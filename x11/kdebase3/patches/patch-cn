@@ -1,8 +1,8 @@
-$NetBSD: patch-cn,v 1.5 2003/05/22 02:42:50 markd Exp $
+$NetBSD: patch-cn,v 1.6 2003/07/30 13:35:00 markd Exp $
 
---- konqueror/keditbookmarks/Makefile.in.orig	Tue May 13 23:07:59 2003
+--- konqueror/keditbookmarks/Makefile.in.orig	2003-07-15 22:03:40.000000000 +1200
 +++ konqueror/keditbookmarks/Makefile.in
-@@ -424,20 +424,24 @@ INCLUDES = -I$(top_srcdir)/libkonq $(all
+@@ -425,20 +425,24 @@ INCLUDES = -I$(top_srcdir)/libkonq $(all
  
  #>- METASOURCES = AUTO
  
@@ -140,7 +140,7 @@ $NetBSD: patch-cn,v 1.5 2003/05/22 02:42:50 markd Exp $
  #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
  #>+ 4
 -KDE_DIST=toplevel.h cr48-app-keditbookmarks.png cr128-app-keditbookmarks.png cr32-app-keditbookmarks.png uninstall.desktop cr64-app-keditbookmarks.png keditbookmarksui.rc favicons.h commands.h cr16-app-keditbookmarks.png kinsertionsort.h 
-+KDE_DIST=commands.h kinsertionsort.h favicons.h cr64-app-keditbookmarks.png cr32-app-keditbookmarks.png toplevel.h keditbookmarksui.rc cr128-app-keditbookmarks.png cr48-app-keditbookmarks.png cr16-app-keditbookmarks.png uninstall.desktop 
++KDE_DIST=commands.h kinsertionsort.h favicons.h cr64-app-keditbookmarks.png cr32-app-keditbookmarks.png toplevel.h keditbookmarksui.rc cr128-app-keditbookmarks.png cr48-app-keditbookmarks.png Makefile.in.rej cr16-app-keditbookmarks.png uninstall.desktop 
  
  DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
  
@@ -154,37 +154,45 @@ $NetBSD: patch-cn,v 1.5 2003/05/22 02:42:50 markd Exp $
  install-data-local: uninstall.desktop
  	$(mkinstalldirs) $(DESTDIR)$(kde_appsdir)/Internet
  	$(INSTALL_DATA) $(srcdir)/uninstall.desktop $(DESTDIR)$(kde_appsdir)/Internet/keditbookmarks.desktop
-@@ -869,27 +887,27 @@ install-data-local: uninstall.desktop
+@@ -869,12 +887,6 @@ install-data-local: uninstall.desktop
  # Otherwise a system limit (for SysV at least) may be exceeded.
  .NOEXPORT:
  
 -#>+ 5
 -toplevel.kidl: $(srcdir)/toplevel.h $(DCOP_DEPENDENCIES)
--	$(DCOPIDL) $(srcdir)/toplevel.h > toplevel.kidl || ( rm -f toplevel.kidl ; /bin/false )
+-	$(DCOPIDL) $(srcdir)/toplevel.h > toplevel.kidl || ( rm -f toplevel.kidl ; false )
 -toplevel_skel.cpp: toplevel.kidl
 -	$(DCOPIDL2CPP) --c++-suffix cpp --no-signals --no-stub toplevel.kidl
 -
  #>+ 3
  favicons.moc: $(srcdir)/favicons.h
  	$(MOC) $(srcdir)/favicons.h -o favicons.moc
- 
+@@ -882,20 +894,26 @@ favicons.moc: $(srcdir)/favicons.h
+ #>+ 1
+ mocs: favicons.moc
  #>+ 3
 +commands.moc: $(srcdir)/commands.h
 +	$(MOC) $(srcdir)/commands.h -o commands.moc
 +
++#>+ 1
++mocs: commands.moc
 +#>+ 3
  toplevel.moc: $(srcdir)/toplevel.h
  	$(MOC) $(srcdir)/toplevel.h -o toplevel.moc
  
+ #>+ 1
+ mocs: toplevel.moc
 -#>+ 3
 -commands.moc: $(srcdir)/commands.h
 -	$(MOC) $(srcdir)/commands.h -o commands.moc
 +#>+ 5
 +toplevel.kidl: $(srcdir)/toplevel.h $(DCOP_DEPENDENCIES)
-+	$(DCOPIDL) $(srcdir)/toplevel.h > toplevel.kidl || ( rm -f toplevel.kidl ; /bin/false )
++	$(DCOPIDL) $(srcdir)/toplevel.h > toplevel.kidl || ( rm -f toplevel.kidl ; false )
 +toplevel_skel.cpp: toplevel.kidl
 +	$(DCOPIDL2CPP) --c++-suffix cpp --no-signals --no-stub toplevel.kidl
  
+-#>+ 1
+-mocs: commands.moc
  #>+ 3
  clean-metasources:
 -	-rm -f  favicons.moc toplevel.moc commands.moc
@@ -192,7 +200,7 @@ $NetBSD: patch-cn,v 1.5 2003/05/22 02:42:50 markd Exp $
  
  #>+ 4
  clean-idl:
-@@ -927,33 +945,33 @@ force-reedit:
+@@ -933,33 +951,33 @@ force-reedit:
  
  
  #>+ 11
@@ -239,7 +247,7 @@ $NetBSD: patch-cn,v 1.5 2003/05/22 02:42:50 markd Exp $
  #>+ 3
  cvs-clean:
  	$(MAKE) admindir=$(top_srcdir)/admin -f $(top_srcdir)/admin/Makefile.common cvs-clean
-@@ -963,9 +981,9 @@ kde-rpo-clean:
+@@ -969,9 +987,9 @@ kde-rpo-clean:
  	-rm -f *.rpo
  
  #>+ 7

@@ -1,8 +1,8 @@
-$NetBSD: patch-cd,v 1.5 2003/05/22 02:42:50 markd Exp $
+$NetBSD: patch-cd,v 1.6 2003/07/30 13:34:59 markd Exp $
 
---- kmenuedit/Makefile.in.orig	Tue May 13 23:07:59 2003
+--- kmenuedit/Makefile.in.orig	2003-07-15 22:03:38.000000000 +1200
 +++ kmenuedit/Makefile.in
-@@ -423,17 +423,19 @@ x_libraries = @x_libraries@
+@@ -424,17 +424,19 @@ x_libraries = @x_libraries@
  INCLUDES = $(all_includes)
  
  bin_PROGRAMS = kmenuedit
@@ -144,16 +144,16 @@ $NetBSD: patch-cd,v 1.5 2003/05/22 02:42:50 markd Exp $
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/main.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/menueditview.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/treeview.Plo@am__quote@
-@@ -833,7 +849,7 @@ distclean-tags:
+@@ -827,7 +843,7 @@ distclean-tags:
  	-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
  #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
  #>+ 4
 -KDE_DIST=cr48-app-kmenuedit.png uninstall.desktop kmenuedit.desktop cr16-app-kmenuedit.png kmenueditui.rc cr32-app-kmenuedit.png 
-+KDE_DIST=cr32-app-kmenuedit.png cr16-app-kmenuedit.png cr48-app-kmenuedit.png kmenuedit.desktop kmenueditui.rc uninstall.desktop 
++KDE_DIST=cr32-app-kmenuedit.png cr16-app-kmenuedit.png cr48-app-kmenuedit.png kmenuedit.desktop Makefile.in.rej kmenueditui.rc uninstall.desktop 
  
  DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
  
-@@ -907,7 +923,6 @@ install-strip:
+@@ -901,7 +917,6 @@ install-strip:
  mostlyclean-generic:
  
  clean-generic:
@@ -161,34 +161,43 @@ $NetBSD: patch-cd,v 1.5 2003/05/22 02:42:50 markd Exp $
  
  distclean-generic:
  	-rm -f Makefile $(CONFIG_CLEAN_FILES)
-@@ -1012,10 +1027,6 @@ dummy.cpp:
+@@ -1006,12 +1021,6 @@ dummy.cpp:
  .NOEXPORT:
  
  #>+ 3
 -menueditview.moc: $(srcdir)/menueditview.h
 -	$(MOC) $(srcdir)/menueditview.h -o menueditview.moc
 -
+-#>+ 1
+-mocs: menueditview.moc
 -#>+ 3
  basictab.moc: $(srcdir)/basictab.h
  	$(MOC) $(srcdir)/basictab.h -o basictab.moc
  
-@@ -1024,16 +1035,20 @@ treeview.moc: $(srcdir)/treeview.h
- 	$(MOC) $(srcdir)/treeview.h -o treeview.moc
- 
+@@ -1024,11 +1033,11 @@ treeview.moc: $(srcdir)/treeview.h
+ #>+ 1
+ mocs: treeview.moc
  #>+ 3
 -kmenuedit.moc: $(srcdir)/kmenuedit.h
 -	$(MOC) $(srcdir)/kmenuedit.h -o kmenuedit.moc
 +menueditview.moc: $(srcdir)/menueditview.h
 +	$(MOC) $(srcdir)/menueditview.h -o menueditview.moc
  
+ #>+ 1
+-mocs: kmenuedit.moc
++mocs: menueditview.moc
  #>+ 3
  desktopfileeditor.moc: $(srcdir)/desktopfileeditor.h
  	$(MOC) $(srcdir)/desktopfileeditor.h -o desktopfileeditor.moc
- 
+@@ -1036,8 +1045,14 @@ desktopfileeditor.moc: $(srcdir)/desktop
+ #>+ 1
+ mocs: desktopfileeditor.moc
  #>+ 3
 +kmenuedit.moc: $(srcdir)/kmenuedit.h
 +	$(MOC) $(srcdir)/kmenuedit.h -o kmenuedit.moc
 +
++#>+ 1
++mocs: kmenuedit.moc
 +#>+ 3
  clean-metasources:
 -	-rm -f  menueditview.moc basictab.moc treeview.moc kmenuedit.moc desktopfileeditor.moc
@@ -196,7 +205,7 @@ $NetBSD: patch-cd,v 1.5 2003/05/22 02:42:50 markd Exp $
  
  #>+ 2
  docs-am:
-@@ -1060,33 +1075,33 @@ force-reedit:
+@@ -1064,33 +1079,33 @@ force-reedit:
  
  
  #>+ 11
@@ -243,7 +252,7 @@ $NetBSD: patch-cd,v 1.5 2003/05/22 02:42:50 markd Exp $
  #>+ 3
  cvs-clean:
  	$(MAKE) admindir=$(top_srcdir)/admin -f $(top_srcdir)/admin/Makefile.common cvs-clean
-@@ -1096,13 +1111,13 @@ kde-rpo-clean:
+@@ -1100,13 +1115,13 @@ kde-rpo-clean:
  	-rm -f *.rpo
  
  #>+ 11

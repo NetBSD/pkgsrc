@@ -1,8 +1,8 @@
-$NetBSD: patch-ct,v 1.6 2003/05/22 02:42:51 markd Exp $
+$NetBSD: patch-ct,v 1.7 2003/07/30 13:35:00 markd Exp $
 
---- konsole/konsole/Makefile.in.orig	Tue May 13 23:08:00 2003
+--- konsole/konsole/Makefile.in.orig	2003-07-15 22:03:42.000000000 +1200
 +++ konsole/konsole/Makefile.in
-@@ -437,7 +437,7 @@ INCLUDES = -I. $(all_includes)
+@@ -438,7 +438,7 @@ INCLUDES = -I. $(all_includes)
  
  # you can add here more. This one gets installed
  bin_PROGRAMS = konsole konsole_grantpty kwrited #kcmkonsole
@@ -11,7 +11,7 @@ $NetBSD: patch-ct,v 1.6 2003/05/22 02:42:51 markd Exp $
  
  
  # libkonsolepart is a part, but konsole.la links directly to it, so we can't
-@@ -472,30 +472,38 @@ libkonsolepart_la_LDFLAGS = $(all_librar
+@@ -473,30 +473,38 @@ libkonsolepart_la_LDFLAGS = $(all_librar
  libkonsolepart_la_LIBADD = $(LIBUTIL) $(XTESTLIB) $(LIB_KPARTS)
  
  # kwrited kdeinit module
@@ -275,11 +275,11 @@ $NetBSD: patch-ct,v 1.6 2003/05/22 02:42:51 markd Exp $
  #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
  #>+ 4
 -KDE_DIST=x-konsole.desktop sessioniface.h MakeDefaults konsole_part.h konsolerc konsoleiface.h 
-+KDE_DIST=konsoleiface.h konsole_part.h x-konsole.desktop konsolerc sessioniface.h MakeDefaults 
++KDE_DIST=konsoleiface.h konsole_part.h Makefile.in.rej x-konsole.desktop konsolerc sessioniface.h MakeDefaults 
  
  DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
  
-@@ -1154,50 +1192,37 @@ messages: rc.cpp
+@@ -1154,29 +1192,16 @@ messages: rc.cpp
  	$(XGETTEXT) rc.cpp *.cpp -o $(podir)/konsole.pot
  	rm -f schemas.cpp
  	rm -f tips.cpp
@@ -292,11 +292,11 @@ $NetBSD: patch-ct,v 1.6 2003/05/22 02:42:51 markd Exp $
  
 -#>+ 9
 -konsoleiface.kidl: $(srcdir)/konsoleiface.h $(DCOP_DEPENDENCIES)
--	$(DCOPIDL) $(srcdir)/konsoleiface.h > konsoleiface.kidl || ( rm -f konsoleiface.kidl ; /bin/false )
+-	$(DCOPIDL) $(srcdir)/konsoleiface.h > konsoleiface.kidl || ( rm -f konsoleiface.kidl ; false )
 -konsoleiface_skel.cpp: konsoleiface.kidl
 -	$(DCOPIDL2CPP) --c++-suffix cpp --no-signals --no-stub konsoleiface.kidl
 -sessioniface.kidl: $(srcdir)/sessioniface.h $(DCOP_DEPENDENCIES)
--	$(DCOPIDL) $(srcdir)/sessioniface.h > sessioniface.kidl || ( rm -f sessioniface.kidl ; /bin/false )
+-	$(DCOPIDL) $(srcdir)/sessioniface.h > sessioniface.kidl || ( rm -f sessioniface.kidl ; false )
 -sessioniface_skel.cpp: sessioniface.kidl
 -	$(DCOPIDL2CPP) --c++-suffix cpp --no-signals --no-stub sessioniface.kidl
 -
@@ -306,70 +306,98 @@ $NetBSD: patch-ct,v 1.6 2003/05/22 02:42:51 markd Exp $
 +konsolebookmarkmenu.moc: $(srcdir)/konsolebookmarkmenu.h
 +	$(MOC) $(srcdir)/konsolebookmarkmenu.h -o konsolebookmarkmenu.moc
  
+ #>+ 1
+-mocs: kwrited.moc
++mocs: konsolebookmarkmenu.moc
  #>+ 3
  TEWidget.moc: $(srcdir)/TEWidget.h
  	$(MOC) $(srcdir)/TEWidget.h -o TEWidget.moc
- 
+@@ -1184,35 +1209,35 @@ TEWidget.moc: $(srcdir)/TEWidget.h
+ #>+ 1
+ mocs: TEWidget.moc
  #>+ 3
 -konsole_child.moc: $(srcdir)/konsole_child.h
 -	$(MOC) $(srcdir)/konsole_child.h -o konsole_child.moc
 -
+-#>+ 1
+-mocs: konsole_child.moc
 -#>+ 3
  TEmulation.moc: $(srcdir)/TEmulation.h
  	$(MOC) $(srcdir)/TEmulation.h -o TEmulation.moc
  
+ #>+ 1
+ mocs: TEmulation.moc
  #>+ 3
 -konsolebookmarkhandler.moc: $(srcdir)/konsolebookmarkhandler.h
 -	$(MOC) $(srcdir)/konsolebookmarkhandler.h -o konsolebookmarkhandler.moc
 +kwrited.moc: $(srcdir)/kwrited.h
 +	$(MOC) $(srcdir)/kwrited.h -o kwrited.moc
  
+ #>+ 1
+-mocs: konsolebookmarkhandler.moc
++mocs: kwrited.moc
  #>+ 3
 -konsole.moc: $(srcdir)/konsole.h
 -	$(MOC) $(srcdir)/konsole.h -o konsole.moc
 +TEPty.moc: $(srcdir)/TEPty.h
 +	$(MOC) $(srcdir)/TEPty.h -o TEPty.moc
  
+ #>+ 1
+-mocs: konsole.moc
++mocs: TEPty.moc
  #>+ 3
 -konsolebookmarkmenu.moc: $(srcdir)/konsolebookmarkmenu.h
 -	$(MOC) $(srcdir)/konsolebookmarkmenu.h -o konsolebookmarkmenu.moc
 +konsole_part.moc: $(srcdir)/konsole_part.h
 +	$(MOC) $(srcdir)/konsole_part.h -o konsole_part.moc
-+
+ 
+ #>+ 1
+-mocs: konsolebookmarkmenu.moc
++mocs: konsole_part.moc
 +#>+ 3
 +konsole.moc: $(srcdir)/konsole.h
 +	$(MOC) $(srcdir)/konsole.h -o konsole.moc
- 
++
++#>+ 1
++mocs: konsole.moc
  #>+ 3
  session.moc: $(srcdir)/session.h
-@@ -1208,12 +1233,22 @@ TEmuVt102.moc: $(srcdir)/TEmuVt102.h
- 	$(MOC) $(srcdir)/TEmuVt102.h -o TEmuVt102.moc
- 
+ 	$(MOC) $(srcdir)/session.h -o session.moc
+@@ -1226,17 +1251,27 @@ TEmuVt102.moc: $(srcdir)/TEmuVt102.h
+ #>+ 1
+ mocs: TEmuVt102.moc
  #>+ 3
 -konsole_part.moc: $(srcdir)/konsole_part.h
 -	$(MOC) $(srcdir)/konsole_part.h -o konsole_part.moc
 +konsole_child.moc: $(srcdir)/konsole_child.h
 +	$(MOC) $(srcdir)/konsole_child.h -o konsole_child.moc
  
+ #>+ 1
+-mocs: konsole_part.moc
++mocs: konsole_child.moc
  #>+ 3
 -TEPty.moc: $(srcdir)/TEPty.h
 -	$(MOC) $(srcdir)/TEPty.h -o TEPty.moc
 +konsolebookmarkhandler.moc: $(srcdir)/konsolebookmarkhandler.h
 +	$(MOC) $(srcdir)/konsolebookmarkhandler.h -o konsolebookmarkhandler.moc
-+
+ 
+ #>+ 1
+-mocs: TEPty.moc
++mocs: konsolebookmarkhandler.moc
 +#>+ 9
 +konsoleiface.kidl: $(srcdir)/konsoleiface.h $(DCOP_DEPENDENCIES)
-+	$(DCOPIDL) $(srcdir)/konsoleiface.h > konsoleiface.kidl || ( rm -f konsoleiface.kidl ; /bin/false )
++	$(DCOPIDL) $(srcdir)/konsoleiface.h > konsoleiface.kidl || ( rm -f konsoleiface.kidl ; false )
 +konsoleiface_skel.cpp: konsoleiface.kidl
 +	$(DCOPIDL2CPP) --c++-suffix cpp --no-signals --no-stub konsoleiface.kidl
 +sessioniface.kidl: $(srcdir)/sessioniface.h $(DCOP_DEPENDENCIES)
-+	$(DCOPIDL) $(srcdir)/sessioniface.h > sessioniface.kidl || ( rm -f sessioniface.kidl ; /bin/false )
++	$(DCOPIDL) $(srcdir)/sessioniface.h > sessioniface.kidl || ( rm -f sessioniface.kidl ; false )
 +sessioniface_skel.cpp: sessioniface.kidl
 +	$(DCOPIDL2CPP) --c++-suffix cpp --no-signals --no-stub sessioniface.kidl
- 
++
  #>+ 8
  libkonsolepart.la.closure: $(libkonsolepart_la_OBJECTS) $(libkonsolepart_la_DEPENDENCIES)
-@@ -1226,7 +1261,7 @@ libkonsolepart.la.closure: $(libkonsolep
+ 	@echo "int main() {return 0;}" > libkonsolepart_la_closure.cpp
+@@ -1248,7 +1283,7 @@ libkonsolepart.la.closure: $(libkonsolep
  
  #>+ 3
  clean-metasources:
@@ -378,7 +406,7 @@ $NetBSD: patch-ct,v 1.6 2003/05/22 02:42:51 markd Exp $
  
  #>+ 7
  clean-idl:
-@@ -1251,19 +1286,19 @@ force-reedit:
+@@ -1273,19 +1308,19 @@ force-reedit:
  
  
  #>+ 11
@@ -407,7 +435,7 @@ $NetBSD: patch-ct,v 1.6 2003/05/22 02:42:51 markd Exp $
  	@echo 'creating libkonsolepart_la.all_cpp.cpp ...'; \
  	rm -f libkonsolepart_la.all_cpp.files libkonsolepart_la.all_cpp.final; \
  	echo "#define KDE_USE_FINAL 1" >> libkonsolepart_la.all_cpp.final; \
-@@ -1276,20 +1311,20 @@ libkonsolepart_la.all_cpp.cpp: $(srcdir)
+@@ -1298,20 +1333,20 @@ libkonsolepart_la.all_cpp.cpp: $(srcdir)
  
  #>+ 3
  clean-final:
@@ -433,7 +461,7 @@ $NetBSD: patch-ct,v 1.6 2003/05/22 02:42:51 markd Exp $
  #>+ 3
  cvs-clean:
  	$(MAKE) admindir=$(top_srcdir)/admin -f $(top_srcdir)/admin/Makefile.common cvs-clean
-@@ -1299,25 +1334,25 @@ kde-rpo-clean:
+@@ -1321,25 +1356,25 @@ kde-rpo-clean:
  	-rm -f *.rpo
  
  #>+ 23

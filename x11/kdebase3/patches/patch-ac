@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.5 2003/05/22 02:42:47 markd Exp $
+$NetBSD: patch-ac,v 1.6 2003/07/30 13:34:59 markd Exp $
 
---- kate/app/Makefile.in.orig	Tue May 13 23:07:53 2003
+--- kate/app/Makefile.in.orig	2003-07-15 22:03:17.000000000 +1200
 +++ kate/app/Makefile.in
-@@ -420,7 +420,7 @@ target_os = @target_os@
+@@ -421,7 +421,7 @@ target_os = @target_os@
  target_vendor = @target_vendor@
  x_includes = @x_includes@
  x_libraries = @x_libraries@
@@ -11,7 +11,7 @@ $NetBSD: patch-ac,v 1.5 2003/05/22 02:42:47 markd Exp $
  bin_PROGRAMS = kate kwrite
  
  #>- libkateinterfaces_la_SOURCES = kateapp.cpp kateconfigdialog.cpp kateconfigplugindialogpage.cpp \
-@@ -440,20 +440,28 @@ libkateinterfaces_la_SOURCES=kateapp.cpp
+@@ -441,20 +441,28 @@ libkateinterfaces_la_SOURCES=kateapp.cpp
  
  libkateinterfaces_la_LIBADD = ../interfaces/libkateinterfacesprivate.la -lkscript ../lib/libkmultitabbar.la
  libkateinterfaces_la_LDFLAGS = $(all_libraries) $(KDE_RPATH) -module -avoid-version
@@ -189,11 +189,11 @@ $NetBSD: patch-ac,v 1.5 2003/05/22 02:42:47 markd Exp $
  #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
  #>+ 4
 -KDE_DIST=katefiledialog.h katemailfilesdialog.h kateapp.h katepluginmanager.h katefileselector.h katedocmanager.h kateviewspace.h katemain.h kateconfigplugindialogpage.h katesplitter.h kactionselector.h kateconfigdialog.h katemainwindow.h kwritemain.h kbookmarkhandler.h kateviewmanager.h kateIface.h katefilelist.h kwritedialogs.h kateconsole.h katedockcontainer.h kategrepdialog.h 
-+KDE_DIST=katemailfilesdialog.h katefileselector.h kateIface.h kateapp.h kbookmarkhandler.h katefiledialog.h katesplitter.h kwritemain.h kateconfigplugindialogpage.h kwritedialogs.h kategrepdialog.h kateviewspace.h katemain.h kateconfigdialog.h katedockcontainer.h kactionselector.h katepluginmanager.h kateconsole.h katefilelist.h katemainwindow.h kateviewmanager.h katedocmanager.h 
++KDE_DIST=katemailfilesdialog.h katefileselector.h kateIface.h kateapp.h kbookmarkhandler.h katefiledialog.h katesplitter.h kwritemain.h Makefile.in.rej kateconfigplugindialogpage.h kwritedialogs.h kategrepdialog.h kateviewspace.h katemain.h kateconfigdialog.h katedockcontainer.h kactionselector.h katepluginmanager.h kateconsole.h katefilelist.h katemainwindow.h kateviewmanager.h katedocmanager.h 
  
  DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
  
-@@ -967,91 +991,85 @@ uninstall-am: uninstall-binPROGRAMS unin
+@@ -967,28 +991,28 @@ uninstall-am: uninstall-binPROGRAMS unin
  
  dummy_kate_la.cpp:
  	echo > dummy_kate_la.cpp
@@ -211,113 +211,168 @@ $NetBSD: patch-ac,v 1.5 2003/05/22 02:42:47 markd Exp $
 +katefilelist.moc: $(srcdir)/katefilelist.h
 +	$(MOC) $(srcdir)/katefilelist.h -o katefilelist.moc
 +
++#>+ 1
++mocs: katefilelist.moc
 +#>+ 3
  kateconfigdialog.moc: $(srcdir)/kateconfigdialog.h
  	$(MOC) $(srcdir)/kateconfigdialog.h -o kateconfigdialog.moc
  
+ #>+ 1
+ mocs: kateconfigdialog.moc
  #>+ 3
 -kateconsole.moc: $(srcdir)/kateconsole.h
 -	$(MOC) $(srcdir)/kateconsole.h -o kateconsole.moc
 +kateconfigplugindialogpage.moc: $(srcdir)/kateconfigplugindialogpage.h
 +	$(MOC) $(srcdir)/kateconfigplugindialogpage.h -o kateconfigplugindialogpage.moc
  
+ #>+ 1
+-mocs: kateconsole.moc
++mocs: kateconfigplugindialogpage.moc
  #>+ 3
  katemainwindow.moc: $(srcdir)/katemainwindow.h
  	$(MOC) $(srcdir)/katemainwindow.h -o katemainwindow.moc
- 
+@@ -996,41 +1020,41 @@ katemainwindow.moc: $(srcdir)/katemainwi
+ #>+ 1
+ mocs: katemainwindow.moc
  #>+ 3
 -katedocmanager.moc: $(srcdir)/katedocmanager.h
 -	$(MOC) $(srcdir)/katedocmanager.h -o katedocmanager.moc
 +katemailfilesdialog.moc: $(srcdir)/katemailfilesdialog.h
 +	$(MOC) $(srcdir)/katemailfilesdialog.h -o katemailfilesdialog.moc
  
+ #>+ 1
+-mocs: katedocmanager.moc
++mocs: katemailfilesdialog.moc
  #>+ 3
 -kategrepdialog.moc: $(srcdir)/kategrepdialog.h
 -	$(MOC) $(srcdir)/kategrepdialog.h -o kategrepdialog.moc
 +kbookmarkhandler.moc: $(srcdir)/kbookmarkhandler.h
 +	$(MOC) $(srcdir)/kbookmarkhandler.h -o kbookmarkhandler.moc
  
+ #>+ 1
+-mocs: kategrepdialog.moc
++mocs: kbookmarkhandler.moc
  #>+ 3
 -kwritemain.moc: $(srcdir)/kwritemain.h
 -	$(MOC) $(srcdir)/kwritemain.h -o kwritemain.moc
 +kactionselector.moc: $(srcdir)/kactionselector.h
 +	$(MOC) $(srcdir)/kactionselector.h -o kactionselector.moc
  
+ #>+ 1
+-mocs: kwritemain.moc
++mocs: kactionselector.moc
  #>+ 3
 -kateviewspace.moc: $(srcdir)/kateviewspace.h
 -	$(MOC) $(srcdir)/kateviewspace.h -o kateviewspace.moc
 +katedockcontainer.moc: $(srcdir)/katedockcontainer.h
 +	$(MOC) $(srcdir)/katedockcontainer.h -o katedockcontainer.moc
  
+ #>+ 1
+-mocs: kateviewspace.moc
++mocs: katedockcontainer.moc
  #>+ 3
 -kbookmarkhandler.moc: $(srcdir)/kbookmarkhandler.h
 -	$(MOC) $(srcdir)/kbookmarkhandler.h -o kbookmarkhandler.moc
 +kategrepdialog.moc: $(srcdir)/kategrepdialog.h
 +	$(MOC) $(srcdir)/kategrepdialog.h -o kategrepdialog.moc
  
+ #>+ 1
+-mocs: kbookmarkhandler.moc
++mocs: kategrepdialog.moc
  #>+ 3
 -katefiledialog.moc: $(srcdir)/katefiledialog.h
 -	$(MOC) $(srcdir)/katefiledialog.h -o katefiledialog.moc
 +kateconsole.moc: $(srcdir)/kateconsole.h
 +	$(MOC) $(srcdir)/kateconsole.h -o kateconsole.moc
  
+ #>+ 1
+-mocs: katefiledialog.moc
++mocs: kateconsole.moc
  #>+ 3
  katefileselector.moc: $(srcdir)/katefileselector.h
  	$(MOC) $(srcdir)/katefileselector.h -o katefileselector.moc
- 
+@@ -1038,29 +1062,23 @@ katefileselector.moc: $(srcdir)/katefile
+ #>+ 1
+ mocs: katefileselector.moc
  #>+ 3
 -katedockcontainer.moc: $(srcdir)/katedockcontainer.h
 -	$(MOC) $(srcdir)/katedockcontainer.h -o katedockcontainer.moc
 -
+-#>+ 1
+-mocs: katedockcontainer.moc
 -#>+ 3
 -katepluginmanager.moc: $(srcdir)/katepluginmanager.h
 -	$(MOC) $(srcdir)/katepluginmanager.h -o katepluginmanager.moc
 +katesplitter.moc: $(srcdir)/katesplitter.h
 +	$(MOC) $(srcdir)/katesplitter.h -o katesplitter.moc
  
+ #>+ 1
+-mocs: katepluginmanager.moc
++mocs: katesplitter.moc
  #>+ 3
 -katemailfilesdialog.moc: $(srcdir)/katemailfilesdialog.h
 -	$(MOC) $(srcdir)/katemailfilesdialog.h -o katemailfilesdialog.moc
 +kateviewmanager.moc: $(srcdir)/kateviewmanager.h
 +	$(MOC) $(srcdir)/kateviewmanager.h -o kateviewmanager.moc
  
+ #>+ 1
+-mocs: katemailfilesdialog.moc
++mocs: kateviewmanager.moc
  #>+ 3
 -katefilelist.moc: $(srcdir)/katefilelist.h
 -	$(MOC) $(srcdir)/katefilelist.h -o katefilelist.moc
 +kwritemain.moc: $(srcdir)/kwritemain.h
 +	$(MOC) $(srcdir)/kwritemain.h -o kwritemain.moc
  
+ #>+ 1
+-mocs: katefilelist.moc
++mocs: kwritemain.moc
  #>+ 3
  kateapp.moc: $(srcdir)/kateapp.h
  	$(MOC) $(srcdir)/kateapp.h -o kateapp.moc
- 
+@@ -1068,29 +1086,29 @@ kateapp.moc: $(srcdir)/kateapp.h
+ #>+ 1
+ mocs: kateapp.moc
  #>+ 3
 -katesplitter.moc: $(srcdir)/katesplitter.h
 -	$(MOC) $(srcdir)/katesplitter.h -o katesplitter.moc
 +kateviewspace.moc: $(srcdir)/kateviewspace.h
 +	$(MOC) $(srcdir)/kateviewspace.h -o kateviewspace.moc
  
+ #>+ 1
+-mocs: katesplitter.moc
++mocs: kateviewspace.moc
  #>+ 3
 -kateviewmanager.moc: $(srcdir)/kateviewmanager.h
 -	$(MOC) $(srcdir)/kateviewmanager.h -o kateviewmanager.moc
 +katefiledialog.moc: $(srcdir)/katefiledialog.h
 +	$(MOC) $(srcdir)/katefiledialog.h -o katefiledialog.moc
  
+ #>+ 1
+-mocs: kateviewmanager.moc
++mocs: katefiledialog.moc
  #>+ 3
 -kactionselector.moc: $(srcdir)/kactionselector.h
 -	$(MOC) $(srcdir)/kactionselector.h -o kactionselector.moc
 +katedocmanager.moc: $(srcdir)/katedocmanager.h
 +	$(MOC) $(srcdir)/katedocmanager.h -o katedocmanager.moc
  
+ #>+ 1
+-mocs: kactionselector.moc
++mocs: katedocmanager.moc
  #>+ 3
 -kateconfigplugindialogpage.moc: $(srcdir)/kateconfigplugindialogpage.h
 -	$(MOC) $(srcdir)/kateconfigplugindialogpage.h -o kateconfigplugindialogpage.moc
 +katepluginmanager.moc: $(srcdir)/katepluginmanager.h
 +	$(MOC) $(srcdir)/katepluginmanager.h -o katepluginmanager.moc
  
+ #>+ 1
+-mocs: kateconfigplugindialogpage.moc
++mocs: katepluginmanager.moc
  #>+ 3
  kwritedialogs.moc: $(srcdir)/kwritedialogs.h
-@@ -1065,7 +1083,7 @@ kateIface_skel.cpp: kateIface.kidl
+ 	$(MOC) $(srcdir)/kwritedialogs.h -o kwritedialogs.moc
+@@ -1105,7 +1123,7 @@ kateIface_skel.cpp: kateIface.kidl
  
  #>+ 3
  clean-metasources:
@@ -326,7 +381,7 @@ $NetBSD: patch-ac,v 1.5 2003/05/22 02:42:47 markd Exp $
  
  #>+ 4
  clean-idl:
-@@ -1083,19 +1101,7 @@ force-reedit:
+@@ -1123,19 +1141,7 @@ force-reedit:
  
  
  #>+ 11
@@ -347,7 +402,7 @@ $NetBSD: patch-ac,v 1.5 2003/05/22 02:42:47 markd Exp $
  	@echo 'creating libkateinterfaces_la.all_cpp.cpp ...'; \
  	rm -f libkateinterfaces_la.all_cpp.files libkateinterfaces_la.all_cpp.final; \
  	echo "#define KDE_USE_FINAL 1" >> libkateinterfaces_la.all_cpp.final; \
-@@ -1106,22 +1112,34 @@ libkateinterfaces_la.all_cpp.cpp: $(srcd
+@@ -1146,22 +1152,34 @@ libkateinterfaces_la.all_cpp.cpp: $(srcd
  	cat libkateinterfaces_la.all_cpp.final libkateinterfaces_la.all_cpp.files > libkateinterfaces_la.all_cpp.cpp; \
  	rm -f libkateinterfaces_la.all_cpp.final libkateinterfaces_la.all_cpp.files
  
@@ -387,7 +442,7 @@ $NetBSD: patch-ac,v 1.5 2003/05/22 02:42:47 markd Exp $
  #>+ 3
  cvs-clean:
  	$(MAKE) admindir=$(top_srcdir)/admin -f $(top_srcdir)/admin/Makefile.common cvs-clean
-@@ -1131,43 +1149,43 @@ kde-rpo-clean:
+@@ -1171,43 +1189,43 @@ kde-rpo-clean:
  	-rm -f *.rpo
  
  #>+ 41

@@ -1,8 +1,8 @@
-$NetBSD: patch-cz,v 1.5 2003/05/22 02:42:51 markd Exp $
+$NetBSD: patch-cz,v 1.6 2003/07/30 13:35:00 markd Exp $
 
---- ksmserver/Makefile.in.orig	Tue May 13 23:08:01 2003
+--- ksmserver/Makefile.in.orig	2003-07-15 22:03:43.000000000 +1200
 +++ ksmserver/Makefile.in
-@@ -443,20 +443,23 @@ SUBDIRS = .
+@@ -444,20 +444,23 @@ SUBDIRS = .
  INCLUDES = $(all_includes)
  
  bin_PROGRAMS = ksmserver
@@ -131,16 +131,16 @@ $NetBSD: patch-cz,v 1.5 2003/05/22 02:42:51 markd Exp $
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/main.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/server.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/shutdown.Plo@am__quote@
-@@ -846,7 +860,7 @@ distclean-tags:
+@@ -840,7 +854,7 @@ distclean-tags:
  	-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
  #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
  #>+ 4
 -KDE_DIST=move_session_config.sh shutdownkonq.png ksmserver.upd LICENSE KSMServerInterface.h configure.in.in 
-+KDE_DIST=move_session_config.sh LICENSE ksmserver.upd shutdownkonq.png configure.in.in KSMServerInterface.h 
++KDE_DIST=configure.in.in KSMServerInterface.h LICENSE move_session_config.sh ksmserver.upd shutdownkonq.png Makefile.in.rej 
  
  DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
  
-@@ -1007,30 +1021,27 @@ uninstall-info: uninstall-info-recursive
+@@ -1001,34 +1015,31 @@ uninstall-info: uninstall-info-recursive
  
  messages:
  	$(XGETTEXT) *.cpp -o $(podir)/ksmserver.pot
@@ -153,26 +153,32 @@ $NetBSD: patch-cz,v 1.5 2003/05/22 02:42:51 markd Exp $
  
 -#>+ 5
 -KSMServerInterface.kidl: $(srcdir)/KSMServerInterface.h $(DCOP_DEPENDENCIES)
--	$(DCOPIDL) $(srcdir)/KSMServerInterface.h > KSMServerInterface.kidl || ( rm -f KSMServerInterface.kidl ; /bin/false )
+-	$(DCOPIDL) $(srcdir)/KSMServerInterface.h > KSMServerInterface.kidl || ( rm -f KSMServerInterface.kidl ; false )
 -KSMServerInterface_skel.cpp: KSMServerInterface.kidl
 -	$(DCOPIDL2CPP) --c++-suffix cpp --no-signals --no-stub KSMServerInterface.kidl
 +#>+ 3
 +server.moc: $(srcdir)/server.h
 +	$(MOC) $(srcdir)/server.h -o server.moc
  
++#>+ 1
++mocs: server.moc
  #>+ 3
  shutdown.moc: $(srcdir)/shutdown.h
  	$(MOC) $(srcdir)/shutdown.h -o shutdown.moc
  
+ #>+ 1
+ mocs: shutdown.moc
 -#>+ 3
 -server.moc: $(srcdir)/server.h
 -	$(MOC) $(srcdir)/server.h -o server.moc
 +#>+ 5
 +KSMServerInterface.kidl: $(srcdir)/KSMServerInterface.h $(DCOP_DEPENDENCIES)
-+	$(DCOPIDL) $(srcdir)/KSMServerInterface.h > KSMServerInterface.kidl || ( rm -f KSMServerInterface.kidl ; /bin/false )
++	$(DCOPIDL) $(srcdir)/KSMServerInterface.h > KSMServerInterface.kidl || ( rm -f KSMServerInterface.kidl ; false )
 +KSMServerInterface_skel.cpp: KSMServerInterface.kidl
 +	$(DCOPIDL2CPP) --c++-suffix cpp --no-signals --no-stub KSMServerInterface.kidl
  
+-#>+ 1
+-mocs: server.moc
  #>+ 3
  clean-metasources:
 -	-rm -f  shutdown.moc server.moc
@@ -180,7 +186,7 @@ $NetBSD: patch-cz,v 1.5 2003/05/22 02:42:51 markd Exp $
  
  #>+ 4
  clean-idl:
-@@ -1048,33 +1059,33 @@ force-reedit:
+@@ -1046,33 +1057,33 @@ force-reedit:
  
  
  #>+ 11
@@ -227,7 +233,7 @@ $NetBSD: patch-cz,v 1.5 2003/05/22 02:42:51 markd Exp $
  #>+ 3
  cvs-clean:
  	$(MAKE) admindir=$(top_srcdir)/admin -f $(top_srcdir)/admin/Makefile.common cvs-clean
-@@ -1084,7 +1095,7 @@ kde-rpo-clean:
+@@ -1082,7 +1093,7 @@ kde-rpo-clean:
  	-rm -f *.rpo
  
  #>+ 5

@@ -1,8 +1,8 @@
-$NetBSD: patch-dh,v 1.5 2003/05/22 02:42:51 markd Exp $
+$NetBSD: patch-dh,v 1.6 2003/07/30 13:35:00 markd Exp $
 
---- kwin/Makefile.in.orig	Tue May 13 23:08:02 2003
+--- kwin/Makefile.in.orig	2003-07-15 22:03:46.000000000 +1200
 +++ kwin/Makefile.in
-@@ -426,18 +426,22 @@ INCLUDES = $(all_includes)
+@@ -427,18 +427,22 @@ INCLUDES = $(all_includes)
  SUBDIRS = . kcmkwin pics clients
  
  bin_PROGRAMS = kwin
@@ -29,7 +29,7 @@ $NetBSD: patch-dh,v 1.5 2003/05/22 02:42:51 markd Exp $
  kwin_la_LDFLAGS = $(all_libraries) -module -avoid-version
  
  include_HEADERS = KWinInterface.h
-@@ -446,7 +450,7 @@ kwinincludedir = $(includedir)/kwin
+@@ -447,7 +451,7 @@ kwinincludedir = $(includedir)/kwin
  kwininclude_HEADERS = options.h client.h workspace.h kwinbutton.h
  
  kwin_SOURCES = kwin_main.cpp
@@ -38,7 +38,7 @@ $NetBSD: patch-dh,v 1.5 2003/05/22 02:42:51 markd Exp $
  kwin_LDFLAGS = $(all_libraries) $(KDE_RPATH)
  
  KDE_ICON = kwin
-@@ -457,7 +461,6 @@ data_DATA = eventsrc
+@@ -458,7 +462,6 @@ data_DATA = eventsrc
  
  sounddir = $(kde_sounddir)
  sound_DATA = pop.wav
@@ -163,54 +163,64 @@ $NetBSD: patch-dh,v 1.5 2003/05/22 02:42:51 markd Exp $
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/kwin_main.Po@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/kwinbutton.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/main.Plo@am__quote@
-@@ -907,7 +918,7 @@ distclean-tags:
+@@ -901,7 +912,7 @@ distclean-tags:
  	-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
  #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
  #>+ 4
 -KDE_DIST=stdclient_bitmaps.h NEWCOLORSCHEME.README killwindow.h cr32-app-kwin.png eventsrc atoms.h main.h kwin.upd pop.wav cr16-app-kwin.png pluginlibFix.pl placement.h plugins.h events.h kwinbindings.cpp LICENSE popupinfo.h cr48-app-kwin.png tabbox.h 
-+KDE_DIST=pluginlibFix.pl kwin.upd plugins.h placement.h LICENSE killwindow.h cr32-app-kwin.png main.h popupinfo.h NEWCOLORSCHEME.README cr48-app-kwin.png tabbox.h kwinbindings.cpp pop.wav stdclient_bitmaps.h events.h cr16-app-kwin.png atoms.h eventsrc 
++KDE_DIST=pluginlibFix.pl kwin.upd plugins.h placement.h LICENSE killwindow.h cr32-app-kwin.png main.h popupinfo.h Makefile.in.rej NEWCOLORSCHEME.README cr48-app-kwin.png tabbox.h kwinbindings.cpp pop.wav stdclient_bitmaps.h events.h cr16-app-kwin.png atoms.h eventsrc 
  
  DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
  
-@@ -1085,25 +1096,15 @@ messages:
+@@ -1079,12 +1090,12 @@ messages:
  # Otherwise a system limit (for SysV at least) may be exceeded.
  .NOEXPORT:
  
 -#>+ 5
 -KWinInterface.kidl: $(srcdir)/KWinInterface.h $(DCOP_DEPENDENCIES)
--	$(DCOPIDL) $(srcdir)/KWinInterface.h > KWinInterface.kidl || ( rm -f KWinInterface.kidl ; /bin/false )
+-	$(DCOPIDL) $(srcdir)/KWinInterface.h > KWinInterface.kidl || ( rm -f KWinInterface.kidl ; false )
 -KWinInterface_skel.cpp: KWinInterface.kidl
 -	$(DCOPIDL2CPP) --c++-suffix cpp --no-signals --no-stub KWinInterface.kidl
 +#>+ 3
 +workspace.moc: $(srcdir)/workspace.h
 +	$(MOC) $(srcdir)/workspace.h -o workspace.moc
  
++#>+ 1
++mocs: workspace.moc
  #>+ 3
  client.moc: $(srcdir)/client.h
  	$(MOC) $(srcdir)/client.h -o client.moc
- 
+@@ -1092,18 +1103,6 @@ client.moc: $(srcdir)/client.h
+ #>+ 1
+ mocs: client.moc
  #>+ 3
 -plugins.moc: $(srcdir)/plugins.h
 -	$(MOC) $(srcdir)/plugins.h -o plugins.moc
 -
+-#>+ 1
+-mocs: plugins.moc
 -#>+ 3
 -workspace.moc: $(srcdir)/workspace.h
 -	$(MOC) $(srcdir)/workspace.h -o workspace.moc
 -
+-#>+ 1
+-mocs: workspace.moc
 -#>+ 3
  options.moc: $(srcdir)/options.h
  	$(MOC) $(srcdir)/options.h -o options.moc
  
-@@ -1120,8 +1121,18 @@ kwinbutton.moc: $(srcdir)/kwinbutton.h
- 	$(MOC) $(srcdir)/kwinbutton.h -o kwinbutton.moc
- 
+@@ -1128,8 +1127,20 @@ kwinbutton.moc: $(srcdir)/kwinbutton.h
+ #>+ 1
+ mocs: kwinbutton.moc
  #>+ 3
 +plugins.moc: $(srcdir)/plugins.h
 +	$(MOC) $(srcdir)/plugins.h -o plugins.moc
 +
++#>+ 1
++mocs: plugins.moc
 +#>+ 5
 +KWinInterface.kidl: $(srcdir)/KWinInterface.h $(DCOP_DEPENDENCIES)
-+	$(DCOPIDL) $(srcdir)/KWinInterface.h > KWinInterface.kidl || ( rm -f KWinInterface.kidl ; /bin/false )
++	$(DCOPIDL) $(srcdir)/KWinInterface.h > KWinInterface.kidl || ( rm -f KWinInterface.kidl ; false )
 +KWinInterface_skel.cpp: KWinInterface.kidl
 +	$(DCOPIDL2CPP) --c++-suffix cpp --no-signals --no-stub KWinInterface.kidl
 +
@@ -221,7 +231,7 @@ $NetBSD: patch-dh,v 1.5 2003/05/22 02:42:51 markd Exp $
  
  #>+ 4
  clean-idl:
-@@ -1153,33 +1164,33 @@ force-reedit:
+@@ -1161,33 +1172,33 @@ force-reedit:
  
  
  #>+ 11
@@ -268,7 +278,7 @@ $NetBSD: patch-dh,v 1.5 2003/05/22 02:42:51 markd Exp $
  #>+ 3
  cvs-clean:
  	$(MAKE) admindir=$(top_srcdir)/admin -f $(top_srcdir)/admin/Makefile.common cvs-clean
-@@ -1189,17 +1200,17 @@ kde-rpo-clean:
+@@ -1197,17 +1208,17 @@ kde-rpo-clean:
  	-rm -f *.rpo
  
  #>+ 15

@@ -1,8 +1,8 @@
-$NetBSD: patch-bg,v 1.5 2003/05/22 02:42:48 markd Exp $
+$NetBSD: patch-bg,v 1.6 2003/07/30 13:34:59 markd Exp $
 
---- khotkeys/khotkeys/Makefile.in.orig	Tue May 13 23:07:57 2003
+--- khotkeys/khotkeys/Makefile.in.orig	2003-07-15 22:03:33.000000000 +1200
 +++ khotkeys/khotkeys/Makefile.in
-@@ -424,16 +424,20 @@ x_includes = @x_includes@
+@@ -425,16 +425,20 @@ x_includes = @x_includes@
  x_libraries = @x_libraries@
  
  bin_PROGRAMS = khotkeys
@@ -129,11 +129,11 @@ $NetBSD: patch-bg,v 1.5 2003/05/22 02:42:48 markd Exp $
  #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
  #>+ 4
 -KDE_DIST=khkglobalaccel.cpp khotkeys.desktop khkglobalaccel.h 
-+KDE_DIST=khotkeys.desktop khkglobalaccel.h khkglobalaccel.cpp 
++KDE_DIST=khotkeys.desktop khkglobalaccel.h khkglobalaccel.cpp Makefile.in.rej 
  
  DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
  
-@@ -848,30 +864,27 @@ uninstall-am: uninstall-autostartDATA un
+@@ -848,34 +864,31 @@ uninstall-am: uninstall-autostartDATA un
  	uninstall-binPROGRAMS uninstall-info-am \
  	uninstall-libLTLIBRARIES
  
@@ -146,26 +146,32 @@ $NetBSD: patch-bg,v 1.5 2003/05/22 02:42:48 markd Exp $
  
 -#>+ 5
 -khotkeys.kidl: $(srcdir)/khotkeys.h $(DCOP_DEPENDENCIES)
--	$(DCOPIDL) $(srcdir)/khotkeys.h > khotkeys.kidl || ( rm -f khotkeys.kidl ; /bin/false )
+-	$(DCOPIDL) $(srcdir)/khotkeys.h > khotkeys.kidl || ( rm -f khotkeys.kidl ; false )
 -khotkeys_skel.cpp: khotkeys.kidl
 -	$(DCOPIDL2CPP) --c++-suffix cpp --no-signals --no-stub khotkeys.kidl
 +#>+ 3
 +khotkeys.moc: $(srcdir)/khotkeys.h
 +	$(MOC) $(srcdir)/khotkeys.h -o khotkeys.moc
  
++#>+ 1
++mocs: khotkeys.moc
  #>+ 3
  khkglobalaccel.moc: $(srcdir)/khkglobalaccel.h
  	$(MOC) $(srcdir)/khkglobalaccel.h -o khkglobalaccel.moc
  
+ #>+ 1
+ mocs: khkglobalaccel.moc
 -#>+ 3
 -khotkeys.moc: $(srcdir)/khotkeys.h
 -	$(MOC) $(srcdir)/khotkeys.h -o khotkeys.moc
 +#>+ 5
 +khotkeys.kidl: $(srcdir)/khotkeys.h $(DCOP_DEPENDENCIES)
-+	$(DCOPIDL) $(srcdir)/khotkeys.h > khotkeys.kidl || ( rm -f khotkeys.kidl ; /bin/false )
++	$(DCOPIDL) $(srcdir)/khotkeys.h > khotkeys.kidl || ( rm -f khotkeys.kidl ; false )
 +khotkeys_skel.cpp: khotkeys.kidl
 +	$(DCOPIDL2CPP) --c++-suffix cpp --no-signals --no-stub khotkeys.kidl
  
+-#>+ 1
+-mocs: khotkeys.moc
  #>+ 3
  clean-metasources:
 -	-rm -f  khkglobalaccel.moc khotkeys.moc
@@ -173,7 +179,7 @@ $NetBSD: patch-bg,v 1.5 2003/05/22 02:42:48 markd Exp $
  
  #>+ 4
  clean-idl:
-@@ -889,33 +902,33 @@ force-reedit:
+@@ -893,33 +906,33 @@ force-reedit:
  
  
  #>+ 11
@@ -220,7 +226,7 @@ $NetBSD: patch-bg,v 1.5 2003/05/22 02:42:48 markd Exp $
  #>+ 3
  cvs-clean:
  	$(MAKE) admindir=$(top_srcdir)/admin -f $(top_srcdir)/admin/Makefile.common cvs-clean
-@@ -926,6 +939,6 @@ kde-rpo-clean:
+@@ -930,6 +943,6 @@ kde-rpo-clean:
  
  #>+ 5
  khotkeys.lo: khotkeys.moc 

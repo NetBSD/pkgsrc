@@ -1,8 +1,8 @@
-$NetBSD: patch-ba,v 1.5 2003/05/22 02:42:48 markd Exp $
+$NetBSD: patch-ba,v 1.6 2003/07/30 13:34:59 markd Exp $
 
---- kdesktop/Makefile.in.orig	Tue May 13 23:07:56 2003
+--- kdesktop/Makefile.in.orig	2003-07-15 22:03:30.000000000 +1200
 +++ kdesktop/Makefile.in
-@@ -422,10 +422,17 @@ x_includes = @x_includes@
+@@ -423,10 +423,17 @@ x_includes = @x_includes@
  x_libraries = @x_libraries@
  
  INCLUDES = -I$(top_srcdir)/kcontrol/background -I$(top_srcdir)/libkonq $(all_includes)
@@ -22,7 +22,7 @@ $NetBSD: patch-ba,v 1.5 2003/05/22 02:42:48 markd Exp $
  
  SUBDIRS = . lock pics patterns programs init kwebdesktop
  
-@@ -433,22 +440,24 @@ SUBDIRS = . lock pics patterns programs 
+@@ -434,22 +441,24 @@ SUBDIRS = . lock pics patterns programs 
  ####### Files
  bin_PROGRAMS = kdesktop
  bin_SCRIPTS = kdeeject
@@ -178,30 +178,30 @@ $NetBSD: patch-ba,v 1.5 2003/05/22 02:42:48 markd Exp $
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/kdiconview.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/krootwm.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/lockeng.Plo@am__quote@
-@@ -934,7 +958,7 @@ distclean-tags:
+@@ -928,7 +952,7 @@ distclean-tags:
  	-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
  #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
  #>+ 4
 -KDE_DIST=kcustommenu.h kdesktopbindings.cpp DESIGN kdesktop.desktop kdesktop_custom_menu1 kdiconview.h kdeeject kdesktop_custom_menu2 
-+KDE_DIST=DESIGN kdesktop.desktop kdesktop_custom_menu1 kdesktop_custom_menu2 kcustommenu.h kdiconview.h kdesktopbindings.cpp kdeeject 
++KDE_DIST=DESIGN kdesktop.desktop kdesktop_custom_menu1 kdesktop_custom_menu2 kcustommenu.h kdiconview.h Makefile.in.rej kdesktopbindings.cpp kdeeject 
  
  DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
  
-@@ -1109,35 +1133,21 @@ dummy.cc:
+@@ -1103,44 +1127,30 @@ dummy.cc:
  # Otherwise a system limit (for SysV at least) may be exceeded.
  .NOEXPORT:
  
 -#>+ 13
 -KDesktopIface.kidl: $(srcdir)/KDesktopIface.h $(DCOP_DEPENDENCIES)
--	$(DCOPIDL) $(srcdir)/KDesktopIface.h > KDesktopIface.kidl || ( rm -f KDesktopIface.kidl ; /bin/false )
+-	$(DCOPIDL) $(srcdir)/KDesktopIface.h > KDesktopIface.kidl || ( rm -f KDesktopIface.kidl ; false )
 -KDesktopIface_skel.cc: KDesktopIface.kidl
 -	$(DCOPIDL2CPP) --c++-suffix cc --no-signals --no-stub KDesktopIface.kidl
 -KScreensaverIface.kidl: $(srcdir)/KScreensaverIface.h $(DCOP_DEPENDENCIES)
--	$(DCOPIDL) $(srcdir)/KScreensaverIface.h > KScreensaverIface.kidl || ( rm -f KScreensaverIface.kidl ; /bin/false )
+-	$(DCOPIDL) $(srcdir)/KScreensaverIface.h > KScreensaverIface.kidl || ( rm -f KScreensaverIface.kidl ; false )
 -KScreensaverIface_skel.cc: KScreensaverIface.kidl
 -	$(DCOPIDL2CPP) --c++-suffix cc --no-signals --no-stub KScreensaverIface.kidl
 -KBackgroundIface.kidl: $(srcdir)/KBackgroundIface.h $(DCOP_DEPENDENCIES)
--	$(DCOPIDL) $(srcdir)/KBackgroundIface.h > KBackgroundIface.kidl || ( rm -f KBackgroundIface.kidl ; /bin/false )
+-	$(DCOPIDL) $(srcdir)/KBackgroundIface.h > KBackgroundIface.kidl || ( rm -f KBackgroundIface.kidl ; false )
 -KBackgroundIface_skel.cc: KBackgroundIface.kidl
 -	$(DCOPIDL2CPP) --c++-suffix cc --no-signals --no-stub KBackgroundIface.kidl
 -
@@ -211,66 +211,91 @@ $NetBSD: patch-ba,v 1.5 2003/05/22 02:42:48 markd Exp $
 +xautolock.moc: $(srcdir)/xautolock.h
 +	$(MOC) $(srcdir)/xautolock.h -o xautolock.moc
  
+ #>+ 1
+-mocs: krootwm.moc
++mocs: xautolock.moc
  #>+ 3
 -minicli.moc: $(srcdir)/minicli.h
 -	$(MOC) $(srcdir)/minicli.h -o minicli.moc
 +lockeng.moc: $(srcdir)/lockeng.h
 +	$(MOC) $(srcdir)/lockeng.h -o lockeng.moc
  
+ #>+ 1
+-mocs: minicli.moc
++mocs: lockeng.moc
  #>+ 3
 -startupid.moc: $(srcdir)/startupid.h
 -	$(MOC) $(srcdir)/startupid.h -o startupid.moc
 +bgmanager.moc: $(srcdir)/bgmanager.h
 +	$(MOC) $(srcdir)/bgmanager.h -o bgmanager.moc
  
+ #>+ 1
+-mocs: startupid.moc
++mocs: bgmanager.moc
  #>+ 3
 -lockeng.moc: $(srcdir)/lockeng.h
 -	$(MOC) $(srcdir)/lockeng.h -o lockeng.moc
 +kdiconview.moc: $(srcdir)/kdiconview.h
 +	$(MOC) $(srcdir)/kdiconview.h -o kdiconview.moc
  
+ #>+ 1
+-mocs: lockeng.moc
++mocs: kdiconview.moc
  #>+ 3
  desktop.moc: $(srcdir)/desktop.h
-@@ -1148,24 +1158,38 @@ pixmapserver.moc: $(srcdir)/pixmapserver
- 	$(MOC) $(srcdir)/pixmapserver.h -o pixmapserver.moc
- 
+ 	$(MOC) $(srcdir)/desktop.h -o desktop.moc
+@@ -1154,32 +1164,46 @@ pixmapserver.moc: $(srcdir)/pixmapserver
+ #>+ 1
+ mocs: pixmapserver.moc
  #>+ 3
 +startupid.moc: $(srcdir)/startupid.h
 +	$(MOC) $(srcdir)/startupid.h -o startupid.moc
 +
++#>+ 1
++mocs: startupid.moc
 +#>+ 3
  kcustommenu.moc: $(srcdir)/kcustommenu.h
  	$(MOC) $(srcdir)/kcustommenu.h -o kcustommenu.moc
  
+ #>+ 1
+ mocs: kcustommenu.moc
  #>+ 3
 -kdiconview.moc: $(srcdir)/kdiconview.h
 -	$(MOC) $(srcdir)/kdiconview.h -o kdiconview.moc
 +minicli.moc: $(srcdir)/minicli.h
 +	$(MOC) $(srcdir)/minicli.h -o minicli.moc
  
+ #>+ 1
+-mocs: kdiconview.moc
++mocs: minicli.moc
  #>+ 3
 -xautolock.moc: $(srcdir)/xautolock.h
 -	$(MOC) $(srcdir)/xautolock.h -o xautolock.moc
 +krootwm.moc: $(srcdir)/krootwm.h
 +	$(MOC) $(srcdir)/krootwm.h -o krootwm.moc
  
+ #>+ 1
+-mocs: xautolock.moc
 -#>+ 3
 -bgmanager.moc: $(srcdir)/bgmanager.h
 -	$(MOC) $(srcdir)/bgmanager.h -o bgmanager.moc
++mocs: krootwm.moc
 +#>+ 13
 +KDesktopIface.kidl: $(srcdir)/KDesktopIface.h $(DCOP_DEPENDENCIES)
-+	$(DCOPIDL) $(srcdir)/KDesktopIface.h > KDesktopIface.kidl || ( rm -f KDesktopIface.kidl ; /bin/false )
++	$(DCOPIDL) $(srcdir)/KDesktopIface.h > KDesktopIface.kidl || ( rm -f KDesktopIface.kidl ; false )
 +KDesktopIface_skel.cc: KDesktopIface.kidl
 +	$(DCOPIDL2CPP) --c++-suffix cc --no-signals --no-stub KDesktopIface.kidl
 +KScreensaverIface.kidl: $(srcdir)/KScreensaverIface.h $(DCOP_DEPENDENCIES)
-+	$(DCOPIDL) $(srcdir)/KScreensaverIface.h > KScreensaverIface.kidl || ( rm -f KScreensaverIface.kidl ; /bin/false )
++	$(DCOPIDL) $(srcdir)/KScreensaverIface.h > KScreensaverIface.kidl || ( rm -f KScreensaverIface.kidl ; false )
 +KScreensaverIface_skel.cc: KScreensaverIface.kidl
 +	$(DCOPIDL2CPP) --c++-suffix cc --no-signals --no-stub KScreensaverIface.kidl
 +KBackgroundIface.kidl: $(srcdir)/KBackgroundIface.h $(DCOP_DEPENDENCIES)
-+	$(DCOPIDL) $(srcdir)/KBackgroundIface.h > KBackgroundIface.kidl || ( rm -f KBackgroundIface.kidl ; /bin/false )
++	$(DCOPIDL) $(srcdir)/KBackgroundIface.h > KBackgroundIface.kidl || ( rm -f KBackgroundIface.kidl ; false )
 +KBackgroundIface_skel.cc: KBackgroundIface.kidl
 +	$(DCOPIDL2CPP) --c++-suffix cc --no-signals --no-stub KBackgroundIface.kidl
  
+-#>+ 1
+-mocs: bgmanager.moc
  #>+ 3
  clean-metasources:
 -	-rm -f  krootwm.moc minicli.moc startupid.moc lockeng.moc desktop.moc pixmapserver.moc kcustommenu.moc kdiconview.moc xautolock.moc bgmanager.moc
@@ -278,7 +303,7 @@ $NetBSD: patch-ba,v 1.5 2003/05/22 02:42:48 markd Exp $
  
  #>+ 6
  clean-idl:
-@@ -1185,45 +1209,45 @@ force-reedit:
+@@ -1199,45 +1223,45 @@ force-reedit:
  
  
  #>+ 11
@@ -347,7 +372,7 @@ $NetBSD: patch-ba,v 1.5 2003/05/22 02:42:48 markd Exp $
  #>+ 3
  cvs-clean:
  	$(MAKE) admindir=$(top_srcdir)/admin -f $(top_srcdir)/admin/Makefile.common cvs-clean
-@@ -1233,23 +1257,23 @@ kde-rpo-clean:
+@@ -1247,23 +1271,23 @@ kde-rpo-clean:
  	-rm -f *.rpo
  
  #>+ 21
