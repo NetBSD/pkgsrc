@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2002/07/02 11:41:15 agc Exp $
+# $NetBSD: Makefile,v 1.18.2.1 2002/07/22 17:13:48 agc Exp $
 #
 
 DISTNAME=		krb4-1.1.1
@@ -41,10 +41,10 @@ post-patch:
 
 # enable this once our autoconf has been upgraded to autoconf>=2.52:
 #pre-configure:
-#	cd ${WRKSRC};                                                         \
-#	${LOCALBASE}/bin/aclocal;                                             \
-#	${LOCALBASE}/bin/autoheader;                                          \
-#	${LOCALBASE}/bin/automake -a --foreign -i;                            \
+#	cd ${WRKSRC};								\
+#	${LOCALBASE}/bin/aclocal --acdir=${LOCALBASE}/share/aclocal;		\
+#	${LOCALBASE}/bin/autoheader;						\
+#	${LOCALBASE}/bin/automake -a --foreign -i;				\
 #	${LOCALBASE}/bin/autoconf
 
 post-install:
