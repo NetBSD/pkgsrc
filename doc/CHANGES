@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2757 2003/07/12 12:30:56 jtb Exp $
+$NetBSD: CHANGES,v 1.2758 2003/07/12 14:54:10 salo Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2778,3 +2778,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated nut to 8.10 [wiz 2003-07-12]
 	Updated proj to 4.4.7 [jtb 2003-07-12]
 	Added proj-doc-1.0 [jtb 2003-07-12]
+	Removed pureftpd [salo 2003-07-12]
+	Added pure-ftpd-1.0.15 [salo 2003-07-12]
