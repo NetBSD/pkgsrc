@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3346 2005/04/02 11:56:22 adrianp Exp $
+$NetBSD: TODO,v 1.3347 2005/04/02 13:03:32 adrianp Exp $
 
 Suggested new packages
 ======================
@@ -1010,7 +1010,6 @@ Suggested package updates
 	o smokeping-1.38
 	o snd-7.11
 	o snes9x-1.43
-	o snortsnarf-050314.1 [pkg/29753]
 	o snownews-1.5.6.1
 	o sox-12.17.7
 	o spim-7.1
