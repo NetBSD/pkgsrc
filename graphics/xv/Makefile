@@ -3,6 +3,7 @@
 # Date created:		30 October 1994
 # Whom:			smace
 #
+# $NetBSD: Makefile,v 1.2 1997/11/20 13:21:02 agc Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/07/03 07:37:08 asami Exp
 #
 
@@ -22,8 +23,15 @@ LIB_DEPENDS=    jpeg\\.7\\.:${PORTSDIR}/graphics/jpeg \
 
 USE_IMAKE=	yes
 
+CAT1=		bggen.0 vdcomp.0 xcmap.0 xv.0 xvpictoppm.0
+
 pre-patch:
 	@${PATCH} ${PATCH_ARGS} -p1 < ${WRKDIR}/Patch.magpic2.PhotoCD.XV310a
+
+pre-configure:
+	for f in `find ${WRKDIR} -name Imakefile -print`; do \
+		${SED} -e 's:/usr/local:'${LOCALBASE}':g' < $$f > $$f.pdone && mv $$f.pdone $$f; \
+	done
 
 post-install:
 	${MKDIR} ${PREFIX}/share/doc/xv
