@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2004/10/03 00:14:38 tv Exp $
+# $NetBSD: Makefile,v 1.13 2004/10/13 22:16:37 ben Exp $
 #
 
-DISTNAME=	biew561
-PKGNAME=	biew-5.6.1
-PKGREVISION=	1
+DISTNAME=	biew562
+PKGNAME=	biew-5.6.2
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=biew/}
 EXTRACT_SUFX=	.tar.bz2
@@ -17,7 +16,7 @@ ONLY_FOR_PLATFORM=	*-*-i386
 USE_BUILDLINK3=	YES
 USE_GNU_TOOLS+=	make
 MAKEFILE=	makefile
-WRKSRC=		${WRKDIR}/biew-561
+WRKSRC=		${WRKDIR}/biew-562
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/biew
