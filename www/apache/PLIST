@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2004/05/13 11:39:09 taca Exp $
+@comment $NetBSD: PLIST,v 1.11.4.1 2004/12/01 00:25:56 salo Exp $
 bin/checkgid
 bin/dbmmanage
 bin/htdigest
@@ -108,10 +108,6 @@ share/httpd/htdocs/manual/bind.html.en
 share/httpd/htdocs/manual/bind.html.fr
 share/httpd/htdocs/manual/bind.html.html
 share/httpd/htdocs/manual/bind.html.ja.jis
-share/httpd/htdocs/manual/cgi_path.html.en
-share/httpd/htdocs/manual/cgi_path.html.fr
-share/httpd/htdocs/manual/cgi_path.html.html
-share/httpd/htdocs/manual/cgi_path.html.ja.jis
 share/httpd/htdocs/manual/configuring.html.en
 share/httpd/htdocs/manual/configuring.html.fr
 share/httpd/htdocs/manual/configuring.html.html
@@ -126,6 +122,7 @@ share/httpd/htdocs/manual/custom-error.html.ja.jis
 share/httpd/htdocs/manual/cygwin.html
 share/httpd/htdocs/manual/dns-caveats.html.en
 share/httpd/htdocs/manual/dns-caveats.html.fr
+share/httpd/htdocs/manual/dns-caveats.html.ja.jis
 share/httpd/htdocs/manual/dns-caveats.html.html
 share/httpd/htdocs/manual/dso.html
 share/httpd/htdocs/manual/ebcdic.html
@@ -169,6 +166,7 @@ share/httpd/htdocs/manual/install.html.html
 share/httpd/htdocs/manual/install.html.ja.jis
 share/httpd/htdocs/manual/invoking.html.en
 share/httpd/htdocs/manual/invoking.html.fr
+share/httpd/htdocs/manual/invoking.html.ja.jis
 share/httpd/htdocs/manual/invoking.html.html
 share/httpd/htdocs/manual/keepalive.html.en
 share/httpd/htdocs/manual/keepalive.html.html
@@ -321,7 +319,6 @@ share/httpd/htdocs/manual/new_features_1_2.html
 share/httpd/htdocs/manual/new_features_1_3.html.en
 share/httpd/htdocs/manual/new_features_1_3.html.html
 share/httpd/htdocs/manual/new_features_1_3.html.ja.jis
-share/httpd/htdocs/manual/new_features_2_0.html
 share/httpd/htdocs/manual/process-model.html.en
 share/httpd/htdocs/manual/process-model.html.html
 share/httpd/htdocs/manual/process-model.html.ja.jis

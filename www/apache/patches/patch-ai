@@ -1,8 +1,8 @@
-$NetBSD: patch-ai,v 1.8 2002/04/02 14:13:03 jlam Exp $
+$NetBSD: patch-ai,v 1.8.16.1 2004/12/01 00:25:56 salo Exp $
 
---- src/support/apxs.pl.orig	Tue Apr  2 02:15:23 2002
+--- src/support/apxs.pl.orig	2004-10-29 14:44:35.000000000 +0100
 +++ src/support/apxs.pl
-@@ -460,8 +460,7 @@
+@@ -423,8 +423,7 @@ if ($opt_i or $opt_e) {
          if ($^O ne "MSWin32") {
              $t =~ s|^.+/([^/]+)$|$1|;
              if ($opt_i) {

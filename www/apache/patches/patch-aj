@@ -1,8 +1,8 @@
-$NetBSD: patch-aj,v 1.7 2001/10/17 19:17:00 jlam Exp $
+$NetBSD: patch-aj,v 1.7.16.1 2004/12/01 00:25:56 salo Exp $
 
---- htdocs/index.html.fr.orig	Wed Jun 27 08:38:39 2001
-+++ htdocs/index.html.fr	Tue Oct 16 22:29:50 2001
-@@ -36,12 +36,28 @@
+--- htdocs/index.html.fr.orig	2001-06-27 09:38:39.000000000 +0100
++++ htdocs/index.html.fr
+@@ -36,12 +36,28 @@ site et ne peut intervenir sur sa config
  <hr width="50%" size="8">
  
  <p>La <a href="manual/">documentation</a> Apache est incluse dans cette

@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.7 2001/06/09 06:36:43 jlam Exp $
+$NetBSD: patch-ac,v 1.7.16.1 2004/12/01 00:25:56 salo Exp $
 
---- htdocs/index.html.en.orig	Thu May  3 20:00:38 2001
-+++ htdocs/index.html.en	Sat Jun  9 01:44:14 2001
-@@ -27,12 +27,26 @@
+--- htdocs/index.html.en.orig	2001-05-04 01:00:38.000000000 +0100
++++ htdocs/index.html.en
+@@ -27,12 +27,26 @@ issues.</p>
  
  <hr width="50%" size="8" />
  <p>The Apache <a href="manual/">documentation</a> has been included
