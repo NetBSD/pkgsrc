@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2003/10/10 09:18:11 cube Exp $
+# $NetBSD: Makefile,v 1.17 2003/10/28 16:59:14 cube Exp $
 # $OpenBSD: Makefile,v 1.13 2000/06/19 18:38:55 dugsong Exp $
 
 DISTNAME=	dsniff-2.3
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security
 MASTER_SITES+=	http://monkey.org/~dugsong/dsniff/
 
