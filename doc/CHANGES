@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6722 2004/07/29 07:42:12 agc Exp $
+$NetBSD: CHANGES,v 1.6723 2004/07/29 09:34:57 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3641,3 +3641,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added xorg-docs-6.7.0 [xtraeme 2004-07-29]
 	Added xorg-dirs-1.0 [xtraeme 2004-07-29]
 	Removed jdk12 [agc 2004-07-29]
+	Removed openldap1 [xtraeme 2004-07-29]
