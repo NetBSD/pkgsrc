@@ -1,0 +1,7 @@
+$NetBSD: MESSAGE,v 1.1.1.1 2000/10/15 12:17:26 rh Exp $
+
+==========================================================================
+  EAGLE has now been installed.  You have to run 'eagle' as 'root' once
+  and click on "Run as Freeware" to generate a valid key.  Thereafter,
+  you can run eagle as any user.
+==========================================================================
