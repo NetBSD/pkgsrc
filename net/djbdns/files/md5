@@ -1,7 +1,7 @@
-$NetBSD: md5,v 1.5 2001/01/10 03:23:49 hubertf Exp $
+$NetBSD: md5,v 1.6 2001/01/26 01:33:21 hubertf Exp $
 
-MD5 (djbdns-1.03.tar.gz) = d756ecca7aa5a0384860eee074f8c3fa
-MD5 (djbdns-1.03-man.tar.gz) = cf8675c8d193fb9129aaec9b1ec03779
+MD5 (djbdns-1.04.tar.gz) = 31ae12bd7f4fb213f830f1b5d302a82a
+MD5 (djbdns-1.04-man.tar.gz) = d92fbf1eb64808ea4208a3499b0a8559
 MD5 (dnscache-log.pl.txt) = ae3b02d588e943e7a0d49e1cfa27ddb5
 MD5 (tinydns-log.pl.txt) = 277b2ecbd2788a5940746faa185fdaef
-MD5 (djbdns-1.03-ipv6.diff.bz2) = d5a2fe93a677734d4f2e692844249081
+MD5 (djbdns-1.04-ipv6.diff.bz2) = 4c3a221f4950d940fa7b753d51e5dc46
