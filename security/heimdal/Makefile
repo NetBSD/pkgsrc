@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2004/07/30 21:05:42 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2004/08/05 16:28:45 jlam Exp $
 
 DISTNAME=	heimdal-0.6.1
 PKGREVISION=	1
@@ -39,12 +39,12 @@ CONFIGURE_ARGS+=	--with-openssl=${SSLBASE}
 
 # Global and legacy options
 .if defined(USE_DB4) || defined(KERBEROS_PREFIX_CMDS)
-.  if !defined(PKG_OPTIONS.mit-krb5)
+.  if !defined(PKG_OPTIONS.heimdal)
 .    if defined(USE_DB4) && !empty(USE_DB4:M[yY][eE][sS])     
-PKG_OPTIONS.mit-krb5+=  db4
+PKG_OPTIONS.heimdal+=	db4
 .    endif
 .    if defined(KERBEROS_PREFIX_CMDS) && !empty(KERBEROS_PREFIX_CMDS:M[yY][eE][sS])     
-PKG_OPTIONS.mit-krb5+=  prefix-cmds
+PKG_OPTIONS.heimdal+=	prefix-cmds
 .    endif
 .  endif
 .endif
