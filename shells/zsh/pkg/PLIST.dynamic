@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.dynamic,v 1.2 2001/07/23 18:23:45 nra Exp $
+@comment $NetBSD: PLIST.dynamic,v 1.3 2001/09/23 21:15:39 tron Exp $
 lib/zsh/libzsh-4.0.2.so
 lib/zsh/4.0.2/zsh/rlimits.so
 lib/zsh/4.0.2/zsh/sched.so
@@ -54,9 +54,6 @@ share/zsh/4.0.2/functions/zftransfer
 share/zsh/4.0.2/functions/zftype
 share/zsh/4.0.2/functions/zfuget
 share/zsh/4.0.2/functions/zfuput
-@dirrm share/zsh/4.0.2/functions
-@dirrm share/zsh/4.0.2
-@dirrm share/zsh
 @dirrm lib/zsh/4.0.2/zsh
 @dirrm lib/zsh/4.0.2
 @dirrm lib/zsh
