@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2000/10/14 16:11:35 hubertf Exp $
+# $NetBSD: Makefile,v 1.23 2000/10/21 22:23:00 wiz Exp $
 #
 
 DISTNAME=	libtool-1.3.5
@@ -17,7 +17,7 @@ GNU_CONFIGURE=	yes
 # ``Cannot find the node "(/usr/pkg/info/libtool.info)Linking executables"''
 # error. Simply making sure the info-files get re-done works here.
 post-extract:
-	rm -f ${WRKSRC}/doc/libtool.info*
+	${RM} -f ${WRKSRC}/doc/libtool.info*
 
 test check: build
 	cd ${WRKSRC} && ${MAKE} check
