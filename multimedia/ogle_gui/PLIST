@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2003/12/08 22:51:55 wiz Exp $
+@comment $NetBSD: PLIST,v 1.1 2004/02/03 04:34:06 grant Exp $
 lib/ogle/ogle_gui
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/ogle_gui.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/ogle_gui.mo

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2003/12/08 22:51:15 wiz Exp $
+@comment $NetBSD: PLIST,v 1.1 2004/02/03 04:34:06 grant Exp $
 bin/ifo_dump
 bin/ogle
 include/ogle/dvd.h
