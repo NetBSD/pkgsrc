@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.6 2003/07/30 13:58:36 markd Exp $
+# $NetBSD: buildlink2.mk,v 1.7 2003/08/04 21:48:01 drochner Exp $
 #
 # This Makefile fragment is included by packages that use kdenetwork.
 #
@@ -13,7 +13,7 @@ BUILDLINK_DEPENDS.kdenetwork?=		kdenetwork>=3.1.3
 BUILDLINK_PKGSRCDIR.kdenetwork?=		../../net/kdenetwork3
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.kdenetwork=kdenetwork
-BUILDLINK_PREFIX.kdenetwork_DEFAULT=	${X11PREFIX}
+BUILDLINK_PREFIX.kdenetwork_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.kdenetwork+=	include/kmailIface.h
 BUILDLINK_FILES.kdenetwork+=	include/mimelib/*
 BUILDLINK_FILES.kdenetwork+=	lib/kde3/kdictapplet.*

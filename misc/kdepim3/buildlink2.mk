@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.5 2003/07/30 14:19:38 markd Exp $
+# $NetBSD: buildlink2.mk,v 1.6 2003/08/04 21:48:00 drochner Exp $
 #
 # This Makefile fragment is included by packages that use kdepim.
 #
@@ -13,7 +13,7 @@ BUILDLINK_DEPENDS.kdepim?=		kdepim>=3.1.3
 BUILDLINK_PKGSRCDIR.kdepim?=		../../misc/kdepim3
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.kdepim=kdepim
-BUILDLINK_PREFIX.kdepim_DEFAULT=	${X11PREFIX}
+BUILDLINK_PREFIX.kdepim_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.kdepim+=	include/KNotesIface.h
 BUILDLINK_FILES.kdepim+=	include/calendar/*
 BUILDLINK_FILES.kdepim+=	include/kgantt/*
