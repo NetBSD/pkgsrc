@@ -3,8 +3,6 @@ It is modeled after Cray Blitz (also written by Bob).
 
 Crafty has the following features:
 
-	- written in C
-	- can be compiled with the GNU C compiler on various platforms
 	- has a customizable opening book
 	- supports tablebases (Steven Edward's endgame database)
 	- text interface
