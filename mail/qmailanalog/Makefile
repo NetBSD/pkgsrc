@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/03/13 03:25:44 schmonz Exp $
+# $NetBSD: Makefile,v 1.8 2005/03/23 00:51:10 schmonz Exp $
 #
 
 DISTNAME=		qmailanalog-0.70
@@ -11,16 +11,8 @@ COMMENT=		Collection of tools to help analyze qmail's activity
 
 USE_BUILDLINK3=		yes
 
-BUILD_TARGET=		it
-INSTALL_TARGET=		setup check
+DJB_RESTRICTED=		YES
+DJB_CONFIG_PREFIX=	${PREFIX}/qmailanalog
 
-RESTRICTED=		"modified source and binaries may not be distributed"
-NO_BIN_ON_CDROM=	${RESTRICTED}
-NO_BIN_ON_FTP=		${RESTRICTED}
-
-do-configure:
-	${ECHO} ${CC:Q} ${CFLAGS:Q} > ${WRKSRC}/conf-cc
-	${ECHO} ${CC:Q} ${_STRIPFLAG_CC} > ${WRKSRC}/conf-ld
-	${ECHO} ${PREFIX}/qmailanalog > ${WRKSRC}/conf-home
-
+.include "../../mk/djbware.mk"
 .include "../../mk/bsd.pkg.mk"
