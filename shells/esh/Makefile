@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/04/14 21:43:59 jtb Exp $
+# $NetBSD: Makefile,v 1.7 2001/04/28 23:59:22 jtb Exp $
 #
 # XXX MASTER_SITES and HOMEPAGE are commented out as they now require
 # authorization for access.
@@ -19,14 +19,13 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/esh ${PREFIX}/bin
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/esh
 	${INSTALL_DATA} ${WRKSRC}/examples/*.esh 			\
-	${PREFIX}/share/examples/esh
+		${PREFIX}/share/examples/esh
 	${INSTALL_DATA_DIR} ${PREFIX}/share/emacs/site-lisp
 	${INSTALL_DATA} ${WRKSRC}/emacs/esh-mode.el 			\
-	${PREFIX}/share/emacs/site-lisp
+		${PREFIX}/share/emacs/site-lisp
 	${INSTALL_DATA} ${WRKSRC}/doc/esh.info ${PREFIX}/info
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/esh
-	@for i in esh.html esh_toc.html ; do				\
-	${INSTALL_DATA} ${WRKSRC}/doc/$$i ${PREFIX}/share/doc/esh/$$i;	\
-	done
+	cd ${WRKSRC} && ${INSTALL_DATA} esh.html esh_toc.html 		\
+		${PREFIX}/share/doc/esh/$$i
 
 .include "../../mk/bsd.pkg.mk"

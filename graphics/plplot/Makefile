@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2001/04/14 21:43:45 jtb Exp $
+# $NetBSD: Makefile,v 1.15 2001/04/28 23:59:19 jtb Exp $
 
 DISTNAME=	plplot-5.0.3
 CATEGORIES=	graphics
@@ -21,38 +21,37 @@ USE_X11=	#defined
 
 EVAL_PREFIX+=	TK_PREFIX=tk TCL_PREFIX=tcl
 
-CONFIGURE_ENV+=	"BIN_DIR=${PREFIX}/bin"
-CONFIGURE_ENV+=	"LIB_DIR=${PREFIX}/lib"
-CONFIGURE_ENV+=	"INCLUDE_DIR=${PREFIX}/include/plplot"
-CONFIGURE_ENV+=	"DATA_DIR=${PREFIX}/libdata/plplot"
-CONFIGURE_ENV+=	"DOC_DIR=${PREFIX}/share/doc/plplot"
-CONFIGURE_ENV+=	"DEMOS_DIR=${PREFIX}/share/examples/plplot"
-CONFIGURE_ENV+=	"TCL_DIR=${PREFIX}/lib/tcl/plplot"
-CONFIGURE_ENV+=	"TKINCDIR=${TK_PREFIX}/include"
-CONFIGURE_ENV+=	"TKLIBDIR=${TK_PREFIX}/lib"
-CONFIGURE_ENV+=	"TCLINCDIR=${TCL_PREFIX}/include"
-CONFIGURE_ENV+=	"TCLLIBDIR=${TCL_PREFIX}/lib"
-CONFIGURE_ENV+=	"USER_FLAGS_C=${CFLAGS}"
-CONFIGURE_ENV+=	"USER_FLAGS_LC=${LDFLAGS}"
-CONFIGURE_ENV+=	"USER_FLAGS_CXX=${CXXFLAGS}"
-CONFIGURE_ENV+=	"USER_FLAGS_LCXX=${LDFLAGS}"
-CONFIGURE_ENV+=	"USER_FLAGS_F=${FFLAGS}"
-CONFIGURE_ENV+=	"USER_FLAGS_LF=${LDLAGS}"
+CONFIGURE_ENV+=	BIN_DIR="${PREFIX}/bin"
+CONFIGURE_ENV+=	LIB_DIR="${PREFIX}/lib"
+CONFIGURE_ENV+=	INCLUDE_DIR="${PREFIX}/include/plplot"
+CONFIGURE_ENV+=	DATA_DIR="${PREFIX}/libdata/plplot"
+CONFIGURE_ENV+=	DOC_DIR="${PREFIX}/share/doc/plplot"
+CONFIGURE_ENV+=	DEMOS_DIR="${PREFIX}/share/examples/plplot"
+CONFIGURE_ENV+=	TCL_DIR="${PREFIX}/lib/tcl/plplot"
+CONFIGURE_ENV+=	TKINCDIR="${TK_PREFIX}/include"
+CONFIGURE_ENV+=	TKLIBDIR="${TK_PREFIX}/lib"
+CONFIGURE_ENV+=	TCLINCDIR="${TCL_PREFIX}/include"
+CONFIGURE_ENV+=	TCLLIBDIR="${TCL_PREFIX}/lib"
+CONFIGURE_ENV+=	USER_FLAGS_C="${CFLAGS}"
+CONFIGURE_ENV+=	USER_FLAGS_LC="${LDFLAGS}"
+CONFIGURE_ENV+=	USER_FLAGS_CXX="${CXXFLAGS}"
+CONFIGURE_ENV+=	USER_FLAGS_LCXX="${LDFLAGS}"
+CONFIGURE_ENV+=	USER_FLAGS_F="${FFLAGS}"
+CONFIGURE_ENV+=	USER_FLAGS_LF="${LDLAGS}"
 
-CONFIGURE_ARGS+="--with-double"
-CONFIGURE_ARGS+="--enable-xwin"
-CONFIGURE_ARGS+="--enable-tcl"
-CONFIGURE_ARGS+="--enable-tk"
-CONFIGURE_ARGS+="--without-shlib"
-CONFIGURE_ARGS+="--disable-python"
-CONFIGURE_ARGS+="--disable-itcl"
-CONFIGURE_ARGS+="--disable-dp"
+CONFIGURE_ARGS+=--with-double
+CONFIGURE_ARGS+=--enable-xwin
+CONFIGURE_ARGS+=--enable-tcl
+CONFIGURE_ARGS+=--enable-tk
+CONFIGURE_ARGS+=--without-shlib
+CONFIGURE_ARGS+=--disable-python
+CONFIGURE_ARGS+=--disable-itcl
+CONFIGURE_ARGS+=--disable-dp
 
 post-patch:
-	for f in ${WRKSRC}/src/plctrl.c; do				\
-		${SED} -e 's:@PREFIX@:'${PREFIX}':g'			\
-		$$f > $$f.tmp && ${MV} $$f.tmp $$f;			\
-	done
+	${MV} -f ${WRKSRC}/src/plctrl.c ${WRKSRC}/src/plctrl.c.dist
+	${SED} -e 's:@PREFIX@:'${PREFIX}':g' ${WRKSRC}/src/plctrl.c.dist \
+		> ${WRKSRC}/src/plctrl.c
 
 pre-configure:
 	(cd ${WRKSRC}/cf && ${LOCALBASE}/bin/autoconf)

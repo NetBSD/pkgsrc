@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/04/14 21:43:56 jtb Exp $
+# $NetBSD: Makefile,v 1.6 2001/04/28 23:59:21 jtb Exp $
 
 DISTNAME=		quadpack-20001130
 CATEGORIES=		math
@@ -16,8 +16,6 @@ pre-build:
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/quadpack
-	for i in doc readme ; do					\
-	${INSTALL_DATA} ${WRKSRC}/$$i ${PREFIX}/share/doc/quadpack;	\
-	done
+	cd ${WRKSRC} && ${INSTALL_DATA} doc readme ${PREFIX}/share/doc/quadpack
 
 .include "../../mk/bsd.pkg.mk"

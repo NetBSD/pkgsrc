@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/04/14 21:43:40 jtb Exp $
+# $NetBSD: Makefile,v 1.5 2001/04/28 23:59:18 jtb Exp $
 
 DISTNAME=		haskell-mode-20001129
 CATEGORIES=		devel editors
@@ -22,7 +22,7 @@ EMACS=			emacs
 LISPDIR=		share/emacs/site-lisp/haskell-mode
 .endif
 
-PLIST_SUBST+=		LISPDIR="${LISPDIR}"
+PLIST_SUBST+=		LISPDIR=${LISPDIR}
 
 SRCS= 	haskell-doc.el haskell-mode.el haskell-font-lock.el		\
 	haskell-simple-indent.el haskell-hugs.el haskell-decl-scan.el	\
@@ -35,9 +35,7 @@ do-build:
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/${LISPDIR}
-	@for f in ${SRCS} ${SRCS:.el=.elc} ; do				\
-		i="${INSTALL_DATA} ${WRKSRC}/$$f ${PREFIX}/${LISPDIR}";	\
-		${ECHO} $$i; $$i;					\
-	done
+	cd ${WRKSRC} && ${INSTALL_DATA} ${SRCS} ${SRCS:.el=.elc} 	\
+			${PREFIX}/${LISPDIR}
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/04/14 21:43:57 jtb Exp $
+# $NetBSD: Makefile,v 1.7 2001/04/28 23:59:22 jtb Exp $
 
 DISTNAME=	tochnog-20010210
 CATEGORIES=	math
@@ -26,14 +26,8 @@ do-install:
 	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/tnp.ps.gz \
 	${PREFIX}/share/doc/tochnog
 	${INSTALL_DATA_DIR} ${PREFIX}/share/tochnog/test
-	@for f in ${WRKDIR}/tochnog/test/*; do			\
-	i="${INSTALL_DATA} $$f ${PREFIX}/share/tochnog/test/";	\
-	${ECHO} $$i; $$i;					\
-	done
+	${INSTALL_DATA} ${WRKDIR}/tochnog/test/* ${PREFIX}/share/tochnog/test/
 	${INSTALL_DATA_DIR} ${PREFIX}/share/tochnog/tools
-	@for f in ${WRKDIR}/tochnog/tools/*; do			\
-	i="${INSTALL_DATA} $$f ${PREFIX}/share/tochnog/tools/";	\
-	${ECHO} $$i; $$i;					\
-	done
+	${INSTALL_DATA} ${WRKDIR}/tochnog/tools/* ${PREFIX}/share/tochnog/tools/
 
 .include "../../mk/bsd.pkg.mk"
