@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.257 1999/04/20 11:07:34 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.258 1999/04/20 20:28:11 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -1569,36 +1569,20 @@ pkg-su-deinstall: uptodate-pkgtools
 
 root-deinstall:
 .ifdef PKG_VERBOSE
-	${_PKG_SILENT}${_PKG_DEBUG}${PKG_DELETE} -v ${PKGNAME} || ${TRUE}
-.else
-	${_PKG_SILENT}${_PKG_DEBUG}${PKG_DELETE} ${PKGNAME} || ${TRUE}
-.endif
-	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${INSTALL_COOKIE} ${PACKAGE_COOKIE}
 .if (${DEINSTALLDEPENDS} != "NO")
-	${_PKG_SILENT}${_PKG_DEBUG}				\
-	${PKG_INFO} -qe ${PKGNAME};				\
-	if [ $$? -ne 0 ]; then					\
-		${MAKE} deinstall-depends;			\
-	fi
-.endif # DEINSTALLDEPENDS != "NO"
-.endif # target(deinstall)
-
-# Deinstall-depends
-# XXX Should be done with "pkg_delete -R"
-#
-# Like clean-depends, only to deinstall things
-.if !target(deinstall-depends)
-deinstall-depends: uptodate-pkgtools
-.if defined(FETCH_DEPENDS) || defined(BUILD_DEPENDS) \
-       || defined(DEPENDS) || defined(RUN_DEPENDS)
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	for dir in `${ECHO} ${FETCH_DEPENDS} ${BUILD_DEPENDS} ${DEPENDS} ${RUN_DEPENDS} | ${TR} '\040' '\012' | ${SED} -e 's/^[^:]*://' -e 's/:.*//' | sort -u`; do \
-		if [ -d $$dir ] ; then					\
-			(cd $$dir && ${MAKE} DEINSTALLDEPENDS=${DEINSTALLDEPENDS} deinstall); \
-		fi							\
-	done
-.endif # *_DEPENDS
-.endif # deinstall-depends
+	${_PKG_SILENT}${_PKG_DEBUG}${PKG_DELETE} -v -R ${PKGNAME} || ${TRUE}
+.else						# DEINSTALLDEPENDS = NO
+	${_PKG_SILENT}${_PKG_DEBUG}${PKG_DELETE} -v ${PKGNAME} || ${TRUE}
+.endif						# DEINSTALLDEPENDS != NO
+.else						# !PKG_VERBOSE
+.if (${DEINSTALLDEPENDS} != "NO")
+	${_PKG_SILENT}${_PKG_DEBUG}${PKG_DELETE} -R ${PKGNAME} || ${TRUE}
+.else						# DEINSTALLDEPENDS = NO
+	${_PKG_SILENT}${_PKG_DEBUG}${PKG_DELETE} ${PKGNAME} || ${TRUE}
+.endif						# DEINSTALLDEPENDS != NO
+.endif						# PKG_VERBOSE
+	@${RM} -f ${INSTALL_COOKIE} ${PACKAGE_COOKIE}
+.endif						# target(deinstall)
 
 
 .endif # __ARCH_OK
