@@ -1,0 +1,3 @@
+Juke is a simple ncurses based jukebox program for Unix computers.
+It uses command line based players to play different kinds of music
+formats.
