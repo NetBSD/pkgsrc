@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2004/04/15 21:20:32 jmmv Exp $
+# $NetBSD: Makefile,v 1.12 2004/06/28 16:30:30 jmmv Exp $
 #
 
-DISTNAME=		gstreamer-0.8.1
+DISTNAME=		gstreamer-0.8.3
 CATEGORIES=		multimedia gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gstreamer/0.8/}
 EXTRACT_SUFX=		.tar.bz2
@@ -23,6 +23,7 @@ USE_PERL5=		build
 
 CONFIGURE_ARGS+=	--disable-plugin-builddir
 CONFIGURE_ARGS+=	--localstatedir=${PREFIX}/libdata/gstreamer-0.8
+CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
 CONFIGURE_ENV+=		ac_cv_path_PYTHON="${PYTHONBIN}"
 
 PKGCONFIG_OVERRIDE+=	pkgconfig/gstreamer-control.pc.in
