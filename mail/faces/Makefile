@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2002/07/07 14:25:52 tron Exp $
+# $NetBSD: Makefile,v 1.27 2002/07/07 14:39:16 tron Exp $
 
 DISTNAME=	faces-1.6.1
 PKGREVISION=	2
@@ -31,7 +31,13 @@ MAKE_ENV+=	CC=gcc
 MAKE_ENV+=	CPPFLAGS=
 .endif
 
-do-configure:
+REPLACE_PERL=	scripts/addxface scripts/deepen scripts/facesaddr \
+		scripts/facesall scripts/from.faces scripts/lpqall.faces \
+		scripts/mailq.faces scripts/mailqto scripts/mailqto.faces \
+		scripts/mkfacesindex scripts/newscheck.faces \
+		scripts/newsfrom.faces scripts/rotary.faces
+
+do-configure: replace-perl
 	${LN} -sf Makefile.dist ${WRKSRC}/${MAKEFILE}
 	cd ${WRKSRC};							\
 	files="								\
@@ -49,5 +55,6 @@ do-configure:
 		${MV} -f $${FILE}.fixed $${FILE};			\
 	done
 
+.include "../../lang/perl5/buildlink.mk"
 .include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
