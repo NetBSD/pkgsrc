@@ -1,3 +1,4 @@
+$NetBSD: patch-ab,v 1.2 2000/12/13 08:31:02 garbled Exp $
 --- crossedit/Cnv/Makefile.in.orig	Tue Dec  5 23:34:36 2000
 +++ crossedit/Cnv/Makefile.in	Tue Dec  5 23:34:56 2000
 @@ -13,7 +13,7 @@
