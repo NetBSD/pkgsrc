@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.7 2000/08/15 03:54:17 hubertf Exp $
+$NetBSD: patch-ab,v 1.8 2000/08/16 16:39:18 tron Exp $
 
 --- xlock/xlock.c.orig	Mon Jul 10 17:46:19 2000
-+++ xlock/xlock.c	Tue Aug 15 05:38:20 2000
++++ xlock/xlock.c	Wed Aug 16 18:38:01 2000
 @@ -597,7 +597,9 @@
  #include <X11/extensions/dpms.h>
  #else /* XFree86 < 4.x */
@@ -12,3 +12,21 @@ $NetBSD: patch-ab,v 1.7 2000/08/15 03:54:17 hubertf Exp $
  extern int  DPMSGetTimeouts(Display *, unsigned short *, unsigned short *, unsigned short *);
  extern int  DPMSSetTimeouts(Display *, unsigned short, unsigned short, unsigned short);
  #endif
+@@ -953,7 +955,7 @@
+ #if defined( HAVE_SYSLOG_H ) && defined( USE_SYSLOG )
+ 	extern Display *dsp;
+ 
+-	syslog(SYSLOG_WARNING, buf);
++	syslog(SYSLOG_WARNING, "%s", buf);
+ 	if (!nolock) {
+ 		if (strstr(buf, "unable to open display") == NULL)
+ 			syslogStop(XDisplayString(dsp));
+@@ -962,7 +964,7 @@
+ 		closelog();
+ 	}
+ #else
+-	(void) fprintf(stderr, buf);
++	(void) fprintf(stderr, "%s", buf);
+ #endif
+ 	exit(1);
+ }
