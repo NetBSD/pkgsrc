@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/01/24 15:46:43 grant Exp $
+# $NetBSD: Makefile,v 1.16 2004/02/10 20:58:04 garbled Exp $
 #
 
 DISTNAME=		gtkglext-0.7.1
@@ -12,7 +12,7 @@ HOMEPAGE=		http://gtkglext.sourceforge.net/
 COMMENT=		OpenGL extension to GTK
 
 GNU_CONFIGURE=		YES
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_PERL5=		build
 USE_GNU_TOOLS+=		make
 USE_X11=		YES
@@ -25,8 +25,9 @@ LIBS+=			-lm
 CONFIGURE_ARGS+=        --with-html-dir=${PREFIX}/share/doc/html
 CONFIGURE_ARGS+=        --enable-gtk-doc=no
 
-.include "../../devel/pkgconfig/buildlink2.mk"
-.include "../../graphics/MesaLib/buildlink2.mk"
-.include "../../graphics/glu/buildlink2.mk"
-.include "../../x11/gtk2/buildlink2.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../graphics/glu/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
