@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1573 2004/04/05 02:31:06 xtraeme Exp $
+$NetBSD: TODO,v 1.1574 2004/04/05 02:45:44 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -191,7 +191,6 @@ Suggested package updates
 	o gdb-6.0
 	o generator-0.35
 	o gettext-0.14.1
-	o gftp-2.0.17
 	o ghostscript-8.00 (apfl)
 	o ghostscript-8.01 (gnu)
 	o gimageview-0.2.25
