@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.34 2004/06/26 10:50:23 jmmv Exp $
+# $NetBSD: Makefile,v 1.35 2004/09/21 17:13:02 jmmv Exp $
 
-DISTNAME=		gnome-games-2.6.2
+DISTNAME=		gnome-games-2.8.0
 CATEGORIES=		games gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-games/2.6/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-games/2.8/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		tech-pkg@NetBSD.org
@@ -34,8 +34,7 @@ CONFIGURE_ARGS+=	--sysconfdir=${EGDIR}
 
 EGDIR=			${PREFIX}/share/examples/gnome2-games
 CONF_FILES=
-.for conffile in	sound/events/gataxx.soundlist \
-			sound/events/gnect.soundlist \
+.for conffile in	sound/events/gnect.soundlist \
 			sound/events/gnibbles.soundlist \
 			sound/events/gnobots2.soundlist \
 			sound/events/iagno.soundlist
@@ -69,6 +68,7 @@ GCONF2_SCHEMAS+=	same-gnome.schemas
 .include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../graphics/librsvg2/buildlink3.mk"
 .include "../../lang/guile/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
