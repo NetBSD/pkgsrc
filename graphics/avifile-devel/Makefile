@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2001/06/29 04:54:54 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2001/07/26 15:20:49 zuntum Exp $
 #
 
-DISTNAME=	avifile-0.6.20010618
+DISTNAME=	avifile-0.6.20010726
 CATEGORIES=	graphics
-MASTER_SITES=	http://flis.utech.lublin.pl/~zuntum/distfiles/		\
-		http://zuntum.net/distfiles/
+MASTER_SITES=	http://flis.utech.lublin.pl/~zuntum/distfiles/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	zuntum@netbsd.org
@@ -34,11 +33,11 @@ LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 GNU_CONFIGURE=		YES
 
-CXXFLAGS+=		-L${BUILDLINK_DIR}/lib -I${BUILDLINK_DIR}/include
+CXXFLAGS+=		-L${BUILDLINK_DIR}/lib -I${BUILDLINK_DIR}/include -I${X11PREFIX}/include
 
 CONFIGURE_ARGS+=	--with-win32-path=${LOCALBASE}/lib/win32
-CONFIGURE_ARGS+=	--enable-release
 CONFIGURE_ARGS+=	--disable-dpms
+CONFIGURE_ARGS+=	--disable-ffmpeg
 
 .if defined (WITH_QT) && ${WITH_QT} == YES
 .include "../../x11/qt2-designer/buildlink.mk"

@@ -1,9 +1,15 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/06/16 11:48:04 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/07/26 15:20:51 zuntum Exp $
+${QT}bin/avicat
 bin/avifile-config
+${QT}bin/avimake
 ${QT}bin/aviplay
+${QT}bin/avitype
 ${QT}bin/benchmark
 ${QT}bin/qtrecompress
+include/avifile/Locker.h
 include/avifile/ReadHandlers.h
+include/avifile/StreamInfo.h
+include/avifile/VideoDPMS.h
 include/avifile/audiodecoder.h
 include/avifile/audioencoder.h
 include/avifile/avifile.h
@@ -25,6 +31,7 @@ include/avifile/playerwidget.h
 include/avifile/plugin.h
 include/avifile/registry.h
 include/avifile/renderer.h
+include/avifile/utils.h
 include/avifile/version.h
 include/avifile/videodecoder.h
 include/avifile/videoencoder.h
@@ -33,6 +40,11 @@ lib/avifile/libaudiodec.la
 lib/avifile/libaudiodec.so
 lib/avifile/libaudiodec.so.0
 lib/avifile/libaudiodec.so.0.0
+${QT}lib/avifile/libmjpeg.a
+${QT}lib/avifile/libmjpeg.la
+${QT}lib/avifile/libmjpeg.so
+${QT}lib/avifile/libmjpeg.so.0
+${QT}lib/avifile/libmjpeg.so.0.0
 lib/avifile/libmp3lame_audioenc.a
 lib/avifile/libmp3lame_audioenc.la
 lib/avifile/libmp3lame_audioenc.so
@@ -52,7 +64,7 @@ lib/libaviplay.a
 lib/libaviplay.la
 lib/libaviplay.so
 lib/libaviplay.so.0
-lib/libaviplay.so.0.0
+lib/libaviplay.so.0.6
 share/avifile/about.ppm
 share/avifile/mute.ppm
 share/avifile/open.ppm
