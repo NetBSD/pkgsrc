@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.12 2004/04/17 00:15:21 snj Exp $
+# $NetBSD: Makefile.common,v 1.13 2004/05/04 21:58:07 grant Exp $
 #
 
 DISTNAME=	SDL-1.2.7
@@ -44,6 +44,17 @@ MAKE_ENV+=		NASMFLAGS="${NASMFLAGS_${OBJECT_FMT}}"
 # are noted correctly in the generated sdl-config.
 #
 CONFIGURE_ENV+=		SYSTEM_LIBS="${LDFLAGS}"
+
+# buildlink passthru the directories required for the Cocoa framework
+# on Darwin if they exist.
+.if ${OPSYS} == "Darwin"
+COCOA_DIRS+=			/System /Library /Developer
+.  for _dir_ in ${COCOA_DIRS}
+.    if exists(${_dir_})
+BUILDLINK_PASSTHRU_DIRS+=	${_dir_}
+.    endif
+.  endfor
+.endif
 
 .include "../../mk/ossaudio.buildlink3.mk"
 .if defined(HAVE_OSS) && (${HAVE_OSS} == "YES")
