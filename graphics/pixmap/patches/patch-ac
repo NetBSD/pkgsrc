@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.4 2002/06/28 08:55:18 agc Exp $
+$NetBSD: patch-ac,v 1.5 2002/10/08 12:38:26 jlam Exp $
 
 --- Imakefile.orig	Fri May 13 06:04:38 1994
 +++ Imakefile
@@ -27,7 +27,7 @@ $NetBSD: patch-ac,v 1.4 2002/06/28 08:55:18 agc Exp $
 -        XPM_INCLUDEDIR = /net/koala/include
 -        XPM_LIBDIR = /net/koala/lib/sun4
 -        EXTRA_INCLUDES = $(R5EXT) -I. -I.. -I$(XPM_INCLUDEDIR) -I/usr/include/$(MOTIFVER)
-+        XPM_INCLUDEDIR = $(BUILDLINK_DIR)/include
++        XPM_INCLUDEDIR = $(LOCALBASE)/include
 +        XPM_LIBDIR = $(USRLIBDIR)
 +        EXTRA_INCLUDES = $(R5EXT) -I. -I.. -I$(XPM_INCLUDEDIR) -I$(MOTIFBASE)/include
  
