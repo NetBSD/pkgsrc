@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/10/01 11:23:15 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2000/01/31 20:56:50 drochner Exp $
 bin/dx
 dx/lib_netbsd/libDXlite.a
 dx/lib_netbsd/libDXcallm.a
@@ -12,6 +12,7 @@ dx/lib/dxfSaveCurrentImage.net
 dx/lib/dxrc
 dx/lib/dxexec.exp
 dx/lib/outboard.c
+dx/bin/dx
 dx/bin_netbsd/dxexec
 dx/bin_netbsd/dxui
 dx/bin_netbsd/prompter
