@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/03/15 00:10:30 tron Exp $
+@comment $NetBSD: PLIST,v 1.2 1999/04/04 23:16:54 tron Exp $
 bin/gmc
 bin/mc
 bin/mcmfmt
@@ -28,13 +28,8 @@ lib/mc/extfs/uzoo
 lib/mc/extfs/uar
 lib/mc/extfs/ulha
 lib/mc/extfs/uzip
+lib/mc/extfs/uha
 lib/mc/layout
-lib/mc/mc-gnome.ext
-lib/mc/mc.ext
-lib/mc/mc.hint
-lib/mc/mc.hlp
-lib/mc/mc.lib
-lib/mc/mc.menu
 lib/mc/term/README.xterm
 lib/mc/term/ansi.ti
 lib/mc/term/linux.ti
@@ -42,6 +37,30 @@ lib/mc/term/vt100.ti
 lib/mc/term/xterm.ad
 lib/mc/term/xterm.tcap
 lib/mc/term/xterm.ti
+lib/mc/syntax/c.syntax
+lib/mc/syntax/changelog.syntax
+lib/mc/syntax/diff.syntax
+lib/mc/syntax/diffc.syntax
+lib/mc/syntax/html.syntax
+lib/mc/syntax/java.syntax
+lib/mc/syntax/latex.syntax
+lib/mc/syntax/lsm.syntax
+lib/mc/syntax/makefile.syntax
+lib/mc/syntax/ml.syntax
+lib/mc/syntax/nroff.syntax
+lib/mc/syntax/pascal.syntax
+lib/mc/syntax/perl.syntax
+lib/mc/syntax/python.syntax
+lib/mc/syntax/sh.syntax
+lib/mc/syntax/smalltalk.syntax
+lib/mc/desktop-scripts/startup.links
+lib/mc/desktop-scripts/README.desktop
+lib/mc/mc-gnome.ext
+lib/mc/mc.ext
+lib/mc/mc.hint
+lib/mc/mc.hlp
+lib/mc/mc.lib
+lib/mc/mc.menu
 man/man1/mc.1
 man/man1/mcedit.1
 man/man8/mcserv.8
@@ -119,6 +138,8 @@ share/pixmaps/mc/makefile.xpm
 share/pixmaps/mc/trash.xpm
 @dirrm share/pixmaps/mc
 @dirrm lib/mc/bin
+@dirrm lib/mc/desktop-scripts
 @dirrm lib/mc/extfs
+@dirrm lib/mc/syntax
 @dirrm lib/mc/term
 @dirrm lib/mc
