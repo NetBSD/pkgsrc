@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2004/06/11 10:40:56 grant Exp $
+# $NetBSD: Makefile,v 1.4 2004/07/24 22:44:12 recht Exp $
 
-PKGNAME=		postgresql-contrib-${BASE_VERS}
+PKGNAME=		postgresql74-contrib-${BASE_VERS}
 SVR4_PKGNAME=		pstgc
 COMMENT=		PostgreSQL database contrib programs
 
