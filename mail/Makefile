@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 1999/04/12 21:21:33 tron Exp $
+# $NetBSD: Makefile,v 1.24 1999/04/30 16:55:39 tv Exp $
 # FreeBSD Id: Makefile,v 1.45 1997/08/13 18:35:22 andreas Exp 
 #
 
@@ -11,6 +11,7 @@
     SUBDIR += exmh
     SUBDIR += faces
     SUBDIR += fetchmail
+    SUBDIR += fromto
     SUBDIR += imap-uw
 #    SUBDIR += mailagent
     SUBDIR += mailwrapper
@@ -20,8 +21,8 @@
 #    SUBDIR += mew
 #    SUBDIR += mh
     SUBDIR += mhonarc
-    SUBDIR += mutt
     SUBDIR += mush
+    SUBDIR += mutt
     SUBDIR += nmh
 #    SUBDIR += p5-Mail-Folder
 #    SUBDIR += p5-Mail-POP3Client
