@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6398 2004/06/29 23:45:44 recht Exp $
+$NetBSD: CHANGES,v 1.6399 2004/06/30 00:16:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3180,3 +3180,6 @@ Changes to the packages collection and infrastructure in 2004:
 	Added gcc34-ada-3.4.1 [shannonjr 2004-06-29]
 	Updated gstreamer to 0.8.3nb1 [recht 2004-06-29]
 	Updated snooper to 19991202nb1 [recht 2004-06-29]
+	Updated doclifter to 1.9 [wiz 2004-06-29]
+	Updated capc-calc to 2.11.9.3 [wiz 2004-06-29]
+	Updated dvd+rw-tools to 5.19.4.9.7 [wiz 2004-06-30]
