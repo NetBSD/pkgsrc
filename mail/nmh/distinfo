@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.9 2005/01/16 19:19:46 jmmv Exp $
+$NetBSD: distinfo,v 1.10 2005/02/24 09:59:25 agc Exp $
 
 SHA1 (nmh-1.0.4.tar.gz) = 71441a884d898db2fd9184a92e663682536425f5
+RMD160 (nmh-1.0.4.tar.gz) = 32f0a0cb7aa76f7d7efc59d99b6e5aeeea519037
 Size (nmh-1.0.4.tar.gz) = 683215 bytes
 SHA1 (patch-aa) = 88e3e0445cb0102bb3748eb2c9503950ae631931
 SHA1 (patch-ca) = 126d53b3af216754c40b828d7c444a6ee077073f

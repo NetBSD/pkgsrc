@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.13 2003/07/11 07:40:45 jtb Exp $
+$NetBSD: distinfo,v 1.14 2005/02/24 09:59:30 agc Exp $
 
 SHA1 (vm-7.17.tar.gz) = 18504d06ba448b8f580aa9d3c240e9d734f6d45c
+RMD160 (vm-7.17.tar.gz) = 593f4e3887457380c0cf6c59b7831bdca5de2404
 Size (vm-7.17.tar.gz) = 380404 bytes
 SHA1 (patch-aa) = 7b8e9b8bcc1c03604fc0d2a81683754b823dc7a6
 SHA1 (patch-ab) = 51ea93e4b4066fbab7e75d03bea2cffd20c85440

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2004/10/12 11:08:03 markd Exp $
+$NetBSD: distinfo,v 1.5 2005/02/24 09:59:23 agc Exp $
 
 SHA1 (kbiff-3.7.1.tar.bz2) = b44fbb342ff64e1a3a8d6d42a41f5e5f74a4bd07
+RMD160 (kbiff-3.7.1.tar.bz2) = 00d802d956351f537bbcc6ed364a3e940b7dd09d
 Size (kbiff-3.7.1.tar.bz2) = 629007 bytes
 SHA1 (patch-aa) = 3f63951e0f77f32b6c59aecae3bb13a81b870afb
 SHA1 (patch-ab) = 53565884f5aed49b8e2d4ad73f3145a95b85895e

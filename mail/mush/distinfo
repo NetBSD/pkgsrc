@@ -1,20 +1,28 @@
-$NetBSD: distinfo,v 1.4 2002/06/03 18:58:48 christos Exp $
+$NetBSD: distinfo,v 1.5 2005/02/24 09:59:25 agc Exp $
 
 SHA1 (mush/mush-7.2.5.tar.Z) = 1b9b54b368b9a748401b1baeb3b3eba5a9ed2c03
+RMD160 (mush/mush-7.2.5.tar.Z) = 32e010f544f79cc1a0f899d722d465975d552a4e
 Size (mush/mush-7.2.5.tar.Z) = 496317 bytes
 SHA1 (mush/patch-7.2.6-alpha-1) = 132e609a6c44889a4ee462cdf0078923c1e0f4c8
+RMD160 (mush/patch-7.2.6-alpha-1) = c7ede33d55899435674ac721d2302139ee4b8b2a
 Size (mush/patch-7.2.6-alpha-1) = 139372 bytes
 SHA1 (mush/patch-7.2.6-alpha-2) = 34c72281af8e2f7f3ef72efad77b824f422845d4
+RMD160 (mush/patch-7.2.6-alpha-2) = 6eed5884f568f52745171f22f717c6f90c46c6c2
 Size (mush/patch-7.2.6-alpha-2) = 12684 bytes
 SHA1 (mush/patch-7.2.6-alpha-3) = a04066037178155c9849fb06329557480a768d87
+RMD160 (mush/patch-7.2.6-alpha-3) = 3ba6b8554d64e826f04b430c227ae436988bc8d1
 Size (mush/patch-7.2.6-alpha-3) = 22109 bytes
 SHA1 (mush/patch-7.2.6-beta-1) = c21c2e60871bccae16310e994a1421c791d1b8cd
+RMD160 (mush/patch-7.2.6-beta-1) = 6abdceaeacb30f2dcd1c18ba1f442bce3a3e7e05
 Size (mush/patch-7.2.6-beta-1) = 5432 bytes
 SHA1 (mush/patch-7.2.6-beta-2) = d6e6ccfa1aaa7113a601c6570364eaa901e78749
+RMD160 (mush/patch-7.2.6-beta-2) = b42f8d4f142f556cff02140bba0ca596cc57440d
 Size (mush/patch-7.2.6-beta-2) = 1907 bytes
 SHA1 (mush/patch-7.2.6-beta-3) = 43014005455f1f219f5590506ae354875da0f825
+RMD160 (mush/patch-7.2.6-beta-3) = 196e8aa0f7d3574709760a6a2ae74b0343b11b9f
 Size (mush/patch-7.2.6-beta-3) = 56089 bytes
 SHA1 (mush/patch-7.2.6-beta-4) = ad506cafa0649196a8dc0576dd17d60937f226e7
+RMD160 (mush/patch-7.2.6-beta-4) = dd3ac8494e0c85ba47516c4d4bb9fce4c9f1a8a7
 Size (mush/patch-7.2.6-beta-4) = 19764 bytes
 SHA1 (patch-aa) = dd38a31a1e048471013df7a167fdf5582445ce2b
 SHA1 (patch-ab) = e1482baca81fe09889f8316d96f9afb1a7a6bbb0

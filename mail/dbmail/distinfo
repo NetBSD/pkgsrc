@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/01/09 03:21:07 schmonz Exp $
+$NetBSD: distinfo,v 1.2 2005/02/24 09:59:21 agc Exp $
 
 SHA1 (dbmail-2.0.1.tgz) = fbe5e0b2ab13257a78e9226e5e416b7d745d3c2c
+RMD160 (dbmail-2.0.1.tgz) = 8710480ada52d3ae131adb8b2785cd352a55aba2
 Size (dbmail-2.0.1.tgz) = 537346 bytes

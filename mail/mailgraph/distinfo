@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/12/31 21:36:59 kim Exp $
+$NetBSD: distinfo,v 1.2 2005/02/24 09:59:24 agc Exp $
 
 SHA1 (mailgraph-1.10.tar.gz) = 9c7db8bedf13201a1e17446e415f9d5d7921c17b
+RMD160 (mailgraph-1.10.tar.gz) = a15b874153e365e32ee85c61aaa3ada9b47c5729
 Size (mailgraph-1.10.tar.gz) = 19234 bytes
