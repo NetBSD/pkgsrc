@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.566 2002/11/21 10:05:17 grant Exp $
+$NetBSD: CHANGES,v 1.567 2002/11/21 10:10:59 grant Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3675,3 +3675,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Added whiteBOX-0.4.2 [jschauma 2002-11-20]
 	Updated samba to 2.2.7 [martti 2002-11-21]
 	Updated bpalogin to 2.0.1nb1 [grant 2002-11-21]
+	Updated icewm to 1.2.0nb1 [grant 2002-11-21]
