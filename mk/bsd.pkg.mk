@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.388 2000/01/11 09:18:03 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.389 2000/01/11 13:19:03 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -537,7 +537,7 @@ PKGTOOLS_VERSION!= ${IDENT} ${PKG_CREATE} ${PKG_DELETE} ${PKG_INFO} ${PKG_ADD} |
 MAKEFLAGS+=	" PKGTOOLS_VERSION=${PKGTOOLS_VERSION}"
 
 # Latest version of pkgtools required for this file.
-# XXX See below for a few test on PKGTOOLS_REQD > 19990909
+# XXX See below for a few test on PKGTOOLS_VERSION > 19991123
 #     that can be removed when this is bumped. (size code - HF)
 PKGTOOLS_REQD=		19990909
 
@@ -2502,9 +2502,9 @@ fake-pkg: ${PLIST} ${DESCR}
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -rf ${PKG_DBDIR}/${PKGNAME}
 .endif
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${BUILD_VERSION_FILE} ${BUILD_INFO_FILE}
-.if ${PKGTOOLS_VERSION} > 19990909
+.if ${PKGTOOLS_VERSION} > 19991123
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${SIZE_PKG_FILE} ${SIZE_ALL_FILE}
-.endif # ${PKGTOOLS_VERSION} > 19990909
+.endif # ${PKGTOOLS_VERSION} > 19991123
 	${_PKG_SILENT}${_PKG_DEBUG}files="";				\
 	for f in ${.CURDIR}/Makefile ${FILESDIR}/* ${PKGDIR}/*; do	\
 		if [ -f $$f ]; then					\
@@ -2540,10 +2540,10 @@ fake-pkg: ${PLIST} ${DESCR}
 	@${ECHO} "GMAKE=	`${GMAKE} --version | ${GREP} version`" >> ${BUILD_INFO_FILE}
 .endif
 	@${ECHO} "_PKGTOOLS_VER= ${PKGTOOLS_VERSION}" >> ${BUILD_INFO_FILE}
-.if ${PKGTOOLS_VERSION} > 19990909
+.if ${PKGTOOLS_VERSION} > 19991123
 	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} print-pkg-size                       >${SIZE_PKG_FILE}
 	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} print-pkg-size SIZEDEPENDS=yesplease >${SIZE_ALL_FILE}
-.endif # ${PKGTOOLS_VERSION} > 19990909
+.endif # ${PKGTOOLS_VERSION} > 19991123
 	${_PKG_SILENT}${_PKG_DEBUG}if [ ! -d ${PKG_DBDIR}/${PKGNAME} ]; then			\
 		${ECHO_MSG} "===>  Registering installation for ${PKGNAME}"; \
 		${MKDIR} ${PKG_DBDIR}/${PKGNAME};			\
