@@ -1,0 +1,34 @@
+$NetBSD: distinfo,v 1.1.1.1 2001/12/21 23:38:52 zuntum Exp $
+
+SHA1 (MPlayer-0.18pre.tgz) = ac440d64d69e26ca9bbc4df8b451c27857e1bd1a
+Size (MPlayer-0.18pre.tgz) = 1012232 bytes
+SHA1 (patch-aa) = ed1f58f04703e808d8c7daff6d9c7f0113ba540e
+SHA1 (patch-ab) = b10669d5577ecaf7ce67aabb8756a3140cdac5dc
+SHA1 (patch-ac) = 0abea756448a47177005383fe1cb2dc87cf09c31
+SHA1 (patch-ad) = bb8754bdea394818e6227b262b4ab73d7b530bd7
+SHA1 (patch-ae) = 3c1654794454ebc906a7999fdcd04ef020a0b0f2
+SHA1 (patch-af) = ef6b4e816fe3efdd14bea9c30af7627342638e32
+SHA1 (patch-ag) = 1158ed93f6f8d594e18eaefb87f78684f4a93a7d
+SHA1 (patch-ah) = fd8a2145f33c2e0769aa8012d41f9ed819458536
+SHA1 (patch-ai) = 7f4fc4e9b69c40002c2df615f4f8dedb9388516f
+SHA1 (patch-aj) = 431b917c225d8667899ffeac2fc4f6fa1fa61764
+SHA1 (patch-ak) = 97821c28cce2ce8b04881d962b9e0fe8e0c423ac
+SHA1 (patch-al) = d2fb5274f852ac8bb31c580bff4dfc941660202c
+SHA1 (patch-am) = dbbc8131be35d2c88680e0e32181df059cc55838
+SHA1 (patch-an) = 713c67e276713e8bfac493b740a8b4708700a0ec
+SHA1 (patch-ao) = 6f7fccf574ddc551886dd2ccdd87a15444319539
+SHA1 (patch-ap) = ab3b94fc31654b03ff98e3d2ab9906b32ef81050
+SHA1 (patch-aq) = 12363063cb68e9f101697f926fd2b2e19d434dec
+SHA1 (patch-ar) = 9cca7efe82d8d73c0b7046293083cfd86cefc5cb
+SHA1 (patch-as) = 22efcab70397cd2fbeb1310b3a60fd499ae6e932
+SHA1 (patch-at) = dececd42336eadf991ec4029e001099554d01ed5
+SHA1 (patch-au) = ebb03b8b115d67386c99c2d1d3d9a76719687186
+SHA1 (patch-av) = 2a7c2650b16357ad1aafa055a62b09a9ac89941a
+SHA1 (patch-aw) = f25c6865c14d57d604b03098f1c99021816b0331
+SHA1 (patch-ax) = 92f88b1e7542d88e39784d3c68b861146f420eab
+SHA1 (patch-ay) = 68af26124eb96348098b382cb70d44134fe9b2d2
+SHA1 (patch-az) = a7b18e6efcea21d057e6cb184002a56aba0c78f8
+SHA1 (patch-ba) = 90978e82a64c1545ab3ae5f9f8179491e0600320
+SHA1 (patch-bb) = 5ddcb4dd8fa95a1d0130fb92525926aa5614fa36
+SHA1 (patch-bc) = c1676330aec9cdb7ef206eb803613ab8684bc775
+SHA1 (patch-bd) = 4130fd3302879edc6de79089f6805ea5ebafbe26

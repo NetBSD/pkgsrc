@@ -1,0 +1,11 @@
+--- libao2/ao_alsa9.c.orig	Sat Jun 23 22:59:54 2001
++++ libao2/ao_alsa9.c	Mon Jul 30 22:10:09 2001
+@@ -47,7 +47,7 @@
+ static int alsa_fragcount = 8;
+ 
+ /* to set/get/query special features/parameters */
+-static int control(int cmd, int arg)
++static int control(int cmd, void* arg)
+ {
+     switch(cmd)
+     {
