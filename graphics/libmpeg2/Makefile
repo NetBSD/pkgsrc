@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2003/12/24 09:53:49 jmmv Exp $
+# $NetBSD: Makefile,v 1.3 2004/01/16 10:33:10 xtraeme Exp $
 
-DISTNAME=	mpeg2dec-${PKGNAME:S/libmpeg2-//}
-PKGNAME=	libmpeg2-20030612
+DISTNAME=	mpeg2dec-0.4.0
+PKGNAME=	libmpeg2-0.4.0
 CATEGORIES=	graphics
-MASTER_SITES=	http://www.videolan.org/pub/vlc/0.6.1/contrib/
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libmpeg2/}
 
 MAINTAINER=	wulf@NetBSD.org
 HOMEPAGE=	http://libmpeg2.sourceforge.net/
@@ -15,7 +14,11 @@ USE_GMAKE=	yes
 USE_LIBTOOL=	yes
 USE_BUILDLINK2=	yes
 
+PKGCONFIG_OVERRIDE+=    libmpeg2/convert/libmpeg2convert.pc.in
+PKGCONFIG_OVERRIDE+=    libmpeg2/libmpeg2.pc.in
+
 CONFIGURE_ARGS=	--enable-shared
 
 .include "../../devel/SDL/buildlink2.mk"
+.include "../../devel/pkgconfig/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
