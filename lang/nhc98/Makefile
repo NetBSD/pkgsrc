@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/02/17 09:07:22 agc Exp $
+# $NetBSD: Makefile,v 1.5 2001/02/19 17:08:12 jtb Exp $
 
 DISTNAME=		nhc98src-1.00
 PKGNAME=		nhc98-1.00
@@ -12,20 +12,22 @@ COMMENT=		Portable Haskell 98 compiler
 NOT_FOR_PLATFORM=	*-*-alpha
 
 WRKSRC=			${WRKDIR}/nhc98-1.00
-HAS_CONFIGURE=		YES
+HAS_CONFIGURE=		#defined
 CONFIGURE_ARGS+=	--buildwith=gcc --installdir=${PREFIX} \
 			+docs --docdir=${PREFIX}/share/doc/nhc98
 
 # Note that you can also build with ghc (Glasgow Haskell Compiler).
 
-USE_GMAKE=		YES
+USE_GMAKE=		#defined
+
+HARCH=			`${WRKSRC}/script/harch`
+PLIST_SUBST+=		HARCH=${HARCH}
 
 post-extract:
-	@for f in `${FIND} ${WRKSRC}/docs -type d | ${GREP} CVS`; do \
-	${RM} -R $$f ; done
+	${RM} -fr ${WRKSRC}/docs/CVS ${WRKSRC}/docs/*/CVS
 	${RMDIR} ${WRKSRC}/docs/hat
 
 do-build:
-	@(cd ${WRKSRC} && ${GMAKE})
+	cd ${WRKSRC} && ${GMAKE}
 
 .include "../../mk/bsd.pkg.mk"
