@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.1 2004/08/23 21:15:17 xtraeme Exp $
+# $NetBSD: options.mk,v 1.2 2004/11/18 23:02:01 jlam Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.sudo
-PKG_SUPPORTED_OPTIONS=	kerberos ldap pam
+PKG_SUPPORTED_OPTIONS=	kerberos ldap PAM
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mkerberos)
@@ -18,7 +18,7 @@ CONFIGURE_ARGS+=	--without-kerb5
 CONFIGURE_ARGS+=	--with-ldap=${BUILDLINK_PREFIX.openldap}
 .endif
 
-.if !empty(PKG_OPTIONS:Mpam)
+.if !empty(PKG_OPTIONS:MPAM)
 .  include "../../security/PAM/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-pam
 .endif
