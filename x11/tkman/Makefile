@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 1998/11/19 15:40:48 agc Exp $
+# $NetBSD: Makefile,v 1.17 1998/12/03 12:41:58 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.28 1997/12/08 15:51:20 tg Exp
 #
 
@@ -11,7 +11,7 @@ MAINTAINER=		packages@netbsd.org
 
 DEPENDS+=		tk-8.0p2:../../x11/tk80
 DEPENDS+=		rman-3.0.6:../../textproc/rman
-DEPENDS+=		glimpse-4.0:../../textproc/glimpse
+DEPENDS+=		glimpse-4.1:../../textproc/glimpse
 
 NO_CDROM=		"Don't sell for profit"
 MIRROR_DISTFILE=	no
