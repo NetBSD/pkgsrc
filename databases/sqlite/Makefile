@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2005/02/24 16:05:25 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2005/02/24 19:08:02 drochner Exp $
 
 DISTNAME=		sqlite-2.8.16
 CATEGORIES=		databases
@@ -22,7 +22,7 @@ CONFIGURE_ENV+=		config_TARGET_READLINE_INC="-I${BUILDLINK_PREFIX.readline}/incl
 CFLAGS+=		-DUINT32_TYPE=u_int32_t -DUINT16_TYPE=u_int16_t \
 			-DUINT8_TYPE=u_int8_t -DINTPTR_TYPE=long
 
-PKGCONFIG_OVERRIDE=	${WRKDIR}/sqlite/sqlite.pc.in
+PKGCONFIG_OVERRIDE=	${WRKDIR}/sqlite-2.8.16/sqlite.pc.in
 
 post-extract:
 	${MKDIR} ${WRKSRC}
