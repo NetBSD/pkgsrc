@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 1998/12/04 11:36:03 frueauf Exp $
+# $NetBSD: Makefile,v 1.2 1998/12/21 10:29:39 frueauf Exp $
 #
 
-DISTNAME=	R-0.63.0
-WRKSRC=		${WRKDIR}/R-0.63
+DISTNAME=	R-0.63.1
 CATEGORIES=	math
 MASTER_SITES=	http://lib.stat.cmu.edu/R/CRAN/src/base/ \
 		ftp://ftp.biostat.washington.edu/mirrors/R/CRAN/src/base/ \
@@ -19,13 +18,13 @@ MAINTAINER=	lamj@stat.cmu.edu
 HOMEPAGE=	http://lib.stat.cmu.edu/R/CRAN/
 
 .if !exists(/usr/bin/f77)
-BUILD_DEPENDS+=	f2c-19980516p1:../../lang/f2c
+DEPENDS+=	f2c:../../lang/f2c
 .endif
 DEPENDS+=	readline-2.2:../../devel/readline
 
-USE_PERL5=	yes
-USE_GMAKE=	yes
+CONFLICTS=	R-0.63.0
 
+USE_PERL5=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--enable-readline --with-x
 
@@ -40,13 +39,11 @@ R_PAPERSIZE=	Letter
 .endif
 .endif
 
-CFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
-CONFIGURE_ENV+=	CPPFLAGS=-I${LOCALBASE}/include \
-		DLLFLAGS="${LDFLAGS}" \
-		R_PAPERSIZE=${R_PAPERSIZE}
+CONFIGURE_ENV+=	CPPFLAGS="-I${LOCALBASE}/include" \
+		R_PAPERSIZE="${R_PAPERSIZE}"
 
-post-build:
-	${TOUCH} ${WRKSRC}/library/modreg/data/.keep_me
+post-install:
+	${RMDIR} ${PREFIX}/share/R/library/modreg/data
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,0 +1,35 @@
+$NetBSD: patch-ad,v 1.1 1998/12/21 10:29:41 frueauf Exp $
+
+--- src/library/eda/src/Makefile.in.orig	Tue Oct 13 04:04:28 1998
++++ src/library/eda/src/Makefile.in	Sun Dec 20 11:16:36 1998
+@@ -18,7 +18,7 @@
+ 
+ all: $(LIB)
+ 	@$(MKINSTALLDIRS) $(top_builddir)/library/$(pkg)/libs
+-	@cp $< $(top_builddir)/library/$(pkg)/libs
++	@cp $(LIB) $(top_builddir)/library/$(pkg)/libs
+ 
+ $(LIB): $(OBJS)
+ 	$(SHLIBLD) $(SHLIBLDFLAGS) -o $@ $(OBJS)
+--- src/library/modreg/src/Makefile.in.orig	Tue Nov 10 03:07:44 1998
++++ src/library/modreg/src/Makefile.in	Sun Dec 20 11:17:28 1998
+@@ -19,7 +19,7 @@
+ 
+ all: $(LIB)
+ 	@$(MKINSTALLDIRS) $(top_builddir)/library/$(pkg)/libs
+-	@cp $< $(top_builddir)/library/$(pkg)/libs
++	@cp $(LIB) $(top_builddir)/library/$(pkg)/libs
+ 
+ $(LIB): $(OBJS)
+ 	$(top_builddir)/bin/R SHLIB -o $@ $(OBJS)
+--- src/library/mva/src/Makefile.in.orig	Tue Oct 13 04:04:28 1998
++++ src/library/mva/src/Makefile.in	Sun Dec 20 11:18:09 1998
+@@ -19,7 +19,7 @@
+ 
+ all: $(LIB)
+ 	@$(MKINSTALLDIRS) $(top_builddir)/library/$(pkg)/libs
+-	@cp $< $(top_builddir)/library/$(pkg)/libs
++	@cp $(LIB) $(top_builddir)/library/$(pkg)/libs
+ 
+ $(LIB): $(OBJS)
+ 	$(SHLIBLD) $(SHLIBLDFLAGS) -o $@ $(OBJS)
