@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/07/15 13:52:28 minoura Exp $
+# $NetBSD: Makefile,v 1.3 2001/09/27 23:18:16 jlam Exp $
 #
 
 DISTNAME=	Gauche-0.4.2
@@ -11,10 +11,10 @@ HOMEPAGE=	http://www.shiro.dreamhost.com/scheme/gauche/index.html
 COMMENT=	R5RS Scheme implementation developed to be a handy script interpreter
 
 # devel/boehm-gc cannot be used because Gauche requires PIC version
-#DEPENDS+=	boehm-gc-*:../../devel/boehm-gc
-DEPENDS+=	slib-*:../../devel/slib
+#DEPENDS+=	boehm-gc-[0-9]*:../../devel/boehm-gc
+DEPENDS+=	slib-[0-9]*:../../devel/slib
 # XXX: On newer SunOS/Linux we have to use their native iconv(3)...?
-DEPENDS+=	libiconv-*:../../converters/libiconv
+DEPENDS+=	libiconv-[0-9]*:../../converters/libiconv
 
 # Due to GC dynamic loading support, this package runs on limited platforms
 # Plus, it is not LP64-safe

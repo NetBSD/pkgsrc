@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/09/14 21:56:49 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2001/09/27 23:18:37 jlam Exp $
 #
 
 DISTNAME=	amavis-0.2.1
@@ -12,16 +12,16 @@ HOMEPAGE=	http://www.amavis.org/
 COMMENT=	mail virus scanner
 
 DEPENDS+=	uvscan-[0-9]*:../../security/uvscan
-DEPENDS+=	maildrop-*:../../mail/maildrop
-DEPENDS+=	tnef-*:../../mail/tnef
-DEPENDS+=	unzip-*:../../archivers/unzip
-DEPENDS+=	unarj-*:../../archivers/unarj
-DEPENDS+=	unrar-*:../../archivers/unrar
-DEPENDS+=	xbin-*:../../archivers/xbin
-DEPENDS+=	lha-*:../../archivers/lha
-DEPENDS+=	zoo-*:../../archivers/zoo
-DEPENDS+=	freeze-*:../../archivers/freeze
-DEPENDS+=	arc-*:../../archivers/arc
+DEPENDS+=	maildrop-[0-9]*:../../mail/maildrop
+DEPENDS+=	tnef-[0-9]*:../../mail/tnef
+DEPENDS+=	unzip-[0-9]*:../../archivers/unzip
+DEPENDS+=	unarj-[0-9]*:../../archivers/unarj
+DEPENDS+=	unrar-[0-9]*:../../archivers/unrar
+DEPENDS+=	xbin-[0-9]*:../../archivers/xbin
+DEPENDS+=	lha-[0-9]*:../../archivers/lha
+DEPENDS+=	zoo-[0-9]*:../../archivers/zoo
+DEPENDS+=	freeze-[0-9]*:../../archivers/freeze
+DEPENDS+=	arc-[0-9]*:../../archivers/arc
 
 VIRUSDIR?=	/var/log/virusmails	# where to put contaminated mails
 VIRUSMAILTO?=	security		# whom to notify about viruses

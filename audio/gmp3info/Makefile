@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/02/16 13:30:41 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/09/27 23:17:44 jlam Exp $
 
 DISTNAME=	mp3info-0.8.2
 PKGNAME=	g${DISTNAME}
@@ -14,7 +14,7 @@ COMMENT=	Utility to read and modify the ID3 tags of MP3 files
 DEPENDS+=	gtk+>=1.2.0:../../x11/gtk
 DEPENDS+=	ncurses>=5.0:../../devel/ncurses
 
-CONFLICTS=	mp3info-*
+CONFLICTS=	mp3info-[0-9]*
 
 USE_X11=	YES
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2001/08/27 06:31:36 tron Exp $
+# $NetBSD: Makefile,v 1.68 2001/09/27 23:19:00 jlam Exp $
 
 DISTNAME=		gnome-core-1.4.0.4
 CATEGORIES=		x11 gnome
@@ -11,7 +11,7 @@ COMMENT=		Base component of GNU Network Object Management Environment
 
 DEPENDS+=		gdk-pixbuf-gnome>=0.9.0nb1:../../graphics/gdk-pixbuf-gnome
 DEPENDS+=		libghttp>=1.0.9:../../www/libghttp
-DEPENDS+=		libxml-*:../../textproc/libxml
+DEPENDS+=		libxml-[0-9]*:../../textproc/libxml
 DEPENDS+=		xscreensaver-gnome>=3.25nb1:../xscreensaver-gnome
 DEPENDS+=		libglade>=0.14:../../devel/libglade
 DEPENDS+=		gtkhtml>=0.8.3:../../www/gtkhtml

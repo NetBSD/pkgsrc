@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/02/17 17:21:33 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/09/27 23:18:49 jlam Exp $
 #
 
 DISTNAME=		enlightenment-conf-0.15
@@ -10,7 +10,7 @@ MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.enlightenment.org/
 COMMENT=		configuration tool for easily setting up Enlightenment
 
-DEPENDS+=		control-center-*:../../x11/controlcenter
+DEPENDS+=		control-center-[0-9]*:../../x11/controlcenter
 
 WRKSRC=			${WRKDIR}/${DISTNAME}
 

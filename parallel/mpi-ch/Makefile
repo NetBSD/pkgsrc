@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2001/04/10 19:31:27 wennmach Exp $
+# $NetBSD: Makefile,v 1.19 2001/09/27 23:18:35 jlam Exp $
 
 DISTNAME=		mpich-1.2.1
 CATEGORIES=		parallel
@@ -9,7 +9,7 @@ HOMEPAGE=		http://www.mcs.anl.gov/mpi/mpich/index.html
 COMMENT=		Free implementation of the Message Passing Interface
 
 .if !exists(/usr/bin/ssh)
-DEPENDS+=		{openssh-*,ssh{,6}-1.2.27*}:../../security/ssh
+DEPENDS+=		{openssh-[0-9]*,ssh{,6}-1.2.27*}:../../security/ssh
 .endif
 DEPENDS+=		tk>=8.3.0:../../x11/tk
 

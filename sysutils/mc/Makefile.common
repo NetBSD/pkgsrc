@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.10 2001/06/12 20:33:07 jlam Exp $
+# $NetBSD: Makefile.common,v 1.11 2001/09/27 23:18:43 jlam Exp $
 
 DISTNAME=		mc-4.5.51
 CATEGORIES+=		sysutils
@@ -7,12 +7,12 @@ MASTER_SITES+=		${MASTER_SITE_GNOME:=stable/sources/mc/}
 MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://www.gnome.org/mc/
 
-DEPENDS+=		libslang-*:../../devel/libslang
+DEPENDS+=		libslang-[0-9]*:../../devel/libslang
 DEPENDS+=		glib>=1.2.0:../../devel/glib
 BUILD_USES_MSGFMT=	yes
 BUILD_DEPENDS+=		autoconf-2.13:../../devel/autoconf
 
-CONFLICTS+=		mc-* gmc-*
+CONFLICTS+=		mc-[0-9]* gmc-[0-9]*
 
 FILESDIR=		${.CURDIR}/../../sysutils/mc/files
 PATCHDIR=		${.CURDIR}/../../sysutils/mc/patches

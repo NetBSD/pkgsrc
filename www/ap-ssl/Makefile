@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2001/07/13 07:09:24 jlam Exp $
+# $NetBSD: Makefile,v 1.39 2001/09/27 23:18:51 jlam Exp $
 
 DISTNAME=		mod_ssl-2.8.4-1.3.20
 PKGNAME=		ap-ssl-2.8.4
@@ -13,7 +13,7 @@ DEPENDS+=		apache>=1.3.20:../../www/apache
 # For "apxs":
 BUILD_DEPENDS+=		perl>=${PERL5_REQD}:../../lang/perl5
 
-CONFLICTS=		apache-1.3.[0-9] apache-*modssl-* apache6-*
+CONFLICTS=		apache-1.3.[0-9] apache-*modssl-[0-9]* apache6-[0-9]*
 
 HAS_CONFIGURE=		# defined
 USE_SSL=		# defined

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2001/04/08 21:40:59 tron Exp $
+# $NetBSD: Makefile,v 1.24 2001/09/27 23:18:33 jlam Exp $
 #
 
 DISTNAME=	xtraceroute-0.8.14
@@ -13,7 +13,7 @@ COMMENT=	Graphical version of traceroute, which traces the route IP packets go
 
 BUILD_USES_MSGFMT=	yes
 DEPENDS+=	gtkglarea>=1.2.1:../../x11/gtkglarea
-DEPENDS+=	tiff-*:../../graphics/tiff
+DEPENDS+=	tiff-[0-9]*:../../graphics/tiff
 
 USE_X11=	yes
 #USE_MESA=	yes

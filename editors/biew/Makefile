@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/02/25 04:17:44 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 2001/09/27 23:17:59 jlam Exp $
 #
 
 DISTNAME=	biew-520
@@ -11,7 +11,7 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://biew.sourceforge.net/en/biew.html
 COMMENT=	Binary viewer/editor
 
-DEPENDS+=	libslang-*:../../devel/libslang
+DEPENDS+=	libslang-[0-9]*:../../devel/libslang
 
 ONLY_FOR_PLATFORM=	*-*-i386
 USE_GMAKE=	YES

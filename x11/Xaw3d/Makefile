@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2001/06/13 15:47:28 tron Exp $
+# $NetBSD: Makefile,v 1.29 2001/09/27 23:18:58 jlam Exp $
 #
 
 DISTNAME=	Xaw3d-1.5
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_XCONTRIB:=widgets/Xaw3d/R6.3/}
 MAINTAINER=	packages@netbsd.org
 COMMENT=	3-D widgets based on the Athena Widget set
 
-CONFLICTS=	Xaw-Xpm-*
+CONFLICTS=	Xaw-Xpm-[0-9]*
 
 USE_IMAKE=	YES
 WRKSRC=		${WRKDIR}/xc/lib/Xaw3d

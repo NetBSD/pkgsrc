@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/08/10 15:29:20 mjl Exp $
+# $NetBSD: Makefile,v 1.5 2001/09/27 23:18:46 jlam Exp $
 
 DISTNAME=	libxml-enno-1.05a
 PKGNAME=	p5-${DISTNAME}
@@ -15,7 +15,8 @@ DEPENDS+=	p5-libwww>=5.50:../../www/p5-libwww
 DEPENDS+=	p5-libxml>=0.07:../../textproc/p5-libxml
 DEPENDS+=	p5-Parse-Yapp>=1.04:../../devel/p5-Parse-Yapp
 
-CONFLICTS+=	p5-XML-DOM-* p5-XML-XQL-* p5-XML-Checker-* p5-XML-RegExp-*
+CONFLICTS+=	p5-XML-DOM-[0-9]* p5-XML-XQL-[0-9]*
+CONFLICTS+=	p5-XML-Checker-[0-9]* p5-XML-RegExp-[0-9]*
 
 WRKSRC=		${WRKDIR}/libxml-enno-1.05
 

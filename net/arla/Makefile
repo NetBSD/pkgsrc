@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2001/08/09 13:48:58 wennmach Exp $
+# $NetBSD: Makefile,v 1.18 2001/09/27 23:18:26 jlam Exp $
 #
 
 DISTNAME=		arla-0.35.5
@@ -11,7 +11,7 @@ COMMENT=		Free AFS implementation from KTH
 
 DEPENDS+=		kth-krb4>=1.0.9:../../security/kth-krb4
 
-CONFLICTS+=		lwp-* rx-*
+CONFLICTS+=		lwp-[0-9]* rx-[0-9]*
 
 OSVERSION_SPECIFIC=	yes
 GNU_CONFIGURE=		yes

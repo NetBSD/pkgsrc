@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/02/16 14:40:52 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2001/09/27 23:18:00 jlam Exp $
 # FreeBSD Id: Makefile,v 1.11 1999/04/17 10:51:03 itojun Exp
 
 DISTNAME=	nvi-1.79
@@ -13,7 +13,7 @@ PATCHFILES=	nvi-1.79.m17n-19991117.diff.gz
 MAINTAINER=	itojun@itojun.org
 COMMENT=	Clone of vi/ex, with multilingual patch
 
-CONFLICTS=	vigor-*
+CONFLICTS=	vigor-[0-9]*
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/build
 GNU_CONFIGURE=	YES

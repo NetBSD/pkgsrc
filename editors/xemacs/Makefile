@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2001/08/23 04:26:53 jlam Exp $
+# $NetBSD: Makefile,v 1.35 2001/09/27 23:18:02 jlam Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1997/09/03 19:27:57 gj Exp
 
 DISTNAME=	xemacs-21.1.14
@@ -17,8 +17,8 @@ COMMENT=	XEmacs text editor version 21
 
 DEPENDS+=	gdbm>=1.7.3:../../databases/gdbm
 DEPENDS+=	png>=1.0.11:../../graphics/png
-DEPENDS+=	tiff-*:../../graphics/tiff
-DEPENDS+=	jpeg-*:../../graphics/jpeg
+DEPENDS+=	tiff-[0-9]*:../../graphics/tiff
+DEPENDS+=	jpeg-[0-9]*:../../graphics/jpeg
 
 NOT_FOR_PLATFORM=	*-*-mips*	#fails purespace dumping
 

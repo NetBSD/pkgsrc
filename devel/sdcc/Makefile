@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/06/11 06:34:29 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2001/09/27 23:17:58 jlam Exp $
 # FreeBSD: ports/devel/sdcc/Makefile,v 1.5 2000/04/15 15:13:38 knu Exp
 
 DISTNAME=	sdcc-2.2.1-src
@@ -18,10 +18,10 @@ WRKSRC=		${WRKDIR}/${PKGNAME}
 # yacc that breaks the building process of sdcc.
 # Use of bison fixes this problem for now.
 #
-BUILD_DEPENDS+=	bison-*:../../devel/bison
+BUILD_DEPENDS+=	bison-[0-9]*:../../devel/bison
 # we link to the static boehm-gc library so we only
 # need this at compile time
-BUILD_DEPENDS+=	boehm-gc-*:../../devel/boehm-gc
+BUILD_DEPENDS+=	boehm-gc-[0-9]*:../../devel/boehm-gc
 YACC=		bison
 
 GNU_CONFIGURE=	yes

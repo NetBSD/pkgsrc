@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/05/10 14:36:49 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2001/09/27 23:18:17 jlam Exp $
 #
 
 DISTNAME=	unix_jb35foundation
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.inprise.com/jbuilder/foundation/linux.html
 COMMENT=	Just-In-Time compiler for Linux Java Virtual Machine
 
 # works with both 1.2.2 and 1.3 JVMs
-DEPENDS=	sun-jre-*:../../lang/sun-jre13
+DEPENDS=	sun-jre-[0-9]*:../../lang/sun-jre13
 
 BROKEN=		Old distfile not available anymore; needs to be updated to 4.0.
 

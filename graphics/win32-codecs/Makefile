@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/04/12 20:48:03 zuntum Exp $
+# $NetBSD: Makefile,v 1.2 2001/09/27 23:18:13 jlam Exp $
 #
 
 DISTNAME=	binaries-${CODEC_VERSION}
@@ -12,7 +12,7 @@ DISTFILES=	${DISTNAME}.zip wmvds32.ax.gz
 MAINTAINER=	zuntum@netbsd.org
 COMMENT=	Huge compilation of Win32 binary codecs, including MPEG-4(DivX ;-))
 
-BUILD_DEPENDS=	unzip-*:../../archivers/unzip
+BUILD_DEPENDS=	unzip-[0-9]*:../../archivers/unzip
 
 EXTRACT_ONLY=	#
 

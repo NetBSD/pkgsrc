@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2001/05/19 14:21:16 drochner Exp $
+# $NetBSD: Makefile,v 1.36 2001/09/27 23:18:36 jlam Exp $
 # FreeBSD Id: Makefile,v 1.14 1998/02/14 16:46:50 andreas Exp
 #
 
@@ -12,7 +12,7 @@ MAINTAINER=		frueauf@netbsd.org
 HOMEPAGE=		http://www.lyx.org/
 COMMENT=		Graphical frontend for LaTeX (nearly WYSIWYG)
 
-DEPENDS=		ispell-base-*:../../textproc/ispell-base
+DEPENDS=		ispell-base-[0-9]*:../../textproc/ispell-base
 DEPENDS+=		teTeX>=1.0.6:../../print/teTeX
 DEPENDS+=		xforms>=0.88nb1:../../x11/xforms
 
