@@ -1,15 +1,20 @@
-$NetBSD: patch-aa,v 1.6 2001/08/14 17:13:02 abs Exp $
+$NetBSD: patch-aa,v 1.7 2001/08/23 21:44:12 jlam Exp $
 
 --- Makefile.orig	Sat Jun  5 09:05:36 1999
-+++ Makefile	Fri Apr  7 20:44:08 2000
-@@ -4,14 +4,14 @@
++++ Makefile
+@@ -1,17 +1,17 @@
+ # Your favorite compilation options here :-)
+-MCFLAGS  = -Wall -O -g 
+-LDFLAGS  =  -lcrypt
++#MCFLAGS  = -Wall -O -g 
++LDFLAGS  +=  -lcrypt
  
  # Comment out the variables for the databases that you do not want
  # Here, what you need for PostgreSQL
 -PGSQLIBS    = -L/usr/local/pgsql/lib -lpq
 -PGSQLCFLAGS = -I/usr/local/pgsql/include -DUSE_POSTGRESQL
 +PGSQLIBS    = -L${LOCALBASE}/lib -lpq
-+PGSQLCFLAGS = -I${LOCALBASE}/include/pgsql -DUSE_POSTGRESQL
++PGSQLCFLAGS = -I${BUILDLINK_DIR}/include/pgsql -DUSE_POSTGRESQL
  PGSQLOBJS   = postgres.o
  
  # Here, what you need for MySQL
@@ -22,18 +27,20 @@ $NetBSD: patch-aa,v 1.6 2001/08/14 17:13:02 abs Exp $
  
  # Nothing to change below this point...
  DBSQLIBS = $(PGSQLIBS) $(MYSQLIBS)
-@@ -24,8 +24,8 @@
+@@ -24,17 +24,17 @@
  OBJS    = $(MOBJS) $(DBSQLOBJS)
  CFLAGS  = $(MCFLAGS) $(DBSQLFLAGS)
  
 -GTKLIBS     = `gtk-config --libs`
 -GTKCFLAGS   = `gtk-config --cflags`
-+GTKLIBS     = `${X11PREFIX}/bin/gtk-config --libs`
-+GTKCFLAGS   = `${X11PREFIX}/bin/gtk-config --cflags`
++GTKLIBS     = `${GTK_CONFIG} --libs`
++GTKCFLAGS   = `${GTK_CONFIG} --cflags`
  
  all: $(OBJS)
- 	gcc -o gtksql $(OBJS) $(DBSQLIBS) $(GTKLIBS) $(CFLAGS) $(LDFLAGS)
-@@ -34,7 +34,7 @@
+-	gcc -o gtksql $(OBJS) $(DBSQLIBS) $(GTKLIBS) $(CFLAGS) $(LDFLAGS)
++	${CC} -o gtksql $(OBJS) $(DBSQLIBS) $(GTKLIBS) $(CFLAGS) $(LDFLAGS)
+ 
+ clean:
  	rm -f *.o gtksql
  
  install: all
@@ -41,4 +48,5 @@ $NetBSD: patch-aa,v 1.6 2001/08/14 17:13:02 abs Exp $
 +	${BSD_INSTALL_PROGRAM} gtksql ${PREFIX}/bin
  
  .c.o: 
- 	gcc $(CFLAGS) $(GTKCFLAGS) $(DBSQLCFLAGS) -c $*.c -o ./$*.o
+-	gcc $(CFLAGS) $(GTKCFLAGS) $(DBSQLCFLAGS) -c $*.c -o ./$*.o
++	${CC} $(CFLAGS) $(GTKCFLAGS) $(DBSQLCFLAGS) -c $*.c -o ./$*.o
