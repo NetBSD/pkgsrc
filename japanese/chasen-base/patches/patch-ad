@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.1.1.1 2001/01/10 14:45:03 taca Exp $
+$NetBSD: patch-ad,v 1.2 2001/02/24 01:25:02 taca Exp $
 
---- mkchadic/mkary.c.orig	Fri Nov 24 05:25:06 2000
+--- mkchadic/mkary.c.orig	Fri Feb 23 20:50:10 2001
 +++ mkchadic/mkary.c
-@@ -9,6 +9,7 @@
+@@ -16,6 +16,7 @@
  #include <stdio.h>
  #include <string.h>
  #include <stdlib.h>
