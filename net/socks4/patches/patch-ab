@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.2 1998/08/07 11:10:58 agc Exp $
+$NetBSD: patch-ab,v 1.3 2003/05/01 22:03:50 jmmv Exp $
 
 --- include/socks.h	1998/06/11 13:02:06	1.1
 +++ include/socks.h	1998/06/11 13:04:33
@@ -21,7 +21,7 @@ $NetBSD: patch-ab,v 1.2 1998/08/07 11:10:58 agc Exp $
  
  /* Control file for versatile clients */
 -#define SOCKS_CONF	"/etc/socks.conf"
-+#define SOCKS_CONF	"@PREFIX@/etc/socks.conf"
++#define SOCKS_CONF	"@PKG_SYSCONFDIR@/socks.conf"
  
  /*
   * Default port number for SOCKS services.
@@ -30,7 +30,7 @@ $NetBSD: patch-ab,v 1.2 1998/08/07 11:10:58 agc Exp $
   * and its services.
   */
 -#define SOCKD_CONF	"/etc/sockd.conf"
-+#define SOCKD_CONF	"@PREFIX@/etc/sockd.conf"
++#define SOCKD_CONF	"@PKG_SYSCONFDIR@/sockd.conf"
  
  /*
   * Define this if your SOCKS server is multi-homed (i.e.,
@@ -39,7 +39,7 @@ $NetBSD: patch-ab,v 1.2 1998/08/07 11:10:58 agc Exp $
   * This has no effects if MULTIHOMED_SERVER is undefined.
   */
 -#define SOCKD_ROUTE_FILE "/etc/sockd.route"
-+#define SOCKD_ROUTE_FILE "@PREFIX@/etc/sockd.route"
++#define SOCKD_ROUTE_FILE "@PKG_SYSCONFDIR@/sockd.route"
  
  /* Current SOCKS protocol version */
  #define SOCKS_VERSION	4
