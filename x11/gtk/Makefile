@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2001/06/18 21:34:02 jlam Exp $
+# $NetBSD: Makefile,v 1.62 2001/06/19 06:52:10 jlam Exp $
 
 DISTNAME=		gtk+-1.2.10
 CATEGORIES=		x11
@@ -38,6 +38,29 @@ PLIST_SUBST+=		LOCALBASE=${LOCALBASE}
 # flags for linking the X11 libs.
 #
 X_LDFLAGS=		-Wl,-R${X11BASE}/lib -L${X11BASE}/lib
+
+GTK_VERSION=		${DISTNAME:S/gtk+-//}
+GTK_MAJOR_VERSION=	${GTK_VERSION:C/\..*//}
+GTK_MINOR_VERSION=	${GTK_VERSION:C/[^.]*\.//:C/\..*//}
+GTK_MICRO_VERSION=	${GTK_VERSION:C/.*\.//}
+
+# We patch the version info in the configure scripts for reasons related to
+# shared library numbering, but we don't want it to leak into the various
+# installed files.  Explicitly replace the version number with the correct
+# one derived from the package name.
+#
+pre-configure:
+	@cd ${WRKSRC};							\
+	files="gtk-config.in docs/gtk-config.1.in gdk.pc.in gtk+.pc.in gtk/gtkfeatures.h.in"; \
+	for file in $${files}; do					\
+		${MV} -f $${file} $${file}.fixme;			\
+		${SED}	-e "s|@GTK_MAJOR_VERSION@|${GTK_MAJOR_VERSION}|g" \
+			-e "s|@GTK_MINOR_VERSION@|${GTK_MINOR_VERSION}|g" \
+			-e "s|@GTK_MICRO_VERSION@|${GTK_MICRO_VERSION}|g" \
+			-e "s|@VERSION@|${GTK_VERSION}|g"		\
+			$${file}.fixme > $${file};			\
+		${RM} $${file}.fixme;					\
+	done
 
 # Fix config scripts by removing buildlink directory references.
 post-build:
