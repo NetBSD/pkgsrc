@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1265 2003/01/28 20:06:46 abs Exp $
+$NetBSD: CHANGES,v 1.1266 2003/01/28 22:45:14 abs Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -460,4 +460,6 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated dctc to 0.84.1 [wiz 2003-01-28]
 	Updated abiword-personal to 1.0.4 [martti 2003-01-28]
 	Updated apache2 to 2.0.44 [martti 2003-01-28]
-	Updated netscape7 to 7.01 [abs 2003-01-28]
+	Updated netscape7 to 7.01  [abs 2003-01-28]
+	Updated pkglint to 3.46 [abs 2003-01-28]
+
