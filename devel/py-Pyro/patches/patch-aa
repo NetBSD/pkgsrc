@@ -1,0 +1,18 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/12/31 10:13:57 darcy Exp $
+
+--- setup.py.orig	Tue May 20 21:43:07 2003
++++ setup.py	Thu Jan  1 21:52:52 2004
+@@ -33,9 +33,12 @@
+ 			unattended=cp.get('install-options','unattended')
+ 		else:	
+ 			unattended=0
++		# there is propably a bug, setup.cfg setting won't work!
++		# 	-- dotz@irc.pl
++		unattended = True
+ 		if unattended:
+ 			scr='y'
+-			loc=cp.get('install','install-scripts')
++			loc=os.environ.get("PREFIX", "/usr/pkg") + "/bin"
+ 			print 'Unattended install. Scripts will go to',loc
+ 		else:
+ 			scr=raw_input('Do you want the Pyro scripts (in bin/) installed (y/n)? ')
