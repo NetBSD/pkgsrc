@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.11 2004/01/22 13:17:05 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2004/02/04 13:25:43 markd Exp $
 #
 
 DISTNAME=	gnome2-dirs-${GNOME_DIRS_VERSION}
 CATEGORIES=	misc gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
+PKGREVISION=	1
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	# empty
@@ -19,6 +20,8 @@ NO_BUILD=	# defined
 
 .include "../../mk/bsd.prefs.mk"
 
+DEPENDS+=	xdg-dirs>=1.0:../../misc/xdg-dirs
+
 .if ${X11PREFIX} == ${LOCALBASE}
 DEPENDS+=	gnome-dirs>=1.0:../../misc/gnome-dirs
 GNOME_DIRS=
@@ -26,7 +29,6 @@ GNOME_DIRS=
 GNOME_DIRS=	${GNOME_DIRS_COMMON}
 .endif
 
-GNOME_DIRS+=	share/applications
 GNOME_DIRS+=	share/application-registry
 GNOME_DIRS+=	share/control-center-2.0
 GNOME_DIRS+=	share/control-center-2.0/capplets
