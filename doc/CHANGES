@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2795 2003/07/15 19:48:42 wiz Exp $
+$NetBSD: CHANGES,v 1.2796 2003/07/15 21:54:16 wennmach Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2825,3 +2825,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated dinotrace to 9.1k [drochner 2003-07-15]
 	Updated xlockmore to 5.09 [hubertf 2003-07-15]
 	Updated dctc to 0.85.4 [wiz 2003-07-15]
+	Added avr-binutils-2.13.2.1 [wennmach 2003-07-15]
