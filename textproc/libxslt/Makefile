@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2002/05/06 08:10:26 rh Exp $
+# $NetBSD: Makefile,v 1.7 2002/08/22 11:17:33 martti Exp $
 
-DISTNAME=	libxslt-1.0.17
+DISTNAME=	libxslt-1.0.19
 PKGNAME=	${DISTNAME}
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GNOME:=stable/sources/libxslt/}
@@ -18,7 +18,7 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-libxml-prefix=${BUILDLINK_DIR}
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html
 
-BUILDLINK_DEPENDS.libxml2=     libxml2>=2.4.10
+BUILDLINK_DEPENDS.libxml2=     libxml2>=2.4.17
 
 .include "../../textproc/libxml2/buildlink.mk"
 .include "../../lang/perl5/buildlink.mk"
