@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/02/14 18:26:26 jmmv Exp $
+# $NetBSD: Makefile,v 1.6 2004/02/17 22:02:02 jmmv Exp $
 #
 
 DISTNAME=	gnome-speech-0.2.8
@@ -14,7 +14,7 @@ COMMENT=	GNOME 2 text-to-speech API
 DEPENDS+=		gnome2-dirs>=1.2:../../misc/gnome2-dirs
 BUILD_USES_MSGFMT=	yes
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
@@ -25,6 +25,8 @@ CONFIGURE_ARGS+=	--disable-gtk-doc
 
 PKGCONFIG_OVERRIDE+=    gnome-speech-1.0.pc.in
 
-.include "../../devel/libbonobo/buildlink2.mk"
-.include "../../devel/pkgconfig/buildlink2.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/libbonobo/buildlink3.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../net/ORBit2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
