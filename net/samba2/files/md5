@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.4 1999/01/21 15:07:59 bouyer Exp $
+$NetBSD: md5,v 1.5 1999/02/11 17:11:33 bouyer Exp $
 
-MD5 (samba-2.0.0.tar.gz) = fb4477a7967a2df752a2a94a493fbe51
+MD5 (samba-2.0.2.tar.gz) = 67a3e3765570aa35ed6cc8fa0e819aad

@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.6 1999/01/29 10:40:03 bouyer Exp $
+# $NetBSD: Makefile,v 1.7 1999/02/11 17:11:33 bouyer Exp $
 
-DISTNAME=	samba-2.0.0
+DISTNAME=	samba-2.0.2
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.samba.org/pub/samba/
 
 MAINTAINER=	bouyer@netbsd.org
 HOMEPAGE=	http://www.samba.org/
 
-CONFLICTS=      samba-1.* samba-2.0.0beta* 
+CONFLICTS=      samba-1.* samba-2.0.0beta* samba-2.0.0
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/source
 GNU_CONFIGURE=	yes
@@ -15,14 +15,18 @@ GNU_CONFIGURE=	yes
 .include "../../mk/bsd.prefs.mk"
 
 STARTUP_SCRIPT=	${PREFIX}/etc/rc.d/samba.sh.sample
-SAMPLE_CONFIG=	${PREFIX}/etc/smb.conf.sample
+SAMPLE_CONFIG=	${PREFIX}/share/examples/smb.conf.sample
 SAMBA_LOGDIR=	/var/log
 SAMBA_LOCKDIR=	/var/run/samba
 SAMBA_ETCDIR?=	/etc/samba
 SAMBA_PRIVATE?=	${SAMBA_ETCDIR}/private
 
-MAKE_ENV+=	ETCDIR=${SAMBA_ETCDIR} PRIVATEDIR=${SAMBA_PRIVATE}
-MAKE_ENV+=	LOGDIR=${SAMBA_LOGDIR} LOCKDIR=${SAMBA_LOCKDIR}
+MAKE_ENV+=	ETCDIR=${SAMBA_ETCDIR}
+MAKE_ENV+=	LOGDIR=${SAMBA_LOGDIR}
+
+CONFIGURE_ARGS+= --with-swatdir=${PREFIX}/share/swat \
+	--with-lockdir=${SAMBA_LOCKDIR} \
+	--with-privatedir=${SAMBA_PRIVATE}
 
 PLIST_SRC= ${WRKDIR}/.PLIST-src
 
