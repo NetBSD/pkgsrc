@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.128 1998/07/26 09:27:15 mycroft Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.129 1998/07/26 22:20:22 tv Exp $
 #
 # This file is in the public domain.
 #
@@ -25,7 +25,7 @@ OPSYS!=	uname -s
 
 .if defined(ONLY_FOR_ARCHS)
 .for __ARCH in ${ONLY_FOR_ARCHS}
-.if ${MACHINE_ARCH} == "${__ARCH}"
+.if ${MACHINE_ARCH:M${__ARCH}} != ""
 __ARCH_OK?=	1
 .endif
 .endfor
