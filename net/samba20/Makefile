@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2002/08/25 21:50:14 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2002/09/18 21:15:16 jlam Exp $
 
 DISTNAME=		samba-2.0.10
 WRKSRC=			${WRKDIR}/${DISTNAME}/source
@@ -65,8 +65,6 @@ CONF_FILES=		${EXAMPLESDIR}/smb.conf.sample ${SAMBA_ETCDIR}/smb.conf
 RCD_SCRIPTS=		samba nmbd smbd
 MAKE_DIRS=		${SAMBA_LOCKDIR}
 OWN_DIRS=		${SAMBA_ETCDIR} ${SAMBA_PRIVATE}
-
-INSTALL_EXTRA_TMPL=	${PKGDIR}/INSTALL
 
 pre-install:
 	for script in ${RCD_SCRIPTS}; do				\

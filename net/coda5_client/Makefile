@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2002/09/10 11:02:16 jlam Exp $
+# $NetBSD: Makefile,v 1.35 2002/09/18 21:15:13 jlam Exp $
 
 PKGNAME=	coda-client-${DIST_VERS}
 COMMENT=	client programs for a replicated high-performance network file system
@@ -7,8 +7,6 @@ COMMENT=	client programs for a replicated high-performance network file system
 
 ALL_TARGET=		coda
 INSTALL_TARGET=		client-install
-INSTALL_EXTRA_TMPL=	${.CURDIR}/DEINSTALL
-DEINSTALL_EXTRA_TMPL=	${.CURDIR}/INSTALL
 
 CONF_FILES+=	${EGDIR}/sidekick.intr.ex ${PKG_SYSCONFDIR}/sidekick.intr
 CONF_FILES+=	${EGDIR}/venus.conf.ex ${PKG_SYSCONFDIR}/venus.conf
