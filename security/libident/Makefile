@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2002/10/22 11:44:58 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2003/01/19 09:04:04 salo Exp $
 #
 
 DISTNAME=	libident-0.22
@@ -12,6 +12,5 @@ USE_BUILDLINK2=	# defined
 USE_LIBTOOL=	# defined
 
 ALL_TARGET=	netbsd
-MAKE_ENV+=	INSTALL_DATA="${INSTALL_DATA}"
 
 .include "../../mk/bsd.pkg.mk"
