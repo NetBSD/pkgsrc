@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.75 2003/01/28 22:04:31 jlam Exp $
+# $NetBSD: Makefile,v 1.76 2003/02/16 06:43:40 taca Exp $
 
 DISTNAME=	squid-2.5.STABLE1
 PKGNAME=	squid-2.5.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www
 MASTER_SITES=	http://www.squid-cache.org/Versions/v2/2.5/ \
 		ftp://ftp.leo.org/pub/comp/general/infosys/www/daemons/squid/squid-2/STABLE/ \
@@ -32,7 +32,48 @@ PATCHFILES=	squid-2.5.STABLE1-disable-ident-lookups.patch \
 		squid-2.5.STABLE1-cachemgr.patch \
 		squid-2.5.STABLE1-auth-proxy.patch \
 		squid-2.5.STABLE1-dnsserver.patch \
-		squid-2.5.STABLE1-spaces.patch
+		squid-2.5.STABLE1-spaces.patch \
+		squid-2.5.STABLE1-flags_open.patch \
+		squid-2.5.STABLE1-ldap_group-compile.patch \
+		squid-2.5.STABLE1-aufs_performance.patch \
+		squid-2.5.STABLE1-RunCache.patch \
+		squid-2.5.STABLE1-rebuild_assert.patch \
+		squid-2.5.STABLE1-offline_mode.patch \
+		squid-2.5.STABLE1-S.patch \
+		squid-2.5.STABLE1-chroot.patch \
+		squid-2.5.STABLE1-aufs_reentrant.patch \
+		squid-2.5.STABLE1-relnote11.patch \
+		squid-2.5.STABLE1-ldap_group.patch \
+		squid-2.5.STABLE1-offline_toggle.patch \
+		squid-2.5.STABLE1-failure_ratio.patch \
+		squid-2.5.STABLE1-hostnames.patch \
+		squid-2.5.STABLE1-sbrk.patch \
+		squid-2.5.STABLE1-log_mime_hdrs.patch \
+		squid-2.5.STABLE1-peer_select_alg.patch \
+		squid-2.5.STABLE1-mempoolstat.patch \
+		squid-2.5.STABLE1-copy_offset.patch \
+		squid-2.5.STABLE1-select_fds_hist.patch \
+		squid-2.5.STABLE1-select_stat.patch \
+		squid-2.5.STABLE1-pidfile.patch \
+		squid-2.5.STABLE1-http_reply_max_size.patch \
+		squid-2.5.STABLE1-cachemgr_non_get.patch \
+		squid-2.5.STABLE1-authsheme_realloc.patch \
+		squid-2.5.STABLE1-ftp_abort.patch \
+		squid-2.5.STABLE1-helper_stats.patch \
+		squid-2.5.STABLE1-delay_pools_docs.patch \
+		squid-2.5.STABLE1-auth_connection.patch \
+		squid-2.5.STABLE1-authenticate_program_docs.patch \
+		squid-2.5.STABLE1-with_aufs_threads_trap.patch \
+		squid-2.5.STABLE1-shutdown_assert.patch \
+		squid-2.5.STABLE1-cachemgr_passwd.patch \
+		squid-2.5.STABLE1-etc_hosts_fdleak.patch \
+		squid-2.5.STABLE1-openssl097.patch \
+		squid-2.5.STABLE1-HEAD_bad_headers.patch \
+		squid-2.5.STABLE1-time_acl_list.patch \
+		squid-2.5.STABLE1-CONNECT_pipeline.patch \
+		squid-2.5.STABLE1-winbind.patch
+#	currently it is broken, so patch with patches/patch-cd
+#		squid-2.5.STABLE1-mib.patch
 PATCH_DIST_STRIP=       -p1
 
 MAINTAINER=	taca@netbsd.org
@@ -40,6 +81,7 @@ HOMEPAGE=	http://www.squid-cache.org/
 COMMENT=	Post-Harvest_cached WWW proxy cache and accelerator
 
 USE_PERL5=	build
+DIST_SUBDIR=	squid-2.5.1
 
 # Configuration directory location which can be overwritten by the user.
 PKG_SYSCONFSUBDIR?=	squid
