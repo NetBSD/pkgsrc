@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.10 2002/05/25 15:33:05 itojun Exp $
+# $NetBSD: Makefile,v 1.11 2002/05/25 20:06:01 wiz Exp $
 
-DISTNAME=		irssi-0.8.4
-PKGREVISION=	1
+DISTNAME=		irssi-0.8.4a
+PKGNAME=		irssi-0.8.4.1
+WRKSRC=			${WRKDIR}/irssi-0.8.4
 CATEGORIES=		chat
-MASTER_SITES=		http://www.irssi.org/files/
+MASTER_SITES=		http://real.irssi.org/files/
+EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		mutru@cc.hut.fi
 HOMEPAGE=		http://www.irssi.org/
 COMMENT=                Secure and modular IRC client with text mode user interface
-
-BROKEN=			"tarball contains backdoor"
 
 # list it into IPv6-ready packages
 BUILD_DEFS+=		USE_INET6
