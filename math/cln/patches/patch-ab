@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.1.1.1 2004/03/05 14:46:23 adam Exp $
+$NetBSD: patch-ab,v 1.2 2004/11/29 08:47:29 adam Exp $
 
---- doc/Makefile.in.orig	2003-11-17 13:22:06.000000000 +0100
+--- doc/Makefile.in.orig	2004-10-26 21:29:16.000000000 +0000
 +++ doc/Makefile.in
 @@ -12,7 +12,7 @@ exec_prefix = @exec_prefix@
  datadir = @datadir@
@@ -20,9 +20,9 @@ $NetBSD: patch-ab,v 1.1.1.1 2004/03/05 14:46:23 adam Exp $
  
  
  info : $(srcdir)/$(PACKAGE).info
-@@ -82,13 +82,11 @@ $(PACKAGE)_toc.html : $(srcdir)/$(PACKAG
- install : all installdirs force
- 	$(INSTALL_DATA) $(srcdir)/$(PACKAGE).info $(DESTDIR)$(infodir)/$(PACKAGE).info
+@@ -87,13 +87,11 @@ install : all installdirs force
+ 	  install-info --info-dir=$(DESTDIR)$(infodir) $(DESTDIR)$(infodir)/$(PACKAGE).info || :;\
+ 	else : ; fi
  	$(INSTALL_DATA) $(srcdir)/$(PACKAGE)_*.html $(DESTDIR)$(htmldir)
 -	$(INSTALL_DATA) $(srcdir)/$(PACKAGE).dvi $(DESTDIR)$(dvidir)/$(PACKAGE).dvi
  
@@ -33,4 +33,4 @@ $NetBSD: patch-ab,v 1.1.1.1 2004/03/05 14:46:23 adam Exp $
 -	$(MKDIR) $(DESTDIR)$(dvidir)
  
  uninstall : force
- 	$(RM) $(DESTDIR)$(infodir)/$(PACKAGE).info
+ 	@if (install-info --version && \
