@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.87 2002/11/13 13:44:42 wiz Exp $
+# $NetBSD: Makefile,v 1.88 2002/11/13 19:17:18 wiz Exp $
 
 DISTNAME=		ImageMagick-5.5.1-6
 PKGNAME=		${DISTNAME:S/-6/.6/}
+PKGREVISION=		1
 CATEGORIES=		graphics
 MASTER_SITES=		ftp://ftp.nluug.nl/pub/ImageMagick/ \
 			ftp://ftp.yggdrasil.com/mirrors/site/ftp.simplesystems.org/pub/ImageMagick/ \
@@ -29,12 +30,6 @@ WRKSRC=			${WRKDIR}/${DISTNAME:S/-6//}
 NOT_FOR_PLATFORM=	NetBSD-*-sparc64
 
 .include "../../mk/bsd.prefs.mk"
-
-.if (${OPSYS} == NetBSD ||  ${OPSYS} == SunOS)
-BUILD_DEPENDS+=		bash>=2.0:../../shells/bash2
-
-CONFIGURE_SCRIPT=	${LOCALBASE}/bin/bash ./configure
-.endif
 
 # Avoid compiler bug on "arm32"
 .if (${MACHINE_ARCH} == arm32)
