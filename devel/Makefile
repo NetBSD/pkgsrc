@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 1999/07/31 19:06:48 rh Exp $
+# $NetBSD: Makefile,v 1.67 1999/08/06 16:37:58 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.78 1997/10/01 08:32:59 cracauer Exp
 #
 
@@ -47,6 +47,7 @@
 #    SUBDIR += libdlmalloc
     SUBDIR += libg++
     SUBDIR += libglade
+    SUBDIR += libgetopt
     SUBDIR += libgtop
     SUBDIR += libproplist
     SUBDIR += libscsi
