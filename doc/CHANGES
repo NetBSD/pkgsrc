@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6241 2004/06/20 20:13:08 jmmv Exp $
+$NetBSD: CHANGES,v 1.6242 2004/06/20 20:16:37 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2974,3 +2974,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added websvn-1.39 [xtraeme 2004-06-20]
 	Added dspam-3.0.0 [xtraeme 2004-06-20]
 	Updated gtk2 to 2.4.3 [jmmv 2004-06-20]
+	Updated epiphany to 1.2.6 [jmmv 2004-06-20]
