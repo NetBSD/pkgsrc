@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 1999/07/07 17:34:51 agc Exp $
+# $NetBSD: Makefile,v 1.27 1999/07/08 08:06:59 agc Exp $
 #
 
 DISTNAME=	qt-1.44
@@ -22,14 +22,11 @@ ALL_TARGET=	src
 
 .if ${OPSYS} == "SunOS"
 DEPENDS+=	egcs-1.1.2:../../lang/egcs
-REAL_OPSYS=	solaris
 CXX=		${LOCALBASE}/egcs/bin/g++
-.else
-REAL_OPSYS=	${LOWER_OPSYS}
 .endif
 
 do-configure:
-	@cd ${WRKSRC} && ${MAKE} QTDIR=${WRKSRC} ${REAL_OPSYS}-g++-static
+	@cd ${WRKSRC} && ${MAKE} QTDIR=${WRKSRC} ${LOWER_OPSYS}-g++-static
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/moc ${PREFIX}/bin/
