@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2000/10/29 19:59:28 tsarna Exp $
+@comment $NetBSD: PLIST,v 1.4 2000/12/12 16:51:40 jlam Exp $
 lib/python2.0/site-packages/DateTime/mxDateTime/mxDateTime.so
 lib/python2.0/site-packages/DateTime/mxDateTime/__init__.py
 lib/python2.0/site-packages/DateTime/mxDateTime/__init__.pyc
@@ -39,8 +39,8 @@ lib/python2.0/site-packages/DateTime/__init__.pyo
 lib/python2.0/site-packages/DateTime/timegm.py
 lib/python2.0/site-packages/DateTime/timegm.pyc
 lib/python2.0/site-packages/DateTime/timegm.pyo
-share/doc/py-mxDateTime/mxDateTime.html
-share/doc/py-mxDateTime/mxDateTime-History.html
+share/doc/html/py-mxDateTime/mxDateTime.html
+share/doc/html/py-mxDateTime/mxDateTime-History.html
 @dirrm lib/python2.0/site-packages/DateTime/mxDateTime
 @dirrm lib/python2.0/site-packages/DateTime
-@dirrm share/doc/py-mxDateTime
+@dirrm share/doc/html/py-mxDateTime
