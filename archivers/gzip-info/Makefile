@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2003/07/17 21:21:19 grant Exp $
+# $NetBSD: Makefile,v 1.15 2003/08/09 10:27:42 seb Exp $
 
 DISTNAME=	gzip-1.2.4a
 PKGNAME=	gzip-info-1.2.4a
@@ -11,7 +11,6 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/gzip/gzip.html
 COMMENT=	Info format documentation for the GZIP utility
 
-USE_NEW_TEXINFO=	YES
 INFO_FILES=	gzip.info
 
 USE_BUILDLINK2=	yes

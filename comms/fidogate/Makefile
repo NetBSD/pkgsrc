@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2003/08/09 10:15:41 seb Exp $
+# $NetBSD: Makefile,v 1.28 2003/08/09 10:34:46 seb Exp $
 #
 
 DISTNAME=	fidogate-4.4.5
@@ -15,7 +15,6 @@ USE_GMAKE=		yes
 MAKE_ENV=		DEBUG="${CFLAGS} -Werror"
 BUILDLINK_SETENV.CC=	CC="cc ${_STRIPFLAG_CC}"
 
-USE_NEW_TEXINFO=	YES
 USE_MAKEINFO=	YES
 INFO_FILES=	fidogate.info
 
