@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2003/05/29 23:14:11 grant Exp $
+# $NetBSD: Makefile,v 1.20 2003/05/31 12:57:31 grant Exp $
 
 DISTNAME=	modxslt-1.1
 PKGNAME=	ap-xslt-1.1
-PKGREVISION=	4
+PKGREVISION=	5
 WRKSRC=		${WRKDIR}/modxslt
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=modxslt/}
@@ -12,10 +12,9 @@ HOMEPAGE=	http://modxslt.sourceforge.net/
 COMMENT=	Simple, fast XSLT transformations for apache
 
 USE_BUILDLINK2=	YES
-USE_GCC_SHLIB=	YES
 
 APACHE_MODULE_NAME=	mod_xslt.so
-LDFLAGS+=	        -lsablot -liconv -lstdc++ -lm
+LDFLAGS+=	        -lsablot
 
 .include "../../textproc/sablotron/buildlink2.mk"
 .include "../../www/libwww/buildlink2.mk"
