@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2002/10/19 10:55:00 rh Exp $
+# $NetBSD: Makefile,v 1.30 2002/10/21 15:43:28 wiz Exp $
 
 DISTNAME=	gdm-2.2.0
 PKGREVISION=	2
@@ -11,17 +11,12 @@ MAINTAINER=	mjl@netbsd.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Gnome Display Manager - a re-implementation of the xdm program
 
-DEPENDS+=	gnome-libs>=1.4.1.2nb1:../../x11/gnome-libs
-DEPENDS+=	libglade>=0.17nb1:../../devel/libglade
-
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
-GNU_CONFIGURE=	yes
-USE_X11BASE=	yes
-USE_LIBINTL=    YES
+USE_BUILLDINK2=	YES
+GNU_CONFIGURE=	YES
+USE_X11BASE=	YES
 
-CPPFLAGS=	-I${LOCALBASE}/include
-LIBS=		-lintl
 LOCALSTATEDIR=	/var/gnome
 
 EVAL_PREFIX+=	KDEBASEDIR=kdebase
@@ -116,4 +111,7 @@ post-install:
 	${LN} -fs Gnome ${GDMCFGDIR}/Sessions/Default
 	${INSTALL_SCRIPT} ${WRKDIR}/gdm ${PREFIX}/etc/rc.d/
 
+.include "../../devel/gettext-lib/buildlink2.mk"
+.include "../../devel/libglade/buildlink2.mk"
+.include "../../x11/gnome-libs/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
