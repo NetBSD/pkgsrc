@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.4 2002/09/14 08:14:22 tron Exp $
+$NetBSD: patch-ab,v 1.5 2002/09/15 19:25:38 tron Exp $
 
---- module/xf86_mod.c.orig	Mon Sep  9 12:29:28 2002
-+++ module/xf86_mod.c	Mon Sep  9 12:30:05 2002
+--- module/xf86_mod.c.orig	Sun Sep 15 21:18:40 2002
++++ module/xf86_mod.c	Sun Sep 15 21:22:02 2002
 @@ -31,7 +31,11 @@
  	0,
  	seltrue, xf86mmap, 0};
@@ -14,3 +14,15 @@ $NetBSD: patch-ab,v 1.4 2002/09/14 08:14:22 tron Exp $
  
  char *xf86_major_version = "2";
  char *xf86_minor_version = "0";
+@@ -76,7 +80,10 @@
+ 		
+ 	case LKM_E_UNLOAD:
+ 		/* Free allocated memory */
+-		free(mem_range_softc.mr_desc, M_MEMDESC);
++		if (mem_range_softc.mr_desc != NULL) {
++			free(mem_range_softc.mr_desc, M_MEMDESC);
++			mem_range_softc.mr_desc = NULL;
++		}
+ 		break;
+ 		
+ 	case LKM_E_STAT:
