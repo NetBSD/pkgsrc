@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2005/02/26 22:48:35 jmmv Exp $
+lib/libboost_date_time.a
+lib/libboost_date_time.so
+lib/libboost_filesystem.a
+lib/libboost_filesystem.so
+lib/libboost_prg_exec_monitor.a
+lib/libboost_prg_exec_monitor.so
+lib/libboost_program_options.a
+lib/libboost_program_options.so
+lib/libboost_regex.a
+lib/libboost_regex.so
+lib/libboost_signals.a
+lib/libboost_signals.so
+lib/libboost_test_exec_monitor.a
+lib/libboost_test_exec_monitor.so
+lib/libboost_thread.a
+lib/libboost_thread.so
+lib/libboost_unit_test_framework.a
+lib/libboost_unit_test_framework.so

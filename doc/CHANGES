@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9329 2005/02/26 22:43:04 is Exp $
+$NetBSD: CHANGES,v 1.9330 2005/02/26 22:48:34 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1157,3 +1157,10 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated blender to 2.36 [reinoud 2005-02-26]
 	Updated sr to 2.3.3 [is 2005-02-26]
 	Updated sr-examples to 2.3.3 [is 2005-02-26]
+	Removed boost-thread [jmmv 2005-02-26]
+	Added boost-build-1.32.0 [jmmv 2005-02-26]
+	Added boost-docs-1.32.0 [jmmv 2005-02-26]
+	Added boost-headers-1.32.0 [jmmv 2005-02-26]
+	Added boost-libs-1.32.0 [jmmv 2005-02-26]
+	Updated boost-python to 1.32.0 [jmmv 2005-02-26]
+	Updated boost to 1.32.0 [jmmv 2005-02-26]
