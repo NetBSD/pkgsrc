@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2004/05/03 15:58:20 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2004/05/16 17:52:11 danw Exp $
 
 DISTNAME=		guile-1.6.4
 CATEGORIES=		lang
@@ -21,6 +21,16 @@ INFO_FILES=		guile.info guile-tut.info goops.info r5rs.info
 
 TEST_DIRS=		${WRKSRC}
 TEST_TARGET=		check
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Darwin"
+CPPFLAGS+=		-Dmacosx
+
+post-patch:
+	@mv ${WRKSRC}/guile-config/guile-config.in.orig \
+	    ${WRKSRC}/guile-config/guile-config.in
+.endif
 
 .include "../../devel/libtool/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"

@@ -1,0 +1,13 @@
+$NetBSD: patch-ai,v 1.1 2004/05/16 17:52:11 danw Exp $
+
+--- libguile/Makefile.in.orig	Sat Mar 13 17:21:34 2004
++++ libguile/Makefile.in
+@@ -258,7 +258,7 @@ noinst_HEADERS = coop-threads.c coop-thr
+ 
+ libguile_la_DEPENDENCIES = @LIBLOBJS@
+ libguile_la_LIBADD = @LIBLOBJS@ ../libguile-ltdl/libguile-ltdl.la $(THREAD_LIBS_LOCAL)
+-libguile_la_LDFLAGS = -version-info @LIBGUILE_INTERFACE_CURRENT@:@LIBGUILE_INTERFACE_REVISION@:@LIBGUILE_INTERFACE_AGE@ -export-dynamic -no-undefined
++libguile_la_LDFLAGS = -version-info @LIBGUILE_INTERFACE_CURRENT@:@LIBGUILE_INTERFACE_REVISION@:@LIBGUILE_INTERFACE_AGE@ -export-dynamic
+ 
+ # These are headers visible as <guile/mumble.h>
+ pkginclude_HEADERS = gh.h
