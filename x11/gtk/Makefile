@@ -1,17 +1,19 @@
-# $NetBSD: Makefile,v 1.20 1998/11/21 22:15:15 tron Exp $
+# $NetBSD: Makefile,v 1.21 1998/12/18 23:53:15 tron Exp $
 
-DISTNAME=	gtk+-1.1.3
+DISTNAME=	gtk+-1.1.9
 CATEGORIES=	x11
 MASTER_SITES=	ftp://ftp.gtk.org/pub/gtk/v1.1/ \
-		ftp://infosoc.uni-koeln.de/pub/ftp.gimp.org/pub/gtk/v1.1/ \
-		ftp://ftp.flirble.org/pub/X/gimp/pub/gtk/v1.1/
+		ftp://ftp.cs.umn.edu/pub/gimp/gtk/v1.1/ \
+		http://www.ameth.org/gimp/pub/gtk/v1.1/ \
+		ftp://infosoc.uni-koeln.de/pub/ftp.gimp.org/pub/gtk/v1.1/
 
 MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.gtk.org/
 
-DEPENDS+=	glib-1.1.4:../../devel/glib
+DEPENDS+=	gettext-0.10:../../misc/gettext
+DEPENDS+=	glib-1.1.9:../../devel/glib
 
-CONFLICTS=	gtk+-1.0.0 gtk+-1.0.4 gtk+-1.1.1 gtk+-1.1.2
+CONFLICTS=	gtk+-*
 
 USE_LIBTOOL=	yes
 USE_X11=	yes
@@ -19,9 +21,13 @@ USE_GMAKE=	yes
 
 GNU_CONFIGURE=  yes
 CONFIGURE_ENV=	INSTALL_SCRIPT="${INSTALL_SCRIPT}" \
-		INSTALL_DATA="${INSTALL_DATA}"
+		INSTALL_DATA="${INSTALL_DATA}" \
+		CPPFLAGS="${CPPFLAGS}"
+
+INFO_FILES=	gdk.info gtk.info
 
 CFLAGS=		-pipe -O2
-INFO_FILES=	gdk.info gtk.info
+CPPFLAGS=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
 
 .include "../../mk/bsd.pkg.mk"
