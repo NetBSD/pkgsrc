@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3063 2003/08/18 04:05:11 gson Exp $
+$NetBSD: CHANGES,v 1.3064 2003/08/18 14:32:41 taca Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3293,4 +3293,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated esound to 0.2.31 [jmmv 2003-08-17]
 	Updated intltool to 0.27.1 [jmmv 2003-08-17]
 	Updated postgresql to 7.3.4 [cjs 2003-08-18]
-	Updated py-dns to 1.1.0 [gson 2003-08-17]
+	Updated py-dns to 1.1.0 [gson 2003-08-18]
+	Updated mew3 to 3.3 [taca 2003-08-18]
