@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2000/09/01 13:43:37 hubertf Exp $
+# $NetBSD: Makefile,v 1.25 2001/02/16 15:22:36 wiz Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/08/29 12:17:50 tg Exp
 #
 
@@ -9,6 +9,7 @@ MASTER_SITES=	http://home.worldonline.dk/~torsten/xpaint/
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://home.worldonline.dk/~torsten/xpaint/
+COMMENT=	Simple paint program
 
 DEPENDS+=	tiff-*:../../graphics/tiff
 DEPENDS+=	jpeg-6b:../../graphics/jpeg

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/08/02 11:28:35 sakamoto Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/16 15:25:29 wiz Exp $
 # FreeBSD Id: Makefile,v 1.9 1998/11/28 05:08:27 asami Exp $
 
 DISTNAME=	sj3-2.0.1.20
@@ -8,6 +8,7 @@ MASTER_SITES=	ftp://ftp.sony.co.jp/pub/unsupported/src/	\
 		ftp://ftp.cs.titech.ac.jp/pub/japanese/sj3/
 
 MAINTAINER=	tech-pkg-ja@jp.netbsd.org
+COMMENT=	Japanese input method (library)
 
 pre-configure:
 	@${MV} ${WRKSRC}/Imakefile ${WRKSRC}/Imakefile.orig

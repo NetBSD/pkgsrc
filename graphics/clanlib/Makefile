@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2000/12/15 03:20:49 garbled Exp $
+# $NetBSD: Makefile,v 1.15 2001/02/16 15:22:16 wiz Exp $
 
 DISTNAME=		ClanLib-0.4.4
 CATEGORIES=		graphics games devel x11
@@ -6,6 +6,7 @@ MASTER_SITES=		http://dark.x.dtu.dk/~mbn/clanlib/download/
 
 MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.clanlib.org/
+COMMENT=		The ClanLib Game SDK
 
 DEPENDS+=		Hermes>=1.3:../../graphics/hermes
 DEPENDS+=		png>=1.0.6:../../graphics/png

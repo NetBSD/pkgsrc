@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/12/24 02:27:41 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/16 15:22:19 wiz Exp $
 #
 
 DISTNAME=	freetype-2.0.1
@@ -13,6 +13,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=freetype/}			\
 
 MAINTAINER=	rh@netbsd.org
 HOMEPAGE=	http://www.freetype.org/
+COMMENT=	font rendering engine and library API
 
 USE_GMAKE=	YES
 GNU_CONFIGURE=	YES

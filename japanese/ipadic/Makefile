@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/01/10 14:47:47 taca Exp $
+# $NetBSD: Makefile,v 1.2 2001/02/16 15:25:18 wiz Exp $
 #
 
 DISTNAME=		ipadic-2.4.1
@@ -7,6 +7,7 @@ MASTER_SITES=		http://chasen.aist-nara.ac.jp/stable/ipadic/
 
 MAINTAINER=     	tech-pkg-ja@jp.netbsd.org
 HOMEPAGE=       	http://chasen.aist-nara.ac.jp/
+COMMENT=		Japanese Morphological Dictionary for ChaSen
 
 DEPENDS=        	chasen-base>=2.2.1:../../japanese/chasen-base
 

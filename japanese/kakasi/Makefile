@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/01/26 21:38:36 veego Exp $
+# $NetBSD: Makefile,v 1.11 2001/02/16 15:25:19 wiz Exp $
 # FreeBSD Id: Makefile,v 1.14 1998/04/05 04:46:33 max Exp $
 
 DISTNAME=	kakasi-2.3.3
@@ -7,6 +7,7 @@ MASTER_SITES=	ftp://kakasi.namazu.org/pub/kakasi/stable/
 
 MAINTAINER=	tech-pkg-ja@jp.netbsd.org
 HOMEPAGE=	http://kakasi.namazu.org/
+COMMENT=	Kanji-Kana Simple Inverter, language filter for Japanese
 
 GNU_CONFIGURE=	YES
 USE_GMAKE=	YES
