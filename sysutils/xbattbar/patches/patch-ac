@@ -1,0 +1,66 @@
+$NetBSD: patch-ac,v 1.1 2004/04/20 10:31:13 lukem Exp $
+
+--- xbattbar.man.orig	2001-02-02 16:25:29.000000000 +1100
++++ xbattbar.man
+@@ -36,8 +36,8 @@
+ .Sh DESCRIPTION
+ .Nm xbattbar
+ shows the current (laptop) battery status in the X window environment.
+-Battery status is obtained through the APM kernel module.
+-The APM kernel module depends on your UNIX platform,
++Battery status is obtained through the APM or ACPI kernel module.
++The APM and ACPI kernels module depends on your UNIX platform,
+ therefore, consult your documentation for its detail.
+ .Pp
+ .Nm xbattbar
+@@ -48,7 +48,7 @@ The thickness of the indicator is 3 pixe
+ you can set the thickness as a parameter of 
+ .Nm -t
+ option.
+-This indicator is appeared in the bottom of the display, as its default.
++This indicator appears in the bottom of the display (by default).
+ The option
+ .Nm top,
+ .Nm left,
+@@ -57,12 +57,12 @@ or
+ forces the status indicator to be at the top, left, and right of the
+ display,
+ respectively.
+-Though it's a default, you can also use
+-.Nm buttom
++Though it's the default, you can also use
++.Nm bottom
+ as the option.
+ .Pp
+-In the case the AC line is on-line (plugged in),
+-its color of the bar indicator consists of "green" and "olive drab"
++When the AC line is on-line (plugged in),
++the color of the bar indicator consists of "green" and "olive drab"
+ portions.
+ The "green" portion shows its battery charging level.
+ These colors can be changed by
+@@ -71,19 +71,20 @@ and
+ .Nm -O
+ options.
+ In the other case (AC line is off-line),
++the color of the bar indicator consists of "blue" and "red";
+ the "blue" portion of the bar indicator shows the percentage of
+ its remaining battery level.
+-The color conbination for the AC off-line case can be changed by
++The color combination for the AC off-line case can be changed by
+ .Nm -i
+ and
+ .Nm -o
+ options.
+ .Pp
+ .Nm xbattbar
+-trys to know its battery status in every 10 seconds in default.
+-This is achived by APM polling.
++trys to know the battery status in every 10 seconds.
++This is achieved by APM or ACPI polling.
+ .Nm -p
+-option sets the polling interval in second.
++option changes the polling interval (in seconds).
+ .Pp
+ If the mouse cursor enters in the status indicator,
+ the diagnosis window appears in the center of the display,
