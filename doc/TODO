@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2203 2004/10/06 11:08:51 wiz Exp $
+$NetBSD: TODO,v 1.2204 2004/10/06 22:49:44 reed Exp $
 
 Suggested new packages
 ======================
@@ -217,6 +217,7 @@ Suggested package updates
 	o classpath-0.11
 	o clisp-2.33.2
 	o cocoon-2.1.5
+	o conglomerate-0.7.14
 	o conserver-8.1.8
 	o cooledit-3.17.8
 	o courier-0.47
