@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2003/07/12 01:47:31 zuntum Exp $
+$NetBSD: distinfo,v 1.6 2003/12/18 14:24:01 grant Exp $
 
-SHA1 (grepmail-5.00.tar.gz) = 55f4594646dfeb4d32a58e0630e98bf3423ccc68
-Size (grepmail-5.00.tar.gz) = 699849 bytes
+SHA1 (grepmail-5.22.tar.gz) = 0fa8c8755bd3b11b329bb52a5ffcebff1b55e27f
+Size (grepmail-5.22.tar.gz) = 441252 bytes
