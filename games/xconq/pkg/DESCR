@@ -1,0 +1,12 @@
+Xconq is an Empire-type strategy game, where players contest for world
+domination.  In the standard game, each player (there may be up to 31)
+starts with a handful of towns and cities, and may build infantry,
+armor, airplanes, and a variety of ships.  Each side's movements are
+hidden; speed and surprise are important.  Any or all sides may be
+played by the computer.  In addition to the standard game, Xconq
+includes a game design language (GDL) that can be used to define a
+wide variety of games. Games already in the distribution's library
+include everything from basic combat to elaborate world models, with
+time periods ranging from ancient history into the distant future.
+Xconq has a huge number of features, and a lengthy manual describing
+them.
