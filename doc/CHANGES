@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3138 2003/08/30 06:00:41 taca Exp $
+$NetBSD: CHANGES,v 1.3139 2003/08/30 07:21:15 taca Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3383,3 +3383,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated ruby-fox to 1.0.25 [taca 2003-08-30]
 	Updated ruby-amstd to 2.0.0 [taca 2003-08-30]
 	Updated ruby-rdtool to 0.6.13 [taca 2003-08-30]
+	Updated ruby-zlib to 0.6.0 [taca 2003-08-30]
+	Moved ruby-zlib from archivers to devel [taca 2003-08-30]
