@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.225 2004/03/29 00:55:55 minskim Exp $
+# $NetBSD: Makefile,v 1.226 2004/03/29 19:44:33 tv Exp $
 
 COMMENT=	System utilities
 
@@ -141,6 +141,7 @@ SUBDIR+=	setquota
 SUBDIR+=	shmux
 SUBDIR+=	skill
 SUBDIR+=	socket
+SUBDIR+=	sredird
 SUBDIR+=	sshsh
 SUBDIR+=	storage-manager
 SUBDIR+=	stow
