@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2000/06/05 09:57:58 tron Exp $
+# $NetBSD: Makefile,v 1.8 2000/06/05 14:48:51 tron Exp $
 
 DISTNAME=	gnome-1.2.0
 CATEGORIES=	x11 gnome
@@ -14,6 +14,7 @@ DEPENDS+=	gdm>=2.0b4:../gdm
 DEPENDS+=	ggv>=0.95:../../print/ggv
 DEPENDS+=	glade>=0.5.3:../../devel/glade
 DEPENDS+=	gmc>=4.5.42:../../sysutils/gmc
+DEPENDS+=	gnome-applets>=1.2.0:../gnome-applets
 DEPENDS+=	gnome-audio>=1.0.0:../../audio/gnome-audio
 DEPENDS+=	gnome-chess>=0.2.4:../../games/gnome-chess
 DEPENDS+=	gnome-games>=1.0.51:../../games/gnome-games
