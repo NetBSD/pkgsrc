@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/07/17 21:38:16 grant Exp $
+# $NetBSD: Makefile,v 1.11 2003/09/19 05:18:37 dent Exp $
 
 DISTNAME=	eus-demo
 PKGNAME=	eus-demo-1.0
@@ -9,7 +9,7 @@ MASTER_SITES=	ftp://ftp.linuxgames.com/loki/demos/eus/ \
 		ftp://ftp.linux.tucows.com/pub/Loki/demos/eus/
 
 MAINTAINER=	abs@NetBSD.org
-HOMEPAGE=	http://www.lokigames.com/products/eus/demo.php3
+HOMEPAGE=	http://www.lokigames.com/products/eus/
 COMMENT=	Eric's Ultimate Solitaire (linux demo)
 
 NO_CONFIGURE=		yes
