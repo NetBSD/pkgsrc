@@ -1,21 +1,19 @@
-$NetBSD: patch-ab,v 1.3 2003/04/02 12:03:44 wiz Exp $
+$NetBSD: patch-ab,v 1.4 2003/04/06 15:42:47 wiz Exp $
 
 --- input/xwin/Makefile.am.orig	Sat Jul  7 21:55:49 2001
 +++ input/xwin/Makefile.am
-@@ -11,12 +11,11 @@ xwin_la_LDFLAGS = ${extra_libraries} -mo
+@@ -11,10 +11,13 @@
  
  inputlibdir = ${libdir}/${ggi_subdir}/input
  
 -xev.c:	../x/xev.c
-+xev.c:	../x/xev.c xev.h
++xev.c:	../x/xev.c ../x/xev.h
  	rm -f xev.c
  	ln -s ../x/xev.c .
--
--xev.lo:
--	rm -f xev.lo
--	ln -s ../x/xev.lo .
-+xev.h: ../x/xev.h
 +	rm -f xev.h
 +	ln -s ../x/xev.h .
  
- EXTRA_DIST = EXPSYMS
++# Workaround for Darwin
+ xev.lo:
+ 	rm -f xev.lo
+ 	ln -s ../x/xev.lo .
