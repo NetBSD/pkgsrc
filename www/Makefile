@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2000/01/18 01:53:35 jwise Exp $
+# $NetBSD: Makefile,v 1.69 2000/01/18 18:09:24 jwise Exp $
 # FreeBSD Id: Makefile,v 1.65 1997/11/17 06:31:39 fenner Exp
 #
 
@@ -77,6 +77,7 @@
     SUBDIR += php3-pgsql
     SUBDIR += php3-snmp
     SUBDIR += py-pcgi
+#    SUBDIR += spfc		# depends on disabled jsdk20
     SUBDIR += squid
     SUBDIR += squid-current
     SUBDIR += swish-e
