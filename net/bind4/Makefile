@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.8 2002/06/28 05:49:09 itojun Exp $
+# $NetBSD: Makefile,v 1.9 2002/10/07 10:31:18 itojun Exp $
 #
 
-DISTNAME=	bind-4.9.9-REL
-PKGNAME=	bind-4.9.9
+DISTNAME=	bind-4.9.10-REL
+PKGNAME=	bind-4.9.10
 CATEGORIES=	net
-MASTER_SITES=	ftp://ftp.isc.org/isc/bind/src/4.9.9/
+MASTER_SITES=	ftp://ftp.isc.org/isc/bind/src/4.9.10/
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.isc.org/
