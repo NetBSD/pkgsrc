@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.22 2004/12/19 05:34:07 grant Exp $
+# $NetBSD: Makefile.common,v 1.23 2005/01/21 02:01:37 tv Exp $
 #
 
 DISTNAME=	Python-2.3.4
@@ -42,7 +42,8 @@ PLIST_SUBST+=	PY_PLATNAME=${PY_PLATNAME}
 # the dl module isn't built for 64 bit archs and Darwin
 .if ${MACHINE_ARCH} == "alpha" || ${MACHINE_ARCH} == "amd64" \
 	|| ${MACHINE_ARCH} == "sparc64" || ${MACHINE_ARCH} == "x86_64" \
-	|| ${OPSYS} == "Darwin" || ( ${OPSYS} == "IRIX" && ${ABI} == "64" )
+	|| ${OPSYS} == "Darwin" || ( ${OPSYS} == "IRIX" && ${ABI} == "64" ) \
+	|| ${OPSYS} == "Interix"
 PLIST_SUBST+=  DLMODULE="@comment "
 .else
 PLIST_SUBST+=  DLMODULE=
@@ -86,7 +87,12 @@ MAKE_ENV+=	PY_BDB_INCDIRS=${BDBBASE}/${BUILDLINK_INCDIRS.${BDB_TYPE}}
 MAKE_ENV+=	PY_BDB_LIBDIRS=${BDBBASE}/lib
 PLIST_SUBST+=	BSDDBMODULE=
 PLIST_SUBST+=	NOSHLIB=
+.  if ${OPSYS} == "Interix"
+PLIST_SUBST+=	NISMODULE="@comment "
+CONFIGURE_ENV+=	ac_cv_header_stropts_h=no
+.  else
 PLIST_SUBST+=	NISMODULE=
+.  endif
 .endif
 
 .if defined(BUILDLINK_TRANSFORM)
