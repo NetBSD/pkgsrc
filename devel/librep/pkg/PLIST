@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/12/17 14:43:05 mellon Exp $
+@comment $NetBSD: PLIST,v 1.2 1999/12/17 14:59:18 mellon Exp $
 bin/rep
 bin/repdoc
 bin/rep-config
@@ -23,30 +23,30 @@ lib/librep.so.6
 lib/librep.so
 lib/librep.la
 lib/librep.a
-libexec/rep/i386--netbsd/libtool
-libexec/rep/i386--netbsd/rules.mk
-libexec/rep/0.9/i386--netbsd/libsdbm.so.0.0
-libexec/rep/0.9/i386--netbsd/libsdbm.so.0
-libexec/rep/0.9/i386--netbsd/libsdbm.so
-libexec/rep/0.9/i386--netbsd/libsdbm.la
-libexec/rep/0.9/i386--netbsd/libsdbm.a
-libexec/rep/0.9/i386--netbsd/libtimers.so.0.0
-libexec/rep/0.9/i386--netbsd/libtimers.so.0
-libexec/rep/0.9/i386--netbsd/libtimers.so
-libexec/rep/0.9/i386--netbsd/libtimers.la
-libexec/rep/0.9/i386--netbsd/libtimers.a
-libexec/rep/0.9/i386--netbsd/libgettext.so.0.0
-libexec/rep/0.9/i386--netbsd/libgettext.so.0
-libexec/rep/0.9/i386--netbsd/libgettext.so
-libexec/rep/0.9/i386--netbsd/libgettext.la
-libexec/rep/0.9/i386--netbsd/libgettext.a
-libexec/rep/0.9/i386--netbsd/libreadline.so.0.0
-libexec/rep/0.9/i386--netbsd/libreadline.so.0
-libexec/rep/0.9/i386--netbsd/libreadline.so
-libexec/rep/0.9/i386--netbsd/libreadline.la
-libexec/rep/0.9/i386--netbsd/libreadline.a
-@dirrm libexec/rep/i386--netbsd
-@dirrm libexec/rep/0.9/i386--netbsd
+libexec/rep/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/libtool
+libexec/rep/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/rules.mk
+libexec/rep/0.9/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/libsdbm.so.0.0
+libexec/rep/0.9/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/libsdbm.so.0
+libexec/rep/0.9/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/libsdbm.so
+libexec/rep/0.9/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/libsdbm.la
+libexec/rep/0.9/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/libsdbm.a
+libexec/rep/0.9/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/libtimers.so.0.0
+libexec/rep/0.9/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/libtimers.so.0
+libexec/rep/0.9/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/libtimers.so
+libexec/rep/0.9/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/libtimers.la
+libexec/rep/0.9/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/libtimers.a
+libexec/rep/0.9/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/libgettext.so.0.0
+libexec/rep/0.9/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/libgettext.so.0
+libexec/rep/0.9/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/libgettext.so
+libexec/rep/0.9/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/libgettext.la
+libexec/rep/0.9/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/libgettext.a
+libexec/rep/0.9/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/libreadline.so.0.0
+libexec/rep/0.9/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/libreadline.so.0
+libexec/rep/0.9/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/libreadline.so
+libexec/rep/0.9/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/libreadline.la
+libexec/rep/0.9/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/libreadline.a
+@dirrm libexec/rep/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}
+@dirrm libexec/rep/0.9/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}
 @dirrm libexec/rep/0.9
 @dirrm libexec/rep
 share/aclocal/rep.m4
