@@ -1,18 +1,7 @@
-$NetBSD: patch-makefile,v 1.1 2001/10/18 11:13:56 darcy Exp $
+$NetBSD: patch-ac,v 1.1 2001/10/18 11:39:24 wiz Exp $
 
 --- makefile.orig	Sat Nov  4 02:49:46 2000
-+++ makefile	Tue Jul 17 01:42:30 2001
-@@ -2,8 +2,8 @@
- GDC_LIB  = .
- 
- # GDChart requires the gd library - www.boutell.com/gd/
--GD_INCL  = ../gd-1.8.3
--GD_LIB   = ../gd-1.8.3
-+GD_INCL  = $(LOCALBASE)/include
-+GD_LIB   = $(LOCALBASE)/lib
- 
- # libgd requires libpng
- # PNG_INCL = ../libpng-1.0.8
++++ makefile
 @@ -23,6 +23,8 @@
  # if not installed in standard paths (/lib, /usr/lib), or LD_LIBRARY_PATH
  # LIB_PATHS   = -L$(GD_LIB) -L$(PNG_LIB) -L$(ZLIB_LIB) -L$(JPEG_LIB)
@@ -92,7 +81,7 @@ $NetBSD: patch-makefile,v 1.1 2001/10/18 11:13:56 darcy Exp $
  # --- compile the lib ---
  gifencode.o: gifencode.c gifencode.h
 -	$(CC) -I$(GD_INCL) -c gifencode.c
-+	$(CC) $(CFLAGS) -I$(GD_INCL) -c gifencode.c
++	$(CC) $(CFLAGS) -c gifencode.c
  
  price_conv.o: price_conv.c
 -	$(CC) -c price_conv.c
@@ -100,15 +89,15 @@ $NetBSD: patch-makefile,v 1.1 2001/10/18 11:13:56 darcy Exp $
  
  gdc.o: gdc.c $(GDC_INCL)/gdc.h $(GDC_INCL)/gifencode.h
 -	$(CC) -I$(GD_INCL) -I$(GDC_INCL) $(JPEG_DEF) -c gdc.c
-+	$(CC) $(CFLAGS) -I$(GD_INCL) -I$(GDC_INCL) $(JPEG_DEF) -c gdc.c
++	$(CC) $(CFLAGS) $(JPEG_DEF) -c gdc.c
  
  gdc_pie.o: $(GDC_INCL)/gdc.h $(GDC_INCL)/gifencode.h $(GDC_INCL)/gdcpie.h gdc_pie.c
 -	$(CC) -I$(GD_INCL) -I$(GDC_INCL) $(JPEG_DEF) -c gdc_pie.c
-+	$(CC) $(CFLAGS) -I$(GD_INCL) -I$(GDC_INCL) $(JPEG_DEF) -c gdc_pie.c
++	$(CC) $(CFLAGS) $(JPEG_DEF) -c gdc_pie.c
  
  gdchart.o: $(GDC_INCL)/gdc.h $(GDC_INCL)/gifencode.h $(GDC_INCL)/gdchart.h gdchart.c
 -	$(CC) -I$(GD_INCL) -I$(GDC_INCL) $(JPEG_DEF) -c gdchart.c
-+	$(CC) $(CFLAGS) -I$(GD_INCL) -I$(GDC_INCL) $(JPEG_DEF) -c gdchart.c
++	$(CC) $(CFLAGS) $(JPEG_DEF) -c gdchart.c
  
  # --- supporting libraries ---
  # should be compile & installed separately
