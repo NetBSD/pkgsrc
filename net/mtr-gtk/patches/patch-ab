@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.6 2005/02/01 17:02:00 wiz Exp $
+$NetBSD: patch-ab,v 1.7 2005/02/27 22:49:43 wiz Exp $
 
---- dns.c.orig	2004-08-26 09:56:53.000000000 +0200
+--- dns.c.orig	2005-01-11 09:32:42.000000000 +0100
 +++ dns.c
 @@ -32,9 +32,17 @@
  #include <sys/socket.h>
@@ -20,7 +20,7 @@ $NetBSD: patch-ab,v 1.6 2005/02/01 17:02:00 wiz Exp $
  #include <unistd.h>
  #include <fcntl.h>
  #include <ctype.h>
-@@ -282,6 +290,17 @@ char nullstring[] = "";
+@@ -294,6 +302,17 @@ char nullstring[] = "";
  
  int use_dns = 1;
  
@@ -38,7 +38,7 @@ $NetBSD: patch-ab,v 1.6 2005/02/01 17:02:00 wiz Exp $
  
  /* Code */
  #ifdef CorruptCheck
-@@ -448,14 +467,14 @@ void dns_open(void)
+@@ -468,14 +487,14 @@ void dns_open(void)
  {
    int option,i;
  
@@ -58,7 +58,7 @@ $NetBSD: patch-ab,v 1.6 2005/02/01 17:02:00 wiz Exp $
    resfd = socket(AF_INET, SOCK_DGRAM, 0);
    if (resfd == -1) {
      fprintf(stderr,"Unable to allocate socket for nameserver communication: %s\n",
-@@ -814,17 +833,17 @@ void dorequest(char *s,int type,word id)
+@@ -858,17 +877,17 @@ void dorequest(char *s,int type,word id)
  {
    packetheader *hp;
    int r,i;
@@ -80,25 +80,28 @@ $NetBSD: patch-ab,v 1.6 2005/02/01 17:02:00 wiz Exp $
  		 sizeof(struct sockaddr));
  }
  
-@@ -1161,15 +1180,15 @@ void dns_ack(void)
-   if (r > 0) {
+@@ -1224,18 +1243,18 @@ void dns_ack(void)
      /* Check to see if this server is actually one we sent to */
-     if (from.sin_addr.s_addr == localhost) {
+     if ( addrcmp( (void *) &(from4->sin_addr), (void *) &localhost,
+                   (int) AF_INET ) == 0 ) {
 -      for (i = 0;i < _res.nscount;i++)
--	if ((_res.nsaddr_list[i].sin_addr.s_addr == from.sin_addr.s_addr) ||
--	    (!_res.nsaddr_list[i].sin_addr.s_addr))	/* 0.0.0.0 replies as 127.0.0.1 */
+-	if ( addrcmp( (void *) &(_res.nsaddr_list[i].sin_addr),
 +      for (i = 0;i < myres.nscount;i++)
-+	if ((myres.nsaddr_list[i].sin_addr.s_addr == from.sin_addr.s_addr) ||
-+	    (!myres.nsaddr_list[i].sin_addr.s_addr))	/* 0.0.0.0 replies as 127.0.0.1 */
++	if ( addrcmp( (void *) &(myres.nsaddr_list[i].sin_addr),
+ 		      (void *) &(from4->sin_addr), (int) AF_INET ) == 0 ||
+-	     addrcmp( (void *) &(_res.nsaddr_list[i].sin_addr),
++	     addrcmp( (void *) &(myres.nsaddr_list[i].sin_addr),
+ 		      (void *) &unspec_addr, (int) AF_INET ) != 0 )	/* 0.0.0.0 replies as 127.0.0.1 */
  	  break;
      } else
 -      for (i = 0;i < _res.nscount;i++)
--	if (_res.nsaddr_list[i].sin_addr.s_addr == from.sin_addr.s_addr)
+-	if ( addrcmp( (void *) &(_res.nsaddr_list[i].sin_addr),
 +      for (i = 0;i < myres.nscount;i++)
-+	if (myres.nsaddr_list[i].sin_addr.s_addr == from.sin_addr.s_addr)
++	if ( addrcmp( (void *) &(myres.nsaddr_list[i].sin_addr),
+ 		      (void *) &(from4->sin_addr), AF_INET ) == 0 )
  	  break;
 -    if (i == _res.nscount) {
 +    if (i == myres.nscount) {
        sprintf(tempstring,"Resolver error: Received reply from unknown source: %s",
- 	      inet_ntoa(from.sin_addr));
+ 	      inet_ntoa(from4->sin_addr ));
        restell(tempstring);
