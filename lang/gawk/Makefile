@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2004/10/14 03:20:20 minskim Exp $
+# $NetBSD: Makefile,v 1.26 2004/10/14 03:24:21 minskim Exp $
 #
 
 DISTNAME=	gawk-3.1.4
@@ -12,6 +12,8 @@ HOMEPAGE=	http://www.gnu.org/software/gawk/gawk.html
 COMMENT=	GNU awk
 
 CONFLICTS=	ja-gawk-[0-9]*
+
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		# defined
