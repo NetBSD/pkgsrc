@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2002/04/29 22:19:46 simonb Exp $
+# $NetBSD: Makefile,v 1.3 2002/05/26 19:45:44 cjep Exp $
 #
 
 DISTNAME=	rox-1.2.0
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=rox/}
 EXTRACT_SUFX=	.tgz
@@ -14,12 +15,14 @@ DEPENDS+=	rox-base>=1.0.2:../../sysutils/rox-base
 
 DIST_SUBDIR=	rox
 
-GNU_CONFIGURE=	yes
+USE_BUILDLINK_ONLY=	yes
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--with-gtk2
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/ROX-Filer/src
 
 post-patch:
-	${SED} -e "s:APPDIR:"${PREFIX}/apps":g" < ${FILESDIR}/rox > \
+	${SED} -e "s:APPDIR:"${PREFIX}/share/rox":g" < ${FILESDIR}/rox > \
 		${WRKDIR}/${DISTNAME}/rox
 
 post-build:
@@ -30,12 +33,19 @@ pre-install:
 	${RM} -rf ${WRKSRC}
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/apps
-	${CP} -Rf ${WRKDIR}/${DISTNAME}/ROX-Filer ${PREFIX}/apps
+	${INSTALL_DATA_DIR} ${PREFIX}/share/rox
+	${INSTALL_PROGRAM_DIR} ${PREFIX}/libexec/rox
+	${INSTALL} ${WRKDIR}/${DISTNAME}/ROX-Filer/ROX-Filer		\
+			${PREFIX}/libexec/rox
+	${RM} -f ${WRKDIR}/${DISTNAME}/ROX-Filer/ROX-Filer
+	${CP} -Rf ${WRKDIR}/${DISTNAME}/ROX-Filer ${PREFIX}/share/rox
+	${SED} -e "s:@PREFIX@:"${PREFIX}":g" <				\
+		${WRKDIR}/${DISTNAME}/ROX-Filer/AppRun > 		\
+		${PREFIX}/share/rox/ROX-Filer/AppRun
 	${INSTALL_SCRIPT} ${WRKDIR}/${DISTNAME}/rox ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKDIR}/${DISTNAME}/rox.1 ${PREFIX}/man/man1
 
-.include "../../graphics/gdk-pixbuf/buildlink.mk"
-.include "../../textproc/libxml/buildlink.mk"
-.include "../../x11/gtk/buildlink.mk"
+.include "../../textproc/libxml2/buildlink.mk"
+.include "../../x11/gtk2/buildlink.mk"
+.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
