@@ -1,8 +1,6 @@
-$NetBSD: distinfo,v 1.9 2004/01/22 12:25:59 grant Exp $
+$NetBSD: distinfo,v 1.10 2004/06/01 04:31:42 minskim Exp $
 
-SHA1 (unzip550.tar.gz) = 51034a8098eddc8facb4db9ea1a935e813dbdb73
-Size (unzip550.tar.gz) = 1068662 bytes
-SHA1 (unzip_5.50-1woody2.diff.gz) = 2988b7954203f9e192e2cdbf590673c6ba986296
-Size (unzip_5.50-1woody2.diff.gz) = 5049 bytes
-SHA1 (patch-aa) = a90ed5bb96f5b1c1be4ef5ddc952edb364fa7a05
+SHA1 (unzip551.tar.gz) = 4643ca31419cfb34c9de8a182aabebd79662ba04
+Size (unzip551.tar.gz) = 1112594 bytes
+SHA1 (patch-aa) = de66b7b5c45904167e8596ce5235d957c2df4d2a
 SHA1 (patch-ab) = dd426fdf4b774bd73f4ee46da470ffa3c2cf6513
