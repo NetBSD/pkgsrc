@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5705 2004/04/21 13:51:49 adam Exp $
+$NetBSD: CHANGES,v 1.5706 2004/04/21 15:02:26 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2208,3 +2208,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated scsh to 0.6.6 [dillo 2004-04-21]
 	Updated cvs2svn to 0.916 [seb 2004-04-21]
 	Updated ImageMagick to 6.0.0-2 [adam 2004-04-21]
+	Updated anjuta to 1.2.2 [jmmv 2004-04-21]
