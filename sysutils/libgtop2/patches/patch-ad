@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.1 2005/03/22 16:03:37 jmmv Exp $
+$NetBSD: patch-ad,v 1.2 2005/03/27 11:18:37 jmmv Exp $
 
 --- sysdeps/freebsd/fsusage.c.orig	2005-02-28 09:54:41.000000000 +0100
 +++ sysdeps/freebsd/fsusage.c
@@ -20,7 +20,7 @@ $NetBSD: patch-ad,v 1.1 2005/03/22 16:03:37 jmmv Exp $
  
  #include <stdio.h>
  #include <string.h>
-@@ -26,9 +33,15 @@ _glibtop_freebsd_get_fsusage_read_write(
+@@ -26,16 +33,26 @@ _glibtop_freebsd_get_fsusage_read_write(
  				      const char *path)
  {
  	int result;
@@ -36,3 +36,16 @@ $NetBSD: patch-ad,v 1.1 2005/03/22 16:03:37 jmmv Exp $
  
  	if (result == -1) {
  		return;
+ 	}
+ 
++#ifdef HAVE_STATVFS_READS_COUNT
+ 	buf->read = sfs.f_syncreads + sfs.f_asyncreads;
++	buf->flags |= (1 << GLIBTOP_FSUSAGE_READ);
++#endif
++#ifdef HAVE_STATVFS_WRITES_COUNT
+ 	buf->write = sfs.f_syncwrites + sfs.f_asyncwrites;
+-
+-	buf->flags |= (1 << GLIBTOP_FSUSAGE_READ) | (1 << GLIBTOP_FSUSAGE_WRITE);
++	buf->flags |= (1 << GLIBTOP_FSUSAGE_WRITE);
++#endif
+ }
