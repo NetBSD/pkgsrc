@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2001/05/31 09:56:59 minoura Exp $
+
+--- ext/charconv/configure.orig	Wed May 30 18:06:30 2001
++++ ext/charconv/configure	Thu May 31 10:38:46 2001
+@@ -548,7 +548,7 @@
+   
+   case $with_iconv in
+     no|yes) ;;
+-    *) CPPFLAGS="$CPPFLAGS -I$with_iconv" ;;
++    *) CPPFLAGS="$CPPFLAGS -I$with_iconv"; LIBS="$LIBS -liconv" ;;
+   esac
+ else
+   with_iconv=yes

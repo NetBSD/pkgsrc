@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2001/05/31 09:56:59 minoura Exp $
+
+--- ext/charconv/configure.in.orig	Wed May 30 16:43:42 2001
++++ ext/charconv/configure.in	Thu May 31 10:38:32 2001
+@@ -31,7 +31,7 @@
+ AC_ARG_WITH(iconv, , [
+   case $with_iconv in
+     no|yes) ;;
+-    *) CPPFLAGS="$CPPFLAGS -I$with_iconv" ;;
++    *) CPPFLAGS="$CPPFLAGS -I$with_iconv"; LIBS="$LIBS -liconv" ;;
+   esac], [with_iconv=yes])
+ 
+ dnl Get compiler parameters which Gauche has been compiled with.
