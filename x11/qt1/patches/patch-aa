@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.6 2001/03/03 14:36:01 skrll Exp $
+$NetBSD: patch-aa,v 1.7 2001/05/01 16:43:40 jlam Exp $
 
---- configs/netbsd-g++-static.orig	Fri Feb 26 17:02:07 1999
+--- configs/netbsd-g++-static.orig	Fri Feb 26 12:02:07 1999
 +++ configs/netbsd-g++-static
 @@ -1,5 +1,6 @@
  # Compiling
@@ -59,7 +59,8 @@ $NetBSD: patch-aa,v 1.6 2001/03/03 14:36:01 skrll Exp $
 +	$(LIBTOOL) --mode=link c++ -rpath $(QTPREFIX)/lib -version-info $(VER_MAJ):$(VER_MIN) \
 +	-o $(SYSCONF_LINK_TARGET) $(OBJECTS:.o=.lo) $(OBJMOC:.o=.lo) 
  # Compiling application source
- SYSCONF_CXXFLAGS	= -O2 -fno-strength-reduce
+-SYSCONF_CXXFLAGS	= -O2 -fno-strength-reduce
++SYSCONF_CXXFLAGS	= ${CXXOPTS} -fno-strength-reduce
  # Compiling library source
 -SYSCONF_CXXFLAGS_LIB	= -O2 -fno-strength-reduce -fPIC
 +SYSCONF_CXXFLAGS_LIB	=
@@ -67,4 +68,4 @@ $NetBSD: patch-aa,v 1.6 2001/03/03 14:36:01 skrll Exp $
 -SYSCONF_CXXFLAGS_SHOBJ	= -O2 -fno-strength-reduce -fPIC
 -SYSCONF_LINK_LIB	= $(SYSCONF_LINK_LIB_STATIC)
 -SYSCONF_LINK_TARGET	= $(SYSCONF_LINK_TARGET_STATIC)
-+SYSCONF_CXXFLAGS_SHOBJ	= -O2 -fno-strength-reduce
++SYSCONF_CXXFLAGS_SHOBJ	= ${CXXOPTS} -fno-strength-reduce
