@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9219 2005/02/19 20:04:55 wiz Exp $
+$NetBSD: CHANGES,v 1.9220 2005/02/19 20:24:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -965,3 +965,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated p5-XML-Writer to 0.530 [wiz 2005-02-19]
 	Added p5-Lingua-EN-Numbers-Ordinate-1.02 [wiz 2005-02-19]
 	Added p5-Lingua-Preferred-0.2.4 [wiz 2005-02-19]
+	Added p5-HTTP-Cache-Transparent-0.5 [wiz 2005-02-19]
