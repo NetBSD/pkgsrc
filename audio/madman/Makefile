@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/08/27 00:05:19 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2004/09/11 20:16:04 wiz Exp $
 
 DISTNAME=	madman-0.93
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=madman/}
 
@@ -10,6 +11,8 @@ COMMENT=	Powerful audio manager for large collections
 
 USE_BUILDLINK3=		# defined
 USE_X11=		# defined
+
+GCC_REQD=		3.0
 
 post-extract:
 	${TAR} -zxC ${WRKSRC} -f ${WRKSRC}/scons-local-0.95.tar.gz
@@ -32,7 +35,7 @@ do-install:
 
 .include "../../x11/qt3-libs/buildlink3.mk"
 .include "../../x11/qt3-tools/buildlink3.mk"
-.include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/glib/buildlink3.mk"
 .include "../../audio/xmms/buildlink3.mk"
 .include "../../audio/libid3tag/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
