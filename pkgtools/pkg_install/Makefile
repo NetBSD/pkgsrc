@@ -1,9 +1,11 @@
-# $NetBSD: Makefile,v 1.4 1998/09/27 23:12:20 hubertf Exp $
+# $NetBSD: Makefile,v 1.5 1998/10/15 11:14:19 agc Exp $
 #
 
+# Note to package maintainers:
 # To update the distfile of this pkg, cd to /usr/src/usr.sbin,
 # "tar vcf pkg_install-YYYYMMDD.tar.gz pkg_install" and upload
 # that file to ${MASTER_SITE_LOCAL}.
+# Also, check PKGTOOLS_REQD value in pkgsrc/mk/bsd.pkg.mk
 
 DISTNAME=		pkg_install-19980911
 CATEGORIES=		pkgtools
