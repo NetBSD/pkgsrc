@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/30 17:27:28 recht Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/01/24 19:44:00 recht Exp $
 bin/pygopherd
+etc/rc.d/pygopherd
 ${PYSITELIB}/pygopherd/GopherExceptions.py
 ${PYSITELIB}/pygopherd/GopherExceptions.pyc
 ${PYSITELIB}/pygopherd/GopherExceptions.pyo
@@ -57,6 +58,9 @@ ${PYSITELIB}/pygopherd/handlers/pyg.pyo
 ${PYSITELIB}/pygopherd/handlers/scriptexec.py
 ${PYSITELIB}/pygopherd/handlers/scriptexec.pyc
 ${PYSITELIB}/pygopherd/handlers/scriptexec.pyo
+${PYSITELIB}/pygopherd/handlers/tal.py
+${PYSITELIB}/pygopherd/handlers/tal.pyc
+${PYSITELIB}/pygopherd/handlers/tal.pyo
 ${PYSITELIB}/pygopherd/handlers/url.py
 ${PYSITELIB}/pygopherd/handlers/url.pyc
 ${PYSITELIB}/pygopherd/handlers/url.pyo
