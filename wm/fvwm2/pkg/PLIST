@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2001/07/10 20:03:29 nra Exp $
+@comment $NetBSD: PLIST,v 1.5 2001/10/01 11:15:16 martti Exp $
 bin/FvwmCommand
 bin/fvwm-config
 bin/fvwm-menu-desktop
@@ -8,41 +8,41 @@ bin/fvwm-menu-xlock
 bin/fvwm2
 bin/fvwm24_convert
 bin/fvwmbug
-lib/X11/fvwm2/2.4.0/FvwmAnimate
-lib/X11/fvwm2/2.4.0/FvwmAudio
-lib/X11/fvwm2/2.4.0/FvwmAuto
-lib/X11/fvwm2/2.4.0/FvwmBacker
-lib/X11/fvwm2/2.4.0/FvwmBanner
-lib/X11/fvwm2/2.4.0/FvwmButtons
-lib/X11/fvwm2/2.4.0/FvwmCascade
-lib/X11/fvwm2/2.4.0/FvwmCommand.pm
-lib/X11/fvwm2/2.4.0/FvwmCommand.sh
-lib/X11/fvwm2/2.4.0/FvwmCommandS
-lib/X11/fvwm2/2.4.0/FvwmConsole
-lib/X11/fvwm2/2.4.0/FvwmConsoleC
-lib/X11/fvwm2/2.4.0/FvwmConsoleC.pl
-lib/X11/fvwm2/2.4.0/FvwmCpp
-lib/X11/fvwm2/2.4.0/FvwmDebug
-lib/X11/fvwm2/2.4.0/FvwmDragWell
-lib/X11/fvwm2/2.4.0/FvwmEvent
-lib/X11/fvwm2/2.4.0/FvwmForm
-lib/X11/fvwm2/2.4.0/FvwmGtk
-lib/X11/fvwm2/2.4.0/FvwmIconBox
-lib/X11/fvwm2/2.4.0/FvwmIconMan
-lib/X11/fvwm2/2.4.0/FvwmIdent
-lib/X11/fvwm2/2.4.0/FvwmM4
-lib/X11/fvwm2/2.4.0/FvwmPager
-lib/X11/fvwm2/2.4.0/FvwmRearrange
-lib/X11/fvwm2/2.4.0/FvwmSave
-lib/X11/fvwm2/2.4.0/FvwmSaveDesk
-lib/X11/fvwm2/2.4.0/FvwmScript
-lib/X11/fvwm2/2.4.0/FvwmScroll
-lib/X11/fvwm2/2.4.0/FvwmTalk
-lib/X11/fvwm2/2.4.0/FvwmTaskBar
-lib/X11/fvwm2/2.4.0/FvwmTheme
-lib/X11/fvwm2/2.4.0/FvwmTile
-lib/X11/fvwm2/2.4.0/FvwmWharf
-lib/X11/fvwm2/2.4.0/FvwmWinList
+lib/X11/fvwm2/${FVWM_VER}/FvwmAnimate
+lib/X11/fvwm2/${FVWM_VER}/FvwmAudio
+lib/X11/fvwm2/${FVWM_VER}/FvwmAuto
+lib/X11/fvwm2/${FVWM_VER}/FvwmBacker
+lib/X11/fvwm2/${FVWM_VER}/FvwmBanner
+lib/X11/fvwm2/${FVWM_VER}/FvwmButtons
+lib/X11/fvwm2/${FVWM_VER}/FvwmCascade
+lib/X11/fvwm2/${FVWM_VER}/FvwmCommand.pm
+lib/X11/fvwm2/${FVWM_VER}/FvwmCommand.sh
+lib/X11/fvwm2/${FVWM_VER}/FvwmCommandS
+lib/X11/fvwm2/${FVWM_VER}/FvwmConsole
+lib/X11/fvwm2/${FVWM_VER}/FvwmConsoleC
+lib/X11/fvwm2/${FVWM_VER}/FvwmConsoleC.pl
+lib/X11/fvwm2/${FVWM_VER}/FvwmCpp
+lib/X11/fvwm2/${FVWM_VER}/FvwmDebug
+lib/X11/fvwm2/${FVWM_VER}/FvwmDragWell
+lib/X11/fvwm2/${FVWM_VER}/FvwmEvent
+lib/X11/fvwm2/${FVWM_VER}/FvwmForm
+lib/X11/fvwm2/${FVWM_VER}/FvwmGtk
+lib/X11/fvwm2/${FVWM_VER}/FvwmIconBox
+lib/X11/fvwm2/${FVWM_VER}/FvwmIconMan
+lib/X11/fvwm2/${FVWM_VER}/FvwmIdent
+lib/X11/fvwm2/${FVWM_VER}/FvwmM4
+lib/X11/fvwm2/${FVWM_VER}/FvwmPager
+lib/X11/fvwm2/${FVWM_VER}/FvwmRearrange
+lib/X11/fvwm2/${FVWM_VER}/FvwmSave
+lib/X11/fvwm2/${FVWM_VER}/FvwmSaveDesk
+lib/X11/fvwm2/${FVWM_VER}/FvwmScript
+lib/X11/fvwm2/${FVWM_VER}/FvwmScroll
+lib/X11/fvwm2/${FVWM_VER}/FvwmTalk
+lib/X11/fvwm2/${FVWM_VER}/FvwmTaskBar
+lib/X11/fvwm2/${FVWM_VER}/FvwmTheme
+lib/X11/fvwm2/${FVWM_VER}/FvwmTile
+lib/X11/fvwm2/${FVWM_VER}/FvwmWharf
+lib/X11/fvwm2/${FVWM_VER}/FvwmWinList
 lib/X11/fvwm2/decor_examples
 lib/X11/fvwm2/pixmaps/Jlock.xpm
 lib/X11/fvwm2/pixmaps/Jnews.xpm
@@ -438,5 +438,5 @@ share/fvwm2/fvwm-script-setup95.pl
 share/fvwm2/system.fvwm2rc-sample-95
 @dirrm share/fvwm2
 @dirrm lib/X11/fvwm2/pixmaps
-@dirrm lib/X11/fvwm2/2.4.0
+@dirrm lib/X11/fvwm2/${FVWM_VER}
 @dirrm lib/X11/fvwm2
