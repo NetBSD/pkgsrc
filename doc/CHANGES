@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7969 2004/11/24 08:16:20 salo Exp $
+$NetBSD: CHANGES,v 1.7970 2004/11/24 11:16:14 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5405,3 +5405,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gnustep-make to 1.10.0nb1 [rh 2004-11-24]
 	Updated mkvtoolnix to 1.0 [salo 2004-11-24]
 	Updated mmg to 1.0 [salo 2004-11-24]
+	Updated libiconv to 1.9.2nb1 [adam 2004-11-24]
