@@ -1,0 +1,41 @@
+--- catdoc.1.orig	Mon Jun  8 08:57:49 1998
++++ catdoc.1	Sat Jun 20 00:54:18 1998
+@@ -13,14 +13,14 @@
+ but it reads MS-Word file and produces human-readable text on standard output.
+ Optionally it can use 
+ .BR latex (1)
+-escape sequenses for characters which have specail meaning for LaTeX.
++escape sequenses for characters which have special meaning for LaTeX.
+ It also makes some effort to recognize MS-Word tables, although it never
+ tries to write correct headers for LaTeX tabular environment.
+ .PP
+ .B catdoc
+ can be invoked as filter, if you supply "-" instead of filename, but it is
+-probably useless. It could be removed in future versions, becouse true
+-parsing of Word file (fast saves, footnotes) requires seekable output.
++probably useless. It could be removed in future versions, because true
++parsing of Word files (fast saves, footnotes) requires seekable output.
+ 
+ .SH OPTIONS
+ .TP 8
+@@ -38,7 +38,7 @@
+ disables word wrapping. By default 
+ .B catdoc
+ output is splitted into lines not longer than 72 characters and paragraphs
+-are separated by blank line. With this option each paragraph is one
++are separated by a blank line. With this option each paragraph is one
+ long line. 
+ .TP 8
+ .B -s 
+@@ -54,9 +54,9 @@
+  
+ .SH BUGS
+ 
+-Can produce garbage, if file contain embedded illustrations. Doesn't handle
++Can produce garbage, if file contains embedded illustrations. Doesn't handle
+ fast-saves properly. Prints footnotes as separate paragraphs at the end of
+-file, instead of producing correct latex commands. 
++file, instead of producing correct LaTeX commands. 
+ 
+ .SH AUTHOR
+ 
