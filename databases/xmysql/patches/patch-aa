@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/08/05 17:21:39 bad Exp $
+$NetBSD: patch-aa,v 1.2 2000/11/03 20:52:47 veego Exp $
 
 --- Makefile.orig	Wed Nov 18 05:19:06 1998
 +++ Makefile	Thu Aug  5 18:57:34 1999
@@ -32,7 +32,7 @@ $NetBSD: patch-aa,v 1.1.1.1 1999/08/05 17:21:39 bad Exp $
 +MYSQLINC = -I${PREFIX}/include/mysql
 +MYSQLLOAD = -Wl,-R${PREFIX}/lib/mysql -L${PREFIX}/lib/mysql -lmysqlclient
 +XFORMLIBDIR =
-+XFORMINCDIR = -I${X11BASE}/include/X11
++XFORMINCDIR = -I${X11PREFIX}/include/X11
 +XINC = -I${X11BASE}/include
 +XLOAD = -lX11
  
