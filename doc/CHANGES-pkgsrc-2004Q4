@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2004Q4,v 1.1.2.93 2005/03/01 12:47:06 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2004Q4,v 1.1.2.94 2005/03/01 20:33:32 snj Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2004Q4 branch:
@@ -197,3 +197,5 @@ Pullup ticket 320 - requested by Lubomir Sedlacik
 security fix for unzip
 Pullup ticket 322 - requested by Takahiro Kambe
 update squid
+Pullup ticket 323 - requested by Thomas Klausner
+security fix for unace
