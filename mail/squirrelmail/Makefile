@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.33 2003/07/17 21:47:04 grant Exp $
+# $NetBSD: Makefile,v 1.34 2003/09/01 11:51:26 martti Exp $
 
-DISTNAME=	squirrelmail-1.4.0
+DISTNAME=	squirrelmail-1.4.1
 CATEGORIES=	mail www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=squirrelmail/}
 EXTRACT_SUFX=	.tar.bz2
@@ -12,10 +12,8 @@ COMMENT=	PHP4 webmail package
 CONFLICTS=	sq-attachment-handlers-[0-9]*
 CONFLICTS+=	sq-squirrelspell-[0-9]*
 
-DEPENDS+=	php>=4.0.6:../../www/php4
-DEPENDS+=	php-gettext>=4.0.6:../../devel/php4-gettext
-DEPENDS+=	php-session>=4.0.6:../../devel/php4-session
-DEPENDS+=	php-pcre>=4.0.6:../../devel/php4-pcre
+DEPENDS+=	php>=4.3.3:../../www/php4
+DEPENDS+=	php-gettext>=4.3.3:../../devel/php4-gettext
 
 USE_BUILDLINK2=	yes
 USE_PKGINSTALL=	yes
@@ -67,6 +65,8 @@ do-install:
 	${CP} -R ${WRKSRC}/* ${SMDIR}
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${SMDIR}
 	${CHMOD} -R a-w ${SMDIR}
+	${CP} ${WRKSRC}/data/index.php ${USER_PREFS_DIR}/
+	${CP} ${WRKSRC}/data/.htaccess ${USER_PREFS_DIR}/
 
 .include "../../lang/perl5/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
