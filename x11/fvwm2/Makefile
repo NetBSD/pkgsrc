@@ -3,7 +3,8 @@
 # Date created:		20 Jan 1996
 # Whom:			peter
 #
-# $Id: Makefile,v 1.1.1.1 1997/11/10 00:50:49 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 1997/11/10 00:54:17 hubertf Exp $
+# FreeBSD Id: Makefile,v 1.12 1997/10/11 10:42:43 jkh Exp
 #
 
 DISTNAME=	fvwm-2.0.46
