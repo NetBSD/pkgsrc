@@ -1,4 +1,4 @@
-/*	$NetBSD: global.c,v 1.3 2003/09/02 08:28:33 jlam Exp $	*/
+/*	$NetBSD: global.c,v 1.4 2003/09/23 07:13:53 grant Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: global.c,v 1.6 1997/10/08 07:47:58 charnier Exp";
 #else
-__RCSID("$NetBSD: global.c,v 1.3 2003/09/02 08:28:33 jlam Exp $");
+__RCSID("$NetBSD: global.c,v 1.4 2003/09/23 07:13:53 grant Exp $");
 #endif
 #endif
 

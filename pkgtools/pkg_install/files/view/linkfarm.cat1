@@ -1,4 +1,4 @@
-LINKFARM(1)                 NetBSD Reference Manual                LINKFARM(1)
+LINKFARM(1)             NetBSD General Commands Manual             LINKFARM(1)
 
 NNAAMMEE
      lliinnkkffaarrmm - manage symbolic links to package files
@@ -64,4 +64,4 @@ SSEEEE AALLSSOO
 AAUUTTHHOORRSS
      The lliinnkkffaarrmm utility was written by Alistair G. Crooks <agc@netbsd.org>.
 
-NetBSD 1.6.1_STABLE            September 2, 2003                             1
+NetBSD 1.6                     September 2, 2003                    NetBSD 1.6

@@ -1,4 +1,4 @@
-PKG_INFO(1)                 NetBSD Reference Manual                PKG_INFO(1)
+PKG_INFO(1)             NetBSD General Commands Manual             PKG_INFO(1)
 
 NNAAMMEE
      ppkkgg__iinnffoo - a utility for displaying information on software packages
@@ -127,9 +127,9 @@ EENNVVIIRROONNMMEENNTT
 
      PKG_PATH   This can be used to specify a semicolon-separated list of
                 paths and URLs to search for package files.  If PKG_PATH is
-                used, the suffix _._t_g_z is automatically appended to the _p_k_g_-
-                _n_a_m_e, whereas searching in the current directory uses _p_k_g_-_n_a_m_e
-                literally.
+                used, the suffix _._t_g_z is automatically appended to the
+                _p_k_g_-_n_a_m_e, whereas searching in the current directory uses
+                _p_k_g_-_n_a_m_e literally.
 
      PKG_TMPDIR, TMPDIR
                 These are tried in turn (if set) as candidate directories in
@@ -146,8 +146,8 @@ EENNVVIIRROONNMMEENNTT
 
 TTEECCHHNNIICCAALL DDEETTAAIILLSS
      Package info is either extracted from package files named on the command
-     line, or from already installed package information in _/_v_a_r_/_d_b_/_p_k_g_/_<_p_k_g_-
-     _n_a_m_e_>.
+     line, or from already installed package information in
+     _/_v_a_r_/_d_b_/_p_k_g_/_<_p_k_g_-_n_a_m_e_>.
 
      A filename can be given instead of a (installed) package name to query
      information on the package this file belongs to.  This filename is then
@@ -168,4 +168,4 @@ AAUUTTHHOORRSS
              NetBSD wildcard dependency processing, pkgdb, depends displaying,
              pkg size display etc.
 
-NetBSD 1.6.1_STABLE            September 2, 2003                             3
+NetBSD 1.6                     September 2, 2003                    NetBSD 1.6

@@ -1,4 +1,4 @@
-PKG_ADD(1)                  NetBSD Reference Manual                 PKG_ADD(1)
+PKG_ADD(1)              NetBSD General Commands Manual              PKG_ADD(1)
 
 NNAAMMEE
      ppkkgg__aadddd - a utility for installing and upgrading software package distri-
@@ -149,11 +149,11 @@ OOPPTTIIOONNSS
      extract files directly from their anonymous ftp or WWW locations (e.g.
      ppkkgg__aadddd ftp://ftp.NetBSD.org/pub/NetBSD/pack-
      ages/1.5/i386/shells/bash-2.04.tgz).  Note:  If you wish to use _p_a_s_s_i_v_e
-     _m_o_d_e  ftp in such transfers, set the variable _F_T_P___P_A_S_S_I_V_E___M_O_D_E  to some
+     _m_o_d_e ftp in such transfers, set the variable _F_T_P___P_A_S_S_I_V_E___M_O_D_E to some
      value in your environment.  Otherwise, the more standard ACTIVE mode may
      be used.  If ppkkgg__aadddd consistently fails to fetch a package from a site
      known to work, it may be because you have a firewall that demands the us-
-     age of _p_a_s_s_i_v_e _m_o_d_e  ftp.
+     age of _p_a_s_s_i_v_e _m_o_d_e ftp.
 
 TTEECCHHNNIICCAALL DDEETTAAIILLSS
      ppkkgg__aadddd extracts each package's "packing list" into a special staging di-
@@ -334,4 +334,4 @@ BBUUGGSS
 
      Sure to be others.
 
-NetBSD 1.6.1_STABLE            September 8, 2003                             6
+NetBSD 1.6                     September 8, 2003                    NetBSD 1.6
