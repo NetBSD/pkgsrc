@@ -1,0 +1,8 @@
+This package contains Tcl, John Osterhout's Tool Command Language, an
+exceedingly simple language great for general scripting and for
+embedding in other programs.
+
+The best way to get started with Tcl is to read ``Tcl and the Tk
+Toolkit'' by John K. Ousterhout, Addison-Wesley, ISBN 0-201-63337-X
+or ``Practical Programming in Tcl and Tk'' by Brent B. Welch, 
+Prentice Hall PTR, ISBN 0-13-616830-X.
