@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2320 2004/11/07 16:14:32 kristerw Exp $
+$NetBSD: TODO,v 1.2321 2004/11/08 10:15:42 adam Exp $
 
 Suggested new packages
 ======================
@@ -587,7 +587,6 @@ Suggested package updates
 	o wdm-1.27
 	o wesnoth-0.8.7
 	o wine-20041019
-	o wmakerconf-2.9.2
 	o wmweather-2.4.3
 	o xalan-c-1.7 [requires xerces-c-2.4.0]
 	o xanalyser-1.24
