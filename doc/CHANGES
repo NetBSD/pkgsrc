@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7571 2004/10/26 05:43:23 snj Exp $
+$NetBSD: CHANGES,v 1.7572 2004/10/26 05:56:57 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4871,3 +4871,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added gthumb-2.6.0.1 [minskim 2004-10-25]
 	Updated lcms to 1.13 [minskim 2004-10-25]
 	Updated bogofilter to 0.92.8 [snj 2004-10-26]
+	Updated gtk-send-pr to 0.3.4 [xtraeme 2004-10-26]
