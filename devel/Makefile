@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.424 2003/09/17 16:42:04 jmmv Exp $
+# $NetBSD: Makefile,v 1.425 2003/09/19 13:26:00 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -236,12 +236,12 @@ SUBDIR+=	p5-AtExit
 SUBDIR+=	p5-Attribute-Handlers
 SUBDIR+=	p5-BSD-Resource
 SUBDIR+=	p5-Bit-Vector
+SUBDIR+=	p5-Cache-Cache
 SUBDIR+=	p5-Class-Container
 SUBDIR+=	p5-Class-Data-Inheritable
 SUBDIR+=	p5-Class-Loader
 SUBDIR+=	p5-Class-ObjectTemplate
 SUBDIR+=	p5-Class-ReturnValue
-SUBDIR+=	p5-Cache-Cache
 SUBDIR+=	p5-Compress-Zlib
 SUBDIR+=	p5-Config-General
 SUBDIR+=	p5-Config-IniFiles
@@ -333,6 +333,7 @@ SUBDIR+=	ptl2
 SUBDIR+=	pvs
 SUBDIR+=	pwlib
 SUBDIR+=	py-Optik
+SUBDIR+=	py-TPG
 SUBDIR+=	py-checker
 SUBDIR+=	py-curses
 SUBDIR+=	py-cursespanel
