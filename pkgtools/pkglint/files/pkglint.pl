@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.126 2004/12/27 18:19:48 wiz Exp $
+# $NetBSD: pkglint.pl,v 1.127 2005/02/11 17:01:29 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
@@ -82,7 +82,9 @@ sub log_message($$$$)
 {
 	my ($file, $lineno, $type, $message) = @_;
 	if ($file ne NO_FILE) {
+		# strip "." path components
 		$file =~ s,^(?:\./)+,,;
+		$file =~ s,/(?:\./)+,/,g;
 	}
 	if ($file eq NO_FILE) {
 		printf("%s: %s\n", $type, $message);
@@ -662,7 +664,7 @@ sub checkline_valid_characters($$) {
 
 sub checkline_trailing_whitespace($) {
 	my ($line) = @_;
-	if ($line =~ /\s+$/) {
+	if ($line->text =~ /\s+$/) {
 		log_warning($line->file, $line->lineno, "Trailing white space.");
 	}
 	return true;
