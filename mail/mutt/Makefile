@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.120 2004/07/17 00:33:15 schmonz Exp $
+# $NetBSD: Makefile,v 1.121 2004/08/05 07:19:25 jlam Exp $
 
 DISTNAME=		mutt-1.4.2.1i
 PKGNAME=		${DISTNAME:C/i$//}
@@ -13,83 +13,83 @@ MAINTAINER=		tron@NetBSD.org
 HOMEPAGE=		http://www.mutt.org/
 COMMENT=		Text-based MIME mail client with PGP support
 
-BUILD_USES_MSGFMT=	yes
-
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-WRKSRC=			${WRKDIR}/${DISTNAME:C/i$$//}
-USE_BUILDLINK3=		yes
-USE_PKGINSTALL=		yes
-GNU_CONFIGURE=		yes
-USE_PKGLOCALEDIR=	yes
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR} \
-			--with-docdir=${PREFIX}/share/doc/mutt \
-			--without-included-gettext \
-			--enable-pop --enable-imap
-
-LDFLAGS+=		${_STRIPFLAG_CC}
-PLIST_SRC=		${WRKDIR}/PLIST
-
 .include "../../mk/bsd.prefs.mk"
+
+WRKSRC=			${WRKDIR}/${DISTNAME:C/i$$//}
+BUILD_USES_MSGFMT=	yes
+USE_BUILDLINK3=		yes
+USE_PKGLOCALEDIR=	yes
+
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}			\
+			--with-docdir=${PREFIX}/share/doc/mutt		\
+			--without-included-gettext			\
+			--enable-pop					\
+			--enable-imap
 
 .if (${OPSYS} == "SunOS")
 CONFIGURE_ARGS+=	--without-wc-funcs
 .endif
 
-.if ${MUTT_USE_SLANG} == YES
-. include "../../devel/libslang/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-slang=${BUILDLINK_PREFIX.libslang}
-.else
-. if ${MUTT_USE_NCURSES} == YES
-USE_NCURSES=		yes
-. endif
-. include "../../devel/ncurses/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-curses=${BUILDLINK_PREFIX.ncurses}
-.endif
-
-# There is a problem using NetBSD's /bin/sh under old NetBSD releases,
-# so use /bin/ksh there.
+# There is a problem using /bin/sh on old NetBSD releases, so use /bin/ksh
+# there.
+#
 .if !empty(MACHINE_PLATFORM:MNetBSD-1.[0-5]*-*)
 CONFIGURE_ARGS+=	--with-exec-shell=/bin/ksh
 .endif
 
-.if ${MUTT_USE_SSL} == YES
-.include "../../security/openssl/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-ssl=${SSLBASE}
-.else
-CONFIGURE_ARGS+=	--without-ssl
-.endif
+.include "options.mk"
 
-.if defined(USE_SASL) && ${USE_SASL} == "YES"
-.include "../../security/cyrus-sasl/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-sasl=${BUILDLINK_PREFIX.cyrus-sasl}
-.endif
+LDFLAGS+=		${_STRIPFLAG_CC}
 
-BUILD_DEFS+=		MUTT_USE_NCURSES MUTT_USE_SLANG MUTT_USE_SSL USE_SASL
-
+USE_PKGINSTALL=		yes
+DEINSTALL_EXTRA_TMPL=	${.CURDIR}/INSTALL
+INSTALL_EXTRA_TMPL=	${.CURDIR}/INSTALL
+DOCDIR=			${PREFIX}/share/doc/mutt
 EGDIR=			${PREFIX}/share/examples/mutt
 CONF_FILES=		${EGDIR}/Muttrc ${PKG_SYSCONFDIR}/Muttrc
 SUPPORT_FILES=		${EGDIR}/mime.types ${PKG_SYSCONFDIR}/mime.types
+FILES_SUBST+=		DOCDIR=${DOCDIR}
 
-post-extract:
-	${MV} ${WRKSRC}/doc/mutt.man ${WRKSRC}/doc/mutt.man.in
-
-pre-build:
-	${SED} -e "s|@PREFIX@|${PREFIX}|g" \
-		-e "s|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g" \
-		< ${WRKSRC}/doc/mutt.man.in > ${WRKSRC}/doc/mutt.man
-
-post-install:
-	${RM} -f ${PREFIX}/share/doc/mutt/samples
-	${LN} -f -s ${EGDIR} ${PREFIX}/share/doc/mutt/samples
-	${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
-	@if [ -f ${PREFIX}/bin/mutt_dotlock ]; then \
-		${ECHO} "bin/mutt_dotlock" >> ${PLIST_SRC}; \
-	fi
-.if (${PKG_INSTALLATION_TYPE} == "pkgviews")
-	${MV} ${PREFIX}/man/man5/mutt-mbox.5 ${PREFIX}/man/man5/mbox.5
+.if exists(${WRKSRC}/mutt_dotlock)
+PLIST_SUBST+=		MUTT_DOTLOCK=
+.else
+PLIST_SUBST+=		MUTT_DOTLOCK="@comment "
 .endif
+INSTALL_MAKE_FLAGS=	${MAKE_FLAGS} sysconfdir=${EGDIR}
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+
+# Fix some absolute paths in installed files.
+post-build:
+	for file in ${WRKSRC}/contrib/gpg.rc; do			\
+		${MV} -f $$file $$file.save;				\
+		${SED}	-e "s,/usr/bin/gpg,gpg,g"			\
+			$$file.save > $$file;				\
+	done
+	for file in ${WRKSRC}/doc/mutt.man; do				\
+		${MV} -f $$file $$file.save;				\
+		${SED}	-e "s,/etc/,${PKG_SYSCONFDIR}/,g"		\
+			-e "s,/usr/local/doc/mutt/,${DOCDIR}/,g"	\
+			-e "s,/usr/local/,${PREFIX}/,g"			\
+			$$file.save > $$file;				\
+	done
+
+# Pre-create some directories and symlinks used during the installation
+# process.
+#
+pre-install:
+	${INSTALL_DATA_DIR} ${EGDIR}
+	${INSTALL_DATA_DIR} ${DOCDIR}
+	${RM} -f ${DOCDIR}/samples
+	${LN} -sf ${EGDIR} ${DOCDIR}/samples
+
+.if (${PKG_INSTALLATION_TYPE} == "pkgviews")
+post-install:
+	${MV} ${PREFIX}/man/man5/mutt-mbox.5 ${PREFIX}/man/man5/mbox.5
+.endif
+
 .include "../../mk/bsd.pkg.mk"
