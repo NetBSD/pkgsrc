@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 10:33:55 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/20 09:04:26 agc Exp $
 
-MD5 (ruby-termios-module-0.0.4.tar.gz) = d1688aa58ab25ce4bc45b94e73710694
+SHA1 (ruby-termios-module-0.0.4.tar.gz) = 223ce8dac2300107b5a9ef45fd2c174f0d49bfce
+Size (ruby-termios-module-0.0.4.tar.gz) = 6743 bytes
