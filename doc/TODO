@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2551 2004/11/28 15:45:31 taca Exp $
+$NetBSD: TODO,v 1.2552 2004/11/28 15:48:57 recht Exp $
 
 Suggested new packages
 ======================
@@ -444,7 +444,6 @@ Suggested package updates
 	o dnstracer-1.8
 	o docbook-4.3
 	o docbook-website-2.5.0
-	o doclifter-1.15
 	o docsis-0.9.1
 	o dpkg-1.10.25
 	o drscheme-208
