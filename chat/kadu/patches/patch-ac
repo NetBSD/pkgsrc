@@ -1,0 +1,20 @@
+$NetBSD: patch-ac,v 1.1.1.1 2004/04/28 13:55:22 adam Exp $
+
+--- kadu/events.cpp.orig	2004-04-28 14:55:16.000000000 +0000
++++ kadu/events.cpp
+@@ -137,6 +137,7 @@ void EventManager::connectionFailedSlot(
+ 		case GG_FAILURE_CONNECTING:
+ 			msg = QString(tr("Unable to connect"));
+ 			break;
++#ifdef GG_FAILURE_NEED_EMAIL
+ 		case GG_FAILURE_NEED_EMAIL:
+ 			msg = QString(tr("Please change your email in \"Change password/email\" window. "
+ 				"Leave new password field blank."));
+@@ -145,6 +146,7 @@ void EventManager::connectionFailedSlot(
+ 			hintmanager->addHintError(msg);
+ 			MessageBox::msg(msg);
+ 			break;
++#endif
+ 		case GG_FAILURE_INVALID:
+ 			msg = QString(tr("Unable to connect, server has returned unknown data"));
+ 			break;
