@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 2004/08/15 00:08:58 minskim Exp $
+
+--- lib/Makefile.in.orig	Thu Apr 24 10:11:58 2003
++++ lib/Makefile.in
+@@ -13,7 +13,7 @@ LIB = libzile.a
+ OBJS = alist.o astr.o htable.o @LIBOBJS@
+ 
+ .c.o:
+-	$(CC) -c -I. -I$(srcdir) $(CFLAGS) $<
++	$(CC) -c -I. -I$(srcdir) @CPPFLAGS@ $(CFLAGS) $<
+ 
+ all: $(LIB)
+ 
