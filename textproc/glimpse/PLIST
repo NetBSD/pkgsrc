@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:56:41 zuntum Exp $
+bin/tbuild
+bin/cast
+bin/uncast
+bin/agrep
+bin/buildcast
+bin/glimpseindex
+bin/wgconvert
+bin/glimpse
+bin/glimpseserver
+man/man1/glimpse.1
+man/man1/glimpseindex.1
+man/man1/glimpseserver.1
+man/man1/agrep.1
+share/doc/glimpse/COPYRIGHT
+share/doc/glimpse/README
+@dirrm share/doc/glimpse

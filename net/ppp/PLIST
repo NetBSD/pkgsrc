@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:58:00 zuntum Exp $
+sbin/chat
+sbin/pppd
+sbin/pppstats
+man/cat8/chat.0
+man/cat8/pppd.0
+man/cat8/pppstats.0
+man/man8/chat.8
+man/man8/pppd.8
+man/man8/pppstats.8

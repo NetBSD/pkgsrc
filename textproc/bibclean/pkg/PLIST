@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/07/24 14:29:45 wiz Exp $
-bin/.bibcleanrc
-bin/bibclean
-man/man1/bibclean.1

@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:53:36 zuntum Exp $
+lib/python2.0/site-packages/chart.py
+lib/python2.0/site-packages/gdchart.so
+share/examples/py-gdchart/test.html
+share/examples/py-gdchart/test.py
+share/examples/py-gdchart/CHANGES
+@dirrm share/examples/py-gdchart

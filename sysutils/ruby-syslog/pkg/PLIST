@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/07/01 13:54:55 taca Exp $
-${RUBY_SITEARCHLIBDIR}/syslog.so
-${RUBY_DOCDIR}/syslog/0README
-@dirrm ${RUBY_DOCDIR}/syslog

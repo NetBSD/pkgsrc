@@ -1,9 +1,0 @@
-======================================================================
-$NetBSD: MESSAGE,v 1.2 2001/01/29 11:34:29 wiz Exp $
-
-    To use skkinput, the dictionary server (skkserv) is almost
-required.  Use "skkserv" pkg, or, if you have another machine
-running skkserv, put the hostname in ${LOCALBASE}/etc/skk.conf
-file, and skkinput will connect to the host.
-
-======================================================================

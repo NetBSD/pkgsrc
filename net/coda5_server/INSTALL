@@ -1,0 +1,30 @@
+#! /bin/sh
+#
+# $NetBSD: INSTALL,v 1.1 2001/10/31 22:55:04 zuntum Exp $
+
+PKGNAME=$1
+STAGE=$2
+
+LN="@LN@"
+RM="@RM@"
+
+case ${STAGE} in
+PRE-INSTALL)
+	;;
+
+POST-INSTALL)
+	# coda-client may have already created these links
+	for script in coda-setup-ports codaconfedit; do
+		if [ ! -f ${PKG_PREFIX}/sbin/${script} ]
+		then
+			${LN} -sf vice-${script} ${PKG_PREFIX}/sbin/${script}
+		fi
+	done
+	;;
+
+*)
+	echo "Unexpected argument: ${STAGE}"
+	exit 1
+	;;
+esac
+exit 0

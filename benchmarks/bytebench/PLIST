@@ -1,0 +1,39 @@
+@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:45:11 zuntum Exp $
+bin/run-byte
+libexec/bytebench/arithoh
+libexec/bytebench/byte.logo
+libexec/bytebench/cleanup.sh
+libexec/bytebench/context1
+libexec/bytebench/dhry2
+libexec/bytebench/dhry2reg
+libexec/bytebench/double
+libexec/bytebench/execl
+libexec/bytebench/float
+libexec/bytebench/fs.awk
+libexec/bytebench/fstime
+libexec/bytebench/hanoi
+libexec/bytebench/index.awk
+libexec/bytebench/index.base
+libexec/bytebench/index.sh
+libexec/bytebench/int
+libexec/bytebench/long
+libexec/bytebench/looper
+libexec/bytebench/loopm.awk
+libexec/bytebench/loops.awk
+libexec/bytebench/multi.sh
+libexec/bytebench/pipe
+libexec/bytebench/register
+libexec/bytebench/report.awk
+libexec/bytebench/report.sh
+libexec/bytebench/short
+libexec/bytebench/spawn
+libexec/bytebench/syscall
+libexec/bytebench/tst.sh
+share/bytebench/cctest.c
+share/bytebench/dc.dat
+share/bytebench/sort.src
+share/doc/bytebench/bench.doc
+share/doc/bytebench/bench3.doc
+@dirrm share/doc/bytebench
+@unexec rm -rf %D/share/bytebench
+@dirrm libexec/bytebench

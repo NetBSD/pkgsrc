@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:29:34 zuntum Exp $
+bin/jsed
+@unexec install-info --delete %D/info/sed.info %D/info/dir
+info/sed.info
+@exec install-info %D/info/sed.info %D/info/dir
+man/man1/jsed.1
+share/doc/ja-sed/OREADME.MB
+share/doc/ja-sed/README.MB
+@dirrm share/doc/ja-sed

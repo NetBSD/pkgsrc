@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:29:46 zuntum Exp $
+share/doc/xjman/COPYRIGHT
+share/doc/xjman/COPYRIGHT.XJDP
+share/doc/xjman/README
+@dirrm share/doc/xjman

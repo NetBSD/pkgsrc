@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 1998/02/26 23:32:17 tron Exp $
-bin/bonnie
-man/cat1/bonnie.0
-man/man1/bonnie.1

@@ -1,9 +1,0 @@
-#!/bin/sh
-#
-# $NetBSD: DEINSTALL,v 1.2 1999/09/09 02:06:01 jwise Exp $
-#
-if [ "$2" != "POST-DEINSTALL" ]; then
-  exit 0
-fi
-
-${PKG_PREFIX}/bin/texconfig rehash

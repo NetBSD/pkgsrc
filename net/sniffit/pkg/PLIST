@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 1998/03/30 11:10:57 hubertf Exp $
-sbin/sniffit
-man/man5/sniffit.5
-man/man8/sniffit.8

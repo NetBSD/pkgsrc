@@ -1,8 +1,0 @@
-======================================================================
-$NetBSD: MESSAGE,v 1.2 2001/01/29 11:34:38 wiz Exp $
-
-To use the The Merit AAA Server you have to copy the contents of
-the directory "${PREFIX}/share/examples/radius" to "/etc/raddb"
-and to customize it.
-
-======================================================================

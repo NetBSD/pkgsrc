@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/09/17 03:46:32 jwise Exp $
-bin/qvplay
-bin/qvrec
-bin/qvalldel
-man/man1/qvplay.1
-man/man1/qvrec.1
-man/man1/qvalldel.1

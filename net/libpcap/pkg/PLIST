@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2001/01/13 23:04:42 tron Exp $
-lib/libpcap.a
-include/pcap.h
-include/pcap-namedb.h
-include/net/bpf.h
-man/man3/pcap.3
-@dirrm include/net

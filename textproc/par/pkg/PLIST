@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 1998/01/12 11:52:17 agc Exp $
-bin/par
-man/man1/par.1.gz
