@@ -1,17 +1,18 @@
-$NetBSD: patch-aa,v 1.8 2001/01/14 12:19:35 tron Exp $
+$NetBSD: patch-aa,v 1.9 2001/08/28 18:37:55 skrll Exp $
 
---- popt/configure.in.orig	Wed May 31 02:55:40 2000
-+++ popt/configure.in	Sun Jan 14 12:52:56 2001
-@@ -59,12 +59,6 @@
- 	AC_MSG_RESULT(no)
+--- popt/configure.orig	Tue Aug 28 19:21:53 2001
++++ popt/configure
+@@ -2277,13 +2277,6 @@
+ 	echo "$ac_t""no" 1>&6
  fi
  
--AC_MSG_CHECKING(for GNU xgettext)
--xgettext --version 2>&1 | grep 'GNU gettext' >/dev/null 2>&1 || AC_MSG_ERROR([
+-echo $ac_n "checking for GNU xgettext""... $ac_c" 1>&6
+-echo "configure:2282: checking for GNU xgettext" >&5
+-xgettext --version 2>&1 | grep 'GNU gettext' >/dev/null 2>&1 || { echo "configure: error: 
 -*** GNU gettext is required. The latest version
--*** is always available from ftp://ftp.gnu.org/gnu/gettext/.])
--AC_MSG_RESULT(yes)
+-*** is always available from ftp://ftp.gnu.org/gnu/gettext/." 1>&2; exit 1; }
+-echo "$ac_t""yes" 1>&6
 -
- AC_CHECK_FUNCS(strerror mtrace)
- dnl AC_CHECK_FUNCS(gettext)
- dnl AC_CHECK_FUNCS(dgettext)
+ for ac_func in strerror mtrace
+ do
+ echo $ac_n "checking for $ac_func""... $ac_c" 1>&6
