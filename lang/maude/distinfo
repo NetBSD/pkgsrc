@@ -1,4 +1,6 @@
-$NetBSD: distinfo,v 1.2 2001/04/19 15:00:53 agc Exp $
+$NetBSD: distinfo,v 1.3 2003/12/31 01:20:35 kristerw Exp $
 
-SHA1 (maude-linux.tar.Z) = 141ac96fb7f2b99e4a24ffd3f63565a7c3cff59a
-Size (maude-linux.tar.Z) = 772565 bytes
+SHA1 (maude-src.tar.gz) = 5682993dcb62bba1cd06e8bc21bf908e42dd3ecd
+Size (maude-src.tar.gz) = 1030863 bytes
+SHA1 (fm.maude) = db8f8d064956a1e8525b368353c3cae9270360d5
+Size (fm.maude) = 511212 bytes
