@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 1998/06/21 02:35:53 tv Exp $
+# $NetBSD: Makefile,v 1.11 1998/08/04 20:19:51 tv Exp $
 # FreeBSD Id: Makefile,v 1.17 1996/12/17 05:18:09 asami Exp
 #
 
@@ -18,8 +18,6 @@ post-patch:
 	( cd ${WRKSRC}/nls/greek ; for i in * ; do ${ECHO} $$i ; ${MV} $$i $$i.BAK ; ${SED} -e 's/\\"/"/g' -e "s/\\\'/'/g" <$$i.BAK >$$i ; done )
 
 post-install:
-	chown bin.bin ${PREFIX}/bin/tcsh
-	chown bin.bin ${PREFIX}/man/man1/tcsh.1
 	cd ${WRKSRC}; ${INSTALL_DATA} tcsh.C.cat ${PREFIX}/share/nls/C/tcsh.cat
 	cd ${WRKSRC}; ${INSTALL_DATA} tcsh.french.cat ${PREFIX}/share/nls/fr_FR.ISO_8859-1/tcsh.cat
 	ln -f ${PREFIX}/share/nls/fr_FR.ISO_8859-1/tcsh.cat ${PREFIX}/share/nls/fr_BE.ISO_8859-1/tcsh.cat
