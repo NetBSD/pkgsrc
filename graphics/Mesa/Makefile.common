@@ -1,6 +1,6 @@
-# $NetBSD: Makefile.common,v 1.5 2002/12/06 17:03:23 jschauma Exp $
+# $NetBSD: Makefile.common,v 1.6 2003/03/09 19:04:52 jschauma Exp $
 
-MESA_VERSION=		3.4.2
+MESA_VERSION=		5.0
 DISTNAME?=		MesaLib-${MESA_VERSION}
 CATEGORIES?=		graphics
 MASTER_SITES?= 		${MASTER_SITE_SOURCEFORGE:=mesa3d/}
