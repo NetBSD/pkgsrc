@@ -1,13 +1,13 @@
-$NetBSD: patch-ad,v 1.5 2004/11/16 14:49:13 adam Exp $
+$NetBSD: patch-ad,v 1.6 2005/02/18 17:22:07 wiz Exp $
 
---- src/Makefile.in.orig	2004-03-19 15:49:36.000000000 +0000
+--- src/Makefile.in.orig	2005-01-11 23:12:05.000000000 +0100
 +++ src/Makefile.in
-@@ -117,7 +117,7 @@ INCLUDES = -I$(top_builddir)/include/ao 
+@@ -233,7 +233,7 @@ SUBDIRS = plugins
+ INCLUDES = -I$(top_builddir)/include/ao -I$(top_srcdir)/include -DAO_PLUGIN_PATH=\"@plugindir@\"
  lib_LTLIBRARIES = libao.la
- 
  libao_la_SOURCES = audio_out.c config.c ao_null.c ao_wav.c ao_au.c ao_raw.c ao_aixs.c ao_private.h
 -libao_la_LDFLAGS = -version-info @LIB_CURRENT@:@LIB_REVISION@:@LIB_AGE@ -ldl
 +libao_la_LDFLAGS = -version-info @LIB_CURRENT@:@LIB_REVISION@:@LIB_AGE@
- subdir = src
- mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
- CONFIG_CLEAN_FILES =
+ all: all-recursive
+ 
+ .SUFFIXES:
