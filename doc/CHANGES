@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1875 2003/04/09 09:12:55 wiz Exp $
+$NetBSD: CHANGES,v 1.1876 2003/04/09 14:05:16 markd Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1497,3 +1497,19 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated cvsync to 0.19.1 [gehenna 2003-04-09]
 	Updated ja-samba to 2.2.7.2.1.0 [taca 2003-04-09]
 	Updated proxycheck to 0.42 [wiz 2003-04-09]
+	Updated ted to 2.14 [markd 2003-04-09]
+	Updated ted-cs to 2.14 [markd 2003-04-09]
+	Updated ted-da to 2.14 [markd 2003-04-09]
+	Updated ted-de to 2.14 [markd 2003-04-09]
+	Updated ted-en-gb to 2.14 [markd 2003-04-09]
+	Updated ted-en-us to 2.14 [markd 2003-04-09]
+	Updated ted-es to 2.14 [markd 2003-04-09]
+	Updated ted-fr to 2.14 [markd 2003-04-09]
+	Updated ted-it to 2.14 [markd 2003-04-09]
+	Updated ted-nl to 2.14 [markd 2003-04-09]
+	Updated ted-no to 2.14 [markd 2003-04-09]
+	Updated ted-pt to 2.14 [markd 2003-04-09]
+	Updated ted-sv to 2.14 [markd 2003-04-09]
+	Added ted-nl-2.14 [markd 2003-04-09]
+	Updated kdemultimedia to 3.1.1nb1 [markd 2003-04-09]
+	Updated koffice to 1.2.1nb1 [markd 2003-04-09]
