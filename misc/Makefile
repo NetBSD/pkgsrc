@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.192 2004/02/24 17:06:48 jmmv Exp $
+# $NetBSD: Makefile,v 1.193 2004/02/24 23:17:08 cube Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -52,6 +52,8 @@ SUBDIR+=	fooseti
 SUBDIR+=	git
 SUBDIR+=	gkrellm-moon
 SUBDIR+=	gkrellm-weather
+SUBDIR+=	gkrellm1-moon
+SUBDIR+=	gkrellm1-weather
 SUBDIR+=	gnome-dirs
 SUBDIR+=	gnome-pim
 SUBDIR+=	gnome-utils
