@@ -3,7 +3,7 @@
 # Date created:				26 July 1997
 # Whom:					Scott Blachowicz <Scott.Blachowicz@seaslug.org>
 #
-# $NetBSD: Makefile,v 1.9 1998/01/24 20:32:34 hubertf Exp $
+# $NetBSD: Makefile,v 1.10 1998/02/09 00:00:57 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/08/04 06:51:28 markm Exp
 #
 
@@ -13,6 +13,7 @@ MASTER_SITES=   ftp://ftp.math.gatech.edu/pub/nmh/
 
 MAINTAINER=     Scott.Blachowicz@seaslug.org
 
+# Mail Transport Agent - either "smtp" or "sendmail"
 NMH_MTA?=	smtp
 
 GNU_CONFIGURE=	yes
