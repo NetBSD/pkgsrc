@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2001/10/31 20:06:39 zuntum Exp $
+bin/libyahoo-config
+include/libyahoo/libyahoo-authors.h
+include/libyahoo/libyahoo-debug.h
+include/libyahoo/libyahoo-proto.h
+include/libyahoo/libyahoo.h
+lib/libyahoo.a
+@dirrm include/libyahoo
