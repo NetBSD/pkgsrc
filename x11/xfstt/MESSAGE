@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.4 2004/01/25 20:46:19 wiz Exp $
+$NetBSD: MESSAGE,v 1.5 2004/04/23 22:43:20 reed Exp $
 
 To use xfstt, you will need to perform the following steps:
 
@@ -10,7 +10,7 @@ To use xfstt, you will need to perform the following steps:
 	${PREFIX}/lib/X11/fonts/TTF/
 
 2. In case you don't have PKG_RCD_SCRIPTS set in your /etc/mk.conf, copy
-   ${PREFIX}/etc/rc.d/xfstt to /etc/rc.d/xfstt and add the following
+   ${RCD_SCRIPTS_EXAMPLEDIR}/xfstt to /etc/rc.d/xfstt and add the following
    line into your /etc/rc.conf
 
 	xfstt=YES

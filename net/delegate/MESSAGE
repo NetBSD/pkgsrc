@@ -1,7 +1,7 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.4 2003/07/30 11:37:01 jmmv Exp $
+$NetBSD: MESSAGE,v 1.5 2004/04/23 22:43:20 reed Exp $
 
-Now copy the sample script in ${PREFIX}/etc/rc.d/delegated to
+Now copy the sample script in ${RCD_SCRIPTS_EXAMPLEDIR}/delegated to
 /etc/rc.d/delegated and edit it according to your needs.
 
 Don't forget to specify a correct e-mail address for ADMIN.

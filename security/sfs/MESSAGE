@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.4 2003/09/08 13:38:12 itojun Exp $
+$NetBSD: MESSAGE,v 1.5 2004/04/23 22:43:20 reed Exp $
 
 Quick Client Setup:
 
@@ -7,7 +7,7 @@ Quick Client Setup:
 
 sfscd=YES
 
-2. Run: ${PREFIX}/etc/rc.d/sfscd start
+2. Run: ${RCD_SCRIPTS_EXAMPLEDIR}/sfscd start
 3. cd /sfs/sfs.fs.net:eu4cvv6wcnzscer98yn4qjpjnn9iv6pi
 4. cat CONGRATULATIONS
 
@@ -24,6 +24,6 @@ sfssd=YES
    ${PKG_SYSCONFDIR}/sfsrwsd_config and modify.
 4. Modify /etc/exports to match your sfsrwsd_config.
 5. Create the root directories in ${SFSDIR}/root.
-6. Run ${PREFIX}/etc/rc.d/sfssd start
+6. Run ${RCD_SCRIPTS_EXAMPLEDIR}/sfssd start
 
 ===========================================================================
