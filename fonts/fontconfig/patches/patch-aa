@@ -1,21 +1,18 @@
-$NetBSD: patch-aa,v 1.6 2005/01/18 12:15:46 drochner Exp $
+$NetBSD: patch-aa,v 1.7 2005/02/26 16:39:51 wiz Exp $
 
---- Makefile.in.orig	2004-12-29 20:45:34.000000000 +0100
+--- Makefile.in.orig	2005-01-29 01:43:07.000000000 +0100
 +++ Makefile.in
-@@ -209,7 +209,7 @@ EXTRA_DIST = \
+@@ -213,11 +213,12 @@ EXTRA_DIST = \
  pkgconfigdir = $(libdir)/pkgconfig
  pkgconfig_DATA = fontconfig.pc
  
 -configdir = $(CONFDIR)
 +configdir = $(prefix)/share/examples/fontconfig
  config_DATA = fonts.dtd
+ 
+ @CROSS_COMPILING_TRUE@RUN_FC_CACHE_TEST = false
+ @CROSS_COMPILING_FALSE@RUN_FC_CACHE_TEST = test -z "$(DESTDIR)"
++RUN_FC_CACHE_TEST = false
  subdir = .
  ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
-@@ -700,7 +700,6 @@ install-data-local:
- 	  echo " $(INSTALL_DATA) local.conf $(DESTDIR)$(configdir)/local.conf"; \
- 	  $(INSTALL_DATA) local.conf $(DESTDIR)$(configdir)/local.conf; \
- 	fi; fi; fi
--	if [ x$(DESTDIR) = x ]; then fc-cache/fc-cache -f -v; fi
- 
- uninstall-local:
- 	if [ -f $(srcdir)/fonts.conf ]; then \
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
