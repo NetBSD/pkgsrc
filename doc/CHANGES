@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.306 2002/10/19 01:33:02 wiz Exp $
+$NetBSD: CHANGES,v 1.307 2002/10/19 03:04:12 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3318,3 +3318,12 @@ Changes to the packages collection and infrastructure in 2002:
 	Added cmu-dhcpd-3.3.7.9 [abs 2002-10-18]
 	links: Downgraded to 2.1.0.3 [wiz 2002-10-19]
 	links-gui: Downgraded to 2.1.0.3 [wiz 2002-10-19]
+	Updated postgresql to 7.2.3 [jlam 2002-10-19]
+	Updated postgresql-client to 7.2.3 [jlam 2002-10-19]
+	Updated postgresql-docs to 7.2.3 [jlam 2002-10-19]
+	Updated postgresql-lib to 7.2.3 [jlam 2002-10-19]
+	Updated postgresql-plperl to 7.2.3 [jlam 2002-10-19]
+	Updated postgresql-pltcl to 7.2.3 [jlam 2002-10-19]
+	Updated postgresql-server to 7.2.3 [jlam 2002-10-19]
+	Updated tcl-postgresql to 7.2.3 [jlam 2002-10-19]
+	Updated tk-postgresql to 7.2.3 [jlam 2002-10-19]
