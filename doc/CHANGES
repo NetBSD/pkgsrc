@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3898 2003/12/03 00:18:30 recht Exp $
+$NetBSD: CHANGES,v 1.3899 2003/12/03 00:20:41 kristerw Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4718,3 +4718,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated roundup to 0.6.3.1 [recht 2003-12-02]
 	Updated mono to 0.28nb1 [recht 2003-12-03]
 	Updated boehm-gc to 6.2nb2 [recht 2003-12-03]
+	Updated xmame to 0.77.1 [kristerw 2003-12-03]
+	Updated xmess to 0.77.1 [kristerw 2003-12-03]
