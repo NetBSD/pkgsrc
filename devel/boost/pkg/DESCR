@@ -4,6 +4,7 @@ to extend the ISO Standard C++ Library, including:
 	call_traits	defines types for passing parameters
 	compose		functional composition adapters for the STL
 	compressed_pair	Empty member optimization
+	functional	enhancements to function object adapters in standard
 	integer		headers for dealing with integral types
 	random		a complete system for random number generation
 	min_rand	a random number generator class (deprecated)
