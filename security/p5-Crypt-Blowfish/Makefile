@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/11/26 06:50:14 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2002/10/06 22:31:08 seb Exp $
 #
 
 DISTNAME=		Crypt-Blowfish-2.09
@@ -12,11 +12,8 @@ COMMENT=		perl5 Blowfish implementation
 
 CRYPTO=			YES
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Crypt/Blowfish/.packlist
 
-do-configure:
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
-
-.include "../../lang/perl5/buildlink.mk"
+.include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/11/26 06:50:14 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2002/10/06 22:31:08 seb Exp $
 #
 
 DISTNAME=		Crypt-DES_EDE3-0.01
@@ -11,11 +11,8 @@ MAINTAINER=		packages@netbsd.org
 #HOMEPAGE=	
 COMMENT=		perl5 module for Triple-DES EDE encryption/decryption
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Crypt/DES_EDE3/.packlist
 
-do-configure:
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
-
-.include "../../lang/perl5/buildlink.mk"
+.include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
