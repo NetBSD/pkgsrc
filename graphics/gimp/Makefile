@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.78 2002/02/07 15:22:20 wiz Exp $
+# $NetBSD: Makefile,v 1.79 2002/02/13 19:50:05 drochner Exp $
 
-DISTNAME=		gimp-1.2.2
+DISTNAME=		gimp-1.2.3
 CATEGORIES=		graphics
-MASTER_SITES=		ftp://ftp.gimp.org/pub/gimp/v1.2/v1.2.2/ \
-			ftp://ftp.fu-berlin.de/unix/X11/graphics/gimp/v1.2/v1.2.2/ \
-			ftp://ftp.cs.umn.edu/pub/gimp/gimp/v1.2/v1.2.2/
+MASTER_SITES=		ftp://ftp.gimp.org/pub/gimp/v1.2/v1.2.3/ \
+		ftp://ftp.fu-berlin.de/unix/X11/graphics/gimp/v1.2/v1.2.3/ \
+		ftp://ftp.cs.umn.edu/pub/gimp/gimp/v1.2/v1.2.3/
 EXTRACT_SUFX=		.tar.bz2
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX} \
 			${GIMP_DATA}${EXTRACT_SUFX}
@@ -21,7 +21,7 @@ REPLACE_BUILDLINK=	gimptool
 USE_X11BASE=		yes
 USE_GMAKE=		yes
 USE_LIBTOOL=		yes
-LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 BUILD_USES_MSGFMT=	yes
 
 GNU_CONFIGURE=		yes
@@ -37,6 +37,7 @@ CONFIGURE_ENV+=		LIBMPEG="-lmpeg_lib"
 CONFIGURE_ENV+=		GAP_DECODE_MPEG="gap_decode_mpeg"
 
 LDFLAGS+=		-Wl,--export-dynamic
+MAKE_ENV+=		X11BASE=${X11BASE}
 
 PLIST_SUBST+=		LOCALBASE=${LOCALBASE}
 
