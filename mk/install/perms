@@ -1,0 +1,78 @@
+#!@SH@
+#
+# $NetBSD: perms,v 1.1.2.2 2005/02/11 15:27:57 tv Exp $
+#
+# +PERMS - special file and directory permissions management script
+#
+# Usage: ./+PERMS [metadatadir]
+#
+# This script sets special permissions on files and directories needed
+# by the package associated with <metadatadir>.
+#
+# Lines starting with "# PERMS: " are data read by this script that
+# name the files and directories required to have special permissions
+# in order for this package to function correctly.
+#
+#	# PERMS: /usr/pkg/bin/lppasswd 4711 lp sys
+#	# PERMS: /usr/pkg/etc/pwd.db 0600
+#
+CHGRP="@CHGRP@"
+CHMOD="@CHMOD@"
+CHOWN="@CHOWN@"
+ECHO="@ECHO@"
+PWD_CMD="@PWD_CMD@"
+SED="@SED@"
+SORT="@SORT@"
+TEST="@TEST@"
+
+SELF=$0
+PKG_METADATA_DIR="${1-`${PWD_CMD}`}"
+: ${PKGNAME=${PKG_METADATA_DIR##*/}}
+
+${SED} -n "/^\# PERMS: /{s/^\# PERMS: //;p;}" ${SELF} | ${SORT} -u |
+{ while read file f_mode f_user f_group; do
+	case $file in
+	""|[!/]*)	continue ;;
+	*)		${TEST} -f "$file" || continue ;;
+	esac
+	case "$printed_header" in
+	yes)	;;
+	*)	printed_header=yes
+		${ECHO} "==========================================================================="
+		${ECHO} "The following files and directories needed by ${PKGNAME}"
+		${ECHO} "have special permissions:"
+		${ECHO} ""
+		;;
+	esac
+	case $f_mode/$f_user/$f_group in
+	//)
+		${ECHO} "	$file"
+		;;
+	[!/]*//)
+		${ECHO} "	$file (m=$f_mode)"
+		;;
+	[!/]*/[!/]*/)
+		${ECHO} "	$file (o=$f_user, m=$f_mode)"
+		;;
+	[!/]*/[!/]*/[!/]*)
+		${ECHO} "	$file (o=$f_user, g=$f_group, m=$f_mode)"
+		;;
+	esac
+	case $f_mode in
+	"")	;;
+	*)	${CHMOD} $f_mode $file ;;
+	esac
+	case $f_user in
+	"")	;;
+	*)	${CHOWN} $f_user $file ;;
+	esac
+	case $f_group in
+	"")	;;
+	*)	${CHGRP} $f_group $file ;;
+	esac
+done
+case "$printed_header" in
+yes)	${ECHO} ""
+	${ECHO} "==========================================================================="
+	;;
+esac; }

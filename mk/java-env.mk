@@ -1,4 +1,4 @@
-# $NetBSD: java-env.mk,v 1.3 2004/05/23 10:29:43 jmmv Exp $
+# $NetBSD: java-env.mk,v 1.3.6.1 2005/02/11 15:27:57 tv Exp $
 #
 # This Makefile fragment handles Java wrappers and is meant to be included
 # by packages that provide a Java build-time and/or run-time environment.
@@ -38,6 +38,13 @@ JAVA_WRAPPERS?=		# empty
 .if !empty(JAVA_WRAPPERS)
 INSTALLATION_DIRS+=	bin
 .endif
+
+ALTERNATIVES_SRC=	${WRKDIR}/.ALTERNATIVES
+${WRKDIR}/.ALTERNATIVES:
+.for w in ${JAVA_WRAPPERS}
+	@${ECHO} 'bin/${w} ${PREFIX}/bin/${JAVA_NAME}-${w}' \
+		>>${WRKDIR}/.ALTERNATIVES
+.endfor
 
 .for w in ${JAVA_WRAPPERS}
 

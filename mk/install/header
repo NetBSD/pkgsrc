@@ -2,7 +2,7 @@
 #
 # start of header
 #
-# $NetBSD: header,v 1.26.6.1 2004/12/31 20:25:30 tv Exp $
+# $NetBSD: header,v 1.26.6.2 2005/02/11 15:27:57 tv Exp $
 
 PKGNAME=$1
 STAGE=$2
@@ -23,7 +23,6 @@ EXPR="@EXPR@"
 FALSE="@FALSE@"
 FIND="@FIND@"
 GREP="@GREP@"
-GROUPADD="@GROUPADD@"
 GTAR="@GTAR@"
 HEAD="@HEAD@"
 ID="@ID@"
@@ -35,6 +34,7 @@ MV="@MV@"
 PERL5="@PERL5@"
 PKG_ADMIN="@PKG_ADMIN@"
 PKG_INFO="@PKG_INFO@"
+PWD_CMD="@PWD_CMD@"
 RM="@RM@"
 RMDIR="@RMDIR@"
 SED="@SED@"
@@ -46,9 +46,9 @@ TEST="@TEST@"
 TOUCH="@TOUCH@"
 TR="@TR@"
 TRUE="@TRUE@"
-USERADD="@USERADD@"
 XARGS="@XARGS@"
 
+: ${PKG_METADATA_DIR=`${PWD_CMD}`}
 PKGBASE="@PKGBASE@"
 
 LOCALBASE="@LOCALBASE@"
@@ -59,25 +59,6 @@ case ${PKG_PREFIX} in
 ${LOCALBASE}/*)	VIEW="${PKG_PREFIX#${LOCALBASE}/}" ;;
 *)		VIEW="" ;;
 esac
-
-PKG_USERS="@PKG_USERS@"
-PKG_GROUPS="@PKG_GROUPS@"
-
-SPECIAL_PERMS="@SPECIAL_PERMS@"
-
-CONF_FILES="@CONF_FILES@"
-CONF_FILES_MODE="@CONF_FILES_MODE@"
-CONF_FILES_PERMS="@CONF_FILES_PERMS@"
-SUPPORT_FILES="@SUPPORT_FILES@"
-SUPPORT_FILES_PERMS="@SUPPORT_FILES_PERMS@"
-RCD_SCRIPTS="@RCD_SCRIPTS@"
-RCD_SCRIPTS_DIR="@RCD_SCRIPTS_DIR@"
-RCD_SCRIPTS_EXAMPLEDIR="@RCD_SCRIPTS_EXAMPLEDIR@"
-
-MAKE_DIRS="@MAKE_DIRS@"
-MAKE_DIRS_PERMS="@MAKE_DIRS_PERMS@"
-OWN_DIRS="@OWN_DIRS@"
-OWN_DIRS_PERMS="@OWN_DIRS_PERMS@"
 
 PKG_SYSCONFBASE="@PKG_SYSCONFBASE@"
 PKG_SYSCONFDEPOTBASE="@PKG_SYSCONFDEPOTBASE@"
@@ -93,13 +74,6 @@ esac
 PKG_REGISTER_SHELLS="@PKG_REGISTER_SHELLS@"
 PKG_SHELL="@PKG_SHELL@"
 
-ALL_USERS=
-ALL_GROUPS=
-ALL_FILES=
-ALL_MAKE_DIRS=
-ALL_DIRS=
-VIEW_FILES=
-
 CONF_IGNORE_FILES="*[~#] *.OLD *.orig *,v .pkgsrc */.pkgsrc"
 
 PKG_INSTALLATION_TYPE="@PKG_INSTALLATION_TYPE@"
@@ -112,9 +86,6 @@ case "${PKG_CREATE_USERGROUP:-@PKG_CREATE_USERGROUP@}" in
 	_PKG_CREATE_USERGROUP=NO
 	;;
 esac
-if [ -z "${USERADD}" -o -z "${GROUPADD}" ]; then
-	_PKG_CREATE_USERGROUP=NO
-fi
 
 case "${PKG_CONFIG:-@PKG_CONFIG@}" in
 [Yy][Ee][Ss]|[Tt][Rr][Uu][Ee]|[Oo][Nn]|1)
@@ -133,41 +104,5 @@ case "${PKG_RCD_SCRIPTS:-@PKG_RCD_SCRIPTS@}" in
 	_PKG_RCD_SCRIPTS=NO
 	;;
 esac
-
-msginit()
-{
-	_msgn=0
-	_msgempty=1
-
-}
-
-msgempty()
-{
-	if [ $_msgempty -gt 0 ]; then
-		${TRUE}
-	else
-		${FALSE}
-	fi
-}
-
-msgadd()
-{
-        eval _msg$_msgn=\"$1\"
-        _msgn=`${EXPR} $_msgn + 1`
-	_msgempty=0
-}
-
-msgprint()
-{
-	i=0
-	while [ $i -lt $_msgn ]; do
-		eval _msg=_msg$i
-		eval ${ECHO} "\$$_msg" | ${SED} \
-			-e "s,^###,			," \
-			-e "s,^##,		," \
-			-e "s,^#,	,"
-                i=`${EXPR} $i + 1`
-        done
-}
 
 # end of header

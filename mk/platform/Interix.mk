@@ -1,4 +1,4 @@
-# $NetBSD: Interix.mk,v 1.13.2.1 2005/01/24 18:40:01 tv Exp $
+# $NetBSD: Interix.mk,v 1.13.2.2 2005/02/11 15:27:57 tv Exp $
 #
 # Variable definitions for the Interix operating system.
 
@@ -24,7 +24,9 @@
 # netpbm	0x6b000000	0x6cffffff	0x00100000	32
 # openssl	0x5e000000	0x5fffffff	0x00100000	32
 # perl58	*
+# python22	*
 # python23	*
+# python24	*
 # ruby16	0x50000000	0x6fffffff	0x00040000	2048
 #   (main lib)	0x48000000
 # ruby18	0x50000000	0x6fffffff	0x00040000	2048
@@ -45,7 +47,6 @@ CMP?=		/bin/cmp
 CP?=		/bin/cp
 CUT?=		/bin/cut
 DATE?=		/bin/date
-DC?=		/bin/dc
 DIRNAME?=	/bin/dirname
 ECHO?=		echo				# Shell builtin
 ECHO_N?=	/bin/printf %s			# does not support "echo -n"
@@ -160,7 +161,6 @@ _OPSYS_HAS_MANZ=	yes	# MANZ controls gzipping of man pages
 _OPSYS_HAS_OSSAUDIO=	no	# libossaudio is available
 _OPSYS_LIBTOOL_REQD=	1.5.10nb4
 _OPSYS_PERL_REQD=	5.8.3nb1 # base version of perl required
-_OPSYS_PKGTOOLS_REQD=	20040330
 _OPSYS_PTHREAD_AUTO=	no	# -lpthread needed for pthreads
 _OPSYS_SHLIB_TYPE=	ELF	# shared lib type - not exactly true, but near enough
 _PATCH_CAN_BACKUP=	yes	# native patch(1) can make backups
@@ -193,7 +193,7 @@ CONFIGURE_ENV+=		${GNU_CONFIGURE:Dac_cv_header_poll_h=no ac_cv_func_poll=no}
 
 # check for maximum command line length and set it in configure's environment,
 # to avoid a test required by the libtool script that takes forever.
-_OPSYS_MAX_CMDLEN=	262144
+_OPSYS_MAX_CMDLEN_CMD=	${ECHO} 262144
 
 # If games are to be installed setgid, then SETGIDGAME is set to 'yes'
 # (it defaults to 'no' as per bsd.pkg.defaults.mk).
