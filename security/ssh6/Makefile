@@ -1,7 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2000/08/10 17:02:25 thorpej Exp $
+# $NetBSD: Makefile,v 1.4 2000/08/11 03:12:51 itojun Exp $
 # FreeBSD Id: Makefile,v 1.47 1997/11/10 22:04:42 dima Exp
 #
 
+# We do not upgrade to 1.2.28 and beyond, intentionally.  There was license
+# change between 1.2.27 and 1.2.28, and the new license prohibits us from
+# modifying/redistributing it.
+#
 DISTNAME=		ssh-1.2.27
 PKGNAME=		ssh6-1.2.27
 CATEGORIES=		security net
