@@ -1,29 +1,37 @@
-# $NetBSD: Makefile,v 1.3 1999/09/27 14:17:22 agc Exp $
+# $NetBSD: Makefile,v 1.4 1999/09/30 16:41:05 explorer Exp $
 #
 
-DISTNAME=	lame-3.13
+#
+# This file is included from ../lame-gui/Makefile to get most of the things
+# to match up.  It will define LAME_GUI before including.
+#
+
+.ifndef LAME_GUI
+DISTNAME=	lame-3.31beta
+.else
+DISTNAME=	lame-gui-3.31beta
+.endif
 CATEGORIES=	audio
-MASTER_SITES=	http://hive.me.gu.edu.au/not_lame/
-DISTFILES=	dist10.tar.gz.a dist10.tar.gz.b lame3.13.patch.tgz
+MASTER_SITES=	http://www.sulaco.org/mp3/download/beta/
+DISTFILES=	lame3.31beta.tar.gz
 
 MAINTAINER=	hubertf@netbsd.org
-HOMEPAGE=	http://hive.me.gu.edu.au/not_lame/
+HOMEPAGE=	http://www.sulaco.org/mp3/
 
-DIST_SUBDIR=	notlame
-EXTRACT_ONLY=
-WRKSRC=		${WRKDIR}/lame_src
-PATCH_DIST_STRIP= -p1
+DEPENDS=	ncurses-4.2:../../devel/ncurses
+
+.ifndef LAME_GUI
+CONFLICTS=	lame-gui-*
+.else
+DEPENDS+=	gtk+-1.2.4:../../x11/gtk
+CONFLICTS=	lame-[0-9]*
+.endif
+
+WRKSRC=		${WRKDIR}/lame3.31
 USE_GMAKE=	yes
 ALL_TARGET=	lame
 MIRROR_DISTFILE=no
 LICENSE=	fee-based-commercial-use
-
-post-extract:
-	${CAT} ${_DISTDIR}/dist* | ( cd ${WRKDIR} ; ${GTAR} plzxf - )
-	${MV} ${WRKDIR}/dist10/lsf/encoder ${WRKSRC}
-	cd ${WRKDIR}; ${GTAR} xvzf ${_DISTDIR}/lame3.13.patch.tgz
-	cd ${WRKSRC}; ${PATCH} -p1 < ${WRKDIR}/lame3.13.patch
-	# ${RM} -fr ${WRKDIR}/dist10
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/lame ${PREFIX}/bin
