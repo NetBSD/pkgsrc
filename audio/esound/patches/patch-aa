@@ -1,12 +1,20 @@
-$NetBSD: patch-aa,v 1.1 1998/12/28 17:26:17 garbled Exp $
---- configure.orig	Mon Dec 28 10:20:08 1998
-+++ configure	Mon Dec 28 10:20:50 1998
-@@ -1198,7 +1198,7 @@
+$NetBSD: patch-aa,v 1.2 1999/02/14 21:21:39 tron Exp $
+
+--- configure.orig	Sat Jul 18 04:51:16 1998
++++ configure	Sun Feb 14 22:16:51 1999
+@@ -1198,6 +1198,7 @@
  fi
  
  # Always use our own libtool.
--LIBTOOL='$(SHELL) $(top_builddir)/libtool'
-+LIBTOOL='$(PREFIX)/bin/pkglibtool'
++if false; then
+ LIBTOOL='$(SHELL) $(top_builddir)/libtool'
  
  # Check for any special flags to pass to ltconfig.
- libtool_flags=
+@@ -1242,6 +1243,7 @@
+ ${CONFIG_SHELL-/bin/sh} $ac_aux_dir/ltconfig \
+ $libtool_flags --no-verify $ac_aux_dir/ltmain.sh $host \
+ || { echo "configure: error: libtool configure failed" 1>&2; exit 1; }
++fi
+ 
+ # Extract the first word of "gcc", so it can be a program name with args.
+ set dummy gcc; ac_word=$2
