@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/08/26 05:26:19 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2001/01/30 16:16:33 wrstuden Exp $
 # FreeBSD: ports/mail/distribute/Makefile,v 1.2 1999/08/25 06:50:06 obrien Exp
 #
 
@@ -43,9 +43,9 @@ MAKE_ENV+=	DEFAULTCONFIG="-DDEF_SEQ_PATH=\\\"${MAILINGLIST_DIR}\\\" \
 pre-build:
 	${TOUCH} ${WRKSRC}/logging.h ${WRKSRC}/strsep.c
 
-post-build: message
-post-install: message
-message::
+post-build: mmessage
+post-install: mmessage
+mmessage::
 	@${ECHO} "===> distribute was compiled with the following configuration:"
 	@${ECHO} "     membership file directory: ${MAILINGLIST_DIR}"
 	@${ECHO} "     membership file directory: ${MAJORDOMO_LIST_DIR} (for majordomo)"
