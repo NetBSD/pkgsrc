@@ -1,0 +1,3 @@
+gnome-common contains a set of M4 macros useful to easily write configure
+scripts for GNOME 1 and GNOME 2 programs.  These macros provide a set of
+checks used by many GNOME programs that need to do similar things.
