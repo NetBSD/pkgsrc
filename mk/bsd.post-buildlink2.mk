@@ -1,4 +1,4 @@
-# $NetBSD: bsd.post-buildlink2.mk,v 1.1.2.3 2002/05/08 21:19:09 jlam Exp $
+# $NetBSD: bsd.post-buildlink2.mk,v 1.1.2.4 2002/05/09 04:12:46 jlam Exp $
 
 ECHO_BUILDLINK_MSG?=	${ECHO_MSG} "=>"
 
@@ -185,8 +185,8 @@ _BUILDLINK_WRAPPEES+=		FC F77
 .endif
 .if defined(USE_LIBTOOL)
 PKGLIBTOOL=			${BUILDLINK_LIBTOOL}
-_BUILDLINK_WRAPPEES+=		LIBTOOL
 .endif
+_BUILDLINK_WRAPPEES+=		LIBTOOL
 .if defined(USE_X11) || defined(USE_X11BASE) || defined(USE_IMAKE)
 IMAKE?=				${X11BASE}/bin/imake
 _BUILDLINK_WRAPPEES+=		IMAKE
@@ -224,10 +224,8 @@ _BUILDLINK_WRAPPERS_ENV.CPP=		# empty
 # it's already correct, and don't sanitize the PATH because we want
 # libtool to invoke the wrapper scripts, too.
 #
-.if defined(USE_LIBTOOL)
 _BUILDLINK_WRAPPERS_ENV.LIBTOOL=	# empty
 _BUILDLINK_SANITIZE_PATH_SH.LIBTOOL=	# empty
-.endif
 
 # Don't transform the arguments for imake, which uses the C preprocessor
 # to generate Makefiles, so that imake will find its config files.
@@ -299,6 +297,8 @@ ${_alias_}: ${BUILDLINK_${_wrappee_}}
 #
 .if defined(USE_LIBTOOL)
 post-build: buildlink-libtool-fix
+.endif
+
 buildlink-libtool-fix: ${BUILDLINK_DIR}/.buildlink_libtool_fix_done
 
 _LIBTOOL_ARCHIVE_PATTERNS=	*.lai
@@ -348,6 +348,5 @@ ${BUILDLINK_DIR}/.buildlink_libtool_fix_done:
 		${MV} -f $${file}.fixed $${file};			\
 		${ECHO} $${file} >> ${.TARGET};				\
 	done
-.endif
 
 .endif	# USE_BUILDLINK2_ONLY
