@@ -103,6 +103,8 @@ int main (int argc, char **argv )
         {
 
             /* We're the child */
+            char *args[MAX_ARGS];
+            unsigned int i;
 
             if (!obtainUIDandGID(DIRMNGR_USER, &UID, &GID))
                 exit(-1);
@@ -127,8 +129,6 @@ int main (int argc, char **argv )
             }
 
             /* Build calling argv */
-            char *args[MAX_ARGS];
-            unsigned int i;
             args[0] = DIRMNGR_PATH;
             for (i=1;i<argc;i++)
             {
