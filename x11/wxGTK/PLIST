@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.3 2003/09/03 18:22:52 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.4 2004/01/07 21:45:18 jmmv Exp $
 bin/wx-config
-bin/wxgtk-2.4-config
+bin/wxgtk${GTKVER}-2.4-config
 include/wx/accel.h
 include/wx/app.h
 include/wx/arrimpl.cpp
@@ -91,7 +91,6 @@ include/wx/fs_zip.h
 include/wx/gauge.h
 include/wx/gdicmn.h
 include/wx/gdiobj.h
-include/wx/quantize.h
 include/wx/generic/accel.h
 include/wx/generic/calctrl.h
 include/wx/generic/caret.h
@@ -281,6 +280,7 @@ include/wx/protocol/file.h
 include/wx/protocol/ftp.h
 include/wx/protocol/http.h
 include/wx/protocol/protocol.h
+include/wx/quantize.h
 include/wx/radiobox.h
 include/wx/radiobut.h
 include/wx/regex.h
@@ -364,12 +364,12 @@ include/wx/wxprec.h
 include/wx/xpmdecod.h
 include/wx/zipstrm.h
 include/wx/zstream.h
-lib/libwx_gtk.a
-lib/libwx_gtk.la
-lib/libwx_gtk.so
-lib/libwx_gtk.so.0
-lib/libwx_gtk.so.0.1
-lib/wx/include/gtk-2.4/wx/setup.h
+lib/libwx_gtk${GTKVER}.a
+lib/libwx_gtk${GTKVER}.la
+lib/libwx_gtk${GTKVER}.so
+lib/libwx_gtk${GTKVER}.so.0
+lib/libwx_gtk${GTKVER}.so.0.1
+lib/wx/include/gtk${GTKVER}-2.4/wx/setup.h
 share/aclocal/wxwin.m4
 share/doc/wx/gtk/LICENSE
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/wxstd.mo
@@ -420,8 +420,8 @@ share/wx/2.4/gs_afm/Zapf.afm
 @unexec ${RMDIR} %D/share/wx 2>/dev/null || ${TRUE}
 @dirrm share/doc/wx/gtk
 @dirrm share/doc/wx
-@dirrm lib/wx/include/gtk-2.4/wx
-@dirrm lib/wx/include/gtk-2.4
+@dirrm lib/wx/include/gtk${GTKVER}-2.4/wx
+@dirrm lib/wx/include/gtk${GTKVER}-2.4
 @unexec ${RMDIR} %D/lib/wx/include 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/lib/wx 2>/dev/null || ${TRUE}
 @dirrm include/wx/unix
