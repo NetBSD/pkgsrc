@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6238 2004/06/20 19:38:27 xtraeme Exp $
+$NetBSD: CHANGES,v 1.6239 2004/06/20 19:39:59 agc Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2964,6 +2964,7 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated ffmpeg to 0.4.8nb1 [xtraeme 2004-06-20]
 	Updated pax to 20040620 [grant 2004-06-20]
 	Updated cvsync to 0.24.16 [gehenna 2004-06-20]
+	bsd.pkg.mk: pkgsrc-2004Q2 branched, freeze ended [agc 2004-06-20]
 	Updated vlc to 0.7.2 [xtraeme 2004-06-20]
 	Updated mysql4-server to 4.0.20 [xtraeme 2004-06-20]
 	Updated mysql4-client to 4.0.20 [xtraeme 2004-06-20]
