@@ -1,0 +1,3 @@
+DVDBACKUP enables users to create backups from DVDs they own. 
+It requires the libdvdread library and is hence capable of reading encrypted
+DVDs on systems that have the libdvdcss library installed.
