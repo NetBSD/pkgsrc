@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2004/04/17 23:59:21 snj Exp $
+# $NetBSD: Makefile,v 1.8 2004/06/04 15:30:35 reed Exp $
 #
 
 .include "../lyx-qt/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/lyx-/lyx-xforms-/}
-PKGREVISION=	1
+PKGREVISION=	2
 
 COMMENT+=	(xforms version)
 
