@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2002/01/10 13:18:06 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2002/02/28 15:07:16 jlam Exp $
 #
 
 PKGNAME=		ap-php-${BASE_VERS}
-PKGREVISION=		# empty
+PKGREVISION=		1
 COMMENT=		Apache module for PHP3
 
 USE_BUILDLINK_ONLY=	yes
@@ -10,7 +10,7 @@ USE_BUILDLINK_ONLY=	yes
 .include "../../www/php3/Makefile.common"
 
 DEPENDS+=		php>=${BASE_VERS}:../../www/php3
-DEPENDS+=		apache{,6}>=1.3:../../www/apache
+DEPENDS+=		${BUILDLINK_DEPENDS.apache}:../../www/apache
 
 CPPFLAGS+=		-DPHP_INTERNAL_FUNCS
 
