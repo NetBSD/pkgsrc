@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2001/05/15 22:43:25 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2001/05/25 23:01:30 kei Exp $
 
-DISTNAME=		bochs-bugfix-20010409-beta
-PKGNAME=		bochs-2001.04.09
-WRKSRC=			${WRKDIR}/bochs
+DISTNAME=		bochs-1.1.2
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=bochs/}
 
@@ -30,7 +28,8 @@ post-configure:
 do-install:
 	${INSTALL_DATA_DIR} ${BOCHS_BIOSDIR}
 	${INSTALL_DATA} ${WRKSRC}/bios/BIOS-bochs-990925a ${BOCHS_BIOSDIR}
-	${INSTALL_DATA} ${WRKSRC}/bios/VGABIOS-elpin-2.20 ${BOCHS_BIOSDIR}
+	${INSTALL_DATA} ${WRKSRC}/bios/VGABIOS-elpin-2.40 ${BOCHS_BIOSDIR}
+	${INSTALL_DATA} ${WRKSRC}/bios/VGABIOS-elpin-LICENSE ${BOCHS_BIOSDIR}
 	${INSTALL_DATA_DIR} ${BOCHS_DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/docs-html/00README ${BOCHS_DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/docs-html/*.gif ${BOCHS_DOCDIR}
