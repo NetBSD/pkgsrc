@@ -1,0 +1,85 @@
+--- Magick.tmpl.orig	Tue Dec  9 05:08:48 1997
++++ Magick.tmpl	Thu Dec 11 01:43:36 1997
+@@ -33,12 +33,12 @@
+ XCOMM HasShape if your X server supports the Shape Extension and
+ XCOMM HasSharedMemory for the Shared Memory Extension.
+ XCOMM
+-XCOMM EXTENSIONS_DEFINES= -DHasLZW -DHasShape -DHasSharedMemory
++EXTENSIONS_DEFINES= -DHasLZW -DHasShape -DHasSharedMemory
+ 
+ XCOMM Set DoSharedLib to HasSharedLibraries to build ImageMagick with shared
+ XCOMM libraries.
+ XCOMM
+-XCOMM #define DoSharedLib  HasSharedLibraries
++#define DoSharedLib  HasSharedLibraries
+ 
+ XCOMM By default, the maximum color value is 255.  To increase the maximum to
+ XCOMM 65535 define:
+@@ -56,10 +56,10 @@
+ XCOMM #define HasFPX
+ XCOMM #define HasHDF
+ XCOMM #define HasJBIG
+-XCOMM #define HasJPEG
+-XCOMM #define HasMPEG
+-XCOMM #define HasPNG
+-XCOMM #define HasTIFF
++#define HasJPEG
++#define HasMPEG
++#define HasPNG
++#define HasTIFF
+ XCOMM #define HasTTF
+ 
+ #ifdef HasDPS
+@@ -92,29 +92,29 @@
+ 
+ #ifdef HasJPEG
+ JPEG_DEFINES= -DHasJPEG
+-JPEG_INCLUDES= -I$(TOP)/jpeg
+-JPEG_FLAGS= -L$(TOP)/jpeg
++JPEG_INCLUDES= -I${LOCALBASE}/include
++JPEG_FLAGS= -L${LOCALBASE}/lib
+ JPEG_LIBRARIES= -ljpeg
+ #endif
+ 
+ #ifdef HasMPEG
+ MPEG_DEFINES= -DHasMPEG
+-MPEG_INCLUDES= -I$(TOP)/mpeg
+-MPEG_FLAGS= -L$(TOP)/mpeg
++MPEG_INCLUDES= -I${LOCALBASE}/include
++MPEG_FLAGS= -L${LOCALBASE}/lib
+ MPEG_LIBRARIES= -lmpeg
+ #endif
+ 
+ #ifdef HasPNG
+ PNG_DEFINES= -DHasPNG
+-PNG_INCLUDES= -I$(TOP)/png -I$(TOP)/zlib
+-PNG_FLAGS= -L$(TOP)/png -L$(TOP)/zlib
++PNG_INCLUDES= -I${LOCALBASE}/include
++PNG_FLAGS= -L${LOCALBASE}/lib
+ PNG_LIBRARIES= -lpng -lz
+ #endif
+ 
+ #ifdef HasTIFF
+ TIFF_DEFINES= -DHasTIFF
+-TIFF_INCLUDES= -I$(TOP)/tiff/libtiff
+-TIFF_FLAGS= -L$(TOP)/tiff/libtiff
++TIFF_INCLUDES= -I${LOCALBASE}/include
++TIFF_FLAGS= -L${LOCALBASE}/lib
+ TIFF_LIBRARIES= -ltiff
+ #endif
+ 
+@@ -136,10 +136,10 @@
+ XCOMM ImageMagick has an include file named X.h.  Do not set LOCALINC to
+ XCOMM the top level X11 include directory or X11/X.h will be overwritten.
+ 
+-LOCALDIR= /usr/local/bin
+-LOCALINC= /usr/local/include/magick
+-LOCALLIB= /usr/local/lib
+-LOCALMAN= /usr/local/man/man1
++LOCALDIR= $(PREFIX)/bin
++LOCALINC= $(PREFIX)/include/magick
++LOCALLIB= $(PREFIX)/lib
++LOCALMAN= $(PREFIX)/man/cat1
+ 
+ MAGICKDIR= $(TOP)/magick
+ MAGICK_INCLUDES= -I$(TOP)/magick
