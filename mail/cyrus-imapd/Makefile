@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2001/11/24 20:49:42 jlam Exp $
+# $NetBSD: Makefile,v 1.23 2001/11/25 18:59:46 jlam Exp $
 
 DISTNAME=		cyrus-imapd-2.0.16
 SVR4_PKGNAME=		cimap
@@ -57,9 +57,9 @@ LIBS+=			`${SASL_CONFIG} --libs`
 
 HTMLDIR=		${PREFIX}/share/doc/html/cyrus-imapd
 EGDIR=			${PREFIX}/share/examples/cyrus-imapd
-CONF_FILES=		${EGDIR}/imapd.conf ${CONFDIR}/imapd.conf
-CONF_FILES+=		${EGDIR}/normal.conf ${CONFDIR}/cyrus.conf
-FILES_SUBST+=		IMAPDCONF=${CONFDIR}/imapd.conf
+CONF_FILES=		${EGDIR}/imapd.conf ${PKG_SYSCONFDIR}/imapd.conf
+CONF_FILES+=		${EGDIR}/normal.conf ${PKG_SYSCONFDIR}/cyrus.conf
+FILES_SUBST+=		IMAPDCONF=${PKG_SYSCONFDIR}/imapd.conf
 
 DEINSTALL_EXTRA_TMPL=	${PKGDIR}/DEINSTALL
 INSTALL_EXTRA_TMPL=	${PKGDIR}/INSTALL
@@ -71,7 +71,7 @@ PERL5_PACKLIST= \
 
 # Change references of some manpages from foo.8 to cyrus-foo.8 to avoid
 # manpage conflicts with other packages.  Also change references to
-# "/etc/{cyrus,imapd}.conf" into "${CONFDIR}/{cyrus,imapd}.conf".
+# "/etc/{cyrus,imapd}.conf" into "${PKG_SYSCONFDIR}/{cyrus,imapd}.conf".
 #
 post-patch:
 	cd ${WRKSRC}/man;						\
@@ -86,8 +86,8 @@ post-patch:
 	for file in $${files}; do					\
 		${SED}	-e "s|\(\\fB\)\($${name}($${suffix})\)|\1cyrus-\2|g" \
 			-e "s|\(\$$(srcdir)/\)\($${man}\)|\1cyrus-\2|g"	\
-			-e "s|/etc/\(cyrus\.conf\)|${CONFDIR}/\1|g"	\
-			-e "s|/etc/\(imapd\.conf\)|${CONFDIR}/\1|g"	\
+			-e "s|/etc/\(cyrus\.conf\)|${PKG_SYSCONFDIR}/\1|g" \
+			-e "s|/etc/\(imapd\.conf\)|${PKG_SYSCONFDIR}/\1|g" \
 			$${file} > $${file}.fixed;			\
 		${MV} -f $${file}.fixed $${file};			\
 	done
