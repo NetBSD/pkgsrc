@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/06/10 15:15:06 taca Exp $
+# $NetBSD: Makefile,v 1.2 2001/07/26 15:44:44 taca Exp $
 #
 
 DISTNAME=		qpopper${VERSION}
@@ -30,6 +30,6 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/man/poppassd.8 ${LOCALBASE}/man/man8
 	${INSTALL_DATA} ${WRKSRC}/License.txt \
 		${LOCALBASE}/share/doc/poppassd.License;
-	@${SETENV} PKG_PREFIX=${LOCALBASE} ${SH} ${INSTALL_FILE}
+	PKG_PREFIX=${LOCALBASE} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
 .include "../../mk/bsd.pkg.mk"
