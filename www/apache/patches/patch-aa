@@ -1,17 +1,8 @@
-$NetBSD: patch-aa,v 1.10 1999/05/07 13:46:43 tv Exp $
+$NetBSD: patch-aa,v 1.11 1999/11/21 22:09:28 tron Exp $
 
---- Makefile.tmpl.orig	Fri May  7 09:49:05 1999
-+++ Makefile.tmpl	Fri May  7 09:52:16 1999
-@@ -114,7 +114,7 @@
- datadir         = @datadir@
- iconsdir        = $(datadir)/icons
- htdocsdir       = $(datadir)/htdocs
--cgidir          = $(datadir)/cgi-bin
-+cgidir          = $(prefix)/libexec/cgi-bin
- includedir      = @includedir@
- localstatedir   = @localstatedir@
- runtimedir      = @runtimedir@
-@@ -344,34 +344,6 @@
+--- Makefile.tmpl.orig	Mon Sep 27 18:03:16 1999
++++ Makefile.tmpl	Mon Sep 27 18:03:18 1999
+@@ -371,34 +371,6 @@
  			file=`echo $${mod} | sed -e 's;^.*/\([^/]*\);\1;'`; \
  			echo "$(INSTALL_DSO) $(TOP)/$(SRC)/$${mod} $(root)$(libexecdir)/$${file}"; \
  			$(INSTALL_DSO) $(TOP)/$(SRC)/$${mod} $(root)$(libexecdir)/$${file}; \
@@ -46,7 +37,7 @@ $NetBSD: patch-aa,v 1.10 1999/05/07 13:46:43 tv Exp $
  		done; \
  	fi
  	@echo "<=== [programs]"
-@@ -453,12 +425,13 @@
+@@ -524,12 +496,13 @@
  		find $(root)$(htdocsdir)/ -type d -exec chmod a+rx {} \; ; \
  		find $(root)$(htdocsdir)/ -type f -exec chmod a+r {} \; ; \
  	fi
@@ -61,7 +52,7 @@ $NetBSD: patch-aa,v 1.10 1999/05/07 13:46:43 tv Exp $
  			> $(TOP)/$(SRC)/.apaci.install.tmp; \
  			echo "$(INSTALL_DATA) $(TOP)/conf/$${script}[*] $(root)$(cgidir)/$${script}"; \
  			$(INSTALL_DATA) $(TOP)/$(SRC)/.apaci.install.tmp $(root)$(cgidir)/$${script}; \
-@@ -475,7 +448,7 @@
+@@ -546,7 +519,7 @@
  #   and initial config files while preserving existing ones.
  install-config:
  	@echo "===> [config: Installing Apache configuration files]"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 1999/08/18 08:29:10 agc Exp $
+# $NetBSD: Makefile,v 1.38 1999/11/21 22:09:26 tron Exp $
 #
 # The fourth number in the PKGNAME version indicates a NetBSD pkg revision
 # (to indicate changes in the shipped third party patches such as the mod_ssl
@@ -6,10 +6,9 @@
 #
 # This pkg does not compile in mod_ssl, only the `mod_ssl EAPI' (a set of
 # code hooks that allow mod_ssl to be compiled separately later, if desired).
-#
 
-DISTNAME=		apache_1.3.6
-PKGNAME=		apache-1.3.6p0
+DISTNAME=		apache_1.3.9
+PKGNAME=		apache-1.3.9p0
 CATEGORIES=		www
 MASTER_SITES=		http://www.apache.org/dist/ \
 			ftp://ftp.modssl.org/source/ \
@@ -23,12 +22,13 @@ HOMEPAGE=		http://www.apache.org/
 
 CONFLICTS=		apache-*modssl-* apache6-*
 
-SSL_DISTNAME=		mod_ssl-2.2.8-1.3.6
+SSL_DISTNAME=		mod_ssl-2.4.8-1.3.9
 
 EXTRACT_ONLY=		${DISTFILES:N*.gif}
 HAS_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--prefix=${PREFIX} --libexecdir=${PREFIX}/lib/httpd \
 			--runtimedir=/var/run --datadir=${PREFIX}/share/httpd \
+			--cgidir=${PREFIX}/libexec/cgi-bin \
 			--logfiledir=/var/log/httpd --sysconfdir=${PREFIX}/etc/httpd \
 			--proxycachedir=/var/spool/httpd/proxy \
 			--includedir=${PREFIX}/include/httpd \
@@ -54,7 +54,7 @@ CFLAGS+=		-O6 -fomit-frame-pointer -fexpensive-optimizations
 
 PLIST_SRC=		${WRKDIR}/PLIST
 
-BUILD_DEFS+=		APACHE_PERF_TUNING APACHE_SUEXEC 
+BUILD_DEFS+=		APACHE_PERF_TUNING APACHE_SUEXEC
 
 # Note that there is NO static compile module hook here.  This is intentional.
 # Under Apache 1.3, modules can be compiled to link dynamically to the server
