@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/01/15 18:46:33 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2001/01/12 12:33:18 dent Exp $
 #
 
 DISTNAME=	tn5250-0.12.51
@@ -6,7 +6,7 @@ CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.blarg.net/users/mmadore/
 
 MAINTAINER=	packages@netbsd.org
-HOMEPAGE=	http://www.blarg.net/~mmadore/5250.html
+HOMEPAGE=	http://www.linux-sna.org/software/5250/
 
 DEPENDS+=	ncurses>=4.2:../../devel/ncurses
 
