@@ -1,11 +1,10 @@
-$NetBSD: distinfo,v 1.26 2004/04/17 10:56:21 xtraeme Exp $
+$NetBSD: distinfo,v 1.27 2004/07/24 03:32:24 jlam Exp $
 
-SHA1 (openldap-2.1.30.tgz) = c036f88abbafc16cb64c4e00ccc1c65563864755
-Size (openldap-2.1.30.tgz) = 2044673 bytes
-SHA1 (patch-aa) = 0f7f0ad7e11a16d084955f5125db12a5e53bafec
-SHA1 (patch-ac) = 56ee06d724a2de895fc373cc57bf3de17058e30b
-SHA1 (patch-ad) = 24734ea7dbfc85c0f1a5ebc7ad9209cfe64ef546
-SHA1 (patch-af) = 74edff185f7d5222416023801084c069d08ec057
-SHA1 (patch-ag) = 822efbcc01dfd4b6181c25390761f534aaeb4315
-SHA1 (patch-ah) = 4fd10030b2531c7b4a4461053e5896274b24d5dd
-SHA1 (patch-ai) = d79797eca448d4131dcdc0c8d8a03ba8cddc8cac
+SHA1 (openldap-2.2.13.tgz) = 0aca3353dca26a118a9ea31c219518b416ec856a
+Size (openldap-2.2.13.tgz) = 2565415 bytes
+SHA1 (patch-ac) = f3d5edf5ddbad93d7a88a6837ea962820fc475ce
+SHA1 (patch-ad) = c49ccf52a60110a6fe16afaff0d327e112216c50
+SHA1 (patch-af) = cd7c9527272dadf4509c4df1388d353378cdba13
+SHA1 (patch-ag) = b2d9b54b9692f0f102b01fcf94a9933a5920523b
+SHA1 (patch-ah) = e421d148537c936d76d3bb3cc3cd8f7dfb504c20
+SHA1 (patch-ai) = d04844735536491407f2aed2e8a7792eb3cd439c
