@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/11/26 06:49:56 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2002/10/07 21:56:52 seb Exp $
 
 DISTNAME=		p5-perl-headers
 PKGNAME=		${DISTNAME}-${OS_VERSION}
@@ -11,7 +11,7 @@ MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://language.perl.com/index.html
 COMMENT=		Perl header files
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/.packlist.h2ph
 
 EXTRACT_ONLY=		# empty
@@ -45,5 +45,5 @@ do-install:
 	${CAT} ${PERL5_PACKLIST} | ${XARGS} ${CHMOD} a-w
 	${CAT} ${PERL5_PACKLIST} | ${XARGS} ${CHOWN} ${SHAREOWN}:${SHAREGRP}
 
-.include "../../lang/perl5/buildlink.mk"
+.include "../../lang/perl5/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
