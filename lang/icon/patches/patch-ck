@@ -1,0 +1,6 @@
+$NetBSD: patch-ck,v 1.1 2000/06/19 15:56:37 pooka Exp $
+
+--- /dev/null   Thu Jan  1 00:00:00 1970
++++ config/unix/sun_netbsd/runtime.hdr  Thu Jun  8 22:10:28 2000
+@@ -0,0 +1 @@
++SHELL=/bin/sh
