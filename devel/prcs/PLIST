@@ -1,9 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 2002/02/18 15:14:15 seb Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/06/24 00:42:03 seb Exp $
 bin/prcs
 bin/prcs-callback
-@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/prcs.info
 info/prcs.info
-@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/prcs.info
 info/prcs.info-1
 info/prcs.info-2
 info/prcs.info-3

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/10/15 23:07:16 dillo Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/06/24 00:35:34 seb Exp $
 arm-palmos/bin/ar
 arm-palmos/bin/as
 arm-palmos/bin/gcc
@@ -71,9 +71,7 @@ bin/m68k-palmos-strings
 bin/m68k-palmos-strip
 bin/m68k-palmos-stubgen
 bin/palmdev-prep
-@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/prc-tools.info
 info/prc-tools.info
-@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/prc-tools.info
 lib/gcc-lib/arm-palmos/2.95.3-kgpd/cc1
 lib/gcc-lib/arm-palmos/2.95.3-kgpd/cc1plus
 lib/gcc-lib/arm-palmos/2.95.3-kgpd/collect2
