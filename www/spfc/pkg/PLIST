@@ -1,0 +1,98 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/01/18 18:05:29 jwise Exp $
+lib/spfc.jar
+doc/spfc/api/images/blue-ball-small.gif
+doc/spfc/api/images/blue-ball.gif
+doc/spfc/api/images/class-index.gif
+doc/spfc/api/images/constructor-index.gif
+doc/spfc/api/images/constructors.gif
+doc/spfc/api/images/cyan-ball-small.gif
+doc/spfc/api/images/cyan-ball.gif
+doc/spfc/api/images/error-index.gif
+doc/spfc/api/images/exception-index.gif
+doc/spfc/api/images/green-ball-small.gif
+doc/spfc/api/images/green-ball.gif
+doc/spfc/api/images/interface-index.gif
+doc/spfc/api/images/magenta-ball-small.gif
+doc/spfc/api/images/magenta-ball.gif
+doc/spfc/api/images/method-index.gif
+doc/spfc/api/images/methods.gif
+doc/spfc/api/images/package-index.gif
+doc/spfc/api/images/red-ball-small.gif
+doc/spfc/api/images/red-ball.gif
+doc/spfc/api/images/variable-index.gif
+doc/spfc/api/images/variables.gif
+doc/spfc/api/images/yellow-ball-small.gif
+doc/spfc/api/images/yellow-ball.gif
+doc/spfc/api/AllNames.html
+doc/spfc/api/Package-org.apache.spfc.html
+doc/spfc/api/Package-org.apache.spfc.util.html
+doc/spfc/api/index.html
+doc/spfc/api/org.apache.spfc.AbstractButton.html
+doc/spfc/api/org.apache.spfc.ActionAdapter.html
+doc/spfc/api/org.apache.spfc.ActionEvent.html
+doc/spfc/api/org.apache.spfc.ActionListener.html
+doc/spfc/api/org.apache.spfc.Button.html
+doc/spfc/api/org.apache.spfc.ButtonGroup.html
+doc/spfc/api/org.apache.spfc.Cell.html
+doc/spfc/api/org.apache.spfc.CheckBox.html
+doc/spfc/api/org.apache.spfc.Client.html
+doc/spfc/api/org.apache.spfc.Component.html
+doc/spfc/api/org.apache.spfc.Container.html
+doc/spfc/api/org.apache.spfc.FlowLayout.html
+doc/spfc/api/org.apache.spfc.Form.html
+doc/spfc/api/org.apache.spfc.GridBagConstraints.html
+doc/spfc/api/org.apache.spfc.GridBagLayout.html
+doc/spfc/api/org.apache.spfc.Header.html
+doc/spfc/api/org.apache.spfc.LayoutManager.html
+doc/spfc/api/org.apache.spfc.Link.html
+doc/spfc/api/org.apache.spfc.NavigationComponent.html
+doc/spfc/api/org.apache.spfc.NetObject.html
+doc/spfc/api/tree.html
+doc/spfc/api/packages.html
+doc/spfc/api/org.apache.spfc.NetPage.html
+doc/spfc/api/org.apache.spfc.Page.html
+doc/spfc/api/org.apache.spfc.RadioButton.html
+doc/spfc/api/org.apache.spfc.RequestListener.html
+doc/spfc/api/org.apache.spfc.Row.html
+doc/spfc/api/org.apache.spfc.Servlet.html
+doc/spfc/api/org.apache.spfc.Table.html
+doc/spfc/api/org.apache.spfc.TableStyle.html
+doc/spfc/api/org.apache.spfc.Text.html
+doc/spfc/api/org.apache.spfc.TextField.html
+doc/spfc/api/org.apache.spfc.ToggleButton.html
+doc/spfc/api/org.apache.spfc.Wizard.html
+doc/spfc/api/org.apache.spfc.WizardNode.html
+doc/spfc/api/org.apache.spfc.util.ActionProducerAdapter.html
+doc/spfc/api/org.apache.spfc.util.EmptyEnumeration.html
+doc/spfc/api/org.apache.spfc.Sendable.html
+doc/spfc/api/org.apache.spfc.DefaultRequestListener.html
+doc/spfc/api/org.apache.spfc.URLRequestListener.html
+doc/spfc/.htaccess
+doc/spfc/common.css
+doc/spfc/index.html
+doc/spfc/design/brainstorming/index.html
+doc/spfc/design/index.html
+doc/spfc/design/objectmodel/objectmodel.gif
+doc/spfc/design/objectmodel/objectmodel.vsd
+doc/spfc/design/objectmodel/overview.flo
+doc/spfc/design/objectmodel/overview.gif
+doc/spfc/history/index.html
+doc/spfc/links/index.html
+doc/spfc/problems/index.html
+doc/spfc/resources/index.html
+doc/spfc/system/complete.flo
+doc/spfc/system/complete.gif
+doc/spfc/system/index.html
+doc/spfc/system/simple.flo
+doc/spfc/system/simple.gif
+@dirrm doc/spfc/system
+@dirrm doc/spfc/resources
+@dirrm doc/spfc/problems
+@dirrm doc/spfc/links
+@dirrm doc/spfc/history
+@dirrm doc/spfc/design/objectmodel
+@dirrm doc/spfc/design/brainstorming
+@dirrm doc/spfc/design
+@dirrm doc/spfc/api/images
+@dirrm doc/spfc/api
+@dirrm doc/spfc
