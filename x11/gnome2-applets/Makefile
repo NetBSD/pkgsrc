@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2004/04/02 03:49:51 snj Exp $
+# $NetBSD: Makefile,v 1.28 2004/04/02 12:18:10 jmmv Exp $
 #
 
 DISTNAME=		gnome-applets-2.6.0
@@ -72,9 +72,9 @@ INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/libgnome/buildlink3.mk"
-.include "../../devel/libgtop2/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
+.include "../../sysutils/libgtop2/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../x11/libxklavier/buildlink3.mk"
