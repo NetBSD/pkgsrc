@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8973 2005/01/29 15:37:11 abs Exp $
+$NetBSD: CHANGES,v 1.8974 2005/01/29 21:55:45 kristerw Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -655,4 +655,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated mad123 to 0.8.5 [scw 2005-01-29]
 	Updated cpuflags to 0.81 [abs 2005-01-29]
 	Updated pkg_chk to 1.53 [abs 2005-01-29]
-
+	Updated xmame to 0.90 [kristerw 2005-01-29]
+	Updated xmess to 0.90 [kristerw 2005-01-29]
