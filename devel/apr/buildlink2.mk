@@ -1,11 +1,11 @@
-# $NetBSD: buildlink2.mk,v 1.1.1.1 2003/05/25 08:55:19 epg Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2003/05/29 09:37:08 jklos Exp $
 #
 
 .if !defined(APR_BUILDLINK2_MK)
 APR_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		apr
-BUILDLINK_DEPENDS.apr?=		apr>=0.9.1.2.0.45
+BUILDLINK_DEPENDS.apr?=		apr>=0.9.4.2.0.46
 BUILDLINK_PKGSRCDIR.apr?=	../../devel/apr
 
 EVAL_PREFIX+=			BUILDLINK_PREFIX.apr=apr
