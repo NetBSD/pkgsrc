@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2003/07/17 21:40:01 grant Exp $
+# $NetBSD: Makefile,v 1.22 2003/08/26 01:43:52 jschauma Exp $
 
 PKGNAME=		MesaLib-${MESA_VERSION}
 WRKSRC=			${WRKDIR}/${DISTNAME:S/Lib//}
@@ -19,23 +19,6 @@ BUILD_DIRS=		${WRKSRC}/src
 .if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "sparc64"
 CONFIGURE_ARGS+=	--disable-sparc
 .endif
-
-# XXX should be >= 3.4.2
-.if empty(MESA_REQD:M5.[0-9]*)
-
-# Check if we got Mesa distributed with XFree86 4.x.
-.if exists(${X11BASE}/include/GL/glx.h) && \
-    exists(${X11BASE}/lib/X11/config/X11.tmpl)
-_IS_BUILTIN_MESA!=	${EGREP} -c BuildGLXLibrary ${X11BASE}/lib/X11/config/X11.tmpl || ${TRUE}
-.else
-_IS_BUILTIN_MESA=	0
-.endif
-
-.if (${X11PREFIX} == ${X11BASE}) && (${_IS_BUILTIN_MESA} != "0")
-PKG_SKIP_REASON= "${PKGNAME} is part of your X11 distribution"
-.endif
-
-.endif  # MESA_REQD
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/include/GL

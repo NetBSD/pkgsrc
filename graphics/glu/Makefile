@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2003/07/17 21:40:58 grant Exp $
+# $NetBSD: Makefile,v 1.18 2003/08/26 01:43:49 jschauma Exp $
 
 PKGNAME=		${DISTNAME:C/MesaLib/glu/}
 WRKSRC=			${WRKDIR}/${DISTNAME:C/Lib//}
@@ -15,23 +15,6 @@ USE_X11BASE=		yes
 BUILD_DIRS=		${WRKSRC}/src-glu
 
 .include "../../mk/bsd.prefs.mk"
-
-# XXX should be >= 3.4.2
-.if empty(MESA_REQD:M5.[0-9]*)
-
-# Check if we got libGLU distributed with XFree86 4.x.
-.if exists(${X11BASE}/include/GL/glu.h) && \
-    exists(${X11BASE}/lib/X11/config/X11.tmpl)
-_IS_BUILTIN_GLU!=	${EGREP} -c BuildGLULibrary ${X11BASE}/lib/X11/config/X11.tmpl || ${TRUE}
-.else
-_IS_BUILTIN_GLU=	0
-.endif
-
-.if (${X11PREFIX} == ${X11BASE}) && (${_IS_BUILTIN_GLU} != "0")
-PKG_SKIP_REASON= "${PKGNAME} is part of your X11 distribution"
-.endif
-
-.endif  # MESA_REQD
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/include/GL
