@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2001/04/20 17:16:19 jtb Exp $
+SHA1 (patch-aa) = b36fa4900d8f27b1c9663172ccf95b8810f0afcc
 
 SHA1 (GMT3.4/GMT3.4_progs.tar.bz2) = b9fa8f60fe20ff9509ef3ebdf15fcc74e01d3f95
 Size (GMT3.4/GMT3.4_progs.tar.bz2) = 551406 bytes
@@ -24,7 +24,7 @@ SHA1 (patch-ae) = e543e7593b949e1476d9f8b8f85b65a892967fb1
 SHA1 (patch-af) = eac4b86614b6ffe88a3790b37b3f0b17f999947d
 SHA1 (patch-ag) = d78cf5b95dd18e4aa5aca68fd62a5793ec7d966f
 SHA1 (patch-ah) = 80fe4869af2c3c2eacf4f24dd9e6585153479f41
-SHA1 (patch-ai) = 039e4164425eed0a3ea03867cce3f55c0ee36d4a
+SHA1 (patch-ai) = e95feed7fde9fb7a5a98cd3c73d0d9d7c057af43
 SHA1 (patch-aj) = 1b4994e217756f1a6978e6b4bbc3e7e7b2a26351
 SHA1 (patch-ak) = 78a08380047c154cf11ad41d94619e05375b7a6d
 SHA1 (patch-al) = 21b50de82954941058ca8fc81337b013f67f878c
