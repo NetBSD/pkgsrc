@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2003/05/22 03:07:28 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2003/07/30 15:13:48 markd Exp $
 share/doc/kde/HTML/lt/khelpcenter/common
 share/doc/kde/HTML/lt/khelpcenter/contact.docbook
 share/doc/kde/HTML/lt/khelpcenter/help.docbook
@@ -153,6 +153,7 @@ share/kde/locale/lt/LC_MESSAGES/kdmgreet.mo
 share/kde/locale/lt/LC_MESSAGES/kedit.mo
 share/kde/locale/lt/LC_MESSAGES/keduca.mo
 share/kde/locale/lt/LC_MESSAGES/kfax.mo
+share/kde/locale/lt/LC_MESSAGES/kfifteenapplet.mo
 share/kde/locale/lt/LC_MESSAGES/kfile_avi.mo
 share/kde/locale/lt/LC_MESSAGES/kfile_deb.mo
 share/kde/locale/lt/LC_MESSAGES/kfile_font.mo
@@ -213,6 +214,7 @@ share/kde/locale/lt/LC_MESSAGES/knewsticker.mo
 share/kde/locale/lt/LC_MESSAGES/knode.mo
 share/kde/locale/lt/LC_MESSAGES/knotes.mo
 share/kde/locale/lt/LC_MESSAGES/knotify.mo
+share/kde/locale/lt/LC_MESSAGES/kodo.mo
 share/kde/locale/lt/LC_MESSAGES/kolourpicker.mo
 share/kde/locale/lt/LC_MESSAGES/kompare.mo
 share/kde/locale/lt/LC_MESSAGES/konqsidebar_mediaplayer.mo
@@ -255,11 +257,13 @@ share/kde/locale/lt/LC_MESSAGES/ktimemon.mo
 share/kde/locale/lt/LC_MESSAGES/ktimer.mo
 share/kde/locale/lt/LC_MESSAGES/ktip.mo
 share/kde/locale/lt/LC_MESSAGES/ktouch.mo
+share/kde/locale/lt/LC_MESSAGES/ktux.mo
 share/kde/locale/lt/LC_MESSAGES/kuick_plugin.mo
 share/kde/locale/lt/LC_MESSAGES/kuickshow.mo
 share/kde/locale/lt/LC_MESSAGES/kuser.mo
 share/kde/locale/lt/LC_MESSAGES/kview.mo
 share/kde/locale/lt/LC_MESSAGES/kviewshell.mo
+share/kde/locale/lt/LC_MESSAGES/kweather.mo
 share/kde/locale/lt/LC_MESSAGES/kwin.mo
 share/kde/locale/lt/LC_MESSAGES/kwin_b2_config.mo
 share/kde/locale/lt/LC_MESSAGES/kwin_default_config.mo

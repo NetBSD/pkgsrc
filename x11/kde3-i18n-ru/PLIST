@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2003/05/22 03:07:32 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2003/07/30 15:14:04 markd Exp $
 share/doc/kde/HTML/ru/KRegExpEditor/common
 share/doc/kde/HTML/ru/KRegExpEditor/index.cache.bz2
 share/doc/kde/HTML/ru/KRegExpEditor/index.docbook
@@ -255,6 +255,12 @@ share/doc/kde/HTML/ru/kodo/index.docbook
 share/doc/kde/HTML/ru/kolf/common
 share/doc/kde/HTML/ru/kolf/index.cache.bz2
 share/doc/kde/HTML/ru/kolf/index.docbook
+share/doc/kde/HTML/ru/konq-plugins/babel/common
+share/doc/kde/HTML/ru/konq-plugins/babel/index.cache.bz2
+share/doc/kde/HTML/ru/konq-plugins/babel/index.docbook
+share/doc/kde/HTML/ru/konq-plugins/crashes/common
+share/doc/kde/HTML/ru/konq-plugins/crashes/index.cache.bz2
+share/doc/kde/HTML/ru/konq-plugins/crashes/index.docbook
 share/doc/kde/HTML/ru/konqueror/basics.docbook
 share/doc/kde/HTML/ru/konqueror/bookmarks.docbook
 share/doc/kde/HTML/ru/konqueror/browser.docbook
@@ -790,6 +796,9 @@ share/kde/locale/ru/flag.png
 @dirrm share/doc/kde/HTML/ru/kpovmodeler
 @dirrm share/doc/kde/HTML/ru/kpager
 @dirrm share/doc/kde/HTML/ru/konqueror
+@dirrm share/doc/kde/HTML/ru/konq-plugins/crashes
+@dirrm share/doc/kde/HTML/ru/konq-plugins/babel
+@dirrm share/doc/kde/HTML/ru/konq-plugins
 @dirrm share/doc/kde/HTML/ru/kolf
 @dirrm share/doc/kde/HTML/ru/kodo
 @dirrm share/doc/kde/HTML/ru/kmix

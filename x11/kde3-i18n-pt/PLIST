@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/05/22 03:07:30 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/07/30 15:14:00 markd Exp $
 share/doc/kde/HTML/pt/amor/common
 share/doc/kde/HTML/pt/amor/index.cache.bz2
 share/doc/kde/HTML/pt/amor/index.docbook
@@ -481,6 +481,14 @@ share/doc/kde/HTML/pt/kwuftpd/index.docbook
 share/doc/kde/HTML/pt/kxconfig/common
 share/doc/kde/HTML/pt/kxconfig/index.cache.bz2
 share/doc/kde/HTML/pt/kxconfig/index.docbook
+share/doc/kde/HTML/pt/quanta/adv-quanta.docbook
+share/doc/kde/HTML/pt/quanta/debugging-quanta.docbook
+share/doc/kde/HTML/pt/quanta/extending-quanta.docbook
+share/doc/kde/HTML/pt/quanta/fundamentals.docbook
+share/doc/kde/HTML/pt/quanta/installation.docbook
+share/doc/kde/HTML/pt/quanta/introduction.docbook
+share/doc/kde/HTML/pt/quanta/quanta-menus.docbook
+share/doc/kde/HTML/pt/quanta/quanta-projects.docbook
 share/kde/apps/ktuberling/sounds/pt/bigode.wav
 share/kde/apps/ktuberling/sounds/pt/boca.wav
 share/kde/apps/ktuberling/sounds/pt/brincos.wav
@@ -732,6 +740,7 @@ share/kde/locale/pt/LC_MESSAGES/kinetd.mo
 share/kde/locale/pt/LC_MESSAGES/kio_audiocd.mo
 share/kde/locale/pt/LC_MESSAGES/kio_devices.mo
 share/kde/locale/pt/LC_MESSAGES/kio_finger.mo
+share/kde/locale/pt/LC_MESSAGES/kio_fish.mo
 share/kde/locale/pt/LC_MESSAGES/kio_floppy.mo
 share/kde/locale/pt/LC_MESSAGES/kio_imap4.mo
 share/kde/locale/pt/LC_MESSAGES/kio_lan.mo
@@ -931,6 +940,7 @@ share/kde/locale/pt/flag.png
 @comment dirrm share/kde/locale/pt
 @dirrm share/kde/apps/ktuberling/sounds/pt
 @comment dirrm share/kde/apps/ktuberling/sounds
+@dirrm share/doc/kde/HTML/pt/quanta
 @dirrm share/doc/kde/HTML/pt/kxconfig
 @dirrm share/doc/kde/HTML/pt/kwuftpd
 @dirrm share/doc/kde/HTML/pt/kwrite
@@ -1050,4 +1060,3 @@ share/kde/locale/pt/flag.png
 @comment dirrm share/doc/kde/HTML/pt/common
 @dirrm share/doc/kde/HTML/pt/amor
 @comment dirrm share/doc/kde/HTML/pt
-@comment dirrm share/doc/kde/HTML
