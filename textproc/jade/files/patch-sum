@@ -1,5 +1,0 @@
-$NetBSD: patch-sum,v 1.2 2001/03/29 01:02:59 hubertf Exp $
-
-SHA1 (patch-aa) = a7a500f614f752bf889df4005751fde8550443c0
-SHA1 (patch-ab) = 1742175ec89ea8e796b4e874a488225850cf78e1
-SHA1 (patch-ac) = c96ca44b40bbcc9c588dfe40045f4d386e32998d

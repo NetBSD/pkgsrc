@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:54:27 agc Exp $
+
+SHA1 (fvwm-2.2.5.tar.gz) = 2cb0c6dbd1a361987a301956315d9f3b9a68f78b
+SHA1 (patch-aa) = ac1eb7da79fcc06bedc20994beb6accea5f75b4e
+SHA1 (patch-ab) = a6f4e367cad784c8f126a9498795b0c88a71fcbb

@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:54:44 agc Exp $
+
+MD5 (libunicode-0.4.tar.gz) = d788ed7595a0250931f421068f4a0083
+SHA1 (patch-aa) = 29df09e0206e66ba9fb585db12887c0ff818dea1

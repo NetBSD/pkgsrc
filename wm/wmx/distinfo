@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:55:04 agc Exp $
+
+MD5 (wmx-5.tar.gz) = 1b8f1c4f527952c1ac84d72174363b3f
+SHA1 (patch-aa) = 1985cba1ccb8d24c05ccdc9cadfc04335d241b91
+SHA1 (patch-ab) = df34a077fdbad3e4459cf8957d0f558d06a8ef73
