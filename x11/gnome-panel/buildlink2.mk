@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.9 2004/01/03 18:49:56 reed Exp $
+# $NetBSD: buildlink2.mk,v 1.10 2004/02/16 12:37:58 jmmv Exp $
 #
 # This Makefile fragment is included by packages that use gnome-panel.
 #
@@ -14,13 +14,7 @@ BUILDLINK_PKGSRCDIR.gnome-panel?=		../../x11/gnome-panel
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.gnome-panel=gnome-panel
 BUILDLINK_PREFIX.gnome-panel_DEFAULT=	${LOCALBASE}
-BUILDLINK_FILES.gnome-panel+=	include/panel-2.0/GNOME_Panel.h
-BUILDLINK_FILES.gnome-panel+=	include/panel-2.0/panel-applet-gconf.h
-BUILDLINK_FILES.gnome-panel+=	include/panel-2.0/panel-applet.h
-BUILDLINK_FILES.gnome-panel+=	lib/bonobo/servers/GNOME_FishApplet_Factory.server
-BUILDLINK_FILES.gnome-panel+=	lib/bonobo/servers/GNOME_GenUtilApplet_Factory.server
-BUILDLINK_FILES.gnome-panel+=	lib/bonobo/servers/GNOME_NotificationAreaApplet.server
-BUILDLINK_FILES.gnome-panel+=	lib/bonobo/servers/GNOME_Panel.server
+BUILDLINK_FILES.gnome-panel+=	include/panel-2.0/*
 BUILDLINK_FILES.gnome-panel+=	lib/libgen_util_applet-2.*
 BUILDLINK_FILES.gnome-panel+=	lib/libpanel-applet-2.*
 
