@@ -1,4 +1,4 @@
-#	$NetBSD: cross.mk,v 1.14 2003/09/04 07:16:15 kent Exp $
+#	$NetBSD: cross.mk,v 1.15 2003/09/05 10:54:06 seb Exp $
 #	based on pkgsrc/cross/COMMON/cross.mk
 #	NetBSD: cross.mk,v 1.16 2000/11/09 13:04:55 wiz Exp 
 
@@ -61,6 +61,7 @@ GCC_INTVERSION=		2.95.2
 MASTER_SITES+=		${MASTER_SITE_GNU:=gcc/}
 GCC_LANGUAGES=		c # add to these below
 AUTOCONF_REQD=		2.13
+USE_MAKEINFO=		YES
 
 .if defined(GCC_CXX)
 CXX_CONFIGURE_ARGS+=	--with-gxx-include-dir=${TARGET_DIR}/include/c++
@@ -137,7 +138,7 @@ gcc-build:
 	${LN} -s ${AS_FOR_TARGET} ${WRKOBJ}/gcc/as
 	${LN} -s ${LD_FOR_TARGET} ${WRKOBJ}/gcc/ld
 	@cd ${WRKOBJ} && make all-libiberty all-binutils all-gas all-ld
-	@cd ${WRKOBJ}/gcc && ${GCC_MAKE} native gcc-cross specs stmp-headers stmp-fixproto libgcc.a libgcc1-test lang.all.cross # all.cross except doc
+	@cd ${WRKOBJ}/gcc && ${GCC_MAKE} all
 .if defined(GCC_CXX) && defined(GCC_CXX_RUNTIME)
 	@cd ${WRKOBJ} && ${GCC_MAKE} configure-target-libio \
 		configure-target-libstdc++ all-target-libio all-target-libstdc++
