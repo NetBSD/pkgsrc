@@ -1,4 +1,4 @@
-# $NetBSD: defs.UnixWare.mk,v 1.1 2004/04/12 15:15:33 heinz Exp $
+# $NetBSD: defs.UnixWare.mk,v 1.2 2004/04/19 20:19:46 jmmv Exp $
 #
 # Variable definitions for the UnixWare 7 operating system.
 
@@ -151,3 +151,11 @@ _STRIPFLAG_INSTALL?=		# install(1) option to strip
 LOCALBASE?=		${DESTDIR}/usr/pkg
 
 PKG_TOOLS_BIN?=		${LOCALBASE}/sbin
+
+# check for maximum command line length and set it in configure's environment,
+# to avoid a test required by the libtool script that takes forever.
+# FIXME: Adjust to work on this system and enable the lines below.
+#.if defined(GNU_CONFIGURE) && defined(USE_LIBTOOL)
+#_OPSYS_MAX_CMDLEN!=	/sbin/sysctl -n kern.argmax
+#CONFIGURE_ENV+=		lt_cv_sys_max_cmd_len=${_OPSYS_MAX_CMDLEN}
+#.endif
