@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/04/29 16:01:16 jtb Exp $
+# $NetBSD: Makefile,v 1.8 2001/05/03 22:16:50 jtb Exp $
 
 DISTNAME=		pl-lite-4.0.4
 PKGNAME=		swi-prolog-4.0.4
@@ -23,6 +23,7 @@ SWIPL=			swi-prolog
 CONFIGURE_ENV+=		PL="${SWIPL}"
 CPPFLAGS+=		-D__unix__=1
 
+READLINE_PREFIX_DEFAULT=${LOCALBASE}
 EVAL_PREFIX+=		READLINE_PREFIX=readline
 CPPFLAGS+=		-I${READLINE_PREFIX}/include
 CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
