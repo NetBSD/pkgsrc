@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2002/10/02 21:13:11 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2004/02/22 16:40:50 christos Exp $
 #
 
 DISTNAME=	netsaint-plugins-1.2.9-4
 PKGNAME=	netsaint-plugin-snmp-1.2.9.4
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=netsaintplug/}
 
@@ -12,7 +12,7 @@ HOMEPAGE=	http://netsaintplug.sourceforge.net/
 COMMENT=	SNMP monitoring plug-in for netsaint
 
 DEPENDS+=	netsaint-base-[0-9]*:../../net/netsaint-base
-DEPENDS+=	ucd-snmp-4.2.4*:../../net/ucd-snmp
+DEPENDS+=	net-snmp-5.0.9*:../../net/net-snmp
 
 .include "../../net/netsaint-base/Makefile.common"
 
