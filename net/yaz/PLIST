@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/05/16 12:17:26 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/01/28 05:04:26 grant Exp $
 bin/yaz-client
 bin/yaz-comp
 bin/yaz-config
@@ -73,12 +73,17 @@ lib/libyaz.a
 lib/libyaz.la
 lib/libyaz.so
 lib/libyaz.so.2
-lib/libyaz.so.${PKGVERSION}
+lib/libyaz.so.2.0
 lib/libyazmalloc.a
 lib/libyazmalloc.la
 lib/libyazmalloc.so
 lib/libyazmalloc.so.2
-lib/libyazmalloc.so.${PKGVERSION}
+lib/libyazmalloc.so.2.0
+${YAZTHREAD}lib/libyazthread.a
+${YAZTHREAD}lib/libyazthread.la
+${YAZTHREAD}lib/libyazthread.so
+${YAZTHREAD}lib/libyazthread.so.2
+${YAZTHREAD}lib/libyazthread.so.2.0
 man/man1/yaz-client-ssl.1
 man/man1/yaz-client.1
 man/man1/yaz-config.1
