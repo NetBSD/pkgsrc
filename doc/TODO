@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2968 2005/01/27 15:49:53 adam Exp $
+$NetBSD: TODO,v 1.2969 2005/01/27 16:23:34 adam Exp $
 
 Suggested new packages
 ======================
@@ -554,7 +554,6 @@ Suggested package updates
 	o httptunnel-3.3
 	o hugs-200311
 	o hydrogen-0.9.0
-	o hylafax-4.2.1
 	o i2ocfg-1.1
 	o icdprog-0.5
 	o icepref-2.3
