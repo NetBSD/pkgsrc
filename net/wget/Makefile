@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2004/03/26 02:27:50 wiz Exp $
+# $NetBSD: Makefile,v 1.73 2004/04/18 07:16:32 snj Exp $
 
 DISTNAME=	wget-1.9.1
 PKGREVISION=	1
@@ -12,7 +12,7 @@ COMMENT=	Retrieve files from the 'net via HTTP and FTP
 BUILD_USES_MSGFMT=	YES
 
 USE_PERL5=		build
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
 
 GNU_CONFIGURE=		YES
@@ -36,11 +36,11 @@ INFO_FILES=		wget.info
 
 BUILD_DEFS+=		WGET_USE_SSL
 .if !empty(WGET_USE_SSL:M[Yy][Ee][Ss])
-.include "../../security/openssl/buildlink2.mk"
+.include "../../security/openssl/buildlink3.mk"
 CONFIGURE_ARGS+=--with-ssl=${SSLBASE}
 .else
 CONFIGURE_ARGS+=--without-ssl
 .endif
 
-.include "../../devel/gettext-lib/buildlink2.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

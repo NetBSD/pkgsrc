@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/01/26 15:19:52 jmmv Exp $
+# $NetBSD: Makefile,v 1.2 2004/04/18 07:07:06 snj Exp $
 
 DISTNAME=	xanim2801
 PKGNAME=	xanim-2.80.1
@@ -22,7 +22,7 @@ EXTRACT_ONLY=   ${DISTNAME}${EXTRACT_SUFX}
 
 .include "Makefile.codecs"
 
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 USE_X11BASE=	YES
 USE_IMAKE=	YES
 
@@ -51,5 +51,5 @@ post-extract:
 	done
 .endif
 
-.include "../../mk/ossaudio.buildlink2.mk"
+.include "../../mk/ossaudio.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
