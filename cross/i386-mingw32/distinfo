@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2002/01/22 12:16:20 kent Exp $
+$NetBSD: distinfo,v 1.2 2003/11/05 23:03:54 seb Exp $
 
 SHA1 (binutils-2.11.92-20011113-src.tar.gz) = 3286f3f239fa3e3565225ca6d3a875dbecfbc542
 Size (binutils-2.11.92-20011113-src.tar.gz) = 10310634 bytes
@@ -8,3 +8,4 @@ SHA1 (mingw-runtime-1.2-src.tar.gz) = 6a1b3937ce2f85e37d8ce5e3b0a411b884d9521d
 Size (mingw-runtime-1.2-src.tar.gz) = 136354 bytes
 SHA1 (w32api-1.2-src.tar.gz) = 4862ee2372ea962651a315eba836c2e04cd1fa4c
 Size (w32api-1.2-src.tar.gz) = 493336 bytes
+SHA1 (patch-aa) = 37937b1b8de5eb8c2de3835b4296538bd253796b
