@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1122 2003/01/14 09:18:17 jlam Exp $
+$NetBSD: CHANGES,v 1.1123 2003/01/14 12:02:15 wennmach Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -262,3 +262,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated gtkglext to 0.6.1 [rh 2003-01-14]
 	Updated coconut to 0.3.0nb2 [rh 2003-01-14]
 	Added Xrender-0.7 [jlam 2003-01-14]
+	Updated arla to 0.35.12pre1 [wennmach 2003-01-14]
