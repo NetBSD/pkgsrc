@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2000/12/28 15:46:26 tron Exp $
+# $NetBSD: Makefile,v 1.62 2001/01/03 16:01:44 hubertf Exp $
 
 DISTNAME=		gimp-1.2.0
 CATEGORIES=		graphics
@@ -21,9 +21,6 @@ DEPENDS+=		tiff-*:../../graphics/tiff
 
 GIMP_DATA=		gimp-data-extras-1.2.0
 
-.ifndef DISPLAY
-IS_INTERACTIVE=		YES
-.endif
 USE_X11BASE=		yes
 USE_XPM=		yes
 USE_GMAKE=		yes
@@ -51,10 +48,6 @@ LDFLAGS+=		-Wl,-E
 .endif
 
 pre-build:
-	@if [ "$$DISPLAY" = "" ]; then \
-		${ECHO} "${DISTNAME} can only be built under X11."; \
-		exit 1; \
-	fi
 	${LINK.c} -o ${WRKSRC}/docs/pdb_self_doc ${FILESDIR}/pdb_self_doc.c
 
 post-install:
