@@ -1,12 +1,16 @@
 LIB 	= fftpack
 
 LIBDIR	= ${PREFIX}/lib
-FORTRAN = %%FORTRAN%%
-FOPTS	= -O3
 
-all:	lib$(LIB)
+.if $(FC)=="f77" || $(FC)=="g77"
+FOPTS=-funroll-loops -O2
+.else
+FOPTS=-O2
+.endif
 
-OBJ =	cfftb.o cosqf1.o passb2.o radb2.o radfg.o		\
+all:	lib$(LIB).la
+
+OBJS =	cfftb.o cosqf1.o passb2.o radb2.o radfg.o		\
 	sinqi.o cfftb1.o cosqi.o passb3.o radb3.o rfftb.o	\
 	sint.o cfftf.o cost.o passb4.o radb4.o rfftb1.o		\
 	sint1.o cfftf1.o costi.o passb5.o radb5.o rfftf.o	\
@@ -16,15 +20,15 @@ OBJ =	cfftb.o cosqf1.o passb2.o radb2.o radfg.o		\
 	ezffti.o passf4.o radf4.o sinqb.o cosqf.o passb.o	\
 	passf5.o radf5.o sinqf.o
 
-lib$(LIB):	$(OBJ)
-	@$(LIBTOOL) --mode=link $(FORTRAN) $(FFLAGS) $(FOPTS) \
-	-O -o lib$(LIB).la $(OBJ:.o=.lo) --version-info 0:0 -rpath $(LIBDIR)
+lib$(LIB).la:	$(OBJS)
+	$(LIBTOOL) --mode=link $(FC) $(FFLAGS) $(FOPTS) \
+	-o $@ $(OBJS:.o=.lo)  -rpath $(LIBDIR) --version-info 0:0
 
 .f.o:
-	@$(LIBTOOL) --mode=compile $(FORTRAN) $(FFLAGS) $(FOPTS) -c $<
+	$(LIBTOOL) --mode=compile $(FC) $(FFLAGS) $(FOPTS) -c $<
 
-install:	lib$(LIB)
-	@$(LIBTOOL) --mode=install install -c lib$(LIB).la $(LIBDIR)
+install:	lib$(LIB).la
+	$(LIBTOOL) --mode=install $(BSD_INSTALL_DATA) $? $(LIBDIR)
 
 clean:
 	rm -rf *.o *.lo .libs lib$(LIB).la
