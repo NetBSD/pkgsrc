@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1999/04/14 15:38:15 tsarna Exp $
+# $NetBSD: Makefile,v 1.8 1999/07/06 07:59:38 jlam Exp $
 #
 
 DISTNAME=	cursesmodule-1.5b1
@@ -10,7 +10,7 @@ MAINTAINER=	tsarna@netbsd.org
 HOMEPAGE=	http://starship.skyport.net/crew/amk/howto/curses/curses.html
 
 DEPENDS+=	python-1.5.2:../../lang/python
-DEPENDS+=       ncurses-1.9.9g:../../devel/ncurses
+DEPENDS+=       ncurses-4.2:../../devel/ncurses
 
 WRKSRC=		${WRKDIR}/cursesmodule
 ALL_TARGET=	default

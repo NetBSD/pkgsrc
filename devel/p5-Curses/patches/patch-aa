@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.3 1998/08/07 10:40:27 agc Exp $
+$NetBSD: patch-aa,v 1.4 1999/07/06 07:59:20 jlam Exp $
 
 --- Makefile.PL.orig	Mon Feb 16 17:50:19 1998
-+++ Makefile.PL	Mon Jul 13 12:17:51 1998
++++ Makefile.PL	Tue Jul  6 03:30:58 1999
 @@ -76,7 +76,7 @@
      'ncurses' => [ '-I/usr/include/ncurses' => '-lncurses' ],
      'default' => 'ncurses'
    },
 -  'netbsd'    => [ ''                       => '-lcurses -ltermcap' ],
-+  'netbsd'    => [ "-I$ENV{'PREFIX'}/include" => "-L$ENV{'PREFIX'}/lib -lncurses" ],
++  'netbsd'    => [ "-I$ENV{'LOCALBASE'}/include" => "$ENV{'LDFLAGS'} -L$ENV{'LOCALBASE'}/lib -lncurses" ],
    'next'      => [ ''                       => '-lcurses -ltermcap' ],
    'os2'       =>
    { 'bsd'     => [ ''                       => '-lcurses -ltermcap' ],
