@@ -1,3 +1,5 @@
+$NetBSD: patch-al,v 1.2 2000/02/08 14:53:46 wiz Exp $
+
 --- QW/server/asm_i386.h.orig	Tue Feb  8 11:39:20 2000
 +++ QW/server/asm_i386.h	Tue Feb  8 11:39:37 2000
 @@ -21,7 +21,7 @@ Foundation, Inc., 59 Temple Place - Suit
