@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1998/04/20 11:56:30 frueauf Exp $
+# $NetBSD: Makefile,v 1.6 1998/04/24 09:20:36 agc Exp $
 # FreeBSD Id: Makefile,v 1.13 1997/06/27 18:38:15 jfitz Exp
 #
 
@@ -10,7 +10,7 @@ MASTER_SITE_SUBDIR=	Net
 
 MAINTAINER=		packages@netbsd.org
 
-BUILD_DEPENDS= 		${PREFIX}/lib/perl5/site_perl/Data/Dumper.pm:${PORTSDIR}/devel/p5-Data-Dumper
+BUILD_DEPENDS= 		${PREFIX}/lib/perl5/site_perl/Data/Dumper.pm:../../devel/p5-Data-Dumper
 
 USE_PERL5=		YES
 

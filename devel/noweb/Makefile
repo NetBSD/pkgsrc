@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1998/04/20 11:56:22 frueauf Exp $
+# $NetBSD: Makefile,v 1.8 1998/04/24 09:20:34 agc Exp $
 # FreeBSD Id: Makefile,v 1.10 1997/09/15 07:22:06 tg Exp
 #
 
@@ -10,8 +10,8 @@ ONLY_FOR_ARCHS=	i386
 
 MAINTAINER=	packages@netbsd.org
 
-BUILD_DEPENDS=	icont:${PORTSDIR}/lang/icon
-RUN_DEPENDS=	iconx:${PORTSDIR}/lang/icon
+BUILD_DEPENDS=	icont:../../lang/icon
+RUN_DEPENDS=	iconx:../../lang/icon
 
 WRKSRC=		${WRKDIR}/src
 MAN1=		cpif.1 nodefs.1 noroots.1 noweb.1 noindex.1 \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 1998/04/15 10:38:37 agc Exp $
+# $NetBSD: Makefile,v 1.10 1998/04/24 09:20:36 agc Exp $
 #
 
 DISTNAME=	rpm-2.4.12
@@ -8,7 +8,7 @@ MASTER_SITES=	ftp://ftp.redhat.com/pub/redhat/code/rpm/ \
 
 MAINTAINER=	mycroft@NetBSD.ORG
 
-BUILD_DEPENDS=	${PREFIX}/lib/libgdbm.a:${PORTSDIR}/databases/gdbm
+BUILD_DEPENDS=	${PREFIX}/lib/libgdbm.a:../../databases/gdbm
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=${MACHINE_ARCH}--netbsd

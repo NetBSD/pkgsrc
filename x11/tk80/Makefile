@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 1998/04/22 14:22:50 agc Exp $
+# $NetBSD: Makefile,v 1.15 1998/04/24 09:20:39 agc Exp $
 # FreeBSD Id: Makefile,v 1.4 1997/10/01 09:20:31 tg Exp
 #
 
@@ -14,7 +14,7 @@ DEPENDS+=	tcl-8.0p2:../../lang/tcl80
 WRKSRC=		${WRKDIR}/tk8.0/unix
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--enable-shared
-CONFIGURE_ENV+=  PORTSDIR=${PORTSDIR}
+CONFIGURE_ENV+=  PORTSDIR=${.CURDIR}/../../../../..
 
 MAN1=		wish.1
 MAN3=		3DBorder.3 BindTable.3 CanvPsY.3 CanvTkwin.3 \
