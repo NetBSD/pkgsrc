@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1 2003/09/25 12:06:05 tron Exp $
+
+--- configure.orig	1999-11-29 21:54:36.000000000 +0100
++++ configure	2003-09-25 14:04:54.000000000 +0200
+@@ -884,7 +884,6 @@
+     echo "$ac_t""Turning on gcc compiler warnings." 1>&6
+     CC="$CC -Wall -Wstrict-prototypes -Wnested-externs -Wno-format"
+     echo "$ac_t""Disabling C++ comments in ANSI C code." 1>&6
+-    CC="$CC -Wp,-lang-c89"
+   else
+     case "$host" in
+       *-irix5* |*-irix6.0-3* )
