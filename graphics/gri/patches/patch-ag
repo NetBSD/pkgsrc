@@ -1,31 +1,13 @@
-$NetBSD: patch-ag,v 1.1 2002/10/02 21:38:02 dillo Exp $
+$NetBSD: patch-ag,v 1.2 2003/07/10 08:27:39 jtb Exp $
 
---- configure.orig	Wed Oct  2 23:34:47 2002
+--- configure.orig
 +++ configure
-@@ -1455,66 +1453,58 @@ done
+@@ -3696,66 +3696,75 @@
  
  
  
--echo $ac_n "checking for netcdf library""... $ac_c" 1>&6
--echo "configure:1460: checking for netcdf library" >&5
-+echo $ac_n "checking for ncvarid in -lnetcdf""... $ac_c" 1>&6
-+echo "configure:1458: checking for ncvarid in -lnetcdf" >&5
-+ac_lib_var=`echo netcdf'_'ncvarid | sed 'y%./+-%__p_%'`
-+if eval "test \"`echo '$''{'ac_cv_lib_$ac_lib_var'+set}'`\" = set"; then
-+  echo $ac_n "(cached) $ac_c" 1>&6
-+else
-+  ac_save_LIBS="$LIBS"
-+LIBS="-lnetcdf  $LIBS"
-+cat > conftest.$ac_ext <<EOF
-+#line 1466 "configure"
-+#include "confdefs.h"
-+/* Override any gcc2 internal prototype to avoid an error.  */
-+#ifdef __cplusplus
-+extern "C"
-+#endif
-+/* We use char because int might match the return type of a gcc2
-+    builtin and then its argument prototype would still apply.  */
-+char ncvarid();
+-echo "$as_me:$LINENO: checking for netcdf library" >&5
+-echo $ECHO_N "checking for netcdf library... $ECHO_C" >&6
  
 -    if test -d /opt/netcdf/include ; then
 -	#
@@ -35,23 +17,22 @@ $NetBSD: patch-ag,v 1.1 2002/10/02 21:38:02 dillo Exp $
 -	if test $gri_cv_is_sun = yes ; then
 -	    LIBS="$LIBS -lnsl"
 -	fi
--	cat >> confdefs.h <<\EOF
+-	cat >>confdefs.h <<\_ACEOF
 -#define HAVE_LIBNETCDF 1
-+int main() {
-+ncvarid()
-+; return 0; }
- EOF
-+if { (eval echo configure:1480: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
-+  rm -rf conftest*
-+  eval "ac_cv_lib_$ac_lib_var=yes"
++echo "$as_me:$LINENO: checking for nc_open in -lnetcdf" >&5
++echo $ECHO_N "checking for nc_open in -lnetcdf... $ECHO_C" >&6
++if test "${ac_cv_lib_netcdf_nc_open+set}" = set; then
++  echo $ECHO_N "(cached) $ECHO_C" >&6
 +else
-+  echo "configure: failed program was:" >&5
-+  cat conftest.$ac_ext >&5
-+  rm -rf conftest*
-+  eval "ac_cv_lib_$ac_lib_var=no"
-+fi
-+rm -f conftest*
-+LIBS="$ac_save_LIBS"
++  ac_check_lib_save_LIBS=$LIBS
++LIBS="-lnetcdf  $LIBS"
++cat >conftest.$ac_ext <<_ACEOF
++#line $LINENO "configure"
++/* confdefs.h.  */
+ _ACEOF
++cat confdefs.h >>conftest.$ac_ext
++cat >>conftest.$ac_ext <<_ACEOF
++/* end confdefs.h.  */
  
 -        echo "yes (in /opt/netcdf/include/netcdf.h and /opt/netcdf/lib/libnetcdf.a)"
 -    else
@@ -61,17 +42,39 @@ $NetBSD: patch-ag,v 1.1 2002/10/02 21:38:02 dillo Exp $
 -            if test $gri_cv_is_sun = yes ; then
 -		LIBS="$LIBS -lnsl"
 -	    fi
--	    cat >> confdefs.h <<\EOF
+-	    cat >>confdefs.h <<\_ACEOF
 -#define HAVE_LIBNETCDF 1
--EOF
-+fi
-+if eval "test \"`echo '$ac_cv_lib_'$ac_lib_var`\" = yes"; then
-+  echo "$ac_t""yes" 1>&6
-+  HAVE_LIBNETCDF="YES"
++/* Override any gcc2 internal prototype to avoid an error.  */
++#ifdef __cplusplus
++extern "C"
++#endif
++/* We use char because int might match the return type of a gcc2
++   builtin and then its argument prototype would still apply.  */
++char nc_open ();
++int
++main ()
++{
++nc_open ();
++  ;
++  return 0;
++}
+ _ACEOF
++rm -f conftest.$ac_objext conftest$ac_exeext
++if { (eval echo "$as_me:$LINENO: \"$ac_link\"") >&5
++  (eval $ac_link) 2>&5
++  ac_status=$?
++  echo "$as_me:$LINENO: \$? = $ac_status" >&5
++  (exit $ac_status); } &&
++         { ac_try='test -s conftest$ac_exeext'
++  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
++  (eval $ac_try) 2>&5
++  ac_status=$?
++  echo "$as_me:$LINENO: \$? = $ac_status" >&5
++  (exit $ac_status); }; }; then
++  ac_cv_lib_netcdf_nc_open=yes
 +else
-+  echo "$ac_t""no" 1>&6
-+HAVE_LIBNETCDF=""
-+fi
++  echo "$as_me: failed program was:" >&5
++sed 's/^/| /' conftest.$ac_ext >&5
  
 -            echo "yes (in /usr/local/include/netcdf.h and /usr/local/lib/libnetcdf.a)"
 -	else
@@ -83,9 +86,21 @@ $NetBSD: patch-ag,v 1.1 2002/10/02 21:38:02 dillo Exp $
 -                if test $gri_cv_is_sun = yes ; then
 -                    LIBS="$LIBS -lnsl"
 -                fi
--                cat >> confdefs.h <<\EOF
+-                cat >>confdefs.h <<\_ACEOF
 -#define HAVE_LIBNETCDF 1
--EOF
+-_ACEOF
++ac_cv_lib_netcdf_nc_open=no
++fi
++rm -f conftest.$ac_objext conftest$ac_exeext conftest.$ac_ext
++LIBS=$ac_check_lib_save_LIBS
++fi
++echo "$as_me:$LINENO: result: $ac_cv_lib_netcdf_nc_open" >&5
++echo "${ECHO_T}$ac_cv_lib_netcdf_nc_open" >&6
++if test $ac_cv_lib_netcdf_nc_open = yes; then
++  HAVE_LIBNETCDF="YES"
++else
++  HAVE_LIBNETCDF=""
++fi
  
 -                echo "yes (in /usr/include/netcdf.h and /usr/lib/libnetcdf.a)"
 -            else
@@ -96,21 +111,20 @@ $NetBSD: patch-ag,v 1.1 2002/10/02 21:38:02 dillo Exp $
 -			LIBS="$LIBS -lnsl"
 -		    fi
 -                    echo "yes (in /boot/home/netcdf)"
--		    cat >> confdefs.h <<\EOF
++
 +if test -n "$HAVE_LIBNETCDF" ; then
-+    cat >> confdefs.h <<\EOF
+ 		    cat >>confdefs.h <<\_ACEOF
  #define HAVE_LIBNETCDF 1
- EOF
--
+ _ACEOF
+ 
 -		else
 -	            echo "no"
 -		fi
 -            fi
 -        fi
 -    fi
-+ 
 +   LIBS="-lnetcdf $LIBS"
 +fi
  
  
- echo $ac_n "checking for sin in -lm""... $ac_c" 1>&6
+ 
