@@ -1,0 +1,12 @@
+$NetBSD: patch-ad,v 1.1 2001/08/30 22:56:05 elric Exp $
+
+--- src/main.cc.orig	Wed Oct  4 12:07:09 2000
++++ src/main.cc	Fri May 18 19:43:20 2001
+@@ -211,6 +211,7 @@
+ 	    {
+ 	      SysPacket_Packet* pck = audio_extractor.GetNextPacket();
+ 	      fwrite(pck->data.AskContents(),pck->data.AskLength(),1,stdout);
++	      fflush(stdout);
+ 	      delete pck;
+ 	    }
+ 
