@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1998/06/03 12:50:16 agc Exp $
+# $NetBSD: Makefile,v 1.4 1998/06/05 10:59:57 frueauf Exp $
 # Id: Makefile,v 1.5 1998/02/19 09:43:16 obrien Exp
 #
 
@@ -21,18 +21,18 @@ MAN1=		ddd.1
 
 post-patch:
 	@case ${PAPERSIZE} in					\
-	A4)	echo "Using A4 paper size" ;;			\
-	Letter*)	echo "Using US Letter paper size";	\
+	A4)	${ECHO} "Using A4 paper size" ;;			\
+	Letter*)	${ECHO} "Using US Letter paper size";	\
 		${MV} ${WRKSRC}/ddd/Ddd.in ${WRKSRC}/ddd/Ddd.in.orig; \
 		${SED} -e 's|@Ddd@\*paperSize: 210mm x 297mm|@Ddd@*paperSize: 8.5" x 11"|' \
 			< ${WRKSRC}/ddd/Ddd.in.orig 		\
 			> ${WRKSRC}/ddd/Ddd.in ;;		\
-	"")	echo "PAPERSIZE not set - defaulting to A4" ;;	\
-	*)	echo "Bad PAPERSIZE - $$PAPERSIZE - defaulting to A4" ;; \
-	esac;							
+	"")	${ECHO} "PAPERSIZE not set - defaulting to A4" ;;	\
+	*)	${ECHO} "Bad PAPERSIZE - $$PAPERSIZE - defaulting to A4" ;; \
+	esac;
 
 post-configure:
-	echo "LIBXM = ${MOTIFLIB}" >> ${WRKSRC}/ddd/Makefile
+	${ECHO} "LIBXM = ${MOTIFLIB}" >> ${WRKSRC}/ddd/Makefile
 
 post-install:
 .if !defined(NOPORTDOCS)
