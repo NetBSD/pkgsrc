@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1869 2003/04/08 11:00:19 martti Exp $
+$NetBSD: CHANGES,v 1.1870 2003/04/08 13:39:32 manu Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1461,6 +1461,7 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated py-Numeric to 23.0 [drochner 2003-04-03]
 	Updated mrstat to 1.16 [abs 2003-04-03]
 	Updated cvsync-0.19.0 [gehenna 2003-04-03]
+	Added spamass-milter-0.1.3a [manu 2003-04-04]
 	Updated mrstat to 1.17 [abs 2003-04-04]
 	Added wol-0.6.0 [zuntum 2003-04-04]
 	Updated createbuildlink to 2.5 [rh 2003-04-04]
