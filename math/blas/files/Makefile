@@ -1,8 +1,10 @@
+.SUFFIXES: .so
+
 LIB	= blas
 
 LIBDIR	= ${PREFIX}/lib
 
-all:	lib$(LIB).a
+all:	lib$(LIB).a lib$(LIB)_pic.a
 
 OBJS = caxpy.o ccopy.o cdotc.o cdotu.o cgbmv.o cgemm.o cgemv.o cgerc.o	\
        cgeru.o chbmv.o chemm.o chemv.o cher.o cher2.o cher2k.o cherk.o	\
@@ -25,12 +27,40 @@ OBJS = caxpy.o ccopy.o cdotc.o cdotu.o cgbmv.o cgemm.o cgemv.o cgerc.o	\
        zsymm.o zsyr2k.o zsyrk.o ztbmv.o ztbsv.o ztpmv.o ztpsv.o		\
        ztrmm.o ztrmv.o ztrsm.o ztrsv.o
 
+PIC_OBJS = caxpy.so ccopy.so cdotc.so cdotu.so cgbmv.so cgemm.so cgemv.so cgerc.so \
+       cgeru.so chbmv.so chemm.so chemv.so cher.so cher2.so cher2k.so cherk.so	\
+       chpmv.so chpr.so chpr2.so crotg.so cscal.so csrot.so csscal.so cswap.so	\
+       csymm.so csyr2k.so csyrk.so ctbmv.so ctbsv.so ctpmv.so ctpsv.so		\
+       ctrmm.so ctrmv.so ctrsm.so ctrsv.so dasum.so daxpy.so dcabs1.so		\
+       dcopy.so ddot.so dgbmv.so dgemm.so dgemv.so dger.so dnrm2.so drot.so	\
+       drotg.so drotm.so drotmg.so dsbmv.so dscal.so dsdot.so dspmv.so dspr.so	\
+       dspr2.so dswap.so dsymm.so dsymv.so dsyr.so dsyr2.so dsyr2k.so dsyrk.so	\
+       dtbmv.so dtbsv.so dtpmv.so dtpsv.so dtrmm.so dtrmv.so dtrsm.so dtrsv.so	\
+       dzasum.so dznrm2.so icamax.so idamax.so isamax.so izamax.so lsame.so	\
+       sasum.so saxpy.so scasum.so scnrm2.so scopy.so sdot.so sdsdot.so	\
+       sgbmv.so sgemm.so sgemv.so sger.so snrm2.so srot.so srotg.so srotm.so	\
+       srotmg.so ssbmv.so sscal.so sspmv.so sspr.so sspr2.so sswap.so ssymm.so	\
+       ssymv.so ssyr.so ssyr2.so ssyr2k.so ssyrk.so stbmv.so stbsv.so stpmv.so	\
+       stpsv.so strmm.so strmv.so strsm.so strsv.so xerbla.so zaxpy.so		\
+       zcopy.so zdotc.so zdotu.so zdrot.so zdscal.so zgbmv.so zgemm.so		\
+       zgemv.so zgerc.so zgeru.so zhbmv.so zhemm.so zhemv.so zher.so zher2.so	\
+       zher2k.so zherk.so zhpmv.so zhpr.so zhpr2.so zrotg.so zscal.so zswap.so	\
+       zsymm.so zsyr2k.so zsyrk.so ztbmv.so ztbsv.so ztpmv.so ztpsv.so		\
+       ztrmm.so ztrmv.so ztrsm.so ztrsv.so
+
 lib$(LIB).a: 	$(OBJS)
 	$(AR) cru $@ $?
 	$(RANLIB) $@
 
-install: 	lib$(LIB).a
+lib$(LIB)_pic.a:	$(PIC_OBJS)
+	$(AR) cru $@ $?
+	$(RANLIB) $@
+
+install: 	lib$(LIB).a lib$(LIB)_pic.a
 	$(BSD_INSTALL_DATA) $? $(LIBDIR)
 
 clean:
 	rm -f *.o lib$(LIB).a
+
+.f.so:
+	${COMPILE.f} -fPIC -o $@ $<
