@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/12/31 13:28:36 cube Exp $
+
+SHA1 (newsx-1.6.tar.gz) = e128e89ba161ceb4ab6d652d8c132ae3a33fbb20
+Size (newsx-1.6.tar.gz) = 302821 bytes
+SHA1 (patch-aa) = 3928dcda9f7c1686a598dd38e141c96373280aa5
