@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.19 1999/05/05 16:54:04 bad Exp $
+# $NetBSD: Makefile,v 1.20 1999/05/12 23:31:04 tv Exp $
 #
 
 DISTNAME=	rsync-2.3.1
 CATEGORIES=	net
-MASTER_SITES=	ftp://rsync.samba.org/pub/rsync/old-versions/ \
+MASTER_SITES=	ftp://rsync.samba.org/pub/rsync/ \
 		ftp://sunsite.auc.dk/pub/unix/rsync/  \
 		ftp://ftp0.sunet.se/pub/unix/admin/rsync/  \
 		ftp://ftp.fu-berlin.de/pub/unix/network/rsync/
