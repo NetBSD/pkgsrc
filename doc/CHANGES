@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8627 2005/01/06 10:40:12 adam Exp $
+$NetBSD: CHANGES,v 1.8628 2005/01/06 11:11:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -120,3 +120,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated cpuflags to 0.80 [abs 2005-01-05]
 	Updated cups to 1.1.23 [jlam 2005-01-06]
 	Updated doxygen to 1.4.0 [adam 2005-01-06]
+	Updated openldap to 2.2.20 [adam 2005-01-06]
