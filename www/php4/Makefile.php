@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.php,v 1.8 2003/08/31 19:56:05 jdolecek Exp $
+# $NetBSD: Makefile.php,v 1.9 2003/09/05 19:39:52 jdolecek Exp $
 
 .include "../../www/php4/Makefile.common"
 
@@ -32,9 +32,8 @@ CONFIGURE_ARGS+=	--enable-track-vars
 #
 #	http://www.php.net/manual/en/install.configure.php
 #
-# Note that this is generally not needed as many of the extensions (session,
-# mysql, pgsql, pcre) may be dynamically loaded, and are separately packaged
-# in pkgsrc.
+# Note that this is generally not needed as many of the extensions (mysql,
+# pgsql) may be dynamically loaded, and are separately packaged in pkgsrc.
 #
 PHP4_CONFIGURE_ARGS?=	# empty
 CONFIGURE_ARGS+=	${PHP4_CONFIGURE_ARGS}
