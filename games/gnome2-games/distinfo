@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2004/10/11 09:01:21 jmmv Exp $
+$NetBSD: distinfo,v 1.11 2004/12/04 22:40:04 jmmv Exp $
 
-SHA1 (gnome-games-2.8.1.tar.bz2) = da23da5fa21efd9cd384403dac2689629adef53f
-Size (gnome-games-2.8.1.tar.bz2) = 5926555 bytes
+SHA1 (gnome-games-2.8.2.tar.bz2) = c7331ea02ddaee7cb2596782880caaa8508daf2f
+Size (gnome-games-2.8.2.tar.bz2) = 5925337 bytes
 SHA1 (patch-aa) = e74547a19267b1a39528d9556d115fff4f7cd21d
 SHA1 (patch-ac) = e54f3fecee226f78edf17dc686c6bde2a25e36fd
