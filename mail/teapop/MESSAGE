@@ -1,7 +1,0 @@
-======================================================================
-$NetBSD: MESSAGE,v 1.1 2001/11/01 01:01:36 zuntum Exp $
-
-  teapop.password file is expected in /etc, you may want to install
-  one from ${PREFIX}/share/examples/teapop
-
-======================================================================
