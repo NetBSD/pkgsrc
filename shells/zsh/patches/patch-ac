@@ -1,0 +1,24 @@
+$NetBSD: patch-ac,v 1.13 2004/08/04 03:33:40 minskim Exp $
+
+--- configure.orig	Mon Mar 15 13:10:03 2004
++++ configure
+@@ -13630,6 +13630,10 @@ echo "${ECHO_T}$zsh_cv_sys_elf" >&6
+ 	DLLD="${DLLD=/usr/ccs/bin/cc}"
+ 	DLLDARG="${LDARG}"
+       ;;
++      *interix*)
++	DLLD="${DLLD=$CC}"
++	DLLDARG=""
++      ;;
+       * )
+ 	DLLD="${DLLD=$CC}"
+ 	DLLDARG="${LDARG}"
+@@ -13675,7 +13679,7 @@ echo "${ECHO_T}$zsh_cv_sys_elf" >&6
+     esac
+   fi
+   case "$host_os" in
+-    freebsd*|linux*|irix*|osf*|gnu*) DLLDFLAGS="${DLLDFLAGS=-shared}" ;;
++    freebsd*|linux*|irix*|osf*|gnu*|interix*) DLLDFLAGS="${DLLDFLAGS=-shared}" ;;
+     sunos*)       DLLDFLAGS="${DLLDFLAGS=-assert nodefinitions}" ;;
+     sysv4*|esix*) DLLDFLAGS="${DLLDFLAGS=-G $ldflags}" ;;
+     netbsd*)      DLLDFLAGS="${DLLDFLAGS=${DLLDARG}-x -shared --whole-archive}" ;;
