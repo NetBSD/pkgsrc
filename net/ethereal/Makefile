@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2001/09/23 21:25:49 tron Exp $
+# $NetBSD: Makefile,v 1.51 2001/09/24 09:51:09 tron Exp $
 
 DISTNAME=		ethereal-0.8.19
 CATEGORIES=		net
@@ -23,7 +23,5 @@ EVAL_PREFIX+=		GTKDIR=gtk+
 CONFIGURE_ARGS+=	--with-gtk-prefix="${GTKDIR}" \
 			--with-ucdsnmp=${LOCALBASE}
 LIBS+=			-lcrypto
-
-PLIST_SUBST+=		PKGVERSION="${PKGVERSION}"
 
 .include "../../mk/bsd.pkg.mk"
