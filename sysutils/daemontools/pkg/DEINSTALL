@@ -1,0 +1,18 @@
+#! /bin/sh
+#
+# $NetBSD: DEINSTALL,v 1.1.1.1 2000/12/27 15:44:55 hubertf Exp $
+#
+
+case "$2" in
+	DEINSTALL) rmdir 2>/dev/null /var/service || cat <<EOF
+
+=============================================================
+Note that the config files for this package under
+/var/service are not removed in the deinstallation
+process.  You should remove those by hand, if you no longer
+need them.
+=============================================================
+
+EOF
+	;;
+esac
