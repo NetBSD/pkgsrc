@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5823 2004/05/05 06:55:59 martti Exp $
+$NetBSD: CHANGES,v 1.5824 2004/05/05 11:18:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2357,3 +2357,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated libgnomecanvas to 2.6.1.1 [jmmv 2004-05-05]
 	Updated dbh to 1.0.18 [martti 2004-05-05]
 	Updated postfix to 2.0.20 [martti 2004-05-05]
+	Updated gnucash to 1.8.8nb6 [wiz 2004-05-05]
