@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2003/01/28 22:03:53 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2003/02/15 20:01:06 fredb Exp $
 
-DISTNAME=	netatalk-1.5.5
+DISTNAME=	netatalk-1.6.0
 CATEGORIES=	net print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=netatalk/} \
 		http://me.in-berlin.de/~jroger/netatalk/
@@ -10,6 +10,7 @@ HOMEPAGE=	http://sourceforge.net/projects/netatalk/
 COMMENT=	Netatalk appletalk file and print services
 
 GNU_CONFIGURE=	YES
+USE_BUILDLINK2=	YES
 USE_PKGINSTALL=	YES
 USE_GMAKE=	YES
 USE_PERL5=	YES
@@ -22,13 +23,15 @@ RCD_SCRIPTS=	atalkd afpd papd timelord
 
 .include "../../mk/bsd.prefs.mk"
 
-CONFIGURE_ARGS+=	--with-tcp-wrappers --with-flock-locks \
+CONFIGURE_ARGS+=	--enable-netbsd \
 			--enable-timelord \
-			--localstatedir=/var/netatalk \
+			--with-did=last \
+			--with-tcp-wrappers \
 			--sbindir=${PREFIX}/libexec/netatalk \
-			--with-uams-path=${PREFIX}/libexec/netatalk/uams \
 			--sysconfdir=${PKG_SYSCONFDIR} \
-			--enable-netbsd
+			--localstatedir=/var/netatalk \
+			--with-nls-dir=${PREFIX}/share/netatalk/nls \
+			--with-uams-path=${PREFIX}/libexec/netatalk/uams
 
 pre-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/libexec/psffilters
@@ -40,4 +43,5 @@ pre-install:
 					${PREFIX}/share/examples/netatalk/
 .endfor
 
+.include "../../devel/rx/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/05/25 12:55:24 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/02/15 20:01:06 fredb Exp $
 bin/achfile
 bin/acleandir.rc
 bin/add_netatalk_printer
@@ -31,7 +31,6 @@ bin/papstatus
 bin/parsecode
 bin/psorder
 bin/single2bin
-bin/test_parse_mtab
 bin/timeout
 bin/unbin
 bin/unhex
@@ -45,10 +44,12 @@ include/atalk/aep.h
 include/atalk/afp.h
 include/atalk/asp.h
 include/atalk/atp.h
+include/atalk/boolean.h
 include/atalk/cnid.h
 include/atalk/compat.h
 include/atalk/ddp.h
 include/atalk/dsi.h
+include/atalk/logger.h
 include/atalk/nbp.h
 include/atalk/netddp.h
 include/atalk/pap.h
@@ -148,7 +149,6 @@ man/man5/netatalk.conf.5
 man/man5/papd.conf.5
 man/man8/afpd.8
 man/man8/atalkd.8
-man/man8/pap.8
 man/man8/papd.8
 man/man8/papstatus.8
 man/man8/psf.8
