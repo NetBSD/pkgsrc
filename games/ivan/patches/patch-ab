@@ -1,0 +1,22 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/06/26 03:54:38 ben Exp $
+
+--- FeLib/Source/feio.cpp.orig	Sun Aug  3 14:56:18 2003
++++ FeLib/Source/feio.cpp
+@@ -416,7 +416,7 @@ festring iosystem::ContinueMenu(ushort T
+   int Check = 0;
+   festring Buffer;
+   felist List(CONST_S("Choose a file and be sorry:"), TopicColor);
+-  hFile = _findfirst(festring(DirectoryName + "*.sav").CStr(), &Found);
++  hFile = _findfirst(festring(DirectoryName + "/*.sav").CStr(), &Found);
+ 
+   if(hFile == -1L)
+     {
+@@ -483,7 +483,7 @@ festring iosystem::ContinueMenu(ushort T
+   int Check = 0;
+   festring Buffer;
+   felist List(CONST_S("Choose a file and be sorry:"), TopicColor);
+-  Check = findfirst(festring(DirectoryName + "*.sav").CStr(), &Found, FA_HIDDEN | FA_ARCH);
++  Check = findfirst(festring(DirectoryName + "/*.sav").CStr(), &Found, FA_HIDDEN | FA_ARCH);
+ 
+   if(Check)
+     {
