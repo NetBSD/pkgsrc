@@ -1,3 +1,5 @@
+$NetBSD: patch-ac,v 1.2 1998/11/12 23:48:35 frueauf Exp $
+
 --- nfsbug.c.orig	Mon Sep 28 17:45:40 1998
 +++ nfsbug.c	Mon Sep 28 17:47:58 1998
 @@ -25,16 +25,18 @@
