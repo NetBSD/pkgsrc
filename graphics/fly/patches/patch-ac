@@ -1,9 +1,16 @@
-$NetBSD: patch-ac,v 1.1 1999/08/27 10:11:02 agc Exp $
+$NetBSD: patch-ac,v 1.2 1999/11/01 03:31:46 jlam Exp $
 
-Update for PNG graphics.
-
---- doc/using.html	1999/08/27 09:45:48	1.1
-+++ doc/using.html	1999/08/27 09:47:09
+--- doc/using.html.orig	Thu Jun 10 21:39:56 1999
++++ doc/using.html	Sun Oct 31 00:13:57 1999
+@@ -1,7 +1,7 @@
+ <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+ <html>
+  <head>
+-  <title>GIFs on the fly
++  <title>PNGs on the fly
+  </title>
+   <link rev="made" href="mailto:gleeson@unimelb.edu.au">
+   <meta name="description"
 @@ -18,7 +18,7 @@
     <td><h1>fly: Documentation: Using fly</h1>
    </td>
@@ -34,7 +41,7 @@ Update for PNG graphics.
           <DD>for creating a new image.</DD>
  </DL>
  <P>  <B>Note:</B>
-@@ -203,20 +203,20 @@
+@@ -203,21 +203,21 @@
               coordinates supplied.
             </P>
         </DD>
@@ -43,8 +50,9 @@ Update for PNG graphics.
         </STRONG>
     </DT>
 -        <DD><P> Copies region <B>x1,y1 - x2,y2</B> of <B>source-filename.gif</B>
+-                or the GIF output of <B>command</B> to the coordinates <B>x,y</B>
 +        <DD><P> Copies region <B>x1,y1 - x2,y2</B> of <B>source-filename.png</B>
-                 or the GIF output of <B>command</B> to the coordinates <B>x,y</B>
++                or the PNG output of <B>command</B> to the coordinates <B>x,y</B>
                  of the image being created/modified. <BR>
                  If <B>x1,y1,x2,y2</B> are all <B>-1</B>, copy the entire image.
             </P>
@@ -55,10 +63,12 @@ Update for PNG graphics.
         </KBD></STRONG>
     </DT>
 -        <DD><P>Copies region <B>x1,y1 - x2,y2</B> of <B>source-filename.gif</B>
+-               or the GIF output of <B>command</B> to the area <B>dx1,dy1 -
 +        <DD><P>Copies region <B>x1,y1 - x2,y2</B> of <B>source-filename.png</B>
-                or the GIF output of <B>command</B> to the area <B>dx1,dy1 -
++               or the PNG output of <B>command</B> to the area <B>dx1,dy1 -
                 dx2,dy2</B> of the image being created/modified, resizing the
                 image to fit.<BR> If <B>x1,y1,x2,y2</B> are all <B>-1</B>, copy
+                the entire image.
 @@ -238,9 +238,9 @@
          <DD><P> Changes all pixels of colour <B>R1,G1,B1</B> to <B>R2,G2,B2.</B>
             </P>
@@ -83,6 +93,22 @@ Update for PNG graphics.
               Subsequent directives of <KBD>fill</KBD>, and
               <KBD>fpoly</KBD> will use the selected &quot;tile&quot;
               as a fill pattern, until a call of <KBD>killtile.</KBD>
+@@ -307,13 +307,13 @@
+        </DD>
+     <DT><STRONG><KBD>rotate deg</KBD></STRONG>
+    </DT>
+-        <DD><P> Rotates the GIF image <TT>deg</TT> degrees clockwise, where
++        <DD><P> Rotates the PNG image <TT>deg</TT> degrees clockwise, where
+                 <TT>deg</TT> is 90, 180 or 270.
+            </P>
+        </DD>
+     <DT><STRONG><KBD>interlace</KBD></STRONG>
+    </DT>
+-        <DD><P> Makes the image output by fly an interlaced GIF. 
++        <DD><P> Makes the image output by fly an interlaced PNG. 
+            </P>
+        </DD>
+ </DL>
 @@ -339,13 +339,13 @@
   <!-- ===================================================================== -->
   <hr size="2" noshade>
