@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/03/08 19:22:26 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2004/10/09 15:29:41 tv Exp $
 #
 
 DISTNAME=		tcl8.3.4
 PKGNAME=		tcl-8.3.4
+PKGREVISION=		1
 CATEGORIES=		lang
 MASTER_SITES=		ftp://ftp.scriptics.com/pub/tcl/tcl8_3/ \
 			ftp://gd.tuwien.ac.at/languages/tcl/scriptics/tcl8_3/ \
@@ -40,10 +41,8 @@ CONFIGURE_ENV+=		TCL_PACKAGE_PATH="${VIEWBASE}/lib/tcl"
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "Darwin"
-PLIST_SUBST+=		SHLIB_CMT="@comment "
 SHLIB_SUFX=		dylib
 .else
-PLIST_SUBST+=		SHLIB_CMT=""
 SHLIB_SUFX=		la
 .endif
 
