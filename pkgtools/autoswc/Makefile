@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/02/21 23:28:32 jmmv Exp $
+# $NetBSD: Makefile,v 1.2 2004/02/21 23:31:17 jmmv Exp $
 
 DISTNAME=		autoswc-1.0
-CATEGORIES=		sysutils
+CATEGORIES=		pkgtools sysutils
 MASTER_SITES=		# empty
 DISTFILES=		# empty
 
