@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2003/07/21 16:43:20 martti Exp $
+# $NetBSD: Makefile,v 1.15 2004/02/03 01:43:32 grant Exp $
 
 DISTNAME=	ffcall-1.8d
 PKGNAME=	ffcall-1.8.4
@@ -40,6 +40,6 @@ post-patch:
 # Run the supplied tests to sanity check everything
 #
 post-build:
-	cd ${WRKSRC} && ${MAKE} check
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} check
 
 .include "../../mk/bsd.pkg.mk"
