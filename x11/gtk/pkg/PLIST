@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 1999/10/22 23:35:04 tron Exp $
+@comment $NetBSD: PLIST,v 1.24 2000/02/05 15:47:23 wiz Exp $
 bin/gtk-config
 etc/gtk/gtkrc.cs
 etc/gtk/gtkrc.hr
@@ -171,14 +171,14 @@ man/man1/gtk-config.1
 @unexec install-info --delete %D/info/gtk.info %D/info/dir
 info/gdk.info
 info/gtk.info
-@exec install-info %D/info/gdk.info %D/info/dir
-@exec install-info %D/info/gtk.info %D/info/dir
 info/gtk.info-1
 info/gtk.info-2
 info/gtk.info-3
 info/gtk.info-4
 info/gtk.info-5
 info/gtk.info-6
+@exec install-info %D/info/gdk.info %D/info/dir
+@exec install-info %D/info/gtk.info %D/info/dir
 share/aclocal/gtk.m4
 share/locale/nl/LC_MESSAGES/gtk+.mo
 share/locale/da/LC_MESSAGES/gtk+.mo
