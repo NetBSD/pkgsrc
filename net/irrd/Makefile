@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2000/10/07 19:24:13 kim Exp $
+# $NetBSD: Makefile,v 1.10 2000/10/21 22:49:17 wiz Exp $
 #
 
 DISTNAME=	irrd2.0a-Aug22-2000
@@ -10,14 +10,13 @@ MASTER_SITES=	ftp://ftp.merit.edu/radb/irrd/source/ \
 MAINTAINER=	kim@tac.nyc.ny.us
 HOMEPAGE=	http://www.irrd.net/
 
+BUILD_DEPENDS+=	autoreconf:../../devel/autoconf
+BUILD_DEPENDS+=	bison:../../devel/bison
 DEPENDS+=	gdbm-*:../../databases/gdbm
 DEPENDS+=	pgp5-*:../../security/pgp5
 DEPENDS+=	wget-*:../../net/wget
 
 USE_PERL5=	# defined
-
-BUILD_DEPENDS+=	autoreconf:../../devel/autoconf
-BUILD_DEPENDS+=	bison:../../devel/bison
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/src
 
