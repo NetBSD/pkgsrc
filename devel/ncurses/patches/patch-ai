@@ -1,0 +1,58 @@
+$NetBSD: patch-ai,v 1.3 2000/10/12 14:56:46 jlam Exp $
+
+--- mk-1st.awk.orig	Thu Oct 12 04:52:56 2000
++++ mk-1st.awk
+@@ -215,6 +215,29 @@
+ 					printf "\t-@rm -f so_locations\n"
+ 				}
+ 			}
++			else if ( MODEL == "LIBTOOL" )
++			{
++				if ( $2 == "c++" ) {
++					compile="CXX"
++				} else {
++					compile="CC"
++				}
++				end_name = lib_name;
++				printf "../lib/%s : $(%s_OBJS)\n", lib_name, OBJS
++				printf "\tcd ../lib && $(LIBTOOL) $(%s) -o %s $(%s_OBJS:.o=.lo) -rpath $(DESTDIR)$(libdir) -version-info $(NCURSES_MAJOR):$(NCURSES_MINOR)\n", compile, lib_name, OBJS
++				print  ""
++				print  "install \\"
++				print  "install.libs \\"
++				printf "install.%s :: $(DESTDIR)$(libdir) ../lib/%s\n", name, lib_name
++				printf "\t@echo installing ../lib/%s as $(DESTDIR)$(libdir)/%s\n", lib_name, lib_name
++				printf "\tcd ../lib; $(LIBTOOL) $(INSTALL_DATA) %s $(DESTDIR)$(libdir)\n", lib_name
++				print  ""
++				print  "uninstall \\"
++				print  "uninstall.libs \\"
++				printf "uninstall.%s ::\n", name
++				printf "\t@echo uninstalling $(DESTDIR)$(libdir)/%s\n", lib_name
++				printf "\t-@$(LIBTOOL) rm -f $(DESTDIR)$(libdir)/%s\n", lib_name
++			}
+ 			else
+ 			{
+ 				end_name = lib_name;
+@@ -266,14 +289,23 @@
+ 			print ""
+ 			print "mostlyclean::"
+ 			printf "\t-rm -f $(%s_OBJS)\n", OBJS
++			if ( MODEL == "LIBTOOL" ) {
++				printf "\t-rm -f $(%s_OBJS:.o=.lo)\n", OBJS
++			}
+ 		}
+ 		else if ( found == 2 )
+ 		{
+ 			print ""
+ 			print "mostlyclean::"
+ 			printf "\t-rm -f $(%s_OBJS)\n", OBJS
++			if ( MODEL == "LIBTOOL" ) {
++				printf "\t-rm -f $(%s_OBJS:.o=.lo)\n", OBJS
++			}
+ 			print ""
+ 			print "clean ::"
+ 			printf "\t-rm -f $(%s_OBJS)\n", OBJS
++			if ( MODEL == "LIBTOOL" ) {
++				printf "\t-rm -f $(%s_OBJS:.o=.lo)\n", OBJS
++			}
+ 		}
+ 	}

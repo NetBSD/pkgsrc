@@ -1,12 +1,78 @@
-$NetBSD: patch-ad,v 1.3 2000/01/15 18:39:30 jlam Exp $
+$NetBSD: patch-ad,v 1.4 2000/10/12 14:56:45 jlam Exp $
 
---- misc/run_tic.sh.orig	Sat May 30 20:29:34 1998
-+++ misc/run_tic.sh	Sat Jan 15 11:24:46 2000
-@@ -130,6 +130,7 @@
- # to find terminfo under /usr/lib.  That is, we'll _try_ to do that.  Not
- # all systems support symbolic links, and those that do provide a variety
- # of options for 'test'.
-+exit 0 # don't do this
- if test "$TICDIR" != "$TERMINFO" ; then
- 	( rm -f $TICDIR 2>/dev/null )
- 	if ( cd $TICDIR 2>/dev/null )
+--- configure.in.orig	Thu Oct 12 04:52:53 2000
++++ configure.in
+@@ -162,6 +162,13 @@
+ 	[cf_with_progs=yes])
+ AC_MSG_RESULT($cf_with_progs)
+ 
++AC_MSG_CHECKING(if you wish to install curses.h)
++AC_ARG_WITH(curses-h,
++	[  --without-curses-h      install curses.h as ncurses.h only],
++	[with_curses_h=$withval],
++	[with_curses_h=yes])
++AC_MSG_RESULT($with_curses_h)
++
+ modules_to_build="ncurses"
+ if test "X$cf_with_progs" != Xno ; then
+ modules_to_build="$modules_to_build progs tack"
+@@ -212,6 +219,20 @@
+ cf_list_models=""
+ AC_SUBST(cf_list_models)dnl	the complete list of models ("normal debug")
+ 
++AC_MSG_CHECKING(if you want to build libraries with libtool)
++AC_ARG_WITH(libtool,
++	[  --with-libtool          generate libraries with libtool],
++	[with_libtool=$withval],
++	[with_libtool=no])
++AC_MSG_RESULT($with_libtool)
++if test "$with_libtool" = "yes"; then
++	cf_list_models="$cf_list_models libtool"
++	test -z "$LIBTOOL" && LIBTOOL=libtool
++else
++	LIBTOOL=""
++fi
++AC_SUBST(LIBTOOL)
++
+ AC_MSG_CHECKING(if you want to build shared libraries)
+ AC_ARG_WITH(shared,
+ 	[  --with-shared           generate shared-libraries],
+@@ -248,6 +269,9 @@
+ 
+ AC_MSG_CHECKING(for specified models)
+ test -z "$cf_list_models" && cf_list_models=normal
++dnl If we use libtool to generate libraries, then it must be the only
++dnl specified model.
++test "$with_libtool" = "yes" && cf_list_models=libtool
+ AC_MSG_RESULT($cf_list_models)
+ 
+ ### Use the first model as the default, and save its suffix for use in building
+@@ -337,6 +361,7 @@
+ 
+ AC_MSG_CHECKING(for default loader flags)
+ case $DFT_LWR_MODEL in
++libtool) LD_MODEL=''   ;;
+ normal)  LD_MODEL=''   ;;
+ debug)   LD_MODEL=$CC_G_OPT ;;
+ profile) LD_MODEL='-pg';;
+@@ -1075,7 +1100,11 @@
+ ### could override this.
+ if test "$with_termlib" = yes ; then
+ 	TEST_DEPS="${LIB_DIR}/${LIB_PREFIX}${TINFO_NAME}${DFT_DEP_SUFFIX}"
+-	TEST_ARGS="-l${TINFO_NAME}${DFT_ARG_SUFFIX}"
++	if test "$DFT_LWR_MODEL" = "libtool"; then
++		TEST_ARGS="${TEST_DEPS}"
++	else
++		TEST_ARGS="-l${TINFO_NAME}${DFT_ARG_SUFFIX}"
++	fi
+ fi
+ PROG_DEPS="$TEST_DEPS"
+ PROG_ARGS="$TEST_ARGS"
+@@ -1116,6 +1145,7 @@
+ TINFO_NAME="$TINFO_NAME"
+ WITH_ECHO="$with_echo"
+ WITH_OVERWRITE="$with_overwrite"
++WITH_CURSES_H="$with_curses_h"
+ cf_cv_abi_version="$cf_cv_abi_version"
+ cf_cv_do_symlinks="$cf_cv_do_symlinks"
+ cf_cv_rel_version="$cf_cv_rel_version"

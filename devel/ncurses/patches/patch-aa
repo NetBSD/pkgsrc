@@ -1,71 +1,72 @@
-$NetBSD: patch-aa,v 1.9 2000/07/14 21:29:09 jlam Exp $
+$NetBSD: patch-aa,v 1.10 2000/10/12 14:56:45 jlam Exp $
 
---- c++/Makefile.in.orig	Sat Oct 23 16:13:02 1999
-+++ c++/Makefile.in	Fri Jul 14 15:55:55 2000
-@@ -77,10 +77,10 @@
- LINK		= @LINK_PROGS@ $(CXX) @CXXLDFLAGS@
+--- INSTALL.orig	Thu Oct 12 04:52:50 2000
++++ INSTALL
+@@ -104,6 +104,8 @@
  
- LIBROOT	= ncurses++
--LIBNAME	= @LIB_PREFIX@$(LIBROOT).a
-+LIBNAME	= @LIB_PREFIX@$(LIBROOT).la
+ 	libncurses_p.a (profile)
  
--LDFLAGS		= @EXTRA_LDFLAGS@ -L../lib -L$(libdir) \
--	-l$(LIBROOT) \
-+LDFLAGS		= @EXTRA_LDFLAGS@ -L$(libdir) \
-+	$(LIBNAME) \
- 	@TEST_ARGS@ @LDFLAGS@ \
- 	@LD_MODEL@ @LIBS@ @EXTRA_LIBS@ @LOCAL_LDFLAGS@ $(CXXLIBS)
++	libncurses.la (libtool)
++
+     If you do not specify any models, the normal and debug libraries will be
+     configured.  Typing `configure' with no arguments is equivalent to:
  
-@@ -94,7 +94,7 @@
- AUTO_SRC	= \
- 		etip.h
+@@ -126,6 +128,13 @@
+     and SunOS with gcc, but more work needs to be done to make shared libraries
+     work on other systems.
  
--all:		$(AUTO_SRC) ../lib/$(LIBNAME) demo$x
-+all:		$(AUTO_SRC) $(LIBNAME) demo$x
++    If you have libtool installed, you can type
++
++	./configure --with-libtool
++
++    to generate the appropriate static and/or shared libraries for your
++    platform using libtool.
++
+     You can make curses and terminfo fall back to an existing file of termcap
+     definitions by configuring with --enable-termcap.  If you do this, the
+     library will search /etc/termcap before the terminfo database, and will
+@@ -176,7 +185,8 @@
+     The terminfo(5) manual page must be preprocessed with tbl(1) before
+     being formatted by nroff(1).  Modern man(1) implementations tend to do
+     this by default, but you may want to look at your version's manual page
+-    to be sure.
++    to be sure.  You may also install the manual pages after preprocessing
++    with tbl(1) by specifying the configure option --with-manpage-tbl.
  
- sources :	$(AUTO_SRC)
+     If the system already has a curses library that you need to keep using
+     for some bizarre binary-compatibility reason, you'll need to distinguish
+@@ -494,6 +504,10 @@
+ 	NOTE:  a few systems build shared libraries with fixed pathnames; this
+ 	option probably will not work for those configurations.
  
-@@ -111,9 +111,8 @@
- 	$(MODEL)/cursesapp.o \
- 	$(MODEL)/cursesmain.o
++     --with-libtool
++	Generate libraries with libtool.  If this option is selected, then
++	it overrides all other library model specifications.
++
+     --with-manpage-format=XXX
+ 	Tell the configure script how you would like to install man-pages.  The
+ 	option value must be one of these:  gzip, compress, BSDI, normal,
+@@ -513,6 +527,11 @@
+ 	this on systems that do not support symbolic links will result in
+ 	copying the man-page for each alias.
  
--../lib/$(LIBNAME) : $(LIB_OBJS)
--	$(AR) $(AR_OPTS) $@ $?
--	$(RANLIB) $@
-+$(LIBNAME) : $(LIB_OBJS)
-+	cd ../lib && $(LINK) -o lib$(LIBROOT).la $(LIB_OBJS:.o=.lo) -rpath $(INSTALL_PREFIX)$(libdir) -version-info $(NCURSES_MAJOR):$(NCURSES_MINOR)
++    --with-manpage-tbl
++	Tell the configure script that you with to preprocess the manpages
++	by running them through tbl to generate tables understandable by
++	nroff.
++
+     --with-normal
+ 	Generate normal (i.e., static) libraries (default).
  
- OBJS_DEMO = $(MODEL)/demo.o
+@@ -557,6 +576,11 @@
+     --without-ada
+ 	Suppress the configure script's check for Ada95, do not build the
+ 	Ada95 binding and related demo.
++
++    --without-curses-h
++	Don't install the ncurses header with the name "curses.h".  Rather,
++	install as "ncurses.h" and modify the installed headers and manpages
++	accordingly.
  
-@@ -121,7 +120,7 @@
- 	$(cursesf_h) $(cursesm_h) $(cursesapp_h)
- 
- demo$x:	$(OBJS_DEMO) \
--	../lib/$(LIBNAME)  \
-+	$(LIBNAME)  \
- 	@TEST_DEPS@
- 	@ECHO_LINK@ $(LINK) -o $@ $(OBJS_DEMO) $(LDFLAGS_DEFAULT)
- 
-@@ -133,18 +132,18 @@
- 	$(srcdir)/../mkinstalldirs $@
- 
- install \
--install.libs:: ../lib/$(LIBNAME) $(INSTALL_PREFIX)$(libdir)
--	$(INSTALL) ../lib/$(LIBNAME) $(INSTALL_PREFIX)$(libdir)/$(LIBNAME)
-+install.libs:: $(LIBNAME) $(INSTALL_PREFIX)$(libdir)
-+	$(LIBTOOL) $(INSTALL_DATA) $(LIBNAME) $(INSTALL_PREFIX)$(libdir)/$(LIBNAME)
- 
- uninstall \
- uninstall.libs::
--	-rm -f $(INSTALL_PREFIX)$(libdir)/$(LIBNAME)
-+	-$(LIBTOOL) rm -f $(INSTALL_PREFIX)$(libdir)/$(LIBNAME)
- 
- mostlyclean ::
- 	-rm -f core tags TAGS *~ *.ln *.atac trace
- 
- clean :: mostlyclean
--	-rm -f demo$x $(AUTO_SRC) ../lib/$(LIBNAME) $(LIB_OBJS) $(OBJS_DEMO)
-+	-rm -f demo$x $(AUTO_SRC) $(LIBNAME) $(LIB_OBJS) $(OBJS_DEMO)
- 
- distclean :: clean
- 	-rm -f Makefile
+     --without-cxx
+ 	XSI curses declares "bool" as part of the interface.  C++ also declares

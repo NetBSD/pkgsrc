@@ -1,91 +1,181 @@
-$NetBSD: patch-ab,v 1.8 2000/01/15 18:39:29 jlam Exp $
+$NetBSD: patch-ab,v 1.9 2000/10/12 14:56:45 jlam Exp $
 
---- configure.orig	Sat Oct 23 20:33:18 1999
-+++ configure	Sat Jan 15 11:24:46 2000
-@@ -2461,7 +2461,7 @@
+--- aclocal.m4.orig	Thu Oct 12 04:52:50 2000
++++ aclocal.m4
+@@ -1000,27 +1000,62 @@
+ DST=\[$]1
+ REF=\[$]2
+ SRC=\[$]3
++TMPSRC=\${TMPDIR-/tmp}/\`basename \$SRC\`\$\$
++TMPSED=\${TMPDIR-/tmp}/headers.sed\$\$
+ echo installing \$SRC in \$DST
++CF_EOF
++if test $WITH_CURSES_H = yes; then
++	cat >>headers.sh <<CF_EOF
+ case \$DST in
+ /*/include/*)
+-	TMPSRC=\${TMPDIR-/tmp}/\`basename \$SRC\`\$\$
+-	TMPSED=\${TMPDIR-/tmp}/headers.sed\$\$
+ 	END=\`basename \$DST\`
+ 	for i in \`cat \$REF/../*/headers |fgrep -v "#"\`
+ 	do
+ 		NAME=\`basename \$i\`
+ 		echo "s/<\$NAME>/<\$END\/\$NAME>/" >> \$TMPSED
+ 	done
+-	rm -f \$TMPSRC
+-	sed -f \$TMPSED \$SRC > \$TMPSRC
+-	eval \$PRG \$TMPSRC \$DST/\`basename \$SRC\`
+-	rm -f \$TMPSRC \$TMPSED
+ 	;;
+ *)
+-	eval \$PRG \$SRC \$DST
++	echo "" >> \$TMPSED
+ 	;;
+ esac
+ CF_EOF
++else
++	cat >>headers.sh <<CF_EOF
++case \$DST in
++/*/include/*)
++	END=\`basename \$DST\`
++	for i in \`cat \$REF/../*/headers |fgrep -v "#"\`
++	do
++		NAME=\`basename \$i\`
++		if test "\$NAME" = "curses.h"
++		then
++			echo "s/<curses.h>/<ncurses.h>/" >> \$TMPSED
++			NAME=ncurses.h
++		fi
++		echo "s/<\$NAME>/<\$END\/\$NAME>/" >> \$TMPSED
++	done
++	;;
++*)
++	echo "s/<curses.h>/<ncurses.h>/" >> \$TMPSED
++	;;
++esac
++CF_EOF
++fi
++cat >>headers.sh <<CF_EOF
++rm -f \$TMPSRC
++sed -f \$TMPSED \$SRC > \$TMPSRC
++NAME=\`basename \$SRC\`
++CF_EOF
++if test $WITH_CURSES_H != yes; then
++	cat >>headers.sh <<CF_EOF
++test "\$NAME" = "curses.h" && NAME=ncurses.h
++CF_EOF
++fi
++cat >>headers.sh <<CF_EOF
++eval \$PRG \$TMPSRC \$DST/\$NAME
++rm -f \$TMPSRC \$TMPSED
++CF_EOF
  
- 	
- 	case $DFT_LWR_MODEL in
--	normal)  DFT_DEP_SUFFIX='.a'   ;;
-+	normal)  DFT_DEP_SUFFIX='.la'  ;;
- 	debug)   DFT_DEP_SUFFIX='_g.a' ;;
- 	profile) DFT_DEP_SUFFIX='_p.a' ;;
- 	shared)
-@@ -2581,6 +2581,9 @@
+ chmod 0755 headers.sh
  
- 	cf_cv_rm_so_locs=no
- 
-+LINK_PROGS='$(LIBTOOL)'
-+LINK_TESTS='$(LIBTOOL)'
-+
- 	case $cf_cv_system_name in
- 	hpux10.*)
- 		# (tested with gcc 2.7.2 -- I don't have c89)
-@@ -6440,7 +6443,7 @@
- ### could override this.
- if test "$with_termlib" = yes ; then
- 	TEST_DEPS="${LIB_PREFIX}${TINFO_NAME}${DFT_DEP_SUFFIX}"
--	TEST_ARGS="-l${TINFO_NAME}${DFT_ARG_SUFFIX}"
-+	TEST_ARGS="${LIB_PREFIX}${TINFO_NAME}${DFT_DEP_SUFFIX}"
- fi
- PROG_DEPS="$TEST_DEPS"
- PROG_ARGS="$TEST_ARGS"
-@@ -6454,7 +6457,7 @@
- 
- # dependencies and linker-arguments for test-programs
- TEST_DEPS="${LIB_PREFIX}${LIB_NAME}${DFT_DEP_SUFFIX} $TEST_DEPS"
--TEST_ARGS="-l${LIB_NAME}${DFT_ARG_SUFFIX} $TEST_ARGS"
-+TEST_ARGS="${LIB_PREFIX}${LIB_NAME}${DFT_DEP_SUFFIX} $TEST_ARGS"
- 
- # dependencies and linker-arguments for utility-programs
- PROG_ARGS="$TEST_ARGS"
-@@ -6497,16 +6500,17 @@
- EOF
- 
- 			TEST_DEPS="${LIB_PREFIX}${cf_dir}${DFT_DEP_SUFFIX} $TEST_DEPS"
--			TEST_ARGS="-l${cf_dir}${DFT_ARG_SUFFIX} $TEST_ARGS"
-+			TEST_ARGS="${LIB_PREFIX}${cf_dir}${DFT_DEP_SUFFIX} $TEST_ARGS"
- 		fi
- 	fi
- done
- echo "$ac_t""$cf_cv_src_modules" 1>&6
--TEST_ARGS="-L${LIB_DIR} -L\$(libdir) $TEST_ARGS"
--
- 
--
--PROG_ARGS="-L${LIB_DIR} -L\$(libdir) $PROG_ARGS"
-+# Put $(libdir) last so we ensure programs are linked against newly-built
-+# versions of libraries.
-+#
-+TEST_ARGS="$TEST_ARGS -L\$(libdir)"
-+PROG_ARGS="$PROG_ARGS -L\$(libdir)"
- 
- 
- SRC_SUBDIRS="man include"
-@@ -7048,7 +7052,7 @@
- 			
- 	
- 	case $cf_item in
--	normal)  cf_suffix='.a'   ;;
-+	normal)  cf_suffix='.la'  ;;
- 	debug)   cf_suffix='_g.a' ;;
- 	profile) cf_suffix='_p.a' ;;
- 	shared)
-@@ -7098,7 +7102,7 @@
- 			
- 	
- 	case $cf_item in
--	normal)  cf_suffix='.a'   ;;
-+	normal)  cf_suffix='.la'  ;;
- 	debug)   cf_suffix='_g.a' ;;
- 	profile) cf_suffix='_p.a' ;;
- 	shared)
-@@ -7296,7 +7300,7 @@
+@@ -1045,7 +1080,7 @@
  		for i in `cat $srcdir/$cf_dir/headers |fgrep -v "#"`
  		do
- 			echo "	@ (cd \$(INSTALL_PREFIX)\$(includedir) && rm -f `basename $i`) ; ../headers.sh \$(INSTALL_DATA) \$(INSTALL_PREFIX)\$(includedir) \$(srcdir) $i" >>$cf_dir/Makefile
--			test $i = curses.h && echo "	@ (cd \$(INSTALL_PREFIX)\$(includedir) && rm -f ncurses.h && \$(LN_S) curses.h ncurses.h)" >>$cf_dir/Makefile
-+			test $i = curses.h && echo "	@ (cd \$(INSTALL_PREFIX)\$(includedir) && rm -f ncurses.h && mv -f curses.h ncurses.h)" >>$cf_dir/Makefile
+ 			echo "	@ (cd \$(DESTDIR)\$(includedir) && rm -f `basename $i`) ; ../headers.sh \$(INSTALL_DATA) \$(DESTDIR)\$(includedir) \$(srcdir) $i" >>$cf_dir/Makefile
+-			test $i = curses.h && echo "	@ (cd \$(DESTDIR)\$(includedir) && rm -f ncurses.h && \$(LN_S) curses.h ncurses.h)" >>$cf_dir/Makefile
++			test $i = curses.h && test $WITH_CURSES_H = yes && echo "	@ (cd \$(DESTDIR)\$(includedir) && rm -f ncurses.h && \$(LN_S) curses.h ncurses.h)" >>$cf_dir/Makefile
  		done
  
  	cat >>$cf_dir/Makefile <<CF_EOF
+@@ -1073,6 +1108,7 @@
+ [
+ 	AC_REQUIRE([CF_SUBST_NCURSES_VERSION])
+ 	case $1 in
++	libtool) $2='.la'  ;;
+ 	normal)  $2='.a'   ;;
+ 	debug)   $2='_g.a' ;;
+ 	profile) $2='_p.a' ;;
+@@ -1092,6 +1128,7 @@
+ AC_DEFUN([CF_LIB_TYPE],
+ [
+ 	case $1 in
++	libtool) $2=''   ;;
+ 	normal)  $2=''   ;;
+ 	debug)   $2='_g' ;;
+ 	profile) $2='_p' ;;
+@@ -1387,6 +1424,20 @@
+ AC_MSG_RESULT($cf_manpage_symlinks)
+ ])dnl
+ dnl ---------------------------------------------------------------------------
++dnl This option causes manpages to be run through tbl(1) to generate tables
++dnl correctly.
++AC_DEFUN([CF_MANPAGE_TBL],
++[
++AC_MSG_CHECKING(for manpage tbl)
++
++AC_ARG_WITH(manpage-tbl,
++	[  --with-manpage-tbl      specify manpage processing with tbl],
++	[cf_manpage_tbl=$withval],
++	[cf_manpage_tbl=yes])
++
++AC_MSG_RESULT($cf_manpage_tbl)
++])dnl
++dnl ---------------------------------------------------------------------------
+ dnl Try to determine if the man-pages on the system are compressed, and if
+ dnl so, what format is used.  Use this information to construct a script that
+ dnl will install man-pages.
+@@ -1396,6 +1447,7 @@
+ CF_MANPAGE_FORMAT
+ CF_MANPAGE_RENAMES
+ CF_MANPAGE_SYMLINKS
++CF_MANPAGE_TBL
+ 
+   if test "$prefix" = "NONE" ; then
+      cf_prefix="$ac_default_prefix"
+@@ -1509,6 +1561,18 @@
+ 	test \$verb = installing && sed -e "s,@DATADIR@,\$datadir," < \$i | sed -f edit_man.sed >\$TMP
+ CF_EOF
+ fi
++if test $cf_manpage_tbl = yes ; then
++cat >>man/edit_man.sh <<CF_EOF
++	tbl \$TMP >\$TMP.out
++	mv \$TMP.out \$TMP
++CF_EOF
++fi
++if test $with_curses_h != yes ; then
++cat >>man/edit_man.sh <<CF_EOF
++	sed -e "/\#[    ]*include/s,curses.h,ncurses.h," < \$TMP >\$TMP.out
++	mv \$TMP.out \$TMP
++CF_EOF
++fi
+ if test $cf_format = yes ; then
+ cat >>man/edit_man.sh <<CF_EOF
+ 	nroff -man \$TMP >\$TMP.out
+@@ -1645,6 +1709,7 @@
+ AC_DEFUN([CF_OBJ_SUBDIR],
+ [
+ 	case $1 in
++	libtool) $2='obj_lo'  ;;
+ 	normal)  $2='objects' ;;
+ 	debug)   $2='obj_g' ;;
+ 	profile) $2='obj_p' ;;
+@@ -2066,7 +2131,11 @@
+ 
+ # dependencies and linker-arguments for test-programs
+ TEST_DEPS="${LIB_DIR}/${LIB_PREFIX}${LIB_NAME}${DFT_DEP_SUFFIX} $TEST_DEPS"
+-TEST_ARGS="-l${LIB_NAME}${DFT_ARG_SUFFIX} $TEST_ARGS"
++if test "$DFT_LWR_MODEL" = "libtool"; then
++	TEST_ARGS="${TEST_DEPS}"
++else
++	TEST_ARGS="-l${LIB_NAME}${DFT_ARG_SUFFIX} $TEST_ARGS"
++fi
+ 
+ # dependencies and linker-arguments for utility-programs
+ PROG_ARGS="$TEST_ARGS"
+@@ -2101,7 +2170,11 @@
+ 			AC_DEFINE_UNQUOTED(HAVE_${cf_have_include}_H)
+ 			AC_DEFINE_UNQUOTED(HAVE_LIB${cf_have_include})
+ 			TEST_DEPS="${LIB_DIR}/${LIB_PREFIX}${cf_dir}${DFT_DEP_SUFFIX} $TEST_DEPS"
+-			TEST_ARGS="-l${cf_dir}${DFT_ARG_SUFFIX} $TEST_ARGS"
++			if test "$DFT_LWR_MODEL" = "libtool"; then
++				TEST_ARGS="${TEST_DEPS}"
++			else
++				TEST_ARGS="-l${cf_dir}${DFT_ARG_SUFFIX} $TEST_ARGS"
++			fi
+ 		fi
+ 	fi
+ done

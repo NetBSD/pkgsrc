@@ -1,42 +1,14 @@
-$NetBSD: patch-ah,v 1.2 2000/01/15 18:39:31 jlam Exp $
+$NetBSD: patch-ah,v 1.3 2000/10/12 14:56:46 jlam Exp $
 
---- tack/Makefile.in.orig	Sat Sep 18 19:33:48 1999
-+++ tack/Makefile.in	Sat Jan 15 11:25:18 2000
-@@ -26,11 +26,13 @@
- libdir		= @libdir@
- includedir	= @includedir@
- datadir		= @datadir@
-+mandir		= @mandir@
+--- misc/run_tic.in.orig	Mon Oct  9 18:57:35 2000
++++ misc/run_tic.in
+@@ -113,6 +113,9 @@
+ 	exit 1
+ fi
  
- ticdir		= $(datadir)/terminfo
- 
- INSTALL		= @INSTALL@
- INSTALL_PROGRAM	= @INSTALL_PROGRAM@
-+INSTALL_DATA	= @INSTALL_DATA@
- 
- AWK		= @AWK@
- LN_S		= @LN_S@
-@@ -51,7 +53,7 @@
- CFLAGS_DEFAULT	= $(CFLAGS_@DFT_UPR_MODEL@)
- 
- LD		= @LD@
--LINK		= $(CC)
-+LINK		= @LINK_PROGS@ $(CC)
- LDFLAGS		= @EXTRA_LDFLAGS@ \
- 		@PROG_ARGS@ @LDFLAGS@ @LD_MODEL@ @LIBS@ @EXTRA_LIBS@
- 
-@@ -84,10 +86,12 @@
- uninstall.libs:
- 
- install.tack: $(PROGS) $(INSTALL_PREFIX)$(bindir)
--	$(INSTALL_PROGRAM) tack$x    $(INSTALL_PREFIX)$(bindir)/tack$x
-+	$(LIBTOOL) $(INSTALL_PROGRAM) tack$x    $(INSTALL_PREFIX)$(bindir)/tack$x
-+	$(INSTALL_DATA) tack.1 $(INSTALL_PREFIX)$(mandir)/man1/tack.1
- 
- uninstall.tack:
--	-@rm -f $(INSTALL_PREFIX)$(bindir)/tack$x
-+	-@$(LIBTOOL) rm -f $(INSTALL_PREFIX)$(bindir)/tack$x
-+	-@rm -f $(INSTALL_PREFIX)$(mandir)/man1/tack.1
- 
- $(INSTALL_PREFIX)$(bindir) :
- 	$(srcdir)/../mkinstalldirs $@
++# For NetBSD pkgsrc, don't bother with setting a symbolic link.
++exit 0
++
+ # Make a symbolic link to provide compatibility with applications that expect
+ # to find terminfo under /usr/lib.  That is, we'll _try_ to do that.  Not
+ # all systems support symbolic links, and those that do provide a variety
