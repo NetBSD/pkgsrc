@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2001/08/27 14:35:09 tron Exp $
+# $NetBSD: Makefile,v 1.14 2002/01/11 11:47:54 skrll Exp $
 #
 
 DISTNAME=	libggi-2.0b2.1
@@ -13,23 +13,18 @@ BUILD_DEPENDS+=	autoconf>=2.13:../../devel/autoconf
 DEPENDS+=	ncurses>=4.2:../../devel/ncurses
 DEPENDS+=	libgii-0.6:../libgii
 
-GNU_CONFIGURE=	YES
-CONFIGURE_ARGS+=--disable-debug \
-		--with-x \
-		--with-extra-includes=${LOCALBASE}/include \
-		--with-extra-libs="${X11BASE}/lib -Wl,-R${X11BASE}/lib"
+USE_LIBTOOL=		YES
+LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
+GNU_CONFIGURE=		YES
+CONFIGURE_ARGS+=	\
+	--disable-debug \
+	--with-x \
+	--with-extra-includes=${LOCALBASE}/include \
+	--with-extra-libs="${X11BASE}/lib -Wl,-R${X11BASE}/lib"
 
 PLIST_SRC=	${WRKDIR}/PLIST
 
-pre-configure:
-	cd ${WRKSRC}; autoconf
-
 post-configure:
-	cd ${WRKSRC}; \
-	[ -f configure.BAK ] || ${CP} configure configure.BAK; \
-	${SED} \
-		-e '/lib/s@-L\([a-zA-Z$/_]*\)@-Wl,-R\1 -L\1@g' \
-		<configure.BAK >configure
 	@if [ -f ${X11BASE}/include/X11/extensions/xf86dga.h ]; then \
 		${CP} ${PKGDIR}/PLIST ${PLIST_SRC}; \
 	else \
