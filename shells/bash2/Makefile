@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2004/10/22 23:54:22 minskim Exp $
+# $NetBSD: Makefile,v 1.59 2004/10/23 08:10:40 minskim Exp $
 #
 
 DISTNAME=	bash-2.05b
@@ -31,21 +31,15 @@ PKG_SHELL=		${PREFIX}/bin/bash
 .include "../../mk/bsd.prefs.mk"
 
 # Global and legacy options
-.if defined(BASH_STATIC)
-.  if !defined(PKG_OPTIONS.bash)
-.    if defined(BASH_STATIC) && !empty(BASH_STATIC:M[yY][eE][sS])
-PKG_OPTIONS.bash+=	static
-.    endif
-# Always enable multibyte support, because before converted to use
-# bsd.options.mk, this package did not allow to turn off the multibyte
-# support.
-PKG_OPTIONS.bash+=	multibyte
-.  endif
+.if defined(BASH_STATIC) && !empty(BASH_STATIC:M[yY][eE][sS])
+PKG_DEFAULT_OPTIONS+=	static
 .endif
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.bash
-PKG_OPTIONS.bash?=	multibyte
 PKG_SUPPORTED_OPTIONS=	multibyte static
+.if !defined(PKG_OPTIONS.bash)
+PKG_DEFAULT_OPTIONS+=	multibyte
+.endif
 .include "../../mk/bsd.options.mk"
 
 ##
