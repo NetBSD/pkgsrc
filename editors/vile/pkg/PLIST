@@ -1,19 +1,44 @@
-@comment $NetBSD: PLIST,v 1.4 1998/10/05 12:30:52 agc Exp $
+@comment $NetBSD: PLIST,v 1.5 1999/06/26 23:04:52 agc Exp $
 bin/vile
-bin/vile-c-filt
-bin/vile-crypt
-bin/vile-manfilt
-bin/vile-pas-filt
 man/man1/vile.1.gz
+libexec/vile-c-filt
+libexec/vile-crypt
+libexec/vile-manfilt
+libexec/vile-pas-filt
+libexec/vile-ada-filt
+libexec/vile-awk-filt
+libexec/vile-bat-filt
+libexec/vile-dcl-filt
+libexec/vile-diff-filt
+libexec/vile-html-filt
+libexec/vile-latex-filt
+libexec/vile-lex-filt
+libexec/vile-mail-filt
+libexec/vile-make-filt
+libexec/vile-mms-filt
+libexec/vile-nr-filt
+libexec/vile-perl-filt
+libexec/vile-sh-filt
+libexec/vile-spell-filt
+libexec/vile-sql-filt
+libexec/vile-tc-filt
+libexec/vile-tcl-filt
+libexec/vile-txt-filt
+libexec/vile-ti-filt
+libexec/vile-vile-filt
+libexec/vile-yacc-filt
+share/vile/perl/Vileserv.pm
+share/vile/perl/dir.pl
 share/vile/perl/glob2re.pl
 share/vile/perl/hgrep.pl
 share/vile/perl/hilite.pl
 share/vile/perl/manfilt.pl
+share/vile/perl/mime.pl
+share/vile/perl/plugins.pl
 share/vile/perl/search.pl
 share/vile/perl/shell.pl
 share/vile/perl/syntax.pl
 share/vile/perl/tailf.pl
 share/vile/perl/visit.pl
-share/vile/vile.hlp
 @dirrm share/vile/perl
 @dirrm share/vile
