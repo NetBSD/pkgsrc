@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/05/02 13:28:15 bouyer Exp $
+# $NetBSD: Makefile,v 1.2 2002/08/19 02:37:39 kei Exp $
 # FreeBSD Id: Makefile,v 1.9 1997/03/08 05:00:11 gpalmer Exp
 #
 
@@ -15,8 +15,9 @@ USE_X11=		yes
 .include "../../mk/bsd.prefs.mk"
 .include "../../sysutils/amanda-dev-common/Makefile.common"
 
-CONFIGURE_ARGS+=	--without-client --without-restore \
-			--without-restore --without-amrecover
+CONFIGURE_ARGS+=	--without-client
+CONFIGURE_ARGS+=	--without-restore
+CONFIGURE_ARGS+=	--without-amrecover
 CONFIGURE_ENV+=		GNUPLOT="${LOCALBASE}/bin/gnuplot"
 
 .include "../../mk/bsd.pkg.mk"
