@@ -1,17 +1,16 @@
-# $NetBSD: Makefile,v 1.11 2005/03/16 13:29:46 martti Exp $
+# $NetBSD: Makefile,v 1.12 2005/04/06 15:02:05 adam Exp $
 
-DISTNAME=		dbh-1.0.22
-CATEGORIES=		databases
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=dbh/}
+DISTNAME=	dbh-1.0.24
+CATEGORIES=	databases
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dbh/}
 
-MAINTAINER=		tech-pkg@NetBSD.org
-HOMEPAGE=		http://dbh.sourceforge.net/
-COMMENT=		Library to create disk based Hashtables
+MAINTAINER=	tech-pkg@NetBSD.org
+HOMEPAGE=	http://dbh.sourceforge.net/
+COMMENT=	Library to create disk based Hashtables
 
-GNU_CONFIGURE=		yes
 USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
-PKGCONFIG_OVERRIDE=	src/dbh-1.0.pc.in
+GNU_CONFIGURE=		yes
 
 # Avoid an ICE in gcc2 on sparc64
 CONFIGURE_ENV+=		F77=${FALSE}
