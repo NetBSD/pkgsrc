@@ -1,10 +1,10 @@
---- makedepend.SH.orig  Mon Sep  8 21:27:36 1997
-+++ makedepend.SH       Mon Sep  8 21:29:04 1997
-@@ -60,6 +60,7 @@
+--- makedepend.SH.BAK	Wed Nov 19 23:11:49 1997
++++ makedepend.SH	Wed Nov 19 23:12:34 1997
+@@ -66,6 +66,7 @@
      # to be out of date.  I don't know if OS/2 has touch, so do this:
      case "$osname" in
      os2) ;;
-+    freebsd) ;;
++    netbsd) ;;
      *) $touch $firstmakefile ;;
      esac
  fi
