@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.8 2002/10/13 07:16:53 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.9 2002/10/15 11:39:13 tron Exp $
 
 .if !defined(KDELIBS2_BUILDLINK2_MK)
 KDELIBS2_BUILDLINK2_MK=	# defined
@@ -12,7 +12,7 @@ BUILDLINK_PKGSRCDIR.kdelibs2?=	../../x11/kdelibs2
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.kdelibs2=kdelibs
 BUILDLINK_PREFIX.kdelibs2_DEFAULT=	${X11PREFIX}
-BUIDLINK_FILES_CMD.kdelibs2= \
+BUILDLINK_FILES_CMD.kdelibs2= \
 	${BUILDLINK_PLIST_CMD.kdelibs2} | ${GREP} '^\(include\|lib\)'
 
 KDEDIR=				${BUILDLINK_PREFIX.kdelibs2}
