@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/01/24 20:51:55 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2002/01/25 00:18:59 jlam Exp $
 
 DISTNAME=	sqwebmail-3.3.1
 CATEGORIES=	www
@@ -70,6 +70,12 @@ FILES_SUBST+=		GEN_FILES=${GEN_FILES:Q}
 MESSAGE_SUBST+=		IMAGEDIR=${IMAGEDIR}
 
 pre-configure: configure-init
+
+post-configure:
+	cd ${WRKSRC}/ldapaddressbook; for file in ldapsearch; do	\
+		${SED}	-e "s|@SED@|${SED}|g" $${file} > $${file}.new;	\
+		${MV} -f $${file}.new $${file};				\
+	done
 
 post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/sysconftool ${SYSCONFTOOL}
