@@ -1,5 +1,7 @@
 #!/bin/sh
 
+PATH=/bin:/usr/bin:$PATH
+
 while [ $# -gt 1 ]; do
     case $1 in
 	-g) gid="$2" ;;
@@ -7,6 +9,24 @@ while [ $# -gt 1 ]; do
     esac
     shift; shift
 done
+
+getnextgid()
+{
+    # See the comments in useradd for more details.
+
+    used_gids=`nireport . /groups gid`
+    low_gid=300
+
+    maybe_gid=$low_gid
+    while true; do
+        if echo $used_gids | grep -q $maybe_gid; then
+            maybe_gid=`expr $maybe_gid + 1`
+        else
+            echo $maybe_gid
+            return 0
+        fi
+    done
+}
 
 group="$1"
 if [ -z "$group" ]; then
@@ -25,14 +45,7 @@ if [ -n "$gid" ]; then
 	exit 1
     fi
 else
-    # Find a good unused gid. See the comments in useradd for
-    # more details
-    gid=300
-    nireport . /groups gid | sort -n | while read used_gid; do
-	if [ $gid = $used_gid ]; then
-	    gid=`expr $gid + 1`
-	fi
-    done
+    gid=`getnextgid`
 fi
 
 echo "${group}:*:${gid}:" | niload group .
