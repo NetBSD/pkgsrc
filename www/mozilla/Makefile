@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.88 2002/06/06 02:05:57 taya Exp $
+# $NetBSD: Makefile,v 1.89 2002/06/12 00:48:32 dmcmahill Exp $
 
 MOZ_VER=	1.0
 DISTNAME=	mozilla-source-${MOZ_VER}
@@ -48,6 +48,10 @@ CONFIGURE_ENV+=	LIBRUNPATH=${MOZ_LIBDIR}
 MAKE_ENV+=	MOZ_INTERNAL_LIBART_LGPL=1
 CONFIGURE_ENV+=	MOZ_INTERNAL_LIBART_LGPL=1
 LDFLAGS+=	-Wl,-R${MOZ_LIBDIR}
+
+# avoid creating a .mozilla directory in the users home
+# directory
+SCRIPTS_ENV+=	HOME="${WRKDIR}"
 
 PLIST_SRC=      ${PKGDIR}/PLIST-${OBJECT_FMT}
 
