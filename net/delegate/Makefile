@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1999/03/01 06:46:32 rh Exp $
+# $NetBSD: Makefile,v 1.4 1999/04/04 18:01:38 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.14 1998/11/09 09:24:20 max Exp
 #
 
@@ -14,8 +14,6 @@ MASTER_SITES=	ftp://etlport.etl.go.jp/pub/DeleGate/ \
 
 MAINTAINER=	packages@NetBSD.ORG
 HOMEPAGE=	http://wall.etl.go.jp/delegate/
-
-MAKE_ENV=	PATH=$${PATH}:.
 
 DELEGATE_MANAGER?=	root@localhost
 
