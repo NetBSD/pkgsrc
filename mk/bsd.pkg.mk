@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.398 2000/02/01 16:30:07 rh Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.399 2000/02/02 16:28:55 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -559,9 +559,7 @@ PKGTOOLS_VERSION!= ${IDENT} ${PKG_CREATE} ${PKG_DELETE} ${PKG_INFO} ${PKG_ADD} |
 MAKEFLAGS+=	" PKGTOOLS_VERSION=${PKGTOOLS_VERSION}"
 
 # Latest version of pkgtools required for this file.
-# XXX See below for a few test on PKGTOOLS_VERSION > 19991123
-#     that can be removed when this is bumped. (size code - HF)
-PKGTOOLS_REQD=		19990909
+PKGTOOLS_REQD=		20000202
 
 # Check that we're using up-to-date pkg_* tools with this file.
 uptodate-pkgtools:
@@ -589,13 +587,8 @@ SIZE_ALL_FILE=		${WRKDIR}/SizeAll
 .ifndef PKG_ARGS
 PKG_ARGS=		-v -c ${COMMENT} -d ${DESCR} -f ${PLIST} -l
 PKG_ARGS+=		-b ${BUILD_VERSION_FILE} -B ${BUILD_INFO_FILE}
-.if ${PKGTOOLS_VERSION} > 19991123
-# Size storing options, only available since 19991123 or so
-# I don't want to force people using this.
-# This .if block should be removed next time PKGTOOLS_REQD is bumped.
 PKG_ARGS+=		-s ${SIZE_PKG_FILE} -S ${SIZE_ALL_FILE}
-.endif 	# ${PKGTOOLS_VERSION) > 19991123
-PKG_ARGS+=		-p ${PREFIX} -P "`${MAKE} package-depends PACKAGE_DEPENDS_WITH_PATTERNS=false|sort -u`"
+PKG_ARGS+=		-p ${PREFIX} -P "`${MAKE} package-depends|sort -u`"
 .ifdef CONFLICTS
 PKG_ARGS+=		-C "${CONFLICTS}"
 .endif
@@ -2103,7 +2096,7 @@ package-path:
 
 # Show (recursively) all the packages this package depends on.
 # if PACKAGE_DEPENDS_WITH_PATTERNS is set, print as pattern (if possible)
-PACKAGE_DEPENDS_WITH_PATTERNS?=false
+PACKAGE_DEPENDS_WITH_PATTERNS?=true
 .if !target(package-depends)
 package-depends:
 .for dep in ${DEPENDS}
@@ -2393,7 +2386,7 @@ describe:
 	${ECHO} -n "|";							\
 	case "A${RUN_DEPENDS}B${DEPENDS}C" in				\
 		ABC) ;;							\
-		*) cd ${.CURDIR} && ${ECHO} -n `${MAKE} package-depends PACKAGE_DEPENDS_WITH_PATTERNS=true|sort -u`;; \
+		*) cd ${.CURDIR} && ${ECHO} -n `${MAKE} package-depends|sort -u`;; \
 	esac;								\
 	${ECHO} -n "|";							\
 	if [ "${ONLY_FOR_ARCHS}" = "" ]; then				\
@@ -2571,9 +2564,7 @@ fake-pkg: ${PLIST} ${DESCR}
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -rf ${PKG_DBDIR}/${PKGNAME}
 .endif
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${BUILD_VERSION_FILE} ${BUILD_INFO_FILE}
-.if ${PKGTOOLS_VERSION} > 19991123
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${SIZE_PKG_FILE} ${SIZE_ALL_FILE}
-.endif # ${PKGTOOLS_VERSION} > 19991123
 	${_PKG_SILENT}${_PKG_DEBUG}files="";				\
 	for f in ${.CURDIR}/Makefile ${FILESDIR}/* ${PKGDIR}/*; do	\
 		if [ -f $$f ]; then					\
@@ -2609,10 +2600,8 @@ fake-pkg: ${PLIST} ${DESCR}
 	@${ECHO} "GMAKE=	`${GMAKE} --version | ${GREP} version`" >> ${BUILD_INFO_FILE}
 .endif
 	@${ECHO} "_PKGTOOLS_VER= ${PKGTOOLS_VERSION}" >> ${BUILD_INFO_FILE}
-.if ${PKGTOOLS_VERSION} > 19991123
 	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} print-pkg-size                       >${SIZE_PKG_FILE}
 	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} print-pkg-size SIZEDEPENDS=yesplease >${SIZE_ALL_FILE}
-.endif # ${PKGTOOLS_VERSION} > 19991123
 	${_PKG_SILENT}${_PKG_DEBUG}if [ ! -d ${PKG_DBDIR}/${PKGNAME} ]; then			\
 		${ECHO_MSG} "===>  Registering installation for ${PKGNAME}"; \
 		${MKDIR} ${PKG_DBDIR}/${PKGNAME};			\
@@ -2647,7 +2636,7 @@ fake-pkg: ${PLIST} ${DESCR}
 				${CP} ${MESSAGE_FILE} ${PKG_DBDIR}/${PKGNAME}/+DISPLAY; \
 			fi;						\
 		fi;							\
-		for dep in `${MAKE} package-depends PACKAGE_DEPENDS_WITH_PATTERNS=true ECHO_MSG=${TRUE} | sort -u`; do \
+		for dep in `${MAKE} package-depends ECHO_MSG=${TRUE} | sort -u`; do \
 			realdep="`${PKG_INFO} -e \"$$dep\" || ${TRUE}`" ; \
 			if [ `${ECHO} $$realdep | wc -w` -gt 1 ]; then 				\
 				${ECHO} '***' "WARNING: '$$dep' expands to several installed packages " ; \
