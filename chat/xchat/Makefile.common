@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.10 2002/11/30 12:41:07 salo Exp $
+# $NetBSD: Makefile.common,v 1.11 2002/12/02 22:15:16 jlam Exp $
 
 DISTNAME=	xchat-1.8.10
 PKGREVISION=	2
@@ -27,7 +27,6 @@ USE_PKGLOCALEDIR=	YES
 USE_X11BASE=		YES
 USE_GMAKE=		YES
 USE_PERL5=		YES
-CONFIGURE_ARGS+=	--with-libintl-prefix=${BUILDLINK_PREFIX.gettext}
 CONFIGURE_ARGS+=	--enable-python
 
 BUILD_DEFS+=		USE_INET6 USE_SOCKS
