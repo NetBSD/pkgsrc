@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8464 2004/12/26 22:35:46 jlam Exp $
+$NetBSD: CHANGES,v 1.8465 2004/12/26 22:56:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -6578,3 +6578,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated polsms to 2.0.2 [zuntum 2004-12-26]
 	Updated gss to 0.0.15 [wiz 2004-12-26]
 	Added p5-Kwiki-Icons-Gnome-0.14 [jlam 2004-12-26]
+	Updated gsasl to 0.2.3 [wiz 2004-12-26]
