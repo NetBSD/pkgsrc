@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.6 2003/09/16 13:57:19 xtraeme Exp $
+
+--- src/Makefile.in.orig	2003-09-16 15:51:43.000000000 +0200
++++ src/Makefile.in	2003-09-16 15:52:08.000000000 +0200
+@@ -87,7 +87,7 @@
+ 	if [ ! -d $(DESTDIR)$(exec_prefix) ] ; then $(mkinstalldirs) $(DESTDIR)$(exec_prefix) ; fi
+ 	if [ ! -d $(DESTDIR)$(bindir) ] ; then $(mkinstalldirs) $(DESTDIR)$(bindir) ; fi
+ 	case "@host_os@" in \
+-	  hpux* | freebsd*) $(CC) $(LDFLAGS) $(iconv_LDFLAGS) iconv.@OBJEXT@ ../srclib/libicrt.a -L$(libdir) -liconv @LIBINTL@ -o iconv;; \
++	  hpux*) $(CC) $(LDFLAGS) $(iconv_LDFLAGS) iconv.@OBJEXT@ ../srclib/libicrt.a -L$(libdir) -liconv @LIBINTL@ -o iconv;; \
+ 	  *) $(LIBTOOL_LINK) $(CC) $(LDFLAGS) $(iconv_LDFLAGS) iconv.@OBJEXT@ ../srclib/libicrt.a ../lib/libiconv.la @LTLIBINTL@ -o iconv;; \
+ 	esac
+ 	$(INSTALL_PROGRAM_ENV) $(LIBTOOL_INSTALL) $(INSTALL_PROGRAM) iconv $(DESTDIR)$(bindir)/iconv
