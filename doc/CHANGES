@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1731 2003/03/22 05:30:00 salo Exp $
+$NetBSD: CHANGES,v 1.1732 2003/03/22 05:46:11 dillo Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1248,3 +1248,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated fetchmail to 6.2.2 [wiz 2003-03-22]
 	Updated xnc to 4.4.7nb2 [dillo 2003-03-22]
 	Updated sylpheed-claws to 0.8.11nb1 [salo 2003-03-22]
+	Updated amp to 0.7.6nb1 [dillo 2003-03-22]
