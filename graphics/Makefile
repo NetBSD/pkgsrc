@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.102 2000/11/25 21:11:37 jtb Exp $
+# $NetBSD: Makefile,v 1.103 2000/11/26 22:53:04 jtb Exp $
 # FreeBSD Id: Makefile,v 1.53 1997/09/28 13:25:40 markm Exp
 #
 
+    SUBDIR += GMT
     SUBDIR += CompuPic
     SUBDIR += ImageMagick
     SUBDIR += Mesa
