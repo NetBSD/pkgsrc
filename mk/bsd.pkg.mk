@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.439 2000/05/30 17:25:20 tron Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.440 2000/05/30 21:35:32 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -854,8 +854,6 @@ EXTRACT_ONLY?=	${DISTFILES}
 	@${FALSE}
 .endif
 
-# Note this has to start with a capital letter (or more accurately, it
-#  shouldn't match "[a-z]*"), see the target "delete-package-links" below.
 PKGREPOSITORYSUBDIR?=	All
 PKGREPOSITORY?=		${PACKAGES}/${PKGREPOSITORYSUBDIR}
 PKGFILE?=		${PKGREPOSITORY}/${PKGNAME}${PKG_SUFX}
@@ -1379,7 +1377,8 @@ package-links:
 
 .if !target(delete-package-links)
 delete-package-links:
-	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${PACKAGES}/[a-z]*/${PKGNAME}${PKG_SUFX};
+	${_PKG_SILENT}${_PKG_DEBUG}\
+	${FIND} ${PACKAGES} -type l -name ${PKGNAME}${PKG_SUFX} | xargs ${RM} -f
 .endif
 
 .if !target(delete-package)
