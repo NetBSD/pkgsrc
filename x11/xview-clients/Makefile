@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2000/09/13 20:25:04 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2000/09/13 22:19:59 jlam Exp $
 # $FreeBSD Id: Makefile,v 1.11 1996/11/16 10:49:52 asami Exp
 #
 
@@ -19,12 +19,13 @@ USE_IMAKE=		# defined
 XMKMF=			${X11PREFIX}/bin/xvmkmf -a
 
 post-patch:
-	@${MV} ${WRKSRC}/olwm/openwin-menu-programs ${WRKSRC}/foo
-	@${SED} -e 's@XXX11BASEXXX@${PREFIX}@g' < ${WRKSRC}/foo > \
-		${WRKSRC}/olwm/openwin-menu-programs
-	@${RM} -f ${WRKSRC}/foo
-
-pre-install:
-	@cd ${WRKSRC}; ${MAKE} ${MAKE_FLAGS} ${MAKEFILE} install.man
+	@cd ${WRKSRC};					\
+	for file in olwm/openwin-menu-programs; do	\
+		${MV} -f $${file} $${file}.tmp;		\
+		${SED}	-e "s,@PREFIX@,${PREFIX},g"	\
+			-e "s,@X11BASE@,${X11BASE},g"	\
+			< $${file}.tmp > $${file};	\
+		${RM} -f $${file}.tmp;			\
+	done 
 
 .include "../../mk/bsd.pkg.mk"
