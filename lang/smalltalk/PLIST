@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2002/02/18 15:14:27 seb Exp $
+@comment $NetBSD: PLIST,v 1.5 2002/12/13 16:06:40 jschauma Exp $
 bin/gst
 bin/gst-config
 bin/gst-package
@@ -17,8 +17,8 @@ info/gst.info-16
 info/gst.info-17
 info/gst.info-18
 info/gst.info-19
-info/gst.info-20
 info/gst.info-2
+info/gst.info-20
 info/gst.info-3
 info/gst.info-4
 info/gst.info-5
@@ -27,21 +27,17 @@ info/gst.info-7
 info/gst.info-8
 info/gst.info-9
 @exec ${INSTALL_INFO} --info-dir=%D/info %D/info/gst.info
-lib/libgst.la
 lib/libgst.a
-lib/smalltalk/blox-tk-1.95.10.so
-lib/smalltalk/blox-tk.la
-lib/smalltalk/blox-tk.a
-lib/smalltalk/blox-tk.so
-lib/smalltalk/md5-1.95.10.so
-lib/smalltalk/md5.so
+lib/libgst.la
+lib/smalltalk/md5-${PKGVERSION}.so
 lib/smalltalk/md5.a
 lib/smalltalk/md5.la
-lib/smalltalk/regex-1.95.10.so
+lib/smalltalk/md5.so
+lib/smalltalk/regex-${PKGVERSION}.so
 lib/smalltalk/regex.a
 lib/smalltalk/regex.la
 lib/smalltalk/regex.so
-lib/smalltalk/tcp-1.95.10.so
+lib/smalltalk/tcp-${PKGVERSION}.so
 lib/smalltalk/tcp.a
 lib/smalltalk/tcp.la
 lib/smalltalk/tcp.so
@@ -113,19 +109,19 @@ share/smalltalk/examples/RegExp.st
 share/smalltalk/examples/Richards.st
 share/smalltalk/examples/SortCriter.st
 share/smalltalk/examples/Tokenizer.st
-share/smalltalk/examples/pepe.sed
-share/smalltalk/examples/xml.sed
 share/smalltalk/examples/blox/Man.st
 share/smalltalk/examples/blox/Tetris.st
 share/smalltalk/examples/modules/gdbm-c.st
 share/smalltalk/examples/modules/gdbm.st
-share/smalltalk/examples/modules/regex.st
 share/smalltalk/examples/modules/md5.st
+share/smalltalk/examples/modules/regex.st
+share/smalltalk/examples/pepe.sed
 share/smalltalk/examples/shell
+share/smalltalk/examples/xml.sed
 share/smalltalk/gst.im
 share/smalltalk/i18n/Collation.st
-share/smalltalk/i18n/GetText.st
 share/smalltalk/i18n/Expression.st
+share/smalltalk/i18n/GetText.st
 share/smalltalk/i18n/Load.st
 share/smalltalk/i18n/Locale.st
 share/smalltalk/i18n/Numbers.st
@@ -265,18 +261,19 @@ share/smalltalk/web/top.jpg
 share/smalltalk/xml/Id-DOM.st
 share/smalltalk/xml/Id-XWalker.st
 share/smalltalk/xml/XML.st
-@dirrm lib/smalltalk
+@dirrm share/smalltalk/xml
+@dirrm share/smalltalk/web
+@dirrm share/smalltalk/tcp
+@dirrm share/smalltalk/sunit
+@dirrm share/smalltalk/kernel
+@dirrm share/smalltalk/i18n
+@dirrm share/smalltalk/examples/modules
+@dirrm share/smalltalk/examples/blox
+@dirrm share/smalltalk/examples
+@dirrm share/smalltalk/compiler
 @dirrm share/smalltalk/blox/tk
+@exec ${MKDIR} %D/share/smalltalk/blox/gtk
 @dirrm share/smalltalk/blox/gtk
 @dirrm share/smalltalk/blox
-@dirrm share/smalltalk/compiler
-@dirrm share/smalltalk/examples/blox
-@dirrm share/smalltalk/examples/modules
-@dirrm share/smalltalk/examples
-@dirrm share/smalltalk/i18n
-@dirrm share/smalltalk/kernel
-@dirrm share/smalltalk/sunit
-@dirrm share/smalltalk/tcp
-@dirrm share/smalltalk/web
-@dirrm share/smalltalk/xml
 @dirrm share/smalltalk
+@dirrm lib/smalltalk
