@@ -1,6 +1,6 @@
 #! @SH@
 #
-# $Id: pkg_tarup,v 1.15 2004/08/09 21:13:37 cube Exp $
+# $Id: pkg_tarup,v 1.16 2004/10/06 15:27:28 erh Exp $
 #
 # Tar up installed package
 #
@@ -87,6 +87,7 @@ create_package()
 	check_and_add -r "${PKG_DBDIR}/${PKG}/+REQUIRE"
 	check_and_add -D "${PKG_DBDIR}/${PKG}/+DISPLAY"
 	check_and_add -m "${PKG_DBDIR}/${PKG}/+MTREE"		#NOTYET#
+	check_and_add -n "${PKG_DBDIR}/${PKG}/+PRESERVE"
 
 	PLIST=/tmp/+CONTENTS.$$
 	${SED} -n \
