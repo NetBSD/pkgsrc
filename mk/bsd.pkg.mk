@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1461 2004/05/19 01:27:03 jschauma Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1462 2004/05/19 03:26:09 jschauma Exp $
 #
 # This file is in the public domain.
 #
@@ -380,10 +380,6 @@ CONFIGURE_ENV+=		CONFIG_SHELL=${CONFIG_SHELL}
 CONFIGURE_ENV+=		install_sh=${INSTALL:Q}
 .endif
 
-.if defined(_OPSYS_GPATCH_REQD) && !empty(_OPSYS_GPATCH_REQD:M[yY][eE][sS])
-BUILD_DEPENDS+=		patch>=2.5.4:../../devel/patch
-.endif
-
 .if defined(_OPSYS_LIBTOOL_REQD)
 LIBTOOL_REQD=		${_OPSYS_LIBTOOL_REQD}
 .else
@@ -492,6 +488,9 @@ FETCH_CMD?=		/usr/bin/ftp
 TOUCH_FLAGS?=		-f
 
 # determine if we need a working patch(1).
+.if defined(_OPSYS_GPATCH_REQD) && !empty(_OPSYS_GPATCH_REQD:M[yY][eE][sS])
+_NEED_PATCH=		YES
+.else
 _NEED_PATCH!=		if [ -d ${PATCHDIR} ]; then \
 				if [ "`${ECHO} ${PATCHDIR}/patch-*`" != "${PATCHDIR}/patch-*" ]; then \
 					${ECHO} YES; \
@@ -501,6 +500,8 @@ _NEED_PATCH!=		if [ -d ${PATCHDIR} ]; then \
 			else \
 				${ECHO} NO; \
 			fi
+.endif
+
 .if defined(PATCHFILES)
 _NEED_PATCH=		YES
 .endif
