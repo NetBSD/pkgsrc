@@ -1,4 +1,4 @@
-# $NetBSD: ccc.mk,v 1.3 2004/11/23 00:46:26 dmcmahill Exp $
+# $NetBSD: ccc.mk,v 1.4 2004/11/23 05:24:28 jlam Exp $
 
 .if !defined(COMPILER_CCC_MK)
 COMPILER_CCC_MK=	defined
@@ -10,31 +10,31 @@ COMPILER_CCC_MK=	defined
 # requested by the package in USE_LANGUAGES.
 # 
 
-LANGUAGES.ccc=	c
+LANGUAGES.ccc=		c
 .if exists(/usr/lib/cmplrs/cxx)
-LANGUAGES.ccc+=	c++
+LANGUAGES.ccc+=		c++
 .endif
-_LANGUAGES.ccc=	# empty
+_LANGUAGES.ccc=		# empty
 .for _lang_ in ${USE_LANGUAGES}
 _LANGUAGES.ccc+=	${LANGUAGES.ccc:M${_lang_}}
 .endfor
 
-_CCC_DIR=		${WRKDIR}/.ccc
-_CCC_LINKS=		# empty
+_CCC_DIR=	${WRKDIR}/.ccc
+_CCC_LINKS=	# empty
 .if exists(/usr/bin/cc)
-_CCC_CC=		${_CCC_DIR}/cc
+_CCC_CC=	${_CCC_DIR}/cc
 _CCC_LINKS+=	_CCC_CC
-PKG_CC=			${_CCC_CC}
-CC=			${PKG_CC:T}
-CCPATH=			/usr/bin/cc
+PKG_CC=		${_CCC_CC}
+CC=		${PKG_CC:T}
+CCPATH=		/usr/bin/cc
 .endif
 
 .if exists(/usr/bin/cxx)
-_CCC_CXX=		${_CCC_DIR}/cxx
-_CCC_LINKS+=		_CCC_CXX
-PKG_CXX=		${_CCC_CXX}
-CXX=			${PKG_CXX:T}
-CXXPATH=		/usr/bin/cxx
+_CCC_CXX=	${_CCC_DIR}/cxx
+_CCC_LINKS+=	_CCC_CXX
+PKG_CXX=	${_CCC_CXX}
+CXX=		${PKG_CXX:T}
+CXXPATH=	/usr/bin/cxx
 .endif
 
 .if exists(/usr/bin/cc) && !defined(CC_VERSION_STRING)
