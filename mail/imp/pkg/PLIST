@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2001/07/29 14:25:06 bouyer Exp $
+@comment $NetBSD: PLIST,v 1.5 2001/07/31 12:50:12 bouyer Exp $
 share/doc/imp/CHANGES
 share/doc/imp/COPYING
 share/doc/imp/CREDITS
@@ -754,6 +754,7 @@ share/horde/imp/menu.php3
 share/horde/imp/message.php3
 share/horde/imp/newuser.php3
 share/horde/imp/poppassd.php3
+share/horde/imp/prefs.php3
 share/horde/imp/remote_login.php3
 share/horde/imp/scripts/imp-cleanup.cron
 share/horde/imp/scripts/pine2imp.pl
