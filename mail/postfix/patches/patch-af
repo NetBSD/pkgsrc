@@ -1,9 +1,9 @@
-$NetBSD: patch-af,v 1.9 2002/03/13 08:10:10 martti Exp $
+$NetBSD: patch-af,v 1.10 2002/03/27 07:17:10 martti Exp $
 
---- conf/main.cf.orig	Sun Mar  3 17:58:06 2002
-+++ conf/main.cf	Wed Mar 13 08:56:40 2002
+--- conf/main.cf.orig	Mon Mar 25 21:09:24 2002
++++ conf/main.cf	Wed Mar 27 07:33:47 2002
 @@ -1,3 +1,5 @@
-+#	$NetBSD: patch-af,v 1.9 2002/03/13 08:10:10 martti Exp $
++#	$NetBSD: patch-af,v 1.10 2002/03/27 07:17:10 martti Exp $
 +#
  # Global Postfix configuration file. This file lists only a subset
  # of all 100+ parameters. See the sample-xxx.cf files for a full list.
@@ -39,7 +39,7 @@ $NetBSD: patch-af,v 1.9 2002/03/13 08:10:10 martti Exp $
  
  # INTERNET HOST AND DOMAIN NAMES
  # 
-@@ -496,9 +503,8 @@
+@@ -497,9 +504,8 @@
  # the process marches on. If you use an X-based debugger, be sure to
  # set up your XAUTHORITY environment variable before starting Postfix.
  #
@@ -51,7 +51,7 @@ $NetBSD: patch-af,v 1.9 2002/03/13 08:10:10 martti Exp $
  
  # INSTALL-TIME CONFIGURATION INFORMATION
  #
-@@ -523,16 +529,16 @@
+@@ -524,16 +530,16 @@
  # commands.  This must be a group name with a numerical group ID that
  # is not shared with other accounts, not even with the Postfix account.
  #
