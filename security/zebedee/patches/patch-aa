@@ -1,0 +1,118 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/06/24 05:48:51 taca Exp $
+
+--- Makefile.orig	Sat Apr 14 02:41:22 2001
++++ Makefile
+@@ -18,13 +18,13 @@
+ CC_linux = gcc -pthread
+ CC_solaris = gcc
+ CC_freebsd = gcc -pthread
++CC_netbsd = cc
+ CC_tru64 = cc
+ CC = $(CC_$(OS))
+ 
+ # Optimise/debug compilation
+ 
+-#OPTIM = -Wall -g
+-OPTIM = -O3
++OPTIM = -Wall -O2
+ 
+ # Location of gmp include and library
+ #
+@@ -36,19 +36,19 @@
+ 
+ # Location of Blowfish include and library
+ 
+-BFINC = -I../blowfish-0.9.5a
+-BFLIB = ../blowfish-0.9.5a/libblowfish.a
++BFINC =
++BFLIB =
+ 
+ # Location of zlib include and library
+ 
+-ZINC = -I../zlib-1.1.3
+-ZLIB = ../zlib-1.1.3/libz.a
++ZINC =
++ZLIB = -lz
+ 
+ # Location of bzlib include and library
+ # Set these empty if you don't want bzib2 support
+ 
+-BZINC = -I../bzip2-1.0.1
+-BZLIB = ../bzip2-1.0.1/libbz2.a
++BZINC =
++BZLIB = -lbz2
+ 
+ #
+ # Tools needed for Perl "POD"-format documentation conversion.
+@@ -62,9 +62,9 @@
+ 
+ # Installation directories for the Linux/Solaris/*NIX World
+ 
+-ROOTDIR = /usr
++ROOTDIR = $(LOCALBASE)
+ BINDIR = $(ROOTDIR)/bin
+-ZBDDIR = $(ROOTDIR)/lib/zebedee
++ZBDDIR = $(ROOTDIR)/share/doc/zebedee
+ MANDIR = $(ROOTDIR)/man/man1
+ 
+ # This is a BSD-style install
+@@ -74,6 +74,7 @@
+ INSTALL_linux = install -c
+ INSTALL_solaris = /usr/ucb/install -c
+ INSTALL_freebsd = install -c
++INSTALL_netbsd = install -c
+ INSTALL_tru64 = installbsd -c
+ INSTALL = $(INSTALL_$(OS))
+ 
+@@ -104,6 +105,7 @@
+ DEFINES_linux = -DHAVE_PTHREADS
+ DEFINES_solaris = -D_REENTRANT -DHAVE_PTHREADS
+ DEFINES_freebsd = -DHAVE_PTHREADS -DBUGGY_FORK_WITH_THREADS
++DEFINES_netbsd =
+ DEFINES_tru64 = -D_REENTRANT -DHAVE_PTHREADS
+ DEFINES = $(DEFINES_$(OS))
+ 
+@@ -118,6 +120,7 @@
+ OSLIBS_linux = -lpthread
+ OSLIBS_solaris = -lsocket -lnsl -lthread
+ OSLIBS_freebsd =
++OSLIBS_netbsd = -lcrypto
+ OSLIBS_tru64 = -lpthread
+ OSLIBS = $(OSLIBS_$(OS))
+ 
+@@ -133,7 +136,7 @@
+ #### You REALLY shouldn't have to modify anything beyond here ...
+ ####
+ 
+-CFLAGS = $(OPTIM) $(DEFINES) -I. $(GMPINC) $(BFINC) $(ZINC) $(BZINC)
++CFLAGS = $(OPTIM) $(DEFINES) -I. $(GMPINC)
+ 
+ LIBS = $(GMPLIB) $(BFLIB) $(ZLIB) $(BZLIB) $(OSLIBS)
+ 
+@@ -150,7 +153,7 @@
+ all : precheck zebedee$(EXE) zebedee.1 zebedee.html ftpgw.tcl.1 ftpgw.tcl.html zebedee.ja_JP.html
+ 
+ precheck :
+-	@ if test -z "$(OS)"; then echo "Use '$(MAKE) OS=xxx' where xxx is win32, linux, solaris, freebsd or tru64"; exit 1; fi
++	@ if test -z "$(OS)"; then echo "Use '$(MAKE) OS=xxx' where xxx is win32, linux, solaris, freebsd, netbsd or tru64"; exit 1; fi
+ 
+ zebedee$(EXE) : $(OBJS)
+ 	$(CC) $(CFLAGS) -o zebedee$(EXE) $(OBJS) $(LIBS)
+@@ -182,12 +185,12 @@
+ 
+ install : precheck zebedee$(EXE) zebedee.1 ftpgw.tcl.1 $(ZBDFILES) $(TXTFILES)
+ 	-mkdir -p $(BINDIR) $(MANDIR) $(ZBDDIR)
+-	$(INSTALL) zebedee$(EXE) $(BINDIR)
++	$(INSTALL) -s -m 755 zebedee$(EXE) $(BINDIR)
+ 	$(INSTALL) -m 0755 ftpgw.tcl $(BINDIR)
+-	$(INSTALL) zebedee.1 $(MANDIR)
+-	$(INSTALL) ftpgw.tcl.1 $(MANDIR)
+-	$(INSTALL) $(ZBDFILES) $(ZBDDIR)
+-	$(INSTALL) $(TXTFILES) $(ZBDDIR)
++	$(INSTALL) -m 0444 zebedee.1 $(MANDIR)
++	$(INSTALL) -m 0444 ftpgw.tcl.1 $(MANDIR)
++	$(INSTALL) -m 0444 $(ZBDFILES) $(ZBDDIR)
++	$(INSTALL) -m 0444 $(TXTFILES) $(ZBDDIR)
+ 
+ clean : precheck
+ 	rm -f zebedee$(EXE) *.o core *.1 *.html *.tmp *.bak
