@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2003/01/16 15:40:12 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2004/03/10 18:17:11 wiz Exp $
 bin/calc
 bin/cscript/4dsphere
 bin/cscript/fproduct
@@ -44,6 +44,7 @@ include/calc/have_string.h
 include/calc/have_times.h
 include/calc/have_uid_t.h
 include/calc/have_unistd.h
+include/calc/have_unused.h
 include/calc/have_urandom.h
 include/calc/have_ustat.h
 include/calc/hist.h
