@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2002/07/03 03:24:49 jschauma Exp $
+@comment $NetBSD: PLIST,v 1.5 2002/08/01 09:32:16 wiz Exp $
 bin/gtk-config
 share/gtk/gtkrc.az
 share/gtk/gtkrc.be
@@ -238,10 +238,10 @@ ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/gtk+.mo
 share/themes/Default/gtk/gtkrc
 @exec test %D = ${LOCALBASE} || ln -s %D/share/aclocal/gtk.m4 ${LOCALBASE}/share/aclocal/gtk.m4
 @unexec test %D = ${LOCALBASE} || ${RM} ${LOCALBASE}/share/aclocal/gtk.m4
-@unexec ${RMDIR} %D/share/aclocal 2>/dev/null || true
+@unexec ${RMDIR} %D/share/aclocal 2>/dev/null || ${TRUE}
 @dirrm share/themes/Default/gtk
-@dirrm share/themes/Default
-@dirrm share/themes
+@unexec ${RMDIR} %D/share/themes/Default 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/themes 2>/dev/null || ${TRUE}
 @dirrm include/gtk-1.2/gtk
 @dirrm include/gtk-1.2/gdk
 @dirrm include/gtk-1.2
