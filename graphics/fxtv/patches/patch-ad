@@ -1,0 +1,32 @@
+$NetBSD: patch-ad,v 1.1.1.1 2000/05/07 20:34:13 tron Exp $
+
+--- remote.c.orig	Fri Nov  5 00:50:00 1999
++++ remote.c	Sun May  7 22:28:36 2000
+@@ -786,6 +786,7 @@
+                    char               rem_type[], 
+                    TVREMOTE_CB_FUNCT *cb )
+ {
++#ifndef __NetBSD__
+     char type_str[20];
+ 
+     /*  Branch to the appropriate Open method based on remote type.  */
+@@ -812,6 +813,7 @@
+           "are supported.\n" );
+         exit(1);
+     }
++#endif /* !__NetBSD__ */
+ }
+ 
+ 
+@@ -840,9 +842,11 @@
+ 
+ void TVREMOTEFlush( void )
+ {
++#ifndef __NetBSD__
+   switch ( Remote_type ) {
+     case REMOTE_TYPE_X10       :  TVX10REMOTEFlush();  break;
+     case REMOTE_TYPE_HAUPPAUGE :  TVHAUPREMOTEFlush(); break;
+     case REMOTE_TYPE_PIXELVIEW :  TVPIXELVIEWREMOTEFlush(); break;
+   }
++#endif /* !__NetBSD__ */
+ }
