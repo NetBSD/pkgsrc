@@ -1,14 +1,16 @@
-# $NetBSD: Makefile,v 1.5 2001/04/28 23:59:18 jtb Exp $
+# $NetBSD: Makefile,v 1.6 2001/05/06 00:08:29 jtb Exp $
 
-DISTNAME=		haskell-mode-20001129
+DISTNAME=		haskell-mode
+PKGNAME=		haskell-mode-20001129
 CATEGORIES=		devel editors
-MASTER_SITES=		${MASTER_SITE_LOCAL}
+MASTER_SITES=		http://www.haskell.org/haskell-mode/
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.haskell.org/haskell-mode/
 COMMENT=		Haskell mode for Emacs
 
-NO_SRC_ON_FTP=		Already in MASTER_SITE_LOCAL
+DIST_SUBDIR=		${PKGNAME}
+NO_WRKSUBDIR=		# defined
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -29,8 +31,9 @@ SRCS= 	haskell-doc.el haskell-mode.el haskell-font-lock.el		\
 	haskell-indent.el
 
 do-build:
-	for f in ${SRCS}; do \
-	${EMACS} --no-init-file --no-site-file -batch -f batch-byte-compile ${WRKSRC}/$$f; \
+	for f in ${SRCS}; do						\
+		${EMACS} --no-init-file --no-site-file -batch		\
+		-f batch-byte-compile ${WRKSRC}/$$f;			\
 	done
 
 do-install:
