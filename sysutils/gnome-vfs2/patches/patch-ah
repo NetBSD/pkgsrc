@@ -1,0 +1,13 @@
+$NetBSD: patch-ah,v 1.1 2002/09/11 23:07:52 rh Exp $
+
+--- modules/vfolder/Makefile.am.orig	Sat Sep  7 18:20:46 2002
++++ modules/vfolder/Makefile.am	Sat Sep  7 18:21:24 2002
+@@ -36,7 +36,7 @@
+ 
+ ###  Module setup
+ 
+-module_flags = -export_dynamic -avoid-version
++module_flags = -export_dynamic -avoid-version -L$(top_builddir)/libgnomevfs/.libs
+ modulesdir = $(libdir)/gnome-vfs-2.0/modules
+ 
+ modules_LTLIBRARIES = libvfolder-desktop.la
