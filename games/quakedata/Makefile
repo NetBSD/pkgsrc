@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2000/10/05 04:25:59 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2001/02/16 15:10:58 wiz Exp $
 # Based on FreeBSD ports/games/quakeserver
 # FreeBSD: ports/games/quakeserver/Makefile,v 1.20 1999/08/31 06:44:23 mharo Exp
 #
@@ -12,6 +12,7 @@ EXTRACT_SUFX=	.zip
 
 MAINTAINER=	itojun@kame.net
 HOMEPAGE=	http://www.idsoftware.com/
+COMMENT=	Game data files for Quake
 
 BUILD_DEPENDS=	unzip:../../archivers/unzip
 BUILD_DEPENDS+=	lha:../../archivers/lha

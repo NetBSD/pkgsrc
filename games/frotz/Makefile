@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/01/15 18:46:28 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/16 15:10:49 wiz Exp $
 #
 
 DISTNAME=	UnixFrotz232R2Std10
@@ -8,6 +8,7 @@ MASTER_SITES=	ftp://ftp.gmd.de/if-archive/infocom/interpreters/frotz/
 
 MAINTAINER=	seebs@plethora.net
 HOMEPAGE=	ftp://ftp.gmd.de/if-archive/infocom/interpreters/frotz/
+COMMENT=	Curses-based interpreter for Infocom-compatible games
 
 DEPENDS+=	ncurses>=4.2:../../devel/ncurses
 

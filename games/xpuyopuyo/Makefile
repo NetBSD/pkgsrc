@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/02/06 03:16:57 fredb Exp $
+# $NetBSD: Makefile,v 1.11 2001/02/16 15:11:04 wiz Exp $
 
 DISTNAME=		xpuyopuyo-0.9.1
 CATEGORIES=		games x11
@@ -7,6 +7,7 @@ MASTER_SITES=		http://chaos2.org/xpuyopuyo/ \
 
 MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://chaos2.org/xpuyopuyo/
+COMMENT=		Tetris-like puzzle game
 
 BUILD_DEPENDS+=		${LOCALBASE}/bin/autoreconf:../../devel/autoconf
 BUILD_DEPENDS+=		${LOCALBASE}/bin/automake:../../devel/automake

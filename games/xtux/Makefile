@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/11/17 06:45:11 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 2001/02/16 15:11:05 wiz Exp $
 #
 
 DISTNAME=	xtux-arena-src-nov-15
@@ -9,6 +9,7 @@ MASTER_SITES=	http://www.adelaide.net.au/~philaw/ \
 
 MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://xtux.sourceforge.net/
+COMMENT=	2D multi-player shootout using images from the Open Software scene
 
 USE_XPM=	yes
 USE_GMAKE=	yes
