@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2000/08/23 23:14:22 tron Exp $
+# $NetBSD: Makefile,v 1.10 2001/02/16 13:30:54 wiz Exp $
 #
 
 DISTNAME=		xwave2
@@ -7,6 +7,7 @@ CATEGORIES=		audio x11
 MASTER_SITES=		http://www.funet.fi/~kouhia/
 
 MAINTAINER=		hubertf@netbsd.org
+COMMENT=		Audio player/recorder/editor for the X Window System
 
 USE_IMAKE=		YES
 USE_XPM=		YES

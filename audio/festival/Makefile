@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2000/08/17 10:36:20 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2001/02/16 13:30:36 wiz Exp $
 
 DISTNAME=	festival-1.4.0
 WRKSRC=		${WRKDIR}
@@ -14,6 +14,7 @@ DISTFILES=	${DISTNAME}.tar.gz \
 
 MAINTAINER=	proff@iq.org
 HOMEPAGE=	http://www.cstr.ed.ac.uk/projects/festival.html
+COMMENT=	Festival is an advanced multi-lingual speech synthesis system
 
 DEPENDS+=	nas>=1.2.5:../../audio/nas
 

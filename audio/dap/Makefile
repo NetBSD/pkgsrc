@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2000/09/28 20:34:03 fredb Exp $
+# $NetBSD: Makefile,v 1.9 2001/02/16 13:30:34 wiz Exp $
 
 DISTNAME=		dap-2.1.1
 CATEGORIES=		audio
@@ -7,6 +7,7 @@ EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		scw@netbsd.org
 HOMEPAGE=		http://www.cee.hw.ac.uk/~richardk/
+COMMENT=		Digital audio recording and processing package
 
 DEPENDS+=		xforms>=0.88nb1:../../x11/xforms
 

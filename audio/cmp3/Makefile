@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/02/10 14:18:35 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 2001/02/16 13:30:34 wiz Exp $
 # FreeBSD: ports/audio/cmp3/Makefile,v 1.13 2001/02/04 21:12:44 olgeni Exp
 #
 
@@ -9,6 +9,7 @@ MASTER_SITES=	http://www.personal.psu.edu/users/n/k/nkk104/cmp3/
 
 MAINTAINER=	rxg@ms25.url.com.tw
 HOMEPAGE=	http://www.personal.psu.edu/nkk104/cmp3/
+COMMENT=	ncurses based frontend to mpg123
 
 DEPENDS+=	mpg123-*:../../audio/mpg123
 

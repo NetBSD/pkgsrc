@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/01/11 20:01:33 dent Exp $
+# $NetBSD: Makefile,v 1.11 2001/02/16 13:30:50 wiz Exp $
 # FreeBSD Id: Makefile,v 1.4 1997/08/09 23:37:33 fenner Exp 
 #
 
@@ -14,6 +14,7 @@ MASTER_SITES=		http://my.netian.com/~polarb/ \
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://splay.sourceforge.net/
+COMMENT=		Audio player/decoder that decodes MPEG Layer I,II,III and WAV files
 
 # endian and alignment issues
 NOT_FOR_PLATFORM=      *-*-sparc *-*-m68k *-*-macppc *-*-sparc64

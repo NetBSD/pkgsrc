@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1999/12/28 04:19:59 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2001/02/16 13:30:36 wiz Exp $
 
 DISTNAME=	OGIspanish-2.0
 PKGNAME=	festogi-spanish-2.0
@@ -8,6 +8,7 @@ MASTER_SITES=	ftp://cslu.cse.ogi.edu/pub/tts/
 
 MAINTAINER=	proff@iq.org
 HOMEPAGE=	http://cslu.cse.ogi.edu/tts
+COMMENT=	Festival Spanish (Mexican) language support routines (in scheme)
 
 DEPENDS+=	festival-1.4.0:../festival
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/11/11 17:49:23 tron Exp $
+# $NetBSD: Makefile,v 1.4 2001/02/16 13:30:49 wiz Exp $
 #
 
 DISTNAME=	rio500-0.7
@@ -7,6 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=rio500/}
 
 MAINTAINER=	ad@netbsd.org
 HOMEPAGE=	http://rio500.sourceforge.net/
+COMMENT=	Utilities to manage your Diamond Rio 500 MP3 player
 
 DEPENDS+=	glib>=1.2.0:../../devel/glib
 

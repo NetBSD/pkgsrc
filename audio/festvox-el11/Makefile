@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1999/12/28 04:19:59 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2001/02/16 13:30:37 wiz Exp $
 
 DISTNAME=	festvox_ellpc11k
 PKGNAME=	festvox-el11-1.4.0
@@ -8,6 +8,7 @@ MASTER_SITES=	ftp://ftp.cstr.ed.ac.uk/pub/festival/1.4.0/
 
 MAINTAINER=	proff@iq.org
 HOMEPAGE=	http://www.cstr.ed.ac.uk/projects/festival.html
+COMMENT=	Castilian Spanish male voice for the festival speech synthesis system
 
 DEPENDS+=	festival-1.4.0:../festival
 

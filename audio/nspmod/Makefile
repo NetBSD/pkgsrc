@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 1999/04/15 20:39:40 tron Exp $
+# $NetBSD: Makefile,v 1.9 2001/02/16 13:30:48 wiz Exp $
 #
 
 DISTNAME=	nspmod-0.1
@@ -8,6 +8,7 @@ MASTER_SITES=	http://www.jeton.or.jp/users/toru/www/orgsoft/nspmod/	\
 
 MAINTAINER=	mycroft@NetBSD.ORG
 HOMEPAGE=	http://www.jeton.or.jp/users/toru/www/orgsoft/index.html
+COMMENT=	MOD/S3M/MTM tracker that does it's own DSP, uses VoxWare v2.90+
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/nspmod ${PREFIX}/bin

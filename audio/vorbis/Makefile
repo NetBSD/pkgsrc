@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2000/10/18 13:49:42 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2001/02/16 13:30:51 wiz Exp $
 #
 
 DISTNAME=       vorbis_nightly_cvs-20000818
@@ -12,6 +12,7 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.vorbis.com/
+COMMENT=	Encoder/decoder for Ogg Vorbis audio coding format
 
 .if !exists(/usr/include/getopt.h)
 DEPENDS+=	libgetopt>=1.3:../../devel/libgetopt

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2000/12/17 01:37:40 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2001/02/16 13:30:50 wiz Exp $
 #
 
 DISTNAME=	TiMidity++-2.10.2
@@ -9,6 +9,7 @@ EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.goice.co.jp/member/mo/timidity/
+COMMENT=	MIDI to WAV renderer and player
 
 DEPENDS+=	gtk+>=1.2.8:../../x11/gtk
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2000/09/09 17:33:13 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2001/02/16 13:30:53 wiz Exp $
 #
 
 DISTNAME=	xmcd-2.6
@@ -7,6 +7,7 @@ MASTER_SITES=	http://metalab.unc.edu/tkan/download/xmcd/src/
 
 MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://metalab.unc.edu/tkan/xmcd/
+COMMENT=	Motif CD player
 
 DEPENDS+=	ncurses>=4.2:../../devel/ncurses
 

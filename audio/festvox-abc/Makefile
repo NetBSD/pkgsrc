@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2000/02/15 09:26:13 agc Exp $
+# $NetBSD: Makefile,v 1.11 2001/02/16 13:30:37 wiz Exp $
 
 DISTNAME=	voice_abc_di-2.0
 PKGNAME=	festvox-abc-2.0
@@ -8,6 +8,7 @@ MASTER_SITES=	ftp://cslu.cse.ogi.edu/pub/tts/
 
 MAINTAINER=	proff@iq.org
 HOMEPAGE=	http://cslu.cse.ogi.edu/tts
+COMMENT=	Mexican Spanish male voice for the festival speech synthesis system
 
 DEPENDS+=	festival-1.4.0:../festival
 DEPENDS+=	festlex-ogi-2.0:../festlex-ogi

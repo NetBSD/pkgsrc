@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2000/08/18 22:46:31 hubertf Exp $
+# $NetBSD: Makefile,v 1.15 2001/02/16 13:30:51 wiz Exp $
 # FreeBSD Id: Makefile,v 1.29 1996/12/20 23:46:22 ache Exp 
 #
 
@@ -8,6 +8,7 @@ MASTER_SITES=		ftp://ftp.uni-trier.de/pub/unix/audio/tracker/
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		packages@netbsd.org
+COMMENT=		MOD player
 
 RESTRICTED=		"Non-redistributable beta"
 NO_BIN_ON_FTP=		${RESTRICTED}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2000/03/16 15:30:52 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2001/02/16 13:37:54 wiz Exp $
 
 DISTNAME=		linpackc
 PKGNAME=		linpack-940225
@@ -7,6 +7,7 @@ MASTER_SITES=		http://www.netlib.org/benchmark/
 EXTRACT_SUFX=		# empty
 
 MAINTAINER=		root@garbled.net
+COMMENT=		Collection of benchmarks for floating point
 
 NO_WRKSUBDIR=		yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2000/12/13 16:35:23 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2001/02/16 13:30:44 wiz Exp $
 # FreeBSD Id: Makefile,v 1.2 1999/01/27 08:31:48 fenner Exp
 #
 
@@ -10,6 +10,7 @@ MASTER_SITES=		ftp://ftp.68k.org/pub/michael/ \
 
 MAINTAINER=		tron@netbsd.org
 HOMEPAGE=		http://andromeda.68k.org/~michael/audiofile/
+COMMENT=		Sound library for SGI audio file
 
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES

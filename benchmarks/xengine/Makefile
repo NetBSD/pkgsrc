@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/04/03 15:55:23 sakamoto Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/16 13:37:59 wiz Exp $
 # FreeBSD Id: ports/benchmarks/xengine/Makefile,v 1.9 2000/02/02 22:31:24 mharo Exp
 
 DISTNAME=	xengine-1.0.1
@@ -9,6 +9,7 @@ DISTFILES=	part01.z patch1.z
 PATCH_DIST_STRIP=	-p1	# no ${PATCHFILES} but used below
 
 MAINTAINER=	sakamoto@netbsd.org
+COMMENT=	Reciprocating engine for X
 
 BUILD_DEPENDS=	gunshar:../../archivers/gsharutils
 
