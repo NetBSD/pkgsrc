@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/12/23 09:13:57 xtraeme Exp $
+
+SHA1 (acme-2.4.2.tar.bz2) = 8a13b09b841488d7363fda4da1f6d96de1628cf5
+Size (acme-2.4.2.tar.bz2) = 292107 bytes
+SHA1 (patch-aa) = dd8f5f3aaea16b95b01e89aa44fc4a4c49d4bdf4
+SHA1 (patch-ab) = 0182be1de5e98a3b969d6b590ec23af35837835c
