@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.184 2004/06/01 21:50:37 kristerw Exp $
+# $NetBSD: Makefile,v 1.185 2004/06/15 18:46:27 kristerw Exp $
 #
 
 COMMENT=	Security tools
@@ -92,6 +92,7 @@ SUBDIR+=	nfsbug
 SUBDIR+=	nikto
 SUBDIR+=	opencdk
 SUBDIR+=	openssh
+SUBDIR+=	openssh+gssapi
 SUBDIR+=	openssl
 SUBDIR+=	otpcalc
 SUBDIR+=	p0f
