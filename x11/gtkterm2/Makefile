@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.2 2004/10/03 00:18:34 tv Exp $
+# $NetBSD: Makefile,v 1.3 2004/11/19 09:55:13 adam Exp $
 
-DISTNAME=		gtkterm2-0.2.1
-PKGREVISION=	1
-CATEGORIES=		x11
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gtkterm/}
+DISTNAME=	gtkterm2-0.2.3
+CATEGORIES=	x11
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gtkterm/}
 
-MAINTAINER=		yui@yui.pe.kr
-HOMEPAGE=		http://gtkterm.feige.net/
-COMMENT=		Simple GTK-2 terminal with tabs
+MAINTAINER=	yui@yui.pe.kr
+HOMEPAGE=	http://gtkterm.feige.net/
+COMMENT=	Simple GTK-2 terminal with tabs
 
 USE_LIBTOOL=		YES
 USE_BUILDLINK3=		YES
