@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.9 2001/11/30 17:21:57 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.10 2001/12/23 17:11:30 bjoern Exp $
 #
 # This Makefile fragment is included by packages that use tk.
 #
@@ -17,14 +17,14 @@ TK_BUILDLINK_MK=	# defined
 
 .include "../../mk/bsd.buildlink.mk"
 
-BUILDLINK_DEPENDS.tk?=	tk>=8.3.2
+BUILDLINK_DEPENDS.tk?=	tk>=8.3.4
 DEPENDS+=		${BUILDLINK_DEPENDS.tk}:../../x11/tk
 
 EVAL_PREFIX+=		BUILDLINK_PREFIX.tk=tk
 BUILDLINK_PREFIX.tk_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.tk=	include/tk.h
-BUILDLINK_FILES.tk+=	include/tkInt.h
 BUILDLINK_FILES.tk+=	include/tkDecls.h
+BUILDLINK_FILES.tk+=	include/tkPlatDecls.h
 BUILDLINK_FILES.tk+=	include/tkIntXlibDecls.h
 BUILDLINK_FILES.tk+=	include/tk/*/*.h
 BUILDLINK_FILES.tk+=	lib/libtk83.*
