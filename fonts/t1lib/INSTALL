@@ -1,0 +1,36 @@
+#!/bin/sh
+#
+# $NetBSD: INSTALL,v 1.1.1.1 2002/07/19 12:37:41 wiz Exp $
+
+PKGNAME=$1
+STAGE=$2
+
+case ${STAGE} in
+PRE-INSTALL)
+	;;
+POST-INSTALL)
+	CONFDIR=${PKG_PREFIX}/share/t1lib
+
+	echo "Installing configuration files:"
+	if [ ! -f ${CONFDIR}/t1lib.config ]
+	then
+		echo "	t1lib.config"
+		cp ${PKG_PREFIX}/share/examples/t1lib/t1lib.config.netbsd \
+			${CONFDIR}/t1lib.config
+		chmod 644 ${CONFDIR}/t1lib.config
+	fi
+	if [ ! -f ${CONFDIR}/FontDataBase ]
+	then
+		echo "	FontDataBase"
+		cp ${PKG_PREFIX}/share/examples/t1lib/FontDataBase \
+			${CONFDIR}/FontDataBase
+		chmod 644 ${CONFDIR}/FontDataBase
+	fi
+	echo "done."
+	;;
+*)
+	echo "Unexpected argument: $2"
+	exit 1
+	;;
+esac
+exit 0
