@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.1.1.1 1999/11/17 17:34:39 wennmach Exp $
+$NetBSD: patch-af,v 1.2 2000/05/07 12:50:52 wulf Exp $
 
---- contrib/log2rrd/Makefile.in.ORIG	Sat Oct 30 20:35:34 1999
-+++ contrib/log2rrd/Makefile.in	Sat Oct 30 20:37:05 1999
-@@ -77,7 +77,7 @@
+--- contrib/log2rrd/Makefile.in.orig	Tue May  2 21:22:46 2000
++++ contrib/log2rrd/Makefile.in	Sat May  6 01:07:16 2000
+@@ -85,7 +85,7 @@
  
  EXTRA_DIST = log2rrd.pl.in
  

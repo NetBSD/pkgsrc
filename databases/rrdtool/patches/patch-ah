@@ -1,10 +1,10 @@
-$NetBSD: patch-ah,v 1.3 2000/02/25 22:12:59 dmcmahill Exp $
+$NetBSD: patch-ah,v 1.4 2000/05/07 12:50:52 wulf Exp $
 
---- src/Makefile.in.orig	Fri Aug 27 13:20:25 1999
-+++ src/Makefile.in	Fri Feb 18 14:21:20 2000
-@@ -76,12 +76,7 @@
- PERL = @PERL@
- RANLIB = @RANLIB@
+--- src/Makefile.in.orig	Tue May  2 04:52:33 2000
++++ src/Makefile.in	Wed May  3 21:04:46 2000
+@@ -84,12 +84,7 @@
+ TCL_SHLIB_SUFFIX = @TCL_SHLIB_SUFFIX@
+ VERSION = @VERSION@
  
 -CGI_LIB_DIR = $(top_srcdir)/@CGI_LIB_DIR@
 -GD_LIB_DIR = $(top_srcdir)/@GD_LIB_DIR@
@@ -16,16 +16,16 @@ $NetBSD: patch-ah,v 1.3 2000/02/25 22:12:59 dmcmahill Exp $
  
  #COMPILE   = $(CC) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) $(CFLAGS_EXTRA)
  #LTCOMPILE = $(LIBTOOL) --mode=compile $(CC) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) $(CFLAGS_EXTRA)
-@@ -97,7 +92,7 @@
+@@ -105,7 +100,7 @@
  # creates a ./.lib/*.al file that contains the PIC compiled object
  # files.
  
 -RRD_LIBS =  	$(CGI_LIB_DIR)/librrd_cgi.la		$(GD_LIB_DIR)/librrd_gd.la		$(PNG_LIB_DIR)/librrd_png.la		$(ZLIB_LIB_DIR)/librrd_z.la
-+RRD_LIBS = -lz -lgd -lcgi -lpng
++RRD_LIBS = -lz -ljpeg -lgd -lcgi -lpng -lttf -lintl -lX11 -lXpm
  
  
  lib_LTLIBRARIES = librrd.la
-@@ -128,18 +123,12 @@
+@@ -138,18 +133,12 @@
  DEFS = @DEFS@ -I. -I$(srcdir) -I../config
  CPPFLAGS = @CPPFLAGS@
  LDFLAGS = @LDFLAGS@
@@ -33,28 +33,30 @@ $NetBSD: patch-ah,v 1.3 2000/02/25 22:12:59 dmcmahill Exp $
 -librrd_la_DEPENDENCIES =  $(CGI_LIB_DIR)/librrd_cgi.la \
 -$(GD_LIB_DIR)/librrd_gd.la $(PNG_LIB_DIR)/librrd_png.la \
 -$(ZLIB_LIB_DIR)/librrd_z.la
-+LIBS = @LIBS@ -lgd -lpng -lcgi -lz
++LIBS = @LIBS@ -ljpeg -lgd -lpng -lcgi -lz -lttf -lintl -lX11 -lXpm
  librrd_la_OBJECTS =  gdpng.lo getopt.lo getopt1.lo gifsize.lo \
  parsetime.lo pngsize.lo rrd_create.lo rrd_diff.lo rrd_dump.lo \
- rrd_error.lo rrd_fetch.lo rrd_format.lo rrd_graph.lo rrd_last.lo \
- rrd_open.lo rrd_resize.lo rrd_restore.lo rrd_tune.lo rrd_update.lo
- librrd_private_la_LDFLAGS = 
+ rrd_info.lo rrd_error.lo rrd_fetch.lo rrd_format.lo rrd_graph.lo \
+ rrd_last.lo rrd_open.lo rrd_resize.lo rrd_restore.lo rrd_tune.lo \
+ rrd_update.lo
 -librrd_private_la_DEPENDENCIES =  $(CGI_LIB_DIR)/librrd_cgi.la \
 -$(GD_LIB_DIR)/librrd_gd.la $(PNG_LIB_DIR)/librrd_png.la \
 -$(ZLIB_LIB_DIR)/librrd_z.la
  librrd_private_la_OBJECTS =  gdpng.lo getopt.lo getopt1.lo gifsize.lo \
  parsetime.lo pngsize.lo rrd_create.lo rrd_diff.lo rrd_dump.lo \
- rrd_error.lo rrd_fetch.lo rrd_format.lo rrd_graph.lo rrd_last.lo \
-@@ -255,7 +244,7 @@
+ rrd_info.lo rrd_error.lo rrd_fetch.lo rrd_format.lo rrd_graph.lo \
+@@ -266,8 +255,8 @@
  librrd.la: $(librrd_la_OBJECTS) $(librrd_la_DEPENDENCIES)
  	$(LINK) -rpath $(libdir) $(librrd_la_LDFLAGS) $(librrd_la_OBJECTS) $(librrd_la_LIBADD) $(LIBS)
  
 -librrd_private.la: $(librrd_private_la_OBJECTS) $(librrd_private_la_DEPENDENCIES)
+-	$(LINK)  $(librrd_private_la_LDFLAGS) $(librrd_private_la_OBJECTS) $(librrd_private_la_LIBADD) $(LIBS)
 +librrd_private.la: $(librrd_private_la_OBJECTS)
- 	$(LINK)  $(librrd_private_la_LDFLAGS) $(librrd_private_la_OBJECTS) $(librrd_private_la_LIBADD) $(LIBS)
++	$(LINK)  -rpath $(libdir) $(librrd_private_la_LDFLAGS) $(librrd_private_la_OBJECTS) $(librrd_private_la_LIBADD) $(LIBS)
  
  mostlyclean-binPROGRAMS:
-@@ -283,7 +272,7 @@
+ 
+@@ -294,7 +283,7 @@
  	  rm -f $(DESTDIR)$(bindir)/`echo $$p|sed 's/$(EXEEXT)$$//'|sed '$(transform)'|sed 's/$$/$(EXEEXT)/'`; \
  	done
  
@@ -63,22 +65,22 @@ $NetBSD: patch-ah,v 1.3 2000/02/25 22:12:59 dmcmahill Exp $
  	@rm -f rrdcgi
  	$(LINK) $(rrdcgi_LDFLAGS) $(rrdcgi_OBJECTS) $(rrdcgi_LDADD) $(LIBS)
  
-@@ -335,48 +324,48 @@
+@@ -346,50 +335,50 @@
  	    || cp -p $$d/$$file $(distdir)/$$file || :; \
  	  fi; \
  	done
--gdpng.lo gdpng.o : gdpng.c ../libpng-1.0.3/png.h ../zlib-1.1.3/zlib.h \
--	../zlib-1.1.3/zconf.h ../libpng-1.0.3/pngconf.h ../gd1.3/gd.h
+-gdpng.lo gdpng.o : gdpng.c ../libpng-1.0.6/png.h ../zlib-1.1.3/zlib.h \
+-	../zlib-1.1.3/zconf.h ../libpng-1.0.6/pngconf.h ../gd1.3/gd.h
 +gdpng.lo gdpng.o : gdpng.c ${PREFIX}/include/png.h /usr/include/zlib.h \
 +	/usr/include/zconf.h ${PREFIX}/include/pngconf.h ${PREFIX}/include/gd.h
- getopt.lo getopt.o : getopt.c ../config/config.h
+ getopt.lo getopt.o : getopt.c ../config/config.h getopt.h
  getopt1.lo getopt1.o : getopt1.c ../config/config.h getopt.h
  gifsize.lo gifsize.o : gifsize.c
  parsetime.lo parsetime.o : parsetime.c rrd_tool.h ../config/config.h \
 -	parsetime.h getopt.h rrd_format.h ../gd1.3/gd.h
--pngsize.lo pngsize.o : pngsize.c ../libpng-1.0.3/png.h \
+-pngsize.lo pngsize.o : pngsize.c ../libpng-1.0.6/png.h \
 -	../zlib-1.1.3/zlib.h ../zlib-1.1.3/zconf.h \
--	../libpng-1.0.3/pngconf.h
+-	../libpng-1.0.6/pngconf.h
 +	parsetime.h getopt.h rrd_format.h ${PREFIX}/include/gd.h
 +pngsize.lo pngsize.o : pngsize.c ${PREFIX}/include/png.h \
 +	/usr/include/zlib.h /usr/include/zconf.h \
@@ -109,6 +111,9 @@ $NetBSD: patch-ah,v 1.3 2000/02/25 22:12:59 dmcmahill Exp $
 -	../gd1.3/gdlucidan10.h ../gd1.3/gdlucidab12.h
 +	parsetime.h getopt.h rrd_format.h ${PREFIX}/include/gd.h \
 +	${PREFIX}/include/gdfontt.h ${PREFIX}/include/gdfonts.h
+ rrd_info.lo rrd_info.o : rrd_info.c rrd_tool.h ../config/config.h \
+-	parsetime.h getopt.h rrd_format.h ../gd1.3/gd.h
++	parsetime.h getopt.h rrd_format.h ${PREFIX}/include/gd.h
  rrd_last.lo rrd_last.o : rrd_last.c rrd_tool.h ../config/config.h \
 -	parsetime.h getopt.h rrd_format.h ../gd1.3/gd.h
 +	parsetime.h getopt.h rrd_format.h ${PREFIX}/include/gd.h
