@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2000/12/12 01:30:55 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2000/12/21 12:37:59 wiz Exp $
 #
 
+    SUBDIR += common-mml
     SUBDIR += imm
     SUBDIR += nte
     SUBDIR += rat
