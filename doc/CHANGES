@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4641 2004/01/29 17:15:47 cube Exp $
+$NetBSD: CHANGES,v 1.4642 2004/01/29 18:39:59 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -526,3 +526,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated poppassd to 4.0.5nb2 [taca 2004-01-28]
 	Updated fluxbox to 0.9.8 [jmmv 2004-01-29]
 	Updated clamav to 0.65 [cube 2004-01-29]
+	Updated grub to 0.94 [jmmv 2004-01-29]
