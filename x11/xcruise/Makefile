@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 1999/12/22 15:37:13 sakamoto Exp $
+# $NetBSD: Makefile,v 1.4 2000/02/04 15:55:46 minoura Exp $
 #
 
-DISTNAME=	xcruise-0.22
+DISTNAME=	xcruise-0.24
 CATEGORIES=	x11 graphics
 MASTER_SITES=	http://tanaka-www.cs.titech.ac.jp/%7Eeuske/prog/
 
@@ -13,7 +13,10 @@ HOMEPAGE=	http://tanaka-www.cs.titech.ac.jp/%7Eeuske/prog/
 USE_IMAKE=	yes
 
 post-install:
+	${INSTALL_DATA} ${WRKSRC}/XCruise.ad ${PREFIX}/lib/X11/app-defaults/XCruise
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/xcruise
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/xcruise
+	${INSTALL_DATA} ${WRKSRC}/README.jp ${PREFIX}/share/doc/xcruise
+	${INSTALL_DATA} ${WRKSRC}/TODO ${PREFIX}/share/doc/xcruise
 
 .include "../../mk/bsd.pkg.mk"
