@@ -1,6 +1,6 @@
 #!/usr/bin/env perl
 
-# $NetBSD: lintpkgsrc.pl,v 1.41 2001/01/18 11:40:33 abs Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.42 2001/01/29 10:48:09 abs Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -324,10 +324,15 @@ sub get_default_makefile_vars
     ( $default_vars->{'OPSYS'},
 	$default_vars->{'OS_VERSION'},
 	$default_vars->{'MACHINE'} ) = (split);
+
     # Handle systems without uname -p  (NetBSD pre 1.4)
     chomp($default_vars->{'MACHINE_ARCH'} = `uname -p 2>/dev/null`);
+    if (! $default_vars->{'MACHINE_ARCH'} &&
+				$default_vars->{'OS_VERSION'} eq 'NetBSD')
+	{ chomp($default_vars->{'MACHINE_ARCH'} = `sysctl -n hw.machine_arch`);}
     if (! $default_vars->{'MACHINE_ARCH'})
 	{ $default_vars->{'MACHINE_ARCH'} = $default_vars->{'MACHINE'}; }
+
     $default_vars->{'LINTPKGSRC'} = 'YES';
     $default_vars->{'EXTRACT_SUFX'} = 'tar.gz';
     $default_vars->{'OBJECT_FMT'} = 'x';
