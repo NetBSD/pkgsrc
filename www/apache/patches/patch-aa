@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.21 2003/01/20 22:58:26 jschauma Exp $
+$NetBSD: patch-aa,v 1.22 2004/02/28 22:15:30 snj Exp $
 
---- Makefile.tmpl.orig	Mon Jan 20 17:12:39 2003
-+++ Makefile.tmpl	Mon Jan 20 17:15:27 2003
+--- Makefile.tmpl.orig	2004-02-28 14:06:16.000000000 -0800
++++ Makefile.tmpl	2004-02-28 14:06:16.000000000 -0800
 @@ -100,6 +100,8 @@
  PERL            = @PERL@
  TAR		= @TAR@
@@ -23,15 +23,18 @@ $NetBSD: patch-aa,v 1.21 2003/01/20 22:58:26 jschauma Exp $
  	$(MKDIR) $(root)$(htdocsdir)
  	$(MKDIR) $(root)$(manualdir)
  	$(MKDIR) $(root)$(iconsdir)
-@@ -340,7 +337,7 @@
+@@ -340,9 +337,9 @@
  	$(MKDIR) $(root)$(proxycachedir)
  	-@if [ "x`$(AUX)/getuid.sh`" = "x0" ]; then \
  		echo "chown $(conf_user) $(root)$(proxycachedir)"; \
 -		chown $(conf_user) $(root)$(proxycachedir); \
 +		${CHOWN} $(conf_user) $(root)$(proxycachedir); \
  		echo "chgrp $(conf_group) $(root)$(proxycachedir)"; \
- 		chgrp "$(conf_group)" $(root)$(proxycachedir); \
+-		chgrp "$(conf_group)" $(root)$(proxycachedir); \
++		${CHGRP} "$(conf_group)" $(root)$(proxycachedir); \
  	fi
+ 	@echo "<=== [mktree]"
+ 
 @@ -387,34 +384,6 @@
  			file=`echo $${mod} | sed -e 's;^.*/\([^/]*\);\1;'`; \
  			echo "$(INSTALL_DSO) $(TOP)/$(SRC)/$${mod} $(root)$(libexecdir)/$${file}"; \
