@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2002/10/13 07:48:53 jlam Exp $
+@comment $NetBSD: PLIST,v 1.4 2003/02/03 23:48:08 jlam Exp $
 CHANGES
 COPYRIGHT
 LICENSE
@@ -463,33 +463,32 @@ include/verify.h
 include/wrap.h
 include/zip.h
 index.html
-lib/appletviewer.properties
-lib/awt.properties
+lib/appletviewer.properties.default
+lib/awt.properties.default
 lib/classes.zip
-lib/content-types.properties
-lib/font.properties
-lib/font.properties.ISO8859_15_FDIS
-lib/font.properties.cs
-lib/font.properties.el
-lib/font.properties.hu
-lib/font.properties.ja
-lib/font.properties.ko
-lib/font.properties.lt
-lib/font.properties.lv
-lib/font.properties.pl
-lib/font.properties.ru
-lib/font.properties.tr
-lib/font.properties.zh_EUC_CN
-lib/font.properties.zh_TW_Big5
-lib/font.properties.zh_TW_EUC_TW
+lib/content-types.properties.default
+lib/font.properties.default
+lib/font.properties.ISO8859_15_FDIS.default
+lib/font.properties.cs.default
+lib/font.properties.el.default
+lib/font.properties.hu.default
+lib/font.properties.ja.default
+lib/font.properties.ko.default
+lib/font.properties.lt.default
+lib/font.properties.lv.default
+lib/font.properties.pl.default
+lib/font.properties.ru.default
+lib/font.properties.tr.default
+lib/font.properties.zh_EUC_CN.default
+lib/font.properties.zh_TW_Big5.default
+lib/font.properties.zh_TW_EUC_TW.default
 lib/locale/ja/app-defaults/XApplication
 lib/locale/ja_JP.PCK/app-defaults/XApplication
 lib/locale/ja_JP.UTF-8/app-defaults/XApplication
-lib/psfont.properties.ja
-lib/security/java.security
-lib/serialver.properties
+lib/psfont.properties.ja.default
+lib/security/java.security.default
+lib/serialver.properties.default
 src.zip
-@dirrm lib/security
 @dirrm lib/locale/ja_JP.UTF-8/app-defaults
 @dirrm lib/locale/ja_JP.UTF-8
 @dirrm lib/locale/ja_JP.PCK/app-defaults
@@ -499,7 +498,6 @@ src.zip
 @dirrm lib/locale
 @dirrm lib/i386/green_threads
 @dirrm lib/i386
-@dirrm lib
 @dirrm include/netbsd
 @dirrm include/green_threads/include
 @dirrm include/green_threads
@@ -574,4 +572,3 @@ src.zip
 @dirrm bin/i386/green_threads
 @dirrm bin/i386
 @dirrm bin
-@unexec ${RMDIR} %D 2>/dev/null || ${TRUE}
