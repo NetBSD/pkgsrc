@@ -1,4 +1,4 @@
-# $NetBSD: mipspro.mk,v 1.22 2004/02/18 13:32:38 jlam Exp $
+# $NetBSD: mipspro.mk,v 1.23 2004/05/06 14:25:02 jschauma Exp $
 
 .if !defined(COMPILER_MIPSPRO_MK)
 COMPILER_MIPSPRO_MK=	defined
@@ -40,6 +40,9 @@ CC_VERSION!=		${MIPSPROBASE}/bin/cc -version 2>&1 | ${GREP} '^MIPSpro'
 CC_VERSION_STRING?=	${CC_VERSION}
 CC_VERSION?=		MIPSpro Compilers
 .endif
+
+# MIPSPro passes flags to the linker using "-Wl,".
+_COMPILER_LD_FLAG=	-Wl,
 
 # Prepend the path to the compiler to the PATH.
 .if !empty(_LANGUAGES.mipspro)
