@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2004/02/08 23:04:55 grant Exp $
+# $NetBSD: Makefile,v 1.19 2004/04/25 03:58:56 minskim Exp $
 
 DISTNAME=	Expect-1.15
 PKGNAME=	p5-Expect-1.15
@@ -14,7 +14,9 @@ DEPENDS+=	p5-IO-tty-[0-9]*:../../devel/p5-IO-Tty
 
 CONFLICTS+=	p5-expect-[0-9]*
 
-USE_BUILDLINK2=		YES
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+USE_BUILDLINK3=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Expect/.packlist
 
 .include "../../lang/perl5/module.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/07/17 21:32:25 grant Exp $
+# $NetBSD: Makefile,v 1.5 2004/04/25 03:53:45 minskim Exp $
 
 DISTNAME=	Graph-0.201
 PKGNAME=	p5-${DISTNAME}
@@ -10,7 +10,9 @@ COMMENT=	Perl module for graph operations
 
 DEPENDS+=		p5-Heap>=0.50:../../devel/p5-Heap
 
-USE_BUILDLINK2=		YES
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+USE_BUILDLINK3=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Graph/.packlist
 
 .include "../../lang/perl5/module.mk"
