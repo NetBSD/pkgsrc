@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2003/12/11 17:10:21 agc Exp $
+# $NetBSD: Makefile,v 1.37 2003/12/12 15:08:21 agc Exp $
 
 DISTNAME=	audit-packages-1.27
 WRKSRC=		${WRKDIR}
@@ -38,7 +38,7 @@ do-build:
 			-e 's|@MV@|${MV}|g'				\
 			-e 's|@RM@|${RM}|g'				\
 			-e 's|@MKDIR@|${MKDIR}|g'			\
-			-e 's|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g'			\
+			-e 's|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g'	\
 			${FILESDIR}/$$f > ${WRKSRC}/$$f;		\
 	done
 	${NROFF} ${WRKSRC}/audit-packages.8 >${WRKSRC}/audit-packages.0
