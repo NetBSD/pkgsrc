@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/05/22 06:13:22 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2001/06/28 13:35:31 wiz Exp $
 #
 
 DISTNAME=	lftp-2.3.9
@@ -11,13 +11,14 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://lftp.yar.ru/
 COMMENT=	powerful command line ftp client
 
+GNU_CONFIGURE=		YES
 # uses GNU readline internal variables (_rl_mark_modified_lines)
-DEPENDS+=	readline>=4.1:../../devel/readline
+USE_GNU_READLINE=	YES
+USE_BUILDLINK_ONLY=	YES
+CONFIGURE_ARGS+=	--with-ssl=${BUILDLINK_DIR}
 
-GNU_CONFIGURE=	YES
-USE_SSL=	YES
-CONFIGURE_ARGS+=--with-ssl=${SSLBASE}
+USE_LIBINTL=		YES
 
-USE_LIBINTL=	YES
-
+.include "../../devel/readline/buildlink.mk"
+.include "../../security/openssl/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
