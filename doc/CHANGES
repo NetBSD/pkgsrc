@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3131 2003/08/29 11:27:11 xtraeme Exp $
+$NetBSD: CHANGES,v 1.3132 2003/08/29 15:33:49 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3373,3 +3373,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated ruby-fox to 0.99.174nb3 [xtraeme 2003-08-29]
 	Updated libxml2 to 2.5.10 [xtraeme 2003-08-29]
 	Updated libxslt to 1.0.32 [xtraeme 2003-08-29]
+	Updated sablotron to 1.0 [xtraeme 2003-08-29]
+	Updated tinyproxy to 1.6.1 [xtraeme 2003-08-29]
