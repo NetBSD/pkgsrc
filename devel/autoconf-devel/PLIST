@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/01/03 14:02:27 agc Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/01/14 17:50:50 wiz Exp $
 bin/autoconf
 bin/autoheader
 bin/autoreconf
@@ -11,6 +11,14 @@ info/autoconf.info
 info/standards.info
 @exec install-info %D/info/autoconf.info %D/info/dir
 @exec install-info %D/info/standards.info %D/info/dir
+man/man1/autoconf.1
+man/man1/autoheader.1
+man/man1/autoreconf.1
+man/man1/autoscan.1
+man/man1/autoupdate.1
+man/man1/config.guess.1
+man/man1/config.sub.1
+man/man1/ifnames.1
 share/autoconf/INSTALL
 share/autoconf/acfunctions
 share/autoconf/acfunctions.m4
