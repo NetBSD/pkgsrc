@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2002/12/24 06:10:18 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2003/01/22 08:58:38 jmmv Exp $
 #
 
-DISTNAME=		libIDL-0.7.4
-PKGREVISION=		3
+DISTNAME=		libIDL-0.8.0
 CATEGORIES=		net gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libIDL/0.7/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libIDL/0.8/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		rh@netbsd.org
