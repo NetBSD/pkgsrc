@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.22 1999/07/14 20:33:38 hubertf Exp $
+# $NetBSD: Makefile,v 1.23 1999/07/16 21:11:02 jlam Exp $
 
 DISTNAME=		ncurses-4.2
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GNU:=ncurses/} \
 			ftp://ftp.clark.net/pub/dickey/ncurses/
 
-MAINTAINER=		packages@netbsd.org
+MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://www.gnu.org/software/ncurses/ncurses.html
 
 GNU_CONFIGURE=		yes
