@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 1999/01/29 19:26:24 tron Exp $
-bin/tkirc
-share/doc/tkirc/tkircrc-example
-share/doc/tkirc/README
-share/doc/tkirc/CHANGES
-share/doc/tkirc/COPYING
-@dirrm share/doc/tkirc
