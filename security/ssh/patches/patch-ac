@@ -1,6 +1,6 @@
---- Makefile.in.orig	Tue May 12 00:37:58 1998
-+++ Makefile.in	Sun May 24 14:06:29 1998
-@@ -280,8 +280,10 @@
+--- Makefile.in.orig	Wed Jul  8 18:40:39 1998
++++ Makefile.in	Fri Jul 10 21:55:03 1998
+@@ -298,8 +298,10 @@
  GMPDEP 		= $(GMPDIR)/gmp.h $(GMPDIR)/libgmp.a
  
  ZLIBDIR		= zlib-1.0.4
@@ -13,7 +13,7 @@
  
  RSAREFDIR	= rsaref2
  RSAREFSRCDIR 	= $(RSAREFDIR)/source
-@@ -385,7 +387,7 @@
+@@ -404,7 +406,7 @@
  	$(CC) -o rfc-pg rfc-pg.o
  
  .c.o:
@@ -22,7 +22,7 @@
  
  sshd: $(SSHD_OBJS) $(GMPDEP) $(RSAREFDEP) $(ZLIBDEP)
  	-rm -f sshd
-@@ -433,14 +435,14 @@
+@@ -452,14 +454,14 @@
  $(GMPDIR)/libgmp.a:
  	cd $(GMPDIR); $(MAKE)
  
@@ -45,20 +45,21 @@
  
  $(RSAREFSRCDIR)/librsaref.a:
  	-if test '!' -d $(RSAREFDIR); then \
-@@ -497,10 +499,10 @@
+@@ -516,10 +518,10 @@
  # (otherwise it can only log in as the user it runs as, and must be
  # bound to a non-privileged port).  Also, password authentication may
  # not be available if non-root and using shadow passwords.
 -install: $(PROGRAMS) make-dirs generate-host-key install-configs
 +install: $(PROGRAMS) make-dirs install-configs
  	-rm -f $(install_prefix)$(bindir)/ssh1.old
+-	-chmod 755 $(install_prefix)$(bindir)/ssh1
+-	-chmod 755 $(install_prefix)$(bindir)/ssh
++	-chmod 555 $(install_prefix)$(bindir)/ssh1
++	-chmod 555 $(install_prefix)$(bindir)/ssh
  	-mv $(install_prefix)$(bindir)/ssh1 $(install_prefix)$(bindir)/ssh1.old
--	-chmod 755 $(install_prefix)$(bindir)/ssh1.old
-+	-chmod 555 $(install_prefix)$(bindir)/ssh1.old
  	$(INSTALL_PROGRAM) -o root -m $(SSH_INSTALL_MODE) ssh $(install_prefix)$(bindir)/ssh1
  	-if test -f $(install_prefix)$(bindir)/ssh2; then \
- 	  echo "Ssh version 2 program found, installation doesn't touch ssh link"; \
-@@ -523,7 +525,7 @@
+@@ -542,7 +544,7 @@
  	-for p in $(NORMAL_PROGRAMS) $(X_PROGRAMS) $(OTHER_PROGRAMS); do \
  	  rm -f $(install_prefix)$(bindir)/$${p}1.old ; \
  	  mv $(install_prefix)$(bindir)/$${p}1 $(install_prefix)$(bindir)/$${p}1.old; \
@@ -67,7 +68,7 @@
  	  if test -f $(install_prefix)$(bindir)/$${p}2; then \
  	    echo "Ssh version 2 $$p utility found, installation doesn't touch $$p link"; \
  	  else \
-@@ -540,7 +542,7 @@
+@@ -559,7 +561,7 @@
  	  rm -f $(install_prefix)$(bindir)/$${p}1.old ; \
  	  mv $(install_prefix)$(bindir)/$${p}1 $(install_prefix)$(bindir)/$${p}1.old; \
  	  $(INSTALL_DATA) $$p $(install_prefix)$(bindir)/$${p}1; \
@@ -76,7 +77,7 @@
  	  if test -f $(install_prefix)$(bindir)/$${p}2; then \
  	    echo "Ssh version 2 $$p utility found, installation doesn't touch $$p link"; \
  	  else \
-@@ -556,7 +558,7 @@
+@@ -575,7 +577,7 @@
  	-for p in $(SBIN_PROGRAMS); do \
  	  rm -f $(install_prefix)$(sbindir)/$${p}1.old ; \
  	  mv $(install_prefix)$(sbindir)/$${p}1 $(install_prefix)$(sbindir)/$${p}1.old; \
@@ -85,7 +86,7 @@
  	  if test -f $(install_prefix)$(sbindir)/$${p}2; then \
  	    echo "Ssh version 2 $$p utility found, installation doesn't touch $$p link"; \
  	  else \
-@@ -570,7 +572,7 @@
+@@ -589,7 +591,7 @@
  	      $(install_prefix)$(sbindir)/`echo $$p | sed '$(transform)'`; fi;\
  	done
  	-for p in $(MAN1PAGES); do \
@@ -94,7 +95,7 @@
  	  rm -f $(install_prefix)$(man1dir)/$$p.1 ;\
  	  $(LN_S) $${p}1.1 $(install_prefix)$(man1dir)/$$p.1 ;\
  	  if test "`echo $$p | sed '$(transform)'`" '!=' $$p; then \
-@@ -589,7 +591,7 @@
+@@ -608,7 +610,7 @@
  	    $(install_prefix)$(man1dir)/`echo slogin.1 | sed '$(transform)'`; \
  	fi
  	-for p in $(MAN1GENERATED); do \
@@ -103,7 +104,7 @@
  	  rm -f $(install_prefix)$(man1dir)/$$p.1 ; \
  	  $(LN_S) $${p}1.1 $(install_prefix)$(man1dir)/$$p.1 ; \
  	  if test "`echo $$p | sed '$(transform)'`" '!=' $$p; then \
-@@ -599,7 +601,7 @@
+@@ -618,7 +620,7 @@
  	  fi; \
  	done
  	-for p in $(MAN8GENERATED); do \
@@ -112,7 +113,7 @@
  	  rm -f $(install_prefix)$(man8dir)/$$p.8 ; \
  	  $(LN_S) $${p}1.8 $(install_prefix)$(man8dir)/$$p.8 ; \
  	  if test "`echo $$p | sed '$(transform)'`" '!=' $$p; then \
-@@ -610,12 +612,13 @@
+@@ -629,12 +631,13 @@
  
  install-configs:
  	-if test '!' -f $(install_prefix)$(HOST_CONFIG_FILE); then \
@@ -128,7 +129,7 @@
  	    $(install_prefix)$(SERVER_CONFIG_FILE); \
  	  rm -f /tmp/ssh_inst.$$$$; fi
  
-@@ -655,13 +658,13 @@
+@@ -674,13 +677,13 @@
  	-rm -f *.o gmon.out *core $(PROGRAMS) rfc-pg
  	cd $(GMPDIR); $(MAKE) clean
  #	cd $(RSAREFSRCDIR); rm -f *.o *.a
@@ -144,7 +145,7 @@
  
  dist: dist-free
  
-@@ -694,8 +697,8 @@
+@@ -713,8 +716,8 @@
  	gzip -cd $(GMPDIR)/$(GMPDIR).tar.gz | (cd $(DISTNAME); tar pxf - )
  #	tar cf - $(RSAREFDIR) | (cd $(DISTNAME); tar xf -)
  #	cd $(DISTNAME)/$(RSAREFSRCDIR); rm -f *.o *.a
@@ -155,7 +156,7 @@
  
  #ifdef F_SECURE_COMMERCIAL
  #
-@@ -723,7 +726,7 @@
+@@ -742,7 +745,7 @@
  	 (echo "s/\.$$old_version\"/.$$new_version\"/g"; echo w; echo q) | ed $(srcdir)/version.h >/dev/null
  
  depend:
