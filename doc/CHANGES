@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7721 2004/11/05 20:47:33 erh Exp $
+$NetBSD: CHANGES,v 1.7722 2004/11/05 21:04:38 jdolecek Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5100,3 +5100,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Added libextractor-0.3.10 [tv 2004-11-05]
 	Added p5-Apache-AuthCookie-3.05 [he 2004-11-05]
 	Updated pkg_tarup to 1.6.5 [erh 2004-11-05]
+	Added php-dbx 4.3.9nb1 [jdolecek 2004-11-05]
+	Added php-dbx 5.0.2 [jdolecek 2004-11-05]
