@@ -1,6 +1,6 @@
 #!/bin/sh -e
 #
-# $Id: pkgchk.sh,v 1.36 2002/10/08 11:43:34 abs Exp $
+# $Id: pkgchk.sh,v 1.37 2002/10/08 15:44:14 abs Exp $
 #
 # TODO: Handle updates with dependencies via binary packages
 
@@ -173,9 +173,13 @@ pkg_install()
 		exit 1
 	    fi
 	fi
-	export PKG_PATH=$saved_PKG_PATH
+	if [ -n "$saved_PKG_PATH" ] ; then
+	    export PKG_PATH=$saved_PKG_PATH
+	fi
 	run_cmd "cd $PACKAGES/All && ${PKG_ADD} $PKGNAME.tgz"
-	unset PKG_PATH
+	if [ -n "$saved_PKG_PATH" ] ; then
+	    unset PKG_PATH
+	fi
     elif [ -n "$opt_s" ]; then
 	run_cmd "cd $PKGSRCDIR/$PKGDIR && ${MAKE} update"
     fi
