@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.184 2001/01/18 13:12:58 itojun Exp $
+# $NetBSD: Makefile,v 1.185 2001/01/26 18:05:50 manu Exp $
 #
 
     SUBDIR += adns
@@ -44,6 +44,7 @@
     SUBDIR += gtk-gnutella
     SUBDIR += gtksamba
     SUBDIR += gtm
+    SUBDIR += httptunnel
     SUBDIR += icsi-finger
     SUBDIR += irrd
     SUBDIR += isic
