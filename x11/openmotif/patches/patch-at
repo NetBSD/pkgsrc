@@ -1,0 +1,11 @@
+--- lib/Xm/Imakefile.orig	Mon Dec 30 08:53:49 2002
++++ lib/Xm/Imakefile	Mon Dec 30 08:54:45 2002
+@@ -78,7 +78,7 @@
+ STRINGSABIOPTIONS = ToolkitStringsABIOptions
+ 
+ HEADERS = ArrowB.h      ArrowBG.h       ArrowBGP.h      ArrowBP.h \
+-        BulletinB.h     BulletinBP.h    CacheP.h        CascadeB.h \
++        BaseClassI.h	BulletinB.h     BulletinBP.h    CacheP.h        CascadeB.h \
+         CascadeBG.h     CascadeBGP.h    CascadeBP.h     Command.h \
+         CommandP.h      CutPaste.h      DialogS.h \
+         DialogSP.h      DialogSEP.h     DragC.h         DragCP.h \
