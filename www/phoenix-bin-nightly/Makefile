@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.4 2003/04/14 23:45:43 grant Exp $
+# $NetBSD: Makefile,v 1.5 2003/05/25 06:52:52 grant Exp $
 #
 
 DISTNAME=		# see Makefile.${OPSYS}.${ARCH}
 PKGNAME=		phoenix-bin-${PKGVER}
-WRKSRC=			${WRKDIR}/phoenix
+WRKSRC=			${WRKDIR}/MozillaFirebird
 CATEGORIES=		www
-MASTER_SITES=		http://komodo.mozilla.org/pub/phoenix/nightly/latest-trunk/
+MASTER_SITES=		http://komodo.mozilla.org/pub/firebird/nightly/latest-trunk/
 
-MAINTAINER=		grant@netbsd.org
-HOMEPAGE=		http://www.mozilla.org/projects/phoenix/
+MAINTAINER=		grant@NetBSD.org
+HOMEPAGE=		http://www.mozilla.org/projects/firebird/
 COMMENT=		Lightweight gecko-based web browser (nightly binary pkg)
 
 ONLY_FOR_PLATFORM=	Linux-*-i[3-6]86 NetBSD-*-i386 SunOS-5.[789]*-sparc

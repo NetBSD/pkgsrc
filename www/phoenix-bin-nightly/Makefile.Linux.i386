@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.Linux.i386,v 1.1 2003/04/14 21:28:10 grant Exp $
+# $NetBSD: Makefile.Linux.i386,v 1.2 2003/05/25 06:52:52 grant Exp $
 #
 
-DISTNAME=	phoenix-i686-pc-linux-gnu
+DISTNAME=	MozillaFirebird-i686-pc-linux-gnu
 
 PLATFORM=	linux
-PHOENIX_LIB=    ${PREFIX}/lib/phoenix-${PLATFORM}
+PHOENIX_LIB=    ${PREFIX}/lib/MozillaFirebird-${PLATFORM}
