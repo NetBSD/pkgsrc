@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1136 2003/01/16 01:20:21 salo Exp $
+$NetBSD: CHANGES,v 1.1137 2003/01/16 05:42:52 uebayasi Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -281,3 +281,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated pkglint to 3.43 [rh 2003-01-16]
 	Updated gnucash to 1.6.8 [rh 2003-01-16]
 	Updated balsa to 1.4.0nb3 [salo 2003-01-16]
+	Added mowitz-0.2.1 [uebayasi 2003-01-16]
