@@ -1,25 +1,19 @@
-# $NetBSD: pthread.builtin.mk,v 1.2 2004/11/20 05:19:12 grant Exp $
+# $NetBSD: pthread.builtin.mk,v 1.3 2004/11/26 08:12:59 jlam Exp $
 
-.if !defined(_BLNK_LIBPTHREAD_FOUND)
-_BLNK_LIBPTHREAD_FOUND!=	\
-	if ${TEST} "`${ECHO} /usr/lib/libpthread.*`" = "/usr/lib/libpthread.*"; then \
+.for _lib_ in pthread c_r rt
+.  if !defined(_BLNK_LIB_FOUND.${_lib_})
+_BLNK_LIB_FOUND.${_lib_}!=	\
+	if ${TEST} "`${ECHO} /usr/lib/lib${_lib_}.*`" = "/usr/lib/lib${_lib_}.*"; then \
 		${ECHO} "no";						\
-	elif ${TEST} "`${ECHO} /lib/libpthread.*`" = "/lib/libpthread.*"; then \
-		${ECHO} "no";						\
-	else								\
-		${ECHO} "yes";						\
-	fi
-BUILDLINK_VARS+=	_BLNK_LIBPTHREAD_FOUND
-.endif
-.if !defined(_BLNK_LIBC_R_FOUND)
-_BLNK_LIBC_R_FOUND!=	\
-	if ${TEST} "`${ECHO} /usr/lib/libc_r.*`" = "/usr/lib/libc_r.*"; then \
+	elif ${TEST} "`${ECHO} /lib/lib${_lib_}.*`" = "/lib/lib${_lib_}.*"; then \
 		${ECHO} "no";						\
 	else								\
 		${ECHO} "yes";						\
 	fi
-BUILDLINK_VARS+=	_BLNK_LIBC_R_FOUND
-.endif
+BUILDLINK_VARS+=	_BLNK_LIB_FOUND.${_lib_}
+.  endif
+.endfor
+.undef _lib_
 
 .if !defined(IS_BUILTIN.pthread)
 IS_BUILTIN.pthread=	no
@@ -53,14 +47,10 @@ BUILDLINK_LDFLAGS.pthread=	# empty
 .  if ${OPSYS} == "FreeBSD" || ${OPSYS} == "Linux" || ${OPSYS} == "NetBSD"
 BUILDLINK_CFLAGS.pthread+=	-pthread
 BUILDLINK_LDFLAGS.pthread+=	-pthread
+.  elif ${OPSYS} == "OSF1"
+BUILDLINK_CFLAGS.pthread+=	-pthread
 .  else
 BUILDLINK_CPPFLAGS.pthread+=	-D_REENTRANT
-.  endif
-
-.  if ${OPSYS} == "OSF1"
-BUILDLINK_CFLAGS.pthread+=	-pthread
-BUILDLINK_LDFLAGS.pthread+=	-lpthread -lrt
-BUILDLINK_CPPFLAGS.pthread+=	-pthread
 .  endif
 
 # Handle systems which have pthreads functions in libc_r such as
@@ -68,9 +58,12 @@ BUILDLINK_CPPFLAGS.pthread+=	-pthread
 #
 .  if ${OPSYS} == "NetBSD"
 BUILDLINK_LIBS.pthread=		# empty
-.  elif !empty(_BLNK_LIBPTHREAD_FOUND:M[yY][eE][sS])
+.  elif !empty(_BLNK_LIB_FOUND.pthread:M[yY][eE][sS])
 BUILDLINK_LIBS.pthread=		-lpthread
-.  elif !empty(_BLNK_LIBC_R_FOUND:M[yY][eE][sS])
+.    if !empty(_BLNK_LIB_FOUND.rt:M[yY][eE][sS])
+BUILDLINK_LIBS.pthread+=	-lrt
+.    endif
+.  elif !empty(_BLNK_LIB_FOUND.c_r:M[yY][eE][sS])
 BUILDLINK_LIBS.pthread=		-lc_r
 .  else
 BUILDLINK_LIBS.pthread=		# empty
