@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/04/13 04:14:23 uebayasi Exp $
+# $NetBSD: Makefile,v 1.7 2003/04/17 02:15:07 uebayasi Exp $
 
 DISTNAME=	flim-1.14.5
 PKGREVISION=	1
@@ -26,10 +26,13 @@ MAKEFLAGS+=     PACKAGEDIR=${EMACS_LISPPREX:C|/lisp$||}
 INFO_FILES=	mime-en.info mime-ja.info
 
 pre-build:
-	${RM} -f ${WRKSRC}/mime-*.info
-	${LOCALBASE}/bin/qkc -eu ${WRKSRC}/mime-*.texi
-	cd ${WRKSRC} && ${MAKEINFO} --no-validate --no-split mime-en.texi
-	cd ${WRKSRC} && ${MAKEINFO} --no-validate --no-split mime-ja.texi
+	@cd ${WRKSRC}; \
+	for i in mime-en mime-ja; do \
+		${RM} -f $${i}.info; \
+		${CP} $${i}.texi $${i}.texi.orig; \
+		${LOCALBASE}/bin/qkc -Oeu $${i}.texi.orig >$${i}.texi; \
+		${MAKEINFO} --force --no-validate --no-split $${i}.texi; \
+	done
 
 pre-install:
 	${INSTALL_DATA} ${WRKSRC}/mime-*.info ${PREFIX}/info
