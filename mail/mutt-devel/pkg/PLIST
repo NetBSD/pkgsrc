@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2001/06/20 07:46:13 jlam Exp $
+@comment $NetBSD: PLIST,v 1.3 2001/07/22 13:37:13 tron Exp $
 bin/flea
 bin/mutt
 bin/muttbug
@@ -68,8 +68,10 @@ ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/mutt.mo
 ${PKGLOCALEDIR}/locale/el/LC_MESSAGES/mutt.mo
 ${PKGLOCALEDIR}/locale/eo/LC_MESSAGES/mutt.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/mutt.mo
+${PKGLOCALEDIR}/locale/et/LC_MESSAGES/mutt.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/mutt.mo
 ${PKGLOCALEDIR}/locale/gl/LC_MESSAGES/mutt.mo
+${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/mutt.mo
 ${PKGLOCALEDIR}/locale/id/LC_MESSAGES/mutt.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/mutt.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/mutt.mo
@@ -85,8 +87,6 @@ ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/mutt.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/mutt.mo
 ${PKGLOCALEDIR}/locale/zh_CN.GB2312/LC_MESSAGES/mutt.mo
 ${PKGLOCALEDIR}/locale/zh_TW.Big5/LC_MESSAGES/mutt.mo
-share/mutt/.directory
-@dirrm share/mutt
 @dirrm share/doc/mutt/samples/iconv
 @dirrm share/doc/mutt/samples
 @dirrm share/doc/mutt/html
