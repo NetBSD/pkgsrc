@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2493 2003/06/12 07:01:17 wiz Exp $
+$NetBSD: CHANGES,v 1.2494 2003/06/12 13:30:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2444,3 +2444,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated proxycheck to 0.45 [wiz 2003-06-11]
 	Updated source-highlight to 1.7 [seb 2003-06-12]
 	Updated audit-packages to 1.16 [wiz 2003-06-12]
+	Updated file-roller to 2.2.4 [wiz 2003-06-12]
