@@ -1,10 +1,10 @@
-$NetBSD: patch-ae,v 1.1 2003/02/16 23:50:20 seb Exp $
+$NetBSD: patch-ae,v 1.2 2003/05/23 07:19:43 seb Exp $
 
---- lib/Makefile.am.orig	Tue Dec  3 07:34:22 2002
+--- lib/Makefile.am.orig	2003-03-12 03:31:23.000000000 +0000
 +++ lib/Makefile.am
-@@ -6,7 +6,7 @@ CFLAGS=-g -Wall
+@@ -6,7 +6,7 @@ AM_CFLAGS=-g -Wall
  
- DEFS=-I.
+ DEFS=-I. -I$(srcdir)/lib
  
 -include_HEADERS = ftlib.h ftqueue.h radix.h ftpaths.h ftconfig.h
 +pkginclude_HEADERS = ftlib.h ftqueue.h radix.h ftpaths.h ftconfig.h

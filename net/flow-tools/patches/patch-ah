@@ -1,8 +1,8 @@
-$NetBSD: patch-ah,v 1.1 2003/02/16 23:50:21 seb Exp $
+$NetBSD: patch-ah,v 1.2 2003/05/23 07:19:44 seb Exp $
 
---- src/flow-capture.c.orig	Thu Dec 12 00:15:39 2002
+--- src/flow-capture.c.orig	2003-04-02 18:03:01.000000000 +0000
 +++ src/flow-capture.c
-@@ -443,8 +443,9 @@ char **argv;
+@@ -431,8 +431,9 @@ char **argv;
        exit (0); /* parent */
      }
  
