@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2000/11/26 17:55:19 jtb Exp $
+# $NetBSD: Makefile,v 1.28 2000/11/26 23:05:05 jtb Exp $
 # FreeBSD Id: Makefile,v 1.38 1998/04/13 00:51:58 jseger Exp
 #
 
@@ -15,6 +15,7 @@
     SUBDIR += grpn
     SUBDIR += gsl
     SUBDIR += libffm
+    SUBDIR += mcsim
     SUBDIR += octave
     SUBDIR += otter
     SUBDIR += pspp
