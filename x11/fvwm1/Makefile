@@ -3,7 +3,7 @@
 # Date created:		20 Jan 1996
 # Whom:			peter
 #
-# $NetBSD: Makefile,v 1.1 1998/03/17 07:07:57 cjs Exp $
+# $NetBSD: Makefile,v 1.2 1998/03/18 18:44:29 cjs Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/10/11 10:42:43 jkh Exp
 #
 
@@ -11,7 +11,7 @@ DISTNAME=	fvwm-1.24r
 CATEGORIES=	x11
 MASTER_SITES=	ftp://ftp.netbsd.org/pub/NetBSD/packages/distfiles/
 
-MAINTAINER=	matusita@jp.freebsd.org
+MAINTAINER=	cjs@netbsd.org
 
 LIB_DEPENDS=	Xpm.4.:${PORTSDIR}/graphics/xpm
 
