@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.26 2004/02/10 23:23:02 jlam Exp $
+# $NetBSD: Makefile.common,v 1.27 2004/02/10 23:31:27 jlam Exp $
 #
 
 DISTNAME=	MesaLib-${MESA_VERSION}
@@ -27,6 +27,10 @@ DISTINFO_FILE?=		${.CURDIR}/../../graphics/MesaLib/distinfo
 INSTALLATION_DIRS+=	lib
 
 pre-install:
-	for lib in ${INSTLIBS}; do	\
-	    ${LIBTOOL} --mode=install ${INSTALL_DATA} $${lib} ${PREFIX}/lib ; \
-	done;
+	@if [ -n "${INSTLIBS}" ]; then					\
+		${ECHO_MSG} "Installing libraries.";			\
+		for lib in ${INSTLIBS}; do				\
+			${LIBTOOL} --mode=install ${INSTALL_DATA}	\
+				$${lib} ${PREFIX}/lib;			\
+		done;							\
+	fi
