@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: setiathome.sh,v 1.1 2003/04/09 15:52:29 jmmv Exp $
+# $NetBSD: setiathome.sh,v 1.2 2003/05/01 18:07:55 jmmv Exp $
 #
 
 # PROVIDE: setiathome
@@ -15,7 +15,7 @@ sah_homedir="/var/db/setiathome"
 
 name="setiathome"
 rcvar=$name
-command="/usr/pkg/bin/${name}"
+command="@PREFIX@/bin/${name}"
 pidfile="${sah_homedir}/pid.sah"
 extra_commands="config"
 
