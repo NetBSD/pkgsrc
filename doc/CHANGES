@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.672 2002/12/03 09:01:11 grant Exp $
+$NetBSD: CHANGES,v 1.673 2002/12/03 11:17:54 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3799,3 +3799,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated normalize to 0.7.6nb1 [jlam 2002-12-02]
 	Updated squirrelmail to 1.2.10 [martti 2002-12-03]
 	Updated mozilla-linux to 1.2.1 [grant 2002-12-03]
+	Updated xcdroast to 0.98alpha11 [drochner 2002-12-03]
