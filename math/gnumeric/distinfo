@@ -1,4 +1,6 @@
-$NetBSD: distinfo,v 1.4 2001/08/23 22:40:40 mjl Exp $
+$NetBSD: distinfo,v 1.5 2001/10/04 19:28:43 rh Exp $
 
 SHA1 (gnumeric-0.70.tar.gz) = f9cac79f4ad04263efe4317894164fd60d49fd3a
 Size (gnumeric-0.70.tar.gz) = 8111712 bytes
+SHA1 (patch-aa) = de5888c8163b64478563db0c6d10347e2686a57e
+SHA1 (patch-ab) = 6ea390b8d8eaa0efa4461252e5e39187fff051d3
