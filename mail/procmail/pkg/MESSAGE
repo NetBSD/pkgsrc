@@ -1,0 +1,10 @@
+=============================================================
+Please note the following:
+
+    - The system-wide procmailrc is expected in ${PREFIX}/etc
+      (e.g. /usr/pkg/etc/procmailrc).
+
+    - The system-wide procmailrc directory is expected in
+      ${PREFIX}/etc (e.g. /usr/pkg/etc/procmailrcs/*).
+
+=============================================================
