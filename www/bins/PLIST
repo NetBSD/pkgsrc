@@ -1,8 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/07/04 19:37:38 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/07/07 06:47:25 simonb Exp $
 bin/bins
 bin/bins_edit
 man/man1/bins.1
 man/man1/bins_edit.1
+share/doc/html/bins/index.html
+share/doc/html/bins/index_fr.html
 share/examples/bins/templates.default/details.html
 share/examples/bins/templates.default/footer.html
 share/examples/bins/templates.default/image.html
@@ -16,5 +18,6 @@ ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/bins.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/bins.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/bins.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/bins.mo
+@dirrm share/doc/html/bins
 @dirrm share/examples/bins/templates.default
 @dirrm share/examples/bins
