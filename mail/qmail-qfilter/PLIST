@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/08/14 11:51:02 zuntum Exp $
+bin/qmail-qfilter
+share/examples/qmail-qfilter/block-long-dates
+share/examples/qmail-qfilter/deny-filetypes
+share/examples/qmail-qfilter/rename-filetypes
+@dirrm share/examples/qmail-qfilter
