@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2004/10/30 18:28:00 minskim Exp $
+# $NetBSD: Makefile,v 1.41 2004/11/29 17:36:10 minskim Exp $
 #
 
 .include "Makefile.common"
@@ -6,6 +6,10 @@
 PKGREVISION=	1
 
 COMMENT=	X11 (X Window System) IRC client, using the GTK2 toolkit
+
+PATCH_DIST_STRIP=	-p1
+PATCH_SITES=		${MASTER_SITES:=patches/}
+PATCHFILES=		xc241-fix-fetext.diff
 
 BUILD_USES_MSGFMT=	YES
 

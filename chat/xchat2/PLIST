@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2004/08/16 06:53:08 minskim Exp $
+@comment $NetBSD: PLIST,v 1.10 2004/11/29 17:36:10 minskim Exp $
 bin/xchat
 bin/xchat-text
 share/applications/xchat.desktop
@@ -22,17 +22,20 @@ ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/xchat.mo
 ${PKGLOCALEDIR}/locale/lv/LC_MESSAGES/xchat.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/xchat.mo
 ${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/xchat.mo
+${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/xchat.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/xchat.mo
 ${PKGLOCALEDIR}/locale/no/LC_MESSAGES/xchat.mo
 ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/xchat.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/xchat.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/xchat.mo
 ${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/xchat.mo
+${PKGLOCALEDIR}/locale/sq/LC_MESSAGES/xchat.mo
 ${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/xchat.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/xchat.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/xchat.mo
 ${PKGLOCALEDIR}/locale/wa/LC_MESSAGES/xchat.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/xchat.mo
+${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/xchat.mo
 share/pixmaps/xchat.png
 @comment in xdg-dirs: @dirrm share/pixmaps
 @comment in xdg-dirs: @dirrm share/applications
