@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.35 2003/07/17 22:53:25 grant Exp $
+# $NetBSD: Makefile,v 1.36 2004/05/12 18:45:25 bouyer Exp $
 #
 
-DISTNAME=	amanda-2.4.2p2
+DISTNAME=	amanda-2.4.4p2
 CATEGORIES=	sysutils
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -10,9 +10,9 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.amanda.org/
 COMMENT=	The "meta-package" for Amanda, a network backup system
 
-DEPENDS+=	amanda-client-2.4.2p2:../../sysutils/amanda-client
-DEPENDS+=	amanda-server-2.4.2p2:../../sysutils/amanda-server
-DEPENDS+=	amanda-plot-2.4.2p2:../../sysutils/amanda-plot
+DEPENDS+=	amanda-client-2.4.4p2:../../sysutils/amanda-client
+DEPENDS+=	amanda-server-2.4.4p2:../../sysutils/amanda-server
+DEPENDS+=	amanda-plot-2.4.4p2:../../sysutils/amanda-plot
 
 EXTRACT_ONLY=	# empty
 NO_CHECKSUM=	yes
