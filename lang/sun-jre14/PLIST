@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2004/05/22 21:32:34 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.13 2004/07/02 14:40:21 jschauma Exp $
 bin/sun14-java
 java/sun-1.4/.systemPrefs/.system.lock
 java/sun-1.4/.systemPrefs/.systemRootModFile
@@ -67,12 +67,21 @@ java/sun-1.4/lib/ext/localedata.jar
 java/sun-1.4/lib/ext/sunjce_provider.jar
 java/sun-1.4/lib/flavormap.properties.default
 java/sun-1.4/lib/font.properties.default
-java/sun-1.4/lib/font.properties.ja.Sun
+java/sun-1.4/lib/font.properties.ja_JP.Sun
+java/sun-1.4/lib/font.properties.ja_JP.Sun2003
+java/sun-1.4/lib/font.properties.ja_JP_UTF8.Sun2003
+java/sun-1.4/lib/font.properties.ko_KR.Sun
+java/sun-1.4/lib/font.properties.ko_KR_UTF8.Sun
+java/sun-1.4/lib/font.properties.ko_KR_UTF8.Sun2003
 java/sun-1.4/lib/font.properties.ja_JP_UTF8.Sun
 java/sun-1.4/lib/font.properties.zh_CN.Sun
 java/sun-1.4/lib/font.properties.zh_CN_UTF8.Sun
+java/sun-1.4/lib/font.properties.zh_HK.Sun
+java/sun-1.4/lib/font.properties.zh_HK_UTF8.Sun
+java/sun-1.4/lib/font.properties.zh_HK_UTF8.Sun2003
 java/sun-1.4/lib/font.properties.zh_TW.Sun
 java/sun-1.4/lib/font.properties.zh_TW_UTF8.Sun
+java/sun-1.4/lib/font.properties.zh_TW_UTF8.Sun2003
 java/sun-1.4/lib/font.properties.Redhat6.1.default
 java/sun-1.4/lib/font.properties.ja.default
 java/sun-1.4/lib/font.properties.ja.Redhat6.1.default

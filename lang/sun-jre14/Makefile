@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.17 2004/05/22 21:32:34 jmmv Exp $
+# $NetBSD: Makefile,v 1.18 2004/07/02 14:40:21 jschauma Exp $
 
-DISTNAME=	j2re-1_4_2_04-linux-i586
-PKGNAME=	sun-jre14-2.4
-PKGREVISION=	1
+DISTNAME=	j2re-1_4_2_05-linux-i586
+PKGNAME=	sun-jre14-2.5
 MASTER_SITES=	# empty
 
 COMMENT=	Sun's Java(tm) 2 Runtime Environment 1.4.2
 
 SHORT=		JRE
 
-WRKSRC=		${WRKDIR}/j2re1.4.2_04
+WRKSRC=		${WRKDIR}/j2re1.4.2_05
 USE_PKGINSTALL=	yes
 JAVA_WRAPPERS=	java
 OWN_DIRS=	${JAVA_HOME}
