@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1999/04/01 18:53:17 garbled Exp $
+# $NetBSD: Makefile,v 1.4 1999/04/01 18:56:21 garbled Exp $
 
 DISTNAME=		freetype-1.1.full
 PKGNAME=		freetype-1.1
@@ -8,7 +8,7 @@ MASTER_SITES=		ftp://ftp.freetype.org/pub/freetype/old/
 MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.freetype.org
 
-DEPENDS+=		gettext-0.10:../../devel/gettext
+DEPENDS+=		gettext-0.10.35:../../devel/gettext
 
 WRKSRC=			${WRKDIR}/${PKGNAME}
 
