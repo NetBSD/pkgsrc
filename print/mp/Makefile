@@ -1,31 +1,27 @@
-# $NetBSD: Makefile,v 1.4 2001/02/17 17:51:49 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2003/09/21 21:33:09 kim Exp $
 #
 
-DISTNAME=	mpdist-3.5.2
-PKGNAME=	mp-3.5.2
+DISTNAME=	mpdist-3.7.1
+PKGNAME=	mp-3.7.1
 CATEGORIES=	print
-MASTER_SITES=	http://java.sun.com/people/richb/RichApps/mp/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mpdist/}
 
 MAINTAINER=     kim@tac.nyc.ny.us
-HOMEPAGE=	http://java.sun.com/people/richb/
+HOMEPAGE=	http://mpdist.sourceforge.net/
 COMMENT=	PostScript pretty printer
 
-GNU_CONFIGURE=	yes
-
-USE_X11=	yes
+GNU_CONFIGURE=		yes
+USE_BUILDLINK2=		yes
+USE_LIBTOOL=		yes
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+USE_X11=		yes
 
 .include "../../mk/bsd.prefs.mk"
-
-CONFIGURE_ARGS+=--disable-mptool
-CONFIGURE_ARGS+=--with-prologue=${PREFIX}/share/mp
 
 .if ${OPSYS} == "SunOS"
 .else
 CONFIGURE_ARGS+=--enable-bsd-print
 .endif
 
-post-install:
-	${MV} ${PREFIX}/share/mpdist ${PREFIX}/share/mp
-	${RM} -f ${PREFIX}/man/man1/mptool.1
-
+.include "../../x11/gtk/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
