@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/01/08 18:26:00 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2001/02/16 15:11:05 wiz Exp $
 #
 
 DISTNAME=	xscavenger-140
@@ -10,6 +10,7 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	wiz@netbsd.org
 HOMEPAGE=	http://www.xdr.com/dash/scavenger.html
+COMMENT=	Loderunner clone with sound for X11
 
 USE_IMAKE=	yes
 NO_INSTALL_MANPAGES=	yes

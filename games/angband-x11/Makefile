@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2000/09/11 00:22:23 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2001/02/16 15:10:42 wiz Exp $
 #
 
 DISTNAME=		angband-283
@@ -10,6 +10,7 @@ DISTFILES=		${DISTNAME}${EXTRACT_SUFX} angband-spoilers.tar.gz
 
 MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.phial.com/angband/
+COMMENT=		Tolkien based variant of Moria for X11 displays
 
 CONFLICTS=		angband-tty-*
 

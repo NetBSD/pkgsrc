@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/02/05 09:00:56 tron Exp $
+# $NetBSD: Makefile,v 1.10 2001/02/16 15:10:56 wiz Exp $
 
 DISTNAME=		Pacman-0.3-CVS-00-11-17
 PKGNAME=		Pacman-0.3
@@ -7,6 +7,7 @@ MASTER_SITES=		http://dark.x.dtu.dk/~mbn/clanlib/download/snapshots/Games/
 
 MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.clanlib.org/
+COMMENT=		Pacman, a small demonstration game for ClanLib
 
 DEPENDS+=		ClanLib>=0.2.2:../../graphics/clanlib
 DEPENDS+=		autoconf>=2.13:../../devel/autoconf

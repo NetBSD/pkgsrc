@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2000/11/21 16:57:47 abs Exp $
+# $NetBSD: Makefile,v 1.8 2001/02/16 15:10:41 wiz Exp $
 
 DISTNAME=		abuse_pd
 PKGNAME=		abuse-2.0
@@ -8,6 +8,7 @@ DISTFILES=		${DISTNAME}.tgz abuse_data.tar.gz
 
 MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.crack.com/games/abuse/index.html
+COMMENT=		Full color 320x200 arcade quality platform shooter
 
 USE_X11BASE=		yes
 GNU_CONFIGURE=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2000/09/03 10:22:44 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2001/02/16 15:10:54 wiz Exp $
 
 DISTNAME=		Maelstrom-1.4.3-L2.0.6-src.tar.gz
 PKGNAME=		maelstrom-2.0.6
@@ -10,6 +10,7 @@ DISTFILES=		${DISTNAME} ${STREK} ${SWARS} ${ESOUND}
 
 MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.ambrosiasw.com/Products/Maelstrom.html
+COMMENT=		Incredible, fast moving, high graphics version of asteroids
 
 ESOUND=			Maelstrom-Sounds-L2.0.0.tar.gz
 STREK=			Star_Trek.tar.gz

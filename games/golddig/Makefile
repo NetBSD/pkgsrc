@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1999/01/30 23:18:47 agc Exp $
+# $NetBSD: Makefile,v 1.4 2001/02/16 15:10:51 wiz Exp $
 #
 
 DISTNAME=	golddig2
@@ -7,6 +7,7 @@ CATEGORIES=	games x11
 MASTER_SITES=	ftp://uiarchive.cso.uiuc.edu/pub/systems/linux/sunsite/games/arcade/
 
 MAINTAINER=	root@garbled.net
+COMMENT=	Fast action game designed for use with X
 
 USE_X11BASE=	yes
 

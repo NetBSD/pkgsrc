@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/01/07 19:02:07 hubertf Exp $
+# $NetBSD: Makefile,v 1.6 2001/02/16 15:10:49 wiz Exp $
 #
 
 DISTNAME=	galaxa.0.1
@@ -8,6 +8,7 @@ MASTER_SITES=	ftp://ftp.sonic.net/pub/users/nbs/unix/x/galaxa/
 
 MAINTAINER=	root@garbled.net
 HOMEPAGE=	http://www.newbreedsoftware.com/galaxa/
+COMMENT=	Space game based loosely on "Galaga"
 
 WRKSRC=		${WRKDIR}/galaxa
 MAKEFILE=	makefile

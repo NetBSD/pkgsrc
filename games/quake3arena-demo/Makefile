@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/12/24 01:59:52 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2001/02/16 15:10:57 wiz Exp $
 #
 
 DISTNAME=	linuxq3ademo-1_11-6_x86_gz
@@ -10,6 +10,7 @@ EXTRACT_SUFX=	.sh
 
 MAINTAINER=	wiz@netbsd.org
 HOMEPAGE=	http://www.quake3arena.com/
+COMMENT=	Quake 3 Arena -- first person shooter (linux demo)
 
 DEPENDS+=	suse_linux>=6.3:../../emulators/suse_linux
 DEPENDS+=	suse_glx-6.4:../../emulators/suse_glx

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2000/08/18 22:46:34 hubertf Exp $
+# $NetBSD: Makefile,v 1.9 2001/02/16 15:11:03 wiz Exp $
 # FreeBSD Id: Makefile,v 1.3 1996/12/08 01:11:27 max Exp
 #
 
@@ -10,6 +10,7 @@ CATEGORIES=	games
 MASTER_SITES=	ftp://wcarchive.cdrom.com/pub/linux/slackware/source/xap/xgames/
 
 MAINTAINER=	packages@netbsd.org
+COMMENT=	The Chinese game of Mahjongg for X11
 
 WRKSRC=		${WRKDIR}/xmahjongg
 USE_IMAKE=	yes

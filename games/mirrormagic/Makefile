@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2000/09/04 10:23:58 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2001/02/16 15:10:54 wiz Exp $
 #
 
 DISTNAME=		mirrormagic-1.3
@@ -8,6 +8,7 @@ MASTER_SITES=		${MASTER_SITE_XCONTRIB:=games/} \
 
 MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.artsoft.org/mirrormagic/
+COMMENT=		Nice little puzzle game with color graphics and sound
 
 USE_X11BASE=		YES
 USE_XPM=		YES

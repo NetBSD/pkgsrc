@@ -1,9 +1,11 @@
-# $NetBSD: Makefile,v 1.9 2000/08/10 17:50:04 pooka Exp $
+# $NetBSD: Makefile,v 1.10 2001/02/16 15:10:54 wiz Exp $
 #
 
 .include		"../nethack-lib/Makefile.common"
 
 PKGNAME=		nethack-lib-${NETHACK_VERSION}
+
+COMMENT=		data files for Nethack
 
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	./sys/unix/setup.sh

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1999/04/15 20:39:43 tron Exp $
+# $NetBSD: Makefile,v 1.8 2001/02/16 15:11:03 wiz Exp $
 # FreeBSD Id: Makefile,v 1.10 1997/11/12 09:57:17 tg Exp
 #
 
@@ -9,6 +9,7 @@ MASTER_SITES=	${MASTER_SITE_XCONTRIB:=games/}  \
 
 MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://seki.math.hokudai.ac.jp:20080/xkobo-current.html
+COMMENT=	Multi-way scrolling shoot 'em up game for X.  Strangely addictive
 
 USE_IMAKE=	yes
 ALL_TARGET+=	xkobo all

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/12/16 01:30:10 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2001/02/16 15:11:05 wiz Exp $
 # FreeBSD Id: Makefile,v 1.10 1998/12/22 16:07:01 tg Exp 
 #
 
@@ -8,6 +8,7 @@ MASTER_SITES=	http://www.gulu.net/xskat/
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.gulu.net/xskat/
+COMMENT=	Play the card game Skat
 
 USE_IMAKE=	yes
 

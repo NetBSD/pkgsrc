@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2000/07/11 08:43:54 agc Exp $
+# $NetBSD: Makefile,v 1.8 2001/02/16 15:11:03 wiz Exp $
 #
 
 DISTNAME=		xjig-2.4
@@ -7,6 +7,7 @@ MASTER_SITES=		${MASTER_SITE_XCONTRIB:=games/multiplayer/}
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		packages@netbsd.org
+COMMENT=		jigsaw puzzle
 
 USE_IMAKE=		yes
 ALL_TARGET=		xjig xjig.0

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2000/02/03 16:01:14 abs Exp $
+# $NetBSD: Makefile,v 1.12 2001/02/16 15:11:01 wiz Exp $
 
 DISTNAME=	linuxdoom-1.10
 PKGNAME=	xdoom-1.10nb1
@@ -10,6 +10,7 @@ DISTFILES=	doomsrc.zip doom-1.8.wad.gz
 
 MAINTAINER=	root@garbled.net
 HOMEPAGE=	http://www.idsoftware.com/archives/doomarc.html
+COMMENT=	3D shoot-em-up for 8-bit X11 displays
 
 BUILD_DEPENDS=	unzip:../../archivers/unzip
 

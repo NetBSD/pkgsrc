@@ -1,6 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2001/01/04 14:18:50 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2001/02/16 15:10:48 wiz Exp $
 
 PKGNAME=		${DISTNAME:S/-/-server-/}
+
+COMMENT=		Freeciv game server
 
 DEPENDS+=		freeciv-share-${FC_VERS}:../../games/freeciv-share
 DEPENDS+=		readline-*:../../devel/readline

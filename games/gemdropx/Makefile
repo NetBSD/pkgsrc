@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1999/01/30 23:18:47 agc Exp $
+# $NetBSD: Makefile,v 1.5 2001/02/16 15:10:49 wiz Exp $
 #
 
 DISTNAME=	gemdropx
@@ -8,6 +8,7 @@ MASTER_SITES=	ftp://ftp.sonic.net/pub/users/nbs/unix/x/gemdropx/
 
 MAINTAINER=	root@garbled.net
 HOMEPAGE=	http://www.sonic.net/~nbs/unix/x/gemdropx/
+COMMENT=	Color puzzle game for X11 similar to Gem Drop
 
 MAKEFILE=	makefile
 WRKSRC=		${WRKDIR}/gemdropx

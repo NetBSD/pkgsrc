@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2000/07/15 20:39:17 agc Exp $
+# $NetBSD: Makefile,v 1.9 2001/02/16 15:10:42 wiz Exp $
 #
 
 DISTNAME=	amor-0.6
@@ -8,6 +8,7 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://www.powerup.com.au/~mjones/amor/index.html
+COMMENT=	Small blob that sits on top of your active window
 
 DEPENDS+=	kdebase-1.1.2:../../x11/kdebase
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/10/21 22:36:35 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2001/02/16 15:10:45 wiz Exp $
 
 DISTNAME=		large
 PKGNAME=		${CHESS_ENGINE}-book-${DISTNAME}-20000511
@@ -11,6 +11,7 @@ DISTFILES+=		${DISTNAME}3${EXTRACT_SUFX}
 DISTFILES+=		${DISTNAME}4${EXTRACT_SUFX}
 
 MAINTAINER=		jlam@netbsd.org
+COMMENT=		chess opening book for Crafty (large)
 
 DEPENDS+=		crafty>=17.0:../../games/crafty
 

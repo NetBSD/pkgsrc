@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/12/24 01:59:52 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/16 15:10:43 wiz Exp $
 #
 
 DISTNAME=	civctp-demo-10251999
@@ -10,6 +10,7 @@ MASTER_SITES=	ftp://ftp.linuxgames.com/loki/demos/civctp/ \
 
 MAINTAINER=	abs@netbsd.org
 HOMEPAGE=	http://www.lokigames.com/products/civctp/demo.php3
+COMMENT=	Civilization: Call to Power - graphical strategy (linux demo)
 
 NO_CONFIGURE=		yes
 

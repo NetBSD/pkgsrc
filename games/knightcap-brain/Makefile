@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/10/21 23:15:24 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/16 15:10:53 wiz Exp $
 
 DISTNAME=		new_brain
 PKGNAME=		knightcap-brain-19980616
@@ -8,6 +8,7 @@ EXTRACT_SUFX=		.dat
 
 MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://anu.samba.org/KnightCap/
+COMMENT=		book of losing moves for KnightCap
 
 ONLY_FOR_PLATFORMS=	*-*-i386
 
