@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 1998/02/27 09:02:31 mellon Exp $
+@comment $NetBSD: PLIST,v 1.2 1998/02/27 11:21:16 agc Exp $
 include/zephyr/mit-copyright.h
 include/zephyr/zephyr.h
 include/zephyr/zephyr_err.h
@@ -84,4 +84,7 @@ etc/zephyr/acl/xmt-zephyr_admin.acl
 etc/zephyr/acl/xmt-zephyr_ctl.acl
 etc/zephyr/acl/xmt-zmatch_all.acl
 sbin/zhm
-man/man8/zhm.8 
+man/man8/zhm.8
+@dirrm etc/zephyr/acl
+@dirrm etc/zephyr
+@dirrm include/zephyr
