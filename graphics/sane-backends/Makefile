@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/10/16 13:17:04 tron Exp $
+# $NetBSD: Makefile,v 1.8 2001/10/16 16:39:07 tron Exp $
 
 DISTNAME=       sane-backends-1.0.5
 CATEGORIES=	graphics
@@ -24,4 +24,5 @@ CPPFLAGS+=	-I${PREFIX}/include
 # -O to work around a bug with -O2 and egcs.
 CFLAGS=		-O -I${LOCALBASE}/include
 
+.include "../../devel/libusb/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
