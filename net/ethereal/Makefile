@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.92 2004/03/26 02:27:47 wiz Exp $
+# $NetBSD: Makefile,v 1.93 2004/03/31 07:03:30 cube Exp $
 #
 
-DISTNAME=		ethereal-0.10.0a
-PKGREVISION=		2
+DISTNAME=		ethereal-0.10.3
+PKGREVISION=		# defined
 CATEGORIES=		net
 MASTER_SITES=		ftp://ftp.ethereal.com/pub/ethereal/ \
 			ftp://ftp.sunet.se/pub/network/monitoring/ethereal/ \
@@ -18,7 +18,7 @@ MAINTAINER=		frueauf@NetBSD.org
 HOMEPAGE=		http://www.ethereal.com/
 COMMENT=		Network protocol analyzer
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_X11=		YES
 USE_PERL5=		build
 
@@ -31,18 +31,18 @@ CONFIGURE_ARGS+=        --enable-static=no
 CONFIGURE_ARGS+=	--enable-threads
 CONFIGURE_ARGS+=	--with-gtk-prefix=${BUILDLINK_PREFIX.gtk2}
 CONFIGURE_ARGS+=	--with-ssl=${SSLBASE}
-CONFIGURE_ARGS+=	--with-net-snmp=${BUILDLINK_PREFIX.net-snmp}
+CONFIGURE_ARGS+=	--with-net-snmp
 CONFIGURE_ARGS+=	--with-pcap=${BUILDLINK_PREFIX.libpcap}
 CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib}
 CONFIGURE_ENV+=		ac_cv_func_pcap_compile_nopcap=no
 
 PTHREAD_OPTS=		require
 
-.include "../../devel/zlib/buildlink2.mk"
-.include "../../net/libpcap/buildlink2.mk"
-.include "../../net/net-snmp/buildlink2.mk"
-.include "../../security/openssl/buildlink2.mk"
-.include "../../x11/gtk2/buildlink2.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../net/libpcap/buildlink3.mk"
+.include "../../net/net-snmp/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 
-.include "../../mk/pthread.buildlink2.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
