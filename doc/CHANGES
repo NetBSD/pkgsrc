@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8282 2004/12/05 15:32:22 he Exp $
+$NetBSD: CHANGES,v 1.8283 2004/12/05 15:42:34 he Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5785,3 +5785,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated ruby-rexml to 3.1.2nb1 [taca 2004-12-05]
 	Updated mummer to 3.15 [cube 2004-12-05]
 	Updated p5-HTML-Template to 2.7 [he 2004-12-05]
+	Updated p5-CGI-Application to 3.31 [he 2004-12-05]
