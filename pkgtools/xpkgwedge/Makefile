@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1998/07/01 15:56:35 tv Exp $
+# $NetBSD: Makefile,v 1.4 1998/07/14 10:56:16 frueauf Exp $
 #
 
 DISTNAME=	xpkgwedge-0.2
@@ -25,7 +25,11 @@ pre-extract:
 pre-configure:
 	@${CP} ${FILESDIR}/Imakefile ${FILESDIR}/xpkgwedge.def ${WRKSRC}
 
-post-install:
-	@${SED} -e s,@@PREFIX@@,${LOCALBASE}, ${PKGDIR}/MESSAGE
+pre-install:
+	@${SED} -e 's|@@PREFIX@@|${LOCALBASE}|g' < ${PKGDIR}/MESSAGE.pre \
+		> ${PKGDIR}/MESSAGE
+
+pre-clean:
+	@${RM} ${PKGDIR}/MESSAGE
 
 .include "../../mk/bsd.pkg.mk"
