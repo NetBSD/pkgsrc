@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/05/14 13:02:55 agc Exp $
+# $NetBSD: Makefile,v 1.2 2001/07/16 10:17:00 jlam Exp $
 #
 
 DISTNAME=		xfd_SZDD
@@ -11,10 +11,11 @@ MAINTAINER=		collver@linuxfreemail.com
 HOMEPAGE=		http://www.kyz.uklinux.net/packers.php3#SZDD
 COMMENT=		extracts Microsoft SZDD files
 
+USE_BUILDLINK_ONLY=	yes
 NO_WRKSUBDIR=		yes
 
 pre-build:
-	cd ${WRKSRC} && make clean
+	cd ${WRKSRC} && ${MAKE_PROGRAM} clean
 
 do-install:
 	${CP} ${WRKSRC}/szddexpand ${WRKSRC}/szddinfo ${PREFIX}/bin
