@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 1998/10/19 16:56:34 tsarna Exp $
+# $NetBSD: Makefile,v 1.10 1998/12/18 00:42:39 tsarna Exp $
 
 DISTNAME=	MySQLmodule-1.4
 PKGNAME=	py-mysql-1.4
@@ -14,8 +14,6 @@ DEPENDS+=	python-1.5.1:../../lang/python \
 		mysql>=3.21:../../databases/mysql
 
 CONFLICTS=	py-mysql-1.1
-
-NOT_FOR_ARCHS=  alpha # possibly broken
 
 EXTRACT_ONLY=	MySQLmodule-1.4${EXTRACT_SUFX}
 ALL_TARGET=	default
