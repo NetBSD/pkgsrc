@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4647 2004/01/31 00:30:15 kristerw Exp $
+$NetBSD: CHANGES,v 1.4648 2004/01/31 00:53:46 kristerw Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -532,3 +532,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated ngrep to 1.41 [adam 2004-01-30]
 	Updated freeradius to 0.9.3 [david 2004-01-30]
 	Updated dejagnu to 1.4.4 [kristerw 2004-01-31]
+	Updated vice to 1.14 [kristerw 2004-01-31]
