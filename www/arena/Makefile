@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 1999/01/30 23:18:54 agc Exp $
+# $NetBSD: Makefile,v 1.12 1999/03/20 00:48:30 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.10 1998/05/04 20:22:31 jseger Exp
 #
 
@@ -11,9 +11,9 @@ MAINTAINER=	tv@netbsd.org
 HOMEPAGE=	http://www.yggdrasil.com/Products/Arena/
 
 DEPENDS=	libwww-5.1m1:../../www/libwww \
-		jpeg-6*:../../graphics/jpeg \
-		png-1.*:../../graphics/png \
-		xpm-3.4*:../../graphics/xpm
+		jpeg-6b:../../graphics/jpeg \
+		png-1.0.3:../../graphics/png \
+		xpm-3.4k:../../graphics/xpm
 
 NOT_FOR_ARCHS=	alpha	#Runs, displays black screen
 
