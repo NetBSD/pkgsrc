@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8261 2004/12/04 23:14:26 jmmv Exp $
+$NetBSD: CHANGES,v 1.8262 2004/12/04 23:38:25 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5766,3 +5766,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gnome2-games to 2.8.2 [jmmv 2004-12-04]
 	Updated eog2 to 2.8.2 [jmmv 2004-12-04]
 	Updated epiphany-extensions to 1.4.3 [jmmv 2004-12-04]
+	Updated opencm to 0.1.2rc8 [jmmv 2004-12-04]
