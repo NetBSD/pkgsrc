@@ -1,6 +1,6 @@
-$NetBSD: patch-sum,v 1.1 1999/07/09 13:50:23 agc Exp $
+$NetBSD: patch-sum,v 1.2 2001/02/21 18:50:37 tv Exp $
 
-MD5 (patch-aa) = c7237625b43a32b516d5141536d91d5e
+MD5 (patch-aa) = c26244e76833f89fdc34bb5f4f7bf846
 MD5 (patch-ab) = 93eabfe5c116ab445f5178181eeb124b
 MD5 (patch-ac) = de1d9d3a5e18a36b929462a86a545b77
 MD5 (patch-ad) = 6d138796513a0f5f7a1c1c2e84f32675
@@ -9,14 +9,17 @@ MD5 (patch-af) = 02cdf6ee2ab417cfeae4c508285c5cd7
 MD5 (patch-ag) = 8486e1dc02bc9ea09d6e29207f4ab943
 MD5 (patch-ah) = 0448c674ed9997e15003c5efb5de7f55
 MD5 (patch-ai) = 6b69baa96f4b35c0f117a9be6bb476b5
-MD5 (patch-aj) = 0cae8cb86ef574255888cf56383ac108
+MD5 (patch-aj) = a1afb30a4b85d501370f802ade5da54b
 MD5 (patch-ak) = d68402c77c7c585f31f09700f698f95d
 MD5 (patch-al) = c6430caf128dcb1a8100794426e1e411
-MD5 (patch-am) = d3f4e9ffc09c390b86ceb196e97e9821
+MD5 (patch-am) = eca318296bf54b951369771ac6704d16
 MD5 (patch-an) = f84af712346e1757a0bacc4f22af8f38
-MD5 (patch-ao) = d3cacd30d5f91030567ef2cc722bb391
-MD5 (patch-ap) = 170c3c4cc17a069dd9ad03484ee3b55a
+MD5 (patch-ao) = 683692582d07caff106ef105ce4b9aa2
+MD5 (patch-ap) = d8f86bf2f9692a144ab929396805bfe4
 MD5 (patch-aq) = 1f2d906d0b1edfb4d8b49bb6f73e6b67
-MD5 (patch-ar) = bfdab986ff89b445c59c5694a98f7da2
-MD5 (patch-as) = 31ce1a9f2feda8238c613dbee20a7803
+MD5 (patch-ar) = 7ccd1ff833205ffb7a39d4cd45b6e7de
+MD5 (patch-as) = 70aee65ccb8430f053338c0af263474f
 MD5 (patch-at) = aaa9004a37e310e47b2c480353c51ea1
+MD5 (patch-au) = fe93664c434a6fc2a3178d1ffb3febfa
+MD5 (patch-av) = 5ae3d1f246d5f6433172b60f0123446e
+MD5 (patch-aw) = 04b1f38567350721020a281a158c4dfb

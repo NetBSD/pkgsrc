@@ -1,7 +1,7 @@
-$NetBSD: patch-ap,v 1.1 1998/12/21 15:45:21 tv Exp $
+$NetBSD: patch-ap,v 1.2 2001/02/21 18:50:37 tv Exp $
 
---- ifcico/hydra.c.orig	Mon Dec 21 09:46:45 1998
-+++ ifcico/hydra.c	Mon Dec 21 09:50:00 1998
+--- ifcico/hydra.c.orig	Sun Nov 15 15:13:14 1998
++++ ifcico/hydra.c	Wed Feb 21 10:51:23 2001
 @@ -89,7 +89,7 @@
  
  static char *put_long(char *buffer, long val)
@@ -20,15 +20,28 @@ $NetBSD: patch-ap,v 1.1 1998/12/21 15:45:21 tv Exp $
    return *(long *) buffer;
  #else
    return ((unsigned long) ((unsigned char) buffer[0])) |
-@@ -894,7 +894,7 @@
+@@ -530,8 +530,8 @@
+   char *inbuf, *outbuf;
+   int rxlen, txlen;		/* length of receive/transmit buffer */
+   long txwindow, rxwindow;	/* window sizes */
+-  long txpos, rxpos;		/* file positions */
+-  long stxpos, srxpos;
++  off_t txpos, rxpos;		/* file positions */
++  off_t stxpos, srxpos;
+   long longnum;
+   int hdxlink = 0;
+   int txretries, rxretries;
+@@ -894,8 +894,8 @@
  	if (to_send)
  	{
  	  txlen = sprintf(txbuf, "%08lx%08lx%08lx%08lx%08lx",
 -			  mtime2sl(txstat.st_mtime),
-+			  (long)mtime2sl(txstat.st_mtime),
- 			  txstat.st_size,
+-			  txstat.st_size,
++			  (unsigned long)mtime2sl(txstat.st_mtime),
++			  (unsigned long)txstat.st_size,
  			  0UL,
  			  0UL,
+ 			  0UL);
 @@ -1353,7 +1353,7 @@
  	 */
  	else if ((rxlen > 41) && (rxbuf[rxlen - 1] == 0))
