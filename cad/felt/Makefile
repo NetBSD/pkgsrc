@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2001/10/24 22:10:47 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2002/06/28 07:31:36 agc Exp $
 
 DISTNAME=		felt-3.05.src
 PKGNAME=		felt-3.05
 CATEGORIES=		cad
-MASTER_SITES=		ftp://ftp.sourceforge.net/pub/sourceforge/FElt/
+MASTER_SITES=		ftp://ftp.sourceforge.net/pub/sourceforge/felt/
 DISTFILES=		felt-3.05.src.tar.gz felt-3.05.ps.gz
 
 MAINTAINER=		packages@netbsd.org
