@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2003/06/02 01:16:07 jschauma Exp $
+# $NetBSD: Makefile,v 1.11 2003/06/18 09:22:27 agc Exp $
 
 DISTNAME=		${PKGNAME}-i386.linux
 PKGNAME=		asWedit-4.0.1
-WRKSRC=			${WRKDIR}/${PKGNAME}
+WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 CATEGORIES=		www
 MASTER_SITES=		http://www.advasoft.com/asWedit/ \
 			http://gd.tuwien.ac.at/infosys/editors/asWedit/ \

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2003/06/02 01:19:51 jschauma Exp $
+# $NetBSD: Makefile,v 1.6 2003/06/18 09:22:18 agc Exp $
 #
 
 DISTNAME=	x48_041
 PKGNAME=	x48-0.4.1
-WRKSRC=		${WRKDIR}/${PKGNAME}
+WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 CATEGORIES=	emulators
 MASTER_SITES=	http://home.earthlink.net/~rmmlgetz/
 

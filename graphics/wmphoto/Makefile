@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2003/06/02 01:19:11 jschauma Exp $
+# $NetBSD: Makefile,v 1.5 2003/06/18 09:22:19 agc Exp $
 #
 
 DISTNAME=	wmphoto-0.3a
-WRKSRC=		${WRKDIR}/${PKGNAME}/wmphoto
+WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}/wmphoto
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.dcc.uchile.cl/~amartoq/wmphoto/
 

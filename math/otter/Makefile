@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2003/06/02 01:18:28 jschauma Exp $
+# $NetBSD: Makefile,v 1.8 2003/06/18 09:22:21 agc Exp $
 
 DISTNAME=	otter-3.0.6
-WRKSRC=		${WRKDIR}/${PKGNAME}/source
+WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}/source
 CATEGORIES=	math
 MASTER_SITES=	ftp://info.mcs.anl.gov/pub/Otter/
 
@@ -15,18 +15,18 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/otter ${PREFIX}/bin
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/otter
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/otter
-	cd ${WRKDIR}/${PKGNAME} && ${INSTALL_DATA} Announce Changelog 	\
+	cd ${WRKDIR}/${PKGNAME_NOREV} && ${INSTALL_DATA} Announce Changelog \
 		Copying README* ${PREFIX}/share/doc/otter
 	for d in auto fringe ivy kalman misc program split wos;	do	\
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/otter/$$d;		\
-	${INSTALL_DATA} ${WRKDIR}/${PKGNAME}/examples/$$d/*		\
+	${INSTALL_DATA} ${WRKDIR}/${PKGNAME_NOREV}/examples/$$d/*	\
 		${PREFIX}/share/examples/otter/$$d;			\
 	done
-	cd ${WRKDIR}/${PKGNAME}/examples && ${INSTALL_SCRIPT} Run_all 	\
+	cd ${WRKDIR}/${PKGNAME_NOREV}/examples && ${INSTALL_SCRIPT} Run_all \
 		objects	summary ${PREFIX}/share/examples/otter
-	${INSTALL_DATA} ${WRKDIR}/${PKGNAME}/examples/README 		\
+	${INSTALL_DATA} ${WRKDIR}/${PKGNAME_NOREV}/examples/README 	\
 		${PREFIX}/share/examples/otter
-	${INSTALL_DATA} ${WRKDIR}/${PKGNAME}/document/* 		\
+	${INSTALL_DATA} ${WRKDIR}/${PKGNAME_NOREV}/document/* 		\
 		${PREFIX}/share/doc/otter
 
 .include "../../mk/bsd.pkg.mk"
