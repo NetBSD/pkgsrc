@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/02/25 18:43:59 reed Exp $
+bin/bsflite
+share/doc/bsflite/COPYING
+share/doc/bsflite/ChangeLog
+share/doc/bsflite/README
+@dirrm share/doc/bsflite
