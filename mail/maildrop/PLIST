@@ -1,33 +1,31 @@
-@comment $NetBSD: PLIST,v 1.2 2002/01/22 22:09:41 jlam Exp $
-bin/dotlock
+@comment $NetBSD: PLIST,v 1.3 2005/02/18 22:12:53 jlam Exp $
+bin/lockmail
 bin/mailbot
 bin/maildrop
 bin/makemime
 bin/reformail
 bin/reformime
-man/man1/dotlock.1
+man/man1/lockmail.1
 man/man1/mailbot.1
 man/man1/maildrop.1
 man/man1/makemime.1
 man/man1/reformail.1
 man/man1/reformime.1
-man/man5/maildropex.5
-man/man5/maildropfilter.5
-man/man5/maildropgdbm.5
-share/doc/courier/README.maildrop
+man/man7/maildropex.7
+man/man7/maildropfilter.7
+man/man7/maildropgdbm.7
 share/doc/courier/README.postfix
 share/doc/courier/maildroptips.txt
-share/doc/html/maildrop/dotlock.html
-share/doc/html/maildrop/mailbot.html
-share/doc/html/maildrop/maildirmake.html
-share/doc/html/maildrop/maildrop.html
-share/doc/html/maildrop/maildropex.html
-share/doc/html/maildrop/maildropfilter.html
-share/doc/html/maildrop/maildropgdbm.html
-share/doc/html/maildrop/makemime.html
-share/doc/html/maildrop/reformail.html
-share/doc/html/maildrop/reformime.html
-share/doc/html/maildrop/rfc2045.html
-share/doc/html/maildrop/rfc822.html
-@dirrm share/doc/html/maildrop
+share/doc/courier/lockmail.html
+share/doc/courier/mailbot.html
+share/doc/courier/maildrop.html
+share/doc/courier/maildropex.html
+share/doc/courier/maildropfilter.html
+share/doc/courier/maildropgdbm.html
+share/doc/courier/makemime.html
+share/doc/courier/manpage.css
+share/doc/courier/reformail.html
+share/doc/courier/reformime.html
+share/doc/courier/rfc2045.html
+share/doc/courier/rfc822.html
 @unexec ${RMDIR} -p %D/share/doc/courier 2>/dev/null || ${TRUE}
