@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.5 2002/10/16 15:25:32 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.6 2002/11/13 19:30:45 jlam Exp $
 
 .if !defined(OSS_BUILDLINK2_MK)
 OSS_BUILDLINK2_MK=	# defined
@@ -23,6 +23,11 @@ BUILDLINK_FILES.ossaudio=	include/sys/awe_voice.h
 BUILDLINK_FILES.ossaudio+=	include/sys/dm.h
 BUILDLINK_FILES.ossaudio+=	include/sys/soundcard.h
 BUILDLINK_FILES.ossaudio+=	include/sys/ultrasound.h
+
+# If we are using audio/oss, then we don't need the NetBSD OSS
+# compatibility library.
+#
+BUILDLINK_TRANSFORM+=		r:-lossaudio
 
 BUILDLINK_TARGETS+=	oss-buildlink
 BUILDLINK_TARGETS+=	oss-buildlink-soundcard-h
