@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.1 1999/10/24 20:44:41 tron Exp $
+$NetBSD: patch-ac,v 1.2 1999/10/25 10:18:37 tron Exp $
 
 --- servGL/serverglx/glxmesa.c.orig	Mon Aug  2 20:37:13 1999
 +++ servGL/serverglx/glxmesa.c	Sun Oct 24 22:30:45 1999
@@ -23,7 +23,7 @@ $NetBSD: patch-ac,v 1.1 1999/10/24 20:44:41 tron Exp $
        fprintf(stderr, "glX Error: error setting log file\n");
     }
     log_initialize();
-@@ -269,9 +270,10 @@
+@@ -269,9 +269,9 @@
                hwInitVisuals = NULL;
  #endif
             } else 
@@ -32,8 +32,7 @@ $NetBSD: patch-ac,v 1.1 1999/10/24 20:44:41 tron Exp $
 -                (!strcmp("RIVATNT2", vga256InfoRec.chipset)) )  {
 +           if ( (strncmp("RIVA", vga256InfoRec.chipset, 4) == 0) &&
 +                ((strstr(&vga256InfoRec.chipset[4], "128") != NULL) ||
-+                 (strstr(&vga256InfoRec.chipset[4], "TNT") != NULL) ||
-+                 (strstr(&vga256InfoRec.chipset[4], "TNT2") != NULL)) ) {
++                 (strstr(&vga256InfoRec.chipset[4], "TNT") != NULL)) ) {
                hw_flag = GL_TRUE;
                /* XXX - may need to select correct one */ 
                glx_chipset = NV_RIVATNT; 
