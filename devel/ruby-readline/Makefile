@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.9 2004/03/12 05:02:55 taca Exp $
+# $NetBSD: Makefile,v 1.10 2004/03/16 02:01:10 taca Exp $
 #
 
 DISTNAME=		${RUBY_DISTNAME}
 PKGNAME=		${RUBY_PKGNAMEPREFIX}readline-${RUBY_VERSION}
 PKGREVISION=		3
-CATEGORIES=		devel
+CATEGORIES=		devel ruby
 MASTER_SITES=		${MASTER_SITE_RUBY}
 
 MAINTAINER=		taca@NetBSD.org

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2004/03/07 04:10:04 taca Exp $
+# $NetBSD: Makefile,v 1.5 2004/03/16 02:01:11 taca Exp $
 # FreeBSD: ports/mail/ruby-tmail/Makefile,v 1.10 2001/01/27 09:46:32 knu Exp
 
 DISTNAME=	tmail-0.10.8
 PKGNAME=	${RUBY_PKGNAMEPREFIX}${DISTNAME}
-CATEGORIES=	mail
+CATEGORIES=	mail ruby
 MASTER_SITES=	http://www.loveruby.net/archive/tmail/
 
 MAINTAINER=	taca@NetBSD.org
