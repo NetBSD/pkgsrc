@@ -1,22 +1,13 @@
-$NetBSD: patch-ac,v 1.1 2001/02/27 08:48:39 tron Exp $
+$NetBSD: patch-ac,v 1.2 2002/10/16 00:21:22 dmcmahill Exp $
 
---- Makefile.in.orig	Fri Jun 23 18:35:23 2000
-+++ Makefile.in	Tue Feb 27 09:40:18 2001
-@@ -101,7 +101,7 @@
- man_MANS = make.1
- info_TEXINFOS = make.texinfo
+--- Makefile.am.orig	Thu Oct  3 22:29:18 2002
++++ Makefile.am
+@@ -27,7 +27,7 @@ make_LDADD =	@LIBOBJS@ @ALLOCA@ $(GLOBLI
  
--DEFS = -DALIASPATH=\"$(aliaspath)\" -DLOCALEDIR=\"$(localedir)\" -DLIBDIR=\"$(libdir)\" -DINCLUDEDIR=\"$(includedir)\" @DEFS@
-+DEFS = -DALIASPATH=\"$(aliaspath)\" -DLIBDIR=\"$(libdir)\" -DINCLUDEDIR=\"$(includedir)\" @DEFS@
+ man_MANS =	make.1
  
- INCLUDES = -I. -I$(srcdir) $(GLOBINC)
+-DEFS =		-DLOCALEDIR=\"$(localedir)\" -DLIBDIR=\"$(libdir)\" -DINCLUDEDIR=\"$(includedir)\" @DEFS@
++DEFS =		-DLOCALEDIR=\"$(prefix)/$(PKGLOCALEDIR)/locale\" -DLIBDIR=\"$(libdir)\" -DINCLUDEDIR=\"$(includedir)\" @DEFS@
  
-@@ -117,7 +117,7 @@
+ AM_CPPFLAGS =	$(GLOBINC)
  
- POTFILES = $(SRCS) remote-cstms.c vmsfunctions.c
- 
--localedir = $(prefix)/share/locale
-+localedir = $(prefix)/$(PKGLOCALEDIR)/locale
- aliaspath = $(localedir):.
- 
- # --------------- Local INSTALL Section

@@ -1,19 +1,13 @@
-$NetBSD: patch-ad,v 1.1 2001/03/19 14:57:33 wiz Exp $
+$NetBSD: patch-ad,v 1.2 2002/10/16 00:21:22 dmcmahill Exp $
 
---- getopt.c.orig	Tue Jan 25 08:42:51 2000
-+++ getopt.c
-@@ -79,9 +79,13 @@
- # endif
- #endif
+--- Makefile.in.orig	Thu Oct  3 22:56:12 2002
++++ Makefile.in
+@@ -55,7 +55,7 @@ CPP = @CPP@
+ CPPFLAGS = @CPPFLAGS@
+ CYGPATH_W = @CYGPATH_W@
  
-+#ifdef HAVE_GETTEXT
-+# include <libintl.h>
-+#else
- /* This is for other GNU distributions with internationalized messages.
-    When compiling libc, the _ macro is predefined.  */
--#include "gettext.h"
-+# include "gettext.h"
-+#endif
- #define _(msgid)    gettext (msgid)
- 
- 
+-DEFS = -DLOCALEDIR=\"$(localedir)\" -DLIBDIR=\"$(libdir)\" -DINCLUDEDIR=\"$(includedir)\" @DEFS@
++DEFS = -DLOCALEDIR=\"$(prefix)/$(PKGLOCALEDIR)/locale\" -DLIBDIR=\"$(libdir)\" -DINCLUDEDIR=\"$(includedir)\" @DEFS@
+ DEPDIR = @DEPDIR@
+ ECHO_C = @ECHO_C@
+ ECHO_N = @ECHO_N@
