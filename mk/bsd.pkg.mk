@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.792 2001/07/26 08:39:35 wiz Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.793 2001/07/27 12:19:15 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -763,7 +763,7 @@ XPMDIR_DEFAULT=		${X11BASE}
 # If USE_MESA is set, depend on Mesa (or Mesa-glx if USE_GLX is defined and
 # Mesa/GLX is not included in XFree86)
 .if defined(USE_MESA)
-.  if (defined(USE_GLX) && ${HAVE_BUILTIN_MESA} == "NO")
+.  if (defined(USE_GLX) && defined(HAVE_BUILTIN_MESA) && ${HAVE_BUILTIN_MESA} == "NO")
 DEPENDS+=		Mesa-glx>=20000813:../../graphics/Mesa-glx
 .  else
 DEPENDS+=		Mesa>=3.2.1:../../graphics/Mesa
