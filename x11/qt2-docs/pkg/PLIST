@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2001/03/23 18:09:34 drochner Exp $
+@comment $NetBSD: PLIST,v 1.7 2001/06/17 19:10:38 drochner Exp $
 qt2/doc/README
 qt2/doc/README.QT
 qt2/doc/html/HOWTO-framebuffer.html
@@ -288,6 +288,7 @@ qt2/doc/html/objecttrees.html
 qt2/doc/html/opengl.html
 qt2/doc/html/organizers.html
 qt2/doc/html/palette.png
+qt2/doc/html/performance-qws.html
 qt2/doc/html/picture-picture-cpp.html
 qt2/doc/html/pictures.html
 qt2/doc/html/pnglogo.png
@@ -1258,6 +1259,8 @@ qt2/doc/html/qwsmousehandler-members.html
 qt2/doc/html/qwsmousehandler.html
 qt2/doc/html/qwsserver-members.html
 qt2/doc/html/qwsserver.html
+qt2/doc/html/qwswindow-members.html
+qt2/doc/html/qwswindow.html
 qt2/doc/html/qxml-h.html
 qt2/doc/html/qxmlattributes-members.html
 qt2/doc/html/qxmlattributes.html
@@ -1738,6 +1741,7 @@ qt2/man/man3/QWSDecoration.3
 qt2/man/man3/QWSKeyboardHandler.3
 qt2/man/man3/QWSMouseHandler.3
 qt2/man/man3/QWSServer.3
+qt2/man/man3/QWSWindow.3
 qt2/man/man3/QWaitCondition.3
 qt2/man/man3/QWhatsThis.3
 qt2/man/man3/QWheelEvent.3
@@ -2083,6 +2087,7 @@ qt2/man/man3/qwsdecoration.3
 qt2/man/man3/qwskeyboardhandler.3
 qt2/man/man3/qwsmousehandler.3
 qt2/man/man3/qwsserver.3
+qt2/man/man3/qwswindow.3
 qt2/man/man3/qxmlattributes.3
 qt2/man/man3/qxmlcontenthandler.3
 qt2/man/man3/qxmldeclhandler.3

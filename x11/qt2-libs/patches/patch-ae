@@ -1,7 +1,7 @@
-$NetBSD: patch-ae,v 1.7 2001/03/23 18:09:34 drochner Exp $
+$NetBSD: patch-ae,v 1.8 2001/06/17 19:10:39 drochner Exp $
 
---- src/Makefile.in.orig	Mon Mar  5 19:12:49 2001
-+++ src/Makefile.in
+--- src/Makefile.in.orig	Wed Jun 13 10:57:02 2001
++++ src/Makefile.in	Fri Jun 15 20:28:15 2001
 @@ -2,7 +2,7 @@
  
  ####### Compiler, tools and options
@@ -19,7 +19,7 @@ $NetBSD: patch-ae,v 1.7 2001/03/23 18:09:34 drochner Exp $
 +DESTDIR =
  VER_MAJ = 2
  VER_MIN = 3
- VER_PATCH = 0
+ VER_PATCH = 1
 @@ -378,19 +378,7 @@
  .SUFFIXES: .cpp .cxx .cc .C .c
  
