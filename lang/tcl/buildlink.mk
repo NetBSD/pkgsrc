@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.7 2001/10/23 13:02:11 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.8 2001/11/30 17:21:56 jlam Exp $
 #
 # This Makefile fragment is included by packages that use tcl.
 #
@@ -47,7 +47,7 @@ tclConfig-buildlink:
 	cookie=${BUILDLINK_DIR}/.tclConfig_buildlink_done;		\
 	if [ ! -f $${cookie} ]; then					\
 		file=lib/tclConfig.sh;					\
-		${ECHO_MSG} "Creating script ${BUILDLINK_DIR}/$${file}."; \
+		${ECHO_BUILDLINK_MSG} "Creating script ${BUILDLINK_DIR}/$${file}."; \
 		${SED}	${_TCLCONFIG_SED}				\
 			${BUILDLINK_PREFIX.tcl}/$${file}		\
 			> ${BUILDLINK_DIR}/$${file}; \

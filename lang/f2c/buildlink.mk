@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.4 2001/07/27 13:33:32 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.5 2001/11/30 17:21:56 jlam Exp $
 #
 # This Makefile fragment is included by packages that use f2c.
 #
@@ -49,7 +49,7 @@ f2c-f77-buildlink:
 	if [ ! -f $${cookie} ]; then					\
 		file=bin/f2c-f77;					\
 		dest=${BUILDLINK_DIR}/$${file};				\
-		${ECHO_MSG} "Creating script $${dest}.";		\
+		${ECHO_BUILDLINK_MSG} "Creating script $${dest}.";		\
 		dir=`${DIRNAME} $${dest}`;				\
 		if [ ! -d $${dir} ]; then				\
 			${MKDIR} $${dir};				\

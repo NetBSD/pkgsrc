@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.12 2001/10/25 19:10:18 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.13 2001/11/30 17:21:54 jlam Exp $
 #
 # This Makefile fragment is included by packages that use ncurses.
 #
@@ -89,7 +89,7 @@ ncurses-buildlink: _BUILDLINK_USE
 
 ncurses-extra-includes-buildlink:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${ECHO_MSG} "Touching extra ncurses headers in ${BUILDLINK_DIR}."; \
+	${ECHO_BUILDLINK_MSG} "Touching extra ncurses headers in ${BUILDLINK_DIR}."; \
 	extra_includes="						\
 		include/term.h						\
 	";								\
