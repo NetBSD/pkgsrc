@@ -1,3 +1,5 @@
+$NetBSD: md5,v 1.2 1998/08/07 13:21:32 agc Exp $
+
 MD5 (crossfire-0.94.2.tar.gz) = cc59e08438fa2b8ae6cd0194f533ec75
 MD5 (crossfire-0.94.2.maps.tar.gz) = 03533cc5ad2da4ec9308d5e71d36749e
 MD5 (crossfire-0.92.7.sounds.tar.gz) = 9f5496b93000956014c4541f4b66acba
