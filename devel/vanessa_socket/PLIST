@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/09/25 00:05:06 grant Exp $
+bin/vanessa_socket_pipe
+include/vanessa_socket.h
+lib/libvanessa_socket.la
+man/man1/vanessa_socket_pipe.1
