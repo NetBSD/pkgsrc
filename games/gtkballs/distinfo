@@ -1,5 +1,4 @@
-$NetBSD: distinfo,v 1.4 2003/12/30 12:29:48 gavan Exp $
+$NetBSD: distinfo,v 1.5 2004/07/04 23:03:11 wiz Exp $
 
-SHA1 (gtkballs-3.0.1.tar.gz) = 744d59fbca3fca74cca1e677045d7c5011f55a04
-Size (gtkballs-3.0.1.tar.gz) = 416098 bytes
-SHA1 (patch-aa) = a6c9a1bc483ff02d173090afb99f902ae0e8e54c
+SHA1 (gtkballs-3.1.3.tar.gz) = cc3c5f874ef15b6aa5b1abf50c28f984794d7fb3
+Size (gtkballs-3.1.3.tar.gz) = 811081 bytes
