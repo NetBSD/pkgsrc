@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2002/09/26 22:11:05 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2002/09/27 22:10:34 cjep Exp $
 #
 
 COMMENT=	Shells
@@ -11,6 +11,7 @@ SUBDIR+=	osh
 SUBDIR+=	rc
 SUBDIR+=	scsh
 SUBDIR+=	standalone-tcsh
+SUBDIR+=	static-bash2
 SUBDIR+=	static-tcsh
 SUBDIR+=	tcsh
 SUBDIR+=	zsh
