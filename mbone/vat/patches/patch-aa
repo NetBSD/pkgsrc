@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.3 1999/06/04 15:11:27 mycroft Exp $
+$NetBSD: patch-aa,v 1.4 1999/06/04 15:21:12 mycroft Exp $
 
---- configure.orig	Thu May 16 01:03:58 1996
-+++ configure	Tue Sep  9 11:36:10 1997
+--- configure.orig	Thu May 16 04:03:58 1996
++++ configure	Fri Jun  4 11:18:21 1999
 @@ -1,7 +1,7 @@
  #! /bin/sh
  
@@ -805,7 +805,19 @@ $NetBSD: patch-aa,v 1.3 1999/06/04 15:11:27 mycroft Exp $
    rm -rf conftest*
    eval "ac_cv_lib_$ac_lib_var=no"
  fi
-@@ -1468,6 +1579,7 @@
+@@ -1452,10 +1563,7 @@
+ fi
+ 
+ if test -n "$x_libraries" ; then
+-	V_LIB_X11="-L$x_libraries $V_LIB_X11"
+-	if test $solaris ; then
+-		V_LIB_X11="-R$x_libraries $V_LIB_X11"
+-	fi
++	V_LIB_X11="-Wl,-R$x_libraries -L$x_libraries $V_LIB_X11"
+ fi
+ 
+ 
+@@ -1468,6 +1576,7 @@
    d=""
  fi
  
@@ -813,7 +825,7 @@ $NetBSD: patch-aa,v 1.3 1999/06/04 15:11:27 mycroft Exp $
  if test "$d" != "" ; then 
  	if test ! -d $d ; then 
  		echo "'$d' is not a directory"
-@@ -1478,22 +1590,22 @@
+@@ -1478,22 +1587,22 @@
  		echo "can't find tcl.h in $d/include"
  		exit 1
  	fi
@@ -845,7 +857,7 @@ $NetBSD: patch-aa,v 1.3 1999/06/04 15:11:27 mycroft Exp $
  		$d/lib/tcl"
  	V_LIBRARY_TCL=FAIL
  	for dir in $places; do
-@@ -1508,31 +1620,34 @@
+@@ -1508,31 +1617,34 @@
  	fi
  else
  	cat > conftest.$ac_ext <<EOF
@@ -885,7 +897,7 @@ $NetBSD: patch-aa,v 1.3 1999/06/04 15:11:27 mycroft Exp $
  			/usr/contrib/include \
  			/usr/include"
  		for dir in $places; do
-@@ -1546,26 +1661,28 @@
+@@ -1546,26 +1658,28 @@
  			exit 1
  		fi
  	fi
@@ -921,7 +933,7 @@ $NetBSD: patch-aa,v 1.3 1999/06/04 15:11:27 mycroft Exp $
    rm -rf conftest*
    eval "ac_cv_lib_$ac_lib_var=no"
  fi
-@@ -1575,7 +1692,7 @@
+@@ -1575,7 +1689,7 @@
  fi
  if eval "test \"`echo '$ac_cv_lib_'$ac_lib_var`\" = yes"; then
    echo "$ac_t""yes" 1>&6
@@ -930,7 +942,7 @@ $NetBSD: patch-aa,v 1.3 1999/06/04 15:11:27 mycroft Exp $
  else
    echo "$ac_t""no" 1>&6
  V_LIB_TCL="FAIL"
-@@ -1589,17 +1706,22 @@
+@@ -1589,17 +1703,22 @@
  			/usr/contrib/lib \
  			/usr/local/lib \
  			/usr/lib \
@@ -962,7 +974,7 @@ $NetBSD: patch-aa,v 1.3 1999/06/04 15:11:27 mycroft Exp $
  				break
  			fi
  		done
-@@ -1614,15 +1736,16 @@
+@@ -1614,15 +1733,16 @@
  	fi
  	echo "checking for tcl/init.tcl"
  	V_LIBRARY_TCL=FAIL
@@ -986,7 +998,7 @@ $NetBSD: patch-aa,v 1.3 1999/06/04 15:11:27 mycroft Exp $
  		/usr/lib/tk/tcl \
  		/import/tcl/lib/tcl \
  		$prefix/lib/tcl \
-@@ -1651,6 +1774,7 @@
+@@ -1651,6 +1771,7 @@
    d=""
  fi
  
@@ -994,7 +1006,7 @@ $NetBSD: patch-aa,v 1.3 1999/06/04 15:11:27 mycroft Exp $
  if test "$d" != "" ; then 
  	if test ! -d $d ; then 
  		echo "'$d' is not a directory"
-@@ -1661,22 +1785,22 @@
+@@ -1661,22 +1782,22 @@
  		echo "can't find tk.h in $d/include"
  		exit 1
  	fi
@@ -1026,7 +1038,7 @@ $NetBSD: patch-aa,v 1.3 1999/06/04 15:11:27 mycroft Exp $
  		$d/lib/tk"
  	V_LIBRARY_TK=FAIL
  	for dir in $places; do
-@@ -1691,18 +1815,20 @@
+@@ -1691,18 +1812,20 @@
  	fi
  else
  	cat > conftest.$ac_ext <<EOF
@@ -1049,7 +1061,7 @@ $NetBSD: patch-aa,v 1.3 1999/06/04 15:11:27 mycroft Exp $
    rm -rf conftest*
    V_INCLUDE_TK=FAIL
  fi
-@@ -1713,14 +1839,15 @@
+@@ -1713,14 +1836,15 @@
  		places="\
  			$prefix/include \
  			/usr/local/include \
@@ -1068,7 +1080,7 @@ $NetBSD: patch-aa,v 1.3 1999/06/04 15:11:27 mycroft Exp $
  			"
  		for dir in $places; do
  			if test -r $dir/tk.h ; then
-@@ -1733,26 +1860,28 @@
+@@ -1733,26 +1857,28 @@
  			exit 1
  		fi
  	fi
@@ -1104,7 +1116,7 @@ $NetBSD: patch-aa,v 1.3 1999/06/04 15:11:27 mycroft Exp $
    rm -rf conftest*
    eval "ac_cv_lib_$ac_lib_var=no"
  fi
-@@ -1775,17 +1904,22 @@
+@@ -1775,17 +1901,22 @@
  			/usr/lib \
  			/usr/lib/tk \
  			/import/tcl/lib \
@@ -1135,7 +1147,7 @@ $NetBSD: patch-aa,v 1.3 1999/06/04 15:11:27 mycroft Exp $
  				break
  			fi
  		done
-@@ -1800,15 +1934,15 @@
+@@ -1800,15 +1931,15 @@
  	fi
  	echo "checking for tk/tk.tcl"
  	V_LIBRARY_TK=FAIL
@@ -1160,7 +1172,7 @@ $NetBSD: patch-aa,v 1.3 1999/06/04 15:11:27 mycroft Exp $
  		/usr/local/lib/tk \
  		/usr/lib/tk \
  		/usr/lib/tk/tk \
-@@ -1944,18 +2078,20 @@
+@@ -1944,18 +2075,20 @@
  fi
  
  cat > conftest.$ac_ext <<EOF
@@ -1183,7 +1195,7 @@ $NetBSD: patch-aa,v 1.3 1999/06/04 15:11:27 mycroft Exp $
    rm -rf conftest*
    x=""
  fi
-@@ -1963,18 +2099,20 @@
+@@ -1963,18 +2096,20 @@
  V_OBJ_AUDIO="$V_OBJ_AUDIO $x"
  
  cat > conftest.$ac_ext <<EOF
@@ -1206,7 +1218,7 @@ $NetBSD: patch-aa,v 1.3 1999/06/04 15:11:27 mycroft Exp $
    rm -rf conftest*
    x=""
  fi
-@@ -2000,17 +2138,20 @@
+@@ -2000,17 +2135,20 @@
  	V_DEFINE="$V_DEFINE -DNEED_SUNOS_PROTOS"
  	V_STATIC="-static"
  	;;
@@ -1234,7 +1246,7 @@ $NetBSD: patch-aa,v 1.3 1999/06/04 15:11:27 mycroft Exp $
  	fi
  	V_LIB_AUDIO="$V_LIB_AUDIO -laudio"
  	V_OBJ_AUDIO="$V_OBJ_AUDIO audio-sgi.o"
-@@ -2051,7 +2192,7 @@
+@@ -2051,7 +2189,7 @@
  	CXX="xlC -+ -qlanglvl=compat -I/usr/lpp/xlC/include -I/usr/include"
  	CC="cc -Dinline="
  	V_OBJ_AUDIO="$V_OBJ_AUDIO audio-ibm.o"
@@ -1243,7 +1255,7 @@ $NetBSD: patch-aa,v 1.3 1999/06/04 15:11:27 mycroft Exp $
  	;;
  *-*-aix4*)
  	V_DEFINE="$V_DEFINE -DSIGARGS=int -D_AIX41"
-@@ -2086,30 +2227,32 @@
+@@ -2086,30 +2224,32 @@
  		V_LIB_DL="dld"
  		;;
  	*-*-linux*)
@@ -1282,7 +1294,7 @@ $NetBSD: patch-aa,v 1.3 1999/06/04 15:11:27 mycroft Exp $
    rm -rf conftest*
    eval "ac_cv_lib_$ac_lib_var=no"
  fi
-@@ -2128,26 +2271,28 @@
+@@ -2128,26 +2268,28 @@
  		;;
  	esac
  	if test ! -z "$V_LIB_DL" ; then
@@ -1317,7 +1329,7 @@ $NetBSD: patch-aa,v 1.3 1999/06/04 15:11:27 mycroft Exp $
    rm -rf conftest*
    eval "ac_cv_lib_$ac_lib_var=no"
  fi
-@@ -2157,7 +2302,8 @@
+@@ -2157,7 +2299,8 @@
  fi
  if eval "test \"`echo '$ac_cv_lib_'$ac_lib_var`\" = yes"; then
    echo "$ac_t""yes" 1>&6
@@ -1327,7 +1339,7 @@ $NetBSD: patch-aa,v 1.3 1999/06/04 15:11:27 mycroft Exp $
    cat >> confdefs.h <<EOF
  #define $ac_tr_lib 1
  EOF
-@@ -2231,11 +2377,25 @@
+@@ -2231,11 +2374,25 @@
  # --recheck option to rerun configure.
  #
  EOF
@@ -1355,7 +1367,7 @@ $NetBSD: patch-aa,v 1.3 1999/06/04 15:11:27 mycroft Exp $
  if cmp -s $cache_file confcache; then
    :
  else
-@@ -2302,7 +2462,7 @@
+@@ -2302,7 +2459,7 @@
      echo "running \${CONFIG_SHELL-/bin/sh} $0 $ac_configure_args --no-create --no-recursion"
      exec \${CONFIG_SHELL-/bin/sh} $0 $ac_configure_args --no-create --no-recursion ;;
    -version | --version | --versio | --versi | --vers | --ver | --ve | --v)
@@ -1364,7 +1376,7 @@ $NetBSD: patch-aa,v 1.3 1999/06/04 15:11:27 mycroft Exp $
      exit 0 ;;
    -help | --help | --hel | --he | --h)
      echo "\$ac_cs_usage"; exit 0 ;;
-@@ -2392,20 +2552,56 @@
+@@ -2392,20 +2549,56 @@
  
  CEOF
  EOF
@@ -1424,7 +1436,7 @@ $NetBSD: patch-aa,v 1.3 1999/06/04 15:11:27 mycroft Exp $
  
    # Remove last slash and all that follows it.  Not all systems have dirname.
    ac_dir=`echo $ac_file|sed 's%/[^/][^/]*$%%'`
-@@ -2429,6 +2625,7 @@
+@@ -2429,6 +2622,7 @@
      top_srcdir="$ac_dots$ac_given_srcdir" ;;
    esac
  
@@ -1432,7 +1444,7 @@ $NetBSD: patch-aa,v 1.3 1999/06/04 15:11:27 mycroft Exp $
    echo creating "$ac_file"
    rm -f "$ac_file"
    configure_input="Generated automatically from `echo $ac_file_in|sed 's%.*/%%'` by configure."
-@@ -2437,15 +2634,21 @@
+@@ -2437,15 +2631,21 @@
  # $configure_input" ;;
    *) ac_comsub= ;;
    esac
@@ -1459,7 +1471,7 @@ $NetBSD: patch-aa,v 1.3 1999/06/04 15:11:27 mycroft Exp $
 --- configure.in.tk.orig	Thu May 16 01:06:05 1996
 +++ configure.in.tk	Tue Sep  9 11:35:45 1997
 @@ -2,6 +2,7 @@
- dnl $Header: /cvsroot/pkgsrc/mbone/vat/patches/patch-aa,v 1.3 1999/06/04 15:11:27 mycroft Exp $ (LBL)
+ dnl $Header: /cvsroot/pkgsrc/mbone/vat/patches/patch-aa,v 1.4 1999/06/04 15:21:12 mycroft Exp $ (LBL)
  
  AC_ARG_WITH(tcl,	--with-tcl=path	specify a pathname for tcl, d=$withval, d="")
 +tclposs="tcl8.0 tcl80 tcl"
