@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6828 2004/08/09 11:51:13 adam Exp $
+$NetBSD: CHANGES,v 1.6829 2004/08/09 14:20:28 taya Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3766,3 +3766,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated nail to 11.1 [cjep 2004-08-09]
 	Updated scummvm to 0.6.1b [adam 2004-08-09]
 	Updated ImageMagick to 6.0.4-3 [adam 2004-08-09]
+	Updated mozilla to 1.7.2 [taya 2004-08-09]
+	Updated mozilla-gtk2 to 1.7.2 [taya 2004-08-09]
