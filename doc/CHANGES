@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6296 2004/06/24 09:18:12 cjep Exp $
+$NetBSD: CHANGES,v 1.6297 2004/06/24 11:11:11 markd Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3041,3 +3041,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated smokeping to 1.30 [adrianp 2004-06-23]
 	Updated firefox-gtk2 to 0.9 [taya 2004-06-24]
 	Updated w3m to 0.5.1 [cjep 2004-06-24]
+	Updated R to 1.9.1 [markd 2004-06-24]
