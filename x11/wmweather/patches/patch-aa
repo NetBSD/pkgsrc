@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 2001/07/15 14:03:13 jlam Exp $
+$NetBSD: patch-aa,v 1.3 2002/10/27 13:41:26 bouyer Exp $
 
 --- Makefile.orig	Wed Mar 17 01:59:39 1999
 +++ Makefile	Tue May  2 13:20:57 2000
@@ -12,7 +12,8 @@ $NetBSD: patch-aa,v 1.2 2001/07/15 14:03:13 jlam Exp $
 +DESTDIR= ${PREFIX}
 +LIBDIR = ${LDFLAGS}
  # for linux
- LIBS   = -lXpm -lX11 -lXext
+-LIBS   = -lXpm -lX11 -lXext
++LIBS   = -lXpm -lX11 -lXext ${EXTRA_LOCAL_LIBS}
  # for Solaris
 @@ -10,16 +8,14 @@
  OBJS   = wmWeather.o \
