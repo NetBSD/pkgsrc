@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 1999/07/28 19:55:17 rh Exp $
+
+--- ml.h.orig	Sun May 23 12:08:41 1999
++++ ml.h	Sun May 23 12:08:49 1999
+@@ -165,7 +165,7 @@
+ /* function prototypes of all ml function */
+ 
+ void convfreq(dvector);
+-void radixsort(cmatrix, ivector, int, int, int *);
++void my_radixsort(cmatrix, ivector, int, int, int *);
+ void condenceseq(cmatrix, ivector, cmatrix, ivector, int, int, int);
+ void countconstantsites(cmatrix, ivector, int, int, int *);
+ void evaluateseqs(void);
