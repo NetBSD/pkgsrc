@@ -1,4 +1,5 @@
-$NetBSD: patch-aa,v 1.1.1.1 1998/11/05 08:26:03 garbled Exp $
+$NetBSD: patch-aa,v 1.2 1999/09/24 01:00:04 fredb Exp $
+
 --- configure.orig	Fri Oct 16 08:48:40 1998
 +++ configure	Thu Nov  5 00:55:49 1998
 @@ -634,7 +634,7 @@
