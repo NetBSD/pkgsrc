@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.41 2001/06/14 13:45:12 rafal Exp $
+# $NetBSD: bsd.prefs.mk,v 1.42 2001/06/14 16:04:06 skrll Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -56,6 +56,9 @@ MAKEFLAGS+=		LOWER_ARCH=${LOWER_ARCH}
 . endif
 LOWER_VENDOR?=		sun
 LOWER_OPSYS?=		solaris
+
+# We need to set this early to get "USE_MESA" and "USE_XPM" working.
+X11BASE?=               ${DESTDIR}/usr/openwin
 .elif ${OPSYS} == "Linux"
 LOWER_OPSYS?=		linux
 . if ${MACHINE_ARCH} == "unknown"
@@ -113,12 +116,28 @@ USE_INET6?=		NO
 # or a pkg Makefile modifies them.
 .include <sys.mk>
 
+# Load the OS-specific definitions for program variables.  Default to loading
+# the NetBSD ones if an OS-specific file doesn't exist.
+.if exists(${.CURDIR}/../../mk/defs.${OPSYS}.mk)
+.include "${.CURDIR}/../../mk/defs.${OPSYS}.mk"
+.elif exists(${.CURDIR}/../mk/defs.${OPSYS}.mk)
+.include "${.CURDIR}/../mk/defs.${OPSYS}.mk"
+.elif exists(${.CURDIR}/mk/defs.${OPSYS}.mk)
+.include "${.CURDIR}/mk/defs.${OPSYS}.mk"
+.elif exists(${.CURDIR}/../../mk/defs.NetBSD.mk)
+.include "${.CURDIR}/../../mk/defs.NetBSD.mk"
+.elif exists(${.CURDIR}/../mk/defs.NetBSD.mk)
+.include "${.CURDIR}/../mk/defs.NetBSD.mk"
+.else exists(${.CURDIR}/mk/defs.NetBSD.mk)
+.include "${.CURDIR}/mk/defs.NetBSD.mk"
+.endif
+
 # Check if we got Mesa distributed with XFree86 4.x or if we need to
 # depend on the Mesa package.
 .if (defined(CHECK_MESA) || defined(USE_MESA))
 X11BASE?=		/usr/X11R6
 .if exists(${X11BASE}/include/GL/glx.h)
-__BUILTIN_MESA!=	egrep -c BuildGLXLibrary ${X11BASE}/lib/X11/config/X11.tmpl || true
+__BUILTIN_MESA!=	${EGREP} -c BuildGLXLibrary ${X11BASE}/lib/X11/config/X11.tmpl || ${TRUE}
 .else
 __BUILTIN_MESA=		0
 .endif
@@ -135,7 +154,7 @@ HAVE_BUILTIN_MESA=	YES
 .if (defined(CHECK_FREETYPE2) || defined(USE_FREETYPE2))
 X11BASE?=		/usr/X11R6
 .if exists(${X11BASE}/include/freetype2/freetype/freetype.h)
-__BUILTIN_FREETYPE2!=	egrep -c BuildFreetype2Library ${X11BASE}/lib/X11/config/X11.tmpl || true
+__BUILTIN_FREETYPE2!=	${EGREP} -c BuildFreetype2Library ${X11BASE}/lib/X11/config/X11.tmpl || ${TRUE}
 .else
 __BUILTIN_FREETYPE2=	0
 .endif
@@ -204,9 +223,13 @@ SERIAL_DEVICES?=	/dev/null
 PKG_TOOLS_BIN?=		/usr/sbin
 .elif (${OPSYS} == "SunOS")
 LOCALBASE?=             ${DESTDIR}/usr/local
-X11BASE?=               ${DESTDIR}/usr/openwin
 ZOULARISBASE?=		${LOCALBASE}/bsd
 PKG_TOOLS_BIN?=		${ZOULARISBASE}/bin
+
+.if (${X11BASE} == "/usr/openwin")
+HAVE_OPENWINDOWS=	YES
+.endif
+
 .elif (${OPSYS} == "Linux")
 ZOULARISBASE?=		${DESTDIR}/usr/local/bsd
 PKG_TOOLS_BIN?=		${ZOULARISBASE}/bin
