@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 2002/02/18 15:14:16 seb Exp $
-@unexec	${INSTALL_INFO} --delete %D/info/slib.info %D/info/dir
+@comment $NetBSD: PLIST,v 1.3 2002/10/22 12:56:45 wiz Exp $
+@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/slib.info
 info/slib.info
-@exec	${INSTALL_INFO} %D/info/slib.info %D/info/dir
+@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/slib.info
 share/doc/slib/FAQ
 share/doc/slib/README
 share/slib/Bev2slib.scm
@@ -23,10 +23,16 @@ share/slib/chez.init
 share/slib/cltime.scm
 share/slib/coerce.scm
 share/slib/collect.scm
+share/slib/color.scm
+share/slib/colornam.scm
+share/slib/colorspc.scm
 share/slib/comlist.scm
 share/slib/comparse.scm
 share/slib/cring.scm
+share/slib/cvs.scm
+share/slib/daylight.scm
 share/slib/db2html.scm
+share/slib/dbcom.scm
 share/slib/dbrowse.scm
 share/slib/dbutil.scm
 share/slib/debug.scm
@@ -59,6 +65,7 @@ share/slib/macrotst.scm
 share/slib/macscheme.init
 share/slib/macwork.scm
 share/slib/makcrc.scm
+share/slib/matfile.scm
 share/slib/mbe.scm
 share/slib/minimize.scm
 share/slib/mitscheme.init
@@ -70,6 +77,7 @@ share/slib/mwdenote.scm
 share/slib/mwexpand.scm
 share/slib/mwsynrul.scm
 share/slib/nclients.scm
+share/slib/null.scm
 share/slib/obj2str.scm
 share/slib/object.scm
 share/slib/paramlst.scm
@@ -116,6 +124,7 @@ share/slib/scsh.init
 share/slib/selfset.scm
 share/slib/sierpinski.scm
 share/slib/simetrix.scm
+share/slib/solid.scm
 share/slib/sort.scm
 share/slib/soundex.scm
 share/slib/srfi-1.scm
@@ -125,12 +134,11 @@ share/slib/strcase.scm
 share/slib/strport.scm
 share/slib/strsrch.scm
 share/slib/structure.scm
+share/slib/subarray.scm
 share/slib/synchk.scm
 share/slib/synclo.scm
 share/slib/synrul.scm
 share/slib/t3.init
-share/slib/tek40.scm
-share/slib/tek41.scm
 share/slib/timezone.scm
 share/slib/trace.scm
 share/slib/tree.scm
