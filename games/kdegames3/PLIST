@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/02/05 07:53:58 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/06/10 12:41:42 markd Exp $
 bin/atlantik
 bin/kasteroids
 bin/katomic
@@ -1392,7 +1392,6 @@ share/kde/apps/kreversi/pics/background/Stones.png
 share/kde/apps/kreversi/pics/chips.png
 share/kde/apps/kreversi/pics/chips_mono.png
 share/kde/apps/kreversi/sounds/reversi-click.wav
-share/kde/apps/kreversi/sounds/reversi-lost.wav
 share/kde/apps/kreversi/sounds/reversi-won.wav
 share/kde/apps/ksame/eventsrc
 share/kde/apps/ksame/ksameui.rc
