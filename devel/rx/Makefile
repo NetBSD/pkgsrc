@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/06/01 11:23:25 rh Exp $
+# $NetBSD: Makefile,v 1.4 2000/06/08 22:40:30 jlam Exp $
 
 DISTNAME=	rx-1.5
 CATEGORIES=	devel
@@ -7,8 +7,8 @@ MASTER_SITES=	${MASTER_SITE_GNU:=rx/}
 MAINTAINER=	jlam@netbsd.org
 HOMEPAGE=	http://www.gnu.org/software/rx/rx.html
 
-USE_PKGLIBTOOL=	yes
-GNU_CONFIGURE=	yes
+USE_LIBTOOL=	# defined
+GNU_CONFIGURE=	# defined
 
 INFO_FILES=	rx.info
 
