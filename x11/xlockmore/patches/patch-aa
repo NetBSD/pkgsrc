@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2002/12/05 00:45:53 hubertf Exp $
+$NetBSD: patch-aa,v 1.5 2004/11/27 00:15:22 hubertf Exp $
 
---- xlock/XLock.ad.orig	Mon Sep 30 22:39:14 2002
+--- xlock/XLock.ad.orig	2004-11-02 02:23:44.000000000 +0100
 +++ xlock/XLock.ad
-@@ -58,9 +58,9 @@
+@@ -60,9 +60,9 @@ XLock.left3d: Red
  XLock.both3d: Magenta
  
  ! For marquee & nose modes

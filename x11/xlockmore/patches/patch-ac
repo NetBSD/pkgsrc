@@ -1,12 +1,13 @@
-$NetBSD: patch-ac,v 1.10 2003/02/06 06:49:09 briggs Exp $
+$NetBSD: patch-ac,v 1.11 2004/11/27 00:15:23 hubertf Exp $
 
---- config.guess.orig	Wed Feb  5 23:43:57 2003
-+++ config.guess	Wed Feb  5 23:31:18 2003
-@@ -385,6 +385,7 @@
- 	echo ${UNAME_MACHINE}-unknown-freebsd`echo ${UNAME_RELEASE}|sed -e 's/[-(].*//'`
- 	exit 0 ;;
-     *:NetBSD:*:*)
-+	UNAME_MACHINE=`(uname -p) 2>/dev/null` || UNAME_MACHINE=unknown
- 	echo ${UNAME_MACHINE}-unknown-netbsd`echo ${UNAME_RELEASE}|sed -e 's/[-_].*/\./'`
- 	exit 0 ;;
-     *:OpenBSD:*:*)
+--- xglock/Makefile.in.orig	2003-01-09 04:27:51.000000000 +0100
++++ xglock/Makefile.in
+@@ -122,7 +122,7 @@ install-man :
+ 
+ install-ad :
+ 	$(top_srcdir)/mkinstalldirs $(datadir)/xlock
+-	$(INSTALL_PROGRAM) $(top_srcdir)/xglock/xglockrc $(datadir)/xlock/xglockrc
++	$(INSTALL_DATA) $(top_srcdir)/xglock/xglockrc $(datadir)/xlock/xglockrc
+ 
+ uninstall : @UNINSTALL_XGLOCK@
+ 

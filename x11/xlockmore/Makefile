@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2004/01/06 15:44:10 hubertf Exp $
+# $NetBSD: Makefile,v 1.66 2004/11/27 00:15:22 hubertf Exp $
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -22,10 +22,13 @@ COMMENT=	Like the XLock session-locker/screensaver, but with more
 
 CONFIGURE_ARGS+=	--with-mesagl
 
+PLIST_SUBST+=    LITE=""
+
 .include "../../audio/esound/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../graphics/xpm/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
 
