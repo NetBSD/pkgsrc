@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2003/10/18 20:32:32 kleink Exp $
+# $NetBSD: Makefile,v 1.31 2003/11/03 22:43:38 kim Exp $
 #
 
 DISTNAME=		jwhois-3.2.2
@@ -6,7 +6,7 @@ PKGREVISION=		1
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_GNU:=jwhois/}
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		kim@tac.nyc.ny.us
 HOMEPAGE=		http://www.gnu.org/software/jwhois/
 COMMENT=		Configurable WHOIS client
 
