@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2001/06/11 06:34:35 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2001/07/04 03:08:57 jlam Exp $
 
 DISTNAME=		geomview-1.8.1
 CATEGORIES=		graphics math
@@ -10,20 +10,22 @@ COMMENT=		Interactive geometry viewing program
 
 CONFLICTS=		ImageMagick-*	# both have a program named 'animate'
 
+USE_BUILDLINK_ONLY=	yes
 GNU_CONFIGURE=		yes
 USE_X11=		yes
-USE_MOTIF=		yes
-USE_MESA=		yes
-
-MESABASE_DEFAULT=	${X11BASE}
-EVAL_PREFIX+=		MESABASE=Mesa
 
 CONFIGURE_ARGS+=	--without-xforms
-CONFIGURE_ARGS+=	--with-opengl=${MESABASE}
-CONFIGURE_ARGS+=	--with-motif=${MOTIFBASE}
-CPPFLAGS+=		-Dunix -Dalloca=__builtin_alloca
+CONFIGURE_ARGS+=	--with-opengl=${BUILDLINK_DIR}
+CONFIGURE_ARGS+=	--with-motif=${BUILDLINK_DIR}
+CPPFLAGS+=		-Dunix -Dalloca=__builtin_alloca -I${X11BASE}/include
 
 INFO_FILES=		geomview
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} != "Linux"
+CONFIGURE_ARGS+=	--enable-fstropen-1
+.endif
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/geomview
@@ -39,4 +41,6 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/html/pix/*			\
 	${PREFIX}/share/doc/html/geomview/pix
 
+.include "../../graphics/Mesa/buildlink.mk"
+.include "../../x11/lesstif/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
