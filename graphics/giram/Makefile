@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2003/05/02 11:55:18 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2003/05/24 11:23:08 salo Exp $
+#
 
-DISTNAME=	giram-0.3.4
-PKGREVISION=	2
+DISTNAME=	giram-0.3.5
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.giram.org/downloads/
 
@@ -10,31 +10,35 @@ HOMEPAGE=	http://www.giram.org/
 COMMENT=	Giram Is Really A Modeller
 
 DEPENDS+=	povray-[0-9]*:../../graphics/povray
+BUILD_DEPENDS+=	bison:../../devel/bison
 
-USE_BUILDLINK2=		yes
-USE_PKGLOCALEDIR=	yes
-USE_PKGINSTALL=		yes
-USE_X11=		yes
-USE_GMAKE=		yes
-GNU_CONFIGURE=		yes
-BUILD_DEPENDS+=		bison:../../devel/bison
-
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+USE_BUILDLINK2=		YES
+USE_PKGLOCALEDIR=	YES
+USE_PKGINSTALL=		YES
+USE_X11=		YES
+USE_GMAKE=		YES
+USE_LIBTOOL=		YES
+GNU_CONFIGURE=		YES
 
 PKG_SYSCONFSUBDIR=	giram
 
-CONF_FILES+=	${PREFIX}/share/examples/giram/giramrc		\
-		${PKG_SYSCONFDIR}/giramrc
-CONF_FILES+=	${PREFIX}/share/examples/giram/giramrc_user	\
-		${PKG_SYSCONFDIR}/giramrc_user
-CONF_FILES+=	${PREFIX}/share/examples/giram/gtkrc		\
-		${PKG_SYSCONFDIR}/gtkrc
-CONF_FILES+=	${PREFIX}/share/examples/giram/gtkrc_user	\
-		${PKG_SYSCONFDIR}/gtkrc_user
-CONF_FILES+=	${PREFIX}/share/examples/giram/ps-menurc	\
-		${PKG_SYSCONFDIR}/ps-menurc
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}/0.3
 
-.include "../../graphics/MesaLib/buildlink2.mk"
-.include "../../graphics/glu/buildlink2.mk"
+SHLIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+
+OWN_DIRS+=	${PKG_SYSCONFDIR}/0.3
+CONF_FILES+=	${PREFIX}/share/examples/giram/giramrc		\
+		${PKG_SYSCONFDIR}/0.3/giramrc
+CONF_FILES+=	${PREFIX}/share/examples/giram/giramrc_user	\
+		${PKG_SYSCONFDIR}/0.3/giramrc_user
+CONF_FILES+=	${PREFIX}/share/examples/giram/gtkrc		\
+		${PKG_SYSCONFDIR}/0.3/gtkrc
+CONF_FILES+=	${PREFIX}/share/examples/giram/gtkrc_user	\
+		${PKG_SYSCONFDIR}/0.3/gtkrc_user
+CONF_FILES+=	${PREFIX}/share/examples/giram/ps-menurc	\
+		${PKG_SYSCONFDIR}/0.3/ps-menurc
+
+.include "../../graphics/lib3ds/buildlink2.mk"
 .include "../../x11/gtk2/buildlink2.mk"
+
 .include "../../mk/bsd.pkg.mk"
