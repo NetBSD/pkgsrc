@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.11 2003/09/05 16:47:54 xtraeme Exp $
+$NetBSD: distinfo,v 1.12 2003/11/08 06:31:58 xtraeme Exp $
 
-SHA1 (lftp-2.6.7.tar.bz2) = d6f94de8e26fd4898d388cf103d92ed3eb8a766c
-Size (lftp-2.6.7.tar.bz2) = 1194853 bytes
+SHA1 (lftp-2.6.8.tar.bz2) = c9ce743b067c72ec539daca0c9c8125811502ef8
+Size (lftp-2.6.8.tar.bz2) = 1196767 bytes
 SHA1 (patch-aa) = 007249b3b1235cc8b163f95324ad94ac75284915
 SHA1 (patch-ab) = 4312c2878b6e553bdadfab8528906f811cd9d381
 SHA1 (patch-ac) = 6df164610322c4dcfa82b8cb92e6a0845a75aee2
