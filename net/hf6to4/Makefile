@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2003/09/16 13:05:57 hubertf Exp $
+# $NetBSD: Makefile,v 1.3 2004/01/08 12:59:26 hubertf Exp $
 #
 
-DISTNAME=		hf6to4-1.1
+DISTNAME=		hf6to4-1.2
 WRKSRC=			${WRKDIR}
 CATEGORIES=		net
 MASTER_SITES=		# empty
