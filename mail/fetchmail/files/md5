@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.22 1998/12/29 21:29:45 frueauf Exp $
+$NetBSD: md5,v 1.23 1999/01/02 11:15:51 frueauf Exp $
 
-MD5 (fetchmail-4.7.2.tar.gz) = 5248af0ff0940344322c6f442b88bf89
+MD5 (fetchmail-4.7.3.tar.gz) = 4ccd9f51013718cc8e82ece0718fda5d
