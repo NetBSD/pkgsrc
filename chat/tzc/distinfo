@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2002/12/30 17:41:04 sommerfeld Exp $
+
+SHA1 (tzc-2.6.15.tar.gz) = 13385b849f6e5142c94393da253eca70f6ec4bf6
+Size (tzc-2.6.15.tar.gz) = 22726 bytes
+SHA1 (patch-aa) = f876da61bb5da7ce695c3515a2c4c650f2e08e51
