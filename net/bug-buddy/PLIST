@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2004/04/01 18:54:03 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.7 2004/04/16 14:03:49 jmmv Exp $
 bin/bug-buddy
 man/man1/bug-buddy.1
 share/application-registry/bug-buddy.applications
@@ -71,11 +71,13 @@ ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/bug-buddy.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/bug-buddy.mo
 ${PKGLOCALEDIR}/locale/ga/LC_MESSAGES/bug-buddy.mo
 ${PKGLOCALEDIR}/locale/gl/LC_MESSAGES/bug-buddy.mo
+${PKGLOCALEDIR}/locale/gu/LC_MESSAGES/bug-buddy.mo
 ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/bug-buddy.mo
 ${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/bug-buddy.mo
 ${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/bug-buddy.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/bug-buddy.mo
 ${PKGLOCALEDIR}/locale/id/LC_MESSAGES/bug-buddy.mo
+${PKGLOCALEDIR}/locale/is/LC_MESSAGES/bug-buddy.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/bug-buddy.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/bug-buddy.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/bug-buddy.mo
@@ -123,17 +125,28 @@ share/omf/bug-buddy/bug-buddy-zh_TW.omf
 share/pixmaps/bug-buddy.png
 @comment in xdg-dirs: @dirrm share/pixmaps
 @dirrm share/omf/bug-buddy
+@comment in scrollkeeper: @dirrm share/omf
 @comment in xdg-dirs: @dirrm share/mime-info
 @dirrm share/gnome/help/bug-buddy/zh_TW/figures
+@dirrm share/gnome/help/bug-buddy/zh_TW
 @dirrm share/gnome/help/bug-buddy/zh_HK/figures
+@dirrm share/gnome/help/bug-buddy/zh_HK
 @dirrm share/gnome/help/bug-buddy/zh_CN/figures
+@dirrm share/gnome/help/bug-buddy/zh_CN
 @dirrm share/gnome/help/bug-buddy/sv/figures
+@dirrm share/gnome/help/bug-buddy/sv
 @dirrm share/gnome/help/bug-buddy/ko/figures
+@dirrm share/gnome/help/bug-buddy/ko
 @dirrm share/gnome/help/bug-buddy/ja/figures
+@dirrm share/gnome/help/bug-buddy/ja
 @dirrm share/gnome/help/bug-buddy/it/figures
+@dirrm share/gnome/help/bug-buddy/it
 @dirrm share/gnome/help/bug-buddy/fr/figures
+@dirrm share/gnome/help/bug-buddy/fr
 @dirrm share/gnome/help/bug-buddy/es/figures
+@dirrm share/gnome/help/bug-buddy/es
 @dirrm share/gnome/help/bug-buddy/de/figures
+@dirrm share/gnome/help/bug-buddy/de
 @dirrm share/gnome/help/bug-buddy/C
 @dirrm share/gnome/help/bug-buddy
 @comment in GConf2: @dirrm share/gconf/schemas
