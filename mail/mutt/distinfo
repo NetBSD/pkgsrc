@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2001/06/20 07:07:23 jlam Exp $
+$NetBSD: distinfo,v 1.5 2001/10/18 08:04:25 tron Exp $
 
 SHA1 (mutt-1.2.5i.tar.gz) = a8eceff4693120da1d39f042f04668caa34deaa9
 Size (mutt-1.2.5i.tar.gz) = 1973923 bytes
@@ -13,3 +13,4 @@ SHA1 (patch-ah) = 36004ff9b20a3cf119c6163467f587c51a1d1e36
 SHA1 (patch-ai) = f1a3c47666dd308e4d8938939a50a5553220f736
 SHA1 (patch-aj) = 36f20c476b695bb88378aa02326bfdef77695111
 SHA1 (patch-ak) = c71e21bdd2e5c194ee2f8f619737d3cc0b4c4d5c
+SHA1 (patch-al) = 6516789c92fcbf11a8cb0da17cc67d4698e5f3ad
