@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.270 1999/05/22 15:47:23 tv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.271 1999/05/23 22:10:01 tv Exp $
 #
 # This file is in the public domain.
 #
@@ -17,16 +17,7 @@
 # NEVER override the "regular" targets unless you want to open
 # a major can of worms.
 
-# Let people know this is bsd.pkg.mk, so they can set up their
-# /etc/mk.conf accordingly
-BSD_PKG_MK=1
-
-# Get the operating system type
-.ifndef OPSYS
-OPSYS!=	/usr/bin/uname -s
-.endif
-
-# Include any preferences, if not already included
+# Include any preferences, if not already included, and common definitions
 .include "../../mk/bsd.prefs.mk"
 
 .if defined(ONLY_FOR_ARCHS)
@@ -269,23 +260,6 @@ MTREE_CMD?=	${LOCALBASE}/bsd/bin/mtree
 MTREE_CMD?=	/usr/sbin/mtree
 .endif
 MTREE_ARGS?=	-U -f ${MTREE_FILE} -d -e -p
-
-.if (${OPSYS} == "NetBSD")
-NEED_OWN_INSTALL_TARGET=	no
-.include <bsd.own.mk>
-SHAREOWN = ${DOCOWN}
-SHAREGRP = ${DOCGRP}
-SHAREMODE = ${DOCMODE}
-.elif (${OPSYS} == "SunOS")
-NEED_OWN_INSTALL_TARGET=	no
-.include <bsd.own.mk>
-SHAREOWN = ${DOCOWN}
-SHAREGRP = ${DOCGRP}
-SHAREMODE = ${DOCMODE}
-.elif (${OPSYS} == "OpenBSD")
-.include <bsd.own.mk>
-MAKE_ENV+=	EXTRA_SYS_MK_INCLUDES="<bsd.own.mk>"
-.endif
 
 # Debugging levels for this file, dependent on PKG_DEBUG_LEVEL definition
 # 0 == normal, default, quiet operation
