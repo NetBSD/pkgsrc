@@ -1,3 +1,4 @@
+@comment $NetBSD: PLIST,v 1.2 2000/02/05 07:05:44 wiz Exp $
 bin/sysinfo
 man/man1/sysinfo.1
 man/man5/sysinfo.cf.5
