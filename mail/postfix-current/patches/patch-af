@@ -1,0 +1,52 @@
+$NetBSD: patch-af,v 1.1.1.1 2000/08/14 04:33:24 itojun Exp $
+
+--- conf/main.cf.orig	Fri Jan  7 01:52:45 2000
++++ conf/main.cf	Thu Mar  2 10:56:58 2000
+@@ -1,3 +1,5 @@
++#	$NetBSD: patch-af,v 1.1.1.1 2000/08/14 04:33:24 itojun Exp $
++#
+ # Global Postfix configuration file. This file lists only a subset
+ # of all 100+ parameters. See the sample-xxx.cf files for a full list.
+ # 
+@@ -17,14 +19,19 @@
+ # The command_directory parameter specifies the location of all
+ # postXXX commands.  The default value is $program_directory.
+ #
+-command_directory = /usr/sbin
++command_directory = __PREFIX/sbin
+ 
+ # The daemon_directory parameter specifies the location of all Postfix
+ # daemon programs (i.e. programs listed in the master.cf file). The
+ # default value is $program_directory. This directory must be owned
+ # by root.
+ #
+-daemon_directory = /usr/libexec/postfix
++daemon_directory = __PREFIX/libexec/postfix
++
++# Shared files and etc directory
++etc_directory = /etc/postfix
++share_directory = __PREFIX/share/postfix
++man_directory = __PREFIX/man
+ 
+ # QUEUE AND PROCESS OWNERSHIP
+ #
+@@ -41,7 +48,7 @@
+ # These rights are used in the absence of a recipient user context.
+ # DO NOT SPECIFY A PRIVILEGED USER OR THE POSTFIX OWNER.
+ #
+-#default_privs = nobody
++default_privs = nobody
+ 
+ # INTERNET HOST AND DOMAIN NAMES
+ # 
+@@ -376,8 +383,7 @@
+ # the process marches on. If you use an X-based debugger, be sure to
+ # set up your XAUTHORITY environment variable before starting Postfix.
+ #
+-debugger_command =
+-	 PATH=/usr/bin:/usr/X11R6/bin
+-	 xxgdb $daemon_directory/$process_name $process_id & sleep 5
++debugger_command = PATH=/usr/bin:/usr/X11R6/bin; \
++	xxgdb $daemon_directory/$process_name $process_id & sleep 5
+ 
+ # Other configurable parameters.

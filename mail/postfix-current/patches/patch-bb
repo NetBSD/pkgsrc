@@ -1,0 +1,17 @@
+$NetBSD: patch-bb,v 1.1.1.1 2000/08/14 04:33:24 itojun Exp $
+
+--- postmap/Makefile.orig	Wed Apr 26 20:25:56 2000
++++ postmap/Makefile	Wed Apr 26 20:39:34 2000
+@@ -0,0 +1,12 @@
++#	$NetBSD: patch-bb,v 1.1.1.1 2000/08/14 04:33:24 itojun Exp $
++.include "../conf/main.cf"
++PROG=	postmap
++BINDIR=${command_directory}
++
++DPADD+= ${LIBPGLOBAL} ${LIBPUTIL}
++LDADD+= ${LIBPGLOBAL} ${LIBPUTIL} ${AUXLIBS}
++
++# XXX
++NOMAN=1
++
++.include <bsd.prog.mk>

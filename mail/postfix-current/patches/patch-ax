@@ -1,0 +1,24 @@
+$NetBSD: patch-ax,v 1.1.1.1 2000/08/14 04:33:24 itojun Exp $
+
+--- postfix-script/Makefile.orig	Sun May 30 20:37:40 1999
++++ postfix-script/Makefile	Sun May 30 20:40:07 1999
+@@ -0,0 +1,19 @@
++#	$NetBSD: patch-ax,v 1.1.1.1 2000/08/14 04:33:24 itojun Exp $
++.include "../conf/main.cf"
++
++.PATH:		${.CURDIR}/../conf
++
++BINDIR=		${PREFIX}/share/postfix
++FILESDIR=	${PREFIX}/share/doc/postfix
++
++# XXX
++.include <bsd.own.mk>
++.if POSTFIX_NOSETGID
++SCRIPTS=	postfix-script-nosgid
++.else
++SCRIPTS=	postfix-script-sgid
++.endif
++SCRIPTSNAME=	postfix-script
++FILES=	LICENSE
++
++.include <bsd.prog.mk>

@@ -1,0 +1,23 @@
+$NetBSD: patch-ad,v 1.1.1.1 2000/08/14 04:33:24 itojun Exp $
+
+--- cleanup/Makefile.orig	Wed Apr 26 20:25:53 2000
++++ cleanup/Makefile	Wed Apr 26 20:38:21 2000
+@@ -0,0 +1,18 @@
++#	$NetBSD: patch-ad,v 1.1.1.1 2000/08/14 04:33:24 itojun Exp $
++.include "../conf/main.cf"
++
++PROG=	cleanup
++BINDIR=${daemon_directory}
++
++SRCS	= cleanup.c cleanup_out.c cleanup_envelope.c cleanup_message.c \
++	cleanup_extracted.c cleanup_state.c cleanup_skip.c cleanup_rewrite.c \
++	cleanup_map11.c cleanup_map1n.c cleanup_masquerade.c \
++	cleanup_out_recipient.c
++
++DPADD+= ${LIBPMASTER} ${LIBPGLOBAL} ${LIBPUTIL}
++LDADD+= ${LIBPMASTER} ${LIBPGLOBAL} ${LIBPUTIL} ${AUXLIBS}
++
++# XXX
++NOMAN=1
++
++.include <bsd.prog.mk>

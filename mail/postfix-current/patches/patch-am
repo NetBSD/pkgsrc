@@ -1,0 +1,16 @@
+$NetBSD: patch-am,v 1.1.1.1 2000/08/14 04:33:24 itojun Exp $
+
+--- man/man8/Makefile.orig	Sun May 30 18:49:13 1999
++++ man/man8/Makefile	Sun May 30 18:49:13 1999
+@@ -0,0 +1,11 @@
++#	$NetBSD: patch-am,v 1.1.1.1 2000/08/14 04:33:24 itojun Exp $
++.include "../../conf/main.cf"
++MANDIR= ${man_directory}
++
++MAN=	bounce.8 error.8 local.8 pipe.8 smtp.8 \
++	cleanup.8 master.8 qmgr.8 smtpd.8 \
++	pickup.8 showq.8 trivial-rewrite.8
++
++MLINKS=	bounce.8 defer.8
++
++.include <bsd.man.mk>

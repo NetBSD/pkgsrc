@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/08/14 04:33:24 itojun Exp $
+
+--- Makefile.orig	Tue May 18 23:37:51 1999
++++ Makefile	Sun May 30 18:49:12 1999
+@@ -1,3 +1,17 @@
++#	$NetBSD: patch-aa,v 1.1.1.1 2000/08/14 04:33:24 itojun Exp $
++
++# NOTE THAT THE BELOW DOES NOT CONTAIN `etc'!
++SUBDIR= util global dns master masterlib postfix sendmail error \
++	pickup cleanup smtpd local trivial-rewrite qmgr smtp bounce pipe \
++	showq postalias postcat postconf postdrop postkick postlock postlog \
++	postmap postsuper postfix-script conf
++
++SUBDIR+=man
++
++# not yet included: html
++# not needed: smtpstone fsstone
++
++.include <bsd.subdir.mk>
+ # Usage: 
+ #	make makefiles [CC=compiler] [OPT=compiler-flags] [DEBUG=debug-flags]
+ #

@@ -1,0 +1,21 @@
+$NetBSD: patch-ag,v 1.1.1.1 2000/08/14 04:33:24 itojun Exp $
+
+--- dns/Makefile.orig	Sat Apr  8 22:14:35 2000
++++ dns/Makefile	Sat Apr  8 23:18:53 2000
+@@ -0,0 +1,16 @@
++#	$NetBSD: patch-ag,v 1.1.1.1 2000/08/14 04:33:24 itojun Exp $
++
++LIB	= dns
++SRCS	= dns_lookup.c dns_rr.c dns_strerror.c dns_strtype.c
++
++MKLINT=		no
++MKPIC=		no
++MKPROFILE=	no
++NOLINT=		yes
++NOPIC=		yes
++NOPROFILE=	yes
++
++# only needed during build
++libinstall::
++
++.include <bsd.lib.mk>

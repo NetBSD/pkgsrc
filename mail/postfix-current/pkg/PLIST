@@ -1,0 +1,64 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/08/14 04:33:27 itojun Exp $
+etc/mailer.conf.postfix
+libexec/postfix/bounce
+libexec/postfix/cleanup
+libexec/postfix/error
+libexec/postfix/local
+libexec/postfix/master
+libexec/postfix/pickup
+libexec/postfix/pipe
+libexec/postfix/qmgr
+libexec/postfix/sendmail
+libexec/postfix/showq
+libexec/postfix/smtp
+libexec/postfix/smtpd
+libexec/postfix/trivial-rewrite
+sbin/postalias
+sbin/postcat
+sbin/postconf
+sbin/postdrop
+sbin/postfix
+sbin/postkick
+sbin/postlock
+sbin/postlog
+sbin/postmap
+sbin/postsuper
+share/doc/postfix/LICENSE
+share/postfix/LICENSE
+share/postfix/Makefile
+share/postfix/access
+share/postfix/aliases
+share/postfix/canonical
+share/postfix/main.cf
+share/postfix/master.cf
+share/postfix/postfix-script
+share/postfix/postfix-script-nosgid
+share/postfix/postfix-script-sgid
+share/postfix/relocated
+share/postfix/sample-aliases.cf
+share/postfix/sample-canonical.cf
+share/postfix/sample-debug.cf
+share/postfix/sample-ldap.cf
+share/postfix/sample-local.cf
+share/postfix/sample-misc.cf
+share/postfix/sample-pcre.cf
+share/postfix/sample-rate.cf
+share/postfix/sample-regexp.cf
+share/postfix/sample-relocated.cf
+share/postfix/sample-resource.cf
+share/postfix/sample-rewrite.cf
+share/postfix/sample-smtp.cf
+share/postfix/sample-smtpd.cf
+share/postfix/sample-transport.cf
+share/postfix/sample-virtual.cf
+share/postfix/transport
+share/postfix/virtual
+@dirrm share/postfix
+@dirrm share/doc/postfix
+@dirrm libexec/postfix
+@exec mkdir -p /etc/postfix
+@exec if [ ! -f /etc/postfix/main.cf ]; then cp %D/share/postfix/main.cf /etc/postfix ; fi
+@exec if [ ! -f /etc/postfix/master.cf ]; then cp %D/share/postfix/master.cf /etc/postfix ; fi
+@exec if [ ! -d /var/spool/postfix ]; then mkdir /var/spool/postfix; chmod 755 /var/spool/postfix ; fi
+@exec ln -sf %D/share/postfix/postfix-script /etc/postfix
+@unexec rm -f /etc/postfix/postfix-script

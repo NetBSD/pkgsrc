@@ -1,0 +1,37 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/08/14 04:33:24 itojun Exp $
+
+--- Makefile.inc.orig	Sun May 30 18:49:12 1999
++++ Makefile.inc	Sun May 30 18:49:12 1999
+@@ -0,0 +1,32 @@
++#	$NetBSD: patch-ab,v 1.1.1.1 2000/08/14 04:33:24 itojun Exp $
++
++WARNS?=	0
++
++DOBJDIR!=cd $(.CURDIR)/../dns; \
++	printf "xxx: .MAKE\n\t@echo \$${.OBJDIR}\n" | ${MAKE} -s -f-
++
++MOBJDIR!=cd $(.CURDIR)/../masterlib; \
++	printf "xxx: .MAKE\n\t@echo \$${.OBJDIR}\n" | ${MAKE} -s -f-
++
++GOBJDIR!=cd $(.CURDIR)/../global; \
++	printf "xxx: .MAKE\n\t@echo \$${.OBJDIR}\n" | ${MAKE} -s -f-
++
++UOBJDIR!=cd $(.CURDIR)/../util; \
++	printf "xxx: .MAKE\n\t@echo \$${.OBJDIR}\n" | ${MAKE} -s -f-
++
++CPPFLAGS+= -Wno-comment -D@OPSYS@ -I${.CURDIR}/ \
++	-I${.CURDIR}/../master -I${.CURDIR}/../global -I${.CURDIR}/../util \
++	-I${.CURDIR}/../dns
++
++
++LIBPDNS=	${DOBJDIR}/libdns.a
++LIBPMASTER=	${MOBJDIR}/libmaster.a
++LIBPGLOBAL=	${GOBJDIR}/libglobal.a
++LIBPUTIL=	${UOBJDIR}/libutil.a
++
++#LDADD=    
++#DPADD=  ${MOBJDIR}/libmaster.a ${GOBJDIR}/libglobal.a ${UOBJDIR}/libutil.a
++
++.if exists(${.CURDIR}/../../Makefile.inc)
++.include "${.CURDIR}/../../Makefile.inc"
++.endif

@@ -1,0 +1,13 @@
+$NetBSD: patch-bk,v 1.1.1.1 2000/08/14 04:33:25 itojun Exp $
+
+--- util/sys_defs.h.orig	Thu Nov 18 14:27:15 1999
++++ util/sys_defs.h	Thu Nov 18 14:27:16 1999
+@@ -33,7 +33,7 @@
+ #define DEF_DB_TYPE	"hash"
+ #define ALIAS_DB_MAP	"hash:/etc/aliases"
+ #define GETTIMEOFDAY(t)	gettimeofday(t,(struct timezone *) 0)
+-#define ROOT_PATH	"/bin:/usr/bin:/sbin:/usr/sbin"
++#define ROOT_PATH	"/bin:/usr/bin:/sbin:/usr/sbin:__PREFIX/sbin:__PREFIX/bin"
+ #define USE_STATFS
+ #define STATFS_IN_SYS_MOUNT_H
+ #define HAS_POSIX_REGEXP

@@ -1,0 +1,13 @@
+Postfix aims to be an alternative to the widely-used sendmail
+program.  Sendmail is responsible for 70% of all e-mail delivered
+on the Internet.  With an estimated 100 million users, that's an
+estimated 10 billion (10^10) messages daily. A stunning number.
+
+Although IBM supported the Postfix development, it abstains from
+control over its evolution. The goal is to have Postfix installed
+on as many systems as possible. To this end, the software is given
+away with no strings attached to it, so that it can evolve with
+input from and under control by its users.
+
+In other words, IBM releases Postfix only once. I will be around
+to guide its development for a limited time.

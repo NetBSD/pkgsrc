@@ -1,0 +1,12 @@
+$NetBSD: patch-bl,v 1.1.1.1 2000/08/14 04:33:25 itojun Exp $
+
+--- util/fifo_rdonly_bug.c.orig	Tue Aug 17 17:19:00 1999
++++ util/fifo_rdonly_bug.c	Tue Aug 17 17:22:45 1999
+@@ -31,6 +31,7 @@
+ #include <unistd.h>
+ #include <stdlib.h>
+ #include <fcntl.h>
++#include <string.h>
+ 
+ #define FIFO_PATH	"test-fifo"
+ #define TRIGGER_DELAY	5
