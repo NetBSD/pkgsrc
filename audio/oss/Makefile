@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2004/04/01 11:23:32 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2004/06/09 22:46:48 agc Exp $
 
 DISTNAME=	oss-${OSS_VERSION}	# Overridden below
 PKGNAME=	oss-${OSS_VERSION}
@@ -12,6 +12,8 @@ COMMENT=	Open Sound System(TM) soundcard driver
 #ONLY_FOR_PLATFORM=	NetBSD-1.6-i386 NetBSD-1.6.*-i386
 #ONLY_FOR_PLATFORM+=	NetBSD-1.6_*-i386
 OSVERSION_SPECIFIC=	yes
+
+INTERACTIVE_STAGE=	install
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
