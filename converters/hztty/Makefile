@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/12/03 15:14:52 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2005/01/19 16:11:41 tv Exp $
 
 DISTNAME=	hztty-2.0
 CATEGORIES=	converters
@@ -13,7 +13,13 @@ COMMENT=	Turns a tty session between Big5/GB/HZ/Unicode
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Interix"
+BUILD_TARGET=	svr4
+.else
 BUILD_TARGET=	bsd
+.endif
 
 INSTALLATION_DIRS=	bin man/man1
 
