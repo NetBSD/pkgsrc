@@ -1,13 +1,33 @@
-$NetBSD: patch-ab,v 1.1.1.1 2003/07/17 15:11:44 agc Exp $
+$NetBSD: patch-ab,v 1.2 2003/09/19 18:08:16 wiz Exp $
 
---- Makefile	2003/07/17 14:51:51	1.1
-+++ Makefile	2003/07/17 14:52:17
-@@ -2,7 +2,7 @@
+--- Makefile.orig	Mon Sep 10 05:21:01 2001
++++ Makefile	Fri Sep 19 16:06:02 2003
+@@ -1,8 +1,8 @@
+ VERSION = 1.2.01
  
- CC = gcc
- CFLAGS = -O2 -Wall 
+-CC = gcc
+-CFLAGS = -O2 -Wall 
 -CPPFLAGS = "-DVERSION=\"$(VERSION)\""
++#CC = gcc
++#CFLAGS = -O2 -Wall 
 +CPPFLAGS = "-DVERSION=\"$(VERSION)\"" -DPREFIX='"${PREFIX}"'
  
  DB_OBJS = fileio.o util.o dbench.o child.o
  TB_OBJS = sockio.o util.o dbench.o child.o socklib.o
+@@ -11,13 +11,13 @@
+ all: dbench tbench tbench_srv
+ 
+ dbench: $(DB_OBJS)
+-	$(CC) -o $@ $(DB_OBJS)
++	$(CC) -o $@ $(DB_OBJS) $(DB_LDFLAGS)
+ 
+ tbench: $(TB_OBJS)
+-	$(CC) -o $@ $(TB_OBJS)
++	$(CC) -o $@ $(TB_OBJS) $(TB_LDFLAGS)
+ 
+ tbench_srv: $(SRV_OBJS)
+-	$(CC) -o $@ $(SRV_OBJS)
++	$(CC) -o $@ $(SRV_OBJS) $(TB_LDFLAGS)
+ 
+ clean:
+ 	rm -f *.o *~ dbench tbench tbench_srv
