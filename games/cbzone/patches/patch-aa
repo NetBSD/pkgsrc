@@ -1,8 +1,9 @@
-$NetBSD: patch-aa,v 1.2 1998/08/07 10:40:38 agc Exp $
-
+$NetBSD: patch-aa,v 1.3 1998/09/13 20:39:44 garbled Exp $
 --- Imakefile.orig	Sun Aug  1 22:45:08 1993
-+++ Imakefile	Sun Jul 26 05:36:23 1998
-@@ -34,5 +34,5 @@
++++ Imakefile	Sun Sep 13 13:25:43 1998
+@@ -32,9 +32,9 @@
+ 
+ ETCS =  cbzone.help \
          cbzone.motd \
 -		cbzone.script \
 -		cbzone.highscores \
@@ -11,30 +12,60 @@ $NetBSD: patch-aa,v 1.2 1998/08/07 10:40:38 agc Exp $
 +        cbzone.highscores \
 +        Cbzone.ad
  
-@@ -55,3 +55,3 @@
+ MISC =  Imakefile \
+         Makefile.orig \
+@@ -53,15 +53,15 @@
+ 
+ # this is where the shellscript, and executable will go
  # TANK_BINDIR = $(BINDIR)
 -TANK_BINDIR= /usr/local/games
 +TANK_BINDIR= $(PREFIX)/bin
  
-@@ -59,3 +59,3 @@
+ # this is where the scorefile and helpfile will go
  # TANK_LIBDIR = $(LIBDIR)
 -TANK_LIBDIR = /usr/local/games/lib/cbzone
 +TANK_LIBDIR = $(PREFIX)/share/cbzone
  
-@@ -63,3 +63,3 @@
+ # this is where the app-defaults file will go
  # TANK_APPDIR = $(XAPPLOADDIR)
 -TANK_APPDIR = $(TANK_LIBDIR)
 +TANK_APPDIR = $(XAPPLOADDIR)
  
-@@ -74,3 +74,3 @@
+ # this is where the sound files go
+ TANK_SOUNDDIR = $(TANK_LIBDIR)/sounds
+@@ -72,20 +72,20 @@
+ 
+ AllTarget(cbzone.script)
  AllTarget(cbzone.exec)
 -           
 +
  MakeDirectories(install,$(TANK_BINDIR) $(TANK_LIBDIR) $(TANK_APPDIR) $(TANK_SOUNDDIR))
-@@ -99,4 +99,4 @@
+ InstallProgram(cbzone.exec,$(TANK_BINDIR))
+ InstallNamedProg(cbzone.script,cbzone,$(TANK_BINDIR))
+ InstallNonExec(cbzone.help,$(TANK_LIBDIR))
+ InstallNonExec(cbzone.motd,$(TANK_LIBDIR))
+-InstallNonExec(cbzone.highscores,$(TANK_LIBDIR))
++InstallNonExec(cbzone.highscores,/var/games)
+ InstallNamedNonExec(Cbzone.ad,Cbzone,$(TANK_APPDIR))
+ InstallMultiple($(SOUNDS),$(TANK_SOUNDDIR))
+ 
+ install::
+-	@if chgrp games $(TANK_BINDIR)/cbzone.exec $(TANK_LIBDIR)/cbzone.highscores 2>/dev/null ; then \
++	@if chgrp games $(TANK_BINDIR)/cbzone.exec /var/games/cbzone.highscores 2>/dev/null ; then \
+ 		(set -x ; chmod 2755 $(TANK_BINDIR)/cbzone.exec ) ; \
+-		(set -x ; chmod 664 $(TANK_LIBDIR)/cbzone.highscores ) ; \
++		(set -x ; chmod 664 /var/games/cbzone.highscores ) ; \
+ 	else \
+ 		echo 'Failed: chgrp games for "cbzone.exec", "cbzone.highscores".' ; \
+ 		echo '         highscore file exists but could not be protected.' ; \
+@@ -97,8 +97,8 @@
+ 	chmod 664 $@
+ 
  cbzone.exec: $(OBJS) $(DEPLIBS)
 -    RemoveTargetProgram($@)
 -    $(CC) -o $@ $(OBJS) $(LDOPTIONS) $(LOCAL_LIBRARIES) $(LDLIBS) $(EXTRA_LOAD_FLAGS)
 +	RemoveTargetProgram($@)
 +	$(CC) -o $@ $(OBJS) $(LDOPTIONS) $(LOCAL_LIBRARIES) $(LDLIBS) $(EXTRA_LOAD_FLAGS)
  
+ cbzone.script : cbzone.script.src
+ 	rm -f $@
