@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/11/30 18:26:40 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2005/01/08 00:08:39 wiz Exp $
 #
 
 VERS=		0.50.18
@@ -13,7 +13,7 @@ HOMEPAGE=	http://www.exit1.org/dvdrip/
 COMMENT=	Graphical frontend for DVD ripping
 
 DEPENDS+=	cdrdao>=1.1.7:../../sysutils/cdrdao
-DEPENDS+=	cdrecord>=1.10:../../sysutils/cdrecord
+DEPENDS+=	{cdrecord,cdrtools-ossdvd}>=1.10:../../sysutils/cdrecord
 DEPENDS+=	mplayer>=0.90:../../multimedia/mplayer
 DEPENDS+=	ogmtools-[0-9]*:../../multimedia/ogmtools
 DEPENDS+=	p5-Gdk-Pixbuf-[0-9]*:../../graphics/p5-Gdk-Pixbuf
