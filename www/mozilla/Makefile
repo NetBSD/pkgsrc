@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.16 1998/11/09 01:25:12 fvdl Exp $
+# $NetBSD: Makefile,v 1.17 1998/11/10 13:59:50 agc Exp $
 #
 
 DISTNAME=	mozilla-19981008
-PKGNAME=	mozilla-19981008
 CATEGORIES=	www
 MASTER_SITES=	ftp://ftp.mozilla.org/pub/mozilla/source/ \
 	ftp://sunsite.org.uk/Mirrors/ftp.mozilla.org/pub/mozilla/source/ \
