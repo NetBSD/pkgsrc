@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7729 2004/11/05 22:49:35 wiz Exp $
+$NetBSD: CHANGES,v 1.7730 2004/11/05 23:10:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5112,3 +5112,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added p5-Apache-Session-Wrapper-0.17 [he 2004-11-05]
 	Added libvisual-gforce-0.1.1 [wiz 2004-11-05]
 	Added libvisual-nebulus-0.1.4 [wiz 2004-11-05]
+	Added libvisual-xmms-0.1.7 [wiz 2004-11-05]
