@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.kde3,v 1.11 2004/03/09 11:07:58 markd Exp $
+# $NetBSD: Makefile.kde3,v 1.12 2004/03/09 21:00:09 skrll Exp $
 #
 # This Makefile fragment is included at the top of package Makefiles for
 # KDE3-distributed packages (they all share common configure and build
@@ -25,7 +25,7 @@ MASTER_SITES_KDE=	ftp://ftp.kde.org/pub/kde/stable/${_KDE_VERSION}/src/ \
 MASTER_SITES?=	${MASTER_SITES_KDE}
 EXTRACT_SUFX?=	.tar.bz2
 
-MAINTAINER?=	skrll@NetBSD.org
+MAINTAINER?=	tech-pkg@NetBSD.org
 HOMEPAGE?=	http://www.kde.org/
 
 USE_GNU_TOOLS+=		make
