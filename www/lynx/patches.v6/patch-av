@@ -1,6 +1,4 @@
-$NetBSD: patch-av,v 1.1 2000/01/15 17:44:25 hubertf Exp $
-
-Place(s) where this was (most probably...) in before:
+$NetBSD: patch-av,v 1.2 2000/01/15 22:55:49 hubertf Exp $
 
 diff -x *.orig -urN ./aclocal.m4 /usr/pkgsrc/www/lynx/work.unpatched/lynx2-8-2/aclocal.m4
 --- ./aclocal.m4	Sat May  8 19:46:28 1999
