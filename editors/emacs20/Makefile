@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/04/11 00:31:43 uebayasi Exp $
+# $NetBSD: Makefile,v 1.2 2003/04/11 04:00:17 uebayasi Exp $
 
 DISTNAME=	emacs-20.7
 PKGREVISION=	2
@@ -28,7 +28,7 @@ USE_GMAKE=	yes
 USE_LIBTOOL=	yes
 GNU_ARCH.mipsbe= mips
 
-BUILD_DEFS+=	USE_INET6 EMACS_USE_POP EMACS_USE_X EMACS_USE_X_TOOLKIT
+BUILD_DEFS+=	USE_INET6 EMACS_USE_POP
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -37,11 +37,21 @@ EMACS_USE_POP?=	yes
     (${EMACS_USE_POP} == yes || ${EMACS_USE_POP} == YES))
 CONFIGURE_ARGS+=--with-pop
 .endif
-USE_X11=	yes
-CONFIGURE_ARGS+=--with-x=yes
+
+.if defined(EMACS_USE_X)
+BUILD_DEFS+=		EMACS_USE_X EMACS_USE_X_TOOLKIT
+USE_X11=		yes
+CONFIGURE_ARGS+=	--with-x=yes
 .if defined(EMACS_USE_X_TOOLKIT)
-CONFIGURE_ARGS+=--with-x-toolkit=${EMACS_USE_X_TOOLKIT}
+CONFIGURE_ARGS+=	--with-x-toolkit=${EMACS_USE_X_TOOLKIT}
+.if ${EMACS_USE_X_TOOLKIT} == "lucid" || ${EMACS_USE_X_TOOLKIT} == "athena"
+.include "../../mk/xaw.buildlink2.mk"
+.elif ${EMACS_USE_X_TOOLKIT} == "motif"
+.include "../../mk/motif.buildlink2.mk"
 .endif
+.endif
+.endif	# EMACS_USE_X
+
 .if defined(USE_INET6) && ${USE_INET6} == YES
 CONFIGURE_ARGS+=--with-ipv6
 .else
@@ -58,13 +68,6 @@ pre-install:
 
 post-install:
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/emacs
-
-.if defined(EMACS_USE_X_TOOLKIT) && ${EMACS_USE_X_TOOLKIT} == "athena"
-.include "../../mk/xaw.buildlink2.mk"
-.endif
-.if defined(EMACS_USE_X_TOOLKIT) && ${EMACS_USE_X_TOOLKIT} == "motif"
-.include "../../mk/motif.buildlink2.mk"
-.endif
 
 .include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
