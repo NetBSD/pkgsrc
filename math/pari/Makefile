@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2004/03/26 02:27:45 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2004/04/11 09:09:06 snj Exp $
 
 DISTNAME=		pari-2.1.5
 PKGREVISION=		3
@@ -12,7 +12,7 @@ COMMENT=		Software package for computer-aided number theory
 
 BUILD_DEPENDS+= 	teTeX-[0-9]*:../../print/teTeX
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
 USE_X11=		yes
 USE_GNU_READLINE=	# rl_save_prompt
@@ -26,7 +26,7 @@ CONFIGURE_ENV+=		X11BASE=${X11BASE}
 
 TEST_TARGET=		test-compat bench
 
-.include "../../devel/ncurses/buildlink2.mk"
-.include "../../devel/readline/buildlink2.mk"
-.include "../../lang/perl5/buildlink2.mk"
+.include "../../devel/ncurses/buildlink3.mk"
+.include "../../devel/readline/buildlink3.mk"
+.include "../../lang/perl5/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
