@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1.1.1 1999/12/04 12:56:32 scw Exp $
+
+--- libaudio/Makefile.netbsd.orig	Fri Dec  3 21:50:24 1999
++++ libaudio/Makefile.netbsd	Fri Dec  3 21:50:43 1999
+@@ -4,7 +4,7 @@
+ HOMEDIR = $(HOME)
+ INCDIR  = -I.
+ CCFLAGS = $(INCDIR) $(DEBUG) $(OPTIM) -DLINUX -DBIGENDIAN -DUSINGGCC -Wall
+-DEBUG   = -g3
++DEBUG   = #-g3
+ OPTIM   = -O1
+ 
+ LIBNAME = libaudio.a
