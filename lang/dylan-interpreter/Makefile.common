@@ -1,8 +1,7 @@
-# $NetBSD: Makefile.common,v 1.15 2004/05/09 02:26:14 snj Exp $
+# $NetBSD: Makefile.common,v 1.16 2004/09/30 10:53:19 agc Exp $
 #
 
 DISTNAME=		gwydion-dylan-${DYLAN_VERSION}
-PKGREVISION=		1
 CATEGORIES=		lang
 MASTER_SITES=		ftp://berlin.ccc.de/pub/gd/src/	\
 			ftp://ftp.fu-berlin.de/pub/unix/languages/dylan/src/ \
@@ -27,7 +26,7 @@ GNU_CONFIGURE=		yes
 AUTOMAKE_REQD=		1.4
 AUTOCONF_REQD=		2.50
 
-DYLAN_VERSION=		2.3.6
+DYLAN_VERSION=		2.3.11
 
 # other architecture changes will be gratefully received
 ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-*-sparc NetBSD-*-powerpc
@@ -58,6 +57,7 @@ pre-configure:
 	cd ${WRKSRC} && ${AUTOHEADER}
 	cd ${WRKSRC} && ${AUTOCONF}
 
+.include "../../devel/boehm-gc/buildlink3.mk"
 .include "../../lang/perl5/buildlink3.mk"
 .include "../../x11/gtk/buildlink3.mk"
 
