@@ -1,0 +1,3 @@
+GDBM_File is a module which allows Perl programs to make use of the
+facilities provided by the GNU gdbm library.  Most of the libgdbm.a
+functions are available through the GDBM_File interface.
