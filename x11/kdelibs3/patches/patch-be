@@ -1,8 +1,8 @@
-$NetBSD: patch-be,v 1.1.1.1 2002/05/31 13:16:47 skrll Exp $
+$NetBSD: patch-be,v 1.2 2002/08/15 08:22:10 skrll Exp $
 
---- kio/kssl/ksslcertificate.cc.orig	Sat Dec  1 03:30:25 2001
+--- kio/kssl/ksslcertificate.cc.orig	Wed Aug 14 15:48:38 2002
 +++ kio/kssl/ksslcertificate.cc
-@@ -90,7 +90,7 @@
+@@ -90,7 +90,7 @@ public:
  KSSLCertificate::KSSLCertificate() {
    d = new KSSLCertificatePrivate;
    d->m_stateCached = false;
@@ -11,7 +11,7 @@ $NetBSD: patch-be,v 1.1.1.1 2002/05/31 13:16:47 skrll Exp $
  #ifdef HAVE_SSL
    d->m_cert = NULL;
  #endif
-@@ -100,7 +100,7 @@
+@@ -100,7 +100,7 @@ KSSLCertificate::KSSLCertificate() {
  KSSLCertificate::KSSLCertificate(const KSSLCertificate& x) {
    d = new KSSLCertificatePrivate;
    d->m_stateCached = false;
@@ -20,3 +20,14 @@ $NetBSD: patch-be,v 1.1.1.1 2002/05/31 13:16:47 skrll Exp $
  #ifdef HAVE_SSL
    d->m_cert = NULL;
    setCert(KOSSL::self()->X509_dup(const_cast<KSSLCertificate&>(x).getCert()));
+@@ -541,9 +541,8 @@ KSSLCertificate::KSSLValidation KSSLCert
+ 
+     //kdDebug(7029) << "KSSL setting CRL.............." << endl;
+     // int X509_STORE_add_crl(X509_STORE *ctx, X509_CRL *x);
+-    //
+ 
+-    // int X509_STORE_CTX_set_purpose(X509_STORE_CTX *ctx, int purpose);
++    d->kossl->X509_STORE_CTX_set_purpose(certStoreCTX, X509_PURPOSE_SSL_SERVER);
+ 
+     //kdDebug(7029) << "KSSL verifying.............." << endl;
+     certStoreCTX->error = X509_V_OK;
