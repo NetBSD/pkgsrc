@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2001/12/02 06:56:40 jlam Exp $
+# $NetBSD: Makefile,v 1.25 2001/12/03 11:53:07 martti Exp $
 
 DISTNAME=		cyrus-imapd-2.0.16
 SVR4_PKGNAME=		cimap
@@ -81,8 +81,8 @@ post-patch:
 			Makefile.in > Makefile.in.fixed;		\
 		${MV} -f Makefile.in.fixed Makefile.in;			\
 	done
-	cd ${WRKSRC};							\
-	files=`${FIND} . -type f -exec ${GREP} -l /etc/imapd\.conf {} \;`; \
+	files=`${FIND} ${WRKSRC} -type f -exec ${GREP} -l \
+		-e /etc/imapd\.conf -e /etc/cyrus\.conf {} \;`; \
 	for file in $${files}; do					\
 		${SED}	-e "s|\(\\fB\)\($${name}($${suffix})\)|\1cyrus-\2|g" \
 			-e "s|\(\$$(srcdir)/\)\($${man}\)|\1cyrus-\2|g"	\
