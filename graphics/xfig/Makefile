@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2003/01/14 06:37:07 rh Exp $
+# $NetBSD: Makefile,v 1.35 2003/01/15 07:11:43 rh Exp $
 #
 
 DISTNAME=		xfig.3.2.4.full
@@ -23,6 +23,13 @@ CFLAGS+=		-I${X11PREFIX}/include/X11
 
 .include "../../mk/bsd.prefs.mk"
 
+.if defined(XAW_TYPE) && (${XAW_TYPE} != "3d" && ${XAW_TYPE} != "xpm")
+pre-configure:
+	cd ${WRKSRC} &&	\
+	  if [ ! -f Imakefile.bak ]; then ${MV} Imakefile Imakefile.bak; fi && \
+	  ${SED} 's/#define.XAW3D/XCOMM &/' Imakefile.bak > Imakefile
+.endif
+
 XFIGDOCDIR=		${PREFIX}/share/doc/xfig
 
 post-install:
@@ -31,6 +38,6 @@ post-install:
 .include "../../graphics/jpeg/buildlink2.mk"
 .include "../../graphics/png/buildlink2.mk"
 .include "../../graphics/xpm/buildlink2.mk"
-.include "../../x11/Xaw3d/buildlink2.mk"
+.include "../../mk/xaw.buildlink2.mk"
 
 .include "../../mk/bsd.pkg.mk"
