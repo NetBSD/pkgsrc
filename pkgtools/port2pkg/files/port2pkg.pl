@@ -1,6 +1,6 @@
 #!/usr/bin/env perl
 #
-# $NetBSD: port2pkg.pl,v 1.1.1.1 1999/07/27 11:33:06 sakamoto Exp $
+# $NetBSD: port2pkg.pl,v 1.2 1999/09/03 04:37:36 sakamoto Exp $
 #
 
 require 'getopts.pl';
@@ -99,8 +99,8 @@ sub conv_Makefile {
 	while (<PORTS>) {
 		if (! /^\#/) {last;}
 
-		if (/\$(Id: .*)/) {
-			print PKG "\# FreeBSD $1\n";
+		if (/\$FreeBSD:( .*) \$/ || /\$Id: port2pkg.pl,v 1.2 1999/09/03 04:37:36 sakamoto Exp $/) {
+			print PKG "\# FreeBSD Id:$1\n";
 		} else {
 			print;
 		}
@@ -123,10 +123,12 @@ sub conv_Makefile {
 			}
 		}
 
+		s|^\.include <bsd.port.pre.mk>|.include \"../../mk/bsd.prefs.mk\"|;
 		s|^\.include <bsd.port.mk>|.include \"../../mk/bsd.pkg.mk\"|;
 		s|^FETCH_(DEPENDS)|BUILD_$1|;
 		s|^LIB_(DEPENDS)|$1|;
 		s|\$\{PORTSDIR\}|../..|g;
+		s|PLIST_SUB|PLIST_SUBST|;
 
 		if (defined($master_site_subdir) &&
 		    $master_site_subdir ne "" &&
@@ -141,6 +143,7 @@ sub conv_Makefile {
 		}
 
 		if (/(\/usr\/local)/ ||
+		    /(\/usr\/X11R6)/ ||
 		    /(ldconfig)/i ||
 		    /(MASTERDIR)/ ||
 		    /(.*cat.*MESSAGE.*)/i) {
@@ -165,6 +168,16 @@ sub conv_Makefile {
 			if ($nextline) {
 				$remove = 1;
 			}
+
+			open(DESCR, "$pkgdir/pkg/DESCR")
+				|| die "$pkgdir/pkg/DESCR: $!\n";
+			while (<DESCR>) {
+				chop;
+				if (/^WWW:[\s]*(.*)/) {
+					print PKG "HOMEPAGE=\t$1\n";
+				}
+			}
+			close(DESCR);
 		} elsif ($noportdocs || /^\.if.*NOPORTDOCS/) {
 			if (/^\.if/) {
 				$noportdocs++;
@@ -210,6 +223,7 @@ sub conv_PLIST {
 		print PKG "\@comment \$NetBSD\$\n";
 		my ($cat_added, $man_added);
 		while (<PORTS>) {
+			s|\%\%([^\%]+)\%\%|\${$1}|g;
 			if (/^\@.*ldconfig/) {next;}
 			if (defined($cat_added) && $cat_added == 0 && /^[d-z]/){
 				&add_manual(*PKG, "cat");
