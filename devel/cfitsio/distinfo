@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2001/04/21 00:44:13 wiz Exp $
+$NetBSD: distinfo,v 1.3 2004/09/08 13:32:31 wiz Exp $
 
-SHA1 (cfitsio2037.tar.gz) = 2a662db36ff8c927eb5b4e93e966ac39b35b44a9
-Size (cfitsio2037.tar.gz) = 1946415 bytes
-SHA1 (patch-aa) = c7eed82f4d49a63b195cb573ee9099b37eb76845
-SHA1 (patch-ab) = 12ac770326f04a762de6276a2e9405bb6778100f
+SHA1 (cfitsio2500.tar.gz) = b9c294b3705fe40d9057877f2f11baa2f598430b
+Size (cfitsio2500.tar.gz) = 2050459 bytes
+SHA1 (patch-aa) = 7ece0dc8537ddc98f9c46d2162145590ed7a00d3
+SHA1 (patch-ab) = ecfee3ba35fdf09a47dbac9e2ab44ba8b90a226c
