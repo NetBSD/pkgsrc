@@ -1,10 +1,8 @@
-$NetBSD: distinfo,v 1.5 2001/12/06 14:51:07 rafal Exp $
+$NetBSD: distinfo,v 1.6 2002/08/03 12:23:58 hubertf Exp $
 
-SHA1 (nmap-2.53.tgz) = 208979028c8b02e882e452e94280f09bc617490f
-Size (nmap-2.53.tgz) = 584385 bytes
-SHA1 (patch-aa) = e669fe70e3d6102bcfad2328c7329733d6795b09
-SHA1 (patch-ab) = 691a4b1a226a93ae3d4f52ad96bebacaed9dd452
-SHA1 (patch-ac) = 59fbb788a76f53a99bc411ba44f514d694990852
-SHA1 (patch-ad) = 3f9d55ec44fa017f77d7e042185bdc3cfcc3fefa
-SHA1 (patch-ae) = 3f9d04156506a9df3b55bba0c7da4ff772478302
-SHA1 (patch-af) = 3225b7698640cb142f6c45ef48ea2677efe793ba
+SHA1 (nmap-3.00.tgz) = 7c51c4013bf70c223b81af5a5a171fc9af011df2
+Size (nmap-3.00.tgz) = 922293 bytes
+SHA1 (patch-aa) = baa9ef7b31f8e1c74c9acdf17a71517bfc262de1
+SHA1 (patch-ab) = 590271ab5edd85ec8304ae5ee2248c8249b42195
+SHA1 (patch-ad) = 28a0bc76dbb8fd271c52f26f2b1d95152da129d7
+SHA1 (patch-af) = e4a0ed033d2931b4e3bd7d9897d3ee079585ef54
