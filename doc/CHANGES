@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1102 2003/01/12 02:30:30 wiz Exp $
+$NetBSD: CHANGES,v 1.1103 2003/01/12 05:45:33 rh Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -238,3 +238,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated dsssl-docbook-modular to 1.57nb1 [jmmv 2003-01-11]
 	Updated jade to 1.2.1nb5 [jmmv 2003-01-11]
 	Updated leim to 20.7nb1 [wiz 2003-01-12]
+	Updated gnumeric to 1.0.12nb1 [rh 2003-01-12]
