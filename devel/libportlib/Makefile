@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/12/11 20:16:10 ben Exp $
+# $NetBSD: Makefile,v 1.8 2003/12/13 16:20:09 ben Exp $
 #
 
 DISTNAME=		portlib-1.01
@@ -14,7 +14,10 @@ COMMENT=		Portable file locking and directory reading
 post-patch:
 	${MV} ${WRKSRC}/Makefile ${WRKSRC}/Makefile.bak
 	${SED} <${WRKSRC}/Makefile.bak >${WRKSRC}/Makefile \
-		-e 's|/usr/local|${PREFIX}|' \
-		-e 's|/usr/ucb/install|$${BSD_INSTALL}|'
+		-e 's|/usr/local|${PREFIX}|'
+
+do-install:
+	${INSTALL_DATA} ${WRKSRC}/libport.a ${PREFIX}/lib
+	${INSTALL_DATA} ${WRKSRC}/portlib.h ${PREFIX}/include
 
 .include "../../mk/bsd.pkg.mk"

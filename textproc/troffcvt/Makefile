@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/12/11 20:16:10 ben Exp $
+# $NetBSD: Makefile,v 1.7 2003/12/13 16:20:09 ben Exp $
 #
 
 DISTNAME=		troffcvt-1.04
@@ -27,9 +27,34 @@ post-patch:
 			-e "s| -Xc||" \
 			-e "s|/usr/include/sys/feature_tests.h||" \
 			-e "s|/usr/tmp|/tmp|g" \
-			-e 's|/usr/ucb/install|$${BSD_INSTALL}|' \
 			-e "s|/usr/local|${PREFIX}|g" \
 			-e "s|/usr/local/man|${PREFIX}/man|" ;\
 	done
+
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/troffcvt/troffcvt ${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/tblcvt/tblcvt ${PREFIX}/bin
+	cd ${WRKSRC}/post && ${INSTALL_PROGRAM} tc2null tc2html tc2rtf tc2text \
+		${PREFIX}/bin
+	cd ${WRKSRC}/post && ${INSTALL_SCRIPT} troff2null tc2html-toc \
+		troff2html troff2rtf unroff ${PREFIX}/bin
+	${INSTALL_DATA_DIR} ${PREFIX}/lib/troffcvt
+	cd ${WRKSRC}/troffcvt && ${INSTALL_DATA} actions actions-html \
+		tc.man tc.man-html tc.me tc.me-html tc.mm tc.mm-html tc.ms \
+		tc.ms-html tc.mdoc tc.mdoc-html ${PREFIX}/lib/troffcvt
+	cd ${WRKSRC}/post && ${INSTALL_DATA} tcr-fonts html-fonts \
+		html-specials rtf-fonts rtf-spec-ansi rtf-spec-mac \
+		rtf-spec-pc rtf-spec-pca text-specials text-8-specials \
+		${PREFIX}/lib/troffcvt
+	${INSTALL_MAN} ${WRKSRC}/man/tblcvt.man ${PREFIX}/man/man1/tblcvt.1
+	${INSTALL_MAN} ${WRKSRC}/man/unroff.man ${PREFIX}/man/man1/unroff.1
+	${INSTALL_MAN} ${WRKSRC}/man/troff2rtf.man \
+		${PREFIX}/man/man1/troff2rtf.1
+	${INSTALL_MAN} ${WRKSRC}/man/tc2html-toc.man \
+		${PREFIX}/man/man1/tc2html-toc.1
+	${INSTALL_MAN} ${WRKSRC}/man/troff2html.man \
+		${PREFIX}/man/man1/troff2html.1
+	${INSTALL_MAN} ${WRKSRC}/man/tc2html.man ${PREFIX}/man/man1/tc2html.1
+	${INSTALL_MAN} ${WRKSRC}/man/troffcvt.man ${PREFIX}/man/man1/troffcvt.1
 
 .include "../../mk/bsd.pkg.mk"
