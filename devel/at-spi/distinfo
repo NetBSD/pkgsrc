@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2004/09/21 16:59:05 jmmv Exp $
+$NetBSD: distinfo,v 1.10 2004/12/28 21:50:56 jmmv Exp $
 
-SHA1 (at-spi-1.6.0.tar.bz2) = f94cb971a210ea7869540841120c04c896e6e453
-Size (at-spi-1.6.0.tar.bz2) = 503948 bytes
+SHA1 (at-spi-1.6.1.tar.bz2) = 5a59ed6064767b3368df459927fc4f0f2d410da8
+Size (at-spi-1.6.1.tar.bz2) = 469311 bytes
