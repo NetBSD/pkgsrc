@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.4 2004/12/05 06:59:21 jlam Exp $
+# $NetBSD: builtin.mk,v 1.5 2004/12/05 07:01:19 jlam Exp $
 
 .for _lib_ in dl
 .  if !defined(_BLNK_LIB_FOUND.${_lib_})
@@ -15,17 +15,15 @@ BUILDLINK_VARS+=	_BLNK_LIB_FOUND.${_lib_}
 .endfor
 .undef _lib_
 
-_DL_H=	/usr/include/dlfcn.h
+_DLFCN_H=	/usr/include/dlfcn.h
 
 .if !defined(IS_BUILTIN.dlcompat)
 IS_BUILTIN.dlcompat=	no
-.  if !empty(_BLNK_LIB_FOUND.dl:M[yY][eE][sS]) && exists(${_DL_H})
+.  if !empty(_BLNK_LIB_FOUND.dl:M[yY][eE][sS]) && exists(${_DLFCN_H})
 IS_BUILTIN.dlcompat=	yes
-.    if !empty(IS_BUILTIN.dlcompat:M[yY][eE][sS])
-_DL_VERSION=		20030629
-BUILTIN_PKG.dlcompat=	dlcompat-${_DL_VERSION}
+_DLCOMPAT_VERSION=	20030629
+BUILTIN_PKG.dlcompat=	dlcompat-${_DLCOMPAT_VERSION}
 BUILDLINK_VARS+=	BUILTIN_PKG.dlcompat
-.    endif
 .  endif
 BUILDLINK_VARS+=	IS_BUILTIN.dlcompat
 .endif	# IS_BUILTIN.dlcompat
