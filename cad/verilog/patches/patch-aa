@@ -1,0 +1,11 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/01/26 15:28:41 dmcmahill Exp $
+
+--- ./vpi/sys_readmem.c.orig	Tue Dec 14 23:35:34 1999
++++ ./vpi/sys_readmem.c	Sat Jan 22 14:04:59 2000
+@@ -21,5 +21,5 @@
+ #endif
+ 
+-# include  <vpi_user.h>
++# include  "vpi_user.h"
+ # include  <string.h>
+ # include  <stdlib.h>

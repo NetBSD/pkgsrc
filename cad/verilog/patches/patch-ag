@@ -1,0 +1,11 @@
+$NetBSD: patch-ag,v 1.1.1.1 2000/01/26 15:28:41 dmcmahill Exp $
+
+--- ./vpi/Makefile.in.orig	Sat Jan 22 16:53:15 2000
++++ ./vpi/Makefile.in	Sat Jan 22 16:52:03 2000
+@@ -69,5 +69,5 @@
+ 
+ $(libdir)/ivl/system.vpi: ./system.vpi
+-	$(INSTALL_PROGRAM) ./system.vpi $(libdir)/ivl/system.vpi
++	$(INSTALL_DATA) ./system.vpi $(libdir)/ivl/system.vpi
+ 
+ $(includedir)/vpi_user.h: $(srcdir)/vpi_user.h
