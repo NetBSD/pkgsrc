@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2002/08/27 10:29:41 dillo Exp $
+# $NetBSD: Makefile,v 1.47 2002/10/28 12:42:36 agc Exp $
 #
 
 COMMENT=	Archivers
@@ -27,6 +27,7 @@ SUBDIR+=	lha
 SUBDIR+=	liblzo
 SUBDIR+=	lzop
 SUBDIR+=	macutil
+SUBDIR+=	mousetar
 SUBDIR+=	mscompress
 SUBDIR+=	nulib2
 SUBDIR+=	p5-Archive-Tar
