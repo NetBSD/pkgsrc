@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 1999/04/07 13:21:00 agc Exp $
+# $NetBSD: Makefile,v 1.10 2000/01/09 01:19:11 wiz Exp $
 #
 
 DISTNAME=	guavac-1.2
@@ -20,14 +20,17 @@ CXX=		${LOCALBASE}/egcs/bin/gcc
 CONFIGURE_ENV+=	CXX=${CXX}
 .endif
 
-HAVE_GCC27!=	${CXX} -v 2>&1 | grep '2\.7\.'; echo
-.if !empty(HAVE_GCC27)
-IGNORE=		"requires gcc 2.8 or egcs or better for ANSI C++"
-.endif
-
 GNU_CONFIGURE=  yes
 
 post-install:
 	${MV} ${PREFIX}/man/cat1/guavac.man ${PREFIX}/man/cat1/guavac.0
 
 .include "../../mk/bsd.pkg.mk"
+
+# next check has to be below include, else ${GREP} and ${ECHO} don't get
+# expanded correctly
+
+HAVE_GCC27!=	${CXX} -v 2>&1 | ${GREP} '2\.7\.'; ${ECHO}
+.if !empty(HAVE_GCC27)
+IGNORE=		"requires gcc 2.8 or egcs or better for ANSI C++"
+.endif

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1999/10/13 19:03:38 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2000/01/09 01:19:11 wiz Exp $
 #
 
 DISTNAME=	se
@@ -24,8 +24,8 @@ SE_BINARIES=	clean compile compile_to_c compile_to_jvm \
 		finder pretty print_jvm_class short
 
 post-extract:
-	find ${WRKSRC} -type f -print | xargs ${CHMOD} 644
-	find ${WRKSRC} -name ".gdb*" -print | xargs ${RM} -f
+	${FIND} ${WRKSRC} -type f -print | xargs ${CHMOD} 644
+	${FIND} ${WRKSRC} -name ".gdb*" -print | xargs ${RM} -f
 	cd ${WRKSRC}/man; ${RM} -f *.txt
 	cd ${WRKSRC}/sys; ${RM} -f compiler.se gc loadpath.* system.se
 	cd ${FILESDIR}; \
@@ -60,7 +60,7 @@ post-build:
 		${FILESDIR}/${BINNAME}.sh > ${WRKDIR}/${BINNAME}.sh
 
 pre-install:
-	find ${WRKSRC} -name "*.orig" -print | xargs ${RM} -f
+	${FIND} ${WRKSRC} -name "*.orig" -print | xargs ${RM} -f
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/${BINNAME}.sh ${PREFIX}/bin/${BINNAME}
