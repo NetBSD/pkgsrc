@@ -25,6 +25,7 @@ gen() {
 	esac
 	save_IFS="${IFS}"; IFS=":"
 	set -- $1
+	IFS="${save_IFS}"
 	case "$1" in
 	I|L)
 		case "$action" in
@@ -122,7 +123,6 @@ EOF
 		esac
 		;;
 	esac
-	IFS="${save_IFS}"
 }
 
 for arg; do
