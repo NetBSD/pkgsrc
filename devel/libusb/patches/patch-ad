@@ -1,0 +1,32 @@
+$NetBSD: patch-ad,v 1.4 2004/06/23 08:42:57 mycroft Exp $
+
+--- bsd.c.orig	2004-01-27 22:36:40.000000000 +0000
++++ bsd.c	2004-06-23 08:40:16.000000000 +0000
+@@ -320,7 +320,7 @@
+ int usb_bulk_read(usb_dev_handle *dev, int ep, char *bytes, int size,
+                   int timeout)
+ {
+-  int fd, ret, retrieved = 0, one = 1;
++  int fd, ret, retrieved = 0, one = 1, requested;
+ 
+   /* Ensure the endpoint address is correct */
+   ep |= USB_ENDPOINT_IN;
+@@ -346,7 +346,8 @@
+     USB_ERROR_STR(-errno, "error setting short xfer: %s", strerror(errno));
+ 
+   do {
+-    ret = read(fd, bytes+retrieved, size-retrieved);
++    requested = size - retrieved;
++    ret = read(fd, bytes+retrieved, requested);
+     if (ret < 0)
+ #if __FreeBSD__
+       USB_ERROR_STR(-errno, "error reading from bulk endpoint %s.%d: %s",
+@@ -356,7 +357,7 @@
+                   dev->device->filename, UE_GET_ADDR(ep), strerror(errno));
+ #endif
+     retrieved += ret;
+-  } while (ret > 0 && retrieved < size);
++  } while (ret > 0 && retrieved < size && ret == requested);
+ 
+   return retrieved;
+ }
