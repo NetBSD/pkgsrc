@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2005/01/25 23:39:30 cube Exp $
+# $NetBSD: Makefile,v 1.8 2005/01/27 20:42:23 jschauma Exp $
 
-DISTNAME=	pkgfind-20050125
+DISTNAME=	pkgfind-20050127
 CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -34,8 +34,10 @@ SUBST_MESSAGE.path=	"Adjusting pkgsrc directory."
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "Interix"
-.  include "../../devel/libiberty/application.mk" # need asprintf(3)
+.if ${OPSYS} == "IRIX"
+CFLAGS+=	-DNEED_LIBNBCOMPAT
+LDFLAGS+=	-lnbcompat
+.  include "../../pkgtools/libnbcompat/buildlink3.mk" # need err(1), warn(1)
 .endif
 
 .include "../../mk/bsd.pkg.mk"
