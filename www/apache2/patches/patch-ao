@@ -1,34 +1,21 @@
-$NetBSD: patch-ao,v 1.1 2002/06/18 02:17:18 itojun Exp $
+$NetBSD: patch-ao,v 1.2 2002/06/18 23:58:08 itojun Exp $
 
---- srclib/apr/configure-	Tue Jun 18 11:12:43 2002
-+++ srclib/apr/configure	Tue Jun 18 11:13:27 2002
-@@ -24882,21 +24882,21 @@
- echo "$as_me:$LINENO: checking for /dev/random" >&5
- echo $ECHO_N "checking for /dev/random... $ECHO_C" >&6
- 
--if test -r "/dev/random"; then
-+if test -r "/dev/urandom"; then
-     cat >>confdefs.h <<\_ACEOF
--#define DEV_RANDOM /dev/random
+--with-randomdev=foo does not work.
+
+--- srclib/apr/configure-	Wed Jun 19 08:23:54 2002
++++ srclib/apr/configure	Wed Jun 19 08:34:18 2002
+@@ -25347,11 +25347,11 @@
+   elif test "$apr_devrandom" != "no"; then
+     if test -r "$apr_devrandom"; then
+       cat >>confdefs.h <<\_ACEOF
+-#define DEV_RANDOM $apr_devrandom
 +#define DEV_RANDOM /dev/urandom
  _ACEOF
  
--    echo "$as_me:$LINENO: result: /dev/random" >&5
--echo "${ECHO_T}/dev/random" >&6
-+    echo "$as_me:$LINENO: result: /dev/urandom" >&5
+-      echo "$as_me:$LINENO: result: $apr_devrandom" >&5
+-echo "${ECHO_T}$apr_devrandom" >&6
++      echo "$as_me:$LINENO: result: /dev/urandom" >&5
 +echo "${ECHO_T}/dev/urandom" >&6
-     rand="1"
--elif test -r "/dev/urandom"; then
-+elif test -r "/dev/random"; then
-     cat >>confdefs.h <<\_ACEOF
--#define DEV_RANDOM /dev/urandom
-+#define DEV_RANDOM /dev/random
- _ACEOF
- 
--    echo "$as_me:$LINENO: result: /dev/urandom" >&5
--echo "${ECHO_T}/dev/urandom" >&6
-+    echo "$as_me:$LINENO: result: /dev/random" >&5
-+echo "${ECHO_T}/dev/random" >&6
-     rand="1"
- else
-     case $host in
+       rand="1"
+     else
+       { { echo "$as_me:$LINENO: error: $apr_devrandom not found or unreadable." >&5
