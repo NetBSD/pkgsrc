@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2001/04/28 23:59:18 jtb Exp $
+# $NetBSD: Makefile,v 1.10 2001/07/15 13:00:31 jtb Exp $
 
-DISTNAME=	libctl-1.4
+DISTNAME=	libctl-1.4.1
 CATEGORIES=	devel
 MASTER_SITES=	http://superjdj.mit.edu/libctl/
 
@@ -10,7 +10,7 @@ COMMENT=	Guile-based flexible control file library for scientific simulations
 
 DEPENDS+=	guile>=1.4:../../lang/guile
 
-GNU_CONFIGURE=	#defined
+GNU_CONFIGURE=	yes
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/libctl
