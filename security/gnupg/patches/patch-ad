@@ -1,11 +1,10 @@
-$NetBSD: patch-ad,v 1.4 2003/08/15 07:02:23 itojun Exp $
+$NetBSD: patch-ad,v 1.5 2003/12/25 14:05:02 wiz Exp $
 
 ftp://ftp.kame.net/pub/kame/misc/gnupg-1.2.2-IPv6.diff.gz
 
-diff -u -r1.1.1.1 -r1.2
---- util/http.c	15 Aug 2003 05:12:28 -0000	1.1.1.1
-+++ util/http.c	15 Aug 2003 06:44:46 -0000	1.2
-@@ -753,6 +753,28 @@
+--- util/http.c.orig	Tue Dec 23 18:33:34 2003
++++ util/http.c
+@@ -751,6 +751,28 @@ connect_server( const char *server, usho
          sock_close (sd);
          return -1;
      }
