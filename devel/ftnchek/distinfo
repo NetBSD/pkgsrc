@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2001/04/21 00:44:17 wiz Exp $
+$NetBSD: distinfo,v 1.3 2001/04/25 23:24:45 jtb Exp $
 
-SHA1 (ftnchek-3.0.3.tar.gz) = e85f28a3cff4b44ff14da06edde221a1a4b421c8
-Size (ftnchek-3.0.3.tar.gz) = 837074 bytes
+SHA1 (ftnchek-3.0.4.tar.gz) = 30fbed8860ececf00c6860c3ab39a50921a0b8eb
+Size (ftnchek-3.0.4.tar.gz) = 839084 bytes
 SHA1 (patch-aa) = c0594e830575602b70e26385c3b3eba3e99577df

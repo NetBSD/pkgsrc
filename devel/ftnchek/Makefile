@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2001/04/14 21:43:40 jtb Exp $
+# $NetBSD: Makefile,v 1.6 2001/04/25 23:24:45 jtb Exp $
 
-DISTNAME=	ftnchek-3.0.3
+DISTNAME=	ftnchek-3.0.4
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SUNSITE:=devel/lang/fortran/}
 
@@ -17,9 +17,9 @@ pre-install:
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/ftnchek
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/ftnchek/html
-	@for i in FAQ INSTALL LICENSE README ftnchek.man dcl2inc.man \
-	macro-doc.txt; do \
-	${INSTALL_DATA} ${WRKSRC}/$$i ${PREFIX}/share/doc/ftnchek; done
+	cd ${WRKSRC} && ${INSTALL_DATA} FAQ INSTALL LICENSE README 	\
+		ftnchek.man dcl2inc.man macro-doc.txt 			\
+		${PREFIX}/share/doc/ftnchek
 	${INSTALL_DATA} ${WRKSRC}/html/* ${PREFIX}/share/doc/ftnchek/html
 
 .include "../../mk/bsd.pkg.mk"
