@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2001/10/14 16:23:52 tron Exp $
+# $NetBSD: Makefile,v 1.12 2001/12/30 03:39:28 hubertf Exp $
 
 DISTNAME=	xmahjongg
 PKGNAME=	xmahjongg-1.0
+PKGREVISION=	1
 CATEGORIES=	games
 # Most Usenet archive sites don't store it as a .tar.gz, but Slackware
 # and its mirrors do.
@@ -22,6 +23,7 @@ post-extract:
 	@${CP} ${WRKSRC}/xmahjongg.6 ${WRKSRC}/xmahjongg.man
 
 post-install:
+	${GZIP_CMD} ${X11PREFIX}/lib/X11/fonts/misc/xmahjongg.bdf
 	${X11BASE}/bin/mkfontdir ${X11PREFIX}/lib/X11/fonts/misc
 
 .include "../../mk/bsd.pkg.mk"
