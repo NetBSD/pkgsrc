@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.22 2004/10/03 00:13:18 tv Exp $
+# $NetBSD: Makefile.common,v 1.23 2005/02/05 16:56:40 jmmv Exp $
 #
 
 DISTNAME=		libgda-1.0.4
@@ -31,8 +31,8 @@ CONFIGURE_ARGS+=	--without-ldap
 PKGNAME=		${DISTNAME:S/libgda-/libgda-${LIBGDA_PROVIDER}-/}
 COMMENT+=		- ${LIBGDA_PROVIDER} provider
 
-BUILD_DIRS=		${WRKSRC}/providers/postgres
-INSTALL_DIRS=		${WRKSRC}/providers/postgres
+BUILD_DIRS=		${WRKSRC}/providers/${LIBGDA_PROVIDER}
+INSTALL_DIRS=		${WRKSRC}/providers/${LIBGDA_PROVIDER}
 
 SUBST_CLASSES+=		libs
 SUBST_STAGE.libs=	pre-configure
