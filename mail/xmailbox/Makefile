@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2003/03/02 20:19:43 jschauma Exp $
+# $NetBSD: Makefile,v 1.8 2003/04/27 11:04:32 cjep Exp $
 #
 
 DISTNAME=       xmailbox-2.5
-PKGREVISIOn=	1
+PKGREVISION=	1
 CATEGORIES=	mail x11
 MASTER_SITES=   ${MASTER_SITE_XCONTRIB:=applications/}
 
