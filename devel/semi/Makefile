@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/12/03 15:14:55 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2005/03/05 16:01:17 minskim Exp $
 
 DISTNAME=	semi-1.14.6
 PKGREVISION=	2
@@ -16,16 +16,17 @@ COMMENT=	Emacs lisp library to provide MIME feature
 
 DEPENDS+=	${PKGNAME_PREFIX}apel>=9.22:../../devel/apel # See ${WRKSRC}/README.en
 DEPENDS+=	${PKGNAME_PREFIX}flim>=1.14.2:../../devel/flim # See ${WRKSRC}/README.en
-BUILD_DEPENDS+=	${PKGNAME_PREFIX}w3-*:../../www/w3
-BUILD_DEPENDS+=	${PKGNAME_PREFIX}bbdb-*:../../misc/bbdb
 BUILD_DEPENDS+=	qkc-*:../../converters/qkc
 
 .include "../../mk/emacs.mk"
 
 .if ${EMACS_FLAVOR} == "emacs"
+BUILD_DEPENDS+=	${PKGNAME_PREFIX}w3-*:../../www/w3
+BUILD_DEPENDS+=	${PKGNAME_PREFIX}bbdb-*:../../misc/bbdb
 BUILD_TARGET=     elc
 INSTALL_TARGET= install
 .else   # ${EMACS_FLAVOR} == "xemacs"
+BUILD_DEPENDS+=	xemacs-packages-[0-9]*:../../editors/xemacs-packages
 BUILD_TARGET=     package
 INSTALL_TARGET= install-package
 MAKEFLAGS+=     PACKAGEDIR=${EMACS_LISPPREFIX:C|/lisp$||}
