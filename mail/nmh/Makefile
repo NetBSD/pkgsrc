@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.43 2001/09/27 23:18:21 jlam Exp $
+# $NetBSD: Makefile,v 1.44 2001/11/29 01:12:40 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/08/04 06:51:28 markm Exp
 #
 
 DISTNAME=		nmh-1.0.4
-PKGNAME=		${DISTNAME}nb1
+PKGREVISION=		1
 CATEGORIES=		mail
 MASTER_SITES=		ftp://ftp.mhost.com/pub/nmh/ \
 			ftp://ftp.gw.com/pub/unix/mail/mh/nmh/

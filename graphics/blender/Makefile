@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2001/11/27 03:49:44 hubertf Exp $
+# $NetBSD: Makefile,v 1.10 2001/11/29 01:12:34 hubertf Exp $
 #
 
-PKGNAME=	blender-2.11nb4
+PKGNAME=	blender-2.11
+PKGREVISION=	4
 CATEGORIES=	graphics
 MASTER_SITES=	ftp://www.blender.nl/pub/
 
