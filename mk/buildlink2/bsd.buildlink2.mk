@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.107 2004/02/01 12:04:31 grant Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.108 2004/02/02 10:26:42 jlam Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -465,8 +465,16 @@ BUILDLINK_FAKE_LA=							\
 # ALIASES.CC, ALIASES.LD, etc. are the other names by which each wrapper
 #	may be invoked.
 #
-_BLNK_WRAPPEES=		AS CC CXX CPP LD
-.if defined(USE_FORTRAN)
+_BLNK_WRAPPEES+=	AS
+.if !empty(USE_LANGUAGES:Mc)
+_BLNK_WRAPPEES+=	CC
+_BLNK_WRAPPEES+=	CPP
+.endif
+.if !empty(USE_LANGUAGES:Mc++)
+_BLNK_WRAPPEES+=	CXX
+.endif
+_BLNK_WRAPPEES+=	LD
+.if !empty(USE_LANGUAGES:Mfortran) || defined(USE_FORTRAN)
 _BLNK_WRAPPEES+=	FC
 .endif
 .if defined(USE_LIBTOOL)
