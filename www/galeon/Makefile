@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2001/10/02 16:52:06 taya Exp $
+# $NetBSD: Makefile,v 1.14 2001/10/06 16:48:24 taya Exp $
 
-DISTNAME=	galeon-0.12.2
+DISTNAME=	galeon-0.12.3
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=galeon/}
 
@@ -9,15 +9,7 @@ HOMEPAGE=	http://galeon.sourceforge.net/
 COMMENT=	GNOME web browser based on gecko (mozilla rendering engine)
 
 BUILD_DEPENDS+=	xml-i18n-tools>=0.8.1:../../textproc/xml-i18n-tools
-DEPENDS+=	mozilla>=0.9.2:../mozilla
-DEPENDS+=	gnome-libs>=1.2.1:../../x11/gnome-libs
-DEPENDS+=	libglade>=0.13:../../devel/libglade
-DEPENDS+=	gnome-vfs>=0.6:../../sysutils/gnome-vfs
-DEPENDS+=	GConf>=1.0.4:../../devel/GConf
-DEPENDS+=	oaf>=0.6.5:../../devel/oaf
-DEPENDS+=	libxml>=1.8.13:../../textproc/libxml
-DEPENDS+=	libiconv>=1.6.1:../../converters/libiconv
-DEPENDS+=	gdk-pixbuf-gnome>=0.10.1:../../graphics/gdk-pixbuf-gnome
+DEPENDS+=	mozilla>=0.9.4:../mozilla
 
 USE_X11BASE=	yes
 USE_GMAKE=	yes
@@ -28,7 +20,15 @@ CONFIGURE_ARGS+= --with-mozilla-includes=${PREFIX}/include/mozilla \
 		--disable-applet \
 		--sysconfdir=${PREFIX}/etc
 
-USE_LIBINTL=	yes
+.include	"../../x11/gnome-libs/buildlink.mk"
+.include	"../../devel/libglade/buildlink.mk"
+.include	"../../sysutils/gnome-vfs/buildlink.mk"
+.include	"../../devel/GConf/buildlink.mk"
+.include	"../../devel/oaf/buildlink.mk"
+.include	"../../textproc/libxml/buildlink.mk"
+.include	"../../converters/libiconv/buildlink.mk"
+.include	"../../graphics/gdk-pixbuf-gnome/buildlink.mk"
+.include	"../../devel/gettext-lib/buildlink.mk"
 
 MOZ_LIBDIR=     ${PREFIX}/lib/mozilla
 LDFLAGS+=       -Wl,-R${MOZ_LIBDIR}
