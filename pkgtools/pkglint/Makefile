@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2001/01/18 11:40:33 abs Exp $
+# $NetBSD: Makefile,v 1.74 2001/01/19 21:16:51 tron Exp $
 #
 
 DISTNAME=		pkglint-2.34
@@ -23,9 +23,11 @@ MAKE_ENV=	PKGSRCDIR=${PKGSRCDIR}
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "SunOS"
-NROFF=		gnroff
+# This doesn't create readable manual pages. "mandoc" should be added
+# to zoularis.
+NROFF=		nroff -man
 .else
-NROFF=		nroff
+NROFF=		nroff -mandoc
 .endif
 
 do-build:
@@ -40,7 +42,7 @@ do-build:
 		-e 's|@PORTSDIR@|${PKGSRCDIR}|g'	\
 		< ${FILESDIR}/${file}.1			\
 		> ${WRKSRC}/${file}.1
-	${NROFF} -mandoc ${WRKSRC}/${file}.1 >${WRKSRC}/${file}.0
+	${NROFF} ${WRKSRC}/${file}.1 >${WRKSRC}/${file}.0
 .endfor
 
 do-install:
