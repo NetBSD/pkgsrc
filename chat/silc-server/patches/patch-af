@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1.2.2 2004/07/15 19:38:29 agc Exp $
+
+--- silcd/route.h.orig	Mon Mar  3 17:56:04 2003
++++ silcd/route.h	Mon Jul 12 23:27:35 2004
+@@ -54,7 +54,7 @@
+ /* Returns route cache hash table entry index. This is IPv4 specific.
+    `port' argument may be zero (0) if it doesn't exist.  This has been
+    taken from Linux kernel's route cache code. */
+-extern inline
++static inline
+ SilcUInt32 silc_server_route_hash(unsigned int addr, 
+ 				    SilcUInt16 port)
+ {
