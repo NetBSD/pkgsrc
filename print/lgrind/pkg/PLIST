@@ -1,3 +1,4 @@
+@comment $NetBSD: PLIST,v 1.2 1999/07/09 14:25:28 agc Exp $
 bin/lgrind
 share/texmf/tex/latex/lgrind/lgrindef
 share/texmf/doc/latex/lgrind/lgrind.dvi
