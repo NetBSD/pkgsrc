@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2000/08/17 00:39:37 hubertf Exp $
+# $NetBSD: Makefile,v 1.9 2001/02/05 09:00:56 tron Exp $
 #
 
 DISTNAME=		latestCDK
@@ -11,7 +11,7 @@ EXTRACT_SUFX=		.tgz
 MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.vexus.ca/CDK.html
 
-BUILD_DEPENDS+=		${LOCALBASE}/bin/autoconf:../../devel/autoconf
+BUILD_DEPENDS+=		${LOCALBASE}/bin/${LOCALBASE}/bin/autoconf:../../devel/autoconf
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes

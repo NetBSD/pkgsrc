@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/01/15 23:01:34 hubertf Exp $
+# $NetBSD: Makefile,v 1.10 2001/02/05 09:00:58 tron Exp $
 #
 
 DISTNAME=	libggi-2.0b2.1
@@ -8,7 +8,7 @@ MASTER_SITES=	ftp://ftp.ggi-project.org/pub/ggi/ggi/current/
 MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://www.ggi-project.org/
 
-BUILD_DEPENDS+=	autoconf:../../devel/autoconf
+BUILD_DEPENDS+=	${LOCALBASE}/bin/autoconf:../../devel/autoconf
 DEPENDS+=	ncurses>=4.2:../../devel/ncurses
 DEPENDS+=	libgii-0.6:../libgii
 

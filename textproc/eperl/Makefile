@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2000/08/27 07:11:21 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2001/02/05 09:01:04 tron Exp $
 #
 
 DISTNAME=	eperl-2.2.14
@@ -8,7 +8,7 @@ MASTER_SITES=	http://www.engelschall.com/sw/eperl/distrib/
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.engelschall.com/sw/eperl/
 
-BUILD_DEPENDS+=	autoreconf:../../devel/autoconf
+BUILD_DEPENDS+=	${LOCALBASE}/bin/autoremake:../../devel/autoconf
 DEPENDS=	libperl-5.*:../../lang/libperl
 
 USE_PERL5=	# defined
@@ -18,7 +18,7 @@ GNU_CONFIGURE=	# defined
 ALL_TARGET=	all libeperl.a
 
 pre-configure:
-	cd ${WRKSRC} && autoreconf
+	cd ${WRKSRC} && ${LOCALBASE}/bin/autoremake
 
 post-build:
 	cd ${WRKSRC}/mod/Parse; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL

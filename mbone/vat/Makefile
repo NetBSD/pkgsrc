@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2000/12/03 06:30:05 mycroft Exp $
+# $NetBSD: Makefile,v 1.35 2001/02/05 09:01:00 tron Exp $
 #
 
 DISTNAME=		vatsrc-4.0b2
@@ -10,7 +10,7 @@ MASTER_SITES=		ftp://ftp.ee.lbl.gov/conferencing/vat/alpha-test/
 MAINTAINER=		mycroft@netbsd.org
 HOMEPAGE=		http://www-nrg.ee.lbl.gov/vat/
 
-BUILD_DEPENDS+=		${LOCALBASE}/bin/autoconf:../../devel/autoconf
+BUILD_DEPENDS+=		${LOCALBASE}/bin/${LOCALBASE}/bin/autoconf:../../devel/autoconf
 DEPENDS+=		tk-8.3.2:../../x11/tk
 DEPENDS+=		gsm-1.0.10:../../audio/gsm
 

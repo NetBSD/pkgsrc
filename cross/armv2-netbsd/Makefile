@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/07/13 21:39:11 bjh21 Exp $
+# $NetBSD: Makefile,v 1.2 2001/02/05 09:00:55 tron Exp $
 #
 
 DISTVERSION=		1.3.0.0
@@ -17,12 +17,12 @@ EGCS_FAKE_RUNTIME=	yes
 
 TARGET_ARCH=		armv2-netbsd
 
-BUILD_DEPENDS+=		autoconf:../../devel/autoconf
+BUILD_DEPENDS+=		${LOCALBASE}/bin/autoconf:../../devel/autoconf
 
 post-patch: egcs-autoconf
 
-egcs-autoconf:
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${WRKSRC}/gcc && autoconf
+egcs-${LOCALBASE}/bin/autoconf:
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${WRKSRC}/gcc && ${LOCALBASE}/bin/autoconf
 
 # FOllowing chunk ripped from cross.mk
 

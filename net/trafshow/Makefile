@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/08/11 12:18:58 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2001/02/05 09:01:02 tron Exp $
 # $FreeBSD: ports/net/trafshow/Makefile,v 1.14 2000/06/28 12:53:15 alex Exp $
 #
 
@@ -10,13 +10,13 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=     packages@netbsd.org
 HOMEPAGE=	http://soft.risp.ru/trafshow/index.shtml
 
-BUILD_DEPENDS+=	autoreconf:../../devel/autoconf
+BUILD_DEPENDS+=	${LOCALBASE}/bin/autoremake:../../devel/autoconf
 
 GNU_CONFIGURE=	yes
 ALL_TARGET=	trafshow
 
 pre-configure:
-	cd ${WRKSRC} && autoreconf
+	cd ${WRKSRC} && ${LOCALBASE}/bin/autoremake
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/trafshow ${PREFIX}/bin

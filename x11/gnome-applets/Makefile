@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2000/10/18 00:07:41 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2001/02/05 09:01:06 tron Exp $
 #
 
 DISTNAME=		gnome-applets-1.2.2
@@ -8,8 +8,8 @@ MASTER_SITES=		${MASTER_SITE_GNOME:=stable/sources/gnome-applets/}
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.gnome.org/
 
-BUILD_DEPENDS+=		autoreconf:../../devel/autoconf
-BUILD_DEPENDS+=		automake:../../devel/automake
+BUILD_DEPENDS+=		${LOCALBASE}/bin/autoremake:../../devel/autoconf
+BUILD_DEPENDS+=		${LOCALBASE}/bin/automake:../../devel/automake
 DEPENDS+=		gnome-core>=1.2.1:../../x11/gnome-core
 DEPENDS+=		libgtop>=1.0.0:../../devel/libgtop
 

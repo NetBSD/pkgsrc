@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2000/12/30 13:57:46 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2001/02/05 09:01:01 tron Exp $
 #
 
 DISTNAME=	gnut-0.4.12
@@ -8,8 +8,8 @@ MASTER_SITES=	http://www.mrob.com/gnut/tars/
 MAINTAINER=	deberg@netbsd.org
 HOMEPAGE=	http://www.mrob.com/gnut/
 
-#BUILD_DEPENDS+=	autoreconf:../../devel/autoconf
-#BUILD_DEPENDS+=	automake:../../devel/automake
+#BUILD_DEPENDS+=	${LOCALBASE}/bin/autoremake:../../devel/autoconf
+#BUILD_DEPENDS+=	${LOCALBASE}/bin/automake:../../devel/automake
 #DEPENDS+=	pth>=1.3.6:../../devel/pth
 
 DEPENDS+=	unproven-pthreads-0.*:../../devel/unproven-pthreads
@@ -30,7 +30,7 @@ LDFLAGS=	-Wl,-R${LOCALBASE}/pthreads/lib -L${LOCALBASE}/pthreads/lib
 .endif
 
 #post-patch:
-#	cd ${WRKSRC} && ${CP} aclocal.m4 acinclude.m4 && autoreconf
+#	cd ${WRKSRC} && ${CP} aclocal.m4 acinclude.m4 && ${LOCALBASE}/bin/autoremake
 
 GNUTDOCS=	TUTORIAL \
 		gnut-1.html \

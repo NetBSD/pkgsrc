@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/01/29 11:34:44 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2001/02/05 09:01:05 tron Exp $
 
 DISTNAME=	AfterStep-1.8.0
 PKGNAME=	afterstep-1.8.0
@@ -10,7 +10,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=		fb@enteract.com
 HOMEPAGE=		http://www.afterstep.org/
 
-BUILD_DEPENDS+=		autoconf:../../devel/autoconf
+BUILD_DEPENDS+=		${LOCALBASE}/bin/autoconf:../../devel/autoconf
 DEPENDS+=		jpeg-6b:../../graphics/jpeg
 DEPENDS+=		png>=1.0.6:../../graphics/png
 DEPENDS+=		rplay>=3.3.2:../../audio/rplay

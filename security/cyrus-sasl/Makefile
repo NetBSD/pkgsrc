@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/01/31 22:52:21 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2001/02/05 09:01:03 tron Exp $
 
 DISTNAME=		cyrus-sasl-1.5.24
 PKGNAME=		${DISTNAME}nb3
@@ -9,7 +9,7 @@ MASTER_SITES=		ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/ \
 MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://asg2.web.cmu.edu/sasl/
 
-BUILD_DEPENDS+=		automake:../../devel/automake
+BUILD_DEPENDS+=		${LOCALBASE}/bin/automake:../../devel/automake
 
 GNU_CONFIGURE=		# defined
 USE_SSL=		# defined
@@ -93,7 +93,7 @@ post-extract:
 	${CP} ${FILESDIR}/sasl-config.in ${WRKSRC}/plugins
 
 pre-configure:
-	cd ${WRKSRC} && autoheader && autoconf && automake --gnu
+	cd ${WRKSRC} && ${LOCALBASE}/bin/autoheader && ${LOCALBASE}/bin/autoconf && ${LOCALBASE}/bin/automake --gnu
 
 post-build:
 	${SED}	-e "s,@PREFIX@,${PREFIX},g" \

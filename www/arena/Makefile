@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2001/01/23 16:18:37 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.30 2001/02/05 09:01:05 tron Exp $
 # FreeBSD Id: Makefile,v 1.10 1998/05/04 20:22:31 jseger Exp
 #
 
@@ -10,7 +10,7 @@ MASTER_SITES=		ftp://ftp.yggdrasil.com/pub/dist/web/arena/
 MAINTAINER=		tv@netbsd.org
 HOMEPAGE=		http://www.yggdrasil.com/Products/Arena/
 
-BUILD_DEPENDS+=		autoconf:../../devel/autoconf
+BUILD_DEPENDS+=		${LOCALBASE}/bin/autoconf:../../devel/autoconf
 BUILD_DEPENDS+=		msgfmt:../../devel/gettext
 DEPENDS+=		jpeg-6b:../../graphics/jpeg
 DEPENDS+=		libwww>=5.2.8:../../www/libwww
@@ -40,7 +40,7 @@ pre-configure:
 	    ${LN} -sf $$c ${WRKSRC}/config.h; \
  	  fi; \
 	done
-	cd ${WRKSRC} && autoconf
+	cd ${WRKSRC} && ${LOCALBASE}/bin/autoconf
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/Arena/netbsd/arena ${PREFIX}/bin/

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/01/29 01:15:33 jtb Exp $
+# $NetBSD: Makefile,v 1.6 2001/02/05 09:00:59 tron Exp $
 
 DISTNAME=	plplot-5.0.1
 CATEGORIES=	graphics
@@ -10,7 +10,7 @@ HOMEPAGE=	http://www.plplot.org/
 DEPENDS+=	tcl>=8.3.0:../../lang/tcl
 DEPENDS+= 	tk>=8.3.0:../../x11/tk
 DEPENDS+=	m4-[0-9]*:../../devel/m4
-BUILD_DEPENDS+=	autoconf:../../devel/autoconf
+BUILD_DEPENDS+=	${LOCALBASE}/bin/autoconf:../../devel/autoconf
 BUILD_DEPENDS+=	perl:../../lang/perl5
 
 GNU_CONFIGURE=	YES
@@ -52,7 +52,7 @@ post-patch:
 	< $$f > $$f.tmp && ${MV} $$f.tmp $$f ; done
 
 pre-configure:
-	(cd ${WRKSRC}/cf && autoconf)
+	(cd ${WRKSRC}/cf && ${LOCALBASE}/bin/autoconf)
 	${MV} ${WRKSRC}/cf/configure ${WRKSRC}/configure
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/01/27 10:36:53 jtb Exp $
+# $NetBSD: Makefile,v 1.6 2001/02/05 09:00:58 tron Exp $
 
 DISTNAME=	GMT3.3.6
 PKGNAME=	GMT-3.3.6
@@ -17,7 +17,7 @@ MAINTAINER=	jtb@netbsd.org
 HOMEPAGE=	http://imina.soest.hawaii.edu/gmt/
 
 DEPENDS+=	netcdf>=3.0:../../devel/netcdf
-BUILD_DEPENDS+=	autoreconf:../../devel/autoconf
+BUILD_DEPENDS+=	${LOCALBASE}/bin/autoremake:../../devel/autoconf
 
 EXTRACT_SUFFIX= .tar.bz2
 WRKSRC=		${WRKDIR}/${DISTNAME}
@@ -41,7 +41,7 @@ post-extract:
 	${MV} -f ${WRKSRC}/www/gmt/doc/ps/ ${WRKSRC}
 
 pre-configure:
-	(cd ${WRKSRC} && autoreconf)
+	(cd ${WRKSRC} && ${LOCALBASE}/bin/autoremake)
 	for e in ${WRKSRC}/examples/*.bat			\
 	${WRKSRC}/examples/*/*.bat; do				\
 	${RM} -f $$e;						\

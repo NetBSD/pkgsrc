@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2000/12/27 11:54:32 hubertf Exp $
+# $NetBSD: Makefile,v 1.7 2001/02/05 09:00:55 tron Exp $
 #
 
 DISTNAME=	SDL-1.1.6
@@ -8,8 +8,8 @@ MASTER_SITES=	http://www.libsdl.org/release/
 MAINTAINER=	wiz@netbsd.org
 HOMEPAGE=	http://www.libsdl.org/
 
-BUILD_DEPENDS+= ${LOCALBASE}/bin/autoconf:../../devel/autoconf
-BUILD_DEPENDS+= ${LOCALBASE}/bin/automake:../../devel/automake
+BUILD_DEPENDS+= ${LOCALBASE}/bin/${LOCALBASE}/bin/autoconf:../../devel/autoconf
+BUILD_DEPENDS+= ${LOCALBASE}/bin/${LOCALBASE}/bin/automake:../../devel/automake
 DEPENDS+=	pth>=1.3.5:../../devel/pth
 #DEPENDS+=	unproven-pthreads>=0.16
 DEPENDS+=	esound>=0.2.18:../../audio/esound
@@ -29,7 +29,7 @@ pre-patch:
 	cd ${WRKSRC} && ${MKDIR} src/audio/netbsd
 
 pre-configure:
-	cd ${WRKSRC} && autoconf
+	cd ${WRKSRC} && ${LOCALBASE}/bin/autoconf
 
 post-configure:
 	cd ${WRKSRC}/src/audio && ${CP} *.[ch] netbsd/

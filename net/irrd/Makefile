@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2000/10/21 22:49:17 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2001/02/05 09:01:01 tron Exp $
 #
 
 DISTNAME=	irrd2.0a-Aug22-2000
@@ -10,7 +10,7 @@ MASTER_SITES=	ftp://ftp.merit.edu/radb/irrd/source/ \
 MAINTAINER=	kim@tac.nyc.ny.us
 HOMEPAGE=	http://www.irrd.net/
 
-BUILD_DEPENDS+=	autoreconf:../../devel/autoconf
+BUILD_DEPENDS+=	${LOCALBASE}/bin/autoremake:../../devel/autoconf
 BUILD_DEPENDS+=	bison:../../devel/bison
 DEPENDS+=	gdbm-*:../../databases/gdbm
 DEPENDS+=	pgp5-*:../../security/pgp5
@@ -30,7 +30,7 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 CFLAGS+=	-g
 
 pre-configure:
-	@(cd ${WRKSRC} && autoreconf)
+	@(cd ${WRKSRC} && ${LOCALBASE}/bin/autoremake)
 
 IRRD_CACHER=	irrdcacher ripe2rpsl update_source
 

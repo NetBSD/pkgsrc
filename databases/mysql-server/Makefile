@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2001/01/10 06:03:13 briggs Exp $
+# $NetBSD: Makefile,v 1.16 2001/02/05 09:00:55 tron Exp $
 #
 
 DISTNAME=		mysql-3.22.32
@@ -10,7 +10,7 @@ MASTER_SITES=		ftp://ftp.mysql.com/MySQL-3.22/ \
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.mysql.com/
 
-BUILD_DEPENDS=		autoconf:../../devel/autoconf
+BUILD_DEPENDS=		${LOCALBASE}/bin/autoconf:../../devel/autoconf
 DEPENDS=		${DISTNAME:S/-/-client-/}:../../databases/mysql-client
 
 RESTRICTED=		"Restrictive license."
@@ -46,7 +46,7 @@ post-extract:
 	done
 
 pre-configure:
-	@cd ${WRKSRC}/mit-pthreads/config && autoconf
+	@cd ${WRKSRC}/mit-pthreads/config && ${LOCALBASE}/bin/autoconf
 
 post-configure:
 	@cd ${WRKSRC} && ${CP} config.h include/my_config.h

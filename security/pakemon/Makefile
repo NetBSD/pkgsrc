@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/01/09 06:32:42 itojun Exp $
+# $NetBSD: Makefile,v 1.2 2001/02/05 09:01:03 tron Exp $
 
 DISTNAME=	pakemon-0.3.1
 CATEGORIES=	security
@@ -12,7 +12,7 @@ DEPENDS+=	libnet-*:../../devel/libnet
 # only at compile-time.
 #
 BUILD_DEPENDS+=	${LOCALBASE}/lib/libnids.a:../../net/libnids
-BUILD_DEPENDS+=	autoreconf:../../devel/autoconf
+BUILD_DEPENDS+=	${LOCALBASE}/bin/autoremake:../../devel/autoconf
 
 GNU_CONFIGURE=	yes
 

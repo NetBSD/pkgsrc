@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2000/09/13 13:51:29 fredb Exp $
+# $NetBSD: Makefile,v 1.7 2001/02/05 09:00:55 tron Exp $
 #
 
 DISTVERSION=		2.0.7.1
@@ -9,7 +9,7 @@ MASTER_SITES=		ftp://ftp.cdrom.com/pub/linux/redhat/redhat-5.1/i386/RedHat/RPMS/
 MAINTAINER=		packages@netbsd.org
 
 BUILD_DEPENDS+=		rpm2cpio:../../misc/rpm
-BUILD_DEPENDS+=		autoheader:../../devel/autoconf
+BUILD_DEPENDS+=		${LOCALBASE}/bin/autoheader:../../devel/autoconf
 
 CHECK_SHLIBS=		no
 WRKSRC=			${WRKDIR}

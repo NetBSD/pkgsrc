@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2000/11/27 12:23:48 tron Exp $
+# $NetBSD: Makefile,v 1.11 2001/02/05 09:01:04 tron Exp $
 
 DISTNAME=		gtop-1.0.9
 CATEGORIES=		sysutils gnome
@@ -6,8 +6,8 @@ MASTER_SITES=		${MASTER_SITE_GNOME:=stable/sources/gtop/}
 
 MAINTAINER=		tron@netbsd.org
 
-BUILD_DEPENDS+=		autoreconf:../../devel/autoconf
-BUILD_DEPENDS+=		automake:../../devel/automake
+BUILD_DEPENDS+=		${LOCALBASE}/bin/autoremake:../../devel/autoconf
+BUILD_DEPENDS+=		${LOCALBASE}/bin/automake:../../devel/automake
 BUILD_DEPENDS+=		msgfmt:../../devel/gettext
 BUILD_DEPENDS+=		gettextize:../../devel/gettext
 DEPENDS+=		gnome-core>=1.2.0:../../x11/gnome-core
