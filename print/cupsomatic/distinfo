@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:43:31 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/05/08 15:54:48 agc Exp $
 
-MD5 (cupsomatic-1.3/cupsomatic) = fd56c3c9fc37e1b39400567eecf0f6de
+SHA1 (cupsomatic-1.3/cupsomatic) = 11732a57210ab22245e7e5e8361664d5fc1b33ca
+Size (cupsomatic-1.3/cupsomatic) = 23981 bytes
 SHA1 (patch-aa) = c78c13fe49213edeb75f344c564d20bbf5c2c465
