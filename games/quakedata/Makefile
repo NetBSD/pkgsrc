@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/08/18 22:46:34 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 2000/10/05 04:25:59 jlam Exp $
 # Based on FreeBSD ports/games/quakeserver
 # FreeBSD: ports/games/quakeserver/Makefile,v 1.20 1999/08/31 06:44:23 mharo Exp
 #
@@ -16,23 +16,21 @@ HOMEPAGE=	http://www.idsoftware.com/
 BUILD_DEPENDS=	unzip:../../archivers/unzip
 BUILD_DEPENDS+=	lha:../../archivers/lha
 
-LICENSE+=	shareware
-RESTRICTED=	"This software is shareware"
+LICENSE+=		shareware
+RESTRICTED=		"This software is shareware"
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
+EXTRACT_CMD=	unzip -q -o ${DOWNLOADED_DISTFILE} -d ${WRKDIR} resource.*
 NO_WRKSUBDIR=	YES
 NO_BUILD=	YES
 
-do-extract:
-		${RM} -rf ${WRKDIR}
-		${MKDIR} ${WRKDIR}
-		unzip -q -o ${DISTDIR}/quake106.zip -d ${WRKDIR} resource.*
-		${CAT} ${WRKDIR}/resource.dat ${WRKDIR}/resource.1 > ${WRKDIR}/resource.exe
-		cd ${WRKDIR}; lha xfq resource.exe id1/pak0.pak
+post-extract:
+	cd ${WRKSRC}; ${CAT} resource.dat resource.1 > resource.exe
+	cd ${WRKDIR}; lha xfq resource.exe id1/pak0.pak
 
 do-install:
-		${MKDIR} ${PREFIX}/share/quake/id1
-		${INSTALL_DATA} ${WRKSRC}/id1/pak0.pak ${PREFIX}/share/quake/id1
+	${INSTALL_DATA_DIR} ${PREFIX}/share/quake/id1
+	${INSTALL_DATA} ${WRKSRC}/id1/pak0.pak ${PREFIX}/share/quake/id1
 
 .include "../../mk/bsd.pkg.mk"
