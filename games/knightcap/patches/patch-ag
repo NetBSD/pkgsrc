@@ -1,0 +1,22 @@
+$NetBSD: patch-ag,v 1.1.1.1 2000/10/15 08:38:23 jlam Exp $
+
+--- td.c.orig	Sun May 17 19:09:21 1998
++++ td.c
+@@ -115,7 +115,7 @@
+ 	
+ #if LARGE_ETYPE
+ 	if (round >= 0)
+-		sprintf(fn, "/usr/local/chess/large_coeffs%d.h", round);
++		sprintf(fn, "large_coeffs%d.h", round);
+ 	else 
+ 		sprintf(fn,"large_coeffs.h");
+ 	large = (FILE *)fopen(fn, "w");
+@@ -123,7 +123,7 @@
+ 	small = (FILE *)fopen(fn, "w");
+ #else
+ 	if (round >= 0)
+-		sprintf(fn, "/usr/local/chess/small_coeffs%d.h", round);
++		sprintf(fn, "small_coeffs%d.h", round);
+ 	else 
+ 		sprintf(fn, "small_coeffs.h");
+ 	large = (FILE *)fopen(fn, "w");
