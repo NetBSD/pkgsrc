@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/01/22 08:38:29 grant Exp $
+# $NetBSD: Makefile,v 1.5 2004/04/19 05:34:58 snj Exp $
 #
 
 DISTNAME=	chkfontpath-1.9.7
@@ -13,7 +13,7 @@ COMMENT=	Command line tool to manage X server's font path
 BUILD_DEPENDS+=	rpm2cpio>=1.1:../../converters/rpm2cpio
 
 MAKE_ENV+=	VERSION=${PKGVERSION}
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=	yes
 USE_GNU_TOOLS+=	make
 
 # Might as well make this a general scheme for .src.rpm files... - HF
@@ -27,5 +27,5 @@ do-install:
 		${INSTALL_PROGRAM} ${WRKSRC}/chkfontpath ${PREFIX}/bin
 		${INSTALL_MAN} ${WRKSRC}/man/en/chkfontpath.8 ${PREFIX}/man/man8
 
-.include "../../devel/popt/buildlink2.mk"
+.include "../../devel/popt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
