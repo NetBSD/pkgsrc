@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1533 2004/11/11 22:34:12 tv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1534 2004/11/12 02:05:20 tv Exp $
 #
 # This file is in the public domain.
 #
@@ -401,10 +401,8 @@ _SHLIBTOOL?=		${PKG_SHLIBTOOL}
 LIBTOOL?=		${PKG_LIBTOOL}
 SHLIBTOOL?=		${PKG_SHLIBTOOL}
 .if defined(USE_LIBTOOL)
-.if defined(_OPSYS_LIBTOOL_REQD)
-BUILD_DEPENDS+=		libtool-base>=${_OPSYS_LIBTOOL_REQD}:../../devel/libtool-base
-.endif
-BUILD_DEPENDS+=		libtool-base>=1.5.10nb1:../../devel/libtool-base
+LIBTOOL_REQD?=		1.5.10nb1
+BUILD_DEPENDS+=		libtool-base>=${_OPSYS_LIBTOOL_REQD:U${LIBTOOL_REQD}}:../../devel/libtool-base
 CONFIGURE_ENV+=		LIBTOOL="${LIBTOOL} ${LIBTOOL_FLAGS}"
 MAKE_ENV+=		LIBTOOL="${LIBTOOL} ${LIBTOOL_FLAGS}"
 LIBTOOL_OVERRIDE?=	libtool */libtool */*/libtool
