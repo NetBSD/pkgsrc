@@ -1,0 +1,36 @@
+$NetBSD: patch-ab,v 1.6 2000/08/06 01:11:38 fredb Exp $
+
+--- configure.in.orig	Fri Aug  4 05:21:20 2000
++++ configure.in	Fri Aug  4 13:56:59 2000
+@@ -307,7 +307,10 @@
+     AC_MSG_RESULT(yes)
+     AC_DEFINE(HT_POSIX_REGEX)
+     if test "x$withval" = "xyes"; then
+-      AC_CHECK_LIB(rx, regexec, [ LIBS="-lrx $LIBS" ] )
++      AC_TRY_LINK([],
++	          [ regexec(); ],
++		  [],
++		  [ AC_CHECK_LIB(rx, regexec, [ LIBS="-lrx $LIBS" ] ) ] )
+     else
+       AC_ADDLIB($withval)
+       AC_TRY_LINK([],
+@@ -535,13 +538,17 @@
+ dnl Checks for libwww and OpenSSL:
+ AC_MSG_CHECKING(whether we can find OpenSSL)
+ dnl find the ssl library dir (empirical)
+-if test -d '/usr/local/ssl/lib'; then
++if test -f "${prefix}/lib/libssl.a" -a -f "${prefix}/lib/libcrypto.a"; then
++  ssllib="-L${prefix}/lib -lssl -lcrypto"
++elif test -d '/usr/local/ssl/lib'; then
+   ssllib="-L/usr/local/ssl/lib -lssl -lcrypto"
+ else
+   ssllib="-L/usr/lib -lssl -lcrypto"
+ fi
+ dnl find the ssl include dir (empirical)
+-if test -d '/usr/local/ssl/include'; then
++if test -d "${prefix}/include/openssl"; then
++  sslinc="-I${prefix}/include -I${prefix}/include/openssl"
++elif test -d '/usr/local/ssl/include'; then
+   sslinc="-I/usr/local/ssl/include"
+ elif test -d '/usr/local/openssl/include'; then
+   sslinc="-I/usr/local/openssl/include"
