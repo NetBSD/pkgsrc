@@ -1,7 +1,8 @@
 #!@BUILDLINK_SHELL@
 #
-# $NetBSD: fake-la,v 1.4 2003/01/06 04:30:12 jlam Exp $
+# $NetBSD: fake-la,v 1.5 2003/06/19 17:20:42 jschauma Exp $
 
+AWK="@AWK@"
 BASENAME="@BASENAME@"
 CC="@CC@"
 CP="@CP@"
@@ -21,8 +22,22 @@ realdir=`${DIRNAME} $reallib`
 libname=`${BASENAME} $reallib`
 tmpdir=${BUILDLINK_DIR}/.tmp
 
-if ${TEST} ! -f $tmpdir/inst/$libbase.la; then
-	case $libname in
+case $libname in
+	*.so)
+		# no version in name which happens e.g. for libpthread.so on Linux
+		# Suse 8.1, Slackware 8.1 and others, but there, the library is a link
+		# to a library with a version in it
+		libbase=`${ECHO} $libname | ${SED} -e "s/\.so$//"`
+		if ${TEST} -h $reallib; then
+			liblinked=`ls -l $reallib | ${AWK} '{print $NF}'`
+			version=`${ECHO} $liblinked | ${SED} -e "s/.*\.so\.//;s/\./:/g"`
+		else
+			# bail out
+			${ECHO} "could not determine version of $reallib"
+			exit 1
+		fi
+		;;
+
 	*.so.[0-9]*)
 		libbase=`${ECHO} $libname | ${SED} -e "s/\.so\.[0-9.]*$//"`
 		version=`${ECHO} $libname | ${SED} -e "s/.*\.so\.//;s/\./:/g"`
@@ -32,7 +47,9 @@ if ${TEST} ! -f $tmpdir/inst/$libbase.la; then
 		libbase=`${ECHO} $libname | ${SED} -e "s/\.[0-9.]*\.dylib$//"`
 		version=`${ECHO} $libname | ${SED} -e "s/^[^.]*\.\([0-9]*\.[0-9]*\)\.dylib/\1/;s/\./:/g"`
 		;;
-	esac
+esac
+
+if ${TEST} ! -f $tmpdir/inst/$libbase.la; then
 	${MKDIR} $tmpdir/inst
 	cd $tmpdir
 	${ECHO} "static int i;" > nonempty.c	# create a nonempty input file
