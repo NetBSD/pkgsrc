@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7832 2004/11/12 06:26:54 erh Exp $
+$NetBSD: CHANGES,v 1.7833 2004/11/12 06:42:42 erh Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5243,3 +5243,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Added p5-XML-Filter-DetectWS-0.01 [erh 2004-11-12]
 	Added p5-XML-Filter-Reindent-0.03 [erh 2004-11-12]
 	Added p5-XML-Filter-SAXT-0.01 [erh 2004-11-12]
+	Added p5-XML-Encoding-1.01 [erh 2004-11-12]
+	Added p5-XML-UM-0.01 [erh 2004-11-12]
