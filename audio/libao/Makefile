@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2002/08/25 18:38:09 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2002/10/04 08:14:14 jlam Exp $
 
 DISTNAME=	libao-0.8.3
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://www.vorbis.com/files/1.0/unix/
 
