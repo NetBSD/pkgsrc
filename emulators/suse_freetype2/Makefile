@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/04/28 23:17:04 jdolecek Exp $
+# $NetBSD: Makefile,v 1.2 2003/05/30 15:40:47 taca Exp $
 
 DISTNAME=		freetype2
 PKGNAME=		suse_${DISTNAME}-${SUSE_VERSION}
 CATEGORIES=		emulators
-MASTER_SITES=		${MASTER_SITE_SUSE:=gra1/}
-EXTRACT_SUFX=		.rpm
+PKGREVISION=		1
+MASTER_SITES=		${MASTER_SITE_SUSE:=gra1/} \
+                        ${MASTER_SITE_SUSE_UPD:=gra1/}
+DISTFILES=		${RPMFILES}
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.suse.com/
@@ -19,7 +21,7 @@ NO_BUILD=		YES
 EXTRACT_ONLY=		# empty
 PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
 
-RPMFILES=		${DISTNAME}${EXTRACT_SUFX}
+RPMFILES+=      	freetype2-2.0.4-52.${SUSE_ARCH}.rpm
 
 .include "../suse_linux/Makefile.common"
 .include "../../mk/bsd.pkg.mk"
