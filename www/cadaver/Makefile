@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/05/22 15:22:20 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2001/05/22 16:09:14 jlam Exp $
 
 DISTNAME=		cadaver-0.17.0
 CATEGORIES=		www
@@ -24,13 +24,11 @@ CONFIGURE_ARGS+=	--enable-netrc
 .include "../../devel/libgetopt/Makefile.getopt"
 .include "../../devel/readline/Makefile.readline"
 
-CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
 CONFIGURE_ENV+=		LIBS="${LIBS}"
 CONFIGURE_ENV+=		ac_cv_lib_curses_tputs=no
 CONFIGURE_ENV+=		ac_cv_lib_ncurses_tputs=no
 
-CPPFLAGS+=		-I${WRKINCDIR}
-CFLAGS+=		-I${WRKINCDIR}
+CFLAGS+=		-I${WRKINCDIR} ${CPPFLAGS}
 LDFLAGS+=		-L${WRKLIBDIR}
 LIBS+=			-ltermcap
 
