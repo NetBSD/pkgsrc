@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1 2003/09/23 13:29:26 wiz Exp $
+
+--- Makefile.orig	Sun Sep 12 16:23:32 1999
++++ Makefile	Tue Sep 23 10:04:24 2003
+@@ -18,8 +18,8 @@
+ 	chmod a+rx $@
+ 
+ install: ${CMD}
+-	install -c -m 755 ${CMD} ${PREFIX}/${BIN}/${CMD}
+-	install -c -m 444 ${CMD}.man ${PREFIX}/man/man${MAN}/${CMD}.${MAN}
++	${BSD_INSTALL_SCRIPT} ${CMD} ${PREFIX}/${BIN}/${CMD}
++	${BSD_INSTALL_MAN} ${CMD}.man ${PREFIX}/man/man${MAN}/${CMD}.${MAN}
+ 
+ clean:
+ 	rm -f ${CMD}
