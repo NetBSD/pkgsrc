@@ -1,11 +1,10 @@
-@comment $NetBSD: PLIST,v 1.5 2004/09/22 08:09:50 jlam Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/12/31 08:14:35 martti Exp $
 bin/cancel
 bin/lp
 bin/lpq
 bin/lpr
 bin/lprm
 bin/lpstat
-etc/rc.d/LPRng
 lib/liblpr.la
 libexec/LPRng/lpbanner
 libexec/LPRng/lpf
