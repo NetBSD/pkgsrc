@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 1999/12/24 22:30:02 pooka Exp $
+# $NetBSD: Makefile,v 1.9 1999/12/29 16:15:47 pooka Exp $
 #
 
 DISTNAME=		nethack-3.3.0
@@ -28,7 +28,7 @@ ALLFILES=		${DISTFILES}	# don't checksum shared patches
 
 MD5_FILE=		${.CURDIR}/../nethack-lib/files/md5
 
-IGNORE=			"requires qt2 which is unavailable in pkgsrc"
+BROKEN=			requires qt 2.0 or greater
 
 #post-extract:
 #	#@${LN} -sf ../../Qt ${WRKSRC}/win/Qt
