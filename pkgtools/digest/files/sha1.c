@@ -1,4 +1,4 @@
-/*	$NetBSD: sha1.c,v 1.4 2001/07/09 21:43:21 hubertf Exp $	*/
+/*	$NetBSD: sha1.c,v 1.5 2002/12/21 04:06:15 schmonz Exp $	*/
 /*	$OpenBSD: sha1.c,v 1.9 1997/07/23 21:12:32 kstailey Exp $	*/
 
 /*
@@ -15,7 +15,11 @@
  *   34AA973C D4C4DAA4 F61EEB2B DBAD2731 6534016F
  */
 
-#include <sys/cdefs.h>		/* hfpkg */
+#ifdef HAVE_CONFIG_H
+#include "config.h"
+#endif
+
+#include <digest-types.h>
 
 #define SHA1HANDSOFF		/* Copies data before messing with it. */
 
@@ -25,7 +29,6 @@
 #define _DIAGASSERT(x)	(void)0
 #else
 /* #include "namespace.h" */
-#include <sys/types.h>
 #include <assert.h>
 #include <string.h>
 #endif
