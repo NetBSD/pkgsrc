@@ -1,7 +1,7 @@
-$NetBSD: patch-aj,v 1.2 2000/05/30 19:23:48 drochner Exp $
+$NetBSD: patch-aj,v 1.3 2000/06/02 12:10:09 drochner Exp $
 
 --- gnome-config.in.orig	Tue Sep  7 21:25:26 1999
-+++ gnome-config.in	Tue May 30 17:56:22 2000
++++ gnome-config.in	Thu Jun  1 11:06:04 2000
 @@ -40,6 +40,8 @@
      module_dirs="$extra:$module_dirs"
  done
@@ -11,6 +11,20 @@ $NetBSD: patch-aj,v 1.2 2000/05/30 19:23:48 drochner Exp $
  usage()
  {
      exit_code=$1
+@@ -169,11 +171,11 @@
+ 	the_flags="$the_flags `gtk-config --cflags`"
+ 	;;
+     gnome)
+-       	the_libs="$the_libs @GNOME_LIBDIR@ @GNOME_LIBS@"
++       	the_libs="$the_libs @GNOME_LIBDIR@ @GNOME_LIBS@ -lintl"
+   	the_flags="$the_flags @GNOME_INCLUDEDIR@ @GTK_CFLAGS@"
+ 	;;
+     gnomeui)
+-	the_libs="$the_libs @GNOME_LIBDIR@ @GNOMEUI_LIBS@"
++	the_libs="$the_libs @GNOME_LIBDIR@ @GNOMEUI_LIBS@ -lintl"
+ 	the_flags="$the_flags @GNOME_INCLUDEDIR@ @GTK_CFLAGS@"
+ 	;;
+     gtkxmhtml)
 @@ -239,7 +241,7 @@
      case "$i" in
      # a library, save it for later, in reverse order
