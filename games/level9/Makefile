@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/01/20 12:15:41 agc Exp $
-#
+# $NetBSD: Makefile,v 1.7 2004/03/10 03:31:36 snj Exp $
 
 DISTNAME=		Level9_3.0_Source
 PKGNAME=		level9-3.0
@@ -13,7 +12,7 @@ HOMEPAGE=		http://www.ifarchive.org/if-archive/level9/interpreters/level9/
 COMMENT=		Curses port of the Level 9 text adventure interpreter
 
 WRKSRC=			${WRKDIR}/Unix
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 # uses halfkey (present since 1.6M)
 INCOMPAT_CURSES+=	NetBSD-1.4[Y-Z]* NetBSD-1.5* NetBSD-1.6-* NetBSD-1.6.*
 INCOMPAT_CURSES+=	NetBSD-1.6[A-L]*
@@ -26,5 +25,5 @@ do-install:
 	${INSTALL_DATA} ${WRKDIR}/level9.txt ${PREFIX}/share/doc/level9
 	${INSTALL_PROGRAM} ${WRKSRC}/level9 ${PREFIX}/bin
 
-.include "../../devel/ncurses/buildlink2.mk"
+.include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
