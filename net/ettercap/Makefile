@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2004/12/04 23:09:06 jlam Exp $
+# $NetBSD: Makefile,v 1.34 2004/12/15 16:17:59 jlam Exp $
 
 DISTNAME=		ettercap-0.6.b
 PKGREVISION=		2
@@ -18,10 +18,10 @@ CONFIGURE_ARGS+=	--enable-plugins \
 USE_BUILDLINK3=		yes
 
 USE_NCURSES=		# putwin()
+USE_OLD_DES_API=	yes
 PTHREAD_OPTS+=		require
 PTHREAD_AUTO_VARS=	yes
 MAKE_ENV+=		MACHINE_ARCH=${MACHINE_ARCH}
-LIBS+=			-ldes
 
 BUILD_DIRS=		${WRKSRC} ${WRKSRC}/plugins
 INSTALL_DIRS=		${WRKSRC} ${WRKSRC}/plugins
