@@ -1,7 +1,7 @@
 #!/bin/sh
-# $NetBSD: cdpack.sh,v 1.7 2002/09/18 02:42:20 dmcmahill Exp $
+# $NetBSD: cdpack.sh,v 1.8 2003/02/05 15:01:57 dmcmahill Exp $
 #
-# Copyright (c) 2001, 2002 Dan McMahill, All rights reserved.
+# Copyright (c) 2001, 2002, 2003 Dan McMahill, All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions
@@ -57,10 +57,13 @@ mkdir $TMP
 touch $exclude
 
 usage(){
+	echo " "
 	echo "$prog - generates ISO9660 images for a multi-cd binary package collection"
-	echo "Usage:      $prog [-ac | -ec] [-af | -ef] [-l logfile] [-dnRvV] [-x dir] [-X dir] packages_directory cdimage_directory"
+	echo "Usage:      $prog [-ac | -ec] [-af | -ef] [-dvd] [-h|--help] [-l logfile] [-dnRvV] "
+	echo "            [-x dir] [-X dir] packages_directory cdimage_directory"
 	echo "Example:    $prog /usr/pkgsrc/packages/netbsd-1.5/alpha/All  /images/netbsd-1.5/alpha"
 	echo "Please refer to the manual page for complete documentation."
+	echo " "
 }
 
 clean_and_exit(){
@@ -97,6 +100,7 @@ mkisofslog=/dev/null
 
 ALLOW_NO_BIN_ON_CDROM=no
 ALLOW_NO_BIN_ON_FTP=yes
+DVD=no
 
 while
     test -n "$1"
@@ -118,6 +122,11 @@ do
 	    shift
 	    ;;
 
+	# make a DVD sized image
+	-dvd) DVD=yes
+	    shift
+	    ;;
+
 	# exclude NO_BIN_ON_CDROM packages
 	-ec) ALLOW_NO_BIN_ON_CDROM=no
 	    shift
@@ -128,6 +137,10 @@ do
 	    shift
 	    ;;
 
+	# help
+	-h|--help) usage
+	    exit 0
+	    ;;
 	# log file for the output of mkisofs -v -v
 	-l) mkisofslog=$2
 	    shift 2
@@ -193,17 +206,25 @@ fi
 packages=$1
 cddir=$2
 
-if [ $VERBOSE = "yes" ]; then
+if [ "$VERBOSE" = "yes" ]; then
     echo "Verbose output is on"
+
     if [ "$ALLOW_NO_BIN_ON_CDROM" = "yes" ]; then
 	echo "NO_BIN_ON_CDROM Packages will be included in the images"
     else
 	echo "NO_BIN_ON_CDROM Packages will be excluded in the images"
     fi
+
     if [ "$ALLOW_NO_BIN_ON_FTP" = "yes" ]; then
 	echo "NO_BIN_ON_FTP Packages will be included in the images"
     else
 	echo "NO_BIN_ON_FTP Packages will be excluded in the images"
+    fi
+
+    if [ "$DVD" = "yes" ]; then
+	echo "A DVD sized image will be created"
+    else
+	echo "A CD-ROM sized image will be created"
     fi
 fi
 
@@ -378,9 +399,9 @@ tsort $deptree > $order
 #    cdlist   = ARGV[6];
 #
 if [ "$VERBOSE" = "yes" ]; then
-    echo "awk -f @prefix@/libexec/cdgen.awk $packages $cddir $deptree $exclude $order $cdlist dup=$DUP verbose=$VERBOSE $XTRA_SIZE $OTHER_SIZE"
+    echo "awk -f @prefix@/libexec/cdgen.awk $packages $cddir $deptree $exclude $order $cdlist dup=$DUP verbose=$VERBOSE dvd=$DVD $XTRA_SIZE $OTHER_SIZE"
 fi
-awk -f @prefix@/libexec/cdgen.awk $packages $cddir $deptree $exclude $order $cdlist dup=$DUP verbose=$VERBOSE $XTRA_SIZE $OTHER_SIZE
+awk -f @prefix@/libexec/cdgen.awk $packages $cddir $deptree $exclude $order $cdlist dup=$DUP verbose=$VERBOSE dvd=$DVD $XTRA_SIZE $OTHER_SIZE
 
 if [ $? -ne 0 ]; then
     echo "$prog:  ERROR:  cdgen.awk has failed"
@@ -390,8 +411,14 @@ fi
 #
 # Generate a README
 #
+if [ "$DVD" = "yes" ]; then
+    what="DVD"
+else
+    what="CD-ROM"
+fi
+
 cat <<EOF > $readme
-This CD-ROM collection contains NetBSD binary packages.  For
+This $what collection contains NetBSD binary packages.  For
 information on the NetBSD package collection, please visit
 http://www.netbsd.org/Documentation/software/packages.html.
 
@@ -402,19 +429,19 @@ EOF
 
 if [ "$DUP" = "yes" ]; then
 cat <<EOF >> $readme
-The packages on this CD have been arranged to eliminate all
-inter-CD dependencies.  In other words, each package on this
-CD should have all of its dependencies (if they are allowed
-to be provided on CD) present on the same CD.
+The packages on this $what have been arranged to eliminate all
+inter-$what dependencies.  In other words, each package on this
+$what should have all of its dependencies (if they are allowed
+to be provided on $what) present on the same $what.
 
 EOF
 else
 
 cat <<EOF >> $readme
-The packages on this CD have been arranged such that for a
-given package on CD number n, all of the other required
-packages are on CD number 1 through n.  This allows the 
-user to make a single pass through the CD set when installing
+The packages on this $what have been arranged such that for a
+given package on $what number n, all of the other required
+packages are on $what number 1 through n.  This allows the 
+user to make a single pass through the $what set when installing
 a collection of packages.
 
 EOF
@@ -431,10 +458,10 @@ this cd collection.
 EOF
 else
 cat <<EOF >> $readme
-This CD collection includes packaged with NO_BIN_ON_CDROM set.
-Please do not violate license agreements by selling this CD
+This $what collection includes packaged with NO_BIN_ON_CDROM set.
+Please do not violate license agreements by selling this $what
 without verifying that you are allowed to.  A list of these
-packages may be found in the ".restricted" file on this CD.
+packages may be found in the ".restricted" file on this $what.
 EOF
 fi
 
@@ -449,11 +476,11 @@ this cd collection.
 EOF
 else
 cat <<EOF >> $readme
-This CD collection includes packages with NO_BIN_ON_FTP set.
+This $what collection includes packages with NO_BIN_ON_FTP set.
 Please do not violate license agreements by placing this 
 image on a public FTP site without verifying that you are
 allowed to.  A list of these packages may be found in the
- ".restricted" file on this CD.
+ ".restricted" file on this $what.
 EOF
 fi
 
@@ -462,7 +489,7 @@ fi
 #
 cat <<EOF >> $readme
 
-This README, along with the CD layout was created using the
+This README, along with the $what layout was created using the
 cdpack program which is available as part of the NetBSD
 packages collection at 
 ftp://ftp.netbsd.org/pub/NetBSD/packages/pkgsrc/pkgtools/cdpack
@@ -482,7 +509,7 @@ do
     # cdgen shouldn't have included any restricted pkgs, but
     # make 100% sure now!
     #
-    if [ $VERBOSE = "yes" ]; then
+    if [ "$VERBOSE" = "yes" ]; then
 	echo "Removing any leftover restricted packages from $cdname"
     fi
     for pkg in `cat $exclude`
@@ -490,7 +517,7 @@ do
 	rm -f ${cddir}/${cdname}/packages/*/$pkg
     done
 
-    if [ $VERBOSE = "yes" ]; then
+    if [ "$VERBOSE" = "yes" ]; then
 	echo "Creating index for $cdname"
     fi
     for pkg in ${cddir}/${cdname}/packages/All/*
@@ -510,16 +537,25 @@ sort ${indexf}.tmp > $indexf
 # specified with the -x flag.
 #
 
-if [ $VERBOSE = "yes" ]; then
+if [ "$VERBOSE" = "yes" ]; then
     echo "Copying .index and .restricted files to the image directories."
 fi
 
 ncds=0
 for cdname in `cat $cdlist`
 do
-    (cd ${cddir}/${cdname} && cp $indexf .index ; cp $restricted .restricted)
+    if [ -f $indexf ]; then
+	(cd ${cddir}/${cdname} && cp $indexf .index )
+    fi
 
-    if [ $ADD_README = "yes" ]; then
+    if [ -f $indexf ]; then
+	(cd ${cddir}/${cdname} &&  cp $restricted .restricted )
+    fi
+
+    if [ "$ADD_README" = "yes" ]; then
+	if [ "$VERBOSE" = "yes" ]; then
+	    echo "Copying README.txt file"
+	fi
        (cd ${cddir}/${cdname} && cp $readme README.txt)
     fi
 
@@ -534,8 +570,8 @@ do
 done
 
 
-if [ $USE_OTHERS = "yes" ]; then
-    if [ $VERBOSE = "yes" ]; then
+if [ "$USE_OTHERS" = "yes" ]; then
+    if [ "$VERBOSE" = "yes" ]; then
 	echo "Creating symlinks from $others (specified with -X) to ${cddir}/${cdname}"
     fi
     cdname=`tail -1 $cdlist`

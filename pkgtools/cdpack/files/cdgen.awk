@@ -1,7 +1,7 @@
 #!/usr/bin/awk -f
-# $NetBSD: cdgen.awk,v 1.3 2002/05/19 07:59:46 dmcmahill Exp $
+# $NetBSD: cdgen.awk,v 1.4 2003/02/05 15:01:57 dmcmahill Exp $
 #
-# Copyright (c) 2001 Dan McMahill, All rights reserved.
+# Copyright (c) 2001, 2002, 2003 Dan McMahill, All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions
@@ -44,8 +44,9 @@ BEGIN {
 # ARGV[8] = verbose flag.  "verbose=yes" for verbose output
 # ARGV[9] = xtra_size.  How many kB are needed per CD for common files
 
-    if (ARGC != 11){
-	printf("%s:  wrong number of arguments\n",ARGV[0]);
+    reqnum = 12;
+    if (ARGC != reqnum){
+	printf("cdgen.awk:  wrong number of arguments (got %d, wanted %d)\n", ARGC, reqnum);
 	usage();
 	exit(1);
     }
@@ -57,8 +58,8 @@ BEGIN {
     exclude  = ARGV[4];
     order    = ARGV[5];
     cdlist   = ARGV[6];
-    xtra_size= ARGV[9];
-    other_size= ARGV[10];
+    xtra_size= ARGV[10];
+    other_size= ARGV[11];
 
     if (ARGV[7] ~ "dup=yes"){
 	dup=1;
@@ -69,8 +70,11 @@ BEGIN {
     if (ARGV[8] ~ "verbose=yes"){
 	verbose=1;
     }
+    if (ARGV[9] ~ "dvd=yes"){
+	dvd=1;
+    }
     else{
-	verbose=0;
+	dvd=0;
     }
 
 #
@@ -130,7 +134,7 @@ BEGIN {
     }
     close(order);
     npkgs = n-1;
-    printf("%d packages to go on CD-ROM!\n",npkgs);
+    printf("%d packages to go on CD-ROM/DVD!\n",npkgs);
 
 #
 # Read in the list of excluded packages
@@ -187,11 +191,15 @@ BEGIN {
 # to the second, etc.  This way, we never have to reinsert a CD
 # while installing pkgs.
 #
-    printf("Figuring out which packages go on each CD\n");
+    printf("Figuring out which packages go on each CD/DVD\n");
 
 # maximum kB for binary pkgs per CD.
-    maxcd=1024*620;
+    if( dvd ) 
+	maxcd = 1024 * 4300;
+    else
+	maxcd = 1024 * 620;
 
+    if( verbose ) printf("Maximum image size = %g Mb\n", maxcd/1024);
 #
 # no package duplication
 #
@@ -356,7 +364,7 @@ BEGIN {
 	for (cdn=1; cdn<=ncd; cdn=cdn+1){
 	    tot_cdpkgs = tot_cdpkgs + cdpkgs[cdn];
 	}
-	printf("CD images with package duplication resulted in %d packages total\n",tot_cdpkgs);
+	printf("CD/DVD images with package duplication resulted in %d packages total\n",tot_cdpkgs);
 	printf("This is an increase of %d over the base %d packages\n",tot_cdpkgs-(npkgs-tot_ex),npkgs-tot_ex);
     }
 	
@@ -365,10 +373,10 @@ BEGIN {
 # Next, create a subdirectory for each CD and populate the directory
 # with links to the actual binary pkgs
 #
-    printf("Creating subdirectories for each CD and populating it with links\n");
+    printf("Creating subdirectories for each CD/DVD and populating it with links\n");
     printf("to the binary packages and other required files.\n");
     for (cdn=1; cdn<=ncd; cdn=cdn+1){
-	printf("----------- CD #%d ----------\n",cdn);
+	printf("----------- CD/DVD #%d ----------\n",cdn);
 	printf("      %3d binary packages\n",cdpkgs[cdn]);
 	outdir=cddir "/cd" cdn "/packages/All";
 	cmd="test -d " outdir;
@@ -404,7 +412,7 @@ BEGIN {
     printf("\n");
 
     exit 0
-	} 
+	} # BEGIN
 
 function getsize(name,cmd,sz){
 

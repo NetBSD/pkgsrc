@@ -1,6 +1,6 @@
-.\" $NetBSD: cdpack.1,v 1.9 2002/09/18 02:42:20 dmcmahill Exp $
+.\" $NetBSD: cdpack.1,v 1.10 2003/02/05 15:01:57 dmcmahill Exp $
 .\"
-.\" Copyright (c) 2001 Dan McMahill, All rights reserved.
+.\" Copyright (c) 2001, 2002, 2003 Dan McMahill, All rights reserved.
 .\"
 .\" Redistribution and use in source and binary forms, with or without
 .\" modification, are permitted provided that the following conditions
@@ -34,11 +34,13 @@
 .Os
 .Sh NAME
 .Nm cdpack
-.Nd produce multi-CD binary package images
+.Nd produce multi-CD/DVD binary package images
 .Sh SYNOPSIS
 .Nm ""
 .Op -ac | -ec
 .Op -af | -ef
+.Op -dvd
+.Op -h | --help
 .Op -l logfile
 .Op -dnRvV
 .Op -x common_directory
@@ -49,7 +51,7 @@
 The
 .Nm
 utility produces ISO 9660 image files for
-a multiple CD-ROM collection of binary packages.
+a multiple CD/DVD collection of binary packages.
 .Pp
 The
 .Nm
@@ -57,58 +59,63 @@ utility extracts the dependency information from the binary
 packages in the directory
 .Ar packages_directory
 specified on the command line.  The dependency information is
-used to determine which packages are placed on which CD.  The
+used to determine which packages are placed on which CD/DVD.  The
 directory
 .Ar cd_image_directory
 is used as a staging area and the final ISO 9660 images are left in
 that directory.  A file,
 .Ar .index ,
-which lists the contents of each CD will be left in the root
-directory of each CD image.
+which lists the contents of each CD/DVD will be left in the root
+directory of each CD/DVD image.
 .Bl -tag -width "-x directory "
 .It Fl ac
-Include binary packages marked as NO_BIN_ON_CDROM on the CD set.
+Include binary packages marked as NO_BIN_ON_CDROM on the CD/DVD set.
 The default is to omit any
 packages which were marked as NO_BIN_ON_CDROM.  This option should
-only be used when making a CD set for personal use and not for
+only be used when making a CD/DVD set for personal use and not for
 distribution unless you are sure you have not violated any licenses.
 .It Fl af
-Include binary packages marked as NO_BIN_ON_FTP on the CD set.
+Include binary packages marked as NO_BIN_ON_FTP on the CD/DVD set.
 This option is enabled by default.
 .It Fl d
 Enable debugging by not deleting temporary files at the end of the
 run.  These files are left in TMPDIR.
 .It Fl ec
-Exclude packages marked as NO_BIN_ON_CDROM from the CD set.  This is
+Exclude packages marked as NO_BIN_ON_CDROM from the CD/DVD set.  This is
 the default.
 .It Fl ef
-Exclude packages marked as NO_BIN_ON_FTP from the CD set.  The default
+Exclude packages marked as NO_BIN_ON_FTP from the CD/DVD set.  The default
 is to allow packages which are NO_BIN_ON_FTP.
+.It Fl dvd
+Create DVD sized images rather than the default CD-ROM sized images.
+.It Fl h
+.It Fl -help
+Displays a short usage message.
 .It Fl l Ar logfile
 Log the output of mkisofs -v -v to the file
 .Ar logfile .
 .It Fl n
-Do not duplicate packages in order to prevent inter-CD dependencies.
+Do not duplicate packages in order to prevent inter-CD/DVD dependencies.
 The default without the
 .Fl n
 option will place a package and all of its dependencies on the same
-CD.  If a particular package is also required by pacakges on other
-CD's, it will be placed there as well.
+CD/DVD.  If a particular package is also required by pacakges on other
+CD/DVD's, it will be placed there as well.
 When the
 .Fl n
 option is used packages are not duplicated.  This results in slightly
 smaller ISO 9660 images.
 .Nm
 places packages which are lower in the dependency tree on lower
-numbered CD-ROM's and packages which are higher on the higher numbered
-CD-ROM's.  In this fashion, a package on CD number n
-will have all of its dependencies on CD numbers 1 through n
+numbered CD/DVD's and packages which are higher on the higher numbered
+CD/DVD's.  In this fashion, a package on CD/DVD number n
+will have all of its dependencies on CD/DVD numbers 1 through n
 .It Fl R
 Generate a file,
 .Ar README.txt ,
-which will be placed in the root directory of each CD image.  This
+which will be placed in the root directory of each CD/DVD image.  This
 README file contains a small amount of information about the contents
-of the CD set.
+of the CD/DVD set.
 .It Fl v
 Be verbose.  Currently does not change things much.
 .It Fl V
@@ -116,14 +123,14 @@ Print the program version number and exit.
 .It Fl x Ar directory
 Includes the contents of
 .Ar directory
-on each CD.  This is useful for README files, etc., which you want
-to be present on each CD in the set.
+on each CD/DVD.  This is useful for README files, etc., which you want
+to be present on each CD/DVD in the set.
 .It Fl X Ar directory
 Includes the contents of
 .Ar directory
-on the last CD in the set.  This is useful for adding
+on the last CD/DVD in the set.  This is useful for adding
 a pkgsrc.tar.gz tarball, i.e. a file which does not
-need to be on each CD.
+need to be on each CD/DVD.
 .El
 .Pp
 The
@@ -145,7 +152,7 @@ This example takes all of the binary packages found in
 /u2/cdimages/cd{1,2,...} are used to create the ISO 9660 layouts.
 .D1 cdpack /usr/pkgsrc/packages/All /u2/cdimages
 .Pp
-To include a common set of files on all CD's, place them in a
+To include a common set of files on all CD/DVD's, place them in a
 directory, /tmp/foo, in this example, and pass in the directory name
 with the
 .Fl x
@@ -163,5 +170,5 @@ packages collection in April, 2001.
 The
 .Nm
 utility was written by Dan McMahill (dmcmahill@netbsd.org).  The
-idea of duplicating packages to eliminate inter-CD dependencies
+idea of duplicating packages to eliminate inter-CD/DVD dependencies
 came from Todd Vierling (tv@netbsd.org).
