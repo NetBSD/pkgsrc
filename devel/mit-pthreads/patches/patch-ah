@@ -1,7 +1,18 @@
-$NetBSD: patch-ah,v 1.3 1999/04/30 14:04:56 bad Exp $
+$NetBSD: patch-ah,v 1.4 1999/05/01 18:35:22 tron Exp $
 
 --- config/Makefile.in.orig	Fri Mar 22 05:29:54 1996
-+++ config/Makefile.in	Fri Apr 30 15:13:48 1999
++++ config/Makefile.in	Sat May  1 20:27:07 1999
+@@ -18,8 +18,8 @@
+ 
+ # Standard bsd install rules look for the "install" program, rather than
+ # using some variable.  So, hack things so that that install rule works.
+-BINGRP != echo " " `groups` " " | sed 's/ [0-9][0-9]* / /g' | awk '{print $$1}'
+-BINOWN != echo $${USER}
++#BINGRP != echo " " `groups` " " | sed 's/ [0-9][0-9]* / /g' | awk '{print $$1}'
++#BINOWN != echo $${USER}
+ LIBMODE = 644 # so ranlib can run!
+ 
+ .include "config.flags"
 @@ -29,7 +29,7 @@
  # pathname for srcdir here, and live with it.
  srcdir = $(srctop)
