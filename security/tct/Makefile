@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/01/03 10:58:57 agc Exp $
+# $NetBSD: Makefile,v 1.2 2002/01/03 12:45:06 agc Exp $
 #
 
 DISTNAME=	tct-1.09
-CATEGORIES=	sysutils
+CATEGORIES=	security
 MASTER_SITES=	http://www.porcupine.org/forensics/
 
 MAINTAINER=	packages@netbsd.org
