@@ -1,10 +1,11 @@
-$NetBSD: distinfo,v 1.7 2004/02/28 23:50:59 heinz Exp $
+$NetBSD: distinfo,v 1.8 2005/01/09 00:07:46 schmonz Exp $
 
-SHA1 (prayer-1.0.8.tar.gz) = bda62959dae75515530fbc87304a721e17c903e4
-Size (prayer-1.0.8.tar.gz) = 519741 bytes
-SHA1 (patch-aa) = 309dfb2c7d4c38673117cdd6419c8100cf6d98e4
-SHA1 (patch-ab) = d188b7f475af8a81724e221196d1f321cebd9d54
-SHA1 (patch-ac) = f9550de3d8704ea293bc89c572f219e0c41aa8e8
-SHA1 (patch-ad) = e8d1cd82e62d86886acca94c840b55a8b55f7f17
-SHA1 (patch-ae) = b33cdbe6634f370a451a319dd140680949400943
-SHA1 (patch-af) = 969ecdce0496d889dfc3b8d1b7464148b4430ec9
+SHA1 (prayer-1.0.12.tar.gz) = 8ea568f9e0e1fe925102e80451b3c9432f5fed15
+Size (prayer-1.0.12.tar.gz) = 544239 bytes
+SHA1 (patch-aa) = 0161f04e22a8e67b5d5cb0990f7ac90bf4b8c93e
+SHA1 (patch-ab) = 72f6b8768303222a8798ca07e83efccdefa8fe25
+SHA1 (patch-ac) = b7df87589bdc2fd2894f2028652e01aa0c181fa1
+SHA1 (patch-ad) = bd8f517d5bede0fd3d3f4e9a108cd0cd99d7c8ab
+SHA1 (patch-ae) = a04d4206e9b671be0fdce73a5093fb18778a1052
+SHA1 (patch-af) = 730ee832fcb6464d7909ff9f048d7c57ce86aba8
+SHA1 (patch-ag) = d932eeb11171da4084eb56e097a7880e67a18561

@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: prayer.rc,v 1.1 2004/02/28 23:59:47 heinz Exp $
+# $NetBSD: prayer.sh,v 1.1 2005/01/09 00:07:47 schmonz Exp $
 #
 # This shell script takes care of starting and stopping prayer,
 # a program providing web access to a mail server using IMAP
@@ -53,7 +53,7 @@ prayer_start()
 		echo "${command} already running as pid ${prayer_pid}."
 		return 1
 	fi
-	echo "Starting ${name}"
+	echo "Starting ${name}."
 	${command} ${prayer_flags} ${command_args}
 }
 
@@ -65,7 +65,7 @@ prayer_stop()
 		echo "${command} not running? (check ${pidfile})."
 		return 1
 	fi
-	echo "Stopping ${name}"
+	echo "Stopping ${name}."
 	kill -HUP ${prayer_pid}
 	prayer_session_pid=`cat @VAR_PREFIX@/pid/prayer-session`
 	if [ -n "${prayer_session_pid}" ]; then
