@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: wwwoffled,v 1.1 2001/03/12 18:05:25 fredb Exp $
+# $NetBSD: wwwoffled,v 1.2 2001/10/25 10:20:59 wiz Exp $
 #
 
 # PROVIDE: wwwoffled
@@ -14,7 +14,7 @@ control_prog="@PREFIX@/bin/wwwoffle"
 command_args="-c @PREFIX@/etc/wwwoffle/wwwoffle.conf"
 required_files="@PREFIX@/etc/wwwoffle/wwwoffle.conf"
 start_cmd=wwwoffled_start
-stop_cmd="${control_prog} -kill"
+stop_cmd="${control_prog} ${command_args} -kill"
 autodial_cmd="${control_prog} -autodial ${command_args}"
 offline_cmd="${control_prog} -offline ${command_args}"
 online_cmd="${control_prog} -online ${command_args}"
