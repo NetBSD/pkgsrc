@@ -1,0 +1,11 @@
+--- scripts/mysql_install_db.sh.orig	Sun Jun 14 23:02:32 1998
++++ scripts/mysql_install_db.sh	Sun Jun 14 23:05:16 1998
+@@ -34,7 +34,7 @@
+   echo "@scriptdir@/safe_mysqld -l &"
+   echo
+   echo "Plese report any problems with the @scriptdir@/mysqlbug script"
+-  exit 1
++  exit 0
+ fi
+ 
+ # On IRIX hostname is in /usr/bsd so add this to the path

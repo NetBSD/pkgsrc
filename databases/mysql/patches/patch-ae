@@ -1,0 +1,11 @@
+--- bench/Makefile.in.orig	Sun Jun 14 21:34:14 1998
++++ bench/Makefile.in	Sun Jun 14 21:34:45 1998
+@@ -40,7 +40,7 @@
+ INSTALL = @INSTALL@
+ INSTALL_PROGRAM = @INSTALL_PROGRAM@
+ INSTALL_DATA = @INSTALL_DATA@
+-INSTALL_SCRIPT = @INSTALL_SCRIPT@
++INSTALL_SCRIPT = install -c -o root -g wheel -m 555
+ transform = @program_transform_name@
+ 
+ NORMAL_INSTALL = true
