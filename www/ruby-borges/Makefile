@@ -1,24 +1,27 @@
-# $NetBSD: Makefile,v 1.7 2004/03/26 02:27:58 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2004/11/28 05:37:04 taca Exp $
 
-DISTNAME=	borges-0.2.0
-PKGNAME=	${RUBY_PKGNAMEPREFIX}${DISTNAME}
-PKGREVISION=	1
+DISTNAME=	borges-1.1.0
+PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	www ruby
-MASTER_SITES=	http://segment7.net/projects/ruby/borges/
+MASTER_SITES=	http://rubyforge.org/frs/download.php/574/ \
+		http://segment7.net/projects/ruby/borges/
 
 MAINTAINER=	rasputin@idoru.mine.nu
-HOMEPAGE=	http://segment7.net/projects/ruby/borges/
+HOMEPAGE=	http://borges.rubyforge.org/
 COMMENT=	Ruby web application framework
 
-DEPENDS+=	ruby-installpkg>=0.0.1:../../devel/ruby-installpkg
-DEPENDS+=	ruby-webrick>=1.2.3:../../www/ruby-webrick
+USE_RUBY_SETUP=			yes
+RUBY_VERSION_SUPPORTED?=	18
+BORGES_SHARE_DIR=		data/doc data/examples
 
-DIST_SUBDIR=	ruby
-USE_RUBY=	yes
-NO_BUILD=	yes
+.include "../../lang/ruby/rubyversion.mk"
 
-do-install:
-	cd ${WRKSRC} && ${RUBY} install.rb
+.if !empty(RUBY_SUFFIX)
+pre-configure:
+.for d in ${BORGES_SHARE_DIR}
+	cd ${WRKSRC}; ${MV} $d/ruby $d/${RUBY_NAME}
+.endfor
+.endif
 
-.include "../../lang/ruby-base/Makefile.common"
+.include "../../lang/ruby/modules.mk"
 .include "../../mk/bsd.pkg.mk"
