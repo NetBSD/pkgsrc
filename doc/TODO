@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2582 2004/11/29 14:55:11 wiz Exp $
+$NetBSD: TODO,v 1.2583 2004/11/29 15:03:22 uebayasi Exp $
 
 Suggested new packages
 ======================
@@ -700,7 +700,6 @@ Suggested package updates
 	o mc-4.6.0 [pkgsrc-wip]
 	o memtest86-3.2
 	o mergeant-0.52
-	o mew-4.1
 	o mgetty+sendfax-1.1.31
 	o micq-0.4.12
 	o milter-greylist-1.5.12
@@ -713,7 +712,6 @@ Suggested package updates
 	o mlview-0.7.1
 	o mmix-20041014
 	o molden-4.2 [pkg/28457]
-	o monafonts-2.90
 	o most-4.9.5
 	o mowitz-0.3.0
 	o moz-bin-flash-7.0r25 [pkgsrc-wip]
