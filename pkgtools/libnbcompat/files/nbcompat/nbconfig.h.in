@@ -155,6 +155,12 @@
 /* Define to 1 if you have the `mkstemp' function. */
 #undef HAVE_MKSTEMP
 
+/* Define to 1 if the `statfs' function is built into the library. */
+#undef HAVE_NBCOMPAT_STATFS
+
+/* Define to 1 if the `vis' function is built into the library. */
+#undef HAVE_NBCOMPAT_VIS
+
 /* Define to 1 if you have the <ndir.h> header file. */
 #undef HAVE_NDIR_H
 
@@ -163,6 +169,12 @@
 
 /* Define to 1 if you have the <netinet/in6_machtypes.h> header file. */
 #undef HAVE_NETINET_IN6_MACHTYPES_H
+
+/* Define to 1 if optarg is declared in <stdlib.h> or <unistd.h> */
+#undef HAVE_OPTARG_D
+
+/* Define to 1 if optind is declared in <stdlib.h> or <unistd.h> */
+#undef HAVE_OPTIND_D
 
 /* Define to 1 if you have the <paths.h> header file. */
 #undef HAVE_PATHS_H
@@ -173,6 +185,10 @@
 /* Define to 1 if you have the <poll.h> header file. */
 #undef HAVE_POLL_H
 
+/* Define to 1 if *printf() uses %qd to print `long long' (otherwise uses
+   %lld). */
+#undef HAVE_PRINTF_QD
+
 /* Define to 1 if you have the `pwcache_groupdb' function. */
 #undef HAVE_PWCACHE_GROUPDB
 
@@ -181,6 +197,9 @@
 
 /* Define to 1 if you have the <pwd.h> header file. */
 #undef HAVE_PWD_H
+
+/* Define to 1 if `long long' is supported and sizeof(off_t) >= 8. */
+#undef HAVE_QUAD_SUPPORT
 
 /* Define to 1 if you have the `RMD160File' function. */
 #undef HAVE_RMD160FILE
@@ -380,6 +399,9 @@
 /* Define to 1 if the system has the type `u_int8_t'. */
 #undef HAVE_U_INT8_T
 
+/* Define to 1 if you have the <vis.h> header file. */
+#undef HAVE_VIS_H
+
 /* Define to 1 if you have the `vprintf' function. */
 #undef HAVE_VPRINTF
 
@@ -424,29 +446,7 @@
 #undef size_t
 
 
-/* Define to 1 if you have the <vis.h> header file. */
-#undef HAVE_VIS_H
-
 /* NBCOMPAT template section follows. */
-
-/* Define to 1 if the `vis' function is built into the library. */
-#undef HAVE_NBCOMPAT_VIS
-
-/* Define to 1 if the `statfs' function is built into the library. */
-#undef HAVE_NBCOMPAT_STATFS
-
-/* Define to 1 if *printf() uses %qd to print `long long' (otherwise uses
-   %lld) */
-#undef HAVE_PRINTF_QD
-
-/* Define to 1 if `long long' is supported and sizeof(off_t) >= 8 */
-#undef HAVE_QUAD_SUPPORT
-
-/* Define to 1 if optarg is declared in <stdlib.h> or <unistd.h> */
-#undef HAVE_OPTARG_D
-
-/* Define to 1 if optind is declared in <stdlib.h> or <unistd.h> */
-#undef HAVE_OPTIND_D
 
 #ifndef HAVE___ATTRIBUTE__
 # define __attribute__(x)
