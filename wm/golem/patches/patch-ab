@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2003/05/15 11:19:43 salo Exp $
+
+--- src/rcfile.y.orig	2002-05-22 01:06:25.000000000 +0200
++++ src/rcfile.y	2003-05-15 11:46:30.000000000 +0200
+@@ -536,7 +536,7 @@
+ 	 */
+ 	fp = fopen(rcfn, "r");
+ 	if (!fp) {
+-		snprintf(filedir, MAXPATHLEN, "%s/golem/", DATADIR);
++		snprintf(filedir, MAXPATHLEN, "%s/", PKG_SYSCONFDIR);
+ 		snprintf(rcfn, sizeof(rcfn), "%s%s", filedir, filename);
+ 		fp = fopen(rcfn, "r");
+ 		if (!fp)
