@@ -1,0 +1,22 @@
+$NetBSD: patch-ab,v 1.1.1.1 2001/09/02 20:13:28 wiz Exp $
+
+--- src/file.c.orig	Wed Feb 21 01:13:56 2001
++++ src/file.c
+@@ -39,7 +39,8 @@
+   wmove(m, 2, 0);
+   whline(m, '-', width);
+   wrefresh(m);
+-  wclear(w);
++  if (w)
++    wclear(w);
+   return node;
+ }
+ 
+@@ -155,6 +156,7 @@
+     wclear(w);
+   }
+ 
++  wmove(w, 0, 0);
+   fseek(node->file, node->fileLines[n], SEEK_SET);
+   /*  wclear(w); */
+   for (j = 0; j < WLINES; j++) {
