@@ -1,4 +1,4 @@
-# $NetBSD: extension.buildlink.mk,v 1.7 2002/01/22 18:01:41 drochner Exp $
+# $NetBSD: extension.buildlink.mk,v 1.8 2002/01/29 19:22:26 drochner Exp $
 
 # derive a python version from the package name if possible
 .if defined(PKGNAME_REQD)
@@ -19,11 +19,11 @@ IGNORE="${PKGNAME} needs dynamic loading"
 
 .if exists(${PYTHONBIN})
 PYINC!=	${PYTHONBIN} -c "import distutils.sysconfig; \
-	print distutils.sysconfig.get_python_inc(0, \"\")"
+	print distutils.sysconfig.get_python_inc(0, \"\")" || echo ""
 PYLIB!=	${PYTHONBIN} -c "import distutils.sysconfig; \
-	print distutils.sysconfig.get_python_lib(0, 1, \"\")"
-PYSITELIB!=	${PYTHONBIN} -c "import distutils.sysconfig; \
-		print distutils.sysconfig.get_python_lib(0, 0, \"\")"
+	print distutils.sysconfig.get_python_lib(0, 1, \"\")" || echo ""
+PYSITELIB!= ${PYTHONBIN} -c "import distutils.sysconfig; \
+	print distutils.sysconfig.get_python_lib(0, 0, \"\")" || echo ""
 .endif
 
 .if defined(PYDISTUTILSPKG)
