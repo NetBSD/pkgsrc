@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2003/01/10 07:47:21 cjep Exp $
+# $NetBSD: Makefile,v 1.7 2003/02/14 20:20:46 jmmv Exp $
 #
 
-DISTNAME=		libgnomeprintui-1.116.0
-PKGREVISION=		2
+DISTNAME=		libgnomeprintui-2.2.1.1
 CATEGORIES=		print gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libgnomeprintui/1.116/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libgnomeprintui/2.2/}
+EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		jmmv@netbsd.org
 HOMEPAGE=		http://www.levien.com/gnome/print-arch.html
@@ -16,11 +16,14 @@ GNU_CONFIGURE=		yes
 USE_BUILDLINK2=		yes
 USE_PKGLOCALEDIR=	yes
 USE_GMAKE=		yes
-USE_GNU_GETTEXT=	yes
 USE_X11=		yes
-
 USE_LIBTOOL=		yes
+
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+PKGCONFIG_OVERRIDE=	${WRKSRC}/libgnomeprintui/libgnomeprintui-2.2.pc.in
+
+CONFIGURE_ARGS=		--enable-gtk-doc=no
+CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html
 
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../devel/GConf2/buildlink2.mk"
