@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 1998/04/17 09:37:23 agc Exp $
+# $NetBSD: Makefile,v 1.11 1998/06/22 11:27:49 agc Exp $
 # FreeBSD Id: Makefile,v 1.16 1997/06/13 20:00:47 max Exp
 #
 
@@ -10,7 +10,6 @@ MASTER_SITES=   ${MASTER_SITE_GNU}
 MAINTAINER=	packages@netbsd.org
 
 GNU_CONFIGURE=	yes
-MAN1=		gmake.1
 USE_GTEXINFO=	yes
 
 # joerg@freebsd.org says FreeBSD getloadavg() no longer requires setgid kmem

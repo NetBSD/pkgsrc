@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1998/04/15 10:38:22 agc Exp $
+# $NetBSD: Makefile,v 1.4 1998/06/22 11:27:51 agc Exp $
 #
 
 DISTNAME=	xxgdb-1.12
@@ -10,8 +10,6 @@ MAINTAINER=	rh@trapdoor.vip.at
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
 USE_IMAKE=	yes
-
-MAN1=		xxgdb.1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/xxgdb ${PREFIX}/bin
