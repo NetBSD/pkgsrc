@@ -1,0 +1,29 @@
+$NetBSD: patch-ad,v 1.1 2004/04/01 16:00:42 tv Exp $
+
+--- irc.c.orig	Thu Apr  1 10:50:38 2004
++++ irc.c
+@@ -50,6 +50,7 @@ char irc_pass[256];
+ char irc_ident[256];
+ char irc_nick[256];
+ char irc_channel[256];
++int in_irc_channel;
+ 
+ /*
+  * irc_recv() receives read(2) chunks and assembles complete lines, which are
+@@ -115,6 +116,8 @@ irc_cmd(const char *cmd, int fd)
+ 			cmd++;
+ 		scan(&cmd, group, sizeof(group), " ", " ");
+ 		icb_send_group(fd, group);
++	} else if (!strncasecmp(cmd, "PART ", 5)) {
++		in_irc_channel = 0;
+ 	} else if (!strncasecmp(cmd, "PRIVMSG ", 8) ||
+ 	    !strncasecmp(cmd, "NOTICE ", 7)) {
+ 		char dst[128];
+@@ -242,6 +245,7 @@ irc_send_join(int fd, const char *src, c
+ 
+ 	snprintf(cmd, sizeof(cmd), ":%s JOIN :%s\r\n", src, dst);
+ 	sync_write(fd, cmd, strlen(cmd));
++	in_irc_channel = 1;
+ }
+ 
+ void

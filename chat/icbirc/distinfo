@@ -1,5 +1,9 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/01/18 14:21:18 tron Exp $
+$NetBSD: distinfo,v 1.2 2004/04/01 16:00:42 tv Exp $
 
 SHA1 (icbirc-1.6.tar.gz) = ed34478deae940e5cd97e5eb7415b279e87484d9
 Size (icbirc-1.6.tar.gz) = 10936 bytes
-SHA1 (patch-aa) = faa20fd7a94df6585caca93bd7744f5c822bb190
+SHA1 (patch-aa) = a660db6b48e3af9ccf566128e7f31177dcda3e1b
+SHA1 (patch-ab) = 067cca58c86971f1f0f2f426622be1e906a95508
+SHA1 (patch-ac) = 513482d11aeb0efa5dd6cee620deab7b6f756c96
+SHA1 (patch-ad) = 039e10c46d9a5fa15b4a7fbd83ffbf3d4a139210
+SHA1 (patch-ae) = 74133ff7125740943cef136a59fbc7641261212b

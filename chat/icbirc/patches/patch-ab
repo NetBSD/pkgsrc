@@ -1,0 +1,76 @@
+$NetBSD: patch-ab,v 1.1 2004/04/01 16:00:42 tv Exp $
+
+--- icb.c.orig	Sat Jan  3 19:08:07 2004
++++ icb.c
+@@ -41,7 +41,7 @@ static const char rcsid[] = "$Id: icb.c,
+ extern int	 sync_write(int, const char *, int);
+ 
+ static unsigned char	 icb_args(const char *, unsigned char, char [255][255]);
+-static void		 icb_cmd(const char *, unsigned char, int);
++static void		 icb_cmd(const char *, unsigned char, int, int);
+ static void		 icb_ico(int, const char *);
+ static void		 icb_iwl(int, const char *, const char *, long,
+ 			    long, const char *, const char *);
+@@ -124,7 +124,7 @@ scan(const char **s, char *d, size_t siz
+ }
+ 
+ void
+-icb_recv(const char *buf, unsigned len, int fd)
++icb_recv(const char *buf, unsigned len, int fd, int server_fd)
+ {
+ 	static unsigned char cmd[256];
+ 	static unsigned off = 0;
+@@ -142,7 +142,7 @@ icb_recv(const char *buf, unsigned len, 
+ 		}
+ 		/* len == 0 || (off - 1) == cmd[0] */
+ 		if ((off - 1) == cmd[0]) {
+-			icb_cmd(cmd + 1, off - 1 /* <= 255 */, fd);
++			icb_cmd(cmd + 1, off - 1 /* <= 255 */, fd, server_fd);
+ 			off = 0;
+ 		}
+ 	}
+@@ -175,7 +175,7 @@ icb_args(const char *data, unsigned char
+ }
+ 
+ static void
+-icb_cmd(const char *cmd, unsigned char len, int fd)
++icb_cmd(const char *cmd, unsigned char len, int fd, int server_fd)
+ {
+ 	char args[255][255];
+ 	const char *a = args[1];
+@@ -195,9 +195,18 @@ icb_cmd(const char *cmd, unsigned char l
+ 		irc_send_code(fd, icb_hostid, irc_nick, "002",
+ 		    "Your host is %s running %s protocol %s",
+ 		    icb_hostid, icb_serverid, icb_protolevel);
++		/* some clients really want to see a MOTD */
++		irc_send_code(fd, icb_hostid, irc_nick, "375",
++		    "ICB server: %s", icb_serverid);
++		irc_send_code(fd, icb_hostid, irc_nick, "376",
++		    "End of MOTD");
+ 		icb_logged_in = 1;
+ 		break;
+ 	case 'b':	/* Open Message */
++		if (!in_irc_channel) {
++			irc_send_join(fd, irc_nick, irc_channel);
++			icb_send_names(server_fd, irc_channel);
++		}
+ 		irc_send_msg(fd, args[0], irc_channel, args[1]);
+ 		break;
+ 	case 'c':	/* Personal Message */
+@@ -213,6 +222,7 @@ icb_cmd(const char *cmd, unsigned char l
+ 			scan(&a, irc_channel + 1, sizeof(irc_channel) - 1,
+ 			    " ", " ");
+ 			irc_send_join(fd, irc_nick, irc_channel);
++			icb_send_names(server_fd, irc_channel);
+ 		} else if (!strcmp(args[0], "Arrive") ||
+ 		    !strcmp(args[0], "Sign-on")) {
+ 			char nick[256], host[256];
+@@ -372,7 +382,7 @@ icb_iwl(int fd, const char *flags, const
+ 		    icb_hostid, irc_nick, nick);
+ 		sync_write(fd, s, strlen(s));
+ 	} else if (imode == imode_names && !strcmp(icurgroup, igroup)) {
+-		snprintf(s, sizeof(s), ":%s 353 %s @ %s :%s%s\r\n",
++		snprintf(s, sizeof(s), ":%s 353 %s @ %s :%s%s \r\n",
+ 		    icb_hostid, irc_nick, icurgroup, chanop ? "@" : "", nick);
+ 		sync_write(fd, s, strlen(s));
+ 		snprintf(s, sizeof(s), ":%s 352 %s %s %s %s %s %s H :5 %s\r\n",

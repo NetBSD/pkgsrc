@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2004/04/01 16:00:42 tv Exp $
+
+--- icb.h.orig	Thu Apr  1 10:31:31 2004
++++ icb.h
+@@ -3,7 +3,7 @@
+ #ifndef _ICB_H_
+ #define _ICB_H_
+ 
+-void	 icb_recv(const char *, unsigned, int);
++void	 icb_recv(const char *, unsigned, int, int);
+ void	 icb_send_login(int, const char *, const char *, const char *);
+ void	 icb_send_openmsg(int, const char *);
+ void	 icb_send_privmsg(int, const char *, const char *);

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2004/01/18 17:05:40 tron Exp $
+# $NetBSD: Makefile,v 1.4 2004/04/01 16:00:42 tv Exp $
 
 DISTNAME=	icbirc-1.6
+PKGREVISION=	1
 CATEGORIES=	chat
 MASTER_SITES=	http://www.benzedrine.cx/
 
