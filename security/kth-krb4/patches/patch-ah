@@ -1,0 +1,16 @@
+$NetBSD: patch-ah,v 1.1 2000/10/11 16:28:54 wennmach Exp $
+
+Do not install the des executable. This avoids a conflict with the
+openssl package, which installs an executable with the same name
+(and functionality) into the same place.
+
+--- lib/des/Makefile.in.orig	Wed Oct 11 18:07:08 2000
++++ lib/des/Makefile.in	Wed Oct 11 18:08:09 2000
+@@ -42,7 +42,6 @@
+ 	des$(EXECSUFFIX) \
+ 	rpw$(EXECSUFFIX) \
+ 	speed$(EXECSUFFIX)
+-PROGS2INSTALL = des$(EXECSUFFIX)
+ LIBNAME = $(LIBPREFIX)des
+ LIBEXT = @LIBEXT@
+ LIBPREFIX = @LIBPREFIX@
