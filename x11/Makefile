@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.245 2002/05/31 14:34:50 skrll Exp $
+# $NetBSD: Makefile,v 1.246 2002/05/31 15:02:44 seb Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -133,6 +133,7 @@ SUBDIR+=	xfstt
 SUBDIR+=	xgas
 SUBDIR+=	xglobe
 SUBDIR+=	xhangglider
+SUBDIR+=	xjman
 SUBDIR+=	xkeycaps
 SUBDIR+=	xless
 SUBDIR+=	xlockmore
