@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/07/12 16:22:58 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/01/04 23:36:53 jmmv Exp $
 bin/echo-client-2
 include/libbonobo-2.0/bonobo/Bonobo.h
 include/libbonobo-2.0/bonobo/bonobo-arg.h
@@ -47,42 +47,43 @@ lib/orbit-2.0/Bonobo_module.a
 lib/orbit-2.0/Bonobo_module.la
 lib/orbit-2.0/Bonobo_module.so
 lib/pkgconfig/libbonobo-2.0.pc
-share/gtk-doc/html/libbonobo/c4.html
-share/gtk-doc/html/libbonobo/index.html
-share/gtk-doc/html/libbonobo/libbonobo-bonobo-arg.html
-share/gtk-doc/html/libbonobo/libbonobo-bonobo-config-database.html
-share/gtk-doc/html/libbonobo/libbonobo-bonobo-context.html
-share/gtk-doc/html/libbonobo/libbonobo-bonobo-event-source.html
-share/gtk-doc/html/libbonobo/libbonobo-bonobo-exception.html
-share/gtk-doc/html/libbonobo/libbonobo-bonobo-generic-factory.html
-share/gtk-doc/html/libbonobo/libbonobo-bonobo-i18n.html
-share/gtk-doc/html/libbonobo/libbonobo-bonobo-item-container.html
-share/gtk-doc/html/libbonobo/libbonobo-bonobo-item-handler.html
-share/gtk-doc/html/libbonobo/libbonobo-bonobo-listener.html
-share/gtk-doc/html/libbonobo/libbonobo-bonobo-macros.html
-share/gtk-doc/html/libbonobo/libbonobo-bonobo-main.html
-share/gtk-doc/html/libbonobo/libbonobo-bonobo-moniker-context.html
-share/gtk-doc/html/libbonobo/libbonobo-bonobo-moniker-extender.html
-share/gtk-doc/html/libbonobo/libbonobo-bonobo-moniker-simple.html
-share/gtk-doc/html/libbonobo/libbonobo-bonobo-moniker-util.html
-share/gtk-doc/html/libbonobo/libbonobo-bonobo-moniker.html
-share/gtk-doc/html/libbonobo/libbonobo-bonobo-object.html
-share/gtk-doc/html/libbonobo/libbonobo-bonobo-persist-client.html
-share/gtk-doc/html/libbonobo/libbonobo-bonobo-persist-file.html
-share/gtk-doc/html/libbonobo/libbonobo-bonobo-persist-stream.html
-share/gtk-doc/html/libbonobo/libbonobo-bonobo-persist.html
-share/gtk-doc/html/libbonobo/libbonobo-bonobo-property-bag-client.html
-share/gtk-doc/html/libbonobo/libbonobo-bonobo-property-bag.html
-share/gtk-doc/html/libbonobo/libbonobo-bonobo-running-context.html
-share/gtk-doc/html/libbonobo/libbonobo-bonobo-shlib-factory.html
-share/gtk-doc/html/libbonobo/libbonobo-bonobo-shutdown.html
-share/gtk-doc/html/libbonobo/libbonobo-bonobo-storage-memory.html
-share/gtk-doc/html/libbonobo/libbonobo-bonobo-storage.html
-share/gtk-doc/html/libbonobo/libbonobo-bonobo-stream-client.html
-share/gtk-doc/html/libbonobo/libbonobo-bonobo-stream-memory.html
-share/gtk-doc/html/libbonobo/libbonobo-bonobo-transient.html
-share/gtk-doc/html/libbonobo/libbonobo-bonobo-types.html
-share/gtk-doc/html/libbonobo/libbonobo-bonobo-xobject.html
+share/doc/html/libbonobo/c4.html
+share/doc/html/libbonobo/index.html
+share/doc/html/libbonobo/index.sgml
+share/doc/html/libbonobo/libbonobo-bonobo-arg.html
+share/doc/html/libbonobo/libbonobo-bonobo-config-database.html
+share/doc/html/libbonobo/libbonobo-bonobo-context.html
+share/doc/html/libbonobo/libbonobo-bonobo-event-source.html
+share/doc/html/libbonobo/libbonobo-bonobo-exception.html
+share/doc/html/libbonobo/libbonobo-bonobo-generic-factory.html
+share/doc/html/libbonobo/libbonobo-bonobo-i18n.html
+share/doc/html/libbonobo/libbonobo-bonobo-item-container.html
+share/doc/html/libbonobo/libbonobo-bonobo-item-handler.html
+share/doc/html/libbonobo/libbonobo-bonobo-listener.html
+share/doc/html/libbonobo/libbonobo-bonobo-macros.html
+share/doc/html/libbonobo/libbonobo-bonobo-main.html
+share/doc/html/libbonobo/libbonobo-bonobo-moniker-context.html
+share/doc/html/libbonobo/libbonobo-bonobo-moniker-extender.html
+share/doc/html/libbonobo/libbonobo-bonobo-moniker-simple.html
+share/doc/html/libbonobo/libbonobo-bonobo-moniker-util.html
+share/doc/html/libbonobo/libbonobo-bonobo-moniker.html
+share/doc/html/libbonobo/libbonobo-bonobo-object.html
+share/doc/html/libbonobo/libbonobo-bonobo-persist-client.html
+share/doc/html/libbonobo/libbonobo-bonobo-persist-file.html
+share/doc/html/libbonobo/libbonobo-bonobo-persist-stream.html
+share/doc/html/libbonobo/libbonobo-bonobo-persist.html
+share/doc/html/libbonobo/libbonobo-bonobo-property-bag-client.html
+share/doc/html/libbonobo/libbonobo-bonobo-property-bag.html
+share/doc/html/libbonobo/libbonobo-bonobo-running-context.html
+share/doc/html/libbonobo/libbonobo-bonobo-shlib-factory.html
+share/doc/html/libbonobo/libbonobo-bonobo-shutdown.html
+share/doc/html/libbonobo/libbonobo-bonobo-storage-memory.html
+share/doc/html/libbonobo/libbonobo-bonobo-storage.html
+share/doc/html/libbonobo/libbonobo-bonobo-stream-client.html
+share/doc/html/libbonobo/libbonobo-bonobo-stream-memory.html
+share/doc/html/libbonobo/libbonobo-bonobo-transient.html
+share/doc/html/libbonobo/libbonobo-bonobo-types.html
+share/doc/html/libbonobo/libbonobo-bonobo-xobject.html
 share/idl/bonobo-2.0/Bonobo.idl
 share/idl/bonobo-2.0/Bonobo_Canvas.idl
 share/idl/bonobo-2.0/Bonobo_Clipboard.idl
@@ -128,7 +129,11 @@ ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/libbonobo-2.0.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/libbonobo-2.0.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/libbonobo-2.0.mo
 @dirrm share/idl/bonobo-2.0
-@dirrm share/gtk-doc/html/libbonobo
+@comment in ORBit2: @dirrm share/idl
+@dirrm share/doc/html/libbonobo
+@comment in ORBit2: dirrm lib/orbit-2.0
+@comment in bonobo-activation: @dirrm lib/bonobo/servers
+@comment in bonobo-activation: @dirrm lib/bonobo/monikers
 @dirrm lib/bonobo-2.0/samples
 @dirrm lib/bonobo-2.0
 @dirrm include/libbonobo-2.0/bonobo
