@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.326 2004/02/01 00:29:01 snj Exp $
+# $NetBSD: Packages.txt,v 1.327 2004/02/01 01:56:28 jlam Exp $
 ###########################################################################
 
 			==========================
@@ -333,6 +333,33 @@ properly detect your installed packages, and fail miserably. Note also that
 precompiled binary packages are usually built with the default LOCALBASE of
 /usr/pkg, and that you should *not* install any if you use a non-standard
 LOCALBASE.
+
+
+ 2.5 Selecting the compiler
+ ==========================
+
+By default, pkgsrc will use GCC to build packages.  This may be
+overridden by setting the following variables in /etc/mk.conf:
+
+ * PKGSRC_COMPILER:
+   This is a list of values specifying the chain of compilers to invoke
+   when building packages.  Valid values are:
+
+	distcc		distributed C/C++ (chainable)
+	ccache		compiler cache (chainable)
+	gcc		GNU
+	mipspro		Silicon Graphics, Inc. MIPSpro
+	sunpro		Sun Microsystems, Inc. WorkShip/Forte/Sun
+			ONE Studio
+
+   The default is "gcc".  You can use ccache and/or distcc with an
+   appropriate PKGSRC_COMPILER setting, e.g. "ccache gcc".  This variable
+   should always be terminated with a value for a real compiler.
+
+ * GCC_REQD:
+   This specifies the minimum version of GCC to use when building
+   packages.  If the system GCC doesn't satisfy this requirement, then
+   pkgsrc will build and install one of the GCC packages to use instead.
 
 
  3 Making precompiled packages
