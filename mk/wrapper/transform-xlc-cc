@@ -1,4 +1,4 @@
-# $NetBSD: transform-xlc-cc,v 1.3 2004/12/05 02:47:52 grant Exp $
+# $NetBSD: transform-xlc-cc,v 1.4 2004/12/05 09:26:59 grant Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -49,10 +49,24 @@ case $arg in
 	msg_log $wrapperlog "   (transform-xlc-cc) to: $arg"
 	addtocache=yes
 	;;
+# xlc uses -qmkshrobj to create shared objects, and we also need to
+# tell the linker to use a flat namespace and allow undefined symbols.
+-dynamiclib)
+        arg="-qmkshrobj -Wl,-flat_namespace -Wl,-undefined -Wl,suppress"
+        msg_log $wrapperlog "   (transform-xlc-cc) to: $arg"
+        addtocache=yes
+	split_arg=yes
+        ;;
+# -qnocommon is the xlc argument to allocate uninitialized globals in
+# the data section.
+-fno-common)
+	arg=-qnocommon
+	addtocache=yes
+	;;
 ######################################################################
 # Ignore some flags that are unnecessary for XL C.
 ######################################################################
--pipe|-ansi|-fno-common|-fno-gnu-keywords|-fstrict-prototypes|-no-cpp-precomp|-pedantic)
+-pipe|-ansi|-fno-gnu-keywords|-fstrict-prototypes|-no-cpp-precomp|-pedantic)
 	arg=
 	msg_log $wrapperlog "   (transform-xlc-cc) to: $arg"
 	addtocache=yes
