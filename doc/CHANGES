@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1475 2003/02/24 07:41:01 wiz Exp $
+$NetBSD: CHANGES,v 1.1476 2003/02/24 15:35:54 kei Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -821,3 +821,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated wdm to 1.22.1 [salo 2003-02-23]
 	Updated netatalk to 1.6.1 [fredb 2003-02-23]
 	Updated automake to 1.7.3 [wiz 2003-02-24]
+	Added dvipdfmx-0.0.0.20021230 [kei 2003-02-24]
