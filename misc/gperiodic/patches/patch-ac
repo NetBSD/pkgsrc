@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.2 2003/06/23 21:04:38 jtb Exp $
+$NetBSD: patch-ac,v 1.3 2003/07/30 14:05:27 wiz Exp $
 
---- gperiodic.c.orig
+--- gperiodic.c.orig	Fri Jul 25 09:15:29 2003
 +++ gperiodic.c
-@@ -413,7 +413,7 @@
+@@ -414,7 +414,7 @@ void main_prog(void)
  
  
  int main(int argc, char** argv) {
