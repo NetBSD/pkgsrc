@@ -1,7 +1,5 @@
-$NetBSD: patch-ac,v 1.2 1999/07/06 08:00:11 jlam Exp $
-
---- Makefile.in.orig	Wed Feb 17 09:22:57 1999
-+++ Makefile.in	Fri Jul  2 06:57:09 1999
+--- Makefile.in.orig	Thu Sep 24 18:41:31 1998
++++ Makefile.in	Thu Oct 14 15:38:52 1999
 @@ -7,6 +7,7 @@
  
  CC = @CC@
@@ -15,8 +13,8 @@ $NetBSD: patch-ac,v 1.2 1999/07/06 08:00:11 jlam Exp $
  
  install: $(PRODUCT)
 -	$(INSTALL) -d -m 755 $(bindir)
--	$(INSTALL) -s -m 755 $(PRODUCT) $(bindir)
+-	$(INSTALL) -s -m 755 -o root $(PRODUCT) $(bindir)
 -	$(INSTALL) -d -m 755 $(mandir)
--	$(INSTALL) -m 644 $(PRODUCT).1 $(mandir)
+-	$(INSTALL) -m 644 -o root $(PRODUCT).1 $(mandir)
 +	$(BSD_INSTALL_PROGRAM) $(PRODUCT) $(bindir)
 +	$(BSD_INSTALL_DATA) $(PRODUCT).1 $(mandir)
