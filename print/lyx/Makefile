@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2002/09/21 04:52:38 jlam Exp $
+# $NetBSD: Makefile,v 1.48 2002/09/29 09:42:38 jlam Exp $
 # FreeBSD Id: Makefile,v 1.14 1998/02/14 16:46:50 andreas Exp
 #
 
@@ -16,14 +16,9 @@ COMMENT=		Graphical frontend for LaTeX (nearly WYSIWYG)
 DEPENDS=		ispell-base-[0-9]*:../../textproc/ispell-base
 DEPENDS+=		teTeX>=1.0.6:../../print/teTeX
 
-GCC_VERSION!=		gcc --version
-.if (${GCC_VERSION:C/-.*$$//} == egcs)
-# "egcs" cannot be used, as this package tickles c++ compiler bugs
-.include "../../lang/gcc/Makefile.gcc"
-.endif
-
 USE_BUILDLINK2=		YES
 USE_PERL5=		YES
+USE_CXX=		YES
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+= 	--with-extra-lib=${BUILDLINK_PREFIX.xforms}/lib \
 			--with-extra-inc=${BUILDLINK_PREFIX.xforms}/include/X11
@@ -39,6 +34,7 @@ post-install:
 
 .include "../../graphics/jpeg/buildlink2.mk"
 .include "../../graphics/xpm/buildlink2.mk"
+.include "../../lang/gcc/buildlink2.mk"
 .include "../../x11/xforms/buildlink2.mk"
 
 .include "../../mk/bsd.pkg.mk"
