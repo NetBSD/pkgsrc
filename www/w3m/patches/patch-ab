@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1.1.1 1999/09/27 05:37:36 sakamoto Exp $
+$NetBSD: patch-ab,v 1.2 1999/09/27 11:18:59 agc Exp $
 
 Index: gc/dyn_load.c
 ===================================================================
@@ -6,8 +6,8 @@ RCS file: /cvsroot/w3m/gc/dyn_load.c,v
 retrieving revision 1.1.1.2
 retrieving revision 1.2
 diff -u -u -r1.1.1.2 -r1.2
---- dyn_load.c	1999/06/02 19:29:13	1.1.1.2
-+++ dyn_load.c	1999/06/03 12:44:49	1.2
+--- gc/dyn_load.c	1999/06/02 19:29:13	1.1.1.2
++++ gc/dyn_load.c	1999/06/03 12:44:49	1.2
 @@ -48,7 +48,8 @@
  #if !defined(SUNOS4) && !defined(SUNOS5DL) && !defined(IRIX5) && \
      !defined(MSWIN32) && !(defined(ALPHA) && defined(OSF1)) && \
