@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.85 2002/10/21 01:40:57 wiz Exp $
+# $NetBSD: bsd.prefs.mk,v 1.86 2002/10/21 13:58:18 wiz Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -209,28 +209,6 @@ USE_INET6?=		NO
 .else exists(${.CURDIR}/mk/defs.NetBSD.mk)
 .include "${.CURDIR}/mk/defs.NetBSD.mk"
 .endif
-
-# Check if we got Xpm distributed with XFree86 4.x or Solaris 9 or if we need
-# to depend on the Xpm package.
-.if (defined(CHECK_XPM) || defined(USE_XPM))
-X11BASE?=		/usr/X11R6
-.if (${OPSYS} != SunOS)
-.if exists(${X11BASE}/include/X11/xpm.h) && \
-    exists(${X11BASE}/lib/X11/config/X11.tmpl)
-__BUILTIN_XPM!=	${EGREP} -c NormalLibXpm ${X11BASE}/lib/X11/config/X11.tmpl || ${TRUE}
-.else
-__BUILTIN_XPM=	0
-.endif
-.else
-__BUILTIN_XPM!=	(/usr/sbin/pkgchk -l SUNWxwinc | ${EGREP} -c xpm.h) || ${TRUE}
-.endif
-.if ${__BUILTIN_XPM} == "0"
-HAVE_BUILTIN_XPM=	NO
-.else
-HAVE_BUILTIN_XPM=	YES
-.endif
-.undef __BUILTIN_XPM
-.endif	# CHECK_XPM
 
 LOCALBASE?=		${DESTDIR}/usr/pkg
 X11BASE?=		${DESTDIR}/usr/X11R6
