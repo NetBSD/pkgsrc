@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5101 2004/03/05 22:34:27 ben Exp $
+$NetBSD: CHANGES,v 1.5102 2004/03/05 22:37:30 ben Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1178,3 +1178,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added cln-1.1.6 [adam 2004-03-05]
 	Updated createbuildlink to 3.2 [jlam 2004-03-05]
 	Added libmodplug-0.7 [ben 2004-03-05]
+	Added xmms-modplug-2.05 [ben 2004-03-05]
