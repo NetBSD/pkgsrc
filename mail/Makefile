@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2000/12/05 12:48:58 abs Exp $
+# $NetBSD: Makefile,v 1.56 2000/12/11 02:25:35 kei Exp $
 # FreeBSD Id: Makefile,v 1.45 1997/08/13 18:35:22 andreas Exp 
 #
 
@@ -43,6 +43,7 @@
     SUBDIR += sendmail88
     SUBDIR += smtpfeed
     SUBDIR += spruce
+    SUBDIR += sylpheed
     SUBDIR += tnef
     SUBDIR += vm
     SUBDIR += wmmail
