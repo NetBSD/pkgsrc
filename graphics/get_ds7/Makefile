@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/11/23 04:20:23 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 2000/08/26 05:12:18 jlam Exp $
 #
 
 DISTNAME=	get_ds7_1.2.4
@@ -10,21 +10,23 @@ EXTRACT_SUFX=	.tar
 MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://www.yk.rim.or.jp/~mamo/Computer/DS-7/index-e.html
 
+USE_PERL5=	# defined
+
 DECOMPRESS_CMD=	${CAT}
 WRKSRC=		${WRKDIR}/ds-7_1.2.4
-USE_PERL5=	yes
-NO_BUILD=	yes
+NO_BUILD=	# defined
+
+DOCDIR=		${PREFIX}/share/doc/get_ds7
 
 post-patch:
-		${SED} \
-			-e 's,@LOCALBASE@,${LOCALBASE},' \
-			<${WRKSRC}/get_ds7 >${WRKSRC}/get_ds7.exe
+	${SED}	-e 's,@LOCALBASE@,${LOCALBASE},' \
+		<${WRKSRC}/get_ds7 >${WRKSRC}/get_ds7.exe
 
 do-install:
-		${INSTALL_DATA} ${WRKSRC}/ds7_lib.pm ${LOCALBASE}/lib/perl5/site_perl
-		${INSTALL_SCRIPT} ${WRKSRC}/get_ds7.exe ${PREFIX}/bin/get_ds7
-		${INSTALL_MAN_DIR} ${PREFIX}/share/doc/get_ds7
-		${INSTALL_MAN} ${WRKSRC}/README ${PREFIX}/share/doc/get_ds7
-		${INSTALL_MAN} ${WRKSRC}/README.english ${PREFIX}/share/doc/get_ds7
+	${INSTALL_DATA} ${WRKSRC}/ds7_lib.pm ${LOCALBASE}/lib/perl5/site_perl
+	${INSTALL_SCRIPT} ${WRKSRC}/get_ds7.exe ${PREFIX}/bin/get_ds7
+	${INSTALL_DATA_DIR} ${DOCDIR}
+	${INSTALL_MAN} ${WRKSRC}/README ${DOCDIR}
+	${INSTALL_MAN} ${WRKSRC}/README.english ${DOCDIR}
 
 .include "../../mk/bsd.pkg.mk"
