@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/08/26 01:03:09 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2004/11/10 08:56:16 markd Exp $
 
 PKGNAME=		realplayer-8.0.1
 PKGREVISION=		2
@@ -30,7 +30,7 @@ COMMENT=		RealAudio and RealVideo player
 .if ${OPSYS} == "NetBSD"
 .  if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "powerpc"
 DEPENDS+=		suse_x11>=6.1:../../emulators/${SUSE_DIR_PREFIX}_x11
-DEPENDS+=		suse_openmotif>=7.3:../../emulators/suse_openmotif
+DEPENDS+=		suse_openmotif>=7.3:../../emulators/${SUSE_DIR_PREFIX}_openmotif
 .  elif ${MACHINE_ARCH} == "sparc" || ${MACHINE_ARCH} == "sparc64"
 .    if !exists(/emul/svr4/usr/lib/ld.so)
 PKG_FAIL_REASON= "${PKGNAME} requires Solaris libraries - see compat_svr4(8)"
