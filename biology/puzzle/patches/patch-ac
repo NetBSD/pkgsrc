@@ -1,0 +1,22 @@
+$NetBSD: patch-ac,v 1.1.1.1 1999/07/28 19:55:17 rh Exp $
+
+--- ml1.c.orig	Sun May 23 12:07:15 1999
++++ ml1.c	Sun May 23 12:07:36 1999
+@@ -65,7 +65,7 @@
+ }
+ 
+ /* sort site patters of original input data */
+-void radixsort(cmatrix seqchar, ivector ali, int maxspc, int maxsite,
++void my_radixsort(cmatrix seqchar, ivector ali, int maxspc, int maxsite,
+ 	int *numptrn)
+ {
+ 	int i, j, k, l, n, pass;
+@@ -181,7 +181,7 @@
+ 
+ 	convfreq(Freqtpm); /* make all frequencies slightly different */
+ 	ali = new_ivector(Maxsite);
+-	radixsort(Seqchar, ali, Maxspc, Maxsite, &Numptrn);
++	my_radixsort(Seqchar, ali, Maxspc, Maxsite, &Numptrn);
+ 	Seqpat = new_cmatrix(Maxspc, Numptrn);
+ 	constpat = new_ivector(Numptrn);
+ 	Weight = new_ivector(Numptrn);

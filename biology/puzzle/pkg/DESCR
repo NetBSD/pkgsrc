@@ -1,0 +1,20 @@
+PUZZLE is a computer program to reconstruct phylogenetic trees
+from molecular sequence data by maximum likelihood.  It implements
+a fast tree search algorithm, quartet puzzling, that allows
+analysis of large data sets and automatically assigns estimations
+of support to each internal branch.  PUZZLE also computes pairwise
+maximum likelihood distances as well as branch lengths for user
+specified trees.  Branch lengths can also be calculated under the
+clock-assumption.  In addition, PUZZLE offers a novel method,
+likelihood mapping, to investigate the support of a hypothesized
+internal branch without computing an overall tree and to
+visualize the phylogenetic content of a sequence alignment.
+PUZZLE also conducts a number of statistical tests on the data
+set (chi-square test for homogeneity of base composition,
+likelihood ratio to test the clock hypothesis, Kishino-Hasegaw a
+test).  The models of substitution provided by PUZZLE are TN, HKY,
+F84, SH for nucleotides, Dayhoff, JTT, mtREV24, BLOSUM 62 for
+amino acids, and F81 for two-state data.  Rate heterogeneity is
+modelled by a discrete Gamma distribution and by allowing
+invariable sites.  The corresponding parameters can be inferred
+from the data set.
