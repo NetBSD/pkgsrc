@@ -1,5 +1,0 @@
---- /dev/null	Sat Oct  2 21:52:15 1999
-+++ sdr/netbsd/configure	Sat Oct  2 21:56:12 1999
-@@ -0,0 +1,2 @@
-+#!/bin/sh
-+cat Makefile.netbsd ../src/Makefile.template > Makefile
