@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2004/11/13 22:04:53 jlam Exp $
+# $NetBSD: Makefile,v 1.56 2004/12/04 23:09:06 jlam Exp $
 
 DISTNAME=		openoffice-1.1.1
 PKGREVISION=		2
@@ -32,6 +32,7 @@ USE_X11=		# defined
 USE_GNU_TOOLS+=		make
 USE_PERL5=		build
 PTHREAD_OPTS+=		require
+PTHREAD_AUTO_VARS=	yes
 
 CONFLICTS+=		staroffice-[0-9]*
 CONFLICTS+=		openoffice-linux-[0-9]*

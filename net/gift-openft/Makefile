@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/11/12 06:39:20 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2004/12/04 23:09:07 jlam Exp $
 #
 
 DISTNAME=	gift-openft-0.2.1.3
@@ -14,6 +14,7 @@ USE_BUILDLINK3=	yes
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
 
+PTHREAD_AUTO_VARS=	yes
 SHLIBTOOL_OVERRIDE=	libtool
 
 .include "../../devel/zlib/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.108 2004/11/12 06:39:20 jlam Exp $
+# $NetBSD: Makefile,v 1.109 2004/12/04 23:09:06 jlam Exp $
 #
 
 DISTNAME=		ORBit-0.${ORBIT_MAJOR}.${ORBIT_MINOR}
@@ -22,6 +22,7 @@ DEPENDS+=		gindent-[0-9]*:../../devel/gindent
 
 USE_GNU_TOOLS+=		lex make yacc
 USE_LIBTOOL=		YES
+PTHREAD_AUTO_VARS=	YES
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ENV+=	LIBWRAP_PATH=${BUILDLINK_PREFIX.tcp_wrappers}/lib/libwrap.a
