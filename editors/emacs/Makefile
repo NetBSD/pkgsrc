@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 1999/01/31 17:29:32 frueauf Exp $
+# $NetBSD: Makefile,v 1.24 1999/02/04 14:54:25 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.30 1997/12/14 02:03:53 asami Exp
 #
 
@@ -24,9 +24,6 @@ pre-install:
 	@find ${WRKSRC} -type f -name "*.orig" | xargs ${RM} -f
 
 post-install:
-	# needed for archs that CANNOT_DUMP like pmax
-	${LN} -sf ${PREFIX}/share/emacs/20.3/etc/DOC-20.3.1 \
-		${PREFIX}/share/emacs/20.3/etc/DOC
 	chown -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/emacs
 
 .include "../../mk/bsd.pkg.mk"

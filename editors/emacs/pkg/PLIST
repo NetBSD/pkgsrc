@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 1999/01/31 17:29:33 frueauf Exp $
+@comment $NetBSD: PLIST,v 1.18 1999/02/04 14:54:25 frueauf Exp $
 bin/emacs
 bin/emacs-20.3
 bin/emacs-etags
@@ -167,7 +167,6 @@ share/emacs/20.3/etc/MH-E-ONEWS
 share/emacs/20.3/etc/MORE.STUFF
 share/emacs/20.3/etc/MOTIVATION
 share/emacs/20.3/etc/DOC-20.3.1
-share/emacs/20.3/etc/DOC
 share/emacs/20.3/etc/NEWS
 share/emacs/20.3/etc/ONEWS
 share/emacs/20.3/etc/OONEWS
