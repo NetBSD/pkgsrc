@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.4 2001/01/21 04:49:45 jtb Exp $
+$NetBSD: patch-ab,v 1.5 2001/01/29 05:39:59 jtb Exp $
 
 --- base/Makefile.in.orig	Thu Jul 13 20:40:36 2000
 +++ base/Makefile.in
@@ -25,7 +25,7 @@ $NetBSD: patch-ab,v 1.4 2001/01/21 04:49:45 jtb Exp $
 -	$(AR) r $@ $(OBJECTS)
 -	$(RANLIB) $@
 +libctl.la: $(OBJECTS)
-+	$(LIBTOOL) --mode=link $(CC) $(CFLAGS) -o $@ $(OBJECTS.o=.lo) \
++	$(LIBTOOL) --mode=link $(CC) $(CFLAGS) -o $@ $(OBJECTS:.o=.lo) \
 +	$(LIBS) -rpath $(prefix)/lib -version-info 0:0
  
  install:
