@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 1998/06/26 00:26:29 christos Exp $
+# $NetBSD: Makefile,v 1.33 1998/07/13 17:56:27 tv Exp $
 # FreeBSD Id: Makefile,v 1.117 1997/08/16 03:11:52 gpalmer Exp 
 #
 
@@ -38,7 +38,7 @@
 #    SUBDIR += libsocket++
     SUBDIR += mirror
 #    SUBDIR += mpd
-#    SUBDIR += mrtg
+    SUBDIR += mrtg
 #    SUBDIR += moxftp
 #    SUBDIR += ncftp
     SUBDIR += ncftp2
