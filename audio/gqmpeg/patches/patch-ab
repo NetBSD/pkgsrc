@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.16 2001/03/01 17:09:03 jlam Exp $
+$NetBSD: patch-ab,v 1.17 2001/11/27 02:07:10 hubertf Exp $
 
---- configure.orig	Wed Feb 28 02:00:28 2001
+--- configure.orig	Sat Oct 27 00:26:56 2001
 +++ configure
-@@ -2192,7 +2192,6 @@
+@@ -2290,7 +2290,6 @@
    FALSE_FALSE=
  fi
  
@@ -10,7 +10,7 @@ $NetBSD: patch-ab,v 1.16 2001/03/01 17:09:03 jlam Exp $
  
  
  ALL_LINGUAS="cs de fr ja pt_BR"
-@@ -4023,6 +4022,8 @@
+@@ -4121,6 +4120,8 @@
  	< $srcdir/po/POTFILES.in > po/POTFILES
    
  

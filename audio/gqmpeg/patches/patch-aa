@@ -1,19 +1,19 @@
-$NetBSD: patch-aa,v 1.12 2001/01/18 04:04:32 hubertf Exp $
+$NetBSD: patch-aa,v 1.13 2001/11/27 02:07:10 hubertf Exp $
 
---- Makefile.in.orig	Thu Jan 18 04:42:51 2001
+--- Makefile.in.orig	Sat Oct 27 00:29:16 2001
 +++ Makefile.in
-@@ -109,11 +109,11 @@
+@@ -116,11 +116,11 @@
  skindir = $(prefix)/share/gqmpeg/skins
  skin_DATA = SKIN-SPECS
  
--@HAVE_GNOME_TRUE@desktopdir = $(GNOME_DATADIR)/gnome/apps/Multimedia
--@HAVE_GNOME_TRUE@desktop_DATA = gqmpeg.desktop
-+desktopdir = $(datadir)/gnome/apps/Multimedia
+-@HAVE_GNOME_TRUE@desktopdir = @HAVE_GNOME_TRUE@$(GNOME_DATADIR)/gnome/apps/Multimedia
+-@HAVE_GNOME_TRUE@desktop_DATA = @HAVE_GNOME_TRUE@gqmpeg.desktop
++desktopdir = $(GNOME_DATADIR)/gnome/apps/Multimedia
 +desktop_DATA = gqmpeg.desktop
  
--@HAVE_GNOME_TRUE@icondir = $(GNOME_DATADIR)/pixmaps
--@HAVE_GNOME_TRUE@icon_DATA = gqmpeg.png
-+icondir = $(datadir)/pixmaps
+-@HAVE_GNOME_TRUE@icondir = @HAVE_GNOME_TRUE@$(GNOME_DATADIR)/pixmaps
+-@HAVE_GNOME_TRUE@icon_DATA = @HAVE_GNOME_TRUE@gqmpeg.png
++icondir = $(GNOME_DATADIR)/pixmaps
 +icon_DATA = gqmpeg.png
  ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
  mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
