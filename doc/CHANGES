@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3751 2003/10/29 00:45:13 gehenna Exp $
+$NetBSD: CHANGES,v 1.3752 2003/10/29 06:22:14 itojun Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4268,3 +4268,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated dsniff to 2.3nb2 [cube 2003-10-28]
 	Updated pakemon to 0.3.1nb2 [cube 2003-10-28]
 	Updated cvsync to 0.24.9 [gehenna 2003-10-29]
+	Updated cue to 20031027 [itojun 2003-10-29]
