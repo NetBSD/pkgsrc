@@ -1,8 +1,27 @@
-$NetBSD: patch-ao,v 1.1.1.1 2001/03/14 15:59:45 skrll Exp $
+$NetBSD: patch-ao,v 1.2 2001/09/07 14:32:21 drochner Exp $
 
---- kinit/kinit.cpp.orig	Sun Feb 18 15:27:05 2001
-+++ kinit/kinit.cpp
-@@ -81,7 +81,7 @@
+--- kinit/kinit.cpp.orig	Thu Mar 15 01:38:06 2001
++++ kinit/kinit.cpp	Thu Aug  9 16:12:05 2001
+@@ -64,18 +64,8 @@
+ # include <dlfcn.h>
+ #endif
+ 
+-#ifdef RTLD_GLOBAL
+-# define LTDL_GLOBAL	RTLD_GLOBAL
+-#else
+-# ifdef DL_GLOBAL
+-#  define LTDL_GLOBAL	DL_GLOBAL
+-# else
+-#  define LTDL_GLOBAL	0
+-# endif
+-#endif
+ 
+ 
+-extern int lt_dlopen_flag;
+ static int X11fd = -1;
+ static Display *X11display = 0;
+ static const KInstance *s_instance = 0;
+@@ -96,11 +86,10 @@
    pid_t my_pid;
    int n;
    lt_dlhandle handle;
@@ -11,3 +30,24 @@ $NetBSD: patch-ao,v 1.1.1.1 2001/03/14 15:59:45 skrll Exp $
    char **argv;
    int (*func)(int, char *[]);
    int (*launcher_func)(int);
+-  int lt_dlopen_flag;
+ } d;
+ 
+ extern "C" {
+@@ -228,7 +217,6 @@
+            }
+         }
+      }
+-     lt_dlopen_flag = d.lt_dlopen_flag;
+      if (!d.handle )
+      {
+         d.result = 2; // Try execing
+@@ -993,8 +981,6 @@
+    d.maxname = strlen(argv[0]);
+    d.launcher_pid = 0;
+    d.wrapper = 0;
+-   d.lt_dlopen_flag = lt_dlopen_flag;
+-   lt_dlopen_flag |= LTDL_GLOBAL;
+    init_signals();
+ 
+ 
