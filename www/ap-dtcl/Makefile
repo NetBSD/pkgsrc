@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2001/05/24 03:04:05 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2001/06/13 18:16:07 jwise Exp $
 
 DISTNAME=	mod_dtcl-0.10.1
 PKGNAME=	ap-dtcl-0.10.1
@@ -14,7 +14,7 @@ DEPENDS+=	apache{,6}-1.3.*:../../www/apache
 DEPENDS+=	tcl>=8.3.2nb2:../../lang/tcl
 
 TCLSH=		${LOCALBASE}/bin/tclsh
-CPPFLAGS+=	-I${PREFIX}/include/httpd
+CPPFLAGS+=	-I${PREFIX}/include/httpd -DEAPI
 
 MAKE_ENV+=	TCLSH="${TCLSH}"
 MAKE_ENV+=	INCLUDES="${CPPFLAGS}"
