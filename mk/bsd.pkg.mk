@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1271 2003/09/12 10:49:28 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1272 2003/09/12 10:54:49 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -4443,7 +4443,21 @@ print-PLIST:
 BUILD_VIEWS?=	yes
 .endif
 
-PKGVIEWS+=	${DEFAULT_VIEW}
+# DEFAULT_VIEW.${PKGBASE}	default view for ${PKGBASE}
+# VIEWBASE			base location of files at run-time
+#
+DEFAULT_VIEW.${PKGBASE}?=	${DEFAULT_VIEW}
+.if ${PKG_INSTALLATION_TYPE} == "pkgviews"
+.  if empty(DEFAULT_VIEW.${PKGBASE}:M"")
+VIEWBASE=	${LOCALBASE}/${DEFAULT_VIEW.${PKGBASE}}
+.  else
+VIEWBASE=	${LOCALBASE}
+.  endif
+.elif ${PKG_INSTALLATION_TYPE} == "overwrite"
+VIEWBASE=	${PREFIX}
+.endif
+
+PKGVIEWS+=	${DEFAULT_VIEW.${PKGBASE}}
 
 # Fake installation of package so that user can pkg_delete it later.
 # Also, make sure that an installed package is recognized correctly in
