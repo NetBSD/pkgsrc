@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/07/10 08:33:10 adam Exp $
+
+SHA1 (libid3tag-0.15.0b.tar.gz) = 97ea5f410c7c6dd1fe8af55eaa20d73d6c53b18a
+Size (libid3tag-0.15.0b.tar.gz) = 240656 bytes
+SHA1 (patch-aa) = 2103523de3b2703479bba578eb002b33ffff88b0
