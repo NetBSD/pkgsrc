@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2001/10/24 22:10:57 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2002/01/11 10:17:21 skrll Exp $
 
 DISTNAME=		Pacman-0.3-CVS-00-11-17
 PKGNAME=		Pacman-0.3
@@ -8,8 +8,6 @@ MASTER_SITES=		http://dark.x.dtu.dk/~mbn/clanlib/download/snapshots/Games/
 MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.clanlib.org/
 COMMENT=		Pacman, a small demonstration game for ClanLib
-
-DEPENDS+=		autoconf>=2.13:../../devel/autoconf
 
 USE_BUILDLINK_ONLY=	YES
 USE_X11BASE=		yes
@@ -22,8 +20,9 @@ IS_INTERACTIVE=		yes
 .endif
 
 pre-configure:
-	cd ${WRKSRC} && ${LOCALBASE}/bin/autoconf
-	${SED} -e 's@/usr/share@${PREFIX}/share@' < ${WRKSRC}/Sources/config.h.in > ${WRKSRC}/foo
+	${CP} ${FILESDIR}/configure ${WRKSRC}
+	${SED} -e 's@/usr/share@${PREFIX}/share@' < \
+		${WRKSRC}/Sources/config.h.in > ${WRKSRC}/foo
 	${MV} ${WRKSRC}/foo ${WRKSRC}/Sources/config.h.in
 
 pre-build:
