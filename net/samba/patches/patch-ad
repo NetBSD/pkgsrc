@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.1 2000/01/19 00:42:43 jlam Exp $
+$NetBSD: patch-ad,v 1.2 2000/05/02 15:24:10 jlam Exp $
 
---- client/client.c.orig	Wed Nov 10 21:35:59 1999
-+++ client/client.c	Tue Jan 18 15:27:27 2000
-@@ -1588,22 +1588,19 @@
+--- client/client.c.orig	Tue Apr 25 19:06:41 2000
++++ client/client.c	Fri Apr 28 16:29:58 2000
+@@ -1599,22 +1599,19 @@
  	return True;
  }
  
@@ -29,7 +29,7 @@ $NetBSD: patch-ad,v 1.1 2000/01/19 00:42:43 jlam Exp $
  	}
  }
  #  endif 
-@@ -1664,7 +1661,7 @@
+@@ -1675,7 +1672,7 @@
    {"setmode",cmd_setmode,"filename <setmode string> change modes of file",{COMPL_REMOTE,COMPL_NONE}},
    {"help",cmd_help,"[command] give help on a command",{COMPL_NONE,COMPL_NONE}},
    {"?",cmd_help,"[command] give help on a command",{COMPL_NONE,COMPL_NONE}},
@@ -38,7 +38,7 @@ $NetBSD: patch-ad,v 1.1 2000/01/19 00:42:43 jlam Exp $
    {"history",cmd_history,"displays the command history",{COMPL_NONE,COMPL_NONE}},
  #endif
    {"!",NULL,"run a shell command on the local system",{COMPL_NONE,COMPL_NONE}},
-@@ -1724,7 +1721,7 @@
+@@ -1735,7 +1732,7 @@
  	}
  }
  
@@ -47,16 +47,16 @@ $NetBSD: patch-ad,v 1.1 2000/01/19 00:42:43 jlam Exp $
  /****************************************************************************
  wait for keyboard activity, swallowing network packets
  ****************************************************************************/
-@@ -1806,7 +1803,7 @@
+@@ -1814,7 +1811,7 @@
  	pstring line;
  	char *ptr;
  
 -#ifdef HAVE_LIBREADLINE
 +#ifdef HAVE_READLINE
  /* Minimal readline support, 29Jun1999, s.xenitellis@rhbnc.ac.uk */
- 	const int PromptSize = 2048;
- 	char prompt_str[PromptSize];	/* This holds the buffer "smb: \dir1\> " */
-@@ -1817,7 +1814,7 @@
+ #ifdef PROMPTSIZE
+ #undef PROMPTSIZE
+@@ -1828,7 +1825,7 @@
  	while (!feof(stdin)) {
  		fstring tok;
  		int i;
@@ -65,7 +65,7 @@ $NetBSD: patch-ad,v 1.1 2000/01/19 00:42:43 jlam Exp $
  		if ( temp != (char *)NULL )
  		{
  			free( temp );	/* Free memory allocated every time by readline() */
-@@ -2197,7 +2194,7 @@
+@@ -2215,7 +2212,7 @@
  
  	DEBUGLEVEL = 2;
  

@@ -1,22 +1,22 @@
-$NetBSD: patch-aa,v 1.9 1999/11/16 21:01:05 jlam Exp $
+$NetBSD: patch-aa,v 1.10 2000/05/02 15:24:09 jlam Exp $
 
---- Makefile.in.orig	Wed Nov 10 21:35:55 1999
-+++ Makefile.in	Tue Nov 16 10:36:48 1999
-@@ -25,10 +25,11 @@
+--- Makefile.in.orig	Tue Apr 25 19:06:11 2000
++++ Makefile.in	Fri Apr 28 16:26:52 2000
+@@ -25,10 +25,12 @@
  BINDIR = @bindir@
  # we don't use sbindir because we want full compatibility with
  # the previous releases of Samba
 -SBINDIR = @bindir@
 +SBINDIR = @sbindir@
  LIBDIR = @libdir@
--VARDIR = @localstatedir@
+ VARDIR = @localstatedir@
  MANDIR = @mandir@
 +ETCDIR?= $(BASEDIR)/etc
 +LOGDIR?= $(BASEDIR)/log
+ SAMBABOOK = @sambabook@
  
  # The permissions to give the executables
- INSTALLPERMS = 0755
-@@ -36,12 +37,12 @@
+@@ -37,12 +39,12 @@
  # set these to where to find various files
  # These can be overridden by command line switches (see smbd(8))
  # or in smb.conf (see smb.conf(5))
@@ -35,8 +35,16 @@ $NetBSD: patch-aa,v 1.9 1999/11/16 21:01:05 jlam Exp $
  # This is where smbpasswd et al go
  PRIVATEDIR = @privatedir@
  
-@@ -458,8 +459,8 @@
- 	@$(SHELL) $(srcdir)/script/installbin.sh $(INSTALLPERMS) $(BASEDIR) $(SBINDIR) $(LIBDIR) $(VARDIR) $(SPROGS)
+@@ -463,14 +465,14 @@
+ 
+ installdirs:
+ 	$(SHELL) $(srcdir)/install-sh -d -m $(INSTALLPERMS) \
+-	$(BASEDIR) $(SBINDIR) $(BINDIR) $(LIBDIR) $(VARDIR) $(CODEPAGEDIR)
++	$(BASEDIR) $(SBINDIR) $(BINDIR) $(LIBDIR) $(ETCDIR) $(LOGDIR) $(CODEPAGEDIR)
+ 
+ installservers: all installdirs
+-	@$(SHELL) $(srcdir)/script/installbin.sh $(INSTALLPERMS) $(BASEDIR) $(SBINDIR) $(LIBDIR) $(VARDIR) $(SPROGS)
++	@$(SHELL) $(srcdir)/script/installbin.sh $(INSTALLPERMS) $(BASEDIR) $(SBINDIR) $(ETCDIR) $(LOGDIR) $(SPROGS)
  
  installbin: all installdirs
 -	@$(SHELL) $(srcdir)/script/installbin.sh $(INSTALLPERMS) $(BASEDIR) $(SBINDIR) $(LIBDIR) $(VARDIR) $(SPROGS)
@@ -46,7 +54,7 @@ $NetBSD: patch-aa,v 1.9 1999/11/16 21:01:05 jlam Exp $
  
  installscripts: installdirs
  	@$(SHELL) $(srcdir)/script/installscripts.sh $(INSTALLPERMS) $(BINDIR) $(SCRIPTS)
-@@ -484,8 +485,8 @@
+@@ -495,8 +497,8 @@
  	@$(SHELL) $(srcdir)/script/uninstallman.sh $(MANDIR) $(srcdir)
  
  uninstallbin:
