@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2004/08/27 06:29:08 jlam Exp $
+# $NetBSD: options.mk,v 1.6 2004/10/29 07:07:44 xtraeme Exp $
 
 # Global and legacy options
 #
@@ -108,12 +108,12 @@ AUXLIBS+=	-L${BUILDLINK_PREFIX.db4}/lib				\
 ### Support using a MySQL database server for table lookups.
 ###
 .if !empty(PKG_OPTIONS:Mmysql4)
-.  include "../../databases/mysql4-client/buildlink3.mk"
+.  include "../../mk/mysql.buildlink3.mk"
 CCARGS+=	-DHAS_MYSQL
 CCARGS+=	`${BUILDLINK_PREFIX.mysql-client}/bin/mysql_config --include`
 AUXLIBS+=	`${BUILDLINK_PREFIX.mysql-client}/bin/mysql_config --libs`
 .elif !empty(PKG_OPTIONS:Mmysql)
-.  include "../../databases/mysql-client/buildlink3.mk"
+.  include "../../mk/mysql.buildlink3.mk"
 CCARGS+=	-DHAS_MYSQL -I${BUILDLINK_PREFIX.mysql-client}/include/mysql
 AUXLIBS+=	-L${BUILDLINK_PREFIX.mysql-client}/lib/mysql		\
 		${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.mysql-client}/lib/mysql \

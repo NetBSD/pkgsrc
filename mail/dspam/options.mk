@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2004/10/28 13:32:20 wiz Exp $
+# $NetBSD: options.mk,v 1.6 2004/10/29 07:07:44 xtraeme Exp $
 
 .if defined(DSPAM_DELIVERY_AGENT) && !empty(DSPAM_DELIVERY_AGENT:Mcustom)
 DSPAM_DELIVERY_AGENT:=	${DSPAM_DELIVERY_AGENT_ARGS}
@@ -49,7 +49,7 @@ BUILD_DEFS+=		DSPAM_STORAGE_DRIVER
 PKG_OPTIONS:=		${PKG_OPTIONS:Nvirtualusers}
 .endif
 .if !empty(DSPAM_STORAGE_DRIVER:Mmysql)
-.  include "../../databases/mysql4-client/buildlink3.mk"
+.  include "../../mk/mysql.buildlink3.mk"
 CONFIGURE_ARGS+=	--with-storage-driver=mysql_drv
 CONFIGURE_ARGS+=	\
 	--with-mysql-includes=${BUILDLINK_PREFIX.mysql-client}/include/mysql \

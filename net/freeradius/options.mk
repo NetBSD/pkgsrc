@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.1 2004/10/02 12:06:03 adrianp Exp $
+# $NetBSD: options.mk,v 1.2 2004/10/29 07:07:44 xtraeme Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.freeradius
-PKG_SUPPORTED_OPTIONS=	ldap postgresql73 postgresql74 mysql4 mysql3 snmp
+PKG_SUPPORTED_OPTIONS=	ldap postgresql73 postgresql74 mysql snmp
 
 .include "../../mk/bsd.options.mk"
 
@@ -49,19 +49,10 @@ PLIST_SRC+=		${PKGDIR}/PLIST.pgsql
 .endif
 
 ###
-### Use mySQL v4.x for storing user details
+### Use MySQL for storing user details
 ###
-.if !empty(PKG_OPTIONS:Mmysql4)
-.	include "../../databases/mysql4-client/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-rlm_sql_mysql
-PLIST_SRC+=		${PKGDIR}/PLIST.mysql
-.endif
-
-###
-### Use mySQL v3.x for storing user details
-###
-.if !empty(PKG_OPTIONS:Mmysql3)
-.	include "../../databases/mysql-client/buildlink3.mk"
+.if !empty(PKG_OPTIONS:Mmysql)
+.	include "../../mk/mysql.buildlink3.mk"
 CONFIGURE_ARGS+=	--with-rlm_sql_mysql
 PLIST_SRC+=		${PKGDIR}/PLIST.mysql
 .endif
