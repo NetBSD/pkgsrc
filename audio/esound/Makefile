@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.42 2003/07/21 16:30:38 martti Exp $
+# $NetBSD: Makefile,v 1.43 2003/08/01 17:10:40 jmmv Exp $
 
-DISTNAME=		esound-0.2.29
-PKGREVISION=		1
+DISTNAME=		esound-0.2.30
 CATEGORIES=		audio
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/esound/0.2/}
 
@@ -21,6 +20,14 @@ MAKE_ENV+=		AM_CPPFLAGS='-DDEV_DSP=\"${DEVOSSAUDIO}\"'
 
 EGDIR=			${PREFIX}/share/examples/esound
 CONF_FILES=		${EGDIR}/esd.conf ${PKG_SYSCONFDIR}/esd.conf
+
+.include "../../mk/bsd.prefs.mk"
+
+.if defined(USE_INET6) && !empty(USE_INET6:M[Yy][Ee][Ss])
+CONFIGURE_ARGS+=	--enable-ipv6
+.else
+CONFIGURE_ARGS+=	--disable-ipv6
+.endif
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/esound
