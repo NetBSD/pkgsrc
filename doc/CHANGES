@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8618 2005/01/05 12:28:41 adam Exp $
+$NetBSD: CHANGES,v 1.8619 2005/01/05 12:30:37 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -111,3 +111,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated SDL_image to 1.2.4 [adam 2005-01-05]
 	Updated SDL_mixer to 1.2.6 [adam 2005-01-05]
 	Updated SDL_gfx to 2.0.13 [adam 2005-01-05]
+	Updated SDL_ttf to 2.0.7 [adam 2005-01-05]
