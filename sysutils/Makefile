@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.221 2004/02/28 17:11:10 uebayasi Exp $
+# $NetBSD: Makefile,v 1.222 2004/02/29 05:58:52 uebayasi Exp $
 
 COMMENT=	System utilities
 
 SUBDIR+=	GWLib
 SUBDIR+=	acpi-iasl
+SUBDIR+=	acpidump
 SUBDIR+=	adjustkernel
 SUBDIR+=	amanda
 SUBDIR+=	amanda-client
