@@ -1,13 +1,6 @@
-@comment $NetBSD: PLIST,v 1.7 2002/12/09 16:01:36 tron Exp $
+@comment $NetBSD: PLIST,v 1.7.2.1 2003/03/07 07:46:37 jmc Exp $
 bin/snort
-etc/snort/SnortCommonMIB.txt
-etc/snort/SnortIDAlertMIB.txt
-etc/snort/classification.config
-etc/snort/gen-msg.map
-etc/snort/reference.config
-etc/snort/sid
-etc/snort/sid-msg.map
-etc/snort/snort.conf
+etc/rc.d/snort
 man/man8/snort.8
 share/doc/snort/AUTHORS
 share/doc/snort/BUGS
@@ -26,6 +19,11 @@ share/doc/snort/RULES.todo
 share/doc/snort/SnortUsersManual.pdf
 share/doc/snort/TODO
 share/doc/snort/USAGE
+share/examples/snort/classification.config
+share/examples/snort/reference.config
+share/examples/snort/snort.conf.default
+share/snort/rules/SnortCommonMIB.txt
+share/snort/rules/SnortIDAlertMIB.txt
 share/snort/rules/attack-responses.rules
 share/snort/rules/backdoor.rules
 share/snort/rules/bad-traffic.rules
@@ -38,6 +36,7 @@ share/snort/rules/experimental.rules
 share/snort/rules/exploit.rules
 share/snort/rules/finger.rules
 share/snort/rules/ftp.rules
+share/snort/rules/gen-msg.map
 share/snort/rules/icmp-info.rules
 share/snort/rules/icmp.rules
 share/snort/rules/imap.rules
@@ -52,12 +51,15 @@ share/snort/rules/oracle.rules
 share/snort/rules/other-ids.rules
 share/snort/rules/p2p.rules
 share/snort/rules/policy.rules
+share/snort/rules/pop2.rules
 share/snort/rules/pop3.rules
 share/snort/rules/porn.rules
 share/snort/rules/rpc.rules
 share/snort/rules/rservices.rules
 share/snort/rules/scan.rules
 share/snort/rules/shellcode.rules
+share/snort/rules/sid
+share/snort/rules/sid-msg.map
 share/snort/rules/smtp.rules
 share/snort/rules/snmp.rules
 share/snort/rules/sql.rules
@@ -74,8 +76,6 @@ share/snort/rules/web-misc.rules
 share/snort/rules/web-php.rules
 share/snort/rules/x11.rules
 @dirrm share/snort/rules
-@dirrm share/snort
+@dirrm share/examples/snort
 @dirrm share/doc/snort
-@dirrm etc/snort
-@exec install -d -m 700 -o root -g wheel /var/log/snort
-@unexec ${RMDIR} /var/log/snort 2>/dev/null || ${TRUE}
+@dirrm share/snort
