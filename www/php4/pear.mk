@@ -1,4 +1,4 @@
-# $NetBSD: pear.mk,v 1.3 2004/03/17 19:07:51 kristerw Exp $
+# $NetBSD: pear.mk,v 1.4 2004/04/02 21:54:49 jdolecek Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install pear packages.
@@ -33,17 +33,25 @@ MASTER_SITES+=	${MASTER_SITE_PEAR_PACKAGE}
 PEAR_CMD=	${PREFIX}/bin/pear
 PEAR_LIB=	lib/php
 
+_PEAR_PKG=	${DISTNAME:C/-.*//}
+
 # Changed to not use :tl modifier since that's currently NetBSD 1.6-only
-_PEAR_PKG!=	${ECHO} ${DISTNAME:C/-.*//} | ${TR} '[A-Z]' '[a-z]'
+_PEAR_PKG_LC!=	${ECHO} ${_PEAR_PKG} | ${TR} '[A-Z]' '[a-z]'
 
 # Dynamic PLIST
 # The package.xml 'parsing' is a bit crude, but enough for now. Eventually
 # should write a small PHP script for this, using real XML parser.
 PEAR_GENERATE_PLIST=	\
 	${ECHO} "@comment The following lines are automatically generated"; \
-	${ECHO} "${PEAR_LIB}/.registry/${_PEAR_PKG}.reg";	\
+	${ECHO} "${PEAR_LIB}/.registry/${_PEAR_PKG_LC}.reg";	\
 	${FGREP} '<file role="php"' ${WRKDIR}/package.xml | ${SED} -e 's,.*<file role="php",<,' -e 's,<.*baseinstalldir="\([^"]*\)",\1/<,' -e 's,<.* name=",,' -e 's,".*,,' -e "s,^/*,${PEAR_LIB}/,"; \
-	${FGREP} '<file role="php"' ${WRKDIR}/package.xml | ${SED} -e 's,.*<file role="php",<,' -e 's,<.*baseinstalldir="\([^"]*\)",\1/<,' -e 's,<.* name=",,' -e 's,".*,,' -e 's,//*,/,g' -e 's,/[^/]*$$,,' | ${FGREP} '/' | ${SORT} -ru | ${SED} -e "s,^,@dirrm ${PEAR_LIB}/,";
+	${FGREP} '<file role="php"' ${WRKDIR}/package.xml | ${SED} -e 's,.*<file role="php",<,' -e 's,<.*baseinstalldir="\([^"]*\)",\1/<,' -e 's,<.* name=",,' -e 's,".*,,' -e 's,//*,/,g' -e 's,/[^/]*$$,,' | ${FGREP} '/' | ${SORT} -ru | ${SED} -e "s,^,@dirrm ${PEAR_LIB},"; \
+	${FGREP} '<file role="doc"' ${WRKDIR}/package.xml | ${SED} -e 's,.*<file role="doc",<,' -e 's,<.*baseinstalldir="\([^"]*\)",\1/<,' -e 's,<.* name=",,' -e 's,".*,,' -e "s,^/*,${PEAR_LIB}/doc/${_PEAR_PKG}/,"; \
+	${FGREP} '<file role="doc"' ${WRKDIR}/package.xml | ${SED} -e 's,.*<file role="doc",<,' -e 's,<.*baseinstalldir="\([^"]*\)",\1/<,' -e 's,<.* name=",,' -e 's,".*,,' -e 's,//*,/,g' -e 's,/[^/]*$$,,' | ${FGREP} '/' | ${SORT} -ru | ${SED} -e "s,^,@dirrm ${PEAR_LIB}/doc/${_PEAR_PKG},"; \
+	${FGREP} -q '<file role="doc"' ${WRKDIR}/package.xml && echo "@dirrm ${PEAR_LIB}/doc/${_PEAR_PKG}"; \
+	${FGREP} '<file role="test"' ${WRKDIR}/package.xml | ${SED} -e 's,.*<file role="test",<,' -e 's,<.*baseinstalldir="\([^"]*\)",\1/<,' -e 's,<.* name=",,' -e 's,".*,,' -e "s,^/*,${PEAR_LIB}/test/${_PEAR_PKG}/,"; \
+	${FGREP} '<file role="test"' ${WRKDIR}/package.xml | ${SED} -e 's,.*<file role="test",<,' -e 's,<.*baseinstalldir="\([^"]*\)",\1/<,' -e 's,<.* name=",,' -e 's,".*,,' -e 's,//*,/,g' -e 's,/[^/]*$$,,' | ${FGREP} '/' | ${SORT} -ru | ${SED} -e "s,^,@dirrm ${PEAR_LIB}/test/${_PEAR_PKG},"; \
+	${FGREP} -q '<file role="test"' ${WRKDIR}/package.xml && echo "@dirrm ${PEAR_LIB}/test/${_PEAR_PKG}";
 GENERATE_PLIST+=	${PEAR_GENERATE_PLIST}
 
 NO_BUILD=	# defined
