@@ -1,4 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:26:12 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/06/20 19:28:01 jlam Exp $
+bin/filcon
+bin/rp2gen
 include/rpc2/errors.h
 include/rpc2/errorsdefs.h
 include/rpc2/fail.h
@@ -7,21 +9,19 @@ include/rpc2/multi.h
 include/rpc2/rpc2.h
 include/rpc2/se.h
 include/rpc2/sftp.h
-@dirrm include/rpc2
-lib/librpc2.a
-lib/librpc2.la
-lib/librpc2.so
-lib/librpc2.so.4
-lib/librpc2.so.4.1
-lib/libse.a
-lib/libse.la
-lib/libse.so
-lib/libse.so.4
-lib/libse.so.4.1
 lib/libfail.a
 lib/libfail.la
 lib/libfail.so
 lib/libfail.so.4
-lib/libfail.so.4.1
-bin/rp2gen
-bin/filcon
+lib/libfail.so.4.3
+lib/librpc2.a
+lib/librpc2.la
+lib/librpc2.so
+lib/librpc2.so.4
+lib/librpc2.so.4.3
+lib/libse.a
+lib/libse.la
+lib/libse.so
+lib/libse.so.4
+lib/libse.so.4.3
+@dirrm include/rpc2
