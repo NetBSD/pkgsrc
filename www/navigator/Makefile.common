@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.45 2002/04/05 09:25:41 tron Exp $
+# $NetBSD: Makefile.common,v 1.46 2002/04/05 09:33:21 tron Exp $
 #
 # Common include file for communicator and navigator packages
 
@@ -210,3 +210,5 @@ do-install:
 .endif
 
 .endif
+
+.include "../../emulators/suse_linux/Makefile.application"
