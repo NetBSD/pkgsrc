@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.403 2002/10/29 19:12:08 heinz Exp $
+$NetBSD: CHANGES,v 1.404 2002/10/29 22:37:08 rh Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3439,3 +3439,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated gcdmaster to 1.1.7 [drochner 2002-10-29]
 	Updated frotz to 2.43 [dillo 2002-10-29]
 	Updated rocksndiamonds to 2.1.1nb1 [heinz 2002-10-29]
+	Updated gtk-gnutella to 0.91 [rh 2002-10-29]
