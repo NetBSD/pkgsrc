@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/11/27 23:36:42 taya Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/01/20 19:29:38 snj Exp $
 bin/${MOZILLA}
 @comment begin PROGRAMS
 lib/${MOZILLA}/${MOZILLA_BIN}
@@ -123,7 +123,6 @@ lib/${MOZILLA}/libxlibrgb.${SO_SUFFIX}
 lib/${MOZILLA}/libxpcom.${SO_SUFFIX}
 lib/${MOZILLA}/libxpcom_compat.${SO_SUFFIX}
 lib/${MOZILLA}/libxpistub.${SO_SUFFIX}
-lib/${MOZILLA}/plugins/libnullplugin.${SO_SUFFIX}
 @comment end DSO
 @comment begin DATA
 lib/${MOZILLA}/LICENSE
