@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.6 2000/08/06 01:11:38 fredb Exp $
+$NetBSD: patch-ab,v 1.7 2000/10/15 12:56:25 fredb Exp $
 
 --- configure.in.orig	Fri Aug  4 05:21:20 2000
 +++ configure.in	Fri Aug  4 13:56:59 2000
@@ -27,6 +27,62 @@ $NetBSD: patch-ab,v 1.6 2000/08/06 01:11:38 fredb Exp $
    ssllib="-L/usr/lib -lssl -lcrypto"
  fi
  dnl find the ssl include dir (empirical)
+-if test -d '/usr/local/ssl/include'; then
++if test -d "${prefix}/include/openssl"; then
++  sslinc="-I${prefix}/include -I${prefix}/include/openssl"
++elif test -d '/usr/local/ssl/include'; then
+   sslinc="-I/usr/local/ssl/include"
+ elif test -d '/usr/local/openssl/include'; then
+   sslinc="-I/usr/local/openssl/include"
+--- configure.orig	Fri Aug  4 08:28:00 2000
++++ configure	Mon Oct  9 14:10:23 2000
+@@ -6790,8 +6790,22 @@
+ EOF
+ 
+     if test "x$withval" = "xyes"; then
++      cat > conftest.$ac_ext <<EOF
++#line 6795 "configure"
++#include "confdefs.h"
++
++int main() {
++ regexec(); 
++; return 0; }
++EOF
++if { (eval echo configure:6802: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
++  :
++else
++  echo "configure: failed program was:" >&5
++  cat conftest.$ac_ext >&5
++  rm -rf conftest*
+       echo $ac_n "checking for regexec in -lrx""... $ac_c" 1>&6
+-echo "configure:6795: checking for regexec in -lrx" >&5
++echo "configure:6809: checking for regexec in -lrx" >&5
+ ac_lib_var=`echo rx'_'regexec | sed 'y%./+-%__p_%'`
+ if eval "test \"`echo '$''{'ac_cv_lib_$ac_lib_var'+set}'`\" = set"; then
+   echo $ac_n "(cached) $ac_c" 1>&6
+@@ -6830,6 +6844,8 @@
+   echo "$ac_t""no" 1>&6
+ fi
+ 
++fi
++rm -f conftest*
+     else
+        echo $ac_n "checking for $withval""... $ac_c" 1>&6
+ echo "configure:6836: checking for $withval" >&5
+@@ -7270,13 +7286,17 @@
+ 
+ 
+ echo $ac_n "checking whether we can find OpenSSL""... $ac_c" 1>&6
+-echo "configure:7274: checking whether we can find OpenSSL" >&5
+-if test -d '/usr/local/ssl/lib'; then
++echo "configure:7290: checking whether we can find OpenSSL" >&5
++if test -f "${prefix}/lib/libssl.a" -a -f "${prefix}/lib/libcrypto.a"; then
++  ssllib="-L${prefix}/lib -lssl -lcrypto"
++elif test -d '/usr/local/ssl/lib'; then
+   ssllib="-L/usr/local/ssl/lib -lssl -lcrypto"
+ else
+   ssllib="-L/usr/lib -lssl -lcrypto"
+ fi
 -if test -d '/usr/local/ssl/include'; then
 +if test -d "${prefix}/include/openssl"; then
 +  sslinc="-I${prefix}/include -I${prefix}/include/openssl"
