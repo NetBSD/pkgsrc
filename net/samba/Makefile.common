@@ -1,4 +1,10 @@
-# $NetBSD: Makefile.common,v 1.9 2003/09/14 22:15:21 jlam Exp $
+# $NetBSD: Makefile.common,v 1.10 2003/09/16 09:28:20 jlam Exp $
+#
+# NOTE: This file is included by:
+#
+#	net/samba/Makefile
+#	security/pam-smbpass/Makefile
+#	security/winbind/Makefile
 
 DISTNAME=		samba-${SAMBA_DIST_VERS}
 SAMBA_DIST_VERS=	2.2.8a
