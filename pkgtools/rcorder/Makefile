@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2004/08/27 03:06:07 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2004/08/27 17:08:07 reed Exp $
 #
 
 DISTNAME=		rcorder-20031013
-CATEGORIES=		pkgtools
+CATEGORIES=		pkgtools sysutils
 MASTER_SITES=		# empty
 DISTFILES=		# empty
 
