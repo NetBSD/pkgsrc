@@ -1,4 +1,4 @@
-dnl $Id: configure.ac,v 1.2 2003/06/16 16:11:36 seb Exp $
+dnl $Id: configure.ac,v 1.3 2003/07/20 19:55:01 seb Exp $
 dnl Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.57)
 AC_INIT([nbsd-digest],[20021220],[agc@netbsd.org])
@@ -25,7 +25,7 @@ AC_SUBST(AUTOHEADER)
 dnl Checks for header files.
 AC_HEADER_STDC
 AC_CHECK_HEADERS([errno.h fcntl.h inttypes.h locale.h machine/endian.h])
-AC_CHECK_HEADERS([sys/bitypes.h sys/byteorder.h sys/cdefs.h])
+AC_CHECK_HEADERS([stdlib.h sys/bitypes.h sys/byteorder.h sys/cdefs.h])
 AC_CHECK_HEADERS([sys/endian.h sys/file.h sys/param.h])
 
 dnl Checks for typedefs, structures, and compiler characteristics.
@@ -49,7 +49,6 @@ AC_CHECK_TYPES([long long, int8_t, int16_t, int32_t, int64_t, u_int8_t, u_int16_
 AC_C_BIGENDIAN
 
 # Checks for library functions.
-AC_FUNC_MALLOC
 AC_FUNC_STRERROR_R
 AC_FUNC_VPRINTF
 AC_CHECK_FUNCS([bcopy bzero memset memcpy setlocale])
