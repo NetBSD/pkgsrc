@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/02/20 00:23:03 xtraeme Exp $
+# $NetBSD: Makefile,v 1.3 2005/02/20 00:52:46 xtraeme Exp $
 #
 
 DISTNAME=	libaura-2.0
@@ -19,4 +19,11 @@ SUBST_FILES.prefix=	Makefile
 SUBST_SED.prefix=	-e "s,/usr/local,${PREFIX},g"
 SUBST_MESSAGE.prefix=	"Fixing hardcoded paths."
 
+INSTALLATION_DIRS=	include/aura lib
+
+do-install:
+	${INSTALL_DATA} ${WRKSRC}/*.h ${PREFIX}/include/aura
+	${INSTALL_LIB} ${WRKSRC}/libaura.so* ${PREFIX}/lib
+	${INSTALL_LIB} ${WRKSRC}/*.a ${PREFIX}/lib
+	
 .include "../../mk/bsd.pkg.mk"
