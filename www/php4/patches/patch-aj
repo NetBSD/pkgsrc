@@ -1,19 +1,20 @@
-$NetBSD: patch-aj,v 1.5 2003/09/01 10:17:39 cjep Exp $
---- ext/gettext/gettext.c.orig	2003-08-30 21:56:34.000000000 +0200
-+++ ext/gettext/gettext.c	2003-08-30 21:57:13.000000000 +0200
-@@ -58,6 +58,11 @@
- };
- /* }}} */
+$NetBSD: patch-aj,v 1.6 2003/11/08 06:58:10 jdolecek Exp $
+
+--- ext/gettext/gettext.c.orig	2003-09-24 04:08:48.000000000 +0200
++++ ext/gettext/gettext.c	2003-11-07 21:47:25.000000000 +0100
+@@ -31,6 +31,11 @@
+ #include "ext/standard/info.h"
+ #include "php_gettext.h"
  
-+#define CHECK(a) if (a == NULL) { \
-+	fprintf(stderr, "%s, %d: NULL value\n", __FILE__, __LINE__); \
-+	a = ""; \
++#define CHECK(a) if (a == NULL) {										\
++		fprintf(stderr, "%s, %d: NULL value\n", __FILE__, __LINE__);	\
++		a = "";															\
 +}
 +
- zend_module_entry php_gettext_module_entry = {
-     STANDARD_MODULE_HEADER,
- 	"gettext",
-@@ -104,6 +109,7 @@
+ /* {{{ php_gettext_functions[]
+  */
+ function_entry php_gettext_functions[] = {
+@@ -103,6 +108,7 @@
  
  	retval = textdomain(domain_name);
  
@@ -21,7 +22,7 @@ $NetBSD: patch-aj,v 1.5 2003/09/01 10:17:39 cjep Exp $
  	RETURN_STRING(retval, 1);
  }
  /* }}} */
-@@ -141,6 +147,7 @@
+@@ -140,6 +146,7 @@
  
  	msgstr = dgettext(Z_STRVAL_PP(domain_name), Z_STRVAL_PP(msgid));
  
@@ -29,7 +30,7 @@ $NetBSD: patch-aj,v 1.5 2003/09/01 10:17:39 cjep Exp $
  	RETURN_STRING(msgstr, 1);
  }
  /* }}} */
-@@ -161,6 +168,7 @@
+@@ -160,6 +167,7 @@
  
  	msgstr = dcgettext(Z_STRVAL_PP(domain_name), Z_STRVAL_PP(msgid), Z_LVAL_PP(category));
  
@@ -37,7 +38,7 @@ $NetBSD: patch-aj,v 1.5 2003/09/01 10:17:39 cjep Exp $
  	RETURN_STRING(msgstr, 1);
  }
  /* }}} */
-@@ -191,6 +199,7 @@
+@@ -190,6 +198,7 @@
  
  	retval = bindtextdomain(Z_STRVAL_PP(domain_name), dir_name);
  
