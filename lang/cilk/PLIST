@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/05/04 00:37:28 jtb Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/07/04 19:59:51 seb Exp $
 bin/cilk
 include/cilk/cilk-cilk2c-pre.h
 include/cilk/cilk-cilk2c.h
@@ -7,9 +7,7 @@ include/cilk/cilk-lib.h
 include/cilk/cilk-sysdep.h
 include/cilk/cilk.h
 include/cilk/gcc-builtin.h
-@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/cilk-faq.info
 info/cilk-faq.info
-@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/cilk-faq.info
 lib/cilk/cilk2c
 lib/cilk/libcilkrt0.a
 lib/cilk/specs
