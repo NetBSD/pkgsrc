@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/09/02 07:19:20 xtraeme Exp $
+
+--- src/sm.c.orig	2003-09-02 04:09:39.000000000 +0200
++++ src/sm.c	2003-09-02 04:10:05.000000000 +0200
+@@ -25,6 +25,7 @@
+ #include "main.h"
+ #include <X11/SM/SMlib.h>
+ #include <stdio.h>	/* only for printf */
++#include <sys/types.h> /* for getuid and getpwuid */
+ #include <sys/select.h>	/* for select */
+ #include <stdlib.h>	/* for free */
+ #include <string.h>	/* for strlen */
