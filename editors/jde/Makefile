@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/01/12 02:26:16 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2003/01/24 04:20:24 grant Exp $
 #
 
 DISTNAME=       jde-2.3.2
@@ -34,13 +34,13 @@ post-extract:
 
 do-install:
 	@${INSTALL_DATA_DIR} ${EMACS_LISPPREFIX}/jde
-	@cd ${WRKDIR}/${DISTNAME}/doc; \
-		${PAX} -rw * ${PREFIX}/share/doc/jde -s',^src.*,,' \
-			-s',.*\.nosearch.*,,'
-	@cd ${WRKDIR}/${DISTNAME}; \
-		${PAX} -rw java ${PREFIX}/share/jde -s',^java/classes.*,,' \
-			-s',^java/src.*,,' -s',.*\.nosearch.*,,'
-	@cd ${WRKDIR}/${DISTNAME}; \
+	@cd ${WRKDIR}/${DISTNAME}/doc &&				\
+		${PAX} -s',^src.*,,' -s',.*\.nosearch.*,,'		\
+			-rw * ${PREFIX}/share/doc/jde
+	@cd ${WRKDIR}/${DISTNAME} &&					\
+		${PAX} -s',^java/classes.*,,' -s',^java/src.*,,'	\
+			-s',.*\.nosearch.*,,' -rw java ${PREFIX}/share/jde
+	@cd ${WRKDIR}/${DISTNAME} &&					\
 		${PAX} -rw lisp ${EMACS_LISPPREFIX}/jde
 
 .include "../../mk/java-vm.mk"
