@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2004/01/24 09:12:10 xtraeme Exp $
+# $NetBSD: Makefile,v 1.3 2004/02/02 14:08:27 xtraeme Exp $
 
 DISTNAME=	# empty
 PKGNAME=	XFree86-${XF_VER}
+PKGREVISION=	1
 CATEGORIES=	meta-pkgs x11
 MASTER_SITES=	${MASTER_SITE_XFREE}
 DISTFILES=	# empty
@@ -35,5 +36,4 @@ do-install:
 	# empty
 
 .include "../../meta-pkgs/XFree86/Makefile.common"
-
 .include "../../mk/bsd.pkg.mk"

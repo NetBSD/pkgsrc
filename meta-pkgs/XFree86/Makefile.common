@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2004/01/31 19:08:47 xtraeme Exp $
+# $NetBSD: Makefile.common,v 1.3 2004/02/02 14:08:28 xtraeme Exp $
 #
 # XBUILD_DIRS is the group of directories under ${WRKSRC} that will 
 #   be built in.
@@ -26,6 +26,7 @@ USE_GNU_TOOLS+= make
 WRKSRC?=	${WRKDIR}/xc
 USE_X11BASE=	YES
 USE_X11_LINKS=	NO
+X11ROOT=	${X11PREFIX}/X11R6
 
 MASTER_SITE_XFREE+=	\
 	ftp://archive.progeny.com/XFree86/${XF_VER}/source/ \
@@ -36,7 +37,7 @@ MASTER_SITE_XFREE+=	\
 
 XF_VER=	4.3.0
 
-IMAKE=		${X11PREFIX}/bin/imake
+IMAKE=		${X11ROOT}/bin/imake
 
 XINSTALL_DIRS?=	${XBUILD_DIRS}
 _XINCLUDE_DIRS=	include ${XBUILD_DIRS} ${XINCLUDE_DIRS}
@@ -55,20 +56,20 @@ post-extract:
 		-e "s|@MAKE@|${MAKE_PROGRAM}|g" \
 		-e "s|@MAKE_PROGRAM@|${MAKE_PROGRAM}|g" \
 		-e "s|@IMAKE@|${IMAKE}|g" \
-		-e "s|@RMAN@|${X11PREFIX}/bin/rman|g" \
-		-e "s|@MKHTMLINDEX@|${X11PREFIX}/bin/mkhtmlindex|g" \
-		-e "s|@GCCMAKEDEP@|${X11PREFIX}/bin/gccmakedep|g" \
-		-e "s|@MAKEDEPEND@|${X11PREFIX}/bin/makedepend|g" \
-		-e "s|@REVPATH@|${X11PREFIX}/bin/revpath|g" \
-		-e "s|@PREFIX@|${X11PREFIX}|g" \
+		-e "s|@RMAN@|${X11ROOT}/bin/rman|g" \
+		-e "s|@MKHTMLINDEX@|${X11ROOT}/bin/mkhtmlindex|g" \
+		-e "s|@GCCMAKEDEP@|${X11ROOT}/bin/gccmakedep|g" \
+		-e "s|@MAKEDEPEND@|${X11ROOT}/bin/makedepend|g" \
+		-e "s|@REVPATH@|${X11ROOT}/bin/revpath|g" \
+		-e "s|@PREFIX@|${X11ROOT}|g" \
 		-e "s|@LOCALBASE@|${LOCALBASE}|g" \
 		-e "s|@LDFLAGS@|${LDFLAGS}|g" \
 		${FILESDIR}/host.def > ${WRKSRC}/config/cf/host.def
-	@${LN} -sf ${PREFIX}/bin/gccmakedep ${WRKSRC}/config/util
-	@${LN} -sf ${PREFIX}/bin/revpath ${WRKSRC}/config/util
-	@${LN} -sf ${PREFIX}/bin/pswrap ${WRKSRC}/config/pswrap
-	@${LN} -sf ${PREFIX}/lib/X11/config/version.def ${WRKSRC}/config/cf
-	@${LN} -sf ${PREFIX}/lib/X11/config/date.def ${WRKSRC}/config/cf
+	@${LN} -sf ${X11ROOT}/bin/gccmakedep ${WRKSRC}/config/util
+	@${LN} -sf ${X11ROOT}/bin/revpath ${WRKSRC}/config/util
+	@${LN} -sf ${X11ROOT}/bin/pswrap ${WRKSRC}/config/pswrap
+	@${LN} -sf ${X11ROOT}/lib/X11/config/version.def ${WRKSRC}/config/cf
+	@${LN} -sf ${X11ROOT}/lib/X11/config/date.def ${WRKSRC}/config/cf
 .if exists(${FILESDIR}/ucs2any.c)
 	@${CP} ${FILESDIR}/ucs2any.c ${WRKSRC}/fonts/util
 .endif
@@ -155,4 +156,4 @@ do-install:
 	done
 .endif
 
-.endif # ! NO_XFREE86_TARGETS
+.endif # NO_XFREE86_TARGETS

@@ -1,10 +1,10 @@
 /*
- * $NetBSD: host.def,v 1.1.1.1 2004/01/24 08:43:29 xtraeme Exp $
+ * $NetBSD: host.def,v 1.2 2004/02/02 14:14:45 xtraeme Exp $
  *
  * XFree86 packages for pkgsrc system
  *
  */ 
 
-#define ProjectRoot @PREFIX@
+#define ProjectRoot @PREFIX@/X11R6
 #define BuildHtmlManPages NO
 #define MakeCmd @MAKE@
