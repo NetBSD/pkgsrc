@@ -1,6 +1,9 @@
 #!/bin/sh
 #
-# $NetBSD: innd.sh,v 1.8 2001/02/08 16:23:06 tron Exp $
+# $NetBSD: innd.sh,v 1.9 2001/02/20 15:10:53 tron Exp $
+#
+# PROVIDE: inn
+# REQUIRE: DAEMON
 
 if [ -x @@PREFIX@@/inn/bin/rc.news -a -s @@INN_DATA_DIR@@/db/active ]
 then
