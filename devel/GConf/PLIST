@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.4 2002/02/15 10:12:34 skrll Exp $
+@comment $NetBSD: PLIST,v 1.5 2002/03/14 11:00:37 wiz Exp $
 bin/gconf-config
 bin/gconf-config-1
 bin/gconfd-1
 bin/gconftool
 bin/gconftool-1
+@unexec cmp -s %D/etc/gconf/1/path.example %D/etc/gconf/1/path && rm %D/etc/gconf/1/path
 etc/gconf/1/path.example
 @exec test -f %D/etc/gconf/1/path || cp -p %D/%F %D/etc/gconf/1/path
 etc/gconf/schemas/desktop.schemas
