@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7570 2004/10/26 01:28:09 wiz Exp $
+$NetBSD: CHANGES,v 1.7571 2004/10/26 05:43:23 snj Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4870,3 +4870,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated mozilla-gtk2 to 1.7.3nb1 [jmmv 2004-10-25]
 	Added gthumb-2.6.0.1 [minskim 2004-10-25]
 	Updated lcms to 1.13 [minskim 2004-10-25]
+	Updated bogofilter to 0.92.8 [snj 2004-10-26]
