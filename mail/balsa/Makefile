@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2004/04/25 04:16:43 xtraeme Exp $
+# $NetBSD: Makefile,v 1.46 2004/07/01 08:28:11 cjep Exp $
 #
 
 DISTNAME=		balsa-1.4.3
@@ -31,6 +31,7 @@ CONFIGURE_ARGS+=        --with-ssl=${BUILDLINK_PREFIX.openssl}
 .include "../../devel/libtool/buildlink3.mk"
 .include "../../devel/libproplist/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
+.include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf/buildlink3.mk"
 .include "../../mail/libesmtp/buildlink3.mk"
 .include "../../print/gnome-print/buildlink3.mk"
