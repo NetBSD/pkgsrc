@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2003/07/13 13:53:54 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2003/07/17 22:56:24 grant Exp $
 #
 
 DISTNAME=		Eterm-0.9.2
@@ -13,7 +13,7 @@ SITES_Eterm-bg-scale-1.tar.gz= ${MASTER_SITE_BACKUP}
 SITES_Eterm-bg-scale-2.tar.gz= ${MASTER_SITE_BACKUP}
 SITES_Eterm-bg-tile.tar.gz=    ${MASTER_SITE_BACKUP}
 
-MAINTAINER=		tech-pkg@netbsd.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.eterm.org/
 COMMENT=		Enlightened terminal emulator for the X Window System
 

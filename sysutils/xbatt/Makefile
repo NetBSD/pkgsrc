@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/01/11 15:21:48 cjep Exp $
+# $NetBSD: Makefile,v 1.13 2003/07/17 22:53:57 grant Exp $
 #
 
 DISTNAME=	xbatt-1.3pr1
@@ -8,7 +8,7 @@ WRKSRC=		${WRKDIR}/xbatt-1.3
 CATEGORIES=	sysutils x11
 MASTER_SITES=	http://www2.clave.gr.jp/~eto/xbatt/
 
-MAINTAINER=	hubertf@netbsd.org
+MAINTAINER=	hubertf@NetBSD.org
 HOMEPAGE=	http://www2.clave.gr.jp/~eto/xbatt/	# Not really
 COMMENT=	Displays battery status of your notebook via APM
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/06/30 08:59:03 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/17 22:53:22 grant Exp $
 
 DISTNAME=	bash-doc-2.05b
 PKGNAME=	bash-doc-2.05.2
@@ -7,7 +7,7 @@ CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_GNU:=bash/} \
 		ftp://ftp.cwru.edu/pub/bash/
 
-MAINTAINER=	wiz@netbsd.org
+MAINTAINER=	wiz@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/bash/bash.html
 COMMENT=	documentation for the GNU Bourne Again Shell
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/06/02 01:17:02 jschauma Exp $
+# $NetBSD: Makefile,v 1.13 2003/07/17 22:53:20 grant Exp $
 #
 
 DISTNAME=	tripwire-1.2
@@ -7,7 +7,7 @@ CATEGORIES=	security
 MASTER_SITES=	ftp://coast.cs.purdue.edu/pub/tools/unix/ids/tripwire/
 EXTRACT_SUFX=	.tar.Z
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.cerias.purdue.edu/coast/coast-library.html
 COMMENT=	File and directory integrity checker
 

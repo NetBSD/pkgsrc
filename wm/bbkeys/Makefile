@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.9 2003/05/22 15:39:31 jschauma Exp $
+# $NetBSD: Makefile,v 1.10 2003/07/17 22:55:09 grant Exp $
 #
 
 DISTNAME=	bbkeys-0.8.6
 CATEGORIES=	x11 wm
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=bbkeys/}
 
-MAINTAINER=	jschauma@netbsd.org
+MAINTAINER=	jschauma@NetBSD.org
 HOMEPAGE=	http://bbkeys.sourceforge.net/
 COMMENT=	General X Window keygrabber
 

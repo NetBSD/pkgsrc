@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.17 2003/06/02 01:16:42 jschauma Exp $
+# $NetBSD: Makefile,v 1.18 2003/07/17 22:54:14 grant Exp $
 
 DISTNAME=	eperl-2.2.14
 CATEGORIES=	lang perl5 textproc
 MASTER_SITES=	http://www.engelschall.com/sw/eperl/distrib/
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.engelschall.com/sw/eperl/
 COMMENT=	Interpreter/preprocessor for Perl embedded in text documents
 

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.14 2003/06/02 01:17:00 jschauma Exp $
+# $NetBSD: Makefile,v 1.15 2003/07/17 22:53:22 grant Exp $
 
 DISTNAME=		esh-0.8
 WRKSRC=			${WRKDIR}/esh
 CATEGORIES=		shells
 MASTER_SITES=		${MASTER_SITE_BACKUP}
 
-MAINTAINER=		tech-pkg@netbsd.org
+MAINTAINER=		tech-pkg@NetBSD.org
 COMMENT=		Unix shell with Lisp-like syntax
 
 INFO_FILES=		esh.info

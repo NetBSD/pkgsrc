@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2003/06/02 01:15:40 jschauma Exp $
+# $NetBSD: Makefile,v 1.19 2003/07/17 22:56:38 grant Exp $
 # FreeBSD: /c/ncvs/ports/x11-toolkits/open-motif/Makefile,v 1.18 2000/10/09 01:40:02 asami Exp
 # OpenBSD: Makefile,v 1.5 2000/10/23 16:08:12 espie Exp
 
@@ -17,7 +17,7 @@ PATCH_SITES=		${MOTIF_SITES:=fixes/}
 PATCHFILES=		patch1 patch2 patch3 patch4 patch5
 PATCH_DIST_STRIP=	-p1
 
-MAINTAINER=		tech-pkg@netbsd.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.opengroup.org/openmotif/
 COMMENT=		Open Motif
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2003/07/13 13:54:29 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2003/07/17 22:56:44 grant Exp $
 #
 
 DISTNAME=		rep-gtk-0.15
@@ -6,7 +6,7 @@ PKGREVISION=		4
 CATEGORIES=		x11 lang
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=rep-gtk/}
 
-MAINTAINER=		danw@netbsd.org
+MAINTAINER=		danw@NetBSD.org
 HOMEPAGE=		http://rep-gtk.sourceforge.net/
 COMMENT=		librep bindings for gtk (used by sawmill)
 

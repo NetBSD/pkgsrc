@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.9 2003/07/13 13:53:19 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2003/07/17 22:53:39 grant Exp $
 
 DISTNAME=	koncd-0.7.1
 PKGREVISION=	3
 CATEGORIES=	sysutils
 MASTER_SITES=	${HOMEPAGE}download/
 
-MAINTAINER=	wulf@netbsd.org
+MAINTAINER=	wulf@NetBSD.org
 HOMEPAGE=	http://www.koncd.de/
 COMMENT=	Frontend to the fabulous cdrecord and mkisofs programs
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2003/06/02 01:16:21 jschauma Exp $
+# $NetBSD: Makefile,v 1.12 2003/07/17 22:54:59 grant Exp $
 #
 
 DISTNAME=	devtodo-0.1.6-1
@@ -7,7 +7,7 @@ WRKSRC=		${WRKDIR}/${DISTNAME:S/-1//}
 CATEGORIES=	time
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=devtodo/}
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://sourceforge.net/projects/devtodo/
 COMMENT=	Display and manage a list of items that are outstanding
 

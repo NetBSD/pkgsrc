@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2003/06/10 17:58:34 jschauma Exp $
+# $NetBSD: Makefile,v 1.12 2003/07/17 22:53:19 grant Exp $
 
 DISTNAME= 	tcp_wrappers_7.6-ipv6.1
 PKGNAME=	tcp_wrappers-7.6.1
@@ -6,7 +6,7 @@ PKGREVISION= 	1
 CATEGORIES=	security net
 MASTER_SITES=	ftp://ftp.porcupine.org/pub/security/
 
-MAINTAINER=	tron@netbsd.org
+MAINTAINER=	tron@NetBSD.org
 HOMEPAGE=	ftp://ftp.porcupine.org/pub/security/index.html
 COMMENT=	Monitor and filter incoming requests for network services
 

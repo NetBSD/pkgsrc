@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.23 2003/06/02 01:17:32 jschauma Exp $
+# $NetBSD: Makefile,v 1.24 2003/07/17 22:52:22 grant Exp $
 
 PKGNAME=	acroread3-3.01
 WRKSRC=		${WRKDIR}
 CATEGORIES=	print
 MASTER_SITES=	ftp://ftp-pac.adobe.com/pub/adobe/acrobatreader/unix/3.x/
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.adobe.com/prodindex/acrobat/readstep.html
 COMMENT=	View, distribute and print PDF documents
 

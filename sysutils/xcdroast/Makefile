@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.16 2003/06/05 16:15:47 drochner Exp $
+# $NetBSD: Makefile,v 1.17 2003/07/17 22:53:58 grant Exp $
 
 DISTNAME=	xcdroast-0.98alpha14
 PKGNAME=	xcdroast-0.98a14
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xcdroast/}
 
-MAINTAINER=	frueauf@netbsd.org
+MAINTAINER=	frueauf@NetBSD.org
 HOMEPAGE=	http://www.xcdroast.org/
 COMMENT=	graphical user interface for the command-line cdrecord-tools
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2003/06/12 15:29:52 jschauma Exp $
+# $NetBSD: Makefile,v 1.33 2003/07/17 22:52:19 grant Exp $
 #
 # NOTE:	If you update this package, then you'll likely need to also update
 #	the x11-links dependency in mk/buildlink2/bsd.buildlink2.mk to the
@@ -10,8 +10,8 @@ CATEGORIES=	pkgtools x11
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 
-MAINTAINER=	jlam@netbsd.org
-HOMEPAGE=	ftp://ftp.netbsd.org/pub/NetBSD/packages/pkgsrc/Packages.txt
+MAINTAINER=	jlam@NetBSD.org
+HOMEPAGE=	ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/Packages.txt
 COMMENT=	shadow tree of links to X11R6 headers and libraries
 
 USE_BUILDLINK2=	# defined

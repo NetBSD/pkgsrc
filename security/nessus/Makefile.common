@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.16 2003/06/09 17:01:25 frueauf Exp $
+# $NetBSD: Makefile.common,v 1.17 2003/07/17 22:53:00 grant Exp $
 #
 # Common Makefile for:
 #  * nessus-core
@@ -26,5 +26,5 @@ MASTER_SITES?=	ftp://ftp.nessus.org/pub/nessus/nessus-${VERS}/src/ \
 		ftp://ftp.at.nessus.org/pub/nessus/nessus-${VERS}/src/ \
 		ftp://ftp.linux.org.tr/pub/security/nessus/nessus-${VERS}/src/
 
-MAINTAINER=	frueauf@netbsd.org
+MAINTAINER=	frueauf@NetBSD.org
 HOMEPAGE=	http://www.nessus.org/

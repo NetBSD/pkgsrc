@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/06/02 01:15:32 jschauma Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/17 22:57:02 grant Exp $
 #
 
 DISTNAME=	xpostit3.3.1
@@ -10,7 +10,7 @@ MASTER_SITES=	ftp://ftp.x.org/R5contrib/ \
 		ftp://ftp.freesoftware.com/pub/X11/R5contrib/
 EXTRACT_SUFX=	.tar.Z
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 COMMENT=	Post notes to yourself on the screen
 #HOMEPAGE=
 

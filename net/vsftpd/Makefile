@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2003/05/29 20:08:41 salo Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/17 22:52:00 grant Exp $
 #
 
 DISTNAME=	vsftpd-1.2.0
 CATEGORIES=	net
 MASTER_SITES=	ftp://vsftpd.beasts.org/users/cevans/
 
-MAINTAINER=	salo@netbsd.org
+MAINTAINER=	salo@NetBSD.org
 HOMEPAGE=	http://vsftpd.beasts.org/
 COMMENT=	FTP server that aims to be very secure
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/06/02 01:15:51 jschauma Exp $
+# $NetBSD: Makefile,v 1.7 2003/07/17 22:56:16 grant Exp $
 #
 
 DISTNAME=	ZMySQLDA-2.0.8
@@ -7,7 +7,7 @@ PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mysql-python/}
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://sourceforge.net/projects/mysql-python
 COMMENT=	MySQL Database adaptor for Zope
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2003/07/13 13:53:41 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2003/07/17 22:55:10 grant Exp $
 #
 
 DISTNAME=		enlightenment-0.16.4
@@ -6,7 +6,7 @@ PKGREVISION=		4
 CATEGORIES=		x11 gnome wm
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=enlightenment/}
 
-MAINTAINER=		tech-pkg@netbsd.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.enlightenment.org/
 COMMENT=		Highly themeable and configurable window manager
 

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2002/11/29 01:27:39 markd Exp $
+# $NetBSD: Makefile,v 1.4 2003/07/17 22:52:06 grant Exp $
 
 DISTNAME=	yafc-0.7.10
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=yafc/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	pkgsrc@netbsd.org
+MAINTAINER=	pkgsrc@NetBSD.org
 HOMEPAGE=	http://yafc.sourceforge.net/
 COMMENT=	Yet another FTP client
 

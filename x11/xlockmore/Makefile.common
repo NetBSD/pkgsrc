@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2003/07/15 14:49:05 hubertf Exp $
+# $NetBSD: Makefile.common,v 1.6 2003/07/17 22:56:59 grant Exp $
 #
 # This Makefile.common is included by:
 #
@@ -14,7 +14,7 @@ MASTER_SITES=	ftp://ftp.tux.org/pub/tux/bagleyd/xlockmore/ \
 		${MASTER_SITE_XCONTRIB:=applications/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	hubertf@netbsd.org
+MAINTAINER=	hubertf@NetBSD.org
 HOMEPAGE=	http://www.tux.org/~bagleyd/xlockmore.html
 
 CONFLICTS+=	xlockmore-[0-9]* xlockmore-lite-[0-9]*

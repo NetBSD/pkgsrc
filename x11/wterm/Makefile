@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2003/07/13 13:54:31 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2003/07/17 22:56:49 grant Exp $
 
 DISTNAME=	wterm-6.2.9
 PKGREVISION=	2
@@ -6,7 +6,7 @@ CATEGORIES=	x11 windowmaker
 MASTER_SITES=	http://largo.windowmaker.org/files/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	rh@netbsd.org
+MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://largo.windowmaker.org/files.php\#wterm
 COMMENT=	NeXTStep(tm) style X11 terminal emulator for WindowMaker
 

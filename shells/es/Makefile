@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2003/06/02 01:17:00 jschauma Exp $
+# $NetBSD: Makefile,v 1.12 2003/07/17 22:53:22 grant Exp $
 # FreeBSD Id: Makefile,v 1.4 1996/11/18 11:39:46 asami Exp
 #
 
@@ -7,7 +7,7 @@ PKGNAME=	es-0.9a1
 CATEGORIES=	shells
 MASTER_SITES=   ftp://ftp.sys.toronto.edu/pub/es/
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://hawkwind.utcs.utoronto.ca:8001/mlists/es.html
 COMMENT=	Extensible shell, derived from plan9's rc
 

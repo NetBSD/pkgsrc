@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/07/13 13:53:20 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2003/07/17 22:53:44 grant Exp $
 #
 
 DISTNAME=		nautilus-2.2.3.1
@@ -7,7 +7,7 @@ CATEGORIES=		sysutils gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/nautilus/2.2/}
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		rh@netbsd.org
+MAINTAINER=		rh@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/projects/nautilus/
 COMMENT=		Nautilus file manager for GNOME2
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2003/04/10 01:28:26 grant Exp $
+# $NetBSD: Makefile,v 1.17 2003/07/17 22:54:15 grant Exp $
 #
 # Note: we currently use the pre-built (-bin) distribution of FOP,
 # because although FOP runs fine under JDK 1.1, JDK 1.2 or greater is
@@ -7,7 +7,7 @@
 # Note: please do NOT update this package to a more recent version of FOP --
 # this is the most recent version which works with cocoon.  If you need a
 # newer version, let me know, and I will import the latest version as
-# fop-current -- jwise@netbsd.org
+# fop-current -- jwise@NetBSD.org
 #
 
 DISTNAME=	fop-0_15_0-forBeginners
@@ -17,7 +17,7 @@ CATEGORIES=	textproc www
 MASTER_SITES=	http://xml.apache.org/dist/fop/recent/
 EXTRACT_SUFX=	.zip
 
-MAINTAINER=	jwise@netbsd.org
+MAINTAINER=	jwise@NetBSD.org
 HOMEPAGE=	http://xml.apache.org/fop/
 COMMENT=	the Apache Project's XSL Formatting Objects implementation
 

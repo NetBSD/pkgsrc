@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2003/06/10 02:00:36 jmc Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/17 22:51:55 grant Exp $
 
 DISTNAME=	tcpreplay-1.3.2
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tcpreplay/}
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://tcpreplay.sourceforge.net/
 COMMENT=	Replay saved tcpdump or snoop files
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/04/10 01:28:30 grant Exp $
+# $NetBSD: Makefile,v 1.9 2003/07/17 22:56:09 grant Exp $
 #
 
 DISTNAME=	Confera-1.2.0-nonbin
@@ -8,7 +8,7 @@ CATEGORIES=	www
 MASTER_SITES=   http://www.zope.org/Download/Prereleases/Confera/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	tsarna@netbsd.org
+MAINTAINER=	tsarna@NetBSD.org
 HOMEPAGE=	http://www.zope.org/
 COMMENT=	Confera: Threaded discussion groups for Zope
 

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.12 2003/07/13 13:54:27 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2003/07/17 22:56:37 grant Exp $
 
 DISTNAME=	multi-gnome-terminal-1.6.1
 PKGREVISION=	3
 CATEGORIES=	gnome x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=multignometerm/}
 
-MAINTAINER=	damon@netbsd.org
+MAINTAINER=	damon@NetBSD.org
 HOMEPAGE=	http://multignometerm.sourceforge.net/
 COMMENT=	Gnome tabbed terminal emulator
 

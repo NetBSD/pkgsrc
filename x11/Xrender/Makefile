@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2003/03/29 12:42:58 jmmv Exp $
+# $NetBSD: Makefile,v 1.4 2003/07/17 22:56:20 grant Exp $
 
 DISTNAME=	fcpackage.2_1
 PKGNAME=	Xrender-${XRENDER_VERSION}
@@ -6,7 +6,7 @@ WRKSRC=		${WRKDIR}/${DISTNAME}/Xrender
 CATEGORIES=	x11
 MASTER_SITES=	http://fontconfig.org/release/
 
-MAINTAINER=	jlam@netbsd.org
+MAINTAINER=	jlam@NetBSD.org
 HOMEPAGE=	http://fontconfig.org/
 COMMENT=	client library for the X Rendering Extension protocol
 

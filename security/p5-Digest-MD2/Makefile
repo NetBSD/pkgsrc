@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/06/02 01:17:09 jschauma Exp $
+# $NetBSD: Makefile,v 1.8 2003/07/17 22:53:06 grant Exp $
 #
 
 DISTNAME=		Digest-MD2-2.01
@@ -7,7 +7,7 @@ SVR4_PKGNAME=		p5md2
 CATEGORIES=		security perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Digest/}
 
-MAINTAINER=		tech-pkg@netbsd.org
+MAINTAINER=		tech-pkg@NetBSD.org
 COMMENT=		perl5 module for MD2
 
 CONFLICTS+=		p5-Digest-MD5<=2.12

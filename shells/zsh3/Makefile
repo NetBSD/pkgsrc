@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/06/02 01:16:58 jschauma Exp $
+# $NetBSD: Makefile,v 1.8 2003/07/17 22:53:24 grant Exp $
 
 DISTNAME=       zsh-3.0.8
 CATEGORIES=	shells
@@ -8,7 +8,7 @@ MASTER_SITES=   ftp://ftp.rge.com/pub/shells/zsh/old/ \
 		ftp://ftp.net.lut.ac.uk/zsh/old/ \
 		ftp://ftp.zsh.org/zsh/old/
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://sunsite.dk/zsh/
 COMMENT=	The Z shell
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/06/02 01:15:32 jschauma Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/17 22:57:03 grant Exp $
 #
 
 DISTNAME=	xscript.tar
@@ -13,7 +13,7 @@ MASTER_SITES=	ftp://ftp.x.org/R5contrib/ \
 		ftp://ftp.darenet.dk/ny/mirrors/ftp.x.org/R5contrib/
 EXTRACT_SUFX=	.Z
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.ee.ryerson.ca/~elf/xapps/Q-XVIII.html
 COMMENT=	X Window system script recording and playback
 

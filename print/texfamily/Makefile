@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/09/16 08:47:27 uebayasi Exp $
+# $NetBSD: Makefile,v 1.3 2003/07/17 22:52:43 grant Exp $
 
 DISTNAME=	TeXfamily-1.2.1
 PKGREVISION=	3
@@ -24,7 +24,7 @@ PATCH_SITES=	ftp://ftp.ascii.co.jp/pub/TeX/ascii-ptex/tetex/
 PATCHFILES=	ptex-src-${TEXFAMILY_PTEXVERSION}.patch
 PATCH_DIST_ARGS= -d ${WRKSRC}/texk/web2c/ptex-${TEXFAMILY_PTEXVERSION}
 
-MAINTAINER=	kei@netbsd.org
+MAINTAINER=	kei@NetBSD.org
 COMMENT=	TeXfamily (pTeX, JTeX, MuLTeX) - executables
 
 DEPENDS+=	TeXfamily-share>=1.2.1nb3:../../print/texfamily-share

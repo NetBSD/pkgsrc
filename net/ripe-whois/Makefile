@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/03/29 12:42:03 jmmv Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/17 22:51:47 grant Exp $
 #
 
 DISTNAME=	ripe-whois-3.1.1v6
@@ -7,7 +7,7 @@ WRKSRC=		${WRKDIR}/whois-3.1.1v6
 MASTER_SITES=	ftp://ftp.ripe.net/tools/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${ASCII_DOC} ${PS_DOC}
 
-MAINTAINER=	seb@netbsd.org
+MAINTAINER=	seb@NetBSD.org
 HOMEPAGE=	http://www.ripe.net/ripencc/pub-services/db/
 COMMENT=	RIPE very simple and generic whois client
 

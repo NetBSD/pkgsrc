@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2003/06/02 01:16:00 jschauma Exp $
+# $NetBSD: Makefile,v 1.4 2003/07/17 22:56:00 grant Exp $
 #
 
 DISTNAME=	HTMLgen
@@ -8,7 +8,7 @@ MASTER_SITES=	http://starship.python.net/crew/friedrich/
 EXTRACT_SUFX=	.tgz
 DIST_SUBDIR=	py-HTMLgen-2.2.2
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://starship.python.net/crew/friedrich/HTMLgen/html/main.html
 COMMENT=	class library for the generation of HTML documents
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2003/06/23 12:19:52 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2003/07/17 22:51:23 grant Exp $
 
 DISTNAME=	mrtg-2.9.29
 PKGREVISION=	1
@@ -23,7 +23,7 @@ MASTER_SITES=	http://people.ee.ethz.ch/~oetiker/webtools/mrtg/pub/ \
 		ftp://sunsite.icm.edu.pl/pub/unix/net/mrtg/ \
 		ftp://net2b.co.pt/pub/mrtg/
 
-MAINTAINER=	bouyer@netbsd.org
+MAINTAINER=	bouyer@NetBSD.org
 HOMEPAGE=	http://ee-staff.ethz.ch/~oetiker/webtools/mrtg/mrtg.html
 COMMENT=	The Multi-Router Traffic Grapher
 

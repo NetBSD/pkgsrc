@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/09/21 23:47:01 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2003/07/17 22:56:40 grant Exp $
 #
 
 DISTNAME=	sip-3.1
@@ -6,7 +6,7 @@ PKGNAME=	${PYPKGPREFIX}-qt2-sip-3.1
 CATEGORIES=	x11 devel
 MASTER_SITES=	http://www.riverbankcomputing.co.uk/download/sip/
 
-MAINTAINER=	drochner@netbsd.org
+MAINTAINER=	drochner@NetBSD.org
 HOMEPAGE=	http://www.riverbankcomputing.co.uk/sip/index.php
 COMMENT=	tool to create Python bindings for C++ libraries
 

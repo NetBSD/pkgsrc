@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2003/01/31 12:18:31 abs Exp $
+# $NetBSD: Makefile,v 1.18 2003/07/17 22:52:14 grant Exp $
 #
 
 DISTNAME=	gensolpkg-1.10
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	pkgtools
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 
-MAINTAINER=	veego@netbsd.org
+MAINTAINER=	veego@NetBSD.org
 COMMENT=	Utility to generate a Solaris package
 
 ONLY_FOR_PLATFORM=	SunOS-*-*	# uses Solaris pkgmk(1)

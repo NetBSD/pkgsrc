@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/02/25 04:18:23 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 2003/07/17 22:55:37 grant Exp $
 #
 
 DISTNAME=	ijb20
@@ -7,7 +7,7 @@ CATEGORIES=	www
 MASTER_SITES=	http://www.junkbuster.com/
 EXTRACT_SUFX=	.tar.Z
 
-MAINTAINER=	abs@netbsd.org
+MAINTAINER=	abs@NetBSD.org
 HOMEPAGE=	http://www.junkbuster.com/
 COMMENT=	The Internet Junkbuster Proxy blocks unwanted banner ads and cookies
 

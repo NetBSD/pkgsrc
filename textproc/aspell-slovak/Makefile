@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/07/13 13:53:29 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2003/07/17 22:54:08 grant Exp $
 #
 
 DISTNAME=	aspell-sk-0.50.3-1.1
@@ -8,7 +8,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	http://ispell.hq.sk/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	salo@netbsd.org
+MAINTAINER=	salo@NetBSD.org
 HOMEPAGE=	http://ispell.hq.sk/homepage/
 COMMENT=	Slovak language support for aspell
 

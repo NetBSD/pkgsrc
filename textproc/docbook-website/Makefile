@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/05/03 18:50:05 jmmv Exp $
+# $NetBSD: Makefile,v 1.8 2003/07/17 22:54:12 grant Exp $
 #
 
 DISTNAME=	website-2.3
@@ -7,7 +7,7 @@ PKGREVISION=	3
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=docbook/}
 
-MAINTAINER=	grant@netbsd.org
+MAINTAINER=	grant@NetBSD.org
 HOMEPAGE=	http://docbook.sourceforge.net/
 COMMENT=	DocBook XML DTD for building websites
 

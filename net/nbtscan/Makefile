@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2003/06/02 01:17:54 jschauma Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/17 22:51:25 grant Exp $
 #
 
 DISTNAME=	nbtscan-1.5
 CATEGORIES=	net
 MASTER_SITES=	http://www.inetcat.org/software/
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.inetcat.org/software/nbtscan.html
 COMMENT=	NetBIOS name network scanner
 

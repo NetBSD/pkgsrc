@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/07/13 13:53:19 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2003/07/17 22:53:42 grant Exp $
 #
 
 DISTNAME=		medusa-0.5.1
@@ -7,7 +7,7 @@ CATEGORIES=		sysutils gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/medusa/0.5/}	\
 			http://download.eazel.com/source/
 
-MAINTAINER=		rh@netbsd.org
+MAINTAINER=		rh@NetBSD.org
 HOMEPAGE=		http://www.eazel.com/
 COMMENT=		file system indexing engine
 

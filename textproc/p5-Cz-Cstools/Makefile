@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/06/03 22:31:03 salo Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/17 22:54:33 grant Exp $
 #
 
 DISTNAME=	Cstools-3.42
@@ -8,7 +8,7 @@ SVR4_PKGNAME=	p5cst
 CATEGORIES=	textproc converters perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Cz/}
 
-MAINTAINER=	salo@netbsd.org
+MAINTAINER=	salo@NetBSD.org
 HOMEPAGE=	http://www.fi.muni.cz/~adelton/perl/
 COMMENT=	Tools for dealing with Czech and Slovak texts in Perl
 

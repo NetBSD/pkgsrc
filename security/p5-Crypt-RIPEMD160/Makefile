@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/06/02 01:17:10 jschauma Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/17 22:53:04 grant Exp $
 #
 
 DISTNAME=		Crypt-RIPEMD160-0.04
@@ -7,7 +7,7 @@ SVR4_PKGNAME=		p5cri
 CATEGORIES=		security perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Crypt/}
 
-MAINTAINER=		tech-pkg@netbsd.org
+MAINTAINER=		tech-pkg@NetBSD.org
 #HOMEPAGE=	
 COMMENT=		perl5 module of the RIPEMD160 hash function
 

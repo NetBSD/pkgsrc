@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2003/06/11 20:50:57 abs Exp $
+# $NetBSD: Makefile,v 1.24 2003/07/17 22:51:05 grant Exp $
 # FreeBSD Id: ports/net/djbdns/Makefile,v 1.4 2000/09/28 18:18:41 nbm Exp
 #
 
@@ -19,7 +19,7 @@ PATCH_SITES=	http://www.fefe.de/dns/
 PATCHFILES=	${DISTNAME}-ipv6.diff.bz2
 PATCH_DIST_STRIP=       -p1
 
-MAINTAINER=	zuntum@netbsd.org
+MAINTAINER=	zuntum@NetBSD.org
 HOMEPAGE=	http://cr.yp.to/djbdns.html
 COMMENT=	Collection of secure and reliable DNS tools by Dan Bernstein
 

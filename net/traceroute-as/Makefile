@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2003/03/29 12:42:06 jmmv Exp $
+# $NetBSD: Makefile,v 1.4 2003/07/17 22:51:57 grant Exp $
 #
 
 DISTNAME=	traceroute_991603.tar
@@ -8,7 +8,7 @@ CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.nikhef.nl/pub/network/
 EXTRACT_SUFX=	.Z
 
-MAINTAINER=	seb@netbsd.org
+MAINTAINER=	seb@NetBSD.org
 COMMENT=	Traceroute capable of reporting the AS number of hops
 
 .include "../../mk/bsd.prefs.mk"

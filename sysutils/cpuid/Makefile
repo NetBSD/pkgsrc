@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/07/03 10:21:31 agc Exp $
+# $NetBSD: Makefile,v 1.2 2003/07/17 22:53:30 grant Exp $
 
 DISTNAME=	cpuid-3.3
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.ka9q.net/code/cpuid/
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/directory/System_administration/Configuration/cpuid.html
 COMMENT=	CPU identification feature
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/03/29 12:42:15 jmmv Exp $
+# $NetBSD: Makefile,v 1.9 2003/07/17 22:52:26 grant Exp $
 
 DISTNAME=	foomatic-gswrapper
 PKGNAME=	foomatic-gswrapper-1.2
@@ -13,7 +13,7 @@ MASTER_SITES=	${MASTER_SITE_LOCAL:=${PKGNAME_NOREV}/}
 #
 #MASTER_SITES+=	http://www.linuxprinting.org/
 
-MAINTAINER=	jlam@netbsd.org
+MAINTAINER=	jlam@NetBSD.org
 HOMEPAGE=	http://www.linuxprinting.org/gswrapper.html
 COMMENT=	Foomatic Ghostscript Wrapper
 

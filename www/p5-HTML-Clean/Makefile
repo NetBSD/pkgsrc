@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/06/02 01:16:03 jschauma Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/17 22:55:49 grant Exp $
 
 DISTNAME=	HTML-Clean-0.8
 PKGNAME=	p5-${DISTNAME}
@@ -6,7 +6,7 @@ SVR4_PKGNAME=	p5hcl
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=HTML/}
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 COMMENT=	perl5 module that cleans up HTML code for web browsers
 
 USE_BUILDLINK2=		YES

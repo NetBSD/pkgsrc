@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/06/09 22:12:35 jmmv Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/17 22:53:19 grant Exp $
 #
 
 DISTNAME=	TkPasMan-2.2a
@@ -6,7 +6,7 @@ PKGNAME=	${DISTNAME:S/TkPasMan/tkpasman/}
 CATEGORIES=	security
 MASTER_SITES=	http://www.xs4all.nl/~wbsoft/linux/projects/
 
-MAINTAINER=	jmmv@netbsd.org
+MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://www.xs4all.nl/~wbsoft/linux/tkpasman.html
 COMMENT=	Username and password manager that uses the Tk toolkit
 

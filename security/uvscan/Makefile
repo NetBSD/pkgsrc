@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2003/06/02 01:17:01 jschauma Exp $
+# $NetBSD: Makefile,v 1.20 2003/07/17 22:53:20 grant Exp $
 
 DISTNAME=		vlnx416e
 PKGNAME=		uvscan-4.16.0
@@ -8,7 +8,7 @@ CATEGORIES=		security
 MASTER_SITES=		http://download.nai.com/products/evaluation/virusscan/english/cmdline/linux/version_4.16/
 EXTRACT_SUFX=		.tar.Z
 
-MAINTAINER=		tech-pkg@netbsd.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.mcafeeb2b.com/products/virusscan/default.asp
 COMMENT=		evaluation version of a DOS/Windows file virus scanner
 

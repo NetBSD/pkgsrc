@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/10/06 14:51:27 taca Exp $
+# $NetBSD: Makefile,v 1.4 2003/07/17 22:54:28 grant Exp $
 # FreeBSD Id: Makefile,v 1.14 1998/04/05 04:46:33 max Exp $
 
 DISTNAME=	kakasi-2.3.4
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	japanese textproc
 MASTER_SITES=	ftp://kakasi.namazu.org/pub/kakasi/stable/
 
-MAINTAINER=	tech-pkg-ja@jp.netbsd.org
+MAINTAINER=	tech-pkg-ja@jp.NetBSD.org
 HOMEPAGE=	http://kakasi.namazu.org/
 COMMENT=	Kanji-Kana Simple Inverter, language filter for Japanese
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/06/02 01:17:51 jschauma Exp $
+# $NetBSD: Makefile,v 1.7 2003/07/17 22:51:29 grant Exp $
 #
 
 DISTNAME=	nsca-1.1.0
@@ -6,7 +6,7 @@ PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	http://netsaint.sourceforge.net/download/
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://netsaint.sourceforge.net/docs/0_0_6/addons.html\#nsca
 COMMENT=	submit passive NetSaint checks results to another server
 

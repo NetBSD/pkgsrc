@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/06/02 01:17:45 jschauma Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/17 22:51:47 grant Exp $
 #
 
 DISTNAME=	rootprobe-20030115
@@ -7,7 +7,7 @@ WRKSRC=		${WRKDIR}/rootprobe
 CATEGORIES=	net
 MASTER_SITES=	http://mawi.wide.ad.jp/mawi/dnsprobe/
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://mawi.wide.ad.jp/mawi/dnsprobe/
 COMMENT=	root DNS server performance analaysis
 

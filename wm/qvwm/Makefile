@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/07/13 13:53:43 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2003/07/17 22:55:16 grant Exp $
 #
 
 DISTNAME=	qvwm-1.1.12
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	wm
 MASTER_SITES=	ftp://www.qvwm.org/pub/qvwm/
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.qvwm.org/
 COMMENT=	Windows 95/98/NT like window manager for X11
 

@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.22 2003/03/17 17:58:13 bouyer Exp $
+# $NetBSD: Makefile,v 1.23 2003/07/17 22:55:36 grant Exp $
 
 DISTNAME=	horde-2.2.1
 CATEGORIES=	www
 MASTER_SITES=	ftp://ftp.horde.org/pub/horde/tarballs/
 
-MAINTAINER=	bouyer@netbsd.org
+MAINTAINER=	bouyer@NetBSD.org
 HOMEPAGE=	http://www.horde.org/
 COMMENT=	PHP application framework
 

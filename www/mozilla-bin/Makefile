@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/07/02 14:56:59 grant Exp $
+# $NetBSD: Makefile,v 1.8 2003/07/17 22:55:43 grant Exp $
 #
 
 DISTNAME=		# see Makefile.${OPSYS}.${ARCH}
@@ -7,7 +7,7 @@ WRKSRC=			${WRKDIR}/mozilla
 CATEGORIES=		www
 MASTER_SITES=		${MASTER_SITE_MOZILLA:=mozilla1.4/}
 
-MAINTAINER=		grant@netbsd.org
+MAINTAINER=		grant@NetBSD.org
 HOMEPAGE=		http://www.mozilla.org/
 COMMENT=		Full featured gecko-based browser (binary pkg)
 

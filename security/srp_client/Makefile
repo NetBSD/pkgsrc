@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2002/10/09 19:45:26 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2003/07/17 22:53:16 grant Exp $
 
 DISTNAME=		srp-1.4.4
 PKGNAME=		srp-client-1.4.4
@@ -6,7 +6,7 @@ CATEGORIES=		security net
 MASTER_SITES=		ftp://ftp.win.ne.jp/pub/network/security/srp/ \
 			ftp://ftp.zedz.net/pub/crypto/programs/srp/
 
-MAINTAINER=		jlam@netbsd.org
+MAINTAINER=		jlam@NetBSD.org
 HOMEPAGE=		http://www-cs-students.stanford.edu/~tjw/srp/
 COMMENT=		client programs using Secure Remote Password protocol
 

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.10 2003/07/13 13:53:38 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2003/07/17 22:54:57 grant Exp $
 
 DISTNAME=	yodl-1.31.18
 PKGREVISION=	2
 CATEGORIES=	textproc
 MASTER_SITES=	ftp://ftp.lilypond.org/pub/yodl/development/
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.xs4all.nl/~jantien/yodl/
 COMMENT=	high-level document preparation system
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2003/06/23 14:23:14 jschauma Exp $
+# $NetBSD: Makefile.common,v 1.7 2003/07/17 22:55:36 grant Exp $
 #
 
 HTMLDOC_VERSION=	1.8.23
@@ -8,7 +8,7 @@ CATEGORIES=		www
 MASTER_SITES=		ftp://ftp.easysw.com/pub/htmldoc/${HTMLDOC_VERSION}/
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		tech-pkg@netbsd.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.easysw.com/htmldoc/
 
 NOT_FOR_PLATFORM=	NetBSD-1.[3-4]*-alpha	#ps-pdf.cpp:3229: Internal compiler error. on 1.4 - 1.7 unknown

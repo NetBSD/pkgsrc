@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2002/10/22 11:49:52 markd Exp $
+# $NetBSD: Makefile,v 1.14 2003/07/17 22:51:27 grant Exp $
 #
 # XXX do not use -- see ../netatalk instead
 
@@ -9,7 +9,7 @@ CATEGORIES=	net print
 MASTER_SITES=   ftp://ftp.cobaltnet.com/pub/users/asun/release/ \
 		ftp://ftp.hanse.de/sites/transit/mirror/ftp.u.washington.edu/public/asun/
 
-MAINTAINER=	abs@netbsd.org
+MAINTAINER=	abs@NetBSD.org
 HOMEPAGE=	http://sourceforge.net/projects/netatalk/
 COMMENT=	Netatalk appletalk file and print services, enhanced by Adrian Sun
 

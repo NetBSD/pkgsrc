@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2001/11/04 03:28:45 tv Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/17 22:53:27 grant Exp $
 
 DISTNAME=	bchunk-1.1.1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://hes.iki.fi/bchunk/
 
-MAINTAINER=	pooka@netbsd.org
+MAINTAINER=	pooka@NetBSD.org
 HOMEPAGE=	http://hes.iki.fi/bchunk/
 COMMENT=	".bin/.cue" CD image converter
 

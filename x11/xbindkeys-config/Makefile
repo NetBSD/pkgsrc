@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/07/13 13:54:32 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2003/07/17 22:56:51 grant Exp $
 
 DISTNAME=	xbindkeys_config-0.1.2
 PKGNAME=	xbindkeys-config-0.1.2
@@ -6,7 +6,7 @@ PKGREVISION=	2
 CATEGORIES=	x11
 MASTER_SITES=	http://www.netchampagne.com/xbindkeys_config/
 
-MAINTAINER=	jmmv@netbsd.org
+MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://www.netchampagne.com/xbindkeys_config/
 COMMENT=	Tool to configure xbindkeys graphically
 

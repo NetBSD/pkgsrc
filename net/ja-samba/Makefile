@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2003/06/04 16:25:33 taca Exp $
+# $NetBSD: Makefile,v 1.18 2003/07/17 22:51:17 grant Exp $
 
 .include "Makefile.common"
 
@@ -6,7 +6,7 @@ PKGNAME=		ja-samba-${SAMBA_BASE_VERS:S/a/.1/}.${SAMBA_JA_VERS}
 PKGREVISION=		1
 CATEGORIES=		net
 
-MAINTAINER=		tech-pkg-ja@jp.netbsd.org
+MAINTAINER=		tech-pkg-ja@jp.NetBSD.org
 HOMEPAGE=		http://www.jp.samba.org/project/samba-ja/index.html.en
 COMMENT=		Samba supporting I18N swat and L10N for Japanese
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2003/06/02 01:15:45 jschauma Exp $
+# $NetBSD: Makefile,v 1.18 2003/07/17 22:56:24 grant Exp $
 # $FreeBSD Id: Makefile,v 1.12 1998/02/24 21:43:11 jseger Exp
 #
 
@@ -7,7 +7,7 @@ PKGNAME=	filerunner-2.4.2
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SUNSITE:=X11/desktop/}
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.cd.chalmers.se/~hch/filerunner.html
 COMMENT=	Filemanager with FTP capabilities. Uses Tcl/Tk
 

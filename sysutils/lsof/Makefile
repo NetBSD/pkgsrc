@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2003/06/19 07:31:13 tron Exp $
+# $NetBSD: Makefile,v 1.65 2003/07/17 22:53:41 grant Exp $
 #
 
 DISTNAME=		lsof_4.68
@@ -11,7 +11,7 @@ MASTER_SITES=		ftp://lsof.itap.purdue.edu/pub/tools/unix/lsof/  \
 			ftp://ftp.auscert.org.au/pub/mirrors/vic.cc.purdue.edu/lsof/  \
 			ftp://ftp.sunet.se/pub/unix/admin/lsof/
 
-MAINTAINER=		atatat@netbsd.org
+MAINTAINER=		atatat@NetBSD.org
 HOMEPAGE=		http://www-rcd.cc.purdue.edu/~abe/
 COMMENT=		Lists information about open files
 

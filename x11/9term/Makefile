@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/06/02 01:15:47 jschauma Exp $
+# $NetBSD: Makefile,v 1.13 2003/07/17 22:56:19 grant Exp $
 # FreeBSD Id: Makefile,v 1.5 1996/12/07 23:43:56 asami Exp
 #
 
@@ -8,7 +8,7 @@ WRKSRC=			${WRKDIR}
 CATEGORIES=		plan9 x11
 MASTER_SITES=		ftp://ftp.ecf.toronto.edu/pub/plan9/matty/
 
-MAINTAINER=		tech-pkg@netbsd.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.psrg.cs.usyd.edu.au/~matty/9term/index.html
 COMMENT=		X11 program which emulates a plan9 window
 

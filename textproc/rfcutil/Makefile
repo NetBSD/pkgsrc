@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/03/29 12:42:41 jmmv Exp $
+# $NetBSD: Makefile,v 1.8 2003/07/17 22:54:47 grant Exp $
 #
 
 DISTNAME=	rfc-3.2
@@ -8,7 +8,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	http://www.dewn.com/rfc/
 EXTRACT_SUFX=	#
 
-MAINTAINER=	zuntum@netbsd.org
+MAINTAINER=	zuntum@NetBSD.org
 HOMEPAGE=	http://www.dewn.com/rfc/
 COMMENT=	Search for RFCs and do ports, services & protocol lookups
 

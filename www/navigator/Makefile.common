@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.63 2003/06/23 14:23:14 jschauma Exp $
+# $NetBSD: Makefile.common,v 1.64 2003/07/17 22:55:43 grant Exp $
 #
 # Common include file for communicator and navigator packages
 
@@ -129,7 +129,7 @@ PLIST_ARCH=
 .endif
 #
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE?=	http://home.netscape.com/browsers/index.html
 RESTRICTED=	"No re-distribution without agreement from Netscape"
 NO_SRC_ON_CDROM=	${RESTRICTED}

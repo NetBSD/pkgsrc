@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.26 2003/03/29 12:42:22 jmmv Exp $
+# $NetBSD: Makefile,v 1.27 2003/07/17 22:52:56 grant Exp $
 #
 
 DISTNAME=		isakmpd-20021118
 WRKSRC=			${WRKDIR}/isakmpd
 CATEGORIES=		security net
-MASTER_SITES=		ftp://ftp.netbsd.org/pub/NetBSD/packages/distfiles/LOCAL_PORTS/
+MASTER_SITES=		ftp://ftp.NetBSD.org/pub/NetBSD/packages/distfiles/LOCAL_PORTS/
 
 MAINTAINER=		itojun@kame.net
 COMMENT=		OpenBSD IKE daemon

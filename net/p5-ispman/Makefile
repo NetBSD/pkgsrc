@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2002/10/27 20:48:59 seb Exp $
+# $NetBSD: Makefile,v 1.8 2003/07/17 22:51:36 grant Exp $
 #
 
 DISTNAME=		ispman-0.5
@@ -8,7 +8,7 @@ WRKSRC=			${WRKDIR}/ispman/Modules/ISPMan
 CATEGORIES=		net perl5
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ispman/}
 
-MAINTAINER=		rh@netbsd.org
+MAINTAINER=		rh@NetBSD.org
 HOMEPAGE=		http://www.ispman.org/
 COMMENT=		Perl module for ISPMan webAdministrator and command line utils
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/03/03 03:32:32 jschauma Exp $
+# $NetBSD: Makefile,v 1.10 2003/07/17 22:55:12 grant Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/10/11 10:42:43 jkh Exp
 #
 
@@ -7,7 +7,7 @@ PKGNAME=	${DISTNAME:S/fvwm/fvwm1/}
 CATEGORIES=	x11 wm
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 
-MAINTAINER=	cjs@netbsd.org
+MAINTAINER=	cjs@NetBSD.org
 HOMEPAGE=	http://www.fvwm.org/
 COMMENT=	Virtual window manager for X
 

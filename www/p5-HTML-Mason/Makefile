@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/06/02 01:16:02 jschauma Exp $
+# $NetBSD: Makefile,v 1.8 2003/07/17 22:55:50 grant Exp $
 
 DISTNAME=		HTML-Mason-1.04
 PKGNAME=		p5-${DISTNAME}
@@ -6,7 +6,7 @@ SVR4_PKGNAME=		p5hma
 CATEGORIES=		www perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=HTML/}
 
-MAINTAINER=		tech-pkg@netbsd.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.masonhq.com/
 COMMENT=		Perl-based web site development and delivery system
 

@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2003/06/02 01:16:55 jschauma Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/17 22:53:35 grant Exp $
 
 DISTNAME=	gpart-0.1g
 CATEGORIES=	sysutils
 MASTER_SITES=	http://home.pages.de/~michab/gpart/
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://home.pages.de/~michab/gpart/
 COMMENT=	Tool to show the partitions on a PC type harddisk
 

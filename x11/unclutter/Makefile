@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2003/03/29 12:43:10 jmmv Exp $
+# $NetBSD: Makefile,v 1.12 2003/07/17 22:56:47 grant Exp $
 #
 
 DISTNAME=	unclutter-8
@@ -7,7 +7,7 @@ CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XCONTRIB:=utilities/}
 EXTRACT_SUFX=	.tar.Z
 
-MAINTAINER=	mycroft@netbsd.org
+MAINTAINER=	mycroft@NetBSD.org
 COMMENT=	Remove idle cursor image from screen
 
 USE_IMAKE=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/07/13 13:54:00 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2003/07/17 22:56:29 grant Exp $
 #
 
 DISTNAME=	gnustep-back-0.8.5
@@ -6,7 +6,7 @@ PKGREVISION=	2
 CATEGORIES=	x11 gnustep
 MASTER_SITES=	${MASTER_SITE_GNUSTEP:=core/}
 
-MAINTAINER=	rh@netbsd.org
+MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://www.gnustep.org/
 COMMENT=	AppKit backend for GNUstep
 

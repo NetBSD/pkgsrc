@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/02/17 15:28:03 dillo Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/17 22:56:47 grant Exp $
 #
 
 DISTNAME=	tix8.2.0b1
@@ -7,7 +7,7 @@ WRKSRC=		${WRKDIR}/tix8.2.0/unix
 CATEGORIES=	x11 tcl tk
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tixlibrary/}
 
-MAINTAINER=	he@netbsd.org
+MAINTAINER=	he@NetBSD.org
 HOMEPAGE=	http://tixlibrary.sourceforge.net/
 COMMENT=	Powerful widget library for Tcl/Tk
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2003/05/27 08:49:18 grant Exp $
+# $NetBSD: Makefile,v 1.71 2003/07/17 22:55:27 grant Exp $
 
 DISTNAME=		mod_ssl-2.8.14-1.3.27
 PKGNAME=		ap-ssl-2.8.14
@@ -7,7 +7,7 @@ MASTER_SITES=		http://www.modssl.org/source/ \
 			ftp://ftp.pca.dfn.de/pub/tools/net/mod_ssl/source/ \
 			ftp://ftp.funet.fi/pub/crypt/cryptography/libs/modssl/source/
 
-MAINTAINER=		jlam@netbsd.org
+MAINTAINER=		jlam@NetBSD.org
 HOMEPAGE=		http://www.modssl.org/
 COMMENT=		SSL/TLS protocols module for Apache
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2003/07/13 13:53:34 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2003/07/17 22:54:30 grant Exp $
 
 DISTNAME=	libxslt-1.0.31
 PKGNAME=	${DISTNAME}
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libxslt/1.0/}
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://xmlsoft.org/XSLT/
 COMMENT=	XSLT parser library for GNOME
 

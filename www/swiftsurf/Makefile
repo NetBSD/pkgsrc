@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/06/29 23:15:07 jtb Exp $
+# $NetBSD: Makefile,v 1.2 2003/07/17 22:56:04 grant Exp $
 
 DISTNAME=		swiftsurf-1.2.5
 CATEGORIES=		www
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=swiftsurf/}
 
-MAINTAINER=		tech-pkg@netbsd.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://swiftsurf.sourceforge.net
 COMMENT=		web proxy that can handle http and https
 

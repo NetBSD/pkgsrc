@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.20 2003/05/11 03:01:54 jwise Exp $
+# $NetBSD: Makefile.common,v 1.21 2003/07/17 22:56:06 grant Exp $
 #
 
 DISTNAME=	w3m-${W3M_VERS}
@@ -6,7 +6,7 @@ WRKSRC=		${WRKDIR}/w3m-${W3M_VERS}
 CATEGORIES=	www
 MASTER_SITES=	http://www2u.biglobe.ne.jp/~hsaka/w3m/patch/
 
-MAINTAINER=	kei@netbsd.org
+MAINTAINER=	kei@NetBSD.org
 HOMEPAGE=	http://www2u.biglobe.ne.jp/~hsaka/w3m/
 
 USE_BUILDLINK2=	yes

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2002/06/19 10:43:57 abs Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/17 22:55:36 grant Exp $
 #
 
 DISTNAME=		htmlfix-1.03
 CATEGORIES=		www
 MASTER_SITES=		http://www.mono.org/abs/tools/htmlfix/
 
-MAINTAINER=		abs@netbsd.org
+MAINTAINER=		abs@NetBSD.org
 COMMENT=		Fix latin1 to html entities and/or line endings
 
 DEPENDS+=	p5-HTML-FixEntities-[0-9]*:../../www/p5-HTML-FixEntities

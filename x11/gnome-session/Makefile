@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2003/07/13 13:53:57 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2003/07/17 22:56:28 grant Exp $
 #
 
 DISTNAME=		gnome-session-2.2.1
@@ -7,7 +7,7 @@ CATEGORIES=		x11 gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-session/2.2/}
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		jmmv@netbsd.org
+MAINTAINER=		jmmv@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		GNOME2 session management utilities
 

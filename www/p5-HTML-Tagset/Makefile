@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2002/10/07 21:14:16 seb Exp $
+# $NetBSD: Makefile,v 1.9 2003/07/17 22:55:52 grant Exp $
 #
 
 DISTNAME=		HTML-Tagset-3.03
@@ -7,7 +7,7 @@ SVR4_PKGNAME=		p5htg
 CATEGORIES=		www perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=HTML/}
 
-MAINTAINER=		jlam@netbsd.org
+MAINTAINER=		jlam@NetBSD.org
 COMMENT=		perl5 module of data tables useful in parsing HTML
 
 USE_BUILDLINK2=		YES

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2003/02/17 23:18:15 grant Exp $
+# $NetBSD: Makefile,v 1.17 2003/07/17 22:55:23 grant Exp $
 #
 
 DISTNAME=	csacek-2.1.9
@@ -7,7 +7,7 @@ CATEGORIES=	www
 MASTER_SITES=	http://www.csacek.cz/distrib/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	jdolecek@netbsd.org
+MAINTAINER=	jdolecek@NetBSD.org
 # Note the homepage is in czech language only
 HOMEPAGE=	http://www.csacek.cz/
 COMMENT=	on-fly code set recoder

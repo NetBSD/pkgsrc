@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/03/29 12:42:10 jmmv Exp $
+# $NetBSD: Makefile,v 1.10 2003/07/17 22:52:14 grant Exp $
 
 DISTNAME=	pkg_comp-1.6
 WRKSRC=		${WRKDIR}
@@ -6,7 +6,7 @@ CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 
-MAINTAINER=	jmmv@netbsd.org
+MAINTAINER=	jmmv@NetBSD.org
 COMMENT=	Build packages inside a chroot jail
 
 EXTRACT_ONLY=	# empty

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/03/29 12:43:13 jmmv Exp $
+# $NetBSD: Makefile,v 1.3 2003/07/17 22:56:58 grant Exp $
 # FreeBSD Id: ports/japanese/xjman/Makefile,v 1.10 1999/10/30 15:34:24 sada Exp
 
 DISTNAME=	xjman-0.5
@@ -7,7 +7,7 @@ CATEGORIES=	japanese x11
 MASTER_SITES=	http://xjman.dsl.gr.jp/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	sakamoto@netbsd.org
+MAINTAINER=	sakamoto@NetBSD.org
 HOMEPAGE=	http://xjman.dsl.gr.jp/
 COMMENT=	Japanized X manual from "The X Japanese Documentation Project"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/08/19 21:20:38 jwise Exp $
+# $NetBSD: Makefile,v 1.2 2003/07/17 22:54:26 grant Exp $
 #
 
 DISTNAME=	rom-spell
@@ -6,7 +6,7 @@ PKGNAME=	ispell-romanian-20020218
 CATEGORIES=	textproc
 MASTER_SITES=	http://www.cs.cmu.edu/~mihaib/ftp/
 
-MAINTAINER=	jwise@netbsd.org
+MAINTAINER=	jwise@NetBSD.org
 HOMEPAGE=	http://fmg-www.cs.ucla.edu/fmg-members/geoff/ispell-dictionaries.html#Romanian-dicts
 COMMENT=	Romanian dictionary for ispell
 

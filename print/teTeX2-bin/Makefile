@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/07/13 14:37:42 wulf Exp $
+# $NetBSD: Makefile,v 1.8 2003/07/17 22:52:41 grant Exp $
 
 DISTNAME=	tetex-src-${TETEX_BIN_VERS}
 PKGNAME=	teTeX2-bin-${TETEX_BIN_VERS}
@@ -6,7 +6,7 @@ PKGREVISION=	3
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=systems/unix/teTeX/2.0/distrib/}
 
-MAINTAINER=	kei@netbsd.org
+MAINTAINER=	kei@NetBSD.org
 HOMEPAGE=	http://www.tug.org/tetex/
 COMMENT=	TeX distribution for UNIX compatible systems - executables, version 2
 

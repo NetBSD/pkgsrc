@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2003/07/10 16:18:47 abs Exp $
+# $NetBSD: Makefile,v 1.12 2003/07/17 22:51:56 grant Exp $
 # FreeBSD Id: Makefile,v 1.2 1998/03/19 01:54:59 msmith Exp
 #
 
@@ -10,7 +10,7 @@ CATEGORIES=		net x11
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=vnc-tight/}
 DISTFILES=		${DISTNAME}_unixsrc.tar.bz2
 
-MAINTAINER=		mycroft@netbsd.org
+MAINTAINER=		mycroft@NetBSD.org
 HOMEPAGE=		http://www.tightvnc.com/
 COMMENT=		Viewer for remote X and Win32 VNC servers
 

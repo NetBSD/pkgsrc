@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2003/06/23 14:23:15 jschauma Exp $
+# $NetBSD: Makefile.common,v 1.5 2003/07/17 22:53:42 grant Exp $
 #
 
 DISTNAME=		xmbmon201
@@ -8,7 +8,7 @@ PATCH_SITES+=		http://www.nt.phys.kyushu-u.ac.jp/shimizu/download/
 PATCHFILES+=		xmbmon201.netbsd.patch.gz xmbmon201pl1.diff
 PATCH_DIST_STRIP=	-p1
 
-MAINTAINER=		tech-pkg@netbsd.org
+MAINTAINER=		tech-pkg@NetBSD.org
 #HOMEPAGE=	
 
 MAKEFILE=		Makefile.NetBSD

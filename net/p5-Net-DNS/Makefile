@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/03/26 11:01:01 seb Exp $
+# $NetBSD: Makefile,v 1.11 2003/07/17 22:51:33 grant Exp $
 #
 
 DISTNAME=		Net-DNS-0.33
@@ -8,7 +8,7 @@ CATEGORIES=		net perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Net/}		\
 			http://www.net-dns.org/download/
 
-MAINTAINER=		hubertf@netbsd.org
+MAINTAINER=		hubertf@NetBSD.org
 HOMEPAGE=		http://www.net-dns.org/
 COMMENT=		Net::DNS - Perl DNS Resolver Module
 

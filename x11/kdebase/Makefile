@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.90 2003/07/13 13:54:22 wiz Exp $
+# $NetBSD: Makefile,v 1.91 2003/07/17 22:56:34 grant Exp $
 # FreeBSD Id: Makefile,v 1.6 1997/11/27 00:35:27 se Exp
 
 DISTNAME=	kdebase-1.1.2
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_LOCAL}/kde1
 EXTRACT_SUFX=	.tar.bz2
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} Daemon.png Daemon.README
 
-MAINTAINER=	tron@netbsd.org
+MAINTAINER=	tron@NetBSD.org
 HOMEPAGE=       http://www.kde.org/
 COMMENT=	Base modules for the KDE integrated X11 desktop
 

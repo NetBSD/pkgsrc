@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2002/10/21 13:12:45 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/17 22:55:07 grant Exp $
 #
 
 DISTNAME=	xbeats-0.4
 CATEGORIES=	x11 time
 MASTER_SITES=	http://iznogood.bohemians.org/xbeats/
 
-MAINTAINER=	hubertf@netbsd.org
+MAINTAINER=	hubertf@NetBSD.org
 HOMEPAGE=	http://iznogood.bohemians.org/
 COMMENT=	Beats clock dockable in both Window Maker and AfterStep
 

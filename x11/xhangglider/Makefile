@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2002/03/09 17:05:46 hubertf Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/17 22:56:57 grant Exp $
 #
 
 DISTNAME=	xhangglider-0.94.0
 CATEGORIES=	x11
 MASTER_SITES=	http://www.netfort.gr.jp/~take/linux/
 
-MAINTAINER=	hubertf@netbsd.org
+MAINTAINER=	hubertf@NetBSD.org
 HOMEPAGE=	http://www.netfort.gr.jp/~take/linux/xhang-en.html
 COMMENT=	Hanggliders fly in the background of the X screen
 

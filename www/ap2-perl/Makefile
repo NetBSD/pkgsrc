@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/07/05 05:10:32 kim Exp $
+# $NetBSD: Makefile,v 1.7 2003/07/17 22:55:27 grant Exp $
 #
 # NOTE: This package is *BETA*.  If it doesn't work, then check the
 #	modperl-2.0 mailing lists for help.
@@ -8,7 +8,7 @@ PKGNAME=		ap2-perl-1.99.8
 CATEGORIES=		www perl5
 MASTER_SITES=		http://perl.apache.org/dist/
 
-MAINTAINER=		jlam@netbsd.org
+MAINTAINER=		jlam@NetBSD.org
 HOMEPAGE=		http://perl.apache.org/
 COMMENT=		Module that embeds a Perl interpreter into Apache
 

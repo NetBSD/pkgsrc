@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/03/14 14:57:34 zuntum Exp $
+# $NetBSD: Makefile,v 1.4 2003/07/17 22:54:48 grant Exp $
 # FreeBSD Id: ports/misc/rtfm/Makefile,v 1.10 2001/01/16 17:31:43 sobomax Exp
 
 DISTNAME=	rtfm-1.0
@@ -6,7 +6,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	ftp://ftp.freebsd.org/pub/FreeBSD/ports/distfiles/	\
 		ftp://ftp.pl.freebsd.org/pub/FreeBSD/ports/distfiles/
 
-MAINTAINER=	zuntum@netbsd.org
+MAINTAINER=	zuntum@NetBSD.org
 COMMENT=	NetBSD documentation and GNU Texinfo files search mechanism
 
 post-patch:

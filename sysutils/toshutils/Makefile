@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/07/13 13:53:23 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2003/07/17 22:53:56 grant Exp $
 #
 
 DISTNAME=	toshutils-991217
@@ -6,7 +6,7 @@ PKGREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.ne426pd.in2home.co.uk/
 
-MAINTAINER=	hubertf@netbsd.org
+MAINTAINER=	hubertf@NetBSD.org
 HOMEPAGE=	http://www.buzzard.org.uk/toshiba/
 COMMENT=	NetBSD port of the Toshiba(tm) Linux Utilities
 
