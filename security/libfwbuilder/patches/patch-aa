@@ -1,6 +1,0 @@
---- configure      2004/07/06 11:44:26     1.1
-+++ configure      2004/07/06 11:45:40
-10032c10032
-< . runqmake.sh
----
-> $SHELL runqmake.sh
