@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 1999/11/14 22:51:21 frueauf Exp $
+@comment $NetBSD: PLIST,v 1.8 1999/11/28 21:17:10 frueauf Exp $
 bin/lyx
 bin/noweb2lyx
 bin/reLyX
@@ -245,10 +245,6 @@ share/lyx/tex/hollywood.cls
 share/lyx/tex/iletter.cls
 share/lyx/tex/revtex.cls
 share/lyx/textclass.lst
-share/texmf/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk
-share/texmf/fonts/tfm/jknappen/ec/ecrm1000.tfm
-@exec %D/bin/texhash
-@unexec %D/bin/texhash
 @dirrm share/lyx/bind
 @dirrm share/lyx/clipart
 @dirrm share/lyx/doc
@@ -261,7 +257,3 @@ share/texmf/fonts/tfm/jknappen/ec/ecrm1000.tfm
 @dirrm share/lyx/templates
 @dirrm share/lyx/tex
 @dirrm share/lyx
-@dirrm share/texmf/fonts/tfm/jknappen/ec
-@dirrm share/texmf/fonts/tfm/jknappen
-@dirrm share/texmf/fonts/pk/ljfour/jknappen/ec
-@dirrm share/texmf/fonts/pk/ljfour/jknappen
