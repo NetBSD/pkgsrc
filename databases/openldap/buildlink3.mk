@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2004/01/05 11:05:45 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2004/01/21 14:08:24 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 OPENLDAP_BUILDLINK3_MK:=	${OPENLDAP_BUILDLINK3_MK}+
@@ -18,6 +18,9 @@ BUILDLINK_PKGSRCDIR.openldap?=	../../databases/openldap
 .    include "../../security/cyrus-sasl2/buildlink3.mk"
 .  elif defined(USE_SASL) && (${USE_SASL} == "YES")
 .    include "../../security/cyrus-sasl/buildlink3.mk"
+.  endif
+.  if defined(KERBEROS)
+.    include "../../mk/krb5.buildlink3.mk"
 .  endif
 .  include "../../security/openssl/buildlink3.mk"
 .endif	# OPENLDAP_BUILDLINK3_MK
