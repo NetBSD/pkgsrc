@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2001/08/27 14:35:12 tron Exp $
+# $NetBSD: Makefile,v 1.36 2001/09/24 09:40:00 tron Exp $
 
 DISTNAME=	ucd-snmp-4.1.2
 CATEGORIES=	net
@@ -43,6 +43,7 @@ CONFIGURE_ARGS+=--with-mibdirs="${PREFIX}/share/snmp/mibs:${PREFIX}/lib/tcl/tnm2
 # do not supply them:
 post-extract:
 	@${ECHO} 'int allow_severity, deny_severity;' >${WRKSRC}/snmplib/libwrap.c
+	${LN} ${WRKSRC}/s/netbsd.h ${WRKSRC}/s/netbsdelf.h
 
 pre-configure:
 	cd ${WRKSRC} && ${LOCALBASE}/bin/autoreconf
