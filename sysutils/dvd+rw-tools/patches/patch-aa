@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2003/11/10 00:07:41 wiz Exp $
+
+--- transport.hxx.orig	Fri Sep 19 13:04:06 2003
++++ transport.hxx
+@@ -6,7 +6,7 @@
+ // For further details see http://fy.chalmers.se/~appro/linux/DVD+RW/
+ //
+ 
+-#if defined(__unix) || defined(__unix__)
++#if defined(__unix) || defined(__unix__) || defined(__NetBSD__)
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <unistd.h>
