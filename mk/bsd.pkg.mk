@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1057 2002/09/26 09:57:50 abs Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1058 2002/09/26 21:04:11 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -480,14 +480,16 @@ MTREE_ARGS?=	-U -f ${MTREE_FILE} -d -e -p
 # 2 == shell "set -x" operation
 PKG_DEBUG_LEVEL?=	0
 _PKG_SILENT=		@
-_PKG_DEBUG=		
+_PKG_DEBUG=		# empty
+_PKG_DEBUG_SCRIPT=	# empty
 
 .if ${PKG_DEBUG_LEVEL} > 0
-_PKG_SILENT=	
+_PKG_SILENT=		# empty
 .endif
 
 .if ${PKG_DEBUG_LEVEL} > 1
 _PKG_DEBUG=		set -x;
+_PKG_DEBUG_SCRIPT=	${SH} -x
 .endif
 
 # If WRKOBJDIR is set, use that tree to build
