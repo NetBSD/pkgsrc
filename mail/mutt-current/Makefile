@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2000/09/09 19:40:18 fredb Exp $
-
-IGNORE=		"Stable mutt avaiable in mail/mutt"
+# $NetBSD: Makefile,v 1.8 2000/10/18 13:05:28 wiz Exp $
 
 DISTNAME=	mutt-1.1.10i
 WRKSRC=		${WRKDIR}/mutt-1.1.10
@@ -18,6 +16,8 @@ HOMEPAGE=	http://www.mutt.org/
 
 BUILD_DEPENDS+=	${LOCALBASE}/bin/autoconf:../../devel/autoconf
 BUILD_DEPENDS+=	${LOCALBASE}/bin/automake:../../devel/automake
+
+IGNORE=		"stable mutt available in mail/mutt is newer"
 
 EXTRACT_ONLY=	mutt-1.1.10i.tar.gz
 
