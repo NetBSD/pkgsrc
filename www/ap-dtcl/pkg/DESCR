@@ -1,4 +1,3 @@
-mod_dtcl is a free/open source implementation of server side
-Tcl, under Apache.  It allows you to tightly integrate html
-with Tcl, a widely used scripting language with many years of
-development invested in it. 
+The mod_dtcl Apache module enables the use of Tcl as an HTML-embedded
+scripting language, similar to PHP. It is fast, light, and lets you
+use the extensive codebase of existing Tcl code, on the web.
