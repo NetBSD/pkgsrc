@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2183 2003/05/08 14:56:52 jmmv Exp $
+$NetBSD: CHANGES,v 1.2184 2003/05/08 15:44:07 gehenna Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1893,3 +1893,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated cgoban-java to 2.4.60 [rh 2003-05-08]
 	Updated easytag to 0.27.1 [wiz 2003-05-08]
 	Updated wmthemes to 0.80.0 [jmmv 2003-05-08]
+	Updated cvsync to 0.20.2 [gehenna 2003-05-08]
