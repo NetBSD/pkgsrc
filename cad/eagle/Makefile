@@ -1,19 +1,23 @@
-# $NetBSD: Makefile,v 1.10 2004/01/20 12:09:09 agc Exp $
+# $NetBSD: Makefile,v 1.11 2004/02/25 01:09:25 xtraeme Exp $
 #
 
-DISTNAME=		eagle-4.09r2e
-PKGNAME=		eagle-4.09r2
+DISTNAME=		eagle-4.11e
+PKGNAME=		eagle-4.11
 CATEGORIES=		cad
-MASTER_SITES=		ftp://ftp.cadsoft.de/pub/program/4.09r2/
+MASTER_SITES=		ftp://ftp.cadsoft.de/pub/program/4.11/
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		rh@NetBSD.org
 HOMEPAGE=		http://www.cadsoft.de/
 COMMENT=		Easy to use printed circuit board editor
 
-DEPENDS+=		suse_x11>=6.1:../../emulators/${SUSE_DIR_PREFIX}_x11
+.include "../../mk/bsd.prefs.mk"
 
-ONLY_FOR_PLATFORM=	NetBSD-*-i386
+.if ${OPSYS} != "Linux"
+DEPENDS+=		suse_x11>=6.1:../../emulators/${SUSE_DIR_PREFIX}_x11
+.endif
+
+ONLY_FOR_PLATFORM=	NetBSD-*-i386 Linux-*-i386
 CHECK_SHLIBS=		NO		# this is Linux software
 
 RESTRICTED=		"Redistribution not permitted"
