@@ -1,16 +1,13 @@
-$NetBSD: patch-ad,v 1.4 2001/09/24 13:10:48 wulf Exp $
+$NetBSD: patch-ad,v 1.5 2003/02/16 23:08:57 seb Exp $
 
---- contrib/trytime/Makefile.in.orig	Thu Feb 22 12:07:45 2001
-+++ contrib/trytime/Makefile.in
-@@ -86,9 +86,9 @@
- VERSION = @VERSION@
- ZLIB_LIB_DIR = @ZLIB_LIB_DIR@
+--- configure.orig	Fri Oct 11 18:39:32 2002
++++ configure
+@@ -2231,8 +2231,6 @@ echo "$ac_t""$rd_cv_gcc_opt" 1>&6
+   fi
+ fi
  
--INCLUDES = -I../../src -I../../gd1.3
-+INCLUDES = -I../../src
- EXTRA_DIST = trytime.c
--contribdir = $(prefix)/contrib/trytime
-+contribdir = $(prefix)/share/rrdtool/contrib/trytime
- contrib_DATA = README trytime.c
- bin_PROGRAMS = trytime
- trytime_SOURCES = trytime.c
+-CFLAGS="$CFLAGS "`grep pic_flag= libtool | sed -e 's/.*pic_flag=//' -e 's/"//g'`
+-
+ ZLIB_CFLAGS=$CFLAGS
+ case $target_os in
+ *hpux*)
