@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.544 2000/08/17 14:13:56 wiz Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.545 2000/08/18 02:47:56 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -1720,14 +1720,14 @@ root-install:
 #
 check-shlibs:
 	${_PKG_SILENT}${_PKG_DEBUG}\
-	bins=`${PKG_INFO} -qf ${PKGNAME} | ( ${EGREP} -h '/(bin|sbin|libexec)/' || true )`; \
+	bins=`${PKG_INFO} -qL ${PKGNAME} | ( ${EGREP} -h '/(bin|sbin|libexec)/' || true )`; \
 	if [ "${OBJECT_FMT}" = "ELF" ]; then \
-		shlibs=`${PKG_INFO} -qf ${PKGNAME} | ( ${EGREP} -h '^lib/lib.*.so' || true )`; \
+		shlibs=`${PKG_INFO} -qL ${PKGNAME} | ( ${EGREP} -h '/lib/lib.*.so' || true )`; \
 	else \
 		shlibs=""; \
 	fi ; \
 	for i in $${bins} $${shlibs} ; do \
-		err=`( ldd ${PREFIX}/$$i 2>&1 || true ) | ( grep "not found" || true )`; \
+		err=`( ldd $$i 2>&1 || true ) | ( grep "not found" || true )`; \
 		if [ "${PKG_VERBOSE}" != "" ]; then \
 			echo "ldd $$i" ; \
 		fi ; \
