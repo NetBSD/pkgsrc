@@ -1,7 +1,7 @@
-$NetBSD: patch-aw,v 1.1.1.1 2001/04/27 15:27:32 agc Exp $
+$NetBSD: patch-aw,v 1.2 2003/12/06 19:28:22 ben Exp $
 
---- savelev.c.orig	Fri Jun 19 13:55:34 1992
-+++ savelev.c	Sun Jan 14 15:27:32 2001
+--- savelev.c.orig	1992-06-19 13:55:34.000000000 -0700
++++ savelev.c
 @@ -1,4 +1,6 @@
  /* savelev.c	*/
 +#include <stdlib.h>
@@ -20,7 +20,7 @@ $NetBSD: patch-aw,v 1.1.1.1 2001/04/27 15:27:32 agc Exp $
  typedef struct_mitem	Mitem_Ary[MAXX][MAXY];
  
  static int w = 0;
-@@ -19,11 +19,11 @@
+@@ -19,11 +19,11 @@ static int r = 0;
  
  /* this is the structure that holds the entire dungeon specifications */
  typedef struct save_lev_str {
@@ -36,7 +36,7 @@ $NetBSD: patch-aw,v 1.1.1.1 2001/04/27 15:27:32 agc Exp $
  } Saved_Level;
  
  static Saved_Level *saved_levels[NLEVELS];
-@@ -33,15 +33,15 @@
+@@ -33,15 +33,15 @@ static unsigned int FileSum;
  /*
   *	routine to save the present level into storage
   */
@@ -57,7 +57,7 @@ $NetBSD: patch-aw,v 1.1.1.1 2001/04/27 15:27:32 agc Exp $
  	level_sums[level] = sum((unsigned char *)storage, sizeof(Saved_Level));
  }
  
-@@ -49,17 +49,17 @@
+@@ -49,17 +49,17 @@ savelevel()
  /*
   *	routine to restore a level from storage
   */
@@ -80,7 +80,7 @@ $NetBSD: patch-aw,v 1.1.1.1 2001/04/27 15:27:32 agc Exp $
  
  	if (level_sums[level] > 0) {
  	  if ((i = sum((unsigned char *)storage,sizeof(Saved_Level))) 
-@@ -82,7 +82,7 @@
+@@ -82,7 +82,7 @@ getlevel()
  /*
   *	to save the game in a file
   */
@@ -89,7 +89,7 @@ $NetBSD: patch-aw,v 1.1.1.1 2001/04/27 15:27:32 agc Exp $
  char	*fname;
  {
  	int	i;
-@@ -145,10 +145,10 @@
+@@ -145,10 +145,10 @@ char	*fname;
  	bwrite(fd,(char * )char_class, 20 * sizeof(char));
  
  	for (i=0; i<MAXSCROLL; i++)
@@ -102,7 +102,7 @@ $NetBSD: patch-aw,v 1.1.1.1 2001/04/27 15:27:32 agc Exp $
  
  	bwrite(fd,(char *)spelknow, sizeof(char) * SPNUM);
  	bwrite(fd,(char *)&wizard, sizeof(wizard));
-@@ -192,18 +192,22 @@
+@@ -192,18 +192,22 @@ char	*fname;
  }
  
  
@@ -116,19 +116,39 @@ $NetBSD: patch-aw,v 1.1.1.1 2001/04/27 15:27:32 agc Exp $
  	Saved_Level * storage;
 -	char buf[1024], *tmp="/tmp/UtmpXXXXXX", *mktemp();
 +	char buf[1024];
-+	char *tmp;
      	int fd;
  
-+	tmp = strdup("/tmp/UtmpXXXXXX");
++	if (tempfilename != NULL)
++		free(tempfilename);
++	tempfilename = strdup("/tmp/UtmpXXXXXX");
  	if (compress) {
 -		if ((tempfilename = mktemp(tmp)) == NULL) {
-+		tempfilename = mktemp(tmp);
-+		free(tmp);
-+		if (tempfilename == NULL) {
++		fd = mkstemp(tempfilename);
++		if (fd == -1) {
  			fprintf(stderr,"Can't create temp file to restore game\n");
  			perror("mktemp");
  			nosignal=0;
-@@ -273,10 +277,10 @@
+@@ -221,15 +225,18 @@ char	*fname;
+ 			sleep(4);
+ 			c[GOLD] = c[BANKACCOUNT] = 0;
+ 			died(-265);
++			close(fd);
+ 			unlink(tempfilename);
+ 			return;
+ 		}
+-		if ((fd = open(tempfilename, O_RDONLY)) < 0) {
++		if (lseek(fd, 0, SEEK_SET) < 0) {
+ 			fprintf(stderr,"Can't open temp file to restore game\n");
+ 			perror("open");
+ 			sleep(4);
+ 			c[GOLD] = c[BANKACCOUNT] = 0;
+ 			died(-265);
++			close(fd);
++			unlink(tempfilename);
+ 			return;
+ 		}
+ 	} else {
+@@ -273,10 +280,10 @@ char	*fname;
  	bread(fd,(char * )char_class, sizeof(char) * 20);
  
  	for (i=0; i<MAXSCROLL; i++)
@@ -141,7 +161,7 @@ $NetBSD: patch-aw,v 1.1.1.1 2001/04/27 15:27:32 agc Exp $
  
  	bread(fd,(char * )spelknow, sizeof(char) * SPNUM);
  
-@@ -350,7 +354,7 @@
+@@ -350,7 +357,7 @@ char	*fname;
  /*
  	subroutine to not allow greedy cheaters
   */
@@ -150,7 +170,7 @@ $NetBSD: patch-aw,v 1.1.1.1 2001/04/27 15:27:32 agc Exp $
  {
  	if (wizard) 
  		return;
-@@ -370,7 +374,7 @@
+@@ -370,7 +377,7 @@ lprcat("In that you are GREEDY as well a
  	subroutine to not allow altered save files and terminate the attempted
  	restart
   */
@@ -159,7 +179,7 @@ $NetBSD: patch-aw,v 1.1.1.1 2001/04/27 15:27:32 agc Exp $
  {
  	if (cheat) 
  		return;
-@@ -385,7 +389,7 @@
+@@ -385,7 +392,7 @@ fsorry()
  /*
  	subroutine to not allow game if save file can't be deleted
   */
@@ -168,7 +188,7 @@ $NetBSD: patch-aw,v 1.1.1.1 2001/04/27 15:27:32 agc Exp $
  {
  	if (wizard) 
  		return;
-@@ -403,7 +407,7 @@
+@@ -403,7 +410,7 @@ lprcat("is in.  Since this is unfair to 
  }
  
  
@@ -177,7 +197,7 @@ $NetBSD: patch-aw,v 1.1.1.1 2001/04/27 15:27:32 agc Exp $
  {
  	int	i;
  
-@@ -415,18 +419,20 @@
+@@ -415,18 +422,20 @@ init_cells()
  }
  
  
@@ -200,7 +220,7 @@ $NetBSD: patch-aw,v 1.1.1.1 2001/04/27 15:27:32 agc Exp $
  		fprintf(stderr, "    Wrote %d bytes so far\n", w);
  		fprintf(stderr, "        Call: %d\n", ncalls);
  		abort();
-@@ -437,7 +443,7 @@
+@@ -437,7 +446,7 @@ long num;
  	w += nwrote;
  	if (nwrote != num) {
  		fprintf(stderr, "Error writing to save file\n");
@@ -209,7 +229,7 @@ $NetBSD: patch-aw,v 1.1.1.1 2001/04/27 15:27:32 agc Exp $
  		fprintf(stderr, "    Wrote %d bytes so far\n", w);
  		fprintf(stderr, "        Call: %d\n", ncalls);
  		sleep(4);
-@@ -446,18 +452,20 @@
+@@ -446,18 +455,20 @@ long num;
  	FileSum += sum((unsigned char *)buf, num);
  }
  
@@ -232,7 +252,7 @@ $NetBSD: patch-aw,v 1.1.1.1 2001/04/27 15:27:32 agc Exp $
  		fprintf(stderr, "    Read %d bytes so far\n", w);
  		fprintf(stderr, "        Call: %d\n", ncalls);
  		perror("read");
-@@ -467,7 +475,7 @@
+@@ -467,7 +478,7 @@ long num;
  	r += nread;
  	if (nread != num) {
  		fprintf(stderr, "Error reading save file\n");
