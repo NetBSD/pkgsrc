@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/07/01 15:12:44 tron Exp $
+# $NetBSD: Makefile,v 1.6 2001/07/14 13:54:55 wiz Exp $
 
 DISTNAME=	g-wrap-1.1.10
 CATEGORIES=	devel
@@ -8,7 +8,7 @@ MAINTAINER=	rh@netbsd.org
 HOMEPAGE=	http://web.mit.edu/chlee/www/Software/g-wrap/index.html
 COMMENT=	tool for importing types, functions, and constants into guile
 
-DEPENDS+=	guile>=1.3.4:../../lang/guile
+DEPENDS+=	guile-slib-2c8:../../devel/guile-slib
 
 GNU_CONFIGURE=	YES
 USE_GMAKE=	YeS
