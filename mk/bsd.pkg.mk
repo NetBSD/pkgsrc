@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1303 2003/11/20 16:59:02 cube Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1304 2003/11/22 23:47:47 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -2032,10 +2032,14 @@ EXTRACT_ELEMENTS?=	# empty
 
 DOWNLOADED_DISTFILE=	$${extract_file}
 
-EXTRACT_CMD.zip?=	${LOCALBASE}/bin/unzip -Laqo $${extract_file}
-EXTRACT_CMD.lha?=	${LOCALBASE}/bin/lha xq $${extract_file}
+EXTRACT_CMD.zip?=	${LOCALBASE}/bin/unzip ${EXTRACT_CMD_OPTS.zip} $${extract_file}
+EXTRACT_CMD_OPTS.zip?=	-Laqo
+EXTRACT_CMD.lha?=	${LOCALBASE}/bin/lha ${EXTRACT_CMD_OPTS.lha} $${extract_file}
+EXTRACT_CMD_OPTS.lha?=	xq
 EXTRACT_CMD.lzh?=	${EXTRACT_CMD.lha}
-EXTRACT_CMD.zoo?=	${LOCALBASE}/bin/unzoo -x $${extract_file}
+EXTRACT_CMD_OPTS.lzh?=	${EXTRACT_CMD_OPTS.lha}
+EXTRACT_CMD.zoo?=	${LOCALBASE}/bin/unzoo ${EXTRACT_CMD_OPTS.zoo} $${extract_file}
+EXTRACT_CMD_OPTS.zoo?=	-x
 
 .for __suffix__ in .gz .bz2 .Z
 EXTRACT_CMD${__suffix__}?=	${DECOMPRESS_CMD${__suffix__}} $${extract_file} > `${BASENAME} $${extract_file} ${__suffix__}`
