@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2004/01/05 11:05:44 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2004/01/06 19:13:13 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 ICONV_BUILDLINK3_MK:=	${ICONV_BUILDLINK3_MK}+
@@ -67,7 +67,7 @@ MAKEFLAGS+=	_BLNK_LIBICONV_FOUND=${_BLNK_LIBICONV_FOUND}
 _BLNK_LIBICONV=		-liconv
 .    else
 _BLNK_LIBICONV=		# empty
-BUILDLINK_TRANSFORM+=	S:-liconv:
+BUILDLINK_TRANSFORM+=	l:iconv:
 .    endif
 BUILDLINK_LDADD.iconv?=	${_BLNK_LIBICONV}
 .  endif
