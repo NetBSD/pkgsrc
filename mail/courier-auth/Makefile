@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/01/24 16:02:21 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2002/01/27 23:47:08 jlam Exp $
 
 PKGNAME=	courier-auth-${BASE_VERS}
 PKGREVISION?=	1
@@ -12,18 +12,7 @@ USE_BUILDLINK_ONLY=	yes
 USE_PERL5=		yes
 REPLACE_PERL=		sysconftool
 
-.include "../../mail/courier-auth/Makefile.common"
-
-WRKSRC_FILES=		config.guess config.sub configure		\
-			install-sh mkinstalldirs
-WRKSRC_FILES+=		dbobj.h.in dbobj.config.in sysconftool
-WRKSRC_SUBDIRS=		afx bdbobj gdbmobj numlib soxwrap md5 sha1	\
-			libhmac random128 unicode rfc822 rfc1035	\
-			rfc2045	liblock
-WRKSRC_SUBDIRS+=	makedat userdb authlib
-
-EXTRACT_ELEMENTS=	${WRKSRC_FILES:S/^/${DISTNAME}\//}
-EXTRACT_ELEMENTS+=	${WRKSRC_SUBDIRS:S/^/${DISTNAME}\//}
+.include "../../mail/courier-auth/Makefile.authdaemond"
 
 .if !defined(STRIPFLAG) || empty(STRIPFLAG:M-s)
 INSTALL_TARGET=		install-strip
@@ -31,7 +20,6 @@ INSTALL_TARGET=		install-strip
 INSTALL_TARGET=		install
 .endif
 
-SYSCONFTOOL=		${PREFIX}/sbin/authdaemon.sysconftool
 GEN_FILES=		authdaemonrc
 OWN_DIRS_PERMS=		/var/authdaemon ${ROOT_USER} ${ROOT_GROUP} 700
 
@@ -44,16 +32,7 @@ RCD_SCRIPTS=		authdaemond
 
 DEINSTALL_EXTRA_TMPL=	${.CURDIR}/DEINSTALL
 INSTALL_EXTRA_TMPL=	${.CURDIR}/INSTALL
-FILES_SUBST+=		SYSCONFTOOL=${SYSCONFTOOL:Q}
 FILES_SUBST+=		GEN_FILES=${GEN_FILES:Q}
-
-pre-configure: configure-init
-
-do-build:
-.for DIR in ${WRKSRC_SUBDIRS}
-	@cd ${WRKSRC}/${DIR} && ${SETENV} ${MAKE_ENV}			\
-		${MAKE_PROGRAM} ${ALL_TARGET}
-.endfor
 
 do-install:
 .for DIR in ${WRKSRC_SUBDIRS}
