@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3924 2003/12/03 13:17:35 jmmv Exp $
+$NetBSD: CHANGES,v 1.3925 2003/12/03 13:24:14 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4768,3 +4768,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated xmule to 1.7.1 [jmmv 2003-12-03]
 	Updated fastdep to 0.16 [jmmv 2003-12-03]
 	Added xmms-musepack-0.94 [jmmv 2003-12-03]
+	Updated gaim to 0.74 [jmmv 2003-12-03]

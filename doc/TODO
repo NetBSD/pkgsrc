@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1114 2003/12/03 13:12:24 jmmv Exp $
+$NetBSD: TODO,v 1.1115 2003/12/03 13:24:14 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -201,7 +201,6 @@ Suggested package updates
 	o foobillard-2.9
 	o foomatic-2.9.1 [jlam]
 	o fsviewer-0.2.5
-	o gaim-0.74 [jmmv]
 	o gauche-0.7 [kei]
 	o gcc-3.3.2
 	o gcpio-2.5 [pkg/20799]
