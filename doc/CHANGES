@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3112 2003/08/27 09:03:27 recht Exp $
+$NetBSD: CHANGES,v 1.3113 2003/08/27 09:09:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3350,3 +3350,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added lft-2.2 [grant 2003-08-26]
 	Updated chicken to 1.12 [itojun 2003-08-27]
 	Updated criticalmass to 0.98 [recht 2003-08-27]
+	Updated glib2 to 2.2.3 [wiz 2003-08-27]
