@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2295 2004/11/03 10:54:08 wiz Exp $
+$NetBSD: TODO,v 1.2296 2004/11/03 13:30:38 adam Exp $
 
 Suggested new packages
 ======================
@@ -353,7 +353,6 @@ Suggested package updates
 	o gg2-2.2.1
 	o ghostscript-8.00 (apfl)
 	o ghostscript-8.01 (gnu)
-	o gimp-2.0.6
 	o gkrellm-volume-2.1.13
 	o gkrellm1-xmms-0.5.8
 	o glpk-4.6
