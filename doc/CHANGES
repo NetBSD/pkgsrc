@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2249 2003/05/17 00:50:55 gehenna Exp $
+$NetBSD: CHANGES,v 1.2250 2003/05/17 01:47:05 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1974,3 +1974,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated opera7 to 7.11beta2 [jdolecek 2003-05-16]
 	Updated wxGTK to 2.4.0nb2 [martin 2003-05-16]
 	Updated cvsync to 0.21.0 [gehenna 2003-05-17]
+	Added p5-MARC-1.15 [dmcmahill 2003-05-16]
