@@ -1,10 +1,13 @@
-$NetBSD: patch-an,v 1.1 2001/02/09 11:29:38 dmcmahill Exp $
+$NetBSD: patch-an,v 1.2 2004/09/20 02:08:58 dmcmahill Exp $
 
---- src/zbuf/patran.c.orig	Tue Nov 12 14:18:56 1996
-+++ src/zbuf/patran.c	Thu Feb  8 19:38:44 2001
-@@ -41,4 +41,5 @@
- 
- **************************************************************************/
-+#include <string.h>
- #include "mulGlobal.h"
- 
+--- src/fasthenry/sparse/Makefile.orig	Wed Aug  4 00:59:27 2004
++++ src/fasthenry/sparse/Makefile
+@@ -3,7 +3,7 @@
+ #  Ken Kundert
+ #  UC Berkeley
+ #
+-CFLAGS = -O
++#CFLAGS = -O
+ LINTFLAGS = -lc -lm
+ SHELL = /bin/sh
+ CC = cc

@@ -1,13 +1,13 @@
-$NetBSD: patch-ax,v 1.1 2004/05/07 01:44:45 danw Exp $
+$NetBSD: patch-ax,v 1.2 2004/09/20 02:08:58 dmcmahill Exp $
 
---- src/zbuf/mulGlobal.h.orig	Sun May  2 21:47:21 2004
-+++ src/zbuf/mulGlobal.h
-@@ -42,7 +42,7 @@ extern char *   calloc();
- extern char *   malloc();
- extern char *   realloc();
- #else
--#include <malloc.h>
-+#include <stdlib.h>
- #endif /* end if NEWS */
- #include <stdio.h>
- #include <math.h>
+--- src/zbuf/zbufInOut.c.orig	Tue Aug  3 22:24:28 2004
++++ src/zbuf/zbufInOut.c
+@@ -33,7 +33,7 @@ person or damage to property arising fro
+ operation of Software or Licensed Program(s) by LICENSEE or its customers.
+  
+ */
+-
++#include <string.h>
+ #include "mulGlobal.h"
+ #include "zbufGlobal.h"
+ 

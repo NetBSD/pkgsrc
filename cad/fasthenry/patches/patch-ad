@@ -1,11 +1,15 @@
-$NetBSD: patch-ad,v 1.3 2004/03/22 00:25:11 dmcmahill Exp $
+$NetBSD: patch-ad,v 1.4 2004/09/20 02:08:58 dmcmahill Exp $
 
---- src/fasthenry/sparse/Makefile.orig	Wed May  6 23:42:03 1998
-+++ src/fasthenry/sparse/Makefile	Wed May  6 23:42:12 1998
-@@ -4,5 +4,5 @@
- #  UC Berkeley
- #
--CFLAGS = -O
-+#CFLAGS = -O
- LINTFLAGS = -lc -lm
- SHELL = /bin/sh
+--- src/fasthenry/addgroundplane.c.orig	Tue Aug  3 22:17:08 2004
++++ src/fasthenry/addgroundplane.c
+@@ -32,7 +32,9 @@ damages, losses or liabilities whatsoeve
+ person or damage to property arising from or out of the possession, use, or
+ operation of Software or Licensed Program(s) by LICENSEE or its customers.
+  
+-*/#include<stdio.h>
++*/
++#include<stdio.h>
++#include<string.h>
+ #include<math.h>
+ #include "induct.h"
+ 
