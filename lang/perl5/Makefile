@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2000/08/30 18:42:23 jlam Exp $
+# $NetBSD: Makefile,v 1.30 2000/08/30 19:46:47 jlam Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/07/18 06:16:44 markm Exp
 #
 
@@ -20,24 +20,19 @@ CONFIGURE_ARGS+=	-sde -Dprefix=${PREFIX} -Doptimize="${CFLAGS}" \
 			-Dcc=gcc -Dusemymalloc=false
 MAKE_ENV+=		LD_LIBRARY_PATH=${WRKSRC}
 
-.include "../../mk/bsd.prefs.mk"
-
 .if exists(/usr/libexec/ld.so) || exists(/usr/libexec/ld.elf_so)
 CONFIGURE_ARGS+=	-Duseshrplib=true
-PLIST_SOURCES=		${PKGDIR}/PLIST-md.shared
-PLIST_SOURCES+=		${PKGDIR}/PLIST-md-${OBJECT_FMT}.shared
 .else
 CONFIGURE_ARGS+=	-Duseshrplib=false
-PLIST_SOURCES=		${PKGDIR}/PLIST-md.static
 .endif
-PLIST_SOURCES+=		${PKGDIR}/PLIST-mi
-PLIST_SRC=		${PLIST_SOURCES}
-PLIST_SUBST+=		PERL_VERSION=${PERL_VERSION}
+
+.include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "SunOS"
-PLIST_SRC=      	${WRKDIR}/.PLIST_SRC
 MAKE_ENV+=		CFLAGS=
 .endif
+
+PERL5_PACKLIST=		${PREFIX}/lib/perl5/${PERL_VERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/.packlist
 
 test:
 	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} test
@@ -56,10 +51,6 @@ pre-configure:
 post-install:
 	@strip ${PREFIX}/bin/a2p
 	@strip ${PREFIX}/bin/perl
-.if ${OPSYS} == "SunOS"
-	${CAT} ${PLIST_SOURCES} | ${EGREP} -v 'DB_File' > ${PLIST_SRC}
-.endif
-	eval `${PREFIX}/bin/perl -V:installsitearch`; \
-	${TOUCH} $${installsitearch}/.directory
+	${RMDIR} -p ${PREFIX}/lib/perl5/site_perl/${PERL_VERSION}/${MACHINE_ARCH}-${LOWER_OPSYS} 2>/dev/null || ${TRUE}
 
 .include "../../mk/bsd.pkg.mk"
