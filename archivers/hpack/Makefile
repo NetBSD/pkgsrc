@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2005/03/07 09:43:34 uebayasi Exp $
+# $NetBSD: Makefile,v 1.25 2005/03/13 15:08:19 uebayasi Exp $
 
 DISTNAME=       hpack79src
 PKGNAME=        hpack-0.79
@@ -25,9 +25,9 @@ DIST_SUBDIR=	${PKGNAME_NOREV}
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "Linux"
-MAKE_FLAGS=	CFLAGS="-c -DLINUX -D__UNIX__ -DPREFIX="\"${PREFIX}\"" -I. ${CFLAGS} -Icrypt"
+MAKE_FLAGS=	CFLAGS='-c -DLINUX -D__UNIX__ -DPREFIX="\"${PREFIX}\"" -I. ${CFLAGS} -Icrypt'
 .else
-MAKE_FLAGS=	CFLAGS="-c -DBSD386 -D__UNIX__ -DPREFIX="\"${PREFIX}\"" -I. ${CFLAGS} -Icrypt"
+MAKE_FLAGS=	CFLAGS='-c -DBSD386 -D__UNIX__ -DPREFIX="\"${PREFIX}\"" -I. ${CFLAGS} -Icrypt'
 .endif
 
 .if ${OPSYS} == "Darwin"
