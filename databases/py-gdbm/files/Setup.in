@@ -1,4 +1,5 @@
-# $NetBSD: Setup.in,v 1.2 1998/08/07 14:58:43 agc Exp $
+# $NetBSD: Setup.in,v 1.3 2000/10/29 20:48:27 tsarna Exp $
 #
 *shared*
-gdbm gdbmmodule.c -I@LOCALBASE@/include -L@LOCALBASE@/lib -lgdbm
+gdbm gdbmmodule.c -I@LOCALBASE@/include -L@LOCALBASE@/lib \
+	-R@LOCALBASE@/lib -lgdbm
