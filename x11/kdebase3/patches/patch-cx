@@ -1,9 +1,9 @@
-$NetBSD: patch-cx,v 1.3 2002/08/25 19:23:43 jlam Exp $
+$NetBSD: patch-cx,v 1.4 2003/09/17 23:18:58 markd Exp $
 
---- konsole/konsole/main.cpp.orig	Mon Jun 24 12:57:09 2002
+--- konsole/konsole/main.cpp.orig	2003-09-01 23:32:01.000000000 +1200
 +++ konsole/konsole/main.cpp
-@@ -112,7 +112,9 @@
- 
+@@ -126,7 +126,9 @@ public:
+ extern void TEPtyInit();
  
  /* --| main |------------------------------------------------------ */
 -int main(int argc, char* argv[])
