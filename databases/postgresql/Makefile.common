@@ -1,8 +1,9 @@
-# $NetBSD: Makefile.common,v 1.9 2001/03/27 03:19:49 hubertf Exp $
+# $NetBSD: Makefile.common,v 1.10 2001/04/10 13:08:05 jlam Exp $
 #
 # This file is included by the following packages:
 #
 #	postgresql
+#	odbc-postgresql
 #	tcl-postgresql
 #	tk-postgresql
 
