@@ -1,6 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1 2004/02/02 15:49:17 soren Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/02/19 17:22:17 wiz Exp $
 bin/tpb
+etc/tpbrc
+man/man1/tpb.1
 share/doc/tpb/callback_example.sh
 share/doc/tpb/nvram.txt
 share/doc/tpb/tpbrc
+${PKGLOCALEDIR}/locale/da/LC_MESSAGES/tpb.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/tpb.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/tpb.mo
 @dirrm share/doc/tpb
