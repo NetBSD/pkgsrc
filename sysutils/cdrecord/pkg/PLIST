@@ -1,6 +1,3 @@
-@comment $NetBSD: PLIST,v 1.2 1997/11/13 07:35:38 thorpej Exp $
+@comment $NetBSD: PLIST,v 1.3 1997/11/13 08:17:27 thorpej Exp $
 bin/cdrecord
-man/man1/cdrecord.1.gz
-@cd /dev
-@exec ln -sf /dev/rworm0.ctl sgx
-@unexec rm -f sgx
+man/man1/cdrecord.1
