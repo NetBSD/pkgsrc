@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/01/25 09:27:18 tron Exp $
+# $NetBSD: Makefile,v 1.6 2001/01/25 09:27:48 tron Exp $
 #
 
 DISTNAME=		suse_glx-${SUSE_VERSION}
@@ -9,7 +9,7 @@ DISTFILES=		${RPMFILES}
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.suse.com/
 
-DEPENDS+=		suse_x11-${SUSE_VERSION}:../../emulators/suse_base
+DEPENDS+=		suse_x11-${SUSE_VERSION}:../../emulators/suse_x11
 
 ONLY_FOR_PLATFORM=      NetBSD-*-i386
 
