@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/02/25 04:17:48 hubertf Exp $
+# $NetBSD: Makefile,v 1.5 2002/02/07 11:39:52 wiz Exp $
 #
 
 DISTNAME=	civctp-demo-10251999
@@ -14,10 +14,8 @@ COMMENT=	Civilization: Call to Power - graphical strategy (linux demo)
 
 NO_CONFIGURE=		yes
 
-.if !make(fetch)
 # Someone needs to look at alpha, powerpc and sparc compat_linux
 ONLY_FOR_PLATFORM=*-*-i386
-.endif
 
 .if (${MACHINE_ARCH} == "i386")
 BINTYPE=	x86/glibc-2.1
