@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1998/10/31 00:18:47 tron Exp $
+@comment $NetBSD: PLIST,v 1.2 1998/11/19 23:00:18 tron Exp $
 sbin/linux-mkpwd
 sbin/linux-rpm
 @exec ln -s /dev/sound %D/emul/linux/dev/dsp
@@ -99,7 +99,7 @@ emul/linux/usr/i486-linux-libc6/lib/libform.so.4
 emul/linux/usr/i486-linux-libc6/lib/libforms.so.0.88
 emul/linux/usr/i486-linux-libc6/lib/libg++.so.2.7.2
 emul/linux/usr/i486-linux-libc6/lib/libg++.so.2.7.2.8
-emul/linux/usr/i486-linux-libc6/lib/libg++.so.2.8
+emul/linux/usr/i486-linux-libc6/lib/libg++-1.so.2
 emul/linux/usr/i486-linux-libc6/lib/libgdbm.so.1
 emul/linux/usr/i486-linux-libc6/lib/libgdk.so.1
 emul/linux/usr/i486-linux-libc6/lib/libgdk_imlib.so.1
@@ -110,12 +110,13 @@ emul/linux/usr/i486-linux-libc6/lib/libgltt.so.2
 emul/linux/usr/i486-linux-libc6/lib/libglut.so.3
 emul/linux/usr/i486-linux-libc6/lib/libgpm.so.1
 emul/linux/usr/i486-linux-libc6/lib/libgtk.so.1
-emul/linux/usr/i486-linux-libc6/lib/libguile.so.2
+emul/linux/usr/i486-linux-libc6/lib/libguile.so.3
 emul/linux/usr/i486-linux-libc6/lib/libgz.so.1
 emul/linux/usr/i486-linux-libc6/lib/libjpeg.so.6
 emul/linux/usr/i486-linux-libc6/lib/liblug.so.1
 emul/linux/usr/i486-linux-libc6/lib/libm.so.6
 emul/linux/usr/i486-linux-libc6/lib/libmenu.so.4
+emul/linux/usr/i486-linux-libc6/lib/libncp.so.1
 emul/linux/usr/i486-linux-libc6/lib/libncurses.so.4
 emul/linux/usr/i486-linux-libc6/lib/libnsl.so.1
 emul/linux/usr/i486-linux-libc6/lib/libnss_compat.so.2
@@ -125,6 +126,7 @@ emul/linux/usr/i486-linux-libc6/lib/libnss_files.so.2
 emul/linux/usr/i486-linux-libc6/lib/libnss_hesiod.so.2
 emul/linux/usr/i486-linux-libc6/lib/libnss_nis.so.2
 emul/linux/usr/i486-linux-libc6/lib/libnss_nisplus.so.2
+emul/linux/usr/i486-linux-libc6/lib/libolgx.so.3
 emul/linux/usr/i486-linux-libc6/lib/libopcodes-2.9.1.0.4.so.0
 emul/linux/usr/i486-linux-libc6/lib/libpanel.so.4
 emul/linux/usr/i486-linux-libc6/lib/libpbm.so.1.0
@@ -134,24 +136,25 @@ emul/linux/usr/i486-linux-libc6/lib/libpnm.so.1.0
 emul/linux/usr/i486-linux-libc6/lib/libppm.so.1.0
 emul/linux/usr/i486-linux-libc6/lib/libpthread.so.0
 emul/linux/usr/i486-linux-libc6/lib/libpvm3.so.3
-emul/linux/usr/i486-linux-libc6/lib/libqimgio.so
 emul/linux/usr/i486-linux-libc6/lib/libqimgio.so.0
+emul/linux/usr/i486-linux-libc6/lib/libqimgio.so.0.1
 emul/linux/usr/i486-linux-libc6/lib/libqt.so.1
-emul/linux/usr/i486-linux-libc6/lib/libqt.so.1.33
+emul/linux/usr/i486-linux-libc6/lib/libqt.so.1.41
 emul/linux/usr/i486-linux-libc6/lib/libradiusclient.so.0
 emul/linux/usr/i486-linux-libc6/lib/libresolv.so.2
+emul/linux/usr/i486-linux-libc6/lib/librle.so.1
 emul/linux/usr/i486-linux-libc6/lib/librt.so.1
+emul/linux/usr/i486-linux-libc6/lib/libsspkg.so.1
 emul/linux/usr/i486-linux-libc6/lib/libstdc++.so.2.7.2
 emul/linux/usr/i486-linux-libc6/lib/libstdc++.so.2.7.2.8
-emul/linux/usr/i486-linux-libc6/lib/libstdc++.so.2.8
+emul/linux/usr/i486-linux-libc6/lib/libstdc++.so.2.9
 emul/linux/usr/i486-linux-libc6/lib/libtcl7.4.so.1
 emul/linux/usr/i486-linux-libc6/lib/libtermcap.so.2
 emul/linux/usr/i486-linux-libc6/lib/libtiff.so.3
 emul/linux/usr/i486-linux-libc6/lib/libttf.so.2
 emul/linux/usr/i486-linux-libc6/lib/libutil.so.1
-emul/linux/usr/i486-linux-libc6/lib/libvga.so.1
-emul/linux/usr/i486-linux-libc6/lib/libvgagl.so.1
 emul/linux/usr/i486-linux-libc6/lib/libxdelta.so.0
+emul/linux/usr/i486-linux-libc6/lib/libxview.so.3
 emul/linux/usr/i486-linux-libc6/lib/libz.so.1
 emul/linux/usr/include/dlfcn.h
 emul/linux/usr/lib/lddstub
