@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.1.1.1 2001/08/29 22:24:51 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.2 2001/09/25 23:36:49 jlam Exp $
 #
 # This Makefile fragment is included by packages that use X11.
 #
@@ -427,6 +427,7 @@ BUILDLINK_FILES.X11+=	lib/libXdmcp.a
 BUILDLINK_FILES.X11+=	lib/libXext.a
 BUILDLINK_FILES.X11+=	lib/libXext.so
 BUILDLINK_FILES.X11+=	lib/libXext.so.6
+BUILDLINK_FILES.X11+=	lib/libXext.so.6.3
 BUILDLINK_FILES.X11+=	lib/libXext.so.6.4
 BUILDLINK_FILES.X11+=	lib/libXfont.a
 BUILDLINK_FILES.X11+=	lib/libXfont.so
