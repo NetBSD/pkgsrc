@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2002/02/18 15:14:46 seb Exp $
+# $NetBSD: Makefile,v 1.19 2002/04/10 04:49:58 seb Exp $
 # $FreeBSD Id: Makefile,v 1.13 1997/07/17 15:13:03 max Exp
 #
 
@@ -23,5 +23,4 @@ post-install:
 	cd ${PREFIX}/lib && ${LN} -fs libolgx.so.3.2 libolgx.so.3 && \
 		${LN} -fs libxview.so.3.2 libxview.so.3
 
-.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
