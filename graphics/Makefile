@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 1998/08/23 08:00:42 garbled Exp $
+# $NetBSD: Makefile,v 1.24 1998/08/24 04:49:17 thorpej Exp $
 # FreeBSD Id: Makefile,v 1.53 1997/09/28 13:25:40 markm Exp
 #
 
@@ -6,6 +6,7 @@
     SUBDIR += Mesa
 #    SUBDIR += aero
 #    SUBDIR += camediaplay
+    SUBDIR += cqcam
 #    SUBDIR += dc3play
 #    SUBDIR += dore
     SUBDIR += fly
