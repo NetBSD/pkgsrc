@@ -1,10 +1,10 @@
 #!/bin/sh -e
 #
-# $Id: pkgchk.sh,v 1.30 2002/03/27 09:39:02 abs Exp $
+# $Id: pkgchk.sh,v 1.31 2002/04/01 20:20:05 abs Exp $
 #
 # TODO: Handle updates with dependencies via binary packages
 
-PATH=/usr/sbin:${PATH}
+PATH=/usr/sbin:/usr/bin:${PATH}
 
 check_packages_installed()
     {
@@ -31,7 +31,7 @@ check_packages_installed()
 	if [ ! -d /var/db/pkg/$PKGNAME ];then
 	    echo_n "$PKGNAME: "
 	    pkg=`echo $PKGNAME | sed 's/-[0-9].*//'`
-	    pkginstalled=`pkg_info -e $pkg || true`
+	    pkginstalled=`sh -c "${PKG_INFO} -e $pkg" || true`
 	    INSTALL=
 	    if [ -n "$pkginstalled" ];then
 		echo_n "version mismatch - $pkginstalled"
@@ -74,7 +74,8 @@ extract_make_vars()
     for var in $* ; do
 	MAKEDATA=$MAKEDATA"\t@echo $var=\${$var}\n"
     done
-    eval `printf "$MAKEDATA" | ${MAKE} -f - -f Makefile x`
+    eval `printf "$MAKEDATA" | ${MAKE} -f - -f Makefile x | \
+					sed -e 's/[^=]*=/&"/' -e 's/$/"/'`
     }
 
 extract_variables()
@@ -100,7 +101,8 @@ extract_variables()
     #
 
     cd $PKGSRCDIR/pkgtools/pkgchk
-    extract_make_vars AWK GREP SED PACKAGES PKGCHK_CONF PKGCHK_TAGS PKGCHK_NOTAGS
+    extract_make_vars AWK GREP SED PACKAGES PKG_INFO PKG_ADD PKG_DELETE \
+		      PKGCHK_CONF PKGCHK_TAGS PKGCHK_NOTAGS
 
     if [ -z "$PACKAGES" ];then
 	PACKAGES=$PKGSRCDIR/packages
@@ -162,13 +164,13 @@ pkg_install()
     elif [ -n "$opt_b" -a -f $PACKAGES/All/$PKGNAME.tgz ] ; then
 	if [ $INSTALL = Update ];then
 	    PKG=`echo $PKGNAME | sed 's/-[0-9].*//'`
-	    run_cmd "pkg_delete $PKG" 1
+	    run_cmd "${PKG_DELETE} $PKG" 1
 	    if [ -n "$FAIL" ]; then
 		echo "Can only update packages with dependencies via -s"
 		exit 1
 	    fi
 	fi
-	run_cmd "pkg_add $PACKAGES/All/$PKGNAME.tgz"
+	run_cmd "${PKG_ADD} $PACKAGES/All/$PKGNAME.tgz"
     elif [ -n "$opt_s" ]; then
 	run_cmd "cd $PKGSRCDIR/$PKGDIR && ${MAKE} update"
     fi
@@ -315,7 +317,7 @@ cd $PKGSRCDIR
 real_pkgsrcdir=`pwd`
 
 if [ -n "$opt_i" ];then
-    PKGDIRLIST=`pkg_info -B \* | ${AWK} '/PKGPATH= /{print $2}'`
+    PKGDIRLIST=`sh -c "${PKG_INFO} -B \*" | ${AWK} '/PKGPATH= /{printf $2" "}'`
 fi
 
 if [ -n "$opt_c" ];then
@@ -408,7 +410,7 @@ fi
 check_packages_installed $PKGDIRLIST
 
 if [ -n "$opt_r" -a -n "$MISMATCH_TODO" ]; then
-    run_cmd "pkg_delete -r $MISMATCH_TODO" 1
+    run_cmd "${PKG_DELETE} -r $MISMATCH_TODO" 1
     if [ -n "$opt_a" ] ; then
 	echo "[ Rechecking packages after deletions ]"
 	check_packages_installed $PKGDIRLIST # May need to add more packages
