@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2002/11/13 14:00:45 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2002/11/13 19:29:59 wiz Exp $
 
 DISTNAME=		ImageMagick-5.5.1-6
 PKGNAME=		p5-PerlMagick-5.5.1.6
+PKGREVISION=		1
 SVR4_PKGNAME=		p5pma
 CATEGORIES=		graphics
 MASTER_SITES=		ftp://ftp.nluug.nl/pub/ImageMagick/ \
@@ -13,7 +14,7 @@ MAINTAINER=		tron@netbsd.org
 HOMEPAGE=		http://www.simplesystems.org/ImageMagick/
 COMMENT=		Object-oriented Perl interface to ImageMagick
 
-DEPENDS+=		${DISTNAME:S/-6/.6/}:../../graphics/ImageMagick
+DEPENDS+=		${DISTNAME:S/-6/.6/}nb1:../../graphics/ImageMagick
 
 DISTINFO_FILE=		${.CURDIR}/../../graphics/ImageMagick/distinfo
 FILESDIR=		${.CURDIR}/../../graphics/ImageMagick/files
@@ -39,14 +40,6 @@ CONFIGURE_ARGS+=	--with-perl=${PERL5} \
 			--without-dps --without-fpx \
 			--without-hdf --without-jbig --without-threads \
 			--without-ttf --without-xml
-
-.include "../../mk/bsd.prefs.mk"
-
-.if (${OPSYS} == NetBSD)
-BUILD_DEPENDS+=		bash>=2.0:../../shells/bash2
-
-CONFIGURE_SCRIPT=	${LOCALBASE}/bin/bash ./configure
-.endif
 
 post-configure: perl5-configure
 
