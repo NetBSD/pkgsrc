@@ -1,4 +1,8 @@
-$NetBSD: distinfo,v 1.2 2001/04/19 15:00:47 agc Exp $
+$NetBSD: distinfo,v 1.3 2002/03/05 08:45:33 jmc Exp $
 
 SHA1 (rs-0.7.3.1.tar.gz) = 31f8b515e394e3e467e0f445335a3fdf22fcdb63
 Size (rs-0.7.3.1.tar.gz) = 1872020 bytes
+SHA1 (patch-aa) = c7021af105513a71b3ddbeddd15865c1e197b1a4
+SHA1 (patch-ab) = 29f4eb38c21631dc92bb5ff086fecc56d35ed366
+SHA1 (patch-ac) = 3b4924d62afa5fc7c4a4973fe48eead719e1d7a4
+SHA1 (patch-ad) = b4387026fb26f2a75af49eed113708ff218ae04a
