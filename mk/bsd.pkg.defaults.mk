@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.160.2.6 2003/08/14 07:37:00 jlam Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.160.2.7 2003/08/16 09:08:47 jlam Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.

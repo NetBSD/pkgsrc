@@ -1,6 +1,6 @@
 #!@BUILDLINK_SHELL@
 #
-# $NetBSD: wrapper.sh,v 1.7 2003/01/01 07:16:57 jlam Exp $
+# $NetBSD: wrapper.sh,v 1.7.6.1 2003/08/16 09:08:51 jlam Exp $
 
 Xsed='@SED@ -e 1s/^X//'
 sed_quote_subst='s/\([\\`\\"$\\\\]\)/\\\1/g'
@@ -15,7 +15,8 @@ cache="@_BLNK_WRAP_CACHE@"
 post_cache="@_BLNK_WRAP_POST_CACHE@"
 logic="@_BLNK_WRAP_LOGIC@"
 post_logic="@_BLNK_WRAP_POST_LOGIC@"
-wrapperlog="@_BLNK_WRAP_LOG@"
+
+wrapperlog="${BUILDLINK_WRAPPER_LOG-@_BLNK_WRAP_LOG@}"
 
 updatecache=${BUILDLINK_UPDATE_CACHE-yes}
 cacheall=${BUILDLINK_CACHE_ALL-no}

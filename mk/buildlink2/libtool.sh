@@ -1,6 +1,6 @@
 #!@BUILDLINK_SHELL@
 #
-# $NetBSD: libtool.sh,v 1.8 2002/12/26 17:08:57 jlam Exp $
+# $NetBSD: libtool.sh,v 1.8.6.1 2003/08/16 09:08:51 jlam Exp $
 
 Xsed='@SED@ -e 1s/^X//'
 sed_quote_subst='s/\([\\`\\"$\\\\]\)/\\\1/g'
@@ -15,7 +15,8 @@ cache="@_BLNK_WRAP_CACHE@"
 post_cache="@_BLNK_WRAP_POST_CACHE@"
 logic="@_BLNK_WRAP_LOGIC@"
 post_logic="@_BLNK_WRAP_POST_LOGIC@"
-wrapperlog="@_BLNK_WRAP_LOG@"
+
+wrapperlog="${BUILDLINK_WRAPPER_LOG-@_BLNK_WRAP_LOG@}"
 
 libtool_fix_la="@_BLNK_LIBTOOL_FIX_LA@"
 libtool_do_install="@_BLNK_LIBTOOL_DO_INSTALL@"
