@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2002/10/18 01:34:39 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2002/10/18 13:43:37 jlam Exp $
 
 PKGNAME=	oss-${OSS_VERSION}
 CATEGORIES=	audio sysutils
@@ -65,8 +65,11 @@ post-extract:
 	${CHMOD} +x ${WRKSRC}/install.sh
 
 do-build:
-	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/soundconf.sh		\
-		> ${WRKDIR}/soundconf.sh
+	@for file in ossxmix soundconf; do				\
+		${SED}	${FILES_SUBST_SED}				\
+			-e "s|@OSS_WRAPPEE@|${OSSLIBDIR}/$${file}|g"	\
+			${FILESDIR}/wrapper.sh > ${WRKDIR}/$${file}.sh;	\
+	done
 
 chroot:
 	${PAX} -rw `${CAT} ${FILESDIR}/chroot` ${WRKSRC}
@@ -81,13 +84,13 @@ do-install: chroot
 	${INSTALL_DATA} ${FILESDIR}/MAKEDEV.oss ${OSSLIBDIR}
 	${LN} -sf ../lib/oss/mixer ${PREFIX}/bin/ossmixer
 	${LN} -sf ../lib/oss/mplay ${PREFIX}/bin/ossmplay
-	${LN} -sf ../lib/oss/ossxmix ${PREFIX}/bin/ossxmix
+	${INSTALL_SCRIPT} ${WRKDIR}/ossxmix.sh ${PREFIX}/bin/ossxmix
 	${LN} -sf ../lib/oss/play ${PREFIX}/bin/ossplay
 	${LN} -sf ../lib/oss/record ${PREFIX}/bin/ossrecord
 	${LN} -sf ../lib/oss/savemixer ${PREFIX}/bin/osssavemixer
+	${INSTALL_SCRIPT} ${WRKDIR}/soundconf.sh ${PREFIX}/sbin/soundconf
 	${LN} -sf ../lib/oss/soundoff ${PREFIX}/sbin/soundoff
 	${LN} -sf ../lib/oss/soundon ${PREFIX}/sbin/soundon
-	${INSTALL_SCRIPT} ${WRKDIR}/soundconf.sh ${PREFIX}/sbin/soundconf
 
 	${RM} -rf ${WRKSRC}/bin ${WRKSRC}/sbin ${WRKSRC}/usr
 	${RM} -f ${WRKSRC}/dev/mixer0 ${WRKSRC}/dev/null
