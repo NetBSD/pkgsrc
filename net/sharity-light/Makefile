@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/03/09 16:09:36 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2001/03/19 12:27:35 dmcmahill Exp $
 #
 
 DISTNAME=	Sharity-Light.1.2
@@ -10,6 +10,9 @@ MASTER_SITES=	http://www.obdev.at/ftp/pub/Products/Sharity-Light/ \
 MAINTAINER=	jmcneill@invisible.yi.org
 HOMEPAGE=	http://www.obdev.at/Products/shlight.html
 COMMENT=	Userland smbfs -- SMB to NFS protocol converter
+
+# avoid picking up a bad value from a users environment
+MAKE_ENV+=	"ARCH=	"
 
 post-extract:
 	${MKDIR} ${WRKDIR}/unshlight
