@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1570 2004/04/03 15:39:30 wiz Exp $
+$NetBSD: TODO,v 1.1571 2004/04/04 11:54:20 wiz Exp $
 
 Suggested new packages
 ======================
@@ -131,6 +131,7 @@ Suggested package updates
 
 	o ImageViewer-0.6.3
 	o SDL-1.2.7
+	o TeXmacs-1.0.3.6
 	o Xaw3d-1.5E
 	o Xbae-4.50.0
 	o afio-2.5
@@ -228,15 +229,17 @@ Suggested package updates
 	o kaffe-1.1.4 [pkg/24507]
 	o kile-1.6.2
 	o lavaps-2.4
-	o leafnode-1.9.50
+	o leafnode-1.9.52
 	o lftp-3.0.0
 	o libcaca-0.9
 	o libebml-0.6.4
 	o libesmtp-1.0.2
+	o libevent-0.8
 	o libidn-0.4.2
 	o libmpeg3-1.5.4
 	o libnet-1.1.1
 	o libole2-2.2.8
+	o libtool-1.5.4
 	o licq-1.2.7
 	o lilypond-2.2
 	o lmbench-2.0.4
@@ -272,6 +275,7 @@ Suggested package updates
 	o ns-flash-6.0.79
 	o nsd-2.0.2
 	o nut-9.12
+	o nxtvepg-2.7.0
 	o ocaml-3.07pl2
 	o onyx-5.1.1
 	o openal-20040215
