@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.177 2003/09/02 06:59:41 jlam Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.178 2003/09/03 13:56:28 jlam Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -152,6 +152,10 @@ DISTDIR?=	${_PKGSRCDIR}/distfiles
 # hold any updated distfiles, for example.
 # Possible:  any directories
 # Default: none
+
+DEFAULT_VIEW?= ""
+# This is the default view to which packages are added after installation.
+# Default: "" (the empty view)
 
 PKG_INSTALLATION_PREFS?= overwrite pkgviews
 # This is a whitespace-separated list of installation types to try when
