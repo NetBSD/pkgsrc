@@ -1,6 +1,6 @@
 #! @WRAPPER_SHELL@
 #
-# $NetBSD: wrapper.sh,v 1.4.2.1 2004/11/22 22:48:05 tv Exp $
+# $NetBSD: wrapper.sh,v 1.4.2.2 2005/01/24 18:40:01 tv Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -37,6 +37,8 @@
 # POSSIBILITY OF SUCH DAMAGE.
 
 @BUILD_ENV@
+arg_pp="@_WRAP_ARG_PP@"
+arg_pp_main="@_WRAP_ARG_PP_MAIN@"
 arg_source="@_WRAP_ARG_SOURCE@"
 buildcmd="@_WRAP_BUILDCMD@"
 cache="@_WRAP_CACHE@"

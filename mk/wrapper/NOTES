@@ -1,4 +1,4 @@
-$NetBSD: NOTES,v 1.1 2004/09/21 15:01:41 jlam Exp $
+$NetBSD: NOTES,v 1.1.2.1 2005/01/24 18:40:01 tv Exp $
 
 
     ==>  {"$@"}        ,-->  {argbuf}    ,-->  {cmdbuf}
@@ -8,24 +8,24 @@ $NetBSD: NOTES,v 1.1 2004/09/21 15:01:41 jlam Exp $
            |        |  |        |        |        |
            v        v  |        |        |        |
                                 |                 |
-        [scan]   [arg-source]   `-->  [logic]     `-->  [cmd-sink]
+        [scan]   [arg-source]   `-->  [logic]     `-------->  [cmd-sink]
 
-                                       ^ ^ ^                ^
-                                       | | |                |
-                     ,-----------------' | |                |
-                     |           ,-------' `---.            |
-                     |           |             |            |
-                     v           v             v            v
+                                     ^ ^ ^ ^ ^                    ^
+       ,-----------------------------' | | | |                    |
+       |           ,-------------------' | | |                    |
+       |           |       ,-------------' | |                    |
+       |           |       |           ,---' `-------.            |
+       v           v       v           v             v            v
 
-                  [cache] [transform.sed] [transform]   [buildcmd]
+ [arg-pp-main] [arg-pp] [cache] [transform.sed] [transform]   [buildcmd]
 
-                                                            |
-                                            ,--  {cmd}   <--|
-                                 {cmd}  <===|               |
-                                            `--  {libs}  <--'
+                                                                  |
+                                                  ,--  {cmd}   <--|
+                                       {cmd}  <===|               |
+                                                  `--  {libs}  <--'
 
-                                                   ^
-                                                   |
-                                                   v
+                                                         ^
+                                                         |
+                                                         v
 
-                                             [reorderlibs]
+                                                   [reorderlibs]

@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.74.2.3 2005/01/13 20:11:55 tv Exp $
+# $NetBSD: gcc.mk,v 1.74.2.4 2005/01/24 18:40:01 tv Exp $
 
 .if !defined(COMPILER_GCC_MK)
 COMPILER_GCC_MK=	defined
@@ -417,20 +417,26 @@ BUILD_DEPENDS+=	${_GCC_DEPENDENCY}
 .endif
 
 # Create compiler driver scripts in ${WRKDIR}.
+GCC_USE_SYMLINKS?=	no
 .for _var_ in ${_GCC_VARS}
 .  if !target(${_GCC_${_var_}})
 override-tools: ${_GCC_${_var_}}        
 ${_GCC_${_var_}}:
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
+.    if !empty(GCC_USE_SYMLINKS:Myes)
+	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${.TARGET}
+	${_PKG_SILENT}${_PKG_DEBUG}${LN} -s ${_GCCBINDIR}/${.TARGET:T} ${.TARGET}
+.    else
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	(${ECHO} '#!${TOOLS_SHELL}';					\
 	 ${ECHO} 'exec ${_GCCBINDIR}/${.TARGET:T} "$$@"';		\
 	) > ${.TARGET}
 	${_PKG_SILENT}${_PKG_DEBUG}${CHMOD} +x ${.TARGET}
+.    endif
 .    for _alias_ in ${_ALIASES.${_var_}:S/^/${.TARGET:H}\//}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if [ ! -x "${_alias_}" ]; then					\
-		${LN} -f ${.TARGET} ${_alias_};				\
+		${LN} -f -s ${.TARGET:T} ${_alias_};			\
 	fi
 .    endfor
 .  endif
