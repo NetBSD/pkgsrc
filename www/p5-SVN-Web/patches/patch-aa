@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/12/03 16:13:28 epg Exp $
+
+--- lib/SVN/Web.pm.orig	Wed Aug 27 01:54:11 2003
++++ lib/SVN/Web.pm
+@@ -170,7 +170,7 @@ sub handler {
+     $repos =~ s/^$base// or die "path $repos not inside base $base";
+     return &Apache::FORBIDDEN unless $repos;
+ 
+-    my $script = $1 if $r->uri =~ m|^((?:/\w+)+)/$repos| or die "can't find script";
++    $script = $1 if $r->uri =~ m|^((?:/\w+)+)/$repos| or die "can't find script";
+     chdir ($base);
+     $pool ||= SVN::Pool->new_default;
+     $config ||= load_config ('config.yaml');
