@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/02/10 22:01:23 garbled Exp $
+$NetBSD: distinfo,v 1.2 2004/04/09 03:44:30 garbled Exp $
 
-SHA1 (genecys-data-0.1.tar.gz) = c6ea7e54b244add5faac0f9edbd68ad9500e817e
-Size (genecys-data-0.1.tar.gz) = 28393871 bytes
+SHA1 (genecys-data-0.2.tar.gz) = 5a8ae1eed11bcd6c2eb96609c2ab89064aad5671
+Size (genecys-data-0.2.tar.gz) = 31861311 bytes
