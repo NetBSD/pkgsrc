@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2003/03/29 12:41:25 jmmv Exp $
-# FreeBSD Id: ports/lang/ghc/Makefile,v 1.1.1.1 1999/11/10 17:25:28 nectar Exp
+# $NetBSD: Makefile,v 1.11 2003/04/29 11:27:39 augustss Exp $
 
-DISTNAME=	ghc-4.04
-WRKSRC=		${WRKDIR}/fptools
+DISTNAME=	ghc-5.04.3
 CATEGORIES=	lang
-MASTER_SITES=	http://www.haskell.org/ghc/dist/4.04/
-DISTFILES=	ghc-4.04-src.tar.gz ghc-4.04-x86-hc.tar.gz
+MASTER_SITES=	http://www.haskell.org/ghc/dist/5.04.3/
+DISTFILES=	ghc-5.04.3-src.tar.bz2 ghc-5.04.3-i386-unknown-netbsd-hc.tar.bz2
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.haskell.org/ghc/
@@ -14,39 +12,43 @@ COMMENT=	Compiler for the functional language Haskell
 DEPENDS+=	readline>=4.0:../../devel/readline
 DEPENDS+=	gmp>=2.0.2:../../devel/gmp
 
+USE_GNU_READLINE=yes
 USE_PERL5=	yes
 USE_GMAKE=	yes
-GNU_CONFIGURE=	yes
 
-CONFIGURE_ARGS+= --enable-hc-boot --libdir=${PREFIX}/lib/ghc
-CONFIGURE_ENV+=	HASKELL_OBJ_FMT=${OBJECT_FMT}
+# Note: this package contains a Haskell compiler that is itself
+# written in Haskell. There are basically two ways we can solve the
+# bootstrap problem:
+# 1. bootstrap from pre-generated C files.
+# 2. first download a binary pre-built compiler and use it to compile.
+# We currently use way 1.
+# The problem with 2. is that it may make the package more sensitive
+# to the exact NetBSD versions involved (the version of the build
+# system compared to the version used to build the pre-built binary).
+# On the other hand, bootstrapping GHC from C is very fragile and it
+# may be harder to update the package with method 1.
+# For comparison, FreeBSD currently uses method 2.
 
-# a number of non-i386 platforms, including solaris/sparc, osf/alpha
-# etc are supported natively by ghc. pkg support for those platforms
-# and their NetBSD varients is left as a mid-level exercise for the reader
-# XXX: doesn't even work on ELF machines
-ONLY_FOR_PLATFORM= NetBSD-0.*-i386 NetBSD-1.[0-4]*-i386
+# Note: a number of non-i386 platforms, including solaris/sparc,
+# osf/alpha etc are supported natively by ghc. pkg support for those
+# platforms and their NetBSD varients is left as a mid-level exercise
+# for the reader
+ONLY_FOR_PLATFORM= NetBSD-1.5*-i386 NetBSD-1.6*-i386
 
-# Note:
-# 	- This package will bootstrap from pre-compiled C files.
-# XXX: we touch the happy-generated files to ensure that when we
-# switch to non-bootstrapping mode for installation, the build system
-# won't try to create them.
-#
 pre-configure:
-	${SED} < ${WRKSRC}/ghc/driver/ghc.lprl \
-	       > ${WRKSRC}/ghc/driver/ghc.lprl.hacked \
-		'/push(@SysLibrary, "-l$LibGmp")/s%^%push(@SysLibrary, "-L'${PREFIX}/lib'");%' && \
-		${MV} -f ${WRKSRC}/ghc/driver/ghc.lprl.hacked \
-			${WRKSRC}/ghc/driver/ghc.lprl
-pre-build:
-	${CP} ${FILESDIR}/build.mk ${WRKSRC}/mk
-	${TOUCH} ${TOUCH_FLAGS} ${WRKSRC}/ghc/compiler/rename/ParseIface.hs
-	${TOUCH} ${TOUCH_FLAGS} ${WRKSRC}/ghc/compiler/parser/Parser.hs
-	(cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${GMAKE} ${MAKE_FLAGS} ${MAKEFILE} ${MAKE_ARGS} boot)
+	cd ${WRKSRC}; file=configure.in;				\
+	${SED} -e "s|@PREFIX@|${PREFIX}|g" $${file} > $${file}.fixed;	\
+	${MV} -f $${file}.fixed $${file};				\
+	${AUTOCONF}
 
-post-build:
-	${ECHO} "GhcWithHscBuiltViaC=NO" >>${WRKSRC}/mk/build.mk
-	(cd ${WRKSRC}/ghc/lib; ${SETENV} ${MAKE_ENV} ${GMAKE} ${MAKE_FLAGS} ${MAKEFILE} ${MAKE_ARGS} clean boot all)
+do-configure:
+	: Nothing here, configure is run twice by the hc-build script.
 
+do-build:
+	(cd ${WRKSRC}; \
+	 LIBS="-L${PREFIX}/lib" ./distrib/hc-build --prefix=${PREFIX})
+
+.include "../../devel/readline/buildlink2.mk"
+.include "../../devel/gmp/buildlink2.mk"
+.include "../../mk/autoconf.mk"
 .include "../../mk/bsd.pkg.mk"
