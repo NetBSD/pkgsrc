@@ -1,0 +1,31 @@
+$NetBSD: patch-aa,v 1.1 2002/06/12 01:14:49 uebayasi Exp $
+
+--- configure.orig	Sun Jun  9 12:06:40 2002
++++ configure
+@@ -9509,7 +9509,7 @@
+ fi;
+ 
+ if test "X$z_libdir" != X ; then
+-   ZLIBLIBS="-L$z_libdir -lz"
++   ZLIBLIBS="-Wl,-R$z_libdir -L$z_libdir -lz"
+    ZLIBDEPS=''
+ else
+    ZLIBLIBS='-lz'
+@@ -11250,7 +11250,7 @@
+ 
+ if test $included_zlib = yes ; then
+    EBCONF_ZLIBINCS='-I$(includedir)'
+-   EBCONF_ZLIBLIBS='-L$(libdir) -lz'
++   EBCONF_ZLIBLIBS='-Wl,-R$(libdir) -L$(libdir) -lz'
+ else
+    EBCONF_ZLIBINCS=$ZLIBINCS
+    EBCONF_ZLIBLIBS=$ZLIBLIBS
+@@ -11269,7 +11269,7 @@
+ 
+ 
+ EBCONF_EBINCS='-I$(includedir)'
+-EBCONF_EBLIBS='-L$(libdir) -leb'
++EBCONF_EBLIBS='-Wl,-R$(libdir) -L$(libdir) -leb'
+ 
+ 
+ 

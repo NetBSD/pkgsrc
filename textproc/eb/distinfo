@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.3 2002/03/14 13:54:05 uebayasi Exp $
+$NetBSD: distinfo,v 1.4 2002/06/12 01:14:49 uebayasi Exp $
 
-SHA1 (eb/eb-3.2.1.tar.gz) = 1e34957cbb8e689e7e48f0d54c912acef7ddd455
-Size (eb/eb-3.2.1.tar.gz) = 998191 bytes
+SHA1 (eb/eb-3.2.2.tar.gz) = ae6fa87b996c239d95a8e24a4514eadb3cd9fb80
+Size (eb/eb-3.2.2.tar.gz) = 1010300 bytes
 SHA1 (eb/LIST) = 03cc7f7c41b415fd7ea9c119ee1cb9c445617cdd
 Size (eb/LIST) = 9136 bytes
 SHA1 (eb/LIST-ja) = f21e7765c637ad13beb8171edf70b0587f298e19
@@ -60,3 +60,5 @@ SHA1 (eb/readers2-2.0.tar.gz) = 08f6dc279a09ef1094d1b36152c857f6e3890d84
 Size (eb/readers2-2.0.tar.gz) = 2698 bytes
 SHA1 (eb/superdic98-1.0.tar.gz) = 4e74ecf887e0c1cf257b718d0e0922d03dfe8138
 Size (eb/superdic98-1.0.tar.gz) = 5252 bytes
+SHA1 (patch-aa) = 9dde77605b151e22c0b0ea96cb9d58788d259360
+SHA1 (patch-ab) = c135fd66475eac600226b672e7963b696720a3cf
