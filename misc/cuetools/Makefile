@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.2 2004/05/07 11:27:16 jmmv Exp $
+# $NetBSD: Makefile,v 1.3 2005/01/03 22:48:40 jmmv Exp $
 #
 
-DISTNAME=	cuetools-0.6
+DISTNAME=	cuetools-1.2
 CATEGORIES=	misc
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cuetools/}
+MASTER_SITES=	http://download.berlios.de/cuetools/
 
 MAINTAINER=	jmmv@NetBSD.org
-HOMEPAGE=	http://cuetools.sourceforge.net/
+HOMEPAGE=	http://cuetools.berlios.de/
 COMMENT=	Set of utilities to manipulate cue and toc files
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
@@ -17,15 +17,16 @@ USE_GNU_TOOLS+=		make
 INSTALLATION_DIRS=	bin man/man1
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/src/cueconvert ${PREFIX}/bin/
-	${INSTALL_PROGRAM} ${WRKSRC}/src/cuerename ${PREFIX}/bin/
-	${INSTALL_DATA} ${WRKSRC}/man/cueconvert.1 ${PREFIX}/man/man1
-	${INSTALL_DATA} ${WRKSRC}/man/cuerename.1 ${PREFIX}/man/man1
+	${INSTALL_PROGRAM} ${WRKSRC}/tools/cuebreakpoints ${PREFIX}/bin/
+	${INSTALL_PROGRAM} ${WRKSRC}/tools/cueconvert ${PREFIX}/bin/
+	${INSTALL_PROGRAM} ${WRKSRC}/tools/cueprint ${PREFIX}/bin/
+	${INSTALL_DATA} ${WRKSRC}/man/cuebreakpoints.man \
+		${PREFIX}/man/man1/cuebreakpoints.1
+	${INSTALL_DATA} ${WRKSRC}/man/cueconvert.man \
+		${PREFIX}/man/man1/cueconvert.1
+	${INSTALL_DATA} ${WRKSRC}/man/cueprint.man \
+		${PREFIX}/man/man1/cueprint.1
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/cuetools/
-	${INSTALL_DATA} ${WRKSRC}/doc/formats ${PREFIX}/share/doc/cuetools/
-	${INSTALL_DATA} ${WRKSRC}/doc/useage ${PREFIX}/share/doc/cuetools/usage
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/cuetools/
-	${INSTALL_DATA} ${WRKSRC}/doc/cuerename \
-	    ${PREFIX}/share/examples/cuetools/cuerename
+	${INSTALL_DATA} ${WRKSRC}/formats.txt ${PREFIX}/share/doc/cuetools/
 
 .include "../../mk/bsd.pkg.mk"
