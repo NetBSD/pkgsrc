@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/03/28 17:56:09 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2001/04/30 03:27:30 jlam Exp $
 
 .include "../../www/php4/Makefile.common"
 
@@ -10,12 +10,15 @@ DEPENDS+=		php-${PHP_VERS}:../../www/php4
 DEPENDS+=		apache>=1.3:../../www/apache
 
 # For "apxs":
-BUILD_DEPENDS+=		perl-5.*:../../lang/perl5
+BUILD_DEPENDS+=		perl>=${PERL5_REQD}:../../lang/perl5
 
 CONFIGURE_ARGS+=	--with-apxs=${LOCALBASE}/sbin/apxs
 
+# Ensure we export symbols in the linked shared object.
+LDFLAGS+=		-Wl,-E
+
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/.libs/libphp4.so \
+	${INSTALL_DATA} ${WRKSRC}/.libs/libphp4.so 			\
 		${PREFIX}/lib/httpd/mod_php4.so
 
 .include "../../mk/bsd.pkg.mk"
