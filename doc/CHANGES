@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8595 2005/01/04 13:42:44 shannonjr Exp $
+$NetBSD: CHANGES,v 1.8596 2005/01/04 13:43:24 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -81,3 +81,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated pgpdump to 0.24 [taca 2005-01-04]
 	Updated bkpupsd to 2.1.2nb4 [taca 2005-01-04]
 	Updated dirmngr to 0.9.0 [shannonjr 2005-01-04]
+	Updated scummvm to 0.7.0 [adam 2005-01-04]
