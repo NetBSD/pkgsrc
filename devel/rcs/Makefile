@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/03/12 16:02:32 agc Exp $
+# $NetBSD: Makefile,v 1.2 1999/03/16 09:46:42 agc Exp $
 #
 
 DISTNAME=       rcs-5.7
@@ -14,5 +14,11 @@ DEPENDS+=	diffutils-2.7:../../devel/diffutils
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV+=	PATH=${LOCALBASE}/bin:$PATH
+
+post-install:
+	${RM} -f ${PREFIX}/bin/rcslog
+	${LN} -s ${PREFIX}/bin/rlog ${PREFIX}/bin/rcslog
+	${RM} -f ${PREFIX}/man/rcslog.1 ${PREFIX}/man/man1/rcslog.1.gz
+	${LN} -s ${PREFIX}/man/man1/rlog.1 ${PREFIX}/man/man1/rcslog.1
 
 .include "../../mk/bsd.pkg.mk"
