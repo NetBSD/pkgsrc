@@ -1,0 +1,28 @@
+$NetBSD: patch-bd,v 1.1 2005/01/04 09:50:15 jlam Exp $
+
+--- lib/ExtUtils/instmodsh.orig	2004-01-05 17:34:59.000000000 -0500
++++ lib/ExtUtils/instmodsh
+@@ -58,16 +58,13 @@ while (1)
+       $reply =~ /^t\s*/ and do
+          {
+          my $file = (split(' ', $reply))[1];
+-         my $tmp = "/tmp/inst.$$";
+-         if (my $fh = IO::File->new($tmp, "w"))
+-            {
+-            $fh->print(join("\n", $Inst->files($module)));
+-            $fh->close();
+-            system("tar cvf $file -I $tmp");
+-            unlink($tmp);
+-            last CASE;
+-            }
+-         else { print("Can't open $file: $!\n"); }
++         # Use File::Temp to create the tempfile and avoid possible symlink
++         # race attacks against a known filename in /tmp [CAN-2004-0976].
++         my ($fh, $tmp) = File::Temp::tempfile(UNLINK => 1);
++         $fh->print(join("\n", $Inst->files($module)));
++         $fh->close();
++         system("tar cvf $file -T $tmp");
++         unlink($tmp);
+          last CASE;
+          };
+       $reply eq 'v' and do
