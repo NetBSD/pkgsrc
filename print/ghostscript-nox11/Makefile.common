@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.13 2001/05/22 09:33:32 wiz Exp $
+# $NetBSD: Makefile.common,v 1.14 2001/05/28 03:52:12 jlam Exp $
 
 DISTNAME=		ghostscript-${GS_VERS}
 GS_VERS=		6.01
@@ -11,9 +11,7 @@ MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://www.cs.wisc.edu/~ghost/index.html
 
 DEPENDS+=		ghostscript-fonts-6.0:../../fonts/ghostscript-fonts
-DEPENDS+=		ja-vflib-lib-2.*:../../japanese/vflib-lib
 DEPENDS+=		watanabe-vfont-19930318:../../fonts/watanabe_vfont
-DEPENDS+=		png>=1.0.11:../../graphics/png
 
 GS_SOURCES=		${DISTNAME}${EXTRACT_SUFX}
 DISTFILES+=		${GS_SOURCES}
@@ -99,6 +97,8 @@ MAKEFILE=		src/unix-gcc.mak
 ALL_TARGET=		std
 
 .include "../../mk/bsd.prefs.mk"
+.include "../../graphics/png/buildlink.mk"
+.include "../../japanese/vflib-lib/buildlink.mk"
 
 # arm32 compiler has an optimizer problem
 .if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "arm32"
@@ -109,8 +109,10 @@ CFLAGS=
 CFLAGS+=		-DA4
 .endif
 
-CFLAGS+=		-I${LOCALBASE}/include		# png.h, VF.h
+CFLAGS+=		-I${BUILDLINK_INCDIR}
 CFLAGS+=		-DHAVE_MKSTEMP=1
+
+LDFLAGS+=		-L${BUILDLINK_LIBDIR}
 
 .if ${OPSYS} == "SunOS"
 LDFLAGS+=		-L${LOCALBASE}/bsd/lib -Wl,-R${LOCALBASE}/bsd/lib
@@ -176,6 +178,8 @@ post-patch:
 	fi
 	${SED} -e "s|epsimage\.src|${GSINST_DIR}/lib/escp_24.src|g"	\
 		${WRKDIR}/dmp_site.ps.bak > ${WRKDIR}/dmp_site.ps
+
+pre-configure: ${BUILDLINK_TARGETS}
 
 do-configure:
 	#
