@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: printdepends,v 1.11 2002/08/22 08:21:31 jlam Exp $
+# $NetBSD: printdepends,v 1.12 2003/12/10 13:59:06 sketch Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@netbsd.org>
@@ -32,7 +32,7 @@
 
 #
 # Print list of pkg dependencies suitable for tsort(1).
-# Start in /usr/pkgsrc.
+# Start in $USR_PKGSRC.
 #
 # If an argument is given, use it as a file name
 # to contain any failure messages in each package directory.
@@ -44,7 +44,7 @@ else
 	brokenfile=/dev/null
 fi
 
-# /usr/pkgsrc
+# $USR_PKGSRC
 cwd=$PWD
 
 # List of all pkgs, from pkgsrc/*/Makefile
