@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6759 2004/08/02 09:57:55 cube Exp $
+$NetBSD: CHANGES,v 1.6760 2004/08/02 12:30:54 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3684,3 +3684,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gtk-gnutella to 0.94 [adam 2004-08-02]
 	Updated p5-HTML-Mason to 1.26 [cube 2004-08-02]
 	Updated p5-DBIx-SearchBuilder to 1.01 [cube 2004-08-02]
+	Updated freetype2 to 2.1.9 [adam 2004-08-02]
