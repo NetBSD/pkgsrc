@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2706 2003/07/09 08:10:48 itojun Exp $
+$NetBSD: CHANGES,v 1.2707 2003/07/09 13:32:47 gehenna Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2705,3 +2705,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated pax to 20030708 [jschauma 2003-07-08]
 	Udpated apr to 0.9.4.2.0.47 [itojun 2003-07-09]
 	Updated apache2 to 2.0.47 [itojun 2003-07-09]
+	Updated cvsync to 0.23.8 [gehenna 2003-07-09]
