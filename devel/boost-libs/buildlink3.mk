@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2005/02/26 22:48:35 jmmv Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2005/02/28 01:44:17 tv Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 BOOST_LIBS_BUILDLINK3_MK:=	${BOOST_LIBS_BUILDLINK3_MK}+
@@ -11,7 +11,8 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nboost-libs}
 BUILDLINK_PACKAGES+=	boost-libs
 
 .if !empty(BOOST_LIBS_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.boost-libs+=		boost-libs>=1.32.0
+# Use a dependency pattern that guarantees the proper ABI.
+BUILDLINK_DEPENDS.boost-libs+=		boost-libs-1.32.*
 BUILDLINK_PKGSRCDIR.boost-libs?=	../../devel/boost-libs
 .endif	# BOOST_LIBS_BUILDLINK3_MK
 
