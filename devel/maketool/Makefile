@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/10/13 11:31:26 fredb Exp $
+# $NetBSD: Makefile,v 1.3 1999/10/13 12:32:05 fredb Exp $
 #
 
 DISTNAME=	maketool-0.4
@@ -17,7 +17,7 @@ USE_X11BASE=	yes
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--without-included-gettext
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include"
+CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" GMAKE=${GMAKE}
 
 post-patch:
 	cd ${WRKSRC}; \
