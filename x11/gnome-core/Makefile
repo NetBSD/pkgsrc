@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2000/06/01 11:23:44 rh Exp $
+# $NetBSD: Makefile,v 1.44 2000/06/02 13:18:43 tron Exp $
 
 DISTNAME=		gnome-core-1.2.0
 CATEGORIES=		x11 gnome
@@ -44,18 +44,5 @@ post-install:
 	  ${EGREP} -v '/((cpumem|disk)usage|(cpu|mem|multi|swap)load)_applet' \
 	  <${PKGDIR}/PLIST.${OPSYS} >${PLIST_SRC}; \
 	fi
-
-.include "../../mk/bsd.prefs.mk"
-
-.if (${OPSYS} == "NetBSD")
-.if (${MACHINE_ARCH} == arm32) || (${MACHINE_ARCH} == i386) || \
-   (${MACHINE_ARCH} == m68k)
-DEPENDS+=		libgtop-*:../../devel/libgtop
-.endif
-
-.if exists(/usr/include/machine/apmvar.h)
-CPPFLAGS+=		-D__NetBSD_APM__
-.endif
-.endif
 
 .include "../../mk/bsd.pkg.mk"
