@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/01/27 00:53:11 heinz Exp $
+# $NetBSD: Makefile,v 1.11 2004/02/28 20:57:48 kristerw Exp $
 
 DISTNAME=	emacs-20.7
 PKGREVISION=	2
@@ -78,6 +78,9 @@ INFO_FILES=	emacs vip viper forms gnus mh-e cl sc dired-x ediff \
 		    ccmode message widget reftex
 
 INSTALL_PROGRAM=${INSTALL} ${COPY} -o ${BINOWN} -g ${BINGRP} -m ${BINMODE}
+
+post-extract:
+	${CP} ${FILESDIR}/amd64.h ${WRKSRC}/src/m
 
 pre-install:
 	@${FIND} ${WRKSRC} -type f -name "*.orig*" -print | ${XARGS} ${RM} -f
