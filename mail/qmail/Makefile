@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/11/26 22:22:19 zuntum Exp $
+# $NetBSD: Makefile,v 1.5 2002/01/21 16:00:52 zuntum Exp $
 #
 
 DISTNAME=	qmail-1.03
@@ -29,7 +29,9 @@ INSTALL_TARGET=	setup check
 IS_INTERACTIVE=	YES
 NO_PACKAGE=	"Has to be compiled on target system due to installation path issue"
 
-QMAILDIR=	/var/qmail
+QMAILDIR?=	/var/qmail
+
+MESSAGE_SUBST+=	QMAILDIR=${QMAILDIR}
 
 OWN_DIRS+=	${QMAILDIR}
 
