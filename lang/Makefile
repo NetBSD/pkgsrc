@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.120 2002/05/14 18:02:16 jschauma Exp $
+# $NetBSD: Makefile,v 1.121 2002/05/14 20:08:05 jschauma Exp $
 #
 
 COMMENT=	Programming languages
@@ -48,6 +48,7 @@ SUBDIR+=	java-vm-spec
 SUBDIR+=	jbuilder-jit
 SUBDIR+=	jdk
 SUBDIR+=	jikes
+SUBDIR+=	jini
 SUBDIR+=	joos
 SUBDIR+=	kaffe
 SUBDIR+=	kali
