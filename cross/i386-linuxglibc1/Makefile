@@ -1,4 +1,4 @@
-#	$NetBSD: Makefile,v 1.1 1998/08/12 02:44:15 tv Exp $
+# $NetBSD: Makefile,v 1.2 1998/08/23 20:43:41 frueauf Exp $
 #
 
 DISTVERSION=		5.3.12.0
@@ -7,9 +7,11 @@ EXTRACT_ONLY=		# none of the RPM files
 MASTER_SITES=		ftp://ftp.redhat.com/pub/redhat/redhat-4.2/i386/RedHat/RPMS/ \
 			ftp://ftp.digital.com/pub/linux/redhat/redhat-4.2/i386/RedHat/RPMS/
 
-USE_CROSS_GNU=		yes
+MAINTAINER=		packages@netbsd.org
 
 BUILD_DEPENDS=		rpm2cpio:../../misc/rpm
+
+USE_CROSS_GNU=		yes
 
 LINUXDEVEL_FILES=	libc-5.3.12-18.i386.rpm \
 			libc-devel-5.3.12-18.i386.rpm \
