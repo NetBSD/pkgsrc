@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/09/23 21:47:50 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2004/03/08 19:52:51 minskim Exp $
 
 .include "../pdflib/Makefile.common"
 
@@ -30,6 +30,6 @@ do-install:
 .endfor
 
 .include "../pdflib/buildlink2.mk"
-.include "../../lang/tcl/buildlink2.mk"
+.include "../../lang/tcl83/buildlink2.mk"
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2004/01/20 12:18:16 agc Exp $
+# $NetBSD: Makefile,v 1.19 2004/03/08 19:52:51 minskim Exp $
 
 DISTNAME=		igmt_v1.2
 PKGNAME=		iGMT-1.2
@@ -11,7 +11,7 @@ HOMEPAGE=		http://op.gfz-potsdam.de/igmt/
 COMMENT=		Interactive Mapping of Geoscientific Datasets
 
 DEPENDS+=		GMT>=3.3.6:../../graphics/GMT
-DEPENDS+=		tcl>=8.0:../../lang/tcl
+DEPENDS+=		tcl>=8.0:../../lang/tcl83
 DEPENDS+=		tk>=8.0:../../x11/tk
 DEPENDS+=		gv-[0-9]*:../../print/gv
 DEPENDS+=		ImageMagick>=5.3.9nb1:../../graphics/ImageMagick

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/01/20 12:22:22 agc Exp $
+# $NetBSD: Makefile,v 1.10 2004/03/08 19:52:51 minskim Exp $
 #
 
 DISTNAME=	scotty-${DIST_VERS}
@@ -11,7 +11,7 @@ MAINTAINER=	jwise@NetBSD.org
 HOMEPAGE=	http://wwwhome.cs.utwente.nl/~schoenw/scotty/
 COMMENT=	Network management extensions to TCL
 
-DEPENDS+=	tcl>=8.3.2:../../lang/tcl
+DEPENDS+=	tcl>=8.3.2:../../lang/tcl83
 
 DIST_VERS=	2.1.11
 

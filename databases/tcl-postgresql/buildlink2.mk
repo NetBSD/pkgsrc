@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.3 2003/01/05 20:12:29 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.4 2004/03/08 19:52:50 minskim Exp $
 
 .if !defined(TCL_POSTGRESQL_BUILDLINK2_MK)
 TCL_POSTGRESQL_BUILDLINK2_MK=	# defined
@@ -12,7 +12,7 @@ BUILDLINK_PREFIX.tcl-postgresql_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.tcl-postgresql=		include/pgsql/libpgtcl.h
 BUILDLINK_FILES.tcl-postgresql+=	lib/libpgtcl.*
 
-.include "../../lang/tcl/buildlink2.mk"
+.include "../../lang/tcl83/buildlink2.mk"
 
 BUILDLINK_TARGETS+=	tcl-postgresql-buildlink
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/12/08 14:41:40 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2004/03/08 19:52:51 minskim Exp $
 #
 
 DISTNAME=	tuxracer-0.61
@@ -32,7 +32,7 @@ post-install:
 
 .include "../../audio/SDL_mixer/buildlink2.mk"
 .include "../../graphics/glu/buildlink2.mk"
-.include "../../lang/tcl/buildlink2.mk"
+.include "../../lang/tcl83/buildlink2.mk"
 
 .include "../../mk/pthread.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

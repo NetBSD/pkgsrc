@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/01/20 14:11:50 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2004/03/08 19:52:50 minskim Exp $
 
 PKGNAME=		postgresql-pltcl-${BASE_VERS}
 PKGREVISION=		1
@@ -19,6 +19,6 @@ TCLSH=			${LOCALBASE}/bin/tclsh
 BUILD_DIRS=		${WRKSRC}/src/pl/tcl
 
 .include "../postgresql-lib/buildlink2.mk"
-.include "../../lang/tcl/buildlink2.mk"
+.include "../../lang/tcl83/buildlink2.mk"
 
 .include "../../mk/bsd.pkg.mk"

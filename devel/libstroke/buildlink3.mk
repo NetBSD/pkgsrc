@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2004/03/05 19:25:11 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2004/03/08 19:52:51 minskim Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBSTROKE_BUILDLINK3_MK:=	${LIBSTROKE_BUILDLINK3_MK}+
@@ -14,7 +14,7 @@ BUILDLINK_PACKAGES+=	libstroke
 BUILDLINK_DEPENDS.libstroke+=	libstroke>=0.3nb1
 BUILDLINK_PKGSRCDIR.libstroke?=	../../devel/libstroke
 
-.include "../../lang/tcl/buildlink3.mk"
+.include "../../lang/tcl83/buildlink3.mk"
 
 .endif	# LIBSTROKE_BUILDLINK3_MK
 

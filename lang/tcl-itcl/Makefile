@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/07/17 21:45:30 grant Exp $
+# $NetBSD: Makefile,v 1.9 2004/03/08 19:52:51 minskim Exp $
 
 DISTNAME=	itcl3.2
 PKGNAME=	tcl-itcl-3.2
@@ -27,16 +27,16 @@ post-extract:
 	@${MV} -f ${WRKSRC}/iwidgets2.2.0/doc/menubar.n 		\
 		${WRKSRC}/iwidgets2.2.0/doc/itclmenubar.n
 	@if [ ! -e ${_PKGSRCDIR}/lang/tcl/${WRKDIR:T}/tcl8.3.4 ]; then	\
-		cd ../../lang/tcl && ${MAKE} extract;			\
+		cd ../../lang/tcl83 && ${MAKE} extract;			\
 	fi
 	@if [ ! -e ${_PKGSRCDIR}/x11/tk/${WRKDIR:T}/tk8.3.4 ]; then	\
 		cd ../../x11/tk && ${MAKE} extract;			\
 	fi
 
 pre-clean:
-	@cd ../../lang/tcl && ${MAKE} clean
+	@cd ../../lang/tcl83 && ${MAKE} clean
 	@cd ../../x11/tk && ${MAKE} clean
 
-.include "../../lang/tcl/buildlink2.mk"
+.include "../../lang/tcl83/buildlink2.mk"
 .include "../../x11/tk/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
