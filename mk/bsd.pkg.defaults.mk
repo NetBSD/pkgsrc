@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.230 2004/04/19 00:23:34 recht Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.231 2004/04/20 14:21:19 uebayasi Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -2075,11 +2075,10 @@ W3M_USE_M17N?=			YES
 # Possible: YES, NO
 # Default: YES
 
-# XXX Currently broken; should be fixed later.
-#W3M_USE_UNICODE?=		YES
-## Used in w3m to use Unicode characters.
-## Possible: YES, NO
-## Default: YES
+W3M_USE_UNICODE?=		NO
+# Used in w3m to use Unicode characters.
+# Possible: YES, NO
+# Default: YES
 
 WGET_USE_SSL?=	YES
 # Enable SSL in wget (for https connections)
