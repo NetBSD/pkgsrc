@@ -1,2 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/08/13 09:10:10 zuntum Exp $
-@unexec cd ${QMAILDIR} && rm -rf bin boot doc man
+@comment $NetBSD: PLIST,v 1.2 2001/08/13 10:05:13 zuntum Exp $
+@unexec cd ${QMAILDIR} && rm -rf boot doc man
+@unexec cd ${QMAILDIR}/bin && rm -f bouncesaying condredirect datemail elq except forward maildir2mbox maildirmake maildirwatch mailsubj pinq predate preline qail qbiff qmail-clean qmail-getpw qmail-inject qmail-local qmail-lspawn qmail-newmrh qmail-newu qmail-pop3d qmail-popup qmail-pw2u qmail-qmqpc qmail-qmqpd qmail-qmtpd qmail-qread qmail-qstat qmail-queue qmail-remote qmail-rspawn qmail-send qmail-showctl qmail-smtpd qmail-start qmail-tcpok qmail-tcpto qreceipt qsmhook sendmail splogger tcp-env 
