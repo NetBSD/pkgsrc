@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.20 2004/04/11 06:56:11 rh Exp $	*/
+/*	$NetBSD: perform.c,v 1.21 2004/04/21 20:11:55 tv Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: perform.c,v 1.44 1997/10/13 15:03:46 jkh Exp";
 #else
-__RCSID("$NetBSD: perform.c,v 1.20 2004/04/11 06:56:11 rh Exp $");
+__RCSID("$NetBSD: perform.c,v 1.21 2004/04/21 20:11:55 tv Exp $");
 #endif
 #endif
 
@@ -143,6 +143,7 @@ pkg_do(const char *pkg)
 	zapLogDir = 0;
 	LogDir[0] = '\0';
 	strlcpy(playpen, FirstPen, sizeof(playpen));
+	memset(buildinfo, '\0', sizeof(buildinfo));
 	inPlace = 0;
 
 	/* Are we coming in for a second pass, everything already extracted?
