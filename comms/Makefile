@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 1999/09/21 09:58:09 agc Exp $
+# $NetBSD: Makefile,v 1.24 2000/01/04 11:22:44 fredb Exp $
 # FreeBSD Id: Makefile,v 1.26 1997/10/13 04:41:06 max Exp
 #
 
@@ -6,6 +6,7 @@
 #    SUBDIR += bpl+
 #    SUBDIR += ecu
     SUBDIR += fidogate
+    SUBDIR += gkermit
     SUBDIR += hylafax
     SUBDIR += ifcico-cm
     SUBDIR += kermit
