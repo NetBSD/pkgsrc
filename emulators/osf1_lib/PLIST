@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:53:11 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/03/22 15:33:53 wiz Exp $
+emul/osf1/etc/hosts
 emul/osf1/etc/sia/OSFC2_matrix.conf
 emul/osf1/etc/sia/bsd_matrix.conf
 emul/osf1/etc/sia/matrix.conf
