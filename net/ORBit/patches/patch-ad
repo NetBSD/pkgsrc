@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.6 2001/02/07 03:23:08 fredb Exp $
+$NetBSD: patch-ad,v 1.7 2002/09/27 00:45:14 jlam Exp $
 
---- popt/Makefile.am.orig	Mon Feb 21 12:39:52 2000
-+++ popt/Makefile.am	Tue Feb  6 18:20:34 2001
-@@ -12,10 +12,10 @@
+--- popt/Makefile.in.orig	Wed Mar 20 06:46:09 2002
++++ popt/Makefile.in
+@@ -114,10 +114,10 @@ INCLUDES = -I$(top_srcdir)
  
  noinst_PROGRAMS = test1 test2
  test1_SOURCES = test1.c
