@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.8 2001/02/24 18:37:46 dmcmahill Exp $
+$NetBSD: patch-ac,v 1.9 2001/04/07 12:43:48 dmcmahill Exp $
 
 Much cleanup of the script.  Added various options such as
 -O    for optimization
@@ -185,7 +185,7 @@ Much cleanup of the script.  Added various options such as
 +CPPFLAGS=
 +CFLAGS=-I@PREFIX@/include 
 +LIBS=
-+FLIBS="-L@PREFIX@/lib -lf2c -lm"
++FLIBS="-Wl,-R@PREFIX@/lib -L@PREFIX@/lib -lF77 -lI77 -lm"
 +VERBOSE=no
 +
  while
