@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.12 2000/09/26 21:42:34 eeh Exp $
+$NetBSD: patch-ab,v 1.13 2001/10/06 22:04:22 hubertf Exp $
 
---- configure.orig	Mon Jun 12 13:05:56 2000
-+++ configure	Tue Sep 26 14:18:05 2000
+--- configure.orig	Mon Jun 12 22:05:56 2000
++++ configure
 @@ -21,6 +21,9 @@
    --with-x-toolkit=KIT    use an X toolkit (KIT = yes/lucid/athena/motif/no)"
  ac_help="$ac_help
@@ -12,11 +12,12 @@ $NetBSD: patch-ab,v 1.12 2000/09/26 21:42:34 eeh Exp $
  
  # Initialize some variables set by options.
  # The variables have the same names as the options, with
-@@ -718,9 +721,12 @@
+@@ -718,9 +721,13 @@
  			machine=hp9000s300 ;;
        powerpc-apple-netbsd*) machine=macppc ;;
        mips-*-netbsd*)	machine=pmax ;;
 +      mipsel-*-netbsd*)	machine=pmax ;;
++      mipseb-*-netbsd*)	machine=mips ;;		# HF what else?
        ns32k-*-netbsd*)	machine=ns32000 ;;
 -      sparc-*-netbsd*)	machine=sparc ;;
 +      powerpc-*-netbsd*) machine=macppc ;;
@@ -26,7 +27,7 @@ $NetBSD: patch-ab,v 1.12 2000/09/26 21:42:34 eeh Exp $
      esac
    ;;
  
-@@ -4903,6 +4909,64 @@
+@@ -4903,6 +4910,64 @@
    cat >> confdefs.h <<\EOF
  #define HAVE_AIX_SMT_EXP 1
  EOF
