@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2004/03/10 12:51:45 taya Exp $
+# $NetBSD: Makefile,v 1.16 2004/04/24 02:57:07 taya Exp $
 
-PKGREVISION=	3
+PKGREVISION=	4
 MOZILLA=	mozilla-stable
 MOZILLA_BIN=	mozilla-bin
 DISTNAME=	mozilla-${MOZ_DIST_VER}
