@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/11/13 21:25:13 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2001/12/04 06:14:59 jlam Exp $
 
 DISTNAME=	ktail-0.5.1
 CATEGORIES=	misc kde
@@ -11,7 +11,6 @@ COMMENT=	ktail monitors multiple files and/or command output in one window
 BUILD_DEPENDS+=	qt2-designer-kde>=2.3.1nb1:../../x11/qt2-designer-kde
 
 BUILD_USES_MSGFMT=      YES
-AUTOMAKE_OVERRIDE=	YES
 USE_BUILDLINK_ONLY=	YES
 GNU_CONFIGURE=		YES
 
