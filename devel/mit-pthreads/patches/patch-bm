@@ -1,7 +1,7 @@
-$NetBSD: patch-bm,v 1.1 1999/07/29 16:44:43 bad Exp $
+$NetBSD: patch-bm,v 1.2 1999/09/10 20:38:23 bad Exp $
 
---- /dev/null	Wed Jul 28 16:32:34 1999
-+++ machdep/engine-m68000-netbsd.c	Wed Jul 28 23:54:31 1999
+--- /dev/null	Fri Sep 10 15:38:20 1999
++++ machdep/engine-m68000-netbsd.c	Fri Sep 10 20:57:07 1999
 @@ -0,0 +1,256 @@
 +/* ==== machdep.c ============================================================
 + * Copyright (c) 1993, 1994 Chris Provenzano, proven@athena.mit.edu
@@ -47,7 +47,7 @@ $NetBSD: patch-bm,v 1.1 1999/07/29 16:44:43 bad Exp $
 + */
 +
 +#ifndef lint
-+static const char rcsid[] = "$Id: patch-bm,v 1.1 1999/07/29 16:44:43 bad Exp $";
++static const char rcsid[] = "$Id: patch-bm,v 1.2 1999/09/10 20:38:23 bad Exp $";
 +#endif
 +
 +#include "pthread.h"
@@ -230,13 +230,13 @@ $NetBSD: patch-bm,v 1.1 1999/07/29 16:44:43 bad Exp $
 +        return(machdep_sys_getdents(fd, buf, len));
 +}  
 +
++extern off_t __syscall();
++
 +/* ==========================================================================
 + * machdep_sys_lseek()
 + */
 +off_t machdep_sys_lseek(int fd, off_t offset, int whence)
 +{
-+	extern off_t __syscall();
-+
 +	return(__syscall((quad_t)SYS_lseek, fd, 0, offset, whence));
 +}
 +

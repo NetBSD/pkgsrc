@@ -1,7 +1,7 @@
-$NetBSD: patch-bp,v 1.1 1999/07/29 16:44:44 bad Exp $
+$NetBSD: patch-bp,v 1.2 1999/09/10 20:38:23 bad Exp $
 
 --- config/config.guess.orig	Sun Jul  7 05:51:23 1996
-+++ config/config.guess	Tue Jul 27 16:55:36 1999
++++ config/config.guess	Fri Sep 10 19:42:26 1999
 @@ -261,8 +261,29 @@
      CRAY-2:UNICOS:*:*)
  	echo cray2-cray-unicos
@@ -18,7 +18,7 @@ $NetBSD: patch-bp,v 1.1 1999/07/29 16:44:44 bad Exp $
 +    mac68k:NetBSD:*:*)
 +	echo m68k-apple-netbsd${UNAME_RELEASE}
 +	exit 0 ;;
-+    mvme68:NetBSD:*:*)
++    mvme68k:NetBSD:*:*)
 +	echo m68k-motorola-netbsd${UNAME_RELEASE}
 +	exit 0 ;;
 +    next68k:NetBSD:*:*)
