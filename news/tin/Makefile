@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 1998/07/16 17:40:09 tron Exp $
+# $NetBSD: Makefile,v 1.2 1998/07/17 07:41:52 hubertf Exp $
 # $FreeBSD Id: Makefile,v 1.17 1997/06/16 06:39:51 max Exp
 
 DISTNAME=	tinpre-1.4-980618
@@ -8,7 +8,7 @@ MASTER_SITES=	ftp://ftp.tin.org/pub/news/clients/tin/current/ \
 		ftp://ftp.cs.tu-berlin.de/pub/net/news/tin/pre-v1.4/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	udo@netvision.org
+MAINTAINER=	udo@keks.franken.de
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/pre-1.4//}
 GNU_CONFIGURE=	yes
@@ -22,7 +22,8 @@ CONFIGURE_ARGS=	--with-nntp-default-server=news  \
 		--enable-forgery \
 		--enable-break-long-lines \
 		--with-metamail=${PREFIX}/bin/metamail \
-		--enable-nntp-only
+		--enable-nntp-only \
+		--disable-mime-strict-charset
 MAKEFILE=	makefile
 ALL_TARGET=	build
 
