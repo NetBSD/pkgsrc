@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.2 2001/07/15 14:24:04 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.3 2001/07/20 01:54:52 jlam Exp $
 #
 # This Makefile fragment is included by packages that use windowmaker.
 #
@@ -20,7 +20,7 @@ WINDOWMAKER_BUILDLINK_MK=	# defined
 BUILDLINK_DEPENDS.windowmaker?=	windowmaker>=0.65.0
 DEPENDS+=	${BUILDLINK_DEPENDS.windowmaker}:../../wm/windowmaker
 
-BUILDLINK_PREFIX.windowmaker=	${X11PREFIX}
+EVAL_PREFIX+=			BUILDLINK_PREFIX.windowmaker=windowmaker
 BUILDLINK_FILES.windowmaker=	include/WINGs/*
 BUILDLINK_FILES.windowmaker+=	include/WMaker.h
 BUILDLINK_FILES.windowmaker+=	include/wraster.h
@@ -44,13 +44,13 @@ BUILDLINK_TARGETS.windowmaker+=	wm-wutil-buildlink-config-wrapper
 BUILDLINK_TARGETS.windowmaker+=	wm-wraster-buildlink-config-wrapper
 BUILDLINK_TARGETS+=		${BUILDLINK_TARGETS.windowmaker}
 
-BUILDLINK_CONFIG.wm-wings=		${X11PREFIX}/bin/get-wings-flags
+BUILDLINK_CONFIG.wm-wings=		${BUILDLINK_PREFIX.windowmaker}/bin/get-wings-flags
 BUILDLINK_CONFIG_WRAPPER.wm-wings=	${BUILDLINK_DIR}/bin/get-wings-flags
 
-BUILDLINK_CONFIG.wm-wutil=		${X11PREFIX}/bin/get-wutil-flags
+BUILDLINK_CONFIG.wm-wutil=		${BUILDLINK_PREFIX.windowmaker}/bin/get-wutil-flags
 BUILDLINK_CONFIG_WRAPPER.wm-wutil=	${BUILDLINK_DIR}/bin/get-wutil-flags
 
-BUILDLINK_CONFIG.wm-wraster=		${X11PREFIX}/bin/get-wraster-flags
+BUILDLINK_CONFIG.wm-wraster=		${BUILDLINK_PREFIX.windowmaker}/bin/get-wraster-flags
 BUILDLINK_CONFIG_WRAPPER.wm-wraster=	${BUILDLINK_DIR}/bin/get-wraster-flags
 
 .if defined(USE_CONFIG_WRAPPER)

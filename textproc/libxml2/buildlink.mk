@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.3 2001/07/02 05:34:00 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.4 2001/07/20 01:54:52 jlam Exp $
 #
 # This Makefile fragment is included by packages that use libxml2.
 #
@@ -20,7 +20,7 @@ LIBXML2_BUILDLINK_MK=	# defined
 BUILDLINK_DEPENDS.libxml2?=	libxml2>=2.3.12
 DEPENDS+=	${BUILDLINK_DEPENDS.libxml2}:../../textproc/libxml2
 
-BUILDLINK_PREFIX.libxml2=	${LOCALBASE}
+EVAL_PREFIX+=			BUILDLINK_PREFIX.libxml2=libxml2
 BUILDLINK_FILES.libxml2=	include/libxml2/libxml/*
 BUILDLINK_FILES.libxml2+=	lib/libxml2.*
 BUILDLINK_FILES.libxml2+=	lib/xml2Conf.sh
@@ -32,8 +32,10 @@ BUILDLINK_TARGETS.libxml2=	libxml2-buildlink
 BUILDLINK_TARGETS.libxml2+=	libxml2-buildlink-config-wrapper
 BUILDLINK_TARGETS+=		${BUILDLINK_TARGETS.libxml2}
 
-BUILDLINK_CONFIG.libxml2=		${LOCALBASE}/bin/xml2-config
-BUILDLINK_CONFIG_WRAPPER.libxml2=	${BUILDLINK_DIR}/bin/xml2-config
+BUILDLINK_CONFIG.libxml2=	\
+		${BUILDLINK_PREFIX.libxml2}/bin/xml2-config
+BUILDLINK_CONFIG_WRAPPER.libxml2=	\
+		${BUILDLINK_DIR}/bin/xml2-config
 
 .if defined(USE_CONFIG_WRAPPER) && defined(GNU_CONFIGURE)
 XML2_CONFIG?=		${BUILDLINK_CONFIG_WRAPPER.libxml2}

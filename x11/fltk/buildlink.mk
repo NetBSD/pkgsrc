@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.7 2001/07/01 22:59:32 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.8 2001/07/20 01:54:53 jlam Exp $
 #
 # This Makefile fragment is included by packages that use FLTK.
 #
@@ -20,7 +20,7 @@ FLTK_BUILDLINK_MK=	# defined
 BUILDLINK_DEPENDS.fltk?=	fltk>=1.0.9
 DEPENDS+=	${BUILDLINK_DEPENDS.fltk}:../../x11/fltk
 
-BUILDLINK_PREFIX.fltk=	${X11PREFIX}
+EVAL_PREFIX+=		BUILDLINK_PREFIX.fltk=fltk
 BUILDLINK_FILES.fltk=	include/FL/*
 BUILDLINK_FILES.fltk+=	lib/libfltk.*
 
