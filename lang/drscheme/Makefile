@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/05/22 20:26:59 groo Exp $
+# $NetBSD: Makefile,v 1.2 2000/09/14 16:03:20 tron Exp $
 #
 
 DISTNAME=		plt.src.x
@@ -12,6 +12,7 @@ HOMEPAGE=		http://www.cs.rice.edu/CS/PLT/packages/drscheme/
 DEPENDS+=               mzscheme-101:../mzscheme
 
 USE_GMAKE=		yes
+USE_PERL5=		yes
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386
 
