@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4157 2003/12/17 10:56:59 wulf Exp $
+$NetBSD: CHANGES,v 1.4158 2003/12/17 14:40:04 taca Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5208,3 +5208,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated xfce4-clipman-plugin to 0.4.0 [martti 2003-12-17]
 	Updated tsclient to 0.132 [xtraeme 2003-12-17]
 	Updated bbsload to 0.2.6 [wulf 2003-12-17]
+	Added ruby-webunit-20030121 [taca 2003-12-17]
