@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2002/12/19 12:04:30 grant Exp $
+
+SHA1 (quirc-0.9.82.tar.gz) = edb4e3acc8daf9d3451b91c3f98aed4a931b8c07
+Size (quirc-0.9.82.tar.gz) = 296135 bytes
+SHA1 (patch-aa) = 997938094af7ff493ad31248b13e428e393aa2a1
+SHA1 (patch-ab) = 4e37d9e64f55a5f587d513ac97dd284751c72e69
