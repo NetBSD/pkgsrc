@@ -1,31 +1,14 @@
-$NetBSD: patch-aa,v 1.22 2002/08/25 21:52:55 jlam Exp $
+$NetBSD: patch-aa,v 1.23 2002/10/28 22:37:10 wiz Exp $
 
---- configure.orig	Mon Mar 18 18:42:35 2002
-+++ configure
-@@ -6095,7 +6095,7 @@
-   if test "$have_kerberos5" = yes ; then
-     # from Matt Knopp <mhat@infocalypse.netlag.com>
-     # (who got it from amu@mit.edu)
--    PASSWD_LIBS="$PASSWD_LIBS -lkrb4 -ldes425 -lkrb5 -lk5crypto -lcrypt -lcom_err"
-+    PASSWD_LIBS="$PASSWD_LIBS -lkrb5 -lasn1 -lkrb -lcrypto -lroken -lcom_err -lcrypt"
-   elif test "$have_kerberos" = yes ; then
-     # from Tim Showalter <tjs@psaux.com> for FreeBSD 4.2
-     PASSWD_LIBS="$PASSWD_LIBS -lkrb -ldes -lcom_err"
-@@ -7584,7 +7584,7 @@
-     /*)
-      echo $ac_n "checking for XML headers""... $ac_c" 1>&6
- echo "configure:7598: checking for XML headers" >&5
--     d=$with_xml/include
-+     d=$with_xml/include/gnome-xml
-      if test -d $d; then
-        X_CFLAGS="-I$d $X_CFLAGS"
-        echo "$ac_t""$d" 1>&6
-@@ -10745,7 +10745,7 @@
-   GTK_ICONDIR='$(GNOME_DATADIR)/pixmaps'
- elif test "$have_gtk" = yes; then
-   # should this be "$(prefix)/share/pixmaps"? But /usr/X11R6/share/ is wrong...
--  GTK_ICONDIR='/usr/share/pixmaps'
-+  GTK_ICONDIR='$(prefix)/share/pixmaps'
- else
-   GTK_ICONDIR=''
- fi
+--- config.guess.orig	Mon Sep  9 10:33:43 2002
++++ config.guess
+@@ -402,6 +402,9 @@ EOF
+     powerpc:machten:*:*)
+ 	echo powerpc-apple-machten${UNAME_RELEASE}
+ 	exit 0 ;;
++    macppc:NetBSD:*:*)
++	echo powerpc-apple-netbsd${UNAME_RELEASE}
++	exit 0 ;;
+     RISC*:Mach:*:*)
+ 	echo mips-dec-mach_bsd4.3
+ 	exit 0 ;;
