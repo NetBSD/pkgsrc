@@ -1,0 +1,35 @@
+$NetBSD: patch-ab,v 1.1 2001/08/31 00:22:12 itojun Exp $
+
+Plug security hole inherited from xloadimage.
+
+Index: image/faces.c
+===================================================================
+RCS file: /usr/cvsroot/mgp/kit/image/faces.c,v
+retrieving revision 1.4
+retrieving revision 1.5
+diff -u -r1.4 -r1.5
+--- faces.c	1998/12/28 08:22:58	1.4
++++ faces.c	2001/08/30 17:10:30	1.5
+@@ -18,6 +18,7 @@
+ 
+ #define HEXIGNORE -1
+ #define HEXBAD    -2
++#define MAXFACESNAME 256 /* to avoid buffer overflow */
+ 
+ /* build a hex digit value table with the bits inverted
+  */
+@@ -107,10 +108,11 @@
+   while (zgets((byte *)buf, BUFSIZ - 1, zf)) {
+     if (! strcmp(buf, "\n"))
+       break;
+-    if (!strncmp(buf, "FirstName:", 10))
+-      strcpy(fname, buf + 11);
++    if (!strncmp(buf, "FirstName:", 10)){
++      strncpy(fname, buf + 11, MAXFACESNAME);
++	}
+     else if (!strncmp(buf, "LastName:", 9))
+-      strcpy(lname, buf + 10);
++      strncpy(lname, buf + 10, MAXFACESNAME);
+     else if (!strncmp(buf, "Image:", 6)) {
+       if (sscanf(buf + 7, "%d%d%d", &iw, &ih, &id) != 3) {
+ 	fprintf(stderr, "%s: Bad Faces Project image\n", fullname);
