@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/05/02 11:53:58 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2003/05/02 13:07:52 wiz Exp $
 #
 
 DISTNAME=	ipal-20001210
@@ -12,15 +12,12 @@ HOMEPAGE=	http://www.icarus.com/eda/ipal/index.html
 COMMENT=	Libs and utils for manipulating PAL designs (development version)
 
 BUILD_DEPENDS+= bison-[0-9]*:../../devel/bison
-DEPENDS+=       gtk+>=1.2.10nb4:../../x11/gtk
 
 GNU_CONFIGURE=	YES
+USE_BUILDLINK2=	YES
 USE_GMAKE=	YES
-USE_X11=	YES
 
 CFLAGS+=	-fPIC
 
-post-patch:
-	${CHMOD} a+x ${WRKSRC}/configure
-
+.include "../../x11/gtk/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
