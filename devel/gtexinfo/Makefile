@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 1998/08/20 15:16:47 tsarna Exp $
+# $NetBSD: Makefile,v 1.13 1999/02/18 13:43:26 tv Exp $
 #
 
 DISTNAME=		texinfo-3.12
@@ -11,6 +11,10 @@ HOMEPAGE=		http://www.gnu.org/software/texinfo/texinfo.html
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-catgets
+
+.if exists(/usr/bin/install-info)
+IGNORE=			"included with your NetBSD distribution"
+.endif
 
 post-patch:
 	${MV} -f ${WRKSRC}/info/filesys.h ${WRKSRC}/info/filesys.h.orig
