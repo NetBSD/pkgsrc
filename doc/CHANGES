@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8460 2004/12/26 21:58:32 jlam Exp $
+$NetBSD: CHANGES,v 1.8461 2004/12/26 22:06:46 jdolecek Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -6574,3 +6574,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added p5-Kwiki-Search-0.12 [jlam 2004-12-26]
 	Added p5-Kwiki-UserName-0.13 [jlam 2004-12-26]
 	Added p5-Kwiki-UserPreferences-0.12 [jlam 2004-12-26]
+	Updated vmware-module3 to 3.2.1.6 [jdolecek 2004-12-26]
