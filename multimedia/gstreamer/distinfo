@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2004/04/15 21:20:32 jmmv Exp $
+$NetBSD: distinfo,v 1.5 2004/06/28 16:30:31 jmmv Exp $
 
-SHA1 (gstreamer-0.8.1.tar.bz2) = 37016774662375af2c2641e750c4dc2f2c317aad
-Size (gstreamer-0.8.1.tar.bz2) = 1177592 bytes
+SHA1 (gstreamer-0.8.3.tar.bz2) = 71d8ee8db2ae8f5de4f05dd33491d4e8a6ae5902
+Size (gstreamer-0.8.3.tar.bz2) = 1286174 bytes
 SHA1 (patch-aa) = 749f788b2639bdffb48cf937aae0520db2ba864f
