@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7788 2004/11/09 13:08:24 xtraeme Exp $
+$NetBSD: CHANGES,v 1.7789 2004/11/09 14:12:56 taca Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5185,3 +5185,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated xps to 4.2 [adam 2004-11-09]
 	Updated dar to 2.1.5 [adam 2004-11-09]
 	Added qemu-0.6.0 [xtraeme 2004-11-09]
+	Updated ruby-base to 1.6.8.nb7 [taca 2004-11-09]
