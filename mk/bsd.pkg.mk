@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.250 1999/04/08 18:43:42 tron Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.251 1999/04/09 02:06:53 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -1014,13 +1014,6 @@ do-fetch:
 .endif
 .endif
 
-# This is for the use of sites which store distfiles which others may
-# fetch - only fetch the distfile if it is allowed to be
-# re-distributed freely
-mirror-distfiles:
-.if (${MIRROR_DISTFILE} == "yes")
-	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} fetch __ARCH_OK=1 __OPSYS_OK=1 NO_IGNORE=yes
-.endif
 
 # Extract
 
@@ -1594,6 +1587,15 @@ deinstall-depends: uptodate-pkgtools
 ################################################################
 # Some more targets supplied for users' convenience
 ################################################################
+
+# This is for the use of sites which store distfiles which others may
+# fetch - only fetch the distfile if it is allowed to be
+# re-distributed freely
+mirror-distfiles:
+.if (${MIRROR_DISTFILE} == "yes")
+	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} fetch __ARCH_OK=1 __OPSYS_OK=1 NO_IGNORE=yes
+.endif
+
 
 # Cleaning up
 
