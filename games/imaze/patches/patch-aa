@@ -1,11 +1,17 @@
---- source/Makefile.orig	Thu Feb 22 15:01:18 1996
-+++ source/Makefile	Wed Jul 29 23:33:30 1998
-@@ -12,3 +12,3 @@
+--- source/Makefile.orig	Thu Feb 22 23:01:18 1996
++++ source/Makefile	Fri Jul 31 00:43:52 1998
+@@ -10,7 +10,7 @@
+ ##
+ 
  #DEFINES=
 -BINDIR=..
 +BINDIR=$(PREFIX)/bin
  COPT=-O
-@@ -121,2 +121,10 @@
+ #CC=
+ 
+@@ -119,6 +119,14 @@
+ 	  SYSDEFS='-DDONT_DECLARE_ERRLIST -DSOUND -DJOYSTICK' \
+ 	  all
  
 +netbsd:
 +	$(MAKE) \
@@ -16,20 +22,31 @@
 +	  all
 +
  irix:
-@@ -140,3 +148,3 @@
+ 	$(MAKE) \
+ 	  GRAF=MOTIF \
+@@ -138,13 +146,13 @@
+ ###########################################################################
+ 
  LD=$(CC)
 -INSTALL=install -s -m 755
-+INSTALL=install -s -o bin -g bin -m 0755
++INSTALL=install -c -s -o bin -g bin -m 0755
  
-@@ -145,4 +153,4 @@
+ XVLIBS=-L$(OPENWINHOME)/lib -lxview -lolgx -lX11
+ XVINCLUDES=-I$(OPENWINHOME)/include
  
 -MOTIFLIBS=-lXm -lXt -lX11
 -MOTIFINCLUDES=
 +MOTIFLIBS=-L$(PREFIX)/lib -lXm -lXt -lX11
 +MOTIFINCLUDES=-I$(PREFIX)/include
  
-@@ -154,3 +162,3 @@
+ GRAFLIBS=$($(GRAF)LIBS)
+ GRAFINCLUDES=$($(GRAF)INCLUDES)
+@@ -152,7 +160,7 @@
+ 
+ GRAF=NONE
  
 -LDFLAGS=
 +LDFLAGS=$(RPATH)
  CFLAGS=$(GRAFINCLUDES) $(COPT) $(DEFINES) $(SYSDEFS)
+ 
+ # bis hier Optionen eintragen
