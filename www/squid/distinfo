@@ -1,18 +1,30 @@
-$NetBSD: distinfo,v 1.16 2002/07/04 06:11:44 tron Exp $
+$NetBSD: distinfo,v 1.17 2002/10/13 16:43:20 taca Exp $
 
-SHA1 (squid-2.4.STABLE7-src.tar.gz) = 91d05fbfd07545c7f11a997e988f8412b259a902
-Size (squid-2.4.STABLE7-src.tar.gz) = 1087532 bytes
-SHA1 (patch-aa) = f78e4aa062ff3df0ba3c66b5b6d98db8733ba5c3
-SHA1 (patch-ab) = afb0c443c708d03fc7ab39120ae9a3c68d9e9b88
+SHA1 (squid-2.5.STABLE1.tar.bz2) = 6705006527f5fa0753e7c9f14347f36b1b787e62
+Size (squid-2.5.STABLE1.tar.bz2) = 1006600 bytes
+SHA1 (squid-2.5.STABLE1-disable-ident-lookups.patch) = 8b21d1c40c85a86c575e039021b10010e0ab55a8
+Size (squid-2.5.STABLE1-disable-ident-lookups.patch) = 695 bytes
+SHA1 (squid-2.5.STABLE1-disable-http-violations.patch) = 16c24d98ca41a0aaa15c4f58fafc3b5adfd3d375
+Size (squid-2.5.STABLE1-disable-http-violations.patch) = 405 bytes
+SHA1 (squid-2.5.STABLE1-proxy_auth.patch) = acbe54df4e2f6f00ac17d20e8b65a33c8fb27c32
+Size (squid-2.5.STABLE1-proxy_auth.patch) = 6507 bytes
+SHA1 (squid-2.5.STABLE1-max_user_ip.patch) = fcab373dc21c2b79e397a594469e18a308c13f41
+Size (squid-2.5.STABLE1-max_user_ip.patch) = 12639 bytes
+SHA1 (squid-2.5.STABLE1-cache_dir_docs.patch) = 3795590991c447b1f4b3bc78db78722f4c1709df
+Size (squid-2.5.STABLE1-cache_dir_docs.patch) = 960 bytes
+SHA1 (squid-2.5.STABLE1-load_icons.patch) = 960858c6d8ada1d70c20d740148de42ddb3c93a0
+Size (squid-2.5.STABLE1-load_icons.patch) = 1254 bytes
+SHA1 (patch-aa) = a15b9ccca79a8eeaacbf035f392f251ef98e0470
+SHA1 (patch-ab) = 1224ba4cee98a26d2c9d670eb6d57c6187ff2d56
 SHA1 (patch-ac) = b962e05bcaccd0d9a0969b2f1419fd73456440cd
-SHA1 (patch-ad) = 03f76c2a781bff4b3a8680ee815f8c5dcbdd70d0
-SHA1 (patch-ae) = 5189de99c6f453ef58b97a4df54c065c87cf7e21
-SHA1 (patch-ag) = 9f7e81052d8134d3da970148dbfe51a7be072e62
+SHA1 (patch-ad) = 23a906011ffef78d070cc49c94c4f4837eb319ec
+SHA1 (patch-ae) = 33888cf772b3fb3b7c4352cc29551a2dadfb12fa
+SHA1 (patch-ag) = 7a0aa328d18374a4a954f66ac1431779a303f395
 SHA1 (patch-ah) = c80f9d8ce5fae7f399583607aa7f7153824465b7
-SHA1 (patch-aj) = 2a8a7df72d0e978c069a8f273a0ee91ac31aa985
-SHA1 (patch-ak) = a3f3000dbab7ba6f08904008ccf9e08bc70b3e3f
-SHA1 (patch-al) = d0741a93a4df8bf94b07e65680b50c294243c728
-SHA1 (patch-am) = c844378a03ae27ae52eb454958fb9ed7bc0ce21e
-SHA1 (patch-an) = 1db7caccce45fa29d61f6341a22ac29e02ee4b93
-SHA1 (patch-ba) = c29829c4f1fcd094102188e1ef4fd28bb73ba2ce
-SHA1 (patch-bb) = d6d3cc0ddfcda9c36e95d37b7986a7a5c1e89486
+SHA1 (patch-aj) = aa2271e53602fe168604aeced6ed66d28fe47707
+SHA1 (patch-ak) = 19861281d8a9ece352ce9e881e1e60f6787933e3
+SHA1 (patch-al) = 534f273ec63f6de0818f1f86a2b655eac4564213
+SHA1 (patch-an) = 8748cfb50e0acb6588228b87b424f87b0c48cc59
+SHA1 (patch-ba) = c91bc26e4b6df2cb4b7042591efb4afd7c989462
+SHA1 (patch-bb) = 70e92462230ac3b9920946b089290d9ec814fade
+SHA1 (patch-bc) = 536299e59c396829f23484a14bb9a6f5c0a4de35
