@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.43 2002/09/24 11:59:23 wiz Exp $
+$NetBSD: CHANGES,v 1.44 2002/09/24 12:35:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -2951,3 +2951,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Added tremor 1.0.2 [chris 2002-09-24]
 	Added tremor-tools 1.0.0.8 [chris 2002-09-24]
 	Updated popa3d to 0.5.9 [wiz 2002-09-24]
+	Updated pkglint to 3.33 [wiz 2002-09-24]
