@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.15 2000/12/11 09:01:46 itojun Exp $
+$NetBSD: md5,v 1.16 2001/02/18 16:00:14 itojun Exp $
 
-MD5 (racoon-20001211a.tar.gz) = 7bd5f01cb07e31454d28e233b75c805f
+MD5 (racoon-20010215a.tar.gz) = 5d4467f279ab6309ead78fb2c0358e2e
