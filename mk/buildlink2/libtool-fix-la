@@ -1,4 +1,4 @@
-# $NetBSD: libtool-fix-la,v 1.20 2003/08/31 06:07:33 jlam Exp $
+# $NetBSD: libtool-fix-la,v 1.21 2003/08/31 08:56:39 jlam Exp $
 #
 # For *.la files, in the "relink_command" line, we make the following
 # replacements:
@@ -143,6 +143,10 @@ if $test -f $lafile; then
 		for i in ${dependency_libs}; do
 			case "$i" in
 			$prev)
+				;;
+			-R*)
+				# skip all -R* options... rpath info shouldn't
+				# go into the dependency_libs line.
 				;;
 			-L*)
 				case "$i" in
