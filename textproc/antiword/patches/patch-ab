@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.7 2004/12/05 00:01:39 cube Exp $
+$NetBSD: patch-ab,v 1.8 2005/03/07 18:29:03 minskim Exp $
 
---- main_u.c.orig	2004-10-14 18:49:18.000000000 +0200
+--- main_u.c.orig	Thu Oct 14 11:49:18 2004
 +++ main_u.c
 @@ -29,7 +29,7 @@
  #include <fcntl.h>
  #include <io.h>
  #endif /* __dos */
 -#if defined(__STDC_ISO_10646__)
-+#if defined(__STDC_ISO_10646__) || defined(__NetBSD__) || defined(__FreeBSD__)
++#if defined(__STDC_ISO_10646__) || defined(__NetBSD__) || defined(__FreeBSD__) || defined(__APPLE__)
  #include <locale.h>
  #endif /* __STDC_ISO_10646__ */
  #if defined(N_PLAT_NLM)
