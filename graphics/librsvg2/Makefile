@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.14 2003/12/14 21:35:11 jmmv Exp $
+# $NetBSD: Makefile,v 1.15 2003/12/18 14:15:25 adam Exp $
 #
 
-DISTNAME=		librsvg-2.4.0
-PKGNAME=		${DISTNAME:S/-/2-/}
-CATEGORIES=		graphics gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/librsvg/2.4/}
-EXTRACT_SUFX=		.tar.bz2
+DISTNAME=	librsvg-2.5.0
+PKGNAME=	${DISTNAME:S/-/2-/}
+CATEGORIES=	graphics gnome
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/librsvg/2.5/}
+EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=		tech-pkg@NetBSD.org
-HOMEPAGE=		http://librsvg.sourceforge.net/
-COMMENT=		SVG library for GNOME2
+MAINTAINER=	tech-pkg@NetBSD.org
+HOMEPAGE=	http://librsvg.sourceforge.net/
+COMMENT=	SVG library for GNOME2
 
 USE_BUILDLINK2=		YES
 USE_X11=		YES
