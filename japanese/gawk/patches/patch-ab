@@ -1,31 +1,25 @@
-$NetBSD: patch-ab,v 1.2 1999/06/08 09:19:50 sakamoto Exp $
+$NetBSD: patch-ab,v 1.3 1999/10/11 13:00:43 sakamoto Exp $
 
---- awklib/Makefile.in.orig	Tue Jun  8 10:31:14 1999
-+++ awklib/Makefile.in	Tue Jun  8 10:38:52 1999
-@@ -34,7 +34,7 @@
- prefix = @prefix@
+--- awklib/Makefile.in.orig	Mon Oct 11 21:30:42 1999
++++ awklib/Makefile.in	Mon Oct 11 21:36:58 1999
+@@ -35,5 +35,5 @@
  exec_prefix = @exec_prefix@
  exec_suffix = @exec_suffix@
 -binprefix =
 +binprefix = j
  manprefix =
  
- bindir = @bindir@
-@@ -75,7 +75,7 @@
- 	sed 's;/usr/local/libexec/awk;$(libexecdir);' < groupawk.in) > group.awk
+@@ -76,5 +76,5 @@
  
  install: igawk $(AUXPROGS) $(AUXAWK)
 -	$(INSTALL_PROGRAM) igawk $(bindir)/igawk
 +	$(INSTALL_PROGRAM:-s=) igawk $(bindir)/$(binprefix)igawk
  	for i in $(AUXPROGS) ; do \
  		$(INSTALL_PROGRAM) $$i $(libexecdir)/$$i ; \
- 	done
-@@ -87,7 +87,7 @@
- # libexecdir and datadir are removed in the top level Makefile's uninstall
+@@ -88,5 +88,5 @@
  uninstall:
  	rm -fr $(libexecdir)/* $(datadir)/*
 -	rm -f $(bindir)/igawk
 +	rm -f $(bindir)/$(binprefix)igawk
  
  clean:
- 	rm -f $(AUXPROGS) $(AUXAWK) igawk *~

@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.3 1999/06/29 04:16:11 sakamoto Exp $
+# $NetBSD: Makefile,v 1.4 1999/10/11 13:00:42 sakamoto Exp $
 # FreeBSD Id: Makefile,v 1.13 1999/01/27 07:41:14 fenner Exp $
 
-DISTNAME=	gawk-3.0.3
-PKGNAME=	ja-gawk-3.0.3
+DISTNAME=	gawk-3.0.4
+PKGNAME=	ja-gawk-3.0.4
 CATEGORIES=	japanese textproc
 MASTER_SITES=	${MASTER_SITE_GNU:=gawk/}
 
 PATCH_SITES=	http://member.nifty.ne.jp/wills/program/
-PATCHFILES=	gawkmb111.diff.gz
+PATCHFILES=	gawkmb112.diff.gz
 PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	tech-pkg-ja@jp.netbsd.org
