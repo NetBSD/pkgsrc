@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2002/05/10 13:18:47 frueauf Exp $
+@comment $NetBSD: PLIST,v 1.4 2002/08/04 08:02:38 veego Exp $
 bin/nessus-build
 etc/nessus/accounts.txt
 etc/nessus/queso.conf
@@ -911,7 +911,6 @@ lib/nessus/plugins/zope_dos.nasl
 lib/nessus/plugins/zope_img_updating.nasl
 lib/nessus/plugins/zope_zclass.nasl
 lib/nessus/plugins/zyxel_pwd.nasl
-lib/nessus/plugins_factory
 lib/nessus/plugins_factory/Makefile
 lib/nessus/plugins_factory/libtool
 lib/nessus/plugins_factory/nessus.tmpl
