@@ -1,0 +1,34 @@
+@comment $NetBSD: PLIST,v 1.1 1998/08/01 14:58:18 frueauf Exp $
+bin/xsoldier
+share/xsoldier/Boss1.xpm
+share/xsoldier/Boss2.xpm
+share/xsoldier/Boss3.xpm
+share/xsoldier/Boss4.xpm
+share/xsoldier/Boss5.xpm
+share/xsoldier/Boss6.xpm
+share/xsoldier/Boss7.xpm
+share/xsoldier/Enemy1.xpm
+share/xsoldier/Enemy2.xpm
+share/xsoldier/Enemy3.xpm
+share/xsoldier/Enemy4.xpm
+share/xsoldier/Enemy5.xpm
+share/xsoldier/Enemy6.xpm
+share/xsoldier/Enemy7.xpm
+share/xsoldier/EnemyBound.xpm
+share/xsoldier/EnemyLaser.xpm
+share/xsoldier/EnemyMiss.xpm
+share/xsoldier/EnemyRing.xpm
+share/xsoldier/EnemyShot.xpm
+share/xsoldier/ExpLarge.xpm
+share/xsoldier/ExpSmall.xpm
+share/xsoldier/Item.xpm
+share/xsoldier/Player.xpm
+share/xsoldier/PlayerShot1.xpm
+share/xsoldier/PlayerShot2.xpm
+share/xsoldier/PlayerShot3.xpm
+share/xsoldier/Star1.xpm
+share/xsoldier/Star2.xpm
+share/xsoldier/Title.xpm
+share/xsoldier/.scorefile
+@unexec rm -f %D/share/xsoldier/.scorefile
+@dirrm share/xsoldier
