@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.809 2002/12/16 22:20:33 wiz Exp $
+$NetBSD: CHANGES,v 1.810 2002/12/16 22:57:33 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3977,3 +3977,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated sane-frontends to 1.0.9 [tron 2002-12-16]
 	Updated gnome-desktop to 2.0.10 [jmmv 2002-12-16]
 	Updated gqview to 1.2.0 [wiz 2002-12-16]
+	Updated gnome-panel to 2.0.11 [jmmv 2002-12-16]
