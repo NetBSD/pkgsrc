@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 10:30:14 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 16:26:58 agc Exp $
 
-MD5 (geda/symbols-20000220.tar.gz) = ddef81b21c79d8aea826623c77eccf24
+SHA1 (geda/symbols-20000220.tar.gz) = 20a109892706151806eb8215a41c2bbd257555d4
+Size (geda/symbols-20000220.tar.gz) = 185657 bytes

@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 10:30:19 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 16:27:00 agc Exp $
 
-MD5 (ipal-20001210.tar.gz) = 077f56de8223da9d4fff068835e60ea9
+SHA1 (ipal-20001210.tar.gz) = 3ab54b3cf39545b6d709617ab7a378feb554ebac
+Size (ipal-20001210.tar.gz) = 216307 bytes
