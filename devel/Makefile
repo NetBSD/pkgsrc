@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.323 2002/09/12 01:41:45 rh Exp $
+# $NetBSD: Makefile,v 1.324 2002/09/18 10:47:06 agc Exp $
 #
 
 COMMENT=	Development utilities
@@ -302,6 +302,7 @@ SUBDIR+=	ruby-textbuf
 SUBDIR+=	ruby-unit
 SUBDIR+=	rvm
 SUBDIR+=	rx
+SUBDIR+=	sablecc
 SUBDIR+=	sdcc
 SUBDIR+=	semantic
 SUBDIR+=	semi
