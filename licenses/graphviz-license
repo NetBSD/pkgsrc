@@ -1,376 +1,239 @@
-                            SOURCE CODE AGREEMENT
-
-                                Version 1.2D
-
-PLEASE  READ THIS  AGREEMENT CAREFULLY. By  accessing and  using the  Source
-Code,  you accept this Agreement  in its entirety and agree  to only use the
-Source Code in accordance with the following terms and conditions. If you do
-not wish to be bound by these terms and conditions, do not access or use the
-Source Code.
-
-  1. YOUR REPRESENTATIONS
-
-       1. You represent and warrant that:
-
-            a. If you are an entity, or an individual other than the person
-               accepting this Agreement, the person accepting this Agreement
-               on your behalf is your legally authorized representative,
-               duly authorized to accept agreements of this type on your
-               behalf and obligate you to comply with its provisions;
-
-            b. You have read and fully understand this Agreement in its
-               entirety;
-
-            c. Your Build Materials are either original or do not include
-               any Software obtained under a license that conflicts with the
-               obligations contained in this Agreement;
-
-            d. To the best of your knowledge, your Build Materials do not
-               infringe or misappropriate the rights of any person or
-               entity; and,
-
-            e. You will regularly monitor the Website for any notices.
-
-  2. DEFINITIONS AND INTERPRETATION
-
-       1. For purposes of this Agreement, certain terms have been defined
-          below and elsewhere in this Agreement to encompass meanings that
-          may differ from, or be in addition to, the normal connotation of
-          the defined word.
-
-            a. "Additional Code" means Software in source code form which
-               does not contain any
-
-                 i. of the Source Code, or
-                ii. derivative work (such term having the same meaning in
-                    this Agreement as under U.S. Copyright Law) of the
-                    Source Code.
-
-            b. "AT&T Patent Claims" means those claims of patents (i) owned
-               by AT&T and (ii) licensable without restriction or
-               obligation, which, absent a license, are necessarily and
-               unavoidably infringed by the use of the functionality of the
-               Source Code.
-
-            c. "Build Materials" means, with reference to a Derived Product,
-               the Patch and Additional Code, if any, used in the
-               preparation of such Derived Product, together with written
-               instructions that describe, in reasonable detail, such
-               preparation.
-
-            d. "Capsule" means a computer file containing the exact same
-               contents as the computer file having the name gviz15.tgz or
-               gviz15.zip, which will be downloaded after accepting, or was
-               opened to access, this Agreement.
-
-            e. "Derived Product" means a Software Product which is a
-               derivative work of the Source Code.
-
-            f. "IPR" means all rights protectable under intellectual
-               property law anywhere throughout the world, including rights
-               protectable under patent, copyright and trade secret laws,
-               but not trademark rights.
-
-            g. "Patch" means Software for changing all or any portion of the
-               Source Code.
-
-            h. "Proprietary Notice" means the following statement:
-
-               "This  product  contains   certain  software  code  or  other
-               information  ("AT&T  Software")  proprietary  to  AT&T  Corp.
-               ("AT&T"). The  AT&T Software is provided  to you "AS IS". YOU
-               ASSUME  TOTAL RESPONSIBILITY  AND  RISK FOR  USE OF  THE AT&T
-               SOFTWARE. AT&T  DOES NOT  MAKE, AND EXPRESSLY  DISCLAIMS, ANY
-               EXPRESS  OR  IMPLIED   WARRANTIES  OF  ANY  KIND  WHATSOEVER,
-               INCLUDING,  WITHOUT  LIMITATION,  THE  IMPLIED WARRANTIES  OF
-               MERCHANTABILITY   OR  FITNESS   FOR  A   PARTICULAR  PURPOSE,
-               WARRANTIES OF  TITLE OR NON-INFRINGEMENT  OF ANY INTELLECTUAL
-               PROPERTY RIGHTS,  ANY WARRANTIES  ARISING BY USAGE  OF TRADE,
-               COURSE OF  DEALING OR COURSE OF  PERFORMANCE, OR ANY WARRANTY
-               THAT  THE AT&T  SOFTWARE IS  "ERROR FREE"  OR WILL  MEET YOUR
-               REQUIREMENTS.
-
-               Unless  you accept a  license to  use the AT&T  Software, you
-               shall not  reverse compile, disassemble  or otherwise reverse
-               engineer this  product to  ascertain the source  code for any
-               AT&T Software.
-
-               ©  AT&T  Corp.  All rights  reserved.  AT&T  is a  registered
-               trademark of AT&T Corp."
-
-            i. "Software" means, as the context may require, source or
-               object code instructions for controlling the operation of a
-               central processing unit or computer, and computer files
-               containing data or text.
-
-            j. "Software Product" means a collection of computer files
-               containing Software in object code form only, which, taken
-               together, reasonably comprise a product, regardless of
-               whether such product is intended for internal use or
-               commercial exploitation. A single computer file can comprise
-               a Software Product.
-
-            k. "Source Code" means the Software contained in compressed form
-               in the Capsule.
-
-            l. "Website" means the Internet website having the URL
-               http://www.research.att.com/sw/tools/graphviz. AT&T may
-               change the content or URL of the Website, or remove it from
-               the Internet altogether.
-
-       2. By way of clarification only, the terms Capsule, Proprietary
-          Notice and Source Code when used in this Agreement shall mean the
-          materials and information defined by such terms without any
-          change, enhancement, amendment, alteration or modification
-          (collectively, "change").
-
-  3. GRANT OF RIGHTS
-
-       1. Subject to third party intellectual property claims, if any, and
-          the terms and conditions of this Agreement, AT&T grants to you
-          under:
-
-            a. the AT&T Patent Claims and AT&T's copyright rights in the
-               Source Code, a non-exclusive, fully paid-up license to:
-
-                 i. Reproduce and distribute the Capsule;
-                ii. Display, perform, use, and compile the Source Code and
-                    execute the resultant binary Software on a computer;
-               iii. Prepare a Derived Product solely by compiling Additional
-                    Code, if any, together with the code resulting from
-                    operating a Patch on the Source Code; and,
-                iv. Execute on a computer and distribute to others Derived
-                    Products,
-
-               except  that, with  respect to  the  AT&T Patent Claims , the
-               license rights granted in  clauses (iii) and (iv) above shall
-               only extend,  and be  limited, to that  portion of a  Derived
-               Product which  is Software compiled from  some portion of the
-               Source Code; and,
-
-            b. AT&T's copyright rights in the Source Code, a non-exclusive,
-               fully paid-up license to prepare and distribute Patches for
-               the Source Code.
-
-       2. Subject to the terms and conditions of this Agreement, you may
-          create a hyperlink between an Internet website owned and
-          controlled by you and the Website, which hyperlink describes in a
-          fair and good faith manner where the Capsule and Source Code may
-          be obtained, provided that, you do not frame the Website or
-          otherwise give the false impression that AT&T is somehow
-          associated with, or otherwise endorses or sponsors your website.
-          Any goodwill associated with such hyperlink shall inure to the
-          sole benefit of AT&T. Other than the creation of such hyperlink,
-          nothing in this Agreement shall be construed as conferring upon
-          you any right to use any reference to AT&T, its trade names,
-          trademarks, service marks or any other indicia of origin owned by
-          AT&T, or to indicate that your products or services are in any way
-          sponsored, approved or endorsed by, or affiliated with, AT&T.
-
-       3. Except as expressly set forth in Section 3.1 above, no other
-          rights or licenses under any of AT&T?s IPR are granted or, by
-          implication, estoppel or otherwise, conferred. By way of example
-          only, no rights or licenses under any of AT&T's patents are
-          granted or, by implication, estoppel or otherwise, conferred with
-          respect to any portion of a Derived Product which is not Software
-          compiled from some portion, without change, of the Source Code.
-
-  4. YOUR OBLIGATIONS
-
-       1. If you distribute Build Materials (including if you are required
-          to do so pursuant to this Agreement), you shall ensure that the
-          recipient enters into and duly accepts an agreement with you which
-          includes the minimum terms set forth in Appendix A (completed to
-          indicate you as the LICENSOR) and no other provisions which, in
-          AT&T's opinion, conflict with your obligations under, or the
-          intent of, this Agreement. The agreement required under this
-          Section 4.1 may be in electronic form and may be distributed with
-          the Build Materials in a form such that the recipient accepts the
-          agreement by using or installing the Build Materials. If any
-          Additional Code contained in your Build Materials includes
-          Software you obtained under license, the agreement shall also
-          include complete details concerning the license and any
-          restrictions or obligations associated with such Software.
-
-       2. If you prepare a Patch which you distribute to anyone else you
-          shall:
-
-            a. Contact AT&T, as may be provided on the Website or in a text
-               file included with the Source Code, and describe for AT&T
-               such Patch and provide AT&T with a copy of such Patch as
-               directed by AT&T; or,
-
-            b. Where you make your Patch generally available on your
-               Internet website, you shall provide AT&T with the URL of your
-               website and hereby grant to AT&T a non-exclusive, fully-paid
-               up right to create a hyperlink between your website and a
-               page associated with the Website.
-
-       3. If you prepare a Derived Product, such product shall conspicuously
-          display to users, and any corresponding documentation and license
-          agreement shall include as a provision, the Proprietary Notice.
-
-  5. YOUR GRANT OF RIGHTS TO AT&T
-
-       1. You grant to AT&T under any IPR owned or licensable by you which
-          in any way relates to your Patches, a non-exclusive, perpetual,
-          worldwide, fully paid-up, unrestricted, irrevocable license, along
-          with the right to sublicense others, to (a) make, have made, use,
-          offer to sell, sell and import any products, services or any
-          combination of products or services, and (b) reproduce,
-          distribute, prepare derivative works based on, perform, display
-          and transmit your Patches in any media whether now known or in the
-          future developed.
-
-  6. AS IS CLAUSE / LIMITATION OF LIABILITY
-
-       1. The Source Code and Capsule are provided to you "AS IS". YOU
-          ASSUME TOTAL RESPONSIBILITY AND RISK FOR YOUR USE OF THEM
-          INCLUDING THE RISK OF ANY DEFECTS OR INACCURACIES THEREIN. AT&T
-          DOES NOT MAKE, AND EXPRESSLY DISCLAIMS, ANY EXPRESS OR IMPLIED
-          WARRANTIES OF ANY KIND WHATSOEVER, INCLUDING, WITHOUT LIMITATION,
-          THE IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A
-          PARTICULAR PURPOSE, WARRANTIES OF TITLE OR NON-INFRINGEMENT OF ANY
-          IPR OR TRADEMARK RIGHTS, ANY WARRANTIES ARISING BY USAGE OF TRADE,
-          COURSE OF DEALING OR COURSE OF PERFORMANCE, OR ANY WARRANTY THAT
-          THE SOURCE CODE OR CAPSULE ARE "ERROR FREE" OR WILL MEET YOUR
-          REQUIREMENTS.
-
-       2. IN NO EVENT SHALL AT&T BE LIABLE FOR (a) ANY INCIDENTAL,
-          CONSEQUENTIAL, OR INDIRECT DAMAGES (INCLUDING, WITHOUT LIMITATION,
-          DAMAGES FOR LOSS OF PROFITS, BUSINESS INTERRUPTION, LOSS OF
-          PROGRAMS OR INFORMATION, AND THE LIKE) ARISING OUT OF THE USE OF
-          OR INABILITY TO USE THE SOURCE CODE OR CAPSULE, EVEN IF AT&T OR
-          ANY OF ITS AUTHORIZED REPRESENTATIVES HAS BEEN ADVISED OF THE
-          POSSIBILITY OF SUCH DAMAGES, (b) ANY CLAIM ATTRIBUTABLE TO ERRORS,
-          OMISSIONS, OR OTHER INACCURACIES IN THE SOURCE CODE OR CAPSULE, OR
-          (c) ANY CLAIM BY ANY THIRD PARTY.
-
-       3. BECAUSE SOME STATES DO NOT ALLOW THE EXCLUSION OR LIMITATION OF
-          LIABILITY FOR CONSEQUENTIAL OR INCIDENTAL DAMAGES, THE ABOVE
-          LIMITATIONS MAY NOT APPLY TO YOU. IN THE EVENT THAT APPLICABLE LAW
-          DOES NOT ALLOW THE COMPLETE EXCLUSION OR LIMITATION OF LIABILITY
-          OF CLAIMS AND DAMAGES AS SET FORTH IN THIS AGREEMENT, AT&T?S
-          LIABILITY IS LIMITED TO THE GREATEST EXTENT PERMITTED BY LAW.
-
-  7. INDEMNIFICATION
-
-       1. You shall indemnify and hold harmless AT&T, its affiliates and
-          authorized representatives against any claims, suits or
-          proceedings asserted or commenced by any third party and arising
-          out of, or relating to, your use of the Source Code. This
-          obligation shall include indemnifying against all damages, losses,
-          costs and expenses (including attorneys? fees) incurred by AT&T,
-          its affiliates and authorized representatives as a result of any
-          such claims, suits or proceedings, including any costs or expenses
-          incurred in defending against any such claims, suits, or
-          proceedings.
-
-  8. GENERAL
-
-       1. You shall not assert against AT&T, its affiliates or authorized
-          representatives any claim for infringement or misappropriation of
-          any IPR or trademark rights in any way relating to the Source
-          Code, including any such claims relating to any Patches.
-
-       2. In the event that any provision of this Agreement is deemed
-          illegal or unenforceable, AT&T may, but is not obligated to, post
-          on the Website a new version of this Agreement which, in AT&T's
-          opinion, reasonably preserves the intent of this Agreement.
-
-       3. Your rights and license (but not any of your obligations) under
-          this Agreement shall terminate automatically in the event that (a)
-          notice of a non-frivolous claim by a third party relating to the
-          Source Code or Capsule is posted on the Website, (b) you have
-          knowledge of any such claim, (c) any of your representations or
-          warranties in Article 1.0 or Section 8.4 are false or inaccurate,
-          (d) you exceed the rights and license granted to you or (e) you
-          fail to fully comply with any provision of this Agreement. Nothing
-          in this provision shall be construed to restrict you, at your
-          option and subject to applicable law, from replacing the portion
-          of the Source Code that is the subject of a claim by a third party
-          with non-infringing code or from independently negotiating for
-          necessary rights from the third party.
-
-       4. You acknowledge that the Source Code and Capsule may be subject to
-          U.S. export laws and regulations, and, accordingly, you hereby
-          assure AT&T that you will not, directly or indirectly, violate any
-          applicable U.S. laws and regulations.
-
-       5. Without limiting any of AT&T?s rights under this Agreement or at
-          law or in equity, or otherwise expanding the scope of the license
-          and rights granted hereunder, if you fail to perform any of your
-          obligations under this Agreement with respect to any of your
-          Patches or Derived Products, or if you do any act which exceeds
-          the scope of the license and rights granted herein, then such
-          Patches, Derived Products and acts are not licensed or otherwise
-          authorized under this Agreement and such failure shall also be
-          deemed a breach of this Agreement. In addition to all other relief
-          available to it for any breach of your obligations under this
-          Agreement, AT&T shall be entitled to an injunction requiring you
-          to perform such obligations.
-
-       6. This Agreement shall be governed by and construed in accordance
-          with the laws of the State of New York, USA, without regard to its
-          conflicts of law rules. This Agreement shall be fairly interpreted
-          in accordance with its terms and without any strict construction
-          in favor of or against either AT&T or you. Any suit or proceeding
-          you bring relating to this Agreement shall be brought and
-          prosecuted only in New York, New York, USA.
-
---------------------------
-Appendix A - Minimum Terms
---------------------------
-The minimum terms are available at the Internet website having the URL http://www.research.att.com/sw/tools/graphviz/license/minterms.html or accessed by opening the computer file having the name MINTERMS.txt.
-
-
-============================================================
-
-The gd source has this copyright statement:
-
-
-COPYRIGHT STATEMENT FOLLOWS THIS LINE
-
-     Portions copyright 1994, 1995, 1996, 1997, 1998, 1999, 2000 by Cold
-     Spring Harbor Laboratory. Funded under Grant P41-RR02188 by the
-     National Institutes of Health.
-     
-     Portions copyright 1996, 1997, 1998, 1999, 2000 by Boutell.Com,
-     Inc.
-     
-     Portions relating to GD2 format copyright 1999, 2000 Philip Warner.
-     
-     Portions relating to PNG copyright 1999, 2000 Greg Roelofs.
-     
-     Portions relating to libttf copyright 1999, 2000 John Ellson
-     (ellson@lucent.com).
-     
-     Portions relating to JPEG copyright 2000, Doug Becker and copyright
-     (C) 1994-1998, Thomas G. Lane. This software is based in part on
-     the work of the Independent JPEG Group.
-     
-     Portions relating to WBMP copyright 2000 Maurice Szmurlo and Johan
-     Van den Brande.
-     
-     _Permission has been granted to copy, distribute and modify gd in
-     any context without fee, including a commercial application,
-     provided that this notice is present in user-accessible supporting
-     documentation._
-     
-     This does not affect your ownership of the derived work itself, and
-     the intent is to assure proper credit for the authors of gd, not to
-     interfere with your productive use of gd. If you have questions,
-     ask. "Derived works" includes all programs that utilize the
-     library. Credit must be given in user-accessible documentation.
-     
-     _This software is provided "AS IS."_ The copyright holders disclaim
-     all warranties, either express or implied, including but not
-     limited to implied warranties of merchantability and fitness for a
-     particular purpose, with respect to this code and accompanying
-     documentation.
-     
-     Although their code does not appear in gd 1.8.3, the authors wish
-     to thank David Koblas, David Rowley, and Hutchison Avenue Software
-     Corporation for their prior contributions.
-     
-END OF COPYRIGHT STATEMENT
+
+   AT&T has previously made versions of this software available under the AT&T
+   Source Code Agreement, version 1.2D and earlier. If you received a copy of
+   the software under that license agreement, you may continue to use and
+   distribute  the  same version of the software subject to the terms and
+   conditions of the license agreement under which the software was received.
+   However, current versions of the software are now licensed on an open source
+   basis only under The Common Public License.
+
+   To download this software, you need to accept the terms of the following
+   license agreement. PLEASE READ THE ENTIRE AGREEMENT CAREFULLY. By clicking
+   on the button that follows the agreement, you will indicate your acceptance
+   of  the entire agreement and will be bound to use the software only in
+   accordance with the terms and conditions of the agreement. Once you manifest
+   your acceptance of the license agreement by clicking on the button, a new
+   web page will appear for downloading the software.
+
+                       Common Public License Version 1.0
+
+   THE ACCOMPANYING PROGRAM IS PROVIDED UNDER THE TERMS OF THIS COMMON PUBLIC
+   LICENSE ("AGREEMENT"). ANY USE, REPRODUCTION OR DISTRIBUTION OF THE PROGRAM
+   CONSTITUTES RECIPIENT'S ACCEPTANCE OF THIS AGREEMENT.
+
+   1. DEFINITIONS 
+
+   "Contribution" means:
+
+     a)  in  the  case  of the initial Contributor, the initial code and
+     documentation distributed under this Agreement, and
+
+     b) in the case of each subsequent Contributor:
+
+     i) changes to the Program, and
+
+     ii) additions to the Program;
+
+     where such changes and/or additions to the Program originate from and are
+     distributed by that particular Contributor. A Contribution 'originates'
+     from a Contributor if it was added to the Program by such Contributor
+     itself or anyone acting on such Contributor's behalf. Contributions do not
+     include additions to the Program which: (i) are separate modules of
+     software distributed in conjunction with the Program under their own
+     license agreement, and (ii) are not derivative works of the Program.
+
+   "Contributor" means any person or entity that distributes the Program.
+
+   "Licensed Patents " mean patent claims licensable by a Contributor which are
+   necessarily infringed by the use or sale of its Contribution alone or when
+   combined with the Program.
+
+   "Program"  means the Contributions distributed in accordance with this
+   Agreement.
+
+   "Recipient" means anyone who receives the Program under this Agreement,
+   including all Contributors.
+
+   2. GRANT OF RIGHTS
+
+     a) Subject to the terms of this Agreement, each Contributor hereby grants
+     Recipient a non-exclusive, worldwide, royalty-free copyright license to
+     reproduce,  prepare derivative works of, publicly display, publicly
+     perform, distribute and sublicense the Contribution of such Contributor,
+     if any, and such derivative works, in source code and object code form.
+
+     b) Subject to the terms of this Agreement, each Contributor hereby grants
+     Recipient a non-exclusive, worldwide, royalty-free patent license under
+     Licensed Patents to make, use, sell, offer to sell, import and otherwise
+     transfer the Contribution of such Contributor, if any, in source code and
+     object code form. This patent license shall apply to the combination of
+     the Contribution and the Program if, at the time the Contribution is added
+     by  the  Contributor, such addition of the Contribution causes such
+     combination to be covered by the Licensed Patents. The patent license
+     shall not apply to any other combinations which include the Contribution.
+     No hardware per se is licensed hereunder.
+
+     c)  Recipient understands that although each Contributor grants the
+     licenses to its Contributions set forth herein, no assurances are provided
+     by any Contributor that the Program does not infringe the patent or other
+     intellectual  property rights of any other entity. Each Contributor
+     disclaims any liability to Recipient for claims brought by any other
+     entity based on infringement of intellectual property rights or otherwise.
+     As a condition to exercising the rights and licenses granted hereunder,
+     each Recipient hereby assumes sole responsibility to secure any other
+     intellectual property rights needed, if any. For example, if a third party
+     patent license is required to allow Recipient to distribute the Program,
+     it  is  Recipient's  responsibility  to acquire that license before
+     distributing the Program.
+
+     d) Each Contributor represents that to its knowledge it has sufficient
+     copyright rights in its Contribution, if any, to grant the copyright
+     license set forth in this Agreement.
+
+   3. REQUIREMENTS
+
+   A Contributor may choose to distribute the Program in object code form under
+   its own license agreement, provided that:
+
+     a) it complies with the terms and conditions of this Agreement; and
+
+     b) its license agreement:
+
+     i) effectively disclaims on behalf of all Contributors all warranties and
+     conditions, express and implied, including warranties or conditions of
+     title and non-infringement, and implied warranties or conditions of
+     merchantability and fitness for a particular purpose;
+
+     ii) effectively excludes on behalf of all Contributors all liability for
+     damages, including direct, indirect, special, incidental and consequential
+     damages, such as lost profits;
+
+     iii) states that any provisions which differ from this Agreement are
+     offered by that Contributor alone and not by any other party; and
+
+     iv)  states that source code for the Program is available from such
+     Contributor, and informs licensees how to obtain it in a reasonable manner
+     on or through a medium customarily used for software exchange.
+
+   When the Program is made available in source code form:
+
+     a) it must be made available under this Agreement; and
+
+     b)  a copy of this Agreement must be included with each copy of the
+     Program.
+
+   Contributors may not remove or alter any copyright notices contained within
+   the Program.
+
+   Each Contributor must identify itself as the originator of its Contribution,
+   if any, in a manner that reasonably allows subsequent Recipients to identify
+   the originator of the Contribution.
+
+   4. COMMERCIAL DISTRIBUTION
+
+   Commercial distributors of software may accept certain responsibilities with
+   respect to end users, business partners and the like. While this license is
+   intended to facilitate the commercial use of the Program, the Contributor
+   who includes the Program in a commercial product offering should do so in a
+   manner which does not create potential liability for other Contributors.
+   Therefore, if a Contributor includes the Program in a commercial product
+   offering, such Contributor ("Commercial Contributor") hereby agrees to
+   defend and indemnify every other Contributor ("Indemnified Contributor")
+   against any losses, damages and costs (collectively "Losses") arising from
+   claims, lawsuits and other legal actions brought by a third party against
+   the Indemnified Contributor to the extent caused by the acts or omissions of
+   such Commercial Contributor in connection with its distribution of the
+   Program in a commercial product offering. The obligations in this section do
+   not  apply  to  any claims or Losses relating to any actual or alleged
+   intellectual property infringement. In order to qualify, an Indemnified
+   Contributor must: a) promptly notify the Commercial Contributor in writing
+   of such claim, and b) allow the Commercial Contributor to control, and
+   cooperate with the Commercial Contributor in, the defense and any related
+   settlement negotiations. The Indemnified Contributor may participate in any
+   such claim at its own expense.
+
+   For example, a Contributor might include the Program in a commercial product
+   offering, Product X. That Contributor is then a Commercial Contributor. If
+   that  Commercial  Contributor then makes performance claims, or offers
+   warranties related to Product X, those performance claims and warranties are
+   such Commercial Contributor's responsibility alone. Under this section, the
+   Commercial  Contributor  would have to defend claims against the other
+   Contributors related to those performance claims and warranties, and if a
+   court requires any other Contributor to pay any damages as a result, the
+   Commercial Contributor must pay those damages.
+
+   5. NO WARRANTY
+
+   EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS PROVIDED ON
+   AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, EITHER
+   EXPRESS  OR  IMPLIED  INCLUDING, WITHOUT LIMITATION, ANY WARRANTIES OR
+   CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY OR FITNESS FOR A
+   PARTICULAR PURPOSE. Each Recipient is solely responsible for determining the
+   appropriateness of using and distributing the Program and assumes all risks
+   associated with its exercise of rights under this Agreement, including but
+   not  limited to the risks and costs of program errors, compliance with
+   applicable laws, damage to or loss of data, programs or equipment, and
+   unavailability or interruption of operations.
+
+   6. DISCLAIMER OF LIABILITY 
+
+   EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT NOR ANY
+   CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+   SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING WITHOUT LIMITATION
+   LOST PROFITS), HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+   CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+   ARISING IN ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+   EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE POSSIBILITY
+   OF SUCH DAMAGES.
+
+   7. GENERAL
+
+   If  any  provision of this Agreement is invalid or unenforceable under
+   applicable law, it shall not affect the validity or enforceability of the
+   remainder of the terms of this Agreement, and without further action by the
+   parties hereto, such provision shall be reformed to the minimum extent
+   necessary to make such provision valid and enforceable.
+
+   If Recipient institutes patent litigation against a Contributor with respect
+   to a patent applicable to software (including a cross-claim or counterclaim
+   in a lawsuit), then any patent licenses granted by that Contributor to such
+   Recipient  under  this  Agreement  shall terminate as of the date such
+   litigation is filed. In addition, if Recipient institutes patent litigation
+   against any entity (including a cross-claim or counterclaim in a lawsuit)
+   alleging that the Program itself (excluding combinations of the Program with
+   other software or hardware) infringes such Recipient's patent(s), then such
+   Recipient's rights granted under Section 2(b) shall terminate as of the date
+   such litigation is filed.
+
+   All Recipient's rights under this Agreement shall terminate if it fails to
+   comply with any of the material terms or conditions of this Agreement and
+   does not cure such failure in a reasonable period of time after becoming
+   aware of such noncompliance. If all Recipient's rights under this Agreement
+   terminate, Recipient agrees to cease use and distribution of the Program as
+   soon as reasonably practicable. However, Recipient's obligations under this
+   Agreement and any licenses granted by Recipient relating to the Program
+   shall continue and survive.
+
+   Everyone is permitted to copy and distribute copies of this Agreement, but
+   in order to avoid inconsistency the Agreement is copyrighted and may only be
+   modified in the following manner. The Agreement Steward reserves the right
+   to publish new versions (including revisions) of this Agreement from time to
+   time. No one other than the Agreement Steward has the right to modify this
+   Agreement.  IBM  is  the initial Agreement Steward. IBM may assign the
+   responsibility to serve as the Agreement Steward to a suitable separate
+   entity. Each new version of the Agreement will be given a distinguishing
+   version  number.  The  Program (including Contributions) may always be
+   distributed subject to the version of the Agreement under which it was
+   received. In addition, after a new version of the Agreement is published,
+   Contributor  may  elect  to  distribute  the  Program  (including  its
+   Contributions) under the new version. Except as expressly stated in Sections
+   2(a)  and  2(b) above, Recipient receives no rights or licenses to the
+   intellectual property of any Contributor under this Agreement, whether
+   expressly, by implication, estoppel or otherwise. All rights in the Program
+   not expressly granted under this Agreement are reserved.
+
+   This Agreement is governed by the laws of the State of New York and the
+   intellectual property laws of the United States of America. No party to this
+   Agreement will bring a legal action under this Agreement more than one year
+   after the cause of action arose. Each party waives its rights to a jury
+   trial in any resulting litigation.
