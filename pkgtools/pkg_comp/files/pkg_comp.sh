@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: pkg_comp.sh,v 1.18 2004/02/13 23:52:07 snj Exp $
+# $NetBSD: pkg_comp.sh,v 1.19 2004/02/21 13:08:31 jmmv Exp $
 #
 # pkg_comp - Build packages inside a clean chroot environment
 # Copyright (c) 2002, 2003, 2004 Julio M. Merino Vidal <jmmv@NetBSD.org>
@@ -42,14 +42,14 @@ ProgName="`basename $0`"
 _MKCONF_VARS="WRKDIR_BASENAME MKOBJDIRS BSDSRCDIR WRKOBJDIR DISTDIR PACKAGES \
               PKG_DEVELOPER CLEANDEPENDS LOCALBASE PKG_SYSCONFBASE \
               CFLAGS CPPFLAGS CXXFLAGS USE_AUDIT_PACKAGES PKGVULNDIR \
-              USE_XPKGWEDGE"
+              USE_XPKGWEDGE PKGSRC_COMPILER"
 
 _TEMPLATE_VARS="DESTDIR ROOTSHELL COPYROOTCFG BUILD_TARGET DISTRIBDIR SETS \
                 SETS_X11 REAL_SRC REAL_SRC_OPTS REAL_PKGSRC \
                 REAL_PKGSRC_OPTS REAL_DISTFILES REAL_DISTFILES_OPTS \
                 REAL_PACKAGES REAL_PACKAGES_OPTS REAL_PKGVULNDIR \
                 NETBSD_RELEASE MOUNT_HOOKS UMOUNT_HOOKS SYNC_UMOUNT \
-                AUTO_TARGET AUTO_PACKAGES BUILD_PACKAGES"
+                AUTO_TARGET AUTO_PACKAGES BUILD_PACKAGES REAL_CCACHE"
 
 _BUILD_RESUME=
 
@@ -96,6 +96,7 @@ env_setdefaults()
     : ${USE_AUDIT_PACKAGES:=yes}
     : ${PKGVULNDIR:=/usr/pkg/share}
     : ${USE_XPKGWEDGE:=yes}
+    : ${PKGSRC_COMPILER:=gcc}
 
     # Default values for global variables used in the script.
     : ${DESTDIR:=/var/chroot/pkg_comp/default}
@@ -119,6 +120,7 @@ env_setdefaults()
     : ${MOUNT_HOOKS:=}
     : ${UMOUNT_HOOKS:=}
     : ${SYNC_UMOUNT:=no}
+    : ${REAL_CCACHE:=}
 
     if [ -n "${MAKE_PACKAGES}" ]; then
         warn "MAKE_PACKAGES is deprecated; use {AUTO,BUILD}_PACKAGES instead."
@@ -264,6 +266,15 @@ fsmount()
         mount $REAL_PACKAGES_OPTS $REAL_PACKAGES $DESTDIR/pkg_comp/packages
     fi
 
+    if [ -n "${REAL_CCACHE}" ]; then
+        if [ ! -d "${REAL_CCACHE}" ]; then
+            echo " failed."
+            fsumount
+            err "REAL_CCACHE ${REAL_CCACHE} disappeared"
+        fi
+        mount -t null -o rw ${REAL_CCACHE} ${DESTDIR}/pkg_comp/ccache
+    fi
+
     touch $fsstate
 
     for h in ${MOUNT_HOOKS}; do
@@ -312,6 +323,10 @@ fsumount()
 
     if [ -n "$REAL_PACKAGES" -a -d "$REAL_PACKAGES" ]; then
         umount $DESTDIR/pkg_comp/packages || fsfailed=yes
+    fi
+
+    if [ -n "${REAL_CCACHE}" -a -d "${REAL_CCACHE}" ]; then
+        umount ${DESTDIR}/pkg_comp/ccache || fsfailed=yes
     fi
 
     if [ "$SYNC_UMOUNT" != "no" ]; then
@@ -416,6 +431,13 @@ makeroot()
         err "REAL_PACKAGES $REAL_PACKAGES does not exist"
     fi
 
+    if echo ${PKGSRC_COMPILER} | grep ccache >/dev/null 2>&1 && \
+        [ -z "${REAL_CCACHE}" ]; then
+        warn "PKGSRC_COMPILER contains 'ccache' but REAL_CCACHE is unset"
+    elif [ -n "${REAL_CCACHE}" -a ! -d "${REAL_CCACHE}" ]; then
+        err "REAL_CCACHE ${REAL_CCACHE} does not exist"
+    fi
+
     # Check for required directories.
     if [ ! -d $DISTRIBDIR ]; then
         err "DISTRIBDIR $DISTRIBDIR does not exist"
@@ -457,6 +479,11 @@ makeroot()
     if [ "$COPYROOTCFG" = "yes" ]; then
         cp /root/.* $DESTDIR/root >/dev/null 2>&1
     fi
+    if [ -n "${REAL_CCACHE}" ]; then
+        # This is a workaround for older versions of ccache.mk that do not
+        # pass the CCACHE_DIR variable down to ccache.
+        ( cd ${DESTDIR}/root && ln -fs ../pkg_comp/ccache .ccache )
+    fi
 
     echo "Setting up initial configuration..."
 
@@ -466,6 +493,7 @@ makeroot()
     mkdir -p $DESTDIR/pkg_comp/packages
     mkdir -p $DESTDIR/pkg_comp/tmp
     mkdir -p $DESTDIR/pkg_comp/obj/pkgsrc
+    [ -n "${REAL_CCACHE}" ] && mkdir -p ${DESTDIR}/pkg_comp/ccache
     ( cd $DESTDIR && ln -s pkg_comp p )
 
     # Set sh configuration
@@ -487,6 +515,7 @@ makeroot()
     # signals to umount them.
     trap "echo \"*** Process aborted ***\" ; fsumount ; exit 1" INT QUIT
 
+    makeroot_digest
     makeroot_libkver
 
     if [ "$USE_GCC3" = "yes" ]; then
@@ -554,6 +583,16 @@ CXXFLAGS += $CXXFLAGS
 .endif # BSD_PKG_MK
 EOF
     fi
+}
+
+# makeroot_digest
+#
+#   Ensure digest is always installed, specially because PKGSRC_COMPILER
+#   may contain 'ccache' or 'distcc'.
+#
+makeroot_digest()
+{
+    ( PKGSRC_COMPILER=; export PKGSRC_COMPILER; pkg_build pkgtools/digest )
 }
 
 # makeroot_libkver
