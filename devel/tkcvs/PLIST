@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:27:01 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/01/28 16:55:54 wiz Exp $
 bin/tkcvs
 bin/tkdiff
 man/man1/tkcvs.1
@@ -49,12 +49,15 @@ share/tkcvs/bitmaps/refresh.gif
 share/tkcvs/bitmaps/remove.gif
 share/tkcvs/bitmaps/stat_conf.gif
 share/tkcvs/bitmaps/stat_ex.gif
+share/tkcvs/bitmaps/stat_kb.gif
 share/tkcvs/bitmaps/stat_merge.gif
 share/tkcvs/bitmaps/stat_minus.gif
 share/tkcvs/bitmaps/stat_mod.gif
 share/tkcvs/bitmaps/stat_ok.gif
+share/tkcvs/bitmaps/stat_okay.gif
 share/tkcvs/bitmaps/stat_ood.gif
 share/tkcvs/bitmaps/stat_plus.gif
+share/tkcvs/bitmaps/stat_plus_kb.gif
 share/tkcvs/bitmaps/stat_ques.gif
 share/tkcvs/bitmaps/tag.gif
 share/tkcvs/bitmaps/tags.gif
