@@ -1,7 +1,7 @@
-$NetBSD: patch-bm,v 1.2 1998/08/07 10:40:51 agc Exp $
+$NetBSD: patch-aq,v 1.1 1999/01/10 23:52:16 tron Exp $
 
---- ./pnm/pnmmerge.c.orig	Mon Jan 31 06:31:47 1994
-+++ ./pnm/pnmmerge.c	Thu Oct 16 11:08:33 1997
+--- pnm/pnmmerge.c.orig	Mon Jan 31 12:31:47 1994
++++ pnm/pnmmerge.c	Sun Jan 10 23:48:40 1999
 @@ -30,6 +30,10 @@
  	{
  	++argv;

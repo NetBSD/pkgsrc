@@ -1,7 +1,7 @@
-$NetBSD: patch-bn,v 1.2 1998/08/07 10:40:51 agc Exp $
+$NetBSD: patch-ar,v 1.1 1999/01/10 23:52:17 tron Exp $
 
---- ./pnm/pnmsmooth.1.orig	Mon Oct  4 05:11:56 1993
-+++ ./pnm/pnmsmooth.1	Sun Aug 13 00:21:28 1995
+--- pnm/pnmsmooth.1.orig	Mon Oct  4 10:11:56 1993
++++ pnm/pnmsmooth.1	Sun Jan 10 23:48:40 1999
 @@ -1,25 +1,42 @@
 -.TH pnmsmooth 1 "13 January 1991"
 +.TH pnmsmooth 1 "4 December 1994"

@@ -1,6 +1,6 @@
-$NetBSD: md5,v 1.4 1998/08/07 13:21:37 agc Exp $
+$NetBSD: md5,v 1.5 1999/01/10 23:52:15 tron Exp $
 
 MD5 (netpbm-1mar1994.tar.gz) = 55f505b09e69a5db8f08844435282dfb
 MD5 (pcxtoppm.tar.gz) = d9a37913ef2c2cd412b0e7f969487dc2
 MD5 (rletopnm.tar.gz) = c0488f9918f506bf6a8d09870d5d115f
-MD5 (pnmtopng-2.36.tar.gz) = 37258ecb340f58784faef72f280b1b9f
+MD5 (pnmtopng-2.37.1.tar.gz) = 3addb1d14811c86169c4bb09ee8942d7

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 1998/11/30 19:42:02 tv Exp $
+# $NetBSD: Makefile,v 1.23 1999/01/10 23:52:15 tron Exp $
 #
 
 DISTNAME=	netpbm
@@ -10,7 +10,7 @@ MASTER_SITES=	ftp://ftp.wustl.edu/graphics/graphics/packages/NetPBM/ \
 DISTFILES=	netpbm-1mar1994.tar.gz \
 		pcxtoppm.tar.gz \
 		rletopnm.tar.gz \
-		pnmtopng-2.36.tar.gz
+		pnmtopng-2.37.1.tar.gz
 
 MAINTAINER=	tron@netbsd.org
 
@@ -18,23 +18,16 @@ DEPENDS+=	tiff-3.4:../../graphics/tiff
 DEPENDS+=	jpeg-6b:../../graphics/jpeg
 DEPENDS+=	png-1.0.2:../../graphics/png
 
-CONFLICTS=	netpbm-94.3.1
+CONFLICTS=	netpbm-*
 
 WRKSRC=		${WRKDIR}/netpbm
-MAKE_ENV +=	PREFIX=${PREFIX} INSTALL_MAN="${INSTALL_MAN}"
+MAKE_ENV +=	PREFIX=${PREFIX} MANCP="${INSTALL_MAN}"
+NO_CONFIGURE=	yes
 
 post-extract:
-# make sure our TIFF library is used
-	${RM} -rf ${WRKSRC}/libtiff
 # move updates into source tree
-	cd ${WRKSRC};\
-	${MV} ../*pcx*.? ppm;\
-	${MV} ../*rle*.? ../*png*.? pnm
-
-post-install:
-.for PBMLIB in pbm pgm pnm ppm
-	${INSTALL_DATA} ${WRKSRC}/${PBMLIB}/lib${PBMLIB}.a ${PREFIX}/lib
-	${INSTALL_DATA} ${WRKSRC}/${PBMLIB}/${PBMLIB}.h ${PREFIX}/include
-.endfor
+	cd ${WRKSRC}; \
+	${MV} ../*pcx*.? ppm; \
+	${MV} ../*rle*.? ../*png*.? pnm;
 
 .include "../../mk/bsd.pkg.mk"

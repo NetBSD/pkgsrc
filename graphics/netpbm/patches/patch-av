@@ -1,7 +1,7 @@
-$NetBSD: patch-br,v 1.2 1998/08/07 10:40:52 agc Exp $
+$NetBSD: patch-av,v 1.1 1999/01/10 23:52:17 tron Exp $
 
---- ./pnm/pnmtotiff.c.orig	Sun Aug 13 00:32:57 1995
-+++ ./pnm/pnmtotiff.c	Sun Aug 13 00:34:21 1995
+--- pnm/pnmtotiff.c.orig	Thu Jan 27 17:59:25 1994
++++ pnm/pnmtotiff.c	Sun Jan 10 23:48:40 1999
 @@ -196,6 +196,7 @@
  	    samplesperpixel = 1;
  	    bitspersample = pm_maxvaltobits( maxval );

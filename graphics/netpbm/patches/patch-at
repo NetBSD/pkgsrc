@@ -1,7 +1,7 @@
-$NetBSD: patch-bp,v 1.2 1998/08/07 10:40:51 agc Exp $
+$NetBSD: patch-at,v 1.1 1999/01/10 23:52:17 tron Exp $
 
---- /dev/null	Thu Oct 16 09:27:24 1997
-+++ ./pnm/pnmsmooth.c	Sun Aug 13 00:21:29 1995
+--- pnm/pnmsmooth.c.orig	Sun Jan 10 23:48:41 1999
++++ pnm/pnmsmooth.c	Sun Jan 10 23:48:41 1999
 @@ -0,0 +1,171 @@
 +/* pnmsmooth.c - smooth out an image by replacing each pixel with the 
 +**               average of its width x height neighbors.
