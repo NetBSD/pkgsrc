@@ -3,7 +3,7 @@
 # Date created:		31 January 1995
 # Whom:			janek
 #
-# $NetBSD: Makefile,v 1.2 1998/01/30 16:21:15 agc Exp $
+# $NetBSD: Makefile,v 1.3 1998/01/30 16:39:21 agc Exp $
 # FreeBSD Id: Makefile,v 1.10 1997/10/15 20:23:40 max Exp
 #
 
@@ -16,7 +16,6 @@ MAINTAINER=     volf@oasis.IAEhv.nl
 
 WRKSRC=		${WRKDIR}/x3270-3.1.1
 USE_IMAKE=	yes
-MAN1=		x3270.1 x3270if.1 x3270-script.1 ibm_hosts.1
-MANCOMPRESSED=	yes
+CAT1=		x3270.0 x3270if.0 x3270-script.0 ibm_hosts.0
 
 .include <bsd.port.mk>
