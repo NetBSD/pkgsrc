@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.29 2003/10/18 12:36:07 cjep Exp $
+# $NetBSD: Makefile,v 1.30 2003/12/19 12:25:02 agc Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/08/28 06:49:06 obrien Exp
 #
 
 DISTNAME=	socks5-v1_0r2
 PKGNAME=	socks5-1.0.2
-PKGREVISION=	2
+PKGREVISION=	3
 WRKSRC=		${WRKDIR}/socks5-v1.0r2
 CATEGORIES=	net security
 MASTER_SITES=	# empty -- manual fetch needed
