@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2000/07/20 15:41:06 tron Exp $
+# $NetBSD: Makefile,v 1.23 2000/07/27 00:25:10 phil Exp $
 #
 
 DISTNAME=		coda-5.3.5
@@ -7,7 +7,7 @@ CATEGORIES=		net
 MASTER_SITES=		ftp://ftp.coda.cs.cmu.edu/pub/coda/src/
 EXTRACT_SUFX=		.tgz
 
-MAINTAINER=		rvb@cs.cmu.edu
+MAINTAINER=		phil@cs.wwu.edu
 HOMEPAGE=		http://www.coda.cs.cmu.edu/
 
 DEPENDS+=		lwp>=1.1:../../devel/lwp
