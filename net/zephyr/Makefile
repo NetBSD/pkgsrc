@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2003/07/17 22:52:07 grant Exp $
+# $NetBSD: Makefile,v 1.27 2003/07/30 10:53:02 jmmv Exp $
 #
 
 DISTNAME=	zephyr-2.0.4
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	ftp://athena-dist.mit.edu/pub/ATHENA/zephyr/dist/
 
@@ -21,20 +22,29 @@ CPPFLAGS+=	-I/usr/include/kerberosIV
 CONFIGURE_ARGS+="--without-krb4"
 .endif
 
+USE_BUILDLINK2=	yes
+USE_PKGINSTALL=	yes
 USE_X11=	yes
 GNU_CONFIGURE=	yes
 
-ZEPHYR_RCDIR=	${PREFIX}/etc/rc.d
 ZEPHYR_DOCDIR=	${PREFIX}/share/doc/zephyr
 ZEPHYR_DOCS=	INSTALL NOTES OPERATING README USING
 
-post-install:
-	${INSTALL_DATA_DIR} ${ZEPHYR_RCDIR}
-	${SED} -e 's|@prefix@|'${PREFIX}'|g' < ${FILESDIR}/zhm.sh > ${WRKDIR}/zhm.sh
-	${INSTALL_SCRIPT} ${WRKDIR}/zhm.sh ${ZEPHYR_RCDIR}/zhm
+RCD_SCRIPTS=	zhm
+
+CONFIGURE_ARGS+=	--sysconfdir="${PKG_SYSCONFDIR}"
+PKG_SYSCONFSUBDIR=	zephyr
+OWN_DIRS=		${PKG_SYSCONFDIR}/acl
+EGDIR=			${PREFIX}/share/examples/zephyr
+CONF_FILES=		# Contents set in HEADER file
+
+pre-install:
+	${INSTALL_DATA_DIR} ${EGDIR}
+	${INSTALL_DATA_DIR} ${EGDIR}/acl
 	${INSTALL_DATA_DIR} ${ZEPHYR_DOCDIR}
-	for file in ${ZEPHYR_DOCS} ; do \
-	    ${INSTALL_DATA} ${WRKSRC}/$$file ${ZEPHYR_DOCDIR} ; \
-	    done
+.for f in ${ZEPHYR_DOCS}
+	${INSTALL_DATA} ${WRKSRC}/$f ${ZEPHYR_DOCDIR}
+.endfor
+.undef f
 
 .include "../../mk/bsd.pkg.mk"

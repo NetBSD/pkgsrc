@@ -1,24 +1,22 @@
-#!/bin/sh
+#!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: zhm.sh,v 1.3 2002/07/29 11:55:26 joda Exp $
+# $NetBSD: zhm.sh,v 1.4 2003/07/30 10:53:03 jmmv Exp $
 #
 # PROVIDE: zhm
 # REQUIRE: DAEMON
 
 . /etc/rc.subr
 
-PREFIX=${PREFIX-@prefix@}
-
 name="zhm"
 rcvar="$name"
-command="${PREFIX}/sbin/${name}"
+command="@PREFIX@/sbin/${name}"
 pidfile="/var/run/${name}.pid"
-required_files="${PREFIX}/etc/zephyr/server.list"
+required_files="@PKG_SYSCONFDIR@/server.list"
 start_precmd="zhm_precmd"
 
 zhm_precmd()
 {
-	_flags="`cat ${PREFIX}/etc/zephyr/server.list`"
+	_flags="`cat @PKG_SYSCONFDIR@/server.list`"
 }
 load_rc_config "$name"
 run_rc_command "$1"
