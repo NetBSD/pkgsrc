@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST.pre,v 1.1 2001/11/01 00:32:32 zuntum Exp $
+bin/python
+bin/python2.0
+man/man1/python.1

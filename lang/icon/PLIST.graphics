@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST.graphics,v 1.1 2001/11/01 00:32:28 zuntum Exp $
+bin/colrbook
+bin/colrpick
+bin/fontpick
+bin/palette
+bin/vib
+bin/wevents
+bin/xgamma
+lib/icon/libXpm.a
+lib/icon/xpm.h
+lib/icon/xpmP.h
+@dirrm lib/icon
