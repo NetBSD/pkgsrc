@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.5 2004/01/29 17:14:16 cube Exp $
+$NetBSD: patch-aa,v 1.6 2004/02/02 00:00:48 recht Exp $
 
---- configure.in.orig	Wed Nov 12 02:27:29 2003
-+++ configure.in
-@@ -74,12 +74,15 @@ then
+--- configure.in.orig	2003-11-12 02:27:29.000000000 +0100
++++ configure.in	2004-02-02 00:03:11.000000000 +0100
+@@ -74,12 +74,15 @@
      AC_CHECK_LIB(bz2, bzReadOpen, AC_DEFINE(NOBZ2PREFIX),)
  fi
  
@@ -22,7 +22,16 @@ $NetBSD: patch-aa,v 1.5 2004/01/29 17:14:16 cube Exp $
  
  want_dsig="yes"
  AC_ARG_ENABLE(dsig,
-@@ -271,8 +274,12 @@ openbsd*)
+@@ -193,7 +196,7 @@
+ AC_DEFINE_UNQUOTED(CONFDIR,"$cfg_dir",)
+ 
+ dnl Do not overwrite the current config file
+-AM_CONDITIONAL(INSTALL_CONF, test ! -r "$cfg_dir/clamav.conf")
++AM_CONDITIONAL(INSTALL_CONF, test "yes" = "yes")
+ 
+ if test "$test_urandom" = "yes"
+ then
+@@ -271,8 +274,12 @@
      AC_DEFINE(C_BSD)
      ;;
  netbsd*)
