@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/11/05 04:32:07 hubertf Exp $
+$NetBSD: patch-aa,v 1.2 2000/02/24 02:12:36 hubertf Exp $
 
---- configure.orig	Sat Aug  7 23:54:57 1999
-+++ configure	Fri Nov  5 04:57:42 1999
-@@ -4138,43 +4138,43 @@
+--- configure.orig	Mon Feb 21 22:30:52 2000
++++ configure	Wed Feb 23 21:49:48 2000
+@@ -5131,43 +5131,43 @@
      kde_htmldir='\$(prefix)/share/doc/HTML'
    fi
    if test -z "$kde_appsdir"; then
@@ -56,13 +56,13 @@ $NetBSD: patch-aa,v 1.1.1.1 1999/11/05 04:32:07 hubertf Exp $
 +    kde_servicetypesdir='\$(prefix)/share/kde/servicetypes'
    fi
  
-   kde_cv_all_paths="kde_have_all_paths=\"yes\" \
-@@ -4288,7 +4288,7 @@
+   
+@@ -5417,7 +5417,7 @@
    echo $ac_n "(cached) $ac_c" 1>&6
  else
    ac_save_LIBS="$LIBS"
 -LIBS="$all_libraries -lgif -lX11 $LIBSOCKET"
 +LIBS="$all_libraries -lungif -lX11 $LIBSOCKET"
  cat > conftest.$ac_ext <<EOF
- #line 4294 "configure"
+ #line 5423 "configure"
  #include "confdefs.h"
