@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2003/09/19 12:34:26 wiz Exp $
+$NetBSD: distinfo,v 1.3 2003/09/19 12:58:14 wiz Exp $
 
 SHA1 (binutils-2.13.2.1.tar.gz) = d13624807c6b47fec870096a65d47cce4cf82370
 Size (binutils-2.13.2.1.tar.gz) = 12980018 bytes
@@ -8,4 +8,6 @@ SHA1 (patch-ac) = 9261e61c68d50ba771ff74d3dba0670796a256af
 SHA1 (patch-ad) = 306fa82019efec11ae8ed18bf6853934a0f6c16f
 SHA1 (patch-ae) = 8d1f64fa51ed4fb7bbed49f3cedb20c1e08bce0d
 SHA1 (patch-af) = 92f0a4156ed6ea1027dcdffbbf41f05732b6dba9
-SHA1 (patch-ag) = f86a7ee67047287a12c8006daf26ca1771d05622
+SHA1 (patch-ag) = ab2bd066584a8c54663547c78afb4eaac4515446
+SHA1 (patch-ah) = 0559821757c0b112b118bd966430f9d1c3894a83
+SHA1 (patch-ai) = 559e4d685369ca37ecb0168573e7a77e657fd1bf
