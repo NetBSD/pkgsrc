@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2003/05/05 19:05:10 jmmv Exp $
+# $NetBSD: Makefile,v 1.10 2003/05/22 14:32:39 wiz Exp $
 #
 
 DISTNAME=		glade-2.0.0
 PKGNAME=		${DISTNAME:S/-/2-/}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		devel gnome
 MASTER_SITES=		http://glade.pn.org/				\
 			${MASTER_SITE_GNOME:=sources/glade/2.0/}
@@ -25,5 +25,6 @@ LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../databases/libgnomedb/buildlink2.mk"
+.include "../../devel/gail/buildlink2.mk"
 .include "../../print/libgnomeprintui/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
