@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 1998/07/27 00:14:14 tron Exp $
+# $NetBSD: Makefile,v 1.19 1998/07/30 21:42:10 tron Exp $
 # FreeBSD Id: Makefile,v 1.87 1997/10/15 04:58:31 max Exp
 #
 
@@ -28,7 +28,7 @@
 #    SUBDIR += gnushogi
     SUBDIR += golddig
     SUBDIR += icbm3d
-#    SUBDIR += imaze
+    SUBDIR += imaze
 #    SUBDIR += jetpack
     SUBDIR += kdegames
 #    SUBDIR += klondike
