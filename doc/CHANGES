@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9285 2005/02/24 11:20:51 agc Exp $
+$NetBSD: CHANGES,v 1.9286 2005/02/24 11:36:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1061,3 +1061,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated abiword to 2.2.4 [adam 2005-02-24]
 	Updated abiword-plugins to 2.2.4 [adam 2005-02-24]
 	Added pmccabe-2.2 [agc 2005-02-24]
+	Updated htmllint to 20050220 [wiz 2005-02-24]
