@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.9 2001/11/12 05:07:19 itojun Exp $
+$NetBSD: distinfo,v 1.10 2001/11/22 11:43:07 martti Exp $
 
-SHA1 (postfix/postfix-20010228-pl04.tar.gz) = 5a9328a7e50d5abffaeb320a5ae403f5229efd90
-Size (postfix/postfix-20010228-pl04.tar.gz) = 989045 bytes
+SHA1 (postfix/postfix-20010228-pl08.tar.gz) = d171867ba89c3766f2346575acdab8423ebf7077
+Size (postfix/postfix-20010228-pl08.tar.gz) = 989129 bytes
 SHA1 (postfix/postfix-20010228release-ercpt.diff) = c6abc5d57ca1a36de85dadee878b266d707ad3cd
 Size (postfix/postfix-20010228release-ercpt.diff) = 4484 bytes
 SHA1 (patch-aa) = a2cbec9609c9abaf87a8e11220ddf2546802648d
