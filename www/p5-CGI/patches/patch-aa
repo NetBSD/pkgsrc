@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1 2000/10/15 02:17:16 jlam Exp $
+$NetBSD: patch-aa,v 1.2 2001/06/07 04:29:04 jlam Exp $
 
---- Makefile.PL.orig	Tue Nov 24 07:29:59 1998
-+++ Makefile.PL	Sun Sep 24 19:23:29 2000
+--- Makefile.PL.orig	Tue Nov 24 04:29:59 1998
++++ Makefile.PL	Wed Jun  6 20:18:51 2001
 @@ -2,7 +2,6 @@
  # See lib/ExtUtils/MakeMaker.pm for details of how to influence
  # the contents of the Makefile that is written.
