@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2004/02/18 20:30:31 minskim Exp $
+# $NetBSD: Makefile,v 1.20 2004/03/10 17:58:22 jlam Exp $
 #
 
 DISTNAME=	xerces-c-src_2_3_0
@@ -34,19 +34,19 @@ CONFIGURE_ARGS+=	-p ${XERCES_PLATFORM}	# platform
 CONFIGURE_ARGS+=	-n socket		# net accessor
 CONFIGURE_ARGS+=	-m inmem		# message loader
 CONFIGURE_ARGS+=	-r none			# threading
+CONFIGURE_ARGS+=	${CONFIGURE_ARGS.${ICONV_TYPE}-iconv}
 
-.include "../../converters/libiconv/buildlink3.mk"
+CONFIGURE_ARGS.gnu-iconv=	-t IconvGNU	# transcoder
+PLIST_SUBST.gnu-iconv=		NATIVEICONV="@comment " GNUICONV=""
 
-.if defined(ICONV_TYPE) && (${ICONV_TYPE} == "gnu")
-CONFIGURE_ARGS+=	-t IconvGNU		# transcoder
-PLIST_SUBST+=		NATIVEICONV="@comment " GNUICONV=""
-.else
-CONFIGURE_ARGS+=	-t native		# transcoder
-PLIST_SUBST+=		NATIVEICONV="" GNUICONV="@comment "
-.endif
+CONFIGURE_ARGS.native-iconv=	-t native	# transcoder
+PLIST_SUBST.native-iconv=	NATIVEICONV="" GNUICONV="@comment "
 
 CONFIGURE_ENV+=		${XERCES_ENV}
 MAKE_ENV+=		${XERCES_ENV}
+PLIST_SUBST+=		${PLIST_SUBST.${ICONV_TYPE}-iconv}
+
+.include "../../converters/libiconv/buildlink3.mk"
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/dom/impl/*.hpp \
