@@ -29,4 +29,3 @@ SNMP::Session
             private
  DestAddr - internal field used to hold the translated DestHost field
  SessPtr - internal field used to cache a created session structure
-
