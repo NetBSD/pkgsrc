@@ -1,7 +1,5 @@
-$NetBSD: patch-ai,v 1.1 2000/02/01 02:30:34 wiz Exp $
-
---- WinQuake/Makefile.linuxi386	Tue Apr 27 17:51:18 1999
-+++ ../work/WinQuake/Makefile.linuxi386	Wed Jan 19 21:38:00 2000
+--- WinQuake/Makefile.linuxi386.orig	Tue Apr 27 17:51:18 1999
++++ WinQuake/Makefile.linuxi386	Tue Feb  8 12:06:10 2000
 @@ -25,29 +25,32 @@
  endif
  NOARCH=noarch
@@ -33,15 +31,16 @@ $NetBSD: patch-ai,v 1.1 2000/02/01 02:30:34 wiz Exp $
 -LDFLAGS=-lm
 +LDFLAGS=-lm -lossaudio
  SVGALDFLAGS=-lvga
- XLDFLAGS=-L/usr/X11R6/lib -lX11 -lXext -lXxf86dga
+-XLDFLAGS=-L/usr/X11R6/lib -lX11 -lXext -lXxf86dga
 -XCFLAGS=-DX11
++XLDFLAGS=-L/usr/X11R6/lib -Wl,-rpath -Wl,${X11BASE}/lib -lX11 -lXext -lXxf86dga
 +XCFLAGS=-DX11 -I${X11BASE}/include
  
 -MESAGLLDFLAGS=-L/usr/X11/lib -L/usr/local/lib -L$(MESA_DIR)/lib -lMesaGL -lglide2x -lX11 -lXext -ldl
 +MESAGLLDFLAGS=-L${X11BASE}/lib -L${LOCALBASE}/lib -L$(MESA_DIR)/lib -lMesaGL -lX11 -lXext
  TDFXGLLDFLAGS=-L$(TDFXGL_DIR)/release$(ARCH)$(GLIBC) -l3dfxgl -lglide2x -ldl
 -GLLDFLAGS=-L/usr/X11/lib -L/usr/local/lib -lGL -lX11 -lXext -ldl -lXxf86dga -lXxf86vm -lm
-+GLLDFLAGS=-L${X11BASE}/lib -L${LOCALBASE}/lib -lGL -lX11 -lXext -lXxf86dga -lXxf86vm -lm
++GLLDFLAGS=-L${X11BASE}/lib -Wl,-rpath -Wl,${X11BASE}/lib -L${LOCALBASE}/lib -Wl,-rpath -Wl,"${LOCALBASE}/lib" -lGL -lX11 -lXext -lXxf86dga -lXxf86vm -lm
  GLCFLAGS=-DGLQUAKE -I$(MESA_DIR)/include -I/usr/include/glide
  
  DO_CC=$(CC) $(CFLAGS) -o $@ -c $<

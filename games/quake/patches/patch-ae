@@ -1,7 +1,5 @@
-$NetBSD: patch-ae,v 1.2 2000/02/01 02:30:33 wiz Exp $
-
---- QW/Makefile.Linux	Wed Apr 21 20:16:24 1999
-+++ ../work/QW/Makefile.Linux	Wed Jan 19 21:37:30 2000
+--- QW/Makefile.Linux.orig	Wed Apr 21 20:16:24 1999
++++ QW/Makefile.Linux	Tue Feb  8 12:16:23 2000
 @@ -27,41 +27,51 @@
  RPMARCH=i386
  endif
@@ -42,11 +40,12 @@ $NetBSD: patch-ae,v 1.2 2000/02/01 02:30:33 wiz Exp $
 -LDFLAGS=-lm
 +LDFLAGS=-lm -lossaudio
  SVGALDFLAGS=-lvga
- XLDFLAGS=-L/usr/X11R6/lib -lX11 -lXext
+-XLDFLAGS=-L/usr/X11R6/lib -lX11 -lXext
 -GL_SVGA_LDFLAGS=-L/usr/X11/lib -L/usr/local/src/Mesa-3.0/lib -lm -lMesaGL -lglide2x -lX11 -lXext -lvga
 -GL_X11_LDFLAGS=-L/usr/X11/lib -L/usr/local/src/Mesa-3.0/lib -lm -lGL -lX11 -lXext
-+GL_SVGA_LDFLAGS=-L/usr/X11R6/lib -L/usr/local/src/Mesa-3.0/lib -lm -lMesaGL -lglide2x -lX11 -lXext -lvga
-+GL_X11_LDFLAGS=-L/usr/X11R6/lib -L/usr/local/src/Mesa-3.0/lib -lm -lGL -lX11 -lXext
++XLDFLAGS=-L${X11BASE}/lib -Wl,-rpath -Wl,${X11BASE}/lib -lX11 -lXext
++GL_SVGA_LDFLAGS=-L${X11BASE}/lib -Wl,-rpath -Wl,${X11BASE}/lib -L/usr/local/src/Mesa-3.0/lib -lm -lMesaGL -lglide2x -lX11 -lXext -lvga
++GL_X11_LDFLAGS=-L${X11BASE}/lib -Wl,-rpath -Wl,${X11BASE}/lib -L/usr/local/src/Mesa-3.0/lib -lm -lGL -lX11 -lXext
  
  DO_CC=$(CC) $(CFLAGS) -o $@ -c $<
 -DO_O_CC=$(CC) -O $(CFLAGS) -o $@ -c $<
