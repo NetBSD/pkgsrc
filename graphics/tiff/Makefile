@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2002/03/05 19:33:16 martti Exp $
+# $NetBSD: Makefile,v 1.39 2002/03/07 21:55:08 jlam Exp $
 
 DISTNAME=	tiff-v3.5.7
 PKGNAME=	tiff-3.5.7
@@ -19,8 +19,6 @@ CONFIGURE_ARGS=	--noninteractive --site=${FILESDIR} --prefix=${PREFIX}
 CONFIGURE_ENV+=	CC="${CC}"
 
 .include "../../mk/bsd.prefs.mk"
-.include "../../devel/zlib/buildlink.mk"
-.include "../../graphics/jpeg/buildlink.mk"
 
 USE_BUILDLINK_ONLY=	# defined
 
@@ -69,4 +67,6 @@ pre-install:
 	${SH} ${INSTALL_FILE} ${PKGNAME} PRE-INSTALL
 .endif
 
+.include "../../devel/zlib/buildlink.mk"
+.include "../../graphics/jpeg/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
