@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.139 2000/10/15 07:36:00 jlam Exp $
+# $NetBSD: Makefile,v 1.140 2000/10/15 09:09:50 wulf Exp $
 # FreeBSD Id: Makefile,v 1.78 1997/10/01 08:32:59 cracauer Exp
 #
 
@@ -127,6 +127,7 @@
     SUBDIR += sgi-stl-docs
     SUBDIR += slib
     SUBDIR += stooop
+    SUBDIR += smpeg
     SUBDIR += swig
     SUBDIR += tkcvs
     SUBDIR += tkdiff
