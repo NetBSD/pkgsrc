@@ -1,0 +1,8 @@
+$NetBSD: patch-ad,v 1.1.1.1 2000/08/17 16:56:18 itojun Exp $
+--- vorbis-tools/Makefile.in-	Fri Aug 18 01:37:11 2000
++++ vorbis-tools/Makefile.in	Fri Aug 18 01:37:18 2000
+@@ -31,3 +31,3 @@
+ RANLIB=@RANLIB@
+-LIBS=@LIBS@ $(LIBAO_LIBS) ../lib/vorbisfile.a ../lib/libvorbis.a
++LIBS=@LIBS@ $(LIBAO_LIBS) ../lib/vorbisfile.a ../lib/libvorbis.a -lossaudio
+ 
