@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2002/08/31 02:14:38 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2002/08/31 02:15:29 wiz Exp $
 #
 
 DISTNAME=	easytag-0.23
@@ -9,9 +9,10 @@ MAINTAINER=	wiz@netbsd.org
 HOMEPAGE=	http://easytag.sourceforge.net/
 COMMENT=	Tool to view, edit and write ID3 v1&2 TAGs with a GTK+ interface
 
+BUILD_USES_MSGFMT=	yes				# xgettext, really
+
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
-BUILD_USES_MSGFMT=	yes				# xgettext, really
 USE_X11BASE=	yes
 USE_BUILDLINK2=	yes
 
