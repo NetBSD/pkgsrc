@@ -1,4 +1,5 @@
 ===================================================================
+$NetBSD: MESSAGE,v 1.2 2001/02/06 14:24:13 wiz Exp $
 
 To customize AUC TeX you will need to edit the file `tex-site.el' in
 the site-lisp directory (${PREFIX}/share/emacs/site-lisp).  Add the

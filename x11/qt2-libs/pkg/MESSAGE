@@ -1,4 +1,5 @@
-$NetBSD: MESSAGE,v 1.1.1.1 2000/10/19 07:41:12 skrll Exp $
+======================================================================
+$NetBSD: MESSAGE,v 1.2 2001/02/06 14:24:16 wiz Exp $
 
 To allow this package to coexist with other versions of Qt
 it has been installed in ${X11BASE}/qt2/{bin,include,lib,doc}.
@@ -15,3 +16,5 @@ programs which use it by ensuring that
 To access Qt-2 man pages add ${X11BASE}/qt2/doc/man to your MANPATH
 environment variable.  Note that the Qt-2 man pages are installed
 here to avoid conflicts with man pages of other Qt versions.
+
+======================================================================

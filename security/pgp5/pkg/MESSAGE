@@ -1,4 +1,6 @@
-----------------------------------------------------------------------
+===========================================================================
+$NetBSD: MESSAGE,v 1.2 2001/02/06 14:24:14 wiz Exp $
+
 There are a number of large changes from the 2.6.2 distribution.  Most
 notable is that the command line has changed substantially.  See
 the pgp(1) man page for a discussion of how to use the new command
@@ -19,4 +21,4 @@ language50.txt is a decidedly bad idea.  Also note that language50.txt
 is entirely optional; US English is the only language it contains at
 this time.
 
-----------------------------------------------------------------------
+===========================================================================

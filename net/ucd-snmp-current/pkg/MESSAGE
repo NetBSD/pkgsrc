@@ -1,4 +1,5 @@
-$NetBSD: MESSAGE,v 1.1.1.1 1999/09/22 21:11:39 kim Exp $
+======================================================================
+$NetBSD: MESSAGE,v 1.2 2001/02/06 14:24:12 wiz Exp $
 
 You may want to install the x11/p5-Tk and net/p5-SNMP packages to
 use the tkmib application!
@@ -20,3 +21,5 @@ Finally, a note from the maintainer:
           IT - DCAS
           UCDavis
           Davis CA, 95616
+
+======================================================================

@@ -1,4 +1,5 @@
 ===================================================================
+$NetBSD: MESSAGE,v 1.2 2001/02/06 14:24:10 wiz Exp $
 
 In order to make use of the Inprise JBuilder JIT for the Linux JVM,
 you need to set one of the following (either will work):

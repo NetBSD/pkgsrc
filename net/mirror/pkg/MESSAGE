@@ -1,5 +1,5 @@
-$NetBSD: MESSAGE,v 1.1 2000/04/19 16:16:52 kim Exp $
 ==============================================================
+$NetBSD: MESSAGE,v 1.2 2001/02/06 14:24:12 wiz Exp $
 
 You may need to customize ${PREFIX}/lib/mirror/mirror.defaults
 

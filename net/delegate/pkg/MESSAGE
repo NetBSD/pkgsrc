@@ -1,6 +1,6 @@
-$NetBSD: MESSAGE,v 1.4 2000/04/16 15:19:17 rh Exp $
-
 ======================================================================
+$NetBSD: MESSAGE,v 1.5 2001/02/06 14:24:12 wiz Exp $
+
 Now copy the sample script in ${PREFIX}/etc/rc.d/delegated.sh.sample
 to ${PREFIX}/etc/rc.d/delegated.sh and edit it according to your
 needs.
@@ -12,4 +12,5 @@ delegated with no argument.
 
 For more configuration information, consult
 ${PREFIX}/share/doc/delegate/manual.html
+
 ======================================================================

@@ -1,5 +1,5 @@
-$NetBSD: MESSAGE,v 1.1.1.1 2000/12/12 20:12:06 kei Exp $
 ===========================================================================
+$NetBSD: MESSAGE,v 1.2 2001/02/06 14:24:13 wiz Exp $
 
 For further information for LPRng, have a look at
 	${PREFIX}/share/doc/LPRng/LPRng-HOWTO.txt
