@@ -8,7 +8,7 @@
 -# LIBDIR="/usr/local/lib/tf-${TFVER}-lib"
 -# SYMLINK="/usr/local/bin/tf"
 +if [ -z "${PREFIX}" ]; then 
-+  PREFIX="/usr/local" 
++  PREFIX="/usr/pkg" 
 +fi
 +TF="${PREFIX}/bin/tf-${TFVER}"
 +LIBDIR="${PREFIX}/lib/tf-${TFVER}-lib"
