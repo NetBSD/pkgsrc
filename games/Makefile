@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 1998/07/30 21:42:10 tron Exp $
+# $NetBSD: Makefile,v 1.20 1998/07/30 23:12:51 tron Exp $
 # FreeBSD Id: Makefile,v 1.87 1997/10/15 04:58:31 max Exp
 #
 
@@ -33,6 +33,7 @@
     SUBDIR += kdegames
 #    SUBDIR += klondike
 #    SUBDIR += lincity
+    SUBDIR += maelstrom
     SUBDIR += mirrormagic
 #    SUBDIR += nethack
 #    SUBDIR += nethack-qt
