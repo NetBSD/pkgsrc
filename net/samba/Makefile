@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.28 1999/10/06 17:05:23 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.29 1999/11/16 21:01:04 jlam Exp $
 
-DISTNAME=	samba-2.0.5a
+DISTNAME=	samba-2.0.6
 WRKSRC=		${WRKDIR}/${DISTNAME}/source
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.samba.org/pub/samba/
@@ -24,44 +24,42 @@ SAMBA_PRIVATE?=	${SAMBA_ETCDIR}/private
 MAKE_ENV+=	ETCDIR=${SAMBA_ETCDIR}
 MAKE_ENV+=	LOGDIR=${SAMBA_LOGDIR}
 
-CONFIGURE_ARGS+= --with-swatdir=${PREFIX}/share/swat \
-	--with-lockdir=${SAMBA_LOCKDIR} \
-	--with-privatedir=${SAMBA_PRIVATE}
+CONFIGURE_ARGS= --with-swatdir=${PREFIX}/share/swat \
+		--with-lockdir=${SAMBA_LOCKDIR} \
+		--with-privatedir=${SAMBA_PRIVATE}
 
-PLIST_SRC= ${WRKDIR}/.PLIST-src
+PLIST_SUBST+=	SAMBA_PRIVATE=${SAMBA_PRIVATE}
 
 post-install:
-	${MKDIR} ${PREFIX}/share/doc/samba/faq
-	${MKDIR} ${PREFIX}/share/doc/samba/textdocs
-	for i in ${WRKDIR}/${DISTNAME}/docs/NT4_PlainPassword.reg \
-	    ${WRKDIR}/${DISTNAME}/docs/Win95_PlainPassword.reg \
-	    ${WRKDIR}/${DISTNAME}/docs/THANKS ; do \
-		${INSTALL_DATA} $$i ${PREFIX}/share/doc/samba; \
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/samba/faq
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/samba/textdocs
+	cd ${WRKDIR}/${DISTNAME}/docs; \
+	for file in NT4-Locking.txt NT4_PlainPassword.reg	\
+	    Win2000_PlainPassword.reg Win95_PlainPassword.reg	\
+	    Win98_PlainPassword.reg Win9X-CacheHandling.reg	\
+	    WindowsTerminalServer.reg THANKS announce ; do	\
+		${INSTALL_DATA} $${file} ${PREFIX}/share/doc/samba; \
 	done
-	for i in ${WRKDIR}/${DISTNAME}/docs/faq/* ; do \
-		${INSTALL_DATA} $$i ${PREFIX}/share/doc/samba/faq; \
+	for file in ${WRKDIR}/${DISTNAME}/docs/faq/*.html ; do \
+		${INSTALL_DATA} $${file} ${PREFIX}/share/doc/samba/faq; \
 	done
-	for i in ${WRKDIR}/${DISTNAME}/docs/textdocs/* ; do \
-		${INSTALL_DATA} $$i ${PREFIX}/share/doc/samba/textdocs; \
+	for file in ${WRKDIR}/${DISTNAME}/docs/textdocs/* ; do \
+		${INSTALL_DATA} $${file} ${PREFIX}/share/doc/samba/textdocs; \
 	done
-	@${ECHO} "Installing ${STARTUP_SCRIPT} startup file.";          \
-	${ECHO} '#!/bin/sh' > ${STARTUP_SCRIPT};                        \
-	${ECHO} 'smbd=${PREFIX}/sbin/smbd' >> ${STARTUP_SCRIPT};        \
-	${ECHO} 'nmbd=${PREFIX}/sbin/nmbd' >> ${STARTUP_SCRIPT};        \
-	${ECHO} 'if [ -f $$smbd ]; then' >> ${STARTUP_SCRIPT};          \
-	${ECHO} "       ${ECHO} -n ' Samba'" >> ${STARTUP_SCRIPT};      \
-	${ECHO} '       $$smbd -D' >> ${STARTUP_SCRIPT};                \
-	${ECHO} '       $$nmbd -D' >> ${STARTUP_SCRIPT};                \
-	${ECHO} "fi" >> ${STARTUP_SCRIPT};                              \
-	${CHMOD} 755 ${STARTUP_SCRIPT};                                 \
-	${CHOWN} ${BINOWN}:${BINGRP} ${STARTUP_SCRIPT};
-	@if [ ! -f ${SAMPLE_CONFIG} ]; then                             \
-		${SED} -e 's:__LOGDIR__:${SAMBA_LOGDIR}:g'              \
-		-e 's:__ETCDIR__:${SAMBA_ETCDIR}:g'			\
-		-e 's:__PREFIX__:${PREFIX}:g'				\
-			${FILESDIR}/smb.conf.sample                     \
-			> ${SAMPLE_CONFIG} ;                            \
-	fi
+
+	${SED}	-e "s:__PREFIX__:${PREFIX}:g" \
+		-e "s:__ECHO__:${ECHO}:g" \
+		${FILESDIR}/samba.sh \
+		> ${WRKDIR}/samba.sh
+	${INSTALL_SCRIPT} ${WRKDIR}/samba.sh ${STARTUP_SCRIPT}
+
+	${SED}	-e 's:__LOGDIR__:${SAMBA_LOGDIR}:g' \
+		-e 's:__ETCDIR__:${SAMBA_ETCDIR}:g' \
+		-e 's:__PREFIX__:${PREFIX}:g' \
+		${FILESDIR}/smb.conf.sample \
+		> ${WRKDIR}/smb.conf.sample
+	${INSTALL_DATA} ${WRKDIR}/smb.conf.sample ${SAMPLE_CONFIG}
+
 	${INSTALL_SCRIPT} ${WRKSRC}/script/mksmbpasswd.sh ${PREFIX}/bin
 	if [ ! -d ${SAMBA_PRIVATE} ] ; then				\
 		${MKDIR} ${SAMBA_PRIVATE} ;				\
@@ -73,7 +71,5 @@ post-install:
 			> ${SAMBA_PRIVATE}/smbpasswd ;			\
 		${CHMOD} 600 ${SAMBA_PRIVATE}/smbpasswd ;                  \
 	fi
-	${SED} -e 's:__SAMBA_PRIVATE__:${SAMBA_PRIVATE}:g' ${PKGDIR}/PLIST \
-		> ${PLIST_SRC}
 
 .include "../../mk/bsd.pkg.mk"
