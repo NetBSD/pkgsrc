@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2001/10/29 17:18:52 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2001/11/11 19:30:07 bouyer Exp $
 
-DISTNAME=	horde-1.2.6
+DISTNAME=	horde-1.2.7
 CATEGORIES=	www
 MASTER_SITES=	ftp://ftp.horde.org/pub/horde/tarballs/
 
