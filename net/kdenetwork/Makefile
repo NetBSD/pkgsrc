@@ -3,7 +3,7 @@
 # Date created:        28 October 1997
 # Whom:                Stefan Eßer <se@freebsd.org>
 #
-# $NetBSD: Makefile,v 1.4 1998/01/30 13:57:32 agc Exp $
+# $NetBSD: Makefile,v 1.5 1998/02/23 23:36:46 tron Exp $
 # FreeBSD Id: Makefile,v 1.3 1997/11/05 04:19:54 asami Exp
 #
 
@@ -37,7 +37,7 @@ CONFIGURE_ARGS=	"--x-inc=${X11BASE}/include -I${PREFIX}/include -I${PREFIX}/incl
 		"--prefix=${PREFIX}" \
 		"--datadir=${PREFIX}/share/kde" \
 		"--with-qt-dir=${PREFIX}" \
-		"--with-qt-includes=${PREFIX}/include/qt"
+		"--with-qt-includes=${X11BASE}/include/qt"
 
 WRKSRC=		${WRKDIR}/kdenetwork
 
