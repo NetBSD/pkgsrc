@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1530 2003/03/04 00:35:12 seb Exp $
+$NetBSD: CHANGES,v 1.1531 2003/03/04 01:04:31 salo Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -900,3 +900,6 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated ripe-whois to 3.1.1v6 [seb 2003-03-03]
 	Updated sendmail to 8.12.8 [seb 2003-03-04]
 	Updated sendmail811 to 8.11.6nb3 [seb 2003-03-04]
+	Updated snort to 1.9.1 [salo 2003-03-04]
+	Updated snort-mysql to 1.9.1 [salo 2003-03-04]
+	Updated snort-pgsql to 1.9.1 [salo 2003-03-04]
