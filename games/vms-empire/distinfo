@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/06/02 14:09:48 jmmv Exp $
+$NetBSD: distinfo,v 1.2 2004/11/04 12:15:40 wiz Exp $
 
-SHA1 (vms-empire-1.4.tar.gz) = 88be68a9232f65acf51fa5e7ba15f269745a5e8b
-Size (vms-empire-1.4.tar.gz) = 84453 bytes
-SHA1 (patch-aa) = a0ae58bb2b5468ef684f9f660be162c0a01b6767
+SHA1 (vms-empire-1.7.tar.gz) = 3a9d697f333269ed486f93e77c54f3e688c96edc
+Size (vms-empire-1.7.tar.gz) = 84726 bytes
+SHA1 (patch-aa) = d723aaf73ee2117738ee239ce206fd59c6e92fb1
