@@ -1,6 +1,6 @@
 #!/bin/sh -e
 #
-# $Id: pkgchk.sh,v 1.1.1.1 2001/07/02 14:12:30 abs Exp $
+# $Id: pkgchk.sh,v 1.2 2001/07/02 15:28:44 abs Exp $
 
 extract_variables()
     {
@@ -33,10 +33,6 @@ extract_variables()
 
     if [ -z "$PKGCHK_CONF" ];then
 	PKGCHK_CONF=$PKGSRCDIR/pkgchk.conf
-    fi
-    if [ ! -r $PKGCHK_CONF ];then
-	echo "Unable to read PKGCHK_CONF '$PKGCHK_CONF'"
-	exit 1;
     fi
     }
 
@@ -122,6 +118,12 @@ if [ -n "$opt_i" ];then
 fi
 
 if [ -n "$opt_c" ];then
+
+    if [ ! -r $PKGCHK_CONF ];then
+	echo "Unable to read PKGCHK_CONF '$PKGCHK_CONF'"
+	exit 1;
+    fi
+
     # Determine list of tags
     #
     TAGS="`hostname -s`,`hostname`,`uname -srm | awk '{print $1"-"$2"-"$3","$1"-"$2","$1"-"$3","$1","$2","$3}'`"
