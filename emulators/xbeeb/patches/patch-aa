@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/05/22 22:13:12 skrll Exp $
+
+--- src/Imakefile	Tue Oct  8 13:04:30 1996
++++ src/Imakefile	Sat Apr 29 16:46:01 2000
+@@ -76,7 +76,7 @@
+ #
+ # SYS_LIBRARIES may need to include -lsocket and -lnsl...
+ #
+-SYS_LIBRARIES	= -lm
++SYS_LIBRARIES	= -lm -lossaudio
+ 
+ #
+ # LOCAL_LIBRARIES are the X libraries to link...
