@@ -1,12 +1,9 @@
-/*	$NetBSD: buildlinkX11.def,v 1.1.1.1 2001/07/02 21:00:44 jlam Exp $	*/
+/*	$NetBSD: buildlinkX11.def,v 1.2 2001/08/08 07:23:28 jlam Exp $	*/
 
 #ifdef AfterVendorCF
 
 #ifdef UseInstalled
 # ifdef BuildLink
-#  ifndef ProjectRulesFile
-#   define ProjectRulesFile	<buildlinkX11.rules>
-#  endif
 
 /*
  * Force the buildlink include and lib directories to the head of the

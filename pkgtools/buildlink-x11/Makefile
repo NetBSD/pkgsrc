@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2001/07/13 07:09:21 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2001/08/08 07:23:28 jlam Exp $
 
-DISTNAME=	buildlink-x11-0.6
+DISTNAME=	buildlink-x11-0.7
 CATEGORIES=	pkgtools devel x11
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -24,6 +24,8 @@ FILES_SUBST+=		PREFIX=${PREFIX}
 FILES_SUBST+=		CMP=${CMP:Q}
 FILES_SUBST+=		CP=${CP:Q}
 FILES_SUBST+=		GREP=${GREP:Q}
+FILES_SUBST+=		LN=${LN:Q}
+FILES_SUBST+=		MV=${MV:Q}
 FILES_SUBST+=		RM=${RM:Q}
 FILES_SUBST+=		RMDIR=${RMDIR:Q}
 FILES_SUBST+=		TRUE=${TRUE:Q}
