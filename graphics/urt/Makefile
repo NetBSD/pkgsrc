@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1999/10/08 21:12:49 jlam Exp $
+# $NetBSD: Makefile,v 1.8 1999/11/12 10:41:22 agc Exp $
 # FreeBSD Id: Makefile,v 1.6 1998/02/11 08:48:26 tg Exp
 #
 
@@ -27,6 +27,8 @@ HAS_CONFIGURE=	yes
 MAKEFILE=	makefile
 MAKE_ENV+=	PKGSRCDIR=${BUILD_ROOT} WORKINGDIRNAME=${WRKDIR:T}
 ALL_TARGET=
+
+PATCH_FUZZ_FACTOR=	-F2
 
 post-install:
 	${MKDIR} ${PREFIX}/share/doc/urt ${PREFIX}/share/examples/urt
