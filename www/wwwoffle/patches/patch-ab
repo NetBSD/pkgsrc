@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.5 2002/03/23 22:48:09 fredb Exp $
+
+--- src/parse.c.orig	Sun Jan 20 04:54:12 2002
++++ src/parse.c
+@@ -208,7 +208,8 @@
+     else
+        strcat(url,"?");
+ 
+-    sprintf(url+strlen(url),"!%s:%s.%08lx",(*request_head)->method,MakeHash((*request_body)->content),time(NULL));
++    if (snprintf(url+strlen(url),40,"!%s:%s.%08lx",(*request_head)->method,MakeHash((*request_body)->content),time(NULL)) >= 40)
++	{free(url);return(NULL);}
+    }
+ 
+  return(url);
