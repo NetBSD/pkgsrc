@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 1998/02/10 22:20:55 frueauf Exp $
+@comment $NetBSD: PLIST,v 1.8 1998/07/15 12:51:36 agc Exp $
 @exec if [ ! -d %d/pthreads ]; then mkdir -p %D/pthreads; fi
 pthreads/bin/pgcc
 pthreads/bin/pg++
@@ -6,8 +6,6 @@ pthreads/lib/libpthread.a
 pthreads/lib/libpthread_p.a
 pthreads/lib/libpthread_pic.a
 pthreads/lib/libpthread.so.1.60
-@exec ldconfig || /usr/bin/true
-@unexec ldconfig || /usr/bin/true
 pthreads/include/Makefile.inc
 pthreads/include/dirent.h
 pthreads/include/endian.h

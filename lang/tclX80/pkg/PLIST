@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 1998/03/07 23:41:38 tron Exp $
+@comment $NetBSD: PLIST,v 1.2 1998/07/15 12:51:37 agc Exp $
 bin/tcl
 bin/tclhelp
 bin/wishx
@@ -7,8 +7,6 @@ lib/libtclx802.a
 lib/libtclx802.so.1.0
 lib/libtkx802.a
 lib/libtkx802.so.1.0
-@exec /sbin/ldconfig || /usr/bin/true
-@unexec /sbin/ldconfig || /usr/bin/true
 lib/tclX8.0.2/autoload.tcl
 lib/tclX8.0.2/buildidx.tcl
 lib/tclX8.0.2/help/Tcl.brf
