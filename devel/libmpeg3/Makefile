@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/01/22 08:24:30 grant Exp $
+# $NetBSD: Makefile,v 1.14 2004/03/12 19:34:01 snj Exp $
 #
 
 DISTNAME=	libmpeg3-1.3
@@ -16,7 +16,7 @@ BUILD_DEPENDS+=	nasm-[0-9]*:../../devel/nasm
 CONFIGURE_ARGS+= --no-mmx --no-css
 .endif
 
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3= yes
 HAS_CONFIGURE=	yes
 USE_GNU_TOOLS+=	make
 
@@ -58,5 +58,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/docs/index.html \
 		${PREFIX}/share/doc/html/libmpeg3
 
-.include "../../mk/pthread.buildlink2.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
