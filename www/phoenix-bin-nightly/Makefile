@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2003/05/25 06:52:52 grant Exp $
+# $NetBSD: Makefile,v 1.6 2003/06/11 13:19:42 grant Exp $
 #
 
 DISTNAME=		# see Makefile.${OPSYS}.${ARCH}
 PKGNAME=		phoenix-bin-${PKGVER}
 WRKSRC=			${WRKDIR}/MozillaFirebird
 CATEGORIES=		www
-MASTER_SITES=		http://komodo.mozilla.org/pub/firebird/nightly/latest-trunk/
 
 MAINTAINER=		grant@NetBSD.org
 HOMEPAGE=		http://www.mozilla.org/projects/firebird/
@@ -55,7 +54,7 @@ post-install:
 	${LN} -s ${X11BASE}/lib/libgdk.so libgdk-1.2.so.0; \
 	${LN} -s ${X11BASE}/lib/libgtk.so libgtk-1.2.so.0
 .  for _lib_ in glib gdk gtk
-	@${ECHO} lib/phoenix-${PLATFORM}/lib${_lib_}-1.2.so.0 >> ${PLIST_SRC}
+	@${ECHO} lib/MozillaFirebird-${PLATFORM}/lib${_lib_}-1.2.so.0 >> ${PLIST_SRC}
 .  endfor
 .endif
 	@${FIND} ${PHOENIX_LIB} -type d -print				\
