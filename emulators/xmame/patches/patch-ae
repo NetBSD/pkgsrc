@@ -1,7 +1,18 @@
-$NetBSD: patch-ae,v 1.14 2001/09/02 22:07:40 kristerw Exp $
---- doc/xmamerc.dist.orig	Sat Aug 25 21:53:26 2001
-+++ doc/xmamerc.dist	Sun Sep  2 23:29:09 2001
-@@ -70,20 +70,19 @@
+$NetBSD: patch-ae,v 1.15 2002/01/06 09:36:45 kristerw Exp $
+--- doc/xmamerc.dist.orig	Wed Jan  2 03:45:53 2002
++++ doc/xmamerc.dist	Sun Jan  6 09:44:30 2002
+@@ -47,10 +47,6 @@
+ 
+ ### XFree86 DGA Related ###
+ 
+-### Video Mode Selection Related ###
+-keepaspect              1
+-displayaspectratio      1.330000
+-
+ ### X11-input related ###
+ grabmouse               0
+ winkeys                 0
+@@ -70,20 +66,19 @@
  mouse                   1
  
  ### Fileio Related ###
