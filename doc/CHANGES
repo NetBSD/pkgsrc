@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4855 2004/02/16 09:27:20 mrg Exp $
+$NetBSD: CHANGES,v 1.4856 2004/02/16 09:51:47 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -865,3 +865,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added scew-0.3.1 [minskim 2004-02-16]
 	Added rss2html-0.5 [minskim 2004-02-16]
 	Updated ircII to 20040216 [mrg 2004-02-16]
+	Updated darkice to 0.14 [xtraeme 2004-02-16]
