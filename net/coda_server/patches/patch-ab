@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.5 1999/04/27 20:43:11 rvb Exp $
+$NetBSD: patch-ab,v 1.6 2000/12/28 14:20:09 hubertf Exp $
 
---- coda-src/venus/fso_cfscalls2.cc~	Wed Oct  7 20:11:22 1998
-+++ coda-src/venus/fso_cfscalls2.cc	Wed Feb 24 01:52:18 1999
-@@ -538,6 +538,10 @@
+--- coda-src/venus/fso_cfscalls2.cc.orig	Thu Oct  8 02:11:22 1998
++++ coda-src/venus/fso_cfscalls2.cc
+@@ -538,6 +538,14 @@
  static char cputype [] = "i386";
  static char systype [] = "i386_nbsd1";
  #endif /* i386 */
@@ -10,6 +10,10 @@ $NetBSD: patch-ab,v 1.5 1999/04/27 20:43:11 rvb Exp $
 +static char cputype [] = "arm32";
 +static char systype [] = "arm32_nbsd1";
 +#endif /* arm32 */
++#ifdef m68k
++static char cputype [] = "m68k";
++static char systype [] = "m68k_nbsd1";
++#endif /* m68k */
  #endif /* __NetBSD__ */
  
  #ifdef __FreeBSD__
