@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/05/22 16:48:29 jmmv Exp $
+# $NetBSD: Makefile,v 1.13 2003/07/04 19:43:40 seb Exp $
 #
 
 DISTNAME=	Gauche-0.6.3
@@ -32,6 +32,8 @@ CONFIGURE_ARGS+=	--with-slib=${PREFIX}/share/slib
 CONFIGURE_ARGS+=	--with-iconv=${BUILDLINK_PREFIX.libiconv} --with-iconv-lib=iconv
 CONFIGURE_ENV+=		AS="${CC} -x assembler-with-cpp -c"
 
+USE_NEW_TEXINFO=	YES
+USE_MAKEINFO=		YES
 INFO_FILES=		gauche-refe.info gauche-refj.info
 
 .include "../../mk/bsd.prefs.mk"
@@ -40,5 +42,4 @@ CONFIGURE_ARGS+=	--enable-multibyte=${GAUCHE_MULTIBYTE}
 .endif
 
 .include "../../converters/libiconv/buildlink2.mk"
-.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"

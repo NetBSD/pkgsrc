@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/06/02 01:19:07 jschauma Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/04 19:48:58 seb Exp $
 
 DISTNAME=	a60-0.20a
 CATEGORIES=	lang
@@ -11,6 +11,7 @@ GNU_CONFIGURE=	yes
 
 CPPFLAGS+= 	-Dunix
 
+USE_NEW_TEXINFO=	YES
 INFO_FILES=	RRA60.info a60.info
 
 do-install:
@@ -27,5 +28,4 @@ do-install:
 	cd ${WRKSRC} && ${INSTALL_DATA} a60.ps RRA60.ps			\
 		${PREFIX}/share/doc/a60/
 
-.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
