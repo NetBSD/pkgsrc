@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: cpuflags.NetBSD,v 1.16 2002/01/01 17:01:26 abs Exp $
+# $NetBSD: cpuflags.NetBSD,v 1.17 2002/01/28 08:26:08 abs Exp $
 
 if [ -x /sbin/sysctl ] ;then
     SYSCTL=/sbin/sysctl
@@ -27,6 +27,7 @@ case $hw_model in
     # sparc
     MB86904* | MB86907*) FLAGS="-mcpu=supersparc"	;; # ss5
     TMS390Z50*)		FLAGS="-mcpu=supersparc"	;; # ss10/ss20
+    TMS390S10*)		FLAGS="-mcpu=supersparc"	;; # classic
     MB86930* | MB86934*) FLAGS="-mcpu=sparclite"	;; # from gcc
     MB86900/1A*)	FLAGS="-mcpu=cypress"		;; # ss1+
     CY7C601*)		FLAGS="-mcpu=cypress"		;; # ss2
@@ -47,8 +48,8 @@ case $hw_model in
 		# The memorybus in strongarm risc pc machines cannot support
 		# certain strongarm instructions, but in 1.5 and earlier all
 		# strongarm machines are 'arm32', so uname and sysctl no use
-		if egrep -q ofbus0|footbridge0 /var/run/dmesg.boot 2>/dev/null \
-									; then
+		if egrep -q 'ofbus0|footbridge0' /var/run/dmesg.boot \
+							    2>/dev/null ; then
 		    FLAGS="-mcpu=strongarm110"			   # dnard/cats
 		else
 		    FLAGS="-march=armv3m -mtune=strongarm"	   # risc pc
