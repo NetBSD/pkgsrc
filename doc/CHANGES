@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8759 2005/01/14 22:21:26 wiz Exp $
+$NetBSD: CHANGES,v 1.8760 2005/01/14 23:37:56 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -310,3 +310,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated py-docutils to 0.3.7 [darcy 2005-01-14]
 	Updated honeyd to 1.0 [adrianp 2005-01-14]
 	Added kajaani-kombat-0.6 [wiz 2005-01-14]
+	Updated msf to 2.3 [adrianp 2005-01-14]
