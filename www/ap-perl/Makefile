@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1999/12/02 21:03:35 rh Exp $
+# $NetBSD: Makefile,v 1.8 2000/08/27 10:37:04 jlam Exp $
 #
 
 DISTNAME=       	mod_perl-1.19
@@ -12,16 +12,23 @@ HOMEPAGE=		http://perl.apache.org/
 DEPENDS+=		libperl-5.*:../../lang/libperl
 DEPENDS+=		apache-1.3.*:../../www/apache
 
-USE_PERL5=		yes
+USE_PERL5=		# defined
+PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/mod_perl/.packlist
 
-MAKE_ENV=		DYNALOADER_OBJ_PIC="${PREFIX}/lib/perl5/${MACHINE_ARCH}-${LOWER_OPSYS}/5.00404/DynaLoader_pic.o"
+MAKE_PARAMS+=		USE_APXS=1
+MAKE_PARAMS+=		WITH_APXS=${PREFIX}/sbin/apxs
+MAKE_PARAMS+=		EVERYTHING=1
 
 do-configure:
-	@cd ${WRKSRC} && ${PREFIX}/bin/perl Makefile.PL USE_APXS=1 \
-		WITH_APXS=${PREFIX}/sbin/apxs EVERYTHING=1
+	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \
+		${PERL5} Makefile.PL ${MAKE_PARAMS}
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/htdocs/manual/mod/mod_perl.html \
 		${PREFIX}/share/httpd/htdocs/manual/mod/
 
 .include "../../mk/bsd.pkg.mk"
+
+.if exists(${PERL5_ARCHLIB}/DynaLoader_pic.o)
+MAKE_ENV+=		DYNALOADER_OBJ_PIC="${PERL5_ARCHLIB}/DynaLoader_pic.o"
+.endif
