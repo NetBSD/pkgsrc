@@ -1,0 +1,10 @@
+$NetBSD: patch-ak,v 1.1 2003/09/30 09:44:00 cube Exp $
+
+--- Makefile.am.orig	2002-10-20 18:29:01.000000000 +0200
++++ Makefile.am
+@@ -1,4 +1,4 @@
+-SUBDIRS = mpegsound nmixer src doc
++SUBDIRS = getopt mpegsound nmixer src doc
+ man_MANS = mp3blaster.1 nmixer.1 splay.1
+ EXTRA_DIST = CREDITS TODO FAQ mp3blaster.1 nmixer.1 \
+ 	BUGS splay.1 mp3blaster.list mp3blaster.spec
