@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/07/22 09:16:02 recht Exp $
+# $NetBSD: Makefile,v 1.6 2005/01/23 20:41:49 recht Exp $
 #
 
 DISTNAME=	csv-1.0
@@ -15,7 +15,7 @@ USE_BUILDLINK3=	YES
 PYDISTUTILSPKG=	yes
 PYBINMODULE=	yes
 
-PYTHON_VERSIONS_ACCEPTED=	22 22pth 21 21pth 20
+PYTHON_VERSIONS_ACCEPTED=	22 21 20
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/10/03 00:18:12 tv Exp $
+# $NetBSD: Makefile,v 1.11 2005/01/23 20:41:49 recht Exp $
 #
 
 DISTNAME=		m2crypto-0.12
@@ -14,7 +14,7 @@ COMMENT=		Crypto and SSL toolkit for Python
 
 USE_BUILDLINK3=			yes
 PYDISTUTILSPKG=			yes
-PYTHON_VERSIONS_ACCEPTED=	23pth 22pth 21pth
+PYTHON_VERSIONS_ACCEPTED=	23 22 21
 
 BUILDLINK_DEPENDS.openssl=	openssl>=0.9.7b
 

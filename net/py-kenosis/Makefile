@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/01/13 12:55:32 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2005/01/23 20:41:48 recht Exp $
 #
 
 DISTNAME=		kenosis-0.92
@@ -11,7 +11,7 @@ HOMEPAGE=		http://kenosis.sourceforge.net/
 COMMENT=		P2P RPC system
 
 USE_BUILDLINK3=		yes
-PYTHON_VERSIONS_ACCEPTED= 23pth 24pth 22pth 21pth
+PYTHON_VERSIONS_ACCEPTED= 23 24 22 21
 PYDISTUTILSPKG=		yes
 PYSETUP=		kenosis_setup.py
 

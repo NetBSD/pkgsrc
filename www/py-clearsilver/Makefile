@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/11/29 00:21:13 epg Exp $
+# $NetBSD: Makefile,v 1.3 2005/01/23 20:41:49 recht Exp $
 
 PKGNAME=			${PYPKGPREFIX}-${DISTNAME}
 
@@ -13,7 +13,7 @@ INSTALL_DIRS=			${WRKSRC}/python
 
 PY_PATCHPLIST=			YES
 PYBINMODULE=			YES
-PYTHON_VERSIONS_ACCEPTED=	23pth 22pth 21pth
+PYTHON_VERSIONS_ACCEPTED=	23 22 21
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"

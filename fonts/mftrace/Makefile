@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/01/05 12:49:19 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2005/01/23 20:41:46 recht Exp $
 
 DISTNAME=	mftrace-1.1.1
 PKGREVISION=	1
@@ -21,7 +21,7 @@ CONFIGURE_ENV+=		PYTHON=${PYTHONBIN}
 MAKEFILE=		GNUmakefile
 
 PLIST_SUBST+=		PYSITELIB=${PYSITELIB}
-PYTHON_VERSIONS_ACCEPTED=	20 21 21pth 22 22pth 23 23pth
+PYTHON_VERSIONS_ACCEPTED=	20 21 22 23
 
 post-build:
 	cd ${WRKSRC} && ${PYTHONBIN} ${PREFIX}/${PYLIB}/py_compile.py afm.py

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/07/22 09:16:03 recht Exp $
+# $NetBSD: Makefile,v 1.7 2005/01/23 20:41:48 recht Exp $
 #
 
 DISTNAME=	email-2.5
@@ -14,12 +14,12 @@ USE_BUILDLINK3=	yes
 PYDISTUTILSPKG=	yes
 # This pkg (or an older version of it) comes with 2.2 and later;
 # 2.1 is the primary target (particulary for Zope).
-PYTHON_VERSIONS_ACCEPTED= 21pth 21 22 22pth 23 23pth
+PYTHON_VERSIONS_ACCEPTED= 21 22 23
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
 
-# _compat22.py is not byte-compiled if built with 2.1(-pth)
+# _compat22.py is not byte-compiled if built with 2.1(-)
 .if !empty(PYPKGPREFIX:Mpy21*)
 NOT21=	"@comment "
 .else

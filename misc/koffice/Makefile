@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2005/01/21 11:32:12 markd Exp $
+# $NetBSD: Makefile,v 1.54 2005/01/23 20:41:48 recht Exp $
 
 DISTNAME=	koffice-1.3.5
 PKGREVISION=	4
@@ -23,7 +23,7 @@ GCC_REQD+=		2.95.3
 
 PTHREAD_OPTS+=		require
 
-PYTHON_VERSIONS_ACCEPTED=	24pth 24 23pth 23 # needs shared library
+PYTHON_VERSIONS_ACCEPTED=	24 23 # needs shared library
 CONFIGURE_ENV+=			PYTHONDIR="${LOCALBASE}"
 CONFIGURE_ENV+=			PYVERSSUFFIX="${PYVERSSUFFIX}"
 

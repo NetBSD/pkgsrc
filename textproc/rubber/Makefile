@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/01/16 17:58:01 cube Exp $
+# $NetBSD: Makefile,v 1.2 2005/01/23 20:41:49 recht Exp $
 #
 
 DISTNAME=		rubber-0.99.8
@@ -18,7 +18,7 @@ USE_GNU_TOOLS+=         make
 USE_MAKEINFO=           yes
 INFO_FILES=             rubber.info
 TEXINFO_REQD=		4.6
-PYTHON_VERSIONS_ACCEPTED=	23 23pth 24 24pth
+PYTHON_VERSIONS_ACCEPTED=	23 24
 
 CONFIGURE_ARGS=		--python=${PYTHONBIN} --prefix=${PREFIX} \
 			--datadir=${PREFIX}/share

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/01/13 11:35:25 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2005/01/23 20:41:49 recht Exp $
 #
 
 DISTNAME=		gDeskCal-0_57
@@ -15,7 +15,7 @@ WRKSRC=		${WRKDIR}/gDeskCal-0.57
 USE_BUILDLINK3=	yes
 NO_BUILD=	yes
 
-PYTHON_VERSIONS_ACCEPTED=	23pth
+PYTHON_VERSIONS_ACCEPTED=	23
 PYTHON_PATCH_SCRIPTS=	gdeskcal
 
 post-extract:
