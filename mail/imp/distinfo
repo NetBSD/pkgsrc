@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2003/09/14 21:27:44 bouyer Exp $
+$NetBSD: distinfo,v 1.10 2004/06/26 20:35:48 adrianp Exp $
 
-SHA1 (imp-3.2.2.tar.gz) = dc645b4ee67e8ff9e3e4581413ee7c682a6882b0
-Size (imp-3.2.2.tar.gz) = 1489544 bytes
+SHA1 (imp-3.2.4.tar.gz) = ecb899b32726ef255826238b549d730c21687f30
+Size (imp-3.2.4.tar.gz) = 1568463 bytes

@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2004/04/12 03:35:38 salo Exp $
+# $NetBSD: Makefile,v 1.25 2004/06/26 20:35:48 adrianp Exp $
 
-DISTNAME=	imp-3.2.2
-PKGREVISION=	1
+DISTNAME=	imp-3.2.4
 CATEGORIES=	mail www
 MASTER_SITES=	ftp://ftp.horde.org/pub/imp/tarballs/
 
@@ -19,8 +18,6 @@ IMPDIR=		${HORDEDIR}/imp
 
 MESSAGE_SUBST+=	IMPDIR=${IMPDIR}
 MESSAGE_SUBST+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
-
-.include "../../mk/bsd.prefs.mk"
 
 USE_PKGINSTALL=		yes
 PKG_SYSCONFSUBDIR?=	httpd
