@@ -1,8 +1,10 @@
 =============================================================================
-$NetBSD: MESSAGE,v 1.3 1998/12/04 00:36:55 tv Exp $
+$NetBSD: MESSAGE,v 1.4 1999/05/13 14:59:43 tv Exp $
 
 You will need to edit ${PREFIX}/etc/httpd/httpd.conf and add the following
-lines to the Dynamic Shared Object section in order to use this module
+lines in order to use this module.  Also see
+${PREFIX}/share/httpd/htdocs/manual/mod/mod_fastcgi.html for instructions
+on setting up FastCGI handlers.
 
 LoadModule lib/httpd/mod_fastcgi.so
 AddModule mod_fastcgi.c
