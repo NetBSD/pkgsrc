@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/05/02 09:57:19 hubertf Exp $
+# $NetBSD: Makefile,v 1.15 2004/05/07 15:25:13 cjep Exp $
 # FreeBSD Id: Makefile,v 1.6 1997/06/29 09:56:32 obrien Exp
 #
 
@@ -14,7 +14,7 @@ COMMENT=	Print text banners in fancy ASCII art characters
 
 PKG_INSTALLATION_TYPES= overwrite pkgviews
 
-pre-install:	
+pre-install:
 		${INSTALL_PROGRAM_DIR} ${PREFIX}/bin
 		${INSTALL_MAN_DIR} ${PREFIX}/man/man6
 

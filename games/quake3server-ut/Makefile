@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/01/22 13:50:15 xtraeme Exp $
+# $NetBSD: Makefile,v 1.3 2004/05/07 15:25:13 cjep Exp $
 
 DISTNAME=	urbanterror3
 PKGNAME=	quake3server-ut-3.0
@@ -31,7 +31,7 @@ do-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}
 
 	${INSTALL_DATA} ${WRKSRC}/zq3ut3.pk3 ${Q3MODDIR}
-	
+
 	for docfile in readme.txt overview.txt radio\ commands.txt; do \
 		${INSTALL_DATA} "${WRKSRC}/$${docfile}" ${DOCDIR}; \
 	done

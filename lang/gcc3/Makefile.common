@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.3 2004/04/24 22:10:14 jlam Exp $
+# $NetBSD: Makefile.common,v 1.4 2004/05/07 15:25:13 cjep Exp $
 
 GCC_VERSION=	3.3.3
 DISTNAME=	gcc-${GCC_VERSION}
@@ -45,7 +45,7 @@ INFO_DIR=	${GCC_SUBPREFIX}/info
 
 # These come from $WRKSRC/Makefile.in
 ALL_GCC=	all-gcc
-ALL_GCC_C=	$$(ALL_GCC) all-target-newlib all-target-libgloss  
+ALL_GCC_C=	$$(ALL_GCC) all-target-newlib all-target-libgloss
 ALL_GCC_CXX=	$$(ALL_GCC_C) all-target-libstdc++-v3
 
 # Support threads and building of crt*.o on post-1.6 -current.

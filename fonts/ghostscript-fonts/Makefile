@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2004/05/01 16:58:46 snj Exp $
+# $NetBSD: Makefile,v 1.12 2004/05/07 15:25:13 cjep Exp $
 
 DISTNAME=		ghostscript-fonts-6.0
 CATEGORIES=		fonts
 MASTER_SITES+=		${MASTER_SITE_SOURCEFORGE:=ghostscript/} \
-			ftp://mirror.cs.wisc.edu/pub/mirrors/ghost/fonts/ 
+			ftp://mirror.cs.wisc.edu/pub/mirrors/ghost/fonts/
 DISTFILES=		${GS_FONTS_STD} ${GS_FONTS_OTHER}
 
 MAINTAINER=		tech-pkg@NetBSD.org
