@@ -1,0 +1,87 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/10/15 02:06:27 jlam Exp $
+
+--- chess.h.orig	Sun Aug 13 23:59:55 2000
++++ chess.h
+@@ -54,6 +54,12 @@
+ #define CDECL
+ #define STDCALL
+ 
++/* Provide reasonable defaults for UNIX systems. */
++#undef  HAS_64BITS             /* machine has 64-bit integers / operators     */
++#define HAS_LONGLONG           /* machine has 32-bit/64-bit integers          */
++#define UNIX                   /* system is unix-based                        */
++
++/* Architecture-specific definitions */
+ #if defined(AIX)
+ #  undef  HAS_64BITS           /* machine has 64-bit integers / operators     */
+ #  define HAS_LONGLONG         /* machine has 32-bit/64-bit integers          */
+@@ -99,6 +105,17 @@
+ #  define HAS_LONGLONG         /* machine has 32-bit/64-bit integers          */
+ #  define UNIX                 /* system is unix-based                        */
+ #endif
++#if defined(NetBSD)
++#  if defined(__alpha__)
++#    define HAS_64BITS         /* machine has 64-bit integers / operators     */
++#    undef  HAS_LONGLONG       /* machine has 32-bit/64-bit integers          */
++#    define UNIX               /* system is unix-based                        */
++#  else
++#    undef  HAS_64BITS         /* machine has 64-bit integers / operators     */
++#    define HAS_LONGLONG       /* machine has 32-bit/64-bit integers          */
++#    define UNIX               /* system is unix-based                        */
++#  endif
++#endif
+ #if defined(NEXT)
+ #  undef  HAS_64BITS          /* machine has 64-bit integers / operators     */
+ #  define HAS_LONGLONG        /* machine has 32-bit/64-bit integers          */
+@@ -156,16 +173,34 @@
+ 
+ #  define COMPACT_ATTACKS
+ #  define USE_ATTACK_FUNCTIONS  
++#endif
+ 
+-#  define     BOOKDIR    "Books"
+-#  define      LOGDIR     "Logs"
+-#  define       TBDIR       "TB"
+-#  define       RCDIR        "."
++#if defined(MACOS)
++#  if !defined(BOOKDIR)
++#    define     BOOKDIR    "Books"
++#  endif
++#  if !defined(LOGDIR)
++#    define      LOGDIR     "Logs"
++#  endif
++#  if !defined(TBDIR)
++#    define       TBDIR       "TB"
++#  endif
++#  if !defined(RCDIR)
++#    define       RCDIR        "."
++#  endif
+ #else
+-#  define     BOOKDIR        "."
+-#  define      LOGDIR        "."
+-#  define       TBDIR     "./TB"
+-#  define       RCDIR        "."
++#  if !defined(BOOKDIR)
++#    define     BOOKDIR        "."
++#  endif
++#  if !defined(LOGDIR)
++#    define      LOGDIR        "."
++#  endif
++#  if !defined(TBDIR)
++#    define       TBDIR     "./TB"
++#  endif
++#  if !defined(RCDIR)
++#    define       RCDIR        "."
++#  endif
+ #endif
+ 
+ # define    EGTB_CACHE_DEFAULT 1024*1024
+@@ -195,7 +230,7 @@
+   extension is exactly one ply.
+ */
+ 
+-#define INCPLY            60  /* 1.00 */
++#define INCPLY                   60  /* 1.00 */
+ #define NULL_MOVE_DEPTH         120  /* 2.00 */
+ #define RAZORING_DEPTH           60  /* 1.00 */
+ 
