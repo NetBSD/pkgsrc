@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2004/02/09 11:06:06 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2004/04/05 11:21:05 markd Exp $
 bin/kile
 share/applications/kde/kile.desktop
 share/doc/kde/HTML/en/kile/TODO
@@ -18,26 +18,16 @@ share/doc/kde/HTML/en/kile/snap_ref_select.png
 share/doc/kde/HTML/en/kile/snap_sidebarmenu.png
 share/doc/kde/HTML/en/kile/snap_structview_label.png
 share/doc/kde/HTML/en/kile/snap_usertag.png
+share/doc/kde/HTML/en/kile/snap_wizardry.png
+share/doc/kde/HTML/et/kile/common
+share/doc/kde/HTML/et/kile/index.cache.bz2
+share/doc/kde/HTML/et/kile/index.docbook
 share/doc/kde/HTML/it/kile/common
 share/doc/kde/HTML/it/kile/index.cache.bz2
 share/doc/kde/HTML/it/kile/index.docbook
-share/doc/kde/HTML/it/kile/latexhelp.html
-share/doc/kde/HTML/it/kile/snap_autocomplete.png
-share/doc/kde/HTML/it/kile/snap_compile_error.png
-share/doc/kde/HTML/it/kile/snap_editusertag.png
-share/doc/kde/HTML/it/kile/snap_encoding.png
-share/doc/kde/HTML/it/kile/snap_kdvi_settings.png
-share/doc/kde/HTML/it/kile/snap_projectview.png
-share/doc/kde/HTML/it/kile/snap_projectview_add.png
-share/doc/kde/HTML/it/kile/snap_ref_choose.png
-share/doc/kde/HTML/it/kile/snap_ref_select.png
-share/doc/kde/HTML/it/kile/snap_sidebarmenu.png
-share/doc/kde/HTML/it/kile/snap_structview_label.png
-share/doc/kde/HTML/it/kile/snap_usertag.png
 share/doc/kde/HTML/sv/kile/common
 share/doc/kde/HTML/sv/kile/index.cache.bz2
 share/doc/kde/HTML/sv/kile/index.docbook
-share/doc/kde/HTML/sv/kile/latexhelp.html
 share/doc/kde/HTML/sv/kile/snap_autocomplete.png
 share/doc/kde/HTML/sv/kile/snap_compile_error.png
 share/doc/kde/HTML/sv/kile/snap_editusertag.png
@@ -580,16 +570,19 @@ share/kde/icons/crystalsvg/32x32/apps/kile.png
 share/kde/icons/crystalsvg/48x48/apps/kile.png
 share/kde/locale/da/LC_MESSAGES/kile.mo
 share/kde/locale/de/LC_MESSAGES/kile.mo
+share/kde/locale/en_GB/LC_MESSAGES/kile.mo
 share/kde/locale/es/LC_MESSAGES/kile.mo
 share/kde/locale/et/LC_MESSAGES/kile.mo
 share/kde/locale/fr/LC_MESSAGES/kile.mo
 share/kde/locale/hu/LC_MESSAGES/kile.mo
 share/kde/locale/it/LC_MESSAGES/kile.mo
 share/kde/locale/nl/LC_MESSAGES/kile.mo
+share/kde/locale/pl/LC_MESSAGES/kile.mo
 share/kde/locale/pt/LC_MESSAGES/kile.mo
 share/kde/locale/pt_BR/LC_MESSAGES/kile.mo
 share/kde/locale/sr/LC_MESSAGES/kile.mo
 share/kde/locale/sv/LC_MESSAGES/kile.mo
+share/kde/locale/ta/LC_MESSAGES/kile.mo
 share/kde/mimelnk/text/x-kilepr.desktop
 @dirrm share/kde/apps/kile/templates
 @dirrm share/kde/apps/kile/pics
@@ -597,4 +590,5 @@ share/kde/mimelnk/text/x-kilepr.desktop
 @dirrm share/kde/apps/kile
 @dirrm share/doc/kde/HTML/sv/kile
 @dirrm share/doc/kde/HTML/it/kile
+@dirrm share/doc/kde/HTML/et/kile
 @dirrm share/doc/kde/HTML/en/kile
