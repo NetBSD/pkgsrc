@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1317 2003/02/04 11:26:40 chris Exp $
+$NetBSD: CHANGES,v 1.1318 2003/02/04 18:06:48 skrll Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -549,3 +549,9 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated spim to 6.5 [dmcmahill 2003-02-03]
 	Updated etcupdate to 20030204 [martti 2003-02-04]
 	Updated sylpheed to 0.8.10 [chris 2003-02-04]
+	Updated qt3-libs to 3.0.7 [skrll 2003-02-04]
+	Updated qt3-tools to 3.0.7 [skrll 2003-02-04]
+	Updated qt3-docs to 3.0.7 [skrll 2003-02-04]
+	Updated qt3-psql to 3.0.7 [skrll 2003-02-04]
+	Updated qt3-mysql to 3.0.7 [skrll 2003-02-04]
+	Updated qt3 to 3.0.7 [skrll 2003-02-04]
