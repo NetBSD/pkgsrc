@@ -1,0 +1,30 @@
+$NetBSD: patch-ab,v 1.5 2005/04/04 10:00:54 adam Exp $
+
+--- configure.orig	2005-01-24 10:12:25.000000000 +0000
++++ configure
+@@ -19858,7 +19858,6 @@ else
+ echo "${ECHO_T}no" >&6
+     #autoconf_compflags is set to "-g -O2" with GCC
+     #override CFLAGS when running configure to avoid this
+-    CFLAGS="$CFLAGS $autoconf_compflags"
+ fi
+ 
+ #-Wall ?
+@@ -25304,7 +25303,7 @@ cat >>conftest.$ac_ext <<_ACEOF
+ #include <unistd.h>
+ 
+ struct hostent *
+-gethostbyaddr( const char *, int, int
++gethostbyaddr( const char *, socklen_t, int
+ );
+ int
+ main ()
+@@ -25346,7 +25345,7 @@ cat >>confdefs.h <<_ACEOF
+ _ACEOF
+ 
+ cat >>confdefs.h <<_ACEOF
+-#define HAVE_PROT_GETHOSTBYADDR_2 int
++#define HAVE_PROT_GETHOSTBYADDR_2 socklen_t
+ _ACEOF
+ 
+ cat >>confdefs.h <<_ACEOF
