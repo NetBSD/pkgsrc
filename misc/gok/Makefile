@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.22 2005/02/26 17:26:09 jmmv Exp $
+# $NetBSD: Makefile,v 1.23 2005/03/22 16:31:53 jmmv Exp $
 #
 
-DISTNAME=		gok-0.11.17
+DISTNAME=		gok-1.0.2
 CATEGORIES=		misc
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gok/0.11/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gok/1.0/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		tech-pkg@NetBSD.org
@@ -33,9 +33,12 @@ GCONF2_SCHEMAS=		gok.schemas
 .include "../../devel/GConf2/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libbonobo/buildlink3.mk"
+.include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/libwnck/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../net/ORBit2/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
