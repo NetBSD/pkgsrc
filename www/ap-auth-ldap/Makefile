@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/05/30 13:58:49 kleink Exp $
+# $NetBSD: Makefile,v 1.2 2000/06/15 12:55:37 kleink Exp $
 
 DISTNAME=	auth_ldap-1.4.2
 PKGNAME=	ap-auth-ldap-1.4.2
@@ -9,7 +9,7 @@ MAINTAINER=	kleink@netbsd.org
 HOMEPAGE=	http://www.rudedog.org/auth_ldap/
 
 DEPENDS+=	apache-1.3.*:../../www/apache
-DEPENDS+=	openldap-1.2.7p1:../../databases/openldap
+DEPENDS+=	openldap-1.2.*:../../databases/openldap
 
 # For "apxs":
 BUILD_DEPENDS=	${LOCALBASE}/bin/perl:../../lang/perl5
