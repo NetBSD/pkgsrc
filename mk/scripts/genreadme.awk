@@ -1,5 +1,5 @@
 #!/usr/bin/awk -f
-# $NetBSD: genreadme.awk,v 1.6 2003/02/09 15:06:54 wiz Exp $
+# $NetBSD: genreadme.awk,v 1.7 2003/03/19 02:12:11 dmcmahill Exp $
 #
 # Copyright (c) 2002, 2003 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -116,8 +116,7 @@ BEGIN {
 			  printf("Appending %s to topbuilddepends[%s] (%s)\n",
 				 pkgpat, pkg, topbuilddepends[pkg]);
 			}
-			topbuilddepends[pkg] = topbuilddepends[pkg] 
-				" " pkgpat " " ;
+			topbuilddepends[pkg] = topbuilddepends[pkg] " " pkgpat " " ;
 		}
 	}
 	
@@ -342,10 +341,7 @@ END {
 			}
 			
 			if (MULTIARCH == "no"){
-				cmd="ls -1 "PACKAGES "/" \
-					PKGREPOSITORYSUBDIR "/" \
-					wildcard[toppkg] PKG_SUFX \
-					" 2>/dev/null";
+				cmd="ls -1 "PACKAGES "/" PKGREPOSITORYSUBDIR "/" wildcard[toppkg] PKG_SUFX " 2>/dev/null";
 				if (debug) {
 				  printf("Checking for binary package with %s\n",
 					 cmd);
@@ -649,8 +645,7 @@ function find_all_depends(pkg, pkgreg, i, deps, depdir){
 # we depend on may also have depended on
 # deps[i].
 		if (alldepends[pkg] !~ reg2str(deps[i])){
-		  alldepends[pkg] = alldepends[pkg] " " deps[i] " " 
-		    find_all_depends(depdir);
+		  alldepends[pkg] = alldepends[pkg] " " deps[i] " " find_all_depends(depdir);
 		} 
 		else {
 		  if (debug) printf("\t%s is already listed in %s\n",
