@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.40 2003/09/26 12:04:46 salo Exp $
+# $NetBSD: Makefile.common,v 1.41 2003/10/18 11:51:09 grant Exp $
 #
 
 MPLAYER_DIST_VERSION=	1.0pre1
@@ -70,6 +70,11 @@ MPLAYER_DRIVERS=	arts		audio/arts \
 			esd		audio/esound \
 			nas		audio/nas \
 			sdl		devel/SDL
+
+# arts is currently broken on Solaris.
+.if ${OPSYS} == "SunOS"
+MPLAYER_DISABLE_DRIVERS=	arts
+.endif
 
 .if defined(PKGNAME) && !empty(PKGNAME:M*encoder*)
 MPLAYER_DISABLE_DRIVERS=arts esd nas sdl
