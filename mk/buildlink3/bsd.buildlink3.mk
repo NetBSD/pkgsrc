@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.51 2004/01/21 07:37:32 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.52 2004/01/21 07:54:50 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -728,8 +728,8 @@ _BLNK_TRANSFORM+=	mangle:${_dir_}:${_BLNK_MANGLE_DIR.${_dir_}}
 # Protect -I/usr/include/* and -L/usr/lib/* from transformations (these
 # aren't part of the normal header or library search paths).
 #
-_BLNK_TRANSFORM+=	submangle:-I/usr/include:-I${_BLNK_MANGLE_DIR./usr/include}
-_BLNK_TRANSFORM+=	submangle:-L/usr/lib:-L${_BLNK_MANGLE_DIR./usr/lib}
+_BLNK_TRANSFORM+=	sub-mangle:-I/usr/include:-I${_BLNK_MANGLE_DIR./usr/include}
+_BLNK_TRANSFORM+=	sub-mangle:-L/usr/lib:-L${_BLNK_MANGLE_DIR./usr/lib}
 #
 # Change any buildlink directories in runtime library search paths into
 # the canonical actual installed paths.
@@ -786,11 +786,11 @@ _BLNK_TRANSFORM+=	L:${LOCALBASE}:${_BLNK_MANGLE_DIR.${BUILDLINK_DIR}}
 # Protect any remaining references to ${PREFIX}, ${LOCALBASE}, or ${X11BASE}.
 #
 .if ${PKG_INSTALLATION_TYPE} == "pkgviews"
-_BLNK_TRANSFORM+=	untransform:submangle:${PREFIX}:${_BLNK_MANGLE_DIR.${PREFIX}}
+_BLNK_TRANSFORM+=	untransform:sub-mangle:${PREFIX}:${_BLNK_MANGLE_DIR.${PREFIX}}
 .endif
-_BLNK_TRANSFORM+=	untransform:submangle:${LOCALBASE}:${_BLNK_MANGLE_DIR.${LOCALBASE}}
+_BLNK_TRANSFORM+=	untransform:sub-mangle:${LOCALBASE}:${_BLNK_MANGLE_DIR.${LOCALBASE}}
 .if defined(USE_X11)
-_BLNK_TRANSFORM+=	untransform:submangle:${X11BASE}:${_BLNK_MANGLE_DIR.${X11BASE}}
+_BLNK_TRANSFORM+=	untransform:sub-mangle:${X11BASE}:${_BLNK_MANGLE_DIR.${X11BASE}}
 .endif
 #
 # Add any package specified transformations (l:, etc.)
