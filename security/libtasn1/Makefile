@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2004/12/26 01:53:17 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2005/01/27 15:47:57 adam Exp $
 
-DISTNAME=	libtasn1-0.2.11
+DISTNAME=	libtasn1-0.2.13
 CATEGORIES=	security devel
 MASTER_SITES=	ftp://ftp.gnutls.org/pub/gnutls/libtasn1/ \
 		ftp://ftp.gnupg.org/gcrypt/alpha/gnutls/libtasn1/ \
@@ -13,9 +13,9 @@ COMMENT=	ASN.1 structure parser library
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=		YES
-USE_LIBTOOL=		YES
-GNU_CONFIGURE=		YES
+USE_BUILDLINK3=		yes
+USE_LIBTOOL=		yes
+GNU_CONFIGURE=		yes
 TEST_TARGET=		check
 
 .include "../../mk/bsd.prefs.mk"

@@ -1,5 +1,27 @@
-@comment $NetBSD: PLIST,v 1.5 2004/09/22 08:09:52 jlam Exp $
+@comment $NetBSD: PLIST,v 1.6 2005/01/27 15:47:57 adam Exp $
 bin/libtasn1-config
 include/libtasn1.h
 lib/libtasn1.la
+info/libtasn1.info
 share/aclocal/libtasn1.m4
+man/man3/asn1_array2tree.3
+man/man3/asn1_check_version.3
+man/man3/asn1_create_element.3
+man/man3/asn1_delete_element.3
+man/man3/asn1_delete_structure.3
+man/man3/asn1_der_coding.3
+man/man3/asn1_der_decoding.3
+man/man3/asn1_der_decoding_element.3
+man/man3/asn1_der_decoding_startEnd.3
+man/man3/asn1_expand_any_defined_by.3
+man/man3/asn1_expand_octet_string.3
+man/man3/asn1_find_structure_from_oid.3
+man/man3/asn1_number_of_elements.3
+man/man3/asn1_parser2array.3
+man/man3/asn1_parser2tree.3
+man/man3/asn1_print_structure.3
+man/man3/asn1_read_tag.3
+man/man3/asn1_read_value.3
+man/man3/asn1_write_value.3
+man/man3/libtasn1_perror.3
+man/man3/libtasn1_strerror.3
