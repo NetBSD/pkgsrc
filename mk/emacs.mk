@@ -1,4 +1,4 @@
-# $NetBSD: emacs.mk,v 1.8 2002/12/07 02:37:57 schmonz Exp $
+# $NetBSD: emacs.mk,v 1.9 2002/12/17 16:54:13 drochner Exp $
 #
 # A Makefile fragment for Emacs Lisp packages.
 #
@@ -28,8 +28,8 @@ EMACS_MK=	# defined
 #
 EMACS_VERSION_DEFAULT?=		emacs21
 .if !defined(USE_XEMACS)
-EMACS_VERSIONS_ACCEPTED?=	emacs21 emacs20
-#EMACS_VERSIONS_ACCEPTED?=	emacs21 xemacs211 emacs20 xemacs215
+EMACS_VERSIONS_ACCEPTED?=	emacs21 emacs21nox emacs20
+#EMACS_VERSIONS_ACCEPTED?=	emacs21 emacs21nox xemacs211 emacs20 xemacs215
 .else
 EMACS_VERSIONS_ACCEPTED?=	xemacs211 xemacs215
 .endif
@@ -38,6 +38,7 @@ EMACS_VERSIONS_ACCEPTED?=	xemacs211 xemacs215
 #
 BUILDLINK_DEPENDS.emacs20?=	emacs>=20.7
 BUILDLINK_DEPENDS.emacs21?=	emacs>=21.2
+BUILDLINK_DEPENDS.emacs21nox?=	emacs-nox11>=21.2
 BUILDLINK_DEPENDS.xemacs211?=	xemacs>=21.1
 BUILDLINK_DEPENDS.xemacs215?=	xemacs>=21.5
 BUILDLINK_DEPENDS.leim20?=	leim>=20.7
@@ -59,6 +60,16 @@ _EMACS_VERSION_emacs21_INSTALLED=	yes
 .elif ${_EMACS_VERSION_EMACS_MAJOR} == "20"
 _EMACS_VERSION_emacs20_INSTALLED=	yes
 .endif
+.endif
+
+# Look for Emacs21 without X11
+#
+_TMP!= ${PKG_INFO} -e emacs-nox11 || ${ECHO}
+.if ${_TMP} != ""
+_EMACS_VERSION_EMACS_FULL:=	${_TMP}
+_EMACS_VERSION_EMACS=	${_EMACS_VERSION_EMACS_FULL:C/^.*-//}
+_EMACS_VERSION_EMACS_MAJOR=	${_EMACS_VERSION_EMACS:C/\..*//}
+_EMACS_VERSION_emacs21nox_INSTALLED=	yes
 .endif
 
 # Look for XEmacs 21.5/XEmacs 21.1
@@ -111,12 +122,19 @@ _EMACS_VERSION=	${EMACS_VERSION_FIRSTACCEPTED}
 # Set version specifics.
 #
 FOR.emacs21=		"@comment "
+FOR.emacs21nox=		"@comment "
 FOR.emacs20=		"@comment "
 FOR.xemacs215=		"@comment "
 FOR.xemacs211=		"@comment "
 .if ${_EMACS_VERSION} == "emacs21"
 EMACS_DEPENDENCY=	${BUILDLINK_DEPENDS.emacs21}:../../editors/emacs21
 FOR.emacs21=		""
+.if defined(EMACS_USE_LEIM)
+DEPENDS+=		${BUILDLINK_DEPENDS.leim21}:../../editors/leim21
+.endif
+.elif ${_EMACS_VERSION} == "emacs21nox"
+EMACS_DEPENDENCY=	${BUILDLINK_DEPENDS.emacs21nox}:../../editors/emacs21-nox11
+FOR.emacs21nox=		""
 .if defined(EMACS_USE_LEIM)
 DEPENDS+=		${BUILDLINK_DEPENDS.leim21}:../../editors/leim21
 .endif
@@ -144,14 +162,15 @@ DEPENDS+=	${EMACS_DEPENDENCY}
 
 # Provide some macro definitions.
 #
-EMACS_FLAVOR=	${_EMACS_VERSION:C|[0-9]*$||}
-.if ${EMACS_FLAVOR} == "emacs"
+.if ${_EMACS_VERSION:Memacs*}
+EMACS_FLAVOR=	emacs
 EMACS_BIN=	${PREFIX}/bin/emacs
 EMACS_PKG_VERSION=	${_EMACS_VERSION_EMACS_FULL:C|^.*-||}
 EMACS_LISPPREFIX=	${PREFIX}/share/emacs/site-lisp
 PKGNAME_PREFIX=
 CONFLICTS+=		xemacs-${PKGBASE}-*
 .else
+EMACS_FLAVOR=	xemacs
 EMACS_BIN=	${PREFIX}/bin/xemacs
 EMACS_PKG_VERSION=	${_EMACS_VERSION_XEMACS_FULL:C|^.*-||}
 EMACS_LISPPREFIX=	${PREFIX}/lib/xemacs/site-packages/lisp
@@ -164,6 +183,7 @@ EMACS_VERSION=${EMACS_PKG_VERSION:C|nb[0-9]*$||}
 PLIST_SUBST+=	EMACS_VERSION=${EMACS_VERSION}
 PLIST_SUBST+=	EMACS_LISPPREFIX=${EMACS_LISPPREFIX:C|^${PREFIX}/||}
 PLIST_SUBST+=	FOR_emacs21=${FOR.emacs21}
+PLIST_SUBST+=	FOR_emacs21nox=${FOR.emacs21nox}
 PLIST_SUBST+=	FOR_emacs20=${FOR.emacs20}
 PLIST_SUBST+=	FOR_xemacs215=${FOR.xemacs215}
 PLIST_SUBST+=	FOR_xemacs211=${FOR.xemacs211}
