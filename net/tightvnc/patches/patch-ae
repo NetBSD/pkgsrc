@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1 2001/09/23 01:34:31 mycroft Exp $
+
+--- Xvnc/programs/Xserver/cfb/stipsprc32.s.orig	Wed Apr 27 08:14:23 1994
++++ Xvnc/programs/Xserver/cfb/stipsprc32.s
+@@ -81,7 +81,7 @@
+ #define ForEachBits	LY4
+ #define NextBits	LY5
+ 
+-#ifdef SVR4
++#if defined(SVR4) || defined(__ELF__)
+ #ifdef TETEXT
+ #define	_cfb32StippleStack	cfb32StippleStackTE
+ #else
