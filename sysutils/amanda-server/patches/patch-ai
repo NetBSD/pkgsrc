@@ -1,32 +1,38 @@
-$NetBSD: patch-ai,v 1.4 2001/06/26 03:14:12 christos Exp $
+$NetBSD: patch-ai,v 1.5 2004/05/12 18:45:26 bouyer Exp $
 
---- restore-src/Makefile.in.orig	Tue Apr  3 15:55:46 2001
-+++ restore-src/Makefile.in	Mon Jun 25 22:53:37 2001
-@@ -160,7 +160,7 @@
+--- changer-src/Makefile.in.orig	2004-01-08 10:23:21.000000000 -0800
++++ changer-src/Makefile.in	2004-02-23 15:25:39.000000000 -0800
+@@ -179,10 +179,7 @@
+ # need to list libamanda twice here, first to override the system library
  # routines, and second to pick up any references in the other libraries.
  ###
+-LDADD = ../common-src/libamanda.$(LIB_EXTENSION) \
+-	../server-src/libamserver.$(LIB_EXTENSION) \
+-	../tape-src/libamtape.$(LIB_EXTENSION) \
+-	../common-src/libamanda.$(LIB_EXTENSION)
++LDADD = ../server-src/libamserver.$(LIB_EXTENSION)
  
--LDADD = ../common-src/libamanda.$(LIB_EXTENSION) 	../tape-src/libamtape.$(LIB_EXTENSION) 	../common-src/libamanda.$(LIB_EXTENSION)
-+LDADD = -lamtape -lamanda
  
+ SUFFIXES = .pl .sh
+@@ -213,19 +210,13 @@
+ 	scsi-bsd.$(OBJEXT) scsi-cam.$(OBJEXT) sense.$(OBJEXT)
+ chg_scsi_OBJECTS = $(am_chg_scsi_OBJECTS)
+ chg_scsi_LDADD = $(LDADD)
+-chg_scsi_DEPENDENCIES = ../common-src/libamanda.$(LIB_EXTENSION) \
+-	../server-src/libamserver.$(LIB_EXTENSION) \
+-	../tape-src/libamtape.$(LIB_EXTENSION) \
+-	../common-src/libamanda.$(LIB_EXTENSION)
++chg_scsi_DEPENDENCIES = ../server-src/libamserver.$(LIB_EXTENSION)
+ chg_scsi_LDFLAGS =
+ am_chg_scsi_chio_OBJECTS = chg-scsi-chio.$(OBJEXT) scsi-hpux.$(OBJEXT) \
+ 	scsi-chio.$(OBJEXT)
+ chg_scsi_chio_OBJECTS = $(am_chg_scsi_chio_OBJECTS)
+ chg_scsi_chio_LDADD = $(LDADD)
+-chg_scsi_chio_DEPENDENCIES = ../common-src/libamanda.$(LIB_EXTENSION) \
+-	../server-src/libamserver.$(LIB_EXTENSION) \
+-	../tape-src/libamtape.$(LIB_EXTENSION) \
+-	../common-src/libamanda.$(LIB_EXTENSION)
++chg_scsi_chio_DEPENDENCIES = ../server-src/libamserver.$(LIB_EXTENSION)
+ chg_scsi_chio_LDFLAGS =
+ SCRIPTS = $(libexec_SCRIPTS)
  
- amidxtaped_SOURCES = amidxtaped.c
-@@ -178,16 +178,12 @@
- LIBS = @LIBS@
- amidxtaped_OBJECTS =  amidxtaped.$(OBJEXT)
- amidxtaped_LDADD = $(LDADD)
--amidxtaped_DEPENDENCIES =  ../common-src/libamanda.$(LIB_EXTENSION) \
--../tape-src/libamtape.$(LIB_EXTENSION) \
--../common-src/libamanda.$(LIB_EXTENSION)
-+amidxtaped_DEPENDENCIES = 
- amidxtaped_LDFLAGS = 
- amrestore_SOURCES = amrestore.c
- amrestore_OBJECTS =  amrestore.$(OBJEXT)
- amrestore_LDADD = $(LDADD)
--amrestore_DEPENDENCIES =  ../common-src/libamanda.$(LIB_EXTENSION) \
--../tape-src/libamtape.$(LIB_EXTENSION) \
--../common-src/libamanda.$(LIB_EXTENSION)
-+amrestore_DEPENDENCIES = 
- amrestore_LDFLAGS = 
- CFLAGS = @CFLAGS@
- COMPILE = $(CC) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
