@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2001/08/27 14:35:04 tron Exp $
+# $NetBSD: Makefile,v 1.30 2001/11/21 17:55:55 jlam Exp $
 # FreeBSD Id: Makefile,v 1.8 1997/06/13 16:17:01 ache Exp
 #
 
@@ -14,23 +14,25 @@ COMMENT=	Network audio player
 BUILD_DEPENDS+=	autoconf>=2.13:../../devel/autoconf
 
 USE_BUILDLINK_ONLY=	YES
-USE_LIBTOOL=	# defined
-GNU_CONFIGURE=	# defined
-CONFIGURE_ENV+=	RPLAY_TARGET=generic	# XXX generic, or oss, or sun?
+USE_LIBTOOL=		YES
+GNU_CONFIGURE=		YES
+CONFIGURE_ARGS+=	--sysconfdir=${CONFDIR}
+CONFIGURE_ENV+=		RPLAY_TARGET=generic	# XXX generic, or oss, or sun?
 
 INFO_FILES=	RPLAY.info RPTP.info librplay.info rplay.info
 
 pre-configure:
-	cd ${WRKSRC}; ${LOCALBASE}/bin/autoreconf
-	cd ${WRKSRC}/doc; for f in *.[0-9]; do				\
-		${SED} -e "s|/usr/local|${PREFIX}|g" $$f > $$f.pdone;	\
-		${MV} -f $$f.pdone $$f;					\
+	cd ${WRKSRC}; ${LOCALBASE}/bin/autoreconf --force
+	cd ${WRKSRC}/doc; for manpage in *.[0-9]; do			\
+		${SED}	-e "s|/usr/local/etc|${CONFDIR}|g"		\
+			-e "s|/usr/local|${PREFIX}|g"			\
+			$${manpage} > $${manpage}.pdone;		\
+		${MV} -f $${manpage}.pdone $${manpage};			\
 	done
 
 post-install:
-	${SED} -e "s|@PREFIX@|${PREFIX}|g"				\
-		${FILESDIR}/rplayd.sh > ${WRKDIR}/rplayd.sh
-	${INSTALL_SCRIPT} ${WRKDIR}/rplayd.sh ${PREFIX}/etc/rc.d/rplayd
+	${SED} ${FILES_SUBST_SED} ${FILESDIR}/rplayd.sh > ${WRKDIR}/rplayd
+	${INSTALL_SCRIPT} ${WRKDIR}/rplayd ${PREFIX}/etc/rc.d/rplayd
 	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
 .include "../../audio/gsm/buildlink.mk"
