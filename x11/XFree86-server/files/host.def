@@ -1,0 +1,70 @@
+/*
+ * $NetBSD: host.def,v 1.1.1.1 2004/01/24 08:49:00 xtraeme Exp $
+ *
+ * XFree86 packages for pkgsrc system
+ */
+
+#define ProjectRoot @PREFIX@
+#define BuildHtmlManPages NO
+
+#define MakeCmd @MAKE@
+#define HasGnuMake      NO
+#define ImakeCmd @IMAKE@
+#define RmanCmd @RMAN@
+#define HtmlIndexCmd @MKHTMLINDEX@
+#define DependDir @GCCMAKEDEP@
+#define DependCmd @MAKEDEPEND@
+#define RevPathCmd @REVPATH@
+
+#define NothingOutsideProjectRoot YES
+#define InstallXserverSetUID YES
+#define HasGlide3 YES
+
+#define BuildServer YES
+#define LibInstallBuild YES
+#define ModInstall YES
+#define XF86Server YES
+#define BuildServersOnly YES
+#define BuildGLXLibrary YES
+#define BuildXFree86ConfigTools YES
+#define UseInstalledPrograms YES
+#define StandardIncludes -I@BLNK@/include
+
+#ifdef LinuxArchitecture
+#define InstallAppDefFiles YES
+#define LdPostLib @LDFLAGS@
+#endif
+
+#define XTrueTypeInstallCConvHeaders NO
+
+/* Don't build with SecureRPC, we need to fix this ... */
+
+#if defined(NetBSDArchitecture)
+# define HasSecureRPC NO
+#endif
+
+/* DRI/DRM Support only in FreeBSD/Linux at this moment */
+
+#if defined(FreeBSDArchitecture)
+# define BuildXF86DRI YES
+# define BuildXF86DRM NO
+# define HasSecureRPC YES
+#elif defined(LinuxArchitecture)
+# define BuildXF86DRI YES
+# define BuildXF86DRM YES
+#endif
+
+#if defined(i386Architecture)
+# define XF86CardDrivers	mga glint nv tga s3 s3virge sis rendition \
+				neomagic i740 tdfx savage \
+				cirrus vmware tseng trident chips apm \
+				i128 nsc ati i810 ark cyrix siliconmotion \
+				vesa vga
+#elif defined(ia64Architecture)
+# define XF86CardDrivers	mga nv tdfx glint ati vga
+#elif defined(AlphaArchitecture)
+# define XF86CardDrivers	mga glint nv tga s3 s3virge rendition \
+				tdfx savage cirrus ati siliconmotion vga
+#elif defined(Sparc64Architecture)
+# define XF86CardDrivers	nv ati sunffb
+#endif
