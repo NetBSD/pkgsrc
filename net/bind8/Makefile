@@ -1,5 +1,5 @@
 #
-# $NetBSD: Makefile,v 1.16 2002/11/17 16:08:08 itojun Exp $
+# $NetBSD: Makefile,v 1.17 2002/12/07 21:35:10 cjep Exp $
 #
 # FreeBSD Id: Makefile,v 1.12 1999/06/28 21:25:07 billf Exp
 #
@@ -27,14 +27,22 @@ EXTRACT_ONLY=	${DISTNAME}-src.tar.gz ${DISTNAME}-doc.tar.gz
 PLIST_SRC=		${PKGDIR}/PLIST-Linux
 .endif
 
+.if ${OPSYS} == "SunOS"
+MAKEFLAGS+=	MANROFF=cat
+MAKEFLAGS+=	INSTALL=${INSTALL}
+PLIST_SRC=	${PKGDIR}/PLIST-SunOS
+.endif
+
+MAKEFLAGS+=	PREFIX=${PREFIX}
+
 post-build:
-	@(cd ${WRKDIR}/doc/man && ${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_FLAGS} ${MAKEFILE} clean all)
+	@(cd ${WRKDIR}/doc/man && ${SETENV} ${MAKE_ENV} ${MAKE} ${MAKEFLAGS} ${MAKEFILE} clean all)
 
 pre-install:
 	${SED} ${FILES_SUBST_SED} ${FILESDIR}/named.sh > ${WRKDIR}/named.sh
 
 post-install:
-	@(cd ${WRKDIR}/doc/man && ${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_FLAGS} ${MAKEFILE} ${INSTALL_TARGET})
+	@(cd ${WRKDIR}/doc/man && ${SETENV} ${MAKE_ENV} ${MAKE} ${MAKEFLAGS} ${MAKEFILE} ${INSTALL_TARGET})
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/bind8
 	(cd ${WRKDIR}/doc/html/; tar Bpcf - .) | (cd ${PREFIX}/share/doc/bind8; tar Bpxf -)
 	${INSTALL_SCRIPT} ${WRKDIR}/named.sh ${PREFIX}/etc/rc.d/named
