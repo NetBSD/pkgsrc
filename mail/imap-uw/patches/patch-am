@@ -1,0 +1,13 @@
+$NetBSD: patch-am,v 1.1 2003/09/13 18:31:34 kim Exp $
+
+--- src/osdep/unix/env_unix.c.orig	Wed Apr 16 20:14:42 2003
++++ src/osdep/unix/env_unix.c	Sat Sep 13 14:07:00 2003
+@@ -804,7 +804,7 @@
+ {
+   char tmp[MAILTMPLEN];
+   if (!sysInbox) {		/* initialize if first time */
+-    sprintf (tmp,"%s/%s",MAILSPOOL,myusername ());
++    sprintf (tmp,"%s/%s",@SPOOLDIR@,@MAILBOX@);
+     sysInbox = cpystr (tmp);	/* system inbox is from mail spool */
+   }
+   return sysInbox;
