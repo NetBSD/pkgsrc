@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1684 2004/04/29 16:08:01 taca Exp $
+$NetBSD: TODO,v 1.1685 2004/04/29 18:19:05 minskim Exp $
 
 Suggested new packages
 ======================
@@ -319,6 +319,7 @@ Suggested package updates
 	o rox-1.2.2
 	o rox-session-0.1.22
 	o rrdtool-1.0.45
+	o rsync-2.6.1
 	o rt-3.0.10 [pkgsrc-wip]
 	o ruby-1.8.1 [taca]
 	o sablecc-2.18.1
@@ -394,6 +395,7 @@ Suggested package updates
 	o yaz-2.0.12
 	o ysm-2.9.4
 	o zenicb 1.31 (needs merge with lots of local changes)
+	o zenity-2.6.2
 
 Infrastructure problems which need addressing
 =============================================
