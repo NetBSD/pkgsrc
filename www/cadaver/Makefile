@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2001/08/20 03:55:32 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2002/01/13 21:24:44 agc Exp $
 
-DISTNAME=		cadaver-0.17.0
+DISTNAME=		cadaver-0.19.0
 CATEGORIES=		www
 MASTER_SITES=		http://www.webdav.org/cadaver/
 
@@ -13,9 +13,7 @@ USE_BUILDLINK_ONLY=	# defined
 
 ALL_TARGET=		cadaver
 GNU_CONFIGURE=		# defined
-CONFIGURE_ARGS+=	--with-ssl=${BUILDLINK_DIR}
-CONFIGURE_ARGS+=	--with-include-neon
-CONFIGURE_ARGS+=	--enable-libxml
+CONFIGURE_ARGS+=	--with-neon=${BUILDLINK_DIR}
 CONFIGURE_ARGS+=	--enable-netrc
 
 LIBS+=			${LIBGETOPT}
@@ -40,6 +38,5 @@ post-install:
 .include "../../devel/gettext-lib/buildlink.mk"
 .include "../../devel/libgetopt/buildlink.mk"
 .include "../../devel/readline/buildlink.mk"
-.include "../../security/openssl/buildlink.mk"
-.include "../../textproc/libxml/buildlink.mk"
+.include "../../www/neon/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
