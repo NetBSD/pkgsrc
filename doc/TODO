@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1002 2003/11/07 09:55:27 wiz Exp $
+$NetBSD: TODO,v 1.1003 2003/11/07 11:12:11 seb Exp $
 
 Suggested new packages
 ======================
@@ -210,7 +210,7 @@ Suggested package updates
 	o gpa-0.7.0
 	o grace-5.1.12
 	o grepmail-5.21
-	o gsed-4.0.8
+	o gsed-4.0.8 [seb]
 	o gstreamer-0.6.4
 	o gtetrinet-0.7.4
 	o gtk-gnutella-0.93
