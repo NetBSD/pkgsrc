@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.43 2004/01/10 06:15:39 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.44 2004/01/10 10:52:09 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -229,7 +229,7 @@ BUILDLINK_PREFIX.${_pkg_}=	${_BLNK_PKG_DBDIR.${_pkg_}}
 .    else
 .      if empty(BUILDLINK_PKGNAME.${_pkg_}:Mnot_found)
 BUILDLINK_PREFIX.${_pkg_}!=	\
-	${_BLNK_PKG_INFO.${_pkg_}} -qp ${BUILDLINK_PKGNAME.${_pkg_}} | ${SED}  -e "s,^[^/]*,,"
+	${_BLNK_PKG_INFO.${_pkg_}} -qp ${BUILDLINK_PKGNAME.${_pkg_}} | ${SED}  -e "s,^[^/]*,,;q"
 .      else
 BUILDLINK_PREFIX.${_pkg_}=	not_found
 .      endif
