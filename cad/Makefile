@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2004/10/01 22:56:10 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.57 2004/10/02 05:25:58 dmcmahill Exp $
 #
 
 COMMENT=	CAD tools
@@ -27,6 +27,7 @@ SUBDIR+=	gnetlist
 SUBDIR+=	gnetman
 SUBDIR+=	gnucap
 SUBDIR+=	gschem
+SUBDIR+=	gsmc
 SUBDIR+=	gsymcheck
 SUBDIR+=	gtkwave
 SUBDIR+=	gwave
