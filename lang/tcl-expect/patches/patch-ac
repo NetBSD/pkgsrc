@@ -1,13 +1,13 @@
-$NetBSD: patch-ac,v 1.1 2001/05/16 13:27:55 dillo Exp $
+$NetBSD: patch-ac,v 1.2 2004/11/18 16:47:19 adam Exp $
 
---- exp_command.c.orig	Tue Feb  1 01:38:43 2000
-+++ exp_command.c	Wed May 16 09:17:50 2001
-@@ -780,7 +780,7 @@
+--- exp_command.c.orig	2004-07-02 01:03:04.000000000 +0000
++++ exp_command.c
+@@ -784,7 +784,7 @@ when trapping, see below in child half o
  	 * process "-open $channel"
  	 */
  	int mode;
 -	int rfd, wfd;
 +	long rfd, wfd;
+ 	ClientData rfdc, wfdc;
  	
  	if (echo) {
- 	    expStdoutLogU(argv0,0);
