@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.915 2003/10/01 23:16:47 recht Exp $
+$NetBSD: TODO,v 1.916 2003/10/02 02:44:39 jschauma Exp $
 
 Suggested new packages
 ======================
@@ -228,7 +228,7 @@ Suggested package updates
 	o nut-9.2
 	o openh323-1.11.2
 	o openoffice-1.0.3.1 [skrll]
-	o openssl-0.9.7b
+	o openssl-0.9.7c [jschauma]
 	o oss-3.9.8a
 	o p5-XML-LibXML-1.54
 	o pdmenu-1.2.81
