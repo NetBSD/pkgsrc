@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2003/07/17 22:53:27 grant Exp $
+# $NetBSD: Makefile,v 1.28 2003/08/10 21:47:32 wiz Exp $
 
 DISTNAME=	apNetBSD
 PKGNAME=	aperture-2.0
@@ -6,14 +6,12 @@ PKGREVISION=	4
 WRKSRC=		${WRKDIR}
 CATEGORIES=	sysutils x11
 EXTRACT_SUFX=	.shar
-
 # Not sure why ${MASTER_SITE_LOCAL:=${PKGNAME}} doesn't work, but the
 # following does the correct substitution.
 #
 .for subdir in ${PKGNAME}
 MASTER_SITES=	${MASTER_SITE_LOCAL:=${subdir}nb1/}
 .endfor
-
 # The definitive location of the distfile is as below, but it's risky to depend
 # on NetBSD-current files to stay stable, so don't we'll place new copies at
 # MASTER_SITE_LOCAL and update this package accordingly.
