@@ -1,4 +1,4 @@
-# $NetBSD: defs.Linux.mk,v 1.6 2001/07/15 12:40:03 jlam Exp $
+# $NetBSD: defs.Linux.mk,v 1.7 2001/08/23 15:27:50 abs Exp $
 #
 # Variable definitions for the Linux operating system.
 
@@ -44,7 +44,7 @@ SH?=		/bin/sh
 SORT?=		/bin/sort
 .else
 SORT?=		/usr/bin/sort
-.fi
+.endif
 SU?=		/bin/su
 TAIL?=		/usr/bin/tail
 TEST?=		/usr/bin/test
