@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.55 2003/11/27 23:46:36 heinz Exp $
+# $NetBSD: Makefile,v 1.56 2003/12/25 14:05:02 wiz Exp $
 
-DISTNAME=	gnupg-1.2.3
-PKGREVISION=	2
+DISTNAME=	gnupg-1.2.4
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.gnupg.org/gcrypt/gnupg/ \
 		ftp://ftp.planetmirror.com/pub/gnupg/gnupg/ \
@@ -63,6 +62,7 @@ PLIST_SUBST+=	OPENLDAP="@comment "
 .include "../../converters/libiconv/buildlink2.mk"
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../devel/zlib/buildlink2.mk"
+.include "../../archivers/bzip2/buildlink2.mk"
 .include "../../lang/perl5/buildlink2.mk"
 
 .include "../../mk/bsd.pkg.mk"

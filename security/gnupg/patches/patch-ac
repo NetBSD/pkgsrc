@@ -1,11 +1,10 @@
-$NetBSD: patch-ac,v 1.13 2003/08/15 07:02:23 itojun Exp $
+$NetBSD: patch-ac,v 1.14 2003/12/25 14:05:02 wiz Exp $
 
 ftp://ftp.kame.net/pub/kame/misc/gnupg-1.2.2-IPv6.diff.gz
 
-diff -u -r1.1.1.1 -r1.2
---- config.h.in	15 Aug 2003 05:12:06 -0000	1.1.1.1
-+++ config.h.in	15 Aug 2003 06:44:46 -0000	1.2
-@@ -537,3 +537,4 @@
+--- config.h.in.orig	Tue Dec 23 20:28:49 2003
++++ config.h.in
+@@ -553,3 +553,4 @@
  
  #include "g10defs.h"
  
