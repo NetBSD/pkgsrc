@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5492 2004/04/09 11:45:16 grant Exp $
+$NetBSD: CHANGES,v 1.5493 2004/04/09 12:36:36 grant Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1857,3 +1857,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added p5-Net-Google-0.61 [grant 2004-04-09]
 	Added p5-DBD-Google-0.11 [grant 2004-04-09]
 	Updated ap-perl to 1.29 [grant 2004-04-09]
+	Added p5-Net-DNSServer [grant 2004-04-09]
