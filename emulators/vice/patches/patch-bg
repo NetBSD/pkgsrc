@@ -1,0 +1,34 @@
+$NetBSD: patch-bg,v 1.1 2004/07/26 17:22:40 dillo Exp $
+
+--- src/arch/unix/uijoystick2.c.orig	Sun May 25 19:39:59 2003
++++ src/arch/unix/uijoystick2.c
+@@ -99,6 +99,14 @@ static ui_menu_entry_t set_joystick_devi
+       (ui_callback_t)set_joystick_device_1,
+       (ui_callback_data_t)JOYDEV_DIGITAL_1, NULL },
+ #endif
++#ifdef HAS_USB_JOYSTICK
++    { N_("*USB Joystick 0"),
++      (ui_callback_t)set_joystick_device_1,
++      (ui_callback_data_t)JOYDEV_USB_0, NULL },
++    { N_("*USB Joystick 1"),
++      (ui_callback_t)set_joystick_device_1,
++      (ui_callback_data_t)JOYDEV_USB_1, NULL },
++#endif
+ #endif
+     { NULL }
+ };
+@@ -127,6 +135,14 @@ static ui_menu_entry_t set_joystick_devi
+     { N_("*Digital Joystick 1"),
+       (ui_callback_t)set_joystick_device_2,
+       (ui_callback_data_t)JOYDEV_DIGITAL_1, NULL },
++#endif
++#ifdef HAS_USB_JOYSTICK
++    { N_("*USB Joystick 0"),
++      (ui_callback_t)set_joystick_device_2,
++      (ui_callback_data_t)JOYDEV_USB_0, NULL },
++    { N_("*USB Joystick 1"),
++      (ui_callback_t)set_joystick_device_2,
++      (ui_callback_data_t)JOYDEV_USB_1, NULL },
+ #endif
+ #endif /* HAS_JOYSTICK */
+     { NULL }
