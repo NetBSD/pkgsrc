@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2001/10/31 01:15:36 hubertf Exp $
+# $NetBSD: Makefile,v 1.12 2001/11/01 14:08:00 hubertf Exp $
 #
 
 DISTNAME=	gkrellm-1.2.3
+PKGNAME=	${DISTNAME}nb1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://web.wt.net/~billw/gkrellm/
 
@@ -22,6 +23,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/gkrellm
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/gkrellm
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/gkrellm/plugins
+	${INSTALL_DATA_DIR} ${PREFIX}/share/gkrellm/themes
 
 .include "../../devel/pth/buildlink.mk"
 .include "../../graphics/imlib/buildlink.mk"
