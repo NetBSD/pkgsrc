@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.191 2002/10/07 11:36:15 skrll Exp $
+$NetBSD: CHANGES,v 1.192 2002/10/07 17:05:52 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3142,3 +3142,5 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated mplayer to 0.90rc8nb2 [skrll 2002-10-07]
 	Updated gmplayer to 0.90rc8nb2 [skrll 2002-10-07]
 	Updated mplayer-share to 0.90rc8 [skrll 2002-10-07]
+	Added sawfish-themes-0.1 [jschauma 2002-10-07]
+	Removed aquaified-0.30 [jschauma 2002-10-07]
