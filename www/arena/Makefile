@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1998/08/20 15:17:30 tsarna Exp $
+# $NetBSD: Makefile,v 1.6 1998/09/15 05:38:45 garbled Exp $
 # FreeBSD Id: Makefile,v 1.10 1998/05/04 20:22:31 jseger Exp
 #
 
@@ -14,12 +14,16 @@ DEPENDS=	libwww-5.1m1:../../www/libwww \
 		png-1.0.2:../../graphics/png \
 		xpm-3.4k:../../graphics/xpm
 
+LDFLAGS+=	-L${PREFIX}/lib -L${X11BASE}/lib
 USE_GMAKE=	yes
 MAKEFILE=	makefile
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	--with-libwww-include=${PREFIX}/include/w3c-libwww
-CONFIGURE_ENV=	CPPFLAGS="-I${PREFIX}/include -I${X11BASE}/include -I${WRKDIR}" \
-		LDFLAGS="-L${PREFIX}/lib -L${X11BASE}/lib"
+LDFLAGS+=	-Wl,-R${X11BASE}/lib
+CONFIGURE_ARGS+=	--without-debug
+CONFIGURE_ARGS+=	--with-libwww-include=${PREFIX}/include/w3c-libwww
+CONFIGURE_ARGS+=	--with-libwww-libdir=${PREFIX}/lib
+CONFIGURE_ARGS+=	--with-libwww-config-h-dir=${PREFIX}/include/w3c-libwww
+CONFIGURE_ENV+=	CPPFLAGS="-I${PREFIX}/include -I${X11BASE}/include -I${WRKDIR}"
 
 WRKSRC=		${WRKDIR}/Arena-0.3.61
 
