@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2001/03/28 11:37:07 itojun Exp $
+# $NetBSD: Makefile,v 1.3 2001/04/02 16:23:39 itojun Exp $
 #
 
-DISTNAME=	www6to4-1.3
+DISTNAME=	www6to4-1.3p1
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.pasta.cs.uit.no/pub/Vermicelli/
 
