@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/10/01 12:48:05 rh Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/10/14 04:00:31 grant Exp $
 include/libgtkhtml-3.0/gtkhtml/gtkhtml-compat.h
 include/libgtkhtml-3.0/gtkhtml/gtkhtml-embedded.h
 include/libgtkhtml-3.0/gtkhtml/gtkhtml-enums.h
@@ -85,14 +85,8 @@ include/libgtkhtml-3.0/gtkhtml/htmltypes.h
 include/libgtkhtml-3.0/gtkhtml/htmlundo-action.h
 include/libgtkhtml-3.0/gtkhtml/htmlundo.h
 lib/bonobo/servers/GNOME_GtkHTML_Editor.server
-lib/gtkhtml/libgnome-gtkhtml-editor-3.0.a
 lib/gtkhtml/libgnome-gtkhtml-editor-3.0.la
-lib/gtkhtml/libgnome-gtkhtml-editor-3.0.so
-lib/libgtkhtml-3.0.a
 lib/libgtkhtml-3.0.la
-lib/libgtkhtml-3.0.so
-lib/libgtkhtml-3.0.so.4
-lib/libgtkhtml-3.0.so.4.0
 lib/pkgconfig/libgtkhtml-3.0.pc
 share/gtkhtml-3.0/Editor.idl
 share/gtkhtml-3.0/GNOME_GtkHTML_Editor-emacs.xml
