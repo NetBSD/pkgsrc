@@ -3,14 +3,14 @@
 # Copyright (c) 2002, 2003 by Andrew Brown <atatat@netbsd.org>
 # Absolutely no warranty.
 
-# $NetBSD: pkgdepgraph.pl,v 1.3 2003/03/06 21:13:13 atatat Exp $
+# $NetBSD: pkgdepgraph.pl,v 1.4 2003/03/10 22:31:20 atatat Exp $
 # pkgdepgraph: @DISTVER@
 
 use strict;
 
 use Getopt::Std;
 my($opts, %opt) = ('CcDd:fgLlO:oP:Rt:vU:');
-my($iam, $usecolor, $group, $locations, $order, $versions);
+my($iam, $version, $usecolor, $group, $locations, $order, $versions);
 my($limit, $delete, $rebuild, $force, $outofdate, $update, $clean);
 my($pkg_dbdir, $pkgsrcdir);
 
@@ -19,6 +19,7 @@ die("usage: $iam [-CcDfgLloRv] [-d pkg_dbdir] [-O package] [-P pkgsrcdir]\n",
     " " x (length($iam) + 8), "[-t target] [-U package] [data ...]\n")
     if (!getopts($opts, \%opt));
 
+$version = "@DISTVER@";
 $usecolor = 0;
 $pkg_dbdir = $opt{d} || $ENV{'PKG_DBDIR'} || "/var/db/pkg";
 $pkgsrcdir = $opt{P} || $ENV{'PKGSRCDIR'} || "/usr/pkgsrc";
@@ -36,14 +37,15 @@ $clean = $opt{c} ? "clean" : "";
 $clean = $opt{C} ? "CLEANDEPENDS=YES clean" : $clean;
 
 my(@pkgs, $pkg, $req, %req, @reqs, @rreqs);
-my(%clusters, $closeme);
+my(%clusters, $cluster);
 my(%where, $pkgcnt, $num, %num, @num, %ord, @ord, $suffix);
 my(%color, $color, %vuln);
 my(%need, $label);
 my($recolor, @graph);
 
 ##
-## load out-of-date or security problem list (if given)
+## load out-of-date or security problem list (if given), or a graph to
+## recolor
 ##
 $recolor = 0;
 if (@ARGV || ! -t) {
@@ -53,9 +55,11 @@ if (@ARGV || ! -t) {
 	    $recolor = 1;
 	    @graph = ($_);
 	}
-	elsif ($recolor == 1) {
+	elsif ($recolor > 0) {
 	    push(@graph, $_);
-	    $recolor = 2 if (/^}/);
+	    $recolor++ if (/^subgraph/);
+	    $recolor-- if (/^\}/);
+	    $recolor -= ($recolor == 0);
 	}
 	elsif (/^Version mismatch: '(\S+)' (\S+) vs (\S+)/) {
 	    $color{"$1-$2"} = "red";
@@ -75,7 +79,8 @@ if (@ARGV || ! -t) {
 ## load pkg list
 ##
 opendir(P, $pkg_dbdir) || die("opendir");
-@pkgs = grep(/-/, readdir(P));
+@pkgs = grep(/-/ && -d "$pkg_dbdir/$_" && -f "$pkg_dbdir/$_/+BUILD_INFO",
+	     readdir(P));
 closedir(P);
 $pkgcnt = @pkgs;
 
@@ -98,6 +103,7 @@ foreach $pkg (@pkgs) {
 	chomp($req);
 	$req{$req}->{$pkg} = 1;
     }
+    close(R);
 }
 
 ##
@@ -122,7 +128,7 @@ if ($recolor) {
 	    }
 	}
 
-	elsif (/label/) {
+	elsif (/label=/) {
 	    s/color=\"([^\"]+)\"/color="NEWCOLOR"/;
 	    $ocolor = $1;
 	    s/label=\"([^\"]+)\"/label="NEWLABEL"/;
@@ -181,18 +187,31 @@ foreach $pkg (@pkgs) {
 ## create a hash of clusters of package prefixes, with counts.  later,
 ## clusters that have more than one member can be marked as subgraphs.
 ##
+## the outer map() iterates over each pkg name.  the inner map()
+## breaks each pkg name up into tokens that end in either _ or - and
+## loops over the resulting list, appending each one to $a.  for
+## example:
+##
+##	pkg:	one_two-three-4.56
+##	tokens:	one_     two-         three-
+##	$a:	one_ one_two- one_two-three-
+##
 map({ $a = ""; map({ $a .= $_; $clusters{$a}++; } /([^-_]*[-_])/g); } @pkgs);
 
 ##
 ## impose some sort of order on the pkgs by assigning them numbers
-## that indicate their height in the graph
+## that indicate their height in the graph.  leaf pkgs will always
+## have an order of 1, and each pkg above will be numbered at least 2
+## (possibly higher, if there exists another longer path to another
+## leaf).
 ##
 map(order(1, $_), @pkgs);
 
 ##
 ## assign each pkg a group number, and count the number of pkgs in
-## that group.  the higher the number, the earlier we need to assign
-## them to a group.
+## that group.  the higher the order number, the earlier we need to
+## assign them to a group.  the group numbers are arbitrary, and serve
+## only to identify pkgs that belong to the same group.
 ##
 $num = 1;
 foreach $pkg (sort(byord @pkgs)) {
@@ -209,7 +228,10 @@ foreach $pkg (sort(byord @pkgs)) {
 }
 
 ##
-## if we want to check a specific pkg for rebuild impact... 
+## if we want to check a specific pkg for rebuild impact, mark it as
+## "forced" to be out of date, unless it already *is* out of date.
+##
+## XXX: i wish getopts could stuff successive -O values into an array
 ##
 if ($outofdate) {
     $usecolor = 1;
@@ -223,12 +245,17 @@ if ($outofdate) {
 
 ##
 ## if we want to update a specific package, mark all non-related
-## packages as "green"
+## packages as "green".  this avoids rebuilding unnecessary pkgs that
+## don't depend on any of the same dependencies as the given pkg.  if
+## $force is set, mark *all* dependencies of the given pkg as out of
+## date.
+##
+## XXX: i wish getopts could stuff successive -U values into an array
 ##
 if ($update) {
     $update = canonicalize($update);
 
-    # these things will need to be checked
+    # these things are directly related
     @reqs = sort(keys %{$req{$update}});
     @rreqs = recurse(@reqs);
 
@@ -260,7 +287,9 @@ if ($delete) {
 }
 
 ##
-## "rebuild" output for sh(1), with just leaves listed
+## "rebuild" output for sh(1), with just leaves listed.  all the
+## dependencies will be built "automagically" by the regular build
+## mechanism.
 ##
 if ($rebuild) {
     map(printf("( pkg_info -qe %s || " .
@@ -278,8 +307,11 @@ if ($rebuild) {
 ##
 ## show left overs as a graph
 ##
-printf("digraph \"%s\" {\n",
-       $limit ? "out of date packages" : "packages");
+printf("digraph \"%s packages\" {\n",
+       $limit ? "out of date" : "installed");
+printf("label = \"%s packages graph, generated by %s v%s, on %s\";\n",
+       $limit ? "out of date" : "installed",
+       $iam, $version, scalar(localtime));
 foreach $pkg (sort(bynum @pkgs)) {
     $color = color($pkg);
     next if ($limit && $color eq "green");
@@ -294,19 +326,31 @@ foreach $pkg (sort(bynum @pkgs)) {
     }
     $suffix = "\t// \#$ord{$pkg}, group $num{$pkg}, $num[$num{$pkg}] members, $pkgcnt pkgs";
     $suffix .= ", LEAF" if ($ord{$pkg} == 1);
-    $a = "";
-    $b = 0;
-    foreach ($pkg =~ /([^-_]*[-_])/g) {
-	last if ($clusters{$a .= $_} <= 1 || !$group);
-	next if ($b && $clusters{$a} >= $b);
-	printf("subgraph \"cluster_%s\" {\n", substr($a, 0, -1));
+
+    ##
+    ## scan the cluster list, but in the opposite order so in the case
+    ## of pkgs with a common "multi-token" prefix, we only emit the
+    ## one with the longest name.  we have to prepend the names to a
+    ## buffer so that they end up being printed in the reverse of
+    ## discovery order, so that we end up with the "least-specific"
+    ## subgroup announced first.
+    ##
+    $a = $pkg;
+    $b = 1;
+    $cluster = "";
+    while ($group && $a =~ s/([-_])[^-_]+[-_]?$/$1/) {
+	next if ($clusters{$a} == $b);
 	$b = $clusters{$a};
-	$closeme .= "}\n";
+	$cluster = sprintf("subgraph \"cluster_%s\" {\n", substr($a, 0, -1)) .
+	    sprintf("label = \"%s (%d)\";\n", substr($a, 0, -1), $b) .
+		$cluster;
     }
+    print($cluster);
     printf("\"%s\" [color=\"%s\",label=\"%s\"];$suffix\n", $pkg,
 	   $usecolor ? $color : "black", $label);
-    print($closeme);
-    $closeme = "";
+    $cluster =~ s/label = .*\n//g;
+    $cluster =~ s/.+\{/\}/g;
+    print($cluster);
     @reqs = sort(keys %{$req{$pkg}});
     $suffix =~ s/, LEAF$//;
     $suffix .= ", EDGE";
@@ -346,7 +390,7 @@ sub canonicalize {
     ($canon) = grep(($a = $_) =~ s/(.*)-.*/$1/ && $pkg eq $a, @pkgs)
         if (!defined($canon));
 
-    die("package '$update' not found\n")
+    die("package '$pkg' not found\n")
         if (!defined($canon));
 
     $canon;
@@ -398,7 +442,7 @@ sub bynum {
 }
 
 ##
-## byord - higher orders comes first
+## byord - higher orders come first
 ##
 sub byord {
     return $ord{$b} <=> $ord{$a} ||
