@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-#	$NetBSD: createbuildlink,v 1.17 2004/01/14 08:53:57 rh Exp $
+#	$NetBSD: createbuildlink,v 1.18 2004/02/10 03:36:55 jlam Exp $
 #
 # Copyright (c) 2002 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -40,7 +40,7 @@
 # and PLIST
 #
 
-REV=`echo '$Revision: 1.17 $' | sed 's/\\$//g'`
+REV=`echo '$Revision: 1.18 $' | sed 's/\\$//g'`
 tmpdir=/tmp
 makefile=Makefile
 sedrules=$tmpdir/sedrules.buildlink.$$
@@ -166,7 +166,23 @@ fi	# buildlink 2/3
 
 sed -f $sedrules <<EOF
 BUILDLINK_PACKAGES+=			$PKGNOVER
+EOF
+
+if [ $blver = 2 ]; then
+
+sed -f $sedrules <<EOF
 BUILDLINK_DEPENDS.$PKGNOVER?=		$PKGNOVER>=$PKGVER
+EOF
+
+else # [ $blver = 3 ]
+
+sed -f $sedrules <<EOF
+BUILDLINK_DEPENDS.$PKGNOVER+=		$PKGNOVER>=$PKGVER
+EOF
+
+fi
+
+sed -f $sedrules <<EOF
 BUILDLINK_PKGSRCDIR.$PKGNOVER?=		../../$CURDIR
 
 EOF
