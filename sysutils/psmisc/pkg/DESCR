@@ -1,6 +1,3 @@
-psmisc, version 17
-==================
-
 This package contains three little utilities that use the proc FS:
 
   killall   kills processes by name, e.g. killall -HUP named

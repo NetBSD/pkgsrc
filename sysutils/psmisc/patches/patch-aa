@@ -1,30 +1,19 @@
-$NetBSD: patch-aa,v 1.3 1999/07/23 15:49:44 frueauf Exp $
+$NetBSD: patch-aa,v 1.4 2000/03/17 15:54:53 jlam Exp $
 
---- Makefile.orig	Mon Jul 28 11:28:00 1997
-+++ Makefile	Wed Jul 21 21:00:29 1999
-@@ -1,13 +1,13 @@
- CC=cc
--CFLAGS=-O -DPSMISC_VERSION=\"`cat VERSION`\" \
-+CFLAGS=-O -Dunix -DPSMISC_VERSION=\"`cat VERSION`\" \
-   -Wall -Wno-parentheses -Wwrite-strings -Wpointer-arith \
+--- Makefile.orig	Mon Oct 25 14:01:33 1999
++++ Makefile	Thu Mar 16 23:46:06 2000
+@@ -5,7 +5,7 @@
    # -Wcast-align -Wconversion -g
  LDFLAGS=#-s -N #-Xlinker -qmagic
--REAL_CPP=/lib/cpp
+ REAL_CPP=cc -E
 -PROGS=killall pstree fuser
--EBINDIR=/bin		# essential binaries
--BINDIR=/usr/bin		# not so essential ones
--MANDIR=/usr/man/man1	# all man pages
-+REAL_CPP=/usr/bin/cpp
-+PROGS=killall pstree #fuser
-+EBINDIR=$(PREFIX)/bin		# essential binaries
-+BINDIR=$(PREFIX)/bin		# not so essential ones
-+MANDIR=$(PREFIX)/man/man1	# all man pages
- 
- all:		$(PROGS)
- 
-@@ -18,34 +18,26 @@
- \2,"\1" },:p;d' \
- 		  > signames.h
++PROGS=killall pstree # fuser
+ EBINDIR=/bin		# essential binaries
+ BINDIR=/usr/bin		# not so essential ones
+ MANDIR=/usr/man/man1	# all man pages
+@@ -22,13 +22,14 @@
+ 		grep '^{ 1,"HUP" },$$' signames.h >/dev/null || \
+ 		  { rm -f signames.h; exit 1; }
  
 -signals.o:	signals.h signals.c signames.h Makefile
 +signals.o:	signals.h signals.c Makefile
@@ -34,33 +23,7 @@ $NetBSD: patch-aa,v 1.3 1999/07/23 15:49:44 frueauf Exp $
  
  fuser:		fuser.o signals.o
  killall:	killall.o signals.o
-+		$(CC) $(LDFLAGS) -o killall killall.o signals.o
++		$(CC) $(CFLAGS) $(LDFLAGS) -o killall killall.o signals.o
  
  pstree:		pstree.c comm.h Makefile VERSION
  		$(CC) $(CFLAGS) $(LDFLAGS) -o pstree pstree.c -ltermcap
- 
- install:	$(PROGS)
- #		EBINDIR is expected to exist, so we don't try to create it
--		install -o 0 -g 0 -m 555 fuser $(EBINDIR)
--		[ -d $(BINDIR) ] || install -d -o 0 -g 0 -m 755 $(BINDIR)
--		install -o 0 -g 0 -m 555 killall $(BINDIR)
--		install -o 0 -g 0 -m 555 pstree $(BINDIR)
--		[ -d $(MANDIR) ] || install -d -o 0 -g 0 -m 755 $(MANDIR)
--		install -o 0 -g 0 -m 444 fuser.1 $(MANDIR)
--		install -o 0 -g 0 -m 444 killall.1 $(MANDIR)
--		install -o 0 -g 0 -m 444 pstree.1 $(MANDIR)
--
--install-pidof:
--		@[ -x `echo $(BINDIR)`/killall ] || { \
--		  echo "Need `echo $(BINDIR)`/killall to install pidof"; \
--		  exit 1 }
-+		$(BSD_INSTALL_PROGRAM) killall $(BINDIR)
-+		$(BSD_INSTALL_PROGRAM) pstree $(BINDIR)
-+		$(BSD_INSTALL_MAN) killall.1 $(MANDIR)
-+		$(BSD_INSTALL_MAN) pstree.1 $(MANDIR)
- 		ln -sf killall `echo $(BINDIR)`/pidof
--		install -o 0 -g 0 -m 444 pidof.1 $(MANDIR)
-+		$(BSD_INSTALL_MAN) pidof.1 $(MANDIR)
- 
- clean:
- 		rm -f *.o signames.h
