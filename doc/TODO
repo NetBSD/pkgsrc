@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.798 2003/08/30 14:57:21 wiz Exp $
+$NetBSD: TODO,v 1.799 2003/08/30 15:10:08 wiz Exp $
 
 Suggested new packages
 ======================
@@ -215,7 +215,6 @@ Suggested package updates
 	o nano-1.2.2
 	o nap-1.5.2
 	o napshare-1.2
-	o nasm-0.98.37
 	o neXtaW-0.14.1
 	o neon-0.24.0
 	o nessus-2.0.7 [pkg/22356]
