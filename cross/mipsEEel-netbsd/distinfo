@@ -1,0 +1,14 @@
+$NetBSD: distinfo,v 1.1 2001/08/05 15:28:41 kent Exp $
+
+SHA1 (binutils-2.9EE.linux.patch.bz2) = 9b8af1ca94cbb6731fc283509d420b9ca35a7658
+Size (binutils-2.9EE.linux.patch.bz2) = 292104 bytes
+SHA1 (binutils-ps2linux-0.9.patch.bz2) = 29283f4fe7f450a69495a0da80c44eb28377088d
+Size (binutils-ps2linux-0.9.patch.bz2) = 19123 bytes
+SHA1 (binutils-2.9EE.tar.gz) = 541c6815446b091ca17405127602b3673dc84fc8
+Size (binutils-2.9EE.tar.gz) = 7199214 bytes
+SHA1 (gcc-2.95.2.tar.gz) = c3da103de3fa97c78ccc1b4fdc29fa25bf26a6c8
+Size (gcc-2.95.2.tar.gz) = 12885815 bytes
+SHA1 (gcc-2.95.2.EE-linux.patch.bz2) = df5ee1b60219a1d1f7c073751571554888028b18
+Size (gcc-2.95.2.EE-linux.patch.bz2) = 220838 bytes
+SHA1 (gcc-ps2linux-0.9.1.patch.bz2) = 2dd428fc45d2aafafe7bbd479012fbff29fbc07c
+Size (gcc-ps2linux-0.9.1.patch.bz2) = 612196 bytes
