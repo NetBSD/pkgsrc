@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2001/05/11 15:49:53 jlam Exp $
+# $NetBSD: Makefile,v 1.23 2001/05/11 16:03:24 jlam Exp $
 #
 # According to AbiSource's explanation of their trademark rights,
 # compilations/distributions of AbiWord not provided by AbiSource must
@@ -18,7 +18,6 @@ HOMEPAGE=	http://www.abisource.com/
 COMMENT=	Open Source cross-platform word processor
 
 BUILD_DEPENDS+=	unzip-*:../../archivers/unzip
-DEPENDS+=	libiconv>=1.5:../../converters/libiconv
 DEPENDS+=	ispell-base-*:../../textproc/ispell-base
 DEPENDS+=	gtk+-1.2.*:../../x11/gtk
 DEPENDS+=	png>1.0.9:../../graphics/png
@@ -38,8 +37,8 @@ UNIXFONTS=	unixfonts-${ABIWORD_VERS}${EXTRACT_SUFX}
 WVSRC=		wv-${ABIWORD_VERS}${EXTRACT_SUFX}
 
 CPPFLAGS+=	-I${WRKDIR}/wv 		# avoid installed wv headers
+CPPFLAGS+=	-I${WRKDIR}/libiconv	# avoid installed libiconv headers
 CPPFLAGS+=	-I${LOCALBASE}/include	# png.h
-LDFLAGS+=	-Wl,-R${LOCALBASE}/lib -L${LOCALBASE}/lib -liconv
 
 MAKE_ENV+=	ABI_BUILD_VERSION="${ABIWORD_VERS}"
 MAKE_ENV+=	OS_CFLAGS="${CPPFLAGS}"
