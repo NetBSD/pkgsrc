@@ -1,15 +1,19 @@
-# $NetBSD: Makefile,v 1.17 1998/09/05 22:27:29 hubertf Exp $
+# $NetBSD: Makefile,v 1.18 1998/09/05 23:14:45 hubertf Exp $
 #
 
 DISTNAME=       apache_1.3.1
 PKGNAME=        apache-1.3.1
 CATEGORIES=	www
-MASTER_SITES=   http://www.apache.org/dist/
+MASTER_SITES=   http://www.apache.org/dist/ \
+		http://www.netbsd.org/images/logos/
+DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
+		sitedrivenby.gif
 
-MAINTAINER=	cjs@netbsd.org
+MAINTAINE=	cjs@netbsd.org
 HOMEPAGE=	http://www.apache.org/
 
-CONFLICTS=     apache-modssl-1.3.1
+EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
+CONFLICTS=	apache-modssl-1.3.1
 HAS_CONFIGURE=	YES
 CONFIGURE_ARGS+=--compat --prefix=${PREFIX}/http --exec-prefix=${PREFIX} \
 		--mandir=${PREFIX}/man --libexecdir=${PREFIX}/lib/apache \
@@ -26,6 +30,7 @@ CONFIGURE_ARGS+=--compat --prefix=${PREFIX}/http --exec-prefix=${PREFIX} \
 post-install:
 	touch ${PREFIX}/http/logs/.keep_me
 	touch ${PREFIX}/http/proxy/.keep_me
+	${CP} ${DISTDIR}/sitedrivenby.gif ${PREFIX}/http/htdocs
 
 .include "../../mk/bsd.pkg.mk"
 
