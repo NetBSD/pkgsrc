@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2003/07/03 15:56:37 drochner Exp $
+# $NetBSD: Makefile,v 1.28 2003/07/03 16:16:30 drochner Exp $
 #
 
 DISTNAME=		gcc-3.3
@@ -24,8 +24,10 @@ HAS_CONFIGURE=		YES
 
 CONFIGURE_ARGS+=	--infodir=${PREFIX}/info
 CONFIGURE_ARGS+=	--prefix=${GCC_PREFIX}
-# java deliberately omitted, we'll provide an addon
+# java takes hours to build, so make it optional
+.if !defined(PKG_GCC3_JAVA)
 CONFIGURE_ARGS+=	--enable-languages="c c++ f77 objc ada"
+.endif
 UNLIMIT_RESOURCES=	datasize
 
 # as this is named gcc3, use DISTNAME instead.
@@ -35,6 +37,9 @@ MESSAGE_SUBST+=		PKGNAME_NOREV=${DISTNAME}
 TEXINFO_REQD=		4.2
 
 INFO_FILES=		cpp.info g77.info gcc.info
+.if defined(PKG_GCC3_JAVA)
+INFO_FILES+=		fastjar.info gcj.info
+.endif
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "NetBSD" && exists(/usr/include/pthread.h)
@@ -96,6 +101,9 @@ post-install:
 	${LN} -f ${GCC_PREFIX}/bin/gcc ${GCC_PREFIX}/bin/cc
 #	${LN} -f ${GCC_PREFIX}/bin/g77 ${GCC_PREFIX}/bin/f77
 	${CP} -f ${PKGDIR}/PLIST ${PLIST_SRC}
+.if defined(PKG_GCC3_JAVA)
+	${CAT} ${PKGDIR}/PLIST.java >> ${PLIST_SRC}
+.endif
 	${FIND} ${GCC_PREFIX} \( -type f -o -type l \) -print		\
 		| ${SORT} | ${SED} -e "s,${PREFIX}/,,g"			\
 		>> ${PLIST_SRC}
