@@ -1,4 +1,4 @@
-<!-- $NetBSD: README.category,v 1.5 1998/05/29 03:25:51 hubertf Exp $ -->
+<!-- $NetBSD: README.category,v 1.6 1999/08/22 01:30:16 hubertf Exp $ -->
 <html>
 <head>
 <title>The NetBSD Packages Collection: %%CATEGORY%%</title>
@@ -26,6 +26,8 @@ in this directory:
 <hr noshade>
 [
 <a href="../README.html"> Go to top of packages tree</a>
+|
+<a href="../README-all.html"> List all packages</a>
 ]
 </body>
 </html>
