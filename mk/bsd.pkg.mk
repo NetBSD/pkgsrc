@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.601 2000/11/11 17:55:44 tron Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.602 2000/11/11 19:13:41 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -934,6 +934,12 @@ EXTRACT_ONLY?=	${DISTFILES}
 .if defined(LIB_DEPENDS)
 .BEGIN:
 	@${ECHO_MSG} "LIB_DEPENDS is deprecated and must be replaced with DEPENDS."
+	@${FALSE}
+.endif
+
+.if defined(PKG_PATH)
+.BEGIN:
+	@${ECHO_MSG} "Please unset PKG_PATH before doing pkgsrc works!"
 	@${FALSE}
 .endif
 
