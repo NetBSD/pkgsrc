@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1999/06/21 04:53:15 jlam Exp $
+# $NetBSD: Makefile,v 1.5 1999/08/08 06:11:44 rh Exp $
 #
 
 DISTNAME=	wmakerconf-2.1
@@ -7,7 +7,7 @@ MASTER_SITES=	http://www-info2.informatik.uni-wuerzburg.de/staff/ulli/wmakerconf
 		ftp://ftp.ema.fr/pub/mirrors/windowmaker/wmakerconf/
 EXTRACT_SUFX=	.tar.bz2
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
-		wmakerconf-data-0.53.0p2${EXTRACT_SUFX}
+		wmakerconf-data-0.60.0${EXTRACT_SUFX}
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www-info2.informatik.uni-wuerzburg.de/staff/ulli/wmakerconf/
