@@ -1,7 +1,9 @@
-# $NetBSD: buildlink3.mk,v 1.13 2004/06/27 12:04:45 grant Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2004/09/23 04:29:39 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LIBPCAP_BUILDLINK3_MK:=	${LIBPCAP_BUILDLINK3_MK}+
+
+.include "../../mk/bsd.prefs.mk"
 
 .if !empty(BUILDLINK_DEPTH:M+)
 BUILDLINK_DEPENDS+=	libpcap
@@ -14,13 +16,11 @@ BUILDLINK_PACKAGES+=	libpcap
 BUILDLINK_DEPENDS.libpcap+=	libpcap>=0.7.2
 BUILDLINK_PKGSRCDIR.libpcap?=	../../net/libpcap
 
-.  include "../../mk/bsd.prefs.mk"
-
 # on Solaris, we always need libnsl and libsocket because libpcap.a
 # references symbols in them.
 .  if ${OPSYS} == "SunOS"
 BUILDLINK_LDADD.libpcap+=	-lnsl -lsocket
-LDFLAGS+=			${BUILDLINK_LDADD.libpcap}
+BUILDLINK_LDFLAGS.libpcap?=	${BUILDLINK_LDADD.libpcap}
 .  endif
 
 .endif	# LIBPCAP_BUILDLINK3_MK
