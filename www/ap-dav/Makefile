@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/10/11 13:40:19 grant Exp $
+# $NetBSD: Makefile,v 1.10 2004/04/24 22:46:12 jlam Exp $
 
 DISTNAME=		mod_dav-1.0.3-1.3.6
 PKGNAME=		ap-dav-1.0.3
@@ -6,7 +6,7 @@ PKGREVISION=		1
 CATEGORIES=		www
 MASTER_SITES=		http://www.webdav.org/mod_dav/
 
-MAINTAINER=		jlam@NetBSD.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.webdav.org/mod_dav/
 COMMENT=		Apache WebDAV module
 

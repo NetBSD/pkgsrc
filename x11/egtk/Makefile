@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/01/20 12:28:26 agc Exp $
+# $NetBSD: Makefile,v 1.17 2004/04/24 22:46:13 jlam Exp $
 #
 
 DISTNAME=	eGTK_0.3.4
@@ -7,7 +7,7 @@ PKGREVISION=	2
 CATEGORIES=	x11
 MASTER_SITES=	http://www.netlabs.net/hp/richieb/downloads/
 
-MAINTAINER=	jlam@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.netlabs.net/hp/richieb/gtk_eiffel.html
 COMMENT=	Eiffel/GTK+ interface for SmallEiffel
 
