@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/09/27 17:20:36 wennmach Exp $
-
+@comment $NetBSD: PLIST,v 1.2 1999/10/27 11:12:16 tron Exp $
 share/doc/kde/HTML/en/kdbg/index.html
 share/doc/kde/HTML/en/kdbg/types.html
 @dirrm share/doc/kde/HTML/en/kdbg
