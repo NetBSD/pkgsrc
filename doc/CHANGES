@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2676 2003/07/04 07:02:13 wiz Exp $
+$NetBSD: CHANGES,v 1.2677 2003/07/04 11:54:13 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2669,3 +2669,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated mad123 to 0.7.1 [agc 2003-07-03]
 	Added GridSim-2.1 [jschauma 2003-07-03]
 	Updated crimsonfields to 0.3.4 [wiz 2003-07-04]
+	Added conglomerate-0.5.4 [jmmv 2003-07-04]
