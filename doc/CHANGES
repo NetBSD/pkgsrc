@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4269 2003/12/28 10:35:03 wiz Exp $
+$NetBSD: CHANGES,v 1.4270 2003/12/28 11:36:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5398,3 +5398,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated p5-Time-HiRes to 1.52nb1 [heinz 2003-12-28]
 	Added p5-Digest-Hashcash-0.02 [heinz 2003-12-28]
 	Updated fix-mime-charset to 0.5.2 [wiz 2003-12-28]
+	Updated gif2png to 2.5.0 [wiz 2003-12-28]
