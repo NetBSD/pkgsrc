@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.530 2000/08/01 02:18:12 wiz Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.531 2000/08/01 02:23:43 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -187,7 +187,7 @@ DEPENDS+=		gtexinfo-3.12:../../devel/gtexinfo
 LIBTOOL=		${LOCALBASE}/bin/libtool
 # XXX: actually, here we would need something like
 # BUILD_DEPENDS+=libtool>1.3.5nb3:../../devel/libtool
-.if make(run-depends)
+.if make(install-run-depends)
 DEPENDS+=		libtool>1.3.5nb3:../../devel/libtool
 .endif
 .elif defined(USE_PKGLIBTOOL)
@@ -1504,7 +1504,7 @@ PLIST_SRC=
 
 _PORT_USE: .USE
 .if make(real-extract)
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} build-depends run-depends DEPENDS_TARGET=${DEPENDS_TARGET}
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} install-build-depends install-run-depends DEPENDS_TARGET=${DEPENDS_TARGET}
 .endif
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${SETENV} ${MAKE_ENV} ${MAKE} ${MAKEFLAGS} ${.TARGET:S/^real-/pre-/}
 	${_PKG_SILENT}${_PKG_DEBUG}if [ -f ${SCRIPTDIR}/${.TARGET:S/^real-/pre-/} ]; then		\
@@ -2466,9 +2466,9 @@ package-noinstall:
 ################################################################
 
 .if !target(depends)
-depends: run-depends build-depends
+install-depends: install-run-depends install-build-depends
 
-build-depends:
+install-build-depends:
 .if defined(BUILD_DEPENDS)
 .if !defined(NO_DEPENDS)
 .for dep in ${BUILD_DEPENDS}
@@ -2519,7 +2519,7 @@ build-depends:
 FATAL_OBJECT_FMT_SKEW?= yes
 WARN_NO_OBJECT_FMT?= yes
 
-run-depends: uptodate-pkgtools
+install-run-depends: uptodate-pkgtools
 .if defined(DEPENDS)
 .if !defined(NO_DEPENDS)
 .for dep in ${DEPENDS}
@@ -2575,7 +2575,7 @@ check-depends:
     !defined(NO_DEPENDS) && !defined(NO_CHECK_DEPENDS) && !exists(${EXTRACT_COOKIE})
 	${_PKG_SILENT}${_PKG_DEBUG}\
 	${ECHO_MSG} "${_PKGSRC_IN}> Validating dependencies for ${PKGNAME}" ; \
-	${MAKE} ${MAKEFLAGS} DEPENDS_TARGET=check-depends ECHO_MSG=${TRUE:Q} IGNORE_FAIL=1 _DEPENDS_TARGET_OVERRIDE=1 depends || \
+	${MAKE} ${MAKEFLAGS} DEPENDS_TARGET=check-depends ECHO_MSG=${TRUE:Q} IGNORE_FAIL=1 _DEPENDS_TARGET_OVERRIDE=1 install-depends || \
 		(${ECHO_MSG} "${_PKGSRC_IN}> ${PKGNAME} cannot build necessary dependencies."; ${FALSE})
 .endif
 .endif
