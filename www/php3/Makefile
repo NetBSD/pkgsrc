@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2000/02/28 02:02:20 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.10 2000/02/29 18:10:24 explorer Exp $
 #
 
 DISTNAME=	php-${PHP_VERSION}
@@ -49,7 +49,7 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/php ${PREFIX}/bin/
 	${INSTALL_PROGRAM} ${WRKSRC}/convertor/convertor \
 		${PREFIX}/bin/php2convert
-	if [ ! -d ${PREFIX}/libexec/cgi-bin} ]; then \
+	if [ ! -d ${PREFIX}/libexec/cgi-bin ]; then \
 	  ${MKDIR}  ${PREFIX}/libexec/cgi-bin ; fi
 	${LN} -sf ${PREFIX}/bin/php ${PREFIX}/libexec/cgi-bin/php
 	cd ${WRKSRC}/dbase && \
