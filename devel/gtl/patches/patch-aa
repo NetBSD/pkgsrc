@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/05/10 04:31:18 jlam Exp $
+$NetBSD: patch-aa,v 1.2 2000/07/13 15:10:35 jlam Exp $
 
 --- src/Makefile.in.orig	Tue Mar  7 04:14:07 2000
 +++ src/Makefile.in	Tue May  9 11:46:57 2000
@@ -11,12 +11,3 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/05/10 04:31:18 jlam Exp $
  mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
  CONFIG_CLEAN_FILES = 
  LTLIBRARIES =  $(lib_LTLIBRARIES)
-@@ -112,7 +112,7 @@
- CXXCOMPILE = $(CXX) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS)
- LTCXXCOMPILE = $(LIBTOOL) --mode=compile $(CXX) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS)
- CXXLD = $(CXX)
--CXXLINK = $(LIBTOOL) --mode=link $(CXXLD) $(AM_CXXFLAGS) $(CXXFLAGS) $(LDFLAGS) -o $@
-+CXXLINK = $(LIBTOOL) --mode=link --cplusplus $(CXXLD) $(AM_CXXFLAGS) $(CXXFLAGS) $(LDFLAGS) -o $@
- DIST_COMMON =  Makefile.am Makefile.in
- 
- 
