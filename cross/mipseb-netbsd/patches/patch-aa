@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.2 2000/11/09 12:54:58 wiz Exp $
+
 --- gcc/config/mips/mips.h	Tue Jul 21 07:15:32 1998
 +++ gcc/config/mips/mips.h	Sat Feb 27 12:36:28 1999
 @@ -2519,13 +2519,14 @@
