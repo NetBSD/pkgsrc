@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.155 2002/10/03 23:51:56 simonb Exp $
+$NetBSD: CHANGES,v 1.156 2002/10/04 02:21:44 uebayasi Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3101,3 +3101,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Removed autoconf-devel [wiz 2002-10-03]
 	Removed automake-devel [wiz 2002-10-03]
 	Updated adzap to 20021003 [simonb 2002-10-04]
+	Added ast-ksh-20020922 [uebayasi 2002-10-04]
