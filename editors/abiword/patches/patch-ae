@@ -1,28 +1,8 @@
-$NetBSD: patch-ae,v 1.2 2000/02/29 18:31:30 jlam Exp $
+$NetBSD: patch-ae,v 1.3 2000/05/02 23:35:56 jlam Exp $
 
---- src/config/require/unix/Makefile.orig	Tue Feb  1 18:55:24 2000
-+++ src/config/require/unix/Makefile	Tue Feb 29 12:05:03 2000
-@@ -74,7 +74,9 @@
- 
- _ZLIB_:
- 	@if [    -r /usr/lib/libz.a				\
-+	      -o -r ${LOCALBASE}/lib/libz.a			\
- 	      -o -r /usr/local/lib/libz.a			\
-+	      -o -r ${X11BASE}/lib/libz.a			\
- 	      -o -r /usr/X11R6/lib/libz.a			\
- 	    ]; then						\
- 		echo Found zlib in system directories;		\
-@@ -90,7 +92,9 @@
- 
- _LIBPNG_:
- 	@if [    -r /usr/lib/libpng.a				\
-+	      -o -r ${LOCALBASE}/lib/libpng.a			\
- 	      -o -r /usr/local/lib/libpng.a			\
-+	      -o -r ${X11BASE}/lib/libpng.a			\
- 	      -o -r /usr/X11R6/lib/libpng.a			\
- 	    ]; then						\
- 		echo Found libpng in system directories;	\
-@@ -155,7 +159,7 @@
+--- src/config/require/unix/Makefile.orig	Tue Feb 29 16:37:57 2000
++++ src/config/require/unix/Makefile	Tue May  2 18:16:28 2000
+@@ -159,7 +159,7 @@
  # was something you installed yourself.  
  
  _LIBICONV_:

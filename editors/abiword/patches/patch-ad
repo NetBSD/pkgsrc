@@ -1,46 +1,8 @@
-$NetBSD: patch-ad,v 1.4 2000/02/29 18:31:30 jlam Exp $
+$NetBSD: patch-ad,v 1.5 2000/05/02 23:35:56 jlam Exp $
 
---- src/config/platforms/netbsd.mk.orig	Sun Dec 12 10:07:09 1999
-+++ src/config/platforms/netbsd.mk	Tue Feb 29 12:05:03 2000
-@@ -30,8 +30,13 @@
- ## compiler/loader options are used.  It will probably also be used
- ## in constructing the name object file destination directory.
- 
--OS_ARCH		:= $(shell uname -m | sed -e s/i.86/i386/ -e s/sun4u/sparc64/ -e s/arm.*/arm/ -e s/sa110/arm/ | sed "s/\//-/")
-+OS_ARCH		:= $(shell uname -m)
-+
-+ifneq (,$(shell $(CC) -E - -dM </usr/include/machine/endian.h | grep BYTE_ORDER.*LITTLE_ENDIAN))
- OS_ENDIAN	= LittleEndian32
-+else
-+OS_ENDIAN	= BigEndian32
-+endif
- 
- # Define tools
- CC		= gcc
-@@ -65,17 +70,20 @@
- endif
- 
- # Includes
--OS_INCLUDES		=
-+OS_INCLUDES		+=
- G++INCLUDES		= -I/usr/include/g++
- 
- # Compiler flags
- PLATFORM_FLAGS		= -pipe -DNETBSD -DNetBSD
- PORT_FLAGS		= -DHAVE_STRERROR
--OS_CFLAGS		= $(DSO_CFLAGS) $(PLATFORM_FLAGS) $(PORT_FLAGS)
-+OS_CFLAGS		+= $(DSO_CFLAGS) $(PLATFORM_FLAGS) $(PORT_FLAGS)
- 
- PLATFORM_FLAGS		+= 
- PORT_FLAGS		+= 
- 
-+# Linker flags
-+OS_DLLFLAGS		+=
-+
- GLIB_CONFIG		= glib-config
- GTK_CONFIG		= gtk-config
- GNOME_CONFIG    	= gnome-config
-@@ -86,7 +94,7 @@
+--- src/config/platforms/netbsd.mk.orig	Tue Feb 29 16:37:56 2000
++++ src/config/platforms/netbsd.mk	Tue May  2 18:14:13 2000
+@@ -85,7 +85,7 @@
  # Which links can this platform create.  Define one or
  # both of these options.
  UNIX_CAN_BUILD_DYNAMIC=1
@@ -49,16 +11,3 @@ $NetBSD: patch-ad,v 1.4 2000/02/29 18:31:30 jlam Exp $
  
  ##################################################################
  ## Here you can choice if you want to use the gnome stuff.
-@@ -101,5 +109,12 @@
- 
- ABI_NATIVE	= unix
- ABI_FE		= Unix
-+
-+##################################################################
-+## ABIPKGDIR defines the directory containing the Makefile to use to
-+## build a set of distribution archives (.deb, .rpm, .tgz, .exe, etc)
-+## This is relative to $(ABI_ROOT)/src/pkg
-+
-+ABIPKGDIR	= netbsd
- 
- # End of NetBSD defs
