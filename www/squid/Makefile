@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 1999/06/03 16:42:35 tron Exp $
+# $NetBSD: Makefile,v 1.14 1999/07/14 21:45:50 tron Exp $
 
-DISTNAME=	squid-2.2.STABLE3-src
-PKGNAME=	squid-2.2s3
+DISTNAME=	squid-2.2.STABLE4-src
+PKGNAME=	squid-2.2s4
 CATEGORIES=	www
 MASTER_SITES=  \
 	ftp://squid.nlanr.net/pub/squid-2/STABLE/ \
