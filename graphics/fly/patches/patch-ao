@@ -1,13 +1,7 @@
-$NetBSD: patch-ao,v 1.1 1999/11/01 03:31:46 jlam Exp $
+$NetBSD: patch-ao,v 1.2 2003/06/06 21:27:18 jmmv Exp $
 
 --- examples/fly-tester.pl.orig	Thu Jun 10 19:14:53 1999
 +++ examples/fly-tester.pl	Sun Oct 31 00:28:28 1999
-@@ -1,4 +1,4 @@
--#!/usr/local/web/bin/perl
-+#!/usr/pkg/bin/perl
- ### ---------------------------------------------------------------------- ###
- #
- # Fly tester
 @@ -108,9 +108,9 @@
  		exit 0;
  	}
