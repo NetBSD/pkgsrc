@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9001 2005/02/01 23:34:13 agc Exp $
+$NetBSD: CHANGES,v 1.9002 2005/02/02 03:09:15 epg Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -705,3 +705,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated pkg_chk to 1.54 [wiz 2005-02-01]
 	Added nss-3.9.2 [jschauma 2005-02-01]
 	Updated mencvcd to 0.3nb1 [tron 2005-02-01]
+	Updated p5-SVN-Mirror to 0.55 [epg 2005-02-02]
+	Updated svk to 0.29 [epg 2005-02-02]
