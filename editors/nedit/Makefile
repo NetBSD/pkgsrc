@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2001/12/19 01:23:09 mjl Exp $
+# $NetBSD: Makefile,v 1.21 2002/01/17 17:11:48 agc Exp $
 
 VERS=		5.2
 DISTNAME=	nedit-${VERS}-src
@@ -12,6 +12,7 @@ COMMENT=	Motif based standard GUI style text editor
 
 USE_BUILDLINK_ONLY=	YES
 ALL_TARGET=		netbsd
+MAKE_ENV+=	_MOTIFBASE=${_MOTIFBASE}
 
 WRKSRC=	${WRKDIR}/${PKGNAME}
 
