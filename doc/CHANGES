@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3907 2003/12/03 02:35:14 xtraeme Exp $
+$NetBSD: CHANGES,v 1.3908 2003/12/03 02:40:47 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4727,3 +4727,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated libIDL to 0.8.2 [xtraeme 2003-12-03]
 	Updated intltool to 0.27.2 [xtraeme 2003-12-03]
 	Updated gnome-audio to 2.0.0 [xtraeme 2003-12-03]
+	Updated libart2 to 2.3.16 [xtraeme 2003-12-03]

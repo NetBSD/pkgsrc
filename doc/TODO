@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1103 2003/12/03 02:35:14 xtraeme Exp $
+$NetBSD: TODO,v 1.1104 2003/12/03 02:40:47 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -274,7 +274,6 @@ Suggested package updates
 	o libao-0.8.4
 	o libgcrypt-1.1.44 [pkg/23322]
 	o libgtop-2.0.6
-	o libart-2.3.16 [pkg/23559]
 	o libmpeg3-1.5.3
 	o libogg-1.1
 	o libole2-2.2.8
