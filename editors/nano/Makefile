@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/05/17 00:05:29 jtb Exp $
+# $NetBSD: Makefile,v 1.2 2001/05/18 23:54:09 jtb Exp $
 
 DISTNAME=	nano-1.0.2
 CATEGORIES=	editors
@@ -9,6 +9,10 @@ HOMEPAGE=	http://www.gnu.org/software/nano/nano.html
 COMMENT=	small and friendly text editor (a free replacement for Pico)
 
 GNU_CONFIGURE=	yes
-REPLACE_NCURSES=${WRKSRC}/configure
+
+USE_CURSES=	yes
+REPLACE_NCURSES=configure
+
+USE_LIBINTL=	yes
 
 .include "../../mk/bsd.pkg.mk"
