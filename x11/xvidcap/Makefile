@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2004/10/03 00:18:40 tv Exp $
+# $NetBSD: Makefile,v 1.4 2005/01/10 21:12:28 reed Exp $
 #
 
 DISTNAME=		xvidcap-1.1.3
-PKGREVISION=	1
+PKGREVISION=		2
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=xvidcap/}
 
@@ -22,6 +22,12 @@ BUILD_DEFS+=		XVIDCAP_GTK2_GUI
 PLIST_SUBST+=		GTK2_GUI=
 CONFIGURE_ARGS+=	--with-gtk2
 .  include "../../x11/gtk2/buildlink3.mk"
+
+post-install:
+	${RM} -f ${PREFIX}/${PKGMANDIR}/man1/gvidcap.1 ; \
+	${LN} -s ${PREFIX}/${PKGMANDIR}/man1/xvidcap.1 \
+		${PREFIX}/${PKGMANDIR}/man1/gvidcap.1
+
 .else
 PLIST_SUBST+=		GTK2_GUI='@comment '
 .endif
