@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6119 2004/06/04 08:19:08 adam Exp $
+$NetBSD: CHANGES,v 1.6120 2004/06/04 11:45:45 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2774,6 +2774,7 @@ Changes to the packages collection and infrastructure in 2004:
 	Removed florist [shannonjr 2004-06-03]
 	Updated bitlbee to 0.90 [xtraeme 2004-06-03]
 	Updated allegro to 4.1.14 [xtraeme 2004-06-03]
-	Updated acpi-isal to 20040311p1 [uebayasi 2004-06-04]
+	Updated acpi-iasl to 20040311p1 [uebayasi 2004-06-04]
 	Updated mathomatic to 11.2 [minskim 2004-06-04]
 	Updated ffcall to 1.10 [adam 2004-06-04]
+	Updated xosd to 2.2.7 [xtraeme 2004-06-04]
