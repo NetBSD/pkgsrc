@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/09/17 14:40:45 fredb Exp $
+$NetBSD: patch-aa,v 1.2 1999/10/13 11:31:28 fredb Exp $
 
---- Makefile.in.orig	Wed Jul 14 02:35:50 1999
-+++ Makefile.in	Fri Sep 17 06:17:47 1999
-@@ -25,13 +25,13 @@
+--- Makefile.in.orig	Sat Sep  4 23:41:34 1999
++++ Makefile.in	Wed Oct 13 04:50:29 1999
+@@ -25,14 +25,15 @@
  INSTALL=	@INSTALL@
  PACKAGE=	@PACKAGE@
  VERSION=	@VERSION@
@@ -15,12 +15,13 @@ $NetBSD: patch-aa,v 1.1.1.1 1999/09/17 14:40:45 fredb Exp $
  
  CC=		@CC@
  CFLAGS=		@CFLAGS@
--CPPFLAGS=	@GTK_CFLAGS@ -D_USE_BSD -I. -Iicons -Iintl \
-+CPPFLAGS=	@GTK_CFLAGS@ -D_USE_BSD -I. @CPPFLAGS@ -Iicons -Iintl \
+ CPPFLAGS=	@GTK_CFLAGS@ -D_USE_BSD -I. -Iicons -Iintl \
  		-DLICENCE="\"$(LICENCE)\"" -DLOCALEDIR=\"$(localedir)\" \
++		-DGNU_MAKE=@GMAKE@ @CPPFLAGS@ \
  		$(TESTCPPFLAGS)
  LDLIBS=		@GTK_LIBS@ @INTLLIBS@
-@@ -132,8 +132,8 @@
+ O=		objs
+@@ -132,8 +133,8 @@
  	test -d $(DOCDIR) || $(INSTALL) -m 755 -d $(DOCDIR)
  	$(INSTALL) -m 755 COPYING $(DOCDIR)/COPYING
  	$(INSTALL) -m 755 COPYRIGHT $(DOCDIR)/COPYRIGHT
