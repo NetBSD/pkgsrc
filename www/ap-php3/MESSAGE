@@ -1,12 +1,10 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2001/11/01 02:15:51 zuntum Exp $
+$NetBSD: MESSAGE,v 1.2 2002/08/26 00:12:51 grant Exp $
 
-To add this to your Apache server, you will need to add the following
-lines to the appropriate place in your httpd.conf file:
+In order to use this module in your Apache installation, you need to
+add the following to your httpd.conf file:
 
-    LoadModule php3_module lib/httpd/mod_php3.so
-
-    AddModule mod_php3.c
-    AddType application/x-httpd-php3 .php3
+  LoadModule php3_module lib/httpd/mod_php3.so
+  AddType application/x-httpd-php3 .php3
 
 ===========================================================================
