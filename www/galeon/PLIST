@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2002/03/13 16:14:57 taya Exp $
+@comment $NetBSD: PLIST,v 1.9 2002/04/26 15:16:39 tron Exp $
 bin/galeon
 bin/galeon-bin
 bin/galeon-config-tool
@@ -13,6 +13,7 @@ share/galeon/Fullscreen.png
 share/galeon/Insecure.png
 share/galeon/Secure.png
 share/galeon/about_logo.png
+share/galeon/autoscroll.xpm
 share/galeon/babelfish.png
 share/galeon/bookmarks.glade
 share/galeon/bookmarks.png
@@ -70,6 +71,7 @@ share/galeon/new_separator.xpm
 share/galeon/new_separator_small.xpm
 share/galeon/preferences.glade
 share/galeon/print.glade
+share/galeon/print-preview.glade
 share/galeon/programs.png
 share/galeon/prompts.glade
 share/galeon/rpm.png
@@ -279,6 +281,19 @@ share/gnome/help/galeon-manual/C/prefs-handlers.html
 share/gnome/help/galeon-manual/C/prefs-rendering.html
 share/gnome/help/galeon-manual/C/prefs-user-interface.html
 share/gnome/help/galeon-manual/C/statusbar.html
+share/gnome/help/galeon-manual/C/stylesheet-images/caution.gif
+share/gnome/help/galeon-manual/C/stylesheet-images/home.gif
+share/gnome/help/galeon-manual/C/stylesheet-images/important.gif
+share/gnome/help/galeon-manual/C/stylesheet-images/next.gif
+share/gnome/help/galeon-manual/C/stylesheet-images/note.gif
+share/gnome/help/galeon-manual/C/stylesheet-images/prev.gif
+share/gnome/help/galeon-manual/C/stylesheet-images/tip.gif
+share/gnome/help/galeon-manual/C/stylesheet-images/toc-blank.gif
+share/gnome/help/galeon-manual/C/stylesheet-images/toc-minus.gif
+share/gnome/help/galeon-manual/C/stylesheet-images/toc-plus.gif
+share/gnome/help/galeon-manual/C/stylesheet-images/up.gif
+share/gnome/help/galeon-manual/C/stylesheet-images/warning.gif
+share/gnome/help/galeon-manual/C/LEGALNOTICE.html
 share/gnome/help/galeon-manual/C/tabbed-browsing.html
 share/gnome/help/galeon-manual/C/toolbar.html
 share/gnome/ui/nautilus-galeon-view-ui.xml
@@ -327,7 +342,6 @@ share/sounds/galeon/clicked.wav
 @dirrm share/sounds/galeon
 @exec ${MKDIR} -p %D/share/omf/galeon
 @dirrm share/omf/galeon
-@exec ${MKDIR} %D/share/gnome/help/galeon-manual/C/stylesheet-images
 @dirrm share/gnome/help/galeon-manual/C/stylesheet-images
 @dirrm share/gnome/help/galeon-manual/C/figures
 @dirrm share/gnome/help/galeon-manual/C
