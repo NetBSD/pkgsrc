@@ -1,4 +1,4 @@
-]2;feyrer@miyu:/usr/pkgsrc/misc/mc/work/mc-4.1 ]1;miyu--- src/dlg.c	Sat Jan 24 17:08:46 1998
+--- src/dlg.c	Sat Jan 24 17:08:46 1998
 +++ src/dlg.c.orig	Tue Sep 16 23:54:31 1997
 @@ -21,5 +21,5 @@
  #include <string.h>
