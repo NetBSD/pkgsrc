@@ -1,4 +1,6 @@
-$NetBSD: distinfo,v 1.2 2001/04/19 15:00:53 agc Exp $
+$NetBSD: distinfo,v 1.3 2001/04/24 12:40:07 skrll Exp $
 
 SHA1 (kaffe-1.0.6.tar.gz) = aa9028f1108a664b624ab9f1f4022801aea7e5bd
 Size (kaffe-1.0.6.tar.gz) = 3586207 bytes
+SHA1 (patch-aa) = 16cdd6a8e555397c9ffc8b4f58cb9667b8da6509
+SHA1 (patch-ab) = 5012e6e54662cc4a061a80def732dc030fe86961

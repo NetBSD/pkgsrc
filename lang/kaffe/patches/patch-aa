@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.9 2001/04/24 12:40:08 skrll Exp $
+
+--- configure.orig	Mon Jul 24 20:47:29 2000
++++ configure
+@@ -3608,7 +3608,7 @@
+ 
+ 
+ case "$Khost_os" in
+-freebsd2|netbsd1|oskit)
++freebsd2|oskit)
+ 	KSAVE_LIBS="$LIBS"
+ LIBS="$VM_LIBS $KSAVE_LIBS"
+ echo $ac_n "checking for __moddi3 in -lgcc""... $ac_c" 1>&6

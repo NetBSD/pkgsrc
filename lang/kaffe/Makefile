@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2001/03/19 17:07:16 wennmach Exp $
+# $NetBSD: Makefile,v 1.32 2001/04/24 12:40:07 skrll Exp $
 #
 
 DISTNAME=		kaffe-1.0.6
@@ -16,6 +16,7 @@ DEPENDS+=		gmp>=3.0.0:../../devel/gmp
 
 USE_X11=		yes
 USE_LIBTOOL=		yes
+LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 ONLY_FOR_PLATFORM=	*-*-arm32 *-*-i386 *-*-m68k *-*-mips* *-*-sparc
 
@@ -26,28 +27,11 @@ CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
 
 CPPFLAGS+=		-Dunix -I${LOCALBASE}/include -I${X11BASE}/include
 
-post-configure:
-	${RM} ${WRKDIR}/${PKGNAME}/libtool
-	${LN} -s ${LOCALBASE}/bin/libtool ${WRKDIR}/${PKGNAME}/libtool
-	${RM} ${WRKDIR}/${PKGNAME}/libltdl/libtool
-	${LN} -s ${LOCALBASE}/bin/libtool ${WRKDIR}/${PKGNAME}/libltdl/libtool
-
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/license.terms \
 		${PREFIX}/kaffe/share
-	if [ -f ${PREFIX}/kaffe/lib/libkaffevm.so ]; then \
-		${MV} ${PREFIX}/kaffe/lib/libkaffevm.so \
-			${PREFIX}/kaffe/lib/libkaffevm.so.0.0; \
-		${MV} ${PREFIX}/kaffe/lib/kaffe/libio.so \
-			${PREFIX}/kaffe/lib/kaffe/libio.so.0.0; \
-		${MV} ${PREFIX}/kaffe/lib/kaffe/libmanagement.so \
-			${PREFIX}/kaffe/lib/kaffe/libmanagement.so.0.0; \
-		${MV} ${PREFIX}/kaffe/lib/kaffe/libmicrosoft.so \
-			${PREFIX}/kaffe/lib/kaffe/libmicrosoft.so.0.0; \
-		${MV} ${PREFIX}/kaffe/lib/kaffe/libnet.so \
-			${PREFIX}/kaffe/lib/kaffe/libnet.so.0.0; \
-		${MV} ${PREFIX}/kaffe/lib/kaffe/libsecurity.so \
-			${PREFIX}/kaffe/lib/kaffe/libsecurity.so.0.0; \
-	fi
+
+test:
+	@cd ${WRKSRC}/test && ${MAKE} check
 
 .include "../../mk/bsd.pkg.mk"
