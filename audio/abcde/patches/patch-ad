@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.6 2003/06/19 22:42:31 seb Exp $
+$NetBSD: patch-ad,v 1.7 2003/11/27 17:38:29 abs Exp $
 
---- cddb-tool.orig      2003-05-25 12:32:29.000000000 +0200
-+++ cddb-tool   2003-05-25 12:34:12.000000000 +0200
-@@ -153,7 +153,7 @@
+--- cddb-tool.orig	2003-11-05 16:07:11.000000000 +0000
++++ cddb-tool
+@@ -153,7 +153,7 @@ template)
  	echo '#'
  	echo '# Track frame offsets:'
  	NUMTRACKS=$2
@@ -11,7 +11,7 @@ $NetBSD: patch-ad,v 1.6 2003/06/19 22:42:31 seb Exp $
  	do
  		printf "#\t$(echo "$DISCID" | cut -f$x -d' ')\n"
  	done
-@@ -171,13 +171,13 @@
+@@ -171,13 +171,13 @@ template)
  	echo "DYEAR="
  	echo "DGENRE="
  	# TTITLE0 -- TTITLEn
@@ -27,4 +27,3 @@ $NetBSD: patch-ad,v 1.6 2003/06/19 22:42:31 seb Exp $
  	do
  		echo "EXTT$(expr $x - 1)="
  	done
-
