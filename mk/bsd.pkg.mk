@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.552 2000/08/28 08:23:03 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.553 2000/08/28 22:43:07 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -454,10 +454,12 @@ PLIST_SUBST+=	OPSYS=${OPSYS}						\
 		MACHINE_GNU_PLATFORM=${MACHINE_GNU_PLATFORM}		\
 		LOWER_VENDOR=${LOWER_VENDOR}				\
 		LOWER_OPSYS=${LOWER_OPSYS}				\
-		PKGNAME=${PKGNAME}					\
-		PERL5_SITELIB=${PERL5_SITELIB:S/^${LOCALBASE}\///}	\
+		PKGNAME=${PKGNAME}
+.if defined(USE_PERL5)
+PLIST_SUBST+=	PERL5_SITELIB=${PERL5_SITELIB:S/^${LOCALBASE}\///}	\
 		PERL5_SITEARCH=${PERL5_SITEARCH:S/^${LOCALBASE}\///}	\
 		PERL5_ARCHLIB=${PERL5_ARCHLIB:S/^${LOCALBASE}\///}
+.endif
 
 # Set INSTALL_FILE to be the name of any INSTALL file
 .if !defined(INSTALL_FILE) && exists(${PKGDIR}/INSTALL)
