@@ -1,0 +1,15 @@
+$NetBSD: patch-af,v 1.1 2004/01/23 17:51:24 jmmv Exp $
+
+The package does not install documentation, so avoid creating the directory
+that should contain it.
+
+--- doc/gconf/Makefile.in.orig	2004-01-23 18:41:17.000000000 +0100
++++ doc/gconf/Makefile.in
+@@ -381,6 +381,7 @@ maintainer-clean-local: clean
+ 	cd $(srcdir) && rm -rf sgml html $(DOC_MODULE)-decl-list.txt $(DOC_MODULE)-decl.txt
+ 
+ install-data-local:
++dontdo-install-data-local:
+ 	$(mkinstalldirs) $(DESTDIR)$(TARGET_DIR)
+ 	(installfiles=`echo $(srcdir)/html/*`; \
+ 	if test "$$installfiles" = '$(srcdir)/html/*'; \
