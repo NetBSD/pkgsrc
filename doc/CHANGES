@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3188 2003/09/01 15:32:18 jlam Exp $
+$NetBSD: CHANGES,v 1.3189 2003/09/01 16:02:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3446,3 +3446,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated squirrelmail to 1.4.1 [martti 2003-09-01]
 	Updated apel to 10.6 [minoura 2003-09-01]
 	Updated libnbcompat to 20020823 [jlam 2003-09-01]
+	Updated grhino to 0.8.3 [wiz 2003-09-01]
