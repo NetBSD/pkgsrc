@@ -1,31 +1,13 @@
-$NetBSD: patch-ak,v 1.1.1.1 2001/03/14 16:03:13 skrll Exp $
+$NetBSD: patch-ak,v 1.2 2001/10/15 22:46:00 skrll Exp $
 
---- kwin/Makefile.am.orig	Wed Feb 21 10:39:04 2001
-+++ kwin/Makefile.am
-@@ -3,13 +3,13 @@
- SUBDIRS = default . pics clients
+--- kcontrol/access/main.cpp.orig	Mon Oct 30 01:36:22 2000
++++ kcontrol/access/main.cpp
+@@ -11,7 +11,7 @@
+ 	    "with disabilities.");
  
- bin_PROGRAMS = kwin
--lib_LTLIBRARIES = kwin.la
-+lib_LTLIBRARIES = libkwin.la
  
--kwin_la_SOURCES = atoms.cpp  client.cpp main.cpp workspace.cpp \
-+libkwin_la_SOURCES = atoms.cpp  client.cpp main.cpp workspace.cpp \
- 	tabbox.cpp options.cpp plugins.cpp events.cpp KWinInterface.skel \
- 	killwindow.cpp 
--kwin_la_LIBADD = $(LIB_KDEUI) $(top_builddir)/kwin/default/libkwindefault.la
--kwin_la_LDFLAGS = $(all_libraries) -module -avoid-version
-+libkwin_la_LIBADD = $(LIB_KDEUI) $(top_builddir)/kwin/default/libkwindefault.la
-+libkwin_la_LDFLAGS = $(all_libraries) -module -avoid-version
- 
- include_HEADERS = KWinInterface.h
- 
-@@ -17,7 +17,7 @@
- kwininclude_HEADERS = options.h client.h workspace.h
- 
- kwin_SOURCES = kwin_main.cpp
--kwin_LDADD = kwin.la
-+kwin_LDADD = libkwin.la
- kwin_LDFLAGS = $(all_libraries) $(KDE_RPATH)
- 
- KDE_ICON = kwin
+-int main(int argc, char *argv[])
++int kaccess_main(int argc, char *argv[])
+ {
+   KAboutData about("kaccess", I18N_NOOP("KDE Accessibility Tool"), "0.1",
+                    DESCRIPTION, KAboutData::License_QPL, 

@@ -1,13 +1,25 @@
-$NetBSD: patch-ay,v 1.1 2001/03/24 13:42:05 skrll Exp $
+$NetBSD: patch-ay,v 1.2 2001/10/15 22:46:01 skrll Exp $
 
---- kdm/greeter/verify.c.orig	Sun Feb 18 15:28:18 2001
-+++ kdm/greeter/verify.c
-@@ -74,7 +74,7 @@
- static char krbtkfile[MAXPATHLEN];
- #endif
- 
--#if defined(HAVE_LOGIN_CAP_H) && !defined(__NetBSD__)
-+#if defined(HAVE_LOGIN_CAP_H)
- # define USE_LOGIN_CAP 1
- # include <login_cap.h>
- #endif
+--- kcontrol/kio/Makefile.in.orig	Sat Sep  8 01:36:26 2001
++++ kcontrol/kio/Makefile.in
+@@ -292 +292 @@
+-libkcm_kio_la_LIBADD = $(LIB_KSYCOCA) $(LIB_KFILE)
++libkcm_kio_la_LIBADD = $(LIB_KSYCOCA) $(LIB_KFILE) ${KDE_RPATH}
+@@ -361 +361 @@
+-KDE_DIST=UA-DESKTOP-FILE-HOWTO cookies.desktop useragent.desktop useragentdlg.h uagentproviderdlg.h proxy.desktop policydlg.h ksmboptdlg.h kcookiesmanagement.h fakeuaprovider.h netpref.desktop kproxydlg.h kcookiesmain.h kproxydlgui.ui kcookiespolicies.h uninstall.desktop smb.desktop uasprovider.desktop netpref.h smbrodlg.h 
++KDE_DIST=policydlg.h ksmboptdlg.h kcookiesmanagement.h UA-DESKTOP-FILE-HOWTO kproxydlgui.ui fakeuaprovider.h useragentdlg.h uagentproviderdlg.h cookies.desktop kcookiespolicies.h netpref.desktop uninstall.desktop smb.desktop proxy.desktop useragent.desktop uasprovider.desktop kproxydlg.h netpref.h kcookiesmain.h smbrodlg.h 
+@@ -574 +574 @@
+-	  test "$$subdir" = "." && dot_seen=yes; \
++	  test "$$subdir" != "." || dot_seen=yes; \
+@@ -632,11 +631,0 @@
+-#>- 	@for file in $(DISTFILES); do \
+-#>- 	  d=$(srcdir); \
+-#>- 	  if test -d $$d/$$file; then \
+-#>- 	    cp -pr $$/$$file $(distdir)/$$file; \
+-#>- 	  else \
+-#>- 	    test -f $(distdir)/$$file \
+-#>- 	    || ln $$d/$$file $(distdir)/$$file 2> /dev/null \
+-#>- 	    || cp -p $$d/$$file $(distdir)/$$file || :; \
+-#>- 	  fi; \
+-#>- 	done
+-#>+ 10

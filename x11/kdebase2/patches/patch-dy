@@ -1,0 +1,28 @@
+$NetBSD: patch-dy,v 1.1 2001/10/15 22:46:10 skrll Exp $
+
+--- kwin/clients/modernsystem/Makefile.in.orig	Sat Sep  8 01:36:50 2001
++++ kwin/clients/modernsystem/Makefile.in
+@@ -283 +283 @@
+-libkwinmodernsys_la_LIBADD = ../../kwin.la
++libkwinmodernsys_la_LIBADD = ../../libkwin.la
+@@ -305 +305 @@
+-libkwinmodernsys_la_DEPENDENCIES =  ../../kwin.la
++libkwinmodernsys_la_DEPENDENCIES =  ../../libkwin.la
+@@ -333 +333 @@
+-KDE_DIST=buttondata.h btnhighcolor.h modernsystem.desktop 
++KDE_DIST=btnhighcolor.h modernsystem.desktop buttondata.h 
+@@ -495 +495 @@
+-	  test "$$subdir" = "." && dot_seen=yes; \
++	  test "$$subdir" != "." || dot_seen=yes; \
+@@ -553,11 +552,0 @@
+-#>- 	@for file in $(DISTFILES); do \
+-#>- 	  d=$(srcdir); \
+-#>- 	  if test -d $$d/$$file; then \
+-#>- 	    cp -pr $$/$$file $(distdir)/$$file; \
+-#>- 	  else \
+-#>- 	    test -f $(distdir)/$$file \
+-#>- 	    || ln $$d/$$file $(distdir)/$$file 2> /dev/null \
+-#>- 	    || cp -p $$d/$$file $(distdir)/$$file || :; \
+-#>- 	  fi; \
+-#>- 	done
+-#>+ 10

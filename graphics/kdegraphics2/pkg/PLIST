@@ -1,36 +1,19 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/03/14 16:10:47 skrll Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/10/15 22:45:58 skrll Exp $
+bin/kcolorchooser
+bin/kcoloredit
 bin/kdvi
 bin/kfax
 bin/kfract
 bin/kghostview
 bin/kiconedit
 bin/kpaint
-bin/kpixmap2bitmap
 bin/kruler
 bin/ksnapshot
 bin/kview
 bin/kviewshell
-bin/pixie
-include/ifplugin.h
-include/mini-magick/animate.h
-include/mini-magick/api.h
-include/mini-magick/blob.h
-include/mini-magick/cache.h
-include/mini-magick/cache_io.h
-include/mini-magick/classify.h
-include/mini-magick/compress.h
-include/mini-magick/defines.h
-include/mini-magick/delegates.h
-include/mini-magick/error.h
-include/mini-magick/gems.h
-include/mini-magick/image.h
-include/mini-magick/magick.h
-include/mini-magick/memory.h
-include/mini-magick/monitor.h
-include/mini-magick/quantize.h
-include/mini-magick/timer.h
-include/mini-magick/utility.h
-include/mini-magick/version.h
+lib/kcolorchooser.a
+lib/kcolorchooser.la
+lib/kcolorchooser.so
 lib/kview.a
 lib/kview.la
 lib/kview.so
@@ -45,21 +28,6 @@ lib/libkghostview.la
 lib/libkghostview.so
 lib/libkghostview.so.1
 lib/libkghostview.so.1.0
-lib/libkif_kdeeffects.a
-lib/libkif_kdeeffects.la
-lib/libkif_kdeeffects.so
-lib/libkif_kdeeffects.so.1
-lib/libkif_kdeeffects.so.1.0
-lib/libkif_magick.a
-lib/libkif_magick.la
-lib/libkif_magick.so
-lib/libkif_magick.so.1
-lib/libkif_magick.so.1.0
-lib/libkifplugin.a
-lib/libkifplugin.la
-lib/libkifplugin.so
-lib/libkifplugin.so.3
-lib/libkifplugin.so.3.0
 lib/libkmultipage.a
 lib/libkmultipage.la
 lib/libkmultipage.so
@@ -74,158 +42,38 @@ lib/libkviewerpart.so
 lib/libkviewpart.a
 lib/libkviewpart.la
 lib/libkviewpart.so
-lib/libminimagick.a
-lib/libminimagick.la
-lib/libminimagick.so
-lib/libminimagick.so.5
-lib/libminimagick.so.5.1
-lib/libpixie_color.a
-lib/libpixie_color.la
-lib/libpixie_color.so
-lib/libpixie_color.so.1
-lib/libpixie_color.so.1.0
-lib/libpixie_thumb.a
-lib/libpixie_thumb.la
-lib/libpixie_thumb.so
-lib/libpixie_thumb.so.1
-lib/libpixie_thumb.so.1.0
-share/doc/kde/HTML/en/kdvi/.anchors
 share/doc/kde/HTML/en/kdvi/KDVI-features.dvi
 share/doc/kde/HTML/en/kdvi/KDVI-features.tex
 share/doc/kde/HTML/en/kdvi/aboutkde.ps
 share/doc/kde/HTML/en/kdvi/common
-share/doc/kde/HTML/en/kdvi/index.cvlog
+share/doc/kde/HTML/en/kdvi/index.cache.bz2
 share/doc/kde/HTML/en/kdvi/index.docbook
-share/doc/kde/HTML/en/kdvi/index.html
-share/doc/kde/HTML/en/kdvi/opt-rendering.html
 share/doc/kde/HTML/en/kdvi/optionrequester1.png
 share/doc/kde/HTML/en/kdvi/optionrequester2.png
-share/doc/kde/HTML/en/kdvi/options.html
-share/doc/kde/HTML/en/kdvi/printing.html
-share/doc/kde/HTML/en/kdvi/qampa.html
-share/doc/kde/HTML/en/kdvi/usage.html
-share/doc/kde/HTML/en/kfax/.anchors
-share/doc/kde/HTML/en/kfax/command-line-options.html
-share/doc/kde/HTML/en/kfax/common
-share/doc/kde/HTML/en/kfax/compilation-and-installation.html
-share/doc/kde/HTML/en/kfax/copyright.html
-share/doc/kde/HTML/en/kfax/dealing-with-files-on-the-internet.html
-share/doc/kde/HTML/en/kfax/fax-options.html
-share/doc/kde/HTML/en/kfax/fundamentals.html
-share/doc/kde/HTML/en/kfax/help.html
-share/doc/kde/HTML/en/kfax/how-to-create-fax-files.html
-share/doc/kde/HTML/en/kfax/index.cvlog
-share/doc/kde/HTML/en/kfax/index.docbook
-share/doc/kde/HTML/en/kfax/index.html
-share/doc/kde/HTML/en/kfax/installation.html
-share/doc/kde/HTML/en/kfax/introduction.html
-share/doc/kde/HTML/en/kfax/kfax-key-bindings.html
-share/doc/kde/HTML/en/kfax/options.html
-share/doc/kde/HTML/en/kfax/printing.html
-share/doc/kde/HTML/en/kfax/questionsandanswers.html
-share/doc/kde/HTML/en/kfax/requirements.html
-share/doc/kde/HTML/en/kfax/themenuentries.html
-share/doc/kde/HTML/en/kfax/view.html
-share/doc/kde/HTML/en/kfract/.anchors
 share/doc/kde/HTML/en/kfract/common
-share/doc/kde/HTML/en/kfract/credits-and-license.html
-share/doc/kde/HTML/en/kfract/index.cvlog
+share/doc/kde/HTML/en/kfract/index.cache.bz2
 share/doc/kde/HTML/en/kfract/index.docbook
-share/doc/kde/HTML/en/kfract/index.html
-share/doc/kde/HTML/en/kfract/introduction.html
 share/doc/kde/HTML/en/kfract/kfract.png
-share/doc/kde/HTML/en/kfract/onscreenfundamentals.html
-share/doc/kde/HTML/en/kfract/the-file-menu.html
-share/doc/kde/HTML/en/kfract/the-help-menu.html
-share/doc/kde/HTML/en/kfract/the-options-menu.html
-share/doc/kde/HTML/en/kfract/the-toolbar.html
-share/doc/kde/HTML/en/kfract/the-types-menu.html
-share/doc/kde/HTML/en/kghostview/.anchors
-share/doc/kde/HTML/en/kghostview/authors.html
 share/doc/kde/HTML/en/kghostview/common
-share/doc/kde/HTML/en/kghostview/configure-interpreter.html
-share/doc/kde/HTML/en/kghostview/configure-key-bindings.html
-share/doc/kde/HTML/en/kghostview/copyright.html
-share/doc/kde/HTML/en/kghostview/dialogboxes.html
-share/doc/kde/HTML/en/kghostview/epilogue.html
-share/doc/kde/HTML/en/kghostview/fundamentals.html
-share/doc/kde/HTML/en/kghostview/ghostscript-messages.html
-share/doc/kde/HTML/en/kghostview/go-to-page.html
-share/doc/kde/HTML/en/kghostview/go.html
-share/doc/kde/HTML/en/kghostview/help.html
-share/doc/kde/HTML/en/kghostview/index.cvlog
+share/doc/kde/HTML/en/kghostview/index.cache.bz2
 share/doc/kde/HTML/en/kghostview/index.docbook
-share/doc/kde/HTML/en/kghostview/index.html
-share/doc/kde/HTML/en/kghostview/info.html
-share/doc/kde/HTML/en/kghostview/introduction.html
-share/doc/kde/HTML/en/kghostview/options.html
-share/doc/kde/HTML/en/kghostview/page-list.html
-share/doc/kde/HTML/en/kghostview/primarymenuitems.html
-share/doc/kde/HTML/en/kghostview/tool-bar.html
-share/doc/kde/HTML/en/kghostview/tutorial.html
-share/doc/kde/HTML/en/kghostview/view-control.html
-share/doc/kde/HTML/en/kghostview/view.html
-share/doc/kde/HTML/en/kiconedit/.anchors
 share/doc/kde/HTML/en/kiconedit/common
-share/doc/kde/HTML/en/kiconedit/compilation-and-installation.html
-share/doc/kde/HTML/en/kiconedit/configuration.html
-share/doc/kde/HTML/en/kiconedit/edit.html
-share/doc/kde/HTML/en/kiconedit/grid.html
-share/doc/kde/HTML/en/kiconedit/help.html
-share/doc/kde/HTML/en/kiconedit/index.cvlog
+share/doc/kde/HTML/en/kiconedit/index.cache.bz2
 share/doc/kde/HTML/en/kiconedit/index.docbook
-share/doc/kde/HTML/en/kiconedit/index.html
-share/doc/kde/HTML/en/kiconedit/installation.html
-share/doc/kde/HTML/en/kiconedit/introduction.html
-share/doc/kde/HTML/en/kiconedit/onscreenfundamentals.html
-share/doc/kde/HTML/en/kiconedit/options.html
-share/doc/kde/HTML/en/kiconedit/requirements.html
-share/doc/kde/HTML/en/kiconedit/statusbar.html
-share/doc/kde/HTML/en/kiconedit/themenuentries.html
-share/doc/kde/HTML/en/kiconedit/tools-toolbar.html
-share/doc/kde/HTML/en/kiconedit/tools.html
-share/doc/kde/HTML/en/kiconedit/view.html
-share/doc/kde/HTML/en/kpaint/.anchors
-share/doc/kde/HTML/en/kpaint/Technic.png
 share/doc/kde/HTML/en/kpaint/common
-share/doc/kde/HTML/en/kpaint/index.cvlog
+share/doc/kde/HTML/en/kpaint/index.cache.bz2
 share/doc/kde/HTML/en/kpaint/index.docbook
-share/doc/kde/HTML/en/kpaint/index.html
-share/doc/kde/HTML/en/kpaint/introductiongraphicfilereftechnicpnggraphic.html
-share/doc/kde/HTML/en/kpaint/planned-features.html
-share/doc/kde/HTML/en/ksnapshot/.anchors
-share/doc/kde/HTML/en/ksnapshot/additional-features.html
+share/doc/kde/HTML/en/kruler/common
+share/doc/kde/HTML/en/kruler/index.cache.bz2
+share/doc/kde/HTML/en/kruler/index.docbook
 share/doc/kde/HTML/en/ksnapshot/common
-share/doc/kde/HTML/en/ksnapshot/compilation-installation.html
-share/doc/kde/HTML/en/ksnapshot/credits.html
+share/doc/kde/HTML/en/ksnapshot/index.cache.bz2
 share/doc/kde/HTML/en/ksnapshot/index.docbook
-share/doc/kde/HTML/en/ksnapshot/index.html
-share/doc/kde/HTML/en/ksnapshot/installation.html
-share/doc/kde/HTML/en/ksnapshot/introduction.html
 share/doc/kde/HTML/en/ksnapshot/preview.png
-share/doc/kde/HTML/en/ksnapshot/requirements.html
-share/doc/kde/HTML/en/ksnapshot/taking-snapshot.html
-share/doc/kde/HTML/en/ksnapshot/using-ksapshot.html
 share/doc/kde/HTML/en/ksnapshot/window.png
-share/doc/kde/HTML/en/kview/.anchors
-share/doc/kde/HTML/en/kview/cluttering-desktop.html
-share/doc/kde/HTML/en/kview/command-line.html
-share/doc/kde/HTML/en/kview/commands.html
 share/doc/kde/HTML/en/kview/common
-share/doc/kde/HTML/en/kview/credits.html
-share/doc/kde/HTML/en/kview/desktop-menu.html
-share/doc/kde/HTML/en/kview/edit-menu.html
-share/doc/kde/HTML/en/kview/filter-menu.html
-share/doc/kde/HTML/en/kview/help-menu.html
-share/doc/kde/HTML/en/kview/images-menu.html
+share/doc/kde/HTML/en/kview/index.cache.bz2
 share/doc/kde/HTML/en/kview/index.docbook
-share/doc/kde/HTML/en/kview/index.html
-share/doc/kde/HTML/en/kview/installation.html
-share/doc/kde/HTML/en/kview/introduction.html
-share/doc/kde/HTML/en/kview/requirements.html
-share/doc/kde/HTML/en/kview/sample-session.html
-share/doc/kde/HTML/en/kview/selection.html
-share/doc/kde/HTML/en/kview/settings-menu.html
 share/doc/kde/HTML/en/kview/snapshot1.png
 share/doc/kde/HTML/en/kview/snapshot2.png
 share/doc/kde/HTML/en/kview/snapshot3.png
@@ -235,64 +83,17 @@ share/doc/kde/HTML/en/kview/snapshot6.png
 share/doc/kde/HTML/en/kview/snapshot7.png
 share/doc/kde/HTML/en/kview/snapshot8.png
 share/doc/kde/HTML/en/kview/snapshot9.png
-share/doc/kde/HTML/en/kview/stirring-paste.html
-share/doc/kde/HTML/en/kview/transform-menu.html
-share/doc/kde/HTML/en/kview/view-menu.html
-share/doc/kde/HTML/en/pixie/.anchors
-share/doc/kde/HTML/en/pixie/clone.png
-share/doc/kde/HTML/en/pixie/command-line-options.html
-share/doc/kde/HTML/en/pixie/common
-share/doc/kde/HTML/en/pixie/compilation.html
-share/doc/kde/HTML/en/pixie/configure.html
-share/doc/kde/HTML/en/pixie/copy-paste.png
-share/doc/kde/HTML/en/pixie/credits.html
-share/doc/kde/HTML/en/pixie/drag-and-drop.html
-share/doc/kde/HTML/en/pixie/edit-advanced.html
-share/doc/kde/HTML/en/pixie/edit-basics.html
-share/doc/kde/HTML/en/pixie/effects.html
-share/doc/kde/HTML/en/pixie/file.html
-share/doc/kde/HTML/en/pixie/getting-started.html
-share/doc/kde/HTML/en/pixie/help.html
-share/doc/kde/HTML/en/pixie/hotlist.png
-share/doc/kde/HTML/en/pixie/image-edit.png
-share/doc/kde/HTML/en/pixie/image-size.png
-share/doc/kde/HTML/en/pixie/ind-color-edit.png
-share/doc/kde/HTML/en/pixie/index.docbook
-share/doc/kde/HTML/en/pixie/index.html
-share/doc/kde/HTML/en/pixie/installation.html
-share/doc/kde/HTML/en/pixie/introduction.html
-share/doc/kde/HTML/en/pixie/key-bindings.html
-share/doc/kde/HTML/en/pixie/new-win.png
-share/doc/kde/HTML/en/pixie/open-save-print.png
-share/doc/kde/HTML/en/pixie/open.png
-share/doc/kde/HTML/en/pixie/options.png
-share/doc/kde/HTML/en/pixie/pixie.png
-share/doc/kde/HTML/en/pixie/reload.png
-share/doc/kde/HTML/en/pixie/requirements.html
-share/doc/kde/HTML/en/pixie/scale.png
-share/doc/kde/HTML/en/pixie/screenshot.png
-share/doc/kde/HTML/en/pixie/sharp-bright.png
-share/doc/kde/HTML/en/pixie/startup.png
-share/doc/kde/HTML/en/pixie/stop.png
-share/doc/kde/HTML/en/pixie/thumb-fm.png
-share/doc/kde/HTML/en/pixie/thumbgen.png
-share/doc/kde/HTML/en/pixie/thumbnails.png
-share/doc/kde/HTML/en/pixie/thumbs-preview.png
-share/doc/kde/HTML/en/pixie/thumbs-update.png
-share/doc/kde/HTML/en/pixie/toggle.png
-share/doc/kde/HTML/en/pixie/toolbar-menu-entries.html
-share/doc/kde/HTML/en/pixie/windows.html
+share/kde/applnk/Graphics/kcolorchooser.desktop
+share/kde/applnk/Graphics/kcoloredit.desktop
 share/kde/applnk/Graphics/kdvi.desktop
 share/kde/applnk/Graphics/kfax.desktop
 share/kde/applnk/Graphics/kfract.desktop
 share/kde/applnk/Graphics/kghostview.desktop
 share/kde/applnk/Graphics/kiconedit.desktop
 share/kde/applnk/Graphics/kpaint.desktop
-share/kde/applnk/Graphics/kpixmap2bitmap.desktop
 share/kde/applnk/Graphics/kruler.desktop
 share/kde/applnk/Graphics/ksnapshot.desktop
 share/kde/applnk/Graphics/kview.desktop
-share/kde/applnk/Graphics/pixie.desktop
 share/kde/apps/kdvi/kdvi_part.rc
 share/kde/apps/kdvi/toolbar/forwpage.xpm
 share/kde/apps/kdvi/toolbar/largetext.xpm
@@ -303,6 +104,7 @@ share/kde/apps/kfax/pics/kfaxlogo.xpm
 share/kde/apps/kfract/kfract.rc
 share/kde/apps/kghostview/kghostviewui.rc
 share/kde/apps/kghostview/kgv_part.rc
+share/kde/apps/kghostview/pdf_sec.ps
 share/kde/apps/kiconedit/pics/compressed.png
 share/kde/apps/kiconedit/pics/source.png
 share/kde/apps/kiconedit/pics/standard.png
@@ -343,10 +145,12 @@ share/kde/apps/kpaint/toolbar/pen.xpm
 share/kde/apps/kpaint/toolbar/rectangle.xpm
 share/kde/apps/kpaint/toolbar/roundangle.xpm
 share/kde/apps/kpaint/toolbar/spraycan.xpm
+share/kde/apps/kruler/eventsrc
 share/kde/apps/kruler/kruler-east.png
 share/kde/apps/kruler/kruler-north.png
 share/kde/apps/kruler/kruler-south.png
 share/kde/apps/kruler/kruler-west.png
+share/kde/apps/kruler/move.wav
 share/kde/apps/kview/kview_part.rc
 share/kde/apps/kview/kview_popup.rc
 share/kde/apps/kview/kviewui.rc
@@ -354,85 +158,42 @@ share/kde/apps/kview/toolbar/rotate.png
 share/kde/apps/kviewerpart/kviewerpart.rc
 share/kde/apps/kviewshell/kviewshell.rc
 share/kde/apps/kviewshell/paper-formats
-share/kde/apps/pixie/dec2.png
-share/kde/apps/pixie/dec2high.png
-share/kde/apps/pixie/inc2.png
-share/kde/apps/pixie/inc2high.png
-share/kde/apps/pixie/logo.png
-share/kde/apps/pixie/plugins/kdeeffects.desktop
-share/kde/apps/pixie/plugins/magick.desktop
-share/kde/apps/pixie/progress1.png
-share/kde/apps/pixie/progress2.png
-share/kde/apps/pixie/thumbwallpaper.png
-share/kde/apps/pixie/toolbar/back.png
-share/kde/apps/pixie/toolbar/brightness+.png
-share/kde/apps/pixie/toolbar/brightness-.png
-share/kde/apps/pixie/toolbar/contrast+.png
-share/kde/apps/pixie/toolbar/contrast-.png
-share/kde/apps/pixie/toolbar/fliph.png
-share/kde/apps/pixie/toolbar/flipv.png
-share/kde/apps/pixie/toolbar/forward.png
-share/kde/apps/pixie/toolbar/kwin.png
-share/kde/apps/pixie/toolbar/mini-ray.png
-share/kde/apps/pixie/toolbar/mini-run.png
-share/kde/apps/pixie/toolbar/play.png
-share/kde/apps/pixie/toolbar/scaledown.png
-share/kde/apps/pixie/toolbar/scaleup.png
-share/kde/apps/pixie/toolbar/stop.png
-share/kde/apps/pixie/toolbar/thumb.png
+share/kde/icons/hicolor/16x16/apps/kcoloredit.png
+share/kde/icons/hicolor/16x16/apps/kdvi.png
+share/kde/icons/hicolor/16x16/apps/kfax.png
+share/kde/icons/hicolor/16x16/apps/kfract.png
+share/kde/icons/hicolor/16x16/apps/kghostview.png
+share/kde/icons/hicolor/16x16/apps/kiconedit.png
+share/kde/icons/hicolor/16x16/apps/kpaint.png
 share/kde/icons/hicolor/16x16/apps/kruler.png
+share/kde/icons/hicolor/16x16/apps/ksnapshot.png
+share/kde/icons/hicolor/16x16/apps/kview.png
+share/kde/icons/hicolor/32x32/apps/kcoloredit.png
 share/kde/icons/hicolor/32x32/apps/kdvi.png
 share/kde/icons/hicolor/32x32/apps/kfax.png
 share/kde/icons/hicolor/32x32/apps/kfract.png
 share/kde/icons/hicolor/32x32/apps/kghostview.png
 share/kde/icons/hicolor/32x32/apps/kiconedit.png
 share/kde/icons/hicolor/32x32/apps/kpaint.png
-share/kde/icons/hicolor/32x32/apps/kpixmap2bitmap.png
 share/kde/icons/hicolor/32x32/apps/kruler.png
 share/kde/icons/hicolor/32x32/apps/ksnapshot.png
 share/kde/icons/hicolor/32x32/apps/kview.png
-share/kde/icons/hicolor/32x32/apps/pixie.png
 share/kde/icons/hicolor/48x48/apps/kdvi.png
 share/kde/icons/hicolor/48x48/apps/kfax.png
 share/kde/icons/hicolor/48x48/apps/kfract.png
 share/kde/icons/hicolor/48x48/apps/kghostview.png
 share/kde/icons/hicolor/48x48/apps/kiconedit.png
 share/kde/icons/hicolor/48x48/apps/kpaint.png
-share/kde/icons/hicolor/48x48/apps/kpixmap2bitmap.png
 share/kde/icons/hicolor/48x48/apps/kruler.png
 share/kde/icons/hicolor/48x48/apps/ksnapshot.png
 share/kde/icons/hicolor/48x48/apps/kview.png
-share/kde/icons/hicolor/48x48/apps/pixie.png
-share/kde/icons/locolor/16x16/apps/kdvi.png
-share/kde/icons/locolor/16x16/apps/kfax.png
-share/kde/icons/locolor/16x16/apps/kfract.png
-share/kde/icons/locolor/16x16/apps/kghostview.png
-share/kde/icons/locolor/16x16/apps/kiconedit.png
-share/kde/icons/locolor/16x16/apps/kpaint.png
-share/kde/icons/locolor/16x16/apps/kpixmap2bitmap.png
-share/kde/icons/locolor/16x16/apps/kruler.png
-share/kde/icons/locolor/16x16/apps/ksnapshot.png
-share/kde/icons/locolor/16x16/apps/kview.png
-share/kde/icons/locolor/16x16/apps/pixie.png
-share/kde/icons/locolor/32x32/apps/kdvi.png
-share/kde/icons/locolor/32x32/apps/kfax.png
-share/kde/icons/locolor/32x32/apps/kfract.png
-share/kde/icons/locolor/32x32/apps/kghostview.png
-share/kde/icons/locolor/32x32/apps/kiconedit.png
-share/kde/icons/locolor/32x32/apps/kpaint.png
-share/kde/icons/locolor/32x32/apps/kpixmap2bitmap.png
-share/kde/icons/locolor/32x32/apps/kruler.png
-share/kde/icons/locolor/32x32/apps/ksnapshot.png
-share/kde/icons/locolor/32x32/apps/kview.png
-share/kde/icons/locolor/32x32/apps/pixie.png
-@comment kdebase:dirrm share/kde/icons/locolor/32x32/apps
-@comment kdebase:dirrm share/kde/icons/locolor/16x16/apps
-@comment kdebase:dirrm share/kde/icons/hicolor/48x48/apps
-@comment kdebase:dirrm share/kde/icons/hicolor/32x32/apps
-@comment kdebase:dirrm share/kde/icons/hicolor/16x16/apps
-@dirrm share/kde/apps/pixie/toolbar
-@dirrm share/kde/apps/pixie/plugins
-@dirrm share/kde/apps/pixie
+share/kde/icons/locolor/16x16/apps/kcoloredit.png
+share/kde/icons/locolor/32x32/apps/kcoloredit.png
+@comment dirrm share/kde/icons/locolor/32x32/apps
+@comment dirrm share/kde/icons/locolor/16x16/apps
+@comment dirrm share/kde/icons/hicolor/48x48/apps
+@comment dirrm share/kde/icons/hicolor/32x32/apps
+@comment dirrm share/kde/icons/hicolor/16x16/apps
 @dirrm share/kde/apps/kviewshell
 @dirrm share/kde/apps/kviewerpart
 @dirrm share/kde/apps/kview/toolbar
@@ -449,16 +210,19 @@ share/kde/icons/locolor/32x32/apps/pixie.png
 @dirrm share/kde/apps/kfax
 @dirrm share/kde/apps/kdvi/toolbar
 @dirrm share/kde/apps/kdvi
-@comment kdebase:dirrm share/kde/apps
-@comment kdebase:dirrm share/kde/applnk/Graphics
-@dirrm share/doc/kde/HTML/en/pixie
+@comment dirrm share/kde/apps
+@comment dirrm share/kde/applnk/Toys
+@comment dirrm share/kde/applnk/Graphics
+@comment dirrm share/kde/applnk/Games/TacticStrategy
+@comment dirrm share/kde/applnk/Games/Card
+@comment dirrm share/kde/applnk/Games/Board
+@comment dirrm share/kde/applnk/Games/Arcade
 @dirrm share/doc/kde/HTML/en/kview
 @dirrm share/doc/kde/HTML/en/ksnapshot
+@dirrm share/doc/kde/HTML/en/kruler
 @dirrm share/doc/kde/HTML/en/kpaint
 @dirrm share/doc/kde/HTML/en/kiconedit
 @dirrm share/doc/kde/HTML/en/kghostview
 @dirrm share/doc/kde/HTML/en/kfract
-@dirrm share/doc/kde/HTML/en/kfax
 @dirrm share/doc/kde/HTML/en/kdvi
-@comment kdelibs:dirrm share/doc/kde/HTML/en
-@dirrm include/mini-magick
+@comment dirrm share/doc/kde/HTML/en

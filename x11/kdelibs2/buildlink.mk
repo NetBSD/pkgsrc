@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.10 2001/10/03 20:56:55 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.11 2001/10/15 22:46:21 skrll Exp $
 #
 # This Makefile fragment is included by packages that use kdelibs2.
 #
@@ -17,7 +17,7 @@ KDELIBS2_BUILDLINK_MK=	# defined
 
 .include "../../mk/bsd.buildlink.mk"
 
-BUILDLINK_DEPENDS.kdelibs2?=	kdelibs>=2.1nb1
+BUILDLINK_DEPENDS.kdelibs2?=	kdelibs>=2.2.1
 DEPENDS+=	${BUILDLINK_DEPENDS.kdelibs2}:../../x11/kdelibs2
 
 .include "../../mk/bsd.prefs.mk"
@@ -27,16 +27,15 @@ BUILDLINK_PREFIX.kdelibs2_DEFAULT=	${X11PREFIX}
 BUILDLINK_FILES.kdelibs2!=	${GREP} "^\(include\|lib\)" ${.CURDIR}/../../x11/kdelibs2/pkg/PLIST
 BUILDLINK_FILES.kdelibs2+=	bin/dcopserver
 
-.if (defined(KJS_USE_PCRE) && ${KJS_USE_PCRE} == yes)
-.include "../../devel/pcre/buildlink.mk"
-.endif
+BUILDLINK_DEPENDS.audiofile=	libaudiofile>=0.1.9
 
 .include "../../archivers/bzip2/buildlink.mk"
-BUILDLINK_DEPENDS.audiofile=	libaudiofile>=0.1.9
+.include "../../print/cups/buildlink.mk"
 .include "../../audio/libaudiofile/buildlink.mk"
-.include "../../devel/libtool/buildlink.mk"
 .include "../../graphics/tiff/buildlink.mk"
-#.include "../../textproc/jade/buildlink.mk"
+.include "../../security/openssl/buildlink.mk"
+.include "../../devel/pcre/buildlink.mk"
+.include "../../textproc/libxml2/buildlink.mk"
 .include "../../x11/qt2-libs/buildlink.mk"
 
 BUILDLINK_TARGETS.kdelibs2=	kdelibs2-buildlink

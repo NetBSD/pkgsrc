@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 2001/10/15 22:46:16 skrll Exp $
+
+--- kdict/Makefile.in.orig	Mon Sep 10 07:17:55 2001
++++ kdict/Makefile.in
+@@ -213,7 +213,7 @@
+ x_includes = @x_includes@
+ x_libraries = @x_libraries@
+ 
+-KDE_CXXFLAGS = $(USE_THREADS)
++KDE_CXXFLAGS =
+ 
+ # this has all of the subdirectories that make will recurse into.  if
+ # there are none, comment this out

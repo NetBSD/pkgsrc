@@ -1,13 +1,13 @@
-$NetBSD: patch-al,v 1.1.1.1 2001/03/14 16:03:13 skrll Exp $
+$NetBSD: patch-al,v 1.2 2001/10/15 22:46:00 skrll Exp $
 
---- kwin/clients/b2/Makefile.am.orig	Wed Dec 13 18:25:17 2000
-+++ kwin/clients/b2/Makefile.am
-@@ -4,7 +4,7 @@
- kde_module_LTLIBRARIES = libkwinb2.la
+--- kcontrol/ebrowsing/Makefile.am.orig	Sat Dec  9 11:07:23 2000
++++ kcontrol/ebrowsing/Makefile.am
+@@ -10,7 +10,7 @@
  
- libkwinb2_la_SOURCES = b2client.cpp
--libkwinb2_la_LIBADD = ../../kwin.la
-+libkwinb2_la_LIBADD = ../../libkwin.la
- libkwinb2_la_LDFLAGS = $(all_libraries) $(KDE_PLUGIN)
+ libkcm_kurifilt_la_SOURCES = filteropts.cpp main.cpp
  
- METASOURCES = AUTO
+-libkcm_kurifilt_la_LDFLAGS  = $(all_libraries) -module -avoid-version -no-undefined
++libkcm_kurifilt_la_LDFLAGS  = $(all_libraries) -module -avoid-version -no-undefined ${KDE_RPATH}
+ libkcm_kurifilt_la_LIBADD = $(LIB_KSYCOCA)
+ # Don't link this lib to the plugins. They are dlopened and linking to them
+ # results in crashes when closing kcmshell.
