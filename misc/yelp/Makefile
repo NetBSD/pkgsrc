@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/02/14 17:21:45 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2004/02/16 13:51:51 jmmv Exp $
 #
 
 DISTNAME=		yelp-2.4.2
@@ -12,6 +12,7 @@ HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Help browser for GNOME 2 desktop
 
 DEPENDS=		gnome2-dirs>=1.2:../../misc/gnome2-dirs
+DEPENDS+=		docbook>=4.2:../../textproc/docbook
 BUILD_USES_MSGFMT=	yes
 
 USE_BUILDLINK3=		yes
@@ -23,9 +24,20 @@ GNU_CONFIGURE=		yes
 
 CONFIGURE_ARGS+=	--with-html-widget=gtkhtml2
 
+.include "../../archivers/bzip2/buildlink3.mk"
+.include "../../devel/GConf2/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/glib/buildlink3.mk"
+.include "../../devel/libbonobo/buildlink3.mk"
+.include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../net/ORBit2/buildlink3.mk"
+.include "../../sysutils/gnome-vfs2/buildlink3.mk"
+.include "../../textproc/intltool/buildlink3.mk"
+.include "../../textproc/libxslt/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../www/libgtkhtml/buildlink3.mk"
 
