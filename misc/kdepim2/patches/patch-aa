@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/03/14 16:15:16 skrll Exp $
+
+--- korganizer/Makefile.in.orig	Mon Jan 22 15:38:33 2001
++++ korganizer/Makefile.in
+@@ -829,7 +829,7 @@
+ #>- $(srcdir)/parseholiday.c: parseholiday.y
+ #>+ 1
+ $(srcdir)/parseholiday.c: outgoingdialog_base.h incomingdialog_base.h categoryselectdialog_base.h categoryeditdialog_base.h kofilterview_base.h  parseholiday.y
+-	cd $(srcdir) && bison -d -o parseholiday.c parseholiday.y
++	cd $(srcdir) && yacc -d -o parseholiday.c parseholiday.y
+ 
+ #>- $(srcdir)/scanholiday.c: scanholiday.lex parseholiday.h
+ #>+ 1
