@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3031 2005/02/18 12:58:47 wiz Exp $
+$NetBSD: TODO,v 1.3032 2005/02/18 13:12:42 wiz Exp $
 
 Suggested new packages
 ======================
@@ -769,7 +769,6 @@ Suggested package updates
 	o p5-HTTPD-User-Manage-1.62
 	o p5-Heap-0.71
 	o p5-I18N-LangTags-0.35
-	o p5-IO-Socket-SSL-0.96
 	o p5-IO-Util-1.42
 	o p5-IO-Zlib-1.04
 	o p5-IPC-Run-0.78
