@@ -1,0 +1,36 @@
+$NetBSD: patch-ac,v 1.1.1.1 1999/09/15 18:56:22 jlam Exp $
+
+--- isectd/Makefile.in.orig	Mon Sep 13 21:59:53 1999
++++ isectd/Makefile.in	Wed Sep 15 00:09:41 1999
+@@ -142,18 +142,18 @@
+ 
+ install-binPROGRAMS: $(bin_PROGRAMS)
+ 	@$(NORMAL_INSTALL)
+-	$(mkinstalldirs) $(DESTDIR)$(bindir)
++	$(mkinstalldirs) $(DESTDIR)$(sbindir)
+ 	@list='$(bin_PROGRAMS)'; for p in $$list; do \
+ 	  if test -f $$p; then \
+-	    echo " $(LIBTOOL)  --mode=install $(INSTALL_PROGRAM) $$p $(DESTDIR)$(bindir)/`echo $$p|sed 's/$(EXEEXT)$$//'|sed '$(transform)'|sed 's/$$/$(EXEEXT)/'`"; \
+-	    $(LIBTOOL)  --mode=install $(INSTALL_PROGRAM) $$p $(DESTDIR)$(bindir)/`echo $$p|sed 's/$(EXEEXT)$$//'|sed '$(transform)'|sed 's/$$/$(EXEEXT)/'`; \
++	    echo " $(LIBTOOL)  --mode=install $(INSTALL_PROGRAM) $$p $(DESTDIR)$(sbindir)/`echo $$p|sed 's/$(EXEEXT)$$//'|sed '$(transform)'|sed 's/$$/$(EXEEXT)/'`"; \
++	    $(LIBTOOL)  --mode=install $(INSTALL_PROGRAM) $$p $(DESTDIR)$(sbindir)/`echo $$p|sed 's/$(EXEEXT)$$//'|sed '$(transform)'|sed 's/$$/$(EXEEXT)/'`; \
+ 	  else :; fi; \
+ 	done
+ 
+ uninstall-binPROGRAMS:
+ 	@$(NORMAL_UNINSTALL)
+ 	list='$(bin_PROGRAMS)'; for p in $$list; do \
+-	  rm -f $(DESTDIR)$(bindir)/`echo $$p|sed 's/$(EXEEXT)$$//'|sed '$(transform)'|sed 's/$$/$(EXEEXT)/'`; \
++	  rm -f $(DESTDIR)$(sbindir)/`echo $$p|sed 's/$(EXEEXT)$$//'|sed '$(transform)'|sed 's/$$/$(EXEEXT)/'`; \
+ 	done
+ 
+ .c.o:
+@@ -466,7 +466,7 @@
+ install-strip:
+ 	$(MAKE) $(AM_MAKEFLAGS) AM_INSTALL_PROGRAM_FLAGS=-s install
+ installdirs:
+-	$(mkinstalldirs)  $(DESTDIR)$(bindir)
++	$(mkinstalldirs)  $(DESTDIR)$(sbindir)
+ 
+ 
+ mostlyclean-generic:
