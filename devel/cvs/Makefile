@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.52 2002/10/10 09:42:58 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2002/11/24 21:31:20 hubertf Exp $
 #
 
-DISTNAME=	cvs-1.11
-PKGREVISION=	2
+DISTNAME=	cvs-1.11.2
 CATEGORIES=	devel
 MASTER_SITES=	http://ftp.cvshome.org/${DISTNAME}/ \
 		${MASTER_SITE_GNU:=non-gnu/cvs/}
@@ -19,8 +18,8 @@ BUILD_DEFS+=		USE_INET6
 USE_BUILDLINK2=		yes
 
 .if ${OPSYS} == "NetBSD"
-PATCH_SITES=		${MASTER_SITE_LOCAL}
-PATCHFILES=		cvs-1.11-v6-20020111.diff.gz
+PATCH_SITES=		ftp://ftp.kame.net/pub/kame/misc/
+PATCHFILES=		cvs-1.11.2-v6-20020709.diff.gz
 PATCH_DIST_STRIP=	-p1
 
 .if defined(USE_INET6) && ${USE_INET6} == "YES"

@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.592 2002/11/24 17:25:17 magick Exp $
+$NetBSD: CHANGES,v 1.593 2002/11/24 21:32:53 hubertf Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3707,3 +3707,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated gpgme to 0.3.13 [chris 2002-11-24]
 	Updated postfix to 1.1.12 [martti 2002-11-24]
 	Updated nxtvepg to 2.4.0 [magick 2002-11-24]
+	Updated cvs to 1.11.2 [hubertf 2002-11-24]
