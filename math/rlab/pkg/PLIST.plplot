@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.plplot,v 1.1.1.1 2001/01/31 07:30:31 jtb Exp $
+@comment $NetBSD: PLIST.plplot,v 1.2 2001/02/01 04:44:52 jtb Exp $
 share/rlab/help/getplot
 share/rlab/help/pl3d
 share/rlab/help/plalt
@@ -45,3 +45,12 @@ share/rlab/help/subplot
 share/rlab/help/xlabel
 share/rlab/help/ylabel
 share/rlab/help/zlabel
+share/rlab/rlib/plot.r
+@dirrm share/rlab/toolbox
+@dirrm share/rlab/rlib
+@dirrm share/rlab/help
+@dirrm share/rlab/examples
+@dirrm share/rlab/controls-toolbox
+@dirrm share/doc/html/rlab
+@dirrm share/doc/rlab
+@dirrm share/rlab

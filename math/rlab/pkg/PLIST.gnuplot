@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.gnuplot,v 1.1.1.1 2001/01/31 07:30:31 jtb Exp $
+@comment $NetBSD: PLIST.gnuplot,v 1.2 2001/02/01 04:44:51 jtb Exp $
 share/rlab/help/autoscale
 share/rlab/help/autotics
 share/rlab/help/axis
@@ -89,3 +89,12 @@ share/rlab/help/zlabel
 share/rlab/help/zrange
 share/rlab/help/ztics
 share/rlab/rlib/gp-compat.r
+share/rlab/rlib/plot.r
+@dirrm share/rlab/toolbox
+@dirrm share/rlab/rlib
+@dirrm share/rlab/help
+@dirrm share/rlab/examples
+@dirrm share/rlab/controls-toolbox
+@dirrm share/doc/html/rlab
+@dirrm share/doc/rlab
+@dirrm share/rlab

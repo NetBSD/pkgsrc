@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST.plotmtv,v 1.2 2001/02/01 04:44:52 jtb Exp $
-share/rlab/rlib/plotmtv.r
+@comment $NetBSD: PLIST.pgraf,v 1.1 2001/02/01 04:44:51 jtb Exp $
+share/rlab/rlib/pgraf.r
+share/rlab/examples/pgdemo.r
 @dirrm share/rlab/toolbox
 @dirrm share/rlab/rlib
 @dirrm share/rlab/help

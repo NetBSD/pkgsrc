@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1.1.1 2001/01/31 07:30:37 jtb Exp $
+$NetBSD: patch-ab,v 1.2 2001/02/01 04:44:51 jtb Exp $
 
 --- Makefile.in.orig	Fri Apr 30 14:32:04 1999
 +++ Makefile.in
@@ -23,6 +23,15 @@ $NetBSD: patch-ab,v 1.1.1.1 2001/01/31 07:30:37 jtb Exp $
  
  Ranlib = ./flibs/ranlib/src/libranlib.a
  RANLIB_LIB  = -L./flibs/ranlib/src -lranlib
+@@ -157,7 +157,7 @@
+ prefix =        @prefix@
+ exec_prefix =   @exec_prefix@
+ bindir = 	$(exec_prefix)/bin
+-libdir =        $(exec_prefix)/lib
++libdir =        $(exec_prefix)/share
+ mand =		$(exec_prefix)/man
+ mandir = 	$(exec_prefix)/man/man1
+ buildir =       @BUILD_DIR@
 @@ -236,7 +236,7 @@
  SRC = 		$(R_SRC) $(F_SRC) $(EXTRA_SRC) $(GNU_SRC) $(CMD_SRC)
  OBJ = 		$(R_OBJ) $(F_OBJ) $(EXTRA_OBJ) $(GNU_OBJ) $(CMD_OBJ)
@@ -57,49 +66,49 @@ $NetBSD: patch-ab,v 1.1.1.1 2001/01/31 07:30:37 jtb Exp $
 -		  cp misc/pgplot.r ${TOPDIR}/rlib/plot.r;\
 -		  cd misc/pghelp; tar cf - . | (cd ${RHELPDIR}; umask 022; tar xf - ) ;\
 +install:	rlab
-+		$(BSD_INSTALL_DATA_DIR) $(prefix)/share/rlab
-+		$(BSD_INSTALL_DATA) $(buildir)/.rlab $(prefix)/share/rlab
-+		$(BSD_INSTALL_DATA_DIR) $(prefix)/share/rlab/rlib
++		$(BSD_INSTALL_DATA_DIR) $(libdir)/rlab
++		$(BSD_INSTALL_DATA) $(buildir)/.rlab $(libdir)/rlab
++		$(BSD_INSTALL_DATA_DIR) $(libdir)/rlab/rlib
 +		@for f in $(buildir)/rlib/*; do \
-+			i="$(BSD_INSTALL_DATA) $$f $(prefix)/share/rlab/rlib/"; \
++			i="$(BSD_INSTALL_DATA) $$f $(libdir)/rlab/rlib/"; \
 +			echo $$i; $$i; \
 +		done
-+		$(BSD_INSTALL_DATA_DIR) $(prefix)/share/rlab/toolbox
++		$(BSD_INSTALL_DATA_DIR) $(libdir)/rlab/toolbox
 +		@for f in $(buildir)/toolbox/*; do \
-+			i="$(BSD_INSTALL_DATA) $$f $(prefix)/share/rlab/toolbox/"; \
++			i="$(BSD_INSTALL_DATA) $$f $(libdir)/rlab/toolbox/"; \
 +			echo $$i; $$i; \
 +		done
-+		$(BSD_INSTALL_DATA_DIR) $(prefix)/share/rlab/controls-toolbox
++		$(BSD_INSTALL_DATA_DIR) $(libdir)/rlab/controls-toolbox
 +		@for f in $(buildir)/controls-toolbox/*; do \
-+			i="$(BSD_INSTALL_DATA) $$f $(prefix)/share/rlab/controls-toolbox/"; \
++			i="$(BSD_INSTALL_DATA) $$f $(libdir)/rlab/controls-toolbox/"; \
 +			echo $$i; $$i; \
 +		done
-+		$(BSD_INSTALL_DATA_DIR) $(prefix)/share/rlab/help
++		$(BSD_INSTALL_DATA_DIR) $(libdir)/rlab/help
 +		@for f in $(buildir)/doc/help/*; do \
-+			i="$(BSD_INSTALL_DATA) $$f $(prefix)/share/rlab/help/"; \
++			i="$(BSD_INSTALL_DATA) $$f $(libdir)/rlab/help/"; \
 +			echo $$i; $$i; \
 +		done
-+		$(BSD_INSTALL_DATA_DIR) $(prefix)/share/rlab/examples
++		$(BSD_INSTALL_DATA_DIR) $(libdir)/rlab/examples
 +		@for f in $(buildir)/examples/* $(buildir)/test.*; do \
-+			i="$(BSD_INSTALL_DATA) $$f $(prefix)/share/rlab/examples/"; \
++			i="$(BSD_INSTALL_DATA) $$f $(libdir)/rlab/examples/"; \
 +			echo $$i; $$i; \
 +		done
-+		$(BSD_INSTALL_DATA_DIR) $(prefix)/share/doc/rlab
-+		$(BSD_INSTALL_DATA) $(buildir)/doc/rlab-ref.ps $(prefix)/share/doc/rlab
++		$(BSD_INSTALL_DATA_DIR) $(libdir)/doc/rlab
++		$(BSD_INSTALL_DATA) $(buildir)/doc/rlab-ref.ps $(libdir)/doc/rlab
 +		@for f in BUGS PROBLEMS README.Metis README.PGRAF \
 +		README.PLPLOT README.SPARSE TODO WHATS.NEW; do \
-+			i="$(BSD_INSTALL_DATA) $(buildir)/$$f $(prefix)/share/doc/rlab/"; \
++			i="$(BSD_INSTALL_DATA) $(buildir)/$$f $(libdir)/doc/rlab/"; \
 +			echo $$i; $$i; \
 +		done
-+		$(BSD_INSTALL_DATA_DIR) $(prefix)/share/doc/html/rlab
++		$(BSD_INSTALL_DATA_DIR) $(libdir)/doc/html/rlab
 +		@for f in $(buildir)/doc/html/*; do \
-+			i="$(BSD_INSTALL_DATA) $$f $(prefix)/share/doc/html/rlab/"; \
++			i="$(BSD_INSTALL_DATA) $$f $(libdir)/doc/html/rlab/"; \
 +			echo $$i; $$i; \
 +		done
 +		if test "$(PLOT_PROG)" = "plplot" ; then \
-+		  $(BSD_INSTALL_DATA) $(buildir)/misc/plplot.r $(prefix)/share/rlab/rlib/plot.r;\
++		  $(BSD_INSTALL_DATA) $(buildir)/misc/plplot.r $(libdir)/rlab/rlib/plot.r;\
 +		  for f in $(buildir)/misc/plhelp/*; do \
-+			i="$(BSD_INSTALL_DATA) $$f $(prefix)/share/rlab/help/"; \
++			i="$(BSD_INSTALL_DATA) $$f $(libdir)/rlab/help/"; \
 +			echo $$i; $$i; \
 +		  done \
  		fi
@@ -107,10 +116,10 @@ $NetBSD: patch-ab,v 1.1.1.1 2001/01/31 07:30:37 jtb Exp $
 -		  cp misc/gnuplot.r ${TOPDIR}/rlib/plot.r;\
 -		  cp misc/gp-compat.r ${TOPDIR}/rlib/gp-compat.r;\
 -		  cd misc/gnuplothelp; tar cf - . | (cd ${RHELPDIR}; umask 022; tar xf - ) ;\
-+		  $(BSD_INSTALL_DATA) $(buildir)/misc/gnuplot.r $(prefix)/share/rlab/rlib/plot.r;\
-+		  $(BSD_INSTALL_DATA) $(buildir)/misc/gp-compat.r $(prefix)/share/rlab/rlib/gp-compat.r;\
++		  $(BSD_INSTALL_DATA) $(buildir)/misc/gnuplot.r $(libdir)/rlab/rlib/plot.r;\
++		  $(BSD_INSTALL_DATA) $(buildir)/misc/gp-compat.r $(libdir)/rlab/rlib/gp-compat.r;\
 +		  for f in $(buildir)/misc/gnuplothelp/*; do \
-+			i="$(BSD_INSTALL_DATA) $$f $(prefix)/share/rlab/help/"; \
++			i="$(BSD_INSTALL_DATA) $$f $(libdir)/rlab/help/"; \
 +			echo $$i; $$i; \
 +		  done \
  		fi
@@ -120,13 +129,14 @@ $NetBSD: patch-ab,v 1.1.1.1 2001/01/31 07:30:37 jtb Exp $
 -		$(INSTALL_PROGRAM) rlab $(bindir)/rlab-$(VER)
 -		if test -x "$(bindir)/rlab2" ; then\
 -		  rm -f $(bindir)/rlab2;\
-+		  $(BSD_INSTALL_DATA) $(buildir)/misc/plotmtv.r $(prefix)/share/rlab/rlib/;\
++		  $(BSD_INSTALL_DATA) $(buildir)/misc/plotmtv.r $(libdir)/rlab/rlib/;\
  		fi
 +		$(BSD_INSTALL_PROGRAM) $(buildir)/rlab $(bindir)/rlab-$(VER)
  		sed 's@rlab_exec_prefix@$(exec_prefix)@' ./misc/rlab > ./misc/rlab.tmp.0
  		sed 's@rlab_ver_string@$(VER)@' ./misc/rlab.tmp.0 > ./misc/rlab.tmp.1
  		sed 's@plot_dir@$(PLOT_DIR)@' ./misc/rlab.tmp.1 > ./misc/rlab.tmp.2
- 		sed 's@plot_prog@$(PLOT_PROG)@' ./misc/rlab.tmp.2 > ./misc/rlab2
+-		sed 's@plot_prog@$(PLOT_PROG)@' ./misc/rlab.tmp.2 > ./misc/rlab2
++		sed 's@plot_prog@$(PLOT_PROG)@' ./misc/rlab.tmp.2 > ./misc/rlab
  		rm -f ./misc/rlab.tmp.0 ./misc/rlab.tmp.1 ./misc/rlab.tmp.2
 -		$(INSTALL_PROGRAM) ./misc/rlab2 $(bindir)/rlab2
 -		if test "$(LN)" = "ln" ; then\
@@ -144,8 +154,8 @@ $NetBSD: patch-ab,v 1.1.1.1 2001/01/31 07:30:37 jtb Exp $
 -		-mkdir $(exec_prefix) $(bindir) $(libdir) $(mand) \
 -			$(mandir) $(TOPDIR) $(RLIBDIR) $(DOCDIR) \
 -			$(RHELPDIR) $(TOOLBOX) $(CTOOLBOX)
-+		$(BSD_INSTALL_SCRIPT) $(buildir)/misc/rlab2 $(bindir)/rlab2
-+		$(BSD_INSTALL_MAN) $(buildir)/doc/rlab2.1 $(mandir)
++		$(BSD_INSTALL_SCRIPT) $(buildir)/misc/rlab $(bindir)
++		$(BSD_INSTALL_MAN) $(buildir)/doc/rlab2.1 $(mandir)/rlab.1
  
  FRC:		
  
