@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/01/03 18:49:40 reed Exp $
+# $NetBSD: Makefile,v 1.9 2004/01/22 08:37:19 grant Exp $
 
 DISTNAME=	kmymoney2-0.5.1
 PKGREVISION=	5
@@ -11,7 +11,7 @@ HOMEPAGE=	http://kmymoney2.sourceforge.net/
 COMMENT=	Personal finance manager for kde3
 
 USE_BUILDLINK2=		YES
-USE_GMAKE=              YES
+USE_GNU_TOOLS+=		make
 GNU_CONFIGURE=          YES
 USE_LIBTOOL=            YES
 SHLIBTOOL_OVERRIDE=     ${WRKSRC}/libtool
