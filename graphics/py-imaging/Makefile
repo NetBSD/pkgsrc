@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.3 1999/03/08 10:53:56 agc Exp $
+# $NetBSD: Makefile,v 1.4 1999/04/14 15:54:46 tsarna Exp $
 
-DISTNAME=	Imaging-0.3b2
-PKGNAME=	py-imaging-0.3b2
+DISTNAME=	Imaging-1.0b1
+PKGNAME=	py-imaging-1.0b1
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.pythonware.com/downloads/
 
 MAINTAINER=	tsarna@netbsd.org
 HOMEPAGE=	http://www.pythonware.com/products/pil/
 
-DEPENDS+=	python-1.5.1:../../lang/python
+DEPENDS+=	python-1.5.2:../../lang/python
 DEPENDS+=	jpeg-6b:../../graphics/jpeg
 
 DIST_SUBDIR=    python
