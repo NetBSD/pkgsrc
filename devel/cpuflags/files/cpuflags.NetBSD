@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: cpuflags.NetBSD,v 1.27 2002/09/16 10:43:24 abs Exp $
+# $NetBSD: cpuflags.NetBSD,v 1.28 2002/09/25 15:14:04 abs Exp $
 
 if [ -x /sbin/sysctl ] ;then
     SYSCTL=/sbin/sysctl
@@ -65,6 +65,26 @@ case $hw_machine_arch in
 	*\(68040*)		FLAGS='-m68040'		;; # Untested
 	*\(68060*)		FLAGS='-m68060'		;; # Upgr amiga 3000
     esac ;;
+
+    mipseb|mipsel)
+	# cpu0 at mainbus0: QED R4600 Orion CPU (0x2020) Rev. 2.0 with ...
+	case "`egrep '^cpu0 ' /var/run/dmesg.boot`" in
+	    *\ MIPS\ R2000\ *)	FLAGS="-mcpu=r2000"	   ;;
+	    *\ MIPS\ R3000\ *)	FLAGS="-mcpu=r3000"	   ;;
+	    *\ MIPS\ R3000A\ *)	FLAGS="-mcpu=r3000"	   ;;
+	    *\ Toshiba\ TX3912\ *)    FLAGS="-mcpu=r3900"  ;;
+	    *\ Toshiba\ TX392[27]\ *) FLAGS="-mcpu=r3900"  ;;
+	    *\ MIPS\ R4000\ *)	FLAGS="-mcpu=r4000 -mips2" ;; # really mips3
+	    *\ MIPS\ R4400\ *)	FLAGS="-mcpu=r4400 -mips2" ;; # really mips3
+	    *\ NEC\ VR4100\ *)	FLAGS="-mcpu=r4100 -mips2" ;; # really mips3
+	    *\ NEC\ VR4300\ *)	FLAGS="-mcpu=r4300 -mips2" ;; # really mips3
+	    *\ QED\ R4600\ *)	FLAGS="-mcpu=r4600 -mips2" ;; # really mips3
+	    *\ MIPS\ R5000\ *)	FLAGS="-mcpu=r5000 -mips2" ;; # really mips4
+	    *\ QED\ RM5200\ *)	FLAGS="-mcpu=r5000 -mips2" ;; # really mips4
+	    *\ MIPS\ R6000\ *)	FLAGS="-mcpu=r6000 -mips2" ;;
+	    *\ MIPS\ R8000\ *)	FLAGS="-mcpu=r8000 -mips2" ;; # really mips4
+	esac
+	;;
 
     powerpc) case $hw_model in				   # Examples
 	601\ *)		   	FLAGS='-mcpu=601'	;; # Untested
