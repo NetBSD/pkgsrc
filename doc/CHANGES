@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3186 2003/09/01 11:51:46 martti Exp $
+$NetBSD: CHANGES,v 1.3187 2003/09/01 14:53:47 minoura Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3444,3 +3444,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated dvdrecord to 0.1.5 [mycroft 2003-09-01]
 	Updated postfix to 2.0.14 [martti 2003-09-01]
 	Updated squirrelmail to 1.4.1 [martti 2003-09-01]
+	Updated apel to 10.6 [minoura 2003-09-01]
