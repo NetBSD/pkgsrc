@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: build,v 1.32 2004/01/20 07:39:24 grant Exp $
+# $NetBSD: build,v 1.33 2004/01/22 09:08:34 grant Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@netbsd.org>
@@ -242,7 +242,7 @@ echo "Post processing bulk build results..."
 
 # Perl was wiped, reinstall it!
 ( cd lang/perl5 && ${BMAKE} bulk-install )
-perl mk/bulk/post-build | ${MAIL} -s "pkgsrc/${MACHINE_ARCH} bulk build results `date +%F`" $ADMIN
+perl mk/bulk/post-build | ${MAIL} -s "pkgsrc/${MACHINE_ARCH} bulk build results `date +%Y-%m-%d`" $ADMIN
 
 # Done!
 echo ""
