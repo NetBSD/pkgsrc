@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/05/29 00:16:41 xtraeme Exp $
+$NetBSD: distinfo,v 1.2 2005/01/10 21:12:28 reed Exp $
 
 SHA1 (xvidcap-1.1.3.tar.gz) = e6d86a4184c8cc3e74738fb6e20d49c0d1640025
 Size (xvidcap-1.1.3.tar.gz) = 1627036 bytes
@@ -6,3 +6,4 @@ SHA1 (patch-aa) = 9196f59ec849a361821fd5cae800ec6aef2a1dfc
 SHA1 (patch-ab) = 3e3835f57e204aa24a30b5940afc221d70cfc9f5
 SHA1 (patch-ac) = 0de9d748e3808a210ec68d140eb1dfd5e18d9e4f
 SHA1 (patch-ad) = ac40095849f721cfd8aa1e0143dff3ac9b705be7
+SHA1 (patch-ae) = fc4fa298ed796225ce80ac780cebf46e46f3d21b
