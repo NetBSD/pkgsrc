@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1999/07/04 23:42:52 kim Exp $
+# $NetBSD: Makefile,v 1.8 2000/03/23 21:31:40 dmcmahill Exp $
 #
 
 DISTNAME=	xglobe-0.2
@@ -17,7 +17,7 @@ DISTFILES+=	${MAPS} ${DISTNAME}${EXTRACT_SUFX}
 MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://www.uni-karlsruhe.de/~uddn/xglobe/
 
-DEPENDS+=	qt-1.44:../../x11/qt
+DEPENDS+=	qt1-1.44:../../x11/qt1
 
 DIST_SUBDIR=	xglobe
 MAPS=		LE.400.gif Brill.400.gif mggd.gif
