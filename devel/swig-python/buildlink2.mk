@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1.1.1 2003/05/25 08:50:07 epg Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2003/05/30 11:22:37 epg Exp $
 
 .if !defined(SWIG_PYTHON_BUILDLINK2_MK)
 SWIG_PYTHON_BUILDLINK2_MK=		#defined
@@ -12,7 +12,7 @@ BUILDLINK_PREFIX.swig-python_DEFAULT=	${LOCALBASE}
 
 BUILDLINK_FILES.swig-python+=		lib/libswigpy.*
 
-PYTHON_VERSION_REQD=			22
+PYTHON_VERSION_REQD=			22 22pth
 .include "../../lang/python/pyversion.mk"
 
 .include "../../devel/swig-build/Makefile.version"
