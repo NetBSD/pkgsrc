@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2001/12/02 06:56:47 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2002/05/12 14:47:28 joda Exp $
 
 DISTNAME=	thttpd-2.21b
 CATEGORIES=	www
@@ -25,7 +25,7 @@ pre-configure:
 	${MV} ${WRKSRC}/extras/htpasswd.c ${WRKSRC}/extras/thtpasswd.c
 	for file in thttpd.8 extras/Makefile.in extras/thtpasswd.c; do	\
 		${MV} -f ${WRKSRC}/$${file} ${WRKSRC}/$${file}.bak;	\
-		${SED}	-e "s,htpasswd,thtpasswd,g"			\
+		${SED}	-e "s,\.htpasswd,XXX,g;s,htpasswd,thtpasswd,g;s,XXX,.htpasswd,g" \
 			${WRKSRC}/$${file}.bak > ${WRKSRC}/$${file};	\
 	done
 
