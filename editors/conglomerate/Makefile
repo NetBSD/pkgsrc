@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2003/11/12 01:31:49 salo Exp $
+# $NetBSD: Makefile,v 1.8 2003/12/03 23:03:39 xtraeme Exp $
 #
 
-DISTNAME=	conglomerate-0.7.4
-PKGREVISION=	2
+DISTNAME=	conglomerate-0.7.6
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=conglomerate/}
 
@@ -24,6 +23,10 @@ USE_PKGLOCALEDIR=	yes
 
 LIBTOOL_OVERRIDE=       ${WRKSRC}/libtool
 
+CONFIGURE_ARGS+=	--enable-printing
+CONFIGURE_ARGS+=	--disable-gtk-doc
+CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html
+
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../devel/libglade2/buildlink2.mk"
 .include "../../devel/libgnomeui/buildlink2.mk"
@@ -31,6 +34,7 @@ LIBTOOL_OVERRIDE=       ${WRKSRC}/libtool
 .include "../../textproc/libxml2/buildlink2.mk"
 .include "../../textproc/libxslt/buildlink2.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
+.include "../../x11/gtksourceview/buildlink2.mk"
 
 .include "../../mk/pthread.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
