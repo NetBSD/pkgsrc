@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/05/24 05:46:54 jlam Exp $
+
+Still need to find 1st word of +infinity, quiet NaN, and signaling NaN.
+
+--- limits.orig	Thu Apr 22 20:47:10 1999
++++ limits	Sat May 13 02:24:42 2000
+@@ -372,9 +372,15 @@
+ #if !defined(LONGLONG_MIN) && !defined(LONGLONG_MAX) \
+                            && !defined(ULONGLONG_MAX)
+ 
++#ifdef __NetBSD__
++#define ULONGLONG_MAX ULLONG_MAX
++#define LONGLONG_MAX LLONG_MAX
++#define LONGLONG_MIN LLONG_MIN
++#else
+ #define ULONGLONG_MAX 0xffffffffffffffffLLU
+ #define LONGLONG_MAX 0x7fffffffffffffffLL
+ #define LONGLONG_MIN (-LONGLONG_MAX - 1)
++#endif
+ 
+ #endif
+ 
