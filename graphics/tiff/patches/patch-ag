@@ -1,17 +1,30 @@
-$NetBSD: patch-ag,v 1.6 2004/03/22 17:03:30 abs Exp $
+$NetBSD: patch-ag,v 1.6.6.1 2004/10/18 17:03:48 agc Exp $
 
---- libtiff/tif_fax3.c.orig	Thu Nov  6 08:22:13 2003
-+++ libtiff/tif_fax3.c
-@@ -309,7 +309,7 @@ Fax3Decode2D(TIFF* tif, tidata_t buf, ts
-  * this is <8 bytes.  We optimize the code here to reflect the
-  * machine characteristics.
-  */
--#if defined(__alpha) || _MIPS_SZLONG == 64 || defined(__LP64__) || defined(__arch64__)
-+#if defined(__alpha) || _MIPS_SZLONG == 64 || defined(__LP64__) || defined(__arch64__) || defined(_LP64)
- #define FILL(n, cp)							    \
-     switch (n) {							    \
-     case 15:(cp)[14] = 0xff; case 14:(cp)[13] = 0xff; case 13: (cp)[12] = 0xff;\
-@@ -451,7 +451,7 @@ Fax3SetupState(TIFF* tif)
+--- libtiff/tif_fax3.c.orig	2003-11-06 09:22:13.000000000 +0100
++++ libtiff/tif_fax3.c	2004-10-18 16:24:04.000000000 +0200
+@@ -437,6 +437,21 @@
+ #undef	ZERO
+ #undef	FILL
+ 
++static char *
++CheckMalloc(TIFF* tif, size_t nmemb, size_t elem_size, const char* what)
++{
++	char	*cp = NULL;
++	tsize_t	bytes = nmemb * elem_size;
++
++	if (elem_size && bytes / elem_size == nmemb)
++		cp = (char*) _TIFFmalloc(bytes);
++
++	if (cp == NULL)
++		TIFFError(tif->tif_name, "No space %s", what);
++	
++	return (cp);
++}
++
+ /*
+  * Setup G3/G4-related compression/decompression state
+  * before data is processed.  This routine is called once
+@@ -451,7 +466,7 @@
  	Fax3BaseState* sp = Fax3State(tif);
  	long rowbytes, rowpixels;
  	int needsRefLine;
@@ -20,7 +33,24 @@ $NetBSD: patch-ag,v 1.6 2004/03/22 17:03:30 abs Exp $
  	uint32 nruns;
  
  	if (td->td_bitspersample != 1) {
-@@ -1284,7 +1284,8 @@ InitCCITTFax3(TIFF* tif)
+@@ -481,13 +496,10 @@
+ 
+ 	nruns = needsRefLine ? 2*TIFFroundup(rowpixels,32) : rowpixels;
+ 
+-	dsp->runs = (uint32*) _TIFFmalloc((2*nruns+3)*sizeof (uint32));
+-	if (dsp->runs == NULL) {
+-		TIFFError("Fax3SetupState",
+-		    "%s: No space for Group 3/4 run arrays",
+-		    tif->tif_name);
++	dsp->runs = (uint32*) CheckMalloc(tif, 2*nruns+3, sizeof (uint32),
++					  "for Group 3/4 run arrays");
++	if (dsp->runs == NULL)
+ 		return (0);
+-	}
+ 	dsp->curruns = dsp->runs;
+ 	if (needsRefLine)
+ 		dsp->refruns = dsp->runs + (nruns>>1);
+@@ -1284,7 +1296,8 @@
  	sp->recvparams = 0;
  	sp->subaddress = NULL;
  

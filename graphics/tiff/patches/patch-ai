@@ -1,0 +1,16 @@
+$NetBSD: patch-ai,v 1.1.2.2 2004/10/18 17:03:48 agc Exp $
+
+--- libtiff/tiffiop.h.orig	2003-12-26 12:56:25.000000000 +0100
++++ libtiff/tiffiop.h	2004-10-18 16:25:32.000000000 +0200
+@@ -198,8 +198,9 @@
+ #endif
+ 
+ /* NB: the uint32 casts are to silence certain ANSI-C compilers */
+-#define	TIFFhowmany(x, y) ((((uint32)(x))+(((uint32)(y))-1))/((uint32)(y)))
+-#define	TIFFroundup(x, y) (TIFFhowmany(x,y)*((uint32)(y)))
++#define TIFFhowmany(x, y) ((((uint32)(x))+(((uint32)(y))-1))/((uint32)(y)))
++#define TIFFhowmany8(x) (((x)&0x07)?((uint32)(x)>>3)+1:(uint32)(x)>>3)
++#define	TIFFroundup(x, y) (TIFFhowmany(x,y)*(y))
+ 
+ #define TIFFmax(A,B) ((A)>(B)?(A):(B))
+ #define TIFFmin(A,B) ((A)<(B)?(A):(B))
