@@ -12,7 +12,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.23 2000/01/05 21:13:01 wiz Exp $
+# $NetBSD: pkglint.pl,v 1.24 2000/01/06 01:34:22 wiz Exp $
 #
 # This version contains some changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org> and
@@ -387,6 +387,11 @@ sub checkplist {
 				$rcsidseen++ if (/\$$rcsidstr[:\$]/);
 			} elsif ($_ =~ /^\@(dirrm|option)/) {
 				; # no check made
+			} elsif ($_ =~ /^\@(mode|owner|group)/) {
+				&perror("WARN: \"\@mode/owner/group\" are ".
+					"deprecated, please use chmod/".
+					"chown/chgrp in the pkg Makefile ".
+					"and let tar do the rest.");
 			} else {
 				&perror("WARN: $file $.: ".
 					"unknown PLIST directive \"$_\"");
