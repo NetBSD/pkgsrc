@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 1998/11/27 13:13:09 bouyer Exp $
+# $NetBSD: Makefile,v 1.17 1998/11/27 13:45:20 drochner Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1997/10/23 15:17:43 max Exp
 #
 
@@ -64,8 +64,6 @@ post-install:
 		${CAT} /etc/passwd | ${PREFIX}/bin/mksmbpasswd.sh > ${SAMBA_PRIVATE}/smbpasswd ; \
 		chmod 600 ${SAMBA_PRIVATE}/smbpasswd ;			\
 	fi
-	chown root.wheel ${PREFIX}/bin/smbpasswd
-	chmod 4111 ${PREFIX}/bin/smbpasswd
 	${SED} -e 's:__SAMBA_PRIVATE__:${SAMBA_PRIVATE}:g' ${PKGDIR}/PLIST > ${PLIST_SRC}
 
 .include "../../mk/bsd.pkg.mk"
