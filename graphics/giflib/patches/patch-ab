@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.6 1998/11/12 23:36:24 frueauf Exp $
+$NetBSD: patch-ab,v 1.7 1999/09/30 15:21:55 agc Exp $
 
---- util/Makefile.orig	Thu Jun 26 13:22:30 1997
-+++ util/Makefile	Mon Sep 14 20:26:57 1998
+--- util/Makefile.orig	Thu Jun 26 18:22:30 1997
++++ util/Makefile	Thu Sep 30 16:01:59 1999
 @@ -22,12 +22,12 @@
  # X_INC_DIR = /server/sun4/usr/new/lib/X11R4
  
@@ -9,7 +9,7 @@ $NetBSD: patch-ab,v 1.6 1998/11/12 23:36:24 frueauf Exp $
 -INC = -I../lib
 -GIF_LIB = ../lib/libgif.a
 -GIF_INC_DEPEND = ../lib/libgif.a ../lib/gif_lib.h ../lib/getarg.h
-+CFLAGS+= -I../lib
++CDEFS= -I../lib
 +GIF_LIB = ../lib/libgif.la
 +GIF_INC_DEPEND = ../lib/libgif.la ../lib/gif_lib.h ../lib/getarg.h
  
@@ -48,12 +48,14 @@ $NetBSD: patch-ab,v 1.6 1998/11/12 23:36:24 frueauf Exp $
  
  install-rle:
  	cp $(RLE) $(DEST)
-@@ -114,7 +115,7 @@
+@@ -113,8 +114,8 @@
+ install-iris:
  	cp $(IRIS) $(DEST)
  
- .c:
+-.c:
 -	$(CC) $(CFLAGS) $< $(GIF_LIB) -lm $(LDFLAGS) -o $*
-+	${LIBTOOL} --mode=link $(CC) $(CFLAGS) $< $(GIF_LIB) -lm $(LDFLAGS) -L$(X_LIB_DIR) $(XLIBS) -o $*
++.c:
++	${LIBTOOL} --mode=link $(CC) $(CDEFS) ${CFLAGS} $< $(GIF_LIB) -lm $(LDFLAGS) -L$(X_LIB_DIR) $(XLIBS) -o $*
  
  uninstall-utils:
  	(cd $(DEST); rm -f $(BINARIES) $(RLE) $(IRIS) $(SCRIPTS))
