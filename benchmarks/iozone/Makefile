@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1999/03/16 09:02:27 agc Exp $
+# $NetBSD: Makefile,v 1.7 1999/06/21 09:57:03 agc Exp $
 
 DISTNAME=		iozone
 PKGNAME=		iozone-1.14b
@@ -11,7 +11,13 @@ MAINTAINER=		root@garbled.net
 NO_WRKSUBDIR=		yes
 
 do-build:
-	(cd ${WRKDIR} && ${CC} -O2 -o iozone iozone.c)
+	(cd ${WRKDIR} &&					\
+	case `uname -s` in					\
+	SunOS)							\
+		${CC} -O2 -DSYSTYPE_SYSV -o iozone iozone.c ;;	\
+	NetBSD)							\
+		${CC} -O2 -o iozone iozone.c ;;			\
+	esac)
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/iozone ${PREFIX}/bin
