@@ -1,22 +1,22 @@
-$NetBSD: patch-ab,v 1.4 1998/08/07 10:40:35 agc Exp $
+$NetBSD: patch-ab,v 1.5 1998/12/14 02:17:10 tv Exp $
 
---- Makefile.in.orig	Sun Feb 15 14:20:52 1998
-+++ Makefile.in	Sun Mar 15 23:37:10 1998
-@@ -108,7 +108,7 @@
- lib: $(LIBSUBDIRS) $(LIB_TARGET)
+--- Makefile.in.orig	Fri Dec 11 08:26:26 1998
++++ Makefile.in	Sun Dec 13 17:33:34 1998
+@@ -153,7 +153,7 @@
+ lib: $(LIBSUBDIRS) $(X11SUBDIRS) $(LIB_TARGET)
  
- wine wine.sym: $(LIBSUBDIRS) $(LIB_TARGET) $(EMUSUBDIRS) dummy
--	$(CC) -o wine $(EMUOBJS) $(LIB_TARGET) $(LDOPTIONS) $(X_LIBS) $(XPM_LIB) $(XLIB) $(LIBS)
-+	$(CC) -o wine $(EMUOBJS) -L. -lwine $(LDOPTIONS) $(X_LIBS) $(XPM_LIB) $(XLIB) $(LIBS)
+ wine wine.sym: $(LIBSUBDIRS) $(X11SUBDIRS) $(LIB_TARGET) $(EMUSUBDIRS) dummy
+-	$(CC) -o wine $(EMUOBJS) $(LIB_TARGET) $(ALT_LINK) $(LDOPTIONS) $(X_LIBS) $(XLIB) $(LIBS)
++	$(CC) -o wine $(EMUOBJS) -L. -lwine $(ALT_LINK) $(LDOPTIONS) $(X_LIBS) $(XLIB) $(LIBS)
  	nm -n wine | grep -v _compiled >wine.sym
+ 	@echo "Wine build complete."
  
- libwine.a: $(LIBOBJS)
-@@ -117,7 +117,7 @@
+@@ -163,7 +163,7 @@
  	$(RANLIB) $@
  
- libwine.so.1.0: $(LIBOBJS)
--	$(CC) -shared -Wl,-soname,libwine.so -o$@ $(LIBOBJS) $(LDOPTIONS) $(X_LIBS) $(XPM_LIB) $(XLIB) $(LIBS)
-+	${LDSHARE} -o$@ $(LIBOBJS) $(LDOPTIONS)
+ libwine.so.1.0: $(LIBOBJS) $(X11OBJS)
+-	$(CC) -shared -Wl,-soname,libwine.so -o$@ $(LIBOBJS) $(X11OBJS) $(LDOPTIONS) $(X_LIBS) $(XLIB) $(LIBS)
++	${LDSHARE} -o$@ $(LIBOBJS) $(X11OBJS) $(LDOPTIONS)
  
  install_emu: install_lib
- 	$(INSTALL_PROGRAM) wine $(bindir)/wine
+ 	[ -d $(bindir) ] || $(MKDIR) $(bindir)

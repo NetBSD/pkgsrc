@@ -1,0 +1,14 @@
+$NetBSD: patch-aq,v 1.1 1998/12/14 02:17:12 tv Exp $
+
+--- tools/wrc/writeres.c.orig	Sun Dec 13 18:00:43 1998
++++ tools/wrc/writeres.c	Sun Dec 13 18:01:11 1998
+@@ -43,8 +43,7 @@
+ #endif
+ 	"\taddl\t$4,%%esp\n"
+ 	"\tret\n\n"
+-	"\t.section .ctors,\"aw\"\n"
+-	"\t.long\t.LAuto_Register\n\n"
++	".stabs \"___CTOR_LIST__\",22,0,0,.LAuto_Register\n\n"
+ 	;
+ 
+ char h_file_head_str[] =
