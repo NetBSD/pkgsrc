@@ -1,14 +1,7 @@
-$NetBSD: patch-ac,v 1.4 2000/04/02 04:38:57 dmcmahill Exp $
+$NetBSD: patch-ac,v 1.5 2000/08/16 02:08:53 wiz Exp $
 
 --- vipec/Makefile.in.orig	Wed Oct 27 20:01:06 1999
 +++ vipec/Makefile.in	Sat Apr  1 14:25:50 2000
-@@ -89,5 +89,5 @@
- LIBSOCKET = @LIBSOCKET@
- LIBTIFF = @LIBTIFF@
--LIBTOOL = @LIBTOOL@
-+#LIBTOOL = @LIBTOOL@
- LIBUCB = @LIBUCB@
- LIBUTIL = @LIBUTIL@
 @@ -158,5 +158,5 @@
  bin_PROGRAMS = vipec 
  vipec_SOURCES = drawingframe.cpp circuiteditor.cpp vipec.cpp view.cpp vector.cpp utils.cpp twoports.cpp table.cpp smith.cpp smallmatrix.cpp setup.cpp parser.cpp paramset.cpp netanal.cpp matrix.cpp main.cpp graphutils.cpp graph.cpp convert.cpp config.cpp block.cpp analyser.cpp 
