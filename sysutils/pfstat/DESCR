@@ -1,0 +1,2 @@
+Pfstat is a small utility that collects statistics for the OpenBSD
+Packer Filter and produces graphs like mrtg, rrdtool or alike.
