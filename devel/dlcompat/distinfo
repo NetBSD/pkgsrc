@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2002/07/02 12:42:52 wiz Exp $
+$NetBSD: distinfo,v 1.4 2002/07/22 00:54:36 schmonz Exp $
 
-SHA1 (dlcompat-20020508.tar.gz) = 72a3eb537f24d4f4f7f046d7decc35a2d287ab75
-Size (dlcompat-20020508.tar.gz) = 10193 bytes
-SHA1 (patch-aa) = 9c0fb45804941b847ca3093471f1a11eefd2b0e1
+SHA1 (dlcompat-20020606.tar.gz) = 4ac0bb67d1693bb6af7d4ebf095f7ccc4feb59e2
+Size (dlcompat-20020606.tar.gz) = 8131 bytes
+SHA1 (patch-aa) = 2fbfa064dbf270f0d297efa07a0413b9e3979bd6
