@@ -1,15 +1,17 @@
-$NetBSD: patch-am,v 1.1 2001/04/05 13:57:16 wiz Exp $
+$NetBSD: patch-am,v 1.2 2004/03/29 00:50:41 dillo Exp $
 
 This patch is based on
 http://www.mit.edu/afs/athena/contrib/graphics/src/xv/patches/png/xvpng.diff
 It was edited to fit into the NetBSD Packages Collection! - HF
 
+It is also based on
+ftp://ftp.trilon.com/pub/xv/patches/longname.patch
 ---------------------------------------------------------------------------
 
 
---- xvbrowse.c.patched	Sun Jun 13 03:22:27 1999
-+++ xvbrowse.c	Sun Jun 13 03:25:38 1999
-@@ -61,6 +61,7 @@
+--- xvbrowse.c.orig	Sun Mar 21 21:27:18 2004
++++ xvbrowse.c
+@@ -61,6 +61,7 @@ typedef unsigned int mode_t;  /* file mo
  #include "bits/br_pic"
  #include "bits/br_pi"
  #include "bits/br_pic2"
@@ -17,7 +19,7 @@ It was edited to fit into the NetBSD Packages Collection! - HF
  
  #include "bits/br_trash"
  #include "bits/fcurs"
-@@ -106,7 +107,8 @@
+@@ -106,7 +107,8 @@ typedef unsigned int mode_t;  /* file mo
  #define BF_PI       31
  #define BF_PIC2     32
  #define BF_PCD      33
@@ -27,7 +29,7 @@ It was edited to fit into the NetBSD Packages Collection! - HF
  
  #define ISLOADABLE(ftyp) (ftyp!=BF_DIR  && ftyp!=BF_CHR && ftyp!=BF_BLK && \
  			  ftyp!=BF_SOCK && ftyp!=BF_FIFO) 
-@@ -543,6 +545,7 @@
+@@ -543,6 +545,7 @@ void CreateBrowse(geom, fgstr, bgstr, hi
    bfIcons[BF_PI]  = MakePix1(br->win,br_pi_bits,br_pi_width,br_pi_height);
    bfIcons[BF_PIC2]=MakePix1(br->win,br_pic2_bits,br_pic2_width,br_pic2_height);
    bfIcons[BF_PCD] = MakePix1(br->win,br_pcd_bits,br_pcd_width,br_pcd_height);
@@ -35,7 +37,15 @@ It was edited to fit into the NetBSD Packages Collection! - HF
  
  
    /* check that they all got built */
-@@ -3045,6 +3048,7 @@
+@@ -1509,6 +1512,7 @@ static void drawIcon(br, num)
+   if (StringWidth(str) > ISPACE_WIDE-6) {
+     int dotpos; 
+     strncpy(tmpstr, str, (size_t) 56);
++    tmpstr[56] = '\0';
+     dotpos = strlen(tmpstr);
+     strcat(tmpstr,"...");
+ 
+@@ -3045,6 +3049,7 @@ static void scanFile(br, bf, name)
      case RFT_PI:       bf->ftype = BF_PI;       break;
      case RFT_PIC2:     bf->ftype = BF_PIC2;     break;
      case RFT_PCD:      bf->ftype = BF_PCD;      break;
@@ -43,7 +53,7 @@ It was edited to fit into the NetBSD Packages Collection! - HF
      }
    }
  }
-@@ -3612,6 +3616,7 @@
+@@ -3612,6 +3617,7 @@ static void genIcon(br, bf)
    case RFT_PI:       strcat(str,"PI file");               break;
    case RFT_PIC2:     strcat(str,"PIC2 file");             break;
    case RFT_PCD:      strcat(str,"PhotoCD file");          break;
