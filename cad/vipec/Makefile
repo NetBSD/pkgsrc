@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/03/23 22:07:17 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.4 2000/03/28 00:09:23 dmcmahill Exp $
 #
 
 DISTNAME=	vipec-1.07
@@ -11,6 +11,10 @@ HOMEPAGE=	http://www.netfold.com/~vipec/
 DEPENDS+=	qt1-1.44:../../x11/qt1
 
 USE_X11=	yes
+
+PATH=	${X11BASE}/qt1/bin:$$PATH
+
+MAKE_ENV+=	"QTDIR=${X11BASE}/qt1"
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/vipec ${PREFIX}/bin

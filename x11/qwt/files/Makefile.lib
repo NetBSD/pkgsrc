@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.lib,v 1.1.1.1 1999/11/17 18:32:29 drochner Exp $
+# $NetBSD: Makefile.lib,v 1.2 2000/03/28 00:09:23 dmcmahill Exp $
 #
 #	Makefile rules for the Qwt Library
 #	==================================
@@ -11,7 +11,7 @@ include $(QWTDIR)/Makefile.common
 #
 LCXX	=	$(LIBTOOL) --mode=compile $(CXX)
 INCLUDES =	-I../include -I$(QTINC)
-LLD	=	$(LIBTOOL) --mode=link $(CXX) -rpath $(PREFIX)/lib \
+LLD	=	$(LIBTOOL) --mode=link $(CXX) -rpath $(QTLIB) -rpath $(PREFIX)/lib -rpath ${X11BASE}/lib \
 		-version-info 0:2
 
 #

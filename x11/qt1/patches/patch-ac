@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.1.1.1 2000/03/23 21:27:40 dmcmahill Exp $
+$NetBSD: patch-ac,v 1.2 2000/03/28 00:09:20 dmcmahill Exp $
 
 --- configs/solaris-g++-static.orig	Fri Feb 26 12:02:12 1999
-+++ configs/solaris-g++-static	Wed Mar 22 13:46:36 2000
++++ configs/solaris-g++-static	Sun Mar 26 09:45:22 2000
 @@ -1,9 +1,10 @@
  # Compiling
 -SYSCONF_CXX		= g++
@@ -16,16 +16,14 @@ $NetBSD: patch-ac,v 1.1.1.1 2000/03/23 21:27:40 dmcmahill Exp $
 +SYSCONF_CXXFLAGS_OPENGL	= -I${X11BASE}/include
  
  # Compiline YACC output
-@@ -12,18 +13,18 @@
+@@ -12,5 +13,5 @@
  # Linking with support libraries
  # X11
 -SYSCONF_LFLAGS_X11	= -L/usr/openwin/lib
 +SYSCONF_LFLAGS_X11	= -L${X11BASE}/lib
  SYSCONF_LIBS_X11	= -lX11 -lXext
  # Qt, Qt+OpenGL
- SYSCONF_LFLAGS_QT	= -L$(QTDIR)/lib
--SYSCONF_LIBS_QT		= -lqt
-+SYSCONF_LIBS_QT		= -lqt1
+@@ -19,11 +20,11 @@
  SYSCONF_LIBS_QT_OPENGL	= -lqgl
  # OpenGL
 -SYSCONF_LFLAGS_OPENGL	= 
@@ -40,13 +38,6 @@ $NetBSD: patch-ac,v 1.1.1.1 2000/03/23 21:27:40 dmcmahill Exp $
 +SYSCONF_LINK		= ${LOCALBASE}/egcs/bin/g++
  SYSCONF_LFLAGS		= 
  SYSCONF_LIBS		= 
-@@ -33,5 +34,5 @@
- 
- # Meta-object compiler
--SYSCONF_MOC		= $(QTDIR)/bin/moc
-+SYSCONF_MOC		= $(QTDIR)/bin/moc1
- 
- # Linking shared libraries
 @@ -40,5 +41,5 @@
  #   - Usually needs to incorporate $(VER_MAJ) and $(VER_MIN)
  #
