@@ -1,35 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2003/12/31 18:39:42 lha Exp $
-share/doc/gnus/info/emacs-mime
-share/doc/gnus/info/emacs-mime-1
-share/doc/gnus/info/emacs-mime-2
-share/doc/gnus/info/gnus
-share/doc/gnus/info/gnus-1
-share/doc/gnus/info/gnus-10
-share/doc/gnus/info/gnus-11
-share/doc/gnus/info/gnus-12
-share/doc/gnus/info/gnus-13
-share/doc/gnus/info/gnus-14
-share/doc/gnus/info/gnus-15
-share/doc/gnus/info/gnus-16
-share/doc/gnus/info/gnus-17
-share/doc/gnus/info/gnus-18
-share/doc/gnus/info/gnus-19
-share/doc/gnus/info/gnus-2
-share/doc/gnus/info/gnus-20
-share/doc/gnus/info/gnus-21
-share/doc/gnus/info/gnus-22
-share/doc/gnus/info/gnus-3
-share/doc/gnus/info/gnus-4
-share/doc/gnus/info/gnus-5
-share/doc/gnus/info/gnus-6
-share/doc/gnus/info/gnus-7
-share/doc/gnus/info/gnus-8
-share/doc/gnus/info/gnus-9
-share/doc/gnus/info/message
-share/doc/gnus/info/message-1
-share/doc/gnus/info/message-2
-share/doc/gnus/info/pgg
-share/doc/gnus/info/sieve
+@comment $NetBSD: PLIST,v 1.4 2004/03/07 20:09:06 seb Exp $
 share/gnus/gnus-tut.txt
 share/gnus/gnus/bar.xbm
 share/gnus/gnus/bar.xpm
