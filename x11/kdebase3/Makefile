@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2004/10/15 17:19:03 seb Exp $
+# $NetBSD: Makefile,v 1.62 2004/11/01 16:35:59 gavan Exp $
 
 DISTNAME=	kdebase-${_KDE_VERSION}
 CATEGORIES=	x11
@@ -15,6 +15,7 @@ EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 USE_BUILDLINK3=		YES
 USE_DIRS+=		xdg-1.1
 USE_PKGINSTALL=		YES
+USE_GNU_TOOLS+=		awk
 
 CONFIGURE_ARGS+=	--with-ssl-dir="${BUILDLINK_PREFIX.openssl}"
 CONFIGURE_ARGS+=	--with-ldap="${BUILDLINK_PREFIX.openldap}"
