@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.9 2004/02/09 12:03:27 seb Exp $
+$NetBSD: distinfo,v 1.10 2004/04/11 04:35:22 dmcmahill Exp $
 
 SHA1 (lcms-1.12.tar.gz) = 91c184378287df26cd8d729b1aae00b49077b9fb
 Size (lcms-1.12.tar.gz) = 567985 bytes
+SHA1 (patch-aa) = 776379ce8b7ba25986a2e13dc2390c8033755d9a
