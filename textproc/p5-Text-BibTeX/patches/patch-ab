@@ -1,0 +1,22 @@
+$NetBSD: patch-ab,v 1.1.1.1 2001/02/27 23:39:55 jtb Exp $
+
+--- btxs_support.c~	Thu Mar 23 14:09:25 2000
++++ btxs_support.c	Fri Sep 15 23:41:44 2000
+@@ -160,7 +160,7 @@
+ 
+       DBG_ACTION (2, printf ("  field=%s, value=\"%s\"\n", 
+                              field_name, text));
+-      sv_field_value = text ? newSVpv (text, 0) : &sv_undef;
++      sv_field_value = text ? newSVpv (text, 0) : &PL_sv_undef;
+    }
+ 
+    return sv_field_value;
+@@ -297,7 +297,7 @@
+    else
+    {
+       value = bt_get_text (top);
+-      sv_value = value ? newSVpv (value, 0) : &sv_undef;
++      sv_value = value ? newSVpv (value, 0) : &PL_sv_undef;
+    }
+    hv_store (entry, "value", 5, sv_value, 0);
+ 
