@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2002/04/17 04:45:09 fredb Exp $
+$NetBSD: distinfo,v 1.4 2002/04/17 18:58:51 briggs Exp $
 
 SHA1 (xisp-2.6p1.tar.gz) = 5e6f1795f20b22fd26212215b86b505e00d43b9e
 Size (xisp-2.6p1.tar.gz) = 260645 bytes
-SHA1 (patch-aa) = df706174b5f90d0f0543bf8c6e0027aee249c37e
+SHA1 (patch-aa) = 7bbf49bbb32d5d57c9e1185dd03e16ca2f14fdf6

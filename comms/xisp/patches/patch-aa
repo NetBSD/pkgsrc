@@ -1,18 +1,20 @@
-$NetBSD: patch-aa,v 1.5 2002/04/17 04:45:09 fredb Exp $
+$NetBSD: patch-aa,v 1.6 2002/04/17 18:58:52 briggs Exp $
 
---- Makefile.orig	Thu Aug 26 07:08:51 1999
-+++ Makefile
+--- Makefile.orig	Thu Aug 26 08:08:51 1999
++++ Makefile	Wed Apr 17 14:55:31 2002
 @@ -8,11 +8,11 @@
  #  Compilation/installation vars (global for all following sections) |
  #=====================================================================
  #
 -PREFIX     = /usr/local
 -X11PREFIX  = /usr/X11R6
-+#PREFIX     = /usr/local
-+X11PREFIX  = ${X11BASE}
- INCX11     = $(X11PREFIX)/include
- LIBX11     = $(X11PREFIX)/lib
+-INCX11     = $(X11PREFIX)/include
+-LIBX11     = $(X11PREFIX)/lib
 -INCFORMS   = $(X11PREFIX)/include
++#PREFIX     = /usr/local
++#X11PREFIX  = /usr/X11R6
++INCX11     = $(X11BASE)/include
++LIBX11     = $(X11BASE)/lib
 +INCFORMS   = $(X11PREFIX)/include/X11
  LIBFORMS   = $(X11PREFIX)/lib
  MODEM_DEV  = modem
