@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:14:19 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/18 14:24:36 agc Exp $
 
-MD5 (jmk-x11-fonts-3.0.tar.gz) = 1c699d69c02a306b9148d9148b6dace2
+SHA1 (jmk-x11-fonts-3.0.tar.gz) = b24d28585a9a69613499db740acb27094466e3cd
+Size (jmk-x11-fonts-3.0.tar.gz) = 624357 bytes
