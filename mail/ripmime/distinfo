@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/10/01 20:45:55 reed Exp $
+
+SHA1 (ripmime-1.3.0.4.tar.gz) = e7000b118a185ea4bbc18e56345f0cc494290d29
+Size (ripmime-1.3.0.4.tar.gz) = 96277 bytes
+SHA1 (patch-aa) = 2095916db402b732e999d1b24637d5a65862edba
