@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.4 2000/12/31 09:58:53 rh Exp $
+$NetBSD: md5,v 1.5 2001/04/06 21:55:39 rh Exp $
 
-MD5 (oaf-0.6.1.tar.gz) = d225e45e64a60716bbb29b9169272d5f
+SHA1 (oaf-0.6.5.tar.gz) = 50a78e04ceedb16591cb4f03ee63ee28c53a5b1c
