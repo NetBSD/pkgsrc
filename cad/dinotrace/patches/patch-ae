@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1 2000/07/06 12:24:31 hubertf Exp $
+
+--- Makefile.in.orig	Thu Jul  6 14:18:21 2000
++++ Makefile.in	Thu Jul  6 14:18:32 2000
+@@ -157,7 +157,7 @@
+ 
+ install: all info installdirs install-info
+ 	for p in dinotrace; do \
+-	  $(INSTALL_PROGRAM) $$p $(bindir)/$p; \
++	  $(INSTALL_PROGRAM) $$p $(bindir)/$$p; \
+ 	done
+ 	@echo ""
+ 	@echo "*** Lisp files not installed, you may want to"
