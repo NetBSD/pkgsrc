@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9520 2005/03/20 12:35:11 jmmv Exp $
+$NetBSD: CHANGES,v 1.9521 2005/03/20 14:15:21 ben Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1421,3 +1421,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated ncmpc to 0.11.1 [wiz 2005-03-19]
 	Updated tunesbrowser to 0.2.0 [jmmv 2005-03-20]
 	Updated avr-gcc to 3.3.2003.05.11nb1 [jmmv 2005-03-20]
+	Updated fprot-workstation-bin to 4.5.4 [ben 2005-03-20]
