@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/08/10 06:48:21 minskim Exp $
+$NetBSD: distinfo,v 1.2 2004/08/17 15:50:30 minskim Exp $
 
-SHA1 (moss-0.1.2.tar.gz) = 1743987723035bbf150e5d1b59b81b5863ed1ab4
-Size (moss-0.1.2.tar.gz) = 40202 bytes
-SHA1 (patch-aa) = f343abfda298951268a0f834e55a26be1f2228fc
+SHA1 (moss-0.1.8.tar.gz) = 285058af55ffd58aef52e7a005a4d3d030c92ec2
+Size (moss-0.1.8.tar.gz) = 43295 bytes
+SHA1 (patch-aa) = 4eb7c5e0d3dc5a8c47d11284017f30fd798cb54c
