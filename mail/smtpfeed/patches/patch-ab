@@ -1,0 +1,24 @@
+$NetBSD: patch-ab,v 1.1.1.1 1999/11/29 08:06:32 itojun Exp $
+
+--- configure.in-	Sun May 16 23:33:06 1999
++++ configure.in	Sun May 16 23:33:28 1999
+@@ -221,7 +221,7 @@
+ [#include <sys/types.h>
+ #include <sys/socket.h>
+ #include <netinet/in.h>
+-#include <resolv.h>], [_res_ext.nsaddr_list[0].ss_family = 1;],
++#include <resolv.h>], [_res_ext.nsaddr_list[0].__ss_family = 1;],
+ 	[AC_DEFINE(RESOLVER_KAME)
+ 	resolver=kame],
+ 	[AC_TRY_COMPILE(dnl
+--- configure-	Sun May 16 23:33:04 1999
++++ configure	Sun May 16 23:33:17 1999
+@@ -1371,7 +1371,7 @@
+ #include <netinet/in.h>
+ #include <resolv.h>
+ int main() {
+-_res_ext.nsaddr_list[0].ss_family = 1;
++_res_ext.nsaddr_list[0].__ss_family = 1;
+ ; return 0; }
+ EOF
+ if { (eval echo configure:1378: \"$ac_compile\") 1>&5; (eval $ac_compile) 2>&5; }; then
