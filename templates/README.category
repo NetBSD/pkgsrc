@@ -1,4 +1,4 @@
-<!-- $NetBSD: README.category,v 1.7 1999/12/06 23:06:45 abs Exp $ -->
+<!-- $NetBSD: README.category,v 1.8 1999/12/06 23:40:56 abs Exp $ -->
 <html>
 <head>
 <title>The NetBSD Packages Collection: %%CATEGORY%%</title>
@@ -16,8 +16,9 @@
 <p>
 %%DESCR%%
 
-<p>Here are the one-line descriptions for each of the items
-in this directory:
+<p>Here are the one-line descriptions for each of the items (
+%%NUMITEMS%%
+) in this directory:
 
 <p><hr noshade>
 <p><table>
