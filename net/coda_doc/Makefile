@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1998/10/02 14:38:59 rvb Exp $
+# $NetBSD: Makefile,v 1.4 1998/10/27 19:12:22 agc Exp $
 #
 
 DISTNAME=	coda-doc-4.6.5-3
@@ -14,12 +14,12 @@ HOMEPAGE=	http://www.coda.cs.cmu.edu/
 #NO_CONFIGURE=
 
 do-build:
-	@${ECHO} "At present, Coda documentation is distributed in html, man, ps, and ppt forms"
-	@${ECHO} "but documentation source is not available.  It should appear in a release"
-	@${ECHO} "or two."
+	@${ECHO} "At present, Coda documentation is distributed in html,"
+	@${ECHO} "man, ps, and ppt forms but documentation source is not"
+	@${ECHO} "available.  It should appear in a release or two."
 
 do-install:
-	cd ${WRKSRC}; tar cf - man | (cd ${PREFIX}; tar xvf -)
-	cd ${WRKSRC}; tar cf - doc | (cd ${PREFIX}/share; tar xvf -)
+	cd ${WRKSRC}; pax -r -w man ${PREFIX}
+	cd ${WRKSRC}; pax -r -w doc ${PREFIX}/share
 
 .include "../../mk/bsd.pkg.mk"
