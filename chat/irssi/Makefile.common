@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.2 2003/12/04 10:43:10 veego Exp $
+# $NetBSD: Makefile.common,v 1.3 2003/12/11 20:18:58 veego Exp $
 
 # Specific distribution information.
-IRSSI_VERSION=		0.8.8
+IRSSI_VERSION=		0.8.9
 IRSSI_DISTNAME=		irssi-${IRSSI_VERSION}
 IRSSI_EXTRACT_SUFX=	.tar.bz2
 IRSSI_DISTFILE=		${IRSSI_DISTNAME}${IRSSI_EXTRACT_SUFX}
