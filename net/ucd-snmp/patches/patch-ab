@@ -1,29 +1,25 @@
-$NetBSD: patch-ab,v 1.4 2000/01/23 10:41:10 itojun Exp $
---- snmplib/Makefile.in-	Fri Jan 21 05:38:31 2000
-+++ snmplib/Makefile.in	Fri Jan 21 05:39:59 2000
-@@ -42,30 +42,34 @@
- 	system.c vacm.c int64.c read_config.c 			\
- 	snmp_debug.c tools.c  snmp_logging.c			\
+$NetBSD: patch-ab,v 1.5 2000/10/13 17:55:36 kim Exp $
+
+--- snmplib/Makefile.in.orig	Sat Feb  5 06:15:42 2000
++++ snmplib/Makefile.in	Wed Oct 11 19:02:56 2000
+@@ -36,3 +36,4 @@
  	snmpv3.c snmpusm.c lcd_time.c keytools.c		\
--	scapi.c callback.c default_store.c snmp_alarm.c	
-+	scapi.c callback.c default_store.c snmp_alarm.c	\
+-	scapi.c callback.c default_store.c snmp_alarm.c	mt_support.c
++	scapi.c callback.c default_store.c snmp_alarm.c	mt_support.c \
 +	libwrap.c
  
- OBJS=	snmp_client.o mib.o parse.o snmp_api.o snmp.o 		\
- 	snmp_auth.o asn1.o md5.o 				\
- 	system.o vacm.o int64.o read_config.o 			\
- 	snmp_debug.o tools.o  snmp_logging.o			\
+@@ -43,3 +44,4 @@
  	snmpv3.o snmpusm.o lcd_time.o keytools.o		\
--	scapi.o callback.o default_store.o snmp_alarm.o	
-+	scapi.o callback.o default_store.o snmp_alarm.o	\
-+	libwrap.c
+-	scapi.o callback.o default_store.o snmp_alarm.o	mt_support.o
++	scapi.o callback.o default_store.o snmp_alarm.o	mt_support.o \
++	libwrap.o
  
- CFLAGS	 = @CFLAGS@ @SHLIB_CFLAGS@
+@@ -47,3 +49,3 @@
  CPPFLAGS = -I. -I.. -I$(srcdir) -I$(srcdir)/.. @CPPFLAGS@
 -CC	 = @CC@ $(CPPFLAGS)
 +CC	 = $(LIBTOOL) @CC@ $(CPPFLAGS)
  
- all: $(TARG)
+@@ -51,5 +53,7 @@
  
 -libsnmp.$(SHLIB_EXTENSION)$(SHLIB_VERSION):    ${OBJS}
 -	$(SHLIB_LD_CMD) libsnmp.$(SHLIB_EXTENSION)$(SHLIB_VERSION) ${OBJS}
@@ -34,12 +30,8 @@ $NetBSD: patch-ab,v 1.4 2000/01/23 10:41:10 itojun Exp $
 +#	$(SHLIB_LD_CMD) libsnmp.$(SHLIB_EXTENSION)$(SHLIB_VERSION) ${OBJS}
 +#	$(RANLIB) libsnmp.$(SHLIB_EXTENSION)$(SHLIB_VERSION)
  
- installdirs:
- 	@$(SHELL) $(srcdir)/../mkinstalldirs $(libdir) $(includedir)
- 
+@@ -59,3 +63,3 @@
  install:	$(TARG) installdirs
 -	@for i in $(TARG) ; do $(INSTALL) $$i $(libdir) ; $(RANLIB) $(libdir)/$$i ; echo "install:  installed $$i in $(libdir)" ; done
 +	@for i in $(TARG) ; do $(LIBTOOL) $(INSTALL) $$i $(libdir) ; $(RANLIB) $(libdir)/$$i ; echo "install:  installed $$i in $(libdir)" ; done
  	@for i in $(INSTALLHEADERS) ; do $(INSTALL) $(srcdir)/$$i $(includedir) ; echo "install:  installed $$i in $(includedir)" ; done
- 	$(SHLIB_LDCONFIG_CMD)
- 
