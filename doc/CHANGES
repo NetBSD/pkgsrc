@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2710 2003/07/09 21:00:18 jmmv Exp $
+$NetBSD: CHANGES,v 1.2711 2003/07/09 21:15:43 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2710,3 +2710,6 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated ircII to 20030709 [mrg 2003-07-09]
 	Updated bozohttpd to 20030622 [mrg 2003-07-09]
 	Updated gaim to 0.64nb2 [jmmv 2003-07-09]
+	Updated icewm to 1.2.9 [jmmv 2003-07-09]
+	Updated icewm-gnome to 1.2.9 [jmmv 2003-07-09]
+	Updated icewm-imlib to 1.2.9 [jmmv 2003-07-09]
