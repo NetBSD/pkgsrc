@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/06/30 13:35:54 wennmach Exp $
+# $NetBSD: Makefile,v 1.3 2000/06/30 15:03:11 wennmach Exp $
 #
 
 DISTNAME=		arla-0.33
@@ -105,22 +105,8 @@ post-install:
 	@${SED} -e 's|@PREFIX@|${PREFIX}|g'                                   \
 		< ${FILESDIR}/lkm.conf                                        \
 		> ${PREFIX}/share/examples/arla/lkm.conf
-	@if ${GREP} xfs_mod /etc/lkm.conf 2>/dev/null 1>&2 ; then             \
-		${ECHO} "Not changing /etc/lkm.conf";                         \
-	else                                                                  \
-		${ECHO} "Appending to /etc/lkm.conf";                         \
-		${CAT} ${PREFIX}/share/examples/arla/lkm.conf                 \
-		>> /etc/lkm.conf;                                             \
-	fi
 	@${INSTALL} -c -o root -g wheel -m 444                                \
-		 ${FILESDIR}/services ${PREFIX}/share/examples/arla
-	@if ${GREP} afs3-bos /etc/services 2>/dev/null 1>&2 ; then            \
-		${ECHO} "Not changing /etc/services";                         \
-	else                                                                  \
-		${ECHO} "Appending to /etc/services";                         \
-		${CAT} ${PREFIX}/share/examples/arla/services                 \
-			>> /etc/services;                                     \
-	fi
+		${FILESDIR}/services ${PREFIX}/share/examples/arla
 	@${INSTALL} -c -o root -g wheel -m 444                                \
 		 ${FILESDIR}/fstab ${PREFIX}/share/examples/arla
 	@${SED} -e 's|@PREFIX@|${PREFIX}|' ${FILESDIR}/arlad.sh               \
