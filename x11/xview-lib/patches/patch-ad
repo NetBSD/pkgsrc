@@ -291,7 +291,7 @@ diff -rc ../old/xview3.2p1-X11R6/lib/libxview/file_chooser/file_list.c ./lib/lib
   #include <xview_private/flist_impl.h>
   #include <xview_private/portable.h>
   
-+ #ifdef __FreeBSD__
++ #if defined(__FreeBSD__) || defined(__NetBSD__)
 + #include <regex.h>
 + #endif
   
@@ -313,7 +313,7 @@ diff -rc ../old/xview3.2p1-X11R6/lib/libxview/file_chooser/file_list.c ./lib/lib
       if (status == DESTROY_CLEANUP) {
   	xv_free_ref( private->directory );
   	xv_free_ref( private->regex_pattern );
-+ #ifndef __FreeBSD__
++ #if !defined(__FreeBSD__) && !defined(__NetBSD__)
   	xv_free_ref( private->regex_compile );
 + #else
 + 	xv_free_regex_t( (regex_t *)private->regex_compile );
@@ -341,7 +341,7 @@ diff -rc ../old/xview3.2p1-X11R6/lib/libxview/file_chooser/file_list.c ./lib/lib
   static int 	step();
   #endif /* SVR4 */
   
-! #ifndef __FreeBSD__
+! #if !defined(__FreeBSD__) && !defined(__NetBSD__)
   #include <regexp.h>
 + #endif
   
@@ -350,7 +350,7 @@ diff -rc ../old/xview3.2p1-X11R6/lib/libxview/file_chooser/file_list.c ./lib/lib
   flist_compile_regex( private )
        File_list_private *private;
   {
-+ #ifndef __FreeBSD__
++ #if !defined(__FreeBSD__) && !defined(__NetBSD__)
       char compile_buf[MAXPATHLEN+1];
       char *end_ptr;
       size_t num_bytes;
@@ -380,7 +380,7 @@ diff -rc ../old/xview3.2p1-X11R6/lib/libxview/file_chooser/file_list.c ./lib/lib
        char *s;
        File_list_private *private;
   {
-+ #ifndef __FreeBSD__
++ #if !defined(__FreeBSD__) && !defined(__NetBSD__)
       return step(s, private->regex_compile);
 + #else
 +     return !regexec((regex_t *)private->regex_compile, s, 0, NULL, 0);
@@ -648,7 +648,7 @@ diff -rc ../old/xview3.2p1-X11R6/lib/libxview/io_stream/file_strms.c ./lib/libxv
   
   #define GetFISData struct xv_file_input_stream_data *data = (struct xv_file_input_stream_data*) in->client_data
   
-+ #ifndef __FreeBSD__
++ #if !defined(__FreeBSD__) && !defined(__NetBSD__)
   static struct xv_file_input_stream_data {
 + #else
 + struct xv_file_input_stream_data {
@@ -662,7 +662,7 @@ diff -rc ../old/xview3.2p1-X11R6/lib/libxview/io_stream/file_strms.c ./lib/libxv
   
   #define GetFOSData struct xv_file_output_stream_data *data = (struct xv_file_output_stream_data*) out->client_data
   
-+ #ifndef __FreeBSD__
++ #if !defined(__FreeBSD__) && !defined(__NetBSD__)
   static struct xv_file_output_stream_data {
 + #else
 + struct xv_file_output_stream_data {
@@ -679,7 +679,7 @@ diff -rc ../old/xview3.2p1-X11R6/lib/libxview/io_stream/othr_strms.c ./lib/libxv
   
   #define GetFCSData struct xv_filter_comments_stream_data *data = (struct xv_filter_comments_stream_data*) in->client_data
   
-+ #ifndef __FreeBSD__
++ #if !defined(__FreeBSD__) && !defined(__NetBSD__)
   static struct xv_filter_comments_stream_data {
 + #else
 + struct xv_filter_comments_stream_data {
@@ -696,7 +696,7 @@ diff -rc ../old/xview3.2p1-X11R6/lib/libxview/io_stream/str_strms.c ./lib/libxvi
   
   #define GetSISData struct string_input_stream_data	*data = (struct string_input_stream_data*) in->client_data
   
-+ #ifndef __FreeBSD__
++ #if !defined(__FreeBSD__) && !defined(__NetBSD__)
   static struct string_input_stream_data {
 + #else
 + struct string_input_stream_data {
@@ -710,7 +710,7 @@ diff -rc ../old/xview3.2p1-X11R6/lib/libxview/io_stream/str_strms.c ./lib/libxvi
   
   #define GetSOSData struct string_output_stream_data *data = (struct string_output_stream_data*) out->client_data
   
-+ #ifndef __FreeBSD__
++ #if !defined(__FreeBSD__) && !defined(__NetBSD__)
   static struct string_output_stream_data {
 + #else
 + struct string_output_stream_data {
@@ -1192,7 +1192,7 @@ diff -rc ../old/xview3.2p1-X11R6/lib/libxview/notify/ntfyclient.c ./lib/libxview
   #include <xview_private/ntfy.h>
   #include <xview_private/ndis.h>	/* For ndis_default_prioritizer */
   #include <xview_private/ndet.h>	
-+ #ifndef __FreeBSD__
++ #if !defined(__FreeBSD__) && !defined(__NetBSD__)
   #include <search.h>
 + #endif
   #include <xview_private/portable.h>
@@ -1204,7 +1204,7 @@ diff -rc ../old/xview3.2p1-X11R6/lib/libxview/notify/ntfyclient.c ./lib/libxview
       if (*client_latest && (*client_latest)->nclient == nclient)
   	return (*client_latest);
   
-+ #ifndef __FreeBSD__
++ #if !defined(__FreeBSD__) && !defined(__NetBSD__)
       if(( client_list == ndet_clients ) && ndet_clients ) {
          dummy_client.nclient = nclient;
          /* Find client */
@@ -1233,7 +1233,7 @@ diff -rc ../old/xview3.2p1-X11R6/lib/libxview/notify/ntfyclient.c ./lib/libxview
       register NTFY_CLIENT *client;
       static NTFY_CLIENT *new_client;
   
-+ #ifndef __FreeBSD__
++ #if !defined(__FreeBSD__) && !defined(__NetBSD__)
       if( client_list == &ndet_clients ) {
           if( new_client  == NTFY_CLIENT_NULL ) {
               if ((new_client = ntfy_alloc_client()) == NTFY_CLIENT_NULL)
@@ -1262,7 +1262,7 @@ diff -rc ../old/xview3.2p1-X11R6/lib/libxview/notify/ntfyclient.c ./lib/libxview
   	ntfy_remove_condition(client, condition, who);
       }
       /* Remove & free client from client_list */
-+ #ifndef __FreeBSD__
++ #if !defined(__FreeBSD__) && !defined(__NetBSD__)
       if( client_list == &ndet_clients )
           tdelete( client, ndet_root, ndet_compar );
 + #endif
@@ -1797,7 +1797,7 @@ diff -rc ../old/xview3.2p1-X11R6/lib/libxview/textsw/txt_again.c ./lib/libxview/
    * Following is stolen from 3.2ALPHA sprintf(str, fmt, va_alist) SIDE_EFFECT:
    * TXTSW_STRING_FREE(ptr_to_string) is modified by this routine.
    */
-+ #ifndef __FreeBSD__
++ #if !defined(__FreeBSD__) && !defined(__NetBSD__)
   #ifndef SVR4
   
   /* VARARGS2 */
@@ -1841,7 +1841,7 @@ diff -rc ../old/xview3.2p1-X11R6/lib/libxview/textsw/txt_again.c ./lib/libxview/
    */
   /* VARARGS2 */
   
-+ #ifndef __FreeBSD__
++ #if !defined(__FreeBSD__) && !defined(__NetBSD__)
 + 
   static int
   #ifdef ANSI_FUNC_PROTO
@@ -1930,7 +1930,7 @@ diff -rc ../old/xview3.2p1-X11R6/lib/libxview/textsw/txt_e_menu.c ./lib/libxview
   	            goto found;
   	}
   
-! #ifdef __FreeBSD__
+! #if defined(__FreeBSD__) || defined(__NetBSD__)
   	/* Gee, still?... We will try the old fashioned way */
           (void) sprintf(tmp, "%s/lib/.%s",
   		       filename, EXTRASMENU);

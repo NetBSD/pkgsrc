@@ -1,25 +1,19 @@
-# New ports collection makefile for:    xview-lib
-# Version required:     3.2p1-X11R6
-# Date created:         22 November 1994
-# Whom:                 ljo
-#
-# $Id: Makefile,v 1.1.1.1 1998/07/03 21:02:03 tron Exp $
+# $NetBSD: Makefile,v 1.2 1998/07/03 22:58:34 tron Exp $
+# $FreeBSD Id: Makefile,v 1.13 1997/07/17 15:13:03 max Exp
 #
 
-DISTNAME=	xview-lib
+DISTNAME=	xview3.2p1-X11R6
 PKGNAME=	xview-lib-3.2.1
 CATEGORIES=	x11
+MASTER_SITES=	${MASTER_SITE_LOCAL}
 
-DEPENDS=        ${PORTSDIR}/x11/xview-config
+MAINTAINER=	packages@netbsd.org
 
-WRKSRC=      	${PORTSDIR}/x11/xview-config/work/xview3.2p1-X11R6
+DEPENDS=        xview-config-3.2.1:../../x11/xview-config
+
 USE_IMAKE=	yes
-NO_WRKDIR=      yes
-
-do-fetch:
-do-extract:	# don't use NO_EXTRACT, dependency won't work
 
 post-install:
-	${LDCONFIG} -m ${PREFIX}/lib
+	${LDCONFIG} || ${TRUE}
 
-.include <bsd.port.mk>
+.include <../../mk/bsd.pkg.mk>
