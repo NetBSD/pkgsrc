@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.2 2003/11/27 17:27:29 abs Exp $
+$NetBSD: patch-ab,v 1.3 2004/01/03 14:18:57 mrg Exp $
 
---- Xvnc/config/cf/NetBSD.cf.orig	2000-06-11 13:00:51.000000000 +0100
-+++ Xvnc/config/cf/NetBSD.cf
-@@ -2,9 +2,37 @@ XCOMM platform:  $XConsortium: NetBSD.cf
+--- Xvnc/config/cf/NetBSD.cf.orig	2000-06-11 12:00:51.000000000 +0000
++++ Xvnc/config/cf/NetBSD.cf	2004-01-03 11:41:23.000000000 +0000
+@@ -2,9 +2,37 @@
  
  
  
@@ -41,7 +41,7 @@ $NetBSD: patch-ab,v 1.2 2003/11/27 17:27:29 abs Exp $
  #ifndef OSName
  #define OSName			DefaultOSName OSBinaryType
  #endif
-@@ -14,24 +42,34 @@ XCOMM platform:  $XFree86: xc/config/cf/
+@@ -14,24 +42,34 @@
  #ifndef OSMinorVersion
  #define OSMinorVersion		DefaultOSMinorVersion
  #endif
@@ -78,7 +78,7 @@ $NetBSD: patch-ab,v 1.2 2003/11/27 17:27:29 abs Exp $
  #define HasNdbm         	YES
  #define HasPutenv       	YES
  #define HasSnprintf		YES
-@@ -61,7 +99,20 @@ XCOMM operating system:  OSName (OSMajor
+@@ -61,7 +99,20 @@
       (OSMajorVersion == 1 && OSMinorVersion == 2 && OSTeenyVersion < 2))
  #  define HasDlsymBug		YES
  #endif
@@ -100,15 +100,19 @@ $NetBSD: patch-ab,v 1.2 2003/11/27 17:27:29 abs Exp $
  #if (!(OSMajorVersion == 0 || \
         (OSMajorVersion == 1 && OSMinorVersion < 2))) 
  #define HasMkstemp		YES
-@@ -85,6 +136,7 @@ XCOMM operating system:  OSName (OSMajor
+@@ -85,9 +136,10 @@
  #define NeedVarargsPrototypes	YES
  #define NeedWidePrototypes	NO
  
 +#define HasMktemp		NO
  #define MkdirHierCmd		mkdir -p
  
- #define CppCmd          	/usr/libexec/cpp
-@@ -96,13 +148,15 @@ XCOMM operating system:  OSName (OSMajor
+-#define CppCmd          	/usr/libexec/cpp
++#define CppCmd          	/usr/bin/cpp
+ #define StandardCppDefines	-traditional
+ #define PreProcessCmd   	CppCmd
+ #define PreIncDir		/usr/include
+@@ -96,13 +148,15 @@
  #define CcCmd 			gcc
  #if defined(UseInstalled) && (!defined(XF86LinkKit) || !XF86LinkKit)
  #define DefaultCCOptions 	/**/
@@ -125,7 +129,7 @@ $NetBSD: patch-ab,v 1.2 2003/11/27 17:27:29 abs Exp $
  /* UseElfFormat defaults to YES if __ELF__ set */
  #ifndef UseElfFormat
  # ifdef __ELF__
-@@ -114,60 +168,234 @@ XCOMM operating system:  OSName (OSMajor
+@@ -114,60 +168,234 @@
  #endif
  
  /*
@@ -382,7 +386,7 @@ $NetBSD: patch-ab,v 1.2 2003/11/27 17:27:29 abs Exp $
  #endif
  
  #define StandardDefines	-DCSRG_BASED
-@@ -177,7 +405,18 @@ XCOMM operating system:  OSName (OSMajor
+@@ -177,7 +405,18 @@
  #define ExtraLibraries		/**/
  #endif
  #ifndef UseGnuMalloc
@@ -401,7 +405,7 @@ $NetBSD: patch-ab,v 1.2 2003/11/27 17:27:29 abs Exp $
  #endif
  #ifndef GnuMallocLibrary
  #define GnuMallocLibrary	-lgnumalloc
-@@ -191,6 +430,13 @@ XCOMM operating system:  OSName (OSMajor
+@@ -191,6 +430,13 @@
  #endif
  #endif 
  
@@ -415,7 +419,7 @@ $NetBSD: patch-ab,v 1.2 2003/11/27 17:27:29 abs Exp $
  #define	AdmDir			/var/log
  
  /*
-@@ -200,8 +446,17 @@ XCOMM operating system:  OSName (OSMajor
+@@ -200,8 +446,17 @@
  #define StripInstalledPrograms	YES
  #define CompressAllFonts	YES
  #define GzipFontCompression	YES
@@ -435,7 +439,7 @@ $NetBSD: patch-ab,v 1.2 2003/11/27 17:27:29 abs Exp $
  
  #ifdef  InstallCmd
  # undef  InstallCmd
-@@ -212,11 +467,23 @@ XCOMM operating system:  OSName (OSMajor
+@@ -212,11 +467,23 @@
  # define ExtraFilesToClean 	*.core
  #endif
  
@@ -461,7 +465,7 @@ $NetBSD: patch-ab,v 1.2 2003/11/27 17:27:29 abs Exp $
  #define	EqnCmd 			eqn -Tps
  #define TroffCmd        	groff -Tps
  
-@@ -264,7 +531,10 @@ install.man::                           
+@@ -264,7 +531,10 @@
  	-@if [ -f file.0 ]; \						@@\
  	then \								@@\
  	$(INSTALL) -c $(INSTMANFLAGS) file.0 $(DESTDIR)destdir/dest.0; \@@\
@@ -473,7 +477,7 @@ $NetBSD: patch-ab,v 1.2 2003/11/27 17:27:29 abs Exp $
  
  #define InstallGenManPageLong(file,destdir,dest,suffix)			@@\
  	InstallManPageLong(file,destdir,dest)
-@@ -281,7 +551,16 @@ install.man:: 								@@\
+@@ -281,7 +551,16 @@
  	done
  
  #define InstallMultipleMan(list,dest)                                   @@\
@@ -491,7 +495,7 @@ $NetBSD: patch-ab,v 1.2 2003/11/27 17:27:29 abs Exp $
  
  #define InstallManPageAliases(file,destdir,aliases)                     @@\
  install.man:: 								@@\
-@@ -299,13 +578,10 @@ install.man:: 								@@\
+@@ -299,13 +578,10 @@
  /*
   * Shared libraries supported starting in 1.0 on a.out platforms,
   * and on all ELF platforms.
@@ -507,7 +511,7 @@ $NetBSD: patch-ab,v 1.2 2003/11/27 17:27:29 abs Exp $
  # ifndef HasSharedLibraries
  # define HasSharedLibraries	YES
  # endif
-@@ -327,51 +603,179 @@ install.man:: 								@@\
+@@ -327,51 +603,179 @@
  #include <bsdLib.rules>
  #endif /* HasSharedLibraries */
  
