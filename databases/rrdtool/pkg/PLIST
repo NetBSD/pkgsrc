@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2000/06/27 01:32:14 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.6 2000/06/30 15:57:06 hubertf Exp $
 bin/rrdcgi
 bin/rrdtool
 bin/trytime
@@ -127,6 +127,3 @@ share/rrdtool/lib/perl/auto/RRDs/RRDs.so
 @dirrm share/doc/rrdtool
 @dirrm lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/RRDs
 @dirrm lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/RRDp
-@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto
-@dirrm lib/perl5/site_perl
-@dirrm lib/perl5/man/man3
