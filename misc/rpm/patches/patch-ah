@@ -1,0 +1,11 @@
+--- configure.orig	Wed May 27 10:50:18 1998
++++ configure	Sat Jul  4 06:17:46 1998
+@@ -640,7 +640,7 @@
+   program_prefix=${target_alias}-
+ 
+ 
+-RPMCONFIGDIR='$(libdir)'
++RPMCONFIGDIR='$(datadir)/share/misc'
+ 
+ # Extract the first word of "gcc", so it can be a program name with args.
+ set dummy gcc; ac_word=$2
