@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/02/16 14:38:20 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2001/12/19 19:45:06 wiz Exp $
 
 DISTNAME=	chkpt-1.7.1
 CATEGORIES=	devel
@@ -10,5 +10,6 @@ MAINTAINER=	wennmach@netbsd.org
 COMMENT=	User-level checkpointing library
 
 HAS_CONFIGURE=	yes
+CONFIGURE_ENV+=	PREFIX="${PREFIX}"
 
 .include "../../mk/bsd.pkg.mk"
