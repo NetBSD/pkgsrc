@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.2 2001/10/09 19:16:20 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.3 2001/10/09 19:37:11 jlam Exp $
 #
 # This Makefile fragment is included by packages that use libmcrypt.
 #
@@ -24,6 +24,8 @@ EVAL_PREFIX+=			BUILDLINK_PREFIX.libmcrypt=libmcrypt
 BUILDLINK_PREFIX.libmcrypt_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.libmcrypt=	include/mcrypt.h
 BUILDLINK_FILES.libmcrypt+=	lib/libmcrypt.*
+
+.include "../../devel/libtool/buildlink.mk"
 
 BUILDLINK_TARGETS.libmcrypt=	libmcrypt-buildlink
 BUILDLINK_TARGETS.libmcrypt+=	libmcrypt-buildlink-config-wrapper
