@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2004/02/08 04:03:15 jlam Exp $
+# $NetBSD: Makefile,v 1.30 2004/04/21 04:58:19 snj Exp $
 
 DISTNAME=		elm2.5.5
 PKGREVISION=		2
@@ -15,7 +15,7 @@ CONFLICTS+=		elm-me-[0-9]*
 
 DEPENDS+=		metamail>=2.7:../../mail/metamail
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 HAS_CONFIGURE=		YES
 CONFIGURE_SCRIPT=	./Configure
 CONFIGURE_ARGS+=	-d
@@ -31,5 +31,5 @@ pre-configure:
 	${MV} ${WRKSRC}/nls/LANGS ${WRKSRC}/nls/LANGS.tmpl
 	${SED} -e 's:__PREFIX:'${PREFIX}':g' < ${WRKSRC}/nls/LANGS.tmpl > ${WRKSRC}/nls/LANGS
 
-.include "../../devel/gettext-lib/buildlink2.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
