@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/05/09 20:44:04 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2000/05/10 18:43:14 jlam Exp $
 
 DISTNAME=		boost_all
 PKGNAME=		boost-1.14.1
@@ -10,7 +10,7 @@ MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://www.boost.org/
 
 DIST_SUBDIR=		${PKGNAME}
-EXTRACT_CMD=		${LOCALBASE}/bin/unzip -uLa ${DOWNLOADED_DISTFILE}
+EXTRACT_CMD=		${LOCALBASE}/bin/unzip -aaLu ${DOWNLOADED_DISTFILE}
 NO_WRKSUBDIR=		# defined
 
 NO_CONFIGURE=		# defined
@@ -18,6 +18,11 @@ NO_BUILD=		# defined
 
 BOOSTDIR=		${PREFIX}/include/boost
 HTMLDOCDIR=		${PREFIX}/share/doc/html/boost
+
+post-extract:
+	cd ${WRKSRC}; ${LOCALBASE}/bin/unzip -aCLo \
+		${_DISTDIR}/${DISTNAME}${EXTRACT_SUFX} \
+		*.gif */*.jpg */*/*.gif */*/*.jpg
 
 do-install:
 	${INSTALL_DATA_DIR} ${BOOSTDIR}
@@ -35,7 +40,8 @@ do-install:
 	${INSTALL_DATA_DIR} ${HTMLDOCDIR}/people
 
 	cd ${WRKSRC}; ${INSTALL_DATA} *.htm ${HTMLDOCDIR}
-	cd ${WRKSRC}/libs; for file in */*.cpp */*.gif */*.htm */*.jpg; do \
+	cd ${WRKSRC}/libs; \
+	for file in */*.cpp */*.gif */*.htm */*.html */*.jpg; do \
 		${INSTALL_DATA} $${file} ${HTMLDOCDIR}/libs/$${file}; \
 	done
 	cd ${WRKSRC}/people; ${INSTALL_DATA} * ${HTMLDOCDIR}/people
