@@ -1,30 +1,49 @@
-$NetBSD: patch-ae,v 1.1.1.1 1999/10/01 11:23:15 drochner Exp $
---- src/exec/dpexec/loader.c.orig	Sat Jun  5 22:25:38 1999
-+++ src/exec/dpexec/loader.c	Mon Sep 27 00:27:49 1999
-@@ -85,7 +85,7 @@
+$NetBSD: patch-ae,v 1.2 2002/02/05 22:23:32 drochner Exp $
+
+--- src/exec/dpexec/loader.c.orig	Mon May 21 07:06:58 2001
++++ src/exec/dpexec/loader.c	Tue Feb  5 13:22:41 2002
+@@ -38,21 +38,19 @@
+ #include <stdio.h>
+ #include <stdlib.h>
+ 
+-#if defined(HAVE_SYS_ERRNO_H)
+-#include <sys/errno.h>
+-#endif
+-
+ #if defined(HAVE_ERRNO_H)
+ #include <errno.h>
++#elif defined(HAVE_SYS_ERRNO_H)
++#include <sys/errno.h>
+ #endif
+ 
++#if !defined(HAVE_SYS_ERRLIST)
+ #if defined(HAVE__SYS_ERRLIST) 
+ #define sys_errlist _sys_errlist
+-#endif
+-
+-#if ! (defined(HAVE_SYS_ERRLIST) || defined(HAVE__SYS_ERRLIST))
++#else
+ extern char *sys_errlist[];
+ #endif
++#endif
+ 
+ 
+ #include <sys/stat.h> 
+@@ -88,7 +86,7 @@
  #endif /* hp700 */
  
  
--#if defined(sun4) || defined(solaris) || defined(sgi) || defined(alphax) || defined(aviion) || defined(linux) || defined(cygwin) || defined(freebsd)
-+#if defined(sun4) || defined(solaris) || defined(sgi) || defined(alphax) || defined(aviion) || defined(linux) || defined(cygwin) || defined(freebsd) || defined(__NetBSD__)
+-#if defined(sun4) || defined(solaris) || defined(sgi) || defined(alphax) || defined(aviion) || defined(linux) || defined(cygwin) || defined(freebsd) || defined(macos)
++#if defined(sun4) || defined(solaris) || defined(sgi) || defined(alphax) || defined(aviion) || defined(linux) || defined(cygwin) || defined(freebsd) || defined(macos) || defined(__NetBSD__)
  
  #include <dlfcn.h>
  typedef void *Handle;
-@@ -574,7 +574,7 @@
+@@ -571,7 +569,7 @@
  #endif  /* hp700 */
  
  
--#if defined(sun4) || defined(solaris) || defined(sgi) || defined(alphax) || defined(aviion) || defined(linux) || defined(cygwin) || defined(freebsd)
-+#if defined(sun4) || defined(solaris) || defined(sgi) || defined(alphax) || defined(aviion) || defined(linux) || defined(cygwin) || defined(freebsd) || defined(__NetBSD__)
+-#if defined(sun4) || defined(solaris) || defined(sgi) || defined(alphax) || defined(aviion) || defined(linux) || defined(cygwin) || defined(freebsd) || defined(macos)
++#if defined(sun4) || defined(solaris) || defined(sgi) || defined(alphax) || defined(aviion) || defined(linux) || defined(cygwin) || defined(freebsd) || defined(macos) || defined(__NetBSD__)
  
  
  #define __ROUTINES_DEF
-@@ -852,7 +852,7 @@
-     return ERROR;
- }
- 
--Error DXUnloadObjFile(char *fname)
-+Error DXUnloadObjFile(char *fname, char *envvar)
- {
-     /* the unload routine needs the entry point address, which we
-      * wouldn't need to save unless this is an important function.

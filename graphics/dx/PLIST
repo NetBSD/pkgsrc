@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:50:29 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/05 22:23:32 drochner Exp $
 bin/dx
 dx/lib_netbsd/arch.mak
 dx/lib_netbsd/libDXlite.a
@@ -21,7 +21,9 @@ dx/bin_netbsd/tutor
 dx/bin_netbsd/builder
 dx/bin_netbsd/startupui
 dx/ui/icon50.dat
+dx/ui/icon50.xpm
 dx/ui/logo.dat
+dx/ui/logo.xpm
 dx/ui/ui.mdf
 dx/ui/Basic2D.cfg
 dx/ui/Basic2D.net
@@ -1802,13 +1804,6 @@ dx/html/pages/progu341.htm
 dx/html/pages/progu342.htm
 dx/html/pages/progu343.htm
 dx/html/pages/progu344.htm
-dx/html/pages/progu345.htm
-dx/html/pages/progu346.htm
-dx/html/pages/progu347.htm
-dx/html/pages/progu348.htm
-dx/html/pages/progu349.htm
-dx/html/pages/progu350.htm
-dx/html/pages/progu351.htm
 dx/html/pages/qikgu002.htm
 dx/html/pages/qikgu003.htm
 dx/html/pages/qikgu004.htm
@@ -2113,7 +2108,6 @@ dx/html/images/datdpnd.gif
 dx/html/images/dialint.gif
 dx/html/images/dinhd.gif
 dx/html/images/dxicon8.gif
-dx/html/images/dxlogo.gif
 dx/html/images/example1.gif
 dx/html/images/excutgrp.gif
 dx/html/images/exticon.gif
@@ -2150,8 +2144,6 @@ dx/html/images/map2plan.gif
 dx/html/images/mapdform.gif
 dx/html/images/matpa1.gif
 dx/html/images/matpa2.gif
-dx/html/images/matpa3.gif
-dx/html/images/matpa4.gif
 dx/html/images/modbuild.gif
 dx/html/images/navigate.gif
 dx/html/images/opendb.gif
@@ -2181,7 +2173,6 @@ dx/html/images/skwdgrid.gif
 dx/html/images/slidint.gif
 dx/html/images/startup.gif
 dx/html/images/stepint.gif
-dx/html/images/strgint.gif
 dx/html/images/strngint.gif
 dx/html/images/strtsrv.gif
 dx/html/images/strtsrvo.gif
