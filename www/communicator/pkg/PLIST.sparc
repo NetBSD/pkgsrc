@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST.sparc,v 1.2 1999/04/17 02:42:17 jlam Exp $
-bin/communicator-4.51_nis
+@comment $NetBSD: PLIST.sparc,v 1.3 1999/05/25 01:34:24 jlam Exp $
+bin/communicator-${NS_VERS}_nis
 bin/netscape_nis
-lib/netscape/communicator-4.51/netscape_nis
-lib/netscape/communicator-4.51/libjsd.so.1.0
-lib/netscape/communicator-4.51/dynfonts/libTrueDoc.so
-lib/netscape/communicator-4.51/plugins/libnullplugin.so
-@dirrm lib/netscape/communicator-4.51/dynfonts
+lib/netscape/communicator-${NS_VERS}/netscape_nis
+lib/netscape/communicator-${NS_VERS}/libjsd.so.1.0
+lib/netscape/communicator-${NS_VERS}/dynfonts/libTrueDoc.so
+lib/netscape/communicator-${NS_VERS}/plugins/libnullplugin.so
+@dirrm lib/netscape/communicator-${NS_VERS}/dynfonts
