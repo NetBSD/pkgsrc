@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7426 2004/10/14 04:01:41 grant Exp $
+$NetBSD: CHANGES,v 1.7427 2004/10/14 09:45:30 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4709,3 +4709,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated biew to 5.6.2 [ben 2004-10-13]
 	Updated ccache to 2.4 [xtraeme 2004-10-14]
 	Updated gtkhtml30 to 3.0.10nb2 [grant 2004-10-14]
+	Updated gaim to 1.0.1 [jmmv 2004-10-14]
