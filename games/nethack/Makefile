@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.1 1998/08/29 12:55:17 garbled Exp $
+# $NetBSD: Makefile,v 1.2 1998/11/12 23:34:31 frueauf Exp $
 
 DISTNAME=	nethack-3.2.2
-PKGNAME=	nethack-3.2.2
 CATEGORIES=	games x11
 MASTER_SITES=	# empty
 DISTFILES=	# empty

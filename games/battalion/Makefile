@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 1998/09/30 20:03:18 tron Exp $
+# $NetBSD: Makefile,v 1.10 1998/11/12 23:34:30 frueauf Exp $
 #
 
 DISTNAME=	battalion
@@ -8,12 +8,12 @@ CATEGORIES=	games x11
 MASTER_SITES=	http://www.evl.uic.edu/aej/
 DISTFILES=	battalionSource1.4.tar.Z battalionSUN4.tar.gz
 
-NOT_FOR_ARCHS=	alpha	# relies on Mesa (gcc)
-
 MAINTAINER=	root@garbled.net
 HOMEPAGE=	http://www.evl.uic.edu/aej/AndyBattalion.html
 
 DEPENDS+=	Mesa-3.0:../../graphics/Mesa
+
+NOT_FOR_ARCHS=	alpha	# relies on Mesa (gcc)
 
 EXTRACT_ONLY=	battalionSource1.4.tar.Z
 USE_X11=	yes
