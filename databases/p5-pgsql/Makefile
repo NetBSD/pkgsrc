@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/08/27 10:37:02 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2000/08/29 20:48:12 jlam Exp $
 #
 
 DISTNAME=	pgsql_perl5-1.8.1
@@ -16,7 +16,11 @@ PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/Pg/.packlist
 
 MAKE_ENV+=	POSTGRES_HOME="${PREFIX}"
 
+# Until the source catches up to the current Perl API, we need PERL_POLLUTE
+# to look like an older perl.
+MAKE_PARAMS=	DEFINE="-DPERL_POLLUTE=1"
+
 do-configure:
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
+	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL ${MAKE_PARAMS}
 
 .include "../../mk/bsd.pkg.mk"
