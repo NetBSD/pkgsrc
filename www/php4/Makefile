@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2001/10/16 12:44:16 tron Exp $
+# $NetBSD: Makefile,v 1.16 2001/10/20 17:46:50 jlam Exp $
 
 .include "Makefile.php"
 
@@ -28,13 +28,14 @@ FILES_SUBST+=		CP=${CP:Q}
 FILES_SUBST+=		RM=${RM:Q}
 FILES_SUBST_SED=	${FILES_SUBST:S/=/@!/:S/$/!g/:S/^/ -e s!@/}
 
-# On NetBSD, we need to link libgcc.a whole-archive so that certain symbols
-# from the C++ implementation (__get_eh_context, etc.) referenced by DSOs
-# written in C++ will resolve correctly.  We need to prefix the linker flags
-# "-whole-archive -lgcc -no-whole-archive" with "-Wl," to force all of the
-# flags to be passed down to the linker without change.
+# On NetBSD ELF platforms, we need to link libgcc.a whole-archive so that
+# certain symbols from the C++ implementation (__get_eh_context, etc.)
+# referenced by DSOs written in C++ will resolve correctly.  We need to
+# prefix the linker flags "-whole-archive -lgcc -no-whole-archive" with
+# "-Wl," to force all of the flags to be passed down to the linker through
+# libtool without change.
 #
-.if ${OPSYS} == "NetBSD"
+.if (${OPSYS} == "NetBSD") && (${OBJECT_FMT} == "ELF")
 LINK_LIBGCC_LDFLAGS=	-Wl,--whole-archive -Wl,-lgcc -Wl,--no-whole-archive
 MAKE_ENV+=		LINK_LIBGCC_LDFLAGS="${LINK_LIBGCC_LDFLAGS}"
 .endif
