@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1998/05/19 22:28:10 tron Exp $
+# $NetBSD: Makefile,v 1.8 1998/06/06 15:31:17 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.28 1997/06/27 23:02:54 brian Exp 
 #
 
@@ -13,7 +13,7 @@
 #    SUBDIR += nntp
 #    SUBDIR += nntpbtr
     SUBDIR += nntpclnt
-#    SUBDIR += nntpcache
+    SUBDIR += nntpcache
 #    SUBDIR += plor
 #    SUBDIR += rkive
 #    SUBDIR += slnr
