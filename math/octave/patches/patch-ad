@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 1998/11/25 23:59:18 tron Exp $
+
+--- src/pt-mvr-base.h.orig	Sun May 12 09:16:36 1996
++++ src/pt-mvr-base.h	Sun Nov 22 21:35:59 1998
+@@ -41,7 +41,7 @@
+ 
+   tree_multi_val_ret (int l = -1, int c = -1) : tree_expression (l, c) { }
+ 
+-  tree_multi_val_ret (int l = -1, int c = -1, tree_expression::type et)
++  tree_multi_val_ret (int l, int c, tree_expression::type et)
+     : tree_expression (l, c, et) { }
+ 
+   ~tree_multi_val_ret (void) { }
