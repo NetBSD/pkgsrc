@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2001/01/04 15:10:26 agc Exp $
+@comment $NetBSD: PLIST,v 1.7 2001/04/17 16:27:24 rh Exp $
 bin/sdl-config
 include/SDL/SDL.h
 include/SDL/SDL_active.h
@@ -9,6 +9,7 @@ include/SDL/SDL_copying.h
 include/SDL/SDL_endian.h
 include/SDL/SDL_error.h
 include/SDL/SDL_events.h
+include/SDL/SDL_getenv.h
 include/SDL/SDL_joystick.h
 include/SDL/SDL_keyboard.h
 include/SDL/SDL_keysym.h
@@ -28,8 +29,8 @@ include/SDL/close_code.h
 lib/libSDL.a
 lib/libSDL.la
 lib/libSDL.so
-lib/libSDL.so.5
-lib/libSDL.so.5.1
+lib/libSDL.so.0
+lib/libSDL.so.0.0
 lib/libSDLmain.a
 man/man3/SDLKey.3
 man/man3/SDL_ActiveEvent.3
@@ -92,7 +93,9 @@ man/man3/SDL_GL_SwapBuffers.3
 man/man3/SDL_GLattr.3
 man/man3/SDL_GetAppState.3
 man/man3/SDL_GetAudioStatus.3
+man/man3/SDL_GetClipRect.3
 man/man3/SDL_GetCursor.3
+man/man3/SDL_GetEventFilter.3
 man/man3/SDL_GetGamma.3
 man/man3/SDL_GetGammaRamp.3
 man/man3/SDL_GetKeyName.3
@@ -153,6 +156,7 @@ man/man3/SDL_PushEvent.3
 man/man3/SDL_Quit.3
 man/man3/SDL_QuitEvent.3
 man/man3/SDL_QuitSubSystem.3
+man/man3/SDL_RWFromFile.3
 man/man3/SDL_Rect.3
 man/man3/SDL_RemoveTimer.3
 man/man3/SDL_ResizeEvent.3
@@ -184,6 +188,7 @@ man/man3/SDL_UnlockYUVOverlay.3
 man/man3/SDL_UpdateRect.3
 man/man3/SDL_UpdateRects.3
 man/man3/SDL_UserEvent.3
+man/man3/SDL_VideoDriverName.3
 man/man3/SDL_VideoInfo.3
 man/man3/SDL_VideoModeOK.3
 man/man3/SDL_WM_GetCaption.3
