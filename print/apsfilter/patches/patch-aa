@@ -1,8 +1,15 @@
-$NetBSD: patch-aa,v 1.2 2002/03/09 13:58:04 martti Exp $
+$NetBSD: patch-aa,v 1.3 2002/11/26 11:26:34 jmmv Exp $
 
 --- Makefile.in.orig	Sun Feb 24 21:47:45 2002
-+++ Makefile.in	Wed Feb 27 10:41:18 2002
-@@ -18,9 +18,9 @@
++++ Makefile.in
+@@ -12,15 +12,15 @@ docdir=${DESTDIR}@docdir@
+ 
+ APSSHARE=${datadir}/apsfilter
+ APSDOC=${docdir}/apsfilter
+-APSCONF=${sysconfdir}/apsfilter
++APSCONF=${sysconfdir}
+ 
+ MKDIR=mkdir -p
  RM=rm -f
  LN=ln -sfn
  
@@ -15,3 +22,19 @@ $NetBSD: patch-aa,v 1.2 2002/03/09 13:58:04 martti Exp $
  
  .PHONY: all install update clean distclean
  
+@@ -33,7 +33,6 @@ update:
+ 	${MKDIR} ${mandir}/man1
+ 	${MKDIR} ${mandir}/man5
+ 	${MKDIR} ${APSDOC}
+-	${MKDIR} ${APSCONF}
+ 	${MKDIR} ${APSSHARE}
+ 	${MKDIR} ${APSSHARE}/bin
+ 	${MKDIR} ${APSSHARE}/setup
+@@ -79,7 +78,6 @@ update:
+ 	${INSTALL_DATA}   man/apsfilter-bug.1	${mandir}/man1/apsfilter-bug.1
+ 	${INSTALL_DATA}   man/apsfilterrc.5	${mandir}/man5/apsfilterrc.5
+ 	tar cf - driver | ( cd ${APSSHARE} && tar xf -)
+-	${LN} ${APSSHARE} ${APSCONF}/basedir
+ 
+ clean:
+ 	(cd doc; make clean)

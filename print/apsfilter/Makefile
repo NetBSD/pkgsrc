@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2002/09/13 06:53:35 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2002/11/26 11:26:32 jmmv Exp $
 #
 
 DISTNAME=	apsfilter-7.2.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	print
 MASTER_SITES=	http://www.apsfilter.org/download/
 
@@ -18,8 +18,6 @@ DEPENDS+=	netpbm>=9.7nb1:../../graphics/netpbm
 DEPENDS+=	a2ps-[0-9]*:../../print/a2ps
 DEPENDS+=	psutils-[0-9]*:../../print/psutils
 
-DEINSTALL_FILE=	${WRKDIR}/.DEINSTALL
-
 WRKSRC=		${WRKDIR}/apsfilter
 
 HAS_CONFIGURE=	YES
@@ -27,6 +25,16 @@ USE_BZIP2=	YES
 
 CONFIGURE_ARGS+=--prefix=${LOCALBASE}
 CONFIGURE_ARGS+=--with-shell=${SH}
+CONFIGURE_ARGS+=--sysconfdir=${PKG_SYSCONFDIR}
+
+PKG_SYSCONFSUBDIR?=	apsfilter
+CONF_FILES=	${PREFIX}/share/apsfilter/template/apsfilterrc \
+		${PKG_SYSCONFDIR}/apsfilterrc
+
+DEINSTALL_EXTRA_TMPL=	${.CURDIR}/INSTALL
+INSTALL_EXTRA_TMPL=	${.CURDIR}/INSTALL
+
+FILES_SUBST+=	PREFIX="${PREFIX}"
 
 post-patch:
 	for i in bin/apsfilter.in SETUP.in tools/prtmgmt; do		\
@@ -35,8 +43,9 @@ post-patch:
 		${MV} ${WRKSRC}/$$i.done ${WRKSRC}/$$i;			\
 	done
 
-	${SED} "s,@LOCALBASE@,${LOCALBASE},g" ${PKGDIR}/DEINSTALL	\
-		> ${DEINSTALL_FILE}
+#	${SED} "s,@LOCALBASE@,${LOCALBASE},g" ${PKGDIR}/DEINSTALL	\
+#		> ${DEINSTALL_FILE}
 
 .include "../../mk/ghostscript.mk"
+.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
