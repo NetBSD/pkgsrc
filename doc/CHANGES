@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5518 2004/04/11 00:13:06 rh Exp $
+$NetBSD: CHANGES,v 1.5519 2004/04/11 00:26:48 rh Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1890,3 +1890,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated Gorm to 0.6.0 [rh 2004-04-11]
 	Added gnustep-ssl-1.9.1 [rh 2004-04-11]
 	Updated ProjectCenter to 0.3.6nb4 [rh 2004-04-11]
+	Updated ImageViewer to 0.6.2 [rh 2004-04-11]
