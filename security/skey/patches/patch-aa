@@ -1,0 +1,34 @@
+$NetBSD: patch-aa,v 1.1 2003/07/23 14:34:29 jmmv Exp $
+
+--- Makefile.in.orig   Thu May 10 17:10:49 2001
++++ Makefile.in        Wed Jul 23 12:31:50 2003
+@@ -18,10 +18,10 @@
+ AR=@AR@
+ RANLIB=@RANLIB@
+ INSTALL=@INSTALL@
+-INSTALL_PROGRAM=${INSTALL} -c -s -m 555
+-INSTALL_MAN=${INSTALL} -c -m 444
+-INSTALL_SCRIPT=${INSTALL} -c -m 555
+-INSTALL_DATA=${INSTALL} -c -m 444
++INSTALL_PROGRAM=@INSTALL_PROGRAM@
++INSTALL_MAN=@INSTALL_DATA@
++INSTALL_SCRIPT=@INSTALL_SCRIPT@
++INSTALL_DATA=@INSTALL_DATA@
+ PERL=@PERL@
+ SENDMAIL=@SENDMAIL@
+ TOUCH=@TOUCH@
+@@ -88,14 +88,6 @@
+ 	done
+ 
+ install: ${TARGETS}
+-	$(INSTALL) -d $(DESTDIR)$(bindir)
+-	$(INSTALL) -d $(DESTDIR)$(libdir)
+-	$(INSTALL) -d $(DESTDIR)$(mandir)
+-	$(INSTALL) -d $(DESTDIR)$(etcdir)
+-	$(INSTALL) -d $(DESTDIR)$(mandir)/$(mansubdir)1
+-	$(INSTALL) -d $(DESTDIR)$(mandir)/$(mansubdir)8
+-	$(INSTALL) -d $(DESTDIR)$(includedir)
+-	$(INSTALL) -d $(DESTDIR)$(sysconfdir)
+ 	${INSTALL_DATA} libskey.a $(DESTDIR)$(libdir)
+ 	${INSTALL_DATA} ${HDRS} $(DESTDIR)$(includedir)
+ 	@for target in ${TARGETS}; do \
