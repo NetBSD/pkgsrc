@@ -1,12 +1,20 @@
---- Makefile.in.orig	Thu Feb 12 19:24:28 1998
-+++ Makefile.in	Tue Apr 21 04:56:17 1998
-@@ -9,3 +9,3 @@
- #HISTORYF=/var/news/etc/history
--HISTORYF=/usr/lib/news/history
+--- Makefile.in.orig	Fri Jul 24 06:45:32 1998
++++ Makefile.in	Sat Aug  1 18:43:54 1998
+@@ -6,7 +6,7 @@
+ ############################################################################
+ 
+ # Step1: Define the location of the History file(s)
+-HISTORYF=/usr/news/db/history
 +HISTORYF=%%%HISTORY%%%
  
-@@ -132,3 +132,3 @@
+ # Step 2: Define ONE of the CHKHISTORY 
+ CHKHISTORY=chkhistory.o		# use flat file history routine
+@@ -131,7 +131,7 @@
+ 
+ install_bin: suck rpost testhost lmove
  	- mkdir -p $(bindir)
 -	- strip -s suck rpost testhost lmove
 +	- strip suck rpost testhost lmove
  	$(INSTALL_PROGRAM) suck $(bindir)/suck
+ 	$(INSTALL_PROGRAM) rpost $(bindir)/rpost
+ 	$(INSTALL_PROGRAM) testhost $(bindir)/testhost
