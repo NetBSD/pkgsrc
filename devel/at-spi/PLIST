@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/02/13 16:13:27 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/02/15 18:14:51 jmmv Exp $
 include/at-spi-1.0/cspi/spi-impl.h
 include/at-spi-1.0/cspi/spi-listener.h
 include/at-spi-1.0/cspi/spi-roletypes.h
@@ -36,12 +36,12 @@ lib/libcspi.a
 lib/libcspi.la
 lib/libcspi.so
 lib/libcspi.so.9
-lib/libcspi.so.9.7
+lib/libcspi.so.9.10
 lib/libspi.a
 lib/libspi.la
 lib/libspi.so
 lib/libspi.so.9
-lib/libspi.so.9.7
+lib/libspi.so.9.10
 lib/orbit-2.0/Accessibility_module.a
 lib/orbit-2.0/Accessibility_module.la
 lib/orbit-2.0/Accessibility_module.so
