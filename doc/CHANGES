@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5300 2004/03/26 23:47:04 wiz Exp $
+$NetBSD: CHANGES,v 1.5301 2004/03/27 00:06:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1521,3 +1521,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated emacs20 to emacs-20.7nb3 [kristerw 2004-03-25]
 	Updated openssl to 0.9.6m [wiz 2004-03-26]
 	Removed automake17-1.7.9 [wiz 2004-03-26]
+	Renamed pkgchk to pkg_chk [wiz 2004-03-27]
