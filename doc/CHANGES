@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3616 2003/10/02 09:55:30 martti Exp $
+$NetBSD: CHANGES,v 1.3617 2003/10/02 10:39:24 martti Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4051,3 +4051,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated xfce4-netload-plugin to 0.2.1 [martti 2003-10-02]
 	Updated mono to 0.28 [recht 2003-10-02]
 	Updated xfce4-minicmd-plugin to 0.2.0 [martti 2003-10-02]
+	Updated postfix to 2.0.16 [martti 2003-10-02]
