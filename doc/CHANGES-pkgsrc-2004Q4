@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2004Q4,v 1.1.2.32 2005/01/17 20:39:46 snj Exp $
+$NetBSD: CHANGES-pkgsrc-2004Q4,v 1.1.2.33 2005/01/17 21:03:09 snj Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2004Q4 branch:
@@ -73,3 +73,5 @@ Pullup ticket 227 - requested by Matthias Drochner
 security fix for mpg123
 Pullup ticket 221 - requested by Min Sik Kim
 build fix for nbitools
+Pullup ticket 222 - requested by Juan RP
+build fix for xorg-libs
