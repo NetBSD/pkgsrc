@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2002/04/04 16:07:56 abs Exp $
+# $NetBSD: Makefile,v 1.4 2002/04/10 10:19:24 abs Exp $
 
-DISTNAME=	rconfig-0.07
+DISTNAME=	rconfig-0.08
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.mono.org/abs/tools/rconfig/
 
@@ -15,6 +15,7 @@ DEPENDS+=	srsh-[0-9]*:../../net/srsh
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/rconfig.pl ${PREFIX}/sbin/rconfig
+	${INSTALL_SCRIPT} ${WRKSRC}/probe.sh ${PREFIX}/libexec/rconfig_probe
 	${INSTALL_MAN} ${WRKSRC}/rconfig.8 ${PREFIX}/man/man8/rconfig.8
 
 .include "../../mk/bsd.pkg.mk"
