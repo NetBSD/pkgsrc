@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1 2002/11/15 02:50:24 heinz Exp $
+
+--- Makefile.PL.orig	Sun Oct 13 19:20:37 2002
++++ Makefile.PL
+@@ -365,7 +365,6 @@ sub doMakefile {
+ 	'XSOPT'	=> $XSOPT,
+     # do not even think about 'INC' => '-I/usr/ucbinclude', Solaris will avenge.
+ 	'INC'	=> '',     # e.g., '-I/usr/include/other' 
+-	'INSTALLDIRS' => 'perl',
+ 	'dist'      => {
+ 	    'CI'       => 'ci -l',
+ 	    'COMPRESS' => 'gzip -9f', 
