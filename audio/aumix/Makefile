@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/03/27 03:19:45 hubertf Exp $
+# $NetBSD: Makefile,v 1.9 2001/04/02 20:06:11 wiz Exp $
 
 DISTNAME=	aumix-2.7
 CATEGORIES=	audio
@@ -12,9 +12,8 @@ MAINTAINER=	trevor@jpj.net
 HOMEPAGE=	http://jpj.net/~trevor/aumix.html
 COMMENT=	Set mix levels
 
-BUILD_USES_MSGFMT=	yes
-
 DEPENDS+=	gtk+-1.2.*:../../x11/gtk
+BUILD_USES_MSGFMT=	yes
 
 USE_CURSES=	yes
 REPLACE_NCURSES=	${WRKSRC}/configure ${WRKSRC}/src/curses.h \
