@@ -1,0 +1,22 @@
+A UML Modeller supporting the creation of Unified Modelling Language (UML)
+diagrams. UML diagrams are made up of UML icons that aid to model
+real world ideas.
+
+The following diagrams are supported:
+
+	* Sequence Diagrams
+	* Collaboration Diagrams
+	* Use Case Diagrams
+	* Class/Concept Diagrams
+
+The following assiocations are supported:
+
+	* Anchors
+	* Dependencies
+	* Aggregations
+	* Generalizations
+	* Associations
+	* Uni-Directional Associations
+	* Implementations
+	* Realizations
+	* Composistions
