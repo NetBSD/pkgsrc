@@ -1,19 +1,19 @@
-# $NetBSD: Makefile,v 1.10 2000/09/03 13:38:31 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2000/12/13 03:49:30 jwise Exp $
 
 DISTNAME=	jakarta-tomcat.src
-PKGNAME=	jakarta-tomcat-3.1
+PKGNAME=	jakarta-tomcat-3.1.1
 CATEGORIES=	www
-MASTER_SITES=	http://jakarta.apache.org/builds/tomcat/release/v3.1/src/
-DISTFILES=	jakarta-tomcat.tar.gz jakarta-tools.tar.gz jakarta-ant.tar.gz
+MASTER_SITES=	http://jakarta.apache.org/builds/tomcat/release/v3.1.1/src/
+DISTFILES=	jakarta-tomcat-3.1.1-src.tar.gz jakarta-tools.tar.gz jakarta-ant.tar.gz
 
 MAINTAINER=	jwise@netbsd.org
 HOMEPAGE=	http://jakarta.apache.org/
 
-DIST_SUBDIR=	jakarta-3.1
+DIST_SUBDIR=	jakarta-3.1.1
 
 USE_JAVA=	yes
 
-WRKSRC=		${WRKDIR}/jakarta-tomcat
+WRKSRC=		${WRKDIR}/jakarta-tomcat-3.1.1-src
 
 JAKARTA_HOME=	${PREFIX}/jakarta
 MAKE_ENV+=	JAVA_HOME=${JAVA_HOME}
