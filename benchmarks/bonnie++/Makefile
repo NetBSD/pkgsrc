@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/07/16 23:20:43 garbled Exp $
+# $NetBSD: Makefile,v 1.2 2001/07/18 00:55:48 garbled Exp $
 #
 
 DISTNAME=       bonnie++-1.01
@@ -11,6 +11,8 @@ HOMEPAGE=	http://www.coker.com.au/bonnie++/
 COMMENT=	Enhanced performance Test of Filesystem I/O
 
 GNU_CONFIGURE=	yes
+USE_PERL5=	yes
+REPLACE_PERL=	bon_csv2txt.in bon_csv2html.in
 
 benchmark:
 	@(cd ${WRKSRC}; ./bonnie++ -u 0:0 | tee bonnie.out)
@@ -20,3 +22,4 @@ results:
 	-@${CP} ${WRKSRC}/bonnie.out /tmp/benches/`domainname`/bonnie++.`uname`-`uname -m`-`uname -r`.`hostname`
 
 .include "../../mk/bsd.pkg.mk"
+
