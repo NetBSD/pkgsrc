@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/10/13 04:30:05 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.2 2002/10/15 09:33:12 dmcmahill Exp $
 #
 
 DISTNAME=	Parallel-Pvm-1.3.0
@@ -12,8 +12,6 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.epm.ornl.gov/pvm/pvm_home.html
 COMMENT=	Perl module for PVM (Parallel Virtual Machine)
 
-#DEPENDS+=	pvm-3.4.3:../../parallel/pvm3
-
 PVM_ROOT?=		${LOCALBASE}/pvm3
 CONFIGURE_ENV+=		PVM_ROOT=${PVM_ROOT} PVM_ARCH=${PVM_ARCH}
 MAKE_ENV+=		PVM_ROOT=${PVM_ROOT} PVM_ARCH=${PVM_ARCH}
@@ -21,9 +19,6 @@ PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Parallel/Pvm/.packlist
 MESSAGE_SUBST+=		PVM_ROOT=${PVM_ROOT}
 EXAMPLES_DIR=		${PREFIX}/share/examples/p5-Parallel-Pvm
 USE_BUILDLINK2=		YES
-
-do-configure:
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
 
 post-build:
 .for f in hello.pl hello_other.pl
