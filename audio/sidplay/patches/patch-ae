@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1.1.1 1999/02/09 13:09:56 frueauf Exp $
+
+--- ./console/Makefile.in.orig	Sat May 23 02:30:46 1998
++++ ./console/Makefile.in	Sun Jan 31 11:33:05 1999
+@@ -24,7 +24,7 @@
+ DEFS			= @DEFS@
+ INCLUDES		= -I$(SRCDIR) -I$(TOPDIR)/libsidplay/include
+ 
+-LIBM			= @LIBM@
++LIBM			= @LIBM@ -lossaudio
+ LIBIOS			= @LIBIOS@
+ SIDLIB          = -L$(TOPDIR)/libsidplay -lsidplay
+ LIBS			= @LIBS@ $(LIBM) $(LIBIOS) $(SIDLIB)
