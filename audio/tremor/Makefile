@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2002/12/05 19:49:50 chris Exp $
+# $NetBSD: Makefile,v 1.6 2003/06/29 16:54:03 chris Exp $
 
-DISTNAME=	tremor_snapshot_021205
+DISTNAME=	tremor_snapshot_030406
 PKGNAME=	tremor-1.0.2
-PKGREVISION=	2
+PKGREVISION=	3
 WRKSRC=         ${WRKDIR}/Tremor
 CATEGORIES=	devel audio
 MASTER_SITES=	http://www.xiph.org/ogg/vorbis/download/
