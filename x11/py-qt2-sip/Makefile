@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/02/14 17:21:56 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2004/05/02 05:35:17 snj Exp $
 #
 
 DISTNAME=	sip-3.1
@@ -10,7 +10,7 @@ MAINTAINER=	drochner@NetBSD.org
 HOMEPAGE=	http://www.riverbankcomputing.co.uk/sip/index.php
 COMMENT=	Tool to create Python bindings for C++ libraries
 
-USE_BUILDLINK2= 	# defined
+USE_BUILDLINK3= 	yes
 USE_X11=		# defined
 USE_LIBTOOL=		# defined
 
@@ -23,6 +23,6 @@ PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 MAKE_ENV+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 
 .include "../../lang/python/extension.mk"
-.include "../../x11/qt2-libs/buildlink2.mk"
+.include "../../x11/qt2-libs/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
