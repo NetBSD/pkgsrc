@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2845 2005/01/05 14:13:52 wiz Exp $
+$NetBSD: TODO,v 1.2846 2005/01/05 14:57:53 wiz Exp $
 
 Suggested new packages
 ======================
@@ -329,6 +329,7 @@ Suggested package updates
 	o bibtex2html-1.74 [requires ocaml>=3.07]
 	o bins-1.1.27
 	o bioperl-1.4
+	o bison-2.0
 	o blender-2.36
 	o blitz++-0.8
 	o boaconstructor-0.3.1
@@ -426,7 +427,7 @@ Suggested package updates
 	o dropbear-0.44
 	o drscheme-208
 	o dsssl-docbook-modular-1.79
-	o dvdrip-0.51.4
+	o dvdrip-0.52.0
 	o dvipng-1.4 [http://sourceforge.net/projects/dvipng/]
 	o dxpc-3.8.2
 	o dylan-compiler-2.4.0
@@ -441,8 +442,9 @@ Suggested package updates
 	o efax-gtk-2.2.14
 	o efont-unicode-0.4.2
 	o egtk-0.3.6
+	o electricfence-2.4.11
 	o elf-0.5.4
-	o elinks-0.10.0
+	o elinks-0.10.1
 	o elk-3.99.6
 	o elm-2.5.7
 	o elm-me-2.5plalpha4
@@ -464,6 +466,7 @@ Suggested package updates
 	o fakeroot-1.2.2
 	o fd-2.06b
 	o fdgw-20040609
+	o feh-1.3.0
 	o festival-1.4.3
 	o fhist-1.14
 	o fidogate-4.4.10
@@ -570,7 +573,7 @@ Suggested package updates
 	o hevea-1.07
 	o hitchhiker-0.7
 	o honeyd-1.0
-	o horde-3.0
+	o horde-3.0.1
 	o host-20040812 [cjep,talking to greg woods about this]
 	o hot-babe-0.2.2
 	o howl-0.9.8 [tech-pkg post 2004/12/28 contains update]
@@ -1165,6 +1168,7 @@ Suggested package updates
 	o tunesbrowser-0.1.6
 	o twelf-1.5
 	o txt2html-2.31 [wennmach]
+	o txt2html-2.32
 	o txt2man-1.4.8
 	o uae-0.8.23
 	o ubs-0.20
