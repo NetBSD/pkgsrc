@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2002/12/19 22:24:51 jlam Exp $
+@comment $NetBSD: PLIST,v 1.9 2002/12/20 06:59:59 jlam Exp $
 bin/cancel
 bin/cups-config
 bin/disable
@@ -54,6 +54,7 @@ libexec/cups/filter/rastertohp
 libexec/cups/filter/texttops
 man/cat1/backend.0
 man/cat1/cancel.0
+man/cat1/cupstestppd.0
 man/cat1/filter.0
 man/cat1/lp.0
 man/cat1/lpoptions.0
@@ -82,6 +83,7 @@ man/cat8/lpmove.0
 man/cat8/reject.0
 man/fr/cat1/backend.0
 man/fr/cat1/cancel.0
+man/fr/cat1/cupstestppd.0
 man/fr/cat1/filter.0
 man/fr/cat1/lp.0
 man/fr/cat1/lpoptions.0
@@ -110,6 +112,7 @@ man/fr/cat8/lpmove.0
 man/fr/cat8/reject.0
 man/fr/man1/backend.1
 man/fr/man1/cancel.1
+man/fr/man1/cupstestppd.1
 man/fr/man1/filter.1
 man/fr/man1/lp.1
 man/fr/man1/lpoptions.1
@@ -138,6 +141,7 @@ man/fr/man8/lpmove.8
 man/fr/man8/reject.8
 man/man1/backend.1
 man/man1/cancel.1
+man/man1/cupstestppd.1
 man/man1/filter.1
 man/man1/lp.1
 man/man1/lpoptions.1
@@ -167,6 +171,7 @@ man/man8/reject.8
 sbin/accept
 sbin/cupsaddsmb
 sbin/cupsd
+sbin/cupstestppd
 sbin/lpadmin
 sbin/lpc
 sbin/lpinfo
@@ -203,6 +208,7 @@ share/cups/charsets/windows-1255
 share/cups/charsets/windows-1256
 share/cups/charsets/windows-1257
 share/cups/charsets/windows-1258
+share/cups/charsets/windows-874
 share/cups/data/HPGLprolog
 share/cups/data/psglyphs
 share/cups/data/testprint.ps
@@ -211,7 +217,37 @@ share/cups/fonts/Courier-Bold
 share/cups/fonts/Courier-BoldOblique
 share/cups/fonts/Courier-Oblique
 share/cups/fonts/Symbol
-share/cups/templates/fr/add-class.tmpl 
+share/cups/model/deskjet.ppd
+share/cups/model/deskjet2.ppd
+share/cups/model/dymo.ppd
+share/cups/model/epson24.ppd
+share/cups/model/epson9.ppd
+share/cups/model/laserjet.ppd
+share/cups/model/okidat24.ppd
+share/cups/model/okidata9.ppd
+share/cups/model/stcolor.ppd
+share/cups/model/stcolor2.ppd
+share/cups/model/stphoto.ppd
+share/cups/model/stphoto2.ppd
+share/cups/templates/add-class.tmpl
+share/cups/templates/add-printer.tmpl
+share/cups/templates/admin-op.tmpl
+share/cups/templates/admin.tmpl
+share/cups/templates/choose-device.tmpl
+share/cups/templates/choose-make.tmpl
+share/cups/templates/choose-members.tmpl
+share/cups/templates/choose-model.tmpl
+share/cups/templates/choose-serial.tmpl
+share/cups/templates/choose-uri.tmpl
+share/cups/templates/class-added.tmpl
+share/cups/templates/class-confirm.tmpl
+share/cups/templates/class-deleted.tmpl
+share/cups/templates/class-modified.tmpl
+share/cups/templates/classes.tmpl
+share/cups/templates/config-printer.tmpl
+share/cups/templates/config-printer2.tmpl
+share/cups/templates/error.tmpl
+share/cups/templates/fr/add-class.tmpl
 share/cups/templates/fr/add-printer.tmpl
 share/cups/templates/fr/admin-op.tmpl
 share/cups/templates/fr/admin.tmpl
@@ -256,36 +292,6 @@ share/cups/templates/fr/printer-stop.tmpl
 share/cups/templates/fr/printers.tmpl
 share/cups/templates/fr/test-page.tmpl
 share/cups/templates/fr/trailer.tmpl
-share/cups/model/deskjet.ppd
-share/cups/model/deskjet2.ppd
-share/cups/model/dymo.ppd
-share/cups/model/epson24.ppd
-share/cups/model/epson9.ppd
-share/cups/model/laserjet.ppd
-share/cups/model/okidat24.ppd
-share/cups/model/okidata9.ppd
-share/cups/model/stcolor.ppd
-share/cups/model/stcolor2.ppd
-share/cups/model/stphoto.ppd
-share/cups/model/stphoto2.ppd
-share/cups/templates/add-class.tmpl
-share/cups/templates/add-printer.tmpl
-share/cups/templates/admin-op.tmpl
-share/cups/templates/admin.tmpl
-share/cups/templates/choose-device.tmpl
-share/cups/templates/choose-make.tmpl
-share/cups/templates/choose-members.tmpl
-share/cups/templates/choose-model.tmpl
-share/cups/templates/choose-serial.tmpl
-share/cups/templates/choose-uri.tmpl
-share/cups/templates/class-added.tmpl
-share/cups/templates/class-confirm.tmpl
-share/cups/templates/class-deleted.tmpl
-share/cups/templates/class-modified.tmpl
-share/cups/templates/classes.tmpl
-share/cups/templates/config-printer.tmpl
-share/cups/templates/config-printer2.tmpl
-share/cups/templates/error.tmpl
 share/cups/templates/header.tmpl
 share/cups/templates/job-cancel.tmpl
 share/cups/templates/job-hold.tmpl
@@ -343,11 +349,11 @@ share/doc/html/cups/fr/images/modify-class.gif
 share/doc/html/cups/fr/images/modify-printer.gif
 share/doc/html/cups/fr/images/navbar.gif
 share/doc/html/cups/fr/images/print-test-page.gif
-share/doc/html/cups/fr/images/reject-jobs.gif 
+share/doc/html/cups/fr/images/reject-jobs.gif
 share/doc/html/cups/fr/images/release-job.gif
 share/doc/html/cups/fr/images/restart-job.gif
 share/doc/html/cups/fr/images/show-active.gif
-share/doc/html/cups/fr/images/show-completed.gif 
+share/doc/html/cups/fr/images/show-completed.gif
 share/doc/html/cups/fr/images/start-class.gif
 share/doc/html/cups/fr/images/start-printer.gif
 share/doc/html/cups/fr/images/stop-class.gif
@@ -444,11 +450,9 @@ ${PKGLOCALEDIR}/locale/sv/cups_sv
 ${PKGLOCALEDIR}/locale/uk/cups_uk
 ${PKGLOCALEDIR}/locale/uk_UA.cp1251/cups_uk_UA.cp1251
 ${PKGLOCALEDIR}/locale/zh_CN/cups_zh_CN
-share/cups/charsets/windows-874
 @unexec ${RMDIR} %D/${PKGLOCALEDIR}/locale/uk_UA.cp1251 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/${PKGLOCALEDIR}/locale/ru_RU.koi8r 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/${PKGLOCALEDIR}/locale/ru_RU.cp1251 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/${PKGLOCALEDIR}/locale/be 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/${PKGLOCALEDIR}/locale/C 2>/dev/null || ${TRUE}
 @dirrm share/examples/cups
 @dirrm share/doc/html/cups/images
