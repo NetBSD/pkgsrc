@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.857 2002/12/21 11:11:50 wiz Exp $
+$NetBSD: CHANGES,v 1.858 2002/12/21 17:06:18 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -4034,3 +4034,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated digest to 20021220 [schmonz 2002-12-21]
 	Added avi-xmms-1.2.2 [jmmv 2002-12-21]
 	Updated fxtv to 1.03nb2 [wiz 2002-12-21]
+	Updated TeXmacs to 1.0.1 [jmmv 2002-12-21]
