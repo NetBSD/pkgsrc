@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.31 2005/03/22 14:57:12 cube Exp $
+$NetBSD: distinfo,v 1.32 2005/03/30 15:26:43 cube Exp $
 
 SHA1 (gkrellm-2.2.5.tar.bz2) = 4cbdf75828b3d8b216694c2e6978c29a4920595a
 RMD160 (gkrellm-2.2.5.tar.bz2) = 7755fa7bbf88dfd53185e76604981b2a5c81d74d
@@ -17,3 +17,6 @@ SHA1 (patch-al) = 4eab3c3757c198dcc3049a63fc3b8adceef7bc1c
 SHA1 (patch-am) = bf8b01f5e368a5387f8d224ca51ec18a74410b5c
 SHA1 (patch-an) = 1e63ce0e4fbe9bd22c46d00c6aeac6b3e7cda440
 SHA1 (patch-ao) = 63bf8657fa7707def41b13b3cc74c031098e070a
+SHA1 (patch-ap) = b3c89911085e73b8651e35f71b9561046b3cd073
+SHA1 (patch-aq) = 4cdf043e8cdabd8482705c80b9c06b416454b658
+SHA1 (patch-ar) = 8d672b33875186791dee2bfeea4d6cf10c3ee33c
