@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: printindex,v 1.1 2001/01/28 20:56:34 dmcmahill Exp $
+# $NetBSD: printindex,v 1.2 2001/02/17 16:45:10 wiz Exp $
 #
 #
 # Copyright (c) 2001 The NetBSD Foundation, Inc.
@@ -51,7 +51,7 @@
 cwd=$PWD
 
 # List of all pkgs, from pkgsrc/*/Makefile
-list=`grep '^[^#].*'SUBDIR */Makefile | sed 's,/Makefile.*= *,/,'`
+list=`grep '^[[:space:]]*'SUBDIR */Makefile | sed 's,/Makefile.*=[[:space:]]*,/,'`
 
 
 for pkgdir in $list
