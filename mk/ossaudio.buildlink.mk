@@ -1,4 +1,4 @@
-# $NetBSD: ossaudio.buildlink.mk,v 1.1 2001/07/14 15:43:18 jlam Exp $
+# $NetBSD: ossaudio.buildlink.mk,v 1.2 2001/07/24 10:13:38 jlam Exp $
 #
 # This Makefile fragment is included by packages that use OSS audio.
 #
@@ -32,7 +32,8 @@ ossaudio-buildlink: _BUILDLINK_USE
 ossaudio-buildlink-soundcard-h:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	sys_soundcard_h=${BUILDLINK_DIR}/include/sys/soundcard.h;	\
-	if [ ! -f $${sys_soundcard_h} ]; then				\
+	if [ ! -f $${sys_soundcard_h} -a				\
+	       -f ${BUILDLINK_PREFIX.ossaudio}/include/soundcard.h ]; then \
 		${ECHO_MSG} "Creating $${sys_soundcard_h}.";		\
 		${MKDIR} `${DIRNAME} $${sys_soundcard_h}`;		\
 		( ${ECHO} "#ifndef BUILDLINK_SYS_SOUNDCARD_H";		\
