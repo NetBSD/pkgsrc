@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/05/30 13:58:50 kleink Exp $
+lib/httpd/auth_ldap.so
+share/doc/mod_auth_ldap/auth_ldap.html
+share/doc/mod_auth_ldap/future-directions.html
+@dirrm share/doc/mod_auth_ldap
