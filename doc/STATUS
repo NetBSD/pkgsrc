@@ -1,4 +1,4 @@
-$NetBSD: STATUS,v 1.28 2004/04/15 02:19:17 xtraeme Exp $
+$NetBSD: STATUS,v 1.29 2004/07/06 23:39:18 wiz Exp $
 
 Below is a list of packages known to build on various non-NetBSD
 platforms.  Currently, there are three categories.  If all packages in a given
@@ -106,7 +106,7 @@ www/opera
 notes:
 
 Solaris/mplayer: depends on cdparanoia.
-Solaris/mozilla: depends on net/ORBit (broken buildlink2/libtool libpthread
+Solaris/mozilla: depends on net/ORBit (broken buildlink3/libtool libpthread
 handling).
 
 
