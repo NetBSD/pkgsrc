@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2001/04/19 20:51:33 jtb Exp $
+@comment $NetBSD: PLIST,v 1.7 2001/04/26 21:05:18 jtb Exp $
 bin/GMT
 bin/backtracker
 bin/binlegs
@@ -873,6 +873,129 @@ share/doc/html/gmt/gmt_suppl.html
 share/doc/html/gmt/images/gmt_back.gif
 share/doc/html/gmt/images/gmt_bar.gif
 share/doc/html/gmt/images/gmt_small_logo.gif
+share/examples/gmt/README.SCRIPTS
+share/examples/gmt/do_examples.bash
+share/examples/gmt/do_examples.csh
+share/examples/gmt/do_view.bash
+share/examples/gmt/do_view.csh
+share/examples/gmt/ex01/osu91a1f_16.grd
+share/examples/gmt/ex01/job01.csh
+share/examples/gmt/ex01/job01.bash
+share/examples/gmt/ex02/HI_topo2.grd
+share/examples/gmt/ex02/HI_geoid2.grd
+share/examples/gmt/ex02/job02.bash
+share/examples/gmt/ex02/job02.csh
+share/examples/gmt/ex03/sat.xyg
+share/examples/gmt/ex03/ship.xyg
+share/examples/gmt/ex03/shipsat.dos
+share/examples/gmt/ex03/job03.csh
+share/examples/gmt/ex03/job03.bash
+share/examples/gmt/ex04/HI_geoid4.grd
+share/examples/gmt/ex04/topo.cpt
+share/examples/gmt/ex04/HI_topo4.grd
+share/examples/gmt/ex04/geoid.cpt
+share/examples/gmt/ex04/job04.csh
+share/examples/gmt/ex04/job04.bash
+share/examples/gmt/ex04/job4c.csh
+share/examples/gmt/ex04/job4c.bash
+share/examples/gmt/ex05/job05.bash
+share/examples/gmt/ex05/job05.csh
+share/examples/gmt/ex06/v3206.t
+share/examples/gmt/ex06/fractures.d
+share/examples/gmt/ex06/job06.csh
+share/examples/gmt/ex06/job06.bash
+share/examples/gmt/ex07/quakes.xym
+share/examples/gmt/ex07/isochron.xy
+share/examples/gmt/ex07/fz.xy
+share/examples/gmt/ex07/ridge.xy
+share/examples/gmt/ex07/job07.csh
+share/examples/gmt/ex07/job07.bash
+share/examples/gmt/ex08/guinea_bay.grd
+share/examples/gmt/ex08/job08.csh
+share/examples/gmt/ex08/job08.bash
+share/examples/gmt/ex09/track_d.223.xys
+share/examples/gmt/ex09/track_d.25.xys
+share/examples/gmt/ex09/track_d.251.xys
+share/examples/gmt/ex09/track_d.51.xys
+share/examples/gmt/ex09/track_d.53.xys
+share/examples/gmt/ex09/track_d.79.xys
+share/examples/gmt/ex09/track_d.81.xys
+share/examples/gmt/ex09/track_d.109.xys
+share/examples/gmt/ex09/track_d.111.xys
+share/examples/gmt/ex09/track_d.137.xys
+share/examples/gmt/ex09/track_d.139.xys
+share/examples/gmt/ex09/track_d.165.xys
+share/examples/gmt/ex09/track_d.167.xys
+share/examples/gmt/ex09/track_d.193.xys
+share/examples/gmt/ex09/track_d.195.xys
+share/examples/gmt/ex09/track_d.197.xys
+share/examples/gmt/ex09/track_d.21.xys
+share/examples/gmt/ex09/track_d.225.xys
+share/examples/gmt/ex09/track_d.23.xys
+share/examples/gmt/ex09/fz.xy
+share/examples/gmt/ex09/all.xys
+share/examples/gmt/ex09/track_d.253.xys
+share/examples/gmt/ex09/track_d.279.xys
+share/examples/gmt/ex09/track_d.281.xys
+share/examples/gmt/ex09/track_d.283.xys
+share/examples/gmt/ex09/track_d.309.xys
+share/examples/gmt/ex09/track_d.311.xys
+share/examples/gmt/ex09/track_d.337.xys
+share/examples/gmt/ex09/track_d.339.xys
+share/examples/gmt/ex09/track_d.365.xys
+share/examples/gmt/ex09/track_d.367.xys
+share/examples/gmt/ex09/track_d.369.xys
+share/examples/gmt/ex09/track_d.395.xys
+share/examples/gmt/ex09/track_d.397.xys
+share/examples/gmt/ex09/track_d.423.xys
+share/examples/gmt/ex09/track_d.425.xys
+share/examples/gmt/ex09/track_d.427.xys
+share/examples/gmt/ex09/track_d.451.xys
+share/examples/gmt/ex09/track_d.453.xys
+share/examples/gmt/ex09/track_d.455.xys
+share/examples/gmt/ex09/track_d.481.xys
+share/examples/gmt/ex09/track_d.483.xys
+share/examples/gmt/ex09/track_d.49.xys
+share/examples/gmt/ex09/ridge.xy
+share/examples/gmt/ex09/track_d.107.xys
+share/examples/gmt/ex09/job09.csh
+share/examples/gmt/ex09/job09.bash
+share/examples/gmt/ex10/agu.d
+share/examples/gmt/ex10/job10.csh
+share/examples/gmt/ex10/job10.bash
+share/examples/gmt/ex11/rgb_cube.awk
+share/examples/gmt/ex11/contoured_cube.ps.bz2
+share/examples/gmt/ex11/job11.bash
+share/examples/gmt/ex11/job11.csh
+share/examples/gmt/ex12/table_5.11
+share/examples/gmt/ex12/job12.bash
+share/examples/gmt/ex12/job12.csh
+share/examples/gmt/ex13/job13.csh
+share/examples/gmt/ex13/job13.bash
+share/examples/gmt/ex14/table_5.11
+share/examples/gmt/ex14/job14.bash
+share/examples/gmt/ex14/job14.csh
+share/examples/gmt/ex15/ship.xyz
+share/examples/gmt/ex15/job15.bash
+share/examples/gmt/ex15/job15.csh
+share/examples/gmt/ex16/table_5.11
+share/examples/gmt/ex16/job16.csh
+share/examples/gmt/ex16/job16.bash
+share/examples/gmt/ex16/ex16.cpt
+share/examples/gmt/ex17/job17.csh
+share/examples/gmt/ex17/job17.bash
+share/examples/gmt/ex17/india_geoid.grd
+share/examples/gmt/ex17/india_topo.grd
+share/examples/gmt/ex18/job18.csh
+share/examples/gmt/ex18/job18.bash
+share/examples/gmt/ex18/AK_gulf_grav.grd
+share/examples/gmt/ex19/job19.bash
+share/examples/gmt/ex19/job19.csh
+share/examples/gmt/ex20/job20.bash
+share/examples/gmt/ex20/make_symbol
+share/examples/gmt/ex20/volcano.def
+share/examples/gmt/ex20/bullseye.def
+share/examples/gmt/ex20/job20.csh
 share/examples/gmt/tutorial/bermuda.grd
 share/examples/gmt/tutorial/data
 share/examples/gmt/tutorial/quakes.cpt
@@ -1013,7 +1136,28 @@ share/gmt/ps_pattern_90.ras
 @dirrm share/gmt/mgg
 @dirrm share/gmt/dbase
 @dirrm share/gmt
+@dirrm share/examples/gmt/ex01
+@dirrm share/examples/gmt/ex02
+@dirrm share/examples/gmt/ex03
+@dirrm share/examples/gmt/ex04
+@dirrm share/examples/gmt/ex05
+@dirrm share/examples/gmt/ex06
+@dirrm share/examples/gmt/ex07
+@dirrm share/examples/gmt/ex08
+@dirrm share/examples/gmt/ex09
+@dirrm share/examples/gmt/ex10
+@dirrm share/examples/gmt/ex11
+@dirrm share/examples/gmt/ex12
+@dirrm share/examples/gmt/ex13
+@dirrm share/examples/gmt/ex14
+@dirrm share/examples/gmt/ex15
+@dirrm share/examples/gmt/ex16
+@dirrm share/examples/gmt/ex17
+@dirrm share/examples/gmt/ex18
+@dirrm share/examples/gmt/ex19
+@dirrm share/examples/gmt/ex20
 @dirrm share/examples/gmt/tutorial
+@dirrm share/examples/gmt
 @dirrm share/doc/html/gmt/images
 @dirrm share/doc/html/gmt/doc/html/tutorial
 @dirrm share/doc/html/gmt/doc/html/GMT_Docs
