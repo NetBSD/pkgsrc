@@ -1,0 +1,6 @@
+Knights is a graphical chess interface to various chess engines and is
+designed to work with KDE2.  It has features geared toward novice players,
+such as "previews": when you right click on a piece, Knights will show you
+where that piece can move, and where it can attack.  Future releases of
+Knights will include tutorials which teach everything from piece movement
+to advanced endgame strategy.

@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2001/11/13 21:32:50 jlam Exp $
+
+SHA1 (knights-0.4.6.tar.gz) = b060436198d311d42191c7944aba7564f72971a9
+Size (knights-0.4.6.tar.gz) = 1138560 bytes
+SHA1 (patch-aa) = 4d8fa0076dda17b7b06826d95dc28e26e163290f

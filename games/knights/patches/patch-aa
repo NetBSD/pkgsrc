@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/11/13 21:32:50 jlam Exp $
+
+--- doc/en/index.docbook.orig	Wed Aug 15 17:44:29 2001
++++ doc/en/index.docbook
+@@ -3,7 +3,6 @@
+   <!ENTITY kappname "Knights">
+   <!ENTITY % addindex "IGNORE">
+   <!ENTITY % English "INCLUDE" > <!-- change language only here -->
+-  %ents;
+ ]>
+ 
+ <book lang="&language;">
