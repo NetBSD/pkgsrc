@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.in,v 1.26 2004/08/21 06:36:13 jlam Exp $
+# $NetBSD: Makefile.in,v 1.27 2004/08/23 03:32:12 jlam Exp $
 #
 
 srcdir=		@srcdir@
@@ -20,6 +20,11 @@ RANLIB=		@RANLIB@
 LIB=		libnbcompat.a
 
 INCS=		nbcompat.h \
+		nbcompat/assert.h \
+		nbcompat/cdefs.h \
+		nbcompat/ctype.h \
+		nbcompat/dirent.h \
+		nbcompat/endian.h \
 		nbcompat/err.h \
 		nbcompat/fnmatch.h \
 		nbcompat/fts.h \
@@ -30,6 +35,7 @@ INCS=		nbcompat.h \
 		nbcompat/md5.h \
 		nbcompat/nbconfig.h \
 		nbcompat/nbtypes.h \
+		nbcompat/param.h \
 		nbcompat/paths.h \
 		nbcompat/poll.h \
 		nbcompat/pwd.h \
@@ -42,14 +48,15 @@ INCS=		nbcompat.h \
 		nbcompat/stdio.h \
 		nbcompat/stdlib.h \
 		nbcompat/string.h \
+		nbcompat/termcap.h \
 		nbcompat/time.h \
+		nbcompat/types.h \
 		nbcompat/tzfile.h \
 		nbcompat/unistd.h \
 		nbcompat/util.h \
 		nbcompat/vis.h
 
-# always use our local glob() implementation.
-OBJS=		glob.o @LIBOBJS@
+OBJS=		@LIBOBJS@
 
 LINK=		$(CCLD) $(CFLAGS) $(LDFLAGS) -o $@
 COMPILE=	$(CC) $(CPPFLAGS) $(CFLAGS)
@@ -70,7 +77,7 @@ nbcompat/nbtypes.h: bits
 	./bits $@
 
 bits: bits.c
-	$(CC) -o bits bits.c
+	$(COMPILE) $(DEFS) -o bits bits.c
 
 install:
 	$(INSTALL) -m 755 -d $(prefix)/lib
