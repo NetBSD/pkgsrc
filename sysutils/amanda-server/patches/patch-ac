@@ -1,13 +1,16 @@
-$NetBSD: patch-ac,v 1.3 1999/09/04 01:19:50 bad Exp $
+$NetBSD: patch-ac,v 1.4 1999/09/06 18:16:34 bad Exp $
 
---- Makefile.in.old	Tue Feb 23 10:37:10 1999
-+++ Makefile.in	Tue Feb 23 10:38:36 1999
-@@ -157,7 +157,7 @@
+--- Makefile.in.orig	Sat Nov 21 18:32:54 1998
++++ Makefile.in	Fri Sep  3 20:09:55 1999
+@@ -157,9 +157,9 @@
  AUTOCONF = @AUTOCONF@ --localdir=config
  
  SUBDIRS=config		\
 -	common-src	client-src	tape-src	\
 +	client-src	\
  	server-src	restore-src	recover-src	\
- 	changer-src	amplot		man		\
+-	changer-src	amplot		man		\
++	changer-src			man		\
  	example
+ 
+ EXTRA_DIST = \
