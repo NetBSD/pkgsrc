@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.393 2003/05/17 18:57:27 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.394 2003/05/25 09:54:35 epg Exp $
 #
 
 COMMENT=	Development utilities
@@ -19,7 +19,7 @@ SUBDIR+=	aegis
 SUBDIR+=	ald
 SUBDIR+=	anjuta
 SUBDIR+=	apel
-SUBDIR+=	apr-devel
+SUBDIR+=	apr
 SUBDIR+=	arch
 SUBDIR+=	argtable
 SUBDIR+=	as31
@@ -372,7 +372,11 @@ SUBDIR+=	st
 SUBDIR+=	stlport
 SUBDIR+=	stooop
 SUBDIR+=	subversion
+SUBDIR+=	subversion-base
+SUBDIR+=	subversion-python
 SUBDIR+=	swig
+#SUBDIR+=	swig-build	# conflicts with swig (soon to change)
+SUBDIR+=	swig-python
 SUBDIR+=	tavrasm
 SUBDIR+=	tcl-tclcl
 SUBDIR+=	tkcvs
