@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1215 2003/01/24 11:16:47 mrauch Exp $
+$NetBSD: CHANGES,v 1.1216 2003/01/24 12:42:19 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -393,3 +393,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated pkg_comp to 1.6 [jmmv 2003-01-24]
 	Updated gqview to 1.2.1 [wiz 2003-01-24]
 	Updated openoffice-linux to 1.0.2nb1 [mrauch 2003-01-24]
+	Updated gdchart to 0.10.1nb3 [jlam 2003-01-24]
