@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2947 2003/07/30 21:06:38 jmmv Exp $
+$NetBSD: CHANGES,v 1.2948 2003/07/30 21:30:18 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3146,3 +3146,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated pxe to 1.2nb1 [jmmv 2003-07-30]
 	Updated mmix to 20030622 [jtb 2003-07-30]
 	Updated ucd-snmp to 4.2.4nb1 [jmmv 2003-07-30]
+	Updated libbonoboui to 2.2.3 [jmmv 2003-07-30]
