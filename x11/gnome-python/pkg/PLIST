@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2000/03/14 22:20:22 tron Exp $
+@comment $NetBSD: PLIST,v 1.4 2000/06/05 19:52:33 tron Exp $
 include/pygtk/pygdkimlib.h
 include/pygtk/pygtk.h
 lib/python1.5/site-packages/GDK.py
@@ -16,17 +16,28 @@ lib/python1.5/site-packages/GtkExtra.pyo
 lib/python1.5/site-packages/Gtkinter.py
 lib/python1.5/site-packages/Gtkinter.pyc
 lib/python1.5/site-packages/Gtkinter.pyo
-lib/python1.5/site-packages/_appletmodule.so
-lib/python1.5/site-packages/_cappletmodule.so
-lib/python1.5/site-packages/_gdkimlibmodule.so
-lib/python1.5/site-packages/_gladegnomemodule.so
-lib/python1.5/site-packages/_gnomemodule.so
-lib/python1.5/site-packages/_gnomeuimodule.so
-lib/python1.5/site-packages/_gtkglmodule.so
-lib/python1.5/site-packages/_gtkmodule.so
-lib/python1.5/site-packages/_gtkxmhtmlmodule.so
-lib/python1.5/site-packages/_libglademodule.so
-lib/python1.5/site-packages/_zvtmodule.so
+lib/python1.5/site-packages/_gtkmodule.la
+lib/python1.5/site-packages/lib_gtkmodule.a
+lib/python1.5/site-packages/_gdkimlibmodule.la
+lib/python1.5/site-packages/lib_gdkimlibmodule.a
+lib/python1.5/site-packages/_gtkglmodule.la
+lib/python1.5/site-packages/lib_gtkglmodule.a
+lib/python1.5/site-packages/_libglademodule.la
+lib/python1.5/site-packages/lib_libglademodule.a
+lib/python1.5/site-packages/_gnomemodule.la
+lib/python1.5/site-packages/lib_gnomemodule.a
+lib/python1.5/site-packages/_gnomeuimodule.la
+lib/python1.5/site-packages/lib_gnomeuimodule.a
+lib/python1.5/site-packages/_zvtmodule.la
+lib/python1.5/site-packages/lib_zvtmodule.a
+lib/python1.5/site-packages/_gtkxmhtmlmodule.la
+lib/python1.5/site-packages/lib_gtkxmhtmlmodule.a
+lib/python1.5/site-packages/_appletmodule.la
+lib/python1.5/site-packages/lib_appletmodule.a
+lib/python1.5/site-packages/_cappletmodule.la
+lib/python1.5/site-packages/lib_cappletmodule.a
+lib/python1.5/site-packages/_gladegnomemodule.la
+lib/python1.5/site-packages/lib_gladegnomemodule.a
 lib/python1.5/site-packages/gettext.py
 lib/python1.5/site-packages/gettext.pyc
 lib/python1.5/site-packages/gettext.pyo
