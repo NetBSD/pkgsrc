@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.464 2000/06/03 19:43:20 mycroft Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.465 2000/06/03 20:03:37 mycroft Exp $
 #
 # This file is in the public domain.
 #
@@ -67,14 +67,14 @@ PKG_JVM?=		kaffe
 .endif
 .endif
 .if ${PKG_JVM} == "jdk"
-DEPENDS+=		jdk-1.1.*:${PKGSRCDIR}/lang/jdk
+DEPENDS+=		jdk-1.1.*:../../lang/jdk
 .if defined(JDK_HOME)
 JAVA_HOME?=		${JDK_HOME}
 .else
 JAVA_HOME?=		${LOCALBASE}/java
 .endif
 .elif ${PKG_JVM} == "kaffe"
-DEPENDS+=		kaffe-[0-9]*:${PKGSRCDIR}/lang/kaffe
+DEPENDS+=		kaffe-[0-9]*:../../lang/kaffe
 JAVA_HOME?=		${LOCALBASE}/kaffe
 .endif
 CLASSPATH?=		${JAVA_HOME}/lib/classes.zip:.
@@ -97,7 +97,7 @@ MOTIFBASE?=		${X11BASE}
 .if defined(USE_IMAKE) || defined(USE_MOTIF) || defined(USE_X11BASE)
 .if defined(USE_LOCALBASE_FOR_X11)
 PREFIX=			${LOCALBASE}
-BUILD_DEPENDS+=		${X11BASE}/lib/X11/config/xpkgwedge.def:${PKGSRCDIR}/pkgtools/xpkgwedge
+BUILD_DEPENDS+=		${X11BASE}/lib/X11/config/xpkgwedge.def:../../pkgtools/xpkgwedge
 .else
 PREFIX=			${X11BASE}
 .endif
@@ -109,7 +109,7 @@ PREFIX=			${LOCALBASE}
 .endif
 
 .if defined(USE_GMAKE)
-BUILD_DEPENDS+=		${GMAKE}:${PKGSRCDIR}/devel/gmake
+BUILD_DEPENDS+=		${GMAKE}:../../devel/gmake
 MAKE_PROGRAM=		${GMAKE}
 GMAKE?=			gmake
 .else
@@ -122,7 +122,7 @@ BUILD_DEFS+=		KERBEROS
 .endif
 
 .if defined(USE_PERL5)
-DEPENDS+=		perl-*:${PKGSRCDIR}/lang/perl5
+DEPENDS+=		perl-*:../../lang/perl5
 .endif
 
 .if defined(USE_FORTRAN)
@@ -134,7 +134,7 @@ PKG_FC?=		f2c-f77
 # /usr/bin/f77, the default will remain as f2c-f77.
 PKG_FC?=		f2c-f77
 .if  (${PKG_FC} == "f2c-f77")
-BUILD_DEPENDS+=       f2c-f77:${PKGSRCDIR}/lang/f2c
+BUILD_DEPENDS+=       f2c-f77:../../lang/f2c
 .endif
 FC=             ${PKG_FC}
 F77=            ${PKG_FC}
@@ -147,23 +147,23 @@ USE_GTEXINFO=		yes
 .endif
 
 .if defined(USE_GTEXINFO) && !exists(/usr/bin/install-info)
-DEPENDS+=		gtexinfo-3.12:${PKGSRCDIR}/devel/gtexinfo
+DEPENDS+=		gtexinfo-3.12:../../devel/gtexinfo
 .endif
 
 .if defined(USE_LIBTOOL)
 LIBTOOL=		${LOCALBASE}/bin/libtool
 # XXX: actually, here we would need something like
-# BUILD_DEPENDS+=libtool>1.3.5:${PKGSRCDIR}/devel/libtool
+# BUILD_DEPENDS+=libtool>1.3.5:../../devel/libtool
 .if make(misc-depends)
-DEPENDS+=		libtool>1.3.5:${PKGSRCDIR}/devel/libtool
+DEPENDS+=		libtool>1.3.5:../../devel/libtool
 .endif
 .elif defined(USE_PKGLIBTOOL)
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "SunOS"
 LIBTOOL=		${LOCALBASE}/bin/pkglibtool-${OBJECT_FMT}-1.2p2
-BUILD_DEPENDS+=		${LIBTOOL}:${PKGSRCDIR}/pkgtools/pkglibtool
+BUILD_DEPENDS+=		${LIBTOOL}:../../pkgtools/pkglibtool
 .else
 LIBTOOL=		${LOCALBASE}/bin/libtool
-BUILD_DEPENDS+=		${LIBTOOL}:${PKGSRCDIR}/devel/libtool
+BUILD_DEPENDS+=		${LIBTOOL}:../../devel/libtool
 .endif
 .endif
 
@@ -176,7 +176,7 @@ MAKE_ENV+=		LIBTOOL="${LIBTOOL} ${LIBTOOL_FLAGS}"
 .if exists(/usr/include/openssl/ssl.h)
 SSLBASE=	/usr
 .else
-DEPENDS+=	openssl>=0.9.5a:${PKGSRCDIR}/security/openssl
+DEPENDS+=	openssl>=0.9.5a:../../security/openssl
 SSLBASE=	${LOCALBASE}
 .endif
 BUILD_DEFS+=	SSLBASE
@@ -185,9 +185,9 @@ BUILD_DEFS+=	SSLBASE
 .if defined(USE_XAW)
 XAW_TYPE?=		standard
 .if ${XAW_TYPE} == "xpm"
-DEPENDS+=		Xaw-Xpm-1.1:${PKGSRCDIR}/x11/Xaw-Xpm
+DEPENDS+=		Xaw-Xpm-1.1:../../x11/Xaw-Xpm
 .elif ${XAW_TYPE} == "3d"
-DEPENDS+=		Xaw3d-1.5:${PKGSRCDIR}/x11/Xaw3d
+DEPENDS+=		Xaw3d-1.5:../../x11/Xaw3d
 .endif
 .endif
 
@@ -285,7 +285,7 @@ EXTRACT_SUFX?=		.tar.gz
 BZCAT=			/usr/bin/bzcat
 .else
 BZCAT=			${LOCALBASE}/bin/bzcat
-BUILD_DEPENDS+=		${BZCAT}:${PKGSRCDIR}/archivers/bzip2
+BUILD_DEPENDS+=		${BZCAT}:../../archivers/bzip2
 .endif # !exists bzcat
 DECOMPRESS_CMD?=	${BZCAT}
 .elif ${EXTRACT_SUFX} == ".tar"
@@ -302,7 +302,7 @@ DECOMPRESS_CMD?=	${GZCAT}
 BZCAT=			/usr/bin/bzcat
 .else
 BZCAT=			${LOCALBASE}/bin/bzcat
-BUILD_DEPENDS+=		${BZCAT}:${PKGSRCDIR}/archivers/bzip2
+BUILD_DEPENDS+=		${BZCAT}:../../archivers/bzip2
 .endif # !exists bzcat
 .endif
 .endif # defined(PATCHFILES)
@@ -685,10 +685,10 @@ FETCH_BEFORE_ARGS += -p
 .if exists(${MOTIFBASE}/include/Xm/Xm.h)
 IS_LESSTIF!=	${EGREP} -c LESSTIF ${MOTIFBASE}/include/Xm/Xm.h || ${TRUE}
 .if (${IS_LESSTIF} != "0")
-DEPENDS+=	lesstif-*:${PKGSRCDIR}/x11/lesstif
+DEPENDS+=	lesstif-*:../../x11/lesstif
 .endif
 .else
-DEPENDS+=	lesstif-*:${PKGSRCDIR}/x11/lesstif
+DEPENDS+=	lesstif-*:../../x11/lesstif
 .endif
 .endif
 
