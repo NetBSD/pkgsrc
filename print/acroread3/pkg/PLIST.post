@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST.post,v 1.1.1.1 2000/01/14 15:19:28 dmcmahill Exp $
+@exec ln -sf %D/Acrobat3/Reader/Fonts %D/Acrobat3/Reader/${PLATFORM}/fonts
+@unexec rm -f %D/Acrobat3/Reader/${PLATFORM}/fonts
+@exec ln -sf %D/Acrobat3/Reader/res %D/Acrobat3/Reader/${PLATFORM}/res
+@unexec rm -f %D/Acrobat3/Reader/${PLATFORM}/res
+@dirrm Acrobat3/Browsers/${PLATFORM}
+@dirrm Acrobat3/Reader/${PLATFORM}/app-defaults
+@dirrm Acrobat3/Reader/${PLATFORM}/bin
+@dirrm Acrobat3/Reader/${PLATFORM}/lib
+@dirrm Acrobat3/Reader/${PLATFORM}/plug_ins
+@dirrm Acrobat3/Reader/${PLATFORM}
+@dirrm Acrobat3/bin
+@dirrm Acrobat3/Browsers
+@dirrm Acrobat3/Fonts
+@dirrm Acrobat3/Reader/help
+@dirrm Acrobat3/Reader/res
+@dirrm Acrobat3/Reader
+@dirrm Acrobat3
