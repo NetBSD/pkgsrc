@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2002/08/04 21:54:50 jdolecek Exp $
+# $NetBSD: Makefile,v 1.7 2002/08/07 12:47:51 wiz Exp $
 #
 
 DISTNAME=	jhead-1.8
@@ -9,7 +9,7 @@ MAINTAINER=	veego@netbsd.org
 HOMEPAGE=	http://www.sentex.net/~mwandel/jhead/
 COMMENT=	Extract EXIF header from JPEG image
 
-LIBS=		-lm -L${LOCALBASE}/lib -ljpeg
+LIBS=		-lm -L${BUILDLINK_DIR}/lib -Wl,-R${LOCALBASE}/lib -ljpeg
 
 do-build:
 	cd ${WRKSRC} && \
