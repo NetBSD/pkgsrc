@@ -1,4 +1,4 @@
-# $NetBSD: defs.IRIX.mk,v 1.35 2003/10/11 05:09:39 grant Exp $
+# $NetBSD: defs.IRIX.mk,v 1.36 2003/10/13 00:23:49 jschauma Exp $
 #
 # Variable definitions for the IRIX operating system.
 
@@ -131,7 +131,7 @@ _OPSYS_NEEDS_XPKGWEDGE=	yes		# xpkgwedge is required for X11
 _OPSYS_PERL_REQD=			# no base version of perl required
 _OPSYS_PTHREAD_AUTO=	no		# -lpthread needed for pthreads
 _OPSYS_RPATH_NAME=	-rpath,		# name of symbol in rpath directive to linker 
-if defined(_OPSYS_GPATCH_REQD) && ${_OPSYS_GPATCH_REQD} == "YES"
+.if defined(_OPSYS_GPATCH_REQD) && ${_OPSYS_GPATCH_REQD} == "YES"
 _PATCH_CAN_BACKUP=      yes		# patch(1) can make backups
 _PATCH_BACKUP_ARG=      -b -V simple -z # switch to patch(1) for backup suffix
 .else
