@@ -4,7 +4,7 @@
 # Date created:		03 September 1994
 # Whom:			mr
 #
-# $NetBSD: Makefile,v 1.3 1997/11/22 05:42:42 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 1997/12/04 22:53:34 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.21 1997/03/26 02:12:07 ache Exp
 #
 
@@ -29,8 +29,7 @@ do-build:
 	cd ${WRKSRC} && ./build neb
 
 do-install:
-	install -c -o ${BINOWN} -g ${BINGRP} -m ${BINMODE} ${WRKSRC}/bin/libpico.so.1.3 ${PREFIX}/lib/libpico.so.1.3
-	/sbin/ldconfig -m ${PREFIX}/lib
+	install -c -o ${BINOWN} -g ${BINGRP} -m ${BINMODE} ${WRKSRC}/pico/libpico.a ${PREFIX}/lib/libpico.a
 	install -c -s -o ${BINOWN} -g ${BINGRP} -m ${BINMODE} ${WRKSRC}/bin/pico ${PREFIX}/bin/pico
 	install -c -s -o ${BINOWN} -g ${BINGRP} -m ${BINMODE} ${WRKSRC}/bin/pilot ${PREFIX}/bin/pilot
 	install -c -s -o ${BINOWN} -g ${BINGRP} -m ${BINMODE} ${WRKSRC}/bin/pine ${PREFIX}/bin/pine
