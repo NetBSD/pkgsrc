@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.58 2004/10/03 00:14:50 tv Exp $
+# $NetBSD: Makefile,v 1.59 2004/11/03 13:13:02 adam Exp $
 
-DISTNAME=	gd-2.0.28
-PKGREVISION=	1
+DISTNAME=	gd-2.0.32
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.boutell.com/gd/http/
 
