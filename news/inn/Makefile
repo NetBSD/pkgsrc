@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1998/09/17 15:39:53 agc Exp $
+# $NetBSD: Makefile,v 1.3 1998/10/17 18:09:32 bad Exp $
 
 DISTNAME=		inn-2.1
 CATEGORIES=		news
@@ -16,7 +16,8 @@ INN_SPOOL?=		/var/spool/news
 USE_PERL5=		yes
 USE_LIBTOOL=		yes
 CONFIGURE_ARGS+=	--with-perl --with-spool-dir=${INN_SPOOL}
-CONFIGURE_ARGS+=	--with-tmp-path=/tmp
+CONFIGURE_ARGS+=	--with-tmp-path=/tmp  --with-sendmail=/usr/sbin/sendmail
+CONFIGURE_ENV+=		_PATH_PERL=${LOCALBASE}/bin/perl
 GNU_CONFIGURE=		yes
 
 INSTALL_FILE=		${WRKDIR}/.INSTALL
