@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2003/02/17 22:34:41 grant Exp $
+# $NetBSD: Makefile,v 1.16 2003/02/18 00:34:43 grant Exp $
 
 DISTNAME=	AuthPG-1.2b2
 PKGNAME=	ap-auth-postgresql-1.2b2
@@ -14,7 +14,7 @@ USE_BUILDLINK2=	YES
 
 APACHE_MODULE_NAME=	mod_auth_pg.so
 
-CPPFLAGS+=	-I${LOCALBASE}/include/postgresql
+CPPFLAGS+=	-I${BUILDLINK_PREFIX.postgresql-lib}/include/postgresql
 LDFLAGS+=	-lpq -lcrypt
 
 post-install:
