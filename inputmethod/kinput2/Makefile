@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/05/31 13:01:25 seb Exp $
+# $NetBSD: Makefile,v 1.2 2002/06/10 11:53:54 sakamoto Exp $
 # FreeBSD Id: Makefile,v 1.4 1999/06/06 13:19:49 taoka Exp $
 
 DISTNAME=	kinput2-v3
@@ -22,8 +22,8 @@ IGNORE=	${PKGNAME} is ignored. because USE_CANNA,USE_WNN4,USE_WNN6,USE_SJ3 are "
 .endif
 
 .if !defined(USE_CANNA) || ${USE_CANNA} == YES
-DEPENDS+=	Canna-lib>=3.5.2:../../inputmethod/canna-lib
-KINPUT2_DEF+=	-DUseCanna -Dport_CANNASRC=${LOCALBASE}/include \
+.include "../../inputmethod/canna-lib/buildlink.mk"
+KINPUT2_DEF+=	-DUseCanna -Dport_CANNASRC=${BUILDLINK_DIR}/include \
 		-Dport_CANNALIB="${LDFLAGS} -lcanna16"
 .endif
 
@@ -33,15 +33,15 @@ KINPUT2_DEF+=	-DUseCanna -Dport_CANNASRC=${LOCALBASE}/include \
 #		-Dport_WNNLIB="${LDFLAGS} -lwnn6 -lcrypt"
 #.elif (!defined(USE_WNN4) || ${USE_WNN4} == YES)
 .if !defined(USE_WNN4) || ${USE_WNN4} == YES
-DEPENDS+=	ja-FreeWnn-lib-1.10:../../inputmethod/ja-freewnn-lib
-KINPUT2_DEF+=	-DUseWnn -Dport_WNNINCDIR=${LOCALBASE}/include/wnn \
+.include "../../inputmethod/freewnn-lib/buildlink.mk"
+KINPUT2_DEF+=	-DUseWnn -Dport_WNNINCDIR=${BUILDLINK_DIR}/include/wnn \
 		-Dport_WNNLIB="${LDFLAGS} -lwnn -lcrypt"
 PLIST_SRC+=	${PKGDIR}/PLIST-freewnn
 .endif
 
 .if !defined(USE_SJ3) || ${USE_SJ3} == YES
-DEPENDS+=	sj3-lib-2.0.1.20:../../inputmethod/sj3-lib
-KINPUT2_DEF+=	-DUseSj3 -Dport_SJ3SRC=${LOCALBASE}/include \
+.include "../../inputmethod/sj3-lib/buildlink.mk"
+KINPUT2_DEF+=	-DUseSj3 -Dport_SJ3SRC=${BUILDLINK_DIR}/include \
 		-Dport_SJ3LIB="${LDFLAGS} -lsj3lib"
 PLIST_SRC+=	${PKGDIR}/PLIST-sj3
 .endif
