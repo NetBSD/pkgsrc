@@ -1,7 +1,17 @@
-@comment $NetBSD: PLIST,v 1.3 1998/11/12 23:03:39 frueauf Exp $
-lib/libIDL.so.5.0
+@comment $NetBSD: PLIST,v 1.4 1998/12/19 12:31:48 tron Exp $
+bin/name-client
+bin/old-name-server
+bin/orbit-idl
+bin/orbit-config
+bin/orbit-event-server
+bin/orbit-ird
+bin/orbit-name-server
+lib/libIDL.so.5.7
 lib/libIDL.la
 lib/libIDL.a
+lib/libORBitCosNaming.so.3.0
+lib/libORBitCosNaming.la
+lib/libORBitCosNaming.a
 lib/libORBitutil.so.3.0
 lib/libORBitutil.la
 lib/libORBitutil.a
@@ -11,11 +21,16 @@ lib/libIIOP.a
 lib/libORBit.so.3.0
 lib/libORBit.la
 lib/libORBit.a
-bin/orbit-idl
-bin/naming-client
-bin/orbit-naming-server
-bin/orbit-config
+lib/libname-server.a
 include/libIDL/IDL.h
+include/ORBitservices/CosNaming.h
+include/ORBitservices/CosNaming_impl.h
+include/ORBitservices/CosNaming.idl
+include/ORBitservices/LName.pidl
+include/ORBitservices/CosEventComm.idl
+include/ORBitservices/CosEventChannel.idl
+include/ORBitservices/CosTypedEventComm.idl
+include/ORBitservices/CosTypedEventChannel.idl
 include/ORBitutil/basic_types.h
 include/ORBitutil/thread-safety.h
 include/ORBitutil/trace.h
@@ -27,9 +42,11 @@ include/IIOP/IIOP.h
 include/IIOP/giop-msg-buffer.h
 include/IIOP/iiop-encoders.h
 include/IIOP/iiop-endian.h
+include/orb/corba_any_proto.h
+include/orb/orbit_typecode.h
+include/orb/interface_repository.h
 include/orb/allocator-defs.h
 include/orb/allocators.h
-include/orb/boa.h
 include/orb/cdr.h
 include/orb/dii.h
 include/orb/dynany.h
@@ -49,7 +66,6 @@ include/orb/corba_any_type.h
 include/orb/corba_basic_sequences_type.h
 include/orb/corba_env.h
 include/orb/corba_env_type.h
-include/orb/corba_ir.h
 include/orb/corba_object.h
 include/orb/corba_object_type.h
 include/orb/corba_orb.h
@@ -69,5 +85,6 @@ info/libIDL.info
 @exec %D/bin/install-info %D/info/libIDL.info %D/info/libIDL.info
 @dirrm include/libIDL
 @dirrm include/ORBitutil
+@dirrm include/ORBitservices
 @dirrm include/IIOP
 @dirrm include/orb
