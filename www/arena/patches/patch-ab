@@ -1,52 +1,72 @@
-$NetBSD: patch-ab,v 1.2 1999/10/14 07:27:35 fredb Exp $
+$NetBSD: patch-ab,v 1.3 2000/02/06 03:49:49 fredb Exp $
 
---- configure.orig	Wed Nov 25 05:21:07 1998
-+++ configure	Sun Oct 10 12:01:16 1999
-@@ -2517,7 +2517,7 @@
- #
- LibWWW_headers="WWWLib.h WWWApp.h WWWFile.h WWWHTTP.h WWWMIME.h WWWNews.h WWWTrans.h"
- LibWWW_HTAncMan_h="HTAncMan.h"
--LibWWW_config_h="config.h"
-+LibWWW_config_h="wwwconf.h"
+--- configure.in.orig	Wed Nov 25 05:20:37 1998
++++ configure.in	Sun Oct 31 00:59:09 1999
+@@ -333,13 +333,13 @@
+ )
+ AC_ARG_WITH(libwww_libdir,
+ [  --with-libwww-libdir=DIR
+-                          Specify directory where the libwww.a resides.],
++                          Specify directory where the libwww modules reside.],
+ [
+   if test "${with_libwww_libdir+set}" = "set" ;
+    then
+     if test "${with_libwww_libdir}" = "no" ;
+      then
+-      AC_MSG_WARN(Without libwww.a library? =O)
++      AC_MSG_WARN(Without libwww modules? =O)
+      else
+       libwww_library_dir="${with_libwww_libdir}"
+       if test -d ${libwww_library_dir} ;
+@@ -395,7 +395,7 @@
+ ]
+ )
  
+-libwww="libwww"
++libwww="libwwwinit"
  
  #
-@@ -2853,22 +2853,22 @@
+ if test "${libwww_include+set}" = "set" && \
+@@ -474,7 +474,7 @@
+     fi
+   fi
    #
-   # If not all defined yet, then we've failed with it.
+-  libwww_dep="$libwww"
++  libwww_dep="$libwwwinit"
    #
--  if eval ${libwww_not_defined_yet} ;
--   then
--    ac_path_libwww=missing
--    libwww_dir=""
--    libwww_version=""
--    libwww_distribution=""
--    libwww_library_dir=""
--    libwww_include=""
--    libwww_config_h_dir=""
--    libwww_suffix=""
--    libwww_library=""
--    libwww_make_dir=""
--    libwww_make_target=""
--    echo "$ac_t""no" 1>&6
--    { echo "configure: error: Cannot find W3C libwww. Do worry! Arena cannot be built." 1>&2; exit 1; }
--  fi
-+#  if eval ${libwww_not_defined_yet} ;
-+#   then
-+#    ac_path_libwww=missing
-+#    libwww_dir=""
-+#    libwww_version=""
-+#    libwww_distribution=""
-+#    libwww_library_dir=""
-+#    libwww_include=""
-+#    libwww_config_h_dir=""
-+#    libwww_suffix=""
-+#    libwww_library=""
-+#    libwww_make_dir=""
-+#    libwww_make_target=""
-+#    echo "$ac_t""no" 1>&6
-+#    { echo "configure: error: Cannot find W3C libwww. Do worry! Arena cannot be built." 1>&2; exit 1; }
-+#  fi
+   # Aren't all the necessary symbols already defined?
    #
-   # If we get managed to reach this point,
-   # then all the libwww stuff has been already found.
+@@ -531,7 +531,7 @@
+     #
+     for ac_dir in $LibWWWPATH ;
+      do
+-      if test -f ${ac_dir}/libwww.a && \
++      if test -f ${ac_dir}/libwwwinit.a && \
+          test -f ${ac_dir}/include/WWWLib.h && \
+          test -f ${ac_dir}/config.h ;
+        then
+@@ -566,7 +566,7 @@
+          test -f ${ac_dir}/config.h.in ;
+        then
+         ac_dir_f="`cd $ac_dir ; $BINPWD`"
+-        libwww_dep="libwww"
++        libwww_dep="libwwwinit"
+         : ${libwww_dir:="$ac_dir_f"}
+         libwww_version="5"
+         libwww_distribution="source"
+@@ -897,6 +897,15 @@
+ 
+ AC_CHECK_FUNCS(snprintf vsnprintf strerror strncpy strndup strdup strstr)
+ 
++if test "${ac_cv_header_sys_time_h}" = "yes" ;
++ then
++  AC_CHECK_FUNCS(setitimer)
++  if test "${ac_cv_func_setitimer}" = "yes" ;
++   then
++dnl XXX Need to actually test for itimerval in sys/time.h!
++    AC_DEFINE(SETITIMER_USES_TIMEVAL)
++  fi
++fi
+ 
+ #
+ # Check if we want to use index or strchr
