@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2004/11/18 10:27:03 markd Exp $
+@comment $NetBSD: PLIST,v 1.10 2004/12/10 06:28:25 markd Exp $
 bin/atlantik
 bin/kasteroids
 bin/katomic
@@ -2301,34 +2301,34 @@ share/kde/mimelnk/application/x-kolf.desktop
 share/kde/mimelnk/application/x-kourse.desktop
 share/kde/mimelnk/application/x-tuberling.desktop
 share/kde/services/atlantik.protocol
-@comment dirrm share/kde/services
-@comment dirrm share/kde/mimelnk/application
-@comment dirrm share/kde/icons/locolor/32x32/apps
-@comment dirrm share/kde/icons/locolor/16x16/apps
-@comment dirrm share/kde/icons/hicolor/32x32/apps
-@comment dirrm share/kde/icons/hicolor/16x16/apps
-@comment dirrm share/kde/icons/crystalsvg/scalable/apps
-@comment dirrm share/kde/icons/crystalsvg/64x64/apps
-@comment dirrm share/kde/icons/crystalsvg/48x48/apps
-@comment dirrm share/kde/icons/crystalsvg/32x32/apps
-@comment dirrm share/kde/icons/crystalsvg/32x32/actions
-@comment dirrm share/kde/icons/crystalsvg/22x22/apps
-@comment dirrm share/kde/icons/crystalsvg/22x22/actions
-@comment dirrm share/kde/icons/crystalsvg/16x16/apps
-@comment dirrm share/kde/icons/crystalsvg/16x16/actions
-@comment dirrm share/kde/icons/crystalsvg/128x128/apps
-@comment dirrm share/kde/config/magic
-@comment dirrm share/kde/config.kcfg
+@comment in kde: @dirrm share/kde/services
+@comment in kde: @dirrm share/kde/mimelnk/application
+@comment in kde: @dirrm share/kde/icons/locolor/32x32/apps
+@comment in kde: @dirrm share/kde/icons/locolor/16x16/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/32x32/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/16x16/apps
+@comment in kde: @dirrm share/kde/icons/crystalsvg/scalable/apps
+@comment in kde: @dirrm share/kde/icons/crystalsvg/64x64/apps
+@comment in kde: @dirrm share/kde/icons/crystalsvg/48x48/apps
+@comment in kde: @dirrm share/kde/icons/crystalsvg/32x32/apps
+@comment in kde: @dirrm share/kde/icons/crystalsvg/32x32/actions
+@comment in kde: @dirrm share/kde/icons/crystalsvg/22x22/apps
+@comment in kde: @dirrm share/kde/icons/crystalsvg/22x22/actions
+@comment in kde: @dirrm share/kde/icons/crystalsvg/16x16/apps
+@comment in kde: @dirrm share/kde/icons/crystalsvg/16x16/actions
+@comment in kde: @dirrm share/kde/icons/crystalsvg/128x128/apps
+@comment in kde: @dirrm share/kde/config/magic
+@comment in kde: @dirrm share/kde/config.kcfg
 @dirrm share/kde/apps/lskat/grafix
 @dirrm share/kde/apps/lskat
 @dirrm share/kde/apps/kwin4/grafix/default
 @dirrm share/kde/apps/kwin4/grafix
 @dirrm share/kde/apps/kwin4
 @dirrm share/kde/apps/ktuberling/sounds/en
-@dirrm share/kde/apps/ktuberling/sounds
+@comment in kde: @dirrm share/kde/apps/ktuberling/sounds
 @dirrm share/kde/apps/ktuberling/pics
 @dirrm share/kde/apps/ktuberling/museum
-@dirrm share/kde/apps/ktuberling
+@comment in kde: @dirrm share/kde/apps/ktuberling
 @dirrm share/kde/apps/ktron
 @dirrm share/kde/apps/kspaceduel/sprites/sun
 @dirrm share/kde/apps/kspaceduel/sprites/ship2
@@ -2441,7 +2441,7 @@ share/kde/services/atlantik.protocol
 @dirrm share/kde/apps/atlantik/icons/crystalsvg
 @dirrm share/kde/apps/atlantik/icons
 @dirrm share/kde/apps/atlantik
-@comment dirrm share/kde/apps
+@comment in kde: @dirrm share/kde/apps
 @dirrm share/doc/kde/HTML/en/lskat
 @dirrm share/doc/kde/HTML/en/kwin4
 @dirrm share/doc/kde/HTML/en/ktuberling
@@ -2465,7 +2465,7 @@ share/kde/services/atlantik.protocol
 @dirrm share/doc/kde/HTML/en/kfouleggs
 @dirrm share/doc/kde/HTML/en/kenolaba
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdegames-apidocs/libkdegames/html
-@dirrm share/doc/kde/HTML/en/kdegames-apidocslibkdegames/html
+@dirrm share/doc/kde/HTML/en/kdegames-apidocs/libkdegames/html
 @dirrm share/doc/kde/HTML/en/kdegames-apidocs/libkdegames
 @dirrm share/doc/kde/HTML/en/kdegames-apidocs
 @dirrm share/doc/kde/HTML/en/kbounce
@@ -2475,9 +2475,9 @@ share/kde/services/atlantik.protocol
 @dirrm share/doc/kde/HTML/en/katomic
 @dirrm share/doc/kde/HTML/en/kasteroids
 @dirrm share/doc/kde/HTML/en/atlantik
-@comment dirrm share/doc/kde/HTML/en
-@comment dirrm share/applications/kde
-@comment dirrm lib/kde3
+@comment in kde: @dirrm share/doc/kde/HTML/en
+@comment in kde: @dirrm share/applications/kde
+@comment in kde: @dirrm lib/kde3
 @dirrm include/kolf
 @dirrm include/kgame
 @dirrm include/atlantik/ui
