@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/02/12 08:55:34 seb Exp $
+# $NetBSD: Makefile,v 1.3 2004/02/12 19:06:39 seb Exp $
 #
 
 DISTNAME=		genecys-0.1
@@ -18,6 +18,8 @@ CONFIGURE_DIRS=		${WRKSRC}/common ${WRKSRC}/client
 BUILD_DIRS=		${WRKSRC}/common ${WRKSRC}/client
 LIBS+=			-lm
 CONFIG_STATUS_OVERRIDE=	common/config.status client/config.status
+CONFIGURE_ARGS+=	--with-cal3d=${BUILDLINK_PREFIX.cal3d}
+CONFIGURE_ARGS+=	--with-openrm=${BUILDLINK_PREFIX.OpenRM}
 
 .include "../../graphics/cal3d/buildlink3.mk"
 .include "../../graphics/OpenRM/buildlink3.mk"
