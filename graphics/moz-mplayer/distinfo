@@ -1,5 +1,4 @@
-$NetBSD: distinfo,v 1.2 2003/05/23 09:37:27 salo Exp $
+$NetBSD: distinfo,v 1.3 2004/01/01 19:03:20 salo Exp $
 
-SHA1 (mplayerplug-in-0.80.tar.gz) = f51c65316edae74082edcbd4360d5581942ffbf1
-Size (mplayerplug-in-0.80.tar.gz) = 38414 bytes
-SHA1 (patch-aa) = a4747680ec045f36435a9a6f60dab5da26206f72
+SHA1 (mplayerplug-in-1.0.tar.gz) = a4667a272e43af94c4bca90d373430d53b6d3f9d
+Size (mplayerplug-in-1.0.tar.gz) = 79681 bytes
