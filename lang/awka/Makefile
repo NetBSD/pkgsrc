@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.2 2001/02/17 09:06:58 agc Exp $
+# $NetBSD: Makefile,v 1.3 2001/05/31 09:46:28 dent Exp $
 #
 
 DISTNAME=	awka-0.7.0
 CATEGORIES=	lang devel
-MASTER_SITES=	http://members.linuxstart.com/~awka/
+MASTER_SITES=	http://awka.sourceforge.net/
 
 MAINTAINER=	rh@netbsd.org
-HOMEPAGE=	http://members.linuxstart.com/~awka/
+HOMEPAGE=	http://awka.sourceforge.net/
 COMMENT=	AWK to ANSI C compiler
 
 GNU_CONFIGURE=	YES
