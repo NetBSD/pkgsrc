@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2004/10/03 00:18:23 tv Exp $
+# $NetBSD: Makefile,v 1.18 2004/10/15 12:06:05 tv Exp $
 #
 
 DISTNAME=	ion-2-20040729
 PKGNAME=	${DISTNAME:S/-2-/-/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	wm x11
 MASTER_SITES=	http://modeemi.cs.tut.fi/~tuomov/ion/dl/
 
@@ -40,6 +40,6 @@ INSTALLATION_DIRS=	bin lib/ion libexec/ion man/man1
 INSTALLATION_DIRS+=	share/doc/ion share/examples/ion share/ion
 
 .include "../../lang/lua/buildlink3.mk"
-.include "../../devel/libtool/buildlink3.mk"
+.include "../../devel/libltdl/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
