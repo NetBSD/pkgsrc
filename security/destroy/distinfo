@@ -1,4 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/01/23 18:11:29 recht Exp $
+$NetBSD: distinfo,v 1.2 2004/01/23 23:30:10 recht Exp $
 
 SHA1 (destroy-20030307.tar.gz) = a3a4e07f58b207cfc8d1b6110a40ad72762aaab4
 Size (destroy-20030307.tar.gz) = 2590 bytes
+SHA1 (patch-aa) = b70f9d6ea08d62767f5833adbf10c771be5a4148
+SHA1 (patch-ab) = 49fcc11b6df7b8d48cf5c6ebbcabf13f07ccf95e
