@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.7 2003/09/27 12:03:50 tron Exp $
+
+--- Makefile.in.orig	Thu May  4 23:04:20 2000
++++ Makefile.in	Sat Sep 27 14:00:42 2003
+@@ -62,7 +62,7 @@
+ all:	${PROG}
+ 
+ ${PROG}: ${OFILES}
+-	${CC} ${CFLAGS} -o $@.new ${OFILES} ${LIBS}
++	${CC} ${CFLAGS} -o $@.new ${OFILES} ${LIBS} ${LDFLAGS}
+ 	-mv -f $@ $@.old
+ 	mv -f $@.new $@
+ 
