@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.261 1999/04/29 02:19:55 tv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.262 1999/04/29 14:27:28 tv Exp $
 #
 # This file is in the public domain.
 #
@@ -731,6 +731,18 @@ PKGFILE?=		${PKGNAME}${PKG_SUFX}
 
 CONFIGURE_SCRIPT?=	configure
 CONFIGURE_ENV+=		PATH=${PATH}:${LOCALBASE}/bin:${X11BASE}/bin
+
+# 1.3.[012] did not define all of these in bsd.own.mk.  Preload those
+# for architectures available in those releases.
+GNU_ARCH.alpha?=	alpha
+GNU_ARCH.arm32?=	arm
+GNU_ARCH.i386?=		i386
+GNU_ARCH.m68k?=		m68k
+GNU_ARCH.mips?=		mipsel
+GNU_ARCH.ns32k?=	ns32k
+GNU_ARCH.sparc?=	sparc
+GNU_ARCH.vax?=		vax
+MACHINE_GNU_ARCH?=	${GNU_ARCH.${MACHINE_ARCH}}
 
 .if (${OPSYS} == "NetBSD")
 LOWER_OPSYS?=		netbsd
