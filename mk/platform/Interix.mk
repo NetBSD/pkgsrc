@@ -1,4 +1,4 @@
-# $NetBSD: Interix.mk,v 1.11 2004/11/16 16:21:40 tv Exp $
+# $NetBSD: Interix.mk,v 1.12 2004/11/16 18:04:00 tv Exp $
 #
 # Variable definitions for the Interix operating system.
 
@@ -108,9 +108,8 @@ USERADD?=		${LOCALBASE}/sbin/useradd
 GROUPADD?=		${LOCALBASE}/sbin/groupadd
 _PKG_USER_HOME?=	# empty by default
 _USER_DEPENDS=		user>=20040426:../../sysutils/user_interix
-DEPENDS+=		${USE_USERADD:D${_USER_DEPENDS}}
-DEPENDS+=		${USE_GROUPADD:D${_USER_DEPENDS}}
 
+CPP_PRECOMP_FLAGS?=	# unset
 DEF_UMASK?=		002
 EXPORT_SYMBOLS_LDFLAGS?=-Wl,-E	# add symbols to the dynamic symbol table
 
@@ -189,7 +188,7 @@ CONFIGURE_ENV+=		ac_cv_header_poll_h=no ac_cv_func_poll=no
 # check for maximum command line length and set it in configure's environment,
 # to avoid a test required by the libtool script that takes forever.
 .if defined(GNU_CONFIGURE) && defined(USE_LIBTOOL)
-CONFIGURE_ENV+=		lt_cv_sys_max_cmd_len=262144
+_OPSYS_MAX_CMDLEN=	262144
 .endif
 
 # If games are to be installed setgid, then SETGIDGAME is set to 'yes'

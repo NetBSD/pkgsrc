@@ -1,4 +1,4 @@
-# $NetBSD: AIX.mk,v 1.3 2004/11/16 16:21:40 tv Exp $
+# $NetBSD: AIX.mk,v 1.4 2004/11/16 18:04:00 tv Exp $
 #
 # Variable definitions for the AIX operating system.
 
@@ -114,10 +114,9 @@ GROUPADD?=	/usr/sbin/groupadd
 USERADD?=	${LOCALBASE}/sbin/useradd
 GROUPADD?=	${LOCALBASE}/sbin/groupadd
 _USER_DEPENDS=	user>=20000313:../../sysutils/user
-DEPENDS+=	${USE_USERADD:D${_USER_DEPENDS}}
-DEPENDS+=	${USE_GROUPADD:D${_USER_DEPENDS}}
 .endif
 
+CPP_PRECOMP_FLAGS?=	# unset
 DEF_UMASK?=		0022
 EXPORT_SYMBOLS_LDFLAGS?=-Wl,-E	# add symbols to the dynamic symbol table
 MOTIF_TYPE_DEFAULT?=	openmotif	# default 2.0 compatible libs type
@@ -186,7 +185,6 @@ SERIAL_DEVICES?=	/dev/tty0 \
 # FIXME: Adjust to work on this system and enable the lines below.
 #.if defined(GNU_CONFIGURE) && defined(USE_LIBTOOL)
 #_OPSYS_MAX_CMDLEN!=	/sbin/sysctl -n kern.argmax
-#CONFIGURE_ENV+=		lt_cv_sys_max_cmd_len=${_OPSYS_MAX_CMDLEN}
 #.endif
 
 # If games are to be installed setgid, then SETGIDGAME is set to 'yes'

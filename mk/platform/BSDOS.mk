@@ -1,4 +1,4 @@
-# $NetBSD: BSDOS.mk,v 1.3 2004/11/16 16:21:40 tv Exp $
+# $NetBSD: BSDOS.mk,v 1.4 2004/11/16 18:04:00 tv Exp $
 #
 # Variable definitions for the BSD/OS operating system.
 
@@ -98,6 +98,7 @@ XARGS?=		/usr/bin/xargs
 USERADD?=	/usr/sbin/adduser
 GROUPADD?=	/usr/sbin/addgroup
 
+CPP_PRECOMP_FLAGS?=	# unset
 DEF_UMASK?=		0022
 .if ${OBJECT_FMT} == "ELF"
 EXPORT_SYMBOLS_LDFLAGS?=-Wl,-E	# add symbols to the dynamic symbol table
@@ -166,7 +167,6 @@ PKG_CREATE_USERGROUP=	NO # until it works
 # FIXME: Adjust to work on this system and enable the lines below.
 #.if defined(GNU_CONFIGURE) && defined(USE_LIBTOOL)
 #_OPSYS_MAX_CMDLEN!=	/sbin/sysctl -n kern.argmax
-#CONFIGURE_ENV+=		lt_cv_sys_max_cmd_len=${_OPSYS_MAX_CMDLEN}
 #.endif
 
 # If games are to be installed setgid, then SETGIDGAME is set to 'yes'
