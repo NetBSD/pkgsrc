@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: pre-build,v 1.29 2003/09/02 07:00:06 jlam Exp $
+# $NetBSD: pre-build,v 1.30 2003/09/16 17:21:36 grant Exp $
 #
 # Clean up system to be ready for bulk pkg build
 #
@@ -45,24 +45,29 @@ X11BASE=`( cd ${PKGLINT_PKG_DIR} ; ${BMAKE} show-var VARNAME=X11BASE )`;
 # On non-NetBSD platforms we need to keep the bootstrap-files!
 if [ x"$BMAKE" = x"bmake" ]; then
 	( cd $LOCALBASE && tar cf /tmp/$$.tar \
-        	sbin/mtree sbin/pkg_add sbin/pkg_admin sbin/pkg_create \
-		sbin/pkg_delete sbin/pkg_info share/mk/sys.mk \
-		share/mk/bsd.dep.mk share/mk/bsd.depall.mk \
+		sbin/mtree sbin/pkg_add sbin/pkg_admin sbin/pkg_create \
+		sbin/pkg_delete sbin/pkg_info sbin/pkg_view sbin/linkfarm \
+		share/mk/sys.mk share/mk/bsd.dep.mk share/mk/bsd.depall.mk \
 		share/mk/bsd.files.mk share/mk/bsd.hostprog.mk \
-		share/mk/bsd.inc.mk share/mk/bsd.info.mk \
+		share/mk/bsd.doc.mk share/mk/bsd.inc.mk share/mk/bsd.info.mk \
 		share/mk/bsd.kernobj.mk share/mk/bsd.kinc.mk \
 		share/mk/bsd.kmod.mk share/mk/bsd.lib.mk \
 		share/mk/bsd.links.mk share/mk/bsd.man.mk \
 		share/mk/bsd.nls.mk share/mk/bsd.obj.mk \
 		share/mk/bsd.prog.mk share/mk/bsd.subdir.mk \
 		share/mk/bsd.sys.mk share/mk/bsd.own.mk \
-		share/mk/zoularis.mk bin/bmake bin/ftp bin/digest \
+		share/mk/zoularis.mk bin/bmake bin/ftp bin/digest bin/nbsed \
 		bin/pax bin/tar bin/cpio man/cat1/ftp.1 man/cat1/pax.0 \
 		man/cat1/tar.0 man/cat1/cpio.0 man/cat1/pkg_add.0 \
 		man/cat1/pkg_admin.0 man/cat1/pkg_create.0 \
 		man/cat1/pkg_delete.0 man/cat1/pkg_info.0 \
-		man/man1/digest.1 man/cat8/mtree.0 \
-		man/cat7/packages.0 )
+		man/cat1/pkg_view.0 man/cat1/linkfarm.0 \
+		man/man1/digest.1 man/man1/pax.1 man/man1/cpio.1 \
+		man/man1/tar.1 man/man1/nbsed.1 man/man1/pkg_add.1 \
+		man/man1/pkg_admin.1 man/man1/pkg_create.1 \
+		man/man1/pkg_delete.1 man/man1/pkg_info.1 \
+		man/man1/pkg_view.1 man/man1/linkfarm.1 man/cat8/mtree.0 \
+		man/man8/mtree.8 man/cat7/packages.0 )
 fi
 
 #
