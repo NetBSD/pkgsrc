@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/05/20 20:48:58 xtraeme Exp $
+
+SHA1 (libstatgrab-0.10.tar.gz) = 90ed5616776dc3043646dff55c29486bb99f7a0a
+Size (libstatgrab-0.10.tar.gz) = 406060 bytes
+SHA1 (patch-aa) = 96a0468807a4437b30f07a1e6b106459e556ce64
+SHA1 (patch-ab) = 5d0edb931d3c14dcd2560c0a777295fc523e9052
