@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8322 2004/12/09 18:06:54 wiz Exp $
+$NetBSD: CHANGES,v 1.8323 2004/12/09 18:21:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5828,3 +5828,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Downgraded xfce4-taskbar-plugin to 0.1.0nb1 [martti 2004-12-08]
 	Updated spegla to 1.1p4 [wiz 2004-12-09]
 	Updated p5-Text-Quoted to 1.8 [wiz 2004-12-09]
+	Updated p5-Regexp-Common to 2.117 [wiz 2004-12-09]
