@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.315 2003/02/24 20:56:28 jschauma Exp $
+$NetBSD: TODO,v 1.316 2003/02/25 10:57:21 wiz Exp $
 
 Suggested new packages
 ======================
@@ -136,6 +136,7 @@ Suggested package updates
 	o gnuplot-3.7.3 [pkg/19663]
 	o gpa-0.6.1
 	o gpgme-0.4.0
+	o grace-5.1.12
 	o gsed-4.0.5
 	o gtetrinet-0.6.2
 	o gtk---2.2.0
@@ -146,6 +147,7 @@ Suggested package updates
 	o icu-2.4 [heinz]
 	o id3v2-0.1.8
 	o imp-3.1 [pkg/19497]
+	o imp-3.2
 	o inform-6.21.3 [pkg/19298]
 	o inn 2.3.4 [waiting for IPv6 patch]
 	o iozone-3.157
@@ -167,6 +169,7 @@ Suggested package updates
 	o lcms-1.0.9
 	o leafnode-1.9.35
 	o lesstif-0.93.40
+	o libdvdread-0.9.4
 	o libgii-0.8.2
 	o libggi-2.0.2
 	o libole2-2.2.8
@@ -175,6 +178,7 @@ Suggested package updates
 	o libslang-1.4.8
 	o libsndfile-1.0.4
 	o lilypond-1.6.6
+	o links-2.1pre8
 	o lmbench-2.0.4
 	o lout-3.26 [pkg/18687]
 	o lynx-current-2.8.5dev9
@@ -194,8 +198,10 @@ Suggested package updates
 	o mysql-3.23.54
 	o naim-0.11.5.5
 	o napshare-1.2
+	o nessus-2.0.0
 	o net-snmp-5.0.7 [pkg/19939]
 	o netpbm-10.8
+	o nethack-3.4.1
 	o netscape-7.02
 	o neXtaw-0.13.0
 	o ns-flash-6.0.69
@@ -256,7 +262,7 @@ Suggested package updates
 	o sylpheed-claws-0.8.9
 	o tcl/tk-8.4.1 [bjoern]
 	o ted-2.12
-	o texmacs-1.0.1.5
+	o texmacs-1.0.1.6
 	o tightvnc-1.2.8
 	o ttf2pt1-3.4.3
 	o tuxpaint-0.9.10
