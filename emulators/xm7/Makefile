@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/12/30 21:44:25 agc Exp $
+# $NetBSD: Makefile,v 1.6 2002/01/24 12:16:14 wiz Exp $
 #
 
 DISTNAME=		xm71010s
@@ -19,18 +19,14 @@ RESTRICTED+=		no-commercial-use
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_SRC_ON_FTP=		${RESTRICTED}
 
-LHA=			lha
-# convert CRLF to LF and sjis encoding to EUC-JP in text files.
-EXTRACT_CMD=		${LHA} xqte ${DOWNLOADED_DISTFILE}
+# convert CRLF to LF
+EXTRACT_CMD=		lha xqt ${DOWNLOADED_DISTFILE}
 
 NO_CONFIGURE=		yes
 MAKEFILE=		makefile.x11
 
 post-extract:
 	@cd ${WRKDIR}; ${MV} linux/* vm
-
-pre-build:
-	cd ${WRKSRC}; ${MV} cpu.c cpu.c-msdos && ${SED} -e 's|.$$||g' cpu.c-msdos > cpu.c
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKDIR}/vm/xm7 ${PREFIX}/bin
