@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: mkbinarykit,v 1.2 2004/03/29 02:22:18 tv Exp $
+# $NetBSD: mkbinarykit,v 1.3 2004/03/31 23:46:14 jschauma Exp $
 #
 # Make a binary bootstrap kit and place it in targetdir (or current
 # working directory if not specified). The mk.conf.example file is
@@ -13,7 +13,7 @@
 
 usage="Usage: $0 "'
 	[ --force ] [ --targetdir=<tar target dir> ] [ --mkconf=<target> ]
-	[ bootstrap script arguments ]'
+	[ --no-build ] [ --workdir=<work dir> ] [ bootstrap script arguments ]'
 
 opsys=`uname -s`
 osrev=`uname -r`
@@ -26,14 +26,26 @@ pkgsrcdir=/usr/pkgsrc
 mkfile=/etc/mk.conf
 ignorecasecheck=no
 force=no
+build=yes
 targetdir=`pwd`
+wrkdir=work 		# default: relative to pkgsrc/bootstrap
 
 sedprog="sed" 
 
 case "$opsys" in
+AIX)
+	mkfile=/usr/pkg/etc/mk.conf
+	pkgdbdir=/usr/pkg/pkgdb
+	;;
 FreeBSD)
 	# Don't use the ports /var/db/pkg
 	pkgdbdir=/usr/pkg/pkgdb
+	;;
+Interix)
+	mkfile=/etc/mk.conf.example
+	# Don't use the interopsystems.com package dir
+	pkgdbdir=/usr/pkg/pkgdb
+	ospro=i386
 	;;
 NetBSD)
 	# Don't overwrite the system's mk.conf
@@ -47,75 +59,70 @@ OpenBSD)
 	# Use "arch -s" instead of uname -p
 	ospro=`arch -s`
 	;;
-
-Interix)
-	mkfile=/etc/mk.conf.example
-	# Don't use the interopsystems.com package dir
-	pkgdbdir=/usr/pkg/pkgdb
-	ospro=i386
-	;;
 SunOS)
 	sedprog=/usr/xpg4/bin/sed
-	;;
-AIX)
-	mkfile=/usr/pkg/etc/mk.conf
-	pkgdbdir=/usr/pkg/pkgdb
 	;;
 esac
 
 while [ $# -gt 0 ]; do
         case $1 in
 	--force)	force=yes ;;
+	--no-build)	build=no ;;
 	--targetdir=*)	targetdir=`echo $1 | $sedprog -e 's|--targetdir=||'` ;;
         --prefix=*)     prefix=`echo $1 | $sedprog -e 's|--prefix=||'` ;;
 	--mkconf=*)	mkfile=`echo $1 | $sedprog -e 's|--mkconf=||'` ;;
         --pkgdbdir=*)   pkgdbdir=`echo $1 | $sedprog -e 's|--pkgdbdir=||'` ;;
         --pkgsrcdir=*)  pkgsrcdir=`echo $1 | $sedprog -e 's|--pkgsrcdir=||'` ;;
         --ignore-case-check) ignorecasecheck=yes ;;
+	--workdir=*)	wrkdir=`echo $1 | $sedprog -e 's|--workdir=||'` ;;
         --*)            echo "$usage"; exit 1 ;;
         esac
         shift
 done
 
-if [ "$force" != "yes" ]; then
+if [ "$build" = "yes" ] && [ "$force" != "yes" ]; then
 	if [ -d "$prefix" ] || [ -d "$pkgdbdir" ]; then
 		echo "Some pkgsrc infrastructure exists on this system already."
 		echo "Use --force to move it out of the way."
 		exit 1
 	fi
-else
+elif [ "$build" = "yes" ]; then
 	mv -f "$prefix" "$prefix.$$"
 	mv -f "$pkgdbdir" "$pkgdbdir.$$"
 	mv -f "$mkfile" "$mkfile.$$"
 fi
 
-# Bootstrap
-bootstrap_flags="--prefix=$prefix --pkgsrcdir=$pkgsrcdir --pkgdbdir=$pkgdbdir"
-if [ "$ignorecasecheck" = "yes" ]; then
+if [ "$build" != "no" ]; then
+
+	# Bootstrap
+	bootstrap_flags="--prefix=$prefix --pkgsrcdir=$pkgsrcdir --pkgdbdir=$pkgdbdir --workdir=$wrkdir"
+	if [ "$ignorecasecheck" = "yes" ]; then
 	bootstrap_flags="$bootstrap_flags --ignore-case-check"
-fi
+	fi
 
-echo "Making bootstrap kit with"
-echo "prefix = $prefix"
-echo "pkgsrcdir = $pkgsrcdir"
-echo "pkgdbdir = $pkgdbdir"
-echo "mk.conf.example will be copied to $mkfile"
-echo ""
+	echo "Making bootstrap kit with"
+	echo "prefix = $prefix"
+	echo "pkgsrcdir = $pkgsrcdir"
+	echo "pkgdbdir = $pkgdbdir"
+	echo "mk.conf.example will be copied to $mkfile"
+	echo ""
 
-./cleanup
-./bootstrap $bootstrap_flags
-if [ $? != "0" ]; then
+	./cleanup $wrkdir
+	./bootstrap $bootstrap_flags
+	if [ $? != "0" ]; then
 	echo "Bootstrap error."
 	exit 1;
+	fi
 fi
 
 # Make a tar ball
+
 echo "Stripping binaries..."
 strip "$prefix/"bin/*
 strip "$prefix/"sbin/*
 
 echo "Making binary kit."
-cp mk.conf.example $mkfile &&						\
+cp ${wrkdir}/mk.conf.example $mkfile &&						\
 cd / && 								\
 tar -hcf "$targetdir/bootstrap-pkgsrc-$opsys-$osrev-$ospro-$date.tar"	\
 					.$prefix .$pkgdbdir .$mkfile && \
