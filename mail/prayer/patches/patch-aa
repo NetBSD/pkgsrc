@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2003/07/28 15:51:24 adam Exp $
+$NetBSD: patch-aa,v 1.5 2004/02/28 23:50:59 heinz Exp $
 
---- Config.orig	2003-05-29 11:49:38.000000000 +0200
-+++ Config	2003-07-28 16:50:50.000000000 +0200
-@@ -14,9 +14,9 @@
+--- Config.orig	Thu May 29 11:49:38 2003
++++ Config
+@@ -14,9 +14,9 @@ FENCE_ENABLE         = false  # Use Elec
  DIRECT_ENABLE        = false  # Experimental. Leave this switched off... 
  
  # Following depend on the way that you have configured c-client
@@ -14,7 +14,13 @@ $NetBSD: patch-aa,v 1.4 2003/07/28 15:51:24 adam Exp $
  
  # Probably don't need the following
  ACCOUNTD_ENABLE      = false  # Only of use in Cambridge at the moment.
-@@ -35,8 +35,8 @@
+@@ -30,13 +30,13 @@ CC           = gcc
+ # Location of make program (GNU make required)
+ MAKE         = gmake
+ # Location of install program (GNU install or compatible required)
+-INSTALL      = install
++INSTALL      = install -c
+ 
  # Base Compiler options for GCC.
  #BASECFLAGS   = -Wall -g
  #BASELDFLAGS  = -g
@@ -25,7 +31,7 @@ $NetBSD: patch-aa,v 1.4 2003/07/28 15:51:24 adam Exp $
  BASE_LIBS    = -lcrypt
  
  # Base Compiler options for Sun SUNWspro compiler
-@@ -56,9 +56,9 @@
+@@ -56,9 +56,9 @@ BASE_LIBS    = -lcrypt
  # which points to ../../imap/c-client. This just reduces the amount of
  # noise output on each line when building the package.
  #
@@ -38,7 +44,7 @@ $NetBSD: patch-aa,v 1.4 2003/07/28 15:51:24 adam Exp $
  CCLIENT_SSL_ENABLE  = true
  
  #
-@@ -101,8 +101,8 @@
+@@ -101,8 +101,8 @@ PAM_INCLUDE =
  PAM_LIBS    = -lpam
  
  # Kerberos (required if CCLIENT_KERB_ENABLE set)
@@ -49,7 +55,7 @@ $NetBSD: patch-aa,v 1.4 2003/07/28 15:51:24 adam Exp $
  
  # SSL definitions (required if SSL_ENABLE or CCLIENT_SSL_ENABLE set)
  #
-@@ -126,8 +126,8 @@
+@@ -126,8 +126,8 @@ DB_INCLUDE=
  DB_LIBS=-ldb
  
  # Following suitable for FreeBSD with DB 4 package installed
@@ -60,7 +66,7 @@ $NetBSD: patch-aa,v 1.4 2003/07/28 15:51:24 adam Exp $
  
  ############################################################################
  
-@@ -148,7 +148,7 @@
+@@ -148,7 +148,7 @@ RW_GROUP   = prayer
  # Default configuration and permissions does not allow prayer user to
  # update prayer configuration file.
  
@@ -69,7 +75,7 @@ $NetBSD: patch-aa,v 1.4 2003/07/28 15:51:24 adam Exp $
  RO_USER   = root
  RO_GROUP  = prayer
  
-@@ -163,6 +163,6 @@
+@@ -163,6 +163,6 @@ PRIVATE_DIR  = 0750
  PRIVATE_FILE = 0640
  
  # Location of configuration files and binaries
