@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2001/04/02 20:06:14 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2001/04/08 21:40:59 tron Exp $
 #
 
 DISTNAME=	xtraceroute-0.8.14
@@ -12,7 +12,7 @@ HOMEPAGE=	http://www.dtek.chalmers.se/~d3august/xt/index.html
 COMMENT=	Graphical version of traceroute, which traces the route IP packets go
 
 BUILD_USES_MSGFMT=	yes
-DEPENDS+=	gtkglarea-1.2.1:../../x11/gtkglarea
+DEPENDS+=	gtkglarea>=1.2.1:../../x11/gtkglarea
 DEPENDS+=	tiff-*:../../graphics/tiff
 
 USE_X11=	yes
