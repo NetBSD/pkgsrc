@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5233 2004/03/12 14:32:20 atatat Exp $
+$NetBSD: CHANGES,v 1.5234 2004/03/12 16:06:40 reed Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1429,6 +1429,7 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated xmms-jakdaw to to 0.0.4nb3 [snj 2004-03-12]
 	Updated yacas to 1.0.56 [dmcmahill 2004-03-11]
 	Updated tkirc2 to 2.46nb1 [minskim 2004-03-12]
+	Added ed-0.2 [reed 2004-03-11]
 	Updated ruby-base to 1.6.8.nb3  [taca 2004-03-12]
 	Added ruby-fcgi [taca 2004-03-12]
 	Added ruby-amrita [taca 2004-03-12]
