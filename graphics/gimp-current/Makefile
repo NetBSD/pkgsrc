@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2000/07/05 03:39:30 hubertf Exp $
+# $NetBSD: Makefile,v 1.16 2000/07/05 15:52:03 tron Exp $
 
 DISTNAME=		gimp-1.1.24
 CATEGORIES=		graphics
@@ -7,7 +7,7 @@ MASTER_SITES=		ftp://ftp.gimp.org/pub/gimp/unstable/v1.1.24/ \
 			ftp://ftp.fu-berlin.de/unix/X11/graphics/gimp/unstable/v1.1.24/
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		tron@netbsd.org
+MAINTAINER=		hubert@netbsd.org
 HOMEPAGE=		http://www.gimp.org/
 
 DEPENDS+=		jpeg-6b:../../graphics/jpeg
