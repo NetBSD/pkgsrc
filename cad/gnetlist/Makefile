@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2002/06/01 20:11:55 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.12 2002/10/14 09:59:30 rh Exp $
 #
 
 DISTNAME=		geda-gnetlist-${PKGVERSION}
@@ -10,7 +10,7 @@ MASTER_SITES=		ftp://ftp.geda.seul.org/pub/geda/devel/${PKGVERSION}/ \
 			http://www.geda.seul.org/devel/${PKGVERSION}/ \
 			http://www.geda.coelacanth.com/devel/${PKGVERSION}/
 
-MAINTAINER=		rh@netbsd.org
+MAINTAINER=		dmcmahill@netbsd.org
 HOMEPAGE=		http://www.geda.seul.org/
 COMMENT=		Netlist generation program
 
