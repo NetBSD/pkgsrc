@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4137 2003/12/15 23:38:43 chris Exp $
+$NetBSD: CHANGES,v 1.4138 2003/12/16 00:14:49 dillo Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5185,3 +5185,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated fix-mime-charset to 0.5.1 [wiz 2003-12-15]
 	Updated jdb to 1.21 [bad 2003-12-15]
 	Updated sylpheed to 0.9.8a [chris 2003-12-15]
+	Updated tin to 1.6.1 [dillo 2003-12-16]
