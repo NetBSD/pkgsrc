@@ -1,9 +1,9 @@
 #!/bin/sh
 #
-# $NetBSD: pkg_comp.sh,v 1.12 2003/12/13 18:29:47 seb Exp $
+# $NetBSD: pkg_comp.sh,v 1.13 2003/12/19 09:51:55 jmmv Exp $
 #
 # pkg_comp - Build packages inside a clean chroot environment
-# Copyright (c) 2002, 2003, Julio M. Merino Vidal <jmmv@netbsd.org>
+# Copyright (c) 2002, 2003, Julio M. Merino Vidal <jmmv@NetBSD.org>
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions
@@ -117,7 +117,7 @@ err()
 
 usage()
 {
-    echo "usage: $ProgName [-(c|C) conf_file] target [pkg_names]"
+    echo "usage: $ProgName [-(c|C) conf_file] [-n] target [pkg_names]"
     exit 1
 }
 
@@ -419,11 +419,11 @@ pkg_makeroot()
         pkg_build pkgtools/x11-links
     fi
 
-    if [ -n "$INSTALL_PACKAGES" ]; then
+    if [ "$nflag" = "no" -a -n "$INSTALL_PACKAGES" ]; then
         pkg_install $INSTALL_PACKAGES
     fi
 
-    if [ -n "$MAKE_PACKAGES" ]; then
+    if [ "$nflag" = "no" -a -n "$MAKE_PACKAGES" ]; then
         pkg_build $MAKE_PACKAGES
     fi
 }
@@ -654,12 +654,13 @@ pkg_removeroot()
 confdir="$HOME/pkg_comp"
 
 # Parse options
-args=`getopt c:C: $*`
+args=`getopt c:C:n $*`
 if [ $? != 0 ]; then
     usage
 fi
 set -- $args
 conffile=
+nflag=no
 while [ $# -gt 0 ]; do
     case "$1" in
         -c)
@@ -675,6 +676,9 @@ while [ $# -gt 0 ]; do
             fi
             conffile="$2"
             shift
+            ;;
+        -n)
+            nflag=yes
             ;;
         --)
             shift; break
