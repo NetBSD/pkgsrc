@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2002/03/14 13:54:04 uebayasi Exp $
+# $NetBSD: Makefile,v 1.7 2002/03/15 08:05:54 uebayasi Exp $
 # FreeBSD Id: ports/japanese/eb/Makefile,v 1.21 2000/08/21 03:39:42 kevlo Exp
 
 DISTNAME=	eb-3.2.1
@@ -54,7 +54,7 @@ CONFIGURE_ARGS+=	--with-zlib
 USE_GMAKE=		# Defined
 TEXINFO_OVERRIDE=	YES
 # For patterns like '... (install-info ...) ...'
-TEXINFO_SUBST_SED+=     -e "s!^\(	.*\)\([ 	'(]\)install-info\([ 	]\)!\1\2${INSTALL_INFO}\3!g"
+TEXINFO_SUBST_SED+=	-e "s!^\(	.*\)\([ 	'(]\)install-info\([ 	]\)!\1\2${INSTALL_INFO}\3!g"
 
 EB_APPENDIXDIR=	${PREFIX}/share/eb/appendix
 
