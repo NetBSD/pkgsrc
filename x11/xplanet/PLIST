@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.3 2004/04/26 14:56:01 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2005/04/01 11:33:36 adam Exp $
 bin/xplanet
 man/man1/xplanet.1
-share/xplanet/rgb.txt
 share/xplanet/arcs/README
 share/xplanet/arcs/constellations
 share/xplanet/config/README
@@ -9,18 +8,18 @@ share/xplanet/config/default
 share/xplanet/config/earth_markers
 share/xplanet/config/moon_orbit
 share/xplanet/config/overlay_clouds
-share/xplanet/fonts/README
 share/xplanet/fonts/FreeMonoBold.ttf
+share/xplanet/fonts/README
 share/xplanet/images/README
 share/xplanet/images/earth.jpg
-share/xplanet/images/night.jpg
 share/xplanet/images/hubble.png
-share/xplanet/images/shuttle.png
-share/xplanet/images/sublunar.png
 share/xplanet/images/iss.png
 share/xplanet/images/mgs.png
+share/xplanet/images/night.jpg
 share/xplanet/images/odyssey.png
+share/xplanet/images/shuttle.png
 share/xplanet/images/smile.png
+share/xplanet/images/sublunar.png
 share/xplanet/images/subsolar.png
 share/xplanet/markers/README
 share/xplanet/markers/brightStars
@@ -30,9 +29,12 @@ share/xplanet/markers/moon
 share/xplanet/origin/README
 share/xplanet/origin/cassini
 share/xplanet/origin/galileo
+share/xplanet/rgb.txt
 share/xplanet/satellites/README
 share/xplanet/satellites/iss
 share/xplanet/satellites/iss.tle
+share/xplanet/scripts/convertCassini.perl
+share/xplanet/scripts/convertCassini2.perl
 share/xplanet/spice/README
 share/xplanet/spice/asteroids
 share/xplanet/spice/asteroids.krn
@@ -42,8 +44,6 @@ share/xplanet/spice/mgs
 share/xplanet/spice/mgs.krn
 share/xplanet/spice/voyager
 share/xplanet/spice/voyager.krn
-share/xplanet/scripts/convertCassini.perl
-share/xplanet/scripts/convertCassini2.perl
 share/xplanet/stars/BSC
 @dirrm share/xplanet/stars
 @dirrm share/xplanet/spice
