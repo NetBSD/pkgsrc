@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.8 2000/06/01 15:28:57 rh Exp $
+$NetBSD: md5,v 1.9 2000/10/15 17:20:46 rh Exp $
 
-MD5 (glade-0.5.9.tar.gz) = 198531c9895a4edb94020ea7b6799c8a
+MD5 (glade-0.5.11.tar.gz) = 23d063133cbbfd331e3ee0f694efa610

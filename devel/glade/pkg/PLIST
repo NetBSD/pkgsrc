@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2000/06/01 15:28:57 rh Exp $
+@comment $NetBSD: PLIST,v 1.6 2000/10/15 17:20:46 rh Exp $
 bin/glade
 share/doc/glade/README
 share/doc/glade/TODO
@@ -16,6 +16,7 @@ share/locale/es/LC_MESSAGES/glade.mo
 share/locale/fr/LC_MESSAGES/glade.mo
 share/locale/it/LC_MESSAGES/glade.mo
 share/locale/ja/LC_MESSAGES/glade.mo
+share/locale/ko/LC_MESSAGES/glade.mo
 share/locale/no/LC_MESSAGES/glade.mo
 share/locale/pl/LC_MESSAGES/glade.mo
 share/locale/ru/LC_MESSAGES/glade.mo
@@ -27,6 +28,7 @@ share/locale/sv/LC_MESSAGES/glade.mo
 share/locale/uk/LC_MESSAGES/glade.mo
 share/locale/gl/LC_MESSAGES/glade.mo
 share/locale/pt_BR/LC_MESSAGES/glade.mo
+share/locale/tr/LC_MESSAGES/glade.mo
 share/gnome/apps/Development/glade.desktop
 share/gnome/help/glade/C/topic.dat
 share/gnome/help/glade/C/user-guide/user-guide-images/edit-menu.png
@@ -74,12 +76,12 @@ share/gnome/help/glade/C/user-guide/toolbar.html
 share/gnome/help/glade/C/user-guide/using.html
 share/gnome/help/glade/C/user-guide/view-menu.html
 share/gnome/help/glade/C/user-guide/windows-clipboard.html
-share/gnome/help/glade/C/user-guide/x230.html
 share/gnome/help/glade/C/user-guide/windows-editor.html
 share/gnome/help/glade/C/user-guide/windows-palette.html
 share/gnome/help/glade/C/user-guide/windows-tree.html
 share/gnome/help/glade/C/user-guide/windows.html
-share/gnome/help/glade/C/user-guide/x329.html
+share/gnome/help/glade/C/user-guide/x225.html
+share/gnome/help/glade/C/user-guide/x324.html
 share/gnome/help/glade/C/user-guide/docbook.css
 share/gnome/help/glade/C/faq/stylesheet-images/caution.gif
 share/gnome/help/glade/C/faq/stylesheet-images/home.gif
