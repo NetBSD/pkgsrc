@@ -1,6 +1,6 @@
 #!/bin/sh -e
 #
-# $Id: pkgchk.sh,v 1.48 2003/12/09 12:54:13 abs Exp $
+# $Id: pkgchk.sh,v 1.49 2004/02/07 21:40:17 grant Exp $
 #
 # TODO: Handle updates with dependencies via binary packages
 
@@ -427,7 +427,7 @@ if [ -n "$opt_g" ]; then
 		mv $PKGCHK_CONF ${PKGCHK_CONF}.old
 	fi
 	echo "# Generated automatically at `date`" > $PKGCHK_CONF
-	${PKG_INFO} -qBa | awk '/^PKGPATH/ { sub("PKGPATH=[ ]*", ""); print }' >> $PKGCHK_CONF
+	${PKG_INFO} -qBa | ${AWK} '/^PKGPATH/ { sub("PKGPATH=[ ]*", ""); print }' >> $PKGCHK_CONF
 fi
 
 if [ -n "$opt_c" -o -n "$opt_l" ];then
