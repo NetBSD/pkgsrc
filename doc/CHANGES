@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5946 2004/05/15 12:50:06 jmmv Exp $
+$NetBSD: CHANGES,v 1.5947 2004/05/15 13:14:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2540,3 +2540,6 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated librsvg2-gtk2 to 2.6.5 [jmmv 2004-05-15]
 	Updated at-spi to 1.4.2 [jmmv 2004-05-15]
 	Updated dasher to 3.2.10 [jmmv 2004-05-15]
+	Updated xscreensaver to 4.16 [wiz 2004-05-15]
+	Updated xscreensaver-demo to 4.16 [wiz 2004-05-15]
+	Updated xscreensaver-gnome to 4.16 [wiz 2004-05-15]
