@@ -1,4 +1,4 @@
-# $NetBSD: tools.mk,v 1.50 2005/01/21 02:23:34 tv Exp $
+# $NetBSD: tools.mk,v 1.51 2005/02/09 22:10:19 gavan Exp $
 #
 # This Makefile creates a ${TOOLS_DIR} directory and populates the bin
 # subdir with tools that hide the ones outside of ${TOOLS_DIR}.
@@ -123,10 +123,13 @@ ${TOOLS_DIR}/bin/makeinfo: ${_GNU_MISSING}
 
 _TOOLS=		awk grep lex m4 make patch sed yacc
 
-.if defined(_IGNORE_USE_GNU_TOOLS)
-USE_GNU_TOOLS:=		# empty
-.else
-USE_GNU_TOOLS?=		# empty
+.if defined(_IGNORE_GNU_TOOL) && defined(USE_GNU_TOOLS)
+.  for _tool_ in ${USE_GNU_TOOLS}
+.    if !defined(_IGNORE_GNU_TOOL.${_tool_})
+_tools+=	${_tool_}
+.    endif
+.  endfor
+USE_GNU_TOOLS=	${_tools}
 .endif
 
 # These platforms already have GNU versions of the tools in the base
@@ -226,7 +229,7 @@ AWK:=			${_TOOLS_PROGNAME.awk}
 .endif
 .if !empty(PKGPATH:Mlang/gawk)
 _TOOLS_OVERRIDE.awk=	NO
-MAKEFLAGS+=		_IGNORE_USE_GNU_TOOLS=
+MAKEFLAGS+=		_IGNORE_GNU_TOOL.awk=
 .endif
 
 .if ${_TOOLS_REPLACE.grep} == "YES"
@@ -243,7 +246,7 @@ GREP:=			${_TOOLS_PROGNAME.grep}
 .endif
 .if !empty(PKGPATH:Mtextproc/grep)
 _TOOLS_OVERRIDE.grep=	NO
-MAKEFLAGS+=		_IGNORE_USE_GNU_TOOLS=
+MAKEFLAGS+=		_IGNORE_GNU_TOOL.grep=
 .endif
 
 .if ${_TOOLS_REPLACE.lex} == "YES"
@@ -264,7 +267,7 @@ LEX:=			${_TOOLS_PROGNAME.lex}
 .endif
 .if !empty(PKGPATH:Mdevel/flex)
 _TOOLS_OVERRIDE.lex=	NO
-MAKEFLAGS+=		_IGNORE_USE_GNU_TOOLS=
+MAKEFLAGS+=		_IGNORE_GNU_TOOL.lex=
 .endif
 
 .if ${_TOOLS_REPLACE.m4} == "YES"
@@ -281,7 +284,7 @@ M4:=			${_TOOLS_PROGNAME.m4}
 .endif
 .if !empty(PKGPATH:Mdevel/m4)
 _TOOLS_OVERRIDE.m4=	NO
-MAKEFLAGS+=		_IGNORE_USE_GNU_TOOLS=
+MAKEFLAGS+=		_IGNORE_GNU_TOOLS.m4=
 .endif
 
 .if ${_TOOLS_REPLACE.make} == "YES"
@@ -298,7 +301,7 @@ GMAKE:=			${_TOOLS_PROGNAME.make}
 .endif
 .if !empty(PKGPATH:Mdevel/gmake)
 _TOOLS_OVERRIDE.make=	NO
-MAKEFLAGS+=		_IGNORE_USE_GNU_TOOLS=
+MAKEFLAGS+=		_IGNORE_GNU_TOOL.make=
 .endif
 
 .if ${_TOOLS_REPLACE.patch} == "YES"
@@ -315,7 +318,7 @@ PATCH:=			${_TOOLS_PROGNAME.patch}
 .endif
 .if !empty(PKGPATH:Mdevel/patch)
 _TOOLS_OVERRIDE.patch=	NO
-MAKEFLAGS+=		_IGNORE_USE_GNU_TOOLS=
+MAKEFLAGS+=		_IGNORE_GNU_TOOL.patch=
 .endif
 
 .if ${_TOOLS_REPLACE.sed} == "YES"
@@ -332,7 +335,7 @@ SED:=			${_TOOLS_PROGNAME.sed}
 .endif
 .if !empty(PKGPATH:Mtextproc/gsed)
 _TOOLS_OVERRIDE.sed=	NO
-MAKEFLAGS+=		_IGNORE_USE_GNU_TOOLS=
+MAKEFLAGS+=		_IGNORE_GNU_TOOL.sed=
 .endif
 
 .if ${_TOOLS_HAS_GNU.yacc} == "YES"
@@ -352,7 +355,7 @@ YACC:=			${_TOOLS_PROGNAME.yacc} -y
 .endif
 .if !empty(PKGPATH:Mdevel/bison)
 _TOOLS_OVERRIDE.yacc=	NO
-MAKEFLAGS+=		_IGNORE_USE_GNU_TOOLS=
+MAKEFLAGS+=		_IGNORE_GNU_TOOL.yacc=
 .endif
 
 # If _TOOLS_OVERRIDE.<tool> is actually set to "YES", then we override
