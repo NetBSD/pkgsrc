@@ -1,13 +1,13 @@
-$NetBSD: patch-an,v 1.1.1.1 2001/06/17 19:13:52 drochner Exp $
+$NetBSD: patch-an,v 1.2 2001/08/02 17:45:35 drochner Exp $
 
---- Help.cpp.orig	Mon Apr 30 01:07:29 2001
-+++ Help.cpp	Sat Jun 16 21:06:53 2001
-@@ -49,7 +49,7 @@
- void InitHelp(wxWindow *parent)
+--- Help.cpp.orig	Sun Jul 29 03:17:54 2001
++++ Help.cpp	Mon Jul 30 14:13:57 2001
+@@ -61,7 +61,7 @@
+ void InitHelp(wxWindow * parent)
  {
-   if (!gHelp) {
--	wxString defaultLoc = wxGetCwd() + "/audacity-help.htb";
-+	wxString defaultLoc = "XXXHELPDIRXXX/audacity-help.htb";
+    if (!gHelp) {
+-      wxString defaultLoc = wxGetCwd() + wxFILE_SEP_PATH + "audacity-help.htb";
++      wxString defaultLoc = "XXXHELPDIRXXX/audacity-help.htb";
  
- 	wxString helpFilePath = gPrefs->Read("/Help/HelpFilePath", defaultLoc);
- 
+       wxString helpFilePath =
+           gPrefs->Read("/Help/HelpFilePath", defaultLoc);
