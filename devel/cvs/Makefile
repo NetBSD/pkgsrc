@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 1998/04/22 11:05:02 agc Exp $
+# $NetBSD: Makefile,v 1.11 1998/06/05 12:06:11 frueauf Exp $
 #
 
 DISTNAME=       cvs-1.9
@@ -8,6 +8,8 @@ MASTER_SITES=   ${MASTER_SITE_GNU}
 MAINTAINER=	lamj@stat.cmu.edu
 
 GNU_CONFIGURE=	yes
+
+CONFLICTS=	cvs-1.9.26 cvs-1.9.27 cvs-1.9.28
 
 .if exists(/usr/lib/libkrb.a)
 CONFIGURE_ARGS+=	--with-krb4=/usr --enable-encryption
