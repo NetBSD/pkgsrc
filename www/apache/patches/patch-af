@@ -1,15 +1,15 @@
-$NetBSD: patch-af,v 1.6 2000/09/12 14:17:32 jlam Exp $
+$NetBSD: patch-af,v 1.7 2001/02/02 16:39:57 jlam Exp $
 
---- src/modules/standard/mod_so.c.orig	Thu Sep  7 01:28:46 2000
+--- src/modules/standard/mod_so.c.orig	Fri Feb  2 00:42:13 2001
 +++ src/modules/standard/mod_so.c
-@@ -307,7 +307,15 @@
-     ap_os_dso_handle_t handle;
-     char *file;
- 
+@@ -318,7 +318,15 @@
+         return err;
+     }
+     
 -    file = ap_server_root_relative(cmd->pool, filename);
 +    /*
-+     * XXX Hack: If the filename starts with '!', then just as dlopen()
-+     * XXX without translating to a pathname relative to ServerRoot.
++     * If the filename starts with '!', then just dlopen() it without
++     * translating it to a pathname relative to ServerRoot.
 +     */
 +    if (filename[0] == '!') {
 +	file = filename + 1;

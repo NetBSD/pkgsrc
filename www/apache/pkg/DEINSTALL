@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: DEINSTALL,v 1.4 2000/12/22 19:41:53 jlam Exp $
+# $NetBSD: DEINSTALL,v 1.5 2001/02/02 16:39:58 jlam Exp $
 
 PKGNAME=$1
 STAGE=$2
@@ -11,6 +11,8 @@ RMDIR="@RMDIR@"
 TRUE="@TRUE@"
 
 SERVERROOT=${PKG_PREFIX}/etc/httpd
+CGIBINDIR=${PKG_PREFIX}/libexec/cgi-bin
+DATADIR=${PKG_PREFIX}/share/httpd
 LOGDIR=/var/log/httpd
 SPOOLDIR=/var/spool/httpd
 SAMPLECONFDIR=${SERVERROOT}
@@ -48,6 +50,9 @@ POST-DEINSTALL)
 	${RMDIR} ${SPOOLDIR}/proxy 2>/dev/null || ${TRUE}
 	${RMDIR} ${SPOOLDIR} 2>/dev/null || ${TRUE}
 	${RMDIR} ${LOGDIR} 2>/dev/null || ${TRUE}
+	${RMDIR} ${DATADIR}/htdocs 2>/dev/null || ${TRUE}
+	${RMDIR} ${DATADIR} 2>/dev/null || ${TRUE}
+	${RMDIR} ${CGIBINDIR} 2>/dev/null || ${TRUE}
 	${RMDIR} ${SERVERROOT}/ssl.prm 2>/dev/null || ${TRUE}
 	${RMDIR} ${SERVERROOT}/ssl.key 2>/dev/null || ${TRUE}
 	${RMDIR} ${SERVERROOT}/ssl.csr 2>/dev/null || ${TRUE}
@@ -56,7 +61,7 @@ POST-DEINSTALL)
 	${RMDIR} ${SERVERROOT} 2>/dev/null || ${TRUE}
 
 	existing_dirs=''
-	for dir in ${CONFDIR} ${LOGDIR} ${REQUESTDIR}
+	for dir in ${CONFDIR} ${LOGDIR} ${REQUESTDIR} ${DATADIR}
 	do
 		if [ -d ${dir} ]
 		then
@@ -69,7 +74,6 @@ POST-DEINSTALL)
         	${CAT} << EOF
 ===========================================================================
 If you won't be using ${PKGNAME} any longer, you may want to remove:
-
 EOF
 		if [ -n "${modified_files}" ]
 		then
@@ -99,7 +103,6 @@ EOF
 ===========================================================================
 EOF
 	fi
-
 	;;
 
 *)
