@@ -1,0 +1,7 @@
+VM (View Mail) is an Emacs subsystem that allows UNIX mail to be read
+and disposed of within Emacs.  Commands exist to do the normal things
+expected of a mail user agent, such as generating replies, saving
+messages to folders, deleting messages and so on.  There are other more
+advanced commands that do tasks like bursting and creating digests,
+message forwarding, and organizing message presentation according to
+various criteria.
