@@ -1,6 +1,6 @@
-# $NetBSD: Makefile.common,v 1.15 2002/11/01 10:19:17 jlam Exp $
+# $NetBSD: Makefile.common,v 1.16 2002/11/13 15:25:34 wiz Exp $
 
-MPLAYER_DIST_VERSION=	0.90pre9
+MPLAYER_DIST_VERSION=	0.90pre10
 #PKGREVISION=		1
 
 # There is no need to change anything below here.
@@ -23,11 +23,7 @@ HOMEPAGE?=		http://www.mplayerhq.hu/
 PATCHDIR=		${.CURDIR}/../../graphics/mplayer-share/patches
 ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-*-powerpc SunOS-*-*
 
-RESTRICTED?=		"unsure of the license"
-#	see http://www.mplayerhq.hu/DOCS/users_against_developers.html#binary
-NO_BIN_ON_CDROM=	${RESTRICTED}
-NO_BIN_ON_FTP=		${RESTRICTED}
-#	no source on the ftp server because of the css source code in it
+# no source on the ftp server because of the css source code in it
 NO_SRC_ON_FTP=		${RESTRICTED}
 
 USE_BUILDLINK2=		YES
@@ -41,6 +37,7 @@ CONFIGURE_ARGS+=	--with-extraincdir="${LOCALBASE}/include"
 CONFIGURE_ARGS+=	--with-extralibdir="${LOCALBASE}/lib"
 #CONFIGURE_ARGS+=	--enable-dvdread
 CONFIGURE_ARGS+=	--disable-mpdvdkit
+CONFIGURE_ARGS+=	--enable-runtime-cpudetection
 CONFIGURE_ARGS+=	--enable-faad
 CONFIGURE_ARGS+=	--disable-arts
 
@@ -50,12 +47,6 @@ CONFIGURE_ARGS+=	--disable-arts
 CONFIGURE_ENV+=		TMPDIR=${WRKDIR}
 
 .include "../../mk/bsd.prefs.mk"
-
-.if defined(USE_OSS)
-CONFIGURE_ARGS+=	--enable-ossaudio
-.else
-CONFIGURE_ARGS+=	--disable-ossaudio
-.endif
 
 .if ${MACHINE_ARCH} == "i386"
 CONFIGURE_ARGS+=	--with-win32libdir="${LOCALBASE}/lib/win32"
