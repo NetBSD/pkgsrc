@@ -1,0 +1,60 @@
+$NetBSD: patch-ai,v 1.1.1.1 1998/10/07 13:11:35 agc Exp $
+
+--- sysdeps/bsd/procmem.c	1998/10/07 11:22:59	1.1
++++ sysdeps/bsd/procmem.c	1998/10/07 11:39:30
+@@ -31,6 +31,9 @@
+ #include <sys/resource.h>
+ #include <vm/vm_object.h>
+ #include <vm/vm_map.h>
++#ifdef __NetBSD__
++#include <vm/vnode_pager.h>
++#endif
+ 
+ #include <sys/vnode.h>
+ #include <ufs/ufs/quota.h>
+@@ -96,6 +99,9 @@
+ 	struct vnode vnode;
+ 	struct inode inode;
+ 	int count;
++#ifdef __NetBSD__
++	vn_pager_t	vnpage;
++#endif
+ 
+ 	glibtop_init_p (server, (1 << GLIBTOP_SYSDEPS_PROC_MEM), 0);
+ 	
+@@ -150,8 +156,16 @@
+ 			      &entry, sizeof (entry)) != sizeof (entry))
+ 			glibtop_error_io_r (server, "kvm_read (entry)");
+ 
++#ifdef __FreeBSD__
+ 		if (entry.eflags & (MAP_ENTRY_IS_A_MAP|MAP_ENTRY_IS_SUB_MAP))
+ 			continue;
++#elseif defined(UVM)
++		if (entry.eflags & (MAP_ENTRY_IS_A_MAP|MAP_ENTRY_IS_SUB_MAP))
++			continue;
++#else
++		if (entry.is_a_map || entry.is_sub_map)
++			continue;
++#endif
+ 
+ 		if (!entry.object.vm_object)
+ 			continue;
+@@ -165,10 +179,17 @@
+ 
+ 		/* If the object is of type vnode, add its size */
+ 
++#ifdef __FreeBSD__
+ 		if (object.type != OBJT_VNODE)
+ 			continue;
+-
+ 		buf->share += object.un_pager.vnp.vnp_size;
++#else
++		if (object.pager->pg_type != PG_VNODE)
++			continue;
++		vnpage = (vn_pager_t) object.pager->pg_handle;
++		buf->share += vnpage->vnp_size;
++#endif
++
+ 	}
+ 
+ 	glibtop_suid_leave (server);

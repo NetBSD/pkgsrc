@@ -1,0 +1,18 @@
+$NetBSD: patch-ab,v 1.1.1.1 1998/10/07 13:11:35 agc Exp $
+
+Make this compile under NetBSD as well.
+
+--- sysdeps/bsd/open.c	1998/10/06 16:01:28	1.1
++++ sysdeps/bsd/open.c	1998/10/06 16:02:06
+@@ -61,7 +61,11 @@
+ 	server->machine.gid = getgid ();
+ 	server->machine.egid = getegid ();
+ 
++#ifdef __NetBSD__
++	server->os_version_code = __NetBSD_Version__;
++#else
+ 	server->os_version_code = __FreeBSD_version;
++#endif
+   
+ 	/* Setup machine-specific data */
+ 	server->machine.kd = kvm_open (NULL, NULL, NULL, O_RDONLY, "kvm_open");
