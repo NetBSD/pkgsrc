@@ -1,0 +1,11 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2003/08/23 13:30:35 hubertf Exp $
+
+To configure a 6to4 tunnel, modify the configuration file
+${PKG_SYSCONFDIR}/hf6to4.conf for your system, then run
+
+	${RCD_SCRIPTS_DIR}/hf6to4 -v start
+
+You should then be able to ping6 www.kame.net.
+
+===========================================================================
