@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2664 2003/07/02 20:35:09 jtb Exp $
+$NetBSD: CHANGES,v 1.2665 2003/07/02 21:02:51 jtb Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2657,3 +2657,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated mtoolsfm to 1.9.3nb2 [jmmv 2003-07-02]
 	Updated upclient to 4.2.1.23nb2 [jmmv 2003-07-02]
 	Updated algae to 4.1.3 [jtb 2003-07-02]
+	Updated octave to 2.0.17 [jtb 2003-07-02]
