@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.572 2004/11/20 04:20:45 minskim Exp $
+# $NetBSD: Makefile,v 1.573 2004/11/26 21:55:12 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -39,6 +39,7 @@ SUBDIR+=	autoconf213
 SUBDIR+=	autogen
 SUBDIR+=	automake
 SUBDIR+=	automake14
+SUBDIR+=	avl
 SUBDIR+=	avltree
 SUBDIR+=	bcc
 SUBDIR+=	binutils
@@ -194,7 +195,6 @@ SUBDIR+=	lcc
 SUBDIR+=	ldapsdk
 SUBDIR+=	libargparse
 SUBDIR+=	libast
-SUBDIR+=	libavl
 SUBDIR+=	libbegemot
 SUBDIR+=	libbonobo
 SUBDIR+=	libbonoboui
