@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/07/22 09:16:03 recht Exp $
+# $NetBSD: Makefile,v 1.16 2004/08/13 08:57:14 recht Exp $
 #
 
 DISTNAME=	SOAPpy-0.11.4
@@ -11,8 +11,6 @@ MAINTAINER=	recht@NetBSD.org
 HOMEPAGE=	http://pywebsvcs.sourceforge.net/
 COMMENT=	SOAP implementation
 
-DEPENDS=	${PYPKGPREFIX}-fpconst>=0.6.0:../../math/py-fpconst
-
 USE_BUILDLINK3=	YES
 PYDISTUTILSPKG=	YES
 PY_PATCHPLIST=	YES
@@ -20,5 +18,6 @@ PY_PATCHPLIST=	YES
 PYTHON_VERSIONS_ACCEPTED=	23pth 22pth 21pth
 
 .include "../../lang/python/extension.mk"
+.include "../../math/py-fpconst/buildlink3.mk"
 .include "../../textproc/py-xml/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
