@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2004/11/18 10:14:44 markd Exp $
+@comment $NetBSD: PLIST,v 1.13 2004/11/18 11:48:37 markd Exp $
 bin/artsbuilder
 bin/artscontrol
 bin/juk
@@ -1149,7 +1149,7 @@ share/kde/servicetypes/krec_exportitem.desktop
 @dirrm share/kde/apps/kmid/fm
 @dirrm share/kde/apps/kmid
 @dirrm share/kde/apps/kicker/applets
-@dirrm share/kde/apps/kconf_update
+@comment dirrm share/kde/apps/kconf_update
 @dirrm share/kde/apps/kaudiocreator/pics
 @dirrm share/kde/apps/kaudiocreator
 @dirrm share/kde/apps/kappfinder/apps/Multimedia
@@ -1174,7 +1174,7 @@ share/kde/servicetypes/krec_exportitem.desktop
 @dirrm share/doc/kde/HTML/en/kmix
 @dirrm share/doc/kde/HTML/en/kmid
 @dirrm share/doc/kde/HTML/en/kcontrol/kmixcfg
-@dirrm share/doc/kde/HTML/en/kcontrol
+@comment dirrm share/doc/kde/HTML/en/kcontrol
 @dirrm share/doc/kde/HTML/en/kaboodle
 @dirrm share/doc/kde/HTML/en/juk
 @dirrm share/doc/kde/HTML/en/artsbuilder/images
