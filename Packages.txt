@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.120 2000/10/17 15:51:34 hubertf Exp $
+# $NetBSD: Packages.txt,v 1.121 2000/10/18 03:53:41 garbled Exp $
 ###########################################################################
 
 			==========================
@@ -1980,6 +1980,7 @@ Now compile:
 > cc -c -DSTDC_HEADERS=1 -DHAVE_STRING_H=1 -DHAVE_STDLIB_H=1 -DHAVE_MEMORY_H=1 -DHAVE_ALLOCA=1 -DHAVE_STRERROR=1 -I./../include  -g getopt.c
 > cc -c -DSTDC_HEADERS=1 -DHAVE_STRING_H=1 -DHAVE_STDLIB_H=1 -DHAVE_MEMORY_H=1 -DHAVE_ALLOCA=1 -DHAVE_STRERROR=1 -I./../include  -g getopt1.c
 > cc  -g -o bison LR0.o allocate.o closure.o conflicts.o derives.o files.o         getargs.o gram.o lalr.o lex.o                                   main.o nullable.o output.o print.o reader.o reduce.o symtab.o   warshall.o version.o                        
+
                     getopt.o getopt1.o  
 > ./files.c:240: warning: mktemp() possibly used unsafely, consider using mkstemp()
 > rm -f bison.s1
@@ -2140,6 +2141,14 @@ To create:
  - if necessary ln -s `sysctl -n hw.machine` `sysctl -n hw.machine_arch`
 
 Disk space needed: unknown.
+
+Packages for a release version of NetBSD should be uploaded to the
+directory major.minor corresponding to the appropriate release.  Packages
+for NetBSD with versions such as "1.5.1" should be uploaded to the "1.5"
+directory, stripping the tiny number off the directory name.  For packages
+that need to be tightly coupled with the OS Version, such as LKM's, you
+may create a major.minor.tiny release directory, and place those packages
+therein. 
 
 
 ###########################################################################
