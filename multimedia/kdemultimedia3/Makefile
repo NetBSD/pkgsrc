@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/07/02 15:10:56 drochner Exp $
+# $NetBSD: Makefile,v 1.15 2004/08/21 14:44:47 markd Exp $
 
 DISTNAME=	kdemultimedia-${_KDE_VERSION}
 CATEGORIES=	multimedia
@@ -7,7 +7,6 @@ COMMENT=	Multimedia tools for the KDE integrated X11 desktop
 .include "../../meta-pkgs/kde3/Makefile.kde3"
 
 DEPENDS+=	xine-arts>=1rc0a:../../audio/xine-arts
-DEPENDS+=	trm>=0.2.1:../../audio/trm
 
 USE_BUILDLINK3=		YES
 USE_DIRS+=		xdg-1.1
@@ -45,7 +44,9 @@ PLIST_SUBST+=		XV_SUFFIX="so"
 .include "../../meta-pkgs/kde3/kde3.mk"
 .include "../../audio/arts/buildlink3.mk"
 .include "../../audio/cdparanoia/buildlink3.mk"
+.include "../../audio/lame/buildlink3.mk"
 .include "../../audio/musicbrainz/buildlink3.mk"
+.include "../../audio/tunepimp/buildlink3.mk"
 .include "../../audio/taglib/buildlink3.mk"
 .include "../../multimedia/xine-lib/buildlink3.mk"
 .include "../../x11/kdebase3/buildlink3.mk"
