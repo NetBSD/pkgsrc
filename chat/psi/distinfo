@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.2 2002/08/04 17:11:06 jdolecek Exp $
+$NetBSD: distinfo,v 1.3 2003/01/03 20:05:21 lha Exp $
 
-SHA1 (psi-0.8.6.tar.bz2) = 472c7434459c9fdcc7641217509c6bd0e27afa7c
-Size (psi-0.8.6.tar.bz2) = 448520 bytes
-SHA1 (patch-aa) = b2ef8e4e8fa2f9543363df559f6a1b7854fb6132
-SHA1 (patch-ab) = f89c78533f7bccac216cb7c33e97ef13a9564980
-SHA1 (patch-ac) = b6ab63f0389303e42853b712d9526541379aab1a
+SHA1 (psi-0.8.7.tar.bz2) = 40431331a56f63cb61738538604c75f8363203eb
+Size (psi-0.8.7.tar.bz2) = 465036 bytes
+SHA1 (patch-ab) = 98a46d0014fedc425c05c0a54e8a2c0b961953a0
 SHA1 (patch-ad) = a753869d279434dfd62d9f3330a0302f1b504b4d
+SHA1 (patch-af) = 5fb9b727156e774773e937ddd4c42d3b7b66d371
