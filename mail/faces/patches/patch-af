@@ -1,3 +1,5 @@
+$NetBSD: patch-af,v 1.2 1999/10/01 07:49:20 simonb Exp $
+
 diff -ur ../faces-DIST/compface/uncmain.c ./compface/uncmain.c
 --- ../faces-DIST/compface/uncmain.c	Thu Oct 24 12:28:07 1991
 +++ ./compface/uncmain.c	Fri Oct  1 14:32:06 1999

@@ -1,3 +1,5 @@
+$NetBSD: patch-an,v 1.2 1999/10/01 07:49:21 simonb Exp $
+
 diff -ur ../faces-DIST/main.c ./main.c
 --- ../faces-DIST/main.c	Tue Nov 19 15:00:47 1991
 +++ ./main.c	Fri Oct  1 14:32:02 1999

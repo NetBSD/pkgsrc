@@ -1,3 +1,5 @@
+$NetBSD: patch-ak,v 1.2 1999/10/01 07:49:20 simonb Exp $
+
 diff -ur ../faces-DIST/filters/ikon2icon.c ./filters/ikon2icon.c
 --- ../faces-DIST/filters/ikon2icon.c	Mon Apr 15 13:40:02 1991
 +++ ./filters/ikon2icon.c	Fri Oct  1 14:32:15 1999
