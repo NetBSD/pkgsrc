@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/01/27 17:12:02 hubertf Exp $
+# $NetBSD: Makefile,v 1.6 2000/03/07 12:02:35 wiz Exp $
 #
 
 DISTNAME=		openssh-1.2.2
@@ -9,7 +9,7 @@ MASTER_SITES=		http://the.wiretapped.net/security/cryptography/ssh/OpenSSH/files
 			ftp://sunsite.cnlab-switch.ch/mirror/OpenSSH/files/
 
 MAINTAINER=		packages@netbsd.org
-HOMEPAGE=		http://www.openssh.org/
+HOMEPAGE=		http://www.openssh.com/
 
 DEPENDS=		openssl-[0-9]*:../../security/openssl
 BUILD_DEPENDS+=		${LOCALBASE}/bin/perl:../../lang/perl5
