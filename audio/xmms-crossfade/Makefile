@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2005/03/14 10:25:47 uebayasi Exp $
+# $NetBSD: Makefile,v 1.22 2005/03/16 11:56:13 rillig Exp $
 #
 
 DISTNAME=		xmms-crossfade-0.2.9
@@ -17,8 +17,8 @@ GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 
 LDFLAGS+=		${LIBOSSAUDIO}
-OSS_DEFS+=		-DDEFAULT_OSS_ALT_AUDIO_DEVICE=\\\"${DEVOSSSOUND}\\\"
-MAKE_ENV+=		OSS_DEFS="${OSS_DEFS}"
+OSS_DEFS+=		-DDEFAULT_OSS_ALT_AUDIO_DEVICE='"${DEVOSSSOUND}"'
+MAKE_ENV+=		OSS_DEFS=${OSS_DEFS:Q}
 
 .include "../../audio/xmms/buildlink3.mk"
 .include "../../mk/ossaudio.buildlink3.mk"
