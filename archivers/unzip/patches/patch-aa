@@ -1,0 +1,18 @@
+--- unzip.h.orig	Sat Oct 18 18:58:07 1997
++++ unzip.h	Sat Jun 20 18:33:18 1998
+@@ -175,10 +175,15 @@
+ #endif
+ 
+ /* used to remove arguments in function prototypes for non-ANSI C */
++#ifdef USE_ZLIB
++#include <zconf.h>
++#ifndef OF
+ #ifdef PROTO
+ #  define OF(a) a
+ #else
+ #  define OF(a) ()
++#endif
++#endif
+ #endif
+ 
+ /* enable the "const" keyword only if MODERN and if not otherwise instructed */
