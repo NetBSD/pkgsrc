@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.8 2002/01/17 11:15:32 martti Exp $
+$NetBSD: distinfo,v 1.9 2002/04/10 16:56:12 jlam Exp $
 
 SHA1 (gtkhtml-1.0.1.tar.bz2) = 67f9ab77def69365209ec189f0a74d2f05e0359a
 Size (gtkhtml-1.0.1.tar.bz2) = 939965 bytes
-SHA1 (patch-aa) = 0a0c00da0b28a3c8658b5fb486be4dabe14598d4
+SHA1 (patch-aa) = 5c3074da0d28bcbe4495f24af0ee73a905e22ac4
 SHA1 (patch-ab) = e87b80de2c0a64ca7076264e9d23addb57b709b2
 SHA1 (patch-ac) = ac61550a67e032bc04995137d28293d7b3a714ca
