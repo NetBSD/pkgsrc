@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/01/13 21:51:08 jlam Exp $
+@comment
 include/security/openpam.h
 include/security/openpam_version.h
 include/security/pam_appl.h
@@ -12,6 +12,7 @@ lib/security/pam_unix.la
 man/man3/openpam.3
 man/man3/openpam_borrow_cred.3
 man/man3/openpam_free_data.3
+man/man3/openpam_free_envlist.3
 man/man3/openpam_get_option.3
 man/man3/openpam_log.3
 man/man3/openpam_nullconv.3
