@@ -1,21 +1,29 @@
-# $NetBSD: Makefile,v 1.18 2004/04/18 04:42:32 snj Exp $
+# $NetBSD: Makefile,v 1.19 2004/06/06 05:08:34 schmonz Exp $
 #
 
-DISTNAME=	tmda-1.0
+DISTNAME=	tmda-1.0.3
 CATEGORIES=	mail python
-MASTER_SITES=	http://tmda.net/releases/ \
-		http://tmda.net/releases/old/
+MASTER_SITES=	http://tmda.net/releases/stable/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	kim@tac.nyc.ny.us
 HOMEPAGE=	http://tmda.net/
 COMMENT=	Python-based SPAM reduction system
 
-PYTHON_VERSIONS_ACCEPTED=	23 23pth 22 22pth 21 21pth
-
 USE_BUILDLINK3=		yes
+USE_PKGINSTALL=		yes
 PY_PATCHPLIST=		# defined
 PYTHON_PATCH_SCRIPTS=	${TMDA_PROGRAMS}
+
+PKG_SYSCONFSUBDIR=	${PKGBASE}
+
+PYTHON_VERSIONS_ACCEPTED=	23 23pth 22 22pth
+
+PKG_GROUPS=	tofmipd
+PKG_USERS=	tofmipd:tofmipd::TMDA\\ ofmipd\\ User
+
+RCD_SCRIPTS=	tofmipd
+FILES_SUBST+=	PYTHONBIN=${PYTHONBIN}
 
 SHAREDIR=	share/${PKGBASE}
 DOCDIR=		share/doc/${PKGBASE}
@@ -26,27 +34,18 @@ PLIST_SUBST+=	DOCDIR="${DOCDIR}"
 PLIST_SUBST+=	CONTRIBDIR="${CONTRIBDIR}"
 PLIST_SUBST+=	HTMLDIR="${HTMLDIR}"
 
-TMDA_PROGRAMS=	bin/tmda-address
-TMDA_PROGRAMS+=	bin/tmda-check-address
-TMDA_PROGRAMS+=	bin/tmda-filter
-TMDA_PROGRAMS+=	bin/tmda-inject
-TMDA_PROGRAMS+=	bin/tmda-keygen
-TMDA_PROGRAMS+=	bin/tmda-ofmipd
-TMDA_PROGRAMS+=	bin/tmda-pending
-TMDA_PROGRAMS+=	bin/tmda-rfilter
-TMDA_PROGRAMS+=	bin/tmda-sendmail
+TMDA_PROGRAMS=	bin/tmda-*
+TMDA_DOCS=	CODENAMES COPYING CRYPTO ChangeLog INSTALL README THANKS UPGRADE
+TMDA_HTDOCS=	htdocs/*.html
+TMDA_CONTRIB=	contrib/*
 
-TMDA_DOCS=	CODENAMES
-TMDA_DOCS+=	COPYING
-TMDA_DOCS+=	CRYPTO
-TMDA_DOCS+=	ChangeLog
-TMDA_DOCS+=	INSTALL
-TMDA_DOCS+=	README
-TMDA_DOCS+=	THANKS
-TMDA_DOCS+=	UPGRADE
+SUBST_CLASSES+=		etc
+SUBST_STAGE.etc=	do-configure
+SUBST_FILES.etc=	bin/tmda-ofmipd TMDA/Auth.py TMDA/Defaults.py
+SUBST_SED.etc=		-e 's|/etc|${PKG_SYSCONFDIR}|g'
 
 do-build:
-	cd ${WRKSRC}; ${PYTHONBIN} ./compileall
+	cd ${WRKSRC} && ${PYTHONBIN} ./compileall
 
 do-install:
 	for f in ${TMDA_PROGRAMS}; do \
@@ -69,10 +68,14 @@ do-install:
 	done
 
 	${INSTALL_DATA_DIR} ${PREFIX}/${CONTRIBDIR}
-	${INSTALL_DATA} ${WRKSRC}/contrib/* ${PREFIX}/${CONTRIBDIR}
+	for f in ${TMDA_CONTRIB}; do \
+		${INSTALL_DATA} ${WRKSRC}/$${f} ${PREFIX}/${CONTRIBDIR}; \
+	done
 
 	${INSTALL_DATA_DIR} ${PREFIX}/${HTMLDIR}
-	${INSTALL_DATA} ${WRKSRC}/htdocs/*.html ${PREFIX}/${HTMLDIR}
+	for f in ${TMDA_HTDOCS}; do \
+		${INSTALL_DATA} ${WRKSRC}/$${f} ${PREFIX}/${HTMLDIR}; \
+	done
 
 	${INSTALL_DATA_DIR} ${PREFIX}/${HTMLDIR}/img
 	${INSTALL_DATA} ${WRKSRC}/htdocs/img/*.png ${PREFIX}/${HTMLDIR}/img
