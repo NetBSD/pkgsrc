@@ -1,4 +1,4 @@
-# $NetBSD: ccc.mk,v 1.10 2005/01/12 17:39:34 jlam Exp $
+# $NetBSD: ccc.mk,v 1.11 2005/01/12 17:40:01 jlam Exp $
 
 .if !defined(COMPILER_CCC_MK)
 COMPILER_CCC_MK=	defined
@@ -19,21 +19,21 @@ _LANGUAGES.ccc=		# empty
 _LANGUAGES.ccc+=	${LANGUAGES.ccc:M${_lang_}}
 .endfor
 
-_CCC_DIR=	${WRKDIR}/.ccc
-_CCC_VARS=	# empty
+_CCC_DIR=		${WRKDIR}/.ccc
+_CCC_VARS=		# empty
 .if exists(/usr/bin/cc)
-_CCC_VARS+=	CC
-_CCC_CC=	${_CCC_DIR}/cc
-_ALIASES.CC=	cc
-CCPATH=		/usr/bin/cc
-PKG_CC:=	${_CCC_CC}
+_CCC_VARS+=		CC
+_CCC_CC=		${_CCC_DIR}/cc
+_ALIASES.CC=		cc
+CCPATH=			/usr/bin/cc
+PKG_CC:=		${_CCC_CC}
 .endif
 .if exists(/usr/bin/cxx)
-_CCC_VARS+=	CXX
-_CCC_CXX=	${_CCC_DIR}/cxx
-_ALIASES.CXX=	c++ cxx
-CXXPATH=	/usr/bin/cxx
-PKG_CXX:=	${_CCC_CXX}
+_CCC_VARS+=		CXX
+_CCC_CXX=		${_CCC_DIR}/cxx
+_ALIASES.CXX=		c++ cxx
+CXXPATH=		/usr/bin/cxx
+PKG_CXX:=		${_CCC_CXX}
 .endif
 _COMPILER_STRIP_VARS+=	${_CCC_VARS}
 
