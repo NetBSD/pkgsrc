@@ -1,17 +1,11 @@
-# $NetBSD: Makefile,v 1.24 2001/03/31 11:14:30 zuntum Exp $
-# FreeBSD Id: Makefile,v 1.20 1997/08/27 13:06:01 ache Exp
+# $NetBSD: Makefile,v 1.25 2001/05/14 13:40:04 wiz Exp $
 #
 
-DISTNAME=	gnupg-1.0.4
-PKGNAME=	${DISTNAME}nb3
+DISTNAME=	gnupg-1.0.5
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.gnupg.org/pub/gcrypt/gnupg/
 # don't remove this -- we may add idea.c to it below
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
-
-PATCHFILES=	gnupg-1.0.4.security-patch1.diff
-PATCH_SITES=	ftp://ftp.gnupg.org/pub/gcrypt/gnupg/
-PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	wiz@netbsd.org
 HOMEPAGE=	http://www.gnupg.org/
@@ -25,6 +19,8 @@ USE_GMAKE=	yes
 USE_LIBINTL=	yes
 
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
+
+INFO_FILES=	gpg.info gpgv.info
 
 .include "../../mk/bsd.prefs.mk"
 
