@@ -1,0 +1,15 @@
+$NetBSD: patch-ar,v 1.1 2004/11/15 11:15:48 hira Exp $
+
+--- programs/Xserver/hw/xfree86/loader/Imakefile.orig	2004-11-03 17:25:44.000000000 +0900
++++ programs/Xserver/hw/xfree86/loader/Imakefile	2004-11-03 17:25:49.000000000 +0900
+@@ -40,6 +40,10 @@
+ ARCHDEFINES = -DDoMMAPedMerge -DMmapPageAlign
+ #endif
+ 
++#if defined(NetBSDArchitecture) && defined(AMD64Architecture)
++ARCHDEFINES = -DUseMMAP
++#endif
++
+ DEFINES = $(DBMALLOCDEFINE) $(DLOPENDEFINES) $(OS_DEFINES) $(COMPAT_DEFINES) \
+ 	  $(SHM_DEFINES) $(FONTCACHE_DEFINES) $(ARCHDEFINES)
+ 
