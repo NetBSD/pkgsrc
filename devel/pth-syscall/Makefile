@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/07/18 11:22:00 agc Exp $
+# $NetBSD: Makefile,v 1.4 2002/07/28 16:21:31 schmonz Exp $
 #
 
 DISTNAME=		pth-1.4.1
@@ -18,6 +18,8 @@ GNU_CONFIGURE=		YES
 GNU_CONFIGURE_PREFIX=	${PREFIX}/pth-syscall
 CONFIGURE_ARGS+=	--enable-pthread
 CONFIGURE_ARGS+=	--enable-syscall-hard
+CONFIG_GUESS_OVERRIDE=	${WRKSRC}/config.guess
+CONFIG_SUB_OVERRIDE=	${WRKSRC}/config.sub
 .if (${MACHINE_ARCH} == "i386" && ${CFLAGS:M-O2} == "-O2")
 CFLAGS:=		${CFLAGS:S/-O2/-O0/}
 .endif
