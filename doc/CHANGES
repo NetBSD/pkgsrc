@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6878 2004/08/14 13:31:29 dmcmahill Exp $
+$NetBSD: CHANGES,v 1.6879 2004/08/14 14:17:00 tron Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3834,3 +3834,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added bannerfilter-1.31 [mjl 2004-08-14]
 	Updated musicpd to 0.11.4 [simonb 2004-08-14]
 	Added octave-forge-2004.07.07 [dmcmahill 2004-08-14]
+	Updated rsync to 2.6.2nb1 [tron 2004-08-14]
