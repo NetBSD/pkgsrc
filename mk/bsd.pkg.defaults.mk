@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.235 2004/04/28 11:27:54 uebayasi Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.236 2004/05/02 19:15:18 xtraeme Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -1248,6 +1248,11 @@ JSDK_HOME?= ${JAVA_HOME}/jsdk
 # Location for Java Servlet Development Kit installed by www/jsdk20
 # Possible: any directory
 # Default: ${JAVA_HOME}/jsdk
+
+#JWHOIS_ENABLE_CACHE=
+# Enable cache option in net/jwhois package.
+# Possible: defined or not defined.
+# Default: not defined.
 
 #KERBEROS=
 # Used in many packages to specify use of a Kerberos (or compatible)
