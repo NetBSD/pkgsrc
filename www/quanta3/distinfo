@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.9 2004/04/05 11:52:31 markd Exp $
+$NetBSD: distinfo,v 1.10 2004/04/20 12:53:28 markd Exp $
 
-SHA1 (quanta-3.2.1.tar.bz2) = 6a93df392d8726740281cc00fbf042374e74eef6
-Size (quanta-3.2.1.tar.bz2) = 3632173 bytes
+SHA1 (quanta-3.2.2.tar.bz2) = de61928e68a92b49fb875d55921c819c8dddcce2
+Size (quanta-3.2.2.tar.bz2) = 3527064 bytes
 SHA1 (patch-aa) = 705605a78c7cf55c4d6db09ac5053f16ca010691
 SHA1 (patch-ab) = 923728303d8220eb27160763d2bf0846c020c34f
 SHA1 (patch-ac) = 59106b54c5caf199288b27283426c777e1b135a6
