@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/03/29 23:31:08 tron Exp $
+# $NetBSD: Makefile,v 1.3 1999/03/30 00:59:24 msaitoh Exp $
 
 DISTNAME=	PTL2-current-990325
 PKGNAME=	ptl2-current-990325
@@ -14,7 +14,6 @@ USE_PERL5=	YES
 PLIST_SRC=	${WRKDIR}/PLIST
 
 post-install:
-	@${MKDIR} ${PREFIX}/libdata/PTL
 	@${CHOWN} -R ${BINOWN}:${BINGRP} ${PREFIX}/PTL/include
 	@find ${PREFIX}/PTL/include -type f -name "*.orig" | xargs ${RM}
 	@find ${PREFIX}/PTL/include -type d -print | xargs ${CHMOD} 755
