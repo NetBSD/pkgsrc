@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.10 2000/07/20 13:31:00 rh Exp $
+# $NetBSD: Makefile,v 1.11 2000/08/08 03:50:29 sakamoto Exp $
 #
 
 DISTNAME=	Rollemup
 PKGNAME=	rollemup-1.0
 CATEGORIES=	games
-MASTER_SITES=	ftp://usa.lostboys.nl/pub/medialab/rollemup/Linux/
+MASTER_SITES=	http://usa.lostboys.nl/medialab/rollemup/Linux/
 
 MAINTAINER=	sakamoto@netbsd.org
-HOMEPAGE=	http://www.medialab.lostboys.nl/rollemup/
+HOMEPAGE=	http://www.medialab.lostboys.nl/projects/madewith/pinball/pinballgame.html
 
 LICENSE=	no-commercial-use
 RESTRICTED=	You are not allowed to distribute the software by any means. \
