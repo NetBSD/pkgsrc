@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/02/24 21:39:51 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/04/24 08:09:13 jmmv Exp $
 bin/gnome-pkgview
 share/applications/gnome-pkgview.desktop
 share/gconf/schemas/gnome-pkgview.schemas
@@ -16,6 +16,7 @@ ${PKGLOCALEDIR}/locale/eo/LC_MESSAGES/gnome-pkgview.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/gnome-pkgview.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gnome-pkgview.mo
 ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/gnome-pkgview.mo
+${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/gnome-pkgview.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/gnome-pkgview.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/gnome-pkgview.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/gnome-pkgview.mo
@@ -24,6 +25,7 @@ ${PKGLOCALEDIR}/locale/ml/LC_MESSAGES/gnome-pkgview.mo
 ${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/gnome-pkgview.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/gnome-pkgview.mo
 ${PKGLOCALEDIR}/locale/no/LC_MESSAGES/gnome-pkgview.mo
+${PKGLOCALEDIR}/locale/pa/LC_MESSAGES/gnome-pkgview.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/gnome-pkgview.mo
 ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/gnome-pkgview.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/gnome-pkgview.mo
@@ -48,5 +50,6 @@ share/pixmaps/gnome-pkgview/solaris.png
 share/pixmaps/gnome-pkgview/suse.png
 share/pixmaps/gnome-pkgview/whitebox.png
 @dirrm share/pixmaps/gnome-pkgview
+@comment in xdg-dirs: @dirrm share/pixmaps
 @comment in GConf2: @dirrm share/gconf/schemas
 @comment in xdg-dirs: @dirrm share/applications
