@@ -1,6 +1,6 @@
-$NetBSD: patch-al,v 1.1 2003/09/30 09:44:00 cube Exp $
+$NetBSD: patch-al,v 1.2 2003/12/03 12:31:37 cube Exp $
 
---- configure.in.orig	2002-10-20 18:34:43.000000000 +0200
+--- configure.in.orig	2003-10-26 16:40:37.000000000 +0100
 +++ configure.in
 @@ -17,7 +17,7 @@ AC_C_BIGENDIAN
  
@@ -9,9 +9,9 @@ $NetBSD: patch-al,v 1.1 2003/09/30 09:44:00 cube Exp $
 -AC_CHECK_FUNCS(strdup strstr)
 +AC_CHECK_FUNCS(strdup strstr getopt_long_only)
  
- #For FreeBSD, look in /usr/local/(lib,include) first, since ncurses4
- #must be installed as an add-on on these systems in /usr/local
-@@ -201,7 +201,7 @@ AC_CHECK_HEADERS(fcntl.h malloc.h sys/io
+ AC_LANG_CPLUSPLUS
+ 
+@@ -220,7 +220,7 @@ AC_CHECK_HEADERS(fcntl.h malloc.h sys/io
  AC_CHECK_HEADERS(bool.h)
  AC_CHECK_HEADERS(pthread.h pthread/mit/pthread.h pth.h)
  AC_CHECK_HEADERS(curses.h,HAVE_CURSES_H=1)
@@ -20,7 +20,7 @@ $NetBSD: patch-al,v 1.1 2003/09/30 09:44:00 cube Exp $
  AC_CHECK_HEADER(sys/soundcard.h,HAVE_SYS_SOUNDCARD_H=1)
  AC_CHECK_HEADER(machine/soundcard.h,HAVE_MACHINE_SOUNDCARD_H=1)
  AC_CHECK_HEADER(soundcard.h,HAVE_SOUNDCARD_H=1)
-@@ -336,15 +336,17 @@ dnl CXXFLAGS="$CXXFLAGS -D__NO_MATH_INLI
+@@ -355,15 +355,17 @@ dnl CXXFLAGS="$CXXFLAGS -D__NO_MATH_INLI
  dnl check for Network Audio System library
  
  
