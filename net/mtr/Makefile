@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2000/06/12 10:59:42 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2000/06/14 02:10:58 hubertf Exp $
 # $FreeBSD: ports/net/mtr/Makefile,v 1.16 1999/10/28 08:06:00 mharo Exp $
 
 DISTNAME=	mtr-0.42
@@ -15,11 +15,11 @@ GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 CONFIGURE_ENV+= CPPFLAGS=-I${PREFIX}/include
 
-OSVER!=		uname -r
+.include "../../mk/bsd.prefs.mk"
 GOOD_CURSES=	1.4[Y-Z] 1.4Z[A-Z] 1.[5-9]*
 
 .for PATTERN in ${GOOD_CURSES}
-.if ${OSVER:M${PATTERN}} != ""
+.if ${OS_VERSION:M${PATTERN}} != ""
 CURSES_GOOD?=	# defined
 .endif
 .endfor
