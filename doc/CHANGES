@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7448 2004/10/15 16:24:32 jmmv Exp $
+$NetBSD: CHANGES,v 1.7449 2004/10/15 18:22:53 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4734,3 +4734,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated metacity to 2.8.6 [jmmv 2004-10-15]
 	Updated nedit to 5.5 [adam 2004-10-15]
 	Updated gnome2-applets to 2.8.1.1 [jmmv 2004-10-15]
+	Updated libgpg-error to 1.0 [minskim 2004-10-15]
