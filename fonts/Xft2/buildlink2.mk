@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.14 2004/02/16 22:55:24 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.15 2004/04/15 00:49:29 wiz Exp $
 #
 # This Makefile fragment is included by packages that use Xft2.
 #
@@ -17,7 +17,6 @@ BUILDLINK_PREFIX.Xft2_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.Xft2+=	bin/xft-config
 BUILDLINK_FILES.Xft2+=	include/X11/Xft/*
 BUILDLINK_FILES.Xft2+=	lib/libXft.*
-BUILDLINK_FILES.Xft2+=	lib/pkgconfig/xft.pc
 
 BUILDLINK_DEPENDS.Xrender=	Xrender>=0.8.2
 BUILDLINK_DEPENDS.render=	render>=0.8

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.5 2004/02/19 17:54:07 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.6 2004/04/15 00:49:29 wiz Exp $
 #
 # This Makefile fragment is included by packages that use gtk-thinice-engine.
 #
@@ -15,7 +15,6 @@ BUILDLINK_PKGSRCDIR.gtk-thinice-engine?=		../../x11/gtk-thinice-engine
 EVAL_PREFIX+=	BUILDLINK_PREFIX.gtk-thinice-engine=gtk-thinice-engine
 BUILDLINK_PREFIX.gtk-thinice-engine_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.gtk-thinice-engine+=	lib/gtk-2.0/2.2.0/engines/libthinice.*
-BUILDLINK_FILES.gtk-thinice-engine+=	lib/pkgconfig/gtk-thinice-engine-2.pc
 
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../x11/gtk2/buildlink2.mk"
