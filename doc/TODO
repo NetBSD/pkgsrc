@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.27 2002/12/04 17:36:19 salo Exp $
+$NetBSD: TODO,v 1.28 2002/12/05 11:59:46 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -154,6 +154,8 @@ Suggested package updates
 	o lesstif-0.93.36 [drochner]
 	o lftp-2.6.2
 	o libexif-0.5.7
+	o libgnomeprint-2.1.2 [jmmv]
+	o libgnomeprintui-2.1.2 [jmmv]
 	o libole2-2.2.8
 	o libmng-1.0.5rc1
 	o librep-0.16.1
