@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2002/03/06 20:17:24 seb Exp $
+# $NetBSD: Makefile,v 1.3 2002/03/07 13:22:33 seb Exp $
 
 DISTNAME=	# empty
 PKGNAME=	ms-ttf-20020306
+PKGREVISION=	1
 CATEGORIES=	fonts
 MASTER_SITES=	http://www.microsoft.com/typography/downloads/ \
 		http://www.asia.microsoft.com/typography/downloads/ \
@@ -31,7 +32,7 @@ USE_X11BASE=    yes
 DIST_SUBDIR=	ms-ttf
 EVAL_PREFIX+=	CABEXTRACT_PREFIX=cabextract
 EXTRACT_CMD=	${CABEXTRACT_PREFIX}/bin/cabextract -q $${extract_file}
-FONTDIR=	${PREFIX}/lib/X11/fonts/truetype
+FONTDIR=	${PREFIX}/lib/X11/fonts/TrueType
 DOCDIR=		${PREFIX}/share/doc/ms-ttf
 
 post-extract:
