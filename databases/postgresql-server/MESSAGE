@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2002/08/22 22:36:26 hubertf Exp $
+$NetBSD: MESSAGE,v 1.3 2002/08/25 21:49:36 jlam Exp $
 
 To enable this package, put the following into your /etc/rc.conf:
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/09/09 20:36:11 agc Exp $
+# $NetBSD: Makefile,v 1.8 2002/08/25 21:49:27 jlam Exp $
 #
 
 DISTNAME=	${PRGNAME}unix
@@ -14,11 +14,11 @@ RESTRICTED=	"May not be sold without permission"
 NO_SRC_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_CDROM=${RESTRICTED}
 
-USE_BUILDLINK_ONLY=	# defined
-WRKSRC=			${WRKDIR}
+USE_BUILDLINK2=	# defined
+WRKSRC=		${WRKDIR}
 
 PRGNAME=	xbin
-EXTRACT_ONLY=	# blank
+EXTRACT_ONLY=	# empty
 
 post-extract:
 .for dfile in ${DISTFILES}
@@ -27,7 +27,7 @@ post-extract:
 
 do-build:
 	cd ${WRKSRC} && \
-	${CC} ${CFLAGS} -DBSD -o ${PRGNAME} ${DISTNAME}.c -lcompat
+	${BUILDLINK_CC} ${CFLAGS} -DBSD -o ${PRGNAME} ${DISTNAME}.c -lcompat
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${PRGNAME} ${PREFIX}/bin

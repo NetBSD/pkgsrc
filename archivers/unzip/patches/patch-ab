@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.3 2002/07/16 08:56:34 grant Exp $
+$NetBSD: patch-ab,v 1.4 2002/08/25 21:49:26 jlam Exp $
 
 --- unix/Makefile.orig	Sun Feb 17 04:00:38 2002
 +++ unix/Makefile	Wed Jul 17 04:50:03 2002

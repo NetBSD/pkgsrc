@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2001/09/09 20:36:10 agc Exp $
+# $NetBSD: Makefile,v 1.30 2002/08/25 21:49:20 jlam Exp $
 # FreeBSD Id: Makefile,v 1.7 1997/08/10 22:31:27 fenner Exp 
 #
 
@@ -21,6 +21,7 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 
 WRKSRC=			${WRKDIR}
 EXTRACT_CMD=		${DOWNLOADED_DISTFILE} >/dev/null
+USE_BUILDLINK2=		# defined
 
 pre-extract:
 	@if [ -z "$$KERNEL" ]; then \

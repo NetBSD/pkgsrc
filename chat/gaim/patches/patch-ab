@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1 2002/07/19 05:13:35 mycroft Exp $
+$NetBSD: patch-ab,v 1.2 2002/08/25 21:49:33 jlam Exp $
 
 --- src/perl.c.orig	Fri May 31 05:13:02 2002
 +++ src/perl.c	Fri Jul 19 05:07:30 2002

@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.86 2002/08/01 02:40:05 jlam Exp $
-
-USE_BUILDLINK_ONLY=	# defined
+# $NetBSD: Makefile,v 1.87 2002/08/25 21:50:10 jlam Exp $
 
 .include "Makefile.common"
 
@@ -8,27 +6,29 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.samba.org/
 COMMENT=		SMB/CIFS protocol server suite for UNIX
 
+USE_BUILDLINK2=		# defined
+
 USE_GNU_READLINE=	# uses rl_event_hook interface to GNU readline
 CONFIGURE_ARGS+=	--with-readline
 
 CONFIGURE_ARGS+=	--with-ssl
-CONFIGURE_ARGS+=	--with-sslinc=${BUILDLINK_DIR}
-CFLAGS+=		-I${BUILDLINK_DIR}/include/openssl	# ssl.h, err.h
+CONFIGURE_ARGS+=	--with-sslinc=${SSLBASE}
+CFLAGS+=		-I${SSLBASE}/include/openssl	# ssl.h, err.h
 
 .if defined(USE_CUPS) && (${USE_CUPS} == "YES")
-.include "../../print/cups/buildlink.mk"
+.include "../../print/cups/buildlink2.mk"
 BUILD_DEFS+=		USE_CUPS
 CONFIGURE_ARGS+=	--enable-cups
 .endif
 
 .if defined(USE_PAM)
-.include "../../security/PAM/buildlink.mk"
+.include "../../security/PAM/buildlink2.mk"
 BUILD_DEFS+=		USE_PAM
 CONFIGURE_ARGS+=	--with-pam
 .endif
 
 .if defined(SAMBA_USE_LDAP) && ${SAMBA_USE_LDAP} == "YES"
-.include "../../databases/openldap/buildlink.mk"
+.include "../../databases/openldap/buildlink2.mk"
 BUILD_DEFS+=		SAMBA_USE_LDAP
 CONFIGURE_ARGS+=	--with-ldapsam
 PLIST_SUBST+=		SAMBA_LDAP=""
@@ -96,8 +96,8 @@ post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/script/mksmbpasswd.sh		\
 		${PREFIX}/sbin/mksmbpasswd
 
-.include "../../devel/readline/buildlink.mk"
-.include "../../security/openssl/buildlink.mk"
+.include "../../devel/readline/buildlink2.mk"
+.include "../../security/openssl/buildlink2.mk"
 
 .include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
