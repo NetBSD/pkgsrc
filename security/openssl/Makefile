@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2003/06/10 18:02:26 jschauma Exp $
+# $NetBSD: Makefile,v 1.71 2003/06/27 02:36:36 jschauma Exp $
 
 DISTNAME=		openssl-0.9.6g
 PKGREVISION=		2
@@ -75,6 +75,11 @@ PLIST_RSAREF=		${PKGDIR}/PLIST.rsaref
 .if (${OPSYS} == SunOS) && (${MACHINE_ARCH} == sparc)
 CONFIGURE_SCRIPT=	Configure
 CONFIGURE_ARGS+=	solaris-${SPARC_TARGET_ARCH}-${CC:C|.*/||}
+.endif
+
+.if ${OPSYS} == "IRIX" && ${ABI} =="64"
+CONFIGURE_SCRIPT=	Configure
+CONFIGURE_ARGS+=	irix64-mips4-cc
 .endif
 
 .include  "../../mk/bsd.pkg.mk"
