@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2001/04/14 14:16:54 rh Exp $
+# $NetBSD: Makefile,v 1.13 2001/04/27 19:44:39 danw Exp $
 #
 
 DISTNAME=		bonobo-1.0.2
+PKGNAME=		bonobo-1.0.2nb1
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GNOME:=unstable/sources/bonobo/}
 
@@ -18,6 +19,7 @@ DEPENDS+=		gnome-print>=0.28:../../print/gnome-print
 
 USE_LIBTOOL=		YES
 USE_X11BASE=		YES
+USE_GMAKE=		YES
 GNU_CONFIGURE=		YES
 
 CONFIGURE_ENV+=		CPPFLAGS="-I${LOCALBASE}/include"

@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.4 2001/04/06 22:16:50 rh Exp $
+$NetBSD: patch-ab,v 1.5 2001/04/27 19:44:40 danw Exp $
 
 --- configure.orig	Thu Feb 15 07:40:11 2001
 +++ configure
@@ -11,14 +11,3 @@ $NetBSD: patch-ab,v 1.4 2001/04/06 22:16:50 rh Exp $
  fi
  rm -f conftest*
  		INSTOBJEXT=.mo
-@@ -6309,6 +6309,10 @@
- bonobo/Makefile
- storage-modules/Makefile
- monikers/Makefile
-+monikers/Bonobo_Moniker_gzip.oaf
-+monikers/Bonobo_Moniker_http.oaf
-+monikers/Bonobo_Moniker_std.oaf.in
-+monikers/Bonobo_Moniker_std.oaf
- components/Makefile
- components/application-x-gnomine/Makefile
- components/text-plain/Makefile
