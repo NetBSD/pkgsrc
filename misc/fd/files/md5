@@ -1,5 +1,3 @@
-$NetBSD: md5,v 1.2 1998/08/07 13:25:05 agc Exp $
+$NetBSD: md5,v 1.3 1999/12/03 16:23:18 rh Exp $
 
-MD5 (FD-1.01.tar.gz) = 3444e994a8b37bd004280d44ffcccff0
-MD5 (FD-1.01g.patch.gz) = 8eb94f0bc3cc044e01ba181278499393
-MD5 (FD-1.01h.patch.gz) = 01dd4b346ec282cb4fe35f4e10dec0c0
+MD5 (FD-1.03l.tar.gz) = 290d37e37945a98829ddc59fc7fa3fed
