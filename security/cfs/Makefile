@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/06/09 04:32:13 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2001/06/09 15:14:54 wiz Exp $
 
 DISTNAME=		cfs-1.4.1
 CATEGORIES=		security
@@ -32,21 +32,21 @@ MAKE_ENV+=		OPSYS="${OPSYS}"
 # copied from ${WRKSRC}/Makefile and from browsing the various README files.
 #
 .if ${OPSYS} == "NetBSD"
-CFLAGS+=		-DPROTOTYPES=1                                          
-CFLAGS+=		-DBSD44 -DANYPORT -DCFS_PORT=2049 -DSHORTLINKS          
-MAKE_ENV+=		MAKE=${MAKE_PROGRAM}                                    
-MAKE_ENV+=		COMPAT="-lcompat"                                       
-MAKE_ENV+=		RPCOPTS="-b"                                            
+CFLAGS+=		-DPROTOTYPES=1
+CFLAGS+=		-DBSD44 -DANYPORT -DCFS_PORT=2049 -DSHORTLINKS
+MAKE_ENV+=		MAKE=${MAKE_PROGRAM}
+MAKE_ENV+=		COMPAT="-lcompat"
+MAKE_ENV+=		RPCOPTS="-b"
 #
 # Use getpass() instead of own getpassword() function, which doesn't seem to
 # hide the password when the user is typing it.
 #
-CFS_SUBST+=		getpassword->getpass                                    
-CFLAGS+=		-DHAVE_GETPASS                                          
+CFS_SUBST+=		getpassword->getpass
+CFLAGS+=		-DHAVE_GETPASS
 CFS_BUILD_SCRIPT=	${WRKSRC}/netbsd_make_with_bad_rpcgen
 .elif ${OPSYS} == "SunOS"
 CFLAGS+=		-traditional
-CFLAGS+=		-DPROTOTYPES=1                                          
+CFLAGS+=		-DPROTOTYPES=1
 CFLAGS+=		-DSOLARIS2X -DPORTMAP -DPTMX
 MAKE_ENV+=		MAKE=${MAKE_PROGRAM}
 MAKE_ENV+=		LIBS="-lsocket -lnsl"
@@ -55,7 +55,7 @@ MAKE_ENV+=		RPCOPTS=
 CFS_BUILD_SCRIPT=	${WRKSRC}/make_with_bad_rpcgen
 .elif ${OPSYS} == "Linux"
 CFLAGS+=		-traditional
-CFLAGS+=		-DPROTOTYPES=1                                          
+CFLAGS+=		-DPROTOTYPES=1
 CFLAGS+=		-U__OPTIMIZE__ -U__STDC__ -Dd_fileno=d_ino
 MAKE_ENV+=		MAKE=${MAKE_PROGRAM}
 MAKE_ENV+=		LIBS=
@@ -69,7 +69,7 @@ CFS_SUBST_SED=		${CFS_SUBST:S/->/!/:S/$/!g/:S/^/ -e s!/}
 DOCDIR=			${PREFIX}/share/doc/cfs
 
 post-extract:
-	${RM} -f ${WRKSRC}/esm.1                                               
+	${RM} -f ${WRKSRC}/esm.1
 
 post-patch:
 	cd ${WRKSRC}; for file in *; do					\
@@ -86,12 +86,12 @@ pre-build:
 		${FILESDIR}/unansi.sh > ${WRKSRC}/unansi
 	${CHMOD} +x ${WRKSRC}/unansi
 
-pre-install:                                                                    
+pre-install:
 	${SED}	-e "s|@PREFIX@|${PREFIX}|g"				\
-		${FILESDIR}/cfsd.sh > ${WRKDIR}/cfsd.sh                         
+		${FILESDIR}/cfsd.sh > ${WRKDIR}/cfsd.sh
 
 post-install:
-	${INSTALL_SCRIPT} ${WRKDIR}/cfsd.sh ${PREFIX}/etc/rc.d/cfsd             
+	${INSTALL_SCRIPT} ${WRKDIR}/cfsd.sh ${PREFIX}/etc/rc.d/cfsd
 	cd ${WRKSRC}; for file in *.1; do				\
 		${INSTALL_MAN} $${file} ${PREFIX}/man/man1/$${file};	\
 	done
