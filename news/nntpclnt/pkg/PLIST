@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 1998/03/25 19:31:36 tv Exp $
+bin/inews
+lib/libnntpclnt.a
+@exec mkdir -p %D/etc/nntp
+@dirrm etc/nntp
+man/man3/nntpclnt.3.gz
