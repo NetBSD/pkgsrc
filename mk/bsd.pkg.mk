@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1062 2002/10/03 18:20:46 jwise Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1063 2002/10/04 11:19:26 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -66,7 +66,7 @@ PKGDIR?=		${.CURDIR}
 INTERACTIVE_STAGE?=	none
 
 .if defined(USE_JAVA)
-BUILD_DEFS+=		PKG_JVM JAVA_HOME
+BUILD_DEFS+=		PKG_JVM
 .  if !defined(PKG_JVM)
 .    if ${MACHINE_PLATFORM:MNetBSD-*-i386} != "" || \
        ${MACHINE_PLATFORM:MLinux-*-i[3456]86} != ""
@@ -143,13 +143,6 @@ DEPENDS+=		kaffe-[0-9]*:../../lang/kaffe
 .  endif
 .  undef _UNUSED_DEPENDS
 EVAL_PREFIX+=		_JAVA_PREFIX=${_JAVA_PKGBASE}
-MAKE_ENV+=		JAVA_HOME=${JAVA_HOME}
-CONFIGURE_ENV+=		JAVA_HOME=${JAVA_HOME}
-SCRIPTS_ENV+=		JAVA_HOME=${JAVA_HOME}
-
-MAKE_ENV+=		CLASSPATH=${CLASSPATH}
-CONFIGURE_ENV+=		CLASSPATH=${CLASSPATH}
-SCRIPTS_ENV+=		CLASSPATH=${CLASSPATH}
 .endif
 
 # Set the default BUILDLINK_DIR, BUILDLINK_X11PKG_DIR,  BUILDLINK_X11_DIR so
@@ -1583,15 +1576,24 @@ MAKEFLAGS+= ${def:C/=.*//}=${_dir_${def:C/=.*//}}
 .endif
 
 .if defined(USE_JAVA)
-JAVA_HOME?=		${_JAVA_HOME}
-.  if exists(${JAVA_HOME}/lib/classes.zip)
-_JAVA_CLASSES_ZIP=	${JAVA_HOME}/lib/classes.zip:
+PKG_JAVA_HOME?=		${_JAVA_HOME}
+BUILD_DEFS+=		PKG_JAVA_HOME
+.  if exists(${PKG_JAVA_HOME}/lib/classes.zip)
+_JAVA_CLASSES_ZIP=	${PKG_JAVA_HOME}/lib/classes.zip:
 .  endif
-.  if exists(${JAVA_HOME}/lib/tools.jar)
-_JAVA_TOOLS_JAR=	${JAVA_HOME}/lib/tools.jar:
+.  if exists(${PKG_JAVA_HOME}/lib/tools.jar)
+_JAVA_TOOLS_JAR=	${PKG_JAVA_HOME}/lib/tools.jar:
 .  endif
 CLASSPATH?=		${_JAVA_CLASSES_ZIP}${_JAVA_TOOLS_JAR}.
-PATH:=			${PATH}:${JAVA_HOME}/bin
+PATH:=			${PKG_JAVA_HOME}/bin:${PATH}
+
+MAKE_ENV+=		JAVA_HOME=${PKG_JAVA_HOME}
+CONFIGURE_ENV+=		JAVA_HOME=${PKG_JAVA_HOME}
+SCRIPTS_ENV+=		JAVA_HOME=${PKG_JAVA_HOME}
+
+MAKE_ENV+=		CLASSPATH=${CLASSPATH}
+CONFIGURE_ENV+=		CLASSPATH=${CLASSPATH}
+SCRIPTS_ENV+=		CLASSPATH=${CLASSPATH}
 .endif
 
 .if !target(show-pkgsrc-dir)
