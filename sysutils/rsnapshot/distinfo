@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/10/10 17:28:14 kim Exp $
+$NetBSD: distinfo,v 1.2 2004/10/11 09:44:12 kim Exp $
 
 SHA1 (rsnapshot-1.1.6.tar.gz) = 6813c68df1ff82df79682c0aaa6012f189c7eeb5
 Size (rsnapshot-1.1.6.tar.gz) = 88871 bytes
+SHA1 (patch-aa) = 54f91858948e46288fe8d47f825e69db3ef56387
