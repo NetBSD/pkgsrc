@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2001/04/09 04:29:23 fredb Exp $
-#
+# $NetBSD: Makefile,v 1.37 2001/04/09 13:32:01 tron Exp $
 
 DISTNAME=		openssl-0.9.6
 CATEGORIES=		security
@@ -37,10 +36,6 @@ PATCHDIR=		${WRKDIR}/.patches
 MAKE_ENV=		LD_LIBRARY_PATH=${WRKSRC} MAKELIB=${FILESDIR}/makelib
 .endif
 
-.if ${OPSYS} == "SunOS"
-PATCH_SUM_FILE=		${FILESDIR}/patch-sum.solaris
-.endif
-
 PLIST_SRC=		${WRKDIR}/.PLIST_SRC
 
 .if ${OPSYS} == "NetBSD" && !exists(/usr/libexec/ld.elf_so) && !exists(/usr/libexec/ld.so)
@@ -72,7 +67,7 @@ do-configure:
 #	@cd ${WRKSRC}/perl && ${MAKE}
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/apps/openssl ${PREFIX}/bin/
+	${INSTALL_PROGRAM} ${WRKSRC}/apps/openssl ${PREFIX}/bin
 	@cd ${PREFIX}/bin && \
 	for file in asn1parse base64 bf bf-cbc bf-cfb bf-ecb bf-ofb ca \
 	cast cast-cbc cast5-cbc cast5-cfb cast5-ecb cast5-ofb ciphers crl \
@@ -87,14 +82,14 @@ do-install:
 		${LN} -sf openssl $$file; \
 	done
 	cd ${WRKSRC}/tools && ${INSTALL_SCRIPT} \
-		c_hash c_info c_issuer c_name c_rehash ${PREFIX}/bin/
+		c_hash c_info c_issuer c_name c_rehash ${PREFIX}/bin
 	${SED} -e s,/usr/local,${PREFIX}, ${WRKSRC}/apps/der_chop >${WRKDIR}/der_chop && \
-		${INSTALL_SCRIPT} ${WRKDIR}/der_chop ${PREFIX}/bin/
-	cd ${WRKSRC}/apps && ${INSTALL_SCRIPT} CA.sh CA.pl ${PREFIX}/bin/
+		${INSTALL_SCRIPT} ${WRKDIR}/der_chop ${PREFIX}/bin
+	cd ${WRKSRC}/apps && ${INSTALL_SCRIPT} CA.sh CA.pl ${PREFIX}/bin
 	${INSTALL_DATA} ${WRKSRC}/apps/openssl.cnf ${PREFIX}/etc/openssl.cnf.example
-	cd ${WRKSRC} && ${INSTALL_DATA} libcrypto.a libssl.a ${PREFIX}/lib/
+	cd ${WRKSRC} && ${INSTALL_DATA} libcrypto.a libssl.a ${PREFIX}/lib
 .if ${OPSYS} == "NetBSD"
-	cd ${WRKSRC} && ${INSTALL_DATA} libcrypto.so.1.0 libssl.so.1.0 ${PREFIX}/lib/
+	cd ${WRKSRC} && ${INSTALL_DATA} libcrypto.so.1.0 libssl.so.1.0 ${PREFIX}/lib
 .if ${OBJECT_FMT} == "ELF"
 .for shared_lib in libcrypto.so.1.0 libssl.so.1.0
 	cd ${PREFIX}/lib && ${LN} -s ${shared_lib} ${shared_lib:R} && \
@@ -108,18 +103,19 @@ do-install:
 .endif
 .if defined(USE_RSAREF2) && ${USE_RSAREF2} == YES
 	# libRSAglue.a is only useful if you are using the RSAREF2 library.
-	cd ${WRKSRC} && ${INSTALL_DATA} libRSAglue.a ${PREFIX}/lib/
+	cd ${WRKSRC} && ${INSTALL_DATA} libRSAglue.a ${PREFIX}/lib
 .endif
 	${INSTALL_DATA_DIR} ${PREFIX}/include/openssl
 	cd ${WRKSRC}/include/openssl && \
 	for file in \
 	asn1.h asn1_mac.h bio.h blowfish.h bn.h buffer.h cast.h comp.h conf.h \
 	crypto.h des.h dh.h dsa.h e_os.h e_os2.h ebcdic.h err.h evp.h hmac.h \
-	idea.h lhash.h md2.h md5.h mdc2.h objects.h opensslconf.h opensslv.h \
-	pem.h pem2.h pkcs12.h pkcs7.h rand.h rc2.h rc4.h rc5.h ripemd.h rsa.h \
-	safestack.h sha.h ssl.h ssl2.h ssl23.h ssl3.h stack.h tls1.h tmdiff.h \
-	txt_db.h x509.h x509_vfy.h x509v3.h ; do \
-		${INSTALL_DATA} $$file ${PREFIX}/include/openssl/; \
+	idea.h lhash.h md2.h md4.h md5.h mdc2.h obj_mac.h objects.h \
+	opensslconf.h opensslv.h pem.h pem2.h pkcs12.h pkcs7.h rand.h rc2.h \
+	rc4.h rc5.h ripemd.h rsa.h safestack.h sha.h ssl.h ssl2.h ssl23.h \
+	ssl3.h stack.h symhacks.h tls1.h tmdiff.h txt_db.h x509.h x509_vfy.h \
+	x509v3.h ; do \
+		${INSTALL_DATA} $$file ${PREFIX}/include/openssl; \
 	done
 #	@cd ${WRKSRC}/perl && ${MAKE} install
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/openssl
@@ -127,15 +123,15 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/openssl/crypto
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/openssl/ssl
 	${INSTALL_DATA} ${WRKSRC}/doc/apps/* \
-		${PREFIX}/share/doc/openssl/apps/
+		${PREFIX}/share/doc/openssl/apps
 	${INSTALL_DATA} ${WRKSRC}/doc/crypto/* \
-		${PREFIX}/share/doc/openssl/crypto/
+		${PREFIX}/share/doc/openssl/crypto
 	${INSTALL_DATA} ${WRKSRC}/doc/ssl/* \
-		${PREFIX}/share/doc/openssl/ssl/
+		${PREFIX}/share/doc/openssl/ssl
 	for file in README c-indentation.el openssl.txt openssl_button.gif \
 	openssl_button.html ssleay.txt ; do \
 		${INSTALL_DATA} ${WRKSRC}/doc/$$file \
-			${PREFIX}/share/doc/openssl/; \
+			${PREFIX}/share/doc/openssl; \
 	done
 	${INSTALL_DATA_DIR} ${PREFIX}/certs
 	${INSTALL_DATA_DIR} ${PREFIX}/private

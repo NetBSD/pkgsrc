@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.2 2001/04/09 04:29:24 fredb Exp $
+@comment $NetBSD: PLIST.common,v 1.3 2001/04/09 13:32:01 tron Exp $
 bin/CA.pl
 bin/CA.sh
 bin/asn1parse
@@ -108,8 +108,10 @@ include/openssl/hmac.h
 include/openssl/idea.h
 include/openssl/lhash.h
 include/openssl/md2.h
+include/openssl/md4.h
 include/openssl/md5.h
 include/openssl/mdc2.h
+include/openssl/obj_mac.h
 include/openssl/objects.h
 include/openssl/opensslconf.h
 include/openssl/opensslv.h
@@ -130,6 +132,7 @@ include/openssl/ssl2.h
 include/openssl/ssl23.h
 include/openssl/ssl3.h
 include/openssl/stack.h
+include/openssl/symhacks.h
 include/openssl/tls1.h
 include/openssl/tmdiff.h
 include/openssl/txt_db.h
