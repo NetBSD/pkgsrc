@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/03/30 05:00:33 garbled Exp $
+# $NetBSD: Makefile,v 1.2 1999/04/01 06:06:49 garbled Exp $
 
 DISTNAME=		freetype-1.1.full
 PKGNAME=		freetype-1.1
 CATEGORIES=		textproc
-MASTER_SITES=		ftp://ftp.freetype.org/pub/freetype/
+MASTER_SITES=		ftp://ftp.freetype.org/pub/freetype/old/
 
 MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.freetype.org
