@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2000/04/27 03:53:49 kim Exp $
+# $NetBSD: Makefile,v 1.13 2000/06/26 20:09:33 rh Exp $
 # FreeBSD Id: Makefile,v 1.16 1997/12/24 17:45:28 ache Exp
 #
 
-DISTNAME=       wu-ftpd-2.6.0
+DISTNAME=	wu-ftpd-2.6.0
+PKGNAME=	${DISTNAME}nb1
 CATEGORIES=	net
 MASTER_SITES=   ftp://ftp.wu-ftpd.org/pub/wu-ftpd/ \
 		ftp://ftp.landfield.com/wu-ftpd/wu-ftpd.org/wu-ftpd/ \
@@ -25,7 +26,7 @@ MASTER_SITES=   ftp://ftp.wu-ftpd.org/pub/wu-ftpd/ \
 		ftp://sunsite.cnlab-switch.ch/mirror/wu-ftpd/wu-ftpd/ \
 		ftp://ftp.ox.ac.uk/pub/comp/security/COAST/mirrors/ftp.vr.net/wu-ftpd/
 
-MAINTAINER=     rh@netbsd.org
+MAINTAINER=	rh@netbsd.org
 HOMEPAGE=	http://www.wu-ftpd.org/
 
 CONFLICTS+=	wu-ftpd-vr-* beroftpd-*
