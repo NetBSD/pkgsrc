@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.1 2005/01/14 13:08:51 wiz Exp $
+
+--- Makefile.orig	2005-01-09 19:58:48.000000000 +0100
++++ Makefile
+@@ -1,10 +1,9 @@
+ # Make file for parallel BZIP2
+-CC=g++
+ 
+ all: pbzip2
+ 
+ pbzip2: pbzip2.cpp
+-	$(CC) -O3 -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -o pbzip2 pbzip2.cpp -pthread -lpthread -lbz2
++	$(CXX) $(CXXFLAGS) $(LDFLAGS) -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -o pbzip2 pbzip2.cpp -pthread -lpthread -lbz2
+ 
+ pbzip2-static: libbz2.a pbzip2.cpp
+ 	$(CC) -O3 -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -o pbzip2 pbzip2.cpp -pthread -lpthread -L. -lbz2
