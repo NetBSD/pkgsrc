@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/12/20 06:41:17 salo Exp $
+# $NetBSD: Makefile,v 1.4 2003/07/17 22:55:03 grant Exp $
 #
 
 DISTNAME=	pclock-0.13.1
@@ -7,7 +7,7 @@ MASTER_SITES=	http://bnt.kourakos.com/~awk/programs/ \
 		ftp://ftp.kourakos.com/pub/pclock/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	salo@netbsd.org
+MAINTAINER=	salo@NetBSD.org
 HOMEPAGE=	http://bnt.kourakos.com/~awk/programs/pclock/
 COMMENT=	Simple analog clock designed for WindowMaker
 

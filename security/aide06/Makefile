@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/06/23 13:48:33 agc Exp $
+# $NetBSD: Makefile,v 1.2 2003/07/17 22:52:50 grant Exp $
 #
 
 DISTNAME=       aide-0.6
 CATEGORIES=	security
 MASTER_SITES=   ftp://ftp.cs.tut.fi/pub/src/gnu/
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	packages@NetBSD.org
 HOMEPAGE=	http://www.cs.tut.fi/~rammer/aide.html
 COMMENT=	older intrusion detection system for checking file integrity
 

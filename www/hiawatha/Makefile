@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/05/12 05:23:29 jmc Exp $
+# $NetBSD: Makefile,v 1.11 2003/07/17 22:55:35 grant Exp $
 #
 
 DISTNAME=	hiawatha
@@ -10,7 +10,7 @@ EXTRACT_SUFX=	.zip
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
 		sitedrivenby.gif
 
-MAINTAINER=	jwise@netbsd.org
+MAINTAINER=	jwise@NetBSD.org
 HOMEPAGE=	http://www.pault.com/pault/downloads/
 COMMENT=	Barebones HTTP server with XML and XSLT support (and more)
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/06/02 01:15:59 jschauma Exp $
+# $NetBSD: Makefile,v 1.13 2003/07/17 22:56:01 grant Exp $
 
 DISTNAME=	w3-4.0pre.47
 PKGNAME=	w3-4.0b47
@@ -9,7 +9,7 @@ MASTER_SITES=	ftp://ftp.xemacs.org/pub/xemacs/emacs-w3/ \
 		ftp://ftp.lab.kdd.co.jp/xemacs/emacs-w3/ \
 		ftp://ftp.th-darmstadt.de/pub/editors/xemacs/emacs-w3/
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.cs.indiana.edu/elisp/w3/docs.html
 COMMENT=	World Wide Web browser for Emacs
 

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.7 2003/06/02 01:15:43 jschauma Exp $
+# $NetBSD: Makefile,v 1.8 2003/07/17 22:56:32 grant Exp $
 
 DISTNAME=	hanterm-3.1.6
 PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	http://hanterm.org/download/
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://hanterm.org/
 COMMENT=	X11R6-based xterm hacked for managing Korean languages
 

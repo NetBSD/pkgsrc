@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/02/27 04:53:34 lukem Exp $
+# $NetBSD: Makefile,v 1.2 2003/07/17 22:51:56 grant Exp $
 #
 
 DISTNAME=		tnftpd-2.0-beta3
 PKGNAME=		tnftpd-2.0rc3
 SVR4_PKGNAME=		tnftpd
 CATEGORIES=		net
-MASTER_SITES=		ftp://ftp.netbsd.org/pub/NetBSD/misc/tnftp/
+MASTER_SITES=		ftp://ftp.NetBSD.org/pub/NetBSD/misc/tnftp/
 
-MAINTAINER=		lukem@netbsd.org
+MAINTAINER=		lukem@NetBSD.org
 COMMENT=		The NetBSD FTP Daemon
 
 CONFLICTS=		wu-ftpd-[0-9]*

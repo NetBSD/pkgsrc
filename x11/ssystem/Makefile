@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/03/09 19:28:18 jschauma Exp $
+# $NetBSD: Makefile,v 1.8 2003/07/17 22:56:45 grant Exp $
 #
 
 DISTNAME=	ssystem-1.6
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	x11 graphics
 MASTER_SITES=	${HOMEPAGE}			# ${HOMEPAGE}/hires/
 
-MAINTAINER=	fredb@netbsd.org
+MAINTAINER=	fredb@NetBSD.org
 HOMEPAGE=	http://www1.las.es/~amil/ssystem/
 COMMENT=	Solar System Flyby Simulator
 

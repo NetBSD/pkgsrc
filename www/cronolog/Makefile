@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2003/06/10 07:21:29 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/17 22:55:31 grant Exp $
 #
 
 DISTNAME=	cronolog-1.6.2
 CATEGORIES=	www
 MASTER_SITES=	http://www.cronolog.org/download/
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.cronolog.org/
 COMMENT=	Web log rotation utility that provides datestamp filenames
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2003/07/13 13:53:45 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2003/07/17 22:55:20 grant Exp $
 #
 
 DISTNAME=	amaya-src-8.0
@@ -11,7 +11,7 @@ MASTER_SITES=	http://www.w3.org/Amaya/Distribution/ \
 		ftp://mirror.aarnet.edu.au/pub/amaya/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.w3.org/Amaya/
 COMMENT=	Web browser/editor from the World Wide Web Consortium (W3C)
 

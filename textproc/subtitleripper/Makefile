@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/06/23 07:20:55 mrg Exp $
+# $NetBSD: Makefile,v 1.2 2003/07/17 22:54:52 grant Exp $
 #
 
 DISTNAME=	subtitleripper-0.3-1
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=subtitleripper/}
 EXTRACT_SUFX=	.tgz
 WRKSRC=		${WRKDIR}/subtitleripper
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://sourceforge.net/projects/subtitleripper/
 COMMENT=	sub title ripping program
 

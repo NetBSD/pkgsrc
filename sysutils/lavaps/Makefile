@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2003/06/18 09:22:25 agc Exp $
+# $NetBSD: Makefile,v 1.15 2003/07/17 22:53:40 grant Exp $
 #
 
 DISTNAME=	lavaps-1.20
@@ -7,7 +7,7 @@ WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 CATEGORIES=	sysutils x11
 MASTER_SITES=	http://www.isi.edu/~johnh/SOFTWARE/LAVAPS/
 
-MAINTAINER=	hubertf@netbsd.org
+MAINTAINER=	hubertf@NetBSD.org
 HOMEPAGE=	http://www.isi.edu/~johnh/SOFTWARE/LAVAPS/
 COMMENT=	Lava lamp of currently running processes
 

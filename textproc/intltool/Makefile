@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/06/03 19:27:52 jmmv Exp $
+# $NetBSD: Makefile,v 1.9 2003/07/17 22:54:20 grant Exp $
 #
 
 DISTNAME=		intltool-0.26
@@ -6,7 +6,7 @@ CATEGORIES=		textproc devel gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/intltool/0.26/}
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		tech-pkg@netbsd.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Toolbox for internationalisation
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/05/02 11:56:45 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2003/07/17 22:56:00 grant Exp $
 
 DISTNAME=	pycurl-7.10.1
 PKGREVISION=	1
@@ -6,7 +6,7 @@ PKGNAME=	${PYPKGPREFIX}-curl-7.10.1
 CATEGORIES=	www
 MASTER_SITES=	http://pycurl.sourceforge.net/download/
 
-MAINTAINER=	shell@netbsd.org
+MAINTAINER=	shell@NetBSD.org
 HOMEPAGE=	http://pycurl.sf.net/
 COMMENT=	python module interface to the cURL library
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2002/10/02 19:40:15 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2003/07/17 22:55:08 grant Exp $
 
 DISTNAME=	AfterStep-1.8.11
 PKGNAME=	afterstep-1.8.11
@@ -8,7 +8,7 @@ MASTER_SITES=	ftp://ftp.afterstep.org/stable/ \
 		ftp://ftp.digex.net/pub/X11/window-managers/afterstep/AfterStep/stable/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=		fredb@netbsd.org
+MAINTAINER=		fredb@NetBSD.org
 HOMEPAGE=		http://www.afterstep.org/
 COMMENT=		NeXT-like window manager for X11
 

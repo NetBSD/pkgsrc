@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2003/06/14 09:18:10 shell Exp $
+# $NetBSD: Makefile,v 1.31 2003/07/17 22:51:33 grant Exp $
 # FreeBSD Id: Makefile,v 1.13 1997/06/27 18:38:15 jfitz Exp
 #
 
@@ -8,7 +8,7 @@ SVR4_PKGNAME=	p5net
 CATEGORIES=	net perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Net/}
 
-MAINTAINER=	shell@netbsd.org
+MAINTAINER=	shell@NetBSD.org
 HOMEPAGE=	http://theory.uwinnipeg.ca/CPAN/data/libnet/Net/libnetFAQ.html
 COMMENT=	perl5 modules to access and use network protocols
 

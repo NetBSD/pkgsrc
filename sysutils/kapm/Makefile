@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2003/07/13 17:52:50 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2003/07/17 22:53:38 grant Exp $
 #
 
 DISTNAME=	kapm-0.3.1
@@ -6,7 +6,7 @@ PKGREVISION=	2
 CATEGORIES=	sysutils x11 kde
 MASTER_SITES=	ftp://bodnar42.dhs.org/pub/kapm/
 
-MAINTAINER=	hubertf@netbsd.org
+MAINTAINER=	hubertf@NetBSD.org
 HOMEPAGE=	http://bodnar42.dhs.org/kapm/
 COMMENT=	Monitor a laptop's battery status and perform other APM tasks
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/06/02 01:17:23 jschauma Exp $
+# $NetBSD: Makefile,v 1.8 2003/07/17 22:52:46 grant Exp $
 #
 
 DISTNAME=	xpdf-japanese
@@ -7,7 +7,7 @@ WRKSRC=		${WRKDIR}/${DISTNAME}
 CATEGORIES=	print
 MASTER_SITES=	ftp://ftp.foolabs.com/pub/xpdf/
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.foolabs.com/xpdf/
 COMMENT=	xpdf support files for Japanese
 

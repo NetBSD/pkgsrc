@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2003/04/05 18:31:37 jmmv Exp $
+# $NetBSD: Makefile,v 1.7 2003/07/17 22:54:56 grant Exp $
 #
 
 DISTNAME=	xmlcatmgr-0.2
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xmlcatmgr/}
 
-MAINTAINER=	jmmv@netbsd.org
+MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://xmlcatmgr.sourceforge.net/
 COMMENT=	XML catalog manager
 

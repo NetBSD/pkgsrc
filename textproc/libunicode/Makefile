@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2002/10/19 10:54:58 rh Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/17 22:54:29 grant Exp $
 #
 
 DISTNAME=		libunicode-0.4
 CATEGORIES=		textproc devel
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libunicode/0.4/}
 
-MAINTAINER=		rh@netbsd.org
+MAINTAINER=		rh@NetBSD.org
 HOMEPAGE=		http://www.pango.org/
 COMMENT=		library for manipulating Unicode characters and strings
 

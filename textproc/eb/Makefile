@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2003/07/13 13:53:31 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2003/07/17 22:54:07 grant Exp $
 # FreeBSD Id: ports/japanese/eb/Makefile,v 1.21 2000/08/21 03:39:42 kevlo Exp
 #
 
@@ -11,7 +11,7 @@ DISTFILES=	${EB_DISTFILES} \
 		${EB_LISTS} \
 		${EB_APPENDICES}
 
-MAINTAINER=	uebayasi@netbsd.org
+MAINTAINER=	uebayasi@NetBSD.org
 HOMEPAGE=	http://www.sra.co.jp/people/m-kasahr/eb/
 COMMENT=	C library for accessing EB, EBG, EBXA and EPWING CD-ROM dictionaries
 

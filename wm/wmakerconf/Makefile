@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2003/07/13 13:53:45 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2003/07/17 22:55:18 grant Exp $
 #
 
 DISTNAME=	wmakerconf-2.8.1
@@ -7,7 +7,7 @@ CATEGORIES=	x11 wm windowmaker
 MASTER_SITES=	http://ulli.on.openave.net/wmakerconf/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	wiz@netbsd.org
+MAINTAINER=	wiz@NetBSD.org
 HOMEPAGE=	http://ulli.on.openave.net/wmakerconf/
 COMMENT=	Gtk+ based configuration tool for Window Maker
 

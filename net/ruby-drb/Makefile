@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2002/09/04 12:59:13 taca Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/17 22:51:48 grant Exp $
 # FreeBSD: ports/net/ruby-drb/Makefile,v 1.8 2001/01/18 16:57:25 knu Exp
 
 DISTNAME=	drb-1.3.7
@@ -6,7 +6,7 @@ PKGNAME=	${RUBY_PKGNAMEPREFIX}${DISTNAME}
 CATEGORIES=	net
 MASTER_SITES=	http://www2a.biglobe.ne.jp/~seki/ruby/
 
-MAINTAINER=	taca@netbsd.org
+MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	http://www2a.biglobe.ne.jp/~seki/ruby/
 COMMENT=	Distributed Ruby
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/03/29 12:43:12 jmmv Exp $
+# $NetBSD: Makefile,v 1.11 2003/07/17 22:56:53 grant Exp $
 
 DISTNAME=	xdaemon-1.0
 WRKSRC=		${WRKDIR}
@@ -6,8 +6,8 @@ CATEGORIES=	games x11
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 DISTFILES=	${PIX} Daemon.README
 
-MAINTAINER=	hubertf@netbsd.org
-HOMEPAGE=	http://www.netbsd.org/
+MAINTAINER=	hubertf@NetBSD.org
+HOMEPAGE=	http://www.NetBSD.org/
 COMMENT=	BSD Daemon sticking on your desktop (like xteddy)
 
 DEPENDS+=	xteddy-1.*:../xteddy

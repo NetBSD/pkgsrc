@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.16 2003/02/08 17:13:19 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.17 2003/07/17 22:51:39 grant Exp $
 
 DISTNAME=	ppp-2.3.9
 PKGNAME=	ppp-mppe-2.3.9
 CATEGORIES=	net
 MASTER_SITES=	ftp://cs.anu.edu.au/pub/software/ppp/
 
-MAINTAINER=	dbj@netbsd.org
+MAINTAINER=	dbj@NetBSD.org
 HOMEPAGE=	http://www.moretonbay.com/vpn/releases/
 COMMENT=	PPP daemon and LKM with MPPE - Microsoft Point-to-Point Encryption
 

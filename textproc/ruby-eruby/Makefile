@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2002/01/19 09:42:47 taca Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/17 22:54:49 grant Exp $
 # FreeBSD: ports/textproc/eruby/Makefile,v 1.9 2000/12/12 14:04:26 knu Exp
 
 DISTNAME=	eruby-0.9.7
@@ -6,7 +6,7 @@ PKGNAME=	${RUBY_PKGNAMEPREFIX}${DISTNAME}
 CATEGORIES=	textproc
 MASTER_SITES=	http://www.modruby.net/archive/
 
-MAINTAINER=	taca@netbsd.org
+MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	http://www.modruby.net/
 COMMENT=	Interprets Ruby code embedded in a text file
 

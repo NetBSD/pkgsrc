@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2003/06/26 14:51:00 dillo Exp $
+# $NetBSD: Makefile,v 1.24 2003/07/17 22:53:24 grant Exp $
 # FreeBSD Id: Makefile,v 1.4 1997/07/15 15:00:30 cracauer Exp
 #
 
@@ -6,7 +6,7 @@ DISTNAME=		scsh-0.6.4
 CATEGORIES=		shells lang
 MASTER_SITES=		ftp://ftp.scsh.net/pub/scsh/0.6/
 
-MAINTAINER= 		tech-pkg@netbsd.org
+MAINTAINER= 		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.scsh.net/
 COMMENT=		Unix shell embedded into Scheme, with access to all Posix calls
 

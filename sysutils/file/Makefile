@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2003/06/02 01:16:55 jschauma Exp $
+# $NetBSD: Makefile,v 1.3 2003/07/17 22:53:34 grant Exp $
 
 DISTNAME=		file-4.02
 CATEGORIES=		sysutils
 MASTER_SITES=		ftp://ftp.gw.com/mirrors/pub/unix/file/
 MASTER_SITES+=		ftp://ftp.astron.com/pub/file/
 
-MAINTAINER=		tech-pkg@netbsd.org
+MAINTAINER=		tech-pkg@NetBSD.org
 #HOMEPAGE=
 COMMENT=		tool for determining file type
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/01/03 15:21:38 taca Exp $
+# $NetBSD: Makefile,v 1.4 2003/07/17 22:53:13 grant Exp $
 # FreeBSD: ports/security/ruby-acl/Makefile,v 1.4 2000/12/26 04:13:28 knu Exp
 
 DISTNAME=	acl-1.0.1
@@ -6,7 +6,7 @@ PKGNAME=	${RUBY_PKGNAMEPREFIX}${DISTNAME}
 CATEGORIES=	security
 MASTER_SITES=	http://www2a.biglobe.ne.jp/~seki/ruby/
 
-MAINTAINER=	taca@netbsd.org
+MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	http://www2a.biglobe.ne.jp/~seki/ruby/
 COMMENT=	Ruby module to provide Access Control List checks
 

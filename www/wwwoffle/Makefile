@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2002/11/08 15:39:55 fredb Exp $
+# $NetBSD: Makefile,v 1.46 2003/07/17 22:56:08 grant Exp $
 
 DISTNAME=	wwwoffle-2.7f
 CATEGORIES=	www
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SUNSITE:=apps/www/servers/} \
 		http://www.gedanken.freeserve.co.uk/download-wwwoffle/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	fredb@netbsd.org
+MAINTAINER=	fredb@NetBSD.org
 HOMEPAGE=	http://www.gedanken.demon.co.uk/wwwoffle/
 COMMENT=	WWW proxy with support for offline browsing
 

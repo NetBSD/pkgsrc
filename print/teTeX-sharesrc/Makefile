@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2003/04/10 20:10:19 grant Exp $
+# $NetBSD: Makefile,v 1.19 2003/07/17 22:52:40 grant Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/08/05 06:56:41 tg Exp
 #
 
@@ -9,7 +9,7 @@ WRKSRC=		${WRKDIR}
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=systems/unix/teTeX/1.0/distrib/sources/}
 
-MAINTAINER=	hubertf@netbsd.org
+MAINTAINER=	hubertf@NetBSD.org
 HOMEPAGE=	http://www.tug.org/tetex/
 COMMENT=	Sources for machine-independent part of teTeX
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/03/29 12:41:57 jmmv Exp $
+# $NetBSD: Makefile,v 1.9 2003/07/17 22:51:15 grant Exp $
 
 DISTNAME=	ipcalc
 PKGNAME=	${DISTNAME}-0.35
@@ -8,7 +8,7 @@ CATEGORIES=	net
 MASTER_SITES=	http://jodies.de/
 EXTRACT_SUFX=	.pl
 
-MAINTAINER=	zuntum@netbsd.org
+MAINTAINER=	zuntum@NetBSD.org
 HOMEPAGE=	http://jodies.de/ipcalc/
 COMMENT=	IP Calculator
 

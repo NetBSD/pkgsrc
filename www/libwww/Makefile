@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2003/06/02 01:16:05 jschauma Exp $
+# $NetBSD: Makefile,v 1.44 2003/07/17 22:55:40 grant Exp $
 
 DISTNAME=		w3c-libwww-5.4.0
 PKGNAME=		libwww-5.4.0
@@ -7,7 +7,7 @@ MASTER_SITES=		http://www.w3.org/Library/Distribution/ \
 			ftp://ftp.uni-hannover.de/pub/mirror/info-systems/WWW/libwww/
 EXTRACT_SUFX=		.tgz
 
-MAINTAINER=		tech-pkg@netbsd.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.w3.org/Library/
 COMMENT=		The W3C Reference Library
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/09/27 23:18:47 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/17 22:54:52 grant Exp $
 #
 
 DISTNAME=	TclDOM-1.6
@@ -6,7 +6,7 @@ PKGNAME=	tcl-dom-1.6
 CATEGORIES=	textproc www tcl
 MASTER_SITES=	http://www.zveno.com/in-tclxml/in-tcldom/
 
-MAINTAINER=	jwise@netbsd.org
+MAINTAINER=	jwise@NetBSD.org
 HOMEPAGE=	http://www.zveno.com/zm.cgi/in-tclxml/in-tcldom/
 COMMENT=	DOM implementation for use with TclXML or TclExpat
 

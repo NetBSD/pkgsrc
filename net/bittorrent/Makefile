@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/07/13 13:52:47 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2003/07/17 22:51:01 grant Exp $
 #
 
 DISTNAME=	BitTorrent-3.2.1b
@@ -7,7 +7,7 @@ PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	http://bitconjurer.org/BitTorrent/
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://bitconjurer.org/BitTorrent/
 COMMENT=	file sharing tool
 

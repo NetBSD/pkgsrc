@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/06/02 01:16:22 jschauma Exp $
+# $NetBSD: Makefile,v 1.7 2003/07/17 22:54:58 grant Exp $
 # FreeBSD Id: Makefile,v 1.5 1997/05/12 06:33:23 max Exp
 #
 
@@ -8,7 +8,7 @@ WRKSRC=			${WRKDIR}/cal-3.5/source
 CATEGORIES=		time
 MASTER_SITES=		${MASTER_SITE_SUNSITE:=utils/shell/}
 
-MAINTAINER=		tech-pkg@netbsd.org
+MAINTAINER=		tech-pkg@NetBSD.org
 COMMENT=		Enhanced color version of standard calendar utility
 
 MAKEFILE=		makefile.unx

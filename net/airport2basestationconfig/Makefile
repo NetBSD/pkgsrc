@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/06/05 12:31:35 markd Exp $
+# $NetBSD: Makefile,v 1.2 2003/07/17 22:50:58 grant Exp $
 
 DISTNAME=	configurator_201
 PKGNAME=	${BINNAME}-2.0.1
@@ -6,7 +6,7 @@ CATEGORIES=	net
 MASTER_SITES=	${HOMEPAGE}
 EXTRACT_SUFX=	.zip
 
-MAINTAINER=	markd@netbsd.org
+MAINTAINER=	markd@NetBSD.org
 HOMEPAGE=	http://edge.mcs.drexel.edu/GICL/people/sevy/airport/
 COMMENT=	Configuration program for Apple's Airport Base Station
 

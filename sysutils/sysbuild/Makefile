@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2003/03/29 12:42:33 jmmv Exp $
+# $NetBSD: Makefile,v 1.15 2003/07/17 22:53:53 grant Exp $
 #
 
 DISTNAME=	sysbuild-1.9
@@ -7,7 +7,7 @@ CATEGORIES=	sysutils
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 
-MAINTAINER=	jmmv@netbsd.org
+MAINTAINER=	jmmv@NetBSD.org
 COMMENT=	Automate NetBSD system and kernel unprivileged builds
 
 EXTRACT_ONLY=	# empty

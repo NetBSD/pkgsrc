@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.15 2003/07/13 13:54:27 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2003/07/17 22:56:36 grant Exp $
 
 DISTNAME=	mlterm-2.7.0
 PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mlterm/}
 
-MAINTAINER=	uebayasi@netbsd.org
+MAINTAINER=	uebayasi@NetBSD.org
 HOMEPAGE=	http://mlterm.sourceforge.net/
 COMMENT=	Multilingual terminal emulator
 

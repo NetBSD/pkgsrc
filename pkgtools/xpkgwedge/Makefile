@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2003/06/12 15:34:38 jschauma Exp $
+# $NetBSD: Makefile,v 1.37 2003/07/17 22:52:20 grant Exp $
 
 DISTNAME=	xpkgwedge-1.7
 WRKSRC=		${WRKDIR}
@@ -6,8 +6,8 @@ CATEGORIES=	pkgtools devel x11
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 
-MAINTAINER=	jlam@netbsd.org
-HOMEPAGE=	ftp://ftp.netbsd.org/pub/NetBSD/packages/pkgsrc/Packages.txt
+MAINTAINER=	jlam@NetBSD.org
+HOMEPAGE=	ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/Packages.txt
 COMMENT=	allows X11 pkgs to be built and used outside of /usr/X11R6
 
 NOT_FOR_PLATFORM=	SunOS-*-*

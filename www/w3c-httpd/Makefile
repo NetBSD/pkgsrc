@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/03/29 12:42:55 jmmv Exp $
+# $NetBSD: Makefile,v 1.10 2003/07/17 22:56:05 grant Exp $
 # FreeBSD Id: Makefile,v 1.19 1999/01/08 19:59:26 fenner Exp
 
 DISTNAME=	w3c-httpd-3.0A
@@ -7,7 +7,7 @@ CATEGORIES=	www
 MASTER_SITES=	ftp://ftp.w3.org/pub/httpd/ \
 		ftp://ftp-eu.w3.org/pub/httpd/
 
-MAINTAINER=	package@netbsd.org
+MAINTAINER=	package@NetBSD.org
 HOMEPAGE=	http://www.w3.org/pub/WWW/Daemon/
 COMMENT=	WWW server from the W3 Consortium (W3C)
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2003/03/29 12:42:48 jmmv Exp $
+# $NetBSD: Makefile,v 1.18 2003/07/17 22:55:25 grant Exp $
 
 DISTNAME=	jakarta-tomcat-${TOMCAT_VERSION}-src
 PKGNAME=	ap-jk-${TOMCAT_VERSION}
@@ -7,7 +7,7 @@ WRKSRC=		${WRKDIR}/${DISTNAME}/src/native/apache1.3
 CATEGORIES=	www
 MASTER_SITES=	http://jakarta.apache.org/builds/tomcat/release/v${TOMCAT_VERSION}/src/
 
-MAINTAINER=	jwise@netbsd.org
+MAINTAINER=	jwise@NetBSD.org
 HOMEPAGE=	http://jakarta.apache.org/
 COMMENT=	Apache connector for accessing Jakarta Tomcat or Apache JServ
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2003/06/02 01:16:05 jschauma Exp $
+# $NetBSD: Makefile,v 1.15 2003/07/17 22:55:36 grant Exp $
 
 DISTNAME=	htdig-3.1.6
 CATEGORIES=	www databases
@@ -11,7 +11,7 @@ MASTER_SITES=	http://www.htdig.org/files/ \
 		ftp://www.it.htdig.org/pub/htdig/ \
 		http://www.opdenbrouw.nl/htdig/maindocs/files/
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://htdig.sourceforge.net/
 COMMENT=	WWW indexing and searching system
 

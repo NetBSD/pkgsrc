@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.20 2003/05/25 10:14:23 epg Exp $
+# $NetBSD: Makefile,v 1.21 2003/07/17 22:55:30 grant Exp $
 
 DISTNAME=		cadaver-0.21.0
 PKGREVISION=		2
 CATEGORIES=		www
 MASTER_SITES=		http://www.webdav.org/cadaver/
 
-MAINTAINER=		jlam@netbsd.org
+MAINTAINER=		jlam@NetBSD.org
 HOMEPAGE=		http://www.webdav.org/cadaver/
 COMMENT=		command-line WebDAV client
 

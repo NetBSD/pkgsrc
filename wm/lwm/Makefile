@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/08/22 17:39:00 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/17 22:55:14 grant Exp $
 #
 
 DISTNAME=	lwm
@@ -7,7 +7,7 @@ WRKSRC=		${WRKDIR}/lwm-1.00
 CATEGORIES=	x11 wm
 MASTER_SITES=	http://users.ch.genedata.com/~enh/lwm/
 
-MAINTAINER=	jwise@netbsd.org
+MAINTAINER=	jwise@NetBSD.org
 HOMEPAGE=	http://users.ch.genedata.com/~enh/lwm/
 COMMENT=	Lightweight Window Manager
 

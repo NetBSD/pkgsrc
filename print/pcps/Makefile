@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/06/02 01:17:28 jschauma Exp $
+# $NetBSD: Makefile,v 1.8 2003/07/17 22:52:36 grant Exp $
 #
 
 DISTNAME=	pcps840
@@ -7,7 +7,7 @@ WRKSRC=		${WRKDIR}
 CATEGORIES=	print textproc
 MASTER_SITES=	ftp://garbo.uwasa.fi/unix/pcps/
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.swreg.org/soft_shop/695/shopscr3.shtml
 COMMENT=	converts text files to PostScript(tm)
 

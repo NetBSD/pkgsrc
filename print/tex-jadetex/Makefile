@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/03/29 12:42:18 jmmv Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/17 22:52:43 grant Exp $
 #
 
 DISTNAME=	jadetex-2.20
@@ -9,7 +9,7 @@ CATEGORIES=	print
 MASTER_SITES=	http://www.tug.org/applications/jadetex/
 EXTRACT_SUFX=	.zip
 
-MAINTAINER=	hubertf@netbsd.org
+MAINTAINER=	hubertf@NetBSD.org
 COMMENT=	Process tex files produced by the TeX backend of Jade
 
 DEPENDS+=	tex-hugelatex-1.0nb1:../tex-hugelatex

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2002/10/25 11:33:32 drochner Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/17 22:55:03 grant Exp $
 #
 
 DISTNAME=	pcal-4.7
@@ -6,7 +6,7 @@ CATEGORIES=	time
 MASTER_SITES=	http://membled.com/work/mirror/pcal/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	kei@netbsd.org
+MAINTAINER=	kei@NetBSD.org
 # pcal's home used to be http://www.geocities.com/SunsetStrip/Palms/5555/PS/
 HOMEPAGE=	http://membled.com/work/mirror/pcal/
 COMMENT=	PostScript calendar program

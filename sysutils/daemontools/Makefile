@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2002/04/18 16:23:22 yyamano Exp $
+# $NetBSD: Makefile,v 1.11 2003/07/17 22:53:30 grant Exp $
 # FreeBSD Id: ports/sysutils/daemontools/Makefile,v 1.8 2000/12/03 05:16:41 steve Exp
 
 DISTNAME=	daemontools-0.70
@@ -9,7 +9,7 @@ MASTER_SITES=	http://cr.yp.to/daemontools/				\
 DISTFILES=	${DISTNAME}.tar.gz					\
 		${DISTNAME}-man-20001116.tar.gz
 
-MAINTAINER=	zuntum@netbsd.org
+MAINTAINER=	zuntum@NetBSD.org
 HOMEPAGE=	http://cr.yp.to/daemontools.html
 COMMENT=	Service monitoring and logging utilities by djb
 

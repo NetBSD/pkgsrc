@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/04/16 16:29:24 jmc Exp $
+# $NetBSD: Makefile,v 1.13 2003/07/17 22:54:45 grant Exp $
 #
 
 DISTNAME=	Zope-2.2.2-src
@@ -8,7 +8,7 @@ CATEGORIES=	textproc
 MASTER_SITES=   http://www.zope.org/Products/Zope/2.2.2/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	tsarna@netbsd.org
+MAINTAINER=	tsarna@NetBSD.org
 HOMEPAGE=	http://www.zope.org/Documentation/Guides/DTML-HTML/DTML.html
 COMMENT=	DTML and StructuredText from Zope, also independently useful
 

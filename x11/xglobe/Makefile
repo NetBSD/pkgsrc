@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2002/07/10 17:15:18 mycroft Exp $
+# $NetBSD: Makefile,v 1.18 2003/07/17 22:56:57 grant Exp $
 #
 
 DISTNAME=	xglobe-0.5
@@ -13,7 +13,7 @@ MASTER_SITES=	http://www.cs.unc.edu/~scheuerm/xglobe/ \
 		http://www.ngdc.noaa.gov/mgg/image/
 DISTFILES+=	${MAPS} ${DISTNAME}${EXTRACT_SUFX}
 
-MAINTAINER=	hubertf@netbsd.org
+MAINTAINER=	hubertf@NetBSD.org
 HOMEPAGE=	http://www.cs.unc.edu/~scheuerm/xglobe/
 COMMENT=	Displays the earth as seen from space, similar to xearth
 

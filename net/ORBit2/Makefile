@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2003/07/13 13:52:47 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2003/07/17 22:50:58 grant Exp $
 #
 
 DISTNAME=		ORBit2-2.6.0
@@ -7,7 +7,7 @@ CATEGORIES=		net gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/ORBit2/2.6/}
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		rh@netbsd.org
+MAINTAINER=		rh@NetBSD.org
 HOMEPAGE=		http://orbit-resource.sourceforge.net/
 COMMENT=		high-performance CORBA ORB with C language support
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2003/06/17 17:41:37 tron Exp $
+# $NetBSD: Makefile,v 1.43 2003/07/17 22:52:40 grant Exp $
 
 DISTNAME=	teTeX-src-1.0.7
 PKGNAME=	teTeX-bin-1.0.7
@@ -7,7 +7,7 @@ WRKSRC=		${WRKDIR}/teTeX-1.0
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=systems/unix/teTeX/1.0/distrib/sources/}
 
-MAINTAINER=	hubertf@netbsd.org
+MAINTAINER=	hubertf@NetBSD.org
 HOMEPAGE=	http://www.tug.org/tetex/
 COMMENT=	TeX distribution for UNIX compatible systems - executables
 

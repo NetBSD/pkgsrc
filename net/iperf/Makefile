@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/06/18 09:22:24 agc Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/17 22:51:15 grant Exp $
 #
 
 DISTNAME=	iperf-1.6.5-source
@@ -7,7 +7,7 @@ WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 CATEGORIES=	net
 MASTER_SITES=	http://dast.nlanr.net/Projects/Iperf/
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://dast.nlanr.net/Projects/Iperf/
 COMMENT=	TCP and UDP bandwidth performance measurement tool
 

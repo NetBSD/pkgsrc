@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/07/13 13:53:22 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2003/07/17 22:53:49 grant Exp $
 #
 
 DISTNAME=	Wallpaper-0.1.1
@@ -9,7 +9,7 @@ CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=rox/}
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	rxg@netbsd.org
+MAINTAINER=	rxg@NetBSD.org
 HOMEPAGE=	http://rox.sourceforge.net/
 COMMENT=	For setting the backdrop
 

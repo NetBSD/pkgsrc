@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.11 2002/10/19 10:54:59 rh Exp $
+# $NetBSD: Makefile,v 1.12 2003/07/17 22:55:39 grant Exp $
 
 DISTNAME=		libghttp-1.0.9
 CATEGORIES=		www gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libghttp/1.0/}
 
-MAINTAINER=		tron@netbsd.org
+MAINTAINER=		tron@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		GNOME http client library
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2003/01/01 07:03:42 jlam Exp $
+# $NetBSD: Makefile.common,v 1.2 2003/07/17 22:55:37 grant Exp $
 #
 # This file is included by the following packages:
 #	www/ap-iasp, www/iasp
@@ -12,5 +12,5 @@ IASP_TARFILE=	iasp21.tar
 IASP_DIR=	iasp21
 IASP_DESTDIR=	${PREFIX}/java/${IASP_DIR}
 
-MAINTAINER=	jlam@netbsd.org
+MAINTAINER=	jlam@NetBSD.org
 HOMEPAGE=	http://www.stryon.com/docs/

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2003/06/02 01:17:35 jschauma Exp $
+# $NetBSD: Makefile,v 1.16 2003/07/17 22:52:11 grant Exp $
 
 DISTNAME=		trn4-test74
 PKGNAME=		trn-4.74
@@ -7,7 +7,7 @@ CATEGORIES=		news
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=trn/} \
 			ftp://trn.sourceforge.net/pub/trn/
 
-MAINTAINER=     	tech-pkg@netbsd.org
+MAINTAINER=     	tech-pkg@NetBSD.org
 HOMEPAGE=		http://trn.sourceforge.net/
 COMMENT=		Threaded version of rn, the classic news reader
 

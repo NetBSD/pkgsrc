@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2003/07/06 08:51:34 rh Exp $
+# $NetBSD: Makefile.common,v 1.6 2003/07/17 22:53:36 grant Exp $
 #
 
 DISTNAME=		gworkspace-0.5.3
@@ -7,7 +7,7 @@ CATEGORIES?=		sysutils gnustep
 MASTER_SITES=		http://www.gnustep.it/enrico/gworkspace/	\
 			http://www.imago.ro/gworkspace/
 
-MAINTAINER?=		tech-pkg@netbsd.org
+MAINTAINER?=		tech-pkg@NetBSD.org
 HOMEPAGE?=		http://www.gnustep.it/enrico/gworkspace/
 
 USE_BUILDLINK2=		YES

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2003/06/14 14:21:43 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/17 22:52:33 grant Exp $
 #
 
 DISTNAME=	latex-mk-1.1
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=latex-mk/}
 
-MAINTAINER=	dmcmahill@netbsd.org
+MAINTAINER=	dmcmahill@NetBSD.org
 HOMEPAGE=	http://latex-mk.sourceforge.net
 COMMENT=	Makefile fragments and scripts for managing LaTeX documents
 

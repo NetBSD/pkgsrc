@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/05/17 05:45:09 salo Exp $
+# $NetBSD: Makefile,v 1.8 2003/07/17 22:55:17 grant Exp $
 #
 
 DISTNAME=	whiteBOX-0.5
@@ -6,7 +6,7 @@ PKGREVISION=	2
 CATEGORIES=	wm x11
 MASTER_SITES=	http://whitebox.sourceforge.net/dist/
 
-MAINTAINER=	jschauma@netbsd.org
+MAINTAINER=	jschauma@NetBSD.org
 HOMEPAGE=	http://whitebox.sourceforge.net/
 COMMENT=	Multi-purpose configuration tool for Blackbox
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/06/27 08:50:29 hubertf Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/17 22:51:28 grant Exp $
 #
 
 DISTNAME=	nidentd-1.0
@@ -6,7 +6,7 @@ CATEGORIES=	net sysutils
 MASTER_SITES=	ftp://ftp.tgr.lubin.edu.pl/pub/NetBSD/nidentd/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	hubertf@netbsd.org
+MAINTAINER=	hubertf@NetBSD.org
 COMMENT=	identd that supports IPv4, IPv6, NAT, fake and random
 
 DEPENDS+=	lsof>=4.61:../../sysutils/lsof

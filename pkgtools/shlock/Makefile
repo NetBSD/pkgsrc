@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/06/02 01:17:33 jschauma Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/17 22:52:19 grant Exp $
 #
 
 DISTNAME=	shlock-20020114
@@ -7,7 +7,7 @@ CATEGORIES=	pkgtools sysutils
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 #HOMEPAGE=
 COMMENT=	shell utility to perform dot-locking
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2003/07/13 13:53:09 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2003/07/17 22:52:34 grant Exp $
 #
 
 DISTNAME=		libgnomeprintui-2.2.1.2
@@ -7,7 +7,7 @@ CATEGORIES=		print gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libgnomeprintui/2.2/}
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		jmmv@netbsd.org
+MAINTAINER=		jmmv@NetBSD.org
 HOMEPAGE=		http://www.levien.com/gnome/print-arch.html
 COMMENT=		Graphical library for the GNOME2 Printing Architecture
 

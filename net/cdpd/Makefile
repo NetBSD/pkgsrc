@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2002/12/23 16:23:59 cjep Exp $
+# $NetBSD: Makefile,v 1.3 2003/07/17 22:51:02 grant Exp $
 #
 
 DISTNAME=	cdpd-1.0.1
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.lexa.ru/pub/domestic/snar/
 
-MAINTAINER=	explorer@netbsd.org
+MAINTAINER=	explorer@NetBSD.org
 COMMENT=	Simple daemon to send Cisco Discovery Protocol packets
 
 GNU_CONFIGURE=	YES

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2003/07/09 20:33:07 grant Exp $
+# $NetBSD: Makefile,v 1.27 2003/07/17 22:51:28 grant Exp $
 #
 
 DISTNAME=	nmap-3.30
@@ -6,7 +6,7 @@ CATEGORIES=	net security
 MASTER_SITES=	http://www.insecure.org/nmap/dist/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	salo@netbsd.org
+MAINTAINER=	salo@NetBSD.org
 HOMEPAGE=	http://www.insecure.org/nmap/
 COMMENT=	Network/port scanner with OS detection
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2003/04/16 15:51:22 salo Exp $
+# $NetBSD: Makefile.common,v 1.10 2003/07/17 22:51:52 grant Exp $
 #
 
 DISTNAME=	snort-2.0.0
@@ -7,7 +7,7 @@ MASTER_SITES=	http://www.snort.org/dl/				\
 		ftp://the.wiretapped.net/pub/security/network-intrusion-detection/snort/ \
 		ftp://gd.tuwien.ac.at/infosys/security/snort/dl/
 
-MAINTAINER=	salo@netbsd.org
+MAINTAINER=	salo@NetBSD.org
 HOMEPAGE=	http://www.snort.org/
 
 USE_PKGINSTALL=	YES

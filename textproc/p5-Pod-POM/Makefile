@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/06/02 01:16:34 jschauma Exp $
+# $NetBSD: Makefile,v 1.7 2003/07/17 22:54:34 grant Exp $
 #
 
 DISTNAME=       Pod-POM-0.14
@@ -7,7 +7,7 @@ SVR4_PKGNAME=	p5pod
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Pod/}
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.kfs.org/~abw/
 COMMENT=	p5 module to format POD into an object format, hence POM
 

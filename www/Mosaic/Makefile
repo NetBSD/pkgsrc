@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2003/06/02 01:16:11 jschauma Exp $
+# $NetBSD: Makefile,v 1.38 2003/07/17 22:55:19 grant Exp $
 # FreeBSD Id: Makefile,v 1.15 1998/05/27 08:44:56 dburr Exp
 #
 
@@ -9,7 +9,7 @@ WRKSRC=			${WRKDIR}/Mosaic-src
 CATEGORIES=		www
 MASTER_SITES=		ftp://ftp.ncsa.uiuc.edu/Web/Mosaic/Unix/source/
 
-MAINTAINER=		tech-pkg@netbsd.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.ncsa.uiuc.edu/SDG/Software/Mosaic/
 COMMENT=		World Wide Web browser
 

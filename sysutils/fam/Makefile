@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/06/02 01:16:56 jschauma Exp $
+# $NetBSD: Makefile,v 1.7 2003/07/17 22:53:33 grant Exp $
 #
 
 DISTNAME=		fam-2.6.9
@@ -8,7 +8,7 @@ MASTER_SITES=		ftp://oss.sgi.com/projects/fam/download/stable/	\
 			ftp://ftp.tuwien.ac.at/opsys/linux/gentoo/distfiles/ \
 			http://gd.tuwien.ac.at/opsys/linux/gentoo/distfiles/
 
-MAINTAINER=		tech-pkg@netbsd.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://oss.sgi.com/projects/fam/
 COMMENT=		File Alteration Monitor
 

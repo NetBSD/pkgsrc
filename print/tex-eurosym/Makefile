@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/06/02 01:17:26 jschauma Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/17 22:52:42 grant Exp $
 #
 
 DISTNAME=	eurosym-1.0
@@ -8,7 +8,7 @@ WRKSRC=		${WRKDIR}/eurosym
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	ftp://ftp.univie.ac.at/packages/tex/fonts/eurosym/
 COMMENT=	Euro symbols for LaTeX
 

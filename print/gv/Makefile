@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2003/07/17 20:51:14 jmmv Exp $
+# $NetBSD: Makefile,v 1.40 2003/07/17 22:52:29 grant Exp $
 # FreeBSD Id: Makefile,v 1.16 1997/07/13 18:49:29 max Exp
 #
 
@@ -7,7 +7,7 @@ PKGREVISION=	3
 CATEGORIES=	print
 MASTER_SITES=	ftp://ftpthep.physik.uni-mainz.de/pub/gv/unix/
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://wwwthep.physik.uni-mainz.de/~plass/gv/
 COMMENT=	PostScript and PDF previewer
 

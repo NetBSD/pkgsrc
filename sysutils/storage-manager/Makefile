@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/04/10 20:10:20 grant Exp $
+# $NetBSD: Makefile,v 1.11 2003/07/17 22:53:52 grant Exp $
 
 DISTNAME=		sm_linux_v314_install
 PKGNAME=		storage-manager-3.14
@@ -7,7 +7,7 @@ CATEGORIES=		sysutils
 MASTER_SITES=		# empty
 EXTRACT_SUFX=		.rpm
 
-MAINTAINER=		ad@netbsd.org
+MAINTAINER=		ad@NetBSD.org
 HOMEPAGE=		http://opensource.adaptec.com/
 COMMENT=		Adaptec Storage Management software
 

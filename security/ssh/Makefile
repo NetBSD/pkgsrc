@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.105 2003/06/02 01:17:03 jschauma Exp $
+# $NetBSD: Makefile,v 1.106 2003/07/17 22:53:16 grant Exp $
 # FreeBSD Id: Makefile,v 1.47 1997/11/10 22:04:42 dima Exp
 #
 
@@ -14,7 +14,7 @@ MASTER_SITES=		ftp://ftp.ssh.com/pub/ssh/old/ \
 			ftp://ftp.cert.dfn.de/pub/tools/net/ssh/
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX}
 
-MAINTAINER=		tech-pkg@netbsd.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.cs.hut.fi/ssh/
 COMMENT=		Secure shell client and server (remote login program)
 

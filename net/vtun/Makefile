@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.19 2003/07/12 17:26:15 taca Exp $
+# $NetBSD: Makefile,v 1.20 2003/07/17 22:52:01 grant Exp $
 
 DISTNAME=	vtun-2.6
 WRKSRC=		${WRKDIR}/vtun
 CATEGORIES=	net
 MASTER_SITES=	http://vtun.sourceforge.net/
 
-MAINTAINER=	hubertf@netbsd.org
+MAINTAINER=	hubertf@NetBSD.org
 HOMEPAGE=	http://vtun.sourceforge.net/
 COMMENT=	Virtual Tunnels over TCP/IP networks with traffic shaping
 

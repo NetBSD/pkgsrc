@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/06/02 01:15:32 jschauma Exp $
+# $NetBSD: Makefile,v 1.7 2003/07/17 22:57:03 grant Exp $
 
 DISTNAME=	xscribble
 PKGNAME=	xscribble-20000616
@@ -6,7 +6,7 @@ CATEGORIES=	x11
 MASTER_SITES=	ftp://ftp.handhelds.org/pub/apps/src/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.handhelds.org/projects/xscribble.html
 COMMENT=	Handwriting recognition (like graffiti)
 

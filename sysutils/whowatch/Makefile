@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/07/13 13:53:24 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2003/07/17 22:53:57 grant Exp $
 #
 
 DISTNAME=	whowatch-1.4
@@ -7,7 +7,7 @@ CATEGORIES=	sysutils
 MASTER_SITES=	http://wizard.ae.krakow.pl/~mike/download/ \
 		http://janek.ae.krakow.pl/~suszyckm/download/
 
-MAINTAINER=	rh@netbsd.org
+MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://wizard.ae.krakow.pl/~mike/\#whowatch
 COMMENT=	interactive who-like program displaying real-time user information
 

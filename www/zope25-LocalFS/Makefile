@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/06/02 01:15:54 jschauma Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/17 22:56:13 grant Exp $
 
 DISTNAME=	LocalFS-1-0-0
 PKGREVISION=	1
@@ -7,7 +7,7 @@ CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=localfs/}
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.zope.org/Members/jfarr/Products/LocalFS
 COMMENT=	local file access for zope
 

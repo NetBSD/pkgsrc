@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2003/07/13 13:53:07 wiz Exp $
+# $NetBSD: Makefile,v 1.58 2003/07/17 22:52:29 grant Exp $
 #
 
 DISTNAME=		gnome-print-0.36
@@ -6,7 +6,7 @@ PKGREVISION=		3
 CATEGORIES=		print gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-print/0.36/}
 
-MAINTAINER=		rh@netbsd.org
+MAINTAINER=		rh@NetBSD.org
 HOMEPAGE=		http://www.levien.com/gnome/print-arch.html
 COMMENT=		Prototype implementation of the Gnome Printing Architecture
 

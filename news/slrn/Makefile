@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2003/07/13 13:53:04 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2003/07/17 22:52:10 grant Exp $
 #
 
 DISTNAME=	slrn-0.9.7.4
@@ -15,7 +15,7 @@ PATCHFILES=	slrn-0.9.7.4-po.diff \
 		slrn-0.9.7.4-strcasecmp.diff
 PATCH_DIST_STRIP=      -p1
 
-MAINTAINER=	mjl@netbsd.org
+MAINTAINER=	mjl@NetBSD.org
 HOMEPAGE=	http://slrn.sourceforge.net/
 COMMENT=	Highly customizable threaded newsreader
 

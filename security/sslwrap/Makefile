@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2002/08/25 21:50:44 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2003/07/17 22:53:18 grant Exp $
 #
 
 DISTNAME=	${PKGNAME:S/-//}
@@ -6,7 +6,7 @@ PKGNAME=	sslwrap-206
 CATEGORIES=	security net
 MASTER_SITES=	http://www.rickk.com/sslwrap/
 
-MAINTAINER=	rh@netbsd.org
+MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://www.rickk.com/sslwrap/
 COMMENT=	simple ssl wrapper
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/06/02 01:16:19 jschauma Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/17 22:55:05 grant Exp $
 #
 
 DISTNAME=       pclock0.7
@@ -8,7 +8,7 @@ CATEGORIES=	time
 MASTER_SITES=   http://members.optushome.com.au/starters/pclock/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://members.optushome.com.au/starters/pclock/
 COMMENT=	Time management software
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/07/13 13:53:45 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2003/07/17 22:55:27 grant Exp $
 #
 
 DISTNAME=	mod_ruby-${VERSION}
@@ -7,7 +7,7 @@ PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://www.modruby.net/archive/
 
-MAINTAINER=	taca@netbsd.org
+MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	http://www.modruby.net/
 COMMENT=	Apache module that embeds Ruby interpreter within
 

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2002/10/09 17:56:50 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/17 22:50:58 grant Exp $
 #
 
 DISTNAME=	adns-1.0
 CATEGORIES=	net
 MASTER_SITES=	http://www.chiark.greenend.org.uk/~ian/adns/ftp/
 
-MAINTAINER=	lukem@netbsd.org
+MAINTAINER=	lukem@NetBSD.org
 HOMEPAGE=	http://www.chiark.greenend.org.uk/~ian/adns/
 COMMENT=	Asynchronous-capable DNS client library and utilities
 

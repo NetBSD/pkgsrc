@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2003/06/02 01:16:31 jschauma Exp $
+# $NetBSD: Makefile,v 1.12 2003/07/17 22:54:39 grant Exp $
 #
 
 DISTNAME=	XML-DOM-1.42
@@ -7,7 +7,7 @@ SVR4_PKGNAME=	p5xdo
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=XML/}
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 COMMENT=	Extend XML::Parser to build DOM Level 1 compliant data structure
 
 DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww

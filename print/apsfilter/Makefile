@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/06/02 01:17:31 jschauma Exp $
+# $NetBSD: Makefile,v 1.13 2003/07/17 22:52:23 grant Exp $
 #
 
 DISTNAME=	apsfilter-7.2.5
@@ -6,7 +6,7 @@ WRKSRC=		${WRKDIR}/apsfilter
 CATEGORIES=	print
 MASTER_SITES=	http://www.apsfilter.org/download/
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.apsfilter.org/
 COMMENT=	Number one magic filter for printing under Unix environment
 

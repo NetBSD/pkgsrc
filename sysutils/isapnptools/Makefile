@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2003/06/02 01:16:55 jschauma Exp $
+# $NetBSD: Makefile,v 1.4 2003/07/17 22:53:37 grant Exp $
 #
 
 DISTNAME=	isapnptools-1.26
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SUNSITE:=system/hardware/} \
 		ftp://ftp.demon.co.uk/pub/unix/linux/utils/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.roestock.demon.co.uk
 COMMENT=	manually query and configure isapnp devices
 

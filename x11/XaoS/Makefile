@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2002/08/25 21:52:26 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2003/07/17 22:56:20 grant Exp $
 #
 
 DISTNAME=		XaoS-3.0
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=xaos/}
 
-MAINTAINER=		atatat@netbsd.org
+MAINTAINER=		atatat@NetBSD.org
 HOMEPAGE=		http://xaos.theory.org/
 COMMENT=		Zoomable fractal rendering doodad
 

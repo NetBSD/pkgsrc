@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2003/06/18 22:41:38 seb Exp $
+# $NetBSD: Makefile,v 1.18 2003/07/17 22:53:58 grant Exp $
 
 DISTNAME=	xbattbar_1.4.2
 PKGNAME=	${DISTNAME:S/_/-/}
@@ -7,7 +7,7 @@ WRKSRC=		${WRKDIR}/${DISTNAME:S/_/-/}
 CATEGORIES=	sysutils x11
 MASTER_SITES=	http://iplab.aist-nara.ac.jp/member/suguru/
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://iplab.aist-nara.ac.jp/member/suguru/xbattbar.html
 COMMENT=	X11 battery graph for laptops
 
