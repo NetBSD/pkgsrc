@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2000/03/27 16:04:13 itojun Exp $
+# $NetBSD: Makefile,v 1.2 2000/04/12 15:09:50 itojun Exp $
 #
 
 DISTNAME=		isakmpd-000220
@@ -11,6 +11,11 @@ PATCHFILES=		isakmpd-20000220-20000328a.diff.gz
 PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=		itojun@kame.net
+
+# this is not compatible with cross build - there's no other way
+.if !exists(/usr/include/netinet6/ipsec.h)
+IGNORE+=		"requires ipsec-ready NetBSD"
+.endif
 
 DEPENDS+=		openssl-0.9.4:../../security/openssl
 DEPENDS+=		gmp-*:../../devel/gmp
