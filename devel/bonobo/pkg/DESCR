@@ -1,0 +1,14 @@
+  Bonobo is a set of language and system independant CORBA interfaces
+for creating reusable components (controls) and creating compound
+documents.
+
+  The Bonobo distribution includes a Gtk+ based implementation of the
+Bonobo interfaces, enabling developers to create reusable components
+and applications that can be used to form more complex documents.
+
+* Licensing
+
+  Bonobo libraries are released under the terms of the GNU Lesser
+General Public License (GNU LGPL).  While components and programs
+included with this release are licensed under the terms of the GNU
+General Public License (GNU GPL).
