@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1605 2005/03/29 08:17:42 garbled Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1606 2005/03/31 21:02:28 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -1405,7 +1405,12 @@ batch-check-distfiles:
 # Please do not modify the leading "@" here
 .PHONY: check-vulnerable
 check-vulnerable:
-	@if [ -f ${PKGVULNDIR}/pkg-vulnerabilities ]; then		\
+	@if [ ! -z "${PKG_SYSCONFDIR.audit-packages}" -a -f ${PKG_SYSCONFDIR.audit-packages}/audit-packages.conf ]; then \
+		. ${PKG_SYSCONFDIR.audit-packages}/audit-packages.conf; \
+	elif [ ! -z "${PKG_SYSCONFDIR}" -a -f ${PKG_SYSCONFDIR}/audit-packages.conf ]; then \
+		. ${PKG_SYSCONFDIR}/audit-packages.conf;		\
+	fi;								\
+	if [ -f $${PKGVULNDIR}/pkg-vulnerabilities ]; then		\
 		${SETENV} PKGNAME="${PKGNAME}"				\
 			  PKGBASE="${PKGBASE}"				\
 			${AWK} '/^$$/ { next }				\
