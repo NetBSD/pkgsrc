@@ -1,4 +1,4 @@
-# $NetBSD: Darwin.mk,v 1.5 2004/12/20 13:09:04 grant Exp $
+# $NetBSD: Darwin.mk,v 1.6 2005/01/25 18:15:58 tv Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -153,9 +153,7 @@ LOCALBASE?=		${DESTDIR}/usr/pkg
 
 # check for maximum command line length and set it in configure's environment,
 # to avoid a test required by the libtool script that takes forever.
-.if defined(GNU_CONFIGURE) && defined(USE_LIBTOOL)
-_OPSYS_MAX_CMDLEN!=	/usr/sbin/sysctl -n kern.argmax
-.endif
+_OPSYS_MAX_CMDLEN_CMD=	/usr/sbin/sysctl -n kern.argmax
 
 # Darwin 7.7.x has poll() in libc, but no poll.h. Try to help GNU
 # configure packages that break because of this by pretending that
