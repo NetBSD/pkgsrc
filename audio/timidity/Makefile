@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2004/04/14 14:41:34 adam Exp $
+# $NetBSD: Makefile,v 1.47 2004/04/18 18:41:51 ben Exp $
 #
 
 DISTNAME=	TiMidity++-2.13.0
@@ -15,10 +15,20 @@ CONFLICTS=	kdemultimedia-[0-9]*
 
 USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--enable-vt100 --enable-audio=sun,vorbis
+CONFIGURE_ARGS+=	--enable-vt100
 CONFIGURE_ARGS+=	--enable-gtk --enable-wrd --enable-xaw --enable-ncurses
 CONFIGURE_ARGS+=	--with-ogg-prefix="${BUILDLINK_DIR}/include"
 CONFIGURE_ARGS+=	--with-vorbis-prefix="${BUILDLINK_DIR}/include"
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD" || ${OPSYS} == "SunOS"
+CONFIGURE_ARGS+=	--enable-audio=sun,vorbis
+.endif
+
+.if ${OPSYS} == "Linux"
+CONFIGURE_ARGS+=	--enable-audio=oss,vorbis
+.endif
 
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
