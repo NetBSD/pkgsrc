@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5734 2004/04/25 13:22:36 tron Exp $
+$NetBSD: CHANGES,v 1.5735 2004/04/25 15:49:57 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2239,3 +2239,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added mstream-0.2 [kim 2004-04-24]
 	Updated gdk-pixbuf to 0.22.0nb2 [xtraeme 2004-04-25]
 	Updated p5-HTML-SimpleParse to 0.12 [minskim 2004-04-25]
+	Updated osh to 040216 [minskim 2004-04-25]
