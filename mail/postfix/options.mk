@@ -1,36 +1,6 @@
-# $NetBSD: options.mk,v 1.10 2004/10/29 07:07:44 xtraeme Exp $
+# $NetBSD: options.mk,v 1.11 2004/11/17 19:34:31 xtraeme Exp $
 
 # Global and legacy options
-#
-# XXX Support for the following variables will be removed after the
-# XXX pkgsrc-2004Q3 branch is released:
-# XXX
-# XXX	POSTFIX_USE_INET6	POSTFIX_USE_TLS
-# XXX	POSTFIX_USE_PCRE	POSTFIX_USE_MYSQL
-# XXX	POSTFIX_USE_PGSQL	POSTFIX_OPTIONS
-# XXX	POSTFIX_USE_SASL_AUTH
-#
-.if defined(POSTFIX_USE_INET6) && !empty(POSTFIX_USE_INET6:M[yY][eE][sS])
-PKG_DEFAULT_OPTIONS+=	inet6
-.endif
-.if defined(POSTFIX_USE_TLS) && !empty(POSTFIX_USE_TLS:M[yY][eE][sS])
-PKG_DEFAULT_OPTIONS+=	tls
-.endif
-.if defined(POSTFIX_USE_PCRE) && !empty(POSTFIX_USE_PCRE:M[yY][eE][sS])
-PKG_DEFAULT_OPTIONS+=	pcre
-.endif
-.if defined(POSTFIX_USE_MYSQL) && !empty(POSTFIX_USE_MYSQL:M[yY][eE][sS])
-PKG_DEFAULT_OPTIONS+=	mysql
-.endif
-.if defined(POSTFIX_USE_PGSQL) && !empty(POSTFIX_USE_PGSQL:M[yY][eE][sS])
-PKG_DEFAULT_OPTIONS+=	pgsql
-.endif
-.if defined(POSTFIX_USE_SASL_AUTH) && defined(POSTFIX_USE_SASL_AUTH)
-PKG_DEFAULT_OPTIONS+=	sasl
-.endif
-.if defined(POSTFIX_OPTIONS)
-PKG_DEFAULT_OPTIONS=	${POSTFIX_OPTIONS}
-.endif
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.postfix
 PKG_SUPPORTED_OPTIONS=	inet6 ldap mysql mysql4 pcre pgsql sasl tls
