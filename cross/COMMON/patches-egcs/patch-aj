@@ -1,3 +1,5 @@
+$NetBSD: patch-aj,v 1.1 2000/09/30 19:04:24 fredb Exp $
+
 --- gcc/cpphash.c.orig	Thu Jun  1 01:38:11 2000
 +++ gcc/cpphash.c	Thu Jun  1 01:54:57 2000
 @@ -88,7 +88,7 @@
