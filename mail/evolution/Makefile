@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/09/29 17:43:55 rh Exp $
+# $NetBSD: Makefile,v 1.9 2001/10/05 22:47:33 tron Exp $
 
 DISTNAME=		evolution-0.14
 CATEGORIES=		mail time gnome
@@ -44,4 +44,5 @@ pre-configure:
 
 .include "../../security/openssl/buildlink.mk"
 .include "../../databases/db3/buildlink.mk"
+.include "../../devel/bonobo/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
