@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.10 2003/01/23 01:25:11 dmcmahill Exp $
+$NetBSD: patch-ab,v 1.11 2003/07/28 14:38:06 adam Exp $
 
---- src/osdep/unix/Makefile.orig	Wed Dec 11 12:15:02 2002
-+++ src/osdep/unix/Makefile	Wed Dec 11 12:18:05 2002
+--- src/osdep/unix/Makefile.orig	2003-07-28 14:34:04.000000000 +0200
++++ src/osdep/unix/Makefile	2003-07-28 14:34:38.000000000 +0200
 @@ -28,8 +28,6 @@
  
  # Extended flags needed for SSL.  You may need to modify.
@@ -61,7 +61,7 @@ $NetBSD: patch-ab,v 1.10 2003/01/23 01:25:11 dmcmahill Exp $
  	 BASELDFLAGS="-lcrypt"
  
  nec:	# NEC UX
-@@ -876,7 +874,7 @@
+@@ -877,7 +875,7 @@
  	 -DACTIVEFILE=\"$(ACTIVEFILE)\" -DNEWSSPOOL=\"$(NEWSSPOOL)\" \
  	 -DRSHPATH=\"$(RSHPATH)\" -DLOCKPGM=\"$(LOCKPGM)\" > OSCFLAGS
  	echo $(BASELDFLAGS) $(EXTRALDFLAGS) > LDFLAGS
