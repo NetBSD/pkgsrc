@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2000/10/28 02:35:52 itojun Exp $
+# $NetBSD: Makefile,v 1.10 2000/12/17 22:21:44 jlam Exp $
 
 DISTNAME=	thttpd-2.20b
 CATEGORIES=	www
@@ -14,6 +14,9 @@ GNU_CONFIGURE=	# defined
 
 # Note: this pkg auto-detects IPv6 without regarding USE_INET6.
 BUILD_DEFS+=	USE_INET6
+
+DEINSTALL_FILE=	${WRKDIR}/DEINSTALL
+INSTALL_FILE=	${WRKDIR}/INSTALL
 
 pre-configure:
 	${MV} ${WRKSRC}/extras/htpasswd.1 ${WRKSRC}/extras/thtpasswd.1
@@ -32,6 +35,14 @@ post-build:
 
 pre-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/thttpd
+	${SED}	-e "s,@CAT@,${CAT},g" \
+		-e "s,@RM@,${RM},g" \
+		< ${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
+	${SED}	-e "s,@CAT@,${CAT},g" \
+		-e "s,@CHMOD@,${CHMOD},g" \
+		-e "s,@CP@,${CP},g" \
+		< ${PKGDIR}/INSTALL > ${INSTALL_FILE}
+	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} PRE-INSTALL
 
 post-install:
 	${INSTALL_DATA} ${WRKDIR}/thttpd.conf ${PREFIX}/share/examples
