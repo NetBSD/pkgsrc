@@ -1,3 +1,4 @@
+$NetBSD: patch-aa,v 1.2 1999/12/29 01:47:59 wiz Exp $
 --- configure.in.orig	Mon Apr 12 22:40:51 1999
 +++ configure.in	Mon Apr 12 22:40:54 1999
 @@ -304,29 +304,29 @@
