@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5992 2004/05/20 08:42:30 adam Exp $
+$NetBSD: CHANGES,v 1.5993 2004/05/20 11:20:25 hubertf Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2601,3 +2601,6 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gnuls to 5.2.1 [jmmv 2004-05-19]
 	Updated tcsh to 6.13.00 [kim 2004-05-19]
 	Updated netpbm to 10.18.13 [adam 2004-05-20]
+	Updated swi-prolog to 5.2.13 [hubertf 2004-05-20]
+	Added swi-prolog-lite-5.2.13 [hubertf 2004-05-20]
+	Added swi-prolog-packages-5.2.13 [hubertf 2004-05-20]
