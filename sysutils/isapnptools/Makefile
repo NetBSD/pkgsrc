@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/07/23 12:07:45 agc Exp $
+# $NetBSD: Makefile,v 1.2 2002/07/23 14:33:24 agc Exp $
 #
 
 DISTNAME=	isapnptools-1.26
@@ -11,6 +11,8 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.roestock.demon.co.uk
 COMMENT=	manually query and configure isapnp devices
+
+ONLY_FOR_PLATFORM=	NetBSD-*-i386
 
 USE_GMAKE=	YES
 GNU_CONFIGURE=	YES
