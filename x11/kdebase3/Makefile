@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.58 2004/10/03 00:18:36 tv Exp $
+# $NetBSD: Makefile,v 1.59 2004/10/13 11:54:11 markd Exp $
 
 DISTNAME=	kdebase-${_KDE_VERSION}
-PKGREVISION=	1
 CATEGORIES=	x11
 COMMENT=	Base modules for the KDE 3 integrated X11 desktop
 
@@ -59,6 +58,10 @@ CONFIGURE_ENV+=		RUN_KAPPFINDER=no
 
 PLIST_SRC+=		${PKGDIR}/PLIST
 
+PKG_OPTIONS_VAR=	PKG_OPTIONS.kdebase
+PKG_SUPPORTED_OPTIONS=	samba
+.include "../../mk/bsd.options.mk"
+
 .if exists(${X11BASE}/include/X11/extensions/Xrandr.h)
 HAVE_RANDR!=		${GREP} XRRSetScreenConfigAndRateX  ${X11BASE}/include/X11/extensions/Xrandr.h; ${ECHO}
 .endif
@@ -72,6 +75,12 @@ PLIST_SUBST+=		HAVE_RANDR="@comment "
 PLIST_SUBST+=		HAVE_XCURSOR=""
 .else
 PLIST_SUBST+=		HAVE_XCURSOR="@comment "
+.endif
+
+.if !empty(PKG_OPTIONS:Msamba)
+.include "../../net/samba/buildlink3.mk"
+LIBS+=			-L${BUILDLINK_PREFIX.samba}/lib/samba -Wl,-R${BUILDLINK_PREFIX.samba}/lib/samba
+PLIST_SUBST+=		HAVE_SMB=""
 .endif
 
 ICONDIR=		share/kde/icons
