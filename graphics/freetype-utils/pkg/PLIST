@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/05/01 06:03:37 jlam Exp $
+bin/ftdump
+bin/fterror
+bin/ftlint
+bin/ftstring
+bin/ftstrpnm
+bin/fttimer
+bin/ftview
+bin/ftzoom
