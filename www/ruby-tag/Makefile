@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/11/28 05:46:43 taca Exp $
+# $NetBSD: Makefile,v 1.9 2004/12/01 15:38:59 taca Exp $
 
 DISTNAME=	tag104
 PKGNAME=	${RUBY_PKGPREFIX}-tag-1.0.4
@@ -15,6 +15,7 @@ COMMENT=	Ruby Simple HTML Tag library for CGI
 BUILD_DEPENDS+=	gtar-base-[0-9]*:../../archivers/gtar-base
 GTAR=		${PREFIX}/bin/${GNU_PROGRAM_PREFIX}tar
 
+USE_BUILDLINK3=	yes
 WRKSRC=		${WRKDIR}
 NO_CONFIGURE=	# defined
 
