@@ -1,29 +1,17 @@
-$NetBSD: patch-ae,v 1.1 2004/03/26 01:34:08 kristerw Exp $
+$NetBSD: patch-ae,v 1.1.1.1 2005/01/25 15:59:27 xtraeme Exp $
 
---- physical.C.orig	Fri Mar 26 02:15:18 2004
-+++ physical.C	Fri Mar 26 02:16:06 2004
-@@ -22,6 +22,7 @@
-     hardts@alum.mit.edu
-     http://graphics.lcs.mit.edu/~hardts/xevil.html
- */
-+using namespace std;
+--- cmn/role.cpp.orig	2000-01-19 12:54:34.000000000 -0800
++++ cmn/role.cpp	2003-11-22 10:55:47.000000000 -0800
+@@ -29,9 +29,10 @@
  
- #ifndef NO_PRAGMAS
- #pragma implementation "physical.h"
-@@ -29,13 +30,14 @@
+ #include "stdafx.h"
  
- 
- // Include Files
 -#include <iostream.h>
 +#include <iostream>
- 
- extern "C" {
- #include <string.h>
- }
- 
++using namespace std;
+ #if X11
 -#include <strstream.h>
 +#include <strstream>
-+using std::ostrstream;
- 
- #include "utils.h"
- #include "coord.h"
+ #include <time.h>
+ #endif
+ #if WIN32
