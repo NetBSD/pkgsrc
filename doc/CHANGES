@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8094 2004/11/28 07:04:34 taca Exp $
+$NetBSD: CHANGES,v 1.8095 2004/11/28 08:02:52 taca Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5568,3 +5568,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated ruby-drb to 2.0.4 [taca 2004-11-28]
 	Added ruby16-borges-0.2.0 [taca 2004-11-28]
 	Removed ruby-base [taca 2004-11-28]
+	Removed ruby-mutexm [taca 2004-11-28]
+	Removed ruby-acl [taca 2004-11-28]
