@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.13 2004/02/16 11:33:16 wiz Exp $
+# $NetBSD: Makefile.common,v 1.14 2004/05/15 13:22:27 grant Exp $
 #
 
 DISTNAME=		# see Makefile.${OPSYS}.${ARCH}
@@ -78,25 +78,19 @@ DEPENDS+=	suse_compat>=7.3:../../emulators/${SUSE_DIR_PREFIX}_compat
 DEPENDS+=	suse_x11>=7.3:../../emulators/${SUSE_DIR_PREFIX}_x11
 DEPENDS+=	suse_gtk>=7.3:../../emulators/${SUSE_DIR_PREFIX}_gtk
 
-# NetBSD native builds are built with gtk-1.2.10nb5.
 .  elif ${OPSYS} == "NetBSD" && ${MOZ_PLATFORM} == "netbsd"
-DEPENDS+=	gtk+>=1.2.10nb5:../../x11/gtk
-
 # we need libstdc++.so.4 on -current.
 .    if !exists(/usr/lib/libstdc++.so.4)
 DEPENDS+=	compat16>=1.6.0:../../emulators/compat16
 _COMPAT16_LIBSTDCXX=	YES
 .    endif
-.  else
-
+.  endif
+.  if defined(MOZ_GTK2) && ${MOZ_GTK2} == "YES"
 # gtk2 builds.
-.    if defined(MOZ_GTK2) && ${MOZ_GTK2} == "YES"
 DEPENDS+=	gtk2+>=2.2:../../x11/gtk2
-.    else
-
+.  else
 # default to at least gtk-1.2.
 DEPENDS+=	gtk+>=1.2:../../x11/gtk
-.    endif
 .  endif
 
 .endif	# defined(MOZ_PLATFORM)
