@@ -1,0 +1,7 @@
+#!/bin/sh
+if [ "$2" != "POST-INSTALL" ]; then exit 0; fi
+(grep -v ^# /etc/services | grep 'canna.*5680' >/dev/null) ||	\
+	(echo "" >> /etc/services;			\
+	 echo "# canna package" >> /etc/services;	\
+	 echo "canna		5680/tcp" >> /etc/services;	\
+	 )
