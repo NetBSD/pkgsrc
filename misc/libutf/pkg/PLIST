@@ -1,0 +1,6 @@
+include/utf.h
+include/ure.h
+lib/libutf.a
+etc/langcoll.utf
+man/man3/utf.3.gz
+man/man3/ure.3.gz
