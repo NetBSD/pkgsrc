@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.977 2003/01/02 17:22:33 grant Exp $
+$NetBSD: CHANGES,v 1.978 2003/01/02 18:47:19 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -38,3 +38,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added p5-Test-Inline-0.15 [mjl 2002-01-02]
 	Updated p5-DBIx-SearchBuilder to 0.76 [mjl 2002-01-02]
 	Updated docbook-xsl to 1.58.1nb1 [grant 2002-01-02]
+	Updated jdbc-postgresql to 7.3.1 [jlam 2002-01-02]
