@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/01/20 12:07:41 agc Exp $
+# $NetBSD: Makefile,v 1.14 2004/02/21 06:19:12 snj Exp $
 
 DISTNAME=	festlex_CMU
 PKGNAME=	festlex-cmu-1.4.0
@@ -8,7 +8,7 @@ MASTER_SITES=	ftp://ftp.cstr.ed.ac.uk/pub/festival/1.4.1/ \
 
 MAINTAINER=	proff@iq.org
 HOMEPAGE=	http://www.cstr.ed.ac.uk/projects/festival.html
-COMMENT=	CMU American English pronounciation dictionary for Festival
+COMMENT=	CMU American English pronunciation dictionary for Festival
 
 DEPENDS+=	festival>=1.4.0:../festival
 
