@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 1999/09/23 17:42:59 tsarna Exp $
+# $NetBSD: Makefile,v 1.10 2000/02/05 14:12:23 wiz Exp $
 #
 
 DISTNAME=	Zope-2.0.1-src
@@ -25,17 +25,17 @@ do-configure:
 do-install:
 	${CAT} ${PKGDIR}/PLIST.pre >${PLIST_SRC}
 	${MKDIR} ${ZOPEDIR}
-	(cd ${WRKSRC}; pax -r -w -s'/.*\.[cho]$$//' . ${ZOPEDIR})
+	(cd ${WRKSRC}; ${PAX} -r -w -s'/.*\.[cho]$$//' . ${ZOPEDIR})
 	${PREFIX}/bin/python \
 		${PREFIX}/lib/python1.5/compileall.py ${ZOPEDIR}
-	chmod -R a+rX ${ZOPEDIR}
-	(cd ${PREFIX}; find lib/zope \( -type f -o -type l \) -print >>${PLIST_SRC})
-	(cd ${PREFIX}; find -d lib/zope -type d -print | \
+	${CHMOD} -R a+rX ${ZOPEDIR}
+	(cd ${PREFIX}; ${FIND} lib/zope \( -type f -o -type l \) -print >>${PLIST_SRC})
+	(cd ${PREFIX}; ${FIND} -d lib/zope -type d -print | \
 	${SED} -e "s/^/@dirrm /" >>${PLIST_SRC})
 	${SED} -e "s,/usr/pkg,${PREFIX}," \
 		<${FILESDIR}/zope-install.py >${PREFIX}/sbin/zope-install
 	${SED} -e "s,/usr/pkg,${PREFIX}," \
 		<${FILESDIR}/zope-shutdown.py >${PREFIX}/sbin/zope-shutdown
-	chmod 755 ${PREFIX}/sbin/zope-install ${PREFIX}/sbin/zope-shutdown
+	${CHMOD} 755 ${PREFIX}/sbin/zope-install ${PREFIX}/sbin/zope-shutdown
 
 .include "../../mk/bsd.pkg.mk"
