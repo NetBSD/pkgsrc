@@ -1,9 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/02/26 03:58:51 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/04/26 17:28:58 xtraeme Exp $
 man/man8/mklivecd.8
 sbin/mklivecd
 share/mklivecd/KERN-LIVECD
-share/mklivecd/Makefile.bootfloppy
-share/mklivecd/bootkern.mk
 share/mklivecd/mfs_rcd
 share/mklivecd/personal_config
 @dirrm share/mklivecd
