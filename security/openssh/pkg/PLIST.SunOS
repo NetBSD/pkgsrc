@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST.SunOS,v 1.1 2001/01/10 16:05:53 tron Exp $
+bin/scp
+bin/slogin
+bin/ssh
+bin/ssh-add
+bin/ssh-agent
+bin/ssh-keygen
+etc/rc.d/sshd
+libexec/sftp-server
+man/man1/scp.1
+man/man1/slogin.1
+man/man1/ssh-add.1
+man/man1/ssh-agent.1
+man/man1/ssh-keygen.1
+man/man1/ssh.1
+man/man8/sftp-server.8
+man/man8/sshd.8
+sbin/sshd
+share/examples/ssh/ssh_config
+share/examples/ssh/ssh_prng_cmds
+share/examples/ssh/sshd_config
+@dirrm share/examples/ssh
