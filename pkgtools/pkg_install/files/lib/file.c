@@ -1,4 +1,4 @@
-/*	$NetBSD: file.c,v 1.3 2003/02/11 16:42:06 grant Exp $	*/
+/*	$NetBSD: file.c,v 1.4 2003/04/11 14:40:36 grant Exp $	*/
 
 #if 0
 #include <sys/cdefs.h>
@@ -6,7 +6,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: file.c,v 1.29 1997/10/08 07:47:54 charnier Exp";
 #else
-__RCSID("$NetBSD: file.c,v 1.3 2003/02/11 16:42:06 grant Exp $");
+__RCSID("$NetBSD: file.c,v 1.4 2003/04/11 14:40:36 grant Exp $");
 #endif
 #endif
 #endif
@@ -547,23 +547,23 @@ int
 unpack(const char *pkg, const char *flist)
 {
 	char    args[10] = "-";
-	char   *cp;
+	const char *decompress_cmd;
+	const char *suf;
 
-	/*
-         * Figure out by a crude heuristic whether this or not this is probably
-         * compressed.
-         */
 	if (!IS_STDIN(pkg)) {
-		cp = strrchr(pkg, '.');
-		if (cp) {
-			cp++;
-			if (strchr(cp, 'z') || strchr(cp, 'Z'))
-				strcat(args, "z");
-		}
+		suf = suffix_of(pkg);
+		if (!strcmp(suf, "tbz") || !strcmp(suf, "bz2"))
+			decompress_cmd = BZIP2_CMD " -c -d";
+		else if (!strcmp(suf, "tgz") || !strcmp(suf, "gz"))
+			decompress_cmd = GZIP_CMD " -c -d";
+		else if (!strcmp(suf, "tar"))
+			decompress_cmd = "cat";
+		else
+			errx(EXIT_FAILURE, "don't know how to decompress %s", pkg);
 	} else
-		strcat(args, "z");
-	strcat(args, "xpf");
-	if (vsystem("%s %s %s %s", TAR_FULLPATHNAME, args, pkg, flist ? flist : "")) {
+		decompress_cmd = GZIP_CMD " -c -d";
+	strcat(args, "xpf -");
+	if (vsystem("%s %s | %s %s %s", decompress_cmd, pkg, TAR_FULLPATHNAME, args, flist ? flist : "")) {
 		warnx("%s extract of %s failed!", TAR_FULLPATHNAME, pkg);
 		return 1;
 	}
