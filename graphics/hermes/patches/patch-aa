@@ -1,0 +1,18 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/07/08 17:16:39 garbled Exp $
+--- src/HermConf.h.BAK	Sat Apr 17 00:03:08 1999
++++ src/HermConf.h	Sat Apr 17 00:03:19 1999
+@@ -20,6 +20,14 @@
+ #endif
+ #endif 
+ 
++#if defined(__NetBSD__)
++#  if (BYTE_ORDER == LITTLE_ENDIAN)
++#    define __LITTLE_ENDIAN__ 1
++#  else /* BYTE_ORDER == LITTLE_ENDIAN */
++#    define __BIG_ENDIAN__ 1
++#  endif /* BYTE_ORDER == LITTLE_ENDIAN */
++#endif /* __NetBSD__ */
++
+ 
+ #ifdef __CYGWIN32__
+   #define __CYGNUS__
