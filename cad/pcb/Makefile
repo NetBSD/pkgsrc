@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2003/08/09 10:32:13 seb Exp $
+# $NetBSD: Makefile,v 1.23 2003/08/17 04:00:51 dmcmahill Exp $
 # FreeBSD Id: Makefile,v 1.19 1998/10/31 18:05:31 jseger Exp
 #
 
@@ -16,6 +16,8 @@ HOMEPAGE=	http://bach.ece.jhu.edu/~haceaton/pcb/
 COMMENT=	X11 interactive printed circuit board layout system
 
 DEPENDS+=	m4>=1.4:../../devel/m4
+
+CONFLICTS+=	pcb-current-[0-9]*
 
 USE_BUILDLINK2=	yes
 USE_PKGINSTALL=	yes
