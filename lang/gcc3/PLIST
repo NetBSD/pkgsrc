@@ -1,18 +1,3 @@
-@comment $NetBSD: PLIST,v 1.7 2003/07/04 16:11:57 seb Exp $
-@unexec ${INSTALL_INFO} --delete %D/info/cpp.info %D/info/dir
-info/cpp.info
-@exec ${INSTALL_INFO} %D/info/cpp.info %D/info/dir
-@unexec ${INSTALL_INFO} --delete %D/info/g77.info %D/info/dir
-info/g77.info
-@exec ${INSTALL_INFO} %D/info/g77.info %D/info/dir
-@unexec ${INSTALL_INFO} --delete %D/info/gcc.info %D/info/dir
-info/gcc.info
-@exec ${INSTALL_INFO} %D/info/gcc.info %D/info/dir
-@unexec ${INSTALL_INFO} --delete %D/info/gccint.info %D/info/dir
-info/gccint.info
-@exec ${INSTALL_INFO} %D/info/gccint.info %D/info/dir
-@unexec ${INSTALL_INFO} --delete %D/info/cppinternals.info %D/info/dir
-info/cppinternals.info
-@exec ${INSTALL_INFO} %D/info/cppinternals.info %D/info/dir
+@comment $NetBSD: PLIST,v 1.8 2003/07/04 16:27:27 seb Exp $
 share/examples/${DISTNAME}/mk.conf
 @dirrm share/examples/${DISTNAME}
