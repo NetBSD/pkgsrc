@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/02/16 15:25:29 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2001/03/11 16:19:46 tron Exp $
 #
 
 DISTNAME=	sj3-2.0.1.20
@@ -42,7 +42,7 @@ pre-configure:
 	 done
 
 do-configure:
-	@(cd ${WRKSRC}; xmkmf; ${MAKE} Makefiles)
+	@(cd ${WRKSRC}; ${X11BASE}/bin/xmkmf; ${MAKE} Makefiles)
 
 post-build:
 	@${ECHO} '#!/bin/sh'				 > ${STARTUP_SCRIPT_SRC}
