@@ -1,35 +1,45 @@
-# $NetBSD: Makefile,v 1.11 1999/07/01 14:19:32 mrg Exp $
+# $NetBSD: Makefile,v 1.12 1999/10/28 04:14:02 jlam Exp $
 
-DISTNAME=		magicpoint-1.05a
+DISTNAME=		magicpoint-1.06a
 CATEGORIES=		x11 graphics
 MASTER_SITES=		ftp://ftp.mew.org/pub/MagicPoint/
 
 MAINTAINER=		itojun@itojun.org
 HOMEPAGE=		http://www.Mew.org/mgp/
 
-DEPENDS=		freetype-1.1:${.CURDIR}/../../graphics/freetype
+DEPENDS=		freetype-*:../../graphics/freetype
 
-CONFLICTS=		mgp-* magicpoint-1.04a
+CONFLICTS=		mgp-*
 
 GNU_CONFIGURE=		yes
 USE_IMAKE=		yes
-CONFIGURE_ARGS=		--disable-vflib --enable-freetype-charset16
+CONFIGURE_ARGS=		--disable-vflib --enable-freetype-charset16 \
+			--enable-locale
+MAKE_ENV+=		LOCAL_LDFLAGS="${LDFLAGS}"
+
+# We need to perform the steps normally done by ``xmkmf -a'' since some
+# files need to be created before ``make depend''.
+#
+XMKMF=			xmkmf
 
 post-configure:
-	(cd ${WRKSRC}/contrib/xmindpath; env LDFLAGS="${LDFLAGS}" \
-		./configure --prefix=${PREFIX} \
-		--x-libraries=${X11BASE}/lib --x-includes=${X11BASE}/include)
-
-post-build:
-	(cd ${WRKSRC}/contrib/xmindpath; make)
+	cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ctlwords.h
+	cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} grammar.c
+	cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} scanner.c
+	cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} tokdefs.h
+	cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} Makefiles
+	cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} includes
+	cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} depend
 
 post-install:
-	(cd ${WRKSRC}/contrib/xmindpath; make install)
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mgp
+	cd ${WRKSRC}; \
+	${INSTALL_DATA} COPYRIGHT COPYRIGHT.jp FAQ \
+		README README.fonts README.fonts.jp README.lang \
+		SYNTAX USAGE USAGE.jp ${PREFIX}/share/doc/mgp
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/mgp
-	${INSTALL_DATA} ${WRKSRC}/sample/README* ${PREFIX}/share/examples/mgp
-	${INSTALL_DATA} ${WRKSRC}/sample/*.gif ${PREFIX}/share/examples/mgp
-	${INSTALL_DATA} ${WRKSRC}/sample/*.eps ${PREFIX}/share/examples/mgp
-	${INSTALL_DATA} ${WRKSRC}/sample/*.mgp ${PREFIX}/share/examples/mgp
-	${INSTALL_DATA} ${WRKSRC}/sample/mgprc-sample ${PREFIX}/share/examples/mgp
+	cd ${WRKSRC}/sample; \
+	${INSTALL_DATA} README* *.gif *.eps *.mgp *.xbm mgprc-sample \
+		${PREFIX}/share/examples/mgp
 
 .include "../../mk/bsd.pkg.mk"
