@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2003/04/10 01:28:26 grant Exp $
+# $NetBSD: Makefile,v 1.12 2003/04/16 16:29:24 jmc Exp $
 #
 
 DISTNAME=	Zope-2.2.2-src
@@ -35,7 +35,7 @@ do-install:
 	cd ${WRKSRC}/.. && ${PAX} -rw -pp . ${PY_SITEPKG}
 	cd ${PREFIX} && ${FIND} ${PY_SITEPATH}/DocumentTemplate \
 		${PY_SITEPATH}/StructuredText \
-		-type f -print >>${PLIST_SRC})
+		-type f -print >>${PLIST_SRC}
 	cd ${PREFIX} && ${FIND} -d ${PY_SITEPATH}/DocumentTemplate \
 		${PY_SITEPATH}/StructuredText \
 		-type d -print | ${SED} -e "s/^/@dirrm /" >>${PLIST_SRC}
