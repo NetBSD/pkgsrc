@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2004/03/18 00:36:11 xtraeme Exp $
+# $NetBSD: Makefile,v 1.24 2004/03/18 00:37:01 xtraeme Exp $
 
 DISTNAME=		${IRSSI_DISTNAME}
 CATEGORIES=		chat
@@ -32,7 +32,7 @@ PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Irssi/.packlist
 PERL5_PACKLIST+=	${PERL5_SITEARCH}/auto/Irssi/Irc/.packlist
 PERL5_PACKLIST+=	${PERL5_SITEARCH}/auto/Irssi/UI/.packlist
 PERL5_PACKLIST+=	${PERL5_SITEARCH}/auto/Irssi/TextUI/.packlist
-.include "../../lang/perl5/buildlink2.mk"
+.include "../../lang/perl5/buildlink3.mk"
 # actually we don't need --with-perl here, irssi is compiled with it by default
 # but who knows what may happen in future versions
 CONFIGURE_ARGS+=	--with-perl
