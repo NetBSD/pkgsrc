@@ -1,1 +1,24 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/10/15 08:48:33 wulf Exp $
+@comment $NetBSD: PLIST,v 1.2 2000/10/15 09:06:57 wulf Exp $
+lib/libsmpeg.a
+lib/libsmpeg.la
+lib/libsmpeg.so
+lib/libsmpeg-0.4.so
+lib/libsmpeg-0.4.so.1
+lib/libsmpeg-0.4.so.1.0
+bin/plaympeg
+bin/gtv
+bin/glmovie
+man/man1/plaympeg.1
+man/man1/gtv.1
+include/smpeg/MPEG.h
+include/smpeg/MPEGaction.h
+include/smpeg/MPEGaudio.h
+include/smpeg/MPEGerror.h
+include/smpeg/MPEGfilter.h
+include/smpeg/MPEGring.h
+include/smpeg/MPEGlist.h
+include/smpeg/MPEGstream.h
+include/smpeg/MPEGsystem.h
+include/smpeg/MPEGvideo.h
+include/smpeg/smpeg.h
+@dirrm include/smpeg
