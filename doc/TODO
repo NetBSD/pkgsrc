@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.904 2003/09/25 22:15:31 recht Exp $
+$NetBSD: TODO,v 1.905 2003/09/26 13:20:55 wiz Exp $
 
 Suggested new packages
 ======================
@@ -87,7 +87,7 @@ Suggested package updates
 	o Mesa-5.0.2
 	o Ngraph-6.3.20 [pkg/22800]
 	o R-1.7.1
-	o TeXmacs-1.0.1.23
+	o TeXmacs-1.0.2
 	o Xaw3d-1.5E
 	o Xbae-4.50.0
 	o abiword-2.0
@@ -117,28 +117,35 @@ Suggested package updates
 	o cxref-1.5e
 	o dante-1.1.14
 	o dctc-0.85.5
+	o distcc-2.11
 	o dlcompat-20030629 [grant]
 	o dnetc-2.9004-482 [pkg/22390]
+	o doxygen-1.3.4
 	o dylan-compiler-2.3.11
 	o dylan-interpreter-2.3.11
 	o easytag-0.30
 	o echoping-5.0.1
+	o elk-3.99.4
 	o elm-me-2.4pl107
 	o ettercap-0.6.b
 	o evilwm-0.99.16
 	o evolution-1.4.4
+	o exiftags-0.98 [pkg/22935]
+	o exim-4.24
 	o festival-1.4.3
 	o findutils-4.1.20
 	o fltk-1.1.3
 	o foomatic-2.9.1 [jlam]
 	o freetds-0.61.2 [tarball still called 0.61]
 	o fsviewer-0.2.5
+	o gaim-0.69
 	o gauche-0.7 [kei]
 	o gawk-3.1.3
 	o gcpio-2.5 [pkg/20799]
 	o gcvs-1.0-1
 	o gdm-2.4.1.3
 	o generator-0.35
+	o getmail-3.2.0
 	o gettext-0.12.1
 	o gforth-0.6.2
 	o ghostscript-8.00 (apfl)
@@ -167,7 +174,7 @@ Suggested package updates
 	o hpijs-1.4.1
 	o icepref-2.2
 	o inn-2.4.0
-	o iozone-3.196
+	o iozone-3.200
 	o isync-0.9.1 [pkg/22189]
 	o jakarta-tomcat-3.3.1a
 	o joe-2.9.8 [pkg/18022, incomplete]
@@ -185,7 +192,7 @@ Suggested package updates
 	o libmpeg3-1.5.3
 	o libole2-2.2.8
 	o libtool-1.5 [skrll]
-	o lilypond-1.8.2
+	o lilypond-2.0.0
 	o links-2.11pre12
 	o lmbench-2.0.4
 	o lout-3.26 [pkg/18687]
@@ -195,6 +202,7 @@ Suggested package updates
 	o maildrop-1.6
 	o mailman-2.1.2 [pkgsrc-wip]
 	o mailsync-5.1.0
+	o marbles-1.0.6
 	o memtest86-3.0
 	o midnight-commander-4.6.0
 	o mimedefang-2.37
@@ -212,6 +220,7 @@ Suggested package updates
 	o napshare-1.2
 	o nasm-0.98.38
 	o neXtaW-0.15.1
+	o neon-0.24.2
 	o netatalk-1.6.3 [pkg/21930]
 	o newscache-0.99.22p1
 	o ngrep-1.41
@@ -220,14 +229,16 @@ Suggested package updates
 	o openoffice-1.0.3.1 [skrll]
 	o openssl-0.9.7b
 	o oss-3.9.8a
+	o p0f-2.0.2 [pkg/22939]
 	o p5-XML-LibXML-1.54
 	o pdmenu-1.2.81
 	o postfix-2.0.16
-	o prboom-2.2.4
-	o proftpd-1.2.9rc1
+	o prboom-2.3.0
+	o proftpd-1.2.9rc2p
 	o pxe-1.4 [pkg/22323]
 	o pygtk-0.6.11
 	o pysol-4.82
+	o pthon-2.3.1
 	o rep-gtk-0.17
 	o rosegarden-2.1.4 [pkg/21904]
 	o rox-1.2.2
@@ -236,6 +247,7 @@ Suggested package updates
 	o rt-3.0.2
 	o ruby-1.8.0
 	o sablecc-2.18.1
+	o samba-3.0.0
 	o sawfish-1.3
 	o scribus-1.0.1 [pkg/22557]
 	o sendfile-20010424
@@ -244,9 +256,10 @@ Suggested package updates
 	o slrn-0.9.8.0
 	o smarteiffel-1.0 [replacing smalleiffel]
 	o sml-nj-110.43
-	o snd-6.8
+	o snd-6.12
 	o snes9x-1.41
 	o spamassassin-2.60
+	o speex-1.0.2
 	o squeak-3.2 [fredb|pkg/17950]
 	o squeak-3.5
 	o srp_client-1.7.5 [jlam]
@@ -279,6 +292,7 @@ Suggested package updates
 	o xalan-c-1.4
 	o xanim-2.92.0 [pkg/19934]
 	o xdaliclock-2.20
+	o xemacs-21.5.16
 	o xephem-3.5.2
 	o xerces-c-2.2.0 [heinz]
 	o xerces-j-2.4.0 [pkg/21725]
@@ -293,6 +307,7 @@ Suggested package updates
 	o xps-4.2
 	o xpuyopuyo-0.9.5
 	o xsidplay-1.6.5pre20
+	o xzgv-0.8
 	o yacas-1.0.55
 	o ysm-2.9.0
 	o yudit-2.7.6
