@@ -1,0 +1,35 @@
+$NetBSD: patch-ab,v 1.3 2000/04/18 06:49:18 fredb Exp $
+
+--- manpath.tcl.orig	Sat Nov 21 00:21:24 1998
++++ manpath.tcl	Tue Apr 18 01:14:34 2000
+@@ -19,8 +19,13 @@
+ 	# doesn't that's OK (it's got a good whatis organization)
+ 
+ 	# BSDI concatenates all whatis information into single file
+-	# share fBSDI with manualpage.tcl to find xxx.0 files
+-	set manx(fBSDI) [file readable [set whatis "/usr/share/man/whatis.db"]]
++	# share fBSDI with manualpage.tcl to find xxx.0 files,
++	# but NetBSD uses multiple whatis.db files.
++	if {![file executable "/usr/libexec/makewhatis"]} {
++		set manx(fBSDI) [file readable [set whatis "/usr/share/man/whatis.db"]]
++	} else {
++		set manx(fBSDI) 0
++	}
+ 	set fDebian [expr {[file readable [set whatis "/usr/man/index.bt"]] || [file readable [set whatis "/var/catman/index.bt"]]}]
+ 	# HPUX concatenates all whatis information into single file
+ 	set fHPUX 0; if {!$manx(fBSDI) && !$fDebian} { set fHPUX [file readable [set whatis "/usr/lib/whatis"]] }
+@@ -79,10 +84,12 @@
+ 			lappend manx(pathstat) $man($root)
+ 			set manx($root,latest) [lfirst [manLatestMan $root]]
+ 
+-			# check for apropos index (called windex on Solaris)
++			# check for apropos index (called windex on Solaris, whatis.db on NetBSD)
+ 			if {!$manx(fBSDI) && !$fDebian && !$fHPUX} {
+ 				if ![file exists [set whatis $root/windex]] {
+-					set whatis $root/whatis
++					if ![file exists [set whatis $root/whatis.db]] {
++						set whatis $root/whatis
++					}
+ 				}
+ 			}
+ 
