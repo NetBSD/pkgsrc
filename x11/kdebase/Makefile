@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.81 2001/08/26 11:36:02 skrll Exp $
+# $NetBSD: Makefile,v 1.82 2001/08/29 18:27:59 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.6 1997/11/27 00:35:27 se Exp
 
 DISTNAME=	kdebase-1.1.2
@@ -102,5 +102,8 @@ post-install:
 	${INSTALL_DATA} ${DISTDIR}/Daemon.png ${PREFIX}/share/kde/icons
 	${INSTALL_DATA} ${DISTDIR}/Daemon.README \
 	  ${PREFIX}/share/doc/kde/HTML/en/kdm
+	#
+	# Make template links writeable, to prevent "Permission denied"
+	${CHMOD} u+w ${PREFIX}/share/kde/apps/kfm/Desktop/Templates/*.kdelnk
 
 .include "../../mk/bsd.pkg.mk"
