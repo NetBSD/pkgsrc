@@ -1,0 +1,4 @@
+This is a copy of NetBSD-current's pkg_* tools in a format which is
+able to be installed as a package.  They simply replace the tools in
+/usr/sbin, but don't register themselves as a package, so that no
+de-installation can take place.
