@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.151 2004/02/13 18:00:29 jlam Exp $
+# $NetBSD: bsd.prefs.mk,v 1.152 2004/02/14 03:26:09 grant Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -159,8 +159,7 @@ LOWER_ARCH?=		${MACHINE_GNU_ARCH}
 MACHINE_PLATFORM?=	${OPSYS}-${OS_VERSION}-${MACHINE_ARCH}
 MACHINE_GNU_PLATFORM?=	${LOWER_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}${APPEND_ELF}${LOWER_OPSYS_VERSUFFIX}
 
-# Needed on NetBSD and SunOS (zoularis) to prevent an "install:" target
-# from being created in bsd.own.mk.
+# Needed to prevent an "install:" target from being created in bsd.own.mk.
 NEED_OWN_INSTALL_TARGET=no
 
 # This prevents default use of the cross-tool harness in the "src" tree,
@@ -437,13 +436,10 @@ USE_BUILDLINK3?=	no	# default to not using buildlink3
 USE_BUILDLINK3=		yes	# pkgviews requires buildlink3
 .endif
 
-.if (${OPSYS} == SunOS) && !defined(ZOULARIS_VERSION)
-.  if !exists(${ZOULARISBASE}/share/mk/zoularis.mk)
-ZOULARIS_VERSION=	20000522
-.  else
-.    include "${ZOULARISBASE}/share/mk/zoularis.mk"
-.  endif
-MAKEFLAGS+=		ZOULARIS_VERSION=${ZOULARIS_VERSION}
+.if exists(${LOCALBASE}/bsd/share/mk/zoularis.mk)
+PKG_FAIL_REASON+=	'You appear to have a deprecated Zoularis installation.'
+PKG_FAIL_REASON+=	'Please update your system to bootstrap-pkgsrc and remove the'
+PKG_FAIL_REASON+=	'${LOCALBASE}/bsd directory.'
 .endif
 
 _PKGSRCDIR?=		${.CURDIR:C|/[^/]*/[^/]*$||}
