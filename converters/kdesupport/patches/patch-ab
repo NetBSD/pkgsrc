@@ -1,4 +1,6 @@
-$NetBSD: patch-ab,v 1.4 1999/11/12 05:29:38 hubertf Exp $
+$NetBSD: patch-ab,v 1.5 1999/11/22 20:31:03 jdolecek Exp $
+
+Pulled into KDE	(jdolecek)
 
 --- ./mimelib/mimelib/config.h	Sat Sep 27 13:55:18 1997
 +++ /usr/pkgsrc/converters/kdesupport/work.i386.unpatched/kdesupport-1.1.2/mimelib/mimelib/config.h	Fri Nov 12 06:31:53 1999
