@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/08/12 18:39:57 tron Exp $
+# $NetBSD: Makefile,v 1.6 2002/08/12 19:00:36 tron Exp $
 
 DISTNAME=	gnome-1.4.0.7
 CATEGORIES=	meta-pkgs x11 gnome
@@ -25,7 +25,7 @@ DEPENDS+=	gnome-users-guide>=1.2:../../x11/gnome-users-guide
 DEPENDS+=	gnome-utils>=1.4.1:../../misc/gnome-utils
 DEPENDS+=	evolution>=1.0.2:../../mail/evolution
 .if exists(/usr/include/wctype.h)
-DEPENDS+=	gnumeric>=1.0.9:../../math/gnumeric
+DEPENDS+=	gnumeric>=0.75:../../math/gnumeric
 .else
 DEPENDS+=	gnumeric>=0.75:../../math/gnumeric0
 .endif
