@@ -1,4 +1,4 @@
-# $NetBSD: scan-libtool,v 1.1 2004/09/21 15:01:41 jlam Exp $
+# $NetBSD: scan-libtool,v 1.2 2004/09/22 17:56:31 jlam Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -112,7 +112,7 @@ unwrap)
 # archives.
 ######################################################################
 link)
-	set -- "$@" @_BLNK_LIBTOOL_LDFLAGS@
+	append_extra_args=yes
 	;;
 ######################################################################
 # We're doing libtool execution or installation, so just invoke the
@@ -121,5 +121,8 @@ link)
 execute|install)
 	msg_log $wrapperlog "<.> $cmd $@"
 	exec $cmd "$@"
+	;;
+*)
+	append_extra_args=no
 	;;
 esac

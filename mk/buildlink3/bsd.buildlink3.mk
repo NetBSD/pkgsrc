@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.154 2004/09/21 15:01:40 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.155 2004/09/22 17:56:31 jlam Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -1056,7 +1056,8 @@ _WRAP_EXTRA_ARGS.CXX+=		${_BLNK_CPPFLAGS} ${_BLNK_LDFLAGS}
 _WRAP_EXTRA_ARGS.CPP+=		${_BLNK_CPPFLAGS}
 _WRAP_EXTRA_ARGS.FC+=		${_BLNK_CPPFLAGS} ${_BLNK_LDFLAGS}
 _WRAP_EXTRA_ARGS.LD+=		${_BLNK_LDFLAGS}
-_BLNK_LIBTOOL_LDFLAGS=		${_BLNK_LDFLAGS}
+_WRAP_EXTRA_ARGS.LIBTOOL+=	${_BLNK_LDFLAGS}
+_WRAP_EXTRA_ARGS.SHLIBTOOL+=	${_BLNK_LDFLAGS}
 
 ${WRAPPER_TMPDIR}/libtool-fix-la: ${BUILDLINK_SRCDIR}/libtool-fix-la
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
@@ -1095,7 +1096,6 @@ ${WRAPPER_TMPDIR}/cmd-sink-libtool: ${BUILDLINK_SRCDIR}/cmd-sink-libtool
 ${WRAPPER_TMPDIR}/scan-libtool: ${BUILDLINK_SRCDIR}/scan-libtool
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
 	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC}			\
-		| ${SED} -e "s|@_BLNK_LIBTOOL_LDFLAGS@|${_BLNK_LIBTOOL_LDFLAGS:Q}|g" \
 		| ${_WRAP_SH_CRUNCH_FILTER} > ${.TARGET}
 
 ${WRAPPER_TMPDIR}/transform-libtool: ${BUILDLINK_SRCDIR}/transform-libtool
