@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2003/07/17 21:42:26 grant Exp $
+# $NetBSD: Makefile,v 1.18 2003/11/07 14:48:07 gavan Exp $
 
 DISTNAME=	pstoedit_3_31
 PKGNAME=	pstoedit-3.31
@@ -19,6 +19,7 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 USE_X11=	yes
 USE_LIBTOOL=	yes
 USE_BUILDLINK2=	yes
+USE_GCC_SHLIB=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV+=	LIBTOOL="${LIBTOOL}" LIBPLOTTERLA="${X11PREFIX}/lib/libplotter.la"
 CONFIGURE_ENV+=	CXXFLAGS="${CFLAGS} -Dunix"
