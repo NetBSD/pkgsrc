@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 1999/07/23 09:17:03 tron Exp $
+# $NetBSD: Makefile,v 1.8 1999/07/24 08:41:39 rh Exp $
 #
 
-DISTNAME=	gnome-pim-1.0.7
+DISTNAME=	gnome-pim-1.0.8
 CATEGORIES=	misc x11 gnome
 MASTER_SITES=	ftp://ftp.gnome.org/pub/GNOME/gnome-1.0/sources/ \
 		ftp://ftp.tuwien.ac.at/hci/GNOME/gnome-1.0/sources/ \
