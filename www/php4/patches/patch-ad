@@ -1,3 +1,4 @@
+$NetBSD: patch-ad,v 1.15 2003/06/07 14:37:02 cjep Exp $
 --- configure.orig	Thu Sep  5 23:40:53 2002
 +++ configure	Fri May 30 10:04:07 2003
 @@ -3220,9 +3220,10 @@
