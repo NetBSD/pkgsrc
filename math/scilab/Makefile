@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2002/05/25 18:47:24 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.32 2002/09/30 22:36:08 jlam Exp $
 #
 
 DISTNAME=	${SCIBASE}.src
@@ -14,27 +14,30 @@ HOMEPAGE=	http://www-rocq.inria.fr/scilab/
 COMMENT=	High-level scientific math programming environment with graphics
 
 DEPENDS+=	xless-[0-9]*:../../x11/xless
-DEPENDS+=	pvm-3.4.3:../../parallel/pvm3
 
 #needs FPC code not found in older versions of NetBSD
 NOT_FOR_PLATFORM=	NetBSD-1.[0-4]*-alpha NetBSD-1.5-alpha \
 			NetBSD-1.5.*-alpha NetBSD-1.5[A-U]-alpha
 
+USE_BUILDLINK2=		yes
 USE_FORTRAN=		yes
+USE_X11BASE=		yes
+
 USE_LIBTOOL=		yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/config/ltconfig
-USE_X11BASE=		yes
-USE_X11=		yes
-GNU_CONFIGURE=		yes
 
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-xless --with-xaw
-#override HOME to avoid picking up a bad ${HOME}/.scilab during the build
-MAKE_ENV+=	HOME=${WRKSRC} PVM_ROOT=${PVM_ROOT}
-CONFIGURE_ENV+=	LOCALBASE=${LOCALBASE}
-PVM_ROOT?=	${LOCALBASE}/pvm3
-CONFIGURE_ENV+=	PVM_ROOT=${PVM_ROOT}
-CONFIGURE_ENV+=	X11BASE=${X11BASE}
-PLIST_SUBST+=	SCIBASE=${SCIBASE}
+
+# override HOME to avoid picking up a bad ${HOME}/.scilab during the build
+MAKE_ENV+=		HOME=${WRKSRC}
+MAKE_ENV+=		PVM_ROOT=${PVM_ROOT}
+CONFIGURE_ENV+=		LOCALBASE=${LOCALBASE}
+
+PVM_ROOT?=		${LOCALBASE}/pvm3
+CONFIGURE_ENV+=		PVM_ROOT=${PVM_ROOT}
+CONFIGURE_ENV+=		X11BASE=${X11BASE}
+PLIST_SUBST+=		SCIBASE=${SCIBASE}
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -52,10 +55,8 @@ pre-fetch:
 		${ECHO} "Without fixing this problem ${PKGNAME} will not work." ; ${FALSE} ; fi
 .endif
 
-GCC_VERSION!=           gcc --version
-.if (${GCC_VERSION:C/-.*$$//} == egcs) && (${MACHINE_ARCH} == arm32)
-.include "../../lang/gcc/Makefile.gcc"
-MAKE_FLAGS+=	CC=${CC}
+.if ${MACHINE_ARCH} == "arm32"
+.include "../../lang/gcc/buildlink2.mk"
 .endif
 
 # remove some stuff which is broken in the distfile.  The config's
@@ -68,18 +69,19 @@ post-extract:
 
 # make sure that the 'whatis' files in the man directories get rebuilt
 pre-build:
-	cd ${WRKSRC}/man && ${MAKE_ENV} ${MAKE_PROGRAM} cleanall
+	cd ${WRKSRC}/man && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} cleanall
 
 post-build:
-	cd ${WRKSRC}/man && ${MAKE_ENV} ${MAKE_PROGRAM} all
+	cd ${WRKSRC}/man && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} all
 
 # clean up any possible leftovers from 'make test' so that our PLIST
 # will still be right.  Also clean up .orig files we may have 
 # created during patching so they don't corrupt our PLIST
+#
 pre-install:
-	cd ${WRKSRC}/tests && ${MAKE_PROGRAM} distclean
-	cd ${WRKSRC}/examples && ${MAKE_PROGRAM} distclean
-	${FIND} ${WRKSRC}/ -name \*.orig -print -exec ${RM} {} \;
+	cd ${WRKSRC}/tests && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} distclean
+	cd ${WRKSRC}/examples && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} distclean
+	${FIND} ${WRKSRC}/ -name \*.orig -print | ${XARGS} ${RM}
 
 post-install:
 	${LN} -sf ${X11PREFIX}/bin/xless ${PREFIX}/${SCIBASE}/bin/xless
@@ -94,4 +96,5 @@ test: build
 		${MAKE_ENV} ${MAKE_PROGRAM} tests 2>&1 | \
 		tee ${WRKDIR}/examples.log
 
+.include "../../parallel/pvm3/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
