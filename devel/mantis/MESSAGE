@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2004/11/08 19:05:33 adrianp Exp $
+$NetBSD: MESSAGE,v 1.2 2004/12/05 23:19:08 cube Exp $
 
 To complete the setup you will need to read the INSTALL guide in order
 to setup mySQL properly.  In particular secion 3 of the document deals
@@ -8,7 +8,7 @@ with database setup.
 You will need to make Mantis accessible through your HTTP server.
 If you are running Apache then you may add the following lines to httpd.conf:
 
-	Include ${PKG_SYSCONFDIR}/httpd/mantis.conf
+	Include ${PKG_SYSCONFDIR}/mantis.conf
 
 to make Mantis accessible through:
 	
