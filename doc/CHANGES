@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.443 2002/11/02 10:04:24 abs Exp $
+$NetBSD: CHANGES,v 1.444 2002/11/02 10:27:53 rh Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3508,3 +3508,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Added eog-1.0.3 as eog2 [rh 2002-11-02]
 	Added gal2-0.0.7 [rh 2002-11-02]
 	Updated cpuflags to 0.37 [abs 2002-11-02]
+	Added gcalctool-4.1.0 [rh 2002-11-02]
