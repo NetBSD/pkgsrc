@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2000/12/25 04:42:04 itojun Exp $
+# $NetBSD: Makefile,v 1.25 2001/01/01 21:32:54 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.4 1997/05/22 07:53:29 tg Exp
 #
 
@@ -31,5 +31,10 @@ CONFIGURE_ARGS+=        --enable-ipv6
 .else
 CONFIGURE_ARGS+=        --disable-ipv6
 .endif
+
+# Prevent us from running autoconf (needed due to order of
+# files patched in the IPv6 patch):
+post-patch:
+	${TOUCH} ${WRKSRC}/configure
 
 .include "../../mk/bsd.pkg.mk"
