@@ -1,11 +1,16 @@
-@comment $NetBSD: PLIST,v 1.2 2002/03/14 18:18:20 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/07/14 08:27:08 wiz Exp $
 bin/gif2epsn
 bin/gif2ps
 bin/gif2rgb
 bin/gifasm
 bin/gifbg
+bin/gifburst
 bin/gifclip
+bin/gifclrmp
+bin/gifcolor
 bin/gifcomb
+bin/gifcompose
+bin/giffiltr
 bin/giffix
 bin/gifflip
 bin/gifhisto
@@ -14,20 +19,15 @@ bin/gifinter
 bin/gifinto
 bin/gifovly
 bin/gifpos
+bin/gifrotat
 bin/gifrsize
+bin/gifspnge
 bin/giftext
 bin/gifwedge
+bin/icon2gif
 bin/raw2gif
 bin/rgb2gif
 bin/text2gif
-bin/gifspnge
-bin/giffiltr
-bin/icon2gif
-bin/gifcolor
-bin/gifclrmp
-bin/gifrotat
-bin/gifcompose
-bin/gifburst
 include/gif_lib.h
 lib/libgif.a
 lib/libgif.so
