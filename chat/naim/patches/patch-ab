@@ -1,12 +1,14 @@
-$NetBSD: patch-ab,v 1.1.1.1 2002/01/25 15:53:56 tv Exp $
+$NetBSD: patch-ab,v 1.2 2002/01/25 22:45:51 simonb Exp $
 
---- src/Makefile.in.orig	Thu Jan 24 13:01:44 2002
-+++ src/Makefile.in	Thu Jan 24 13:02:51 2002
-@@ -334,7 +334,5 @@
+--- src/Makefile.in.orig	Sat Jan 26 01:00:55 2002
++++ src/Makefile.in	Sat Jan 26 03:16:45 2002
+@@ -334,9 +334,6 @@
  
  conio.c: conio_keys.h
  
--conio_keys.h: /usr/include/ncurses.h
+-conio_keys.h: 
 -	./genkeys.sh > conio_keys.h
- 
+-
  fireio.c: sysinfo.h
+ 
+ help.h: ../doc/naim.hlp
