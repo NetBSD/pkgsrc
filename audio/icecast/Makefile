@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/07/17 21:22:24 grant Exp $
+# $NetBSD: Makefile,v 1.11 2003/09/09 17:11:16 jmmv Exp $
 #
 
 DISTNAME=	icecast-1.3.12
@@ -16,6 +16,8 @@ CONFIGURE_ARGS+=	--with-readline \
 			--with-python
 CPPFLAGS+=		-I${BUILDLINK_PREFIX.readline}/include/readline
 CPPFLAGS+=		${BUILDLINK_CPPFLAGS.${PYPACKAGE}}
+CFLAGS+=		${PTHREAD_CFLAGS}
+LDFLAGS+=		${PTHREAD_LDFLAGS}
 LDFLAGS+=		${BUILDLINK_LDFLAGS.${PYPACKAGE}}
 LIBS+=			-lutil
 PTHREAD_OPTS+=		native
