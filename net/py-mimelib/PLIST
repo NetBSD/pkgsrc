@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/09/14 16:43:53 recht Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/10/21 12:43:33 drochner Exp $
 ${PYSITELIB}/email/Charset.py
 ${PYSITELIB}/email/Charset.pyc
 ${PYSITELIB}/email/Charset.pyo
@@ -54,8 +54,8 @@ ${PYSITELIB}/email/_compat21.py
 ${PYSITELIB}/email/_compat21.pyc
 ${PYSITELIB}/email/_compat21.pyo
 ${PYSITELIB}/email/_compat22.py
-${PYSITELIB}/email/_compat22.pyc
-${PYSITELIB}/email/_compat22.pyo
+${NOT21}${PYSITELIB}/email/_compat22.pyc
+${NOT21}${PYSITELIB}/email/_compat22.pyo
 ${PYSITELIB}/email/_parseaddr.py
 ${PYSITELIB}/email/_parseaddr.pyc
 ${PYSITELIB}/email/_parseaddr.pyo
