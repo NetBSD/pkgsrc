@@ -1,8 +1,8 @@
-# $NetBSD: buildlink2.mk,v 1.6 2004/01/08 08:11:41 martti Exp $
+# $NetBSD: buildlink2.mk,v 1.7 2004/01/23 14:06:38 martti Exp $
 #
 # This Makefile fragment is included by packages that use xfce4.
 #
-# This file was created automatically using createbuildlink 2.7.
+# This file was created automatically using createbuildlink-3.0.
 #
 
 .if !defined(XFCE4_BUILDLINK2_MK)
@@ -24,12 +24,7 @@ BUILDLINK_PREFIX.xfce4_DEFAULT=	${X11PREFIX}
 .include "../../x11/xfce4-utils/buildlink2.mk"
 .include "../../x11/xfce4-panel/buildlink2.mk"
 .include "../../audio/xfce4-mixer/buildlink2.mk"
-.include "../../graphics/xfce4-artwork/buildlink2.mk"
 .include "../../sysutils/xfce4-fm-icons/buildlink2.mk"
-.include "../../sysutils/xfce4-minicmd-plugin/buildlink2.mk"
-.include "../../sysutils/xfce4-netload-plugin/buildlink2.mk"
-.include "../../sysutils/xfce4-showdesktop-plugin/buildlink2.mk"
-.include "../../sysutils/xfce4-systemload-plugin/buildlink2.mk"
 .include "../../sysutils/xfce4-systray/buildlink2.mk"
 .include "../../wm/xfce4-wm-themes/buildlink2.mk"
 .include "../../x11/xfce4-themes/buildlink2.mk"
