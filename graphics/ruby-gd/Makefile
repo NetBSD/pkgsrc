@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/10/05 09:55:18 taca Exp $
+# $NetBSD: Makefile,v 1.2 2003/11/02 17:50:05 taca Exp $
 
 DISTNAME=	ruby-GD-${VER}-1
 PKGNAME=	ruby-gd-${VER}.1
@@ -9,6 +9,8 @@ MASTER_SITES=	http://tam.0xfa.com/ruby-gd/
 MAINTAINER=	rasputin@idoru.mine.nu
 HOMEPAGE=	# not available
 COMMENT=	Ruby extension to drive the GD library
+
+USE_BUILDLINK2=	# defined
 
 VER=		0.7.4
 DIST_SUBDIR=	ruby
@@ -29,4 +31,5 @@ post-install:
 .include "../../graphics/freetype-lib/buildlink2.mk"
 .include "../../graphics/freetype2/buildlink2.mk"
 .include "../../lang/ruby-base/Makefile.common"
+.include "../../lang/ruby-base/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
