@@ -1,13 +1,16 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/03/02 15:05:39 kei Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/09/26 20:04:15 recht Exp $
 bin/aiksaurus
 bin/caiksaurus
-include/Aiksaurus.h
-include/AiksaurusC.h
+include/Aiksaurus/Aiksaurus.h
+include/Aiksaurus/AiksaurusC.h
+lib/libAiksaurus-1.0.so
+lib/libAiksaurus-1.0.so.0
+lib/libAiksaurus-1.0.so.0.1
 lib/libAiksaurus.a
 lib/libAiksaurus.la
 lib/libAiksaurus.so
-lib/libAiksaurus.so.0
-lib/libAiksaurus.so.0.15
-share/Aiksaurus/words.dat
-share/Aiksaurus/meanings.dat
-@dirrm share/Aiksaurus
+lib/pkgconfig/aiksaurus-1.0.pc
+share/aiksaurus/meanings.dat
+share/aiksaurus/words.dat
+@dirrm share/aiksaurus
+@dirrm include/Aiksaurus
