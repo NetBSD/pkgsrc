@@ -1,0 +1,20 @@
+--- Imakefile.orig	Wed Jul 24 21:48:27 1996
++++ Imakefile	Wed Apr 22 17:57:37 1998
+@@ -8,7 +8,7 @@
+ XCOMM optimization on your version, but if it doesn't work, a compiler bug
+ XCOMM might be the reason...
+ 
+-XCOMM           CXX = gcc -g
++CXX = gcc -O5 -I${X11BASE}/include
+ 
+ XCOMM On some machines (like on linux) you can gain speed by using the
+ XCOMM MIT-SHM extension for transfering images to the server via shared
+@@ -27,7 +27,7 @@
+ 
+ XCOMM which default file should be loaded if no option is set
+ 
+-        JIG_DEFAULT = \"tina.gif\"
++        JIG_DEFAULT = \"${X11BASE}/lib/xjig/tina.gif\"
+ 
+ XCOMM #######################################################################
+ 
