@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.5 2003/07/30 14:24:50 markd Exp $
+$NetBSD: patch-af,v 1.6 2004/01/15 11:12:40 markd Exp $
 
---- kedit/Makefile.in.orig	2003-07-15 22:19:24.000000000 +1200
+--- kedit/Makefile.in.orig	2003-12-29 11:33:17.000000000 +1300
 +++ kedit/Makefile.in
-@@ -281,16 +281,20 @@ x_libraries = @x_libraries@
+@@ -282,16 +282,20 @@ x_libraries = @x_libraries@
  INCLUDES = $(all_includes)
  
  bin_PROGRAMS = kedit
@@ -28,7 +28,7 @@ $NetBSD: patch-af,v 1.5 2003/07/30 14:24:50 markd Exp $
  kedit_LDFLAGS = $(all_libraries) $(KDE_RPATH)
  
  noinst_HEADERS = kedit.h ktextfiledlg.h\
-@@ -314,34 +318,44 @@ CONFIG_HEADER = $(top_builddir)/config.h
+@@ -316,34 +320,44 @@ CONFIG_HEADER = $(top_builddir)/config.h
  CONFIG_CLEAN_FILES =
  LTLIBRARIES = $(lib_LTLIBRARIES)
  
@@ -87,7 +87,7 @@ $NetBSD: patch-af,v 1.5 2003/07/30 14:24:50 markd Exp $
  @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/ktextfiledlg.Plo ./$(DEPDIR)/mail.Plo \
  @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/optiondialog.Plo
  
-@@ -363,7 +377,8 @@ CXXLD = $(CXX)
+@@ -365,7 +379,8 @@ CXXLD = $(CXX)
  #>+ 2
  CXXLINK = $(LIBTOOL) --mode=link --tag=CXX $(CXXLD) $(AM_CXXFLAGS) $(CXXFLAGS) $(KDE_CXXFLAGS) \
  	$(AM_LDFLAGS) $(LDFLAGS) -o $@
@@ -97,7 +97,7 @@ $NetBSD: patch-af,v 1.5 2003/07/30 14:24:50 markd Exp $
  DATA = $(apps_DATA) $(rc_DATA)
  
  HEADERS = $(noinst_HEADERS)
-@@ -377,7 +392,7 @@ RECURSIVE_TARGETS = info-recursive dvi-r
+@@ -379,7 +394,7 @@ RECURSIVE_TARGETS = info-recursive dvi-r
  DIST_COMMON = README $(noinst_HEADERS) ChangeLog Makefile.am \
  	Makefile.in TODO
  DIST_SUBDIRS = $(SUBDIRS)
@@ -106,7 +106,7 @@ $NetBSD: patch-af,v 1.5 2003/07/30 14:24:50 markd Exp $
  
  #>- all: all-recursive
  #>+ 1
-@@ -424,6 +439,8 @@ clean-libLTLIBRARIES:
+@@ -426,6 +441,8 @@ clean-libLTLIBRARIES:
  	done
  kedit.la: $(kedit_la_OBJECTS) $(kedit_la_DEPENDENCIES) 
  	$(CXXLINK) -rpath $(libdir) $(kedit_la_LDFLAGS) $(kedit_la_OBJECTS) $(kedit_la_LIBADD) $(LIBS)
@@ -115,7 +115,7 @@ $NetBSD: patch-af,v 1.5 2003/07/30 14:24:50 markd Exp $
  binPROGRAMS_INSTALL = $(INSTALL_PROGRAM)
  install-binPROGRAMS: $(bin_PROGRAMS)
  	@$(NORMAL_INSTALL)
-@@ -463,8 +480,9 @@ mostlyclean-compile:
+@@ -465,8 +482,9 @@ mostlyclean-compile:
  distclean-compile:
  	-rm -f *.tab.c
  
@@ -126,16 +126,16 @@ $NetBSD: patch-af,v 1.5 2003/07/30 14:24:50 markd Exp $
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/ktextfiledlg.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/mail.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/optiondialog.Plo@am__quote@
-@@ -670,7 +688,7 @@ distclean-tags:
+@@ -678,7 +696,7 @@ distclean-tags:
  	-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
  #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
  #>+ 4
--KDE_DIST=optionstate.h keditui.rc KEdit.desktop 
+-KDE_DIST=KEdit.desktop keditui.rc optionstate.h 
 +KDE_DIST=KEdit.desktop keditui.rc Makefile.in.rej optionstate.h 
  
  DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
  
-@@ -830,14 +848,17 @@ uninstall-info: uninstall-info-recursive
+@@ -838,19 +856,16 @@ uninstall-info: uninstall-info-recursive
  
  messages: rc.cpp
  	$(XGETTEXT) rc.cpp *.cpp -o $(podir)/kedit.pot
@@ -147,36 +147,46 @@ $NetBSD: patch-af,v 1.5 2003/07/30 14:24:50 markd Exp $
  .NOEXPORT:
  
  #>+ 3
+-ktextfiledlg.moc: $(srcdir)/ktextfiledlg.h
+-	$(MOC) $(srcdir)/ktextfiledlg.h -o ktextfiledlg.moc
 +optiondialog.moc: $(srcdir)/optiondialog.h
 +	$(MOC) $(srcdir)/optiondialog.h -o optiondialog.moc
-+
-+#>+ 1
+ 
+ #>+ 1
+-mocs: ktextfiledlg.moc
 +mocs: optiondialog.moc
-+#>+ 3
+ #>+ 3
  mail.moc: $(srcdir)/mail.h
  	$(MOC) $(srcdir)/mail.h -o mail.moc
- 
-@@ -856,14 +877,8 @@ kedit.moc: $(srcdir)/kedit.h
+@@ -858,11 +873,11 @@ mail.moc: $(srcdir)/mail.h
  #>+ 1
- mocs: kedit.moc
+ mocs: mail.moc
  #>+ 3
 -optiondialog.moc: $(srcdir)/optiondialog.h
 -	$(MOC) $(srcdir)/optiondialog.h -o optiondialog.moc
--
--#>+ 1
++ktextfiledlg.moc: $(srcdir)/ktextfiledlg.h
++	$(MOC) $(srcdir)/ktextfiledlg.h -o ktextfiledlg.moc
+ 
+ #>+ 1
 -mocs: optiondialog.moc
--#>+ 3
++mocs: ktextfiledlg.moc
+ #>+ 3
+ kedit.moc: $(srcdir)/kedit.h
+ 	$(MOC) $(srcdir)/kedit.h -o kedit.moc
+@@ -871,7 +886,7 @@ kedit.moc: $(srcdir)/kedit.h
+ mocs: kedit.moc
+ #>+ 3
  clean-metasources:
--	-rm -f  mail.moc ktextfiledlg.moc kedit.moc optiondialog.moc
+-	-rm -f  ktextfiledlg.moc mail.moc optiondialog.moc kedit.moc
 +	-rm -f  optiondialog.moc mail.moc ktextfiledlg.moc kedit.moc
  
  #>+ 2
  docs-am:
-@@ -876,33 +891,33 @@ force-reedit:
+@@ -884,33 +899,33 @@ force-reedit:
  
  
  #>+ 11
--kedit_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kedit.cpp $(srcdir)/ktextfiledlg.cpp $(srcdir)/mail.cpp $(srcdir)/optiondialog.cpp  mail.moc kedit.moc ktextfiledlg.moc optiondialog.moc
+-kedit_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kedit.cpp $(srcdir)/ktextfiledlg.cpp $(srcdir)/mail.cpp $(srcdir)/optiondialog.cpp  ktextfiledlg.moc mail.moc optiondialog.moc kedit.moc
 -	@echo 'creating kedit_la.all_cpp.cpp ...'; \
 -	rm -f kedit_la.all_cpp.files kedit_la.all_cpp.final; \
 -	echo "#define KDE_USE_FINAL 1" >> kedit_la.all_cpp.final; \
@@ -219,17 +229,20 @@ $NetBSD: patch-af,v 1.5 2003/07/30 14:24:50 markd Exp $
  #>+ 3
  cvs-clean:
  	$(MAKE) admindir=$(top_srcdir)/admin -f $(top_srcdir)/admin/Makefile.common cvs-clean
-@@ -913,10 +928,10 @@ kde-rpo-clean:
+@@ -920,11 +935,11 @@ kde-rpo-clean:
+ 	-rm -f *.rpo
  
  #>+ 9
+-kedit.o: kedit.moc 
+-ktextfiledlg.lo: ktextfiledlg.moc 
+-ktextfiledlg.o: ktextfiledlg.moc 
  optiondialog.o: optiondialog.moc 
--mail.o: mail.moc 
 +mail.lo: mail.moc 
  optiondialog.lo: optiondialog.moc 
-+mail.o: mail.moc 
- kedit.lo: kedit.moc 
--ktextfiledlg.lo: ktextfiledlg.moc 
- ktextfiledlg.o: ktextfiledlg.moc 
+-kedit.lo: kedit.moc 
+ mail.o: mail.moc 
 -mail.lo: mail.moc 
++kedit.lo: kedit.moc 
++ktextfiledlg.o: ktextfiledlg.moc 
 +ktextfiledlg.lo: ktextfiledlg.moc 
- kedit.o: kedit.moc 
++kedit.o: kedit.moc 
