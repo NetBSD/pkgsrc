@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1999/04/21 15:32:06 agc Exp $
+# $NetBSD: Makefile,v 1.6 1999/04/26 19:25:06 garbled Exp $
 # FreeBSD Id: Makefile,v 1.9 1997/03/08 05:00:11 gpalmer Exp
 #
 
@@ -13,6 +13,8 @@ HOMEPAGE=		http://www.amanda.org/
 DEPENDS+=		readline-2.2:../../devel/readline
 DEPENDS+=		gnuplot-3.7:../../graphics/gnuplot
 DEPENDS+=		amanda-common-2.4.1p1:../amanda-common
+
+USE_X11=		yes
 USE_PERL5=		yes
 
 .include "../../mk/bsd.prefs.mk"
