@@ -8,7 +8,6 @@ for f in `/usr/bin/find $WRKSRC -name Makefile`; do			   \
 	    -e 's/$(AR)/$(AR) cr/g'					   \
 	    -e 's/$(MV)/$(MV) -f/g'					   \
 	    -e 's/$(RM)/$(RM) -fr/g'					   \
-            -e 's/$(YACC) --debug/$(YACC)/g'			   	   \
 	    -e 's/$(LIB_DIR)\/libglobal.a/ -lglobal/g'	                   \
         < $f > $f.tmp && /bin/mv -f $f.tmp $f; 				   \
 done

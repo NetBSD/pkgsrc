@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/02/24 01:30:04 jtb Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/03/02 19:45:57 jtb Exp $
 bin/psf
 bin/tatd
 bin/tcm
@@ -26,7 +26,7 @@ bin/ttdt
 bin/ttut
 bin/tucd
 etc/tcm.conf
-lib/X11/app-defaults/TCM
+lib/X11/app-defaults/tcm
 man/man1/psf.1
 man/man1/tatd.1
 man/man1/tcm.1

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/02/24 02:11:20 jtb Exp $
+# $NetBSD: Makefile,v 1.3 2001/03/02 19:45:57 jtb Exp $
 
 DISTNAME=		tcm-2.01.src
 PKGNAME=		tcm-2.01
@@ -45,7 +45,7 @@ do-install:
 	${INSTALL_DATA} ${TCM_SRC}/lib/tcm.conf ${PREFIX}/etc
 
 	${INSTALL_DATA} ${TCM_SRC}/lib/TCM				\
-	${PREFIX}/lib/X11/app-defaults
+	${PREFIX}/lib/X11/app-defaults/tcm
 	@for f in ${TCM_SRC}/man/man1/*.1; do				\
 	i="${INSTALL_MAN} $$f ${PREFIX}/man/man1/";			\
 	${ECHO} $$i; $$i;						\
