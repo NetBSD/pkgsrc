@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.386 2005/04/01 13:37:02 abs Exp $
+# $NetBSD: Makefile,v 1.387 2005/04/01 13:45:57 abs Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -123,8 +123,8 @@ SUBDIR+=	iasp
 SUBDIR+=	ijb
 SUBDIR+=	instiki
 SUBDIR+=	jakarta-servletapi
-SUBDIR+=	jakarta-tomcat
 SUBDIR+=	jakarta-tomcat4
+SUBDIR+=	jakarta-tomcat5
 SUBDIR+=	jakarta-tomcat55
 SUBDIR+=	jsdk20
 SUBDIR+=	jssi
