@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/12/15 20:25:37 agc Exp $
+# $NetBSD: Makefile,v 1.9 2001/12/23 17:32:45 bjoern Exp $
 #
 
 DISTNAME=	tclX8.2.0
@@ -10,7 +10,7 @@ MAINTAINER=	jwise@netbsd.org
 HOMEPAGE=	http://www.neosoft.com/TclX/
 COMMENT=	Extended Tcl (TclX), a set of Tcl extensions for system programming
 
-DEPENDS+=	tk>=8.3.2:../../x11/tk
+DEPENDS+=	tk>=8.3.4:../../x11/tk
 DEPENDS+=	tcl-tclX-8.2.0:../../lang/tcl-tclX
 
 CONFLICTS+=	tclX-[0-9]*
@@ -21,8 +21,8 @@ CONFIGURE_ARGS+=	--enable-shared --with-tcl=${PREFIX}/lib \
 			--with-tk=${PREFIX}/lib
 
 CONFIGURE_ENV+=		\
-	PKGSRC_TCL_SRC_DIR="${_PKGSRCDIR}/lang/tcl/${WRKDIR:T}/tcl8.3.2" \
-	PKGSRC_TK_SRC_DIR="${_PKGSRCDIR}/x11/tk/${WRKDIR:T}/tk8.3.2"
+	PKGSRC_TCL_SRC_DIR="${_PKGSRCDIR}/lang/tcl/${WRKDIR:T}/tcl8.3.4" \
+	PKGSRC_TK_SRC_DIR="${_PKGSRCDIR}/x11/tk/${WRKDIR:T}/tk8.3.4"
 
 MAKE_ENV+=		GTAR=${GTAR} CHOWN=${CHOWN} CHMOD=${CHMOD} \
 			SHAREMODE=${SHAREMODE} SHAREOWN=${SHAREOWN} \
@@ -35,10 +35,10 @@ PATCHDIR=	${.CURDIR}/../../lang/tcl-tclX/patches
 
 post-extract:
 	${MV} ${WRKSRC}/../doc/Memory.n ${WRKSRC}/../doc/TclXMemory.n
-	@if [ ! -e ${_PKGSRCDIR}/lang/tcl/${WRKDIR:T}/tcl8.3.2 ]; then	\
+	@if [ ! -e ${_PKGSRCDIR}/lang/tcl/${WRKDIR:T}/tcl8.3.4 ]; then	\
 		cd ../../lang/tcl && ${MAKE} extract;			\
 	fi
-	@if [ ! -e ${_PKGSRCDIR}/x11/tk/${WRKDIR:T}/tk8.3.2 ]; then	\
+	@if [ ! -e ${_PKGSRCDIR}/x11/tk/${WRKDIR:T}/tk8.3.4 ]; then	\
 		cd ../../x11/tk && ${MAKE} extract;			\
 	fi
 
