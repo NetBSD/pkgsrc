@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2001/08/29 22:41:01 jlam Exp $
+$NetBSD: distinfo,v 1.5 2002/09/21 01:02:04 jlam Exp $
 
 SHA1 (snd.tar.gz) = cb48922170602f30553b604bda039974c1706b65
 Size (snd.tar.gz) = 735422 bytes
@@ -6,7 +6,7 @@ SHA1 (patch-aa) = 3aa0e5bcc54730628d220515919d8dbf11951c1a
 SHA1 (patch-ab) = de7027da166eda24e9f19c8ffc86192027e7eee1
 SHA1 (patch-ac) = d3073b7d102abcd05d7588b57eb8a053f20b74a7
 SHA1 (patch-ad) = 19a185e3e5a9800e56c904c06613b5d9645e6d17
-SHA1 (patch-ae) = 3366a8151ceab8a835e18417d61cb5d8a62d4bd0
+SHA1 (patch-ae) = f3968df5d034d5b3629aef8708cfff7e7a033fd9
 SHA1 (patch-af) = a8cf1931093397bcf88be08d36bd11efd9d4c161
 SHA1 (patch-ag) = 7a19ce85c0c45ef2844ca22bca74de9238aa3ad1
 SHA1 (patch-ah) = f744861a8736e4acf498a751b42708e0922d5ff2
