@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2003/02/18 19:16:55 drochner Exp $
+# $NetBSD: Makefile,v 1.18 2003/03/18 08:36:25 skrll Exp $
 #
 
 .include "../qt3-libs/Makefile.common"
@@ -16,14 +16,15 @@ ALL_TARGET=		sub-tools
 
 do-install:
 	${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/bin/uic ${QTPREFIX}/bin
-	${LIBTOOL} ${INSTALL_DATA} ${WRKSRC}/lib/libqui.la ${QTPREFIX}/lib
-	${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/bin/designer ${QTPREFIX}/bin
+	${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/lib/libqui.la ${QTPREFIX}/lib
 	${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/lib/libeditor.la ${QTPREFIX}/lib
+	${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/bin/designer ${QTPREFIX}/bin
 	${INSTALL_DATA_DIR} ${QTPREFIX}/plugins/designer
 	${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/plugins/designer/libwizards.la ${QTPREFIX}/plugins/designer
 	${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/plugins/designer/libcppeditor.la ${QTPREFIX}/plugins/designer
 	${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/plugins/designer/libdlgplugin.la ${QTPREFIX}/plugins/designer
 	${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/plugins/designer/librcplugin.la ${QTPREFIX}/plugins/designer
+	${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/plugins/designer/libkdevdlgplugin.la ${QTPREFIX}/plugins/designer
 	${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/bin/assistant ${QTPREFIX}/bin
 	${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/bin/linguist ${QTPREFIX}/bin
 	${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/bin/qm2ts ${QTPREFIX}/bin
