@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2000/11/01 16:03:26 itojun Exp $
+# $NetBSD: Makefile,v 1.14 2000/11/01 16:08:02 itojun Exp $
 
 DISTNAME=		suse_base-6.3
 CATEGORIES=		emulators
@@ -15,12 +15,6 @@ ONLY_FOR_PLATFORM=	NetBSD-*-i386
 
 EXTRACT_ONLY=		# empty
 PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
-USE_LIBINTL=		yes
-.if exists(/usr/include/libintl.h)
-LIBINTL=		-lintl
-.else
-LIBINTL=		-L${LOCALBASE} -lintl
-.endif
 
 # Careful!  The ncurses-p1.rpm file doesn't come from SuSE, quite.
 # It's been rebuilt to use seteuid() where an ill-advised SuSE patch
@@ -35,6 +29,14 @@ RPMIGNOREPATH=		tmp usr/tmp var
 
 LINUX_LDD=		${PREFIX}/${EMULSUBDIR}/usr/bin/ldd
 RPMLIB=			${LOCALBASE}/lib/librpm.a
+
+# librpm.a needs libintl.a
+USE_LIBINTL=		yes
+.if exists(/usr/include/libintl.h)
+LIBINTL=		-lintl
+.else
+LIBINTL=		-L${LOCALBASE} -lintl
+.endif
 
 do-build:
 	${CC} ${FILESDIR}/rpm2pkg.c ${CFLAGS} -I${PREFIX}/include/rpm \
