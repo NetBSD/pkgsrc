@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 1999/02/19 23:07:20 tron Exp $
+@comment $NetBSD: PLIST,v 1.15 1999/02/21 15:44:14 tron Exp $
 bin/kappfinder
 bin/kappfinder_restart
 bin/kcmkpanel
@@ -82,9 +82,6 @@ share/kde/apps/kdm/pics/users/root2.xpm
 share/kde/apps/kdisplay/color-schemes/BeOS.kcsrc
 share/kde/apps/kdisplay/color-schemes/Pumpkin.kcsrc
 share/kde/apps/kdisplay/color-schemes/Storm.kcsrc
-share/kde/apps/kdisknav/Root.kdelnk
-share/kde/apps/kdisknav/KDE.kdelnk
-share/kde/apps/kdisknav/CD-ROM.kdelnk
 share/kde/apps/kcmlocale/pics/flag_is.gif
 share/kde/apps/kcmlocale/pics/flag_eo.gif
 share/kde/apps/kcmlocale/pics/flag_mk.gif
@@ -1546,7 +1543,6 @@ share/kde/wallpapers/wind_chill.jpg
 @dirrm share/kde/apps/kdisplay/color-schemes
 @dirrm share/kde/apps/kdisplay/app-defaults
 @dirrm share/kde/apps/kdisplay
-@dirrm share/kde/apps/kdisknav
 @dirrm share/kde/apps/kcontrol/pics
 @dirrm share/kde/apps/kcontrol
 @dirrm share/kde/apps/kcmlocale/pics
