@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST.pam,v 1.1 2004/01/12 03:33:04 jlam Exp $
-lib/security/pam_smbpass.so
-lib/security/pam_winbind.so
-share/doc/samba/README.pam_smbpass
-share/examples/samba/pam_smbpass/kdc-pdc
-share/examples/samba/pam_smbpass/password-mature
-share/examples/samba/pam_smbpass/password-migration
-share/examples/samba/pam_smbpass/password-sync
-@dirrm share/examples/samba/pam_smbpass

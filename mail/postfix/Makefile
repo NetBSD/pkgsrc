@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.144 2004/07/29 10:15:38 martti Exp $
+# $NetBSD: Makefile,v 1.145 2004/07/30 21:05:41 jlam Exp $
 
 DISTNAME=	postfix-2.1.4
 CATEGORIES=	mail
@@ -42,9 +42,7 @@ CCARGS+=	-DDEF_MAILQ_PATH=\"${PREFIX}/bin/mailq\"
 CCARGS+=	-DDEF_NEWALIAS_PATH=\"${PREFIX}/bin/newaliases\"
 
 # Makefile.options appends to CCARGS and AUXLIBS the options needed to
-# build Postfix with support for various add-on modules.  It also defines
-# _POSTFIX_OPTIONS, which is POSTFIX_OPTIONS filtered to only contain
-# supported modules.
+# build Postfix with support for various add-on modules.
 #
 .include "Makefile.options"
 
@@ -85,7 +83,7 @@ CONF_FILES_PERMS+=	${EXAMPLEDIR}/${_file_} ${PKG_SYSCONFDIR}/${_file_} \
 			${ROOT_USER} ${ROOT_GROUP} 755
 .endfor
 .undef _file_
-.if !empty(_POSTFIX_OPTIONS:Msasl)
+.if !empty(PKG_OPTIONS:Msasl)
 MAKE_DIRS+=		${SASLLIBDIR}
 CONF_FILES+=		${EXAMPLEDIR}/smtpd.conf ${SASLLIBDIR}/smtpd.conf
 .endif
@@ -108,7 +106,7 @@ do-configure:
 post-build:
 	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/mailer.conf		\
 		> ${WRKDIR}/mailer.conf
-.if !empty(_POSTFIX_OPTIONS:Msasl)
+.if !empty(PKG_OPTIONS:Msasl)
 	${ECHO} "pwcheck_method: ${PWCHECK_METHOD}" > ${WRKDIR}/smtpd.conf
 .endif
 
@@ -121,7 +119,7 @@ do-install:
 	${INSTALL_DATA_DIR} ${EXAMPLEDIR}
 	${INSTALL_DATA_DIR} ${DOCDIR}
 	-${RM} -f ${WRKSRC}/conf/*.orig
-.if !empty(_POSTFIX_OPTIONS:Msasl)
+.if !empty(PKG_OPTIONS:Msasl)
 	${INSTALL_DATA} ${WRKDIR}/smtpd.conf ${EXAMPLEDIR}
 .endif
 	@for i in ${POSTFIX_EXAMPLE_FILES}; do				\
