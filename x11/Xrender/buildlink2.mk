@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.11 2004/02/16 12:43:06 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.12 2004/02/16 21:03:14 jlam Exp $
 
 .if !defined(XRENDER_BUILDLINK2_MK)
 XRENDER_BUILDLINK2_MK=	# defined
@@ -116,9 +116,6 @@ _NEED_XRENDER=	YES
 _NEED_XRENDER=	NO
 .endif
 
-BUILDLINK_FILES.Xrender=	include/X11/extensions/Xrender.h
-BUILDLINK_FILES.Xrender+=	lib/libXrender.*
-
 .if ${_NEED_XRENDER} == "YES"
 BUILDLINK_PACKAGES+=			Xrender
 EVAL_PREFIX+=	BUILDLINK_PREFIX.Xrender=Xrender
@@ -131,11 +128,14 @@ BUILDLINK_DEPENDS.Xrender=	Xrender>=0.8.2
 BUILDLINK_DEPENDS.render=	render>=0.8
 .else
 BUILDLINK_PREFIX.Xrender=	${X11BASE}
+.endif
+
+BUILDLINK_FILES.Xrender=	include/X11/extensions/Xrender.h
 BUILDLINK_FILES.Xrender+=	include/X11/extensions/extutil.h
 BUILDLINK_FILES.Xrender+=	include/X11/extensions/region.h
 BUILDLINK_FILES.Xrender+=	include/X11/extensions/render.h
 BUILDLINK_FILES.Xrender+=	include/X11/extensions/renderproto.h
-.endif
+BUILDLINK_FILES.Xrender+=	lib/libXrender.*
 
 USE_X11=	yes
 
