@@ -1,0 +1,31 @@
+$NetBSD: patch-aa,v 1.1 2001/06/26 10:00:05 zuntum Exp $
+
+--- Makefile.orig	Tue May 22 12:51:09 2001
++++ Makefile
+@@ -1,19 +1,18 @@
+ PROG=apla
+ 
+ LOCALBASE?=/usr/pkg
+-X11BASE?=/usr/X11R6
+ CC=${CXX}
+ 
++AVIFILE_CONFIG?=${LOCALBASE}/bin/avifile-config
++SDL_CONFIG?=${LOCALBASE}/bin/sdl-config
++
+ CFLAGS+=
+ 
+-CPPFLAGS+=`${LOCALBASE}/bin/avifile-config --cflags`			\
+-	`${LOCALBASE}/bin/sdl-config --cflags`				\
+-	-I${LOCALBASE}/include						\
++CPPFLAGS+=`${AVIFILE_CONFIG} --cflags`					\
++	`${SDL_CONFIG} --cflags`					\
+ 	'-DX11BASE="${X11BASE}"'
+-LDFLAGS=`${LOCALBASE}/bin/avifile-config --libs`			\
+-	`${LOCALBASE}/bin/sdl-config --libs`				\
+-	-L${X11BASE}/lib -Wl,-R${X11BASE}/lib				\
+-	-L${LOCALBASE}/lib -Wl,-R${LOCALBASE}/lib			\
++LDFLAGS+=`${AVIFILE_CONFIG} --libs`					\
++	`${SDL_CONFIG} --libs`						\
+ 	-lSDL_ttf -lttf -liconv -li386
+ SRCS=main.cc cmdline.cc help.cc text.cc					\
+ 	${FONTLIBSRCS}
