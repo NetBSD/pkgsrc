@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.71 2002/12/16 18:08:00 tron Exp $
+$NetBSD: TODO,v 1.72 2002/12/16 22:20:34 wiz Exp $
 
 Suggested new packages
 ======================
@@ -133,7 +133,6 @@ Suggested package updates
 	o gnustep-1.5.1
 	o gnustep-gui-0.8.3
 	o gphoto-2.1.1
-	o gqview-1.2.0
 	o grub-0.93
 	o gtkmm-2.1.0
 	o guile-1.6.1
