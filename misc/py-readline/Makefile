@@ -1,37 +1,23 @@
-# $NetBSD: Makefile,v 1.12 2000/08/21 21:01:32 hubertf Exp $
+# $NetBSD: Makefile,v 1.13 2000/10/22 20:01:50 tsarna Exp $
 #
 
-DISTNAME=	py152
-PKGNAME=	py-readline-1.5.2
-WRKSRC=		${WRKDIR}/Python-1.5.2/Modules
+DISTNAME=	${PY_DISTNAME}
+PKGNAME=	py-readline-${PY_VERSION}
+WRKSRC=		${PY_WRKSRC}
 CATEGORIES=	misc
-MASTER_SITES=	ftp://ftp.python.org/pub/python/src/
-EXTRACT_SUFX=	.tgz
+MASTER_SITES=	${PY_MASTER_SITES}
 
 MAINTAINER=	tsarna@netbsd.org
 HOMEPAGE=	http://www.python.org/doc/tut/interacting.html
 
-DEPENDS+=	python-1.5.2:../../lang/python
 DEPENDS+=	readline>=4.0:../../devel/readline
 
-DIST_SUBDIR=	python
-ALL_TARGET=	default
-EXTRACT_ELEMENTS=	Python-1.5.2/Modules/readline.c
+EXTRACT_ELEMENTS=	${PY_MODULES}/readline.c
 
-PYTHON_CONFIGDIR=	${LOCALBASE}/lib/python1.5/config
-
-.if ${MACHINE_ARCH} == "sparc64"
-IGNORE="${PKGNAME} needs dynamic loading"
-.endif
-
-do-configure:
-	${SED} 's%@LOCALBASE@%${LOCALBASE}%g' ${FILESDIR}/Setup.in \
-	 >${WRKSRC}/Setup.in
-	(cd ${WRKSRC}; \
-	 ${LN} -s ${PYTHON_CONFIGDIR}/Makefile.pre.in; \
-	 ${MAKE} -f Makefile.pre.in boot)
+do-configure:	python-std-do-configure
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/readline.so ${LOCALBASE}/lib/python1.5/lib-dynload
+	${INSTALL_DATA} ${WRKSRC}/readline.so ${PY_LIBDIR}/lib-dynload
 
+.include "../../lang/python/Makefile.inc"
 .include "../../mk/bsd.pkg.mk"

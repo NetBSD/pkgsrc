@@ -1,34 +1,23 @@
-# $NetBSD: Makefile,v 1.10 2000/08/21 21:01:30 hubertf Exp $
+# $NetBSD: Makefile,v 1.11 2000/10/22 20:01:52 tsarna Exp $
 #
 
-DISTNAME=	cursesmodule-1.5b1
-PKGNAME=	py-curses-1.5b1
+DISTNAME=	${PY_DISTNAME}
+PKGNAME=	py-curses-${PY_VERSION}
+WRKSRC=		${PY_WRKSRC}
 CATEGORIES=	devel
-MASTER_SITES=	ftp://starship.skyport.net/pub/crew/andrich/Unsupported/
+MASTER_SITES=	${PY_MASTER_SITES}
 
 MAINTAINER=	tsarna@netbsd.org
-HOMEPAGE=	http://starship.skyport.net/crew/amk/howto/curses/curses.html
+HOMEPAGE=	http://www.python.org/doc/current/lib/module-curses.html
 
-DEPENDS+=	python-1.5.2:../../lang/python
-DEPENDS+=       ncurses>=4.2:../../devel/ncurses
+DEPENDS+=	ncurses>=4.2:../../devel/ncurses
 
-WRKSRC=		${WRKDIR}/cursesmodule
-ALL_TARGET=	default
+EXTRACT_ELEMENTS=	${PY_MODULES}/_cursesmodule.c
 
-PYTHON_CONFIGDIR=	${LOCALBASE}/lib/python1.5/config/
-
-.if ${MACHINE_ARCH} == "sparc64"
-IGNORE="${PKGNAME} needs dynamic loading"
-.endif
-
-do-configure:
-	${SED} -e 's%@LOCALBASE@%${LOCALBASE}%g' \
-	 ${FILESDIR}/Setup.in \
-	 >${WRKSRC}/Setup.in
-	( cd ${WRKSRC} ;\
-	  ${MAKE} -f Makefile.pre.in boot)
+do-configure:	python-std-do-configure
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/cursesmodule.so ${LOCALBASE}/lib/python1.5/lib-dynload
+	${INSTALL_DATA} ${WRKSRC}/_cursesmodule.so ${PY_LIBDIR}/lib-dynload
 
+.include "../../lang/python/Makefile.inc"
 .include "../../mk/bsd.pkg.mk"

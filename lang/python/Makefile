@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.18 2000/01/09 01:19:11 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2000/10/22 20:01:48 tsarna Exp $
 #
 
-DISTNAME=	py152
-PKGNAME=	python-1.5.2
+DISTNAME=	BeOpen-Python-2.0
+PKGNAME=	python-2.0
 CATEGORIES=	lang
-MASTER_SITES=	ftp://ftp.python.org/pub/python/src/
-EXTRACT_SUFX=	.tgz
+MASTER_SITES=	http://www.pythonlabs.com/products/python2.0/downloads/
 
 MAINTAINER=	tsarna@netbsd.org
 HOMEPAGE=	http://www.python.org/
@@ -14,14 +13,20 @@ PLIST_SRC=	${WRKDIR}/.PLIST_SRC
 
 DIST_SUBDIR=	python
 
-WRKSRC=		${WRKDIR}/Python-1.5.2
+WRKSRC=		${WRKDIR}/Python-2.0
 GNU_CONFIGURE=	yes
+CONFIGURE_ARGS+=	--without-threads
 
 # Make sure having environment variable OPT doesn't affect the
 # installed module-building Makefile
 MAKE_ENV+=	'OPT=${CFLAGS}'
 CONFIGURE_ENV+=	'OPT=${CFLAGS}'
 SCRIPTS_ENV+=	'OPT=${CFLAGS}'
+
+# If Building on NetBSD 1.5, include SSL support
+.if exists(/usr/include/openssl/ssl.h)
+SSLFLAGS=	-DUSE_SSL -I/usr/include/openssl -lssl -lcrypto
+.endif
 
 # Handle the module setup file:
 #   - disable a few broken modules on 64 bit platforms (nothing important)
@@ -40,23 +45,33 @@ ZOULARIS?=	${PREFIX}/bsd
 MODADD=		-I${ZOULARIS}/include -L${ZOULARIS}/lib -R${ZOULARIS}/lib
 .endif
 
-post-configure:
+pre-configure:
 	${SED}  -e 's,@NO64BIT@,${NO64BIT},g' \
 		-e 's,@NOSHARED@,${NOSHARED},g' \
 		-e 's,@MODADD@,${MODADD},g' \
-		${FILESDIR}/Setup >${WRKSRC}/Modules/Setup
+		-e 's,@SSLFLAGS@,${SSLFLAGS},g' \
+		${FILESDIR}/Setup.in >${WRKSRC}/Modules/Setup.in
+	${SED}  -e 's,@NO64BIT@,${NO64BIT},g' \
+		-e 's,@NOSHARED@,${NOSHARED},g' \
+		-e 's,@MODADD@,${MODADD},g' \
+		${FILESDIR}/Setup.config.in >${WRKSRC}/Modules/Setup.config.in
 
 post-install:
 	${CAT} ${PKGDIR}/PLIST.pre >${PLIST_SRC}
-	(cd ${PREFIX}; ${FIND} lib/python1.5 -type f -print >>${PLIST_SRC})
-	(cd ${PREFIX}; ${FIND} include/python1.5 -type f -print \
+	(cd ${PREFIX}; ${FIND} lib/python2.0 -type f -print | \
+		${GREP} -v site-packages >>${PLIST_SRC})
+	${ECHO} lib/python2.0/site-packages/README >>${PLIST_SRC}
+	(cd ${PREFIX}; ${FIND} include/python2.0 -type f -print \
 		>>${PLIST_SRC})
-	(cd ${PREFIX}; ${FIND} -d include/python1.5 -type d -print | \
+	(cd ${PREFIX}; ${FIND} -d include/python2.0 -type d -print | \
 		${SED} -e "s/^/@dirrm /" >>${PLIST_SRC})
-	${ECHO} "@unexec ${RM} -rf %D/lib/python1.5" >>${PLIST_SRC}
+	(cd ${PREFIX}; ${FIND} -d lib/python2.0 -type d -print | \
+		${GREP} -v site-packages | tee /tmp/x | \
+		${GREP} -vx lib/python2.0 | tee /tmp/y | \
+		${SED} -e "s/^/@dirrm /" >>${PLIST_SRC})
 	# Reinstall Python binary to get it stripped
-	${RM} ${PREFIX}/bin/python ${PREFIX}/bin/python1.5
-	${INSTALL_PROGRAM} ${WRKSRC}/python ${PREFIX}/bin
-	${LN} ${PREFIX}/bin/python ${PREFIX}/bin/python1.5
+	${RM} ${PREFIX}/bin/python2.0 ${PREFIX}/bin/python
+	${INSTALL_PROGRAM} ${WRKSRC}/python ${PREFIX}/bin/python2.0
+	${LN} ${PREFIX}/bin/python2.0 ${PREFIX}/bin/python
 
 .include "../../mk/bsd.pkg.mk"

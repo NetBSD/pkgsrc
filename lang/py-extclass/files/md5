@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.4 2000/07/28 16:40:18 tsarna Exp $
+$NetBSD: md5,v 1.5 2000/10/22 20:01:53 tsarna Exp $
 
-MD5 (Zope-2.2.0-src.tgz) = e9a66aa64a75317ff6cefe3d3dce6286
+MD5 (python/Zope-2.2.2-src.tgz) = 83c8197f18bf97ad62bf2c5e424e2b82

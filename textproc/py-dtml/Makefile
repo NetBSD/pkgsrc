@@ -1,22 +1,18 @@
-# $NetBSD: Makefile,v 1.6 2000/09/05 17:11:20 jdolecek Exp $
+# $NetBSD: Makefile,v 1.7 2000/10/22 20:01:54 tsarna Exp $
 #
 
-DISTNAME=	Zope-2.2.0-src
-PKGNAME=	py-dtml-2.2.0
+DISTNAME=	Zope-2.2.2-src
+PKGNAME=	py-dtml-2.2.2
 CATEGORIES=	textproc
-MASTER_SITES=   http://www.zope.org/Products/Zope/2.2.0/
+MASTER_SITES=   http://www.zope.org/Products/Zope/2.2.2/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	tsarna@netbsd.org
 HOMEPAGE=	http://www.zope.org/Documentation/Guides/DTML-HTML/DTML.html
 
-DEPENDS+=	py-extclass-2.2.*:../../lang/py-extclass
+DEPENDS+=	py-extclass>=2.2.2:../../lang/py-extclass
 
-ALL_TARGET=	default
 PLIST_SRC=	${WRKDIR}/.PLIST_SRC
-SITE_PKG=		lib/python1.5/site-packages
-PYTHON_LIBDIR=		${LOCALBASE}/${SITE_PKG}
-PYTHON_CONFIGDIR=	${LOCALBASE}/lib/python1.5/config
 EXTRACT_ELEMENTS=	${DISTNAME}/lib/python/DocumentTemplate \
 			${DISTNAME}/lib/python/StructuredText \
 			${DISTNAME}/lib/python/ts_regex.py
@@ -25,23 +21,25 @@ WRKSRC=		${WRKDIR}/${DISTNAME}/lib/python/DocumentTemplate
 
 do-configure:
 	( cd ${WRKSRC} ;\
-	  ${CP} ${PYTHON_CONFIGDIR}/Makefile.pre.in . ;\
+	  ${CP} ${PY_CONFIGDIR}/Makefile.pre.in . ;\
 	  ${MAKE} -f Makefile.pre.in boot)
 
 post-build:
 	(cd ${WRKSRC}; make clean; ${RM} Makefile* sedscript release.* *.c)
-	(cd ${WRKSRC}/..; ${LOCALBASE}/bin/python ${PREFIX}/lib/python1.5/compileall.py .)
-	(cd ${WRKSRC}/..; ${LOCALBASE}/bin/python -O ${PREFIX}/lib/python1.5/compileall.py .)
+	(cd ${WRKSRC}/..; ${PY_PROG} ${PY_LIBDIR}/compileall.py .)
+	(cd ${WRKSRC}/..; ${PY_PROG} -O ${PY_LIBDIR}/compileall.py .)
 
 do-install:
-	${INSTALL_SCRIPT_DIR} ${PYTHON_LIBDIR}
+	${INSTALL_SCRIPT_DIR} ${PY_SITEPKG}
 	${CAT} ${PKGDIR}/PLIST.pre >${PLIST_SRC}
-	(cd ${WRKSRC}/..; ${PAX} -r -w -v -p p . ${PYTHON_LIBDIR})
-	(cd ${PREFIX}; ${FIND} ${SITE_PKG}/DocumentTemplate \
-		${SITE_PKG}/StructuredText \
+	(cd ${WRKSRC}/..; ${PAX} -r -w -v -p p . ${PY_SITEPKG})
+	(cd ${PREFIX}; ${FIND} ${PY_SITEPATH}/DocumentTemplate \
+		${PY_SITEPATH}/StructuredText \
 		-type f -print >>${PLIST_SRC})
-	(cd ${PREFIX}; ${FIND} -d ${SITE_PKG}/DocumentTemplate \
-		${SITE_PKG}/StructuredText \
+	(cd ${PREFIX}; ${FIND} -d ${PY_SITEPATH}/DocumentTemplate \
+		${PY_SITEPATH}/StructuredText \
 		-type d -print | ${SED} -e "s/^/@dirrm /" >>${PLIST_SRC})
 
+.include "../../lang/python/Makefile.inc"
 .include "../../mk/bsd.pkg.mk"
+
