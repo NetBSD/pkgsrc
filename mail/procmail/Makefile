@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2003/11/03 22:43:38 kim Exp $
+# $NetBSD: Makefile,v 1.33 2004/01/05 12:01:14 jlam Exp $
 #
 
 DISTNAME=	procmail-3.22
@@ -9,7 +9,9 @@ MAINTAINER=	kim@tac.nyc.ny.us
 HOMEPAGE=	http://www.procmail.org/
 COMMENT=	Local mail delivery agent
 
-USE_BUILDLINK2=	YES
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+USE_BUILDLINK3=	YES
 MAKE_ENV+=	SHELL=${SH} CHMOD=${CHMOD}
 INSTALL_TARGET=	install-suid install.man
 
@@ -29,7 +31,7 @@ pre-configure:
 	>> ${WRKSRC}/config.h
 	${ECHO} "#define ETCRCS \"${PKG_SYSCONFDIR}/procmailrcs/\""	\
 	>> ${WRKSRC}/config.h
-.ifdef(PROCMAIL_MAILSPOOLHOME)
+.if defined(PROCMAIL_MAILSPOOLHOME)
 	${ECHO} "#define MAILSPOOLHOME \"/${PROCMAIL_MAILSPOOLHOME}\""	\
 	>> ${WRKSRC}/src/authenticate.h
 .endif

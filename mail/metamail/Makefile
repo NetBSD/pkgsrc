@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2003/10/19 21:05:35 bouyer Exp $
+# $NetBSD: Makefile,v 1.23 2004/01/05 12:00:10 jlam Exp $
 
 DISTNAME=	mm2.7
 PKGNAME=	metamail-2.7
@@ -13,7 +13,9 @@ COMMENT=	Implementation of MIME, the Multipurpose Internet Mail Extensions
 
 CONFLICTS+=	elm>=2.5.5 mm-2.7
 
-USE_BUILDLINK2=		YES
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
 USE_X11=		YES
 
@@ -23,10 +25,12 @@ MAKE_ENV+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
 EGDIR=		${PREFIX}/share/examples/metamail
 CONF_FILES=	${EGDIR}/mailcap ${PKG_SYSCONFDIR}/mailcap
 
+INSTALLATION_DIRS=	bin man/man1 man/man4
+
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "SunOS"
-CFLAGS+=		-DSYSV
+CFLAGS+=	-DSYSV
 .endif
 
 post-patch:
