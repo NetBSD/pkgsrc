@@ -1,0 +1,113 @@
+$NetBSD: patch-ai,v 1.1.2.2 2003/04/06 20:58:25 grant Exp $
+
+Fixes potential remote buffer overflows.  See the following url for more
+details:  http://securityfocus.com/archive/1/315057
+
+Patch by caf@guarana.org.
+
+--- source/misc.c.orig	2002-03-24 10:31:07.000000000 +0100
++++ source/misc.c	2003-03-29 21:44:37.000000000 +0100
+@@ -3110,42 +3110,47 @@
+ 	static char result[IRCD_BUFFER_SIZE/4 + 1];
+ 	char temphost[BIG_BUFFER_SIZE + 1];
+ 	char *host;
++	char *atsign;
+ 
+ 	if (!hostname)
+ 		return NULL;
+-	host = temphost;
+-	*result = 0;
+-	memset(result, 0, sizeof(result));
+-	memset(temphost, 0, sizeof(temphost));
+-	if (strchr(hostname, '@'))
+-	{
+-		if (*hostname == '~')
+-			hostname++;
+-		strcpy(result, hostname);
+-		*strchr(result, '@') = '\0';
+-		if (strlen(result) > 9)
+-		{
++
++	atsign = strchr(hostname, '@');
++	if (atsign) {
++		if (*hostname == '~') {
++			strcpy(result, "~*@");
++		} else {
++			size_t ident_len = atsign - hostname;
++			
++			if (ident_len <= 9) {
++				/* copy ident@ */
++				strmcpy(result, hostname, ident_len + 1);
++			} else {
++				strmcpy(result, hostname, 8);
+ 			result[8] = '*';
+-			result[9] = '\0';
++				result[9] = '@';
++				result[10] = '\0';
+ 		}
+-		strcat(result, "@");
+-		if (!(hostname = strchr(hostname, '@')))
+-			return NULL;
+-		hostname++;
+ 	}
+-	strcpy(host, hostname);
++		hostname = atsign + 1;
++	} else {
++		*result = 0;
++	}
+ 
+-	if (*host && isdigit(*(host + strlen(host) - 1)))
++	strlcpy(temphost, hostname, sizeof temphost);
++	host = temphost;
++
++	if (*host && isdigit((unsigned char)*(host + strlen(host) - 1)))
+ 	{
+ 		/* Thanks icebreak for this small patch which fixes this function */
+                 int i;
+                 char *tmp;
+-                char count=0;
++                char count = 0;
+ 
+                 tmp = host;
+-                while((tmp-host)<strlen(host))
++                while((tmp - host) < strlen(host))
+                 {
+-	                if((tmp=strchr(tmp,'.'))==NULL) 
++	                if((tmp = strchr(tmp,'.')) == NULL) 
+ 				break;
+         	        count++;
+                 	tmp++;
+@@ -3154,8 +3159,8 @@
+                 for (i = 0; i < count; i++)
+                         tmp = strchr(tmp, '.') + 1;
+                 *tmp = '\0';
+-                strcat(result, host);
+-                strcat(result, "*");
++                strlcat(result, host, sizeof result);
++                strlcat(result, "*", sizeof result);
+ 	}
+ 	else
+ 	{
+@@ -3177,17 +3182,18 @@
+ 			else
+ 				return (char *) NULL;
+ 		}
++		
++		/* We don't need strlcat for these first two, because
++		 * at this point the maximum length of the string in
++		 * result is 10 */
+ 		strcat(result, "*");
+ 		if (my_stricmp(host, temphost))
+ 			strcat(result, ".");
+-		strcat(result, host);
++		strlcat(result, host, sizeof result);
+ 	}
+ 	return result;
+ }
+ 
+-
+-
+-
+ struct _sock_manager
+ {
+ 	int init;
