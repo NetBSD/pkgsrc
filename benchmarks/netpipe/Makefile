@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2004/07/30 15:50:38 minskim Exp $
+# $NetBSD: Makefile,v 1.5 2004/10/28 16:53:03 wiz Exp $
 
-DISTNAME=	netpipe-2.4
+DISTNAME=	NetPIPE_2.4
+PKGNAME=	netpipe-2.4
 CATEGORIES=	benchmarks net
-MASTER_SITES=	ftp://ftp.scl.ameslab.gov/pub/netpipe/
+MASTER_SITES=	http://www.scl.ameslab.gov/netpipe/code/
 
 MAINTAINER=	thorpej@NetBSD.org
 HOMEPAGE=	http://www.scl.ameslab.gov/netpipe/
