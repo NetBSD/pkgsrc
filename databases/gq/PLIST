@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:11:43 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/09/04 12:57:24 xtraeme Exp $
 bin/gq
 share/gnome/apps/Internet/gq.desktop
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gq.mo
 share/pixmaps/gq/bomb.xpm
 share/pixmaps/gq/line.xpm
 share/pixmaps/gq/logo.xpm
