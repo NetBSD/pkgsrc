@@ -1,42 +1,13 @@
-$NetBSD: patch-ae,v 1.6 2001/12/25 14:48:39 wiz Exp $
+$NetBSD: patch-ae,v 1.7 2002/10/03 02:06:32 seb Exp $
 
---- info/terminal.c.orig	Mon Sep 20 14:28:54 1999
-+++ info/terminal.c
-@@ -32,13 +32,17 @@
- #ifdef HAVE_NCURSES_TERMCAP_H
- #include <ncurses/termcap.h>
- #else
--#ifdef HAVE_TERMCAP_H
-+#if defined(HAVE_TERMCAP_H) && !defined(__NetBSD__)
- #include <termcap.h>
- #else
- /* On Solaris2, sys/types.h #includes sys/reg.h, which #defines PC.
-    Unfortunately, PC is a global variable used by the termcap library. */
- #undef PC
+--- makeinfo/Makefile.am.orig	Fri Mar  8 20:43:31 2002
++++ makeinfo/Makefile.am
+@@ -12,7 +12,7 @@
  
-+#if defined(__NetBSD__)
-+#include <termcap.h>
-+#endif
-+
- /* Termcap requires these variables, whether we access them or not. */
- char *BC, *UP;
- char PC;      /* Pad character */
-@@ -116,12 +120,18 @@
- /* Although I can't find any documentation that says this is supposed to
-    return its argument, all the code I've looked at (termutils, less)
-    does so, so fine.  */
-+#ifdef __NetBSD__
-+void
-+#else
- static int
-+#endif
- output_character_function (c)
-      int c;
- {
-   putc (c, stdout);
-+#ifndef __NetBSD__
-   return c;
-+#endif
- }
+ bin_PROGRAMS = makeinfo
  
- /* Macro to send STRING to the terminal. */
+-localedir = $(datadir)/locale
++localedir = $(PKGLOCALEDIR)
+ INCLUDES = -I$(top_srcdir)/lib -I../intl -DLOCALEDIR=\"$(localedir)\"
+ LDADD = ../lib/libtxi.a @LIBINTL@
+ 

@@ -1,13 +1,13 @@
-$NetBSD: patch-ag,v 1.6 2001/12/25 14:48:39 wiz Exp $
+$NetBSD: patch-ag,v 1.7 2002/10/03 02:06:32 seb Exp $
 
---- configure.orig	Tue Sep 28 21:39:56 1999
-+++ configure
-@@ -4019,7 +4019,7 @@
- 		 USE_INCLUDED_LIBINTL=yes
- 		 CATOBJEXT=.cat
- 		 INSTOBJEXT=.cat
--		 DATADIRNAME=lib
-+		 DATADIRNAME=${PKGLOCALEDIR}
- 		 INTLDEPS='$(top_builddir)/intl/libintl.a'
- 		 INTLLIBS=$INTLDEPS
- 		 LIBS=`echo $LIBS | sed -e 's/-lintl//'`
+--- util/Makefile.am.orig	Fri Mar  8 20:44:13 2002
++++ util/Makefile.am
+@@ -13,7 +13,7 @@
+ bin_PROGRAMS = install-info texindex
+ bin_SCRIPTS = texi2dvi
+ 
+-localedir = $(datadir)/locale
++localedir = $(PKGLOCALEDIR)
+ INCLUDES = -I$(top_srcdir)/lib -I../intl -DLOCALEDIR=\"$(localedir)\"
+ LDADD = ../lib/libtxi.a @LIBINTL@
+ 
