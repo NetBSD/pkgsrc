@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2000/09/05 09:33:15 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2000/10/15 11:35:53 rh Exp $
 
 DISTNAME=	glx-20000813
 PKGNAME=	Mesa-${DISTNAME}
@@ -17,15 +17,25 @@ BUILD_DEPENDS+=	${AUTOCONF}:../../devel/autoconf
 BUILD_DEPENDS+=	${TCLSH}:../../lang/tcl
 
 CONFLICTS+=		Mesa-*
+CONFLICTS+=		MesaLib-*
+CONFLICTS+=		glu-*
+CONFLICTS+=		glut-*
 ONLY_FOR_PLATFORM=	NetBSD-*-i386
 
-GNU_CONFIGURE=		# defined
-USE_GMAKE=		# defined
-USE_LIBTOOL=		# defined
-USE_X11BASE=		# defined
+GNU_CONFIGURE=		yes
+USE_GMAKE=		yes
+USE_LIBTOOL=		yes
+USE_X11BASE=		yes
+CHECK_MESA=		yes
 CONFIGURE_ARGS+=	--enable-static --with-mesa=${MESA_WRKSRC}
 CONFIGURE_ARGS+=	--with-moduledir=${PREFIX}/lib/modules
 CONFIGURE_ENV+=		TCLSH=${TCLSH}
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${HAVE_BUILTIN_MESA} != "NO"
+IGNORE=			"Mesa-glx has already been installed as part of XFree86-4.x"
+.endif
 
 AUTOCONF=	${LOCALBASE}/bin/autoconf
 WRKSRCDIRS=	${MESA_WRKSRC} ${WRKSRC} ${WRKSRC}/docs
