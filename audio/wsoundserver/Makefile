@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2002/03/13 17:36:38 fredb Exp $
+# $NetBSD: Makefile,v 1.12 2002/08/31 03:00:07 wiz Exp $
 #
 
 DISTNAME=	WSoundServer-0.4.0
@@ -11,8 +11,7 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://shadowmere.student.utwente.nl/
 COMMENT=	sound server for windowmaker
 
-USE_BUILDLINK_ONLY=	YES
-REPLACE_BUILDLINK=	wslib/get-wsound-flags
+USE_BUILDLINK2=		YES
 
 USE_X11BASE=		YES
 GNU_CONFIGURE=		YES
@@ -34,10 +33,9 @@ post-patch:
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/WMSound ${PREFIX}/etc/WindowMaker
 
-.include "../../audio/libaudiofile/buildlink.mk"
-.include "../../devel/libdockapp/buildlink.mk"
-.include "../../devel/libproplist/buildlink.mk"
-.include "../../wm/windowmaker/buildlink.mk"
-.include "../../mk/ossaudio.buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
+.include "../../audio/libaudiofile/buildlink2.mk"
+.include "../../devel/libdockapp/buildlink2.mk"
+.include "../../devel/libproplist/buildlink2.mk"
+.include "../../wm/windowmaker/buildlink2.mk"
+.include "../../mk/ossaudio.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
