@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.73 2002/03/13 17:37:56 fredb Exp $
+# $NetBSD: Makefile,v 1.74 2002/03/24 20:03:34 rh Exp $
 
-DISTNAME=		gnome-core-1.4.0.4
-PKGREVISION=		1
+DISTNAME=		gnome-core-1.4.0.6
 CATEGORIES=		x11 gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=stable/sources/gnome-core/}
 EXTRACT_SUFX=		.tar.bz2
@@ -19,7 +18,7 @@ USE_GMAKE=		YES
 USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
-LOCALSTATEDIR=		/var/gnome
+LOCALSTATEDIR=		${X11PREFIX}/var/gnome
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--localstatedir=${LOCALSTATEDIR}
