@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 1999/07/13 01:34:40 jlam Exp $
+# $NetBSD: Makefile,v 1.16 1999/07/13 12:20:19 tron Exp $
 # FreeBSD Id: Makefile,v 1.39 1998/01/31 17:49:48 jseger Exp
 #
 
@@ -23,7 +23,7 @@ CPPFLAGS+=		-DHAVE_LIBREADLINE=1
 CPPFLAGS+=		-DHAVE_FILENAME_COMPLETION_FUNCTION=1
 CPPFLAGS+=		-DHAVE_READLINE_H=1 -DHAVE_HISTORY_H=1
 CONFIGURE_ARGS+=	--disable-readline
-CONFIGURE_ENV+=		LIBS="-ledit"
+CONFIGURE_ENV+=		LIBS="-ledit -lncurses"
 .else
 DEPENDS+=		readline-4.0:../../devel/readline
 .endif
