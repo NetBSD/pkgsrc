@@ -1,21 +1,20 @@
-$NetBSD: patch-aa,v 1.3 1998/11/15 20:17:57 perry Exp $
+$NetBSD: patch-aa,v 1.4 1999/08/29 21:41:14 jlam Exp $
 
---- configure.orig	Tue Oct 20 00:34:18 1998
-+++ configure	Sun Nov 15 14:35:36 1998
-@@ -1319,6 +1319,7 @@
-   echo "$ac_t""no" 1>&6
- fi
+--- configure.orig	Sun Aug  1 06:35:52 1999
++++ configure	Sun Aug 29 13:26:34 1999
+@@ -1606,13 +1606,14 @@
+ # This can be used to rebuild libtool when needed
+ LIBTOOL_DEPS="$ac_aux_dir/ltconfig $ac_aux_dir/ltmain.sh"
  
 +if false; then
  # Always use our own libtool.
  LIBTOOL='$(SHELL) $(top_builddir)/libtool'
  
-@@ -1364,7 +1365,7 @@
- ${CONFIG_SHELL-/bin/sh} $ac_aux_dir/ltconfig \
- $libtool_flags --no-verify $ac_aux_dir/ltmain.sh $host \
- || { echo "configure: error: libtool configure failed" 1>&2; exit 1; }
+ # Redirect the config.log output again, so that the ltconfig log is not
+ # clobbered by the next message.
+ exec 5>>./config.log
 -
 +fi
  
  echo $ac_n "checking for AIX""... $ac_c" 1>&6
- echo "configure:1371: checking for AIX" >&5
+ echo "configure:1619: checking for AIX" >&5
