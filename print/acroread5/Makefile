@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/08/01 11:59:09 grant Exp $
+# $NetBSD: Makefile,v 1.2 2002/08/01 14:06:53 grant Exp $
 
-PKGNAME=	acroread-5.06
+PKGNAME=	acroread5-5.06
 CATEGORIES=	print
 MASTER_SITES=	ftp://ftp-pac.adobe.com/pub/adobe/acrobatreader/unix/5.x/
 
