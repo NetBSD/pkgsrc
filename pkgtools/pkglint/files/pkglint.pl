@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.119 2004/09/24 15:33:26 wiz Exp $
+# $NetBSD: pkglint.pl,v 1.120 2004/10/15 12:14:14 wiz Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
@@ -295,6 +295,7 @@ my $seen_NO_PKG_REGISTER= false;
 my $seen_NO_CHECKSUM	= false;
 my $seen_USE_PKGLOCALEDIR = false;
 my $seen_USE_BUILDLINK3 = false;
+my %seen_Makefile_include = ();
 my %predefined;
 my $pkgname		= "";
 
@@ -1062,6 +1063,11 @@ sub readmakefile($) {
 			if ($includefile =~ /\"([^\"]+)\"/) {
 				$includefile = $1;
 			}
+			if (exists($seen_Makefile_include{$includefile})) {
+				$contents .= "### pkglint ### skipped $includefile\n";
+				next;
+			}
+			$seen_Makefile_include{$includefile} = true;
 			if ($includefile =~ /\/mk\/texinfo\.mk/) {
 				log_error(NO_FILE, NO_LINE_NUMBER, "do not include $includefile");
 			}
