@@ -1,10 +1,10 @@
-$NetBSD: patch-ab,v 1.2 2000/06/21 08:12:39 jlam Exp $
+$NetBSD: patch-ab,v 1.3 2000/11/27 21:20:07 mycroft Exp $
 
---- src/Makefile.in.orig	Mon Mar 20 22:13:03 2000
-+++ src/Makefile.in	Sat May 27 05:43:16 2000
-@@ -175,7 +175,7 @@
- 		  video.c \
- 		  ws.c
+--- src/Makefile.am.orig	Sun Mar 19 14:47:10 2000
++++ src/Makefile.am	Mon Nov 27 20:40:21 2000
+@@ -91,7 +91,7 @@
+ ws.c:		@ARCH_WS@
+ 		cp $< $@
  
 -xracer_LDADD	= mpeg/libmpeg.a
 +xracer_LDADD	= mpeg/libmpeg.a -lintl
