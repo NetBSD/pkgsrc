@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1 1998/08/23 09:55:27 garbled Exp $
+--- sound.c.orig	Sun Aug 23 02:24:57 1998
++++ sound.c	Sun Aug 23 02:25:31 1998
+@@ -26,3 +26,7 @@
+ #include <fcntl.h>
+-#include <linux/soundcard.h>
++#ifdef __NetBSD__
++  #include <soundcard.h>
++#else
++  #include <linux/soundcard.h>
++#endif
+ #include <sys/ioctl.h>

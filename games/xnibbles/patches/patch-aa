@@ -1,0 +1,72 @@
+$NetBSD: patch-aa,v 1.1 1998/08/23 09:55:27 garbled Exp $
+--- Makefile.orig	Thu Mar  5 15:06:19 1998
++++ Makefile	Sun Aug 23 02:42:30 1998
+@@ -27,6 +27,6 @@
+   # This must be set correctly at compile time
+-  DATADIR = /usr/local/games/xnibbles
++  DATADIR = $(PREFIX)/share/xnibbles
+ 
+   # Prefix to find bin and man directories for installation
+-  PREFIX  = /usr/local
++#  PREFIX  = $(PREFIX)
+ 
+@@ -36,4 +36,4 @@
+   # User to own the program
+-  USER = 0
+-  GROUP = 0
++  USER = root
++  GROUP = wheel
+ 
+@@ -43,6 +43,6 @@
+   SOUND = 1
+-  SOUNDDEV = /dev/dsp
++  SOUNDDEV = /dev/audio
+ 
+   # Requires kernel joystick support, change from 0 to 1 if you want it
+-  JOYSTICK = 1
++  JOYSTICK = 0
+   JOYSTICK0DEV = /dev/js0
+@@ -68,2 +68,3 @@
+ 	@echo "make irix                Irix 5.3 (6.x?)"
++	@echo "make netbsd              NetBSD 1.3 or higher"
+ 	@echo ""
+@@ -81,2 +82,11 @@
+ 
++netbsd:
++	$(MAKE) OBJECTS='$(OBJECTS)' \
++	CC=$(CC) LDFLAGS='-Wl,-R$(X11BASE)/lib -L$(X11BASE)/lib' \
++	CFLAGS='-Wall -O2 $(SDEV) \
++	-I$(X11BASE)/include -fwritable-strings \
++	$(JDEV) \
++	-DDATADIR=\"$(DATADIR)\"' \
++	all
++
+ irix:
+@@ -92,3 +102,3 @@
+ 	timer.o walls.o worm.o xnibbles.o xpms.o $(OBJECTS) deadWorm.o counter.o \
+-	-o xnibbles -lm -lXpm -lX11
++	-o xnibbles -lm -lXpm -lX11 -lossaudio
+ 
+@@ -120,12 +130,12 @@
+ 	$(INSTALL) -d $(DATADIR)/sounds -g $(GROUP) -m 755 -o $(USER)
+-	$(INSTALL) -d $(PREFIX) -g $(GROUP) -m 755 -o $(USER)
+-	$(INSTALL) -d $(PREFIX)/bin -g $(GROUP) -m 755 -o $(USER)
+-	$(INSTALL) -d $(PREFIX)/man -g $(GROUP) -m 755 -o $(USER)
+-	$(INSTALL) -d $(PREFIX)/man/man6 -g $(GROUP) -m 755 -o $(USER)
+-	$(INSTALL) -g $(GROUP) -m 644 -o $(USER) levels/*.xnl $(DATADIR)/levels
+-	$(INSTALL) -g $(GROUP) -m 644 -o $(USER) levels/README $(DATADIR)/levels
+-	$(INSTALL) -g $(GROUP) -m 644 -o $(USER) sounds/*.ub $(DATADIR)/sounds
+-	$(INSTALL) -g $(GROUP) -m 755 -o $(USER) xnibbles $(PREFIX)/bin
+-	$(INSTALL) -g $(GROUP) -m 755 -o $(USER) xnleditor/xnleditor $(PREFIX)/bin
+-	$(INSTALL) -g $(GROUP) -m 644 -o $(USER) xnibbles.6 $(PREFIX)/man/man6
++#	$(INSTALL) -d $(PREFIX) -g $(GROUP) -m 755 -o $(USER)
++#	$(INSTALL) -d $(PREFIX)/bin -g $(GROUP) -m 755 -o $(USER)
++#	$(INSTALL) -d $(PREFIX)/man -g $(GROUP) -m 755 -o $(USER)
++#	$(INSTALL) -d $(PREFIX)/man/man6 -g $(GROUP) -m 755 -o $(USER)
++	$(INSTALL) -c -g $(GROUP) -m 644 -o $(USER) levels/*.xnl $(DATADIR)/levels
++	$(INSTALL) -c -g $(GROUP) -m 644 -o $(USER) levels/README $(DATADIR)/levels
++	$(INSTALL) -c -g $(GROUP) -m 644 -o $(USER) sounds/*.ub $(DATADIR)/sounds
++	$(INSTALL) -c -s -g $(GROUP) -m 755 -o $(USER) xnibbles $(PREFIX)/bin
++	$(INSTALL) -c -s -g $(GROUP) -m 755 -o $(USER) xnleditor/xnleditor $(PREFIX)/bin
++	$(INSTALL) -c -g $(GROUP) -m 644 -o $(USER) xnibbles.6 $(PREFIX)/man/man6
+ 	./make-LEVELS $(DATADIR) OOGA
