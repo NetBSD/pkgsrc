@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:24:42 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/12/30 16:21:51 taca Exp $
 bin/irb
 bin/ruby
 bin/ruby${_RUBY_SUFFIX}
@@ -27,6 +27,7 @@ ${RUBY_ARCHLIBDIR}/rubysig.h
 ${RUBY_ARCHLIBDIR}/sdbm.so
 ${RUBY_ARCHLIBDIR}/socket.so
 ${RUBY_ARCHLIBDIR}/st.h
+${RUBY_ARCHLIBDIR}/syslog.so
 ${RUBY_ARCHLIBDIR}/util.h
 ${RUBY_ARCHLIBDIR}/version.h
 ${RUBY_LIBDIR}/English.rb
@@ -53,6 +54,7 @@ ${RUBY_LIBDIR}/ftplib.rb
 ${RUBY_LIBDIR}/getoptlong.rb
 ${RUBY_LIBDIR}/getopts.rb
 ${RUBY_LIBDIR}/importenv.rb
+${RUBY_LIBDIR}/irb.rb
 ${RUBY_LIBDIR}/irb/completion.rb
 ${RUBY_LIBDIR}/irb/context.rb
 ${RUBY_LIBDIR}/irb/extend-command.rb
@@ -77,7 +79,6 @@ ${RUBY_LIBDIR}/irb/workspace.rb
 ${RUBY_LIBDIR}/irb/ws-for-case-2.rb
 ${RUBY_LIBDIR}/irb/xmp.rb
 @dirrm ${RUBY_LIBDIR}/irb
-${RUBY_LIBDIR}/irb.rb
 ${RUBY_LIBDIR}/jcode.rb
 ${RUBY_LIBDIR}/kconv.rb
 ${RUBY_LIBDIR}/mailread.rb
@@ -104,6 +105,8 @@ ${RUBY_LIBDIR}/profile.rb
 ${RUBY_LIBDIR}/pstore.rb
 ${RUBY_LIBDIR}/rational.rb
 ${RUBY_LIBDIR}/readbytes.rb
+${RUBY_LIBDIR}/resolv-replace.rb
+${RUBY_LIBDIR}/resolv.rb
 ${RUBY_LIBDIR}/shell.rb
 ${RUBY_LIBDIR}/shell/builtin-command.rb
 ${RUBY_LIBDIR}/shell/command-processor.rb
@@ -123,33 +126,33 @@ ${RUBY_LIBDIR}/thwait.rb
 ${RUBY_LIBDIR}/timeout.rb
 ${RUBY_LIBDIR}/tracer.rb
 ${RUBY_LIBDIR}/weakref.rb
-@exec /bin/mkdir -p %D/${RUBY_SITEARCHLIBDIR}
-@dirrm ${RUBY_SITEARCHLIBDIR}
-@dirrm ${RUBY_SITELIBDIR}
-@dirrm lib/ruby/site_ruby
+@exec ${MKDIR} -p %D/${RUBY_SITEARCHLIBDIR}
+@unexec ${RMDIR} %D/${RUBY_SITEARCHLIBDIR} 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/${RUBY_SITELIBDIR} 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/lib/ruby/site_ruby 2>/dev/null || ${TRUE}
 @dirrm ${RUBY_ARCHLIBDIR}
 @dirrm ${RUBY_LIBDIR}
-@dirrm lib/ruby
+@unexec ${RMDIR} %D/lib/ruby 2>/dev/null || ${TRUE}
 man/man1/ruby16.1
 man/man1/ruby.1
 ${RUBY_DOCDIR}/NEWS
 ${RUBY_DOCDIR}/README
 ${RUBY_DOCDIR}/README.EXT
-${RUBY_DOCDIR}/README.EXT.jp
-${RUBY_DOCDIR}/README.jp
+${RUBY_DOCDIR}/README.EXT.ja
+${RUBY_DOCDIR}/README.ja
 ${RUBY_DOCDIR}/ToDo
 ${RUBY_DOCDIR}/etc/etc.txt
-${RUBY_DOCDIR}/etc/etc.txt.jp
+${RUBY_DOCDIR}/etc/etc.txt.ja
+@dirrm ${RUBY_DOCDIR}/etc
 ${RUBY_DOCDIR}/forwardable.rd
-${RUBY_DOCDIR}/forwardable.rd.jp
+${RUBY_DOCDIR}/forwardable.rd.ja
 ${RUBY_DOCDIR}/pty/README
 ${RUBY_DOCDIR}/pty/README.expect
-${RUBY_DOCDIR}/pty/README.expect.jp
-${RUBY_DOCDIR}/pty/README.jp
-${RUBY_DOCDIR}/shell.rd
-${RUBY_DOCDIR}/shell.rd.jp
-@dirrm ${RUBY_DOCDIR}/etc
+${RUBY_DOCDIR}/pty/README.expect.ja
+${RUBY_DOCDIR}/pty/README.ja
 @dirrm ${RUBY_DOCDIR}/pty
+${RUBY_DOCDIR}/shell.rd
+${RUBY_DOCDIR}/shell.rd.ja
 @dirrm ${RUBY_DOCDIR}
 ${RUBY_EXAMPLESDIR}/README
 ${RUBY_EXAMPLESDIR}/biorhythm.rb
