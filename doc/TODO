@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3343 2005/03/31 11:41:52 wiz Exp $
+$NetBSD: TODO,v 1.3344 2005/03/31 21:52:03 seb Exp $
 
 Suggested new packages
 ======================
@@ -820,7 +820,6 @@ Suggested package updates
 	o p5-Time-Piece-2.00.01
 	o p5-Tree-Simple-1.14
 	o p5-WWW-Amazon-Wishlist-1.4
-	o p5-Want-0.08
 	o p5-XML-LibXSLT-1.57
 	o p5-XML-RAI-1.04
 	o p5-XML-RSS-1.05
