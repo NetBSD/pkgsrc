@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2003/03/29 12:41:12 jmmv Exp $
+# $NetBSD: Makefile,v 1.5 2003/11/02 21:41:03 salo Exp $
 #
 
 DISTNAME=	xtris-1.15
 WRKSRC=		${WRKDIR}/xtris
 CATEGORIES=	games x11
-MASTER_SITES=	http://www.iagora.com/~espel/xtris/
+MASTER_SITES=	http://www.iagora.com/~espel/xtris/xtris.html
 
 MAINTAINER=	opp@MuFFiN.Org
 HOMEPAGE=	http://www.iagora.com/~espel/xtris/
