@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.188 1998/10/27 10:35:26 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.189 1998/11/07 14:23:26 mycroft Exp $
 #
 # This file is in the public domain.
 #
@@ -977,7 +977,7 @@ do-configure:
 
 .if !target(do-build)
 do-build:
-	@(cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} ${ALL_TARGET})
+	@(cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} ${ALL_TARGET})
 .endif
 
 # Install
