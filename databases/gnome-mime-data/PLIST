@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/04/27 04:20:17 rh Exp $
-etc/gnome-vfs-mime-magic
+@comment $NetBSD: PLIST,v 1.5 2003/04/30 19:52:35 jmmv Exp $
 lib/pkgconfig/gnome-mime-data-2.0.pc
 man/man5/gnome-vfs-mime.5
 share/application-registry/gnome-vfs.applications
