@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 1999/06/27 00:34:58 abs Exp $
+# $NetBSD: Makefile,v 1.16 1999/07/01 23:28:32 tron Exp $
 #
 # Every effort has been made to keep the communicator and navigator
 # Makefiles as similar as possible.
@@ -10,21 +10,21 @@ NS_ENCRYPTION?=	export
 #
 .if (${MACHINE_ARCH} == "alpha")
 .if !exists(/emul/osf1/sbin/loader)
-IGNORE=You must have Digital UNIX libraries installed - see compat_osf1(8)
+IGNORE=	requires Digital UNIX libraries - see compat_osf1(8)
 .endif
 DISTUNAME=	alpha-dec-osf4.0
 DIST_DIR_NAME=	supported/dec_unix40
 WRKNAME=	alpha-dec-osf4.0
 .elif (${MACHINE_ARCH} == "i386")
 .if !exists(/emul/linux/lib/ld-linux.so.2)
-IGNORE=You must have Linux libraries installed - see compat_linux(8)
+IGNORE=	requires Linux libraries - see compat_linux(8)
 .endif
 DISTUNAME=	x86-unknown-linuxglibc2.0
 DIST_DIR_NAME=	supported/linux20_glibc2
 WRKNAME=	x86-unknown-linux2.0
 .elif (${MACHINE_ARCH} == "sparc")
 .if !exists(/emul/sunos/usr/lib/ld.so)
-IGNORE=You must have SunOS libraries installed - see compat_sunos(8)
+IGNORE=	requires SunOS libraries - see compat_sunos(8)
 .endif
 DISTUNAME=	sparc-sun-sunos4.1.3_U1
 DIST_DIR_NAME=	unsupported/sunos413
