@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/02/26 15:41:50 adam Exp $
+# $NetBSD: Makefile,v 1.15 2004/03/20 04:30:55 snj Exp $
 #
 
 DISTNAME=	libsndfile-1.0.7
@@ -13,6 +13,9 @@ USE_BUILDLINK3=		YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 PKGCONFIG_OVERRIDE=	sndfile.pc.in
+
+# Avoid an ICE in gcc2 on sparc64
+CONFIGURE_ENV+=		F77=${FALSE}
 
 .include "../../mk/bsd.prefs.mk"
 
