@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/05/07 20:49:45 tron Exp $
+bin/xmradio
+lib/X11/app-defaults/XMradio
+share/doc/xmradio/README
+@dirrm share/doc/xmradio
