@@ -1,0 +1,17 @@
+$NetBSD: patch-ad,v 1.1.1.1 2004/01/09 23:03:20 cube Exp $
+
+--- etc/Makefile.orig	2003-12-11 18:16:16.000000000 +0100
++++ etc/Makefile
+@@ -22,8 +22,9 @@ include $(TOPDIR)/rules.mk
+ 
+ _install:
+ 	$(INSTALLDIR) $(ETCDIR)
++	$(INSTALLDIR) $(EXDIR)
+ 	for i in $(ETC); do \
+-		$(INSTALL) -m $(DATA_MODE) $$i $(ETCDIR); \
++		$(INSTALL) -m $(DATA_MODE) $$i $(EXDIR); \
+ 	done
+-	rm -f $(ETCDIR)/draw.lua
+-	ln -s look-cleanviolet.lua $(ETCDIR)/draw.lua
++	rm -f $(EXDIR)/draw.lua
++	ln -s look-cleanviolet.lua $(EXDIR)/draw.lua
