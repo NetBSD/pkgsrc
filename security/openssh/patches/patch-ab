@@ -1,33 +1,26 @@
-$NetBSD: patch-ab,v 1.6 2001/12/03 08:21:23 martti Exp $
+$NetBSD: patch-ab,v 1.7 2002/02/05 04:17:32 jlam Exp $
 
---- configure.ac.orig	Mon Dec  3 08:43:01 2001
-+++ configure.ac	Mon Dec  3 08:44:59 2001
-@@ -132,7 +132,7 @@
-         )
+--- configure.ac.orig	Sat Nov  3 14:09:33 2001
++++ configure.ac
+@@ -150,8 +150,6 @@
+ 	CFLAGS="$CFLAGS"
  	;;
- *-*-netbsd*)
--	need_dash_r=1
-+	#need_dash_r=1		# buildlink.mk
- 	;;
- *-*-freebsd*)
- 	check_for_libcrypt_later=1
-@@ -152,7 +152,7 @@
  *-*-solaris*)
- 	CPPFLAGS="$CPPFLAGS -I/usr/local/include"
- 	LDFLAGS="$LDFLAGS -L/usr/local/lib -R/usr/local/lib" 
--	need_dash_r=1
-+	#need_dash_r=1		# buildlink.mk
+-	CPPFLAGS="$CPPFLAGS -I/usr/local/include"
+-	LDFLAGS="$LDFLAGS -L/usr/local/lib -R/usr/local/lib" 
+ 	need_dash_r=1
  	AC_DEFINE(PAM_SUN_CODEBASE)
  	AC_DEFINE(LOGIN_NEEDS_UTMPX)
- 	AC_DEFINE(LOGIN_NEEDS_TERM)
-@@ -518,6 +518,7 @@
+@@ -283,6 +281,9 @@
+ 	;;
+ esac
  
- # Check whether user wants TCP wrappers support
- TCPW_MSG="no"
-+TCPW_LIB=""
- AC_ARG_WITH(tcp-wrappers,
- 	[  --with-tcp-wrappers[[=PATH]]      Enable tcpwrappers support
-                             (optionally in PATH)],
++# pkgsrc handles any rpath settings this package needs
++need_dash_r=
++
+ # Allow user to specify flags
+ AC_ARG_WITH(cflags,
+ 	[  --with-cflags           Specify additional flags to pass to compiler],
 @@ -550,6 +551,8 @@
  			AC_MSG_CHECKING(for libwrap)
  			AC_TRY_LINK(
@@ -37,15 +30,18 @@ $NetBSD: patch-ab,v 1.6 2001/12/03 08:21:23 martti Exp $
  #include <tcpd.h>
  					int deny_severity = 0, allow_severity = 0;
  				],
-@@ -558,6 +561,7 @@
+@@ -558,14 +561,18 @@
  					AC_MSG_RESULT(yes)
  					AC_DEFINE(LIBWRAP)
  					TCPW_MSG="yes"
 +					TCPW_LIB="-lwrap"
  				],
  				[
++					TCPW_LIB=""
  					AC_MSG_ERROR([*** libwrap missing])
-@@ -566,6 +570,7 @@
+ 				]
+ 			)
++			LIBS="$saved_LIBS"
  		fi
  	]
  )
@@ -53,3 +49,12 @@ $NetBSD: patch-ab,v 1.6 2001/12/03 08:21:23 martti Exp $
  
  dnl    Checks for library functions.
  AC_CHECK_FUNCS(arc4random atexit b64_ntop bcopy bindresvport_sa \
+@@ -2194,7 +2201,7 @@
+ echo "                 User binaries: $B"
+ echo "               System binaries: $C"
+ echo "           Configuration files: $D"
+-echo "               Askpass program: $E"
++echo "               Askpass program: ${ASKPASS_PROGRAM}"
+ echo "                  Manual pages: $F"
+ echo "                      PID file: $G"
+ echo "        sshd default user PATH: $H"
