@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/04/29 16:17:50 jtb Exp $
+# $NetBSD: Makefile,v 1.9 2001/05/07 22:09:14 dmcmahill Exp $
 
 DISTNAME=	tochnog-20010429
 CATEGORIES=	math
@@ -14,6 +14,8 @@ EXTRACT_ONLY=	tn.tar.gz
 WRKSRC=		${WRKDIR}/tochnog/src
 MAKEFILE=	makefile
 ALL_TARGET=	netbsd
+
+MAKE_ENV+=	MACHINE_ARCH=${MACHINE_ARCH}
 
 post-patch:
 	@${RM} -f ${WRKDIR}/tochnog/test/*.orig ${WRKDIR}/tochnog/tools/*.bat
