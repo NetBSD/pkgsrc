@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: mkbinarykit,v 1.1.1.1 2004/03/11 13:03:59 grant Exp $
+# $NetBSD: mkbinarykit,v 1.2 2004/03/29 02:22:18 tv Exp $
 #
 # Make a binary bootstrap kit and place it in targetdir (or current
 # working directory if not specified). The mk.conf.example file is
@@ -48,6 +48,12 @@ OpenBSD)
 	ospro=`arch -s`
 	;;
 
+Interix)
+	mkfile=/etc/mk.conf.example
+	# Don't use the interopsystems.com package dir
+	pkgdbdir=/usr/pkg/pkgdb
+	ospro=i386
+	;;
 SunOS)
 	sedprog=/usr/xpg4/bin/sed
 	;;
