@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 1999/02/19 08:37:35 tron Exp $
+@comment $NetBSD: PLIST,v 1.9 2001/08/26 11:36:36 skrll Exp $
 bin/aclocal
 bin/automake
 @unexec install-info --delete %D/info/automake.info %D/info/dir
@@ -10,6 +10,7 @@ share/aclocal/dmalloc.m4
 share/aclocal/error.m4
 share/aclocal/header.m4
 share/aclocal/init.m4
+share/aclocal/lex.m4
 share/aclocal/lispdir.m4
 share/aclocal/maintainer.m4
 share/aclocal/missing.m4
@@ -23,7 +24,6 @@ share/aclocal/sanity.m4
 share/aclocal/strtod.m4
 share/aclocal/termios.m4
 share/aclocal/winsz.m4
-share/aclocal/lex.m4
 share/automake/COPYING
 share/automake/INSTALL
 share/automake/acinstall
@@ -47,6 +47,8 @@ share/automake/footer.am
 share/automake/header-vars.am
 share/automake/header.am
 share/automake/install-sh
+share/automake/java-clean.am
+share/automake/java.am
 share/automake/kr-extra.am
 share/automake/library.am
 share/automake/libs-clean.am
@@ -58,6 +60,7 @@ share/automake/ltlib-clean.am
 share/automake/ltlib.am
 share/automake/ltlibrary.am
 share/automake/mans-vars.am
+share/automake/mans.am
 share/automake/mdate-sh
 share/automake/missing
 share/automake/mkinstalldirs
@@ -75,7 +78,4 @@ share/automake/texi-vers.am
 share/automake/texinfo.tex
 share/automake/texinfos.am
 share/automake/ylwrap
-share/automake/mans.am
-share/automake/java.am
-share/automake/java-clean.am
 @dirrm share/automake
