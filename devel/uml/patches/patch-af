@@ -1,0 +1,11 @@
+--- uml/diagramprintpage.cpp.orig	2004-06-15 19:20:34.000000000 +0200
++++ uml/diagramprintpage.cpp	2004-06-15 19:21:13.000000000 +0200
+@@ -71,7 +71,7 @@
+ 	disconnect(typeCB, SIGNAL(activated(const QString&)), this, SLOT(slotActivated(const QString&)));
+ }
+ ////////////////////////////////////////////////////////////////////////////////////////////////////
+-void DiagramPrintPage::getOptions( QMap<QString,QString>& opts, bool incldef = false )
++void DiagramPrintPage::getOptions( QMap<QString,QString>& opts, bool incldef )
+ {
+ 	int listCount = selectLB -> count();
+ 	int count = 0;
