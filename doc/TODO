@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1395 2004/02/17 13:34:36 wiz Exp $
+$NetBSD: TODO,v 1.1396 2004/02/17 14:30:12 minskim Exp $
 
 Suggested new packages
 ======================
@@ -277,6 +277,8 @@ Suggested package updates
 	o p5-CGI-Application-3.1
 	o p5-DateTime-0.20
 	o p5-HTML-FillInForm-1.03 [pkg/23976]
+	o p5-Net-Server-0.86
+	o p5-XML-XSLT-0.47
 	o pdmenu-1.2.81
 	o pgplot-5.2 [grant]
 	o plib-1.7.0
@@ -365,6 +367,7 @@ Suggested package updates
 	o xsidplay-1.6.5pre20
 	o xzgv-0.8
 	o yacas-1.0.55
+	o yaz-2.0.12
 	o ysm-2.9.2
 	o zenicb 1.31 (needs merge with lots of local changes)
 
