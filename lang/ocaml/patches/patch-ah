@@ -1,8 +1,8 @@
-$NetBSD: patch-ah,v 1.5 2004/04/22 09:27:49 tron Exp $
+$NetBSD: patch-ah,v 1.6 2004/04/23 03:06:02 danw Exp $
 
---- asmrun/power-bsd.S.orig	Thu Apr 22 10:34:28 2004
-+++ asmrun/power-bsd.S	Thu Apr 22 10:34:38 2004
-@@ -15,4 +15,33 @@
+--- asmrun/power-bsd.S.orig	Thu Apr 22 21:34:41 2004
++++ asmrun/power-bsd.S
+@@ -15,2 +15,31 @@
  
 +#if defined(PROFILING)
 +#define PROFILE_CAML \
@@ -34,66 +34,34 @@ $NetBSD: patch-ah,v 1.5 2004/04/22 09:27:49 tron Exp $
 +#endif
 +
  #define Addrglobal(reg,glob) \
-         addis   reg, 0, glob@ha; \
-         addi    reg, reg, glob@l
-@@ -30,6 +59,7 @@
-         .globl  caml_call_gc
-         .type   caml_call_gc, @function
+@@ -32,2 +61,3 @@
  caml_call_gc:
 +        PROFILE_CAML
      /* Set up stack frame */
-         stwu    1, -0x1A0(1)
-     /* 0x1A0 = 4*32 (int regs) + 8*32 (float regs) + 32 (space for C call) */
-@@ -182,6 +212,7 @@
-         .globl  caml_c_call
-         .type   caml_c_call, @function
+@@ -184,2 +214,3 @@ caml_call_gc:
  caml_c_call:
 +        PROFILE_CAML
      /* Save return address */
-         mflr    25
-     /* Get ready to call C function (address in 11) */
-@@ -210,6 +241,7 @@
-         .globl  raise_caml_exception
-         .type   raise_caml_exception, @function
+@@ -212,2 +243,3 @@ caml_c_call:
  raise_caml_exception:
 +        PROFILE_C
      /* Reload Caml global registers */
-         Loadglobal(1, caml_exception_pointer, 11)
-         Loadglobal(31, young_ptr, 11)
-@@ -230,6 +262,7 @@
-         .globl  caml_start_program
-         .type   caml_start_program, @function
+@@ -232,2 +264,3 @@ raise_caml_exception:
  caml_start_program:
 +        PROFILE_C
          Addrglobal(12, caml_program)
- 
- /* Code shared between caml_start_program and callback */
-@@ -380,6 +413,7 @@
-         .globl  callback_exn
-         .type   callback_exn, @function
+@@ -382,2 +415,3 @@ caml_start_program:
  callback_exn:
 +        PROFILE_C
      /* Initial shuffling of arguments */
-         mr      0, 3            /* Closure */
-         mr      3, 4            /* Argument */
-@@ -390,6 +424,7 @@
-         .globl  callback2_exn
-         .type   callback2_exn, @function
+@@ -392,2 +426,3 @@ callback_exn:
  callback2_exn:
 +        PROFILE_C
          mr      0, 3            /* Closure */
-         mr      3, 4            /* First argument */
-         mr      4, 5            /* Second argument */
-@@ -400,6 +435,7 @@
-         .globl  callback3_exn
-         .type   callback3_exn, @function
+@@ -402,2 +437,3 @@ callback2_exn:
  callback3_exn:
 +        PROFILE_C
          mr      0, 3            /* Closure */
-         mr      3, 4            /* First argument */
-         mr      4, 5            /* Second argument */
-@@ -418,4 +454,3 @@
-         .long   .L105 + 4       /* return address into callback */
-         .short  -1              /* negative size count => use callback link */
+@@ -420,2 +456 @@ system__frametable:
          .short  0               /* no roots here */
 -
