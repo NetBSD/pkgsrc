@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 1998/05/07 15:17:46 tron Exp $
+# $NetBSD: Makefile,v 1.15 1998/05/07 15:26:01 tron Exp $
 
 DISTNAME=	gimp-0.99.28
 CATEGORIES=	graphics
@@ -20,7 +20,9 @@ DEPENDS+=	xpm-3.4j:../../graphics/xpm
 
 GIMP_DATA=	gimp-data-extras-0.99a
 
+.ifndef DISPLAY
 IS_INTERACTIVE=	yes
+.endif
 USE_X11=	yes
 USE_GTEXINFO=	yes
 GNU_CONFIGURE=	yes
