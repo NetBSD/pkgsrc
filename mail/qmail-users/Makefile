@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/01/20 12:19:44 agc Exp $
+# $NetBSD: Makefile,v 1.8 2004/07/21 23:58:17 schmonz Exp $
 #
 
 DISTNAME=	qmail-users-1.0
@@ -6,9 +6,11 @@ CATEGORIES=	mail
 MASTER_SITES=   #
 DISTFILES=	#
 
-MAINTAINER=	zuntum@NetBSD.org
+MAINTAINER=	schmonz@NetBSD.org
 HOMEPAGE=	http://www.qmail.org/
 COMMENT=	Users required to build & run qmail package
+
+NO_BUILDLINK=	# defined
 
 PKG_GROUPS=	qmail nofiles
 

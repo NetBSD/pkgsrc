@@ -1,1 +1,3 @@
-This package installs users necessary to build & run qmail package
+qmail's users and groups must exist in order for it to compile.
+This package creates these users and groups, and qmail has a
+dependency on it.
