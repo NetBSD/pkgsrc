@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2003/03/11 13:02:07 markd Exp $
+@comment $NetBSD: PLIST,v 1.10 2003/03/18 08:36:24 skrll Exp $
 qt3/bin/moc
 qt3/include/private/qapplication_p.h
 qt3/include/private/qcolor_p.h
@@ -373,11 +373,11 @@ qt3/include/qwindow.h
 qt3/include/qwindowdefs.h
 qt3/include/qwindowsstyle.h
 qt3/include/qwindowsxpstyle.h
+qt3/include/qwinexport.h
 qt3/include/qwizard.h
 qt3/include/qwmatrix.h
 qt3/include/qworkspace.h
 qt3/include/qxml.h
-qt3/include/qxtwidget.h
 qt3/lib/libqt-mt.a
 qt3/lib/libqt-mt.la
 qt3/lib/libqt-mt.so

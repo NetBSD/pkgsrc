@@ -1,10 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.12 2003/03/14 19:38:07 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.13 2003/03/18 08:36:24 skrll Exp $
 
 .if !defined(QT3_LIBS_BUILDLINK2_MK)
 QT3_LIBS_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		qt3-libs
-BUILDLINK_DEPENDS.qt3-libs?=	qt3-libs>=3.1.1
+BUILDLINK_DEPENDS.qt3-libs?=	qt3-libs>=3.1.2
 BUILDLINK_PKGSRCDIR.qt3-libs?=	../../x11/qt3-libs
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.qt3-libs=qt3-libs
@@ -22,6 +22,7 @@ FIX_RPATH+=			BUILDLINK_LDFLAGS.qt3-libs
 PTHREAD_OPTS+=	require
 
 .include "../../devel/zlib/buildlink2.mk"
+.include "../../fonts/Xft2/buildlink2.mk"
 .include "../../graphics/MesaLib/buildlink2.mk"
 .include "../../graphics/freetype2/buildlink2.mk"
 .include "../../graphics/glu/buildlink2.mk"

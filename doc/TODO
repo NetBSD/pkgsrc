@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.380 2003/03/17 18:36:56 wiz Exp $
+$NetBSD: TODO,v 1.381 2003/03/18 08:36:23 skrll Exp $
 
 Suggested new packages
 ======================
@@ -200,7 +200,6 @@ Suggested package updates
 	o py-mysqldb-0.9.2 [pkg/19056]
 	o py-wxWindows-2.4.0.2
 	o pygtk-0.6.11
-	o qt3-3.1.2 [skrll]
 	o rdiff-backup-0.10.2 [pkg/20268]
 	o rep-gtk-0.17
 	o rocksndiamonds-2.2.0rc3
