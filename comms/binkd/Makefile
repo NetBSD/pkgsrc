@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/04/01 14:07:53 agc Exp $
+# $NetBSD: Makefile,v 1.3 1999/05/12 15:08:45 tv Exp $
 #
 
 DISTNAME=	binkd-0.9.2
@@ -15,6 +15,7 @@ GNU_CONFIGURE=	yes
 EXTRACT_CMD=	unzip -qo ${DOWNLOADED_DISTFILE}
 
 NO_CDROM=	"extremely limited usefulness to the general public"
+NOT_FOR_ARCHS=	alpha sparc64
 
 post-extract:
 	@cd ${WRKSRC}/mkfls/unix && ${CHMOD} +x configure && ${CP} * ../../
