@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/12/21 23:38:52 zuntum Exp $
+# $NetBSD: Makefile,v 1.2 2001/12/22 00:07:06 zuntum Exp $
 #
 
 DISTNAME=	MPlayer-0.18pre
 PKGNAME=	mplayer-0.18pre
 CATEGORIES=	graphics
-MASTER_SITES=	http://mp.dev.hu/MPlayer/releases/
+MASTER_SITES=	http://zuntum.utech.lublin.pl/distfiles/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	svs@ropnet.ru,zuntum@netbsd.org
