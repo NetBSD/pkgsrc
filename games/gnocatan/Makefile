@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2003/12/14 17:44:32 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2003/12/15 18:51:13 wiz Exp $
 #
 
 DISTNAME=	gnocatan-0.8.0.0
+PKGREVISION=	1
 CATEGORIES=	games gnome
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gnocatan/}
 
@@ -18,4 +19,5 @@ USE_PKGLOCALEDIR=	YES
 USE_X11=		YES
 
 .include "../../devel/libgnomeui/buildlink2.mk"
+.include "../../textproc/scrollkeeper/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
