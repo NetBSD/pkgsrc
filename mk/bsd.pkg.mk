@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1029 2002/08/08 06:10:03 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1030 2002/08/11 09:59:43 tron Exp $
 #
 # This file is in the public domain.
 #
@@ -917,7 +917,8 @@ _MASTER_SITE_OVERRIDE:= ${MASTER_SITE_OVERRIDE}
 
 # Where to put distfiles that don't have any other master site
 MASTER_SITE_LOCAL?= \
-	${MASTER_SITE_BACKUP:=LOCAL_PORTS/}
+	${MASTER_SITE_BACKUP:=LOCAL_PORTS/} \
+	ftp://ftp.fi.netbsd.org/pub/NetBSD/packages/distfiles/LOCAL_PORTS/
 
 # Derived names so that they're easily overridable.
 DISTFILES?=		${DISTNAME}${EXTRACT_SUFX}
