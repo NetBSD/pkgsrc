@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2001/05/22 00:45:55 jtb Exp $
+@comment $NetBSD: PLIST,v 1.5 2001/07/15 12:40:21 jtb Exp $
 bin/greencard-nhc98
 bin/harch
 bin/hat-check
@@ -102,20 +102,32 @@ lib/hmake/${HARCH}/HInteractive
 lib/hmake/${HARCH}/MkProg
 lib/hmake/${HARCH}/Older
 lib/hmake/${HARCH}/hmake.config
+lib/nhc98/hat-trail.jar
+lib/nhc98/hood.jar
 lib/nhc98/${HARCH}/Prelude.a
+lib/nhc98/${HARCH}/PreludeT.a
 lib/nhc98/${HARCH}/Runtime.a
+lib/nhc98/${HARCH}/RuntimeT.a
 lib/nhc98/${HARCH}/config
 lib/nhc98/${HARCH}/greencard-nhc98
+lib/nhc98/${HARCH}/hat-check
+lib/nhc98/${HARCH}/hat-checki
+lib/nhc98/${HARCH}/hat-connect
+lib/nhc98/${HARCH}/hat-detect
+lib/nhc98/${HARCH}/hat-observe
+lib/nhc98/${HARCH}/hat-stack
 lib/nhc98/${HARCH}/hmake-PRAGMA
 lib/nhc98/${HARCH}/hmake.config
 lib/nhc98/${HARCH}/libdebug.a
+lib/nhc98/${HARCH}/libdebugT.a
 lib/nhc98/${HARCH}/main.o
+lib/nhc98/${HARCH}/mainT.o
 lib/nhc98/${HARCH}/mutator.o
+lib/nhc98/${HARCH}/mutatorT.o
 lib/nhc98/${HARCH}/mutlib.o
+lib/nhc98/${HARCH}/mutlibT.o
 lib/nhc98/${HARCH}/nhc98comp
 lib/nhc98/${HARCH}/nhc98heap
-lib/nhc98/hat-trail.jar
-lib/nhc98/hood.jar
 man/man1/harch.1
 man/man1/hmake.1
 man/man1/hp2graph.1
@@ -170,11 +182,10 @@ share/doc/nhc98/greencard.html
 share/doc/nhc98/hat/browser-detail.html
 share/doc/nhc98/hat/faq.html
 share/doc/nhc98/hat/feature-table.html
+share/doc/nhc98/hat/frejaHatHood.ps.gz
 share/doc/nhc98/hat/hat-trail-1.eps
 share/doc/nhc98/hat/hat-trail.gif
 share/doc/nhc98/hat/hat.gif
-share/doc/nhc98/hat/hatuser.pdf
-share/doc/nhc98/hat/hatuser.ps
 share/doc/nhc98/hat/hatuser.tex
 share/doc/nhc98/hat/index.html
 share/doc/nhc98/hat/limitations-detail.html
@@ -231,3 +242,4 @@ share/doc/nhc98/york-release.html
 @dirrm lib/hmake/${HARCH}
 @dirrm lib/hmake
 @dirrm include/nhc98
+
