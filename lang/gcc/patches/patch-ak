@@ -1,49 +1,13 @@
-$NetBSD: patch-ak,v 1.1 2000/09/15 23:58:48 tron Exp $
+$NetBSD: patch-ak,v 1.2 2002/01/03 20:40:43 tron Exp $
 
---- ../gcc-2.95.2/gcc/config/elfos.h.orig	Fri Mar 26 11:45:26 1999
-+++ ../gcc-2.95.2/gcc/config/elfos.h	Sat Sep 16 00:17:42 2000
-@@ -48,6 +48,7 @@
+--- ../gcc-2.95.3/gcc/config/i386/gas.h.orig	Fri Apr  9 22:31:32 1999
++++ ../gcc-2.95.3/gcc/config/i386/gas.h	Thu Jan  3 20:37:53 2002
+@@ -150,7 +150,7 @@
  
- /* Output #ident as a .ident.  */
- 
-+#undef ASM_OUTPUT_IDENT
- #define ASM_OUTPUT_IDENT(FILE, NAME) \
-   fprintf (FILE, "\t%s\t\"%s\"\n", IDENT_ASM_OP, NAME);
- 
-@@ -92,6 +93,10 @@
- #undef SET_ASM_OP
- #define SET_ASM_OP	".set"
- 
-+/* We want local labels to start with period if made with asm_fprintf. */
-+#undef LOCAL_LABEL_PREFIX
-+#define LOCAL_LABEL_PREFIX "."
-+
- /* This is how to begin an assembly language file.  Most svr4 assemblers want
-    at least a .file directive to come first, and some want to see a .version
-    directive come right after that.  Here we just establish a default
-@@ -130,7 +135,7 @@
- #undef ASM_OUTPUT_INTERNAL_LABEL
- #define ASM_OUTPUT_INTERNAL_LABEL(FILE, PREFIX, NUM)			\
- do {									\
--  fprintf (FILE, ".%s%d:\n", PREFIX, NUM);				\
-+  fprintf (FILE, "%s%s%d:\n", LOCAL_LABEL_PREFIX, PREFIX, NUM);		\
- } while (0)
- 
- /* This is how to store into the string LABEL
-@@ -144,7 +149,7 @@
  #undef ASM_GENERATE_INTERNAL_LABEL
- #define ASM_GENERATE_INTERNAL_LABEL(LABEL, PREFIX, NUM)			\
- do {									\
--  sprintf (LABEL, "*.%s%d", PREFIX, NUM);				\
-+  sprintf (LABEL, "*%s%s%d", LOCAL_LABEL_PREFIX, PREFIX, NUM);		\
- } while (0)
+ #define ASM_GENERATE_INTERNAL_LABEL(BUF,PREFIX,NUMBER)	\
+-    sprintf ((BUF), ".%s%d", (PREFIX), (NUMBER))
++    sprintf ((BUF), "*.%s%d", (PREFIX), (NUMBER))
  
- /* Output the label which precedes a jumptable.  Note that for all svr4
-@@ -461,6 +466,7 @@
- 
- /* This is how we tell the assembler that a symbol is weak.  */
- 
-+#undef ASM_WEAKEN_LABEL
- #define ASM_WEAKEN_LABEL(FILE,NAME) \
-   do { fputs ("\t.weak\t", FILE); assemble_name (FILE, NAME); \
-        fputc ('\n', FILE); } while (0)
+ /* This is how to output an internal numbered label where
+    PREFIX is the class of label and NUM is the number within the class.  */

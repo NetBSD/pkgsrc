@@ -1,0 +1,44 @@
+$NetBSD: patch-bm,v 1.1 2002/01/03 20:40:46 tron Exp $
+
+--- ../gcc-2.95.3/gcc/c-common.c.orig	Tue Sep  7 10:11:16 1999
++++ ../gcc-2.95.3/gcc/c-common.c	Thu Jan  3 20:37:54 2002
+@@ -1132,7 +1132,7 @@
+   { "D", 		0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, "2" },
+   { "g", 		0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, "2O-_0w" },
+   { "cx", 		0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, "3E" },
+-  { "%RTXnrt",		0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, "" },
++  { "%FRTXnrt",		0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, "" },
+   { "P",		0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, "G" },
+   { "HIMSUWdemw",	0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, "-_0Ow" },
+   { "Vju",		0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, "-_0Oow" },
+@@ -1398,7 +1398,8 @@
+ 
+   if (integer_zerop (format_tree))
+     {
+-      warning ("null format string");
++      if (pedantic)
++        warning ("null format string");
+       return;
+     }
+   if (TREE_CODE (format_tree) != ADDR_EXPR)
+@@ -1432,8 +1433,6 @@
+ 	{
+ 	  if (format_chars - TREE_STRING_POINTER (format_tree) != format_length)
+ 	    warning ("embedded `\\0' in format");
+-	  if (info->first_arg_num != 0 && params != 0 && ! has_operand_number)
+-	    warning ("too many arguments for format");
+ 	  return;
+ 	}
+       if (*format_chars++ != '%')
+@@ -1722,11 +1721,6 @@
+ 	}
+       if (wide && index (fci->flag_chars, 'w') == 0)
+ 	warning ("width used with `%c' format", format_char);
+-      if (index (fci->flag_chars, '2') != 0)
+-	warning ("`%%%c' yields only last 2 digits of year", format_char);
+-      else if (index (fci->flag_chars, '3') != 0)
+-	warning ("`%%%c' yields only last 2 digits of year in some locales",
+-		 format_char);
+       if (precise && index (fci->flag_chars, 'p') == 0)
+ 	warning ("precision used with `%c' format", format_char);
+       if (aflag && index (fci->flag_chars, 'a') == 0)
