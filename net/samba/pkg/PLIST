@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2000/10/07 13:58:31 kei Exp $
+@comment $NetBSD: PLIST,v 1.20 2001/02/04 15:29:59 tron Exp $
 bin/addtosmbpass
 bin/convert_smbpasswd
 bin/make_printerdef
@@ -14,7 +14,8 @@ bin/smbstatus
 bin/smbtar
 bin/testparm
 bin/testprns
-etc/rc.d/samba.sh.sample
+etc/rc.d/nmbd.sh
+etc/rc.d/smbd.sh
 lib/codepages/codepage.1251
 lib/codepages/codepage.437
 lib/codepages/codepage.737

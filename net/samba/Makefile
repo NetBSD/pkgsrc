@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2000/11/20 02:45:18 kim Exp $
+# $NetBSD: Makefile,v 1.40 2001/02/04 15:29:58 tron Exp $
 
 DISTNAME=		samba-2.0.7-ja-1.3
 PKGNAME=		samba-2.0.7.1.3
@@ -23,7 +23,6 @@ GNU_CONFIGURE=		# defined
 
 .include "../../mk/bsd.prefs.mk"
 
-STARTUP_SCRIPT=		${PREFIX}/etc/rc.d/samba.sh.sample
 SAMPLE_CONFIG=		${PREFIX}/share/examples/samba/smb.conf.sample
 SAMBA_LOGDIR=		/var/log
 SAMBA_LOCKDIR=		/var/run/samba
@@ -53,6 +52,13 @@ DEINSTALL_FILE=		${WRKDIR}/DEINSTALL
 pre-configure:
 	cd ${WRKSRC}; ${LOCALBASE}/bin/autoreconf
 
+post-build:
+.for FILE in nmbd.sh smbd.sh
+	${SED}	-e "s,@PREFIX@,${PREFIX},g" \
+		-e "s,@ECHO@,${ECHO},g" \
+		< ${FILESDIR}/${FILE} > ${WRKDIR}/${FILE}
+.endfor
+
 post-install:
 	# Install Samba documentation.
 	#
@@ -81,10 +87,8 @@ post-install:
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/examples/samba
 	${CHMOD} -R ugo-w ${PREFIX}/share/examples/samba
 
-	${SED}	-e "s,@PREFIX@,${PREFIX},g" \
-		-e "s,@ECHO@,${ECHO},g" \
-		< ${FILESDIR}/samba.sh > ${WRKDIR}/samba.sh
-	${INSTALL_SCRIPT} ${WRKDIR}/samba.sh ${STARTUP_SCRIPT}
+	${INSTALL_SCRIPT} ${WRKDIR}/nmbd.sh ${WRKDIR}/smbd.sh \
+		${PREFIX}/etc/rc.d
 
 	${SED}	-e 's,@LOGDIR@,${SAMBA_LOGDIR},g' \
 		-e 's,@ETCDIR@,${SAMBA_ETCDIR},g' \
