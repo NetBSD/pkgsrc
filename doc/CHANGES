@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8040 2004/11/27 00:43:43 sketch Exp $
+$NetBSD: CHANGES,v 1.8041 2004/11/27 00:47:13 sketch Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5477,3 +5477,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated apachetop to 0.12.5 [sketch 2004-11-27]
 	Updated p5-Getopt-Simple to 1.48 [wiz 2004-11-27]
 	Updated p5-Config-General to 2.27 [sketch 2004-11-27]
+	Updated p5-Proc-Daemon to 0.03 [sketch 2004-11-27]
