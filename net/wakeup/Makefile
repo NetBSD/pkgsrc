@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/11/18 23:34:41 tron Exp $
+# $NetBSD: Makefile,v 1.3 1999/11/20 11:38:24 tron Exp $
 #
 
 DISTNAME=	hpwake.c.gz
@@ -18,7 +18,7 @@ do-extract:
 	${GUNZIP_CMD} ${WRKSRC}/${DISTNAME}
 
 do-build:
-	(cd ${WRKSRC} ; ${CC} ${CFLAGS} -O2 -o ${DISTNAME:C/.c.gz//} ${DISTNAME:C/.gz//} )
+	(cd ${WRKSRC} ; ${CC} ${CFLAGS} -o ${DISTNAME:C/.c.gz//} ${DISTNAME:C/.gz//} )
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${DISTNAME:C/.c.gz//} ${PREFIX}/bin/${PKGNAME:C/-.*$//}
