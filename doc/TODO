@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.411 2003/03/22 15:09:34 wiz Exp $
+$NetBSD: TODO,v 1.412 2003/03/23 02:03:59 rh Exp $
 
 Suggested new packages
 ======================
@@ -88,7 +88,6 @@ Suggested package updates
 	o blender-2.26
 	o bzflag-1.7g0
 	o canna-3.6p3 [pkg/20208]
-	o cdlabelgen-2.5.0
 	o cfengine-1.6.5 [pkg/19459|seb]
 	o clisp-2.30
 	o courier-0.40.2
