@@ -1,0 +1,53 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/03/25 00:26:03 manu Exp $
+--- ./jre/bin/.java_wrapper.orig        Fri Aug  4 16:23:12 2000
++++ ./jre/bin/.java_wrapper     Fri Mar 16 00:54:55 2001
+@@ -24,8 +24,11 @@
+         ;;
+     sparc*)
+         proc=sparc
+         ;;
++    macppc | ofppc | bebox | sandpoint | amigappc | prep)
++       proc=ppc
++       ;;
+     *)
+         proc="`uname -m`"
+         ;;
+ esac
+--- ./jre/bin/realpath.orig     Fri Aug  4 16:23:12 2000
++++ ./jre/bin/realpath  Fri Mar 16 00:48:08 2001
+@@ -19,8 +19,11 @@
+         ;;
+     sparc*)
+         proc=sparc
+         ;;
++    macppc | prep | bebox | sandpoint | amigappc | ofppc)
++       proc=ppc
++       ;;
+     *)
+         proc="`uname -m`"
+         ;;
+ esac
+--- ./bin/.java_wrapper.orig    Fri Aug  4 16:23:12 2000
++++ ./bin/.java_wrapper Fri Mar 16 00:54:46 2001
+@@ -24,8 +24,11 @@
+         ;;
+     sparc*)
+         proc=sparc
+         ;;
++    macppc | ofppc | bebox | sandpoint | amigappc | prep)
++       proc=ppc
++       ;;
+     *)
+         proc="`uname -m`"
+         ;;
+ esac
+@@ -132,9 +135,8 @@
+ LD_LIBRARY_PATH="${JAVA_LIBRARY_PATH}${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}"
+ export LD_LIBRARY_PATH
+ 
+ prog="${APPHOME}/bin/${proc}/${ttype}/${progname}"
+-
+ # Run.
+ if [ -x "$prog" ]
+ then
+      # Calling: exec $DEBUG_PROG "$prog" "$@"
