@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/11/07 18:49:13 minskim Exp $
+
+SHA1 (bmon-2.0.1.tar.gz) = ef6297bbd7a5f9a351e14b2b3e9f45157b136a9c
+Size (bmon-2.0.1.tar.gz) = 110024 bytes
+SHA1 (patch-aa) = 1b737dc493506f374ed8e5732f922225f2c4d8c1
