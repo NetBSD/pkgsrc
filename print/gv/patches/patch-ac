@@ -1,0 +1,15 @@
+--- source/paths.h.orig	1997-04-06 08:00:00.000000000 +1000
++++ source/paths.h	2003-07-30 01:30:09.000000000 +1000
+@@ -34,9 +34,9 @@
+ #   define INC_XMU(aaa) <XMU_DIRECTORY/aaa>
+ #   define INC_XAW(aaa) <XAW_DIRECTORY/aaa>
+ #else
+-#   define INC_X11(aaa) <X11/##aaa##>
+-#   define INC_XMU(aaa) <X11/Xmu/##aaa##>
+-#   define INC_XAW(aaa) <X11/Xaw3d/##aaa##>
++#   define INC_X11(aaa) <X11/aaa>
++#   define INC_XMU(aaa) <X11/Xmu/aaa>
++#   define INC_XAW(aaa) <X11/Xaw3d/aaa>
+ #endif
+ 
+ #endif /* _PATHS_H_ */
