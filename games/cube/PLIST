@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/01/18 17:48:53 peter Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/02/15 21:26:39 peter Exp $
 bin/cube_client
 bin/cube_server
 share/cube/autoexec.cfg
@@ -16,7 +16,6 @@ share/cube/data/menus.cfg
 share/cube/data/newchars.png
 share/cube/data/prefabs.cfg
 share/cube/data/sounds.cfg
-share/cube/packages/readme.txt
 share/cube/packages/aard/aardfdry256_1.jpg
 share/cube/packages/aard/aardmbr16_2.jpg
 share/cube/packages/aard/aardmmet32_1.jpg
@@ -588,6 +587,7 @@ share/cube/packages/pigcam/pig09.cfg
 share/cube/packages/pigcam/pig09.cgz
 share/cube/packages/pigcam/pigfin.cfg
 share/cube/packages/pigcam/pigfin.cgz
+share/cube/packages/readme.txt
 share/cube/packages/schwenz/dt_tile_check.01.jpg
 share/cube/packages/schwenz/readme.txt
 share/cube/packages/socksky/desert_bk.jpg
