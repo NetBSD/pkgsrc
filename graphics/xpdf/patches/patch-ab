@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 1999/08/01 09:38:39 frueauf Exp $
+
+--- configure-orig	Sun Aug  1 09:56:37 1999
++++ configure	Sun Aug  1 09:57:31 1999
+@@ -1453,7 +1453,7 @@
+ 
+   # It would also be nice to do this for all -L options, not just this one.
+   if test -n "$x_libraries"; then
+-    X_LIBS="$X_LIBS -L$x_libraries"
++    X_LIBS="$X_LIBS -L$x_libraries -Wl,-R$x_libraries"
+     # For Solaris; some versions of Sun CC require a space after -R and
+     # others require no space.  Words are not sufficient . . . .
+     case "`(uname -sr) 2>/dev/null`" in
