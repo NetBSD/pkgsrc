@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2004/01/24 00:56:37 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2004/02/09 12:03:27 seb Exp $
 # FreeBSD: ports/graphics/lcms/Makefile,v 1.2 2000/12/19 15:36:26 sobomax Exp
 
-DISTNAME=	lcms-1.06
+DISTNAME=	lcms-1.12
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.littlecms.com/ \
 		http://www.abaforum.es/martim/
@@ -15,11 +15,18 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
-LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+TEST_TARGET=		check
+
+CONFIGURE_ARGS+=	--without-jpeg
+CONFIGURE_ARGS+=	--without-tiff
+CONFIGURE_ARGS+=	--without-zlib
+
+INSTALLATION_DIRS+=	share/doc/lcms
 
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/lcms
-	cd ${WRKSRC}/doc && ${PAX} -rw . ${PREFIX}/share/doc/lcms
-	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/doc/lcms
+.for _f_ in LCMSAPI.TXT TUTORIAL.TXT
+	${INSTALL_DATA} ${WRKSRC}/doc/${_f_} ${PREFIX}/share/doc/lcms/${_f_}
+.endfor
 
 .include "../../mk/bsd.pkg.mk"
