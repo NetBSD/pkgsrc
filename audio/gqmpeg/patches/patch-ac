@@ -1,0 +1,31 @@
+$NetBSD: patch-ac,v 1.6 2002/01/16 07:59:54 lukem Exp $
+
+--- src/io_ogg123.c.orig	Thu Jan  3 19:46:03 2002
++++ src/io_ogg123.c
+@@ -105,7 +105,7 @@
+ 
+ 	if (!ogg123_info_found) return NULL;
+ 
+-	command = g_strdup_printf("%s %s", OGG123_BINARY_INFO, path);
++	command = g_strdup_printf("%s '%s'", OGG123_BINARY_INFO, path);
+ 	f = popen(command, "r");
+ 	if (!f)
+ 		{
+@@ -183,7 +183,7 @@
+ 
+ 	if (!ogg123_comment_found) return NULL;
+ 
+-	command = g_strdup_printf("%s -l %s", OGG123_BINARY_COMMENT, path);
++	command = g_strdup_printf("%s -l '%s'", OGG123_BINARY_COMMENT, path);
+ 	f = popen(command, "r");
+ 	if (!f)
+ 		{
+@@ -259,7 +259,7 @@
+ 	if (!ogg123_comment_found) return TRUE;
+ 	if (!path) return FALSE;
+ 
+-	command = g_strdup_printf("%s -w %s", OGG123_BINARY_COMMENT, path);
++	command = g_strdup_printf("%s -w '%s'", OGG123_BINARY_COMMENT, path);
+ 
+ 	work = comments;
+ 	while (work && work->next)
