@@ -1,0 +1,5 @@
+This package contains a hacked version of the Linux program for
+the CueCat (a barcode reader distributed for free in the USA by
+e.g. Radio Shack). This package only works on a console with
+the wscons keyboard driver, and only supports the original CueCat
+(neither the serial nor the USB hack).
