@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 1998/04/15 10:38:52 agc Exp $
+# $NetBSD: Makefile,v 1.30 1998/05/04 22:57:01 tron Exp $
 # FreeBSD Id: Makefile,v 1.156 1997/09/30 07:54:42 asami Exp
 #
 
@@ -58,7 +58,7 @@
     SUBDIR += sunclock
     SUBDIR += swisswatch
 #    SUBDIR += sxpc
-#    SUBDIR += tix
+    SUBDIR += tix
 #    SUBDIR += tk41
 #    SUBDIR += tk42
     SUBDIR += tk80
