@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2005 2004/08/04 20:55:12 jlam Exp $
+$NetBSD: TODO,v 1.2006 2004/08/04 21:20:16 wiz Exp $
 
 Suggested new packages
 ======================
@@ -180,7 +180,6 @@ Suggested package updates
 	o bitchx-1.1
 	o blender-2.33
 	o boson-0.10
-	o cdrtools-ossdvd-2.01.1.27
 	o cervisia-2.1.2
 	o checkbot-1.75 [pkg/26371]
 	o clanlib-0.7.8
