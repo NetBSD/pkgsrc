@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.741 2001/05/18 10:29:10 abs Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.742 2001/05/18 16:23:20 skrll Exp $
 #
 # This file is in the public domain.
 #
@@ -1897,6 +1897,9 @@ do-shlib-handling:
 					links[linkc++] = $$0;		\
 					sub("\.[0-9]+$$", "");		\
 					links[linkc++] = $$0;		\
+					if (sub("-[^-]+\.so$$", "\.so")) { \
+						links[linkc++] = $$0;	\
+					}				\
 					next				\
 				}					\
 				/.*\/lib[^\/]+\.so\.[0-9]+\.[0-9]+$$/ {	\
@@ -1906,6 +1909,9 @@ do-shlib-handling:
 					links[linkc++] = $$0;		\
 					sub("\.[0-9]+$$", "");		\
 					links[linkc++] = $$0;		\
+					if (sub("-[^-]+\.so$$", "\.so")) { \
+						links[linkc++] = $$0;	\
+					}				\
 					next				\
 				}					\
 				{ lines[NR] = $$0 }			\
