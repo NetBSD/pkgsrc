@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/01/01 07:03:42 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/01/02 06:40:33 jlam Exp $
 etc/rc.d/iasp
 etc/rc.d/iasp_admin
 ${IASP}/README_EN
@@ -1236,6 +1236,8 @@ ${IASP}/stop-server.sh
 @dirrm ${IASP}/docs/iasp/samples/database/CloudscapeDB
 @dirrm ${IASP}/docs/iasp/samples/database
 @dirrm ${IASP}/docs/iasp/samples
+@comment Remove any auto-generated images.
+@unexec ${RM} -f %D/${IASP}/docs/iasp/images/*.gif
 @dirrm ${IASP}/docs/iasp/images
 @dirrm ${IASP}/docs/iasp/features/image
 @dirrm ${IASP}/docs/iasp/features

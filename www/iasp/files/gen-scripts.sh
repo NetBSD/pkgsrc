@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: gen-scripts.sh,v 1.1.1.1 2003/01/01 07:03:42 jlam Exp $
+# $NetBSD: gen-scripts.sh,v 1.2 2003/01/02 06:40:33 jlam Exp $
 
 IASP_CLASSPATH=
 for classpath in ${WRKSRC}/lib/*.jar ${WRKSRC}/servlets; do
@@ -58,32 +58,32 @@ ${CAT} > ${WRKSRC}/start-server.sh << EOF
 . ${IASP}/iasp-common.conf
 eval exec \${JAVA} servlet.http.HttpServer
 EOF
-chmod u+x ${WRKSRC}/start-server.sh
+${CHMOD} 555 ${WRKSRC}/start-server.sh
 
 ${CAT} > ${WRKSRC}/stop-server.sh << EOF
 #!${SH}
 . ${IASP}/iasp-common.conf
 eval exec \${JAVA} servlet.http.HttpServerControl webserver
 EOF
-chmod u+x ${WRKSRC}/stop-server.sh
+${CHMOD} 555 ${WRKSRC}/stop-server.sh
 
 ${CAT} > ${WRKSRC}/start-admin.sh << EOF
 #!${SH}
 . ${IASP}/iasp-common.conf
 eval exec \${JAVA} servlet.webserver.WebHttpServer
 EOF
-chmod u+x ${WRKSRC}/start-admin.sh
+${CHMOD} 555 ${WRKSRC}/start-admin.sh
 
 ${CAT} > ${WRKSRC}/stop-admin.sh << EOF
 #!${SH}
 . ${IASP}/iasp-common.conf
 eval exec \${JAVA} servlet.http.HttpServerControl adminserver
 EOF
-chmod u+x ${WRKSRC}/stop-admin.sh
+${CHMOD} 555 ${WRKSRC}/stop-admin.sh
 
 ${CAT} > ${WRKSRC}/connector.sh << EOF
 #!${SH}
 . ${IASP}/iasp-common.conf
 eval exec \${JAVA} connector.iasp_connector
 EOF
-chmod u+x ${WRKSRC}/connector.sh
+${CHMOD} 555 ${WRKSRC}/connector.sh
