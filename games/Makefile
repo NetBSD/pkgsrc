@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 1998/07/25 21:23:47 frueauf Exp $
+# $NetBSD: Makefile,v 1.17 1998/07/26 22:14:31 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.87 1997/10/15 04:58:31 max Exp
 #
 
@@ -16,6 +16,7 @@
 #    SUBDIR += dontspace
 #    SUBDIR += doom
 #    SUBDIR += empire
+    SUBDIR += finalbattle
 #    SUBDIR += flying
     SUBDIR += freeciv
     SUBDIR += galaxa
@@ -24,7 +25,7 @@
 #    SUBDIR += gnuchess
 #    SUBDIR += gnugo
 #    SUBDIR += gnushogi
-#    SUBDIR += golddig
+    SUBDIR += golddig
     SUBDIR += icbm3d
 #    SUBDIR += imaze
 #    SUBDIR += jetpack
