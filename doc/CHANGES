@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2266 2003/05/20 11:56:04 wiz Exp $
+$NetBSD: CHANGES,v 1.2267 2003/05/20 14:28:37 grant Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1997,3 +1997,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added pyslsk-1.2.0 [hubertf 2003-05-19]
 	Updated libxslt to 1.0.30 [wiz 2003-05-20]
 	Updated curl to 7.10.5 [wiz 2003-05-20]
+	Added mozilla-bin-nightly [grant 2003-05-20]
