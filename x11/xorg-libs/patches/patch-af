@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.3 2005/03/22 09:49:14 adam Exp $
+$NetBSD: patch-af,v 1.4 2005/03/22 14:00:25 adam Exp $
 
 --- config/cf/darwin.cf.in.orig	Wed Dec 15 05:53:05 2004
 +++ config/cf/darwin.cf.in
@@ -16,11 +16,11 @@ $NetBSD: patch-af,v 1.3 2005/03/22 09:49:14 adam Exp $
   */
  #if OSMajorVersion >= 7
 -# define CppCmd                 /usr/bin/cpp3
-+# define CppCmd                 /usr/bin/cpp
++# define CppCmd                 /usr/bin/cpp -xassembler-with-cpp
  # define StandardCppOptions     -traditional -D__GNUC__
  #else
 -# define CppCmd                 /usr/bin/cpp
-+# define CppCmd                /usr/bin/cpp
++# define CppCmd                 /usr/bin/cpp -xassembler-with-cpp
  #endif
  #if HasGcc3
  # define RawCppCmd              CppCmd -undef
