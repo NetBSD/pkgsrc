@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2002/07/06 15:04:57 tron Exp $
+# $NetBSD: Makefile,v 1.36 2002/08/27 15:27:46 grant Exp $
 
 DISTNAME=		inn-2.3.3
 CATEGORIES=		news
@@ -60,11 +60,11 @@ INSTALL_FILE=		${WRKDIR}/INSTALL
 BUILD_DEFS+=		INN_DATA_DIR
 
 post-build:
-	${SED} -e 's#@@INN_DATA_DIR@@#${INN_DATA_DIR}#g' \
-	       -e 's#@@PREFIX@@#${PREFIX}#g' \
+	${SED} -e 's#@INN_DATA_DIR@#${INN_DATA_DIR}#g' \
+	       -e 's#@PREFIX@#${PREFIX}#g' \
 	        ${FILESDIR}/innd.sh >${WRKDIR}/innd.sh
 .for FILE in DEINSTALL INSTALL
-	${SED} -e 's#@@INN_DATA_DIR@@#${INN_DATA_DIR}#g' \
+	${SED} -e 's#@INN_DATA_DIR@#${INN_DATA_DIR}#g' \
 	        ${PKGDIR}/${FILE} >${WRKDIR}/${FILE}
 .endfor
 	for DIR in backends expire frontends innd innfeed lib nnrpd	\
