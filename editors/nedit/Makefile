@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2001/02/25 04:17:44 hubertf Exp $
+# $NetBSD: Makefile,v 1.14 2001/07/02 21:54:19 jlam Exp $
 
 DISTNAME=	nedit-5.1.1-src
 PKGNAME=	nedit-5.1.1
@@ -9,11 +9,10 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.nedit.org/
 COMMENT=	Motif based standard GUI style text editor
 
-USE_MOTIF=	YES
-USE_XPM=	YES
+USE_BUILDLINK_ONLY=	YES
+ALL_TARGET=		netbsd
 
-NO_CONFIGURE=	YES
-ALL_TARGET=	netbsd
+CFLAGS+=	-I${X11BASE}/include
 
 WRKSRC=	${WRKDIR}/${PKGNAME}
 
@@ -25,4 +24,6 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/nedit
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/nedit
 
+.include "../../graphics/xpm/buildlink.mk"
+.include "../../x11/lesstif/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
