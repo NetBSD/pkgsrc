@@ -1,0 +1,21 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/03/07 12:14:59 drochner Exp $
+
+--- setup.py.orig	Sun Feb 25 19:14:48 2001
++++ setup.py	Wed Mar  7 10:52:05 2001
+@@ -56,7 +56,7 @@
+         return 0
+ 
+ def get_expat_prefix():
+-    for p in ("/usr", "/usr/local"):
++        p = os.getenv("PREFIX")
+         incs = os.path.join(p, "include")
+         libs = os.path.join(p, "lib")
+         if os.path.isfile(os.path.join(incs, "expat.h")) \
+@@ -99,6 +99,7 @@
+                       define_macros=define_macros,
+                       include_dirs=include_dirs,
+                       library_dirs=library_dirs,
++                      runtime_library_dirs=library_dirs,
+                       libraries=libraries,
+                       sources=sources
+                       ))
