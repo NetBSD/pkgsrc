@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.11 2002/07/24 19:45:28 jlam Exp $
-# FreeBSD Id: ports/textproc/textutils/Makefile,v 1.7 1999/09/18 17:46:30 steve Exp
+# $NetBSD: Makefile,v 1.12 2002/12/22 17:27:28 wiz Exp $
+#
 
 DISTNAME=	textutils-2.0
 CATEGORIES=	textproc
@@ -12,7 +12,14 @@ COMMENT=	GNU text utilities
 USE_PERL5=	build
 USE_GMAKE=	YES
 GNU_CONFIGURE=	YES
-CONFIGURE_ARGS=	--program-prefix=g
+
+.include "../../mk/bsd.prefs.mk"
+
+.if defined(GNU_PROGRAM_PREFIX)
+CONFIGURE_ARGS=	--program-prefix=${GNU_PROGRAM_PREFIX}
+.endif
+PLIST_SUBST+=	GNU_PROGRAM_PREFIX=${GNU_PROGRAM_PREFIX}
+BUILD_DEFS+=	GNU_PROGRAM_PREFIX
 
 post-install:
 	${INSTALL_INFO} ${PREFIX}/info/textutils.info ${PREFIX}/info/dir
