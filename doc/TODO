@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2365 2004/11/14 21:56:31 snj Exp $
+$NetBSD: TODO,v 1.2366 2004/11/15 01:29:29 wiz Exp $
 
 Suggested new packages
 ======================
@@ -235,6 +235,11 @@ Suggested new packages
 	http://nostatic.org/grip/
 	cd-player and cd-ripper for the Gnome desktop
 
+	wired
+	http://bloodshed.net/wired/
+	Professional music production and creation software
+
+
 Suggested package updates
 =========================
 
@@ -300,6 +305,7 @@ Suggested package updates
 	o dact-0.8.37
 	o db4-4.3.21
 	o dctc-0.85.9
+	o devilspie-0.7
 	o dict-client-1.9.11
 	o dict-server-1.9.11
 	o distcc-2.18.2
@@ -338,6 +344,7 @@ Suggested package updates
 	o fugu-1.2.3
 	o galeon-1.3.18
 	o gbib-0.1.2
+	o gdb6-6.3.0
 	o gdm-2.6.0.5
 	o generator-0.35
 	o gettext-0.14.1
@@ -412,6 +419,7 @@ Suggested package updates
 	o libstatgrab-0.11 [pkg/28258]
 	o libtiff-3.7.0 [reed]
 	o licq-1.3.0
+	o liferea-0.6.2
 	o lilypond-2.4
 	o lmbench-2.0.4
 	o lout-3.29
@@ -453,7 +461,7 @@ Suggested package updates
 	o nsd-2.1.4
 	o nslint-2.1a3
 	o nulib2-2.0.3
-	o nut-10.8
+	o nut-10.9
 	o nxtvepg-2.7.0
 	o ocaml-3.07pl2
 	o openal-20040816
@@ -492,7 +500,7 @@ Suggested package updates
 	o py-psycopg-1.1.10
 	o py-wxWindows-2.5.2.8
 	o pysol-4.82
-	o raine-0.41.1
+	o raine-0.41.2
 	o randread-0.2
 	o rasmol-2.7.2.1.1
 	o ratpoison-1.3.0
@@ -544,6 +552,7 @@ Suggested package updates
 	o thunderbird-0.9
 	o tinyproxy-1.6.3
 	o tkdesk-2.0
+	o tkdiff-4.0.2
 	o tkgate-1.8.5
 	o tkman-2.2
 	o top-3.5b13
