@@ -1,4 +1,6 @@
-$NetBSD: distinfo,v 1.2 2002/02/14 17:56:05 jonb Exp $
+$NetBSD: distinfo,v 1.3 2002/02/21 03:02:33 jonb Exp $
 
-SHA1 (arch-1.0pre7.tar.gz) = 23e6c9fa9001f27bebccfa20db576942b3e4f26e
-Size (arch-1.0pre7.tar.gz) = 2460644 bytes
+SHA1 (arch-1.0pre9.tar.gz) = 58515fb4d68fddad5d3996f6471df5627ce3f354
+Size (arch-1.0pre9.tar.gz) = 2519236 bytes
+SHA1 (patch-aa) = fb631341438d5cbc5e2d7adf31ae397aefae2568
+SHA1 (patch-ab) = 8dca684511739f2417518b1776db3701e239d229

@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2002/02/16 15:48:20 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2002/02/21 03:02:33 jonb Exp $
 #
 
-DISTNAME=	arch-1.0pre7
-PKGNAME=	arch-1.0.0.7
+DISTNAME=	arch-1.0pre9
+PKGNAME=	arch-1.0.0.9
 CATEGORIES=	devel
-MASTER_SITES=	ftp://regexps.com/pub/src/arch/
+MASTER_SITES=	ftp://regexps.com/pub/src/arch/ \
+		ftp://regexps.com/pub/src/arch/old/
 
 MAINTAINER=	schmonz+netbsd@schmonz.com
 HOMEPAGE=	http://www.regexps.com/
@@ -21,6 +22,7 @@ CONFIGURE_ARGS+=	--prefix ${PREFIX}
 WRKSRC=		${WRKDIR}/${DISTNAME}/src/=build
 HTMLDIR=	${PREFIX}/share/doc/html/arch
 EXAMPLESDIR=	${PREFIX}/share/examples/arch
+LOCALDIR=	${PREFIX}/libexec/arch/local
 
 post-extract:
 	${MKDIR} ${WRKSRC}
@@ -41,6 +43,7 @@ post-install:
 	${CHMOD} -R ugo-w ${EXAMPLESDIR}
 
 	# Install GNU patch where it can be found
-	${LN} -s ${LOCALBASE}/bin/gpatch ${PREFIX}/libexec/arch/arch/patch
+	${INSTALL_DATA_DIR} ${LOCALDIR}
+	${LN} -s ${LOCALBASE}/bin/gpatch ${LOCALDIR}/patch
 
 .include "../../mk/bsd.pkg.mk"
