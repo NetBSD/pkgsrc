@@ -1,9 +1,9 @@
-$NetBSD: patch-aa,v 1.3 2003/01/19 00:41:10 wiz Exp $
+$NetBSD: patch-aa,v 1.4 2003/11/11 07:48:03 wiz Exp $
 
---- validate.netbsd.orig	Sat Jan 18 17:19:30 2003
+--- validate.netbsd.orig	Tue Nov 11 08:39:01 2003
 +++ validate.netbsd
-@@ -43,10 +43,10 @@ my $usage = "Usage: validate [OPTION] [F
- my $tryHelp = qq{Try "validate --help" for more information.};
+@@ -50,10 +50,10 @@ by Liam Quinn <liam\@htmlhelp.com>";
+ my $usage = "Usage: validate [OPTION] [FILE...]";
  
  # SGML directory (catalog, DTDs, SGML declarations)
 -my $sgmlDir = '/usr/local/share/wdg/sgml-lib';
