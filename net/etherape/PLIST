@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2003/03/11 03:07:36 salo Exp $
+@comment $NetBSD: PLIST,v 1.4 2004/11/22 15:27:53 adam Exp $
 bin/etherape
 man/man1/etherape.1
 share/etherape/glade/etherape.glade2
@@ -9,11 +9,15 @@ share/etherape/glade/stop.xpm
 @exec ${MKDIR} %D/share/examples/etherape
 share/examples/etherape/services
 share/gnome/apps/Applications/etherape.desktop
+share/gnome/help/etherape/C/topic.dat
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/etherape.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/etherape.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/etherape.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/etherape.mo
 share/pixmaps/etherape.png
+@dirrm share/gnome/help/etherape/C/stylesheet-images
+@dirrm share/gnome/help/etherape/C
+@dirrm share/gnome/help/etherape
 @dirrm share/examples/etherape
 @dirrm share/etherape/glade
 @dirrm share/etherape
