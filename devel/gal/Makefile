@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2000/12/31 09:35:24 rh Exp $
+# $NetBSD: Makefile,v 1.7 2001/01/01 17:33:44 rh Exp $
 #
 
 DISTNAME=	gal-0.4.1
@@ -8,6 +8,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=unstable/sources/gal/}
 MAINTAINER=	rh@netbsd.org
 HOMEPAGE=	http://www.gnome.org/
 
+DEPENDS+=	libiconv-*:../../converters/libiconv
 DEPENDS+=	gnome-core>=1.2.0:../../x11/gnome-core
 DEPENDS+=	gnome-print>=0.25:../../print/gnome-print
 DEPENDS+=	gnome-vfs-*:../../sysutils/gnome-vfs
