@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.24 1998/03/25 14:19:59 hubertf Exp $
+# $NetBSD: Packages.txt,v 1.25 1998/04/16 14:10:53 frueauf Exp $
 ###########################################################################
 
 			==========================
@@ -255,9 +255,9 @@ Building, installation and creation of a binary package are all controlled
 by the package's Makefile.
 
 There is a Makefile for each package. This file includes the standard
-<bsd.port.mk> file, which sets all the definitions and actions necessary
-for the package to compile and install itself. The mandatory fields are the
-DISTNAME which specifies the base name of the distribution file to be
+"../../mk/bsd.pkg.mk" file, which sets all the definitions and actions
+necessary for the package to compile and install itself. The mandatory fields
+are the DISTNAME which specifies the base name of the distribution file to be
 downloaded from the site on the Internet, MASTER_SITES which specifies that
 site, CATEGORIES which denotes the categories into which the package falls,
 PKGNAME which is the name of the package and the MAINTAINER name. This is
@@ -272,7 +272,7 @@ one is used, they need to be separated by spaces:
   benchmarks devel      graphics   misc       print      templates
   comms      editors    lang       net        security   textproc
 
-See /usr/share/mk/bsd.port.mk for a description of all available options
+See /usr/pkgsrc/mk/bsd.pkg.mk for a description of all available options
 and variables.
 
 Please pay attention to the following gotchas, especially when preparing a
@@ -282,7 +282,7 @@ port from the FreeBSD ports collection:
    compressed correctly if MANZ is set
  - Do the same for CATx, if the package installs any formatted manpages.
  - Add MANCOMPRESSED (if not already there) if manpages are installed in
-   compressed form by the package; see comment in bsd.port.mk
+   compressed form by the package; see comment in bsd.pkg.mk
  - Replace /usr/local by ${PREFIX} in all files  (see patches below)
  - Rewrite any ldconfig commands as "ldconfig || ${TRUE}", as there isn't a
    ldconfig command on all platforms NetBSD runs on (e.g. alpha).
@@ -534,7 +534,7 @@ removed soon when perl's fixed for dynamic loading.
 
 (This handling of MI/MD PLIST files is implemented by setting PLIST_SRC to
 either "PLIST-mi PLIST-md.static" or "PLIST-mi PLIST-md.shared", see
-/usr/share/mk/bsd.port.mk).
+/usr/pkgsrc/mk/bsd.pkg.mk).
 
 
  5.2.3 Order in the PLIST* file(s)
@@ -652,7 +652,7 @@ applied, the software can be configured, then built (usually by compiling),
 and finally the produced binaries etc. can be put into place on the system.
 These are exactly the steps performed by the NetBSD package system, which
 is implemented as a series of targets in a central Makefile(include) -
-/usr/share/mk/bsd.port.mk.
+/usr/pkgsrc/mk/bsd.pkg.mk.
 
 
  7.1 Program location
@@ -672,7 +672,7 @@ to these files are encoded; see sections 4.3 and 6.2 for details on this.
  7.2 Main targets
  ================
 
-The main targets used during the build process defined in bsd.port.mk are:
+The main targets used during the build process defined in bsd.pkg.mk are:
 
  * fetch:
    This will check if the file(s) given in the variables DISTFILES and
@@ -789,7 +789,7 @@ only with some debugging aids.
    otherwise):
    (cd .../pkgsrc/category/pkgname ; cvs import pkgsrc/category/pkgname \
 	FREEBSD FreeBSD-current-yyyy-mm-dd)
- - IF you dida CVS import, check it out to apply the following fixes
+ - IF you did a CVS import, check it out to apply the following fixes
    (not needed if you don't have CVS access!)
  - Look at Makefile, fix if necessary; see section 4.1. 
  - Look at patches, remember if not appropriate
@@ -866,7 +866,7 @@ quick answer is:
 
 > HAS_CONFIGURE=          yes
 > CONFIGURE_SCRIPT=       Configure
-> CONFIGURE_ARGS=	netbsd13
+> CONFIGURE_ARGS=         netbsd13
 
 
  9.5 Packages not building in their DIST_NAME directory
@@ -923,7 +923,7 @@ Here's the preferred way to handle things if you want to include variables
 in .if statements:
 
 1. in the pkg Makefile, set all the pre-install etc targets.
-2. in the pkg Makefile, .include <bsd.port.mk>
+2. in the pkg Makefile, .include "../../mk/bsd.pkg.mk"
 3. Then put all the .if defined(USE_SOCKS), .if defined(USE_IDEA) etc
 
 
@@ -982,22 +982,22 @@ The file contents in this section must be used without the "> " prefix.
  11.1.1 Makefile
  ===============
 
-> # New ports collection makefile for:    bison
-> # Version required:     1.25
-> # Date created:         1 October 1997
-> # Whom:                 agc@netbsd.org
-> #
 > # <$>NetBSD<$>
 > #
 >  
 > DISTNAME=       bison-1.25
 > CATEGORIES=     lang
 > MASTER_SITES=   ${MASTER_SITE_GNU}
+>
+> BUILD_DEPENDS=  ${PREFIX}/bin/install-info:${PORTSDIR}/devel/gtexinfo
 >  
 > GNU_CONFIGURE=  yes
 > MAN1=           bison.1
+>
+> post-install:
+>                 @install-info ${PREFIX}/info/bison.info ${PREFIX}/info/dir
 >  
-> .include <bsd.port.mk>
+> .include "../../mk/bsd.pkg.mk"
 
 
  11.1.2 pkg/COMMENT
@@ -1019,7 +1019,20 @@ The file contents in this section must be used without the "> " prefix.
  11.1.4 pkg/PLIST
  ================
 
+> @comment <$>NetBSD<$>
 > bin/bison
+> man/man1/bison.1.gz
+> @unexec %D/bin/install-info --delete %D/info/bison.info %D/info/dir
+> info/bison.info
+> info/bison.info-1
+> info/bison.info-2
+> info/bison.info-3
+> info/bison.info-4
+> info/bison.info-5
+> @exec [ -f %D/info/dir ] || sed -ne '1,/Menu:/p' /usr/share/info/dir > %D/info/dir
+> @exec %D/bin/install-info %D/info/bison.info %D/info/dir
+> share/bison.simple
+> share/bison.hairy
 
 
  11.2 Steps for building, installing, packaging
