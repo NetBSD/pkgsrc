@@ -1,0 +1,25 @@
+--- Makefile.in.orig	Sun Dec 17 22:20:55 1995
++++ Makefile.in	Wed Oct  1 16:24:02 1997
+@@ -11,10 +11,11 @@
+ 
+ YACC = @YACC@ 
+ 
++prefix= ${PREFIX}
+ # where to put mawk
+-BINDIR = @BINDIR@
++BINDIR = ${prefix}/bin
+ # where to put the man pages
+-MANDIR = @MANDIR@
++MANDIR = ${prefix}/man/man1
+ MANEXT = @MANEXT@
+ #######################################
+ 
+@@ -31,7 +32,7 @@
+ REXP_C=rexp/rexp.c rexp/rexp0.c rexp/rexp1.c rexp/rexp2.c\
+     rexp/rexp3.c 
+ 
+-
++all: mawk_and_test
+ mawk_and_test :  mawk  mawk_test  fpe_test
+ 
+ mawk : $(O)  rexp/.done
