@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2004/03/29 23:50:49 wiz Exp $
+$NetBSD: distinfo,v 1.5 2005/02/19 20:54:14 wiz Exp $
 
-SHA1 (XML-LibXML-1.57.tar.gz) = e0219748e8fe49c03aec89eebed6a6f2c19c1a1b
-Size (XML-LibXML-1.57.tar.gz) = 169306 bytes
+SHA1 (XML-LibXML-1.58.tar.gz) = f2660677e2a579ba0bf9ef5d675ea2883b786abe
+Size (XML-LibXML-1.58.tar.gz) = 171713 bytes
