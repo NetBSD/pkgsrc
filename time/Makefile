@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2003/06/14 23:24:31 atatat Exp $
+# $NetBSD: Makefile,v 1.22 2003/07/18 15:55:08 jschauma Exp $
 #
 
 COMMENT=	clocks, calendars, daily planners and other time related applications
@@ -6,6 +6,7 @@ COMMENT=	clocks, calendars, daily planners and other time related applications
 SUBDIR+=	asclock
 SUBDIR+=	asclock-gtk
 SUBDIR+=	asclock-xlib
+SUBDIR+=	bbdate
 SUBDIR+=	cal
 SUBDIR+=	cardboard-schedule
 SUBDIR+=	catclock
