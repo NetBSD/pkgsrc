@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.37 2001/02/16 15:22:15 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2001/03/23 12:36:53 drochner Exp $
 #
 
-DISTNAME=	Mesa-3.4
+DISTNAME=	Mesa-3.4.1
 CATEGORIES=	graphics
 MASTER_SITES= 	# empty
 DISTFILES=	# empty
@@ -10,8 +10,8 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.ssec.wisc.edu/~brianp/Mesa.html
 COMMENT=	Graphics library meta package, similar to SGI's OpenGL
 
-DEPENDS+=	glu-3.4:../../graphics/glu
-DEPENDS+=	glut-3.4:../../graphics/glut
+DEPENDS+=	glu-3.4.1:../../graphics/glu
+DEPENDS+=	glut-3.4.1:../../graphics/glut
 
 CONFLICTS=	Mesa-glx-*
 
@@ -19,7 +19,7 @@ CHECK_MESA=	yes
 .include	"../../mk/bsd.prefs.mk"
 
 .if ${HAVE_BUILTIN_MESA} == "NO"
-DEPENDS+=	MesaLib-3.4:../../graphics/MesaLib
+DEPENDS+=	MesaLib-3.4.1:../../graphics/MesaLib
 .endif
 
 USE_X11BASE=	yes
