@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/09/27 23:18:11 jlam Exp $
+# $NetBSD: Makefile,v 1.10.8.1 2002/11/12 20:24:39 agc Exp $
 #
 
 .include "../Mesa/Makefile.common"
@@ -23,6 +23,19 @@ LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS=		--enable-static
+
+.include "../../mk/bsd.prefs.mk"
+
+# Check if we got libGLU distributed with XFree86 4.x.
+.if exists(${X11BASE}/include/GL/glu.h)
+_IS_BUILTIN_GLU!=       ${EGREP} -c BuildGLULibrary ${X11BASE}/lib/X11/config/X11.tmpl || ${TRUE}
+.else
+_IS_BUILTIN_GLU=        0
+.endif
+
+.if ${_IS_BUILTIN_GLU} != "0"
+IGNORE=         "GLU has already been installed as part of XFree86-4.x"
+.endif
 
 do-build:
 	cd ${WRKSRC}/src-glu && ${SETENV} ${MAKE_ENV} \
