@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2004/10/08 21:02:53 mjl Exp $
+$NetBSD: patch-aa,v 1.5 2004/10/08 22:31:02 mjl Exp $
 
 --- make/unix.mak.orig	2003-07-25 00:01:42.000000000 +0200
-+++ make/unix.mak	2004-10-08 21:27:52.000000000 +0200
-@@ -66,7 +66,7 @@
++++ make/unix.mak	2004-10-09 00:28:36.000000000 +0200
+@@ -66,13 +66,13 @@
  #
  
  ifndef PWLIBDIR
@@ -11,6 +11,13 @@ $NetBSD: patch-aa,v 1.4 2004/10/08 21:02:53 mjl Exp $
  endif
  
  ####################################################
+ 
+ # include generated build options file, then include it
+-include $(PWLIBDIR)/make/ptbuildopts.mak
++include $(PWLIBDIR)/share/pwlib/make/ptbuildopts.mak
+ 
+ ###############################################################################
+ #
 @@ -381,9 +381,9 @@
  
  ifeq ($(OSTYPE),OpenBSD)
