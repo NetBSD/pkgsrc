@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/04/29 22:41:44 jtb Exp $
+# $NetBSD: Makefile,v 1.5 2003/08/02 21:43:24 seb Exp $
 
 DISTNAME=	yorick-1.5.12
 CATEGORIES=	math
@@ -11,6 +11,7 @@ COMMENT=	Numerical algebra system (similar to Matlab)
 
 WRKSRC=		${WRKDIR}/yorick-1.5
 
+USE_BUILDLINK2=	yes
 USE_X11=        yes
 
 INFO_FILES=	yorick.info
