@@ -1,1028 +1,1028 @@
-@comment $NetBSD: PLIST,v 1.4 1999/07/14 18:53:35 tron Exp $
+@comment $NetBSD: PLIST,v 1.5 1999/08/13 14:06:56 agc Exp $
 bin/gnuattach
 bin/gnuclient
 bin/gnudoit
 bin/ootags
 bin/pstogif
 bin/xemacs
-bin/xemacs-21.1.4
+bin/${PKGNAME}
 bin/xemacs-b2m
 bin/xemacs-ctags
 bin/xemacs-etags
 bin/xemacs-rcs-checkin
 @exec mkdir -p %D/lib/xemacs
-@exec mkdir -p %D/lib/xemacs-21.1.4/lisp/x11
-@exec mkdir -p %D/lib/xemacs-21.1.4/lisp/w32
-@exec mkdir -p %D/lib/xemacs-21.1.4/lisp/w3
-@exec mkdir -p %D/lib/xemacs-21.1.4/lisp/vms
-@exec mkdir -p %D/lib/xemacs-21.1.4/lisp/vm
-@exec mkdir -p %D/lib/xemacs-21.1.4/lisp/viper
-@exec mkdir -p %D/lib/xemacs-21.1.4/lisp/utils
-@exec mkdir -p %D/lib/xemacs-21.1.4/lisp/url
-@exec mkdir -p %D/lib/xemacs-21.1.4/lisp/tooltalk
-@exec mkdir -p %D/lib/xemacs-21.1.4/lisp/tm
-@exec mkdir -p %D/lib/xemacs-21.1.4/lisp/tl
-@exec mkdir -p %D/lib/xemacs-21.1.4/lisp/sunpro
-@exec mkdir -p %D/lib/xemacs-21.1.4/lisp/skk
-@exec mkdir -p %D/lib/xemacs-21.1.4/lisp/rmail
-@exec mkdir -p %D/lib/xemacs-21.1.4/lisp/quail
-@exec mkdir -p %D/lib/xemacs-21.1.4/lisp/psgml
-@exec mkdir -p %D/lib/xemacs-21.1.4/lisp/prim
-@exec mkdir -p %D/lib/xemacs-21.1.4/lisp/pcl-cvs
-@exec mkdir -p %D/lib/xemacs-21.1.4/lisp/packages
-@exec mkdir -p %D/lib/xemacs-21.1.4/lisp/oobr/tree-x
-@exec mkdir -p %D/lib/xemacs-21.1.4/lisp/oobr/tree-nx/English.lproj/TreeView.nib
-@exec mkdir -p %D/lib/xemacs-21.1.4/lisp/oobr/tree-nx/English.lproj/InfoPanel.nib
-@exec mkdir -p %D/lib/xemacs-21.1.4/lisp/oobr/tree-nx/English.lproj/DocWindow.nib
-@exec mkdir -p %D/lib/xemacs-21.1.4/lisp/oobr/tree-nx/English.lproj
-@exec mkdir -p %D/lib/xemacs-21.1.4/lisp/oobr/tree-nx
-@exec mkdir -p %D/lib/xemacs-21.1.4/lisp/oobr
-@exec mkdir -p %D/lib/xemacs-21.1.4/lisp/ns
-@exec mkdir -p %D/lib/xemacs-21.1.4/lisp/mu
-@exec mkdir -p %D/lib/xemacs-21.1.4/lisp/modes
-@exec mkdir -p %D/lib/xemacs-21.1.4/lisp/mh-e
-@exec mkdir -p %D/lib/xemacs-21.1.4/lisp/mel
-@exec mkdir -p %D/lib/xemacs-21.1.4/lisp/mailcrypt
-@exec mkdir -p %D/lib/xemacs-21.1.4/lisp/locale/ja
-@exec mkdir -p %D/lib/xemacs-21.1.4/lisp/locale
-@exec mkdir -p %D/lib/xemacs-21.1.4/lisp/leim/quail
-@exec mkdir -p %D/lib/xemacs-21.1.4/lisp/leim
-@exec mkdir -p %D/lib/xemacs-21.1.4/lisp/language
-@exec mkdir -p %D/lib/xemacs-21.1.4/lisp/its
-@exec mkdir -p %D/lib/xemacs-21.1.4/lisp/iso
-@exec mkdir -p %D/lib/xemacs-21.1.4/lisp/ilisp
-@exec mkdir -p %D/lib/xemacs-21.1.4/lisp/hyperbole/kotl
-@exec mkdir -p %D/lib/xemacs-21.1.4/lisp/hyperbole
-@exec mkdir -p %D/lib/xemacs-21.1.4/lisp/hm--html-menus
-@exec mkdir -p %D/lib/xemacs-21.1.4/lisp/gnus
-@exec mkdir -p %D/lib/xemacs-21.1.4/lisp/gnats
-@exec mkdir -p %D/lib/xemacs-21.1.4/lisp/games
-@exec mkdir -p %D/lib/xemacs-21.1.4/lisp/eterm
-@exec mkdir -p %D/lib/xemacs-21.1.4/lisp/epoch
-@exec mkdir -p %D/lib/xemacs-21.1.4/lisp/eos
-@exec mkdir -p %D/lib/xemacs-21.1.4/lisp/energize
-@exec mkdir -p %D/lib/xemacs-21.1.4/lisp/emulators
-@exec mkdir -p %D/lib/xemacs-21.1.4/lisp/electric
-@exec mkdir -p %D/lib/xemacs-21.1.4/lisp/egg
-@exec mkdir -p %D/lib/xemacs-21.1.4/lisp/efs
-@exec mkdir -p %D/lib/xemacs-21.1.4/lisp/ediff
-@exec mkdir -p %D/lib/xemacs-21.1.4/lisp/edebug
-@exec mkdir -p %D/lib/xemacs-21.1.4/lisp/dired
-@exec mkdir -p %D/lib/xemacs-21.1.4/lisp/custom
-@exec mkdir -p %D/lib/xemacs-21.1.4/lisp/comint
-@exec mkdir -p %D/lib/xemacs-21.1.4/lisp/cl
-@exec mkdir -p %D/lib/xemacs-21.1.4/lisp/cc-mode
-@exec mkdir -p %D/lib/xemacs-21.1.4/lisp/calendar
-@exec mkdir -p %D/lib/xemacs-21.1.4/lisp/bytecomp
-@exec mkdir -p %D/lib/xemacs-21.1.4/lisp/auctex/style
-@exec mkdir -p %D/lib/xemacs-21.1.4/lisp/auctex
-@exec mkdir -p %D/lib/xemacs-21.1.4/lisp/apel
-@exec mkdir -p %D/lib/xemacs-21.1.4/etc/w3
-@exec mkdir -p %D/lib/xemacs-21.1.4/etc/vm
-@exec mkdir -p %D/lib/xemacs-21.1.4/etc/time
-@exec mkdir -p %D/lib/xemacs-21.1.4/etc/sounds
-@exec mkdir -p %D/lib/xemacs-21.1.4/etc/smilies
-@exec mkdir -p %D/lib/xemacs-21.1.4/etc/skk
-@exec mkdir -p %D/lib/xemacs-21.1.4/etc/sgml/cdtd
-@exec mkdir -p %D/lib/xemacs-21.1.4/etc/sgml/ISO_8879=1986/entities
-@exec mkdir -p %D/lib/xemacs-21.1.4/etc/sgml/ISO_8879=1986
-@exec mkdir -p %D/lib/xemacs-21.1.4/etc/sgml
-@exec mkdir -p %D/lib/xemacs-21.1.4/etc/ns
-@exec mkdir -p %D/lib/xemacs-21.1.4/etc/mule
-@exec mkdir -p %D/lib/xemacs-21.1.4/etc/mine
-@exec mkdir -p %D/lib/xemacs-21.1.4/etc/message
-@exec mkdir -p %D/lib/xemacs-21.1.4/etc/gnusrefcard
-@exec mkdir -p %D/lib/xemacs-21.1.4/etc/gnus
-@exec mkdir -p %D/lib/xemacs-21.1.4/etc/gnats
-@exec mkdir -p %D/lib/xemacs-21.1.4/etc/frame-icon
-@exec mkdir -p %D/lib/xemacs-21.1.4/etc/e
-@exec mkdir -p %D/lib/xemacs-21.1.4/etc/auctex/style
-@exec mkdir -p %D/lib/xemacs-21.1.4/etc/auctex
-@exec mkdir -p %D/lib/xemacs-21.1.4/etc/app-defaults/ja
-@exec mkdir -p %D/lib/xemacs-21.1.4/etc/app-defaults/fr
-@exec mkdir -p %D/lib/xemacs-21.1.4/etc/app-defaults
-lib/xemacs-21.1.4/etc/BETA
-lib/xemacs-21.1.4/etc/CHARSETS
-lib/xemacs-21.1.4/etc/CODING-STANDARDS
-lib/xemacs-21.1.4/etc/CODINGS
-lib/xemacs-21.1.4/etc/COPYING
-lib/xemacs-21.1.4/etc/COPYING.LIB
-lib/xemacs-21.1.4/etc/DEBUG
-lib/xemacs-21.1.4/etc/DISTRIB
-lib/xemacs-21.1.4/etc/Emacs.ad
-lib/xemacs-21.1.4/etc/FTP
-lib/xemacs-21.1.4/etc/GNU
-lib/xemacs-21.1.4/etc/GOATS
-lib/xemacs-21.1.4/etc/HELLO
-lib/xemacs-21.1.4/etc/InstallGuide
-lib/xemacs-21.1.4/etc/LPF
-lib/xemacs-21.1.4/etc/MACHINES
-lib/xemacs-21.1.4/etc/MAILINGLISTS
-lib/xemacs-21.1.4/etc/MORE.STUFF
-lib/xemacs-21.1.4/etc/MOTIVATION
-lib/xemacs-21.1.4/etc/NEWS
-lib/xemacs-21.1.4/etc/ORDERS
-lib/xemacs-21.1.4/etc/ORDERS.EUROPE
-lib/xemacs-21.1.4/etc/ORDERS.JAPAN
-lib/xemacs-21.1.4/etc/PACKAGES
-lib/xemacs-21.1.4/etc/README
-lib/xemacs-21.1.4/etc/SERVICE
-lib/xemacs-21.1.4/etc/eos/eos-build.xbm
-lib/xemacs-21.1.4/etc/eos/eos-clear-at.xbm
-lib/xemacs-21.1.4/etc/eos/eos-cont.xbm
-lib/xemacs-21.1.4/etc/eos/eos-dismiss.xbm
-lib/xemacs-21.1.4/etc/eos/eos-down.xbm
-lib/xemacs-21.1.4/etc/eos/eos-evaluate-star.xbm
-lib/xemacs-21.1.4/etc/eos/eos-evaluate.xbm
-lib/xemacs-21.1.4/etc/eos/eos-fix.xbm
-lib/xemacs-21.1.4/etc/eos/eos-intro.xbm
-lib/xemacs-21.1.4/etc/eos/eos-introB.xbm
-lib/xemacs-21.1.4/etc/eos/eos-introD.xbm
-lib/xemacs-21.1.4/etc/eos/eos-introDB.xbm
-lib/xemacs-21.1.4/etc/eos/eos-run.xbm
-lib/xemacs-21.1.4/etc/eos/eos-run2.xbm
-lib/xemacs-21.1.4/etc/eos/eos-step-into.xbm
-lib/xemacs-21.1.4/etc/eos/eos-step-over.xbm
-lib/xemacs-21.1.4/etc/eos/eos-stop-in.xbm
-lib/xemacs-21.1.4/etc/eos/eos-stop.xbm
-lib/xemacs-21.1.4/etc/eos/eos-type.xbm
-lib/xemacs-21.1.4/etc/eos/eos-up.xbm
-lib/xemacs-21.1.4/etc/README.HYPERBOLE
-lib/xemacs-21.1.4/etc/README.OO-BROWSER
-lib/xemacs-21.1.4/etc/TERMS
-lib/xemacs-21.1.4/etc/TUTORIAL
-lib/xemacs-21.1.4/etc/TUTORIAL.de
-lib/xemacs-21.1.4/etc/TUTORIAL.fr
-lib/xemacs-21.1.4/etc/TUTORIAL.hr
-lib/xemacs-21.1.4/etc/TUTORIAL.ja
-lib/xemacs-21.1.4/etc/TUTORIAL.ko
-lib/xemacs-21.1.4/etc/TUTORIAL.no
-lib/xemacs-21.1.4/etc/TUTORIAL.pl
-lib/xemacs-21.1.4/etc/TUTORIAL.ro
-lib/xemacs-21.1.4/etc/TUTORIAL.ru
-lib/xemacs-21.1.4/etc/TUTORIAL.th
-lib/xemacs-21.1.4/etc/XKeysymDB
-lib/xemacs-21.1.4/etc/aliases.ksh
-lib/xemacs-21.1.4/etc/cbx.png
-lib/xemacs-21.1.4/etc/check_cygwin_setup.sh
-lib/xemacs-21.1.4/etc/ctags.1
-lib/xemacs-21.1.4/etc/editclient.sh
-lib/xemacs-21.1.4/etc/emacskeys.sco
-lib/xemacs-21.1.4/etc/emacsstrs.sco
-lib/xemacs-21.1.4/etc/etags.1
-lib/xemacs-21.1.4/etc/gnu.xbm
-lib/xemacs-21.1.4/etc/idd/drop
-lib/xemacs-21.1.4/etc/idd/dropmsk
-lib/xemacs-21.1.4/etc/gnu.xpm
-lib/xemacs-21.1.4/etc/gnuattach.1
-lib/xemacs-21.1.4/etc/gnuclient.1
-lib/xemacs-21.1.4/etc/gnudoit.1
-lib/xemacs-21.1.4/etc/gnuserv.1
-lib/xemacs-21.1.4/etc/gnuserv.README
-lib/xemacs-21.1.4/etc/gray1.xbm
-lib/xemacs-21.1.4/etc/ms-kermit
-lib/xemacs-21.1.4/etc/ms-kermit-7bit
-lib/xemacs-21.1.4/etc/package-index.LATEST.pgp
-lib/xemacs-21.1.4/etc/recycle.xpm
-lib/xemacs-21.1.4/etc/recycle2.xpm
-lib/xemacs-21.1.4/etc/refcard.ps.gz
-lib/xemacs-21.1.4/etc/refcard.tex
-lib/xemacs-21.1.4/etc/sample.Xdefaults
-lib/xemacs-21.1.4/etc/sample.emacs
-lib/xemacs-21.1.4/etc/sink.xbm
-lib/xemacs-21.1.4/etc/trash.xpm
-lib/xemacs-21.1.4/etc/xemacs-beta.xpm
-lib/xemacs-21.1.4/etc/xemacs-enhanced.png
-lib/xemacs-21.1.4/etc/xemacs-fe.sh
-lib/xemacs-21.1.4/etc/xemacs-icon.xpm
-lib/xemacs-21.1.4/etc/xemacs-icon2.xbm
-lib/xemacs-21.1.4/etc/xemacs-icon2.xpm
-lib/xemacs-21.1.4/etc/xemacs-icon3.xpm
-lib/xemacs-21.1.4/etc/xemacs-ja.1
-lib/xemacs-21.1.4/etc/xemacs.1
-lib/xemacs-21.1.4/etc/xemacs.xbm
-lib/xemacs-21.1.4/etc/xemacs.xpm
-lib/xemacs-21.1.4/etc/custom/check0.xpm
-lib/xemacs-21.1.4/etc/custom/check1.xpm
-lib/xemacs-21.1.4/etc/custom/choose-down.png
-lib/xemacs-21.1.4/etc/custom/choose-up.png
-lib/xemacs-21.1.4/etc/custom/done-down.png
-lib/xemacs-21.1.4/etc/custom/done-up.png
-lib/xemacs-21.1.4/etc/custom/down-pushed.xpm
-lib/xemacs-21.1.4/etc/custom/down.xpm
-lib/xemacs-21.1.4/etc/custom/face.xpm
-lib/xemacs-21.1.4/etc/custom/folder.xpm
-lib/xemacs-21.1.4/etc/custom/open-down.png
-lib/xemacs-21.1.4/etc/custom/open-up.png
-lib/xemacs-21.1.4/etc/custom/option.xpm
-lib/xemacs-21.1.4/etc/custom/radio0.xpm
-lib/xemacs-21.1.4/etc/custom/radio1.xpm
-lib/xemacs-21.1.4/etc/custom/reset-down.png
-lib/xemacs-21.1.4/etc/custom/reset-up.png
-lib/xemacs-21.1.4/etc/custom/right-pushed.xpm
-lib/xemacs-21.1.4/etc/custom/right.xpm
-lib/xemacs-21.1.4/etc/custom/save-down.png
-lib/xemacs-21.1.4/etc/custom/save-up.png
-lib/xemacs-21.1.4/etc/custom/set-down.png
-lib/xemacs-21.1.4/etc/custom/set-up.png
-lib/xemacs-21.1.4/etc/custom/state-down.png
-lib/xemacs-21.1.4/etc/custom/state-up.png
-lib/xemacs-21.1.4/etc/custom/toggle-off-down.png
-lib/xemacs-21.1.4/etc/custom/toggle-off-up.png
-lib/xemacs-21.1.4/etc/custom/toggle-on-down.png
-lib/xemacs-21.1.4/etc/custom/toggle-on-up.png
-lib/xemacs-21.1.4/etc/photos/ajc.png
-lib/xemacs-21.1.4/etc/photos/ajcm.png
-lib/xemacs-21.1.4/etc/photos/baw.png
-lib/xemacs-21.1.4/etc/photos/bawm.png
-lib/xemacs-21.1.4/etc/photos/bw.png
-lib/xemacs-21.1.4/etc/photos/bwm.png
-lib/xemacs-21.1.4/etc/photos/chr.png
-lib/xemacs-21.1.4/etc/photos/chrm.png
-lib/xemacs-21.1.4/etc/photos/cthomp.png
-lib/xemacs-21.1.4/etc/photos/cthompm.png
-lib/xemacs-21.1.4/etc/photos/dkindred.png
-lib/xemacs-21.1.4/etc/photos/dkindredm.png
-lib/xemacs-21.1.4/etc/photos/dmoore.png
-lib/xemacs-21.1.4/etc/photos/dmoorem.png
-lib/xemacs-21.1.4/etc/photos/dv.png
-lib/xemacs-21.1.4/etc/photos/dvm.png
-lib/xemacs-21.1.4/etc/photos/hniksic.png
-lib/xemacs-21.1.4/etc/photos/hniksicm.png
-lib/xemacs-21.1.4/etc/photos/jareth.png
-lib/xemacs-21.1.4/etc/photos/jarethm.png
-lib/xemacs-21.1.4/etc/photos/jens.png
-lib/xemacs-21.1.4/etc/photos/jensm.png
-lib/xemacs-21.1.4/etc/photos/jmiller.png
-lib/xemacs-21.1.4/etc/photos/jmillerm.png
-lib/xemacs-21.1.4/etc/photos/jwz.png
-lib/xemacs-21.1.4/etc/photos/jwzm.png
-lib/xemacs-21.1.4/etc/photos/kazz.png
-lib/xemacs-21.1.4/etc/photos/kazzm.png
-lib/xemacs-21.1.4/etc/photos/kyle.png
-lib/xemacs-21.1.4/etc/photos/kylem.png
-lib/xemacs-21.1.4/etc/photos/larsi.png
-lib/xemacs-21.1.4/etc/photos/larsim.png
-lib/xemacs-21.1.4/etc/photos/martin.png
-lib/xemacs-21.1.4/etc/photos/martinm.png
-lib/xemacs-21.1.4/etc/photos/mcook.png
-lib/xemacs-21.1.4/etc/photos/mcookm.png
-lib/xemacs-21.1.4/etc/photos/mly.png
-lib/xemacs-21.1.4/etc/photos/mlym.png
-lib/xemacs-21.1.4/etc/photos/morioka.png
-lib/xemacs-21.1.4/etc/photos/moriokam.png
-lib/xemacs-21.1.4/etc/photos/ograf.png
-lib/xemacs-21.1.4/etc/photos/ografm.png
-lib/xemacs-21.1.4/etc/photos/pez.png
-lib/xemacs-21.1.4/etc/photos/pezm.png
-lib/xemacs-21.1.4/etc/photos/piper.png
-lib/xemacs-21.1.4/etc/photos/piperm.png
-lib/xemacs-21.1.4/etc/photos/rickc.png
-lib/xemacs-21.1.4/etc/photos/rickcm.png
-lib/xemacs-21.1.4/etc/photos/slb.png
-lib/xemacs-21.1.4/etc/photos/slbm.png
-lib/xemacs-21.1.4/etc/photos/sperber.png
-lib/xemacs-21.1.4/etc/photos/sperberm.png
-lib/xemacs-21.1.4/etc/photos/stig.png
-lib/xemacs-21.1.4/etc/photos/stigb.png
-lib/xemacs-21.1.4/etc/photos/stigbm.png
-lib/xemacs-21.1.4/etc/photos/stigm.png
-lib/xemacs-21.1.4/etc/photos/thiessel.png
-lib/xemacs-21.1.4/etc/photos/thiesselm.png
-lib/xemacs-21.1.4/etc/photos/vin.png
-lib/xemacs-21.1.4/etc/photos/vinm.png
-lib/xemacs-21.1.4/etc/photos/vladimir.png
-lib/xemacs-21.1.4/etc/photos/vladimirm.png
-lib/xemacs-21.1.4/etc/photos/wing.png
-lib/xemacs-21.1.4/etc/photos/wingm.png
-lib/xemacs-21.1.4/etc/photos/wmperry.png
-lib/xemacs-21.1.4/etc/photos/wmperrym.png
-lib/xemacs-21.1.4/etc/sparcworks/SW.Editor.xpm
-lib/xemacs-21.1.4/etc/sparcworks/sunpro-mailcap
-lib/xemacs-21.1.4/etc/tests/external-widget/Makefile
-lib/xemacs-21.1.4/etc/tests/external-widget/test-ew-motif.c
-lib/xemacs-21.1.4/etc/tests/external-widget/test-ew-xlib.c
-lib/xemacs-21.1.4/etc/toolbar/compile-cap-up.xpm
-lib/xemacs-21.1.4/etc/toolbar/compile-cap-xx.xpm
-lib/xemacs-21.1.4/etc/toolbar/compile-dn.xbm
-lib/xemacs-21.1.4/etc/toolbar/compile-up.xbm
-lib/xemacs-21.1.4/etc/toolbar/compile-up.xpm
-lib/xemacs-21.1.4/etc/toolbar/compile-xx.xbm
-lib/xemacs-21.1.4/etc/toolbar/compile-xx.xpm
-lib/xemacs-21.1.4/etc/toolbar/copy-cap-up.xpm
-lib/xemacs-21.1.4/etc/toolbar/copy-cap-xx.xpm
-lib/xemacs-21.1.4/etc/toolbar/copy-dn.xbm
-lib/xemacs-21.1.4/etc/toolbar/copy-up.xbm
-lib/xemacs-21.1.4/etc/toolbar/copy-up.xpm
-lib/xemacs-21.1.4/etc/toolbar/copy-xx.xbm
-lib/xemacs-21.1.4/etc/toolbar/copy-xx.xpm
-lib/xemacs-21.1.4/etc/toolbar/cut-cap-up.xpm
-lib/xemacs-21.1.4/etc/toolbar/cut-cap-xx.xpm
-lib/xemacs-21.1.4/etc/toolbar/cut-dn.xbm
-lib/xemacs-21.1.4/etc/toolbar/cut-up.xbm
-lib/xemacs-21.1.4/etc/toolbar/cut-up.xpm
-lib/xemacs-21.1.4/etc/toolbar/cut-xx.xbm
-lib/xemacs-21.1.4/etc/toolbar/cut-xx.xpm
-lib/xemacs-21.1.4/etc/toolbar/debug-cap-up.xpm
-lib/xemacs-21.1.4/etc/toolbar/debug-cap-xx.xpm
-lib/xemacs-21.1.4/etc/toolbar/debug-dn.xbm
-lib/xemacs-21.1.4/etc/toolbar/debug-up.xbm
-lib/xemacs-21.1.4/etc/toolbar/debug-up.xpm
-lib/xemacs-21.1.4/etc/toolbar/debug-xx.xbm
-lib/xemacs-21.1.4/etc/toolbar/debug-xx.xpm
-lib/xemacs-21.1.4/etc/toolbar/disk-cap-up.xpm
-lib/xemacs-21.1.4/etc/toolbar/disk-cap-xx.xpm
-lib/xemacs-21.1.4/etc/toolbar/disk-dn.xbm
-lib/xemacs-21.1.4/etc/toolbar/disk-up.xbm
-lib/xemacs-21.1.4/etc/toolbar/disk-up.xpm
-lib/xemacs-21.1.4/etc/toolbar/disk-xx.xbm
-lib/xemacs-21.1.4/etc/toolbar/disk-xx.xpm
-lib/xemacs-21.1.4/etc/toolbar/file-cap-up.xpm
-lib/xemacs-21.1.4/etc/toolbar/file-cap-xx.xpm
-lib/xemacs-21.1.4/etc/toolbar/file-dn.xbm
-lib/xemacs-21.1.4/etc/toolbar/file-up.xbm
-lib/xemacs-21.1.4/etc/toolbar/file-up.xpm
-lib/xemacs-21.1.4/etc/toolbar/file-xx.xbm
-lib/xemacs-21.1.4/etc/toolbar/file-xx.xpm
-lib/xemacs-21.1.4/etc/toolbar/folder-cap-up.xpm
-lib/xemacs-21.1.4/etc/toolbar/folder-cap-xx.xpm
-lib/xemacs-21.1.4/etc/toolbar/folder-dn.xbm
-lib/xemacs-21.1.4/etc/toolbar/folder-up.xbm
-lib/xemacs-21.1.4/etc/toolbar/folder-up.xpm
-lib/xemacs-21.1.4/etc/toolbar/folder-xx.xbm
-lib/xemacs-21.1.4/etc/toolbar/folder-xx.xpm
-lib/xemacs-21.1.4/etc/toolbar/info-def-cap-up.xpm
-lib/xemacs-21.1.4/etc/toolbar/info-def-cap-xx.xpm
-lib/xemacs-21.1.4/etc/toolbar/info-def-dn.xbm
-lib/xemacs-21.1.4/etc/toolbar/info-def-up.xbm
-lib/xemacs-21.1.4/etc/toolbar/info-def-up.xpm
-lib/xemacs-21.1.4/etc/toolbar/info-def-xx.xbm
-lib/xemacs-21.1.4/etc/toolbar/info-def-xx.xpm
-lib/xemacs-21.1.4/etc/toolbar/info-exit-cap-up.xpm
-lib/xemacs-21.1.4/etc/toolbar/info-exit-cap-xx.xpm
-lib/xemacs-21.1.4/etc/toolbar/info-exit-dn.xbm
-lib/xemacs-21.1.4/etc/toolbar/info-exit-up.xbm
-lib/xemacs-21.1.4/etc/toolbar/info-exit-up.xpm
-lib/xemacs-21.1.4/etc/toolbar/info-exit-xx.xbm
-lib/xemacs-21.1.4/etc/toolbar/info-exit-xx.xpm
-lib/xemacs-21.1.4/etc/toolbar/info-exit.xbm
-lib/xemacs-21.1.4/etc/toolbar/info-exit.xpm
-lib/xemacs-21.1.4/etc/toolbar/info-next-cap-up.xpm
-lib/xemacs-21.1.4/etc/toolbar/info-next-cap-xx.xpm
-lib/xemacs-21.1.4/etc/toolbar/info-next-dn.xbm
-lib/xemacs-21.1.4/etc/toolbar/info-next-up.xbm
-lib/xemacs-21.1.4/etc/toolbar/info-next-up.xpm
-lib/xemacs-21.1.4/etc/toolbar/info-next-xx.xbm
-lib/xemacs-21.1.4/etc/toolbar/info-next-xx.xpm
-lib/xemacs-21.1.4/etc/toolbar/info-next.xbm
-lib/xemacs-21.1.4/etc/toolbar/info-next.xpm
-lib/xemacs-21.1.4/etc/toolbar/info-prev-cap-up.xpm
-lib/xemacs-21.1.4/etc/toolbar/info-prev-cap-xx.xpm
-lib/xemacs-21.1.4/etc/toolbar/info-prev-dn.xbm
-lib/xemacs-21.1.4/etc/toolbar/info-prev-up.xbm
-lib/xemacs-21.1.4/etc/toolbar/info-prev-up.xpm
-lib/xemacs-21.1.4/etc/toolbar/info-prev-xx.xbm
-lib/xemacs-21.1.4/etc/toolbar/info-prev-xx.xpm
-lib/xemacs-21.1.4/etc/toolbar/info-prev.xbm
-lib/xemacs-21.1.4/etc/toolbar/info-prev.xpm
-lib/xemacs-21.1.4/etc/toolbar/info-up-cap-up.xpm
-lib/xemacs-21.1.4/etc/toolbar/info-up-cap-xx.xpm
-lib/xemacs-21.1.4/etc/toolbar/info-up-dn.xbm
-lib/xemacs-21.1.4/etc/toolbar/info-up-up.xbm
-lib/xemacs-21.1.4/etc/toolbar/info-up-up.xpm
-lib/xemacs-21.1.4/etc/toolbar/info-up-xx.xbm
-lib/xemacs-21.1.4/etc/toolbar/info-up-xx.xpm
-lib/xemacs-21.1.4/etc/toolbar/info-up.xbm
-lib/xemacs-21.1.4/etc/toolbar/info-up.xpm
-lib/xemacs-21.1.4/etc/toolbar/last-win-cap-up.xpm
-lib/xemacs-21.1.4/etc/toolbar/last-win-cap-xx.xpm
-lib/xemacs-21.1.4/etc/toolbar/last-win-dn.xbm
-lib/xemacs-21.1.4/etc/toolbar/last-win-up.xbm
-lib/xemacs-21.1.4/etc/toolbar/last-win-up.xpm
-lib/xemacs-21.1.4/etc/toolbar/last-win-xx.xbm
-lib/xemacs-21.1.4/etc/toolbar/last-win-xx.xpm
-lib/xemacs-21.1.4/etc/toolbar/mail-cap-up.xpm
-lib/xemacs-21.1.4/etc/toolbar/mail-dn.xbm
-lib/xemacs-21.1.4/etc/toolbar/mail-cap-xx.xpm
-lib/xemacs-21.1.4/etc/toolbar/mail-up.xbm
-lib/xemacs-21.1.4/etc/toolbar/mail-up.xpm
-lib/xemacs-21.1.4/etc/toolbar/mail-xx.xbm
-lib/xemacs-21.1.4/etc/toolbar/mail-xx.xpm
-lib/xemacs-21.1.4/etc/toolbar/news-cap-up.xpm
-lib/xemacs-21.1.4/etc/toolbar/news-cap-xx.xpm
-lib/xemacs-21.1.4/etc/toolbar/news-dn.xbm
-lib/xemacs-21.1.4/etc/toolbar/news-up.xbm
-lib/xemacs-21.1.4/etc/toolbar/news-up.xpm
-lib/xemacs-21.1.4/etc/toolbar/news-xx.xbm
-lib/xemacs-21.1.4/etc/toolbar/news-xx.xpm
-lib/xemacs-21.1.4/etc/toolbar/next-win-cap-up.xpm
-lib/xemacs-21.1.4/etc/toolbar/next-win-cap-xx.xpm
-lib/xemacs-21.1.4/etc/toolbar/next-win-dn.xbm
-lib/xemacs-21.1.4/etc/toolbar/next-win-up.xbm
-lib/xemacs-21.1.4/etc/toolbar/next-win-up.xpm
-lib/xemacs-21.1.4/etc/toolbar/next-win-xx.xbm
-lib/xemacs-21.1.4/etc/toolbar/next-win-xx.xpm
-lib/xemacs-21.1.4/etc/toolbar/paste-cap-up.xpm
-lib/xemacs-21.1.4/etc/toolbar/paste-cap-xx.xpm
-lib/xemacs-21.1.4/etc/toolbar/paste-dn.xbm
-lib/xemacs-21.1.4/etc/toolbar/paste-up.xbm
-lib/xemacs-21.1.4/etc/toolbar/paste-up.xpm
-lib/xemacs-21.1.4/etc/toolbar/paste-xx.xbm
-lib/xemacs-21.1.4/etc/toolbar/paste-xx.xpm
-lib/xemacs-21.1.4/etc/toolbar/printer-cap-up.xpm
-lib/xemacs-21.1.4/etc/toolbar/printer-cap-xx.xpm
-lib/xemacs-21.1.4/etc/toolbar/printer-dn.xbm
-lib/xemacs-21.1.4/etc/toolbar/printer-up.xbm
-lib/xemacs-21.1.4/etc/toolbar/printer-up.xpm
-lib/xemacs-21.1.4/etc/toolbar/printer-xx.xbm
-lib/xemacs-21.1.4/etc/toolbar/printer-xx.xpm
-lib/xemacs-21.1.4/etc/toolbar/replace-cap-up.xpm
-lib/xemacs-21.1.4/etc/toolbar/replace-cap-xx.xpm
-lib/xemacs-21.1.4/etc/toolbar/replace-dn.xbm
-lib/xemacs-21.1.4/etc/toolbar/replace-up.xbm
-lib/xemacs-21.1.4/etc/toolbar/replace-up.xpm
-lib/xemacs-21.1.4/etc/toolbar/replace-xx.xbm
-lib/xemacs-21.1.4/etc/toolbar/replace-xx.xpm
-lib/xemacs-21.1.4/etc/toolbar/spell-cap-up.xpm
-lib/xemacs-21.1.4/etc/toolbar/spell-cap-xx.xpm
-lib/xemacs-21.1.4/etc/toolbar/spell-dn.xbm
-lib/xemacs-21.1.4/etc/toolbar/spell-up.xbm
-lib/xemacs-21.1.4/etc/toolbar/spell-up.xpm
-lib/xemacs-21.1.4/etc/toolbar/spell-xx.xbm
-lib/xemacs-21.1.4/etc/toolbar/spell-xx.xpm
-lib/xemacs-21.1.4/etc/toolbar/undo-cap-up.xpm
-lib/xemacs-21.1.4/etc/toolbar/undo-cap-xx.xpm
-lib/xemacs-21.1.4/etc/toolbar/undo-dn.xbm
-lib/xemacs-21.1.4/etc/toolbar/undo-up.xbm
-lib/xemacs-21.1.4/etc/toolbar/undo-up.xpm
-lib/xemacs-21.1.4/etc/toolbar/undo-xx.xbm
-lib/xemacs-21.1.4/etc/toolbar/undo-xx.xpm
-lib/xemacs-21.1.4/etc/toolbar/workshop-cap-up.xpm
-lib/xemacs-21.1.4/etc/toolbar/workshop-cap-xx.xpm
-lib/xemacs-21.1.4/etc/toolbar/workshop-up.xpm
-lib/xemacs-21.1.4/etc/toolbar/workshop-xx.xpm
-lib/xemacs-21.1.4/lisp/.cvsignore
-lib/xemacs-21.1.4/lisp/ChangeLog
-lib/xemacs-21.1.4/lisp/ChangeLog.1
-lib/xemacs-21.1.4/lisp/README
-lib/xemacs-21.1.4/lisp/abbrev.el@.GZ@
-lib/xemacs-21.1.4/lisp/about.el@.GZ@
-lib/xemacs-21.1.4/lisp/alist.el@.GZ@
-lib/xemacs-21.1.4/lisp/apropos.el@.GZ@
-lib/xemacs-21.1.4/lisp/auto-autoloads.el@.GZ@
-lib/xemacs-21.1.4/lisp/auto-save.el@.GZ@
-lib/xemacs-21.1.4/lisp/auto-show.el@.GZ@
-lib/xemacs-21.1.4/lisp/autoload.el@.GZ@
-lib/xemacs-21.1.4/lisp/backquote.el@.GZ@
-lib/xemacs-21.1.4/lisp/blessmail.el@.GZ@
-lib/xemacs-21.1.4/lisp/buff-menu.el@.GZ@
-lib/xemacs-21.1.4/lisp/buffer.el@.GZ@
-lib/xemacs-21.1.4/lisp/build-report.el@.GZ@
-lib/xemacs-21.1.4/lisp/byte-optimize.el@.GZ@
-lib/xemacs-21.1.4/lisp/bytecomp-runtime.el@.GZ@
-lib/xemacs-21.1.4/lisp/bytecomp.el@.GZ@
-lib/xemacs-21.1.4/lisp/callers-of-rpt.el@.GZ@
-lib/xemacs-21.1.4/lisp/cl.el@.GZ@
-lib/xemacs-21.1.4/lisp/check-features.el@.GZ@
-lib/xemacs-21.1.4/lisp/cl-compat.el@.GZ@
-lib/xemacs-21.1.4/lisp/cl-extra.el@.GZ@
-lib/xemacs-21.1.4/lisp/cl-macs.el@.GZ@
-lib/xemacs-21.1.4/lisp/cl-seq.el@.GZ@
-lib/xemacs-21.1.4/lisp/cleantree.el@.GZ@
-lib/xemacs-21.1.4/lisp/cmdloop.el@.GZ@
-lib/xemacs-21.1.4/lisp/code-files.el@.GZ@
-lib/xemacs-21.1.4/lisp/code-process.el@.GZ@
-lib/xemacs-21.1.4/lisp/coding.el@.GZ@
-lib/xemacs-21.1.4/lisp/config.el@.GZ@
-lib/xemacs-21.1.4/lisp/console.el@.GZ@
-lib/xemacs-21.1.4/lisp/cus-dep.el@.GZ@
-lib/xemacs-21.1.4/lisp/cus-edit.el@.GZ@
-lib/xemacs-21.1.4/lisp/cus-face.el@.GZ@
-lib/xemacs-21.1.4/lisp/cus-load.el@.GZ@
-lib/xemacs-21.1.4/lisp/cus-start.el@.GZ@
-lib/xemacs-21.1.4/lisp/custom-load.el@.GZ@
-lib/xemacs-21.1.4/lisp/custom.el@.GZ@
-lib/xemacs-21.1.4/lisp/derived.el@.GZ@
-lib/xemacs-21.1.4/lisp/device.el@.GZ@
-lib/xemacs-21.1.4/lisp/dialog.el@.GZ@
-lib/xemacs-21.1.4/lisp/disass.el@.GZ@
-lib/xemacs-21.1.4/lisp/dragdrop.el@.GZ@
-lib/xemacs-21.1.4/lisp/disp-table.el@.GZ@
-lib/xemacs-21.1.4/lisp/dump-paths.el@.GZ@
-lib/xemacs-21.1.4/lisp/dumped-lisp.el
-lib/xemacs-21.1.4/lisp/easymenu.el@.GZ@
-lib/xemacs-21.1.4/lisp/etags.el@.GZ@
-lib/xemacs-21.1.4/lisp/events.el@.GZ@
-lib/xemacs-21.1.4/lisp/extents.el@.GZ@
-lib/xemacs-21.1.4/lisp/faces.el@.GZ@
-lib/xemacs-21.1.4/lisp/files-nomule.el@.GZ@
-lib/xemacs-21.1.4/lisp/files.el@.GZ@
-lib/xemacs-21.1.4/lisp/fill.el@.GZ@
-lib/xemacs-21.1.4/lisp/find-paths.el@.GZ@
-lib/xemacs-21.1.4/lisp/finder.el@.GZ@
-lib/xemacs-21.1.4/lisp/float-sup.el@.GZ@
-lib/xemacs-21.1.4/lisp/font-lock.el@.GZ@
-lib/xemacs-21.1.4/lisp/font.el@.GZ@
-lib/xemacs-21.1.4/lisp/fontl-hooks.el@.GZ@
-lib/xemacs-21.1.4/lisp/format.el@.GZ@
-lib/xemacs-21.1.4/lisp/frame.el@.GZ@
-lib/xemacs-21.1.4/lisp/glyphs.el@.GZ@
-lib/xemacs-21.1.4/lisp/gnuserv.el@.GZ@
-lib/xemacs-21.1.4/lisp/gui.el@.GZ@
-lib/xemacs-21.1.4/lisp/help-macro.el@.GZ@
-lib/xemacs-21.1.4/lisp/help-nomule.el@.GZ@
-lib/xemacs-21.1.4/lisp/help.el@.GZ@
-lib/xemacs-21.1.4/lisp/hyper-apropos.el@.GZ@
-lib/xemacs-21.1.4/lisp/indent.el@.GZ@
-lib/xemacs-21.1.4/lisp/info.el@.GZ@
-lib/xemacs-21.1.4/lisp/isearch-mode.el@.GZ@
-lib/xemacs-21.1.4/lisp/iso8859-1.el@.GZ@
-lib/xemacs-21.1.4/lisp/itimer-autosave.el@.GZ@
-lib/xemacs-21.1.4/lisp/itimer.el@.GZ@
-lib/xemacs-21.1.4/lisp/keydefs.el@.GZ@
-lib/xemacs-21.1.4/lisp/keymap.el@.GZ@
-lib/xemacs-21.1.4/lisp/ldap.el@.GZ@
-lib/xemacs-21.1.4/lisp/lib-complete.el@.GZ@
-lib/xemacs-21.1.4/lisp/lisp-mnt.el@.GZ@
-lib/xemacs-21.1.4/lisp/lisp-mode.el@.GZ@
-lib/xemacs-21.1.4/lisp/lisp.el@.GZ@
-lib/xemacs-21.1.4/lisp/list-mode.el@.GZ@
-lib/xemacs-21.1.4/lisp/loaddefs.el@.GZ@
-lib/xemacs-21.1.4/lisp/loadhist.el@.GZ@
-lib/xemacs-21.1.4/lisp/loadup-el.el
-lib/xemacs-21.1.4/lisp/loadup.el
-lib/xemacs-21.1.4/lisp/make-docfile.el
-lib/xemacs-21.1.4/lisp/map-ynp.el@.GZ@
-lib/xemacs-21.1.4/lisp/menubar.el@.GZ@
-lib/xemacs-21.1.4/lisp/minibuf.el@.GZ@
-lib/xemacs-21.1.4/lisp/menubar-items.el@.GZ@
-lib/xemacs-21.1.4/lisp/misc.el@.GZ@
-lib/xemacs-21.1.4/lisp/mode-motion.el@.GZ@
-lib/xemacs-21.1.4/lisp/modeline.el@.GZ@
-lib/xemacs-21.1.4/lisp/mouse.el@.GZ@
-lib/xemacs-21.1.4/lisp/msw-faces.el@.GZ@
-lib/xemacs-21.1.4/lisp/msw-glyphs.el@.GZ@
-lib/xemacs-21.1.4/lisp/msw-init.el@.GZ@
-lib/xemacs-21.1.4/lisp/msw-mouse.el@.GZ@
-lib/xemacs-21.1.4/lisp/msw-select.el@.GZ@
-lib/xemacs-21.1.4/lisp/multicast.el@.GZ@
-lib/xemacs-21.1.4/lisp/mwheel.el@.GZ@
-lib/xemacs-21.1.4/lisp/objects.el@.GZ@
-lib/xemacs-21.1.4/lisp/obsolete.el@.GZ@
-lib/xemacs-21.1.4/lisp/package-admin.el@.GZ@
-lib/xemacs-21.1.4/lisp/package-get.el@.GZ@
-lib/xemacs-21.1.4/lisp/package-info.el@.GZ@
-lib/xemacs-21.1.4/lisp/package-ui.el@.GZ@
-lib/xemacs-21.1.4/lisp/packages.el@.GZ@
-lib/xemacs-21.1.4/lisp/page.el@.GZ@
-lib/xemacs-21.1.4/lisp/paragraphs.el@.GZ@
-lib/xemacs-21.1.4/lisp/paths.el
-lib/xemacs-21.1.4/lisp/picture.el@.GZ@
-lib/xemacs-21.1.4/lisp/process.el@.GZ@
-lib/xemacs-21.1.4/lisp/rect.el@.GZ@
-lib/xemacs-21.1.4/lisp/register.el@.GZ@
-lib/xemacs-21.1.4/lisp/replace.el@.GZ@
-lib/xemacs-21.1.4/lisp/scrollbar.el@.GZ@
-lib/xemacs-21.1.4/lisp/select.el@.GZ@
-lib/xemacs-21.1.4/lisp/setup-paths.el@.GZ@
-lib/xemacs-21.1.4/lisp/shadow.el@.GZ@
-lib/xemacs-21.1.4/lisp/simple.el@.GZ@
-lib/xemacs-21.1.4/lisp/site-load.el
-lib/xemacs-21.1.4/lisp/sound.el@.GZ@
-lib/xemacs-21.1.4/lisp/specifier.el@.GZ@
-lib/xemacs-21.1.4/lisp/startup.el@.GZ@
-lib/xemacs-21.1.4/lisp/subr.el@.GZ@
-lib/xemacs-21.1.4/lisp/symbol-syntax.el@.GZ@
-lib/xemacs-21.1.4/lisp/symbols.el@.GZ@
-lib/xemacs-21.1.4/lisp/syntax.el@.GZ@
-lib/xemacs-21.1.4/lisp/text-mode.el@.GZ@
-lib/xemacs-21.1.4/lisp/text-props.el@.GZ@
-lib/xemacs-21.1.4/lisp/toolbar-items.el@.GZ@
-lib/xemacs-21.1.4/lisp/toolbar.el@.GZ@
-lib/xemacs-21.1.4/lisp/tty-init.el@.GZ@
-lib/xemacs-21.1.4/lisp/userlock.el@.GZ@
-lib/xemacs-21.1.4/lisp/version.el
-lib/xemacs-21.1.4/lisp/undo-stack.el@.GZ@
-lib/xemacs-21.1.4/lisp/update-elc.el
-lib/xemacs-21.1.4/lisp/very-early-lisp.el
-lib/xemacs-21.1.4/lisp/view-less.el@.GZ@
-lib/xemacs-21.1.4/lisp/wid-browse.el@.GZ@
-lib/xemacs-21.1.4/lisp/wid-edit.el@.GZ@
-lib/xemacs-21.1.4/lisp/widget.el@.GZ@
-lib/xemacs-21.1.4/lisp/window-xemacs.el@.GZ@
-lib/xemacs-21.1.4/lisp/window.el@.GZ@
-lib/xemacs-21.1.4/lisp/winnt.el@.GZ@
-lib/xemacs-21.1.4/lisp/x-compose.el@.GZ@
-lib/xemacs-21.1.4/lisp/x-faces.el@.GZ@
-lib/xemacs-21.1.4/lisp/x-font-menu.el@.GZ@
-lib/xemacs-21.1.4/lisp/x-init.el@.GZ@
-lib/xemacs-21.1.4/lisp/x-iso8859-1.el@.GZ@
-lib/xemacs-21.1.4/lisp/x-misc.el@.GZ@
-lib/xemacs-21.1.4/lisp/x-mouse.el@.GZ@
-lib/xemacs-21.1.4/lisp/x-scrollbar.el@.GZ@
-lib/xemacs-21.1.4/lisp/x-select.el@.GZ@
-lib/xemacs-21.1.4/lisp/x-win-sun.el@.GZ@
-lib/xemacs-21.1.4/lisp/x-win-xfree86.el@.GZ@
-lib/xemacs-21.1.4/lisp/term/AT386.el@.GZ@
-lib/xemacs-21.1.4/lisp/term/README
-lib/xemacs-21.1.4/lisp/term/apollo.el@.GZ@
-lib/xemacs-21.1.4/lisp/term/bg-mouse.el@.GZ@
-lib/xemacs-21.1.4/lisp/term/bobcat.el@.GZ@
-lib/xemacs-21.1.4/lisp/term/internal.el@.GZ@
-lib/xemacs-21.1.4/lisp/term/keyswap.el@.GZ@
-lib/xemacs-21.1.4/lisp/term/linux.el@.GZ@
-lib/xemacs-21.1.4/lisp/term/lk201.el@.GZ@
-lib/xemacs-21.1.4/lisp/term/news.el@.GZ@
-lib/xemacs-21.1.4/lisp/term/pc-win.el@.GZ@
-lib/xemacs-21.1.4/lisp/term/scoansi.el@.GZ@
-lib/xemacs-21.1.4/lisp/term/sun-mouse.el@.GZ@
-lib/xemacs-21.1.4/lisp/term/sun.el@.GZ@
-lib/xemacs-21.1.4/lisp/term/sup-mouse.el@.GZ@
-lib/xemacs-21.1.4/lisp/term/tvi970.el@.GZ@
-lib/xemacs-21.1.4/lisp/term/vt-control.el@.GZ@
-lib/xemacs-21.1.4/lisp/term/vt100-led.el@.GZ@
-lib/xemacs-21.1.4/lisp/term/vt100.el@.GZ@
-lib/xemacs-21.1.4/lisp/term/vt102.el@.GZ@
-lib/xemacs-21.1.4/lisp/term/vt125.el@.GZ@
-lib/xemacs-21.1.4/lisp/term/vt200.el@.GZ@
-lib/xemacs-21.1.4/lisp/term/vt201.el@.GZ@
-lib/xemacs-21.1.4/lisp/term/vt220.el@.GZ@
-lib/xemacs-21.1.4/lisp/term/vt240.el@.GZ@
-lib/xemacs-21.1.4/lisp/term/vt300.el@.GZ@
-lib/xemacs-21.1.4/lisp/term/vt320.el@.GZ@
-lib/xemacs-21.1.4/lisp/term/vt400.el@.GZ@
-lib/xemacs-21.1.4/lisp/term/vt420.el@.GZ@
-lib/xemacs-21.1.4/lisp/term/win32-win.el@.GZ@
-lib/xemacs-21.1.4/lisp/term/wyse50.el@.GZ@
-lib/xemacs-21.1.4/lisp/term/xterm.el@.GZ@
-lib/xemacs-21.1.4/lisp/term/AT386.elc
-lib/xemacs-21.1.4/lisp/term/apollo.elc
-lib/xemacs-21.1.4/lisp/term/bg-mouse.elc
-lib/xemacs-21.1.4/lisp/term/bobcat.elc
-lib/xemacs-21.1.4/lisp/term/internal.elc
-lib/xemacs-21.1.4/lisp/term/keyswap.elc
-lib/xemacs-21.1.4/lisp/term/linux.elc
-lib/xemacs-21.1.4/lisp/term/lk201.elc
-lib/xemacs-21.1.4/lisp/term/news.elc
-lib/xemacs-21.1.4/lisp/term/pc-win.elc
-lib/xemacs-21.1.4/lisp/term/scoansi.elc
-lib/xemacs-21.1.4/lisp/term/sun-mouse.elc
-lib/xemacs-21.1.4/lisp/term/sun.elc
-lib/xemacs-21.1.4/lisp/term/sup-mouse.elc
-lib/xemacs-21.1.4/lisp/term/tvi970.elc
-lib/xemacs-21.1.4/lisp/term/vt-control.elc
-lib/xemacs-21.1.4/lisp/term/vt100-led.elc
-lib/xemacs-21.1.4/lisp/term/vt100.elc
-lib/xemacs-21.1.4/lisp/term/vt102.elc
-lib/xemacs-21.1.4/lisp/term/vt125.elc
-lib/xemacs-21.1.4/lisp/term/vt200.elc
-lib/xemacs-21.1.4/lisp/term/vt201.elc
-lib/xemacs-21.1.4/lisp/term/vt220.elc
-lib/xemacs-21.1.4/lisp/term/vt240.elc
-lib/xemacs-21.1.4/lisp/term/vt300.elc
-lib/xemacs-21.1.4/lisp/term/vt320.elc
-lib/xemacs-21.1.4/lisp/term/vt400.elc
-lib/xemacs-21.1.4/lisp/term/vt420.elc
-lib/xemacs-21.1.4/lisp/term/win32-win.elc
-lib/xemacs-21.1.4/lisp/term/wyse50.elc
-lib/xemacs-21.1.4/lisp/term/xterm.elc
-lib/xemacs-21.1.4/lisp/abbrev.elc
-lib/xemacs-21.1.4/lisp/about.elc
-lib/xemacs-21.1.4/lisp/alist.elc
-lib/xemacs-21.1.4/lisp/apropos.elc
-lib/xemacs-21.1.4/lisp/auto-autoloads.elc
-lib/xemacs-21.1.4/lisp/auto-save.elc
-lib/xemacs-21.1.4/lisp/auto-show.elc
-lib/xemacs-21.1.4/lisp/autoload.elc
-lib/xemacs-21.1.4/lisp/backquote.elc
-lib/xemacs-21.1.4/lisp/blessmail.elc
-lib/xemacs-21.1.4/lisp/buff-menu.elc
-lib/xemacs-21.1.4/lisp/buffer.elc
-lib/xemacs-21.1.4/lisp/build-report.elc
-lib/xemacs-21.1.4/lisp/byte-optimize.elc
-lib/xemacs-21.1.4/lisp/bytecomp-runtime.elc
-lib/xemacs-21.1.4/lisp/bytecomp.elc
-lib/xemacs-21.1.4/lisp/callers-of-rpt.elc
-lib/xemacs-21.1.4/lisp/check-features.elc
-lib/xemacs-21.1.4/lisp/cl-compat.elc
-lib/xemacs-21.1.4/lisp/cl-extra.elc
-lib/xemacs-21.1.4/lisp/cl-macs.elc
-lib/xemacs-21.1.4/lisp/cl-seq.elc
-lib/xemacs-21.1.4/lisp/cl.elc
-lib/xemacs-21.1.4/lisp/cleantree.elc
-lib/xemacs-21.1.4/lisp/cmdloop.elc
-lib/xemacs-21.1.4/lisp/code-files.elc
-lib/xemacs-21.1.4/lisp/code-process.elc
-lib/xemacs-21.1.4/lisp/coding.elc
-lib/xemacs-21.1.4/lisp/config.elc
-lib/xemacs-21.1.4/lisp/console.elc
-lib/xemacs-21.1.4/lisp/cus-dep.elc
-lib/xemacs-21.1.4/lisp/cus-edit.elc
-lib/xemacs-21.1.4/lisp/cus-face.elc
-lib/xemacs-21.1.4/lisp/cus-load.elc
-lib/xemacs-21.1.4/lisp/cus-start.elc
-lib/xemacs-21.1.4/lisp/custom-load.elc
-lib/xemacs-21.1.4/lisp/custom.elc
-lib/xemacs-21.1.4/lisp/derived.elc
-lib/xemacs-21.1.4/lisp/device.elc
-lib/xemacs-21.1.4/lisp/dialog.elc
-lib/xemacs-21.1.4/lisp/disass.elc
-lib/xemacs-21.1.4/lisp/disp-table.elc
-lib/xemacs-21.1.4/lisp/dragdrop.elc
-lib/xemacs-21.1.4/lisp/dump-paths.elc
-lib/xemacs-21.1.4/lisp/easymenu.elc
-lib/xemacs-21.1.4/lisp/etags.elc
-lib/xemacs-21.1.4/lisp/events.elc
-lib/xemacs-21.1.4/lisp/extents.elc
-lib/xemacs-21.1.4/lisp/faces.elc
-lib/xemacs-21.1.4/lisp/files-nomule.elc
-lib/xemacs-21.1.4/lisp/files.elc
-lib/xemacs-21.1.4/lisp/fill.elc
-lib/xemacs-21.1.4/lisp/find-paths.elc
-lib/xemacs-21.1.4/lisp/finder.elc
-lib/xemacs-21.1.4/lisp/float-sup.elc
-lib/xemacs-21.1.4/lisp/font-lock.elc
-lib/xemacs-21.1.4/lisp/font.elc
-lib/xemacs-21.1.4/lisp/fontl-hooks.elc
-lib/xemacs-21.1.4/lisp/format.elc
-lib/xemacs-21.1.4/lisp/frame.elc
-lib/xemacs-21.1.4/lisp/glyphs.elc
-lib/xemacs-21.1.4/lisp/gnuserv.elc
-lib/xemacs-21.1.4/lisp/gui.elc
-lib/xemacs-21.1.4/lisp/help-macro.elc
-lib/xemacs-21.1.4/lisp/help-nomule.elc
-lib/xemacs-21.1.4/lisp/help.elc
-lib/xemacs-21.1.4/lisp/hyper-apropos.elc
-lib/xemacs-21.1.4/lisp/indent.elc
-lib/xemacs-21.1.4/lisp/info.elc
-lib/xemacs-21.1.4/lisp/isearch-mode.elc
-lib/xemacs-21.1.4/lisp/iso8859-1.elc
-lib/xemacs-21.1.4/lisp/itimer-autosave.elc
-lib/xemacs-21.1.4/lisp/itimer.elc
-lib/xemacs-21.1.4/lisp/keydefs.elc
-lib/xemacs-21.1.4/lisp/keymap.elc
-lib/xemacs-21.1.4/lisp/ldap.elc
-lib/xemacs-21.1.4/lisp/lib-complete.elc
-lib/xemacs-21.1.4/lisp/lisp-mnt.elc
-lib/xemacs-21.1.4/lisp/lisp-mode.elc
-lib/xemacs-21.1.4/lisp/lisp.elc
-lib/xemacs-21.1.4/lisp/list-mode.elc
-lib/xemacs-21.1.4/lisp/loaddefs.elc
-lib/xemacs-21.1.4/lisp/loadhist.elc
-lib/xemacs-21.1.4/lisp/map-ynp.elc
-lib/xemacs-21.1.4/lisp/menubar-items.elc
-lib/xemacs-21.1.4/lisp/menubar.elc
-lib/xemacs-21.1.4/lisp/minibuf.elc
-lib/xemacs-21.1.4/lisp/misc.elc
-lib/xemacs-21.1.4/lisp/mode-motion.elc
-lib/xemacs-21.1.4/lisp/modeline.elc
-lib/xemacs-21.1.4/lisp/mouse.elc
-lib/xemacs-21.1.4/lisp/msw-faces.elc
-lib/xemacs-21.1.4/lisp/msw-glyphs.elc
-lib/xemacs-21.1.4/lisp/msw-init.elc
-lib/xemacs-21.1.4/lisp/msw-mouse.elc
-lib/xemacs-21.1.4/lisp/msw-select.elc
-lib/xemacs-21.1.4/lisp/multicast.elc
-lib/xemacs-21.1.4/lisp/mwheel.elc
-lib/xemacs-21.1.4/lisp/objects.elc
-lib/xemacs-21.1.4/lisp/obsolete.elc
-lib/xemacs-21.1.4/lisp/package-admin.elc
-lib/xemacs-21.1.4/lisp/package-get.elc
-lib/xemacs-21.1.4/lisp/package-info.elc
-lib/xemacs-21.1.4/lisp/package-ui.elc
-lib/xemacs-21.1.4/lisp/packages.elc
-lib/xemacs-21.1.4/lisp/page.elc
-lib/xemacs-21.1.4/lisp/paragraphs.elc
-lib/xemacs-21.1.4/lisp/picture.elc
-lib/xemacs-21.1.4/lisp/process.elc
-lib/xemacs-21.1.4/lisp/rect.elc
-lib/xemacs-21.1.4/lisp/register.elc
-lib/xemacs-21.1.4/lisp/replace.elc
-lib/xemacs-21.1.4/lisp/scrollbar.elc
-lib/xemacs-21.1.4/lisp/select.elc
-lib/xemacs-21.1.4/lisp/setup-paths.elc
-lib/xemacs-21.1.4/lisp/shadow.elc
-lib/xemacs-21.1.4/lisp/simple.elc
-lib/xemacs-21.1.4/lisp/sound.elc
-lib/xemacs-21.1.4/lisp/specifier.elc
-lib/xemacs-21.1.4/lisp/startup.elc
-lib/xemacs-21.1.4/lisp/subr.elc
-lib/xemacs-21.1.4/lisp/symbol-syntax.elc
-lib/xemacs-21.1.4/lisp/symbols.elc
-lib/xemacs-21.1.4/lisp/syntax.elc
-lib/xemacs-21.1.4/lisp/text-mode.elc
-lib/xemacs-21.1.4/lisp/text-props.elc
-lib/xemacs-21.1.4/lisp/toolbar-items.elc
-lib/xemacs-21.1.4/lisp/toolbar.elc
-lib/xemacs-21.1.4/lisp/tty-init.elc
-lib/xemacs-21.1.4/lisp/undo-stack.elc
-lib/xemacs-21.1.4/lisp/userlock.elc
-lib/xemacs-21.1.4/lisp/view-less.elc
-lib/xemacs-21.1.4/lisp/wid-browse.elc
-lib/xemacs-21.1.4/lisp/wid-edit.elc
-lib/xemacs-21.1.4/lisp/widget.elc
-lib/xemacs-21.1.4/lisp/window-xemacs.elc
-lib/xemacs-21.1.4/lisp/window.elc
-lib/xemacs-21.1.4/lisp/winnt.elc
-lib/xemacs-21.1.4/lisp/x-compose.elc
-lib/xemacs-21.1.4/lisp/x-faces.elc
-lib/xemacs-21.1.4/lisp/x-font-menu.elc
-lib/xemacs-21.1.4/lisp/x-init.elc
-lib/xemacs-21.1.4/lisp/x-iso8859-1.elc
-lib/xemacs-21.1.4/lisp/x-misc.elc
-lib/xemacs-21.1.4/lisp/x-mouse.elc
-lib/xemacs-21.1.4/lisp/x-scrollbar.elc
-lib/xemacs-21.1.4/lisp/x-select.elc
-lib/xemacs-21.1.4/lisp/x-win-sun.elc
-lib/xemacs-21.1.4/lisp/x-win-xfree86.elc
-lib/xemacs-21.1.4/lisp/finder-inf.el@.GZ@
-lib/xemacs-21.1.4/lisp/finder-inf.elc
-lib/xemacs-21.1.4/lisp/mule/arabic.el@.GZ@
-lib/xemacs-21.1.4/lisp/mule/canna-leim.el@.GZ@
-lib/xemacs-21.1.4/lisp/mule/chinese.el@.GZ@
-lib/xemacs-21.1.4/lisp/mule/cyrillic.el@.GZ@
-lib/xemacs-21.1.4/lisp/mule/english.el@.GZ@
-lib/xemacs-21.1.4/lisp/mule/european.el@.GZ@
-lib/xemacs-21.1.4/lisp/mule/greek.el@.GZ@
-lib/xemacs-21.1.4/lisp/mule/hebrew.el@.GZ@
-lib/xemacs-21.1.4/lisp/mule/japanese.el@.GZ@
-lib/xemacs-21.1.4/lisp/mule/kinsoku.el@.GZ@
-lib/xemacs-21.1.4/lisp/mule/korean.el@.GZ@
-lib/xemacs-21.1.4/lisp/mule/misc-lang.el@.GZ@
-lib/xemacs-21.1.4/lisp/mule/mule-category.el@.GZ@
-lib/xemacs-21.1.4/lisp/mule/mule-ccl.el@.GZ@
-lib/xemacs-21.1.4/lisp/mule/mule-charset.el@.GZ@
-lib/xemacs-21.1.4/lisp/mule/mule-cmds.el@.GZ@
-lib/xemacs-21.1.4/lisp/mule/mule-coding.el@.GZ@
-lib/xemacs-21.1.4/lisp/mule/mule-files.el@.GZ@
-lib/xemacs-21.1.4/lisp/mule/mule-help.el@.GZ@
-lib/xemacs-21.1.4/lisp/mule/mule-init.el@.GZ@
-lib/xemacs-21.1.4/lisp/mule/mule-misc.el@.GZ@
-lib/xemacs-21.1.4/lisp/mule/mule-x-init.el@.GZ@
-lib/xemacs-21.1.4/lisp/mule/mule-tty-init.el@.GZ@
-lib/xemacs-21.1.4/lisp/mule/viet-chars.el@.GZ@
-lib/xemacs-21.1.4/lisp/mule/arabic.elc
-lib/xemacs-21.1.4/lisp/mule/canna-leim.elc
-lib/xemacs-21.1.4/lisp/mule/chinese.elc
-lib/xemacs-21.1.4/lisp/mule/cyrillic.elc
-lib/xemacs-21.1.4/lisp/mule/english.elc
-lib/xemacs-21.1.4/lisp/mule/european.elc
-lib/xemacs-21.1.4/lisp/mule/greek.elc
-lib/xemacs-21.1.4/lisp/mule/hebrew.elc
-lib/xemacs-21.1.4/lisp/mule/japanese.elc
-lib/xemacs-21.1.4/lisp/mule/kinsoku.elc
-lib/xemacs-21.1.4/lisp/mule/korean.elc
-lib/xemacs-21.1.4/lisp/mule/misc-lang.elc
-lib/xemacs-21.1.4/lisp/mule/mule-category.elc
-lib/xemacs-21.1.4/lisp/mule/mule-ccl.elc
-lib/xemacs-21.1.4/lisp/mule/mule-charset.elc
-lib/xemacs-21.1.4/lisp/mule/mule-cmds.elc
-lib/xemacs-21.1.4/lisp/mule/mule-coding.elc
-lib/xemacs-21.1.4/lisp/mule/mule-files.elc
-lib/xemacs-21.1.4/lisp/mule/mule-help.elc
-lib/xemacs-21.1.4/lisp/mule/mule-init.elc
-lib/xemacs-21.1.4/lisp/mule/mule-misc.elc
-lib/xemacs-21.1.4/lisp/mule/mule-x-init.elc
-lib/xemacs-21.1.4/lisp/mule/mule-tty-init.elc
-lib/xemacs-21.1.4/lisp/mule/viet-chars.elc
-lib/xemacs-21.1.4/info/dir
-lib/xemacs-21.1.4/info/cl.info
-lib/xemacs-21.1.4/info/cl.info-1
-lib/xemacs-21.1.4/info/cl.info-2
-lib/xemacs-21.1.4/info/cl.info-3
-lib/xemacs-21.1.4/info/cl.info-4
-lib/xemacs-21.1.4/info/cl.info-5
-lib/xemacs-21.1.4/info/cl.info-6
-lib/xemacs-21.1.4/info/custom.info
-lib/xemacs-21.1.4/info/external-widget.info
-lib/xemacs-21.1.4/info/info.info
-lib/xemacs-21.1.4/info/internals.info
-lib/xemacs-21.1.4/info/internals.info-1
-lib/xemacs-21.1.4/info/internals.info-2
-lib/xemacs-21.1.4/info/internals.info-3
-lib/xemacs-21.1.4/info/internals.info-4
-lib/xemacs-21.1.4/info/internals.info-5
-lib/xemacs-21.1.4/info/internals.info-6
-lib/xemacs-21.1.4/info/internals.info-7
-lib/xemacs-21.1.4/info/lispref.info
-lib/xemacs-21.1.4/info/lispref.info-1
-lib/xemacs-21.1.4/info/lispref.info-10
-lib/xemacs-21.1.4/info/lispref.info-11
-lib/xemacs-21.1.4/info/lispref.info-12
-lib/xemacs-21.1.4/info/lispref.info-13
-lib/xemacs-21.1.4/info/lispref.info-14
-lib/xemacs-21.1.4/info/lispref.info-15
-lib/xemacs-21.1.4/info/lispref.info-16
-lib/xemacs-21.1.4/info/lispref.info-17
-lib/xemacs-21.1.4/info/lispref.info-18
-lib/xemacs-21.1.4/info/lispref.info-19
-lib/xemacs-21.1.4/info/lispref.info-2
-lib/xemacs-21.1.4/info/lispref.info-20
-lib/xemacs-21.1.4/info/lispref.info-21
-lib/xemacs-21.1.4/info/lispref.info-22
-lib/xemacs-21.1.4/info/lispref.info-23
-lib/xemacs-21.1.4/info/lispref.info-24
-lib/xemacs-21.1.4/info/lispref.info-25
-lib/xemacs-21.1.4/info/lispref.info-26
-lib/xemacs-21.1.4/info/lispref.info-27
-lib/xemacs-21.1.4/info/lispref.info-28
-lib/xemacs-21.1.4/info/lispref.info-29
-lib/xemacs-21.1.4/info/lispref.info-3
-lib/xemacs-21.1.4/info/lispref.info-30
-lib/xemacs-21.1.4/info/lispref.info-31
-lib/xemacs-21.1.4/info/lispref.info-32
-lib/xemacs-21.1.4/info/lispref.info-33
-lib/xemacs-21.1.4/info/lispref.info-34
-lib/xemacs-21.1.4/info/lispref.info-35
-lib/xemacs-21.1.4/info/lispref.info-36
-lib/xemacs-21.1.4/info/lispref.info-37
-lib/xemacs-21.1.4/info/lispref.info-38
-lib/xemacs-21.1.4/info/lispref.info-39
-lib/xemacs-21.1.4/info/lispref.info-4
-lib/xemacs-21.1.4/info/lispref.info-40
-lib/xemacs-21.1.4/info/lispref.info-41
-lib/xemacs-21.1.4/info/lispref.info-42
-lib/xemacs-21.1.4/info/lispref.info-43
-lib/xemacs-21.1.4/info/lispref.info-44
-lib/xemacs-21.1.4/info/lispref.info-5
-lib/xemacs-21.1.4/info/lispref.info-6
-lib/xemacs-21.1.4/info/lispref.info-7
-lib/xemacs-21.1.4/info/lispref.info-8
-lib/xemacs-21.1.4/info/lispref.info-9
-lib/xemacs-21.1.4/info/new-users-guide.info
-lib/xemacs-21.1.4/info/new-users-guide.info-1
-lib/xemacs-21.1.4/info/new-users-guide.info-2
-lib/xemacs-21.1.4/info/new-users-guide.info-3
-lib/xemacs-21.1.4/info/standards.info
-lib/xemacs-21.1.4/info/standards.info-1
-lib/xemacs-21.1.4/info/standards.info-2
-lib/xemacs-21.1.4/info/standards.info-3
-lib/xemacs-21.1.4/info/term.info
-lib/xemacs-21.1.4/info/termcap.info
-lib/xemacs-21.1.4/info/termcap.info-1
-lib/xemacs-21.1.4/info/termcap.info-2
-lib/xemacs-21.1.4/info/termcap.info-3
-lib/xemacs-21.1.4/info/texinfo.info
-lib/xemacs-21.1.4/info/texinfo.info-1
-lib/xemacs-21.1.4/info/texinfo.info-10
-lib/xemacs-21.1.4/info/texinfo.info-11
-lib/xemacs-21.1.4/info/texinfo.info-12
-lib/xemacs-21.1.4/info/texinfo.info-2
-lib/xemacs-21.1.4/info/texinfo.info-3
-lib/xemacs-21.1.4/info/texinfo.info-4
-lib/xemacs-21.1.4/info/texinfo.info-5
-lib/xemacs-21.1.4/info/texinfo.info-6
-lib/xemacs-21.1.4/info/texinfo.info-7
-lib/xemacs-21.1.4/info/texinfo.info-8
-lib/xemacs-21.1.4/info/texinfo.info-9
-lib/xemacs-21.1.4/info/widget.info
-lib/xemacs-21.1.4/info/xemacs-faq.info
-lib/xemacs-21.1.4/info/xemacs-faq.info-1
-lib/xemacs-21.1.4/info/xemacs-faq.info-2
-lib/xemacs-21.1.4/info/xemacs-faq.info-3
-lib/xemacs-21.1.4/info/xemacs-faq.info-4
-lib/xemacs-21.1.4/info/xemacs-faq.info-5
-lib/xemacs-21.1.4/info/xemacs.info
-lib/xemacs-21.1.4/info/xemacs.info-1
-lib/xemacs-21.1.4/info/xemacs.info-10
-lib/xemacs-21.1.4/info/xemacs.info-11
-lib/xemacs-21.1.4/info/xemacs.info-12
-lib/xemacs-21.1.4/info/xemacs.info-13
-lib/xemacs-21.1.4/info/xemacs.info-14
-lib/xemacs-21.1.4/info/xemacs.info-15
-lib/xemacs-21.1.4/info/xemacs.info-16
-lib/xemacs-21.1.4/info/xemacs.info-17
-lib/xemacs-21.1.4/info/xemacs.info-18
-lib/xemacs-21.1.4/info/xemacs.info-19
-lib/xemacs-21.1.4/info/xemacs.info-2
-lib/xemacs-21.1.4/info/xemacs.info-20
-lib/xemacs-21.1.4/info/xemacs.info-21
-lib/xemacs-21.1.4/info/xemacs.info-3
-lib/xemacs-21.1.4/info/xemacs.info-4
-lib/xemacs-21.1.4/info/xemacs.info-5
-lib/xemacs-21.1.4/info/xemacs.info-6
-lib/xemacs-21.1.4/info/xemacs.info-7
-lib/xemacs-21.1.4/info/xemacs.info-8
-lib/xemacs-21.1.4/info/xemacs.info-9
-lib/xemacs-21.1.4/${MACHINE_GNU_PLATFORM}/make-path
-lib/xemacs-21.1.4/${MACHINE_GNU_PLATFORM}/wakeup
-lib/xemacs-21.1.4/${MACHINE_GNU_PLATFORM}/profile
-lib/xemacs-21.1.4/${MACHINE_GNU_PLATFORM}/make-docfile
-lib/xemacs-21.1.4/${MACHINE_GNU_PLATFORM}/digest-doc
-lib/xemacs-21.1.4/${MACHINE_GNU_PLATFORM}/sorted-doc
-lib/xemacs-21.1.4/${MACHINE_GNU_PLATFORM}/movemail
-lib/xemacs-21.1.4/${MACHINE_GNU_PLATFORM}/cvtmail
-lib/xemacs-21.1.4/${MACHINE_GNU_PLATFORM}/fakemail
-lib/xemacs-21.1.4/${MACHINE_GNU_PLATFORM}/yow
-lib/xemacs-21.1.4/${MACHINE_GNU_PLATFORM}/hexl
-lib/xemacs-21.1.4/${MACHINE_GNU_PLATFORM}/gnuserv
-lib/xemacs-21.1.4/${MACHINE_GNU_PLATFORM}/mmencode
-lib/xemacs-21.1.4/${MACHINE_GNU_PLATFORM}/rcs2log
-lib/xemacs-21.1.4/${MACHINE_GNU_PLATFORM}/vcdiff
-lib/xemacs-21.1.4/${MACHINE_GNU_PLATFORM}/gzip-el.sh
-lib/xemacs-21.1.4/${MACHINE_GNU_PLATFORM}/add-big-package.sh
-lib/xemacs-21.1.4/${MACHINE_GNU_PLATFORM}/DOC
-lib/xemacs-21.1.4/${MACHINE_GNU_PLATFORM}/config.values
+@exec mkdir -p %D/lib/${PKGNAME}/lisp/x11
+@exec mkdir -p %D/lib/${PKGNAME}/lisp/w32
+@exec mkdir -p %D/lib/${PKGNAME}/lisp/w3
+@exec mkdir -p %D/lib/${PKGNAME}/lisp/vms
+@exec mkdir -p %D/lib/${PKGNAME}/lisp/vm
+@exec mkdir -p %D/lib/${PKGNAME}/lisp/viper
+@exec mkdir -p %D/lib/${PKGNAME}/lisp/utils
+@exec mkdir -p %D/lib/${PKGNAME}/lisp/url
+@exec mkdir -p %D/lib/${PKGNAME}/lisp/tooltalk
+@exec mkdir -p %D/lib/${PKGNAME}/lisp/tm
+@exec mkdir -p %D/lib/${PKGNAME}/lisp/tl
+@exec mkdir -p %D/lib/${PKGNAME}/lisp/sunpro
+@exec mkdir -p %D/lib/${PKGNAME}/lisp/skk
+@exec mkdir -p %D/lib/${PKGNAME}/lisp/rmail
+@exec mkdir -p %D/lib/${PKGNAME}/lisp/quail
+@exec mkdir -p %D/lib/${PKGNAME}/lisp/psgml
+@exec mkdir -p %D/lib/${PKGNAME}/lisp/prim
+@exec mkdir -p %D/lib/${PKGNAME}/lisp/pcl-cvs
+@exec mkdir -p %D/lib/${PKGNAME}/lisp/packages
+@exec mkdir -p %D/lib/${PKGNAME}/lisp/oobr/tree-x
+@exec mkdir -p %D/lib/${PKGNAME}/lisp/oobr/tree-nx/English.lproj/TreeView.nib
+@exec mkdir -p %D/lib/${PKGNAME}/lisp/oobr/tree-nx/English.lproj/InfoPanel.nib
+@exec mkdir -p %D/lib/${PKGNAME}/lisp/oobr/tree-nx/English.lproj/DocWindow.nib
+@exec mkdir -p %D/lib/${PKGNAME}/lisp/oobr/tree-nx/English.lproj
+@exec mkdir -p %D/lib/${PKGNAME}/lisp/oobr/tree-nx
+@exec mkdir -p %D/lib/${PKGNAME}/lisp/oobr
+@exec mkdir -p %D/lib/${PKGNAME}/lisp/ns
+@exec mkdir -p %D/lib/${PKGNAME}/lisp/mu
+@exec mkdir -p %D/lib/${PKGNAME}/lisp/modes
+@exec mkdir -p %D/lib/${PKGNAME}/lisp/mh-e
+@exec mkdir -p %D/lib/${PKGNAME}/lisp/mel
+@exec mkdir -p %D/lib/${PKGNAME}/lisp/mailcrypt
+@exec mkdir -p %D/lib/${PKGNAME}/lisp/locale/ja
+@exec mkdir -p %D/lib/${PKGNAME}/lisp/locale
+@exec mkdir -p %D/lib/${PKGNAME}/lisp/leim/quail
+@exec mkdir -p %D/lib/${PKGNAME}/lisp/leim
+@exec mkdir -p %D/lib/${PKGNAME}/lisp/language
+@exec mkdir -p %D/lib/${PKGNAME}/lisp/its
+@exec mkdir -p %D/lib/${PKGNAME}/lisp/iso
+@exec mkdir -p %D/lib/${PKGNAME}/lisp/ilisp
+@exec mkdir -p %D/lib/${PKGNAME}/lisp/hyperbole/kotl
+@exec mkdir -p %D/lib/${PKGNAME}/lisp/hyperbole
+@exec mkdir -p %D/lib/${PKGNAME}/lisp/hm--html-menus
+@exec mkdir -p %D/lib/${PKGNAME}/lisp/gnus
+@exec mkdir -p %D/lib/${PKGNAME}/lisp/gnats
+@exec mkdir -p %D/lib/${PKGNAME}/lisp/games
+@exec mkdir -p %D/lib/${PKGNAME}/lisp/eterm
+@exec mkdir -p %D/lib/${PKGNAME}/lisp/epoch
+@exec mkdir -p %D/lib/${PKGNAME}/lisp/eos
+@exec mkdir -p %D/lib/${PKGNAME}/lisp/energize
+@exec mkdir -p %D/lib/${PKGNAME}/lisp/emulators
+@exec mkdir -p %D/lib/${PKGNAME}/lisp/electric
+@exec mkdir -p %D/lib/${PKGNAME}/lisp/egg
+@exec mkdir -p %D/lib/${PKGNAME}/lisp/efs
+@exec mkdir -p %D/lib/${PKGNAME}/lisp/ediff
+@exec mkdir -p %D/lib/${PKGNAME}/lisp/edebug
+@exec mkdir -p %D/lib/${PKGNAME}/lisp/dired
+@exec mkdir -p %D/lib/${PKGNAME}/lisp/custom
+@exec mkdir -p %D/lib/${PKGNAME}/lisp/comint
+@exec mkdir -p %D/lib/${PKGNAME}/lisp/cl
+@exec mkdir -p %D/lib/${PKGNAME}/lisp/cc-mode
+@exec mkdir -p %D/lib/${PKGNAME}/lisp/calendar
+@exec mkdir -p %D/lib/${PKGNAME}/lisp/bytecomp
+@exec mkdir -p %D/lib/${PKGNAME}/lisp/auctex/style
+@exec mkdir -p %D/lib/${PKGNAME}/lisp/auctex
+@exec mkdir -p %D/lib/${PKGNAME}/lisp/apel
+@exec mkdir -p %D/lib/${PKGNAME}/etc/w3
+@exec mkdir -p %D/lib/${PKGNAME}/etc/vm
+@exec mkdir -p %D/lib/${PKGNAME}/etc/time
+@exec mkdir -p %D/lib/${PKGNAME}/etc/sounds
+@exec mkdir -p %D/lib/${PKGNAME}/etc/smilies
+@exec mkdir -p %D/lib/${PKGNAME}/etc/skk
+@exec mkdir -p %D/lib/${PKGNAME}/etc/sgml/cdtd
+@exec mkdir -p %D/lib/${PKGNAME}/etc/sgml/ISO_8879=1986/entities
+@exec mkdir -p %D/lib/${PKGNAME}/etc/sgml/ISO_8879=1986
+@exec mkdir -p %D/lib/${PKGNAME}/etc/sgml
+@exec mkdir -p %D/lib/${PKGNAME}/etc/ns
+@exec mkdir -p %D/lib/${PKGNAME}/etc/mule
+@exec mkdir -p %D/lib/${PKGNAME}/etc/mine
+@exec mkdir -p %D/lib/${PKGNAME}/etc/message
+@exec mkdir -p %D/lib/${PKGNAME}/etc/gnusrefcard
+@exec mkdir -p %D/lib/${PKGNAME}/etc/gnus
+@exec mkdir -p %D/lib/${PKGNAME}/etc/gnats
+@exec mkdir -p %D/lib/${PKGNAME}/etc/frame-icon
+@exec mkdir -p %D/lib/${PKGNAME}/etc/e
+@exec mkdir -p %D/lib/${PKGNAME}/etc/auctex/style
+@exec mkdir -p %D/lib/${PKGNAME}/etc/auctex
+@exec mkdir -p %D/lib/${PKGNAME}/etc/app-defaults/ja
+@exec mkdir -p %D/lib/${PKGNAME}/etc/app-defaults/fr
+@exec mkdir -p %D/lib/${PKGNAME}/etc/app-defaults
+lib/${PKGNAME}/etc/BETA
+lib/${PKGNAME}/etc/CHARSETS
+lib/${PKGNAME}/etc/CODING-STANDARDS
+lib/${PKGNAME}/etc/CODINGS
+lib/${PKGNAME}/etc/COPYING
+lib/${PKGNAME}/etc/COPYING.LIB
+lib/${PKGNAME}/etc/DEBUG
+lib/${PKGNAME}/etc/DISTRIB
+lib/${PKGNAME}/etc/Emacs.ad
+lib/${PKGNAME}/etc/FTP
+lib/${PKGNAME}/etc/GNU
+lib/${PKGNAME}/etc/GOATS
+lib/${PKGNAME}/etc/HELLO
+lib/${PKGNAME}/etc/InstallGuide
+lib/${PKGNAME}/etc/LPF
+lib/${PKGNAME}/etc/MACHINES
+lib/${PKGNAME}/etc/MAILINGLISTS
+lib/${PKGNAME}/etc/MORE.STUFF
+lib/${PKGNAME}/etc/MOTIVATION
+lib/${PKGNAME}/etc/NEWS
+lib/${PKGNAME}/etc/ORDERS
+lib/${PKGNAME}/etc/ORDERS.EUROPE
+lib/${PKGNAME}/etc/ORDERS.JAPAN
+lib/${PKGNAME}/etc/PACKAGES
+lib/${PKGNAME}/etc/README
+lib/${PKGNAME}/etc/SERVICE
+lib/${PKGNAME}/etc/eos/eos-build.xbm
+lib/${PKGNAME}/etc/eos/eos-clear-at.xbm
+lib/${PKGNAME}/etc/eos/eos-cont.xbm
+lib/${PKGNAME}/etc/eos/eos-dismiss.xbm
+lib/${PKGNAME}/etc/eos/eos-down.xbm
+lib/${PKGNAME}/etc/eos/eos-evaluate-star.xbm
+lib/${PKGNAME}/etc/eos/eos-evaluate.xbm
+lib/${PKGNAME}/etc/eos/eos-fix.xbm
+lib/${PKGNAME}/etc/eos/eos-intro.xbm
+lib/${PKGNAME}/etc/eos/eos-introB.xbm
+lib/${PKGNAME}/etc/eos/eos-introD.xbm
+lib/${PKGNAME}/etc/eos/eos-introDB.xbm
+lib/${PKGNAME}/etc/eos/eos-run.xbm
+lib/${PKGNAME}/etc/eos/eos-run2.xbm
+lib/${PKGNAME}/etc/eos/eos-step-into.xbm
+lib/${PKGNAME}/etc/eos/eos-step-over.xbm
+lib/${PKGNAME}/etc/eos/eos-stop-in.xbm
+lib/${PKGNAME}/etc/eos/eos-stop.xbm
+lib/${PKGNAME}/etc/eos/eos-type.xbm
+lib/${PKGNAME}/etc/eos/eos-up.xbm
+lib/${PKGNAME}/etc/README.HYPERBOLE
+lib/${PKGNAME}/etc/README.OO-BROWSER
+lib/${PKGNAME}/etc/TERMS
+lib/${PKGNAME}/etc/TUTORIAL
+lib/${PKGNAME}/etc/TUTORIAL.de
+lib/${PKGNAME}/etc/TUTORIAL.fr
+lib/${PKGNAME}/etc/TUTORIAL.hr
+lib/${PKGNAME}/etc/TUTORIAL.ja
+lib/${PKGNAME}/etc/TUTORIAL.ko
+lib/${PKGNAME}/etc/TUTORIAL.no
+lib/${PKGNAME}/etc/TUTORIAL.pl
+lib/${PKGNAME}/etc/TUTORIAL.ro
+lib/${PKGNAME}/etc/TUTORIAL.ru
+lib/${PKGNAME}/etc/TUTORIAL.th
+lib/${PKGNAME}/etc/XKeysymDB
+lib/${PKGNAME}/etc/aliases.ksh
+lib/${PKGNAME}/etc/cbx.png
+lib/${PKGNAME}/etc/check_cygwin_setup.sh
+lib/${PKGNAME}/etc/ctags.1
+lib/${PKGNAME}/etc/editclient.sh
+lib/${PKGNAME}/etc/emacskeys.sco
+lib/${PKGNAME}/etc/emacsstrs.sco
+lib/${PKGNAME}/etc/etags.1
+lib/${PKGNAME}/etc/gnu.xbm
+lib/${PKGNAME}/etc/idd/drop
+lib/${PKGNAME}/etc/idd/dropmsk
+lib/${PKGNAME}/etc/gnu.xpm
+lib/${PKGNAME}/etc/gnuattach.1
+lib/${PKGNAME}/etc/gnuclient.1
+lib/${PKGNAME}/etc/gnudoit.1
+lib/${PKGNAME}/etc/gnuserv.1
+lib/${PKGNAME}/etc/gnuserv.README
+lib/${PKGNAME}/etc/gray1.xbm
+lib/${PKGNAME}/etc/ms-kermit
+lib/${PKGNAME}/etc/ms-kermit-7bit
+lib/${PKGNAME}/etc/package-index.LATEST.pgp
+lib/${PKGNAME}/etc/recycle.xpm
+lib/${PKGNAME}/etc/recycle2.xpm
+lib/${PKGNAME}/etc/refcard.ps.gz
+lib/${PKGNAME}/etc/refcard.tex
+lib/${PKGNAME}/etc/sample.Xdefaults
+lib/${PKGNAME}/etc/sample.emacs
+lib/${PKGNAME}/etc/sink.xbm
+lib/${PKGNAME}/etc/trash.xpm
+lib/${PKGNAME}/etc/xemacs-beta.xpm
+lib/${PKGNAME}/etc/xemacs-enhanced.png
+lib/${PKGNAME}/etc/xemacs-fe.sh
+lib/${PKGNAME}/etc/xemacs-icon.xpm
+lib/${PKGNAME}/etc/xemacs-icon2.xbm
+lib/${PKGNAME}/etc/xemacs-icon2.xpm
+lib/${PKGNAME}/etc/xemacs-icon3.xpm
+lib/${PKGNAME}/etc/xemacs-ja.1
+lib/${PKGNAME}/etc/xemacs.1
+lib/${PKGNAME}/etc/xemacs.xbm
+lib/${PKGNAME}/etc/xemacs.xpm
+lib/${PKGNAME}/etc/custom/check0.xpm
+lib/${PKGNAME}/etc/custom/check1.xpm
+lib/${PKGNAME}/etc/custom/choose-down.png
+lib/${PKGNAME}/etc/custom/choose-up.png
+lib/${PKGNAME}/etc/custom/done-down.png
+lib/${PKGNAME}/etc/custom/done-up.png
+lib/${PKGNAME}/etc/custom/down-pushed.xpm
+lib/${PKGNAME}/etc/custom/down.xpm
+lib/${PKGNAME}/etc/custom/face.xpm
+lib/${PKGNAME}/etc/custom/folder.xpm
+lib/${PKGNAME}/etc/custom/open-down.png
+lib/${PKGNAME}/etc/custom/open-up.png
+lib/${PKGNAME}/etc/custom/option.xpm
+lib/${PKGNAME}/etc/custom/radio0.xpm
+lib/${PKGNAME}/etc/custom/radio1.xpm
+lib/${PKGNAME}/etc/custom/reset-down.png
+lib/${PKGNAME}/etc/custom/reset-up.png
+lib/${PKGNAME}/etc/custom/right-pushed.xpm
+lib/${PKGNAME}/etc/custom/right.xpm
+lib/${PKGNAME}/etc/custom/save-down.png
+lib/${PKGNAME}/etc/custom/save-up.png
+lib/${PKGNAME}/etc/custom/set-down.png
+lib/${PKGNAME}/etc/custom/set-up.png
+lib/${PKGNAME}/etc/custom/state-down.png
+lib/${PKGNAME}/etc/custom/state-up.png
+lib/${PKGNAME}/etc/custom/toggle-off-down.png
+lib/${PKGNAME}/etc/custom/toggle-off-up.png
+lib/${PKGNAME}/etc/custom/toggle-on-down.png
+lib/${PKGNAME}/etc/custom/toggle-on-up.png
+lib/${PKGNAME}/etc/photos/ajc.png
+lib/${PKGNAME}/etc/photos/ajcm.png
+lib/${PKGNAME}/etc/photos/baw.png
+lib/${PKGNAME}/etc/photos/bawm.png
+lib/${PKGNAME}/etc/photos/bw.png
+lib/${PKGNAME}/etc/photos/bwm.png
+lib/${PKGNAME}/etc/photos/chr.png
+lib/${PKGNAME}/etc/photos/chrm.png
+lib/${PKGNAME}/etc/photos/cthomp.png
+lib/${PKGNAME}/etc/photos/cthompm.png
+lib/${PKGNAME}/etc/photos/dkindred.png
+lib/${PKGNAME}/etc/photos/dkindredm.png
+lib/${PKGNAME}/etc/photos/dmoore.png
+lib/${PKGNAME}/etc/photos/dmoorem.png
+lib/${PKGNAME}/etc/photos/dv.png
+lib/${PKGNAME}/etc/photos/dvm.png
+lib/${PKGNAME}/etc/photos/hniksic.png
+lib/${PKGNAME}/etc/photos/hniksicm.png
+lib/${PKGNAME}/etc/photos/jareth.png
+lib/${PKGNAME}/etc/photos/jarethm.png
+lib/${PKGNAME}/etc/photos/jens.png
+lib/${PKGNAME}/etc/photos/jensm.png
+lib/${PKGNAME}/etc/photos/jmiller.png
+lib/${PKGNAME}/etc/photos/jmillerm.png
+lib/${PKGNAME}/etc/photos/jwz.png
+lib/${PKGNAME}/etc/photos/jwzm.png
+lib/${PKGNAME}/etc/photos/kazz.png
+lib/${PKGNAME}/etc/photos/kazzm.png
+lib/${PKGNAME}/etc/photos/kyle.png
+lib/${PKGNAME}/etc/photos/kylem.png
+lib/${PKGNAME}/etc/photos/larsi.png
+lib/${PKGNAME}/etc/photos/larsim.png
+lib/${PKGNAME}/etc/photos/martin.png
+lib/${PKGNAME}/etc/photos/martinm.png
+lib/${PKGNAME}/etc/photos/mcook.png
+lib/${PKGNAME}/etc/photos/mcookm.png
+lib/${PKGNAME}/etc/photos/mly.png
+lib/${PKGNAME}/etc/photos/mlym.png
+lib/${PKGNAME}/etc/photos/morioka.png
+lib/${PKGNAME}/etc/photos/moriokam.png
+lib/${PKGNAME}/etc/photos/ograf.png
+lib/${PKGNAME}/etc/photos/ografm.png
+lib/${PKGNAME}/etc/photos/pez.png
+lib/${PKGNAME}/etc/photos/pezm.png
+lib/${PKGNAME}/etc/photos/piper.png
+lib/${PKGNAME}/etc/photos/piperm.png
+lib/${PKGNAME}/etc/photos/rickc.png
+lib/${PKGNAME}/etc/photos/rickcm.png
+lib/${PKGNAME}/etc/photos/slb.png
+lib/${PKGNAME}/etc/photos/slbm.png
+lib/${PKGNAME}/etc/photos/sperber.png
+lib/${PKGNAME}/etc/photos/sperberm.png
+lib/${PKGNAME}/etc/photos/stig.png
+lib/${PKGNAME}/etc/photos/stigb.png
+lib/${PKGNAME}/etc/photos/stigbm.png
+lib/${PKGNAME}/etc/photos/stigm.png
+lib/${PKGNAME}/etc/photos/thiessel.png
+lib/${PKGNAME}/etc/photos/thiesselm.png
+lib/${PKGNAME}/etc/photos/vin.png
+lib/${PKGNAME}/etc/photos/vinm.png
+lib/${PKGNAME}/etc/photos/vladimir.png
+lib/${PKGNAME}/etc/photos/vladimirm.png
+lib/${PKGNAME}/etc/photos/wing.png
+lib/${PKGNAME}/etc/photos/wingm.png
+lib/${PKGNAME}/etc/photos/wmperry.png
+lib/${PKGNAME}/etc/photos/wmperrym.png
+lib/${PKGNAME}/etc/sparcworks/SW.Editor.xpm
+lib/${PKGNAME}/etc/sparcworks/sunpro-mailcap
+lib/${PKGNAME}/etc/tests/external-widget/Makefile
+lib/${PKGNAME}/etc/tests/external-widget/test-ew-motif.c
+lib/${PKGNAME}/etc/tests/external-widget/test-ew-xlib.c
+lib/${PKGNAME}/etc/toolbar/compile-cap-up.xpm
+lib/${PKGNAME}/etc/toolbar/compile-cap-xx.xpm
+lib/${PKGNAME}/etc/toolbar/compile-dn.xbm
+lib/${PKGNAME}/etc/toolbar/compile-up.xbm
+lib/${PKGNAME}/etc/toolbar/compile-up.xpm
+lib/${PKGNAME}/etc/toolbar/compile-xx.xbm
+lib/${PKGNAME}/etc/toolbar/compile-xx.xpm
+lib/${PKGNAME}/etc/toolbar/copy-cap-up.xpm
+lib/${PKGNAME}/etc/toolbar/copy-cap-xx.xpm
+lib/${PKGNAME}/etc/toolbar/copy-dn.xbm
+lib/${PKGNAME}/etc/toolbar/copy-up.xbm
+lib/${PKGNAME}/etc/toolbar/copy-up.xpm
+lib/${PKGNAME}/etc/toolbar/copy-xx.xbm
+lib/${PKGNAME}/etc/toolbar/copy-xx.xpm
+lib/${PKGNAME}/etc/toolbar/cut-cap-up.xpm
+lib/${PKGNAME}/etc/toolbar/cut-cap-xx.xpm
+lib/${PKGNAME}/etc/toolbar/cut-dn.xbm
+lib/${PKGNAME}/etc/toolbar/cut-up.xbm
+lib/${PKGNAME}/etc/toolbar/cut-up.xpm
+lib/${PKGNAME}/etc/toolbar/cut-xx.xbm
+lib/${PKGNAME}/etc/toolbar/cut-xx.xpm
+lib/${PKGNAME}/etc/toolbar/debug-cap-up.xpm
+lib/${PKGNAME}/etc/toolbar/debug-cap-xx.xpm
+lib/${PKGNAME}/etc/toolbar/debug-dn.xbm
+lib/${PKGNAME}/etc/toolbar/debug-up.xbm
+lib/${PKGNAME}/etc/toolbar/debug-up.xpm
+lib/${PKGNAME}/etc/toolbar/debug-xx.xbm
+lib/${PKGNAME}/etc/toolbar/debug-xx.xpm
+lib/${PKGNAME}/etc/toolbar/disk-cap-up.xpm
+lib/${PKGNAME}/etc/toolbar/disk-cap-xx.xpm
+lib/${PKGNAME}/etc/toolbar/disk-dn.xbm
+lib/${PKGNAME}/etc/toolbar/disk-up.xbm
+lib/${PKGNAME}/etc/toolbar/disk-up.xpm
+lib/${PKGNAME}/etc/toolbar/disk-xx.xbm
+lib/${PKGNAME}/etc/toolbar/disk-xx.xpm
+lib/${PKGNAME}/etc/toolbar/file-cap-up.xpm
+lib/${PKGNAME}/etc/toolbar/file-cap-xx.xpm
+lib/${PKGNAME}/etc/toolbar/file-dn.xbm
+lib/${PKGNAME}/etc/toolbar/file-up.xbm
+lib/${PKGNAME}/etc/toolbar/file-up.xpm
+lib/${PKGNAME}/etc/toolbar/file-xx.xbm
+lib/${PKGNAME}/etc/toolbar/file-xx.xpm
+lib/${PKGNAME}/etc/toolbar/folder-cap-up.xpm
+lib/${PKGNAME}/etc/toolbar/folder-cap-xx.xpm
+lib/${PKGNAME}/etc/toolbar/folder-dn.xbm
+lib/${PKGNAME}/etc/toolbar/folder-up.xbm
+lib/${PKGNAME}/etc/toolbar/folder-up.xpm
+lib/${PKGNAME}/etc/toolbar/folder-xx.xbm
+lib/${PKGNAME}/etc/toolbar/folder-xx.xpm
+lib/${PKGNAME}/etc/toolbar/info-def-cap-up.xpm
+lib/${PKGNAME}/etc/toolbar/info-def-cap-xx.xpm
+lib/${PKGNAME}/etc/toolbar/info-def-dn.xbm
+lib/${PKGNAME}/etc/toolbar/info-def-up.xbm
+lib/${PKGNAME}/etc/toolbar/info-def-up.xpm
+lib/${PKGNAME}/etc/toolbar/info-def-xx.xbm
+lib/${PKGNAME}/etc/toolbar/info-def-xx.xpm
+lib/${PKGNAME}/etc/toolbar/info-exit-cap-up.xpm
+lib/${PKGNAME}/etc/toolbar/info-exit-cap-xx.xpm
+lib/${PKGNAME}/etc/toolbar/info-exit-dn.xbm
+lib/${PKGNAME}/etc/toolbar/info-exit-up.xbm
+lib/${PKGNAME}/etc/toolbar/info-exit-up.xpm
+lib/${PKGNAME}/etc/toolbar/info-exit-xx.xbm
+lib/${PKGNAME}/etc/toolbar/info-exit-xx.xpm
+lib/${PKGNAME}/etc/toolbar/info-exit.xbm
+lib/${PKGNAME}/etc/toolbar/info-exit.xpm
+lib/${PKGNAME}/etc/toolbar/info-next-cap-up.xpm
+lib/${PKGNAME}/etc/toolbar/info-next-cap-xx.xpm
+lib/${PKGNAME}/etc/toolbar/info-next-dn.xbm
+lib/${PKGNAME}/etc/toolbar/info-next-up.xbm
+lib/${PKGNAME}/etc/toolbar/info-next-up.xpm
+lib/${PKGNAME}/etc/toolbar/info-next-xx.xbm
+lib/${PKGNAME}/etc/toolbar/info-next-xx.xpm
+lib/${PKGNAME}/etc/toolbar/info-next.xbm
+lib/${PKGNAME}/etc/toolbar/info-next.xpm
+lib/${PKGNAME}/etc/toolbar/info-prev-cap-up.xpm
+lib/${PKGNAME}/etc/toolbar/info-prev-cap-xx.xpm
+lib/${PKGNAME}/etc/toolbar/info-prev-dn.xbm
+lib/${PKGNAME}/etc/toolbar/info-prev-up.xbm
+lib/${PKGNAME}/etc/toolbar/info-prev-up.xpm
+lib/${PKGNAME}/etc/toolbar/info-prev-xx.xbm
+lib/${PKGNAME}/etc/toolbar/info-prev-xx.xpm
+lib/${PKGNAME}/etc/toolbar/info-prev.xbm
+lib/${PKGNAME}/etc/toolbar/info-prev.xpm
+lib/${PKGNAME}/etc/toolbar/info-up-cap-up.xpm
+lib/${PKGNAME}/etc/toolbar/info-up-cap-xx.xpm
+lib/${PKGNAME}/etc/toolbar/info-up-dn.xbm
+lib/${PKGNAME}/etc/toolbar/info-up-up.xbm
+lib/${PKGNAME}/etc/toolbar/info-up-up.xpm
+lib/${PKGNAME}/etc/toolbar/info-up-xx.xbm
+lib/${PKGNAME}/etc/toolbar/info-up-xx.xpm
+lib/${PKGNAME}/etc/toolbar/info-up.xbm
+lib/${PKGNAME}/etc/toolbar/info-up.xpm
+lib/${PKGNAME}/etc/toolbar/last-win-cap-up.xpm
+lib/${PKGNAME}/etc/toolbar/last-win-cap-xx.xpm
+lib/${PKGNAME}/etc/toolbar/last-win-dn.xbm
+lib/${PKGNAME}/etc/toolbar/last-win-up.xbm
+lib/${PKGNAME}/etc/toolbar/last-win-up.xpm
+lib/${PKGNAME}/etc/toolbar/last-win-xx.xbm
+lib/${PKGNAME}/etc/toolbar/last-win-xx.xpm
+lib/${PKGNAME}/etc/toolbar/mail-cap-up.xpm
+lib/${PKGNAME}/etc/toolbar/mail-dn.xbm
+lib/${PKGNAME}/etc/toolbar/mail-cap-xx.xpm
+lib/${PKGNAME}/etc/toolbar/mail-up.xbm
+lib/${PKGNAME}/etc/toolbar/mail-up.xpm
+lib/${PKGNAME}/etc/toolbar/mail-xx.xbm
+lib/${PKGNAME}/etc/toolbar/mail-xx.xpm
+lib/${PKGNAME}/etc/toolbar/news-cap-up.xpm
+lib/${PKGNAME}/etc/toolbar/news-cap-xx.xpm
+lib/${PKGNAME}/etc/toolbar/news-dn.xbm
+lib/${PKGNAME}/etc/toolbar/news-up.xbm
+lib/${PKGNAME}/etc/toolbar/news-up.xpm
+lib/${PKGNAME}/etc/toolbar/news-xx.xbm
+lib/${PKGNAME}/etc/toolbar/news-xx.xpm
+lib/${PKGNAME}/etc/toolbar/next-win-cap-up.xpm
+lib/${PKGNAME}/etc/toolbar/next-win-cap-xx.xpm
+lib/${PKGNAME}/etc/toolbar/next-win-dn.xbm
+lib/${PKGNAME}/etc/toolbar/next-win-up.xbm
+lib/${PKGNAME}/etc/toolbar/next-win-up.xpm
+lib/${PKGNAME}/etc/toolbar/next-win-xx.xbm
+lib/${PKGNAME}/etc/toolbar/next-win-xx.xpm
+lib/${PKGNAME}/etc/toolbar/paste-cap-up.xpm
+lib/${PKGNAME}/etc/toolbar/paste-cap-xx.xpm
+lib/${PKGNAME}/etc/toolbar/paste-dn.xbm
+lib/${PKGNAME}/etc/toolbar/paste-up.xbm
+lib/${PKGNAME}/etc/toolbar/paste-up.xpm
+lib/${PKGNAME}/etc/toolbar/paste-xx.xbm
+lib/${PKGNAME}/etc/toolbar/paste-xx.xpm
+lib/${PKGNAME}/etc/toolbar/printer-cap-up.xpm
+lib/${PKGNAME}/etc/toolbar/printer-cap-xx.xpm
+lib/${PKGNAME}/etc/toolbar/printer-dn.xbm
+lib/${PKGNAME}/etc/toolbar/printer-up.xbm
+lib/${PKGNAME}/etc/toolbar/printer-up.xpm
+lib/${PKGNAME}/etc/toolbar/printer-xx.xbm
+lib/${PKGNAME}/etc/toolbar/printer-xx.xpm
+lib/${PKGNAME}/etc/toolbar/replace-cap-up.xpm
+lib/${PKGNAME}/etc/toolbar/replace-cap-xx.xpm
+lib/${PKGNAME}/etc/toolbar/replace-dn.xbm
+lib/${PKGNAME}/etc/toolbar/replace-up.xbm
+lib/${PKGNAME}/etc/toolbar/replace-up.xpm
+lib/${PKGNAME}/etc/toolbar/replace-xx.xbm
+lib/${PKGNAME}/etc/toolbar/replace-xx.xpm
+lib/${PKGNAME}/etc/toolbar/spell-cap-up.xpm
+lib/${PKGNAME}/etc/toolbar/spell-cap-xx.xpm
+lib/${PKGNAME}/etc/toolbar/spell-dn.xbm
+lib/${PKGNAME}/etc/toolbar/spell-up.xbm
+lib/${PKGNAME}/etc/toolbar/spell-up.xpm
+lib/${PKGNAME}/etc/toolbar/spell-xx.xbm
+lib/${PKGNAME}/etc/toolbar/spell-xx.xpm
+lib/${PKGNAME}/etc/toolbar/undo-cap-up.xpm
+lib/${PKGNAME}/etc/toolbar/undo-cap-xx.xpm
+lib/${PKGNAME}/etc/toolbar/undo-dn.xbm
+lib/${PKGNAME}/etc/toolbar/undo-up.xbm
+lib/${PKGNAME}/etc/toolbar/undo-up.xpm
+lib/${PKGNAME}/etc/toolbar/undo-xx.xbm
+lib/${PKGNAME}/etc/toolbar/undo-xx.xpm
+lib/${PKGNAME}/etc/toolbar/workshop-cap-up.xpm
+lib/${PKGNAME}/etc/toolbar/workshop-cap-xx.xpm
+lib/${PKGNAME}/etc/toolbar/workshop-up.xpm
+lib/${PKGNAME}/etc/toolbar/workshop-xx.xpm
+lib/${PKGNAME}/lisp/.cvsignore
+lib/${PKGNAME}/lisp/ChangeLog
+lib/${PKGNAME}/lisp/ChangeLog.1
+lib/${PKGNAME}/lisp/README
+lib/${PKGNAME}/lisp/abbrev.el@.GZ@
+lib/${PKGNAME}/lisp/about.el@.GZ@
+lib/${PKGNAME}/lisp/alist.el@.GZ@
+lib/${PKGNAME}/lisp/apropos.el@.GZ@
+lib/${PKGNAME}/lisp/auto-autoloads.el@.GZ@
+lib/${PKGNAME}/lisp/auto-save.el@.GZ@
+lib/${PKGNAME}/lisp/auto-show.el@.GZ@
+lib/${PKGNAME}/lisp/autoload.el@.GZ@
+lib/${PKGNAME}/lisp/backquote.el@.GZ@
+lib/${PKGNAME}/lisp/blessmail.el@.GZ@
+lib/${PKGNAME}/lisp/buff-menu.el@.GZ@
+lib/${PKGNAME}/lisp/buffer.el@.GZ@
+lib/${PKGNAME}/lisp/build-report.el@.GZ@
+lib/${PKGNAME}/lisp/byte-optimize.el@.GZ@
+lib/${PKGNAME}/lisp/bytecomp-runtime.el@.GZ@
+lib/${PKGNAME}/lisp/bytecomp.el@.GZ@
+lib/${PKGNAME}/lisp/callers-of-rpt.el@.GZ@
+lib/${PKGNAME}/lisp/cl.el@.GZ@
+lib/${PKGNAME}/lisp/check-features.el@.GZ@
+lib/${PKGNAME}/lisp/cl-compat.el@.GZ@
+lib/${PKGNAME}/lisp/cl-extra.el@.GZ@
+lib/${PKGNAME}/lisp/cl-macs.el@.GZ@
+lib/${PKGNAME}/lisp/cl-seq.el@.GZ@
+lib/${PKGNAME}/lisp/cleantree.el@.GZ@
+lib/${PKGNAME}/lisp/cmdloop.el@.GZ@
+lib/${PKGNAME}/lisp/code-files.el@.GZ@
+lib/${PKGNAME}/lisp/code-process.el@.GZ@
+lib/${PKGNAME}/lisp/coding.el@.GZ@
+lib/${PKGNAME}/lisp/config.el@.GZ@
+lib/${PKGNAME}/lisp/console.el@.GZ@
+lib/${PKGNAME}/lisp/cus-dep.el@.GZ@
+lib/${PKGNAME}/lisp/cus-edit.el@.GZ@
+lib/${PKGNAME}/lisp/cus-face.el@.GZ@
+lib/${PKGNAME}/lisp/cus-load.el@.GZ@
+lib/${PKGNAME}/lisp/cus-start.el@.GZ@
+lib/${PKGNAME}/lisp/custom-load.el@.GZ@
+lib/${PKGNAME}/lisp/custom.el@.GZ@
+lib/${PKGNAME}/lisp/derived.el@.GZ@
+lib/${PKGNAME}/lisp/device.el@.GZ@
+lib/${PKGNAME}/lisp/dialog.el@.GZ@
+lib/${PKGNAME}/lisp/disass.el@.GZ@
+lib/${PKGNAME}/lisp/dragdrop.el@.GZ@
+lib/${PKGNAME}/lisp/disp-table.el@.GZ@
+lib/${PKGNAME}/lisp/dump-paths.el@.GZ@
+lib/${PKGNAME}/lisp/dumped-lisp.el
+lib/${PKGNAME}/lisp/easymenu.el@.GZ@
+lib/${PKGNAME}/lisp/etags.el@.GZ@
+lib/${PKGNAME}/lisp/events.el@.GZ@
+lib/${PKGNAME}/lisp/extents.el@.GZ@
+lib/${PKGNAME}/lisp/faces.el@.GZ@
+lib/${PKGNAME}/lisp/files-nomule.el@.GZ@
+lib/${PKGNAME}/lisp/files.el@.GZ@
+lib/${PKGNAME}/lisp/fill.el@.GZ@
+lib/${PKGNAME}/lisp/find-paths.el@.GZ@
+lib/${PKGNAME}/lisp/finder.el@.GZ@
+lib/${PKGNAME}/lisp/float-sup.el@.GZ@
+lib/${PKGNAME}/lisp/font-lock.el@.GZ@
+lib/${PKGNAME}/lisp/font.el@.GZ@
+lib/${PKGNAME}/lisp/fontl-hooks.el@.GZ@
+lib/${PKGNAME}/lisp/format.el@.GZ@
+lib/${PKGNAME}/lisp/frame.el@.GZ@
+lib/${PKGNAME}/lisp/glyphs.el@.GZ@
+lib/${PKGNAME}/lisp/gnuserv.el@.GZ@
+lib/${PKGNAME}/lisp/gui.el@.GZ@
+lib/${PKGNAME}/lisp/help-macro.el@.GZ@
+lib/${PKGNAME}/lisp/help-nomule.el@.GZ@
+lib/${PKGNAME}/lisp/help.el@.GZ@
+lib/${PKGNAME}/lisp/hyper-apropos.el@.GZ@
+lib/${PKGNAME}/lisp/indent.el@.GZ@
+lib/${PKGNAME}/lisp/info.el@.GZ@
+lib/${PKGNAME}/lisp/isearch-mode.el@.GZ@
+lib/${PKGNAME}/lisp/iso8859-1.el@.GZ@
+lib/${PKGNAME}/lisp/itimer-autosave.el@.GZ@
+lib/${PKGNAME}/lisp/itimer.el@.GZ@
+lib/${PKGNAME}/lisp/keydefs.el@.GZ@
+lib/${PKGNAME}/lisp/keymap.el@.GZ@
+lib/${PKGNAME}/lisp/ldap.el@.GZ@
+lib/${PKGNAME}/lisp/lib-complete.el@.GZ@
+lib/${PKGNAME}/lisp/lisp-mnt.el@.GZ@
+lib/${PKGNAME}/lisp/lisp-mode.el@.GZ@
+lib/${PKGNAME}/lisp/lisp.el@.GZ@
+lib/${PKGNAME}/lisp/list-mode.el@.GZ@
+lib/${PKGNAME}/lisp/loaddefs.el@.GZ@
+lib/${PKGNAME}/lisp/loadhist.el@.GZ@
+lib/${PKGNAME}/lisp/loadup-el.el
+lib/${PKGNAME}/lisp/loadup.el
+lib/${PKGNAME}/lisp/make-docfile.el
+lib/${PKGNAME}/lisp/map-ynp.el@.GZ@
+lib/${PKGNAME}/lisp/menubar.el@.GZ@
+lib/${PKGNAME}/lisp/minibuf.el@.GZ@
+lib/${PKGNAME}/lisp/menubar-items.el@.GZ@
+lib/${PKGNAME}/lisp/misc.el@.GZ@
+lib/${PKGNAME}/lisp/mode-motion.el@.GZ@
+lib/${PKGNAME}/lisp/modeline.el@.GZ@
+lib/${PKGNAME}/lisp/mouse.el@.GZ@
+lib/${PKGNAME}/lisp/msw-faces.el@.GZ@
+lib/${PKGNAME}/lisp/msw-glyphs.el@.GZ@
+lib/${PKGNAME}/lisp/msw-init.el@.GZ@
+lib/${PKGNAME}/lisp/msw-mouse.el@.GZ@
+lib/${PKGNAME}/lisp/msw-select.el@.GZ@
+lib/${PKGNAME}/lisp/multicast.el@.GZ@
+lib/${PKGNAME}/lisp/mwheel.el@.GZ@
+lib/${PKGNAME}/lisp/objects.el@.GZ@
+lib/${PKGNAME}/lisp/obsolete.el@.GZ@
+lib/${PKGNAME}/lisp/package-admin.el@.GZ@
+lib/${PKGNAME}/lisp/package-get.el@.GZ@
+lib/${PKGNAME}/lisp/package-info.el@.GZ@
+lib/${PKGNAME}/lisp/package-ui.el@.GZ@
+lib/${PKGNAME}/lisp/packages.el@.GZ@
+lib/${PKGNAME}/lisp/page.el@.GZ@
+lib/${PKGNAME}/lisp/paragraphs.el@.GZ@
+lib/${PKGNAME}/lisp/paths.el
+lib/${PKGNAME}/lisp/picture.el@.GZ@
+lib/${PKGNAME}/lisp/process.el@.GZ@
+lib/${PKGNAME}/lisp/rect.el@.GZ@
+lib/${PKGNAME}/lisp/register.el@.GZ@
+lib/${PKGNAME}/lisp/replace.el@.GZ@
+lib/${PKGNAME}/lisp/scrollbar.el@.GZ@
+lib/${PKGNAME}/lisp/select.el@.GZ@
+lib/${PKGNAME}/lisp/setup-paths.el@.GZ@
+lib/${PKGNAME}/lisp/shadow.el@.GZ@
+lib/${PKGNAME}/lisp/simple.el@.GZ@
+lib/${PKGNAME}/lisp/site-load.el
+lib/${PKGNAME}/lisp/sound.el@.GZ@
+lib/${PKGNAME}/lisp/specifier.el@.GZ@
+lib/${PKGNAME}/lisp/startup.el@.GZ@
+lib/${PKGNAME}/lisp/subr.el@.GZ@
+lib/${PKGNAME}/lisp/symbol-syntax.el@.GZ@
+lib/${PKGNAME}/lisp/symbols.el@.GZ@
+lib/${PKGNAME}/lisp/syntax.el@.GZ@
+lib/${PKGNAME}/lisp/text-mode.el@.GZ@
+lib/${PKGNAME}/lisp/text-props.el@.GZ@
+lib/${PKGNAME}/lisp/toolbar-items.el@.GZ@
+lib/${PKGNAME}/lisp/toolbar.el@.GZ@
+lib/${PKGNAME}/lisp/tty-init.el@.GZ@
+lib/${PKGNAME}/lisp/userlock.el@.GZ@
+lib/${PKGNAME}/lisp/version.el
+lib/${PKGNAME}/lisp/undo-stack.el@.GZ@
+lib/${PKGNAME}/lisp/update-elc.el
+lib/${PKGNAME}/lisp/very-early-lisp.el
+lib/${PKGNAME}/lisp/view-less.el@.GZ@
+lib/${PKGNAME}/lisp/wid-browse.el@.GZ@
+lib/${PKGNAME}/lisp/wid-edit.el@.GZ@
+lib/${PKGNAME}/lisp/widget.el@.GZ@
+lib/${PKGNAME}/lisp/window-xemacs.el@.GZ@
+lib/${PKGNAME}/lisp/window.el@.GZ@
+lib/${PKGNAME}/lisp/winnt.el@.GZ@
+lib/${PKGNAME}/lisp/x-compose.el@.GZ@
+lib/${PKGNAME}/lisp/x-faces.el@.GZ@
+lib/${PKGNAME}/lisp/x-font-menu.el@.GZ@
+lib/${PKGNAME}/lisp/x-init.el@.GZ@
+lib/${PKGNAME}/lisp/x-iso8859-1.el@.GZ@
+lib/${PKGNAME}/lisp/x-misc.el@.GZ@
+lib/${PKGNAME}/lisp/x-mouse.el@.GZ@
+lib/${PKGNAME}/lisp/x-scrollbar.el@.GZ@
+lib/${PKGNAME}/lisp/x-select.el@.GZ@
+lib/${PKGNAME}/lisp/x-win-sun.el@.GZ@
+lib/${PKGNAME}/lisp/x-win-xfree86.el@.GZ@
+lib/${PKGNAME}/lisp/term/AT386.el@.GZ@
+lib/${PKGNAME}/lisp/term/README
+lib/${PKGNAME}/lisp/term/apollo.el@.GZ@
+lib/${PKGNAME}/lisp/term/bg-mouse.el@.GZ@
+lib/${PKGNAME}/lisp/term/bobcat.el@.GZ@
+lib/${PKGNAME}/lisp/term/internal.el@.GZ@
+lib/${PKGNAME}/lisp/term/keyswap.el@.GZ@
+lib/${PKGNAME}/lisp/term/linux.el@.GZ@
+lib/${PKGNAME}/lisp/term/lk201.el@.GZ@
+lib/${PKGNAME}/lisp/term/news.el@.GZ@
+lib/${PKGNAME}/lisp/term/pc-win.el@.GZ@
+lib/${PKGNAME}/lisp/term/scoansi.el@.GZ@
+lib/${PKGNAME}/lisp/term/sun-mouse.el@.GZ@
+lib/${PKGNAME}/lisp/term/sun.el@.GZ@
+lib/${PKGNAME}/lisp/term/sup-mouse.el@.GZ@
+lib/${PKGNAME}/lisp/term/tvi970.el@.GZ@
+lib/${PKGNAME}/lisp/term/vt-control.el@.GZ@
+lib/${PKGNAME}/lisp/term/vt100-led.el@.GZ@
+lib/${PKGNAME}/lisp/term/vt100.el@.GZ@
+lib/${PKGNAME}/lisp/term/vt102.el@.GZ@
+lib/${PKGNAME}/lisp/term/vt125.el@.GZ@
+lib/${PKGNAME}/lisp/term/vt200.el@.GZ@
+lib/${PKGNAME}/lisp/term/vt201.el@.GZ@
+lib/${PKGNAME}/lisp/term/vt220.el@.GZ@
+lib/${PKGNAME}/lisp/term/vt240.el@.GZ@
+lib/${PKGNAME}/lisp/term/vt300.el@.GZ@
+lib/${PKGNAME}/lisp/term/vt320.el@.GZ@
+lib/${PKGNAME}/lisp/term/vt400.el@.GZ@
+lib/${PKGNAME}/lisp/term/vt420.el@.GZ@
+lib/${PKGNAME}/lisp/term/win32-win.el@.GZ@
+lib/${PKGNAME}/lisp/term/wyse50.el@.GZ@
+lib/${PKGNAME}/lisp/term/xterm.el@.GZ@
+lib/${PKGNAME}/lisp/term/AT386.elc
+lib/${PKGNAME}/lisp/term/apollo.elc
+lib/${PKGNAME}/lisp/term/bg-mouse.elc
+lib/${PKGNAME}/lisp/term/bobcat.elc
+lib/${PKGNAME}/lisp/term/internal.elc
+lib/${PKGNAME}/lisp/term/keyswap.elc
+lib/${PKGNAME}/lisp/term/linux.elc
+lib/${PKGNAME}/lisp/term/lk201.elc
+lib/${PKGNAME}/lisp/term/news.elc
+lib/${PKGNAME}/lisp/term/pc-win.elc
+lib/${PKGNAME}/lisp/term/scoansi.elc
+lib/${PKGNAME}/lisp/term/sun-mouse.elc
+lib/${PKGNAME}/lisp/term/sun.elc
+lib/${PKGNAME}/lisp/term/sup-mouse.elc
+lib/${PKGNAME}/lisp/term/tvi970.elc
+lib/${PKGNAME}/lisp/term/vt-control.elc
+lib/${PKGNAME}/lisp/term/vt100-led.elc
+lib/${PKGNAME}/lisp/term/vt100.elc
+lib/${PKGNAME}/lisp/term/vt102.elc
+lib/${PKGNAME}/lisp/term/vt125.elc
+lib/${PKGNAME}/lisp/term/vt200.elc
+lib/${PKGNAME}/lisp/term/vt201.elc
+lib/${PKGNAME}/lisp/term/vt220.elc
+lib/${PKGNAME}/lisp/term/vt240.elc
+lib/${PKGNAME}/lisp/term/vt300.elc
+lib/${PKGNAME}/lisp/term/vt320.elc
+lib/${PKGNAME}/lisp/term/vt400.elc
+lib/${PKGNAME}/lisp/term/vt420.elc
+lib/${PKGNAME}/lisp/term/win32-win.elc
+lib/${PKGNAME}/lisp/term/wyse50.elc
+lib/${PKGNAME}/lisp/term/xterm.elc
+lib/${PKGNAME}/lisp/abbrev.elc
+lib/${PKGNAME}/lisp/about.elc
+lib/${PKGNAME}/lisp/alist.elc
+lib/${PKGNAME}/lisp/apropos.elc
+lib/${PKGNAME}/lisp/auto-autoloads.elc
+lib/${PKGNAME}/lisp/auto-save.elc
+lib/${PKGNAME}/lisp/auto-show.elc
+lib/${PKGNAME}/lisp/autoload.elc
+lib/${PKGNAME}/lisp/backquote.elc
+lib/${PKGNAME}/lisp/blessmail.elc
+lib/${PKGNAME}/lisp/buff-menu.elc
+lib/${PKGNAME}/lisp/buffer.elc
+lib/${PKGNAME}/lisp/build-report.elc
+lib/${PKGNAME}/lisp/byte-optimize.elc
+lib/${PKGNAME}/lisp/bytecomp-runtime.elc
+lib/${PKGNAME}/lisp/bytecomp.elc
+lib/${PKGNAME}/lisp/callers-of-rpt.elc
+lib/${PKGNAME}/lisp/check-features.elc
+lib/${PKGNAME}/lisp/cl-compat.elc
+lib/${PKGNAME}/lisp/cl-extra.elc
+lib/${PKGNAME}/lisp/cl-macs.elc
+lib/${PKGNAME}/lisp/cl-seq.elc
+lib/${PKGNAME}/lisp/cl.elc
+lib/${PKGNAME}/lisp/cleantree.elc
+lib/${PKGNAME}/lisp/cmdloop.elc
+lib/${PKGNAME}/lisp/code-files.elc
+lib/${PKGNAME}/lisp/code-process.elc
+lib/${PKGNAME}/lisp/coding.elc
+lib/${PKGNAME}/lisp/config.elc
+lib/${PKGNAME}/lisp/console.elc
+lib/${PKGNAME}/lisp/cus-dep.elc
+lib/${PKGNAME}/lisp/cus-edit.elc
+lib/${PKGNAME}/lisp/cus-face.elc
+lib/${PKGNAME}/lisp/cus-load.elc
+lib/${PKGNAME}/lisp/cus-start.elc
+lib/${PKGNAME}/lisp/custom-load.elc
+lib/${PKGNAME}/lisp/custom.elc
+lib/${PKGNAME}/lisp/derived.elc
+lib/${PKGNAME}/lisp/device.elc
+lib/${PKGNAME}/lisp/dialog.elc
+lib/${PKGNAME}/lisp/disass.elc
+lib/${PKGNAME}/lisp/disp-table.elc
+lib/${PKGNAME}/lisp/dragdrop.elc
+lib/${PKGNAME}/lisp/dump-paths.elc
+lib/${PKGNAME}/lisp/easymenu.elc
+lib/${PKGNAME}/lisp/etags.elc
+lib/${PKGNAME}/lisp/events.elc
+lib/${PKGNAME}/lisp/extents.elc
+lib/${PKGNAME}/lisp/faces.elc
+lib/${PKGNAME}/lisp/files-nomule.elc
+lib/${PKGNAME}/lisp/files.elc
+lib/${PKGNAME}/lisp/fill.elc
+lib/${PKGNAME}/lisp/find-paths.elc
+lib/${PKGNAME}/lisp/finder.elc
+lib/${PKGNAME}/lisp/float-sup.elc
+lib/${PKGNAME}/lisp/font-lock.elc
+lib/${PKGNAME}/lisp/font.elc
+lib/${PKGNAME}/lisp/fontl-hooks.elc
+lib/${PKGNAME}/lisp/format.elc
+lib/${PKGNAME}/lisp/frame.elc
+lib/${PKGNAME}/lisp/glyphs.elc
+lib/${PKGNAME}/lisp/gnuserv.elc
+lib/${PKGNAME}/lisp/gui.elc
+lib/${PKGNAME}/lisp/help-macro.elc
+lib/${PKGNAME}/lisp/help-nomule.elc
+lib/${PKGNAME}/lisp/help.elc
+lib/${PKGNAME}/lisp/hyper-apropos.elc
+lib/${PKGNAME}/lisp/indent.elc
+lib/${PKGNAME}/lisp/info.elc
+lib/${PKGNAME}/lisp/isearch-mode.elc
+lib/${PKGNAME}/lisp/iso8859-1.elc
+lib/${PKGNAME}/lisp/itimer-autosave.elc
+lib/${PKGNAME}/lisp/itimer.elc
+lib/${PKGNAME}/lisp/keydefs.elc
+lib/${PKGNAME}/lisp/keymap.elc
+lib/${PKGNAME}/lisp/ldap.elc
+lib/${PKGNAME}/lisp/lib-complete.elc
+lib/${PKGNAME}/lisp/lisp-mnt.elc
+lib/${PKGNAME}/lisp/lisp-mode.elc
+lib/${PKGNAME}/lisp/lisp.elc
+lib/${PKGNAME}/lisp/list-mode.elc
+lib/${PKGNAME}/lisp/loaddefs.elc
+lib/${PKGNAME}/lisp/loadhist.elc
+lib/${PKGNAME}/lisp/map-ynp.elc
+lib/${PKGNAME}/lisp/menubar-items.elc
+lib/${PKGNAME}/lisp/menubar.elc
+lib/${PKGNAME}/lisp/minibuf.elc
+lib/${PKGNAME}/lisp/misc.elc
+lib/${PKGNAME}/lisp/mode-motion.elc
+lib/${PKGNAME}/lisp/modeline.elc
+lib/${PKGNAME}/lisp/mouse.elc
+lib/${PKGNAME}/lisp/msw-faces.elc
+lib/${PKGNAME}/lisp/msw-glyphs.elc
+lib/${PKGNAME}/lisp/msw-init.elc
+lib/${PKGNAME}/lisp/msw-mouse.elc
+lib/${PKGNAME}/lisp/msw-select.elc
+lib/${PKGNAME}/lisp/multicast.elc
+lib/${PKGNAME}/lisp/mwheel.elc
+lib/${PKGNAME}/lisp/objects.elc
+lib/${PKGNAME}/lisp/obsolete.elc
+lib/${PKGNAME}/lisp/package-admin.elc
+lib/${PKGNAME}/lisp/package-get.elc
+lib/${PKGNAME}/lisp/package-info.elc
+lib/${PKGNAME}/lisp/package-ui.elc
+lib/${PKGNAME}/lisp/packages.elc
+lib/${PKGNAME}/lisp/page.elc
+lib/${PKGNAME}/lisp/paragraphs.elc
+lib/${PKGNAME}/lisp/picture.elc
+lib/${PKGNAME}/lisp/process.elc
+lib/${PKGNAME}/lisp/rect.elc
+lib/${PKGNAME}/lisp/register.elc
+lib/${PKGNAME}/lisp/replace.elc
+lib/${PKGNAME}/lisp/scrollbar.elc
+lib/${PKGNAME}/lisp/select.elc
+lib/${PKGNAME}/lisp/setup-paths.elc
+lib/${PKGNAME}/lisp/shadow.elc
+lib/${PKGNAME}/lisp/simple.elc
+lib/${PKGNAME}/lisp/sound.elc
+lib/${PKGNAME}/lisp/specifier.elc
+lib/${PKGNAME}/lisp/startup.elc
+lib/${PKGNAME}/lisp/subr.elc
+lib/${PKGNAME}/lisp/symbol-syntax.elc
+lib/${PKGNAME}/lisp/symbols.elc
+lib/${PKGNAME}/lisp/syntax.elc
+lib/${PKGNAME}/lisp/text-mode.elc
+lib/${PKGNAME}/lisp/text-props.elc
+lib/${PKGNAME}/lisp/toolbar-items.elc
+lib/${PKGNAME}/lisp/toolbar.elc
+lib/${PKGNAME}/lisp/tty-init.elc
+lib/${PKGNAME}/lisp/undo-stack.elc
+lib/${PKGNAME}/lisp/userlock.elc
+lib/${PKGNAME}/lisp/view-less.elc
+lib/${PKGNAME}/lisp/wid-browse.elc
+lib/${PKGNAME}/lisp/wid-edit.elc
+lib/${PKGNAME}/lisp/widget.elc
+lib/${PKGNAME}/lisp/window-xemacs.elc
+lib/${PKGNAME}/lisp/window.elc
+lib/${PKGNAME}/lisp/winnt.elc
+lib/${PKGNAME}/lisp/x-compose.elc
+lib/${PKGNAME}/lisp/x-faces.elc
+lib/${PKGNAME}/lisp/x-font-menu.elc
+lib/${PKGNAME}/lisp/x-init.elc
+lib/${PKGNAME}/lisp/x-iso8859-1.elc
+lib/${PKGNAME}/lisp/x-misc.elc
+lib/${PKGNAME}/lisp/x-mouse.elc
+lib/${PKGNAME}/lisp/x-scrollbar.elc
+lib/${PKGNAME}/lisp/x-select.elc
+lib/${PKGNAME}/lisp/x-win-sun.elc
+lib/${PKGNAME}/lisp/x-win-xfree86.elc
+lib/${PKGNAME}/lisp/finder-inf.el@.GZ@
+lib/${PKGNAME}/lisp/finder-inf.elc
+lib/${PKGNAME}/lisp/mule/arabic.el@.GZ@
+lib/${PKGNAME}/lisp/mule/canna-leim.el@.GZ@
+lib/${PKGNAME}/lisp/mule/chinese.el@.GZ@
+lib/${PKGNAME}/lisp/mule/cyrillic.el@.GZ@
+lib/${PKGNAME}/lisp/mule/english.el@.GZ@
+lib/${PKGNAME}/lisp/mule/european.el@.GZ@
+lib/${PKGNAME}/lisp/mule/greek.el@.GZ@
+lib/${PKGNAME}/lisp/mule/hebrew.el@.GZ@
+lib/${PKGNAME}/lisp/mule/japanese.el@.GZ@
+lib/${PKGNAME}/lisp/mule/kinsoku.el@.GZ@
+lib/${PKGNAME}/lisp/mule/korean.el@.GZ@
+lib/${PKGNAME}/lisp/mule/misc-lang.el@.GZ@
+lib/${PKGNAME}/lisp/mule/mule-category.el@.GZ@
+lib/${PKGNAME}/lisp/mule/mule-ccl.el@.GZ@
+lib/${PKGNAME}/lisp/mule/mule-charset.el@.GZ@
+lib/${PKGNAME}/lisp/mule/mule-cmds.el@.GZ@
+lib/${PKGNAME}/lisp/mule/mule-coding.el@.GZ@
+lib/${PKGNAME}/lisp/mule/mule-files.el@.GZ@
+lib/${PKGNAME}/lisp/mule/mule-help.el@.GZ@
+lib/${PKGNAME}/lisp/mule/mule-init.el@.GZ@
+lib/${PKGNAME}/lisp/mule/mule-misc.el@.GZ@
+lib/${PKGNAME}/lisp/mule/mule-x-init.el@.GZ@
+lib/${PKGNAME}/lisp/mule/mule-tty-init.el@.GZ@
+lib/${PKGNAME}/lisp/mule/viet-chars.el@.GZ@
+lib/${PKGNAME}/lisp/mule/arabic.elc
+lib/${PKGNAME}/lisp/mule/canna-leim.elc
+lib/${PKGNAME}/lisp/mule/chinese.elc
+lib/${PKGNAME}/lisp/mule/cyrillic.elc
+lib/${PKGNAME}/lisp/mule/english.elc
+lib/${PKGNAME}/lisp/mule/european.elc
+lib/${PKGNAME}/lisp/mule/greek.elc
+lib/${PKGNAME}/lisp/mule/hebrew.elc
+lib/${PKGNAME}/lisp/mule/japanese.elc
+lib/${PKGNAME}/lisp/mule/kinsoku.elc
+lib/${PKGNAME}/lisp/mule/korean.elc
+lib/${PKGNAME}/lisp/mule/misc-lang.elc
+lib/${PKGNAME}/lisp/mule/mule-category.elc
+lib/${PKGNAME}/lisp/mule/mule-ccl.elc
+lib/${PKGNAME}/lisp/mule/mule-charset.elc
+lib/${PKGNAME}/lisp/mule/mule-cmds.elc
+lib/${PKGNAME}/lisp/mule/mule-coding.elc
+lib/${PKGNAME}/lisp/mule/mule-files.elc
+lib/${PKGNAME}/lisp/mule/mule-help.elc
+lib/${PKGNAME}/lisp/mule/mule-init.elc
+lib/${PKGNAME}/lisp/mule/mule-misc.elc
+lib/${PKGNAME}/lisp/mule/mule-x-init.elc
+lib/${PKGNAME}/lisp/mule/mule-tty-init.elc
+lib/${PKGNAME}/lisp/mule/viet-chars.elc
+lib/${PKGNAME}/info/dir
+lib/${PKGNAME}/info/cl.info
+lib/${PKGNAME}/info/cl.info-1
+lib/${PKGNAME}/info/cl.info-2
+lib/${PKGNAME}/info/cl.info-3
+lib/${PKGNAME}/info/cl.info-4
+lib/${PKGNAME}/info/cl.info-5
+lib/${PKGNAME}/info/cl.info-6
+lib/${PKGNAME}/info/custom.info
+lib/${PKGNAME}/info/external-widget.info
+lib/${PKGNAME}/info/info.info
+lib/${PKGNAME}/info/internals.info
+lib/${PKGNAME}/info/internals.info-1
+lib/${PKGNAME}/info/internals.info-2
+lib/${PKGNAME}/info/internals.info-3
+lib/${PKGNAME}/info/internals.info-4
+lib/${PKGNAME}/info/internals.info-5
+lib/${PKGNAME}/info/internals.info-6
+lib/${PKGNAME}/info/internals.info-7
+lib/${PKGNAME}/info/lispref.info
+lib/${PKGNAME}/info/lispref.info-1
+lib/${PKGNAME}/info/lispref.info-10
+lib/${PKGNAME}/info/lispref.info-11
+lib/${PKGNAME}/info/lispref.info-12
+lib/${PKGNAME}/info/lispref.info-13
+lib/${PKGNAME}/info/lispref.info-14
+lib/${PKGNAME}/info/lispref.info-15
+lib/${PKGNAME}/info/lispref.info-16
+lib/${PKGNAME}/info/lispref.info-17
+lib/${PKGNAME}/info/lispref.info-18
+lib/${PKGNAME}/info/lispref.info-19
+lib/${PKGNAME}/info/lispref.info-2
+lib/${PKGNAME}/info/lispref.info-20
+lib/${PKGNAME}/info/lispref.info-21
+lib/${PKGNAME}/info/lispref.info-22
+lib/${PKGNAME}/info/lispref.info-23
+lib/${PKGNAME}/info/lispref.info-24
+lib/${PKGNAME}/info/lispref.info-25
+lib/${PKGNAME}/info/lispref.info-26
+lib/${PKGNAME}/info/lispref.info-27
+lib/${PKGNAME}/info/lispref.info-28
+lib/${PKGNAME}/info/lispref.info-29
+lib/${PKGNAME}/info/lispref.info-3
+lib/${PKGNAME}/info/lispref.info-30
+lib/${PKGNAME}/info/lispref.info-31
+lib/${PKGNAME}/info/lispref.info-32
+lib/${PKGNAME}/info/lispref.info-33
+lib/${PKGNAME}/info/lispref.info-34
+lib/${PKGNAME}/info/lispref.info-35
+lib/${PKGNAME}/info/lispref.info-36
+lib/${PKGNAME}/info/lispref.info-37
+lib/${PKGNAME}/info/lispref.info-38
+lib/${PKGNAME}/info/lispref.info-39
+lib/${PKGNAME}/info/lispref.info-4
+lib/${PKGNAME}/info/lispref.info-40
+lib/${PKGNAME}/info/lispref.info-41
+lib/${PKGNAME}/info/lispref.info-42
+lib/${PKGNAME}/info/lispref.info-43
+lib/${PKGNAME}/info/lispref.info-44
+lib/${PKGNAME}/info/lispref.info-5
+lib/${PKGNAME}/info/lispref.info-6
+lib/${PKGNAME}/info/lispref.info-7
+lib/${PKGNAME}/info/lispref.info-8
+lib/${PKGNAME}/info/lispref.info-9
+lib/${PKGNAME}/info/new-users-guide.info
+lib/${PKGNAME}/info/new-users-guide.info-1
+lib/${PKGNAME}/info/new-users-guide.info-2
+lib/${PKGNAME}/info/new-users-guide.info-3
+lib/${PKGNAME}/info/standards.info
+lib/${PKGNAME}/info/standards.info-1
+lib/${PKGNAME}/info/standards.info-2
+lib/${PKGNAME}/info/standards.info-3
+lib/${PKGNAME}/info/term.info
+lib/${PKGNAME}/info/termcap.info
+lib/${PKGNAME}/info/termcap.info-1
+lib/${PKGNAME}/info/termcap.info-2
+lib/${PKGNAME}/info/termcap.info-3
+lib/${PKGNAME}/info/texinfo.info
+lib/${PKGNAME}/info/texinfo.info-1
+lib/${PKGNAME}/info/texinfo.info-10
+lib/${PKGNAME}/info/texinfo.info-11
+lib/${PKGNAME}/info/texinfo.info-12
+lib/${PKGNAME}/info/texinfo.info-2
+lib/${PKGNAME}/info/texinfo.info-3
+lib/${PKGNAME}/info/texinfo.info-4
+lib/${PKGNAME}/info/texinfo.info-5
+lib/${PKGNAME}/info/texinfo.info-6
+lib/${PKGNAME}/info/texinfo.info-7
+lib/${PKGNAME}/info/texinfo.info-8
+lib/${PKGNAME}/info/texinfo.info-9
+lib/${PKGNAME}/info/widget.info
+lib/${PKGNAME}/info/xemacs-faq.info
+lib/${PKGNAME}/info/xemacs-faq.info-1
+lib/${PKGNAME}/info/xemacs-faq.info-2
+lib/${PKGNAME}/info/xemacs-faq.info-3
+lib/${PKGNAME}/info/xemacs-faq.info-4
+lib/${PKGNAME}/info/xemacs-faq.info-5
+lib/${PKGNAME}/info/xemacs.info
+lib/${PKGNAME}/info/xemacs.info-1
+lib/${PKGNAME}/info/xemacs.info-10
+lib/${PKGNAME}/info/xemacs.info-11
+lib/${PKGNAME}/info/xemacs.info-12
+lib/${PKGNAME}/info/xemacs.info-13
+lib/${PKGNAME}/info/xemacs.info-14
+lib/${PKGNAME}/info/xemacs.info-15
+lib/${PKGNAME}/info/xemacs.info-16
+lib/${PKGNAME}/info/xemacs.info-17
+lib/${PKGNAME}/info/xemacs.info-18
+lib/${PKGNAME}/info/xemacs.info-19
+lib/${PKGNAME}/info/xemacs.info-2
+lib/${PKGNAME}/info/xemacs.info-20
+lib/${PKGNAME}/info/xemacs.info-21
+lib/${PKGNAME}/info/xemacs.info-3
+lib/${PKGNAME}/info/xemacs.info-4
+lib/${PKGNAME}/info/xemacs.info-5
+lib/${PKGNAME}/info/xemacs.info-6
+lib/${PKGNAME}/info/xemacs.info-7
+lib/${PKGNAME}/info/xemacs.info-8
+lib/${PKGNAME}/info/xemacs.info-9
+lib/${PKGNAME}/${MACHINE_GNU_PLATFORM}/make-path
+lib/${PKGNAME}/${MACHINE_GNU_PLATFORM}/wakeup
+lib/${PKGNAME}/${MACHINE_GNU_PLATFORM}/profile
+lib/${PKGNAME}/${MACHINE_GNU_PLATFORM}/make-docfile
+lib/${PKGNAME}/${MACHINE_GNU_PLATFORM}/digest-doc
+lib/${PKGNAME}/${MACHINE_GNU_PLATFORM}/sorted-doc
+lib/${PKGNAME}/${MACHINE_GNU_PLATFORM}/movemail
+lib/${PKGNAME}/${MACHINE_GNU_PLATFORM}/cvtmail
+lib/${PKGNAME}/${MACHINE_GNU_PLATFORM}/fakemail
+lib/${PKGNAME}/${MACHINE_GNU_PLATFORM}/yow
+lib/${PKGNAME}/${MACHINE_GNU_PLATFORM}/hexl
+lib/${PKGNAME}/${MACHINE_GNU_PLATFORM}/gnuserv
+lib/${PKGNAME}/${MACHINE_GNU_PLATFORM}/mmencode
+lib/${PKGNAME}/${MACHINE_GNU_PLATFORM}/rcs2log
+lib/${PKGNAME}/${MACHINE_GNU_PLATFORM}/vcdiff
+lib/${PKGNAME}/${MACHINE_GNU_PLATFORM}/gzip-el.sh
+lib/${PKGNAME}/${MACHINE_GNU_PLATFORM}/add-big-package.sh
+lib/${PKGNAME}/${MACHINE_GNU_PLATFORM}/DOC
+lib/${PKGNAME}/${MACHINE_GNU_PLATFORM}/config.values
 man/man1/gnuattach.1
 man/man1/gnuclient.1
 man/man1/gnudoit.1
@@ -1030,111 +1030,111 @@ man/man1/gnuserv.1
 man/man1/xemacs.1
 man/man1/xemacs-ctags.1
 man/man1/xemacs-etags.1
-@dirrm lib/xemacs-21.1.4/lisp/x11
-@dirrm lib/xemacs-21.1.4/lisp/w32
-@dirrm lib/xemacs-21.1.4/lisp/w3
-@dirrm lib/xemacs-21.1.4/lisp/vms
-@dirrm lib/xemacs-21.1.4/lisp/vm
-@dirrm lib/xemacs-21.1.4/lisp/viper
-@dirrm lib/xemacs-21.1.4/lisp/utils
-@dirrm lib/xemacs-21.1.4/lisp/url
-@dirrm lib/xemacs-21.1.4/lisp/tooltalk
-@dirrm lib/xemacs-21.1.4/lisp/tm
-@dirrm lib/xemacs-21.1.4/lisp/tl
-@dirrm lib/xemacs-21.1.4/lisp/term
-@dirrm lib/xemacs-21.1.4/lisp/sunpro
-@dirrm lib/xemacs-21.1.4/lisp/skk
-@dirrm lib/xemacs-21.1.4/lisp/rmail
-@dirrm lib/xemacs-21.1.4/lisp/quail
-@dirrm lib/xemacs-21.1.4/lisp/psgml
-@dirrm lib/xemacs-21.1.4/lisp/prim
-@dirrm lib/xemacs-21.1.4/lisp/pcl-cvs
-@dirrm lib/xemacs-21.1.4/lisp/packages
-@dirrm lib/xemacs-21.1.4/lisp/oobr/tree-x
-@dirrm lib/xemacs-21.1.4/lisp/oobr/tree-nx/English.lproj/TreeView.nib
-@dirrm lib/xemacs-21.1.4/lisp/oobr/tree-nx/English.lproj/InfoPanel.nib
-@dirrm lib/xemacs-21.1.4/lisp/oobr/tree-nx/English.lproj/DocWindow.nib
-@dirrm lib/xemacs-21.1.4/lisp/oobr/tree-nx/English.lproj
-@dirrm lib/xemacs-21.1.4/lisp/oobr/tree-nx
-@dirrm lib/xemacs-21.1.4/lisp/oobr
-@dirrm lib/xemacs-21.1.4/lisp/ns
-@dirrm lib/xemacs-21.1.4/lisp/mule
-@dirrm lib/xemacs-21.1.4/lisp/mu
-@dirrm lib/xemacs-21.1.4/lisp/modes
-@dirrm lib/xemacs-21.1.4/lisp/mh-e
-@dirrm lib/xemacs-21.1.4/lisp/mel
-@dirrm lib/xemacs-21.1.4/lisp/mailcrypt
-@dirrm lib/xemacs-21.1.4/lisp/locale/ja
-@dirrm lib/xemacs-21.1.4/lisp/locale
-@dirrm lib/xemacs-21.1.4/lisp/leim/quail
-@dirrm lib/xemacs-21.1.4/lisp/leim
-@dirrm lib/xemacs-21.1.4/lisp/language
-@dirrm lib/xemacs-21.1.4/lisp/its
-@dirrm lib/xemacs-21.1.4/lisp/iso
-@dirrm lib/xemacs-21.1.4/lisp/ilisp
-@dirrm lib/xemacs-21.1.4/lisp/hyperbole/kotl
-@dirrm lib/xemacs-21.1.4/lisp/hyperbole
-@dirrm lib/xemacs-21.1.4/lisp/hm--html-menus
-@dirrm lib/xemacs-21.1.4/lisp/gnus
-@dirrm lib/xemacs-21.1.4/lisp/gnats
-@dirrm lib/xemacs-21.1.4/lisp/games
-@dirrm lib/xemacs-21.1.4/lisp/eterm
-@dirrm lib/xemacs-21.1.4/lisp/epoch
-@dirrm lib/xemacs-21.1.4/lisp/eos
-@dirrm lib/xemacs-21.1.4/lisp/energize
-@dirrm lib/xemacs-21.1.4/lisp/emulators
-@dirrm lib/xemacs-21.1.4/lisp/electric
-@dirrm lib/xemacs-21.1.4/lisp/egg
-@dirrm lib/xemacs-21.1.4/lisp/efs
-@dirrm lib/xemacs-21.1.4/lisp/ediff
-@dirrm lib/xemacs-21.1.4/lisp/edebug
-@dirrm lib/xemacs-21.1.4/lisp/dired
-@dirrm lib/xemacs-21.1.4/lisp/custom
-@dirrm lib/xemacs-21.1.4/lisp/comint
-@dirrm lib/xemacs-21.1.4/lisp/cl
-@dirrm lib/xemacs-21.1.4/lisp/cc-mode
-@dirrm lib/xemacs-21.1.4/lisp/calendar
-@dirrm lib/xemacs-21.1.4/lisp/bytecomp
-@dirrm lib/xemacs-21.1.4/lisp/auctex/style
-@dirrm lib/xemacs-21.1.4/lisp/auctex
-@dirrm lib/xemacs-21.1.4/lisp/apel
-@dirrm lib/xemacs-21.1.4/lisp
-@dirrm lib/xemacs-21.1.4/info
-@dirrm lib/xemacs-21.1.4/etc/w3
-@dirrm lib/xemacs-21.1.4/etc/vm
-@dirrm lib/xemacs-21.1.4/etc/toolbar
-@dirrm lib/xemacs-21.1.4/etc/time
-@dirrm lib/xemacs-21.1.4/etc/tests/external-widget
-@dirrm lib/xemacs-21.1.4/etc/tests
-@dirrm lib/xemacs-21.1.4/etc/sparcworks
-@dirrm lib/xemacs-21.1.4/etc/sounds
-@dirrm lib/xemacs-21.1.4/etc/smilies
-@dirrm lib/xemacs-21.1.4/etc/skk
-@dirrm lib/xemacs-21.1.4/etc/sgml/cdtd
-@dirrm lib/xemacs-21.1.4/etc/sgml/ISO_8879=1986/entities
-@dirrm lib/xemacs-21.1.4/etc/sgml/ISO_8879=1986
-@dirrm lib/xemacs-21.1.4/etc/sgml
-@dirrm lib/xemacs-21.1.4/etc/photos
-@dirrm lib/xemacs-21.1.4/etc/ns
-@dirrm lib/xemacs-21.1.4/etc/mule
-@dirrm lib/xemacs-21.1.4/etc/mine
-@dirrm lib/xemacs-21.1.4/etc/message
-@dirrm lib/xemacs-21.1.4/etc/idd
-@dirrm lib/xemacs-21.1.4/etc/gnusrefcard
-@dirrm lib/xemacs-21.1.4/etc/gnus
-@dirrm lib/xemacs-21.1.4/etc/gnats
-@dirrm lib/xemacs-21.1.4/etc/frame-icon
-@dirrm lib/xemacs-21.1.4/etc/eos
-@dirrm lib/xemacs-21.1.4/etc/e
-@dirrm lib/xemacs-21.1.4/etc/custom
-@dirrm lib/xemacs-21.1.4/etc/auctex/style
-@dirrm lib/xemacs-21.1.4/etc/auctex
-@dirrm lib/xemacs-21.1.4/etc/app-defaults/ja
-@dirrm lib/xemacs-21.1.4/etc/app-defaults/fr
-@dirrm lib/xemacs-21.1.4/etc/app-defaults
-@dirrm lib/xemacs-21.1.4/etc
-@dirrm lib/xemacs-21.1.4/${MACHINE_GNU_PLATFORM}
-@dirrm lib/xemacs-21.1.4
+@dirrm lib/${PKGNAME}/lisp/x11
+@dirrm lib/${PKGNAME}/lisp/w32
+@dirrm lib/${PKGNAME}/lisp/w3
+@dirrm lib/${PKGNAME}/lisp/vms
+@dirrm lib/${PKGNAME}/lisp/vm
+@dirrm lib/${PKGNAME}/lisp/viper
+@dirrm lib/${PKGNAME}/lisp/utils
+@dirrm lib/${PKGNAME}/lisp/url
+@dirrm lib/${PKGNAME}/lisp/tooltalk
+@dirrm lib/${PKGNAME}/lisp/tm
+@dirrm lib/${PKGNAME}/lisp/tl
+@dirrm lib/${PKGNAME}/lisp/term
+@dirrm lib/${PKGNAME}/lisp/sunpro
+@dirrm lib/${PKGNAME}/lisp/skk
+@dirrm lib/${PKGNAME}/lisp/rmail
+@dirrm lib/${PKGNAME}/lisp/quail
+@dirrm lib/${PKGNAME}/lisp/psgml
+@dirrm lib/${PKGNAME}/lisp/prim
+@dirrm lib/${PKGNAME}/lisp/pcl-cvs
+@dirrm lib/${PKGNAME}/lisp/packages
+@dirrm lib/${PKGNAME}/lisp/oobr/tree-x
+@dirrm lib/${PKGNAME}/lisp/oobr/tree-nx/English.lproj/TreeView.nib
+@dirrm lib/${PKGNAME}/lisp/oobr/tree-nx/English.lproj/InfoPanel.nib
+@dirrm lib/${PKGNAME}/lisp/oobr/tree-nx/English.lproj/DocWindow.nib
+@dirrm lib/${PKGNAME}/lisp/oobr/tree-nx/English.lproj
+@dirrm lib/${PKGNAME}/lisp/oobr/tree-nx
+@dirrm lib/${PKGNAME}/lisp/oobr
+@dirrm lib/${PKGNAME}/lisp/ns
+@dirrm lib/${PKGNAME}/lisp/mule
+@dirrm lib/${PKGNAME}/lisp/mu
+@dirrm lib/${PKGNAME}/lisp/modes
+@dirrm lib/${PKGNAME}/lisp/mh-e
+@dirrm lib/${PKGNAME}/lisp/mel
+@dirrm lib/${PKGNAME}/lisp/mailcrypt
+@dirrm lib/${PKGNAME}/lisp/locale/ja
+@dirrm lib/${PKGNAME}/lisp/locale
+@dirrm lib/${PKGNAME}/lisp/leim/quail
+@dirrm lib/${PKGNAME}/lisp/leim
+@dirrm lib/${PKGNAME}/lisp/language
+@dirrm lib/${PKGNAME}/lisp/its
+@dirrm lib/${PKGNAME}/lisp/iso
+@dirrm lib/${PKGNAME}/lisp/ilisp
+@dirrm lib/${PKGNAME}/lisp/hyperbole/kotl
+@dirrm lib/${PKGNAME}/lisp/hyperbole
+@dirrm lib/${PKGNAME}/lisp/hm--html-menus
+@dirrm lib/${PKGNAME}/lisp/gnus
+@dirrm lib/${PKGNAME}/lisp/gnats
+@dirrm lib/${PKGNAME}/lisp/games
+@dirrm lib/${PKGNAME}/lisp/eterm
+@dirrm lib/${PKGNAME}/lisp/epoch
+@dirrm lib/${PKGNAME}/lisp/eos
+@dirrm lib/${PKGNAME}/lisp/energize
+@dirrm lib/${PKGNAME}/lisp/emulators
+@dirrm lib/${PKGNAME}/lisp/electric
+@dirrm lib/${PKGNAME}/lisp/egg
+@dirrm lib/${PKGNAME}/lisp/efs
+@dirrm lib/${PKGNAME}/lisp/ediff
+@dirrm lib/${PKGNAME}/lisp/edebug
+@dirrm lib/${PKGNAME}/lisp/dired
+@dirrm lib/${PKGNAME}/lisp/custom
+@dirrm lib/${PKGNAME}/lisp/comint
+@dirrm lib/${PKGNAME}/lisp/cl
+@dirrm lib/${PKGNAME}/lisp/cc-mode
+@dirrm lib/${PKGNAME}/lisp/calendar
+@dirrm lib/${PKGNAME}/lisp/bytecomp
+@dirrm lib/${PKGNAME}/lisp/auctex/style
+@dirrm lib/${PKGNAME}/lisp/auctex
+@dirrm lib/${PKGNAME}/lisp/apel
+@dirrm lib/${PKGNAME}/lisp
+@dirrm lib/${PKGNAME}/info
+@dirrm lib/${PKGNAME}/etc/w3
+@dirrm lib/${PKGNAME}/etc/vm
+@dirrm lib/${PKGNAME}/etc/toolbar
+@dirrm lib/${PKGNAME}/etc/time
+@dirrm lib/${PKGNAME}/etc/tests/external-widget
+@dirrm lib/${PKGNAME}/etc/tests
+@dirrm lib/${PKGNAME}/etc/sparcworks
+@dirrm lib/${PKGNAME}/etc/sounds
+@dirrm lib/${PKGNAME}/etc/smilies
+@dirrm lib/${PKGNAME}/etc/skk
+@dirrm lib/${PKGNAME}/etc/sgml/cdtd
+@dirrm lib/${PKGNAME}/etc/sgml/ISO_8879=1986/entities
+@dirrm lib/${PKGNAME}/etc/sgml/ISO_8879=1986
+@dirrm lib/${PKGNAME}/etc/sgml
+@dirrm lib/${PKGNAME}/etc/photos
+@dirrm lib/${PKGNAME}/etc/ns
+@dirrm lib/${PKGNAME}/etc/mule
+@dirrm lib/${PKGNAME}/etc/mine
+@dirrm lib/${PKGNAME}/etc/message
+@dirrm lib/${PKGNAME}/etc/idd
+@dirrm lib/${PKGNAME}/etc/gnusrefcard
+@dirrm lib/${PKGNAME}/etc/gnus
+@dirrm lib/${PKGNAME}/etc/gnats
+@dirrm lib/${PKGNAME}/etc/frame-icon
+@dirrm lib/${PKGNAME}/etc/eos
+@dirrm lib/${PKGNAME}/etc/e
+@dirrm lib/${PKGNAME}/etc/custom
+@dirrm lib/${PKGNAME}/etc/auctex/style
+@dirrm lib/${PKGNAME}/etc/auctex
+@dirrm lib/${PKGNAME}/etc/app-defaults/ja
+@dirrm lib/${PKGNAME}/etc/app-defaults/fr
+@dirrm lib/${PKGNAME}/etc/app-defaults
+@dirrm lib/${PKGNAME}/etc
+@dirrm lib/${PKGNAME}/${MACHINE_GNU_PLATFORM}
+@dirrm lib/${PKGNAME}
 @dirrm lib/xemacs
 @exec mkdir -p /var/tmp/xemacs.lock && chmod 1777 /var/tmp/xemacs.lock
 @unexec rm -rf /var/tmp/xemacs.lock
