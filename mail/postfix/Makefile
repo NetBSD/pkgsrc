@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.140 2004/07/19 19:59:16 jlam Exp $
+# $NetBSD: Makefile,v 1.141 2004/07/19 22:04:40 jlam Exp $
 
 DISTNAME=	postfix-2.1.3
 CATEGORIES=	mail
@@ -74,18 +74,20 @@ MAKE_DIRS+=		${PKG_SYSCONFDIR}
 PKG_GROUPS?=		postfix maildrop
 PKG_USERS?=		postfix:postfix::Postfix\\ User:${POSTFIX_QUEUE_DIR}
 
-CONF_FILES=		${EXAMPLEDIR}/main.cf ${PKG_SYSCONFDIR}/main.cf
-CONF_FILES+=		${EXAMPLEDIR}/master.cf ${PKG_SYSCONFDIR}/master.cf
+CONF_FILES=		# empty
+.for _file_ in main.cf master.cf postfix-files
+CONF_FILES+=		${EXAMPLEDIR}/${_file_} ${PKG_SYSCONFDIR}/${_file_}
+.endfor
+CONF_FILES_PERMS=	# empty
+.for _file_ in post-install postfix-script
+CONF_FILES_PERMS+=	${EXAMPLEDIR}/${_file_} ${PKG_SYSCONFDIR}/${_file_} \
+			${ROOT_USER} ${ROOT_GROUP} 755
+.endfor
+.undef _file_
 .if !empty(_POSTFIX_OPTIONS:Msasl)
 MAKE_DIRS+=		${SASLLIBDIR}
 CONF_FILES+=		${EXAMPLEDIR}/smtpd.conf ${SASLLIBDIR}/smtpd.conf
 .endif
-CONF_FILES_PERMS=	# empty
-.for confscr in post-install postfix-files postfix-script
-CONF_FILES_PERMS+=	${EXAMPLEDIR}/${confscr} ${PKG_SYSCONFDIR}/${confscr} \
-			${ROOT_USER} ${ROOT_GROUP} 755
-.endfor
-.undef confscr
 
 POSTFIX_CONF_FILES=	conf/main.cf src/util/sys_defs.h		\
 			src/global/mail_params.h postfix-install
@@ -109,6 +111,10 @@ post-build:
 	${ECHO} "pwcheck_method: ${PWCHECK_METHOD}" > ${WRKDIR}/smtpd.conf
 .endif
 
+POSTFIX_EXAMPLE_FILES=	LICENSE access aliases canonical header_checks	\
+			main.cf main.cf.default makedefs.out master.cf	\
+			postfix-files relocated transport virtual
+
 do-install:
 	${INSTALL_DATA_DIR} ${LIBEXECDIR}
 	${INSTALL_DATA_DIR} ${EXAMPLEDIR}
@@ -117,13 +123,13 @@ do-install:
 .if !empty(_POSTFIX_OPTIONS:Msasl)
 	${INSTALL_DATA} ${WRKDIR}/smtpd.conf ${EXAMPLEDIR}
 .endif
+	@for i in ${POSTFIX_EXAMPLE_FILES}; do				\
+		${INSTALL_DATA} ${WRKSRC}/conf/$$i ${EXAMPLEDIR}/$$i;	\
+	done
 	${INSTALL_SCRIPT} ${WRKSRC}/conf/post-install ${EXAMPLEDIR}
-	${INSTALL_SCRIPT} ${WRKSRC}/conf/postfix-files ${EXAMPLEDIR}
 	${INSTALL_SCRIPT} ${WRKSRC}/conf/postfix-script ${EXAMPLEDIR}
-	${INSTALL_DATA} ${WRKSRC}/conf/main.cf ${EXAMPLEDIR}
-	${INSTALL_DATA} ${WRKSRC}/conf/master.cf ${EXAMPLEDIR}
 	${INSTALL_DATA} ${WRKDIR}/mailer.conf ${EXAMPLEDIR}/mailer.conf
-	cd ${WRKSRC} && ${SETENV} config_directory="${EXAMPLEDIR}"	\
-		${SH} postfix-install -non-interactive
+	cd ${WRKSRC}; ${SH} ./postfix-install -non-interactive		\
+		config_directory="${EXAMPLEDIR}"
 
 .include "../../mk/bsd.pkg.mk"
