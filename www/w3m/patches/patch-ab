@@ -1,24 +1,10 @@
-$NetBSD: patch-ab,v 1.5 2000/05/19 07:34:35 itohy Exp $
+$NetBSD: patch-ab,v 1.6 2000/06/21 08:22:12 itohy Exp $
 
-Fix problems where:
- 1. Suspend the job w3m belongs to, not w3m only.
- 2. Automatic creation of ~/.w3m fails.
+Suspend the job w3m belongs to, not w3m only.
 
---- main.c.orig	Fri Apr 21 12:45:53 2000
-+++ main.c	Fri May 19 12:40:52 2000
-@@ -145,9 +145,8 @@
- 
-     BookmarkFile = NULL;
-     rc_dir = expandName(RC_DIR);
--    i = strlen(rc_dir);
--    if (i > 1 && rc_dir[i] == '/')
--	rc_dir[i] = '\0';
-+    for (p = rc_dir + strlen(rc_dir) - 1; p > rc_dir && *p == '/'; p--)
-+      *p = '\0';
-     config_file = rcFile("config");
- 
-     /* argument search 1 */
-@@ -1427,7 +1426,17 @@
+--- main.c.orig	Tue Jun  6 14:56:48 2000
++++ main.c	Tue Jun 20 21:21:19 2000
+@@ -1529,7 +1529,17 @@
  	shell = "/bin/sh";
      system(shell);
  #else				/* SIGSTOP */
@@ -26,8 +12,8 @@ Fix problems where:
 +    signal(SIGTSTP, SIG_DFL);	/* just in case */
 +    /*
 +     * Note: If susp() was called from SIGTSTP handler,
-+     *	unblocking SIGTSTP would be required here.
-+     *	Currently not.
++     * unblocking SIGTSTP would be required here.
++     * Currently not.
 +     */
 +    kill(0, SIGTSTP);	/* stop whole job, not a single process */
 +#else
