@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2004/04/14 16:15:22 jmmv Exp $
+# $NetBSD: Makefile,v 1.9 2004/04/21 01:05:06 dillo Exp $
 #
 
-DISTNAME=		freesci-0.3.4a
-PKGREVISION=		1
+DISTNAME=		freesci-0.3.4c
 CATEGORIES=		games
 MASTER_SITES=		http://www-plan.cs.colorado.edu/reichenb/freesci/ \
 			http://teksolv.de/~jameson/
@@ -16,6 +15,7 @@ USE_DIRS+=		xdg-1.1
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--without-ggi --without-directfb
 
 post-install:
 	${INSTALL_DATA_DIR} ${LOCALBASE}/share/examples/freesci
@@ -24,6 +24,7 @@ post-install:
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
+.include "../../fonts/Xft2/buildlink3.mk"
 #.include "../../mk/motif.buildlink3.mk"
 #.include "../../mk/ossaudio.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
