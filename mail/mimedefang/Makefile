@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/08/30 20:22:57 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2003/08/30 22:51:21 jlam Exp $
 
 DISTNAME=		mimedefang-2.35
 CATEGORIES=		mail
@@ -18,10 +18,13 @@ DEPENDS+=		p5-MIME-tools>=5.411.1:../../mail/p5-MIME-tools
 DEPENDS+=		spamassassin>=2.31:../../mail/spamassassin
 
 USE_BUILDLINK2=		YES
-USE_PKGINSTALL=		YES
 USE_PERL5=		YES
 GNU_CONFIGURE=		YES
 PKG_SYSCONFSUBDIR?=	mimedefang
+
+USE_PKGINSTALL=		YES
+DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
+INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
 
 DEFANG_SPOOLDIR?=	/var/spool/MIMEDefang
 DEFANG_USER?=		defang

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2003/07/21 17:24:46 martti Exp $
+# $NetBSD: Makefile,v 1.19 2003/08/30 22:51:38 jlam Exp $
 
 DISTNAME=	xcdroast-0.98alpha14
 PKGNAME=	xcdroast-0.98a14
@@ -31,6 +31,8 @@ DOCDIR=		${PREFIX}/share/doc/xcdroast
 DOCFILES=	DOCUMENTATION FAQ README.nonroot
 HTMLDIR=	${PREFIX}/share/doc/html/xcdroast
 SUPPORT_FILES=	/dev/null ${PKG_SYSCONFDIR}/xcdroast.conf
+
+INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
 
 pre-build:
 	cd ${WRKSRC}/src; for file in io.c wavplay.c; do		\
