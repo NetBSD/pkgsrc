@@ -1,0 +1,26 @@
+$NetBSD: patch-bb,v 1.1 2004/07/01 15:17:21 recht Exp $
+
+--- ../lock/lock.c.orig	2003-11-21 03:40:10.000000000 +0100
++++ ../lock/lock.c	2004-07-01 15:32:08.000000000 +0200
+@@ -2217,9 +2217,10 @@
+ 					    sizeof(db_pgno_t);		\
+ 				} while (0)
+ #define COPY_OBJ(dp, obj)	do {					   \
+-					memcpy(dp, obj->data, obj->size);  \
++					memcpy(dp,			\
++					    (obj)->data, (obj)->size);  \
+ 					dp = (u_int8_t *)dp +		   \
+-					     ALIGN(obj->size,		   \
++					     ALIGN((obj)->size,		\
+ 					     sizeof(u_int32_t)); 	   \
+ 				} while (0)
+ 
+@@ -2339,7 +2340,7 @@
+ 		for (i = 0; i < nlocks; i = j) {
+ 			PUT_PCOUNT(dp, obj[i].ulen);
+ 			PUT_SIZE(dp, obj[i].size);
+-			COPY_OBJ(dp, obj);
++			COPY_OBJ(dp, &obj[i]);
+ 			lock = (DB_LOCK_ILOCK *)obj[i].data;
+ 			for (j = i + 1; j <= i + obj[i].ulen; j++) {
+ 				lock = (DB_LOCK_ILOCK *)obj[j].data;
