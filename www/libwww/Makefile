@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2001/07/12 02:09:35 fredb Exp $
+# $NetBSD: Makefile,v 1.26 2001/07/12 02:14:43 fredb Exp $
 # FreeBSD Id: Makefile,v 1.10 1998/06/14 23:34:59 jseger Exp
 #
 
-DISTNAME=		w3c-${PKGNAME}
+DISTNAME=		w3c-libwww-5.3.2
 PKGNAME=		libwww-5.3.2nb1
 CATEGORIES=		www devel
 MASTER_SITES=		http://www.w3.org/Library/Distribution/ \
