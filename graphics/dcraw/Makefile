@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/10/03 00:14:49 tv Exp $
+# $NetBSD: Makefile,v 1.8 2004/10/04 12:42:56 seb Exp $
 #
 
 DISTNAME=	dcraw
@@ -9,7 +9,7 @@ CATEGORIES=	graphics
 #MASTER_SITES=	http://www.cybercom.net/~dcoffin/dcraw/
 MASTER_SITES=	http://www.cybercom.net/~dcoffin/dcraw/
 DISTFILES=	dcraw.c dcraw.1
-DIST_SUBDIR=	${PKGNAME}
+DIST_SUBDIR=	${PKGNAME_NOREV}
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.cybercom.net/~dcoffin/dcraw/
