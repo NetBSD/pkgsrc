@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 1999/01/04 23:29:46 frueauf Exp $
+# $NetBSD: Makefile,v 1.17 1999/04/07 09:49:33 agc Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/07/03 07:37:08 asami Exp
 #
 
@@ -39,6 +39,11 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/xv
 .if !defined(NOPORTDOCS)
 	${INSTALL_DATA} ${WRKSRC}/docs/xvdocs.ps ${PREFIX}/share/doc/xv
+.endif
+
+.if ${OPSYS} == "SunOS"
+MAKE_ENV+=	CPPFLAGS=
+LDFLAGS+=	-Wl,-R${X11BASE}/lib
 .endif
 
 .include "../../mk/bsd.pkg.mk"
