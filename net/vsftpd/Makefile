@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/01/01 04:39:22 salo Exp $
+# $NetBSD: Makefile,v 1.7 2004/04/02 20:17:44 salo Exp $
 #
 
 DISTNAME=	vsftpd-1.2.1
@@ -9,7 +9,7 @@ MAINTAINER=	salo@NetBSD.org
 HOMEPAGE=	http://vsftpd.beasts.org/
 COMMENT=	FTP server that aims to be very secure
 
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 USE_PKGINSTALL=	YES
 
 PKG_SYSCONFSUBDIR=	vsftpd
@@ -51,6 +51,6 @@ do-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}
 	cd ${WRKSRC} && ${INSTALL_DATA} FAQ INSTALL README TUNING ${DOCDIR}
 
-.include "../../security/tcp_wrappers/buildlink2.mk"
+.include "../../security/tcp_wrappers/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
