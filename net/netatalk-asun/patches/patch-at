@@ -1,0 +1,20 @@
+$NetBSD: patch-at,v 1.1.1.1 2000/07/31 17:36:02 abs Exp $
+
+--- man/Makefile.orig	Tue May 20 18:35:43 1997
++++ man/Makefile	Mon Jul 31 14:07:25 2000
+@@ -8,6 +8,7 @@
+ ${ALL}: FRC
+ 	cd $@; ${MAKE} ${MFLAGS} CC="${CC}" DEFS="${DEFS}" \
+ 	    OPTOPTS="${OPTOPTS}" DESTDIR="${DESTDIR}" MANDIR="${MANDIR}" \
++	    LIBEXECDIR="${LIBEXECDIR}" EXAMPLEDIR="${EXAMPLEDIR}" \
+ 	    SBINDIR="${SBINDIR}" BINDIR="${BINDIR}" RESDIR="${RESDIR}" \
+ 	    ETCDIR="${ETCDIR}" LIBDIR="${LIBDIR}" INCDIR="${INCDIR}"
+ 
+@@ -25,6 +26,7 @@
+ 	for i in ${ALL}; \
+ 	    do (cd $$i; ${MAKE} ${MFLAGS} \
+ 		DESTDIR="${DESTDIR}"  MANDIR="${MANDIR}" \
++		LIBEXECDIR="${LIBEXECDIR}" EXAMPLEDIR="${EXAMPLEDIR}" \
+ 		SBINDIR="${SBINDIR}" BINDIR="${BINDIR}" RESDIR="${RESDIR}" \
+ 	        ETCDIR="${ETCDIR}" LIBDIR="${LIBDIR}" INCDIR="${INCDIR}" \
+ 		INSTALL="${INSTALL}" install); \
