@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2001/11/29 01:12:28 hubertf Exp $
+# $NetBSD: Makefile,v 1.24 2002/01/15 23:59:46 rh Exp $
 #
 
-DISTNAME=		GConf-1.0.4
-PKGREVISION=		1
+DISTNAME=		GConf-1.0.7
 CATEGORIES=		devel gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=stable/sources/GConf/}
 EXTRACT_SUFX=		.tar.bz2
@@ -32,6 +31,7 @@ post-install:
 
 .include "../../devel/gettext-lib/buildlink.mk"
 .include "../../databases/db3/buildlink.mk"
+.include "../../devel/popt/buildlink.mk"
 .include "../../devel/oaf/buildlink.mk"
 .include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

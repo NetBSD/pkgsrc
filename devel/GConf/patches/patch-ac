@@ -1,75 +1,13 @@
-$NetBSD: patch-ac,v 1.4 2001/08/11 18:28:58 rh Exp $
+$NetBSD: patch-ac,v 1.5 2002/01/15 23:59:46 rh Exp $
 
---- configure.orig	Mon Jul 23 22:44:59 2001
+--- configure.orig	Tue Oct 30 04:55:14 2001
 +++ configure
-@@ -6497,14 +6497,14 @@
- BDB_LIBS=
+@@ -6627,7 +6627,7 @@
  BDB_CFLAGS=
  
--echo $ac_n "checking for db_env_create in -ldb-3""... $ac_c" 1>&6
--echo "configure:6502: checking for db_env_create in -ldb-3" >&5
--ac_lib_var=`echo db-3'_'db_env_create | sed 'y%./+-%__p_%'`
-+echo $ac_n "checking for db_env_create in -ldb3""... $ac_c" 1>&6
-+echo "configure:6502: checking for db_env_create in -ldb3" >&5
-+ac_lib_var=`echo db3'_'db_env_create | sed 'y%./+-%__p_%'`
- if eval "test \"`echo '$''{'ac_cv_lib_$ac_lib_var'+set}'`\" = set"; then
-   echo $ac_n "(cached) $ac_c" 1>&6
- else
-   ac_save_LIBS="$LIBS"
--LIBS="-ldb-3  $LIBS"
-+LIBS="-ldb3  $LIBS"
- cat > conftest.$ac_ext <<EOF
- #line 6510 "configure"
- #include "confdefs.h"
-@@ -6532,7 +6532,7 @@
- fi
- if eval "test \"`echo '$ac_cv_lib_'$ac_lib_var`\" = yes"; then
-   echo "$ac_t""yes" 1>&6
--  BDB_LIBS=-ldb-3
-+  BDB_LIBS=-ldb3
- else
-   echo "$ac_t""no" 1>&6
- fi
-@@ -6596,14 +6596,14 @@
  
- 
- 
--echo $ac_n "checking for poptGetArg in -lpopt""... $ac_c" 1>&6
--echo "configure:6601: checking for poptGetArg in -lpopt" >&5
-+echo $ac_n "checking for poptGetArg in -lgnomesupport""... $ac_c" 1>&6
-+echo "configure:6601: checking for poptGetArg in -lgnomesupport" >&5
- ac_lib_var=`echo popt'_'poptGetArg | sed 'y%./+-%__p_%'`
- if eval "test \"`echo '$''{'ac_cv_lib_$ac_lib_var'+set}'`\" = set"; then
-   echo $ac_n "(cached) $ac_c" 1>&6
- else
-   ac_save_LIBS="$LIBS"
--LIBS="-lpopt  $LIBS"
-+LIBS="-lgnomesupport  $LIBS"
- cat > conftest.$ac_ext <<EOF
- #line 6609 "configure"
- #include "confdefs.h"
-@@ -6631,19 +6631,19 @@
- fi
- if eval "test \"`echo '$ac_cv_lib_'$ac_lib_var`\" = yes"; then
-   echo "$ac_t""yes" 1>&6
--  POPT_LIBS=-lpopt
-+  POPT_LIBS=-lgnomesupport
- else
-   echo "$ac_t""no" 1>&6
--ac_safe=`echo "popt.h" | sed 'y%./+-%__p_%'`
--echo $ac_n "checking for popt.h""... $ac_c" 1>&6
--echo "configure:6640: checking for popt.h" >&5
-+ac_safe=`echo "popt-gnome.h" | sed 'y%./+-%__p_%'`
-+echo $ac_n "checking for popt-gnome.h""... $ac_c" 1>&6
-+echo "configure:6640: checking for popt-gnome.h" >&5
- if eval "test \"`echo '$''{'ac_cv_header_$ac_safe'+set}'`\" = set"; then
-   echo $ac_n "(cached) $ac_c" 1>&6
- else
-   cat > conftest.$ac_ext <<EOF
- #line 6645 "configure"
- #include "confdefs.h"
--#include <popt.h>
-+#include <popt-gnome.h>
- EOF
- ac_try="$ac_cpp conftest.$ac_ext >/dev/null 2>conftest.out"
- { (eval echo configure:6650: \"$ac_try\") 1>&5; (eval $ac_try) 2>&5; }
+-for dblib in db-3.3 db-3.2 db-3.1 db-3; do
++for dblib in db-3.3 db-3.2 db-3.1 db-3 db3; do
+   echo $ac_n "checking for db_env_create in -l$dblib""... $ac_c" 1>&6
+ echo "configure:6633: checking for db_env_create in -l$dblib" >&5
+ ac_lib_var=`echo $dblib'_'db_env_create | sed 'y%./+-%__p_%'`
