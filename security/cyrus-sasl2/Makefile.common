@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.14 2004/02/14 03:16:58 jlam Exp $
+# $NetBSD: Makefile.common,v 1.15 2004/02/14 07:45:36 jlam Exp $
 #
 # This Makefile fragment should be included _below_ any SASL_PLUGIN
 # definition and _above_ any CONFIGURE_ARGS definitions.
@@ -60,17 +60,18 @@ CONFIGURE_ARGS+=	--with-plugindir=${_PLUGINDIR}
 
 # Authentication mechanisms
 CONFIGURE_ARGS+=	--disable-anon		# ANONYMOUS
+CONFIGURE_ARGS+=	--disable-checkapop	# CHECKAPOP
 CONFIGURE_ARGS+=	--disable-cram		# CRAM-MD5
 CONFIGURE_ARGS+=	--disable-digest	# DIGEST-MD5
+CONFIGURE_ARGS+=	--disable-gssapi	# GSSAPI
+CONFIGURE_ARGS+=	--disable-krb4		# KERBEROS_V4
 CONFIGURE_ARGS+=	--disable-login		# LOGIN
 CONFIGURE_ARGS+=	--disable-ntlm		# NTLM
-CONFIGURE_ARGS+=	--disable-plain		# PLAIN
-CONFIGURE_ARGS+=	--disable-scram		# SCRAM-MD5
-CONFIGURE_ARGS+=	--disable-sia		# SIA
-CONFIGURE_ARGS+=	--disable-srp		# SRP
-CONFIGURE_ARGS+=	--disable-krb4		# KERBEROS_V4
-CONFIGURE_ARGS+=	--disable-gssapi	# GSSAPI
 CONFIGURE_ARGS+=	--disable-otp		# OTP
+CONFIGURE_ARGS+=	--disable-plain		# PLAIN
+CONFIGURE_ARGS+=	--disable-sql		# SQL
+CONFIGURE_ARGS+=	--disable-srp		# SRP
+CONFIGURE_ARGS+=	--disable-srp-setpass
 CONFIGURE_ARGS+=	--without-pam
 
 # clean up a bit to help package maintainer produce patch files
