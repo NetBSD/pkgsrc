@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2003/04/14 20:28:22 grant Exp $
+# $NetBSD: Makefile,v 1.2 2003/04/14 22:50:18 grant Exp $
 #
 
-DISTNAME=		mozilla-i686-pc-linux-gnu-1.3
+#DISTNAME=		# see Makefile.${OPSYS}.${ARCH}
 PKGNAME=		mozilla-bin-1.3
 WRKSRC=			${WRKDIR}/mozilla
 CATEGORIES=		www
@@ -16,24 +16,25 @@ ONLY_FOR_PLATFORM=	Linux-*-i[3-6]86 NetBSD-*-i386
 CONFLICTS+=		mozilla-linux-[0-9]*
 
 NO_CONFIGURE=		# defined
+USE_PKGINSTALL=		YES
 
+FILES_SUBST+=		PLATFORM=${PLATFORM}
 PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
-
-MOZILLA_LIB=		${PREFIX}/lib/mozilla-linux
 
 do-build:
 
 post-build:
-	${SED} -e "s|@PREFIX@|${PREFIX}|g" ${FILESDIR}/mozilla.sh >	\
+	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/mozilla.sh > \
 		${WRKDIR}/mozilla.sh
 
 do-install:
 	${INSTALL_DATA_DIR} ${MOZILLA_LIB}
-	cd ${WRKSRC} && ${CP} -r . ${MOZILLA_LIB}
-	${INSTALL_SCRIPT} ${WRKDIR}/mozilla.sh ${PREFIX}/bin/mozilla-linux
+	cd ${WRKSRC} && ${PAX} -rw -pm . ${MOZILLA_LIB}
+	${INSTALL_SCRIPT} ${WRKDIR}/mozilla.sh ${PREFIX}/bin/mozilla-${PLATFORM}
 
 post-install:
 	@${CP} -f ${PKGDIR}/PLIST ${PLIST_SRC}
+	@${ECHO} bin/mozilla-${PLATFORM} >> ${PLIST_SRC}
 	@${FIND} ${MOZILLA_LIB} \( -type f -o -type l \) -print		\
 		| ${SORT} | ${SED} -e "s,${PREFIX}/,,g"			\
 		>> ${PLIST_SRC}
