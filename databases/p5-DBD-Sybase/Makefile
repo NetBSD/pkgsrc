@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/03/29 09:58:28 grant Exp $
+# $NetBSD: Makefile,v 1.15 2004/05/14 18:49:52 wiz Exp $
 #
 
 DISTNAME=		DBD-Sybase-0.94
@@ -12,7 +12,7 @@ MAINTAINER=		rh@NetBSD.org
 HOMEPAGE=		http://www.mbay.net/~mpeppler/
 COMMENT=		Perl DBI/DBD driver for Sybase/MS-SQL databases
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/DBD/Sybase/.packlist
 
 BUILD_DEFS+=		USE_SYBASE_OPENCLIENT
@@ -33,9 +33,9 @@ PERL5_LDFLAGS+=		-Wl,${RPATH_FLAG}${_SYBASE}/lib
 MAKE_ENV+=		SYBASE=${_SYBASE}
 
 .if !defined(USE_SYBASE_OPENCLIENT)
-.  include "../../databases/freetds/buildlink2.mk"
+.  include "../../databases/freetds/buildlink3.mk"
 .endif
 
-.include "../../databases/p5-DBI/buildlink2.mk"
+.include "../../databases/p5-DBI/buildlink3.mk"
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
