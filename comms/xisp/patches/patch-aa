@@ -1,8 +1,6 @@
-$NetBSD: patch-aa,v 1.2 1999/08/26 19:01:45 jlam Exp $
-
---- Makefile.orig	Thu Aug 26 08:08:51 1999
-+++ Makefile	Thu Aug 26 14:53:57 1999
-@@ -8,8 +8,8 @@
+--- Makefile.orig	Thu Aug 26 14:08:51 1999
++++ Makefile	Sun Sep  5 06:08:36 1999
+@@ -8,11 +8,11 @@
  #  Compilation/installation vars (global for all following sections) |
  #=====================================================================
  #
@@ -12,7 +10,11 @@ $NetBSD: patch-aa,v 1.2 1999/08/26 19:01:45 jlam Exp $
 +X11PREFIX  = ${X11BASE}
  INCX11     = $(X11PREFIX)/include
  LIBX11     = $(X11PREFIX)/lib
- INCFORMS   = $(X11PREFIX)/include
+-INCFORMS   = $(X11PREFIX)/include
++INCFORMS   = $(X11PREFIX)/include/X11
+ LIBFORMS   = $(X11PREFIX)/lib
+ MODEM_DEV  = modem
+ MODEM_PATH = /dev/$(MODEM_DEV)
 @@ -24,25 +24,25 @@
  # Normal (i.e. SuSE-6.x) vars; for SuSE-5.x use the lines which
  # DO NOT include -lcrypt in EXTRALIBS and -DGLIBC2 in EXTRADEFS.
