@@ -1,3 +1,4 @@
+$NetBSD: patch-ad,v 1.2 2003/06/07 14:37:01 cjep Exp $
 --- audio_sun.c.orig	Sat Nov  3 01:49:07 2001
 +++ audio_sun.c	Mon Jun  2 14:18:03 2003
 @@ -26,6 +26,7 @@
