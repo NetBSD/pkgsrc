@@ -1,4 +1,4 @@
-$NetBSD: md5,v 1.2 1999/04/17 02:43:32 jlam Exp $
+$NetBSD: md5,v 1.3 1999/05/25 01:34:53 jlam Exp $
 
-MD5 (navigator-v451-export.sparc-sun-sunos4.1.3_U1.tar.gz) = c9d01cddd827aade6bf2c32917fc4e74
-MD5 (navigator-v451-export.x86-bsdi-bsd2.tar.gz) = 372090644a3d28ad43c4e4a936260cb3
+MD5 (navigator-v46-export.sparc-sun-sunos4.1.3_U1.tar.gz) = f190d6e158cfc648ba44aa1481b9b293
+MD5 (navigator-v46-export.x86-bsdi-bsd2.tar.gz) = 670d38a88e61f76529ce5c7776afe3f2
