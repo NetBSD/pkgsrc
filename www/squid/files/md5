@@ -1,7 +1,9 @@
-$NetBSD: md5,v 1.13 2000/10/15 20:17:45 veego Exp $
+$NetBSD: md5,v 1.14 2000/11/27 14:39:51 taca Exp $
 
 MD5 (squid-2.3.STABLE4-src.tar.gz) = c38c083f44c222a8d026fa129c30b98f
 MD5 (squid-2.3.stable4-invalid_ip_acl_entry.patch) = 436eb77056bed5d45547c739d1123bd3
 MD5 (squid-2.3.stable4-ipfw_configure.patch) = 4453c53a712280a26fdca42c950bc94f
 MD5 (squid-2.3.stable4-internal_dns_rcode_table_formatting.patch) = bec46f5a1fcbd9aa1deb9d518c5c11a5
 MD5 (squid-2.3.stable4-ftp_icon_not_found.patch) = f1383b24672f9a8317c2c16302a94eaa
+MD5 (squid-2.3.stable4-accel_only_access.patch) = db8e4eb9c1712a4adde7e9aaed0b5249
+MD5 (squid-2.3.stable4-html_quoting.patch) = 68228709d011c93c2cccd9ac723fb462
