@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1205 2003/01/23 18:25:33 fredb Exp $
+$NetBSD: CHANGES,v 1.1206 2003/01/23 18:29:54 martti Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -383,3 +383,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added tex-musixtex-109 [fredb 2003-01-23]
 	Added tex-bagpipetex-3.01 [fredb 2003-01-23]
 	Added bww2tex-2.00 [fredb 2003-01-23]
+	Updated pico to 4.4nb1 [martti 2003-01-23]
