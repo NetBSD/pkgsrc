@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 1998/09/27 18:38:30 tron Exp $
+# $NetBSD: Makefile,v 1.13 2000/06/28 15:02:32 agc Exp $
 #
 
 DISTNAME=	xpkgwedge-0.4
@@ -32,7 +32,7 @@ pre-install:
 .include "../../mk/bsd.pkg.mk"
 
 # In order to force xpkgwedge to install into X11BASE, we forcibly override
-# any user setting of USE_LOCALBASE_FOR_X11.  _NO_ other pkg should do this.
+# the PREFIX definition.  _NO_ other pkg should do this.
 PREFIX=${X11BASE}
 
 # Clear the build dependencies list so that xpkgwedge will not be recursively
