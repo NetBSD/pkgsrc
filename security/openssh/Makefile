@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2000/08/18 22:46:48 hubertf Exp $
+# $NetBSD: Makefile,v 1.23 2000/08/28 09:14:51 jlam Exp $
 #
 
 DISTNAME=		openssh-2.1.1p4
@@ -16,7 +16,7 @@ MASTER_SITES=		http://the.wiretapped.net/security/cryptography/ssh/OpenSSH/files
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.openssh.com/
 
-BUILD_DEPENDS+=		${LOCALBASE}/bin/perl:../../lang/perl5
+BUILD_DEPENDS+=		${PERL5}:../../lang/perl5
 BUILD_DEPENDS+=		autoreconf:../../devel/autoconf
 
 # Check for a usable installed version of OpenSSL.  Version must be greater
@@ -44,7 +44,6 @@ CONFLICTS=		ssh-[0-9]* ssh6-[0-9]*
 # retain the following line, for IPv6-ready pkgsrc webpage 
 BUILD_DEFS+=		USE_INET6
 BUILD_DEFS+=		SSH_CONF_DIR
-# USE_PERL5=		yes
 
 RESTRICTED=		"Crypto; export-controlled"
 NO_SRC_ON_FTP=	${RESTRICTED}
