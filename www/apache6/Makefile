@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2001/11/19 16:23:13 jlam Exp $
+# $NetBSD: Makefile,v 1.44 2001/11/21 15:44:24 jlam Exp $
 #
 # This package does not compile in mod_ssl support hooks, as it conflicts
 # with IPv6-enable patch.
@@ -109,7 +109,7 @@ EGDIR=		${PREFIX}/share/examples/httpd
 CONF_FILES=	${EGDIR}/httpd.conf.default ${APACHE_SYSCONFDIR}/httpd.conf
 SUPPORT_FILES=	${EGDIR}/magic.default ${APACHE_SYSCONFDIR}/magic
 SUPPORT_FILES+=	${EGDIR}/mime.types.default ${APACHE_SYSCONFDIR}/mime.types
-RCD_SCRIPTS=	${PREFIX}/etc/rc.d/apache /etc/rc.d/apache
+RCD_SCRIPTS=	apache
 
 MAKE_DIRS=		${APACHE_SYSCONFDIR}
 OWN_DIRS=		/var/log/httpd

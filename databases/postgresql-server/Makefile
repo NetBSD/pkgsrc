@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2001/11/19 16:23:08 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2001/11/21 15:44:22 jlam Exp $
 
 .include "../../databases/postgresql/Makefile.common"
 .include "../../databases/postgresql/Makefile.ssl"
@@ -35,7 +35,7 @@ PKG_USER_HOME=		${PGHOME}
 PKG_USER_SHELL=		${SH}
 PKG_GROUP=		${PGGROUP}
 
-RCD_SCRIPTS=		${PREFIX}/etc/rc.d/pgsql /etc/rc.d/pgsql
+RCD_SCRIPTS=		pgsql
 OWN_DIRS_PERMS=		${PGHOME} ${PGUSER} ${PGGROUP} 0755
 
 DEINSTALL_EXTRA_TMPL=	${PKGDIR}/DEINSTALL
