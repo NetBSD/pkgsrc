@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2003/06/23 08:12:57 adam Exp $
+# $NetBSD: Makefile,v 1.43 2003/06/23 16:59:37 wiz Exp $
 
 DISTNAME=		Wine-20030618
 PKGNAME=		${DISTNAME:S/W/w/}
@@ -46,6 +46,7 @@ post-install:
 	${INSTALL_DATA} config ${EGDIR}/wine.conf;			\
 	${INSTALL_DATA} generic.ppd ${EGDIR}/generic.ppd;		\
 	${INSTALL_DATA} system.ini ${EGDIR}/system.ini
+	${RMDIR} ${PREFIX}/man/man3w
 
 .include "../../graphics/MesaLib/buildlink2.mk"
 .include "../../graphics/glu/buildlink2.mk"
