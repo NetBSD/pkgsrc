@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2000/01/06 19:10:31 fredb Exp $
+# $NetBSD: Makefile,v 1.5 2000/10/15 12:06:34 rh Exp $
 
 DISTNAME=	battleball.21.src
 PKGNAME=	battleball-2.1
@@ -23,13 +23,11 @@ do-install:
 
 .include "../../mk/bsd.prefs.mk"
 
-.if !defined(USE_MESA)
+.if defined(BATTLEBALL_USE_MESA)
+USE_MESA=	YES
+.else
 CPPFLAGS+=	-DNO_OPENGL
 SED_CMDS+=	-e '/^GLINCS/s|^|\#|' -e '/^GLLIBS/s|^|\#|'
-.else
-# Note to Maintainers: Wildcard needs to match all possible Mesa-glx
-# variations, so the build doesn't fail if Mesa-glx is already installed.
-DEPENDS+=	Mesa-*:../../graphics/Mesa
 .endif
 
 .include "../../mk/bsd.pkg.mk"
