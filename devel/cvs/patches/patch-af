@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.10 2004/05/22 10:38:06 wiz Exp $
+$NetBSD: patch-af,v 1.11 2005/03/01 15:36:48 wiz Exp $
 
---- src/update.c.orig	2004-05-04 19:25:54.000000000 +0200
+--- src/update.c.orig	2005-01-31 23:18:01.000000000 +0100
 +++ src/update.c
-@@ -1359,11 +1359,18 @@ VERS: ", 0);
+@@ -1366,11 +1366,18 @@ VERS: ", 0);
  		    xchmod (finfo->file, 1);
  		else
  		{

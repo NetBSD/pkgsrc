@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.8 2004/04/15 22:28:36 wiz Exp $
+$NetBSD: patch-ae,v 1.9 2005/03/01 15:36:48 wiz Exp $
 
---- src/rcs.c.orig	Fri Apr  2 21:16:34 2004
+--- src/rcs.c.orig	2005-01-31 23:15:08.000000000 +0100
 +++ src/rcs.c
-@@ -3483,7 +3483,7 @@ struct rcs_keyword
+@@ -3498,7 +3498,7 @@ struct rcs_keyword
      size_t len;
  };
  #define KEYWORD_INIT(s) (s), sizeof (s) - 1
@@ -11,7 +11,7 @@ $NetBSD: patch-ae,v 1.8 2004/04/15 22:28:36 wiz Exp $
  {
      { KEYWORD_INIT ("Author") },
      { KEYWORD_INIT ("Date") },
-@@ -3496,6 +3496,7 @@ static const struct rcs_keyword keywords
+@@ -3511,6 +3511,7 @@ static const struct rcs_keyword keywords
      { KEYWORD_INIT ("Revision") },
      { KEYWORD_INIT ("Source") },
      { KEYWORD_INIT ("State") },
@@ -19,7 +19,7 @@ $NetBSD: patch-ae,v 1.8 2004/04/15 22:28:36 wiz Exp $
      { NULL, 0 }
  };
  enum keyword
-@@ -3510,7 +3511,8 @@ enum keyword
+@@ -3525,7 +3526,8 @@ enum keyword
      KEYWORD_RCSFILE,
      KEYWORD_REVISION,
      KEYWORD_SOURCE,
@@ -29,7 +29,7 @@ $NetBSD: patch-ae,v 1.8 2004/04/15 22:28:36 wiz Exp $
  };
  
  /* Convert an RCS date string into a readable string.  This is like
-@@ -3647,6 +3649,11 @@ expand_keywords (rcs, ver, name, log, lo
+@@ -3662,6 +3664,11 @@ expand_keywords (rcs, ver, name, log, lo
  	return;
      }
  
@@ -41,7 +41,7 @@ $NetBSD: patch-ae,v 1.8 2004/04/15 22:28:36 wiz Exp $
      /* If we are using -kkvl, dig out the locker information if any.  */
      locker = NULL;
      if (expand == KFLAG_KVL)
-@@ -3738,6 +3745,7 @@ expand_keywords (rcs, ver, name, log, lo
+@@ -3753,6 +3760,7 @@ expand_keywords (rcs, ver, name, log, lo
  
  	    case KEYWORD_HEADER:
  	    case KEYWORD_ID:
@@ -49,7 +49,7 @@ $NetBSD: patch-ae,v 1.8 2004/04/15 22:28:36 wiz Exp $
  		{
  		    const char *path;
  		    int free_path;
-@@ -4383,7 +4391,7 @@ RCS_checkout (rcs, workfile, rev, nameta
+@@ -4402,7 +4410,7 @@ RCS_checkout (rcs, workfile, rev, nameta
  	if (info != NULL)
  	{
  	    /* If the size of `devtype' changes, fix the sscanf call also */

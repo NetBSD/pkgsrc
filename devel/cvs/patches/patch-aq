@@ -1,8 +1,8 @@
-$NetBSD: patch-aq,v 1.7 2004/09/09 22:26:09 wiz Exp $
+$NetBSD: patch-aq,v 1.8 2005/03/01 15:36:48 wiz Exp $
 
---- src/recurse.c.orig	2004-03-19 23:21:18.000000000 +0100
+--- src/recurse.c.orig	2005-01-31 23:15:21.000000000 +0100
 +++ src/recurse.c
-@@ -526,7 +526,7 @@ do_recursion (frame)
+@@ -554,7 +554,7 @@ do_recursion (frame)
      if (frame->flags == R_SKIP_ALL)
  	return (0);
  
@@ -11,12 +11,3 @@ $NetBSD: patch-aq,v 1.7 2004/09/09 22:26:09 wiz Exp $
  
      /* The fact that locks are not active here is what makes us fail to have
         the
-@@ -566,7 +566,7 @@ do_recursion (frame)
-      * generating data, to give the buffers a chance to drain to the
-      * remote client.  We should not have locks active at this point,
-      * but if there are writelocks around, we cannot pause here.  */
--    if (server_active && locktype != CVS_LOCK_NONE)
-+    if (server_active && locktype != CVS_LOCK_WRITE)
- 	server_pause_check();
- #endif
- 

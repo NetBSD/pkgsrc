@@ -1,8 +1,8 @@
-$NetBSD: patch-au,v 1.9 2004/09/09 22:26:17 wiz Exp $
+$NetBSD: patch-au,v 1.10 2005/03/01 15:36:48 wiz Exp $
 
---- src/commit.c.orig	2004-06-09 16:34:54.000000000 +0200
+--- src/commit.c.orig	2005-01-31 23:11:19.000000000 +0100
 +++ src/commit.c
-@@ -1035,7 +1035,9 @@ warning: file `%s' seems to still contai
+@@ -1040,7 +1040,9 @@ warning: file `%s' seems to still contai
  		  xmalloc (sizeof (struct logfile_info)));
  	    li->type = status;
  	    li->tag = xstrdup (vers->tag);
@@ -13,7 +13,7 @@ $NetBSD: patch-au,v 1.9 2004/09/09 22:26:17 wiz Exp $
  	    li->rev_new = NULL;
  	    p->data = li;
  	    (void) addnode (ulist, p);
-@@ -1187,7 +1189,7 @@ precommit_proc (repository, filter)
+@@ -1192,7 +1194,7 @@ precommit_proc (repository, filter)
      run_setup (filter);
      run_arg (repository);
      (void) walklist (saved_ulist, precommit_list_proc, NULL);
