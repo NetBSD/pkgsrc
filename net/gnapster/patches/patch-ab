@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.1 2000/02/27 21:36:48 wiz Exp $
+$NetBSD: patch-ab,v 1.2 2000/03/16 00:56:32 wiz Exp $
 
---- ./configure.orig	Wed Feb 16 03:35:34 2000
-+++ ./configure	Sun Feb 27 21:33:55 2000
+--- configure.orig	Wed Mar  1 04:00:12 2000
++++ configure	Thu Mar 16 01:48:17 2000
 @@ -3669,7 +3669,7 @@
  #include "confdefs.h"
  #include <libintl.h>
