@@ -1,84 +1,65 @@
-*** makefiles/Makefile.fbs.orig	Fri Dec 19 08:54:48 1997
---- makefiles/Makefile.fbs	Wed Dec 24 20:20:39 1997
+*** src/pathnames.h.orig	Mon Dec 22 00:25:08 1997
+--- src/pathnames.h	Mon Mar  2 19:13:35 1998
 ***************
-*** 1,7 ****
-! PREFIX=		/usr/local
-  BINDIR=		${PREFIX}/bin
-! ETCDIR=		${PREFIX}/libexec
-  MANDIR=		${PREFIX}/man
-  MANEXT=		8
-  INSTALL=	install
+*** 45,54 ****
+  #define _PATH_CVT       "/etc/ftpd/ftpconversions"
+  #define _PATH_PRIVATE   "/etc/ftpd/ftpgroups"
+  #else
+! #define _PATH_FTPUSERS  "/usr/local/lib/ftpd/ftpusers"
+! #define _PATH_FTPACCESS "/usr/local/lib/ftpd/ftpaccess"
+! #define _PATH_CVT       "/usr/local/lib/ftpd/ftpconversions"
+! #define _PATH_PRIVATE   "/usr/local/lib/ftpd/ftpgroups"
+  #endif
+  #endif
   
---- 1,8 ----
-! PREFIX?=        /usr/local
-  BINDIR=		${PREFIX}/bin
-! ETCDIR=         ${PREFIX}/etc
-  MANDIR=		${PREFIX}/man
-+ LIBEXECDIR=     ${PREFIX}/libexec
-  MANEXT=		8
-  INSTALL=	install
+--- 45,54 ----
+  #define _PATH_CVT       "/etc/ftpd/ftpconversions"
+  #define _PATH_PRIVATE   "/etc/ftpd/ftpgroups"
+  #else
+! #define _PATH_FTPUSERS  "/usr/pkg/etc/ftpusers"
+! #define _PATH_FTPACCESS "/usr/pkg/etc/ftpaccess"
+! #define _PATH_CVT       "/usr/pkg/etc/ftpconversions"
+! #define _PATH_PRIVATE   "/usr/pkg/etc/ftpgroups"
+  #endif
+  #endif
   
 ***************
-*** 10,26 ****
-  	@ echo 'You can say "build help" for details on how it works.'
+*** 69,78 ****
+  #endif
+  #else
+  #ifndef _PATH_PIDNAMES
+! #define _PATH_PIDNAMES  "/usr/local/lib/ftpd/pids/%s"
+  #endif
+  #ifndef _PATH_XFERLOG
+! #define _PATH_XFERLOG   "/usr/local/logs/xferlog"
+  #endif
+  #endif
   
-  install: bin/ftpd bin/ftpcount bin/ftpshut
-! 	-mv -f ${ETCDIR}/ftpd ${ETCDIR}/ftpd-old
-  	@echo installing binaries.
-! 	${INSTALL} -c -o bin -g bin -m 755 bin/ftpd ${ETCDIR}/ftpd
-  	${INSTALL} -c -o bin -g bin -m 755 bin/ftpshut ${BINDIR}/ftpshut
-  	${INSTALL} -c -o bin -g bin -m 755 bin/ftpcount ${BINDIR}/ftpcount
-  	${INSTALL} -c -o bin -g bin -m 755 bin/ftpwho ${BINDIR}/ftpwho
-  	install -c -o bin -g bin -m 755 bin/ckconfig ${BINDIR}/ftpckconfig
-  	@echo NOT Installing basic configuration
-! #	install -c -o root -g bin -m 644 doc/examples/ftpaccess ${ETCDIR}/ftpaccess
-! #	install -c -o root -g bin -m 644 doc/examples/ftpusers ${ETCDIR}/ftpusers
-! #	install -c -o root -g bin -m 644 doc/examples/ftpconversions ${ETCDIR}/ftpconversions
-  	@echo installing manpages.
-  	${INSTALL} -c -o bin -g bin -m 644 doc/ftpd.8 ${MANDIR}/man8/ftpd.8
-  	${INSTALL} -c -o bin -g bin -m 644 doc/ftpcount.1 ${MANDIR}/man1/ftpcount.1
---- 11,27 ----
-  	@ echo 'You can say "build help" for details on how it works.'
+--- 69,78 ----
+  #endif
+  #else
+  #ifndef _PATH_PIDNAMES
+! #define _PATH_PIDNAMES  "/usr/pkg/lib/ftpd/pids/%s"
+  #endif
+  #ifndef _PATH_XFERLOG
+! #define _PATH_XFERLOG   "/usr/pkg/logs/xferlog"
+  #endif
+  #endif
   
-  install: bin/ftpd bin/ftpcount bin/ftpshut
-! 	-mv -f ${LIBEXECDIR}/ftpd ${LIBEXECDIR}/ftpd-old
-  	@echo installing binaries.
-! 	${INSTALL} -c -o bin -g bin -m 755 bin/ftpd ${LIBEXECDIR}/ftpd
-  	${INSTALL} -c -o bin -g bin -m 755 bin/ftpshut ${BINDIR}/ftpshut
-  	${INSTALL} -c -o bin -g bin -m 755 bin/ftpcount ${BINDIR}/ftpcount
-  	${INSTALL} -c -o bin -g bin -m 755 bin/ftpwho ${BINDIR}/ftpwho
-  	install -c -o bin -g bin -m 755 bin/ckconfig ${BINDIR}/ftpckconfig
-  	@echo NOT Installing basic configuration
-! 	install -c -o root -g bin -m 644 doc/examples/ftpaccess ${ETCDIR}/ftpaccess.example
-! 	install -c -o root -g bin -m 644 doc/examples/ftpusers ${ETCDIR}/ftpusers.example
-! 	install -c -o root -g bin -m 644 doc/examples/ftpconversions ${ETCDIR}/ftpconversions.example
-  	@echo installing manpages.
-  	${INSTALL} -c -o bin -g bin -m 644 doc/ftpd.8 ${MANDIR}/man8/ftpd.8
-  	${INSTALL} -c -o bin -g bin -m 644 doc/ftpcount.1 ${MANDIR}/man1/ftpcount.1
 ***************
-*** 30,41 ****
-  	${INSTALL} -c -o bin -g bin -m 644 doc/ftphosts.5 ${MANDIR}/man5/ftphosts.5
-  	${INSTALL} -c -o bin -g bin -m 644 doc/ftpconversions.5 ${MANDIR}/man5/ftpconversions.5
-  	${INSTALL} -c -o bin -g bin -m 644 doc/xferlog.5 ${MANDIR}/man5/xferlog.5
-! 	@echo Compressing manpages
-! 	gzip -f -9 ${MANDIR}/man8/ftpd.8
-! 	gzip -f -9 ${MANDIR}/man1/ftpcount.1
-! 	gzip -f -9 ${MANDIR}/man1/ftpwho.1
-! 	gzip -f -9 ${MANDIR}/man8/ftpshut.8
-! 	gzip -f -9 ${MANDIR}/man5/ftpaccess.5
-! 	gzip -f -9 ${MANDIR}/man5/ftphosts.5
-! 	gzip -f -9 ${MANDIR}/man5/ftpconversions.5
-! 	gzip -f -9 ${MANDIR}/man5/xferlog.5
---- 31,42 ----
-  	${INSTALL} -c -o bin -g bin -m 644 doc/ftphosts.5 ${MANDIR}/man5/ftphosts.5
-  	${INSTALL} -c -o bin -g bin -m 644 doc/ftpconversions.5 ${MANDIR}/man5/ftpconversions.5
-  	${INSTALL} -c -o bin -g bin -m 644 doc/xferlog.5 ${MANDIR}/man5/xferlog.5
-! #       @echo Compressing manpages
-! #       gzip -f -9 ${MANDIR}/man8/ftpd.8
-! #       gzip -f -9 ${MANDIR}/man1/ftpcount.1
-! #       gzip -f -9 ${MANDIR}/man1/ftpwho.1
-! #       gzip -f -9 ${MANDIR}/man8/ftpshut.8
-! #       gzip -f -9 ${MANDIR}/man5/ftpaccess.5
-! #       gzip -f -9 ${MANDIR}/man5/ftphosts.5
-! #       gzip -f -9 ${MANDIR}/man5/ftpconversions.5
-! #       gzip -f -9 ${MANDIR}/man5/xferlog.5
+*** 117,123 ****
+  #ifdef USE_ETC_FTPD
+  #define _PATH_FTPHOSTS  "/etc/ftpd/ftphosts"
+  #else
+! #define _PATH_FTPHOSTS  "/usr/local/lib/ftpd/ftphosts"
+  #endif
+  #endif
+  #endif
+--- 117,123 ----
+  #ifdef USE_ETC_FTPD
+  #define _PATH_FTPHOSTS  "/etc/ftpd/ftphosts"
+  #else
+! #define _PATH_FTPHOSTS  "/usr/pkg/etc/ftphosts"
+  #endif
+  #endif
+  #endif
