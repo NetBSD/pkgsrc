@@ -1,6 +1,6 @@
 # start of install
 #
-# $NetBSD: install,v 1.5 2001/11/26 20:37:39 jlam Exp $
+# $NetBSD: install,v 1.6 2001/12/04 21:05:06 seb Exp $
 
 case ${STAGE} in
 PRE-INSTALL)
@@ -25,10 +25,10 @@ PRE-INSTALL)
 				groupid_option=
 				if [ -n "${groupid}" ]
 				then
-					groupid_option="-g ${groupid}"
+					groupid_option="-g"
 				fi
 				${ECHO} "Creating group: ${group}"
-				${GROUPADD} ${groupid_option} "${group}"
+				${GROUPADD} ${groupid_option} ${groupid} "${group}"
 			  fi
 			  ${RM} -f /tmp/grouptest.$$
 			)
@@ -55,11 +55,11 @@ PRE-INSTALL)
 				userid_option=
 				if [ -n "${userid}" ]
 				then
-					userid_option="-u ${userid}"
+					userid_option="-u"
 				fi
 				${ECHO} "Creating user: ${user}"
 				${USERADD} -c "${descr}"		\
-					${userid_option}		\
+					${userid_option} ${userid}	\
 					-g "${group}"			\
 					-d "${home}"			\
 					-s "${shell}"			\
