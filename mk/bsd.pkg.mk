@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1574 2005/01/25 18:15:58 tv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1575 2005/01/27 04:05:08 tv Exp $
 #
 # This file is in the public domain.
 #
@@ -182,10 +182,7 @@ PKG_FAIL_REASON+=	"PLIST_TYPE must be \`\`dynamic'' or \`\`static''."
 PKG_FAIL_REASON+=	"PLIST_TYPE must be \`\`static'' for \`\`overwrite'' packages."
 .endif
 
-PREPEND_PATH+=		${LOCALBASE}/bin
-
 .if defined(USE_IMAKE)
-PREPEND_PATH+=		${X11BASE}/bin
 USE_X11BASE?=		implied
 PLIST_SUBST+=		IMAKE_MAN_SOURCE_PATH=${IMAKE_MAN_SOURCE_PATH}
 PLIST_SUBST+=		IMAKE_MAN_DIR=${IMAKE_MAN_DIR}
@@ -451,7 +448,7 @@ CONFIGURE_ENV+=		LDFLAGS="${LDFLAGS:M*}" M4="${M4}" YACC="${YACC}"
 CONFIGURE_ENV+=		LINKER_RPATH_FLAG="${LINKER_RPATH_FLAG}"
 CONFIGURE_ENV+=		COMPILER_RPATH_FLAG="${COMPILER_RPATH_FLAG}"
 
-MAKE_ENV+=		PATH=${PATH}
+MAKE_ENV+=		PATH=${PATH:Q}
 MAKE_ENV+=		PREFIX=${PREFIX} LOCALBASE=${LOCALBASE}
 MAKE_ENV+=		X11BASE=${X11BASE} CFLAGS="${CFLAGS}"
 MAKE_ENV+=		CPPFLAGS="${CPPFLAGS}" FFLAGS="${FFLAGS}"
@@ -1039,7 +1036,7 @@ PKG_FAIL_REASON+='Please "${MAKE} install" in ../../pkgtools/shlock.'
 . endif
 .endif
 
-CONFIGURE_ENV+=		PATH=${PATH}
+CONFIGURE_ENV+=		PATH=${PATH:Q}
 
 .if defined(GNU_CONFIGURE)
 #
@@ -1117,7 +1114,7 @@ BUILD_DEFS+=		PKG_SYSCONFBASEDIR PKG_SYSCONFDIR
 
 # Passed to most of script invocations
 SCRIPTS_ENV+= CURDIR=${.CURDIR} DISTDIR=${DISTDIR}			\
-	PATH=${PATH}							\
+	PATH=${PATH:Q}							\
 	WRKDIR=${WRKDIR} WRKSRC=${WRKSRC} PATCHDIR=${PATCHDIR}		\
 	SCRIPTDIR=${SCRIPTDIR} FILESDIR=${FILESDIR}			\
 	_PKGSRCDIR=${_PKGSRCDIR} PKGSRCDIR=${PKGSRCDIR} DEPENDS="${DEPENDS}" \
@@ -1187,7 +1184,7 @@ PATH=			${_PATH_CMD:sh} # DOES NOT use :=, to defer evaluation
 # Add these bits to the environment use when invoking the sub-make
 # processes for build-related phases.
 #
-BUILD_ENV+=	PATH=${PATH:Q}
+BUILD_ENV+=		PATH=${PATH:Q}
 
 .MAIN: all
 
