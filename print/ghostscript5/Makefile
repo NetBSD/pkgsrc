@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 1998/06/10 08:02:09 agc Exp $
+# $NetBSD: Makefile,v 1.16 1998/06/15 10:26:09 agc Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/10/13 11:22:43 asami Exp
 #
 
@@ -64,7 +64,7 @@ do-configure:
 
 do-build:
 	cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} \
-		${MAKE_PROGRAM} ${PAPERSIZE_DEF} ${MAKE_FLAGS} ${MAKEFILE} ${ALL_TARGET}
+		${MAKE_PROGRAM} ${PAPERSIZE_DEF} ${MAKE_FLAGS} -f ${MAKEFILE} ${ALL_TARGET}
 
 pre-install:
 	@${MKDIR} ${PREFIX}/share/ghostscript ${PREFIX}/bin ${PREFIX}/man/man1
