@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2003/09/07 10:46:06 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2004/01/06 07:17:03 jlam Exp $
 
 DISTNAME=		esound-0.2.32
 CATEGORIES=		audio
@@ -8,7 +8,9 @@ MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.tux.org/~ricdude/EsounD.html
 COMMENT=		The Enlightened sound daemon
 
-USE_BUILDLINK2=		YES
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
@@ -34,7 +36,7 @@ post-install:
 	cd ${WRKSRC}/docs/html && \
 		${PAX} -rw -pp -pm . ${PREFIX}/share/doc/html/esound
 
-.include "../../audio/libaudiofile/buildlink2.mk"
-.include "../../mk/ossaudio.buildlink2.mk"
+.include "../../audio/libaudiofile/buildlink3.mk"
+.include "../../mk/ossaudio.buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

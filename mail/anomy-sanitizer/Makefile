@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/08/31 13:51:20 mjl Exp $
+# $NetBSD: Makefile,v 1.9 2004/01/06 07:17:57 jlam Exp $
 #
 
 DISTNAME=	anomy-sanitizer-1.63
@@ -13,8 +13,11 @@ COMMENT=	Mail message filter and sanitizer
 DEPENDS+=	p5-MIME-Base64-[0-9]*:../../converters/p5-MIME-Base64
 DEPENDS+=	p5-Digest-MD5-[0-9]*:../../security/p5-Digest-MD5
 
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
 .include "../../mk/bsd.prefs.mk"
 
+NO_BUILDLINK=	# defined
 NO_CONFIGURE=	# defined
 USE_PERL5=	# defined
 
@@ -38,6 +41,7 @@ do-build:
 	)
 
 do-install:
+	${INSTALL_SCRIPT_DIR} ${PREFIX}/sbin
 	${INSTALL_SCRIPT} ${WRKSRC}/sanitizer ${PREFIX}/sbin
 	${INSTALL_SCRIPT} ${WRKSRC}/simplify ${PREFIX}/sbin
 	${INSTALL_DATA_DIR} ${ANOMYDOC}
