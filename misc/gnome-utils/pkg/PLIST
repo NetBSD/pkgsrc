@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/05/03 16:48:57 rh Exp $
+@comment $NetBSD: PLIST,v 1.2 1999/08/29 14:20:45 rh Exp $
 bin/gcalc
 bin/ghex
 bin/gsearchtool
@@ -20,7 +20,7 @@ share/pixmaps/gnome-ghex.png
 share/pixmaps/penguin1.png
 share/gnome/apps/Applications/ghex.desktop
 share/gnome/apps/Applications/gtt.desktop
-share/gnome/apps/Settings/gshutdown.desktop
+share/gnome/apps/System/gshutdown.desktop
 share/gnome/apps/Utilities/gcalc.desktop
 share/gnome/apps/Utilities/gsearchtool.desktop
 share/gnome/apps/Utilities/guname.desktop
@@ -44,6 +44,7 @@ share/gnome/help/gshutdown/C/index.html
 share/gnome/help/gshutdown/C/topic.dat
 share/gnome/help/gshutdown/es/index.html
 share/gnome/help/gshutdown/es/topic.dat
+share/idl/gsu.idl
 @dirrm share/gnome/help/ghex/C
 @dirrm share/gnome/help/ghex/es
 @dirrm share/gnome/help/ghex
@@ -55,8 +56,9 @@ share/gnome/help/gshutdown/es/topic.dat
 @dirrm share/gnome/help/gshutdown/es
 @dirrm share/gnome/help/gshutdown
 @unexec rmdir %D/share/gnome/apps/Applications 2>/dev/null || true
-@unexec rmdir %D/share/gnome/apps/Settings 2>/dev/null || true
+@unexec rmdir %D/share/gnome/apps/System 2>/dev/null || true
 @unexec rmdir %D/share/gnome/apps/Utilities 2>/dev/null || true
 @unexec rmdir %D/share/gnome/apps 2>/dev/null || true
 @unexec rmdir %D/share/gnome/help 2>/dev/null || true
 @unexec rmdir %D/share/gnome 2>/dev/null || true
+@unexec rmdir %D/share/idl 2>/dev/null || true
