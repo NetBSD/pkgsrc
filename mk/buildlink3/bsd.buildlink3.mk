@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.129 2004/03/28 22:25:35 xtraeme Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.130 2004/03/29 05:21:17 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -53,6 +53,11 @@ BUILDLINK_DIR=		${WRKDIR}/.buildlink
 BUILDLINK_X11_DIR=	${BUILDLINK_DIR:H}/.x11-buildlink
 BUILDLINK_SHELL?=	${SH}
 BUILDLINK_OPSYS?=	${OPSYS}
+_BLNK_VARS_MK=		${BUILDLINK_DIR}/vars.mk
+
+.if exists(${_BLNK_VARS_MK})
+.  include "${_BLNK_VARS_MK}"
+.endif
 
 # Prepend ${BUILDLINK_DIR}/bin to the PATH so that the wrappers are found
 # first when searching for executables.
@@ -309,7 +314,7 @@ _BLNK_PKG_DBDIR.${_pkg_}!=	\
 .      endif
 .    endfor
 .    if empty(_BLNK_PKG_DBDIR.${_pkg_}:M*not_found)
-MAKEFLAGS+=	_BLNK_PKG_DBDIR.${_pkg_}=${_BLNK_PKG_DBDIR.${_pkg_}}
+BUILDLINK_VARS+=	_BLNK_PKG_DBDIR.${_pkg_}
 .    endif
 .  endif
 
@@ -340,7 +345,7 @@ BUILDLINK_PREFIX.${_pkg_}=	BUILDLINK_PREFIX.${_pkg_}_not_found
 .      endif
 .    endif
 .    if empty(BUILDLINK_PREFIX.${_pkg_}:M*not_found)
-MAKEFLAGS+=	BUILDLINK_PREFIX.${_pkg_}=${BUILDLINK_PREFIX.${_pkg_}}
+BUILDLINK_VARS+=	BUILDLINK_PREFIX.${_pkg_}
 .    endif
 .  endif
 
@@ -499,6 +504,11 @@ buildlink-directories:
 .endif
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${BUILDLINK_DIR}/include
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${BUILDLINK_DIR}/lib
+
+# Create the saved variables Makefile fragment to pass variables through
+# to sub-make processes invoked on the same Makefile.
+#
+do-buildlink: ${_BLNK_VARS_MK}
 
 # Create the buildlink wrappers before any of the other buildlink targets
 # are run, as the wrappers may need to be used in some of those targets.
@@ -850,7 +860,7 @@ _BLNK_PHYSICAL_PATH.${_var_}!=						\
 	else								\
 		${ECHO} ${${_var_}};					\
 	fi
-MAKEFLAGS+=	_BLNK_PHYSICAL_PATH.${_var_}=${_BLNK_PHYSICAL_PATH.${_var_}:Q}
+BUILDLINK_VARS+=	_BLNK_PHYSICAL_PATH.${_var_}
 .  endif
 .endfor
 
@@ -1742,3 +1752,19 @@ ${_BLNK_TRANSFORM_SEDFILE} ${_BLNK_UNTRANSFORM_SEDFILE} ${_BLNK_REORDERLIBS}: \
 	${_PKG_SILENT}${_PKG_DEBUG}${_BLNK_GEN_TRANSFORM}		\
 		${_BLNK_TRANSFORM}
 .endif	# BUILDLINK_PHASES
+
+.PHONY: buildlink-vars-mk
+buildlink-vars-mk: ${_BLNK_VARS_MK}
+${_BLNK_VARS_MK}:
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
+	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${.TARGET}.tmp
+.for _var_ in ${BUILDLINK_VARS}
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${ECHO} "${_var_}=	${${_var_}}" >> ${.TARGET}.tmp
+.endfor
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	if [ -f ${.TARGET}.tmp ]; then					\
+		${SORT} -u ${.TARGET}.tmp > ${.TARGET};			\
+		${RM} -f ${.TARGET}.tmp;				\
+	fi 
+	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${.TARGET}
