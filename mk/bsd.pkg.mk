@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1597 2005/03/02 11:11:36 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1598 2005/03/13 09:30:31 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -1393,6 +1393,7 @@ check-vulnerable:
 			  PKGBASE="${PKGBASE}"				\
 			${AWK} '/^$$/ { next }				\
 				/^#.*/ { next }				\
+				$$1 !~ ENVIRON["PKGBASE"] && $$1 !~ /\{/ { next } \
 				{ s = sprintf("${PKG_ADMIN} pmatch \"%s\" %s && ${ECHO} \"*** WARNING - %s vulnerability in %s - see %s for more information ***\"", $$1, ENVIRON["PKGNAME"], $$2, ENVIRON["PKGNAME"], $$3); system(s); }' < ${PKGVULNDIR}/pkg-vulnerabilities || ${FALSE}; \
 	fi
 
