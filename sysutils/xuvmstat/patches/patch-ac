@@ -1,0 +1,12 @@
+$NetBSD: patch-ac,v 1.1 2001/02/19 13:30:26 simonb Exp $
+
+--- xuvmstat.c.orig	Mon Feb 12 12:30:00 2001
++++ xuvmstat.c	Tue Feb 20 00:26:32 2001
+@@ -26,6 +26,7 @@
+ 
+ #include <errno.h>
+ #include <stdio.h>
++#include <string.h>
+ #include <unistd.h>
+ #include <sys/param.h>
+ #include <sys/errno.h>
