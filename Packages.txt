@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.178 2001/08/22 17:53:30 jlam Exp $
+# $NetBSD: Packages.txt,v 1.179 2001/08/22 17:59:11 jlam Exp $
 ###########################################################################
 
 			==========================
@@ -1516,7 +1516,7 @@ buildlink.mk file in a package's Makefile, which does the following:
   (1b) Creates a directory ${BUILDLINK_DIR}, by default set to a
        subdirectory of ${WRKDIR};
 
-  (1c) Links all the headers and libraries for that package into
+  (1c) Links all the headers and libraries for that dependency into
        ${BUILDLINK_DIR}/include and ${BUILDLINK_DIR}/lib, respectively;
 
   (1d) Prepends -I${BUILDLINK_DIR}/include to CPPFLAGS, CFLAGS, CXXFLAGS,
@@ -1552,7 +1552,7 @@ ${X11BASE}.
  ==============================
 
 Most of the work done by buildlink.mk files is encapsulated and shared
-through bsd.buildlink.mk, which is included by package buildlink.mk files.
+through bsd.buildlink.mk, which is included by packages' buildlink.mk files.
 Please see the comments at the top of bsd.buildlink.mk for complete
 documentation on how to use the file.  A simple example of a buildlink.mk
 for a mythical package foo follows:
