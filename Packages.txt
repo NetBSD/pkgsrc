@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.89 2000/06/02 06:08:41 rh Exp $
+# $NetBSD: Packages.txt,v 1.90 2000/06/16 09:18:34 hubertf Exp $
 ###########################################################################
 
 			==========================
@@ -625,6 +625,12 @@ to when dealing with the PLIST file (or files, see below!).
    details. This modification of the PLIST file is done on a copy of it,
    not pkg/PLIST itself.
 
+ * Semi-automatic PLIST generation:
+   You can use the "make print-PLIST" command to output a PLIST that matches
+   any new files since the package was extracted. If the package installs
+   files via tar(1) or other methods that don't update file access times, be
+   sure to add these files manually to your pkg/PLIST!
+
 
  5.2 MD/MI vs. general PLIST
  ===========================
@@ -1179,8 +1185,9 @@ debugging aids.
  - find /usr/pkg/ /usr/X11R6/ -newer /tmp/bla >/tmp/x
    (or whatever you set LOCALBASE and X11BASE to)
  - pkg_delete blub
- - find /usr/pkg/ /usr/X11R6/ -newer /tmp/bla: if this brings up any files,
-   they are missing in pkg/PLIST*; add them.
+ - find /usr/pkg/ /usr/X11R6/ -newer /tmp/bla (or diff against output of
+   'make print-PLIST'): if this brings up any files, that are missing in
+   pkg/PLIST*; add them.
  - Compare pkg/PLIST* against /tmp/x, fix the former one
    ( sort /tmp/x >/tmp/x2 ; sort pkg/PLIST >/tmp/P ; sdiff /tmp/x2 /tmp/P )
  - make reinstall && make package
