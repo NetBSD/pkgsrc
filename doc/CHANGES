@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8495 2004/12/28 17:11:20 wiz Exp $
+$NetBSD: CHANGES,v 1.8496 2004/12/28 21:58:05 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -6624,3 +6624,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated vera-ttf to 1.10nb3 [wiz 2004-12-28]
 	Added pfqueue-0.1.4 [xtraeme 2004-12-28]
 	Added uim-0.4.5 [wiz 2004-12-28]
+	Added epeg-0.9.0 [xtraeme 2004-12-28]
