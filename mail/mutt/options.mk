@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2004/08/22 19:32:52 jlam Exp $
+# $NetBSD: options.mk,v 1.3 2004/09/12 04:33:12 jlam Exp $
 
 # Global and legacy options
 .if defined(MUTT_USE_SLANG) && !empty(MUTT_USE_SLANG:M[yY][eE][sS])
@@ -11,11 +11,11 @@ PKG_DEFAULT_OPTIONS+=	ncurses
 PKG_DEFAULT_OPTIONS+=	ssl
 .endif
 .if defined(MUTT_USE_SASL) && !empty(MUTT_USE_SASL:M[yY][eE][sS])
-PKG_DEFAULT_OPTIONS+=	sasl
+PKG_DEFAULT_OPTIONS+=	sasl1
 .endif
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mutt
-PKG_SUPPORTED_OPTIONS=	slang ncurses ssl sasl
+PKG_SUPPORTED_OPTIONS=	slang ncurses ssl sasl1
 
 .if !defined(PKG_OPTIONS.mutt)
 PKG_DEFAULT_OPTIONS+=	ssl
@@ -40,7 +40,7 @@ CONFIGURE_ARGS+=	--with-curses=${BUILDLINK_PREFIX.ncurses}
 ###
 ### SASLv1
 ###
-.if !empty(PKG_OPTIONS:Msasl)
+.if !empty(PKG_OPTIONS:Msasl1)
 .  include "../../security/cyrus-sasl/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-sasl=${BUILDLINK_PREFIX.cyrus-sasl}
 .endif
