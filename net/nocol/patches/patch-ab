@@ -1,17 +1,17 @@
-$NetBSD: patch-ab,v 1.2 1998/08/07 11:10:48 agc Exp $
+$NetBSD: patch-ab,v 1.3 1999/12/06 21:09:12 abs Exp $
 
---- Makefile.mid.orig	Thu Dec 18 04:19:01 1997
-+++ Makefile.mid	Thu Jul 23 15:41:03 1998
-@@ -64,7 +64,7 @@
+--- Makefile.mid.orig	Tue Nov  9 05:38:58 1999
++++ Makefile.mid	Tue Nov 23 23:20:21 1999
+@@ -68,7 +68,7 @@
  	-[ -d $(DATADIR) ] || mkdir $(DATADIR)
- 	-[ -d $(ETCDIR) ] || mkdir $(ETCDIR)
- 	-[ -d $(PIDDIR) ] || mkdir $(PIDDIR)
+ 	-[ -d $(ETCDIR) ] ||  mkdir $(ETCDIR)
+ 	-[ -d $(PIDDIR) ] ||  mkdir $(PIDDIR)
 -	-[ -d $(ETCDIR)/samples ] || mkdir $(ETCDIR)/samples
 +	-[ -d $(EXAMPLESDIR) ] || mkdir -p $(EXAMPLESDIR)
- 	-[ -d $(BINDIR) ] || mkdir $(BINDIR)
+ 	-[ -d $(BINDIR) ] ||  mkdir $(BINDIR)
  	-[ -d $(MSGSDIR) ] || mkdir $(MSGSDIR)
- 	@[ -d $(ROOTDIR) ] && [ -d $(DATADIR) ] && [ -d $(ETCDIR) ] \
-@@ -80,9 +80,9 @@
+ 	-[ -d $(HELPDIR) ] || mkdir $(HELPDIR)
+@@ -85,9 +85,9 @@
  	  ( echo "" ; echo "MAKING IN $$i" ; echo "----------" ; cd $$i ; \
  		make $(MFLAGS) install ; ) ;\
  	done
