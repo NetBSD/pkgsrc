@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2928 2005/01/19 15:10:57 adam Exp $
+$NetBSD: TODO,v 1.2929 2005/01/19 15:32:00 adam Exp $
 
 Suggested new packages
 ======================
@@ -693,16 +693,13 @@ Suggested package updates
 	o mrproject-0.9.1
 	o mrtg-2.11.1
 	o mserv-devel-0.41
-	o msmtp-1.3.4
 	o mtail-1.1.1
 	o multi-gnome-terminal-1.6.2
 	o multitail-3.4.4
 	o muse-0.9.1
 	o nail-11.20
-	o nano-1.3.5
+	o nano-1.3.5 [devel version]
 	o nap-1.5.3
-	o nautilus-2.8.2
-	o nautilus-cd-burner-2.8.5
 	o navi2ch-1.7.5
 	o ncmpc-0.11.0 [pkg/26237]
 	o ncview-1.92e

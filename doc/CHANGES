@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8819 2005/01/19 15:10:56 adam Exp $
+$NetBSD: CHANGES,v 1.8820 2005/01/19 15:31:59 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -423,3 +423,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated artist to 1.2.6 [adam 2005-01-19]
 	Updated squid to 2.5.7nb7 [taca 2005-01-19]
 	Updated dxpc to 3.8.2 [adam 2005-01-19]
+	Updated msmtp to 1.2.4 [adam 2005-01-19]
