@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2001/06/12 20:33:09 jlam Exp $
+# $NetBSD: Makefile,v 1.41 2001/07/13 14:41:19 fredb Exp $
 #
 
 DISTNAME=		lynx2.8.3rel.1
@@ -24,7 +24,7 @@ PATCH_SITES+=		http://www.moxienet.com/lynx/
 PATCHFILES+= 		lynx-283-ssl.patch.gz
 PATCH_DIST_STRIP=	-p1
 
-MAINTAINER=		fb@enteract.com
+MAINTAINER=		fredb@netbsd.org
 HOMEPAGE=		http://lynx.browser.org/
 COMMENT=		Alphanumeric display oriented World-Wide Web Client
 
