@@ -1,0 +1,116 @@
+.\"	$NetBSD: binpatch.1,v 1.1.1.1 2004/07/23 03:37:26 atatat Exp $
+.\"
+.\" Copyright (c) 2004 by Andrew Brown <atatat@netbsd.org>
+.\" Absolutely no warranty.
+.\"
+.Dd July 20, 2004
+.Dt BINPATCH 1
+.Sh NAME
+.Nm binpatch
+.Nd trivial binary patch applicator
+.Sh SYNOPSIS
+.Nm
+.Pa file=...
+.Pa size=...
+.Pa offset=...
+.Pa compare=...
+.Pa skip=...
+.Pa replace=...
+.Sh DESCRIPTION
+The
+.Nm
+utility can read and replace a small section of a given file.
+It is designed for use in those instances where a problem exists with
+a given binary that cannot be reconstructed from source code, but the
+required change can be implemented by replacing a few bytes in the
+existing binary.
+All arguments must be given.
+.Sh EXAMPLES
+Given a binary called
+.Dq a.out
+of 10713 bytes in size with the following text segment:
+.Bd -literal -offset indent
+% objdump -h a.out
+.sp
+a.out:     file format elf32-i386
+.sp
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+[...]
+  9 .text         00000be4  08048968  08048968  00000968  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+[...]
+% objdump -d -j .text a.out
+[...]
+ 8048b0f:       83 ef 04                sub    $0x4,%edi
+ 8048b12:       ff d0                   call   *%eax
+ 8048b14:       83 fe ff                cmp    $0xffffffff,%esi
+[...]
+.sp
+.Ed
+where we wish to elide the call through
+.Ar %eax
+by replacing it with a series of
+.Ar nop
+(or
+.Dq no operation )
+instructions (the machine code for this on the i386 platform is 0x90),
+we first calculate the offset into the file of the previous
+.Ar sub
+instruction.  To do this, we take the address of the
+.Ar sub
+instruction as given by the dissassembly output, subtract the
+.Dq LMA
+and add the
+.Dq File off
+values from the objdump output (note that
+.Xr bc 1
+expects hexadecimal values to be given using upper case):
+.Bd -literal -offset indent
+% bc
+ibase=16
+8048B0F-08048968+00000968
+2831
+.sp
+.Ed
+The region of the binary we want to compare to before applying the
+patch is the concatenation of the relevant machine codes from the
+dissassembly dump (\c
+.Ar 83ef04ffd083feff )
+and the replacement is simply two
+.Ar nop
+instructions (\c
+.Ar 9090 ) ,
+that will replace the
+.Ar ffd0
+of the original call.
+The offset of the replacement is 3, since that is the number of bytes
+in the
+.Ar sub
+instruction.
+From this we have our patch:
+.Bd -literal -offset indent
+% binpatch file=a.out size=10713 offset=2831 \\
+  compare=83ef04ffd083feff skip=3 replace=9090
+% objdump -d -j .text a.out
+[...]
+ 8048b0f:       83 ef 04                sub    $0x4,%edi
+ 8048b12:       90                      nop    
+ 8048b13:       90                      nop    
+ 8048b14:       83 fe ff                cmp    $0xffffffff,%esi
+[...]
+.sp
+.Ed
+And thus the call is removed.
+.Sh DIAGNOSTICS
+The diagnostics are terse and almost unhelpful, but are more verbose
+than users of
+.Xr ed 1
+might be used to.
+They typically mention the command line argument that was in error.
+.Sh SEE ALSO
+.Xr bc 1 ,
+.Xr objdump 1 ,
+.Xr patch 1
+.Sh AUTHORS
+.An Andrew Brown Aq atatat@netbsd.org
