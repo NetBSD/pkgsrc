@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.785 2002/12/14 10:48:18 cjep Exp $
+$NetBSD: CHANGES,v 1.786 2002/12/14 15:20:38 kristerw Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3951,3 +3951,5 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated fastjar to 0.93 [jschauma 2002-12-13]
 	Updated pico to 4.4 [tron 2002-12-14]
 	Updated pine to 4.51 [tron 2002-12-14]
+	Updated xmame to 0.62.1nb3 [kristerw 2002-12-14]
+	Updated xmess to 0.62.1 [kristerw 2002-12-14]
