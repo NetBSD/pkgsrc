@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9372 2005/03/01 12:09:06 dmcmahill Exp $
+$NetBSD: CHANGES,v 1.9373 2005/03/01 14:35:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1213,3 +1213,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added xmms-wma-1.0.4 [xtraeme 2005-03-01]
 	Updated squid to 2.5.9 [taca 2005-03-01]
 	Updated gerbv to 1.0.1 [dmcmahill 2005-03-01]
+	Updated wesnoth to 0.8.11 [wiz 2005-03-01]
