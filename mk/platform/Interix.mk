@@ -1,4 +1,4 @@
-# $NetBSD: Interix.mk,v 1.14 2005/01/14 00:10:01 tv Exp $
+# $NetBSD: Interix.mk,v 1.15 2005/01/18 18:22:56 tv Exp $
 #
 # Variable definitions for the Interix operating system.
 
@@ -23,6 +23,7 @@
 # netpbm	0x6b000000	0x6cffffff	0x00100000	32
 # openssl	0x5e000000	0x5fffffff	0x00100000	32
 # perl58	*
+# python23	*
 # zsh		*
 
 AWK?=		/usr/contrib/bin/gawk
