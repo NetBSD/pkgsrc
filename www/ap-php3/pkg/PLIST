@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/05/03 19:51:26 tv Exp $
+lib/httpd/mod_php3.so
