@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1837 2003/04/03 17:08:31 salo Exp $
+$NetBSD: CHANGES,v 1.1838 2003/04/03 18:11:59 toshii Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1457,3 +1457,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated kdegraphics3 to 3.1.1nb1 [markd 2003-04-03]
 	Updated sudo to 1.6.7.2 [wiz 2003-04-03]
 	Updated realplayer-codecs to 8nb1 [salo 2003-04-03]
+	Updated py-postgresql to 3.3nb2 [toshii 2003-04-03]
