@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 1999/10/17 05:00:17 fredb Exp $
+# $NetBSD: Makefile,v 1.42 1999/10/31 21:15:52 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.23 1997/09/30 06:14:59 asami Exp
 #
 
@@ -52,7 +52,7 @@
     SUBDIR += top
 #    SUBDIR += tua
      SUBDIR += usbutil
-#    SUBDIR += xbatt
+    SUBDIR += xbatt
 #    SUBDIR += xcpustate
     SUBDIR += xdu
     SUBDIR += xhfs
