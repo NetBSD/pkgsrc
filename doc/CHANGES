@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6383 2004/06/28 18:36:23 jmmv Exp $
+$NetBSD: CHANGES,v 1.6384 2004/06/28 18:40:42 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3161,3 +3161,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated libgnomeprint to 2.6.2 [jmmv 2004-06-28]
 	Updated libgnomeprintui to 2.6.2 [jmmv 2004-06-28]
 	Updated libgtkhtml to 2.6.2 [jmmv 2004-06-28]
+	Updated libwnck to 2.6.2 [jmmv 2004-06-28]
