@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.43 2004/08/27 06:29:11 jlam Exp $
+# $NetBSD: Makefile.common,v 1.44 2004/08/31 02:37:57 danw Exp $
 
 MOZ_DIST_VER?=	${MOZ_VER}
 DISTNAME?=	mozilla-source-${MOZ_DIST_VER}
@@ -94,8 +94,13 @@ PLIST_SUBST+=	MOZILLA=${MOZILLA}
 PLIST_SUBST+=	MOZILLA_BIN=${MOZILLA_BIN}
 .if ${OBJECT_FMT} == "ELF"
 SO_SUFFIX=	so
+SCRIPTS_ENV+=	MOZ_INSTALL_LIB="${INSTALL_PROGRAM}"
+.elif ${OBJECT_FMT} == "Mach-O"
+SO_SUFFIX=	dylib
+SCRIPTS_ENV+=	MOZ_INSTALL_LIB="${INSTALL_LIB}"
 .else
 SO_SUFFIX=	so.1.0
+SCRIPTS_ENV+=	MOZ_INSTALL_LIB="${INSTALL_PROGRAM}"
 .endif
 PLIST_SUBST+=	SO_SUFFIX=${SO_SUFFIX}
 
@@ -133,6 +138,10 @@ CONFIGURE_ARGS+=	--enable-optimize=${COPTS:Q}
 
 XPTCFILES+=	xptcinvoke_asm_sparc64_netbsd.s xptcstubs_asm_sparc64_netbsd.s
 XPTCFILES+=	xptcinvoke_sparc64_netbsd.cpp xptcstubs_sparc64_netbsd.cpp
+
+.if ${OPSYS} == "Darwin"
+BUILDLINK_PASSTHRU_DIRS+=/Developer
+.endif
 
 post-extract:
 .for F in ${XPTCFILES}
