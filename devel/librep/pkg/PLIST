@@ -1,0 +1,108 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/12/17 14:43:05 mellon Exp $
+bin/rep
+bin/repdoc
+bin/rep-config
+bin/rep-xgettext
+bin/rep-remote
+include/rep.h
+include/rep_lisp.h
+include/rep_regexp.h
+include/rep_subrs.h
+@unexec install-info --delete %D/info/librep.info %D/info/dir
+info/librep.info
+info/librep.info-1
+info/librep.info-2
+info/librep.info-3
+info/librep.info-4
+info/librep.info-5
+info/librep.info-6
+info/librep.info-7
+@exec   install-info          %D/info/librep.info %D/info/dir
+lib/librep.so.6.0
+lib/librep.so.6
+lib/librep.so
+lib/librep.la
+lib/librep.a
+libexec/rep/i386--netbsd/libtool
+libexec/rep/i386--netbsd/rules.mk
+libexec/rep/0.9/i386--netbsd/libsdbm.so.0.0
+libexec/rep/0.9/i386--netbsd/libsdbm.so.0
+libexec/rep/0.9/i386--netbsd/libsdbm.so
+libexec/rep/0.9/i386--netbsd/libsdbm.la
+libexec/rep/0.9/i386--netbsd/libsdbm.a
+libexec/rep/0.9/i386--netbsd/libtimers.so.0.0
+libexec/rep/0.9/i386--netbsd/libtimers.so.0
+libexec/rep/0.9/i386--netbsd/libtimers.so
+libexec/rep/0.9/i386--netbsd/libtimers.la
+libexec/rep/0.9/i386--netbsd/libtimers.a
+libexec/rep/0.9/i386--netbsd/libgettext.so.0.0
+libexec/rep/0.9/i386--netbsd/libgettext.so.0
+libexec/rep/0.9/i386--netbsd/libgettext.so
+libexec/rep/0.9/i386--netbsd/libgettext.la
+libexec/rep/0.9/i386--netbsd/libgettext.a
+libexec/rep/0.9/i386--netbsd/libreadline.so.0.0
+libexec/rep/0.9/i386--netbsd/libreadline.so.0
+libexec/rep/0.9/i386--netbsd/libreadline.so
+libexec/rep/0.9/i386--netbsd/libreadline.la
+libexec/rep/0.9/i386--netbsd/libreadline.a
+@dirrm libexec/rep/i386--netbsd
+@dirrm libexec/rep/0.9/i386--netbsd
+@dirrm libexec/rep/0.9
+@dirrm libexec/rep
+share/aclocal/rep.m4
+share/rep/0.9/lisp/autoload.jl
+share/rep/0.9/lisp/backquote.jl
+share/rep/0.9/lisp/bytecodes.jl
+share/rep/0.9/lisp/cgi-get.jl
+share/rep/0.9/lisp/compiler-opt.jl
+share/rep/0.9/lisp/compiler.jl
+share/rep/0.9/lisp/date.jl
+share/rep/0.9/lisp/debug.jl
+share/rep/0.9/lisp/disassembler.jl
+share/rep/0.9/lisp/dump.jl
+share/rep/0.9/lisp/environ.jl
+share/rep/0.9/lisp/gaol.jl
+share/rep/0.9/lisp/init.jl
+share/rep/0.9/lisp/lisp-doc.jl
+share/rep/0.9/lisp/lisp.jl
+share/rep/0.9/lisp/mailaddr.jl
+share/rep/0.9/lisp/pwd-prompt.jl
+share/rep/0.9/lisp/remote-ftp.jl
+share/rep/0.9/lisp/remote-rcp.jl
+share/rep/0.9/lisp/remote-rep.jl
+share/rep/0.9/lisp/remote.jl
+share/rep/0.9/lisp/rep.jl
+share/rep/0.9/lisp/ring.jl
+share/rep/0.9/lisp/sort.jl
+share/rep/0.9/lisp/tar-file-handler.jl
+share/rep/0.9/lisp/tilde.jl
+share/rep/0.9/lisp/backquote.jlc
+share/rep/0.9/lisp/bytecodes.jlc
+share/rep/0.9/lisp/cgi-get.jlc
+share/rep/0.9/lisp/compiler-opt.jlc
+share/rep/0.9/lisp/compiler.jlc
+share/rep/0.9/lisp/date.jlc
+share/rep/0.9/lisp/debug.jlc
+share/rep/0.9/lisp/disassembler.jlc
+share/rep/0.9/lisp/dump.jlc
+share/rep/0.9/lisp/environ.jlc
+share/rep/0.9/lisp/gaol.jlc
+share/rep/0.9/lisp/init.jlc
+share/rep/0.9/lisp/lisp-doc.jlc
+share/rep/0.9/lisp/lisp.jlc
+share/rep/0.9/lisp/mailaddr.jlc
+share/rep/0.9/lisp/pwd-prompt.jlc
+share/rep/0.9/lisp/remote-ftp.jlc
+share/rep/0.9/lisp/remote-rcp.jlc
+share/rep/0.9/lisp/remote-rep.jlc
+share/rep/0.9/lisp/remote.jlc
+share/rep/0.9/lisp/rep.jlc
+share/rep/0.9/lisp/ring.jlc
+share/rep/0.9/lisp/sort.jlc
+share/rep/0.9/lisp/tar-file-handler.jlc
+share/rep/0.9/lisp/tilde.jlc
+share/rep/0.9/DOC.pag
+share/rep/0.9/DOC.dir
+@dirrm share/rep/0.9/lisp
+@dirrm share/rep/0.9
+@dirrm share/rep
