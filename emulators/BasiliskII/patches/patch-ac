@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.1 2003/10/08 02:00:44 danw Exp $
+$NetBSD: patch-ac,v 1.2 2003/10/12 21:11:52 wiz Exp $
 
---- src/Unix/vm_alloc.cpp.orig	Tue Oct  7 21:54:33 2003
-+++ src/Unix/vm_alloc.cpp	Tue Oct  7 21:54:19 2003
+--- vm_alloc.cpp.orig	Fri Mar 14 20:17:27 2003
++++ vm_alloc.cpp
 @@ -29,6 +29,7 @@
  #include "vm_alloc.h"
  
