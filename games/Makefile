@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1997/12/29 04:07:15 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 1997/12/30 03:45:55 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.87 1997/10/15 04:58:31 max Exp
 #
 
@@ -61,7 +61,7 @@
 #    SUBDIR += xgolgo
 #    SUBDIR += xinvaders
 #    SUBDIR += xjewel
-#    SUBDIR += xkobo
+   SUBDIR += xkobo
 #    SUBDIR += xlife
 #    SUBDIR += xmahjongg
 #    SUBDIR += xmille
