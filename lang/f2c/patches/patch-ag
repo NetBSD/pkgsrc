@@ -1,10 +1,10 @@
-$NetBSD: patch-ag,v 1.6 2001/04/07 12:43:48 dmcmahill Exp $
+$NetBSD: patch-ag,v 1.7 2001/04/09 01:44:39 dmcmahill Exp $
 
 use a BSD style makefile for building shared libs
 
 --- libI77/makefile.orig	Fri Apr  6 22:20:23 2001
 +++ libI77/makefile	Fri Apr  6 22:20:42 2001
-@@ -1,16 +1,4 @@
+@@ -1,16 +1,5 @@
 -.SUFFIXES: .c .o
 -CC = cc
 -CFLAGS = -O
@@ -21,7 +21,8 @@ use a BSD style makefile for building shared libs
 -## or remove both the ld and mv lines above.
 +CPPFLAGS+= -Wcast-align -DSkip_f2c_Undefs
 +NOGCCERROR=	yes
- 
++MKLINT=	no 
+
  OBJ =	Version.o backspace.o close.o dfe.o dolio.o due.o endfile.o err.o \
 @@ -18,87 +6,7 @@
  	open.o rdfmt.o rewind.o rsfe.o rsli.o rsne.o sfe.o sue.o typesize.o \
