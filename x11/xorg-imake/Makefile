@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/07/31 01:37:23 xtraeme Exp $
+# $NetBSD: Makefile,v 1.8 2004/08/04 06:49:41 xtraeme Exp $
 
 DISTNAME=	${DISTFILES}
 PKGNAME=	xorg-imake-${XORG_VER}
@@ -38,6 +38,11 @@ post-extract:
 	@${MV} ${WRKSRC}/config/cf/${F}.cf  ${WRKSRC}/config/cf/${F}.cf.in
 .endfor
 .undef F
+	@${SED} -e "s|CONFIGDIRSPEC|-I${X11ROOT}/lib/X11/config|" \
+		${WRKSRC}/config/util/xmkmf.cpp > \
+		${WRKSRC}/config/util/xmkmf.cpp.orig
+	@${MV} ${WRKSRC}/config/util/xmkmf.cpp.orig \
+		${WRKSRC}/config/util/xmkmf.cpp
 
 pre-configure:
 .for F in ${SYSTEMS}
