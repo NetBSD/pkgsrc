@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2941 2005/01/20 20:38:22 bad Exp $
+$NetBSD: TODO,v 1.2942 2005/01/20 21:25:01 bad Exp $
 
 Suggested new packages
 ======================
@@ -741,7 +741,6 @@ Suggested package updates
 	o p5-Business-CreditCard-0.28
 	o p5-Business-ISBN-Data-1.09
 	o p5-CDDB-1.15
-	o p5-CGI_Lite-2.02
 	o p5-Class-MethodMaker-2.04.1
 	o p5-Convert-BER-1.3101
 	o p5-Crypt-CBC-2.12
@@ -755,7 +754,6 @@ Suggested package updates
 	o p5-DBIx-SearchBuilder-1.16
 	o p5-DB_File-1.810
 	o p5-Data-TemporaryBag-0.08
-	o p5-Devel-SmallProf-1.15
 	o p5-Device-Gsm-1.36
 	o p5-Device-Modem-1.43
 	o p5-Device-SerialPort-1.002
@@ -840,7 +838,6 @@ Suggested package updates
 	o p5-Text-Kakasi-1.05
 	o p5-Text-Template-1.44
 	o p5-Tie-EncryptedHash-1.21
-	o p5-Time-HiRes-1.66
 	o p5-Time-Piece-2.00.01
 	o p5-Tree-Simple-1.14
 	o p5-URI-1.35
