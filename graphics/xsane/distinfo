@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2002/08/19 19:36:49 mycroft Exp $
+$NetBSD: distinfo,v 1.4 2001/10/15 21:28:42 veego Exp $
 
-SHA1 (xsane-0.86.tar.gz) = 9ca1dc7be786073101a9eda4e77555aac455422c
-Size (xsane-0.86.tar.gz) = 2259870 bytes
+SHA1 (xsane-0.80.tar.gz) = da176c70271ab22666ab79fa7b2af61a3037fd4c
+Size (xsane-0.80.tar.gz) = 1364632 bytes

@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.82 2002/08/19 18:39:14 seb Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.81 2002/08/15 00:34:04 fredb Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -572,12 +572,6 @@ FREEWNN_GROUP?=	jserver
 GAWK_ENABLE_PORTALS?=	NO
 # Used by gawk package to enable/disable handling file names that start with
 # `/p/' as a 4.4 BSD type portal file, i.e., a two-way pipe for `|&'.
-# Possible: YES, NO
-# Default: NO
-
-GMAKE_NSEC_TIMESTAMPS?=	NO
-# Used by GNU make to enable/disable support of micro- and nano-second
-# timestamp values provided by stat(2).
 # Possible: YES, NO
 # Default: NO
 

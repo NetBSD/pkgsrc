@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.97 2002/08/19 19:53:22 wiz Exp $
+# $NetBSD: Makefile,v 1.96 2002/08/02 05:40:48 jlam Exp $
 
 MOZ_VER=	1.0
 DISTNAME=	mozilla-source-${MOZ_VER}
@@ -14,7 +14,7 @@ HOMEPAGE=	http://www.mozilla.org/
 COMMENT=	Open-source version of the Netscape browser
 
 BUILD_DEPENDS+=	zip>=2.3:../../archivers/zip
-BUILD_DEPENDS+=	autoconf-2.13:../../devel/autoconf
+BUILD_DEPENDS+=	autoconf>=2.13:../../devel/autoconf
 
 USE_PERL5=	build
 USE_GMAKE=	yes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.7 2002/08/19 19:07:19 mycroft Exp $
+$NetBSD: distinfo,v 1.6 2002/03/03 15:23:10 veego Exp $
 
-SHA1 (libusb-0.1.6a.tar.gz) = 79ef093d70b5f4597a4227178ad00b6aa5ed49b0
-Size (libusb-0.1.6a.tar.gz) = 180291 bytes
-SHA1 (patch-ac) = cc92318e0979779f6ef03ee653bc94ee2b96a055
+SHA1 (libusb-0.1.5.tar.gz) = 519bb37993f01aefdc821cded229ca39e2112620
+Size (libusb-0.1.5.tar.gz) = 186539 bytes
+SHA1 (patch-ac) = 4e68ca416a75d54845bb0c19e17bd1c3d42ed252
+SHA1 (patch-ad) = 8674eb850989ecaaa9306f6da5919e7b025b363a

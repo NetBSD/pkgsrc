@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.4 2002/06/06 11:25:53 manu Exp $
+
+--- configure.in.orig	Thu Jun  6 13:02:43 2002
++++ configure.in	Thu Jun  6 13:04:13 2002
+@@ -7,9 +7,9 @@
+ AC_PROG_CC
+ AC_PROG_RANLIB
+ AC_PROG_CPP
+ 
+-ALL_LINGUAS="ca cs da de el es fi fr he hu it ja ko lt lv nl no pl pt pt_BR ro ru sk sl sr sv tr uk zh_CN zh_TW.Big5"
++ALL_LINGUAS="ca cs da de el es fi fr he hu it ja ko lt lv nl no pt pt_BR ro ru sk sl sr sv tr uk zh_CN"
+ AM_GNU_GETTEXT
+ 
+ AC_PATH_PROG(sedpath, sed)
+ if test "_$sedpath" = _; then
