@@ -1,15 +1,13 @@
-$NetBSD: patch-aa,v 1.1.1.1 2002/09/11 23:31:16 rh Exp $
+$NetBSD: patch-aa,v 1.2 2003/02/14 20:11:50 jmmv Exp $
 
---- doc/reference/Makefile.am.orig	Thu Sep  5 23:37:18 2002
-+++ doc/reference/Makefile.am	Thu Sep  5 23:37:33 2002
-@@ -155,8 +155,8 @@
- 	    echo '-- Installing '$$i ; \
- 	    $(INSTALL_DATA) $$i $(DESTDIR)$(TARGET_DIR); \
- 	  done; \
--	  echo '-- Installing $(srcdir)/html/index.sgml' ; \
--	  $(INSTALL_DATA) $(srcdir)/html/index.sgml $(DESTDIR)$(TARGET_DIR); \
-+	  echo '-- Installing $(srcdir)/html/index.html' ; \
-+	  $(INSTALL_DATA) $(srcdir)/html/index.html $(DESTDIR)$(TARGET_DIR); \
- 	fi)
+--- gnome-data/Makefile.in.orig	Thu Jan 23 15:08:16 2003
++++ gnome-data/Makefile.in
+@@ -132,7 +132,7 @@ YACC = @YACC@
+ Z_LIBS = @Z_LIBS@
+ gnomelocaledir = @gnomelocaledir@
  
- #
+-soundlistdir = $(sysconfdir)/sound/events
++soundlistdir = $(datadir)/examples/libgnome/sound/events
+ 
+ soundlist_in_files = \
+ 	gnome-2.soundlist.in		\
