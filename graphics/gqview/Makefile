@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.47 2004/04/30 23:33:37 snj Exp $
+# $NetBSD: Makefile,v 1.48 2004/09/20 21:12:15 snj Exp $
 
-DISTNAME=	gqview-1.4.3
+DISTNAME=	gqview-1.4.4
 CATEGORIES=	graphics x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gqview/}
 
@@ -10,10 +10,10 @@ COMMENT=	GTK2-based graphic file viewer
 
 BUILD_USES_MSGFMT=	# defined
 
-USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		# defined
+USE_BUILDLINK3=		yes
+USE_DIRS+=		xdg-1.1
 USE_PKGLOCALEDIR=	# defined
-CONFIGURE_ENV+=		ac_cv_path_GNOME_CONFIG=no
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
