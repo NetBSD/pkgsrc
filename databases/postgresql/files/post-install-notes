@@ -1,9 +1,9 @@
-$NetBSD: post-install-notes,v 1.4 1999/09/20 23:38:48 jlam Exp $
+$NetBSD: post-install-notes,v 1.5 1999/09/21 03:17:37 soren Exp $
 
 Now that PostgreSQL is installed, you should read the documentation and
 implementation guides. These can be found at:
 
-		http://www.PostgreSQL.org/docs
+		http://www.PostgreSQL.org/docs/
 
 You may wish to subscribe to the PostgreSQL user-support mailing list.
 Send an e-mail to pgsql-questions-request@postgresql.org with the
