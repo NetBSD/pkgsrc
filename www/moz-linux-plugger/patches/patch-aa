@@ -1,0 +1,39 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/01/05 04:13:43 rh Exp $
+
+--- pluggerrc.orig	Thu Dec  6 05:14:01 2001
++++ pluggerrc
+@@ -36,6 +36,7 @@ audio/mid: midi,mid: MIDI audio file
+ audio/x-mid: midi,mid: MIDI audio file
+ audio/midi: midi,mid: MIDI audio file
+ audio/x-midi: midi,mid: MIDI audio file
++	: midiplay $file
+ 	: timidity -s 48000 -a -idqqqqqqq "$file" >/dev/null 2>/dev/null
+ 	: playmidi $file
+ 
+@@ -67,6 +68,7 @@ audio/x-mpeg: mpa,abs,mpega: MPEG audio
+ 	: amp -b 200 -q "$file"
+ 	: maplay "$file"
+ 	: mpeg3play "$file"
++	: gqmpeg --playlist_add_play "$file"
+ 
+ audio/x-sidtune: sid,psid,dat: Commodore 64 audio
+ audio/sidtune: sid,psid,dat: Commodore 64 audio
+@@ -83,8 +85,10 @@ audio/x-basic: au,snd: Basic audio file
+ 
+ audio/wav:wav:Microsoft wave file
+ audio/x-wav:wav:Microsoft wave file
++	stream preload: audioplay
+ 	stream preload: splay -W
+ 	repeat swallow(alsaplayer): alsaplayer -q "$file" >/dev/null
++	: audioplay "$file"
+ 	: wavplay -q "$file"
+ 	stream preload: bplay 1>/dev/null 2>/dev/null
+ 	: bplay 1>/dev/null 2>/dev/null "$file"
+@@ -124,6 +128,7 @@ image/x-portable-anymap: pnm: PBM Image
+ 	exits: xli -quiet -windowid $window "$file"
+ 	exits: xloadimage -quiet -windowid $window "$file"
+ 	exits: display -window $window -backdrop $file
++	: xv $file
+ 
+ # This does not work :(
+ #	swallow(XVroot) maxaspect: xv -nopos "$file"
