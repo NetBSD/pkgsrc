@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.3 1998/08/07 11:13:51 agc Exp $
+$NetBSD: patch-ab,v 1.4 1999/08/31 19:26:41 jlam Exp $
 
---- check.c.orig        Sat Nov 29 23:32:37 1997
-+++ check.c     Sat Nov 29 23:32:51 1997
-@@ -733,7 +733,7 @@
-        (void) fclose(user_skey->keyfile);
+--- check.c.orig	Sat May 29 14:34:02 1999
++++ check.c	Sun Aug 29 05:42:50 1999
+@@ -1078,7 +1078,7 @@
+ 	(void) fclose(user_skey->keyfile);
  
      /* get the skey part of the prompt */
 -    if ((rval = skeychallenge(user_skey, user_name, challenge)) != 0) {
 +    if ((rval = skeychallenge(user_skey, user_name, challenge, sizeof(challenge))) != 0) {
  #ifdef OTP_ONLY
-        (void) fprintf(stderr,
-                       "%s: You do not exist in the s/key database.\n",
+ 	(void) fprintf(stderr,
+ 		       "%s: You do not exist in the s/key database.\n",

@@ -1,8 +1,11 @@
-@comment $NetBSD: PLIST,v 1.3 1998/01/24 22:53:04 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.4 1999/08/31 19:26:41 jlam Exp $
 bin/sudo
+man/man5/sudoers.5
+man/man8/sudo.8
+man/man8/visudo.8
 sbin/visudo
-etc/sudoers
-etc/sudoers.example
-man/man5/sudoers.5.gz
-man/man8/sudo.8.gz
-man/man8/visudo.8.gz
+share/examples/sudo/sudoers
+@exec if [ ! -f /etc/sudoers ]; then cp %D/%F /etc/sudoers; fi; chown 0:0 /etc/sudoers; chmod 0440 /etc/sudoers
+@unexec echo "If you won't be using the sudo package anymore, you may want to manually delete /etc/sudoers."
+share/examples/sudo/sudoers.sample
+@dirrm share/examples/sudo
