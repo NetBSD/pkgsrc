@@ -1,0 +1,13 @@
+$NetBSD: patch-ah,v 1.1.1.1 1999/06/12 20:22:53 kleink Exp $
+
+--- lib/Makefile.in.orig	Sun Feb 22 01:13:49 1998
++++ lib/Makefile.in	Wed Jun  9 00:59:00 1999
+@@ -11,7 +11,7 @@
+ exec_prefix = $(prefix)
+ bindir = $(exec_prefix)/bin
+ libdir = $(exec_prefix)/lib
+-datadir = $(prefix)/lib/xconqdir
++datadir = $(prefix)/share/xconq
+ mandir = $(prefix)/man
+ man6dir = $(mandir)/man6
+ infodir = $(prefix)/info
