@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2004/04/05 23:03:52 reinoud Exp $
+$NetBSD: distinfo,v 1.4 2004/04/24 16:53:38 minskim Exp $
 
-SHA1 (libXrandr-1.0.1.tar.bz2) = a3d4f06d1a64abaf8f5dd6f0125d4bc5aebdcdeb
-Size (libXrandr-1.0.1.tar.bz2) = 186940 bytes
+SHA1 (libXrandr-1.0.2.tar.bz2) = 9d0d5fe7ddab5c976a75cc848afa56aa6beabf18
+Size (libXrandr-1.0.2.tar.bz2) = 187231 bytes
 SHA1 (patch-aa) = a8e0b3ef460f21125ebf9058dcaa3d9066e06841
 SHA1 (patch-ab) = 54d37f78e7f61cb82957b7526e2a426bf1e41d8a
