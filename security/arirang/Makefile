@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2002/09/05 00:13:39 itojun Exp $
+# $NetBSD: Makefile,v 1.5 2002/09/05 00:18:20 itojun Exp $
 #
 
 DISTNAME=	arirang-1.6
@@ -6,7 +6,7 @@ CATEGORIES=	security www
 MASTER_SITES=	http://monkey.org/~pilot/arirang/
 
 MAINTAINER=	packages@netbsd.org
-HOMEPAGE=	http://www.monkey.org/~pilot/arirang/
+HOMEPAGE=	http://monkey.org/~pilot/arirang/
 COMMENT=	Powerful webserver security scanner
 
 do-install:
