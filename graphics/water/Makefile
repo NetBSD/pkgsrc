@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/07/26 21:41:27 jmmv Exp $
+# $NetBSD: Makefile,v 1.8 2004/04/12 02:28:00 snj Exp $
 #
 
 DISTNAME=	water-1.0
@@ -10,7 +10,7 @@ MAINTAINER=	zuntum@NetBSD.org
 HOMEPAGE=	http://www.libsdl.org/projects/water/
 COMMENT=	Motion in a pool of water
 
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 USE_X11=	YES
 GNU_CONFIGURE=	YES
 
@@ -20,5 +20,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/water320.bmp ${PREFIX}/share/water
 	${INSTALL_DATA} ${WRKSRC}/water.txt ${PREFIX}/share/doc/water
 
-.include "../../devel/SDL/buildlink2.mk"
+.include "../../devel/SDL/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
