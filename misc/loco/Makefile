@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/03/24 19:37:10 zuntum Exp $
+# $NetBSD: Makefile,v 1.4 2001/10/01 06:35:58 zuntum Exp $
 #
 
 DISTNAME=	loco-0.32
@@ -10,12 +10,8 @@ HOMEPAGE=	http://zjuul.net/~jules/loco/
 COMMENT=	Colorize file or standard input and print on the standard output
 
 USE_PERL5=	YES
+REPLACE_PERL=	loco
 
 ALL_TARGET=	# defined
-
-post-patch:
-	${SED} "s,/usr/bin/perl,${LOCALBASE}/bin/perl,g"		\
-		${WRKSRC}/loco > ${WRKSRC}/loco.done
-	${MV} ${WRKSRC}/loco.done ${WRKSRC}/loco
 
 .include "../../mk/bsd.pkg.mk"
