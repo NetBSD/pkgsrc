@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2000/05/09 18:09:10 tron Exp $
+@comment $NetBSD: PLIST,v 1.12 2001/02/13 11:47:02 tron Exp $
 bin/mutt
 bin/muttbug
 bin/pgpewrap
@@ -40,25 +40,25 @@ share/doc/mutt/samples/pgp6.rc
 share/doc/mutt/samples/sample.mailcap
 share/doc/mutt/samples/sample.muttrc
 share/doc/mutt/samples/sample.muttrc-tlr
-${LOCALEBASE}/locale/cs/LC_MESSAGES/mutt.mo
-${LOCALEBASE}/locale/da/LC_MESSAGES/mutt.mo
-${LOCALEBASE}/locale/de/LC_MESSAGES/mutt.mo
-${LOCALEBASE}/locale/el/LC_MESSAGES/mutt.mo
-${LOCALEBASE}/locale/eo/LC_MESSAGES/mutt.mo
-${LOCALEBASE}/locale/es/LC_MESSAGES/mutt.mo
-${LOCALEBASE}/locale/fr/LC_MESSAGES/mutt.mo
-${LOCALEBASE}/locale/gl/LC_MESSAGES/mutt.mo
-${LOCALEBASE}/locale/id/LC_MESSAGES/mutt.mo
-${LOCALEBASE}/locale/it/LC_MESSAGES/mutt.mo
-${LOCALEBASE}/locale/ko/LC_MESSAGES/mutt.mo
-${LOCALEBASE}/locale/nl/LC_MESSAGES/mutt.mo
-${LOCALEBASE}/locale/pl/LC_MESSAGES/mutt.mo
-${LOCALEBASE}/locale/pt_BR/LC_MESSAGES/mutt.mo
-${LOCALEBASE}/locale/ru/LC_MESSAGES/mutt.mo
-${LOCALEBASE}/locale/sk/LC_MESSAGES/mutt.mo
-${LOCALEBASE}/locale/sv/LC_MESSAGES/mutt.mo
-${LOCALEBASE}/locale/uk/LC_MESSAGES/mutt.mo
-${LOCALEBASE}/locale/zh_TW.Big5/LC_MESSAGES/mutt.mo
+${LOCALEDIR}/locale/cs/LC_MESSAGES/mutt.mo
+${LOCALEDIR}/locale/da/LC_MESSAGES/mutt.mo
+${LOCALEDIR}/locale/de/LC_MESSAGES/mutt.mo
+${LOCALEDIR}/locale/el/LC_MESSAGES/mutt.mo
+${LOCALEDIR}/locale/eo/LC_MESSAGES/mutt.mo
+${LOCALEDIR}/locale/es/LC_MESSAGES/mutt.mo
+${LOCALEDIR}/locale/fr/LC_MESSAGES/mutt.mo
+${LOCALEDIR}/locale/gl/LC_MESSAGES/mutt.mo
+${LOCALEDIR}/locale/id/LC_MESSAGES/mutt.mo
+${LOCALEDIR}/locale/it/LC_MESSAGES/mutt.mo
+${LOCALEDIR}/locale/ko/LC_MESSAGES/mutt.mo
+${LOCALEDIR}/locale/nl/LC_MESSAGES/mutt.mo
+${LOCALEDIR}/locale/pl/LC_MESSAGES/mutt.mo
+${LOCALEDIR}/locale/pt_BR/LC_MESSAGES/mutt.mo
+${LOCALEDIR}/locale/ru/LC_MESSAGES/mutt.mo
+${LOCALEDIR}/locale/sk/LC_MESSAGES/mutt.mo
+${LOCALEDIR}/locale/sv/LC_MESSAGES/mutt.mo
+${LOCALEDIR}/locale/uk/LC_MESSAGES/mutt.mo
+${LOCALEDIR}/locale/zh_TW.Big5/LC_MESSAGES/mutt.mo
 @dirrm share/mutt
 @dirrm share/doc/mutt/samples
 @dirrm share/doc/mutt/html
