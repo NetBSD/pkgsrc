@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3393 2003/09/16 09:07:49 agc Exp $
+$NetBSD: CHANGES,v 1.3394 2003/09/16 09:25:46 agc Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3711,3 +3711,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated audit-packages to 1.22 [agc 2003-09-16]
 	Updated tsclient to 0.124 [xtraeme 2003-09-16]
 	Updated audit-packages to 1.23 [agc 2003-09-16]
+	Updated jwhois to 3.2.2 [agc 2003-09-16]
