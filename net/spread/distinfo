@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.5 2003/11/05 00:48:56 recht Exp $
+$NetBSD: distinfo,v 1.6 2003/11/05 08:22:12 agc Exp $
 
-SHA1 (spread-src-3.17.1.tar.gz) = c87a78392ff42d24d1ab088de8fda99703252068
-Size (spread-src-3.17.1.tar.gz) = 581845 bytes
+SHA1 (spread-3.17.1/spread-src-3.17.1.tar.gz) = c87a78392ff42d24d1ab088de8fda99703252068
+Size (spread-3.17.1/spread-src-3.17.1.tar.gz) = 581845 bytes
 SHA1 (patch-ba) = 90f2896dc62627772a05c06add99c59a55e91c88
 SHA1 (patch-bb) = efd9b08d775542622ce35265e2b72d655b5ca00f
 SHA1 (patch-bd) = 5d09d5e182cb2bf52f6366ff02e4f73dcd067e5e
