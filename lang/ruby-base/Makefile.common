@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.14 2003/06/23 21:40:22 jschauma Exp $
+# $NetBSD: Makefile.common,v 1.15 2003/12/19 11:59:39 sketch Exp $
 # FreeBSD: ports/Mk/bsd.ruby.mk,v 1.11 2000/11/16 17:59:40 knu Exp
 # Makefile.common: ruby common makefile, based on FreeBSD's bsd.ruby.mk.
 
@@ -72,11 +72,7 @@ RUBY_VERSION?=		1.7			# current, not tested.
 RUBY_SUFFIX?=		${_RUBY_SUFFIX}
 .endif
 
-.if ${OPSYS} == "Linux"
-RUBY_ARCH?=		${LOWER_ARCH}-${LOWER_OPSYS}
-.else
-RUBY_ARCH?=		${LOWER_ARCH}-${LOWER_OPSYS}${APPEND_ELF}
-.endif
+RUBY_ARCH?=		${LOWER_ARCH}-${LOWER_OPSYS}${APPEND_ELF}${LOWER_OPSYS_VERSUFFIX}
 RUBY_NAME?=		ruby${RUBY_SUFFIX}
 
 RUBY_DISTNAME?=		ruby-${RUBY_VERSION}
