@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/11/28 04:57:17 taca Exp $
+# $NetBSD: Makefile,v 1.9 2004/11/28 15:34:06 taca Exp $
 
 DISTNAME=	mod_ruby-${VERSION}
 PKGNAME=	ap2-${RUBY_PKGPREFIX}-${VERSION}
@@ -14,17 +14,15 @@ CONFLICTS+=		ap-ruby*
 USE_BUILDLINK3=		yes
 USE_PKGINSTALL=		yes
 APACHE_MODULE=		yes
-VERSION=		1.1.1
+VERSION=		1.2.4
 HAS_CONFIGURE=  	yes
 INSTALL_TARGET=		site-install
 CONFIGURE_SCRIPT=	${RUBY} configure.rb
-CONFIGURE_ARGS+=	--with-apxs="${APXS}" \
-	--with-eruby-includes="${BUILDLINK_PREFIX.ruby-eruby}/include" \
-	--with-eruby-libraries="${BUILDLINK_PREFIX.ruby-eruby}/lib"
+CONFIGURE_ARGS+=	--with-apxs="${APXS}"
 MAKE_FLAGS+= APACHE_INCLUDES='-I${PREFIX}/include/httpd \
 		-I${PREFIX}/include/apr-0'
 MESSAGE_SUBST+=	RUBY_DOCDIR=${RUBY_DOCDIR}
-DOCS=		ChangeLog README.en README.ja
+DOCS=		ChangeLog NOTICE README.en README.ja
 
 .include "../../mk/bsd.prefs.mk"
 
