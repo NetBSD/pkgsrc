@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/07/18 10:31:20 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2001/11/28 05:20:38 jlam Exp $
 #
 
 DISTNAME=       bonnie++-1.01
@@ -10,9 +10,9 @@ MAINTAINER=	root@garbled.net
 HOMEPAGE=	http://www.coker.com.au/bonnie++/
 COMMENT=	Enhanced performance Test of Filesystem I/O
 
-GNU_CONFIGURE=	yes
-USE_PERL5=	yes
-REPLACE_PERL=	bon_csv2txt.in bon_csv2html.in
+USE_BUILDLINK_ONLY=	YES
+GNU_CONFIGURE=		YES
+REPLACE_PERL=		bon_csv2txt.in bon_csv2html.in
 
 benchmark:
 	@(cd ${WRKSRC}; ./bonnie++ -u 0:0 | tee bonnie.out)
@@ -21,4 +21,5 @@ results:
 	@${MKDIR} /tmp/benches/`domainname`
 	-@${CP} ${WRKSRC}/bonnie.out /tmp/benches/`domainname`/bonnie++.`uname`-`uname -m`-`uname -r`.`hostname`
 
+.include "../../lang/perl5/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
