@@ -1,14 +1,15 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:54:23 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/07/08 14:25:03 jschauma Exp $
 bin/bzip.xnc
-bin/es
 bin/groups.xnc
 bin/gzip.xnc
 bin/ives
+bin/iedit
+bin/iview
 bin/rpm.xnc
 bin/users.xnc
-bin/vs
 bin/xjpegroot
 bin/xnc
+bin/xncloader
 bin/xncsetup
 bin/xnlaunch
 bin/zips.xnc
