@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2001/02/17 18:19:05 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/03/28 02:35:37 hubertf Exp $
 #
 
-DISTNAME=	lopster-0.9.7.2
+DISTNAME=	lopster-0.9.8
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lopster/}
 
@@ -12,8 +12,13 @@ COMMENT=	Yet another Gtk+ Napster clone
 DEPENDS+=	glib>=1.2.0:../../devel/glib
 DEPENDS+=	gtk+>=1.2.8:../../x11/gtk
 
-USE_X11BASE=	YES
-USE_GMAKE=	YES
+USE_X11BASE=	yes
+USE_GMAKE=	yes
 GNU_CONFIGURE=	# defined
+USE_INTL=	yes
+CC+=		-I${LOCALBASE}/include	# libintl headers
+
+post-extract:
+	${RM} -fr ${WRKSRC}/intl
 
 .include "../../mk/bsd.pkg.mk"
