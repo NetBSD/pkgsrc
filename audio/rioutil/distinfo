@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2004/08/19 03:33:35 schmonz Exp $
+$NetBSD: distinfo,v 1.7 2005/01/08 22:56:04 schmonz Exp $
 
-SHA1 (rioutil-1.4.6.tar.gz) = 22322ebcf421c1a7b307485d7a66f7922b900b22
-Size (rioutil-1.4.6.tar.gz) = 406514 bytes
+SHA1 (rioutil-1.4.7.tar.gz) = 956a75ce2f23fa0dfd62a4c1facbd1994b88cde6
+Size (rioutil-1.4.7.tar.gz) = 406844 bytes
