@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2002/09/23 13:26:29 taca Exp $
+# $NetBSD: Makefile,v 1.24 2002/09/24 14:21:43 taca Exp $
 #
 
 DISTNAME=	jisx0208fonts-20010112
@@ -89,7 +89,7 @@ post-extract:
 	@(cd ${WRKDIR}/shinonome12-1.0.8 ; \
 	${SETENV} ${SHINONOME_CONFIGURE_ENV} ${CONFIGURE_SCRIPT} \
 		${SHINONOME_CONFIGURE_ARGS} ; \
-	${SETENV} ${MAKE_ENV} gmake bdf; \
+	${SETENV} ${MAKE_ENV} ${GMAKE} bdf; \
 	${RM} hankaku/*.bdf latin1/*.bdf)
 .endif
 	(cd ${WRKSRC}; ${MAKE} prepare)
