@@ -1,8 +1,8 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: courierpop.sh,v 1.8 2004/02/24 01:18:52 jlam Exp $
+# $NetBSD: courierpop.sh,v 1.9 2004/07/14 20:07:16 jlam Exp $
 #
-# Courier POP services daemon
+# Courier POP3 services daemon
 #
 # PROVIDE: courierpop
 # REQUIRE: authdaemond
@@ -17,6 +17,7 @@ command="@PREFIX@/libexec/courier/couriertcpd"
 ctl_command="@PREFIX@/libexec/courier/pop3d.rc"
 pidfile="/var/run/pop3d.pid"
 required_files="@PKG_SYSCONFDIR@/pop3d @PKG_SYSCONFDIR@/pop3d-ssl"
+required_vars="authdaemond"
 
 start_cmd="courier_doit start"
 stop_cmd="courier_doit stop"
@@ -26,6 +27,19 @@ courier_doit()
 	action=$1
 	case ${action} in
 	start)
+		for _f in $required_vars; do
+			eval _value=\$${_f}
+			case $_value in
+			[Yy][Ee][Ss]|[Tt][Rr][Uu][Ee]|[Oo][Nn]|1)
+				;;
+			*)
+				@ECHO@ 1>&2 "$0: WARNING: \$${_f} is not set"
+				if [ -z $rc_force ]; then
+					return 1
+				fi
+				;;
+			esac
+		done
 		for f in $required_files; do
 			if [ ! -r "$f" ]; then
 				@ECHO@ "$0: WARNING: $f is not readable"
