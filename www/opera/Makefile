@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2001/03/23 08:42:56 tron Exp $
+# $NetBSD: Makefile,v 1.17 2001/04/03 06:58:39 tron Exp $
 
 DISTNAME=	opera-5.0b7
 CATEGORIES=	www
 MASTER_SITES=	http://opera.online.no/linux/tgz/ \
 		ftp://ftp.opera.com/pub/opera/linux/  \
-		ftp://ftp.fh-koblenz.de/pub/InternetClients/Opera/english/4.0b4/linux/intel-x86/static/ \
 		ftp://gd.tuwien.ac.at/infosys/browsers/opera/linux/tgz/tgz/ \
 		ftp://sunsite.cnlab-switch.ch/mirror/opera/linux/tgz/
 DISTFILES=	${RPMFILES}
