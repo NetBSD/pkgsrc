@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/09/21 23:46:55 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2002/10/10 00:01:46 wiz Exp $
 
 DISTNAME=	bg5ps-1.3.0
 CATEGORIES=	print converters
@@ -11,6 +11,7 @@ COMMENT=	convert Big5/GB encoded files to postscript
 
 DEPENDS+=	arphic-ttf-2.11:../../fonts/arphic-ttf
 
+USE_BUILDLINK2=		yes
 PKG_SYSCONFSUBDIR?=	bg5ps
 
 post-patch:
@@ -18,5 +19,5 @@ post-patch:
 		${WRKSRC}/bg5ps > ${WRKSRC}/bg5ps.new
 
 .include "../../lang/python/extension.mk"
-.include "../../graphics/freetype-lib/buildlink.mk"
+.include "../../graphics/freetype-lib/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
