@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1260 2004/01/01 12:34:20 recht Exp $
+$NetBSD: TODO,v 1.1261 2004/01/01 16:00:10 cjep Exp $
 
 Suggested new packages
 ======================
@@ -186,7 +186,7 @@ Suggested package updates
 	o gtk-gnutella-0.93
 	o gtkglext-1.0.5
 	o gtksee-0.5.5.1
-	o host-20031203
+	o host-20031203 [cjep, also PR#21047 for earlier version]
 	o hp2xx-3.4.4
 	o hpijs-1.4.1
 	o icepref-2.3
