@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4350 2004/01/04 19:14:42 cjep Exp $
+$NetBSD: CHANGES,v 1.4351 2004/01/04 21:38:06 rh Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -51,3 +51,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added quake3server-1.32b [xtraeme 2003-01-04]
 	Added quake3server-ra3-1.65 [xtraeme 2003-01-04]
 	Updated overnet to 0.51.2 [cjep 2003-01-04]
+	Updated evolution to 1.4.5 [rh 2003-01-04]
