@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1886 2004/07/01 17:17:52 adrianp Exp $
+$NetBSD: TODO,v 1.1887 2004/07/02 11:30:12 wiz Exp $
 
 Suggested new packages
 ======================
@@ -163,6 +163,7 @@ Suggested package updates
 =========================
 
 	o ImageViewer-0.6.3
+	o TeXmacs-1.0.3.10
 	o Xaw3d-1.5E
 	o Xbae-4.50.0
 	o abiword-2.0.7
@@ -176,16 +177,15 @@ Suggested package updates
 	o avidemux-2.0.20
 	o balsa-1.4.4
 	o bind-9.3
-	o binutils-2.15
 	o bitchx-1.1
 	o bitlbee-0.90a
-	o bk_edit-0.6.23
 	o blender-2.33
 	o boehm-gc-6.3alpha6 [recht]
 	o boson-0.10
-	o centericq-4.9.12
+	o centericq-4.10.0
 	o cervisia-2.1.2
 	o checkbot-1.74
+	o clamav-0.74
 	o clanlib-0.7.8
 	o classpath-0.09
 	o clisp-2.33.2
@@ -216,7 +216,7 @@ Suggested package updates
 	o eclipse-3.0
 	o efax-gtk-2.2.8
 	o elk-3.99.6
-	o elm-me-2.4pl116a
+	o elm-me-2.4pl117
 	o evolution-1.5.2
 	o exim-4.34
 	o festival-1.4.3
@@ -265,6 +265,7 @@ Suggested package updates
 	o gtranslator-1.0.1
 	o guile-pg-0.16 [pkg/24039]
 	o guile-gtk-0.40.90 [in wip]
+	o heimdal-0.6.2
 	o host-20031203 [cjep, in wip, awaiting greg woods response on 1 issue]
 	o hp2xx-3.4.4
 	o icepref-2.3
@@ -277,6 +278,7 @@ Suggested package updates
 	o jam-2.5
 	o john-1.6.37
 	o jpilot-0.99.7 [pkg/24635]
+	o kth-kerberos-1.2.2
 	o larswm-7.5.0
 	o latex2rtf-1.9.15
 	o lavaps-2.5
@@ -290,6 +292,7 @@ Suggested package updates
 	o libole2-2.2.8
 	o libsigc++-2.0.3
 	o licq-1.2.7
+	o liferea-0.5.1
 	o lilypond-2.2
 	o lmbench-2.0.4
 	o lout-3.29
@@ -304,6 +307,8 @@ Suggested package updates
 	o midnight-commander-4.6.0
 	o mimedefang-2.43
 	o minicom-2.1
+	o mkvtoolnix-0.9.2
+	o mono-1.0
 	o mowitz-0.3.0
 	o moz-bin-flash-7.0r25 [pkgsrc-wip]
 	o moz-bin-plugger-1.5.1
@@ -322,7 +327,7 @@ Suggested package updates
 	o ns-flash-6.0.79
 	o nsd-2.1.0
 	o nslint-2.1a3
-	o nut-9.16
+	o nut-9.17
 	o nxtvepg-2.7.0
 	o ocaml-3.07pl2
 	o onyx-5.1.1
@@ -337,6 +342,7 @@ Suggested package updates
 	o p5-Exception-Class-1.17
 	o pdmenu-1.2.81
 	o pgplot-5.2 [grant]
+	o phppgadmin-3.4 [pkg/26130]
 	o physfs-1.0.0
 	o plib-1.7.0
 	o povray-3.6.0
@@ -347,6 +353,7 @@ Suggested package updates
 	o pygtk-0.6.11
 	o pysol-4.82
 	o ratpoison-1.3.0
+	o re2c-0.9.2
 	o rep-gtk-0.17
 	o rox-1.2.2
 	o rox-session-0.1.23
@@ -366,11 +373,11 @@ Suggested package updates
 	o slib-3a1
 	o smalltalk-2.1.8
 	o smarteiffel-1.1 [replacing smalleiffel]
-	o snd-7.4
+	o snd-7.5
 	o snes9x-1.42
 	o snownews-1.5.3
 	o socat-1.4.0.0
-	o sqlite-2.8.14
+	o sqlite-3.0.2
 	o sqwebmail-4.0.4
 	o srp_client-1.7.5 [jlam]
 	o staroffice-7p1
@@ -386,7 +393,7 @@ Suggested package updates
 	o texinfo-4.7
 	o thunderbird-0.7.1
 	o thy-0.9.0 [pkg/25318]
-	o thy-0.9.2
+	o thy-0.9.3
 	o tkdesk-2.0
 	o tkman-2.2
 	o top-3.5b12.10
