@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2003/10/29 05:45:15 reed Exp $
+# $NetBSD: Makefile,v 1.18.2.1 2003/12/20 19:49:01 agc Exp $
 #
 
 DISTNAME=	fontconfig-2.2.1
@@ -32,7 +32,12 @@ CONFIGURE_ARGS+=	--with-expat-includes=${BUILDLINK_PREFIX.expat}/include
 CONFIGURE_ARGS+=	--with-expat-lib=${BUILDLINK_PREFIX.expat}/lib
 CONFIGURE_ARGS+=	--with-confdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-x
-CONFIGURE_ARGS+=	--with-add-fonts=${X11PREFIX}/lib/X11/fonts/TTF,${X11PREFIX}/lib/X11/fonts/Type1
+FONT_PATH=		${X11PREFIX}/lib/X11/fonts/TTF,${X11PREFIX}/lib/X11/fonts/Type1
+.include "../../mk/bsd.prefs.mk"
+.if ${X11BASE} != ${X11PREFIX}
+FONT_PATH2=		,${X11BASE}/lib/X11/fonts,${X11BASE}/lib/X11/fonts/TTF,${X11BASE}/lib/X11/fonts/Type1
+.endif
+CONFIGURE_ARGS+=	--with-add-fonts=${FONT_PATH}${FONT_PATH2}
 
 EGDIR=		${PREFIX}/share/examples/fontconfig
 CONF_FILES=	${EGDIR}/fonts.conf ${PKG_SYSCONFDIR}/fonts.conf
