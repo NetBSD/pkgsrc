@@ -1,4 +1,4 @@
-# $NetBSD: compiler.mk,v 1.33 2004/07/04 00:28:30 wiz Exp $
+# $NetBSD: compiler.mk,v 1.34 2004/07/04 00:38:15 wiz Exp $
 #
 # This Makefile fragment implements handling for supported C/C++/Fortran
 # compilers.
@@ -35,7 +35,8 @@
 #
 # USE_PKGSRC_GCC
 #	Force using the appropriate version of GCC from pkgsrc based on
-#	GCC_REQD instead of the native compiler.
+#	GCC_REQD instead of the native compiler.  Should only be set in
+#	/etc/mk.conf.
 #
 # USE_GCC_SHLIB
 #	Indicates that a package uses GCC shared libraries, so we
@@ -80,6 +81,12 @@ USE_LANGUAGES?=	c
 
 # Default to using gcc.
 PKGSRC_COMPILER?=	gcc
+
+# For environments where there is an external gcc too, but pkgsrc
+# should use the pkgsrc one for consistency.
+.if defined(USE_PKGSRC_GCC)
+_USE_PKGSRC_GCC=	yes
+.endif
 
 _COMPILERS=		gcc mipspro mipspro-ucode sunpro
 _PSEUDO_COMPILERS=	ccache distcc
