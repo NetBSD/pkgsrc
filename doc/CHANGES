@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.547 2002/11/18 16:24:05 cjep Exp $
+$NetBSD: CHANGES,v 1.548 2002/11/18 17:11:50 cjep Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3654,3 +3654,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated mrtg to 2.9.26.2 [martti 2002-11-18]
 	Added makeself-1.5.3 [cjep 2002-11-18]
 	Added libcomprex-0.3.2 [cjep 2002-11-18]
+	Added mudsh-20010311 [cjep 2002-11-18]
