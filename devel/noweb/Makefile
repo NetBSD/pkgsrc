@@ -3,7 +3,7 @@
 # Date created:		29 July 1995
 # Whom:			Thomas Gellekum <tg@freebsd.org>
 #
-# $NetBSD: Makefile,v 1.3 1998/01/24 04:31:10 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 1998/02/02 06:36:35 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.10 1997/09/15 07:22:06 tg Exp
 #
 
@@ -11,6 +11,7 @@ DISTNAME=	noweb-2.8a
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.cs.virginia.edu/pub/nr/
 EXTRACT_SUFX=	.tgz
+ONLY_FOR_ARCHS=	i386
 
 MAINTAINER=	tg@freebsd.org
 
