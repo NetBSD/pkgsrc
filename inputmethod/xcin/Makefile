@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/06/04 08:46:59 uebayasi Exp $
+# $NetBSD: Makefile,v 1.2 2002/07/16 15:40:59 agc Exp $
 #
 
 DISTNAME=	xcin-2.5.3.pre2
@@ -15,6 +15,10 @@ USE_X11BASE=	yes
 USE_LIBTOOL=	yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/script/ltmain.sh
 GNU_CONFIGURE=	yes
+CONFIGURE_ARGS+=	--with-db-lib=${BUILDLINK_DIR}/lib
+CONFIGURE_ARGS+=	--with-db-inc=${BUILDLINK_DIR}/include/db3
+
+USE_BUILDLINK_ONLY=	yes
 
 WRKSRC=		${WRKDIR}/xcin
 
@@ -27,7 +31,7 @@ post-configure:
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/xcin
-	${CP} -Rf ${WRKSRC}/doc/* ${PREFIX}/share/doc/xcin
+	cd ${WRKSRC}/doc; ${PAX} -rw * ${PREFIX}/share/doc/xcin
 
 .include "../../converters/libiconv/buildlink.mk"
 .include "../../databases/db3/buildlink.mk"
