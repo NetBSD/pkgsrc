@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.644 2001/01/17 20:46:57 tron Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.645 2001/01/21 22:41:03 veego Exp $
 #
 # This file is in the public domain.
 #
@@ -482,7 +482,8 @@ PLIST_SUBST+=	OPSYS=${OPSYS}						\
 		MACHINE_GNU_PLATFORM=${MACHINE_GNU_PLATFORM}		\
 		LOWER_VENDOR=${LOWER_VENDOR}				\
 		LOWER_OPSYS=${LOWER_OPSYS}				\
-		PKGNAME=${PKGNAME}
+		PKGNAME=${PKGNAME}					\
+		SVR4_PKGNAME=${SVR4_PKGNAME}
 .if defined(PERL5_SITELIB)
 PLIST_SUBST+=	PERL5_SITELIB=${PERL5_SITELIB:S/^${LOCALBASE}\///}
 .endif
@@ -905,6 +906,7 @@ PATCH_SITES:=	${_MASTER_SITE_OVERRIDE} ${PATCH_SITES}
 # Derived names so that they're easily overridable.
 DISTFILES?=		${DISTNAME}${EXTRACT_SUFX}
 PKGNAME?=		${DISTNAME}
+SVR4_PKGNAME?=		${PKGNAME}
 
 MAINTAINER?=		packages@netbsd.org
 
@@ -2528,8 +2530,10 @@ bin-install:
 # You probably won't need to touch these
 ################################################################
 
-# Set to "html" by the README.html target (and passed via build-depends-list
-# and run-depends-list)
+# Set to "html" by the README.html target to generate HTML code,
+# or to "svr4" to print SVR4 (Solaris, ...) short package names, from
+# SVR4_PKGNAME variable.
+# This variable is passed down via build-depends-list and run-depends-list
 PACKAGE_NAME_TYPE?=	name
 
 # Nobody should want to override this unless PKGNAME is simply bogus.
@@ -2538,6 +2542,8 @@ PACKAGE_NAME_TYPE?=	name
 package-name:
 .if (${PACKAGE_NAME_TYPE} == "html")
 	@${ECHO} '<a href="../../${PKGPATH:S/&/\&amp;/g:S/>/\&gt;/g:S/</\&lt;/g}/README.html">${PKGNAME:S/&/\&amp;/g:S/>/\&gt;/g:S/</\&lt;/g}</A>'
+.elif (${PACKAGE_NAME_TYPE} == "svr4")
+	@${ECHO} ${SVR4_PKGNAME}
 .else
 	@${ECHO} ${PKGNAME}
 .endif # PACKAGE_NAME_TYPE
@@ -2570,7 +2576,7 @@ run-depends-list:
 		${PKG_INFO} -qf "$$pkg" | ${AWK} '/^@pkgdep/ {print $$2}'; \
 	else 							\
 		if cd $$dir 2>/dev/null; then				\
-			${MAKE} ${MAKEFLAGS} run-depends-list PACKAGE_NAME_TYPE=${PACKAGE_NAME_TYPE}; \
+			${MAKE} ${MAKEFLAGS} run-depends-list PACKAGE_NAME_TYPE=${PACKAGE_NAME_TYPE} PACKAGE_DEPENDS_WITH_PATTERNS=${PACKAGE_DEPENDS_WITH_PATTERNS}; \
 		else 							\
 			${ECHO_MSG} "Warning: \"$$dir\" non-existent -- @pkgdep registration incomplete" >&2; \
 		fi;							\
