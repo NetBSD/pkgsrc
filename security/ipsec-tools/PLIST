@@ -1,0 +1,26 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/11/09 22:42:20 manu Exp $
+lib/libipsec.la
+include/libipsec/libpfkey.h
+sbin/setkey
+sbin/racoon
+sbin/racoonctl
+sbin/plainrsa-gen
+man/man3/ipsec_set_policy.3
+man/man3/ipsec_strerror.3
+man/man5/racoon.conf.5
+man/man8/racoon.8
+man/man8/setkey.8
+man/man8/plainrsa-gen.8
+share/examples/ipsec-tools/psk.txt
+share/examples/ipsec-tools/psk.txt.in
+share/examples/ipsec-tools/psk.txt.sample
+share/examples/ipsec-tools/racoon.conf
+share/examples/ipsec-tools/racoon.conf.in
+share/examples/ipsec-tools/racoon.conf.sample
+share/examples/ipsec-tools/racoon.conf.sample-cvpn
+share/examples/ipsec-tools/racoon.conf.sample-gssapi
+share/examples/ipsec-tools/racoon.conf.sample-inherit
+share/examples/ipsec-tools/racoon.conf.sample-natt
+share/examples/ipsec-tools/racoon.conf.sample-plainrsa
+@dirrm include/libipsec
+@dirrm share/examples/ipsec-tools
