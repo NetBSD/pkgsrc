@@ -1,0 +1,39 @@
+icdprog - a programmer for Microchip PIC controllers.
+
+ICDPROG is a simple command line programmer for Microchip PIC controllers,
+using the Microchip or Olimex ICD (in circuit debugger) as a programmer.
+The program is written for command line usage.
+
+FEATURES
+ * Works with PIC16F87x, x = [0,1,2,3,4,6,7] (3,7 is well tested ... )
+ * Reads intel hex format
+ * Auto-detects controller type
+
+run the program with
+
+    ./icdprog <hex file>
+
+or
+
+    ./icdprog -p /dev/tty01 <hex file>
+
+if you connect the ICD to serial port #2
+
+TODO
+* Better documentation, and web page
+* Add EEPROM programming support
+* Add verify mode (but it verifies during programming)
+* Better error checking
+* Set the fuse bits from the command line
+* Windows port (I need this for our production environment)
+* Check sum calculation
+* gdb support :-)  /* sorry, I am dreaming again ... */
+
+MICROCHIP
+If you have any problems with this software, please don't bug Microchip
+with them. This software was written without any help from them
+(it would have been much easier if they had released the specification
+of the ICD..). Use the sourceforge forum instead.
+
+CREDITS
+Geir Thomassen, geirt@powertech.no
