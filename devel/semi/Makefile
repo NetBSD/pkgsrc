@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/04/17 02:15:08 uebayasi Exp $
+# $NetBSD: Makefile,v 1.8 2003/06/25 12:44:21 seb Exp $
 
 DISTNAME=	semi-1.14.5
 PKGREVISION=	1
@@ -24,6 +24,8 @@ INSTALL_TARGET= install-package
 MAKEFLAGS+=     PACKAGEDIR=${EMACS_LISPPREFIX:C|/lisp$||}
 .endif
 
+USE_NEW_TEXINFO=	YES
+USE_MAKEINFO=	YES
 INFO_FILES=	mime-ui-en.info mime-ui-ja.info
 
 pre-build:
@@ -39,5 +41,4 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/mime-ui-en.info ${PREFIX}/info
 	${INSTALL_DATA} ${WRKSRC}/mime-ui-ja.info ${PREFIX}/info
 
-.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
