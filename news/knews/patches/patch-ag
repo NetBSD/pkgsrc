@@ -1,7 +1,7 @@
-$NetBSD: patch-ag,v 1.3 2001/02/23 22:19:42 tron Exp $
+$NetBSD: patch-ag,v 1.4 2001/02/24 22:40:40 tron Exp $
 
 --- src/sysdeps.c.orig	Tue Dec 29 11:46:52 1998
-+++ src/sysdeps.c	Fri Feb 23 23:11:36 2001
++++ src/sysdeps.c	Sat Feb 24 23:31:43 2001
 @@ -20,8 +20,8 @@
  #include <netinet/in.h>
  #include <arpa/inet.h>
@@ -64,7 +64,7 @@ $NetBSD: patch-ag,v 1.3 2001/02/23 22:19:42 tron Exp $
      SERV_ADDR		*ret;
      struct in_addr	addr;
      unsigned short	port;
-@@ -332,14 +359,15 @@
+@@ -332,14 +359,38 @@
      ret->port = port;
  
      return ret;
@@ -72,53 +72,57 @@ $NetBSD: patch-ag,v 1.3 2001/02/23 22:19:42 tron Exp $
  }
  
 -int open_socket(void)
-+int open_socket(int family)
++SERV_ADDR *next_addr(SERV_ADDR *addr)
++
++{
++#ifdef USE_INET6
++    return addr->ai_next;
++#else
++    return NULL;
++#endif
++}
++void free_addr(SERV_ADDR *addr)
++
++{
++#ifdef USE_INET6
++    freeaddrinfo(addr);
++#else
++    XtFree((char *)addr);
++#endif
++}
++
++int open_socket(SERV_ADDR *addr)
  {
      int	fd, tmp;
  
      do {
 -	fd = socket(PF_INET, SOCK_STREAM, 0);
-+	fd = socket(family, SOCK_STREAM, 0);
++#ifdef USE_INET6
++	fd = socket(addr->ai_family, addr->ai_socktype, addr->ai_protocol);
++#else
++	fd = socket(AF_INET, SOCK_STREAM, 0);
++#endif
      } while (fd < 0 && errno == EINTR);
  
      if (fd < 0) {
-@@ -372,6 +400,35 @@
+@@ -372,8 +423,15 @@
  
  int connect_socket(int fd, SERV_ADDR *addr)
  {
-+#ifdef USE_INET6
-+    int	family;
-+
-+    family = AF_INET;
-+    while (addr) {
-+	if (family != addr->ai_family) {
-+	    int	newsocket;
-+
-+	    newsocket = open_socket(addr->ai_family);
-+	    if (newsocket < 0)
-+		return -1;
-+	    if (dup2(newsocket, fd) < 0)
-+		close(newsocket);
-+
-+	    close(newsocket);
-+	    family = addr->ai_family;
-+	}
-+
-+	do {
-+	    if ((connect(fd, addr->ai_addr, addr->ai_addrlen) == 0) ||
-+		(errno == EISCONN))
-+		return 0;
-+	} while (would_block(fd, errno));
-+
-+	addr = addr->ai_next;
-+    }
-+
-+    return -1;
-+#else
-     struct sockaddr_in	serv_addr;
+-    struct sockaddr_in	serv_addr;
      int			tmp;
++#ifdef USE_INET6
++    do {
++	tmp = connect(fd, addr->ai_addr, addr->ai_addrlen);
++    } while (tmp < 0 && errno == EINTR);
++
++    return tmp;
++#else
++    struct sockaddr_in	serv_addr;
  
-@@ -390,6 +447,7 @@
+     if (!addr) {
+ 	fputs("knews: connect_socket: addr is NULL!!!\n", stderr);
+@@ -390,6 +448,7 @@
      } while (tmp < 0 && errno == EINTR);
  
      return tmp;
@@ -126,7 +130,7 @@ $NetBSD: patch-ag,v 1.3 2001/02/23 22:19:42 tron Exp $
  }
  
  #if 0 /* Misc stuff for ftp routines */
-@@ -548,7 +606,7 @@
+@@ -548,7 +607,7 @@
  char *get_mailhostname(void)
  {
      struct utsname	  un = {{0,},};
