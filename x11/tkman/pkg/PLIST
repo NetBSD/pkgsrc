@@ -1,3 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 1997/11/27 13:58:09 explorer Exp $
+@comment $NetBSD: PLIST,v 1.5 2000/09/11 21:08:50 fredb Exp $
 bin/tkman
 bin/retkman
+libexec/mkindex
