@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1998/04/20 11:56:36 frueauf Exp $
+# $NetBSD: Makefile,v 1.5 1998/05/27 14:39:27 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.2 1996/12/29 00:51:27 obrien Exp
 #
 
@@ -11,5 +11,7 @@ MASTER_SITE_SUBDIR=     applications
 MAINTAINER=		packages@netbsd.org
 
 USE_IMAKE=		yes
+
+CAT1=			xless.0
 
 .include "../../mk/bsd.pkg.mk"
