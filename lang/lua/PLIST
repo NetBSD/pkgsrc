@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/01/25 10:48:21 cube Exp $
-bin/bin2c
+@comment $NetBSD: PLIST,v 1.5 2004/04/05 02:31:06 xtraeme Exp $
 bin/lua
 bin/luac
 include/lauxlib.h
@@ -7,20 +6,13 @@ include/lua.h
 include/lualib.h
 lib/liblua.a
 lib/liblua.so
-lib/liblua.so.1
-lib/liblua.so.1.0
-lib/liblua_p.a
-lib/liblua_pic.a
+lib/liblua.so.5.0
 lib/liblualib.a
 lib/liblualib.so
-lib/liblualib.so.1
-lib/liblualib.so.1.0
-lib/liblualib_p.a
-lib/liblualib_pic.a
-man/cat1/lua.0
-man/cat1/luac.0
+lib/liblualib.so.5.0
 man/man1/lua.1
 man/man1/luac.1
+share/doc/html/lua/contents.html
 share/doc/html/lua/logo.gif
 share/doc/html/lua/lua.html
 share/doc/html/lua/luac.html
@@ -32,7 +24,6 @@ share/doc/lua/README
 share/examples/lua/README
 share/examples/lua/bisect.lua
 share/examples/lua/cf.lua
-share/examples/lua/compat.lua
 share/examples/lua/echo.lua
 share/examples/lua/env.lua
 share/examples/lua/etc/README
