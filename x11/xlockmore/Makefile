@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 1999/08/27 07:20:29 tron Exp $
+# $NetBSD: Makefile,v 1.28 1999/09/29 22:58:45 tron Exp $
 # FreeBSD Id: Makefile,v 1.23 1997/10/10 09:24:38 tg Exp
 #
 
@@ -10,7 +10,7 @@ MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://www.tux.org/~bagleyd/xlockmore.html
 
 DEPENDS+=	xpm-3.4k:../../graphics/xpm
-DEPENDS+=	Mesa-3.0:../../graphics/Mesa
+DEPENDS+=	Mesa-*:../../graphics/Mesa
 
 GNU_CONFIGURE=	yes
 USE_X11BASE=	yes
