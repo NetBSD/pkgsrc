@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.890 2002/01/05 06:46:03 tron Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.891 2002/01/05 18:40:32 tron Exp $
 #
 # This file is in the public domain.
 #
@@ -228,7 +228,7 @@ DEPENDS+=		ncurses>=5.0:../../devel/ncurses
 .endif
 
 .if defined(USE_GTEXINFO) && !exists(/usr/bin/install-info)
-DEPENDS+=		gtexinfo-3.12:../../devel/gtexinfo
+DEPENDS+=		gtexinfo>=3.12:../../devel/gtexinfo
 .endif
 
 # Automatically increase process limit where necessary for building.
