@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.19 2004/02/03 21:48:14 jlam Exp $
+# $NetBSD: gcc.mk,v 1.20 2004/02/03 21:51:45 jlam Exp $
 
 .if !defined(COMPILER_GCC_MK)
 COMPILER_GCC_MK=	defined
@@ -200,7 +200,7 @@ PKG_SKIP_REASON=	"Unable to satisfy dependency: ${_GCC_DEPENDS}"
 # link against gcc shared libs.
 #
 .  if !empty(_CC:M${LOCALBASE}/*)
-_GCC_SUBPREFIX=		${_CC:T:S/\/bin$//:S/${LOCALBASE}\///:S/${LOCALBASE}//}/
+_GCC_SUBPREFIX=		${_CC:H:S/\/bin$//:S/${LOCALBASE}\///:S/${LOCALBASE}//}/
 .  else
 _GCC_SUBPREFIX!=	\
 	if ${PKG_INFO} -qe ${_GCC_PKGBASE}; then			\
