@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.10 2004/03/29 02:20:04 tv Exp $
+# $NetBSD: bootstrap,v 1.11 2004/04/07 12:05:37 jmmv Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -41,6 +41,7 @@ BOOTSTRAP_VERSION=20040214
 prefix=/usr/pkg
 pkgdbdir=/var/db/pkg
 pkgsrcdir=/usr/pkgsrc
+sysconfdir=${prefix}/etc
 
 ignorecasecheck=no
 ignoreusercheck=no
@@ -54,6 +55,7 @@ usage="Usage: $0 "'
     [ --prefix=<prefix> ]
     [ --pkgdbdir=<pkgdbdir> ]
     [ --pkgsrcdir=<pkgsrcdir> ]
+    [ --sysconfdir=<sysconfdir> ]
     [ --ignore-case-check ]
     [ --ignore-user-check ]
     [ --help ]'
@@ -341,9 +343,11 @@ check_prog whoamiprog whoami
 while [ $# -gt 0 ]; do
 	case $1 in
 	--workdir=*)	wrkdir=`echo $1 | $sedprog -e 's|--workdir=||'` ;;
-	--prefix=*)	prefix=`echo $1 | $sedprog -e 's|--prefix=||'` ;;
+	--prefix=*)	prefix=`echo $1 | $sedprog -e 's|--prefix=||'`
+			sysconfdir=${prefix}/etc ;;
 	--pkgdbdir=*)	pkgdbdir=`echo $1 | $sedprog -e 's|--pkgdbdir=||'` ;;
 	--pkgsrcdir=*)	pkgsrcdir=`echo $1 | $sedprog -e 's|--pkgsrcdir=||'` ;;
+	--sysconfdir=*)	sysconfdir=`echo $1 | $sedprog -e 's|--sysconfdir=||'`;;
 	--ignore-case-check) ignorecasecheck=yes ;;
 	--ignore-user-check) ignoreusercheck=yes ;;
 	--help)		echo "$usage"; exit ;;
@@ -422,7 +426,7 @@ LOCALBASE=$prefix; export LOCALBASE
 MKCONF_EXAMPLE=${wrkdir}/mk.conf.example
 export MKCONF_EXAMPLE
 echo_msg "Creating mk.conf.example in ${wrkdir}"
-echo "# Example /etc/mk.conf file produced by bootstrap-pkgsrc" > ${MKCONF_EXAMPLE}
+echo "# Example ${sysconfdir}/mk.conf file produced by bootstrap-pkgsrc" > ${MKCONF_EXAMPLE}
 echo "# `date`" >> ${MKCONF_EXAMPLE}
 echo "" >> ${MKCONF_EXAMPLE}
 echo ".ifdef BSD_PKG_MK	# begin pkgsrc settings" >> ${MKCONF_EXAMPLE}
@@ -440,6 +444,9 @@ fi
 # save environment in example mk.conf
 echo "PKG_DBDIR=$pkgdbdir" >> ${MKCONF_EXAMPLE}
 echo "LOCALBASE=$prefix" >> ${MKCONF_EXAMPLE}
+if [ "${sysconfdir}" != "${prefix}/etc" ]; then
+	echo "PKG_SYSCONFBASE=$sysconfdir" >> ${MKCONF_EXAMPLE}
+fi
 
 # create directories
 mkdir_p $prefix $pkgdbdir $prefix/sbin
@@ -469,11 +476,11 @@ if [ -f mods/mk/$opsys.bsd.man.mk ] ;  then
 	run_cmd "$cpprog mods/mk/$opsys.bsd.man.mk $prefix/share/mk/bsd.man.mk"
 fi
 
+own_mk=mods/mk/bsd.own.mk.in
 if [ -f mods/mk/$opsys.bsd.own.mk ] ; then
-	run_cmd "$cpprog mods/mk/$opsys.bsd.own.mk $prefix/share/mk/bsd.own.mk"
-else
-	run_cmd "$sedprog -e 's|@ROOT_GROUP@|'$root_group'|g;s|@ROOT_USER@|'$root_user'|g' mods/mk/bsd.own.mk.in > $prefix/share/mk/bsd.own.mk"
+	own_mk=mods/mk/$opsys.bsd.own.mk.in
 fi
+run_cmd "$sedprog -e 's|@ROOT_GROUP@|'$root_group'|g;s|@ROOT_USER@|'$root_user'|g;s|@SYSCONFDIR@|'$sysconfdir'|g' $own_mk > $prefix/share/mk/bsd.own.mk"
 
 if [ -f mods/mk/$opsys.bsd.prog.mk ] ; then
 	run_cmd "$cpprog mods/mk/$opsys.bsd.prog.mk $prefix/share/mk/bsd.prog.mk"
@@ -505,7 +512,7 @@ run_cmd "(cd $wrkdir/bmake; $shprog ./configure --prefix=$prefix --with-default-
 # build libnbcompat
 echo_msg "Building libnbcompat"
 copy_src ../pkgtools/libnbcompat/files libnbcompat
-run_cmd "(cd $wrkdir/libnbcompat; $shprog ./configure -C --prefix=$prefix && $prefix/bin/bmake)"
+run_cmd "(cd $wrkdir/libnbcompat; $shprog ./configure -C --prefix=$prefix --sysconfdir=$sysconfdir && $prefix/bin/bmake)"
 
 # bootstrap tnftp
 case "$DEBIAN" in
@@ -515,7 +522,7 @@ yes)
 esac
 echo_msg "Installing tnftp"
 copy_src ../net/tnftp/files tnftp
-run_cmd "(cd $wrkdir/tnftp; env $BSTRAP_ENV $shprog ./configure --prefix=$prefix && make && (cd src && make install))"
+run_cmd "(cd $wrkdir/tnftp; env $BSTRAP_ENV $shprog ./configure --prefix=$prefix --sysconfdir=$sysconfdir && make && (cd src && make install))"
 pkg_install_args="$pkg_install_args --with-ftp=$prefix/bin/ftp"
 
 FETCH_CMD=$prefix/bin/ftp
@@ -525,7 +532,7 @@ echo "FETCH_CMD=$prefix/bin/ftp" >> ${MKCONF_EXAMPLE}
 # bootstrap digest
 echo_msg "Installing digest"
 copy_src ../pkgtools/digest/files digest
-run_cmd "(cd $wrkdir/digest; env $BSTRAP_ENV $shprog ./configure -C --prefix=$prefix && make && make install)"
+run_cmd "(cd $wrkdir/digest; env $BSTRAP_ENV $shprog ./configure -C --prefix=$prefix --sysconfdir=$sysconfdir && make && make install)"
 
 # create the digest package's meta files
 digestversion=digest-`$awkprog -F "'" '/^PACKAGE_VERSION=/ {print $2}' $wrkdir/digest/configure`
@@ -539,7 +546,7 @@ env DIGESTPROG=$prefix/bin/digest PKG_DIGEST=md5 PKG_DBDIR=$pkgdbdir \
 case "$need_pax" in
 yes)	echo_msg "Installing pax"
 	copy_src ../archivers/pax/files pax
-	run_cmd "(cd $wrkdir/pax; env $BSTRAP_ENV CPPFLAGS='-I../libnbcompat' LDFLAGS='-L../libnbcompat' LIBS='-lnbcompat' $shprog ./configure -C --prefix=$prefix && $prefix/bin/bmake && $prefix/bin/bmake install)"
+	run_cmd "(cd $wrkdir/pax; env $BSTRAP_ENV CPPFLAGS='-I../libnbcompat' LDFLAGS='-L../libnbcompat' LIBS='-lnbcompat' $shprog ./configure -C --prefix=$prefix --sysconfdir=$sysconfdir && $prefix/bin/bmake && $prefix/bin/bmake install)"
 	echo "PAX=$prefix/bin/pax" >> ${MKCONF_EXAMPLE}
 	pkg_install_args="$pkg_install_args --with-pax=$prefix/bin/pax --with-tar=$prefix/bin/tar"
 	;;
@@ -552,7 +559,7 @@ esac
 case "$need_mtree" in
 yes)	echo_msg "Installing mtree"
 	copy_src ../pkgtools/mtree/files mtree
-	run_cmd "(cd $wrkdir/mtree; env $BSTRAP_ENV CPPFLAGS='-I../libnbcompat' LDFLAGS='-L../libnbcompat' LIBS='-lnbcompat' $shprog ./configure -C --prefix=$prefix && $prefix/bin/bmake && $prefix/bin/bmake install)"
+	run_cmd "(cd $wrkdir/mtree; env $BSTRAP_ENV CPPFLAGS='-I../libnbcompat' LDFLAGS='-L../libnbcompat' LIBS='-lnbcompat' $shprog ./configure -C --prefix=$prefix --sysconfdir=$sysconfdir && $prefix/bin/bmake && $prefix/bin/bmake install)"
 	pkg_install_args="$pkg_install_args --with-mtree=$prefix/sbin/mtree"
 	;;
 *)	pkg_install_args="$pkg_install_args --with-mtree=$mtreeprog"
@@ -563,7 +570,7 @@ esac
 case "$need_sed" in
 yes)	echo_msg "Installing sed"
 	copy_src ../textproc/nbsed/files sed
-	run_cmd "(cd $wrkdir/sed; env $BSTRAP_ENV $shprog ./configure -C --prefix=$prefix && make && make install)"
+	run_cmd "(cd $wrkdir/sed; env $BSTRAP_ENV $shprog ./configure -C --prefix=$prefix --sysconfdir=$sysconfdir && make && make install)"
 	echo "SED=$prefix/bin/nbsed" >> ${MKCONF_EXAMPLE}
 	;;
 esac
@@ -575,7 +582,7 @@ pkg_install_mandir="$prefix/man"
 if [ "$prefix" = "/usr" ]; then
 	pkg_install_mandir="$prefix/share/man"
 fi
-run_cmd "(cd $wrkdir/pkg_install; env $BSTRAP_ENV CPPFLAGS='-I../libnbcompat -I../../libnbcompat' LDFLAGS='-L../libnbcompat -L../../libnbcompat' LIBS='-lnbcompat' $shprog ./configure -C --prefix=$prefix --with-pkgdbdir=$pkgdbdir --mandir=$pkg_install_mandir $pkg_install_args && $prefix/bin/bmake && $prefix/bin/bmake install)"
+run_cmd "(cd $wrkdir/pkg_install; env $BSTRAP_ENV CPPFLAGS='-I../libnbcompat -I../../libnbcompat' LDFLAGS='-L../libnbcompat -L../../libnbcompat' LIBS='-lnbcompat' $shprog ./configure -C --prefix=$prefix --sysconfdir=$sysconfdir --with-pkgdbdir=$pkgdbdir --mandir=$pkg_install_mandir $pkg_install_args && $prefix/bin/bmake && $prefix/bin/bmake install)"
 
 # all's ready, install the man page
 echo_msg "Installing packages(7) man page"
@@ -593,7 +600,7 @@ echo "and $prefix/man to your MANPATH environment variable, if necessary."
 echo ""
 echo "An example mk.conf file \"${MKCONF_EXAMPLE}\" with the settings you"
 echo "provided to \"bootstrap\" has been created for you."
-echo "Please copy ${MKCONF_EXAMPLE} to /etc/mk.conf."
+echo "Please copy ${MKCONF_EXAMPLE} to ${sysconfdir}/mk.conf."
 echo ""
 echo "You can find extensive documentation of the NetBSD Packages Collection"
 echo "in $pkgsrcdir/Packages.txt and packages(7)."
