@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2004/03/08 19:40:43 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.9 2004/04/01 18:35:20 jmmv Exp $
 bin/metacity
 bin/metacity-message
 bin/metacity-theme-viewer
@@ -19,6 +19,7 @@ libexec/metacity-dialog
 share/gconf/schemas/metacity.schemas
 share/gnome/wm-properties/metacity.desktop
 ${PKGLOCALEDIR}/locale/am/LC_MESSAGES/metacity.mo
+${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/metacity.mo
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/metacity.mo
 ${PKGLOCALEDIR}/locale/be/LC_MESSAGES/metacity.mo
 ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/metacity.mo
@@ -29,6 +30,7 @@ ${PKGLOCALEDIR}/locale/cy/LC_MESSAGES/metacity.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/metacity.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/metacity.mo
 ${PKGLOCALEDIR}/locale/el/LC_MESSAGES/metacity.mo
+${PKGLOCALEDIR}/locale/en_CA/LC_MESSAGES/metacity.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/metacity.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/metacity.mo
 ${PKGLOCALEDIR}/locale/fa/LC_MESSAGES/metacity.mo
@@ -38,6 +40,7 @@ ${PKGLOCALEDIR}/locale/ga/LC_MESSAGES/metacity.mo
 ${PKGLOCALEDIR}/locale/gl/LC_MESSAGES/metacity.mo
 ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/metacity.mo
 ${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/metacity.mo
+${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/metacity.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/metacity.mo
 ${PKGLOCALEDIR}/locale/id/LC_MESSAGES/metacity.mo
 ${PKGLOCALEDIR}/locale/is/LC_MESSAGES/metacity.mo
@@ -65,6 +68,7 @@ ${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/metacity.mo
 ${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/metacity.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/metacity.mo
 ${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/metacity.mo
+${PKGLOCALEDIR}/locale/th/LC_MESSAGES/metacity.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/metacity.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/metacity.mo
 ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/metacity.mo
@@ -176,6 +180,8 @@ share/themes/Simple/metacity-1/minimize.png
 @dirrm share/themes/Atlanta
 @dirrm share/themes/AgingGorilla/metacity-1
 @dirrm share/themes/AgingGorilla
+@comment in xdg-dirs: @dirrm share/themes
+@comment in xdg-dirs: @dirrm share/pixmaps
 @dirrm share/metacity/icons
 @dirrm share/metacity/glade
 @dirrm share/metacity
