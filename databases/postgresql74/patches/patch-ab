@@ -1,0 +1,10 @@
+$NetBSD: patch-ab,v 1.1 2004/04/20 22:37:22 recht Exp $
+
+--- src/template/netbsd.orig	2003-10-10 00:55:46.000000000 +0200
++++ src/template/netbsd	2004-04-20 01:54:45.000000000 +0200
+@@ -1,2 +1,5 @@
+ THREAD_SUPPORT=yes
+ NEED_REENTRANT_FUNCS=yes	# 1.6 2003-09-14
++case $build in
++	*-netbsdelf[2-9]*) THREAD_CPPFLAGS="-pthread"; THREAD_LIBS="-pthread" ;;
++esac
