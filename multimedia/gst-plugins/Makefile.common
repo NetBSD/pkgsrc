@@ -1,0 +1,149 @@
+# $NetBSD: Makefile.common,v 1.1 2004/04/06 09:36:28 jmmv Exp $
+#
+
+DISTNAME=		gst-plugins-0.8.0
+CATEGORIES=		multimedia gnome
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gst-plugins/0.8/}
+EXTRACT_SUFX=		.tar.bz2
+
+MAINTAINER=		rh@NetBSD.org
+HOMEPAGE=		http://www.gstreamer.net/
+COMMENT=		GStreamer -
+
+DISTINFO_FILE=		${.CURDIR}/../../multimedia/gst-plugins/distinfo
+FILESDIR=		${.CURDIR}/../../multimedia/gst-plugins/files
+PATCHDIR=		${.CURDIR}/../../multimedia/gst-plugins/patches
+
+BUILD_DEPENDS+=		nasm>=0.98.38:../../devel/nasm
+
+GNU_CONFIGURE=		yes
+USE_BUILDLINK3=		yes
+USE_GNU_TOOLS+=		make
+USE_LIBTOOL=		yes
+USE_PKGLOCALEDIR=	yes
+
+CONFIGURE_ARGS+=	--disable-gconf
+CONFIGURE_ARGS+=	--disable-gconftool
+CONFIGURE_ARGS+=	--disable-examples
+CONFIGURE_ARGS+=	--disable-tests
+
+# Disable all drivers by default.
+.for driver in	a52dec \
+		aalib \
+		aalibtest \
+		alsa \
+		arts \
+		artsc \
+		artstest \
+		audiofile \
+		cdparanoia \
+		cdrom \
+		divx \
+		dvdnav \
+		dvdread \
+		dxr3 \
+		esd \
+		esdtest \
+		faac \
+		faad \
+		flac \
+		freetypetest \
+		gdk_pixbuf \
+		gnome_vfs \
+		gsm \
+		hermes \
+		ivorbis \
+		jack \
+		jpeg \
+		ladspa \
+		lame \
+		lcs \
+		libcaca \
+		libdv \
+		libfame \
+		libfametest \
+		libmikmodtest \
+		libpng \
+		libpng \
+		librfb \
+		mad \
+		mikmod \
+		mpeg2dec \
+		mpeg2enc \
+		mplex \
+		musicbrainz \
+		nas \
+		ogg \
+		oggtest \
+		oss \
+		pango \
+		qcam \
+		raw1394 \
+		sdl \
+		sdltest \
+		shout \
+		shout2 \
+		shout2test \
+		sidplay \
+		smoothwave \
+		sndfile \
+		speex \
+		swfdec \
+		tarkin \
+		theora \
+		v4l \
+		v4l2 \
+		vcd \
+		vorbis \
+		vorbistest \
+		x \
+		xshm \
+		xvid \
+		xvideo
+CONFIGURE_ARGS+=	--disable-${driver}
+.endfor
+.undef driver
+
+# A package building a single plugin of gst-plugins has to include this
+# file and define the following variables:
+#    GST_PLUGINS_NAME - The name of the plugin, to be added to the package
+#                       name and the comment.
+#    GST_PLUGINS_DIR  - The directory where the plugin resides; a relative
+#                       path from WRKSRC.
+#    GST_PLUGINS_FLAG - The name of the flag used to enable the plugin.
+#                       Defaults to GST_PLUGINS_NAME.
+.if defined(GST_PLUGINS_NAME) && !empty(GST_PLUGINS_NAME)
+PKGNAME=		${DISTNAME:S/plugins/plugins-${GST_PLUGINS_NAME}/}
+COMMENT+=		${GST_PLUGINS_NAME} plugin
+
+GST_PLUGINS_FLAG?=	${GST_PLUGINS_NAME}
+GST_PLUGINS_DIR?=	non-existent
+
+CONFIGURE_ARGS:=	${CONFIGURE_ARGS:S/--disable-${GST_PLUGINS_FLAG}/--enable-${GST_PLUGINS_FLAG}/}
+
+BUILD_DIRS=		${WRKSRC}/${GST_PLUGINS_DIR}
+INSTALL_DIRS=		${WRKSRC}/${GST_PLUGINS_DIR}
+
+# Generate a description automatically.
+DESCR_SRC=		${.CURDIR}/../../multimedia/gst-plugins/DESCR
+DESCR_SRC+=		${WRKDIR}/.gen_descr
+
+# Fix paths to already installed libraries (by the gst-plugins package).
+SUBST_CLASSES+=		libs
+SUBST_MESSAGE.libs=	"Fixing path to dependent libraries."
+SUBST_STAGE.libs=	pre-configure
+SUBST_FILES.libs=	${GST_PLUGINS_DIR}/Makefile.in
+SUBST_SED.libs=		-e 's|$$(top_builddir)/gst-libs/gst/libgst|${BUILDLINK_PREFIX.gst-plugins}/lib/libgst|g'
+
+post-build:
+	@${ECHO} "" >${WRKDIR}/.gen_descr
+	@${ECHO} "This package provides the ${GST_PLUGINS_NAME} plugin for GStreamer." >>${WRKDIR}/.gen_descr
+
+.include "../../multimedia/gst-plugins/buildlink3.mk"
+.endif
+
+.include "../../converters/libiconv/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../multimedia/gstreamer/plugins.mk"
