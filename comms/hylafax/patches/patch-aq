@@ -1,13 +1,12 @@
-$NetBSD: patch-aq,v 1.1.1.1 1999/08/11 06:04:30 rh Exp $
+$NetBSD: patch-aq,v 1.2 2000/08/29 17:08:38 abs Exp $
 
---- config/Makefile.in.orig	Sat Feb 14 11:46:36 1998
-+++ config/Makefile.in	Thu Apr 15 21:57:19 1999
-@@ -95,6 +95,7 @@
- PUTSERVER=${INSTALL} -idb ${PRODUCT}.sw.server
- 
- install: default ${CONFIGFILES}
-+	-${MKDIR} -p -m 0755 ${PREFIX}/etc/hylafax/modem
- 	for i in ${CONFIGFILES}; do \
--	    ${PUTSERVER} -F ${SPOOL}/config -m 444 -src ${SRCDIR}/$$i -O $$i; \
-+	    ${PUTSERVER} -F ${PREFIX}/etc/hylafax/modem -m 444 -src ${SRCDIR}/$$i -O $$i; \
- 	done
+--- util/TypeRules.h.orig	Sun Jun 13 08:41:26 1999
++++ util/TypeRules.h
+@@ -130,6 +130,7 @@
+     bool	cont;	// continuation
+     enum {
+ 	ASCII,		// ascii-only string
++	ASCIIESC,	// ascii-only string + escape char (iso-2022 variants)
+ 	STRING,		// byte string
+ 	ADDR,		// address of match
+ 	BYTE,		// 8 bits

@@ -1,13 +1,27 @@
-$NetBSD: patch-ak,v 1.1.1.1 1999/08/11 06:04:29 rh Exp $
+$NetBSD: patch-ak,v 1.2 2000/08/29 17:08:38 abs Exp $
 
---- util/faxcron.sh.in.orig	Tue Jun 29 13:55:07 1999
-+++ util/faxcron.sh.in	Mon Aug  9 22:06:17 1999
-@@ -41,7 +41,7 @@
- AGELOG=30			# keep log info for last 30 days
- AGERCV=7			# purge received facsimile after 2 days
- AGETMP=1			# purge orphaned temp files after 1 day
--FAXUSER=fax			# owner of log files
-+FAXUSER=@FAXUID@		# owner of log files
- LOGMODE=0644			# mode for log files
- XFERLOG=etc/xferfaxlog		# HylaFAX xferfaxlog file location
- LAST=etc/lastrun		# file where time+date of last run recorded
+--- faxd/UUCPLock.c++.orig	Sun Jun 13 08:41:05 1999
++++ faxd/UUCPLock.c++
+@@ -37,6 +37,7 @@
+ }
+ #endif
+ #include <pwd.h>
++#include <grp.h>
+ 
+ /*
+  * UUCP Device Locking Support.
+@@ -146,8 +147,13 @@
+ 	if (!pwd)
+ 	    faxApp::fatal("Can not deduce identity of UUCP");
+ 	UUCPuid = pwd->pw_uid;
+-	UUCPgid = pwd->pw_gid;
+ 	endpwent();			// paranoia
++
++	const group *grp = getgrnam(FAX_GROUP);
++	if (!grp)
++	    faxApp::fatal("Can not deduce group identity of '" FAX_GROUP "'");
++	UUCPgid = grp->gr_gid;
++	endgrent();			// paranoia
+     }
+ }
+ uid_t UUCPLock::getUUCPUid() { setupIDs(); return UUCPuid; }
