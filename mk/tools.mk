@@ -1,4 +1,4 @@
-# $NetBSD: tools.mk,v 1.7 2003/08/16 23:54:31 grant Exp $
+# $NetBSD: tools.mk,v 1.8 2003/08/17 02:03:53 jlam Exp $
 #
 # This Makefile creates a ${TOOLS_DIR} directory and populates the bin
 # subdir with tools that hide the ones outside of ${TOOLS_DIR}.
@@ -166,15 +166,17 @@ _TOOLS_NEED_GNU.${_tool_}=	NO
 _TOOLS_NEED_GNU.${_tool_}=	YES
 .    endif
 .  endfor
+.endfor	# USE_GNU_TOOLS
 #
 # Are we using a GNUish system tool in place of the needed GNU tool?
 #
+.for _tool_ in ${_TOOLS}
 .  for _pattern_ in ${_TOOLS_REPLACE_OPSYS.${_tool_}}
 .    if !empty(MACHINE_PLATFORM:M${_pattern_})
 _TOOLS_REPLACE.${_tool_}=	YES
 .    endif
 .  endfor
-.endfor	# USE_GNU_TOOLS
+.endfor	_TOOLS
 
 .if ${_TOOLS_REPLACE.awk} == "YES"
 _TOOLS_OVERRIDE.awk=	YES
