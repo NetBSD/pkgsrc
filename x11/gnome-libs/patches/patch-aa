@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.14 2001/10/07 10:13:11 rh Exp $
+$NetBSD: patch-aa,v 1.15 2001/10/12 13:29:40 tron Exp $
 
 --- configure.orig	Tue Aug 21 23:41:20 2001
-+++ configure
++++ configure	Fri Oct 12 15:12:57 2001
 @@ -3471,12 +3471,9 @@
  
  
@@ -30,6 +30,15 @@ $NetBSD: patch-aa,v 1.14 2001/10/07 10:13:11 rh Exp $
    
  # AM_GNOME_GETTEXT above substs $DATADIRNAME
  # this is the directory where the *.{mo,gmo} files are installed
+@@ -5415,7 +5417,7 @@
+   echo $ac_n "(cached) $ac_c" 1>&6
+ else
+   
+-  save_LDFLAGS="$LDFLAGBS"
++  save_LDFLAGS="$LDFLAGS"
+   LDFLAGS="$LDFLAGS `glib-config --libs gmodule`"
+   if test "$cross_compiling" = yes; then
+   ac_cv_gmodule=yes
 @@ -10116,7 +10118,7 @@
  GTKXMHTML_LIBS="-lgtkxmhtml $LIBGTKXMHTML_LIBS"
  ZVT_LIBS="-lzvt $UTIL_LIBS $GTK_LIBS"
