@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.2 2001/10/23 02:15:38 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.3 2002/09/11 21:29:28 wiz Exp $
 #
 # This Makefile fragment is included by packages that use libsigc++.
 #
@@ -17,13 +17,13 @@ LIBSIGCXX_BUILDLINK_MK=	# defined
 
 .include "../../mk/bsd.buildlink.mk"
 
-BUILDLINK_DEPENDS.libsigcxx?=	libsigc++>=0.4
+BUILDLINK_DEPENDS.libsigcxx?=	libsigc++>=1.0.4
 DEPENDS+=	${BUILDLINK_DEPENDS.libsigcxx}:../../devel/libsigc++
 
 EVAL_PREFIX+=			BUILDLINK_PREFIX.libsigcxx=libsigc++
 BUILDLINK_PREFIX.libsigcxx_DEFAULT=	${LOCALBASE}
-BUILDLINK_FILES.libsigcxx=	include/sigc++/*
-BUILDLINK_FILES.libsigcxx+=	lib/sigc++/include/sigc++config.h
+BUILDLINK_FILES.libsigcxx=	include/sigc++-1.0/sigc++/*
+BUILDLINK_FILES.libsigcxx+=	lib/sigc++-1.0/include/sigc++config.h
 BUILDLINK_FILES.libsigcxx+=	lib/libsigc.*
 
 BUILDLINK_TARGETS.libsigcxx=	libsigcxx-buildlink
