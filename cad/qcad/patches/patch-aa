@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/03/26 20:53:53 jtb Exp $
+$NetBSD: patch-aa,v 1.2 2001/06/26 20:10:23 jlam Exp $
 
---- Makefile.orig	Sun Mar 25 11:17:10 2001
+--- Makefile.orig	Sun Mar 25 06:17:10 2001
 +++ Makefile
 @@ -7,13 +7,14 @@
  
@@ -17,9 +17,9 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/03/26 20:53:53 jtb Exp $
 -LIBS	=	-L$(QTDIR)/lib -lqt -L/usr/X11R6/lib -lX11
 -MOC	=	moc
 +LINK	=	$(CXX)
-+#LFLAGS	=	-static
-+LIBS	=	-Wl,-R$(QTDIR)/lib -L$(QTDIR)/lib -lqt -Wl,-R${X11BASE}/lib -L${X11BASE}/lib -lGLU -lGL -lXmu -lXext -lX11 -lm -lSM -lICE -lXmu -Wl,-R${PNG_PREFIX}/lib -L${PNG_PREFIX}/lib -lpng -lz -Wl,-R${JPEG_PREFIX}/lib -L${JPEG_PREFIX}/lib -ljpeg
-+MOC	=	${QTDIR}/bin/moc
++LFLAGS	=	${LDFLAGS}
++LIBS	=	-L$(QTDIR)/lib -lqt -L${X11BASE}/lib -lGLU -lGL -lXmu -lXext -lX11 -lm -lSM -lICE -lXmu -lpng -lz -ljpeg
++MOC	=	$(QTDIR)/bin/moc
  
  ####### Files
  
@@ -40,12 +40,3 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/03/26 20:53:53 jtb Exp $
  
  .C.o:
  	$(CC) -c $(CFLAGS) $(INCPATH) -o $@ $<
-@@ -386,7 +387,7 @@
- all: $(TARGET)
- 
- $(TARGET): $(OBJECTS) $(OBJMOC) 
--	$(LINK) $(LFLAGS) -o $(TARGET) $(OBJECTS) $(OBJMOC) $(LIBS)
-+	$(LINK) $(LDFLAGS) -o $(TARGET) $(OBJECTS) $(OBJMOC) $(LIBS)
- 
- moc: $(SRCMOC)
- 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/04/30 11:03:30 skrll Exp $
+# $NetBSD: Makefile,v 1.9 2001/06/26 20:42:59 jlam Exp $
 
 DISTNAME=	qwt-0.3.0
 CATEGORIES=	x11
@@ -8,15 +8,15 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://sourceforge.net/projects/qwt
 COMMENT=	Qt widget library for technical purposes
 
-DEPENDS+=	qt2-libs-2.3.0:../../x11/qt2-libs
+BUILDLINK_DEPENDS.qt2-libs=	qt2-libs>=2.3.0
+USE_BUILDLINK_ONLY=		yes
 
 USE_X11BASE=	yes
 USE_GMAKE=	yes
 USE_LIBTOOL=	yes
 
-EVAL_PREFIX+=	QT2DIR=qt2-libs
-MAKE_ENV+=	CXX="${CXX}" \
-		QTDIR="${QT2DIR}/qt2"
+MAKE_ENV+=	CXX="${CXX}"
+MAKE_ENV+=	CXXFLAGS="${CXXFLAGS}"
 
 CONFLICTS=	qwtlib-*
 
@@ -30,4 +30,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/include/*.h ${PREFIX}/include/qwt
 	${INSTALL_DATA} ${WRKSRC}/doc/man/man3/* ${PREFIX}/man/man3
 
+.include "../../x11/qt2-libs/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
