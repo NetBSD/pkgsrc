@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 1998/02/25 22:33:10 frueauf Exp $
+@comment $NetBSD: PLIST,v 1.5 1998/06/04 13:08:36 agc Exp $
 bin/addtosmbpass
 bin/make_printerdef
 bin/make_smbcodepage
@@ -18,6 +18,9 @@ lib/codepages/codepage.850
 lib/codepages/codepage.852
 lib/codepages/codepage.866
 lib/codepages/codepage.932
+lib/codepages/codepage.936
+lib/codepages/codepage.949
+lib/codepages/codepage.950
 man/man1/make_smbcodepage.1.gz
 man/man1/smbclient.1.gz
 man/man1/smbrun.1.gz
@@ -58,12 +61,14 @@ share/doc/samba/Application_Serving.txt
 share/doc/samba/BROWSING.txt
 share/doc/samba/BUGS.txt
 share/doc/samba/CVS_ACCESS.txt
+share/doc/samba/DHCP-Server-Configuration.txt
 share/doc/samba/DIAGNOSIS.txt
 share/doc/samba/DNIX.txt
 share/doc/samba/DOMAIN.txt
 share/doc/samba/DOMAIN_CONTROL.txt
 share/doc/samba/ENCRYPTION.txt
 share/doc/samba/Faxing.txt
+share/doc/samba/PROFILES.txt
 share/doc/samba/GOTCHAS.txt
 share/doc/samba/HINTS.txt
 share/doc/samba/MIRRORS.txt
@@ -75,6 +80,7 @@ share/doc/samba/Passwords.txt
 share/doc/samba/Printing.txt
 share/doc/samba/SCO.txt
 share/doc/samba/Speed.txt
+share/doc/samba/Speed2.txt
 share/doc/samba/Support.txt
 share/doc/samba/Tracing.txt
 share/doc/samba/UNIX-SMB.txt

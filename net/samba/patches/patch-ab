@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.1 1998/01/12 17:31:16 agc Exp $
+$NetBSD: patch-ab,v 1.2 1998/06/04 13:08:36 agc Exp $
 
 Note: I (tsarna@endicor.com) have submitted the patches in this file 
 plus a more generic Makefile patch (ie, without the pkgsrc changes) to
 the Samba group. I hope this file can be deleted when this package is
 updated for the next version of Samba. 
 
---- includes.h.orig	Fri Jan  9 17:24:10 1998
-+++ includes.h	Fri Jan  9 17:37:08 1998
-@@ -193,7 +193,7 @@
+--- includes.h.orig	Tue May 12 20:46:49 1998
++++ includes.h	Tue Jun  2 15:46:07 1998
+@@ -198,7 +198,7 @@
  #include <pwdadj.h>
  #endif
  
@@ -16,15 +16,25 @@ updated for the next version of Samba.
  #include <shadow.h>
  #endif
  
-@@ -492,16 +492,19 @@
+@@ -506,21 +506,22 @@
  #endif
  
  
--#ifdef NETBSD
+-#ifdef NETBSD 
+-#ifdef NetBSD1_3
+-#include <string.h>
++
 +#ifdef __NetBSD__
 +#include <dirent.h>
- #include <strings.h>
- #include <netinet/tcp.h>
++#include <strings.h>
++#include <netinet/tcp.h>
+ #ifdef ALLOW_CHANGE_PASSWORD
+ #include <termios.h>
+ #endif /* ALLOW_CHANGE_PASSWORD */
+-#else /* NetBSD1_3 */
+-#include <strings.h>
+-#endif /* NetBSD1_3 */
+-#include <netinet/tcp.h>
 -/* you may not need this */
 -#define NO_GETSPNAM
  #define SIGNAL_CAST (void (*)())
@@ -38,10 +48,9 @@ updated for the next version of Samba.
 +#define USE_GETCWD
 +#define USE_SETSID
  #endif 
--
  
  
- #ifdef FreeBSD
+
 --- interface.c.orig	Fri Jan  9 17:22:01 1998
 +++ interface.c	Fri Jan  9 17:22:13 1998
 @@ -161,7 +161,7 @@
