@@ -1,12 +1,27 @@
-$NetBSD: patch-aa,v 1.2 1998/08/07 11:14:04 agc Exp $
+$NetBSD: patch-aa,v 1.3 1998/11/24 00:20:13 hubertf Exp $
 
---- makefile	1997/11/14 09:49:34	1.1
-+++ makefile	1997/11/14 09:51:01
-@@ -10,3 +10,8 @@
- pddet.o: pddet.c
- 	cc -c pddet.c
- 
+--- makefile.orig	Tue Nov 24 01:08:49 1998
++++ makefile	Tue Nov 24 01:09:26 1998
+@@ -1,12 +1,19 @@
++CFLAGS=	-O6
 +
+ all: crashme pddet
+ 
+ crashme:	crashme.o
+-	cc -o crashme crashme.o
++	${CC} ${CFLAGS} -o crashme crashme.o
+ crashme.o: crashme.c
+-	cc -c crashme.c
++	${CC} ${CFLAGS} -c crashme.c
+ 
+ pddet:	pddet.o
+-	cc -o pddet pddet.o
++	${CC} ${CFLAGS} -o pddet pddet.o
+ pddet.o: pddet.c
+-	cc -c pddet.c
++	${CC} ${CFLAGS} -c pddet.c
++
+ 
 +install: crashme pddet
 +	${INSTALL} -c -m 0755 crashme ${PREFIX}/sbin/crashme
 +	${INSTALL} -c -m 0755 pddet ${PREFIX}/sbin/pddet
