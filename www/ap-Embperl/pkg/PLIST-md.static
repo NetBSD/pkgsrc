@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST-md.static,v 1.1.1.1 1999/12/02 20:46:35 rh Exp $
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/HTML/Embperl/Embperl.a
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/HTML/Embperl/extralibs.ld
+@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/HTML/Embperl
