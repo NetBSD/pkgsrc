@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.11 2000/06/29 08:06:06 skrll Exp $
+$NetBSD: patch-aa,v 1.12 2000/08/26 07:35:19 veego Exp $
 --- ./ltconfig.in.orig	Sat May 27 02:58:57 2000
 +++ ./ltconfig.in	Thu Jun 29 09:00:00 2000
 @@ -1194,11 +1194,20 @@
@@ -60,3 +60,12 @@ $NetBSD: patch-aa,v 1.11 2000/06/29 08:06:06 skrll Exp $
      library_names_spec='${libname}${release}.so$versuffix ${libname}${release}.so$major ${libname}${release}.so ${libname}.so'
      soname_spec='${libname}${release}.so$major'
      dynamic_linker='NetBSD ld.elf_so'
+@@ -2069,6 +2094,6 @@
+   ;;
+ 
+ solaris*)
+-  version_type=linux
++  version_type=sunos
+   need_lib_prefix=no
+   need_version=no
+   library_names_spec='${libname}${release}.so$versuffix ${libname}${release}.so$major $libname.so'
