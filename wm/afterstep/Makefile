@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/12/22 16:21:53 abs Exp $
+# $NetBSD: Makefile,v 1.3 2001/01/25 12:36:16 fredb Exp $
 
 DISTNAME=	AfterStep-1.8.0
 PKGNAME=	afterstep-1.8.0
@@ -13,7 +13,10 @@ HOMEPAGE=		http://www.afterstep.org/
 BUILD_DEPENDS+=		autoconf:../../devel/autoconf
 DEPENDS+=		jpeg-6b:../../graphics/jpeg
 DEPENDS+=		png>=1.0.6:../../graphics/png
-DEPENDS+=		rplay>=3.2.0b6:../../audio/rplay
+DEPENDS+=		rplay>=3.3.2:../../audio/rplay
+# XXX
+# XXX The following would be "RUN_DEPENDS," if we had such a thing.
+# XXX
 DEPENDS+=		asclock-[0-9]*:../../time/asclock
 DEPENDS+=		xp-*:../../x11/xp
 
