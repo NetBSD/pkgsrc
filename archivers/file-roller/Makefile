@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.35 2005/02/26 17:25:58 jmmv Exp $
+# $NetBSD: Makefile,v 1.36 2005/03/22 16:29:09 jmmv Exp $
 #
 
-DISTNAME=	file-roller-2.8.4
+DISTNAME=	file-roller-2.10.0
 CATEGORIES=	archivers gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/file-roller/2.8/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/file-roller/2.10/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	tech-pkg@NetBSD.org
@@ -36,6 +36,10 @@ EVAL_PREFIX+=		PREFIX.zip=zip
 PREFIX.zip_DEFAULT=	${LOCALBASE}
 CPPFLAGS+=		-DFILEROLLER_ZIP="\"${PREFIX.zip}/bin/zip\""
 
+BUILDLINK_DEPENDS.glib2+=	glib2>=2.6.0
+BUILDLINK_DEPENDS.gnome-vfs2+=	gnome-vfs2>=2.10.0
+BUILDLINK_DEPENDS.libglade2+=	libglade2>=2.4.0
+
 .include "../../devel/GConf2/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
@@ -46,6 +50,7 @@ CPPFLAGS+=		-DFILEROLLER_ZIP="\"${PREFIX.zip}/bin/zip\""
 .include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
+.include "../../sysutils/nautilus/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../x11/gtk2/buildlink3.mk"

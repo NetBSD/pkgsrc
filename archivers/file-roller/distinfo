@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.14 2005/02/26 17:25:58 jmmv Exp $
+$NetBSD: distinfo,v 1.15 2005/03/22 16:29:09 jmmv Exp $
 
-SHA1 (file-roller-2.8.4.tar.bz2) = 2785366a17274a21babeffe62f54341214e08634
-RMD160 (file-roller-2.8.4.tar.bz2) = a40a764a4c807d18d7403651961049a548213931
-Size (file-roller-2.8.4.tar.bz2) = 1410279 bytes
+SHA1 (file-roller-2.10.0.tar.bz2) = 26d95ffacd765e92884972156aaf75d3f4c42dfb
+RMD160 (file-roller-2.10.0.tar.bz2) = ef387fc02b591f26950de49247c1f9e4c61fc341
+Size (file-roller-2.10.0.tar.bz2) = 1311026 bytes
 SHA1 (patch-aa) = ab3ba9f2acd38e24f55e5f4c0be903df7c5995c9
-SHA1 (patch-ab) = 849a501e0bb6b3babc6a1247945c81ba1310e274
+SHA1 (patch-ab) = 68b1aae60cfe774c35382875bd37f611107ec3c7
