@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: linkfarm.sh,v 1.1 2003/09/01 16:27:16 jlam Exp $
+# $NetBSD: linkfarm.sh.in,v 1.1 2003/09/08 04:49:07 jlam Exp $
 
 #
 # Copyright (c) 2002 Alistair G. Crooks.  All rights reserved.
@@ -34,16 +34,20 @@
 
 # set -x
 
+prefix="@prefix@"
+exec_prefix="@exec_prefix@"
+sbindir="@sbindir@"
+
 # set up program definitions
-findprog=/usr/bin/find
-grepprog=/usr/bin/grep
-lnprog=/bin/ln
-mkdirprog=/bin/mkdir
-pkginfoprog=/usr/sbin/pkg_info
-rmprog=/bin/rm
-rmdirprog=/bin/rmdir
-sedprog=/usr/bin/sed
-sortprog=/usr/bin/sort
+findprog="@FIND@"
+grepprog="@GREP@"
+lnprog="@LN@"
+mkdirprog="@MKDIR@"
+pkginfoprog="@sbindir@/pkg_info"
+rmprog="@RM@"
+rmdirprog="@RMDIR@"
+sedprog="@SED@"
+sortprog="@SORT@"
 
 usage() {
 	echo 'Usage: linkfarm [options] package'

@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: pkg_view.sh,v 1.2 2003/09/03 14:06:01 jlam Exp $
+# $NetBSD: pkg_view.sh.in,v 1.1 2003/09/08 04:49:07 jlam Exp $
 
 #
 # Copyright (c) 2001 Alistair G. Crooks.  All rights reserved.
@@ -34,22 +34,26 @@
 
 # set -x
 
+prefix="@prefix@"
+exec_prefix="@exec_prefix@"
+sbindir="@sbindir@"
+
 # set up program definitions
-chmodprog=/bin/chmod
-cmpprog=/usr/bin/cmp
-cpprog=/bin/cp
-envprog=/usr/bin/env
-findprog=/usr/bin/find
-grepprog=/usr/bin/grep
-linkfarmprog=/usr/sbin/linkfarm
-lnprog=/bin/ln
-mkdirprog=/bin/mkdir
-paxprog=/bin/pax
-pkginfoprog=/usr/sbin/pkg_info
-rmprog=/bin/rm
-rmdirprog=/bin/rmdir
-sedprog=/usr/bin/sed
-touchprog=/usr/bin/touch
+chmodprog="@CHMOD@"
+cmpprog="@CMP@"
+cpprog="@CP@"
+envprog="@ENV@"
+findprog="@FIND@"
+grepprog="@GREP@"
+linkfarmprog="@sbindir@/linkfarm"
+lnprog="@LN@"
+mkdirprog="@MKDIR@"
+paxprog="@PAX@"
+pkginfoprog="@sbindir@/pkg_info"
+rmprog="@RM@"
+rmdirprog="@RMDIR@"
+sedprog="@SED@"
+touchprog="@TOUCH@"
 
 usage() {
 	echo 'Usage: pkg_view [-n] [-v] [-i ignore] [-k pkg_dbdir_dflt] [-w viewname] [-d stowdir] [-W viewbase] add|check|delete pkgname...'
