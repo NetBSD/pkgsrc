@@ -1,28 +1,109 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/12/29 00:49:49 xtraeme Exp $
+$NetBSD: patch-aa,v 1.2 2004/04/01 19:08:26 jmmv Exp $
 
---- src/util.c.orig	2003-12-29 01:33:58.000000000 +0100
-+++ src/util.c	2003-12-29 01:34:44.000000000 +0100
-@@ -12,11 +12,13 @@
- #include <sys/types.h>
- #include <sys/ioctl.h>
- #include <sys/wait.h>
--
-+#include <sys/param.h>
+http://bugzilla.gnome.org/show_bug.cgi?id=129176
+
+Index: configure.in
+===================================================================
+RCS file: /cvs/gnome/procman/configure.in,v
+retrieving revision 1.101
+diff -u -r1.101 configure.in
+--- configure.in	15 Feb 2004 19:43:59 -0000	1.101
++++ configure.in	19 Feb 2004 12:17:40 -0000
+@@ -6,11 +6,22 @@
+ 
+ AC_PROG_INTLTOOL
+ 
++AC_CANONICAL_HOST
+ AC_ISC_POSIX
+ AC_PROG_CC
+ AM_PROG_CC_STDC
+ AC_HEADER_STDC
+ GNOME_COMPILE_WARNINGS
++
++# Some systems need special libraries to get pty functions.
++case "${host}" in
++    *netbsd*)
++        LIBS="${LIBS} -lutil"
++        ;;
++    *)
++        ;;
++esac
++AC_CHECK_FUNCS(getpt grantpt ptsname unlockpt)
+ 
+ LIBGNOME_REQUIRED=2.0.0
+ LIBGNOMEUI_REQUIRED=2.0.0
+Index: src/util.c
+===================================================================
+RCS file: /cvs/gnome/procman/src/util.c,v
+retrieving revision 1.16
+diff -u -r1.16 util.c
+--- src/util.c	2 Jan 2004 17:02:45 -0000	1.16
++++ src/util.c	19 Feb 2004 12:17:40 -0000
+@@ -16,7 +16,10 @@
  
  #ifdef __FreeBSD__
  # include <errno.h>
++# include <termios.h>
  # include <libutil.h>
 +#elif defined(__NetBSD__)
 +# include <util.h>
  #endif
  
- #include "util.h"
-@@ -40,7 +42,7 @@
+ #ifdef __sun
+@@ -49,8 +52,9 @@
   */
  #define OPEN_TTY() getpt()
  
 -#ifdef __FreeBSD__
-+#ifdef BSD
- /* FreeBSD doesn't have getpt(). This function emulates it's behaviour. */
+-/* FreeBSD doesn't have getpt(). This function emulates it's behaviour. */
++#if !defined(HAVE_GETPT) && (defined(__FreeBSD__) || defined(__NetBSD__))
++/* FreeBSD and NetBSD don't have getpt(). This function emulates its
++   behaviour. */
  int getpt (void);
  
+ int
+@@ -68,6 +72,7 @@
+ #endif
+ 
+ #ifdef __sun
++#if !defined(HAVE_GETPT)
+ /* Sun doesn't have getpt().  This function emulates it's behavior. */
+ int getpt (void);
+ 
+@@ -113,6 +118,7 @@
+ 
+ 	return fds;
+ }
++#endif
+ 
+ /* Handle the fact that solaris doesn't have an asprintf */
+ /* pinched from 
+@@ -181,7 +187,14 @@
+ 	 * Make su think we're sending the password from a terminal:
+ 	 */
+ 
+-	if (((t_fd = OPEN_TTY()) < 0) || (grantpt(t_fd) < 0) || (unlockpt(t_fd) < 0)) {
++	if (((t_fd = OPEN_TTY()) < 0)
++#ifdef HAVE_GRANTPT
++            || (grantpt(t_fd) < 0)
++#endif
++#ifdef HAVE_UNLOCKPT
++            || (unlockpt(t_fd) < 0)
++#endif
++            ) {
+ 		fprintf (stderr, "Unable to open a terminal\n");
+ 		ABORT (root);
+ 	}
+@@ -259,7 +272,11 @@
+ 			}
+ 		}
+ 
+-		if(((pts = ptsname(t_fd)) == NULL) || ((t_fd = open(pts, O_RDWR | O_NOCTTY)) < 0)) {
++#ifdef HAVE_PTSNAME
++		if (((pts = ptsname(t_fd)) == NULL) || ((t_fd = open(pts, O_RDWR | O_NOCTTY)) < 0)) {
++#else
++		if (((pts = ttyname(t_fd)) == NULL) || ((t_fd = open(pts, O_RDWR | O_NOCTTY)) < 0)) {
++#endif
+ 			perror ("Unable to open pseudo slave terminal");
+ 			_exit (-1);
+ 		}
