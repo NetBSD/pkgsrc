@@ -3,7 +3,8 @@
 # Date created:				October 17th 1996
 # Whom:	      				James FitzGibbon <jfitz@FreeBSD.org>
 #
-#   $Id: Makefile,v 1.1.1.1 1997/11/22 04:44:06 hubertf Exp $
+#   $NetBSD: Makefile,v 1.2 1997/11/22 04:50:43 hubertf Exp $
+#   FreeBSD Id: Makefile,v 1.7 1997/06/24 18:43:11 jfitz Exp
 #
 
 DISTNAME=	Data-Dumper-2.07
