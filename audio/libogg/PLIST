@@ -1,12 +1,12 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:17:08 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/01/02 12:32:44 lukem Exp $
 include/ogg/config_types.h
 include/ogg/ogg.h
 include/ogg/os_types.h
 lib/libogg.a
 lib/libogg.la
 lib/libogg.so
-lib/libogg.so.2
-lib/libogg.so.2.0
+lib/libogg.so.3
+lib/libogg.so.3.0
 share/aclocal/ogg.m4
 share/doc/html/${DISTNAME}/framing.html
 share/doc/html/${DISTNAME}/index.html
@@ -17,17 +17,19 @@ share/doc/html/${DISTNAME}/ogg/encoding.html
 share/doc/html/${DISTNAME}/ogg/general.html
 share/doc/html/${DISTNAME}/ogg/index.html
 share/doc/html/${DISTNAME}/ogg/ogg_packet.html
+share/doc/html/${DISTNAME}/ogg/ogg_packet_clear.html
 share/doc/html/${DISTNAME}/ogg/ogg_page.html
 share/doc/html/${DISTNAME}/ogg/ogg_page_bos.html
+share/doc/html/${DISTNAME}/ogg/ogg_page_checksum_set.html
 share/doc/html/${DISTNAME}/ogg/ogg_page_continued.html
 share/doc/html/${DISTNAME}/ogg/ogg_page_eos.html
 share/doc/html/${DISTNAME}/ogg/ogg_page_granulepos.html
+share/doc/html/${DISTNAME}/ogg/ogg_page_packets.html
 share/doc/html/${DISTNAME}/ogg/ogg_page_pageno.html
 share/doc/html/${DISTNAME}/ogg/ogg_page_serialno.html
 share/doc/html/${DISTNAME}/ogg/ogg_page_version.html
 share/doc/html/${DISTNAME}/ogg/ogg_stream_clear.html
 share/doc/html/${DISTNAME}/ogg/ogg_stream_destroy.html
-share/doc/html/${DISTNAME}/ogg/ogg_stream_eof.html
 share/doc/html/${DISTNAME}/ogg/ogg_stream_eos.html
 share/doc/html/${DISTNAME}/ogg/ogg_stream_flush.html
 share/doc/html/${DISTNAME}/ogg/ogg_stream_init.html
