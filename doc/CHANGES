@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1513 2003/03/01 13:15:55 jmmv Exp $
+$NetBSD: CHANGES,v 1.1514 2003/03/01 14:35:17 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -875,3 +875,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated libsigc++ to 1.2.3 [jmmv 2003-03-01]
 	Added elizatalk-0.4 [jlam 2003-03-01]
 	Added mono-0.21 [jmmv 2003-03-01]
+	Added gtkmm-2.2.0 [jmmv 2003-03-01]
