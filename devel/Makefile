@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.402 2003/07/06 15:36:55 taca Exp $
+# $NetBSD: Makefile,v 1.403 2003/07/13 20:03:24 dillo Exp $
 #
 
 COMMENT=	Development utilities
@@ -312,6 +312,7 @@ SUBDIR+=	php4-posix
 SUBDIR+=	php4-session
 SUBDIR+=	php4-sysvsem
 SUBDIR+=	php4-sysvshm
+SUBDIR+=	physfs
 SUBDIR+=	pilrc
 SUBDIR+=	pkgconfig
 SUBDIR+=	popt
