@@ -1,11 +1,25 @@
-# $NetBSD: DEINSTALL,v 1.3 2002/01/28 17:56:19 zuntum Exp $
+# $NetBSD: DEINSTALL,v 1.4 2004/07/21 22:35:59 schmonz Exp $
+
+QMAILDIR=@QMAILDIR@
+
+VAR_QMAIL_DIRS="alias bin boot control doc man queue users"
 
 case "${STAGE}" in
+
 POST-DEINSTALL)
-	${ECHO} ===========================================================================
-	${ECHO}
-	${ECHO} You may remove qmail-users package now, as it is no longer needed.
-	${ECHO}
-	${ECHO} ===========================================================================
+
+	for dir in $VAR_QMAIL_DIRS; do
+		if [ -h ${QMAILDIR}/$dir ]; then
+			${RM} -f ${QMAILDIR}/$dir
+		fi
+	done
+
+	${CAT} <<EOF
+===========================================================================
+
+You may remove the qmail-users package now, as it is no longer needed.
+
+===========================================================================
+EOF
 	;;
 esac
