@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2004/03/10 22:41:30 minskim Exp $
+# $NetBSD: Makefile,v 1.9 2004/10/14 02:39:19 xtraeme Exp $
 
-DISTNAME=	ccache-2.3
-PKGREVISION=	1
+DISTNAME=	ccache-2.4
 CATEGORIES=	devel
 MASTER_SITES=	http://ccache.samba.org/ftp/ccache/
 
