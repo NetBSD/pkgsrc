@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5706 2004/04/21 15:02:26 jmmv Exp $
+$NetBSD: CHANGES,v 1.5707 2004/04/21 16:04:43 recht Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2209,3 +2209,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated cvs2svn to 0.916 [seb 2004-04-21]
 	Updated ImageMagick to 6.0.0-2 [adam 2004-04-21]
 	Updated anjuta to 1.2.2 [jmmv 2004-04-21]
+	Updated gail to 1.6.1 [recht 2004-04-21]
