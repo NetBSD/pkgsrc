@@ -7,5 +7,3 @@ files and lockfiles at the same time.
 
 To be portable, a small C extension is used to minimize the time
 between existence check of a lockfile and its creation.
-
-Author:	Clemens Hintze <c.hintze@gmx.net>
