@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.591 2003/05/26 06:55:17 martti Exp $
+$NetBSD: TODO,v 1.592 2003/05/26 08:38:35 wiz Exp $
 
 Suggested new packages
 ======================
@@ -73,7 +73,7 @@ Suggested package updates
 	o angband-3.0.3
 	o anjuta-1.0.2
 	o arch-1.0pre17 [pkg/20776]
-	o arch-1.0pre21
+	o arch-1.0pre23
 	o asm2html-1.4 [pkg/21319]
 	o asp2php-0.76.15 [pkg/20506]
 	o atari800-1.3
@@ -105,7 +105,7 @@ Suggested package updates
 	o dircproxy-1.0.5 [pkg/21644]
 	o disc-cover-1.5.0
 	o distcc-2.4
-	o docbook-xsl-1.61.1
+	o docbook-xsl-1.61.2
 	o dylan-compiler-2.3.9
 	o dylan-interpreter-2.3.9
 	o elm-me-2.4pl101c
@@ -184,6 +184,7 @@ Suggested package updates
 	o micq-0.4.10.3
 	o midnight-commander-4.6.0
 	o minicom-2.1
+	o mldonkey-2.5
 	o mono-0.24
 	o mpgtx-1.3 [pkg/19082]
 	o mrproject-0.9.1
@@ -194,7 +195,7 @@ Suggested package updates
 	o mysql-3.23.54
 	o napshare-1.2
 	o nessus-2.0.1 [pkg/20796]
-	o nessus-2.0.4
+	o nessus-2.0.6
 	o net-snmp-5.0.7 [pkg/19939]
 	o net-snmp-5.0.8
 	o netatalk-1.6.2 [pkg/21341]
@@ -204,7 +205,7 @@ Suggested package updates
 	o nut-8.5
 	o openbox-2.3.1 [devel]
 	o openh323-1.11.2
-	o openldap-2.1.17
+	o openldap-2.1.20 [pkg/21682]
 	o openoffice-1.0.3.1 [skrll]
 	o openslp-1.0.11
 	o openssh-3.6.1p2
@@ -247,10 +248,11 @@ Suggested package updates
 	o stella-1.3
 	o sun-jdk14-1.4.2
 	o sun-jre14-1.4.2
-	o swig-1.3.17 (started --epg)
+	o swig-1.3.17 [epg]
+	o sylpheed-claws-0.9.0
 	o t1lib-5.0.0
 	o tcl/tk-8.4.3
-	o tcpreplay-1.4.1
+	o tcpreplay-1.4.2
 	o texmacs-1.0.1.14
 	o tightvnc-1.2.8
 	o tkman-2.2
