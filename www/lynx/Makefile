@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 1998/11/05 02:29:18 mycroft Exp $
+# $NetBSD: Makefile,v 1.16 1999/01/23 12:41:13 frueauf Exp $
 #
 
 DISTNAME=       lynx2-8-1
@@ -10,13 +10,21 @@ MASTER_SITES=   http://sol.slcc.edu/lynx/release2-8-1/
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://sol.slcc.edu/lynx/
 
-CONFLICTS=	lynx-2.8rel.2 lynx-2.8
-
 DEPENDS+=	libslang-1.2.2:../../devel/libslang
 
-CONFIGURE_ARGS+= --with-screen=slang --with-zlib --libdir="${PREFIX}/etc"
-CONFIGURE_ENV+=	LIBS="-lm -ltermcap" CPPFLAGS=-Dunix
+CONFLICTS=	lynx-*
+
 GNU_CONFIGURE=  YES
+CONFIGURE_ARGS+= --with-screen=slang --with-zlib --libdir="${PREFIX}/etc"
+# see if PASSIVE_FETCH is defined in /etc/mk.conf.  If so compile
+# with the ftp code set to passive mode (-DNOPORT)
+.include "../../mk/bsd.prefs.mk"
+
+.if defined(PASSIVE_FETCH)
+CONFIGURE_ENV+=	LIBS="-lm -ltermcap" CPPFLAGS="-Dunix -DNOPORT"
+.else
+CONFIGURE_ENV+=	LIBS="-lm -ltermcap" CPPFLAGS=-Dunix
+.endif
 
 INSTALL_TARGET= install install-help
 MAKEFILE=       makefile
