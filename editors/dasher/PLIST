@@ -1,0 +1,41 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/02/23 19:01:53 jmmv Exp $
+bin/dasher
+man/man1/dasher.1
+share/applications/dasher.desktop
+share/dasher/alphabet.albanian.xml
+share/dasher/alphabet.dtd
+share/dasher/alphabet.dutch.xml
+share/dasher/alphabet.english.xml
+share/dasher/alphabet.french.xml
+share/dasher/alphabet.german.xml
+share/dasher/alphabet.hiragana.xml
+share/dasher/alphabet.hungarian.xml
+share/dasher/alphabet.hungarianLowerCase.xml
+share/dasher/alphabet.ipa.xml
+share/dasher/alphabet.italian.xml
+share/dasher/alphabet.korean.xml
+share/dasher/alphabet.polish.xml
+share/dasher/alphabet.portuguese.xml
+share/dasher/alphabet.russian.xml
+share/dasher/alphabet.spanish.xml
+share/dasher/alphabet.xsl
+share/dasher/colour.dtd
+share/dasher/colour.hiragana.xml
+share/dasher/colour.xml
+share/dasher/dasher.glade
+share/dasher/training_dutch_NL.txt
+share/dasher/training_english_GB.txt
+share/dasher/training_french_FR.txt
+share/dasher/training_german_DE.txt
+share/dasher/training_hiragana60_JP.txt
+share/dasher/training_hiragana83_JP.txt
+share/dasher/training_italian_IT.txt
+share/dasher/training_portuguese_BR.txt
+share/dasher/training_russian_RU.txt
+share/icons/dasher.png
+${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/dasher.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/dasher.mo
+${PKGLOCALEDIR}/locale/mn/LC_MESSAGES/dasher.mo
+@unexec ${RMDIR} %D/share/icons 2>/dev/null || ${TRUE}
+@dirrm share/dasher
+@comment in xdg-dirs: @dirrm share/applications
