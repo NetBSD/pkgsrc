@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2661 2003/07/02 16:42:32 martti Exp $
+$NetBSD: CHANGES,v 1.2662 2003/07/02 17:43:20 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2654,3 +2654,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated galeon to 1.2.11nb1 [taya 2003-07-02]
 	gtexinfo: Downgraded to 4.6 [grant 2003-07-02]
 	Updated postfix to 2.0.13 [martti 2003-07-02]
+	Updated mtoolsfm to 1.9.3nb2 [jmmv 2003-07-02]
