@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.7 2003/03/31 02:43:11 jschauma Exp $
+$NetBSD: patch-aa,v 1.8 2003/11/10 02:45:01 danw Exp $
 
 --- config.Unix.orig	Fri Jun  6 18:00:00 1997
 +++ config.Unix	Sun Mar 30 21:25:38 2003
@@ -30,7 +30,7 @@ $NetBSD: patch-aa,v 1.7 2003/03/31 02:43:11 jschauma Exp $
  XCOMM --- Use extra code for setenv() and getenv() ?
  XCOMM --------------------------------------------------------------------
 -#if !defined(LinuxArchitecture) && !defined(FreeBSDArchitecture)
-+#if !defined(LinuxArchitecture) && !defined(FreeBSDArchitecture) && !defined(NetBSDArchitecture) && !defined(OpenBSDArchitecture)
++#if !defined(LinuxArchitecture) && !defined(FreeBSDArchitecture) && !defined(NetBSDArchitecture) && !defined(OpenBSDArchitecture) && !defined(DarwinArchitecture)
  #   define USE_SETENV_CODE
  #endif
  
