@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/01/20 12:19:17 agc Exp $
+# $NetBSD: Makefile,v 1.14 2004/01/25 16:06:47 recht Exp $
 #
 
 DISTNAME=	Python-2.0.1
@@ -19,7 +19,7 @@ PLIST_SRC=	${WRKDIR}/.PLIST_SRC
 WRKSRC=		${WRKDIR}/Python-2.0.1
 DIST_SUBDIR=	python
 
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--without-threads
 INSTALL_TARGET=	altinstall
@@ -74,5 +74,5 @@ post-install:
 	${RM} ${PREFIX}/bin/python2.0
 	${INSTALL_PROGRAM} ${WRKSRC}/python ${PREFIX}/bin/python2.0
 
-.include "../../security/openssl/buildlink2.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
