@@ -1,4 +1,4 @@
-/*	$NetBSD: getopt_long.c,v 1.5 2003/09/06 04:28:16 grant Exp $	*/
+/*	$NetBSD: getopt_long.c,v 1.6 2004/03/12 15:21:13 grant Exp $	*/
 
 /*-
  * Copyright (c) 2000 The NetBSD Foundation, Inc.
@@ -47,7 +47,7 @@
 #endif
 
 #if defined(LIBC_SCCS) && !defined(lint)
-__RCSID("$NetBSD: getopt_long.c,v 1.5 2003/09/06 04:28:16 grant Exp $");
+__RCSID("$NetBSD: getopt_long.c,v 1.6 2004/03/12 15:21:13 grant Exp $");
 #endif /* LIBC_SCCS and not lint */
 
 /* #include "namespace.h" */
@@ -74,8 +74,10 @@ __RCSID("$NetBSD: getopt_long.c,v 1.5 2003/09/06 04:28:16 grant Exp $");
 #ifndef __ELF__
 #define _getopt getopt
 #else
+#if 0
 #ifdef __weak_alias
 __weak_alias(getopt,_getopt)
+#endif
 #endif
 #endif
 int	opterr = 1;		/* if error message should be printed */
