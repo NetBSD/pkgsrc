@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 1999/04/01 13:38:44 agc Exp $
+# $NetBSD: Makefile,v 1.15 1999/04/05 03:41:16 hubertf Exp $
 #
 
 DISTNAME=	nt.1.5a23
@@ -8,11 +8,11 @@ MASTER_SITES=	ftp://cs.ucl.ac.uk/mice/nte/
 
 MAINTAINER=	mycroft@netbsd.org
 
-BUILD_DEPENDS=	${BUILD_ROOT}/x11/tk80/${WRKDIR:T}/tk8.0/generic/default.h:${TK_DIR}:configure
+BUILD_DEPENDS=	${TK_SRC}/generic/default.h:${TK_DIR}:configure
 DEPENDS+=	tk-8.0.5:../../x11/tk80
 
-TK_DIR=         ${BUILD_ROOT}/x11/tk80
-TK_SRC=		${TK_DIR}/${WRKDIR:T}/tk8.0
+TK_DIR=         ${.CURDIR}/../../x11/tk80
+TK_SRC=		${TK_DIR}/${WRKDIR:T}/tk8.0.5
 
 NOT_FOR_ARCHS=	alpha	# ANSI headers cause LP64 problems
 
@@ -38,4 +38,7 @@ do-configure:
 pre-build:	${WRKSRC}/netbsd/hsearch.o
 
 ${WRKSRC}/netbsd/hsearch.o:	${WRKSRC}/src/hsearch.c
-		${CC} -I${WRKSRC}/src ${CFLAGS} -c -o $@ ${WRKSRC}/src/hsearch.c
+	${CC} -I${WRKSRC}/src ${CFLAGS} -c -o $@ ${WRKSRC}/src/hsearch.c
+
+pre-clean:
+	@cd ${TK_DIR} && ${MAKE} clean
