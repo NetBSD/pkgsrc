@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.13 2000/02/27 23:37:53 tron Exp $
+# $NetBSD: Makefile,v 1.14 2000/09/09 23:26:46 wiz Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/07/30 18:17:48 adam Exp
 #
 
 DISTNAME=	nn-6.5.4
 CATEGORIES=	news
-MASTER_SITES=	ftp://ftp.gw.com/pub/unix/news/nn/
+MASTER_SITES=	ftp://ftp.gw.com/pub/unix/news/nn/ \
+		ftp://ftp.visi.com/users/mtpins/nn/
 
 MAINTAINER=     packages@netbsd.org
 
@@ -43,5 +44,6 @@ post-patch:
 	    s#@SFILE@#${SFILE}#' \
 	    <${WRKSRC}/config.h-dist >${WRKSRC}/config.h
 	@${CP} ${FILESDIR}/s-netbsd.h ${WRKSRC}/conf/s-netbsd.h
+	@${CP} ${WRKSRC}/conf/m-m680x0.h ${WRKSRC}/conf/m-m68k.h
 
 .include "../../mk/bsd.pkg.mk"
