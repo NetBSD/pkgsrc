@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/01/29 00:51:50 taca Exp $
+# $NetBSD: Makefile,v 1.6 2002/01/30 11:52:43 taca Exp $
 #
 
 DISTNAME=		rats-1.3
@@ -11,7 +11,7 @@ COMMENT=		Rough Auditing Tool for Security
 
 USE_BUILDLINK_ONLY=	# defined
 GNU_CONFIGURE=		# defined
-CONFIGURE_ARGS=		--libdir=${LOCALBASE}/share/rats
+CONFIGURE_ARGS+=	--libdir=${LOCALBASE}/share/rats
 ALL_TARGET=		rats
 
 .include "../../textproc/expat/buildlink.mk"
