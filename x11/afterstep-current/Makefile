@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 1999/10/28 10:08:24 agc Exp $
+# $NetBSD: Makefile,v 1.12 1999/11/12 08:13:55 fredb Exp $
 
 DISTNAME=		AfterStep-1.7.142
-PKGNAME=		afterstep-1.7.149
+PKGNAME=		afterstep-1.7.155
 CATEGORIES=		x11
 MASTER_SITES=		ftp://ftp.afterstep.org/devel/snapshots/ \
 			ftp://ftp.afterstep.org/devel/archives/1.7/ \
@@ -23,7 +23,13 @@ PATCHFILES=	1.7.142-01-sasha-png_jpg_warnings.patch.gz \
 		1.7.142-04-allanon-desk_and_shaped_icons_and_wharf_reswallow.patch.gz \
 		1.7.142-05-allanon-desks_and_wharf.patch.gz \
 		1.7.142-06-sasha-menus_and_more.patch.gz \
-		1.7.142-07-sasha-winfunctions_scroll.patch.gz
+		1.7.142-07-sasha-winfunctions_scroll.patch.gz \
+		1.7.142-08-sasha-functions-gamma-etc.patch.gz \
+		1.7.142-09-sasha-borders_myframes_more.patch.gz \
+		1.7.142-10-allanon-avoidcover.patch.gz \
+		1.7.142-11-sasha-icons_shade_gamma.patch.gz \
+		1.7.142-12-allanon-window_position_and_shaping.patch.gz \
+		1.7.142-13-sasha-titlebuttons_mapping.patch.gz
 PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=		fb@enteract.com
@@ -36,8 +42,6 @@ DEPENDS+=		rplay-3.2.0b6:../../audio/rplay
 DEPENDS+=		xli-1.16:../../graphics/xli
 DEPENDS+=		xp-1.2b10:../../x11/xp
 DEPENDS+=		xpm-3.4k:../../graphics/xpm
-
-CONFLICTS=		ascp-1.0.2
 
 DIST_SUBDIR=		AfterStep
 GNU_CONFIGURE=		yes
