@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.47 2000/11/11 17:49:25 tron Exp $
+# $NetBSD: Makefile,v 1.48 2001/01/08 02:13:44 wiz Exp $
 
-DISTNAME=	netpbm-${VERS}
+DISTNAME=	netpbm-9.7
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=netpbm/}
 EXTRACT_SUFX=	.tgz
@@ -16,9 +16,6 @@ USE_LIBTOOL=	yes
 
 INSTALL_TARGET=	install-dev install
 MAKEFILE=	GNUmakefile
-
-VERS=		9.7
-PLIST_SUBST+=	VERS=${VERS}
 
 .include "../../mk/bsd.prefs.mk"
 
