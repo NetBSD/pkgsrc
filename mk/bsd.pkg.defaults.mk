@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.285 2004/09/30 15:37:24 epg Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.286 2004/10/06 19:47:01 tv Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -1907,6 +1907,12 @@ SILC_CLIENT_WITH_PERL?=	YES
 SUN_JRE14_USE_JCE?= NO
 # Whether to include the Java Cryptography Extension (JCE) Unlimited Strength
 # Jurisdiction Policy Files in the sun-jre14 package
+# Possible: YES or NO.
+# Default: NO
+
+SUN_JRE15_USE_JCE?= NO
+# Whether to include the Java Cryptography Extension (JCE) Unlimited Strength
+# Jurisdiction Policy Files in the sun-jre15 package
 # Possible: YES or NO.
 # Default: NO
 
