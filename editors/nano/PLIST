@@ -1,8 +1,6 @@
-@comment $NetBSD: PLIST,v 1.6 2002/12/26 15:14:42 shell Exp $
+@comment $NetBSD: PLIST,v 1.7 2003/06/30 02:04:51 seb Exp $
 bin/nano
-@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/nano.info
 info/nano.info
-@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/nano.info
 man/man1/nano.1
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/nano.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/nano.mo
