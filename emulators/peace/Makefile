@@ -1,29 +1,27 @@
-# $NetBSD: Makefile,v 1.9 2004/01/20 12:14:41 agc Exp $
+# $NetBSD: Makefile,v 1.10 2004/03/09 12:40:13 kent Exp $
 #
-PEACE_VERSION=	20030919
-DISTNAME=	peace-0.0.${PEACE_VERSION}
-SITES_peace-20030919.tar.gz=http://cvs.kshosen.ac.jp/PEACE/src/
+PEACE_VERSION=	0.0.20040309
+DISTNAME=	peace-${PEACE_VERSION}
+SITES_peace-0.0.20040309.tar.gz=http://chiharu.hauN.org/peace/dist/
 CATEGORIES=	emulators
 
 MAINTAINER=	peace-sacrifice@hauN.org
 HOMEPAGE=	http://chiharu.hauN.org/peace/
 COMMENT=	Enable to run Win32 executables
 
-DISTFILES+=	i386-netbsdpe-stl-3.3.tgz \
-		peace-${PEACE_VERSION}.tar.gz
+DISTFILES+=	peace-${PEACE_VERSION}.tar.gz
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=peace/}
-ONLY_FOR_PLATFORM=      NetBSD-1.6[Q-Z]*-* NetBSD-[2-9]*-*
+ONLY_FOR_PLATFORM=      NetBSD-1.6Z[D-Z]*-* NetBSD-[2-9]*-*
 # bin/showstack requires perl5
 # DEPENDS+=	perl5:../../lang/perl5
 DEPENDS+=	icu>=2.4nb1:../../textproc/icu
 
-BUILD_DEPENDS=	cross-i386-netbsdpe>=1.3:../../cross/i386-netbsdpe
-BUILD_DEPENDS+=	w32api>=2.4:../../devel/w32api
+BUILD_DEPENDS=	cross-i386-netbsdpe>=3.3:../../cross/i386-netbsdpe
+BUILD_DEPENDS+=	w32api>=2.5:../../devel/w32api
 BUILD_DEPENDS+= x11-links-*:../../pkgtools/x11-links
 
-WRKSRC=		${WRKDIR}/peace
-CPPFLAGS+=	-I${WRKDIR}/cross/i386-netbsdpe/include \
-		-I${WRKDIR}/cross/i386-netbsdpe/include/c++
+#WRKSRC=		${WRKDIR}/peace
+CPPFLAGS+=	-I${WRKDIR}/cross/i386-netbsdpe/include
 LDFLAGS=	-L${WRKSRC}/lib
 PECOFFDIR=	${PREFIX}/emul/pecoff
 MAKE_FLAGS+=	PECOFFDIR=${PECOFFDIR} \
