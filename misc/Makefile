@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.147 2003/01/13 12:57:40 manu Exp $
+# $NetBSD: Makefile,v 1.148 2003/01/22 13:52:46 agc Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -72,6 +72,7 @@ SUBDIR+=	kp
 SUBDIR+=	kstars
 SUBDIR+=	ktail
 SUBDIR+=	less
+SUBDIR+=	libdvdcss
 SUBDIR+=	libdvdread
 SUBDIR+=	libutf
 SUBDIR+=	lile
