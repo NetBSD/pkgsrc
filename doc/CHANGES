@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5945 2004/05/15 12:20:40 jmmv Exp $
+$NetBSD: CHANGES,v 1.5946 2004/05/15 12:50:06 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2539,3 +2539,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated librsvg2 to 2.6.5 [jmmv 2004-05-15]
 	Updated librsvg2-gtk2 to 2.6.5 [jmmv 2004-05-15]
 	Updated at-spi to 1.4.2 [jmmv 2004-05-15]
+	Updated dasher to 3.2.10 [jmmv 2004-05-15]
