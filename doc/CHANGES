@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2497 2003/06/13 03:56:55 jlam Exp $
+$NetBSD: CHANGES,v 1.2498 2003/06/13 14:18:57 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2448,3 +2448,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated gtexinfo to 4.6 [wiz 2003-06-12]
 	Updated ethereal to 0.9.13 [itojun 2003-06-13]
 	Updated pwm to 1.0.20030528nb1 [jlam 2003-06-13]
+	Updated libgnomedb to 0.12.2 [jmmv 2003-06-13]
