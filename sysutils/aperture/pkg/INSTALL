@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: INSTALL,v 1.1.1.1 2000/01/05 18:02:19 jlam Exp $
+# $NetBSD: INSTALL,v 1.2 2001/07/29 05:35:48 tron Exp $
 
 case $2 in
 PRE-INSTALL)
@@ -10,7 +10,7 @@ POST-INSTALL)
 ===========================================================================
 Add the following line to /etc/lkm.conf:
 
-    ${PKG_PREFIX}/lkm/xf86.o    - -  ${PKG_PREFIX}/lkm/xf86_mod_install - -
+    ${PREFIX}/lkm/xf86.o    - -  ${PREFIX}/lkm/xf86_mod_install - AFTERMOUNT
 
 and set:
 
