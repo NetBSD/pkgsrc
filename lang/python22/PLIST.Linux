@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST.Linux,v 1.1 2002/12/25 12:35:04 grant Exp $
-lib/python2.2/plat-linux2/CDROM.py
-lib/python2.2/plat-linux2/CDROM.pyc
-lib/python2.2/plat-linux2/CDROM.pyo
-lib/python2.2/plat-linux2/DLFCN.py
-lib/python2.2/plat-linux2/DLFCN.pyc
-lib/python2.2/plat-linux2/DLFCN.pyo
-lib/python2.2/plat-linux2/TYPES.py
-lib/python2.2/plat-linux2/TYPES.pyc
-lib/python2.2/plat-linux2/TYPES.pyo
-lib/python2.2/lib-dynload/linuxaudiodev.so
+@comment $NetBSD: PLIST.Linux,v 1.2 2004/01/24 08:13:14 grant Exp $
+lib/python${PY_VER_SUFFIX}/plat-linux2/CDROM.py
+lib/python${PY_VER_SUFFIX}/plat-linux2/CDROM.pyc
+lib/python${PY_VER_SUFFIX}/plat-linux2/CDROM.pyo
+lib/python${PY_VER_SUFFIX}/plat-linux2/DLFCN.py
+lib/python${PY_VER_SUFFIX}/plat-linux2/DLFCN.pyc
+lib/python${PY_VER_SUFFIX}/plat-linux2/DLFCN.pyo
+lib/python${PY_VER_SUFFIX}/plat-linux2/TYPES.py
+lib/python${PY_VER_SUFFIX}/plat-linux2/TYPES.pyc
+lib/python${PY_VER_SUFFIX}/plat-linux2/TYPES.pyo
+lib/python${PY_VER_SUFFIX}/lib-dynload/linuxaudiodev.so
