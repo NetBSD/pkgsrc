@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/06/21 08:12:37 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2000/07/31 04:14:07 jlam Exp $
 #
 
 DISTNAME=		xracer-0.96.9
@@ -10,7 +10,7 @@ HOMEPAGE=		http://xracer.annexia.org/
 
 DEPENDS+=		Mesa-*:../../graphics/Mesa
 DEPENDS+=		jpeg-*:../../graphics/jpeg
-DEPENDS+=		gettext-0.10.*:../../devel/gettext
+DEPENDS+=		gettext>=0.10.35nb1:../../devel/gettext
 
 USE_X11=		# defined
 USE_GMAKE=		# defined
