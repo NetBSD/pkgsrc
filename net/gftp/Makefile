@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2003/07/13 13:52:50 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2003/07/21 17:10:38 martti Exp $
 
 DISTNAME=	gftp-2.0.8
 PKGREVISION=	4
@@ -9,7 +9,7 @@ MASTER_SITES=	http://gftp.seul.org/					\
 
 MAINTAINER=	jmcneill@invisible.yi.org
 HOMEPAGE=	http://gftp.seul.org/
-COMMENT=	multithreaded ftp client for *NIX based machines running X11R6
+COMMENT=	Multithreaded ftp client for *NIX based machines running X11R6
 
 DEPENDS+=	gnome1-dirs>=1.0:../../misc/gnome1-dirs
 
