@@ -1,0 +1,12 @@
+$NetBSD: patch-ag,v 1.3 2005/03/27 10:25:51 recht Exp $
+
+--- mono/mini/tramp-ppc.c.orig	Tue Mar 15 00:01:22 2005
++++ mono/mini/tramp-ppc.c
+@@ -537,6 +537,7 @@ mono_debugger_create_notification_functi
+ 	if (notification_address)
+ 		*notification_address = buf;
+ 	ppc_blr (buf);
++	mono_arch_flush_icache (ptr, buf - ptr);
+ 
+ 	return ptr;
+ }

@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.10 2005/03/27 10:25:51 recht Exp $
+
+--- mono/metadata/metadata.c.orig	Wed Mar 16 17:18:22 2005
++++ mono/metadata/metadata.c
+@@ -551,6 +551,7 @@ mono_metadata_compute_size (MonoImage *m
+ 				g_assert (i == 4 || i == 5);
+ 				field_size = i == 4 ? idx_size (MONO_TABLE_FIELD):
+ 					idx_size(MONO_TABLE_METHOD);
++				break;
+ 			case MONO_TABLE_GENERICPARAM:
+ 				g_assert (i == 2 || i == 4 || i == 5);
+ 				if (i == 2)

@@ -1,13 +1,13 @@
-$NetBSD: patch-ac,v 1.9 2004/11/22 13:42:42 adam Exp $
+$NetBSD: patch-ac,v 1.10 2005/03/27 10:25:51 recht Exp $
 
---- data/Makefile.in.orig	2004-10-29 16:11:18.000000000 +0000
+--- data/Makefile.in.orig	Fri Mar 18 16:08:45 2005
 +++ data/Makefile.in
-@@ -233,7 +233,7 @@ target_alias = @target_alias@
- target_cpu = @target_cpu@
+@@ -255,7 +255,7 @@ target_cpu = @target_cpu@
  target_os = @target_os@
  target_vendor = @target_vendor@
+ SUBDIRS = net_1_1 net_2_0
 -monodir = $(sysconfdir)/mono
 +monodir = $(datadir)/examples/mono
  EXTRA_DIST = config.in \
- 	     machine.config \
- 	     DefaultWsdlHelpGenerator.aspx \
+ 	     browscap.ini
+ 
