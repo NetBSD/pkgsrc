@@ -2,7 +2,7 @@
 #
 # start of header
 #
-# $NetBSD: header,v 1.7 2002/01/10 12:05:26 jlam Exp $
+# $NetBSD: header,v 1.8 2002/06/20 20:15:50 jlam Exp $
 
 PKGNAME=$1
 STAGE=$2
@@ -61,5 +61,29 @@ ALL_GROUPS=
 ALL_FILES=
 ALL_MAKE_DIRS=
 ALL_DIRS=
+
+case "${PKG_CREATE_USERGROUP}" in
+[Yy][Ee][Ss]|[Tt][Rr][Uu][Ee]|[Oo][Nn]|1)
+	_PKG_CREATE_USERGROUP=YES
+	;;
+[Nn][Oo]|[Ff][Aa][Ll][Ss][Ee]|[Oo][Ff][Ff]|0)
+	_PKG_CREATE_USERGROUP=NO
+	;;
+*)
+	_PKG_CREATE_USERGROUP=YES
+	;;
+esac
+
+case "${PKG_CONFIG}" in
+[Yy][Ee][Ss]|[Tt][Rr][Uu][Ee]|[Oo][Nn]|1)
+	_PKG_CONFIG=YES
+	;;
+[Nn][Oo]|[Ff][Aa][Ll][Ss][Ee]|[Oo][Ff][Ff]|0)
+	_PKG_CONFIG=NO
+	;;
+*)
+	_PKG_CONFIG=YES
+	;;
+esac
 
 # end of header

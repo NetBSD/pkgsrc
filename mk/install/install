@@ -1,60 +1,101 @@
 # start of install
 #
-# $NetBSD: install,v 1.8 2002/01/23 15:02:27 jlam Exp $
+# $NetBSD: install,v 1.9 2002/06/20 20:15:50 jlam Exp $
 
 case ${STAGE} in
 PRE-INSTALL)
-	if [ -n "${PKG_GROUPS}" ]
-	then
+	_pkg_exit=0
+	_print_line=1
+	_print_group=1
+	if [ -n "${PKG_GROUPS}" ]; then
 		eval set -- ${PKG_GROUPS}
-		for groupset
-		do
-			( IFS=":"
-			  set -- ${groupset}
-			  group="$1"; groupid="$2"
-			  
-			  # We need to check that ${PKG_GROUP} exists before
-			  # adding the user.  Do it with chgrp to be able to
-			  # use NIS.
-			  #
-	        	  ${TOUCH} /tmp/grouptest.$$
-			  if ${CHGRP} ${group} /tmp/grouptest.$$ >/dev/null 2>&1
-			  then
+		for groupset; do
+			save_IFS="${IFS}"; IFS=":"
+			set -- ${groupset}
+			group="$1"; groupid="$2"
+			IFS="${save_IFS}"
+			
+			# We need to check that ${PKG_GROUP} exists before
+			# adding the user.  Do it with chgrp to be able to
+			# use NIS.
+			#
+	          	${TOUCH} /tmp/grouptest.$$
+		  	if ${CHGRP} ${group} /tmp/grouptest.$$ >/dev/null 2>&1; then
 				${ECHO} "Group '${group}' already exists."
-			  else
+			elif [ "${_PKG_CREATE_USERGROUP}" = "NO" ]; then
+				if [ ${_print_line} -gt 0 ]; then
+					_print_line=0
+					${CAT} << EOF
+===========================================================================
+EOF
+					if [ ${_print_group} -gt 0 ]; then
+						_print_group=0
+						${CAT} << EOF
+The following groups need to be created for ${PKGNAME}:
+
+EOF
+					fi
+				fi
+				if [ -z "${groupid}" ]; then
+					groupid_str=
+				else
+					groupid_str=" (${groupid})"
+				fi
+				${ECHO} "	${group}${groupid_str}"
+				_pkg_exit=1
+			else
 				groupid_option=
-				if [ -n "${groupid}" ]
-				then
+				if [ -n "${groupid}" ]; then
 					groupid_option="-g"
 				fi
 				${ECHO} "Creating group: ${group}"
 				${GROUPADD} ${groupid_option} ${groupid} "${group}"
-			  fi
-			  ${RM} -f /tmp/grouptest.$$
-			)
+			fi
+			${RM} -f /tmp/grouptest.$$
 		done
 	fi
-
-	if [ -n "${PKG_USERS}" ]
-	then
+	_print_user=1
+	if [ -n "${PKG_USERS}" ]; then
 		eval set -- ${PKG_USERS}
-		for userset
-		do
-			( IFS=":"
-			  set -- ${userset}
-			  user="$1"; group="$2"; userid="$3"
-			  descr="${4:-${PKGBASE} ${user} user}"
-			  home="${5:-@PKG_USER_HOME@}"
-			  shell="${6:-@PKG_USER_SHELL@}"
+		for userset; do
+			save_IFS="${IFS}"; IFS=":"
+			set -- ${userset}
+			user="$1"; group="$2"; userid="$3"
+			descr="${4:-${PKGBASE} ${user} user}"
+			home="${5:-@PKG_USER_HOME@}"
+			shell="${6:-@PKG_USER_SHELL@}"
+			IFS="${save_IFS}"
 
-			  # Use `id' to be able to use NIS.
-			  if ${ID} "${user}" >/dev/null 2>&1
-			  then
+			# Use `id' to be able to use NIS.
+			if ${ID} "${user}" >/dev/null 2>&1; then
 				${ECHO} "User '${user}' already exists."
-			  else
+			elif [ "${_PKG_CREATE_USERGROUP}" = "NO" ]; then
+				if [ ${_print_line} -gt 0 ]; then
+					_print_line=0
+					${CAT} << EOF
+===========================================================================
+EOF
+				elif [ ${_print_group} -eq 0 ]; then
+					_print_group=1
+					${ECHO} "";
+				fi
+				if [ ${_print_user} -gt 0 ]; then
+					_print_user=0
+					${CAT} << EOF
+The following users need to be created for ${PKGNAME}:
+
+EOF
+				fi
+				if [ -z "${userid}" ]; then
+					userid_str=
+				else
+					userid_str=" (${userid})"
+				fi
+				${ECHO} "	${user}${userid_str}: ${group}, ${home}, ${shell}"
+				_pkg_exit=1
+			else
 				userid_option=
-				if [ -n "${userid}" ]
-				then
+				if [ -n "${userid}" ]; then
 					userid_option="-u"
 				fi
 				${ECHO} "Creating user: ${user}"
@@ -64,49 +105,115 @@ PRE-INSTALL)
 					-d "${home}"			\
 					-s "${shell}"			\
 					"${user}"
-			  fi
-			)
+			fi
 		done
+	fi
+	if [ ${_print_line} -eq 0 ]; then
+		${CAT} << EOF
+===========================================================================
+EOF
+	fi
+	if [ ${_pkg_exit} -gt 0 ]; then
+		exit ${_pkg_exit}
 	fi
         ;;
 
 POST-INSTALL)
 	# Create package directories.
-	eval set -- ${MAKE_DIRS} ${OWN_DIRS}
-	for dir
-	do
-		${MKDIR} "${dir}"
-	done
-	eval set -- ${MAKE_DIRS_PERMS} ${OWN_DIRS_PERMS}
-	while [ $# -gt 0 ]
-	do
-		dir="$1"; owner="$2"; group="$3"; mode="$4"
-		shift; shift; shift; shift
-		${MKDIR} "${dir}"
-		${CHOWN} "${owner}" "${dir}"
-		${CHGRP} "${group}" "${dir}"
-		${CHMOD} "${mode}" "${dir}"
-	done
+	_print_line=1
+	_print_dirs=1
+	if [ -n "${MAKE_DIRS}" -o -n "${OWN_DIRS}" -o			\
+	     -n "${MAKE_DIRS_PERMS}" -o -n "${OWN_DIRS_PERMS}" ]; then
+		eval set -- ${MAKE_DIRS} ${OWN_DIRS}
+		for dir; do
+			if [ "${_PKG_CONFIG}" = "NO" ]; then
+				if [ ${_print_line} -gt 0 ]; then
+					_print_line=0
+					${CAT} << EOF
+===========================================================================
+EOF
+					if [ ${_print_dirs} -gt 0 ]; then
+						_print_dirs=0
+						${CAT} << EOF
+The following directories should be created for ${PKGNAME}:
 
-	if [ -n "${CONF_FILES}" -o -n "${CONF_FILES_PERMS}" -o		\
-	     -n "${SUPPORT_FILES}" -o -n "${SUPPORT_FILES_PERMS}" -o	\
-	     -n "${RCD_SCRIPTS}" ]
-	then
-		${ECHO} "Installing configuration files:"
+EOF
+					fi
+				fi
+				${ECHO} "	${dir}"
+			else
+				${MKDIR} "${dir}"
+			fi
+		done
+		eval set -- ${MAKE_DIRS_PERMS} ${OWN_DIRS_PERMS}
+		while [ $# -gt 0 ]; do
+			dir="$1"; owner="$2"; group="$3"; mode="$4"
+			shift; shift; shift; shift
+			if [ "${_PKG_CONFIG}" = "NO" ]; then
+				if [ ${_print_line} -gt 0 ]; then
+					_print_line=0
+					${CAT} << EOF
+===========================================================================
+EOF
+					if [ ${_print_dirs} -gt 0 ]; then
+						_print_dirs=0
+						${CAT} << EOF
+The following directories should be created for ${PKGNAME}:
+
+EOF
+					fi
+				fi
+				${ECHO} "	${dir} (o=${owner}, g=${group}, m=${mode})"
+			else
+				${MKDIR} "${dir}"
+				${CHOWN} "${owner}" "${dir}"
+				${CHGRP} "${group}" "${dir}"
+				${CHMOD} "${mode}" "${dir}"
+			fi
+		done
+	fi
+
+	_print_files=1
+	if [ "${_PKG_CONFIG}" = "YES" ]; then
+		if [ -n "${CONF_FILES}" -o				\
+		     -n "${CONF_FILES_PERMS}" -o			\
+		     -n "${SUPPORT_FILES}" -o				\
+		     -n "${SUPPORT_FILES_PERMS}" -o			\
+		     -n "${RCD_SCRIPTS}" ]; then
+			${CAT} << EOF
+Installing configuration files for ${PKGNAME}:
+
+EOF
+		fi
 	fi
 	eval set -- ${CONF_FILES}
-	while [ $# -gt 0 ]
-	do
+	while [ $# -gt 0 ]; do
 		samplefile="$1"; file="$2"
 		shift; shift
 
-		if [ -e "${file}" ]
-		then
+		if [ "${_PKG_CONFIG}" = "NO" ]; then
+			if [ ${_print_line} -gt 0 ]; then
+				_print_line=0
+				${CAT} << EOF
+===========================================================================
+EOF
+			elif [ ${_print_dirs} -eq 0 ]; then
+				_print_dirs=1
+				${ECHO} "";
+			fi
+			if [ ${_print_files} -gt 0 ]; then
+				_print_files=0
+				${CAT} << EOF
+The following files should be created for ${PKGNAME}:
+
+EOF
+			fi
+			${ECHO} "	${file} (m=@CONF_FILES_MODE@)"
+		elif [ -e "${file}" ]; then
 			${ECHO} "    ${file} already exists, example file is"
 			${ECHO} "        ${samplefile}"
 		else
-			if [ -e "${samplefile}" ]
-			then
+			if [ -e "${samplefile}" ]; then
 				${ECHO} "    ${file}"
 				${CP} "${samplefile}" "${file}"
 				${CHMOD} @CONF_FILES_MODE@ "${file}"
@@ -114,18 +221,33 @@ POST-INSTALL)
 		fi
 	done
 	eval set -- ${SUPPORT_FILES}
-	while [ $# -gt 0 ]
-	do
+	while [ $# -gt 0 ]; do
 		samplefile="$1"; file="$2"
 		shift; shift
 
-		if [ -e "${file}" ]
-		then
+		if [ "${_PKG_CONFIG}" = "NO" ]; then
+			if [ ${_print_line} -gt 0 ]; then
+				_print_line=0
+				${CAT} << EOF
+===========================================================================
+EOF
+			elif [ ${_print_dirs} -eq 0 ]; then
+				_print_dirs=1
+				${ECHO} "";
+			fi
+			if [ ${_print_files} -gt 0 ]; then
+				_print_files=0
+				${CAT} << EOF
+The following files should be created for ${PKGNAME}:
+
+EOF
+			fi
+			${ECHO} "	${file} (m=@SUPPORT_FILES_MODE@)"
+		elif [ -e "${file}" ]; then
 			${ECHO} "    ${file} already exists, example file is"
 			${ECHO} "        ${samplefile}"
 		else
-			if [ -e "${samplefile}" ]
-			then
+			if [ -e "${samplefile}" ]; then
 				${ECHO} "    ${file}"
 				${CP} "${samplefile}" "${file}"
 				${CHMOD} @SUPPORT_FILES_MODE@ "${file}"
@@ -133,18 +255,34 @@ POST-INSTALL)
 		fi
 	done
 	eval set -- ${CONF_FILES_PERMS} ${SUPPORT_FILES_PERMS}
-	while [ $# -gt 0 ]
-	do
-		samplefile="$1"; file="$2"; owner="$3"; group="$4"; mode="$5"
+	while [ $# -gt 0 ]; do
+		samplefile="$1"; file="$2"
+		owner="$3"; group="$4"; mode="$5"
 		shift; shift; shift; shift; shift
 
-		if [ -e ${file} ]
-		then
+		if [ "${_PKG_CONFIG}" = "NO" ]; then
+			if [ ${_print_line} -gt 0 ]; then
+				_print_line=0
+				${CAT} << EOF
+===========================================================================
+EOF
+			elif [ ${_print_dirs} -eq 0 ]; then
+				_print_dirs=1
+				${ECHO} "";
+			fi
+			if [ ${_print_files} -gt 0 ]; then
+				_print_files=0
+				${CAT} << EOF
+The following files should be created for ${PKGNAME}:
+
+EOF
+			fi
+			${ECHO} "	${file} (o=${owner}, g=${group}, m=${mode})"
+		elif [ -e ${file} ]; then
 			${ECHO} "    ${file} already exists, example file is"
 			${ECHO} "        ${samplefile}"
 		else
-			if [ -e "${samplefile}" ]
-			then
+			if [ -e "${samplefile}" ]; then
 				${ECHO} "    ${file}"
 				${CP} "${samplefile}" "${file}"
 				${CHOWN} "${owner}" "${file}"
@@ -154,52 +292,71 @@ POST-INSTALL)
 		fi
 	done
 	eval set -- ${RCD_SCRIPTS}
-	for script
-	do
+	for script; do
 		samplefile="${PKG_PREFIX}/etc/rc.d/${script}"
 		file="${RCD_SCRIPTS_DIR}/${script}"
 
-		if [ -e "${file}" ]
-		then
+		if [ "${_PKG_CONFIG}" = "NO" ]; then
+			if [ ${_print_line} -gt 0 ]; then
+				_print_line=0
+				${CAT} << EOF
+===========================================================================
+EOF
+			elif [ ${_print_dirs} -eq 0 ]; then
+				_print_dirs=1
+				${ECHO} "";
+			fi
+			if [ ${_print_files} -gt 0 ]; then
+				_print_files=0
+				${CAT} << EOF
+The following files should be created for ${PKGNAME}:
+
+EOF
+			fi
+			${ECHO} "	${file} (m=@RCD_SCRIPTS_MODE@)"
+		elif [ -e "${file}" ]; then
 			${ECHO} "    ${file} already exists, example file is"
 			${ECHO} "        ${samplefile}"
 		else
-			if [ -e "${samplefile}" ]
-			then
+			if [ -e "${samplefile}" ]; then
 				${ECHO} "    ${file}"
 				${CP} "${samplefile}" "${file}"
 				${CHMOD} @RCD_SCRIPTS_MODE@ "${file}"
 			fi
 		fi
 	done
-
-	if [ -n "${CONF_FILES}" -o -n "${CONF_FILES_PERMS}" ]
-	then
+	if [ ${_print_line} -eq 0 ]; then
 		${CAT} << EOF
-
-===========================================================================
-You may wish to customize the following files:
-
-EOF
-	eval set -- ${CONF_FILES}
-	while [ $# -gt 0 ]
-	do
-		samplefile="$1"; file="$2"
-		shift; shift
-
-		${ECHO} "	${file}"
-       	done
-	eval set -- ${CONF_FILES_PERMS}
-	while [ $# -gt 0 ]
-	do
-		samplefile="$1"; file="$2"; owner="$3"; group="$4"; mode="$5"
-		shift; shift; shift; shift; shift
-
-		${ECHO} "	${file}"
-	done
-	${CAT} << EOF
 ===========================================================================
 EOF
+	fi
+	if [ "${_PKG_CONFIG}" = "YES" ]; then
+		if [ -n "${CONF_FILES}" -o -n "${CONF_FILES_PERMS}" ]; then
+			${CAT} << EOF
+
+===========================================================================
+You may wish to customize the following files for ${PKGNAME}:
+
+EOF
+			eval set -- ${CONF_FILES}
+			while [ $# -gt 0 ]; do
+				samplefile="$1"; file="$2"
+				shift; shift
+
+				${ECHO} "	${file}"
+		       	done
+			eval set -- ${CONF_FILES_PERMS}
+			while [ $# -gt 0 ]; do
+				samplefile="$1"; file="$2"
+				owner="$3"; group="$4"; mode="$5"
+				shift; shift; shift; shift; shift
+
+				${ECHO} "	${file}"
+			done
+			${CAT} << EOF
+===========================================================================
+EOF
+		fi
 	fi
 	;;
 
