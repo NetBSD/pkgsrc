@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3461 2003/09/19 22:21:05 jmmv Exp $
+$NetBSD: CHANGES,v 1.3462 2003/09/20 00:48:28 kristerw Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3852,3 +3852,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated centericq to 4.9.6nb1 [jmmv 2003-09-19]
 	Updated libgda to 1.0.0 [jmmv 2003-09-19]
 	Updated libgnomedb to 1.0.0 [jmmv 2003-09-19]
+	Updated xmame to 0.74.1 [kristerw 2003-09-20]
+	Updated xmess to 0.74.1 [kristerw 2003-09-20]
