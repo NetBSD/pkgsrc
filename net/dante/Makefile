@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2002/09/09 21:51:52 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2002/09/10 06:10:04 jlam Exp $
 #
 
 DISTNAME=		dante-1.1.13
@@ -11,12 +11,13 @@ COMMENT=		BSD-licensed socks 4/5 proxy suite
 
 CONFLICTS=		socks4-[0-9]*
 
+USE_BUILDLINK2=		YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
-CONFIGURE_ARGS+=	--with-socks-conf=${PKG_SYSCONFDIR}/etc/socks.conf
-CONFIGURE_ARGS+=	--with-sockd-conf=${PKG_SYSCONFDIR}/etc/sockd.conf
+CONFIGURE_ARGS+=	--with-socks-conf=${PKG_SYSCONFDIR}/socks.conf
+CONFIGURE_ARGS+=	--with-sockd-conf=${PKG_SYSCONFDIR}/sockd.conf
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/dante
