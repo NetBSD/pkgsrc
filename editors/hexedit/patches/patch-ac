@@ -1,13 +1,22 @@
-$NetBSD: patch-ac,v 1.1 1998/09/28 10:35:56 frueauf Exp $
+$NetBSD: patch-ac,v 1.2 1999/07/06 08:00:11 jlam Exp $
 
---- Makefile.in.orig	Sat Sep 12 10:25:05 1998
-+++ Makefile.in	Tue Sep 15 14:11:35 1998
-@@ -6,7 +6,7 @@
- SHELL = /bin/sh
+--- Makefile.in.orig	Wed Feb 17 09:22:57 1999
++++ Makefile.in	Fri Jul  2 06:57:09 1999
+@@ -7,6 +7,7 @@
  
  CC = @CC@
--CFLAGS = @CFLAGS@
-+CFLAGS = @CFLAGS@ -I${prefix}/include
+ CFLAGS = @CFLAGS@
++CFLAGS += -I${LOCALBASE}/include	# for ncurses.h
  LDFLAGS = @LDFLAGS@
  LIBS = @LIBS@
  DEFS = @DEFS@
+@@ -39,7 +40,5 @@
+ 	rm -f Makefile config.cache config.status config.log
+ 
+ install: $(PRODUCT)
+-	$(INSTALL) -d -m 755 $(bindir)
+-	$(INSTALL) -s -m 755 $(PRODUCT) $(bindir)
+-	$(INSTALL) -d -m 755 $(mandir)
+-	$(INSTALL) -m 644 $(PRODUCT).1 $(mandir)
++	$(BSD_INSTALL_PROGRAM) $(PRODUCT) $(bindir)
++	$(BSD_INSTALL_DATA) $(PRODUCT).1 $(mandir)

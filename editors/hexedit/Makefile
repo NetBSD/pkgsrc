@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1999/02/20 22:48:27 hubertf Exp $
+# $NetBSD: Makefile,v 1.6 1999/07/06 08:00:10 jlam Exp $
 #
 
 DISTNAME=	hexedit-1.1.0
@@ -10,13 +10,13 @@ EXTRACT_SUFX=	.src.tgz
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.chez.com/prigaux/hexedit.html
 
-DEPENDS+=	ncurses-1.9.9g:../../devel/ncurses
+DEPENDS+=	ncurses-4.2:../../devel/ncurses
 
 GNU_CONFIGURE=	yes
-CONFIGURE_ENV+=	LIBS="-L${PREFIX}/lib" INSTALL=/usr/bin/install
+LDFLAGS+=	-L${LOCALBASE}/lib	# for -lncurses
 
 post-install:
-	${MKDIR} ${PREFIX}/share/doc/hexedit
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/hexedit
 .for file in COPYING Changes TODO
 	${INSTALL_DATA} ${WRKSRC}/${file} ${PREFIX}/share/doc/hexedit
 .endfor
