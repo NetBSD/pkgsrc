@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.8 2003/12/04 04:14:05 grant Exp $
+# $NetBSD: buildlink2.mk,v 1.9 2004/01/01 21:10:05 wiz Exp $
 
 .if !defined(DB_BUILDLINK2_MK)
 DB_BUILDLINK2_MK=	# defined
@@ -8,8 +8,13 @@ BUILDLINK_PKGSRCDIR.db?=	../../databases/db
 
 _NEED_DB2=			YES
 
+.include "../../mk/bsd.prefs.mk"
+
 .if defined(USE_DB185)
 .  if exists(/usr/include/db.h)		# NetBSD, Darwin
+# See if /usr/include/db.h belongs to db3 or db4
+_IS_DB34!=	${GREP} -c 'DB_VERSION_MAJOR.*[34]$$' /usr/include/db.h || ${TRUE}
+.    if ${_IS_DB34} == "0"
 BUILDLINK_PREFIX.db=		/usr
 BUILDLINK_FILES.db=		include/db.h
 BUILDLINK_FILES.db+=		include/mpool.h
@@ -17,6 +22,7 @@ BUILDLINK_CPPFLAGS.db=		# empty
 BUILDLINK_LDFLAGS.db=		# empty
 BUILDLINK_LIBS.db=		# empty
 _NEED_DB2=			NO
+.    endif
 .  elif exists(/usr/include/db1/db.h)
 # Linux
 BUILDLINK_PREFIX.db=		/usr
