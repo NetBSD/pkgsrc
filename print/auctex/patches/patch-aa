@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/12/02 07:49:27 jtb Exp $
+$NetBSD: patch-aa,v 1.2 2001/03/01 18:50:06 jtb Exp $
 
---- Makefile.orig	Sun Nov  5 20:54:41 2000
+--- Makefile.orig	Thu Feb 11 10:19:48 1999
 +++ Makefile
 @@ -10,7 +10,7 @@
  ##----------------------------------------------------------------------
@@ -11,7 +11,16 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/12/02 07:49:27 jtb Exp $
  
  # Where info files go.
  infodir = $(prefix)/info
-@@ -109,7 +109,7 @@
+@@ -22,7 +22,7 @@
+ aucdir=$(lispdir)/auctex
+ 
+ # Name of your emacs binary
+-EMACS=emacs
++#EMACS=emacs
+ 
+ ##----------------------------------------------------------------------
+ ## YOU MAY NEED TO EDIT THESE
+@@ -106,7 +106,7 @@
  
  some:	$(AUCELC) $(STYLESRC:.el=.elc)
  
