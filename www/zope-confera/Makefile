@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/05/03 15:23:49 tsarna Exp $
+# $NetBSD: Makefile,v 1.2 1999/06/19 23:01:41 tsarna Exp $
 #
 
 DISTNAME=	Confera-1.2.0-nonbin
@@ -10,7 +10,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	tsarna@netbsd.org
 HOMEPAGE=	http://www.zope.org/
 
-DEPENDS+=	zope-1.10.2:../../www/zope
+DEPENDS+=	zope-1.10.3:../../www/zope
 
 NO_BUILD=	yes
 
@@ -18,14 +18,14 @@ WRKSRC=		${WRKDIR}/lib
 
 PLIST_SRC=	${WRKDIR}/.PLIST_SRC
 
-ZOPEDIR=	${PREFIX}/zope
-PRODPATH=		lib/python/Products/Confera
+ZOPEDIR=	${PREFIX}/lib/zope
+PRODPATH=	lib/python/Products/Confera
 
 do-install:
 	${CAT} ${PKGDIR}/PLIST.pre >${PLIST_SRC}
 	(cd ${WRKDIR}; pax -r -w lib ${ZOPEDIR})
 	chmod -R a+rX ${ZOPEDIR}/${PRODPATH}
-	(cd ${PREFIX}; find zope/${PRODPATH} -type f -print >>${PLIST_SRC})
-	${ECHO} "@dirrm zope/${PRODPATH}" >> ${PLIST_SRC}
+	(cd ${PREFIX}; find lib/zope/${PRODPATH} -type f -print >>${PLIST_SRC})
+	${ECHO} "@dirrm lib/zope/${PRODPATH}" >> ${PLIST_SRC}
 
 .include "../../mk/bsd.pkg.mk"
