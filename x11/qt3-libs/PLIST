@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/03/19 17:54:36 drochner Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/05/04 13:30:10 drochner Exp $
 qt3/bin/moc
 qt3/include/jri.h
 qt3/include/jri_md.h
@@ -133,7 +133,7 @@ qt3/include/qfontmetrics.h
 qt3/include/qframe.h
 qt3/include/qftp.h
 qt3/include/qgarray.h
-qt3/include/qgbkcodec.h
+qt3/include/qgb18030codec.h
 qt3/include/qgcache.h
 qt3/include/qgdict.h
 qt3/include/qgeneric.h
