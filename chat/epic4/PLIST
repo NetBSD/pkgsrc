@@ -1,16 +1,19 @@
-@comment $NetBSD: PLIST,v 1.3 2002/07/13 15:48:52 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2002/09/01 16:34:42 wiz Exp $
 bin/epic
-bin/epic-EPIC4-1.0.1
-libexec/wserv
+bin/epic-EPIC4-${PKGVERSION}
+libexec/wserv4
 man/man1/epic.1
 @exec ${MKDIR} %D/share/epic/help
 share/epic/script/2.8script
 share/epic/script/alias
+share/epic/script/altchan
+share/epic/script/autoget
 share/epic/script/autokick
 share/epic/script/autoop
 share/epic/script/away
 share/epic/script/basical
 share/epic/script/columns
+share/epic/script/commandqueues
 share/epic/script/country
 share/epic/script/dcc_timeout
 share/epic/script/deban
@@ -21,6 +24,8 @@ share/epic/script/edit
 share/epic/script/edit_topic
 share/epic/script/efnext
 share/epic/script/environment
+share/epic/script/epic-crypt-gpg
+share/epic/script/epic-crypt-gpg-aa
 share/epic/script/events
 share/epic/script/events.hop
 share/epic/script/fake-dcc
@@ -44,8 +49,11 @@ share/epic/script/less-pipe
 share/epic/script/list
 share/epic/script/local.examp
 share/epic/script/ls
+share/epic/script/mail
 share/epic/script/man
+share/epic/script/map
 share/epic/script/meta
+share/epic/script/mkpdir
 share/epic/script/more
 share/epic/script/motd
 share/epic/script/mudirc
@@ -72,6 +80,7 @@ share/epic/script/starutils
 share/epic/script/stat
 share/epic/script/status_lag
 share/epic/script/tabkey
+share/epic/script/tabkey.ce
 share/epic/script/tabkey.th
 share/epic/script/tc
 share/epic/script/time
