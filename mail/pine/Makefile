@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2002/01/02 13:24:54 tron Exp $
+# $NetBSD: Makefile,v 1.58 2002/01/06 13:59:08 kleink Exp $
 # FreeBSD Id: Makefile,v 1.21 1997/03/26 02:12:07 ache Exp
 #
 
@@ -18,7 +18,7 @@ LICENSE=	pine-license
 BUILD_DEFS+=	PINE_USE_LDAP
 
 # This pkg doesn't build pico or libpico; the pico pkg does that part.
-DEPENDS+=	pico>=4.1:../../editors/pico
+DEPENDS+=	pico>=4.2:../../editors/pico
 DEPENDS+=	imap-uw>=2001.1:../../mail/imap-uw
 
 .include "../../mk/bsd.prefs.mk"
