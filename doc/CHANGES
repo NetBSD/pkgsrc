@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6782 2004/08/03 21:24:08 schmonz Exp $
+$NetBSD: CHANGES,v 1.6783 2004/08/04 06:16:04 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3712,3 +3712,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated ucl to 1.02nb1 [mycroft 2004-08-03]
 	Updated ogmtools to 1.4.1 [salo 2004-08-03]
 	Updated getmail to 4.0.5 [schmonz 2004-08-03]
+	Updated mips64emul to 0.2 [xtraeme 2004-08-04]

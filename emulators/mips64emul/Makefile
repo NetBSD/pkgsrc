@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2004/07/03 02:08:02 xtraeme Exp $
+# $NetBSD: Makefile,v 1.7 2004/08/04 06:16:04 xtraeme Exp $
 #
 
-DISTNAME=	mips64emul-0.1.1
+DISTNAME=	mips64emul-0.2
 CATEGORIES=	emulators
 MASTER_SITES=	http://www.mdstud.chalmers.se/~md1gavan/mips64emul/src/
 
@@ -12,6 +12,7 @@ COMMENT=	MIPS 32/64-bit emulator
 USE_BUILDLINK3=	yes
 USE_X11=	yes
 HAS_CONFIGURE=	yes
+WRKSRC=		${WRKDIR}/${DISTNAME}
 
 INSTALLATION_DIRS=	bin share/doc/${PKGBASE}
 
