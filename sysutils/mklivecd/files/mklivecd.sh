@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: mklivecd.sh,v 1.9 2004/04/27 15:34:19 xtraeme Exp $
+# $NetBSD: mklivecd.sh,v 1.10 2004/04/27 16:10:46 xtraeme Exp $
 #
 # Copyright (c) 2004 Juan RP <xtraeme@NetBSD.org>
 # All rights reserved.
@@ -45,7 +45,8 @@ CDRECORD="@PREFIX@/bin/cdrecord"
 #
 # Don't modify it! they are needed for booting grub
 MKISOFS_FIXED_ARGS="-no-emul-boot -boot-load-size 30 -boot-info-table"
-BOOTIMAGE="boot/grub/stage2_eltorito"
+BOOTDIR="boot/grub"
+BOOTIMAGE="stage2_eltorito"
 GRUB_FILES="stage2_eltorito iso9660_stage1_5"
 
 trap "echo; showmsg \"Process cancelled!\"; bye 127" INT QUIT
@@ -242,12 +243,13 @@ do_cdlive()
 		make depend
 		make COPTS="-Os"	    # Don't use additional flags
 		if [ $? -eq 0 ]; then
-		    [ ! -d $ISODIR/grub ] && mkdir -p $ISODIR/grub
+		    [ ! -d $ISODIR/$BOOTDIR ] && mkdir -p $ISODIR/$BOOTDIR
 		    for f in $GRUB_FILES
 		    do
-			    cp @PREFIX@/share/grub/@MACHINE_ARCH@-/$f $ISODIR/grub
+			    cp @PREFIX@/share/grub/@MACHINE_ARCH@-/$f \
+				$ISODIR/$BOOTDIR
 			    if [ "$verbose_mode" = "on" ]; then
-				showmsg "Copying $f into $ISODIR/grub."
+				showmsg "Copying $f into $ISODIR/boot/grub."
 			    fi
 		    done
 		    cp $WORKDIR/$KERNEL_NAME/netbsd $ISODIR
@@ -341,7 +343,7 @@ do_cdlive()
 		cat > $ISODIR/etc/rc.d/root <<_EOF_
 #!/bin/sh
 #
-# \$NetBSD: mklivecd.sh,v 1.9 2004/04/27 15:34:19 xtraeme Exp $
+# \$NetBSD: mklivecd.sh,v 1.10 2004/04/27 16:10:46 xtraeme Exp $
 # 
 
 # PROVIDE: root
