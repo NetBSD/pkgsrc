@@ -1,3 +1,4 @@
+$NetBSD: patch-ab,v 1.4 1998/09/13 20:40:39 garbled Exp $
 --- battalion.c.orig	Thu Jan 16 09:31:59 1997
 +++ battalion.c	Sun Sep 13 12:51:53 1998
 @@ -2874,11 +2874,16 @@
