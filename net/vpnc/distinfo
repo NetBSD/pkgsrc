@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/09/20 22:58:52 wiz Exp $
+
+SHA1 (vpnc-0.2-rm+zomb.1.tar.gz) = 155f15bd886207e177f8d611de72a9f70819db5a
+Size (vpnc-0.2-rm+zomb.1.tar.gz) = 54166 bytes
+SHA1 (patch-aa) = 7989361e203525bbe68a62ddb2580f851c918bfc
+SHA1 (patch-ab) = ef63e1aa4ee01f32e21ccb111ff90fa8a147866c
