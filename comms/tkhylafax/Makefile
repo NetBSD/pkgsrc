@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2001/05/05 19:51:13 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2001/07/08 13:50:19 bad Exp $
 # FreeBSD Id: Makefile,v 1.6 1998/08/07 23:56:12 asami Exp
 #
 
@@ -12,7 +12,7 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.elgro.demon.co.uk/resources.html
 COMMENT=	Tcl/tk interface to Sam Leffler's fax package
 
-DEPENDS+=	hylafax-4.1b3:../../comms/hylafax
+DEPENDS+=	hylafax>=4.1b3:../../comms/hylafax
 DEPENDS+=	tk>=8.3.2:../../x11/tk
 DEPENDS+=	gv-3.5.8:../../print/gv
 
