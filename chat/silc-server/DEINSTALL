@@ -1,10 +1,7 @@
-# $NetBSD: DEINSTALL,v 1.5 2002/09/14 02:59:25 hubertf Exp $
+# $NetBSD: DEINSTALL,v 1.6 2003/03/17 20:12:47 salo Exp $
+#
 
 case ${STAGE} in
-DEINSTALL)
-	${ECHO} "==> Try to stop silcd if running."
-	@PREFIX@/etc/rc.d/silcd stop
-	;;
 POST-DEINSTALL)
 	if [ -f @PKG_SYSCONFDIR@/silcd.prv ]; then
 		${ECHO} ===========================================================================
