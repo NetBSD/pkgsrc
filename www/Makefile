@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.305 2004/02/26 05:54:17 epg Exp $
+# $NetBSD: Makefile,v 1.306 2004/02/29 17:49:30 xtraeme Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -72,6 +72,7 @@ SUBDIR+=	elinks04
 SUBDIR+=	emacs-w3m
 SUBDIR+=	epiphany
 SUBDIR+=	fcgi
+SUBDIR+=	firefox
 SUBDIR+=	firefox-bin
 SUBDIR+=	firefox-bin-acroread
 SUBDIR+=	firefox-bin-acroread3
@@ -80,6 +81,7 @@ SUBDIR+=	firefox-bin-flash
 SUBDIR+=	firefox-bin-java
 SUBDIR+=	firefox-bin-nightly
 SUBDIR+=	firefox-bin-realplayer
+SUBDIR+=	firefox-gtk2
 SUBDIR+=	firefox-gtk2-bin
 SUBDIR+=	firefox-gtk2-bin-nightly
 SUBDIR+=	galeon
