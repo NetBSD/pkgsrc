@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1998/11/23 21:39:41 tv Exp $
+libexec/named4-xfer
+man/man8/named4.8
+sbin/named4
+sbin/ndc4
