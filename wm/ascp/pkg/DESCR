@@ -1,0 +1,9 @@
+The AfterStep Control Panel is intended to provide an easy to use
+and intuitive graphical front-end for configuring the AfterStep
+window manager (versions 1.4 and up).
+
+Although based (read: looks like) on a previous program of the same
+name written in Tcl/Tk (Alfredo Kojima, Ludovic Marcotte and Nwanua
+Elumeze), this version (also dubbed gtk+-ascp), works with the
+~/GNUstep/ directory structure. It is written in C using the GTK+
+toolkit and as such bears only a visual resemblance to its predecessor.
