@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.197 2004/01/02 18:45:44 ben Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.198 2004/01/06 23:00:51 jlam Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -139,6 +139,12 @@ CROSSBASE?=	${LOCALBASE}/cross
 # on the system.
 # Possible: any path
 # Default: ${X11PREFIX} or where lesstif12 is installed
+
+USE_XPKGWEDGE?=	no
+# Whether we should use xpkgwedge or not to install all packages into
+# ${LOCALBASE}.
+# Possible: yes, no
+# Default: no
 
 BSDSRCDIR?=	/usr/src
 # Where the NetBSD src module source tree is located
