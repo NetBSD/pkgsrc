@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.10 2003/03/24 18:07:07 jschauma Exp $
+# $NetBSD: buildlink2.mk,v 1.11 2003/07/15 23:31:22 jschauma Exp $
 
 .if !defined(GLU_BUILDLINK2_MK)
 GLU_BUILDLINK2_MK=	# defined
@@ -10,6 +10,8 @@ BUILDLINK_DEPENDS.glu?=		glu>=${MESA_REQD}
 BUILDLINK_PKGSRCDIR.glu?=	../../graphics/glu
 
 _REQUIRE_BUILTIN_GLU?=	NO
+
+MAKEFLAGS+=			MESA_REQD="${MESA_REQD}"
 
 # XXX should be >= 3.4.2
 .if !empty(MESA_REQD:M5.[0-9]*)
