@@ -1,4 +1,6 @@
-$NetBSD: distinfo,v 1.5 2004/03/10 23:05:43 ben Exp $
+$NetBSD: distinfo,v 1.5.6.1 2004/11/02 10:33:50 agc Exp $
 
-SHA1 (cabextract-1.0.tar.gz) = 789f2401fc62876a55cd9c9928fbe31589982b72
-Size (cabextract-1.0.tar.gz) = 189625 bytes
+SHA1 (cabextract-1.1.tar.gz) = 359c8f4ec9c62d9dac5d572269b607b2cae4fbf7
+Size (cabextract-1.1.tar.gz) = 187495 bytes
+SHA1 (patch-aa) = 4d36b50b1ca2dfd6f317dd0bcbc23523e1da70f2
+SHA1 (patch-ab) = 87d0089ebc1589c805b67d44675c78f1cc4ffc3b
