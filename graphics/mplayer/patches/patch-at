@@ -1,3 +1,4 @@
+$NetBSD: patch-at,v 1.2 2001/12/25 18:02:10 wiz Exp $
 --- mp3lib/dct64_MMX.s.orig	Thu Jul  5 13:44:18 2001
 +++ mp3lib/dct64_MMX.s	Mon Jul 30 21:20:01 2001
 @@ -14,7 +14,7 @@

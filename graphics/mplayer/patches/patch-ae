@@ -1,3 +1,4 @@
+$NetBSD: patch-ae,v 1.2 2001/12/25 18:02:08 wiz Exp $
 --- libao2/ao_alsa9.c.orig	Sat Jun 23 22:59:54 2001
 +++ libao2/ao_alsa9.c	Mon Jul 30 22:10:09 2001
 @@ -47,7 +47,7 @@

@@ -1,3 +1,4 @@
+$NetBSD: patch-al,v 1.2 2001/12/25 18:02:09 wiz Exp $
 --- libao2/audio_out.c.orig	Fri Jun 22 02:34:58 2001
 +++ libao2/audio_out.c	Mon Jul 30 22:10:10 2001
 @@ -31,6 +31,9 @@
