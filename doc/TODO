@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2004 2004/08/04 19:59:59 minskim Exp $
+$NetBSD: TODO,v 1.2005 2004/08/04 20:55:12 jlam Exp $
 
 Suggested new packages
 ======================
@@ -196,7 +196,6 @@ Suggested package updates
 	o cvs2cl-2.55
 	o cxref-1.5e
 	o cyrus-imapd21-2.1.16
-	o cyrus-sasl2-2.1.19 [jlam pkg/26447]
 	o dact-0.8.37
 	o dar-2.1.2
 	o dctc-0.85.9
