@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/04/19 15:38:21 zuntum Exp $
+# $NetBSD: Makefile,v 1.2 2003/03/28 21:14:22 wiz Exp $
 #
 
 DISTNAME=	locator-0.1
@@ -10,7 +10,6 @@ HOMEPAGE=	http://www.stauss.purespace.de/
 COMMENT=	longitudes, latitudes to HAM locator converter
 
 NO_CONFIGURE=	yes
-NO_PATCH=	yes
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/locator ${PREFIX}/bin

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2001/02/17 17:49:53 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2003/03/28 21:14:32 wiz Exp $
 #
 
 DISTNAME=	nessus-${VERS}
@@ -14,7 +14,6 @@ DEPENDS+=	nessus-plugins-${VERS}:../nessus-plugins
 USE_X11=	yes
 EXTRACT_ONLY=	# empty
 NO_CHECKSUM=	yes
-NO_PATCH=	yes
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
