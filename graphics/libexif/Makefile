@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2002/12/24 17:36:28 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2003/01/31 10:20:07 shell Exp $
 
-DISTNAME=	libexif-0.5.8
+DISTNAME=	libexif-0.5.9
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libexif/}
-#EXTRACT_SUFX=	.tar.bz2
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://libexif.sourceforge.net/
