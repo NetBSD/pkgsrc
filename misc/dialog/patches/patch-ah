@@ -1,0 +1,14 @@
+--- textbox.c.orig	Fri Jan 23 17:37:13 1998
++++ textbox.c	Fri Jan 23 17:37:12 1998
+@@ -45,6 +45,11 @@
+     char search_term[MAX_LEN + 1], *tempptr, *found;
+     WINDOW *dialog, *text;
+ 
++    if (height < 0 || width < 0) {
++       fprintf(stderr, "\nAutosizing is impossible in dialog_textbox().\n");
++       return(-1);
++    }
++
+     search_term[0] = '\0';	/* no search term entered yet */
+ 
+     /* Open input file for reading */
