@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.16 2001/03/24 19:52:34 kristerw Exp $
+$NetBSD: md5,v 1.17 2001/03/31 18:59:30 kristerw Exp $
 
-SHA1 (xmame-0.37b12.1.tgz) = b60885bbfe071ee0a97eef2b5a4f2a882ea76a51
+SHA1 (xmame-0.37b13.1.tar.bz2) = 88447c926ff3604e2325aafad73b1e50069c2fcf
