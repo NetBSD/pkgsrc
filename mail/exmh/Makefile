@@ -1,9 +1,9 @@
 # New ports collection Makefile for:    exmh2
 # Version required:		2.0.1
-# Date released:		1 Jan 97
+# Date created:			1 Jan 97
 # Whom:				Peter Wemm <peter@freebsd.org>
 #
-# $NetBSD: Makefile,v 1.4 1998/02/25 12:08:07 agc Exp $
+# $NetBSD: Makefile,v 1.5 1998/02/28 10:37:39 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.25 1998/02/15 05:36:54 peter Exp
 #
 
@@ -17,14 +17,12 @@ PATCHFILES=	utils.patch folderNew.patch extrasInit.patch exec.patch \
 		app-defaults.patch pgpMisc.patch seditMime.patch mime.patch \
 		bindings.patch html_bindings.patch find.patch mh.patch \
 		pgp.patch
-
 # User contributed and "new features".  Some not useable as-is.
 PATCHFILES+=	seditpost.patch inc.patch next.patch
 # XXX pgpExec.patch has got confused paths	(supplied as patch-as)
 # XXX newsgroups.patch is relative to a different directory (patch-at)
 # XXX MDN.patch doesn't apply			(patch-au)
 # XXX post.from.patch doesn't apply		(patch-av)
-
 .if defined(PATCH_DEBUG)
 PATCH_DIST_ARGS= -d ${WRKSRC}/lib -E ${PATCH_DIST_STRIP}
 .else
@@ -33,18 +31,17 @@ PATCH_DIST_ARGS= -d ${WRKSRC}/lib --forward --quiet -E ${PATCH_DIST_STRIP}
 
 MAINTAINER=	peter@FreeBSD.org
 
+BUILD_DEPENDS=	tclsh8.0:${PORTSDIR}/lang/tcl80
+RUN_DEPENDS=	wish8.0:${PORTSDIR}/x11/tk80
+# exmh is pretty useless without this, but it's not needed to build it.
+RUN_DEPENDS+=   repl:${PORTSDIR}/mail/nmh
+# full mime support needs mmencode/mmdecode from metamail
+RUN_DEPENDS+=   mmencode:${PORTSDIR}/mail/metamail
+
 DIST_SUBDIR=	${PKGNAME}
 
-RUN_DEPENDS=	wish8.0:${PORTSDIR}/x11/tk80
-BUILD_DEPENDS=	tclsh8.0:${PORTSDIR}/lang/tcl80
 WISH=		wish8.0
 TCLSH=		tclsh8.0
-
-# exmh is pretty useless without this, but it's not needed to build it.
-RUN_DEPENDS+=	repl:${PORTSDIR}/mail/nmh
-
-# full mime support needs mmencode/mmdecode from metamail
-RUN_DEPENDS+=	mmencode:${PORTSDIR}/mail/metamail
 
 # Additionally, exmh will use the following ports if present:
 # lang/expect
