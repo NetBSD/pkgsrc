@@ -1,9 +1,8 @@
 #!/bin/sh -e
 #
-# $Id: pkgchk.sh,v 1.8 2001/07/31 17:32:07 tron Exp $
+# $Id: pkgchk.sh,v 1.9 2001/08/08 13:41:43 abs Exp $
 #
 # TODO: Handle and as well as or tags (eg: i386+x11)
-# TODO: Order updates based on DEPENDENCIES.
 # TODO: Handle updates with dependencies via binary packages
 
 extract_variables()
@@ -45,7 +44,9 @@ pkg_install()
     PKGNAME=$1
     PKGDIR=$2
     INSTALL=$3
-    if [ -n "$opt_b" -a -f $PACKAGES/All/$PKGNAME.tgz ] ; then
+    if [ -d /var/db/pkg/$PKGNAME ];then
+	echo "$PKGNAME installed in previous stage"
+    elif [ -n "$opt_b" -a -f $PACKAGES/All/$PKGNAME.tgz ] ; then
 	if [ $INSTALL = U ];then
 	    PKG=`echo $PKGNAME | sed 's/-[0-9].*//'`
 	    echo "pkg_delete $PKG"
