@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.685 2001/03/15 13:31:04 abs Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.686 2001/03/16 11:45:01 wiz Exp $
 #
 # This file is in the public domain.
 #
@@ -1190,16 +1190,6 @@ UPDATE_TARGET=	${DEPENDS_TARGET}
 # Disable checksum
 .if (defined(NO_CHECKSUM) && !target(checksum)) || exists(${EXTRACT_COOKIE})
 checksum: fetch
-	@${DO_NADA}
-.endif
-
-# Disable extract
-.if defined(NO_EXTRACT) && !target(extract)
-extract: checksum
-	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${EXTRACT_COOKIE}
-checksum: fetch
-	@${DO_NADA}
-makesum:
 	@${DO_NADA}
 .endif
 
