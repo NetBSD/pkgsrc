@@ -1,0 +1,35 @@
+$NetBSD: patch-af,v 1.1.2.2 2002/12/22 08:29:20 agc Exp $
+This is based on, tar-dots.patch from RedHat tar-1.13.25-4.7.1.src.rpm, and
+http://www.security.nnov.ru/files/archive/tar-1.13.19.patch
+
+--- src/misc.c.orig	Mon Nov 11 15:09:06 2002
++++ src/misc.c	Mon Nov 11 15:14:34 2002
+@@ -203,17 +203,25 @@
+ {
+   char const *p = name + FILESYSTEM_PREFIX_LEN (name);
+ 
++  if (ISSLASH (*p)) return 1;
+   for (;;)
+     {
+-      if (p[0] == '.' && p[1] == '.' && (ISSLASH (p[2]) || !p[2]))
++      if (p[0] == '.' && p[1] == '.' && (!p[2] || ISSLASH (p[2])))
+ 	return 1;
+ 
+       do
+ 	{
+-	  if (! *p++)
++	  if (! *p)
+ 	    return 0;
+ 	}
+-      while (! ISSLASH (*p));
++      while (! ISSLASH (*p++));
++
++      do
++        {
++          if (! *p++)
++            return 0;
++        }
++      while ( ISSLASH (*p));
+     }
+ }
+ 
