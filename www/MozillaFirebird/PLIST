@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/11/27 00:10:55 taya Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/01/20 19:29:37 snj Exp $
 bin/${MOZILLA}
 @comment begin PROGRAMS
 lib/${MOZILLA}/${MOZILLA_BIN}
@@ -104,7 +104,6 @@ lib/${MOZILLA}/libxlibrgb.${SO_SUFFIX}
 lib/${MOZILLA}/libxpcom.${SO_SUFFIX}
 lib/${MOZILLA}/libxpcom_compat.${SO_SUFFIX}
 lib/${MOZILLA}/libxpistub.${SO_SUFFIX}
-lib/${MOZILLA}/plugins/libnullplugin.${SO_SUFFIX}
 @comment end DSO
 @comment begin DATA
 lib/${MOZILLA}/bloaturls.txt
