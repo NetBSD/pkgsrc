@@ -1,9 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2002/12/23 20:54:41 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2003/01/03 15:24:57 wiz Exp $
 #
 
-DISTNAME=	easytag-0.25
-PKGNAME=	easytag-0.25.0.2
-PKGREVISION=	1
+DISTNAME=	easytag-0.26
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=easytag/}
 
@@ -15,12 +13,13 @@ BUILD_USES_MSGFMT=	yes				# xgettext, really
 
 GNU_CONFIGURE=		yes
 USE_GMAKE=		yes
-USE_X11BASE=		yes
+USE_X11=		yes
 USE_BUILDLINK2=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
+#.include "../../audio/flac/buildlink2.mk"
 .include "../../audio/id3lib/buildlink2.mk"
 .include "../../audio/libvorbis/buildlink2.mk"
 .include "../../x11/gtk/buildlink2.mk"
