@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.3 1999/05/24 00:35:37 dan Exp $
+$NetBSD: patch-ad,v 1.4 1999/10/20 05:44:05 dan Exp $
 
 
 Note:  before adding drives to the compatibility list, please test them
@@ -18,6 +18,16 @@ Note:  before adding drives to the compatibility list, please test them
      ,
 +        { 
 +        "MATSHITA CD-R   CW-7502",
++        mmc_getcdtoc,
++        mmc_cd_setblocksize,
++        mmc_cdrawread,
++        mmc_cddaread,
++        mmc_begin_cdda,
++        mmc_end_cdda
++        }
++    ,
++        { 
++        "MATSHITA CD-R   CW-7582",
 +        mmc_getcdtoc,
 +        mmc_cd_setblocksize,
 +        mmc_cdrawread,
