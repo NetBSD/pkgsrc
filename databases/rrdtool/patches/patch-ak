@@ -1,10 +1,10 @@
-$NetBSD: patch-ak,v 1.2 2000/05/07 12:50:52 wulf Exp $
+$NetBSD: patch-ak,v 1.3 2000/12/05 11:15:42 wulf Exp $
 
---- perl-shared/Makefile.PL.orig	Tue May  2 19:36:56 2000
-+++ perl-shared/Makefile.PL	Sat May  6 00:50:18 2000
-@@ -11,10 +11,10 @@
+--- perl-shared/Makefile.PL.orig	Fri Jul 14 06:52:17 2000
++++ perl-shared/Makefile.PL	Tue Dec  5 20:57:43 2000
+@@ -10,10 +10,10 @@
+     'NAME'         => 'RRDs',
      'VERSION_FROM' => 'RRDs.pm', # finds $VERSION
-     'OPTIMIZE'     => '-g',
      'DEFINE'	   => "-DPERLPATCHLEVEL=$Config{PATCHLEVEL}",
 -    'INC'          => '-I../src -I../gd1.3',
 +    'INC'          => '-I../src -I${PREFIX}/include',
