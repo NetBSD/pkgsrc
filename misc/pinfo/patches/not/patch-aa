@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/03/23 20:07:33 fredb Exp $
+
+--- configure.in.orig	Wed Jul  5 05:07:48 2000
++++ configure.in
+@@ -29,7 +29,7 @@
+ KEY_END=""
+ AC_EGREP_CPP(HAVE_KEY_END,
+ [
+-#if defined(RENAMED_NCURSES) or !defined(USE_NCURSES)
++#if defined(RENAMED_NCURSES) || !defined(USE_NCURSES)
+ #include <curses.h>
+ #else
+ #include <ncurses.h>

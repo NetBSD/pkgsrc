@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/03/23 20:07:33 fredb Exp $
+bin/pinfo
+man/man1/pinfo.1
+share/locale/cs/LC_MESSAGES/pinfo.mo
+share/locale/de/LC_MESSAGES/pinfo.mo
+share/locale/pl/LC_MESSAGES/pinfo.mo
+share/locale/ru/LC_MESSAGES/pinfo.mo
+share/locale/sv/LC_MESSAGES/pinfo.mo
+share/examples/pinforc
+@exec if [ ! -f %D/etc/pinforc ]; then cp %D/share/examples/pinforc %D/etc/; fi

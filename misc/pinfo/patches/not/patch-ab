@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2001/03/23 20:07:33 fredb Exp $
+
+--- configure.orig	Wed Jul  5 05:21:21 2000
++++ configure
+@@ -1715,7 +1715,7 @@
+ #line 1716 "configure"
+ #include "confdefs.h"
+ 
+-#if defined(RENAMED_NCURSES) or !defined(USE_NCURSES)
++#if defined(RENAMED_NCURSES) || !defined(USE_NCURSES)
+ #include <curses.h>
+ #else
+ #include <ncurses.h>
