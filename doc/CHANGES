@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5694 2004/04/20 20:46:39 minskim Exp $
+$NetBSD: CHANGES,v 1.5695 2004/04/20 21:19:35 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2196,3 +2196,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated p5-XML-XSLT to 0.48 [minskim 2004-04-20]
 	Updated cpuflags to 0.66 [abs 2004-04-20]
 	Updated gtk-send-pr to 0.3.3 [minskim 2004-04-20]
+	Updated p5-XML-XPath to 1.13 [minskim 2004-04-20]
