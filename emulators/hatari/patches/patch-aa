@@ -1,0 +1,19 @@
+$NetBSD: patch-aa,v 1.1 2004/01/01 03:34:49 cjep Exp $
+
+--- includes/unzip.h.orig	2003-03-30 14:39:27.000000000 +0100
++++ includes/unzip.h
+@@ -49,6 +49,14 @@
+ #ifndef _unz_H
+ #define _unz_H
+ 
++#ifndef OF /* function prototypes */
++#  ifdef STDC
++#    define OF(args)  args
++#  else
++#    define OF(args)  ()
++#  endif
++#endif
++
+ #ifdef __cplusplus
+ extern "C" {
+ #endif
