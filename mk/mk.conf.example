@@ -1,4 +1,4 @@
-# $NetBSD: mk.conf.example,v 1.57 1999/06/21 08:46:18 jlam Exp $
+# $NetBSD: mk.conf.example,v 1.58 1999/07/05 22:17:27 tron Exp $
 #
 
 # Sample /etc/mk.conf file, which can be used to set specific values
@@ -302,11 +302,6 @@ PAPERSIZE=	A4		# Default paper size for packages.
                                 # menus.
                                 # Possible: defined, not defined
                                 # Default: undefined
-
-#USE_MULE=			# Used in xemacs package to build MULE
-                                # extensions
-                                # Possible: defined, not defined
-                                # Default: not defined
 
 #USE_RSAREF2=	NO		# Use the RSA reference package
                                 # Possible: YES (US domestic only), or NO.
