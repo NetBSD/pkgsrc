@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.16 2004/12/20 13:16:02 grant Exp $
+# $NetBSD: Makefile.common,v 1.17 2005/01/21 03:15:52 tv Exp $
 #
 # This Makefile fragment is included by all PostgreSQL packages built from
 # the main sources of the PostgreSQL distribution except jdbc-postgresql.
@@ -93,6 +93,13 @@ post-extract:
 		${CP} -f ${COMMON_FILESDIR}/Makefile.custom		\
 			${WRKSRC}/src/Makefile.custom;			\
 	fi
+.for platform in interix3
+	if [ -d ${WRKSRC}/src/template ]; then				\
+		${RM} -f ${WRKSRC}/src/template/${platform};		\
+		${CP} -f ${COMMON_FILESDIR}/${platform}.template	\
+			${WRKSRC}/src/template/${platform};		\
+	fi
+.endfor
 	if [ -d ${WRKSRC}/src/interfaces/libpq ]; then			\
 		${RM} -f ${WRKSRC}/src/interfaces/libpq/GNUmakefile;	\
 		${CP} -f ${COMMON_FILESDIR}/GNUmakefile.libpq		\
@@ -104,9 +111,9 @@ post-extract:
 			${WRKSRC}/src/interfaces/libpgtcl/GNUmakefile;	\
 	fi
 	if [ -d ${WRKSRC}/src/backend/port/dynloader ]; then		\
-		${RM} -f ${WRKSRC}/src/backend/port/dynloader/netbsd.[ch];\
-		${CP} -f ${COMMON_FILESDIR}/netbsd.[ch]	\
-			${WRKSRC}/src/backend/port/dynloader/;	\
+		${RM} -f ${WRKSRC}/src/backend/port/dynloader/netbsd.[ch]; \
+		${CP} -f ${COMMON_FILESDIR}/netbsd.[ch]			\
+			${WRKSRC}/src/backend/port/dynloader/;		\
 	fi
 
 .include "../../devel/gettext-lib/buildlink3.mk"
