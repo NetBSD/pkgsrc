@@ -1,4 +1,17 @@
-$NetBSD: distinfo,v 1.1.1.1 2001/12/04 10:01:44 wulf Exp $
+$NetBSD: distinfo,v 1.2 2004/06/15 17:48:35 kristerw Exp $
 
 SHA1 (uml-1.0.3-1.tar.gz) = da2c249c31d0890d856e6c9578db8eec07d59032
 Size (uml-1.0.3-1.tar.gz) = 783519 bytes
+SHA1 (patch-aa) = 569fdb15462e2c99f7abc815c0908dfe65c526c4
+SHA1 (patch-ab) = 04a07a62c238841e8ca06f5a7ee0594009842581
+SHA1 (patch-ac) = f0b0320b421aaed3c669d4970a68681660db95a3
+SHA1 (patch-ad) = 7c0e79b6415482ab940169b52d2a0cd2486cfa83
+SHA1 (patch-ae) = 4603bb58c78c1628d0fc89953176d56d2fc0172d
+SHA1 (patch-af) = 8d7cb24713c981b23af375ba09882158fe6fbea6
+SHA1 (patch-ag) = 960d49bf338b05ce0d45b176301f79f7641bd2b8
+SHA1 (patch-ah) = b8ebebbacbdcba578db8985e8ecbb965fa9f4ae1
+SHA1 (patch-ai) = 4ed510a5d066c818a210a6e8ab20a6dbbfb94a69
+SHA1 (patch-aj) = c3facd7145132010a5ff83db83ed4061f1321609
+SHA1 (patch-ak) = e2127e7bc29281a581d02dcdc1a4a66f1d915b19
+SHA1 (patch-al) = c29453965b9d7ca2ffa92cd4007dc6601c77d3fb
+SHA1 (patch-am) = bdb2adfcbd1e09aa42bb4aa3ad172752f8709385

@@ -1,0 +1,38 @@
+--- uml/umlview.cpp.orig	2004-06-15 19:23:17.000000000 +0200
++++ uml/umlview.cpp	2004-06-15 19:24:59.000000000 +0200
+@@ -512,7 +512,7 @@
+ 				ObjectWidget * ow = new ObjectWidget(viewport(), o, ++localID);
+ 				temp = (UMLWidget *)ow;
+ 			}
+-		}else cerr <<"ERROR: trying to create an invalid widget"<<endl;
++		}else std::cerr <<"ERROR: trying to create an invalid widget"<<std::endl;
+ 		connect(getDocument(), SIGNAL(sigWidgetUpdated(UMLObject *)), temp, SLOT(slotChangeWidget(UMLObject *)));
+ 		connect(this, SIGNAL(sigColorChanged(int)), temp, SLOT(slotColorChanged(int)));
+ 		int y=pos.y();
+@@ -577,7 +577,7 @@
+ 	if(status)
+ 		if( !(temp = getDocument()->findUMLObject(id)) )
+ 		{
+-			cerr<<"object not found"<<endl;
++			std::cerr<<"object not found"<<std::endl;
+ 			status = false;
+ 		}
+ 	//make sure dragging item onto correct diagram
+@@ -630,7 +630,7 @@
+ 	if(status)
+ 		if(!(o = getDocument()->findUMLObject(id)))
+ 		{
+-			cerr<<"object not found"<<endl;
++			std::cerr<<"object not found"<<std::endl;
+ 			status = false;
+ 		}
+ 	if(status)
+@@ -913,7 +913,7 @@
+    		}//end object
+    		else
+    		{
+-   			cerr<<"ERROR LOADING VIEW"<<endl;
++   			std::cerr<<"ERROR LOADING VIEW"<<std::endl;
+    			return false;
+    		}
+    		status = o -> serialize(s, archive, fileVersion);
