@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/10/11 15:13:49 agc Exp $
+bin/firewalk-gtk
+man/man1/firewalk-gtk.1
