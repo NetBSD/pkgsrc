@@ -1,10 +1,9 @@
-# $NetBSD: mipspro.mk,v 1.5 2004/02/02 10:03:46 jlam Exp $
+# $NetBSD: mipspro.mk,v 1.6 2004/02/02 11:04:17 jlam Exp $
 
 .if !defined(COMPILER_MIPSPRO_MK)
 COMPILER_MIPSPRO_MK=	defined
 
 MIPSPROBASE?=	/usr
-PATH:=		${MIPSPROBASE}/bin:${PATH}
 
 # LANGUAGES.<compiler> is the list of supported languages by the compiler.
 # _LANGUAGES.<compiler> is ${LANGUAGES.<compiler>} restricted to the ones
@@ -16,6 +15,9 @@ _LANGUAGES.mipspro=	# empty
 _LANGUAGES.mipspro=	${LANGUAGES.mipspro:M${_lang_}}
 .endfor
 
+.if !empty(_LANGUAGES.mipspro)
+PATH:=	${MIPSPROBASE}/bin:${PATH}
+.endif
 .if !empty(_LANGUAGES.mipspro:Mc)
 CC=	${MIPSPROBASE}/bin/cc
 CPP=	${MIPSPROBASE}/bin/cc -E
