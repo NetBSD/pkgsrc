@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.185 2003/09/15 16:12:33 jmmv Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.186 2003/09/20 16:56:10 salo Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -1577,6 +1577,17 @@ PURE_FTPD_USE_MYSQL?=	NO
 
 PURE_FTPD_USE_PGSQL?=	NO
 # Compile in PostgreSQL support.
+# Possible: YES, NO
+# Default: NO
+
+PURE_FTPD_USE_TLS?=	NO
+# Compile in SSL/TLS support.
+# Possible: YES, NO
+# Default: NO
+
+PURE_FTPD_USE_VIRTUAL_CHROOT?=	NO
+# Compile in virtual chroot support (enables the ability
+# to follow symlinks outside a chroot jail).
 # Possible: YES, NO
 # Default: NO
 
