@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8945 2005/01/27 13:52:39 adam Exp $
+$NetBSD: CHANGES,v 1.8946 2005/01/27 14:07:24 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -625,3 +625,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated fontforge to 20050117 [adam 2005-01-27]
 	Updated libextractor to 0.3.11nb1 [drochner 2005-01-27]
 	Updated ImageMagick to 6.1.9-4 [adam 2005-01-27]
+	Updated ProjectCenter to 0.4.1 [adam 2005-01-27]
