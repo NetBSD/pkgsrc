@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2003/07/01 09:45:54 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2003/07/04 10:03:37 skrll Exp $
 
 DISTNAME=	libxml2-${LIBXML_VERSION}
 PKGREVISION=	1
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libxml2/2.5/}
 
 MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://xmlsoft.org/
-COMMENT=	XML parser library for GNOME
+COMMENT=	XML parser library from the GNOME project
 
 USE_BUILDLINK2=		yes
 USE_GMAKE=		yes
