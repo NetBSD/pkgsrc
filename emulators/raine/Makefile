@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/06/05 17:14:14 xtraeme Exp $
+# $NetBSD: Makefile,v 1.5 2004/06/05 18:55:39 xtraeme Exp $
 #
 
 DISTNAME=	raines-0.40.2
@@ -25,11 +25,13 @@ REPLACE_PERL=	makedep
 # XXX Really?
 ONLY_FOR_PLATFORM=  *-*-i386
 
-pre-install:
-	@(								\
-	${ECHO_MSG} "#!/bin/sh";					\
-	${ECHO_MSG} "cd ${PREFIX}/share/raine && ./raine"		\
+post-build:
+	@(							\
+	${ECHO} "#!${SH}";					\
+	${ECHO} "cd ${PREFIX}/share/raine && ./raine $$@"	\
 	) > ${WRKSRC}/raine.sh
+
+pre-install:
 	@${INSTALL_SCRIPT} ${WRKSRC}/raine.sh ${PREFIX}/bin/raine
 
 .include "../../devel/allegro/buildlink3.mk"
