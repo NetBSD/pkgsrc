@@ -1,6 +1,6 @@
 #!/bin/sh -e
 #
-# $Id: pkgchk.sh,v 1.32 2002/06/09 14:43:39 tron Exp $
+# $Id: pkgchk.sh,v 1.33 2002/06/20 09:17:40 abs Exp $
 #
 # TODO: Handle updates with dependencies via binary packages
 
@@ -70,7 +70,7 @@ echo_n()
 
 extract_make_vars()
     {
-    MAKEDATA="x:\n";
+    MAKEDATA=".PHONY: x\nx:\n";
     for var in $* ; do
 	MAKEDATA=$MAKEDATA"\t@echo $var=\${$var}\n"
     done
@@ -78,43 +78,26 @@ extract_make_vars()
 					sed -e 's/[^=]*=/&"/' -e 's/$/"/'`
     }
 
+# $1 = name of variable
+# $2 = default value
+extract_mk_dir_var()
+    {
+    if [ -z "`eval echo \\$$1`" ] ; then
+	eval `printf "BSD_PKG_MK=1\n.PHONY: x\nx:\n\t@echo $1="'$'"{$1}\n" | ${MAKE} -f - -f $MAKECONF x`
+	if [ -z "`eval echo \\$$1`" ]; then
+	    eval "$1=$2"
+	fi
+	if [ ! -d `eval echo \\$$1` ];then
+	    echo "Unable to locate $1 `eval echo \\$$1`"
+	    exit 1;
+	fi
+    fi
+    }
+
 extract_variables()
     {
-    # Establish PKGSRCDIR
-    #
-
-    if [ -z "$PKGSRCDIR" ];then
-	if [ -f $MAKECONF ];then
-	    eval `printf 'BSD_PKG_MK=1\nx:\n\t@echo PKGSRCDIR=${PKGSRCDIR}\n' | ${MAKE} -f - -f $MAKECONF x`
-	elif [ -f /etc/mk.conf ];then
-	    eval `printf 'BSD_PKG_MK=1\nx:\n\t@echo PKGSRCDIR=${PKGSRCDIR}\n' | ${MAKE} -f - -f /etc/mk.conf x` 
-	fi
-	if [ -z "$PKGSRCDIR" ];then
-	    PKGSRCDIR=/usr/pkgsrc
-	fi
-    fi
-    if [ ! -d $PKGSRCDIR ];then
-	echo "Unable to locate PKGSRCDIR '$PKGSRCDIR'"
-	exit 1;
-    fi
-
-    # Establish PKG_DBDIR
-    #
-
-    if [ -z "$PKG_DBDIR" ];then
-	if [ -f $MAKECONF ];then
-	    eval `printf 'BSD_PKG_MK=1\nx:\n\t@echo PKG_DBDIR=${PKG_DBDIR}\n' | ${MAKE} -f - -f $MAKECONF x`
-	elif [ -f /etc/mk.conf ];then
-	    eval `printf 'BSD_PKG_MK=1\nx:\n\t@echo PKG_DBDIR=${PKG_DBDIR}\n' | ${MAKE} -f - -f /etc/mk.conf x`
-	fi
-	if [ -z "$PKG_DBDIR" ];then
-	    PKG_DBDIR=/var/db/pkg
-	fi
-    fi
-    if [ ! -d $PKG_DBDIR ];then
-	echo "Unable to locate PKG_DBDIR '$PKG_DBDIR'"
-	exit 1;
-    fi
+    extract_mk_dir_var PKGSRCDIR /usr/pkgsrc
+    extract_mk_dir_var PKG_DBDIR /var/db/pkg
 
     # Now we have PKGSRCDIR, use it to determine PACKAGES, and PKGCHK_CONF
     # as well as AWK, GREP, SED, PKGCHK_TAGS and PKGCHK_NOTAGS
@@ -315,6 +298,9 @@ fi
 
 test -n "$MAKE" || MAKE="@MAKE@"
 test -n "$MAKECONF" || MAKECONF="@MAKECONF@"
+if [ ! -f $MAKECONF ] ; then
+    MAKECONF=/etc/mk.conf
+fi
 
 # grabbed from GNU configure
 if (echo "testing\c"; echo 1,2,3) | grep c >/dev/null; then
