@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/04/20 11:32:05 tv Exp $
+# $NetBSD: Makefile,v 1.3 1999/04/20 11:57:14 tv Exp $
 
 DISTNAME=	mailwrapper-19990412
 CATEGORIES=	mail
@@ -14,8 +14,10 @@ NO_PATCH=		yes
 IGNORE=         "is part of your NetBSD distribution"
 .endif
 
+.include "../../mk/bsd.prefs.mk"
+.if defined(MANZ)
 MANCOMPRESSED=	1
-MAKE_ENV+=	MANZ=1
+.endif
 WRKSRC=		${WRKDIR}/mailwrapper
 
 MAILER_CONF=	/etc/mailer.conf
@@ -27,7 +29,7 @@ post-install:
 	${TEST} -e ${MAILER_CONF} || \
 	${LN} -s ${PREFIX}/etc/mailer.conf.default /etc/mailer.conf
 	${MKDIR} ${LIBEXECDIR}
-	${MV} ${SENDMAIL} ${LIBEXECDIR}
+	${MV} -i ${SENDMAIL} ${LIBEXECDIR} </dev/null 2>/dev/null || ${TRUE}
 	${LN} -fs ${PREFIX}/sbin/mailwrapper /usr/bin/mailq
 	${LN} -fs ${PREFIX}/sbin/mailwrapper /usr/bin/newaliases
 	${LN} -fs ${PREFIX}/sbin/mailwrapper ${SENDMAIL}
