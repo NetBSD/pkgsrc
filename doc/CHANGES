@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1453 2003/02/21 13:47:11 wiz Exp $
+$NetBSD: CHANGES,v 1.1454 2003/02/21 14:03:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -786,3 +786,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated gmp to 4.1.2 [mycroft 2003-02-21]
 	Updated librep to 1.16.1 [mycroft 2003-02-21]
 	Updated suck to 4.3.1 [wiz 2003-02-21]
+	Updated p5-CGI to 2.88 [wiz 2003-02-21]

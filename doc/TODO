@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.301 2003/02/21 14:00:05 heinz Exp $
+$NetBSD: TODO,v 1.302 2003/02/21 14:03:14 wiz Exp $
 
 Suggested new packages
 ======================
@@ -207,7 +207,6 @@ Suggested package updates
 	o openssl-0.9.7a
 	o oss-3.9.7h
 	o p0f-1.8.3
-	o p5-CGI-2.88 [pkg/20323]
 	o pen-0.9.5 [pkg/19216]
 	o php4-4.3.1
 	o plib-1.6.0 [pkg/19015]
