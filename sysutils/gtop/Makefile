@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2000/11/25 12:09:42 hubertf Exp $
+# $NetBSD: Makefile,v 1.9 2000/11/27 11:54:10 itojun Exp $
 
 DISTNAME=		gtop-1.0.9
 CATEGORIES=		sysutils gnome
@@ -8,6 +8,8 @@ MAINTAINER=		tron@netbsd.org
 
 BUILD_DEPENDS+=		autoreconf:../../devel/autoconf
 BUILD_DEPENDS+=		automake:../../devel/automake
+BUILD_DEPENDS+=		msgfmt:../../devel/gettext
+BUILD_DEPENDS+=		gettextize:../../devel/gettext
 DEPENDS+=		gnome-core>=1.2.0:../../x11/gnome-core
 DEPENDS+=		libgtop>=1.0.9:../../devel/libgtop
 
@@ -15,6 +17,7 @@ OSVERSION_SPECIFIC=	yes
 USE_GMAKE=		# defined
 USE_X11BASE=		# defined
 USE_LIBTOOL=            # defined
+USE_LIBINTL=		# defined
 
 GNU_CONFIGURE=		# defined
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
