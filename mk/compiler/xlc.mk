@@ -1,4 +1,4 @@
-# $NetBSD: xlc.mk,v 1.2 2004/10/06 13:56:46 grant Exp $
+# $NetBSD: xlc.mk,v 1.3 2004/11/23 00:46:26 dmcmahill Exp $
 
 .if !defined(COMPILER_XLC_MK)
 COMPILER_XLC_MK=	defined
@@ -24,12 +24,14 @@ _XLC_CC=	${_XLC_DIR}/bin/xlc
 _XLC_LINKS+=	_XLC_CC
 PKG_CC=		${_XLC_CC}
 CC=		${PKG_CC:T}
+CCPATH=		${XLCBASE}/bin/xlc
 .endif
 .if exists(${XLCBASE}/bin/xlc++)
 _XLC_CXX=	${_XLC_DIR}/bin/xlc++
 _XLC_LINKS+=	_XLC_CXX
 PKG_CXX=	${_XLC_CXX}
 CXX=		${PKG_CXX:T}
+CXXPATH=	${XLCBASE}/bin/xlc++
 .endif
 
 .if exists(${XLCBASE}/bin/xlc)
