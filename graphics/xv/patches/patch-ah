@@ -1,4 +1,4 @@
-$NetBSD: patch-png2-Imakefile,v 1.2 2000/01/04 16:55:34 bouyer Exp $
+$NetBSD: patch-ah,v 1.1 2001/04/05 13:57:15 wiz Exp $
 
 This patch is based on
 http://www.mit.edu/afs/athena/contrib/graphics/src/xv/patches/png/xvpng.diff

@@ -1,4 +1,4 @@
-$NetBSD: patch-png2-xvps.c,v 1.1 1999/11/14 13:26:01 rh Exp $
+$NetBSD: patch-au,v 1.1 2001/04/05 13:57:18 wiz Exp $
 
 --- xvps.c.orig	Thu Dec 22 23:34:42 1994
 +++ xvps.c	Sun Nov 14 14:05:49 1999

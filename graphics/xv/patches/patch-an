@@ -1,4 +1,4 @@
-$NetBSD: patch-png2-xvdial.c,v 1.1 1999/11/14 13:26:01 rh Exp $
+$NetBSD: patch-an,v 1.1 2001/04/05 13:57:16 wiz Exp $
 
 --- xvdial.c.orig	Tue Jan  3 22:20:31 1995
 +++ xvdial.c	Sun Nov 14 14:05:49 1999

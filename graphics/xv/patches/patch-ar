@@ -1,4 +1,4 @@
-$NetBSD: patch-png2-xvjpeg.c,v 1.1 1999/11/14 13:26:01 rh Exp $
+$NetBSD: patch-ar,v 1.1 2001/04/05 13:57:17 wiz Exp $
 
 --- xvjpeg.c.orig	Sun Nov 14 14:05:46 1999
 +++ xvjpeg.c	Sun Nov 14 14:05:49 1999
