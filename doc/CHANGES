@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7543 2004/10/23 19:12:48 kristerw Exp $
+$NetBSD: CHANGES,v 1.7544 2004/10/24 02:53:52 grant Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4839,3 +4839,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added p5-OOTools-1.75 [minskim 2004-10-23]
 	Added p5-IO-Util-1.26 [minskim 2004-10-23]
 	Updated lua to 5.0.2nb2 [kristerw 2004-10-23]
+	Updated openssh 3.9.1nb2 [grant 2004-10-24]
