@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.2 2004/04/12 21:05:15 kim Exp $
+$NetBSD: patch-ac,v 1.3 2005/01/22 21:50:54 adrianp Exp $
 
---- etc/config.dist.orig	2004-01-04 08:57:51.000000000 -0500
-+++ etc/config.dist	2004-04-12 16:27:51.000000000 -0400
-@@ -4,16 +4,16 @@
+--- etc/config.dist.orig	2005-01-22 19:52:46.000000000 +0000
++++ etc/config.dist	2005-01-22 19:59:21.000000000 +0000
+@@ -4,16 +4,18 @@
  
  *** General ***
  
@@ -21,14 +21,16 @@ $NetBSD: patch-ac,v 1.2 2004/04/12 21:05:15 kim Exp $
 -piddir  = /home/oetiker/data/projects/AADJ-smokeping/dist/var
 -cgiurl   = http://people.ee.ethz.ch/~oetiker/smokeping/smokeping.cgi
 -smokemail = /home/oetiker/data/projects/AADJ-smokeping/dist/etc/smokemail.dist
-+datadir  = /var/db/smokeping
-+piddir   = /var/run
++datadir  = @VARBASE@/db/smokeping
++piddir   = @VARBASE@/run
 +cgiurl   = http://localhost/cgi-bin/smokeping.cgi
 +smokemail = @PREFIX@/etc/smokeping/smokemail
++
++
  # specify this to get syslog logging
- # syslogfacility = local0
- 
-@@ -63,7 +63,7 @@
+ syslogfacility = local0
+ # each probe is now run in its own process
+@@ -65,7 +67,7 @@
  
  *** Presentation ***
  
@@ -37,16 +39,16 @@ $NetBSD: patch-ac,v 1.2 2004/04/12 21:05:15 kim Exp $
  
  + overview 
  
-@@ -86,7 +86,7 @@
+@@ -88,7 +90,7 @@
  
  + FPing
  
 -binary = /usr/sepp/bin/fping
-+binary = @PREFIX@/sbin/fping
++binary = @PREFIX@/bin/fping
  
  *** Targets ***
  
-@@ -171,4 +171,3 @@
+@@ -173,4 +175,3 @@
  menu = Sun Microsystems
  title = Sun Microsystems Webserver
  host = www.sun-web.com
