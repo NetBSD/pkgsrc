@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.103 2004/05/10 17:46:28 minskim Exp $
+# $NetBSD: Makefile,v 1.104 2004/07/05 16:17:09 minskim Exp $
 
 DISTNAME=		gnome-libs-1.4.2
 PKGREVISION=		3
@@ -29,7 +29,7 @@ CONFIGURE_ENV+=		${CONFIGURE_ENV.db-${BDB_TYPE}}
 USE_BUILDLINK3=		YES
 USE_PKGLOCALEDIR=	YES
 
-LOCALSTATEDIR=		/var/gnome
+LOCALSTATEDIR=		${VARBASE}/gnome
 PLIST_SUBST+=		LOCALSTATEDIR=${LOCALSTATEDIR}
 
 .include "../../audio/esound/buildlink3.mk"
