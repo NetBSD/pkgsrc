@@ -1,19 +1,27 @@
-@comment $NetBSD: PLIST,v 1.4 2002/12/09 16:01:30 tron Exp $
-${LISPDIR}/eieio.el
-${LISPDIR}/eieio.elc
-${LISPDIR}/eieio-comp.el
-${LISPDIR}/eieio-comp.elc
-${LISPDIR}/eieio-opt.el
-${LISPDIR}/eieio-opt.elc
-${LISPDIR}/eieio-custom.el
-${LISPDIR}/eieio-custom.elc
-${LISPDIR}/eieio-doc.el
-${LISPDIR}/eieio-doc.elc
-${LISPDIR}/eieio-base.el
-${LISPDIR}/eieio-base.elc
-${LISPDIR}/compare-strings.el
-${LISPDIR}/compare-strings.elc
+@comment $NetBSD: PLIST,v 1.5 2003/01/11 08:53:48 uebayasi Exp $
+${EMACS_LISPPREFIX}/eieio/call-tree.el
+${EMACS_LISPPREFIX}/eieio/call-tree.elc
+${EMACS_LISPPREFIX}/eieio/chart.el
+${EMACS_LISPPREFIX}/eieio/chart.elc
+${EMACS_LISPPREFIX}/eieio/eieio-base.el
+${EMACS_LISPPREFIX}/eieio/eieio-base.elc
+${EMACS_LISPPREFIX}/eieio/eieio-comp.el
+${EMACS_LISPPREFIX}/eieio/eieio-comp.elc
+${EMACS_LISPPREFIX}/eieio/eieio-custom.el
+${EMACS_LISPPREFIX}/eieio/eieio-custom.elc
+${EMACS_LISPPREFIX}/eieio/eieio-doc.el
+${EMACS_LISPPREFIX}/eieio/eieio-doc.elc
+${EMACS_LISPPREFIX}/eieio/eieio-opt.el
+${EMACS_LISPPREFIX}/eieio/eieio-opt.elc
+${EMACS_LISPPREFIX}/eieio/eieio-speedbar.el
+${EMACS_LISPPREFIX}/eieio/eieio-speedbar.elc
+${EMACS_LISPPREFIX}/eieio/eieio.el
+${EMACS_LISPPREFIX}/eieio/eieio.elc
+${EMACS_LISPPREFIX}/eieio/linemark.el
+${EMACS_LISPPREFIX}/eieio/linemark.elc
+${EMACS_LISPPREFIX}/eieio/tree.el
+${EMACS_LISPPREFIX}/eieio/tree.elc
 @unexec ${INSTALL_INFO} --delete %D/info/eieio.info %D/info/dir
 info/eieio.info
 @exec ${INSTALL_INFO} %D/info/eieio.info %D/info/dir
-@unexec ${RMDIR} %D/${LISPDIR} 2>/dev/null || ${TRUE}
+@dirrm ${EMACS_LISPPREFIX}/eieio
