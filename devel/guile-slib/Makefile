@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/01/16 02:26:10 uebayasi Exp $
+# $NetBSD: Makefile,v 1.11 2003/01/24 04:24:49 jlam Exp $
 
 DISTNAME=	guile-slib-2.4.2
 PKGREVISION=	1
@@ -19,13 +19,12 @@ NO_BUILD=	yes
 
 INFO_FILES=	slib.info
 
-GUILE14_PREFIX=	guile/1.4
-PLIST_SUBST+=	GUILE14_PREFIX=${GUILE14_PREFIX}
+PLIST_SUBST+=	GUILE14_SUBDIR=${GUILE14_SUBDIR}
 
 do-install:
-	${LN} -sf ${PREFIX}/share/slib ${BUILDLINK_PREFIX.guile14}/${GUILE14_PREFIX}/share/guile/slib
-	cd ${BUILDLINK_PREFIX.guile14}/${GUILE14_PREFIX}/share/guile/slib; \
-		${BUILDLINK_PREFIX.guile14}/${GUILE14_PREFIX}/bin/guile -q -s ${FILESDIR}/gencat.scm
+	${LN} -sf ${PREFIX}/share/slib ${GUILE14_PREFIX}/share/guile/slib
+	cd ${GUILE14_PREFIX}/share/guile/slib; \
+		${GUILE14} -q -s ${FILESDIR}/gencat.scm
 
 .include "../../lang/guile14/buildlink2.mk"
 .include "../../mk/texinfo.mk"
