@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2001/04/07 19:34:31 rh Exp $
+# $NetBSD: Makefile,v 1.24 2002/09/23 16:56:03 wiz Exp $
 
 DISTNAME=		gtkglarea-1.2.2
 CATEGORIES=		x11 graphics
@@ -8,17 +8,15 @@ MAINTAINER=		hubertf@netbsd.org
 HOMEPAGE=		http://www.student.oulu.fi/~jlof/gtkglarea/
 COMMENT=		OpenGL/Mesa widget for GTK+ GUI toolkit
 
-DEPENDS+=		gtk+-1.2.*:../../x11/gtk
-
 USE_X11BASE=		YES
 USE_MESA=		YES
+USE_BUILDLINK2=		YES
 USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 GNU_CONFIGURE=		YES
-EVAL_PREFIX+=		GTKDIR=gtk+ MESADIR=Mesa
-CONFIGURE_ARGS+=	--with-gtk-prefix="${GTKDIR}"
-CONFIGURE_ARGS+=	--with-GL-prefix=${MESADIR}
+CONFIGURE_ARGS+=	--with-gtk-prefix="${BUILDLINK_PREFIX.gtk}"
+CONFIGURE_ARGS+=	--with-GL-prefix="${BUILDLINK_PREFIX.Mesa}"
 CONFIGURE_ARGS+=	--with-lib-MesaGL
 
 PLIST_SUBST+=		LOCALBASE=${LOCALBASE}
@@ -33,4 +31,6 @@ post-install:
 	${LN} -fs ${PREFIX}/share/aclocal/gtkgl.m4 \
 		${LOCALBASE}/share/aclocal/gtkgl.m4
 
+.include "../../graphics/Mesa/buildlink2.mk"
+.include "../../x11/gtk/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
