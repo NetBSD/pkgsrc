@@ -1,6 +1,6 @@
 #! @SH@
 #
-# $Id: pkg_tarup,v 1.8 2002/11/23 22:47:03 wiz Exp $
+# $Id: pkg_tarup,v 1.9 2003/03/29 04:25:11 jschauma Exp $
 #
 # Tar up installed package
 #
@@ -16,6 +16,7 @@ OS=`uname -s`
 
 AWK=${AWK:-@AWK@}
 ECHO=${ECHO:-@ECHO@}
+HEAD=${HEAD:-@HEAD@}
 ID=${ID:-@ID@}
 SU=${SU:-@SU@}
 
@@ -78,7 +79,7 @@ sed -n \
     <${PKG_DBDIR}/${PKG}/+CONTENTS >$PLIST
 
 # Duplicate first @cwd (work around pkg_create "feature" ...)
-grep '^@cwd' $PLIST | head -1 >$PLIST.1
+grep '^@cwd' $PLIST | ${HEAD} -1 >$PLIST.1
 if [ -s ${PLIST}.1 ]
 then
     sed \
