@@ -1,0 +1,46 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/06/22 21:31:08 jmmv Exp $
+bin/drivel
+share/applications/drivel.desktop
+share/drivel/glade/drivel.glade
+share/gconf/schemas/drivel.schemas
+${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/drivel.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/drivel.mo
+${PKGLOCALEDIR}/locale/en_CA/LC_MESSAGES/drivel.mo
+${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/drivel.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/drivel.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/drivel.mo
+${PKGLOCALEDIR}/locale/no/LC_MESSAGES/drivel.mo
+${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/drivel.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/drivel.mo
+${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/drivel.mo
+${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/drivel.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/drivel.mo
+${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/drivel.mo
+share/pixmaps/drivel/checkbutton.xpm
+share/pixmaps/drivel/combobox.xpm
+share/pixmaps/drivel/community.png
+share/pixmaps/drivel/doublearrow.png
+share/pixmaps/drivel/drivel_splash.png
+share/pixmaps/drivel/entry.xpm
+share/pixmaps/drivel/hscale.xpm
+share/pixmaps/drivel/insert_image.png
+share/pixmaps/drivel/insert_object.png
+share/pixmaps/drivel/leftarrow.png
+share/pixmaps/drivel/livejournal_tray_normal.png
+share/pixmaps/drivel/livejournal_tray_updated.png
+share/pixmaps/drivel/mood.png
+share/pixmaps/drivel/music.png
+share/pixmaps/drivel/private.png
+share/pixmaps/drivel/protected.png
+share/pixmaps/drivel/public.png
+share/pixmaps/drivel/radiobutton.xpm
+share/pixmaps/drivel/rightarrow.png
+share/pixmaps/drivel/user.png
+share/pixmaps/drivel/xmms.xpm
+share/pixmaps/livejournal.png
+@dirrm share/pixmaps/drivel
+@comment in xdg-dirs: @dirrm share/pixmaps
+@comment in GConf2: @dirrm share/gconf/schemas
+@dirrm share/drivel/glade
+@dirrm share/drivel
+@comment in xdg-dirs: @dirrm share/applications
