@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2002/03/29 11:34:51 rh Exp $
+# $NetBSD: Makefile,v 1.10 2002/05/03 22:02:49 hubertf Exp $
 
-DISTNAME=		silc-server-0.8.1
+DISTNAME=		silc-server-0.8.4
 CATEGORIES=		chat
 MASTER_SITES=		http://www.silcnet.org/download/server/sources/ \
 			ftp://ftp.silcnet.org/silc/server/sources/ \
@@ -52,8 +52,8 @@ DEINSTALL_EXTRA_TMPL=	${PKGDIR}/DEINSTALL
 CONFIGURE_ARGS+=	--with-docdir=${PREFIX}/share/doc/silcd
 CONFIGURE_ARGS+=	--with-etcdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-silcd-config-file=${PKG_SYSCONFDIR}/silcd.conf
-CONFIGURE_ARGS+=	--with-silcd-pid-file=/var/run/silcd.pid
 CONFIGURE_ARGS+=	--with-logsdir=/var/log/silcd
+CONFIGURE_ARGS+=	--with-silcd-pid-file=/var/log/silcd/silcd.pid
 CONFIGURE_ARGS+=	--without-ncurses
 
 # list it into IPv6-ready packages
@@ -69,8 +69,13 @@ CONFIGURE_ARGS+=	--disable-asm
 .endif
 
 post-install:
+.if (${OPSYS} == "NetBSD")
 	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/silcd.sh \
 		> ${PREFIX}/share/doc/silcd/silcd.default
+.else
+	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/silcd.generic \
+		> ${PREFIX}/share/doc/silcd/silcd.default
+.endif	
 	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/motd.txt \
 		> ${PREFIX}/share/doc/silcd/motd.txt.default
 
