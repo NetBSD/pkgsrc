@@ -1,24 +1,13 @@
-$NetBSD: patch-aa,v 1.4 2001/09/14 06:56:13 jlam Exp $
+$NetBSD: patch-aa,v 1.5 2001/09/26 23:22:17 jlam Exp $
 
---- configure.orig	Wed Aug 15 08:26:09 2001
+--- configure.orig	Fri Sep 14 13:36:02 2001
 +++ configure
-@@ -6152,7 +6152,7 @@
- 
- 
- if test "x$with_html_dir" = "x" ; then
--  HTML_DIR='$(prefix)/doc'
-+  HTML_DIR='$(prefix)/share/doc'
- else
-   HTML_DIR=$with_html_dir
- fi
-@@ -7086,8 +7086,8 @@
+@@ -7086,7 +7086,7 @@
  fi
  
  
 -XML_LIBDIR='-L${libdir}'
--XML_INCLUDEDIR='-I${includedir}/libxml -I${includedir}'
 +XML_LIBDIR='-L${libdir} -Wl,-R${libdir}'
-+XML_INCLUDEDIR='-I${includedir}/libxml2/libxml -I${includedir}/libxml2'
+ XML_INCLUDEDIR='-I${includedir}/libxml2/libxml -I${includedir}/libxml2'
  
  XML_CFLAGS=""
- RDL_LIBS=""

@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2001/08/24 16:59:03 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2001/09/26 23:22:17 jlam Exp $
 bin/xml2-config
+bin/xmlcatalog
 bin/xmllint
 include/libxml2/libxml/DOCBparser.h
 include/libxml2/libxml/HTMLparser.h
@@ -28,15 +29,16 @@ include/libxml2/libxml/xmlwin32version.h
 include/libxml2/libxml/xpath.h
 include/libxml2/libxml/xpathInternals.h
 include/libxml2/libxml/xpointer.h
-lib/pkgconfig/libxml-2.0.pc
-lib/libxml2.so.6.2
-lib/libxml2.so.6
-lib/libxml2.so
-lib/libxml2.la
 lib/libxml2.a
+lib/libxml2.la
+lib/libxml2.so
+lib/libxml2.so.6
+lib/libxml2.so.6.5
+lib/pkgconfig/libxml-2.0.pc
 lib/xml2Conf.sh
-man/man1/xmllint.1
 man/man1/xml2-config.1
+man/man1/xmlcatalog.1
+man/man1/xmllint.1
 man/man4/libxml.4
 share/aclocal/libxml.m4
 share/doc/libxml2/html/DOM.gif
@@ -44,7 +46,6 @@ share/doc/libxml2/html/FAQ.html
 share/doc/libxml2/html/book1.html
 share/doc/libxml2/html/encoding.html
 share/doc/libxml2/html/index.sgml
-share/doc/libxml2/html/xml.html
 share/doc/libxml2/html/libxml-catalog.html
 share/doc/libxml2/html/libxml-debugxml.html
 share/doc/libxml2/html/libxml-docbparser.html
@@ -70,7 +71,9 @@ share/doc/libxml2/html/libxml-xpath.html
 share/doc/libxml2/html/libxml-xpathinternals.html
 share/doc/libxml2/html/libxml-xpointer.html
 share/doc/libxml2/html/structure.gif
-@dirrm include/libxml2/libxml
-@dirrm include/libxml2
+share/doc/libxml2/html/xml.html
 @dirrm share/doc/libxml2/html
 @dirrm share/doc/libxml2
+@dirrm include/libxml2/libxml
+@dirrm include/libxml2
+@unexec rmdir -p %D/lib/pkgconfig 2>/dev/null || true
