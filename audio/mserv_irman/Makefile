@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/11/06 01:48:51 abs Exp $
+# $NetBSD: Makefile,v 1.9 2004/12/31 20:31:19 minskim Exp $
 #
 
 DISTNAME=	mserv_irman-0.20
@@ -15,6 +15,9 @@ DEPENDS+=	libirman>=0.4.1.2nb3:../../sysutils/libirman
 DEPENDS+=	p5-Time-HiRes-[0-9]*:../../time/p5-Time-HiRes
 DEPENDS+=	p5-Config-IniFiles-[0-9]*:../../devel/p5-Config-IniFiles
 
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
 USE_PERL5=	YES
+REPLACE_PERL=	mserv_irman.pl
 
 .include "../../mk/bsd.pkg.mk"
