@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2002/01/02 20:30:17 reinoud Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/05 22:39:01 skrll Exp $
 bin/ttf2pt1
 bin/ttf2pt1_convert
 bin/ttf2pt1_x2gs
@@ -101,5 +101,5 @@ share/ttf2pt1/scripts/x2gs
 @dirrm share/ttf2pt1/app/RPM
 @dirrm share/ttf2pt1/app
 @dirrm share/ttf2pt1
-@exec /bin/mkdir -p %D/libexec/ttf2pt1
+@exec ${MKDIR} -p %D/libexec/ttf2pt1
 @dirrm libexec/ttf2pt1
