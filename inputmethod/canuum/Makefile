@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/06/10 11:06:35 sakamoto Exp $
+# $NetBSD: Makefile,v 1.4 2002/10/25 17:13:14 wiz Exp $
 #
 
 DISTNAME=	canuum-1.0
@@ -12,8 +12,9 @@ MAINTAINER=	oishi@ims.ac.jp
 HOMEPAGE=	http://www.nec.co.jp/japanese/product/computer/soft/canna/
 COMMENT=	Japanese input tty frontend for Canna using uum
 
-MANLANG=	ja
-MAN1=		canuum.1
+USE_BUILDLINK2=	YES
+USE_IMAKE=	YES
+USE_X11=	YES
 MAKE_ARGS=	PREFIX=${PREFIX}
 WRKSRC=		${WRKDIR}/Canna35b2/canuum
 
@@ -36,10 +37,13 @@ do-configure:
 do-build:
 	@(cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_ARGS} all)
 
+pre-install:
+	@${MKDIR} ${WRKSRC}/misc
+
 post-install:
 	@${INSTALL_MAN} ${WRKSRC}/canuum.jmn \
 		${PREFIX}/man/ja_JP.EUC/man1/canuum.1
 
-.include "../../devel/nbitools/nbitools.mk"
-.include "../canna-lib/buildlink.mk"
+.include "../../devel/nbitools/buildlink2.mk"
+.include "../../inputmethod/canna-lib/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
