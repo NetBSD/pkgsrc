@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1364 2003/02/15 00:08:48 salo Exp $
+$NetBSD: CHANGES,v 1.1365 2003/02/15 00:38:07 salo Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -660,3 +660,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added xmms-synaesthesia-0.0.3rc3 [hubertf 2003-02-15]
 	Added xmms-tv-scope-0.0.2 [hubertf 2003-02-15]
 	Updated unproven-pthreads to 0.17nb4 [salo 2003-02-15]
+	Updated opensp to 1.5 [salo 2003-02-15]
