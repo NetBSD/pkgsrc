@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2004/01/24 03:12:32 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2004/02/05 06:58:03 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 MESALIB_BUILDLINK3_MK:=	${MESALIB_BUILDLINK3_MK}+
@@ -29,6 +29,14 @@ BUILDLINK_IS_BUILTIN.MesaLib!=						\
 	fi
 .  endif
 MAKEFLAGS+=	BUILDLINK_IS_BUILTIN.MesaLib="${BUILDLINK_IS_BUILTIN.MesaLib}"
+.endif
+
+.if defined(BUILDLINK_PREFER_PKGSRC)
+.  if empty(BUILDLINK_PREFER_PKGSRC) || \
+      !empty(BUILDLINK_PREFER_PKGSRC:M[yY][eE][sS]) || \
+      !empty(BUILDLINK_PREFER_PKGSRC:MMesaLib)
+BUILDLINK_USE_BUILTIN.MesaLib=	NO
+.  endif
 .endif
 
 .if !empty(BUILDLINK_CHECK_BUILTIN.MesaLib:M[yY][eE][sS])

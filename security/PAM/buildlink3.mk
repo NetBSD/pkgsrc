@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2004/01/24 03:12:32 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2004/02/05 06:58:03 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 PAM_BUILDLINK3_MK:=	${PAM_BUILDLINK3_MK}+
@@ -17,6 +17,14 @@ BUILDLINK_CHECK_BUILTIN.pam?=	NO
 BUILDLINK_IS_BUILTIN.pam=	NO
 .  if exists(/usr/include/security/pam_appl.h)
 BUILDLINK_IS_BUILTIN.pam=	YES
+.  endif
+.endif
+
+.if defined(BUILDLINK_PREFER_PKGSRC)
+.  if empty(BUILDLINK_PREFER_PKGSRC) || \
+      !empty(BUILDLINK_PREFER_PKGSRC:M[yY][eE][sS]) || \
+      !empty(BUILDLINK_PREFER_PKGSRC:Mpam)
+BUILDLINK_USE_BUILTIN.pam=	NO
 .  endif
 .endif
 

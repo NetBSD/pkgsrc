@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2004/01/24 03:12:32 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2004/02/05 06:58:03 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 FREETYPE2_BUILDLINK3_MK:=	${FREETYPE2_BUILDLINK3_MK}+
@@ -29,6 +29,14 @@ BUILDLINK_IS_BUILTIN.freetype2!=					\
 .  endif
 MAKEFLAGS+=	\
 	BUILDLINK_IS_BUILTIN.freetype2="${BUILDLINK_IS_BUILTIN.freetype2}"
+.endif
+
+.if defined(BUILDLINK_PREFER_PKGSRC)
+.  if empty(BUILDLINK_PREFER_PKGSRC) || \
+      !empty(BUILDLINK_PREFER_PKGSRC:M[yY][eE][sS]) || \
+      !empty(BUILDLINK_PREFER_PKGSRC:Mfreetype2)
+BUILDLINK_USE_BUILTIN.freetype2=	NO
+.  endif
 .endif
 
 .if !empty(BUILDLINK_CHECK_BUILTIN.freetype2:M[yY][eE][sS])

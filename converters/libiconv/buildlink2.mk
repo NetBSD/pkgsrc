@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.12 2004/01/15 23:04:00 tron Exp $
+# $NetBSD: buildlink2.mk,v 1.13 2004/02/05 06:58:02 jlam Exp $
 
 .if !defined(ICONV_BUILDLINK2_MK)
 ICONV_BUILDLINK2_MK=	# defined
@@ -31,6 +31,14 @@ INCOMPAT_ICONV?=	# empty
 _NEED_ICONV=		YES
 .    endif
 .  endfor
+.endif
+
+.if defined(BUILDLINK_PREFER_PKGSRC)
+.  if empty(BUILDLINK_PREFER_PKGSRC) || \
+      !empty(BUILDLINK_PREFER_PKGSRC:M[yY][eE][sS]) || \
+      !empty(BUILDLINK_PREFER_PKGSRC:Miconv)
+_NEED_ICONV=		YES
+.  endif
 .endif
 
 .if ${_NEED_ICONV} == "YES"

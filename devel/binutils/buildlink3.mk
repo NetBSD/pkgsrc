@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2004/01/24 03:12:32 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2004/02/05 06:58:02 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 BINUTILS_BUILDLINK3_MK:=	${BINUTILS_BUILDLINK3_MK}+
@@ -16,6 +16,14 @@ BUILDLINK_CHECK_BUILTIN.binutils?=	NO
 
 .if !defined(BUILDLINK_IS_BUILTIN.binutils)
 BUILDLINK_IS_BUILTIN.binutils=	YES
+.endif
+
+.if defined(BUILDLINK_PREFER_PKGSRC)
+.  if empty(BUILDLINK_PREFER_PKGSRC) || \
+      !empty(BUILDLINK_PREFER_PKGSRC:M[yY][eE][sS]) || \
+      !empty(BUILDLINK_PREFER_PKGSRC:Mbinutils)
+BUILDLINK_USE_BUILTIN.binutils=	NO
+.  endif
 .endif
 
 .if defined(USE_BINUTILS)

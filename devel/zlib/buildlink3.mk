@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2004/01/26 02:39:17 grant Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2004/02/05 06:58:03 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 ZLIB_BUILDLINK3_MK:=	${ZLIB_BUILDLINK3_MK}+
@@ -19,6 +19,14 @@ _ZLIB_H=	/usr/include/zlib.h
 BUILDLINK_IS_BUILTIN.zlib=	NO
 .  if exists(${_ZLIB_H})
 BUILDLINK_IS_BUILTIN.zlib=	YES
+.  endif
+.endif
+
+.if defined(BUILDLINK_PREFER_PKGSRC)
+.  if empty(BUILDLINK_PREFER_PKGSRC) || \
+      !empty(BUILDLINK_PREFER_PKGSRC:M[yY][eE][sS]) || \
+      !empty(BUILDLINK_PREFER_PKGSRC:Mzlib)
+BUILDLINK_USE_BUILTIN.zlib=	NO
 .  endif
 .endif
 
