@@ -1,20 +1,25 @@
-# $NetBSD: builtin.mk,v 1.4 2004/10/13 20:10:31 tv Exp $
+# $NetBSD: builtin.mk,v 1.5 2004/11/26 23:16:35 jlam Exp $
 
-.if !defined(_BLNK_LIBNCURSES_FOUND)
-_BLNK_LIBNCURSES_FOUND!=	\
-	if [ "`${ECHO} /usr/lib/libncurses.*`" = "/usr/lib/libncurses.*" ]; then \
+.for _lib_ in ncurses
+.  if !defined(_BLNK_LIB_FOUND.${_lib_})
+_BLNK_LIB_FOUND.${_lib_}!=	\
+	if ${TEST} "`${ECHO} /usr/lib/lib${_lib_}.*`" = "/usr/lib/lib${_lib_}.*"; then \
+		${ECHO} "no";						\
+	elif ${TEST} "`${ECHO} /lib/lib${_lib_}.*`" = "/lib/lib${_lib_}.*"; then \
 		${ECHO} "no";						\
 	else								\
 		${ECHO} "yes";						\
 	fi
-BUILDLINK_VARS+=	_BLNK_LIBNCURSES_FOUND
-.endif
+BUILDLINK_VARS+=	_BLNK_LIB_FOUND.${_lib_}
+.  endif
+.endfor
+.undef _lib_
 
 _NCURSES_H=	/usr/include/curses.h
 
 .if !defined(IS_BUILTIN.ncurses)
 IS_BUILTIN.ncurses=	no
-.  if !empty(_BLNK_LIBNCURSES_FOUND:M[yY][eE][sS])
+.  if !empty(_BLNK_LIB_FOUND.ncurses:M[yY][eE][sS])
 IS_BUILTIN.ncurses=	yes
 .  elif exists(${_NCURSES_H})
 IS_BUILTIN.ncurses!=		\
@@ -100,7 +105,7 @@ CHECK_BUILTIN.ncurses?=	no
 
 .if !empty(USE_BUILTIN.ncurses:M[yY][eE][sS])
 .  include "../../mk/bsd.prefs.mk"
-.  if !empty(_BLNK_LIBNCURSES_FOUND:M[nN][oO]) || ${OPSYS} == "Interix"
+.  if !empty(_BLNK_LIB_FOUND.ncurses:M[nN][oO]) || ${OPSYS} == "Interix"
 BUILDLINK_TRANSFORM.ncurses+=	-e "s|/curses\.h|/ncurses.h|g"
 BUILDLINK_TRANSFORM+=		l:ncurses:curses
 .  endif
