@@ -1,0 +1,22 @@
+$NetBSD: patch-ad,v 1.1 2005/02/20 00:57:39 xtraeme Exp $
+
+--- package.c.orig	2005-02-20 01:38:02.000000000 +0100
++++ package.c	2005-02-20 01:38:29.000000000 +0100
+@@ -110,7 +110,7 @@
+ 		 * Strip any trailing whitespace.
+ 		 */
+ 		while (strlen(rpkg_name) > 0 &&
+-		       isspace(rpkg_name[strlen(rpkg_name) - 1])) {
++		       isspace((int)rpkg_name[strlen(rpkg_name) - 1])) {
+ 			rpkg_name[strlen(rpkg_name) - 1] = '\0';
+ 		}
+ 
+@@ -184,7 +184,7 @@
+ 			 * Strip any trailing whitespace.
+ 			 */
+ 			while (strlen(rpkg_name) > 0 &&
+-			       isspace(rpkg_name[strlen(rpkg_name) - 1])) {
++			       isspace((int)rpkg_name[strlen(rpkg_name) - 1])) {
+ 				rpkg_name[strlen(rpkg_name) - 1] = '\0';
+ 			}
+ 
