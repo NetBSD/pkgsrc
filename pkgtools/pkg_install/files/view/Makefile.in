@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.in,v 1.3 2004/03/11 13:33:57 grant Exp $
+# $NetBSD: Makefile.in,v 1.4 2004/08/21 06:33:40 jlam Exp $
 
 prefix=		@prefix@
 exec_prefix=	@exec_prefix@
@@ -11,8 +11,6 @@ cat1dir=	$(mandir)/cat1
 INSTALL=	@INSTALL@
 
 SCRIPTS=	linkfarm pkg_view
-
-.PHONY: all clean install
 
 all:
 	@true # do nothing

@@ -2,7 +2,7 @@
 # Process this file with autoconf to produce a configure script.
 
 AC_PREREQ(2.57)
-AC_INIT([mtree], [20030905], [grant@NetBSD.org])
+AC_INIT([mtree], [20040722], [grant@NetBSD.org])
 AC_CONFIG_SRCDIR([mtree.c])
 AC_CONFIG_HEADER([config.h])
 
