@@ -146,6 +146,7 @@
 .ds operating-system-NetBSD-1.5.2  1.5.2
 .ds operating-system-NetBSD-1.5.3  1.5.3
 .ds operating-system-NetBSD-1.6.1  1.6.1
+.ds operating-system-NetBSD-1.6.2  1.6.2
 .ds operating-system-NetBSD-2.0    2.0
 .ds str-At-V.3 \*[Tn-font-size]AT&T\*[str-At] System\~V.3
 .as str-At-V.3 " \*[Tn-font-size]UNIX\*[str-At]
