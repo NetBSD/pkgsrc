@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2003/03/16 07:57:44 martti Exp $
+# $NetBSD: Makefile.common,v 1.7 2003/03/16 16:19:04 tron Exp $
 
 DISTNAME=		samba-${SAMBA_DIST_VERS}
 SAMBA_DIST_VERS=	2.2.8
@@ -7,7 +7,6 @@ CATEGORIES?=		net
 MASTER_SITES=		ftp://ftp.samba.org/pub/samba/ \
 			ftp://ring.asahi-net.or.jp/pub/net/samba/ \
 			ftp://samba.anu.edu.au/pub/samba/ \
-			http://de.samba.org/samba/ftp/ \
 			ftp://ftp.sunet.se/pub/unix/utilities/samba/
 COUNTRY_MIRRORS=	au1 ca fi fr de it pl ru sg se us1 us6
 .for COUNTRY in ${COUNTRY_MIRRORS}
