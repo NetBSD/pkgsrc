@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2003/03/18 21:53:29 jschauma Exp $
+# $NetBSD: Makefile,v 1.22 2003/03/28 20:30:24 wiz Exp $
 #
 
 DISTNAME=	bzip2-1.0.2
@@ -18,7 +18,7 @@ MAKE_ENV+=		REALCC="${BUILDLINK_CC}"
 CCVERS!=       ${CC} -v 2>&1 | ${GREP} "gcc" || ${ECHO} "notgcc"
 
 .if ${CCVERS} != "notgcc"
-BZIP_CFLAGS=           -Wall -Winline -fomit-frame-pointer -fno-strength-reduce 
+BZIP_CFLAGS=           -Wall -Winline -fomit-frame-pointer -fno-strength-reduce
 .endif
 
 MAKE_ENV+=             BZIP_CFLAGS="${BZIP_CFLAGS}"

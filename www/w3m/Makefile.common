@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.16 2003/03/22 03:28:01 wiz Exp $
+# $NetBSD: Makefile.common,v 1.17 2003/03/28 20:29:27 wiz Exp $
 #
 
 DISTNAME=	w3m-${W3M_VERS}
@@ -113,7 +113,7 @@ CONFIGURE_ENV+= use_menu=y use_matrix=n use_ansi_color=y
 CONFIGURE_ENV+= use_help_cgi=n use_migemo=n
 CONFIGURE_ENV+= ded=vi dmail=Mail dbrowser=
 CONFIGURE_ENV+= dcc="${CC}"
-.if ${OPSYS} == "Darwin" 
+.if ${OPSYS} == "Darwin"
 CONFIGURE_ENV+= dtermlib="-lcurses"
 .else
 CONFIGURE_ENV+= dtermlib="-ltermcap"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/02/09 16:33:57 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.6 2003/03/28 20:32:18 wiz Exp $
 #
 
 DISTNAME=	isic-0.05
@@ -23,11 +23,11 @@ post-install:
 # XXX
 # XXX     alpha
 # XXX
-# XXX has an optimization bug when compiling with -O2 
+# XXX has an optimization bug when compiling with -O2
 #
 .if ${OPSYS} == "NetBSD"
 .  if (${MACHINE_ARCH} == "alpha")
-CPPFLAGS:=      ${CPPFLAGS:C/-O[0-9]*//g} 
+CPPFLAGS:=      ${CPPFLAGS:C/-O[0-9]*//g}
 CFLAGS:=        ${CFLAGS:C/-O[0-9]*//g}
 CONFIGURE_ENV+= CPPFLAGS="${CPPFLAGS}"
 CONFIGURE_ENV+= CFLAGS="${CFLAGS}"
