@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.6 2000/11/03 21:15:48 veego Exp $
+$NetBSD: patch-aa,v 1.7 2000/12/28 12:49:51 abs Exp $
 
---- makefiles/Makefile.netbsd.orig	Sat Dec 11 00:07:06 1999
-+++ makefiles/Makefile.netbsd	Thu Nov  2 13:14:19 2000
+--- makefiles/Makefile.netbsd.orig	Fri Dec 10 23:07:06 1999
++++ makefiles/Makefile.netbsd
 @@ -2,8 +2,8 @@
  AR=ar
  
