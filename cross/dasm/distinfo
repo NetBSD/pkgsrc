@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/11/20 16:24:43 minskim Exp $
+$NetBSD: distinfo,v 1.2 2005/02/24 10:16:53 agc Exp $
 
 SHA1 (dasm212.zip) = cf14367131bc3490ab75a349d07ee276e114967d
+RMD160 (dasm212.zip) = dc1af353dae599acf5fedda46f586369e7030c51
 Size (dasm212.zip) = 63734 bytes
 SHA1 (build.sh) = 56eef59dc399d80059371b7f1153e031d6478386
 SHA1 (patch-aa) = 8977637e43cd12bc9884d3a42d50cfd3761bef02
