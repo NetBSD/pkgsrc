@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/07/18 07:31:17 grant Exp $
+# $NetBSD: Makefile,v 1.5 2003/09/04 11:23:19 grant Exp $
 #
 
 DISTNAME=		# see Makefile.${OPSYS}.${ARCH}
@@ -13,10 +13,11 @@ COMMENT=		Full featured gecko-based browser (nightly binary pkg)
 
 ONLY_FOR_PLATFORM=	Linux-*-i[3-6]86 NetBSD-*-i386 SunOS-5.[789]*-sparc
 
-PKGVER!=		date +%Y%m%d
+PKGVER!=		${DATE} +%Y%m%d
 DIST_SUBDIR=		${PKGNAME}
 NO_CHECKSUM=		# defined
 NO_CONFIGURE=		# defined
+
 USE_PKGINSTALL=		YES
 
 .include "../../mk/bsd.prefs.mk"
