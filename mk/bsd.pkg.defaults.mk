@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.115 2002/12/22 20:05:34 atatat Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.116 2002/12/23 00:05:32 wiz Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -997,6 +997,16 @@ MAJORDOMO_USER?= majordom
 # Used by majordomo package as the userid majordomo runs at.
 # Possible: any
 # Default: majordom
+
+MPLAYER_ENABLE_RUNTIME_CPU_DETECTION?= YES
+# Used by mplayer to enable runtime CPU detection -- this makes
+# binary packages work on different machines than the one compiled one,
+# but may be slower.
+# Note that this only takes effect on i386 and that binary packages made with
+# this option set to NO will only run reliably on a machine of the same
+# CPU type.
+# Possible: YES, NO
+# Default: NO
 
 MPLAYER_USE_REALMEDIA?= NO
 # Used by mplayer to enable realmedia support by using the realplayer
