@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/01/24 21:24:09 recht Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/01/25 17:18:13 jlam Exp $
 #
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
@@ -9,10 +9,9 @@ BUILDLINK_DEPENDS+=	spread
 .endif
 
 .if !empty(SPREAD_BUILDLINK3_MK:M+)
-BUILDLINK_PACKAGES+=			spread
-BUILDLINK_DEPENDS.spread?=		spread>=3.17.1nb1
-BUILDLINK_PKGSRCDIR.spread?=		../../net/spread
-
+BUILDLINK_PACKAGES+=		spread
+BUILDLINK_DEPENDS.spread+=	spread>=3.17.1
+BUILDLINK_PKGSRCDIR.spread?=	../../net/spread
 .endif # SPREAD_BUILDLINK3_MK
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
