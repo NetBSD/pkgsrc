@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/02/14 18:26:27 jmmv Exp $
+# $NetBSD: Makefile,v 1.4 2004/02/15 20:01:11 wiz Exp $
 #
 
 DISTNAME=		fribidi-0.10.4
@@ -10,7 +10,7 @@ MAINTAINER=		xtraeme@NetBSD.org
 HOMEPAGE=		http://fribidi.sourceforge.net/
 COMMENT=		Free Implementation of the Unicode Bidirectional Algorithm
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_LIBTOOL=            yes
 GNU_CONFIGURE=		yes
 
@@ -18,5 +18,5 @@ PKGCONFIG_OVERRIDE=	fribidi.pc.in
 
 TEST_TARGET=		check
 
-.include "../../devel/pkgconfig/buildlink2.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
