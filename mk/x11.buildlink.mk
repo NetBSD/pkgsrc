@@ -1,15 +1,9 @@
-# $NetBSD: x11.buildlink.mk,v 1.18 2002/08/06 05:56:36 jlam Exp $
+# $NetBSD: x11.buildlink.mk,v 1.19 2002/08/06 06:10:41 jlam Exp $
 #
 # This Makefile fragment is included by packages that use X11.  It's
 # only purpose is to make a package strongly buildlinked, so packages
 # that include this file must already satisfy the requirements for
 # USE_BUILDLINK_ONLY.
-#
-# To use this Makefile fragment, simply:
-#
-# (1) Optionally define USE_BUILDLINK_X11 to use pkgtools/buildlink-x11
-#     to cause packages that use imake to use buildlink, and
-# (2) Include this Makefile fragment in the package Makefile.
 #
 # NOTE: This file must be included _before_ bsd.pkg.mk.
 # NOTE: This file should _not_ be included in any package's buildlink.mk file.
