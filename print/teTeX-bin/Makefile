@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/08/10 14:51:54 hubertf Exp $
+# $NetBSD: Makefile,v 1.3 1999/08/14 18:42:09 tron Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/08/05 06:56:41 tg Exp
 #
 
@@ -53,6 +53,7 @@ CONFIGURE_ENV+=	INSTALL_PROGRAM="${INSTALL_PROGRAM}" \
 		INSTALL_DATA="${INSTALL_DATA}"
 
 post-install:
+	@${RM} ${PREFIX}/share/texmf/web2c/*.log
 	### someone needs to adjust papersize to this:
 	#texconfig dvips paper a4
 	#texconfig xdvi a4
