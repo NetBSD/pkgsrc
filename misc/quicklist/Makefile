@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/10/23 00:05:17 tron Exp $
+# $NetBSD: Makefile,v 1.3 2000/01/10 19:11:09 hubertf Exp $
 #
 
 DISTNAME=	quicklist-0.8.2
@@ -8,7 +8,7 @@ MASTER_SITES=	ftp://ftp.quicklist.org/
 MAINTAINER=	jlam@netbsd.org
 HOMEPAGE=	http://www.quicklist.org/
 
-DEPENDS+=	gettext-0.10.35:../../devel/gettext
+DEPENDS+=	gettext-0.10.*:../../devel/gettext
 DEPENDS+=	gtk+-1.2.*:../../x11/gtk
 
 GNU_CONFIGURE=	yes

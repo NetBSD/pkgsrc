@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 1999/10/09 20:29:17 jlam Exp $
+# $NetBSD: Makefile,v 1.39 2000/01/10 19:11:10 hubertf Exp $
 
 DISTNAME=		WindowMaker-0.61.1
 PKGNAME=		windowmaker-0.61.1
@@ -58,7 +58,7 @@ CONFIGURE_ARGS+=	--enable-${OPTION}
 # are installed.
 #
 .if defined(LINGUAS)
-BUILD_DEPENDS+=		gettext-0.10.35:../../devel/gettext
+BUILD_DEPENDS+=		gettext-0.10.*:../../devel/gettext
 CONFIGURE_ARGS+=	--enable-modelock
 CONFIGURE_ENV+=		LINGUAS="${LINGUAS}"
 LDFLAGS+=		-Wl,-R${LOCALBASE}/lib -L${LOCALBASE}/lib	# -lintl
