@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.5 2004/12/09 18:45:32 minskim Exp $
+$NetBSD: patch-ab,v 1.6 2005/03/14 22:40:09 tv Exp $
 
 --- config.h.in.orig	2003-01-19 18:40:15.000000000 -0600
 +++ config.h.in
@@ -60,7 +60,7 @@ $NetBSD: patch-ab,v 1.5 2004/12/09 18:45:32 minskim Exp $
  #undef uid_t
 +
 +/* Use standard POSIX type if BSD type is not available */
-+#ifndef u_int32_t
++#if !defined(u_int32_t) && defined(HAVE_INTTYPES_H)
 +#include <inttypes.h>
 +typedef uint32_t u_int32_t;
 +#endif
