@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2673 2003/07/03 11:18:07 markd Exp $
+$NetBSD: CHANGES,v 1.2674 2003/07/03 11:36:09 agc Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2666,3 +2666,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added cpuid-3.3 [agc 2003-07-03]
 	Updated wonka to 0.9.6 [skrll 2003-07-03]
 	Updated mimedefang to 2.35 [markd 2003-07-03]
+	Updated mad123 to 0.7.1 [agc 2003-07-03]
