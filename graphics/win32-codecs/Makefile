@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2003/07/30 13:02:19 grant Exp $
+# $NetBSD: Makefile,v 1.18 2003/12/12 23:16:44 recht Exp $
 #
 
 DISTNAME=	win32codecs
-PKGNAME=	win32-codecs-030714
+PKGNAME=	win32-codecs-031029
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.mplayerhq.hu/MPlayer/releases/codecs/ \
 		http://www2.mplayerhq.hu/MPlayer/releases/codecs/ \
@@ -10,6 +10,7 @@ MASTER_SITES=	http://www.mplayerhq.hu/MPlayer/releases/codecs/ \
 		ftp://ftp2.mplayerhq.hu/MPlayer/releases/codecs/
 EXTRACT_SUFX=	.tar.bz2
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} qt6dlls.tar.bz2
+DISTFILES+=	qtextras.tar.bz2
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://mplayerhq.hu/MPlayer/releases/codecs/
@@ -31,5 +32,6 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/win32
 	${INSTALL_DATA} ${WRKDIR}/${DISTNAME}/* ${PREFIX}/lib/win32
 	${INSTALL_DATA} ${WRKDIR}/qt6dlls/* ${PREFIX}/lib/win32
+	${INSTALL_DATA} ${WRKDIR}/qtextras/* ${PREFIX}/lib/win32
 
 .include "../../mk/bsd.pkg.mk"
