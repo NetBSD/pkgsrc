@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1998/10/31 00:23:34 tron Exp $
+# $NetBSD: Makefile,v 1.3 1998/11/06 17:23:46 tron Exp $
 
 DISTNAME=	SuSE-5.3
 PKGNAME=	linux_SuSE-5.3
@@ -13,7 +13,7 @@ ONLY_FOR_ARCHS=	i386
 MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.suse.com/
 
-DEPENDS+=	rpm-2.5.1:../../misc/rpm
+DEPENDS+=	rpm-2.5.4:../../misc/rpm
 
 CONFLICTS=	linux_lib-2.4
 
