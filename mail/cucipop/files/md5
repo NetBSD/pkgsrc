@@ -1,3 +1,4 @@
-$NetBSD: md5,v 1.2 1998/08/07 13:24:59 agc Exp $
+$NetBSD: md5,v 1.3 2000/11/22 13:05:59 itojun Exp $
 
 MD5 (cucipop-1.31.tar.gz) = e4dc7c3c6e3a4a83dde5cbbe21fee5f8
+MD5 (cucipop-1.31-v6-20001122.diff.gz) = 3001f8b32a7ec0fae48e5f2c94f44420
