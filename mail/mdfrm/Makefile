@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/04/27 16:51:07 zuntum Exp $
+# $NetBSD: Makefile,v 1.2 2001/04/27 16:53:14 zuntum Exp $
 #
 
 DISTNAME=	mdfrm.pl
@@ -15,6 +15,7 @@ DEPENDS+=       p5-TimeDate-*:../../devel/p5-TimeDate
 EXTRACT_CMD=	${CP} ${DOWNLOADED_DISTFILE} ${WRKSRC}
 WRKSRC=		${WRKDIR}
 
+USE_PERL5=	yes
 NO_BUILD=	yes
 
 post-patch:
