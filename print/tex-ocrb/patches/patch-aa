@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/03/12 00:50:02 mjl Exp $
+
+--- ocrbmac.mf.orig	2003-03-12 01:27:13.000000000 +0100
++++ ocrbmac.mf	2003-03-12 01:27:25.000000000 +0100
+@@ -6,6 +6,8 @@
+ %  Dort koennen globale Design-Entscheidungen durch evtl.
+ %  Mehrfachausgaben realisiert wdrden.
+ %
++mode_setup;
++
+ pen  penxy;
+ picture bild; picture bildb;
+ path negpath;
