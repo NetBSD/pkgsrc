@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.150 2000/08/27 20:43:26 hubertf Exp $
+# $NetBSD: Makefile,v 1.151 2000/08/30 04:14:50 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.117 1997/08/16 03:11:52 gpalmer Exp 
 #
 
@@ -23,13 +23,8 @@
     SUBDIR += coda_doc
     SUBDIR += coda_intro
     SUBDIR += coda_server
-<<<<<<< Makefile
-    SUBDIR += delegate
-    SUBDIR += ddclient
-=======
     SUBDIR += ddclient
     SUBDIR += delegate
->>>>>>> 1.142
     SUBDIR += dhid
     SUBDIR += dip
     SUBDIR += dlint
