@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2000/08/06 23:07:09 tron Exp $
+# $NetBSD: Makefile,v 1.5 2000/08/15 05:34:41 jlam Exp $
 #
 
 DISTNAME=		rp7_linux20_libc6_i386_b2
@@ -37,7 +37,7 @@ NS_PLUGINS_DIR=		${PREFIX}/lib/netscape/plugins
 do-fetch:
 	@if [ ! -f ${RP_INSTALLER} ]; then \
 	    ${ECHO_MSG} "==============================================================="; \
-	    ${ECHO_MSG} "  RealPlayer 7 for Linux 2.0/2.2 must be fetched into"; \
+	    ${ECHO_MSG} "  RealPlayer 7 for Linux 2.0 (libc6 i386) must be fetched into"; \
 	    ${ECHO_MSG} "  ${DISTDIR} from"; \
 	    ${ECHO_MSG} "  ${DOWNLOAD}."; \
 	    ${ECHO_MSG} "==============================================================="; \
