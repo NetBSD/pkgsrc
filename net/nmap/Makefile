@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1999/04/05 18:50:30 hubertf Exp $
+# $NetBSD: Makefile,v 1.7 2000/01/28 14:36:37 agc Exp $
 #
 
 DISTNAME=	nmap-2.12
@@ -11,5 +11,11 @@ HOMEPAGE=	http://www.insecure.org/nmap/index.html
 
 GNU_CONFIGURE=	YES
 CONFIGURE_ENV+=	INSTALL=${INSTALL}
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "SunOS"
+MAKE_ENV+=	CPPFLAGS=""
+.endif
 
 .include "../../mk/bsd.pkg.mk"
