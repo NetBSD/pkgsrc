@@ -1,27 +1,35 @@
-$NetBSD: patch-al,v 1.4 2005/02/04 21:35:51 adrianp Exp $
+$NetBSD: patch-al,v 1.5 2005/03/24 11:32:50 adam Exp $
 
---- camlp4/camlp4/Makefile.orig	2004-10-14 16:06:37.000000000 +0100
-+++ camlp4/camlp4/Makefile	2004-10-14 16:10:46.000000000 +0100
-@@ -71,18 +71,26 @@
+--- camlp4/camlp4/Makefile.orig	2005-01-31 10:38:53.000000000 +0000
++++ camlp4/camlp4/Makefile
+@@ -71,24 +71,33 @@ compare:
  install:
  	-$(MKDIR) "$(BINDIR)"
  	-$(MKDIR) "$(LIBDIR)/camlp4"
 -	cp $(CAMLP4) "$(BINDIR)/."
 -	cp mLast.mli quotation.mli ast2pt.mli pcaml.mli spretty.mli "$(LIBDIR)/camlp4/."
 -	cp mLast.cmi quotation.cmi ast2pt.cmi pcaml.cmi spretty.cmi "$(LIBDIR)/camlp4/."
--	cp camlp4.cma $(LIBDIR)/camlp4/.
+-	cp  argl.cmi argl.cmo "$(LIBDIR)/camlp4/."
 +	${BSD_INSTALL_SCRIPT} $(CAMLP4) $(BINDIR)/.
 +	${BSD_INSTALL_DATA} mLast.mli $(LIBDIR)/camlp4/
-+	${BSD_INSTALL_DATA} quotation.mli $(LIBDIR)/camlp4/
-+	${BSD_INSTALL_DATA} ast2pt.mli $(LIBDIR)/camlp4/
-+	${BSD_INSTALL_DATA} pcaml.mli $(LIBDIR)/camlp4/
-+	${BSD_INSTALL_DATA} spretty.mli $(LIBDIR)/camlp4/
 +	${BSD_INSTALL_DATA} mLast.cmi $(LIBDIR)/camlp4/
++	${BSD_INSTALL_DATA} quotation.mli $(LIBDIR)/camlp4/
 +	${BSD_INSTALL_DATA} quotation.cmi $(LIBDIR)/camlp4/
++	${BSD_INSTALL_DATA} ast2pt.mli $(LIBDIR)/camlp4/
 +	${BSD_INSTALL_DATA} ast2pt.cmi $(LIBDIR)/camlp4/
++	${BSD_INSTALL_DATA} pcaml.mli $(LIBDIR)/camlp4/
 +	${BSD_INSTALL_DATA} pcaml.cmi $(LIBDIR)/camlp4/
++	${BSD_INSTALL_DATA} spretty.mli $(LIBDIR)/camlp4/
 +	${BSD_INSTALL_DATA} spretty.cmi $(LIBDIR)/camlp4/
-+	${BSD_INSTALL_DATA} camlp4.cma $(LIBDIR)/camlp4/
++	${BSD_INSTALL_DATA} argl.cmi $(LIBDIR)/camlp4/
++	${BSD_INSTALL_DATA} argl.cmo $(LIBDIR)/camlp4/
+ 	for f in argl.o argl.cmx; do \
+ 	  if test -r $$f ; then \
+-		cp $$f "$(LIBDIR)/camlp4/." ; \
++		${BSD_INSTALL_DATA} $$f "$(LIBDIR)/camlp4/." ; \
+ 	  fi ; \
+ 	done
+ 	cp camlp4.cma $(LIBDIR)/camlp4/.
  	for f in  camlp4.$(A)  camlp4.p.$(A) ; do \
  	  if test -f $$f ; then \
 -	     cp $$f "$(LIBDIR)/camlp4/." && ( cd  "$(LIBDIR)/camlp4/." && $(RANLIB) $$f ) ; \
