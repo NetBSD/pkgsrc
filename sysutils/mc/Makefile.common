@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2001/02/13 11:47:06 tron Exp $
+# $NetBSD: Makefile.common,v 1.6 2001/02/26 17:01:59 jlam Exp $
 
 DISTNAME=		mc-4.5.51
 CATEGORIES+=		sysutils
@@ -10,7 +10,7 @@ HOMEPAGE=		http://www.gnome.org/mc/
 DEPENDS+=		libslang-*:../../devel/libslang
 DEPENDS+=		glib>=1.2.0:../../devel/glib
 BUILD_DEPENDS+=		msgfmt:../../devel/gettext
-BUILD_DEPENDS+=		autoheader:../../devel/autoconf
+BUILD_DEPENDS+=		${LOCALBASE}/bin/autoheader:../../devel/autoconf
 
 CONFLICTS+=		mc-* gmc-*
 
