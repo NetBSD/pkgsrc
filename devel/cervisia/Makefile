@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.2 1999/12/13 19:24:02 hubertf Exp $
+# $NetBSD: Makefile,v 1.3 2000/02/24 02:12:35 hubertf Exp $
 #
 
-DISTNAME=	cervisia-0.3.1
+DISTNAME=	cervisia-0.5.0
 CATEGORIES=	kde devel
 MASTER_SITES=	ftp://linde.physik.hu-berlin.de/pub/bernd/cervisia/ \
 		ftp://ftp.kde.org/pub/kde/unstable/apps/utils/
 
 MAINTAINER=	hubertf@netbsd.org
-HOMEPAGE=	http://pauli.uni-muenster.de/~gehrmab/cervisia/cervisia.html
+HOMEPAGE=	http://cervisia.sourceforge.net/
 
-DEPENDS+=	kdebase-1.1.2:../../x11/kdebase
+DEPENDS+=	kde-1.1.2:../../x11/kde
 DEPENDS+=	cvs-1.10:../../devel/cvs
 
 USE_X11BASE=		yes	# To get this near KDE

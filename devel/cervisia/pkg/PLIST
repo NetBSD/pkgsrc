@@ -1,9 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/11/05 04:32:07 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.2 2000/02/24 02:12:36 hubertf Exp $
 bin/cervisia
 man/man1/cervisia.1
-share/doc/HTML/en/cervisia/index.html
-share/doc/HTML/en/cervisia/index-1.html
-share/doc/HTML/en/cervisia/index-2.html
-share/doc/HTML/en/cervisia/index-3.html
+share/doc/kde/HTML/en/cervisia/index.html
+share/doc/kde/HTML/en/cervisia/mainscreen.html
+share/doc/kde/HTML/en/cervisia/removingfiles.html
+share/doc/kde/HTML/en/cervisia/addingfiles.html
+share/doc/kde/HTML/en/cervisia/addingremovingdirs.html
+share/doc/kde/HTML/en/cervisia/browsinglogs.html
+share/doc/kde/HTML/en/cervisia/ignoredfiles.html
 share/kde/applnk/Development/Cervisia.kdelnk
-@dirrm share/doc/HTML/en/cervisia
