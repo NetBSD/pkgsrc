@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1999/09/06 07:58:29 sakamoto Exp $
+# $NetBSD: Makefile,v 1.4 2000/02/20 22:05:38 wiz Exp $
 #
 
 DISTNAME=	sj3-2.0.1.20
@@ -34,7 +34,7 @@ pre-configure:
 	@${MV} ${WRKSRC}/Imakefile ${WRKSRC}/Imakefile.orig
 	@${SED} -e 's|\(SUBDIRS = .*\)sj3lib \(.*\)|\1\2|'	\
 		${WRKSRC}/Imakefile.orig > ${WRKSRC}/Imakefile
-	@for file in `find ${WRKSRC} -name Imakefile`; do	\
+	@for file in `${FIND} ${WRKSRC} -name Imakefile`; do	\
 		${MV} -f $$file $$file.orig;			\
 		${SED} -e 's|\(= \).*/lib\(sj3lib\).a|\1-l\2|'	\
 			$$file.orig > $$file;			\
