@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.435 2003/04/01 12:35:48 markd Exp $
+$NetBSD: TODO,v 1.436 2003/04/02 00:19:30 grant Exp $
 
 Suggested new packages
 ======================
@@ -194,7 +194,7 @@ Suggested package updates
 	o openoffice-1.0.2 [skrll]
 	o openoffice-643 [post-1.0.1]
 	o openslp-1.0.11
-	o openssh-3.6
+	o openssh-3.6.1
 	o openssl-0.9.7a
 	o oss-3.9.7h
 	o p0f-1.8.3
