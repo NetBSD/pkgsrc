@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.107 2004/07/19 18:38:00 wiz Exp $
+# $NetBSD: Makefile,v 1.108 2004/07/19 20:30:12 wiz Exp $
 #
 
 COMMENT=	Emulators for other operating systems
@@ -96,6 +96,7 @@ SUBDIR+=	suse_x11
 SUBDIR+=	suse_xforms
 SUBDIR+=	swarm
 SUBDIR+=	tme
+SUBDIR+=	tuxnes
 SUBDIR+=	twin
 SUBDIR+=	uae
 SUBDIR+=	uips
