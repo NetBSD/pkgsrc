@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/02/10 02:09:02 xtraeme Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/02/10 20:45:01 jlam Exp $
 #
 # This Makefile fragment is included by packages that use libgtop2.
 #
@@ -14,7 +14,7 @@ BUILDLINK_DEPENDS+=	libgtop2
 
 .if !empty(LIBGTOP2_BUILDLINK3_MK:M+)
 BUILDLINK_PACKAGES+=			libgtop2
-BUILDLINK_DEPENDS.libgtop2?=		libgtop2>=2.0.8
+BUILDLINK_DEPENDS.libgtop2?=		libgtop2>=2.0.0nb4
 BUILDLINK_PKGSRCDIR.libgtop2?=		../../devel/libgtop2
 
 .include "../../devel/popt/buildlink3.mk"
