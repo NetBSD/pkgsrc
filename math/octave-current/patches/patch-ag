@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.6 2004/01/23 13:26:20 adam Exp $
+$NetBSD: patch-ag,v 1.7 2004/03/29 16:20:16 adam Exp $
 
---- src/Makefile.in.orig	2004-01-23 04:13:58.000000000 +0000
+--- src/Makefile.in.orig	2004-02-20 21:16:54.000000000 +0000
 +++ src/Makefile.in
-@@ -247,8 +247,9 @@ libraries: $(LIBRARIES)
+@@ -246,8 +246,9 @@ libraries: $(LIBRARIES)
  
  liboctinterp.$(LIBEXT): $(OBJECTS) $(XERBLA)
  	rm -f $@
@@ -14,7 +14,7 @@ $NetBSD: patch-ag,v 1.6 2004/01/23 13:26:20 adam Exp $
  
  liboctinterp.$(SHLEXT_VER): liboctinterp.$(SHLEXT)
  	rm -f $@
-@@ -268,6 +269,7 @@ stamp-prereq: defaults.h oct-conf.h oct-
+@@ -267,6 +268,7 @@ stamp-prereq: defaults.h oct-conf.h oct-
  	touch stamp-prereq
  
  octave$(EXEEXT): stamp-prereq $(LIBRARIES) main.o $(DLD_STATIC_OBJ)
@@ -22,7 +22,7 @@ $NetBSD: patch-ag,v 1.6 2004/01/23 13:26:20 adam Exp $
  	$(LD_CXX) $(CPPFLAGS) $(ALL_CXXFLAGS) $(RDYNAMIC_FLAG) \
  	$(ALL_LDFLAGS) -o $@ \
  	main.o $(DLD_STATIC_OBJ) \
-@@ -348,6 +350,7 @@ install-strip:
+@@ -347,6 +349,7 @@ install-strip:
  install-bin:
  	$(top_srcdir)/mkinstalldirs $(DESTDIR)$(bindir)
  	rm -f $(DESTDIR)$(bindir)/octave$(EXEEXT)
@@ -30,7 +30,7 @@ $NetBSD: patch-ag,v 1.6 2004/01/23 13:26:20 adam Exp $
  	$(INSTALL_PROGRAM) octave$(EXEEXT) $(DESTDIR)$(bindir)/octave-$(version)$(EXEEXT)
  	$(LN_S) octave-$(version)$(EXEEXT) $(DESTDIR)$(bindir)/octave$(EXEEXT)
  .PHONY: install-bin
-@@ -367,9 +370,8 @@ install-lib:
+@@ -366,9 +369,8 @@ install-lib:
  	$(top_srcdir)/mkinstalldirs $(DESTDIR)$(octlibdir)
  	if $(STATIC_LIBS); then \
  	  rm -f $(DESTDIR)$(octlibdir)/liboctinterp.$(LIBEXT); \
