@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2002/11/28 05:24:16 itojun Exp $
+$NetBSD: distinfo,v 1.10 2002/12/13 13:19:48 taca Exp $
 
-SHA1 (w3m-0.3.2.1-m17n-20021127.tar.gz) = be343e5dc02c3bbbfe1366d8d17ca6420819a383
-Size (w3m-0.3.2.1-m17n-20021127.tar.gz) = 2391982 bytes
+SHA1 (w3m-0.3.2.2-m17n-20021207.tar.gz) = ad62ca8bb5cc2cf75d43db3d7da9b316cb7be841
+Size (w3m-0.3.2.2-m17n-20021207.tar.gz) = 2399915 bytes
 SHA1 (patch-aa) = e40ad9fa0765041b605e86febd71d399b92fc4d1
 SHA1 (patch-ab) = c0c21616d1d3557453648107eca26eaa91af4741
