@@ -1,5 +1,5 @@
 #!/usr/bin/awk -f
-# $NetBSD: genreadme.awk,v 1.8 2003/03/19 20:46:55 dmcmahill Exp $
+# $NetBSD: genreadme.awk,v 1.9 2003/03/21 12:49:58 dmcmahill Exp $
 #
 # Copyright (c) 2002, 2003 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -306,6 +306,9 @@ END {
 						 readme_name, nm);
 				i = i + 1;
 			}
+			if ( htmldeps == "" ) {
+				htmldeps = "<EM>none</EM>";
+			}
 			if (debug) printf("htmldeps = \"%s\"\n", htmldeps);
 			
 			vul = "";
@@ -407,6 +410,12 @@ END {
 			
 			if (debug) printf("binary packages: \n%s\n\n",
 					  binpkgs);
+
+			if ( flatdepends[toppkg] ~ /^[ \t]*$/ ) {
+				rundeps = "<EM>none</EM>";
+			} else {
+				rundeps = flatdepends[toppkg];
+			}
 			
 			while((getline < templatefile) > 0){
 				gsub(/%%PORT%%/, toppkg);
@@ -427,8 +436,7 @@ END {
 				gsub(/%%VULNERABILITIES%%/, ""vul"");
 				gsub(/%%VULDATE%%/, ""vuldate"");
 				gsub(/%%BUILD_DEPENDS%%/, ""htmldeps"");
-				gsub(/%%RUN_DEPENDS%%/, 
-				     ""flatdepends[toppkg]"");
+				gsub(/%%RUN_DEPENDS%%/, ""rundeps"");
 				gsub(/%%BIN_PKGS%%/, ""binpkgs"");
 				gsub(/README.html/, readme_name);
 				print >> readme;
