@@ -1,5 +1,5 @@
 #!/usr/pkg/bin/perl
-# $NetBSD: post-build,v 1.28 2004/01/26 21:10:32 heinz Exp $
+# $NetBSD: post-build,v 1.29 2004/01/31 03:30:49 grant Exp $
 #
 # Collect stuff after a pkg bulk build
 #
@@ -11,21 +11,19 @@ use File::Basename;
 # Where config vars are stored (/bin/sh syntax)
 
 if (-f $ENV{"BULK_BUILD_CONF"}) {
-    $BULK_BUILD_CONF=$ENV{"BULK_BUILD_CONF"};
+	$BULK_BUILD_CONF=$ENV{"BULK_BUILD_CONF"};
 } else {
-    $BULK_BUILD_CONF=dirname("$0")."/build.conf";
+	$BULK_BUILD_CONF=dirname("$0")."/build.conf";
 }
 
 # Dig given variable out of config file, and set it
-sub getconf
-{
-    local($var)=@_;
-    local($val);
+sub getconf {
+	local($var)=@_;
+	local($val);
 
-    chomp($val=`. ./$BULK_BUILD_CONF ; echo \$$var`);
-    eval "\$$var=\"$val\";";
+	chomp($val=`. ./$BULK_BUILD_CONF ; echo \$$var`);
+	eval "\$$var=\"$val\";";
 }
-
 
 getconf("ADMINSIG");		# "-Your Name"
 getconf("FTPURL");		# "pub/NetBSD/pkgstat/`date +%Y%m%d.%H%M`"
@@ -35,7 +33,7 @@ getconf("REPORT");		# "broken.html"
 getconf("USR_PKGSRC");		# "/usr/pkgsrc"
 getconf("osrev");	       	# `uname -r`
 getconf("arch"); 		# `uname -m`
-chomp($date=`date`);
+$enddate=localtime(time());
 $reportf=basename($REPORT);
 
 chomp($os=`uname -s`);
@@ -62,175 +60,33 @@ $indfile=basename($INDEXFILE);
 $ordfile=basename($ORDERFILE);
 $startfile=basename($STARTFILE);
 
+$startdate = (stat($STARTFILE))[9];
+$startdate = "unknown" if $startdate == 0;
+
 $verbose=1;
 
-if ($verbose) {
-	print "\n";
-	print "*** $os $osrev/$arch\n";
-	print "*** Result of bulk pkgsrc build as of $date:\n";
-	print "\n";
-	printf ("%-23s State       \tBreaks\t(last modified, maintainer)\n","Pkg");
-}
+$report_head = <<EOF;
+Package                    Breaks  Last commit  Maintainer
+-------------------------------------------------------------------------
+EOF
+$report_form = <<EOF;
+@<<<<<<<<<<<<<<<<<<<<<<<<< @<<<<<< @<<<<<<<<<<< @<<<<<<<<<<<<<<<<<<<<<<<<
+$pkg                       $nbrokenby $who      $maintainer
+EOF
 
 system("mkdir -p ${FTP}");
 
 # Copy over the output from the build process
-chdir("$USR_PKGSRC");
+chdir($USR_PKGSRC);
 system("tar plcf - $BROKENFILE */*/$BROKENFILE | ( cd ${FTP} ; tar plxf - )");
 
 # Copy over the cache files used during the build
-if (-f $DEPENDSTREEFILE ) {system("cp $DEPENDSTREEFILE ${FTP}");}
-if (-f $DEPENDSFILE ) {system("cp $DEPENDSFILE ${FTP}");}
-if (-f $SUPPORTSFILE ) {system("cp $SUPPORTSFILE ${FTP}");}
-if (-f $INDEXFILE ) {system("cp $INDEXFILE ${FTP}");}
-if (-f $ORDERFILE ) {system("cp $ORDERFILE ${FTP}");}
-
-
-open(HTML,">$REPORT") or die "Can't write $REPORT: $!\n";
-print HTML <<EOHTML
-<HTML>
-<HEAD>
-<TITLE>$os-$osrev/$arch bulk package build</TITLE>
-</HEAD>
-
-<BODY BGCOLOR=#cccccc>
-
-<H1> $os $osrev/$arch </H1>
-<H2>Output of the pkgsrc bulk build<BR>
-    as of $date</H2>
-
-    Packages not listed here resulted in a <A
-    HREF="../../packages/">binary package</A>. To see the output of
-    the (failed) build, select the package below.
-    <P>
-
-    Files not listed in PLISTs can be found in <A HREF="leftovers-${arch}.html">this list</A>.
-    <P>
-   
-<TABLE>
-<TR><TH> Package <TH> State <TH> Pkgs Broken by <TH> Last touched by <TH> File touched last <TH> Maintainer
-EOHTML
-;
-
-# some nifty postprocessing of $FTP/.broken* -> HTML here
-$nunpackaged = $nbroken = $nbrokendep = 0;
-chdir("$FTP");
-open(BF,"sort +1 $BROKENFILE |") or die "can't open .broken-file '$BROKENFILE'";
-while (<BF>) {
-    ($nerrors, $bf, $nbrokenby) = split;
-    $pkg = $bf;
-    $pkg =~ s,/$BROKENFILE,,;
-
-#    next
-#	if $pkg!~/^a/; # DEBUG! HF
-   
-    if ($nerrors > 0) {
-	$color = "red";
-	$state = "build broken";
-	$nbroken++;
-    } elsif ($nerrors == -1) {
-	$color = "orange";
-	$state = "broken depends";
-	$nbrokendep++;
-    }  else {
-	$color = "yellow";
-	$state = "not packaged";
-	$nunpackaged++;
-    }
-
-    @idents = `${FIND} ${USR_PKGSRC}/${pkg} -type f -print | xargs grep \\\$NetBSD`;
-    $datetime = "";
-    $who = "nobody";
-    $file = "";
-    $ver = "";
-    foreach $ident (@idents) {
-	$ident =~ /\$[N]etBSD: ([^ ]*),v ([^ ]*) ([^ ]*) ([^ ]*) ([^ ]*) Exp \$/;
-	if ("$3 $4" gt $datetime) {
-	    $datetime = "$3 $4";
-	    $who = $5;
-	    $file = $1;
-	    $ver = $1;
-	}
-    }
-
-    $maintainer=`grep ^MAINTAINER $USR_PKGSRC/$pkg/Makefile`;
-    $maintainer =~ s/MAINTAINER=[ \t]*//;
-    $maintainer =~ s/</&lt;/g;
-    $maintainer =~ s/>/&gt;/g;
-    chomp($maintainer);
-   
-    print HTML "<TR><TD><A HREF=\"$bf\">$pkg</A>";
-    print HTML "    <TD><FONT COLOR=$color>$state</FONT>";
-    if ($nbrokenby > 0){
-        print HTML "    <TD ALIGN=\"right\"><FONT COLOR=$color>$nbrokenby</FONT>";
-    }
-    else {
-        print HTML "    <TD> ";
-    }
-    print HTML "    <TD> $who <TD> $file";
-    print HTML "    <TD> $maintainer\n";
-
-    ($category, $dbfeed_pkg) = split('/', $pkg);
-
-    if ($nerrors != 0) {
-	if ($nbrokenby > 0){
-    	    printf("%-23s $state\t%-5d\t($who, $maintainer)\n", "$pkg:",$nbrokenby)
-	        if $verbose;
-	}
-	else {
-    	    printf("%-23s $state\t%-5s\t($who, $maintainer)\n", "$pkg:","")
-	        if $verbose;
-	}
-
-    }
+foreach my $f ($DEPENDSTREEFILE, $DEPENDSFILE, $SUPPORTSFILE, $INDEXFILE, $ORDERFILE) {
+	system("cp ${f} ${FTP}") if -f ${f};
 }
-close(BF);
 
-
-$nbrokentot=$nbroken+$nbrokendep;
-$ntotal=$nunpackaged+$nbroken+$nbrokendep;
-print HTML <<EOHTML
-</TABLE>
-
-<HR>
-<P>
-The following cache files were used during the build:
-<UL>
-<LI>The <a href=$dtfile>depends tree file</a>.
-<LI>The <a href=$depfile>depends file</a>.
-<LI>The <a href=$supfile>supports file</a>.
-<LI>The <a href=$indfile>index file</a>.
-<LI>The <a href=$ordfile>build order file</a>.
-</UL>
-<P>
-<HR>
-
-<TABLE>
-<TR><TD> Packages not packaged:		<TD ALIGHT=RIGHT> <FONT COLOR=yellow>$nunpackaged</FONT>
-<TR><TD> Packages really broken:	<TD ALIGHT=RIGHT> <FONT COLOR=red>$nbroken</FONT>
-<TR><TD> Pkgs broken due to them:	<TD ALIGHT=RIGHT> <FONT COLOR=blue>$nbrokendep</FONT>
-<TR><TD> Total broken:			<TD ALIGHT=RIGHT> $nbrokentot
-<TR><TD> Total:				<TD ALIGHT=RIGHT> $ntotal
-</TABLE>
-
-<HR>
-<P>    
-<UL>
-<!-- <LI>View the <A HREF="$PROG">progress</A> of the build. -->
-<!-- <LI>See the list of <A HREF="../index.html">all log files</A>. -->
-<LI>Visit the <A HREF="http://www.netbsd.org">NetBSD Homepage</A>.
-<LI>Learn about the
-    <A HREF="http://www.netbsd.org/Documentation/software/packages.html">
-    NetBSD Package System</A>.
-</UL>
-</P>
-<HR>
-Hubert Feyrer, 1999-2000.
-</BODY>
-</HTML>
-EOHTML
-;
-close(HTML);
+chdir($FTP);
+writeReport();
 
 #
 # Adjust "last" symlink
@@ -248,7 +104,7 @@ close(HTML);
 # leftovers-${arch}.html
 #
 {
-	chdir("${FTP}");
+	chdir($FTP);
 	system("mkdir -p leftovers-${arch}");
 
 	# Find files since last build:
@@ -283,38 +139,361 @@ close(HTML);
 	# Add links to leftover list:
 	open (OUT, "> $leftovers_html")
 		or die "can't write $leftovers_html";
-	print OUT <<EOOUT
-<HTML>
-<BODY>
-<PRE>
+	print OUT <<EOOUT;
+<html>
+<body>
+<pre>
 EOOUT
-;
 	foreach (@leftovers) {
-	    	print OUT "<A HREF=\"${FTPHOST}/${FTPURL}/leftovers-${arch}$_\">$_</A>\n";
+		chomp;
+	    	print OUT "<a href=\"${FTPHOST}/${FTPURL}/leftovers-${arch}$_\">$_</a>\n";
 	}
-	print OUT <<EOOUT2
-</PRE>
-</BODY>
-</HTML>
+	print OUT <<EOOUT2;
+</pre>
+</body>
+</html>
 EOOUT2
-;
     	close(OUT);
 }
 
-if ($verbose) {
-	print "\n";
-	print "Packages not packaged:     $nunpackaged\n";
-	print "Packages really broken:    $nbroken\n";
-	print "Pkgs broken due to them:   $nbrokendep\n";
-	print "Total broken:              $nbrokentot\n";
-	print "Total:                     $ntotal\n";
-	print "\n";
-	print "See $FTPHOST/$FTPURL/$reportf\n";
-	print "for logs of builds broken or not resulting in a binary pkg.\n";
-	print "\n";
-	print "\n";
-	print "$ADMINSIG\n";
-	print "\n";
-	print "[* This message was created automatically! *]\n";
-	print "\n";
+# print the result of a single broken package
+sub pkgResult {
+	my ($pinfo, $state) = @_;
+	my $pkg = $pinfo->{pkg};
+	my $nbrokenby = $pinfo->{nbrokenby};
+	my $nerrors = $pinfo->{nerrors};
+
+	@idents = `${FIND} ${USR_PKGSRC}/${pkg} -type f -print | xargs grep \\\$NetBSD`;
+	$datetime = "";
+	$who = "nobody";
+	$file = "";
+	$ver = "";
+	foreach $ident (@idents) {
+		$ident =~ /\$[N]etBSD: ([^ ]*),v ([^ ]*) ([^ ]*) ([^ ]*) ([^ ]*) Exp \$/;
+		if ("$3 $4" gt $datetime) {
+			$datetime = "$3 $4";
+			$who = $5;
+			$file = $1;
+			$ver = $1;
+		}
+	}
+
+	$maintainer = `grep ^MAINTAINER $USR_PKGSRC/$pkg/Makefile`;
+	$maintainer =~ s/MAINTAINER=[ \t]*//;
+	$maintainer =~ s/</&lt;/g;
+	$maintainer =~ s/>/&gt;/g;
+	chomp($maintainer);
+
+	(my $state_style = $state) =~ s/ //g;
+
+	$nbrokenby_html = '<td>&nbsp;</td>'; 
+	$nbrokenby_html =
+		'<td align="right" class="pkg-'.$state_style.'">'.$nbrokenby.'</td>'
+		if $nbrokenby > 0;
+
+	if ($pinfo->{nerrors} != 0 && $verbose) {
+		print swrite($report_form, $pkg, $nbrokenby > 0 ? $nbrokenby : "", $who, $maintainer);
+	}
+
+	return <<EOHTML;
+<tr>
+  <td><a class="pkg-$state_style" href="$pinfo->{bf}" title="build log for $pkg">$pkg</a></td>
+  $nbrokenby_html
+  <td>$who</td>
+  <td>$file</td>
+  <td>$maintainer</td>
+</tr>
+
+EOHTML
+}
+
+# write the build report
+sub writeReport {
+	my $broken = getBroken();
+	$nbroken = scalar(@{$broken->{"broken"}});
+	$nbrokendep = scalar(@{$broken->{"broken depends"}});
+	$nunpackaged = scalar(@{$broken->{"not packaged"}});
+	$nbrokentot = $nbroken + $nbrokendep;
+	$ntotal = $nunpackaged + $nbroken + $nbrokendep;
+
+	if ($verbose) {
+		print <<EOF;
+pkgsrc bulk build results
+$os $osrev/$arch
+
+Summary:
+
+EOF
+		my $summary_form = <<EOF;
+        @<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  @<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+EOF
+		print swrite($summary_form, "Build started:", $startdate);
+		print swrite($summary_form, "Build ended:", $enddate);
+		print swrite($summary_form);
+		print swrite($summary_form, "Packages really broken:", $nbroken);
+		print swrite($summary_form, "Pkgs broken due to them:", $nbrokendep);
+		print swrite($summary_form, "Total broken:", $nbrokentot);
+		print swrite($summary_form, "Not packaged:", $nunpackaged);
+		print swrite($summary_form, "Total:", $ntotal);
+		print <<EOF;
+
+Packages not listed here resulted in a binary package. The build
+report, including logs of failed/not-packaged is available from:
+
+$FTPHOST/$FTPURL/$reportf
+EOF
+	}
+
+	$REPORT = "/data1/www/broken.html";
+
+	open(HTML,">$REPORT") or die "Can't write $REPORT: $!\n";
+	print HTML <<EOHTML;
+<html>
+<head>
+<title>$os $osrev/$arch bulk package build</title>
+<style type="text/css">
+<!--
+
+body {
+	Font-Family: Tahoma, Verdana, sans-serif;
+	Line-Height: 1.3em;
+	Text-Decoration: None;
+	Color: black;
+	Background-Color: white;
+	Border-Width: 0;
+}
+
+table {
+	Border-Width: 0;
+}
+
+table td {
+	Font-Family: Tahoma, Verdana, sans-serif;
+	line-height: 1em;
+}
+
+a:link {
+	Color: #3535c5;
+}
+
+a:visited {
+	Color: #700080;
+}
+
+a:hover {
+	Color: #6565e5;
+	Text-Decoration: underline;
+}
+
+tr {
+	Vertical-Align: top;
+}
+
+td {
+	Vertical-Align: top;
+}
+
+h1 {
+	Font-Size: 3.5ex;
+	Line-Height: 1em;
+	Color: #000066;
+}
+
+h2 {
+	Font-Size: 2.5ex;
+	Line-Height: 1em;
+	Color: #660000;
+}
+
+h3 {
+	Font-Size: 2ex;
+	Color: #660066;
+}
+
+h4 {
+	Font-Size: 1.8ex;
+	Color: #006600;
+}
+
+tt.filename {
+	Line-Height: 1.3em;
+	Color: #AA0000;
+}
+
+.pkgname {
+	Font-Family: Arial, Helvetica, Courier, fixed;
+	Font-Style: Italic;
+	Text-Decoration: none;
+	Line-Height: 1.3em;
+}
+
+.pkg-broken {
+	Color: red;
+}
+
+.pkg-brokendepends {
+	Color: orange;
+}
+
+.pkg-notpackaged {
+	Color: blue;
+}
+-->
+</style>
+</head>
+
+<body bgcolor="white" text="black" link="#3535c5" vlink="#700080"
+alink="#3535c5">
+
+<h1>pkgsrc bulk build results</h1>
+<h2>$os $osrev/$arch</h2>
+
+<h3>Summary</h3>
+
+<table>
+<tr>
+  <td>Build started:			<td align="right">$startdate</td>
+</tr>
+<tr>
+  <td>Build ended:			<td align="right">$enddate</td>
+</tr>
+<tr>
+  <td>&nbsp;</td>			<td>&nbsp;</td>
+</tr>
+<tr class="pkg-broken">
+  <td>Packages really broken:		<td align="right">$nbroken</td>
+</tr>
+<tr class="pkg-brokendepends">
+  <td>Packages broken due to them:	<td align="right">$nbrokendep</td>
+</tr>
+<tr>
+  <td>Total broken:			<td align="right">$nbrokentot</td>
+</tr>
+<tr class="pkg-notpackaged">
+  <td>Not packaged:			<td align="right">$nunpackaged</td>
+</tr>
+<tr>
+  <td>Total:				<td align="right">$ntotal</td>
+</tr>
+</table>
+
+<p>
+  Packages not listed here resulted in a <a
+  href="../../packages/" title="binary packages for $os $osrev/$arch">binary
+  package</a>. Results of failed packages are available below.
+</p>
+
+<p>
+  Files leftover from the build (because of broken PLISTs, etc.) can be
+  found in <a href="leftovers-${arch}.html" title="leftover files">this
+  list</a>.
+</p>
+EOHTML
+
+	my %state_head = (
+		"broken" => "Broken packages",
+		"broken depends" => "Broken dependencies",
+		"not packaged" => "Not packaged"
+	);
+
+	foreach my $state ("broken", "broken depends", "not packaged") {
+		next unless scalar(@{$broken->{$state}});
+		print HTML <<EOHTML;
+<h2>$state_head{$state}</h2>
+<table width="100%">
+<tr align="left">
+  <th width="30%">Package</th>
+  <th>Breaks</th>
+  <th>Last commit by</th>
+  <th>File touched last</th>
+  <th>Maintainer</th>
+</tr>
+
+EOHTML
+		if ($verbose && $state ne "not packaged") {
+			print "\n\n$state_head{$state}\n\n";
+			print $report_head;
+		}
+		foreach my $pinfo (@{$broken->{$state}}) {
+			print HTML pkgResult($pinfo, $state);
+		}
+
+		print HTML "</table>\n";
+	}
+	print HTML <<EOHTML;
+<hr>
+<p>
+The following cache files were used during the build:
+</p>
+<ul>
+<li>The <a href="$dtfile">depends tree file</a>.</li>
+<li>The <a href="$depfile">depends file</a>.</li>
+<li>The <a href="$supfile">supports file</a>.</li>
+<li>The <a href="$indfile">index file</a>.</li>
+<li>The <a href="$ordfile">build order file</a>.</li>
+</ul>
+<hr>
+
+<p>    
+<ul>
+<!-- <li>View the <a href="$prog">progress</a> of the build. -->
+<!-- <li>See the list of <a href="../index.html">all log files</a>. -->
+<li>Visit the <a href="http://www.NetBSD.org">NetBSD web site</a>.
+<li>Learn more about
+    <a href="http://www.NetBSD.org/Documentation/software/packages.html">
+    The NetBSD Packages Collection</a>.
+</ul>
+</p>
+</body>
+</html>
+EOHTML
+	close(HTML);
+
+	if ($verbose) {
+		print "\n\n$ADMINSIG\n\n";
+		print "[* This message was created automatically! *]\n";
+	}
+}
+
+# get and sort the broken packages
+sub getBroken {
+	open (BF, $BROKENFILE) or die "can't open $BROKENFILE: $!";
+	my @in = <BF>;
+	close (BF);
+
+	my $res = {};
+	foreach (@in) {
+		chomp;
+		my ($nerrors, $bf, $nbrokenby) = split;
+		(my $pkg = $bf) =~ s,/$BROKENFILE,,;
+		my %tmp = (
+			bf => $bf,
+			pkg => $pkg,
+			nbrokenby => $nbrokenby,
+			nerrors => $nerrors,
+		);
+
+		if ($nerrors > 0) {
+			push(@{$res->{"broken"}}, \%tmp);
+		} elsif ($nerrors == -1) {
+			push(@{$res->{"broken depends"}}, \%tmp);
+		} else {
+			push(@{$res->{"not packaged"}}, \%tmp);
+		}
+	}
+
+	# sort pkgs in each state
+	foreach my $state ("broken", "broken depends", "not packaged") {
+		$res->{$state} = [ sort { $a->{pkg} cmp $b->{pkg} } @{$res->{$state}} ];
+	}
+
+	return $res;
+}
+
+sub swrite {
+	my $format = shift;
+	$^A = "";
+	formline($format, @_);
+	$^A =~ s/\n\n/\n/;
+	return $^A;
 }
