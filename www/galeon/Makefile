@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2003/12/10 18:22:45 abs Exp $
+# $NetBSD: Makefile,v 1.57 2003/12/11 16:01:49 agc Exp $
 
 DISTNAME=	galeon-1.2.13
 CATEGORIES=	www
@@ -56,9 +56,9 @@ pre-install:
 .if !empty(CC_VERSION:Mgcc-3*)
 # Workaround for gcc3 build issue
 post-buildlink:
-	${CP} work/.buildlink/bin/cc work/.buildlink/bin/cc.orig
-	${SED} 's:\(exec \$$cmd\):\1 -lstdc++ -lm:' work/.buildlink/bin/cc.orig\
-						> work/.buildlink/bin/cc
+	${CP} ${BUILDLINK_DIR}/bin/cc ${BUILDLINK_DIR}/bin/cc.orig
+	${SED} 's:\(exec \$$cmd\):\1 -lstdc++ -lm:' ${BUILDLINK_DIR}/bin/cc.orig\
+						> ${BUILDLINK_DIR}/bin/cc
 .endif
 
 post-install:
