@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2001/03/27 03:19:45 hubertf Exp $
+# $NetBSD: Makefile,v 1.3 2001/06/29 18:39:03 wiz Exp $
 #
 
-DISTNAME=		unofficial-csound-4.09.0.0b-linux.src
-PKGNAME=		csound-4.09
+DISTNAME=		unofficial-csound-4.12.0.1b-linux.src
+PKGNAME=		csound-4.12
 CATEGORIES=		audio
 MASTER_SITES=		ftp://mustec.bgsu.edu/pub/linux/
 

@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.1.1.1 2001/03/13 13:18:24 wiz Exp $
+$NetBSD: patch-ac,v 1.2 2001/06/29 18:39:03 wiz Exp $
 
---- Make.Variables.in.orig	Sun Dec 10 16:37:23 2000
-+++ Make.Variables.in
-@@ -222,7 +222,7 @@
+--- Make.Variables.in.orig	Sun Jun  3 18:13:08 2001
++++ Make.Variables.in	Sun Jun  3 18:13:36 2001
+@@ -229,7 +229,7 @@
  	$(TOP)/configure.in sliders.tk matrix.tk matrix.hlp
  SRCDISTRIB_DIRS=$(SUBDIRS) $(DOC_DIRS)
  STRINGSDB=csound.txt
