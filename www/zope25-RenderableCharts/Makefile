@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/01/10 19:19:11 kristerw Exp $
+# $NetBSD: Makefile,v 1.4 2004/05/23 11:41:35 recht Exp $
 #
 
 DISTNAME=	RenderableCharts-0.6
@@ -10,10 +10,10 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.zope.org/Members/Dirk.Datzert/RenderableCharts/
 COMMENT=	Drawings with reportlab's graphics toolkit
 
-USE_BUILDLINK2=	yes
-BUILDLINK_DEPENDS.pyreportlab= ${PYPKGPREFIX}-reportlab>=1.17
+DEPENDS+=	${PYPKGPREFIX}-reportlab>=1.17:../../print/py-reportlab
+DEPENDS+=	${PYPKGPREFIX}-reportlab-renderPM-[0-9]*:../../print/py-reportlab-renderPM
+
+USE_BUILDLINK3=	yes
 
 .include "../../www/zope25/product.mk"
-.include "../../print/py-reportlab/buildlink2.mk"
-.include "../../print/py-reportlab-renderPM/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
