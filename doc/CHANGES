@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.485 2002/11/08 16:24:24 mrg Exp $
+$NetBSD: CHANGES,v 1.486 2002/11/08 21:32:52 is Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3560,3 +3560,5 @@ Changes to the packages collection and infrastructure in 2002:
 	Added aegis-4.9 [mrg 2002-11-08]
 	Updated wwwoffle to 2.7f [fredb 2002-11-08]
 	Added netbsd32_compat16-1.0 [mrg 2002-11-08]
+	Added lmclock-1.0 [is 2002-11-08]
+	Updated lmclock to 1.1 [is 2002-11-08]
