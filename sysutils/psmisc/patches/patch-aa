@@ -1,8 +1,13 @@
-$NetBSD: patch-aa,v 1.4 2000/03/17 15:54:53 jlam Exp $
+$NetBSD: patch-aa,v 1.5 2000/10/06 00:04:57 jlam Exp $
 
 --- Makefile.orig	Mon Oct 25 14:01:33 1999
-+++ Makefile	Thu Mar 16 23:46:06 2000
-@@ -5,7 +5,7 @@
++++ Makefile
+@@ -1,11 +1,11 @@
+ CC=cc
+-CFLAGS=-O -DPSMISC_VERSION=\"`cat VERSION`\" \
++CFLAGS+=-O -DPSMISC_VERSION=\"`cat VERSION`\" \
+   -D_GNU_SOURCE \
+   -Wall -Wno-parentheses -Wwrite-strings -Wpointer-arith \
    # -Wcast-align -Wconversion -g
  LDFLAGS=#-s -N #-Xlinker -qmagic
  REAL_CPP=cc -E
