@@ -1,7 +1,7 @@
-$NetBSD: patch-ae,v 1.6 1999/02/08 23:31:59 tron Exp $
+$NetBSD: patch-ae,v 1.7 1999/11/25 14:32:43 tron Exp $
 
 --- src/osdep/unix/Makefile.orig	Wed Jan 27 00:17:39 1999
-+++ src/osdep/unix/Makefile	Tue Feb  9 00:09:04 1999
++++ src/osdep/unix/Makefile	Thu Nov 25 15:08:49 1999
 @@ -95,7 +95,7 @@
  
  # Normally no need to change any of these
@@ -11,13 +11,23 @@ $NetBSD: patch-ae,v 1.6 1999/02/08 23:31:59 tron Exp $
  BINARIES=mail.o misc.o newsrc.o smanager.o osdep.o utf8.o siglocal.o \
   dummy.o pseudo.o netmsg.o flstring.o fdstring.o \
   rfc822.o nntp.o smtp.o imap4r1.o pop3.o \
+@@ -118,7 +118,7 @@
+ # Here if no make argument established
+ 
+ missing: osdep.h
+-	$(MAKE) all CC=`cat CCTYPE` CFLAGS="`cat CFLAGS`" `cat EXTRASPECIALS`
++	$(MAKE) all CC="`cat CCTYPE`" CFLAGS="`cat CFLAGS`" `cat EXTRASPECIALS`
+ 
+ osdep.h:
+ 	@echo You must specify what type of system
 @@ -375,10 +375,11 @@
  
  neb:	# NetBSD
  	$(BUILD) `cat EXTRASPECIALS` OS=bsi \
 +	 CC="$(CC)" \
  	 SPOOLDIR=/var \
- 	 ACTIVEFILE=/var/db/news/active \
+-	 ACTIVEFILE=/var/db/news/active \
++	 ACTIVEFILE=/var/news/db/active \
  	 RSHPATH=/usr/bin/rsh \
 -	 BASECFLAGS="-g -O -pipe -DNFSKLUDGE" \
 +	 BASECFLAGS="-O -pipe -DNFSKLUDGE" \
