@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/09/21 17:17:43 jmmv Exp $
+
+--- configure.orig	2004-03-04 23:07:24.000000000 +0100
++++ configure
+@@ -11454,8 +11454,8 @@ fi
+ # This can only change between Evolution versions (and then can only
+ # go up.)
+ evolution_db_version_major=3
+-evolution_db_version_minor=1
+-evolution_db_version_patch=17
++evolution_db_version_minor=3
++evolution_db_version_patch=11
+ 
+ evolution_db_version=${evolution_db_version_major}.${evolution_db_version_minor}.${evolution_db_version_patch}
+ 
