@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/04/17 19:08:37 ben Exp $
+# $NetBSD: Makefile,v 1.16 2004/06/15 13:25:29 grant Exp $
 #
 
 DISTNAME=		nethack_source_331_jtp_193
@@ -19,6 +19,8 @@ CONFIGURE_SCRIPT=	./sys/unix/setup.sh
 WRKSRC=			${WRKDIR}
 USE_BUILDLINK3=		yes
 USE_X11=		yes
+
+LIBS.SunOS+=		-lm
 
 SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	"Configuring program paths."
