@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2003/01/11 23:57:01 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.4 2003/01/29 21:38:48 jmmv Exp $
 bin/jade
 bin/nsgmls
 bin/sgmlnorm
@@ -175,8 +175,6 @@ share/sgml/jade/demoMaster.tex
 share/sgml/jade/dsssl.dtd
 share/sgml/jade/fot.dtd
 share/sgml/jade/style-sheet.dtd
-@exec %D/bin/xmlcatmgr -c %D/share/sgml/catalog add CATALOG %D/share/sgml/jade/catalog
-@unexec %D/bin/xmlcatmgr -c %D/share/sgml/catalog remove %D/share/sgml/jade/catalog
 @dirrm share/sgml/jade
 @comment in xmlcatmgr: @dirrm share/sgml
 @dirrm share/doc/jade
