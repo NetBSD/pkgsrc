@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/12/18 15:03:30 jdolecek Exp $
+# $NetBSD: Makefile,v 1.3 2004/12/19 09:29:16 jdolecek Exp $
 
 DISTNAME=	qca-tls-1.0
 PKGREVISION=	# empty
@@ -15,6 +15,9 @@ USE_GNU_TOOLS+=	make
 USE_LIBTOOL=	yes
 USE_X11=	yes
 HAS_CONFIGURE=	yes
+
+CONFIGURE_ARGS+=        --with-openssl-inc=${SSLBASE}/include
+CONFIGURE_ARGS+=        --with-openssl-lib=${SSLBASE}/lib
 
 # XXX the -rpath filter is somewhat ugly, and this should be eventually
 # fixed in NetBSD qmake template to not be necessary.
