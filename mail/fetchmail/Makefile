@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 1999/08/11 20:13:03 hwr Exp $
+# $NetBSD: Makefile,v 1.49 1999/08/17 23:54:18 tron Exp $
 #
 
 DISTNAME=       fetchmail-5.0.6
@@ -10,7 +10,7 @@ MASTER_SITES=	ftp://ftp.ccil.org/pub/esr/fetchmail/ \
 MAINTAINER=	mycroft@netbsd.org
 HOMEPAGE=	http://www.tuxedo.org/~esr/fetchmail/ 
 
-BUILD_DEPENDS+=	autoconf:../../devel/autoconf
+BUILD_DEPENDS+=	${LOCALBASE}/bin/autoconf:../../devel/autoconf
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=  LDFLAGS="${CFLAGS}"
