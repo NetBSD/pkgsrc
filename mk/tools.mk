@@ -1,4 +1,4 @@
-# $NetBSD: tools.mk,v 1.13 2003/09/02 06:59:48 jlam Exp $
+# $NetBSD: tools.mk,v 1.14 2003/09/19 00:22:09 grant Exp $
 #
 # This Makefile creates a ${TOOLS_DIR} directory and populates the bin
 # subdir with tools that hide the ones outside of ${TOOLS_DIR}.
@@ -113,7 +113,7 @@ ${TOOLS_DIR}/bin/makeinfo: ${_GNU_MISSING}
 # defining e.g. USE_GNU_TOOLS+="awk sed".  Version numbers are not
 # considered.
 
-_TOOLS=		awk grep make sed
+_TOOLS=		awk grep m4 make sed
 
 .if defined(_IGNORE_USE_GNU_TOOLS)
 USE_GNU_TOOLS:=		# empty
@@ -128,6 +128,7 @@ USE_GNU_TOOLS?=		# empty
 _TOOLS_OPSYS_HAS_GNU.awk+=	FreeBSD-*-* Linux-*-* NetBSD-*-* OpenBSD-*-*
 _TOOLS_OPSYS_HAS_GNU.grep+=	Darwin-*-* FreeBSD-*-* Linux-*-*
 _TOOLS_OPSYS_HAS_GNU.grep+=	NetBSD-*-* OpenBSD-*-*
+_TOOLS_OPSYS_HAS_GNU.m4+=	# empty
 _TOOLS_OPSYS_HAS_GNU.make+=	Darwin-*-*
 _TOOLS_OPSYS_HAS_GNU.sed+=	Linux-*-*
 
@@ -138,6 +139,7 @@ _TOOLS_OPSYS_HAS_GNU.sed+=	Linux-*-*
 #
 _TOOLS_REPLACE_OPSYS.awk+=	SunOS-*-*
 _TOOLS_REPLACE_OPSYS.grep+=	SunOS-*-*
+_TOOLS_REPLACE_OPSYS.m4+=	# empty
 _TOOLS_REPLACE_OPSYS.make+=	# empty
 _TOOLS_REPLACE_OPSYS.sed+=	SunOS-*-*
 
@@ -146,6 +148,7 @@ _TOOLS_REPLACE_OPSYS.sed+=	SunOS-*-*
 #
 _TOOLS_OPSYS_INCOMPAT.awk+=	# empty
 _TOOLS_OPSYS_INCOMPAT.grep+=	# empty
+_TOOLS_OPSYS_INCOMPAT.m4+=	# empty
 _TOOLS_OPSYS_INCOMPAT.make+=	# empty
 _TOOLS_OPSYS_INCOMPAT.sed+=	# empty
 
@@ -214,6 +217,21 @@ GREP:=			${_TOOLS_PROGNAME.grep}
 .endif
 .if !empty(PKGPATH:Mtextproc/grep)
 _TOOLS_OVERRIDE.grep=	NO
+MAKEFLAGS+=		_IGNORE_USE_GNU_TOOLS=
+.endif
+
+.if ${_TOOLS_REPLACE.m4} == "YES"
+_TOOLS_OVERRIDE.m4=	YES
+_TOOLS_PROGNAME.m4=	${M4}
+.endif
+.if (${_TOOLS_NEED_GNU.m4} == "YES") && empty(PKGPATH:Mdevel/m4)
+BUILD_DEPENDS+=		m4>=1.4:../../devel/m4
+_TOOLS_OVERRIDE.m4=	YES
+_TOOLS_PROGNAME.m4=	${LOCALBASE}/bin/gm4	# "gm4" always exists
+M4:=			${_TOOLS_PROGNAME.m4}
+.endif
+.if !empty(PKGPATH:Mdevel/m4)
+_TOOLS_OVERRIDE.m4=	NO
 MAKEFLAGS+=		_IGNORE_USE_GNU_TOOLS=
 .endif
 
