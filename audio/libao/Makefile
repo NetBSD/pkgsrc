@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/08/27 14:35:05 tron Exp $
+# $NetBSD: Makefile,v 1.10 2001/08/29 12:22:38 skrll Exp $
 
 DISTNAME=	libao-0.8.0
 CATEGORIES=	devel
@@ -8,7 +8,6 @@ MAINTAINER=	lukem@netbsd.org
 COMMENT=	cross-platform audio library
 
 BUILD_DEPENDS+=	automake>=1.4:../../devel/automake
-BUILD_DEPENDS+=	autoconf>=2.13:../../devel/autoconf
 
 PLIST_SUBST+=	VERSION="${DISTNAME}"
 USE_BUILDLINK_ONLY=	yes
