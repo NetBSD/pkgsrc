@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.45 2004/10/08 05:14:06 simonb Exp $
+# $NetBSD: Makefile,v 1.46 2005/01/03 23:48:21 simonb Exp $
 #
 
-DISTNAME=	adzap-20040914
+DISTNAME=	adzap-20041124
 CATEGORIES=	www perl5
 # XXX: should use the following one day:
 #MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=adzapper/}
@@ -27,12 +27,19 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/scripts/squid_redirect ${PREFIX}/libexec
 	${INSTALL_SCRIPT} ${WRKSRC}/scripts/wrapzap ${PREFIX}/libexec/adzap
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/adzap
-.for FILE in ad-clear.gif ad-clear.mp3 ad-clear.swf ad-grey.gif ad-old.gif \
-    ad.gif ad.mp3 ad.swf adbg-clear.gif adbg.gif \
-    closepopup-clear.html closepopup.html counter-clear.gif counter.gif \
-    no-op-clear.html no-op-clear.js no-op-counter-clear.html \
-    no-op-counter-clear.js no-op-counter.html no-op-counter.js \
-    no-op.html no-op.js webbug-clear.gif webbug-clear.js webbug.gif webbug.js
+.for FILE in ad-clear.gif ad-clear.mp3 ad-clear.swf \
+    ad-grey.gif ad-old.gif \
+    ad.gif ad.mp3 ad.swf \
+    adbg-clear.gif adbg.gif \
+    closepopup-clear.html closepopup.html \
+    counter-clear.gif counter-clear.js \
+    counter.gif counter.js \
+    no-op-clear.html no-op-clear.js \
+    no-op-counter-clear.html no-op-counter-clear.js \
+    no-op-counter.html no-op-counter.js \
+    no-op.html no-op.js \
+    webbug-clear.gif webbug-clear.html webbug-clear.js \
+    webbug.gif webbug.html webbug.js
 	${INSTALL_DATA} ${WRKSRC}/zaps/${FILE} ${PREFIX}/share/examples/adzap
 .endfor
 .for FILE in proxy-home.pac proxy-zip.pac
