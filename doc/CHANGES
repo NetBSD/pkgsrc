@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1126 2003/01/15 00:43:31 salo Exp $
+$NetBSD: CHANGES,v 1.1127 2003/01/15 02:39:11 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -267,7 +267,7 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated gnome-libs to 1.4.1.4nb2 [jmmv 2003-01-14]
 	Updated aspell to 0.50.3 [salo 2003-01-15]
 	Updated aspell-slovak to 1.1nb1 [salo 2003-01-15]
-	Updated aspell-gaelige to 2.0nb1 [salo 2003-01-15]
+	Updated aspell-gaeilge to 2.0nb1 [salo 2003-01-15]
 	Added aspell-english-0.51.0 [salo 2003-01-15]
 	Updated gtkspell to 2.0.2nb2 [salo 2003-01-15]
 	Removed libpspell [salo 2003-01-15]
