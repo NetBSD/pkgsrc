@@ -14,7 +14,7 @@ The pkgsrc Developers
 
 Copyright (C) 1994-2004 The NetBSD Foundation, Inc
 
-$NetBSD: pkgsrc.txt,v 1.9 2004/12/02 22:23:47 dillo Exp $
+$NetBSD: pkgsrc.xml,v 1.3 2004/10/22 00:24:48 hubertf Exp $
 
 Abstract
 
@@ -739,8 +739,8 @@ filesystem.
 
 The bootstrapping process should set all the right options for programs such as
 imake(1), but you may want to set some options depending on your local setup.
-Please see pkgsrc/mk/bsd.pkg.defaults.mk and, of course, your compilers man
-pages for details.
+Please see pkgsrc/mk/defaults/mk.conf and, of course, your compilers man pages
+for details.
 
 3.2.5. OpenBSD
 
@@ -768,7 +768,7 @@ with the OpenBSD userland tools. There are several steps:
     parts of the file with:
 
     .ifdef BSD_PKG_MK
-    # pkgsrc stuff, e.g. insert bsd.pkg.defaults.mk or similar here
+    # pkgsrc stuff, e.g. insert defaults/mk.conf or similar here
     .else
     # OpenBSD stuff
     .endif
@@ -913,7 +913,7 @@ packages system to be able to build it. If it does not exist, pkgsrc will use
 ftp(1) to fetch it automatically.
 
 You can overwrite some of the major distribution sites to fit to sites that are
-close to your own. Have a look at pkgsrc/mk/bsd.pkg.defaults.mk to find some
+close to your own. Have a look at pkgsrc/mk/defaults/mk.conf to find some
 examples - in particular, look for the MASTER_SORT, MASTER_SORT_REGEX and
 INET_COUNTRY definitions. This may save some of your bandwidth and time.
 
@@ -957,10 +957,10 @@ between programs and other files installed by the package system and whatever
 else may have been installed there.
 
 Some packages look in /etc/mk.conf to alter some configuration options at build
-time. Have a look at pkgsrc/mk/bsd.pkg.defaults.mk to get an overview of what
-will be set there by default. Environment variables such as LOCALBASE can be
-set in /etc/mk.conf to save having to remember to set them each time you want
-to use pkgsrc.
+time. Have a look at pkgsrc/mk/defaults/mk.conf to get an overview of what will
+be set there by default. Environment variables such as LOCALBASE can be set in
+/etc/mk.conf to save having to remember to set them each time you want to use
+pkgsrc.
 
 Occasionally, people want to "look under the covers" to see what is going on
 when a package is building or being installed. This may be for debugging
@@ -990,9 +990,9 @@ If you want to install a binary package that you've either created yourself
 located on a remote FTP server, you can use the "bin-install" target. This
 target will install a binary package - if available - via pkg_add(1), else do a
 make package. The list of remote FTP sites searched is kept in the variable
-BINPKG_SITE, which defaults to ftp.NetBSD.org. Any flags that should be added
-to pkg_add(1) can be put into BIN_INSTALL_FLAGS. See pkgsrc/mk/
-bsd.pkg.defaults.mk for more details.
+BINPKG_SITES, which defaults to ftp.NetBSD.org. Any flags that should be added
+to pkg_add(1) can be put into BIN_INSTALL_FLAGS. See pkgsrc/mk/defaults/mk.conf
+for more details.
 
 A final word of warning: If you setup a system that has a non-standard setting
 for LOCALBASE, be sure to set that before any packages are installed, as you
@@ -1095,10 +1095,10 @@ storage, as this slows things down a lot.
 
 5.3.1.1. /etc/mk.conf
 
-You may want to set things in /etc/mk.conf. Look at pkgsrc/mk/
-bsd.pkg.defaults.mk for details of the default settings. You will want to
-ensure that ACCEPTABLE_LICENSES meet your local policy. As used in this
-example, _ACCEPTABLE=yes accepts all licenses.
+You may want to set things in /etc/mk.conf. Look at pkgsrc/mk/defaults/mk.conf
+for details of the default settings. You will want to ensure that
+ACCEPTABLE_LICENSES meet your local policy. As used in this example,
+_ACCEPTABLE=yes accepts all licenses.
 
 PACKAGES?=      ${_PKGSRCDIR}/packages/${MACHINE_ARCH}
 WRKOBJDIR?=     /usr/tmp/pkgsrc   # build here instead of in pkgsrc
@@ -1663,7 +1663,7 @@ The following message is displayed as part of the audit-packages installation
 procedure:
 
 ===========================================================================
-$NetBSD: pkgsrc.txt,v 1.9 2004/12/02 22:23:47 dillo Exp $
+$NetBSD: faq.xml,v 1.2 2004/11/20 13:25:22 hubertf Exp $
 
 You may wish to have the vulnerabilities file downloaded daily so that
 it remains current.  This may be done by adding an appropriate entry
@@ -2079,7 +2079,7 @@ the PLIST file (or files, see below!).
 
 Be sure to add a RCS ID line as the first thing in any PLIST file you write:
 
-@comment $NetBSD: pkgsrc.txt,v 1.9 2004/12/02 22:23:47 dillo Exp $
+@comment $NetBSD$
 
 8.2. Semi-automatic PLIST generation
 
@@ -2354,7 +2354,7 @@ following command will generate a good starting point for buildlink3.mk files:
 The following real-life example buildlink3.mk is taken from pkgsrc/graphics/
 tiff:
 
-# $NetBSD: pkgsrc.txt,v 1.9 2004/12/02 22:23:47 dillo Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2004/03/18 09:12:12 jlam Exp $
 
 BUILDLINK_DEPTH:=       ${BUILDLINK_DEPTH}+
 TIFF_BUILDLINK3_MK:=    ${TIFF_BUILDLINK3_MK}+
@@ -3789,7 +3789,7 @@ ACCEPTABLE_LICENSES+=graphviz-license
 When adding a package with a new license, the license text should be added to
 pkgsrc/licenses for displaying. A list of known licenses can be seen in this
 directory as well as by looking at the list of (commented out)
-ACCEPTABLE_LICENSES variable settings in pkgsrc/mk/bsd.pkg.defaults.mk.
+ACCEPTABLE_LICENSES variable settings in pkgsrc/mk/defaults/mk.conf.
 
 Is there is a really pressing need to accept all licenses at once, like when
 trying to download or mirror all distfiles or doing a bulk build to test if all
@@ -3831,8 +3831,8 @@ Certain packages, most of them in the games category, install a score file that
 allows all users on the system to record their highscores. In order for this to
 work, the binaries need to be installed setgid and the score files owned by the
 appropriate group and/or owner (traditionally the "games" user/group). The
-following variables, documented in more detail in mk/bsd.pkg.defaults.mk,
-control this behaviour: SETGIDGAME, GAMEDATAMODE, GAMEGRP, GAMEMODE, GAMEOWN.
+following variables, documented in more detail in mk/defaults/mk.conf, control
+this behaviour: SETGIDGAME, GAMEDATAMODE, GAMEGRP, GAMEMODE, GAMEOWN.
 
 Note that per default, setgid installation of games is disabled; setting
 SETGIDGAME=YES will set all the other variables accordingly.
@@ -4316,7 +4316,7 @@ A.1. files
 
 A.1.1. Makefile
 
-# $NetBSD: pkgsrc.txt,v 1.9 2004/12/02 22:23:47 dillo Exp $
+# $NetBSD$
 #
 
 DISTNAME=       bison-1.25
@@ -4340,15 +4340,9 @@ of the NetBSD source tree is beyond me.
 
 A.1.3. PLIST
 
-@comment $NetBSD: pkgsrc.txt,v 1.9 2004/12/02 22:23:47 dillo Exp $
+@comment $NetBSD$
 bin/bison
 man/man1/bison.1.gz
-info/bison.info
-info/bison.info-1
-info/bison.info-2
-info/bison.info-3
-info/bison.info-4
-info/bison.info-5
 share/bison.simple
 share/bison.hairy
 
@@ -4704,8 +4698,8 @@ D.2. Procedure
 The procedure to edit the pkgsrc guide is:
 
   * Make sure you have the packages needed to re-generate the pkgsrc guide (and
-    other XML-based NetBSD documentation) installed. These are "pkgsrc-doc" for
-    creating the ASCII- and HTML-version, and "pkgsrc-doc-print"for the
+    other XML-based NetBSD documentation) installed. These are "netbsd-doc" for
+    creating the ASCII- and HTML-version, and "netbsd-doc-print"for the
     PostScript- and PDF version. You will need both packages installed, to make
     sure documentation is consistent across all formats. The packages can be
     found in pkgsrc/meta-pkgs/netbsd-doc and pkgsrc/meta-pkgs/netbsd-doc-print.
