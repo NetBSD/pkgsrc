@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5637 2004/04/18 17:12:23 jmmv Exp $
+$NetBSD: CHANGES,v 1.5638 2004/04/18 18:04:29 snj Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2055,3 +2055,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gnome2-terminal to 2.6.1 [jmmv 2004-04-18]
 	Updated ggv2 to 2.6.1 [jmmv 2004-04-18]
 	Updated fam to 2.7.0nb1 [jmmv 2004-04-18]
+	Removed apla [snj 2004-04-18]
