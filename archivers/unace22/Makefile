@@ -1,13 +1,15 @@
-# $NetBSD: Makefile,v 1.8 2004/04/25 11:48:31 dillo Exp $
+# $NetBSD: Makefile,v 1.9 2004/06/28 21:45:42 xtraeme Exp $
 #
 
 DISTNAME=	linunace22
 PKGNAME=	unace22-2.20
 CATEGORIES=	archivers
-MASTER_SITES=	http://www.servidas.net/winace/ \
+MASTER_SITES=	http://ace.imptech.net/ \
+		http://www.shedz.com/winace/ \
 		http://www.maxeline.com/winace/ \
-		http://www.winace.mewa.net/mirror/ \
 		http://hem.passagen.se/vanlid/winace/ \
+		http://w1.314.telia.com/~u31412016/dload/ \
+		http://www.winace.mewa.net/mirror/ \
 		http://ace.imptech.net/
 EXTRACT_SUFX=	.tgz
 
