@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.153 2001/08/10 06:37:18 manu Exp $
+# $NetBSD: Makefile,v 1.154 2001/08/12 22:09:36 zuntum Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -48,6 +48,7 @@ SUBDIR+=	gdk-pixbuf
 SUBDIR+=	gdk-pixbuf-gnome
 SUBDIR+=	geomview
 SUBDIR+=	get_ds7
+SUBDIR+=	gfract
 SUBDIR+=	gif2png
 SUBDIR+=	gif320
 SUBDIR+=	giflib
