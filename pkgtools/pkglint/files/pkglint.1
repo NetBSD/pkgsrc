@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkglint.1,v 1.8 2004/09/24 15:33:26 wiz Exp $
+.\"	$NetBSD: pkglint.1,v 1.9 2004/10/16 15:04:26 wiz Exp $
 .\"	From FreeBSD: portlint.1,v 1.8 1997/11/25 14:53:14 itojun Exp
 .\"
 .\" Copyright (c) 1997 by Jun-ichiro Itoh <itojun@itojun.org>.
@@ -6,7 +6,7 @@
 .\"
 .\" Roland Illig <roland.illig@gmx.de>, 2004.
 .\"
-.Dd September 23, 2004
+.Dd October 16, 2004
 .Dt PKGLINT 1
 .Sh NAME
 .Nm pkglint
@@ -111,6 +111,11 @@ They should always be used like ${VAR}.
 .It [no-]patches
 Warn if a patch file patches more than one file or if the patches differ
 from what is recorded in the distinfo file.
+.It [no-]workdir
+Warn about existing
+.Pa work*
+directories.
+They might be committed to CVS accidentally.
 .El
 .Pp
 .Bl -tag -width Fl
