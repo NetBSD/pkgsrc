@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2004/01/12 15:50:22 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2004/01/13 07:12:01 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 PERL5_BUILDLINK3_MK:=	${PERL5_BUILDLINK3_MK}+
@@ -37,8 +37,8 @@ _PERL5_SITEVAR.INSTALLSITEMAN3DIR=	installsiteman3dir
 _PERL5_SITEVAR.SITELIBEXP=		sitelibexp
 _PERL5_SITEVAR.SITEARCHEXP=		sitearchexp
 
-.if !defined(_PERL5_SITEPREFIX)
 .  if exists(${PERL5})
+.    if !defined(_PERL5_SITEPREFIX)
 _PERL5_PREFIX!=		\
 	eval `${PERL5} -V:prefix 2>/dev/null`; ${ECHO} $$prefix
 _PERL5_SITEPREFIX!=	\
@@ -46,13 +46,13 @@ _PERL5_SITEPREFIX!=	\
 MAKEFLAGS+=	_PERL5_PREFIX="${_PERL5_PREFIX}"
 MAKEFLAGS+=	_PERL5_SITEPREFIX="${_PERL5_SITEPREFIX}"
 
-.    for _var_ in ${_PERL5_SITEVARS}
+.      for _var_ in ${_PERL5_SITEVARS}
 PERL5_SUB_${_var_}!=	\
 	eval `${PERL5} -V:${_PERL5_SITEVAR.${_var_}} 2>/dev/null`;	\
 	${ECHO} $${${_PERL5_SITEVAR.${_var_}}} |			\
 	${SED} -e "s,^${_PERL5_SITEPREFIX}/,,"
 MAKEFLAGS+=	PERL5_SUB_${_var_}="${PERL5_SUB_${_var_}}"
-.    endfor
+.      endfor
 PERL5_SUB_INSTALLARCHLIB!=	\
 	eval `${PERL5} -V:installarchlib 2>/dev/null`;			\
 	${ECHO} $$installarchlib |					\
@@ -63,10 +63,8 @@ PERL5_SUB_INSTALLSCRIPT!=	\
 	${ECHO} $$installscript |					\
 	${SED} -e "s,^${_PERL5_PREFIX}/,,"
 MAKEFLAGS+=	PERL5_SUB_INSTALLSCRIPT="${PERL5_SUB_INSTALLSCRIPT}"
-.  endif
-.endif
-
-.  if ${PKG_INSTALLATION_TYPE} == "overwrite"
+.    endif
+.    if ${PKG_INSTALLATION_TYPE} == "overwrite"
 #
 # Perl keeps headers and odd libraries in an odd path not caught by the
 # default BUILDLINK_FILES_CMD, so name them to be symlinked into
@@ -75,6 +73,7 @@ MAKEFLAGS+=	PERL5_SUB_INSTALLSCRIPT="${PERL5_SUB_INSTALLSCRIPT}"
 BUILDLINK_FILES.perl=							\
 	${PERL5_SUB_INSTALLARCHLIB}/CORE/*				\
 	${PERL5_SUB_INSTALLARCHLIB}/auto/DynaLoader/DynaLoader.a
+.    endif
 .  endif
 .endif  # PERL5_BUILDLINK3_MK
 
