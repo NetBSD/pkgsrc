@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2003/12/13 20:27:42 xtraeme Exp $
+# $NetBSD: Makefile,v 1.16 2003/12/13 23:20:46 cube Exp $
 
 DISTNAME=		libgtop-2.0.7
 PKGNAME=		${DISTNAME:S/-/2-/}
@@ -40,6 +40,7 @@ PKGCONFIG_OVERRIDE=	${WRKSRC}/libgtop-2.0.pc.in
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/support/gnome-support-2.0.pc.in
 USE_MAKEINFO=		YES
 INFO_FILES=		libgtop2.info
+TEXINFO_REQD=		4.6
 
 # The following flags are for debugging purposes.  They don't need to
 # be used unless you are actively developing/debugging libgtop.
