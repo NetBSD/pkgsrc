@@ -3,11 +3,7 @@ standard KDE environment:
 
 * kdict: graphical client for the DICT protocol.
 * kit: AOL instant messenger client, using the TOC protocol
-* kmail: universal mail client
-* kmailcvt: converts addressbooks to kmail format
 * knewsticker: RDF newsticker applet
-* knode: online newsreader
-* korn: new mail notification tool
 * kpf: public fileserver applet
 * kppp: dialer and front end for pppd
 * ksirc: IRC client
