@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8527 2004/12/30 10:39:09 jmmv Exp $
+$NetBSD: CHANGES,v 1.8528 2004/12/30 11:57:58 rh Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -6706,3 +6706,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added ec-fonts-mftraced-1.0.8 [dmcmahill 2004-12-30]
 	Updated lilypond to 2.4.3 [dmcmahill 2004-12-30]
 	Updated dvd+rw-tools to 5.21.4.10.8 [jmmv 2004-12-30]
+	Added edcommon-32 [rh 2004-12-30]
