@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/02/24 15:29:25 kei Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/03/15 08:26:36 kei Exp $
 bin/dvipdfmx
 share/texmf/dvipdfm/config/cid-x.map
 share/texmf/dvipdfm/config/dvipdfmx.cfg
@@ -203,4 +203,3 @@ share/texmf/dvipdfm/CMap/UniKSCms-UCS2-V
 share/texmf/dvipdfm/CMap/V
 share/texmf/dvipdfm/CMap/WP-Symbol
 @dirrm share/texmf/dvipdfm/CMap
-@dirrm share/texmf/dvipdfm/config
