@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2004/10/03 00:13:04 tv Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2004/10/20 10:55:46 adam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 SDL_MIXER_BUILDLINK3_MK:=	${SDL_MIXER_BUILDLINK3_MK}+
@@ -17,6 +17,8 @@ BUILDLINK_PKGSRCDIR.SDL_mixer?=	../../audio/SDL_mixer
 BUILDLINK_INCDIRS.SDL_mixer?=	include/SDL
 .endif	# SDL_MIXER_BUILDLINK3_MK
 
-.include "../../devel/SDL/buildlink3.mk"
+.include "../../audio/libvorbis/buildlink3.mk"
+.include "../../multimedia/libogg/buildlink3.mk"
+.include "../../multimedia/smpeg/buildlink3.mk"
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
