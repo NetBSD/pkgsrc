@@ -1,9 +1,11 @@
-$NetBSD: distinfo,v 1.15 2003/09/12 08:26:45 itojun Exp $
+$NetBSD: distinfo,v 1.16 2003/09/13 23:37:07 itojun Exp $
 
 SHA1 (apache_1.3.28.tar.gz) = a4d0a9c57a53cb641928c882a9d3b6fd645e4e3e
 Size (apache_1.3.28.tar.gz) = 2388111 bytes
-SHA1 (apache-1.3.28-v6-20030911.diff.gz) = fc279dcee91606649f06f74d35d6b5ee38b063b4
-Size (apache-1.3.28-v6-20030911.diff.gz) = 36926 bytes
+SHA1 (sitedrivenby.gif) = 7671e9a8ec2cad3961b268befd33c0920e07c658
+Size (sitedrivenby.gif) = 8519 bytes
+SHA1 (apache-1.3.28-v6-20030912.diff.gz) = ce9f6f8966daf6a6deb666910f1c919f586275f7
+Size (apache-1.3.28-v6-20030912.diff.gz) = 36961 bytes
 SHA1 (patch-aa) = 6388498d251bb4bde65954803ff0b0bce21b27f8
 SHA1 (patch-ab) = 7619dbf1cf584f9e92998fe25de0860bfbeb277e
 SHA1 (patch-ac) = d4dd4f5521a7c713a038dec2606dad14356d746f
