@@ -1,4 +1,4 @@
-# $NetBSD: defs.NetBSD.mk,v 1.17 2001/11/21 13:57:31 agc Exp $
+# $NetBSD: defs.NetBSD.mk,v 1.18 2001/11/21 14:10:07 agc Exp $
 #
 # Variable definitions for the NetBSD operating system.
 
@@ -62,12 +62,12 @@ DEPENDS+=	user>=20000313:../../sysutils/user
 .endif
 .endif
 
-DEF_UMASK?=	0022
+DEF_UMASK?=		0022
 MOTIF_TYPE_DEFAULT?=	openmotif	# default 2.0 compatible libs type
 MOTIF12_TYPE_DEFAULT?=	lesstif12	# default 1.2 compatible libs type
-NOLOGIN?=	/sbin/nologin
-
-ROOT_USER?=	root
+NOLOGIN?=		/sbin/nologin
+PKG_TOOLS_BIN?=		/usr/sbin
+ROOT_USER?=		root
 ROOT_GROUP?=	wheel
 
 _DO_LIBINTL_CHECKS=	yes	# perform checks for valid libintl
@@ -78,3 +78,28 @@ _OPSYS_HAS_OSSAUDIO=	yes	# libossaudio is available
 _PATCH_BACKUP_ARG=	-b	# switch to patch(1) to provide a backup file
 _PREFORMATTED_MAN_DIR=	cat	# directory where catman pages are
 _USE_RPATH=		yes	# add rpath to LDFLAGS
+
+.if (${MACHINE_ARCH} == alpha)
+DEFAULT_SERIAL_DEVICE?=	/dev/ttyC0
+SERIAL_DEVICES?=	/dev/ttyC0 \
+			/dev/ttyC1
+.elif (${MACHINE_ARCH} == "i386")
+DEFAULT_SERIAL_DEVICE?=	/dev/tty00
+SERIAL_DEVICES?=	/dev/tty00 \
+			/dev/tty01
+.elif (${MACHINE_ARCH} == m68k)
+DEFAULT_SERIAL_DEVICE?=	/dev/tty00
+SERIAL_DEVICES?=	/dev/tty00 \
+			/dev/tty01
+.elif (${MACHINE_ARCH} == mipsel)
+DEFAULT_SERIAL_DEVICE?=	/dev/ttyC0
+SERIAL_DEVICES?=	/dev/ttyC0 \
+			/dev/ttyC1
+.elif (${MACHINE_ARCH} == "sparc")
+DEFAULT_SERIAL_DEVICE?=	/dev/ttya
+SERIAL_DEVICES?=	/dev/ttya \
+			/dev/ttyb
+.else
+DEFAULT_SERIAL_DEVICE?=	/dev/null
+SERIAL_DEVICES?=	/dev/null
+.endif

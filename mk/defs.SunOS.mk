@@ -1,4 +1,4 @@
-# $NetBSD: defs.SunOS.mk,v 1.16 2001/11/21 13:57:31 agc Exp $
+# $NetBSD: defs.SunOS.mk,v 1.17 2001/11/21 14:10:07 agc Exp $
 #
 # Variable definitions for the SunOS/Solaris operating system.
 
@@ -62,15 +62,16 @@ TYPE?=		/usr/bin/type
 WC?=		/usr/bin/wc
 XARGS?=		/usr/bin/xargs
 
-DEF_UMASK?=	022
-GROUPADD?=	/usr/sbin/groupadd
+DEF_UMASK?=		022
+DEFAULT_SERIAL_DEVICE?=	/dev/null
+GROUPADD?=		/usr/sbin/groupadd
 MOTIF_TYPE_DEFAULT?=	dt		# default 2.0 compatible libs type
 MOTIF12_TYPE_DEFAULT?=	dt		# default 1.2 compatible libs type
-NOLOGIN?=	${FALSE}
-USERADD?=	/usr/sbin/useradd
-
-ROOT_USER?=	root
-ROOT_GROUP?=	root
+NOLOGIN?=		${FALSE}
+ROOT_GROUP?=		root
+ROOT_USER?=		root
+SERIAL_DEVICES?=	/dev/null
+USERADD?=		/usr/sbin/useradd
 
 _DO_LIBINTL_CHECKS=	yes		# perform checks for valid libintl
 _DO_SHLIB_CHECKS=	yes		# fixup PLIST for shared libs
@@ -80,3 +81,30 @@ _OPSYS_HAS_OSSAUDIO=	no		# libossaudio is available
 _PATCH_BACKUP_ARG= 	-z		# switch to patch(1) for backup file
 _PREFORMATTED_MAN_DIR=	man		# directory where catman pages are
 _USE_RPATH=		yes		# add rpath to LDFLAGS
+
+# Migration aid for old /usr/local LOCALBASE
+.if !defined(LOCALBASE) && exists(${DESTDIR}/usr/local/libexec/cgi-bin) && \
+	!exists(${DESTDIR}/usr/pkg/libexec/cgi-bin)
+.BEGIN:
+	@echo "On Solaris and /usr/local/libexec/cgi-bin found:"
+	@echo "- If you have an existing pkgsrc installation & wish to continue"
+	@echo "  using /usr/local, append LOCALBASE=/usr/local to /etc/mk.conf."
+	@echo "- Otherwise set LOCALBASE=/usr/pkg in your environment for the"
+	@echo "  first package install."
+	@false
+.endif
+
+LOCALBASE?=             ${DESTDIR}/usr/pkg
+.if !defined(ZOULARISBASE)
+.  if exists(${LOCALBASE}/bsd)
+ZOULARISBASE:=		${LOCALBASE}/bsd
+.  else
+ZOULARISBASE:=		${LOCALBASE}
+.  endif
+.endif
+PKG_TOOLS_BIN?=		${ZOULARISBASE}/bin
+
+.if ${X11BASE} == "/usr/openwin"
+HAVE_OPENWINDOWS=	YES
+.endif
+
