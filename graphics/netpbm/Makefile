@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2002/08/25 18:39:18 jlam Exp $
+# $NetBSD: Makefile,v 1.66 2002/10/20 00:33:50 wiz Exp $
 
 DISTNAME=	netpbm-9.25
 CATEGORIES=	graphics
@@ -32,7 +32,7 @@ BUILD_DEPENDS+=	flex>=2.5.4:../../devel/flex
 MAKE_ENV+=	NETWORKLD=""
 .endif
 
-post-patch:
+pre-configure:
 	${CP} ${WRKSRC}/Makefile.config.in ${WRKSRC}/Makefile.config
 
 post-install:
