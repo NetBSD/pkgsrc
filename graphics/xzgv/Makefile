@@ -1,13 +1,16 @@
-# $NetBSD: Makefile,v 1.24 2004/10/03 00:14:59 tv Exp $
+# $NetBSD: Makefile,v 1.24.2.1 2004/12/23 03:46:40 snj Exp $
 
-DISTNAME=	xzgv-0.7
-PKGREVISION=	5
+DISTNAME=	xzgv-0.8
+PKGNAME=	xzgv-0.8.0.1
 CATEGORIES=	graphics
-MASTER_SITES=	http://xzgv.browser.org/ \
-		ftp://ftp.ibiblio.org/pub/Linux/apps/graphics/viewers/X/
+MASTER_SITES=	ftp://ftp.ibiblio.org/pub/Linux/apps/graphics/viewers/X/
+
+PATCHFILES=	xzgv-0.8-integer-overflow-fix.diff
+PATCH_SITES=	http://rus.members.beeb.net/
+PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	tech-pkg@NetBSD.org
-HOMEPAGE=	http://xzgv.browser.org/
+HOMEPAGE=	http://rus.members.beeb.net/xzgv.html
 COMMENT=	Image viewer
 
 USE_MAKEINFO=	YES
