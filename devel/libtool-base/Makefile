@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.39 2004/10/03 00:13:31 tv Exp $
+# $NetBSD: Makefile,v 1.40 2004/10/04 19:48:10 tv Exp $
 #
 
 PKGNAME=	${DISTNAME:C/-/-base-/}
+PKGREVISION=	1
 SVR4_PKGNAME=	ltoob
 
 COMMENT=	Generic shared library support script (the script itself)
@@ -21,12 +22,14 @@ TEST_TARGET=	check
 
 .if ${OPSYS} == "NetBSD"
 .  if !exists(/usr/libexec/ld.so) && !exists(/usr/libexec/ld.elf_so)
-CONFIGURE_ARGS=		--disable-shared
+CONFIGURE_ARGS+=	--disable-shared
 BUILD_SHLIBTOOL=	NO
 .  endif
 .else
-CONFIGURE_ARGS=		--enable-ltdl-install
+CONFIGURE_ARGS+=	--enable-ltdl-install
 .endif
+
+CONFIGURE_ARGS+=	--with-tags=CXX,F77,GCJ
 
 # The configure script persists in trying to find the path to ld, which
 # always ends up in ${BUILDLINK_DIR}.  Prevent it from caring.
