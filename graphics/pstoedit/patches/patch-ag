@@ -1,0 +1,58 @@
+$NetBSD: patch-ag,v 1.1.1.1 2000/07/18 07:46:41 itohy Exp $
+
+--- pstoedit.cpp.orig	Mon Jul  3 02:18:38 2000
++++ pstoedit.cpp	Sat Jul 15 00:47:54 2000
+@@ -218,6 +218,12 @@
+ 	}	
+ 
+ 	// also look in the directory where the pstoedit .exe/dll was found
++#ifdef PATH_PLUGINDIR
++	if (strcmp(PATH_PLUGINDIR,plugindir?plugindir:"") != 0) {
++		loadPlugInDrivers(PATH_PLUGINDIR,errstream);
++		pluginsloaded = true;
++	}
++#else
+ 	char szExePath[1000];
+ 	szExePath[0]= '\0';
+ 	const int r = P_GetPathToMyself(progname,szExePath, sizeof(szExePath));
+@@ -230,6 +236,7 @@
+ 			pluginsloaded = true;
+ 		}
+ 	}
++#endif
+ 
+ 	delete [] plugindir;
+ }
+@@ -587,6 +594,14 @@
+ 				// also look in the directory where the pstoedit .exe/dll was found
+ 				char szExePath[1000];
+ 				szExePath[0]= '\0';
++#ifdef PATH_DATADIR
++				RSString test(szExePath);
++				test += PATH_DATADIR;
++				char delim[] = {directoryDelimiter,'\0'};
++				test += delim;
++				test+=drivername;
++				test+=".fmp";
++#else
+ 				const int r = P_GetPathToMyself(argv[0],szExePath, sizeof(szExePath));
+ 				if( r && verbose) {
+ 					errstream << " path to myself: " << szExePath << endl;
+@@ -605,6 +620,7 @@
+ 					test+=drivername;
+ 					test+=".fmp";
+ #endif 
++#endif
+ 					// errstream << test.value() << endl;
+ 					if (fileExists(test.value())) {
+ 						if(verbose) {
+@@ -612,7 +628,9 @@
+ 						}	
+ 						outputdriver->theFontMapper.readMappingTable(errstream,test.value());
+ 					}
++#ifndef PATH_DATADIR
+ 				}
++#endif
+ 			}
+ 
+ 			char * gsoutName = 0;
