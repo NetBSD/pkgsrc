@@ -1,0 +1,78 @@
+--- menu.tcl	Wed Aug 13 11:19:53 1997
++++ ../library/menu.tcl	Wed Sep  3 12:24:24 1997
+@@ -4,7 +4,7 @@
+ # It also implements keyboard traversal of menus and implements a few
+ # other utility procedures related to menus.
+ #
+-# SCCS: @(#) menu.tcl 1.97 97/08/13 10:58:34
++# SCCS: @(#) menu.tcl 1.100 97/08/26 14:29:47
+ #
+ # Copyright (c) 1992-1994 The Regents of the University of California.
+ # Copyright (c) 1994-1997 Sun Microsystems, Inc.
+@@ -53,19 +53,19 @@
+ 
+ #-------------------------------------------------------------------------
+ # Overall note:
+-# This file is tricky because there are four different ways that menus
++# This file is tricky because there are five different ways that menus
+ # can be used:
+ #
+-# 1. As a pulldown from a menubutton.  This is the most common usage.
+-#    In this style, the variable tkPriv(postedMb) identifies the posted
+-#    menubutton.
++# 1. As a pulldown from a menubutton. In this style, the variable
++#    tkPriv(postedMb) identifies the posted menubutton.
+ # 2. As a torn-off menu copied from some other menu.  In this style
+-#    tkPriv(postedMb) is empty, and the top-level menu is no
+-#    override-redirect.
+-# 3. As an option menu, triggered from an option menubutton.  In thi
++#    tkPriv(postedMb) is empty, and menu's type is "tearoff".
++# 3. As an option menu, triggered from an option menubutton.  In this
+ #    style tkPriv(postedMb) identifies the posted menubutton.
+ # 4. As a popup menu.  In this style tkPriv(postedMb) is empty and
+-#    the top-level menu is override-redirect.
++#    the top-level menu's type is "normal".
++# 5. As a pulldown from a menubar. The variable tkPriv(menubar) has
++#    the owning menubar, and the menu itself is of type "normal".
+ #
+ # The various binding procedures use the  state described above to
+ # distinguish the various cases and take different actions in each
+@@ -391,8 +391,7 @@
+ 	    $tkPriv(popup) unpost
+ 	    set tkPriv(popup) {}
+ 	} elseif {(!([$menu cget -type] == "menubar")
+-		&& !([$menu cget -type] == "tearoff"))
+-		|| [wm overrideredirect $menu]} {
++		&& !([$menu cget -type] == "tearoff"))} {
+ 	    # We're in a cascaded sub-menu from a torn-off menu or popup.
+ 	    # Unpost all the menus up to the toplevel one (but not
+ 	    # including the top-level torn-off one) and deactivate the
+@@ -407,8 +406,8 @@
+ 		$parent activate none
+ 		$parent postcascade none
+ 		event generate $parent <<MenuSelect>>
+-		if {([$parent cget -type] == "menubar")
+-		        || ![wm overrideredirect $parent]} {
++		set type [$parent cget -type]
++		if {([$parent cget -type] == "menubar")} {
+ 		    break
+ 		}
+ 		set menu $parent
+@@ -551,8 +550,7 @@
+     if {$tkPriv(postedMb) != ""} {
+ 	grab -global $tkPriv(postedMb)
+     } else {
+-	while {(([$menu cget -type] != "menubar") 
+-		&& [wm overrideredirect $menu])
++	while {([$menu cget -type] == "normal")
+ 		&& ([winfo class [winfo parent $menu]] == "Menu")
+ 		&& [winfo ismapped [winfo parent $menu]]} {
+ 	    set menu [winfo parent $menu]
+@@ -1187,6 +1185,6 @@
+ 	tkSaveGrabInfo $menu
+ 	grab -global $menu
+ 	set tkPriv(popup) $menu
+-	tk_menuSetFocus($menu);
++	tk_menuSetFocus $menu
+     }
+ }
