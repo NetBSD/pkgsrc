@@ -1,17 +1,33 @@
-$NetBSD: patch-ad,v 1.1 2003/02/14 20:04:10 jmmv Exp $
+$NetBSD: patch-ad,v 1.2 2004/04/01 18:17:29 jmmv Exp $
 
---- gconf/default.path.in.orig	2000-01-31 22:49:05.000000000 +0100
+--- gconf/default.path.in.orig	2003-11-03 00:23:30.000000000 +0000
 +++ gconf/default.path.in
-@@ -7,7 +7,7 @@
+@@ -7,13 +7,13 @@
  
  # Look first in systemwide mandatory settings directory
  # (commented out until xml backend knows how to be read-only for users)
 -xml:readonly:@EXPANDED_SYSCONFDIR@/gconf/gconf.xml.mandatory
 +xml:readonly:@EXPANDED_SYSCONFDIR@/gconf.xml.mandatory
  
+ # To read in any mandatory settings that the Sys Admin may have created
+ # prior to a desktop system upgrade. The SysAdmin can stick read-only system
+ # wide sources in this file.
+ 
+-include @EXPANDED_SYSCONFDIR@/gconf/2/local-mandatory.path
++include @EXPANDED_SYSCONFDIR@/2/local-mandatory.path
+ 
  # Now see where users want us to look - basically the user can stick arbitrary 
  # sources in a ~/.gconf.path file and they're inserted here
-@@ -19,7 +19,7 @@ xml:readwrite:$(HOME)/.gconf
+@@ -23,7 +23,7 @@ include "$(HOME)/.gconf.path"
+ # prior to a desktop system upgrade. The SysAdmin can stick default values
+ # system-wide in this file.
+ 
+-include @EXPANDED_SYSCONFDIR@/gconf/2/local-defaults.path
++include @EXPANDED_SYSCONFDIR@/2/local-defaults.path
+ 
+ # Give users a default storage location, ~/.gconf
+ 
+@@ -31,7 +31,7 @@ xml:readwrite:$(HOME)/.gconf
  
  # Finally, look at the systemwide defaults
  # (commented out for now)

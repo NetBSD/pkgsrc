@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.12 2004/01/23 17:51:24 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.13 2004/04/01 18:17:29 jmmv Exp $
+bin/gconf-merge-tree
 bin/gconftool-2
 include/gconf/2/gconf/gconf-changeset.h
 include/gconf/2/gconf/gconf-client.h
@@ -9,6 +10,9 @@ include/gconf/2/gconf/gconf-listeners.h
 include/gconf/2/gconf/gconf-schema.h
 include/gconf/2/gconf/gconf-value.h
 include/gconf/2/gconf/gconf.h
+lib/GConf/2/libgconfbackend-oldxml.a
+lib/GConf/2/libgconfbackend-oldxml.la
+lib/GConf/2/libgconfbackend-oldxml.so
 lib/GConf/2/libgconfbackend-xml.a
 lib/GConf/2/libgconfbackend-xml.la
 lib/GConf/2/libgconfbackend-xml.so
@@ -19,7 +23,43 @@ lib/libgconf-2.so.5
 lib/libgconf-2.so.5.0
 lib/pkgconfig/gconf-2.0.pc
 libexec/gconfd-2
+man/man1/gconftool-2.1
 share/aclocal/gconf-2.m4
+share/doc/html/gconf/GConfClient.html
+share/doc/html/gconf/ch01.html
+share/doc/html/gconf/ch01s02.html
+share/doc/html/gconf/ch02.html
+share/doc/html/gconf/ch02s02.html
+share/doc/html/gconf/ch02s03.html
+share/doc/html/gconf/ch02s04.html
+share/doc/html/gconf/ch06.html
+share/doc/html/gconf/ch06s02.html
+share/doc/html/gconf/ch06s03.html
+share/doc/html/gconf/ch07.html
+share/doc/html/gconf/conventions.html
+share/doc/html/gconf/gconf-client-reference.html
+share/doc/html/gconf/gconf-client.html
+share/doc/html/gconf/gconf-gconf-backend.html
+share/doc/html/gconf/gconf-gconf-changeset.html
+share/doc/html/gconf/gconf-gconf-engine.html
+share/doc/html/gconf/gconf-gconf-error.html
+share/doc/html/gconf/gconf-gconf-internals.html
+share/doc/html/gconf/gconf-gconf-listeners.html
+share/doc/html/gconf/gconf-gconf-locale.html
+share/doc/html/gconf/gconf-gconf-schema.html
+share/doc/html/gconf/gconf-gconf-sources.html
+share/doc/html/gconf/gconf-gconf-value.html
+share/doc/html/gconf/gconf-gconf.html
+share/doc/html/gconf/gconf-internals-reference.html
+share/doc/html/gconf/gconf-reference.html
+share/doc/html/gconf/gconf.devhelp
+share/doc/html/gconf/gconftool.html
+share/doc/html/gconf/home.png
+share/doc/html/gconf/index.html
+share/doc/html/gconf/index.sgml
+share/doc/html/gconf/left.png
+share/doc/html/gconf/right.png
+share/doc/html/gconf/up.png
 share/examples/GConf2/path
 ${PKGLOCALEDIR}/locale/am/LC_MESSAGES/GConf2.mo
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/GConf2.mo
@@ -41,11 +81,13 @@ ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/GConf2.mo
 ${PKGLOCALEDIR}/locale/ga/LC_MESSAGES/GConf2.mo
 ${PKGLOCALEDIR}/locale/gl/LC_MESSAGES/GConf2.mo
 ${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/GConf2.mo
+${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/GConf2.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/GConf2.mo
 ${PKGLOCALEDIR}/locale/id/LC_MESSAGES/GConf2.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/GConf2.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/GConf2.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/GConf2.mo
+${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/GConf2.mo
 ${PKGLOCALEDIR}/locale/lv/LC_MESSAGES/GConf2.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/GConf2.mo
 ${PKGLOCALEDIR}/locale/ml/LC_MESSAGES/GConf2.mo
@@ -78,6 +120,7 @@ share/sgml/gconf/gconf-1.0.dtd
 @dirrm share/gconf/schemas
 @unexec ${RMDIR} -p %D/share/gconf 2>/dev/null || ${TRUE}
 @dirrm share/examples/GConf2
+@dirrm share/doc/html/gconf
 @dirrm lib/GConf/2
 @unexec ${RMDIR} -p %D/lib/GConf 2>/dev/null || ${TRUE}
 @dirrm include/gconf/2/gconf

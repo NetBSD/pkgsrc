@@ -1,13 +1,13 @@
-# $NetBSD: Makefile.common,v 1.16 2004/02/14 18:26:27 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.17 2004/04/01 18:17:29 jmmv Exp $
 #
 
-DISTNAME=		GConf-2.4.0.1
+DISTNAME=		GConf-2.6.0
 CATEGORIES=		devel gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/GConf/2.4/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/GConf/2.6/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		jmmv@NetBSD.org
-HOMEPAGE=		http://advogato.org/proj/GConf/
+HOMEPAGE=		http://www.gnome.org/projects/gconf/
 COMMENT=		Configuration database system used by GNOME (v2)
 
 BUILD_USES_MSGFMT=	yes
