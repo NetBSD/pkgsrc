@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.46 2005/03/10 14:11:23 tv Exp $
+# $NetBSD: Makefile,v 1.47 2005/03/31 11:08:16 adam Exp $
 
-DISTNAME=       xpaint-2.7.3
+DISTNAME=       xpaint-2.7.6
 CATEGORIES=	graphics x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sf-xpaint/}
 EXTRACT_SUFX=	.tar.bz2
+DISTFILES=	${DISTNAME}${EXTRACT_SUFX} xaw95-1.1.4${EXTRACT_SUFX}
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://sf-xpaint.sourceforge.net/
 COMMENT=	Simple paint program
 
@@ -13,7 +14,7 @@ USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
 USE_IMAKE=      	yes
 
-BUILD_TARGET=	xaw95static
+BUILD_TARGET=	xaw95
 MAKE_ENV+=	XMKMF="${XMKMF}"
 
 SUBST_CLASSES=	    foo

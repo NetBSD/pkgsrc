@@ -1,6 +1,6 @@
-$NetBSD: patch-ae,v 1.5 2004/11/03 15:54:31 adam Exp $
+$NetBSD: patch-ae,v 1.6 2005/03/31 11:08:16 adam Exp $
 
---- operation.c.orig	2003-07-24 20:30:56.000000000 +0000
+--- operation.c.orig	2005-03-21 20:36:37.000000000 +0000
 +++ operation.c
 @@ -993,8 +993,10 @@ static PaintMenuItem fontMenu[] =
  	    fontSet, "-*-helvetica-medium-r-normal-*-*-120-*-*-p-*-*-*"),
