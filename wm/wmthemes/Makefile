@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/12/15 23:25:18 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2001/01/13 19:22:36 tv Exp $
 
-DISTNAME=	wmthemes-0.62.x
+DISTNAME=	wmthemes-0.62nb1
 CATEGORIES=	x11 wm
 MASTER_SITES=	http://download.themes.org/wm/
 DISTFILES=	${THEME_FILES}
