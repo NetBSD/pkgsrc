@@ -1,7 +1,7 @@
-$NetBSD: patch-al,v 1.1 1999/09/19 04:24:55 jlam Exp $
+$NetBSD: patch-al,v 1.2 1999/09/20 23:38:50 jlam Exp $
 
---- ./interfaces/libpq++/Makefile.in.orig	Wed Jul  7 23:30:16 1999
-+++ ./interfaces/libpq++/Makefile.in	Sat Sep 18 03:08:44 1999
+--- ./interfaces/libpq++/Makefile.in.orig	Tue Sep  7 14:11:35 1999
++++ ./interfaces/libpq++/Makefile.in	Mon Sep 20 01:21:40 1999
 @@ -17,8 +17,6 @@
  SRCDIR= @top_srcdir@
  include $(SRCDIR)/Makefile.global
@@ -11,9 +11,13 @@ $NetBSD: patch-al,v 1.1 1999/09/19 04:24:55 jlam Exp $
  SRCHEADERDIR = $(SRCDIR)/include
  LIBPQHEADERDIR = $(SRCHEADERDIR)/libpq
  
-@@ -43,10 +41,13 @@
+@@ -42,10 +40,13 @@
+ 
  OBJS = pgconnection.o pgdatabase.o pgtransdb.o pgcursordb.o pglobject.o 
  
++# Signify that we're building a C++ library.
++CXXLIB= true
++
  ifeq ($(PORTNAME), win)
 -SHLIB_LINK+= --driver-name g++ -L../libpq -lpq
 +SHLIB_LINK+= --driver-name g++ $(LIBPQ)
@@ -21,9 +25,5 @@ $NetBSD: patch-al,v 1.1 1999/09/19 04:24:55 jlam Exp $
 -SHLIB_LINK= -L../libpq -lpq
 +SHLIB_LINK= $(LIBPQ)
  endif
-+
-+# Signify that we're building a C++ library.
-+CXXLIB= true
  
- # Shared library stuff, also default 'all' target
- include $(SRCDIR)/Makefile.shlib
+ # For CC on IRIX, must use CC as linker/archiver of C++ libraries
