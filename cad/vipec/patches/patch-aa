@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.6 2000/08/28 19:52:34 dmcmahill Exp $
+$NetBSD: patch-aa,v 1.7 2000/08/30 16:19:43 dmcmahill Exp $
 
 --- configure.orig	Mon May 22 14:34:07 2000
-+++ configure	Mon Aug 28 14:15:03 2000
++++ configure	Wed Aug 30 10:53:54 2000
 @@ -4214,5 +4214,5 @@
    x_libraries="/usr/lib";  else
    x_libraries=$ac_x_libraries
@@ -9,6 +9,13 @@ $NetBSD: patch-aa,v 1.6 2000/08/28 19:52:34 dmcmahill Exp $
 +  X_LDFLAGS="-L$x_libraries -Wl,-R$x_libraries"
  fi
  all_includes="$X_INCLUDES"
+@@ -4408,5 +4408,5 @@
+ echo "configure:4409: checking for Qt" >&5
+ 
+-LIBQT="$LIBQT $X_PRE_LIBS -lXext -lX11 $LIBSOCKET"
++LIBQT="$LIBQT $X_PRE_LIBS -lXext -lX11 -lz -lpng -lSM -ljpeg -lICE $LIBSOCKET"
+ ac_qt_includes=NO ac_qt_libraries=NO ac_qt_bindir=NO
+ qt_libraries=""
 @@ -4501,5 +4501,5 @@
  
  CXXFLAGS="$CXXFLAGS -I$qt_incdir $all_includes"
@@ -20,7 +27,7 @@ $NetBSD: patch-aa,v 1.6 2000/08/28 19:52:34 dmcmahill Exp $
  CXXFLAGS="$CXXFLAGS -I$qt_includes"
  LDFLAGS="$X_LDFLAGS"
 -LIBS="-lqt -lXext -lX11 $LIBSOCKET"
-+LIBS="-lqt -lXext -lX11 -lz -lpng -lSM  $LIBSOCKET"
++LIBS="-lqt -lXext -lX11 -lz -lpng -lSM -ljpeg -lICE $LIBSOCKET"
  LD_LIBRARY_PATH=
  export LD_LIBRARY_PATH
 @@ -4737,5 +4737,5 @@
