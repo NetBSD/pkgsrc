@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/06/01 10:59:22 skrll Exp $
+# $NetBSD: Makefile,v 1.6 2002/08/27 09:13:51 skrll Exp $
 #
 
 .include "../qt3-libs/Makefile.common"
@@ -6,7 +6,7 @@
 PKGNAME=	qt3-docs-${QTVERSION}
 COMMENT=	Documentation for the QT C++ X GUI toolkit
 
-USE_BUILDLINK_ONLY=		yes
+USE_BUILDLINK2=	yes
 
 NO_PATCH=	yes
 NO_CONFIGURE=	yes

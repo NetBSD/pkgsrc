@@ -17,7 +17,7 @@ QT3_LIBS_BUILDLINK_MK=	# defined
 
 .include "../../mk/bsd.buildlink.mk"
 
-BUILDLINK_DEPENDS.qt3-libs?=	qt3-libs>=3.0.4nb2
+BUILDLINK_DEPENDS.qt3-libs?=	qt3-libs>=3.0.5
 DEPENDS+=			${BUILDLINK_DEPENDS.qt3-libs}:../../x11/qt3-libs
 
 EVAL_PREFIX+=			BUILDLINK_PREFIX.qt3-libs=qt3-libs
@@ -34,11 +34,14 @@ REPLACE_BUILDLINK_SED+=		-e "s|-L${BUILDLINK_QTDIR}/|-L${REAL_QTDIR}/|g"
 BUILDLINK_CONFIG_WRAPPER_SED+=	-e "s|-I${REAL_QTDIR}/|-I${BUILDLINK_QTDIR}/|g"
 BUILDLINK_CONFIG_WRAPPER_SED+=	-e "s|-L${REAL_QTDIR}/|-L${BUILDLINK_QTDIR}/|g"
 
+PTHREAD_OPTS+=	require
+
 .include "../../devel/zlib/buildlink.mk"
 .include "../../graphics/Mesa/buildlink.mk"
 .include "../../graphics/jpeg/buildlink.mk"
 .include "../../graphics/mng/buildlink.mk"
 .include "../../graphics/png/buildlink.mk"
+.include "../../mk/pthread.buildlink.mk"
 
 CONFIGURE_ENV+=			MOC="${BUILDLINK_QTDIR}/bin/moc"
 MAKE_ENV+=			MOC="${BUILDLINK_QTDIR}/bin/moc"
