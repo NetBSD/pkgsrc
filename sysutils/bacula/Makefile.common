@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2004/12/14 14:51:07 xtraeme Exp $
+# $NetBSD: Makefile.common,v 1.3 2004/12/14 15:10:15 xtraeme Exp $
 #
 
 DISTNAME=		bacula-1.36.0
@@ -12,6 +12,7 @@ COMMENT=		Network Backup Solution
 .include "Makefile.options"
 
 USE_BUILDLINK3=		yes
+USE_LANGUAGES+=		c++
 USE_PKGLOCALEDIR=	yes
 USE_PKGINSTALL=		yes
 GNU_CONFIGURE=		yes
@@ -37,11 +38,13 @@ CONFIGURE_ARGS+=	--with-readline=${PREFIX}/include/readline
 CONFIGURE_ARGS+=	--with-dir-user=${BACULA_DIR_USER} --with-dir-group=${BACULA_GROUP}
 CONFIGURE_ARGS+=	--with-sd-user=${BACULA_SD_USER} --with-sd-group=${BACULA_GROUP}
 .if !empty(PKG_OPTIONS:Mcatalog-sqlite)
+.  include "../../databases/sqlite/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-sqlite=${BUILDLINK_PREFIX.sqlite}
 BACULA_DB=		sqlite
 .endif
 .if !empty(PKG_OPTIONS:Mcatalog-pgsql)
-CONFIGURE_ARGS+=	-with-postgresql=${BUILDLINK_PREFIX.postgresql-lib}
+.  include "../../mk/pgsql.buildlink3.mk"
+CONFIGURE_ARGS+=	--with-postgresql=${PGSQL_PREFIX}
 BACULA_DB=		postgresql
 .endif
 
@@ -68,13 +71,6 @@ RCD_SCRIPTS=	bacula bacula-dir bacula-sd bacula-fd
 
 pre-install:
 	${MKDIR} ${EXAMPLESDIR}
-
-.if !empty(PKG_OPTIONS:Mcatalog-sqlite)
-.include "../../databases/sqlite/buildlink3.mk"
-.endif
-.if !empty(PKG_OPTIONS:Mcatalog-pgsql)
-.include "../../mk/pgsql.buildlink3.mk"
-.endif
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/tcp_wrappers/buildlink3.mk"
