@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/03/07 20:57:48 jtb Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/05/04 17:14:08 jtb Exp $
 bin/gp
 bin/gp-2.1
 bin/gphelp
@@ -17,10 +17,20 @@ include/pari/paristio.h
 include/pari/parisys.h
 include/pari/paritype.h
 lib/libpari.a
-lib/libpari.a.2.1
 man/man1/gp.1
 man/man1/gphelp.1
 man/man1/pari.1
+share/examples/pari/EXPLAIN
+share/examples/pari/Inputrc
+share/examples/pari/bench.gp
+share/examples/pari/cl.gp
+share/examples/pari/classno.gp
+share/examples/pari/contfrac.gp
+share/examples/pari/lucas.gp
+share/examples/pari/matexp.c
+share/examples/pari/rho.gp
+share/examples/pari/squfof.gp
+share/examples/pari/taylor.gp
 share/pari/pari-translator.el
 share/pari/pari.el
 share/pari/pari.elc
@@ -40,4 +50,5 @@ share/pari/usersch5.tex
 share/pari/with-syntax.el
 @dirrm include/pari
 @unexec rmdir %D/share/pari/data 2>/dev/null || true
+@dirrm share/examples/pari
 @dirrm share/pari
