@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/07/03 00:45:21 wulf Exp $
+
+SHA1 (xlog-0.8.tar.gz) = 1ed13b0b0b91a760c1c29b568abc0ea39c46fbf1
+Size (xlog-0.8.tar.gz) = 370516 bytes
+SHA1 (patch-aa) = 291f57d385352bc208ab80a062d69f3e52479878
+SHA1 (patch-ab) = 9f7c4858fd471c6aa89bd28a8124f1a8aae3f700
+SHA1 (patch-ac) = 0e046aebc30bc0f16a42d19001ed1beb9faa2017
