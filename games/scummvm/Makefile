@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2004/03/08 19:40:39 jmmv Exp $
+# $NetBSD: Makefile,v 1.20 2004/03/29 01:09:56 dillo Exp $
 
-DISTNAME=	scummvm-0.5.1
-PKGREVISION=	3
+DISTNAME=	scummvm-0.6.0
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=scummvm/}
 EXTRACT_SUFX=	.tar.bz2
@@ -28,4 +27,5 @@ do-install:
 .include "../../audio/libmad/buildlink2.mk"
 .include "../../audio/libvorbis/buildlink2.mk"
 .include "../../devel/SDL/buildlink2.mk"
+.include "../../graphics/libmpeg2/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
