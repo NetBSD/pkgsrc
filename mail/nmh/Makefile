@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2003/05/09 14:07:29 lha Exp $
+# $NetBSD: Makefile,v 1.51 2003/05/18 13:06:41 cjep Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/08/04 06:51:28 markm Exp
 #
 
@@ -43,7 +43,7 @@ CONFIGURE_ARGS+=	--with-pager=${NMH_PAGER}
 .if defined(KERBEROS)
 PKG_USE_KERBEROS=	# defined
 .if ${OPSYS} == "NetBSD"
-LIBS=			-lroken -lcrypt -lcom_err 
+LIBS=			-lroken -lcrypt -lcom_err
 .endif
 CONFIGURE_ARGS+=	--with-krb4
 .else
