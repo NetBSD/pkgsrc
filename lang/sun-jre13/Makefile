@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/05/09 16:36:44 abs Exp $
+# $NetBSD: Makefile,v 1.6 2001/05/17 15:04:43 abs Exp $
 #
 
 # MASTER_SITES is very special, and must end in "=":
@@ -37,7 +37,7 @@ NO_BUILD=	yes
 # since we change PREFIX:
 NO_MTREE=	yes
 
-ONLY_FOR_PLATFORM= NetBSD-*-i386
+ONLY_FOR_PLATFORM= NetBSD-*-i386 Linux-*-i386
 LDD=		${TRUE}
 
 post-fetch:
