@@ -1,4 +1,6 @@
-$NetBSD: patch-ae,v 1.9 2001/08/02 12:44:18 itojun Exp $
+$NetBSD: patch-ae,v 1.10 2002/05/07 09:03:57 itojun Exp $
+
+make it compile on 1.5.x
 
 --- ../libipsec/key_debug.c-	Thu Aug  2 21:38:17 2001
 +++ ../libipsec/key_debug.c	Thu Aug  2 21:38:44 2001
