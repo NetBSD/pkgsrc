@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2000/01/02 22:51:19 rh Exp $
+# $NetBSD: Makefile,v 1.16 2000/01/02 22:54:12 rh Exp $
 # FreeBSD Id: Makefile,v 1.8 1997/11/17 10:53:52 tg Exp
 #
 
@@ -13,6 +13,7 @@
     SUBDIR += geda-utils
     SUBDIR += gnetlist
     SUBDIR += gschem
+    SUBDIR += gsymcheck
 #    SUBDIR += irsim
 #    SUBDIR += kaskade
 #    SUBDIR += magic
