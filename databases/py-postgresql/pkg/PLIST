@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2000/07/03 14:10:36 darcy Exp $
+@comment $NetBSD: PLIST,v 1.3 2000/08/19 21:05:01 hubertf Exp $
 ${PYTHON_LIBDIR}/site-packages/_pgmodule.so
 ${PYTHON_LIBDIR}/site-packages/pg.py
 ${PYTHON_LIBDIR}/site-packages/pg.pyc
@@ -10,7 +10,6 @@ share/doc/py-postgresql/README
 share/doc/py-postgresql/tutorial/advanced.py
 share/doc/py-postgresql/tutorial/basics.py
 share/doc/py-postgresql/tutorial/func.py
-share/doc/py-postgresql/tutorial/pgtools.py
 share/doc/py-postgresql/tutorial/syscat.py
 @dirrm share/doc/py-postgresql/tutorial
 @dirrm share/doc/py-postgresql
