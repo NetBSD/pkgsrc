@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/04/20 15:28:44 minskim Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/05/06 13:50:20 jmmv Exp $
 lib/pkgconfig/gnome-icon-theme.pc
 share/icons/gnome/12x12/emblems/emblem-symbolic-link.png
 share/icons/gnome/12x12/filesystems/gnome-fs-directory-accept.png
@@ -2403,4 +2403,3 @@ share/icons/hicolor/96x96/apps/gnome-starthere.png
 @dirrm share/icons/gnome/12x12/devices
 @dirrm share/icons/gnome/12x12
 @dirrm share/icons/gnome
-@comment in xdg-dirs: share/icons
