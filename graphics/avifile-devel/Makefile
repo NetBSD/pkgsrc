@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2002/05/03 10:55:17 zuntum Exp $
+# $NetBSD: Makefile,v 1.26 2002/08/28 02:40:32 jlam Exp $
 #
 
 DISTNAME=	avifile-0.6.20010814
@@ -22,31 +22,34 @@ NO_SRC_ON_FTP=		"Already in MASTER_SITE_LOCAL"
 
 BUILD_USES_GETTEXT_M4=	YES
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 USE_X11=		YES
 USE_GMAKE=		YES
+
 USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 GNU_CONFIGURE=		YES
-
-CXXFLAGS+=		-L${BUILDLINK_DIR}/lib -I${BUILDLINK_DIR}/include
-
 CONFIGURE_ARGS+=	--with-win32-path=${LOCALBASE}/lib/win32
 CONFIGURE_ARGS+=	--disable-dpms
-# ffmpeg codec *partially* works, but is incredibly slow so we don't want to use it
+
+# ffmpeg codec *partially* works, but is incredibly slow so we don't want
+# to use it
 CONFIGURE_ARGS+=	--disable-ffmpeg
+
+CXXFLAGS+=		-L${LOCALBASE}/lib -I${LOCALBASE}/include
 
 .include "../../mk/bsd.prefs.mk"
 
 AVIFILE_USE_QT?=	NO
 
 .if defined (AVIFILE_USE_QT) && ${AVIFILE_USE_QT} == "YES"
-
-# it would be more logical to set PLIST_SRC to PLIST first and then add PLIST.qt to it,
-# but @dirrm lib/avifile-0.6 will fail while processing pkg/PLIST,
-# because the directory still contains files (they are listed in PLIST.qt) and isn't empty,
-# thus can't be removed
+#
+# it would be more logical to set PLIST_SRC to PLIST first and then add
+# PLIST.qt to it, but @dirrm lib/avifile-0.6 will fail while processing
+# pkg/PLIST, because the directory still contains files (they are listed in
+# PLIST.qt) and isn't empty, thus can't be removed
+#
 PLIST_SRC=		${PKGDIR}/PLIST.qt
 PLIST_SRC+=		${PKGDIR}/PLIST
 
@@ -55,15 +58,13 @@ CXXFLAGS+=		-Wl,-R${LOCALBASE}/lib
 CXXFLAGS+=		-Wl,-R${X11BASE}/lib
 
 CONFIGURE_ARGS+=	--enable-qt
-CONFIGURE_ARGS+=	--with-qt-dir="${BUILDLINK_DIR}/qt2"
+CONFIGURE_ARGS+=	--with-qt-dir="${QTDIR}"
 
-.include "../../x11/qt2-designer/buildlink.mk"
-
+.  include "../../x11/qt2-designer/buildlink.mk"
 .endif
 
 pre-configure:
 	cd ${WRKSRC} && ${SH} autogen.sh
 
-.include "../../devel/SDL/buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
+.include "../../devel/SDL/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
