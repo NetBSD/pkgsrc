@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2004/07/14 01:15:15 xtraeme Exp $
+# $NetBSD: Makefile,v 1.3 2005/03/19 14:38:47 wiz Exp $
 #
 
-DISTNAME=	nrg2iso-0.2
+DISTNAME=	nrg2iso-0.4
 CATEGORIES=	sysutils
 MASTER_SITES=	http://gregory.kokanosky.free.fr/v4/linux/
 
