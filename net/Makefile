@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.218 2001/05/16 08:04:25 rh Exp $
+# $NetBSD: Makefile,v 1.219 2001/05/18 11:40:35 rh Exp $
 #
 
 COMMENT=	Networking tools
@@ -123,6 +123,7 @@ SUBDIR+=	ra-pna-proxy
 SUBDIR+=	ra-rtsp-proxy
 SUBDIR+=	radius
 SUBDIR+=	rdist6
+SUBDIR+=	ripe-whois-tools
 SUBDIR+=	rp-pppoe
 SUBDIR+=	rsync
 SUBDIR+=	samba
