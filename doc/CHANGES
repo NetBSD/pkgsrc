@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.614 2002/11/27 03:33:15 jschauma Exp $
+$NetBSD: CHANGES,v 1.615 2002/11/27 08:18:21 sjg Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3735,3 +3735,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated id3lib to 3.8.2 [schmonz 2002-11-26]
 	Updated rioutil to 1.2.1 [schmonz 2002-11-26]
 	Added rmail-mime-1.13.0 [jschauma 2002-11-26]
+	Updated bmake to 3.1.14 [sjg 2002-11-26]
