@@ -1,29 +1,9 @@
-# $NetBSD: Makefile.common,v 1.21 2004/06/29 14:19:42 grant Exp $
+# $NetBSD: Makefile.common,v 1.22 2004/07/16 09:51:32 grant Exp $
 #
 
 DISTNAME=		# see Makefile.${OPSYS}.${ARCH}
 PKGNAME=		${MOZILLA}${MOZ_EXTRA}-bin-${MOZ_VER}
 CATEGORIES=		www
-
-.if ${MOZILLA} == "mozilla"
-MOZILLA_SHORT=		${MOZILLA}
-MOZ_DIR=		mozilla${MOZ_VER}
-.else
-MOZILLA_SHORT=		${MOZILLA}
-MOZ_DIR=		${MOZ_VER}
-.endif
-
-.if !defined(MASTER_SITES)
-_MASTER_SITES+=		http://ftp.mozilla.org/pub/mozilla.org/${MOZILLA_SHORT}/releases/${MOZ_DIR}/
-_MASTER_SITES+=		ftp://ftp.mozilla.org/pub/mozilla.org/${MOZILLA_SHORT}/releases/${MOZ_DIR}/
-_MASTER_SITES+=		http://public.planetmirror.com.au/pub/${MOZILLA_SHORT}/releases/${MOZ_DIR}/
-_MASTER_SITES+=		ftp://public.planetmirror.com.au/pub/${MOZILLA_SHORT}/releases/${MOZ_DIR}/
-_MASTER_SITES+=		ftp://ftp.tuwien.ac.at/infosys/browsers/${MOZILLA_SHORT}/releases/${MOZ_DIR}/
-.  for _site_ in ${_MASTER_SITES}
-MASTER_SITES+=		${_site_}
-MASTER_SITES+=		${_site_}contrib/
-.  endfor
-.endif
 
 MAINTAINER=		grant@NetBSD.org
 HOMEPAGE?=		http://www.mozilla.org/
@@ -44,6 +24,26 @@ ARCH=${MACHINE_ARCH:C/i[3-6]86/i386/g}
 
 .if exists(${.CURDIR}/Makefile.${OPSYS}.${ARCH})
 .  include "${.CURDIR}/Makefile.${OPSYS}.${ARCH}"
+.endif
+
+.if ${MOZILLA} == "mozilla"
+MOZILLA_SHORT=		${MOZILLA}
+MOZ_DIR=		mozilla${MOZ_VER}
+.else
+MOZILLA_SHORT=		${MOZILLA}
+MOZ_DIR=		${MOZ_VER}
+.endif
+
+.if !defined(MASTER_SITES)
+_MASTER_SITES+=		http://ftp.mozilla.org/pub/mozilla.org/${MOZILLA_SHORT}/releases/${MOZ_DIR}/
+_MASTER_SITES+=		ftp://ftp.mozilla.org/pub/mozilla.org/${MOZILLA_SHORT}/releases/${MOZ_DIR}/
+_MASTER_SITES+=		http://public.planetmirror.com.au/pub/${MOZILLA_SHORT}/releases/${MOZ_DIR}/
+_MASTER_SITES+=		ftp://public.planetmirror.com.au/pub/${MOZILLA_SHORT}/releases/${MOZ_DIR}/
+_MASTER_SITES+=		ftp://ftp.tuwien.ac.at/infosys/browsers/${MOZILLA_SHORT}/releases/${MOZ_DIR}/
+.  for _site_ in ${_MASTER_SITES}
+MASTER_SITES+=		${_site_}
+MASTER_SITES+=		${_site_}contrib/
+.  endfor
 .endif
 
 # suffix gtk2 builds with -gtk2
