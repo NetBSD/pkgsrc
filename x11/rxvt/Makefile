@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2003/04/28 20:54:45 salo Exp $
+# $NetBSD: Makefile,v 1.42 2004/04/24 21:34:46 snj Exp $
 # FreeBSD Id: Makefile,v 1.13 1997/03/07 12:29:49 obrien Exp
 #
 
@@ -13,7 +13,7 @@ MAINTAINER=		gcw@rxvt.org
 HOMEPAGE=		http://www.rxvt.org/
 COMMENT=		Low memory usage xterm replacement that supports color
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
 USE_X11BASE=		YES
 GNU_CONFIGURE=		YES
@@ -66,5 +66,5 @@ pre-install:
 		${INSTALL_DATA} ${FILESDIR}/Rxvt ${X11PREFIX}/lib/X11/app-defaults; \
 	fi
 
-.include "../../graphics/xpm/buildlink2.mk"
+.include "../../graphics/xpm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
