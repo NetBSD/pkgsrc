@@ -1,7 +1,16 @@
-$NetBSD: patch-ab,v 1.1.1.1 1999/01/14 20:28:54 frueauf Exp $
+$NetBSD: patch-ab,v 1.2 2002/01/08 19:55:51 agc Exp $
 
---- macros.make.in.orig	Thu Sep 18 22:56:04 1997
-+++ macros.make.in	Sun Sep 27 19:11:17 1998
+--- macros.make.in.orig	Thu Sep 18 21:56:04 1997
++++ macros.make.in	Tue Jan  8 19:47:38 2002
+@@ -19,7 +19,7 @@
+ 
+ # Preprocessing:
+ M4		= @M4@
+-M4FLAGS		= -B10000
++M4FLAGS		= 
+ CPP		= @CPP@
+ CPPFLAGS	= $(INCLUDES) $(DEFINES) @CPPFLAGS@
+ FPP		= @FPP@
 @@ -28,9 +28,9 @@
  
  
