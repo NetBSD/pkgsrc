@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.107 2000/08/17 15:53:58 wiz Exp $
+# $NetBSD: Packages.txt,v 1.108 2000/08/25 20:30:20 tron Exp $
 ###########################################################################
 
 			==========================
@@ -167,7 +167,15 @@ If it is not, then you are advised to read part II of this document,
 "Package Constructor's Guide".
 
 
- 2.1 Where to get pkgsrc
+ 2.1 Requirements
+ ================
+
+To build packages from source on a NetBSD system the "comp" and the "text"
+distribution sets must be installed. If you want to build X11 related
+packages the "xbase" and "xcomp" distribution sets are required, too.
+
+
+ 2.2 Where to get pkgsrc
  =======================
 
 To get the package source going, you need to get the pkgsrc.tar.gz file
@@ -181,7 +189,7 @@ directory /usr/pkgsrc does exist. Then, simply start "sup -v
 /path/to/your/supfile".
 
 
- 2.2 Fetching distfiles
+ 2.3 Fetching distfiles
  ======================
 
 There is one gotcha: The distribution file (i.e. the unmodified source)
@@ -201,7 +209,7 @@ which files to download, "make fetch-list" will tell you what you'll need.
 Put these distfiles into /usr/pkgsrc/distfiles.
 
 
- 2.3 How to build and install
+ 2.4 How to build and install
  ============================
 
 Assuming that has been done, become root and change into the relevant
