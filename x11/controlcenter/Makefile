@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 1999/08/29 12:49:00 rh Exp $
+# $NetBSD: Makefile,v 1.13 1999/10/23 11:08:59 tron Exp $
 #
 
 DISTNAME=		control-center-1.0.6
@@ -7,7 +7,7 @@ MASTER_SITES=		${MASTER_SITE_GNOME:=sources/control-center/}
 MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.gnome.org/
 
-DEPENDS=		gnome-core-1.0.9:../../x11/gnome-core \
+DEPENDS=		gnome-core-*:../../x11/gnome-core \
 			xscreensaver-3.17:../../x11/xscreensaver
 
 GNU_CONFIGURE=		yes

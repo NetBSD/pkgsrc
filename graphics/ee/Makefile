@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 1999/10/22 07:54:17 agc Exp $
+# $NetBSD: Makefile,v 1.10 1999/10/23 11:08:56 tron Exp $
 #
 
 DISTNAME=		ee-0.3.8
@@ -8,7 +8,7 @@ MASTER_SITES=		${MASTER_SITE_GNOME:=gnome-1.0/sources/ee/}
 MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.gnome.org/
 
-DEPENDS=		gnome-core-1.0.9:../../x11/gnome-core
+DEPENDS=		gnome-core-*:../../x11/gnome-core
 
 GNU_CONFIGURE=		yes
 USE_X11BASE=		yes
