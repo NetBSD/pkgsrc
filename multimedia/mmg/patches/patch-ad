@@ -1,0 +1,17 @@
+$NetBSD: patch-ad,v 1.1 2005/02/05 23:45:36 salo Exp $
+
+--- src/common/aac_common.cpp.orig	Sat Jan 29 23:27:27 2005
++++ src/common/aac_common.cpp	Sat Jan 29 23:32:45 2005
+@@ -232,10 +232,10 @@
+ }
+ 
+ bool
+-parse_aac_codec_id(const string &codec_id,
++parse_aac_codec_id(const char *codec_id,
+                    int &id,
+                    int &profile) {
+-  if (codec_id.size() < strlen(MKV_A_AAC_2LC))
++  if (strlen(codec_id) < strlen(MKV_A_AAC_2LC))
+     return false;
+ 
+   if (codec_id[10] == '2')
