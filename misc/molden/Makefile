@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2002/09/24 10:06:49 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2003/03/22 05:51:26 salo Exp $
 
-DISTNAME=	molden3.7
-PKGNAME=	molden-3.7
+DISTNAME=	molden3.8
+PKGNAME=	${DISTNAME:S/molden/&-/}
 CATEGORIES=	misc # chemistry
 MASTER_SITES=	ftp://ftp.cmbi.kun.nl/pub/molgraph/molden/
 EXTRACT_SUFX=	.tar.Z
@@ -38,9 +38,9 @@ _FETCH_MESSAGE=	\
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/molden ${PREFIX}/bin/
 	for d in doc test utils ; do \
-		${INSTALL_DATA_DIR} ${PREFIX}/share/molden/$$d ; \
-		for f in ${WRKSRC}/$$d/* ; do \
-			${INSTALL_DATA} $$f ${PREFIX}/share/molden/$$d ; \
+		${INSTALL_DATA_DIR} ${PREFIX}/share/molden/$${d} ; \
+		for f in ${WRKSRC}/$${d}/* ; do \
+			${INSTALL_DATA} $${f} ${PREFIX}/share/molden/$${d} ; \
 		done ; \
 	done
 
