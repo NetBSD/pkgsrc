@@ -1,0 +1,14 @@
+$NetBSD: patch-ae,v 1.5 2000/06/27 08:15:51 tron Exp $
+
+--- bsd/cpumeter.cc.orig	Tue Feb 16 15:09:22 1999
++++ bsd/cpumeter.cc	Tue Jun 27 10:13:36 2000
+@@ -15,6 +15,9 @@
+ // $Id: patch-ae,v 1.5 2000/06/27 08:15:51 tron Exp $
+ //
+ #include <sys/dkstat.h>         //  For CPUSTATES #define.  BCG
++#if defined(XOSVIEW_NETBSD) && !defined(CPUSTATES)
++#include <sys/sched.h>
++#endif
+ #include <stdlib.h>		//  For use of atoi  BCG
+ #include "general.h"
+ #include "cpumeter.h"
