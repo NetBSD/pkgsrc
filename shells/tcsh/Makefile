@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2002/09/30 23:54:07 jlam Exp $
+# $NetBSD: Makefile,v 1.40 2002/11/17 09:02:01 salo Exp $
 #
 
 DISTNAME=	tcsh-6.12.00
@@ -26,6 +26,8 @@ PLIST_SRC=	${WRKDIR}/PLIST-src
 OS_VERSION!=	${ECHO} ${OS_VERSION} | ${SED} -e 's|5\.|2.|'
 LOWER_OPSYS=	solaris${OS_VERSION}
 .endif
+
+PKG_SHELL?=	${PREFIX}/bin/tcsh
 
 post-install:
 	@${ECHO} "Installing message catalogues"
@@ -72,18 +74,6 @@ post-install:
 		shift 1;					\
 	    done;						\
 	done
-	@${ECHO} "updating /etc/shells";			\
-	${TOUCH} /etc/shells;					\
-	${CP} /etc/shells /etc/shells.bak;			\
-	if [ "${PREFIX}" = / ];then				\
-		TCSHPATH=/bin/tcsh;				\
-	else							\
-		TCSHPATH=${PREFIX}/bin/tcsh;			\
-	fi;							\
-	(							\
-		${GREP} -v '^$${TCSHPATH}$$' /etc/shells.bak || \
-		${TRUE};					\
-		${ECHO} $${TCSHPATH}				\
-	) >/etc/shells
 
+.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
