@@ -6,4 +6,5 @@ on atoms), fast and powerful C/C++ interface, autoloading,
 GNU-readline interface.  SWI-Prolog supports architectures with 32-bit
 or greater (64-bit) word-length.  
 
-Packages are available in the swi-prolog-packages package.
+This is the core package, packages are available in the
+swi-prolog-packages package.
