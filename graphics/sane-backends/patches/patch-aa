@@ -1,0 +1,46 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/02/21 19:53:27 veego Exp $
+
+--- backend/Makefile.in	Thu Nov 30 21:05:49 2000
++++ backend/Makefile.in	Sun Feb 18 16:30:49 2001
+@@ -33,7 +33,7 @@
+ INSTALL_PROGRAM = @INSTALL_PROGRAM@
+ INSTALL_DATA = @INSTALL_DATA@
+ RANLIB = @RANLIB@
+-LN_S = @LN_S@
++LN_S = @LN_S@ -f
+ 
+ CC = @CC@
+ INCLUDES = -I. -I$(srcdir) -I$(top_builddir)/include -I$(top_srcdir)/include
+@@ -93,7 +93,7 @@
+ 	$(MKDIR) $(libdir) $(libsanedir) $(configdir)
+ 	@list="$(LIBS)"; for be in $$list; do \
+ 	  echo installing $${be} in $(libsanedir)...; \
+-	  $(LIBTOOL) $(MINST) $(INSTALL_PROGRAM) $${be} $(libsanedir)/$${be} \
++	  $(LIBTOOL) $(MINST) $(INSTALL_DATA) $${be} $(libsanedir)/$${be} \
+ 	    || exit 1; \
+ 	done
+ 	@$(LIBTOOL) $(MINST) --finish $(libsanedir)
+@@ -101,10 +101,14 @@
+ 	@dllend=`../tools/libtool-get-dll-ext libsane-dll.la`; \
+ 	list="$(ALL_BACKENDS)"; cd $(libsanedir) && for be in $$list; do \
+ 	  file=libsane-$${be}.$$dllend.$(V_MAJOR); \
++	  lnkf=libsane-$${be}.so.$(V_MAJOR); \
+ 	  lib=`grep dlname= libsane-$${be}.la | cut -f2 -d"'"`; \
+ 	  if test ! -f $${file} -a -n "$${lib}"; then \
+ 	    $(LN_S) $${lib} $${file}; \
+ 	  fi; \
++	  if test ! -f $${lnkf} -a -n "$${lib}"; then \
++	    $(LN_S) $${lib} $${lnkf}; \
++	  fi; \
+ 	done
+ 	@# Assume the dll name without any versions is last
+ 	@dllend=`../tools/libtool-get-dll-ext libsane-dll.la`; \
+@@ -116,7 +120,7 @@
+ 	  nn=`echo $$n | sed 's,^libsane-dll,libsane,'`; \
+ 	  (cd ..; $(LN_S) sane/$$n $$nn); \
+ 	done || exit 1
+-	$(LIBTOOL) $(MINST) $(INSTALL_PROGRAM) libsane.la $(libdir)/libsane.la
++	$(LIBTOOL) $(MINST) $(INSTALL_DATA) libsane.la $(libdir)/libsane.la
+ 	@list="$(CONFIGS)"; for cfg in $$list; do \
+ 	  if test ! -r $(srcdir)/$${cfg}; then continue; fi; \
+ 	  if test -f $(configdir)/$${cfg}; then \
