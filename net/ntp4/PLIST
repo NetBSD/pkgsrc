@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/02/28 13:51:24 fredb Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/07/16 14:57:08 fredb Exp $
 bin/ntpd
 bin/ntpdate
 bin/ntpdc
@@ -54,6 +54,7 @@ share/doc/html/ntp4/driver37.htm
 share/doc/html/ntp4/driver38.htm
 share/doc/html/ntp4/driver39.htm
 share/doc/html/ntp4/driver40.htm
+share/doc/html/ntp4/driver42.html
 share/doc/html/ntp4/exec.htm
 share/doc/html/ntp4/extern.htm
 share/doc/html/ntp4/gadget.htm
