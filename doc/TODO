@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2883 2005/01/11 14:44:02 xtraeme Exp $
+$NetBSD: TODO,v 1.2884 2005/01/12 10:59:32 adam Exp $
 
 Suggested new packages
 ======================
@@ -918,7 +918,6 @@ Suggested package updates
 	o pgpdump-0.24
 	o phoon-20030120
 	o photopc-3.05
-	o php5-5.0.3
 	o phylip-3.62
 	o piewm-1.03
 	o pilot-link-0.11.8
