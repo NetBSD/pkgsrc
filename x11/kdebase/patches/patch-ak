@@ -1,0 +1,15 @@
+$NetBSD: patch-ak,v 1.1 1998/11/10 22:23:02 tron Exp $
+
+--- kdm/kdmshutdown.h.orig	Thu Nov 20 14:08:11 1997
++++ kdm/kdmshutdown.h	Tue Nov 10 21:41:48 1998
+@@ -36,8 +36,8 @@
+      Q_OBJECT
+ public:
+      KDMShutdown( int mode, QWidget* _parent=0, const char* _name=0,
+-		  const char* _shutdown = "/sbin/halt", 
+-		  const char* _restart  = "/sbin/reboot");
++		  const char* _shutdown = "/sbin/shutdown -h now", 
++		  const char* _restart  = "/sbin/shutdown -r now");
+ private slots:
+      void rb_clicked(int);
+      void pw_entered();
