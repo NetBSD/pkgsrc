@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1501 2004/09/27 00:27:45 rh Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1502 2004/09/27 14:44:31 tv Exp $
 #
 # This file is in the public domain.
 #
@@ -4491,7 +4491,7 @@ _PRINT_PLIST_DIRS_CMD=	\
 	${FIND} ${PREFIX}/. -xdev -newer ${EXTRACT_COOKIE} -type d -print
 _PRINT_LA_LIBNAMES=	${.CURDIR}/../../mk/scripts/print-la-libnames
 
-.if !empty(LIBTOOLIZE_PLIST:M[yY][eE][sS])
+.if defined(USE_LIBTOOL)
 _PRINT_PLIST_LIBTOOLIZE_FILTER?=					\
 	(								\
 	  if ${TEST} -d ${WRKDIR}; then					\
@@ -4959,7 +4959,7 @@ BEGIN {									\
 .if ${PLIST_TYPE} == "dynamic"
 _PLIST_AWK_LIBTOOL?=	# empty
 .else
-.  if !empty(LIBTOOLIZE_PLIST:M[yY][eE][sS])
+.  if defined(USE_LIBTOOL)
 _PLIST_AWK_LIBTOOL?=							\
 /\.la$$/ {								\
 	system("cd ${PREFIX} && ${SH} ${_PRINT_LA_LIBNAMES} " $$0)	\
