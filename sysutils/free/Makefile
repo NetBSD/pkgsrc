@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/01/20 12:26:15 agc Exp $
+# $NetBSD: Makefile,v 1.4 2005/02/21 20:26:14 hubertf Exp $
 #
 
 DISTNAME=		free-1.0
@@ -6,7 +6,7 @@ CATEGORIES=		sysutils
 MASTER_SITES=		# empty
 DISTFILES=		# empty
 
-MAINTAINER=		hubertf@NetBSD.org
+MAINTAINER=		tech-pkg@NetBSD.org
 COMMENT=		Displays memory usage
 
 USE_PKGINSTALL=		YES

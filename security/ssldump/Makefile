@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/10/03 00:18:13 tv Exp $
+# $NetBSD: Makefile,v 1.12 2005/02/21 20:26:14 hubertf Exp $
 #
 
 DISTNAME=	ssldump-0.9b3
@@ -6,7 +6,7 @@ PKGREVISION=	3
 CATEGORIES=	security
 MASTER_SITES=	http://www.rtfm.com/ssldump/
 
-MAINTAINER=	hubertf@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.rtfm.com/ssldump/
 COMMENT=	SSLv3/TLS network protocol analyzer
 
