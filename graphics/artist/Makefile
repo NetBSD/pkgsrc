@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/11/29 08:59:48 martti Exp $
+# $NetBSD: Makefile,v 1.2 2003/01/11 09:31:09 uebayasi Exp $
 #
 
 DISTNAME=	artist-1.2.4
@@ -9,17 +9,20 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.lysator.liu.se/~tab/artist/
 COMMENT=	Elisp drawing package with mouse and keyboard support
 
-DEPENDS+=	emacs>=19.29:../../editors/emacs
-
 GNU_CONFIGURE=	YES
+
+.include "../../mk/emacs.mk"
+
+.if ${EMACS_FLAVOR} == "xemacs"
+MAKE_FLAGS+=	EMACS=xemacs
+MAKE_FLAGS+=	lispdir=${EMACS_LISPPREFIX}/artist
+.endif
 
 DOCS=		BUGS COPYING ChangeLog INSTALL README TODO
 DOCDIR=		${PREFIX}/share/doc/artist
 
 post-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}
-.for f in ${DOCS}
-	${INSTALL_DATA} ${WRKSRC}/$f ${DOCDIR}
-.endfor
+	cd ${WRKSRC} && ${INSTALL_DATA} ${DOCS} ${DOCDIR}
 
 .include "../../mk/bsd.pkg.mk"
