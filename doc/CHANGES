@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3542 2003/09/26 12:41:22 wiz Exp $
+$NetBSD: CHANGES,v 1.3543 2003/09/26 15:05:53 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3955,3 +3955,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated gmplayer to 1.0rc1nb1 [salo 2003-09-26]
 	Updated mencoder to 1.0rc1nb1 [salo 2003-09-26]
 	Updated marbles to 1.0.2nb3 [wiz 2003-09-26]
+	Updated gaim to 0.69 [jmmv 2003-09-26]
