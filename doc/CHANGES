@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4753 2004/02/09 18:15:15 jmmv Exp $
+$NetBSD: CHANGES,v 1.4754 2004/02/09 18:27:29 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -732,3 +732,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated nawk to 20040207 [cjep 2004-02-09]
 	Updated sylpheed-claws to 0.9.9 [adam 2004-02-09]
 	Updated fam to 2.6.10 [jmmv 2004-02-09]
+	Updated gtkspell to 2.0.5 [minskim 2004-02-09]
