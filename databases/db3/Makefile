@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2002/02/12 11:13:22 seb Exp $
+# $NetBSD: Makefile,v 1.11 2002/07/22 10:36:53 grant Exp $
 
 DISTNAME=	db-3.3.11
 PKGNAME=	db3-3.11.2
 CATEGORIES=	databases
-MASTER_SITES=	http://www.sleepycat.com/update/3.3.11/
+MASTER_SITES=	http://www.sleepycat.com/update/snapshot/
 
 MAINTAINER=	wrstuden@netbsd.org
 HOMEPAGE=	http://www.sleepycat.com/
