@@ -1,4 +1,4 @@
-]2;feyrer@miyu:/usr/pkgsrc/mail/qpopper/work/qpopper2.41beta1 ]1;miyu--- popper.h.orig	Wed Nov 19 22:20:39 1997
+--- popper.h.orig	Wed Nov 19 22:20:39 1997
 +++ popper.h	Sat Mar  7 00:42:23 1998
 @@ -31,14 +31,26 @@
  
