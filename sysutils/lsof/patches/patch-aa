@@ -1,18 +1,27 @@
-$NetBSD: patch-aa,v 1.17 2001/04/30 14:37:24 agc Exp $
+$NetBSD: patch-aa,v 1.18 2002/09/12 19:12:19 tron Exp $
 
-If LSOF_MORE_SECURE is non-zero, compile lsof with security, and
-only let unprivileged (non-root) users view their own open files
-
---- dialects/n+obsd/machine.h	2001/04/30 09:23:38	1.1
-+++ dialects/n+obsd/machine.h	2001/04/30 10:06:24
-@@ -373,7 +373,9 @@
-  * (the one that its user logged on with) of the lsof process.
-  */
+--- dialects/n+obsd/dlsof.h.orig	Mon Jun 17 03:44:15 2002
++++ dialects/n+obsd/dlsof.h	Thu Sep 12 21:08:10 2002
+@@ -46,6 +46,10 @@
+ #include <string.h>
+ #include <unistd.h>
  
--/* #define	HASSECURITY	1 */
-+#if LSOF_MORE_SECURE
-+#define	HASSECURITY	1
-+#endif
++#define	_KERNEL
++#include <sys/buf.h>
++#undef	_KERNEL
++
+ # if	defined(HASGETBOOTFILE)
+ #include <util.h>
+ # endif	/* defined(HASGETBOOTFILE) */
+@@ -209,9 +213,9 @@
  
- 
- /*
+ # if	defined(HASNULLFS)
+ #define	_KERNEL
+-#  if	defined(NETBSDV) && NETBSDV>=1060
++#  if	defined(NETBSDV) && NETBSDV>=1050
+ #include "netexport.h"
+-#  endif	/* defined(NETBSDV) && NETBSDV>=1060 */
++#  endif	/* defined(NETBSDV) && NETBSDV>=1050 */
+ #include <miscfs/nullfs/null.h>
+ #undef	_KERNEL
+ # endif	/* defined(HASNULLFS) */
