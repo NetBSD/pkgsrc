@@ -1,17 +1,17 @@
-@comment $NetBSD: PLIST,v 1.6 2001/03/01 14:35:07 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2001/03/04 09:12:08 jlam Exp $
 bin/gqview
 man/man1/gqview.1
-share/locale/de/LC_MESSAGES/gqview.mo
-share/locale/es/LC_MESSAGES/gqview.mo
-share/locale/fr/LC_MESSAGES/gqview.mo
-share/locale/hu/LC_MESSAGES/gqview.mo
-share/locale/it/LC_MESSAGES/gqview.mo
-share/locale/ja/LC_MESSAGES/gqview.mo
-share/locale/pt_BR/LC_MESSAGES/gqview.mo
-share/locale/pl/LC_MESSAGES/gqview.mo
-share/locale/ru/LC_MESSAGES/gqview.mo
-share/locale/sk/LC_MESSAGES/gqview.mo
-share/locale/sl/LC_MESSAGES/gqview.mo
-share/locale/tr/LC_MESSAGES/gqview.mo
-share/locale/zh_CN.GB2312/LC_MESSAGES/gqview.mo
-share/locale/zh_TW.Big5/LC_MESSAGES/gqview.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gqview.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/gqview.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gqview.mo
+${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/gqview.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/gqview.mo
+${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/gqview.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/gqview.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/gqview.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/gqview.mo
+${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/gqview.mo
+${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/gqview.mo
+${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/gqview.mo
+${PKGLOCALEDIR}/locale/zh_CN.GB2312/LC_MESSAGES/gqview.mo
+${PKGLOCALEDIR}/locale/zh_TW.Big5/LC_MESSAGES/gqview.mo
