@@ -1,0 +1,28 @@
+$NetBSD: patch-al,v 1.1.1.1 2004/05/14 15:42:15 dillo Exp $
+
+This includes sound-20040508.diff from the master site.
+
+--- systemstub.h.orig	Sun Apr 18 16:17:32 2004
++++ systemstub.h
+@@ -41,6 +41,8 @@ struct PlayerInput {
+ };
+ 
+ struct SystemStub {
++	typedef void (*AudioCallback)(void *param, uint8 *stream, int len);
++	
+ 	PlayerInput _pi;
+ 
+ 	virtual ~SystemStub() {}
+@@ -54,6 +56,12 @@ struct SystemStub {
+ 	virtual void processEvents() = 0;
+ 	virtual void sleep(uint32 duration) = 0;
+ 	virtual uint32 getTimeStamp() = 0;
++
++	virtual void lockAudio() = 0;
++	virtual void unlockAudio() = 0;
++	virtual void startAudio(AudioCallback callback, void *param) = 0;
++	virtual void stopAudio() = 0;
++	virtual uint32 getOutputSampleRate() = 0;
+ };
+ 
+ extern SystemStub *SystemStub_SDL_create();

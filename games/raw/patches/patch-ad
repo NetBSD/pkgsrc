@@ -1,0 +1,219 @@
+$NetBSD: patch-ad,v 1.1.1.1 2004/05/14 15:42:14 dillo Exp $
+
+This includes sound-20040508.diff and txhf-20040426.diff from the
+master site.
+
+--- logic.cpp.orig	Wed Apr 21 20:20:36 2004
++++ logic.cpp
+@@ -18,14 +18,15 @@
+ 
+ #include <ctime>
+ #include "logic.h"
++#include "mixer.h"
+ #include "resource.h"
+ #include "video.h"
+ #include "serializer.h"
+ #include "systemstub.h"
+ 
+ 
+-Logic::Logic(Resource *res, Video *vid, SystemStub *stub)
+-	: _res(res), _vid(vid), _stub(stub) {
++Logic::Logic(Mixer *mix, Resource *res, Video *vid, SystemStub *stub)
++	: _mix(mix), _res(res), _vid(vid), _stub(stub) {
+ }
+ 
+ void Logic::init() {
+@@ -57,6 +58,16 @@ void Logic::op_add() {
+ }
+ 
+ void Logic::op_addConst() {
++	if (_res->_curPtrsId == 0x3E86 && _scriptPtr.pc == _res->_segCode + 0x6D48) {
++		warning("Logic::op_addConst() hack for non-stop looping gun bug");
++		// the script 0x27 slot 0x17 doesn't stop the gun sound from looping, I 
++		// don't really know why ; for now, let's play the 'stopping sound' like 
++		// the other scripts do
++		//  (0x6D43) jmp(0x6CE5)
++		//  (0x6D46) break
++		//  (0x6D47) VAR(6) += -50
++		snd_playSound(0x5B, 1, 64, 1);
++	}
+ 	uint8 i = _scriptPtr.fetchByte();
+ 	int16 n = _scriptPtr.fetchWord();
+ 	debug(DBG_LOGIC, "Logic::op_addConst(0x%02X, %d)", i, n);
+@@ -68,12 +79,18 @@ void Logic::op_call() {
+ 	uint8 sp = _stackPtr;
+ 	debug(DBG_LOGIC, "Logic::op_call(0x%X)", off);
+ 	_scriptStackCalls[sp] = _scriptPtr.pc - _res->_segCode;
++	if (_stackPtr == 0xFF) {
++		error("Logic::op_call() ec=0x%X stack overflow", 0x8F);
++	}
+ 	++_stackPtr;
+ 	_scriptPtr.pc = _res->_segCode + off;
+ }
+ 
+ void Logic::op_ret() {
+ 	debug(DBG_LOGIC, "Logic::op_ret()");
++	if (_stackPtr == 0) {
++		error("Logic::op_ret() ec=0x%X stack underflow", 0x8F);
++	}	
+ 	--_stackPtr;
+ 	uint8 sp = _stackPtr;
+ 	_scriptPtr.pc = _res->_segCode + _scriptStackCalls[sp];
+@@ -123,13 +140,14 @@ void Logic::op_condJmp() {
+ #endif
+ 	uint8 op = _scriptPtr.fetchByte();
+ 	int16 b = _scriptVars[_scriptPtr.fetchByte()];
+-	int16 a = _scriptPtr.fetchByte();	
++	uint8 c = _scriptPtr.fetchByte();	
++	int16 a;
+ 	if (op & 0x80) {
+-		a = _scriptVars[a];
++		a = _scriptVars[c];
++	} else if (op & 0x40) {
++		a = c * 256 + _scriptPtr.fetchByte();
+ 	} else {
+-		if (op & 0x40) {
+-			a = (a << 8) | _scriptPtr.fetchByte();
+-		}
++		a = c;
+ 	}
+ 	debug(DBG_LOGIC, "Logic::op_condJmp(%d, 0x%02X, 0x%02X)", op, b, a);
+ 	bool expr = false;
+@@ -178,21 +196,19 @@ void Logic::op_resetScript() {
+ 		return;
+ 	}
+ 	++n;
+-	uint8 _al = _scriptPtr.fetchByte();
++	uint8 a = _scriptPtr.fetchByte();
+ 
+-	debug(DBG_LOGIC, "Logic::op_resetScript(%d, %d, %d)", j, i, _al);
++	debug(DBG_LOGIC, "Logic::op_resetScript(%d, %d, %d)", j, i, a);
+ 
+-	if (_al == 2) {
+-		uint16 *_si = &_scriptPos[1][j];
++	if (a == 2) {
++		uint16 *p = &_scriptPos[1][j];
+ 		while (n--) {
+-			*_si = 0xFFFE;
+-			++_si;
++			*p++ = 0xFFFE;
+ 		}
+-	} else if (_al < 2) {
+-		uint8 *_si = &_scriptPaused[1][j];
++	} else if (a < 2) {
++		uint8 *p = &_scriptPaused[1][j];
+ 		while (n--) {
+-			*_si = _al;
+-			++_si;
++			*p++ = a;
+ 		}
+ 	}
+ }
+@@ -267,54 +283,60 @@ void Logic::op_and() {
+ 	uint8 i = _scriptPtr.fetchByte();
+ 	uint16 n = _scriptPtr.fetchWord();
+ 	debug(DBG_LOGIC, "Logic::op_and(0x%02X, %d)", i, n);
+-	_scriptVars[i] &= n;
++	_scriptVars[i] = (uint16)_scriptVars[i] & n;
+ }
+ 
+ void Logic::op_or() {
+ 	uint8 i = _scriptPtr.fetchByte();
+ 	uint16 n = _scriptPtr.fetchWord();
+ 	debug(DBG_LOGIC, "Logic::op_or(0x%02X, %d)", i, n);
+-	_scriptVars[i] |= n;
++	_scriptVars[i] = (uint16)_scriptVars[i] | n;
+ }
+ 
+ void Logic::op_shl() {
+ 	uint8 i = _scriptPtr.fetchByte();
+ 	uint16 n = _scriptPtr.fetchWord();
+ 	debug(DBG_LOGIC, "Logic::op_shl(0x%02X, %d)", i, n);
+-	_scriptVars[i] <<= n;
++	_scriptVars[i] = (uint16)_scriptVars[i] << n;
+ }
+ 
+ void Logic::op_shr() {
+ 	uint8 i = _scriptPtr.fetchByte();
+ 	uint16 n = _scriptPtr.fetchWord();
+ 	debug(DBG_LOGIC, "Logic::op_shr(0x%02X, %d)", i, n);
+-	_scriptVars[i] >>= n;
++	_scriptVars[i] = (uint16)_scriptVars[i] >> n;
+ }
+ 
+-void Logic::op_soundUnk1() {
+-	uint16 b = _scriptPtr.fetchWord();
+-	uint16 c = _scriptPtr.fetchWord();
+-	uint8 a = _scriptPtr.fetchByte();
+-	debug(DBG_LOGIC, "Logic::op_soundUnk1(0x%X, 0x%X, %d)", b, c, a);
+-	// XXX
++void Logic::op_playSound() {
++	uint16 resNum = _scriptPtr.fetchWord();
++	uint8 freq = _scriptPtr.fetchByte();
++	uint8 vol = _scriptPtr.fetchByte();
++	uint8 channel = _scriptPtr.fetchByte();
++	debug(DBG_LOGIC, "Logic::op_playSound(0x%X, %d, %d, %d)", resNum, freq, vol, channel);
++	snd_playSound(resNum, freq, vol, channel);
+ }
+ 
+ void Logic::op_updateMemList() {
+ 	uint16 num = _scriptPtr.fetchWord();
+ 	debug(DBG_LOGIC, "Logic::op_updateMemList(%d)", num);
+-	_res->update(num);
++	if (num == 0) {
++		_mix->stopAll();
++		_res->invalidateRes();
++	} else {
++		_res->update(num);
++	}
+ }
+ 
+-void Logic::op_soundUnk2() {
+-	uint16 b = _scriptPtr.fetchWord();
+-	uint16 c = _scriptPtr.fetchWord();
+-	uint8 a = _scriptPtr.fetchByte();
+-	debug(DBG_LOGIC, "Logic::op_soundUnk2(0x%X, 0x%X, %d)", b, c, a);
+-	// XXX
++void Logic::op_playMusic() {
++	uint16 resNum = _scriptPtr.fetchWord();
++	uint16 delay = _scriptPtr.fetchWord();
++	uint8 pos = _scriptPtr.fetchByte();
++	debug(DBG_LOGIC, "Logic::op_playMusic(0x%X, %d, %d)", resNum, delay, pos);
++//	snd_playMusic(resNum, delay, pos);
+ }
+ 
+ void Logic::restartAt(uint16 ptrId) {
+-	// XXX
++	_mix->stopAll();
+ 	_scriptVars[0xE4] = 0x14;
+ 	_res->setupPtrs(ptrId);
+ 	memset((uint8 *)_scriptPos, 0xFF, sizeof(_scriptPos));
+@@ -489,6 +511,28 @@ void Logic::inp_handleSpecialKeys() {
+ 	// XXX
+ 	if (_scriptVars[0xC9] == 1) {
+ 		warning("Logic::inp_handleSpecialKeys() unhandled case (_scriptVars[0xC9] == 1)");
++	}
++}
++
++void Logic::snd_playSound(uint16 resNum, uint8 freq, uint8 vol, uint8 channel) {
++	debug(DBG_SND, "snd_playSound(0x%X, %d, %d, %d)", resNum, freq, vol, channel);
++	// XXX if (_res->_curPtrsId != 0x3E80 && _scriptVar_0xBF != _scriptVars[0xBF])
++	MemEntry *me = &_res->_memList[resNum];
++	if (me->valid == 1) {
++		if (vol == 0) {
++			_mix->stopChannel(channel);
++		} else {
++			MixerChunk mc;
++			memset(&mc, 0, sizeof(mc));
++			mc.data = me->bufPtr + 8; // skip header
++			mc.len = READ_BE_UINT16(me->bufPtr) * 2;
++			mc.loopLen = READ_BE_UINT16(me->bufPtr + 2) * 2;
++			if (mc.loopLen != 0) {
++				mc.loopPos = mc.len;
++			}
++			assert(freq < 40);
++			_mix->playChannel(channel & 3, &mc, _freqTable[freq], MIN(vol, 0x3F));
++		}
+ 	}
+ }
+ 
