@@ -1,4 +1,4 @@
-$NetBSD: PKGVIEWS,v 1.1.2.5 2003/07/30 11:25:10 jlam Exp $
+$NetBSD: PKGVIEWS,v 1.1.2.6 2003/07/30 11:27:45 jlam Exp $
 
 Package views integration plan:
 ==============================
@@ -43,3 +43,10 @@ Possible problems:
     so that they install into depot directories, but I'm ignoring them
     for now, or at least until we get much further along on step (2).
     Also, I'll figure out how to deal with binary packages later on.
+
+(*) I need to think about how to best integrate buildlink2 with
+    pkgviews.  One of the motivating philosophies of buildlink2 is
+    that we don't lie to the package configure/build procedure about
+    the true location of libraries and headers.  We need to think of
+    a way to hide ${LOCALBASE} but not ${DEPOTBASE}/* from the package
+    configure/build processes.
