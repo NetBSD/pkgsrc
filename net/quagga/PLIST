@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/08/13 07:26:57 itojun Exp $
+info/quagga.info
+man/man1/vtysh.1
+man/man8/bgpd.8
+man/man8/ospfd.8
+man/man8/ripd.8
+man/man8/zebra.8
+sbin/bgpd
+sbin/ospfd
+sbin/ripd
+sbin/zebra
+share/examples/quagga/bgpd.conf.sample
+share/examples/quagga/bgpd.conf.sample2
+share/examples/quagga/ripd.conf.sample
+share/examples/quagga/zebra.conf.sample
+info/quagga.info-1
+info/quagga.info-2
+info/quagga.info-3
+info/quagga.info-4
+@dirrm share/examples/quagga
