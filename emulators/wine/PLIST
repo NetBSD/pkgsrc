@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2002/07/29 09:16:38 junyoung Exp $
+@comment $NetBSD: PLIST,v 1.5 2002/08/05 16:38:58 junyoung Exp $
 bin/function_grep.pl
 bin/notepad
 bin/progman
@@ -6,6 +6,7 @@ bin/regedit
 bin/regsvr32
 bin/uninstaller
 bin/wcmd
+bin/widl
 bin/wine
 bin/winebuild
 bin/wineclipsrv
@@ -185,7 +186,6 @@ include/wine/wine/obj_oleview.h
 include/wine/wine/obj_picture.h
 include/wine/wine/obj_property.h
 include/wine/wine/obj_propertystorage.h
-include/wine/wine/obj_queryassociations.h
 include/wine/wine/obj_serviceprovider.h
 include/wine/wine/obj_shellbrowser.h
 include/wine/wine/obj_shellextinit.h
@@ -367,12 +367,14 @@ lib/wine/winaspi.dll.so
 lib/wine/windebug.dll.so
 lib/wine/winealsa.drv.so
 lib/wine/winearts.drv.so
+lib/wine/wineaudioio.drv.so
 lib/wine/wineconsole.exe.so
 lib/wine/winedbg.exe.so
 lib/wine/winedos.dll.so
 lib/wine/winefile.exe.so
 lib/wine/winemine.exe.so
 lib/wine/winemp3.acm.so
+lib/wine/winenas.drv.so
 lib/wine/wineoss.drv.so
 lib/wine/winepath.exe.so
 lib/wine/wineps.dll.so
@@ -395,10 +397,12 @@ lib/wine/ws2_32.dll.so
 lib/wine/wsock32.dll.so
 lib/wine/x11drv.dll.so
 man/man1/wine.1
+man/man1/winebuild.1
 man/man1/winemaker.1
 man/man1/wmc.1
 man/man1/wrc.1
 man/man5/wine.conf.5
+share/aclocal/wine.m4
 share/examples/wine/generic.ppd
 share/examples/wine/system.ini
 share/examples/wine/wine.conf

@@ -1,20 +1,13 @@
-$NetBSD: patch-ab,v 1.10 2002/07/29 09:16:39 junyoung Exp $
+$NetBSD: patch-ab,v 1.11 2002/08/05 16:38:58 junyoung Exp $
 
-Index: memory/global.c
-===================================================================
-RCS file: /home/wine/wine/memory/global.c,v
-retrieving revision 1.66
-retrieving revision 1.67
-diff -u -r1.66 -r1.67
---- memory/global.c	3 Jul 2002 21:10:44 -0000	1.66
-+++ memory/global.c	25 Jul 2002 23:57:34 -0000	1.67
-@@ -28,6 +28,9 @@
- #include <stdio.h>
- #include <unistd.h>
- #include <string.h>
-+#ifdef HAVE_SYS_PARAM_H
-+#include <sys/param.h>
-+#endif
- #ifdef HAVE_SYS_SYSCTL_H
- #include <sys/sysctl.h>
- #endif
+--- Make.rules.in.orig	Sat Aug  3 04:34:21 2002
++++ Make.rules.in	Mon Aug  5 14:57:17 2002
+@@ -112,7 +112,7 @@
+ CLEAN_FILES     = *.o *.a *.so *.ln *.$(LIBEXT) \\\#*\\\# *~ *% .\\\#* *.bak *.orig *.rej \
+                   *.flc *.spec.c *.spec.def *.glue.c *.dbg.c y.tab.c y.tab.h @LEX_OUTPUT_ROOT@.c core
+ 
+-OBJS = $(C_SRCS:.c=.o) $(GEN_C_SRCS:.c=.o) $(GEN_ASM_SRCS:.s=.o) $(ASM_SRCS:.S=.o) $(EXTRA_OBJS)
++OBJS = $(EXTRA_OBJS) $(C_SRCS:.c=.o) $(GEN_C_SRCS:.c=.o) $(GEN_ASM_SRCS:.s=.o) $(ASM_SRCS:.S=.o)
+ 
+ RCOBJS = $(RC_SRCS:.rc=.res.o)
+ LINTS  = $(C_SRCS:.c=.ln)
