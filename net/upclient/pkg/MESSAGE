@@ -1,6 +1,6 @@
 To fully configure the upclient, you need to
 
-1. Register at http://uptime.hexon.cx/register.html
+1. Register at http://www.uptimes.net/
 2. Confirm your account as stated in the mail you get
 3. Login on the web site and add a host, note the host ID
 4. Copy @PREFIX@/etc/upclient.conf.example to @PREFIX@/etc/upclient.conf
