@@ -1,21 +1,11 @@
-$NetBSD: patch-aa,v 1.1.1.1 2002/05/31 13:00:02 seb Exp $
+$NetBSD: patch-aa,v 1.2 2003/05/31 13:09:00 uebayasi Exp $
 
---- Imakefile.orig	Tue Mar  3 21:59:39 1998
-+++ Imakefile	Tue Dec 21 01:29:48 1999
-@@ -81,7 +81,8 @@
- OBJS = $(COMMONOBJS) $(KINPUTOBJS) $(XIMPOBJS) $(IMOBJS)
+--- Imakefile.orig	Sat Oct 26 12:11:13 2002
++++ Imakefile
+@@ -108,5 +108,5 @@
+ 	  $(SKKSERVER_USE_INET6)
  
- #ifdef SkkServer
--SKKSERVER_DEFS = -DDEFAULT_SKKSERVER=\"SkkServer\"
-+SKKSERVER_DEFS = -DDEFAULT_SKKSERVER=\"SkkServer\"	\
-+	-DSKK_CONF=\"$(EXECBASE)/etc/skk.conf\"
- #endif
- 
- #ifdef SkkPort
-@@ -95,5 +96,5 @@
- DEFINES = $(SKKSERVER_DEFS) $(SKKPORT_DEFS) $(SKK_DEBUGFLAGS) \
-           $(SKKFONT_DEFS) $(SKK_KINPUTDEFS) $(SKK_XIMPDEFS) $(SKK_IMDEFS)
- 
--ComplexProgramTarget(skkinput)
-+ComplexProgramTargetNoMan(skkinput)
+ ComplexProgramTarget(skkinput)
+-InstallManPageLong(skkinput.ja,$(MANPATH)/ja/man1,skkinput)
++InstallManPageLong(skkinput.ja,$(MANPATH)/ja_JP.EUC/cat1,skkinput)
  InstallAppDefaults(Skkinput)
