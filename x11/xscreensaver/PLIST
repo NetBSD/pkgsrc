@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.15 2003/09/08 12:11:15 wiz Exp $
+@comment $NetBSD: PLIST,v 1.16 2003/12/13 19:22:12 jmmv Exp $
 bin/xscreensaver
 bin/xscreensaver-command
-bin/xscreensaver-demo
 bin/xscreensaver-getimage
 bin/xscreensaver-getimage-file
 bin/xscreensaver-getimage-video
@@ -12,11 +11,13 @@ libexec/xscreensaver/anemone
 libexec/xscreensaver/ant
 libexec/xscreensaver/antspotlight
 libexec/xscreensaver/apollonian
+libexec/xscreensaver/apple2
 libexec/xscreensaver/atlantis
 libexec/xscreensaver/attraction
 libexec/xscreensaver/atunnel
 libexec/xscreensaver/barcode
 libexec/xscreensaver/blaster
+libexec/xscreensaver/blinkbox
 libexec/xscreensaver/blitspin
 libexec/xscreensaver/blocktube
 libexec/xscreensaver/bouboule
@@ -37,11 +38,13 @@ libexec/xscreensaver/config/anemone.xml
 libexec/xscreensaver/config/ant.xml
 libexec/xscreensaver/config/antspotlight.xml
 libexec/xscreensaver/config/apollonian.xml
+libexec/xscreensaver/config/apple2.xml
 libexec/xscreensaver/config/atlantis.xml
 libexec/xscreensaver/config/attraction.xml
 libexec/xscreensaver/config/atunnel.xml
 libexec/xscreensaver/config/barcode.xml
 libexec/xscreensaver/config/blaster.xml
+libexec/xscreensaver/config/blinkbox.xml
 libexec/xscreensaver/config/blitspin.xml
 libexec/xscreensaver/config/blocktube.xml
 libexec/xscreensaver/config/bouboule.xml
@@ -89,11 +92,13 @@ libexec/xscreensaver/config/flow.xml
 libexec/xscreensaver/config/fluidballs.xml
 libexec/xscreensaver/config/flurry.xml
 libexec/xscreensaver/config/flyingtoasters.xml
+libexec/xscreensaver/config/fontglide.xml
 libexec/xscreensaver/config/forest.xml
 libexec/xscreensaver/config/galaxy.xml
 libexec/xscreensaver/config/gears.xml
 libexec/xscreensaver/config/gflux.xml
 libexec/xscreensaver/config/glblur.xml
+libexec/xscreensaver/config/gleidescope.xml
 libexec/xscreensaver/config/glforestfire.xml
 libexec/xscreensaver/config/glknots.xml
 libexec/xscreensaver/config/glmatrix.xml
@@ -133,6 +138,7 @@ libexec/xscreensaver/config/loop.xml
 libexec/xscreensaver/config/maze.xml
 libexec/xscreensaver/config/menger.xml
 libexec/xscreensaver/config/metaballs.xml
+libexec/xscreensaver/config/mirrorblob.xml
 libexec/xscreensaver/config/moebius.xml
 libexec/xscreensaver/config/moire.xml
 libexec/xscreensaver/config/moire2.xml
@@ -151,6 +157,7 @@ libexec/xscreensaver/config/piecewise.xml
 libexec/xscreensaver/config/pipes.xml
 libexec/xscreensaver/config/polyominoes.xml
 libexec/xscreensaver/config/polytopes.xml
+libexec/xscreensaver/config/pong.xml
 libexec/xscreensaver/config/popsquares.xml
 libexec/xscreensaver/config/pulsar.xml
 libexec/xscreensaver/config/pyro.xml
@@ -199,6 +206,7 @@ libexec/xscreensaver/config/webcollage.xml
 libexec/xscreensaver/config/whirlwindwarp.xml
 libexec/xscreensaver/config/whirlygig.xml
 libexec/xscreensaver/config/worm.xml
+libexec/xscreensaver/config/xanalogtv.xml
 libexec/xscreensaver/config/xaos.xml
 libexec/xscreensaver/config/xdaliclock.xml
 libexec/xscreensaver/config/xearth.xml
@@ -242,11 +250,13 @@ libexec/xscreensaver/flow
 libexec/xscreensaver/fluidballs
 libexec/xscreensaver/flurry
 libexec/xscreensaver/flyingtoasters
+libexec/xscreensaver/fontglide
 libexec/xscreensaver/forest
 libexec/xscreensaver/galaxy
 libexec/xscreensaver/gears
 libexec/xscreensaver/gflux
 libexec/xscreensaver/glblur
+libexec/xscreensaver/gleidescope
 libexec/xscreensaver/glforestfire
 libexec/xscreensaver/glknots
 libexec/xscreensaver/glmatrix
@@ -286,6 +296,7 @@ libexec/xscreensaver/loop
 libexec/xscreensaver/maze
 libexec/xscreensaver/menger
 libexec/xscreensaver/metaballs
+libexec/xscreensaver/mirrorblob
 libexec/xscreensaver/moebius
 libexec/xscreensaver/moire
 libexec/xscreensaver/moire2
@@ -304,6 +315,7 @@ libexec/xscreensaver/piecewise
 libexec/xscreensaver/pipes
 libexec/xscreensaver/polyominoes
 libexec/xscreensaver/polytopes
+libexec/xscreensaver/pong
 libexec/xscreensaver/popsquares
 libexec/xscreensaver/pulsar
 libexec/xscreensaver/pyro
@@ -347,10 +359,10 @@ libexec/xscreensaver/vidwhacker
 libexec/xscreensaver/vines
 libexec/xscreensaver/wander
 libexec/xscreensaver/webcollage
-libexec/xscreensaver/webcollage-helper
 libexec/xscreensaver/whirlwindwarp
 libexec/xscreensaver/whirlygig
 libexec/xscreensaver/worm
+libexec/xscreensaver/xanalogtv
 libexec/xscreensaver/xflame
 libexec/xscreensaver/xjack
 libexec/xscreensaver/xlyap
@@ -364,11 +376,13 @@ man/man1/anemone.1
 man/man1/ant.1
 man/man1/antspotlight.1
 man/man1/apollonian.1
+man/man1/apple2.1
 man/man1/atlantis.1
 man/man1/attraction.1
 man/man1/atunnel.1
 man/man1/barcode.1
 man/man1/blaster.1
+man/man1/blinkbox.1
 man/man1/blitspin.1
 man/man1/blocktube.1
 man/man1/bouboule.1
@@ -413,11 +427,13 @@ man/man1/flow.1
 man/man1/fluidballs.1
 man/man1/flurry.1
 man/man1/flyingtoasters.1
+man/man1/fontglide.1
 man/man1/forest.1
 man/man1/galaxy.1
 man/man1/gears.1
 man/man1/gflux.1
 man/man1/glblur.1
+man/man1/gleidescope.1
 man/man1/glforestfire.1
 man/man1/glknots.1
 man/man1/glmatrix.1
@@ -457,6 +473,7 @@ man/man1/loop.1
 man/man1/maze.1
 man/man1/menger.1
 man/man1/metaballs.1
+man/man1/mirrorblob.1
 man/man1/moebius.1
 man/man1/moire.1
 man/man1/moire2.1
@@ -475,6 +492,7 @@ man/man1/piecewise.1
 man/man1/pipes.1
 man/man1/polyominoes.1
 man/man1/polytopes.1
+man/man1/pong.1
 man/man1/pulsar.1
 man/man1/pyro.1
 man/man1/qix.1
@@ -520,6 +538,7 @@ man/man1/webcollage.1
 man/man1/whirlwindwarp.1
 man/man1/whirlygig.1
 man/man1/worm.1
+man/man1/xanalogtv.1
 man/man1/xflame.1
 man/man1/xjack.1
 man/man1/xlyap.1
@@ -555,14 +574,5 @@ ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/xscreensaver.mo
 ${PKGLOCALEDIR}/locale/wa/LC_MESSAGES/xscreensaver.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/xscreensaver.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/xscreensaver.mo
-share/pixmaps/xscreensaver.xpm
-share/xscreensaver/screensaver-cmndln.png
-share/xscreensaver/screensaver-colorselector.png
-share/xscreensaver/screensaver-diagnostic.png
-share/xscreensaver/screensaver-locking.png
-share/xscreensaver/screensaver-power.png
-share/xscreensaver/screensaver-snap.png
-share/xscreensaver/xscreensaver-demo.glade2
-@dirrm share/xscreensaver
 @dirrm libexec/xscreensaver/config
 @dirrm libexec/xscreensaver
