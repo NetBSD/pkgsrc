@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2001/02/16 13:19:22 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2001/03/01 14:35:07 wiz Exp $
 bin/gqview
 man/man1/gqview.1
 share/locale/de/LC_MESSAGES/gqview.mo
@@ -13,4 +13,5 @@ share/locale/ru/LC_MESSAGES/gqview.mo
 share/locale/sk/LC_MESSAGES/gqview.mo
 share/locale/sl/LC_MESSAGES/gqview.mo
 share/locale/tr/LC_MESSAGES/gqview.mo
+share/locale/zh_CN.GB2312/LC_MESSAGES/gqview.mo
 share/locale/zh_TW.Big5/LC_MESSAGES/gqview.mo
