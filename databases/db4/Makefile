@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/09/11 15:25:00 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2002/11/15 00:50:19 jlam Exp $
 
 DISTNAME=	db-4.0.14
 PKGNAME=	db4-4.0.14
@@ -14,7 +14,8 @@ USE_JAVA=	YES
 CONFIGURE_ARGS+=	--enable-java
 .endif
 
-USE_BUILDLINK_ONLY=	yes
+USE_BUILDLINK2=		yes
+USE_CXX=		yes
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKDIR}/${DISTNAME}/build_unix/libtool
 GNU_CONFIGURE=		yes
