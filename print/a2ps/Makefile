@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2000/06/21 07:07:40 jlam Exp $
+# $NetBSD: Makefile,v 1.28 2001/02/17 17:51:35 wiz Exp $
 # FreeBSD Id: Makefile,v 1.12 1998/02/15 21:24:42 steve Exp
 #
 
@@ -8,6 +8,7 @@ MASTER_SITES=		ftp://ftp.enst.fr/pub/unix/a2ps/
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www-inf.enst.fr/~demaille/a2ps/
+COMMENT=		Formats an ascii file for printing on a postscript printer
 
 DEPENDS+=		papersize-1.0.2:../../print/papersize
 DEPENDS+=		psutils-1.17:../../print/psutils

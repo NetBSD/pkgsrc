@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/12/14 01:10:42 hubertf Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/17 17:42:22 wiz Exp $
 #
 
 DISTNAME=	xdu-3.0
@@ -8,6 +8,7 @@ MASTER_SITES=	ftp://ftp.arl.mil/pub/
 EXTRACT_SUFX=	.tar.Z
 
 MAINTAINER=	hubertf@netbsd.org
+COMMENT=	Display the output of "du" in an X window
 
 WRKSRC=		${WRKDIR}
 USE_IMAKE=	yes

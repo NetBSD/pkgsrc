@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2001/01/13 19:19:04 tv Exp $
+# $NetBSD: Makefile,v 1.32 2001/02/17 17:42:22 wiz Exp $
 #
 
 DISTNAME=       xosview-1.7.0.b
@@ -9,6 +9,7 @@ MASTER_SITES=   http://www.ece.utexas.edu/~bgrayson/xosview/ \
 
 MAINTAINER=	bgrayson@netbsd.org
 HOMEPAGE=	http://lore.ece.utexas.edu/~bgrayson/xosview.html
+COMMENT=	X11 graphical display of OS statistics
 
 HAS_CONFIGURE=	YES
 CONFIGURE_ARGS+= --prefix=${PREFIX}

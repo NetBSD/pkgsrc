@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/11/23 13:16:10 rh Exp $
+# $NetBSD: Makefile,v 1.2 2001/02/17 17:49:48 wiz Exp $
 
 DISTNAME=	libdes-4.04b
 CATEGORIES=	security
 MASTER_SITES=   ftp://ftp.psy.uq.oz.au/pub/Crypto/DES/
 
 MAINTAINER=	refling@comet.lbl.gov
+COMMENT=	Small DES (Data Encryption Standard) lib & standalone program
 
 CRYPTO=		YES
 

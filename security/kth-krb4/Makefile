@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/01/29 11:34:41 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2001/02/17 17:49:47 wiz Exp $
 #
 
 DISTNAME=		krb4-1.0.1
@@ -8,6 +8,7 @@ MASTER_SITES=		ftp://ftp.pdc.kth.se/pub/krb/src/
 
 MAINTAINER=		wennmach@netbsd.org
 HOMEPAGE=		http://www.pdc.kth.se/kth-krb/
+COMMENT=		Kerberos IV distribution from KTH
 
 CRYPTO=			yes
 GNU_CONFIGURE=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/01/21 01:22:08 tron Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/17 17:50:13 wiz Exp $
 
 DISTNAME= 	tcp_wrappers_7.6-ipv6.1
 PKGNAME=	tcp_wrappers-7.6.1
@@ -7,6 +7,7 @@ MASTER_SITES=	ftp://ftp.porcupine.org/pub/security/
 
 MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	ftp://ftp.porcupine.org/pub/security/index.html
+COMMENT=	Monitor and filter incoming requests for network services
 
 ONLY_FOR_PLATFORM=	SunOS-*-*	# in NetBSD base system
 
