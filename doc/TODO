@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3267 2005/03/23 02:00:27 cjs Exp $
+$NetBSD: TODO,v 1.3268 2005/03/23 05:05:27 jlam Exp $
 
 Suggested new packages
 ======================
@@ -368,9 +368,6 @@ Suggested package updates
 	o conserver-8.1.11
 	o controlcenter-1.4.0.5
 	o coreutils-5.3.0
-	o courier-authlib-0.55 [jlam]
-	o courier-imap-4.0.2 [jlam]
-	o courier-maildir-0.49.0 [jlam]
 	o cqcam-0.91
 	o crafty-19.5
 	o crossfire-cli-1.7.0
@@ -1010,7 +1007,6 @@ Suggested package updates
 	o spruce-0.6.5
 	o sqlitemanager-1.0.5
 	o sqlrelay-0.35
-	o sqwebmail-5.0.1 [jlam]
 	o srp_client-1.7.5 [jlam]
 	o ssam-1.10
 	o ssh-askpass-1.2.4.1
