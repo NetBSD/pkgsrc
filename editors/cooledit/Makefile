@@ -1,23 +1,21 @@
-# $NetBSD: Makefile,v 1.12 2004/10/03 00:14:38 tv Exp $
-#
+# $NetBSD: Makefile,v 1.13 2004/11/08 15:48:20 adam Exp $
 
-DISTNAME=	cooledit-3.17.5
-PKGREVISION=	2
+DISTNAME=	cooledit-3.17.11
 CATEGORIES=	editors
-MASTER_SITES=	http://cooledit.sourceforge.net/
+MASTER_SITES=	ftp://ftp.ibiblio.org/pub/Linux/apps/editors/X/cooledit/
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://cooledit.sourceforge.net/
 COMMENT=	Full-featured text editor
 
-BUILD_USES_MSGFMT=	# defined
+BUILD_USES_MSGFMT=	yes
 
-USE_BUILDLINK3=		# defined
+USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
-USE_PKGLOCALEDIR=	# defined
-USE_X11=		# defined
-GNU_CONFIGURE=		# defined
-USE_LIBTOOL=		# defined
+USE_LIBTOOL=		yes
+USE_PKGLOCALEDIR=	yes
+USE_X11=		yes
+GNU_CONFIGURE=		yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 post-configure:
@@ -27,5 +25,7 @@ post-configure:
 			< ${WRKSRC}/config.h.bak > ${WRKSRC}/config.h ; \
 	fi
 
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../graphics/xpm/buildlink3.mk"
+.include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
