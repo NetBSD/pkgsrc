@@ -1,24 +1,23 @@
-# $NetBSD: Makefile,v 1.2 2004/07/28 16:03:47 schmonz Exp $
+# $NetBSD: Makefile,v 1.3 2004/08/09 20:39:53 schmonz Exp $
 #
 
-DISTNAME=	memtester-2.93.1
+DISTNAME=	memtester-4.0.2
 CATEGORIES=	sysutils
 MASTER_SITES=	${HOMEPAGE}
-EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pancake@phreaker.net
 HOMEPAGE=	http://www.qcc.ca/~charlesc/software/memtester/
-COMMENT=	Utility to test for faulty memory subsystem
+COMMENT=	Utility for testing the memory subsystem for faults
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_GNU_TOOLS+=		make
 USE_BUILDLINK3=		yes
 
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin man/man8 share/doc/memtester
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/memtest ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/memtest.1 ${PREFIX}/man/man1
+	${INSTALL_PROGRAM} ${WRKSRC}/memtester ${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/memtester.8 ${PREFIX}/man/man8
+	${INSTALL_DATA} ${WRKSRC}/README.tests ${PREFIX}/share/doc/memtester
 
 .include "../../mk/bsd.pkg.mk"
