@@ -1,5 +1,5 @@
 #!/bin/sh
-# $Id: pre-build,v 1.1 2000/09/15 22:05:47 hubertf Exp $
+# $NetBSD: pre-build,v 1.2 2000/09/15 22:27:16 hubertf Exp $
 #
 # Clean up system to be ready for bulk pkg build
 #
