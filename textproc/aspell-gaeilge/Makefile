@@ -1,13 +1,15 @@
-# $NetBSD: Makefile,v 1.4 2003/01/15 00:27:54 salo Exp $
+# $NetBSD: Makefile,v 1.5 2003/01/17 01:23:23 salo Exp $
 
 DISTNAME=	aspell-gaeilge-2.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc
 MASTER_SITES=   http://borel.slu.edu/~kps/ispell/
 
 MAINTAINER=	jschauma@netbsd.org
 HOMEPAGE=	http://borel.slu.edu/~kps/ispell/
 COMMENT=	Irish language support for aspell
+
+USE_BUILDLINK2=	YES
 
 ASPELLDATA=	${PREFIX}/share/aspell/
 
