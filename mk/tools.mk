@@ -1,4 +1,4 @@
-# $NetBSD: tools.mk,v 1.33 2004/04/22 03:36:30 tv Exp $
+# $NetBSD: tools.mk,v 1.34 2004/04/27 21:05:38 dmcmahill Exp $
 #
 # This Makefile creates a ${TOOLS_DIR} directory and populates the bin
 # subdir with tools that hide the ones outside of ${TOOLS_DIR}.
@@ -247,7 +247,11 @@ _TOOLS_OVERRIDE.lex=	YES
 _TOOLS_PROGNAME.lex=	${LEX}
 .endif
 .if (${_TOOLS_NEED_GNU.lex} == "YES") && empty(PKGPATH:Mdevel/flex)
+.if defined(USE_BUILDLINK3) && empty(USE_BUILDLINK3:M[nN][oO])
+.include "../../devel/flex/buildlink3.mk"
+.else
 BUILD_DEPENDS+=		flex>=2.5:../../devel/flex
+.endif
 _TOOLS_OVERRIDE.lex=	YES
 _TOOLS_PROGNAME.lex=	${LOCALBASE}/bin/flex
 .  if exists(${_TOOLS_PROGNAME.lex})
