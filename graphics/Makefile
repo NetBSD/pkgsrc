@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 1999/07/04 00:48:48 hubertf Exp $
+# $NetBSD: Makefile,v 1.49 1999/07/08 17:17:36 garbled Exp $
 # FreeBSD Id: Makefile,v 1.53 1997/09/28 13:25:40 markm Exp
 #
 
@@ -27,6 +27,7 @@
     SUBDIR += giram
     SUBDIR += gnuplot
     SUBDIR += gqview
+    SUBDIR += hermes
 #    SUBDIR += hobbes-icons-xpm
     SUBDIR += hp2xx
 #    SUBDIR += hpscan
