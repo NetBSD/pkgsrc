@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 2003/10/04 15:54:39 danw Exp $
+$NetBSD: patch-aa,v 1.1 2004/06/26 18:27:23 grant Exp $
 
 --- wrapper.c.orig	Sun Aug  8 20:22:14 1999
 +++ wrapper.c	Mon Sep 15 22:50:34 2003

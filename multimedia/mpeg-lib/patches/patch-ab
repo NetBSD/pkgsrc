@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.4 2003/10/04 15:54:39 danw Exp $
+$NetBSD: patch-ab,v 1.1 2004/06/26 18:27:23 grant Exp $
 
 --- globals.c.orig	Sat Jul 31 20:17:20 1999
 +++ globals.c
