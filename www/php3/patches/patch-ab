@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1 1999/05/03 19:45:44 tv Exp $
+$NetBSD: patch-ab,v 1.2 2002/01/10 13:17:12 jlam Exp $
 
---- php.h.orig	Sun May  2 15:38:36 1999
-+++ php.h	Sun May  2 15:49:49 1999
-@@ -309,6 +309,24 @@
+--- php.h.orig	Mon Apr 10 12:29:36 2000
++++ php.h
+@@ -326,6 +326,24 @@
  # endif
  #endif
  
