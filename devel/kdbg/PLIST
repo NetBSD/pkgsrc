@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2002/10/15 03:37:00 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/07/30 15:19:21 markd Exp $
 bin/kdbg
 share/doc/kde/HTML/de/kdbg/argspwdenv.html
 share/doc/kde/HTML/de/kdbg/breakptlist.html
@@ -111,26 +111,26 @@ share/kde/locale/sr/LC_MESSAGES/kdbg.mo
 share/kde/locale/sv/LC_MESSAGES/kdbg.mo
 share/kde/locale/tr/LC_MESSAGES/kdbg.mo
 share/kde/locale/zh_CN.GB2312/LC_MESSAGES/kdbg.mo
-@dirrm share/kde/locale/zh_CN.GB2312/LC_MESSAGES
-@dirrm share/kde/locale/tr/LC_MESSAGES
-@dirrm share/kde/locale/sv/LC_MESSAGES
-@dirrm share/kde/locale/sr/LC_MESSAGES
-@dirrm share/kde/locale/sk/LC_MESSAGES
-@dirrm share/kde/locale/ru/LC_MESSAGES
-@dirrm share/kde/locale/ro/LC_MESSAGES
-@dirrm share/kde/locale/pt/LC_MESSAGES
-@dirrm share/kde/locale/pl/LC_MESSAGES
-@dirrm share/kde/locale/no_NY/LC_MESSAGES
-@dirrm share/kde/locale/no/LC_MESSAGES
-@dirrm share/kde/locale/ja/LC_MESSAGES
-@dirrm share/kde/locale/it/LC_MESSAGES
-@dirrm share/kde/locale/hu/LC_MESSAGES
-@dirrm share/kde/locale/hr/LC_MESSAGES
-@dirrm share/kde/locale/fr/LC_MESSAGES
-@dirrm share/kde/locale/es/LC_MESSAGES
-@dirrm share/kde/locale/de/LC_MESSAGES
-@dirrm share/kde/locale/da/LC_MESSAGES
-@dirrm share/kde/locale/cs/LC_MESSAGES
+@comment dirrm share/kde/locale/zh_CN.GB2312/LC_MESSAGES
+@comment dirrm share/kde/locale/tr/LC_MESSAGES
+@comment dirrm share/kde/locale/sv/LC_MESSAGES
+@comment dirrm share/kde/locale/sr/LC_MESSAGES
+@comment dirrm share/kde/locale/sk/LC_MESSAGES
+@comment dirrm share/kde/locale/ru/LC_MESSAGES
+@comment dirrm share/kde/locale/ro/LC_MESSAGES
+@comment dirrm share/kde/locale/pt/LC_MESSAGES
+@comment dirrm share/kde/locale/pl/LC_MESSAGES
+@comment dirrm share/kde/locale/no_NY/LC_MESSAGES
+@comment dirrm share/kde/locale/no/LC_MESSAGES
+@comment dirrm share/kde/locale/ja/LC_MESSAGES
+@comment dirrm share/kde/locale/it/LC_MESSAGES
+@comment dirrm share/kde/locale/hu/LC_MESSAGES
+@comment dirrm share/kde/locale/hr/LC_MESSAGES
+@comment dirrm share/kde/locale/fr/LC_MESSAGES
+@comment dirrm share/kde/locale/es/LC_MESSAGES
+@comment dirrm share/kde/locale/de/LC_MESSAGES
+@comment dirrm share/kde/locale/da/LC_MESSAGES
+@comment dirrm share/kde/locale/cs/LC_MESSAGES
 @comment dirrm share/kde/icons/locolor/32x32/apps
 @comment dirrm share/kde/icons/locolor/16x16/apps
 @comment dirrm share/kde/icons/hicolor/32x32/apps
