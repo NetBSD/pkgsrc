@@ -1,4 +1,4 @@
-# $NetBSD: omf.mk,v 1.4 2004/02/12 10:20:33 jlam Exp $
+# $NetBSD: omf.mk,v 1.5 2004/03/07 11:53:00 jmmv Exp $
 #
 # This Makefile fragment is intended to be included by packages that install
 # OMF files.  It takes care of registering them in scrollkeeper's global
@@ -7,7 +7,7 @@
 # The following variables are automatically defined for free use in packages:
 #    SCROLLKEEPER_DATADIR   - scrollkeeper's data directory.
 #    SCROLLKEEPER_REBUILDDB - scrollkeeper-rebuilddb binary program.
-#    SCROLLKEEPER_UPDATEDB  - scrollkeeper-updatedb binary program.
+#    SCROLLKEEPER_UPDATEDB  - scrollkeeper-update binary program.
 #
 
 .if !defined(SCROLLKEEPER_OMF_MK)
@@ -20,7 +20,7 @@ SCROLLKEEPER_DATADIR=	${BUILDLINK_PREFIX.scrollkeeper}/libdata/scrollkeeper
 
 # scrollkeeper binary programs.
 SCROLLKEEPER_REBUILDDB=	${BUILDLINK_PREFIX.scrollkeeper}/bin/scrollkeeper-rebuilddb
-SCROLLKEEPER_UPDATEDB=	${BUILDLINK_PREFIX.scrollkeeper}/bin/scrollkeeper-updatedb
+SCROLLKEEPER_UPDATEDB=	${BUILDLINK_PREFIX.scrollkeeper}/bin/scrollkeeper-update
 
 USE_PKGINSTALL=		YES
 INSTALL_EXTRA_TMPL+=	${.CURDIR}/../../textproc/scrollkeeper/files/install.tmpl
