@@ -1,15 +1,11 @@
-@comment $NetBSD: PLIST,v 1.4 2002/12/12 03:17:13 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/07/04 20:57:21 seb Exp $
 bin/gawk
 bin/${PKGNAME}
 bin/igawk
 bin/pgawk
 bin/p${PKGNAME}
-@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/gawk.info
-@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/gawkinet.info
 info/gawk.info
 info/gawkinet.info
-@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/gawk.info
-@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/gawkinet.info
 libexec/awk/grcat
 libexec/awk/pwcat
 man/man1/gawk.1

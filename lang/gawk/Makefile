@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/06/07 16:03:05 jmmv Exp $
+# $NetBSD: Makefile,v 1.13 2003/07/04 20:57:21 seb Exp $
 # FreeBSD Id: Makefile,v 1.13 1999/01/27 07:41:14 fenner Exp $
 
 DISTNAME=	gawk-3.1.1
@@ -21,6 +21,9 @@ EVAL_PREFIX+=		GETTEXT_PREFIX=gettext
 TEST_DIRS=		${WRKSRC}
 TEST_TARGET=		check
 
+USE_NEW_TEXINFO=	YES
+INFO_FILES=	gawk.info gawkinet.info
+
 MAKE_ENV+=		PKGLOCALEDIR="${PKGLOCALEDIR}"
 
 .include "../../mk/bsd.prefs.mk"
@@ -36,5 +39,4 @@ pre-configure:
 		 ${WRKSRC}/po/Makefile.in.in
 
 .include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
