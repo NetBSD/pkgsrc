@@ -1,8 +1,8 @@
-$NetBSD: patch-at,v 1.4 2005/02/04 21:35:51 adrianp Exp $
+$NetBSD: patch-at,v 1.5 2005/03/24 11:32:50 adam Exp $
 
---- configure.orig	Tue Jan 25 20:13:20 2005
-+++ configure	Tue Jan 25 20:16:11 2005
-@@ -573,6 +573,7 @@
+--- configure.orig	2005-01-24 15:22:46.000000000 +0000
++++ configure
+@@ -573,6 +573,7 @@ case "$host" in
    i[3456]86-*-solaris*)         arch=i386; system=solaris;;
    i[3456]86-*-beos*)            arch=i386; system=beos;;
    i[3456]86-*-cygwin*)          arch=i386; system=cygwin;;
@@ -10,7 +10,7 @@ $NetBSD: patch-at,v 1.4 2005/02/04 21:35:51 adrianp Exp $
    mips-*-irix6*)                arch=mips; system=irix;;
    hppa1.1-*-hpux*)              arch=hppa; system=hpux;;
    hppa2.0*-*-hpux*)             arch=hppa; system=hpux;;
-@@ -657,6 +658,7 @@
+@@ -657,6 +658,7 @@ case "$arch,$model,$system" in
      profiling='prof'
      case "$nativecc" in gcc*) ;; *) cc_profile='-xpg';; esac;;
    amd64,*,linux) profiling='prof';;
@@ -18,7 +18,7 @@ $NetBSD: patch-at,v 1.4 2005/02/04 21:35:51 adrianp Exp $
    *) profiling='noprof';;
  esac
  
-@@ -1113,6 +1115,7 @@
+@@ -1123,6 +1125,7 @@ fi
  x11_include="not found"
  x11_link="not found"
  
@@ -26,7 +26,7 @@ $NetBSD: patch-at,v 1.4 2005/02/04 21:35:51 adrianp Exp $
  for dir in \
      $x11_include_dir          \
                                \
-@@ -1159,6 +1162,7 @@
+@@ -1169,6 +1172,7 @@ do
      break
    fi
  done
