@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.11 2004/01/05 12:20:57 markd Exp $
+$NetBSD: patch-ac,v 1.12 2004/04/27 11:24:31 markd Exp $
 
---- configure.orig	2003-11-21 23:31:30.000000000 +1300
+--- configure.orig	2004-04-12 21:28:02.000000000 +1200
 +++ configure
-@@ -2108,7 +2108,7 @@ else
+@@ -2193,7 +2193,7 @@ else
    WANT_R_SHLIB_FALSE=
  fi
  if test "${want_R_shlib}" = yes; then
@@ -11,7 +11,7 @@ $NetBSD: patch-ac,v 1.11 2004/01/05 12:20:57 markd Exp $
  else
    LIBR=
  fi
-@@ -11414,13 +11414,13 @@ _ACEOF
+@@ -20883,13 +20932,13 @@ _ACEOF
  fi
  
  
@@ -27,9 +27,9 @@ $NetBSD: patch-ac,v 1.11 2004/01/05 12:20:57 markd Exp $
 -LIBS="-lncurses  $LIBS"
 +LIBS="-ltermcap  $LIBS"
  cat >conftest.$ac_ext <<_ACEOF
- #line $LINENO "configure"
  /* confdefs.h.  */
-@@ -11450,34 +11450,34 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+ _ACEOF
+@@ -20927,35 +20977,35 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
@@ -42,7 +42,8 @@ $NetBSD: patch-ac,v 1.11 2004/01/05 12:20:57 markd Exp $
 -ac_cv_lib_ncurses_main=no
 +ac_cv_lib_termcap_main=no
  fi
- rm -f conftest.$ac_objext conftest$ac_exeext conftest.$ac_ext
+ rm -f conftest.err conftest.$ac_objext \
+       conftest$ac_exeext conftest.$ac_ext
  LIBS=$ac_check_lib_save_LIBS
  fi
 -echo "$as_me:$LINENO: result: $ac_cv_lib_ncurses_main" >&5
@@ -73,9 +74,9 @@ $NetBSD: patch-ac,v 1.11 2004/01/05 12:20:57 markd Exp $
 -LIBS="-ltermcap  $LIBS"
 +LIBS="-ltermlib  $LIBS"
  cat >conftest.$ac_ext <<_ACEOF
- #line $LINENO "configure"
  /* confdefs.h.  */
-@@ -11507,34 +11507,34 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+ _ACEOF
+@@ -20993,35 +21044,35 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
@@ -88,7 +89,8 @@ $NetBSD: patch-ac,v 1.11 2004/01/05 12:20:57 markd Exp $
 -ac_cv_lib_termcap_main=no
 +ac_cv_lib_termlib_main=no
  fi
- rm -f conftest.$ac_objext conftest$ac_exeext conftest.$ac_ext
+ rm -f conftest.err conftest.$ac_objext \
+       conftest$ac_exeext conftest.$ac_ext
  LIBS=$ac_check_lib_save_LIBS
  fi
 -echo "$as_me:$LINENO: result: $ac_cv_lib_termcap_main" >&5
@@ -119,9 +121,9 @@ $NetBSD: patch-ac,v 1.11 2004/01/05 12:20:57 markd Exp $
 -LIBS="-ltermlib  $LIBS"
 +LIBS="-lncurses  $LIBS"
  cat >conftest.$ac_ext <<_ACEOF
- #line $LINENO "configure"
  /* confdefs.h.  */
-@@ -11564,24 +11564,24 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+ _ACEOF
+@@ -21059,25 +21111,25 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
@@ -134,7 +136,8 @@ $NetBSD: patch-ac,v 1.11 2004/01/05 12:20:57 markd Exp $
 -ac_cv_lib_termlib_main=no
 +ac_cv_lib_ncurses_main=no
  fi
- rm -f conftest.$ac_objext conftest$ac_exeext conftest.$ac_ext
+ rm -f conftest.err conftest.$ac_objext \
+       conftest$ac_exeext conftest.$ac_ext
  LIBS=$ac_check_lib_save_LIBS
  fi
 -echo "$as_me:$LINENO: result: $ac_cv_lib_termlib_main" >&5
@@ -153,7 +156,7 @@ $NetBSD: patch-ac,v 1.11 2004/01/05 12:20:57 markd Exp $
  
  fi
  
-@@ -15834,6 +15834,7 @@ cat > conftest.c <<EOF
+@@ -25738,6 +25851,7 @@ cat > conftest.c <<EOF
  #else
  # define F77_SYMBOL(x)   x
  #endif
@@ -161,7 +164,7 @@ $NetBSD: patch-ac,v 1.11 2004/01/05 12:20:57 markd Exp $
  int main () {
    exit(0);
  }
-@@ -15902,6 +15903,9 @@ cat > conftest.c <<EOF
+@@ -25806,6 +25920,9 @@ cat > conftest.c <<EOF
  
  extern void F77_SYMBOL(cftest)(int *a, int *b, double *x, double *y);
  
@@ -171,7 +174,7 @@ $NetBSD: patch-ac,v 1.11 2004/01/05 12:20:57 markd Exp $
  int main () {
    int a[3] = {17, 237, 2000000000}, b[2], res = 0;
    double x[3] = {3.14159265, 123.456789, 2.3e34}, z[3];
-@@ -15990,6 +15994,9 @@ typedef struct {
+@@ -25894,6 +26011,9 @@ typedef struct {
  
  extern void F77_SYMBOL(cftest)(Rcomplex *x);
  
@@ -181,7 +184,7 @@ $NetBSD: patch-ac,v 1.11 2004/01/05 12:20:57 markd Exp $
  int main () {
      Rcomplex z[3];
  
-@@ -17020,135 +17027,6 @@ echo "${ECHO_T}no" >&6
+@@ -27020,155 +27149,6 @@ echo "${ECHO_T}no" >&6
  fi
  
      fi
@@ -206,11 +209,20 @@ $NetBSD: patch-ac,v 1.11 2004/01/05 12:20:57 markd Exp $
 -_ACEOF
 -rm -f conftest.$ac_objext conftest$ac_exeext
 -if { (eval echo "$as_me:$LINENO: \"$ac_link\"") >&5
--  (eval $ac_link) 2>&5
+-  (eval $ac_link) 2>conftest.er1
 -  ac_status=$?
+-  grep -v '^ *+' conftest.er1 >conftest.err
+-  rm -f conftest.er1
+-  cat conftest.err >&5
 -  echo "$as_me:$LINENO: \$? = $ac_status" >&5
 -  (exit $ac_status); } &&
--         { ac_try='test -s conftest$ac_exeext'
+-	 { ac_try='test -z "$ac_f77_werror_flag"			 || test ! -s conftest.err'
+-  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
+-  (eval $ac_try) 2>&5
+-  ac_status=$?
+-  echo "$as_me:$LINENO: \$? = $ac_status" >&5
+-  (exit $ac_status); }; } &&
+-	 { ac_try='test -s conftest$ac_exeext'
 -  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
 -  (eval $ac_try) 2>&5
 -  ac_status=$?
@@ -223,7 +235,8 @@ $NetBSD: patch-ac,v 1.11 2004/01/05 12:20:57 markd Exp $
 -
 -eval "r_cv_prog_f77_flag_${ac_safe}=no"
 -fi
--rm -f conftest.$ac_objext conftest$ac_exeext conftest.$ac_ext
+-rm -f conftest.err conftest.$ac_objext \
+-      conftest$ac_exeext conftest.$ac_ext
 -FFLAGS="${r_save_FFLAGS}"
 -ac_ext=c
 -ac_cpp='$CPP $CPPFLAGS'
@@ -270,11 +283,20 @@ $NetBSD: patch-ac,v 1.11 2004/01/05 12:20:57 markd Exp $
 -_ACEOF
 -rm -f conftest.$ac_objext conftest$ac_exeext
 -if { (eval echo "$as_me:$LINENO: \"$ac_link\"") >&5
--  (eval $ac_link) 2>&5
+-  (eval $ac_link) 2>conftest.er1
 -  ac_status=$?
+-  grep -v '^ *+' conftest.er1 >conftest.err
+-  rm -f conftest.er1
+-  cat conftest.err >&5
 -  echo "$as_me:$LINENO: \$? = $ac_status" >&5
 -  (exit $ac_status); } &&
--         { ac_try='test -s conftest$ac_exeext'
+-	 { ac_try='test -z "$ac_f77_werror_flag"			 || test ! -s conftest.err'
+-  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
+-  (eval $ac_try) 2>&5
+-  ac_status=$?
+-  echo "$as_me:$LINENO: \$? = $ac_status" >&5
+-  (exit $ac_status); }; } &&
+-	 { ac_try='test -s conftest$ac_exeext'
 -  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
 -  (eval $ac_try) 2>&5
 -  ac_status=$?
@@ -287,7 +309,8 @@ $NetBSD: patch-ac,v 1.11 2004/01/05 12:20:57 markd Exp $
 -
 -eval "r_cv_prog_f77_flag_${ac_safe}=no"
 -fi
--rm -f conftest.$ac_objext conftest$ac_exeext conftest.$ac_ext
+-rm -f conftest.err conftest.$ac_objext \
+-      conftest$ac_exeext conftest.$ac_ext
 -FFLAGS="${r_save_FFLAGS}"
 -ac_ext=c
 -ac_cpp='$CPP $CPPFLAGS'
@@ -317,7 +340,7 @@ $NetBSD: patch-ac,v 1.11 2004/01/05 12:20:57 markd Exp $
      if test "${GXX}" = yes; then
        ac_safe=_mieee
  echo "$as_me:$LINENO: checking whether ${CXX-c++} accepts -mieee" >&5
-@@ -18017,6 +17895,7 @@ fi ;;
+@@ -28101,6 +28087,7 @@ fi ;;
      fpicflags=
      ;;
    netbsd*)

@@ -1,10 +1,10 @@
-$NetBSD: patch-as,v 1.1 2003/12/19 11:43:19 markd Exp $
+$NetBSD: patch-as,v 1.2 2004/04/27 11:24:31 markd Exp $
 
---- src/library/mle/Makefile.in.orig	2003-09-24 08:56:52.000000000 +1200
+--- src/library/mle/Makefile.in.orig	2004-02-19 08:06:12.000000000 +1300
 +++ src/library/mle/Makefile.in
-@@ -29,14 +29,14 @@ all: Makefile DESCRIPTION
- 	  fi; \
- 	done
+@@ -24,14 +24,14 @@ all: Makefile DESCRIPTION
+ 	  $(SHELL) $(top_srcdir)/tools/move-if-change $${f} \
+ 	    $(top_builddir)/library/$(pkg)/R/$(pkg))
  	@if test -f DESCRIPTION; then \
 -	  $(INSTALL_DATA) DESCRIPTION $(top_builddir)/library/$(pkg); \
  	  (tmp="Built: R $(VERSION); "; \
@@ -17,5 +17,5 @@ $NetBSD: patch-as,v 1.1 2003/12/19 11:43:19 markd Exp $
 +	    >> DESCRIPTION; \
 +	  $(INSTALL_DATA) DESCRIPTION $(top_builddir)/library/$(pkg); \
  	fi
- 	@if test -d $(srcdir)/data; then \
- 	  $(MKINSTALLDIRS) $(top_builddir)/library/$(pkg)/data; \
+ 
+ Makefile: $(srcdir)/Makefile.in $(top_builddir)/config.status
