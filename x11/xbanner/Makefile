@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 1998/08/18 21:54:39 tron Exp $
+# $NetBSD: Makefile,v 1.2 1998/08/18 22:29:22 tron Exp $
 
 DISTNAME=		XBanner1.31
 PKGNAME=		xbanner-1.31
@@ -13,9 +13,13 @@ NO_INSTALL_MANPAGES=	yes
 USE_IMAKE=		yes
 
 post-install:
-	@${MKDIR} ${X11BASE}/share/examples/xbanner
 	@${MKDIR} ${X11BASE}/share/doc/xbanner
-	${CP} -R ${WRKSRC}/docs/* ${X11BASE}/share/doc/xbanner
-	${CP} -R ${WRKSRC}/samples/* ${X11BASE}/share/examples/xbanner
+.for FILE in Changes.txt Credits.txt Resource_Reference.html \
+             XBanner_Users_Manual.html email.gif fonttips.html index.html \
+             red_line.gif rnd_doc.html stars.gif xb_check.html
+	${INSTALL_DATA} ${WRKSRC}/docs/${FILE} ${X11BASE}/share/doc/xbanner
+.endfor
+	${INSTALL_DATA} ${WRKSRC}/samples/XBanner.ad \
+	  ${X11BASE}/lib/X11/app-defaults/XBanner
 
 .include "../../mk/bsd.pkg.mk"
