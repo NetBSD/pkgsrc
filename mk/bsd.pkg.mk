@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1075 2002/10/22 22:54:07 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1076 2002/10/22 22:57:56 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -365,14 +365,12 @@ DISTINFO_FILE?=		${.CURDIR}/distinfo
 M4?=			/usr/bin/m4
 .endif
 
-.if !defined(X11_BUILDLINK_MK)
-.  if defined(USE_X11)
+.if defined(USE_X11)
 X11_LDFLAGS=		# empty
-.    if ${_USE_RPATH} == "yes"
+.  if ${_USE_RPATH} == "yes"
 X11_LDFLAGS+=		-Wl,-R${X11BASE}/lib	
-.    endif
-X11_LDFLAGS+=		-L${X11BASE}/lib
 .  endif
+X11_LDFLAGS+=		-L${X11BASE}/lib
 LDFLAGS+=		${X11_LDFLAGS}
 .endif
 .if ${_USE_RPATH} == "yes"
@@ -987,9 +985,8 @@ CONFIGURE_ARGS+=	--host=${MACHINE_GNU_PLATFORM}
 CONFIGURE_ARGS+=	--prefix=${GNU_CONFIGURE_PREFIX}
 HAS_CONFIGURE=		yes
 .  if ${X11PREFIX} == ${LOCALBASE}
-.    if !defined(X11_BUILDLINK_MK)
-CONFIGURE_ARGS+=        --x-libraries=${X11BASE}/lib --x-includes=${X11BASE}/include
-.    endif
+CONFIGURE_ARGS+=	--x-includes=${X11BASE}/include
+CONFIGURE_ARGS+=        --x-libraries=${X11BASE}/lib
 .  endif
 .endif
 
