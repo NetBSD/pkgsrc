@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/02/22 16:12:07 tv Exp $
+# $NetBSD: Makefile,v 1.2 1999/07/26 19:47:37 tron Exp $
 #
 
 DISTNAME=		trn-3.6
@@ -7,7 +7,11 @@ MASTER_SITES=		ftp://ftp.wustl.edu/packages/news/readers/trn/
 
 MAINTAINER=     	packages@netbsd.org
 
-DEPENDS=		nntpclnt-1.6.1:../../news/nntpclnt
+.if defined(USE_INN) && ${USE_INN} == YES
+DEPENDS=		inn-2.2:../inn
+.else
+DEPENDS=		nntpclnt-1.6.1:../nntpclnt
+.endif
 
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	Configure

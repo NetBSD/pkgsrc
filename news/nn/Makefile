@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1998/06/22 13:00:14 agc Exp $
+# $NetBSD: Makefile,v 1.6 1999/07/26 19:47:37 tron Exp $
 # $FreeBSD Id: Makefile,v 1.14 1997/07/30 18:17:48 adam Exp
 #
 
@@ -10,7 +10,13 @@ MASTER_SITES=	ftp://uniwa.uwa.edu.au/pub/nn/old/beta/ \
 
 MAINTAINER=     tron@netbsd.org
 
-DEPENDS=	nntpclnt-1.6.1:../../news/nntpclnt
+.include <../../mk/bsd.prefs.mk>
+
+.if defined(USE_INN) && ${USE_INN} == YES
+DEPENDS=	inn-2.2:../inn
+.else
+DEPENDS=	nntpclnt-1.6.1:../nntpclnt
+.endif
 
 post-extract:
 	@${MV} ${WRKSRC}/config.h-dist ${WRKSRC}/config.h
