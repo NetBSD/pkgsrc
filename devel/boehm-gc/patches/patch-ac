@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.7 2000/07/25 00:46:58 jlam Exp $
+$NetBSD: patch-ac,v 1.8 2000/07/25 05:58:27 jlam Exp $
 
 --- gcconfig.h.orig	Tue Apr 25 20:41:01 2000
-+++ gcconfig.h	Mon Jul 24 20:42:56 2000
++++ gcconfig.h	Tue Jul 25 01:54:06 2000
 @@ -27,6 +27,11 @@
  #    define LINUX
  # endif
@@ -117,7 +117,7 @@ $NetBSD: patch-ac,v 1.7 2000/07/25 00:46:58 jlam Exp $
  # endif
  
  # ifdef I386
-@@ -960,6 +993,20 @@
+@@ -960,6 +993,21 @@
  #	endif
  #	define DYNAMIC_LOADING
  #   endif
@@ -125,6 +125,7 @@ $NetBSD: patch-ac,v 1.7 2000/07/25 00:46:58 jlam Exp $
 +#     define ALIGNMENT 4
 +#     define OS_TYPE "NETBSD"
 +#     define HEURISTIC2
++#     define USE_GENERIC_PUSH_REGS 1
 +#     ifdef __ELF__
 +        extern int etext;
 +#       define DATASTART GC_data_start
@@ -138,7 +139,7 @@ $NetBSD: patch-ac,v 1.7 2000/07/25 00:46:58 jlam Exp $
  # endif
  
  # ifdef RS6000
-@@ -1019,6 +1066,16 @@
+@@ -1019,6 +1067,16 @@
  	/* fp registers in some cases when the target is a 21264.  The assembly	*/
  	/* code doesn't handle that yet, and version dependencies make that a	*/
  	/* bit tricky.  Do the easy thing for now.				*/
