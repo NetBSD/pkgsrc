@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.458 2000/06/03 16:52:32 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.459 2000/06/03 18:51:34 mycroft Exp $
 #
 # This file is in the public domain.
 #
@@ -42,6 +42,11 @@ X11BASE?=		${DESTDIR}/usr/X11R6
 CROSSBASE?=		${LOCALBASE}/cross
 
 PKGSRCDIR=		${.CURDIR:C|/[^/]*/[^/]*$||}
+PKGPATH=		${.CURDIR:C|.*/([^/]*/[^/]*)$|\1|}
+PKGBASE=		${PKGNAME:C/-[^-]*$//}
+PKGVERSION=		${PKGNAME:C/^.*-//}
+PKGWILDCARD=		${PKGBASE}-[0-9]*
+
 DISTDIR?=		${PKGSRCDIR}/distfiles
 _DISTDIR?=		${DISTDIR}/${DIST_SUBDIR}
 PACKAGES?=		${PKGSRCDIR}/packages
@@ -1162,11 +1167,9 @@ show-downlevel:
 	${_PKG_SILENT}${_PKG_DEBUG}${DO_NADA}
 .else
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	base="${PKGNAME:C/-([^-]*)$/<\1/}";				\
-	found=`${PKG_INFO} -e "$$base" || ${TRUE}`;			\
+	found="`${PKG_INFO} -e \"${PKGBASE}<${PKGVERSION}\" || ${TRUE}`";\
 	if [ "X$$found" != "X" -a "X$$found" != "X${PKGNAME}" ]; then	\
-		base=${PKGNAME:C/-([^-]*)$//g};	\
-		${ECHO} "$$base package: $$found installed, pkgsrc version ${PKGNAME}"; \
+		${ECHO} "${PKGBASE} package: $$found installed, pkgsrc version ${PKGNAME}"; \
 	fi
 .endif
 .endif
@@ -1177,9 +1180,9 @@ show-pkgsrc-dir:
 	${_PKG_SILENT}${_PKG_DEBUG}${DO_NADA}
 .else
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	found=`${PKG_INFO} -e "${PKGNAME:C/-[^-]*$/-[0-9]*/}" || ${TRUE}`;			\
+	found="`${PKG_INFO} -e \"${PKGWILDCARD}\" || ${TRUE}`";		\
 	if [ "X$$found" != "X" ]; then					\
-		${ECHO} ${.CURDIR:C,.*/([^/]*/[^/]*)$,\1,} ;		\
+		${ECHO} ${PKGPATH};					\
 	fi
 .endif
 .endif
@@ -1437,20 +1440,24 @@ _PORT_USE: .USE
 .if !make(real-fetch)							\
 	&& (!make(real-patch) || !defined(PATCH_CHECK_ONLY))		\
 	&& (!make(real-package) || !defined(PACKAGE_NOINSTALL))
-	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${WRKDIR}/.${.TARGET:S/^real-//}_done
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${TOUCH} ${TOUCH_FLAGS} ${WRKDIR}/.${.TARGET:S/^real-//}_done
 .endif
 
 root-install:
 .if !defined(NO_PKG_REGISTER) && !defined(FORCE_PKG_REGISTER)
 .if defined(CONFLICTS)
-	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${WRKDIR}/.CONFLICTS
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RM} -f ${WRKDIR}/.CONFLICTS
 .for conflict in ${CONFLICTS}
-	${_PKG_SILENT}${_PKG_DEBUG}found="`${PKG_INFO} -e \"${conflict}\" || ${TRUE}`"; \
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	found="`${PKG_INFO} -e \"${conflict}\" || ${TRUE}`";		\
 	if [ X"$$found" != X"" ]; then					\
 		${ECHO} "$$found" >> ${WRKDIR}/.CONFLICTS;		\
 	fi
 .endfor
-	${_PKG_SILENT}${_PKG_DEBUG}if [ -s ${WRKDIR}/.CONFLICTS ]; then \
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	if [ -s ${WRKDIR}/.CONFLICTS ]; then \
 		found=`cat ${WRKDIR}/.CONFLICTS | ${SED} -e s'|${PKG_DBDIR}/||g' | tr '\012' ' '`; \
 		${ECHO_MSG} "${_PKGSRC_IN}> ${PKGNAME} conflicts with installed package(s): $$found found."; \
 		${ECHO_MSG} "*** They install the same files into the same place."; \
@@ -1459,7 +1466,8 @@ root-install:
 		exit 1;							\
 	fi
 .endif	# CONFLICTS
-	${_PKG_SILENT}${_PKG_DEBUG}found="`${PKG_INFO} -e \"${PKGNAME:C/-[^-]*$/-[0-9]*/}\" || ${TRUE}`"; \
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	found="`${PKG_INFO} -e \"${PKGWILDCARD}\" || ${TRUE}`";		\
 	if [ "$$found" != "" ]; then					\
 		${ECHO_MSG} "${_PKGSRC_IN}>  $$found is already installed - perhaps an older version?"; \
 		${ECHO_MSG} "*** If so, you may wish to \`\`pkg_delete $$found'' and install"; \
@@ -1814,7 +1822,7 @@ root-deinstall-flags+=	-v
 
 root-deinstall:
 	${_PKG_SILENT}${_PKG_DEBUG} \
-	found=`${PKG_INFO} -e "${PKGNAME:C/-[^-]*$/-[0-9]*/}" || ${TRUE}` ; \
+	found="`${PKG_INFO} -e \"${PKGWILDCARD}\" || ${TRUE}`"; \
 	if [ "$$found" != "" ]; then \
 		${ECHO} Running ${PKG_DELETE} ${root-deinstall-flags} $$found ; \
 		${PKG_DELETE} ${root-deinstall-flags} $$found || ${TRUE} ; \
@@ -1823,7 +1831,7 @@ root-deinstall:
 	@${SHCOMMENT} Also remove BUILD_DEPENDS:
 .for pkg in ${BUILD_DEPENDS:C/:.*$//}
 	${_PKG_SILENT}${_PKG_DEBUG} \
-	found=`${PKG_INFO} -e "${pkg}" || ${TRUE}` ; \
+	found="`${PKG_INFO} -e \"${pkg}\" || ${TRUE}`"; \
 	if [ "$$found" != "" ]; then \
 		${ECHO} Running ${PKG_DELETE} $$found ; \
 		${PKG_DELETE} ${root-deinstall-flags} $$found || ${TRUE} ; \
@@ -1931,7 +1939,7 @@ ${DDIR}: ${DLIST}
 ${DLIST}:
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} -p ${WRKDIR}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	(${PKG_INFO} -R "${PKGNAME:C/-[^-]*$/-[0-9]*/}" || ${TRUE}) |	\
+	(${PKG_INFO} -R "${PKGWILDCARD}" || ${TRUE}) |	\
 		${TAIL} -n +4 >${DLIST}
 
 # This is for the use of sites which store distfiles which others may
@@ -2205,7 +2213,7 @@ PACKAGE_NAME_TYPE?=	name
 .if !target(package-name)
 package-name:
 .if (${PACKAGE_NAME_TYPE} == "html")
-	@${ECHO} '<A HREF="../../'`${ECHO} ${.CURDIR:C,.*/([^/]*/[^/]*)$,\1,} | ${HTMLIFY}`'/README.html">'`${ECHO} ${PKGNAME} | ${HTMLIFY}`'</A>'
+	@${ECHO} '<A HREF="../../'`${ECHO} ${PKGPATH} | ${HTMLIFY}`'/README.html">'`${ECHO} ${PKGNAME} | ${HTMLIFY}`'</A>'
 .else
 	@${ECHO} ${PKGNAME}
 .endif # PACKAGE_NAME_TYPE
@@ -2213,7 +2221,7 @@ package-name:
 
 .if !target(package-path)
 package-path:
-	@${ECHO} ${.CURDIR:C,.*/([^/]*/[^/]*)$,\1,}
+	@${ECHO} ${PKGPATH}
 .endif
 
 # Show (recursively) all the packages this package depends on.
@@ -2237,7 +2245,7 @@ package-depends:
 			${MAKE} ${MAKEFLAGS} package-name PACKAGE_NAME_TYPE=${PACKAGE_NAME_TYPE}; \
 		fi;							\
 		if ${PACKAGE_DEPENDS_QUICK} ; then 			\
-			${PKG_INFO} -qf "$$pkg" | ${AWK} '/^@pkgdep/ {print $$2}' ; \
+			${PKG_INFO} -qf "$$pkg" | ${AWK} '/^@pkgdep/ {print $$2}'; \
 		else 							\
 			${MAKE} ${MAKEFLAGS} package-depends PACKAGE_NAME_TYPE=${PACKAGE_NAME_TYPE}; \
 		fi ; 							\
@@ -2253,7 +2261,7 @@ package-depends:
 	if cd $$dir 2>/dev/null; then						\
 		${MAKE} ${MAKEFLAGS} package-name PACKAGE_NAME_TYPE=${PACKAGE_NAME_TYPE}; \
 		if ${PACKAGE_DEPENDS_QUICK} ; then 			\
-			${PKG_INFO} -qf "$$file" | ${AWK} '/^@pkgdep/ {print $$2}' ; \
+			${PKG_INFO} -qf "$$file" | ${AWK} '/^@pkgdep/ {print $$2}'; \
 		else 							\
 			${MAKE} ${MAKEFLAGS} package-depends PACKAGE_NAME_TYPE=${PACKAGE_NAME_TYPE}; \
 		fi ; 							\
@@ -2432,7 +2440,7 @@ binpkg-list:
 	cd ${PACKAGES};							\
 	case ${.CURDIR} in						\
 	*/pkgsrc/packages)						\
-		for pkg in ${PKGREPOSITORYSUBDIR}/${PKGNAME:C/-[^-]*$/-[0-9]*/}${PKG_SUFX} ; \
+		for pkg in ${PKGREPOSITORYSUBDIR}/${PKGWILDCARD}${PKG_SUFX} ; \
 		do 							\
 			if [ -f "$$pkg" ] ; then			\
 				pkgname=`${ECHO} $$pkg | ${SED} 's@.*/@@'`; \
@@ -2443,8 +2451,8 @@ binpkg-list:
 	*)								\
 		cd ${PACKAGES}/../..;					\
 		for i in [1-9].*/*; do  				\
-			if cd ${PACKAGES}/$$i/${PKGREPOSITORYSUBDIR}; then \
-				for j in ${PKGNAME:C/-[^-]*$/-[0-9]*/}${PKG_SUFX};	\
+			if cd ${PACKAGES}/../../$$i/${PKGREPOSITORYSUBDIR}; then \
+				for j in ${PKGWILDCARD}${PKG_SUFX};	\
 				do 					\
 					if [ -f "$$j" ]; then		\
 						${ECHO} $$i/$$j; 	\
@@ -2575,7 +2583,7 @@ README.html: .PRECIOUS
 	@${ECHO} ${PKGNAME} | ${HTMLIFY} >> $@.tmp3
 	@${MAKE} ${MAKEFLAGS} binpkg-list  >> $@.tmp4
 	@[ -s $@.tmp4 ] || ${ECHO} "<TR><TD><I>(no precompiled binaries available)</I>" >> $@.tmp4
-	@${SED} -e 's|%%PORT%%|${.CURDIR:C,.*/([^/]*/[^/]*)$,\1,}|g' \
+	@${SED} -e 's|%%PORT%%|${PKGPATH}|g' \
 		-e '/%%PKG%%/r $@.tmp3'					\
 		-e '/%%PKG%%/d'						\
 		${SED_LICENSE_EXPR}					\
@@ -2659,7 +2667,7 @@ print-pkg-depend-sizes:
 	${SHCOMMENT} direct depends ;					\
 	${PKG_INFO} -qL "$$pkg" ;					\
 	${SHCOMMENT} "depends of depends (XXX complete!)"; 		\
-	dps=`${PKG_INFO} -qf "$$pkg" | ${AWK} '/^@pkgdep/ {print $$2}'`; \
+	dps="`${PKG_INFO} -qf \"$$pkg\" | ${AWK} '/^@pkgdep/ {print $$2}'`";\
 	for dp in $$dps ; do						\
 		${PKG_INFO} -qL "$$dp" ;				\
 	done
