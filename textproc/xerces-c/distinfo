@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:55:43 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/20 15:05:13 skrll Exp $
 
-MD5 (xerces-c-src1_3_0.tar.gz) = a4ae10402823dba553b63431cfd712dc
+SHA1 (xerces-c-src1_3_0.tar.gz) = 74d632a0f7080110fc9d203055d3b6dd16e400c8
+Size (xerces-c-src1_3_0.tar.gz) = 4192315 bytes
 SHA1 (patch-aa) = 85cb4489813102d6eed0331f86d268ea4485c6d8
 SHA1 (patch-ab) = 7d5836be474ed0edd8ffe1266e58c2d5478c6d2d
 SHA1 (patch-ac) = fc50d3a96740182f1a9f65f2e06791f8399c9770

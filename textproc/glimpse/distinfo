@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:54:08 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/20 15:04:57 skrll Exp $
 
-MD5 (glimpse-4.1.src.tar.gz) = 6c5c4f3e0011b366c5feaa2e8d1d3b28
+SHA1 (glimpse-4.1.src.tar.gz) = 42022a91575482c670d1396a1ea0d18605a909d1
+Size (glimpse-4.1.src.tar.gz) = 394803 bytes
 SHA1 (patch-aa) = f8797b6910bca22324e30d06c1cb48f34ddbb49a
 SHA1 (patch-ab) = 52f1ef132a529b800f5f6af723798aab2312836f

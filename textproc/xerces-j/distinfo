@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:55:45 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/20 15:05:13 skrll Exp $
 
-MD5 (Xerces-J-bin.1.2.0.tar.gz) = 21dc5b033e7689b1e98a8ec570f90f90
+SHA1 (Xerces-J-bin.1.2.0.tar.gz) = 3bdf19edb3e8817809c8096b259c2af0ef27f1d4
+Size (Xerces-J-bin.1.2.0.tar.gz) = 1824114 bytes

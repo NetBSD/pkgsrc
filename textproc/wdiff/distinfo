@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:55:41 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/20 15:05:12 skrll Exp $
 
-MD5 (wdiff-0.5.tar.gz) = 7f9c78f5dd6fb4f3dabe28fbd4d14319
+SHA1 (wdiff-0.5.tar.gz) = 44e18850e16518633139cf24a83165e62e3baa95
+Size (wdiff-0.5.tar.gz) = 129267 bytes
