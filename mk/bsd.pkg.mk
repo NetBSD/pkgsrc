@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.538 2000/08/12 06:43:21 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.539 2000/08/13 09:07:45 veego Exp $
 #
 # This file is in the public domain.
 #
@@ -746,7 +746,6 @@ DEPENDS+=		${LESSTIF_DEPENDS}
 # Popular master sites
 MASTER_SITE_XCONTRIB+=	\
 	ftp://crl.dec.com/pub/X11/contrib/ \
-	ftp://ftp.sunsite.auc.dk/pub/X/X.org/contrib/ \
 	ftp://ftp.uni-paderborn.de/pub/X11/contrib/ \
 	ftp://ftp.x.org/contrib/
 
