@@ -1,0 +1,38 @@
+$NetBSD: patch-ac,v 1.1.1.1 1998/11/07 13:22:53 frueauf Exp $
+
+*** webalizer.1.orig	Sat Nov  7 00:30:17 1998
+--- webalizer.1	Sat Nov  7 00:30:47 1998
+***************
+*** 27,33 ****
+  A default configuration file is scanned for.  A file named
+  \fIwebalizer.conf\fP is searched for in the current directory, and if
+  found, it's configuration data is parsed.  If the file is not
+! present in the current directory,  the file \fI/etc/webalizer.conf\fP
+  is searched for and, if found, is used instead.
+  .TP 8
+  .B o
+--- 27,33 ----
+  A default configuration file is scanned for.  A file named
+  \fIwebalizer.conf\fP is searched for in the current directory, and if
+  found, it's configuration data is parsed.  If the file is not
+! present in the current directory,  the file \fI@@prefix@@/etc/webalizer.conf\fP
+  is searched for and, if found, is used instead.
+  .TP 8
+  .B o
+***************
+*** 373,379 ****
+  .TP 20
+  .I webalizer.conf
+  Default configuration file.  Is searched for in the current directory
+! and if not found, in the \fI/etc/\fP directory.
+  .TP 20
+  .I webalizer.hist
+  Monthly history file for previous 12 months.
+--- 373,379 ----
+  .TP 20
+  .I webalizer.conf
+  Default configuration file.  Is searched for in the current directory
+! and if not found, in the \fI@@prefix@@/etc/\fP directory.
+  .TP 20
+  .I webalizer.hist
+  Monthly history file for previous 12 months.

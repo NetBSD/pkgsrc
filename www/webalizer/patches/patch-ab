@@ -1,0 +1,23 @@
+$NetBSD: patch-ab,v 1.1.1.1 1998/11/07 13:22:53 frueauf Exp $
+
+*** webalizer.c.orig	Sat Nov  7 00:22:21 1998
+--- webalizer.c	Sat Nov  7 00:27:09 1998
+***************
+*** 250,257 ****
+     /* check for default config file */
+     if (!access("webalizer.conf",F_OK))
+        get_config("webalizer.conf");
+!    else if (!access("/etc/webalizer.conf",F_OK))
+!       get_config("/etc/webalizer.conf");
+  
+     /* get command line options */
+     opterr = 0;     /* disable parser errors */
+--- 250,257 ----
+     /* check for default config file */
+     if (!access("webalizer.conf",F_OK))
+        get_config("webalizer.conf");
+!    else if (!access("@@prefix@@/etc/webalizer.conf",F_OK))
+!       get_config("@@prefix@@/etc/webalizer.conf");
+  
+     /* get command line options */
+     opterr = 0;     /* disable parser errors */
