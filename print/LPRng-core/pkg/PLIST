@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/12/12 20:09:42 kei Exp $
+@comment $NetBSD: PLIST,v 1.2 2000/12/28 00:13:09 jlam Exp $
 bin/cancel
 bin/lp
 bin/lpq
 bin/lpr
 bin/lprm
 bin/lpstat
-etc/rc.d/lprng.sh
+etc/rc.d/LPRng
 libexec/LPRng/lpbanner
 libexec/LPRng/lpf
 libexec/LPRng/pclbanner
@@ -32,10 +32,7 @@ sbin/lpc
 sbin/lpd
 sbin/lpraccnt
 share/examples/LPRng/lpd.conf.example
-@exec if [ ! -f /etc/lpd.conf ]; then cp %D/%F /etc/lpd.conf; fi
 share/examples/LPRng/lpd.perms.example
-@exec if [ ! -f /etc/lpd.perms ]; then cp %D/%F /etc/lpd.perms; fi
 share/examples/LPRng/printcap.example
-@unexec echo "If you won't be using the LPRng-core package anymore, you may want to manually delete /etc/lpd.conf and /etc/lpd.perms."
 @dirrm share/examples/LPRng
 @dirrm libexec/LPRng
