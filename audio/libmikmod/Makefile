@@ -1,13 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2000/03/07 22:42:00 tron Exp $
+# $NetBSD: Makefile,v 1.5 2000/04/02 16:07:04 pooka Exp $
 
-DISTNAME=	libmikmod-3.1.7
+DISTNAME=	libmikmod-3.1.9
 CATEGORIES=	audio
-# The files at multimania.com seem to be corrupted
-MASTER_SITES=	http://mikmod.darkorb.net/libmikmod/ \
-		http://www.multimania.com/miodrag/mikmod/libmikmod/
+MASTER_SITES=	http://mikmod.darkorb.net/libmikmod/
 
 MAINTAINER=	kuebart@mathematik.uni-ulm.de
-HOMEPAGE=	http://www.multimania.com/miodrag/mikmod/
+HOMEPAGE=	http://mikmod.darkorb.net/
 
 DEPENDS+=	esound-0.2.*:../../audio/esound
 
