@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/12/03 05:14:20 martti Exp $
+lib/xfce4/panel-plugins/libdatetime.a
+lib/xfce4/panel-plugins/libdatetime.la
+lib/xfce4/panel-plugins/libdatetime.so
