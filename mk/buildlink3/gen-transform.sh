@@ -1,6 +1,6 @@
 #!@BUILDLINK_SHELL@
 #
-# $NetBSD: gen-transform.sh,v 1.12 2004/01/17 17:33:49 jlam Exp $
+# $NetBSD: gen-transform.sh,v 1.13 2004/01/17 22:16:12 jlam Exp $
 
 transform="@_BLNK_TRANSFORM_SEDFILE@"
 untransform="@_BLNK_UNTRANSFORM_SEDFILE@"
@@ -59,12 +59,12 @@ EOF
 		gen $action mangle:-R$2:-R$3
 		;;
 	abs-rpath)
-		gen $action __r:-Wl,--rpath-link,[^/\$]
-		gen $action __r:-Wl,--rpath,[^/\$]
-		gen $action __r:-Wl,-rpath-link,[^/\$]
-		gen $action __r:-Wl,-rpath,[^/\$]
-		gen $action __r:-Wl,-R[^/\$]
-		gen $action __r:-R[^/\$]
+		gen $action __r:-Wl,--rpath-link,\\.
+		gen $action __r:-Wl,--rpath,\\.
+		gen $action __r:-Wl,-rpath-link,\\.
+		gen $action __r:-Wl,-rpath,\\.
+		gen $action __r:-Wl,-R\\.
+		gen $action __r:-R\\.
 		;;
 	no-rpath)
 		gen $action _r:-Wl,--rpath-link,
