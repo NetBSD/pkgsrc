@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2003/09/13 10:18:06 jlam Exp $
+# $NetBSD: Makefile,v 1.71 2003/09/13 17:05:08 jschauma Exp $
 
 .include "../../lang/perl5/Makefile.common"
 
@@ -58,6 +58,7 @@ CONFIGURE_ARGS+=        -Dcc='cc -64' -Duse64bitint
 # particular operating system.
 #
 LIBSWANTED.FreeBSD=	m crypt
+LIBSWANTED.IRIX=	m crypt
 LIBSWANTED.NetBSD=	m crypt
 LIBSWANTED.SunOS=	m crypt dl socket nsl
 
@@ -187,7 +188,4 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/mk
 	${INSTALL_DATA} ${WRKDIR}/bsd.perl.mk ${PREFIX}/share/mk/bsd.perl.mk
 
-.if ${OPSYS} == "IRIX"
-.  include "../../converters/libiconv/buildlink2.mk"
-.endif
 .include "../../mk/bsd.pkg.mk"
