@@ -1,8 +1,8 @@
-$NetBSD: patch-bj,v 1.2 2002/05/14 00:16:38 taya Exp $
+$NetBSD: patch-bj,v 1.3 2002/06/06 02:05:58 taya Exp $
 
 diff -ru ../Orig/mozilla/directory/c-sdk/ldap/libraries/libprldap/ldappr-error.c ./directory/c-sdk/ldap/libraries/libprldap/ldappr-error.c
---- ../Orig/mozilla/directory/c-sdk/ldap/libraries/libprldap/ldappr-error.c	Mon Apr 15 11:42:10 2002
-+++ ./directory/c-sdk/ldap/libraries/libprldap/ldappr-error.c	Sat May 11 20:14:18 2002
+--- ../Orig/mozilla/directory/c-sdk/ldap/libraries/libprldap/ldappr-error.c	Sun Apr 14 20:15:10 2002
++++ ./directory/c-sdk/ldap/libraries/libprldap/ldappr-error.c	Thu Jun  6 09:13:48 2002
 @@ -186,6 +186,11 @@
  #define EDEADLOCK       -1
  #endif
