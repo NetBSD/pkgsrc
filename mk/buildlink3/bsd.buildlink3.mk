@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.6 2003/09/08 07:30:07 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.7 2003/09/08 09:18:15 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -99,6 +99,9 @@ ${_BLNK_DEPMETHOD.${_pkg_}}+= \
 # _BLNK_PKG_DBDIR.<pkg>		contains all of the package metadata
 #				files for <pkg>
 #
+# _BLNK_PKG_INFO.<pkg>		pkg_info(1) with correct dbdir to get
+#				information for <pkg>
+#
 # BUILDLINK_PKGNAME.<pkg>	the name of the package
 #
 # BUILDLINK_PREFIX.<pkg>	contains all of the installed files
@@ -133,24 +136,35 @@ ${_BLNK_DEPMETHOD.${_pkg_}}+= \
 #
 .for _pkg_ in ${BUILDLINK_PACKAGES} ${_BLNK_X11_LINKS_PACKAGE}
 .  if !defined(_BLNK_PKG_DBDIR.${_pkg_})
-_BLNK_PKG_DBDIR.${_pkg_}!=						\
+_BLNK_PKG_DBDIR.${_pkg_}!=	\
 	dir=`cd ${_PKG_DBDIR}; ${PKG_ADMIN} -s "" lsbest "${BUILDLINK_DEPENDS.${_pkg_}}" || ${TRUE}`; \
 	case "$$dir" in							\
 	"")	dir="not_found" ;;					\
+	*)	if [ -f $$dir/+DEPOT ]; then				\
+			dir=`${HEAD} -1 $$dir/+DEPOT`;			\
+		fi ;;							\
 	esac;								\
 	${ECHO} $$dir
 .    if empty(_BLNK_PKG_DBDIR.${_pkg_}:Mnot_found)
 MAKEFLAGS+=	_BLNK_PKG_DBDIR.${_pkg_}=${_BLNK_PKG_DBDIR.${_pkg_}}
 .    endif
 .  endif
+_BLNK_PKG_INFO.${_pkg_}=	\
+	${PKG_INFO_CMD} -K ${_BLNK_PKG_DBDIR.${_pkg_}:H}
+
 BUILDLINK_PKGNAME.${_pkg_}?=	${_BLNK_PKG_DBDIR.${_pkg_}:T}
+.  if exists(${_BLNK_PKG_DBDIR.${_pkg_}}/+VIEWS)
+BUILDLINK_IS_DEPOT.${_pkg_}?=	yes
+.  else
+BUILDLINK_IS_DEPOT.${_pkg_}?=	no
+.  endif
 .  if !defined(BUILDLINK_PREFIX.${_pkg_})
-.    if ${PKG_INSTALLATION_TYPE} == "pkgviews"
+.    if !empty(BUILDLINK_IS_DEPOT.${_pkg_}:M[yY][eE][sS])
 BUILDLINK_PREFIX.${_pkg_}?=	${_BLNK_PKG_DBDIR.${_pkg_}}
-.    elif ${PKG_INSTALLATION_TYPE} == "overwrite"
+.    else
 .      if empty(_BLNK_PKG_DBDIR.${_pkg_}:Mnot_found)
 BUILDLINK_PREFIX.${_pkg_}!=	\
-	${PKG_INFO} -qp ${BUILDLINK_PKGNAME.${_pkg_}} | ${SED}  -e "s,^[^/]*,,"
+	${_BLNK_PKG_INFO.${_pkg_}} -qp ${BUILDLINK_PKGNAME.${_pkg_}} | ${SED}  -e "s,^[^/]*,,"
 .      else
 BUILDLINK_PREFIX.${_pkg_}?=	not_found
 .      endif
@@ -158,11 +172,6 @@ BUILDLINK_PREFIX.${_pkg_}?=	not_found
 .    if empty(BUILDLINK_PREFIX.${_pkg_}:Mnot_found)
 MAKEFLAGS+=	BUILDLINK_PREFIX.${_pkg_}=${BUILDLINK_PREFIX.${_pkg_}}
 .    endif
-.  endif
-.  if exists(${_BLNK_PKG_DBDIR.${_pkg_}}/+VIEWS)
-BUILDLINK_IS_DEPOT.${_pkg_}?=	yes
-.  else
-BUILDLINK_IS_DEPOT.${_pkg_}?=	no
 .  endif
 BUILDLINK_IS_BUILTIN.${_pkg_}?=	no
 BUILDLINK_CPPFLAGS.${_pkg_}?=	# empty
@@ -343,11 +352,12 @@ buildlink-${_pkg_}-cookie:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	${TOUCH} ${TOUCH_FLAGS} ${_BLNK_COOKIE.${_pkg_}}
 
-.if !empty(BUILDLINK_IS_DEPOT.${_pkg_}:M[yY][eE][sS])
+.if (${PKG_INSTALLATION_TYPE} == "pkgviews") &&				\
+    !empty(BUILDLINK_IS_DEPOT.${_pkg_}:M[yY][eE][sS])
 BUILDLINK_FILES_CMD.${_pkg_}?=	${TRUE}
 .else
 BUILDLINK_FILES_CMD.${_pkg_}?=						\
-	${PKG_INFO} -f ${BUILDLINK_PKGNAME.${_pkg_}} |			\
+	${_BLNK_PKG_INFO.${_pkg_}} -f ${BUILDLINK_PKGNAME.${_pkg_}} |	\
 	${SED} -n '/File:/s/^[ 	]*File:[ 	]*//p' |		\
 	${GREP} '\(include.*/\|lib.*/lib[^/]*$$\)' |			\
 	${SED} "s,^,$${pkg_prefix},"
@@ -361,7 +371,7 @@ ${_BLNK_COOKIE.${_pkg_}}:
 	esac;								\
 	cd ${BUILDLINK_PREFIX.${_pkg_}};				\
 	pkg_prefix=`							\
-		${PKG_INFO} -qp ${BUILDLINK_PKGNAME.${_pkg_}} |		\
+		${_BLNK_PKG_INFO.${_pkg_}} -qp ${BUILDLINK_PKGNAME.${_pkg_}} | \
 		${SED}	-e "s,^[^/]*,,"					\
 			-e "s,^${BUILDLINK_PREFIX.${_pkg_}},,"		\
 			-e "s,^/,,"					\
@@ -561,12 +571,14 @@ _BLNK_UNPROTECT=	# empty
 _BLNK_PROTECT_DIRS+=	${BUILDLINK_DIR}
 _BLNK_PROTECT_DIRS+=	${BUILDLINK_X11_DIR}
 _BLNK_PROTECT_DIRS+=	${WRKDIR}
-.for _pkg_ in ${BUILDLINK_PACKAGES}
-.  if !empty(BUILDLINK_IS_DEPOT.${_pkg_}:M[yY][eE][sS])
+.if ${PKG_INSTALLATION_TYPE} == "pkgviews"
+.  for _pkg_ in ${BUILDLINK_PACKAGES}
+.    if !empty(BUILDLINK_IS_DEPOT.${_pkg_}:M[yY][eE][sS])
 _BLNK_PROTECT_DIRS+=	${BUILDLINK_PREFIX.${_pkg_}}
 _BLNK_UNPROTECT_DIRS+=	${BUILDLINK_PREFIX.${_pkg_}}
-.  endif
-.endfor
+.    endif
+.  endfor
+.endif
 _BLNK_UNPROTECT_DIRS+=	${WRKDIR}
 _BLNK_UNPROTECT_DIRS+=	${BUILDLINK_X11_DIR}
 _BLNK_UNPROTECT_DIRS+=	${BUILDLINK_DIR}
@@ -585,14 +597,6 @@ _BLNK_TRANSFORM+=	mangle:${_dir_}:${_BLNK_MANGLE_DIR.${_dir_}}
 _BLNK_TRANSFORM+=	untransform:mangle:${_dir_}:${_BLNK_MANGLE_DIR.${_dir_}}
 .endfor
 #
-# Change references to ${DEPOTBASE}/<pkg> into ${LOCALBASE} so that
-# "overwrite" packages think headers and libraries for "pkgviews" packages
-# are just found in the default view.
-#
-.if ${PKG_INSTALLATION_TYPE} == "overwrite"
-_BLNK_TRANSFORM+=       depot:${DEPOTBASE}:${LOCALBASE}
-.endif
-#
 # Change any buildlink directories in runtime library search paths into
 # the canonical actual installed paths.
 #
@@ -606,6 +610,14 @@ _BLNK_TRANSFORM+=	rpath:${_BLNK_MANGLE_DIR.${BUILDLINK_DIR}}:${LOCALBASE}
 .for _dir_ in ${_BLNK_ALLOWED_RPATHDIRS}
 _BLNK_TRANSFORM+=	rpath:${_dir_}:${_BLNK_MANGLE_DIR.${_dir_}}
 .endfor
+#
+# Change references to ${DEPOTBASE}/<pkg> into ${LOCALBASE} so that
+# "overwrite" packages think headers and libraries for "pkgviews" packages
+# are just found in the default view.
+#
+.if ${PKG_INSTALLATION_TYPE} == "overwrite"
+_BLNK_TRANSFORM+=       depot:${DEPOTBASE}:${LOCALBASE}
+.endif
 #
 # Convert direct paths to shared libraries into "-Ldir -llib" equivalents.
 #
@@ -1199,11 +1211,13 @@ _BLNK_CACHE_PASSTHRU_GLOB+=	-[IL].|-[IL]./*|-[IL]..*|-[IL][!/]*
 # Allow the depot directories for packages for which we need to find
 # headers and libraries for both -[IL]<dir>.
 #
-.  for _pkg_ in ${BUILDLINK_PACKAGES}
-.    if !empty(BUILDLINK_IS_DEPOT.${_pkg_}:M[yY][eE][sS])
+.  if ${PKG_INSTALLATION_TYPE} == "pkgviews"
+.    for _pkg_ in ${BUILDLINK_PACKAGES}
+.      if !empty(BUILDLINK_IS_DEPOT.${_pkg_}:M[yY][eE][sS])
 _BLNK_CACHE_PASSTHRU_GLOB+=	-[IL]${BUILDLINK_PREFIX.${_pkg_}}/*
-.    endif
-.  endfor
+.      endif
+.    endfor
+.  endif
 #
 # Allow all subdirs of ${_BLNK_ALLOWED_RPATHDIRS} to be in the runtime
 # library search path.
