@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2490 2004/11/26 21:37:20 snj Exp $
+$NetBSD: TODO,v 1.2491 2004/11/26 21:59:09 snj Exp $
 
 Suggested new packages
 ======================
@@ -249,7 +249,6 @@ Suggested package updates
 
 	o 0verkill-0.16
 	o 3ddesktop-0.2.7
-	o 9menu-1.8
 	o AiCA-0.81
 	o ArX-2.1.1
 	o BasiliskII-1.0.20041109
