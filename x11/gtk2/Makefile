@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.74 2005/02/04 21:40:33 jmmv Exp $
+# $NetBSD: Makefile,v 1.75 2005/02/04 21:42:22 jmmv Exp $
 #
 
 DISTNAME=		gtk+-2.6.2
@@ -17,7 +17,7 @@ CONFLICTS=		gtk2-engines<2.6.0
 
 BUILD_USES_MSGFMT=	yes
 
-BUILDLINK_DEPENDS.glib2+=	glib2>=2.6.1
+BUILDLINK_DEPENDS.glib2+=	glib2>=2.6.2
 BUILDLINK_DEPENDS.pango+=	pango>=1.8.0
 BUILDLINK_DEPENDS.Xft2+=	Xft2>=2.1.2nb2
 
