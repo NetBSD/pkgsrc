@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.21 2003/08/02 04:24:59 grant Exp $
+# $NetBSD: Makefile.common,v 1.22 2003/09/28 01:34:40 grant Exp $
 #
 DISTNAME=		qt-x11-free-${QTVERSION}
 CATEGORIES=		x11
@@ -44,7 +44,11 @@ SCRIPTS_ENV+=		HOME="${WRKDIR}"
 
 .if ${OPSYS} == "SunOS"
 CONFIGURE_SCRIPT=	${SH} ./configure
+.  if !empty(CC_VERSION:Mgcc*)
 CONFIGURE_ARGS+=	-platform solaris-g++
+.  else
+CONFIGURE_ARGS+=	-platform solaris-cc
+.  endif
 SYS_LIBS=		-lresolv -lsocket -lnsl
 .endif
 
@@ -59,8 +63,7 @@ CONFIGURE_ARGS+=	-no-xinerama
 # uces buggy code.
 #
 
-GCC_VERSION!=           ${CXX} --version
-.if (${GCC_VERSION:C/-.*$$//} == egcs)
+.if !empty(CC_VERSION:Mgcc-2.8*)
 CXXFLAGS+=		-DQ_INLINE_TEMPLATES=inline
 .endif
 
