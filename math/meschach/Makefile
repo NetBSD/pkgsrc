@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/02/25 21:40:21 jtb Exp $
+# $NetBSD: Makefile,v 1.4 2001/02/27 18:42:05 jtb Exp $
 
 DISTNAME=		mesch12b
 PKGNAME=		meschach-1.2b
@@ -9,13 +9,10 @@ MAINTAINER=		jtb@netbsd.org
 HOMEPAGE=		http://www.math.uiowa.edu/~dstewart/meschach/
 COMMENT=		Library of C Routines for Matrix Computations
 
-WRKSRC=			${WRKDIR}/${DISTNAME}
-GNU_CONFIGURE=		#defined
 WRKSRC=			${WRKDIR}
+GNU_CONFIGURE=		#defined
+CONFIGURE_ARGS+=	--with-all
 MAKEFILE=		makefile
-USE_LIBTOOL=		#defined
-
-CONFIGURE_ARGS+=	"--with-all"
 
 pre-patch:
 	${CP} ${FILESDIR}/makefile.in ${WRKSRC}
@@ -44,7 +41,7 @@ post-install:
 	${ECHO} $$i; $$i;						\
 	done
 	${INSTALL_DATA} ${WRKSRC}/copyright ${PREFIX}/share/meschach
-	@for f in tutadv.c tutorial.c ; do				\
+	@for f in tutadv.c tutorial.c; do				\
 	i="${INSTALL_DATA} ${WRKSRC}/$$f ${PREFIX}/share/meschach/";	\
 	${ECHO} $$i; $$i;						\
 	done

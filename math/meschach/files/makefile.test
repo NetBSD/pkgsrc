@@ -1,15 +1,14 @@
-LIBS = -Wl,-R@PREFIX@/lib -L@PREFIX@/lib -lmeschach -lm
+TORTURE= torture sptort ztorture memtort itertort mfuntort iotort
 
-CFLAGS += -I@PREFIX@/include -O2 -ansi
+CPPFLAGS+= -I@PREFIX@/include
 
-TORTURE = torture sptort ztorture memtort itertort mfuntort iotort
-
-TORTURE_O = $(TORTURE:=.o)
+LDFLAGS+= -Wl,-R@PREFIX@/lib -L@PREFIX@/lib
+LIBS= -lmeschach -lm
 
 all: $(TORTURE)
 
-$(TORTURE): $(TORTURE_O)
-	$(CC) $(CFLAGS) $@.o $(LIBS) -o $@
+$(TORTURE): $(TORTURE:=.o)
+	$(CC) $(CPPFLAGS) $(CFLAGS) $@.o $(LDFLAGS) $(LIBS) -o $@
 
 clean:
 	rm -fr *.o *.core iotort.dat torture sptort ztorture \

@@ -1,34 +1,26 @@
-CC = @CC@
+LIB= meschach
 
-DEFS = @DEFS@
-LIBS = @LIBS@
-LIBDIR = ${PREFIX}/lib
+SHLIB_MAJOR= 0
+SHLIB_MINOR= 0
 
-OBJ =   copy.o err.o matrixio.o memory.o vecop.o matop.o pxop.o		   \
-	submat.o init.o otherio.o machine.o matlab.o ivecop.o version.o	   \
-	meminfo.o memstat.o lufactor.o bkpfacto.o chfactor.o qrfactor.o	   \
-	solve.o hsehldr.o givens.o update.o norm.o hessen.o symmeig.o	   \
-	schur.o svd.o fft.o mfunc.o bdfactor.o sparse.o sprow.o sparseio.o \
-	spchfctr.o splufctr.o spbkp.o spswap.o iter0.o itersym.o	   \
-	iternsym.o zmachine.o zcopy.o zmatio.o zmemory.o zvecop.o zmatop.o \
-	znorm.o zfunc.o zlufctr.o zsolve.o zmatlab.o zhsehldr.o		   \
-	zqrfctr.o zgivens.o zhessen.o zschur.o conjgrad.o lanczos.o	   \
-	arnoldi.o
+CPPFLAGS+= @DEFS@
+LDADD+= @LIBS@
 
-all:	libmeschach.la
+LIBDIR= ${PREFIX}/lib
 
-libmeschach.la: $(OBJ)
-	$(LIBTOOL) $(CC) $(CFLAGS) -o $@ $(OBJ:.o=.lo) -lm \
-	-rpath $(LIBDIR) --version-info 0:0
+NOLINT= 1
+MKPICINSTALL= no
+MKPROFILE= no
 
-install: libmeschach.la
-	$(LIBTOOL) --mode=install $(BSD_INSTALL_DATA) $? $(LIBDIR)
+SRCS=  copy.c err.c matrixio.c memory.c vecop.c matop.c pxop.c		   \
+	submat.c init.c otherio.c machine.c matlab.c ivecop.c version.c	   \
+	meminfo.c memstat.c lufactor.c bkpfacto.c chfactor.c qrfactor.c	   \
+	solve.c hsehldr.c givens.c update.c norm.c hessen.c symmeig.c	   \
+	schur.c svd.c fft.c mfunc.c bdfactor.c sparse.c sprow.c sparseio.c \
+	spchfctr.c splufctr.c spbkp.c spswap.c iter0.c itersym.c	   \
+	iternsym.c zmachine.c zcopy.c zmatio.c zmemory.c zvecop.c zmatop.c \
+	znorm.c zfunc.c zlufctr.c zsolve.c zmatlab.c zhsehldr.c		   \
+	zqrfctr.c zgivens.c zhessen.c zschur.c conjgrad.c lanczos.c	   \
+	arnoldi.c
 
-.c.o:
-	$(LIBTOOL) $(CC) -c $(CFLAGS) $(DEFS) $<
-
-clean:
-	rm -fr *.o *.lo *.core asx5213a.mat iotort.dat *.la
-	rm -fr torture sptort ztorture memtort itertort mfuntort iotort
-	rm -fr makefile machine.h config.status maxint macheps
-
+.include <bsd.lib.mk>
