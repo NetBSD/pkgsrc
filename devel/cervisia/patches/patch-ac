@@ -1,13 +1,13 @@
-$NetBSD: patch-ac,v 1.1.1.1 1999/11/05 04:32:07 hubertf Exp $
+$NetBSD: patch-ac,v 1.2 1999/12/13 19:24:04 hubertf Exp $
 
---- src/toplevel.cpp.orig	Fri Nov  5 05:27:35 1999
-+++ src/toplevel.cpp	Fri Nov  5 05:27:43 1999
-@@ -297,7 +297,7 @@
-     if (!filename.isEmpty())
- 	{
- 	    DEBUGOUT( "Open file" << filename << "." );
--	    QString command = "gnuclient ";
-+	    QString command = "kwrite ";
+--- src/toplevel.cpp.orig	Mon Nov 22 19:50:56 1999
++++ src/toplevel.cpp	Mon Dec 13 20:04:48 1999
+@@ -400,7 +400,7 @@
+                     system(command);
+                 }
+ #else
+-	    QString command = config->readEntry("Editor", "gnuclient");
++	    QString command = config->readEntry("Editor", "kwrite");
+             command += " ";
  	    command += filename;
  	    command += "&";
- 	    system(command);
