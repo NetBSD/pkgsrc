@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7493 2004/10/20 18:39:25 jmmv Exp $
+$NetBSD: CHANGES,v 1.7494 2004/10/20 19:00:05 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4784,3 +4784,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added p5-Term-ProgressBar-2.06-r1 [adrianp 2004-10-20]
 	Added p5-HTML-LinkExtractor-0.121 [adrianp 2004-10-20]
 	Updated pkgfind to 20041020 [jmmv 2004-10-20]
+	Added p5-xmltv-0.5.35 [adrianp 2004-10-20]
