@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2004/02/14 17:21:54 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2004/02/22 23:05:59 kristerw Exp $
 # FreeBSD Id: ports/www/swish-e/Makefile,v 1.3 1999/08/31 02:43:18 peter Exp
 
 DISTNAME=	swish-e-2.4.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www textproc
 MASTER_SITES=	http://swish-e.org/Download/
 
@@ -10,6 +10,7 @@ MAINTAINER=	dotz@irc.pl
 HOMEPAGE= 	http://swish-e.org/
 COMMENT= 	Simple web indexing for humans - enhanced
 
+USE_BUILDLINK2=	yes
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 
@@ -27,6 +28,7 @@ PLIST_SUBST+=	LIBSWISH_E="@comment "
 PLIST_SUBST+=	LIBSWISH_E=
 .endif
 
+.include "../../converters/libiconv/buildlink2.mk"
 .include "../../devel/pcre/buildlink2.mk"
 .include "../../devel/zlib/buildlink2.mk"
 .include "../../textproc/libxml2/buildlink2.mk"
