@@ -1,7 +1,18 @@
-$NetBSD: patch-ab,v 1.1 2000/04/03 03:24:48 hubertf Exp $
+$NetBSD: patch-ab,v 1.2 2004/07/06 22:08:17 hubertf Exp $
 
---- renderer.cpp.orig	Mon Apr  3 05:07:37 2000
-+++ renderer.cpp	Mon Apr  3 05:08:40 2000
+--- renderer.cpp.orig	1999-12-06 10:13:35.000000000 -0600
++++ renderer.cpp	2003-11-14 12:32:03.000000000 -0600
+@@ -1483,8 +1483,8 @@
+   labelstring.sprintf("%s, %s %d. %d, %d:%02d %s\n"
+                       "View pos %2.2f° %c %2.2f° %c\n"
+                       "Sun pos %2.2f° %c %2.2f° %c",
+-                      dt.date().dayName(dt.date().dayOfWeek()),
+-                      dt.date().monthName(dt.date().month()),
++                      dt.date().dayName(dt.date().dayOfWeek()).ascii(),
++                      dt.date().monthName(dt.date().month()).ascii(),
+                       dt.date().day(), dt.date().year(),
+                       dt.time().hour(), dt.time().minute(),
+                       tzname[tm->tm_isdst],
 @@ -1562,9 +1562,9 @@
    
    for(int i=0; i<numstars; i++)
