@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2004/10/11 21:15:49 abs Exp $
+@comment $NetBSD: PLIST,v 1.14 2005/01/21 12:24:39 abs Exp $
 tomcat/LICENSE
 tomcat/NOTICE
 tomcat/RELEASE-NOTES
@@ -11,6 +11,9 @@ tomcat/bin/catalina.xml
 tomcat/bin/commons-daemon.jar
 tomcat/bin/commons-launcher.jar
 tomcat/bin/commons-logging-api.jar
+tomcat/bin/contrib/GNU-Linux/catalina.sh
+tomcat/bin/contrib/README.txt
+tomcat/bin/contrib/openVMS-alpha/TOMCAT_Setup_Java.com
 tomcat/bin/digest.sh
 tomcat/bin/jmx.jar
 tomcat/bin/jsvc.tar.gz
@@ -814,8 +817,11 @@ tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/catalina/session/package
 tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/catalina/session/package-summary.html
 tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/catalina/session/package-tree.html
 tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/catalina/ssi/ByteArrayServletOutputStream.html
+tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/catalina/ssi/ExpressionParseTree.html
+tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/catalina/ssi/ExpressionTokenizer.html
 tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/catalina/ssi/ResponseIncludeWrapper.html
 tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/catalina/ssi/SSICommand.html
+tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/catalina/ssi/SSIConditional.html
 tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/catalina/ssi/SSIConfig.html
 tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/catalina/ssi/SSIEcho.html
 tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/catalina/ssi/SSIExec.html
@@ -1425,6 +1431,7 @@ tomcat/webapps/tomcat-docs/jasper/docs/api/org/apache/jasper/runtime/package-fra
 tomcat/webapps/tomcat-docs/jasper/docs/api/org/apache/jasper/runtime/package-summary.html
 tomcat/webapps/tomcat-docs/jasper/docs/api/org/apache/jasper/runtime/package-tree.html
 tomcat/webapps/tomcat-docs/jasper/docs/api/org/apache/jasper/security/SecurityClassLoad.html
+tomcat/webapps/tomcat-docs/jasper/docs/api/org/apache/jasper/security/SecurityUtil.html
 tomcat/webapps/tomcat-docs/jasper/docs/api/org/apache/jasper/security/package-frame.html
 tomcat/webapps/tomcat-docs/jasper/docs/api/org/apache/jasper/security/package-summary.html
 tomcat/webapps/tomcat-docs/jasper/docs/api/org/apache/jasper/security/package-tree.html
@@ -1999,5 +2006,8 @@ tomcat/webapps/webdav/tomcat.gif
 @exec ${MKDIR} %D/tomcat/common/classes
 @dirrm tomcat/common/classes
 @dirrm tomcat/common
+@dirrm tomcat/bin/contrib/openVMS-alpha
+@dirrm tomcat/bin/contrib/GNU-Linux
+@dirrm tomcat/bin/contrib
 @dirrm tomcat/bin
 @unexec ${RMDIR} -p %D/tomcat 2> /dev/null || ${TRUE}
