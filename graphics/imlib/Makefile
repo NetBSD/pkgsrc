@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2000/11/26 11:34:56 mycroft Exp $
+# $NetBSD: Makefile,v 1.40 2000/12/03 21:04:21 tron Exp $
 #
 
 DISTNAME=		imlib-1.9.8.1
@@ -6,7 +6,6 @@ CATEGORIES=		graphics
 MASTER_SITES=		${MASTER_SITE_GNOME:=stable/sources/imlib/}
 
 MAINTAINER=		tron@netbsd.org
-HOMEPAGE=		http://www.labs.redhat.com/imlib/
 
 BUILD_DEPENDS+=		${LOCALBASE}/bin/autoconf:../../devel/autoconf
 BUILD_DEPENDS+=		${LOCALBASE}/bin/automake:../../devel/automake
