@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2004/10/03 00:17:49 tv Exp $
+# $NetBSD: Makefile,v 1.7 2004/11/29 23:01:14 explorer Exp $
 #
 
-DISTNAME=	cdpd-1.0.1
-PKGREVISION=	1
+DISTNAME=	cdpd-1.0.2
+#PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.lexa.ru/pub/domestic/snar/
 
