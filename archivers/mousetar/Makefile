@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/07/29 21:47:09 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2004/07/30 14:53:43 minskim Exp $
 #
 
 DISTNAME=	mousetar-20021217
@@ -10,6 +10,8 @@ MAINTAINER=	tech-pkg@NetBSD.org
 #HOMEPAGE=	none
 COMMENT=	der Mouse's version of tar program
 
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
 WRKSRC=		${WRKDIR}
 USE_BUILDLINK3=	yes
 
@@ -18,6 +20,8 @@ USE_BUILDLINK3=	yes
 .if ${MACHINE_PLATFORM:MNetBSD-[2-9].*-*} != ""
 CPPFLAGS+=	-DTAR_INODE_INTERNAL
 .endif
+
+INSTALLATION_DIRS=	bin man/man1
 
 do-extract:
 	for f in ${DISTFILES}; do					\
