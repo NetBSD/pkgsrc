@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.33 2002/12/07 02:39:02 schmonz Exp $
+# $NetBSD: Makefile,v 1.34 2003/01/04 12:52:20 cjep Exp $
 
+DISTNAME=	acroread	# Overridden below
 PKGNAME=	acroread-4.05
 CATEGORIES=	print
 MASTER_SITES=	ftp://ftp-pac.adobe.com/pub/adobe/acrobatreader/unix/4.x/
@@ -20,6 +21,9 @@ NO_BUILD=	YES
 SHLIB_HANDLING=	NO
 
 .include "../../mk/bsd.prefs.mk"
+
+# Default (should be overridden below)
+PLATFORM=	unknown
 
 .if ${OPSYS} == "NetBSD"
 . if (${MACHINE_ARCH} == "i386")
@@ -51,9 +55,6 @@ PLATFORM=	sparcsolaris
 
 post-patch:
 	${CHMOD} -R o+rwx ${WRKSRC}
-.else
-DISTNAME=	${PKGNAME}
-PLATFORM=	unknown
 .endif
 
 PLIST_SUBST+=	PLATFORM=${PLATFORM}
