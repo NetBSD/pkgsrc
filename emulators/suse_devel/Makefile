@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/01/25 09:29:10 tron Exp $
+# $NetBSD: Makefile,v 1.11 2001/02/17 18:38:26 wiz Exp $
 
 DISTNAME=		suse_devel-${SUSE_VERSION}
 CATEGORIES=		emulators
@@ -8,6 +8,7 @@ DISTFILES=		${RPMFILES}
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.suse.com/
+COMMENT=		Linux compatibility package - development tools
 
 DEPENDS+=		suse_base>=${SUSE_VERSION}:../suse_base
 

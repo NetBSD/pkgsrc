@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2000/12/17 13:05:43 tron Exp $
+# $NetBSD: Makefile,v 1.16 2001/02/17 18:38:28 wiz Exp $
 
 DISTNAME=		shlibs5
 PKGNAME=		suse_libc5-${SUSE_VERSION}
@@ -8,6 +8,7 @@ EXTRACT_SUFX=		.rpm
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.suse.com/
+COMMENT=		Linux compatibility package for libc5 binaries
 
 DEPENDS+=		suse_compat-${SUSE_VERSION}:../suse_compat
 

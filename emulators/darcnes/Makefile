@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2000/10/28 23:04:31 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2001/02/17 18:38:16 wiz Exp $
 
 DISTNAME=	dn9a1011
 PKGNAME=	darcnes-20001011
@@ -9,6 +9,7 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	wiz@netbsd.org
 HOMEPAGE=	http://www.netway.com/~nyef/
+COMMENT=	multi-system emulator (NES, SMS, GG, PCE, and others)
 
 LICENSE=	no-commercial-use
 

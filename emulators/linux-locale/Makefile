@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2000/12/17 21:49:40 tron Exp $
+# $NetBSD: Makefile,v 1.12 2001/02/17 18:38:18 wiz Exp $
 #
 
 DISTNAME=	locales-2.1-1mdk
@@ -10,6 +10,7 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	sakamoto@netbsd.org
 HOMEPAGE=	http://www.linuxi18n.org/locales/
+COMMENT=	Locales for Linux
 
 BUILD_DEPENDS+=	rpm2cpio:../../misc/rpm
 
