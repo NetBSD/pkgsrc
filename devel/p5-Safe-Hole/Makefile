@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2002/10/13 22:22:46 seb Exp $
+# $NetBSD: Makefile,v 1.5 2004/04/25 03:22:57 minskim Exp $
 #
 
 DISTNAME=	Safe-Hole-0.08
@@ -11,7 +11,9 @@ MAINTAINER=	eric@cirr.com
 HOMEPAGE=	http://theoryx5.uwinnipeg.ca/CPAN/data/Safe-Hole/Hole.html
 COMMENT=	Exec subs in the original package from within a Safe object
 
-USE_BUILDLINK2=		YES
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+USE_BUILDLINK3=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Safe/Hole/.packlist
 
 .include "../../lang/perl5/module.mk"
