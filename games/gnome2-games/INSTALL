@@ -51,7 +51,7 @@ same-gnome.scores
  do
 	if [ ! -f $FILE ]
 	then
-		@@INSTALL@@ -c -o games -g games -m 664 /dev/null $FILE
+		@INSTALL@ -c -o games -g games -m 664 /dev/null $FILE
 	fi
  done)
 
