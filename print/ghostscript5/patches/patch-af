@@ -1,0 +1,15 @@
+$NetBSD: patch-af,v 1.1 1998/11/04 23:36:49 mycroft Exp $
+
+--- devs.mak.orig	Mon Sep 14 22:03:52 1998
++++ devs.mak	Wed Nov  4 18:15:26 1998
+@@ -896,8 +896,8 @@
+ png_i_=-include $(PNGGENDIR)$(D)libpng
+ 
+ $(GLOBJ)gdevpng.$(OBJ): $(GLSRC)gdevpng.c\
+- $(gdevprn_h) $(gdevpccm_h) $(gscdefs_h) $(PNGSRC)png.h
+-	$(CC_) $(I_)$(GLI_) $(II)$(PI_)$(_I) $(GLF_) $(GLO_)gdevpng.$(OBJ) $(C_) $(GLSRC)gdevpng.c
++ $(gdevprn_h) $(gdevpccm_h) $(gscdefs_h)
++	$(CC_) $(I_)$(PREFIX)/include $(I_)$(GLI_) $(II)$(PI_)$(_I) $(GLF_) $(GLO_)gdevpng.$(OBJ) $(C_) $(GLSRC)gdevpng.c
+ 
+ pngmono.dev: $(libpng_dev) $(png_) page.dev
+ 	$(SETPDEV2) pngmono $(png_)
