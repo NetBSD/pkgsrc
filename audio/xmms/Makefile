@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.50 2003/07/17 21:23:52 grant Exp $
+# $NetBSD: Makefile,v 1.51 2003/07/22 23:23:15 jmmv Exp $
 #
 
 DISTNAME=	xmms-1.2.7
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	audio
 MASTER_SITES=	ftp://ftp.xmms.org/xmms/1.2.x/ \
 		ftp://ftp.sunet.se/pub/multimedia/xmms/1.2.x/
@@ -19,7 +19,8 @@ USE_X11=		yes
 GNU_CONFIGURE=		yes
 
 CONFIGURE_ARGS+=	--without-gnome
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool ${WRKSRC}/libxmms/libtool
+LIBTOOL_OVERRIDE=	${WRKSRC}/libxmms/libtool
+SHLIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 # Broken configure script assumes that iconv_open lives in libc; work around. 
 CPPFLAGS+=		-DHAVE_ICONV_OPEN=1
