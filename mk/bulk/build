@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: build,v 1.44 2004/11/12 15:39:22 jlam Exp $
+# $NetBSD: build,v 1.45 2004/11/16 18:34:12 jlam Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -196,6 +196,7 @@ if [ -d pkgtools/pkglint ]; then
 	INDEXFILE=`${BMAKE} show-var VARNAME=INDEXFILE` || fail=yes
 	ORDERFILE=`${BMAKE} show-var VARNAME=ORDERFILE` || fail=yes
 	BROKENFILE=`${BMAKE} show-var VARNAME=BROKENFILE` || fail=yes
+	BROKENWRKLOG=`${BMAKE} show-var VARNAME=BROKENWRKLOG ` || fail=yes
 	BUILDLOG=`${BMAKE} show-var VARNAME=BUILDLOG` || fail=yes
 	STARTFILE=`${BMAKE} show-var VARNAME=STARTFILE` || fail=yes
 	AWK=`${BMAKE} show-var VARNAME=AWK` || fail=yes
@@ -221,6 +222,7 @@ echo "SUPPORTSFILE    = $SUPPORTSFILE"
 echo "INDEXFILE       = $INDEXFILE"
 echo "ORDERFILE       = $ORDERFILE"
 echo "BROKENFILE      = $BROKENFILE"
+echo "BROKENWRKLOG    = $BROKENWRKLOG"
 echo "BUILDLOG        = $BUILDLOG"
 echo "STARTFILE       = $STARTFILE"
 echo "----------------------------------"
@@ -235,6 +237,7 @@ if [ $fail = "yes" -o \
 	-z "$INDEXFILE" -o \
 	-z "$ORDERFILE" -o \
 	-z "$BROKENFILE" -o \
+	-z "$BROKENWRKLOG" -o \
 	-z "$BUILDLOG" -o \
 	-z "$STARTFILE" -o \
 	-z "$AWK" -o \
