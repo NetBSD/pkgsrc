@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.1 2004/03/10 17:57:14 jlam Exp $
+# $NetBSD: builtin.mk,v 1.2 2004/03/16 17:40:54 jlam Exp $
 
 .if !defined(_BLNK_LIBINTL_FOUND)
 _BLNK_LIBINTL_FOUND!=	\
@@ -106,7 +106,9 @@ _GETTEXT_NEEDS_ICONV!=	\
 .  if ${_GETTEXT_NEEDS_ICONV} == "yes"
 .    for _mkfile_ in buildlink3.mk builtin.mk
 .      if exists(../../converters/libiconv/${_mkfile_})
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 .        include "../../converters/libiconv/${_mkfile_}"
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
 .      endif
 .    endfor
 BUILDLINK_DEPENDS.gettext+=	${_GETTEXT_ICONV_DEPENDS}
