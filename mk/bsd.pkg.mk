@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1524 2004/10/26 02:23:37 lukem Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1525 2004/10/26 21:14:59 xtraeme Exp $
 #
 # This file is in the public domain.
 #
@@ -1462,37 +1462,75 @@ package:
 # adding pre-* or post-* targets/scripts, override these.
 ################################################################
 
-# Resume a previous transfer not finished totally.
+###
+### _RESUME_TRANSFER:
+###
+### Macro to resume a previous transfer, needs to have defined
+### the following options in mk.conf:
+###
+### PKG_RESUME_TRANSFERS
+### FETCH_RESUME_ARGS (if FETCH_CMD != default)
+### FETCH_OUTPUT_ARGS (if FETCH_CMD != default)
+###
+### For example if you want to use wget (pkgsrc/net/wget):
+###
+### FETCH_CMD=wget
+### FETCH_RESUME_ARGS=-c
+### FETCH_OUTPUT_ARGS=-O
+###
+### How does it work?
+###
+### FETCH_CMD downloads the file and saves it temporally into $$bfile.temp
+### if the checksum match the correct one, $$bfile.temp is renamed to
+### the original name.
+###
+
 _RESUME_TRANSFER=							\
-	dsize=`${WC} -c < ${DISTDIR}/${DIST_SUBDIR}/$$bfile`;		\
 	tsize=`${AWK} '/^Size/ && $$2 == '"\"($$file)\""' { print $$4 }' ${DISTINFO_FILE}` || ${TRUE}; \
+	if [ ! -f "${DISTDIR}/${DIST_SUBDIR}/$$bfile.temp" ]; then	\
+		${CP} ${DISTDIR}/${DIST_SUBDIR}/$$bfile ${DISTDIR}/${DIST_SUBDIR}/$$bfile.temp; \
+	fi;	\
+	dsize=`${WC} -c < ${DISTDIR}/${DIST_SUBDIR}/$$bfile.temp`;	\
+	if [ "$$dsize" -eq "$$tsize" -a -f "${DISTDIR}/${DIST_SUBDIR}/$$bfile.temp" ]; then	\
+		${MV} ${DISTDIR}/${DIST_SUBDIR}/$$bfile.temp ${DISTDIR}/${DIST_SUBDIR}/$$bfile;	\
+	fi;	\
 	case "$$tsize" in						\
 	"")	${ECHO_MSG} "No size in distinfo file (${DISTINFO_FILE})"; \
 		break ;;						\
 	esac;								\
-	if ${TEST} -n "$$ftp_proxy" -o -n "$$http_proxy"; then		\
+	if [ -n "$$ftp_proxy" -o -n "$$http_proxy" ]; then		\
 		${ECHO_MSG} "===> Resume is not supported by ftp(1) using http/ftp proxies.";	\
 		break;							\
 	else								\
-		if ${TEST} "$$dsize" -lt "$$tsize"; then		\
-			if ${TEST} "${FETCH_CMD:T}" != "ftp" -a 	\
-				-z "${FETCH_RESUME_ARGS}"; then		\
+		if [ "$$dsize" -lt "$$tsize" ]; then		\
+			if [ "${FETCH_CMD:T}" != "ftp" -a -z "${FETCH_RESUME_ARGS}" ]; then \
 				${ECHO_MSG} "=> Resume transfers are not supported, FETCH_RESUME_ARGS is empty."; \
 				break;					\
 			else						\
 				for res_site in $$sites; do			\
-					${ECHO_MSG} "===> $$bfile not completed, resuming...";	\
-					cd ${_DISTDIR};				\
-					${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${FETCH_RESUME_ARGS} $${res_site}$${bfile}; \
-					if ${TEST} $$? -eq 0; then	\
+					if [ -z "${FETCH_OUTPUT_ARGS}" ]; then	\
+						${ECHO_MSG} "=> FETCH_OUTPUT_ARGS has to be defined.";	\
+						break;			\
+					fi;				\
+					${ECHO_MSG} "=> $$bfile not completed, resuming:";	\
+					${ECHO_MSG} "=> Downloaded: $$dsize Total: $$tsize.";	\
+					${ECHO_MSG};			\
+					cd ${_DISTDIR};			\
+					${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${FETCH_RESUME_ARGS}	\
+						${FETCH_OUTPUT_ARGS} $${bfile}.temp $${res_site}$${bfile}; \
+					if [ $$? -eq 0 ]; then		\
+						ndsize=`${WC} -c < ${DISTDIR}/${DIST_SUBDIR}/$$bfile.temp`;	\
+						if [ "$$tsize" -eq "$$ndsize" ]; then	\
+							${MV} ${DISTDIR}/${DIST_SUBDIR}/$$bfile.temp ${DISTDIR}/${DIST_SUBDIR}/$$bfile;						\
+						fi;			\
 						break;			\
 					fi;				\
 				done;					\
 			fi;						\
-		elif ${TEST} "$$dsize" -gt "$$tsize"; then		\
+		elif [ "$$dsize" -gt "$$tsize" ]; then			\
 			${ECHO_MSG} "==> Downloaded file larger than the recorded size.";	\
 			break;						\
-		fi; 							\
+		fi;							\
 	fi
 
 #
