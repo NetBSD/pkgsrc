@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/01/15 18:46:32 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2000/01/28 14:16:25 sommerfeld Exp $
 #
 # New ports collection makefile for:   mtr
 # Version required:    0.41
@@ -20,6 +20,19 @@ HOMEPAGE=	http://www.bitwizard.nl/mtr/
 # needed for 1.4.x, so just use ncurses..
 DEPENDS+=	ncurses>=4.2:../../devel/ncurses
 
+BUILD_DEFS=	USE_INET6
+.include "../../mk/bsd.prefs.mk"
+.if defined(USE_INET6) && ${USE_INET6} == "YES"
+PATCHFILES=	mtr-041-v6-20000127a.diff.gz
+PATCH_SITES=	ftp://ftp.kame.net/pub/kame/misc/
+PATCH_DIST_STRIP=	-p1
+CONFIGURE_ARGS+=--enable-ipv6
+.else
+DISTFILES=	${DISTNAME}${EXTRACT_SUFX} mtr-041-v6-20000127a.diff.gz
+MASTER_SITES+=	ftp://ftp.kame.net/pub/kame/misc/
+EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
+.endif
+
 #.if defined(USE_GTK)
 #USE_XLIB=	yes
 #LIB_DEPENDS=    gtk12.2:../../x11-toolkits/gtk12
@@ -27,6 +40,7 @@ DEPENDS+=	ncurses>=4.2:../../devel/ncurses
 #.endif
 
 GNU_CONFIGURE=	yes
+USE_GMAKE=	yes
 MAN8=	mtr.8
 CONFIGURE_ENV+= CPPFLAGS=-I${PREFIX}/include
 
