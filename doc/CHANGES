@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4209 2003/12/21 09:26:31 xtraeme Exp $
+$NetBSD: CHANGES,v 1.4210 2003/12/21 09:51:23 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5271,3 +5271,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added mysqlcc-0.9.4 [martti 2003-12-21]
 	Removed abiword2-gnome [xtraeme 2003-12-21]
 	Updated abiword2 to 2.0.2 [xtraeme 2003-12-21]
+	Updated distcc to 2.12 [jmmv 2003-12-21]
