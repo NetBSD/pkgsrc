@@ -1,11 +1,11 @@
-$NetBSD: patch-aa,v 1.2 2004/02/21 01:44:00 gson Exp $
+$NetBSD: patch-aa,v 1.3 2005/02/19 19:32:21 wiz Exp $
 
---- Makefile.PL.orig	2004-01-08 08:38:34.000000000 -0800
+--- Makefile.PL.orig	2005-02-10 13:27:15.000000000 +0100
 +++ Makefile.PL
-@@ -8,13 +8,9 @@
- for (split "\n", <<'QUERIES') {
- xml_pp|y|XML pretty printer
+@@ -10,13 +10,9 @@ xml_pp|y|XML pretty printer
  xml_grep|y|XML grep - grep XML files using XML::Twig's subset of XPath
+ xml_split|y|split big XML files
+ xml_merge|y|merge back files created by xml_split
 -xml_spellcheck|y|spellcheck XML files skipping tags
  QUERIES
      my ($program, $default, $description) = split /\|/, $_;
