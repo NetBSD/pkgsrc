@@ -1,0 +1,35 @@
+$NetBSD: patch-ad,v 1.1 2000/03/28 21:48:43 dmcmahill Exp $
+
+--- bin/start_vipec_help.in.orig	Sun Mar  5 07:38:28 2000
++++ bin/start_vipec_help.in	Tue Mar 28 13:10:55 2000
+@@ -1,15 +1,25 @@
++#!/bin/sh
++
+ # Script to start HTML browser and load help file
+ if [ -z $VIPECHOME ]
+ then
+-  VIPECHOME=/opt/vipec
++  VIPECHOME=@prefix@
+ fi
+ 
+-if [ -z "`ps -ef | grep netscape | grep -v grep`" ]
++URL="file://$VIPECHOME/share/doc/vipec/index.html"
++VIEWER=@prefix@/bin/netscape
++
++if [ -x $VIEWER ]
+ then
+-  netscape "file://$VIPECHOME/help/index.html"
++  if [ -z "`ps -alx | grep netscape | grep -v grep`" ]
++  then
++    $VIEWER $URL 
++  else
++    $VIEWER -noraise -remote "openURL($URL, newwindow)"
++  fi
+ else
+-  netscape -noraise -remote "openURL(file://$VIPECHOME/help/index.html, newwindow)"
++  echo "$VIEWER is not available for online help"
++  echo "Please refer to $URL for help"
+ fi
+-
+ 
+ 
