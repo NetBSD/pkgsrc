@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2004Q4,v 1.1.2.15 2004/12/28 23:34:41 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2004Q4,v 1.1.2.16 2004/12/28 23:50:38 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2004Q4 branch:
@@ -35,3 +35,5 @@ Pullup ticket 189 - requested by Amitai Schlair
 installation fix for php5
 Pullup ticket 190 - requested by Amitai Schlair
 viruscan addition for qmail
+Pullup ticket 191 - requested by Julio M. Merino Vidal
+security fix for gpdf
