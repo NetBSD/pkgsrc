@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.13 2004/11/26 10:31:08 adam Exp $
+$NetBSD: patch-aa,v 1.14 2005/02/22 10:22:05 adam Exp $
 
 --- Makefile.in.orig	2004-11-19 18:50:17.000000000 +0000
 +++ Makefile.in
@@ -26,7 +26,7 @@ $NetBSD: patch-aa,v 1.13 2004/11/26 10:31:08 adam Exp $
  #TK_STUB_LIB_FLAG	= -ltkstub
  
  TK_LIB_FILE		= @TK_LIB_FILE@
-+TK_LA_FILE		= ${TK_LIB_FILE:C/@SHLIB_SUFFIX@/.la/}
++TK_LA_FILE		= ${TK_LIB_FILE:@SHLIB_SUFFIX@=.la}
  #TK_LIB_FILE		= libtk.a
  
  # Generic lib name used in rules that apply to tcl and tk
