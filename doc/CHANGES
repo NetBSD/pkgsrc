@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2114 2003/05/01 20:44:19 jmmv Exp $
+$NetBSD: CHANGES,v 1.2115 2003/05/01 21:34:07 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1818,3 +1818,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated netsaint-base to 0.0.7nb2 [jmmv 2003-05-01]
 	Updated vmware3 to 3.2.1 [jdolecek 2003-05-01]
 	Updated logcheck to 1.1.1nb1 [jmmv 2003-05-01]
+	Updated portsentry to 1.0nb2 [jmmv 2003-05-01]
