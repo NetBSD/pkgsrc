@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/01/23 05:07:43 hamajima Exp $
+sbin/dtcpclient
+sbin/dtcpclient-script
+man/cat8/dtcpclient.0
+man/man8/dtcpclient.8
+share/examples/dtcpclient/dtcpclient-script
+@dirrm share/examples/dtcpclient
