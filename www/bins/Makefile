@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/07/07 06:47:24 simonb Exp $
+# $NetBSD: Makefile,v 1.3 2002/07/30 02:06:30 dmcmahill Exp $
 #
 
 DISTNAME=	bins-1.1.10
@@ -14,6 +14,7 @@ DEPENDS+=	p5-Text-Iconv-1.1:../../converters/p5-Text-Iconv
 DEPENDS+=	p5-Storable>=2.04:../../devel/p5-Storable
 DEPENDS+=	p5-Image-Info>=1.10:../../graphics/p5-Image-Info
 DEPENDS+=	p5-Image-Size>=2.980:../../graphics/p5-Image-Size
+DEPENDS+=	p5-IO-String>=1.01:../../devel/p5-IO-String
 DEPENDS+=	p5-PerlMagick>=5.3.9nb1:../../graphics/p5-PerlMagick
 DEPENDS+=	p5-XML-Grove>=0.46.0.1:../../textproc/p5-XML-Grove
 DEPENDS+=	p5-XML-Handler-YAWriter-0.23:../../textproc/p5-XML-YAWriter
