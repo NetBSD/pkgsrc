@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.3 2002/09/10 16:06:38 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.4 2002/10/26 18:08:54 bouyer Exp $
 
 .if !defined(GAL_BUILDLINK2_MK)
 GAL_BUILDLINK2_MK=	# defined
@@ -12,6 +12,8 @@ BUILDLINK_PREFIX.gal_DEFAULT=	${X11PREFIX}
 BUILDLINK_FILES.gal+=		include/gal/*
 BUILDLINK_FILES.gal+=		include/gal/*/*
 BUILDLINK_FILES.gal+=		lib/libgal.*
+
+INCOMPAT_ICONV= SunOS-*-*
 
 .include "../../converters/libiconv/buildlink2.mk"
 .include "../../devel/bonobo/buildlink2.mk"
