@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/04/12 15:01:45 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2002/10/09 10:54:44 agc Exp $
 #
 
 DISTNAME=	g3d-0.0.2
@@ -9,8 +9,6 @@ MAINTAINER=	sakamoto@netbsd.org
 HOMEPAGE=	http://condor.stcloudstate.edu/~hebl9901/g3d/
 COMMENT=	3D modeller with a view of 3D modelling
 
-DEPENDS+=	gtkglarea>=1.2.1:../../x11/gtkglarea
-
 WRKSRC=		${WRKDIR}/g3d
 
 USE_LIBTOOL=	YES
@@ -18,7 +16,12 @@ USE_GMAKE=	YES
 USE_X11BASE=	YES
 GNU_CONFIGURE=	YES
 
+USE_BUILDLINK2=	yes
+
 post-configure:
 	@${LN} -s ${WRKSRC}/b3d/src ${WRKSRC}/g3d/b3d
+
+.include "../../x11/gtkglarea/buildlink2.mk"
+.include "../../x11/gtk/buildlink2.mk"
 
 .include "../../mk/bsd.pkg.mk"
