@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2003/06/02 01:21:33 jschauma Exp $
+# $NetBSD: Makefile,v 1.23 2003/07/10 11:00:52 adam Exp $
 
 DISTNAME=	sox-12.17.4
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sox/} \
 		http://www.cnpbagwell.com/
@@ -19,5 +20,5 @@ CONFIGURE_ARGS+=	--enable-fast-ulaw \
 			--with-ogg-vorbisinc=${BUILDLINK_PREFIX.libvorbis}/include
 
 .include "../../audio/libvorbis/buildlink2.mk"
-.include "../../audio/mad/buildlink2.mk"
+.include "../../audio/libmad/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
