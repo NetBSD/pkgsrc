@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/07/13 15:15:50 wulf Exp $
+# $NetBSD: Makefile,v 1.3 2001/07/14 13:36:54 wulf Exp $
 
 DISTNAME=	SNNSv4.2
 PKGNAME=	snns-4.2
@@ -9,8 +9,7 @@ MAINTAINER=	wulf@netbsd.org
 HOMEPAGE=	http://www-ra.informatik.uni-tuebingen.de/SNNS/
 COMMENT=	Software simulator for neural networks
 
-DEPENDS=	xpm-3.4k:../../graphics/xpm
-
+USE_XPM=	YES
 GNU_CONFIGURE=	YES
 CONFIGURE_ARGS= --enable-global --prefix=${LOCALBASE}
 
