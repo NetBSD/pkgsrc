@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.193 2002/10/07 19:05:01 wennmach Exp $
+$NetBSD: CHANGES,v 1.194 2002/10/07 19:32:07 seb Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3145,3 +3145,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Added sawfish-themes-0.1 [jschauma 2002-10-07]
 	Removed aquaified-0.30 [jschauma 2002-10-07]
 	Updated arla to 0.35.9nb2 [wennmach 2002-10-07]
+	Updated cyrus-sasl to 1.5.27nb2 [seb 2002-10-07]
