@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.1 2001/06/23 19:28:22 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.2 2001/06/26 17:33:26 jlam Exp $
 #
 # This Makefile fragment is included by packages that use qt2-designer.
 #
@@ -12,8 +12,8 @@
 # (4) Add ${BUILDLINK_DIR}/lib to the front of the linker's library search
 #     path.
 
-.if !defined(QT2_LIBS_BUILDLINK_MK)
-QT2_LIBS_BUILDLINK_MK=	# defined
+.if !defined(QT2_DESIGNER_BUILDLINK_MK)
+QT2_DESIGNER_BUILDLINK_MK=	# defined
 
 BUILDLINK_DEPENDS.qt2-designer?=	qt2-designer>=2.2.4
 DEPENDS+=	${BUILDLINK_DEPENDS.qt2-designer}:../../x11/qt2-designer
@@ -33,4 +33,4 @@ qt2-designer-buildlink: _BUILDLINK_USE
 
 .include "../../mk/bsd.buildlink.mk"
 
-.endif	# QT2_LIBS_BUILDLINK_MK
+.endif	# QT2_DESIGNER_BUILDLINK_MK
