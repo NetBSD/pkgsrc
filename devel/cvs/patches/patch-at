@@ -1,6 +1,6 @@
-$NetBSD: patch-at,v 1.10 2004/04/15 22:28:36 wiz Exp $
+$NetBSD: patch-at,v 1.11 2004/05/22 10:38:06 wiz Exp $
 
---- src/logmsg.c.orig	Fri Mar 19 21:35:29 2004
+--- src/logmsg.c.orig	2004-03-19 21:35:29.000000000 +0100
 +++ src/logmsg.c
 @@ -226,6 +226,8 @@ do_editor (dir, messagep, repository, ch
  	    (*messagep)[strlen (*messagep) - 1] != '\n')
@@ -20,11 +20,10 @@ $NetBSD: patch-at,v 1.10 2004/04/15 22:28:36 wiz Exp $
  	error (editinfo_editor ? 1 : 0, retcode == -1 ? errno : 0,
  	       editinfo_editor ? "Logfile verification failed" :
  	       "warning: editor session failed");
-@@ -684,6 +686,15 @@ title_proc (p, closure)
- 			xrealloc (str_list,
+@@ -685,6 +687,15 @@ title_proc (p, closure)
  				  strlen (str_list) + strlen (p->key) + 5);
  		    (void) strcat (str_list, p->key);
-+		    break;
+ 		    break;
 +		case 't':
 +		    str_list =
 +			xrealloc (str_list,
@@ -33,6 +32,7 @@ $NetBSD: patch-at,v 1.10 2004/04/15 22:28:36 wiz Exp $
 +				   + 10)
 +				  );
 +		    (void) strcat (str_list, (li->tag ? li->tag : ""));
- 		    break;
++		    break;
  		case 'V':
  		    str_list =
+ 			xrealloc (str_list,
