@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.30 2001/03/06 09:38:30 jlam Exp $
+# $NetBSD: Makefile.common,v 1.31 2001/03/10 22:31:57 kei Exp $
 #
 # Common include file for communicator and navigator packages
 
@@ -71,25 +71,64 @@ DIST_DIR_NAME=	unsupported/sunos413
 WRKNAME=	${DISTUNAME}
 VENDOR_NAME=	SunOS 4.1.3
 MASTER_SITES=	ftp://archive.netscape.com/archive/communicator/${SUB}/
+#
+.elif (${MACHINE_ARCH} == "powerpc")
+.if (${BINNAME} == "navigator")
+IGNORE=		"There is no navigator-only package for PowerPC"
+IGNORE+=	"platform.  Please cd to ../communicator and"
+IGNORE+=	"install communicator package instead."
+.endif
+DEPENDS+=	linuxppc_lib>=2000.q4.2:../../emulators/linuxppc_lib
+NS_VERS=	4.73
+DISTNAME=	netscape-4.7-3.ppc
+PKGNAME=	${BINNAME}-${NS_VERS}
+WRKSRC=		${WRKDIR}
+MASTER_SITES=	ftp://ftp.linuxppc.org/linuxppc-halloween/software/
+EXTRACT_SUFX=	.rpm
+HOMEPAGE=	http://linuxppc.org/software/index/linuxppc_stable/software/netscape-4.7-3.ppc.html
+BUILD_DEPENDS=	${RPM2PKG}:../../pkgtools/rpm2pkg
+DESCR_SRC=	${WRKDIR}/DESCR.linux-powerpc
+PLIST_SRC=	${WRKDIR}/PLIST_DYNAMIC
+EMULSUBDIR=	emul/linux
+EMULDIR=	${PREFIX}/${EMULSUBDIR}
+SORT=		sort
+RPM2PKG=	rpm2pkg
+RPM2PKGARGS=	-d ${PREFIX} -f ${PLIST_SRC} -p ${EMULSUBDIR}
+RPM2PKGARGS+=	${DISTDIR}/${DIST_SUBDIR}/${DISTNAME}${EXTRACT_SUFX}
+VENDER_NAME=	# empty.  what should be here?
 .endif
 #
 
 NO_BUILD=	yes
 MAINTAINER=	abs@netbsd.org
-HOMEPAGE=	http://home.netscape.com/browsers/index.html
+HOMEPAGE?=	http://home.netscape.com/browsers/index.html
 RESTRICTED=	"No re-distribution without agreement from Netscape"
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_SRC_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 
-ONLY_FOR_PLATFORM= *-*-alpha *-*-i386 *-*-sparc
+ONLY_FOR_PLATFORM= *-*-alpha *-*-i386 *-*-powerpc *-*-sparc
 CATEGORIES=	www
 NS_NAME=	${BINNAME}-${NS_VERS}
-PKGNAME=	${BINNAME}-${NS_VERS}nb1
-DISTNAME=	${BINNAME}-v${NS_VERS_SHORT}-${NS_ENCRYPTION}.${DISTUNAME}
+PKGNAME?=	${BINNAME}-${NS_VERS}nb1
+DISTNAME?=	${BINNAME}-v${NS_VERS_SHORT}-${NS_ENCRYPTION}.${DISTUNAME}
 
 .if (${BINNAME} != "netscape")
+
+.if (${MACHINE_ARCH} == "powerpc")
+
+do-extract:
+	${MKDIR} ${WRKSRC}
+
+do-install:
+	${CP} ${PKGDIR}/DESCR.linux-powerpc ${WRKDIR}
+	${RM} -f ${PLIST_SRC}
+	${RPM2PKG} -d ${PREFIX} -f ${PLIST_SRC} -p ${EMULSUBDIR} ${RPM2PKGARGS}
+	${SORT} -r ${PLIST_SRC} > ${PLIST_SRC}.sorted
+	${MV} ${PLIST_SRC}.sorted ${PLIST_SRC}
+
+.else
 
 NS_VERS_SHORT=	${NS_VERS:S/.//}
 SUB=		english/${NS_VERS}/unix/${DIST_DIR_NAME}/${DIST_SDIR_NAME}
@@ -146,5 +185,7 @@ do-install:
 	${CHMOD} -R go-w ${MOZILLA_HOME}
 	cd ${MOZILLA_HOME} ; ${PATCH} -s < ${FILESDIR}/bookmarks.patch
 	@${RM} -f ${MOZILLA_HOME}/bookmark.htm.orig -f ${MOZILLA_HOME}/bookmark.htm~
+
+.endif
 
 .endif
