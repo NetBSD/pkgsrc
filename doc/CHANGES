@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4274 2003/12/28 16:15:43 xtraeme Exp $
+$NetBSD: CHANGES,v 1.4275 2003/12/28 16:21:35 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5406,3 +5406,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated icewm to 1.2.13 [xtraeme 2003-12-28]
 	Updated icewm-gnome to 1.2.13 [xtraeme 2003-12-28]
 	Updated icewm-imlib to 1.2.13 [xtraeme 2003-12-28]
+	Updated docbook-xsl to 1.64.1nb1 [jmmv 2003-12-28]
