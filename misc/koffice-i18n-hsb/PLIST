@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/01/25 12:50:19 markd Exp $
+${PKGLOCALEDIR}/locale/hsb/LC_MESSAGES/koffice.mo
+${PKGLOCALEDIR}/locale/hsb/LC_MESSAGES/koshell.mo
+${PKGLOCALEDIR}/locale/hsb/LC_MESSAGES/kspread.mo
+${PKGLOCALEDIR}/locale/hsb/LC_MESSAGES/kthesaurus.mo
+${PKGLOCALEDIR}/locale/hsb/LC_MESSAGES/kword.mo
+${PKGLOCALEDIR}/locale/hsb/LC_MESSAGES/kwordmswordfilter.mo
+${PKGLOCALEDIR}/locale/hsb/LC_MESSAGES/thesaurus_tool.mo
+@dirrm ${PKGLOCALEDIR}/locale/hsb/LC_MESSAGES
+@comment in kde: @dirrm ${PKGLOCALEDIR}/locale/hsb
