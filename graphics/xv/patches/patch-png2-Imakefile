@@ -1,4 +1,4 @@
-$NetBSD: patch-png2-Imakefile,v 1.1 1999/06/13 16:23:54 hubertf Exp $
+$NetBSD: patch-png2-Imakefile,v 1.2 2000/01/04 16:55:34 bouyer Exp $
 
 This patch is based on
 http://www.mit.edu/afs/athena/contrib/graphics/src/xv/patches/png/xvpng.diff
@@ -45,7 +45,7 @@ It was edited to fit into the NetBSD Packages Collection! - HF
 +###
 +*/
 +#ifdef UseInstalledZlib
-+ZLIBDIR = /usr
++ZLIBDIR = $(LOCALBASE)
 +ZLIBINC = -I$(ZLIBDIR)/include
 +ZLIBLIB = -L$(ZLIBDIR)/lib -lz
 +LIBZLIB = ${ZLIB}
