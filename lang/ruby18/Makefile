@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/11/27 14:11:15 taca Exp $
+# $NetBSD: Makefile,v 1.2 2004/11/30 17:16:11 taca Exp $
 #
 
 DISTNAME=	${RUBY_DISTNAME}
 PKGNAME=	${RUBY_PKGPREFIX}-${RUBY_VERSION}
+PKGREVISION=	1
 CATEGORIES=	lang ruby
 MASTER_SITES=	${MASTER_SITE_RUBY}
 
@@ -54,7 +55,7 @@ DOCS=		COPYING COPYING.ja ChangeLog README \
 		doc/irb/irb.rd doc/irb/irb.rd.ja
 EXT_DOCS=	bigdecimal/bigdecimal_en.html bigdecimal/bigdecimal_ja.html \
 		dl/doc/dl.txt enumerator/enumerator.txt \
-		etc/etc.txt etc/etc.txt.ja syslog/syslog.txt zlib/doc/zlib.rd
+		etc/etc.txt etc/etc.txt.ja syslog/syslog.txt
 
 BIGDECIMAL_EXAMPLES=	linear.rb nlsolve.rb pi.rb
 DL_EXAMPLES=		c++sample.C c++sample.rb drives.rb getch.rb libc.rb \
@@ -97,6 +98,7 @@ pre-configure:
 	${RM} -f ${WRKSRC}/ext/readline/MANIFEST
 	${RM} -f ${WRKSRC}/ext/tcltklib/MANIFEST
 	${RM} -f ${WRKSRC}/ext/tk/MANIFEST
+	${RM} -f ${WRKSRC}/ext/zlib/MANIFEST
 	${RM} -f ${WRKSRC}/sample/dbmtest.rb
 	${RM} -rf ${WRKSRC}/sample/openssl
 
