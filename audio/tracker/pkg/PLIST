@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.3 1998/01/19 01:16:33 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.4 1998/01/24 03:16:52 hubertf Exp $
 bin/tracker
 bin/randomize
 etc/compression_methods
-@unexec install-info --delete %D/info/tracker.info %D/info/dir
+@unexec %D/bin/install-info --delete %D/info/tracker.info %D/info/dir
 info/tracker.info
-@exec install-info %D/info/tracker.info %D/info/dir
+@exec %D/bin/install-info %D/info/tracker.info %D/info/dir
 share/doc/tracker/Html/Aix.html
 share/doc/tracker/Html/Introduction.html
 share/doc/tracker/Html/Availability.html
