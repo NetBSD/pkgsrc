@@ -1,6 +1,6 @@
 #!@BUILDLINK_SHELL@
 #
-# $NetBSD: gen-transform.sh,v 1.15 2004/01/19 10:09:36 jlam Exp $
+# $NetBSD: gen-transform.sh,v 1.16 2004/01/21 07:54:50 jlam Exp $
 
 transform="@_BLNK_TRANSFORM_SEDFILE@"
 untransform="@_BLNK_UNTRANSFORM_SEDFILE@"
@@ -9,7 +9,7 @@ untransform="@_BLNK_UNTRANSFORM_SEDFILE@"
 # equivalents:
 #
 #	mangle:src:dst		mangles the directory "src" into "dst"
-#	submangle:src:dst	mangles "src/*" into "dst/*"
+#	sub-mangle:src:dst	mangles "src/*" into "dst/*"
 #	rpath:src:dst		translates the directory "src" into "dst"
 #					in rpath options
 #	abs-rpath		removes all rpath options that try to add
@@ -64,7 +64,7 @@ EOF
 			;;
 		esac
 		;;
-	submangle)
+	sub-mangle)
 		case "$action" in
 		transform|untransform)
 			@CAT@ >> $sedfile << EOF
