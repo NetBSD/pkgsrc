@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/11/16 02:27:04 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2000/11/16 19:14:12 wiz Exp $
 
 DISTNAME=		s9xs132
 PKGNAME=		snes9x-1.32
@@ -14,10 +14,6 @@ BUILD_DEPENDS+=		nasm:../../devel/nasm
 
 USE_X11=		yes
 USE_GMAKE=		yes
-
-.if exists(/usr/X11R6/lib/libXxf86dga.a)
-MAKE_ENV+=	NETBSD_USE_DGA=1
-.endif
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/snes9x ${PREFIX}/bin
@@ -43,4 +39,8 @@ MAKE_ENV+=	FILEFORMAT=elf
 MAKE_ENV+=	ZSNESFX=1
 MAKE_ENV+=	ASMCPU=1
 .endif
+.endif
+
+.if exists(${X11BASE}/lib/libXxf86dga.a)
+MAKE_ENV+=	NETBSD_USE_DGA=1
 .endif
