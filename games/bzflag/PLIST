@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/03/02 23:14:31 snj Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/06/07 02:29:07 snj Exp $
 bin/bzadmin
 bin/bzflag
 bin/bzfrelay
@@ -44,6 +44,7 @@ share/bzflag/hunt_select.wav
 share/bzflag/hunter_tank.png
 share/bzflag/jump.wav
 share/bzflag/killteam.wav
+share/bzflag/l10n/ISO-639-2_values_8bits.txt
 share/bzflag/l10n/bzflag_cs_CZ.po
 share/bzflag/l10n/bzflag_da.po
 share/bzflag/l10n/bzflag_de.po
@@ -68,6 +69,9 @@ share/bzflag/missile.wav
 share/bzflag/mountain1.png
 share/bzflag/mountain2.png
 share/bzflag/mountain3.png
+share/bzflag/mountain4.png
+share/bzflag/mountain5.png
+share/bzflag/mountain6.png
 share/bzflag/phantom.wav
 share/bzflag/pop.wav
 share/bzflag/purple_basetop.png
