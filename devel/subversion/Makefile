@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.12 2003/06/11 13:43:28 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2003/06/18 13:26:25 epg Exp $
 
 PKGNAME=	subversion-${SVNVER}
 COMMENT=	Version control system, meta-package
 
-DEPENDS+=	subversion-base-${SVNVER}nb1:../../devel/subversion-base
-DEPENDS+=	ap2-subversion-${SVNVER}nb1:../../www/ap2-subversion
+DEPENDS+=	subversion-base-${SVNVER}:../../devel/subversion-base
+DEPENDS+=	ap2-subversion-${SVNVER}:../../www/ap2-subversion
 # We depend on subversion-python via its buildlink2.mk so we don't
 # have to worry about which Python version it uses.
 

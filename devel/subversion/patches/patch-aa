@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.3 2003/05/25 09:31:29 epg Exp $
+$NetBSD: patch-aa,v 1.4 2003/06/18 13:26:26 epg Exp $
 
---- build-outputs.mk.orig	Tue Apr 15 20:16:02 2003
+--- build-outputs.mk.orig	Mon Jun 16 08:27:37 2003
 +++ build-outputs.mk
 @@ -109,10 +109,10 @@ libsvn_swig_java_OBJECTS = swigutil_java
  subversion/bindings/swig/libsvn_swig_java-1.la: $(libsvn_swig_java_DEPS)
@@ -15,9 +15,16 @@ $NetBSD: patch-aa,v 1.3 2003/05/25 09:31:29 epg Exp $
  
  libsvn_test_DEPS = subversion/tests/svn_test_editor.lo subversion/tests/svn_tests_main.lo subversion/libsvn_delta/libsvn_delta-1.la subversion/libsvn_subr/libsvn_subr-1.la 
  libsvn_test_OBJECTS = svn_test_editor.lo svn_tests_main.lo
-@@ -134,10 +134,10 @@ md5args_OBJECTS = md5args.o
- subversion/tests/libsvn_repos/md5args: $(md5args_DEPS)
- 	cd subversion/tests/libsvn_repos && $(LINK) -o md5args $(md5args_OBJECTS) ../../../subversion/libsvn_subr/libsvn_subr-1.la $(SVN_APRUTIL_LIBS) $(SVN_APR_LIBS) $(LIBS)
+@@ -134,15 +134,15 @@ md5args_OBJECTS = md5args.o
+ subversion/tests/libsvn_repos/md5args$(EXEEXT): $(md5args_DEPS)
+ 	cd subversion/tests/libsvn_repos && $(LINK) -o md5args$(EXEEXT) $(md5args_OBJECTS) ../../../subversion/libsvn_subr/libsvn_subr-1.la $(SVN_APRUTIL_LIBS) $(SVN_APR_LIBS) $(LIBS)
+ 
+-mod_authz_svn_DEPS = subversion/mod_authz_svn/mod_authz_svn.lo subversion/libsvn_subr/libsvn_subr-1.la 
++mod_authz_svn_DEPS = subversion/mod_authz_svn/mod_authz_svn.lo
+ mod_authz_svn_OBJECTS = mod_authz_svn.lo
+ subversion/mod_authz_svn/mod_authz_svn.la: $(mod_authz_svn_DEPS)
+-	cd subversion/mod_authz_svn && $(LINK_APACHE_MOD) -o mod_authz_svn.la $(mod_authz_svn_OBJECTS) ../../subversion/libsvn_subr/libsvn_subr-1.la $(LIBS)
++	cd subversion/mod_authz_svn && $(LINK_APACHE_MOD) -o mod_authz_svn.la $(mod_authz_svn_OBJECTS) -lsvn_subr-1 $(LIBS)
  
 -mod_dav_svn_DEPS = subversion/mod_dav_svn/activity.lo subversion/mod_dav_svn/deadprops.lo subversion/mod_dav_svn/liveprops.lo subversion/mod_dav_svn/log.lo subversion/mod_dav_svn/merge.lo subversion/mod_dav_svn/mod_dav_svn.lo subversion/mod_dav_svn/repos.lo subversion/mod_dav_svn/update.lo subversion/mod_dav_svn/util.lo subversion/mod_dav_svn/version.lo subversion/libsvn_repos/libsvn_repos-1.la subversion/libsvn_fs/libsvn_fs-1.la subversion/libsvn_delta/libsvn_delta-1.la subversion/libsvn_subr/libsvn_subr-1.la 
 +mod_dav_svn_DEPS = subversion/mod_dav_svn/activity.lo subversion/mod_dav_svn/deadprops.lo subversion/mod_dav_svn/liveprops.lo subversion/mod_dav_svn/log.lo subversion/mod_dav_svn/merge.lo subversion/mod_dav_svn/mod_dav_svn.lo subversion/mod_dav_svn/repos.lo subversion/mod_dav_svn/update.lo subversion/mod_dav_svn/util.lo subversion/mod_dav_svn/version.lo
@@ -28,7 +35,7 @@ $NetBSD: patch-aa,v 1.3 2003/05/25 09:31:29 epg Exp $
  
  path_test_DEPS = subversion/tests/libsvn_subr/path-test.o subversion/tests/libsvn_test-1.la subversion/libsvn_subr/libsvn_subr-1.la 
  path_test_OBJECTS = path-test.o
-@@ -214,40 +214,40 @@ java_wc_OBJECTS = svn_wc.lo
+@@ -219,40 +219,40 @@ java_wc_OBJECTS = svn_wc.lo
  subversion/bindings/swig/java/_wc.la: $(java_wc_DEPS)
  	cd subversion/bindings/swig/java && $(LINK_JAVA_WRAPPER) -o _wc.la $(java_wc_OBJECTS) ../../../../subversion/libsvn_wc/libsvn_wc-1.la ../../../../subversion/bindings/swig/libsvn_swig_java-1.la $(LIBS)
  
@@ -38,6 +45,13 @@ $NetBSD: patch-aa,v 1.3 2003/05/25 09:31:29 epg Exp $
  subversion/bindings/swig/python/_client.la: $(python_client_DEPS)
 -	cd subversion/bindings/swig/python && $(LINK_PY_WRAPPER) -o _client.la $(python_client_OBJECTS) ../../../../subversion/libsvn_client/libsvn_client-1.la -lswigpy ../../../../subversion/bindings/swig/libsvn_swig_py-1.la $(LIBS)
 +	cd subversion/bindings/swig/python && $(LINK_PY_WRAPPER) -o _client.la $(python_client_OBJECTS) -lsvn_client-1 -lswigpy ../../../../subversion/bindings/swig/libsvn_swig_py-1.la $(LIBS)
+ 
+-python_core_DEPS = subversion/bindings/swig/python/core.lo subversion/libsvn_subr/libsvn_subr-1.la subversion/bindings/swig/libsvn_swig_py-1.la 
++python_core_DEPS = subversion/bindings/swig/python/core.lo subversion/bindings/swig/libsvn_swig_py-1.la 
+ python_core_OBJECTS = core.lo
+ subversion/bindings/swig/python/_core.la: $(python_core_DEPS)
+-	cd subversion/bindings/swig/python && $(LINK_PY_WRAPPER) -o _core.la $(python_core_OBJECTS) ../../../../subversion/libsvn_subr/libsvn_subr-1.la $(SVN_APR_LIBS) -lswigpy ../../../../subversion/bindings/swig/libsvn_swig_py-1.la $(LIBS)
++	cd subversion/bindings/swig/python && $(LINK_PY_WRAPPER) -o _core.la $(python_core_OBJECTS) -lsvn_subr-1 $(SVN_APR_LIBS) -lswigpy ../../../../subversion/bindings/swig/libsvn_swig_py-1.la $(LIBS)
  
 -python_delta_DEPS = subversion/bindings/swig/python/svn_delta.lo subversion/libsvn_delta/libsvn_delta-1.la subversion/bindings/swig/libsvn_swig_py-1.la 
 +python_delta_DEPS = subversion/bindings/swig/python/svn_delta.lo subversion/bindings/swig/libsvn_swig_py-1.la 
@@ -66,13 +80,6 @@ $NetBSD: patch-aa,v 1.3 2003/05/25 09:31:29 epg Exp $
  subversion/bindings/swig/python/_repos.la: $(python_repos_DEPS)
 -	cd subversion/bindings/swig/python && $(LINK_PY_WRAPPER) -o _repos.la $(python_repos_OBJECTS) ../../../../subversion/libsvn_repos/libsvn_repos-1.la -lswigpy ../../../../subversion/bindings/swig/libsvn_swig_py-1.la $(LIBS)
 +	cd subversion/bindings/swig/python && $(LINK_PY_WRAPPER) -o _repos.la $(python_repos_OBJECTS) -lsvn_repos-1 -lswigpy ../../../../subversion/bindings/swig/libsvn_swig_py-1.la $(LIBS)
- 
--python_util_DEPS = subversion/bindings/swig/python/util.lo subversion/libsvn_subr/libsvn_subr-1.la subversion/bindings/swig/libsvn_swig_py-1.la 
-+python_util_DEPS = subversion/bindings/swig/python/util.lo subversion/bindings/swig/libsvn_swig_py-1.la 
- python_util_OBJECTS = util.lo
- subversion/bindings/swig/python/_util.la: $(python_util_DEPS)
--	cd subversion/bindings/swig/python && $(LINK_PY_WRAPPER) -o _util.la $(python_util_OBJECTS) ../../../../subversion/libsvn_subr/libsvn_subr-1.la $(SVN_APR_LIBS) -lswigpy ../../../../subversion/bindings/swig/libsvn_swig_py-1.la $(LIBS)
-+	cd subversion/bindings/swig/python && $(LINK_PY_WRAPPER) -o _util.la $(python_util_OBJECTS) -lsvn_subr-1 $(SVN_APR_LIBS) -lswigpy ../../../../subversion/bindings/swig/libsvn_swig_py-1.la $(LIBS)
  
 -python_wc_DEPS = subversion/bindings/swig/python/svn_wc.lo subversion/libsvn_wc/libsvn_wc-1.la subversion/bindings/swig/libsvn_swig_py-1.la 
 +python_wc_DEPS = subversion/bindings/swig/python/svn_wc.lo subversion/bindings/swig/libsvn_swig_py-1.la 
