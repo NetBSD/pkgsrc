@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/06/30 08:27:40 taca Exp $
+$NetBSD: patch-aa,v 1.2 2002/01/22 16:47:00 taca Exp $
 
 --- extconf.rb.orig	Fri Jun  2 22:28:04 2000
 +++ extconf.rb
-@@ -2,8 +2,7 @@
+@@ -2,12 +2,14 @@
  
  dir_config("readline")
  have_library("user32", nil) if /cygwin/ === RUBY_PLATFORM
@@ -12,3 +12,10 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/06/30 08:27:40 taca Exp $
    have_library("curses", "tgetnum")
  
  if have_header("readline/readline.h") and
+     have_header("readline/history.h") and
+     have_library("readline", "readline")
++  if have_func("rl_filename_completion_function")
++    $CFLAGS += " -DREADLINE_42_OR_LATER"
++  end
+   create_makefile("readline")
+ end
