@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.279 2002/10/16 09:38:57 rh Exp $
+$NetBSD: CHANGES,v 1.280 2002/10/16 10:11:16 chris Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3292,3 +3292,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Added coconut-0.3.0 [rh 2002-10-16]
 	Added mousetar-20020202 [agc 2002-10-16]
 	Added eel2-2.0.7 [rh 2002-10-16]
+	Updated sylpheed to 0.8.5 [chris 2002-10-16]
