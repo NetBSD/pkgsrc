@@ -1,7 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/06/23 10:43:35 seb Exp $
-info/elib.info
-info/elib.info-1
-info/elib.info-2
+@comment $NetBSD: PLIST,v 1.5 2004/02/13 08:26:04 seb Exp $
 ${EMACS_LISPPREFIX}/elib/stack-f.el
 ${EMACS_LISPPREFIX}/elib/stack-f.elc
 ${EMACS_LISPPREFIX}/elib/stack-m.el
