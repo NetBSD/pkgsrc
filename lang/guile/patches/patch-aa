@@ -1,0 +1,12 @@
+--- libguile/stime.c.orig	Sun Nov  2 14:40:38 1997
++++ libguile/stime.c	Sun Nov  2 14:44:52 1997
+@@ -81,7 +81,9 @@
+ extern char *tzname[]; /* RS6000 and others reject char **tzname.  */
+ #endif
+ 
++#ifndef HAVE_STRPTIME
+ char *strptime ();
++#endif
+ 
+ /* This should be figured out by autoconf.  */
+ #ifdef CLK_TCK
