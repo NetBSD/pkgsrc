@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2000/02/08 12:18:16 fredb Exp $
+@comment $NetBSD: PLIST,v 1.6 2000/08/18 19:39:54 fredb Exp $
 bin/ntpd
 bin/ntpdate
 bin/ntpdc
@@ -52,6 +52,7 @@ share/doc/ntp4/driver9.htm
 share/doc/ntp4/exec.htm
 share/doc/ntp4/extern.htm
 share/doc/ntp4/gadget.htm
+share/doc/ntp4/genkeys.htm
 share/doc/ntp4/hints.htm
 share/doc/ntp4/howto.htm
 share/doc/ntp4/htmlprimer.htm
@@ -90,6 +91,7 @@ share/doc/ntp4/hints/bsdi
 share/doc/ntp4/hints/changes
 share/doc/ntp4/hints/decosf1
 share/doc/ntp4/hints/decosf2
+share/doc/ntp4/hints/freebsd
 share/doc/ntp4/hints/hpux
 share/doc/ntp4/hints/linux
 share/doc/ntp4/hints/notes-xntp-v3
