@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/04/05 05:02:42 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/11/08 15:18:39 wiz Exp $
 bin/allegro-config
 bin/colormap
 bin/dat
@@ -95,6 +95,7 @@ include/linalleg.h
 include/xalleg.h
 lib/allegro/4.1/alleg-dga2.so
 lib/allegro/4.1/modules.lst
+${ESOUND}lib/allegro/4.1/alleg-esddigi.so
 lib/liballeg-${PKGVERSION}.so
 lib/liballeg.so.4.1
 lib/liballeg_unsharable.a
