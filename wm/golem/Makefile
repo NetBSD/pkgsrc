@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/10/05 21:22:49 kristerw Exp $
+# $NetBSD: Makefile,v 1.5 2003/10/08 22:13:48 kristerw Exp $
 #
 
 DISTNAME=	golem-0.0.5
@@ -49,4 +49,5 @@ post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/golemrc ${EGDIR}/golemrc.default
 
+.include "../../graphics/xpm/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
