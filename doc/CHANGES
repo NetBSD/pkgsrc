@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8701 2005/01/11 13:42:40 adam Exp $
+$NetBSD: CHANGES,v 1.8702 2005/01/11 14:02:30 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -245,3 +245,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated gwenview to 1.1.8 [markd 2005-01-11]
 	Updated imlib2 to 1.2.0 [adam 2005-01-11]
 	Updated enlightenment to 0.16.7.2 [adam 2005-01-11]
+	Updated libast to 0.6.1 [adam 2005-01-11]
+	Updated eterm to 0.9.3 [adam 2005-01-11]
