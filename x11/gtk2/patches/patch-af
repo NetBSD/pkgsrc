@@ -1,0 +1,11 @@
+$NetBSD: patch-af,v 1.5 2002/07/18 02:19:28 rh Exp $
+
+--- contrib/gdk-pixbuf-xlib/gdk-pixbuf-xlib-2.0.pc.in.orig	Wed Mar  6 07:03:50 2002
++++ contrib/gdk-pixbuf-xlib/gdk-pixbuf-xlib-2.0.pc.in
+@@ -7,5 +7,5 @@ Name: GdkPixbuf Xlib
+ Description: GdkPixbuf rendering for Xlib
+ Version: @VERSION@
+ Requires: gobject-2.0,gmodule-2.0,gdk-pixbuf-2.0
+-Libs: -L${libdir} -lgdk_pixbuf_xlib-@GTK_API_VERSION@
++Libs: -L${libdir} -Wl,-R${libdir} -lgdk_pixbuf_xlib-@GTK_API_VERSION@
+ Cflags: -I${includedir}

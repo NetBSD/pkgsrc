@@ -1,0 +1,11 @@
+$NetBSD: patch-ah,v 1.1 2002/07/18 02:19:31 rh Exp $
+
+--- gthread.pc.in.orig	Thu Nov 30 11:15:33 2000
++++ gthread.pc.in
+@@ -7,5 +7,5 @@ Name: GThread
+ Description: Thread support for GLib
+ Requires: glib
+ Version: @VERSION@
+-Libs: -L${libdir} -lgthread @G_THREAD_LIBS@
++Libs: -L${libdir} -Wl,-R${libdir} -lgthread @G_THREAD_LIBS@
+ Cflags: @G_THREAD_CFLAGS@

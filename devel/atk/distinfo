@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2002/06/30 14:04:26 jschauma Exp $
+$NetBSD: distinfo,v 1.6 2002/07/18 02:19:26 rh Exp $
 
 SHA1 (atk-1.0.2.tar.gz) = 70cdf03295fb16fb0e9a7cacf3633a7d913cbf1e
 Size (atk-1.0.2.tar.gz) = 341640 bytes
 SHA1 (patch-aa) = 12baad6715a485f4dd1e0d3176299552fb275598
+SHA1 (patch-ab) = 83508b6261ed51791e3afa7a7a4ae6dfe5d6422a
