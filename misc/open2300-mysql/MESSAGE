@@ -1,9 +1,12 @@
-Before you can use this program, you need to configure the MySQL connection
-in the open2300.conf file. The mysql user used by the program only needs
-"insert" priviledges.
+===========================================================================
+$NetBSD: MESSAGE,v 1.2 2004/11/10 10:38:18 wiz Exp $
 
-You need to creat a table 'weather' in the configured database. The program
-code suggests the following table structure:
+Before you can use this program, you need to configure the MySQL
+connection in the open2300.conf file. The mysql user used by the
+program only needs "insert" priviledges.
+
+You need to creat a table 'weather' in the configured database.
+The program code suggests the following table structure:
 
    CREATE TABLE `weather` (
      `timestamp` bigint(14) NOT NULL default '0',
@@ -27,9 +30,9 @@ code suggests the following table structure:
      UNIQUE KEY `timestamp` (`timestamp`)
    ) TYPE=MyISAM;
 
-Not that the actual field names are not used, but the structure needs to be
-compatible. This alternative structure (for newer MySQL versions) works as
-well:
+Not that the actual field names are not used, but the structure
+needs to be compatible. This alternative structure (for newer MySQL
+versions) works as well:
 
    CREATE TABLE `weather` (
      `id` datetime NOT NULL default '0000-00-00 00:00:00',
@@ -55,5 +58,7 @@ well:
    ENGINE=MyISAM DEFAULT CHARSET=latin1 
    COMMENT='Weather as reported by WS 2300';
 
-The program will not output anything, unless errors occur. This makes it easy
-to use it in cron jobs.
+The program will not output anything, unless errors occur. This
+makes it easy to use it in cron jobs.
+
+===========================================================================
