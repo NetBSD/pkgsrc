@@ -1,5 +1,5 @@
 #!/usr/pkg/bin/perl
-# $NetBSD: post-build,v 1.17 2001/10/16 20:50:54 hubertf Exp $
+# $NetBSD: post-build,v 1.18 2002/06/29 03:33:34 dmcmahill Exp $
 #
 # Collect stuff after a pkg bulk build
 #
@@ -49,11 +49,15 @@ chomp($DEPENDSFILE=`( cd $USR_PKGSRC/pkgtools/pkglint ; make show-var VARNAME=DE
 chomp($SUPPORTSFILE=`( cd $USR_PKGSRC/pkgtools/pkglint ; make show-var VARNAME=SUPPORTSFILE )`); 
 chomp($INDEXFILE=`( cd $USR_PKGSRC/pkgtools/pkglint ; make show-var VARNAME=INDEXFILE )`); 
 chomp($ORDERFILE=`( cd $USR_PKGSRC/pkgtools/pkglint ; make show-var VARNAME=ORDERFILE )`); 
+chomp($STARTFILE=`( cd $USR_PKGSRC/pkgtools/pkglint ; make show-var VARNAME=STARTFILE )`); 
+chomp($LOCALBASE=`( cd $USR_PKGSRC/pkgtools/pkglint ; make show-var VARNAME=LOCALBASE )`); 
+chomp($X11BASE=`( cd $USR_PKGSRC/pkgtools/pkglint ; make show-var VARNAME=X11BASE )`); 
 $dtfile=basename($DEPENDSTREEFILE);
 $depfile=basename($DEPENDSFILE);
 $supfile=basename($SUPPORTSFILE);
 $indfile=basename($INDEXFILE);
 $ordfile=basename($ORDERFILE);
+$startfile=basename($STARTFILE);
 
 $verbose=1;
 
@@ -235,8 +239,8 @@ close(HTML);
 	system("mkdir -p leftovers-${arch}");
 
 	# Find files since last build:
-	system("find /usr/pkg   -newer ${USR_PKGSRC}/.start.${arch} -type f >>leftovers-${arch}.txt");
-	system("find /usr/X11R6 -newer ${USR_PKGSRC}/.start.${arch} -type f >>leftovers-${arch}.txt");
+	system("find ${LOCALBASE} -newer ${USR_PKGSRC}/${startfile} -type f >>leftovers-${arch}.txt");
+	system("find ${X11BASE} -newer ${USR_PKGSRC}/${startfile} -type f >>leftovers-${arch}.txt");
 
 	# Strip perl-files:
 	system("pkg_info -qL perl > .p.${arch}");
