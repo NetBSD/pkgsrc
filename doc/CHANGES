@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7936 2004/11/22 11:52:07 xtraeme Exp $
+$NetBSD: CHANGES,v 1.7937 2004/11/22 13:33:41 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5367,3 +5367,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated sylpheed to 1.0.0beta3 [jmmv 2004-11-21]
 	Updated gtk-send-pr to 0.4 [ben 2004-11-21]
 	Updated xvidcore to 1.0.2 [xtraeme 2004-11-22]
+	Updated abiword to 2.0.14 [adam 2004-11-22]
+	Updated abiword-plugins to 2.0.14 [adam 2004-11-22]
