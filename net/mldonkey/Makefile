@@ -1,18 +1,19 @@
-# $NetBSD: Makefile,v 1.14 2004/01/24 14:50:06 grant Exp $
+# $NetBSD: Makefile,v 1.15 2004/02/07 20:39:43 wiz Exp $
 #
 
-DISTNAME=	mldonkey-${VER}.sources
-VER=		2.5-3
-PKGNAME=	mldonkey-${VER:S/-/./}
-PKGREVISION=	1
+DISTNAME=	mldonkey-source-${VER}
+VER=		2-5-8
+PKGNAME=	mldonkey-${VER:S/-/./g}
 CATEGORIES=	net
-MASTER_SITES=	http://savannah.nongnu.org/download/mldonkey/release-${VER}/official/
+MASTER_SITES=	http://www.giga.or.at/pub/mldonkey/
+# not yet completely up again:
+# http://savannah.nongnu.org/download/mldonkey/release-${VER}/official/
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.nongnu.org/mldonkey/
 COMMENT=	Free peer-to-peer client with eDonkey support and more
 
-WRKSRC=			${WRKDIR}/mldonkey-${VER}
+WRKSRC=			${WRKDIR}/mldonkey
 GNU_CONFIGURE=		yes
 USE_BUILDLINK2=		yes
 USE_GNU_TOOLS+=		make
@@ -25,6 +26,8 @@ CONFIGURE_ENV+=		WGET=""
 CONFIGURE_ENV+=		ac_cv_prog_WGET="no"
 MAKE_ENV+=		BUILDLINK_PREFIX.pthread=${BUILDLINK_PREFIX.pthread}
 CONFIGURE_ARGS+=	--enable-pthread-lib
+
+UNLIMIT_RESOURCES=	stacksize
 
 pre-build:
 	${SED} ${MLDONKEY_SUBST_SED} ${FILESDIR}/mldonkey.sh > \
