@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2003/05/23 18:04:32 salo Exp $
+# $NetBSD: Makefile,v 1.16 2003/06/05 15:24:32 drochner Exp $
 #
 
 DISTNAME=		gimp-1.2.4
@@ -32,6 +32,8 @@ GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--disable-perl
 CONFIGURE_ARGS+=	--disable-python
+# The "print" plugin gets built separately (../../print/gimp-print)
+CONFIGURE_ARGS+=	--disable-print
 
 # Add settings for MPEG, LIBMPEG, and GAP_DECODE_MPEG to properly support
 # the MPEG library from graphics/mpeg-lib that changed it's name, as the
@@ -70,7 +72,6 @@ post-install:
 
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../graphics/mpeg-lib/buildlink2.mk"
-.include "../../print/gimp-print-lib/buildlink2.mk"
 .if defined(GIMP_WITH_HELPBROWSER) && ${GIMP_WITH_HELPBROWSER} != "no"
 PLIST_SUBST+=	HELPBROWSER=""
 .include "../../x11/gnome-libs/buildlink2.mk"
