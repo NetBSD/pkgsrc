@@ -1,50 +1,11 @@
-@comment $NetBSD: PLIST,v 1.6 2004/09/22 08:09:19 jlam Exp $
+@comment $NetBSD: PLIST,v 1.7 2004/12/02 00:06:40 dmcmahill Exp $
 bin/nghelp
 bin/ngmakeidx
 bin/ngmultidec
-bin/ngspice
 bin/ngnutmeg
 bin/ngproc2mod
 bin/ngsconvert
-lib/libdev.a
-lib/ng-spice-rework/libasrc.la
-lib/ng-spice-rework/libbjt.la
-lib/ng-spice-rework/libbsim1.la
-lib/ng-spice-rework/libbsim2.la
-lib/ng-spice-rework/libbsim3.la
-lib/ng-spice-rework/libbsim3soidd.la
-lib/ng-spice-rework/libbsim3soifd.la
-lib/ng-spice-rework/libbsim3soipd.la
-lib/ng-spice-rework/libbsim3v1.la
-lib/ng-spice-rework/libbsim3v2.la
-lib/ng-spice-rework/libbsim4.la
-lib/ng-spice-rework/libcap.la
-lib/ng-spice-rework/libcccs.la
-lib/ng-spice-rework/libccvs.la
-lib/ng-spice-rework/libcsw.la
-lib/ng-spice-rework/libdio.la
-lib/ng-spice-rework/libhfet.la
-lib/ng-spice-rework/libhfet2.la
-lib/ng-spice-rework/libind.la
-lib/ng-spice-rework/libisrc.la
-lib/ng-spice-rework/libjfet.la
-lib/ng-spice-rework/libjfet2.la
-lib/ng-spice-rework/libltra.la
-lib/ng-spice-rework/libmes.la
-lib/ng-spice-rework/libmesa.la
-lib/ng-spice-rework/libmos1.la
-lib/ng-spice-rework/libmos2.la
-lib/ng-spice-rework/libmos3.la
-lib/ng-spice-rework/libmos6.la
-lib/ng-spice-rework/libmos9.la
-lib/ng-spice-rework/libres.la
-lib/ng-spice-rework/libsoi3.la
-lib/ng-spice-rework/libsw.la
-lib/ng-spice-rework/libtra.la
-lib/ng-spice-rework/liburc.la
-lib/ng-spice-rework/libvccs.la
-lib/ng-spice-rework/libvcvs.la
-lib/ng-spice-rework/libvsrc.la
+bin/ngspice
 man/man1/ngnutmeg.1
 man/man1/ngsconvert.1
 man/man1/ngspice.1
@@ -56,4 +17,3 @@ share/ng-spice-rework/scripts/spinit
 @dirrm share/ng-spice-rework/scripts
 @dirrm share/ng-spice-rework/helpdir
 @dirrm share/ng-spice-rework
-@dirrm lib/ng-spice-rework
