@@ -1,13 +1,11 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/01/20 02:03:41 hubertf Exp $
-
---- Makefile.in.BAK	Wed Jan 20 02:01:03 1999
-+++ Makefile.in	Wed Jan 20 02:01:55 1999
-@@ -90,7 +90,7 @@
+--- Makefile.in.orig	Mon Mar  1 20:38:59 1999
++++ Makefile.in	Tue Mar  2 21:57:17 1999
+@@ -103,7 +103,7 @@
+ DEFS = @DEFS@ -DDATADIR=\"${xtraceroutedatadir}\"        -DLOCALEDIR=\"${xtraceroutelocaledir}\"
  
- CPPFLAGS = @CPPFLAGS@
- LDFLAGS = @LDFLAGS@
--LIBS = @LIBS@
-+LIBS = @LIBS@ -L${LOCALSRC}/lib -ljpeg
- xtraceroute_OBJECTS =  readtexture.o db.o countries.o main.o sphere.o \
- dbio.o glstuff.o spinner.o dialogs.o info_window.o doughnut.o util.o \
- resolve.o db_host_gui.o db_net_gui.o db_gen_gui.o
+ 
+-LIBS = @INTLLIBS@ @LIBS@
++LIBS = @INTLLIBS@ @LIBS@ -L${LOCALSRC}/lib -ljpeg
+ 
+ man_MANS = xtraceroute.1
+ 
