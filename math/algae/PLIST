@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/07/31 22:58:39 seb Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/03/07 21:55:24 seb Exp $
 bin/algae
 bin/${PKGNAME}
 include/algae/abs.h
@@ -119,13 +119,6 @@ include/algae/lapack.h
 include/algae/version.h
 include/algae/rc0.h
 include/algae/arpack.h
-info/algae.info
-info/algae.info-1
-info/algae.info-2
-info/algae.info-3
-info/algae.info-4
-info/algae.info-5
-info/algae.info-6
 lib/algae/${PKGVERSION}/algae.A
 man/man1/algae.1
 share/algae/html
