@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1360 2004/02/09 13:30:03 wiz Exp $
+$NetBSD: TODO,v 1.1361 2004/02/09 13:48:37 cjep Exp $
 
 Suggested new packages
 ======================
@@ -250,6 +250,7 @@ Suggested package updates
 	o nano-1.2.2
 	o nap-1.5.2
 	o napshare-1.2
+	o nawk-20040207 [cjep - waiting for a reply from bmk]
 	o netatalk-1.6.3 [pkg/21930]
 	o nethack-3.4.3
 	o newscache-0.99.22p1
