@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.206 2004/10/15 12:14:14 wiz Exp $
+# $NetBSD: Makefile,v 1.207 2004/10/16 15:04:26 wiz Exp $
 #
 
-DISTNAME=	pkglint-3.92
+DISTNAME=	pkglint-3.93
 CATEGORIES=	pkgtools devel
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -22,32 +22,30 @@ NO_CHECKSUM=	yes
 NO_CONFIGURE=	yes
 USE_LANGUAGES=	# empty
 
-MAKE_ENV=	PKGSRCDIR=${PKGSRCDIR:Q}
-
 DISTVER=	${DISTNAME:S/pkglint-//}
 
 INSTALLATION_DIRS=	bin man/cat1 man/man1
 
-SUBST_FILES=	lintpkgsrc.0 lintpkgsrc.1 lintpkgsrc.pl pkglint.1 pkglint.0
-SUBST_FILES+=	pkglint.pl plist-clash.pl
+SUBST_CLASSES+=		pkglint
+SUBST_STAGE.pkglint=	pre-build
+SUBST_FILES.pkglint+=	lintpkgsrc.0 lintpkgsrc.1 lintpkgsrc.pl
+SUBST_FILES.pkglint+=	pkglint.0 pkglint.1 pkglint.pl
+SUBST_FILES.pkglint+=	plist-clash.pl
+SUBST_SED.pkglint+=	-e 's|@PREFIX@|${PREFIX}|g'
+SUBST_SED.pkglint+=	-e 's|@PKGSRCDIR@|${PKGSRCDIR}|g'
+SUBST_SED.pkglint+=	-e 's|@DISTVER@|${DISTVER}|g'
+SUBST_SED.pkglint+=	-e 's|@MAKE@|${MAKE}|g'
+SUBST_SED.pkglint+=	-e 's|@PERL@|${PERL5}|g'
 
 .include "../../mk/bsd.prefs.mk"
 
 do-extract:
-	@${MKDIR} ${WRKSRC}/src
-.for FILE in ${SUBST_FILES}
-	${CP} ${FILESDIR}/${FILE} ${WRKSRC}/src/${FILE}
+.for _f_ in ${SUBST_FILES.pkglint}
+	@${CP} ${FILESDIR}/${_f_} ${WRKSRC}/${_f_}
 .endfor
 
 do-build:
-.for FILE in ${SUBST_FILES}
-	${SED} -e 's|@PREFIX@|${PREFIX}|g'		\
-		-e 's|@PORTSDIR@|${PKGSRCDIR}|g'	\
-		-e 's|@DISTVER@|${DISTVER}|g'		\
-		-e 's|@MAKE@|${MAKE}|g'			\
-		-e 's|@PERL@|${PERL5}|g'		\
-		${WRKSRC}/src/${FILE} > ${WRKSRC}/${FILE}
-.endfor
+	@${DO_NADA}
 .if ${OPSYS} == "SunOS" || ${OPSYS} == "AIX"
    # the pre-generated man-pages are 'mandoc';  these OS need 'man'
 .  for FILE in lintpkgsrc pkglint

@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.120 2004/10/15 12:14:14 wiz Exp $
+# $NetBSD: pkglint.pl,v 1.121 2004/10/16 15:04:26 wiz Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
@@ -226,7 +226,7 @@ BEGIN {
 
 # Buildtime configuration
 my $conf_rcsidstr	= 'NetBSD';
-my $conf_portsdir	= '@PORTSDIR@';
+my $conf_pkgsrcdir	= '@PKGSRCDIR@';
 my $conf_localbase	= '@PREFIX@';
 my $conf_distver	= '@DISTVER@';
 my $conf_make		= '@MAKE@';
@@ -269,12 +269,14 @@ my $opt_warn_exec	= true;
 my $opt_warn_absname	= true;
 my $opt_warn_directcmd	= true;
 my $opt_warn_paren	= true;
+my $opt_warn_workdir	= true;
 my (%warnings) = (
 	"patches"	=> [\$opt_warn_patches, "warn on non-optimal patch files"],
 	"exec"		=> [\$opt_warn_exec, "warn if source files are executable"],
 	"absname"	=> [\$opt_warn_absname, "warn about use of absolute file names"],
 	"directcmd"	=> [\$opt_warn_directcmd, "warn about use of direct command names instead of Make variables"],
 	"paren"		=> [\$opt_warn_paren, "warn about usa of \$(VAR) instead of \${VAR} in Makefiles"],
+	"workdir"	=> [\$opt_warn_workdir, "warn that work* should not be committed into CVS"],
 );
 
 # Constants
@@ -449,9 +451,9 @@ sub parse_command_line() {
 sub main() {
 	parse_command_line();
 
-	log_info(NO_FILE, NO_LINE_NUMBER, "config: portsdir: \"$conf_portsdir\" ".
-		"rcsidstr: \"$conf_rcsidstr\" ".
-		"localbase: $conf_localbase");
+	log_info(NO_FILE, NO_LINE_NUMBER, "pkgsrcdir: $conf_pkgsrcdir");
+	log_info(NO_FILE, NO_LINE_NUMBER, "rcsidstr: $conf_rcsidstr");
+	log_info(NO_FILE, NO_LINE_NUMBER, "localbase: $conf_localbase");
 
 	if (-f "$opt_packagedir/../Packages.txt") {
 		log_info(NO_FILE, NO_LINE_NUMBER, "checking category Makefile.");
@@ -511,7 +513,8 @@ EOF
 	my %checker = ("$pkgdir/DESCR", \&checkfile_DESCR);
 
 	if ($opt_check_MESSAGE) {
-		foreach my $msg (<$opt_packagedir/$filesdir/*>, <$opt_packagedir/$pkgdir/*>) {
+		foreach my $abs_msg (<$opt_packagedir/$filesdir/*>, <$opt_packagedir/$pkgdir/*>) {
+			my ($msg) = (substr($abs_msg, length("$opt_packagedir/")));
 			if ($msg =~ qr"MESSAGE") {
 				push(@checker, $msg);
 				$checker{$msg} = \&checkfile_MESSAGE;
@@ -519,7 +522,8 @@ EOF
 		}
 	}
 	if ($opt_check_PLIST) {
-		foreach my $plist (<$opt_packagedir/$filesdir/*>, <$opt_packagedir/$pkgdir/*>) {
+		foreach my $abs_plist (<$opt_packagedir/$filesdir/*>, <$opt_packagedir/$pkgdir/*>) {
+			my ($plist) = (substr($abs_plist, length("$opt_packagedir/")));
 			if ($plist =~ qr"PLIST") {
 				push(@checker, $plist);
 				$checker{$plist} = \&checkfile_PLIST;
@@ -527,12 +531,12 @@ EOF
 		}
 	}
 	if ($opt_check_patches) {
-		foreach my $i (<$opt_packagedir/$patchdir/patch-*>) {
-			next if (! -T $i);
-			$i =~ s/^\Q$opt_packagedir\E\///;
-			next if (defined $checker{$i});
-			push(@checker, $i);
-			$checker{$i} = \&checkfile_patches_patch;
+		foreach my $abs_patch (<$opt_packagedir/$patchdir/patch-*>) {
+			my ($patch) = (substr($abs_patch, length("$opt_packagedir/")));
+			next if (! -T $abs_patch);
+			next if (defined $checker{$patch});
+			push(@checker, $patch);
+			$checker{$patch} = \&checkfile_patches_patch;
 		}
 	}
 	if ($opt_check_distinfo) {
@@ -558,14 +562,14 @@ EOF
 		}
 	}
 	if ($opt_check_extra) {
-		foreach my $i ((<$opt_packagedir/$filesdir/*>, <$opt_packagedir/$pkgdir/*>)) {
-			next if (! -T $i);
-			$i =~ s/^\Q$opt_packagedir\E\///;
-			next if ($i =~ qr"(?:distinfo$|Makefile$|PLIST|MESSAGE)");
-			next if (defined $checker{$i});
+		foreach my $abs_extra ((<$opt_packagedir/$filesdir/*>, <$opt_packagedir/$pkgdir/*>)) {
+			my ($extra) = (substr($abs_extra, length("$opt_packagedir/")));
+			next if (! -T $abs_extra);
+			next if ($extra =~ qr"(?:distinfo$|Makefile$|PLIST|MESSAGE)");
+			next if (defined $checker{$extra});
 
-			push(@checker, $i);
-			$checker{$i} = \&checkpathname;
+			push(@checker, $extra);
+			$checker{$extra} = \&checkpathname;
 		}
 	}
 
@@ -614,7 +618,7 @@ EOF
 		log_warning(NO_FILE, NO_LINE_NUMBER, "no PLIST or PLIST-mi, and PLIST_SRC and NO_PKG_REGISTER unset.\n     Are you sure PLIST handling is ok?");
 	}
 	if ($opt_committer) {
-		if (scalar(@_ = <$opt_packagedir/work*/*>) || -d "$opt_packagedir/work*") {
+		if ($opt_warn_workdir && (scalar(@_ = <$opt_packagedir/work*/*>) || -d "$opt_packagedir/work*")) {
 			log_warning(NO_FILE, NO_LINE_NUMBER, "be sure to cleanup $opt_packagedir/work* ".
 				"before committing the package.");
 		}
@@ -1733,9 +1737,6 @@ EOF
 	    $tmp =~ /BUILD_USES_MSGFMT/) {
 		&checkearlier($tmp, @varnames);
 
-		if (!defined $ENV{'PORTSDIR'}) {
-			$ENV{'PORTSDIR'} = $conf_portsdir;
-		}
 		foreach my $i (grep(/^[A-Z_]*DEPENDS[?+]?=/, split(/\n/, $tmp))) {
 			$i =~ s/^([A-Z_]*DEPENDS)[?+]?=[ \t]*//;
 			my $j = $1;
@@ -1986,8 +1987,8 @@ sub abspathname($$) {
 
 	log_info(NO_FILE, NO_LINE_NUMBER, "checking direct use of pathnames, phase 1.");
 	my %abspathnames = split(/\n|\t+/, <<EOF);
-/usr/opt	\${PORTSDIR} instead
-$conf_portsdir	\${PORTSDIR} instead
+/usr/pkgsrc	\${PKGSRCDIR} instead
+$conf_pkgsrcdir	\${PKGSRCDIR} instead
 $conf_localbase	\${PREFIX} or \${LOCALBASE}, as appropriate
 /usr/X11	\${PREFIX} or \${X11BASE}, as appropriate
 /usr/X11R6	\${PREFIX} or \${X11BASE}, as appropriate
@@ -2055,7 +2056,7 @@ sub category_check() {
 		log_error($file, NO_LINE_NUMBER, "No RCS Id tag found.");
 	}
 
-	@filesys_subdirs = grep { ($_ = substr($_, 0, -1)) ne "CVS"; } glob("*/");
+	@filesys_subdirs = grep { ($_ = substr($_, length($opt_packagedir) + 1, -1)) ne "CVS"; } glob("$opt_packagedir/*/");
 	
 	my ($first, $last_subdir, $comment_seen) = (true, undef, false);
 	foreach my $line (@$lines) {
