@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2000/02/01 18:52:34 tron Exp $
+# $NetBSD: Makefile,v 1.46 2000/02/12 03:54:51 wiz Exp $
 # FreeBSD Id: Makefile,v 1.13 1997/09/08 08:34:13 tg Exp
 #
 
@@ -23,5 +23,11 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-build-12	# needed for www/Mosaic
 CONFIGURE_ARGS+=	--enable-build-20 --enable-default-20 \
 			--enable-production --disable-debug
+PLIST_SUBST+=		LOCALBASE=${LOCALBASE}
+
+post-install:
+	${TEST} ${PREFIX} = ${LOCALBASE} || \
+	${LN} -fs ${PREFIX}/share/aclocal/ac_find_motif.m4 \
+		${LOCALBASE}/share/aclocal/ac_find_motif.m4
 
 .include "../../mk/bsd.pkg.mk"
