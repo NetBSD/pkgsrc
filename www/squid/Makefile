@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.9 1999/05/02 00:48:31 tron Exp $
+# $NetBSD: Makefile,v 1.10 1999/05/02 12:49:43 tron Exp $
 #
 
-DISTNAME=	squid-2.0.PATCH2
+DISTNAME=	squid-2.2.STABLE2-src
+PKGNAME=	squid-2.2s2
 CATEGORIES=	www
 MASTER_SITES=  \
 	ftp://squid.nlanr.net/pub/squid-2/ \
@@ -10,12 +11,11 @@ MASTER_SITES=  \
 	ftp://www.unimelb.edu.au/pub/cwis/servers/unix/squid/squid-2/ \
 	ftp://sunsite.auc.dk/pub/infosystems/squid/squid-2/ \
 	ftp://ftp.net.lut.ac.uk/squid/squid-2/
-EXTRACT_SUFX=	-src.tar.gz
 
-MAINTAINER=	kim@tac.nyc.ny.us
+MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://squid.nlanr.net/Squid/
 
-BUILD_DEPENDS=    ${LOCALBASE}/bin/perl:${PKGSRCDIR}/lang/perl5
+BUILD_DEPENDS=    ${LOCALBASE}/bin/perl:../../lang/perl5
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--sysconfdir=/etc \
@@ -34,11 +34,11 @@ CONFIGURE_ENV+=		CPPFLAGS=${CPPFLAGS} \
 
 MAKEFILE=	makefile
 MAKE_ENV+=	INSTALL_SCRIPT="${INSTALL_SCRIPT}" PKG_PREFIX="${PREFIX}"
+PLIST_SRC=	${PKGDIR}/PLIST ${WRKDIR}/PLIST.share
+WRKSRC=		${WRKDIR}/squid-2.2.STABLE2
 
 post-build:
 	${SED} s#@PREFIX@#${PREFIX}#g <${FILESDIR}/squid.sh >${WRKDIR}/squid.sh
-
-PLIST_SRC=	${PKGDIR}/PLIST ${WRKDIR}/PLIST.share
 
 pre-install:
 	@-rm -f ${WRKDIR}/PLIST.share
@@ -47,16 +47,16 @@ pre-install:
 	@${MKDIR} ${PREFIX}/share/squid/icons
 	@(							\
 	cd ${WRKSRC}/errors/English;				\
-	ls ERR_* | sed -e 's@^@share/squid/errors/@';		\
-	echo "@dirrm share/squid/errors";			\
+	ls ERR_* | ${SED} -e 's@^@share/squid/errors/@';		\
+	${ECHO} "@dirrm share/squid/errors";			\
 	cd ${WRKSRC}/icons;					\
-	ls anthony-*.gif | sed -e 's@^@share/squid/icons/@';	\
-	echo "@dirrm share/squid/icons";			\
-	echo "share/squid/mib.txt";				\
-	echo "share/squid/mime.conf";				\
-	echo "share/squid/mime.conf.default";			\
-	echo "share/squid/squid.conf.default";			\
-	echo "@dirrm share/squid";				\
+	ls anthony-*.gif | ${SED} -e 's@^@share/squid/icons/@';	\
+	${ECHO} "@dirrm share/squid/icons";			\
+	${ECHO} "share/squid/mib.txt";				\
+	${ECHO} "share/squid/mime.conf";				\
+	${ECHO} "share/squid/mime.conf.default";			\
+	${ECHO} "share/squid/squid.conf.default";			\
+	${ECHO} "@dirrm share/squid";				\
 	) > ${WRKDIR}/PLIST.share
 
 post-install:
