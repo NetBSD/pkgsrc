@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7190 2004/09/21 01:48:51 dmcmahill Exp $
+$NetBSD: CHANGES,v 1.7191 2004/09/21 02:24:32 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4297,3 +4297,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated fix-mime-charset to 0.5.3 [wiz 2004-09-21]
 	Updated physfs to 1.0.0 [wiz 2004-09-21]
 	Updated fastcap to 2.0.19920918 [dmcmahill 2004-09-21]
+	Updated verilog-current to 20040915 [dmcmahill 2004-09-21]
