@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.23 2001/12/06 09:50:12 martti Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.24 2001/12/10 12:43:58 martti Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -998,6 +998,11 @@ PILRC_USE_GTK?=	YES
 
 #POSTFIX_VERP=YES
 # Add support for Variable Envelope Return Paths.
+# Possible: YES, not defined
+# Default: not defined
+
+#SASL_USE_GSSAPI=YES
+# Add support for GSSAPI.
 # Possible: YES, not defined
 # Default: not defined
 
