@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/01/07 01:24:16 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/01/14 22:31:27 xtraeme Exp $
 bin/amule
 bin/amulecmd
 bin/amulecmdDLG
@@ -16,4 +16,3 @@ ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/amule.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/amule.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/amule.mo
 share/pixmaps/amule.xpm
-@dirrm share/applications
