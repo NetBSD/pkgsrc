@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2000/11/24 11:12:29 abs Exp $
+# $NetBSD: Makefile,v 1.15 2000/11/27 14:03:28 tron Exp $
 
 DISTNAME=		gnome-games-1.2.0
 CATEGORIES=		games gnome
@@ -9,25 +9,26 @@ HOMEPAGE=		http://www.gnome.org/
 
 BUILD_DEPENDS+=		autoreconf:../../devel/autoconf
 BUILD_DEPENDS+=		automake:../../devel/automake
+BUILD_DEPENDS+=		gettextize:../../devel/gettext
 DEPENDS+=		gnome-core-*:../../x11/gnome-core
 # Required for ports which don't build "libgtop".
 DEPENDS+=		guile-[0-9]*:../../lang/guile
 DEPENDS+=		xbill-*:../../games/xbill
 
-USE_GMAKE=		# defined
-USE_X11BASE=		# defined
-USE_CURSES=		# defined
-USE_LIBTOOL=		# defined
-USE_LIBINTL=		# defined
+USE_GMAKE=		YES
+USE_X11BASE=		YES
+USE_CURSES=		YES
+USE_LIBTOOL=		YES
+USE_LIBINTL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
-GNU_CONFIGURE=		# defined
+GNU_CONFIGURE=		YES
 CONFIGURE_ENV+=		LOCALEBASE=${LOCALEBASE}
 CONFIGURE_ARGS+=	--localstatedir=/var
-
-PLIST_SUBST+=		LOCALEBASE=${LOCALEBASE}
+CFLAGS+=		-I${LOCALBASE}/include
 
 INSTALL_FILE=		${WRKDIR}/INSTALL
+PLIST_SUBST+=		LOCALEBASE=${LOCALEBASE}
 
 AUTOGEN_ENV=		NOCONFIGURE=1
 AUTOGEN_ENV+=		srcdir=${WRKSRC}
