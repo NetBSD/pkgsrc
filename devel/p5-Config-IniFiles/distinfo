@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2001/08/10 12:25:04 mjl Exp $
+$NetBSD: distinfo,v 1.2 2001/12/19 10:43:20 mjl Exp $
 
-SHA1 (Config-IniFiles-2.19.tar.gz) = 1ed8bf9d292ddf065f316f2f4c9d50fe3617f06c
-Size (Config-IniFiles-2.19.tar.gz) = 26133 bytes
+SHA1 (Config-IniFiles-2.23.tar.gz) = 82fff2af4d2ad7f90e51708237b79c1591067e27
+Size (Config-IniFiles-2.23.tar.gz) = 27381 bytes
