@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/12/30 14:28:04 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2002/10/06 22:26:49 seb Exp $
 #
 
 DISTNAME=		Crypt-IDEA-1.01
@@ -10,13 +10,13 @@ MAINTAINER=		packages@netbsd.org
 #HOMEPAGE=	
 COMMENT=		perl5 module for the IDEA symmetric key algorithm
 
+USE_BUILDLINK2=		YES
+
 # IDEA's license
 LICENCE=		fee-based-commercial-use
 
 USE_PERL5=		# defined
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Crypt/IDEA/.packlist
 
-do-configure:
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
-
+.include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
