@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1204 2003/07/08 09:20:30 chris Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1205 2003/07/08 11:48:37 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -1975,7 +1975,7 @@ do-patch: uptodate-digest
 
 # _CONFIGURE_PREREQ is a list of targets to run after pre-configure but before
 #	do-configure.  These targets typically edit the files used by the
-#	do-configure target.  The targets are run as dependacies of
+#	do-configure target.  The targets are run as dependencies of
 #	pre-configure-override.
 #
 # _CONFIGURE_POSTREQ is a list of targets to run after do-configure but before
