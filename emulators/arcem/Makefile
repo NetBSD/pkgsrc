@@ -1,33 +1,41 @@
-# $NetBSD: Makefile,v 1.7 2004/11/13 21:28:28 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2004/12/03 15:15:23 skrll Exp $
 #
 
-DISTNAME=	arcem0.50
-PKGNAME=	arcem-0.50
+DISTNAME=	arcem-1.00-src
+PKGNAME=	${DISTNAME:S/-src//}
 CATEGORIES=	emulators
-MASTER_SITES=	ftp://ftp.arm.uk.linux.org/pub/linux/arcem/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=arcem/}
+
 EXTRACT_SUFX=	.tgz
-DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
+
+LINUX_FILES=	\
 		linux.rom.gz \
 		HardImage1.gz
 
+.for f in ${LINUX_FILES}
+SITES_${f}+=	\
+		ftp://ftp.arm.uk.linux.org/pub/linux/arcem/
+.endfor
+
+DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${LINUX_FILES}
+
 MAINTAINER=	cjep@NetBSD.org
-HOMEPAGE=	ftp://ftp.arm.uk.linux.org/pub/linux/arcem/Index
+HOMEPAGE=	http://arcem.sourceforge.net/
 COMMENT=	Dave Gilbert's Acorn Archimedes emulator
 
-WRKSRC=		${WRKDIR}/armul-arc
-USE_BUILDLINK3=	yes
+WRKSRC=		${WRKDIR}/arcem
+USE_BUILDLINK3=	# defined
 USE_X11=	# defined
+USE_GNU_TOOLS+=	make
+
+MAKE_ENV+=	SYSTEM=X
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/arcem
 	${INSTALL_DATA} ${WRKDIR}/linux.rom ${PREFIX}/share/arcem/ROM
 	${INSTALL_DATA} ${WRKDIR}/HardImage1 ${PREFIX}/share/arcem/HardImage1
-	${INSTALL_DATA} ${WRKSRC}/arch/dot.arcemrc \
-				${PREFIX}/share/arcem/dot.arcemrc
+	${INSTALL_DATA} ${FILESDIR}/dot.arcemrc \
+		${PREFIX}/share/arcem/dot.arcemrc
 	${INSTALL_DATA} ${WRKSRC}/hexcmos ${PREFIX}/share/arcem/hexcmos
-	${INSTALL_DATA} ${WRKSRC}/hexcmos.2 ${PREFIX}/share/arcem/hexcmos.2
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/arcem/README
-	${INSTALL_DATA} ${WRKSRC}/README.OrElse \
-				${PREFIX}/share/arcem/README.OrElse
 
 .include "../../mk/bsd.pkg.mk"
