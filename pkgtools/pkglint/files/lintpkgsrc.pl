@@ -1,6 +1,6 @@
 #!/usr/bin/env perl
 
-# $NetBSD: lintpkgsrc.pl,v 1.36 2000/10/05 10:29:49 abs Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.37 2000/10/12 15:07:44 abs Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -18,20 +18,21 @@ use strict;
 use Getopt::Std;
 use File::Find;
 my(	$pkgdistdir,		# Distfiles directory
-	%pkg,			# pkgname ->{'restricted'} and ->{'ver'}
+	%pkg,			# {$ver} ->{'restricted'} and ->{'dir'}
 	$default_vars,		# Set for Makefiles, inc PACKAGES & PKGSRCDIR
 	%opt,			# Command line options
-	@old_prebuiltpackages,	# List of obsolete prebuilt package paths
+	%vuln,			# vulnerability data
+	@matched_prebuiltpackages,# List of obsolete prebuilt package paths
 	@prebuilt_pkgdirs,	# Use to follow symlinks in prebuilt pkgdirs
-	@restricted_prebuiltpackages);	# " but for NO_BIN_ON_FTP/RESTRICTED
+	);
 
 $ENV{PATH} .= ':/usr/sbin';
 
-if (! &getopts('DK:LM:P:Rdhilmopru', \%opt) || $opt{'h'} ||
+if (! &getopts('VDK:LM:P:Rdhilmopru', \%opt) || $opt{'h'} ||
 	! ( defined($opt{'d'}) || defined($opt{'i'}) || defined($opt{'l'}) ||
 	    defined($opt{'m'}) || defined($opt{'o'}) || defined($opt{'p'}) ||
 	    defined($opt{'r'}) || defined($opt{'u'}) || defined($opt{'D'}) ||
-	    defined($opt{'R'}) ))
+	    defined($opt{'V'}) || defined($opt{'R'}) ))
     { &usage_and_exit; }
 $| = 1;
 
@@ -89,17 +90,30 @@ if ($opt{'D'} && @ARGV)
 
     # List obsolete or NO_BIN_ON_FTP/RESTRICTED prebuilt packages
     #
-    if ($opt{'p'} || $opt{'R'})
+    if ($opt{'p'} || $opt{'R'} || $opt{'V'})
 	{
-	if (!%pkg)
+	if ($opt{'V'})
+	    {
+	    my($vuln) = "$default_vars->{'PKGSRCDIR'}/distfiles/vulnerabilities";
+	    if (! open(VULN, $vuln))
+		{ &fail("Unable to open '$vuln': $!"); }
+	    while (<VULN>)
+		{
+		s/#.*//;
+		if ( /([^*?[]+)(<|>|<=|>=)(\d\S+)/ ) 
+		    { push(@{$vuln{$1}},"$2 $3"); }
+		}
+	    close(VULN);
+	    }
+	if (($opt{'p'} || $opt{'R'}) && !%pkg)
 	    { &scan_pkgsrc_makefiles($pkgsrcdir); }
 	@prebuilt_pkgdirs = ($default_vars->{'PACKAGES'});
 	while (@prebuilt_pkgdirs)
 	    { find(\&check_prebuilt_packages, shift @prebuilt_pkgdirs); }
 	if ($opt{'r'})
 	    {
-	    &verbose("Unlinking 'old' prebuiltpackages\n");
-	    foreach (@old_prebuiltpackages)
+	    &verbose("Unlinking listed prebuiltpackages\n");
+	    foreach (@matched_prebuiltpackages)
 		{ unlink($_); }
 	    }
 	}
@@ -147,24 +161,50 @@ if ($opt{'D'} && @ARGV)
     }
 exit;
 
+# Could speed up by building a cache of package names to paths, then processing
+# each package name once against the tests.
 sub check_prebuilt_packages
     {
     if ($_ eq 'distfiles')
 	{ $File::Find::prune = 1; }
     elsif (/(.+)-(\d.*)\.tgz$/)
 	{
-	if (!defined $pkg{$1}{$2})
+	my($pkgname, $ver);
+	($pkgname, $ver) = ($1, $2);
+
+	if ($opt{'V'} && $vuln{$pkgname})
 	    {
-	    if ($opt{'p'})
-		{ print "$File::Find::dir/$_\n"; }
-	    push(@old_prebuiltpackages, "$File::Find::dir/$_");
+	    my($chk);
+	    foreach $chk (@{$vuln{$pkgname}})
+		{
+		my($test, $matchver) = split(' ',$chk);
+		if (deweycmp($ver, $test, $matchver))
+		    {
+		    print "$File::Find::dir/$_\n";
+		    push(@matched_prebuiltpackages, "$File::Find::dir/$_");
+		    }
+		}
 	    }
-	elsif (defined $pkg{$1}{$2}->{'restricted'}) # XXX
+
+	if (defined $pkg{$1})
 	    {
-	    if ($opt{'R'})
-		{ print "$File::Find::dir/$_\n"; }
-	    push(@restricted_prebuiltpackages, "$File::Find::dir/$_");
+	    my($chkver) = ($ver);
+	    if (!defined $pkg{$pkgname}{$chkver})
+		{
+		if ($opt{'p'})
+		    {
+		    print "$File::Find::dir/$_\n";
+		    push(@matched_prebuiltpackages, "$File::Find::dir/$_");
+		    }
+		($chkver) = (sort keys %{$pkg{$pkgname}}); # Pick any version
+		}
+	    if ($opt{'R'} && defined $pkg{$pkgname}{$chkver}->{'restricted'})
+		{
+		print "$File::Find::dir/$_\n";
+		push(@matched_prebuiltpackages, "$File::Find::dir/$_");
+		}
 	    }
+
 	}
     elsif (-l $_ && -d $_)
 	{ push(@prebuilt_pkgdirs, readlink($_)); }
@@ -229,6 +269,7 @@ sub get_default_makefile_vars
 	$default_vars->{'OS_VERSION'},
 	$default_vars->{'MACHINE_ARCH'},
 	$default_vars->{'MACHINE'} ) = (split);
+    $default_vars->{'LINTPKGSRC'} = 'YES';
     $default_vars->{'EXTRACT_SUFX'} = 'tar.gz';
     $default_vars->{'OBJECT_FMT'} = 'x';
     $default_vars->{'LOWER_OPSYS'} = lc($default_vars->{'OPSYS'});
@@ -388,7 +429,7 @@ sub package_globmatch
     my($pkgmatch) = @_;
     my($matchpkgname, $matchver, $regex);
 
-    if ( $pkgmatch =~ /^([^*?[]+)(<|>|<=|>=)(\d.+)/ ) 
+    if ( $pkgmatch =~ /^([^*?[]+)(<|>|<=|>=)(\d\S+)/ ) 
 	{						# (package)(cmp)(dewey)
 	my($test);
 
@@ -875,6 +916,10 @@ sub scan_pkgsrc_distfiles_vs_md5
 	}
     &verbose(" ($numpkg packages)\n");
 
+    # Do not mark the vulnerabilitis file as unknown
+    $distfiles{'vulnerabilities'} = 'vulnerabilities';
+    $md5{'vulnerabilities'} = 'IGNORE';
+
     foreach $file (&listdir("$pkgdistdir"))
 	{
 	if (!defined($distfiles{$file}))
@@ -922,11 +967,12 @@ opts:
   -d	     : Check 'DEPENDS' are up to date.
   -i	     : Check installed package versions against pkgsrc.
   -l	     : Pkglint every package in pkgsrc.
-  -R	     : List any NO_BIN_ON_FTP/RESTRICTED prebuilt packages.
+  -R	     : List any NO_BIN_ON_FTP/RESTRICTED prebuilt packages (#).
+  -V	     : List any prebuilt packages with known vulnerabilities (#).
   -m	     : List md5 mismatches for files in distfiles/.
   -o	     : List old/obsolete distfiles (not referenced by any md5).
-  -p	     : List old/obsolete prebuilt packages.
-  -r	     : Remove any 'bad' distfiles (Without -m, -o, or -p, implies all).
+  -p	     : List old/obsolete prebuilt packages (#).
+  -r	     : Remove 'bad' distfiles or packages (*).
   -u	     : For each installed package ensure distfiles are fetched.
 
   -L         : List each Makefile when scanned
@@ -935,7 +981,9 @@ opts:
   -M path    : Set basedir for distfiles (default PKGSRCDIR/distfiles)
   -D [paths] : Parse Makefiles and output contents (For debugging)
 
-If pkgsrc is not in /usr/pkgsrc, set PKGSRCDIR in /etc/mk.conf
+(*) Without any of -m, -o, -p, or -V implies all. Can use with -R.
+
+See lintpkgsrc(1) for more information.
 ";
     exit;
     }
