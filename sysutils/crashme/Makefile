@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/01/20 12:26:15 agc Exp $
+# $NetBSD: Makefile,v 1.14 2004/01/28 12:45:17 grant Exp $
 #
 
 DISTNAME=       	crashme-2.4
@@ -10,6 +10,9 @@ MAINTAINER=		agc@NetBSD.org
 HOMEPAGE=		http://people.delphi.com/gjc/crashme.html
 COMMENT=		Try to crash machine with random arguments to random system calls
 
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+USE_BUILDLINK3=		yes
 EXTRACT_CMD=		${EXTRACT_CMD.shar}
 MAKEFILE=		makefile
 WRKSRC=			${WRKDIR}
