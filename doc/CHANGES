@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6032 2004/05/26 14:41:17 wiz Exp $
+$NetBSD: CHANGES,v 1.6033 2004/05/26 14:56:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2655,3 +2655,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added tacshell-0.91 [sekiya 2004-05-26]
 	Updated kdebase3 to 3.2.2nb2 [markd 2004-05-26]
 	Updated lwm to 1.2.0 [adam 2004-05-26]
+	Updated libidn to 0.4.6 [wiz 2004-05-26]
