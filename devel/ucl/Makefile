@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/07/28 02:29:05 minskim Exp $
+# $NetBSD: Makefile,v 1.9 2004/08/03 14:27:51 mycroft Exp $
 #
 
 DISTNAME=	ucl-1.02
@@ -24,5 +24,6 @@ post-install:
 	for i in simple.c lutil.h uclpack.c Makefile; do		\
 	${INSTALL_DATA} ${WRKSRC}/examples/$$i ${PREFIX}/share/examples/ucl;\
 		done;
+	cd ${WRKSRC}/examples && libtool --mode=install ${INSTALL_PROGRAM} uclpack ${PREFIX}/bin
 
 .include "../../mk/bsd.pkg.mk"
