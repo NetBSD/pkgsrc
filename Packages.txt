@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.191 2001/09/21 09:04:22 skrll Exp $
+# $NetBSD: Packages.txt,v 1.192 2001/09/24 08:59:09 agc Exp $
 ###########################################################################
 
 			==========================
@@ -213,12 +213,17 @@ To do an initial (full) checkout of pkgsrc, do the following steps:
 	% cd /usr
 	% cvs checkout -P pkgsrc
 
-This will create the "pkgsrc" directory in your /usr, and all the package
-source will be stored under /usr/pkgsrc. To update pkgsrc after the initial
-checkout, make sure you have CVS_RSH set as above, then do:
+This will create the "pkgsrc" directory in your /usr, and all the
+package source will be stored under /usr/pkgsrc.  To update pkgsrc
+after the initial checkout, make sure you have CVS_RSH set as above,
+then do:
 
 	% cd /usr/pkgsrc
 	% cvs -q update -dP
+
+Please also note that it is possible to have multiple copies of the
+pkgsrc hierarchy in use at any one time - all work is done relatively
+within the pkgsrc tree.
 
 
  2.3 Fetching distfiles
@@ -230,11 +235,14 @@ If it does not, then ftp(1) is used to fetch the distribution files
 automatically.
 
 You can overwrite some of the major distribution sites to fit to sites
-that are close to your own. Have a look at /usr/pkgsrc/mk/mk.conf.example
-to find some examples. This may save some of your bandwidth and time.
+that are close to your own.  Have a look at
+pkgsrc/mk/bsd.pkg.defaults.mk to find some examples - in particular,
+look for the MASTER_SORT, MASTER_SORT_REGEX and INET_COUNTRY
+definitions.  This may save some of your bandwidth and time.
 
-When you have selected your settings, install your configuration into
-/etc/mk.conf
+You can change these settings either in your shell's environment, or,
+if you want to keep the settings, by editing the /etc/mk.conf file,
+and adding the definitions there.
 
 If you don't have a permanent Internet connection and you want to know
 which files to download, "make fetch-list" will tell you what you'll need.
@@ -280,10 +288,10 @@ which you must install the xpkgwedge package
 (pkgsrc/pkgtools/xpkgwedge) - see section 7.1 for further details.
 
 Some packages look in /etc/mk.conf to alter some configuration options
-at build time.  Have a look at /usr/pkgsrc/mk/mk.conf.example to get
-an overview of what you can set there.  Environment variables such as
-LOCALBASE, and X11BASE can also be set in /etc/mk.conf to save having
-to remember to set them each time you want to use pkgsrc.
+at build time.  Have a look at pkgsrc/mk/bsd.pkg.defaults.mk to
+get an overview of what will be set there by default.  Environment
+variables such as LOCALBASE, and X11BASE can be set in /etc/mk.conf to
+save having to remember to set them each time you want to use pkgsrc.
 
 If you want to de-install and re-install a binary package that you've
 created (see next section), that you put into pkgsrc/packages manually or
@@ -292,7 +300,7 @@ target. This target will install a binary package - if available - via
 pkg_add, and do a "make package" else. The list of remote FTP sites
 searched is kept in the variable BINPKG_SITE, which defaults to
 ftp.netbsd.org. Any flags that should be added to pkg_add(8) can be put
-into BIN_INSTALL_FLAGS. See pkgsrc/mk/mk.conf.example for more details. 
+into BIN_INSTALL_FLAGS. See pkgsrc/mk/bsd.pkg.defaults.mk for more details. 
 
 A final word of warning: If you setup a system that has a non-standard
 setting for LOCALBASE (or X11BASE, for that matter), be sure to set that
@@ -348,9 +356,10 @@ actually compile on NFS storage, as this slows things down a lot.
  3.2.1.1 /etc/mk.conf
  ====================
 
-You may want to set things in /etc/mk.conf.  Look at pkgsrc/mk/mk.conf.example
-for details.  You will want to make sure that ACCEPTABLE_LICENSES meet your
-local policy:
+You may want to set things in /etc/mk.conf.  Look at
+pkgsrc/mk/bsd.pkg.defaults.mk for details of the default settings. 
+You will want to make sure that ACCEPTABLE_LICENSES meet your local
+policy:
 
     BATCH=                  yes          # required for bulk builds 
     DEPENDS_TARGET?=        bulk-install
@@ -1172,7 +1181,7 @@ applied, the software can be configured, then built (usually by
 compiling), and finally the generated binaries etc.  can be put into
 place on the system.  These are exactly the steps performed by the
 NetBSD package system, which is implemented as a series of targets in
-a central Makefile, /usr/pkgsrc/mk/bsd.pkg.mk.
+a central Makefile, pkgsrc/mk/bsd.pkg.mk.
 
 
  7.1 Program location
