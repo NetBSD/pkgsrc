@@ -1,4 +1,4 @@
-$NetBSD: patch-ah,v 1.4 2003/09/02 00:30:55 pooka Exp $
+$NetBSD: patch-ah,v 1.5 2004/09/11 13:38:47 markd Exp $
 
 --- sys/unix/Makefile.src.orig	2003-08-30 03:08:04.000000000 +0300
 +++ sys/unix/Makefile.src	2003-09-02 03:17:23.000000000 +0300
@@ -29,7 +29,7 @@ $NetBSD: patch-ah,v 1.4 2003/09/02 00:30:55 pooka Exp $
  #
  # libraries for Qt
 -WINQTLIB = -L$(QTDIR)/lib -lqt
-+WINQTLIB = -L$(QTDIR)/lib -lqt -lXpm -lX11 -lICE -lSM -lz -lpng -lXext
++WINQTLIB = -L$(QTDIR)/lib -lqt-mt -lXpm -lX11 -lICE -lSM -lz -lpng -lXext
  #
  # libraries for KDE (with Qt)
  WINKDELIB = -lkdecore -lkdeui -lXext
