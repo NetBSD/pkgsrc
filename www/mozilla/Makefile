@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.45 2000/10/28 18:55:24 mycroft Exp $
+# $NetBSD: Makefile,v 1.46 2000/10/30 00:01:17 mycroft Exp $
 
 DISTNAME=	mozilla-source-M18
-PKGNAME=	mozilla-0.m18
+PKGNAME=	mozilla-0.m18nb1
 WRKSRC=		${WRKDIR}/mozilla
 CATEGORIES=	www
 MASTER_SITES=	ftp://ftp.mozilla.org/pub/mozilla/releases/m18/src/
@@ -45,6 +45,7 @@ SCRIPTS_ENV+=	CHMOD=${CHMOD}
 SCRIPTS_ENV+=	BINOWN=${BINOWN}
 SCRIPTS_ENV+=	BINGRP=${BINGRP}
 SCRIPTS_ENV+=	BINMODE=${BINMODE}
+SCRIPTS_ENV+=	SETENV=${SETENV}
 SHAREMODE?=	644
 
 XPTCFILES+=	xptcinvoke_asm_ppc_netbsd.s xptcstubs_asm_ppc_netbsd.s
@@ -62,9 +63,8 @@ pre-configure:
 	(cd ${WRKSRC} && autoconf)
 
 post-build:
-	(cd ${WRKSRC}/dist/bin && \
-	${SETENV} LD_LIBRARY_PATH=. MOZILLA_FIVE_HOME=. ./regxpcom && \
-	${SETENV} LD_LIBRARY_PATH=. MOZILLA_FIVE_HOME=. ./regchrome )
+	${ECHO} skin,install,select,classic/1.0 >> ${WRKSRC}/dist/bin/chrome/installed-chrome.txt
+	${ECHO} locale,install,select,en-US >> ${WRKSRC}/dist/bin/chrome/installed-chrome.txt
 
 do-install:
 	${SETENV} ${SCRIPTS_ENV} ${SCRIPTDIR}/moz-install

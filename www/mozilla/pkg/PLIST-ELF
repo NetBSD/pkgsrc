@@ -1,8 +1,5 @@
-@comment $NetBSD: PLIST-ELF,v 1.5 2000/10/29 09:14:25 mycroft Exp $
-@option extract-in-place
+@comment $NetBSD: PLIST-ELF,v 1.6 2000/10/30 00:01:17 mycroft Exp $
 bin/mozilla
-lib/mozilla/chrome/user-locales.rdf
-lib/mozilla/chrome/user-skins.rdf
 @comment begin PROGRAMS
 lib/mozilla/mozilla-bin
 lib/mozilla/nsTestSample
@@ -116,9 +113,6 @@ lib/mozilla/plugins/libnullplugin.so
 @comment end DSO
 @comment begin DATA
 lib/mozilla/bloaturls.txt
-lib/mozilla/chrome/all-locales.rdf
-lib/mozilla/chrome/all-packages.rdf
-lib/mozilla/chrome/all-skins.rdf
 lib/mozilla/chrome/blue.jar
 lib/mozilla/chrome/classic.jar
 lib/mozilla/chrome/comm.jar
@@ -127,12 +121,7 @@ lib/mozilla/chrome/en-US.jar
 lib/mozilla/chrome/installed-chrome.txt
 lib/mozilla/chrome/messenger.jar
 lib/mozilla/chrome/modern.jar
-lib/mozilla/chrome/overlayinfo/communicator/content/overlays.rdf
-lib/mozilla/chrome/overlayinfo/editor/content/overlays.rdf
-lib/mozilla/chrome/overlayinfo/messenger/content/overlays.rdf
-lib/mozilla/chrome/overlayinfo/navigator/content/overlays.rdf
 lib/mozilla/chrome/toolkit.jar
-lib/mozilla/component.reg
 lib/mozilla/components/absync.xpt
 lib/mozilla/components/addrbook.xpt
 lib/mozilla/components/appshell.xpt
@@ -229,8 +218,6 @@ lib/mozilla/components/xpcom_threads.xpt
 lib/mozilla/components/xpcom_xpti.xpt
 lib/mozilla/components/xpconnect.xpt
 lib/mozilla/components/xpinstall.xpt
-lib/mozilla/components/xpti.dat
-lib/mozilla/components/xptitemp.dat
 lib/mozilla/defaults/pref/all.js
 lib/mozilla/defaults/pref/config.js
 lib/mozilla/defaults/pref/editor.js
@@ -337,6 +324,30 @@ lib/mozilla/searchplugins/google.src
 lib/mozilla/splash.xpm
 lib/mozilla/xpcshell
 @comment end DATA
+@exec env MOZILLA_FIVE_HOME=%D/lib/mozilla %D/lib/mozilla/regxpcom
+@exec env MOZILLA_FIVE_HOME=%D/lib/mozilla %D/lib/mozilla/regchrome
+@unexec rm %D/lib/mozilla/component.reg
+@unexec rm %D/lib/mozilla/chrome/user-locales.rdf
+@unexec rm %D/lib/mozilla/chrome/user-skins.rdf
+@unexec rm %D/lib/mozilla/chrome/all-locales.rdf
+@unexec rm %D/lib/mozilla/chrome/all-packages.rdf
+@unexec rm %D/lib/mozilla/chrome/all-skins.rdf
+@unexec rm %D/lib/mozilla/chrome/overlayinfo/communicator/content/overlays.rdf
+@unexec rm %D/lib/mozilla/chrome/overlayinfo/editor/content/overlays.rdf
+@unexec rm %D/lib/mozilla/chrome/overlayinfo/messenger/content/overlays.rdf
+@unexec rm %D/lib/mozilla/chrome/overlayinfo/navigator/content/overlays.rdf
+@unexec rm %D/lib/mozilla/components/xpti.dat
+@unexec rm %D/lib/mozilla/components/xptitemp.dat
+@dirrm lib/mozilla/chrome/overlayinfo/navigator/content
+@dirrm lib/mozilla/chrome/overlayinfo/navigator
+@dirrm lib/mozilla/chrome/overlayinfo/messenger/content
+@dirrm lib/mozilla/chrome/overlayinfo/messenger
+@dirrm lib/mozilla/chrome/overlayinfo/editor/content
+@dirrm lib/mozilla/chrome/overlayinfo/editor
+@dirrm lib/mozilla/chrome/overlayinfo/communicator/content
+@dirrm lib/mozilla/chrome/overlayinfo/communicator
+@dirrm lib/mozilla/chrome/overlayinfo
+@comment begin DIRS
 @dirrm lib/mozilla/searchplugins
 @dirrm lib/mozilla/res/samples/sampleimages
 @dirrm lib/mozilla/res/samples
@@ -353,14 +364,6 @@ lib/mozilla/xpcshell
 @dirrm lib/mozilla/defaults/pref
 @dirrm lib/mozilla/defaults
 @dirrm lib/mozilla/components
-@dirrm lib/mozilla/chrome/overlayinfo/navigator/content
-@dirrm lib/mozilla/chrome/overlayinfo/navigator
-@dirrm lib/mozilla/chrome/overlayinfo/messenger/content
-@dirrm lib/mozilla/chrome/overlayinfo/messenger
-@dirrm lib/mozilla/chrome/overlayinfo/editor/content
-@dirrm lib/mozilla/chrome/overlayinfo/editor
-@dirrm lib/mozilla/chrome/overlayinfo/communicator/content
-@dirrm lib/mozilla/chrome/overlayinfo/communicator
-@dirrm lib/mozilla/chrome/overlayinfo
 @dirrm lib/mozilla/chrome
 @dirrm lib/mozilla
+@comment end DIRS
