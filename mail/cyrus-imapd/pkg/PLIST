@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2001/09/18 21:56:31 skrll Exp $
-bin/cyradm
+@comment $NetBSD: PLIST,v 1.5 2001/09/25 21:48:18 skrll Exp $
 bin/imtest
 bin/installsieve
 bin/sieveshell
@@ -46,31 +45,8 @@ include/cyrus/util.h
 include/cyrus/xmalloc.h
 lib/libacap.a
 lib/libcyrus.a
-lib/perl5/5.6.0/${MACHINE_ARCH}-${LOWER_OPSYS}/perllocal.pod
-lib/perl5/site_perl/5.6.0/${MACHINE_ARCH}-${LOWER_OPSYS}/Cyrus/IMAP.pm
-lib/perl5/site_perl/5.6.0/${MACHINE_ARCH}-${LOWER_OPSYS}/Cyrus/IMAP/Admin.pm
-lib/perl5/site_perl/5.6.0/${MACHINE_ARCH}-${LOWER_OPSYS}/Cyrus/IMAP/IMSP.pm
-lib/perl5/site_perl/5.6.0/${MACHINE_ARCH}-${LOWER_OPSYS}/Cyrus/IMAP/Shell.pm
-lib/perl5/site_perl/5.6.0/${MACHINE_ARCH}-${LOWER_OPSYS}/Cyrus/SIEVE/acap.pm
-lib/perl5/site_perl/5.6.0/${MACHINE_ARCH}-${LOWER_OPSYS}/Cyrus/SIEVE/managesieve.pm
-lib/perl5/site_perl/5.6.0/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Cyrus/IMAP/.packlist
-lib/perl5/site_perl/5.6.0/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Cyrus/IMAP/IMAP.bs
-lib/perl5/site_perl/5.6.0/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Cyrus/IMAP/IMAP.so
-lib/perl5/site_perl/5.6.0/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Cyrus/SIEVE/acap/.packlist
-lib/perl5/site_perl/5.6.0/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Cyrus/SIEVE/acap/acap.bs
-lib/perl5/site_perl/5.6.0/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Cyrus/SIEVE/acap/acap.so
-lib/perl5/site_perl/5.6.0/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Cyrus/SIEVE/managesieve/.packlist
-lib/perl5/site_perl/5.6.0/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Cyrus/SIEVE/managesieve/managesieve.bs
-lib/perl5/site_perl/5.6.0/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Cyrus/SIEVE/managesieve/managesieve.so
-man/man1/cyradm.1
 man/man1/imtest.1
 man/man1/installsieve.1
-man/man3/Cyrus::IMAP.3
-man/man3/Cyrus::IMAP::Admin.3
-man/man3/Cyrus::IMAP::IMSP.3
-man/man3/Cyrus::IMAP::Shell.3
-man/man3/Cyrus::SIEVE::acap.3
-man/man3/Cyrus::SIEVE::managesieve.3
 man/man3/imclient.3
 man/man5/cyrus.conf.5
 man/man5/imapd.conf.5
@@ -129,14 +105,6 @@ share/examples/cyrus-imapd/prefork.conf
 share/examples/cyrus-imapd/small.conf
 @dirrm share/examples/cyrus-imapd
 @dirrm share/doc/html/cyrus-imapd
-@dirrm lib/perl5/site_perl/5.6.0/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Cyrus/SIEVE/managesieve
-@dirrm lib/perl5/site_perl/5.6.0/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Cyrus/SIEVE/acap
-@dirrm lib/perl5/site_perl/5.6.0/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Cyrus/SIEVE
-@dirrm lib/perl5/site_perl/5.6.0/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Cyrus/IMAP
-@dirrm lib/perl5/site_perl/5.6.0/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Cyrus
-@dirrm lib/perl5/site_perl/5.6.0/${MACHINE_ARCH}-${LOWER_OPSYS}/Cyrus/SIEVE
-@dirrm lib/perl5/site_perl/5.6.0/${MACHINE_ARCH}-${LOWER_OPSYS}/Cyrus/IMAP
-@dirrm lib/perl5/site_perl/5.6.0/${MACHINE_ARCH}-${LOWER_OPSYS}/Cyrus
 @dirrm include/cyrus
 @dirrm cyrus/bin
 @dirrm cyrus
