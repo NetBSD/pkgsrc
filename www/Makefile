@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.257 2003/06/16 03:04:25 kim Exp $
+# $NetBSD: Makefile,v 1.258 2003/06/23 16:39:07 jmc Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -165,6 +165,7 @@ SUBDIR+=	php4
 SUBDIR+=	php4-apc
 SUBDIR+=	php4-curl
 SUBDIR+=	privoxy
+SUBDIR+=	privoxy-user
 SUBDIR+=	py-HTMLgen
 SUBDIR+=	py-curl
 SUBDIR+=	py-pcgi
