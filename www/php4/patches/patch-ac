@@ -1,0 +1,26 @@
+$NetBSD: patch-ac,v 1.4 2001/10/16 04:54:24 jlam Exp $
+
+--- acinclude.m4.orig	Sun Jun 10 15:52:56 2001
++++ acinclude.m4
+@@ -251,10 +251,19 @@
+   ;;
+ esac
+ 
++dnl Having php_always_shared=yes override the configure options breaks
++dnl because it's assumed that the answer to every question is yes.  We
++dnl really only want just the ext_shared=yes to denote that we'll be
++dnl using outside shared libraries.
++dnl
++dnl if test "$php_always_shared" = "yes"; then
++dnl   ext_output="yes, shared"
++dnl   ext_shared=yes
++dnl   test "[$]$1" = "no" && $1=yes
++dnl fi
++
+ if test "$php_always_shared" = "yes"; then
+-  ext_output="yes, shared"
+   ext_shared=yes
+-  test "[$]$1" = "no" && $1=yes
+ fi
+ 
+ AC_MSG_RESULT($ext_output)

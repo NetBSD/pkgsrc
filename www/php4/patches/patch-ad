@@ -1,17 +1,55 @@
-$NetBSD: patch-ad,v 1.4 2001/05/14 14:12:29 jlam Exp $
+$NetBSD: patch-ad,v 1.5 2001/10/16 04:54:24 jlam Exp $
 
---- ext/imap/php_imap.c.orig	Tue Apr 24 10:17:41 2001
-+++ ext/imap/php_imap.c
-@@ -427,7 +427,11 @@
- 	ZEND_INIT_MODULE_GLOBALS(imap, php_imap_init_globals, NULL)
+--- configure.orig	Thu Jun 21 02:28:57 2001
++++ configure
+@@ -14903,10 +14903,6 @@
+ 
+ else
+   echo "$ac_t""no" 1>&6
+-  cat >> confdefs.h <<\EOF
+-#define HAVE_DBA 0
+-EOF
+-
+ fi
  
  
--#if 1
-+/*
-+ * Use the installed c-client linkage.c to determine which drivers and
-+ * authenticators are linked in.
-+ */
-+#if 0
- #ifndef PHP_WIN32
- 	mail_link(&unixdriver);   /* link in the unix driver */
- #endif
+@@ -21394,19 +21390,10 @@
+ 
+ 
+   else
+-    cat >> confdefs.h <<\EOF
+-#define HYPERWAVE 0
+-EOF
+-
+     echo "$ac_t""no" 1>&6
+   fi
+ 
+ else
+-  
+-  cat >> confdefs.h <<\EOF
+-#define HYPERWAVE 0
+-EOF
+-
+   echo "$ac_t""no" 1>&6
+ 
+ fi
+@@ -55797,7 +55784,7 @@
+ 
+ if test "$enable_debug" != "yes"; then
+   
+-  LIBTOOL='$(SHELL) $(top_builddir)/libtool --silent'
++  LIBTOOL='$(SHELL) $(top_builddir)/libtool'
+ 
+ fi
+ 
+@@ -55815,8 +55802,8 @@
+     $SHELL $srcdir/ltconfig --output=shlibtool --disable-static --srcdir=$srcdir --cache-file=./config.cache $srcdir/ltmain.sh
+     SHARED_LIBTOOL='$(SHELL) $(top_builddir)/shlibtool'
+   else
+-    PHP_COMPILE='$(COMPILE) -c $< && touch $@'
+-    CXX_PHP_COMPILE='$(CXX_COMPILE) -c $< && touch $@'
++    PHP_COMPILE='$(LIBTOOL) --mode=compile $(COMPILE) -c $<'
++    CXX_PHP_COMPILE='$(LIBTOOL) --mode=compile $(CXX_COMPILE) -c $<'
+   fi
+ fi
+ 

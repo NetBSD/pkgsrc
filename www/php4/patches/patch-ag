@@ -1,12 +1,25 @@
-$NetBSD: patch-ag,v 1.1 2001/02/12 04:14:29 jlam Exp $
+$NetBSD: patch-ag,v 1.2 2001/10/16 04:54:24 jlam Exp $
 
---- ext/imap/Makefile.in.orig	Tue May 23 19:36:44 2000
-+++ ext/imap/Makefile.in
-@@ -2,6 +2,6 @@
- LTLIBRARY_NAME    = libimap.la
- LTLIBRARY_SOURCES = php_imap.c
- LTLIBRARY_SHARED_NAME = imap.la
--LTLIBRARY_SHARED_LIBADD = $(IMAP_SHARED_LIBADD)
-+LTLIBRARY_SHARED_LIBADD =
+--- php.ini-dist.orig	Thu May 31 23:20:49 2001
++++ php.ini-dist
+@@ -320,8 +320,9 @@
+ ; if nonempty.
+ user_dir =
  
- include $(top_srcdir)/build/dynlib.mk
+-; Directory in which the loadable extensions (modules) reside.
+-extension_dir = ./
++; Directory in which the loadable extensions (modules) reside.  If not
++; defined, then use the extension directory specified at compile-time.
++;extension_dir = ./
+ 
+ ; Whether or not to enable the dl() function.  The dl() function does NOT work
+ ; properly in multithreaded servers, such as IIS or Zeus, and is automatically
+@@ -338,7 +339,7 @@
+ 
+ ; Temporary directory for HTTP uploaded files (will use system default if not
+ ; specified).
+-;upload_tmp_dir =
++upload_tmp_dir = /tmp
+ 
+ ; Maximum allowed size for uploaded files.
+ upload_max_filesize = 2M
