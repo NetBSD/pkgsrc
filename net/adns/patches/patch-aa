@@ -1,0 +1,38 @@
+$NetBSD: patch-aa,v 1.1 2001/11/19 19:39:05 jlam Exp $
+
+--- client/Makefile.in.orig	Sat Sep 16 20:43:10 2000
++++ client/Makefile.in
+@@ -31,7 +31,7 @@
+ PROGRAMS_LOCAL=	fanftest adnstest
+ PROGRAMS_ALL=	$(PROGRAMS) $(PROGRAMS_LOCAL)
+ 
+-STATIC_LIB=	$(ADNSDIR)/libadns.a
++STATIC_LIB=	$(ADNSDIR)/libadns.la
+ 
+ ifeq ($(ENABLE_DYNAMIC),elf)
+ DYNAMIC_DEP=	$(srcdir)/../dynamic/$(SHLIBFILE)
+@@ -60,13 +60,13 @@
+ 
+ install:	$(TARG_INSTALL)
+ 		set -xe; for f in $(TARG_INSTALL); \
+-			do $(INSTALL_PROGRAM) $$f $(bin_dir)/$$f; done
++			do ${LIBTOOL} $(INSTALL_PROGRAM) $$f $(bin_dir)/$$f; done
+ 
+ uninstall:
+ 		for f in $(TARGETS); do rm -f $(bin_dir)/$$f; done
+ 
+ adnshost:	$(ADH_OBJS) $(DYNAMIC_DEP)
+-		$(CC) $(LDFLAGS) $(ADH_OBJS) $(DYNAMIC_LINK) -o $@ $(LDLIBS)
++		$(LIBTOOL) $(CC) $(LDFLAGS) $(ADH_OBJS) $(DYNAMIC_LINK) -o $@ $(LDLIBS)
+ 
+ adnshost_s:	$(ADH_OBJS) $(STATIC_LIB)
+ 		$(CC) $(LDFLAGS) $(ADH_OBJS) $(STATIC_LIB) -o $@ $(LDLIBS)
+@@ -76,7 +76,7 @@
+ adnsresfilter.o:	$(ADNSDIR)/tvarith.h
+ 
+ %:		%.o $(DYNAMIC_DEP)
+-		$(CC) $(LDFLAGS) $< $(DYNAMIC_LINK) -o $@ $(LDLIBS)
++		${LIBTOOL} $(CC) $(LDFLAGS) $< $(DYNAMIC_LINK) -o $@ $(LDLIBS)
+ 
+ %_s:		%.o $(STATIC_LIB)
+ 		$(CC) $(LDFLAGS) $< $(STATIC_LIB) -o $@ $(LDLIBS)

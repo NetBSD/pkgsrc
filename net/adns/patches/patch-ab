@@ -1,0 +1,36 @@
+$NetBSD: patch-ab,v 1.1 2001/11/19 19:39:05 jlam Exp $
+
+--- src/Makefile.in.orig	Sat Sep 16 20:24:24 2000
++++ src/Makefile.in
+@@ -24,13 +24,13 @@
+ srcdir=		@srcdir@
+ VPATH=		@srcdir@
+ 
+-TARGETS=	libadns.a
++TARGETS=	libadns.la
+ include		$(srcdir)/../settings.make
+ include		adns.make
+ 
+ install:
+ 		set -xe; for f in $(TARGETS); \
+-			do $(INSTALL_DATA) $$f $(lib_dir)/$$f; done
++			do ${LIBTOOL} $(INSTALL_DATA) $$f $(lib_dir)/$$f; done
+ 		$(INSTALL_DATA) $(srcdir)/../src/adns.h $(include_dir)/adns.h
+ 
+ uninstall:
+@@ -39,10 +39,10 @@
+ 
+ ALLOBJS=	$(LIBOBJS)
+ 
+-libadns.a:	$(LIBOBJS)
+-		rm -f $@
+-		$(AR) cqv $@.new $(LIBOBJS)
+-		$(RANLIB) $@.new
+-		mv -f $@.new $@
++libadns.la:	$(LIBOBJS)
++		${LIBTOOL} $(CC) $(LDFLAGS) -o $@ $(LIBOBJS:.o=.lo) -rpath ${PREFIX}/lib -version-info $(MAJOR):$(MINOR)
+ 
+ $(LIBOBJS):	adns.h internal.h config.h
++
++.c.o:
++	${LIBTOOL} $(CC) $(CFLAGS) -c $<

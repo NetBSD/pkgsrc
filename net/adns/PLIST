@@ -1,7 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:54:45 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/11/19 19:39:04 jlam Exp $
 bin/adnshost
 bin/adnslogres
 bin/adnsresfilter
 include/adns.h
 lib/libadns.a
+lib/libadns.la
+lib/libadns.so
+lib/libadns.so.1
 lib/libadns.so.1.0
