@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.371 2002/10/27 07:22:02 rh Exp $
+$NetBSD: CHANGES,v 1.372 2002/10/27 07:32:03 rh Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3400,3 +3400,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated gpgme to 0.3.12 [chris 2002-10-27]
 	Updated xmms-crossfade to 0.2.9nb2 [rh 2002-10-27]
 	Updated gdcd to 0.2.1nb2 [rh 2002-10-27]
+	Updated xmms-mad to 0.0.9nb2 [rh 2002-10-27]
