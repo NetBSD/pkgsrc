@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.3 2004/04/02 09:37:56 jmmv Exp $
+
+--- src/common.h.orig	2004-03-09 14:02:41.000000000 +0100
++++ src/common.h
+@@ -117,7 +117,7 @@ typedef struct
+ typedef struct
+ {	unsigned int	version ;	/* version of the PEAK chunk */
+ 	unsigned int	timestamp ;	/* secs since 1/1/1970  */
+-	PEAK_POS		peaks [] ;	/* the per channel peak info */
++	PEAK_POS		*peaks ;	/* the per channel peak info */
+ } PEAK_CHUNK ;
+ 
+ typedef struct
