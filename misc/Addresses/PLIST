@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/09/27 07:53:53 rh Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/11/17 04:28:59 rh Exp $
 share/GNUstep/Local/Applications/AddressManager.app/AddressManager
 share/GNUstep/Local/Applications/AddressManager.app/Resources/AddressManager.desktop
 share/GNUstep/Local/Applications/AddressManager.app/Resources/AddressManager.tiff
@@ -35,6 +35,14 @@ share/GNUstep/Local/Applications/AddressManager.app/Resources/German.lproj/Addre
 share/GNUstep/Local/Applications/AddressManager.app/Resources/German.lproj/AddressManager.gorm/objects.gorm
 share/GNUstep/Local/Applications/AddressManager.app/Resources/German.lproj/ISOCountryCodes.dict
 share/GNUstep/Local/Applications/AddressManager.app/Resources/German.lproj/Localizable.strings
+share/GNUstep/Local/Applications/AddressManager.app/Resources/Spanish.lproj/AddressManager.gorm/Add.tiff
+share/GNUstep/Local/Applications/AddressManager.app/Resources/Spanish.lproj/AddressManager.gorm/AddressManager.gorm/Add.tiff
+share/GNUstep/Local/Applications/AddressManager.app/Resources/Spanish.lproj/AddressManager.gorm/AddressManager.gorm/data.classes
+share/GNUstep/Local/Applications/AddressManager.app/Resources/Spanish.lproj/AddressManager.gorm/AddressManager.gorm/objects.gorm
+share/GNUstep/Local/Applications/AddressManager.app/Resources/Spanish.lproj/AddressManager.gorm/data.classes
+share/GNUstep/Local/Applications/AddressManager.app/Resources/Spanish.lproj/AddressManager.gorm/objects.gorm
+share/GNUstep/Local/Applications/AddressManager.app/Resources/Spanish.lproj/ISOCountryCodes.dict
+share/GNUstep/Local/Applications/AddressManager.app/Resources/Spanish.lproj/Localizable.strings
 share/GNUstep/Local/Applications/AddressManager.app/Resources/Info-gnustep.plist
 share/GNUstep/Local/Applications/AddressManager.app/Resources/VCFFile.tiff
 share/GNUstep/Local/Applications/AddressManager.app/Resources/VCFImage.tiff
@@ -63,6 +71,7 @@ share/GNUstep/Local/Library/Frameworks/AddressView.framework/Versions/A/Resource
 share/GNUstep/Local/Library/Frameworks/AddressView.framework/Versions/A/Resources/Remove.tiff
 share/GNUstep/Local/Library/Frameworks/AddressView.framework/Versions/A/Resources/ScriptingInfo.plist
 share/GNUstep/Local/Library/Frameworks/AddressView.framework/Versions/A/Resources/Share.tiff
+share/GNUstep/Local/Library/Frameworks/AddressView.framework/Versions/A/Resources/Spanish.lproj/Localizable.strings
 share/GNUstep/Local/Library/Frameworks/AddressView.framework/Versions/A/Resources/UnknownImage.tiff
 share/GNUstep/Local/Library/Frameworks/AddressView.framework/Versions/A/Resources/VCFImage.tiff
 share/GNUstep/Local/Library/Frameworks/AddressView.framework/Versions/A/libAddressView.so
@@ -81,6 +90,7 @@ share/GNUstep/Local/Library/Frameworks/Addresses.framework/Versions/A/Headers/AD
 share/GNUstep/Local/Library/Frameworks/Addresses.framework/Versions/A/Headers/ADMultiValue.h
 share/GNUstep/Local/Library/Frameworks/Addresses.framework/Versions/A/Headers/ADPListConverter.h
 share/GNUstep/Local/Library/Frameworks/Addresses.framework/Versions/A/Headers/ADPerson.h
+share/GNUstep/Local/Library/Frameworks/Addresses.framework/Versions/A/Headers/ADPlugin.h
 share/GNUstep/Local/Library/Frameworks/Addresses.framework/Versions/A/Headers/ADPublicAddressBook.h
 share/GNUstep/Local/Library/Frameworks/Addresses.framework/Versions/A/Headers/ADRecord.h
 share/GNUstep/Local/Library/Frameworks/Addresses.framework/Versions/A/Headers/ADSearchElement.h
@@ -94,6 +104,7 @@ share/GNUstep/Local/Library/Frameworks/Addresses.framework/Versions/A/Resources/
 share/GNUstep/Local/Library/Frameworks/Addresses.framework/Versions/A/Resources/German.lproj/PropertiesAndLabels.strings
 share/GNUstep/Local/Library/Frameworks/Addresses.framework/Versions/A/Resources/Info-gnustep.plist
 share/GNUstep/Local/Library/Frameworks/Addresses.framework/Versions/A/Resources/ScriptingInfo.plist
+share/GNUstep/Local/Library/Frameworks/Addresses.framework/Versions/A/Resources/Spanish.lproj/PropertiesAndLabels.strings
 share/GNUstep/Local/Library/Frameworks/Addresses.framework/Versions/A/libAddresses.so
 share/GNUstep/Local/Library/Frameworks/Addresses.framework/Versions/A/libAddresses.so.0.0.1
 share/GNUstep/Local/Library/Frameworks/Addresses.framework/Versions/Current
@@ -106,6 +117,7 @@ share/GNUstep/Local/Library/Libraries/libAddresses.so
 share/GNUstep/Local/Library/Libraries/libAddresses.so.0.0.1
 @comment in devel/gnustep-make: @dirrm share/GNUstep/Local/Library/Libraries
 @comment in devel/gnustep-make: @dirrm share/GNUstep/Local/Library/Headers
+@dirrm share/GNUstep/Local/Library/Frameworks/Addresses.framework/Versions/A/Resources/Spanish.lproj
 @dirrm share/GNUstep/Local/Library/Frameworks/Addresses.framework/Versions/A/Resources/German.lproj
 @dirrm share/GNUstep/Local/Library/Frameworks/Addresses.framework/Versions/A/Resources/French.lproj
 @dirrm share/GNUstep/Local/Library/Frameworks/Addresses.framework/Versions/A/Resources/English.lproj
@@ -115,6 +127,7 @@ share/GNUstep/Local/Library/Libraries/libAddresses.so.0.0.1
 @dirrm share/GNUstep/Local/Library/Frameworks/Addresses.framework/Versions/A
 @dirrm share/GNUstep/Local/Library/Frameworks/Addresses.framework/Versions
 @dirrm share/GNUstep/Local/Library/Frameworks/Addresses.framework
+@dirrm share/GNUstep/Local/Library/Frameworks/AddressView.framework/Versions/A/Resources/Spanish.lproj
 @dirrm share/GNUstep/Local/Library/Frameworks/AddressView.framework/Versions/A/Resources/German.lproj
 @dirrm share/GNUstep/Local/Library/Frameworks/AddressView.framework/Versions/A/Resources/French.lproj
 @dirrm share/GNUstep/Local/Library/Frameworks/AddressView.framework/Versions/A/Resources/English.lproj
@@ -125,6 +138,9 @@ share/GNUstep/Local/Library/Libraries/libAddresses.so.0.0.1
 @dirrm share/GNUstep/Local/Library/Frameworks/AddressView.framework/Versions
 @dirrm share/GNUstep/Local/Library/Frameworks/AddressView.framework
 @comment in devel/gnustep-make: @dirrm share/GNUstep/Local/Library/Frameworks
+@dirrm share/GNUstep/Local/Applications/AddressManager.app/Resources/Spanish.lproj/AddressManager.gorm/AddressManager.gorm
+@dirrm share/GNUstep/Local/Applications/AddressManager.app/Resources/Spanish.lproj/AddressManager.gorm
+@dirrm share/GNUstep/Local/Applications/AddressManager.app/Resources/Spanish.lproj
 @dirrm share/GNUstep/Local/Applications/AddressManager.app/Resources/German.lproj/AddressManager.gorm/AddressManager.gorm
 @dirrm share/GNUstep/Local/Applications/AddressManager.app/Resources/German.lproj/AddressManager.gorm
 @dirrm share/GNUstep/Local/Applications/AddressManager.app/Resources/German.lproj
