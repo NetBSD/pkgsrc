@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2004/02/15 07:41:49 minskim Exp $
+# $NetBSD: Makefile,v 1.24 2004/02/15 07:43:50 minskim Exp $
 
 DISTNAME=		libbonobo-2.4.3
 CATEGORIES=		devel gnome
@@ -33,6 +33,7 @@ CONF_FILES=		${EGDIR}/bonobo-activation-config.xml \
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
