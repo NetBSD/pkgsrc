@@ -1,4 +1,4 @@
-# $NetBSD: defs.Linux.mk,v 1.17 2001/11/21 13:44:44 agc Exp $
+# $NetBSD: defs.Linux.mk,v 1.18 2001/11/21 13:54:14 agc Exp $
 #
 # Variable definitions for the Linux operating system.
 
@@ -57,6 +57,8 @@ XARGS?=		/usr/bin/xargs -r
 
 DEF_UMASK?=	022
 GROUPADD?=	/usr/sbin/groupadd
+MOTIF_TYPE_DEFAULT?=	openmotif	# default 2.0 compatible libs type
+MOTIF12_TYPE_DEFAULT?=	lesstif12	# default 1.2 compatible libs type
 NOLOGIN?=	${FALSE}
 USERADD?=	/usr/sbin/useradd
 
