@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/07/15 10:49:14 uebayasi Exp $
+# $NetBSD: Makefile,v 1.2 2002/07/15 11:05:32 uebayasi Exp $
 
 DISTNAME=	kochi-gothic-20020503
 PKGNAME=	kochi-ttf-20020503
@@ -12,7 +12,7 @@ MAINTAINER=	uebayasi@soum.co.jp
 HOMEPAGE=	http://www.on.cs.keio.ac.jp/~yasu/jp_fonts.html
 COMMENT=	Free Japanese TrueType font by Yasuyuki Furukawa
 
-DEPENDS+=	mkfontscale:../../fonts/mkfontscale
+DEPENDS+=	mkfontscale>=20020524:../../fonts/mkfontscale
 
 KOCHI_VERSION=	0.2.20020503
 
