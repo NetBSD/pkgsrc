@@ -1,8 +1,8 @@
-$NetBSD: patch-am,v 1.4 2003/10/05 17:55:34 martti Exp $
+$NetBSD: patch-am,v 1.5 2004/10/28 01:08:15 xtraeme Exp $
 
---- scripts/safe_mysqld.sh.orig	Fri Apr 11 13:57:14 2003
-+++ scripts/safe_mysqld.sh	Fri Apr 11 13:58:02 2003
-@@ -195,6 +195,14 @@
+--- scripts/mysqld_safe.sh.orig	2004-10-22 02:35:28.000000000 +0200
++++ scripts/mysqld_safe.sh	2004-10-22 02:38:30.000000000 +0200
+@@ -253,6 +253,14 @@
    fi
  fi
  
@@ -17,13 +17,13 @@ $NetBSD: patch-am,v 1.4 2003/10/05 17:55:34 martti Exp $
  #
  # If there exists an old pid file, check if the daemon is already running
  # Note: The switches to 'ps' may depend on your operating system
-@@ -205,18 +213,16 @@
+@@ -263,18 +271,16 @@
    then
      if @FIND_PROC@
      then    # The pid contains a mysqld process
 -      echo "A mysqld process already exists"
 -      echo "A mysqld process already exists at " `date` >> $err_log
-+      datemsg "A mysqld process already exists"
++	datemsg "A mysqld process already exists"
        exit 1
      fi
    fi
@@ -34,27 +34,27 @@ $NetBSD: patch-am,v 1.4 2003/10/05 17:55:34 martti Exp $
 -    echo "Fatal error: Can't remove the pid file: $pid_file at " `date` >> $err_log
 -    echo "Please remove it manually and start $0 again"
 -    echo "mysqld daemon not started"
-+    datemsg "Fatal error: Can't remove the pid file: $pid_file"
-+    datemsg "Please remove it manually and start $0 again"
-+    datemsg "mysqld daemon not started"
++	datemsg "Fatal error: Can't remove the pid file: $pid_file"
++	datemsg "Please remove it manually and start $0 again"
++	datemsg "mysqld daemon not started"
      exit 1
    fi
  fi
-@@ -225,11 +231,11 @@
- # Uncomment the following lines if you want all tables to be automaticly
- # checked and repaired at start
+@@ -287,11 +293,11 @@
+ # Alternatively, you can start mysqld with the "myisam-recover" option. See
+ # the manual for details.
  #
 -# echo "Checking tables in $DATADIR"
 +# datemsg "Checking tables in $DATADIR"
- # $MY_BASEDIR_VERSION/bin/myisamchk --silent --force --fast --medium-check -O key_buffer=64M -O sort_buffer=64M $DATADIR/*/*.MYI
- # $MY_BASEDIR_VERSION/bin/isamchk --silent --force -O sort_buffer=64M $DATADIR/*/*.ISM
+ # $MY_BASEDIR_VERSION/bin/myisamchk --silent --force --fast --medium-check $DATADIR/*/*.MYI
+ # $MY_BASEDIR_VERSION/bin/isamchk --silent --force $DATADIR/*/*.ISM
  
 -echo "Starting $MYSQLD daemon with databases from $DATADIR"
 +datemsg "Starting $MYSQLD daemon with databases from $DATADIR"
  
  # Does this work on all systems?
  #if type ulimit | grep "shell builtin" > /dev/null
-@@ -237,7 +243,7 @@
+@@ -299,7 +305,7 @@
  #  ulimit -n 256 > /dev/null 2>&1		# Fix for BSD and FreeBSD systems
  #fi
  
@@ -62,22 +62,41 @@ $NetBSD: patch-am,v 1.4 2003/10/05 17:55:34 martti Exp $
 +datemsg "mysqld started"
  while true
  do
-   rm -f $MYSQL_UNIX_PORT $pid_file	# Some extra safety
-@@ -260,7 +266,7 @@
-     # The only thing is ps x => redhat 5 gives warnings when using ps -x.
-     # kill -9 is used or the process won't react on the kill.
-     numofproces=`ps xa | grep -v "grep" | grep -c $ledir/$MYSQLD`
+   rm -f $safe_mysql_unix_port $pid_file	# Some extra safety
+@@ -311,7 +317,7 @@
+   fi
+   if test ! -f $pid_file		# This is removed if normal shutdown
+   then
+-    echo "STOPPING server from pid file $pid_file"
++    datemsg "STOPPING server from pid file $pid_file"
+     break
+   fi
+ 
+@@ -329,7 +335,7 @@
+       numofproces=`ps xa | grep -v "grep" | grep -c $ledir/$MYSQLD`
+     fi
+ 
 -    echo -e "\nNumber of processes running now: $numofproces" | tee -a $err_log
-+    datemsg "Number of processes running now: $numofproces"
++	datemsg -e "\nNumber of processes running now: $numofproces"
      I=1
      while test "$I" -le "$numofproces"
      do 
-@@ -272,7 +278,7 @@
+@@ -347,15 +353,14 @@
  	#    echo "TEST $I - $T **"
  	if kill -9 $T
  	then
 -	  echo "$MYSQLD process hanging, pid $T - killed" | tee -a $err_log
-+	  datemsg "$MYSQLD process hanging, pid $T - killed"
++		datemsg "$MYSQLD process hanging, pid $T - killed"
  	else 
  	  break
  	fi
+ 	I=`expr $I + 1`
+     done
+   fi
+-  echo "`date +'%y%m%d %H:%M:%S'`  mysqld restarted" | tee -a $err_log
++  datemsg "mysqld restarted"
+ done
+ 
+-echo "`date +'%y%m%d %H:%M:%S'`  mysqld ended" | tee -a $err_log
+-echo "" | tee -a $err_log
++datemsg "mysqld ended"

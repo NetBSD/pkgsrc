@@ -1,8 +1,8 @@
-$NetBSD: patch-al,v 1.5 2004/01/07 08:02:18 cube Exp $
+$NetBSD: patch-al,v 1.6 2004/10/28 01:08:15 xtraeme Exp $
 
---- include/my_pthread.h.orig	Thu Aug 28 13:26:47 2003
-+++ include/my_pthread.h	Thu Aug 28 13:28:45 2003
-@@ -20,7 +20,13 @@
+--- include/my_pthread.h.orig	2003-12-14 21:23:47.000000000 +0000
++++ include/my_pthread.h	2003-12-20 12:09:31.000000000 +0000
+@@ -19,7 +19,13 @@
  #ifndef _my_pthread_h
  #define _my_pthread_h
  
@@ -16,7 +16,7 @@ $NetBSD: patch-al,v 1.5 2004/01/07 08:02:18 cube Exp $
  #ifndef ETIME
  #define ETIME ETIMEDOUT				/* For FreeBSD */
  #endif
-@@ -294,7 +300,11 @@
+@@ -301,7 +307,11 @@
  #endif
  
  #ifndef HAVE_NONPOSIX_SIGWAIT
