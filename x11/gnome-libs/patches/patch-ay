@@ -1,7 +1,7 @@
-$NetBSD: patch-ay,v 1.2 2002/03/24 19:53:49 rh Exp $
+$NetBSD: patch-ay,v 1.3 2002/05/05 22:52:12 martin Exp $
 
---- libgnome/gnome-url.c.orig	Fri Jan 11 08:03:17 2002
-+++ libgnome/gnome-url.c
+--- libgnome/gnome-url.c.orig	Thu Jan 10 23:03:17 2002
++++ libgnome/gnome-url.c	Mon May  6 00:06:38 2002
 @@ -80,6 +80,8 @@
  	return default_handler;
  }
@@ -11,32 +11,27 @@ $NetBSD: patch-ay,v 1.2 2002/03/24 19:53:49 rh Exp $
  /**
   * gnome_url_show
   * @url: URL to show
-@@ -105,11 +107,11 @@
+@@ -105,11 +107,9 @@
  void
  gnome_url_show(const gchar *url)
  {
 -	gint i;
  	gchar *pos, *template;
  	gboolean free_template = FALSE;
- 	int argc;
+-	int argc;
 -       	char **argv;
-+	char **argv;
 +	int status;
  	
  	g_return_if_fail (url != NULL);
  	pos = strchr (url, ':');
-@@ -140,9 +142,23 @@
- 	if(poptParseArgvString(template, &argc, &argv) != 0) {
- 		/* can't parse */
- 		g_warning("Parse error of '%s'", template);
--		return;
-+		status = gnome_url_show_with_handler (url, template);
-+		if (status == -1 && free_template)
-+			gnome_url_show_with_handler (url, gnome_url_default_handler (NULL));
-+	} else {
-+		gnome_url_show_with_handler (url, template);
- 	}
+@@ -135,12 +135,26 @@
+ 	} else /* no : ? -- this shouldn't happen.  Use default handler */
+ 		template = gnome_url_default_handler (NULL);
  
++	status = gnome_url_show_with_handler (url, template);
++	if (status == -1 && free_template)
++		gnome_url_show_with_handler (url, gnome_url_default_handler (NULL));
++
 +	if (free_template)
 +		g_free (template);
 +}
@@ -47,10 +42,17 @@ $NetBSD: patch-ay,v 1.2 2002/03/24 19:53:49 rh Exp $
 +	int argc, i, status;
 +	char **argv;
 +
+ 	/* we use a popt function as it does exactly what we want to do and
+ 	   gnome already uses popt */
+ 	if(poptParseArgvString(template, &argc, &argv) != 0) {
+ 		/* can't parse */
+ 		g_warning("Parse error of '%s'", template);
+-		return;
++		return -1;
+ 	}
+ 
  	/* we can just replace the entry in the array since the
- 	 * array is all in one buffer, we won't leak */
- 	for(i = 0; i < argc; i++) {
-@@ -154,13 +170,12 @@
+@@ -154,13 +168,12 @@
  
  	/* use execute async, and not the shell, shell is evil and a
  	 * security hole */
