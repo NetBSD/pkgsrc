@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.197 2001/09/30 22:10:33 abs Exp $
+# $NetBSD: Packages.txt,v 1.198 2001/10/02 11:15:29 abs Exp $
 ###########################################################################
 
 			==========================
@@ -1986,16 +1986,8 @@ packages.  The dependency is checked when installing the binary
 package and any package which matches the pattern will be used. 
 Wildcard dependencies should be used with care.
 
-For example, if a package needs any version of Tk installed, but does
-not require an explicit version of Tk:
-
-	DEPENDS+=	tk-*:../../x11/tk80
-
-would also match e.g. tk-postgresql-6.5.3, which is not what was
-needed. ALWAYS ensure that the wildcard doesn't match more than it should,
-and perhaps use version numbers to make certain:
-
-	BUILD_DEPENDS+=	perl-5.*:../../lang/perl
+The -[0-9]* should be used instead of -* to avoid potentially
+ambiguous matches such as tk-postgresql matching a tk-* DEPEND.
 
 (c) If your package needs some executable to be able to run correctly, this
 is specified using the DEPENDS definition. The pkgsrc/print/lyx package needs
