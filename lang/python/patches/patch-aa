@@ -1,0 +1,30 @@
+$NetBSD: patch-aa,v 1.7 2000/11/11 17:08:16 tsarna Exp $
+
+Make this work on non-ELF NetBSD.
+Based on current python cvs with (probably broken... are ALL OpenBSD
+ports a.out?) + NetBSD fix.
+
+--- Python/dynload_shlib.c.orig	Sat Nov 11 10:32:40 2000
++++ Python/dynload_shlib.c	Sat Nov 11 10:51:03 2000
+@@ -16,6 +16,12 @@
+ #endif
+ #endif
+ 
++#if (defined(__NetBSD__) || defined(__OpenBSD__)) && !defined(__ELF__)
++#define LEAD_UNDERSCORE "_"
++#else
++#define LEAD_UNDERSCORE ""
++#endif
++
+ #ifndef RTLD_LAZY
+ #define RTLD_LAZY 1
+ #endif
+@@ -55,7 +61,7 @@
+ 	}
+ 
+ 	/* ### should there be a leading underscore for some platforms? */
+-	sprintf(funcname, "init%.200s", shortname);
++	sprintf(funcname, LEAD_UNDERSCORE "init%.200s", shortname);
+ 
+ 	if (fp != NULL) {
+ 		int i;
