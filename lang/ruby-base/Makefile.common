@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.12 2003/03/24 14:49:37 taca Exp $
+# $NetBSD: Makefile.common,v 1.13 2003/06/05 14:52:34 jschauma Exp $
 # FreeBSD: ports/Mk/bsd.ruby.mk,v 1.11 2000/11/16 17:59:40 knu Exp
 # Makefile.common: ruby common makefile, based on FreeBSD's bsd.ruby.mk.
 
@@ -100,6 +100,18 @@ RUBY_SHLIBVER?=		${RUBY_VERSION:S/.//}
 .else
 RUBY_SHLIBVER?=		${RUBY_VERSION}
 .endif
+
+.if ${OPSYS} == "IRIX"
+RUBY_NOSHLIBMAJOR=	"@comment "
+RUBY_NOEXT_CURSES=	"@comment "
+RUBY_NOEXT_DBM=		"@comment "
+RUBY_NOEXT_ETC=		"@comment "
+RUBY_NOEXT_PTY=		"@comment "
+RUBY_NOEXT_SOCK=	"@comment "
+RUBY_NOEXT_SYSL=	"@comment "
+RUBY_NOEXT_EXPECT=	"@comment "
+.endif
+
 RUBY_SHLIBMAJOR?=	${_RUBY_SUFFIX}
 
 #CONFIGURE_TARGET?=	${RUBY_ARCH}
@@ -133,6 +145,11 @@ PLIST_SUBST+=		RUBY_VERSION="${RUBY_VERSION}" \
 			RUBY_NAME="${RUBY_NAME}" \
 			RUBY_NOEXT_CURSES=${RUBY_NOEXT_CURSES} \
 			RUBY_NOEXT_DBM=${RUBY_NOEXT_DBM} \
+			RUBY_NOEXT_ETC=${RUBY_NOEXT_ETC} \
+			RUBY_NOEXT_PTY=${RUBY_NOEXT_PTY} \
+			RUBY_NOEXT_SOCK=${RUBY_NOEXT_SOCK} \
+			RUBY_NOEXT_SYSL=${RUBY_NOEXT_SYSL} \
+			RUBY_NOEXT_EXPECT=${RUBY_NOEXT_EXPECT} \
 			RUBY_NOSHLIBMAJOR=${RUBY_NOSHLIBMAJOR} \
 			RUBY_COMMENT=${RUBY_COMMENT} \
 			${PLIST_RUBY_DIRS:S,DIR="${LOCALBASE}/,DIR=",}
