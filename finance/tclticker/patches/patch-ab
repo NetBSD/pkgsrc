@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1.1.1 2000/12/11 13:53:25 wiz Exp $
+$NetBSD: patch-ab,v 1.2 2001/11/14 11:55:17 agc Exp $
 --- mailquote.orig	Mon Dec 20 15:10:24 1999
 +++ mailquote	Wed Aug 30 21:00:30 2000
 @@ -1,6 +1,6 @@
@@ -14,7 +14,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2000/12/11 13:53:25 wiz Exp $
  # terms specified in this license. 
   
 +# set this explicitly
-+set env(TCLTICKER_LIB) "/usr/pkg/share/tclticker"
++set env(TCLTICKER_LIB) "@PREFIX@/share/tclticker"
 +
  
  if {! [info exists env(TCLTICKER_LIB)]} {
