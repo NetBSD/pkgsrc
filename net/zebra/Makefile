@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 1999/09/13 16:34:36 itojun Exp $
+# $NetBSD: Makefile,v 1.17 1999/11/19 02:47:00 hubertf Exp $
 # Based on KAME Id: Makefile,v 1.1.2.1.2.1.10.2 1999/01/05 11:03:50 itojun Exp
 #
 
@@ -13,6 +13,7 @@ HOMEPAGE=	http://www.zebra.org/
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--sysconfdir=${PREFIX}/etc/zebra
+USE_GTEXINFO=	yes
 
 BUILD_DEFS+=	USE_INET6
 
@@ -24,5 +25,18 @@ PLIST_SRC=	${PKGDIR}/PLIST.v6
 CONFIGURE_ARGS+=--disable-ospf6d --disable-ripngd
 PLIST_SRC=	${PKGDIR}/PLIST
 .endif
+
+post-build:
+		cd ${WRKSRC}/doc ; \
+		${TOUCH} zebra.texi ; \
+		makeinfo --no-split zebra.texi
+
+post-install:
+		${INSTALL_MAN} ${WRKSRC}/doc/bgpd.1	${PREFIX}/man/man1
+		${INSTALL_MAN} ${WRKSRC}/doc/ospf6d.1	${PREFIX}/man/man1
+		${INSTALL_MAN} ${WRKSRC}/doc/ospfd.1	${PREFIX}/man/man1
+		${INSTALL_MAN} ${WRKSRC}/doc/ripd.1	${PREFIX}/man/man1
+		${INSTALL_MAN} ${WRKSRC}/doc/ripngd.1	${PREFIX}/man/man1
+		${INSTALL_MAN} ${WRKSRC}/doc/zebra.1	${PREFIX}/man/man1
 
 .include "../../mk/bsd.pkg.mk"
