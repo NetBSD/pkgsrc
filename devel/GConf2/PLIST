@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2004/05/03 20:55:36 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.17 2004/06/28 12:52:45 jmmv Exp $
 bin/gconf-merge-tree
 bin/gconftool-2
 include/gconf/2/gconf/gconf-changeset.h
@@ -25,7 +25,6 @@ lib/pkgconfig/gconf-2.0.pc
 libexec/gconfd-2
 man/man1/gconftool-2.1
 share/aclocal/gconf-2.m4
-share/doc/html/gconf/GConfClient.html
 share/doc/html/gconf/ch01.html
 share/doc/html/gconf/ch01s02.html
 share/doc/html/gconf/ch02.html
@@ -37,6 +36,7 @@ share/doc/html/gconf/ch06s02.html
 share/doc/html/gconf/ch06s03.html
 share/doc/html/gconf/ch07.html
 share/doc/html/gconf/conventions.html
+share/doc/html/gconf/gconf-GConfClient.html
 share/doc/html/gconf/gconf-client-reference.html
 share/doc/html/gconf/gconf-client.html
 share/doc/html/gconf/gconf-gconf-backend.html
@@ -59,6 +59,7 @@ share/doc/html/gconf/index.html
 share/doc/html/gconf/index.sgml
 share/doc/html/gconf/left.png
 share/doc/html/gconf/right.png
+share/doc/html/gconf/style.css
 share/doc/html/gconf/up.png
 share/examples/GConf2/path
 ${PKGLOCALEDIR}/locale/am/LC_MESSAGES/GConf2.mo
