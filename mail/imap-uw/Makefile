@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2001/03/13 20:22:10 jlam Exp $
+# $NetBSD: Makefile,v 1.30 2001/03/13 20:46:04 wiz Exp $
 
 DISTNAME=       imap-2000c
 PKGNAME=        imap-uw-2000.0.3nb1
@@ -43,9 +43,6 @@ CCLIENT_INCS=	c-client.h env.h env_unix.h flstring.h fs.h ftl.h	\
 		tcp.h utf8.h
 CCLIENT_LIB=	libc-client.la
 CCLIENT_PICLIB=	libc-client_pic.a
-CCLIENT_LIBS=	libc-client.a libc-client.la libc-client.so		\
-		libc-client.so.${CCLIENT_MAJOR}.${CCLIENT_MINOR}	\
-		libc-client.so.${CCLIENT_MAJOR}
 CCLIENT_MAJOR=	4
 CCLIENT_MINOR=	1
 CCLIENT_MFILES=	src/imapd/Makefile					\
@@ -101,9 +98,10 @@ do-install:
 	${INST_LIB} ${WRKSRC}/c-client/${CCLIENT_LIB} ${LIB_DIR}
 	${INSTALL_DATA} ${WRKSRC}/c-client/.libs/${CCLIENT_PICLIB} ${LIB_DIR}
 	${RANLIB} ${LIB_DIR}/${CCLIENT_PICLIB}
+	cd ${LIB_DIR}; for file in libc-client.*; do			\
 	cd ${LIB_DIR}; for file in ${CCLIENT_LIBS}; do			\
 		f=`echo $${file} | ${SED} "s|libc-client|libimapuw|g"`;	\
-		[ -f $${file} ] && ${LN} -sf $${file} $${f};		\
+		${TEST} -f $${file} && ${LN} -sf $${file} $${f};	\
 	done
 	${INST_PROG} ${WRKSRC}/imapd/imapd ${PREFIX}/libexec
 	${INST_PROG} ${WRKSRC}/ipopd/ipop2d ${PREFIX}/libexec
