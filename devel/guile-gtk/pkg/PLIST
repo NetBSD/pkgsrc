@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/12/20 11:58:46 rh Exp $
+bin/guile-gtk-1.2
+bin/build-guile-gtk
+bin/guile-gtk
+include/guile-gtk.h
+lib/libguilegtk-1.2.so.0.0
+lib/libguilegtk-1.2.a
+lib/libguiledlopenhelper.so.0.0
+lib/libguiledlopenhelper.a
+share/guile/gtk-1.2/gtk.scm
+share/guile/gtk-1.2/gdk.scm
+share/guile/gtk/gtk.scm
+share/guile/gtk/gdk.scm
+share/guile/gtk/dynlink.scm
+share/guile/gtk/config.scm
+share/guile/gtk/event-repl.scm
+share/guile-gtk/gtk-1.2.defs
+share/guile-gtk/gdk-1.2.defs
+@dirrm share/guile/gtk-1.2
+@dirrm share/guile/gtk
+@dirrm share/guile-gtk

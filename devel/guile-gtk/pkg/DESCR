@@ -1,0 +1,10 @@
+  Guile-gtk is a library written to make GTK accesible from guile.
+It provides a convenient interface for Scheme programmers to develop
+visual applications.  It can also integrate with GNOME via the
+Gnome-guile module.
+
+  Guile-gtk was started by Marius Vollmer <mvo@zagadka.ping.de> and
+is currently mantained by Ariel Rios <jarios@usa.net> and other
+intrepid Guile hackers around the world.
+
+Guile-gtk is free software licensed under the GPL.
