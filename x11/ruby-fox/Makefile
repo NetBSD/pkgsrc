@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2005/01/28 14:08:02 taca Exp $
+# $NetBSD: Makefile,v 1.22 2005/03/05 09:19:45 jmmv Exp $
 
 DISTNAME=	FXRuby-1.0.29
 PKGNAME=	${RUBY_PKGPREFIX}-fox-1.0.29
@@ -6,9 +6,12 @@ PKGREVISION=	2
 CATEGORIES=	x11 ruby
 MASTER_SITES=	http://rubyforge.org/frs/download.php/983/ \
 		${MASTER_SITE_SOURCEFORGE:=fxruby/}
+
 MAINTAINER=	sakamoto@NetBSD.org
 HOMEPAGE=	http://www.fxruby.org/
 COMMENT=	Ruby interface to FOX GUI library
+
+DEPENDS+=	${RUBY_PKGPREFIX}-opengl>=0.32:../../graphics/ruby-opengl
 
 RUBY_HAS_ARCHLIB=	yes
 USE_BUILDLINK3=		yes
@@ -21,13 +24,12 @@ CONFIGURE_ARGS+= --with-fox-include=${BUILDLINK_PREFIX.fox}/include/fox
 CONFIGURE_ARGS+= --with-opengl-include=${BUILDLINK_PREFIX.Mesa}/include/GL
 CONFIGURE_ARGS+= --with-fox-lib=${BUILDLINK_PREFIX.fox}/lib
 
-DEPENDS+=	${RUBY_PKGPREFIX}-opengl>=0.32:../../graphics/ruby-opengl
-
 post-install:
 	${INSTALL_DATA_DIR} ${RUBY_SITELIBDIR}/fox
 	${INSTALL_DATA} ${WRKDIST}/lib/fox/*.rb ${RUBY_SITELIBDIR}/fox
 	${INSTALL_DATA_DIR} ${RUBY_EXAMPLESDIR}/fox
-	${INSTALL_DATA} ${WRKDIST}/examples/README ${WRKDIST}/examples/*.rb ${RUBY_EXAMPLESDIR}/fox
+	${INSTALL_DATA} ${WRKDIST}/examples/README ${WRKDIST}/examples/*.rb \
+		${RUBY_EXAMPLESDIR}/fox
 	${INSTALL_DATA_DIR} ${RUBY_EXAMPLESDIR}/fox/icons
 	${INSTALL_DATA} ${WRKDIST}/examples/icons/* \
 		${RUBY_EXAMPLESDIR}/fox/icons
