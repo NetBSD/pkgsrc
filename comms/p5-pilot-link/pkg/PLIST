@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/05/20 21:16:17 tron Exp $
+lib/perl5/site_perl/PDA/Pilot.pm
+lib/perl5/site_perl/PDA/dump.pl
+lib/perl5/site_perl/auto/PDA/Pilot/autosplit.ix
+lib/perl5/site_perl/i386-netbsd/auto/PDA/Pilot/.packlist
+lib/perl5/site_perl/i386-netbsd/auto/PDA/Pilot/Pilot.bs
+lib/perl5/site_perl/i386-netbsd/auto/PDA/Pilot/Pilot.so
+@dirrm lib/perl5/site_perl/i386-netbsd/auto/PDA/Pilot
+@dirrm lib/perl5/site_perl/i386-netbsd/auto/PDA
+@dirrm lib/perl5/site_perl/auto/PDA/Pilot
+@dirrm lib/perl5/site_perl/auto/PDA
+@dirrm lib/perl5/site_perl/PDA
