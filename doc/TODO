@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2472 2004/11/26 00:31:02 wiz Exp $
+$NetBSD: TODO,v 1.2473 2004/11/26 06:47:09 taca Exp $
 
 Suggested new packages
 ======================
@@ -1174,7 +1174,7 @@ Suggested package updates
 	o ruby-mysql-2.5.1
 	o ruby-racc-1.4.4
 	o ruby-rexml-3.1.2
-	o ruby-rttool-1.1.1
+	o ruby-rttool-0.1.8
 	o ruby-webunit-20040429
 	o rudiments-0.27
 	o rvm-1.9
