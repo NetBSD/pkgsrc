@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2001/05/14 18:56:15 jlam Exp $
+# $NetBSD: Makefile,v 1.50 2001/05/22 21:49:28 jlam Exp $
 
 DISTNAME=		samba-2.2.0
 WRKSRC=			${WRKDIR}/${DISTNAME}/source
@@ -14,9 +14,6 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.samba.org/
 COMMENT=		SMB/CIFS protocol server suite for UNIX
 
-# Samba uses some GNU readline features (rl_event_hook).
-DEPENDS+=		readline>=2.2:../../devel/readline
-
 USE_LIBINTL=		# defined
 USE_SSL=		# defined
 
@@ -24,7 +21,13 @@ GNU_CONFIGURE=		# defined
 USE_LIBTOOL=		# defined
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
+USE_GNU_READLINE=	# uses rl_event_hook interface to GNU readline
+
 .include "../../mk/bsd.prefs.mk"
+.include "../../devel/readline/Makefile.readline"
+
+CFLAGS+=		-I${WRKINCDIR}
+LDFLAGS+=		-L${WRKLIBDIR}
 
 SAMBA_LOGDIR=		/var/log
 SAMBA_LOCKDIR=		/var/run/samba
@@ -41,26 +44,24 @@ CONFIGURE_ARGS+=	--with-lockdir=${SAMBA_LOCKDIR}
 CONFIGURE_ARGS+=	--with-privatedir=${SAMBA_PRIVATE}
 CONFIGURE_ARGS+=	--with-swatdir=${PREFIX}/share/swat
 
-CONFIGURE_ARGS+=	--with-readline=${LOCALBASE}
+CONFIGURE_ARGS+=	--with-readline
 CONFIGURE_ARGS+=	--with-ssl
-
-# The following should be ${SSLBASE}, but we don't want the configure script
-# to add -I/usr/include at the front of the compiler options, so force it to
-# be ${LOCALBASE} instead.  This is needed anyway for many of the
-# dependencies.
-#
-CONFIGURE_ARGS+=	--with-sslinc=${LOCALBASE}
+CONFIGURE_ARGS+=	--with-sslinc=${SSLBASE}
+CONFIGURE_ENV+=		ac_cv_lib_ncurses_tgetent=no
+CONFIGURE_ENV+=		ac_cv_lib_curses_tgetent=no
 
 CPPFLAGS+=		-I${SSLBASE}/include/openssl	# ssl.h, err.h
 
 .if defined(SAMBA_WITH_CUPS)
 CONFIGURE_ARGS+=	--with-cups
 DEPENDS+=		cups>=1.1.1:../../print/cups
+CPPFLAGS+=		-I${LOCALBASE}/include
 .endif
 
 .if defined(USE_PAM)
 CONFIGURE_ARGS+=	--with-pam
 DEPENDS+=		PAM-*:../../security/PAM
+CPPFLAGS+=		-I${LOCALBASE}/include
 .endif
 
 # The following are Linux-only options.
