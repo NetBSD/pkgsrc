@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1999/09/03 04:24:08 sakamoto Exp $
+# $NetBSD: Makefile,v 1.4 1999/09/06 08:19:55 sakamoto Exp $
 #
 
 DISTNAME=	FreeWnn-1.10
@@ -29,6 +29,7 @@ INSTALL_FILE=	${WRKDIR}/INSTALL
 INSTALL_SRC=	${FILESDIR}/INSTALL
 PLIST_TMP=	${PKGDIR}/PLIST
 PLIST_SRC=	${WRKDIR}/PLIST
+PLIST_SUBST=	DICT_DIR=${DICT_DIR} PREFIX=${PREFIX} WNN_LANG=${WNN_LANG}
 STARTUP_SCRIPT_SRC=${WRKDIR}/STARTUP
 .else
 MAKE_ENV+=	"WNN_TARGET=LIBRARY"
@@ -79,10 +80,7 @@ post-build:
 	@${ECHO} "    echo -n ' ${SCTITLE}'" >> ${STARTUP_SCRIPT_SRC}
 	@${ECHO} '     $$freewnn' >> ${STARTUP_SCRIPT_SRC}
 	@${ECHO} "fi" >> ${STARTUP_SCRIPT_SRC}
-	@${SED} -e 's|$${DICT_DIR}|${DICT_DIR}|'		\
-		-e 's|$${PREFIX}|${PREFIX}|'			\
-		-e 's|$${WNN_LANG}|${WNN_LANG}|'		\
-		${PLIST_TMP} > ${PLIST_SRC}
+	@${CP} ${PLIST_TMP} ${PLIST_SRC}
 	@${ECHO} ${STARTUP_SCRIPT} >> ${PLIST_SRC}
 
 pre-install:
