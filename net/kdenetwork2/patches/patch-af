@@ -1,0 +1,22 @@
+$NetBSD: patch-af,v 1.1 2001/12/13 00:58:32 skrll Exp $
+
+--- kppp/connect.cpp.orig	Wed Nov 14 01:34:56 2001
++++ kppp/connect.cpp
+@@ -1048,10 +1048,16 @@
+   }
+ 
+   // O.K the ppp interface is up and running
+-  // give it a few time to come up completly (0.2 seconds)
++  // give it a bit of time to come up completely
+   if_timeout_timer->stop();
+   if_timer->stop();
++
++  // NetBSD seems to need more time for pppd to come up
++#ifdef __NetBSD__
++  sleep(2);
++#else
+   usleep(200000);
++#endif
+ 
+   if(gpppdata.autoDNS())
+     addpeerdns();
