@@ -1,0 +1,30 @@
+$NetBSD: patch-ab,v 1.6 2003/12/20 01:51:34 hubertf Exp $
+
+--- configure.orig	Wed Jan  9 19:34:33 2002
++++ configure
+@@ -4458,13 +4458,13 @@ QT_INCLUDES="-I $qtdir/include"
+ QT_LDFLAGS="-L $qtdir/lib"
+ CFLAGS="$CFLAGS $QT_INCLUDES"
+ LDFLAGS="$LDFLAGS $QT_LDFLAGS"
+-echo "$as_me:4461: checking for qVersion__Fv in -lqt" >&5
+-echo $ECHO_N "checking for qVersion__Fv in -lqt... $ECHO_C" >&6
++echo "$as_me:4461: checking for qVersion__Fv in -lqt-mt" >&5
++echo $ECHO_N "checking for qVersion__Fv in -lqt-mt... $ECHO_C" >&6
+ if test "${ac_cv_lib_qt_qVersion__Fv+set}" = set; then
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-lqt  $LIBS"
++LIBS="-lqt-mt  $LIBS"
+ cat >conftest.$ac_ext <<_ACEOF
+ #line 4469 "configure"
+ #include "confdefs.h"
+@@ -4552,7 +4552,7 @@ fi
+ echo "$as_me: WARNING: Moc is missing;  the Qt interface will not be built" >&2;}
+ 
+   else
+-     QT_LDFLAGS="$QT_LDFLAGS -lqt"
++     QT_LDFLAGS="$QT_LDFLAGS -lqt-mt"
+ 
+      have_qt=yes
+   fi
