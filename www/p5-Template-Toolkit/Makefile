@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/11/12 06:57:05 erh Exp $
+# $NetBSD: Makefile,v 1.17 2004/11/16 01:50:31 erh Exp $
 #
 
 DISTNAME=	Template-Toolkit-2.14
@@ -21,11 +21,6 @@ DEPENDS+=	p5-GDGraph>=1.33:../../graphics/p5-GDGraph
 DEPENDS+=	p5-GDGraph3d>=0.55:../../graphics/p5-GDGraph3d
 
 DEPENDS+=	p5-XML-DOM>=1.43:../../textproc/p5-XML-DOM
-DEPENDS+=	p5-XML-XQL>=0.68:../../textproc/p5-XML-XQL
-DEPENDS+=	p5-XML-Checker>=0.13:../../textproc/p5-XML-Checker
-DEPENDS+=	p5-XML-RegExp>=0.03:../../textproc/p5-XML-RegExp
-DEPENDS+=	p5-XML-Filter-Reindent>=0.03:../../textproc/p5-XML-Filter-Reindent
-DEPENDS+=	p5-XML-UM>=0.01:../../textproc/p5-XML-UM
 
 DEPENDS+=	p5-Pod-POM-[0-9]*:../../textproc/p5-Pod-POM
 DEPENDS+=	p5-Text-Autoformat-[0-9]*:../../textproc/p5-Text-Autoformat
