@@ -1,0 +1,10 @@
+--- Xpm.c.orig	Tue Nov 26 06:40:26 1996
++++ Xpm.c	Fri Jan 30 01:02:57 1998
+@@ -208,6 +208,5 @@
+   		new.sa_handler=SigHandle;
+ 		new.sa_mask=0;
+-		new.sa_flags=SA_NOMASK | SA_ONESHOT;
+-		new.sa_restorer=NULL;
++		new.sa_flags=SA_NODEFER;
+ 		sigaction(SIGCHLD, &new, &old);
+ 		playing = 1;
