@@ -1,4 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/02/03 15:53:31 nathanw Exp $
+@comment $NetBSD: PLIST,v 1.2 1999/11/29 21:39:40 hubertf Exp $
 bin/xdaliclock
-lib/X11/app-defaults/XDaliClock
-man/cat1/xdaliclock.0
+man/man1/xdaliclock.1
