@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.3 2001/05/22 11:37:16 wiz Exp $
+$NetBSD: patch-ac,v 1.4 2001/05/22 12:23:28 wiz Exp $
 
 --- main.c.orig	Sun Jan 22 01:21:08 1995
 +++ main.c
@@ -13,11 +13,10 @@ $NetBSD: patch-ac,v 1.3 2001/05/22 11:37:16 wiz Exp $
  #include "config.h"
  #include "w.h"
  #include "tty.h"
-@@ -186,6 +190,20 @@
- #else
+@@ -187,6 +191,20 @@
   run=namprt(argv[0]);
  #endif 
-+
+ 
 +#if defined(__FreeBSD__) || defined(__NetBSD__)
 + setlocale(LC_ALL, "");
 + for(c=0;c<256;c++)
@@ -31,6 +30,28 @@ $NetBSD: patch-ac,v 1.3 2001/05/22 11:37:16 wiz Exp $
 +     xlatc[c]=c;
 +  }
 +#endif
- 
++
   if(s=getenv("LINES")) sscanf(s,"%d",&lines);
   if(s=getenv("COLUMNS")) sscanf(s,"%d",&columns);
+  if(s=getenv("BAUD")) sscanf(s,"%u",&Baud);
+@@ -233,20 +251,6 @@
+   }
+ 
+ #else
+-
+- s=vsncpy(NULL,0,sc("."));
+- s=vsncpy(sv(s),sv(run));
+- s=vsncpy(sv(s),sc("rc"));
+- c=procrc(cap,s);
+- if(c==0) goto donerc;
+- if(c==1)
+-  {
+-  char buf[8];
+-  fprintf(stderr,"There were errors in '%s'.  Use it anyway?",s);
+-  fflush(stderr);
+-  fgets(buf,8,stdin);
+-  if(buf[0]=='y' || buf[0]=='Y') goto donerc;
+-  }
+ 
+  vsrm(s);
+  s=getenv("HOME");
