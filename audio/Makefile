@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.80 2001/02/10 14:18:57 hubertf Exp $
+# $NetBSD: Makefile,v 1.81 2001/02/15 09:26:56 tron Exp $
 #
 
     SUBDIR += ac3dec
@@ -44,6 +44,7 @@
     SUBDIR += festvox-us3
     SUBDIR += freezetag
     SUBDIR += gdcd
+    SUBDIR += gmp3info
     SUBDIR += gnome-audio
     SUBDIR += gnome-media
     SUBDIR += gogo
