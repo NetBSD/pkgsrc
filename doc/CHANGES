@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3514 2003/09/25 11:00:29 abs Exp $
+$NetBSD: CHANGES,v 1.3515 2003/09/25 11:23:21 tron Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3926,3 +3926,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added dgen-1.2.3 [xtraeme 2003-09-25]
 	Updated rconfig to 0.20 [abs 2003-09-25]
 
+	Updated gmplayer to 1.0rc1nb2 [tron 2003-09-25]
