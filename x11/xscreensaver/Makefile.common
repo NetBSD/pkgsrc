@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.40 2002/10/30 11:34:41 tron Exp $
+# $NetBSD: Makefile.common,v 1.41 2002/11/06 11:11:38 wiz Exp $
 #
 
 DISTNAME=		xscreensaver-4.06
@@ -10,7 +10,7 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.jwz.org/xscreensaver/
 
 USE_BUILDLINK2=		yes
-USE_X11BASE=		yes
+USE_X11=		yes
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-hackdir=${PREFIX}/libexec/xscreensaver
@@ -25,7 +25,7 @@ CONFIGURE_ARGS+=	--without-shadow
 CONFIGURE_ENV+=		X_PRE_LIBS=-lXt
 CONFIGURE_ENV+=		ac_cv_x_app_defaults="${PREFIX}/lib/X11/app-defaults"
 CONFIGURE_ENV+=		PERL="${PERL5}" ac_cv_perl_version="${PERL_VERSION}"
-MAKE_ENV+=		KDEDIR=${X11PREFIX}
+MAKE_ENV+=		KDEDIR=${PREFIX}
 
 DISTINFO_FILE=		${.CURDIR}/../xscreensaver/distinfo
 FILESDIR=		${.CURDIR}/../xscreensaver/files
