@@ -1,0 +1,43 @@
+$NetBSD: patch-ad,v 1.1.1.1 2001/03/14 15:59:48 skrll Exp $
+
+--- configure.orig	Thu Feb 22 18:17:52 2001
++++ configure
+@@ -6188,9 +6188,10 @@
+   x_libraries="/usr/lib";  else
+   x_libraries=$kde_x_libraries
+   X_LDFLAGS="-L$x_libraries"
++  X_WLRFLAGS="-Wl,-R$x_libraries"
+ fi
+ all_includes="$X_INCLUDES"
+-all_libraries="$X_LDFLAGS"
++all_libraries="$X_LDFLAGS $X_WLRFLAGS"
+ 
+ 
+ 
+@@ -6790,7 +6791,7 @@
+ ac_link='${CXX-g++} -o conftest${ac_exeext} $CXXFLAGS $CPPFLAGS $LDFLAGS conftest.$ac_ext $LIBS 1>&5'
+ cross_compiling=$ac_cv_prog_cxx_cross
+ 
+-ac_link='rm -rf SunWS_cache; ${CXX-g++} -o conftest${ac_exeext} $CXXFLAGS $CPPFLAGS $LDFLAGS conftest.$ac_ext $LIBS 1>&5'
++ac_link='rm -rf SunWS_cache; ${LIBTOOL_SHELL} --tag=CXX --mode=link ${CXX-g++} -o conftest${ac_exeext} $CXXFLAGS $CPPFLAGS $LDFLAGS conftest.$ac_ext $LIBS 1>&5'
+ 
+ 
+ 
+@@ -13183,7 +13184,7 @@
+ 
+ 
+ 
+-all_includes='-I$(top_srcdir)/dcop -I$(top_srcdir)/libltdl -I$(top_srcdir)/kdecore -I$(top_srcdir)/kdeui -I$(top_srcdir)/kssl $(QT_INCLUDES) $(X_INCLUDES) $(KDE_INCLUDES) $(USER_INCLUDES)'
++all_includes='-I$(top_srcdir)/dcop -I$(top_srcdir)/kdecore -I$(top_srcdir)/kdeui -I$(top_srcdir)/kssl $(QT_INCLUDES) $(X_INCLUDES) $(KDE_INCLUDES) $(USER_INCLUDES)'
+ 
+ 
+ CXXFLAGS="$CXXFLAGS -DQT_CLEAN_NAMESPACE -DQT_NO_COMPAT -DQT_NO_ASCII_CAST"
+@@ -14140,7 +14141,7 @@
+     esac
+   done
+ 
+-  for ac_config_dir in libltdl; do
++  for ac_config_dir in ; do
+ 
+     # Do not complain, so a configure script can configure whichever
+     # parts of a large source tree are present.

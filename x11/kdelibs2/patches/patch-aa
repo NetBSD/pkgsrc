@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/03/14 15:59:44 skrll Exp $
+
+--- Makefile.in.orig	Thu Feb 22 18:17:09 2001
++++ Makefile.in
+@@ -258,7 +258,7 @@
+ x_includes = @x_includes@
+ x_libraries = @x_libraries@
+ 
+-COMPILE_FIRST = dcop libltdl kdecore kdeui kdesu kssl kjs kio kimgio kfile kparts libkmid ksgmltools
++COMPILE_FIRST = dcop kdecore kdeui kdesu kssl kjs kio kimgio kfile kparts libkmid ksgmltools
+ 
+ SUBDIRS = $(COMPILE_FIRST) $(TOPSUBDIRS)
+ 
