@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2002/11/01 16:34:38 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2002/12/01 16:51:16 magick Exp $
 
 DISTNAME=	xemacs-21.1.14
 PKGREVISION=	4
@@ -35,7 +35,14 @@ PLIST_SUBST+=	ELSUFX='.gz'
 PLIST_SUBST+=	ELSUFX=''
 .endif
 
-WITH_DIALOGS=	--with-dialogs=motif
+.if defined(USE_ATHENA)
+ WITH_DIALOGS=  --with-menubars=athena\
+		--with-scrollbars=athena\
+		--with-dialogs=athena\
+		--with-xim=xlib
+.else
+ WITH_DIALOGS=  --with-dialogs=motif
+.endif
 
 .if defined(USE_LDAP) && (${USE_LDAP} == "YES")
 WITH_LDAP=	--with-ldap
@@ -63,7 +70,9 @@ WITH_CANNA=	--without-canna
 .include "../../graphics/png/buildlink2.mk"
 .include "../../graphics/tiff/buildlink2.mk"
 .include "../../graphics/xpm/buildlink2.mk"
+.if !defined(USE_ATHENA)
 .include "../../mk/motif.buildlink2.mk"
+.endif
 .include "../../mk/ossaudio.buildlink2.mk"
 
 INFOPATH=	${PREFIX}/info:${X11BASE}/info:/usr/local/info
