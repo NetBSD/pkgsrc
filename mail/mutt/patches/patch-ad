@@ -1,0 +1,15 @@
+$NetBSD: patch-ad,v 1.1 2000/05/20 18:41:41 kim Exp $
+
+--- lib.c	2000/05/16 15:23:02	2.24
++++ lib.c	2000/05/20 07:31:00
+@@ -32,9 +32,9 @@
+ #include <stdlib.h>
+ #include <sys/wait.h>
+ #include <errno.h>
+-#include <pwd.h>
+ #include <sys/stat.h>
+ #include <fcntl.h>
++#include <pwd.h>
+ 
+ #include "lib.h"
+ 
