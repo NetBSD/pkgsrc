@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/08/01 15:59:44 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/09/26 20:27:05 jlam Exp $
 # FreeBSD: Makefile,v 1.42 1997/12/24 01:21:07 alex Exp
 #
 
@@ -15,7 +15,8 @@ COMMENT=		ELM Mail User Agent with ME extensions
 
 CONFLICTS=		elm-*
 
-HAS_CONFIGURE=		Yes
+USE_BUILDLINK_ONLY=	YES
+HAS_CONFIGURE=		YES
 CONFIGURE_SCRIPT=	ksh ./Configure
 CONFIGURE_ENV=		PREFIX="${PREFIX}" RUN_AS_BATCH=yes
 CONFIGURE_ARGS=		-S
