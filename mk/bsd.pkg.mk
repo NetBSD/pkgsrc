@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.594 2000/10/31 17:20:07 itojun Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.595 2000/11/01 09:06:22 skrll Exp $
 #
 # This file is in the public domain.
 #
@@ -1484,8 +1484,9 @@ do-configure:
 		  ${SCRIPTDIR}/configure; \
 	fi
 .if defined(HAS_CONFIGURE)
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${WRKSRC} && ${SETENV} CC="${CC}" ac_cv_path_CC="${CC}" \
-	    CFLAGS="${CFLAGS}" \
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${WRKSRC} && ${SETENV} \
+	    CC="${CC}" CFLAGS="${CFLAGS}" \
+	    CXX="${CXX}" CXXFLAGS="${CXXFLAGS}" \
 	    INSTALL="`${TYPE} ${INSTALL} | ${AWK} '{ print $$NF }'` -c -o ${BINOWN} -g ${BINGRP}" \
 	    ac_given_INSTALL="`${TYPE} ${INSTALL} | ${AWK} '{ print $$NF }'` -c -o ${BINOWN} -g ${BINGRP}" \
 	    INSTALL_DATA="${INSTALL_DATA}" \
