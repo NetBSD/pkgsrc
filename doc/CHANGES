@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3518 2003/09/25 13:53:47 xtraeme Exp $
+$NetBSD: CHANGES,v 1.3519 2003/09/25 14:07:26 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3928,3 +3928,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated gmplayer to 1.0rc1nb2 [tron 2003-09-25]
 	Updated rconfig to 0.21 [abs 2003-09-25]
 	Added 3ddesktop-0.2.5 [xtraeme 2003-09-25]
+	Added libcroco-0.2 [xtraeme 2003-09-25]
