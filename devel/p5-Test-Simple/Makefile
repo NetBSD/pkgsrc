@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/01/05 22:16:25 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2004/03/31 01:53:01 jlam Exp $
 
 DISTNAME=		Test-Simple-0.47
 PKGNAME=		p5-${DISTNAME}
@@ -13,7 +13,8 @@ DEPENDS+=		p5-Test-Harness-[0-9]*:../../devel/p5-Test-Harness
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=	YES
+USE_BUILDLINK3=		yes
+USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Test/Simple/.packlist
 
 .include "../../lang/perl5/module.mk"
