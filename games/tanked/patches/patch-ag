@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.1 1998/08/14 11:55:11 frueauf Exp $
+
+--- client/libsprite/data.c-orig	Sun Apr 12 03:34:31 1998
++++ client/libsprite/data.c	Fri Aug 14 13:38:42 1998
+@@ -11,7 +11,7 @@
+ #ifdef HACKED_XPMLIB
+ #include "xpmlib-3.4b/xpm.h"
+ #else 
+-#include <xpm.h>
++#include <X11/xpm.h>
+ #endif /*HACKED_XPMLIB*/
+ #endif /*XPM [BDyess]*/
+ 
