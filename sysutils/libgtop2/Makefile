@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/03/22 16:03:37 jmmv Exp $
+# $NetBSD: Makefile,v 1.15 2005/03/27 11:18:37 jmmv Exp $
 
 DISTNAME=		libgtop-2.10.0
 PKGNAME=		${DISTNAME:S/-/2-/}
@@ -74,6 +74,26 @@ PLIST_SUBST+=	LIBGTOP_SUID_H=""
 post-install:
 	@${CHMOD} g+s ${PREFIX}/bin/libgtop_server2
 .endif
+
+# XXX This needs a check in the configure script, which should be clean
+# enough to be integrated in the mainstream sources.
+statvfs_h=	/usr/include/sys/statvfs.h
+.if exists(${statvfs_h})
+reads_count!=	if ${GREP} f_syncreads ${statvfs_h} >/dev/null; then \
+		${ECHO} yes; else ${ECHO} no; fi
+.  if ${reads_count} == "yes"
+CPPFLAGS+=	-DHAVE_STATVFS_READS_COUNT
+.  endif
+.  undef reads_count
+
+writes_count!=	if ${GREP} f_syncwrites ${statvfs_h} >/dev/null; then \
+		${ECHO} yes; else ${ECHO} no; fi
+.  if ${writes_count} == "yes"
+CPPFLAGS+=	-DHAVE_STATVFS_WRITES_COUNT
+.  endif
+.  undef writes_count
+.endif
+.undef statvfs_h
 
 BUILDLINK_DEPENDS.glib2+=	glib2>=2.6.0
 
