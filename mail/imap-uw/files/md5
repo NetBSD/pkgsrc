@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.6 2000/05/19 03:58:56 jlam Exp $
+$NetBSD: md5,v 1.7 2000/09/19 13:13:29 hubertf Exp $
 
-MD5 (imap-4.7c2.tar.Z) = 1a27c7684094a8c94baf294552467060
+MD5 (imap-2000.RELEASE-CANDIDATE.6.tar.Z) = f7de92c2c4dcd0be3f5d650850900449
