@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1831 2004/06/12 04:44:50 grant Exp $
+$NetBSD: TODO,v 1.1832 2004/06/14 00:46:38 grant Exp $
 
 Suggested new packages
 ======================
@@ -418,6 +418,7 @@ Suggested package updates
 	o xmms-alarm-0.3.5
 	o xmms-crossfade-0.3.4
 	o xmms-iris-0.12
+	o xmmsctrl-0.8
 	o xorp-0.5
 	o xpad-1.13.1
 	o xplanet-1.0.8
