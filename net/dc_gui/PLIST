@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2002/11/03 21:32:24 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2002/12/09 21:53:53 jmmv Exp $
 bin/dc_gui
 share/gnome/help/dc_gui/C/index.html
 share/gnome/help/dc_gui/C/topic.dat
@@ -17,7 +17,6 @@ share/pixmaps/dc_gui/icon_refresh.xpm
 share/pixmaps/dc_gui/icon_remove_all.xpm
 share/pixmaps/dc_gui/icon_remove_selected.xpm
 @dirrm share/pixmaps/dc_gui
-@unexec ${RMDIR} %D/share/pixmaps 2> /dev/null || ${TRUE}
 @dirrm share/gnome/help/dc_gui/nl/images
 @dirrm share/gnome/help/dc_gui/nl
 @dirrm share/gnome/help/dc_gui/es/images

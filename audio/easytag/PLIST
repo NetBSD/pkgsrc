@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2002/12/09 16:01:12 tron Exp $
+@comment $NetBSD: PLIST,v 1.6 2002/12/09 21:53:52 jmmv Exp $
 bin/easytag
 share/easytag/EasyTAG_logo.xpm
 share/gnome/apps/Multimedia/easytag.desktop
@@ -15,6 +15,5 @@ ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/easytag.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/easytag.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/easytag.mo
 share/pixmaps/EasyTAG.xpm
-@unexec ${RMDIR} -p %D/share/pixmaps 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} -p %D/share/gnome/apps/Multimedia 2>/dev/null || ${TRUE}
 @dirrm share/easytag
