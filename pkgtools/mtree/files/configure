@@ -2928,11 +2928,9 @@ done
 
 
 
-
-
-for ac_header in ctype.h dirent.h errno.h err.h fcntl.h fnmatch.h fts.h \
-	grp.h inttypes.h limits.h md5.h netdb.h pwd.h rmd160.h sha1.h \
-	stdarg.h stddef.h stdio.h stdlib.h strings.h string.h time.h unistd.h \
+for ac_header in ctype.h dirent.h err.h errno.h fcntl.h fnmatch.h fts.h \
+	grp.h limits.h md5.h netdb.h pwd.h rmd160.h sha1.h \
+	stdarg.h stddef.h stdio.h stdlib.h string.h time.h unistd.h \
 	util.h vis.h
 do
 as_ac_Header=`echo "ac_cv_header_$ac_header" | $as_tr_sh`
