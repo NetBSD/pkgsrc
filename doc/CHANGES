@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3658 2003/10/06 08:58:28 abs Exp $
+$NetBSD: CHANGES,v 1.3659 2003/10/06 11:02:43 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4118,4 +4118,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated freeze to 2.5nb1 [jlam 2003-10-06]
 	Updated pkglint to 3.64 [grant 2003-10-06]
 	Update rconfig to 0.23 [abs 2003-10-06]
-
+	Updated ns to 2.26nb1 [jlam 2003-10-06]
