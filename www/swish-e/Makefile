@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/02/22 23:05:59 kristerw Exp $
+# $NetBSD: Makefile,v 1.16 2004/02/23 17:03:48 kristerw Exp $
 # FreeBSD Id: ports/www/swish-e/Makefile,v 1.3 1999/08/31 02:43:18 peter Exp
 
 DISTNAME=	swish-e-2.4.1
@@ -28,7 +28,6 @@ PLIST_SUBST+=	LIBSWISH_E="@comment "
 PLIST_SUBST+=	LIBSWISH_E=
 .endif
 
-.include "../../converters/libiconv/buildlink2.mk"
 .include "../../devel/pcre/buildlink2.mk"
 .include "../../devel/zlib/buildlink2.mk"
 .include "../../textproc/libxml2/buildlink2.mk"
