@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3308 2003/09/10 11:56:08 adam Exp $
+$NetBSD: CHANGES,v 1.3309 2003/09/10 12:12:09 adam Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3605,3 +3605,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated csound-manual to 4.23 [wiz 2003-09-10]
 	Updated scummvm to 0.5.1nb1 [adam 2003-09-10]
 	Updated imap-uw to 2002.5 [adam 2003-09-10]
+	Updated screen to 4.0.0 [adam 2003-09-10]
