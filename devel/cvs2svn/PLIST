@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/04/12 22:23:47 seb Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/04/21 12:47:22 seb Exp $
 bin/cvs2svn
+bin/verify-cvs2svn
 ${PYSITELIB}/rcsparse/__init__.py
 ${PYSITELIB}/rcsparse/common.py
 ${PYSITELIB}/rcsparse/compat.py
