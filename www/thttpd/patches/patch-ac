@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.4 2000/12/17 22:21:45 jlam Exp $
+$NetBSD: patch-ac,v 1.5 2001/01/14 06:14:14 jlam Exp $
 
 --- cgi-src/Makefile.in.orig	Tue Sep 26 16:20:14 2000
 +++ cgi-src/Makefile.in
@@ -22,13 +22,13 @@ $NetBSD: patch-ac,v 1.4 2000/12/17 22:21:45 jlam Exp $
 +	$(BSD_INSTALL_MAN) redirect.8 $(MANDIR)/man8/redirect.8
  	rm -f $(CGIBINDIR)/ssi
 -	cp ssi $(CGIBINDIR)/ssi
-+	$(BSD_INSTALL_MAN) ssi $(CGIBINDIR)/ssi
++	$(BSD_INSTALL_PROGRAM) ssi $(CGIBINDIR)/ssi
  	rm -f $(MANDIR)/man8/ssi.8
 -	cp ssi.8 $(MANDIR)/man8/ssi.8
 +	$(BSD_INSTALL_MAN) ssi.8 $(MANDIR)/man8/ssi.8
  	rm -f $(CGIBINDIR)/phf
 -	cp phf $(CGIBINDIR)/phf
-+	$(BSD_INSTALL_MAN) phf $(CGIBINDIR)/phf
++	$(BSD_INSTALL_PROGRAM) phf $(CGIBINDIR)/phf
  
  clean:
  	rm -f $(CLEANFILES)
