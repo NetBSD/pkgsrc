@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/08/27 06:07:43 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2000/09/05 09:33:16 jlam Exp $
 #
 
 DISTNAME=	freeWAIS-sf-2.2.12
@@ -9,7 +9,7 @@ MASTER_SITES=	ftp://ls6-ftp.cs.uni-dortmund.de/pub/src/freeWAIS-sf/
 MAINTAINER=	bad@NetBSD.org
 HOMEPAGE=	http://ls6-www.informatik.uni-dortmund.de/ir/projects/freeWAIS-sf/index.html
 
-BUILD_DEPENDS=	${PERL5}:../../lang/perl5
+BUILD_DEPENDS=	${PERL5}:../../lang/perl5-base
 
 USE_LIBTOOL=	# defined
 

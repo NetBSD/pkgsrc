@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2000/09/03 13:36:36 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2000/09/05 09:33:17 jlam Exp $
 #
 
 DISTNAME=	mod_ssl-2.6.3-1.3.12
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.modssl.org/
 
 DEPENDS+=	apache-1.3.12:../../www/apache
 # For "apxs":
-BUILD_DEPENDS+=	${PERL5}:../../lang/perl5
+BUILD_DEPENDS+=	${PERL5}:../../lang/perl5-base
 
 CONFLICTS=	apache-1.3.[0123456789] apache-*modssl-* apache6-*
 

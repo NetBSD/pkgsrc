@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2000/08/28 09:14:51 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2000/09/05 09:33:17 jlam Exp $
 
 DISTNAME=	AuthPG-1.2b2
 PKGNAME=	ap-auth-postgresql-1.2b2
@@ -11,7 +11,7 @@ HOMEPAGE=	http://home.bawi.org/~minskim/authpg/
 DEPENDS+=	apache-1.3.*:../../www/apache
 DEPENDS+=	postgresql-*:../../databases/postgresql
 # For "apxs":
-BUILD_DEPENDS=	${PERL5}:../../lang/perl5
+BUILD_DEPENDS=	${PERL5}:../../lang/perl5-base
 
 CPPFLAGS+=	-I${LOCALBASE}/include/pgsql
 LIBS=		-lpq -lcrypt
