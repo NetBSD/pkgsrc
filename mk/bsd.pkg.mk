@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.189 1998/11/07 14:23:26 mycroft Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.190 1998/11/07 14:41:50 mycroft Exp $
 #
 # This file is in the public domain.
 #
@@ -288,8 +288,8 @@ SHAREMODE = ${DOCMODE}
 
 # If WRKOBJDIR is set, use that tree to build
 .ifdef WRKOBJDIR
-__canonical_PKGSRCDIR!=	cd ${PKGSRCDIR}; pwd -P
-__canonical_CURDIR!=	cd ${.CURDIR}; pwd -P
+__canonical_PKGSRCDIR!=	cd ${PKGSRCDIR} && pwd -P
+__canonical_CURDIR!=	cd ${.CURDIR} && pwd -P
 PKGSRC_SUBDIR=		${__canonical_CURDIR:S,${__canonical_PKGSRCDIR}/,,}
 BUILD_DIR?=		${WRKOBJDIR}/${PKGSRC_SUBDIR}
 .else
@@ -963,7 +963,8 @@ do-configure:
 		  ${SCRIPTDIR}/configure; \
 	fi
 .if defined(HAS_CONFIGURE)
-	@(cd ${WRKSRC} && CC="${CC}" ac_cv_path_CC="${CC}" CFLAGS="${CFLAGS}" \
+	@(cd ${WRKSRC} && ${SETENV} CC="${CC}" ac_cv_path_CC="${CC}" \
+	    CFLAGS="${CFLAGS}" \
 	    INSTALL="/usr/bin/install -c -o ${BINOWN} -g ${BINGRP}" \
 	    INSTALL_PROGRAM="${INSTALL_PROGRAM}" \
 	    ${CONFIGURE_ENV} ./${CONFIGURE_SCRIPT} ${CONFIGURE_ARGS})
@@ -1411,7 +1412,7 @@ cleandir: clean
 distclean: pre-distclean clean
 	@${ECHO_MSG} "===>  Dist cleaning for ${PKGNAME}"
 	@(if [ -d ${_DISTDIR} ]; then \
-		cd ${_DISTDIR}; \
+		cd ${_DISTDIR} && \
 		${RM} -f ${DISTFILES} ${PATCHFILES}; \
 	fi)
 .if defined(DIST_SUBDIR)
@@ -1438,7 +1439,7 @@ fetch-list-recursive:
 	@${MAKE} fetch-list-one-pkg
 .if ${RECURSIVE_FETCH_LIST} != "NO"
 	@for dir in `${ECHO} ${FETCH_DEPENDS} ${BUILD_DEPENDS} ${DEPENDS} ${RUN_DEPENDS} | ${TR} '\040' '\012' | ${SED} -e 's/^[^:]*://' -e 's/:.*//' | sort -u` ; do \
-		(cd $$dir; ${MAKE} fetch-list-recursive; ); \
+		(cd $$dir && ${MAKE} fetch-list-recursive; ); \
 	done
 .endif # ${RECURSIVE_FETCH_LIST} != "NO"
 .endif # !target(fetch-list-recursive)
@@ -1557,7 +1558,7 @@ package-name:
 
 .if !target(package-path)
 package-path:
-	@pwd | sed s@`cd ${PKGSRCDIR} ; pwd`/@@g
+	@pwd | sed s@`cd ${PKGSRCDIR} && pwd`/@@g
 .endif
 
 # Show (recursively) all the packages this package depends on.
@@ -1572,9 +1573,9 @@ package-depends:
 		if ${PACKAGE_DEPENDS_WITH_PATTERNS} ; then \
 			${ECHO} "$$pkg" ; \
 		else \
-			(cd $$dir ; ${MAKE} package-name PACKAGE_NAME_TYPE=${PACKAGE_NAME_TYPE}); \
+			(cd $$dir && ${MAKE} package-name PACKAGE_NAME_TYPE=${PACKAGE_NAME_TYPE}); \
 		fi ; \
-		(cd $$dir ; ${MAKE} package-depends PACKAGE_NAME_TYPE=${PACKAGE_NAME_TYPE}); \
+		(cd $$dir && ${MAKE} package-depends PACKAGE_NAME_TYPE=${PACKAGE_NAME_TYPE}); \
 	else \
 		${ECHO_MSG} "Warning: \"$$dir\" non-existent -- @pkgdep registration incomplete" >&2; \
 	fi
@@ -1583,8 +1584,8 @@ package-depends:
 	@pkg="`${ECHO} \"${dep}\" | ${SED} -e 's/:.*//'`"; \
 	dir="`${ECHO} \"${dep}\" | ${SED} -e 's/[^:]*://'`"; \
 	if [ -d $$dir ]; then \
-		(cd $$dir ; ${MAKE} package-name PACKAGE_NAME_TYPE=${PACKAGE_NAME_TYPE}); \
-		(cd $$dir ; ${MAKE} package-depends PACKAGE_NAME_TYPE=${PACKAGE_NAME_TYPE}); \
+		(cd $$dir && ${MAKE} package-name PACKAGE_NAME_TYPE=${PACKAGE_NAME_TYPE}); \
+		(cd $$dir && ${MAKE} package-depends PACKAGE_NAME_TYPE=${PACKAGE_NAME_TYPE}); \
 	else \
 		${ECHO_MSG} "Warning: \"$$dir\" non-existent -- @pkgdep registration incomplete" >&2; \
 	fi
@@ -1664,7 +1665,7 @@ _DEPENDS_USE:	.USE
 			if [ ! -d "$$dir" ]; then \
 				${ECHO_MSG} ">> No directory for $$prog.  Skipping.."; \
 			else \
-				(cd $$dir; ${MAKE} ${.MAKEFLAGS} $$target) ; \
+				(cd $$dir && ${MAKE} ${.MAKEFLAGS} $$target) ; \
 				${ECHO_MSG} "===>  Returning to build of ${PKGNAME}"; \
 			fi; \
 		fi; \
@@ -1694,7 +1695,7 @@ misc-depends: uptodate-pkgtools
 		if [ ! -d $$dir ]; then					\
 			${ECHO_MSG} ">> No directory for $$dir.  Skipping.."; \
 		else							\
-			(cd $$dir; ${MAKE} ${.MAKEFLAGS} $$target);	\
+			(cd $$dir && ${MAKE} ${.MAKEFLAGS} $$target);	\
 		fi							\
 	fi							
 .endfor
@@ -1711,7 +1712,7 @@ clean-depends:
 	|| defined(DEPENDS) || defined(RUN_DEPENDS)
 	@for dir in `${ECHO} ${FETCH_DEPENDS} ${BUILD_DEPENDS} ${DEPENDS} ${RUN_DEPENDS} | ${TR} '\040' '\012' | ${SED} -e 's/^[^:]*://' -e 's/:.*//' | sort -u`; do \
 		if [ -d $$dir ] ; then \
-			(cd $$dir; ${MAKE} NOCLEANDEPENDS=yes clean clean-depends); \
+			(cd $$dir && ${MAKE} NOCLEANDEPENDS=yes clean clean-depends); \
 		fi \
 	done
 .endif
@@ -1720,7 +1721,7 @@ clean-depends:
 .if !target(depends-list)
 depends-list:
 .for dir in ${FETCH_DEPENDS} ${BUILD_DEPENDS} ${DEPENDS}
-	@cd ${dir:C/^[^:]*://:C/:.*//} ; ${MAKE} package-name depends-list PACKAGE_NAME_TYPE=${PACKAGE_NAME_TYPE}
+	@cd ${dir:C/^[^:]*://:C/:.*//} && ${MAKE} package-name depends-list PACKAGE_NAME_TYPE=${PACKAGE_NAME_TYPE}
 .endfor
 .endif
 
@@ -1941,7 +1942,7 @@ fake-pkg: ${PLIST} ${DESCR}
 			esac;						\
 		done;							\
 	fi;								\
-	pkgsrcdir=`(cd ../.. ; /bin/pwd)`;				\
+	pkgsrcdir=`(cd ../.. && /bin/pwd)`;				\
 	${GREP} '\$$NetBSD' $$files | ${SED} -e 's|^'$$pkgsrcdir'/||' > ${BUILD_VERSION_FILE};
 .for def in ${BUILD_DEFS}
 	@${ECHO} "${def}=	${${def}}" | ${SED} -e 's|PATH=[^ 	]*|PATH=...|' >> ${BUILD_INFO_FILE}
