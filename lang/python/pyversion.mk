@@ -1,4 +1,4 @@
-# $NetBSD: pyversion.mk,v 1.5 2002/01/17 11:06:42 drochner Exp $
+# $NetBSD: pyversion.mk,v 1.6 2002/01/19 12:54:52 drochner Exp $
 
 .if !defined(PYTHON_PYVERSION_MK)
 PYTHON_PYVERSION_MK=	defined
@@ -74,19 +74,24 @@ _PYTHON_VERSION=	${_PYTHON_VERSION_FIRSTACCEPTED}
 #               to multiple Python versions
 #
 .if ${_PYTHON_VERSION} == "22"
-DEPENDS+=	${BUILDLINK_DEPENDS.python22}:../../lang/python22
+PYDEPENDENCY=	${BUILDLINK_DEPENDS.python22}:../../lang/python22
 PYVERSSUFFIX=	2.2
 PYPKGPREFIX=	py22
 .elif ${_PYTHON_VERSION} == "21"
-DEPENDS+=	${BUILDLINK_DEPENDS.python21}:../../lang/python21
+PYDEPENDENCY=	${BUILDLINK_DEPENDS.python21}:../../lang/python21
 PYVERSSUFFIX=	2.1
 PYPKGPREFIX=	py21
 .elif ${_PYTHON_VERSION} == "20"
-DEPENDS+=	${BUILDLINK_DEPENDS.python20}:../../lang/python20
+PYDEPENDENCY=	${BUILDLINK_DEPENDS.python20}:../../lang/python20
 PYVERSSUFFIX=	2.0
 PYPKGPREFIX=	py20
 .endif
 
 PYTHONBIN=	${LOCALBASE}/bin/python${PYVERSSUFFIX}
+.if defined(PYTHON_FOR_BUILD_ONLY)
+BUILD_DEPENDS+=	${PYDEPENDENCY}
+.else
+DEPENDS+=	${PYDEPENDENCY}
+.endif
 
 .endif	# PYTHON_PYVERSION_MK
