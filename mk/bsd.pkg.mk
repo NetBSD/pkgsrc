@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.353 1999/10/07 16:04:57 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.354 1999/10/13 01:41:10 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -1364,14 +1364,24 @@ root-install:
 				so0=`${ECHO} $$so1 | ${SED} -e 's|\.[0-9]*$$||'`; \
 				cnt=`${EGREP} -c -x "$$so0" ${PLIST} || ${TRUE}`; \
 				if [ $$cnt -eq 0 ]; then		\
-					${AWK} "{sub(\"^$$so3$$\",\"$$so3\n$$so0\"); print}" ${PLIST} > ${PLIST}.tmp && ${MV} ${PLIST}.tmp ${PLIST}; \
+					${AWK} "{so3re=\"^$$so3$$\";		 \
+						 gsub(\"\\+\",\"\\\\+\", so3re); \
+						 gsub(\"\\*\",\"\\\\*\", so3re); \
+						 sub(so3re,\"$$so3\n$$so0\");	 \
+						 print}" 			\
+					    <${PLIST} > ${PLIST}.tmp && ${MV} ${PLIST}.tmp ${PLIST}; \
 					${ECHO_MSG} "${LN} -s $$so2 ${PREFIX}/$$so0"; \
 					${RM} -f ${PREFIX}/$$so0; 	\
 					${LN} -s $$so2 ${PREFIX}/$$so0; \
 				fi;					\
 				cnt=`${EGREP} -c -x "$$so1" ${PLIST} || ${TRUE}`; \
 				if [ $$cnt -eq 0 ]; then		\
-					${AWK} "{sub(\"^$$so3$$\",\"$$so3\n$$so1\"); print}" ${PLIST} > ${PLIST}.tmp && ${MV} ${PLIST}.tmp ${PLIST}; \
+					${AWK} "{so3re=\"^$$so3$$\";		 \
+						 gsub(\"\\+\",\"\\\\+\", so3re); \
+						 gsub(\"\\*\",\"\\\\*\", so3re); \
+						 sub(so3re,\"$$so3\n$$so1\");	 \
+						 print}" 			\
+					    <${PLIST} > ${PLIST}.tmp && ${MV} ${PLIST}.tmp ${PLIST}; \
 					${ECHO_MSG} "${LN} -s $$so2 ${PREFIX}/$$so1"; \
 					${RM} -f ${PREFIX}/$$so1; 	\
 					${LN} -s $$so2 ${PREFIX}/$$so1; \
