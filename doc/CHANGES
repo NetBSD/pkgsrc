@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3319 2003/09/10 22:37:05 jmmv Exp $
+$NetBSD: CHANGES,v 1.3320 2003/09/10 23:47:39 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3618,3 +3618,13 @@ Changes to the packages collection and infrastructure in 2003:
 	Added fondu-030428 [manu 2003-09-10]	
 	Added resize_image-0.6 [itojun 2003-09-10]	
 	Updated povray to 3.50cnb1 [jmmv 2003-09-10]
+	Updated libgdgeda to 2.0.15 [dmcmahill 2003-09-10]
+	Updated geda to 20030901 [dmcmahill 2003-09-10]
+	Updated geda-docs to 20030901 [dmcmahill 2003-09-10]
+	Updated geda-symbols to 20030901 [dmcmahill 2003-09-10]
+	Updated geda-utils to 20030901 [dmcmahill 2003-09-10]
+	Updated gnetlist to 20030901 [dmcmahill 2003-09-10]
+	Updated gschem to 20030901 [dmcmahill 2003-09-10]
+	Updated gsymcheck to 20030901 [dmcmahill 2003-09-10]
+	Updated libgeda to 20030901 [dmcmahill 2003-09-10]
+	Added geda-examples-20030901 [dmcmahill 2003-09-10]
