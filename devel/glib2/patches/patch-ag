@@ -1,0 +1,22 @@
+$NetBSD: patch-ag,v 1.5 2005/01/06 09:07:06 itohy Exp $
+
+--- gmodule/gmodule-dl.c.orig	Fri Feb 20 10:41:00 2004
++++ gmodule/gmodule-dl.c	Thu Jan  6 17:41:07 2005
+@@ -140,10 +140,16 @@ _g_module_symbol (gpointer     handle,
+ 		  const gchar *symbol_name)
+ {
+   gpointer p;
++  const gchar *errstr;
+   
+   p = dlsym (handle, symbol_name);
+   if (!p)
+-    g_module_set_error (fetch_dlerror (FALSE));
++    {
++      errstr = fetch_dlerror (FALSE);
++      if (!errstr)
++	errstr = "symbol not found";
++      g_module_set_error (errstr);
++    }
+   
+   return p;
+ }
