@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/10/28 11:04:54 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2003/03/04 13:56:31 wiz Exp $
 #
 
-DISTNAME=	libmng-1.0.4
+DISTNAME=	libmng-1.0.5
 PKGNAME=	${DISTNAME:S/libmng/gmngview/}
 WRKSRC=		${WRKDIR}/${DISTNAME}/contrib/gcc/gtk-mng-view
 CATEGORIES=	graphics
