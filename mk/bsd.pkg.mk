@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.460 2000/06/03 19:03:20 mycroft Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.461 2000/06/03 19:10:48 mycroft Exp $
 #
 # This file is in the public domain.
 #
@@ -345,15 +345,8 @@ _PKG_DEBUG=		set -x;
 
 # If WRKOBJDIR is set, use that tree to build
 .ifdef WRKOBJDIR
-.  if !defined(__canonical_PKGSRCDIR)
-__canonical_PKGSRCDIR!=	cd ${PKGSRCDIR} && pwd -P
-MAKEFLAGS+=	__canonical_PKGSRCDIR=${__canonical_PKGSRCDIR}
-.  endif # !defined(__canonical_PKGSRCDIR)
-# Cannot put this into MAKEFLAGS, as it changes:
-__canonical_CURDIR!=	cd ${.CURDIR} && pwd -P
-PKGSRC_SUBDIR=		${__canonical_CURDIR:S,${__canonical_PKGSRCDIR}/,,}
 BUILD_ROOT=     	${WRKOBJDIR}
-BUILD_DIR?=		${WRKOBJDIR}/${PKGSRC_SUBDIR}
+BUILD_DIR?=		${WRKOBJDIR}/${PKGPATH}
 .else
 BUILD_ROOT=     	${PKGSRCDIR}
 BUILD_DIR?=		${.CURDIR}
