@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2000/03/28 16:50:24 tron Exp $
+# $NetBSD: Makefile,v 1.5 2000/05/11 19:27:21 christos Exp $
 #
 
-DISTNAME=	Msql-Mysql-modules-1.2017
-PKGNAME=	p5-DBD-mysql-1.2017
+DISTNAME=	Msql-Mysql-modules-1.2214
+PKGNAME=	p5-DBD-mysql-1.2214
 CATEGORIES=	databases perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=DBD/}
 
@@ -10,8 +10,8 @@ MAINTAINER=	bad@netbsd.org
 HOMEPAGE=	http://www.mysql.com.org/
 
 DEPENDS+=	mysql-client-3.22.32:../../databases/mysql-client
-DEPENDS+=	p5-DBI-1.08:../../databases/p5-DBI
-DEPENDS+=	p5-Data-Dumper>=2.10:../../devel/p5-Data-Dumper
+DEPENDS+=	p5-DBI-1.13:../../databases/p5-DBI
+DEPENDS+=	p5-Data-Dumper>=2.101:../../devel/p5-Data-Dumper
 DEPENDS+=	p5-Data-ShowTable-3.3:../../devel/p5-Data-ShowTable
 
 USE_PERL5=	YES
