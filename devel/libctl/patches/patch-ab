@@ -1,51 +1,47 @@
-$NetBSD: patch-ab,v 1.3 2000/12/10 05:54:37 jtb Exp $
+$NetBSD: patch-ab,v 1.4 2001/01/21 04:49:45 jtb Exp $
 
---- base/Makefile.in.orig	Sat Oct 28 11:38:01 2000
+--- base/Makefile.in.orig	Thu Jul 13 20:40:36 2000
 +++ base/Makefile.in
-@@ -7,12 +7,11 @@
- CPPFLAGS = @CPPFLAGS@ -I.
- LDFLAGS = @LDFLAGS@
- LIBS = @LIBS@
--RANLIB = @RANLIB@
-+LIBTOOL= @LIBTOOL@
- @SET_MAKE@
+@@ -12,7 +12,7 @@
  INSTALL = @INSTALL@
  prefix = @prefix@
  
 -AR = ar
++#AR = ar
  
  all: libs
  
-@@ -20,18 +19,17 @@
+@@ -20,18 +20,17 @@
             math-utils.scm vector3.scm extern-funcs.scm interaction.scm \
             matrix3x3.scm simplex.scm
- OBJECTS = ctl.o
+ OBJECTS = ctl.o subplex.o
 -LIBNAME = libctl.a
-+LIBNAME = libctl
++LIBNAME = libctl.la
  
  libs: $(LIBNAME)
  
 -libctl.a: $(OBJECTS)
-+libctl: $(OBJECTS)
- 	rm -f $@
+-	rm -f $@
 -	$(AR) r $@ $(OBJECTS)
 -	$(RANLIB) $@
-+	@$(LIBTOOL) $(CC) -O -o $@.la $(OBJECTS:.o=.lo) -rpath $(prefix)/lib -version-info 0:0
++libctl.la: $(OBJECTS)
++	$(LIBTOOL) --mode=link $(CC) $(CFLAGS) -o $@ $(OBJECTS.o=.lo) \
++	$(LIBS) -rpath $(prefix)/lib -version-info 0:0
  
  install:
  	$(INSTALL) -d $(prefix)/lib
 -	$(INSTALL) -m 0644 $(LIBNAME) $(prefix)/lib
-+	@$(LIBTOOL) --mode=install $(INSTALL) $(LIBNAME).la $(prefix)/lib
++	$(LIBTOOL) --mode=install $(BSD_INSTALL_DATA) $(LIBNAME) $(prefix)/lib
  	$(INSTALL) -d $(prefix)/include
  	$(INSTALL) -m 0644 ctl.h $(prefix)/include
  	$(INSTALL) -d $(prefix)/share/libctl/base
-@@ -41,7 +39,7 @@
+@@ -41,7 +40,7 @@
  	$(INSTALL) -m 0644 main.c $(prefix)/share/libctl/base
  
  .c.o:
 -	$(CC) -c $(CPPFLAGS) $(CFLAGS) $< -o $@
-+	@$(LIBTOOL) $(CC) -c $(CPPFLAGS) $(CFLAGS) $< -o $@
++	$(LIBTOOL) --mode=compile $(CC) -c $(CPPFLAGS) $(CFLAGS) $< -o $@
  
  clean: 
 -	rm -f $(OBJECTS) core $(LIBNAME)
-+	rm -rf $(OBJECTS) $(OBJECTS:.o=.lo) core $(LIBNAME).la .libs
++	rm -fr $(OBJECTS) $(OBJECTS:.o=.lo) core $(LIBNAME) .libs

@@ -12,7 +12,7 @@ work for us, and allows us to embed a complete interpreter in a
 program with minimal effort.
 
 Despite its power, libctl is designed to be easy to use. A basic user
-only sees a convenient file format...with a programming language to
+only sees a convenient file format with a programming language to
 back it up if her needs become more complex. For the programmer, all
 headaches associated with reading input files are lifted--once an
 abstract specification is supplied, all interaction with the user is
