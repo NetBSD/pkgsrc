@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST-mi,v 1.1 1997/11/22 04:50:51 hubertf Exp $
+@comment $NetBSD: PLIST-mi,v 1.2 1998/01/28 15:33:48 hubertf Exp $
 lib/perl5/man/man3/Data::Dumper.3.gz
 lib/perl5/site_perl/Data/Dumper.pm
-lib/perl5/site_perl/<$ARCH>-netbsd/auto/Data/Dumper/.packlist
+lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/auto/Data/Dumper/.packlist

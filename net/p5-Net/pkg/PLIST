@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 1997/11/22 04:55:47 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.3 1998/01/28 15:34:02 hubertf Exp $
 lib/perl5/site_perl/Net/Cmd.pm
 lib/perl5/site_perl/Net/Config.pm
 lib/perl5/site_perl/Net/Domain.pm
@@ -22,6 +22,6 @@ lib/perl5/man/man3/Net::FTP.3.gz
 lib/perl5/man/man3/Net::Netrc.3.gz
 lib/perl5/man/man3/Net::Cmd.3.gz
 lib/perl5/man/man3/Net::PH.3.gz
-lib/perl5/site_perl/<$ARCH>-netbsd/auto/Net/.packlist
+lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/auto/Net/.packlist
 @dirrm lib/perl5/site_perl/Net
-@dirrm lib/perl5/site_perl/<$ARCH>-netbsd/auto/Net
+@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/auto/Net
