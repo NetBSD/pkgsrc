@@ -1,23 +1,29 @@
-$NetBSD: patch-aa,v 1.3 2002/03/22 15:20:24 drochner Exp $
+$NetBSD: patch-aa,v 1.4 2002/04/09 04:33:20 jlam Exp $
 
---- setup.py.orig	Mon Dec 17 18:24:43 2001
-+++ setup.py	Fri Mar 22 12:28:30 2002
-@@ -193,10 +193,10 @@
+--- setup.py.orig	Mon Dec 17 12:24:43 2001
++++ setup.py
+@@ -192,11 +192,15 @@
+         return platform
  
      def detect_modules(self):
-         # Ensure that /usr/local is always used
+-        # Ensure that /usr/local is always used
 -        if '/usr/local/lib' not in self.compiler.library_dirs:
 -            self.compiler.library_dirs.insert(0, '/usr/local/lib')
 -        if '/usr/local/include' not in self.compiler.include_dirs:
 -            self.compiler.include_dirs.insert(0, '/usr/local/include' )
-+#        if '/usr/local/lib' not in self.compiler.library_dirs:
-+#            self.compiler.library_dirs.insert(0, '/usr/local/lib')
-+#        if '/usr/local/include' not in self.compiler.include_dirs:
-+#            self.compiler.include_dirs.insert(0, '/usr/local/include' )
++        # Add the buildlink directories for pkgsrc
++        if os.environ.has_key('BUILDLINK_DIR'):
++            dir = os.environ['BUILDLINK_DIR']
++            libdir = dir + '/lib'
++            incdir = dir + '/include'
++            if libdir not in self.compiler.library_dirs:
++                self.compiler.library_dirs.insert(0, libdir)
++            if incdir not in self.compiler.include_dirs:
++                self.compiler.include_dirs.insert(0, incdir)
  
          try:
              have_unicode = unicode
-@@ -256,7 +256,7 @@
+@@ -256,7 +260,7 @@
          if have_unicode:
              exts.append( Extension('unicodedata', ['unicodedata.c']) )
          # access to ISO C locale support
@@ -26,7 +32,7 @@ $NetBSD: patch-aa,v 1.3 2002/03/22 15:20:24 drochner Exp $
  
          # Modules with some UNIX dependencies -- on by default:
          # (If you have a really backward UNIX, select and socket may not be
-@@ -314,13 +314,13 @@
+@@ -314,13 +318,13 @@
          # These represent audio samples or images as strings:
  
          # Disabled on 64-bit platforms
@@ -44,7 +50,7 @@ $NetBSD: patch-aa,v 1.3 2002/03/22 15:20:24 drochner Exp $
  
          # readline
          if self.compiler.find_library_file(lib_dirs, 'readline'):
-@@ -347,14 +347,10 @@
+@@ -347,14 +351,10 @@
          # socket(2)
          # Detect SSL support for the socket module
          ssl_incs = find_file('openssl/ssl.h', inc_dirs,
@@ -61,7 +67,18 @@ $NetBSD: patch-aa,v 1.3 2002/03/22 15:20:24 drochner Exp $
  
          if (ssl_incs is not None and
              ssl_libs is not None):
-@@ -481,8 +477,8 @@
+@@ -470,8 +470,8 @@
+ 
+         if (self.compiler.find_library_file(lib_dirs, 'ncurses')):
+             curses_libs = ['ncurses']
+-            exts.append( Extension('_curses', ['_cursesmodule.c'],
+-                                   libraries = curses_libs) )
++#            exts.append( Extension('_curses', ['_cursesmodule.c'],
++#                                   libraries = curses_libs) )
+         elif (self.compiler.find_library_file(lib_dirs, 'curses')
+               and platform != 'darwin'):
+         	# OSX has an old Berkeley curses, not good enough for
+@@ -481,8 +481,8 @@
              else:
                  curses_libs = ['curses', 'termcap']
  
@@ -72,7 +89,7 @@ $NetBSD: patch-aa,v 1.3 2002/03/22 15:20:24 drochner Exp $
  
          # If the curses module is enabled, check for the panel module
          if (module_enabled(exts, '_curses') and
-@@ -784,7 +780,7 @@
+@@ -784,7 +784,7 @@
            ext_modules=[Extension('struct', ['structmodule.c'])],
  
            # Scripts to install
