@@ -1,4 +1,4 @@
-# $NetBSD: dlopen.builtin.mk,v 1.1 2004/11/26 07:05:19 jlam Exp $
+# $NetBSD: dlopen.builtin.mk,v 1.2 2004/11/26 08:15:25 jlam Exp $
 
 .for _lib_ in dl
 .  if !defined(_BLNK_LIB_FOUND.${_lib_})
@@ -62,14 +62,16 @@ _DLOPEN_REQUIRE_PTHREADS=	yes
 #	included or not.  Its default value depends on whether native
 #	pthreads exist.
 #
-# Including pthread.buildlink3.mk is deferred until bsd.pkg.mk.
-#
 .    if defined(DLOPEN_REQUIRE_PTHREADS)
 _DLOPEN_REQUIRE_PTHREADS:=      ${DLOPEN_REQUIRE_PTHREADS}
 .    else
 DLOPEN_REQUIRE_PTHREADS=        ${_DLOPEN_REQUIRE_PTHREADS}
 .    endif
 .    if !empty(_DLOPEN_REQUIRE_PTHREADS:M[yY][eE][sS])
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
+.      include "../../mk/pthread.buildlink3.mk"
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+.      include "../../mk/pthread.builtin.mk"
 BUILDLINK_CFLAGS.dl+=	${PTHREAD_CFLAGS}
 BUILDLINK_LDFLAGS.dl+=	${PTHREAD_LDFLAGS}
 BUILDLINK_LIBS.dl+=	${PTHREAD_LIBS}
