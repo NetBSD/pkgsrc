@@ -1,0 +1,32 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/04/03 09:25:36 martin Exp $
+
+--- configure.old	Thu Feb 24 12:28:45 2000
++++ configure	Sat Apr  1 19:39:10 2000
+@@ -935,19 +935,17 @@
+ 
+ 
+ checkssldir() { :
+-    if test -d "$1/certs"; then
+-        if test -f "$1/include/openssl/ssl.h"; then
+-            cat >> confdefs.h <<\EOF
++    if test -f "$1/include/openssl/ssl.h"; then
++        cat >> confdefs.h <<\EOF
+ #define HAVE_OPENSSL 1
+ EOF
+ 
+-            ssldir="$1"
+-            return 0
+-        fi
+-        if test -f "$1/include/ssl.h"; then
+-            ssldir="$1"
+-            return 0
+-        fi
++        ssldir="$1"
++        return 0
++    fi
++    if test -f "$1/include/ssl.h"; then
++        ssldir="$1"
++        return 0
+     fi
+     return 1
+ }

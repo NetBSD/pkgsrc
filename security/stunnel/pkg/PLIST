@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/04/03 09:25:36 martin Exp $
+sbin/stunnel
+lib/stunnel.so
+man/man8/stunnel.8
+certs/stunnel.pem
+@dirrm var/stunnel
