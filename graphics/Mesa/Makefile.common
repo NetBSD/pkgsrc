@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.15 2003/07/04 16:51:00 jschauma Exp $
+# $NetBSD: Makefile.common,v 1.16 2003/07/15 23:31:21 jschauma Exp $
 
 # Latest is:		5.0.1
-# Default is:		5.0.1
-MESA_REQD?=		5.0.1
+# Default is:		3.4.2
+MESA_REQD?=		3.4.2
 
 MESA_VERSION=		${MESA_REQD}
 DISTNAME?=		MesaLib-${MESA_VERSION}
@@ -19,3 +19,11 @@ LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 GNU_CONFIGURE?=		yes
 CONFIGURE_ARGS+=	--enable-static
+
+.include "../../mk/bsd.prefs.mk"
+
+.if exists(${LOCALBASE}/lib/libGL.so.5) && empty(MESA_REQD:M5.[0-9]*)
+MESA_REQD=                      5.0.1
+.endif
+
+MAKEFLAGS+=                     MESA_REQD="${MESA_REQD}"
