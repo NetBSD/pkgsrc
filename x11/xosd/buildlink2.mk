@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.3 2003/04/12 12:14:16 jmmv Exp $
+# $NetBSD: buildlink2.mk,v 1.4 2003/04/12 13:23:13 jmmv Exp $
 #
 # This Makefile fragment is included by packages that use xosd.
 #
@@ -16,10 +16,6 @@ EVAL_PREFIX+=	BUILDLINK_PREFIX.xosd=xosd
 BUILDLINK_PREFIX.xosd_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.xosd+=	include/xosd.h
 BUILDLINK_FILES.xosd+=	lib/libxosd.*
-
-.include "../../audio/xmms/buildlink2.mk"
-.include "../../graphics/gdk-pixbuf/buildlink2.mk"
-.include "../../x11/gtk/buildlink2.mk"
 
 BUILDLINK_TARGETS+=	xosd-buildlink
 
