@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9718 2005/04/02 11:34:55 jdolecek Exp $
+$NetBSD: CHANGES,v 1.9719 2005/04/02 11:56:22 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1861,3 +1861,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated gimp-ufraw to 0.4 [drochner 2005-04-01]
 	Added qca-1.0 [jdolecek 2005-04-02]
 	Updated psi to 0.9.3 [jdolecek 2005-04-02]
+	Updated scanssh to 2.1 [adrianp 2005-04-02]
