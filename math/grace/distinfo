@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2001/07/29 15:19:15 wiz Exp $
+$NetBSD: distinfo,v 1.4 2002/09/27 12:01:16 drochner Exp $
 
-SHA1 (grace-5.1.4.tar.gz) = 64ec51327bc45c866b61df38e12865ba6e9b61e2
-Size (grace-5.1.4.tar.gz) = 2385006 bytes
-SHA1 (patch-aa) = 542ba023a03fbf102fda1722447a0a53e79415b2
-SHA1 (patch-ab) = b7fb08b589d79960acc038628003b0baabdadf68
+SHA1 (grace-5.1.10.tar.gz) = 074e998a04cd12d68ea70bedce54e0dd48174396
+Size (grace-5.1.10.tar.gz) = 2418504 bytes
+SHA1 (patch-aa) = 9ec6f7d6e6cca7950c8aade4d97511ad8a3ae1c1
+SHA1 (patch-ab) = d73881cd5911abc972591f03dba2afe1a033384e
