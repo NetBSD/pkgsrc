@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1595 2003/03/08 21:03:47 rh Exp $
+$NetBSD: CHANGES,v 1.1596 2003/03/09 04:14:17 salo Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -987,10 +987,11 @@ Changes to the packages collection and infrastructure in 2003:
 	Added tcl-fbsql-1.05 [bouyer 2003-03-07]
 	Updated pureftpd to 1.0.14 [salo 2003-03-07]
 	Updated sylpheed to 0.8.11 [salo 2003-03-07]
-	Added tinyproxy-1.5.2 [salo 2003-03-06]
+	Added tinyproxy-1.5.2 [salo 2003-03-07]
 	Updated cvsync to 0.14.2 [gehenna 2003-03-08]
 	Updated cdrecord to 2.0nb2 [grant 2003-03-08]
 	Added xcursorgen-4.3.0 [tron 2003-03-08]
 	Updated cvsync to 0.14.3 [gehenna 2003-03-08]
 	Updated ogle to 0.9.0 [mycroft 2003-03-08]
 	Updated gtkdiff to 1.8.0 [rh 2003-03-08]
+	Updated ethereal to 0.9.10 [salo 2003-03-09]
