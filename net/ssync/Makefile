@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/08/31 02:37:52 kim Exp $
+# $NetBSD: Makefile,v 1.2 2000/08/13 14:19:50 kim Exp $
 #
 
 DISTNAME=		ssync-1.1
@@ -9,7 +9,7 @@ MAINTAINER=		kim@tac.nyc.ny.us
 
 DEPENDS+=		netname-*:../../net/netname
 DEPENDS+=		osname-*:../../sysutils/osname
-DEPENDS+=		rsync-2.3.1:../../net/rsync
+DEPENDS+=		rsync>=2.3.1:../../net/rsync
 DEPENDS+=		srsh-*:../../net/srsh
 
 NO_CONFIGURE=		yes
