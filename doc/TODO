@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.942 2003/10/13 14:09:53 wiz Exp $
+$NetBSD: TODO,v 1.943 2003/10/13 15:22:07 martti Exp $
 
 Suggested new packages
 ======================
@@ -153,7 +153,6 @@ Suggested package updates
 	o fltk-1.1.3
 	o foomatic-2.9.1 [jlam]
 	o fsviewer-0.2.5
-	o fvwm-2.4.17
 	o gaim-0.71 [jmmv]
 	o gauche-0.7 [kei]
 	o gcpio-2.5 [pkg/20799]
