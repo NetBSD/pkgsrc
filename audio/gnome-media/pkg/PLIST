@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/08/30 08:41:43 rh Exp $
+@comment $NetBSD: PLIST,v 1.2 1999/09/03 22:06:17 tron Exp $
 bin/cddbslave
 bin/cddbsubmit
 bin/vumeter
@@ -22,4 +22,3 @@ lib/locale/zh_TW.Big5/LC_MESSAGES/gnome-media.mo
 share/gnome/apps/Multimedia/vumeter.desktop
 share/gnome/apps/Multimedia/gmix.desktop
 share/gnome/cddb-submit-methods
-@dirrm share/gnome/apps/Multimedia
