@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.10 2001/04/29 20:42:29 jlam Exp $
+$NetBSD: patch-ab,v 1.10.16.1 2004/12/01 00:25:56 salo Exp $
 
---- conf/httpd.conf-dist.orig	Sun Mar  4 02:42:23 2001
+--- conf/httpd.conf-dist.orig	2004-10-29 14:44:35.000000000 +0100
 +++ conf/httpd.conf-dist
-@@ -197,7 +197,12 @@
+@@ -197,7 +197,12 @@ MaxRequestsPerChild 0
  # the order below without expert advice.
  #
  # Example:

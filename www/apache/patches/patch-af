@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.9 2002/02/01 16:04:39 jlam Exp $
+$NetBSD: patch-af,v 1.9.16.1 2004/12/01 00:25:56 salo Exp $
 
---- src/modules/standard/mod_so.c.orig	Fri Feb  1 10:05:43 2002
+--- src/modules/standard/mod_so.c.orig	2004-10-29 14:44:35.000000000 +0100
 +++ src/modules/standard/mod_so.c
-@@ -324,7 +324,15 @@
+@@ -321,7 +321,15 @@ static const char *load_file(cmd_parms *
          return err;
      }
      

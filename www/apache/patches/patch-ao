@@ -1,8 +1,8 @@
-$NetBSD: patch-ao,v 1.2 2002/08/25 18:40:19 jlam Exp $
+$NetBSD: patch-ao,v 1.2.10.1 2004/12/01 00:25:56 salo Exp $
 
---- configure.orig	Thu Jun 20 20:56:07 2002
+--- configure.orig	2004-10-29 14:44:35.000000000 +0100
 +++ configure
-@@ -227,6 +227,8 @@
+@@ -185,6 +185,8 @@ if [ ! -f "$SHELL" ]; then
      fi
  fi
  
@@ -11,7 +11,7 @@ $NetBSD: patch-ao,v 1.2 2002/08/25 18:40:19 jlam Exp $
  ##
  ##  determine default parameters
  ##
-@@ -1300,6 +1302,8 @@
+@@ -1258,6 +1260,8 @@ sed <Makefile.tmpl >$mkf \
  -e "s%@PLATFORM@%$PLATFORM%g" \
  -e "s%@PERL@%$PERL%g" \
  -e "s%@TAR@%$TAR%g" \

@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.5 2000/09/12 14:17:32 jlam Exp $
+$NetBSD: patch-ad,v 1.5.16.1 2004/12/01 00:25:56 salo Exp $
 
---- src/ap/ap_hook.c.orig	Thu Sep  7 01:19:46 2000
+--- src/ap/ap_hook.c.orig	2004-10-29 14:44:35.000000000 +0100
 +++ src/ap/ap_hook.c
-@@ -740,6 +740,15 @@
+@@ -740,6 +740,15 @@ static int ap_hook_call_func(va_list ap,
          *((int *)v_rc) = ((int(*)(void *, void *, void *, int, void *))(hf->hf_ptr))(v1, v2, v3, v4, v5);
          rc = (*((int *)v_rc) != he->he_modeval.v_int);
      }
