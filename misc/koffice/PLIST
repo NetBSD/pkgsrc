@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2004/05/04 11:47:30 markd Exp $
+@comment $NetBSD: PLIST,v 1.11 2004/07/09 12:09:39 markd Exp $
 bin/karbon
 bin/kchart
 bin/kformula
@@ -2457,7 +2457,6 @@ share/kde/apps/koffice/pics/koPortrait.png
 share/kde/apps/koffice/pics/koRulerFirst.png
 share/kde/apps/koffice/pics/koRulerLeft.png
 share/kde/apps/koffice/pics/koffice-logo.png
-share/kde/apps/kontour/kpartplugins/scan-kontour.rc
 share/kde/apps/koshell/koshellui.rc
 share/kde/apps/kpresenter/autoforms/.autoforms
 share/kde/apps/kpresenter/autoforms/Arrows/.directory
@@ -3312,8 +3311,6 @@ share/kde/templates/TextDocument.desktop
 @dirrm share/kde/apps/kpresenter/autoforms
 @dirrm share/kde/apps/kpresenter
 @dirrm share/kde/apps/koshell
-@dirrm share/kde/apps/kontour/kpartplugins
-@dirrm share/kde/apps/kontour
 @dirrm share/kde/apps/koffice/pics
 @dirrm share/kde/apps/koffice/icons/crystalsvg/48x48/apps
 @dirrm share/kde/apps/koffice/icons/crystalsvg/48x48
