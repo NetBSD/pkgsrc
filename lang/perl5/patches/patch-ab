@@ -1,0 +1,41 @@
+$NetBSD: patch-ab,v 1.8 2001/09/05 17:13:41 jlam Exp $
+
+--- hints/netbsd.sh.orig	Thu Feb 22 18:57:55 2001
++++ hints/netbsd.sh	Sat Sep  1 03:57:59 2001
+@@ -21,7 +21,11 @@
+ 	if [ -f /usr/libexec/ld.elf_so ]; then
+ 		d_dlopen=$define
+ 		d_dlerror=$define
+-		ccdlflags="-Wl,-E -Wl,-R${PREFIX}/lib $ccdlflags"
++		# Include the whole libgcc.a, required for Xerces-P, which
++		# needs __eh_alloc, __pure_virtual, and others.
++		# XXX This should be obsoleted by gcc-3.0.
++		ccdlflags="-Wl,-whole-archive -lgcc -Wl,-no-whole-archive \
++			-Wl,-E -Wl,-R${PREFIX}/lib $ccdlflags"
+ 		cccdlflags="-DPIC -fPIC $cccdlflags"
+ 		lddlflags="--whole-archive -shared $lddlflags"
+ 	elif [ "`uname -m`" = "pmax" ]; then
+@@ -59,14 +63,18 @@
+ d_setruid="$undef"
+ 
+ # there's no problem with vfork.
+-case "$usevfork" in
+-'') usevfork=true ;;
+-esac
++usevfork=true
++
++# Using perl's malloc leads to trouble on some toolchain versions.
++usemymalloc="$undef"
+ 
+ # Pre-empt the /usr/bin/perl question of installperl.
+-installusrbinperl='n'
++installusrbinperl="$undef"
++
++# Don't install any manpages in man3; make user use perldoc
++# (to prevent confusion with similarly named man2/man3 pages).
++man3dir=none
+ 
+ # Recognize the NetBSD packages collection.
+-# GDBM might be here.
+ test -d /usr/pkg/lib     && loclibpth="$loclibpth /usr/pkg/lib"
+ test -d /usr/pkg/include && locincpth="$locincpth /usr/pkg/include"
