@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.324 2004/01/24 15:32:59 grant Exp $
+# $NetBSD: Packages.txt,v 1.325 2004/01/27 09:10:26 agc Exp $
 ###########################################################################
 
 			==========================
@@ -712,6 +712,7 @@ one is used, they need to be separated by spaces:
 	mbone
 	meta-pkgs
 	misc
+	multimedia
 	net
 	news
 	packages
