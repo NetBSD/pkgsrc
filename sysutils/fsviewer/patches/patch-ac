@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.1.1.1 2001/03/14 10:38:11 wiz Exp $
+$NetBSD: patch-ac,v 1.2 2001/07/22 17:42:09 wiz Exp $
 
 --- src/FSFinder.c.orig	Sat Oct  9 20:45:24 1999
 +++ src/FSFinder.c
@@ -19,3 +19,14 @@ $NetBSD: patch-ac,v 1.1.1.1 2001/03/14 10:38:11 wiz Exp $
      attributes.extra_flags = GSFullKeyboardEventsFlag;
      attributes.flags = (GSWindowStyleAttr | GSWindowLevelAttr |
  			GSExtraFlagsAttr);
+@@ -172,8 +172,8 @@
+                               WMTextDidEndEditingNotification, 
+ 			      finder->searchField);
+ 
+-    WMSetWindowMiniwindowImage(finder->win, 
+-			       WMGetApplicationIconImage(finder->scr));
++    WMSetWindowMiniwindowPixmap(finder->win, 
++			       WMGetApplicationIconPixmap(finder->scr));
+ 
+     return finder;
+ }
