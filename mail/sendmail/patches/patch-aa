@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.3 1999/04/10 17:22:43 tron Exp $
+$NetBSD: patch-aa,v 1.4 1999/04/23 17:31:49 tv Exp $
 
 --- BuildTools/OS/NetBSD.orig	Tue Dec 29 18:39:50 1998
 +++ BuildTools/OS/NetBSD	Sat Apr 10 19:13:10 1999
@@ -8,7 +8,7 @@ $NetBSD: patch-aa,v 1.3 1999/04/10 17:22:43 tron Exp $
 -define(`confENVDEF', ` -DNETISO')
 +define(`confENVDEF', ` -DNETISO -I${PREFIX}/include/db2')
  define(`confDEPEND_TYPE', `CC-M')
-+define(`confLIBS', `-L${PREFIX}/lib -ldb2')
++define(`confLIBS', `-L${PREFIX}/lib -ldb2 ${LDFLAGS}')
 +define(`confEBINDIR', `${PREFIX}/libexec/sendmail')
 +define(`confMBINDIR', `${PREFIX}/libexec/sendmail')
 +define(`confSBINDIR', `${PREFIX}/sbin')
