@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/05/03 11:48:35 mjl Exp $
+# $NetBSD: Makefile,v 1.4 2002/05/03 12:52:01 markd Exp $
 #
 
 DISTNAME=	Mail-SpamAssassin-2.20
@@ -21,7 +21,7 @@ post-patch:
 	@(cd ${WRKSRC};							\
 	for f in README Makefile.PL lib/Mail/SpamAssassin/Conf.pm ; do \
 		${SED} -e "s,/usr/share,${PREFIX}/share," \
-		       -e "s,/etc/mail,${PREFIX}/etc,g" $$f > $$f.fixed && \
+		       -e "s,/etc/mail,${PKG_SYSCONFBASE},g" $$f > $$f.fixed && \
 		${MV} $$f.fixed $$f;					\
 	done)
 
