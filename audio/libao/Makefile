@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2002/03/05 17:38:49 skrll Exp $
+# $NetBSD: Makefile,v 1.14 2002/08/05 13:08:38 lukem Exp $
 
-DISTNAME=	libao-0.8.2
+DISTNAME=	libao-0.8.3
 CATEGORIES=	devel
-MASTER_SITES=	http://www.vorbis.com/files/rc3/unix/
+MASTER_SITES=	http://www.vorbis.com/files/1.0/unix/
 
 MAINTAINER=	lukem@netbsd.org
 COMMENT=	cross-platform audio library
@@ -17,7 +17,7 @@ CONFIGURE_ARGS+=	--disable-esd
 
 USE_GMAKE=		yes
 USE_LIBTOOL=		yes
-LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 .include "../../mk/ossaudio.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
