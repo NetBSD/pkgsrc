@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1044 2003/01/07 23:57:41 jlam Exp $
+$NetBSD: CHANGES,v 1.1045 2003/01/08 02:37:11 thorpej Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -141,3 +141,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated xfig to 3.2.4 [rh 2003-01-07]
 	Updated patch to 2.5.4nb2 [grant 2003-01-07]
 	Updated qt3-tools to 3.0.6nb2 [jlam 2003-01-07]
+	Updated id-utils to 3.2nb3 [thorpej 2003-01-07]
