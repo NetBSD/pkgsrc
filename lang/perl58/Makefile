@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2004/09/08 11:59:09 jlam Exp $
+# $NetBSD: Makefile,v 1.50 2004/10/01 20:52:26 jlam Exp $
 
 # The following two variables should have empty values unless we're
 # building a perl snapshot or release candidate.
@@ -101,7 +101,7 @@ CONFIGURE_ARGS+=	-Duseithreads
 
 MKPIC?=		yes
 
-CONFIGURE_ARGS+=	-Dcc="${PERL5_CC}"
+CONFIGURE_ARGS+=	-Dcc="${CC}"
 MAKE_ENV+=		LANG=""
 
 .if ${OPSYS} == "Interix"
@@ -188,16 +188,6 @@ MKPIC=		no
 .endif
 
 .include "../../mk/compiler.mk"
-
-.if !empty(PKGSRC_COMPILER:Mmipspro)
-.  if ${ABI} == "32"
-PERL5_CC=		${CC:T} -n32
-.  elif ${ABI} == "64"
-PERL5_CC=		${CC:T} -64
-.  endif
-.else
-PERL5_CC=		${CC:T}
-.endif
 
 .if ${OPSYS} == "IRIX" && ${ABI} == "64"
 CONFIGURE_ARGS+=	-Duse64bitint
