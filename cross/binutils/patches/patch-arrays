@@ -1,3 +1,4 @@
+$NetBSD: patch-arrays,v 1.2 2001/01/24 12:13:27 wiz Exp $
 --- ./bfd/libbfd-in.h.orig	Fri May  1 11:48:12 1998
 +++ ./bfd/libbfd-in.h	Mon Dec 28 17:43:21 1998
 @@ -496,7 +498,7 @@
