@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2001/10/24 00:28:47 kei Exp $
+# $NetBSD: Makefile,v 1.24 2002/01/28 15:25:12 drochner Exp $
 #
 
 DISTNAME=	teTeX-1.0.7nb1
@@ -12,6 +12,7 @@ COMMENT=	Thomas Esser's TeX distribution for UNIX compatible systems
 
 DEPENDS+=	teTeX-bin>=1.0.7nb1:../teTeX-bin
 DEPENDS+=	teTeX-sharesrc>=1.0.1nb1:../teTeX-sharesrc
+DEPENDS+=	texi2html>=1.52:../../textproc/texi2html
 
 USE_X11=        yes
 EXTRACT_ONLY=   # empty
