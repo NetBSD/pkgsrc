@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/02/05 04:49:06 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2003/02/05 05:03:01 jlam Exp $
 #
 
 DISTNAME=	gnome1-dirs-${GNOME_DIRS_VERSION}
@@ -25,5 +25,4 @@ USE_X11BASE=	YES
 GNOME_DIRS=
 
 .include "../../misc/gnome-dirs/Makefile.common"
-.include "../../misc/gnome-dirs/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
