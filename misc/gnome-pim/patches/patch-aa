@@ -1,8 +1,25 @@
-$NetBSD: patch-aa,v 1.4 2003/01/11 04:24:32 rh Exp $
+$NetBSD: patch-aa,v 1.5 2003/01/14 05:19:25 rh Exp $
 
 --- gncal/Makefile.in.orig	Thu Mar 28 21:16:50 2002
 +++ gncal/Makefile.in
-@@ -845,7 +845,6 @@ gnomecal.conduit: gnomecal.conduit.in Ma
+@@ -243,6 +243,7 @@ libcalendar_conduit_la_SOURCES = \
+ 	calobj.c 		\
+ 	alarm.c			\
+ 	calendar.c 		\
++	dummy.c 		\
+ 	timeutil.c
+ 
+ 
+@@ -302,7 +303,7 @@ LTLIBRARIES = $(calendar_conduits_LTLIBR
+ libcalendar_conduit_la_DEPENDENCIES = \
+ 	$(top_builddir)/libversit/libversit_lt.la
+ am_libcalendar_conduit_la_OBJECTS = GnomeCal-common.lo GnomeCal-stubs.lo \
+-	calendar-conduit.lo calobj.lo alarm.lo calendar.lo timeutil.lo
++	calendar-conduit.lo calobj.lo alarm.lo calendar.lo timeutil.lo dummy.lo
+ libcalendar_conduit_la_OBJECTS = $(am_libcalendar_conduit_la_OBJECTS)
+ bin_PROGRAMS = gnomecal$(EXEEXT)
+ PROGRAMS = $(bin_PROGRAMS)
+@@ -845,7 +846,6 @@ gnomecal.conduit: gnomecal.conduit.in Ma
  	&& mv gnomecal.conduit.tmp gnomecal.conduit
  
  install-data-local:
