@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2000/07/05 16:22:36 tron Exp $
+@comment $NetBSD: PLIST,v 1.10 2000/07/05 17:19:33 tron Exp $
 bin/gimp
 bin/gimp-config
 bin/gimptool
@@ -706,7 +706,6 @@ share/gimp/1.1/help/C/dialogs/tip_of_the_day.html
 share/gimp/1.1/help/C/dialogs/tool_options.html
 share/gimp/1.1/help/C/dialogs/undo_history.html
 share/gimp/1.1/help/C/file/close.html
-share/gimp/1.1/help/C/file/dialogs
 share/gimp/1.1/help/C/file/filters
 share/gimp/1.1/help/C/file/index.html
 share/gimp/1.1/help/C/file/last_opened.html
@@ -873,11 +872,9 @@ share/gimp/1.1/help/C/filters/xjt.html
 share/gimp/1.1/help/C/filters/xpm.html
 share/gimp/1.1/help/C/filters/xwd.html
 share/gimp/1.1/help/C/filters/zealouscrop.html
-share/gimp/1.1/help/C/image/dialogs
 share/gimp/1.1/help/C/image/edit/clear.html
 share/gimp/1.1/help/C/image/edit/copy.html
 share/gimp/1.1/help/C/image/edit/cut.html
-share/gimp/1.1/help/C/image/edit/dialogs
 share/gimp/1.1/help/C/image/edit/fill.html
 share/gimp/1.1/help/C/image/edit/index.html
 share/gimp/1.1/help/C/image/edit/paste.html
@@ -886,27 +883,21 @@ share/gimp/1.1/help/C/image/edit/paste_into.html
 share/gimp/1.1/help/C/image/edit/redo.html
 share/gimp/1.1/help/C/image/edit/stroke.html
 share/gimp/1.1/help/C/image/edit/undo.html
-share/gimp/1.1/help/C/image/file
-share/gimp/1.1/help/C/image/filters
 share/gimp/1.1/help/C/image/image/colors/auto/equalize.html
 share/gimp/1.1/help/C/image/image/colors/auto/index.html
 share/gimp/1.1/help/C/image/image/colors/desaturate.html
 share/gimp/1.1/help/C/image/image/colors/index.html
 share/gimp/1.1/help/C/image/image/colors/invert.html
-share/gimp/1.1/help/C/image/image/dialogs
 share/gimp/1.1/help/C/image/image/duplicate.html
 share/gimp/1.1/help/C/image/image/index.html
 share/gimp/1.1/help/C/image/image/mode/convert_to_grayscale.html
 share/gimp/1.1/help/C/image/image/mode/convert_to_rgb.html
-share/gimp/1.1/help/C/image/image/mode/dialogs
 share/gimp/1.1/help/C/image/image/mode/index.html
-share/gimp/1.1/help/C/image/image/transforms/dialogs
 share/gimp/1.1/help/C/image/image/transforms/index.html
 share/gimp/1.1/help/C/image/image_window.html
 share/gimp/1.1/help/C/image/index.html
 share/gimp/1.1/help/C/image/layers
 share/gimp/1.1/help/C/image/select/all.html
-share/gimp/1.1/help/C/image/select/dialogs
 share/gimp/1.1/help/C/image/select/float.html
 share/gimp/1.1/help/C/image/select/index.html
 share/gimp/1.1/help/C/image/select/invert.html
@@ -915,7 +906,6 @@ share/gimp/1.1/help/C/image/select/save_to_channel.html
 share/gimp/1.1/help/C/image/select/sharpen.html
 share/gimp/1.1/help/C/image/toolbox
 share/gimp/1.1/help/C/image/tools
-share/gimp/1.1/help/C/image/view/dialogs
 share/gimp/1.1/help/C/image/view/dot_for_dot.html
 share/gimp/1.1/help/C/image/view/index.html
 share/gimp/1.1/help/C/image/view/new_view.html
@@ -933,7 +923,6 @@ share/gimp/1.1/help/C/layers/anchor_layer.html
 share/gimp/1.1/help/C/layers/apply_mask.html
 share/gimp/1.1/help/C/layers/delete_layer.html
 share/gimp/1.1/help/C/layers/delete_mask.html
-share/gimp/1.1/help/C/layers/dialogs
 share/gimp/1.1/help/C/layers/duplicate_layer.html
 share/gimp/1.1/help/C/layers/flatten_image.html
 share/gimp/1.1/help/C/layers/index.html
@@ -943,30 +932,19 @@ share/gimp/1.1/help/C/layers/merge_down.html
 share/gimp/1.1/help/C/layers/stack/index.html
 share/gimp/1.1/help/C/layers/stack/stack.html
 share/gimp/1.1/help/C/modes.html
-share/gimp/1.1/help/C/open/dialogs
-share/gimp/1.1/help/C/open/filters
 share/gimp/1.1/help/C/open/index.html
 share/gimp/1.1/help/C/open/open_by_extension.html
 share/gimp/1.1/help/C/paths/copy_path.html
 share/gimp/1.1/help/C/paths/delete_path.html
-share/gimp/1.1/help/C/paths/dialogs
 share/gimp/1.1/help/C/paths/duplicate_path.html
-share/gimp/1.1/help/C/paths/filters
 share/gimp/1.1/help/C/paths/index.html
 share/gimp/1.1/help/C/paths/new_path.html
 share/gimp/1.1/help/C/paths/paste_path.html
 share/gimp/1.1/help/C/paths/path_to_selection.html
 share/gimp/1.1/help/C/paths/stroke_path.html
-share/gimp/1.1/help/C/save/dialogs
-share/gimp/1.1/help/C/save/filters
 share/gimp/1.1/help/C/save/index.html
 share/gimp/1.1/help/C/save/save_by_extension.html
-share/gimp/1.1/help/C/toolbox/dialogs
-share/gimp/1.1/help/C/toolbox/file
-share/gimp/1.1/help/C/toolbox/filters
 share/gimp/1.1/help/C/toolbox/help/context_help.html
-share/gimp/1.1/help/C/toolbox/help/dialogs
-share/gimp/1.1/help/C/toolbox/help/filters
 share/gimp/1.1/help/C/toolbox/help/index.html
 share/gimp/1.1/help/C/toolbox/index.html
 share/gimp/1.1/help/C/toolbox/toolbox.html
@@ -1295,6 +1273,50 @@ share/locale/uk/LC_MESSAGES/gimp-libgimp.mo
 share/locale/uk/LC_MESSAGES/gimp-script-fu.mo
 share/locale/uk/LC_MESSAGES/gimp-std-plugins.mo
 share/locale/uk/LC_MESSAGES/gimp.mo
+@exec ln -s ../dialogs/layers %D/share/gimp/1.1/help/C/layers/dialogs
+@unexec rm -f %D/share/gimp/1.1/help/C/layers/dialogs
+@exec ln -s ../dialogs/paths %D/share/gimp/1.1/help/C/paths/dialogs
+@unexec rm -f %D/share/gimp/1.1/help/C/paths/dialogs
+@exec ln -s ../filters %D/share/gimp/1.1/help/C/paths/filters
+@unexec rm -f %D/share/gimp/1.1/help/C/paths/filters
+@exec ln -s ../../dialogs %D/share/gimp/1.1/help/C/toolbox/help/dialogs
+@unexec rm -f %D/share/gimp/1.1/help/C/toolbox/help/dialogs
+@exec ln -s ../filters %D/share/gimp/1.1/help/C/toolbox/help/filters
+@unexec rm -f %D/share/gimp/1.1/help/C/toolbox/help/filters
+@exec ln -s ../dialogs %D/share/gimp/1.1/help/C/toolbox/dialogs
+@unexec rm -f %D/share/gimp/1.1/help/C/toolbox/dialogs
+@exec ln -s  %D/share/gimp/1.1/help/C/toolbox/file
+@unexec rm -f %D/share/gimp/1.1/help/C/toolbox/file
+@exec ln -s ../filters %D/share/gimp/1.1/help/C/toolbox/filters
+@unexec rm -f %D/share/gimp/1.1/help/C/toolbox/filters
+@exec ln -s ../../dialogs %D/share/gimp/1.1/help/C/image/edit/dialogs
+@unexec rm -f %D/share/gimp/1.1/help/C/image/edit/dialogs
+@exec ln -s ../../dialogs %D/share/gimp/1.1/help/C/image/select/dialogs
+@unexec rm -f %D/share/gimp/1.1/help/C/image/select/dialogs
+@exec ln -s ../../dialogs %D/share/gimp/1.1/help/C/image/view/dialogs
+@unexec rm -f %D/share/gimp/1.1/help/C/image/view/dialogs
+@exec ln -s ../../../dialogs %D/share/gimp/1.1/help/C/image/image/mode/dialogs
+@unexec rm -f %D/share/gimp/1.1/help/C/image/image/mode/dialogs
+@exec ln -s ../../../dialogs %D/share/gimp/1.1/help/C/image/image/transforms/dialogs
+@unexec rm -f %D/share/gimp/1.1/help/C/image/image/transforms/dialogs
+@exec ln -s ../../dialogs %D/share/gimp/1.1/help/C/image/image/dialogs
+@unexec rm -f %D/share/gimp/1.1/help/C/image/image/dialogs
+@exec ln -s ../dialogs %D/share/gimp/1.1/help/C/image/dialogs
+@unexec rm -f %D/share/gimp/1.1/help/C/image/dialogs
+@exec ln -s  %D/share/gimp/1.1/help/C/image/file
+@unexec rm -f %D/share/gimp/1.1/help/C/image/file
+@exec ln -s ../filters %D/share/gimp/1.1/help/C/image/filters
+@unexec rm -f %D/share/gimp/1.1/help/C/image/filters
+@exec ln -s ../dialogs %D/share/gimp/1.1/help/C/open/dialogs
+@unexec rm -f %D/share/gimp/1.1/help/C/open/dialogs
+@exec ln -s ../filters %D/share/gimp/1.1/help/C/open/filters
+@unexec rm -f %D/share/gimp/1.1/help/C/open/filters
+@exec ln -s ../dialogs %D/share/gimp/1.1/help/C/save/dialogs
+@unexec rm -f %D/share/gimp/1.1/help/C/save/dialogs
+@exec ln -s ../filters %D/share/gimp/1.1/help/C/save/filters
+@unexec rm -f %D/share/gimp/1.1/help/C/save/filters
+@exec ln -s ../dialogs %D/share/gimp/1.1/help/C/file/dialogs
+@unexec rm -f %D/share/gimp/1.1/help/C/file/dialogs
 @dirrm share/gimp/1.1/tips
 @dirrm share/gimp/1.1/scripts
 @dirrm share/gimp/1.1/patterns
