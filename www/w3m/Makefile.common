@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.30 2004/06/24 09:17:34 cjep Exp $
+# $NetBSD: Makefile.common,v 1.30.6.1 2005/03/30 06:42:46 salo Exp $
 #
 
 DISTNAME=	w3m-${W3M_VERS}
@@ -120,6 +120,7 @@ post-install:
 	    ( cd ${PREFIX}/${DOCDIR}; ${PAX} -r )
 
 .include "../../devel/boehm-gc/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .if ${_W3M_USE_IMAGE} == YES
 .include "../../graphics/gdk-pixbuf/buildlink3.mk"
 .endif
