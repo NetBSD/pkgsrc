@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.5 2005/01/27 10:15:35 minoura Exp $
+
+--- configure.orig	2004-12-03 14:14:15.000000000 +0900
++++ configure	2005-01-27 11:38:21.000000000 +0900
+@@ -8097,7 +8097,7 @@
+ case "$host" in
+   i686-*) I686OPT="-DUSE_I686_PREFETCH";;
+ esac
+-if test $CC = "gcc"; then
++if test "$GCC" = "yes"; then
+   case "$target" in
+     *mingw*) ;;
+     *)       GCCOPT="-fomit-frame-pointer";;
