@@ -1,4 +1,4 @@
-# $NetBSD: motif.buildlink.mk,v 1.1 2001/09/08 19:52:30 jlam Exp $
+# $NetBSD: motif.buildlink.mk,v 1.2 2001/09/13 08:05:10 jlam Exp $
 #
 # This Makefile fragment is included by packages that use Motif.
 #
@@ -19,60 +19,63 @@ MOTIF_BUILDLINK_MK=	# defined
 # functionality.  On Solaris, default to DT-Motif (in /usr/dt).
 #
 .if ${OPSYS} == "SunOS"
-MOTIF_TYPE_DEFAULT=	dt
+MOTIF_TYPE_DEFAULT?=	dt
 .else
-MOTIF_TYPE_DEFAULT=	lesstif
-.endif
-MOTIF_TYPE?=		${MOTIF_TYPE_DEFAULT}
-
-# We only recognize the tested strings as proper values for MOTIF_TYPE.
-.if ${MOTIF_TYPE} != "openmotif" && \
-    ${MOTIF_TYPE} != "lesstif" && \
-    ${MOTIF_TYPE} != "dt"
-MOTIF_TYPE=		${MOTIF_TYPE_DEFAULT}
+MOTIF_TYPE_DEFAULT?=	lesstif
 .endif
 
-# If MOTIFBASE is defined, then assume that it points to a valid Motif
-# installation.  Otherwise, if /usr/dt is valid and ${MOTIF_TYPE} is "dt",
-# then use it.  Otherwise if ${X11BASE} is valid, then use it and check if
-# it's from pkgsrc, adding a dependency if necessary.  Otherwise, use the
-# Motif specified by ${MOTIF_TYPE}.
+# If /usr/dt is a valid Motif installation, then use it.  Otherwise, check
+# to see if a pkgsrc Motif is installed and valid, then use it.  Otherwise,
+# if ${X11BASE} is valid, then use it.  Otherwise, use the Motif specified
+# by ${MOTIF_TYPE_DEFAULT}.
+#
+.if exists(/usr/dt/include/Xm/Xm.h)
+_MOTIF_TYPE=		dt
+.elif exists(${X11BASE}/lib/X11/config/OpenMotif.tmpl) || \
+      exists(${LOCALBASE}/lib/X11/config/OpenMotif.tmpl)
+_MOTIF_TYPE=		openmotif
+.elif exists(${X11BASE}/lib/X11/config/LessTif.tmpl) || \
+      exists(${LOCALBASE}/lib/X11/config/LessTif.tmpl)
+_MOTIF_TYPE=		lesstif
+.elif exists(${X11BASE}/include/Xm/Xm.h)
+_MOTIF_TYPE=		none
+.else
+_MOTIF_TYPE=		${MOTIF_TYPE_DEFAULT}
+.endif
+
+# If MOTIF_TYPE is set, then let that override the Motif-discovery just
+# performed.  We only recognize the tested strings as proper values for
+# MOTIF_TYPE.
+#
+.if defined(MOTIF_TYPE)
+.  if (${MOTIF_TYPE} == "openmotif") || \
+      (${MOTIF_TYPE} == "lesstif") || \
+      (${MOTIF_TYPE} == "dt")
+_MOTIF_TYPE=		${MOTIF_TYPE}
+.  endif
+.endif
+
+# If MOTIFBASE is set, then let that override all other Motif-discovery
+# just performed.
 #
 .if defined(MOTIFBASE)
-_NEED_PKGMOTIF=		NO
+_MOTIF_TYPE=		none
 .else
-.  if exists(/usr/dt/include/Xm/Xm.h) && (${MOTIF_TYPE} == "dt")
-_NEED_PKGMOTIF=		NO
-MOTIFBASE?=		/usr/dt
-MOTIF_TYPE=		dt
-.  else
-.    if exists(${X11BASE}/include/Xm/Xm.h)
-MOTIFBASE?=		${X11BASE}
-.      if !exists(${X11BASE}/lib/X11/config/OpenMotif.tmpl) && \
-          !exists(${X11BASE}/lib/X11/config/LessTif.tmpl)
-_NEED_PKGMOTIF=		NO
-.      else
-_NEED_PKGMOTIF=		YES
-.        if exists(${X11BASE}/lib/X11/config/OpenMotif.tmpl)
-MOTIF_TYPE=		openmotif
-.        elif exists(${X11BASE}/lib/X11/config/LessTif.tmpl)
-MOTIF_TYPE=		lesstif
-.        endif
-.      endif
-.    else
-_NEED_PKGMOTIF=		YES
-MOTIFBASE?=		${X11PREFIX}
-MOTIF_TYPE?=		${MOTIF_TYPE_DEFAULT}
-.    endif
+.  if ${_MOTIF_TYPE} == "dt"
+MOTIFBASE=		/usr/dt
+.  elif ${_MOTIF_TYPE} == "none"
+MOTIFBASE=		${X11BASE}
+.  elif ${_MOTIF_TYPE} == "openmotif"
+MOTIFBASE=		${X11PREFIX}
+.  elif ${_MOTIF_TYPE} == "lesstif"
+MOTIFBASE=		${X11PREFIX}
 .  endif
 .endif
 
-.if ${_NEED_PKGMOTIF} == "YES"
-.  if ${MOTIF_TYPE} == "openmotif"
-.    include "../../x11/openmotif/buildlink.mk"
-.  elif ${MOTIF_TYPE} == "lesstif"
-.    include "../../x11/lesstif/buildlink.mk"
-.  endif
+.if ${_MOTIF_TYPE} == "openmotif"
+.  include "../../x11/openmotif/buildlink.mk"
+.elif ${_MOTIF_TYPE} == "lesstif"
+.  include "../../x11/lesstif/buildlink.mk"
 .else
 #
 # Link the pre-existing Motif libraries and headers in ${MOTIFBASE} into
