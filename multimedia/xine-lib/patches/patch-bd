@@ -1,0 +1,27 @@
+$NetBSD: patch-bd,v 1.1.2.2 2005/02/28 21:11:50 snj Exp $
+
+--- src/input/libreal/real.c	2004/09/08 15:09:30	1.19
++++ src/input/libreal/real.c	2004/12/15 12:53:46	1.20
+@@ -604,6 +604,8 @@
+   return (n <= 0) ? 0 : n+12;
+ }
+ 
++//! maximum size of the rtsp description, must be < INT_MAX
++#define MAX_DESC_BUF (20 * 1024 * 1024)
+ rmff_header_t  *real_setup_and_get_header(rtsp_t *rtsp_session, uint32_t bandwidth) {
+ 
+   char *description=NULL;
+@@ -652,6 +654,13 @@
+   else
+     size=atoi(rtsp_search_answers(rtsp_session,"Content-length"));
+ 
++  if (size > MAX_DESC_BUF) {
++    printf("real: Content-length for description too big (> %uMB)!\n",
++           MAX_DESC_BUF/(1024*1024) );
++    xine_buffer_free(buf);
++    return NULL;
++  }
++
+   if (!rtsp_search_answers(rtsp_session,"ETag"))
+     lprintf("real: got no ETag!\n");
+   else
