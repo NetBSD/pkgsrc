@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 1999/06/14 17:43:20 hubertf Exp $
+# $NetBSD: Makefile,v 1.11 1999/08/25 00:59:52 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.13 1997/03/07 12:29:49 obrien Exp
 #
 
-DISTNAME=		rxvt-2.6.0
+DISTNAME=		rxvt-2.6.1
 CATEGORIES=		x11
 MASTER_SITES=		ftp://ftp.rxvt.org/pub/rxvt/ \
 			${MASTER_SITE_SUNSITE:=utils/file/managers/mc/rxvt/} \
