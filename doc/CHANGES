@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5657 2004/04/19 15:30:41 minskim Exp $
+$NetBSD: CHANGES,v 1.5658 2004/04/19 15:31:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2077,3 +2077,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated grhino to 0.11.0 [minskim 2004-04-19]
 	Updated libcroco to 0.5.1 [jmmv 2004-04-19]
 	Updated py-libxml2 to 2.6.9 [minskim 2004-04-19]
+	Updated libxslt to 1.1.6 [wiz 2004-04-19]
