@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.448 2004/02/26 22:56:56 agc Exp $
+# $NetBSD: Makefile,v 1.449 2004/02/29 03:33:06 xtraeme Exp $
 #
 
 COMMENT=	Networking tools
@@ -106,6 +106,7 @@ SUBDIR+=	host
 SUBDIR+=	hping
 SUBDIR+=	httptunnel
 SUBDIR+=	icsi-finger
+SUBDIR+=	iftop
 SUBDIR+=	ip6_int
 SUBDIR+=	ipa
 SUBDIR+=	ipcalc
