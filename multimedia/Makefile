@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/01/26 12:35:01 jmmv Exp $
+# $NetBSD: Makefile,v 1.6 2004/01/26 12:39:10 jmmv Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -17,5 +17,6 @@ SUBDIR+=	mplayer-share
 SUBDIR+=	realplayer-codecs
 SUBDIR+=	win32-codecs
 SUBDIR+=	xawtv
+SUBDIR+=	xvidcore
 
 .include "../mk/bsd.pkg.subdir.mk"
