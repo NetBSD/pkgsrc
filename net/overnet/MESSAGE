@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.2 2003/07/28 15:02:25 jschauma Exp $
+$NetBSD: MESSAGE,v 1.2 2003/07/28 15:20:37 jschauma Exp $
 
 	It is recommended that you create a working directory for
 	your instance of ${PKGNAME}, as several configuration files
