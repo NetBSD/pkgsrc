@@ -1,4 +1,4 @@
-$NetBSD: patch-am,v 1.8 2004/09/21 16:45:47 jmmv Exp $
+$NetBSD: patch-am,v 1.9 2004/10/24 18:03:24 recht Exp $
 
 --- libgnomevfs/gnome-vfs-unix-mounts.c.orig	2004-08-25 09:37:37.000000000 +0200
 +++ libgnomevfs/gnome-vfs-unix-mounts.c
@@ -6,7 +6,7 @@ $NetBSD: patch-am,v 1.8 2004/09/21 16:45:47 jmmv Exp $
  gboolean
  _gnome_vfs_get_current_unix_mounts (GList **return_list)
  {
-+#ifdef HAVE_STATVFS
++#if defined(HAVE_STATVFS) && !defined(__APPLE__)
 +    	struct statvfs *mntent = NULL;
 +#else
      	struct statfs *mntent = NULL;
@@ -18,7 +18,7 @@ $NetBSD: patch-am,v 1.8 2004/09/21 16:45:47 jmmv Exp $
  		mount_entry->mount_path = g_strdup (mntent[i].f_mntonname);
  		mount_entry->device_path = g_strdup (mntent[i].f_mntfromname);
  		mount_entry->filesystem_type = g_strdup (mntent[i].f_fstypename);
-+#ifdef HAVE_STATVFS
++#if defined(HAVE_STATVFS) && !defined(__APPLE__)
 +		if (mntent[i].f_flag & MNT_RDONLY) {
 +#else
  		if (mntent[i].f_flags & MNT_RDONLY) {
