@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/11/22 21:23:48 rh Exp $
+# $NetBSD: Makefile,v 1.2 1999/11/22 21:27:44 soren Exp $
 #
 
 DISTNAME=		so51a_lnx_${LANGNO}
@@ -83,7 +83,7 @@ do-fetch:
 			  DISTFILE=${DISTNAME}${EXTRACT_SUFX} \
 			  INTERACTIVE=${FETCH_INTERACTIVE} \
 			  HOMEPAGE=${HOMEPAGE} SITE=${DOWNLOAD_SITE} \
-		automate.sh ; \
+		./automate.sh ; \
 	fi
 
 do-configure:
