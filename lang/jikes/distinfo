@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2002/10/30 06:46:07 skrll Exp $
+$NetBSD: distinfo,v 1.5 2003/01/21 11:18:25 skrll Exp $
 
-SHA1 (jikes-1.17.tar.bz2) = 0d06c46dbb56ec3c84d2883fadedf68a8908b031
-Size (jikes-1.17.tar.bz2) = 533215 bytes
-SHA1 (patch-ab) = 45b368181c1efabb9f3fcefa35636f82fa495cd8
+SHA1 (jikes-1.18.tar.bz2) = 82569a81b6e6e28372e412abb4afea265c235db4
+Size (jikes-1.18.tar.bz2) = 536498 bytes
+SHA1 (patch-ab) = 7aa08474f5593743a5d012aa09ebe77d77ef438e
