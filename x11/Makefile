@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.267 2002/09/24 13:59:55 wiz Exp $
+# $NetBSD: Makefile,v 1.268 2002/09/27 15:25:27 rh Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -38,6 +38,7 @@ SUBDIR+=	gnome-python
 SUBDIR+=	gnome-session
 SUBDIR+=	gnome-users-guide
 SUBDIR+=	gnome2-control-center
+SUBDIR+=	gnustep-gui
 SUBDIR+=	gtk
 SUBDIR+=	gtk+extra
 SUBDIR+=	gtk--
