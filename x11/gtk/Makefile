@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2000/09/05 09:33:18 jlam Exp $
+# $NetBSD: Makefile,v 1.48 2000/11/14 22:43:34 jdolecek Exp $
 
 DISTNAME=		gtk+-1.2.8
 CATEGORIES=		x11
@@ -10,10 +10,10 @@ MASTER_SITES=		ftp://ftp.gtk.org/pub/gtk/v1.2/ \
 MAINTAINER=		tron@netbsd.org
 HOMEPAGE=		http://www.gtk.org/
 
-DEPENDS+=		gettext>=0.10.35nb1:../../devel/gettext
 DEPENDS+=		glib>=1.2.8:../../devel/glib
 BUILD_DEPENDS+=		${PERL5}:../../lang/perl5-base
 
+USE_LIBINTL=		yes
 USE_LIBTOOL=		yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 USE_X11BASE=		yes
