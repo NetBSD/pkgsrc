@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.5 2001/01/16 21:59:31 cjones Exp $
+@comment $NetBSD: PLIST,v 1.6 2001/06/26 03:15:16 christos Exp $
 lib/libamclient.a
 lib/libamclient.la
-lib/libamclient-2.4.2.so
+lib/libamclient-2.4.2p2.so
 libexec/amandad
 libexec/calcsize
 libexec/killpgrp
