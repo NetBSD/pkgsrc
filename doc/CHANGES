@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.645 2002/11/30 13:31:24 taca Exp $
+$NetBSD: CHANGES,v 1.646 2002/11/30 15:02:18 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3773,3 +3773,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Added tdb-1.0.6 [jmmv 2002-11-29]
 	Added hnb-1.8.1 [jmmv 2002-11-29]
 	Updated ddskk to 20021124 [taca 2002-11-30]
+	Updated buildtool to 0.7 [jmmv 2002-11-30]
