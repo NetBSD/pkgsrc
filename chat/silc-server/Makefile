@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2002/09/18 21:15:07 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2002/09/19 09:04:04 jlam Exp $
 
 DISTNAME=		silc-server-0.9.5
 CATEGORIES=		chat security
@@ -39,12 +39,14 @@ CONF_FILES+=		${PREFIX}/share/examples/silcd/silcalgs.conf.default \
 CONF_FILES_PERMS+=	${PREFIX}/share/examples/silcd/motd.txt.default \
 			${PKG_SYSCONFDIR}/motd.txt \
 			${ROOT_USER} ${ROOT_GROUP} 0644
-SUPPORT_FILES_PERMS+=	${PREFIX}/share/examples/silcd/silcd.default \
-			${PREFIX}/etc/rc.d/silcd \
-			${ROOT_USER} ${ROOT_GROUP} 0555
 
 RCD_SCRIPTS=		silcd
-RCD_SCRIPTS_MODE=	0555
+
+.if ${OPSYS} == "NetBSD"
+RCD_SCRIPT_SRC.silcd=	${FILESDIR}/silcd.sh
+.else
+RCD_SCRIPT_SRC.silcd=	${FILESDIR}/silcd.generic
+.endif
 
 OWN_DIRS_PERMS+=	/var/log/silcd ${SILCD_USER} ${SILCD_GROUP} 0700
 
@@ -69,13 +71,6 @@ CONFIGURE_ARGS+=	--disable-asm
 .endif
 
 post-install:
-.if (${OPSYS} == "NetBSD")
-	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/silcd.sh \
-		> ${PREFIX}/share/examples/silcd/silcd.default
-.else
-	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/silcd.generic \
-		> ${PREFIX}/share/examples/silcd/silcd.default
-.endif
 	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/motd.txt \
 		> ${PREFIX}/share/examples/silcd/motd.txt.default
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2002/09/15 14:39:51 grant Exp $
+# $NetBSD: Makefile,v 1.68 2002/09/19 09:04:32 jlam Exp $
 
 DISTNAME=	squid-2.4.STABLE7-src
 PKGNAME=	squid-2.4.7
@@ -48,9 +48,6 @@ SQUID_CONFIGURE_ARGS?=	--disable-internal-dns \
 
 OPTIONAL_FILES=	libexec/diskd libexec/dnsserver libexec/pinger libexec/unlinkd
 
-post-build:
-	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/squid.sh > ${WRKDIR}/squid
-
 pre-install:
 	@${INSTALL_DATA_DIR} ${PREFIX}/share/examples/squid
 	@${INSTALL_DATA_DIR} ${PREFIX}/share/squid
@@ -59,7 +56,6 @@ pre-install:
 
 post-install:
 	cd ${WRKSRC}/src; ${TEST} ! -x pinger || ${MAKE} install-pinger
-	${INSTALL_SCRIPT} ${WRKDIR}/squid ${RCD_SCRIPTS_EXAMPLEDIR}/squid
 	@${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
 	@(							\
 	for FILE in ${OPTIONAL_FILES}; do			\
