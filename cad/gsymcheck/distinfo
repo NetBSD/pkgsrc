@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 10:30:17 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 16:26:59 agc Exp $
 
-MD5 (geda/gsymcheck-20000220.tar.gz) = 79ac38812a616482c79244ac9bef2698
+SHA1 (geda/gsymcheck-20000220.tar.gz) = 7e7c671e5e546a06963d548b444b835780a66f22
+Size (geda/gsymcheck-20000220.tar.gz) = 138647 bytes
