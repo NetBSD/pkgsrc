@@ -1,4 +1,4 @@
-.\"	$NetBSD: etcupdate.8,v 1.6 2001/12/01 11:42:09 martti Exp $
+.\"	$NetBSD: etcupdate.8,v 1.7 2001/12/15 09:05:08 martti Exp $
 .\"
 .\" Copyright (c) 2001 The NetBSD Foundation, Inc.
 .\" All rights reserved.
@@ -178,7 +178,7 @@ do something like this:
 .Pp
 .Dl mkdir /tmp/temproot
 .Dl cd /tmp/temproot
-.Dl tar xzf /some/where/etc.tgz
+.Dl tar xpzf /some/where/etc.tgz
 .Dl etcupdate -b /tmp/temproot
 .Pp
 To get a better idea what's going on, use the

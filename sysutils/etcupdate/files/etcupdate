@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: etcupdate,v 1.10 2001/12/12 10:08:43 martti Exp $
+# $NetBSD: etcupdate,v 1.11 2001/12/15 09:05:08 martti Exp $
 #
 # Copyright (c) 2001 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -397,7 +397,7 @@ fi
 
 # Start the comparision
 echo "*** Checking for added/modified files"
-for i in `find ${TEMPROOT} -type f`; do
+for i in `find ${TEMPROOT} -type f  -a ! -name \*.etcupdate.\*`; do
 	D=`echo ${i} | sed "s#${TEMPROOT}##"`
 	diff_and_merge_file "${D}"
 done
