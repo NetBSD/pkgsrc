@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 1998/09/17 00:48:02 garbled Exp $
+--- crypto/bn/Makefile.ssl.orig	Wed Sep 16 15:46:15 1998
++++ crypto/bn/Makefile.ssl	Wed Sep 16 15:50:42 1998
+@@ -74,6 +74,9 @@
+ # a.out
+ asm/bn86-out.o: asm/bn86unix.cpp
+ 	$(CPP) -DOUT asm/bn86unix.cpp | as -o asm/bn86-out.o
++# alpha
++asm/alpha.o: asm/alpha.s
++	as asm/alpha.s -o asm/alpha.o
+ 
+ # bsdi
+ asm/bn86bsdi.o: asm/bn86unix.cpp
