@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/07/17 21:48:43 grant Exp $
+# $NetBSD: Makefile,v 1.6 2003/11/07 15:30:09 gavan Exp $
 #
 
 DISTNAME=	bbappconf-0.0.2
@@ -12,6 +12,7 @@ COMMENT=	Configure the behaviour of an application under Blackbox
 
 USE_BUILDLINK2=		YES
 USE_X11BASE=		YES
+USE_GCC_SHLIB=		YES
 GNU_CONFIGURE=		YES
 
 post-patch:

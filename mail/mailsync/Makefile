@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/07/17 21:46:24 grant Exp $
+# $NetBSD: Makefile,v 1.8 2003/11/07 15:03:34 gavan Exp $
 #
 
 DISTNAME=	mailsync_4.3-2
@@ -14,6 +14,7 @@ COMMENT=	Mailsync is a way of synchronizing a collection of mailboxes
 DEPENDS+=	imap-uw-[0-9]*:../../mail/imap-uw
 
 USE_GMAKE=	yes
+USE_GCC_SHLIB=	yes
 ALL_TARGET=	default
 
 .include "../../mk/bsd.prefs.mk"
