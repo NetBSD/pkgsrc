@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/09/26 04:43:59 epg Exp $
+# $NetBSD: Makefile,v 1.2 2004/09/26 23:33:48 epg Exp $
 
 DISTNAME=	SVK-0.21
 PKGNAME=	svk-0.21
@@ -16,7 +16,9 @@ MAKE_ENV+=	PERL_EXTUTILS_AUTOINSTALL=--skip
 
 DEPENDS+=	p5-subversion>=1.0.4:../../devel/p5-subversion
 DEPENDS+=	p5-Algorithm-Annotate>=0.10:../../devel/p5-Algorithm-Annotate
+DEPENDS+=	p5-Compress-Zlib>=1.33:../../devel/p5-Compress-Zlib
 DEPENDS+=	p5-Text-Diff>=0.35:../../textproc/p5-Text-Diff
+DEPENDS+=	p5-YAML>=0.35:../../textproc/p5-YAML
 DEPENDS+=	p5-Data-Hierarchy>=0.19:../../devel/p5-Data-Hierarchy
 DEPENDS+=	p5-Regexp-Shellish>=0.93:../../devel/p5-Regexp-Shellish
 DEPENDS+=	p5-Pod-Escapes>=1.04:../../textproc/p5-Pod-Escapes
