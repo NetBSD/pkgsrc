@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2003/10/05 20:20:18 wiz Exp $
+$NetBSD: distinfo,v 1.3 2003/10/09 06:43:42 wiz Exp $
 
 SHA1 (libgsf-1.8.2.tar.bz2) = 4fcf08be27cda3df9b9af8bc2658ff9b658a72e4
 Size (libgsf-1.8.2.tar.bz2) = 330342 bytes
-SHA1 (patch-aa) = 0fe549f9af39e108b88865d534b47cc43e15f66b
 SHA1 (patch-ab) = fb120149076d849c576842889b22cf45e23773e7
