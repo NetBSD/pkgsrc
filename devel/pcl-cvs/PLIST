@@ -1,0 +1,26 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2002/06/08 17:33:18 cjep Exp $
+${LISPDIR}/cvs-compat.el
+${LISPDIR}/cvs-compat.elc
+${LISPDIR}/cvs-edit.el
+${LISPDIR}/cvs-edit.elc
+${LISPDIR}/cvs-log.el
+${LISPDIR}/cvs-log.elc
+${LISPDIR}/cvs-status.el
+${LISPDIR}/cvs-status.elc
+${LISPDIR}/pcl-cvs-defs.el
+${LISPDIR}/pcl-cvs-defs.elc
+${LISPDIR}/pcl-cvs-info.el
+${LISPDIR}/pcl-cvs-info.elc
+${LISPDIR}/pcl-cvs-parse.el
+${LISPDIR}/pcl-cvs-parse.elc
+${LISPDIR}/pcl-cvs-startup.el
+${LISPDIR}/pcl-cvs-util.el
+${LISPDIR}/pcl-cvs-util.elc
+${LISPDIR}/pcl-cvs.el
+${LISPDIR}/pcl-cvs.elc
+@unexec install-info --delete --info-dir=%D/info %D/info/pcl-cvs.info
+info/pcl-cvs.info
+info/pcl-cvs.info-1
+info/pcl-cvs.info-2
+@exec install-info --info-dir=%D/info %D/info/pcl-cvs.info
+@dirrm ${LISPDIR}
