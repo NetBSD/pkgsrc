@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7269 2004/09/27 02:16:46 rh Exp $
+$NetBSD: CHANGES,v 1.7270 2004/09/27 08:48:34 uebayasi Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4460,3 +4460,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gnustep-examples to 1.0.0 [rh 2004-09-27]
 	Updated Gorm to 0.8.0 [rh 2004-09-27]
 	Updated gnustep to 1.10.0nb1 [rh 2004-09-27]
+	Updated semi to 1.14.6nb2 [uebayasi 2004-09-27]
