@@ -1,0 +1,13 @@
+$NetBSD: patch-ah,v 1.1.1.1 1999/04/30 15:19:13 tv Exp $
+
+--- test/Makefile.ssl.orig	Tue Apr 27 14:39:30 1999
++++ test/Makefile.ssl	Tue Apr 27 14:39:44 1999
+@@ -15,7 +15,7 @@
+ PEX_LIBS=
+ EX_LIBS= #-lnsl -lsocket
+ 
+-CFLAGS= $(INCLUDES) $(CFLAG)
++CFLAGS= $(INCLUDES) $(CFLAG:N*PIC)
+ 
+ GENERAL=Makefile.ssl
+ 

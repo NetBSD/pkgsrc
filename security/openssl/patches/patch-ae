@@ -1,0 +1,12 @@
+$NetBSD: patch-ae,v 1.1.1.1 1999/04/30 15:19:13 tv Exp $
+
+--- crypto/Makefile.ssl.orig	Tue Apr 27 14:35:41 1999
++++ crypto/Makefile.ssl	Tue Apr 27 14:37:46 1999
+@@ -48,6 +48,7 @@
+ 	@(cd ..; $(MAKE) DIRS=$(DIR) all)
+ 
+ all: date.h lib subdirs
++	cd .. && csh ${MAKELIB} libcrypto.so.1.0 libcrypto.a libRSAglue.a
+ 
+ date.h: ../Makefile.ssl
+ 	echo "#define DATE \"`date`\"" >date.h
