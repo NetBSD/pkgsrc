@@ -1,0 +1,40 @@
+$NetBSD: patch-ai,v 1.1 1999/07/13 01:31:11 jlam Exp $
+
+--- src/glob.c.orig	Fri Aug 14 10:39:16 1998
++++ src/glob.c	Thu Jul  8 15:10:52 1999
+@@ -42,16 +42,6 @@
+ #endif /* !HAVE_TERMCAP_H */
+ #endif /* !HAVE_LIBTERMCAP */
+ 
+-#if HAVE_LIBHISTORY
+-#if HAVE_READLINE_HISTORY_H
+-#include <readline/history.h>
+-#else /* no readline/history.h */
+-extern void using_history ();
+-extern int read_history ();
+-extern void stifle_history ();
+-#endif /* no readline/history.h */
+-#endif /* -lhistory */
+-
+ #if HAVE_FPU_CONTROL_H
+ #include <fpu_control.h>
+ #elif __BORLANDC__
+@@ -86,6 +76,18 @@
+ #include "avl.h"
+ #include "vfm.h"
+ #include "command.h"
++
++#if HAVE_LIBHISTORY
++#if HAVE_HISTORY_H
++#include <history.h>
++#elif HAVE_READLINE_HISTORY_H
++#include <readline/history.h>
++#else /* no readline/history.h */
++extern void using_history ();
++extern int read_history ();
++extern void stifle_history ();
++#endif /* no readline/history.h */
++#endif /* -lhistory */
+ 
+ /* var.h */
+ dictionary default_dict;
