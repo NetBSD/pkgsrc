@@ -1,3 +1,3 @@
 #!/bin/sh
-# $NetBSD: wrap.sh,v 1.1 2001/09/14 10:19:11 abs Exp $
-exec @PREFIX@/jre/bin/java $@
+# $NetBSD: wrap.sh,v 1.2 2002/03/10 21:04:51 cjs Exp $
+exec @PREFIX@/jre/bin/java "$@"
