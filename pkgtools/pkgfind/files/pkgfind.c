@@ -27,15 +27,11 @@
 
 /*
  * pancake@phreaker.net ** changes 2004/09/14
- * 
- * -i ignore case
- * -x exact match
- * -q quiet (drop COMMENT on search)
- * -C comments
  *
- * [TODO]
- * -D DESCR
- * -P PLIST
+ * -C search in comments
+ * -c case sensitive
+ * -q quiet, don't output comment
+ * -x exact matches
  */
 
 #include <sys/types.h>
@@ -61,13 +57,13 @@ static void		pkgfind(const char *, const char *);
 static void		showpkg(const char *, const char *, const char *);
 static int		getcomment(const char *, char **);
 static int		checkskip(const struct dirent *);
-static int		subcasestr(const char *, const char *);
+static int		partialmatch(const char *, const char *);
+static int		exactmatch(const char *, const char *);
 static void		usage(void);
 
-static int		quiet = 0;
-static int		cases = 0;
-static int		exact = 0;
-static int		comme = 0;
+static int		(*search)(const char *, const char *);
+
+static int		Cflag, cflag, qflag, xflag;
 
 int
 main(int argc, char *argv[])
@@ -75,19 +71,24 @@ main(int argc, char *argv[])
 	const char *path;
 	int ch;
 
+	/* default searches have partial matches */
+	search = partialmatch;
+
+	Cflag = cflag = qflag = xflag = 0;
+
 	while ((ch = getopt(argc, argv, "Ccqx")) != -1) {
 		switch (ch) {
-		case 'C':	/* comment search */
-			comme = 1;
+		case 'C':	/* search in comments */
+			Cflag = 1;
 			break;
 		case 'c':	/* case sensitive */
-			cases = 1;
+			cflag = 1;
 			break;
-		case 'q':	/* quiet */
-			quiet = 1;
+		case 'q':	/* quite, don't output comment */
+			qflag = 1;
 			break;
-		case 'x':	/* exact match */
-			exact = 1;
+		case 'x':	/* exact matches */
+			search = exactmatch;
 			break;
 		default:
 			usage();
@@ -115,7 +116,7 @@ pkgfind(const char *path, const char *pkg)
 	struct dirent **cat, **list;
 	int ncat, nlist, i, j;
 	char tmp[PATH_MAX];
-	char *comment = NULL;
+	char *text, *comment = NULL;
 	struct stat sb;
 
 	if ((ncat = scandir(path, &cat, checkskip, alphasort)) < 0)
@@ -141,17 +142,16 @@ pkgfind(const char *path, const char *pkg)
 			}
 			if (stat(tmp, &sb) < 0 || !S_ISDIR(sb.st_mode))
 				continue;
-
-			if (comme) {
-				strcat(tmp,"/Makefile");
-				if (getcomment(tmp,&comment) != 0)
-					if (comment!=0)
-					if (subcasestr(comment, pkg))
-						showpkg(path, cat[i]->d_name,
-						    list[j]->d_name);
-				continue;
+			if (Cflag) {
+				(void)strncat(tmp, "/Makefile", sizeof(tmp));
+				if (getcomment(tmp, &comment) == 0 ||
+				    comment == NULL)
+					continue;
+				text = comment;
+			} else {
+				text = list[j]->d_name;
 			}
-			if (subcasestr(list[j]->d_name, pkg))
+			if ((*search)(text, pkg))
 				showpkg(path, cat[i]->d_name, list[j]->d_name);
 			free(list[j]);
 		}
@@ -166,7 +166,7 @@ showpkg(const char *path, const char *cat, const char *pkg)
 {
 	char *mk, *comment = NULL;
 
-	if (!quiet) {
+	if (!qflag) {
 		(void)asprintf(&mk, "%s/%s/%s/Makefile", path, cat, pkg);
 		if (mk == NULL)
 			err(EXIT_FAILURE, "asprintf");
@@ -192,7 +192,6 @@ static int
 getcomment(const char *file, char **comment)
 {
 	char line[120], *p;
-	size_t len;
 	FILE *fp;
 
 	if ((fp = fopen(file, "r")) == NULL)
@@ -228,24 +227,15 @@ checkskip(const struct dirent *dp)
 }
 
 static int
-subcasestr(const char *s, const char *find)
+partialmatch(const char *s, const char *find)
 {
 	size_t len, n;
-	int match = 0;
 
 	len = strlen(find);
 	n = strlen(s) - len;
 
-	if (exact) {
-		if (cases)
-			match = (strcmp(find, s) == 0);
-		else
-			match = (strcasecmp(find, s) == 0);
-		return match;
-	}
-
 	do {
-		if (cases) {
+		if (cflag) {
 			if (strncmp(s, find, len) == 0)
 				return 1;
 		} else {
@@ -255,6 +245,15 @@ subcasestr(const char *s, const char *find)
 	} while (*++s != '\0' && n-- > 0);
 
 	return 0;
+}
+
+static int
+exactmatch(const char *s, const char *find)
+{
+	if (cflag)
+		return (strcmp(s, find) == 0);
+	else
+		return (strcasecmp(s, find) == 0);
 }
 
 static void
