@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 1998/07/20 15:51:29 tv Exp $
+# $NetBSD: Makefile,v 1.16 1998/07/31 14:32:15 kleink Exp $
 
 DISTNAME=	tiff-v3.4beta037
 PKGNAME=	tiff-3.4
@@ -10,7 +10,7 @@ EXTRACT_SUFX=	-tar.gz
 
 MAINTAINER=	tron@netbsd.org
 
-BUIL_DDEPENDS=	${PREFIX}/bin/libtool:../../devel/libtool
+BUILD_DEPENDS=	${PREFIX}/bin/libtool:../../devel/libtool
 DEPENDS+=	jpeg-6b:../../graphics/jpeg
 
 HAS_CONFIGURE=		yes
