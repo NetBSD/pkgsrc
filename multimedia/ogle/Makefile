@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/02/15 10:02:14 grant Exp $
+# $NetBSD: Makefile,v 1.5 2004/02/15 12:21:34 grant Exp $
 
 DISTNAME=	ogle-0.9.2
 PKGREVISION=	1
@@ -15,11 +15,13 @@ ONLY_FOR_PLATFORM+=	NetBSD-1.6[D-Z]*-powerpc NetBSD-1.[7-9]*-powerpc
 ONLY_FOR_PLATFORM+=	NetBSD-[2-9]*-powerpc
 ONLY_FOR_PLATFORM+=	NetBSD-1.6Z*-alpha NetBSD-[2-9]*-alpha
 ONLY_FOR_PLATFORM+=	Linux-*-*
+ONLY_FOR_PLATFORM+=	SunOS-*-*
 
 USE_BUILDLINK2=		yes
 USE_X11=		yes
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		yes
+LIBTOOL_OVERRIDE+=	${WRKSRC}/libtool
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
