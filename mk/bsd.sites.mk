@@ -1,4 +1,4 @@
-# $NetBSD: bsd.sites.mk,v 1.16 2004/10/22 13:32:18 ben Exp $
+# $NetBSD: bsd.sites.mk,v 1.17 2004/10/25 07:48:22 tron Exp $
 #
 # Default MASTER_SITES
 
@@ -202,7 +202,8 @@ MASTER_SITE_APACHE+=    \
 	ftp://apache.secsup.org/pub/apache/dist/ \
 	ftp://mirror.telentente.com/pub/apache/dist/ \
 	ftp://mirrors.midco.net/pub/apache.org/ \
-	http://nagoya.apache.org/mirror/
+	ftp://ftp.fu-berlin.de/unix/network/www/apache/ \
+	http://nagoya.apache.org/mirror/ \
 
 MASTER_SITE_DEBIAN+= \
 	http://ftp.debian.org/debian/ \
