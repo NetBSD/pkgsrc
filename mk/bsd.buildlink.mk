@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink.mk,v 1.56 2002/03/08 19:33:38 jlam Exp $
+# $NetBSD: bsd.buildlink.mk,v 1.57 2002/03/08 19:35:57 jlam Exp $
 #
 # This Makefile fragment is included by package buildlink.mk files.  This
 # file does the following things:
@@ -314,6 +314,7 @@ REPLACE_RPATH_SED+=	\
 
 .if defined(_USE_RPATH) && (${_USE_RPATH} == "yes")
 _CONFIGURE_POSTREQ+=	rpath-buildlink-subst
+.endif
 
 BUILDLINK_SUBST_MESSAGE.rpath=  \
 	"Removing rpath references to buildlink directories."
@@ -321,7 +322,6 @@ BUILDLINK_SUBST_FILES.rpath=    ${REPLACE_RPATH}
 BUILDLINK_SUBST_SED.rpath=      ${REPLACE_RPATH_SED}
 
 rpath-buildlink-subst: _BUILDLINK_SUBST_USE
-.endif
 
 # Fix files by removing buildlink directory references and library names.
 #
