@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 1998/11/04 21:42:11 mycroft Exp $
+# $NetBSD: Makefile,v 1.26 1998/11/04 22:00:59 mycroft Exp $
 #
 
 DISTNAME=	ghostscript-5.50
@@ -14,8 +14,8 @@ MAINTAINER=	explorer@netbsd.org
 HOMEPAGE=	http://www.cs.wisc.edu/~ghost/index.html
 
 BUILD_DEPENDS=	${BUILD_ROOT}/graphics/jpeg/${WRKDIR:T}/jpeg-6b:../../graphics/jpeg:extract \
-		libpng-1.0.2:../../graphics/png \
 		unzip:../../archivers/unzip
+DEPENDS=	png-1.0.2:../../graphics/png
 
 CONFLICTS=	ghostscript-5.10
 
