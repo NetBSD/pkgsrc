@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2002/01/23 19:45:22 tron Exp $
+# $NetBSD: Makefile,v 1.11 2002/01/24 12:22:54 tron Exp $
 
 DISTNAME=	Guppi-0.40.0
 PKGNAME=	${DISTNAME:S/G/g/}
@@ -28,4 +28,5 @@ post-install:
 
 .include "../../lang/python/pyversion.mk"
 .include "../../devel/libglade/buildlink.mk"
+.include "../../devel/readline/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
