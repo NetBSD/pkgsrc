@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4837 2004/02/15 08:02:47 itojun Exp $
+$NetBSD: CHANGES,v 1.4838 2004/02/15 12:13:11 markd Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -838,3 +838,8 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated xemacs-packages to 1.14 [minskim 2004-02-15]
 	Updated mrtg to 2.10.13 [martti 2004-02-15]
 	Updated chicken to 1.33 [itojun 2004-02-15]
+	Updated kdelibdocs3 to 3.2.0 [markd 2004-02-15]
+	Updated kdesdk3 to 3.2.0nb1 [markd 2004-02-15]
+	Updated kdevelop-base to 3.0.0 [markd 2004-02-15]
+	Updated c-cpp-reference to 2.0.2nb2 [markd 2004-02-15]
+	Updated kdevelop to 3.0.0 [markd 2004-02-15]
