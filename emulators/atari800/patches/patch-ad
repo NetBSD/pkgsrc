@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.1 2004/01/23 18:57:26 kristerw Exp $
+$NetBSD: patch-ad,v 1.2 2004/09/24 13:42:18 adam Exp $
 
---- configure.orig	Fri Jan 23 19:42:59 2004
-+++ configure	Fri Jan 23 19:43:29 2004
-@@ -1396,7 +1396,7 @@
+--- configure.orig	2004-08-08 08:57:17.000000000 +0000
++++ configure
+@@ -1373,7 +1373,7 @@ case "$target" in
          a8_target="UNKNOWN"
          ;;
  esac
@@ -11,7 +11,7 @@ $NetBSD: patch-ad,v 1.1 2004/01/23 18:57:26 kristerw Exp $
      echo
      echo "Usage: configure --target=<target> <other options>"
      echo
-@@ -1593,11 +1593,11 @@
+@@ -1573,11 +1573,11 @@ _ACEOF
          ;;
  esac
  
@@ -25,7 +25,7 @@ $NetBSD: patch-ad,v 1.1 2004/01/23 18:57:26 kristerw Exp $
      LDFLAGS="-s"
  fi
  
-@@ -4331,7 +4331,7 @@
+@@ -4317,7 +4317,7 @@ fi
  
  
  OBJS=
