@@ -18,6 +18,9 @@
 /* Define to 1 if you have the `btowc' function. */
 #undef HAVE_BTOWC
 
+/* Define to 1 if you have the <ctype.h> header file. */
+#undef HAVE_CTYPE_H
+
 /* Define to 1 if you have the declaration of `getenv', and to 0 if you don't.
    */
 #undef HAVE_DECL_GETENV
@@ -30,14 +33,29 @@
    don't. */
 #undef HAVE_DECL_UF_SETTABLE
 
+/* Define to 1 if you have the <dirent.h> header file. */
+#undef HAVE_DIRENT_H
+
 /* Define to 1 if you have the `endgrent' function. */
 #undef HAVE_ENDGRENT
 
 /* Define to 1 if you have the `endpwent' function. */
 #undef HAVE_ENDPWENT
 
+/* Define to 1 if you have the <errno.h> header file. */
+#undef HAVE_ERRNO_H
+
+/* Define to 1 if you have the <err.h> header file. */
+#undef HAVE_ERR_H
+
+/* Define to 1 if you have the <fcntl.h> header file. */
+#undef HAVE_FCNTL_H
+
 /* Define to 1 if you have the <fnmatch.h> header file. */
 #undef HAVE_FNMATCH_H
+
+/* Define to 1 if you have the <fts.h> header file. */
+#undef HAVE_FTS_H
 
 /* Define to 1 if you have the `getcwd' function. */
 #undef HAVE_GETCWD
@@ -54,11 +72,17 @@
 /* Define to 1 if you have the `util' library (-lutil). */
 #undef HAVE_LIBUTIL
 
+/* Define to 1 if you have the <limits.h> header file. */
+#undef HAVE_LIMITS_H
+
 /* Define to 1 if you have the `mbsrtowcs' function. */
 #undef HAVE_MBSRTOWCS
 
 /* Define to 1 if <wchar.h> declares mbstate_t. */
 #undef HAVE_MBSTATE_T
+
+/* Define to 1 if you have the <md5.h> header file. */
+#undef HAVE_MD5_H
 
 /* Define to 1 if you have the <memory.h> header file. */
 #undef HAVE_MEMORY_H
@@ -69,11 +93,29 @@
 /* Define to 1 if you have the `mkdir' function. */
 #undef HAVE_MKDIR
 
+/* Define to 1 if you have the <netdb.h> header file. */
+#undef HAVE_NETDB_H
+
 /* Define to 1 if you have the <pwd.h> header file. */
 #undef HAVE_PWD_H
 
+/* Define to 1 if you have the <rmd160.h> header file. */
+#undef HAVE_RMD160_H
+
+/* Define to 1 if you have the <sha1.h> header file. */
+#undef HAVE_SHA1_H
+
+/* Define to 1 if you have the <stdarg.h> header file. */
+#undef HAVE_STDARG_H
+
+/* Define to 1 if you have the <stddef.h> header file. */
+#undef HAVE_STDDEF_H
+
 /* Define to 1 if you have the <stdint.h> header file. */
 #undef HAVE_STDINT_H
+
+/* Define to 1 if you have the <stdio.h> header file. */
+#undef HAVE_STDIO_H
 
 /* Define to 1 if you have the <stdlib.h> header file. */
 #undef HAVE_STDLIB_H
@@ -105,17 +147,32 @@
 /* Define to 1 if `st_rdev' is member of `struct stat'. */
 #undef HAVE_STRUCT_STAT_ST_RDEV
 
+/* Define to 1 if you have the <sys/cdefs.h> header file. */
+#undef HAVE_SYS_CDEFS_H
+
+/* Define to 1 if you have the <sys/param.h> header file. */
+#undef HAVE_SYS_PARAM_H
+
+/* Define to 1 if you have the <sys/queue.h> header file. */
+#undef HAVE_SYS_QUEUE_H
+
 /* Define to 1 if you have the <sys/stat.h> header file. */
 #undef HAVE_SYS_STAT_H
 
 /* Define to 1 if you have the <sys/types.h> header file. */
 #undef HAVE_SYS_TYPES_H
 
+/* Define to 1 if you have the <time.h> header file. */
+#undef HAVE_TIME_H
+
 /* Define to 1 if you have the <unistd.h> header file. */
 #undef HAVE_UNISTD_H
 
 /* Define to 1 if you have the <util.h> header file. */
 #undef HAVE_UTIL_H
+
+/* Define to 1 if you have the <vis.h> header file. */
+#undef HAVE_VIS_H
 
 /* Define to 1 if you have the <wchar.h> header file. */
 #undef HAVE_WCHAR_H
