@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2003/10/27 21:48:27 cube Exp $
+# $NetBSD: Makefile,v 1.30 2004/04/11 17:51:20 snj Exp $
 #
 
 DISTNAME=	slrn-0.9.8.0
@@ -15,7 +15,7 @@ MAINTAINER=	mjl@NetBSD.org
 HOMEPAGE=	http://slrn.sourceforge.net/
 COMMENT=	Highly customizable threaded newsreader
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=--disable-inews --with-slrnpull --enable-spool \
@@ -31,10 +31,8 @@ CONFIGURE_ARGS+=--disable-inews --with-slrnpull --enable-spool \
 CONFIGURE_ENV+=	INSTALL=/usr/bin/install
 .endif
 
-.if ${OPSYS} == "Linux"
-LDFLAGS+=	-ldl
-.endif
+LDFLAGS.Linux+=	-ldl
 
-.include "../../devel/libslang/buildlink2.mk"
-.include "../../devel/gettext-lib/buildlink2.mk"
+.include "../../devel/libslang/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
