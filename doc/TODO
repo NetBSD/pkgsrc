@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2517 2004/11/27 10:55:35 gson Exp $
+$NetBSD: TODO,v 1.2518 2004/11/27 11:05:46 wiz Exp $
 
 Suggested new packages
 ======================
@@ -258,6 +258,14 @@ Suggested new packages
 	Blackdown JDK/JRE 1.4
 	1.4 version of Blackdown's Java for Linux
 	http://www.blackdown.org/java-linux/java2-status/jdk1.4-status.html
+
+	ntop3
+	Major version 3 of ntop
+	http://sourceforge.net/project/showfiles.php?group_id=17233&release_id=99153
+
+	ices-mp3-v2
+	Major version 2 of ices-mp3
+	http://www.icecast.org/ices.php
 
 
 Suggested package updates
@@ -607,7 +615,6 @@ Suggested package updates
 	o icdprog-0.5
 	o icecast-2.1.0
 	o icepref-2.3
-	o ices-mp3-2.0.0
 	o icewm-1.2.17
 	o icewm-gnome-1.2.17
 	o icewm-imlib-1.2.17
@@ -792,7 +799,6 @@ Suggested package updates
 	o nsca-1.2.0
 	o nsd-2.1.4
 	o nslint-2.1a3
-	o ntop-3.0
 	o nulib2-2.0.3
 	o nut-10.11
 	o nxtvepg-2.7.2
