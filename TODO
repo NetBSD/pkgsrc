@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6 2001/05/04 14:38:06 wiz Exp $
+$NetBSD: TODO,v 1.7 2001/05/04 15:02:15 wiz Exp $
 
 This file will eventually hold a current 'TODO' list for people
 working on pkgsrc.
@@ -16,6 +16,10 @@ packages TODO (Suggested new packages)
 	kde-i18n
 	Internationalisation package for KDE 2.
 	ftp://ftp.kde.org/pub/kde/stable/2.1/distribution/tar/generic/src
+
+	loserjabber
+	GTK application which allows posting of journal entries to http://www.livejournal.com
+	http://loserjabber.sourceforge.net/
 
 	qmail
 	secure, reliable, efficient, simple, and fast MTA for UNIX systems
