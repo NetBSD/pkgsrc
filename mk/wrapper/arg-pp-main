@@ -1,4 +1,4 @@
-# $NetBSD: arg-pp-main,v 1.1 2005/01/18 17:25:13 jlam Exp $
+# $NetBSD: arg-pp-main,v 1.2 2005/01/25 23:27:34 cube Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -51,6 +51,7 @@ case $arg in
 	$debug_log $wrapperlog "    (arg-pp-main) pre:  -l$lib"
 	prepend_queue argbuf "-L$dir"
 	$debug_log $wrapperlog "    (arg-pp-main) pre:  -L$dir"
+	argmatch=yes
 	;;
 /*/lib*.sl|/*/lib*.sl.[0-9]*)	# HP-UX
 	dir="${arg%/lib*}"
@@ -64,6 +65,7 @@ case $arg in
 	$debug_log $wrapperlog "    (arg-pp-main) pre:  -l$lib"
 	prepend_queue argbuf "-L$dir"
 	$debug_log $wrapperlog "    (arg-pp-main) pre:  -L$dir"
+	argmatch=yes
 	;;
 /*/lib*.dylib)  # Darwin      
 	dir="${arg%/lib*.dylib}"
@@ -76,6 +78,7 @@ case $arg in
 	$debug_log $wrapperlog "    (arg-pp-main) pre:  -l$lib"
 	prepend_queue argbuf "-L$dir"
 	$debug_log $wrapperlog "    (arg-pp-main) pre:  -L$dir"
+	argmatch=yes
 	;;
 ######################################################################
 # Remove extraneous comma in "-Wl,-R,/dir" and in "-Wl,-L,/dir".
