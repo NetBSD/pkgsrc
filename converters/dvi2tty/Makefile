@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2001/06/04 23:54:38 jtb Exp $
+# $NetBSD: Makefile,v 1.3 2001/07/10 23:14:16 fredb Exp $
 #
 
 DISTNAME=	dvi2tty
 PKGNAME=	dvi2tty-1.0
 CATEGORIES=	converters
-MASTER_SITES=	ftp://tug.ctan.org/pub/tex-archive/dviware/
+MASTER_SITES=	${MASTER_SITE_LOCAL}
+#MASTER_SITES=	ftp://tug.ctan.org/pub/tex-archive/dviware/
 
 MAINTAINER=	fredb@netbsd.org
 COMMENT=	Program for previewing DVI files
