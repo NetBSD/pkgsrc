@@ -1,6 +1,6 @@
 #!/bin/sh -e
 #
-# $Id: pkgchk.sh,v 1.34 2002/09/13 09:11:03 abs Exp $
+# $Id: pkgchk.sh,v 1.35 2002/09/13 11:45:03 abs Exp $
 #
 # TODO: Handle updates with dependencies via binary packages
 
@@ -300,7 +300,7 @@ fi
 
 # Hide PKG_PATH to avoid breakage in 'make' calls
 saved_PKG_PATH=$PKG_PATH
-unset PKG_PATH
+unset PKG_PATH || true
 
 test -n "$MAKE" || MAKE="@MAKE@"
 test -n "$MAKECONF" || MAKECONF="@MAKECONF@"
