@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:57:22 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/08/26 10:21:04 martti Exp $
 bin/xml-config
 include/gnome-xml/HTMLparser.h
 include/gnome-xml/HTMLtree.h
@@ -23,7 +23,7 @@ lib/libxml.a
 lib/libxml.la
 lib/libxml.so
 lib/libxml.so.9
-lib/libxml.so.9.16
+lib/libxml.so.9.17
 lib/xmlConf.sh
 lib/pkgconfig/libxml.pc
 share/gnome-xml/html/gnome-xml/DOM.gif
