@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/08/30 14:23:41 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/12/19 23:40:17 jmmv Exp $
 lib/X11/fonts/artwiz/anorexia.pcf
 lib/X11/fonts/artwiz/aqui.pcf
 lib/X11/fonts/artwiz/cure.pcf
@@ -6,7 +6,6 @@ lib/X11/fonts/artwiz/cursor.pcf
 lib/X11/fonts/artwiz/drift.pcf
 lib/X11/fonts/artwiz/edges.pcf
 lib/X11/fonts/artwiz/fkp.pcf
-lib/X11/fonts/artwiz/fonts.dir
 lib/X11/fonts/artwiz/gelly.pcf
 lib/X11/fonts/artwiz/glisp-bold.pcf
 lib/X11/fonts/artwiz/glisp.pcf
