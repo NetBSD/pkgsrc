@@ -1,5 +1,5 @@
 #!/bin/csh -f
-# $NetBSD: pkgconflict,v 1.1.1.1 2001/04/02 18:04:04 wennmach Exp $
+# $NetBSD: pkgconflict,v 1.2 2001/04/10 14:16:08 wennmach Exp $
 # 
 # pkgconflict: A script to find conflicting packages in pkgsrc
 # Author: Lex Wennmacher <wennmach@netbsd.org>
@@ -65,25 +65,26 @@ foreach dir ($BASEDIR/*)
 	echo processig $basename
         set contents=$dir/+CONTENTS
         if (-e $contents) then
-            setenv BASENAME $basename
-            setenv BASEDIR `grep "^@cwd" $contents | awk '{print $2}'`
-# do not break the following line
-            awk '/^[^@].*$/ {print ENVIRON["BASENAME"] "\t" ENVIRON["BASEDIR"] "/" $1}' \
+            awk '/^@cwd/	{cwd=$2} \
+                 /^@name/	{name=$2} \
+                 /^@ignore/	{skip=1} \
+                 /^[^@].*$/	{if (skip==1) skip=0; else print name "\t" cwd "/" $1}' \
                 $contents >> pkgfiles
-            grep "^@pkgcfl" $contents \
-                | awk '{print ENVIRON["BASENAME"] "\t" $2}' \
-                >> registered_conflicts
+            awk '/^@name/	{name=$2} \
+                 /^@pkgcfl/	{print name "\t" $2} \
+                 END {print name "\t" substr(name, 0, match(name, "-[^-]*$")) "*"}' \
+                $contents >> registered_conflicts
         endif
     endif
 end
 
 echo " "
 
-if (-e CFL-big) ci -l -t-version0 -m"script-based checkin" CFL-big
-rm -f CFL-big
+if (-e CFL-files) ci -l -t-version0 -m"script-based checkin" CFL-files
+rm -f CFL-files
 
-if (-e CFL-small) ci -l -t-version0 -m"script-based checkin" CFL-small
-rm -f CFL-small
+if (-e CFL-count) ci -l -t-version0 -m"script-based checkin" CFL-count
+rm -f CFL-count
 
 echo " "
 echo pkgconflict: Done processing packages `date`
@@ -94,48 +95,51 @@ set DATABASE=tmp.$$
 createdb $DATABASE
 psql $DATABASE << --EOI--
 create function
-    pkg_cmp(varchar, varchar)
+    pkg_cmp(text, text)
     returns bool
     as '$PREFIX/lib/dewey_cmp.so'
     language 'C';
 create operator ~~~ (
-    leftarg = varchar,
-    rightarg = varchar,
+    leftarg = text,
+    rightarg = text,
     procedure = pkg_cmp); 
 create table pkgfiles (
-    pkg varchar(40), file varchar(120));
+    pkg text, file text);
 copy pkgfiles from '`pwd`/pkgfiles';
 create table registered_conflicts (
-    pkg varchar(40), pkgpat varchar(40));
+    pkg text, pattern text);
 copy registered_conflicts from '`pwd`/registered_conflicts';
-\o CFL-big
-\qecho 'CFL-big table generated `date`'
+\o CFL-files
+\qecho 'CFL-files table generated `date`'
 \qecho 'This table contains:'
 \qecho '    a pair of conflicting packages (first 2 columns)'
 \qecho '    name of the common file        (third column)'
 \qecho ' '
 select
-    p1.pkg, p2.pkg, p1.file
-    from pkgfiles p1, pkgfiles p2, registered_conflicts r
-    where (p1.pkg <> p2.pkg)
-        and (p1.file = p2.file)
-        and (p1.pkg = r.pkg)
-        and not (p1.pkg ~~~ r.pkgpat)
-    order by 1 asc;    
-\o CFL-small
-\qecho 'CFL-small table generated `date`'
+    p1.pkg as pkg1, p2.pkg as pkg2, p1.file
+    from pkgfiles p1, pkgfiles p2
+    where (p1.file = p2.file)
+        and (not exists (
+            select
+                r.pkg
+                from registered_conflicts r
+                where (p1.pkg = r.pkg) and (p2.pkg ~~~ r.pattern)))
+    order by 1 asc;
+\o CFL-count
+\qecho 'CFL-count table generated `date`'
 \qecho 'This table contains:'
 \qecho '    a pair of conflicting packages (unique) (first 2 columns)'
-\qecho '    the number of conflicting files         (third column)'
+\qecho '    the count of conflicting files          (third column)'
 \qecho ' '
 select
     distinct on (p1.pkg, p2.pkg)
     p1.pkg, p2.pkg, count(p1.file)
-    from pkgfiles p1, pkgfiles p2, registered_conflicts r
-    where (p1.pkg <> p2.pkg)
-        and (p1.file = p2.file)
-        and (p1.pkg = r.pkg)
-        and not (p1.pkg ~~~ r.pkgpat)
+    from pkgfiles p1, pkgfiles p2
+    where (p1.file = p2.file)
+        and not exists (
+            select r.pkg from
+            registered_conflicts r
+            where (p1.pkg = r.pkg) and (p2.pkg ~~~ r.pattern))
     group by p1.pkg, p2.pkg
     order by 1 asc;    
 \o null
