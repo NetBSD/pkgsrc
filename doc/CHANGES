@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7374 2004/10/08 05:15:02 simonb Exp $
+$NetBSD: CHANGES,v 1.7375 2004/10/08 05:39:22 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4576,3 +4576,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated exim-exiscan to 4.43_28 [abs 2004-10-07]
 	Updated exim-html to 4.40 [abs 2004-10-07]
 	Updated adzap to 20040914 [simonb 2004-10-08]
+	Updated clamsmtp to 0.9.5 [xtraeme 2004-10-08]
