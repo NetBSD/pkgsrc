@@ -3,7 +3,7 @@
 # Date created:				19971214
 # Whom:					hubertf@netbsd.org
 #
-# $NetBSD: Makefile,v 1.1.1.1 1997/12/14 16:17:14 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 1997/12/18 02:44:51 mrg Exp $
 # FreeBSD Id: Makefile,v 1.47 1997/11/10 22:04:42 dima Exp
 #
 # Maximal ssh package requires YES values for
@@ -14,9 +14,9 @@ DISTNAME=       ssh-1.2.21
 CATEGORIES=	security net
 MASTER_SITES=   ftp://ftp.funet.fi/pub/unix/security/login/ssh/
 
-MAINTAINER=	hubertf@netbsd.org
+MAINTAINER=	mrg@eterna.com.au
 
-# You can set USA_RESIDENT appropriately in /etc/make.conf if this bugs you..
+# You can set USA_RESIDENT appropriately in /etc/mk.conf if this bugs you..
 .if !defined(USA_RESIDENT)
 USA_RESIDENT=	NO
 .endif
@@ -37,7 +37,7 @@ IS_INTERACTIVE=	YES
 
 GNU_CONFIGURE=	YES
 
-CONFIGURE_ARGS= --prefix=${PREFIX} --with-etcdir=${PREFIX}/etc
+CONFIGURE_ARGS= --prefix=${PREFIX} --with-etcdir=/etc
 
 #Uncomment if all your users are in their own group and their homedir
 #is writeable by that group.  Beware the security implications!
