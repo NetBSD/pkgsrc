@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1.1.1 2001/07/16 23:20:43 garbled Exp $
+--- Makefile.in.orig	Mon Jul 16 16:10:10 2001
++++ Makefile.in	Mon Jul 16 16:11:01 2001
+@@ -34,7 +34,7 @@
+ install-bin: $(EXES)
+ 	mkdir -p $(eprefix)/bin $(eprefix)/sbin
+ 	@INSTALL_PROGRAM@ @stripping@ $(EXES) $(eprefix)/sbin
+-	@INSTALL_PROGRAM@ $(SCRIPTS) $(eprefix)/bin
++	@INSTALL_SCRIPT@ $(SCRIPTS) $(eprefix)/bin
+ 
+ install: install-bin
+ 	mkdir -p @mandir@/man1 @mandir@/man8
