@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.971 2003/01/02 09:12:19 skrll Exp $
+$NetBSD: CHANGES,v 1.972 2003/01/02 09:36:41 wulf Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -28,3 +28,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated kdetoys3 to 3.0.5.1 [skrll 2003-01-02]
 	Updated kdeutils3 to 3.0.5.1 [skrll 2003-01-02]
 	Updated kdesdk3 to 3.0.5.1 [skrll 2003-01-02]
+	Updated geneweb to 4.09 [wulf 2003-01-02]
