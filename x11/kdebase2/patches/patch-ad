@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1.1.1 2001/03/14 16:03:11 skrll Exp $
+
+--- kdm/resource.c.orig	Mon Jan 22 12:10:47 2001
++++ kdm/resource.c
+@@ -140,7 +140,7 @@
+ #define DEF_RANDOM_FILE _PATH_MEM
+ #endif
+ #ifndef DEF_GREETER_LIB
+-#define DEF_GREETER_LIB "libKdmGreet.so"
++#define DEF_GREETER_LIB "libKdmGreet.la"
+ #endif
+ #ifndef DEF_PID_FILE
+ #  if defined(__FreeBSD__) || defined(__NetBSD__)

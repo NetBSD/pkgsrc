@@ -1,0 +1,44 @@
+$NetBSD: patch-ae,v 1.1.1.1 2001/03/14 16:03:12 skrll Exp $
+
+--- kdm/session.c.orig	Sun Feb 18 15:28:17 2001
++++ kdm/session.c
+@@ -77,10 +77,7 @@
+ #endif
+ 
+ #ifndef GREET_USER_STATIC
+-# include <dlfcn.h>
+-# ifndef RTLD_NOW
+-#  define RTLD_NOW 1
+-# endif
++#  include <ltdl.h>
+ #endif
+ 
+ #ifdef CSRG_BASED
+@@ -293,7 +290,7 @@
+     greet_user_rtn	greet_stat;
+     static GreetUserProc greet_user_proc = NULL;
+ #ifndef GREET_USER_STATIC
+-    void		*greet_lib_handle;
++    lt_dlhandle		greet_lib_handle;
+ #endif
+ 
+     Debug ("ManageSession %s\n", d->name);
+@@ -309,12 +306,15 @@
+     greet_user_proc = GreetUser;
+ #else
+     Debug("ManageSession: loading greeter library %s\n", greeterLib);
+-    greet_lib_handle = dlopen(greeterLib, RTLD_NOW);
++    LTDL_SET_PRELOADED_SYMBOLS();
++    lt_dlinit();
++    greet_lib_handle = lt_dlopen(greeterLib);
+     if (greet_lib_handle != NULL)
+-	greet_user_proc = (GreetUserProc)dlsym(greet_lib_handle, "GreetUser");
++	greet_user_proc = (GreetUserProc)lt_dlsym(greet_lib_handle, "GreetUser");
+     if (greet_user_proc == NULL)
+     {
+-	LogError("%s while loading %s\n", dlerror(), greeterLib);
++        Debug("ManageSession: lt_dlsym returned null\n");
++	LogError("%s while loading %s\n", lt_dlerror(), greeterLib);
+ 	exit(UNMANAGE_DISPLAY);
+     }
+ #endif

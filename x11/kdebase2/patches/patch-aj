@@ -1,0 +1,13 @@
+$NetBSD: patch-aj,v 1.1.1.1 2001/03/14 16:03:13 skrll Exp $
+
+--- ksysguard/ksysguardd/FreeBSD/ProcessList.c.orig	Mon Jan 22 12:12:05 2001
++++ ksysguard/ksysguardd/FreeBSD/ProcessList.c
+@@ -199,7 +199,7 @@
+ #if __FreeBSD_version >= 300000
+         ps->userTime = p.kp_proc.p_runtime / 10000;
+ #else
+-        ps->userTime = p.kp_proc.p_rtime.tv_sec*100+p.kp_proc.p_rtime.tv_usec/100
++        ps->userTime = p.kp_proc.p_rtime.tv_sec*100+p.kp_proc.p_rtime.tv_usec/100;
+ #endif
+         ps->sysTime  = 0;
+         ps->userLoad = p.kp_proc.p_pctcpu / 100;

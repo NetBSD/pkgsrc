@@ -1,0 +1,13 @@
+$NetBSD: patch-as,v 1.1.1.1 2001/03/14 16:03:15 skrll Exp $
+
+--- kwin/clients/mwm/Makefile.am.orig	Wed Dec 13 18:25:18 2000
++++ kwin/clients/mwm/Makefile.am
+@@ -4,7 +4,7 @@
+ kde_module_LTLIBRARIES = libkwinmwm.la
+ 
+ libkwinmwm_la_SOURCES = mwmclient.cpp
+-libkwinmwm_la_LIBADD = ../../kwin.la
++libkwinmwm_la_LIBADD = ../../libkwin.la
+ libkwinmwm_la_LDFLAGS = $(all_libraries) $(KDE_PLUGIN)
+ 
+ METASOURCES = AUTO

@@ -1,0 +1,13 @@
+$NetBSD: patch-ao,v 1.1.1.1 2001/03/14 16:03:13 skrll Exp $
+
+--- kwin/clients/kstep/Makefile.am.orig	Wed Dec 13 18:25:17 2000
++++ kwin/clients/kstep/Makefile.am
+@@ -4,7 +4,7 @@
+ kde_module_LTLIBRARIES = libkwinkstep.la
+ 
+ libkwinkstep_la_SOURCES = nextclient.cpp
+-libkwinkstep_la_LIBADD = ../../kwin.la
++libkwinkstep_la_LIBADD = ../../libkwin.la
+ libkwinkstep_la_LDFLAGS = $(all_libraries) $(KDE_PLUGIN)
+ 
+ METASOURCES = AUTO

@@ -1,0 +1,12 @@
+$NetBSD: patch-ax,v 1.1.1.1 2001/03/14 16:03:15 skrll Exp $
+
+--- nsplugins/pluginscan.cpp.orig	Sun Feb 18 15:28:44 2001
++++ nsplugins/pluginscan.cpp
+@@ -22,6 +22,7 @@
+   Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+ 
+ */
++#include <stdlib.h>
+ 
+ #include <qdir.h>
+ #include <qfile.h>

@@ -1,0 +1,13 @@
+$NetBSD: patch-ar,v 1.1.1.1 2001/03/14 16:03:15 skrll Exp $
+
+--- kwin/clients/modernsystem/Makefile.am.orig	Wed Dec 13 18:25:18 2000
++++ kwin/clients/modernsystem/Makefile.am
+@@ -4,7 +4,7 @@
+ kde_module_LTLIBRARIES = libkwinmodernsys.la
+ 
+ libkwinmodernsys_la_SOURCES = modernsys.cpp
+-libkwinmodernsys_la_LIBADD = ../../kwin.la
++libkwinmodernsys_la_LIBADD = ../../libkwin.la
+ libkwinmodernsys_la_LDFLAGS = $(all_libraries) $(KDE_PLUGIN)
+ 
+ METASOURCES = AUTO
