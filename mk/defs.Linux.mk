@@ -1,4 +1,4 @@
-# $NetBSD: defs.Linux.mk,v 1.47 2003/02/28 03:41:39 jschauma Exp $
+# $NetBSD: defs.Linux.mk,v 1.48 2003/03/04 14:50:11 seb Exp $
 #
 # Variable definitions for the Linux operating system.
 
@@ -50,6 +50,7 @@ ID?=		/usr/bin/id
 LDCONFIG?=	/sbin/ldconfig
 LN?=		/bin/ln
 LS?=		/bin/ls
+M4?=		/usr/bin/m4
 MKDIR?=		/bin/mkdir -p
 MTREE?=		${ZOULARISBASE}/sbin/mtree
 MV?=		/bin/mv
