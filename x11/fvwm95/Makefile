@@ -3,7 +3,7 @@
 # Date created:		Sa   1 Feb 1997 14:46:05 MET
 # Whom:			Andreas Klemm <andreas@klemm.gtn.com>
 #
-# $NetBSD: Makefile,v 1.4 1998/02/10 21:52:16 frueauf Exp $
+# $NetBSD: Makefile,v 1.5 1998/03/10 16:30:02 frueauf Exp $
 # FreeBSD: Makefile,v 1.17 1997/12/24 01:21:18 alex Exp
 #
 
@@ -27,6 +27,6 @@ MAN1=		fvwm95.1
 
 post-install:
 		@${INSTALL_MAN}	${WRKSRC}/fvwm/fvwm95.man \
-			$(PREFIX)/man/man1/fvwm95.1
+			${PREFIX}/man/man1/fvwm95.1
 
 .include <bsd.port.mk>
