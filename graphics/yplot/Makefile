@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/03/30 20:30:06 jtb Exp $
+# $NetBSD: Makefile,v 1.4 2001/03/31 18:28:25 jtb Exp $
 
 DISTNAME=		yplot-1.0.3
 CATEGORIES=		graphics math
@@ -15,6 +15,8 @@ EVAL_PREFIX+=		PLPLOT_PREFIX=plplot
 
 MAKEFILE=		Makefile.build
 
+# This looks bad, but the build process won't be able to find the PLplot
+# include files otherwise.
 pre-build:
 	${MKDIR} ${WRKSRC}/plplot
 	${CP} ${PLPLOT_PREFIX}/include/plplot/*.h ${WRKSRC}/plplot
