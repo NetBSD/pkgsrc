@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.2 2002/08/25 19:22:25 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2002/09/23 02:28:36 jlam Exp $
 
 .if !defined(BONOBO_BUILDLINK2_MK)
 BONOBO_BUILDLINK2_MK=	# defined
@@ -19,7 +19,8 @@ BUILDLINK_FILES.bonobo+=	lib/libbonobo-print.*
 BUILDLINK_FILES.bonobo+=	lib/libefs.*
 BUILDLINK_FILES.bonobo+=	share/idl/Bonobo*.idl
 
-CPPFLAGS+=	-I${BUILDLINK_PREFIX.bonobo}/include/gnome-1.0
+BUILDLINK_CPPFLAGS.bonobo=	-I${BUILDLINK_PREFIX.bonobo}/include/gnome-1.0
+CPPFLAGS+=			${BUILDLINK_CPPFLAGS.bonobo}
 
 .include "../../graphics/freetype2/buildlink2.mk"
 .include "../../graphics/gdk-pixbuf-gnome/buildlink2.mk"
