@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2000/12/12 01:31:05 wiz Exp $
+# $NetBSD: Makefile,v 1.65 2000/12/20 18:31:34 skrll Exp $
 #
 
     SUBDIR += antiword
@@ -14,6 +14,7 @@
     SUBDIR += glimpse
     SUBDIR += html
     SUBDIR += html2text
+    SUBDIR += icu
     SUBDIR += iso12083
     SUBDIR += iso8879
     SUBDIR += ispell
