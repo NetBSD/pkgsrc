@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 1999/05/06 23:38:36 tv Exp $
+# $NetBSD: Makefile,v 1.15 1999/05/17 18:31:21 bad Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/07/30 11:47:51 tg Exp 
 #
 
@@ -6,6 +6,7 @@
     SUBDIR += gdbm
 #    SUBDIR += gnats
     SUBDIR += gtksql
+    SUBDIR += jdb
 #    SUBDIR += msql
     SUBDIR += mysql-client
     SUBDIR += mysql-server
