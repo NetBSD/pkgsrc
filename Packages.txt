@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.286 2003/02/03 15:33:01 wiz Exp $
+# $NetBSD: Packages.txt,v 1.287 2003/02/23 10:45:39 wiz Exp $
 ###########################################################################
 
 			==========================
@@ -2171,7 +2171,9 @@ curses prior to 1.4Y.
 If ../../devel/ncurses/buildlink2.mk is included in a package's Makefile,
 then a curses library and headers with ncurses functionality are linked
 into ${BUILDLINK_DIR} at pre-configure time.  If ncurses is actually
-required, then define USE_NCURSES in the package's Makefile.
+required, then define USE_NCURSES in the package's Makefile:
+	USE_NCURSES=	# redrawwin
+The comment should indicate which functions are missing.
 
 
  10.21 Automated security check
