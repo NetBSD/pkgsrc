@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.5 1999/02/10 14:53:34 frueauf Exp $
+$NetBSD: patch-aa,v 1.5.18.1 2005/01/21 15:32:27 salo Exp $
 
---- unarj.h.orig	Wed Jun 23 06:07:20 1993
-+++ unarj.h	Wed Jan 21 15:03:39 1998
-@@ -104,9 +104,13 @@
+--- unarj.h.orig	2002-06-05 12:28:06.000000000 +0200
++++ unarj.h
+@@ -106,9 +106,13 @@
  #endif
  
  typedef unsigned char  uchar;   /*  8 bits or more */
