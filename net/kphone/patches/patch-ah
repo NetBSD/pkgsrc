@@ -1,18 +1,19 @@
-$NetBSD: patch-ah,v 1.1 2004/07/21 21:49:02 scw Exp $
+$NetBSD: patch-ah,v 1.2 2004/11/13 18:33:44 tron Exp $
 
---- kphone/dspoutoss.cpp.orig	2004-03-29 15:59:45.000000000 +0100
-+++ kphone/dspoutoss.cpp	2004-07-21 12:35:56.000000000 +0100
-@@ -6,6 +6,9 @@
- #include <fcntl.h>
- #include <unistd.h>
+--- kphone/dspoutoss.cpp.orig	2004-10-18 09:57:56.000000000 +0200
++++ kphone/dspoutoss.cpp	2004-11-13 19:15:54.000000000 +0100
+@@ -8,6 +8,10 @@
  #include <errno.h>
+ #include <qobject.h>
+ 
 +#ifdef __NetBSD__
 +#include <sys/audioio.h>
 +#endif
- 
++
  #include "dspoutoss.h"
  
-@@ -52,6 +55,7 @@
+ DspOutOss::DspOutOss( const QString &fileName )
+@@ -53,6 +57,7 @@
  	flags &= ~O_NONBLOCK;
  	fcntl( audio_fd, F_SETFL, flags );
  
@@ -20,7 +21,7 @@ $NetBSD: patch-ah,v 1.1 2004/07/21 21:49:02 scw Exp $
  	// keep fragsize less than 20ms !!
  	int frag = ( ( 32767 << 16 ) | 7 );
  	if( ioctl( audio_fd, SNDCTL_DSP_SETFRAGMENT, &frag ) ) {
-@@ -59,6 +63,7 @@
+@@ -60,6 +65,7 @@
  		printf( "ERROR: %s\n", lasterror.ascii() );
  		return false;
  	}
@@ -28,7 +29,7 @@ $NetBSD: patch-ah,v 1.1 2004/07/21 21:49:02 scw Exp $
  
  	int format = AFMT_S16_LE;
  
-@@ -108,6 +113,23 @@
+@@ -109,6 +115,23 @@
  			8000, rate, 100*((rate-8000)/8000.0) );
  	}
  
@@ -52,7 +53,7 @@ $NetBSD: patch-ah,v 1.1 2004/07/21 21:49:02 scw Exp $
  
  	audio_buf_info info;
  
-@@ -126,6 +148,14 @@
+@@ -127,6 +150,14 @@
  	}
  	audio_buf.resize( info.fragsize * sizeof( short ) );
  
@@ -67,7 +68,7 @@ $NetBSD: patch-ah,v 1.1 2004/07/21 21:49:02 scw Exp $
  	lasterror = QString::null;
  	devstate = DeviceOpened;
  	return true;
-@@ -149,6 +179,14 @@
+@@ -150,6 +181,14 @@
  	}
  	audio_buf.resize( info.fragsize * sizeof( short ) );
  
@@ -82,7 +83,7 @@ $NetBSD: patch-ah,v 1.1 2004/07/21 21:49:02 scw Exp $
  	lasterror = QString::null;
  	devstate = DeviceOpened;
  	return true;
-@@ -215,6 +253,7 @@
+@@ -216,6 +255,7 @@
  
  unsigned int DspOutOss::readableBytes( void )
  {
@@ -90,7 +91,7 @@ $NetBSD: patch-ah,v 1.1 2004/07/21 21:49:02 scw Exp $
  	audio_buf_info info;
  	struct timeval timeout;
  	fd_set read_fds;
-@@ -238,6 +277,18 @@
+@@ -239,6 +279,18 @@
  	}
  
  	return info.bytes;
