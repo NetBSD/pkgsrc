@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.14 2004/11/16 14:49:13 adam Exp $
+# $NetBSD: Makefile.common,v 1.15 2004/12/18 17:12:00 grant Exp $
 
 DISTNAME=	libao-0.8.5
 CATEGORIES=	audio devel
@@ -32,6 +32,9 @@ PLIST_SUBST+=		LIBSUN="@comment "
 .elif ${OPSYS} == "Interix"
 PLIST_SUBST+=		LIBOSS="@comment "
 PLIST_SUBST+=		LIBSUN="@comment "
+.elif ${OPSYS} == "Darwin"
+PLIST_SUBST+=		LIBOSS="@comment "
+PLIST_SUBST+=		LIBSUN="@comment "
 .else
 PLIST_SUBST+=		LIBOSS=""
 PLIST_SUBST+=		LIBSUN=""
@@ -43,4 +46,5 @@ CONFIGURE_ARGS+=	--disable-arts
 CONFIGURE_ARGS+=	--disable-esd
 
 .include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/ossaudio.buildlink3.mk"
