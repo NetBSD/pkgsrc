@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2001/12/03 07:55:44 jlam Exp $
+# $NetBSD: Makefile,v 1.51 2001/12/14 05:32:35 jlam Exp $
 
 .include "../../lang/perl5/Makefile.common"
 
@@ -117,13 +117,26 @@ post-patch:
 	done
 .endif
 
-# On platforms that build shared libraries, rebuild the perl binary as a
-# statically linked binary for speed optimization.  Performance increase
-# is only by word-of-mouth -- no actual benchmarks have been produced.
+# By default, on platforms that build shared libraries, rebuild the perl
+# binary as a statically-linked binary as a speed optimization.  Performance
+# increase is only by word-of-mouth -- no actual benchmarks have been
+# produced.  However, it has been remarked that the advantage of having a
+# statically-linked perl is pretty much non-existent on any platform with
+# any reasonable number of registers.  These platforms should be added to
+# the list below to bypass the build of the statically-linked perl.
 #
 .if (${MKPIC} == "yes")
+.  for _arch_ in mipsel mipseb
+.    if !empty(MACHINE_ARCH:M${_arch_})
+STATIC_PERL?=		NO
+.    endif
+.  endfor
+.endif
+STATIC_PERL?=		YES
+
+.if defined(STATIC_PERL) && (${STATIC_PERL} == "YES")
 STATIC_WRKDIR=		${WRKDIR}/static
-STATIC_MAKEFLAGS=	MKPIC=no
+STATIC_MAKEFLAGS=	MKPIC=no STATIC_PERL=NO
 STATIC_MAKEFLAGS+=	WRKDIR=${STATIC_WRKDIR}
 STATIC_MAKEFLAGS+=	ALL_TARGET=perl
 
@@ -132,9 +145,10 @@ post-build:
 .endif
 
 post-install:
-.if (${MKPIC} == "yes")
-	${RM} ${PREFIX}/bin/perl
+.if defined(STATIC_PERL) && (${STATIC_PERL} == "YES")
+	${RM} ${PREFIX}/bin/perl ${PREFIX}/bin/perl${PERL_DIST_VERS}
 	${INSTALL_PROGRAM} ${STATIC_WRKDIR}/${DISTNAME}/perl ${PREFIX}/bin/perl
+	${LN} -f ${PREFIX}/bin/perl ${PREFIX}/bin/perl${PERL_DIST_VERS}
 .endif
 	strip ${PREFIX}/bin/a2p
 	strip ${PREFIX}/bin/perl
@@ -149,7 +163,7 @@ post-install:
 	${INSTALL_DATA} ${WRKDIR}/bsd.perl.mk ${PREFIX}/share/mk/bsd.perl.mk
 
 test:
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} \
+	-@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} \
 		${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} test
 
 .include "../../mk/bsd.pkg.mk"
