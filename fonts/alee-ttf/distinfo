@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/07/23 00:32:16 minskim Exp $
+$NetBSD: distinfo,v 1.2 2004/07/30 05:23:37 minskim Exp $
 
-SHA1 (ttf-alee_0.3.tar.gz) = b11bb8ff1ab13ecef856cdd7c3d1647ed181f62e
-Size (ttf-alee_0.3.tar.gz) = 276821 bytes
+SHA1 (ttf-alee_0.4.tar.gz) = b12387cfa163e4d4a41cd71949905a7b7817f7bb
+Size (ttf-alee_0.4.tar.gz) = 276934 bytes
