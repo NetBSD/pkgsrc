@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2001/01/29 11:34:30 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2001/02/09 15:03:06 agc Exp $
 #
-.include "../../mk/bsd.prefs.mk"
 
-VERSION=1.1.8
+VERSION=	1.1.8
 PKGNAME=	jdk-${VERSION}
 CATEGORIES=     lang
 MASTER_SITES=   ftp://ftp.netbsd.org/pub/NetBSD/misc/java/i386/${VERSION}/ \
@@ -13,6 +12,8 @@ MAINTAINER=     jwise@netbsd.org
 HOMEPAGE=       http://www.quick.com.au/java/
 
 CONFLICTS=	blackdown-j* sun-j*
+
+LICENSE=	jdk-license
 
 .include "../../mk/bsd.prefs.mk"
 
