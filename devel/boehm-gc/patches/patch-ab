@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.9 2002/09/25 18:18:52 wiz Exp $
+$NetBSD: patch-ab,v 1.10 2003/05/22 16:46:50 jmmv Exp $
 
---- dyn_load.c.orig	Mon Sep  9 14:54:12 2002
-+++ dyn_load.c	Mon Sep  9 14:54:53 2002
-@@ -535,6 +535,16 @@
+--- dyn_load.c.orig	2003-05-09 03:45:10.000000000 +0200
++++ dyn_load.c	2003-05-14 00:28:16.000000000 +0200
+@@ -446,6 +446,16 @@
  
  #if defined(NETBSD)
  #  include <sys/exec_elf.h>
