@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7725 2004/11/05 21:38:08 jdolecek Exp $
+$NetBSD: CHANGES,v 1.7726 2004/11/05 22:21:30 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5107,3 +5107,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Added libvisual-bmp-0.1.0 [wiz 2004-11-05]
 	Added libvisual-plugins-0.1.7 [wiz 2004-11-05]
 	Added php5-xsl 5.0.2 [jdolecek 2004-11-05]
+	Updated dirmngr to 0.5.6nb2 [jmmv 2004-11-05]
+	Updated gnupg-devel to 1.9.11nb1 [jmmv 2004-11-05]
