@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2002/11/30 13:36:14 salo Exp $
+# $NetBSD: Makefile,v 1.31 2003/01/10 04:34:18 rh Exp $
 #
 
-DISTNAME=		jpilot-0.99
-PKGREVISION=		2
+DISTNAME=		jpilot-0.99.3
 CATEGORIES=		comms
 MASTER_SITES=		http://jpilot.org/
 
@@ -10,20 +9,21 @@ MAINTAINER=		rh@netbsd.org
 HOMEPAGE=		http://jpilot.org/
 COMMENT=		desktop organizer application for the palm pilot
 
-BUILD_USES_MSGFMT=	# defined
+BUILD_USES_MSGFMT=	YES
 
 CONFLICTS+=		jpilot-libplugin-[0-9]*
 
-USE_BUILDLINK2=		# defined
-USE_PKGLOCALEDIR=	# defined
-USE_X11=		# defined
+USE_BUILDLINK2=		YES
+USE_PKGLOCALEDIR=	YES
+USE_X11=		YES
 
-GNU_CONFIGURE=		# defined
+GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--with-gtk-prefix="${BUILDLINK_PREFIX.gtk}"
 CONFIGURE_ARGS+=	--with-pilot-prefix="${BUILDLINK_PREFIX.pilot-link-libs}"
+LDFLAGS+=		-export-dynamic
 
-USE_LIBTOOL=		# defined
-LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
+USE_LIBTOOL=		YES
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 DOCDIR=			${PREFIX}/share/doc/jpilot
 INCDIR=			${PREFIX}/include/jpilot
