@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2000/04/27 01:05:06 kim Exp $
+# $NetBSD: Makefile,v 1.20 2000/07/03 02:46:16 sommerfeld Exp $
 
-DISTNAME=	postfix-19991231-pl06
-PKGNAME=	postfix-19991231pl06
+DISTNAME=	postfix-19991231-pl08
+PKGNAME=	postfix-19991231pl08
 CATEGORIES=	mail
 MASTER_SITES=	ftp://postfix.cloud9.net/official/
 
