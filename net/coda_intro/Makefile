@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 1998/10/05 23:06:16 rvb Exp $
+# $NetBSD: Makefile,v 1.3 1998/10/09 21:21:33 rvb Exp $
 #
 
-DISTNAME=	coda-intro-4.6.5-2
-PKGNAME=	coda-intro-4.6.5.2
+DISTNAME=	coda-intro-4.6.6
+PKGNAME=	coda-intro-4.6.6.1
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.coda.cs.cmu.edu/pub/coda/doc/
 EXTRACT_SUFX=	.tgz
@@ -14,9 +14,10 @@ HOMEPAGE=	http://www.coda.cs.cmu.edu/
 #NO_CONFIGURE=
 
 do-build:
-	@${ECHO} "These are simple text files.  We are copying them to share/doc/coda-doc-.../info"
+	@${ECHO} "These are simple text files.
 
 do-install:
+	@${ECHO} "We will copy the files to ${PREFIX}/share/doc/coda-intro"
 	cd ${WRKSRC}; tar cf - doc | (cd ${PREFIX}/share; tar xvf -)
 
 .include "../../mk/bsd.pkg.mk"
