@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/08/22 20:27:24 rh Exp $
+@comment $NetBSD: PLIST,v 1.2 1999/09/03 17:58:03 tron Exp $
 bin/ggv
 etc/CORBA/servers/application-ps.gnorba
 share/locale/de/LC_MESSAGES/ggv.mo
@@ -25,4 +25,4 @@ share/gnome/help/ggv/C/docbook.css
 share/gnome/apps/Graphics/ggv.desktop
 @dirrm share/gnome/help/ggv/C
 @dirrm share/gnome/help/ggv
-@dirrm share/gnome/apps/Graphics
+
