@@ -1,4 +1,4 @@
-# $NetBSD: java-vm.mk,v 1.26 2004/06/03 20:19:08 abs Exp $
+# $NetBSD: java-vm.mk,v 1.27 2004/06/09 08:20:22 tron Exp $
 #
 # This Makefile fragment handles Java dependencies and make variables,
 # and is meant to be included by packages that require Java either at
@@ -264,7 +264,11 @@ SCRIPTS_ENV+=		JAVAC="jikes"
 _JDK_DEPENDENCY?=	${BUILDLINK_DEPENDS.${_PKG_JVM}}:${_JDK_PKGSRCDIR}
 _JRE_DEPENDENCY?=	${BUILDLINK_DEPENDS.${_JRE.${_PKG_JVM}}}:${_JRE_PKGSRCDIR}
 
+.if defined(_JAVA_HOME_DEFAULT)
+_JAVA_HOME=		${_JAVA_HOME_DEFAULT}
+.else
 EVAL_PREFIX+=		_JAVA_HOME=${_JAVA_PKGBASE.${_PKG_JVM}}
+.endif
 
 # We always need a run-time dependency on the JRE.
 .if defined(_JRE_PKGSRCDIR)
