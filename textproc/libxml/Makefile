@@ -1,9 +1,11 @@
-# $NetBSD: Makefile,v 1.2 1999/05/20 20:09:52 tron Exp $
+# $NetBSD: Makefile,v 1.3 1999/07/31 19:02:03 rh Exp $
 #
 
-DISTNAME=	libxml-1.0.0
+DISTNAME=	libxml-1.4.0
 CATEGORIES=	textproc devel
-MASTER_SITES=	http://gd.tuwien.ac.at/hci/GNOME/sources/libxml/
+MASTER_SITES=	http://gd.tuwien.ac.at/hci/GNOME/sources/libxml/ \
+		ftp://gnomeftp.wgn.net/pub/gnome/sources/libxml/ \
+		ftp://ftp.fr.gnome.org/pub/gnome/sources/libxml/
 
 MAINTAINER=	rh@netbsd.org
 HOMEPAGE=	http://rufus.w3.org/veillard/XML/xml.html
