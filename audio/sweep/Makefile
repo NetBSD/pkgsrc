@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2003/02/05 05:06:33 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2003/03/24 09:22:24 wiz Exp $
 #
 
 DISTNAME=	sweep-0.8.0
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sweep/}
 
@@ -32,7 +33,7 @@ MAKE_ENV+=		EXPORT_SYMBOLS_LDFLAGS=${EXPORT_SYMBOLS_LDFLAGS}
 .include "../../audio/libsamplerate/buildlink2.mk"
 .include "../../audio/libsndfile/buildlink2.mk"
 .include "../../audio/mad/buildlink2.mk"
-.include "../../audio/Speex/buildlink2.mk"
+.include "../../audio/speex/buildlink2.mk"
 .include "../../converters/libiconv/buildlink2.mk"
 .include "../../databases/tdb/buildlink2.mk"
 .include "../../devel/gettext-lib/buildlink2.mk"
