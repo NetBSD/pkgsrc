@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2003/04/11 11:34:37 tron Exp $
+# $NetBSD: Makefile,v 1.58 2003/04/20 14:17:48 rh Exp $
 
 DISTNAME=		gnome-utils-1.4.1.2
 PKGREVISION=		2
@@ -12,6 +12,8 @@ COMMENT=		Set of useful GNOME utilities and applications
 
 BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
 BUILD_DEPENDS+=		xml-i18n-tools-[0-9]*:../../textproc/xml-i18n-tools
+
+BUILDLINK_DEPENDS.gnome-panel=	gnome-panel<2.0
 
 CONFLICTS=		coreutils<=5.0
 
