@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2003/07/17 22:51:06 grant Exp $
+# $NetBSD: Makefile,v 1.8 2004/01/09 04:49:02 kim Exp $
 #
 
 DISTNAME=	dnstop-20021224
-PKGREVISION=	1
+PKGREVISION=	2
 WRKSRC=		${WRKDIR}
 CATEGORIES=	net
 MASTER_SITES=	http://dnstop.measurement-factory.com/src/
