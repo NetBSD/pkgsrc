@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.104 2002/11/10 18:20:44 hubertf Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.105 2002/11/14 09:44:34 jlam Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -86,11 +86,11 @@ CROSSBASE?=	${LOCALBASE}/cross
 # Possible: any path
 # Default: ${LOCALBASE}/cross
 
-X11BASE?=	/usr/X11R6
+#X11BASE?=	/usr/X11R6
 # Where X11 is installed on the system.
 # (and the default install path of X11 pkgs)
 # Possible: any path
-# Default: /usr/X11R6
+# Default: /usr/X11R6, or /usr/openwin for Solaris
 
 #MOTIFBASE?=	/usr/X11R6
 # Where Motif-2.0-compatible headers and libraries are installed
