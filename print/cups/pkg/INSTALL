@@ -1,6 +1,6 @@
 #! /bin/sh
 #
-# $NetBSD: INSTALL,v 1.4 2000/12/09 22:18:25 jlam Exp $
+# $NetBSD: INSTALL,v 1.5 2000/12/11 08:42:03 jlam Exp $
 
 PKGNAME=$1
 STAGE=$2
@@ -50,7 +50,7 @@ PRE-INSTALL)
 	if [ $? -eq 0 ]
 	then
 		echo "Creating '${USER}' user..."
-		${ADDUSER} -c "Cyrus User" -g ${GROUP} -s /bin/sh ${USER}
+		${ADDUSER} -c "CUPS User" -g ${GROUP} -s /bin/sh ${USER}
 		echo "Done."
 	else
 		echo "User '${USER}' already exists...proceeding."
