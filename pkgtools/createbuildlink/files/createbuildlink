@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-#	$NetBSD: createbuildlink,v 1.26 2004/09/26 23:48:09 rh Exp $
+#	$NetBSD: createbuildlink,v 1.27 2004/10/15 14:41:11 tv Exp $
 #
 # Copyright (c) 2002 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -39,7 +39,7 @@
 # Create an initial buildlink3.mk from a package's Makefile and PLIST
 #
 
-REV=`echo '$Revision: 1.26 $' | sed 's/\\$//g'`
+REV=`echo '$Revision: 1.27 $' | sed 's/\\$//g'`
 tmpdir=/tmp
 spacesintab=8
 makefile=Makefile
@@ -176,10 +176,18 @@ EOF
 ## buildlinked dependencies
 ##
 grep -l '^.include.*\.\.\/.*\/.*/buildlink3.mk\"' $makefile $commons \
-	>/dev/null 2>&1 && echo ""	# Be careful not to print duplicate \n
+	>/dev/null 2>&1 && cat <<EOF
+
+# XXX
+# XXX Uncomment and keep only the buildlink3 lines below which are directly
+# XXX needed for dependencies to compile, link, and run.  If this package
+# XXX provides a wrappered API or otherwise does not expose the APIs of the
+# XXX buildlink3 lines below to dependencies, remove them.
+# XXX
+EOF
 for i in $makefile $commons ; do
 	[ ! -f $i ] || grep '^.include.*\.\.\/.*\/.*/buildlink3.mk\"' $i |
-		egrep -v '/devel/pkgconfig/|/textproc/intltool/'
+		egrep -v '/devel/pkgconfig/|/textproc/intltool/' | sed 's,^,#,'
 done
 
 sed -f $sedrules <<EOF
