@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/02/05 09:01:00 tron Exp $
+# $NetBSD: Makefile,v 1.5 2001/02/11 23:06:02 jtb Exp $
 
 DISTNAME=		rlab-2.1.05
 CATEGORIES=		math
@@ -9,7 +9,7 @@ HOMEPAGE=		http://rlab.sourceforge.net/
 
 DEPENDS+=		boehm-gc>=5.3:../../devel/boehm-gc
 DEPENDS+=		readline>=4.0:../../devel/readline
-DEPENDS+=		superlu-[0-9]*:../../math/superlu
+
 BUILD_DEPENDS+=		${LOCALBASE}/bin/autoconf:../../devel/autoconf
 
 GNU_CONFIGURE=		YES
@@ -17,7 +17,6 @@ USE_FORTRAN=		YES
 
 EVAL_PREFIX+=		GC_PREFIX=boehm-gc
 CONFIGURE_ARGS+=	"--with-GC=${GC_PREFIX}"
-CONFIGURE_ARGS+=	"--enable-SUPERLU"
 
 PLIST_SRC=		${PKGDIR}/PLIST
 
@@ -26,10 +25,8 @@ PLIST_SRC=		${PKGDIR}/PLIST
 RLAB_PLOT_PKG?=		gnuplot
 .if (${RLAB_PLOT_PKG} == "plplot")
 DEPENDS+=		plplot>=5.0.1:../../graphics/plplot
-EVAL_PREFIX+=		PLPLOT_PREFIX=plplot TCL_PREFIX=tcl TK_PREFIX=tk
-CONFIGURE_ARGS+=	"--with-tk=${TK_PREFIX}"
+EVAL_PREFIX+=		PLPLOT_PREFIX=plplot
 CONFIGURE_ARGS+=	"--with-plplot=${PLPLOT_PREFIX}"
-CONFIGURE_ARGS+=	"--with-tcl=${TCL_PREFIX}"
 PLIST_SRC+=		${PKGDIR}/PLIST.plplot
 .elif (${RLAB_PLOT_PKG} == "plotmtv")
 DEPENDS+=		plotmtv-[0-9]*:../../graphics/plotmtv
@@ -44,6 +41,16 @@ PLIST_SRC+=		${PKGDIR}/PLIST.pgraf
 DEPENDS+=		gnuplot>=3.5:../../graphics/gnuplot
 CONFIGURE_ARGS+=	"--with-gnuplot=yes"
 PLIST_SRC+=		${PKGDIR}/PLIST.gnuplot
+.endif
+
+RLAB_USE_SUPERLU?=	YES
+.if (${RLAB_USE_SUPERLU} == YES)
+DEPENDS+=		superlu-[0-9]*:../../math/superlu
+CONFIGURE_ARGS+=	"--enable-SUPERLU"
+.endif
+
+.if defined(RLAB_PAGER)
+CONFIGURE_ENV+=		"PAGER=${RLAB_PAGER}"
 .endif
 
 pre-configure:
