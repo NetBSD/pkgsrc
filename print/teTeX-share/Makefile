@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/11/29 01:12:45 hubertf Exp $
+# $NetBSD: Makefile,v 1.11 2002/03/14 03:13:36 lukem Exp $
 #
 
 DISTNAME=	teTeX-texmf-1.0.2
@@ -34,7 +34,7 @@ do-install:
 		-X ${FILESDIR}/exclude \
 		-f ${DISTDIR}/${DIST_SUBDIR}/${DISTFILES}
 	@cd ${PREFIX}/share/texmf/tex/latex/base && \
-	  ${PATCH} < ${EXTRA_PATCH} && \
+	  ${PATCH} ${_PATCH_BACKUP_ARG} .orig < ${EXTRA_PATCH} && \
 	  ${RM} latex.ltx.orig
 
 .include "../../mk/bsd.pkg.mk"
