@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2004/02/14 17:21:37 jlam Exp $
+# $NetBSD: Makefile,v 1.56 2004/02/17 11:20:22 jlam Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1998/08/09 15:13:33 kuriyama Exp
 #
 
@@ -12,13 +12,12 @@ HOMEPAGE=		http://www.gnu.org/software/gettext/gettext.html
 COMMENT=		Tools for providing messages in different languages
 
 DEPENDS+=			gettext-m4-0.11.5:../../devel/gettext-m4
-BUILDLINK_DEPENDS.gettext=	gettext-lib-0.11.5
+BUILDLINK_DEPENDS.gettext+=	gettext-lib>=0.11.5
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
-USE_GNU_GETTEXT=	yes
 CONFIGURE_ARGS+=	--without-included-gettext
 
 INFO_FILES=		gettext.info
@@ -28,12 +27,12 @@ CONFIGURE_ENV+=		HAVE_GCJ_IN_PATH=
 CONFIGURE_ENV+=		HAVE_JAVAC_IN_PATH=
 CONFIGURE_ENV+=		HAVE_JIKES_IN_PATH=
 
-MAKE_ENV+=  OPSYS="${OPSYS}"
+MAKE_ENV+=  		OPSYS="${OPSYS}"
 
 TEST_TARGET=		check
 
 post-install:
-	cd ${WRKSRC}/intl; ${MAKE_PROGRAM} install-data
+	cd ${WRKSRC}/intl; ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} install-data
 
-.include "../../devel/gettext-lib/buildlink2.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
