@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.102 2003/12/12 04:26:36 xtraeme Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.103 2003/12/12 21:37:55 erh Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -117,7 +117,7 @@ CPPFLAGS+=	${FLAG}
 .  endif
 .endfor
 .for FLAG in ${_BLNK_LDFLAGS}
-.  if empty(LDFLAGS:M${FLAG})
+.  if empty(LDFLAGS:M${FLAG:C/:/\:/})
 LDFLAGS+=	${FLAG}
 .  endif
 .endfor
