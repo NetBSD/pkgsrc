@@ -1,11 +1,12 @@
-$NetBSD: distinfo,v 1.4 2001/05/22 12:23:28 wiz Exp $
+$NetBSD: distinfo,v 1.5 2003/04/27 17:45:30 cjep Exp $
 
 SHA1 (joe2.8.tar.Z) = b2846ac8469fbdbfc7428cc0baf3f874d564959c
 Size (joe2.8.tar.Z) = 322108 bytes
-SHA1 (patch-aa) = 19170144f58d33816198dca4038c1a91c4e914d6
-SHA1 (patch-ab) = a38742e02a443700753ece6ebc19da1b5792752b
-SHA1 (patch-ac) = bb3b2c874e688b0b5eda5396166f579dcccd797a
-SHA1 (patch-ad) = 1f27980091800279c220535c0ee75a5a1379b1d8
-SHA1 (patch-ae) = 094bed1da04f8549d63f8532f62c79af4ec91433
-SHA1 (patch-af) = 9382bdb7467a55c76ad63db5f59bc978940efdbd
-SHA1 (patch-ag) = 3cce5d9fe611f7469b79e713bc8bd25c8ea41369
+SHA1 (patch-aa) = e45c832ad593751af0be3f81fa73301bf389bc90
+SHA1 (patch-ab) = 0070f64c6d8c0ac26d6dce2032618265f7629931
+SHA1 (patch-ac) = c1ec2cea32a459b97362e429f35ff43a6b36cd48
+SHA1 (patch-ad) = 6269254fad1f54ecc9f6af4c0b32df53588f5564
+SHA1 (patch-ae) = d50e73849a2416d7300f9e410e40aa9bcf2e39c1
+SHA1 (patch-af) = ed937b1d648f629fbc23d33994fff8e16b3d4ee4
+SHA1 (patch-ag) = 675d5de283a8d38342e417839a1ee9dc43848f60
+SHA1 (patch-ah) = 30f8ac2d487bc42960e8b5c677b67c0da21ae1c5
