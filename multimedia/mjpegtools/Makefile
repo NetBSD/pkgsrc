@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/01/26 15:16:53 jmmv Exp $
+# $NetBSD: Makefile,v 1.4 2004/02/13 23:50:17 snj Exp $
 
 DISTNAME=	mjpegtools-1.6.1.93
 CATEGORIES=	multimedia
@@ -29,7 +29,7 @@ CONFIGURE_ARGS+=	--without-avifile
 .include "../../graphics/ImageMagick/buildlink2.mk"
 .include "../../graphics/jpeg/buildlink2.mk"
 #.include "../../multimedia/avifile/buildlink2.mk"
-# GTK+ support is disabled to avoid a dependancy on GTK+ when building GNOME2.
+# GTK+ support is disabled to avoid a dependency on GTK+ when building GNOME2.
 # This only disables the "glav" program.  If you really need it, please add an
 # external package for it.
 #.include "../../x11/gtk/buildlink2.mk"
