@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2000/11/09 20:14:48 mycroft Exp $
+# $NetBSD: Makefile,v 1.20 2001/01/01 05:54:22 wiz Exp $
 #
 
 DISTNAME=		gnome-pim-1.2.0
@@ -14,6 +14,7 @@ BUILD_DEPENDS+=		bison:../../devel/bison
 DEPENDS+=		gnome-core-*:../../x11/gnome-core
 
 USE_GMAKE=		# defined
+USE_LIBTOOL=		# defined
 USE_X11BASE=		# defined
 
 GNU_CONFIGURE=		# defined
