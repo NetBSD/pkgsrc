@@ -1,13 +1,31 @@
-$NetBSD: patch-aa,v 1.2 2002/07/07 14:36:42 taca Exp $
+$NetBSD: patch-aa,v 1.2.4.1 2003/04/20 12:24:13 grant Exp $
 
---- Makefile.in.orig	Fri Jun 21 10:28:27 2002
+--- Makefile.in.orig	2002-11-21 22:08:20.000000000 +0900
 +++ Makefile.in
-@@ -52,7 +52,7 @@
- CONFIGFILE = $(CONFIGDIR)/smb.conf
- LMHOSTSFILE = $(CONFIGDIR)/lmhosts
- DRIVERFILE = $(CONFIGDIR)/printers.def
--PASSWD_PROGRAM = /bin/passwd
-+PASSWD_PROGRAM = /usr/bin/passwd
- # This is where smbpasswd et al go
- PRIVATEDIR = @privatedir@
+@@ -99,6 +99,8 @@ FLAGS5 = $(FLAGS1) $(FLAGS2) $(FLAGS3) $
+ FLAGS  = $(ISA) $(FLAGS5) $(PASSWD_FLAGS)
+ FLAGS32  = $(ISA32) $(FLAGS5) $(PASSWD_FLAGS)
  
++PAM_NEEDS_LIBC = @PAM_NEEDS_LIBC@
++
+ WINBIND_PROGS = @WINBIND_TARGETS@
+ WINBIND_SPROGS = @WINBIND_STARGETS@
+ WINBIND_PAM_PROGS = @WINBIND_PAM_TARGETS@
+@@ -672,7 +674,7 @@ bin/libsmbclient.a: $(LIBSMBCLIENT_PICOB
+ 
+ bin/pam_smbpass.@SHLIBEXT@: $(PAM_SMBPASS_OBJ) bin/.dummy
+ 	@echo Linking shared library $@
+-	$(SHLD) @LDSHFLAGS@ -o $@ $(PAM_SMBPASS_OBJ) $(LDFLAGS) -lpam $(DYNEXP) $(LIBS) $(LDAPLIBS) -lc \
++	$(SHLD) @LDSHFLAGS@ -o $@ $(PAM_SMBPASS_OBJ) $(LDFLAGS) -lpam $(DYNEXP) $(LIBS) $(LDAPLIBS) $(PAM_NEEDS_LIBC) \
+ 		@SONAMEFLAG@`basename $@`
+ 
+ nsswitch/libnss_wins.@SHLIBEXT@: $(NSS_OBJ)
+@@ -696,7 +698,7 @@ nsswitch/libnss_winbind.@SHLIBEXT@: $(WI
+ 
+ nsswitch/pam_winbind.@SHLIBEXT@: $(PAM_WINBIND_OBJ)
+ 	@echo Linking $@
+-	@$(SHLD) @LDSHFLAGS@ -o $@ $(PAM_WINBIND_OBJ) \
++	@$(SHLD) @LDSHFLAGS@ -o $@ $(PAM_WINBIND_OBJ) $(LDFLAGS) $(DYNEXP) $(PAM_NEEDS_LIBC) \
+ 		@SONAMEFLAG@`basename $@`
+ 
+ bin/wbinfo: $(WBINFO_OBJ) $(PARAM_OBJ) $(LIB_OBJ) $(NOPROTO_OBJ) \
