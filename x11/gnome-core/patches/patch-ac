@@ -1,0 +1,33 @@
+$NetBSD: patch-ac,v 1.1.1.1 1998/10/07 19:45:26 agc Exp $
+
+Make this compile on NetBSD as well as FreeBSD.  (June 1995 was the
+release of 4.4BSD-lite).
+
+--- applets/modemlights/modemlights.c	1998/10/05 14:51:41	1.1
++++ applets/modemlights/modemlights.c	1998/10/05 15:03:55
+@@ -222,17 +222,17 @@
+ 	struct 	ppp_stats stats;
+ 
+ 	memset(&ifreq, 0, sizeof(ifreq));
+-#ifndef __FreeBSD__
+-	strncpy(ifreq.ifr_ifrn.ifrn_name, device_name, IFNAMSIZ);
+-#else
++#if (defined(BSD) && BSD >= 199506)
+ 	strncpy(ifreq.ifr_name, device_name, IFNAMSIZ);
+-#endif /* __FreeBSD__ */
++#else
++	strncpy(ifreq.ifr_ifrn.ifrn_name, device_name, IFNAMSIZ);
++#endif /* 4.4-BSD derived */
+ 	ifreq.ifr_ifru.ifru_data = (caddr_t)&stats;
+-#ifndef __FreeBSD__
+-	if ((ioctl(ip_socket,SIOCDEVPRIVATE,(caddr_t)&ifreq) < 0))
++#if (defined(BSD) && BSD >= 199506)
++	if ((ioctl(ip_socket,SIOCGPPPSTATS,(caddr_t)&ifreq) < 0))
+ #else
+-		if ((ioctl(ip_socket,SIOCGPPPSTATS,(caddr_t)&ifreq) < 0))
+-#endif /* __FreeBSD__ */
++	if ((ioctl(ip_socket,SIOCDEVPRIVATE,(caddr_t)&ifreq) < 0))
++#endif /* 4.4-BSD derived */
+ 			{
+ 				/* failure means ppp is not up */
+ 				*in = *out = 0;
