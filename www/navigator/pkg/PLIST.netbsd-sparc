@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST.netbsd-sparc,v 1.1 1999/08/13 21:24:12 abs Exp $
-lib/netscape/navigator-${NS_VERS}/netscape_nis
-lib/netscape/navigator-${NS_VERS}/dynfonts/libTrueDoc.so
-lib/netscape/navigator-${NS_VERS}/plugins/libnullplugin.so
-lib/netscape/navigator-${NS_VERS}/nls/C
-lib/netscape/navigator-${NS_VERS}/nls/nls.dir
-@dirrm lib/netscape/navigator-${NS_VERS}/dynfonts
-@dirrm lib/netscape/navigator-${NS_VERS}/nls

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2000/05/09 07:12:58 tron Exp $
+# $NetBSD: Makefile.common,v 1.10 2000/05/09 13:23:20 abs Exp $
 #
 # Common include file for communicator and navigator packages
 
@@ -19,6 +19,7 @@ LDAP_VERS=	30
 #	VENDOR_NAME	Only used in '128-bit key version' information message
 #
 .if ${OPSYS} == "SunOS" && ${MACHINE_ARCH} == "sparc"
+PLIST_ARCH=	solaris-sparc
 DISTUNAME=	sparc-sun-solaris2.5.1
 DIST_DIR_NAME=	supported/sunos551
 WRKNAME=	sparc-sun-solaris2.5.1
@@ -28,12 +29,23 @@ VENDOR_NAME=	Solaris 2.5.1
 .if !exists(/emul/osf1/sbin/loader)
 IGNORE=	"requires Digital UNIX libraries - see compat_osf1(8)"
 .endif
+PLIST_ARCH=	osf-alpha
 DISTUNAME=	alpha-dec-osf4.0
 DIST_DIR_NAME=	supported/dec_unix40
 WRKNAME=	alpha-dec-osf4.0
 VENDOR_NAME=	Tru64 UNIX
 #
+.elif (${MACHINE_ARCH} == "i386" && defined(NS_USE_BSDI))
+PLIST_ARCH=	bsdi-i386
+NS_VERS=	4.72
+LDAP_VERS=	40
+DISTUNAME=	x86-bsdi-bsd2
+DIST_DIR_NAME=	unsupported/bsdi21
+WRKNAME=	x86-bsdi-bsd2
+VENDOR_NAME=	BSD/OS 2.1
+#
 .elif (${MACHINE_ARCH} == "i386")
+PLIST_ARCH=	linux-i386
 NS_VERS=	4.72
 LDAP_VERS=	40
 DEPENDS=	suse_linux>=6.1:../../emulators/suse_linux
@@ -47,6 +59,7 @@ VENDOR_NAME=	Linux 2.2
 IGNORE=	"requires SunOS libraries - see compat_sunos(8)"
 .endif
 NS_VERS=	4.61
+PLIST_ARCH=	sunos-sparc
 DISTUNAME=	sparc-sun-sunos4.1.3_U1
 DIST_DIR_NAME=	unsupported/sunos413
 WRKNAME=	${DISTUNAME}
@@ -80,9 +93,9 @@ MOZILLA_HOME=	${PREFIX}/lib/netscape/${PKGNAME}
 NS_PLUGINS_DIR=	${PREFIX}/lib/netscape/plugins
 
 PLIST_SRC=	${PKGDIR}/PLIST.pre \
-		${PKGDIR}/PLIST.${LOWER_OPSYS}-${MACHINE_ARCH} \
+		${PKGDIR}/PLIST.${PLIST_ARCH} \
 		${PKGDIR}/PLIST.post
-PLIST_SUBST+=	NS_VERS=${NS_VERS} LDAP_VERS=${LDAP_VERS}
+PLIST_SUBST+=	NS_VERS=${NS_VERS} LDAP_VERS=${LDAP_VERS} BINNAME=${BINNAME}
 
 .if (${NS_ENCRYPTION} == "us")
 MASTER_SITES=

@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST.solaris-sparc,v 1.2 1999/10/01 10:11:03 agc Exp $
-lib/netscape/communicator-${NS_VERS}/dynfonts/libTrueDoc.so
-lib/netscape/communicator-${NS_VERS}/plugins/libnullplugin.so
-lib/netscape/communicator-${NS_VERS}/talkback/master.ini
-@dirrm lib/netscape/communicator-${NS_VERS}/dynfonts
-@dirrm lib/netscape/communicator-${NS_VERS}/talkback
+@comment $NetBSD: PLIST.solaris-sparc,v 1.3 2000/05/09 13:23:20 abs Exp $
+lib/netscape/${BINNAME}-${NS_VERS}/dynfonts/libTrueDoc.so
+lib/netscape/${BINNAME}-${NS_VERS}/plugins/libnullplugin.so
+lib/netscape/${BINNAME}-${NS_VERS}/talkback/master.ini
+@dirrm lib/netscape/${BINNAME}-${NS_VERS}/dynfonts
+@dirrm lib/netscape/${BINNAME}-${NS_VERS}/talkback
