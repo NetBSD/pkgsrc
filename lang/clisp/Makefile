@@ -1,16 +1,9 @@
-# $NetBSD: Makefile,v 1.22 2002/01/30 11:15:20 agc Exp $
+# $NetBSD: Makefile,v 1.23 2002/02/21 04:13:20 dillo Exp $
 
-DISTNAME=		clisp-2000-03-06
-PKGNAME=		clisp-20000306
-PKGREVISION=		1
+DISTNAME=		clisp-2.27
 CATEGORIES=		lang
-MASTER_SITES=		ftp://ftp2.cons.org/pub/lisp/clisp/source/ \
-			ftp://ftp.tu-darmstadt.de/pub/programming/languages/lisp/clisp/source/
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=clisp/}
 EXTRACT_SUFX=		.tar.bz2
-
-PATCHFILES=		clisp-2000-03-06-bugfix1.diff
-PATCH_SITES=		${MASTER_SITES}
-PATCH_DIST_STRIP=	-p2
 
 MAINTAINER=		mjl@netbsd.org
 HOMEPAGE=		http://clisp.cons.org/
@@ -18,22 +11,30 @@ COMMENT=		CLISP, a Common Lisp implementation
 
 NOT_FOR_PLATFORM=	*-*-alpha	# severe LP64 problems
 
-RESTRICTED=		"Contract notify author when selling for profit."
-NO_BIN_ON_CDROM=	${RESTRICTED}
-NO_SRC_ON_CDROM=	${RESTRICTED}
-
+USE_BUILDLINK_ONLY=	YES
+CONFIGURE_ENV+=		CC="${CC}" CFLAGS="${CFLAGS}" CPPFLAGS="${CPPFLAGS}"
 GNU_CONFIGURE=		YES
 WRKSRC=			${WRKDIR}/${DISTNAME}/src
 UNLIMIT_RESOURCES=	stacksize
+USE_LIBTOOL=		YES
+LIBTOOL_OVERRIDE=	${WRKSRC}/avcall/libtool
+LIBTOOL_OVERRIDE+=	${WRKSRC}/callback/vacall_r/libtool
+LIBTOOL_OVERRIDE+=	${WRKSRC}/callback/libtool
+LIBTOOL_OVERRIDE+=	${WRKSRC}/callback/trampoline_r/libtool
+LIBTOOL_OVERRIDE+=	${WRKSRC}/libiconv/libcharset/libtool
+LIBTOOL_OVERRIDE+=	${WRKSRC}/libiconv/libtool ${WRKSRC}/sigsegv/libtool
 
 do-configure:
 	cd ${WRKSRC}; \
-	(cd ..;${CONFIGURE_SCRIPT} --host=${MACHINE_GNU_PLATFORM} --prefix=${PREFIX}); \
+	(cd .. ; ${SETENV} ${CONFIGURE_ENV} \
+		${CONFIGURE_SCRIPT} --host=${MACHINE_GNU_PLATFORM} \
+			--prefix=${PREFIX}); \
 	./makemake --prefix=${LOCALBASE} --with-readline --with-gettext \
-	  --with-dynamic-ffi --fsstnd=netbsd >Makefile
+		--with-dynamic-ffi --fsstnd=netbsd >Makefile
 
-post-install:
-	${CHOWN} -R ${ROOT_USER}:${ROOT_GROUP} ${PREFIX}/lib/clisp
-	${CHMOD} -R a-w ${PREFIX}/lib/clisp
+pre-build:
+	cd ${WRKSRC}/avcall && ${MAKE}
+	cd ${WRKSRC}/callback && ${MAKE}
 
+.include "../../devel/readline/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
