@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.96 2002/01/08 09:36:52 agc Exp $
+# $NetBSD: Makefile,v 1.97 2002/02/05 04:13:20 jlam Exp $
 # FreeBSD Id: Makefile,v 1.47 1997/11/10 22:04:42 dima Exp
 #
 
@@ -31,8 +31,7 @@ GNU_CONFIGURE=		YES
 
 .include "../../mk/bsd.prefs.mk"
 
-# Use SSH_CONF_DIR from /etc/mk.conf, if defined; otherwise default to /etc
-SSH_CONF_DIR?=		/etc
+SSH_CONF_DIR=		${PKG_SYSCONFDIR}
 
 CONFIGURE_ARGS+=	--with-etcdir=${SSH_CONF_DIR}
 
@@ -196,7 +195,7 @@ post-install:
 	fi
 	${INSTALL_SCRIPT} ${WRKDIR}/sshd.sh ${PREFIX}/etc/rc.d/sshd
 
-BUILD_DEFS+=		USE_IDEA SSH_CONF_DIR SSH_SUID USE_RSAREF2
+BUILD_DEFS+=		USE_IDEA PKG_SYSCONFDIR SSH_SUID USE_RSAREF2
 BUILD_DEFS+=		LIBWRAP_FWD M68060 USE_SOCKS
 
 .include "../../mk/bsd.pkg.mk"
