@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1999/11/11 10:47:25 tron Exp $
+# $NetBSD: Makefile,v 1.4 1999/11/11 11:54:10 tron Exp $
 
 DISTNAME=	gdm-2.0beta4
 PKGNAME=	gdm-2.0b4
@@ -65,6 +65,7 @@ post-build:
 	${CHMOD} +x KDE Xsession
 
 post-install:
+	${CHMOD} +x ${WRKSRC}/config/gnomerc
 .for FILE in ${GDMCFGFILES}
 	@cd ${WRKSRC}/config; \
 	SOURCE=${FILE:C/:.*//}; \
