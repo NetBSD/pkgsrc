@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2002/09/06 16:01:38 zuntum Exp $
+# $NetBSD: Makefile,v 1.6 2003/02/14 19:37:07 wiz Exp $
 #
 
 DISTNAME=	prboom-2.2.3
+PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=prboom/}
 
@@ -14,5 +15,6 @@ GNU_CONFIGURE=		YES
 
 #CONFIGURE_ARGS+=	--enable-gl
 
+.include "../../audio/SDL-mixer/buildlink2.mk"
 .include "../../net/SDL_net/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
