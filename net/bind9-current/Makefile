@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/01/03 17:15:51 itojun Exp $
+# $NetBSD: Makefile,v 1.8 2001/01/18 13:12:30 itojun Exp $
 #
 
 DISTNAME=	bind-${BIND_VERSION}
@@ -7,6 +7,8 @@ MASTER_SITES=	ftp://ftp.isc.org/isc/bind9/${BIND_VERSION}/
 
 MAINTAINER=	hubertf@NetBSD.org
 HOMEPAGE=	http://www.isc.org/products/BIND/
+
+IGNORE=		"net/bind9 is newer"
 
 # IPv6 ready, automatically detected
 .include "../../mk/bsd.prefs.mk"
