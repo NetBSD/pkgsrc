@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3193 2003/09/01 18:23:06 seb Exp $
+$NetBSD: CHANGES,v 1.3194 2003/09/01 21:46:29 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3451,3 +3451,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Added php4-openssl 4.3.3 [jdolecek 2003-09-01]
 	Added php4-exif 4.3.3 [jdolecek 2003-09-01]
 	Updated ns to 2.26 [seb 2003-09-01]
+	Updated gftp to 2.0.15 [xtraeme 2003-09-01]
+	Added gftp-gtk1-2.0.15 [xtraeme 2003-09-01]
