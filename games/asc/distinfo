@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.5 2005/02/23 23:11:54 agc Exp $
+$NetBSD: distinfo,v 1.6 2005/03/07 14:40:07 wiz Exp $
 
-SHA1 (asc-source-1.15.2.1.tar.gz) = 9311d1b668f4a4151e720d76d605b21268f8b4af
-RMD160 (asc-source-1.15.2.1.tar.gz) = f40d2c2fe3050857f991ae74b883a9ad5720393d
-Size (asc-source-1.15.2.1.tar.gz) = 7987215 bytes
+SHA1 (asc-source-1.15.3.0.tar.gz) = 5cf1cef120f85b596bbf061bb239c8a2183b0196
+RMD160 (asc-source-1.15.3.0.tar.gz) = 14d01559ec3fa2685db44b14982f6db53eef2923
+Size (asc-source-1.15.3.0.tar.gz) = 12034077 bytes
 SHA1 (frontiers.mp3) = 7c6753fb5fe5e498fa780271da0a302c0619a1ca
 RMD160 (frontiers.mp3) = 4d2ec2ff647ef6ef66a2264465b86451bbba64f5
 Size (frontiers.mp3) = 4407769 bytes
