@@ -12,7 +12,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.36 2000/12/02 02:02:59 wiz Exp $
+# $NetBSD: pkglint.pl,v 1.37 2000/12/13 23:53:42 wiz Exp $
 #
 # This version contains some changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org> and
@@ -766,6 +766,11 @@ sub checkmakefile {
 		&perror("FATAL: USE_PKGLIBTOOL is deprecated, ".
 			"use USE_LIBTOOL instead.");
 	}
+	print "OK: checking MIRROR_DISTFILE.\n" if ($verbose);
+	if ($whole =~ /\nMIRROR_DISTFILE/) {
+		&perror("WARN: use of MIRROR_DISTFILE deprecated, ".
+			"use NO_BIN_ON_FTP and/or NO_SRC_ON_FTP instead.");
+	}
 	print "OK: checking NO_CDROM.\n" if ($verbose);
 	if ($whole =~ /\nNO_CDROM/) {
 		&perror("WARN: use of NO_CDROM discouraged, ".
@@ -916,7 +921,8 @@ EXTRACT_SUFX DISTFILES
 EOF
 	if ($osname eq "NetBSD") {
 	    push(@tocheck,"ONLY_FOR_ARCHS");
-	    push(@tocheck,"MIRROR_DISTFILE");
+	    push(@tocheck,"NO_SRC_ON_FTP");
+	    push(@tocheck,"NO_BIN_ON_FTP");
 	}
         &checkorder('DISTNAME', $tmp, @tocheck);
 
@@ -1296,9 +1302,10 @@ EOF
 	}
 
 	# next check commented out since NetBSD doesn't have pkgsrc/LEGAL
-	# check RESTRICTED/NO_CDROM/NO_PACKAGE
-	# print "OK: checking RESTRICTED/NO_CDROM/NO_PACKAGE.\n" if ($verbose);
-	# if ($committer && $tmp =~ /\n(RESTRICTED|NO_CDROM|NO_PACKAGE)[+?]?=/) {
+	# check RESTRICTED/NO_SRC_ON_CDROM/NO_BIN_ON_CDROM/NO_PACKAGE
+	# print "OK: checking RESTRICTED/NO_{SRC,BIN}_ON_CDROM/NO_PACKAGE.\n"
+	# if ($verbose);
+	# if ($committer && $tmp =~ /\n(RESTRICTED|NO_{SRC,BIN}_ON_CDROM|NO_PACKAGE)[+?]?=/) {
 	#	&perror("WARN: \"$1\" found. do not forget to update ".
 	#		"ports/LEGAL.");
 	# }
