@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4672 2004/02/03 12:43:26 recht Exp $
+$NetBSD: CHANGES,v 1.4673 2004/02/03 16:21:38 reed Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -559,3 +559,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added cairo-0.1.17 [recht 2004-02-03]
 	Updated mono to 0.30 [recht 2004-02-03]
 	Added libgdiplus-0.1 [recht 2004-02-03]
+	Added mini_httpd-1.19 [reed 2004-02-03]
