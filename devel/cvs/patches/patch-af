@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.3 2000/10/18 03:31:16 hubertf Exp $
+$NetBSD: patch-af,v 1.4 2000/10/21 19:29:06 wiz Exp $
 
 --- src/update.c.orig	Wed Jul 26 21:29:01 2000
 +++ src/update.c
@@ -22,3 +22,21 @@ $NetBSD: patch-af,v 1.3 2000/10/18 03:31:16 hubertf Exp $
  		}
  	    }
  
+@@ -2678,7 +2685,7 @@
+ 	    else
+ 	    {
+ 		/* If the size of `ftype' changes, fix the sscanf call also */
+-		char ftype[16];
++		char ftype[16+1];
+ 		if (sscanf (n->data, "%16s %lu", ftype,
+ 			    &dev_long) < 2)
+ 		    error (1, 0, "%s:%s has bad `special' newphrase %s",
+@@ -2756,7 +2763,7 @@
+ 	    else
+ 	    {
+ 		/* If the size of `ftype' changes, fix the sscanf call also */
+-		char ftype[16];
++		char ftype[16+1];
+ 		if (sscanf (n->data, "%16s %lu", ftype,
+ 			    &dev_long) < 2)
+ 		    error (1, 0, "%s:%s has bad `special' newphrase %s",
