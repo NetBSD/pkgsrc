@@ -1,10 +1,46 @@
 #!/bin/sh
-# $Id: pkg_tarup,v 1.4 2001/07/26 11:39:37 hubertf Exp $
+# $Id: pkg_tarup,v 1.5 2001/09/20 17:06:01 agc Exp $
 #
 # Tar up installed package
 #
 # (c) Copyright 2000 Hubert Feyrer <hubert@feyrer.de>
 #
+
+OS=`uname -s`
+
+case ${OS} in
+NetBSD)
+	awkprog=/usr/bin/awk
+	echoprog=echo
+	idprog=/usr/bin/id
+	suprog=/usr/bin/su
+	;;
+SunOS)
+	awkprog=/usr/bin/nawk
+	echoprog=/usr/ucb/echo
+	idprog=/usr/xpg4/bin/id
+	suprog=/usr/bin/su
+	;;
+Linux)
+	awkprog=/usr/bin/awk
+	echoprog=/bin/echo
+	idprog=/usr/bin/id
+	suprog=/bin/su
+	;;
+*)
+	echo "Unusual OS - thanks for using pkgsrc"
+	awkprog=awk
+	echoprog=echo
+	idprog=id
+	suprog=su
+	;;
+esac
+
+if [ `${idprog} -u` != 0 ]; then
+	${echoprog} "Becoming root@`/bin/hostname` to create a binary package"
+	${echoprog} -n "`${echoprog} ${suprog} | ${awkprog} '{ print $$1 }'` ";\
+	exec ${suprog} root -c "$0 $@"
+fi
 
 PKG_DBDIR=${PKG_DBDIR:-/var/db/pkg}
 PKGREPOSITORY=${PKGREPOSITORY:-/tmp}
@@ -20,7 +56,7 @@ then
 fi
 
 PKG=$rPKG
-echo "Taring up $PKG"
+echo "Creating binary package: $PKG"
 
 
 check_and_add() {
@@ -81,9 +117,9 @@ pkg_create \
 	-v \
 	-f ${PLIST} \
 	-l \
-	-p "`pkg_info -qp ${PKG} | head -1 | awk '{ print $2 }'`" \
-	-P "`pkg_info -qf ${PKG} | grep '^@pkgdep' | awk '{ print $2 }'`" \
-	-C "`pkg_info -qf ${PKG} | grep '^@pkgcfl' | awk '{ print $2 }'`" \
+	-p "`pkg_info -qp ${PKG} | ${awkprog} 'NR == 1 { print $2; exit }'`" \
+	-P "`pkg_info -qf ${PKG} | ${awkprog} '/^@pkgdep/ { print $2 }'`" \
+	-C "`pkg_info -qf ${PKG} | ${awkprog} '/^@pkgcfl/ { print $2 }'`" \
 	${PKGREPOSITORY}/${PKG}.${PKG_SUFX}
 
 rm -f ${PLIST}
