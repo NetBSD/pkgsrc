@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/12/24 09:53:50 jmmv Exp $
+# $NetBSD: Makefile,v 1.3 2005/01/18 22:10:29 tv Exp $
 #
 
 DISTNAME=	nroff-clone
@@ -11,9 +11,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.scn.rain.com/pub/text/
 COMMENT=	Text formatter (nroff-clone) written in awk
 
-BUILD_DEPENDS=	gsharutils>=4.2.1:../../archivers/gsharutils
-
-EXTRACT_CMD=	zcat ${DOWNLOADED_DISTFILE} | gunshar
+EXTRACT_CMD=	${DECOMPRESS_CMD.shar.Z} ${DOWNLOADED_DISTFILE} | ${SED} -e '1,/^\#!/d' | ${SH}
 WRKSRC=		${WRKDIR}
 
 SUBST_CLASSES+=		awflib
