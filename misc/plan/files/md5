@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.3 1999/07/15 00:15:24 mjl Exp $
+$NetBSD: md5,v 1.4 2000/08/22 09:44:15 rh Exp $
 
-MD5 (plan-1.8.2.tar.gz) = 7070567facebf8b1b5eeb38934fa4ad2
+MD5 (plan-1.8.4.tar.gz) = 85f793084fbb88c4bb128c1d835c6b30
