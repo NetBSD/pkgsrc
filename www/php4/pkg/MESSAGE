@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.5 2001/05/14 14:12:31 jlam Exp $
+$NetBSD: MESSAGE,v 1.6 2001/10/18 17:07:10 jlam Exp $
 
 Example configuration files suitable as a basis for a custom php.ini may
 be found at:
@@ -10,4 +10,11 @@ be found at:
 To process PHP scripts, you will need a PHP-enabled HTTP server.  You may
 either configure the HTTP server to use PHP as a CGI program, or install a
 PHP module for your HTTP server, e.g. ap-php4.
+
+Some additional packages you may wish to install are:
+
+	php-dba		DBM databases access
+	php-pcre	Perl-compatible regular expressions
+	php-session	session ID support
+	php-xml		expat XML parser
 ===========================================================================
