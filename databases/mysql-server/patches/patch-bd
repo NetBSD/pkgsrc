@@ -1,30 +1,34 @@
-$NetBSD: patch-bd,v 1.1.1.1 1999/05/06 23:37:01 tv Exp $
+$NetBSD: patch-bd,v 1.2 1999/08/03 20:30:41 bad Exp $
 
---- mit-pthreads/config/configure.in.orig	Mon Mar  9 11:30:59 1998
-+++ mit-pthreads/config/configure.in	Fri Apr 16 18:17:12 1999
-@@ -124,6 +124,12 @@
+--- mit-pthreads/config/configure.in.orig	Mon Mar  9 02:30:59 1998
++++ mit-pthreads/config/configure.in	Tue Aug  3 12:23:03 1999
+@@ -124,6 +124,14 @@
  name=$host_cpu-$host_os
  
  case $host in
++changequote(,)dnl
 +    alpha-*-netbsd1.3[H-Z]|alpha-*-netbsd1.4*)
 +	name=alpha-netbsd-1.3
 +	sysincludes=netbsd-1.1
 +	except="fork lseek pipe fstat"
 +	available_syscalls="sigsuspend sigprocmask"
 +	;;
++changequote([,])dnl
      alpha-*-netbsd1.3*)
  	name=alpha-netbsd-1.3
  	sysincludes=netbsd-1.1
-@@ -142,6 +148,17 @@
+@@ -142,6 +150,19 @@
  	  CFLAGS="$CFLAGS -std"
  	fi
  	;;
++changequote(,)dnl
 +    arm32-*-netbsd1.3[H-Z]|arm32-*-netbsd1.4*)
 +	name=arm32-netbsd-1.3
 +	sysincludes=netbsd-1.1
 +	except="fork pipe lseek ftruncate fstat"
 +	available_syscalls="sigsuspend sigprocmask"
 +	;;
++changequote([,])dnl
 +    arm32-*-netbsd1.3*)
 +	name=arm32-netbsd-1.3
 +	sysincludes=netbsd-1.1
@@ -33,16 +37,18 @@ $NetBSD: patch-bd,v 1.1.1.1 1999/05/06 23:37:01 tv Exp $
      hppa1.0-*-hpux10.20 | hppa1.1-*-hpux10.20)
  	name=hppa-hpux-10.20
  	sysincludes=hpux-10.20
-@@ -176,6 +193,17 @@
+@@ -176,6 +197,19 @@
  	AC_DEFINE(LD_LINKS_STATIC_DATA)
  	AC_DEFINE(BROKEN_SIGNALS)
  	;;
++changequote(,)dnl
 +    sparc-*-netbsd1.3[H-Z]|sparc-*-netbsd1.4*)
 +	name=sparc-netbsd-1.3
 +	sysincludes=netbsd-1.1
 +	except="pipe fork lseek ftruncate fstat"
 +	available_syscalls="sigprocmask sigsuspend"
 +	;;
++changequote([,])dnl
 +    sparc-*-netbsd1.3*)
 +	name=sparc-netbsd-1.3
 +	sysincludes=netbsd-1.1
@@ -51,20 +57,32 @@ $NetBSD: patch-bd,v 1.1.1.1 1999/05/06 23:37:01 tv Exp $
      sparc-*-netbsd1.0A | sparc-*-netbsd1.1* | sparc-*-netbsd1.2*)
  	name=sparc-sunos-4.1.3
  	sysincludes=netbsd-1.0
-@@ -201,6 +229,12 @@
+@@ -201,6 +235,14 @@
          syscall=i386-bsdi-2.0
          except="fork lseek ftruncate sigsuspend"
  		;;
++changequote(,)dnl
 +    i386-*-netbsd1.3[H-Z]|i386-*-netbsd1.4*)
 +	name=i386-netbsd-1.3
 +	sysincludes=netbsd-1.1
 +	except="fork lseek ftruncate pipe fstat"
 +	available_syscalls="sigsuspend sigprocmask"
 +		;;
++changequote([,])dnl
      i386-*-netbsd1.3*)
  	name=i386-netbsd-1.3
  	sysincludes=netbsd-1.1
-@@ -339,6 +373,16 @@
+@@ -223,6 +265,9 @@
+ 	;;
+     m68*-*-netbsd*)
+ 	name=m68000-netbsd
++	sysincludes=netbsd-1.1
++	except="lseek ftruncate pipe fstat"
++	available_syscalls="sigsuspend sigprocmask"
+ 	;;
+     i386-*-freebsd2.*)
+         name=i386-freebsd-2.0
+@@ -339,6 +384,16 @@
  AC_MSG_RESULT($pthreads_cv_timespec_in_time)
  if test $pthreads_cv_timespec_in_time = yes ; then
    AC_DEFINE(_OS_HAS_TIMESPEC)
