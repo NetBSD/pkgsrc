@@ -1,0 +1,15 @@
+$NetBSD: patch-ad,v 1.1 2004/01/11 21:22:41 jschauma Exp $
+
+--- CfgFileParser.cc.orig	2004-01-11 16:15:05.000000000 -0500
++++ CfgFileParser.cc	2004-01-11 16:15:08.000000000 -0500
+@@ -25,6 +25,10 @@
+ #include <string.h>
+ #include <malloc.h>
+ 
++#include <iostream>
++
++using namespace std;
++
+ 
+ // ## class SearchData ##
+ 
