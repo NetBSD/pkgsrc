@@ -1,17 +1,17 @@
-$NetBSD: patch-ae,v 1.3 2001/01/21 02:04:56 jtb Exp $
+$NetBSD: patch-ae,v 1.4 2001/01/21 03:11:55 jtb Exp $
 
---- /dev/null	Sun Dec 10 08:43:45 2000
+--- /dev/null	Sun Jan 21 02:47:21 2001
 +++ stalinc
 @@ -0,0 +1,12 @@
 +#!/bin/sh
 +
-+STALIN_INCLUDES=-I @PREFIX@/lib/stalin -I @PREFIX@/include \
++STALIN_INCLUDES="-I @PREFIX@/lib/stalin -I @PREFIX@/include \
 +    -I @PREFIX@/lib -I @GC_PREFIX@/include -I @GC_PREFIX@/lib \
 +    -I @X11BASE@/lib -I @X11BASE@/include \
-+    -I @MESA_PREFIX@/lib -I @MESA_PREFIX@/include
++    -I @MESA_PREFIX@/lib -I @MESA_PREFIX@/include"
 +
-+STALIN_OPTIONS= -Ob -Om -On -Or -Ot -d -d1 -du -dI -k \
++STALIN_OPTIONS="-Ob -Om -On -Or -Ot -d -d1 -du -dI -k \
 +		-copt -O2 -copt -fomit-frame-pointer \
-+		-copt -freg-struct-return
++		-copt -freg-struct-return"
 +
 +exec @PREFIX@/bin/stalin $STALIN_INCLUDES $STALIN_OPTIONS $@
