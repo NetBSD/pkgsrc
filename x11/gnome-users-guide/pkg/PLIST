@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/10/10 16:10:26 rh Exp $
+@comment $NetBSD: PLIST,v 1.2 1999/11/08 18:44:37 tron Exp $
 share/gnome/help/users-guide/C/figs/CPULoad.png
 share/gnome/help/users-guide/C/figs/MEMLoad.png
 share/gnome/help/users-guide/C/figs/NETLoad.png
@@ -153,5 +153,3 @@ share/gnome/help/users-guide/C/docbook.css
 @dirrm share/gnome/help/users-guide/C/figs
 @dirrm share/gnome/help/users-guide/C
 @dirrm share/gnome/help/users-guide
-@unexec rmdir %D/share/gnome/help 2>/dev/null || true
-@unexec rmdir %D/share/gnome 2>/dev/null || true
