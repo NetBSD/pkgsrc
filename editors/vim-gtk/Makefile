@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2000/02/15 09:26:19 agc Exp $
+# $NetBSD: Makefile,v 1.14 2000/02/15 15:44:15 agc Exp $
 
 .include		"../vim-share/Makefile.common"
 
@@ -12,7 +12,7 @@ DISTFILES+=		${DISTNAME}-rt${EXTRACT_SUFX}
 
 USE_X11=		yes
 
-CONFIGURE_ARGS+=	--enable-gui=gtk --with-tlib=ncurses
+CONFIGURE_ARGS+=	--enable-gui=gtk
 CPPFLAGS+=		-I${LOCALBASE}/include	# for ncurses' termcap.h
 LDFLAGS+=		-L${LOCALBASE}/lib	# for -lncurses
 CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
@@ -24,18 +24,26 @@ INSTALL_TARGET=		installvimbin
 
 .if ${OPSYS} == "NetBSD"
 DEPENDS+=		ncurses>=4.2:../../devel/ncurses
+CONFIGURE_ARGS+=	--with-tlib=ncurses
+.elif ${OPSYS} == "SunOS"
+CPPFLAGS=
+CONFIGURE_ARGS+=	--with-tlib=curses
 .endif
 
 post-install:
-	${LN} -fs vim.1 ${PREFIX}/man/man1/gvim.1
-	${LN} -fs vim.1 ${PREFIX}/man/man1/gview.1
-	${LN} -fs vim.1 ${PREFIX}/man/man1/rgvim.1
-	${LN} -fs vim.1 ${PREFIX}/man/man1/rgview.1
-	${LN} -fs vim ${PREFIX}/bin/gvim
-	${LN} -fs vim ${PREFIX}/bin/gview
-	${LN} -fs vim ${PREFIX}/bin/rgvim
-	${LN} -fs vim ${PREFIX}/bin/rgview
-	${LN} -fs vim ${PREFIX}/bin/rvim
-	${LN} -fs vim ${PREFIX}/bin/rview
+	${RM} -f ${PREFIX}/man/man1/gvim.1 ${PREFIX}/man/man1/gview.1
+	${RM} -f ${PREFIX}/man/man1/rgvim.1 ${PREFIX}/man/man1/rgview.1
+	${RM} -f ${PREFIX}/bin/gvim ${PREFIX}/bin/gview ${PREFIX}/bin/rgvim
+	${RM} -f ${PREFIX}/bin/rgview ${PREFIX}/bin/rvim ${PREFIX}/bin/rview
+	${LN} -s vim.1 ${PREFIX}/man/man1/gvim.1
+	${LN} -s vim.1 ${PREFIX}/man/man1/gview.1
+	${LN} -s vim.1 ${PREFIX}/man/man1/rgvim.1
+	${LN} -s vim.1 ${PREFIX}/man/man1/rgview.1
+	${LN} -s vim ${PREFIX}/bin/gvim
+	${LN} -s vim ${PREFIX}/bin/gview
+	${LN} -s vim ${PREFIX}/bin/rgvim
+	${LN} -s vim ${PREFIX}/bin/rgview
+	${LN} -s vim ${PREFIX}/bin/rvim
+	${LN} -s vim ${PREFIX}/bin/rview
 
 .include "../../mk/bsd.pkg.mk"
