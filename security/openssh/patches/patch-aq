@@ -1,0 +1,15 @@
+$NetBSD: patch-aq,v 1.1 2004/04/28 04:00:17 jlam Exp $
+
+--- config.h.in.orig	Tue Feb 24 01:22:45 2004
++++ config.h.in
+@@ -1039,4 +1039,10 @@
+ 
+ /* ******************* Shouldn't need to edit below this line ************** */
+ 
++#define SKEYCHALLENGE4(mp, name, ss, sslen) skeychallenge(mp, name, ss, sslen)
++#define SKEYCHALLENGE3(mp, name, ss, sslen) skeychallenge(mp, name, ss)
++#ifndef SKEYCHALLENGE
++#define SKEYCHALLENGE SKEYCHALLENGE3
++#endif
++
+ #endif /* _CONFIG_H */

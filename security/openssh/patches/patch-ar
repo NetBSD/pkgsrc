@@ -1,0 +1,13 @@
+$NetBSD: patch-ar,v 1.1 2004/04/28 04:00:17 jlam Exp $
+
+--- auth-skey.c.orig	Wed Jul  3 20:14:18 2002
++++ auth-skey.c
+@@ -47,7 +47,7 @@ skey_query(void *ctx, char **name, char 
+ 	int len;
+ 	struct skey skey;
+ 
+-	if (skeychallenge(&skey, authctxt->user, challenge) == -1)
++	if (SKEYCHALLENGE(&skey, authctxt->user, challenge, sizeof(challenge)) == -1)
+ 		return -1;
+ 
+ 	*name  = xstrdup("");
