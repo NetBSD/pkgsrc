@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.5 2001/07/01 22:59:33 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.6 2001/07/02 04:27:39 jlam Exp $
 #
 # This Makefile fragment is included by packages that use qt2-libs.
 #
@@ -27,11 +27,12 @@ BUILDLINK_FILES.qt2-libs+=	qt2/lib/libqt.*
 
 BUILDLINK_QTDIR=		${BUILDLINK_DIR}/qt2
 QTDIR=				${X11PREFIX}/qt2
-BUILDLINK_FIX_LIBTOOL_SED+=     -e "s|-L${BUILDLINK_QTDIR}/|-L${QTDIR}/|g"
+REPLACE_BUILDLINK_SED+=		-e "s|-I${BUILDLINK_QTDIR}/|-I${QTDIR}/|g"
+REPLACE_BUILDLINK_SED+=		-e "s|-L${BUILDLINK_QTDIR}/|-L${QTDIR}/|g"
 
 .include "../../devel/zlib/buildlink.mk"
-.include "../../graphics/jpeg/buildlink.mk"
 .include "../../graphics/Mesa/buildlink.mk"
+.include "../../graphics/jpeg/buildlink.mk"
 .include "../../graphics/mng/buildlink.mk"
 .include "../../graphics/png/buildlink.mk"
 
