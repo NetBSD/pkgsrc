@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2004/08/07 17:05:00 jlam Exp $
+# $NetBSD: options.mk,v 1.6 2004/08/11 06:51:31 jlam Exp $
 
 # Global and legacy options
 #
@@ -65,6 +65,11 @@ PATCHFILES+=		${IPV6TLS_PATCH}
 SITES_${IPV6TLS_PATCH}=	ftp://ftp.stack.nl/pub/postfix/tls+ipv6/1.25/
 PATCH_DIST_STRIP.${IPV6TLS_PATCH}=	-p1
 PLIST_SRC+=		${PKGDIR}/PLIST.inet6
+
+post-patch: darwin-inet6-fix
+darwin-inet6-fix:
+	@cd ${WRKSRC} && ${PATCH} ${PATCH_ARGS} \
+		< ${FILESDIR}/patch-darwin-inet6
 .endif
 
 ###
