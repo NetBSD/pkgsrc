@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/12/08 22:29:47 jtb Exp $
+# $NetBSD: Makefile,v 1.4 2001/01/26 09:47:23 wiz Exp $
 
 DISTNAME=	plplot-5.0.0
 CATEGORIES=	graphics
@@ -74,7 +74,7 @@ PLIST_SRC=	${PKGDIR}/PLIST.xwin
 .endif
 
 .if defined(PLPLOT_USE_TCL) && ${PLPLOT_USE_TCL} == "YES"
-DEPENDS+=	tcl-8.3.[0-9]:../../lang/tcl
+DEPENDS+=	tcl>=8.3.2:../../lang/tcl
 .if ${PLPLOT_USE_X11} == "NO"
 PLIST_SRC=	${PKGDIR}/PLIST.tcl
 .endif
