@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1560 2004/03/31 12:40:02 recht Exp $
+$NetBSD: TODO,v 1.1561 2004/03/31 14:46:24 skrll Exp $
 
 Suggested new packages
 ======================
@@ -281,7 +281,7 @@ Suggested package updates
 	o onyx-5.1.1
 	o openal-20040215
 	o openh323-1.11.2
-	o openoffice-1.1.1 [skrll]
+	o openoffice-1.1.1
 	o openssl-0.9.7d [jschauma]
 	o p5-CGI-3.00
 	o p5-CGI-Application-3.1
