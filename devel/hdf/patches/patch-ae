@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.1.1.1 2001/02/28 22:18:41 jtb Exp $
+$NetBSD: patch-ae,v 1.2 2001/03/09 22:47:44 jtb Exp $
 
---- /dev/null	Wed Feb 28 21:02:46 2001
+--- /dev/null	Fri Mar  9 22:24:22 2001
 +++ hdf/util/Makefile
-@@ -0,0 +1,83 @@
+@@ -0,0 +1,84 @@
 +UTILS= hdf24to8 hdfcomp hdfed hdfls hdfpack hdftopal hdftor8	\
 +	paltohdf r8tohdf ristosds vmake vshow hdf8to24		\
 +	hdf2jpeg jpeg2hdf fp2hdf hdfunpac vcompat
@@ -22,6 +22,8 @@ $NetBSD: patch-ae,v 1.1.1.1 2001/02/28 22:18:41 jtb Exp $
 +LDADD+= -ldf -ljpeg -lz -lm
 +
 +CPPFLAGS+= -Dunix ${JPEGINC} -I${.CURDIR}/../src
++
++NOGCCERROR= 1
 +
 +fp2hdf: fp2hdf.o
 +	${CC} ${CPPFLAGS} ${CFLAGS} $? ${LDFLAGS} ${LDADD} -o $@
@@ -80,9 +82,8 @@ $NetBSD: patch-ae,v 1.1.1.1 2001/02/28 22:18:41 jtb Exp $
 +
 +install: ${UTILS}
 +	@for f in ${UTILS}; do					\
-+		i="${BSD_INSTALL_PROGRAM} $$f ${BINDIR}";	\
-+		${ECHO} $$i; $$i;				\
++	${BSD_INSTALL_PROGRAM} $$f ${BINDIR};			\
 +	done
 +
 +clean:
-+	rm -f *.o ${UTILS} hdfed
++	rm -f *.o ${UTILS}

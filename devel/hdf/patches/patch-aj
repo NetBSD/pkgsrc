@@ -1,8 +1,8 @@
-$NetBSD: patch-aj,v 1.1.1.1 2001/02/28 22:18:41 jtb Exp $
+$NetBSD: patch-aj,v 1.2 2001/03/09 22:47:44 jtb Exp $
 
---- /dev/null	Wed Feb 28 02:22:03 2001
+--- /dev/null	Fri Mar  9 22:24:52 2001
 +++ mfhdf/ncgen/Makefile
-@@ -0,0 +1,32 @@
+@@ -0,0 +1,34 @@
 +PROG= ncgen
 +PROGNAME= hdfncgen
 +
@@ -24,6 +24,8 @@ $NetBSD: patch-aj,v 1.1.1.1 2001/02/28 22:18:41 jtb Exp $
 +LDFLAGS+= -Wl,-R{LIBDIR} ${MFHDFLIB} ${HDFLIB} ${JPEGLIB}
 +
 +CPPFLAGS+= -Dunix -DNDEBUG @SWAP@ ${MFHDFINC} ${HDFINC}
++
++NOGCCERROR= 1
 +
 +ncgenyy.c: ncgen.l
 +	${LEX} ${LFLAGS} ncgen.l
