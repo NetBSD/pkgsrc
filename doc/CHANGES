@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4750 2004/02/09 14:06:07 seb Exp $
+$NetBSD: CHANGES,v 1.4751 2004/02/09 14:48:25 cjep Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -729,3 +729,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated conglomerate to 0.7.11 [jmmv 2004-02-09]
 	Updated kdegraphics3 to 3.2.0nb1 [seb 2004-02-09]
 	Updated kde3 to 3.2.0nb3 [seb 2004-02-09]
+	Updated nawk to 20040207 [cjep 2004-02-09]
