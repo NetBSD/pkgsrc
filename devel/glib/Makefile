@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2001/06/22 02:49:11 jlam Exp $
+# $NetBSD: Makefile,v 1.39 2001/10/06 17:52:21 tron Exp $
 # FreeBSD Id: Makefile,v 1.2 1998/08/06 14:55:12 vanilla Exp
 #
 
@@ -66,7 +66,14 @@ post-configure:
 			-e "s|^\(#define.*GLIB_MICRO_VERSION\).*|\1	${GLIB_MICRO_VERSION}|" \
 			$${file}.fixme > $${file};			\
 		${RM} $${file}.fixme;					\
-	done
-	${CHMOD} +x ${WRKSRC}/config.status
+	done;								\
+	${CHMOD} +x config.status
+.if exists(/usr/include/sys/null.h)
+	@cd ${WRKSRC};							\
+	${MV} glib.h glib.h.fixme;					\
+	${SED} -e 's|^#define.NULL.*|#include <sys/null.h>|'		\
+	    glib.h.fixme >glib.h;					\
+	${RM} glib.h.fixme
+.endif
 
 .include "../../mk/bsd.pkg.mk"
