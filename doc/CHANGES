@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3764 2003/10/30 23:02:53 xtraeme Exp $
+$NetBSD: CHANGES,v 1.3765 2003/10/30 23:24:50 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4283,3 +4283,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated naim to 0.11.6.3 [wiz 2003-10-30]
 	Updated gnucash to 1.8.4nb2 [jmmv 2003-10-30]
 	Updated pyca to 0.6.6.20031021 [xtraeme 2003-10-30]
+	Updated dropbear to 0.38 [xtraeme 2003-10-30]
