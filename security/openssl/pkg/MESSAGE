@@ -1,0 +1,11 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 1999/04/30 15:19:13 tv Exp $
+
+If upgrading from SSLeay, you will need to copy your ssleay.cnf (used
+for creating certificate requests with "ca") into PREFIX/etc/openssl.cnf.
+
+If installing from scratch, you may want to take a look at
+PREFIX/etc/openssl.cnf.example, copy it to PREFIX/etc/openssl.cnf, and
+customize it.
+
+===========================================================================
