@@ -1,4 +1,4 @@
-# $NetBSD: mk.conf.example,v 1.201 2001/04/27 14:10:18 wiz Exp $
+# $NetBSD: mk.conf.example,v 1.202 2001/04/28 20:44:52 jlam Exp $
 #
 
 # Sample /etc/mk.conf file, which can be used to set specific values
@@ -844,7 +844,7 @@ PAPERSIZE=	A4
 # Default: NO
 
 #USE_GIF=
-# Enable GIF support in qt.  (disabled per default due to licensing
+# Enable GIF support in qt1.  (disabled per default due to licensing
 # problems; future revisions might have no support at all)
 # Also used by tiff-library to enable LZW compression support.
 # Possible: defined, not defined
