@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.127 2000/06/07 16:49:43 rh Exp $
+# $NetBSD: Makefile,v 1.128 2000/06/08 15:58:17 wennmach Exp $
 # FreeBSD Id: Makefile,v 1.117 1997/08/16 03:11:52 gpalmer Exp 
 #
 
 .include "../mk/bsd.prefs.mk"
 
     SUBDIR += archie
+    SUBDIR += arla
     SUBDIR += arpwatch
     SUBDIR += batchftp
     SUBDIR += bind4
