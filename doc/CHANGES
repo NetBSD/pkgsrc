@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.655 2002/12/01 19:45:37 seb Exp $
+$NetBSD: CHANGES,v 1.656 2002/12/01 21:50:31 seb Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3782,3 +3782,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated pwlib to 1.4.4 [jdolecek 2002-12-01]
 	Updated graphviz to 1.8.10 [seb 2002-12-01]
 	Updated sysbuild to 1.2 [jmmv 2002-12-01]
+	Updated ssldump to 0.9b3 [seb 2002-12-01]
