@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2670 2003/07/03 08:34:20 agc Exp $
+$NetBSD: CHANGES,v 1.2671 2003/07/03 10:22:59 agc Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2663,3 +2663,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated roundup to 0.5.8 [lukem 2003-07-03]
 	Updated adom to 1.1.1 [wiz 2003-07-03]
 	Added mad123-0.7 [agc 2003-07-03]
+	Added cpuid-3.3 [agc 2003-07-03]
