@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.2 2001/12/28 21:29:17 hubertf Exp $
+$NetBSD: patch-ab,v 1.3 2002/01/26 14:43:18 hubertf Exp $
 
---- doc/example_silcd.conf.in.orig	Thu Nov 29 21:23:19 2001
-+++ doc/example_silcd.conf.in	Sun Dec  9 23:47:33 2001
+--- doc/example_silcd.conf.in.orig	Mon Jan 14 23:03:37 2002
++++ doc/example_silcd.conf.in
 @@ -8,25 +8,27 @@
  # Configured ciphers.
  #
@@ -56,15 +56,17 @@ $NetBSD: patch-ab,v 1.2 2001/12/28 21:29:17 hubertf Exp $
  #
  [PKCS]
  rsa
-@@ -59,6 +63,7 @@
+@@ -59,30 +63,34 @@
  # run as root.
  #
  # Format: <user>:<group>
-+# Example: silcd:silcd
++# Example: nobody:nobody
  #
  [Identity]
- nobody:nobody
-@@ -67,22 +72,25 @@
+-nobody:nobody
++silcd:silcd
+ 
+ #
  # Server's administrative information.
  #
  # Format: <location>:<server type>:<admin's name>:<admin's email address>
@@ -106,24 +108,22 @@ $NetBSD: patch-ab,v 1.2 2001/12/28 21:29:17 hubertf Exp $
  
  #
  # Log files.
-@@ -107,12 +116,13 @@
+@@ -120,9 +129,13 @@
  #         warninglogile:<path>:<max byte size>
  #         errorlogile:<path>:<max byte size>
  #         fatallogile:<path>:<max byte size>
-+# Example: infologfile:/usr/local/silc/logs/silcd.log:10000
++# Example: quicklogs:no:
++#          flushdelay:10:
++#          infologfile:/usr/local/silc/logs/silcd.log:10000
++#          
  #
  [Logging]
- infologfile:@LOGSDIR@/silcd.log:10000
--#warninglogfile:@LOGSDIR@/silcd_warning.log:10000
--#errorlogfile:@LOGSDIR@/error.log:10000
--#fatallogfile:@LOGSDIR@/silcd_error.log:
-+warninglogfile:@LOGSDIR@/silcd_warning.log:10000
-+errorlogfile:@LOGSDIR@/error.log:10000
-+fatallogfile:@LOGSDIR@/silcd_error.log:
- 
- #
- # Connection classes.
-@@ -121,6 +131,7 @@
+-quicklogs:no:
++quicklogs:yes:
+ flushdelay:300:
+ infologfile:@LOGSDIR@/silcd.log:50000
+ warninglogfile:@LOGSDIR@/silcd_warnings.log:50000
+@@ -136,6 +149,7 @@
  # used to optimize the server and the connections.#
  #
  # Format: <class number>:<ping freq>:<connect freq>:<max links>
@@ -131,7 +131,7 @@ $NetBSD: patch-ab,v 1.2 2001/12/28 21:29:17 hubertf Exp $
  #
  [ConnectionClass]
  1:100:100:100
-@@ -130,6 +141,7 @@
+@@ -145,6 +159,7 @@
  # Configured client connections.
  #
  # Format: <remote host>:<auth method>:<auth data>:<port>:<class>
@@ -139,7 +139,7 @@ $NetBSD: patch-ab,v 1.2 2001/12/28 21:29:17 hubertf Exp $
  #
  # The <auth data> is either passphrase or file path to the public key
  # file.
-@@ -141,12 +153,13 @@
+@@ -156,12 +171,13 @@
  # Configured server administrator connections
  #
  # Format: <host>:<username>:<nickname>:<auth method>:<auth data>
@@ -154,7 +154,7 @@ $NetBSD: patch-ab,v 1.2 2001/12/28 21:29:17 hubertf Exp $
  
  #
  # Configured server connections.
-@@ -158,6 +171,10 @@
+@@ -173,6 +189,10 @@
  #
  # Format: <remote host>:<auth method>:<auth data>:<port>:
  #         <version ID>:<class>:<backup connection>
@@ -165,7 +165,7 @@ $NetBSD: patch-ab,v 1.2 2001/12/28 21:29:17 hubertf Exp $
  #
  # The <auth data> is either passphrase or file path to the public key
  # file. If the connection is backup connection then set the <backup 
-@@ -165,10 +182,6 @@
+@@ -180,10 +200,6 @@
  # set to value 1 then this server will be backup router.
  #
  [ServerConnection]
@@ -176,7 +176,7 @@ $NetBSD: patch-ab,v 1.2 2001/12/28 21:29:17 hubertf Exp $
  
  #
  # Configured router connections.
-@@ -181,6 +194,9 @@
+@@ -196,6 +212,9 @@
  # Format: <remote host>:<auth method>:<auth data>:<port>:<version ID>:
  #         <class>:<initiator>:<backup replace IP>:<backup replace port>:
  #         <local backup>
@@ -186,7 +186,7 @@ $NetBSD: patch-ab,v 1.2 2001/12/28 21:29:17 hubertf Exp $
  #
  # The <auth data> is either passphrase or file path to the public key
  # file. If you are the initiator of the connection then set the <initiator>
-@@ -195,9 +211,6 @@
+@@ -210,9 +229,6 @@
  # If the backup router is in other cell then set it to value 0.
  #
  [RouterConnection]
@@ -196,7 +196,7 @@ $NetBSD: patch-ab,v 1.2 2001/12/28 21:29:17 hubertf Exp $
  
  #
  # Denied connections.
-@@ -205,22 +218,28 @@
+@@ -220,22 +236,27 @@
  # These connections are denied to connect our server.
  #
  # Format: <remote host>:<port>:<comment>
@@ -220,15 +220,13 @@ $NetBSD: patch-ab,v 1.2 2001/12/28 21:29:17 hubertf Exp $
 +@ETCDIR@/motd.txt
  
  #
--# Pid File
-+# Pidfile
-+#
-+# Specify the pidfile where it will be written.
+ # Pid File
  #
 -# specify the pidfile where it will be written:
++# Specify the pidfile where it will be written.
+ #
 +# Format: <filename>
 +# Example: /var/run/silcd.pid
- #
  [pid]
 -@PIDFILE@
 +/var/run/silcd.pid
