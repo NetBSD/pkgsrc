@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8122 2004/11/28 23:58:31 atatat Exp $
+$NetBSD: CHANGES,v 1.8123 2004/11/29 00:08:18 tv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5606,3 +5606,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated shmux to 1.0b5 [wiz 2004-11-28]
 	Updated amavisd-new to 2.2.0 [wiz 2004-11-28]
 	Updated lsof to 4.73nb1 [atatat 2004-11-29]
+	Updated proxycheck to 0.49a [tv 2004-11-29]
