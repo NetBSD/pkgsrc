@@ -1,11 +1,17 @@
-$NetBSD: patch-ab,v 1.1.1.1 1999/10/28 19:50:19 kim Exp $
+$NetBSD: patch-ab,v 1.2 2000/10/07 19:24:14 kim Exp $
 
---- acconfig.h.orig	Sat Jun 19 22:47:34 1999
-+++ acconfig.h	Fri Oct 22 18:28:26 1999
-@@ -72,3 +72,6 @@
+These are needed so autoreconf will not barf.
+
+--- acconfig.h.orig	Tue Feb 29 17:28:29 2000
++++ acconfig.h	Fri Oct  6 20:04:29 2000
+@@ -83,3 +83,10 @@
+ #undef HAVE_SENDMAIL
  
- /* define if using the new linux 2.2.5 kernel (redhat6.0) */
- #undef HAVE_LINUX_2_2_5_IPV6
+ #undef PGP
 +
-+/* keep autoreconf happy */
++#undef FREEBSD4
++#undef HAVE_CP
 +#undef HAVE_GZIP
++#undef HAVE_IRRDCACHER
++#undef HAVE_MV
++#undef HAVE_WGET
