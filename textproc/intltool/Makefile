@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/02/11 00:48:58 xtraeme Exp $
+# $NetBSD: Makefile,v 1.16 2004/06/04 23:52:46 xtraeme Exp $
 #
 
 DISTNAME=		intltool-0.30
@@ -9,6 +9,8 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		jmmv@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Toolbox for internationalisation
+
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 DEPENDS=		p5-XML-Parser>=2.31nb1:../../textproc/p5-XML-Parser
 
