@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.1.1.2 1999/12/06 18:59:41 rh Exp $
+$NetBSD: md5,v 1.2 2000/12/14 05:08:05 hubertf Exp $
 
-MD5 (postmark-1_11.c) = 0a89d3849a5058651eb0eaf03e8230f2
+MD5 (postmark-1_13.c) = d6a208f56b140669da4cc11ef8501cdc
