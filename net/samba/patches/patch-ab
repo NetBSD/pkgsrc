@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.19 2002/12/13 08:37:11 martti Exp $
+$NetBSD: patch-ab,v 1.19.2.1 2003/03/23 01:23:57 jmc Exp $
 
---- configure.orig	Tue Dec 10 02:01:00 2002
-+++ configure	Fri Dec 13 08:33:48 2002
-@@ -12039,6 +12039,49 @@
+--- configure.orig	Fri Feb 28 15:56:18 2003
++++ configure	Sun Mar 16 09:01:58 2003
+@@ -12074,6 +12074,49 @@
  fi
  
  
@@ -52,7 +52,7 @@ $NetBSD: patch-ab,v 1.19 2002/12/13 08:37:11 martti Exp $
  #################################################
  # check for pam_smbpass support
  echo $ac_n "checking whether to use pam_smbpass""... $ac_c" 1>&6
-@@ -14408,6 +14451,7 @@
+@@ -14491,6 +14534,7 @@
  s%@TERMLDFLAGS@%$TERMLDFLAGS%g
  s%@ROFF@%$ROFF%g
  s%@DYNEXP@%$DYNEXP%g
