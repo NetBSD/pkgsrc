@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1 1998/06/04 20:41:09 tv Exp $
-lib/apache/mod_auth_cookie.so
+@comment $NetBSD: PLIST,v 1.2 1999/01/06 06:19:59 marc Exp $
+lib/httpd/mod_auth_cookie.so
