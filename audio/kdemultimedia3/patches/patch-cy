@@ -1,0 +1,17 @@
+$NetBSD: patch-cy,v 1.1 2003/11/08 16:05:49 jdolecek Exp $
+
+--- mpeglib/lib/mpegplay/copyFunctions.h.orig	2003-11-08 14:08:58.000000000 +0100
++++ mpeglib/lib/mpegplay/copyFunctions.h	2003-11-08 14:09:07.000000000 +0100
+@@ -17,9 +17,11 @@
+ #define MAX_NEG_CROP 32768
+ #define NUM_CROP_ENTRIES (2048+2*MAX_NEG_CROP)
+ 
+-#include <iostream.h>
++#include <iostream>
+ #include "../util/mmx/mmx.h"
+ 
++using namespace std;
++
+ extern "C" {
+ #include <string.h>
+ }
