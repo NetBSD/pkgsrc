@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6906 2004/08/16 16:20:49 recht Exp $
+$NetBSD: CHANGES,v 1.6907 2004/08/16 17:13:54 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3863,3 +3863,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated nail to 11.2 [cjep 2004-08-16]
 	Added glabels-2.0.1 [wiz 2004-08-16]
 	Updated zsh to 4.2.1 [recht 2004-08-16]
+	Added py-funge-0.2beta1 [minskim 2004-08-16]
