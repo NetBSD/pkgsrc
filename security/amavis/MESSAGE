@@ -1,5 +1,5 @@
-==========================================================================
-$NetBSD: MESSAGE,v 1.1 2001/11/01 01:16:29 zuntum Exp $
+===========================================================================
+$NetBSD: MESSAGE,v 1.2 2002/09/24 12:30:32 wiz Exp $
 
   AMaViS has now been installed on your system.  In order to integrate
   the virus scanner with sendmail, copy
@@ -20,4 +20,4 @@ Mlocal, P=${PREFIX}/sbin/scanmails, F=lsDFMAw5:/|@qrmn9, S=10/30, R=20/40,
 	T=DNS/RFC822/X-Unix,
 	A=scanmails -d $u
 
-==========================================================================
+===========================================================================

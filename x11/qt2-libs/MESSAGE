@@ -1,5 +1,5 @@
-======================================================================
-$NetBSD: MESSAGE,v 1.1 2001/10/31 22:11:28 zuntum Exp $
+===========================================================================
+$NetBSD: MESSAGE,v 1.2 2002/09/24 12:30:53 wiz Exp $
 
 To allow this package to coexist with other versions of Qt
 it has been installed in ${PREFIX}/qt2/{bin,include,lib,doc}.
@@ -17,4 +17,4 @@ To access Qt-2 man pages add ${PREFIX}/qt2/doc/man to your MANPATH
 environment variable.  Note that the Qt-2 man pages are installed
 here to avoid conflicts with man pages of other Qt versions.
 
-======================================================================
+===========================================================================

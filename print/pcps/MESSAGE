@@ -1,5 +1,5 @@
-======================================================================
-$NetBSD: MESSAGE,v 1.1 2001/10/31 23:27:56 zuntum Exp $
+===========================================================================
+$NetBSD: MESSAGE,v 1.2 2002/09/24 12:30:32 wiz Exp $
 
   The configuration file is set for US 8.5x11 inch paper
 and some other options you may wish to customize.
@@ -10,4 +10,4 @@ and some other options you may wish to customize.
 
   See ${PREFIX}/share/doc/pcps/license.doc for details.
 
-======================================================================
+===========================================================================
