@@ -1,15 +1,16 @@
-$NetBSD: patch-aa,v 1.5 2002/05/24 16:32:52 fredb Exp $
+$NetBSD: patch-aa,v 1.6 2002/07/03 11:57:13 lukem Exp $
 
---- models/upscommon.c.orig	Fri Mar 15 00:59:57 2002
+--- models/upscommon.c.orig	Fri May 17 15:27:55 2002
 +++ models/upscommon.c
-@@ -716,6 +716,10 @@
- 		return;
- 	}
+@@ -688,6 +688,11 @@ void info_ready(void)
+ {
+ 	int	ret;
  
 +#ifdef HAVE_MMAP
 +	/* sync external file representation before operating on the file */
 +	msync(shared_info, info_size, MS_INVALIDATE);
 +#endif
++
  	ret = rename(initfn, statefn);
  
  	if (ret != 0)
