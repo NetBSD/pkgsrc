@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/01/30 23:18:52 agc Exp $
+# $NetBSD: Makefile,v 1.3 1999/04/05 04:44:25 hubertf Exp $
 #
 
 DISTNAME=	vista
@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_LOCAL}
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://forrest.psych.unc.edu/research/vista.html
 
-DEPENDS+=	xlispstat-3.52.5:../../math/xlispstat
+DEPENDS+=	xlispstat-3.52.9:../../math/xlispstat
 
 WRKSRC=		${WRKDIR}/vista-5.0.5
 USE_X11BASE=	yes
