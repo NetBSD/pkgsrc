@@ -1,0 +1,6 @@
+pciutils is a set of utilities used to access the PCI
+bus. lspci(8) lists devices and information about their
+resources, and setpci(8) enables the user to control the
+PCI bus by writing to config registers. Additionnally,
+liblspci.a, the library upon which those utilities are
+built is provided.

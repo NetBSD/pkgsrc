@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/02/26 00:12:43 kristerw Exp $
+include/pciutils/config.h
+include/pciutils/header.h
+include/pciutils/pci.h
+lib/libpciutils.a
+man/man8/lspci.8
+man/man8/setpci.8
+man/man8/update-pciids.8
+sbin/lspci
+sbin/setpci
+sbin/update-pciids
+share/pciutils/README
+share/pciutils/pci.ids
+@dirrm share/pciutils
+@dirrm include/pciutils
