@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 1999/05/22 14:23:42 explorer Exp $
+# $NetBSD: Makefile,v 1.9 1999/08/28 16:46:44 kim Exp $
 # FreeBSD Id: Makefile,v 1.7 1997/12/16 19:42:17 vanilla Exp
 #
 
-DISTNAME=	mrtg-2.7.4b
+DISTNAME=	mrtg-2.8.8
 CATEGORIES=	net
 MASTER_SITES=	http://ee-staff.ethz.ch/~oetiker/webtools/mrtg/pub/ \
 		http://gd.tuwien.ac.at/infosys/network/tools/mrtg/pub/ \
@@ -16,11 +16,11 @@ MASTER_SITES=	http://ee-staff.ethz.ch/~oetiker/webtools/mrtg/pub/ \
 MAINTAINER=	tv@netbsd.org
 HOMEPAGE=	http://ee-staff.ethz.ch/~oetiker/webtools/mrtg/mrtg.html
 
-DEPENDS=	gd-1.3p1:../../graphics/gd
+DEPENDS=	gd-1.6.3:../../graphics/gd
 
 USE_PERL5=	YES
 GNU_CONFIGURE=	YES
-CONFIGURE_ARGS=	--with-gd-inc=${PREFIX}/include/gd --with-gd-lib=${PREFIX}/lib
+CONFIGURE_ARGS=	--with-gd-inc=${PREFIX}/include --with-gd-lib=${PREFIX}/lib
 
 post-build:
 	${SED} s#@PREFIX@#${PREFIX}#g <${FILESDIR}/mrtg.conf.example \
