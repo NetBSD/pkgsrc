@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: pgsql.sh,v 1.18 2002/10/19 22:26:35 jlam Exp $
+# $NetBSD: pgsql.sh,v 1.19 2003/07/16 10:35:15 abs Exp $
 #
 # PostgreSQL database rc.d control script
 #
@@ -24,8 +24,6 @@
 if [ -f /etc/rc.subr ]; then
 	. /etc/rc.subr
 fi
-
-rcd_dir=`@DIRNAME@ $0`
 
 name="pgsql"
 rcvar=$name
@@ -57,7 +55,7 @@ stop_cmd="pgsql_doit stop"
 pgsql_precmd()
 {
 	if [ ! -f ${pgsql_home}/data/base/1/PG_VERSION ]; then
-		$rcd_dir/pgsql initdb
+		pgsql_initdb
 	fi
 }
 
