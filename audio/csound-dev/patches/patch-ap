@@ -1,8 +1,21 @@
-$NetBSD: patch-ap,v 1.1 2003/12/13 20:26:03 ben Exp $
+$NetBSD: patch-ap,v 1.2 2004/03/15 20:52:07 ben Exp $
 
---- plugins/Makefile.orig	2003-02-25 19:24:01.000000000 -0800
+--- plugins/Makefile.orig	Tue Feb 25 19:24:01 2003
 +++ plugins/Makefile
-@@ -32,7 +32,7 @@ $(PLGNDIR):
+@@ -23,16 +23,18 @@ main.o: main.c
+ 	$(CC) $(CFLAGS) $(C_FLAGS) -c $< -o $@
+ 
+ %-32.o: %.c
+-	$(CC) $(CFLAGS) $(C_FLAGS) -UMYFLT -DMYFLT=float -c $< -o $@
++	$(CC) `echo $(CFLAGS) $(C_FLAGS) | sed s/MYFLT=double/MYFLT=float/g` \
++		-c $< -o $@
+ 
+ %-64.o: %.c
+-	$(CC) $(CFLAGS) $(C_FLAGS) -UMYFLT -DMYFLT=double -c $< -o $@
++	$(CC) `echo $(CFLAGS) $(C_FLAGS) | sed s/MYFLT=float/MYFLT=double/g` \
++		-c $< -o $@
+ 
+ $(PLGNDIR):
  	mkdir -p -m 0755 $@
  
  install: $(PLUGIN) $(PLGNDIR)
