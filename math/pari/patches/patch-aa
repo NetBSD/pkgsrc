@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/03/07 20:57:51 jtb Exp $
+$NetBSD: patch-aa,v 1.2 2001/03/20 13:49:35 jtb Exp $
 
 --- Configure.orig	Mon Nov 13 14:35:43 2000
 +++ Configure
@@ -49,7 +49,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/03/07 20:57:51 jtb Exp $
 +	    alpha)      arch=alpha;;
 +	    hp300)      arch=hppa;;
 +	    i386)       arch=ix86;;
-+	    sun3)       arch=m64k;;
++	    sun3)       arch=m68k;;
 +	    *)          arch=none;;
 +	    esac;;
    sunos)    case "$3" in 5*) osname=solaris;; esac
@@ -197,6 +197,30 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/03/07 20:57:51 jtb Exp $
    *)         LD=$CC; LDFLAGS=$cflags ;;
  esac
  
+@@ -969,7 +906,7 @@
+     hpux-*)  DLSUFFIX=sl ;;
+     irix-*)  DLSUFFIX=so ;;
+     sunos-*) DLSUFFIX=so; somake=.`echo $version| sed 's/\.//g'`.$patch ;;
+-    linux-*|solaris-*|*-alpha)
++    linux-*|solaris-*)
+                DLSUFFIX=so; somake=.$version; sodest=.$patch ;;
+     freebsd-*)
+                if test $PORTOBJFORMAT = "elf"; then
+@@ -1013,10 +950,10 @@
+       freebsd-*)  DLLDFLAGS="-Bshareable -x" ;;
+       linux-*)    DLLDFLAGS="-shared -soname \$@" ;;
+       irix-*)     DLLDFLAGS="-shared -elf -no_unresolved -all" ;;
+-      *-alpha)    DLLDFLAGS="-shared"; EXTRADLLDFLAGS='${LIBS}'
+-         case "$optimization" in
+-           full) DLLDFLAGS="$DLLDFLAGS -O3" ;;
+-         esac;;
++#      *-alpha)    DLLDFLAGS="-shared"; EXTRADLLDFLAGS='${LIBS}'
++#         case "$optimization" in
++#           full) DLLDFLAGS="$DLLDFLAGS -O3" ;;
++#         esac;;
+       sunos-*)    DLLDFLAGS="-assert nodefinitions" ;;
+       solaris-*)  DLLDFLAGS="-G -h \$@" ;;
+       *)          DLLD=;;
 @@ -1156,7 +1093,7 @@
  dflt=$prefix/man/man1; . ./myread; mandir=$ans
  
