@@ -1,0 +1,126 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1998/10/21 19:59:30 garbled Exp $
+now/include/glib/debug.h
+now/include/glib/idle.h
+now/include/glib/perf.h
+now/include/glib/types.h
+now/include/glib.h
+now/include/glib_idle.h
+now/include/glib_perf.h
+now/include/glib_stat.h
+now/lib/perl-lib/Time/CTime.pm
+now/lib/perl-lib/Time/DaysInMonth.pm
+now/lib/perl-lib/Time/JulianDay.pm
+now/lib/perl-lib/Time/ParseDate.pm
+now/lib/perl-lib/Time/Timezone.pm
+now/lib/perl-lib/set.pl
+now/lib/libglunix.a
+now/lib/libglunix.so.1.0
+now/bin/${MACHINE_ARCH}-${OPSYS}-tcp/master
+now/bin/${MACHINE_ARCH}-${OPSYS}-tcp/daemon
+now/bin/GLUnix-bin
+now/bin/GLUnix-bin-script
+now/bin/glupart
+now/bin/run_glunix
+now/bin/S99gluguard-admin
+now/bin/S99gluguard-d
+now/bin/S99gluguard-m
+now/bin/gluadmin
+now/bin/glubatch
+now/bin/gludebug
+now/bin/gluenv
+now/bin/gluguard
+now/bin/gluguard-admin
+now/bin/gluguard-d
+now/bin/gluguard-m
+now/bin/gluinstall
+now/bin/glukill
+now/bin/glumake
+now/bin/glumonitor
+now/bin/glupartInit
+now/bin/glupart_script
+now/bin/gluperf
+now/bin/glups
+now/bin/gluptime
+now/bin/glurun
+now/bin/glush
+@exec echo "updating /etc/shells"; cp /etc/shells /etc/shells.bak; (/usr/bin/grep -v %D/%F /etc/shells.bak; echo %D/%F) >/etc/shells
+@unexec echo "updating /etc/shells"; cp /etc/shells /etc/shells.bak; (/usr/bin/grep -v %D/%F /etc/shells.bak) >/etc/shells
+now/bin/glustat
+now/bin/glutestnode
+now/bin/mhtml2html
+now/bin/msleep
+now/bin/run_glunix_agent
+now/bin/run_glunix_script
+now/bin/sudoas
+now/bin/timelimit
+now/man/mhtml3/Glib_SetPartition.3
+now/man/mhtml3/Glib_AmIStartup.3
+now/man/mhtml3/Glib_GetHostByVnn.3
+now/man/mhtml3/Glib_GetMyNpid.3
+now/man/mhtml3/Glib_GetMyVnn.3
+now/man/mhtml3/Glib_GetNumAvailableNodes.3
+now/man/mhtml3/Glib_GetParallelDegree.3
+now/man/mhtml3/Glib_GetTotalNodes.3
+now/man/mhtml3/Glib_Initialize.3
+now/man/mhtml3/Glib_Spawn.3
+now/man/mhtml3/Glib_GetPartition.3
+now/man/mhtml3/Glib.3
+now/man/mhtml1/glustat.1
+now/man/mhtml1/gluadmin.1
+now/man/mhtml1/glubatch.1
+now/man/mhtml1/gludebug.1
+now/man/mhtml1/gluenv.1
+now/man/mhtml1/glukill.1
+now/man/mhtml1/glupart.1
+now/man/mhtml1/glupartInit.1
+now/man/mhtml1/gluperf.1
+now/man/mhtml1/glups.1
+now/man/mhtml1/gluptime.1
+now/man/mhtml1/glurun.1
+now/man/mhtml1/MHTML.1
+now/man/mhtml1/glush.1
+now/man/mhtml1/glunix.1
+now/man/man1/glustat.1
+now/man/man1/gluadmin.1
+now/man/man1/glubatch.1
+now/man/man1/gludebug.1
+now/man/man1/gluenv.1
+now/man/man1/glukill.1
+now/man/man1/glupart.1
+now/man/man1/glupartInit.1
+now/man/man1/gluperf.1
+now/man/man1/glups.1
+now/man/man1/gluptime.1
+now/man/man1/glurun.1
+now/man/man1/MHTML.1
+now/man/man1/glush.1
+now/man/man1/glunix.1
+now/man/html1/glustat.html
+now/man/html1/gluadmin.html
+now/man/html1/glubatch.html
+now/man/html1/gludebug.html
+now/man/html1/gluenv.html
+now/man/html1/glukill.html
+now/man/html1/glupart.html
+now/man/html1/glupartInit.html
+now/man/html1/gluperf.html
+now/man/html1/glups.html
+now/man/html1/gluptime.html
+now/man/html1/glurun.html
+now/man/html1/MHTML.html
+now/man/html1/glush.html
+now/man/html1/glunix.html
+@dirrm now/lib/${MACHINE_ARCH}-${OPSYS}-tcp
+@dirrm now/lib/perl-lib/Time
+@dirrm now/lib/perl-lib
+@dirrm now/bin/${MACHINE_ARCH}-${OPSYS}-tcp
+@dirrm now/man/mhtml3
+@dirrm now/man/mhtml1
+@dirrm now/man/html1
+@dirrm now/man/man1
+@dirrm now/man
+@dirrm now/lib
+@dirrm now/bin
+@dirrm now/include/glib
+@dirrm now/include
+@unexec /bin/rm -rf %D/now/data

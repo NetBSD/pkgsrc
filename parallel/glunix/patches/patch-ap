@@ -1,0 +1,133 @@
+$NetBSD: patch-ap,v 1.1.1.1 1998/10/21 19:59:30 garbled Exp $
+
+--- progs/Makefile.common.orig	Wed Nov  5 13:43:41 1997
++++ progs/Makefile.common	Fri Mar 13 02:01:15 1998
+@@ -3,50 +3,30 @@
+ # There are configuration values that are used in this Makefile and are
+ # used to do substitutions in the scripts.
+ # Use the environment variable GLUNIX_ARCH to manage multiple architectures
+-ifeq ($(GLUNIX_ARCH),)
+-  # This is the default architecture to build
+-  GLUNIX_ARCH = sun4
+-endif
+-
+-ifeq ($(GLUNIX_ARCH),sun4)
+-  GLUNIX_OS = solaris2.4
+-  GLUNIX_NET = tcp
+-  GLUNIX_PLATFORM = $(GLUNIX_ARCH)-$(GLUNIX_OS)-$(GLUNIX_NET)
+-  PERL_PATH = /usr/sww/bin/perl
+-  MAIL_PATH = /usr/ucb/Mail
+-  RSH_PATH = /usr/sww/bin/ssh
+-  GLUNIX_DIR = /disks/barad-dur/now/glunix
+-  GLUNIX_DATA_DIR = $(GLUNIX_DIR)/data
+-  INSTALL_DIR = /usr/now
+-  HTTP_BASE = /usr/now/share/etc/httpd/docs
+-  MASTER_HOSTNAME = u.CS.Berkeley.EDU
+-  GLUNIX_ACCOUNT = 12345
+-  GLUNIX_GROUP = 311
+-  PERL_LIB_DIR = $(GLUNIX_DIR)/release/progs/tools/perl-lib
+-
+-  INSTALL = /usr/sww/bin/ginstall
+-endif
+-ifeq ($(GLUNIX_ARCH),i386)
+-  GLUNIX_OS = solaris2.6
+-  GLUNIX_NET = tcp
+-  GLUNIX_PLATFORM = $(GLUNIX_ARCH)-$(GLUNIX_OS)-$(GLUNIX_NET)
+-  PERL_PATH = /usr/sww/bin/perl
+-  MAIL_PATH = /usr/ucb/Mail
+-  RSH_PATH = /usr/sww/bin/ssh
+-  GLUNIX_DIR = /disks/barad-dur/now/glunix
+-  GLUNIX_DATA_DIR = $(GLUNIX_DIR)/data
+-  INSTALL_DIR = /usr/now
+-  HTTP_BASE = 
+-  MASTER_HOSTNAME = pc0.CS.Berkeley.EDU
+-  GLUNIX_ACCOUNT = 12345
+-  GLUNIX_GROUP = 311
+-  PERL_LIB_DIR = $(GLUNIX_DIR)/release/progs/tools/perl-lib
+ 
+-  INSTALL = /usr/now/bin/install
++ifeq ($(OPSYS),NetBSD)
++GLUNIX_BASE = $(WRKDIR)
++GLUNIX_SOURCE = $(WRKDIR)/glunix
++GLUNIX_ARCH = $(ARCH)
++GLUNIX_OS = $(OPSYS)
++GLUNIX_NET = tcp
++GLUNIX_PLATFORM = $(GLUNIX_ARCH)-$(GLUNIX_OS)-$(GLUNIX_NET)
++PERL_PATH = ${LOCALBASE}/bin/perl
++MAIL_PATH = /usr/bin/Mail
++RSH_PATH = ${LOCALBASE}/bin/ssh
++GLUNIX_DIR = $(NOW_ROOT)
++GLUNIX_DATA_DIR = $(NOW_ROOT)/data
++INSTALL_DIR = $(NOW_ROOT)
++HTTP_BASE = $(NOW_ROOT)/man/http
++MASTER_HOSTNAME = `hostname`
++GLUNIX_ACCOUNT = 12345 # These don't matter, they're calculated at run-time
++GLUNIX_GROUP = 12345 # These don't matter, they're calculated at run-time
++PERL_LIB_DIR = $(GLUNIX_DIR)/lib/perl-lib
++INSTALL = /usr/bin/install
+ endif
+ 
+ # Paths to needed programs
+-MHTML2HTML = /usr/now/bin/mhtml2html
++MHTML2HTML = $(GLUNIX_SOURCE)/bin/$(GLUNIX_PLATFORM)/mhtml2html
+ 
+ ###########################################################################
+ # Set up purify and quantify commands
+@@ -58,7 +38,7 @@
+ PURIFY_COMMAND = purify -cache-dir=/disks/barad-dur/now/glunix/data/purify/cache
+ endif
+ 
+-CC      = $(PURIFY_COMMAND) gcc
++CC      = gcc
+ CFLAGS += -Wall -g $(RLIBPATH) $(LLIBPATH) $(INCPATH) $(LIBS) \
+           -DGLUNIX_ARCH=$(GLUNIX_ARCH) -DGLUNIX_OS=$(GLUNIX_OS) \
+           -DGLUNIX_NET=$(GLUNIX_NET) -DGLUNIX_PLATFORM=$(GLUNIX_PLATFORM) \
+@@ -69,7 +49,7 @@
+           -DGLUNIX_ACCOUNT=$(GLUNIX_ACCOUNT) -DGLUNIX_GROUP=$(GLUNIX_GROUP)
+ MKDIR   = $(INSTALL) -d -m 0775 -g glunix
+ INSTALL_BIN  = $(INSTALL) -m 0775 -g glunix
+-INSTALL_MAN  = $(INSTALL) -m 0664 -g glunix
++INSTALL_MAN  = $(INSTALL) -c -m 0664 -g glunix
+ MHTML_TO_NROFF = $(MHTML2HTML) nroff
+ MHTML_TO_HTML  = $(MHTML2HTML) html
+ 
+@@ -96,6 +76,7 @@
+ #      %%GLUNIX_GROUP%%
+ STANDARD_XLATE = sed -e 's,%%PERL_PATH%%,$(PERL_PATH),g' \
+                      -e 's,%%MAIL_PATH%%,$(MAIL_PATH),g' \
++                     -e 's,%%GLUNIX_BASE%%,$(GLUNIX_BASE),g' \
+                      -e 's,%%RSH_PATH%%,$(RSH_PATH),g' \
+                      -e 's,%%GLUNIX_ARCH%%,$(GLUNIX_ARCH),g' \
+                      -e 's,%%GLUNIX_OS%%,$(GLUNIX_OS),g' \
+@@ -111,10 +92,10 @@
+                      -e 's,%%GLUNIX_GROUP%%,$(GLUNIX_GROUP),g' \
+                      $^ > $@ ; chmod +x $@
+ 
+-MANHOME_MHTML = ../../man/mhtml
+-MANHOME_HTML  = ../../man/html
+-MANHOME_NROFF = ../../man/man
+-BINHOME       = ../../bin/$(GLUNIX_PLATFORM)
++MANHOME_MHTML = ../../glunix/man/mhtml
++MANHOME_HTML  = ../../glunix/man/html
++MANHOME_NROFF = ../../glunix/man/man
++BINHOME       = ../../glunix/bin/$(GLUNIX_PLATFORM)
+ 
+ ifneq ($(origin GLUNIX_DEVEL),undefined)
+ 
+@@ -123,8 +104,8 @@
+ 
+ else
+ 
+-GLUNIX_LIBPATH = $(INSTALL_DIR)/lib
+-GLUNIX_INCLUDEPATH = $(INSTALL_DIR)/include
++GLUNIX_LIBPATH = $(GLUNIX_SOURCE)/lib/$(GLUNIX_PLATFORM)
++GLUNIX_INCLUDEPATH = $(GLUNIX_SOURCE)/include
+ 
+ endif
+ 
+@@ -166,4 +147,4 @@
+ else
+ installman:
+ 	@echo No manpages to install.
+-endif
++endif

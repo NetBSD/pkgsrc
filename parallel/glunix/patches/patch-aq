@@ -1,0 +1,12 @@
+$NetBSD: patch-aq,v 1.1.1.1 1998/10/21 19:59:30 garbled Exp $
+
+--- progs/tools/Makefile.orig	Wed Oct 29 16:11:27 1997
++++ progs/tools/Makefile	Sat Feb 28 05:51:55 1998
+@@ -12,5 +12,5 @@
+ # These are things that need to be installed
+-BINS    = $(TARGETS) $(SCRIPTS)
++BINS    = $(TARGETS) $(SCRIPTS) gluinstall
+ 
+-LIBS    = -lnsl
++LIBS    = 
+ MANPAGES = MHTML.1

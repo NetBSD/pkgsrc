@@ -1,0 +1,9 @@
+$NetBSD: patch-ao,v 1.1.1.1 1998/10/21 19:59:30 garbled Exp $
+
+--- progs/tools/timelimit.c~	Wed Sep  3 15:34:40 1997
++++ progs/tools/timelimit.c	Sat Feb 28 04:02:55 1998
+@@ -41,3 +41,3 @@
+ 
+-	setpgrp();
++	setpgrp(0,0);
+ 	execv(argv[2], &(argv[2]));

@@ -1,0 +1,231 @@
+$NetBSD: patch-am,v 1.1.1.1 1998/10/21 19:59:30 garbled Exp $
+
+--- glunix/src/rexec/drexec.cc.orig	Thu Oct  2 12:34:05 1997
++++ glunix/src/rexec/drexec.cc	Fri Apr  3 16:58:09 1998
+@@ -308,3 +308,10 @@
+ #include <stdlib.h>
++
++#ifdef __NetBSD__
++#include <sys/ptrace.h>
++#include <sys/ioctl.h>
++#else
+ #include <stropts.h>
++#endif
++
+ #include <grp.h>
+@@ -355,5 +362,7 @@
+ static int PtyMasterOpen(char *ptyName);
+-/*static int PtySlaveOpen(char *ptyName, int uid, int gid);*/
++#ifdef __NetBSD__
++static int PtySlaveOpen(char *ptyName, int uid, int gid);
++#else
+ static int PtySlaveOpen(char *ptyName, int ptyMasterFd);
+-
++#endif
+ /*****************************************************************************/
+@@ -1143,4 +1152,8 @@
+     // Open the stderr pty
++#ifdef __NetBSD__
++    if((ptyErrorSlaveFd = PtySlaveOpen(ptyErrorName, msg->uid, msg->gid)) == -1) {
++#else
+     if((ptyErrorSlaveFd = PtySlaveOpen(ptyErrorName, ptyErrorMasterFd))
+        == -1) {
++#endif
+ 	DE("PtySlaveOpen() failed\n");
+@@ -1150,13 +1163,17 @@
+ 
+-/*    if(setsid() == -1) {
+-	Debug_Print(MODULE_REXEC, DEBUG_ERROR, "(rexec)ChildPtyPiping: "
+-		    "setsid() failed\n");
+-	return False;
+-    }*/
++#ifdef __NetBSD__
++    if(setsid() == -1) {
++      DE("(rexec)ChildPtyPiping: setsid() failed\n");
++      return False;
++    }
++#endif
+ 
+-    setpgrp();
++    setpgrp(0,0);
+ 
+     // Open the stdin/stdout pty
++#ifdef __NetBSD__
++    if((ptySlaveFd = PtySlaveOpen(ptyName, msg->uid, msg->gid)) == -1) {
++#else
+     if((ptySlaveFd = PtySlaveOpen(ptyName, ptyMasterFd)) == -1) {
+-/*    if((ptySlaveFd = PtySlaveOpen(ptyName, msg->uid, msg->gid)) == -1) {*/
++#endif
+ 	DE("PtySlaveOpen() failed\n");
+@@ -1166,22 +1183,21 @@
+ 
+-/* This should work on BSD, but doesn't on SysV
+-#if defined(TIOCSCTTY) && !defined(CIBAUD)
++#ifdef __NetBSD__
++    /* This should work on BSD, but doesn't on SysV*/
+     if(ioctl(ptySlaveFd, TIOCSCTTY, (char *) 0) == -1) {
+-	DE("cannot set controlling tty: %s\n", strerror(errno));
+-	return False;
++      DE("cannot set controlling tty: %s\n", strerror(errno));
++      return False;
+     }
+-#else
+-#error Nope
+-#endif */
+-
++#else 
+     (void) ioctl(ptySlaveFd, TCSETSF, (char *)&startupTermios);
+     (void) ioctl(ptySlaveFd, TIOCSWINSZ, (char *)&windowSize);
++#endif
+ 
+-/*    while(tcsetattr(ptySlaveFd, TCSANOW, &startupTermios) == -1) {
+-	if(errno == EINTR) {
+-	    continue;
+-	} else {
+-	    * BUGBUG maybe should return failure here? *
+-	    DE("ioctl: %s\n", strerror(errno));
+-	}
++#ifdef __NetBSD__
++    while(tcsetattr(ptySlaveFd, TCSANOW, &startupTermios) == -1) {
++      if(errno == EINTR) {
++	continue;
++      } else {
++	/* BUGBUG maybe should return failure here? */
++	DE("ioctl: %s\n", strerror(errno));
++      }
+     }
+@@ -1189,16 +1205,18 @@
+     if(ioctl(ptySlaveFd, TIOCSWINSZ, (char *) &windowSize) == -1) {
+-	* BUGBUG maybe should return failure here? *
+-	DE("ioctl: %s\n", strerror(errno));
+-    }	*/
+-    
++      /* BUGBUG maybe should return failure here? */
++	    DE("ioctl: %s\n", strerror(errno));
++    }  
++#else
+     (void) ioctl(ptyErrorSlaveFd, TCSETSF, (char *)&startupTermios);
+     (void) ioctl(ptyErrorSlaveFd, TIOCSWINSZ, (char *)&windowSize);
++#endif
+ 
+-/*    while(tcsetattr(ptyErrorSlaveFd, TCSANOW, &startupTermios) == -1) {
+-	if(errno == EINTR) {
+-	    continue;
+-	} else {
+-	    * BUGBUG maybe should return failure here? *
+-	    DE("ioctl: %s\n", strerror(errno));
+-	}
++#ifdef __NetBSD__
++    while(tcsetattr(ptyErrorSlaveFd, TCSANOW, &startupTermios) == -1) {
++      if(errno == EINTR) {
++	continue;
++      } else {
++	/* BUGBUG maybe should return failure here? */
++	DE("ioctl: %s\n", strerror(errno));
++      }
+     }
+@@ -1206,5 +1224,6 @@
+     if(ioctl(ptyErrorSlaveFd, TIOCSWINSZ, (char *) &windowSize) == -1) {
+-	* BUGBUG maybe should return failure here? *
+-	DE("ioctl: %s\n", strerror(errno));
+-    }	*/
++      /* BUGBUG maybe should return failure here? */
++      DE("ioctl: %s\n", strerror(errno));
++    }
++#endif
+ 
+@@ -1253,2 +1272,3 @@
+ 
++#ifndef __NetBSD__
+ int
+@@ -1273,3 +1293,3 @@
+ }
+-
++#else
+ /******************************************************************************
+@@ -1286,36 +1306,39 @@
+  ****************************************************************************/
+-/*int
++
++int
+ PtyMasterOpen(char *ptyName)
+ {
+-    int ptyMasterFd;
+-    char *ptr1, *ptr2;
+-
+-    strcpy(ptyName, "/dev/ptyXY");
+-
+-    ASSERT(strlen(ptyName) < PTY_PATH_LENGTH);
+-
+-    // array index: 0123456789 (for references in following code)
+-    for(ptr1 = "pqrstuvwxyzPQRST"; *ptr1 != 0; ptr1++) {
+-	ptyName[8] = *ptr1;
+-	for(ptr2 = "0123456789abcdef"; *ptr2 != 0; ptr2++) {
+-	    ptyName[9] = *ptr2;
+-
+-	    if((ptyMasterFd = open(ptyName, O_RDWR)) == -1) {
+-		if(errno == ENOENT) {
+-		    return -1;
+-		} else {
+-		    continue;
+-		}
+-	    }
+-
+-	    ptyName[5] = 't'; // need to change string to "tty" so that this
+-                              // string can be used later to open the slave
+-                              // end of the pty by PtyChildOpen
+-	    return ptyMasterFd;
++  int ptyMasterFd;
++  char *ptr1, *ptr2;
++  
++  strcpy(ptyName, "/dev/ptyXY");
++
++  ASSERT(strlen(ptyName) < PTY_PATH_LENGTH);
++
++  // array index: 0123456789 (for references in following code)
++  for(ptr1 = "pqrstuvwxyzPQRST"; *ptr1 != 0; ptr1++) {
++    ptyName[8] = *ptr1;
++    for(ptr2 = "0123456789abcdef"; *ptr2 != 0; ptr2++) {
++      ptyName[9] = *ptr2;
++
++      if((ptyMasterFd = open(ptyName, O_RDWR)) == -1) {
++	if(errno == ENOENT) {
++	  return -1;
++	} else {
++	  continue;
+ 	}
++      }
++
++      ptyName[5] = 't'; // need to change string to "tty" so that this
++      // string can be used later to open the slave
++      // end of the pty by PtyChildOpen
++      return ptyMasterFd;
+     }
++  }
+ 
+-    return -1;
+-}*/
++  return -1;
++}
++#endif
+ 
++#ifndef __NetBSD__
+ int
+@@ -1366,3 +1389,3 @@
+ }
+-
++#else
+ /******************************************************************************
+@@ -1399,3 +1422,3 @@
+ }
+-
++#endif
+ /******************************************************************************
+@@ -1802,3 +1825,7 @@
+ 	   (received the SIG_STOP or SIG_CONT possibly) */
++#ifdef __NetBSD__
++	if ((WIFSTOPPED(procStat)) || (WIFSIGNALED(procStat))) {
++#else
+ 	if ((WIFSTOPPED(procStat)) || (WIFCONTINUED(procStat))) {
++#endif
+ 	    // BUGBUG Shouldn't we signal the startup here????

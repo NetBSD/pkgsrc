@@ -1,0 +1,14 @@
+all:
+	cd makedepend; $(MAKE) makedepend || exit 1; \
+	cd .. ;
+	cd glunix/src; $(MAKE) DESTDIR=$(DESTDIR) $(MAKE_ENV) install || exit 1 ; \
+	cd ../.. ;
+	cd progs/tools; $(MAKE) mhtml2html $(MAKE_ENV) install || exit 1 ; \
+	cd ../.. ;
+	cd progs; $(MAKE) DESTDIR=$(DESTDIR) $(MAKE_ENV) install || exit 1 ; \
+	cd .. ;
+	cd progs/tools; $(MAKE) DESTDIR=$(DESTDIR) $(MAKE_ENV) install || exit 1 ; \
+	cd ../.. ; \
+
+install:
+	glunix/bin/$(ARCH)-$(OPSYS)-tcp/gluinstall

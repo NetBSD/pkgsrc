@@ -1,0 +1,14 @@
+$NetBSD: patch-ac,v 1.1.1.1 1998/10/21 19:59:29 garbled Exp $
+
+--- glunix/src/init/bsd.h.orig	Thu Feb  5 03:07:31 1998
++++ glunix/src/init/bsd.h	Thu Feb  5 03:08:27 1998
+@@ -88,3 +88,3 @@
+ //ssize_t write(int filedes, const char *buffer, size_t nbytes);
+-int     connect(int socket, struct sockaddr *address, int address_len);
++//int     connect(int socket, struct sockaddr *address, int address_len);
+ //int setsockopt(int socket, int level, int option_name, char *option_value,
+@@ -92,3 +92,3 @@
+ int     socket(int addr_family, int type, int protocol);
+-void    bzero(char *string, int length);
++//void    bzero(char *string, int length);
+ int     listen(int socket, int backlog);

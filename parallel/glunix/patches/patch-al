@@ -1,0 +1,40 @@
+$NetBSD: patch-al,v 1.1.1.1 1998/10/21 19:59:30 garbled Exp $
+
+--- glunix/src/nmgt/dnmgt.cc.orig	Thu Sep 18 12:05:03 1997
++++ glunix/src/nmgt/dnmgt.cc	Thu Apr  9 09:13:12 1998
+@@ -143,3 +143,6 @@
+ #include <string.h>
++
++#ifndef __NetBSD__
+ #include <sys/processor.h>
++#endif
+ 
+@@ -202,2 +205,23 @@
+ {
++#ifdef __NetBSD__
++
++  FILE *file;
++  int *psize, *phys;
++  int one,two;
++
++  psize = &one;
++  phys = &two;
++
++  hello->machDesc.numProcessors = 1; /* hardcoded cuz I know better */
++  file = fopen("/kern/pagesize","r");
++  fscanf(file,"%d",psize);
++  fclose(file);
++  file = fopen("/kern/physmem","r");
++  fscanf(file,"%d",phys);
++  fclose(file);
++  hello->machDesc.totalMegs = one * two;
++  hello->machDesc.mhz = 100; /* this is a hack XXX */
++
++#else
++
+     processor_info_t  info;
+@@ -218,3 +242,3 @@
+     // Could use uname() to get the os type and version.
+-
++#endif
+     return True;

@@ -1,0 +1,68 @@
+$NetBSD: patch-ah,v 1.1.1.1 1998/10/21 19:59:29 garbled Exp $
+
+--- glunix/src/signal/csignal.cc.orig	Thu Oct 24 15:40:47 1996
++++ glunix/src/signal/csignal.cc	Fri Mar 13 04:53:45 1998
+@@ -113,2 +113,5 @@
+ #endif
++#ifdef __NetBSD__
++#define MAX_SIGNAL NSIG
++#endif
+ 
+@@ -218,8 +221,14 @@
+     sigaddset(&allSignals, SIGUSR2);
++#ifndef __NetBSD__
+     sigaddset(&allSignals, SIGCLD);
++#endif
+     sigaddset(&allSignals, SIGCHLD);
++#ifndef __NetBSD__
+     sigaddset(&allSignals, SIGPWR);
++#endif
+     sigaddset(&allSignals, SIGWINCH);
+     sigaddset(&allSignals, SIGURG);
++#ifndef __NetBSD__
+     sigaddset(&allSignals, SIGPOLL);
++#endif
+     sigaddset(&allSignals, SIGIO);
+@@ -234,4 +243,5 @@
+     sigaddset(&allSignals, SIGXFSZ);
++#ifndef __NetBSD__
+     sigaddset(&allSignals, SIGWAITING);
+-
++#endif
+     initialized = True;
+@@ -440,3 +450,7 @@
+ 	    // Otherwise, we're not catching it and we should be
++#ifdef __NetBSD__
++	    signal(sig, CatchSignal);
++#else
+ 	    sigset(sig, CatchSignal);
++#endif
+ 	}
+@@ -865,7 +879,14 @@
+ {
+-    if (sighold(sig) < 0) {
+-	return False;
+-    } else {
+-	return True;
+-    }
++#ifdef __NetBSD__
++int i;
++   i = sigsetmask(NULL); 
++   i &= ~sigmask(sig); 
++   if (sigsetmask(i) < 0) {
++#else
++   if (sighold(sig) < 0) {
++#endif
++     return False;
++   } else {
++     return True;
++   }
+ }
+@@ -887,3 +908,7 @@
+ {
++#ifdef __NetBSD__
++    if (sigsetmask(sigmask(sig)) < 0 ) {
++#else
+     if (sigrelse(sig) < 0) {
++#endif
+ 	return False;

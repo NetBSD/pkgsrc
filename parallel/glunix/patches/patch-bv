@@ -1,0 +1,20 @@
+$NetBSD: patch-bv,v 1.1.1.1 1998/10/21 19:59:30 garbled Exp $
+
+diff -U 1 progs/glush/sh.sem.c ../old/progs/glush/sh.sem.c
+--- progs/glush/sh.sem.c	Thu Jul 20 11:09:24 1995
++++ ../old/progs/glush/sh.sem.c	Thu Mar 12 01:24:34 1998
+@@ -1,2 +1,2 @@
+-/* $Header: /cvsroot/pkgsrc/parallel/glunix/patches/Attic/patch-bv,v 1.1.1.1 1998/10/21 19:59:30 garbled Exp $ */
++/* $Header: /cvsroot/pkgsrc/parallel/glunix/patches/Attic/patch-bv,v 1.1.1.1 1998/10/21 19:59:30 garbled Exp $ */
+ /*
+@@ -39,3 +39,3 @@
+ 
+-RCSID("$Id: patch-bv,v 1.1.1.1 1998/10/21 19:59:30 garbled Exp $")
++RCSID("$Id: patch-bv,v 1.1.1.1 1998/10/21 19:59:30 garbled Exp $")
+ 
+@@ -52,3 +52,3 @@
+ #if defined(__sparc__) || defined(sparc)
+-# if !defined(MACH) && SYSVREL == 0 && !defined(Lynx)
++# if !defined(MACH) && SYSVREL == 0 && !defined(Lynx) && !defined(__NetBSD__)
+ #  include <vfork.h>
+ 

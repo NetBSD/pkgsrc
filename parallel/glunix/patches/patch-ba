@@ -1,0 +1,9 @@
+$NetBSD: patch-ba,v 1.1.1.1 1998/10/21 19:59:30 garbled Exp $
+
+--- progs/ms/Makefile~	Wed Nov  5 13:44:23 1997
++++ progs/ms/Makefile	Sat Feb 28 07:30:02 1998
+@@ -57,3 +57,3 @@
+ LDDIRS = -L/usr/sww/X11/lib -R/usr/sww/X11/lib $(LLIBPATH) $(RLIBPATH)
+-LDFLAGS = $(LDDIRS) -lglunix-lsocket -lnsl -lm
++LDFLAGS = $(LDDIRS) -lglunix -lm
+ 

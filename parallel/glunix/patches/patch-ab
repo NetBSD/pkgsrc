@@ -1,0 +1,71 @@
+$NetBSD: patch-ab,v 1.1.1.1 1998/10/21 19:59:29 garbled Exp $
+
+--- glunix/src/comm/ccomm_net.cc.orig	Wed Oct 15 12:24:52 1997
++++ glunix/src/comm/ccomm_net.cc	Thu Apr  2 08:54:18 1998
+@@ -75,3 +75,4 @@
+ #include <unistd.h>
+-#include <sys/systeminfo.h>
++/*#include <sys/systeminfo.h>*/
++#include <sys/uio.h>
+ 
+@@ -260,3 +261,3 @@
+     if (!h) {
+-	DE("Cannot resolve host name: %s\n", strerror(errno));
++	DE("Cannot resolve host name: %s %s\n",hostName, strerror(errno));
+ 	// BUGBUG set error code
+@@ -330,10 +331,11 @@
+     // Get my IP address
+-    if (sysinfo(SI_HOSTNAME, hostName, sizeof(hostName)-1) < 0) {
+-	DE("sysinfo(SI_HOSTNAME): %s\n", strerror(errno));
+-	*ipPtr = 0;
+-	return False;
+-    }
++//    if (sysinfo(SI_HOSTNAME, hostName, sizeof(hostName)-1) < 0) {
++//	DE("sysinfo(SI_HOSTNAME): %s\n", strerror(errno));
++//	*ipPtr = 0;
++//	return False;
++//    }
++    gethostname(hostName,sizeof(hostName));
+     h = gethostbyname(hostName);
+     if (!h) {
+-	DE("Cannot resolve host name: %s\n", strerror(errno));
++	DE("Cannot resolve host name: %s %s\n",hostName, strerror(errno));
+ 	// BUGBUG error code
+@@ -378,3 +380,7 @@
+     // use ntohs to convert it back to host order for pc's
++#ifdef L_ENDIAN
++    *port = s.sin_port;
++#else
+     *port = ntohs(s.sin_port);
++#endif
+     return True;
+@@ -437,4 +443,7 @@
+     }
+-
++#ifdef L_ENDIAN
++    *ipAddrPtr = s.sin_addr.s_addr;
++#else
+     *ipAddrPtr = ntohl(s.sin_addr.s_addr);
++#endif
+     return True;
+@@ -530,4 +539,9 @@
+     s.sin_family = AF_INET;
++#ifdef L_ENDIAN
++    s.sin_port = port;
++    s.sin_addr.s_addr = INADDR_ANY;
++#else
+     s.sin_port = htons(port);
+     s.sin_addr.s_addr = htonl(INADDR_ANY);
++#endif
+ 
+@@ -639,5 +653,9 @@
+     s.sin_family = AF_INET ;
++#ifdef L_ENDIAN
++    s.sin_port = port;
++    s.sin_addr.s_addr = ipAddr;
++#else
+     s.sin_port = htons(port);
+     s.sin_addr.s_addr = htonl(ipAddr);
+-
++#endif
+     if (connect(sock, (struct sockaddr *) &s, sizeof(s)) < 0) {

@@ -1,0 +1,9 @@
+$NetBSD: patch-ae,v 1.1.1.1 1998/10/21 19:59:29 garbled Exp $
+
+--- glunix/src/perf/mperf.cc.orig	Thu Feb  5 03:31:15 1998
++++ glunix/src/perf/mperf.cc	Thu Feb  5 03:32:02 1998
+@@ -190,3 +190,3 @@
+     int ctr, offset;
+-    longlong_t startTime, stopTime, remoteTime;
++    quad_t startTime, stopTime, remoteTime;
+     double min, max, totalValue, var;
