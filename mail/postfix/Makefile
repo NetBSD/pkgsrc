@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.114 2004/01/23 06:25:25 martti Exp $
+# $NetBSD: Makefile,v 1.115 2004/01/23 12:03:44 martti Exp $
 
 DISTNAME=	postfix-2.0.18
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.porcupine.org/mirrors/postfix-release/official/
-DIST_SUBDIR=	postfix
 
 MAINTAINER=	martti@NetBSD.org
 HOMEPAGE=	http://www.postfix.org/
 COMMENT=	Postfix SMTP server and tools
+
+DIST_SUBDIR=	postfix
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
@@ -183,5 +184,13 @@ pre-install:
 do-install:
 	cd ${WRKSRC} && ${SETENV} config_directory="${SHAREDIR}"	\
 		${SH} postfix-install -non-interactive
+
+.if ${OPSYS} == "Linux"
+.include "../../databases/db/buildlink3.mk"
+CCARGS+=	-I${BUILDLINK_PREFIX.db}/include/db2
+AUXLIBS+=	-L${BUILDLINK_PREFIX.db}/lib                    \
+		-Wl,${RPATH_FLAG}${BUILDLINK_PREFIX.db}/lib     \
+		-ldb2
+.endif
 
 .include "../../mk/bsd.pkg.mk"
