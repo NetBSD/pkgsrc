@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2002/12/09 16:01:13 tron Exp $
+@comment $NetBSD: PLIST,v 1.10 2003/01/27 12:31:29 jmmv Exp $
 bin/gqmpeg
 bin/gqmpeg-shoutcast-plugin.sh
 @comment from libiconv: lib/charset.alias
@@ -82,4 +82,4 @@ share/gqmpeg/skins/mrclean/skindata_submenu
 share/pixmaps/gqmpeg.png
 @dirrm share/gqmpeg/skins/mrclean
 @unexec ${RMDIR} -p %D/share/gqmpeg/skins 2> /dev/null || ${TRUE}
-@unexec ${RMDIR} -p %D/share/gnome/apps/Multimedia 2> /dev/null || ${TRUE}
+@comment in gnome-dirs: @dirrm share/gnome/apps/Multimedia
