@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2004/02/21 22:06:37 snj Exp $
+# $NetBSD: Makefile,v 1.35 2004/04/14 17:33:38 grant Exp $
 
 DISTNAME=		ircii-${VERS}
 PKGNAME=		ircII-${VERS}
@@ -48,7 +48,7 @@ CONFIGURE_ARGS+=	--with-socks5=${BUILDLINK_PREFIX.socks5}
 .  endif
 .endif
 
-# Allow customizations from /etc/mk.conf.
+# Allow customizations from ${MAKECONF}
 CONFIGURE_ARGS+=	${IRCII_CONFIGURE_ARGS}
 CONFIGURE_ENV+=		${IRCII_CONFIGURE_ENV}
 
