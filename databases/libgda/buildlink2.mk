@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.7 2003/07/25 12:43:41 drochner Exp $
+# $NetBSD: buildlink2.mk,v 1.8 2003/09/11 12:38:26 jmmv Exp $
 #
 # This Makefile fragment is included by packages that use libgda.
 #
@@ -9,7 +9,7 @@
 LIBGDA_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			libgda
-BUILDLINK_DEPENDS.libgda?=		libgda>=0.12.1nb1
+BUILDLINK_DEPENDS.libgda?=		libgda>=0.99.0
 BUILDLINK_PKGSRCDIR.libgda?=		../../databases/libgda
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.libgda=libgda
@@ -18,7 +18,7 @@ BUILDLINK_FILES.libgda+=	include/libgda-report/*.h
 BUILDLINK_FILES.libgda+=	include/libgda/*.h
 BUILDLINK_FILES.libgda+=	lib/libgda-2.*
 BUILDLINK_FILES.libgda+=	lib/libgda-report-2.*
-BUILDLINK_FILES.libgda+=	lib/libgda/providers/libgda-default.*
+BUILDLINK_FILES.libgda+=	lib/libgda/providers/libgda-xml.*
 BUILDLINK_FILES.libgda+=	lib/libgdasql.*
 BUILDLINK_FILES.libgda+=	lib/pkgconfig/libgda.pc
 

@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2003/07/13 13:50:57 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2003/09/11 12:38:26 jmmv Exp $
 #
 
 .include "Makefile.common"
-PKGREVISION=		1
 
 COMMENT=		GNU Database access library
 
