@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2350 2004/11/10 10:51:45 markd Exp $
+$NetBSD: TODO,v 1.2351 2004/11/10 14:13:59 adam Exp $
 
 Suggested new packages
 ======================
@@ -378,7 +378,6 @@ Suggested package updates
 	o idesk-0.5.6
 	o inform-6.30 [pkg/24631]
 	o intercal-0.24 [dillo]
-	o iozone-3.226
 	o ipcheck-0.218
 	o ircd-hybrid-7.0.4
 	o iroffer-1.309
