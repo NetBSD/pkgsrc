@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.4 1999/03/14 20:41:36 tron Exp $
+
+--- libgnome/Makefile.in.orig	Mon Mar  1 20:56:01 1999
++++ libgnome/Makefile.in	Sun Mar 14 20:37:50 1999
+@@ -74,7 +74,7 @@
+ AWK = @AWK@
+ CATALOGS = @CATALOGS@
+ CATOBJEXT = @CATOBJEXT@
+-CC = @CC@
++CC = @CC@ -static
+ DATADIRNAME = @DATADIRNAME@
+ DLLTOOL = @DLLTOOL@
+ DL_LIB = @DL_LIB@
