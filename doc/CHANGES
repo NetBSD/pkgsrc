@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6891 2004/08/15 16:53:06 dillo Exp $
+$NetBSD: CHANGES,v 1.6892 2004/08/15 19:01:46 recht Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3847,3 +3847,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated alee-ttf to 1.4 [minskim 2004-08-15]
 	Updated esound to 0.2.35 [wiz 2004-08-15]
 	Updated pkgdiff to 0.114 [dillo 2004-08-15]
+	Updated tla to 1.2.1 [recht 2004-08-15]
