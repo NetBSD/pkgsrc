@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2005/03/13 03:25:44 schmonz Exp $
+# $NetBSD: Makefile,v 1.22 2005/03/23 00:51:10 schmonz Exp $
 # FreeBSD Id: ports/sysutils/ucspi-tcp/Makefile,v 1.12 2000/07/10 01:41:24 steve Exp
 
 DISTNAME=	ucspi-tcp-0.88
@@ -13,16 +13,11 @@ MAINTAINER=	schmonz@NetBSD.org
 HOMEPAGE=	http://cr.yp.to/ucspi-tcp.html
 COMMENT=	Command-line tools for building TCP client-server applications
 
-RESTRICTED=	"modified source and binaries may not be distributed"
-NO_BIN_ON_CDROM=${RESTRICTED}
-NO_BIN_ON_FTP=	${RESTRICTED}
+DJB_RESTRICTED=	YES
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=	yes
-
-BUILD_TARGET=	it
-INSTALL_TARGET=	setup check
 
 .if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
 GCC_REQD+=	3.0
@@ -30,15 +25,11 @@ GCC_REQD+=	3.0
 
 INSTALLATION_DIRS=	bin man man/man1
 
-do-configure:
-	${ECHO} ${CC:Q} ${CFLAGS:Q} > ${WRKSRC}/conf-cc
-	${ECHO} ${CC:Q} ${_STRIPFLAG_CC} > ${WRKSRC}/conf-ld
-	${ECHO} ${PREFIX} > ${WRKSRC}/conf-home
-
 post-install:
 	cd ${WRKDIR}/${DISTNAME}-man &&					\
 	for i in *.1; do						\
 		${INSTALL_MAN} $${i} ${PREFIX}/man/man1;		\
 	done
 
+.include "../../mk/djbware.mk"
 .include "../../mk/bsd.pkg.mk"
