@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2004/01/04 23:34:06 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2004/01/05 11:05:46 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBUNGIF_BUILDLINK3_MK:=	${LIBUNGIF_BUILDLINK3_MK}+
@@ -13,4 +13,4 @@ BUILDLINK_DEPENDS.libungif?=	libungif>=4.1.0
 BUILDLINK_PKGSRCDIR.libungif?=	../../graphics/libungif
 .endif	# LIBUNGIF_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:C/\+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

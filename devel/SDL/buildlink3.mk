@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2004/01/04 23:34:05 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2004/01/05 11:05:45 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 SDL_BUILDLINK3_MK:=	${SDL_BUILDLINK3_MK}+
@@ -21,4 +21,4 @@ PTHREAD_OPTS+=		require
 .  include "../../mk/pthread.buildlink3.mk"
 .endif	# SDL_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:C/\+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

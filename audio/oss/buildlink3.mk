@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2004/01/04 23:34:05 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2004/01/05 11:05:44 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 OSS_BUILDLINK3_MK:=	${OSS_BUILDLINK3_MK}+
@@ -43,4 +43,4 @@ buildlink-oss-soundcard-h:
         fi
 .endif	# OSS_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:C/\+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
