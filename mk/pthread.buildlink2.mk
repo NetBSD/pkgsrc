@@ -1,4 +1,4 @@
-# $NetBSD: pthread.buildlink2.mk,v 1.5 2002/11/01 06:09:36 jlam Exp $
+# $NetBSD: pthread.buildlink2.mk,v 1.6 2002/12/07 02:37:57 schmonz Exp $
 #
 # The pthreads strategy for pkgsrc is to "bless" a particular pthread
 # package as the Official Pthread Replacement (OPR).  A package that uses
@@ -42,7 +42,7 @@
 #   (3)	Add "require" to PTHREAD_OPTS prior to including
 #	pthread.buildlink2.mk.  This will make the package use the native
 #	pthread library or else use the OPR package, and will otherwise set
-#	IGNORE if neither can be used, e.g.,
+#	PKG_FAIL_REASON if neither can be used, e.g.,
 #
 #	PTHREAD_OPTS+=	require
 #	#
@@ -122,7 +122,7 @@ PTHREAD_TYPE=	native
 .  if !empty(PTHREAD_OPTS:Mnative)
 PTHREAD_TYPE=	none
 .    if !empty(PTHREAD_OPTS:Mrequire) && empty(PTHREAD_OPTS:Moptional)
-IGNORE=		"${PKGNAME} requires a native pthreads implementation."
+PKG_FAIL_REASON= "${PKGNAME} requires a native pthreads implementation."
 .    endif
 .  else
 PTHREAD_TYPE=	none
@@ -133,7 +133,7 @@ PTHREAD_TYPE=	${_PKG_PTHREAD}
 .    endfor
 .    if (${PTHREAD_TYPE} == "none") && \
 	!empty(PTHREAD_OPTS:Mrequire) && empty(PTHREAD_OPTS:Moptional)
-IGNORE=		"${PKGNAME} requires a working pthreads implementation."
+PKG_FAIL_REASON= "${PKGNAME} requires a working pthreads implementation."
 .    endif
 .  endif
 .endif
@@ -161,7 +161,7 @@ BUILDLINK_DEPENDS.${_PKG_PTHREAD}=	${_PKG_PTHREAD_DEPENDS}
 BUILDLINK_PREFIX.pthread=		${BUILDLINK_PREFIX.${_PKG_PTHREAD}}
 .    include "${_PKG_PTHREAD_BUILDLINK2_MK}"
 .  else
-IGNORE=		"${PKGNAME} needs pthreads, but ${_PKG_PTHREAD_BUILDLINK2_MK} is missing."
+PKG_FAIL_REASON= "${PKGNAME} needs pthreads, but ${_PKG_PTHREAD_BUILDLINK2_MK} is missing."
 .  endif
 .endif
 
