@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2002/08/04 15:47:43 fredb Exp $
+# $NetBSD: Makefile,v 1.54 2002/08/09 14:45:05 jlam Exp $
 
 DISTNAME=		openssl-0.9.6e
 SVR4_PKGNAME=		ossl
@@ -23,25 +23,25 @@ CONFIGURE_SCRIPT=	config
 CONFIGURE_ARGS=		shared --openssldir=${PKG_SYSCONFDIR} --prefix=${PREFIX}
 CONFIGURE_ENV=		CC="${CC}"
 
+PLIST_SRC=		${PKGDIR}/PLIST.${LOWER_OPSYS}
+PLIST_SRC+=		${PLIST_RSAREF}
+PLIST_SRC+=		${PKGDIR}/PLIST.common
+
+PKG_SYSCONFSUBDIR=	openssl
 CONF_FILES=		${PREFIX}/share/examples/openssl/openssl.cnf	\
 			${PKG_SYSCONFDIR}/openssl.cnf
-PKG_SYSCONFSUBDIR=	openssl
-PLIST_SRC=		${WRKDIR}/.PLIST_SRC
-PLIST_SUBST=		PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
+OWN_DIRS=		${PKG_SYSCONFDIR}/certs ${PKG_SYSCONFDIR}/private
 
 do-configure:
 	cd ${WRKSRC}							\
-		&& ${PERL5} util/perlpath.pl ${LOCALBASE}/bin		\
+		&& ${PERL5} util/perlpath.pl ${PERL5}			\
 		&& ${SETENV} ${CONFIGURE_ENV} ./${CONFIGURE_SCRIPT}	\
 			${CONFIGURE_ARGS}
 
-post-build:
-	${CAT} ${PKGDIR}/PLIST.${LOWER_OPSYS} ${PLIST_RSAREF}		\
-		${PKGDIR}/PLIST.common  > ${PLIST_SRC}
-
 test: all
 	@cd ${WRKSRC}/test 						\
-		&& ${SETENV} ${LD_PATH_VARNAME}=${WRKSRC} ${MAKE} tests	\
+		&& ${SETENV} ${LD_PATH_VARNAME}=${WRKSRC}		\
+			${MAKE_PROGRAM} tests	\
 		&& ${ECHO} "*** Tests successful. ***"
 
 .include "../../mk/bsd.prefs.mk"
@@ -51,7 +51,7 @@ PATCH_SITES=		${MASTER_SITE_LOCAL}
 PATCHFILES=		openssl-0.9.6e-20020804-netbsd.patch.gz
 PATCH_DIST_STRIP=	-p1
 
-PKG_SYSCONFBASE=	/etc
+PKG_SYSCONFDIR.${PKGBASE}?=	/etc/openssl
 .endif
 
 .if ${OPSYS} == "Darwin"
@@ -75,4 +75,5 @@ CONFIGURE_SCRIPT=	Configure
 CONFIGURE_ARGS+=	solaris-${SPARC_TARGET_ARCH}-${CC}
 .endif
 
+.include  "../../mk/bsd.pkg.install.mk"
 .include  "../../mk/bsd.pkg.mk"
