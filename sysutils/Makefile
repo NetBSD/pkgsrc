@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.94 2001/03/27 19:24:57 zuntum Exp $
+# $NetBSD: Makefile,v 1.95 2001/04/27 11:29:26 agc Exp $
 #
 
 COMMENT=	System utilities
@@ -43,6 +43,7 @@ SUBDIR+=	logrot
 SUBDIR+=	lsof
 SUBDIR+=	mc
 SUBDIR+=	memconf
+SUBDIR+=	memtest
 SUBDIR+=	mkhybrid
 #SUBDIR+=	mkisofs			# currently part of cdrecord
 SUBDIR+=	mksunbootcd
