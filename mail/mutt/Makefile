@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 1999/08/04 08:36:27 hwr Exp $
+# $NetBSD: Makefile,v 1.26 1999/08/18 00:22:33 tron Exp $
 
 DISTNAME=	mutt-${MUTT_VERSION}
 CATEGORIES=	mail
@@ -11,6 +11,8 @@ MASTER_SITES=	ftp://ftp.guug.de/pub/mutt/ \
 MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.mutt.org/
 
+BUILD_DEPENDS+=	${LOCALBASE}/bin/autoconf:../../devel/autoconf
+BUILD_DEPENDS+=	${LOCALBASE}/bin/automake:../../devel/automake
 DEPENDS+=	ncurses-4.2:../../devel/ncurses
 
 GNU_CONFIGURE=	yes
@@ -22,7 +24,7 @@ LDFLAGS+=	-s
 
 .include "../../mk/bsd.pkg.mk"
 
-MUTT_BASE_VERSION=	0.95.6
+MUTT_BASE_VERSION=	0.95.7
 .if defined(MUTT_INTERNATIONAL) && ${MUTT_INTERNATIONAL} == YES
 MUTT_VERSION=		${MUTT_BASE_VERSION}i
 

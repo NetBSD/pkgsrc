@@ -1,4 +1,4 @@
-$NetBSD: md5,v 1.12 1999/06/04 14:07:46 tron Exp $
+$NetBSD: md5,v 1.13 1999/08/18 00:22:34 tron Exp $
 
-MD5 (mutt-0.95.6.tar.gz) = c32ad4151aa1e9df7bf71d87f34394f7
-MD5 (mutt-0.95.6i.tar.gz) = 762a91812e744f024c548db35e66fa9a
+MD5 (mutt-0.95.7.tar.gz) = 21e8ce5e64eae3d98568f14d609711c8
+MD5 (mutt-0.95.7i.tar.gz) = 9ba7a6b4365f4be3e78d428ff4f65a2d
