@@ -1,5 +1,5 @@
 #!/bin/sh
-ID='$NetBSD: zope25-create,v 1.1 2003/07/28 09:27:31 drochner Exp $'
+ID='$NetBSD: zope25-create,v 1.2 2003/08/11 13:15:42 drochner Exp $'
 
 PYTHONBIN=@@PYTHONBIN@@
 ZOPE_HOME=@@ZOPE_HOME@@
@@ -39,7 +39,7 @@ ZOPE_HOME=@ZOPE_HOME@
 INSTANCE_HOME=@INSTANCE_HOME@
 export INSTANCE_HOME
 
-exec ${PYTHONBIN} ${ZOPE_HOME}/z2.py \$*
+exec \${PYTHONBIN} \${ZOPE_HOME}/z2.py \$*
 SCRIPT_END
 
 chmod +x ${STARTSCRIPT}
