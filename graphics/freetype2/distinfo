@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2001/12/30 14:13:27 wiz Exp $
+$NetBSD: distinfo,v 1.5 2002/12/24 00:04:16 wiz Exp $
 
-SHA1 (freetype-2.0.5.tar.gz) = dd5bbc0bff77211b9516ed78a493063f6b46f06a
-Size (freetype-2.0.5.tar.gz) = 740375 bytes
+SHA1 (freetype-2.1.3.tar.bz2) = 7b101c9220c1a64061eec8f007301fb249a52737
+Size (freetype-2.1.3.tar.bz2) = 790213 bytes
