@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.1.1.1 2000/01/16 14:00:24 wulf Exp $
+$NetBSD: md5,v 1.2 2000/12/19 21:40:47 wulf Exp $
 
-MD5 (kdoc-2.0a30.tar.gz) = 87f577472600f214f4106552051bac51
+MD5 (kdoc-2.0.1b.tar.bz2) = 001100b7cb7377f4414aa7447d5b432c
