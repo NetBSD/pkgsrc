@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.8 2002/03/04 19:41:08 fredb Exp $
+# $NetBSD: Makefile,v 1.9 2002/06/21 15:01:54 cjones Exp $
 #
 
 DISTNAME=		mod_aolserver-1.1
 PKGNAME=		ap-aolserver-1.1
 CATEGORIES=		www
-MASTER_SITES=		# none
+MASTER_SITES=		${MASTER_SITE_LOCAL}
 
 MAINTAINER=		cjones@netbsd.org
 HOMEPAGE=		http://www.arsdigita.com/acs-repository/one-version?version_id=601
