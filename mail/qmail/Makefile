@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2002/04/05 15:22:31 yyamano Exp $
+# $NetBSD: Makefile,v 1.12 2002/05/03 10:39:00 zuntum Exp $
 #
 
 DISTNAME=	qmail-1.03
@@ -10,18 +10,6 @@ MASTER_SITES=   http://cr.yp.to/software/			\
 		ftp://ftp.rifkin.technion.ac.il/pub/qmail/	\
 		ftp://ftp.net.ohio-state.edu/pub/networking/mail/qmail/ \
 		ftp://ftp.id.wustl.edu/pub/qmail/
-
-# Patch necessary to cope with non-RFC >512 dns entries
-# Since AOL has been using those, the problem has skyrocketed from minor to
-# groundzero. qmail being RFC compliant need to be "fixed" to work with those
-PATCH_SITES=	http://www.ckdhr.com/ckd/
-PATCHFILES+=	qmail-103.patch
-
-# Apply QMAILQUEUE patch
-PATCH_SITES+=	http://www.qmail.org/
-PATCHFILES+=	qmailqueue-patch
-
-PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	zuntum@netbsd.org
 HOMEPAGE=	http://www.qmail.org/
