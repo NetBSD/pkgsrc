@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2935 2005/01/20 10:29:10 adam Exp $
+$NetBSD: TODO,v 1.2936 2005/01/20 11:49:12 adam Exp $
 
 Suggested new packages
 ======================
@@ -332,7 +332,6 @@ Suggested package updates
 	o boaconstructor-0.3.1
 	o boehm-gc-6.4
 	o bomberclone-0.11.5
-	o bonobo-1.0.22
 	o bonobo-conf-0.16
 	o boost-1.32.0
 	o boson-0.10
