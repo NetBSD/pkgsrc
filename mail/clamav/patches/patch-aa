@@ -1,26 +1,8 @@
-$NetBSD: patch-aa,v 1.11 2004/08/01 04:35:33 jlam Exp $
+$NetBSD: patch-aa,v 1.11.2.1 2004/11/08 00:04:17 salo Exp $
 
---- configure.orig	Thu Jul 29 17:50:13 2004
-+++ configure
-@@ -10811,7 +10811,7 @@ _ACEOF
- 
- 
- 
--if test ! -r "$cfg_dir/clamav.conf"; then
-+if true; then
-   INSTALL_CLAMAV_CONF_TRUE=
-   INSTALL_CLAMAV_CONF_FALSE='#'
- else
-@@ -10821,7 +10821,7 @@ fi
- 
- 
- 
--if test ! -r "$cfg_dir/freshclam.conf"; then
-+if true; then
-   INSTALL_FRESHCLAM_CONF_TRUE=
-   INSTALL_FRESHCLAM_CONF_FALSE='#'
- else
-@@ -11047,6 +11047,7 @@ netbsd*)
+--- configure.orig	2004-10-18 02:37:47.000000000 +1000
++++ configure	2004-10-19 09:28:50.000000000 +1000
+@@ -11558,6 +11558,7 @@
   	LIBCLAMAV_LIBS="$LIBCLAMAV_LIBS -lpthread"
   	CLAMD_LIBS="-lpthread"
   	CLAMAV_MILTER_LIBS="$CLAMAV_MILTER_LIBS -lpthread"
