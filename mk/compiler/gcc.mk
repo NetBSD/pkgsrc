@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.73 2004/11/10 12:04:59 shannonjr Exp $
+# $NetBSD: gcc.mk,v 1.74 2004/11/22 22:24:47 wiz Exp $
 
 .if !defined(COMPILER_GCC_MK)
 COMPILER_GCC_MK=	defined
@@ -159,7 +159,7 @@ _GCC_DEPENDENCY=	gcc>=${_GCC_REQD}:../../lang/gcc
 .    if !empty(_LANGUAGES.gcc:Mc++) || \
         !empty(_LANGUAGES.gcc:Mfortran) || \
         !empty(_LANGUAGES.gcc:Mobjc)
-USE_GCC_SHLIB?=		yes
+_USE_GCC_SHLIB?=	yes
 .    endif
 .  endif
 .elif !empty(_NEED_GCC3:M[yY][eE][sS])
@@ -190,7 +190,7 @@ _GCC_DEPENDENCY=	gcc34>=${_GCC_REQD}:../../lang/gcc34
 .    if !empty(_LANGUAGES.gcc:Mc++) || \
         !empty(_LANGUAGES.gcc:Mfortran) || \
         !empty(_LANGUAGES.gcc:Mobjc)
-USE_GCC_SHLIB?=		yes
+_USE_GCC_SHLIB?=	yes
 .    endif
 .  endif
 .endif
@@ -204,7 +204,7 @@ MAKEFLAGS+=		_IGNORE_GCC3CXX=yes
 .  if !defined(_IGNORE_GCC3CXX) && !empty(_LANGUAGES.gcc:Mc++)
 _GCC_PKGSRCDIR+=	../../lang/gcc3-c++
 _GCC_DEPENDENCY+=	gcc3-c++>=${_GCC_REQD}:../../lang/gcc3-c++
-USE_GCC_SHLIB?=		yes
+_USE_GCC_SHLIB?=	yes
 .  endif
 .  if !empty(PKGPATH:Mlang/gcc3-f77)
 _IGNORE_GCC3F77=	yes
@@ -213,7 +213,7 @@ MAKEFLAGS+=		_IGNORE_GCC3F77=yes
 .  if !defined(_IGNORE_GCC3F77) && !empty(_LANGUAGES.gcc:Mfortran)
 _GCC_PKGSRCDIR+=	../../lang/gcc3-f77
 _GCC_DEPENDENCY+=	gcc3-f77>=${_GCC_REQD}:../../lang/gcc3-f77
-USE_GCC_SHLIB?=		yes
+_USE_GCC_SHLIB?=	yes
 .  endif
 .  if !empty(PKGPATH:Mlang/gcc3-objc)
 _IGNORE_GCC3OBJC=	yes
@@ -222,7 +222,7 @@ MAKEFLAGS+=		_IGNORE_GCC3OBJC=yes
 .  if !defined(_IGNORE_GCC3OBJC) && !empty(_LANGUAGES.gcc:Mobjc)
 _GCC_PKGSRCDIR+=	../../lang/gcc3-objc
 _GCC_DEPENDENCY+=	gcc3-objc>=${_GCC_REQD}:../../lang/gcc3-objc
-USE_GCC_SHLIB?=		yes
+_USE_GCC_SHLIB?=	yes
 .  endif
 .endif
 
@@ -403,7 +403,7 @@ PREPEND_PATH+=	${_GCC_DIR}/bin
 .      include "${_dir_}/buildlink3.mk"
 .    endfor
 .  else
-.    if defined(USE_GCC_SHLIB)
+.    if defined(_USE_GCC_SHLIB)
 DEPENDS+=	${_GCC_DEPENDENCY}
 .    else
 BUILD_DEPENDS+=	${_GCC_DEPENDENCY}
