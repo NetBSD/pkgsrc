@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 1999/10/22 13:45:18 agc Exp $
+@comment $NetBSD: PLIST,v 1.8 1999/10/25 22:28:00 agc Exp $
 bin/xvile
 lib/vile/vile-c-filt
 lib/vile/vile-crypt
@@ -27,7 +27,7 @@ lib/vile/vile-ti-filt
 lib/vile/vile-vile-filt
 lib/vile/vile-yacc-filt
 man/man1/xvile.1
-share/xvile/vile.hlp
+share/vile/vile.hlp
 share/vile/c.keywords
 share/vile/filters.rc
 share/vile/pas.keywords
