@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2003/09/30 12:03:21 xtraeme Exp $
+# $NetBSD: Makefile,v 1.20 2003/11/05 00:04:20 dmcmahill Exp $
 
 DISTNAME=		ettercap-0.6.9
 PKGREVISION=		4
@@ -22,6 +22,10 @@ LIBS+=			-ldes
 
 BUILD_DIRS=		${WRKSRC} ${WRKSRC}/plugins
 INSTALL_DIRS=		${WRKSRC} ${WRKSRC}/plugins
+
+.if ${MACHINE_ARCH} == "alpha"
+GCC_REQD=		3.0
+.endif
 
 post-buildlink:
 	if [ ! -f /usr/include/des.h ]; then \
