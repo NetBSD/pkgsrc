@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/05/05 14:41:57 jmmv Exp $
+# $NetBSD: Makefile,v 1.10 2003/06/05 07:45:03 uebayasi Exp $
 #
 
 DISTNAME=		gnome-desktop-2.2.0.1
@@ -31,4 +31,6 @@ LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 .include "../../graphics/gnome2-pixmaps/buildlink2.mk"
 .include "../../sysutils/gnome-vfs2/buildlink2.mk"
 .include "../../x11/gtk2/buildlink2.mk"
+.include "../../x11/startup-notification/buildlink2.mk"
+
 .include "../../mk/bsd.pkg.mk"
