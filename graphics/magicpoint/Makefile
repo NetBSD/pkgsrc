@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 1999/06/17 16:03:42 hubertf Exp $
+# $NetBSD: Makefile,v 1.11 1999/07/01 14:19:32 mrg Exp $
 
 DISTNAME=		magicpoint-1.05a
 CATEGORIES=		x11 graphics
@@ -16,7 +16,9 @@ USE_IMAKE=		yes
 CONFIGURE_ARGS=		--disable-vflib --enable-freetype-charset16
 
 post-configure:
-	(cd ${WRKSRC}/contrib/xmindpath; ./configure --prefix=${PREFIX})
+	(cd ${WRKSRC}/contrib/xmindpath; env LDFLAGS="${LDFLAGS}" \
+		./configure --prefix=${PREFIX} \
+		--x-libraries=${X11BASE}/lib --x-includes=${X11BASE}/include)
 
 post-build:
 	(cd ${WRKSRC}/contrib/xmindpath; make)
