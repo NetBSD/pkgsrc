@@ -1,10 +1,11 @@
-$NetBSD: patch-aa,v 1.1 2002/02/26 01:37:20 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2002/03/04 17:32:51 jmc Exp $
 
---- Makefile.in.orig	Tue Feb 26 02:35:48 2002
-+++ Makefile.in
+--- Makefile.in.orig	Tue Jan 30 02:20:31 2001
++++ Makefile.in	Mon Mar  4 17:25:06 2002
 @@ -1,7 +1,7 @@
- CC = gcc -Wall -ggdb
+-CC = gcc -Wall -ggdb
 -LIBS = `gtk-config --libs`
++CC = gcc -Wall
 +LIBS = `${GTK_CONFIG} --libs`
  LIBS_DEBUG = -lefence
 -CFLAGS = `gtk-config --cflags`
