@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3875 2003/11/27 23:49:02 heinz Exp $
+$NetBSD: CHANGES,v 1.3876 2003/11/28 10:02:52 junyoung Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4666,3 +4666,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated screen to 4.0.1nb1 [wiz 2003-11-27]
 	Updated mozilla-stable to 1.4.1 [taya 2003-11-27]
 	Updated gnupg to 1.2.3nb2 [heinz 2003-11-27]
+	Updated apr to 0.9.5.2.0.48 [junyoung 2003-11-28]
