@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/10/07 17:26:15 jlam Exp $
+bin/asclock
+share/doc/asclock/COPYING
+share/doc/asclock/README.THEMES
+@dirrm share/doc/asclock
