@@ -1,0 +1,11 @@
+DIR_BIN=$PREFIX/bin
+DIR_LIB=$PREFIX/lib
+DIRS_LIBINC=$PREFIX/include
+DIR_GZLIB=/usr/lib
+DIR_INC=$PREFIX/include
+DIR_JPEGLIB=$PREFIX/lib
+DIR_MAN=$PREFIX/man
+INSTALL=
+JPEG=yes
+MANSCHEME=bsd-source-strip
+ZIP=yes
