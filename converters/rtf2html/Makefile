@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/11/02 18:16:46 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2002/11/14 23:43:56 jlam Exp $
 #
 
 DISTNAME=	rtf2html
@@ -10,10 +10,9 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.ice.ru/~vitus/catdoc/
 COMMENT=	Rich Text to HTML file converter
 
-USE_BUILDLINK_ONLY=	# defined
-ALL_TARGET=		rtf2html
-MAKE_FLAGS+=		CC="${CC}"
-MAKE_FLAGS+=		CFLAGS="${CFLAGS}"
+USE_BUILDLINK2=	# defined
+ALL_TARGET=	rtf2html
+MAKE_FLAGS+=	CFLAGS="${CFLAGS}"
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/rtf2html ${PREFIX}/bin

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/11/28 05:20:43 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2002/11/14 23:44:42 jlam Exp $
 
 DISTNAME=	txt2html-1.28
 CATEGORIES=	converters www
@@ -8,9 +8,9 @@ MAINTAINER=	wennmach@netbsd.org
 HOMEPAGE=	http://www.aigeek.com/txt2html/
 COMMENT=	Text to HTML converter
 
-USE_BUILDLINK_ONLY=	YES
-NO_BUILD=		YES
-REPLACE_PERL=		txt2html.pl
+USE_BUILDLINK2=	YES
+NO_BUILD=	YES
+REPLACE_PERL=	txt2html.pl
 
 do-configure:
 	${SED} -e "s:@PREFIX@:${PREFIX}:g" \
@@ -24,5 +24,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/sample.html ${PREFIX}/share/txt2html
 	${INSTALL_DATA} ${WRKSRC}/sample.txt ${PREFIX}/share/txt2html
 
-.include "../../lang/perl5/buildlink.mk"
+.include "../../lang/perl5/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
