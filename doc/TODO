@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2917 2005/01/16 22:40:43 epg Exp $
+$NetBSD: TODO,v 1.2918 2005/01/17 12:00:07 wiz Exp $
 
 Suggested new packages
 ======================
@@ -340,6 +340,7 @@ Suggested package updates
 	o boost-1.32.0
 	o boson-0.10
 	o btparse-0.34
+	o bugzilla-2.18
 	o bzflag-1.10.8
 	o c4-1.10
 	o camlimages-2.12
@@ -348,7 +349,7 @@ Suggested package updates
 	o cbmconvert-2.1.2
 	o ccgo-0.3.5
 	o cdl3-1.2.6
-	o cdlabelgen-3.1.0
+	o cdlabelgen-3.5.0
 	o cdpd-1.0.2
 	o cdrtools-2.01
 	o cdrtools-ossdvd-2.01a32
@@ -705,7 +706,7 @@ Suggested package updates
 	o msmtp-1.3.1
 	o mtail-1.1.1
 	o multi-gnome-terminal-1.6.2
-	o multitail-3.4.3
+	o multitail-3.4.4
 	o muse-0.9.1
 	o nail-11.20
 	o nano-1.3.5
@@ -948,6 +949,7 @@ Suggested package updates
 	o py-amkCrypto-2.0
 	o py-bdb-xml-2.0.9
 	o py-gnuplot-1.7
+	o py-kenosis-0.93
 	o py-ldap-2.0.6
 	o py-logging-0.4.9.5
 	o py-m2crypto-0.13
@@ -1179,6 +1181,7 @@ Suggested package updates
 	o xerces-c-2.5.0 [heinz?|p5-XML-Xerces requires xerces-c-2.3.0]
 	o xerces-j-2.4.0 [pkg/21725]
 	o xerces-j-2.6.2
+	o xfce-4.2.0
 	o xfce4-minicmd-plugin-0.3.0
 	o xfce4-taskbar-plugin-0.2.2
 	o xfce4-wavelan-plugin-0.4.1
