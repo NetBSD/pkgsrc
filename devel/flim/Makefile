@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/04/17 04:56:34 uebayasi Exp $
+# $NetBSD: Makefile,v 1.9 2003/04/23 16:59:51 jmc Exp $
 
 DISTNAME=	flim-1.14.5
 PKGREVISION=	2
@@ -24,6 +24,7 @@ MAKEFLAGS+=     PACKAGEDIR=${EMACS_LISPPREX:C|/lisp$||}
 .endif
 
 INFO_FILES=	mime-en.info mime-ja.info
+TEXINFO_REQD=	4.5
 
 pre-build:
 	@cd ${WRKSRC}; \
