@@ -1,0 +1,50 @@
+$NetBSD: patch-ab,v 1.1 2004/09/06 20:38:36 danw Exp $
+
+--- src/Makefile.in.orig	Tue Feb 17 11:37:47 2004
++++ src/Makefile.in
+@@ -60,16 +60,16 @@ SOURCES = $(srcdir)/cfg+.c \
+ 		  $(srcdir)/platon/str/strdyn.c \
+ 		  $(srcdir)/platon/str/dynfgets.c
+ 
+-OBJECTS = $(top_builddir)/src/cfg+.o \
+-		  $(top_builddir)/src/parse.o \
+-		  $(top_builddir)/src/props.o \
+-		  $(top_builddir)/src/cmdline.o \
+-		  $(top_builddir)/src/cfgfile.o \
+-		  $(top_builddir)/src/shared.o \
+-		  $(top_builddir)/src/platon/str/strplus.o \
+-		  $(top_builddir)/src/platon/str/strctype.o \
+-		  $(top_builddir)/src/platon/str/strdyn.o \
+-		  $(top_builddir)/src/platon/str/dynfgets.o
++OBJECTS = $(top_builddir)/src/cfg+.lo \
++		  $(top_builddir)/src/parse.lo \
++		  $(top_builddir)/src/props.lo \
++		  $(top_builddir)/src/cmdline.lo \
++		  $(top_builddir)/src/cfgfile.lo \
++		  $(top_builddir)/src/shared.lo \
++		  $(top_builddir)/src/platon/str/strplus.lo \
++		  $(top_builddir)/src/platon/str/strctype.lo \
++		  $(top_builddir)/src/platon/str/strdyn.lo \
++		  $(top_builddir)/src/platon/str/dynfgets.lo
+ 
+ # SunOS 4 make does not allow multiple makefiles to be specified in one ­include directive.
+ DEP_FILES = $(top_builddir)/src/.deps/cfg+.P \
+@@ -97,8 +97,7 @@ noinst_HEADERS  = cfgfile.h \
+ 				  platon/str/strplus.h
+ 
+ LIBSTATIC   = $(PACKAGE).a
+-LIBDYNAMIC  = $(PACKAGE).so
+-LIBDYNAMICV = $(PACKAGE).so.$(VERSION)
++LIBDYNAMICV  = $(PACKAGE).la
+ 
+ install_LIB     = $(LIBSTATIC) $(LIBDYNAMICV)
+ 
+@@ -166,7 +165,7 @@ install-lib: $(install_LIB)
+ 	@list='$(install_LIB)'; for p in $$list; do \
+ 	  if test -f "$$p"; then d= ; else d="$(srcdir)/"; fi; \
+ 	  echo "	Installing file $(DESTDIR)$(libdir)/$$p"; \
+-	  $(INSTALL_DATA) $$d$$p $(DESTDIR)$(libdir)/$$p; \
++	  $(LIBTOOL) --mode=install $(INSTALL_DATA) $$d$$p $(DESTDIR)$(libdir)/$$p; \
+ 	done
+ uninstall-lib:
+ 	@$(NORMAL_UNINSTALL)
