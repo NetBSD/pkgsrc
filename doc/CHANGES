@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8522 2004/12/29 20:27:39 kristerw Exp $
+$NetBSD: CHANGES,v 1.8523 2004/12/29 22:15:08 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -6701,3 +6701,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated perl58 to 5.8.6 [jlam 2004-12-29]
 	Updated xmame to 0.89 [kristerw 2004-12-29]
 	Updated xmess to 0.89 [kristerw 2004-12-29]
+	Updated ezmlm-idx to 0.431 [schmonz 2004-12-29]
