@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2000/11/16 02:54:07 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2000/12/16 22:37:31 tron Exp $
 
 DISTNAME=		suse_base-6.3
 CATEGORIES=		emulators
@@ -69,4 +69,4 @@ do-install:
 	${CHMOD} +x ${LINUX_LDD}
 	@${SETENV} PKG_PREFIX="${PREFIX}" ${SH} ${INSTALL_FILE} - POST-INSTALL
 
-.include "../suse_linux/suse.mk"
+.include "../suse_linux/Makefile.common"

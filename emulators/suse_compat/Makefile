@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2000/05/31 05:01:21 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.8 2000/12/16 22:37:31 tron Exp $
 
 DISTNAME=		compat
 PKGNAME=		suse_compat-6.3
@@ -19,4 +19,4 @@ PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
 
 RPMFILES=		${DISTNAME}${EXTRACT_SUFX}
 
-.include "../suse_linux/suse.mk"
+.include "../suse_linux/Makefile.common"
