@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/09/10 16:06:40 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2002/10/07 09:36:53 wiz Exp $
 #
 
 DISTNAME=		mrproject-0.5.1
@@ -10,7 +10,8 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://mrproject.codefactory.se/
 COMMENT=		Project management program
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
+USE_LIBTOOL=		YES
 USE_X11BASE=		YES
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--sysconfdir=${LOCALBASE}/etc/mrproject
@@ -20,7 +21,6 @@ CFLAGS+=		-I${BUILDLINK_DIR}/include/gconf/1
 LIBTOOL_OVERRIDE=       ${WRKSRC}/libtool
 
 DEPENDS+=		skill-[0-9]*:../../sysutils/skill
-DEPENDS+=		evolution>=1.0.8:../../mail/evolution
 
 post-extract:
 	# This is an ugly hack to fix the missing file error in 0.5.1
@@ -33,11 +33,13 @@ post-patch:
 		${SED} -e 's|/opt/gnome|${PREFIX}|g' $$f.pre > $$f;	\
 	done
 
-.include "../../devel/GConf/buildlink.mk"
-.include "../../devel/bonobo/buildlink.mk"
-.include "../../devel/gal/buildlink.mk"
-.include "../../devel/oaf/buildlink.mk"
-.include "../../graphics/gdk-pixbuf/buildlink.mk"
-.include "../../sysutils/gnome-vfs/buildlink.mk"
-.include "../../x11/gnome-libs/buildlink.mk"
+.include "../../devel/GConf/buildlink2.mk"
+.include "../../devel/bonobo/buildlink2.mk"
+.include "../../devel/gal/buildlink2.mk"
+.include "../../devel/gettext-lib/buildlink2.mk"
+.include "../../devel/oaf/buildlink2.mk"
+.include "../../graphics/gdk-pixbuf/buildlink2.mk"
+.include "../../mail/evolution/buildlink2.mk"
+.include "../../sysutils/gnome-vfs/buildlink2.mk"
+.include "../../x11/gnome-libs/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
