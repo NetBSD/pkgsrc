@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.26 2004/12/03 15:15:04 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2005/01/03 10:51:14 martti Exp $
 
-DISTNAME=		OOo_1.1.2_LinuxIntel_install
-PKGNAME=		openoffice-linux-1.1.2
+DISTNAME=		OOo_${OO_VER}_LinuxIntel_install
+PKGNAME=		openoffice-linux-${OO_VER}
 CATEGORIES=		misc
-MASTER_SITES=		${MASTER_SITE_OPENOFFICE:=stable/1.1.2/}
+MASTER_SITES=		${MASTER_SITE_OPENOFFICE:=stable/${OO_VER}/}
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX}
 DISTFILES+=		openoffice-linux-112-services.rdb.bz2
 SITES_openoffice-linux-112-services.rdb.bz2=http://www.fs.tum.de/~mrauch/OpenOffice/download/\
@@ -12,6 +12,9 @@ SITES_openoffice-linux-112-services.rdb.bz2=http://www.fs.tum.de/~mrauch/OpenOff
 MAINTAINER=		mrauch@NetBSD.org
 HOMEPAGE=		http://www.openoffice.org/
 COMMENT=		Integrated office productivity suite (binary pkg)
+
+OO_VER=			1.1.4
+PLIST_SUBST+=		VER=${OO_VER}
 
 NO_CONFIGURE=           yes
 
@@ -43,16 +46,16 @@ pre-install:
 #.     endif
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/OpenOffice.org1.1.2/program
+	${INSTALL_DATA_DIR} ${PREFIX}/OpenOffice.org${OO_VER}/program
 	${INSTALL_DATA} ${WRKDIR}/openoffice-linux-112-services.rdb	\
-		${PREFIX}/OpenOffice.org1.1.2/program/services.rdb
+		${PREFIX}/OpenOffice.org${OO_VER}/program/services.rdb
 	${SH} -c "cd ${WRKSRC}; ./install --prefix=${PREFIX}"
 	${RM} -f ${PREFIX}/bin/soffice.orig
-	${SED}	-e "s|@@PREFIX@@|${PREFIX}|g"				\
+	${SED}	-e "s|@@PREFIX@@|${PREFIX}|g" -e "s|@@OO_VER@@|${OO_VER}|g"		\
 		< ${FILESDIR}/soffice > ${PREFIX}/bin/soffice
 	${CHMOD} +x ${PREFIX}/bin/soffice
 .for i in scalc sdraw simpress swriter
-	${LN} -sf ${PREFIX}/OpenOffice.org1.1.2/program/$i ${PREFIX}/bin/$i
+	${LN} -sf ${PREFIX}/OpenOffice.org${OO_VER}/program/$i ${PREFIX}/bin/$i
 .endfor
 
 # everything specific to your OS/Arch goes into its own Makefile
