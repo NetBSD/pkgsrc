@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/12/25 05:04:01 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2004/12/25 05:06:15 jlam Exp $
 
 DISTNAME=      	Spiffy-0.21
 PKGNAME=       	p5-${DISTNAME}
@@ -9,6 +9,9 @@ AUTHOR_DIR=	authors/id/I/IN/INGY
 
 MAINTAINER=	jlam@NetBSD.org
 COMMENT=	Object-oriented Perl framework
+
+DEPENDS+=	p5-Filter-[0-9]*:../../textproc/p5-Filter
+DEPENDS+=	p5-Scalar-List-Utils-[0-9]*:../../devel/p5-Scalar-List-Utils
 
 USE_BUILDLINK3=	yes
 PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/Spiffy/.packlist
