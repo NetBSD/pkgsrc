@@ -1,0 +1,13 @@
+$NetBSD: patch-at,v 1.1 2004/11/15 11:15:48 hira Exp $
+
+--- programs/Xserver/hw/xfree86/os-support/bsd/Imakefile.orig	2004-11-03 17:32:01.000000000 +0900
++++ programs/Xserver/hw/xfree86/os-support/bsd/Imakefile	2004-11-03 17:32:07.000000000 +0900
+@@ -114,7 +114,7 @@
+ KMODOBJ = kmod_noop.o
+ #endif
+ 
+-#if defined(i386Architecture) || defined(ia64Architecture)
++#if defined(i386Architecture) || defined(ia64Architecture) || defined(AMD64Architecture)
+ RES_SRC=stdResource.c
+ RES_OBJ=stdResource.o
+ #else
