@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.1 1998/08/23 07:28:44 garbled Exp $
+# $NetBSD: Makefile,v 1.2 1998/08/23 12:07:51 tron Exp $
 
 DISTNAME=		AfterStep-1.4.5.0
 PKGNAME=		afterstep-1.450
 CATEGORIES=		x11
-MASTER_SITES=		ftp://ftp.afterstep.org/pub/
+MASTER_SITES=		ftp://ftp.afterstep.org/pub/ \
+			ftp://ftp.digex.net/pub/os/wm/AfterStep/
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		root@garbled.net
