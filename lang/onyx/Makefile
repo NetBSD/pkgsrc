@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2002/11/11 11:10:41 mrg Exp $
+# $NetBSD: Makefile,v 1.7 2002/11/20 11:57:43 mrg Exp $
 
 DISTNAME=	onyx-${VERS}
 CATEGORIES=	lang
@@ -11,7 +11,7 @@ COMMENT=	Embeddable stack-based threaded interpreted language
 # needs EL_CLIENTDATA in /usr/include/histedit.h
 ONLY_FOR_PLATFORM=	NetBSD-1.5[YZ]*-* NetBSD-1.6*-* NetBSD-1.7*-*
 
-BUILD_DEPENDS=	cook-[0-9]*:../../devel/cook
+BUILD_DEPENDS+=	cook-[0-9]*:../../devel/cook
 
 GNU_CONFIGURE=	yes
 # XXX
