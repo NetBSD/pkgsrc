@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.154 2003/01/08 15:56:40 wiz Exp $
+$NetBSD: TODO,v 1.155 2003/01/08 23:21:04 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -49,10 +49,6 @@ Suggested new packages
 	Fast JSP server. (I will import this when we have a native
 	  Java 2 -- it can't be built with our native jdk. [jwise])
 	http://www.caucho.com/products/resin/index.xtp
-
-	rox-filer
-	graphical file manager for ROX
-	http://rox.sourceforge.net/rox_filer.php3
 
 	squirm
 	Fast and configurable redirector for Squid.
