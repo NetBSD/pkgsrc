@@ -1,14 +1,21 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/01/24 22:13:23 dmcmahill Exp $
+$NetBSD: patch-aa,v 1.2 2000/08/16 22:02:47 dmcmahill Exp $
 
---- src/Makefile.orig	Thu Nov  4 01:52:00 1999
-+++ src/Makefile	Sun Jan 23 21:47:29 2000
-@@ -54,4 +54,9 @@
- 	-(cd ULTRIX-G++; make -k)
+--- src/Makefile.orig	Fri Jun  2 13:15:15 2000
++++ src/Makefile	Tue Aug 15 19:35:55 2000
+@@ -53,5 +53,5 @@
+ 	-mkdir NETBSD
+ 	cat Make1 Make2.g++ Make3 Make.depend >NETBSD/Makefile
+-	(cd NETBSD; make -k)
++	(cd NETBSD; ${MAKE} -k)
  #-----------------------------------------------------------------------------
+ next:
+@@ -69,4 +69,9 @@
+ 	cat Make1 Make2.g++ Make3 Make.depend >ULTRIX-G++/Makefile
+ 	-(cd ULTRIX-G++; make -k)
++#-----------------------------------------------------------------------------
 +sunos:
 +	-mkdir SUNOS 
 +	cat Make1 Make2.g++ Make3 Make.depend >SUNOS/Makefile
-+	(cd SUNOS; make -k)
-+#-----------------------------------------------------------------------------
++	(cd SUNOS; ${MAKE} -k)
+ #-----------------------------------------------------------------------------
  sun3-g++:
- 	-mkdir SUN3-G++
