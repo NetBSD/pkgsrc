@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.5 2004/03/02 16:05:01 adam Exp $
+$NetBSD: distinfo,v 1.6 2004/06/04 08:16:53 adam Exp $
 
-SHA1 (ffcall-1.9.tar.gz) = 6088036bd44581853d546d0ab5803dd1b36d61b9
-Size (ffcall-1.9.tar.gz) = 873806 bytes
+SHA1 (ffcall-1.10.tar.gz) = 6b4fdc7bd38b434bbf3d65508a3d117fc8b349f3
+Size (ffcall-1.10.tar.gz) = 914870 bytes
 SHA1 (patch-aa) = 1aef05b97cf4da460325caddf9410dc7c1917d76
 SHA1 (patch-ab) = 7e4b587a080af5530c7bd883a71b614162522320
 SHA1 (patch-ad) = 4cfba7c4ce9fb709d1e857433c5caad293ca9c29
