@@ -1,10 +1,11 @@
-# $NetBSD: buildlink.mk,v 1.4 2001/06/11 01:59:36 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.5 2001/06/23 19:26:56 jlam Exp $
 #
 # This Makefile fragment is included by packages that use libjpeg.
 #
 # To use this Makefile fragment, simply:
 #
-# (1) Optionally define JPEG_REQD to the version of libjpeg desired.
+# (1) Optionally define BUILDLINK_DEPENDS.jpeg to the dependency pattern
+#     for the version of libjpeg desired.
 # (2) Include this Makefile fragment in the package Makefile,
 # (3) Add ${BUILDLINK_DIR}/include to the front of the C preprocessor's header
 #     search path, and
@@ -14,8 +15,8 @@
 .if !defined(JPEG_BUILDLINK_MK)
 JPEG_BUILDLINK_MK=	# defined
 
-JPEG_REQD?=		6
-DEPENDS+=		jpeg>=${JPEG_REQD}:../../graphics/jpeg
+BUILDLINK_DEPENDS.jpeg?=	jpeg-6b
+DEPENDS+=	${BUILDLINK_DEPENDS.jpeg}:../../graphics/jpeg
 
 BUILDLINK_PREFIX.jpeg=	${LOCALBASE}
 BUILDLINK_FILES.jpeg=	include/jconfig.h

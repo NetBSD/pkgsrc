@@ -1,10 +1,11 @@
-# $NetBSD: buildlink.mk,v 1.2 2001/06/22 16:46:51 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.3 2001/06/23 19:26:57 jlam Exp $
 #
 # This Makefile fragment is included by packages that use mng.
 #
 # To use this Makefile fragment, simply:
 #
-# (1) Optionally define MNG_REQD to the version of mng desired.
+# (1) Optionally define BUILDLINK_DEPENDS.mng to the dependency pattern
+#     for the version of mng desired.
 # (2) Include this Makefile fragment in the package Makefile,
 # (3) Add ${BUILDLINK_DIR}/include to the front of the C preprocessor's header
 #     search path, and
@@ -14,8 +15,8 @@
 .if !defined(MNG_BUILDLINK_MK)
 MNG_BUILDLINK_MK=	# defined
 
-MNG_REQD?=		1.0.0
-DEPENDS+=		mng>=${MNG_REQD}:../../graphics/mng
+BUILDLINK_DEPENDS.mng?=	mng>=1.0.0
+DEPENDS+=		${BUILDLINK_DEPENDS.mng}:../../graphics/mng
 
 BUILDLINK_PREFIX.mng=	${LOCALBASE}
 BUILDLINK_FILES.mng=	include/libmng.h

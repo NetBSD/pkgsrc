@@ -1,10 +1,11 @@
-# $NetBSD: buildlink.mk,v 1.1 2001/06/16 19:23:18 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.2 2001/06/23 19:26:56 jlam Exp $
 #
 # This Makefile fragment is included by packages that use imlib.
 #
 # To use this Makefile fragment, simply:
 #
-# (1) Optionally define IMLIB_REQD to the version of imlib desired.
+# (1) Optionally define BUILDLINK_DEPENDS.imlib to the dependency pattern
+#     for the version of imlib desired.
 # (2) Include this Makefile fragment in the package Makefile,
 # (3) Add ${BUILDLINK_DIR}/include to the front of the C preprocessor's header
 #     search path, and
@@ -14,8 +15,8 @@
 .if !defined(IMLIB_BUILDLINK_MK)
 IMLIB_BUILDLINK_MK=	# defined
 
-IMLIB_REQD?=		1.9.8
-DEPENDS+=		imlib>=${IMLIB_REQD}:../../graphics/imlib
+BUILDLINK_DEPENDS.imlib?=	imlib>=1.9.8
+DEPENDS+=	${BUILDLINK_DEPENDS.imlib}:../../graphics/imlib
 
 BUILDLINK_PREFIX.imlib=	${X11PREFIX}
 BUILDLINK_FILES.imlib=	include/gdk_imlib.h
