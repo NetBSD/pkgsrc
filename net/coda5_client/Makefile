@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2003/04/10 01:28:20 grant Exp $
+# $NetBSD: Makefile,v 1.38 2003/04/10 20:10:18 grant Exp $
 
 PKGNAME=	coda-client-${DIST_VERS}
 COMMENT=	client programs for a replicated high-performance network file system
@@ -13,7 +13,7 @@ CONF_FILES+=	${EGDIR}/sidekick.intr.ex ${PKG_SYSCONFDIR}/sidekick.intr
 CONF_FILES+=	${EGDIR}/venus.conf.ex ${PKG_SYSCONFDIR}/venus.conf
 
 post-install:
-	cd ${PREFIX} && ${PAX} -zr					\
+	cd ${PREFIX} && ${PAX} -O -zr					\
 		-s "/usr\/\(man\/man.\/\)au.8/\1venus-au.8/"		\
 		-s "/usr\/\(man\/man.\/\)replay.8/\1coda_replay.8/"	\
 		-s "/usr\///"						\

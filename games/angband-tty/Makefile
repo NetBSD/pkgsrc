@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2003/03/29 12:41:00 jmmv Exp $
+# $NetBSD: Makefile,v 1.14 2003/04/10 20:10:16 grant Exp $
 #
 
 DISTNAME=		angband-283
@@ -30,10 +30,10 @@ do-install:
 	${INSTALL} -d -o bin -g games -m 0775 ${PREFIX}/share/angband
 	${CP} -R ${WRKDIR}/${DISTNAME}/lib/* ${PREFIX}/share/angband
 	cd ${PREFIX}/share/angband/help && \
-		${PAX} -rOzf ${DISTDIR}/${SPOILERFILE}
+		${PAX} -O -zrf ${DISTDIR}/${SPOILERFILE}
 	${CHOWN} -R bin:games ${PREFIX}/share/angband
 	${CHMOD} -R 0664 ${PREFIX}/share/angband/*
-	(cd ${PREFIX}/share/angband && ${CHMOD} 0775 apex bone data edit file help info save user xtra)
+	cd ${PREFIX}/share/angband && ${CHMOD} 0775 apex bone data edit file help info save user xtra
 	${INSTALL} -c -s -o bin -g games -m 2755 ${WRKSRC}/angband ${PREFIX}/bin
 
 .include "../../mk/bsd.pkg.mk"

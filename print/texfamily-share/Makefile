@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/03/29 12:42:19 jmmv Exp $
+# $NetBSD: Makefile,v 1.8 2003/04/10 20:10:19 grant Exp $
 
 DISTNAME=	TeXfamily-share-1.2.1
 PKGREVISION=	4
@@ -36,7 +36,7 @@ do-install:
     texfam-texmf-j1.9.1 texfam-texmf-m0.8 \
     mulfonts-vf mulfonts-subtfm jis nmin-ngoth standard morisawa
 	@cd ${PREFIX}/share/texmf.local; \
-		${PAX} -rz -pe -s /ls-R// \
+		${PAX} -O -rz -pe -s /ls-R// \
 			-f ${DISTDIR}/${DIST_SUBDIR}/${f}${EXTRACT_SUFX}
 .endfor
 	@${INSTALL_DATA_DIR} ${PREFIX}/share/texmf.local/doc/fonts

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2003/03/27 14:13:26 atatat Exp $
+# $NetBSD: Makefile,v 1.60 2003/04/10 20:10:20 grant Exp $
 #
 
 DISTNAME=		lsof_4.67
@@ -50,7 +50,7 @@ post-extract:
 	if [ "X${EXTRACT_USING_PAX}" = "X" ]; then \
 		${GTAR} -xf ${SRCBALL_NAME}.tar; \
 	else \
-		${PAX} -r < ${SRCBALL_NAME}.tar; \
+		${PAX} -O -r < ${SRCBALL_NAME}.tar; \
 	fi)
 	@( cd ${WRKSRC} ; ${ECHO} "y" | ./Inventory || exit 1 )
 

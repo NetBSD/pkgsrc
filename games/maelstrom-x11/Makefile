@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/04/10 01:28:17 grant Exp $
+# $NetBSD: Makefile,v 1.5 2003/04/10 20:10:17 grant Exp $
 
 DISTNAME=		Maelstrom-1.4.3-L2.0.6-src.tar.gz
 PKGNAME=		maelstrom-x11-2.0.6
@@ -27,9 +27,9 @@ MAKE_ENV+=		BINOWN=${BINOWN} BINGRP=${BINGRP} XPMDIR=${BUILDLINK_PREFIX.xpm}
 
 post-install:
 	cd ${PREFIX}/share/maelstrom && \
-		${PAX} -zrf ${DISTDIR}/${ESOUND} -pm && \
-		${PAX} -zrf ${DISTDIR}/${STREK} -pm && \
-		${PAX} -zrf ${DISTDIR}/${SWARS} -pm
+		${PAX} -O -pm -zrf ${DISTDIR}/${ESOUND} && \
+		${PAX} -O -pm -zrf ${DISTDIR}/${STREK} && \
+		${PAX} -O -pm -zrf ${DISTDIR}/${SWARS}
 	${CHOWN} ${BINOWN}:games ${PREFIX}/bin/Maelstrom
 	${CHMOD} 2755 ${PREFIX}/bin/Maelstrom
 	${CHOWN} ${BINOWN}:games /var/games/Maelstrom-Scores
