@@ -1,4 +1,4 @@
-$NetBSD: README.MacOSX,v 1.3 2004/10/07 13:28:48 grant Exp $
+$NetBSD: README.MacOSX,v 1.4 2004/10/24 11:17:45 grant Exp $
 
 Please read "README.Darwin" as well, as everything there also applies
 to Mac OS X.
@@ -68,3 +68,7 @@ then run:
 /opt/ibmcmp/vacpp/6.0/bin/vacpp_configure -gcc /usr -install -force
 
 as root to install the configuration.
+
+to bootstrap with xlc, you need to make sure CFLAGS contains "-ma":
+
+env CC=/opt/ibmcmp/vacpp/6.0/bin/xlc CFLAGS=-ma ./bootstrap
