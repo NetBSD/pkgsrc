@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/12/28 00:13:08 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2001/01/12 13:08:48 dent Exp $
 # FreeBSD Id: Makefile,v 1.5 1998/10/21 00:57:27 steve Exp
 #
 
@@ -9,7 +9,7 @@ MASTER_SITES=		ftp://ftp.astart.com/pub/LPRng/LPRng/
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		jlam@netbsd.org
-HOMEPAGE=		http://www.astart.com/LPRng/LPRng.html
+HOMEPAGE=		http://www.lprng.com/
 
 CONFLICTS+=		cups-[0-9]*
 
