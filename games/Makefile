@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.171 2003/06/03 00:42:07 hubertf Exp $
+# $NetBSD: Makefile,v 1.172 2003/06/03 14:33:23 wiz Exp $
 #
 
 COMMENT=	Games
@@ -38,6 +38,7 @@ SUBDIR+=	crimsonfields
 SUBDIR+=	criticalmass
 SUBDIR+=	crossfire-cli
 SUBDIR+=	crossfire-srv
+SUBDIR+=	defendguin
 SUBDIR+=	dipmap
 SUBDIR+=	dopewars
 SUBDIR+=	eus-demo
