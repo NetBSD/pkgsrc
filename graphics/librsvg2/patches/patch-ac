@@ -1,14 +1,13 @@
-$NetBSD: patch-ac,v 1.4 2004/04/01 18:37:09 jmmv Exp $
+$NetBSD: patch-ac,v 1.5 2004/09/21 16:51:01 jmmv Exp $
 
---- Makefile.in.orig	2003-12-07 19:35:55.000000000 +0000
+--- Makefile.in.orig	2004-09-12 21:16:35.000000000 +0200
 +++ Makefile.in
-@@ -104,7 +104,8 @@ STRIP = @STRIP@
- VERSION = @VERSION@
- VERSION_INFO = @VERSION_INFO@
- 
--SUBDIRS = . gtk-engine gdk-pixbuf-loader doc
-+# gtk-engine is built directly from the librsvg2-gtk2 package.
-+SUBDIRS = . gdk-pixbuf-loader doc
- 
- bin_PROGRAMS = rsvg
- 
+@@ -307,7 +307,7 @@ sbindir = @sbindir@
+ sharedstatedir = @sharedstatedir@
+ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
+-SUBDIRS = . gtk-engine gdk-pixbuf-loader moz-plugin doc data
++SUBDIRS = . gdk-pixbuf-loader doc data
+ @HAVE_GTK_FALSE@target_rsvg_view = 
+ @HAVE_GTK_TRUE@target_rsvg_view = rsvg-view
+ man_MANS = rsvg.1
