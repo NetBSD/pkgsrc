@@ -1,15 +1,17 @@
-$NetBSD: patch-ad,v 1.2 2000/06/12 20:30:41 dmcmahill Exp $
+$NetBSD: patch-ad,v 1.3 2000/07/26 20:58:39 dmcmahill Exp $
 
 makes 
   install-info --delete %D/info/dinotrace.info %D/info/dir
 actually work.
 
---- dinotrace.info.orig	Tue Jan 25 16:39:51 2000
-+++ dinotrace.info	Mon Jun 12 16:08:18 2000
-@@ -4,5 +4,5 @@
+--- dinotrace.info.orig	Thu Jul 13 14:09:17 2000
++++ dinotrace.info	Wed Jul 26 15:06:50 2000
+@@ -3,7 +3,7 @@
+ 
  INFO-DIR-SECTION Signal waveform tracing tool
  START-INFO-DIR-ENTRY
 -* Dinotrace: (Dinotrace).         Signal waveform tracing tool.
 +* Dinotrace: (dinotrace).         Signal waveform tracing tool.
  END-INFO-DIR-ENTRY
  
+   This file documents the Dinotrace package for viewing signal
