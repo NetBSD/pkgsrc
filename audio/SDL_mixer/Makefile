@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/12/08 14:41:38 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2004/01/05 22:44:04 jlam Exp $
 #
 
 DISTNAME=		SDL_mixer-1.2.5
@@ -12,7 +12,9 @@ COMMENT=		Multi-channel audio mixer library
 
 CONFLICTS=		SDL-mixer-[0-9]*
 
-USE_BUILDLINK2=		YES
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+USE_BUILDLINK3=		YES
 GNU_CONFIGURE=		YES
 USE_X11=		YES
 USE_LIBTOOL=		YES
@@ -22,12 +24,14 @@ LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 CPPFLAGS=		-Dunix=1
 CFLAGS=			-DPREFIX=\"\\\"${PREFIX}\\\"\"
 
-post-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/.libs/playmus ${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/.libs/playwave ${PREFIX}/bin
+INSTALLATION_DIRS=	bin
 
-.include "../../audio/libogg/buildlink2.mk"
-.include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../devel/smpeg/buildlink2.mk"
+post-install:
+	${PKGLIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/playmus ${PREFIX}/bin
+	${PKGLIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/playwave ${PREFIX}/bin
+
+.include "../../audio/libogg/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/smpeg/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
