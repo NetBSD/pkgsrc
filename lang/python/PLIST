@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2004/02/06 08:37:22 lukem Exp $
+bin/python
