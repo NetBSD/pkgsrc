@@ -1,33 +1,33 @@
-@comment $NetBSD: PLIST,v 1.15 2005/02/13 22:55:04 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.16 2005/03/22 16:30:57 jmmv Exp $
 bin/gedit
 bin/gnome-text-editor
-include/gedit-2.8/gedit/bonobo-mdi-child.h
-include/gedit-2.8/gedit/bonobo-mdi.h
-include/gedit-2.8/gedit/gedit-convert.h
-include/gedit-2.8/gedit/gedit-debug.h
-include/gedit-2.8/gedit/gedit-document.h
-include/gedit-2.8/gedit/gedit-encodings.h
-include/gedit-2.8/gedit/gedit-file.h
-include/gedit-2.8/gedit/gedit-mdi-child.h
-include/gedit-2.8/gedit/gedit-mdi.h
-include/gedit-2.8/gedit/gedit-menus.h
-include/gedit-2.8/gedit/gedit-metadata-manager.h
-include/gedit-2.8/gedit/gedit-output-window.h
-include/gedit-2.8/gedit/gedit-plugin.h
-include/gedit-2.8/gedit/gedit-prefs-manager-app.h
-include/gedit-2.8/gedit/gedit-prefs-manager.h
-include/gedit-2.8/gedit/gedit-print.h
-include/gedit-2.8/gedit/gedit-recent.h
-include/gedit-2.8/gedit/gedit-utils.h
-include/gedit-2.8/gedit/gedit-view.h
-include/gedit-2.8/gedit/gedit2.h
-include/gedit-2.8/gedit/recent-files/egg-recent-item.h
-include/gedit-2.8/gedit/recent-files/egg-recent-model.h
-include/gedit-2.8/gedit/recent-files/egg-recent-util.h
-include/gedit-2.8/gedit/recent-files/egg-recent-view-bonobo.h
-include/gedit-2.8/gedit/recent-files/egg-recent-view-gtk.h
-include/gedit-2.8/gedit/recent-files/egg-recent-view.h
-lib/bonobo/libgedit-control.la
+include/gedit-2.10/gedit/bonobo-mdi-child.h
+include/gedit-2.10/gedit/bonobo-mdi.h
+include/gedit-2.10/gedit/gedit-convert.h
+include/gedit-2.10/gedit/gedit-debug.h
+include/gedit-2.10/gedit/gedit-document.h
+include/gedit-2.10/gedit/gedit-encodings-option-menu.h
+include/gedit-2.10/gedit/gedit-encodings.h
+include/gedit-2.10/gedit/gedit-file.h
+include/gedit-2.10/gedit/gedit-mdi-child.h
+include/gedit-2.10/gedit/gedit-mdi.h
+include/gedit-2.10/gedit/gedit-menus.h
+include/gedit-2.10/gedit/gedit-metadata-manager.h
+include/gedit-2.10/gedit/gedit-output-window.h
+include/gedit-2.10/gedit/gedit-plugin.h
+include/gedit-2.10/gedit/gedit-prefs-manager-app.h
+include/gedit-2.10/gedit/gedit-prefs-manager.h
+include/gedit-2.10/gedit/gedit-print.h
+include/gedit-2.10/gedit/gedit-recent.h
+include/gedit-2.10/gedit/gedit-utils.h
+include/gedit-2.10/gedit/gedit-view.h
+include/gedit-2.10/gedit/gedit2.h
+include/gedit-2.10/gedit/recent-files/egg-recent-item.h
+include/gedit-2.10/gedit/recent-files/egg-recent-model.h
+include/gedit-2.10/gedit/recent-files/egg-recent-util.h
+include/gedit-2.10/gedit/recent-files/egg-recent-view-bonobo.h
+include/gedit-2.10/gedit/recent-files/egg-recent-view-gtk.h
+include/gedit-2.10/gedit/recent-files/egg-recent-view.h
 lib/bonobo/servers/GNOME_Gedit.server
 lib/gedit-2/plugins/changecase.gedit-plugin
 lib/gedit-2/plugins/docinfo.gedit-plugin
@@ -36,18 +36,20 @@ lib/gedit-2/plugins/libchangecase.la
 lib/gedit-2/plugins/libdocinfo.la
 lib/gedit-2/plugins/libindent.la
 lib/gedit-2/plugins/libsample.la
+lib/gedit-2/plugins/libsavecopy.la
 lib/gedit-2/plugins/libshell_output.la
 lib/gedit-2/plugins/libsort.la
 lib/gedit-2/plugins/libspell.la
 lib/gedit-2/plugins/libtaglist.la
 lib/gedit-2/plugins/libtime.la
 lib/gedit-2/plugins/sample.gedit-plugin
+lib/gedit-2/plugins/savecopy.gedit-plugin
 lib/gedit-2/plugins/shell_output.gedit-plugin
 lib/gedit-2/plugins/sort.gedit-plugin
 lib/gedit-2/plugins/spell.gedit-plugin
 lib/gedit-2/plugins/taglist.gedit-plugin
 lib/gedit-2/plugins/time.gedit-plugin
-lib/pkgconfig/gedit-2.8.pc
+lib/pkgconfig/gedit-2.10.pc
 man/man1/gedit.1
 share/application-registry/gedit.applications
 share/applications/gedit.desktop
@@ -70,7 +72,6 @@ share/gedit-2/taglist/HTML.tags
 share/gedit-2/taglist/Latex.tags
 share/gedit-2/taglist/XSLT.tags
 share/gedit-2/ui/gedit-ui.xml
-share/gnome-2.0/ui/gedit-viewer-ui.xml
 share/gnome/help/gedit/C/figures/gedit_format_bold.png
 share/gnome/help/gedit/C/figures/gedit_format_italic.png
 share/gnome/help/gedit/C/figures/gedit_format_strikethrough.png
@@ -247,7 +248,6 @@ share/pixmaps/gedit-plugin-manager.png
 @dirrm share/gnome/help/gedit/C
 @dirrm share/gnome/help/gedit
 @comment in gnome2-dirs: @dirrm share/gnome/help
-@comment in gnome2-dirs: @dirrm share/gnome-2.0/ui
 @dirrm share/gedit-2/ui
 @dirrm share/gedit-2/taglist
 @dirrm share/gedit-2/glade
@@ -258,6 +258,6 @@ share/pixmaps/gedit-plugin-manager.png
 @dirrm lib/gedit-2/plugins
 @dirrm lib/gedit-2
 @comment in libbonobo: @dirrm lib/bonobo/servers
-@dirrm include/gedit-2.8/gedit/recent-files
-@dirrm include/gedit-2.8/gedit
-@dirrm include/gedit-2.8
+@dirrm include/gedit-2.10/gedit/recent-files
+@dirrm include/gedit-2.10/gedit
+@dirrm include/gedit-2.10
