@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/01/04 13:17:17 agc Exp $
+# $NetBSD: Makefile,v 1.4 2002/01/04 16:38:48 agc Exp $
 #
 
 DISTNAME=	tct-1.09
@@ -31,6 +31,7 @@ do-install:
 	for f in README design-notes grave-robber.README lazarus.README mac.README; do \
 		${BSD_INSTALL_DATA} $$f ${LOCALBASE}/share/doc/tct;		\
 	done
+	${INSTALL_DATA_DIR} ${PERL5_SITEARCH}
 	cd ${WRKSRC}/lib && ${BSD_INSTALL_DATA} *.pl ${PERL5_SITEARCH}
 
 .include "../../lang/perl5/buildlink.mk"
