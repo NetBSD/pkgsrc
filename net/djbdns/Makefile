@@ -1,54 +1,50 @@
-# $NetBSD: Makefile,v 1.32 2004/04/10 20:28:52 zuntum Exp $
+# $NetBSD: Makefile,v 1.33 2004/09/01 20:07:35 schmonz Exp $
 # FreeBSD Id: ports/net/djbdns/Makefile,v 1.4 2000/09/28 18:18:41 nbm Exp
 #
 
 DISTNAME=	djbdns-1.05
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	net
-MASTER_SITES=	http://cr.yp.to/djbdns/					\
-		ftp://cr.yp.to/djbdns/					\
-		http://smarden.org/pape/djb/manpages/			\
-		http://www.hungry.com/~fn/				\
-		http://tinydns.org/
-DISTFILES=	${DISTNAME}.tar.gz					\
-		${DISTNAME}-man-${MANVERSION}.tar.gz			\
-		dnscache-log.pl.txt					\
-		tinydns-log.pl.txt
+MASTER_SITES=	http://cr.yp.to/djbdns/	ftp://cr.yp.to/djbdns/
+DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${MANPAGES}
 
-PATCH_SITES=	http://www.fefe.de/dns/
-PATCHFILES=	${DISTNAME}-ipv6.diff.bz2
-PATCH_DIST_STRIP=       -p1
-
-MAINTAINER=	zuntum@NetBSD.org
+MAINTAINER=	schmonz@NetBSD.org
 HOMEPAGE=	http://cr.yp.to/djbdns.html
 COMMENT=	Collection of secure and reliable DNS tools by Dan Bernstein
 
+MANPAGES=	djbdns-1.05-man-20031023.tar.gz
+SITES_${MANPAGES}=	http://smarden.org/pape/djb/manpages/
+
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-RESTRICTED=	"Redistribution of modified package is forbidden"
+USE_BUILDLINK3=	yes
+
+RESTRICTED=	"modified source and binaries may not be distributed"
 NO_BIN_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_FTP=	${RESTRICTED}
-
-DIST_SUBDIR=	${PKGNAME}
-EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}				\
-		${DISTNAME}-man-${MANVERSION}.tar.gz
-
-REPLACE_PERL=	*.pl
 
 ALL_TARGET=	it
 INSTALL_TARGET=	setup check
 
-MANVERSION=	20021211
+EGDIR=		${PREFIX}/share/examples/djbdns
+CFLAGS+=	-DPKG_SYSCONFDIR=\"\\\"${PKG_SYSCONFDIR}\\\"\"
+USE_PKGINSTALL=	yes
+MAKE_DIRS+=	${PKG_SYSCONFDIR}
+SUPPORT_FILES+=	${EGDIR}/dnsroots.global ${PKG_SYSCONFDIR}/dnsroots.global
+PLIST_SRC=	${PKGDIR}/PLIST
 
 .if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
 GCC_REQD+=	3.0
 .endif
 
-INSTALLATION_DIRS=	bin etc man/man1 man/man5 man/man8
+INSTALLATION_DIRS=	bin man man/man1 man/man5 man/man8 share/examples/djbdns
 
-post-extract:
-	@${CP} ${DISTDIR}/${DIST_SUBDIR}/tinydns-log.pl.txt ${WRKSRC}/tinydns-log.pl
-	@${CP} ${DISTDIR}/${DIST_SUBDIR}/dnscache-log.pl.txt ${WRKSRC}/dnscache-log.pl
+.include "../../mk/compiler.mk"
+.if ${OPSYS} == "Linux" && !empty(CC_VERSION:Mgcc-*)
+CFLAGS+=		--include errno.h
+.endif
+
+.include "options.mk"
 
 do-configure:
 	${ECHO} ${CC} ${CFLAGS} > ${WRKSRC}/conf-cc
@@ -56,9 +52,6 @@ do-configure:
 	${ECHO} ${PREFIX} > ${WRKSRC}/conf-home
 
 post-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/tinydns-log.pl ${PREFIX}/bin/tinydns-log
-	${INSTALL_SCRIPT} ${WRKSRC}/dnscache-log.pl ${PREFIX}/bin/dnscache-log
-	${INSTALL_DATA} ${WRKSRC}/dnsroots.global ${PREFIX}/etc/dnsroots.global
 	cd ${WRKDIR}/djbdns-man; for i in 1 5 8; do			 \
 	for j in *.$$i; do ${INSTALL_MAN} $$j ${PREFIX}/man/man$$i; done \
 	done
