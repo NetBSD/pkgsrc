@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7307 2004/10/01 12:46:55 rh Exp $
+$NetBSD: CHANGES,v 1.7308 2004/10/01 12:57:37 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4506,3 +4506,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated xpmroot to 2.4.19 [martti 2004-10-01]
 	Updated fvwm2 to 2.4.19 [martti 2004-10-01]
 	Added gal20-1.99.11 [rh 2004-10-01]
+	Updated netpbm to 10.18.15 [adam 2004-10-01]
