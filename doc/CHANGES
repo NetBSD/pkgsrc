@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9577 2005/03/23 14:33:32 agc Exp $
+$NetBSD: CHANGES,v 1.9578 2005/03/23 15:25:32 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1589,3 +1589,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated ns-remote to 1.10 [abs 2005-03-23]
 	Updated joe to 3.2 [adam 2005-03-23]
 	Updated digest to 20050323 [agc 2005-03-23]
+	Updated rdesktop to 1.4.0 [xtraeme 2005-03-23]

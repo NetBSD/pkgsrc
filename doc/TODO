@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3273 2005/03/23 15:05:16 wiz Exp $
+$NetBSD: TODO,v 1.3274 2005/03/23 15:25:32 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -931,7 +931,6 @@ Suggested package updates
 	o rayshade-4.0.6
 	o rblcheck-1.5
 	o rc-1.7.1
-	o rdesktop-1.4.0
 	o rdp-1.6
 	o rep-gtk-0.18
 	o resize_image-0.7
