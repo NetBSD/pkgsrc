@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2003/05/15 08:11:01 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2003/07/01 10:12:54 wiz Exp $
 bin/addftinfo
 bin/afmtodit
 bin/eqn
@@ -29,7 +29,6 @@ bin/soelim
 bin/tbl
 bin/tfmtodit
 bin/troff
-@unexec ${INSTALL_INFO} --delete %D/info/groff %D/info/dir
 info/groff
 info/groff-1
 info/groff-10
@@ -42,7 +41,6 @@ info/groff-6
 info/groff-7
 info/groff-8
 info/groff-9
-@exec ${INSTALL_INFO} %D/info/groff %D/info/dir
 man/man1/addftinfo.1
 man/man1/afmtodit.1
 man/man1/eqn.1
