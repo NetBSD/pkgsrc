@@ -1,4 +1,4 @@
-# $NetBSD: sunpro-cc-post-logic,v 1.7 2004/02/18 11:10:35 jlam Exp $
+# $NetBSD: sunpro-cc-post-logic,v 1.8 2004/06/13 08:50:15 grant Exp $
 #
 # Silently accept some GCC compiler arguments by silently converting
 # them to the SunPro compiler equivalents.  This makes the SunPro
@@ -46,9 +46,19 @@ case $arg in
 	arg=-Kpic
 	addtoprivatecache=yes
 	;;
+-fno-gnu-keywords)
+	arg=
+	addtoprivatecache=yes
+	;;
 -pedantic)
 	# No flag is required for SunPro to be pedantic.
 	arg=
+	addtoprivatecache=yes
+	;;
+-pthread)
+	# SunPro doesn't understand -pthread, and only -lpthread is
+	# needed on Solaris.
+	arg=-lpthread
 	addtoprivatecache=yes
 	;;
 -shared)
