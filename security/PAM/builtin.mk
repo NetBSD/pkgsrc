@@ -1,38 +1,50 @@
-# $NetBSD: builtin.mk,v 1.9 2005/01/12 02:27:48 xtraeme Exp $
+# $NetBSD: builtin.mk,v 1.10 2005/01/14 00:08:46 jlam Exp $
 
 .include "../../mk/bsd.prefs.mk"
 
 _PAM_PAM_APPL_H=	/usr/include/pam/pam_appl.h
 _SECURITY_PAM_APPL_H=	/usr/include/security/pam_appl.h
 
-.if !defined(IS_BUILTIN.pam)
-IS_BUILTIN.pam=	no
+.if !defined(IS_BUILTIN.linux-pam)
+IS_BUILTIN.linux-pam=	no
 .  if empty(_SECURITY_PAM_APPL_H:M${LOCALBASE}/*) && \
       exists(${_SECURITY_PAM_APPL_H})
-IS_BUILTIN.pam=	yes
-.  endif
-.endif	# IS_BUILTIN.pam
-
-.if !defined(USE_BUILTIN.pam)
-USE_BUILTIN.pam?=	${IS_BUILTIN.pam}
-.  if empty(_PAM_PAM_APPL_H:M${LOCALBASE}/*) && exists(${_PAM_PAM_APPL_H})
+IS_BUILTIN.linux-pam!=	\
+	if ${GREP} -q "The Linux-PAM Framework layer API" ${_SECURITY_PAM_APPL_H}; then \
+		${ECHO} "yes";						\
+	else								\
+		${ECHO} "no";						\
+	fi
+.  elif empty(_PAM_PAM_APPL_H:M${LOCALBASE}/*) && exists(${_PAM_PAM_APPL_H})
 #
-# Treat MacOS X's PAM implementation as Linux-PAM-compatible.
+# MacOS X installs their PAM headers as /usr/include/pam/*.h, and their
+# PAM implementation is derived from Linux-PAM:
 #
-USE_BUILTIN.pam=	yes
+#	http://developer.apple.com/documentation/Darwin/Reference/ManPages/man8/pam.8.html
+#
+IS_BUILTIN.linux-pam=	yes
 .  endif
-.endif
+BUILDLINK_VARS+=	IS_BUILTIN.linux-pam
+.endif	# IS_BUILTIN.linux-pam
 
-CHECK_BUILTIN.pam?=	no
-.if !empty(CHECK_BUILTIN.pam:M[nN][oO])
+USE_BUILTIN.linux-pam?=	${IS_BUILTIN.linux-pam}
 
-.if !empty(USE_BUILTIN.pam:M[yY][eE][sS])
-.  if exists(${_SECURITY_PAM_APPL_H})
-BUILDLINK_TRANSFORM.pam+=	-e "s|/include/pam/|/include/security/|"
-BUILDLINK_FILES.pam+=		include/security/*.h
-.  else
-BUILDLINK_FILES.pam+=		include/pam/*.h
+CHECK_BUILTIN.linux-pam?=	no
+.if !empty(CHECK_BUILTIN.linux-pam:M[nN][oO])
+
+.  if !empty(USE_BUILTIN.linux-pam:M[yY][eE][sS])
+BUILDLINK_TARGETS+=	buildlink-pam-security
 .  endif
-.endif
 
-.endif	# CHECK_BUILTIN.pam
+.  if !target(buildlink-pam-security)
+.PHONY: buildlink-pam-security
+buildlink-pam-security:
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	if [ -d ${BUILDLINK_PREFIX.linux-pam}/include/pam ]; then	\
+		${RM} -fr ${BUILDLINK_DIR}/include/security;		\
+		${LN} -fs ${BUILDLINK_PREFIX.linux-pam}/include/pam	\
+			${BUILDLINK_DIR}/include/security;		\
+	fi
+.  endif
+
+.endif	# CHECK_BUILTIN.linux-pam
