@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2003/07/21 16:32:10 martti Exp $
+# $NetBSD: Makefile,v 1.25 2003/08/08 15:42:15 seb Exp $
 #
 
 DISTNAME=	dinotrace-9.1k
@@ -8,8 +8,6 @@ MASTER_SITES=	http://www.veripool.com/ftp/
 MAINTAINER=	dmcmahill@NetBSD.org
 HOMEPAGE= 	http://www.veripool.com/dinotrace/
 COMMENT=	Tool for viewing the output of digital simulators
-
-INFO_FILES=	dinotrace.info
 
 USE_BUILDLINK2=		YES
 USE_X11BASE=		YES
