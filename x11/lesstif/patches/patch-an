@@ -1,21 +1,20 @@
-$NetBSD: patch-an,v 1.8 2000/07/25 14:42:08 jlam Exp $
+$NetBSD: patch-an,v 1.9 2000/07/26 07:23:23 jlam Exp $
 
 --- lib/Makefile.am.orig	Tue May  2 17:05:15 2000
-+++ lib/Makefile.am	Tue Jul 25 08:18:13 2000
-@@ -2,6 +2,22 @@
- # $Header: /cvsroot/pkgsrc/x11/lesstif/patches/patch-an,v 1.8 2000/07/25 14:42:08 jlam Exp $
++++ lib/Makefile.am	Wed Jul 26 03:18:20 2000
+@@ -3,4 +3,20 @@
  #
  MAINTAINERCLEANFILES=Makefile.in
 +
 +if Version_1_2
-+SUBDIRS= \
++SUBDIRS=	\
 +		Xm Mrm Uil \
 +		Xm-2.0 Mrm-2.0 Uil-2.0 \
 +		Xm-2.1 Mrm-2.1 \
 +		Xm-CDE Mrm-CDE \
 +		@BuildXltDir@ @BuildXbaeDir@
 +
-+DIST_SUBDIRS= \
++DIST_SUBDIRS=	\
 +		Xm Mrm Uil \
 +		Xm-2.0 Mrm-2.0 Uil-2.0 \
 +		Xm-2.1 Mrm-2.1 \
@@ -24,9 +23,7 @@ $NetBSD: patch-an,v 1.8 2000/07/25 14:42:08 jlam Exp $
 +else
  SUBDIRS=	config \
  		Xm Mrm Uil \
- 		Xm-2.0 Mrm-2.0 Uil-2.0 \
-@@ -15,3 +31,4 @@
- 		Xm-2.1 Mrm-2.1 \
+@@ -16,2 +32,3 @@
  		Xm-CDE Mrm-CDE \
  		Xlt Xbae
 +endif
