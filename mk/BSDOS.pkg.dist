@@ -1,5 +1,5 @@
 #     Id: BSD.local.dist,v 1.30 1997/08/01 13:16:39 phk Exp 
-#	$NetBSD: BSDOS.pkg.dist,v 1.12 2004/03/08 19:43:13 jmmv Exp $
+#	$NetBSD: BSDOS.pkg.dist,v 1.13 2004/03/09 22:19:37 jmmv Exp $
 #
 
 /set type=dir uname=root gname=wheel mode=0755
@@ -701,6 +701,10 @@
                 ..
             ..
             nso
+                LC_MESSAGES
+                ..
+            ..
+            pa
                 LC_MESSAGES
                 ..
             ..
