@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3186 2005/03/03 12:12:54 garbled Exp $
+$NetBSD: TODO,v 1.3187 2005/03/03 13:51:07 adam Exp $
 
 Suggested new packages
 ======================
@@ -258,7 +258,6 @@ Suggested package updates
 	o Chinput-3.0.1
 	o GMT-4.0
 	o GUIlib-1.1.1
-	o Gorm-0.9.2
 	o GridSim-3.1
 	o GutenMark-20040320
 	o MayaVi-1.4
