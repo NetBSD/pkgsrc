@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/02/22 22:22:21 tron Exp $
+# $NetBSD: Makefile,v 1.2 2002/02/26 18:51:50 tron Exp $
 
 DISTNAME=	opera-${OPERA_PKG_VERSION}
 CATEGORIES=	www
 MASTER_SITES=	ftp://opera.panix.com/pub/linux/${OPERA_DIR}/ \
 		ftp://ftp.hu-berlin.de/pub/www/opera/linux/${OPERA_DIR}/ \
+		http://ftp.sunet.se/pub/www/clients/Opera/linux/${OPERA_DIR}/ \
 		http://ftp.opera.com/pub/opera/linux/${OPERA_DIR}/
 EXTRACT_SUFX=	.rpm
 DISTFILES=	opera-${OPERA_DIST_VERSION}.${OPERA_ARCH}${EXTRACT_SUFX}
@@ -30,9 +31,9 @@ DEPENDS+=	suse_libpng>=6.4:../../emulators/suse_libpng
 DEPENDS+=	suse_x11>=6.4:../../emulators/suse_x11
 
 OPERA_ARCH=		i386
-OPERA_DIR=		600/tp3
-OPERA_DIST_VERSION=	6.0-20020110.1-static_qt
-OPERA_PKG_VERSION=	5.99.3
+OPERA_DIR=		600/beta1
+OPERA_DIST_VERSION=	6.0-20020218.1-static-qt
+OPERA_PKG_VERSION=	5.999.1
 .endif
 
 RPMFILES=	${DISTFILES}
