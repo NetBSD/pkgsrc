@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2004/01/24 15:30:34 grant Exp $
+# $NetBSD: Makefile,v 1.19 2004/01/25 20:46:19 wiz Exp $
 #
 
 DISTNAME=		xfstt-1.6
+PKGREVISION=		1
 CATEGORIES=		x11 net fonts
 MASTER_SITES=		http://download.berlios.de/xfstt/
 
@@ -34,7 +35,7 @@ post-patch:
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/xfstt ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/doc/xfstt.1x ${PREFIX}/man/man1/xfstt.1
-	${INSTALL_DATA_DIR} ${PREFIX}/lib/X11/fonts/TrueType
+	${INSTALL_DATA_DIR} ${PREFIX}/lib/X11/fonts/TTF
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/xfstt
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/xfstt
 	cd ${WRKSRC} && (				\
