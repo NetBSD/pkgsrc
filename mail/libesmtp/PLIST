@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/07/28 14:51:35 drochner Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/09/24 09:12:19 xtraeme Exp $
 bin/libesmtp-config
 include/auth-client.h
 include/auth-plugin.h
@@ -19,5 +19,5 @@ lib/libesmtp.a
 lib/libesmtp.la
 lib/libesmtp.so
 lib/libesmtp.so.6
-lib/libesmtp.so.6.1
+lib/libesmtp.so.6.2
 @dirrm lib/esmtp-plugins
