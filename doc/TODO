@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2760 2004/12/26 01:11:58 wiz Exp $
+$NetBSD: TODO,v 1.2761 2004/12/26 01:21:25 wiz Exp $
 
 Suggested new packages
 ======================
@@ -627,7 +627,6 @@ Suggested package updates
 	o libcdio-0.71
 	o libcomprex-0.3.3
 	o libetpan-0.34b
-	o libevent-1.0
 	o libfwbuilder-2.0.3
 	o libggi-2.1
 	o libggiwmh-0.2.0
