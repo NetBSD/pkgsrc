@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.127 2004/09/08 08:51:31 xtraeme Exp $
+# $NetBSD: Makefile,v 1.128 2004/09/12 05:00:53 jlam Exp $
 
 DISTNAME=		samba-3.0.5
 CATEGORIES=		net
@@ -79,6 +79,17 @@ MAKEFLAGS+=	PWD_MKDB=${PWD_MKDB:Q}
 FILES_SUBST+=	MKTEMP=${MKTEMP:Q}
 FILES_SUBST+=	PWD_MKDB=${PWD_MKDB:Q}
 
+.if !empty(NSS_WINBIND)
+PLIST_SUBST+=	NSS_WINBIND=lib/${NSS_WINBIND}
+.else
+PLIST_SUBST+=	NSS_WINBIND="@comment no NSS winbind module"
+.endif
+.if !empty(NSS_WINS)
+PLIST_SUBST+=	NSS_WINS=lib/${NSS_WINS}
+.else
+PLIST_SUBST+=	NSS_WINS="@comment no NSS WINS module"
+.endif
+
 DOCDIR=		${PREFIX}/share/doc/${PKGBASE}
 EGDIR=		${PREFIX}/share/examples/${PKGBASE}
 
@@ -106,8 +117,12 @@ post-install:
 	${RMDIR} ${SAMBA_LIBDIR}/${d}
 .endfor
 	${INSTALL_DATA_DIR} ${DOCDIR}
-	${INSTALL_LIBRARY} ${WRKSRC}/nsswitch/libnss_winbind.so ${PREFIX}/lib
-	${INSTALL_LIBRARY} ${WRKSRC}/nsswitch/libnss_wins.so ${PREFIX}/lib
+.if !empty(NSS_WINBIND)
+	${INSTALL_LIBRARY} ${WRKSRC}/nsswitch/${NSS_WINBIND} ${PREFIX}/lib
+.endif
+.if !empty(NSS_WINS)
+	${INSTALL_LIBRARY} ${WRKSRC}/nsswitch/${NSS_WINS} ${PREFIX}/lib
+.endif
 	cd ${WRKSRC}/../docs/registry; for file in *.reg; do		\
 		${INSTALL_DATA} $$file ${DOCDIR}/$$file;		\
 	done
