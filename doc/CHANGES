@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9695 2005/03/30 16:42:51 erh Exp $
+$NetBSD: CHANGES,v 1.9696 2005/03/30 20:07:20 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1831,4 +1831,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Added openttd-0.3.6 [wiz 2005-03-30]
 	Updated glpk to 4.8nb1 [adam 2005-03-30]
 	Added ruby-xmlscan-0.2.3 [minskim 2005-03-30]
-	Updated ap-jk to 1.2.8 [erh 2005-03-03]
+	Updated ap-jk to 1.2.8 [erh 2005-03-30]
+	Updated qmail-run to 20050330 [schmonz 2005-03-30]
