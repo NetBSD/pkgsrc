@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/02/01 02:30:29 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2000/02/05 18:36:19 wiz Exp $
 
 DISTNAME=	q1source
 PKGNAME=	quake-2.30
@@ -7,7 +7,6 @@ MASTER_SITES=	ftp://ftp.cdrom.com/pub/idgames/idstuff/source/ \
 		ftp://ftp.fu-berlin.de/pub/pc/msdos/games/idgames/idstuff/source/ \
 		ftp://ftp.idsoftware.com/idstuff/source/
 EXTRACT_SUFX=	.zip
-ONLY_FOR_PLATFORMS=	NetBSD-1.4.[1-9]-i386
 
 MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.idsoftware.com/
@@ -15,6 +14,7 @@ HOMEPAGE=	http://www.idsoftware.com/
 BUILD_DEPENDS+=	${UNZIP}:../../archivers/unzip
 DEPENDS+=	Mesa-*:../../graphics/Mesa
 
+ONLY_FOR_PLATFORMS=	NetBSD-1.4.[1-9]-i386
 USE_GMAKE=	yes
 .include "../../mk/bsd.prefs.mk"
 
