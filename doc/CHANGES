@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7161 2004/09/17 23:21:27 hubertf Exp $
+$NetBSD: CHANGES,v 1.7162 2004/09/18 02:47:28 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4260,3 +4260,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated mozilla-gtk2 to 1.7.3 [taya 2004-09-17]
 	Removed CompuPic [hubertf 2004-09-17]
 	Updated xsidplay to xsidplay-1.6.5.1a [hubertf 2004-09-17]
+	Updated xerces-c to 2.3.0nb1 [minskim 2004-09-18]
