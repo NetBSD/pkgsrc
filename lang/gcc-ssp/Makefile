@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2002/08/17 01:27:41 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.15 2002/10/05 21:11:03 dmcmahill Exp $
 
 DISTNAME=		gcc-2.95.3
 GCC_VERSION=		2.95.3
@@ -13,8 +13,8 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.trl.ibm.com/projects/security/ssp/
 COMMENT=		GNU Compiler Collection with Stack-smashing protection
 
-PATCH_SITES=            ${MASTER_SITE_LOCAL}
-PATCHFILES=             gcc-2.95.3-diff-2002-08-11.gz
+PATCH_SITES=		${MASTER_SITE_LOCAL}
+PATCHFILES=		gcc-2.95.3-diff-2002-08-29.gz
 
 SSP_PATCH=		protector-2.95.3-5.tar.gz
 DISTFILES+=		${DISTNAME}.tar.gz ${SSP_PATCH}
