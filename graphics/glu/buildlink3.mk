@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.16 2004/02/10 22:22:05 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.17 2004/02/10 22:23:40 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GLU_BUILDLINK3_MK:=	${GLU_BUILDLINK3_MK}+
@@ -6,10 +6,10 @@ GLU_BUILDLINK3_MK:=	${GLU_BUILDLINK3_MK}+
 .include "../../mk/bsd.prefs.mk"
 
 .if !empty(GLU_BUILDLINK3_MK:M+)
-MESA_REQD?=		3.4.2
+_MESA_REQD?=		3.4.2
 
 BUILDLINK_PACKAGES+=		glu
-BUILDLINK_DEPENDS.glu+=		glu>=${MESA_REQD}
+BUILDLINK_DEPENDS.glu+=		glu>=${_MESA_REQD}
 BUILDLINK_PKGSRCDIR.glu?=	../../graphics/glu
 .endif	# GLU_BUILDLINK3_MK
 
