@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.3 2004/02/11 10:55:49 recht Exp $
+$NetBSD: patch-ab,v 1.4 2004/04/25 21:37:59 recht Exp $
 
---- etc/Makefile.in.orig	2004-02-11 11:41:38.000000000 +0100
-+++ etc/Makefile.in	2004-02-11 11:42:22.000000000 +0100
-@@ -118,7 +118,7 @@
+--- etc/Makefile.in.orig	2004-04-17 00:50:44.000000000 +0200
++++ etc/Makefile.in	2004-04-25 21:29:51.000000000 +0200
+@@ -119,7 +119,7 @@
  install_sh = @install_sh@
  
  EXTRA_DIST = clamav.conf freshclam.conf
@@ -11,7 +11,7 @@ $NetBSD: patch-ab,v 1.3 2004/02/11 10:55:49 recht Exp $
  subdir = etc
  mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
  CONFIG_HEADER = $(top_builddir)/clamav-config.h
-@@ -248,8 +248,8 @@
+@@ -249,8 +249,8 @@
  
  install:
  	$(mkinstalldirs) $(DESTDIR)$(CFGINST)
