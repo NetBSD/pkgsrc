@@ -1,7 +1,7 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2004/11/25 05:42:40 xtraeme Exp $
+$NetBSD: MESSAGE,v 1.2 2004/11/25 05:55:55 xtraeme Exp $
 
-To configure gld, the following steps should be acomplished:
+To configure gld, the following steps should be completed:
 
 $ mysql -e "create database gld"
 $ mysql -e "grant all on gld.* to gld@localhost identified by 'PASSWORD'"
