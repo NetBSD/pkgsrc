@@ -1,11 +1,11 @@
-# $NetBSD: buildlink3.mk,v 1.5 2004/01/22 08:58:59 grant Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2004/01/24 03:12:31 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 DB2_BUILDLINK3_MK:=	${DB2_BUILDLINK3_MK}+
 
 .if !empty(DB2_BUILDLINK3_MK:M+)
 BUILDLINK_PACKAGES+=		db
-BUILDLINK_DEPENDS.db?=		db>=2.7.3
+BUILDLINK_DEPENDS.db+=		db>=2.7.3
 BUILDLINK_PKGSRCDIR.db?=	../../databases/db
 .endif	# DB2_BUILDLINK3_MK
 
