@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8393 2004/12/21 18:00:24 salo Exp $
+$NetBSD: CHANGES,v 1.8394 2004/12/21 18:15:35 agc Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -6456,3 +6456,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated libtool-base to 1.5.10nb9 [grant 2004-12-21]
 	Updated xterm to 197 [minskim 2004-12-21]
 	Updated lftp to 3.0.13 [salo 2004-12-21]
+	Updated festival to 1.95beta [agc 2004-12-21]
