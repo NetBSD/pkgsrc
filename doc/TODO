@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2121 2004/09/15 10:50:54 wiz Exp $
+$NetBSD: TODO,v 1.2122 2004/09/15 15:36:07 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -269,6 +269,7 @@ Suggested package updates
 	o gimageview-0.2.25
 	o gimp-print-4.2.7
 	o glpk-4.6
+	o gnome-2.8
 	o gnomeicu-0.99.5
 	o gnucash-1.8.9
 	o gnunet-0.6.3a
