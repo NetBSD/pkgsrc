@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.1.1.1 1999/02/08 08:48:37 frueauf Exp $
+$NetBSD: patch-ab,v 1.2 1999/11/17 23:06:22 tron Exp $
 
---- ../../gnuchess-4.0.pl79/src/gnuan.c	Mon Sep 28 08:41:21 1998
-+++ ./src/gnuan.c	Thu Dec 10 23:39:26 1998
+--- gnuan.c.orig	Sat Apr  3 05:58:53 1999
++++ gnuan.c	Wed Nov 17 23:57:25 1999
 @@ -1348,12 +1348,12 @@
      fpout = stderr;
      fprintf (fpout, "Input the file with the algebraic moves of the game.\n");
@@ -45,12 +45,3 @@ $NetBSD: patch-ab,v 1.1.1.1 1999/02/08 08:48:37 frueauf Exp $
  		    p = GNUANinbuf1;
  		    q = GNUANinbuf;
  		    while (true)
-@@ -1724,7 +1725,7 @@
-     move_percent[black] = ((float) same_moves[black]) * 200 / (float) (GNUANmovecnt + (GNUANmovecnt % 2 ? 1 : 0));
-     fprintf (fpout, "\n           White's percentage was %5.2f%%.     Black's percentage was %5.2f%%.\n", move_percent[white], move_percent[black]);
-     time (&end_time);
--    elapsed_time = difftime(end_time - start_time);
-+    elapsed_time = difftime(end_time, start_time);
-     fprintf (fpout, "\n           Elapsed time was %ld seconds.\n", elapsed_time);
-     fclose (fpin);
-     fclose (fpout);
