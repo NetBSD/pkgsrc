@@ -1,12 +1,13 @@
-# $NetBSD: Makefile.common,v 1.2 2004/01/20 12:27:57 agc Exp $
+# $NetBSD: Makefile.common,v 1.1 2004/02/10 12:26:24 grant Exp $
 
+PKGNAME=		${DISTNAME:C|MozillaFirebird|firefox|}
 CATEGORIES=		www print
 MASTER_SITES=		# empty
 DISTFILES=		# empty
 
-DEPENDS+=		MozillaFirebird-bin>=0.6.1:../../www/MozillaFirebird-bin
+DEPENDS+=		firefox-bin>=0.8:../../www/firefox-bin
 
-ONLY_FOR_PLATFORM=	NetBSD-*-i386
+ONLY_FOR_PLATFORM=	Linux-*-i386 NetBSD-*-i386
 PLATFORM=		intellinux
 
 WRKSRC=			${WRKDIR}
@@ -14,10 +15,10 @@ NO_CHECKSUM=		YES
 NO_CONFIGURE=		YES
 NO_BUILD=		YES
 
-PLIST_SRC=		../../www/MozillaFirebird-bin-acroread/PLIST
+PLIST_SRC=		../../www/firefox-bin-acroread/PLIST
 PLIST_SUBST+=		ACROREAD=${ACROREAD}
 PLIST_SUBST+=		PLATFORM=${PLATFORM}
-NS_PLUGINS_DIR=         ${PREFIX}/lib/MozillaFirebird-linux/plugins
+NS_PLUGINS_DIR=		${PREFIX}/lib/firefox-linux/plugins
 
 do-install:
 	${INSTALL_DATA_DIR} ${NS_PLUGINS_DIR}
