@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.34 2004/08/06 03:11:00 reed Exp $
+# $NetBSD: Makefile,v 1.35 2004/09/21 17:11:25 jmmv Exp $
 #
 
-DISTNAME=		ggv-2.6.2
+DISTNAME=		ggv-2.8.0
 CATEGORIES=		print gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/ggv/2.6/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/ggv/2.8/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		tech-pkg@NetBSD.org
@@ -26,6 +26,7 @@ GCONF2_SCHEMAS= 	ggv.schemas
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../mk/ghostscript.mk"
