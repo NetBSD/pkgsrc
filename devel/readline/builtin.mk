@@ -1,37 +1,26 @@
-# $NetBSD: builtin.mk,v 1.7 2004/10/16 17:13:34 minskim Exp $
+# $NetBSD: builtin.mk,v 1.8 2004/11/28 06:41:04 jlam Exp $
 
 _READLINE_H=		/usr/include/readline.h
 _READLINE_READLINE_H=	/usr/include/readline/readline.h
 
-.if !defined(_BLNK_LIBREADLINE_FOUND)
-_BLNK_LIBREADLINE_FOUND!=	\
-	if [ "`${ECHO} /usr/lib/libreadline.*`" = "/usr/lib/libreadline.*" ]; then \
-		${ECHO} "no";						\
-	else								\
-		if [ "`${ECHO} ${_READLINE_H}* ${_READLINE_READLINE_H}*`" = "${_READLINE_H}* ${_READLINE_READLINE_H}*" ]; then \
-			${ECHO} "no";					\
-		else							\
-			${ECHO} "yes";					\
-		fi							\
-	fi
-BUILDLINK_VARS+=	_BLNK_LIBREADLINE_FOUND
-.endif
-
-.if !defined(_BLNK_LIBEDIT_FOUND)
-_BLNK_LIBEDIT_FOUND!=	\
-	if [ "`${ECHO} /usr/lib/libedit.*`" = "/usr/lib/libedit.*" ]; then \
-		${ECHO} "no";						\
-	else								\
+.for _lib_ in readline edit
+.  if !defined(_BLNK_LIB_FOUND.${_lib_})
+_BLNK_LIB_FOUND.${_lib_}!=	\
+	if ${TEST} "`${ECHO} /usr/lib/lib${_lib_}.*`" != "/usr/lib/lib${_lib_}.*"; then \
 		${ECHO} "yes";						\
+	elif ${TEST} "`${ECHO} /lib/lib${_lib_}.*`" != "/lib/lib${_lib_}.*"; then \
+		${ECHO} "yes";						\
+	else								\
+		${ECHO} "no";						\
 	fi
-BUILDLINK_VARS+=	_BLNK_LIBEDIT_FOUND
-.endif
+BUILDLINK_VARS+=	_BLNK_LIB_FOUND.${_lib_}
+.  endif
+.endfor
+.undef _lib_
 
 .if !defined(IS_BUILTIN.readline)
 IS_BUILTIN.readline=	no
-.  if !empty(_BLNK_LIBREADLINE_FOUND:M[yY][eE][sS])
-IS_BUILTIN.readline=	yes
-.  elif exists(${_READLINE_H}) || exists(${_READLINE_READLINE_H})
+.  if exists(${_READLINE_H}) || exists(${_READLINE_READLINE_H})
 .    if exists(${_READLINE_H})
 _READLINE_HEADER=	${_READLINE_H}
 .    else
@@ -86,8 +75,8 @@ USE_BUILTIN.readline!=							\
 # XXX
 # XXX By default, assume that the native editline library supports readline.
 # XXX
-.    if !empty(_BLNK_LIBREADLINE_FOUND:M[nN][oO]) && \
-        !empty(_BLNK_LIBEDIT_FOUND:M[yY][eE][sS])
+.    if !empty(_BLNK_LIB_FOUND.readline:M[nN][oO]) && \
+        !empty(_BLNK_LIB_FOUND.edit:M[yY][eE][sS])
 USE_BUILTIN.readline=	yes
 _INCOMPAT_READLINE?=	SunOS-*-* Darwin-*-* Interix-*-*
 .      for _pattern_ in ${_INCOMPAT_READLINE} ${INCOMPAT_READLINE}
@@ -110,8 +99,8 @@ CHECK_BUILTIN.readline?=	no
 .if !empty(CHECK_BUILTIN.readline:M[nN][oO])
 
 .if !empty(USE_BUILTIN.readline:M[yY][eE][sS])
-.  if !empty(_BLNK_LIBREADLINE_FOUND:M[nN][oO]) && \
-      !empty(_BLNK_LIBEDIT_FOUND:M[yY][eE][sS])
+.  if !empty(_BLNK_LIB_FOUND.readline:M[nN][oO]) && \
+      !empty(_BLNK_LIB_FOUND.edit:M[yY][eE][sS])
 BUILDLINK_TRANSFORM+=		l:history:edit
 BUILDLINK_TRANSFORM+=		l:readline:edit:termcap
 .  endif
