@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.9 2003/03/05 14:29:42 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2003/03/20 02:06:41 salo Exp $
 #
 
 DISTNAME=	antiword-0.33
-CATEGORIES=	textproc print
+CATEGORIES=	textproc converters print
 MASTER_SITES=	http://www.winfield.demon.nl/linux/
 
 MAINTAINER=	rh@netbsd.org
 HOMEPAGE=	http://www.winfield.demon.nl/index.html
-COMMENT=	free converter MS Word to text and Postscript converter
+COMMENT=	free MS Word to text and PostScript converter
 
 CONFLICTS=	siag-[0-9]*
 
