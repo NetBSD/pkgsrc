@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1.1.1 1999/10/01 11:23:15 drochner Exp $
---- configure.orig	Sun Sep 26 22:13:17 1999
-+++ configure	Sun Sep 26 22:13:41 1999
-@@ -901,6 +901,9 @@
- 	if test $unameS = "FreeBSD" ; then
+$NetBSD: patch-ab,v 1.2 2001/05/08 19:48:46 dmcmahill Exp $
+
+--- configure.orig	Fri Mar 31 15:07:21 2000
++++ configure	Tue May  8 14:46:58 2001
+@@ -1258,4 +1258,7 @@
  	    ARCH=freebsd
  	fi
 +	if test $unameS = "NetBSD" ; then
@@ -10,4 +10,11 @@ $NetBSD: patch-ab,v 1.1.1.1 1999/10/01 11:23:15 drochner Exp $
 +	fi
  	if test `echo $unameS | tr A-Z a-z | sed "s/^.*cygwin.*$/yes/"` = "yes" ; then
  	    ARCH=cygwin
+@@ -1269,7 +1272,4 @@
+ 	if test $unameS = "AIX" ; then
+ 	    ARCH=ibm6000
+-	fi
+-	if test $unameM = "alpha" ; then
+-	    ARCH=alphax
  	fi
+ 	if test $unameS = "HP-UX" ; then
