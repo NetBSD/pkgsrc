@@ -1,34 +1,21 @@
-# $NetBSD: Makefile,v 1.25 2003/12/14 17:56:39 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2004/01/01 21:39:02 cube Exp $
 #
 
-DISTNAME=	sylpheed-0.9.7claws
-PKGNAME=	sylpheed-claws-0.9.7
+.include "Makefile.common"
+
+PKGNAME=	sylpheed-claws-${SYLPHEED_VERSION}
 PKGREVISION=	1
-CATEGORIES=	mail news x11
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sylpheed-claws/}
-EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	chris@NetBSD.org
-HOMEPAGE=	http://sylpheed-claws.sourceforge.net/
 COMMENT=	X based e-mail and netnews client
-
-BUILD_USES_MSGFMT=	YES
 
 CONFLICTS=		sylpheed-[0-9]* sylpheed-gtk2-[0-9]*
 
-USE_BUILDLINK2=		YES
+BUILD_USES_MSGFMT=	YES
 USE_PKGINSTALL=		YES
-USE_PKGLOCALEDIR=	YES
-USE_X11=		YES
-USE_GMAKE=		YES
-
-USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/sylpheed-claws.pc.in
 
-GNU_CONFIGURE=		YES
-# Force gnome detection off to avoid installing some extra files
-CONFIGURE_ENV+=		ac_cv_path_GNOME_CONFIG="no"
 CONFIGURE_ARGS+=        --enable-aspell
 CONFIGURE_ARGS+=	--enable-nls
 CONFIGURE_ARGS+=	--enable-openssl
