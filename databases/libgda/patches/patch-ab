@@ -1,0 +1,11 @@
+$NetBSD: patch-ab,v 1.1.1.1 2002/10/30 00:52:11 rh Exp $
+
+--- libgda.pc.in.orig	Thu May 16 00:44:24 2002
++++ libgda.pc.in
+@@ -7,5 +7,5 @@ Name: libgda
+ Description: GDA (GNOME Data Access) library
+ Requires: glib-2.0 libxml-2.0 libxslt
+ Version: @VERSION@
+-Libs: -L${libdir} -lgda-2
++Libs: -Wl,-R${libdir} -L${libdir} -lgda-2
+ Cflags: -I${includedir}

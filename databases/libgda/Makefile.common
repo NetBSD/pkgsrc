@@ -1,0 +1,25 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2002/10/30 00:52:11 rh Exp $
+#
+
+DISTNAME?=		libgda-0.8.199
+CATEGORIES?=		databases gnome
+MASTER_SITES?=		${MASTER_SITE_GNOME:=sources/libgda/0.8/}
+EXTRACT_SUFX?=		.tar.bz2
+
+MAINTAINER?=		sab@posix.org.uk
+HOMEPAGE?=		http://www.gnome-db.org/
+
+USE_X11=		YES
+USE_GMAKE=		YES
+USE_LIBTOOL=		YES
+USE_BUILDLINK2=		YES
+GNU_CONFIGURE=		YES
+
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+
+.include "../../textproc/gtk-doc/buildlink2.mk"
+.include "../../textproc/libxml2/buildlink2.mk"
+.include "../../textproc/libxslt/buildlink2.mk"
+.include "../../lang/python22/buildlink2.mk"
+.include "../../devel/glib2/buildlink2.mk"
+.include "../../devel/popt/buildlink2.mk"
