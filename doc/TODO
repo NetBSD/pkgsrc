@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1860 2004/06/24 11:11:10 markd Exp $
+$NetBSD: TODO,v 1.1861 2004/06/24 23:51:47 ben Exp $
 
 Suggested new packages
 ======================
@@ -368,7 +368,6 @@ Suggested package updates
 	o scribus-1.1.7
 	o sendfile-20010424
 	o sendmail-8.13.0
-	o shorten-3.6.0
 	o siag-3.6.0
 	o skill-4.1.1
 	o skkinput-2.06.4
