@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2004/02/14 17:21:40 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2004/03/03 11:29:32 adam Exp $
 #
 
-DISTNAME=		zoom-1.0.1
-PKGNAME=		${DISTNAME}pl1
-CATEGORIES=		games
-MASTER_SITES=		http://www.logicalshift.demon.co.uk/unix/zoom/
+DISTNAME=	zoom-1.0.1
+PKGNAME=	${DISTNAME}a
+PKGREVISION=	1
+CATEGORIES=	games
+MASTER_SITES=	http://www.logicalshift.demon.co.uk/unix/zoom/
 
 PATCH_SITES=		http://www.logicalshift.demon.co.uk/unix/zoom/
 PATCHFILES=		zoom-1.0.1-1.0.1a.patch
@@ -14,7 +15,7 @@ MAINTAINER=		dillo@NetBSD.org
 HOMEPAGE=		http://www.logicalshift.demon.co.uk/unix/zoom/
 COMMENT=		Plays Infocom-compatible games, with graphics support
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
@@ -38,7 +39,7 @@ post-install:
 		${INSTALL_DATA} ${WRKSRC}/manual/$$f ${DOCDIR}; \
 	done
 
-.include "../../fonts/Xft2/buildlink2.mk"
-.include "../../fonts/t1lib/buildlink2.mk"
-.include "../../graphics/png/buildlink2.mk"
+.include "../../fonts/Xft2/buildlink3.mk"
+.include "../../fonts/t1lib/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
