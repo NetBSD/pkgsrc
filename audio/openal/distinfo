@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/03/17 15:57:05 jmmv Exp $
+$NetBSD: distinfo,v 1.2 2003/09/16 12:16:50 adam Exp $
 
-SHA1 (openal-20030125.tar.gz) = 854abe0d351cdaa29a9d95bbc0f1bd00fc0b5ed6
-Size (openal-20030125.tar.gz) = 337668 bytes
+SHA1 (openal-20030724.tar.gz) = 9ec09f53678bf9672e1f4bd117fc23f9e562d99f
+Size (openal-20030724.tar.gz) = 336690 bytes
 SHA1 (patch-aa) = cbb97881e7c60b227663cba6cf61bc3e585e3ade
 SHA1 (patch-ab) = 32c4cf9de6c45fb43bfa35b8c7ca4192e216e379
