@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/01/17 01:07:14 recht Exp $
+$NetBSD: distinfo,v 1.2 2004/02/18 15:42:37 wiz Exp $
 
-SHA1 (doclifter-1.6.tar.gz) = 21d680e102f5bcd61d3d7d57880e28c881841bb4
-Size (doclifter-1.6.tar.gz) = 100567 bytes
+SHA1 (doclifter-1.7.tar.gz) = 9c138123fcc48448473e704c3bbbbfbdf9acdca8
+Size (doclifter-1.7.tar.gz) = 100704 bytes
