@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1999/04/26 18:38:28 garbled Exp $
+# $NetBSD: Makefile,v 1.5 1999/09/28 20:40:03 soren Exp $
 
 DISTNAME=	nethack-all-3.2.2
 CATEGORIES=	games x11
@@ -20,4 +20,4 @@ NO_CONFIGURE=	yes
 
 do-install:	# empty
 
-.include <../../mk/bsd.pkg.mk>
+.include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1999/04/26 19:30:28 garbled Exp $
+# $NetBSD: Makefile,v 1.4 1999/09/28 20:40:06 soren Exp $
 #
 
 DISTNAME=	xview3.2p1-X11R6
@@ -22,4 +22,4 @@ NO_CONFIGURE=	yes
 
 do-install:	# empty
 
-.include <../../mk/bsd.pkg.mk>
+.include "../../mk/bsd.pkg.mk"
