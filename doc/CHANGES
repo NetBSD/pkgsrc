@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2964 2003/07/31 21:29:44 wiz Exp $
+$NetBSD: CHANGES,v 1.2965 2003/07/31 22:48:49 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3165,3 +3165,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added ap-auth-pgsql-1.9.2 [wiz 2003-07-31]
 	Updated bomberclone to 0.10.0 [wiz 2003-07-31]
 	Removed bomberclone-data [wiz 2003-07-31]
+	Updated libnbcompat to 20030731 [jschauma 2003-07-31]
