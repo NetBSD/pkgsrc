@@ -1,17 +1,20 @@
-# $NetBSD: Makefile,v 1.3 2004/01/23 17:18:31 jmmv Exp $
+# $NetBSD: Makefile,v 1.4 2004/04/12 02:32:38 minskim Exp $
 
 DISTNAME=	db2latex-0.7
 PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=db2latex/}
 
-MAINTAINER=	minskim@bawi.org
+MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://db2latex.sourceforge.net/
 COMMENT=	Set of XSLT stylesheets converting DocBook to LaTeX2e
 
-USE_BUILDLINK2=	yes
-NO_BUILD=	yes
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+USE_BUILDLINK3=	yes
 NO_CONFIGURE=	yes
+NO_BUILD=	yes
+USE_LANGUAGE=	# empty
 
 DOCDIR=		${PREFIX}/share/doc/db2latex
 XSLDIR=		${PREFIX}/share/xsl/db2latex
