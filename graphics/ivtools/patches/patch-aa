@@ -1,0 +1,11 @@
+$NetBSD: patch-aa,v 1.1.1.1 2002/03/22 13:22:05 tron Exp $
+
+--- config/local.def.orig	Wed Feb 20 18:56:32 2002
++++ config/local.def	Fri Mar 22 14:08:54 2002
+@@ -195,3 +195,6 @@
+ #define DependCmd CCDriver -M 
+ 
+ XCOMM -------------------------------------------------------------------------
++
++#undef ExtraCCLdFlags
++#define ExtraCCLdFlags -Wl,-R$(X11BASE)/lib -Wl,-R$(LOCALBASE)/lib
