@@ -1,7 +1,50 @@
-$NetBSD: patch-aa,v 1.2 1998/08/07 10:40:18 agc Exp $
-
---- ./configure.org	Thu Jan  9 06:22:00 1997
-+++ ./configure	Sun Mar 30 04:25:11 1997
+--- configure.orig	Thu Jan  9 09:22:00 1997
++++ configure	Wed Aug 30 13:07:40 2000
+@@ -2202,14 +2202,14 @@
+ cat > conftest.$ac_ext <<EOF
+ #line 2204 "configure"
+ #include "confdefs.h"
++#include <tk.h>
+ /* Override any gcc2 internal prototype to avoid an error.  */
+ /* We use char because int might match the return type of a gcc2
+     builtin and then its argument prototype would still apply.  */
+-char Tk_Main();
+ 
+ int main() { return 0; }
+ int t() {
+-Tk_Main()
++Tk_MainEx(0, (char **)0, (char *)0)
+ ; return 0; }
+ EOF
+ if { (eval echo configure:2216: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; }; then
+@@ -2245,11 +2245,11 @@
+ /* Override any gcc2 internal prototype to avoid an error.  */
+ /* We use char because int might match the return type of a gcc2
+     builtin and then its argument prototype would still apply.  */
+-char Tk_Main();
++char Tk_MainEx();
+ 
+ int main() { return 0; }
+ int t() {
+-Tk_Main()
++Tk_MainEx(0, (char **)0, (char *)0)
+ ; return 0; }
+ EOF
+ if { (eval echo configure:2256: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; }; then
+@@ -2286,11 +2286,11 @@
+ /* Override any gcc2 internal prototype to avoid an error.  */
+ /* We use char because int might match the return type of a gcc2
+     builtin and then its argument prototype would still apply.  */
+-char Tk_Main();
++char Tk_MainEx();
+ 
+ int main() { return 0; }
+ int t() {
+-Tk_Main()
++Tk_Main(0, (char **)0, (char *)0)
+ ; return 0; }
+ EOF
+ if { (eval echo configure:2297: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; }; then
 @@ -3148,7 +3148,7 @@
  
  fi
