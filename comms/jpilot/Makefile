@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.42 2004/10/03 00:13:16 tv Exp $
+# $NetBSD: Makefile,v 1.43 2004/12/15 16:00:23 jlam Exp $
 #
 
 DISTNAME=		jpilot-0.99.5
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		comms
 MASTER_SITES=		http://jpilot.org/
 
@@ -19,6 +19,7 @@ USE_DIRS+=		gnome1-1.0
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
 USE_X11=		YES
+USE_OLD_DES_API=	YES
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--with-gtk-prefix="${BUILDLINK_PREFIX.gtk}"
@@ -56,6 +57,7 @@ post-install:
 .include "../../comms/pilot-link-libs/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
