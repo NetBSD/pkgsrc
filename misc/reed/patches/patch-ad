@@ -1,0 +1,12 @@
+$NetBSD: patch-ad,v 1.1.1.1 2001/09/02 20:13:28 wiz Exp $
+
+--- src/reed.h.orig	Fri Dec  1 01:09:49 2000
++++ src/reed.h
+@@ -26,6 +26,7 @@
+ #include <ctype.h>
+ #include <time.h>
+ #include <getopt.h>
++#include <limits.h>
+ 
+ /* macros */
+ #define clearLine(n) wmove(m, n, 0); whline(m, ' ', COLS);
