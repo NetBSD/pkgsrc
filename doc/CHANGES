@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2571 2003/06/23 20:40:53 jtb Exp $
+$NetBSD: CHANGES,v 1.2572 2003/06/24 00:34:33 hubertf Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2554,3 +2554,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated coq to 7.4nb1 [jtb 2003-06-23]
 	Updated unison to 2.9.1nb1 [jtb 2003-06-23]
 	Updated hevea to 1.05nb1 [jtb 2003-06-23]
+	Added shmux-0.10a [hubertf 2003-06-24]
