@@ -1,12 +1,12 @@
 #!/bin/sh
 #
-# $NetBSD: LPRng.sh,v 1.1 2000/12/28 00:13:08 jlam Exp $
+# $NetBSD: LPRng.sh,v 1.2 2001/01/11 00:31:50 jlam Exp $
 #
 # PROVIDE: lpd
 # REQUIRE: DAEMON
 
 name="lpd"
-command=@@PREFIX@@/sbin/${name}
+command=@PREFIX@/sbin/${name}
 pidfile="/var/run/${name}.pid"
 
 if [ -f ${pidfile} ]
