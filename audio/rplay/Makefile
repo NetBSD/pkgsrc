@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 1998/04/22 14:22:39 agc Exp $
+# $NetBSD: Makefile,v 1.10 1998/05/15 13:55:35 agc Exp $
 # FreeBSD Id: Makefile,v 1.8 1997/06/13 16:17:01 ache Exp
 #
 
@@ -21,7 +21,7 @@ MAN5=		rplay.conf.5 rplay.hosts.5 rplay.servers.5
 INFO_FILES=	RPTP.info RPLAY.info rplay.info librplay.info
 
 pre-configure:
-	for f in `find ${WRKDIR} -type f -print|xargs $[GREP} -l '/usr/local'`; do \
+	for f in `find ${WRKDIR}/. -type f -print|xargs $[GREP} -l '/usr/local'`; do \
 		${SED} -e 's:/usr/local:'${PREFIX}':g' < $$f > $$f.pdone && ${MV} $$f.pdone $$f; \
 	done
 	chmod +x ${WRKSRC}/configure
