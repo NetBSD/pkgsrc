@@ -1,6 +1,7 @@
-$NetBSD: patch-aa,v 1.1 1998/08/30 17:46:26 garbled Exp $
+$NetBSD: patch-aa,v 1.2 2000/11/08 10:13:41 abs Exp $
+
 --- src/Makefile.orig	Fri Jul 31 12:55:18 1998
-+++ src/Makefile	Sun Aug 30 06:32:41 1998
++++ src/Makefile
 @@ -30,7 +30,7 @@
  O= ../bin/unknown
  D= ../doc
@@ -19,3 +20,17 @@ $NetBSD: patch-aa,v 1.1 1998/08/30 17:46:26 garbled Exp $
  
  Wall:
  	@if [ ! -d $(BINDIR) ]; then mkdir -p $(BINDIR); fi
+@@ -181,8 +181,13 @@
+ $O/flushdisk:  flushdisk.c 
+ 	$(COMPILE) -DMAIN -o $O/flushdisk flushdisk.c
+ 
++# Work around gcc codegen bug that results in infinite loop compiling mhz.c -O
+ $O/mhz: mhz.c timing.h stats.h bench.h $O/lmbench.a
++ifeq ($(MACHINE_ARCH),arm32)
++	$(CC) $(SYS5) $(CF) $(CPPFLAGS) $(LDFLAGS) -o $O/mhz mhz.c $O/lmbench.a $(LDLIBS) -lm
++else
+ 	$(COMPILE) -o $O/mhz mhz.c $O/lmbench.a $(LDLIBS) -lm
++endif 
+ 
+ $O/lat_ctx: lat_ctx.c timing.h stats.h bench.h $O/lmbench.a
+ 	$(COMPILE) -o $O/lat_ctx lat_ctx.c $O/lmbench.a $(LDLIBS)
