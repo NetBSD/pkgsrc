@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 1999/07/14 23:09:41 tron Exp $
+# $NetBSD: Makefile,v 1.8 1999/08/06 22:49:24 rh Exp $
 # FreeBSD Id: Makefile,v 1.10 1998/11/18 17:35:16 vanilla Exp
 #
 
-DISTNAME=	glade-0.4.1
+DISTNAME=	glade-0.5.1
 CATEGORIES=	devel
 MASTER_SITES=   http://glade.pn.org/ \
 		http://www.glade.hhips.de/
