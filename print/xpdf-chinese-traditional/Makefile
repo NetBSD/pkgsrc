@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/03/25 14:06:50 salo Exp $
+# $NetBSD: Makefile,v 1.5 2003/03/25 14:28:22 salo Exp $
 #
 
 DISTNAME=	xpdf-chinese-traditional
@@ -12,7 +12,6 @@ COMMENT=	xpdf support files for Chinese (Traditional)
 
 DEPENDS+=	xpdf>=2.02:../../print/xpdf
 
-USE_X11=	yes
 USE_PKGINSTALL=	yes
 
 DIST_SUBDIR=	${PKGNAME_NOREV}
