@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/02/16 20:56:05 rh Exp $
+bin/oregano
+bin/oregano-convert
+share/locale/sv/LC_MESSAGES/oregano.mo
+share/locale/it/LC_MESSAGES/oregano.mo
+share/pixmaps/gnome-oregano.png
+share/gnome/help/oregano/C/topic.dat
+share/gnome/help/oregano/C/oregano.html
+share/gnome/help/oregano/C/editing.html
+share/gnome/help/oregano/C/simulation.html
+share/gnome/apps/Applications/oregano.desktop
+share/mime-info/oregano.keys
+share/mime-info/oregano.mime
+share/oregano/glade/part-browser.glade
+share/oregano/glade/settings.glade
+share/oregano/glade/sim-settings.glade
+share/oregano/default.oreglib
+@dirrm share/gnome/help/oregano/C
+@dirrm share/gnome/help/oregano
+@dirrm share/oregano/glade
+@dirrm share/oregano
