@@ -1,0 +1,29 @@
+$NetBSD: patch-aa,v 1.1.1.1 2002/07/11 14:23:37 tron Exp $
+
+--- Makefile.orig	Tue Jun  4 11:35:45 2002
++++ Makefile	Sun Jun 16 20:51:30 2002
+@@ -1,13 +1,13 @@
+ # makefile crée par Laurent VUIBERT
+ 
+-CC=	gcc -O3 -Wall
++CC=	gcc ${CFLAGS}
+ STD=	_GNU_SOURCE
+-GTK=	`gtk-config  --cflags --libs`
+-GTK2=	`gtk-config  --cflags`
++GTK=	`${BUILDLINK_DIR}/bin/gtk-config  --cflags --libs`
++GTK2=	`${BUILDLINK_DIR}/bin/gtk-config  --cflags`
+ OBJS=	xbindkeys_config.o menu.o middle.o speedc.o
+ NOM=    xbindkeys_config
+ 
+-prefix=	/usr
++prefix=	${LOCALBASE}
+ 
+ .c.o: 
+ 	$(CC) $(GTK2) -D$(STD) -c $<
+@@ -22,5 +22,5 @@
+ 	rm -rf .v*
+ 
+ install:
+-	cp $(NOM) $(DESTDIR)$(prefix)/bin/
++	install -m 555 -o root -g wheel -c $(NOM) $(DESTDIR)$(prefix)/bin/
+ #End Makefile 
