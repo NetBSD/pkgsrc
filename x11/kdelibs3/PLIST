@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2002/06/26 10:37:09 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2002/06/27 07:10:13 skrll Exp $
 bin/artsmessage
 bin/checkXML
 ${CUPS}bin/cupsdconf
@@ -547,6 +547,9 @@ lib/kde3/kdeprint_rlpr.so
 lib/kde3/kgzipfilter.a
 lib/kde3/kgzipfilter.la
 lib/kde3/kgzipfilter.so
+lib/kde3/khtmlimagepart.a
+lib/kde3/khtmlimagepart.la
+lib/kde3/khtmlimagepart.so
 lib/kde3/kimg_eps.a
 lib/kde3/kimg_eps.la
 lib/kde3/kimg_eps.so
