@@ -1,6 +1,0 @@
-$NetBSD: patch-ad,v 1.2 1998/08/07 11:11:26 agc Exp $
-
---- /dev/null	Sun Nov 30 04:26:34 1997
-+++ source/gv.man	Sun Nov 30 04:30:01 1997
-@@ -0,0 +1 @@
-+
