@@ -3,16 +3,17 @@
 # Date created:				February 12, 1998
 # Whom:					Ted Lemon <mellon@fugue.com>
 #
-# $NetBSD: Makefile,v 1.2 1998/02/13 15:06:24 agc Exp $
+# $NetBSD: Makefile,v 1.3 1998/02/15 22:25:12 frueauf Exp $
 #
 
 DISTNAME=	qpopper2.41beta1
-EXTRACT_SUFX=	.tar.Z
 CATEGORIES=	mail
-MASTER_SITES=   ftp://ftp.qualcomm.com/eudora/servers/unix/qpopper
-MASTER_SITE_BACKUPS=
+MASTER_SITES=   ftp://ftp.qualcomm.com/eudora/servers/unix/popper/
+EXTRACT_SUFX=	.tar.Z
 
 MAINTAINER=     mellon@fugue.com
+
+MIRROR_DISTFILE=	no
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+= --libexecdir=${PREFIX}/libexec --sysconfdir=${PREFIX}/etc \
