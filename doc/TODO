@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.513 2003/05/03 16:39:16 cjep Exp $
+$NetBSD: TODO,v 1.514 2003/05/04 02:38:45 fredb Exp $
 
 Suggested new packages
 ======================
@@ -240,6 +240,7 @@ Suggested package updates
 	o tightvnc-1.2.8
 	o tkman-2.2
 	o ttf2pt1-3.4.3
+	o unrar-3.2.1
 	o vfu-4.00
 	o vnc-3.3.4 [http://www.realvnc.com/download.html]
 	o vttest-20030301
