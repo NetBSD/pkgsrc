@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1999/05/04 03:52:42 tv Exp $
+# $NetBSD: Makefile,v 1.5 2000/04/09 18:32:23 tron Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1997/06/27 01:53:13 jfitz Exp
 #
 
@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=SNMP/}
 
 MAINTAINER=	packages@netbsd.org
 
-DEPENDS=	ucd-snmp-3.6.1p1:../../net/ucd-snmp
+DEPENDS=	ucd-snmp>=4.0.1:../../net/ucd-snmp
 
 USE_PERL5=	yes
 
