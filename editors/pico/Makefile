@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 1998/07/21 21:16:15 tv Exp $
+# $NetBSD: Makefile,v 1.8 1998/07/22 02:45:45 tv Exp $
 #
 
-DISTNAME=	pine4.00
-PKGNAME=	pico-3.0
+DISTNAME=	pine4.02
+PKGNAME=	pico-3.2
 CATEGORIES=	editors
 MASTER_SITES=	ftp://ftp.cac.washington.edu/pine/
 
@@ -10,7 +10,7 @@ MAINTAINER=	root@garbled.net
 
 BUILD_DEPENDS=	${PREFIX}/bin/libtool:../../devel/libtool
 
-CONFLICTS=	pico-2.9 pine-3.96
+CONFLICTS=	pico-2.9 pine-3.96 pico-3.0
 
 do-build:
 	cd ${WRKSRC} && ./build neb CC="${PREFIX}/bin/libtool ${CC}" PREFIX=${PREFIX}
