@@ -1,3 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/03/31 18:14:08 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/06/28 13:58:25 minskim Exp $
 bin/am_mathomatic
 man/man1/am_mathomatic.1
+share/doc/${PKGBASE}/am.htm
+share/doc/${PKGBASE}/manual.htm
+share/doc/${PKGBASE}/notes.htm
+share/doc/${PKGBASE}/readme.txt
+@dirrm share/doc/${PKGBASE}
