@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2003/05/31 13:32:49 grant Exp $
+# $NetBSD: Makefile,v 1.74 2003/05/31 15:03:18 grant Exp $
 #
 # This package does not compile in mod_ssl support hooks, as it conflicts
 # with IPv6-enable patch.
@@ -108,18 +108,18 @@ APACHE_CUSTOM_CFLAGS+=	-D_FILE_OFFSET_BITS=64
 # certain symbols from the C++ implementation (__get_eh_context, etc.)
 # referenced by DSOs written in C++ will resolve correctly.
 #
-.if ${OPSYS} == "NetBSD" && ${OBJECT_FMT} == "ELF"
+.if ${OPSYS} == "NetBSD"
+.  if ${OBJECT_FMT} == "ELF"
 LINK_LIBGCC_LDFLAGS=	${WHOLE_ARCHIVE_FLAG} -lgcc ${NO_WHOLE_ARCHIVE_FLAG}
-.endif
-
+MAKE_ENV+=		LINK_LIBGCC_LDFLAGS="${LINK_LIBGCC_LDFLAGS}"
 # if we are using gcc3, we need to link against libgcc_s, too. This
 # ensures modules can resolve symbols they require from gcc.
-.if defined(USE_GCC3)
+.    if defined(USE_GCC3)
 USE_GCC_SHLIB=		# defined
 LINK_LIBGCC_LDFLAGS+=	-lgcc_s
+.    endif
+.  endif
 .endif
-
-MAKE_ENV+=		LINK_LIBGCC_LDFLAGS="${LINK_LIBGCC_LDFLAGS}"
 
 # Use operating system's db1 functions (where available)
 .include "../../databases/db/buildlink2.mk"
