@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1197 2003/06/14 16:53:00 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1198 2003/06/14 18:52:46 atatat Exp $
 #
 # This file is in the public domain.
 #
@@ -1640,6 +1640,23 @@ show-installed-depends:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	for i in ${DEPENDS:C/:.*$//:Q:S/\ / /g} ; do			\
 		echo "$$i =>" `${PKG_INFO} -e "$$i"` ;			\
+	done
+.  endif
+.endif
+
+.if !target(show-needs-update)
+show-needs-update:
+.  if defined(DEPENDS)
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	for i in `${MAKE} show-all-depends-dirs`; do			\
+		cd ${_PKGSRCDIR}/$$i;					\
+		want=`make show-vars VARNAMES=PKGNAME`;			\
+		have=`${PKG_INFO} -e "$${want%-*}" || true`;		\
+		if [ -z "$$have" ]; then				\
+			echo "$$i => (none) => needs install of $$want"; \
+		elif [ "$$have" != "$$want" ]; then			\
+			echo "$$i => $$have => needs update to $$want";	\
+		fi;							\
 	done
 .  endif
 .endif
