@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4578 2004/01/23 17:54:48 jmmv Exp $
+$NetBSD: CHANGES,v 1.4579 2004/01/23 18:21:12 recht Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -432,3 +432,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated xmlcatmgr to 2.0beta1 [jmmv 2004-01-23]
 	Updated gnome-themes to 2.4.1nb3 [jmmv 2004-01-23]
 	Updated GConf2 to 2.4.0.1nb3 [jmmv 2004-01-23]
+	Added destroy-20030307 [recht 2004-01-23]
