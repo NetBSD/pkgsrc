@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1998/12/05 03:28:48 tv Exp $
+lib/perl5/man/man3/MLDBM.3
+lib/perl5/site_perl/alpha-netbsd/auto/MLDBM/.packlist
+lib/perl5/site_perl/MLDBM.pm
+lib/perl5/site_perl/MLDBM/Serializer/Data/Dumper.pm
+lib/perl5/site_perl/MLDBM/Serializer/FreezeThaw.pm
+lib/perl5/site_perl/MLDBM/Serializer/Storable.pm
+@dirrm lib/perl5/site_perl/alpha-netbsd/auto/MLDBM
+@dirrm lib/perl5/site_perl/MLDBM/Serializer/Data
+@dirrm lib/perl5/site_perl/MLDBM/Serializer
