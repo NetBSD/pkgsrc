@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5454 2004/04/05 22:08:33 jmmv Exp $
+$NetBSD: CHANGES,v 1.5455 2004/04/05 22:43:52 martin Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1792,3 +1792,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated cvsync to 0.24.14 [gehenna 2004-04-05]
 	Updated shared-mime-info to 0.14 [adam 2004-04-05]
 	Updated gimp to 2.0.0nb1 [jmmv 2004-04-05]
+	Updatet ups-nut and ups-nut-cgi to 2.0.0 [martin 2004-04-05]
