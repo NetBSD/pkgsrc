@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.4 2001/06/09 15:30:53 wiz Exp $
+# $NetBSD: buildlink.mk,v 1.5 2001/06/10 00:09:33 jlam Exp $
 #
 # This Makefile fragment is included by packages that use libpam.
 #
@@ -7,10 +7,9 @@
 # (1) Optionally define PAM_REQD to the version of pam desired.
 # (2) Include this Makefile fragment in the package Makefile,
 # (3) Optionally define BUILDLINK_INCDIR and BUILDLINK_LIBDIR,
-# (4) Add ${BUILDLINK_TARGETS} to the prerequisite targets for pre-configure,
-# (5) Add ${BUILDLINK_INCDIR} to the front of the C preprocessor's header
+# (4) Add ${BUILDLINK_INCDIR} to the front of the C preprocessor's header
 #     search path, and
-# (6) Add ${BUILDLINK_LIBDIR} to the front of the linker's library search
+# (5) Add ${BUILDLINK_LIBDIR} to the front of the linker's library search
 #     path.
 
 .if !defined(PAM_BUILDLINK_MK)
@@ -27,8 +26,15 @@ PAM_LIBS+=		${LOCALBASE}/lib/libpam_misc.*
 BUILDLINK_INCDIR?=	${WRKDIR}/include
 BUILDLINK_LIBDIR?=	${WRKDIR}/lib
 
-BUILDLINK_TARGETS+=	link-pam-headers
-BUILDLINK_TARGETS+=	link-pam-libs
+PAM_BUILDLINK_COOKIE=		${WRKDIR}/.pam_buildlink_done
+PAM_BUILDLINK_TARGETS=		link-pam-headers
+PAM_BUILDLINK_TARGETS+=		link-pam-libs
+BUILDLINK_TARGETS+=		${PAM_BUILDLINK_COOKIE}
+
+pre-configure: ${PAM_BUILDLINK_COOKIE}
+
+${PAM_BUILDLINK_COOKIE}: ${PAM_BUILDLINK_TARGETS}
+	@${TOUCH} ${TOUCH_FLAGS} ${PAM_BUILDLINK_COOKIE}
 
 # This target links the headers into ${BUILDLINK_INCDIR}, which should
 # be searched first by the C preprocessor.

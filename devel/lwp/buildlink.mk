@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.2 2001/06/09 15:21:03 wiz Exp $
+# $NetBSD: buildlink.mk,v 1.3 2001/06/10 00:09:30 jlam Exp $
 #
 # This Makefile fragment is included by packages that use lwp.
 #
@@ -7,10 +7,9 @@
 # (1) Optionally define LWP_REQD to the version of lwp desired.
 # (2) Include this Makefile fragment in the package Makefile,
 # (3) Optionally define BUILDLINK_INCDIR and BUILDLINK_LIBDIR,
-# (4) Add ${BUILDLINK_TARGETS} to the prerequisite targets for pre-configure,
-# (5) Add ${BUILDLINK_INCDIR} to the front of the C preprocessor's header
+# (4) Add ${BUILDLINK_INCDIR} to the front of the C preprocessor's header
 #     search path, and
-# (6) Add ${BUILDLINK_LIBDIR} to the front of the linker's library search
+# (5) Add ${BUILDLINK_LIBDIR} to the front of the linker's library search
 #     path.
 
 .if !defined(LWP_BUILDLINK_MK)
@@ -25,8 +24,15 @@ LWP_LIBS=		${LOCALBASE}/lib/liblwp.*
 BUILDLINK_INCDIR?=	${WRKDIR}/include
 BUILDLINK_LIBDIR?=	${WRKDIR}/lib
 
-BUILDLINK_TARGETS+=	link-lwp-headers
-BUILDLINK_TARGETS+=	link-lwp-libs
+LWP_BUILDLINK_COOKIE=		${WRKDIR}/.lwp_buildlink_done
+LWP_BUILDLINK_TARGETS=		link-lwp-headers
+LWP_BUILDLINK_TARGETS+=		link-lwp-libs
+BUILDLINK_TARGETS+=		${LWP_BUILDLINK_COOKIE}
+
+pre-configure: ${LWP_BUILDLINK_COOKIE}
+
+${LWP_BUILDLINK_COOKIE}: ${LWP_BUILDLINK_TARGETS}
+	@${TOUCH} ${TOUCH_FLAGS} ${LWP_BUILDLINK_COOKIE}
 
 # This target links the headers into ${BUILDLINK_INCDIR}, which should
 # be searched first by the C preprocessor.
