@@ -1,65 +1,13 @@
-$NetBSD: patch-ab,v 1.4 2001/05/16 02:27:53 fredb Exp $
+$NetBSD: patch-ab,v 1.5 2004/04/26 07:10:16 fredb Exp $
 
---- ../src/unix/sqUnixSound.c.orig	Thu Feb  8 11:27:04 2001
-+++ ../src/unix/sqUnixSound.c
-@@ -70,9 +70,16 @@
- # include <fcntl.h>
- # include <sys/time.h>
- # include <sys/ioctl.h>
-+#ifdef __NetBSD__
-+#include <soundcard.h>
-+#ifdef NETBSD_OSS_HACK
-+#include <sys/audioio.h>
-+#endif
-+#else
- # include <sys/soundcard.h>
-+#endif
- 
--# if !defined(OPEN_SOUND_SYSTEM) && !defined(__FreeBSD__)
-+# if !defined(OPEN_SOUND_SYSTEM) && !defined(__FreeBSD__) && !defined(__NetBSD__)
- #    warning: 
- #    warning: sys/soundcard.h did not define OPEN_SOUND_SYSTEM
- #    warning: SOUND SUPPORT DISABLED
-@@ -274,6 +279,34 @@
- 
- int snd_AvailableSpace(void)
- {
-+#ifdef NETBSD_OSS_HACK
-+/*
-+  This is to work around a bug in NetBSD-1.5.1 and earlier, in which
-+  the SNDCTL_DSP_GETOSPACE(&buf_info) ioctl was not handled properly.
-+  The correct information is always available via the native audio
-+  driver, so use that instead.
-+*/
-+  struct audio_info info;
-+  int freeBlocks;
-+
-+  if (auFd == -1) return -1;
-+
-+  if (ioctl(auFd, AUDIO_GETINFO, &info) < 0) {
-+    perror("ioctl(AUDIO_GETINFO)");
-+    return 0;
-+  }
-+
-+  /* Make certain we have one, full hardware block free. */
-+  freeBlocks = info.hiwat - (info.play.seek + info.blocksize - 1)/info.blocksize;
-+  if (freeBlocks > 0)
-+    {
-+      return info.blocksize;
-+    }
-+  else
-+    {
-+      auSemaWaiting= true;
-+      return 0;
-+#else
-   audio_buf_info info;
-   if (auFd == -1)
-     return -1;
-@@ -294,6 +326,7 @@
-   else
-     {
-       return info.fragsize;
-+#endif
-     }
- }
- 
+--- platforms/unix/config/Makefile.install	2004-04-01 20:17:33.000000000 -0600
++++ platforms/unix/config/Makefile.install	2004-04-25 21:38:16.000000000 -0500
+@@ -63,7 +63,7 @@
+ 	  echo $(INSTALL_DATA) $(topdir)/platforms/unix/doc/$$f $(ROOT)$(docdir); \
+ 	  $(INSTALL_DATA) $(topdir)/platforms/unix/doc/$$f $(ROOT)$(docdir); \
+ 	done
+-	gzip -f9 $(ROOT)$(docdir)/*
++	#gzip -f9 $(ROOT)$(docdir)/*
+ 	$(MKINSTALLDIRS) $(ROOT)$(mandir)/man1
+ 	$(INSTALL_DATA) squeak.1 $(ROOT)$(mandir)/man1
+ 	rm -f $(ROOT)$(mandir)/man1/inisqueak.1

@@ -1,0 +1,36 @@
+$NetBSD: patch-ai,v 1.1 2004/04/26 07:10:16 fredb Exp $
+
+--- platforms/unix/vm-display-X11/acinclude.m4	2004-01-29 21:58:37.000000000 -0600
++++ platforms/unix/vm-display-X11/acinclude.m4	2004-04-25 15:04:40.000000000 -0500
+@@ -27,12 +27,31 @@
+     AC_DEFINE(USE_X11, [1])
+     AC_DEFINE_UNQUOTED(VM_X11DIR, "${x_libraries}")
+     LIBS="${LIBS} -lX11"
++    case "$host" in
++      *-netbsd*)
++	LIBS="${LIBS} -L${x_libraries} -R${x_libraries}" ;;
++    esac
+     AC_CHECK_LIB(Xext, XShmAttach)
+     if test "$have_gl" = ""; then have_gl="no"; fi
+     AC_CHECK_HEADERS(GL/gl.h, [
+       have_gl=yes
+       AC_DEFINE(USE_X11_GLX, [1])
+       AC_CHECK_LIB(GL,glIsEnabled)
++      case "$host" in
++	*-netbsd*)
++	  case "$host" in
++	    *-netbsd1*)
++	      ;;
++	    *-netbsdelf1*)
++	      break
++	      ;;
++	    *)
++	      CFLAGS="${CFLAGS} -pthread"
++	      LDFLAGS="${LDFLAGS} -pthread"
++	      ;;
++	    esac
++	    ;;
++      esac
+     ])
+   ],[
+     AC_PLUGIN_DISABLE

@@ -1,0 +1,17 @@
+$NetBSD: patch-aj,v 1.1 2004/04/26 07:10:16 fredb Exp $
+
+--- platforms/unix/vm-sound-NetBSD/acinclude.m4	1969-12-31 18:00:00.000000000 -0600
++++ platforms/unix/vm-sound-NetBSD/acinclude.m4	2004-04-25 15:05:47.000000000 -0500
+@@ -0,0 +1,12 @@
++# -*- sh -*-
++
++AC_MSG_CHECKING([for NetBSD audio])
++AC_TRY_COMPILE([#include <sys/types.h>
++#include <sys/audioio.h>],
++    [struct audio_info info; info.blocksize;],[
++  AC_MSG_RESULT(yes)
++  AC_DEFINE_UNQUOTED(USE_AUDIO_NETBSD,1)
++],[
++  AC_MSG_RESULT(no)
++  AC_PLUGIN_DISABLE
++])

@@ -1,21 +1,13 @@
-$NetBSD: patch-ae,v 1.1 2001/08/23 21:18:31 fredb Exp $
+$NetBSD: patch-ae,v 1.2 2004/04/26 07:10:16 fredb Exp $
 
-*** ../src/unix/util/relpath	21 May 2001 03:43:46 -0000	1.1.1.1
---- ../src/unix/util/relpath	21 May 2001 03:45:25 -0000
-***************
-*** 44,50 ****
-  path=$2
-  
-  for dir in `echo $cwd | tr '/' ' '`; do
-!   if expr match $path "/$dir" >/dev/null; then
-      path=`echo $path | sed "s,^/$dir,,"`
-      cwd=`echo $cwd | sed "s,^/$dir,,"`
-    fi
---- 44,50 ----
-  path=$2
-  
-  for dir in `echo $cwd | tr '/' ' '`; do
-!   if expr X$path : X"/$dir" >/dev/null; then
-      path=`echo $path | sed "s,^/$dir,,"`
-      cwd=`echo $cwd | sed "s,^/$dir,,"`
-    fi
+--- platforms/unix/config/make.cfg.in	2003-08-31 12:55:21.000000000 -0500
++++ platforms/unix/config/make.cfg.in	2004-04-25 21:38:41.000000000 -0500
+@@ -74,7 +74,7 @@
+ mandir=		@mandir@
+ imgdir=		@imgdir@
+ plgdir=		@plgdir@
+-docdir=		$(prefix)/doc/squeak
++docdir=		$(prefix)/share/doc/squeak
+ 
+ SHELL=		@SHELL@
+ MKINSTALLDIRS=	$(SHELL) $(cfgdir)/mkinstalldirs
