@@ -1,44 +1,15 @@
-# $NetBSD: Makefile,v 1.22 2002/06/06 11:25:52 manu Exp $
+# $NetBSD: Makefile,v 1.23 2002/07/26 17:36:24 wiz Exp $
 
-DISTNAME=	xchat-1.8.9
-CATEGORIES=	chat x11 gnome
-MASTER_SITES=	${HOMEPAGE}files/source/1.8/
-EXTRACT_SUFX=	.tar.bz2
+.include "Makefile.common"
 
-MAINTAINER=	tron@netbsd.org
-HOMEPAGE=	http://xchat.org/
-COMMENT=	X11 (X Window System) IRC client, using the GTK+ toolkit
+PKGREVISION=	1
 
-USE_GMAKE=	YES
-USE_PERL5=	YES
-USE_X11BASE=	YES
-GNU_CONFIGURE=	YES
-CONFIGURE_ENV+=	ac_cv_lib_intl_bindtextdomain='yes'
-CONFIGURE_ENV+=	pythonpath=${PYTHONBIN}
-MAKE_ENV+=	PKGLOCALEDIR="${PKGLOCALEDIR}"
-BUILD_USES_MSGFMT=	YES
+CONFIGURE_ARGS+=	--disable-gnome
+CONFIGURE_ARGS+=	--disable-zvt
 
-BUILD_DEFS+=	USE_INET6
+CONFLICTS+=		xchat-gnome-[0-9]*
 
-.include "../../mk/bsd.prefs.mk"
-
-CONFIGURE_ARGS+=	--enable-panel
-
-# IPv6 support
-.if defined(USE_INET6) && ${USE_INET6} == YES
-CONFIGURE_ARGS+=	--enable-ipv6
-.endif
-
-# SSL support
-.if defined(XCHAT_USE_SSL) && ${XCHAT_USE_SSL} == "YES"
-.include "../../security/openssl/buildlink.mk"
-CONFIGURE_ARGS+=	--enable-openssl=${BUILDLINK_DIR}
-.endif
-
-post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/xchat
-	${INSTALL_DATA} ${WRKSRC}/doc/*.html ${PREFIX}/share/doc/xchat
-
-.include "../../lang/python/application.buildlink.mk"
-.include "../../x11/gnome-core/buildlink.mk"
+.include "../../graphics/gdk-pixbuf/buildlink.mk"
+.include "../../x11/gtk/buildlink.mk"
+.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

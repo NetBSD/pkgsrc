@@ -1,0 +1,52 @@
+# $NetBSD: Makefile.common,v 1.1 2002/07/26 17:36:24 wiz Exp $
+
+DISTNAME=	xchat-1.8.9
+CATEGORIES=	chat x11
+MASTER_SITES=	${HOMEPAGE}files/source/1.8/
+EXTRACT_SUFX=	.tar.bz2
+
+MAINTAINER=	tron@netbsd.org
+HOMEPAGE=	http://xchat.org/
+COMMENT=	X11 (X Window System) IRC client, using the GTK+ toolkit
+
+DISTINFO_FILE=	${.CURDIR}/../xchat/distinfo
+FILESDIR=	${.CURDIR}/../xchat/files
+PATCHDIR=	${.CURDIR}/../xchat/patches
+PKGDIR=		${.CURDIR}/../xchat
+PLIST_SRC=	${.CURDIR}/../xchat/PLIST
+
+USE_GMAKE=	YES
+USE_PERL5=	YES
+USE_X11BASE=	YES
+GNU_CONFIGURE=	YES
+CONFIGURE_ENV+=	ac_cv_lib_intl_bindtextdomain='yes'
+CONFIGURE_ENV+=	pythonpath=${PYTHONBIN}
+MAKE_ENV+=	PKGLOCALEDIR="${PKGLOCALEDIR}"
+BUILD_USES_MSGFMT=	YES
+
+BUILD_DEFS+=	USE_INET6 USE_SOCKS
+
+.include "../../mk/bsd.prefs.mk"
+
+# IPv6 support
+.if defined(USE_INET6) && ${USE_INET6} == YES
+CONFIGURE_ARGS+=	--enable-ipv6
+.endif
+
+# SSL support
+.if defined(XCHAT_USE_SSL) && ${XCHAT_USE_SSL} == "YES"
+.include "../../security/openssl/buildlink.mk"
+CONFIGURE_ARGS+=	--enable-openssl=${BUILDLINK_DIR}
+.endif
+
+# Socks support
+.if defined(USE_SOCKS) && ${USE_SOCKS} == YES
+CONFIGURE_ARGS+=	--enable-socks
+.endif
+
+post-install:
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/xchat
+	${INSTALL_DATA} ${WRKSRC}/doc/*.html ${PREFIX}/share/doc/xchat
+
+.include "../../devel/glib/buildlink.mk"
+.include "../../lang/perl5/buildlink.mk"
