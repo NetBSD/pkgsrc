@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.386 2003/03/20 11:15:20 wiz Exp $
+$NetBSD: TODO,v 1.387 2003/03/20 19:06:58 kristerw Exp $
 
 Suggested new packages
 ======================
@@ -260,7 +260,6 @@ Suggested package updates
 	o xalan-c-1.4
 	o xanim-2.92.0 [pkg/19934]
 	o xerces-c-2.1.0 [heinz]
-	o xmame-0.66.1
 	o xmcd-3.2.0
 	o xosview-1.8.0 [pkg/20265]
 	o xpaint-2.6.9
