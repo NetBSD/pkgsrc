@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2001/09/27 23:17:46 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2001/10/23 01:39:16 dmcmahill Exp $
 #
 
-DISTNAME=	gwave-20001123
+DISTNAME=	gwave-20011021
 CATEGORIES=	cad
 MASTER_SITES=	http://www.cs.unc.edu/~tell/dist/
 
@@ -16,8 +16,5 @@ GNU_CONFIGURE=	YES
 # LDFLAGS to get -lreadline
 # CPPFLAGS to get -I${LOCALBASE}/include for readline/readline.h
 CPPFLAGS+=	-I${LOCALBASE}/include
-
-post-extract:
-	${CP} ${FILESDIR}/sp2sp.1 ${WRKSRC}/doc/sp2sp.1
 
 .include "../../mk/bsd.pkg.mk"
