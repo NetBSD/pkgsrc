@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2002/12/18 11:28:08 jmmv Exp $
+# $NetBSD: Makefile,v 1.7 2002/12/19 12:55:56 jmmv Exp $
 #
 
-DISTNAME=	sysbuild-1.5
+DISTNAME=	sysbuild-1.6
 CATEGORIES=	sysutils
 MASTER_SITES=	# empty
 DISTFILES=	# empty

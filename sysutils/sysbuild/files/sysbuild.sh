@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: sysbuild.sh,v 1.6 2002/12/18 11:28:09 jmmv Exp $
+# $NetBSD: sysbuild.sh,v 1.7 2002/12/19 12:55:57 jmmv Exp $
 #
 # sysbuild - Automatic NetBSD system builds
 # Copyright (c) 2002, Julio Merino <jmmv@netbsd.org>
@@ -212,7 +212,7 @@ sysbuild_install_kernel() {
         cd $BUILDDIR/kernel/$_conf
         echo "Kernel MD5: `md5 netbsd`"
         echo "Installing $_conf kernel:"
-        $BUILDDIR/tools/bin/nbmake-`uname -m` BSDSRCDIR=$SRCDIR OBJMACHINE=yes MKOBJDIRS=yes install
+        $BUILDDIR/tools/bin/nbmake-`uname -m` DESTDIR= BSDSRCDIR=$SRCDIR OBJMACHINE=yes MKOBJDIRS=yes install
     fi
 }
 
