@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2002/08/25 19:22:44 jlam Exp $
+@comment $NetBSD: PLIST,v 1.6 2002/11/13 13:44:42 wiz Exp $
 bin/Magick++-config
 bin/Magick-config
 bin/animate
@@ -15,15 +15,12 @@ include/Magick++/CoderInfo.h
 include/Magick++/Color.h
 include/Magick++/Drawable.h
 include/Magick++/Exception.h
-include/Magick++/Functions.h
 include/Magick++/Geometry.h
 include/Magick++/Image.h
 include/Magick++/Include.h
 include/Magick++/Montage.h
-include/Magick++/Options.h
 include/Magick++/Pixels.h
 include/Magick++/STL.h
-include/Magick++/Thread.h
 include/Magick++/TypeMetric.h
 include/magick/PreRvIcccm.h
 include/magick/api.h
@@ -31,15 +28,16 @@ include/magick/attribute.h
 include/magick/blob.h
 include/magick/cache.h
 include/magick/cache_view.h
-include/magick/classify.h
 include/magick/command.h
 include/magick/compress.h
 include/magick/delegate.h
+include/magick/deprecate.h
 include/magick/draw.h
 include/magick/error.h
 include/magick/gem.h
 include/magick/image.h
 include/magick/list.h
+include/magick/log.h
 include/magick/magic.h
 include/magick/magick.h
 include/magick/magick_config.h
@@ -48,28 +46,32 @@ include/magick/monitor.h
 include/magick/quantize.h
 include/magick/registry.h
 include/magick/render.h
+include/magick/resource.h
 include/magick/semaphore.h
 include/magick/timer.h
 include/magick/utility.h
 include/magick/version.h
 include/magick/widget.h
 include/magick/xwindow.h
-lib/ImageMagick/delegates.mgk
-lib/ImageMagick/type-ghostscript.mgk
-lib/ImageMagick/type-solaris.mgk
-lib/ImageMagick/type-windows.mgk
-lib/ImageMagick/type.mgk
-@exec ${MKDIR} %D/lib/ImageMagick/modules/coders
+lib/ImageMagick-5.5.1/colors.mgk
+lib/ImageMagick-5.5.1/delegates.mgk
+lib/ImageMagick-5.5.1/log.mgk
+lib/ImageMagick-5.5.1/magic.mgk
+lib/ImageMagick-5.5.1/type-ghostscript.mgk
+lib/ImageMagick-5.5.1/type-solaris.mgk
+lib/ImageMagick-5.5.1/type-windows.mgk
+lib/ImageMagick-5.5.1/type.mgk
+@exec ${MKDIR} %D/lib/ImageMagick-5.5.1/modules/coders
 lib/libMagick++.a
 lib/libMagick++.la
 lib/libMagick++.so
 lib/libMagick++.so.5
-lib/libMagick++.so.5.48
+lib/libMagick++.so.5.5
 lib/libMagick.a
 lib/libMagick.la
 lib/libMagick.so
 lib/libMagick.so.5
-lib/libMagick.so.5.48
+lib/libMagick.so.5.5
 man/man1/ImageMagick.1
 man/man1/Magick++-config.1
 man/man1/Magick-config.1
@@ -87,8 +89,6 @@ man/man5/quantize.5
 share/ImageMagick/Copyright.txt
 share/ImageMagick/ImageMagick.html
 share/ImageMagick/QuickStart.txt
-share/ImageMagick/colors.mgk
-share/ImageMagick/images/appligent.jpg
 share/ImageMagick/images/authentica.jpg
 share/ImageMagick/images/ball.png
 share/ImageMagick/images/corbis.png
@@ -96,14 +96,21 @@ share/ImageMagick/images/examples.jpg
 share/ImageMagick/images/home.png
 share/ImageMagick/images/logo.png
 share/ImageMagick/images/magick.png
+share/ImageMagick/images/magick_button_120x60.png
+share/ImageMagick/images/magick_button_88x31.png
+share/ImageMagick/images/magick_icon_16x16.png
+share/ImageMagick/images/magick_icon_32x32.png
+share/ImageMagick/images/magick_icons.ico
 share/ImageMagick/images/magick_small.png
 share/ImageMagick/images/mail.png
+share/ImageMagick/images/pair.png
+share/ImageMagick/images/promote.png
 share/ImageMagick/images/right_triangle.png
 share/ImageMagick/images/right_triangle_option.png
 share/ImageMagick/images/screen.png
-share/ImageMagick/magic.mgk
 share/ImageMagick/www/Changelog.html
 share/ImageMagick/www/Copyright.html
+share/ImageMagick/www/FAQ.html
 share/ImageMagick/www/ImageMagick.html
 share/ImageMagick/www/Magick++/Blob.html
 share/ImageMagick/www/Magick++/Cache.fig
@@ -143,7 +150,7 @@ share/ImageMagick/www/Magick++/thumbnail-anatomy-plain.fig
 share/ImageMagick/www/Magick++/thumbnail-anatomy-plain.jpg
 share/ImageMagick/www/Magick++/thumbnail-sample-framed.jpg
 share/ImageMagick/www/Magick++/thumbnail-sample-plain.jpg
-share/ImageMagick/www/Magick.html
+share/ImageMagick/www/QuickStart.html
 share/ImageMagick/www/animate.html
 share/ImageMagick/www/api.html
 share/ImageMagick/www/api/animate.html
@@ -172,6 +179,7 @@ share/ImageMagick/www/api/quantize.html
 share/ImageMagick/www/api/registry.html
 share/ImageMagick/www/api/render.html
 share/ImageMagick/www/api/resize.html
+share/ImageMagick/www/api/resource.html
 share/ImageMagick/www/api/segment.html
 share/ImageMagick/www/api/shear.html
 share/ImageMagick/www/api/signature.html
@@ -222,8 +230,8 @@ share/ImageMagick/www/windows.html
 @dirrm share/ImageMagick/www
 @dirrm share/ImageMagick/images
 @dirrm share/ImageMagick
-@dirrm lib/ImageMagick/modules/coders
-@dirrm lib/ImageMagick/modules
-@dirrm lib/ImageMagick
+@dirrm lib/ImageMagick-5.5.1/modules/coders
+@dirrm lib/ImageMagick-5.5.1/modules
+@dirrm lib/ImageMagick-5.5.1
 @dirrm include/magick
 @dirrm include/Magick++
