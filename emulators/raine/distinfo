@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/04/05 05:05:28 xtraeme Exp $
+
+SHA1 (raines-0.40.0.tar.bz2) = bb3fe7aa758f8081e5aa14632ddff1858dfb86bb
+Size (raines-0.40.0.tar.bz2) = 1505268 bytes
+SHA1 (patch-aa) = abee628fbe69a12a98fdc88aee96f59a7a2ec721
+SHA1 (patch-ab) = 3fc85718ec2079fbbb7a59d06f782e2832889d0a
+SHA1 (patch-ac) = 40ec161397eed474a1274ea8f0e802eb5e687608

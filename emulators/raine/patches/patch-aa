@@ -1,0 +1,73 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/04/05 05:05:28 xtraeme Exp $
+
+--- makefile.orig	2004-04-05 06:00:31.000000000 +0200
++++ makefile	2004-04-05 06:08:35.000000000 +0200
+@@ -171,10 +171,10 @@
+ 
+ #	SDL = 1
+ 
+-   bindir = $(prefix)/usr/games
+-   sharedir = $(prefix)/usr/share
++   bindir = $(PREFIX)/bin
++   sharedir = $(PREFIX)/share
+    mandir = $(sharedir)/man/man6
+-   rainedata = $(sharedir)/games/raine
++   rainedata = $(sharedir)/raine
+    langdir = $(rainedata)/languages
+    romdir = $(rainedata)/roms
+ 
+@@ -197,10 +197,10 @@
+    DEFINE = -D__RAINE__ \
+ 	   -DRAINE_UNIX \
+ 
+-   LIBS = -lz `allegro-config --libs` -lvga # -lreadline -lefence
+-   LIBS_DEBUG = -lz -lvga `allegro-config --libs debug`
++   LIBS = -lz `allegro-config --libs` # -lreadline -lefence
++   LIBS_DEBUG = -lz `allegro-config --libs debug`
+ 
+-   LIBS_STATIC = -lz -lvga `allegro-config --static`
++   LIBS_STATIC = -lz `allegro-config --static`
+ 
+ endif # linux / mingw32
+ endif # djgpp
+@@ -950,11 +950,7 @@
+ make.dep:
+ 	./makedep $(OBJDIR) $(OBJS) > make.dep
+ 
+-cpuinfo:
+-	@sh ./detect-cpu
+-
+ include make.dep
+-include cpuinfo
+ 
+ # create directories
+ 
+@@ -983,7 +979,6 @@
+ 	$(RM) -r $(OBJDIR)
+ 	@echo Deleting $(RAINE_EXE)...
+ 	$(RM) $(RAINE_EXE) make.dep
+-	$(RM) cpuinfo
+ 
+ vclean:
+ 	@echo make vclean is no longer necessary, just type make clean
+@@ -992,14 +987,16 @@
+ install: install_dirs $(RAINE_LNG)
+ ifdef RAINE_LINUX
+ 
+-	$(INSTALL_BIN) $(RAINE_EXE) $(bindir)
+-	$(INSTALL_DATA) $(RAINE_DAT) $(rainedata)
++	$(BSD_INSTALL_PROGRAM) $(RAINE_EXE) $(rainedata)
++	$(BSD_INSTALL_DATA) $(RAINE_DAT) $(rainedata)
+ 
+ install_dirs:
+-	$(MD) -pv $(bindir) $(rainedata) $(langdir) $(romdir)
++	$(BSD_INSTALL_DATA_DIR) $(rainedata)
++	$(BSD_INSTALL_DATA_DIR) $(langdir)
++	$(BSD_INSTALL_DATA_DIR) $(romdir)
+ 
+ $(RAINE_LNG):
+-	$(INSTALL_DATA) config/language/$@ $(langdir)
++	$(BSD_INSTALL_DATA) config/language/$@ $(langdir)
+ 
+ else
+ 	@echo There is no needs to install for a win32/dos system

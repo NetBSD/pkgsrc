@@ -1,0 +1,29 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/04/05 05:05:28 xtraeme Exp $
+bin/raine
+share/raine/languages/Brasil.cfg
+share/raine/languages/CZECH.CFG
+share/raine/languages/Catala.cfg
+share/raine/languages/Dansk.cfg
+share/raine/languages/Dutch.cfg
+share/raine/languages/English.cfg
+share/raine/languages/Español.cfg
+share/raine/languages/Euskera.cfg
+share/raine/languages/Finnish.cfg
+share/raine/languages/French.cfg
+share/raine/languages/French2.cfg
+share/raine/languages/German.cfg
+share/raine/languages/German2.cfg
+share/raine/languages/Italian.cfg
+share/raine/languages/Japanese.cfg
+share/raine/languages/POLISH.CFG
+share/raine/languages/Portugal.cfg
+share/raine/languages/Spanish.cfg
+share/raine/languages/Svenska.cfg
+share/raine/languages/Template.cfg
+share/raine/languages/Turkish.cfg
+share/raine/languages/galego.cfg
+share/raine/raine
+share/raine/raine.dat
+@dirrm share/raine/languages
+@dirrm share/raine/roms
+@dirrm share/raine
