@@ -1,70 +1,51 @@
-*** config.orig	Thu Sep 21 04:23:14 2000
---- config	Sat Apr  7 12:38:53 2001
-***************
-*** 167,176 ****
-          echo "${MACH}-${ARCH}-freebsd${VERS}"; exit 0
-          ;;
-  
-!     NetBSD:*:*:*386*)
-!         echo "`/usr/sbin/sysctl -n hw.model | sed 's,.*\(.\)86-class.*,i\186,'`-whatever-netbsd"; exit 0
-  	;;
-! 
-      NetBSD:*)
-  	echo "${MACHINE}-whatever-netbsd"; exit 0
-  	;;
---- 167,180 ----
-          echo "${MACH}-${ARCH}-freebsd${VERS}"; exit 0
-          ;;
-  
-!     NetBSD:*:*:i386)
-! 	if echo __ELF__ | cc -E - | grep -q __ELF__; then
-! 	    echo "i386-whatever-netbsd"; exit 0
-! 	else
-! 	    echo "i386elf-whatever-netbsd"; exit 0
-! 	fi
-  	;;
-!   
-      NetBSD:*)
-  	echo "${MACHINE}-whatever-netbsd"; exit 0
-  	;;
-***************
-*** 330,335 ****
---- 334,340 ----
-    CC=cc
-  fi
-  
-+ if false; then
-  if [ "$SYSTEM" = "SunOS" ]; then
-    # check for WorkShop C, expected output is "cc: blah-blah C x.x"
-    CCVER=`(cc -V 2>&1) 2>/dev/null | \
-***************
-*** 347,352 ****
---- 352,358 ----
-      CC=sc3
-    fi
-  fi
-+ fi
-  
-  if [ "${SYSTEM}-${MACHINE}" = "Linux-alpha" ]; then
-    # check for Compaq C, expected output is "blah-blah C Vx.x"
-***************
-*** 454,462 ****
-    alpha*-*-freebsd*) OUT="FreeBSD-alpha" ;;
-    *-freebsd[3-9]*) OUT="FreeBSD-elf" ;;
-    *-freebsd[1-2]*) OUT="FreeBSD" ;;
-!   *86*-*-netbsd) OUT="NetBSD-x86" ;;
-!   sun3*-*-netbsd) OUT="NetBSD-m68" ;;
-!   *-*-netbsd) OUT="NetBSD-sparc" ;;
-    *86*-*-openbsd) OUT="OpenBSD-x86" ;;
-    alpha*-*-openbsd) OUT="OpenBSD-alpha" ;;
-    pmax*-*-openbsd) OUT="OpenBSD-mips" ;;
---- 460,468 ----
-    alpha*-*-freebsd*) OUT="FreeBSD-alpha" ;;
-    *-freebsd[3-9]*) OUT="FreeBSD-elf" ;;
-    *-freebsd[1-2]*) OUT="FreeBSD" ;;
-!   *86elf*-*-netbsd) OUT="NetBSD-i386elf" ;;
-!   *86-*-netbsd) OUT="NetBSD-i386" ;;
-!   *-netbsd) OUT="NetBSD-`sysctl -n hw.machine_arch`" ;;
-    *86*-*-openbsd) OUT="OpenBSD-x86" ;;
-    alpha*-*-openbsd) OUT="OpenBSD-alpha" ;;
-    pmax*-*-openbsd) OUT="OpenBSD-mips" ;;
+$NetBSD: patch-aa,v 1.7 2001/05/11 22:14:10 tron Exp $
+
+--- config.orig	Thu Sep 21 11:23:14 2000
++++ config	Sat May 12 00:03:27 2001
+@@ -167,10 +167,14 @@
+         echo "${MACH}-${ARCH}-freebsd${VERS}"; exit 0
+         ;;
+ 
+-    NetBSD:*:*:*386*)
+-        echo "`/usr/sbin/sysctl -n hw.model | sed 's,.*\(.\)86-class.*,i\186,'`-whatever-netbsd"; exit 0
++    NetBSD:*:*:i386)
++	if echo __ELF__ | cc -E - | grep -q __ELF__; then
++	    echo "i386-whatever-netbsd"; exit 0
++	else
++	    echo "i386elf-whatever-netbsd"; exit 0
++	fi
+ 	;;
+-
++  
+     NetBSD:*)
+ 	echo "${MACHINE}-whatever-netbsd"; exit 0
+ 	;;
+@@ -330,6 +334,7 @@
+   CC=cc
+ fi
+ 
++if false; then
+ if [ "$SYSTEM" = "SunOS" ]; then
+   # check for WorkShop C, expected output is "cc: blah-blah C x.x"
+   CCVER=`(cc -V 2>&1) 2>/dev/null | \
+@@ -347,6 +352,7 @@
+     CC=sc3
+   fi
+ fi
++fi
+ 
+ if [ "${SYSTEM}-${MACHINE}" = "Linux-alpha" ]; then
+   # check for Compaq C, expected output is "blah-blah C Vx.x"
+@@ -454,9 +460,9 @@
+   alpha*-*-freebsd*) OUT="FreeBSD-alpha" ;;
+   *-freebsd[3-9]*) OUT="FreeBSD-elf" ;;
+   *-freebsd[1-2]*) OUT="FreeBSD" ;;
+-  *86*-*-netbsd) OUT="NetBSD-x86" ;;
+-  sun3*-*-netbsd) OUT="NetBSD-m68" ;;
+-  *-*-netbsd) OUT="NetBSD-sparc" ;;
++  *86elf*-*-netbsd) OUT="NetBSD-i386elf" ;;
++  *86-*-netbsd) OUT="NetBSD-i386" ;;
++  *-netbsd) OUT="NetBSD-`sysctl -n hw.machine_arch`" ;;
+   *86*-*-openbsd) OUT="OpenBSD-x86" ;;
+   alpha*-*-openbsd) OUT="OpenBSD-alpha" ;;
+   pmax*-*-openbsd) OUT="OpenBSD-mips" ;;
