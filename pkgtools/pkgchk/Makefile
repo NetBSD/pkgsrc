@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2002/06/09 14:43:39 tron Exp $
+# $NetBSD: Makefile,v 1.31 2002/06/10 15:29:38 tron Exp $
 
 DISTNAME=	pkgchk-1.29
 CATEGORIES=	pkgtools
@@ -12,6 +12,10 @@ COMMENT=	Check installed package versions against pkgsrc
 EXTRACT_ONLY=	# empty
 NO_CHECKSUM=	YES
 WRKSRC=		${WRKDIR}
+
+.include "../../mk/bsd.prefs.mk"
+
+MAKECONF?=	/etc/mk.conf
 
 do-build:
 	${SED} -e 's#@MAKE@#${MAKE}#g' \
