@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.3 2000/10/15 17:19:51 frueauf Exp $
+@comment $NetBSD: PLIST,v 1.4 2000/11/12 04:32:03 frueauf Exp $
 bin/nasl
 bin/nasl-config
 include/nessus/nasl.h
 lib/libnasl.a
 lib/libnasl.la
-lib/libnasl.so.1.5
+lib/libnasl.so.1.6
 man/man1/nasl-config.1
 man/man1/nasl.1
