@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/02/17 11:04:09 salo Exp $
+# $NetBSD: Makefile,v 1.9 2005/03/23 16:58:39 salo Exp $
 #
 
 .include "../../multimedia/mkvtoolnix/Makefile.dist"
@@ -18,18 +18,26 @@ USE_X11=	yes
 
 BUILD_TARGET=	src/mmg/mmg
 
-post-patch:
-	@${SED} 's,@PREFIX@,${PREFIX},' ${WRKSRC}/doc/mmg.1 > \
-		${WRKDIR}/mmg.1
+SUBST_CLASSES=		man help
+
+SUBST_STAGE.man=	pre-configure
+SUBST_FILES.man=	doc/mmg.1
+SUBST_SED.man=		's,(doc/,(${PREFIX}/share/doc/html/mmg/,g'
+SUBST_MESSAGE.man=	"Fixing paths in manual page."
+
+SUBST_STAGE.help=	pre-configure
+SUBST_FILES.help=	src/mmg/mmg.cpp
+SUBST_SED.help=		's,@HELPDIR@,${PREFIX}/share/doc/html/mmg,'
+SUBST_MESSAGE.help=	"Fixing path to help data."
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/mmg/mmg ${PREFIX}/bin/
-	${INSTALL_MAN} ${WRKDIR}/mmg.1 ${PREFIX}/man/man1/
+	${INSTALL_MAN} ${WRKSRC}/doc/mmg.1 ${PREFIX}/man/man1/
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/mmg/images/
-	${INSTALL_DATA} ${WRKSRC}/doc/images/*.png \
+	${INSTALL_DATA} ${WRKSRC}/doc/images/*.gif \
 		${PREFIX}/share/doc/html/mmg/images/
-	${INSTALL_DATA} ${WRKSRC}/doc/mkvmerge-gui.html \
-		${PREFIX}/share/doc/html/mmg/guide.html
+	${INSTALL_DATA} ${WRKSRC}/doc/mkvmerge-gui.* \
+		${PREFIX}/share/doc/html/mmg/
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/libebml/buildlink3.mk"
