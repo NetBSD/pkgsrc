@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.227 2002/10/11 09:30:38 rh Exp $
+$NetBSD: CHANGES,v 1.228 2002/10/12 03:16:15 atatat Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3179,3 +3179,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated fvwm2 to 2.4.12 [martti 2002-10-11]
 	Updated scrollkeeper to 0.2nb2 [rh 2002-10-11]
 	Updated evolution to 1.0.8nb4 [rh 2002-10-11]
+	Updated lsof to 4.65 [atatat 2002-10-11]
