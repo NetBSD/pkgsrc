@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5437 2004/04/04 17:02:42 recht Exp $
+$NetBSD: CHANGES,v 1.5438 2004/04/04 19:27:37 recht Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1772,3 +1772,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated cairo to 0.1.18 [recht 2004-04-04]
 	Updated icu to 2.8 [recht 2004-04-04]
 	Added winelib-0.1 [recht 2004-04-04]
+	Updated mono to 0.31nb1 [recht 2004-04-04]
