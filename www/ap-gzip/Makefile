@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/02/17 17:52:02 grant Exp $
+# $NetBSD: Makefile,v 1.6 2003/02/17 21:01:07 grant Exp $
 #
 
 DISTNAME=	mod_gzip-1.3.26.1a
@@ -14,7 +14,6 @@ COMMENT=	On-the-fly GZIP compression for Apache 1.3.x
 USE_BUILDLINK2=	YES
 
 APACHE_MODULE_NAME=	mod_gzip.so
-APACHE_MODULE_SRC=	*.c
 
 post-install:
 	${INSTALL_DATA_DIR} \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/02/17 17:50:12 grant Exp $
+# $NetBSD: Makefile,v 1.7 2003/02/17 21:01:08 grant Exp $
 #
 
 DISTNAME=	mod_layout-3.2
@@ -14,7 +14,6 @@ COMMENT=	Apache module to wrap static or dynamic content
 USE_BUILDLINK2=	YES
 
 APACHE_MODULE_NAME=	mod_layout.so
-APACHE_MODULE_SRC=	*.c
 
 LAYOUT_DIR=	${PREFIX}/share/httpd/htdocs/manual/mod/mod_layout
 
