@@ -1,4 +1,4 @@
-# $NetBSD: defs.SunOS.mk,v 1.52 2003/01/15 20:55:39 jlam Exp $
+# $NetBSD: defs.SunOS.mk,v 1.53 2003/02/26 03:03:47 grant Exp $
 #
 # Variable definitions for the SunOS/Solaris operating system.
 
@@ -28,17 +28,16 @@ GTAR?=		${LOCALBASE}/bin/gtar
 .else
 GTAR?=		${ZOULARISBASE}/bin/tar
 .endif
-.if exists(/usr/bin/gzip)
-GUNZIP_CMD?=	/usr/bin/gunzip -f
-GZCAT?=		/usr/bin/gzcat
-GZIP?=		-9
-GZIP_CMD?=	/usr/bin/gzip -nf ${GZIP}
-.endif
 .if exists(${LOCALBASE}/bin/gzip)
 GUNZIP_CMD?=	${LOCALBASE}/bin/gunzip -f
 GZCAT?=		${LOCALBASE}/bin/zcat
 GZIP?=		-9
 GZIP_CMD?=	${LOCALBASE}/bin/gzip -nf ${GZIP}
+.elif exists(/usr/bin/gzip)
+GUNZIP_CMD?=	/usr/bin/gunzip -f
+GZCAT?=		/usr/bin/gzcat
+GZIP?=		-9
+GZIP_CMD?=	/usr/bin/gzip -nf ${GZIP}
 .endif
 HEAD?=		/usr/bin/head
 ID?=		/usr/xpg4/bin/id
@@ -60,7 +59,11 @@ PATCH?=		${LOCALBASE}/bin/gpatch -b
 .else
 PATCH?=		${LOCALBASE}/bin/patch -b
 .endif
+.if exists(${LOCALBASE}/bin/pax)
+PAX?=		${LOCALBASE}/bin/pax
+.else
 PAX?=		/bin/pax
+.endif
 PERL5?=		${LOCALBASE}/bin/perl
 PKGLOCALEDIR?=	lib
 PS?=		/bin/ps
