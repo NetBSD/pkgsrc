@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.333 2004/04/07 22:57:16 dmcmahill Exp $
+# $NetBSD: Packages.txt,v 1.334 2004/04/08 09:38:39 xtraeme Exp $
 ###########################################################################
 
 			==========================
@@ -2834,6 +2834,17 @@ This tracks intltool's build-time dependencies and uses the latest available
 version; this way, the package benefits of any bug fixes that may have appeared
 since it was released.
 
+ 10.43 How can I use XFree86 from pkgsrc?
+ =======================================================
+
+If you want to use XFree86 from pkgsrc instead of your system's own
+X11 (/usr/X11R6, /usr/openwin, ...), you will have to add the following
+lines into /etc/mk.conf:
+
+    X11_TYPE=XFree86
+    X11BASE=/usr/pkg/X11R6
+
+`LOCALBASE' by default is `/usr/pkg'.
 
  11 Submitting & Committing
  ==========================
