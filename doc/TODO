@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.296 2003/02/21 13:14:10 grant Exp $
+$NetBSD: TODO,v 1.297 2003/02/21 13:32:43 wiz Exp $
 
 Suggested new packages
 ======================
@@ -176,7 +176,7 @@ Suggested package updates
 	o libole2-2.2.8
 	o libmcrypt-2.5.5
 	o librsvg-2.2.2.1
-	o libslang-1.4.7
+	o libslang-1.4.8
 	o libsndfile-1.0.4
 	o libxml-2.5.3 [problems with kde2(?)|pkg/20302]
 	o libxslt-1.0.26 [problems with kde2(?)|pkg/20300]
@@ -244,7 +244,6 @@ Suggested package updates
 	o shorten-3.5.1
 	o siag-3.5.5
 	o sketch-0.6.15
-	o slang-1.4.8
 	o smalltalk-2.0.11
 	o smarteiffel-1.0 [replacing smalleiffel]
 	o snes9x-1.39a
