@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2003/09/09 14:50:52 recht Exp $
+$NetBSD: distinfo,v 1.6 2004/12/27 13:03:04 darcy Exp $
 
-SHA1 (egenix-mx-base-2.0.5.tar.gz) = a13d8db221a40271f6c27f87318cd5c1b4cff5cc
-Size (egenix-mx-base-2.0.5.tar.gz) = 585267 bytes
+SHA1 (egenix-mx-base-2.0.6.tar.gz) = 7f964408e3bd907c1a39b0f8d8d00d2367d97841
+Size (egenix-mx-base-2.0.6.tar.gz) = 586854 bytes
