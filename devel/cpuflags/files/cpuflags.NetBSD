@@ -1,7 +1,11 @@
 #!/bin/sh
-# $NetBSD: cpuflags.NetBSD,v 1.7 2001/07/02 22:14:56 abs Exp $
+# $NetBSD: cpuflags.NetBSD,v 1.8 2001/08/10 09:03:07 abs Exp $
 
-hw_model=`/sbin/sysctl -n hw.model`
+if [ -x /sbin/sysctl ] ;then
+    hw_model=`/sbin/sysctl -n hw.model`
+else						# NetBSD 1.3
+    hw_model=`/usr/sbin/sysctl -n hw.model`
+fi
 
 case $hw_model in
     # i386
