@@ -1,0 +1,7 @@
+#!/bin/sh
+#
+# $NetBSD: realplay.sh,v 1.1.1.1 2000/02/17 22:44:19 jlam Exp $
+#
+REALPLAYER_HOME=@@REALPLAYER_HOME@@ ; export REALPLAYER_HOME
+LD_LIBRARY_PATH=${REALPLAYER_HOME}:${LD_LIBRARY_PATH} ; export LD_LIBRARY_PATH
+exec ${REALPLAYER_HOME}/realplay "$@"
