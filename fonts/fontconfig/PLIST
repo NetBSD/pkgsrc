@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/08/31 19:19:12 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/04/27 15:09:10 adam Exp $
 bin/fc-cache
 bin/fc-list
 include/fontconfig/fcfreetype.h
@@ -10,6 +10,8 @@ lib/libfontconfig.so
 lib/libfontconfig.so.1
 lib/libfontconfig.so.1.4
 lib/pkgconfig/fontconfig.pc
+man/man1/fc-cache.1
+man/man1/fc-list.1
 man/man3/FcAtomicCreate.3
 man/man3/FcAtomicDeleteNew.3
 man/man3/FcAtomicDestroy.3
