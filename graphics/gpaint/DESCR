@@ -1,0 +1,15 @@
+GNU Paint is a simple, easy-to-use paint program for GNOME,
+the GNU Desktop. Gpaint is part of the GNU Project. Written by
+Andy Tai, Gpaint is licensed under the GNU GPL, version 2 or later.
+
+Curent Features:
+
+* Drawing tools--ovals, freehand, polygon, text, with fill or shallow
+  for polygons and closed freehand.
+* Cut and paste by selecting irregular regions or polygons.
+* Print support using gnome-print (still flaky, will be improved upon
+  next release).
+* Modern, ease-to-use user interface with tool and color palettes.
+* Editing multiple image at the same time without runnng multiple
+  instance of the image editor.
+* All image processing features present in xpaint.
