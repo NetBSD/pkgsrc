@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.1 2000/04/12 06:58:09 rh Exp $
+
+--- guile-gtk.h.orig	Thu Sep 23 00:20:27 1999
++++ guile-gtk.h	Wed Apr 12 08:54:06 2000
+@@ -232,9 +232,6 @@
+ GtkWidget* gtk_radio_menu_item_new_from_widget (GtkRadioMenuItem *group);
+ GtkWidget* gtk_pixmap_new_interp (char *file, GtkWidget *intended_parent);
+ 
+-GdkColor*    gdk_color_copy     (GdkColor *);
+-void         gdk_color_free     (GdkColor *);
+-
+ GdkColor *gdk_color_parse_interp (char *spec);
+ GdkColor *gtk_style_get_white_interp (GtkStyle *style);
+ 
