@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/05/19 12:02:20 bad Exp $
+
+--- Makefile.orig	Wed May 19 21:45:11 1999
++++ Makefile	Wed May 19 21:50:17 1999
+@@ -3,4 +3,7 @@
+ PROG=	bozohttpd
+ MAN=	bozohttpd.8
+ 
++BINDIR=$(PREFIX)/libexec
++MANDIR=$(PREFIX)/man
++
+ .include <bsd.prog.mk>
