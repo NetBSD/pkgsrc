@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2000/01/23 15:13:49 itojun Exp $
+# $NetBSD: Makefile,v 1.18 2000/01/24 04:18:35 itojun Exp $
 # FreeBSD Id: Makefile,v 1.18 1998/04/06 20:50:31 andreas Exp
 #
 
@@ -9,11 +9,13 @@ MASTER_SITES= 	ftp://ucd-snmp.ucdavis.edu/ \
 		ftp://ftp.win.or.jp/pub/network/snmp/ucd-snmp/
 
 PATCH_SITES=	ftp://ftp.kame.net/pub/kame/misc/
-PATCHFILES=	ucd-snmp-4.0.1-v6-20000124a.diff.gz
+PATCHFILES=	ucd-snmp-4.0.1-v6-20000124b.diff.gz
 PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://ucd-snmp.ucdavis.edu/
+
+BUILD_DEPENDS+=	autoreconf:../../devel/autoconf
 
 BUILD_DEFS+=	USE_INET6
 .include "../../mk/bsd.prefs.mk"
@@ -36,6 +38,9 @@ CONFIGURE_ARGS+=--with-mibdirs="${PREFIX}/share/snmp/mibs:${PREFIX}/lib/tnm2.1.8
 # do not supply them:
 post-extract:
 	@${ECHO} 'int allow_severity, deny_severity;' >${WRKSRC}/snmplib/libwrap.c
+
+pre-configure:
+	@(cd ${WRKSRC} && autoreconf)
 
 post-install:
 	@${MKDIR} ${PREFIX}/share/examples/ucd-snmp
