@@ -1,0 +1,17 @@
+lib/libuu.a
+lib/libuu.so.1.0
+include/uu.h
+share/doc/uulib/Makefile
+share/doc/uulib/README
+share/doc/uulib/binhex.fig
+share/doc/uulib/library.ltx
+share/doc/uulib/structure.fig
+share/doc/uulib/td-v1.c
+share/doc/uulib/td-v2.c
+share/doc/uulib/td-v3.c
+share/doc/uulib/test.txt
+share/doc/uulib/porting.notes
+share/doc/uulib/HISTORY
+man/man3/uulib.3.gz
+@exec /sbin/ldconfig -m %D/lib
+@dirrm share/doc/uulib
