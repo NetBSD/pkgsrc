@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4388 2004/01/08 12:59:26 hubertf Exp $
+$NetBSD: CHANGES,v 1.4389 2004/01/08 14:07:14 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -113,3 +113,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added kmplayer-0.8.2rc3 [jmmv 2004-01-08]
 	Updated gd to 2.0.19 [adam 2004-01-08]
 	Updated hf6to4 to 1.2 [hubertf 2004-01-08]
+	Updated pkg_comp to 1.14 [jmmv 2004-01-08]
