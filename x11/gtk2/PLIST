@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2003/08/27 10:58:17 wiz Exp $
+@comment $NetBSD: PLIST,v 1.20 2003/09/08 15:07:22 adam Exp $
 bin/gdk-pixbuf-csource
 bin/gdk-pixbuf-query-loaders
 bin/gtk-demo
@@ -264,22 +264,22 @@ lib/libgdk-x11-2.0.a
 lib/libgdk-x11-2.0.la
 lib/libgdk-x11-2.0.so
 lib/libgdk-x11-2.0.so.200
-lib/libgdk-x11-2.0.so.200.3
+lib/libgdk-x11-2.0.so.200.4
 lib/libgdk_pixbuf-2.0.a
 lib/libgdk_pixbuf-2.0.la
 lib/libgdk_pixbuf-2.0.so
 lib/libgdk_pixbuf-2.0.so.200
-lib/libgdk_pixbuf-2.0.so.200.3
+lib/libgdk_pixbuf-2.0.so.200.4
 lib/libgdk_pixbuf_xlib-2.0.a
 lib/libgdk_pixbuf_xlib-2.0.la
 lib/libgdk_pixbuf_xlib-2.0.so
 lib/libgdk_pixbuf_xlib-2.0.so.200
-lib/libgdk_pixbuf_xlib-2.0.so.200.3
+lib/libgdk_pixbuf_xlib-2.0.so.200.4
 lib/libgtk-x11-2.0.a
 lib/libgtk-x11-2.0.la
 lib/libgtk-x11-2.0.so
 lib/libgtk-x11-2.0.so.200
-lib/libgtk-x11-2.0.so.200.3
+lib/libgtk-x11-2.0.so.200.4
 lib/pkgconfig/gdk-2.0.pc
 lib/pkgconfig/gdk-pixbuf-2.0.pc
 lib/pkgconfig/gdk-pixbuf-xlib-2.0.pc
@@ -759,6 +759,7 @@ ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/gtk20.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/gtk20.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/gtk20.mo
 ${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/gtk20.mo
+${PKGLOCALEDIR}/locale/sq/LC_MESSAGES/gtk20.mo
 ${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/gtk20.mo
 ${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/gtk20.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gtk20.mo
