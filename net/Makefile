@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.172 2000/12/15 00:41:00 wiz Exp $
+# $NetBSD: Makefile,v 1.173 2000/12/15 18:42:31 itojun Exp $
 #
 
     SUBDIR += airportbasestationconfig
@@ -10,6 +10,7 @@
     SUBDIR += bind4
     SUBDIR += bind8
     SUBDIR += bind9
+    SUBDIR += bind9-current
     SUBDIR += bing
     SUBDIR += bitchx
     SUBDIR += bounce
