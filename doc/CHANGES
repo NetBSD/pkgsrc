@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.867 2002/12/22 15:01:49 agc Exp $
+$NetBSD: CHANGES,v 1.868 2002/12/22 16:07:31 cjep Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -4052,3 +4052,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated gpgme to 0.3.14 [chris 2002-12-22]
 	Updated sylpheed to 0.8.7 [chris 2002-12-22]
 	Updated tkcvs to 7.1.2 [agc 2002-12-22]
+	Updated gap to 4.3nb2 [cjep 2002-12-22]
