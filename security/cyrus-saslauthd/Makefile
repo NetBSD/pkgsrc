@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2004/08/01 19:43:45 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2004/08/04 20:08:38 jlam Exp $
 
-DISTNAME=	cyrus-sasl-2.1.18
+DISTNAME=	cyrus-sasl-2.1.19
 PKGNAME=	${DISTNAME:S/sasl/saslauthd/}
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/ \
