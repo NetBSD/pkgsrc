@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4106 2003/12/14 20:34:48 jmmv Exp $
+$NetBSD: CHANGES,v 1.4107 2003/12/14 20:41:12 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5154,3 +5154,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated libgnomedb to 1.0.0nb3 [jmmv 2003-12-14]
 	Updated linc to 1.1.1 [jmmv 2003-12-14]
 	Updated metacity to 2.6.3 [jmmv 2003-12-14]
+	Updated gtksourceview to 0.7.0nb4 [jmmv 2003-12-14]
