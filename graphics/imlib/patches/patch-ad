@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.5 2001/08/13 11:14:31 rh Exp $
+$NetBSD: patch-ad,v 1.6 2001/08/23 04:47:54 jlam Exp $
 
 --- configure.in.orig	Wed Aug  1 00:12:24 2001
 +++ configure.in
@@ -51,7 +51,7 @@ $NetBSD: patch-ad,v 1.5 2001/08/13 11:14:31 rh Exp $
 -    TIFFLIBS="-ltiff"
 -    SUPPORT_LIBS="$SUPPORT_LIBS -ltiff"; AC_DEFINE(HAVE_LIBTIFF),
 +    TIFFLIBS="-ltiff -ljpeg -lz"
-+    SUPPORT_LIBS="$SUPPORT_LIBS -ltiff -jpeg -lz"; AC_DEFINE(HAVE_LIBTIFF),
++    SUPPORT_LIBS="$SUPPORT_LIBS -ltiff -ljpeg -lz"; AC_DEFINE(HAVE_LIBTIFF),
      AC_MSG_WARN(*** Native TIFF support will not be built (TIFF header files not found) ***)),
    AC_CHECK_LIB(tiff, TIFFWriteScanline,
      AC_CHECK_HEADER(tiffio.h,
