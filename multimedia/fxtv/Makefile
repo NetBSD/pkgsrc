@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2004/12/28 23:18:16 reed Exp $
+# $NetBSD: Makefile,v 1.7 2005/02/23 01:11:47 wiz Exp $
 
 DISTNAME=	fxtv-1.03
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	multimedia
 MASTER_SITES=	${HOMEPAGE}
 EXTRACT_SUFX=	.tgz
@@ -9,9 +9,6 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	tron@NetBSD.org
 HOMEPAGE=	http://people.freebsd.org/~rhh/fxtv/
 COMMENT=	TV display application for Brooktree 848 compatible TV cards
-
-#ONLY_FOR_PLATFORM=	NetBSD-1.[5-9]*-arm NetBSD-1.[5-9]*-arm32	\
-#			NetBSD-1.[5-9]*-atari NetBSD-1.[5-9]*-i386
 
 USE_BUILDLINK3=	YES
 USE_X11BASE=	YES
@@ -21,13 +18,10 @@ XAW_TYPE?=	3d
 SUBST_CLASSES+=		ossaudio
 SUBST_MESSAGE.ossaudio=	"Fixing path to audio device."
 SUBST_STAGE.ossaudio=	pre-configure
-SUBST_FILES.ossaudio=	app_rsrc.h
-SUBST_FILES.ossaudio+=	Fxtv
+SUBST_FILES.ossaudio=	app_rsrc.h Fxtv README
 SUBST_SED.ossaudio=	-e 's|/dev/dsp|${DEVOSSAUDIO}|g'
 
 .include "../../mk/bsd.prefs.mk"
-
-MAKE_ENV+=	X11PREFIX=${X11PREFIX}
 
 # The purpose of this check is to make sure that there is a "Xaw3d"
 # compatible widget set installed because normal "Xaw" won't work.
@@ -40,11 +34,6 @@ post-extract:
 	@${RM} -f ${WRKSRC}/videolib/videolib.o
 
 pre-configure:
-	cd ${WRKSRC}; for file in app_rsrc.h Fxtv; do			\
-		${SED}	-e "s,/dev/dsp,${DEVOSSAUDIO},g"		\
-			$${file} > $${file}.fixed;			\
-		${MV} -f $${file}.fixed $${file};			\
-	done
 	if [ -r /usr/include/machine/mouse.h ] ; then \
 		echo '#define HAVE_MOUSE_H 1' > ${WRKSRC}/netbsdconf.h; \
 	else \

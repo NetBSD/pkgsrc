@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.2 2004/09/28 15:26:09 tron Exp $
+$NetBSD: patch-aa,v 1.3 2005/02/23 01:11:47 wiz Exp $
 
 --- Makefile.orig	2001-02-12 23:08:59.000000000 +0100
-+++ Makefile	2004-09-28 17:22:05.000000000 +0200
++++ Makefile	2005-02-23 02:00:43.000000000 +0100
 @@ -4,13 +4,10 @@
  
  HAVE_XFREE86 = YES
@@ -46,6 +46,15 @@ $NetBSD: patch-aa,v 1.2 2004/09/28 15:26:09 tron Exp $
  endif
  
  #
+@@ -62,7 +50,7 @@
+ ifneq ($(DEBUG),NO)
+   override CFLAGS          = -DDEBUG -g
+ else
+-  override CFLAGS          = -DNDEBUG -O2
++  override CFLAGS          = -DNDEBUG
+ endif
+ C_WARN_FLAG                = -Wall
+ override CFLAGS           += $(C_WARN_FLAG) $(INC) $(CF_VERS)
 @@ -72,6 +60,15 @@
  
  override CFLAGS           += $(C_WARN_FLAG) -DX11BASE=\"$(X11BASEINST)\"
