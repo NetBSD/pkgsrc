@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.in,v 1.24 2004/08/10 18:47:55 jlam Exp $
+# $NetBSD: Makefile.in,v 1.25 2004/08/16 17:24:56 jlam Exp $
 #
 
 srcdir=		@srcdir@
@@ -34,6 +34,7 @@ INCS=		nbcompat.h \
 		nbcompat/poll.h \
 		nbcompat/pwd.h \
 		nbcompat/queue.h \
+		nbcompat/regex.h \
 		nbcompat/rmd160.h \
 		nbcompat/sha1.h \
 		nbcompat/stat.h \

@@ -1,4 +1,4 @@
-/*	$NetBSD: err.h,v 1.2 2003/09/15 08:29:51 grant Exp $	*/
+/*	$NetBSD: err.h,v 1.3 2004/08/16 17:24:57 jlam Exp $	*/
 
 /*
  * Copyright (c) 1989, 1993
@@ -35,10 +35,10 @@
  *	@(#)fts.h	8.3 (Berkeley) 8/14/94
  */
 
-#ifndef	_ERR_H_
-#define	_ERR_H_
+#ifndef	_NBCOMPAT_ERR_H_
+#define	_NBCOMPAT_ERR_H_
 
-#ifndef HAVE_ERR
+#if !HAVE_ERR
 void    err(int, const char *, ...);
 void    errx(int, const char *, ...);
 void	verr(int, const char *, va_list);
@@ -49,4 +49,4 @@ void	vwarn(const char *, va_list);
 void	vwarnx(const char *, va_list);
 #endif
 
-#endif /* !_ERR_H_ */
+#endif /* !_NBCOMPAT_ERR_H_ */
