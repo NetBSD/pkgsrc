@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2004/10/18 14:23:29 ben Exp $
+# $NetBSD: Makefile,v 1.29 2004/10/18 18:25:49 ben Exp $
 
 DISTNAME=	flac-1.1.1
 PKGREVISION=	1
@@ -25,7 +25,7 @@ CONFIGURE_ENV+=		ac_cv_path_XMMS_CONFIG="no"
 BUILD_DEPENDS+=		nasm>=0.98:../../devel/nasm
 .endif
 
-.if !empty(MACHINE_PLATFORM:M*-*-ppc)
+.if !empty(MACHINE_PLATFORM:M*-*-powerpc)
 .if ${OPSYS} != "Darwin"
 CONFIGURE_ARGS+=	--disable-asm-optimizations
 CONFIGURE_ARGS+=	--disable-altivec
