@@ -1,4 +1,4 @@
-# $NetBSD: IRIX.mk,v 1.6 2004/11/16 18:04:00 tv Exp $
+# $NetBSD: IRIX.mk,v 1.6.2.1 2004/12/31 20:25:30 tv Exp $
 #
 # Variable definitions for the IRIX operating system.
 
@@ -96,7 +96,6 @@ CPP_PRECOMP_FLAGS?=	# unset
 DEF_UMASK?=		022
 DEFAULT_SERIAL_DEVICE?=	/dev/null
 EXPORT_SYMBOLS_LDFLAGS?=	# Don't add symbols to the dynamic symbol table
-GROUPADD?=		${FALSE}
 MOTIF_TYPE_DEFAULT?=	dt		# default 2.0 compatible libs type
 NOLOGIN?=		${FALSE}
 ROOT_CMD?=		${SU} - root -c
@@ -106,7 +105,6 @@ SERIAL_DEVICES?=	/dev/null
 ULIMIT_CMD_datasize?=	ulimit -d `ulimit -H -d`
 ULIMIT_CMD_stacksize?=	ulimit -s `ulimit -H -s`
 ULIMIT_CMD_memorysize?=	ulimit -v `ulimit -H -v`
-USERADD?=		${FALSE}
 
 # imake installs manpages in weird places
 IMAKE_MAN_SOURCE_PATH=	catman/u_man/cat

@@ -1,4 +1,4 @@
-# $NetBSD: tools.mk,v 1.46.2.2 2004/12/20 20:46:00 tv Exp $
+# $NetBSD: tools.mk,v 1.46.2.3 2004/12/31 20:25:30 tv Exp $
 #
 # This Makefile creates a ${TOOLS_DIR} directory and populates the bin
 # subdir with tools that hide the ones outside of ${TOOLS_DIR}.
@@ -385,11 +385,29 @@ ${TOOLS_DIR}/bin/make:
 	fi
 .endif
 
+# Create a symlink from ${TOOLS_DIR}/bin/perl to ${PERL5} when USE_PERL5
+# is defined.
+.if defined(USE_PERL5)
+override-tools: ${TOOLS_DIR}/bin/perl
+.  if !target(${TOOLS_DIR}/bin/perl)
+${TOOLS_DIR}/bin/perl:
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	src="${PERL5}";							\
+	if [ -x $$src -a ! -f ${.TARGET} ]; then			\
+		${MKDIR} ${.TARGET:H};					\
+		${LN} -sf $$src ${.TARGET};				\
+	fi
+.  endif
+.endif
+
 # Always create a ${TOOLS_DIR}/bin/rpcgen to wrap the real rpcgen.
 # The wrapper will correctly set the CPP environment variable to a
 # stat((2)able path to a C preprocessor, then rely on the PATH to
 # find and invoke the real rpcgen.
 #
+RPCGEN?=		rpcgen
+RPCGEN_ARGS.NetBSD=	-b
+RPCGEN_ARGS?=		${RPCGEN_ARGS.${OPSYS}}
 override-tools: ${TOOLS_DIR}/bin/rpcgen
 .if !target(${TOOLS_DIR}/bin/rpcgen)
 ${TOOLS_DIR}/bin/rpcgen:
@@ -400,8 +418,8 @@ ${TOOLS_DIR}/bin/rpcgen:
 	  ${ECHO} 'CPP="${WRAPPER_BINDIR}/cpp"; export CPP';		\
 	  PATH=`${ECHO} "${PATH}" | ${SED} -e "s,.*${.TARGET:H}:,,"`;	\
 	  ${ECHO} "PATH=\"$$PATH\"; export PATH";			\
-	  ${ECHO} '${ECHO} "<.> rpcgen $$*" >> $$wrapperlog';		\
-	  ${ECHO} 'rpcgen "$$@"';					\
+	  ${ECHO} '${ECHO} "<.> ${RPCGEN} ${RPCGEN_ARGS} $$*" >> $$wrapperlog'; \
+	  ${ECHO} '${RPCGEN} ${RPCGEN_ARGS} "$$@"';			\
 	) > ${.TARGET}
 	${_PKG_SILENT}${_PKG_DEBUG}${CHMOD} +x ${.TARGET}
 .endif
