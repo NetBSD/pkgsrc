@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 10:07:17 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/18 16:11:03 agc Exp $
 
-MD5 (python/BeOpen-Python-2.0.tar.gz) = 8c4a64891d3dc6422df2514c603f0c98
+SHA1 (python/BeOpen-Python-2.0.tar.gz) = 16ca42c5be1ddf5dc08d9b59b97f728f330e1fdc
+Size (python/BeOpen-Python-2.0.tar.gz) = 4066781 bytes

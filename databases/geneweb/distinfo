@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 10:06:57 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/18 16:10:57 agc Exp $
 
-MD5 (geneweb-3.07.tar.gz) = e2b8d67cba69f5714664896a521224b4
+SHA1 (geneweb-3.07.tar.gz) = 971f8398d293fdb903ebb691095c070ea58cdc9d
+Size (geneweb-3.07.tar.gz) = 695510 bytes
 SHA1 (patch-aa) = 3d002a3c8238490dd85cf0db37b5da9ac5d4a3a9
