@@ -1,0 +1,18 @@
+$NetBSD: patch-ac,v 1.1.1.1 2003/08/23 22:08:03 itojun Exp $
+
+--- modules/mysql/Makefile-	2003-08-24 06:40:29.000000000 +0900
++++ modules/mysql/Makefile	2003-08-24 06:41:14.000000000 +0900
+@@ -5,11 +5,9 @@
+ auto_gen=
+ NAME=mysql.so
+ # mysql.h locations (freebsd,openbsd  solaris)
+-DEFS +=-I/usr/local/include -I/usr/local/mysql/include \
++DEFS +=-I${BUILDLINK_PREFIX.mysql-client}/include
+ # libmysqlclient locations on RH/Suse, Solaris /OpenBSD, FreeBSD
+ # (Debian does the right thing and puts it in /usr/lib)
+-LIBS=-L/usr/lib/mysql -L /usr/local/lib -L/usr/local/lib/mysql \
+-		-L/usr/local/mysql/lib/mysql/ \
+-		-lmysqlclient -lz 
++LIBS=-L${BUILDLINK_PREFIX.mysql-client}/lib/mysql -lmysqlclient -lz 
+ 
+ include ../../Makefile.modules
