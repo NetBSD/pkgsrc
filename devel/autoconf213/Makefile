@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/12/31 12:41:02 minskim Exp $
+# $NetBSD: Makefile,v 1.10 2004/12/31 13:17:31 minskim Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/06/13 20:00:47 max Exp
 #
 
@@ -21,7 +21,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=		YES
 GNU_CONFIGURE=		YES
-CONFIGURE_ENV+=		AWK="${AWK}" PERL=${PERL5:Q}
+CONFIGURE_ENV+=		AWK="${AWK}"
 CONFIGURE_ARGS+=	--program-transform-name='s/$$/-2.13/'
 M4=			${LOCALBASE}/bin/gm4
 
