@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/03/23 19:16:33 wiz Exp $
+bin/gopchop
+bin/gtkspu
+bin/mpegcat
+man/man1/gopchop.1
+man/man1/gtkspu.1
+man/man1/mpegcat.1
+share/applications/gopchop.desktop
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gopchop.mo
+${PKGLOCALEDIR}/locale/en/LC_MESSAGES/gopchop.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gopchop.mo
+share/pixmaps/gopchop.png
+share/pixmaps/gopchop/about.xpm
+share/pixmaps/gopchop/error.xpm
+@dirrm share/pixmaps/gopchop
