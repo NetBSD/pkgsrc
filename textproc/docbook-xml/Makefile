@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/02/19 21:51:31 minskim Exp $
+# $NetBSD: Makefile,v 1.13 2004/02/25 11:48:15 grant Exp $
 #
 
 DISTNAME=	docbook-xml-4.2
@@ -13,6 +13,7 @@ COMMENT=	XML DTD designed for computer documentation
 
 WRKSRC=		${WRKDIR}
 USE_BUILDLINK3=	YES
+USE_LANGUAGES=	# empty
 NO_BUILD=	YES
 
 INSTDIR=	${DESTDIR}${PREFIX}/share/xml
