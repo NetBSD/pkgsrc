@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.25 2004/03/23 04:41:00 jlam Exp $
+# $NetBSD: Makefile.common,v 1.26 2004/04/19 23:08:55 hubertf Exp $
 
 DISTNAME=		freetype-${FT_VERS}
 FT_VERS=		1.3.1
@@ -24,7 +24,7 @@ LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--with-locale-dir=${PREFIX}/${PKGLOCALEDIR}/locale
 
-DISTINFO_FILE=		${.CURDIR}/../freetype-lib/distinfo
-PATCHDIR=		${.CURDIR}/../freetype-lib/patches
+DISTINFO_FILE=		${.CURDIR}/../../graphics/freetype-lib/distinfo
+PATCHDIR=		${.CURDIR}/../../graphics/freetype-lib/patches
 
 .include "../../devel/gettext-lib/buildlink3.mk"
