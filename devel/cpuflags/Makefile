@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.66 2004/02/20 00:37:46 dan Exp $
+# $NetBSD: Makefile,v 1.67 2004/03/17 00:26:55 abs Exp $
 #
 
-DISTNAME=	cpuflags-0.62
+DISTNAME=	cpuflags-0.63
 CATEGORIES=	sysutils
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -15,12 +15,20 @@ EXTRACT_ONLY=	# empty
 USE_LANGUAGES=	# empty
 NO_CHECKSUM=	yes
 NO_CONFIGURE=	yes
-NO_BUILD=	yes
+
+FILES_SUBST+=	PREFIX="${PREFIX}"
+
+do-build:
+	${MKDIR} ${WRKSRC}
+.for FILE in cpuflags.1 cpuflags.mk
+	${SED} -e 's|@PREFIX@|${PREFIX}|g' ${FILESDIR}/${FILE} \
+					 > ${WRKSRC}/${FILE}
+.endfor
 
 do-install:
 	${INSTALL_SCRIPT} ${FILESDIR}/cpuflags.${OPSYS} ${PREFIX}/bin/cpuflags
-	${INSTALL_DATA} ${FILESDIR}/cpuflags.mk ${PREFIX}/share/mk/cpuflags.mk
 	${INSTALL_DATA} ${FILESDIR}/optimize_gcc.mk ${PREFIX}/share/mk/optimize_gcc.mk
-	${INSTALL_MAN} ${FILESDIR}/cpuflags.1 ${PREFIX}/man/man1/cpuflags.1
+	${INSTALL_DATA} ${WRKSRC}/cpuflags.mk ${PREFIX}/share/mk/cpuflags.mk
+	${INSTALL_MAN} ${WRKSRC}/cpuflags.1 ${PREFIX}/man/man1/cpuflags.1
 
 .include "../../mk/bsd.pkg.mk"
