@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7742 2004/11/06 21:16:15 jdolecek Exp $
+$NetBSD: CHANGES,v 1.7743 2004/11/06 21:45:53 kristerw Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5133,3 +5133,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added p5-UNIVERSAL-moniker 0.08 [he 2004-11-06]
 	Added p5-Class-DBI 0.96 [he 2004-11-06]
 	Updated websvn to 1.61 [jdolecek 2004-11-06]
+	Updated xmame to 0.87 [kristerw 2004-11-06]
