@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2003/08/30 23:01:32 jlam Exp $
+# $NetBSD: Makefile,v 1.48 2003/10/03 15:38:46 salo Exp $
 
 DISTNAME=	tiff-v3.5.7
 PKGNAME=	tiff-3.5.7
@@ -43,8 +43,8 @@ pre-patch:
 	# reference correct relative man page when using .so
 	#
 	${MV} ${WRKSRC}/man/Makefile.in ${WRKSRC}/man/Makefile.in.in
-	${SED}	-e "s,\$${MANDIR}\(.*\)\.\([0-9]\).,\1.\2,g" \
-		-e "s,\$${MANDIR}\(.*\)\.\([0-9]\),\1.\2,g" \
+	${SED}	-e "s,\$${MANDIR}\(.*\)\.\([0-9]\).,${PREFIX}/man/man\2/\1.\2,g" \
+		-e "s,\$${MANDIR}\(.*\)\.\([0-9]\),${PREFIX}/man/man\2/\1.\2,g" \
 		${WRKSRC}/man/Makefile.in.in  > ${WRKSRC}/man/Makefile.in
 
 	# libtoolize build of TIFF tools
