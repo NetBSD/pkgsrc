@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.103 2004/08/14 02:33:51 jlam Exp $
+# $NetBSD: Makefile,v 1.104 2004/10/05 21:08:32 erh Exp $
 
 # Notes to package maintainers:
 #
@@ -28,8 +28,6 @@ NO_PKGTOOLS_REQD_CHECK=	# defined
 NO_BUILDLINK=		# defined
 NO_CHECKSUM=		# defined
 NO_MTREE=		# defined
-NO_PKG_REGISTER=	# defined
-NO_PACKAGE=		Deinstallation is not permitted
 PKG_PRESERVE=		# defined
 
 # These are needed to solve a chicken-and-egg problem where pkgsrc uses
