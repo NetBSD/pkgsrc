@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2320 2003/05/25 14:13:47 taca Exp $
+$NetBSD: CHANGES,v 1.2321 2003/05/25 14:59:59 taca Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2156,3 +2156,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated cadaver to 0.21.0nb2 [epg 2003-05-25]
 	Removed apr-devel [epg 2003-05-25]
 	Updated namazu2 to 2.0.12nb2 [taca 2003-05-25]
+	Updated squid to 2.5.3 [taca 2003-05-25]
