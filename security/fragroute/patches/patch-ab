@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/01/08 17:55:15 agc Exp $
+
+--- pkt.h	2004/01/08 17:49:28	1.1
++++ pkt.h	2004/01/08 17:50:01
+@@ -68,4 +68,8 @@
+ void		 pktq_shuffle(rand_t *r, struct pktq *pktq);
+ struct pkt	*pktq_random(rand_t *r, struct pktq *pktq);
+ 
++#ifndef TAILQ_END
++#define TAILQ_END(head)	NULL
++#endif
++
+ #endif /* PKT_H */

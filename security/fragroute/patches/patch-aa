@@ -1,0 +1,24 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/01/08 17:55:15 agc Exp $
+
+--- mod.c	2004/01/08 17:33:51	1.1
++++ mod.c	2004/01/08 17:41:16
+@@ -151,10 +151,19 @@
+ {
+ 	struct rule *rule;
+ 	
++#ifdef __NetBSD__
++	TAILQ_FOREACH_REVERSE(rule, &rules, head, next) {
++		if (rule->mod->close != NULL)
++			rule->data = rule->mod->close(rule->data);
++		TAILQ_REMOVE(&rules, rule, next);
++		free(rule);
++	}
++#else
+ 	TAILQ_FOREACH_REVERSE(rule, &rules, next, head) {
+ 		if (rule->mod->close != NULL)
+ 			rule->data = rule->mod->close(rule->data);
+ 		TAILQ_REMOVE(&rules, rule, next);
+ 		free(rule);
+ 	}
++#endif
+ }
