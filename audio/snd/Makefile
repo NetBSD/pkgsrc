@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2001/02/25 04:17:37 hubertf Exp $
+# $NetBSD: Makefile,v 1.21 2001/06/30 21:14:10 jlam Exp $
 #
 
 DISTNAME=		snd
@@ -13,16 +13,17 @@ COMMENT=		X based sound editor
 
 NO_SRC_ON_FTP=		Already on MASTER_SITE_LOCAL
 
-USE_MOTIF=		YES
-USE_XPM=		YES
+USE_BUILDLINK_ONLY=	YES
 MAKEFILE=		makefile.netbsd
 ALL_TARGET=		snd
-MAKE_ENV+=		MOTIFBASE=${MOTIFBASE}
+HTMLDIR=		${PREFIX}/share/doc/html/snd
 
 do-install:
 	cd ${WRKSRC} ; ${INSTALL_PROGRAM} snd ${PREFIX}/bin
 	cd ${WRKSRC} ; ${INSTALL_DATA} Snd.ad ${PREFIX}/lib/X11/app-defaults/Snd
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/snd
-	cd ${WRKSRC} ; ${INSTALL_DATA} *.gif *.html *.txt README.Snd ${PREFIX}/share/doc/snd
+	${INSTALL_DATA_DIR} ${HTMLDIR}
+	cd ${WRKSRC} ; ${INSTALL_DATA} *.gif *.html *.txt README.Snd ${HTMLDIR}
 
+.include "../../graphics/xpm/buildlink.mk"
+.include "../../x11/lesstif/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

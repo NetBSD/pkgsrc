@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2001/06/11 06:34:54 jlam Exp $
+# $NetBSD: Makefile,v 1.29 2001/06/30 21:15:01 jlam Exp $
 # FreeBSD Id: Makefile,v 1.15 1998/05/27 08:44:56 dburr Exp
 #
 
@@ -12,28 +12,19 @@ MAINTAINER=		tv@netbsd.org
 HOMEPAGE=		http://www.ncsa.uiuc.edu/SDG/Software/Mosaic/
 COMMENT=		World Wide Web browser
 
-DEPENDS+=		jpeg-6b:../../graphics/jpeg
-DEPENDS+=		png>=1.0.11:../../graphics/png
-
 LICENSE=		mosaic-license
 
 NOT_FOR_PLATFORM=	*-*-alpha	#LP64 problems
 
+USE_BUILDLINK_ONLY=	YES
 USE_X11BASE=		YES
-USE_XPM=		YES
-USE_MOTIF12=		YES
 
 GNU_CONFIGURE=		YES
-CONFIGURE_ARGS+=	--with-zdir=/usr
-CONFIGURE_ARGS+=	--with-jpegdir=${LOCALBASE}
-CONFIGURE_ARGS+=	--with-pngdir=${LOCALBASE}
+CONFIGURE_ARGS+=	--with-jpegdir=${BUILDLINK_DIR}
+CONFIGURE_ARGS+=	--with-pngdir=${BUILDLINK_DIR}
+CONFIGURE_ARGS+=	--with-zdir=${BUILDLINK_DIR}
 
-EVAL_PREFIX=		XPMDIR=xpm
-
-CPPFLAGS+=		-I${MOTIFBASE}/include
 CPPFLAGS+=		-I${X11BASE}/include
-CPPFLAGS+=		-I${LOCALBASE}/include
-CPPFLAGS+=		-I${XPMDIR}/include
 CPPFLAGS+=		-Dunix
 
 post-configure:
@@ -47,4 +38,9 @@ do-install:
 		${PREFIX}/lib/X11/app-defaults/Mosaic
 	${INSTALL_DATA_DIR} ${PREFIX}/share/mosaic
 
+.include "../../devel/zlib/buildlink.mk"
+.include "../../graphics/jpeg/buildlink.mk"
+.include "../../graphics/png/buildlink.mk"
+.include "../../graphics/xpm/buildlink.mk"
+.include "../../x11/lesstif12/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
