@@ -1,0 +1,35 @@
+$NetBSD: patch-ah,v 1.1 1999/05/23 21:12:01 tv Exp $
+
+--- ../source/rsa.c.orig	Sun May 23 16:57:34 1999
++++ ../source/rsa.c	Sun May 23 16:57:58 1999
+@@ -11,10 +11,10 @@
+ #include "rsa.h"
+ #include "nn.h"
+ 
+-static int RSAPublicBlock PROTO_LIST 
++int RSAPublicBlock PROTO_LIST 
+   ((unsigned char *, unsigned int *, unsigned char *, unsigned int,
+     R_RSA_PUBLIC_KEY *));
+-static int RSAPrivateBlock PROTO_LIST 
++int RSAPrivateBlock PROTO_LIST 
+   ((unsigned char *, unsigned int *, unsigned char *, unsigned int,
+     R_RSA_PRIVATE_KEY *));
+ 
+@@ -212,7 +212,7 @@
+    Assumes inputLen < length of modulus.
+    Requires input < modulus.
+  */
+-static int RSAPublicBlock (output, outputLen, input, inputLen, publicKey)
++int RSAPublicBlock (output, outputLen, input, inputLen, publicKey)
+ unsigned char *output;                                      /* output block */
+ unsigned int *outputLen;                          /* length of output block */
+ unsigned char *input;                                        /* input block */
+@@ -252,7 +252,7 @@
+    Assumes inputLen < length of modulus.
+    Requires input < modulus.
+  */
+-static int RSAPrivateBlock (output, outputLen, input, inputLen, privateKey)
++int RSAPrivateBlock (output, outputLen, input, inputLen, privateKey)
+ unsigned char *output;                                      /* output block */
+ unsigned int *outputLen;                          /* length of output block */
+ unsigned char *input;                                        /* input block */
