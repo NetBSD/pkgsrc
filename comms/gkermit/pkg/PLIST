@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/01/04 11:21:58 fredb Exp $
+bin/gkermit
+man/man1/gkermit.1
+share/gkermit.txt
