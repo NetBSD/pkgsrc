@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 1999/09/14 02:32:23 kim Exp $
+# $NetBSD: Makefile,v 1.24 1999/09/19 22:07:22 kim Exp $
 #
 
 DISTNAME=       cvs-1.10
@@ -14,6 +14,10 @@ USE_GTEXINFO=	yes
 BUILD_DEFS+=	RCS_LOCALID
 
 .include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "SunOS"
+DEPENDS+=	zlib-*:../../devel/zlib
+.endif
 
 .if defined(KERBEROS) && ${KERBEROS} == 4
 USE_KERBEROS=	yes
