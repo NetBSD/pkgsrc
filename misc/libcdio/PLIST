@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2004/04/08 18:52:33 drochner Exp $
+@comment $NetBSD: PLIST,v 1.4 2004/05/11 16:18:39 reed Exp $
 bin/cd-info
 bin/cd-read
 bin/iso-info
@@ -12,9 +12,6 @@ include/cdio/types.h
 include/cdio/util.h
 include/cdio/version.h
 include/cdio/xa.h
-info/libcdio.info
-info/libcdio.info-1
-info/libcdio.info-2
 lib/libcdio.a
 lib/libcdio.la
 lib/libcdio.so
