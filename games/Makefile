@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.145 2002/07/14 09:41:11 rh Exp $
+# $NetBSD: Makefile,v 1.146 2002/09/12 00:22:23 wiz Exp $
 #
 
 COMMENT=	Games
@@ -92,6 +92,7 @@ SUBDIR+=	maelstrom-x11
 SUBDIR+=	marbles
 SUBDIR+=	minami
 SUBDIR+=	mirrormagic
+SUBDIR+=	mirrormagic-sdl
 SUBDIR+=	moria
 SUBDIR+=	nethack
 SUBDIR+=	nethack-lib
