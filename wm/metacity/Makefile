@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2004/02/19 13:41:57 jmmv Exp $
+# $NetBSD: Makefile,v 1.27 2004/03/04 19:17:04 minskim Exp $
 #
 
 DISTNAME=	metacity-2.6.5
@@ -35,8 +35,11 @@ CONFIGURE_ENV+=		USE_XINERAMA=no
 .include "../../devel/GConf2/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/pango/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
+.include "../../textproc/intltool/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/startup-notification/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
