@@ -1,0 +1,15 @@
+$NetBSD: patch-ae,v 1.1 2003/08/14 14:17:41 jschauma Exp $
+
+--- src/I18n.cc.orig	2003-08-14 10:03:53.000000000 -0400
++++ src/I18n.cc	2003-08-14 10:05:06.000000000 -0400
+@@ -58,7 +58,9 @@
+ I18n::I18n():m_multibyte(false), m_catalog_fd((nl_catd)(-1)) {
+ #ifdef 	HAVE_SETLOCALE
+     //make sure we don't get 0 to m_locale string
+-    char *temp = setlocale(LC_ALL, "");
++    char *temp;
++    (void)setlocale(LC_ALL, "");
++    temp = setlocale(LC_MESSAGES, NULL);
+     m_locale = ( temp ?  temp : ""); 
+     if (m_locale.size() == 0) {
+         cerr<<"Warning: Failed to set locale, reverting to \"C\""<<endl;
