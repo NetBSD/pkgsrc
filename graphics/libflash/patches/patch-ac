@@ -1,8 +1,9 @@
-$NetBSD: patch-ac,v 1.1.1.1 2000/08/28 17:33:50 rh Exp $
+$NetBSD: patch-ac,v 1.2 2001/12/03 04:22:41 mycroft Exp $
 
---- Lib/sound.cc.orig	Fri Aug 25 17:03:22 2000
-+++ Lib/sound.cc	Fri Aug 25 17:05:29 2000
-@@ -27,6 +27,10 @@
+--- Lib/sound.cc.orig	Wed Sep  1 15:10:03 1999
++++ Lib/sound.cc	Mon Dec  3 04:12:21 2001
+@@ -26,8 +26,12 @@
+ #include <fcntl.h>
  #include <sys/ioctl.h>
  #ifndef NOSOUND
 +#ifdef __NetBSD__
@@ -13,17 +14,52 @@ $NetBSD: patch-ac,v 1.1.1.1 2000/08/28 17:33:50 rh Exp $
 +#endif
  
  #ifdef RCSID
-@@ -163,5 +167,5 @@
+ static char *rcsid = "$Id: patch-ac,v 1.2 2001/12/03 04:22:41 mycroft Exp $";
+@@ -56,16 +60,16 @@
+ Sound::setSoundFlags(long f) {
+ 	switch (GET_SOUND_RATE_CODE(f)) {
+ 		case 0:
+-			soundRate = 5500;
++			soundRate = 5512;
+ 			break;
+ 		case 1:
+-			soundRate = 11000;
++			soundRate = 11025;
+ 			break;
+ 		case 2:
+-			soundRate = 22000;
++			soundRate = 22050;
+ 			break;
+ 		case 3:
+-			soundRate = 44000;
++			soundRate = 44100;
+ 			break;
+ 	}
+ 	if (f & soundIs16bit) {
+@@ -162,7 +166,7 @@
+ 	}
  
  	// Reset device
 -	status = ioctl(dsp, SNDCTL_DSP_RESET);
 +	status = ioctl(dsp, SNDCTL_DSP_RESET, NULL);
  	if (status < 0) perror("ioctl SNDCTL_DSP_RESET");
  
-@@ -325,5 +329,5 @@
+ 	// Set sample size
+@@ -187,7 +191,7 @@
+ 	}
+ 
+ 	// Set sound rate in Hertz
+-	soundRate = 11000;
++	soundRate = 11025;
+ 	status = ioctl(dsp, SNDCTL_DSP_SPEED, &soundRate);
+ 	if (status < 0) perror("ioctl SNDCTL_DSP_SPEED");
+ 
+@@ -324,7 +328,7 @@
+ 	if (nbBytes) {
  		// At last ! Play It !
  		write(dsp,buffer,nbBytes);
 -		status = ioctl(dsp, SNDCTL_DSP_POST);
 +		status = ioctl(dsp, SNDCTL_DSP_POST, NULL);
  	}
  
+ 	return nbBytes;
