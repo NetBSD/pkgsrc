@@ -1,15 +1,15 @@
-# $NetBSD: buildlink2.mk,v 1.2 2003/12/08 14:41:39 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2004/02/05 07:53:58 markd Exp $
 #
 # This Makefile fragment is included by packages that use kdegames.
 #
-# This file was created automatically using createbuildlink 2.7.
+# This file was created automatically using createbuildlink-3.0.
 #
 
 .if !defined(KDEGAMES_BUILDLINK2_MK)
 KDEGAMES_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			kdegames
-BUILDLINK_DEPENDS.kdegames?=		kdegames>=3.1.4nb1
+BUILDLINK_DEPENDS.kdegames?=		kdegames>=3.2.0
 BUILDLINK_PKGSRCDIR.kdegames?=		../../games/kdegames3
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.kdegames=kdegames
@@ -22,7 +22,6 @@ BUILDLINK_FILES.kdegames+=	include/atlantic/player.h
 BUILDLINK_FILES.kdegames+=	include/atlantic/trade.h
 BUILDLINK_FILES.kdegames+=	include/atlantik/ui/auction_widget.h
 BUILDLINK_FILES.kdegames+=	include/atlantik/ui/board.h
-BUILDLINK_FILES.kdegames+=	include/atlantik/ui/display_widget.h
 BUILDLINK_FILES.kdegames+=	include/atlantik/ui/estatedetails.h
 BUILDLINK_FILES.kdegames+=	include/atlantik/ui/estateview.h
 BUILDLINK_FILES.kdegames+=	include/atlantik/ui/portfolioestate.h
@@ -34,6 +33,8 @@ BUILDLINK_FILES.kdegames+=	include/kcarddialog.h
 BUILDLINK_FILES.kdegames+=	include/kchat.h
 BUILDLINK_FILES.kdegames+=	include/kchatbase.h
 BUILDLINK_FILES.kdegames+=	include/kchatdialog.h
+BUILDLINK_FILES.kdegames+=	include/kexthighscore.h
+BUILDLINK_FILES.kdegames+=	include/kexthighscore_item.h
 BUILDLINK_FILES.kdegames+=	include/kgame/kgame.h
 BUILDLINK_FILES.kdegames+=	include/kgame/kgamechat.h
 BUILDLINK_FILES.kdegames+=	include/kgame/kgameconnectdialog.h
@@ -50,12 +51,16 @@ BUILDLINK_FILES.kdegames+=	include/kgame/kgameproperty.h
 BUILDLINK_FILES.kdegames+=	include/kgame/kgamepropertyarray.h
 BUILDLINK_FILES.kdegames+=	include/kgame/kgamepropertyhandler.h
 BUILDLINK_FILES.kdegames+=	include/kgame/kgamepropertylist.h
+BUILDLINK_FILES.kdegames+=	include/kgame/kgamesequence.h
+BUILDLINK_FILES.kdegames+=	include/kgame/kgameversion.h
 BUILDLINK_FILES.kdegames+=	include/kgame/kmessageclient.h
 BUILDLINK_FILES.kdegames+=	include/kgame/kmessageio.h
 BUILDLINK_FILES.kdegames+=	include/kgame/kmessageserver.h
 BUILDLINK_FILES.kdegames+=	include/kgame/kplayer.h
+BUILDLINK_FILES.kdegames+=	include/kgamelcd.h
 BUILDLINK_FILES.kdegames+=	include/kgamemisc.h
 BUILDLINK_FILES.kdegames+=	include/kgameprogress.h
+BUILDLINK_FILES.kdegames+=	include/kgrid2d.h
 BUILDLINK_FILES.kdegames+=	include/khighscore.h
 BUILDLINK_FILES.kdegames+=	include/kolf/ball.h
 BUILDLINK_FILES.kdegames+=	include/kolf/canvasitem.h
@@ -75,6 +80,7 @@ BUILDLINK_FILES.kdegames+=	lib/libatlantic.*
 BUILDLINK_FILES.kdegames+=	lib/libatlantikclient.*
 BUILDLINK_FILES.kdegames+=	lib/libatlantikui.*
 BUILDLINK_FILES.kdegames+=	lib/libkdegames.*
+BUILDLINK_FILES.kdegames+=	lib/libkdeinit_kolf.*
 BUILDLINK_FILES.kdegames+=	lib/libkolf.*
 
 .include "../../meta-pkgs/kde3/buildlink2.mk"
