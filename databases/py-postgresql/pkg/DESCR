@@ -1,6 +1,6 @@
 PyGreSQL - v3.0: PostgreSQL module for Python
  
-  PyGreSQL, version 3.0
+  PyGreSQL, version 3.1
   A Python interface for PostgreSQL database.
   Written by D'Arcy J.M. Cain, darcy@druid.net
   Based heavily on code written by Pascal Andre, andre@chimay.via.ecp.fr.
