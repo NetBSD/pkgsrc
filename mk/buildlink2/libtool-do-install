@@ -1,0 +1,17 @@
+# $NetBSD: libtool-do-install,v 1.1 2002/12/26 17:08:56 jlam Exp $
+
+cmd="$cmd $arg"
+while $test $# -gt 0; do
+	arg="$1"; shift
+	case $arg in
+	*[\`\"\$\\]*)
+		arg=`$echo "X$arg" | $Xsed -e "$sed_quote_subst"`
+		;;
+	esac
+	case $arg in
+	*[\[\~\#\^\&\*\(\)\{\}\|\;\<\>\?\'\ \	]*|*]*|"")
+		arg="\"$arg\""
+		;;
+	esac
+	cmd="$cmd $arg"
+done
