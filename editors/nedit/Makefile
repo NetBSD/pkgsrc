@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2002/01/18 22:27:35 mjl Exp $
+# $NetBSD: Makefile,v 1.23 2002/04/23 02:08:52 jlam Exp $
 
 VERS=		5.2
 DISTNAME=	nedit-${VERS}-src
@@ -11,6 +11,7 @@ HOMEPAGE=	http://www.nedit.org/
 COMMENT=	Motif based standard GUI style text editor
 
 USE_BUILDLINK_ONLY=	YES
+USE_X11BASE=		YES
 ALL_TARGET=		netbsd
 
 WRKSRC=	${WRKDIR}/${PKGNAME}
