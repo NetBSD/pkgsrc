@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2004/12/10 06:31:05 markd Exp $
+# $NetBSD: Makefile,v 1.39 2005/01/11 13:41:27 markd Exp $
 
 DISTNAME=	kdevelop-3.1.2
 PKGNAME=	kdevelop-base-3.1.2
@@ -44,10 +44,9 @@ CONFIGURE_ARGS+= \
 	--with-qtdoc-dir=${QT3DIR}/qt3/doc/html \
 	--with-kdelibsdoxy-dir=${KDELIBDIR}/share/doc/kde/HTML/en/kdelibs-apidocs
 
-BDB_ACCEPTED=	db3
-.include "../../mk/bdb.buildlink3.mk"
-CPPFLAGS+= -I${BDBBASE}/include/${BDB_TYPE}
-MAKE_ENV+= BDB_LIBS="${BDB_LIBS}"
+.include "../../databases/db3/buildlink3.mk"
+CPPFLAGS+= -I${BUILDLINK_PREFIX.db3}/include/db3
+MAKE_ENV+= BDB_LIBS="${BUILDLINK_LDADD.db3}"
 
 .include "../../meta-pkgs/kde3/kde3.mk"
 
