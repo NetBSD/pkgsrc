@@ -1,12 +1,12 @@
 # New ports collection Makefile for: ImageMagick
-# Version required:	4.0
-# Date created:         11th December 1997
+# Version required:	4.0.1
+# Date created:         09th February 1998
 # Whom:                 tron
 #
-# $NetBSD: Makefile,v 1.11 1998/02/05 01:36:13 tron Exp $
+# $NetBSD: Makefile,v 1.12 1998/02/09 22:21:23 tron Exp $
 #
 
-DISTNAME=	ImageMagick-4.0
+DISTNAME=	ImageMagick-4.0.1
 CATEGORIES=	graphics
 MASTER_SITES=	ftp://ftp.wizards.dupont.com/pub/ImageMagick/ \
 		ftp://ftp.ms.mff.cuni.cz/MIRRORS/ftp.wizards.dupont.com/pub/ImageMagick/ \
