@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2002/11/06 21:59:29 tron Exp $
+# $NetBSD: Makefile,v 1.15 2003/02/24 20:45:19 jmmv Exp $
 
-DISTNAME=	libxslt-1.0.21
+DISTNAME=	libxslt-1.0.26
 PKGNAME=	${DISTNAME}
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libxslt/1.0/}
@@ -13,6 +13,7 @@ USE_BUILDLINK2=		yes
 USE_GMAKE=		yes
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+PKGCONFIG_OVERRIDE=	${WRKSRC}/libxslt.pc.in
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-libxml-prefix=${BUILDLINK_PREFIX.libxml2}
