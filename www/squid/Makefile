@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.105 2004/04/26 03:35:04 snj Exp $
+# $NetBSD: Makefile,v 1.106 2004/05/06 14:44:53 taca Exp $
 
 DISTNAME=	squid-2.5.STABLE5
 PKGNAME=	squid-2.5.5
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	http://www.squid-cache.org/Versions/v2/2.5/ \
 		ftp://ftp.leo.org/pub/comp/general/infosys/www/daemons/squid/squid-2/STABLE/ \
@@ -11,7 +11,24 @@ EXTRACT_SUFX=	.tar.bz2
 
 PATCH_SITES=	http://www.squid-cache.org/Versions/v2/2.5/bugs/
 PATCHFILES=	squid-2.5.STABLE5-ntlm_assert.patch \
-		squid-2.5.STABLE5-ldap.patch
+		squid-2.5.STABLE5-ldap.patch \
+		squid-2.5.STABLE5-helper_warning.patch \
+		squid-2.5.STABLE5-pkgconfig.patch \
+		squid-2.5.STABLE5-vary.patch \
+		squid-2.5.STABLE5-lin22_poll.patch \
+		squid-2.5.STABLE5-version.patch \
+		squid-2.5.STABLE5-deny_info.patch \
+		squid-2.5.STABLE5-CONNECT_timeout.patch \
+		squid-2.5.STABLE5-cache_swap_log.patch \
+		squid-2.5.STABLE5-ntlm_warning.patch \
+		squid-2.5.STABLE5-rfc1035NameUnpack.patch \
+		squid-2.5.STABLE5-digest_blank.patch \
+		squid-2.5.STABLE5-post_assert.patch \
+		squid-2.5.STABLE5-spelling.patch \
+		squid-2.5.STABLE5-digest_ERR.patch \
+		squid-2.5.STABLE5-turkish_ERR_DNS_FAIL.patch \
+		squid-2.5.STABLE5-vary_negatively.patch \
+		squid-2.5.STABLE5-range_offset_limit.patch
 PATCH_DIST_STRIP=       -p1
 
 MAINTAINER=	taca@NetBSD.org
