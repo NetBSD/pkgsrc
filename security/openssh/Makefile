@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.111 2003/09/16 23:06:22 grant Exp $
+# $NetBSD: Makefile,v 1.112 2003/09/17 16:42:01 jschauma Exp $
 
 DISTNAME=		openssh-3.7.1p1
 PKGNAME=		openssh-3.7.1.1
@@ -57,6 +57,16 @@ CONFIGURE_ARGS+=	--with-ssl-dir=${SSLBASE}
 CONFIGURE_ARGS+=	--with-tcp-wrappers=${BUILDLINK_PREFIX.tcp_wrappers}
 CONFIGURE_ARGS+=	--with-privsep-path=${OPENSSH_CHROOT}
 CONFIGURE_ARGS+=	--with-privsep-user=${OPENSSH_USER}
+
+# OpenSSH 3.7x currently does *not* work on IRIX!
+# To compile, we would need to remove the extraneous inclusion of the
+# ``inet_ntoa.h'' header in openbsd-compat/inet_ntoa.c, but even though
+# sshd will not work:  It seems the connection is closed by the daemon
+# when it tries to spawn off a child to handle the incoming connection
+#
+# If you need the latest security patches for your openssh, I'm afraid you'll
+# have to apply them by hand to the 3.6.1p2 version.
+NOT_FOR_PLATFORM=	IRIX-*-*
 
 # XXX: PAM authentication causes memory faults, and I haven't tracked down
 # XXX: why yet.  For the moment, disable PAM authentication.
