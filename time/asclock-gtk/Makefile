@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/07/16 00:36:33 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2001/07/16 00:52:51 jlam Exp $
 #
 
 DISTNAME=	asclock-gtk-2.1.10beta
@@ -10,17 +10,15 @@ MASTER_SITES=	${MASTER_SITE_LOCAL}	# www.asclock.org is no more
 MAINTAINER=	jlam@netbsd.org
 COMMENT=	dockable clock and calendar with themes for GTK+
 
-DEPENDS+=	gtk+-1.2.*:../../x11/gtk
-
-USE_X11BASE=	yes
+USE_BUILDLINK_ONLY=	# defined
+USE_CONFIG_WRAPPER=	# defined
+USE_X11BASE=		# defined
 
 PLIST_SRC=	${PKGDIR}/PLIST \
 		${PKGDIR}/PLIST.themes
 
 ALL_TARGET=	asclock
-
-EVAL_PREFIX+=	GTKDIR=gtk+
-MAKE_ENV+=	CONFIG_PATH="${GTKDIR}/bin/"	# for gtk-config
+MAKE_ENV+=	CONFIG_PATH="${BUILDLINK_DIR}/bin/"	# for gtk-config
 
 pre-configure:
 	cd ${WRKSRC}; ${LN} -sf themes/classic default_theme
@@ -37,4 +35,5 @@ do-install:
 	${CP} -R ${WRKSRC}/themes/* ${PREFIX}/share/asclock-gtk
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/asclock-gtk
 
+.include "../../x11/gtk/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
