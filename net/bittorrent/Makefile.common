@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.6 2004/04/27 03:43:54 snj Exp $
+# $NetBSD: Makefile.common,v 1.7 2004/05/25 12:42:19 wiz Exp $
 #
 
-DISTNAME=	BitTorrent-3.4.1a
+DISTNAME=	BitTorrent-3.4.2
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=bittorrent/}
 EXTRACT_SUFX=	.zip
