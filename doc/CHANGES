@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4493 2004/01/18 12:45:35 recht Exp $
+$NetBSD: CHANGES,v 1.4494 2004/01/18 14:00:46 cube Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -318,3 +318,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Removed kstars [kristerw 2004-01-17]
 	Updated lsof to 4.70 [atatat 2004-01-17]
 	Added cyrus-imapd-2.2.3 [recht 2004-01-18]
+	Updated SDL_sound to 1.0.1 [cube 2004-01-18]
+	Updated gltron to 0.70 [cube 2004-01-18]
