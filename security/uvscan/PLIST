@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/11/14 08:51:40 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/07/29 22:19:57 wiz Exp $
 bin/uvscan
 emul/linux/usr/local/lib/liblnxfv.so
 emul/linux/usr/local/lib/liblnxfv.so.4
@@ -13,7 +13,6 @@ share/doc/uvscan/contact.txt
 share/doc/uvscan/license.txt
 share/uvscan/clean.dat
 share/uvscan/names.dat
-share/uvscan/readme.txt
 share/uvscan/scan.dat
 @dirrm share/uvscan
 @unexec ${RMDIR} %D/share/doc/uvscan 2> /dev/null || ${TRUE}
