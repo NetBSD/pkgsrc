@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/03/12 13:07:20 jmmv Exp $
+
+SHA1 (skencil-0.6.16.tar.gz) = 4dfb1a15b7d30b6da7f6962723241d7e8079416b
+Size (skencil-0.6.16.tar.gz) = 1136249 bytes
+SHA1 (patch-aa) = 50e4c396e19c85a39866b9ca6834ff347a02cc3c
