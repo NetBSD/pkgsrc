@@ -1,7 +1,13 @@
-$NetBSD: distinfo,v 1.4 2002/05/20 23:05:00 veego Exp $
+$NetBSD: distinfo,v 1.5 2002/06/16 18:12:58 wiz Exp $
 
-SHA1 (ogle-0.8.2.tar.gz) = 84f3505eaa8f6d002f663bfe036c533a4a83f714
-Size (ogle-0.8.2.tar.gz) = 480190 bytes
-SHA1 (patch-aa) = 2b3953c7d724bc7ce486233b24623ed492d11e8f
-SHA1 (patch-ab) = aba5adc696ba96916bb4123bb75aca0852e102f9
-SHA1 (patch-ac) = e258a91d992fb3bf5d68029613227873f75b24bc
+SHA1 (ogle-0.8.3.tar.gz) = 80517f375b13b637ee15069368ff703b5d1b7e52
+Size (ogle-0.8.3.tar.gz) = 405249 bytes
+SHA1 (patch-aa) = c7ed5f7b957c0303c451650df2e4b1044d7430ef
+SHA1 (patch-ab) = 63aae484dbbb4e0746807f208f3fadb84a16341a
+SHA1 (patch-ac) = 85d5664419706bce042e564acadff75e0d5def58
+SHA1 (patch-ad) = da39bea384f78a63b94dec2c47a2c39750858bc2
+SHA1 (patch-ae) = a37d75d4c15ab60060df5339680ce863488c2f26
+SHA1 (patch-af) = 66a5c30aaf455e794a4c8940dc2a98815c62ae58
+SHA1 (patch-ag) = 386f8be5ce347f150b6b836a3d9c9b3db12cfbc7
+SHA1 (patch-ah) = 1fb41606f1fc0593597afb54cb2839f7c87221dc
+SHA1 (patch-ai) = 32ca5020e831cabc978c31c4d853cc94ed994a1d
