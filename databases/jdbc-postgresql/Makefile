@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/03/07 15:52:01 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2001/03/28 20:58:03 jwise Exp $
 #
 
 DISTNAME=		postgresql-7.0.3
@@ -17,6 +17,7 @@ COMMENT=		100% Java JDBC driver for PostgreSQL
 
 # checksum shared distfile, since we need not have built postgresql
 DIGEST_FILE=		${PKGSRCDIR}/databases/postgresql/files/md5
+EXTRACT_ELEMENTS=	${DISTNAME}/src/interfaces/jdbc
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -41,5 +42,3 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/*.html ${PREFIX}/share/doc/java/jdbc-postgresql/api
 
 .include "../../mk/bsd.pkg.mk"
-
-EXTRACT_CMD += ${DISTNAME}/src/interfaces/jdbc
