@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.61 2001/08/01 08:22:23 skrll Exp $
+# $NetBSD: Makefile,v 1.62 2001/08/16 10:47:24 rh Exp $
 #
 
 COMMENT=	Databases
 
 SUBDIR+=	db
 SUBDIR+=	db3
+SUBDIR+=	edb
 SUBDIR+=	freetds
 SUBDIR+=	gdbm
 SUBDIR+=	geneweb
