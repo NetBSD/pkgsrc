@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 1998/05/22 13:52:12 frueauf Exp $
+# $NetBSD: Makefile,v 1.11 1998/06/20 09:20:39 agc Exp $
 # FreeBSD Id: Makefile,v 1.6 1997/04/30 03:18:06 asami Exp
 #
 
@@ -8,7 +8,10 @@ MASTER_SITES=	${MASTER_SITE_LOCAL}
 
 MAINTAINER=	packages@netbsd.org
 
-# Do not list MAN/CAT pages here. It will confuse if MANZ is set.
-# The pkg uses BSD-style-Makefiles itself, so it does the right thing.
+.include "../../mk/bsd.prefs.mk"
+
+.ifdef MANZ
+MANCOMPRESSED=	yes
+.endif
 
 .include "../../mk/bsd.pkg.mk"
