@@ -1,0 +1,13 @@
+$NetBSD: patch-ai,v 1.1.1.1 2003/09/16 19:41:50 seb Exp $
+
+--- Makefile.in.orig	1998-06-11 21:10:02.000000000 +0200
++++ Makefile.in
+@@ -31,8 +31,6 @@ install:
+ 	${ENSUREDIR} ${DESTDIR}${libdir} 755
+ 	${ENSUREDIR} ${DESTDIR}${datadir} 755
+ 	${ENSUREDIR} ${DESTDIR}${datadir}/zephyr 755
+-	${ENSUREDIR} ${DESTDIR}${sysconfdir} 755
+-	${ENSUREDIR} ${DESTDIR}${sysconfdir}/zephyr/acl 755
+ 	${ENSUREDIR} ${DESTDIR}${sbindir} 755
+ 	${ENSUREDIR} ${DESTDIR}${includedir} 755
+ 	${ENSUREDIR} ${DESTDIR}${includedir}/zephyr 755
