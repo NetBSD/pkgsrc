@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/01/24 13:51:15 grant Exp $
+# $NetBSD: Makefile,v 1.3 2004/07/06 22:10:42 wiz Exp $
 #
 
 DISTNAME=	scm5d8
@@ -14,6 +14,7 @@ COMMENT=	Portable scheme interpreter
 DEPENDS+=	slib>=2.4.6:../../devel/slib
 
 USE_GNU_TOOLS+=	make
+USE_BUILDLINK3=	yes
 USE_X11=	# defined
 
 WRKSRC=		${WRKDIR}/scm
@@ -40,5 +41,5 @@ post-install:
 		${INSTALL_DATA} ${WRKSRC}/$$f ${PREFIX}/info;		\
 	done
 
-.include "../../devel/ncurses/buildlink2.mk"
+.include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
