@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1998/09/12 17:46:23 garbled Exp $
+# $NetBSD: Makefile,v 1.3 1998/09/13 14:58:41 garbled Exp $
 
 DISTNAME=		vice-0.15.0
 CATEGORIES=		emulators
@@ -10,6 +10,7 @@ HOMEPAGE=		http://www.tu-chemnitz.de/~fachat/vice/
 BUILD_DEPENDS+= 	bison:../../devel/bison
 DEPENDS+=		xpm-3.4k:../../graphics/xpm
 
+MIRROR_DISTFILE=	no
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		LDFLAGS="-Wl,-R${X11BASE}/lib"
 USE_GMAKE=		yes
