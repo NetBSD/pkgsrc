@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2004/11/27 15:02:10 taca Exp $
+# $NetBSD: Makefile,v 1.31 2005/02/21 15:35:53 taca Exp $
 # FreeBSD: ports/lang/ruby/Makefile,v 1.40 2001/01/18 19:53:38 knu Exp
 
 DISTNAME=	ruby-${RUBY_VERSION}
+PKGREVISION=	1
 CATEGORIES=	lang ruby
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -22,7 +23,7 @@ DEPENDS+= 	${RUBY_PKGPREFIX}>=${RUBY_VERSION}:../${RUBY_PKGPREFIX}
 
 RUBY_COMMANDS=	irb ruby
 .if ${RUBY_VER} >= 18
-RUBY_COMMANDS+=	erb rdoc ri testrb
+RUBY_COMMANDS+=	erb h2rb rdoc ri testrb
 .endif
 
 do-install:
