@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2004/03/05 18:38:32 jmmv Exp $
+# $NetBSD: Makefile,v 1.35 2004/03/08 21:03:17 jmmv Exp $
 
 DISTNAME=	gnome-2.4.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	meta-pkgs x11 gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -10,7 +10,6 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Meta-package for the GNU Network Object Model Environment
 
-DEPENDS+=	balsa>=2.0.10:../../mail/balsa2
 DEPENDS+=	bug-buddy>=2.4.2:../../net/bug-buddy
 DEPENDS+=	eog>=2.5.1:../../graphics/eog2
 DEPENDS+=	epiphany>=1.0.7nb1:../../www/epiphany
@@ -19,10 +18,9 @@ DEPENDS+=	gcalctool>=4.2.83:../../math/gcalctool
 DEPENDS+=	gconf-editor>=2.4.0:../../editors/gconf-editor
 DEPENDS+=	gedit>=2.4.1nb4:../../editors/gedit
 DEPENDS+=	ggv>=2.4.1:../../print/ggv2
-DEPENDS+=	glade2>=2.0.0:../../devel/glade2
+DEPENDS+=	gnome-accessibility>=2.4.2:../../meta-pkgs/gnome-accessibility
 DEPENDS+=	gnome-applets>=2.4.2:../../x11/gnome2-applets
 DEPENDS+=	gnome-base>=2.4.2:../../meta-pkgs/gnome-base
-DEPENDS+=	gnome-audio>=2.0.0:../../audio/gnome-audio
 DEPENDS+=	gnome-games>=2.4.2:../../games/gnome2-games
 DEPENDS+=	gnome-media>=2.4.1.1:../../multimedia/gnome2-media
 DEPENDS+=	gnome-themes>=2.4.1:../../x11/gnome-themes
@@ -30,9 +28,13 @@ DEPENDS+=	gnome2-user-docs>=2.4.1:../../misc/gnome2-user-docs
 DEPENDS+=	gnome2-system-monitor>=2.4.0:../../sysutils/gnome2-system-monitor
 DEPENDS+=	gnome-utils>=2.4.1:../../misc/gnome2-utils
 DEPENDS+=	gpdf>=0.112:../../print/gpdf
+DEPENDS+=	gstreamer>=0.6.4nb1:../../multimedia/gstreamer
+DEPENDS+=	gst-plugins>=0.6.4nb1:../../multimedia/gst-plugins
+DEPENDS+=	gucharmap>=1.2.0nb7:../../fonts/gucharmap
 DEPENDS+=	gtk2-extras>=2.2.4:../../meta-pkgs/gtk2-extras
 DEPENDS+=	nautilus-media>=0.3.3.1:../../multimedia/nautilus-media
 DEPENDS+=	vera-ttf>=1.10:../../fonts/vera-ttf
+DEPENDS+=	zenity>=1.8nb1:../../x11/zenity
 
 USE_X11=	yes
 EXTRACT_ONLY=	# empty
