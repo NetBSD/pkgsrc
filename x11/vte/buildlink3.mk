@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2004/10/03 00:18:38 tv Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2004/11/06 16:52:57 minskim Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 VTE_BUILDLINK3_MK:=	${VTE_BUILDLINK3_MK}+
@@ -16,6 +16,8 @@ BUILDLINK_RECOMMENDED.vte+=	vte>=0.11.11nb1
 BUILDLINK_PKGSRCDIR.vte?=	../../x11/vte
 .endif	# VTE_BUILDLINK3_MK
 
+.include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/pango/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libzvt/buildlink3.mk"
 
