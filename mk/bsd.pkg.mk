@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.587 2000/10/16 19:43:14 tv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.588 2000/10/17 23:56:19 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -144,11 +144,11 @@ DEPENDS+=		perl-5.*:../../lang/perl5
 .endif
 .if exists(${PERL5})
 .if !defined(PERL5_SITELIB) || !defined(PERL5_SITEARCH) || !defined(PERL5_ARCHLIB)
-PERL5_SITELIB!=		eval `${PERL5} -V:installsitelib`; \
+PERL5_SITELIB!=		eval `${PERL5} -V:installsitelib 2>/dev/null`; \
 			echo $${installsitelib}
-PERL5_SITEARCH!=	eval `${PERL5} -V:installsitearch`; \
+PERL5_SITEARCH!=	eval `${PERL5} -V:installsitearch 2>/dev/null`; \
 			echo $${installsitearch}
-PERL5_ARCHLIB!=		eval `${PERL5} -V:installarchlib`; \
+PERL5_ARCHLIB!=		eval `${PERL5} -V:installarchlib 2>/dev/null`; \
 			echo $${installarchlib}
 MAKEFLAGS+=		PERL5_SITELIB=${PERL5_SITELIB}
 MAKEFLAGS+=		PERL5_SITEARCH=${PERL5_SITEARCH}
@@ -3077,7 +3077,7 @@ fake-pkg: ${PLIST} ${DESCR}
 .endfor
 	@${ECHO} "CC=	${CC}-`${CC} --version`" >> ${BUILD_INFO_FILE}
 .ifdef USE_PERL5
-	@${ECHO} "PERL=	`${PERL5} --version | ${GREP} 'This is perl'`" >> ${BUILD_INFO_FILE}
+	@${ECHO} "PERL=	`${PERL5} --version 2>/dev/null | ${GREP} 'This is perl'`" >> ${BUILD_INFO_FILE}
 .endif
 .ifdef USE_GMAKE
 	@${ECHO} "GMAKE=	`${GMAKE} --version | ${GREP} version`" >> ${BUILD_INFO_FILE}
