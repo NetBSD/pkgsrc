@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2004/01/26 11:50:29 grant Exp $
+# $NetBSD: Makefile.common,v 1.5 2004/01/26 12:10:24 grant Exp $
 #
 
 DISTNAME=	Python-2.3.3
@@ -15,6 +15,9 @@ USE_BUILDLINK2=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	OPT="${CFLAGS}"
+
+# fdatasync()
+LIBS.SunOS=		-lrt
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -44,18 +47,22 @@ PLIST_SUBST+=  DLMODULE="@comment "
 PLIST_SUBST+=  DLMODULE=
 .endif
 
-X86_SUBST=		"@comment "
+EXTRA_SO_SUBST=		"@comment "
 OSSAUDIODEV_SUBST=	"@comment "
+
+# activate extra modules
 .if ${MACHINE_ARCH} == "i386"
-# activate X86_ONLY modules
-X86_SUBST=
+EXTRA_SO_SUBST=
 # ossaudiodev is only available on x86 for the following platforms
-.if ${PY_PLATNAME} == "linux2" || ${PY_PLATNAME} == "freebsd4" \
+.  if ${PY_PLATNAME} == "linux2" || ${PY_PLATNAME} == "freebsd4" \
 	|| ${PY_PLATNAME} == "freebsd5"
 OSSAUDIODEV_SUBST=
+.   endif
+.elif ${OPSYS} == "SunOS"
+EXTRA_SO_SUBST=
 .endif
-.endif
-PLIST_SUBST+=	X86_ONLY=${X86_SUBST}
+
+PLIST_SUBST+=	EXTRA_SO=${EXTRA_SO_SUBST}
 PLIST_SUBST+=	OSSAUDIODEV=${OSSAUDIODEV_SUBST}
 
 # ensure that the bsddb185 module is built on all platforms
