@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.72 2004/02/05 00:00:05 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.73 2004/02/05 06:58:03 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -201,6 +201,16 @@ BUILDLINK_USE_BUILTIN.${_pkg_}?=	yes
 .  else
 BUILDLINK_USE_BUILTIN.${_pkg_}?=	no
 .  endif
+#
+# If we prefer the pkgsrc version, then don't user the built-in package.
+#
+.if defined(BUILDLINK_PREFER_PKGSRC)
+.  if empty(BUILDLINK_PREFER_PKGSRC) || \
+      !empty(BUILDLINK_PREFER_PKGSRC:M[yY][eE][sS]) || \
+      !empty(BUILDLINK_PREFER_PKGSRC:M${_pkg_})
+BUILDLINK_USE_BUILTIN.${_pkg_}?=	no
+.  endif
+.endif
 #
 # If we're using the built-in package, then provide sensible defaults.
 #

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2004/02/02 11:30:45 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2004/02/05 06:58:03 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 HEIMDAL_BUILDLINK3_MK:=	${HEIMDAL_BUILDLINK3_MK}+
@@ -27,6 +27,14 @@ BUILDLINK_IS_BUILTIN.heimdal!=						\
 	fi
 .  endif
 MAKEFLAGS+=	BUILDLINK_IS_BUILTIN.heimdal="${BUILDLINK_IS_BUILTIN.heimdal}"
+.endif
+
+.if defined(BUILDLINK_PREFER_PKGSRC)
+.  if empty(BUILDLINK_PREFER_PKGSRC) || \
+      !empty(BUILDLINK_PREFER_PKGSRC:M[yY][eE][sS]) || \
+      !empty(BUILDLINK_PREFER_PKGSRC:Mheimdal)
+BUILDLINK_USE_BUILTIN.heimdal=	NO
+.  endif
 .endif
 
 .if !empty(BUILDLINK_CHECK_BUILTIN.heimdal:M[yY][eE][sS])

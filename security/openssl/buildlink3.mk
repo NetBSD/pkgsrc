@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2004/01/30 10:59:14 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2004/02/05 06:58:03 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 OPENSSL_BUILDLINK3_MK:=	${OPENSSL_BUILDLINK3_MK}+
@@ -25,6 +25,14 @@ _OPENSSL_OPENSSLV_H=	/usr/include/openssl/opensslv.h
 BUILDLINK_IS_BUILTIN.openssl=	NO
 .  if exists(${_OPENSSL_OPENSSLV_H})
 BUILDLINK_IS_BUILTIN.openssl=	YES
+.  endif
+.endif
+
+.if defined(BUILDLINK_PREFER_PKGSRC)
+.  if empty(BUILDLINK_PREFER_PKGSRC) || \
+      !empty(BUILDLINK_PREFER_PKGSRC:M[yY][eE][sS]) || \
+      !empty(BUILDLINK_PREFER_PKGSRC:Mopenssl)
+BUILDLINK_USE_BUILTIN.openssl=	NO
 .  endif
 .endif
 
