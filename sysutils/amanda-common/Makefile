@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2003/06/02 01:16:58 jschauma Exp $
+# $NetBSD: Makefile,v 1.26 2003/06/07 14:47:19 cjep Exp $
 # FreeBSD Id: Makefile,v 1.9 1997/03/08 05:00:11 gpalmer Exp
 #
 
@@ -10,7 +10,7 @@ MASTER_SITES=		ftp://ftp.cs.umd.edu/pub/amanda/
 
 MAINTAINER=		tech-pkg@netbsd.org
 HOMEPAGE=		http://www.amanda.org/
-COMMENT=		Libraries and binaries used by both the client and server parts of amanda
+COMMENT=		Common libraries and binaries for Amanda
 
 USE_BUILDLINK2=		YES
 USE_PKGINSTALL=		YES
