@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2002/12/16 16:14:06 drochner Exp $
+# $NetBSD: Makefile,v 1.56 2002/12/17 15:57:31 tron Exp $
 
 DISTNAME=	wget-1.8.2
 CATEGORIES=	net
@@ -10,14 +10,14 @@ COMMENT=	Retrieve files from the 'net via HTTP and FTP
 
 USE_PERL5=	build
 
-BUILD_USES_MSGFMT=	# defined
-USE_BUILDLINK2=		# defined
+BUILD_USES_MSGFMT=	YES
+USE_BUILDLINK2=		YES
 
-USE_GMAKE=		# defined
-GNU_CONFIGURE=		# defined
-USE_PKGLOCALEDIR=	# defined
+USE_GMAKE=		YES
+GNU_CONFIGURE=		YES
+USE_PKGLOCALEDIR=	YES
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
-USE_LIBTOOL=	yes
+USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 EGDIR=			${PREFIX}/share/examples/wget
@@ -25,7 +25,7 @@ CONF_FILES=		${EGDIR}/wgetrc ${PKG_SYSCONFDIR}/wgetrc
 
 INFO_FILES=		wget.info
 
-WGET_USE_SSL?=	YES
+WGET_USE_SSL?=		YES
 
 .if ${WGET_USE_SSL} == YES
 .include "../../security/openssl/buildlink2.mk"
