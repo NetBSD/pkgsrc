@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.6 2001/03/27 03:20:17 hubertf Exp $
+# $NetBSD: Makefile,v 1.7 2001/05/19 12:47:05 drochner Exp $
 #
 
 DISTNAME=		${PKGNAME}.src
-PKGNAME=		cdrdao-1.1.4
+PKGNAME=		cdrdao-1.1.5
 WRKSRC=			${WRKDIR}/${PKGNAME}
 CATEGORIES=		sysutils
-MASTER_SITES=		ftp://cdrdao.sourceforge.net/pub/cdrdao/
+MASTER_SITES=		http://prdownloads.sourceforge.net/cdrdao/
 
 MAINTAINER=		David Maxwell <david@maxwell.net>
-HOMEPAGE=		http://www.ping.de/sites/daneb/cdrdao.html
+HOMEPAGE=		http://cdrdao.sourceforge.net/
 COMMENT=		Records audio or data CD-Rs in disk-at-once (DAO) mode
 
 BUILD_DEPENDS+=		pccts-1.33.22:../../devel/pccts
@@ -19,6 +19,8 @@ CONFIGURE_ARGS+=	--with-pcctsbin=${PREFIX}/bin
 CONFIGURE_ARGS+=	--with-pcctsinc=${PREFIX}/include/pccts
 CONFIGURE_ARGS+=	--without-posix-threads
 CONFIGURE_ARGS+=	--with-gtkmm-exec-prefix=/dev/null
+# don't pick up an installed libcdda_paranoia
+LDFLAGS+=		-L../paranoia
 
 #override ARCH to avoid picking up a bad ${ARCH} during the build
 MAKE_ENV+=      ARCH=""

@@ -1,14 +1,15 @@
-$NetBSD: patch-ac,v 1.1 2000/07/07 16:25:04 dmcmahill Exp $
+$NetBSD: patch-ac,v 1.2 2001/05/19 12:47:05 drochner Exp $
 
---- scsilib/include/btorder.h.orig	Thu Apr 29 05:02:27 1999
-+++ scsilib/include/btorder.h	Fri Jul  7 09:11:17 2000
-@@ -44,4 +44,13 @@
-  * Bitorder is known.
+--- scsilib/include/btorder.h.orig	Sun Apr 29 11:28:21 2001
++++ scsilib/include/btorder.h	Fri May 18 19:04:13 2001
+@@ -54,6 +54,15 @@
+ /*
+  * Bitorder is already known.
   */
 +
-+#elif	defined(__NetBSD__)
++#elif defined(__NetBSD__)
 +#include <machine/endian.h>
-+#if	BYTE_ORDER == LITTLE_ENDIAN
++#if   BYTE_ORDER == LITTLE_ENDIAN
 +#define _BIT_FIELDS_LTOH
 +#else
 +#define _BIT_FIELDS_HTOL
@@ -16,3 +17,4 @@ $NetBSD: patch-ac,v 1.1 2000/07/07 16:25:04 dmcmahill Exp $
 +
  #else
  /*
+  * Bitorder not yet known.
