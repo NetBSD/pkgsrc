@@ -31,7 +31,7 @@ AC_HEADER_STDC
 AC_HEADER_TIME
 
 AC_CHECK_HEADERS([arpa/nameser.h assert.h bind/bitypes.h dirent.h err.h \
-	errno.h fcntl.h fts.h getopt.h glob.h inttypes.h libutil.h limits.h \
+	errno.h fcntl.h fts.h glob.h inttypes.h libutil.h limits.h \
 	machine/endian.h memory.h ndir.h netdb.h netinet/in6_machtypes.h \
 	paths.h poll.h pwd.h stdint.h stdlib.h stringlist.h strings.h \
 	string.h sys/bitypes.h sys/byteorder.h sys/cdefs.h sys/dir.h \
@@ -42,21 +42,32 @@ AC_CHECK_HEADERS([arpa/nameser.h assert.h bind/bitypes.h dirent.h err.h \
 
 AC_CHECK_HEADERS([md5.h rmd160.h sha1.h])
 
+pkg_use_nbcompat_getopt_long=yes
+AC_CHECK_HEADERS([getopt.h], [
+	AC_MSG_TRY_COMPILE([for struct option], pkg_cv_have_struct_option,
+		[ #include <getopt.h> ], [ struct option X ],
+		[ pkg_use_nbcompat_getopt_long=no ],
+		[ pkg_use_nbcompat_getopt_long=yes ])
+])
+if test $pkg_use_nbcompat_getopt_long = yes; then
+	AC_DEFINE(HAVE_NBCOMPAT_GETOPT_LONG)
+	AH_TEMPLATE([HAVE_NBCOMPAT_GETOPT_LONG], [
+		Define to 1 if the `getopt_long' function is built into the
+		library.
+	])
+	AC_LIBOBJ(getopt_long)
+fi
+
 dnl Check that this vis.h has *vis()-related functions because Solaris'
 dnl vis.h doesn't.  Also, only consider the header found if it defines
 dnl all of the functions that we need.
 dnl
 pkg_use_nbcompat_vis=yes
-AC_CHECK_HEADER(vis.h, [
-	AC_MSG_TRY_COMPILE([for VIS_WHITE in vis.h], pkg_cv_have_vis_white, [
-		#include <sys/types.h>
-		#include <vis.h>
-	], [ int X = VIS_WHITE ], [
-		AC_DEFINE(HAVE_VIS_H)
-		AH_TEMPLATE([HAVE_VIS_H], [
-			Define to 1 if you have the <vis.h> header file.
-		])
-	], [ pkg_use_nbcompat_vis=no ])
+AC_CHECK_HEADERS([vis.h], [
+	AC_MSG_TRY_COMPILE([for VIS_WHITE in vis.h], pkg_cv_have_vis_white,
+		[ #include <sys/types.h>
+		  #include <vis.h> ], [ int X = VIS_WHITE ],
+		[ pkg_use_nbcompat_vis=no], [ pkg_use_nbcompat_vis=yes ])
 ])
 
 dnl Checks for typedefs, structures, and compiler characteristics.
@@ -84,25 +95,30 @@ AC_FUNC_MALLOC
 AC_FUNC_STRERROR_R
 AC_FUNC_VPRINTF
 
-AC_REPLACE_FUNCS([err fgetln fparseln fseeko getenv getopt_long glob \
-	inet_ntop inet_pton isblank lchflags lchmod lchown lutimes mkstemp \
-	mkdtemp poll setenv setprogname snprintf strdup strerror strlcat \
-	strlcpy strmode strptime strsep strtoll timegm usleep])
+AC_REPLACE_FUNCS([err fgetln fparseln fseeko getenv glob inet_ntop \
+	inet_pton isblank lchflags lchmod lchown lutimes mkstemp mkdtemp \
+	poll setenv setprogname snprintf strdup strerror strlcat strlcpy \
+	strmode strptime strsep strtoll timegm usleep])
 
 AC_CHECK_FUNCS([setgroupent setgrent setpassent setpwent])
 AC_CHECK_FUNCS([bcopy bzero memset memcpy setlocale])
+AC_CHECK_FUNCS([getmode setmode])
 AC_CHECK_FUNCS([getmode setmode],
-	[pkg_use_nbcompat_setmode=no], [pkg_use_nbcompat_setmode=yes])
+	[pkg_use_nbcompat_setmode=no],
+	[pkg_use_nbcompat_setmode=yes; break])
 
 if test $pkg_use_nbcompat_setmode = yes; then
 	AC_LIBOBJ(setmode)
 fi
 
 AC_CHECK_FUNCS([gid_from_group group_from_gid pwcache_groupdb pwcache_userdb \
+		uid_from_user user_from_uid])
+AC_CHECK_FUNCS([gid_from_group group_from_gid pwcache_groupdb pwcache_userdb \
 		uid_from_user user_from_uid],
-	[pkg_use_nbcompat_pwcache=no], [pkg_use_nbcompat_pwcache=yes])
+	[pkg_use_nbcompat_pwcache=no],
+	[pkg_use_nbcompat_pwcache=yes; break])
 
-if test $pkg_use_nbcompat_setmode = yes; then
+if test $pkg_use_nbcompat_pwcache = yes; then
 	AC_LIBOBJ(pwcache)
 fi
 
@@ -121,9 +137,10 @@ AC_CHECK_FUNC(SHA1File, [:], [
 	AC_LIBOBJ(sha1hl)
 ])
 
+AC_CHECK_FUNCS([strunvis strvis strsvis])
 AC_CHECK_FUNCS([strunvis strvis strsvis],
 	[pkg_use_nbcompat_vis=no],
-	[pkg_use_nbcompat_vis=yes])
+	[pkg_use_nbcompat_vis=yes; break])
 
 if test $pkg_use_nbcompat_vis = yes; then
 	AC_DEFINE(HAVE_NBCOMPAT_VIS)
