@@ -5,3 +5,8 @@
 ###########################################################################
 # (This file is not part of the pine distribution!)
 ###########################################################################
+
+# The following option does the equivalent of Pine's 3.9x behavior of
+# not allowing the From: field to change for any user regardless of whether
+# the allow-changing-from option is set in .pinerc.
+#feature-list=no-allow-changing-from

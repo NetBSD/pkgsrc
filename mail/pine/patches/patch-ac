@@ -1,47 +1,28 @@
---- pine/makefile.neb.orig	Fri Nov 21 18:05:46 1997
-+++ pine/makefile.neb	Fri Nov 21 18:09:21 1997
-@@ -46,19 +46,21 @@
+--- pine/makefile.neb.orig	Fri May  8 19:28:46 1998
++++ pine/makefile.neb	Sat Jul 18 23:02:32 1998
+@@ -45,9 +45,12 @@
  RM=          rm -f
  LN=          ln -s
  MAKE=        make
--OPTIMIZE=    -O
-+#OPTIMIZE=    -O
+-OPTIMIZE=    # -O
++.if (${MACHINE_ARCH} != "arm32")
++# XXX broken arm32 compiler can't optimize several of these source files
++OPTIMIZE=    -O
++.endif
  PROFILE=     # -pg
 -DEBUG=       -g -DDEBUG
-+DEBUG=       # -DDEBUG -g
++DEBUG=       # -g -DDEBUG
  
- IMAPDIR=     ../c-client
+ CCLIENTDIR=  ../c-client
  PICODIR=     ../pico
+@@ -61,8 +64,8 @@
+ 	      other.o pine.o takeaddr.o
  
- STDLIBES=    -ltermlib -lcrypt
--LOCLIBES=    $(PICODIR)/libpico.a $(IMAPDIR)/c-client.a
--LIBES=       $(EXTRALIBES) $(LOCLIBES) $(STDLIBES)
-+#LOCLIBES=   $(PICODIR)/libpico.a $(IMAPDIR)/c-client.a
-+LOCLIBES=    -lpico $(IMAPDIR)/c-client.a
-+LOCLIBDIR=   -L$(PICODIR)
-+LIBES=       $(EXTRALIBES) $(LOCLIBDIR) $(LOCLIBES) $(STDLIBES)
+ STDLIBS=     -ltermlib
+-LOCLIBS=     $(PICODIR)/libpico.a $(CCLIENTDIR)/c-client.a
+-LIBS=        $(EXTRALIBS) $(LOCLIBS) $(LDAPLIBS) $(STDLIBS) \
++LOCLIBS=     -lpico $(CCLIENTDIR)/c-client.a
++LIBS=        -L$(PREFIX)/lib -R$(PREFIX)/lib/ $(EXTRALIBS) $(LOCLIBS) $(LDAPLIBS) $(STDLIBS) \
+              `cat $(CCLIENTDIR)/LDFLAGS`
  
  STDCFLAGS=   -DNETBSD -DSYSTYPE=\"NEB\" -DMOUSE
--CFLAGS=      $(OPTIMIZE) $(PROFILE) $(DEBUG) $(EXTRACFLAGS) $(STDCFLAGS)
-+CFLAGS+=      $(OPTIMIZE) $(PROFILE) $(DEBUG) $(EXTRACFLAGS) $(STDCFLAGS)
- 
- obj=    addrbook.o adrbklib.o args.o context.o filter.o \
- 	folder.o help.o helptext.o imap.o init.o mailcap.o mailcmd.o \
-@@ -73,7 +75,7 @@
- 	ttyout.c os.c
- 
- pine:  $(obj) $(LOCLIBES)
--	echo "char datestamp[]="\"`date`\"";" > date.c
-+	echo "char datestamp[]="\"`LC_TIME=C date`\"";" > date.c
- 	echo "char hoststamp[]="\"`hostname`\"";" >> date.c
- 	$(CC) $(LDFLAGS) $(CFLAGS) -o pine $(obj) date.c $(LIBES)
- 
-@@ -133,7 +135,7 @@
- 
- osdep/os-neb.c:	osdep/bld_path osdep/canacces osdep/canonicl \
- 		osdep/chnge_pw osdep/coredump osdep/creatdir \
--		osdep/diskquot.non osdep/domnames osdep/err_desc \
-+		osdep/diskquot.non osdep/domnames osdep/err_desc.dos \
- 		osdep/expnfldr osdep/fgetpos osdep/filesize osdep/fltrname \
- 		osdep/fnexpand osdep/header osdep/hostname \
- 		osdep/jobcntrl osdep/lstcmpnt osdep/mimedisp osdep/pipe \
