@@ -1,0 +1,31 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2001/04/25 17:39:16 wiz Exp $
+#
+
+DISTNAME=	prc-tools-${PRC_TOOLS_VERS}
+PRC_TOOLS_VERS=	2.0
+CATEGORIES=	devel
+MASTER_SITES=	http://www.palmos.com/dev/tech/tools/gcc/dist/
+
+MAINTAINER=	dillo@giga.or.at
+HOMEPAGE=	http://www.palmos.com/dev/tech/tools/gcc/
+
+#DIST_SUBDIR=	prc-tools
+
+GNU_CONFIGURE=	YES
+CONFIGURE_ARGS+=--target=m68k-palmos --enable-languages=c,c++ \
+		--sharedstatedir=${PREFIX}/share/palmdev
+#--with-headers=${WRKSRC}/empty \
+
+USE_GMAKE=	YES
+
+.if defined(BASE_DIST)
+DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
+		${BASE_DIST}-${BASE_VERS}${EXTRACT_SUFX}
+DIFF_FILE=	${BASE_DIST}-${BASE_VERS}.palmos.diff
+
+post-extract:
+	cd ${WRKDIR} && ${PATCH} --quiet -p0 < ${WRKSRC}/${DIFF_FILE}
+	${LN} -s ../${BASE_DIST}-${BASE_VERS} ${WRKSRC}/${BASE_DIST}
+.endif
+
+.include "../../mk/bsd.pkg.mk"
