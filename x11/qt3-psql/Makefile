@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/07/24 22:45:16 recht Exp $
+# $NetBSD: Makefile,v 1.15 2004/08/13 08:59:46 recht Exp $
 #
 
 .include "../qt3-libs/Makefile.common"
@@ -12,6 +12,8 @@ CONFIGURE_ARGS+=	-I${QTDIR}/include \
 
 USE_BUILDLINK3=		yes
 BUILD_QT3=		yes
+
+PGSQL_VERSION_REQD=	73
 
 do-build:
 	(cd ${WRKSRC}/plugins/src/sqldrivers/psql; \
