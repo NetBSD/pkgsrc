@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1196 2003/12/14 17:15:11 wiz Exp $
+$NetBSD: TODO,v 1.1197 2003/12/14 17:18:19 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -216,7 +216,9 @@ Suggested package updates
 	o lcms-1.0.9
 	o leafnode-1.9.46
 	o libbonobo-2.4.2 [jmmv]
+	o libbonoboui-2.4.1 [jmmv]
 	o libgnome-2.4.0 [jmmv]
+	o libgnomecanvas-2.4.0 [jmmv]
 	o libmpeg3-1.5.3
 	o libole2-2.2.8
 	o libtiff-3.6.0
