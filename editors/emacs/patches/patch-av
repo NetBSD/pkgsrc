@@ -1,0 +1,15 @@
+$NetBSD: patch-av,v 1.1 1998/09/04 02:28:55 tron Exp $
+
+--- man/widget.texi.orig	Thu Jul 10 03:42:38 1997
++++ man/widget.texi	Fri Sep  4 01:56:09 1998
+@@ -3,6 +3,10 @@
+ @c %**start of header
+ @setfilename ../info/widget
+ @settitle The Emacs Widget Library
++@dircategory The Emacs editor and associated tools
++@direntry
++* Widget: (Widget).            Emacs Widget Library
++@end direntry
+ @iftex
+ @afourpaper
+ @headings double

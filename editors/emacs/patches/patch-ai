@@ -1,0 +1,17 @@
+$NetBSD: patch-ai,v 1.1 1998/09/04 02:28:54 tron Exp $
+
+--- info/reftex~	Sun Apr 26 15:19:42 1998
++++ info/reftex	Fri Aug 28 22:13:45 1998
+@@ -1,6 +1,12 @@
+ This is Info file ../info/reftex, produced by Makeinfo version 1.68
+ from the input file reftex.texi.
+ 
++INFO-DIR-SECTION Editors
++START-INFO-DIR-ENTRY
++* RefTeX: (reftex).	Labels, references and citations for LaTeX
++			documents with Emacs.
++END-INFO-DIR-ENTRY
++
+    This file documents RefTeX, a package to do labels, references and
+ citations for LaTeX documents with Emacs.
+ 

@@ -1,0 +1,15 @@
+$NetBSD: patch-at,v 1.1 1998/09/04 02:28:55 tron Exp $
+
+--- man/vip.texi.orig	Sat May 16 20:48:50 1998
++++ man/vip.texi	Fri Sep  4 01:56:09 1998
+@@ -2,6 +2,10 @@
+ 
+ @setfilename ../info/vip
+ @settitle VIP
++@dircategory The Emacs editor and associated tools
++@direntry
++* VIP: (vip).			A VI-emulation for Emacs.
++@end direntry
+ 
+ @dircategory Editors
+ @direntry
