@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1 2001/12/01 10:13:48 kleink Exp $
+
+--- html2ps.orig	Sat Aug  9 20:59:05 1997
++++ html2ps	Sat Dec  1 10:40:03 2001
+@@ -3747,6 +3747,7 @@
+       $mv=~s/\.0//g;
+       $temp.="$mv$line\n";
+     }
++    "   "=~/( )( )( )/;
+   }
+   @nf=();
+   @sf=();
