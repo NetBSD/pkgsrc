@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.4 2000/10/17 23:48:01 jlam Exp $
+$NetBSD: patch-ab,v 1.5 2002/04/25 12:17:05 agc Exp $
 
---- Makefile.in.orig	Thu Oct 12 12:06:49 2000
+--- Makefile.in.orig	Wed Mar 20 15:46:08 2002
 +++ Makefile.in
-@@ -95,7 +95,7 @@
+@@ -99,7 +99,7 @@
  
  AUTOMAKE_OPTIONS = 1.3 # required version of automake.
  

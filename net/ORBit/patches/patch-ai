@@ -1,8 +1,8 @@
-$NetBSD: patch-ai,v 1.4 2000/10/17 23:48:01 jlam Exp $
+$NetBSD: patch-ai,v 1.5 2002/04/25 12:17:05 agc Exp $
 
---- libIDL/Makefile.in.orig	Thu Oct 12 12:06:54 2000
+--- libIDL/Makefile.in.orig	Wed Mar 20 15:46:13 2002
 +++ libIDL/Makefile.in
-@@ -120,7 +120,7 @@
+@@ -125,7 +125,7 @@
  
  libIDL_la_SOURCES = parser.c parser.h lexer.c 			  ns.c util.c util.h rename.h
  

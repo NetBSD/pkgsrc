@@ -1,10 +1,9 @@
-$NetBSD: patch-an,v 1.1 2002/03/22 11:26:05 agc Exp $
+$NetBSD: patch-an,v 1.2 2002/04/25 12:17:05 agc Exp $
+Also handle EINVAL error to writev(2).
 
-Also handle EINVAL error to writev(2)
-
---- src/IIOP/giop-msg-buffer.c	2002/03/22 10:43:32	1.1
-+++ src/IIOP/giop-msg-buffer.c	2002/03/22 10:44:27
-@@ -169,6 +169,37 @@
+--- src/IIOP/giop-msg-buffer.c.orig	Mon Mar 11 13:40:02 2002
++++ src/IIOP/giop-msg-buffer.c
+@@ -165,6 +165,37 @@
    return msgbuf;
  }
  

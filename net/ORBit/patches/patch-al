@@ -1,8 +1,8 @@
-$NetBSD: patch-al,v 1.5 2000/10/17 23:48:01 jlam Exp $
+$NetBSD: patch-al,v 1.6 2002/04/25 12:17:05 agc Exp $
 
---- src/daemons/interface_repository/Makefile.in.orig	Thu Oct 12 12:07:12 2000
+--- src/daemons/interface_repository/Makefile.in.orig	Wed Mar 20 15:46:31 2002
 +++ src/daemons/interface_repository/Makefile.in
-@@ -102,7 +102,7 @@
+@@ -106,7 +106,7 @@
  
  
  orbit_ird_LDFLAGS = -static
