@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2003/08/08 12:56:25 skrll Exp $
+# $NetBSD: Makefile,v 1.38 2003/09/11 04:13:05 jlam Exp $
 
 DISTNAME=	kdelibs-3.1.3
 PKGREVISION=	2
@@ -11,7 +11,6 @@ CONFLICTS+=	koffice3<=1.1.1
 
 USE_BUILDLINK2=		YES
 USE_GCC_SHLIB=		YES
-USE_OPENSSL_VERSION=	${OPENSSL_VERSION_096}
 
 CONFIGURE_ARGS+=	--with-ssl-dir="${BUILDLINK_PREFIX.openssl}"
 
