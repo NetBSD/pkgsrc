@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2974 2003/08/03 05:16:28 gehenna Exp $
+$NetBSD: CHANGES,v 1.2975 2003/08/03 05:50:02 sjg Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3181,3 +3181,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated git to 4.3.17nb1 [seb 2003-08-03]
 	Updated pinfo to 0.6.1nb2 [seb 2003-08-03]
 	Updated cvsync to 0.24.3 [gehenna 2003-08-03]
+	Updated bmake to 20030731 [sjg 2003-08-02]
+	Updated mk-files to 20030731 [sjg 2003-08-02]
