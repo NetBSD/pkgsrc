@@ -1,6 +1,6 @@
 # start of deinstall
 #
-# $NetBSD: deinstall,v 1.17.2.1 2003/07/24 23:45:09 jlam Exp $
+# $NetBSD: deinstall,v 1.17.2.2 2003/07/29 20:34:20 jlam Exp $
 
 eval set -- ${PKG_USERS}
 for userset; do
@@ -71,6 +71,14 @@ ALL_DIRS=`
 
 case ${STAGE} in
 VIEW-DEINSTALL)
+	if [ "${_PKG_CONFIG}" = "YES" -a -n "${PKG_SYSCONFDEPOTBASE}" ]; then
+		if [ -n "${CONF_FILES}" -o				\
+		     -n "${CONF_FILES_PERMS}" -o			\
+		     -n "${SUPPORT_FILES}" -o				\
+		     -n "${SUPPORT_FILES_PERMS}" ]; then
+			${LINKFARM} -D -t ${PKG_SYSCONFVIEWBASE} -d ${PKG_SYSCONFDEPOTBASE} ${PKGNAME}
+		fi
+	fi
 	if [ -n "${PKG_SHELL}" -a "${PKG_REGISTER_SHELLS}" = "YES" ]; then
 		${ECHO} "===> Updating /etc/shells"
 		${CP} /etc/shells /etc/shells.pkgsrc."$$"
