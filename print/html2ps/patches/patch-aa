@@ -1,0 +1,117 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/04/23 05:55:02 kim Exp $
+
+--- install.orig	Sat Sep 13 08:37:20 1997
++++ install	Sun Apr 23 01:39:56 2000
+@@ -42,8 +42,8 @@
+ the directories where the files should be placed.
+ EOD
+ 
+-&getval($goon, "y", "\nDo you want to proceed with the installation?");
+-die "\n" if($goon!~/^y/i);
++#&getval($goon, "y", "\nDo you want to proceed with the installation?");
++#die "\n" if($goon!~/^y/i);
+ 
+ print "\n";
+ for $req (@perl) {
+@@ -121,18 +121,19 @@
+ 
+ chop ($cd = `pwd`);
+ 
+-$prefix = "/usr/local";
++$prefix = "$ARGV[0]";
+ 
+-&getval($ans, "y",
+- "\nBy default all files will be installed in subdirectories 'bin', 'lib',\n"
+- ."and 'man' in a common directory. Is this OK?");
+-$def = $ans=~/^y/i;
+-
+-if($def) {
+-    &getval($prefix, "$prefix", "\nEnter the name of this directory");
+-    &fixdir($prefix);
+-    &mkdir($prefix,0);
+-}
++#&getval($ans, "y",
++# "\nBy default all files will be installed in subdirectories 'bin', 'lib',\n"
++# ."and 'man' in a common directory. Is this OK?");
++#$def = $ans=~/^y/i;
++$def = 1;
++
++#if($def) {
++#    &getval($prefix, "$prefix", "\nEnter the name of this directory");
++#    &fixdir($prefix);
++#    &mkdir($prefix,0);
++#}
+ 
+ if($def) {
+     $bindir = "$prefix/bin";
+@@ -145,7 +146,7 @@
+ &mkdir($bindir,$def);
+ 
+ if($def) {
+-    $glob = "$prefix/lib/html2ps";
++    $glob = "$prefix/share/html2ps";
+ } else {
+     &getval($glob, "$prefix/lib/html2ps",
+      "\nEnter the the directory where the global configuration file for\n"
+@@ -184,7 +185,7 @@
+ if($exist{'TeX'}) {
+     $hfile = "";
+     ($texdir = $dir{'TeX'}) =~ s|/bin$||;
+-    SW:for("texmf/tex/generic/hyphen","macros","inputs","lib/macros",
++    SW:for("share/texmf/tex/generic/hyphen","macros","inputs","lib/macros",
+         "lib/inputs","lib/tex/macros","lib/tex/inputs") {
+         if(-f "$texdir/$_/ushyph1.tex") {
+             $hyph = "$texdir/$_";
+@@ -198,15 +199,15 @@
+         }
+     }
+     if($hfile) {
+-        &getval($hdef, "y", "$ht I believe that I have found\nthe pattern "
+-         ."file for English in your TeX installation:\n\n  "
+-         ."$hfile\n\nWould you like to use this instead of the "
+-         ."file included with html2ps?");
+-        if($hdef=~/^y/i) {
++#        &getval($hdef, "y", "$ht I believe that I have found\nthe pattern "
++#         ."file for English in your TeX installation:\n\n  "
++#         ."$hfile\n\nWould you like to use this instead of the "
++#         ."file included with html2ps?");
++#        if($hdef=~/^y/i) {
+             $cophy = 0;
+-        } else {
+-            $hfile = "";
+-        }
++#        } else {
++#            $hfile = "";
++#        }
+     } else {
+         &getval($hfile, "", "$ht I cannot find the pattern\nfile for English "
+          ."in your TeX installation. (It should be called\n'hyphen.tex', "
+@@ -246,7 +247,7 @@
+ }
+ 
+ if($def) {
+-    $html = "$prefix/lib/html2ps";
++    $html = "$prefix/share/html2ps";
+ } else {
+     &getval($html, "$prefix/lib/html2ps",
+      "\nEnter a directory where to put the HTML document describing\nhtml2ps");
+@@ -254,12 +255,13 @@
+ }
+ &mkdir($html,$def);
+ 
+-$paper = "";
+-&getval($format, "A4",
+- "\nEnter the default paper type, possible choices are:\nA0, A1, A2, A3, A4,"
+- ." A5, A6, A7, A8, A9, A10,\nB0, B1, B2, B3, B4, B5, B6, B7, B8, B9, B10,\n"
+- ."letter, legal, arche, archd, archc, archb, archa,\nflsa, flse, halfletter,"
+- ." 11x17, ledger, other");
++$format = "letter";
++#$paper = "";
++#&getval($format, "A4",
++# "\nEnter the default paper type, possible choices are:\nA0, A1, A2, A3, A4,"
++# ." A5, A6, A7, A8, A9, A10,\nB0, B1, B2, B3, B4, B5, B6, B7, B8, B9, B10,\n"
++# ."letter, legal, arche, archd, archc, archb, archa,\nflsa, flse, halfletter,"
++# ." 11x17, ledger, other");
+ if($format !~ /^other$/i) {
+     $paper .= "    type: $format;";
+ } else {
