@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1998/04/15 10:38:53 agc Exp $
+# $NetBSD: Makefile,v 1.8 1998/04/17 09:37:25 agc Exp $
 
 DISTNAME=	gtk+-1.0.0
 CATEGORIES=	x11
@@ -8,10 +8,9 @@ MASTER_SITES=	ftp://ftp.gimp.org/pub/gtk/v1.0/ \
 
 MAINTAINER=	bsieker@techfak.uni-bielefeld.de
 
-BUILD_DEPENDS=	${LOCALBASE}/bin/install-info:${PORTSDIR}/devel/gtexinfo
-
 GNU_CONFIGURE=  yes
 USE_X11=	yes
+USE_GTEXINFO=	yes
 
 CFLAGS=		-pipe -O2
 

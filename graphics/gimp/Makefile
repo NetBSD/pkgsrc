@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 1998/04/15 20:48:12 tron Exp $
+# $NetBSD: Makefile,v 1.10 1998/04/17 09:37:24 agc Exp $
 
 DISTNAME=	gimp-0.99.26
 CATEGORIES=	graphics
@@ -11,7 +11,6 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
 
 MAINTAINER=	bsieker@techfak.uni-bielefeld.de
 
-BUILD_DEPENDS=	install-info:${PORTSDIR}/devel/gtexinfo
 LIB_DEPENDS=	jpeg.7.:${PORTSDIR}/graphics/jpeg \
 		mpeg.1.2:${PORTSDIR}/graphics/mpeg-lib \
 		png.0.96:${PORTSDIR}/graphics/png \
@@ -25,6 +24,7 @@ CONFIGURE_ENV=	LDFLAGS="-L${LOCALBASE}/lib -L${X11BASE}/lib" \
 		CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include"
 
 CFLAGS=		-pipe -O2 -I${LOCALBASE}/include -I${X11BASE}/include
+USE_GTEXINFO=	yes
 
 post-configure:
 	@${ECHO_MSG} "--> now configuring in ${GIMP_DATA}"
