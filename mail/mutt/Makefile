@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2000/05/13 07:03:38 tron Exp $
+# $NetBSD: Makefile,v 1.45 2000/05/20 17:39:21 kim Exp $
 
 DISTNAME=	mutt-1.2i
 CATEGORIES=	mail
@@ -18,11 +18,18 @@ RESTRICTED=	"Contains PGP and SSL code"
 
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
-USE_SSL=	yes
 CONFIGURE_ARGS+= --with-curses=${LOCALBASE} --with-exec-shell=/bin/ksh \
 		 --with-docdir=${PREFIX}/share/doc/mutt \
-		 --with-ssl=${SSLBASE} \
 		 --enable-pop --enable-imap
+
+MUTT_USE_SSL?=	YES
+
+.if defined(MUTT_USE_SSL) && ${MUTT_USE_SSL} == "YES"
+USE_SSL=	yes
+CONFIGURE_ARGS+= --with-ssl=${SSLBASE}
+.endif
+
+BUILD_DEFS+=	MUTT_USE_SSL
 
 ALL_TARGET=	keymap_defs.h all
 LDFLAGS+=	-s
