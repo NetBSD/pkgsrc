@@ -1,7 +1,10 @@
-@comment $NetBSD: PLIST,v 1.8 2001/05/29 11:25:28 jun Exp $
+@comment $NetBSD: PLIST,v 1.9 2001/10/10 05:45:16 jun Exp $
+bin/incdir
+bin/incmbox
 bin/mewcat
 bin/mewdecode
 bin/mewencode
+bin/mewinc
 bin/mewls
 @unexec install-info --delete --info-dir=%D/info %D/info/mew.info
 info/mew.info
@@ -52,6 +55,18 @@ man/man1/mewcat.1
 man/man1/mewdecode.1
 man/man1/mewencode.1
 man/man1/mewls.1
+share/emacs/site-lisp/mew/contrib/00readme
+share/emacs/site-lisp/mew/contrib/00readme-namazu.jis
+share/emacs/site-lisp/mew/contrib/README-mewinc.jis
+share/emacs/site-lisp/mew/contrib/mew-browse.el
+share/emacs/site-lisp/mew/contrib/mew-caesar.el
+share/emacs/site-lisp/mew/contrib/mew-fancy-summary.el
+share/emacs/site-lisp/mew/contrib/mew-gnus.el
+share/emacs/site-lisp/mew/contrib/mew-nmz-fixer.el
+share/emacs/site-lisp/mew/contrib/mew-nmz.el
+share/emacs/site-lisp/mew/contrib/mew-refile-view.el
+share/emacs/site-lisp/mew/contrib/mew-smime-ja.texi
+share/emacs/site-lisp/mew/contrib/mew-toolbar-frame.el
 share/emacs/site-lisp/mew/mew-addrbook.el
 share/emacs/site-lisp/mew/mew-addrbook.elc
 share/emacs/site-lisp/mew/mew-attach.el
@@ -149,6 +164,7 @@ share/emacs/site-lisp/mew/mew-win32.el
 share/emacs/site-lisp/mew/mew-xemacs.el
 share/emacs/site-lisp/mew/mew.el
 share/emacs/site-lisp/mew/mew.elc
+@dirrm share/emacs/site-lisp/mew/contrib
 @dirrm share/emacs/site-lisp/mew
 @dirrm lib/emacs/etc/Mew/etc
 @dirrm lib/emacs/etc/Mew
