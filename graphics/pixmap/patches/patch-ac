@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.3 2002/01/09 02:37:47 fredb Exp $
+$NetBSD: patch-ac,v 1.4 2002/06/28 08:55:18 agc Exp $
 
 --- Imakefile.orig	Fri May 13 06:04:38 1994
 +++ Imakefile
@@ -11,7 +11,14 @@ $NetBSD: patch-ac,v 1.3 2002/01/09 02:37:47 fredb Exp $
  #ifdef HPArchitecture
  CCOPTIONS = -Aa -D_HPUX_SOURCE -DNO_EDITRES
  #if ProjectX > 4
-@@ -27,16 +27,14 @@
+@@ -21,22 +21,20 @@
+ #endif
+ 
+ XCOMM Where you have rgb.txt
+-RGBTXT = $(LIBDIR)/rgb.txt
++RGBTXT = ${X11BASE}/lib/X11/rgb.txt
+ 
+ XCOMM LUCS extra variable for where bitmaps go
  PIXMAPDIR = $(LIBDIR)/Pixmap
  
  XCOMM Specify here your Xpm installation directories
@@ -32,7 +39,7 @@ $NetBSD: patch-ac,v 1.3 2002/01/09 02:37:47 fredb Exp $
          BITMAPS = MDown MFlipHoriz MFlipVert MFold  MLeft MRight MRotateLeft \
                    MRotateRight Stipple MUp
  #else
-@@ -89,7 +88,7 @@
+@@ -89,7 +87,7 @@
  
  Pixmap.ad: APixmap.ad
  	@echo Pixmap compiled with Athena.
