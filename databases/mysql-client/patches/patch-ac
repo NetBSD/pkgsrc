@@ -1,0 +1,35 @@
+$NetBSD: patch-ac,v 1.1.1.1 1999/05/06 23:22:27 tv Exp $
+
+--- client/get_password.c.orig	Sun Jun 14 16:26:27 1998
++++ client/get_password.c	Sun Jun 14 19:25:24 1998
+@@ -18,8 +18,8 @@
+ #include	<termio.h>
+ #define TERMIO	struct termio
+ #else
+-#include	<sgtty.h>
+-#define TERMIO	struct sgttyb
++#include	<termios.h>
++#define TERMIO	struct termios
+ #endif
+ #ifdef alpha_linux_port
+ #include <asm/ioctls.h>				/* QQ; Fix this in configure */
+@@ -92,13 +92,14 @@
+   get_password(buff,sizeof(buff)-1,fileno(stdin),isatty(fileno(stdout)));
+   ioctl(fileno(stdin),(int) TCSETA, &org);
+ #else
+-  gtty(fileno(stdin), &org);
++  tcgetattr(fileno(stdin), &org);
+   tmp=org;
+-  tmp.sg_flags &= ~ECHO;
+-  tmp.sg_flags |= RAW;
+-  stty(fileno(stdin), &tmp);
++  tmp.c_lflag &= ~(ECHO | ISIG | ICANON);
++  tmp.c_cc[VMIN] = 1;
++  tmp.c_cc[VTIME]= 0;
++  tcsetattr(fileno(stdin), TCSAFLUSH, &tmp);
+   get_password(buff,sizeof(buff)-1,fileno(stdin),isatty(fileno(stdout)));
+-  stty(fileno(stdin), &org);
++  tcsetattr(fileno(stdin), TCSAFLUSH, &org);
+ #endif
+   if (isatty(fileno(stdout)))
+     fputc('\n',stdout);
