@@ -4,7 +4,7 @@
 # Date Created:				11 April 1998
 # Whom:					tron
 #
-# $NetBSD: Makefile,v 1.3 1998/04/12 23:27:43 tron Exp $
+# $NetBSD: Makefile,v 1.4 1998/04/12 23:34:21 tron Exp $
 
 DISTNAME=	mutt-0.91i
 CATEGORIES=	mail
@@ -22,11 +22,11 @@ RESTRICTED=	"Uses PGP"
 MIRROR_DISTFILE= no
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+= --with-curses=${PREFIX}
+CONFIGURE_ENV+=	LDFLAGS=-s
 
 MAN1=		mutt.1
 
 post-install:
-	strip ${PREFIX}/bin/mutt
 	${MKDIR} ${PREFIX}/share/doc/mutt
 	${CP} ${WRKSRC}/doc/manual.txt ${PREFIX}/share/doc/mutt
 	${CP} ${WRKSRC}/doc/pgp-Notes.txt ${PREFIX}/share/doc/mutt
