@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.1 2003/01/06 10:38:09 uebayasi Exp $
+$NetBSD: patch-ag,v 1.2 2003/12/14 17:14:40 wiz Exp $
 
---- doc/goops/Makefile.in.orig	Mon Dec 16 13:05:20 2002
+--- doc/goops/Makefile.in.orig	2003-04-21 19:02:48.000000000 +0200
 +++ doc/goops/Makefile.in
-@@ -200,7 +200,7 @@
+@@ -201,7 +201,7 @@ PSS = goops.ps
  TEXINFOS = goops.texi
  DATA = $(html_DATA)
  
