@@ -1,6 +1,6 @@
-$NetBSD: patch-ao,v 1.1 2001/03/25 01:09:52 jtb Exp $
+$NetBSD: patch-ao,v 1.2 2001/03/25 01:32:10 jtb Exp $
 
---- hdf/src/hdfi.h.orig	Sat Mar 24 20:12:19 2001
+--- hdf/src/hdfi.h.orig	Tue Aug 22 20:26:57 2000
 +++ hdf/src/hdfi.h
 @@ -151,6 +151,8 @@
   * Define options for each platform
@@ -11,12 +11,12 @@ $NetBSD: patch-ao,v 1.1 2001/03/25 01:09:52 jtb Exp $
  /*
   * Meaning of each defined macros (not completed yet)
   *
-@@ -1253,6 +1255,74 @@
+@@ -1253,6 +1255,71 @@
  #endif
  
  #endif /* IA64 */
 +
-+#endif  /* NetBSD */
++#endif  /* ! NetBSD */
 +
 +#ifdef __NetBSD__
 +
@@ -30,13 +30,10 @@ $NetBSD: patch-ao,v 1.1 2001/03/25 01:09:52 jtb Exp $
 +#include <sys/stat.h>
 +#ifdef vax
 +#define DF_MT             DFMT_VAX
-+#endif
-+#if defined(amigappc) || defined(bebox) || defined(luna68k) || defined(m68k) || defined(mac68k) || defined(macppc) || defined(mvme68k) || defined(news68k) || defined(next68k) || defined(next68k) || defined(powerpc) || defined(sun3) || defined(x68k)
++#elif defined(amigappc) || defined(bebox) || defined(luna68k) || defined(m68k) || defined(mac68k) || defined(macppc) || defined(mvme68k) || defined(news68k) || defined(next68k) || defined(next68k) || defined(powerpc) || defined(sun3) || defined(x68k)
 +#define DF_MT             DFMT_MOTOROLA
 +#else
-+#ifndef vax
 +#define DF_MT             DFMT_ALPHA
-+#endif
 +#endif
 +typedef void              VOID;
 +typedef void              *VOIDP;
