@@ -1,22 +1,14 @@
-*** doc/Makefile.in.orig	Thu Jan 30 22:12:33 1997
---- doc/Makefile.in	Wed Jan 21 00:13:58 1998
-***************
-*** 155,161 ****
-  	-$(INSTALL_DATA) $(srcdir)/bashref.info $(infodir)/bash.info
-  # run install-info if it is present to update the info directory
-  	if $(SHELL) -c 'install-info --version' >/dev/null 2>&1; then \
-! 		install-info --dir-file=$(infodir)/dir $(infodir)/bash.info; \
-  	else true; fi
-  
-  uninstall:
---- 155,164 ----
-  	-$(INSTALL_DATA) $(srcdir)/bashref.info $(infodir)/bash.info
-  # run install-info if it is present to update the info directory
-  	if $(SHELL) -c 'install-info --version' >/dev/null 2>&1; then \
-! 		install-info \
-! 		--entry="* BASH: (bash).                 Bash Reference Manual." \
-! 		-s "Shells" \
-! 		--dir-file=$(infodir)/dir $(infodir)/bash.info; \
-  	else true; fi
-  
-  uninstall:
+--- doc/Makefile.in.orig	Tue Mar  3 14:02:18 1998
++++ doc/Makefile.in	Tue Aug  4 21:18:04 1998
+@@ -170,7 +170,10 @@
+ 	-$(INSTALL_DATA) $(srcdir)/bashref.info $(infodir)/bash.info
+ # run install-info if it is present to update the info directory
+ 	if $(SHELL) -c 'install-info --version' >/dev/null 2>&1; then \
+-		install-info --dir-file=$(infodir)/dir $(infodir)/bash.info; \
++		install-info \
++		--entry="* BASH: (bash).                 Bash Reference Manual." \
++		-s "Shells" \
++		--dir-file=$(infodir)/dir $(infodir)/bash.info; \
+ 	else true; fi
+ 
+ uninstall:

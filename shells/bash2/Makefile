@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.10 1998/06/22 13:07:50 agc Exp $
+$NetBSD: Makefile,v 1.11 1998/08/05 10:47:20 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.26 1997/06/27 23:03:27 ache Exp 
 #
 
-V=		2.02
+V=		2.02.1
+DV=		2.02
 DISTNAME=       bash-${V}
 CATEGORIES=	shells
 MASTER_SITES=	ftp://slc2.ins.cwru.edu/pub/dist/  \
@@ -11,10 +12,12 @@ MASTER_SITES=	ftp://slc2.ins.cwru.edu/pub/dist/  \
 .include "../../mk/bsd.prefs.mk"
 
 .if !defined(NOPORTDOCS)
-DISTFILES=      bash-${V}.tar.gz bash-doc-${V}.tar.gz
+DISTFILES=      bash-${V}.tar.gz bash-doc-${DV}.tar.gz
 .endif
 
 MAINTAINER=	packages@netbsd.org
+
+CONFLICTS=	bash-2.02
 
 GNU_CONFIGURE=	Yes
 USE_GTEXINFO=	yes
@@ -29,16 +32,16 @@ post-install:
 .if !defined(NOPORTDOCS)
 	${MKDIR} ${PREFIX}/share/doc/bash
 	${INSTALL_MAN}  \
-		${WRKDIR}/bash-doc-${V}/doc/article.ps  \
-		${WRKDIR}/bash-doc-${V}/doc/bashref.ps  \
+		${WRKDIR}/bash-doc-${DV}/doc/article.ps  \
+		${WRKDIR}/bash-doc-${DV}/doc/bashref.ps  \
 		${PREFIX}/share/doc/bash
 	${INSTALL_MAN}  \
-		${WRKDIR}/bash-doc-${V}/doc/bash.html  \
-		${WRKDIR}/bash-doc-${V}/doc/bashref.html  \
-		${WRKDIR}/bash-doc-${V}/doc/bashref_toc.html  \
+		${WRKDIR}/bash-doc-${DV}/doc/bash.html  \
+		${WRKDIR}/bash-doc-${DV}/doc/bashref.html  \
+		${WRKDIR}/bash-doc-${DV}/doc/bashref_toc.html  \
 		${PREFIX}/share/doc/bash
 	${INSTALL_MAN}  \
-		${WRKDIR}/bash-doc-${V}/doc/article.txt  \
+		${WRKDIR}/bash-doc-${DV}/doc/article.txt  \
 		${PREFIX}/share/doc/bash
 	${GZIP_CMD} ${PREFIX}/share/doc/bash/*.ps
 .endif
