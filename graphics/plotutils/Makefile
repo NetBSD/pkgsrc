@@ -1,10 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2000/08/24 00:08:39 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.12 2000/08/25 23:47:13 dmcmahill Exp $
 #
 
 DISTNAME=		plotutils-2.4.1
-# "nb1" is added to distinguish libplotter enabled version and existent pkg.
-# If you update the base source above 2.3, this hack will no longer needed.
-#PKGNAME=		plotutils-2.3nb1
 CATEGORIES=		devel graphics x11
 MASTER_SITES=		${MASTER_SITE_GNU:=plotutils/}
 
@@ -15,6 +12,9 @@ DEPENDS+=		png>=1.0.6:../../graphics/png
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-libplotter
+# make sure configure finds png
+CPPFLAGS+=		-I${LOCALBASE}/include
+CONFIGURE_ENV+=		CFLAGS="${CFLAGS}" CPPFLAGS="${CPPFLAGS}"
 
 USE_LIBTOOL=		yes
 USE_X11BASE=		yes
