@@ -3,10 +3,11 @@
 # Copyright (c) 2002, 2003 by Andrew Brown <atatat@netbsd.org>
 # Absolutely no warranty.
 
-# $NetBSD: pkgdepgraph.pl,v 1.7 2003/03/26 04:50:19 atatat Exp $
+# $NetBSD: pkgdepgraph.pl,v 1.8 2003/04/30 03:39:18 atatat Exp $
 # pkgdepgraph: @DISTVER@
 
 use strict;
+# no strict 'refs';
 
 use Getopt::Long;
 Getopt::Long::Configure("bundling");
@@ -14,42 +15,51 @@ my(@opts, %opt);
 my($iam, $version, $usecolor, $group, $locations, $order, $versions);
 my($limit, $delete, $rebuild, $force, @outofdate, @update, $clean);
 my($pkg_dbdir, $pkgsrcdir, $packages, $pkgadd, $fetch, $make);
+my($all, $target, $exists, $reverse, $simple, @subgraph);
 
 $version = '@DISTVER@';
 ($iam = $0) =~ s:.*/::;
-@opts = ('A', 'C', 'c', 'D', 'd=s', 'F', 'f', 'g', 'K=s', 'L', 'l',
-	 'M=s', 'O=s', 'o', 'P=s', 'R', 't=s', 'U=s', 'v');
+@opts = ('A', 'a+', 'C', 'c', 'D', 'd=s', 'e', 'F', 'f', 'g', 'K=s',
+	 'L', 'l', 'M=s', 'm=s', 'O=s', 'o', 'P=s', 'R', 'r', 'S=s',
+	 's', 't=s', 'U=s', 'v');
 %opt = (
 	'A' => \$pkgadd,
+	'a' => \$all,
 	# 'C' => implies "realclean", handled later
 	# 'c' => implies "clean", handled later
 	'D' => \$delete,
 	'd' => \$pkg_dbdir,
-	'f' => \$force,
+	'e' => \$exists,
 	'F' => \$fetch,
+	'f' => \$force,
 	'g' => \$group,
 	'K' => \$packages,
 	'L' => \$limit,
 	'l' => \$locations,
 	'M' => \$make,
+	'm' => \$target,
 	'O' => \@outofdate,
 	'o' => \$order,
 	'P' => \$pkgsrcdir,
 	'R' => \$rebuild,
+	'r' => \$reverse,
+	'S' => \@subgraph,
+	's' => \$simple,
 	# 't' => goes to rebuild, handled later
 	'U' => \@update,
 	'v' => \$versions,
 	);
-die("usage: $iam [-ACcDFfgLloRv] [-d pkg_dbdir] [-K packages] [-M make]\n",
+die("usage: $iam [-AaCcDeFfgLloRrsv] [-d pkg_dbdir] [-K packages] [-M make]\n",
     " " x (length($iam) + 8),
-    "[-O package] [-P pkgsrcdir] [-t target] [-U package]\n",
+    "[-m target] [-O package] [-P pkgsrcdir] [-S package]\n",
     " " x (length($iam) + 8),
-    "[data ...]\n")
+    "[-t target] [-U package] [data ...]\n")
     if (!GetOptions(\%opt, @opts));
 
-die("$iam: -D, -F, and -R are mutually exclusive -- please pick one\n")
+die("$iam: -D, -F, -m, and -R are mutually exclusive -- please pick one\n")
     if (($delete != 0) + 
 	($fetch != 0) +
+	($target ne "") +
 	($rebuild ne "") > 1);
 
 $pkg_dbdir ||= $ENV{'PKG_DBDIR'} || "/var/db/pkg";
@@ -62,12 +72,13 @@ $clean = "clean" if ($opt{c});
 $clean = "CLEANDEPENDS=YES clean" if ($opt{C});
 $make ||= $ENV{'MAKE'} || "make";
 
-my(@pkgs, $pkg, $req, %req, @reqs, @rreqs);
+my(@pkgs, $pkg, $req, %req, %dep, @reqs, @rreqs);
 my(%clusters, $cluster);
 my(%where, $pkgcnt, $num, %num, @num, %ord, @ord, $suffix);
 my(%color, $color, %vuln);
 my(%need, %forced, $label);
 my($recolor, @graph);
+my(%vpkgs);
 
 ##
 ## load out-of-date or security problem list (if given), or a graph to
@@ -128,6 +139,7 @@ foreach $pkg (@pkgs) {
     while ($req = <R>) {
 	chomp($req);
 	$req{$req}->{$pkg} = 1;
+	$dep{$pkg}->{$req} = 1;
     }
     close(R);
 }
@@ -205,8 +217,12 @@ if ($recolor) {
 ##
 foreach $pkg (@pkgs) {
     @reqs = sort(keys %{$req{$pkg}});
-    @rreqs = recurse(@reqs);
+    @rreqs = recurse(\%req, @reqs);
     map(delete($req{$pkg}->{$_}), @rreqs);
+
+    @reqs = sort(keys %{$dep{$pkg}});
+    @rreqs = recurse(\%dep, @reqs);
+    map(delete($dep{$pkg}->{$_}), @rreqs);
 }
 
 ##
@@ -240,22 +256,38 @@ map(order(1, $_), @pkgs);
 
 ##
 ## assign each pkg a group number, and count the number of pkgs in
-## that group.  the higher the order number, the earlier we need to
-## assign them to a group.  the group numbers are arbitrary, and serve
-## only to identify pkgs that belong to the same group.
+## that group.  the group numbers are arbitrary, and serve only to
+## identify pkgs that belong to the same group.
 ##
 $num = 1;
-foreach $pkg (sort(byord @pkgs)) {
+foreach $pkg (@pkgs) {
     my($pkgnum);
+    # my direct requirements
     @reqs = sort(keys %{$req{$pkg}});
-    @rreqs = recurse(@reqs);
+    # all the requirements of my requirements
+    @rreqs = recurse(\%req, @reqs);
+    # the lowest group number from all of those
     $pkgnum = number($pkg, @reqs, @rreqs) || $num;
+    # stuff all those into the list for that group 
+    push(@{$num[$pkgnum]}, $pkg, @reqs, @rreqs);
+    # now check for packages coming from other groups
     foreach $req ($pkg, @reqs, @rreqs) {
-	$num[$num{$req}]--;
-	$num{$req} = $pkgnum;
-	$num[$num{$req}]++;
+	# no group yet, skip on
+	next if (!$num{$req});
+	# was $req in a different group
+	if ($num{$req} != $pkgnum) {
+	    # yes, pull that group into the current group 
+	    push(@{$num[$pkgnum]}, @{$num[$num{$req}]});
+	    # empty out the old group
+	    @{$num[$num{$req}]} = ();
+	}
     }
-    $num++;
+    # reduce the group list
+    @{$num[$pkgnum]} = uniq(sort(@{$num[$pkgnum]}));
+    # make sure all packages in this group know 
+    map($num{$_} = $pkgnum, @{$num[$pkgnum]});
+    # skip to next available group number
+    $num += ($num == $pkgnum);
 }
 
 ##
@@ -286,7 +318,7 @@ if (@update) {
     my(@leftover);
 
     canonicalize(@update);
-    @update = uniq(sort(@update, recurse(@update)));
+    @update = uniq(sort(@update, recurse(\%req, @update)));
 
     if ($force) {
 	foreach (@update) {
@@ -312,43 +344,73 @@ if (@update) {
 }
 
 ##
-## "delete" output, ordered with "least depended on" first
+## pick packages for a subgraph
 ##
-if ($delete) {
-    map(print("$_\n"),
-	reverse(sort(byord grep(color($_) ne "green", @pkgs))));
-    exit(0);
+## + means up from given package, - means down, ++ means all the way
+## up, -- means all the way down, = means all "connected" packages, etc.
+##
+if (@subgraph) {
+    my ($sub, $up, $down, $eq);
+    foreach (@subgraph) {
+	($sub) = (/^([-+=]+)/);
+	s/^[-+=]+//;
+	$sub = "+-" if ($sub eq "");
+	canonicalize($_);
+	$up = join("", ($sub =~ /(\+)/g));
+	$down = join("", ($sub =~ /(-)/g));
+	$eq = join("", ($sub =~ /(=)/g));
+	if ($eq) {
+	    map($vpkgs{$_} = 1, @{$num[$num{$_}]});
+	}
+	else {
+	    if ($up) {
+		@reqs = sort(keys %{$req{$_}});
+		@rreqs = (length($up) > 1) ? recurse(\%req, @reqs) : ();
+		map($vpkgs{$_} = 1, ($_, @reqs, @rreqs));
+	    }
+	    if ($down) {
+		@reqs = sort(keys %{$dep{$_}});
+		@rreqs = (length($down) > 1) ? recurse(\%dep, @reqs) : ();
+		map($vpkgs{$_} = 1, ($_, @reqs, @rreqs));
+	    }
+	}
+    }
+}
+else {
+    @vpkgs{@pkgs} = (1) x @pkgs;
 }
 
 ##
-## "fetch" output, in no particular order (as with the rebuild
-## output), but with all out-of-date pkgs listed, instead of all stale
-## leaf pkgs.
+## translate "older" alternate output modes to the new generic version
 ##
 if ($fetch) {
-    map(print("( cd $pkgsrcdir/$where{$_} && $make fetch ) &&\n"),
-	grep(color($_) eq "red", @pkgs));
-    print("true\n");
-    exit(0);
+    $target = "fetch";
+}
+elsif ($rebuild) {
+    $exists = 1;
+    $limit = 1;
+    $target = $rebuild;
+}
+elsif ($delete) {
+    $all++;
+    $simple = 1;
 }
 
 ##
-## "rebuild" output for sh(1), with just leaves listed.  all the
-## dependencies will be built "automagically" by the regular build
-## mechanism.  if $add is set, emit commands for installing binary
-## pkgs instead.
+## "target" output mode, ordered by ascendency
 ##
-if ($rebuild) {
-    printf("PKG_PATH=\"$packages\"\nexport PKG_PATH\n") if ($pkgadd);
-
-    map($pkgadd ?
-	printf("( pkg_info -qe %s || pkg_add %s.tgz ) &&\n",
-	       /(.*)-.*/, ($need{$_} || $_)) :
-	printf("( pkg_info -qe %s || ( cd %s && $make %s%s )) &&\n",
-	       /(.*)-.*/, "$pkgsrcdir/$where{$_}",
-	       $rebuild, $clean ? " && $make $clean" : ""),
-	grep(color($_) ne "green" && $ord{$_} == 1, @pkgs));
-    print("true\n");
+if ($target || $simple) {
+    my(@targets);
+    printf("PKG_PATH=\"$packages\"\nexport PKG_PATH\n")
+	if ($pkgadd && $rebuild);
+    @targets = grep((color($_) eq "red" && !$limit) ||
+		    (color($_) ne "green" &&
+		     ($all || ($ord{$_} == 1 && $limit))) ||
+		    ($all > 1), keys %vpkgs);
+    @targets = sort(byord @targets);
+    @targets = reverse(@targets) if (!$reverse);
+    print_package(@targets);
+    print("true\n") if (!$simple);
     exit(0);
 }
 
@@ -357,10 +419,11 @@ if ($rebuild) {
 ##
 printf("digraph \"%s packages\" {\n",
        $limit ? "out of date" : "installed");
-printf("label = \"%s packages graph, generated by %s v%s, on %s\";\n",
+printf("label = \"%s packages %s, generated by %s v%s, on %s\";\n",
        $limit ? "out of date" : "installed",
+       @subgraph ? "subgraph (@subgraph)" : "graph",
        $iam, $version, scalar(localtime));
-foreach $pkg (sort(bynum @pkgs)) {
+foreach $pkg (sort(bynum keys %vpkgs)) {
     $color = color($pkg);
     next if ($limit && $color eq "green");
     $label = $pkg;
@@ -372,7 +435,8 @@ foreach $pkg (sort(bynum @pkgs)) {
 	$label .= "\\n(no update available)" if (!$need{$pkg});
 	$label .= "\\n[$vuln{$pkg}]";
     }
-    $suffix = "\t// \#$ord{$pkg}, group $num{$pkg}, $num[$num{$pkg}] members, $pkgcnt pkgs";
+    $suffix = "\t// \#$ord{$pkg}, group $num{$pkg}, " .
+	scalar(@{$num[$num{$pkg}]}) . " members, $pkgcnt pkgs";
     $suffix .= ", LEAF" if ($ord{$pkg} == 1);
 
     ##
@@ -412,14 +476,40 @@ foreach $pkg (sort(bynum @pkgs)) {
 print("}\n");
 
 ##
-## find all dependencies below a given node
+## print sh(1) style commands to handle work on a given package, or
+## just the package name if $simple is set
+##
+sub print_package {
+    foreach (@_) {
+	printf("( pkg_info -qe %s || ", /(.*)-.*/) if ($exists && !$simple);
+	if ($simple) {
+	    print($_);
+	}
+	elsif ($pkgadd) {
+	    printf("( pkg_add %s.tgz", ($need{$_} || $_));
+	}
+	else {
+	    print("( cd $pkgsrcdir/$where{$_} && $make $target");
+	    print(" && $make $clean") if ($clean);
+	}
+	if (!$simple) {
+	    print(" )") if ($exists);
+	    print(" ) &&");
+	}
+	print("\n");
+    }
+}
+
+##
+## find all dependencies above or below a given node
 ##
 sub recurse {
-    my(@list, @new);
+    my(@list, @new, $map);
     @list = ();
+    $map = shift;
     foreach (@_) {
-	@new = keys %{$req{$_}};
-	push(@list, @new, recurse(@new));
+	@new = keys %{$map->{$_}};
+	push(@list, @new, recurse($map, @new));
     }
     uniq(sort(@list));
 }
@@ -448,7 +538,7 @@ sub canonicalize {
 }
 
 ##
-## lowest number of a graph
+## lowest group number of a set of packages
 ##
 sub number {
     my($n, $pkg);
@@ -470,7 +560,7 @@ sub color {
     else {
 	my($req, @reqs, $color);
 	@reqs = sort(keys %{$req{$pkg}});
-	@reqs = (@reqs, recurse(@reqs));
+	@reqs = (@reqs, recurse(\%req, @reqs));
 	$color = "green";
 	foreach $req (@reqs) {
 	    if ($color{$req} eq "red") {
