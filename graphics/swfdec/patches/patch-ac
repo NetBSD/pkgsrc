@@ -1,7 +1,16 @@
-$NetBSD: patch-ac,v 1.1 2003/05/01 12:36:15 jmmv Exp $
+$NetBSD: patch-ac,v 1.2 2004/01/22 12:48:32 jmmv Exp $
 
---- pixbuf-loader/Makefile.in.orig	2003-05-01 14:18:55.000000000 +0200
+--- pixbuf-loader/Makefile.in.orig	2003-02-05 21:37:46.000000000 +0100
 +++ pixbuf-loader/Makefile.in
+@@ -102,7 +102,7 @@ SDL_CFLAGS = @SDL_CFLAGS@
+ SDL_LIBS = @SDL_LIBS@
+ STRIP = @STRIP@
+ SWF_CFLAGS = @SWF_CFLAGS@
+-SWF_LIBS = @SWF_LIBS@
++SWF_LIBS = `pkg-config --libs swfdec glib-2.0` -lz
+ VERSION = @VERSION@
+ X_CFLAGS = @X_CFLAGS@
+ X_EXTRA_LIBS = @X_EXTRA_LIBS@
 @@ -391,10 +391,6 @@ uninstall-am: uninstall-info-am uninstal
  
  
