@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2003/07/30 13:58:36 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2004/01/15 11:24:07 markd Exp $
 bin/dsirc
 bin/kdict
 bin/kget
@@ -276,6 +276,7 @@ share/kde/applnk/Utilities/kdict.desktop
 share/kde/applnk/Utilities/kmailcvt.desktop
 share/kde/apps/kconf_update/kmail-3.1-update-new-mail-notification-settings.pl
 share/kde/apps/kconf_update/kmail-3.1-use-UOID-for-identities.pl
+share/kde/apps/kconf_update/kmail-3.1.4-dont-use-UOID-0-for-any-identity.pl
 share/kde/apps/kconf_update/kmail-pgpidentity.pl
 share/kde/apps/kconf_update/kmail-upd-identities.pl
 share/kde/apps/kconf_update/kmail.upd
