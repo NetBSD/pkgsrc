@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.94 2000/07/06 15:08:30 hubertf Exp $
+# $NetBSD: Packages.txt,v 1.95 2000/07/06 16:52:12 hubertf Exp $
 ###########################################################################
 
 			==========================
@@ -238,6 +238,12 @@ at build time.  Have a look at /usr/pkgsrc/mk/mk.conf.example to get
 an overview of what you can set there.  Environment variables such as
 LOCALBASE, and X11BASE can also be set in /etc/mk.conf to save having
 to remember to set them each time you want to use pkgsrc.
+
+If you want to deinstall and re-install a binary package that you've
+created (see next section) or that you put into pkgsrc/packages
+manually, you can use the the "bin-install" target, which will
+install a binary package - if available - via pkg_add, and do a "make
+package" else.
 
 
  3 Making a precompiled package
