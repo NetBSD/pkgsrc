@@ -1,27 +1,27 @@
-@comment $NetBSD: PLIST,v 1.2 2002/01/09 05:50:56 itojun Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/07/01 17:25:59 toshii Exp $
 bin/editcap
 bin/ethereal
 bin/idl2eth
 bin/mergecap
 bin/tethereal
 bin/text2pcap
+etc/diameter/dictionary.dtd
+etc/diameter/dictionary.xml
+etc/diameter/mobileipv4.xml
+etc/diameter/nasreq.xml
+etc/diameter/sunping.xml
 etc/manuf
-etc/dictionary.dtd
-etc/dictionary.xml
-etc/mobileipv4.xml
-etc/nasreq.xml
-etc/sunping.xml
-lib/ethereal/plugins/${PKGVERSION}/coseventcomm.la
 lib/ethereal/plugins/${PKGVERSION}/coseventcomm.a
+lib/ethereal/plugins/${PKGVERSION}/coseventcomm.la
 lib/ethereal/plugins/${PKGVERSION}/coseventcomm.so
-lib/ethereal/plugins/${PKGVERSION}/cosnaming.la
 lib/ethereal/plugins/${PKGVERSION}/cosnaming.a
+lib/ethereal/plugins/${PKGVERSION}/cosnaming.la
 lib/ethereal/plugins/${PKGVERSION}/cosnaming.so
-lib/ethereal/plugins/${PKGVERSION}/gryphon.la
 lib/ethereal/plugins/${PKGVERSION}/gryphon.a
+lib/ethereal/plugins/${PKGVERSION}/gryphon.la
 lib/ethereal/plugins/${PKGVERSION}/gryphon.so
-lib/ethereal/plugins/${PKGVERSION}/mgcp.la
 lib/ethereal/plugins/${PKGVERSION}/mgcp.a
+lib/ethereal/plugins/${PKGVERSION}/mgcp.la
 lib/ethereal/plugins/${PKGVERSION}/mgcp.so
 man/man1/editcap.1
 man/man1/ethereal.1
@@ -29,6 +29,7 @@ man/man1/idl2eth.1
 man/man1/mergecap.1
 man/man1/tethereal.1
 man/man1/text2pcap.1
+@dirrm etc/diameter
 @dirrm lib/ethereal/plugins/${PKGVERSION}
 @dirrm lib/ethereal/plugins
 @dirrm lib/ethereal

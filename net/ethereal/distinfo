@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2002/06/02 11:21:33 tron Exp $
+$NetBSD: distinfo,v 1.12 2002/07/01 17:25:59 toshii Exp $
 
-SHA1 (ethereal-0.9.4.tar.gz) = c2582bf4ae8432f076c73e4d781146ef928a1032
-Size (ethereal-0.9.4.tar.gz) = 3278908 bytes
+SHA1 (ethereal-0.9.5.tar.gz) = bbe8689f0a007ab1d1b5f424b40c256be3309b4c
+Size (ethereal-0.9.5.tar.gz) = 3384282 bytes
