@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7527 2004/10/23 00:23:20 minskim Exp $
+$NetBSD: CHANGES,v 1.7528 2004/10/23 06:13:14 epg Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4820,3 +4820,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated aumix to 2.8nb6 [jmmv 2004-10-22]
 	Added aumix-gtk-2.8 [jmmv 2004-10-22]
 	Added p5-Class-Factory-1.00 [minskim 2004-10-23]
+	Updated subversion to 1.1.1 [epg 2004-10-23]
