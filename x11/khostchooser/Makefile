@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/05/20 20:09:53 tron Exp $
+# $NetBSD: Makefile,v 1.3 1999/06/04 00:11:37 tron Exp $
 #
 
 DISTNAME=	khostchooser-0.3
@@ -10,7 +10,7 @@ MAINTAINER=	root@garbled.net
 HOMEPAGE=       http://stud1.tuwien.ac.at/~e9025461/
 
 BUILD_DEPENDS+=	${LOCALBASE}/bin/msgfmt:../../devel/gettext
-DEPENDS+=	kdelibs-1.1:../../x11/kdelibs
+DEPENDS+=	kdelibs-1.1.1:../../x11/kdelibs
 DEPENDS+=	xpm-3.4k:../../graphics/xpm
 DEPENDS+=	giflib-3.0:../../graphics/giflib
 
