@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5190 2004/03/10 18:13:11 wiz Exp $
+$NetBSD: CHANGES,v 1.5191 2004/03/10 18:17:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1383,3 +1383,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated firefox to 0.8nb1 [taya 2004-03-10]
 	Updated firefox-gtk2 to 0.8nb1 [taya 2004-03-10]
 	Updated doclifter to 1.8 [wiz 2004-03-10]
+	Updated capc-calc to 2.11.9.2 [wiz 2004-03-10]
