@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/02/14 00:54:46 grant Exp $
+# $NetBSD: Makefile,v 1.8 2004/03/10 14:12:51 xtraeme Exp $
 #
 
 DISTNAME=	golem-0.0.5
@@ -10,7 +10,7 @@ MAINTAINER=	reide@darkest.org
 HOMEPAGE=	http://golem.sourceforge.net/
 COMMENT=	Fast and lightweight yet customizable window manager
 
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 USE_PKGINSTALL=	YES
 USE_GNU_TOOLS+=	make
 USE_X11=	YES
@@ -28,7 +28,7 @@ GOLEM_WITH_SOUND?=	NO
 BUILD_DEFS=		GOLEM_WITH_SOUND
 CONFIGURE_ARGS+=	--enable-sound
 PLIST_SUBST=		NOT_SOUND=
-.include "../../audio/esound/buildlink2.mk"
+.include "../../audio/esound/buildlink3.mk"
 .else
 PLIST_SUBST=		NOT_SOUND="@comment "
 .endif
@@ -47,5 +47,5 @@ post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/golemrc ${EGDIR}/golemrc.default
 
-.include "../../graphics/xpm/buildlink2.mk"
+.include "../../graphics/xpm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

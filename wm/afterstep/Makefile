@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2003/07/17 22:55:08 grant Exp $
+# $NetBSD: Makefile,v 1.24 2004/03/10 14:12:50 xtraeme Exp $
 
 DISTNAME=	AfterStep-1.8.11
 PKGNAME=	afterstep-1.8.11
@@ -16,7 +16,7 @@ DEPENDS+=		asclock-[0-9]*:../../time/asclock
 DEPENDS+=		xp-[0-9]*:../../x11/xp
 
 AUTOCONF_REQD=		2.13
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 USE_X11=		YES
@@ -41,9 +41,9 @@ pre-configure:
 	  ${CHMOD} 755 configure; \
 	  ${AUTOHEADER} --localdir=autoconf autoconf/configure.in > autoconf/config.h.in;
 
-.include "../../audio/rplay/buildlink2.mk"
-.include "../../graphics/jpeg/buildlink2.mk"
-.include "../../graphics/png/buildlink2.mk"
-.include "../../graphics/xpm/buildlink2.mk"
+.include "../../audio/rplay/buildlink3.mk"
+.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
+.include "../../graphics/xpm/buildlink3.mk"
 .include "../../mk/autoconf.mk"
 .include "../../mk/bsd.pkg.mk"
