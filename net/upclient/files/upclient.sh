@@ -1,4 +1,7 @@
 #!/bin/sh
+#
+# $NetBSD: upclient.sh,v 1.6 2002/09/23 15:24:13 grant Exp $
+#
 
 pidfile=/var/run/upclient.pid
 
