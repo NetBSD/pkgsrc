@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.15 2004/02/04 13:35:51 markd Exp $
+# $NetBSD: buildlink2.mk,v 1.16 2004/02/06 13:48:05 tron Exp $
 #
 # This Makefile fragment is included by packages that use arts.
 
@@ -58,7 +58,9 @@ BUILDLINK_FILES.arts+=	lib/mcop/soundserver.mcoptype
 BUILDLINK_FILES.arts+=	lib/mcop/x11globalcomm.mcopclass
 BUILDLINK_FILES.arts+=	lib/mcop/x11globalcomm.mcoptype
 
+.include "../../audio/esound/buildlink2.mk"
 .include "../../audio/libaudiofile/buildlink2.mk"
+.include "../../audio/libmad/buildlink2.mk"
 .include "../../audio/libogg/buildlink2.mk"
 .include "../../audio/libvorbis/buildlink2.mk"
 .include "../../devel/glib2/buildlink2.mk"

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2004/02/04 13:35:51 markd Exp $
+# $NetBSD: Makefile,v 1.24 2004/02/06 13:48:05 tron Exp $
 
 DISTNAME=	arts-1.2.0
+PKGREVISION=	1
 CATEGORIES=	audio
 COMMENT=	Analog Real-Time Synthesizer
 
@@ -17,7 +18,9 @@ BUILD_DEPENDS+=		pkgconfig>=0.15.0:../../devel/pkgconfig
 # Ensure we export symbols in the linked shared object.
 LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}
 
+.include "../../audio/esound/buildlink2.mk"
 .include "../../audio/libaudiofile/buildlink2.mk"
+.include "../../audio/libmad/buildlink2.mk"
 .include "../../audio/libogg/buildlink2.mk"
 .include "../../audio/libvorbis/buildlink2.mk"
 .include "../../devel/glib2/buildlink2.mk"
