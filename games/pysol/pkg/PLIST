@@ -1,3 +1,4 @@
+@comment $NetBSD: PLIST,v 1.2 1999/12/14 00:44:52 sakamoto Exp $
 bin/pysol
 share/pysol/cardset-aisleriot/01c.gif
 share/pysol/cardset-aisleriot/01d.gif
