@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/01/24 14:50:06 grant Exp $
+# $NetBSD: Makefile,v 1.13 2004/08/30 18:13:18 martti Exp $
 
 PKGNAME=	proftpd-1.2.9
 DISTNAME=	proftpd-1.2.9
@@ -25,6 +25,29 @@ RCD_SCRIPTS=	proftpd
 CONF_FILES=	${PREFIX}/share/examples/proftpd/basic.conf \
 		${PKG_SYSCONFDIR}/proftpd.conf
 
+PKG_SUPPORTED_OPTIONS = pam wrap quota
+PKG_OPTIONS_VAR       = PROFTPD_OPTIONS
+
+# This (or something like this must be in mk/bsd.options.mk) to allow 
+# to see the supported options
+##BUILD_DEFS+=PKG_SUPPORTED_OPTIONS
+
+.include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Mpam)
+CONFIGURE_ARGS+=--enable-auth-pam
+.include "../../security/PAM/buildlink3.mk"
+.endif
+
+.if !empty(PKG_OPTIONS:Mwrap)
+MODULES:=${MODULES}mod_wrap
+.endif
+
+MODULES=#defined
+.if !empty(PKG_OPTIONS:Mquota)
+MODULES:=${MODULES}mod_quota
+.endif
+
 ## .if defined(PROFTPD_USE_LDAP) && ${PROFTPD_USE_LDAP} == "YES"
 ## MODULES:=	${MODULES}:mod_ldap
 ## DEPENDS+=	openldap-[0-9]*:../../databases/openldap
@@ -40,21 +63,13 @@ CONF_FILES=	${PREFIX}/share/examples/proftpd/basic.conf \
 ## DEPENDS+=	postgresql-client-[0-9]*:../../databases/postgresql-client
 ## .endif
 ##
-## .if defined(PROFTPD_USE_QUOTA) && ${PROFTPD_USE_QUOTA} == "YES"
-## MODULES:=	${MODULES}:mod_quota
-## .endif
-##
 ## .if defined(PROFTPD_USE_README) && ${PROFTPD_USE_README} == "YES"
 ## MODULES:=	${MODULES}:mod_readme
 ## .endif
-##
-## .if defined(PROFTPD_USE_WRAP) && ${PROFTPD_USE_WRAP} == "YES"
-## MODULES:=	${MODULES}:mod_wrap
-## .endif
-##
-## .if !empty(MODULES)
-## CONFIGURE_ARGS+=--with-modules=${MODULES}
-## .endif
+
+.if !empty(MODULES)
+CONFIGURE_ARGS+=--with-modules=${MODULES}
+.endif
 
 post-install:
 	# documentation
