@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2002/07/25 11:13:48 kim Exp $
+# $NetBSD: Makefile,v 1.36 2002/08/10 13:02:56 kim Exp $
 #
 
 DISTNAME=	tcsh-6.12.00
@@ -29,6 +29,8 @@ LOWER_OPSYS=	solaris${OS_VERSION}
 
 post-install:
 	@${ECHO} "Installing message catalogues"
+	@[ -d ${PREFIX}/${NLSDIR}/C ] || \
+	    ${INSTALL_DATA_DIR} ${PREFIX}/${NLSDIR}/C
 	@${INSTALL_DATA} ${WRKSRC}/tcsh.C.cat ${PREFIX}/${NLSDIR}/C/tcsh.cat
 	@${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
 	@${ECHO} ${NLSDIR}/C/tcsh.cat >> ${PLIST_SRC}
@@ -56,6 +58,8 @@ post-install:
 	    o=;							\
 	    while [ $$# -gt 0 ]; do				\
 		d=${NLSDIR}/$${c}_$$1.$${s};			\
+		[ -d ${PREFIX}/$$d ] ||				\
+		    ${INSTALL_DATA_DIR} ${PREFIX}/$$d;		\
 		if [ -z "$$o" ]; then				\
 		    o="$$d";					\
 		    ${INSTALL_DATA} ${WRKSRC}/tcsh.$${l}.cat	\
