@@ -1,4 +1,4 @@
-$NetBSD: md5,v 1.8 1999/09/19 13:53:51 fredb Exp $
+$NetBSD: md5,v 1.9 1999/11/12 08:13:56 fredb Exp $
 
 MD5 (AfterStep/AfterStep-1.7.142.tar.bz2) = 7378c78b10025b1a313ab1c7dad079dd
 MD5 (AfterStep/1.7.142-01-sasha-png_jpg_warnings.patch.gz) = c49f966792fbb1ae1b13e553ec08c69e
@@ -8,3 +8,9 @@ MD5 (AfterStep/1.7.142-04-allanon-desk_and_shaped_icons_and_wharf_reswallow.patc
 MD5 (AfterStep/1.7.142-05-allanon-desks_and_wharf.patch.gz) = 8de347561133316be76d436ef58aa2b3
 MD5 (AfterStep/1.7.142-06-sasha-menus_and_more.patch.gz) = a67b96a04fceaf8628747ef4fc37b5d9
 MD5 (AfterStep/1.7.142-07-sasha-winfunctions_scroll.patch.gz) = 4fee86b0e52416989051994cdf87ff7f
+MD5 (AfterStep/1.7.142-08-sasha-functions-gamma-etc.patch.gz) = d7e9e8f7acc20df7af98fba579f8e833
+MD5 (AfterStep/1.7.142-09-sasha-borders_myframes_more.patch.gz) = 326bba819c04606523a254ce0456721f
+MD5 (AfterStep/1.7.142-10-allanon-avoidcover.patch.gz) = 7498b6e4ed3c8e4853a28b533ff0608b
+MD5 (AfterStep/1.7.142-11-sasha-icons_shade_gamma.patch.gz) = a5038834d13da773b8e2d0b2a17d1523
+MD5 (AfterStep/1.7.142-12-allanon-window_position_and_shaping.patch.gz) = cfbe28a494acafee82fcfe6dc2bdf44a
+MD5 (AfterStep/1.7.142-13-sasha-titlebuttons_mapping.patch.gz) = 0649543debe21973891032e274621a0c
