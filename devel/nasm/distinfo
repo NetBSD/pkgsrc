@@ -1,14 +1,7 @@
-$NetBSD: distinfo,v 1.6 2005/02/23 22:24:21 agc Exp $
+$NetBSD: distinfo,v 1.7 2005/02/25 11:42:17 adam Exp $
 
-SHA1 (nasm-0.98.38.tar.gz) = cb58baa46900e8ce490fdc7c2cada35c2cc49ce0
-RMD160 (nasm-0.98.38.tar.gz) = 159070d9bc39098c56007c50b0c098fee25b89ff
-Size (nasm-0.98.38.tar.gz) = 641727 bytes
+SHA1 (nasm-0.98.39.tar.bz2) = 73d64812bb95774355f737c0fb0271382d23db67
+RMD160 (nasm-0.98.39.tar.bz2) = b5587b1b81f58cef3a50e438e8efb365945df587
+Size (nasm-0.98.39.tar.bz2) = 543976 bytes
 SHA1 (patch-aa) = b0a4c91d7448ba630bfb482ab8f97e98753169cb
 SHA1 (patch-ab) = bbe1d7219dd2e5ade8f97a4f3070bc87d3a7d4b5
-SHA1 (patch-ac) = 51e0bfa1c64729a4b2d509f48fd4929e591599e7
-SHA1 (patch-ad) = b24badef999b04e1d2fe6bc982077328f0d5ff0d
-SHA1 (patch-ae) = 709de8188a60e2acc7f30e65a0c403a4189011c0
-SHA1 (patch-af) = a02e34f7d2c8637df708e8229a496e505e4e2650
-SHA1 (patch-ag) = 16d8817e73be90d083684669e8aafcc1dfe66242
-SHA1 (patch-ah) = ec63d62e6fbcc33e34bafc9200a91b6325562925
-SHA1 (patch-ai) = 374b62391207364537bd467ce271088717bb4b31
