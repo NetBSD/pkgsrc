@@ -1,4 +1,4 @@
-# $NetBSD: transform-icc-cc,v 1.2.2.3 2005/02/25 14:46:51 tv Exp $
+# $NetBSD: transform-aix-cc,v 1.1.2.2 2005/02/25 14:46:51 tv Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -34,35 +34,19 @@
 # ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 # POSSIBILITY OF SUCH DAMAGE.
 
+# prepend -Wl, to linker arguments commonly passed to the compiler.
 case $arg in
-######################################################################
-# ignore flags that icc doesn't understand.
-######################################################################
--fexceptions|-ffast-math|-fomit-frame-pointer|-pedantic|-pipe|-s|-MP|-OPT:*)
-	arg=
-	msg_log $wrapperlog "   (transform-icc-cc) to: $arg"
+-H[0-9]*|-T[0-9]*|-b*)
+	arg=-Wl,$arg
+	msg_log $wrapperlog "   (transform-aix-cc) to: $arg"
 	addtocache=yes
 	;;
--finline-functions)
-	arg=-Ob2
-	msg_log $wrapperlog "   (transform-icc-cc) to: $arg"
-	addtocache=yes
-	;;
--funroll-all-loops|-funroll-loops)
-	arg=-unroll
-	msg_log $wrapperlog "   (transform-icc-cc) to: $arg"
-	addtocache=yes
-	;;
--O[4-9]|-O[12][0-9])
-	arg=-O3
-	msg_log $wrapperlog "   (transform-icc-cc) to: $arg"
-	addtocache=yes
-	;;
--Wall|-Wl,*)
-	;;
--W*)
-	arg=
-	msg_log $wrapperlog "   (transform-icc-cc) to: $arg"
-	addtocache=yes
-	;;
+# AIX ld(1) uses -G to create shared libraries, and we must make sure
+# the runtime linker is used.
+-shared)
+        arg="-Wl,-G -Wl,-brtl"
+        msg_log $wrapperlog "   (transform-aix-cc) to: $arg"
+        addtocache=yes
+        split_arg=yes
+        ;;
 esac
