@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2003/07/21 16:43:21 martti Exp $
+# $NetBSD: Makefile,v 1.51 2003/08/09 10:44:41 seb Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1998/08/09 15:13:33 kuriyama Exp
 #
 
@@ -24,7 +24,6 @@ CONFIG_SUB_OVERRIDE=	${WRKSRC}/config.sub
 USE_GNU_GETTEXT=	yes
 CONFIGURE_ARGS+=	--without-included-gettext
 
-USE_NEW_TEXINFO=	YES
 INFO_FILES=		gettext.info
 
 CONFIGURE_ENV+=		GCJ= ac_cv_prog_GCJ=

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/07/17 21:32:59 grant Exp $
+# $NetBSD: Makefile,v 1.5 2003/08/09 10:44:47 seb Exp $
 #
 
 DISTNAME=	papaya-0.1.7
@@ -13,7 +13,6 @@ COMMENT=	Simple scripts for software development
 USE_PERL5=	run
 USE_BUILDLINK2=	YES
 GNU_CONFIGURE=	YES
-USE_NEW_TEXINFO=	YES
 INFO_FILES=	papaya.info
 
 pre-configure:

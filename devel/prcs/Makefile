@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2003/07/17 21:33:10 grant Exp $
+# $NetBSD: Makefile,v 1.27 2003/08/09 10:44:48 seb Exp $
 # FreeBSD Id: Makefile,v 1.9 1997/10/13 05:11:40 jmacd Exp
 #
 
@@ -18,7 +18,6 @@ ONLY_FOR_PLATFORM=	NetBSD-*-alpha NetBSD-*-arm NetBSD-*-arm32	\
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		lispdir=${PREFIX}/share/examples/prcs
-USE_NEW_TEXINFO=	YES
 INFO_FILES=		prcs.info
 
 .include "../../mk/bsd.pkg.mk"

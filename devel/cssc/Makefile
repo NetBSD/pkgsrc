@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/07/17 21:30:00 grant Exp $
+# $NetBSD: Makefile,v 1.11 2003/08/09 10:44:38 seb Exp $
 #
 
 DISTNAME=	CSSC-0.15alpha.pl0
@@ -15,7 +15,6 @@ CONFIGURE_ARGS+=	--enable-binary
 USE_BUILDLINK2=	YES
 TEST_TARGET=	check
 
-USE_NEW_TEXINFO=	YES
 USE_MAKEINFO=		YES
 TEXINFO_REQD=		4.0
 INFO_FILES=		cssc.info

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2003/07/17 21:30:59 grant Exp $
+# $NetBSD: Makefile,v 1.43 2003/08/09 10:44:43 seb Exp $
 #
 
 DISTNAME=		texinfo-4.6
@@ -19,7 +19,6 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-libiconv-prefix=${BUILDLINK_PREFIX.iconv}
 CONFIGURE_ARGS+=	--with-libintl-prefix=${BUILDLINK_PREFIX.gettext}
 
-USE_NEW_TEXINFO=	YES
 INFO_FILES=		info-stnd.info info.info texinfo
 TEST_TARGET=		check
 

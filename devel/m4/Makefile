@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2003/08/09 07:03:14 heinz Exp $
+# $NetBSD: Makefile,v 1.24 2003/08/09 10:44:45 seb Exp $
 #
 
 DISTNAME=	m4-1.4
@@ -12,7 +12,6 @@ COMMENT=	GNU version of Unix m4 macro-processor
 
 USE_BUILDLINK2=		yes
 GNU_CONFIGURE=		yes
-USE_NEW_TEXINFO=	yes
 INFO_FILES=		m4.info
 USE_MAKEINFO=		yes
 

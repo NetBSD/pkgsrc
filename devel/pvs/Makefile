@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/07/17 21:33:16 grant Exp $
+# $NetBSD: Makefile,v 1.9 2003/08/09 10:44:47 seb Exp $
 #
 
 DISTNAME=		pvs-${VERSION}
@@ -24,7 +24,6 @@ NO_BUILD=		# defined
 CHECK_SHLIBS=		NO
 SHLIB_HANDLING=		NO
 USE_BUILDLINK2=		YES
-USE_NEW_TEXINFO=	YES
 INFO_DIR=		pvs/doc/release-notes
 INFO_FILES=		pvs-release-notes.info
 

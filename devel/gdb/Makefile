@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/07/21 16:43:21 martti Exp $
+# $NetBSD: Makefile,v 1.13 2003/08/09 10:44:38 seb Exp $
 #
 
 DISTNAME=       gdb-5.3
@@ -19,7 +19,6 @@ LIBTOOL_OVERRIDE=	${WRKSRC}/bfd/libtool ${WRKSRC}/opcodes/libtool
 REPLACE_LOCALEDIR_PATTERNS+=	Make-in
 INSTALL_TARGET=	install install-info
 TEST_TARGET=	check
-USE_NEW_TEXINFO=	YES
 INFO_FILES=		bfd.info gdb.info gdbint.info mmalloc.info stabs.info
 
 .include "../../mk/bsd.prefs.mk"

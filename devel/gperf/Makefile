@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/07/17 21:30:57 grant Exp $
+# $NetBSD: Makefile,v 1.13 2003/08/09 10:44:42 seb Exp $
 #
 
 DISTNAME=	gperf-2.7.2
@@ -9,7 +9,6 @@ MAINTAINER=	tech-pkg@NetBSD.org
 COMMENT=	GNU perfect hash function generator
 
 GNU_CONFIGURE=	yes
-USE_NEW_TEXINFO=	YES
 INFO_FILES=	gperf.info
 
 .include "../../mk/bsd.pkg.mk"
