@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/04/04 12:29:47 tron Exp $
+# $NetBSD: Makefile,v 1.4 2002/07/17 20:53:23 wiz Exp $
 
 DISTNAME=		ymessenger-0.93.0
 CATEGORIES=		chat
@@ -16,6 +16,8 @@ ONLY_FOR_PLATFORM=	NetBSD-1.4[Y-Z]-i386 NetBSD-1.4Z[A-Z]-i386 \
 			NetBSD-1.5_ALPHA-i386 NetBSD-1.[5-9]*-i386
 
 CHECK_SHLIBS=		no
+
+DIST_SUBDIR=		.
 
 RESTRICTED=		"Commercial software."
 NO_SRC_ON_FTP=		${RESTRICTED}
