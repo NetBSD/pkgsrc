@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2000/05/09 20:12:46 jwise Exp $
+# $NetBSD: Makefile,v 1.5 2000/05/09 20:54:42 jwise Exp $
 # STOP!  Don't update this to a later version of this software.
 # The JSDK and Apache Jakarta projects have merged, making the
 # jakarta-tomcat package the current version of this software.
@@ -21,7 +21,6 @@ BUILD_DEFS+=    JSDK_HOME
 NO_PATCH=
 NO_CONFIGURE=
 NO_BUILD=
-NO_MTREE=
 RESTRICTED=	"Read license before redistributing the Java(tm) Servlet Development Kit"
 NO_CDROM=	${RESTRICTED}
 MIRROR_DISTFILE=no
