@@ -1,15 +1,15 @@
-$NetBSD: patch-aa,v 1.6 2003/03/01 21:12:52 pooka Exp $
+$NetBSD: patch-aa,v 1.7 2003/09/02 00:30:56 pooka Exp $
 
---- include/config.h.orig	2003-02-23 16:43:19.000000000 +0200
-+++ include/config.h	2003-03-01 22:17:08.000000000 +0200
+--- include/config.h.orig	2003-08-30 03:07:15.000000000 +0300
++++ include/config.h	2003-09-02 03:04:54.000000000 +0300
 @@ -42,8 +42,8 @@
   * Define all of those you want supported in your binary.
   * Some combinations make no sense.  See the installation document.
   */
 -#define TTY_GRAPHICS	/* good old tty based graphics */
 -/* #define X11_GRAPHICS */	/* X11 interface */
-+/* #define TTY_GRAPHICS	/* good old tty based graphics */
-+#define X11_GRAPHICS		/* X11 interface */
++/* #define TTY_GRAPHICS	*//* good old tty based graphics */
++#define X11_GRAPHICS 	/* X11 interface */
  /* #define QT_GRAPHICS */	/* Qt interface */
  /* #define GNOME_GRAPHICS */	/* Gnome interface */
  /* #define MSWIN_GRAPHICS */	/* Windows NT, CE, Graphics */
@@ -37,12 +37,12 @@ $NetBSD: patch-aa,v 1.6 2003/03/01 21:12:52 pooka Exp $
  /* path and file name extension for compression program */
 -#define COMPRESS "/usr/bin/compress"	/* Lempel-Ziv compression */
 -#define COMPRESS_EXTENSION ".Z"		/* compress's extension */
-+/* #define COMPRESS "/usr/bin/compress"	/* Lempel-Ziv compression */
-+/* #define COMPRESS_EXTENSION ".Z"		/* compress's extension */
++/* #define COMPRESS "/usr/bin/compress"	*//* Lempel-Ziv compression */
++/* #define COMPRESS_EXTENSION ".Z"	*/	/* compress's extension */
  /* An example of one alternative you might want to use: */
 -/* #define COMPRESS "/usr/local/bin/gzip" */	/* FSF gzip compression */
 -/* #define COMPRESS_EXTENSION ".gz" */		/* normal gzip extension */
-+#define COMPRESS "@GZIP_PROGRAM@"		/* FSF gzip compression */
++#define COMPRESS "@GZIP_PROGRAM@"	 	/* FSF gzip compression */
 +#define COMPRESS_EXTENSION ".gz"		/* normal gzip extension */
  #endif
  
@@ -52,7 +52,7 @@ $NetBSD: patch-aa,v 1.6 2003/03/01 21:12:52 pooka Exp $
  #    define HACKDIR "nethackdir"	/* nethack directory */
  #  else
 -#    define HACKDIR "/usr/games/lib/nethackdir"
-+#    define HACKDIR "XXXPREFIXXXX/share/nethackdir340"
++#    define HACKDIR PREFIX "/share/nethackdir340"
  #  endif
  # endif
  
@@ -61,7 +61,7 @@ $NetBSD: patch-aa,v 1.6 2003/03/01 21:12:52 pooka Exp $
   */
  
 -/* #define VISION_TABLES */ /* use vision tables generated at compile time */
-+#define VISION_TABLES /* use vision tables generated at compile time */
++#define VISION_TABLES  /* use vision tables generated at compile time */
  #ifndef VISION_TABLES
  # ifndef NO_MACRO_CPATH
  #  define MACRO_CPATH	/* use clear_path macros instead of functions */

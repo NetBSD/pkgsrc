@@ -1,7 +1,7 @@
-$NetBSD: patch-ad,v 1.4 2002/03/25 20:32:26 pooka Exp $
+$NetBSD: patch-ad,v 1.5 2003/09/02 00:30:55 pooka Exp $
 
---- sys/unix/nethack.sh.orig	Thu Mar 21 01:43:54 2002
-+++ sys/unix/nethack.sh	Fri Mar 22 17:39:00 2002
+--- sys/unix/nethack.sh.orig	2003-08-30 03:08:04.000000000 +0300
++++ sys/unix/nethack.sh	2003-09-02 02:52:31.000000000 +0300
 @@ -1,9 +1,15 @@
  #!/bin/sh
  #	SCCS Id: @(#)nethack.sh	3.4	1990/02/26
@@ -19,4 +19,4 @@ $NetBSD: patch-ad,v 1.4 2002/03/25 20:32:26 pooka Exp $
 +HACK=XXXPREFIXXXX/bin/nethack-$TTY
  MAXNROFPLAYERS=4
  
- # see if we can find the full path name of PAGER, so help files work properly
+ # Since Nethack.ad is installed in HACKDIR, add it to XUSERFILESEARCHPATH
