@@ -1,3 +1,5 @@
+$NetBSD: md5,v 1.2 1999/07/05 18:13:34 tron Exp $
+
 MD5 (xemacs/xemacs-base-1.30-pkg.tar.gz) = d9e95850fe8e13a04166d59d62fb38ab
 MD5 (xemacs/xemacs-devel-1.21-pkg.tar.gz) = aa472f2d412382c2fdd3150105ca7d1c
 MD5 (xemacs/c-support-1.12-pkg.tar.gz) = a793cd83bb595d34771332a46d2abfd4
