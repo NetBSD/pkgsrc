@@ -1,14 +1,15 @@
-# $NetBSD: Makefile,v 1.7 1999/01/30 23:18:57 agc Exp $
+# $NetBSD: Makefile,v 1.8 1999/02/02 10:27:55 tron Exp $
 
-DISTNAME=	wmthemes-0.50.x
+DISTNAME=	wmthemes-0.51.x
 CATEGORIES=	x11
 MASTER_SITES=	http://wm.themes.org/WMThemes/
+DIST_SUBDIR=	wmthemes
 DISTFILES=	${THEME_FILES}
 
 MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://wm.themes.org/
 
-DEPENDS+=	windowmaker-0.50.2:../../x11/windowmaker
+DEPENDS+=	windowmaker-0.51.0:../../x11/windowmaker
 
 CONFLICTS=	wm-themes-* wmthemes-*
 
@@ -32,8 +33,8 @@ do-install:
 	@if [ -d ${WRKSRC}/${DIR} ]; then \
 	  ${ECHO} "Installing files in directory ${DIR}."; \
 	  cd ${WRKSRC}/${DIR}; \
-	  for FILE in `ls`; do \
-	    ${INSTALL_DATA} $$FILE ${PREFIX}/${WM_DATADIR}/${DIR}; \
+	  for FILE in *; do \
+	    ${INSTALL_DATA} "$$FILE" ${PREFIX}/${WM_DATADIR}/${DIR}; \
 	    ${ECHO} ${WM_DATADIR}/${DIR}/$$FILE >>${PLIST_SRC}; \
 	  done; \
 	fi
