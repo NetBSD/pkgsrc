@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7453 2004/10/15 23:48:58 snj Exp $
+$NetBSD: CHANGES,v 1.7454 2004/10/16 11:57:45 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4743,3 +4743,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated evolution to 2.0.2 [jmmv 2004-10-15]
 	Updated xmms-flac to 1.1.1 [ben 2004-10-15]
 	Updated gqview to 1.4.5 [snj 2004-10-15]
+	Updated nikto to 1.34 [adrianp 2004-10-15]
