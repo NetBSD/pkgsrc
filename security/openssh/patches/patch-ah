@@ -1,19 +1,13 @@
-$NetBSD: patch-ah,v 1.5 2000/05/31 15:32:44 itojun Exp $
+$NetBSD: patch-ah,v 1.6 2000/07/02 22:07:56 itojun Exp $
 
---- Makefile.in.orig	Sat May 20 14:33:44 2000
-+++ Makefile.in	Wed May 31 18:55:11 2000
-@@ -6,6 +6,7 @@
- mandir=@mandir@
- mansubdir=@mansubdir@
+--- Makefile.in.orig	Tue Jun 27 15:24:49 2000
++++ Makefile.in	Sun Jul  2 14:30:43 2000
+@@ -8,2 +8,3 @@
  sysconfdir=@sysconfdir@
 +examplesdir=@prefix@/share/examples/ssh
  piddir=@piddir@
- srcdir=@srcdir@
- top_srcdir=@top_srcdir@
-@@ -131,14 +132,14 @@
- 	-rm -f $(DESTDIR)$(mandir)/$(mansubdir)1/slogin.1
+@@ -141,6 +142,6 @@
  	ln -s ssh.1 $(DESTDIR)$(mandir)/$(mansubdir)1/slogin.1
- 
 -	if [ ! -f $(DESTDIR)$(sysconfdir)/ssh_config -a ! -f $(DESTDIR)$(sysconfdir)/sshd_config ]; then \
 -		./mkinstalldirs $(DESTDIR)$(sysconfdir); \
 -		$(INSTALL) -m 644 ssh_config.out $(DESTDIR)$(sysconfdir)/ssh_config; \
@@ -23,16 +17,12 @@ $NetBSD: patch-ah,v 1.5 2000/05/31 15:32:44 itojun Exp $
 +		$(INSTALL) -m 644 ssh_config.out $(DESTDIR)$(examplesdir)/ssh_config; \
 +		$(INSTALL) -m 644 sshd_config.out $(DESTDIR)$(examplesdir)/sshd_config; \
  	fi
- 	if [ -f ssh_prng_cmds -a ! -z "$(INSTALL_SSH_PRNG_CMDS)" ]; then \
+@@ -148,3 +149,3 @@
  		$(PERL) fixprogs ssh_prng_cmds $(ENT); \
 -		$(INSTALL) -m 644 ssh_prng_cmds.out $(DESTDIR)$(sysconfdir)/ssh_prng_cmds; \
 +		$(INSTALL) -m 644 ssh_prng_cmds.out $(DESTDIR)$(examplesdir)/ssh_prng_cmds; \
  	fi
- 
- host-key: ssh-keygen
-@@ -146,10 +147,10 @@
- 	./ssh-keygen -d -f $(sysconfdir)/ssh_host_dsa_key -N ""
- 
+@@ -168,6 +169,6 @@
  uninstallall:	uninstall
 -	-rm -f $(DESTDIR)$(sysconfdir)/ssh_config
 -	-rm -f $(DESTDIR)$(sysconfdir)/sshd_config
@@ -43,5 +33,3 @@ $NetBSD: patch-ah,v 1.5 2000/05/31 15:32:44 itojun Exp $
 +	-rm -f $(DESTDIR)$(examplesdir)/ssh_prng_cmds
 +	-rmdir $(DESTDIR)$(examplesdir)
  	-rmdir $(DESTDIR)$(bindir)
- 	-rmdir $(DESTDIR)$(sbindir)
- 	-rmdir $(DESTDIR)$(mandir)/$(mansubdir)1
