@@ -1,0 +1,21 @@
+$NetBSD: patch-ab,v 1.1 1999/09/22 12:33:30 sakamoto Exp $
+
+--- ./configure.in.orig	Mon Aug 30 16:00:47 1999
++++ ./configure.in	Wed Sep 22 19:51:42 1999
+@@ -680,9 +680,11 @@
+     netbsd*)
+ 	LIBRUBY_SO='lib$(RUBY_INSTALL_NAME).so.$(MAJOR).$(MINOR)'
+- 	case "$host_cpu" in
+-	alpha|mipsel|mipseb|powerpc|sparc64)  # ELF platforms
+-	   LIBRUBY_ALIASES='lib$(RUBY_INSTALL_NAME).so.$(MAJOR) lib$(RUBY_INSTALL_NAME).so' ;;
+- 	*) LIBRUBY_ALIASES= ;;  # a.out platforms
+-	esac
++        rb_cv_netbsd_elf=`echo|cc -E -v - 2>&1 |grep __ELF__`
++        if test "x$rb_cv_netbsd_elf" != "x" ; then
++	   LIBRUBYARG='$(LIBRUBY_SO)'
++	   LIBRUBY_ALIASES='lib$(RUBY_INSTALL_NAME).so.$(MAJOR) lib$(RUBY_INSTALL_NAME).so'
++	else
++ 	   LIBRUBY_ALIASES=''
++	fi
+  	;;
+     solaris*)
