@@ -1,0 +1,11 @@
+--- Makefile.in.orig	Mon Oct 14 22:19:01 1996
++++ Makefile.in	Mon Mar  2 01:25:08 1998
+@@ -164,7 +164,7 @@
+ uudeview:	unix/config.h libuu.a
+ 	(cd unix;  $(MAKE) CC='$(CC)' CFLAGS='$(CFLAGS)' LIBS='$(LIBS)' )
+ 
+-xdeview:	tcl/config.h libuu.a
++xdeview:	tcl/config.h
+ 	(cd tcl;   $(MAKE) CC='$(CC)' CFLAGS='$(CFLAGS)' LIBS='$(LIBS)' )
+ 
+ libuu.a:	uulib/config.h
