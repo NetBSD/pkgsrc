@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2005/01/16 22:39:50 epg Exp $
+$NetBSD: distinfo,v 1.5 2005/02/02 03:05:16 epg Exp $
 
-SHA1 (SVK-0.28.tar.gz) = 0d8ceceed682678fa52ae416d5eb2319e50f4ba5
-Size (SVK-0.28.tar.gz) = 199751 bytes
+SHA1 (SVK-0.29.tar.gz) = 67f5610c71616cf4df5cab08e57ceb980e0e63bc
+Size (SVK-0.29.tar.gz) = 206378 bytes
