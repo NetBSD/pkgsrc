@@ -1,8 +1,8 @@
-$NetBSD: patch-aj,v 1.5 2001/12/12 17:06:20 taca Exp $
+$NetBSD: patch-aj,v 1.6 2002/10/13 16:43:21 taca Exp $
 
---- src/access_log.c.orig	Fri Jan 12 09:51:44 2001
+--- src/access_log.c.orig	Sun Jun 16 20:25:40 2002
 +++ src/access_log.c
-@@ -120,6 +120,8 @@
+@@ -120,6 +120,8 @@ log_quote(const char *header)
  {
      int c;
      int i;
@@ -11,9 +11,9 @@ $NetBSD: patch-aj,v 1.5 2001/12/12 17:06:20 taca Exp $
      char *buf;
      char *buf_cursor;
      if (header == NULL) {
-@@ -129,13 +131,41 @@
+@@ -129,13 +131,41 @@ log_quote(const char *header)
      }
-     buf = xcalloc((strlen(header) * 3) + 1, 1);
+     buf = xcalloc(1, (strlen(header) * 3) + 1);
      buf_cursor = buf;
 +
 +    /* if empty or first keyword is "all", log all mime headers */
@@ -54,7 +54,7 @@ $NetBSD: patch-aj,v 1.5 2001/12/12 17:06:20 taca Exp $
  #if !OLD_LOG_MIME
  	if (c == '\r') {
  	    *buf_cursor++ = '\\';
-@@ -143,6 +173,7 @@
+@@ -143,6 +173,7 @@ log_quote(const char *header)
  	} else if (c == '\n') {
  	    *buf_cursor++ = '\\';
  	    *buf_cursor++ = 'n';
