@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1 2002/12/19 12:46:30 abs Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2004/07/01 00:54:25 wiz Exp $
 
 .if !defined(WONKA_BUILDLINK2_MK)
 WONKA_BUILDLINK2_MK=	# defined
@@ -17,10 +17,6 @@ BUILDLINK_FILES_CMD.wonka= \
 EVAL_PREFIX+=	BUILDLINK_JAVA_PREFIX.wonka=wonka
 BUILDLINK_JAVA_PREFIX.wonka_DEFAULT= \
 	${BUILDLINK_PREFIX.wonka}/java/wonka
-
-BUILDLINK_CPPFLAGS.wonka= \
-	-I${BUILDLINK_JAVA_PREFIX.wonka}/include			\
-	-I${BUILDLINK_JAVA_PREFIX.wonka}/include/wonka
 
 BUILDLINK_TARGETS+=	wonka-buildlink
 
