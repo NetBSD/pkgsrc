@@ -1,0 +1,30 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/07/13 21:39:12 bjh21 Exp $
+bin/armv2-netbsd-addr2line
+bin/armv2-netbsd-ar
+bin/armv2-netbsd-as
+bin/armv2-netbsd-ld
+bin/armv2-netbsd-nm
+bin/armv2-netbsd-objcopy
+bin/armv2-netbsd-objdump
+bin/armv2-netbsd-ranlib
+bin/armv2-netbsd-size
+bin/armv2-netbsd-strings
+bin/armv2-netbsd-strip
+armv2-netbsd/bin/addr2line
+armv2-netbsd/bin/ar
+armv2-netbsd/bin/as
+armv2-netbsd/bin/ld
+armv2-netbsd/bin/nm
+armv2-netbsd/bin/objcopy
+armv2-netbsd/bin/objdump
+armv2-netbsd/bin/ranlib
+armv2-netbsd/bin/size
+armv2-netbsd/bin/strings
+armv2-netbsd/bin/strip
+lib/ldscripts/armelf.x
+lib/ldscripts/armelf.xbn
+lib/ldscripts/armelf.xn
+lib/ldscripts/armelf.xr
+lib/ldscripts/armelf.xs
+lib/ldscripts/armelf.xu
+@unexec rmdir %D/lib/ldscripts 2>/dev/null || true
