@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 1997/12/13 19:05:47 agc Exp $
+@comment $NetBSD: PLIST,v 1.6 1997/12/24 09:44:48 agc Exp $
 bin/b2m
 bin/ctags
 bin/etags
@@ -21,7 +21,9 @@ man/man1/gnuserv.1.gz
 man/man1/xemacs.1.gz
 @exec mkdir -p lib/xemacs/lock ; chmod 1777 lib/xemacs/lock
 @exec mkdir -p lib/xemacs/site-lisp ; chmod 755 lib/xemacs/site-lisp
+@unexec rm -rf %D/lib/xemacs
 @exec mkdir -p share/xemacs/site-lisp ; chmod 755 share/xemacs/site-lisp
+@unexec rm -rf %D/share/xemacs
 lib/xemacs-20.3/etc/BABYL
 lib/xemacs-20.3/etc/BETA
 lib/xemacs-20.3/etc/CODING-STANDARDS
@@ -343,8 +345,6 @@ lib/xemacs-20.3/etc/sgml/ietables.dtd
 lib/xemacs-20.3/etc/sgml/iso88591.map
 lib/xemacs-20.3/etc/sgml/sinfo.dtd
 lib/xemacs-20.3/etc/sgml/webtechs.catalog
-lib/xemacs-20.3/etc/sgml/ISO_8879:1986
-lib/xemacs-20.3/etc/sgml/ISO_8879:1986/entities
 lib/xemacs-20.3/etc/sgml/ISO_8879:1986/entities/Added_Latin_1
 lib/xemacs-20.3/etc/sgml/ISO_8879:1986/entities/Added_Latin_1_for_HTML
 lib/xemacs-20.3/etc/sgml/ISO_8879:1986/entities/Added_Math_Symbols:_Delimiters
@@ -427,7 +427,6 @@ lib/xemacs-20.3/etc/sounds/yell2.au
 lib/xemacs-20.3/etc/sounds/whistle.au
 lib/xemacs-20.3/etc/sparcworks/SW.Editor.xpm
 lib/xemacs-20.3/etc/sparcworks/sunpro-mailcap
-lib/xemacs-20.3/etc/tests/external-widget
 lib/xemacs-20.3/etc/tests/external-widget/Makefile
 lib/xemacs-20.3/etc/tests/external-widget/test-ew-motif.c
 lib/xemacs-20.3/etc/tests/external-widget/test-ew-xlib.c
@@ -1370,7 +1369,6 @@ lib/xemacs-20.3/lisp/hyperbole/hui-mini.el
 lib/xemacs-20.3/lisp/hyperbole/hui-mouse.el
 lib/xemacs-20.3/lisp/hyperbole/hui-window.el
 lib/xemacs-20.3/lisp/hyperbole/hui-xe-but.el
-lib/xemacs-20.3/lisp/hyperbole/kotl
 lib/xemacs-20.3/lisp/hyperbole/kotl/EXAMPLE.kotl
 lib/xemacs-20.3/lisp/hyperbole/kotl/kfile.el
 lib/xemacs-20.3/lisp/hyperbole/kotl/kfill.el
@@ -2587,11 +2585,80 @@ lib/xemacs-20.3/<$ARCH>--netbsd/add-little-package.sh
 lib/xemacs-20.3/<$ARCH>--netbsd/add-big-package.sh
 lib/xemacs-20.3/<$ARCH>--netbsd/DOC
 lib/xemacs-20.3/<$ARCH>--netbsd/config.values
-@unexec rm -rf lib/xemacs/lock/*
-@unexec rm -rf lib/xemacs/site-lisp/*
-@unexec rm -rf share/xemacs/site-lisp/*
-@dirrm lib/xemacs/lock
-@dirrm lib/xemacs/site-lisp
-@dirrm lib/xemacs
-@dirrm share/xemacs/site-lisp
-@dirrm share/xemacs
+@dirrm lib/xemacs-20.3/lisp/x11
+@dirrm lib/xemacs-20.3/lisp/w3
+@dirrm lib/xemacs-20.3/lisp/vm
+@dirrm lib/xemacs-20.3/lisp/viper
+@dirrm lib/xemacs-20.3/lisp/vc
+@dirrm lib/xemacs-20.3/lisp/utils
+@dirrm lib/xemacs-20.3/lisp/tooltalk
+@dirrm lib/xemacs-20.3/lisp/tm
+@dirrm lib/xemacs-20.3/lisp/tl
+@dirrm lib/xemacs-20.3/lisp/term
+@dirrm lib/xemacs-20.3/lisp/sunpro
+@dirrm lib/xemacs-20.3/lisp/rmail
+@dirrm lib/xemacs-20.3/lisp/psgml
+@dirrm lib/xemacs-20.3/lisp/prim
+@dirrm lib/xemacs-20.3/lisp/pcl-cvs
+@dirrm lib/xemacs-20.3/lisp/packages
+@dirrm lib/xemacs-20.3/lisp/oobr
+@dirrm lib/xemacs-20.3/lisp/mu
+@dirrm lib/xemacs-20.3/lisp/modes
+@dirrm lib/xemacs-20.3/lisp/mh-e
+@dirrm lib/xemacs-20.3/lisp/mel
+@dirrm lib/xemacs-20.3/lisp/mailcrypt
+@dirrm lib/xemacs-20.3/lisp/iso
+@dirrm lib/xemacs-20.3/lisp/ilisp
+@dirrm lib/xemacs-20.3/lisp/hyperbole/kotl
+@dirrm lib/xemacs-20.3/lisp/hyperbole
+@dirrm lib/xemacs-20.3/lisp/hm--html-menus
+@dirrm lib/xemacs-20.3/lisp/gnus
+@dirrm lib/xemacs-20.3/lisp/gnats
+@dirrm lib/xemacs-20.3/lisp/games
+@dirrm lib/xemacs-20.3/lisp/eterm
+@dirrm lib/xemacs-20.3/lisp/eos
+@dirrm lib/xemacs-20.3/lisp/emulators
+@dirrm lib/xemacs-20.3/lisp/electric
+@dirrm lib/xemacs-20.3/lisp/efs
+@dirrm lib/xemacs-20.3/lisp/ediff
+@dirrm lib/xemacs-20.3/lisp/edebug
+@dirrm lib/xemacs-20.3/lisp/custom
+@dirrm lib/xemacs-20.3/lisp/comint
+@dirrm lib/xemacs-20.3/lisp/cl
+@dirrm lib/xemacs-20.3/lisp/cc-mode
+@dirrm lib/xemacs-20.3/lisp/calendar
+@dirrm lib/xemacs-20.3/lisp/bytecomp
+@dirrm lib/xemacs-20.3/lisp/auctex
+@dirrm lib/xemacs-20.3/lisp/apel
+@dirrm lib/xemacs-20.3/lisp
+@dirrm lib/xemacs-20.3/info
+@dirrm lib/xemacs-20.3/etc/w3
+@dirrm lib/xemacs-20.3/etc/vm
+@dirrm lib/xemacs-20.3/etc/toolbar
+@dirrm lib/xemacs-20.3/etc/time
+@dirrm lib/xemacs-20.3/etc/tests/external-widget
+@dirrm lib/xemacs-20.3/etc/tests
+@dirrm lib/xemacs-20.3/etc/sparcworks
+@dirrm lib/xemacs-20.3/etc/sounds
+@dirrm lib/xemacs-20.3/etc/smilies
+@dirrm lib/xemacs-20.3/etc/sgml/cdtd
+@dirrm lib/xemacs-20.3/etc/sgml/ISO_8879:1986/entities
+@dirrm lib/xemacs-20.3/etc/sgml/ISO_8879:1986
+@dirrm lib/xemacs-20.3/etc/sgml
+@dirrm lib/xemacs-20.3/etc/mine
+@dirrm lib/xemacs-20.3/etc/message
+@dirrm lib/xemacs-20.3/etc/idd
+@dirrm lib/xemacs-20.3/etc/gnusrefcard
+@dirrm lib/xemacs-20.3/etc/gnus
+@dirrm lib/xemacs-20.3/etc/gnats
+@dirrm lib/xemacs-20.3/etc/frame-icon
+@dirrm lib/xemacs-20.3/etc/eos
+@dirrm lib/xemacs-20.3/etc/e
+@dirrm lib/xemacs-20.3/etc/custom
+@dirrm lib/xemacs-20.3/etc/auctex/style
+@dirrm lib/xemacs-20.3/etc/auctex
+@dirrm lib/xemacs-20.3/etc/app-defaults/ja
+@dirrm lib/xemacs-20.3/etc/app-defaults
+@dirrm lib/xemacs-20.3/etc
+@dirrm lib/xemacs-20.3/<$ARCH>--netbsd
+@dirrm lib/xemacs-20.3
