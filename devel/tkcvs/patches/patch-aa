@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.8 2002/12/22 14:59:26 agc Exp $
+$NetBSD: patch-aa,v 1.9 2002/12/23 13:13:29 tron Exp $
 
 --- doinstall.tcl.orig	Wed Jan 23 18:18:03 2002
 +++ doinstall.tcl
-@@ -1,7 +1,7 @@
+@@ -1,6 +1,6 @@
  #!/bin/sh
  #-*-tcl-*-
  # the next line restarts using wish \
@@ -10,7 +10,6 @@ $NetBSD: patch-aa,v 1.8 2002/12/22 14:59:26 agc Exp $
 +exec tclsh "$0" -- ${1+"$@"}
  
  #
- # $Id: patch-aa,v 1.8 2002/12/22 14:59:26 agc Exp $
 @@ -29,7 +29,7 @@
      set MANDIR ""
    } else {
