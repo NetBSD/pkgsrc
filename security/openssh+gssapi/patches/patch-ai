@@ -1,6 +1,40 @@
---- buffer.c.orig	2003-09-16 13:45:48.000000000 -0400
-+++ buffer.c	2003-09-16 13:50:49.000000000 -0400
-@@ -69,6 +69,7 @@
+$NetBSD: patch-ai,v 1.2 2003/09/17 14:27:07 jwise Exp $
+Index: buffer.c
+===================================================================
+RCS file: /cvs/src/usr.bin/ssh/buffer.c,v
+retrieving revision 1.16
+retrieving revision 1.18
+diff -u -r1.16 -r1.18
+--- buffer.c	26 Jun 2002 08:54:18 -0000	1.16
++++ buffer.c	16 Sep 2003 21:02:39 -0000	1.18
+@@ -23,8 +23,11 @@
+ void
+ buffer_init(Buffer *buffer)
+ {
+-	buffer->alloc = 4096;
+-	buffer->buf = xmalloc(buffer->alloc);
++	const u_int len = 4096;
++
++	buffer->alloc = 0;
++	buffer->buf = xmalloc(len);
++	buffer->alloc = len;
+ 	buffer->offset = 0;
+ 	buffer->end = 0;
+ }
+@@ -34,8 +37,10 @@
+ void
+ buffer_free(Buffer *buffer)
+ {
+-	memset(buffer->buf, 0, buffer->alloc);
+-	xfree(buffer->buf);
++	if (buffer->alloc > 0) {
++		memset(buffer->buf, 0, buffer->alloc);
++		xfree(buffer->buf);
++	}
+ }
+ 
+ /*
+@@ -69,6 +74,7 @@
  void *
  buffer_append_space(Buffer *buffer, u_int len)
  {
@@ -8,19 +42,19 @@
  	void *p;
  
  	if (len > 0x100000)
-@@ -98,11 +99,13 @@
+@@ -98,11 +104,13 @@
  		goto restart;
  	}
  	/* Increase the size of the buffer and retry. */
 -	buffer->alloc += len + 32768;
 -	if (buffer->alloc > 0xa00000)
-+
++	
 +	newlen = buffer->alloc + len + 32768;
 +	if (newlen > 0xa00000)
  		fatal("buffer_append_space: alloc %u not supported",
 -		    buffer->alloc);
 -	buffer->buf = xrealloc(buffer->buf, buffer->alloc);
-+			newlen);
++		    newlen);
 +	buffer->buf = xrealloc(buffer->buf, newlen);
 +	buffer->alloc = newlen;
  	goto restart;
