@@ -1,0 +1,38 @@
+$NetBSD: patch-ab,v 1.1.1.1 2003/07/21 22:26:53 kim Exp $
+
+--- tcptraceroute.c.orig	Tue Jul 30 17:51:27 2002
++++ tcptraceroute.c	Mon Jul 21 18:14:11 2003
+@@ -209,7 +209,7 @@
+ #define AF_LINK AF_INET /* BSD defines some AF_INET network interfaces as AF_LINK */
+ #endif
+ 
+-#if defined (__OpenBSD__) || defined(__FreeBSD__) || defined(__bsdi__)
++#if defined (__OpenBSD__) || defined(__FreeBSD__) || defined(__bsdi__) || defined(__NetBSD__)
+ #define HASSALEN /* Awful, awful hack to make subinterfaces work on BSD. */
+ #endif
+ 
+@@ -724,8 +724,7 @@
+ 		}
+ #endif
+ 
+-		if (ifrp->ifr_addr.sa_family != AF_INET &&
+-			ifrp->ifr_addr.sa_family != AF_LINK)
++		if (ifrp->ifr_addr.sa_family != AF_INET)
+ 		{
+ 			debug("Ignoring non-AF_INET address on interface %s\n",
+ 				sprintable(ifr.ifr_name));
+@@ -1783,8 +1782,13 @@
+ 	o_dontfrag = 0;
+ 	o_timeout = 3;
+ 	o_nofilter = 0;
+-	o_noselect = 0;
+ 	o_nogetinterfaces = 0;
++
++#if defined(__NetBSD__)
++	o_noselect = 1;
++#else
++	o_noselect = 0;
++#endif
+ 
+ #if defined (__SVR4) && defined (__sun)
+ 	o_trackport = 1; /* --track-port should be the default for Solaris */
