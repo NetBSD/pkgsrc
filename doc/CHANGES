@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4012 2003/12/07 16:49:48 taca Exp $
+$NetBSD: CHANGES,v 1.4013 2003/12/07 19:03:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5011,3 +5011,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated bins to 1.1.24 [martti 2003-12-07]
 	Updated epic4 to 1.2.1 [wiz 2003-12-07]
 	Updated squid to 2.5.4nb3 [taca 2003-12-07]
+	Updated crimsonfields to 0.3.7 [wiz 2003-12-07]
