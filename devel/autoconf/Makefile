@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2004/12/31 12:36:09 minskim Exp $
+# $NetBSD: Makefile,v 1.50 2004/12/31 13:17:31 minskim Exp $
 
 DISTNAME=		autoconf-2.59
 PKGREVISION=		1
@@ -22,7 +22,7 @@ USE_BUILDLINK3=		YES
 USE_LANGUAGES=		# empty
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--without-lispdir
-CONFIGURE_ENV+=		AWK="${AWK}" PERL=${PERL5:Q}
+CONFIGURE_ENV+=		AWK="${AWK}"
 M4=			${LOCALBASE}/bin/gm4
 
 INFO_FILES=		autoconf.info standards.info
