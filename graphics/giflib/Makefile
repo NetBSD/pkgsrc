@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2002/03/05 23:34:27 skrll Exp $
+# $NetBSD: Makefile,v 1.34 2002/11/15 00:00:41 jlam Exp $
 #
 
 DISTNAME=		giflib-4.1.0
@@ -17,16 +17,12 @@ LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS=		--without-x
 
-USE_BUILDLINK_ONLY=	# defined
+USE_BUILDLINK2=		# defined
 
 DOCDIR=			${PREFIX}/share/doc/giflib
 HTMLDIR=		${PREFIX}/share/doc/html/giflib
 
 .include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "SunOS"
-MAKE_ENV+=		CC="${CC} -I${LOCALBASE}/include"
-.endif
 
 post-patch:
 	${RM} ${WRKSRC}/doc/gif2x11.html
