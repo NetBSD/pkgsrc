@@ -1,0 +1,91 @@
+# $NetBSD: Makefile,v 1.1.1.1 1999/11/10 23:15:27 tron Exp $
+
+DISTNAME=	gdm-2.0beta4
+PKGNAME=	gdm-2.0b4
+CATEGORIES=	x11 gnome
+MASTER_SITES=	${MASTER_SITE_GNOME:=gnome-1.0.53/sources/}
+
+MAINTAINER=	tron@netbsd.org
+HOMEPAGE=	http://www.gnome.org/
+
+DEPENDS+=	gnome-libs-*:../../x11/gnome-libs
+
+GNU_CONFIGURE=	yes
+USE_X11BASE=	yes
+
+CPPFLAGS=	-I${LOCALBASE}/include
+LIBS=		-lintl
+LOCALSTATEDIR=	/var/gnome
+CONFIGURE_ARGS+= --localstatedir=${LOCALSTATEDIR}
+CONFIGURE_ENV+=	CPPFLAGS="${CPPFLAGS}" LIBS="${LIBS}" \
+		LOCALBASE=${LOCALBASE} X11BASE=${X11BASE}
+
+DEINSTALL_FILE=	${WRKDIR}/DEINSTALL
+INSTALL_FILE=	${WRKDIR}/INSTALL
+MAKE_ENV+=	GDMOWN=${GDMOWN} GDMGRP=${GDMGRP}
+PLIST_SUBST+=	GDMOWN=${GDMOWN} GDMGRP=${GDMGRP} \
+		INSTALL="${INSTALL}" LOCALSTATEDIR="${LOCALSTATEDIR}"
+
+GDMOWN=		daemon
+GDMGRP=		daemon
+GDMCFGDIR=	${PREFIX}/etc/gdm
+GDMCFGFILES=	Default:Init.default/Default \
+		PostSession:PostSession.default/Default \
+		PreSession:PreSession.default/Default \
+		Gnome:Sessions.default/Gnome \
+		KDE:Sessions.default/KDE \
+		Xsession:Sessions.default/Xsession \
+		gdm.conf:gdm.conf.default \
+		locale.alias:locale.alias.default \
+		gnomerc:../gnomerc.default
+
+post-build:
+.for FILE in DEINSTALL INSTALL
+	${SED} -e 's#@@CP@@#${CP}#' \
+	  -e 's#@@LN@@#${LN}#' \
+	  -e 's#@@MKDIR@@#${MKDIR}#' \
+	  -e 's#@@RM@@#${RM}#' \
+	  -e 's#@@GDMCFGDIR@@#${GDMCFGDIR}#g' \
+	  -e 's#@@GDMCFGFILES@@#${GDMCFGFILES:C/.*://g}#g' \
+	  ${PKGDIR}/${FILE} >${WRKDIR}/${FILE}
+.endfor
+.for FILE in Default PostSession PreSession
+	cd ${WRKSRC}/config; \
+	${SED} -e 's#/usr/bin/X11#${X11BASE}/bin#g' ${FILE} >${FILE}.new; \
+	${MV} ${FILE}.new ${FILE}; \
+	${CHMOD} +x ${FILE}
+.endfor
+	cd ${WRKSRC}/config; \
+	${RM} -f KDE Xsession; \
+	${ECHO} '#!${SH}' >KDE; \
+	${ECHO} 'export KDEDIR=${X11BASE}' >>KDE; \
+	${ECHO} 'exec $${KDEDIR}/bin/startkde $$@' >>KDE; \
+	${ECHO} '#!${SH}' >Xsession; \
+	${ECHO} 'exec ${X11BASE}/lib/X11/xdm/Xsession $$@' >>Xsession; \
+	${CHMOD} +x KDE Xsession
+
+post-install:
+.for FILE in ${GDMCFGFILES}
+	cd ${WRKSRC}/config; \
+	SOURCE=${FILE:C/:.*//}; \
+	TARGET=${GDMCFGDIR}/${FILE:C/.*://:S/.default//}; \
+	if [ ! -f $$TARGET ]; then \
+	  ${ECHO} "installing $$SOURCE as $$TARGET"; \
+	  if [ -x $$SOURCE ]; then \
+	    ${INSTALL_SCRIPT} $$SOURCE $$TARGET; \
+	  else \
+	    ${INSTALL_DATA} $$SOURCE $$TARGET; \
+	  fi; \
+	fi; \
+	TARGET=${GDMCFGDIR}/${FILE:C/.*://}; \
+	${MKDIR} `dirname $$TARGET`; \
+	${ECHO} "installing $$SOURCE as $$TARGET"; \
+	if [ -x $$SOURCE ]; then \
+	  ${INSTALL_SCRIPT} $$SOURCE $$TARGET; \
+	else \
+	  ${INSTALL_DATA} $$SOURCE $$TARGET; \
+	fi
+.endfor
+	${LN} -fs Gnome ${GDMCFGDIR}/Sessions/Default
+
+.include "../../mk/bsd.pkg.mk"

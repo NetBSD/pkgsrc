@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1.1.1 1999/11/10 23:15:28 tron Exp $
+
+--- daemon/slave.c.orig	Thu Sep 30 00:56:35 1999
++++ daemon/slave.c	Wed Nov 10 01:18:48 1999
+@@ -423,7 +423,7 @@
+ 	/* Restore sigmask inherited from init */
+ 	sigprocmask (SIG_SETMASK, &sysmask, NULL);
+ 	
+-	execl (sesspath, NULL);
++	execl (sesspath, sesspath, NULL);
+ 	
+ 	gdm_error (_("gdm_slave_session_start: Could not start session `%s'"), sesspath);
+ 	
