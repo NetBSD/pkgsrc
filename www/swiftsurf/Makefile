@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2004/12/03 15:15:12 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2004/12/24 17:21:01 jmmv Exp $
 
 DISTNAME=		swiftsurf-1.2.5
-PKGREVISION=	1
+PKGREVISION=		2
 CATEGORIES=		www
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=swiftsurf/}
 
