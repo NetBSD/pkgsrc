@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2005/02/26 22:48:34 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.2 2005/02/27 08:42:05 jmmv Exp $
 #
 
 BOOST_PACKAGE?=		undefined
@@ -24,6 +24,8 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		jmmv@NetBSD.org
 HOMEPAGE=		http://www.boost.org/
 COMMENT=		Free, peer-reviewed portable C++ source libraries ${BOOST_COMMENT}
+
+CONFLICTS+=		boost<1.32.0
 
 DISTINFO_FILE=		${.CURDIR}/../../meta-pkgs/boost/distinfo
 PATCHDIR=		${.CURDIR}/../../meta-pkgs/boost/patches
