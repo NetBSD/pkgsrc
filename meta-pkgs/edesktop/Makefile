@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2000/12/15 23:31:15 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2000/12/18 13:54:39 wiz Exp $
 #
 
 DISTNAME=	edesktop-1.0
@@ -13,7 +13,7 @@ DEPENDS+=	eterm-[0-9]*:../../x11/eterm
 DEPENDS+=	ethemes-[0-9]*:../../wm/ethemes
 DEPENDS+=	rxvt-[0-9]*:../../x11/rxvt
 DEPENDS+=	mutt-[0-9]*:../../mail/mutt
-DEPENDS+=	econf-[0-9]*:../../x11/econf
+DEPENDS+=	econf-[0-9]*:../../wm/econf
 DEPENDS+=	xv-[0-9]*:../../graphics/xv
 DEPENDS+=	ee-[0-9]*:../../graphics/ee
 DEPENDS+=	gimp-[0-9]*:../../graphics/gimp
