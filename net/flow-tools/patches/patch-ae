@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1 2003/02/16 23:50:20 seb Exp $
+
+--- lib/Makefile.am.orig	Tue Dec  3 07:34:22 2002
++++ lib/Makefile.am
+@@ -6,7 +6,7 @@ CFLAGS=-g -Wall
+ 
+ DEFS=-I.
+ 
+-include_HEADERS = ftlib.h ftqueue.h radix.h ftpaths.h ftconfig.h
++pkginclude_HEADERS = ftlib.h ftqueue.h radix.h ftpaths.h ftconfig.h
+ lib_LIBRARIES = libft.a
+ 
+ libft_a_SOURCES = ftio.c ftswap.c ftencode.c ftdecode.c ftprof.c bit1024.c \

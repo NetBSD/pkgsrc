@@ -1,0 +1,31 @@
+$NetBSD: patch-ab,v 1.1 2003/02/16 23:50:19 seb Exp $
+
+--- Makefile.in.orig	Thu Dec 12 17:37:29 2002
++++ Makefile.in
+@@ -82,7 +82,7 @@ YLIB = @YLIB@
+ am__include = @am__include@
+ am__quote = @am__quote@
+ install_sh = @install_sh@
+-SUBDIRS = lib src docs configs bin
++SUBDIRS = lib src docs
+ 
+ EXTRA_DIST = bin/flow-mirror bin/flow-rsync bin/flow-search utils/* \
+  SECURITY contrib/* configs/*
+@@ -92,6 +92,8 @@ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+ CONFIG_HEADER = $(top_builddir)/lib/ftconfig.h
+ CONFIG_CLEAN_FILES =
++depcomp =
++am__depfiles_maybe =
+ DIST_SOURCES =
+ 
+ RECURSIVE_TARGETS = info-recursive dvi-recursive install-info-recursive \
+@@ -107,7 +109,7 @@ all: all-recursive
+ .SUFFIXES:
+ $(srcdir)/Makefile.in:  Makefile.am  $(top_srcdir)/configure.in $(ACLOCAL_M4)
+ 	cd $(top_srcdir) && \
+-	  $(AUTOMAKE) --gnu  Makefile
++	  $(AUTOMAKE) --gnu  --ignore-deps Makefile
+ Makefile:  $(srcdir)/Makefile.in  $(top_builddir)/config.status
+ 	cd $(top_builddir) && $(SHELL) ./config.status $@ $(am__depfiles_maybe)
+ 

@@ -1,0 +1,194 @@
+$NetBSD: patch-af,v 1.1 2003/02/16 23:50:20 seb Exp $
+
+--- lib/Makefile.in.orig	Thu Dec 12 17:37:40 2002
++++ lib/Makefile.in
+@@ -89,7 +89,7 @@ CFLAGS = -g -Wall
+ 
+ DEFS = -I.
+ 
+-include_HEADERS = ftlib.h ftqueue.h radix.h ftpaths.h ftconfig.h
++pkginclude_HEADERS = ftlib.h ftqueue.h radix.h ftpaths.h ftconfig.h
+ lib_LIBRARIES = libft.a
+ 
+ libft_a_SOURCES = ftio.c ftswap.c ftencode.c ftdecode.c ftprof.c bit1024.c \
+@@ -120,30 +120,17 @@ DEFAULT_INCLUDES =  -I. -I$(srcdir) -I.
+ CPPFLAGS = @CPPFLAGS@
+ LDFLAGS = @LDFLAGS@
+ LIBS = @LIBS@
+-depcomp = $(SHELL) $(top_srcdir)/depcomp
+-am__depfiles_maybe = depfiles
+-@AMDEP_TRUE@DEP_FILES = $(DEPDIR)/strerror.Po $(DEPDIR)/strsep.Po \
+-@AMDEP_TRUE@	$(DEPDIR)/strtoull.Po ./$(DEPDIR)/bit1024.Po \
+-@AMDEP_TRUE@	./$(DEPDIR)/fmt.Po ./$(DEPDIR)/ftchash.Po \
+-@AMDEP_TRUE@	./$(DEPDIR)/ftdecode.Po ./$(DEPDIR)/ftencode.Po \
+-@AMDEP_TRUE@	./$(DEPDIR)/fterr.Po ./$(DEPDIR)/ftfil.Po \
+-@AMDEP_TRUE@	./$(DEPDIR)/ftfile.Po ./$(DEPDIR)/ftio.Po \
+-@AMDEP_TRUE@	./$(DEPDIR)/ftmap.Po ./$(DEPDIR)/ftmask.Po \
+-@AMDEP_TRUE@	./$(DEPDIR)/ftprof.Po ./$(DEPDIR)/ftrec.Po \
+-@AMDEP_TRUE@	./$(DEPDIR)/ftstat.Po ./$(DEPDIR)/ftswap.Po \
+-@AMDEP_TRUE@	./$(DEPDIR)/ftsym.Po ./$(DEPDIR)/fttag.Po \
+-@AMDEP_TRUE@	./$(DEPDIR)/fttlv.Po ./$(DEPDIR)/ftvar.Po \
+-@AMDEP_TRUE@	./$(DEPDIR)/ftxfield.Po ./$(DEPDIR)/getdate.Po \
+-@AMDEP_TRUE@	./$(DEPDIR)/radix.Po ./$(DEPDIR)/support.Po
++depcomp =
++am__depfiles_maybe =
+ COMPILE = $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \
+ 	$(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
+ CCLD = $(CC)
+ LINK = $(CCLD) $(AM_CFLAGS) $(CFLAGS) $(AM_LDFLAGS) $(LDFLAGS) -o $@
+ DIST_SOURCES = $(libft_a_SOURCES)
+-HEADERS = $(include_HEADERS)
++HEADERS = $(pkginclude_HEADERS)
+ 
+-DIST_COMMON = $(include_HEADERS) Makefile.am Makefile.in ftconfig.h.in \
+-	ftpaths.h.in strerror.c strsep.c strtoull.c
++DIST_COMMON = $(pkginclude_HEADERS) Makefile.am Makefile.in \
++	ftconfig.h.in ftpaths.h.in strerror.c strsep.c strtoull.c
+ SOURCES = $(libft_a_SOURCES)
+ 
+ all: ftconfig.h
+@@ -153,7 +140,7 @@ all: ftconfig.h
+ .SUFFIXES: .c .o .obj
+ $(srcdir)/Makefile.in:  Makefile.am  $(top_srcdir)/configure.in $(ACLOCAL_M4)
+ 	cd $(top_srcdir) && \
+-	  $(AUTOMAKE) --gnu  lib/Makefile
++	  $(AUTOMAKE) --gnu  --ignore-deps lib/Makefile
+ Makefile:  $(srcdir)/Makefile.in  $(top_builddir)/config.status
+ 	cd $(top_builddir) && $(SHELL) ./config.status $(subdir)/$@ $(am__depfiles_maybe)
+ 
+@@ -218,66 +205,29 @@ mostlyclean-compile:
+ distclean-compile:
+ 	-rm -f *.tab.c
+ 
+-@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/strerror.Po@am__quote@
+-@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/strsep.Po@am__quote@
+-@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/strtoull.Po@am__quote@
+-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/bit1024.Po@am__quote@
+-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/fmt.Po@am__quote@
+-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/ftchash.Po@am__quote@
+-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/ftdecode.Po@am__quote@
+-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/ftencode.Po@am__quote@
+-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/fterr.Po@am__quote@
+-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/ftfil.Po@am__quote@
+-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/ftfile.Po@am__quote@
+-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/ftio.Po@am__quote@
+-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/ftmap.Po@am__quote@
+-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/ftmask.Po@am__quote@
+-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/ftprof.Po@am__quote@
+-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/ftrec.Po@am__quote@
+-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/ftstat.Po@am__quote@
+-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/ftswap.Po@am__quote@
+-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/ftsym.Po@am__quote@
+-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/fttag.Po@am__quote@
+-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/fttlv.Po@am__quote@
+-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/ftvar.Po@am__quote@
+-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/ftxfield.Po@am__quote@
+-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/getdate.Po@am__quote@
+-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/radix.Po@am__quote@
+-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/support.Po@am__quote@
+-
+-distclean-depend:
+-	-rm -rf $(DEPDIR) ./$(DEPDIR)
+-
+ .c.o:
+-@AMDEP_TRUE@	source='$<' object='$@' libtool=no @AMDEPBACKSLASH@
+-@AMDEP_TRUE@	depfile='$(DEPDIR)/$*.Po' tmpdepfile='$(DEPDIR)/$*.TPo' @AMDEPBACKSLASH@
+-@AMDEP_TRUE@	$(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+ 	$(COMPILE) -c `test -f '$<' || echo '$(srcdir)/'`$<
+ 
+ .c.obj:
+-@AMDEP_TRUE@	source='$<' object='$@' libtool=no @AMDEPBACKSLASH@
+-@AMDEP_TRUE@	depfile='$(DEPDIR)/$*.Po' tmpdepfile='$(DEPDIR)/$*.TPo' @AMDEPBACKSLASH@
+-@AMDEP_TRUE@	$(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+ 	$(COMPILE) -c `cygpath -w $<`
+-CCDEPMODE = @CCDEPMODE@
+ uninstall-info-am:
+-includeHEADERS_INSTALL = $(INSTALL_HEADER)
+-install-includeHEADERS: $(include_HEADERS)
++pkgincludeHEADERS_INSTALL = $(INSTALL_HEADER)
++install-pkgincludeHEADERS: $(pkginclude_HEADERS)
+ 	@$(NORMAL_INSTALL)
+-	$(mkinstalldirs) $(DESTDIR)$(includedir)
+-	@list='$(include_HEADERS)'; for p in $$list; do \
++	$(mkinstalldirs) $(DESTDIR)$(pkgincludedir)
++	@list='$(pkginclude_HEADERS)'; for p in $$list; do \
+ 	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
+ 	  f="`echo $$p | sed -e 's|^.*/||'`"; \
+-	  echo " $(includeHEADERS_INSTALL) $$d$$p $(DESTDIR)$(includedir)/$$f"; \
+-	  $(includeHEADERS_INSTALL) $$d$$p $(DESTDIR)$(includedir)/$$f; \
++	  echo " $(pkgincludeHEADERS_INSTALL) $$d$$p $(DESTDIR)$(pkgincludedir)/$$f"; \
++	  $(pkgincludeHEADERS_INSTALL) $$d$$p $(DESTDIR)$(pkgincludedir)/$$f; \
+ 	done
+ 
+-uninstall-includeHEADERS:
++uninstall-pkgincludeHEADERS:
+ 	@$(NORMAL_UNINSTALL)
+-	@list='$(include_HEADERS)'; for p in $$list; do \
++	@list='$(pkginclude_HEADERS)'; for p in $$list; do \
+ 	  f="`echo $$p | sed -e 's|^.*/||'`"; \
+-	  echo " rm -f $(DESTDIR)$(includedir)/$$f"; \
+-	  rm -f $(DESTDIR)$(includedir)/$$f; \
++	  echo " rm -f $(DESTDIR)$(pkgincludedir)/$$f"; \
++	  rm -f $(DESTDIR)$(pkgincludedir)/$$f; \
+ 	done
+ 
+ ETAGS = etags
+@@ -346,7 +296,7 @@ check: check-am
+ all-am: Makefile $(LIBRARIES) $(HEADERS) ftconfig.h
+ 
+ installdirs:
+-	$(mkinstalldirs) $(DESTDIR)$(libdir) $(DESTDIR)$(includedir)
++	$(mkinstalldirs) $(DESTDIR)$(libdir) $(DESTDIR)$(pkgincludedir)
+ 
+ install: install-am
+ install-exec: install-exec-am
+@@ -378,8 +328,8 @@ clean-am: clean-generic clean-libLIBRARI
+ 
+ distclean: distclean-am
+ 
+-distclean-am: clean-am distclean-compile distclean-depend \
+-	distclean-generic distclean-hdr distclean-tags
++distclean-am: clean-am distclean-compile distclean-generic distclean-hdr \
++	distclean-tags
+ 
+ dvi: dvi-am
+ 
+@@ -389,7 +339,7 @@ info: info-am
+ 
+ info-am:
+ 
+-install-data-am: install-includeHEADERS
++install-data-am: install-pkgincludeHEADERS
+ 
+ install-exec-am: install-libLIBRARIES
+ 
+@@ -407,21 +357,21 @@ mostlyclean: mostlyclean-am
+ 
+ mostlyclean-am: mostlyclean-compile mostlyclean-generic
+ 
+-uninstall-am: uninstall-includeHEADERS uninstall-info-am \
+-	uninstall-libLIBRARIES
++uninstall-am: uninstall-info-am uninstall-libLIBRARIES \
++	uninstall-pkgincludeHEADERS
+ 
+ .PHONY: GTAGS all all-am check check-am clean clean-generic \
+-	clean-libLIBRARIES distclean distclean-compile distclean-depend \
++	clean-libLIBRARIES distclean distclean-compile \
+ 	distclean-generic distclean-hdr distclean-tags distdir dvi \
+ 	dvi-am info info-am install install-am install-data \
+-	install-data-am install-exec install-exec-am \
+-	install-includeHEADERS install-info install-info-am \
+-	install-libLIBRARIES install-man install-strip installcheck \
++	install-data-am install-exec install-exec-am install-info \
++	install-info-am install-libLIBRARIES install-man \
++	install-pkgincludeHEADERS install-strip installcheck \
+ 	installcheck-am installdirs maintainer-clean \
+ 	maintainer-clean-generic mostlyclean mostlyclean-compile \
+ 	mostlyclean-generic tags uninstall uninstall-am \
+-	uninstall-includeHEADERS uninstall-info-am \
+-	uninstall-libLIBRARIES
++	uninstall-info-am uninstall-libLIBRARIES \
++	uninstall-pkgincludeHEADERS
+ 
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.

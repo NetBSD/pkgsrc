@@ -1,0 +1,33 @@
+$NetBSD: patch-ag,v 1.1 2003/02/16 23:50:20 seb Exp $
+
+--- lib/ftpaths.h.in.orig	Tue Nov 26 03:00:13 2002
++++ lib/ftpaths.h.in
+@@ -29,17 +29,17 @@
+ #ifndef FTPATHS_H
+ #define FTPATHS_H
+ 
+-#define FT_PATH_CFG_MAP             "@localstatedir@/cfg/map"
+-#define FT_PATH_CFG_TAG             "@localstatedir@/cfg/tag"
+-#define FT_PATH_CFG_FILTER          "@localstatedir@/cfg/filter"
+-#define FT_PATH_CFG_STAT            "@localstatedir@/cfg/stat"
+-#define FT_PATH_CFG_MASK            "@localstatedir@/cfg/mask"
++#define FT_PATH_CFG_MAP             "@sysconfdir@/cfg/map"
++#define FT_PATH_CFG_TAG             "@sysconfdir@/cfg/tag"
++#define FT_PATH_CFG_FILTER          "@sysconfdir@/cfg/filter"
++#define FT_PATH_CFG_STAT            "@sysconfdir@/cfg/stat"
++#define FT_PATH_CFG_MASK            "@sysconfdir@/cfg/mask"
+ 
+-#define FT_PATH_SYM_IP_PROT         "@localstatedir@/sym/ip-prot"
+-#define FT_PATH_SYM_IP_CLASS        "@localstatedir@/sym/ip-class"
+-#define FT_PATH_SYM_IP_TYPE         "@localstatedir@/sym/ip-type"
+-#define FT_PATH_SYM_TCP_PORT        "@localstatedir@/sym/tcp-port"
+-#define FT_PATH_SYM_ASN             "@localstatedir@/sym/asn"
+-#define FT_PATH_SYM_TAG             "@localstatedir@/sym/tag"
++#define FT_PATH_SYM_IP_PROT         "@sysconfdir@/sym/ip-prot"
++#define FT_PATH_SYM_IP_CLASS        "@sysconfdir@/sym/ip-class"
++#define FT_PATH_SYM_IP_TYPE         "@sysconfdir@/sym/ip-type"
++#define FT_PATH_SYM_TCP_PORT        "@sysconfdir@/sym/tcp-port"
++#define FT_PATH_SYM_ASN             "@sysconfdir@/sym/asn"
++#define FT_PATH_SYM_TAG             "@sysconfdir@/sym/tag"
+ 
+ #endif /* FTPATHS_H */
