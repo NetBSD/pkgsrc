@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.60 2003/01/30 03:24:12 jschauma Exp $
+# $NetBSD: Makefile.common,v 1.61 2003/02/07 13:37:35 tron Exp $
 #
 # Common include file for communicator and navigator packages
 
@@ -129,7 +129,7 @@ PLIST_ARCH=
 .endif
 #
 
-MAINTAINER=	tron@netbsd.org
+MAINTAINER=	packages@netbsd.org
 HOMEPAGE?=	http://home.netscape.com/browsers/index.html
 RESTRICTED=	"No re-distribution without agreement from Netscape"
 NO_SRC_ON_CDROM=	${RESTRICTED}
@@ -143,7 +143,7 @@ NS_NAME=	${BINNAME}-${NS_VERS}
 PKGNAME?=	${BINNAME}-${NS_VERS}
 DISTNAME?=	${BINNAME}-v${NS_VERS_SHORT}-${NS_ENCRYPTION}.${DISTUNAME}
 
-.if ((${OPSYS} != "Linux") && (${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "powerpc"))
+.if ((${OPSYS} != "Linux") && ((${MACHINE_ARCH} == "i386" && !defined(NS_USE_BSDI)) || ${MACHINE_ARCH} == "powerpc"))
 DEPENDS+=	suse_compat>=6.4:../../emulators/${SUSE_DIR_PREFIX}_compat
 DEPENDS+=	suse_x11>=6.4:../../emulators/${SUSE_DIR_PREFIX}_x11
 .endif
