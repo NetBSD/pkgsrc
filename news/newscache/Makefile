@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/07/24 23:50:01 grant Exp $
+# $NetBSD: Makefile,v 1.12 2004/10/15 22:46:10 kristerw Exp $
 #
 
 DISTNAME=	NewsCache-0.99.22p1
@@ -7,7 +7,7 @@ CATEGORIES=	news
 MASTER_SITES=	http://www.hstraub.at/linux/downloads/src/
 
 MAINTAINER=	tech-pkg@NetBSD.org
-HOMEPAGE=	http://members.aon.at/hstraub/linux/newscache/
+HOMEPAGE=	http://www.linuxhacker.at/newscache/
 COMMENT=	Free cache server for USENET News
 
 GNU_CONFIGURE=	YES
