@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/01/25 17:47:18 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 2002/03/18 20:24:06 wiz Exp $
 #
 
 DISTNAME=	xtris-1.15
@@ -30,4 +30,5 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/xtbot.6 ${PREFIX}/man/man6/xtbot.6
 	${INSTALL_MAN} ${WRKSRC}/xtserv.6 ${PREFIX}/man/man6/xtserv.6
 
+.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
