@@ -1,1 +1,7 @@
-@comment $NetBSD: PLIST.linux,v 1.1 2001/11/01 01:22:31 zuntum Exp $
+@comment $NetBSD: PLIST.linux,v 1.2 2003/12/03 01:57:08 reed Exp $
+lib/libcrypto.so
+lib/libcrypto.so.300
+lib/libcrypto.so.300.1
+lib/libssl.so
+lib/libssl.so.300
+lib/libssl.so.300.1
