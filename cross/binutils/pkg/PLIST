@@ -1,10 +1,21 @@
-@comment $NetBSD: PLIST,v 1.4 1999/12/18 02:14:39 wrstuden Exp $
+@comment $NetBSD: PLIST,v 1.5 2000/08/14 14:57:55 wiz Exp $
+lib/ldscripts/armnbsd.x
+lib/ldscripts/armnbsd.xbn
+lib/ldscripts/armnbsd.xn
+lib/ldscripts/armnbsd.xr
+lib/ldscripts/armnbsd.xu
 lib/ldscripts/elf32_sparc.x
 lib/ldscripts/elf32_sparc.xbn
 lib/ldscripts/elf32_sparc.xn
 lib/ldscripts/elf32_sparc.xr
 lib/ldscripts/elf32_sparc.xs
 lib/ldscripts/elf32_sparc.xu
+lib/ldscripts/elf32ebmip.x
+lib/ldscripts/elf32ebmip.xbn
+lib/ldscripts/elf32ebmip.xn
+lib/ldscripts/elf32ebmip.xr
+lib/ldscripts/elf32ebmip.xs
+lib/ldscripts/elf32ebmip.xu
 lib/ldscripts/elf32lmip.x
 lib/ldscripts/elf32lmip.xbn
 lib/ldscripts/elf32lmip.xn
@@ -92,9 +103,12 @@ include/ansidecl.h
 include/bfd.h
 lib/libbfd-2.9.1.so.0.0
 lib/libbfd.a
+lib/libbfd.la
 lib/libopcodes-2.9.1.so.0.0
 lib/libopcodes.a
+lib/libopcodes.la
 lib/libiberty.a
+@unexec rm -f %D/lib/libbfd.so %D/lib/libopcodes.so 2> /dev/null || true
 libexec/binutils/addr2line
 libexec/binutils/ar
 libexec/binutils/dlltool
