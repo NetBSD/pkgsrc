@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3097 2003/08/25 11:19:57 cjep Exp $
+$NetBSD: CHANGES,v 1.3098 2003/08/25 11:28:13 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3312,7 +3312,7 @@ Changes to the packages collection and infrastructure in 2003:
 	Removed 6to4 (renamed to hf6to4) [hubertf 2003-08-23]
 	Added hf6to4-1.0 [hubertf 2003-08-23]
 	Updated qt3-qscintilla to 1.2 [drochner 2003-08-23]
-	Updated py-qt3 to 3.8 [drochner 2003-08-23]
+	Updated py-qt3-base to 3.8 [drochner 2003-08-23]
 	Updated mbmon to 2.03 [recht 2003-08-23]
 	Updated xmbmon to 2.03 [recht 2003-08-23]
 	Updated pkgdiff to 0.113 [seb 2003-08-23]
@@ -3330,3 +3330,7 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated nbgrep to 20030825 [cjep 2003-08-25]
 	Updated p5-HTML-Parser to 3.31 [heinz 2003-08-25]
 	Deleted nbgrep, renamed to bgrep [cjep 2003-08-25]
+	Updated lwp to 1.10 [drochner 2003-08-25]
+	Updated rpc2 to 1.19 [drochner 2003-08-25]
+	Updated rvm to 1.8 [drochner 2003-08-25]
+	Updated verilog-current to 20030815 [drochner 2003-08-25]
