@@ -1,0 +1,14 @@
+$NetBSD: patch-am,v 1.1.1.1 2004/04/19 23:25:29 taya Exp $
+
+diff -ru ../Orig/mozilla/nsprpub/pr/src/pthreads/ptio.c ./nsprpub/pr/src/pthreads/ptio.c
+--- ../Orig/mozilla/nsprpub/pr/src/pthreads/ptio.c	2003-11-27 10:30:44.000000000 +0900
++++ ./nsprpub/pr/src/pthreads/ptio.c	2004-01-16 23:17:38.000000000 +0900
+@@ -205,7 +205,7 @@
+ #elif defined(IRIX) || defined(OSF1) || defined(AIX) || defined(HPUX) \
+     || defined(LINUX) || defined(FREEBSD) || defined(BSDI) || defined(VMS) \
+     || defined(NTO) || defined(OPENBSD) || defined(DARWIN) \
+-    || defined(UNIXWARE)
++    || defined(UNIXWARE) || defined(NETBSD)
+ #define _PRSockOptVal_t void *
+ #else
+ #error "Cannot determine architecture"
