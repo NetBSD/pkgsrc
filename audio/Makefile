@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.120 2001/12/22 17:32:44 wiz Exp $
+# $NetBSD: Makefile,v 1.121 2001/12/24 16:49:07 wiz Exp $
 #
 
 COMMENT=	Audio tools
@@ -137,6 +137,7 @@ SUBDIR+=	xmms-dspectogram
 SUBDIR+=	xmms-dspectralizer
 SUBDIR+=	xmms-gdancer
 SUBDIR+=	xmms-neato
+SUBDIR+=	xmms-sid
 SUBDIR+=	xmms-vismsa
 SUBDIR+=	xmp
 SUBDIR+=	xmradio
