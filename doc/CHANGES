@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7247 2004/09/25 13:45:29 tv Exp $
+$NetBSD: CHANGES,v 1.7248 2004/09/25 16:27:28 uebayasi Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4426,3 +4426,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated mathomatic to 11.3f [minskim 2004-09-25]
 	Updated gnustep to 1.10.0 [rh 2004-09-25]
 	Updated entropy to 0.8.2.418 [tv 2004-09-25]
+	Added xtrs-4.9 [uebayasi 2004-09-25]
