@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2002/09/21 01:23:56 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2002/11/30 15:31:59 salo Exp $
 
 DISTNAME=		chemtool-1.4.1
 CATEGORIES=		biology
@@ -9,8 +9,8 @@ HOMEPAGE=		http://www.uni-ulm.de/~s_tvolk/chemtool.html
 COMMENT=		Program for drawing organic molecules
 
 USE_BUILDLINK2=		# defined
+USE_PKGLOCALEDIR=	# defined
 USE_X11=		# defined
-MAKE_ENV+=		PKGLOCALEDIR="${PKGLOCALEDIR}"
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/chemtool
