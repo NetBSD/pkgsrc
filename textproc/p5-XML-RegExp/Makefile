@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2002/01/30 21:44:57 mjl Exp $
+# $NetBSD: Makefile,v 1.7 2002/09/26 10:43:37 seb Exp $
 #
 
 DISTNAME=	XML-RegExp-0.03
@@ -12,11 +12,8 @@ COMMENT=	Provide regular expressions for some XML tokens
 
 CONFLICTS+=	p5-libxml-enno-[0-9]*
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/XML/RegExp/.packlist
 
-do-configure:
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
-
-.include "../../lang/perl5/buildlink.mk"
+.include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
