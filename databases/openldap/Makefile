@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.37 2002/01/30 07:34:00 jlam Exp $
+# $NetBSD: Makefile,v 1.38 2002/01/31 05:06:54 jlam Exp $
 
 DISTNAME=	openldap-2.0.21
 SVR4_PKGNAME=	oldap
+PKGREVISION=	1
 CATEGORIES=	databases
 MASTER_SITES=	ftp://ftp.openldap.org/pub/OpenLDAP/openldap-release/
 EXTRACT_SUFX=	.tgz
@@ -26,14 +27,22 @@ CONFIGURE_ARGS+=	--enable-wrappers
 CONFIGURE_ARGS+=	--with-tls=openssl
 CONFIGURE_ARGS+=	--without-readline
 
-USE_PTHREAD=		native pth
-CONFIGURE_ARGS+=	--with-threads
+# Apparently, only _native_ pthreads are good enough, since compiling
+# OpenLDAP with a userland thread package like GNU pth results in a
+# slapd that isn't capable of passing the regression tests.
+#
+USE_PTHREAD=		native
 
 PKG_SYSCONFSUBDIR=	openldap
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE}
 CONFIGURE_ARGS+=	--localstatedir=/var/openldap
 
 .include "../../mk/bsd.prefs.mk"
+
+.if defined(PTHREAD_TYPE) && (${PTHREAD_TYPE} != "none")
+CONFIGURE_ARGS+=	--with-threads
+PLIST_SRC=		${.CURDIR}/PLIST.slurpd ${.CURDIR}/PLIST
+.endif
 
 .if ${OPSYS} == "SunOS"
 .include "../../databases/db/buildlink.mk"
