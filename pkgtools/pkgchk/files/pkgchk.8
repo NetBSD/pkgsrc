@@ -1,18 +1,19 @@
-.\"	$NetBSD: pkgchk.8,v 1.15 2003/09/16 14:36:10 abs Exp $
+.\"	$NetBSD: pkgchk.8,v 1.16 2003/09/16 14:45:53 wiz Exp $
 .\"
 .\" Copyright (c) 2001 by David Brownlee (abs@netbsd.org)
 .\" Absolutely no warranty.
 .\"
-.Dd June 28, 2001
+.Dd September 16, 2003
 .Dt PKGCHK 1
 .Sh NAME
 .Nm pkg_chk
 .Nd check, and optionally update, installed packages
 .Sh SYNOPSIS
 .Nm
-.Op Fl abcfhiknrsuvB
+.Op Fl aBbcfhiknrsuv
 .Op Fl C Ar conf
 .Op Fl D Ar tags
+.Op Fl L Ar file
 .Op Fl U Ar tags
 .Sh DESCRIPTION
 .Nm
@@ -28,47 +29,37 @@ will skip dependent packages to reduce unnecessary rebuilding.
 .Pp
 .Sy Options
 .Bl -tag -width xxxxxxxx
-.It Fl B
-Check the "Build version" (see option -b of pkg_info(1)) of packages.
-.It Fl C Ar conf
-Use the pkgchk.conf file
-.Sq Ar conf .
-.It Fl D Ar tags
-Add the comma separated list of tags to those checked when parsing
-pkgchk.conf. Also includes
-.Ev PKGCHK_TAGS .
-.It Fl L Ar file
-Redirect the output for all commands run into the logfile
-.Pa file .
-Should be specified as a full pathname. On any error the tail end of the
-logfile will be displayed.
-.It Fl U Ar tags
-Remove the comma separated list of tags from those checked when
-parsing pkgchk.conf. Also includes
-.Ev PKGCHK_NOTAGS .
-Package directories can also be skipped by listing them under
-.Fl U
 .It Fl a
-Automatically add any missing packages. If a binary package exists
-in
+Automatically add any missing packages.
+If a binary package exists in
 .Ev ${PACKAGES}
 it will be used in preference to building from source, unless the
 .Fl b
 or
 .Fl s
 options are given.
+.It Fl B
+Check the "Build version" (see option -b of pkg_info(1)) of packages.
 .It Fl b
-Limit additions or updates to using binary packages. If
-DEPENDS_TARGET=package
-is set in
+Limit additions or updates to using binary packages.
+If DEPENDS_TARGET=package is set in
 .Pa /etc/mk.conf ,
 then
 .Nm
 will automatically generate binary packages for later reuse.
+.It Fl C Ar conf
+Use the pkgchk.conf file
+.Sq Ar conf .
 .It Fl c
 Check versions of packages specified in pkgchk.conf.
+.It Fl D Ar tags
+Add the comma separated list of tags to those checked when parsing
+pkgchk.conf.
+Also includes
+.Ev PKGCHK_TAGS .
 .It Fl f
-Fetch all missing/mismatched packages found. Can be used with
+Fetch all missing/mismatched packages found.
+Can be used with
 .Fl a
 or
 .Fl u
@@ -83,16 +74,30 @@ Brief help.
 Check versions of installed packages, ignoring pkgchk.conf.
 .It Fl k
 Continue with further packages if errors are encountered.
+.It Fl L Ar file
+Redirect the output for all commands run into the logfile
+.Pa file .
+Should be specified as a full pathname.
+On any error the tail end of the logfile will be displayed.
 .It Fl n
 Display actions that would be taken, but do not change anything.
 .It Fl r
-Recursively delete any mismatched packages found. Use with care,
-this does not record which packages were installed for later update.
+Recursively delete any mismatched packages found.
+Use with care, this does not record which packages were installed
+for later update.
 .It Fl s
 Limit additions or updates to building from source.
+.It Fl U Ar tags
+Remove the comma separated list of tags from those checked when
+parsing pkgchk.conf.
+Also includes
+.Ev PKGCHK_NOTAGS .
+Package directories can also be skipped by listing them under
+.Fl U
 .It Fl u
-Automatically update any missing packages. If a binary package exists
-in PACKAGES it will be used in preference to building from source, unless the
+Automatically update any missing packages.
+If a binary package exists in PACKAGES it will be used in preference
+to building from source, unless the
 .Fl b
 or
 .Fl s
@@ -106,7 +111,8 @@ Verbose - list the tags set when checking pkgchk.conf, and all packages checked.
 .Sh FILE FORMAT
 Each non comment line in pkgsrc.conf should contain a package
 directory (such as sysutils/skill) followed by an optional list of
-tags. Tags are checked against the current machine's set:
+tags.
+Tags are checked against the current machine's set:
 .Bl -bullet
 .It
 If a matched tag starts with a hyphen '-', the package is always excluded.
@@ -121,22 +127,26 @@ matches any tag.
 .It
 Tags cannot contain a hypen '-' or plus '+'.
 .It
-Tags separated by spaces are treated as 'or'. 'taga tagb' means if
+Tags separated by spaces are treated as 'or'.
+'taga tagb' means if
 .Em tag_a
 or
 .Em tag_b
 match the current machine.
 .It
-Tags separated by a plus are treated as 'and'. 'taga+tagb' means if
+Tags separated by a plus are treated as 'and'.
+'taga+tagb' means if
 .Em tag_a
 and
 .Em tag_b
 match the current machine.
 .El
 .Pp
-The default set of tags used to determine which packages to match in
-pkgsrc.conf are equivalent to the output of the following with any spaces
-converted to hypens (-): hostname -s, hostname, uname -srm, uname -sr, uname -sm, uname -s, uname -r, uname -m. If
+The default set of tags used to determine which packages to match
+in pkgsrc.conf are equivalent to the output of the following with
+any spaces converted to hypens (-): hostname -s, hostname, uname
+-srm, uname -sr, uname -sm, uname -s, uname -r, uname -m.
+If
 .Pa /usr/X11R6/lib/libX11.so
 or
 .Pa /usr/X11R6/lib/libX11.a
@@ -154,21 +164,24 @@ option.
 uses the following environment variables.
 .Bl -tag -width xxxx
 .It Ev PKGSRCDIR
-Base of pkgsrc tree. If not set in environment then read from
+Base of pkgsrc tree.
+If not set in environment then read from
 .Pa ${MAKECONF}
 or
 .Pa /etc/mk.conf .
 Defaults to
 .Pa /usr/pkgsrc
 .It Ev PKG_DBDIR
-pkgsrc database directory. If not set in environment then read from
+pkgsrc database directory.
+If not set in environment then read from
 .Pa ${MAKECONF}
 or
 .Pa /etc/mk.conf .
 Defaults to
 .Pa /var/db/pkg
 .It Ev PACKAGES
-Location of binary packages. If not set in environment then read from
+Location of binary packages.
+If not set in environment then read from
 .Pa /etc/mk.conf .
 Defaults to
 .Pa ${PKGSRCDIR}/packages .
@@ -183,7 +196,8 @@ to a value such as
 ${PKGSRCDIR}/packages/${LOWER_OPSYS}-${OS_VERSION}-${MACHINE_ARCH}
 .Ed
 .Pp
-is strongly recommended. If
+is strongly recommended.
+If
 .Em cpuflags
 (devel/cpuflags) is being used to optimally target individual CPU types,
 then
@@ -191,8 +205,8 @@ then
 should be appended to
 .Ev ${PACKAGES} .
 .It Ev PKGCHK_CONF
-Pathname to pkg_chk configuration file. If not set in environment
-then read from
+Pathname to pkg_chk configuration file.
+If not set in environment then read from
 .Pa /etc/mk.conf .
 Defaults to
 .Pa ${PKGSRCDIR}/pkgchk.conf .
