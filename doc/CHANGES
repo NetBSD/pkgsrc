@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7352 2004/10/05 15:38:38 adam Exp $
+$NetBSD: CHANGES,v 1.7353 2004/10/05 16:52:06 abs Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4553,3 +4553,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated glib to 1.2.10nb8 [minskim 2004-10-05]
 	Added ntfsprogs-1.9.4 [agc 2004-10-05]
 	Updated sylpheed-claws to 0.9.12b [adam 2004-10-05]
+	Updated rconfig to 0.39 [abs 2004-10-05]
+
