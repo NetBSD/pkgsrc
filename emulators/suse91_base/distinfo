@@ -1,26 +1,38 @@
-$NetBSD: distinfo,v 1.3 2004/08/30 00:00:25 wiz Exp $
+$NetBSD: distinfo,v 1.4 2005/02/23 18:49:20 agc Exp $
 
 SHA1 (suse91/i586/aaa_base-9.1-0.i586.rpm) = c15fcdc81a93c7d3056292d56b1376a0fdf20554
+RMD160 (suse91/i586/aaa_base-9.1-0.i586.rpm) = 62c26c035f73418f2db88685b16282cbf691da66
 Size (suse91/i586/aaa_base-9.1-0.i586.rpm) = 289379 bytes
 SHA1 (suse91/i586/bash-2.05b-305.i586.rpm) = 51c41a86a19628af1e43c4b65ece8aa159bc9da7
+RMD160 (suse91/i586/bash-2.05b-305.i586.rpm) = 464a25a22ae5e7b68ed31a66ae8bf0e5da345e64
 Size (suse91/i586/bash-2.05b-305.i586.rpm) = 636675 bytes
 SHA1 (suse91/i586/coreutils-5.2.1-23.i586.rpm) = 801f63e5e347b19323d01e6a4460aaea60ddc14f
+RMD160 (suse91/i586/coreutils-5.2.1-23.i586.rpm) = dfa09f0e495db289741d7ae7466118428a122dcb
 Size (suse91/i586/coreutils-5.2.1-23.i586.rpm) = 1982252 bytes
 SHA1 (suse91/i586/glibc-2.3.3-98.i586.rpm) = bd12daad569a071dd8989d92b5e278aa168b0ab3
+RMD160 (suse91/i586/glibc-2.3.3-98.i586.rpm) = 4633ccc71cd5bb8dfa3bd7338d39406d702fda14
 Size (suse91/i586/glibc-2.3.3-98.i586.rpm) = 1455673 bytes
 SHA1 (suse91/i586/libgcc-3.3.3-41.i586.rpm) = 1fc7169f9e2730ffd8e7dc28d00f0f9b90dbd0eb
+RMD160 (suse91/i586/libgcc-3.3.3-41.i586.rpm) = 95ed4e7c50be207a3c5bdb563e569c78c9f9acb1
 Size (suse91/i586/libgcc-3.3.3-41.i586.rpm) = 51314 bytes
 SHA1 (suse91/i586/libacl-2.2.21-54.i586.rpm) = 03ad392c7762b22430559c0ab8e2671069dddc5d
+RMD160 (suse91/i586/libacl-2.2.21-54.i586.rpm) = aff03ec829987897ab0d812658eab23b6b81ffae
 Size (suse91/i586/libacl-2.2.21-54.i586.rpm) = 18239 bytes
 SHA1 (suse91/i586/libattr-2.4.12-56.i586.rpm) = 82d248de4b15ffed49a758eef1701b94b1d57415
+RMD160 (suse91/i586/libattr-2.4.12-56.i586.rpm) = d082ec704e5537ff133c29a14dfe63268f3a492b
 Size (suse91/i586/libattr-2.4.12-56.i586.rpm) = 11086 bytes
 SHA1 (suse91/i586/libselinux-1.8-16.i586.rpm) = 302a59b8ac41ffb6d61add6deac3aa0c10990ef5
+RMD160 (suse91/i586/libselinux-1.8-16.i586.rpm) = 887e03f24a29d30e6842790bd499708aaa6307b9
 Size (suse91/i586/libselinux-1.8-16.i586.rpm) = 47298 bytes
 SHA1 (suse91/i586/libstdc++-3.3.3-41.i586.rpm) = 77341589e297e66fc793961d96a7b24df5893101
+RMD160 (suse91/i586/libstdc++-3.3.3-41.i586.rpm) = c038490eb1126db93f08e057448f8ffc0614304c
 Size (suse91/i586/libstdc++-3.3.3-41.i586.rpm) = 301785 bytes
 SHA1 (suse91/i586/ncurses-5.4-59.i586.rpm) = 83fc26e2c55e75f347530ad19b01d23883a60738
+RMD160 (suse91/i586/ncurses-5.4-59.i586.rpm) = 17616a49eeaf0d385ef4049d95183f66aa958752
 Size (suse91/i586/ncurses-5.4-59.i586.rpm) = 790419 bytes
 SHA1 (suse91/i586/readline-4.3-306.i586.rpm) = 500c6665e66d0052a5d922d7db3f88f029c91853
+RMD160 (suse91/i586/readline-4.3-306.i586.rpm) = 740f13777dbfaf579fc4be2c1df735c29695ac0f
 Size (suse91/i586/readline-4.3-306.i586.rpm) = 151357 bytes
 SHA1 (suse91/i586/zlib-1.2.1-70.i586.rpm) = 7592cc5629f8c3c480bb943089c0e09481ac3f46
+RMD160 (suse91/i586/zlib-1.2.1-70.i586.rpm) = 8e9f69c1250be1c194dc3798b7a2b4372e69a5e8
 Size (suse91/i586/zlib-1.2.1-70.i586.rpm) = 63453 bytes
