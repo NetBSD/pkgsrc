@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5932 2004/05/14 09:20:31 xtraeme Exp $
+$NetBSD: CHANGES,v 1.5933 2004/05/14 11:26:27 grant Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2525,3 +2525,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated w3m to 0.5nb3 [wiz 2004-05-14]
 	Updated w3m-img to 0.5nb3 [wiz 2004-05-14]
 	Updated ethereal to 0.10.4 [xtraeme 2004-05-14]
+	Updated xterm to 188 [grant 2004-05-14]
