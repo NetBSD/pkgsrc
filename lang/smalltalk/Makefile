@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2003/07/02 00:00:22 jtb Exp $
+# $NetBSD: Makefile,v 1.16 2003/07/02 22:35:37 jtb Exp $
 
 DISTNAME=		smalltalk-2.1.3
 CATEGORIES=		lang
@@ -10,9 +10,12 @@ COMMENT=		GNU Smalltalk: A smalltalk-80 implementation
 
 ONLY_FOR_PLATFORM=	*-*-i386 *-*-sparc *-*-powerpc
 
+USE_BUILDLINK2=		YES
 USE_GMAKE=		YES
 USE_GNU_READLINE=	YES
-USE_BUILDLINK2=		YES
+
+USE_LIBTOOL=		YES
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--with-gmp=${BUILDLINK_PREFIX.gmp}/lib
@@ -25,10 +28,9 @@ CONFIGURE_ARGS+=	--without-glib --without-gtk
 CONFIGURE_ARGS+=	--with-lispdir=${PREFIX}/share/emacs/site-lisp
 CONFIGURE_ENV+=		CFLAGS="-O2 -fsigned-char"
 
-LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
-
 TEST_TARGET=		check
 
+.include "../../devel/libtool/buildlink2.mk"
 .include "../../devel/gmp/buildlink2.mk"
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../devel/readline/buildlink2.mk"
