@@ -1,19 +1,21 @@
-$NetBSD: patch-bd,v 1.1 1999/08/31 22:09:43 wrstuden Exp $
+$NetBSD: patch-bd,v 1.2 2000/06/29 03:01:36 wrstuden Exp $
 
 --- sys/netbsd/Makefile	Sat Sep 26 08:15:09 1998
-+++ sys/netbsd/Makefile	Tue Aug 31 02:15:30 1999
-@@ -1,9 +1,8 @@
++++ sys/netbsd/Makefile	Wed Jun 28 19:36:36 2000
+@@ -1,9 +1,9 @@
  # NetBSD specific defines, passed to subdirectories.
  DEFS=	-DBSD4_4
 -OPTOPTS=	-O2
- CC=	gcc -Werror -I../../sys/netbsd/
+-CC=	gcc -Werror -I../../sys/netbsd/
++#CC=	gcc -Werror -I../../sys/netbsd/
++OPTOPTS= -Werror -I../../sys/netbsd/
  INSTALL=	install
 -ADDLIBS=	-lcrypt
 +ADDLIBS=	-Wl,-R${LIBDIR} -lcrypt
  
  ALL=	../../libatalk ../../include ../../bin ../../etc ../../man
  
-@@ -16,12 +15,14 @@
+@@ -16,12 +16,14 @@
  	    ADDLIBS="${ADDLIBS}" DEFS="${DEFS}" OPTOPTS="${OPTOPTS}" \
  	    SBINDIR="${SBINDIR}" BINDIR="${BINDIR}" RESDIR="${RESDIR}" \
  	    ETCDIR="${ETCDIR}" LIBDIR="${LIBDIR}" INCDIR="${INCDIR}" \
@@ -30,7 +32,7 @@ $NetBSD: patch-bd,v 1.1 1999/08/31 22:09:43 wrstuden Exp $
  	for i in ${ALL}; \
  	    do (cd $$i; ${MAKE} ${MFLAGS} CC="${CC}" \
  		ADDLIBS="${ADDLIBS}" DEFS="${DEFS}" OPTOPTS="${OPTOPTS}" \
-@@ -30,19 +31,22 @@
+@@ -30,19 +32,22 @@
  		AFSDIR="${AFSDIR}" KRBDIR="${KRBDIR}" \
  		INSTALL="${INSTALL}" $@); \
  	done
