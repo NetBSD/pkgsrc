@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 1999/04/13 15:31:05 agc Exp $
+# $NetBSD: Makefile,v 1.12 2001/02/16 15:22:37 wiz Exp $
 #
 
 DISTNAME=	xplot-0.90
@@ -6,6 +6,7 @@ CATEGORIES=	graphics x11
 MASTER_SITES=	ftp://mercury.lcs.mit.edu/pub/shep/
 
 MAINTAINER=	thorpej@netbsd.org
+COMMENT=	plotting program, most often used in conjunction with tcptrace
 
 USE_X11BASE=	yes
 GNU_CONFIGURE=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2001/01/14 13:46:09 tron Exp $
+# $NetBSD: Makefile,v 1.17 2001/02/16 15:22:37 wiz Exp $
 
 DISTNAME=       xpm-3.4k
 CATEGORIES=	graphics x11
@@ -6,6 +6,7 @@ MASTER_SITES=	ftp://avahi.inria.fr/pub/xpm/
 
 MAINTAINER=	mycroft@netbsd.org
 HOMEPAGE=	http://www.inria.fr/koala/lehors/xpm.html
+COMMENT=	The X Pixmap library
 
 USE_IMAKE=	yes
 

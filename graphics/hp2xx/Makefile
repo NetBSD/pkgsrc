@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2000/11/15 23:05:05 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.11 2001/02/16 15:22:24 wiz Exp $
 #
 
 DISTNAME=	hp2xx-3.3.2
@@ -8,6 +8,7 @@ MASTER_SITES=	${MASTER_SITE_GNU:=hp2xx/}
 
 MAINTAINER=	dmcmahill@netbsd.org
 HOMEPAGE=	http://www.gnu.org/software/hp2xx/hp2xx.html
+COMMENT=	HPGL converter and previewer
 
 DEPENDS+=	png>=1.0.6:../../graphics/png
 DEPENDS+=	tiff-*:../../graphics/tiff

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2001/01/29 19:03:23 tron Exp $
+# $NetBSD: Makefile,v 1.63 2001/02/16 15:22:14 wiz Exp $
 
 DISTNAME=		ImageMagick-5.2.8
 CATEGORIES=		graphics
@@ -7,6 +7,7 @@ EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		tron@netbsd.org
 HOMEPAGE=		http://www.simplesystems.org/ImageMagick/
+COMMENT=		Package for display and interactive manipulation of images
 
 DEPENDS+=		jpeg-6b:../../graphics/jpeg
 DEPENDS+=		mpeg2codec-1.2:../../graphics/mpeg2codec

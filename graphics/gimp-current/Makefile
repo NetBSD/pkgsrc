@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2000/11/28 22:49:23 tron Exp $
+# $NetBSD: Makefile,v 1.28 2001/02/16 15:22:22 wiz Exp $
 
 DISTNAME=		gimp-1.1.29
 CATEGORIES=		graphics
@@ -9,6 +9,7 @@ EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		hubertf@netbsd.org
 HOMEPAGE=		http://www.gimp.org/
+COMMENT=		Image manipulation program similar to Photoshop[tm]
 
 DEPENDS+=		jpeg-6b:../../graphics/jpeg
 DEPENDS+=		gnome-libs>=1.2.0:../../x11/gnome-libs

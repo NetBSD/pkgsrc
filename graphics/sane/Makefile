@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2000/12/26 21:31:54 hubertf Exp $
+# $NetBSD: Makefile,v 1.21 2001/02/16 15:22:33 wiz Exp $
 # FreeBSD Id: Makefile,v 1.3 1998/04/30 02:38:03 obrien Exp
 #
 
@@ -13,6 +13,7 @@ MASTER_SITES=	ftp://ftp.mostang.com/pub/sane/ \
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.mostang.com/sane/
+COMMENT=	API for access to scanners, digitals camera, frame grabbers etc
 
 DEPENDS+=	gtk+-1.2.*:../../x11/gtk
 DEPENDS+=	gimp>=1.0.4:../../graphics/gimp

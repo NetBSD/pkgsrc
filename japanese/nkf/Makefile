@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/05/12 23:34:20 sakamoto Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/16 15:25:25 wiz Exp $
 
 DISTNAME=	nkf-1.7
 CATEGORIES=	japanese converters
@@ -8,6 +8,7 @@ PATCH_SITES=	http://www.rs.civil.tohoku.ac.jp/~ito/ws/
 PATCHFILES=	nkf.patch.txt
 
 MAINTAINER=	kay@kaynet.or.jp
+COMMENT=	Network Kanji code conversion Filter
 
 ALL_TARGET=	nkf
 PATCH_DIST_ARGS+= -R -d ${WRKSRC}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2000/08/26 02:09:20 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2001/02/16 15:22:13 wiz Exp $
 #
 
 DISTNAME=	compupic-5.1.1063-i386-netbsd
@@ -8,6 +8,7 @@ MASTER_SITES=	http://www.photodex.com/files/unix/
 
 MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://beta.compupic.com/
+COMMENT=	Tool for managing graphics and multimedia files
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386
 
