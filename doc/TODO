@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.711 2003/07/12 14:54:09 salo Exp $
+$NetBSD: TODO,v 1.712 2003/07/12 15:31:08 itojun Exp $
 
 Suggested new packages
 ======================
@@ -78,7 +78,6 @@ Suggested package updates
 	o biew-5.5.0
 	o bind-8.4.0
 	o binutils-2.14
-	o bogofilter-0.13.6.2
 	o bzflag-1.7g0
 	o cervisia-2.0
 	o clisp-2.30
