@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/07/25 13:02:08 wulf Exp $
+@comment $NetBSD: PLIST,v 1.2 2000/08/19 11:26:30 wulf Exp $
 libexec/gwd
 bin/consang
 bin/ged2gwb
 bin/gwb2ged
 bin/gwc
+bin/gwtp
 bin/gwu
 share/examples/geneweb/a.gwf
 share/examples/geneweb/only.txt
@@ -95,8 +96,11 @@ share/geneweb/etc/index.txt
 share/geneweb/etc/redirect.txt
 share/geneweb/etc/renamed.txt
 share/geneweb/etc/robot.txt
+share/geneweb/images/female.gif
+share/geneweb/images/male.gif
 share/geneweb/images/gwback.jpg
 share/geneweb/images/gwlogo.gif
+share/geneweb/images/left.jpg
 share/geneweb/images/l-af.jpg
 share/geneweb/images/l-cn.jpg
 share/geneweb/images/l-cs.jpg
@@ -110,6 +114,7 @@ share/geneweb/images/l-fr.jpg
 share/geneweb/images/l-he.jpg
 share/geneweb/images/l-is.jpg
 share/geneweb/images/l-it.jpg
+share/geneweb/images/l-lv.jpg
 share/geneweb/images/l-nl.jpg
 share/geneweb/images/l-no.jpg
 share/geneweb/images/l-pt.jpg
@@ -128,6 +133,7 @@ share/geneweb/images/t-fr.gif
 share/geneweb/images/t-he.gif
 share/geneweb/images/t-is.gif
 share/geneweb/images/t-it.gif
+share/geneweb/images/t-lv.gif
 share/geneweb/images/t-nl.gif
 share/geneweb/images/t-no.gif
 share/geneweb/images/t-pt.gif
