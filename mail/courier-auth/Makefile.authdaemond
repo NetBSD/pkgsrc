@@ -1,4 +1,7 @@
-# $NetBSD: Makefile.authdaemond,v 1.7 2004/02/21 14:43:15 jlam Exp $
+# $NetBSD: Makefile.authdaemond,v 1.8 2004/02/22 01:52:05 jlam Exp $
+
+USE_BUILDLINK3=		yes
+USE_LANGUAGES=		c c++
 
 .include "../courier-auth/Makefile.common"
 
