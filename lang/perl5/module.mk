@@ -1,4 +1,4 @@
-# $NetBSD: module.mk,v 1.14 2003/09/13 01:56:25 jlam Exp $
+# $NetBSD: module.mk,v 1.15 2003/09/13 08:25:03 jlam Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install perl5 modules.
@@ -41,6 +41,11 @@ BUILDLINK_DEPMETHOD.perl+=	full
 
 PERL5_CONFIGURE?=	YES
 PERL5_CONFIGURE_DIRS?=	${CONFIGURE_DIRS}
+
+# All pkgsrc-install perl modules are installed into the "site"
+# directories.
+#
+MAKE_PARAMS+=		INSTALLDIRS=site
 
 perl5-configure:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
