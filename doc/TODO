@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.286 2003/02/21 11:09:04 wiz Exp $
+$NetBSD: TODO,v 1.287 2003/02/21 11:18:22 mycroft Exp $
 
 Suggested new packages
 ======================
@@ -296,7 +296,6 @@ Suggested package updates
 	o xosview-1.8.0 [pkg/20265]
 	o xpaint-2.6.9
 	o xpuyopuyo-0.9.5
-	o xsane-0.90
 	o xscreensaver-4.08
 	o xsidplay-1.6.5pre20
 	o yudit-2.7.2
