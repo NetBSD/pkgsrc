@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.631 2003/06/10 12:48:13 wiz Exp $
+$NetBSD: TODO,v 1.632 2003/06/10 13:26:04 wiz Exp $
 
 Suggested new packages
 ======================
@@ -92,7 +92,6 @@ Suggested package updates
 	o crossfire-1.5.0
 	o csound-4.24.0
 	o cvs-1.11.6
-	o dctc-0.85.3
 	o ddd-3.3.5
 	o disc-cover-1.5.2
 	o distcc-2.5.1
