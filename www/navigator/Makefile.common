@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.32 2001/03/27 03:20:24 hubertf Exp $
+# $NetBSD: Makefile.common,v 1.33 2001/03/29 14:03:11 kei Exp $
 #
 # Common include file for communicator and navigator packages
 
@@ -93,8 +93,7 @@ EMULSUBDIR=	emul/linux
 EMULDIR=	${PREFIX}/${EMULSUBDIR}
 SORT=		sort
 RPM2PKG=	rpm2pkg
-RPM2PKGARGS=	-d ${PREFIX} -f ${PLIST_SRC} -p ${EMULSUBDIR}
-RPM2PKGARGS+=	${DISTDIR}/${DIST_SUBDIR}/${DISTNAME}${EXTRACT_SUFX}
+RPM2PKGARGS=	${DISTDIR}/${DIST_SUBDIR}/${DISTNAME}${EXTRACT_SUFX}
 VENDER_NAME=	# empty.  what should be here?
 .endif
 #
@@ -124,7 +123,16 @@ do-extract:
 do-install:
 	${CP} ${PKGDIR}/DESCR.linux-powerpc ${WRKDIR}
 	${RM} -f ${PLIST_SRC}
-	${RPM2PKG} -d ${PREFIX} -f ${PLIST_SRC} -p ${EMULSUBDIR} ${RPM2PKGARGS}
+	${RPM2PKG} -d ${PREFIX} -f ${PLIST_SRC} -s 1 ${RPM2PKGARGS}
+
+	${SED} -e 's#@BINNAME@#${BINNAME}#g' \
+	       -e 's#@PREFIX@#${PREFIX}#g' \
+	    <${FILESDIR}/${BINNAME}.sh.linux-powerpc >${WRKDIR}/${BINNAME}.sh
+	${INSTALL_SCRIPT} ${WRKDIR}/${BINNAME}.sh ${PREFIX}/bin/${NS_NAME}
+	${RM} -f ${PREFIX}/bin/${BINNAME}
+	${LN} -sf ${NS_NAME} ${PREFIX}/bin/${BINNAME}
+	${ECHO} bin/${BINNAME} >> ${PLIST_SRC}
+	${ECHO} bin/${NS_NAME} >> ${PLIST_SRC}
 	${SORT} -r ${PLIST_SRC} > ${PLIST_SRC}.sorted
 	${MV} ${PLIST_SRC}.sorted ${PLIST_SRC}
 
