@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.49 2003/09/11 08:57:37 agc Exp $
+# $NetBSD: Makefile,v 1.50 2003/09/25 13:51:18 xtraeme Exp $
 #
 
 COMMENT=	Window managers (for X)
 
+SUBDIR+=	3ddesktop
 SUBDIR+=	9wm
 SUBDIR+=	aewm++
 SUBDIR+=	afterstep
