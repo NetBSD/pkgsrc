@@ -1,7 +1,7 @@
-$NetBSD: patch-al,v 1.3 2002/02/18 09:42:10 jmc Exp $
+$NetBSD: patch-al,v 1.4 2002/02/18 09:43:59 jmc Exp $
 
---- pops.c.orig	Sun Jul 11 12:43:39 1993
-+++ pops.c	Mon Feb 18 09:40:23 2002
+--- as/pops.c.orig	Sun Jul 11 12:43:39 1993
++++ as/pops.c	Mon Feb 18 09:40:23 2002
 @@ -72,7 +72,7 @@
  register struct sym_s *symptr;
  {
