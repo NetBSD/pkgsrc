@@ -1,0 +1,26 @@
+$NetBSD: patch-ad,v 1.1 2004/12/01 13:59:43 adam Exp $
+
+--- Makefile.in.orig	2003-07-24 17:06:38.000000000 +0000
++++ Makefile.in
+@@ -14,11 +14,9 @@ INSTALL_DEPS=all
+ 
+ # remind me to look up how to else in a makefile
+ ifeq ($(DO_MINOR_LIBS),yes)
+-INSTALL_DEPS+=install_minor_libs
+ endif
+ 
+ ifeq ($(DO_MINOR_LIBS),no)
+-INSTALL_DEPS+=install_major_lib_only
+ endif
+ 
+ all: configure
+@@ -62,8 +60,7 @@ install_major_lib_only:
+ install: $(INSTALL_DEPS)
+ 	$(INSTALL) -d -m 755 $(DESTINC)
+ 	$(INSTALL) -d -m 755 $(DESTINC)/AL
+-	$(INSTALL) -d -m 755 $(DESTLIB)
+-	$(INSTALL) -m 755 src/libopenal.a $(DESTLIB)
++	${LIBTOOL} --mode=install ${BSD_INSTALL_DATA} src/libopenal.la $(DESTLIB)
+ 	$(INSTALL) -m 444 ../include/AL/al.h $(DESTINC)/AL
+ 	$(INSTALL) -m 444 ../include/AL/alc.h $(DESTINC)/AL
+ 	$(INSTALL) -m 444 ../include/AL/alu.h $(DESTINC)/AL

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2004/01/02 18:06:57 seb Exp $
+@comment $NetBSD: PLIST,v 1.4 2004/12/01 13:59:43 adam Exp $
 include/AL/al.h
 include/AL/alc.h
 include/AL/alctypes.h
@@ -9,8 +9,5 @@ include/AL/alu.h
 include/AL/alut.h
 include/AL/aluttypes.h
 include/AL/alutypes.h
-lib/libopenal.a
-lib/libopenal.so
-lib/libopenal.so.0
-lib/libopenal.so.0.0.6
+lib/libopenal.la
 @dirrm include/AL
