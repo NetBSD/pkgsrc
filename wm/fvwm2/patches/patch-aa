@@ -1,16 +1,13 @@
-$NetBSD: patch-aa,v 1.10 2003/10/13 15:21:19 martti Exp $
+$NetBSD: patch-aa,v 1.11 2004/10/01 09:15:34 martti Exp $
 
---- utils/Makefile.in.orig	Fri Oct 10 23:12:36 2003
-+++ utils/Makefile.in	Mon Oct 13 18:09:55 2003
-@@ -133,14 +133,14 @@
- xpm_CFLAGS = @xpm_CFLAGS@
- xpm_LIBS = @xpm_LIBS@
+--- utils/Makefile.in.orig	2004-09-30 19:56:39.000000000 +0300
++++ utils/Makefile.in	2004-10-01 12:03:56.000000000 +0300
+@@ -168,3 +168,3 @@
  
 -bin_PROGRAMS = @XPMROOT@
 +bin_PROGRAMS =
  bin_SCRIPTS = fvwm-config fvwmbug fvwm-menu-xlock fvwm-menu-directory \
- 	fvwm-menu-desktop fvwm-menu-headlines fvwm24_convert
- 
+@@ -173,5 +173,5 @@
  
 -EXTRA_PROGRAMS = xpmroot xselection
 +EXTRA_PROGRAMS = xselection
@@ -18,16 +15,10 @@ $NetBSD: patch-aa,v 1.10 2003/10/13 15:21:19 martti Exp $
 -man_MANS = xpmroot.1 fvwm-config.1 fvwmbug.1 fvwmrc_convert.1 fvwm24_convert.1 \
 +man_MANS = fvwm-config.1 fvwmbug.1 fvwmrc_convert.1 fvwm24_convert.1 \
  	fvwm-menu-xlock.1 fvwm-menu-directory.1 \
- 	fvwm-menu-desktop.1 fvwm-menu-headlines.1
- 
-@@ -159,8 +159,8 @@
- CONFIG_HEADER = $(top_builddir)/config.h
- CONFIG_CLEAN_FILES = fvwm-config fvwm-menu-xlock fvwm-menu-directory \
+@@ -194,4 +194,4 @@
  	fvwm-menu-desktop fvwm-menu-headlines fvwm24_convert fvwmbug.sh
 -EXTRA_PROGRAMS = xpmroot$(EXEEXT) xselection$(EXEEXT)
 -bin_PROGRAMS = @XPMROOT@
 +EXTRA_PROGRAMS = xselection$(EXEEXT)
 +bin_PROGRAMS =
  PROGRAMS = $(bin_PROGRAMS)
- 
- xpmroot_SOURCES = xpmroot.c
