@@ -1,16 +1,17 @@
-# $NetBSD: Makefile,v 1.9 1998/07/04 09:19:06 mycroft Exp $
+# $NetBSD: Makefile,v 1.10 1998/08/17 21:17:17 tron Exp $
 #
 
 DISTNAME=		asclock
-PKGNAME=		asclock-10
+PKGNAME=		asclock-11
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_SUNSITE}
 MASTER_SITE_SUBDIR=	X11/clocks
-EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		hubertf@netbsd.org
 
 DEPENDS+=		xpm-3.4k:../../graphics/xpm
+
+CONFLICTS=		asclock-10
 
 # Choose language from:
 # 1) english [DEFAULT]
@@ -25,6 +26,11 @@ DEPENDS+=		xpm-3.4k:../../graphics/xpm
 # 0) breton
 # a) french
 # b) czech
+# c) russian
+# d) ukrainian
+# e) slovene
+# f) indonesian
+# g) danish
 LANG?=1
 
 # Choose paneltype from:
