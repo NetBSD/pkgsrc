@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2002/10/10 00:35:56 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2002/11/01 16:34:38 wiz Exp $
 #
 
 DISTNAME=	gdbm-prim-1.15
 PKGNAME=	${DISTNAME:S/-prim/_primitive/}
+PKGREVISION=	1
 CATEGORIES=	databases
 MASTER_SITES=	http://homepage.mac.com/leffert/.cv/leffert/Public/
 EXTRACT_SUFX=	.tar.gz-link.gz
