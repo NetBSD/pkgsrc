@@ -1,4 +1,4 @@
-/*	$NetBSD: extern.h,v 1.1 2003/09/05 18:38:58 jlam Exp $	*/
+/*	$NetBSD: extern.h,v 1.2 2004/08/21 04:10:45 jlam Exp $	*/
 
 /*-
  * Copyright (c) 1991, 1993
@@ -31,12 +31,13 @@
  *	@(#)extern.h	8.1 (Berkeley) 6/6/93
  */
 
+#if HAVE_CONFIG_H
+#include "config.h"
+#endif
 #include "mtree.h"
 
-#if HAVE_CONFIG_H
-#include "config.h" 
-#else 
-#define HAVE_STRUCT_STAT_ST_FLAGS 1
+#if HAVE_NBTOOL_CONFIG_H
+#include "nbtool_config.h"
 #endif
  
 #include <nbcompat.h>
@@ -77,7 +78,7 @@ const char *rlink(const char *);
 int	 verify(void);
 
 extern int	dflag, eflag, iflag, lflag, mflag, rflag, sflag, tflag, uflag;
-extern int	Wflag;
+extern int	mtree_Mflag, mtree_Wflag;
 extern size_t	mtree_lineno;
 extern u_int32_t crc_total;
 extern int	ftsoptions, keys;

@@ -1,4 +1,4 @@
-/*	$NetBSD: crc.c,v 1.2 2003/09/05 04:38:47 grant Exp $	*/
+/*	$NetBSD: crc.c,v 1.3 2004/08/21 04:10:45 jlam Exp $	*/
 
 /*-
  * Copyright (c) 1991, 1993
@@ -35,6 +35,10 @@
 #if HAVE_CONFIG_H
 #include "config.h"
 #endif
+#if HAVE_NBTOOL_CONFIG_H
+#include "nbtool_config.h"
+#endif
+
 #include <nbcompat.h>
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
@@ -43,7 +47,7 @@
 #if 0
 static char sccsid[] = "@(#)crc.c	8.1 (Berkeley) 6/17/93";
 #else
-__RCSID("$NetBSD: crc.c,v 1.2 2003/09/05 04:38:47 grant Exp $");
+__RCSID("$NetBSD: crc.c,v 1.3 2004/08/21 04:10:45 jlam Exp $");
 #endif
 #endif /* not lint */
 
