@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/05/25 17:57:27 wennmach Exp $
+# $NetBSD: Makefile,v 1.2 2000/06/08 13:53:24 wennmach Exp $
 #
 
 DISTNAME=		krb4-1.0.1
@@ -9,10 +9,26 @@ MASTER_SITES=		ftp://ftp.pdc.kth.se/pub/krb/src/
 MAINTAINER=		wennmach@netbsd.org
 HOMEPAGE=		http://www.pdc.kth.se/kth-krb/
 
+CONFLICTS+=		openssl-*
+
 RESTRICTED=		"Crypto; export-controlled"
 MIRROR_DISTFILE=	no
 
 GNU_CONFIGURE=		yes
+#USE_GTEXINFO=		yes #not currently needed
+
+MESSAGE_FILE=		${WRKDIR}/MESSAGE
+
+post-patch:
+	@${SED} -e 's|@PREFIX@|${PREFIX}|g'                                   \
+		<${WRKSRC}/lib/kafs/kafs.h                                    \
+		>${WRKSRC}/lib/kafs/kafs.h.sed
+	@${MV} ${WRKSRC}/lib/kafs/kafs.h.sed ${WRKSRC}/lib/kafs/kafs.h
+
+pre-install:
+	@${SED} -e 's|@PREFIX@|${PREFIX}|g'                                   \
+		<${PKGDIR}/MESSAGE                                            \
+		>${MESSAGE_FILE}    
 
 post-install:
 	@${MKDIR} ${PREFIX}/share/examples/kth-krb4
