@@ -1,0 +1,48 @@
+$NetBSD: patch-ab,v 1.1.1.1 2003/08/16 14:19:36 taya Exp $
+
+diff -ru ../Orig/mozilla/configure.in ./configure.in
+--- ../Orig/mozilla/configure.in	2003-07-10 06:55:23.000000000 +0900
++++ ./configure.in	2003-07-31 23:04:02.000000000 +0900
+@@ -885,6 +885,9 @@
+ #	MKSHLIB_FORCE_ALL='-Wl,-Bforcearchive'
+ #	MKSHLIB_UNFORCE_ALL=''
+ #    fi
++    if test "$LIBRUNPATH"; then
++	DSO_LDOPTS="-Wl,-R$LIBRUNPATH $DSO_LDOPTS"
++    fi
+     ;; 
+ 
+ *-hpux*)
+@@ -1173,6 +1176,13 @@
+     if test "$LIBRUNPATH"; then
+ 	DSO_LDOPTS="-Wl,-R$LIBRUNPATH $DSO_LDOPTS"
+     fi
++
++    case "${target_cpu}" in
++    alpha*)
++    	CFLAGS="$CFLAGS -mieee"
++    	CXXFLAGS="$CXXFLAGS -mieee"
++    ;;
++    esac
+     ;;
+ 
+ *-nto*) 
+@@ -1580,7 +1590,7 @@
+                  [siginfo_t* info;],
+                  [ac_cv_siginfo_t=true],
+                  [ac_cv_siginfo_t=false])])
+-if test "$ac_cv_siginfo_t" = true ; then
++if test "$OS_TARGET" != "NetBSD" -a "$ac_cv_siginfo_t" = true ; then
+   AC_DEFINE(HAVE_SIGINFO_T)
+   AC_MSG_RESULT(yes)
+ else
+@@ -2125,9 +2135,6 @@
+ 				CXXFLAGS="$CXXFLAGS -mt" 
+ 			fi
+ 			;;
+-	*-*-netbsd*)
+-		USE_PTHREADS=
+-		_PTHREAD_LDFLAGS=
+ 	esac
+ fi
+ 
