@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1575 2005/01/27 04:05:08 tv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1576 2005/01/27 11:21:46 tv Exp $
 #
 # This file is in the public domain.
 #
@@ -1173,7 +1173,9 @@ MAKEFLAGS+=		${def:C/=.*//}=${_${def:C/=.*$//}_CMD:sh}
 .if !defined(_PATH_ORIG)
 _PATH_ORIG:=		${PATH}
 MAKEFLAGS+=		_PATH_ORIG=${_PATH_ORIG:Q}
+.endif
 
+.if !empty(PREPEND_PATH)
 # This is very Special.  Because PREPEND_PATH is set with += in reverse order,
 # the awk expression reverses the order again (since bootstrap bmake doesn't
 # yet support the :[-1..1] construct).
