@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/03/26 14:28:13 itojun Exp $
+# $NetBSD: Makefile,v 1.3 2000/08/10 17:02:25 thorpej Exp $
 # FreeBSD Id: Makefile,v 1.47 1997/11/10 22:04:42 dima Exp
 #
 
@@ -95,12 +95,13 @@ USE_KERBEROS=		yes
 CONFIGURE_ARGS+=	--with-krb4=/usr
 .endif
 
-.if defined(KERBEROS) && ${KERBEROS} == 5
-USE_KERBEROS=	yes
-CONFIGURE_ARGS+=--with-krb5=/usr
-.else
-CONFIGURE_ARGS+=--without-krb5
-.endif
+# XXX KERBEROS 5 SUPPORT BROKEN WITH HEIMDAL
+#.if defined(KERBEROS) && ${KERBEROS} == 5
+#USE_KERBEROS=	yes
+#CONFIGURE_ARGS+=--with-krb5=/usr
+#.else
+#CONFIGURE_ARGS+=--without-krb5
+#.endif
 
 # Find X11 libraries with xpkgwedge
 .if defined(USE_LOCALBASE_FOR_X11)
