@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2001/05/05 14:32:43 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2001/07/28 14:10:20 tron Exp $
 
 DISTNAME=	apNetBSD
 PKGNAME=	aperture-2.0nb1
@@ -22,14 +22,15 @@ MAINTAINER=	jlam@netbsd.org
 COMMENT=	XFree86 Framebuffer "aperture" driver for NetBSD/i386
 
 DIST_SUBDIR=	${PKGNAME}
-NO_WRKSUBDIR=	# defined
-NO_CONFIGURE=	# defined
+NO_WRKSUBDIR=	YES
+NO_CONFIGURE=	YES
 
 EXTRACT_CMD=	${SH} ${DOWNLOADED_DISTFILE}
 ALL_TARGET=	cleandir depend all
 INSTALL_TARGET=	dirs includes install
 
-OSVERSION_SPECIFIC=	# defined
+MANCOMPRESSED_IF_MANZ=	YES
+OSVERSION_SPECIFIC=	YES
 ONLY_FOR_PLATFORM=	NetBSD-*-i386
 
 BSDSRCDIR?=	/nonexistent	# to override <bsd.own.mk>, MUST be
