@@ -1,4 +1,4 @@
-/* $NetBSD: lib.h,v 1.13 2004/11/20 06:42:12 grant Exp $ */
+/* $NetBSD: lib.h,v 1.14 2004/12/09 20:10:34 erh Exp $ */
 
 /* from FreeBSD Id: lib.h,v 1.25 1997/10/08 07:48:03 charnier Exp */
 
@@ -352,6 +352,5 @@ int     pkg_perform(lpkg_head_t *);
 extern Boolean Verbose;
 extern Boolean Fake;
 extern Boolean Force;
-extern Boolean Replace;
 
 #endif				/* _INST_LIB_LIB_H_ */
