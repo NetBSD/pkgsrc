@@ -1,3 +1,13 @@
+This package includes the package installation and administration tools:
+
+pkg_add - a utility for installing and upgrading software packages
+pkg_admin - perform various administrative tasks to the pkg system
+pkg_create - a utility for creating software package distributions
+pkg_delete - a utility for deleting previously installed software packages
+pkg_info - a utility for displaying information on software packages
+pkg_view - a utility for managing package views
+linkfarm - a utility for managing symbolic links to package files
+
 This is a copy of NetBSD-current's pkg_* tools in a format which
 is able to be installed as a package.  To prevent deinstallation,
 they don't register themselves as a package.  On NetBSD, they simply
