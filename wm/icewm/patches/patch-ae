@@ -1,16 +1,16 @@
-$NetBSD: patch-ae,v 1.1.1.1 2000/12/12 02:03:48 wiz Exp $
+$NetBSD: patch-ae,v 1.2 2002/02/26 09:41:40 martti Exp $
 
---- src/wmtaskbar.cc.orig	Sun Mar 19 08:34:58 2000
-+++ src/wmtaskbar.cc	Mon Jul 31 01:47:42 2000
-@@ -254,7 +254,11 @@
+--- src/wmtaskbar.cc.orig	Tue Oct  9 16:54:04 2001
++++ src/wmtaskbar.cc	Tue Feb 26 08:48:08 2002
+@@ -287,7 +287,11 @@
      } else
          fClock = 0;
- #ifdef CONFIG_APM
+ #ifdef CONFIG_APPLET_APM
 +#ifdef __linux__
      if (taskBarShowApm && access("/proc/apm", 0) == 0) {
 +#elif defined(__NetBSD__)
 +    if (taskBarShowApm && access(APMDEV, 0) == 0) {
 +#endif
- 	fApm = new YApm(this);
- 	if (fApm->height() + ADD1 > ht) ht = fApm->height() + ADD1;
+         fApm = new YApm(this);
+         if (fApm->height() + ADD1 > ht) ht = fApm->height() + ADD1;
      } else

@@ -1,10 +1,10 @@
-$NetBSD: patch-ab,v 1.1.1.1 2000/12/12 02:03:48 wiz Exp $
+$NetBSD: patch-ab,v 1.2 2002/02/26 09:41:40 martti Exp $
 
---- src/aapm.cc.orig	Sun Feb 13 10:28:36 2000
-+++ src/aapm.cc	Mon Mar  6 22:22:36 2000
-@@ -22,11 +22,18 @@
+--- src/aapm.cc.orig	Tue Oct  9 16:54:03 2001
++++ src/aapm.cc	Tue Feb 26 09:02:17 2002
+@@ -25,6 +25,12 @@
  
- #ifdef CONFIG_APM
+ #ifdef CONFIG_APPLET_APM
  
 +#if defined(__NetBSD__)
 +#include <sys/ioctl.h>
@@ -15,17 +15,19 @@ $NetBSD: patch-ab,v 1.1.1.1 2000/12/12 02:03:48 wiz Exp $
  YColor *YApm::apmBg = 0;
  YColor *YApm::apmFg = 0;
  YFont *YApm::apmFont = 0;
+@@ -32,6 +38,7 @@
+ extern YPixmap *taskbackPixmap;
  
  void ApmStr(char *s, bool Tool) {
-+#ifdef __linux__
++#if !defined(__NetBSD__)
      char buf[45];
      int len, i, fd = open("/proc/apm", O_RDONLY);
      char driver[16];
-@@ -97,6 +104,44 @@
-             strcat(s," - Charging");
+@@ -102,6 +109,44 @@
+             strcat(s,_(" - Charging"));
          else
-             strcat(s,"M");
-+#elif defined(__NetBSD__)
+             strcat(s,_("M"));
++#else
 +    struct apm_power_info aip;
 +    int fd = open(APMDEV, O_RDONLY);
 +
@@ -52,14 +54,14 @@ $NetBSD: patch-ab,v 1.1.1.1 2000/12/12 02:03:48 wiz Exp $
 +
 +    if (aip.ac_state == APM_AC_ON)
 +        if (Tool)
-+            strcat(s," - Power");
++            strcat(s,_(" - Power"));
 +        else
-+            strcat(s,"P");
++            strcat(s,_("P"));
 +    if (aip.battery_state == APM_BATT_CHARGING)
 +        if (Tool)
-+            strcat(s," - Charging");
++            strcat(s,_(" - Charging"));
 +        else
-+            strcat(s,"M");
++            strcat(s,_("M"));
 +
 +    close(fd);
 +#endif

@@ -1,31 +1,34 @@
-# $NetBSD: Makefile.common,v 1.7 2002/02/08 12:31:03 wiz Exp $
+# $NetBSD: Makefile.common,v 1.8 2002/02/26 09:41:39 martti Exp $
 #
 
-DISTNAME=	icewm-1.0.4
+DISTNAME=	icewm-1.0.9-2
+PKGNAME=	icewm-1.0.9.2
 CATEGORIES=	x11 wm
-MASTER_SITES=	http://download.sourceforge.net/icewm/ \
-		ftp://ftp.fu-berlin.de/unix/X11/window-managers/icewm/
-EXTRACT_SUFX=	.src.tar.gz
+MASTER_SITES=	http://download.sourceforge.net/icewm/
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://icewm.sourceforge.net/
 
 GNU_CONFIGURE=	# defined
 USE_X11BASE=	# defined
+USE_GMAKE=	# defined
 
 FILESDIR=	${.CURDIR}/../../wm/icewm/files
 PATCHDIR=	${.CURDIR}/../../wm/icewm/patches
+WRKSRC=		${WRKDIR}/icewm-1.0.9
 
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "NetBSD"
 .if exists(/usr/include/machine/apmvar.h)
-CPPFLAGS+=	-DCONFIG_APM
+CPPFLAGS+=	-DCONFIG_APM -DSTART_XPM="\"bsd-daemon.xpm\""
 .endif
 .endif
 
 DOCDIR=		${PREFIX}/share/doc/icewm
 HTMLDIR=	${PREFIX}/share/doc/html/icewm
+INSTALL_TARGET=	install-base install-nls
 
 post-extract:
 	${CP} ${FILES} ${FILESDIR}/bsd-daemon.xpm ${WRKSRC}/lib/taskbar
