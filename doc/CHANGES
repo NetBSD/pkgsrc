@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2872 2003/07/24 07:10:10 agc Exp $
+$NetBSD: CHANGES,v 1.2873 2003/07/24 07:55:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2920,3 +2920,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated bmake to 20030723 [sjg 2003-07-23]
 	Updated mk-files to 20030723 [sjg 2003-07-23]
 	Added dirdiff-1.6 [agc 2003-07-24]
+	Updated pkglint to 3.57 [wiz 2003-07-24]
