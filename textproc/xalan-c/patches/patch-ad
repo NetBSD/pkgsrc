@@ -1,0 +1,45 @@
+$NetBSD: patch-ad,v 1.1.1.1 2001/01/15 12:42:09 skrll Exp $
+
+--- PlatformSupport/PlatformSupportDefinitions.hpp.orig	Fri Oct  6 19:17:04 2000
++++ PlatformSupport/PlatformSupportDefinitions.hpp
+@@ -77,6 +77,40 @@
+ 
+ #endif
+ 
++#ifdef NETBSD /* hacks to compile with NetBSD */
++#include <sys/types.h>
++#include <ctype.h>  
++#include <strings.h>
++
++inline int iswdigit (wchar_t);
++inline int iswalnum (wchar_t);
++inline wchar_t towlower (wchar_t);
++inline wchar_t towupper (wchar_t);
++
++#ifndef XML_NETBSD_STRICMP_DEFINED /* See GCCDefs.hpp from xerces */
++#define XML_NETBSD_STRICMP_DEFINED
++inline int stricmp (const char*, const char*);
++inline int stricmp (const char* s1, const char* s2) {return strcasecmp(s1,s2);} 
++inline int strincmp (const char*, const char*, size_t l);
++inline int strincmp (const char* s1, const char* s2, size_t l) {return strncasecmp(s1,s2,l);}
++#endif /* XML_NETBSD_STRICMP_DEFINED */
++
++inline int iswdigit (wchar_t c) { return (isascii(c) && isdigit(c)); }
++inline int iswalnum (wchar_t c) { return (isascii(c) && isalnum(c)); }
++inline wchar_t towlower (wchar_t c) {
++  if (isascii(c)) 
++    return tolower(c);
++  else
++    return (c);
++}
++inline wchar_t towupper (wchar_t c) {
++  if (isascii(c)) 
++    return toupper(c);
++  else
++    return (c);
++}
++
++#endif
+ 
+ 
+ #endif	// PLATFORMSUPPORTDEFINITIONS_HEADER_GUARD_1357924680
