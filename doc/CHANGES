@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8755 2005/01/14 15:26:23 jschauma Exp $
+$NetBSD: CHANGES,v 1.8756 2005/01/14 16:03:16 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -306,3 +306,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated afterstep to 2.00.01 [jmmv 2005-01-14]
 	Updated mathomatic to 11.6d [minskim 2005-01-14]
 	Updated p5-Net-SNMP to 5.0.1 [jschauma 2005-01-14]
+	Added CRWInfo-0.2 [jmmv 2005-01-14]
