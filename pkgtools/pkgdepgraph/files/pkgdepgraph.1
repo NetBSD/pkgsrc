@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkgdepgraph.1,v 1.9 2004/06/05 06:17:37 atatat Exp $
+.\"	$NetBSD: pkgdepgraph.1,v 1.10 2004/06/06 04:08:18 wiz Exp $
 .\"
 .\" Copyright (c) 2002, 2003, 2004 by Andrew Brown <atatat@netbsd.org>
 .\" Absolutely no warranty.
@@ -41,7 +41,7 @@ is not connected to a tty), in search of output that resembles that
 of either
 .Xr lintpkgsrc 1
 .Fl i ,
-.Xr audit-packages 1 ,
+.Xr audit-packages 8 ,
 or the output from a previous incantation of this program.
 .Pp
 In the latter case,
@@ -170,7 +170,7 @@ emit a series of
 commands that will fetch all the required distfiles for rebuilding out
 of date packages.
 This option is an alias for
-.Fl m Ar fetch . 
+.Fl m Ar fetch .
 .It Fl f
 Force a rebuild of all dependent packages.
 This option is for use in conjunction with the
@@ -248,7 +248,7 @@ variable, if it is set, or is simply
 .It Fl m Ar target
 Emits generic
 .Xr sh 1
-commands to 
+commands to
 .Dq make Ar target
 for each listed package.
 One interesting target to specify is
@@ -332,7 +332,7 @@ all stale or out of date packages involved in a proper package update
 procedure, the lists may be incomplete and can cause problems.
 .It Fl s
 Print a simple list of packages instead of
-.Xr sh
+.Xr sh 1
 commands.
 The default output set for this command is out of date packages from
 the entire package set.
