@@ -1,59 +1,4 @@
---- Makefile.comm.orig	Tue Jun 27 20:08:27 1995
-+++ Makefile.comm	Tue Mar 26 22:05:36 1996
-@@ -137,44 +137,47 @@
- 	for p in $$pages; do \
- 	 prog=`basename $$p .n`; \
- 	 target=$(man1dir)/$(NAMEPREFIX)$$prog.$(man1ext); \
--	 rm -f $$target; \
-+	 rm -f $$target.gz; \
- 	 echo $(INSTALL_DATA) $$p $$target; \
- 	 $(INSTALL_DATA) $$p $$target; \
-+	 gzip -9n $$target ; \
- 	done
- 	-test -d $(man5dir) || mkdir $(man5dir)
- 	@-pages="$(MAN5)"; \
- 	for p in $$pages; do \
- 	 target=$(man5dir)/`basename $$p .n`.$(man5ext); \
--	 rm -f $$target; \
-+	 rm -f $$target.gz; \
- 	 echo $(INSTALL_DATA) $$p $$target; \
- 	 $(INSTALL_DATA) $$p $$target; \
-+	 gzip -9n $$target ; \
- 	done
- 	-test -d $(man7dir) || mkdir $(man7dir)
- 	@-pages="$(MAN7)"; \
- 	for p in $$pages; do \
- 	 target=$(man7dir)/`basename $$p .n`.$(man7ext); \
--	 rm -f $$target; \
-+	 rm -f $$target.gz; \
- 	 echo $(INSTALL_DATA) $$p $$target; \
- 	 $(INSTALL_DATA) $$p $$target; \
-+	 gzip -9n $$target ; \
- 	done
- 
- .PHONY: uninstall_man
- uninstall_man:
- 	@-pages="$(MAN1)"; \
- 	for p in $$pages; do \
--	 target=$(man1dir)/$(NAMEPREFIX)`basename $$p .n`.$(man1ext); \
-+	 target=$(man1dir)/$(NAMEPREFIX)`basename $$p .n`.$(man1ext).gz; \
- 	 echo rm -f $$target; \
- 	 rm -f $$target; \
- 	done
- 	@-pages="$(MAN5)"; \
- 	for p in $$pages; do \
--	 target=$(man5dir)/`basename $$p .n`.$(man5ext); \
-+	 target=$(man5dir)/`basename $$p .n`.$(man5ext).gz; \
- 	 echo rm -f $$target; \
- 	 rm -f $$target; \
- 	done
- 	@-pages="$(MAN7)"; \
- 	for p in $$pages; do \
--	 target=$(man7dir)/`basename $$p .n`.$(man7ext); \
-+	 target=$(man7dir)/`basename $$p .n`.$(man7ext).gz; \
- 	 echo rm -f $$target; \
- 	 rm -f $$target; \
- 	done
+$NetBSD: patch-aa,v 1.2 1999/06/08 09:35:20 sakamoto Exp $
 --- afmtodit/Makefile.sub.orig	Wed Oct 28 21:48:22 1992
 +++ afmtodit/Makefile.sub	Tue Mar 26 22:38:08 1996
 @@ -15,7 +15,7 @@
@@ -83,7 +28,7 @@
  	-test -d $(bindir) || mkdir $(bindir)
  	-rm -f $(bindir)/grog
 -	$(INSTALL_PROGRAM) grog $(bindir)/grog
-+	$(INSTALL) -m 555 grog $(bindir)/grog
++	$(INSTALL) -m 555 grog $(bindir)/$(NAMEPREFIX)grog
  
  uninstall_sub:
  	-rm -f $(bindir)/grog
@@ -98,16 +43,6 @@
  
  uninstall_sub:
  	-rm -f $(bindir)/$(NAMEPREFIX)nroff
---- Makefile.in.orig	Wed Mar 27 02:35:00 1996
-+++ Makefile.in	Wed Mar 27 02:48:42 1996
-@@ -240,6 +240,7 @@
-   "CCFLAGS=$(CCFLAGS)" "CFLAGS=$(CFLAGS)" "LDFLAGS=$(LDFLAGS)" \
-   "YACC=$(YACC)" "YACCFLAGS=$(YACCFLAGS)" \
-   "LIBS=$(LIBS)" "LIBOBJS=$(LIBOBJS)" "RANLIB=$(RANLIB)" "AR=$(AR)" \
-+  "INSTALL=$(INSTALL)" \
-   "INSTALL_PROGRAM=$(INSTALL_PROGRAM)" "INSTALL_DATA=$(INSTALL_DATA)" \
-   "ETAGS=$(ETAGS)" "ETAGSFLAGS=$(ETAGSFLAGS)" "ETAGSCCFLAG=$(ETAGSCCFLAG)" \
-   "PERLPATH=$(PERLPATH)" "SH_SCRIPT_SED_CMD=$(SH_SCRIPT_SED_CMD)" \
 --- configure.orig	Mon Nov 20 20:36:05 1995
 +++ configure	Sat Mar 30 00:54:44 1996
 @@ -1904,7 +1904,7 @@
@@ -115,7 +50,7 @@
  else
  	echo "$ac_t""no" 1>&6
 -	g=
-+	g=g
++	g=jg
  fi
  
  
