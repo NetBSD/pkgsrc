@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.168 2000/07/30 20:32:20 tron Exp $
+# $NetBSD: Makefile,v 1.169 2000/07/31 01:56:45 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.156 1997/09/30 07:54:42 asami Exp
 #
 
@@ -12,7 +12,7 @@
     SUBDIR += asclock
     SUBDIR += asclock-gtk
     SUBDIR += asclock-xlib
-#    SUBDIR += ascp
+    SUBDIR += ascp
     SUBDIR += blackbox
     SUBDIR += blt
     SUBDIR += catclock
@@ -26,7 +26,7 @@
     SUBDIR += emiclock
     SUBDIR += enlightenment
     SUBDIR += eterm
-#    SUBDIR += ethemes
+    SUBDIR += ethemes
     SUBDIR += filerunner
     SUBDIR += fltk
     SUBDIR += fvwm-wharf
