@@ -1,0 +1,130 @@
+.\" $NetBSD: autoswc.8,v 1.1.1.1 2004/02/21 23:28:36 jmmv Exp $
+.\"
+.\" autoswc - Generates system wide cache files for GNU autoconf
+.\" Copyright (c) 2004 Julio M. Merino Vidal <jmmv@NetBSD.org>
+.\"
+.\" Redistribution and use in source and binary forms, with or without
+.\" modification, are permitted provided that the following conditions
+.\" are met:
+.\" 1. Redistributions of source code must retain the above copyright
+.\"    notice, this list of conditions and the following disclaimer.
+.\" 2. Neither the name of The NetBSD Foundation nor the names of its
+.\"    contributors may be used to endorse or promote products derived
+.\"    from this software without specific prior written permission.
+.\" 3. Neither the name of author nor the names of its contributors may
+.\"    be used to endorse or promote products derived from this software
+.\"    without specific prior written permission.
+.\"
+.\" THIS SOFTWARE IS PROVIDED BY THE NETBSD FOUNDATION, INC. AND CONTRIBUTORS
+.\" ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
+.\" TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+.\" PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE FOUNDATION OR CONTRIBUTORS
+.\" BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+.\" CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+.\" SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+.\" INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+.\" CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+.\" ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+.\" POSSIBILITY OF SUCH DAMAGE.
+.\"
+.Dd February 21, 2004
+.Dt AUTOSWC 8
+.Os
+.Sh NAME
+.Nm autoswc
+.Nd generates system wide cache files for GNU autoconf
+.Sh SYNOPSIS
+.Nm
+.Op Fl c Ar ac_file
+.Op Fl n Ar cache_name
+.Sh DESCRIPTION
+.Nm
+is an utility that automatically generates system wide cache files for use
+with configure scripts created by
+.Nm GNU autoconf ,
+and specially by those executed within
+.Nm pkgsrc .
+.Pp
+.Nm
+starts by reading the configuration script template.
+It will use
+.Pa @SYSCONFDIR@/configure.ac
+if found, or fallback to
+.Pa @PREFIX@/share/autoswc/configure.ac
+otherwise (a custom file may be given using the
+.Fl c
+flag, though).
+This issues all checks that the user wants to store in the system wide
+cache file, and are basically calls to standard
+.Nm GNU autoconf ,
+.Nm GNU automake
+and/or
+.Nm GNU libtool
+macros.
+There is no need to manually execute any of the
+.Sq AC_INIT ,
+.Sq AM_INIT_AUTOMAKE ,
+.Sq AC_CACHE_SAVE
+and
+.Sq AC_OUTPUT
+macros, as they are automatically inserted in the right place during
+execution.
+.Pp
+The default cache file is stored inside the
+.Pa @CACHEDIR@
+directory, using
+.Pa config.cache.default
+as the file name.
+The
+.Sq default
+part can be changed using the
+.Fl n
+flag, which takes the base name of the cache file.
+.Pp
+To tell
+.Nm pkgsrc
+to use the system wide cache, all you need to do is append the following
+line to your
+.Pa @MKCONF@
+file:
+.Bd -literal -offset indent
+\&.sinclude "@PREFIX@/share/autoswc/autoswc.mk"
+.Ed
+.Pp
+In case you used the
+.Fl n
+flag, you also need to define the
+.Va AUTOSWC_CACHE_NAME
+variable in this file, setting it to the value passed to the flag.
+.Sh NOTES
+Be very careful about what you add to
+.Pa configure.ac .
+You should only check for things that are unlikely to change over time,
+as functions in the
+.Lb libc
+and its header files.
+Failure to do so can easily lead to cache files that get outdated very
+easily during installation of new packages, and cause unexpected
+configuration errors.
+.Pp
+It is recommended that you rebuild the cache file periodically.
+You can configure a simple
+.Xr cron 8
+job to it, which just needs to launch this utility.
+.Pp
+If you hit a compilation problem in any package when using
+.Nm ,
+be
+.Em absolutely
+sure it is not beeing caused by an outdated cache before reporting
+problems.
+The safest and easiest way to do this is to clean the package in question
+and restart the build with the
+.Va AUTOSWC_DISABLE
+variable set, like in the following example:
+.Bd -literal -offset indent
+$ @MAKE@ clean
+$ @MAKE@ AUTOSWC_DISABLE=YES
+.Ed
+.Sh AUTHORS
+.An Julio M. Merino Vidal Aq jmmv@netbsd.org
