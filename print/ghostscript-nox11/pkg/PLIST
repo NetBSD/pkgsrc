@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/05/07 02:04:34 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2000/05/28 11:17:33 wiz Exp $
 bin/bdftops
 bin/dvipdf
 bin/eps2eps
@@ -293,7 +293,27 @@ share/ghostscript/6.01vflib/lib/wftopfa.ps
 share/ghostscript/6.01vflib/lib/winmaps.ps
 share/ghostscript/6.01vflib/lib/wrfont.ps
 share/ghostscript/6.01vflib/lib/zeroline.ps
+share/ghostscript/6.01vflib/vflib/allkanji.ps
+share/ghostscript/6.01vflib/vflib/article9.ps
+share/ghostscript/6.01vflib/vflib/fmaptype.ps
+share/ghostscript/6.01vflib/vflib/hankaku.ps
+share/ghostscript/6.01vflib/vflib/jcidcmap.ps
+share/ghostscript/6.01vflib/vflib/jcidemu.ps
+share/ghostscript/6.01vflib/vflib/jcidinit.ps
+share/ghostscript/6.01vflib/vflib/jcidjp1.ps
+share/ghostscript/6.01vflib/vflib/kbase.ps
+share/ghostscript/6.01vflib/vflib/kcomp.ps
+share/ghostscript/6.01vflib/vflib/kconfig.ps
+share/ghostscript/6.01vflib/vflib/kfcid.ps
+share/ghostscript/6.01vflib/vflib/kfvflib.ps
+share/ghostscript/6.01vflib/vflib/kinit.ps
+share/ghostscript/6.01vflib/vflib/kmapping.ps
+share/ghostscript/6.01vflib/vflib/koutline.ps
+share/ghostscript/6.01vflib/vflib/metrics2.ps
+share/ghostscript/6.01vflib/vflib/vchars.ps
+@dirrm share/ghostscript/6.01vflib/vflib
 @dirrm share/ghostscript/6.01vflib/lib
+@dirrm share/ghostscript/6.01vflib
 @dirrm share/examples/ghostscript
 @dirrm share/doc/ghostscript/gdevmjc-0.8
 @dirrm share/doc/ghostscript
