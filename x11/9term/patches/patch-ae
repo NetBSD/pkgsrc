@@ -1,7 +1,7 @@
-$NetBSD: patch-ae,v 1.1 2001/05/01 09:35:41 agc Exp $
+$NetBSD: patch-ae,v 1.2 2001/05/05 01:56:21 hubertf Exp $
 
---- 9term/Makefile.orig	Mon Mar 14 04:50:54 1994
-+++ 9term/Makefile	Tue May  1 09:59:01 2001
+--- 9term/Makefile.orig	Mon Mar 14 05:50:54 1994
++++ 9term/Makefile
 @@ -11,27 +11,29 @@
  #	Define RISCOS for Mips RISC/os
  #	Define BSDPTYS for BSD-style pty support
@@ -12,7 +12,7 @@ $NetBSD: patch-ae,v 1.1 2001/05/01 09:35:41 agc Exp $
 -BINDIR=/usr/pgrad/matty/bin/$(cputype)
 +OS= -D_LIBXG_EXTENSION -DSUNOS
 +
-+SAMPATH=${PREFIX}/include/sam
++SAMPATH=${X11PREFIX}/include/sam
 +
 +BINDIR=.			# where we'll install it
  
@@ -30,7 +30,7 @@ $NetBSD: patch-ae,v 1.1 2001/05/01 09:35:41 agc Exp $
  # or if you need extra libraries to load with X11 applications
 -LIBS=../libtext/libtext.a ../libframe/libframe.a ../libXg/libXg.a
 -XLIBS=-lXt -lX11
-+LIBS=../libtext/libtext.a $(PREFIX)/lib/libframe.a $(PREFIX)/lib/libXg.a
++LIBS=../libtext/libtext.a $(X11PREFIX)/lib/libframe.a $(X11PREFIX)/lib/libXg.a
 +XLIBS= -Wl,-R${X11BASE}/lib -L${X11BASE}/lib -lXt -lX11
  
  OBJECTS=9term.o command.o display.o pty.o
