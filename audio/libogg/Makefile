@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2003/09/25 01:27:34 grant Exp $
+# $NetBSD: Makefile,v 1.21 2003/09/25 13:00:18 grant Exp $
 
 DISTNAME=	libogg-1.0
 PKGNAME=	libogg-1.0.0.8
@@ -13,6 +13,8 @@ USE_BUILDLINK2=		YES
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+
+GCC_REQD=		2.95.3
 
 PLIST_SUBST+=		DISTNAME=${DISTNAME}
 
