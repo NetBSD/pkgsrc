@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2004/12/01 13:40:54 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2004/12/01 15:41:09 adam Exp $
 
 DISTNAME=	pwlib-v1_8_3-src
 PKGNAME=	pwlib-1.8.3
@@ -48,12 +48,12 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/pwlib/make
 	${INSTALL_DATA_DIR} ${PREFIX}/include/ptclib
 	${INSTALL_DATA_DIR} ${PREFIX}/include/ptlib/unix/ptlib
-	cd ${WRKSRC}/make;						\
+	cd ${WRKSRC}/make; ${INSTALL_SCRIPT} ptlib-config ${PREFIX}/bin; \
 	for f in *.mak; do		\
-		${INSTALL_DATA} $$f ${PREFIX}/share/pwlib/make;		\
+		${INSTALL_DATA} $$f ${PREFIX}/share/pwlib/make; \
 	done
 	${INSTALL_DATA} ${WRKSRC}/version.h ${PREFIX}/include/ptlib
-	cd ${WRKSRC};						\
+	cd ${WRKSRC}; \
 	for f in `${FIND} include -name CVS -prune -o -name wince -prune -o -name msos -prune -o -type f -print`; do	\
 		${INSTALL_DATA} $$f ${PREFIX}/$$f;	\
 	done
