@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.31 2001/06/27 04:58:51 jlam Exp $
+ # $NetBSD: Makefile,v 1.32 2001/07/16 07:59:11 itojun Exp $
 #
 
-DISTNAME=	wget-1.6
-PKGNAME=	${DISTNAME}nb1
+DISTNAME=	wget-1.7
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GNU:=wget/}
 
 PATCH_SITES=	ftp://ftp.kame.net/pub/kame/misc/
-PATCHFILES=	wget-16-v6-20010508b.diff.gz
+PATCHFILES=	wget-17-v6-20010716a.diff.gz
 PATCH_DIST_STRIP=-p1
 
 MAINTAINER=	packages@netbsd.org
@@ -17,6 +16,7 @@ COMMENT=	Retrieve files from the 'net via HTTP and FTP
 BUILD_USES_MSGFMT=	yes
 USE_BUILDLINK_ONLY=	yes
 
+USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 #USE_LIBINTL=	yes
 MAKE_ENV+=	PKGLOCALEDIR="${PKGLOCALEDIR}"
