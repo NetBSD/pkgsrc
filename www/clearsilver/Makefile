@@ -1,28 +1,25 @@
-# $NetBSD: Makefile,v 1.6 2004/04/27 05:44:23 snj Exp $
+# $NetBSD: Makefile,v 1.7 2004/11/29 00:08:57 epg Exp $
 
-DISTNAME=	clearsilver-0.9.7
-PKGREVISION=	1
-CATEGORIES=	www
-MASTER_SITES=	http://www.clearsilver.net/downloads/
+.include "Makefile.common"
 
-MAINTAINER=	tech-pkg@NetBSD.org
-HOMEPAGE=	http://www.clearsilver.net/
-COMMENT=	Fast, powerful HTML template system
+DEPENDS+=${CLEARSILVER_BASE}{,nb[0-9]*}:../../www/clearsilver-base
+DEPENDS+=${PYPKGPREFIX}-${DISTNAME}{,nb[0-9]*}:../../www/py-clearsilver
+DEPENDS+=${RUBY_PKGPREFIX}-${DISTNAME}{,nb[0-9]*}:../../www/ruby-clearsilver
 
-GNU_CONFIGURE=	yes
-USE_BUILDLINK3=	yes
-USE_GNU_TOOLS+=	make
+EXTRACT_ONLY=	# empty
+NO_CHECKSUM=	YES
+NO_BUILDLINK=	YES
+NO_CONFIGURE=	YES
+NO_BUILD=	YES
+NO_MTREE=	YES
 
-# All these really ought to be supported as separate packages...
-CONFIGURE_ARGS+=	--with-python=${PYTHONBIN}
-CONFIGURE_ARGS+=	--disable-apache --disable-perl --disable-ruby
-CONFIGURE_ARGS+=	--disable-java --disable-csharp
+.include "../../lang/python/pyversion.mk"
+.include "../../lang/ruby/rubyversion.mk"
 
-PY_PATCHPLIST=	YES
-PYBINMODULE=	YES
-PYTHON_VERSIONS_ACCEPTED=	23pth 22pth 21pth
-PYTHON_PATCH_SCRIPTS=	scripts/document.py
+# The NO_PATCH macro is gone so we have to do this to prevent the
+# patches from being applied:
+do-patch:
 
-.include "../../lang/python/application.mk"
-.include "../../lang/python/extension.mk"
+do-install:
+
 .include "../../mk/bsd.pkg.mk"

@@ -1,22 +1,13 @@
-$NetBSD: patch-aa,v 1.2 2004/03/22 20:07:48 epg Exp $
+$NetBSD: patch-aa,v 1.3 2004/11/29 00:08:57 epg Exp $
 
---- rules.mk.in.orig	Mon Aug 11 16:37:09 2003
-+++ rules.mk.in
-@@ -73,7 +73,7 @@ PYTHON     = @PYTHON@
- PERL	   = @PERL@
- RUBY       = @RUBY@
+--- Makefile.orig	Wed Sep 29 21:09:41 2004
++++ Makefile
+@@ -35,7 +35,7 @@ cs: output_dir
+ 	  fi; \
+ 	done
  
--CFLAGS     = @CFLAGS@ -Wall -c -I$(NEOTONIC_ROOT) @CPPFLAGS@
-+CFLAGS     = @CFLAGS@ -I$(NEOTONIC_ROOT) @CPPFLAGS@
- CPPFLAGS   = -I$(NEOTONIC_ROOT) @CPPFLAGS@
- OUTPUT_OPTION = -o $@
- LD         = $(CC) -o
-@@ -127,7 +127,7 @@ endif
- ## endif
- 
- .c.o:
--	$(CC) $(CFLAGS) $(OUTPUT_OPTION) $<
-+	$(CC) -c $(CFLAGS) $(OUTPUT_OPTION) $<
- 
- everything: depend all
- 
+-install: all man
++install: all
+ 	./mkinstalldirs $(DESTDIR)$(cs_includedir)
+ 	./mkinstalldirs $(DESTDIR)$(bindir)
+ 	./mkinstalldirs $(DESTDIR)$(libdir)
