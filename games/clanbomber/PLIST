@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:51:11 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/09/21 13:23:34 jlam Exp $
 bin/clanbomber
 share/clanbomber/bud.mod
 share/clanbomber/maps/Crammed.map
@@ -35,5 +35,8 @@ share/clanbomber/maps/MungoBane.map
 share/clanbomber/maps/Snake_Race.map
 share/clanbomber/clanbomber.dat
 share/clanbomber/clanbomber.scr
+share/doc/clanbomber/COPYING
+share/doc/clanbomber/README
+@dirrm share/doc/clanbomber
 @dirrm share/clanbomber/maps
 @dirrm share/clanbomber
