@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/03/13 10:47:02 mjl Exp $
+share/texmf/tex/latex/textpos/LICENCE
+share/texmf/tex/latex/textpos/README
+share/texmf/tex/latex/textpos/VERSION
+share/texmf/tex/latex/textpos/textpos-example.tex
+share/texmf/tex/latex/textpos/textpos.drv
+share/texmf/tex/latex/textpos/textpos.dtx
+share/texmf/tex/latex/textpos/textpos.ins
+share/texmf/tex/latex/textpos/textpos.log
+share/texmf/tex/latex/textpos/textpos.sty
+@exec cd %D/share/texmf/tex/latex/textpos; latex testpos.ins
+@exec %D/bin/texconfig rehash
+@unexec %D/bin/texconfig rehash
+@dirrm share/texmf/tex/latex/textpos
