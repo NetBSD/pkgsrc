@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5124 2004/03/07 04:58:09 snj Exp $
+$NetBSD: CHANGES,v 1.5125 2004/03/07 05:41:43 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1208,3 +1208,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated ruby-tmail to 0.10.8 [taca 2004-03-07]
 	Updated ruby-rdtool to 0.6.14nb2 [taca 2004-03-07]
 	Updated foobillard to 2.9 [snj 2004-03-07]
+	Added bibtex2html-1.65 [minskim 2004-03-07]
