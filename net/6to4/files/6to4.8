@@ -1,5 +1,5 @@
-.\"     $NetBSD: 6to4.8,v 1.1.1.1 2001/02/11 05:24:29 hubertf Exp $
-.Dd February 11, 2001
+.\"     $NetBSD: 6to4.8,v 1.2 2001/02/18 15:32:18 hubertf Exp $
+.Dd February 18, 2001
 .Dt 6to4 8
 .Os
 .Sh NAME
@@ -61,9 +61,15 @@ turning the machine into a IPv6 router.
 .Xr rtadvd 8
 is invoked with a custom config file created under
 .Pa /var/run .
-Clients need to be told to use the router as
-default (IPv6) router, e.g. by adding a static route.
-Follow the on-screen instructions to do so.
+Clients just need to be told to accept router advertizements, i.e.
+the
+.Sq net.inet6.ip6.accept_rtadv
+sysctl needs to be set to
+.Sq 1 .
+You can arrange that by setting
+.Dq ip6mode=autohost
+in
+.Pa /etc/rc.conf . 
 .It Sy rtadvd-stop
 Stops router advertizement and IPv6 packet forwarding.
 .Xr rtadvd 8
@@ -87,8 +93,24 @@ options         INET6           # IPV6
 pseudo-device	stf	1	# 6to4 IPv6 over IPv4 encapsulation
 .Ed
 .Pp
+In systems that run past-1.5 NetBSD-current, you will have to
+explicitly create an
+.Xr stf 4
+device after compiling it in the kernel. You do this by running
+the following command before calling the
+.Nm
+script:
+.Bd -literal -offset
+ifconfig stf0 create
+.Ed
+.Pp
 No special values are needed in
-.Pa /etc/rc.conf .
+.Pa /etc/rc.conf
+to run this script, but see comment on setting up IPv6-clients
+.Sq behind
+your 6to4 router for the
+.Sy rtadvd-start
+command!
 .Sh CONFIGURATION
 The
 .Nm
@@ -164,3 +186,7 @@ The
 .Nm
 utility and manpage were writte by
 Hubert Feyrer <hubert@feyrer.de>.
+.Sh BUGS
+On systems running past-1.5 NetBSD-current, the
+.Dq ifconfig stf0 create
+should be run automatically.
