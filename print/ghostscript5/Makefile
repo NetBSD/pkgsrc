@@ -1,9 +1,9 @@
 # New ports collection makefile for:	ghostscript
-# Version required:	5.0
+# Version required:	5.10
 # Date created:		Tue Jun 10 21:58:54 CEST 1997
 # Whom:			Andreas Klemm <andreas@klemm.gtn.com>
 #
-# $NetBSD: Makefile,v 1.7 1998/01/15 18:38:21 chopps Exp $
+# $NetBSD: Makefile,v 1.8 1998/01/19 11:26:50 agc Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/10/13 11:22:43 asami Exp
 #
 
@@ -17,14 +17,8 @@ DISTFILES=	${GS_SOURCES} ${GS_FONTS_STD} ${GS_FONTS_OTHER} \
 
 MAINTAINER=	explorer@netbsd.org
 
-.if defined(OBJMACHINE)
-WRKDIRNAME=work.${ARCH}
-.else
-WRKDIRNAME=work
-.endif
-
-BUILD_DEPENDS=	${PORTSDIR}/graphics/jpeg/${WRKDIRNAME}/jpeg-6a:${PORTSDIR}/graphics/jpeg:extract \
-		${PORTSDIR}/graphics/png/${WRKDIRNAME}/libpng-0.96:${PORTSDIR}/graphics/png:extract \
+BUILD_DEPENDS=	${PORTSDIR}/graphics/jpeg/${WRKDIR:T}/jpeg-6a:${PORTSDIR}/graphics/jpeg:extract \
+		${PORTSDIR}/graphics/png/${WRKDIR:T}/libpng-0.96:${PORTSDIR}/graphics/png:extract \
 		unzip:${PORTSDIR}/archivers/unzip
 
 MAKE_ENV=	PORTSDIR=${PORTSDIR}
@@ -48,19 +42,6 @@ GS_FONTS_OTHER=	ghostscript-fonts-other-4.40.tar.gz
 # Additional driver HP 850, see http://bonk.ethz.ch/hp850/hp850.html
 HP850_DRV=	hp850.zip
 
-.if defined(A4)
-CFLAGS+=	-DA4
-.endif
-
-pre-extract:
-.if !defined(A4)
-	@${ECHO_MSG} "Type \"make A4=yes\" if you want -DA4 for compilation."
-	@${ECHO_MSG} "(Doing so makes the default paper size be A4,"
-	@${ECHO_MSG} "rather than the default of letter)"
-.else
-	@${ECHO_MSG} "Using -DA4 to set default paper size to A4."
-.endif
-
 post-extract:
 	${TOUCH} ${WRKSRC}/adler32.c
 	${TOUCH} ${WRKSRC}/deflate.c
@@ -68,8 +49,8 @@ post-extract:
 	${TOUCH} ${WRKSRC}/adler32.o
 	${TOUCH} ${WRKSRC}/deflate.o
 	${TOUCH} ${WRKSRC}/trees.o
-	ln -s ${PORTSDIR}/graphics/jpeg/${WRKDIRNAME}/jpeg-6a ${WRKSRC}/jpeg-6a
-	ln -s ${PORTSDIR}/graphics/png/${WRKDIRNAME}/libpng-0.96 ${WRKSRC}/libpng
+	ln -s ${PORTSDIR}/graphics/jpeg/${WRKDIR:T}/jpeg-6a ${WRKSRC}/jpeg-6a
+	ln -s ${PORTSDIR}/graphics/png/${WRKDIR:T}/libpng-0.96 ${WRKSRC}/libpng
 	cd ${WRKSRC} && unzip -La ${DISTDIR}/${HP850_DRV}
 
 do-configure:
@@ -80,6 +61,20 @@ do-configure:
 	@${SETENV} PORTSDIR=${PORTSDIR} WRKSRC=${WRKSRC} \
 		${SH} ${SCRIPTDIR}/configure
 .endif
+
+do-build:
+	@(paper=""; \
+	case X"${PAPER_SIZE}" in \
+	X[aA]4) \
+		paper="-DA4"; \
+		${ECHO_MSG} "Using $$paper to set default paper size to A4."; \
+		;; \
+	*) \
+		${ECHO_MSG} "Using default letter paper size (Set PAPER_SIZE=A4 for A4 paper size)."; \
+		;; \
+	esac; \
+	cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} \
+		${MAKE_PROGRAM} $$paper ${MAKE_FLAGS} ${MAKEFILE} ${ALL_TARGET})
 
 pre-install:
 	@${MKDIR} ${PREFIX}/share/ghostscript ${PREFIX}/bin ${PREFIX}/man/man1
