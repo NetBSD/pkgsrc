@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2768 2003/07/13 08:44:29 mrg Exp $
+$NetBSD: CHANGES,v 1.2769 2003/07/13 13:54:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2790,3 +2790,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated libnbcompat to 20030713 [grant 2003-07-13]
 	Updated pfaedit to 20030712 [wiz 2003-07-13]
 	Added xmms-blursk 1.3 [mrg 2003-07-13]
+	Updated libiconv to 1.9.1 [wiz 2003-07-13]

@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.713 2003/07/13 08:26:04 wiz Exp $
+$NetBSD: TODO,v 1.714 2003/07/13 13:54:56 wiz Exp $
 
 Suggested new packages
 ======================
@@ -156,7 +156,6 @@ Suggested package updates
 	o lesstif-0.93.44
 	o libgda-0.90.0
 	o libgnomedb-0.90.0
-	o libiconv-1.9.1
 	o licq-1.2.7
 	o libmpeg3-1.5.1
 	o libole2-2.2.8
