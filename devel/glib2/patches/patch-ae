@@ -1,0 +1,22 @@
+$NetBSD: patch-ae,v 1.1.1.1 2002/03/24 20:27:13 dmcmahill Exp $
+
+--- configure.orig	Fri Mar  8 10:54:21 2002
++++ configure
+@@ -6123,7 +6123,7 @@
+ 
+ # AM_GLIB_GNU_GETTEXT above substs $DATADIRNAME
+ # this is the directory where the *.{mo,gmo} files are installed
+-GLIB_LOCALE_DIR="${prefix}/${DATADIRNAME}/locale"
++GLIB_LOCALE_DIR="${prefix}/${PKGLOCALEDIR}/locale"
+ cat >>confdefs.h <<_ACEOF
+ #define GLIB_LOCALE_DIR "$GLIB_LOCALE_DIR"
+ _ACEOF
+@@ -16852,7 +16852,7 @@
+ 		G_THREAD_LIBS="-pthread"
+ 		;;
+              *)
+-		for thread_lib in "" pthread pthread32 pthreads thread dce; do
++		for thread_lib in "" PTL pthread pthread32 pthreads thread dce; do
+ 			if test x"$thread_lib" = x; then
+ 				add_thread_lib=""
+ 				IN=""
