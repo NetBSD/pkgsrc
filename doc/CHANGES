@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.803 2002/12/16 14:38:38 tron Exp $
+$NetBSD: CHANGES,v 1.804 2002/12/16 15:00:33 itojun Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3970,3 +3970,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Added Xft2-2.1 [jmmv 2002-12-16]
 	Updated polsms to 1.9.0 [cjep 2002-12-16]
 	Updated gnome-pim to 1.4.0nb2 [tron 2002-12-16]
+	Added ex-20020403 [itojun 2002-12-16]
