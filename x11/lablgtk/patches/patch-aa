@@ -1,6 +1,4 @@
-$NetBSD: patch-aa,v 1.3 2004/03/04 16:13:36 wiz Exp $
-
---- src/Makefile.orig	Thu May 15 16:17:53 2003
+--- src/Makefile.orig	2003-05-15 16:17:53.000000000 +0200
 +++ src/Makefile
 @@ -137,32 +137,39 @@ testcc: lablgladecc lablgtktop
  	rm -f testcc.ml
@@ -23,9 +21,9 @@ $NetBSD: patch-aa,v 1.3 2004/03/04 16:13:36 wiz Exp $
 +	do \
 +	    ${BSD_INSTALL_DATA} $$F ${INSTALLDIR}; \
 +	done
-+	${BSD_INSTALL_PROGRAM} lablgtktop $(INSTALLDIR)
++	${BSD_INSTALL_SCRIPT} lablgtktop $(INSTALLDIR)
 +	${BSD_INSTALL_SCRIPT} varcc $(INSTALLDIR)
-+	if test -f lablgtktop_t; then ${BSD_INSTALL_PROGRAM} lablgtktop_t $(INSTALLDIR); fi
++	if test -f lablgtktop_t; then ${BSD_INSTALL_SCRIPT} lablgtktop_t $(INSTALLDIR); fi
  	if test -f lablgtk.cmxa; then $(MAKE) installopt; fi
 +	${BSD_INSTALL_DATA_DIR} $(DLLDIR)
  	if test -f dlllablgtk.so; then \
