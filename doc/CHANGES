@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1351 2003/02/13 22:33:52 jmmv Exp $
+$NetBSD: CHANGES,v 1.1352 2003/02/13 23:33:21 grant Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -600,3 +600,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated apla to 1.0.3nb2 [fredb 2003-02-13]
 	Updated gnome2-pixmaps to 2.2.0.1 [jmmv 2003-02-13]
 	Updated libwnck to 2.2.1 [jmmv 2003-02-13]
+	Updated rdesktop to 1.2 [grant 2003-02-13]
