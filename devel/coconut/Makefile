@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2003/01/24 13:33:52 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2003/04/15 12:17:43 wiz Exp $
 #
 
 DISTNAME=	coconut-0.3.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	http://www.asahi-net.or.jp/~em7t-hmd/coconut/		\
 		${MASTER_SITE_SOURCEFORGE:=coconut-lib/}
@@ -30,6 +30,6 @@ pre-configure:
 .include "../../devel/ncurses/buildlink2.mk"
 .include "../../devel/papaya/buildlink2.mk"
 .include "../../devel/popt/buildlink2.mk"
-.include "../../net/gnet/buildlink2.mk"
+.include "../../net/gnet1/buildlink2.mk"
 .include "../../mk/pthread.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
