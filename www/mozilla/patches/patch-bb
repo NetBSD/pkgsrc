@@ -1,9 +1,9 @@
-$NetBSD: patch-bb,v 1.9 2002/06/06 02:05:58 taya Exp $
+$NetBSD: patch-bb,v 1.10 2002/07/12 13:07:27 taya Exp $
 
 diff -ru ../Orig/mozilla/nsprpub/pr/include/md/_netbsd.h ./nsprpub/pr/include/md/_netbsd.h
 --- ../Orig/mozilla/nsprpub/pr/include/md/_netbsd.h	Wed Apr 10 12:16:43 2002
-+++ ./nsprpub/pr/include/md/_netbsd.h	Thu Jun  6 09:13:29 2002
-@@ -48,6 +48,8 @@
++++ ./nsprpub/pr/include/md/_netbsd.h	Wed Jul 10 22:53:43 2002
+@@ -48,12 +48,20 @@
  #define _PR_SI_ARCHITECTURE "m68k"
  #elif defined(__powerpc__)
  #define _PR_SI_ARCHITECTURE "powerpc"
@@ -12,7 +12,19 @@ diff -ru ../Orig/mozilla/nsprpub/pr/include/md/_netbsd.h ./nsprpub/pr/include/md
  #elif defined(__sparc__)
  #define _PR_SI_ARCHITECTURE "sparc"
  #elif defined(__mips__)
-@@ -106,7 +108,17 @@
+ #define _PR_SI_ARCHITECTURE "mips"
+ #elif defined(__arm32__)
+ #define _PR_SI_ARCHITECTURE "arm32"
++#elif defined(__arm__)
++#define _PR_SI_ARCHITECTURE "arm"
++#elif defined(__armel__)
++#define _PR_SI_ARCHITECTURE "armel"
++#elif defined(__armeb__)
++#define _PR_SI_ARCHITECTURE "armeb"
+ #endif
+ 
+ #if defined(__ELF__)
+@@ -106,7 +114,17 @@
  }
  #define	_MD_GET_SP(_thread)	CONTEXT(_thread)[2]
  #endif
@@ -28,6 +40,15 @@ diff -ru ../Orig/mozilla/nsprpub/pr/include/md/_netbsd.h ./nsprpub/pr/include/md
 +}
 +#define        _MD_GET_SP(_thread)     (CONTEXT(_thread)[2]+0x7ff)
 +#elif defined(__sparc__)
+ #define _MD_INIT_CONTEXT(_thread, _sp, _main, status)			\
+ {									\
+     sigsetjmp(CONTEXT(_thread), 1);					\
+@@ -148,7 +166,7 @@
+ }
+ #define	_MD_GET_SP(_thread)	CONTEXT(_thread)[32]
+ #endif
+-#ifdef __arm32__
++#if defined(__arm32__) || defined(__arm__) || defined(__armel__) || defined(__armeb__)
  #define _MD_INIT_CONTEXT(_thread, _sp, _main, status)			\
  {									\
      sigsetjmp(CONTEXT(_thread), 1);					\

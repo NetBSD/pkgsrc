@@ -1,12 +1,23 @@
-$NetBSD: patch-ba,v 1.9 2002/06/06 02:05:58 taya Exp $
+$NetBSD: patch-ba,v 1.10 2002/07/12 13:07:27 taya Exp $
 
 diff -ru ../Orig/mozilla/nsprpub/pr/include/md/_netbsd.cfg ./nsprpub/pr/include/md/_netbsd.cfg
 --- ../Orig/mozilla/nsprpub/pr/include/md/_netbsd.cfg	Wed Apr 10 12:16:42 2002
-+++ ./nsprpub/pr/include/md/_netbsd.cfg	Thu Jun  6 09:13:25 2002
-@@ -91,6 +91,52 @@
++++ ./nsprpub/pr/include/md/_netbsd.cfg	Wed Jul 10 22:51:15 2002
+@@ -45,7 +45,8 @@
+ 
+ #define PR_AF_INET6 24  /* same as AF_INET6 */
+ 
+-#if defined(__i386__) || defined(__arm32__) || defined(__MIPSEL__)
++#if defined(__i386__) || defined(__arm32__) || defined(__arm__) || \
++	defined(__armel__) || defined(__MIPSEL__)
+ 
+ #define IS_LITTLE_ENDIAN 1
+ #undef  IS_BIG_ENDIAN
+@@ -91,7 +92,53 @@
  #define PR_ALIGN_OF_DOUBLE  4
  #define PR_ALIGN_OF_POINTER 4
  
+-#elif defined(__sparc__) || defined(__MIPSEB__)
 +#elif defined(__sparc_v9__)
 +
 +#undef IS_LITTLE_ENDIAN
@@ -53,6 +64,7 @@ diff -ru ../Orig/mozilla/nsprpub/pr/include/md/_netbsd.cfg ./nsprpub/pr/include/
 +#define PR_ALIGN_OF_DOUBLE  8 
 +#define PR_ALIGN_OF_POINTER 8 
 +
- #elif defined(__sparc__) || defined(__MIPSEB__)
++#elif defined(__sparc__) || defined(__MIPSEB__) || defined(__armeb__)
  
  #undef IS_LITTLE_ENDIAN
+ #define  IS_BIG_ENDIAN 1
