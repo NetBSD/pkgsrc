@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2000/05/13 23:41:55 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.9 2000/09/28 20:34:04 fredb Exp $
 # FreeBSD Id: Makefile,v 1.5 1998/09/26 23:18:07 steve Exp
 #
 
@@ -13,7 +13,7 @@ EXTRACT_SUFX=		-source.tgz
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://a42.com/~thor/xldlas/
 
-DEPENDS=		xforms-0.88:../../x11/xforms
+DEPENDS=		xforms>=0.88nb1:../../x11/xforms
 
 ONLY_FOR_PLATFORM=      NetBSD-*-alpha NetBSD-*-arm32 NetBSD-*-i386 NetBSD-*-m68k \
 			NetBSD-*-mipsel NetBSD-*-ns32k NetBSD-*-sparc NetBSD-*-powerpc
