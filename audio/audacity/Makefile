@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2002/08/31 02:42:48 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.9 2002/10/04 08:59:34 jlam Exp $
 
-DISTNAME=	audacity-src-0.96
-PKGNAME=	audacity-0.96
-PKGREVISION=	1
+DISTNAME=	audacity-src-1.0.0-2
+PKGNAME=	audacity-1.0.0.2
+WRKSRC=		${WRKDIR}/audacity-src-1.0.0
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=audacity/}
 EXTRACT_SUFX=	.tgz
@@ -14,29 +13,43 @@ COMMENT=	audio editor
 
 BUILD_DEPENDS+=	zip-[0-9]*:../../archivers/zip
 
-GNU_CONFIGURE=	YES
-CONFIGURE_ARGS+=	--without-xaudio --with-libmpeg3
-USE_GMAKE=	yes
+USE_BUILDLINK2=		# defined
+USE_X11=		# defined
+USE_GMAKE=		# defined
 
-USE_BUILDLINK2=	yes
+GNU_CONFIGURE=		# defined
+CONFIGURE_ARGS+=	--without-xaudio
+CONFIGURE_ARGS+=	--with-id3
+CONFIGURE_ARGS+=	--with-libmad
+CONFIGURE_ARGS+=	--with-vorbis
+CONFIGURE_ARGS+=	--with-dev-dsp="${DEVOSSSOUND}"
+CONFIGURE_ARGS+=	--with-helpdir="${PREFIX}/share"
+HAVE_OSS=		NO
+
+USE_LIBTOOL=		# defined
+LTCONFIG_OVERRIDE=	${WRKSRC}/id3lib/ltconfig
+
+pre-configure:
+	cd ${WRKSRC}/id3lib/include/id3; ${MV} -f strings.h id3_strings.h
+	cd ${WRKSRC}/id3lib; for file in				\
+		`${FIND} . -type f -print |				\
+			${XARGS} ${GREP} -l "\"strings\.h\""`; do	\
+		${SED}	-e "s|\"strings\.h\"|\"id3_strings.h\"|g"	\
+			$${file} > $${file}.fixed;			\
+		${MV} -f $${file}.fixed $${file};			\
+	done
+	cd ${WRKSRC} && ${AUTOCONF}
+
+.include "../../audio/lame/buildlink2.mk"
+.include "../../audio/libvorbis/buildlink2.mk"
+.include "../../audio/mad/buildlink2.mk"
+.include "../../x11/wxGTK/buildlink2.mk"
+.include "../../mk/ossaudio.buildlink2.mk"
+
+.include "../../mk/autoconf.mk"
+.include "../../mk/bsd.pkg.mk"
 
 # XXX Internal compiler error with -O2
-.if (${MACHINE_ARCH} == alpha)
-CFLAGS=		-O
+.if ${MACHINE_ARCH} == "alpha"
+CFLAGS+=	-O
 .endif
-
-post-patch:
-	${SED} "s|XXXHELPDIRXXX|${PREFIX}/share|" \
-		<${WRKSRC}/Help.cpp >${WRKSRC}/Help.cpp.tmp \
-	&& ${MV} ${WRKSRC}/Help.cpp.tmp ${WRKSRC}/Help.cpp
-	${RM} -rf ${WRKSRC}/mpeg3
-
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/audacity ${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/audacity-help.htb ${PREFIX}/share
-
-.include "../../audio/id3lib/buildlink2.mk"
-.include "../../audio/lame/buildlink2.mk"
-.include "../../devel/libmpeg3/buildlink2.mk"
-.include "../../x11/wxGTK/buildlink2.mk"
-.include "../../mk/bsd.pkg.mk"

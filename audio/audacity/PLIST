@@ -1,3 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:15:16 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/10/04 08:59:35 jlam Exp $
 bin/audacity
 share/audacity-help.htb
+share/doc/audacity/LICENSE.txt
+share/doc/audacity/README.txt
+@dirrm share/doc/audacity

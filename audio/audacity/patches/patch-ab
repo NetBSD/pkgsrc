@@ -1,22 +1,27 @@
-$NetBSD: patch-ab,v 1.1.1.1 2001/06/17 19:13:52 drochner Exp $
+$NetBSD: patch-ab,v 1.2 2002/10/04 08:59:36 jlam Exp $
 
---- snd/audiooss.c.orig	Mon Apr 30 01:07:29 2001
-+++ snd/audiooss.c	Sun Jun 17 09:18:04 2001
-@@ -9,7 +9,7 @@
- #include <fcntl.h>
+--- snd/audiooss.c.orig	Wed Jun  5 00:51:19 2002
++++ snd/audiooss.c
+@@ -16,7 +16,13 @@
+ #include <pthread.h>
  
  #include <sys/ioctl.h>
--#include <sys/soundcard.h>
++#if defined(HAVE_SYS_SOUNDCARD_H)
+ #include <sys/soundcard.h>
++#elif defined(HAVE_SOUNDCARD_H)
 +#include <soundcard.h>
++#else
++#error "No OSS soundcard.h header found."
++#endif
  #include <sys/time.h>
  
  /* snd includes */
-@@ -70,7 +70,7 @@
-   int channels;
-   int rate;
-   oss_info dp;
--  const char *device = "/dev/dsp";
-+  const char *device = "/dev/sound";
+@@ -187,7 +193,7 @@ int audio_open(snd_type snd, long *flags
+    int channels;
+    int rate;
+    oss_info dp;
+-   const char *device = "/dev/dsp";
++   const char *device = DEV_DSP;
+    pthread_t thread;
  
-   snd->u.audio.descriptor = (oss_info) malloc(sizeof(oss_info_struct));
-   dp = get_oss_info(snd);
+    snd->u.audio.descriptor = (oss_info) malloc(sizeof(oss_info_struct));
