@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: mksandbox,v 1.29 2004/01/30 08:34:28 grant Exp $
+# $NetBSD: mksandbox,v 1.30 2004/01/30 08:51:29 grant Exp $
 #
 #
 # Copyright (c) 2002 Alistair G. Crooks.  All rights reserved.
@@ -50,6 +50,12 @@ sandboxEmptyFiles="/var/run/utmp /var/run/utmpx /var/log/wtmp /var/log/wtmpx /va
 usage()
 {
 	echo "Usage: mksandbox [--pkgsrc=dir] [--src=srcdir] [--verbose] sandbox-dir"
+	exit 1
+}
+
+err()
+{
+	echo "error: $1"
 	exit 1
 }
 
@@ -141,8 +147,15 @@ if [ $# -ne 1 ]; then
 fi
 
 if [ `$idprog -u` -ne 0 ]; then
-	echo "You must be root to run this script"
-	exit 1
+	err "You must be root to run this script."
+fi
+
+if [ ! -d $pkgsrc ]; then
+	err "pkgsrc directory $pkgsrc does not exist."
+fi
+
+if [ ! -d $src ]; then
+	err "source directory $src does not exist."
 fi
 
 sandbox=$1
