@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.4 2003/11/07 20:21:52 jdolecek Exp $
+# $NetBSD: buildlink2.mk,v 1.5 2003/11/10 02:26:53 fredb Exp $
 
 .if !defined(XRENDER_BUILDLINK2_MK)
 XRENDER_BUILDLINK2_MK=	# defined
@@ -58,9 +58,9 @@ EVAL_PREFIX+=	BUILDLINK_PREFIX.Xrender=Xrender
 BUILDLINK_PREFIX.Xrender_DEFAULT=	${X11PREFIX}
 #
 # If we depend on the package, depend on the latest version
-# with a library major bump.
+# with a library minor bump.
 #
-BUILDLINK_DEPENDS.Xrender=	Xrender>=0.8
+BUILDLINK_DEPENDS.Xrender=	Xrender>=0.8.2
 
 .include "../../x11/render/buildlink2.mk"
 .else
