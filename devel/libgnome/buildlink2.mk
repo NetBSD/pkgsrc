@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1.1.1 2002/09/11 23:31:16 rh Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2002/09/22 09:52:35 jlam Exp $
 
 .if !defined(LIBGNOME_BUILDLINK2_MK)
 LIBGNOME_BUILDLINK2_MK=	# defined
@@ -11,10 +11,6 @@ EVAL_PREFIX+=			BUILDLINK_PREFIX.libgnome=libgnome
 BUILDLINK_PREFIX.libgnome_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.libgnome=	include/libgnome-2.0/libgnome/*
 BUILDLINK_FILES.libgnome+=	lib/libgnome-2.*
-BUILDLINK_FILES.libgnome+=	lib/pkgconfig/libgnome-2.0.pc
-BUILDLINK_FILES.libgnome+=	libexec/gnome2-db2html
-BUILDLINK_FILES.libgnome+=	libexec/gnome2-info2html
-BUILDLINK_FILES.libgnome+=	libexec/gnome2-man2html
 
 .include "../../archivers/bzip2/buildlink2.mk"
 .include "../../audio/esound/buildlink2.mk"

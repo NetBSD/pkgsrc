@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.2 2002/09/10 16:06:40 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2002/09/22 09:52:35 jlam Exp $
 
 .if !defined(LIBGLADE2_BUILDLINK2_MK)
 LIBGLADE2_BUILDLINK2_MK=	# defined
@@ -11,7 +11,6 @@ EVAL_PREFIX+=			BUILDLINK_PREFIX.libglade2=libglade2
 BUILDLINK_PREFIX.libglade2_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.libglade2=	include/libglade-2.0/glade/*
 BUILDLINK_FILES.libglade2+=	lib/libglade-2.0.*
-BUILDLINK_FILES.libglade2+=	lib/pkgconfig/libglade-2.0.pc
 
 CPPFLAGS+=			-I${BUILDLINK_DIR}/include/libglade-2.0
 
