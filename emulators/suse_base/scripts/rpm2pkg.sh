@@ -33,16 +33,25 @@ grep -v ^pax:\  $LIST | @@AWK@@ '{print("@@EMULSUBDIR@@/"$1)}' |
    shift `expr $# - 1`;
    case $1 in
    /* )
-    set - @@EMULDIR@@$1
+    TARGET=`echo $1 | cut -c 2-`
+    DIR=`dirname $ENTRY`
+    while [ $DIR != @@EMULSUBDIR@@ ]
+    do
+     TARGET=../$TARGET
+     DIR=`dirname $DIR`
+    done
+    unset DIR
     rm $ENTRY
-    ln -s $1 $ENTRY
+    ln -s $TARGET $ENTRY
     ;;
+   * )
+    TARGET=$1
    esac
-   if cd `dirname $ENTRY` && test -f $1
+   if cd `dirname $ENTRY` && test -f $TARGET
    then
     echo $ENTRY
    else
-    echo "@exec ln -s $1 %D/$ENTRY" >>$LINKS
+    echo "@exec ln -s $TARGET %D/$ENTRY" >>$LINKS
     echo "@unexec rm -f %D/$ENTRY" >>$LINKS
    fi
    cd @@PREFIX@@
