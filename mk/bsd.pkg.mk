@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.697 2001/03/26 00:55:39 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.698 2001/03/26 17:04:50 fredb Exp $
 #
 # This file is in the public domain.
 #
@@ -3345,6 +3345,7 @@ tags:
 # to MANZ's value, set MANCOMPRESSED if MANZ is set
 .if defined(MANCOMPRESSED_IF_MANZ) && defined(MANZ)
 MANCOMPRESSED=	yes
+MAKE_ENV+=	MANZ="${MANZ}"
 .endif
 
 # generate ${PLIST} from ${PLIST_SRC} by:
