@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.136 2003/01/04 11:45:19 jmmv Exp $
+$NetBSD: TODO,v 1.137 2003/01/04 12:48:00 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -9,10 +9,6 @@ Suggested new packages
 	driftnet
 	Listens to network traffic and picks out images from TCP streams.
 	http://www.ex-parrot.com/~chris/driftnet/
-
-	fileroller [pkg/19592 ; jmmv]
-	Archive manager for Gnome
-	http://fileroller.sourceforge.net/
 
 	figfonts
 	More fonts for figlet.
