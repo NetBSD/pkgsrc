@@ -1,34 +1,30 @@
-$NetBSD: patch-aa,v 1.8 1999/10/24 16:49:33 tron Exp $
+$NetBSD: patch-aa,v 1.9 1999/10/28 00:23:10 jlam Exp $
 
---- configure.orig	Tue Sep  7 01:53:10 1999
-+++ configure	Fri Oct 22 21:38:23 1999
-@@ -1530,7 +1530,7 @@
-   ac_tool_prefix=
+--- configure.orig	Mon Oct 18 19:52:34 1999
++++ configure	Wed Oct 27 20:20:38 1999
+@@ -1531,6 +1531,7 @@
  fi
  
--
+ 
 +if false; then
  # Check for any special flags to pass to ltconfig.
  libtool_flags="--cache-file=$cache_file"
  test "$enable_shared" = no && libtool_flags="$libtool_flags --disable-shared"
-@@ -1827,6 +1827,7 @@
- 
- # Always use our own libtool.
- LIBTOOL='$(SHELL) $(top_builddir)/libtool'
-+fi
- 
+@@ -1831,6 +1832,7 @@
  # Redirect the config.log output again, so that the ltconfig log is not
  # clobbered by the next message.
-@@ -5378,10 +5379,12 @@
-     top_srcdir="$ac_dots$ac_given_srcdir" ;;
-   esac
- 
-+if false; then
-   case "$ac_given_INSTALL" in
-   [/$]*) INSTALL="$ac_given_INSTALL" ;;
-   *) INSTALL="$ac_dots$ac_given_INSTALL" ;;
-   esac
+ exec 5>>./config.log
 +fi
  
-   echo creating "$ac_file"
-   rm -f "$ac_file"
+ 
+ echo $ac_n "checking whether to enable maintainer-specific portions of Makefiles""... $ac_c" 1>&6
+@@ -2400,6 +2402,9 @@
+   LIBS="$oLIBS"
+   CFLAGS="$oCFLAGS"
+ fi
++
++# NetBSD's ld.so doesn't support library dependencies
++dynworks=false
+ 
+ if $dynworks; then
+    imlib_libtool_config="${CONFIG_SHELL-/bin/sh} libtool --config"
