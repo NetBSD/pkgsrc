@@ -1,10 +1,11 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: mpd.sh,v 1.1.1.1 2004/04/30 10:48:21 grant Exp $
+# $NetBSD: mpd.sh,v 1.2 2004/11/11 03:15:41 simonb Exp $
 #
 
 # PROVIDE: mpd
 # REQUIRE: DAEMON
+# KEYWORD: shutdown
 
 . /etc/rc.subr
 
