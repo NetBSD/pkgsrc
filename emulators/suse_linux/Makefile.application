@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.application,v 1.9 2003/07/02 09:24:43 martin Exp $
+# $NetBSD: Makefile.application,v 1.10 2003/09/04 08:21:52 martti Exp $
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -17,6 +17,8 @@ SUSE_VERSION=			7.3
 .    include "../../emulators/${SUSE_DIR_PREFIX}_linux/Makefile.common"
 .  endif
 
+.elif ${OPSYS} == "Linux"
+# No Linux emulation is needed
 .else
 # we put a value here so that the creation of the bulk
 # build cache files works correctly on non-i386 machines.
