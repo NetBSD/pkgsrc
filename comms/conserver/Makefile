@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/01/05 12:05:54 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2004/03/13 17:16:13 kristerw Exp $
 #
 
 DISTNAME=      conserver-7.2.7
@@ -21,6 +21,11 @@ CONFIGURE_ARGS+=	--with-port=${DEFAULTPORT}
 CONFIGURE_ARGS+=	--with-regex
 CONFIGURE_ARGS+=	--with-libwrap
 
+.if ${MACHINE_ARCH} == alpha || ${MACHINE_ARCH} == sparc64 || \
+	${MACHINE_ARCH} == x86_64
+CONFIGURE_ARGS+=	--with-64bit
+.endif
+
 DEFAULTPORT?=	782
 DEFAULTHOST?=	localhost
 RCD_SCRIPTS=	conserver
@@ -31,8 +36,6 @@ EGDIR=		${PREFIX}/share/examples/conserver
 CONF_FILES=	${EGDIR}/conserver.cf.example ${PKG_SYSCONFDIR}/conserver.cf
 CONF_FILES+=	${EGDIR}/conserver.passwd.example ${PKG_SYSCONFDIR}/conserver.passwd
 OWN_DIRS=	/var/consoles
-
-NOT_FOR_PLATFORM=	*-*-alpha *-*-sparc64
 
 pre-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
