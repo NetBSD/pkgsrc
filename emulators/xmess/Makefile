@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 1998/08/20 15:16:53 tsarna Exp $
+# $NetBSD: Makefile,v 1.3 1998/08/29 04:24:28 mycroft Exp $
 #
 
-DISTNAME=		unix01
-PKGNAME=		xmess-0.1
+DISTNAME=		unix02b4
+PKGNAME=		xmess-0.2b4.1
 CATEGORIES=		emulators games x11
 MASTER_SITES=		http://internetter.com/titan/mess/
 EXTRACT_SUFX=		.tgz
@@ -13,24 +13,34 @@ HOMEPAGE=		http://internetter.com/titan/mess/
 RUN_DEPENDS=		unzip:../../archivers/unzip
 DEPENDS+=		xpm-3.4k:../../graphics/xpm
 
+CONFLICTS=		xmess-0.1
+
 USE_X11=		yes
 USE_GMAKE=		yes
 MAKE_ENV+=		OPSYS=${OPSYS} ARCH=${ARCH} DESTDIR=${DESTDIR} \
 			INSTALL_MAN="${INSTALL_MAN}" \
-			INSTALL_PROGRAM="${INSTALL_PROGRAM}"
+			INSTALL_PROGRAM="${INSTALL_PROGRAM}" \
+			NETBSD_JOYSTICK="${NETBSD_JOYSTICK}"
+MAKEFILE=		makefile.unix
+ALL_TARGET=		xmess.x11
 
-WRKSRC=			${WRKDIR}/xmess-0.1
+WRKSRC=			${WRKDIR}/xmess-0.2b4.1
 
-MESSDIR=		${PREFIX}/share/mess
+MESSDIR=		${PREFIX}/share/xmess
+.if exists(/usr/include/machine/joystick.h)
+NETBSD_JOYSTICK=	yes 
+.else
+NETBSD_JOYSTICK=	no
+.endif
 
 post-patch:
-	${CP} ${WRKSRC}/makefile.unix ${WRKSRC}/Makefile
-	${SED} 's|@MESSDIR@|${MESSDIR}|' ${WRKSRC}/doc/xmessrc.dist >${WRKSRC}/doc/xmessrc
-	${MV} ${WRKSRC}/src/unix/netbsd_i386.c ${WRKSRC}/src/unix/netbsd.c
+	(cd ${WRKSRC}/doc && ${SED} 's|@MESSDIR@|${MESSDIR}|' xmessrc.dist >xmessrc)
+	(cd ${WRKSRC}/src/unix && ${MV} netbsd_i386.c netbsd.c)
 
-post-install:
-	${MKDIR} -p ${MESSDIR}
-	${CP} ${WRKSRC}/doc/xmessrc ${MESSDIR}/xmessrc
+do-install:
+	(cd ${WRKSRC} && ${INSTALL_PROGRAM} ${ALL_TARGET} ${PREFIX}/bin/xmess)
+	${MKDIR} ${MESSDIR}
+	(cd ${WRKSRC}/doc && ${INSTALL_DATA} xmessrc ${MESSDIR}/xmessrc)
 	@${ECHO} Remember to set MESSDIR to ${MESSDIR}.
 
 .include "../../mk/bsd.pkg.mk"
