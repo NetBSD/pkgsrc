@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2002/11/15 01:16:43 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2002/12/14 03:43:18 schmonz Exp $
 
 DISTNAME=	vicq-0.4.1
 PKGREVISION=	1
@@ -16,7 +16,7 @@ DEPEND+=	p5-Term-ReadLine>=1.11:../../devel/p5-Term-ReadLine
 USE_BUILDLINK2=		YES
 NO_BUILD=		YES
 
-REPLACE_PERL=		${WRKSRC}/vicq
+REPLACE_PERL=		vicq
 PERL5_CONFIGURE=	NO
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Net/vICQ/.packlist
 
