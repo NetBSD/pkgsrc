@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/07/19 12:32:32 agc Exp $
+# $NetBSD: Makefile,v 1.2 2002/09/21 06:30:45 jlam Exp $
 
 DISTNAME=	lyx-${LYX_VERS}
 PKGNAME=	cjk-${DISTNAME}
@@ -17,7 +17,7 @@ COMMENT=	multibyte version of LyX
 
 LYX_VERS=	1.2.0
 
-CONFLICTS=	lyx-*
+CONFLICTS=	lyx-[0-9]*
 
 DEPENDS+=	ispell-base-[0-9]*:../../textproc/ispell-base
 DEPENDS+=	teTeX-bin>=1.0.7nb1:../../print/teTeX-bin
@@ -28,17 +28,16 @@ GCC_VERSION!=	gcc --version
 .include "../../lang/gcc/Makefile.gcc"
 .endif
 
-USE_PERL5=	yes
-USE_LIBTOOL=	yes
-LTCONFIG_OVERRIDE=	${WRKSRC}/config/ltmain.sh
-GNU_CONFIGURE=	yes
+USE_BUILDLINK2=		yes
+USE_PERL5=		yes
+GNU_CONFIGURE=		yes
 
-post-configure:
-	# this pkg generates libtool script from configure file
-	cd ${WRKSRC} && config/ltmain.sh
+USE_LIBTOOL=		yes
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+LIBTOOL_OVERRIDE+=	${WRKSRC}/sigc++/libtool
 
-.include "../../graphics/jpeg/buildlink.mk"
-.include "../../graphics/xpm/buildlink.mk"
-.include "../../x11/xforms/buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
+.include "../../graphics/jpeg/buildlink2.mk"
+.include "../../graphics/xpm/buildlink2.mk"
+.include "../../x11/xforms/buildlink2.mk"
+
 .include "../../mk/bsd.pkg.mk"
