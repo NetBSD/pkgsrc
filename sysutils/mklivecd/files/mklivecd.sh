@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: mklivecd.sh,v 1.19 2005/03/16 16:37:38 xtraeme Exp $
+# $NetBSD: mklivecd.sh,v 1.20 2005/03/30 14:23:04 xtraeme Exp $
 #
 # Copyright (c) 2004, 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -257,7 +257,7 @@ do_cdlive()
 		    for f in $GRUB_FILES
 		    do
 			    if [ ! -f $ISODIR/$BOOTDIR/$f ]; then
-				cp @PREFIX@/share/grub/@MACHINE_ARCH@-/$f \
+				cp @PREFIX@/lib/grub/@MACHINE_ARCH@-/$f \
 				    $ISODIR/$BOOTDIR
 				[ "$verbose_mode" = "on" ] && \
 				    showmsg "Copying $f into $ISODIR/$BOOTDIR."
@@ -374,7 +374,7 @@ _EOF_
 		cat > $ISODIR/etc/rc.d/root <<_EOF_
 #!/bin/sh
 #
-# \$NetBSD: mklivecd.sh,v 1.19 2005/03/16 16:37:38 xtraeme Exp $
+# \$NetBSD: mklivecd.sh,v 1.20 2005/03/30 14:23:04 xtraeme Exp $
 # 
 
 # PROVIDE: root
@@ -589,6 +589,10 @@ _EOF_
 		fi
 	;;
 	clean)
+		if [ -f $pkgsrc_mntstat -o -f $pkgsrcdist_mntstat ]; then
+			showmsg "The pkgsrc directories still in use! Exiting."
+			bye 1
+		fi
 		showmsg "Cleaning WORKDIR: $WORKDIR"
 		rm -rf $WORKDIR
 		for F in bin dev etc lib libexec mnt rescue \
