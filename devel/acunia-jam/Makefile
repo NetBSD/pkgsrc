@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/03/29 12:40:29 jmmv Exp $
+# $NetBSD: Makefile,v 1.5 2003/06/27 08:15:14 skrll Exp $
 #
 
 DISTNAME=	acunia-jam-1.0
@@ -27,8 +27,8 @@ do-install:
 		${INSTALL_DATA} ${WRKSRC}/$${file} ${PREFIX}/${DOCDIR}; \
 	done
 	${INSTALL_DATA_DIR} ${PREFIX}/${HTMLDIR}
-	for file in *.html; do \
-		${INSTALL_DATA} ${WRKSRC}/$${file} ${PREFIX}/${HTMLDIR}; \
+	for file in ${WRKSRC}/*.html; do \
+		${INSTALL_DATA} $${file} ${PREFIX}/${HTMLDIR}; \
 	done
 
 .include "../../mk/bsd.pkg.mk"
