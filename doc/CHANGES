@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3339 2003/09/12 13:00:26 seb Exp $
+$NetBSD: CHANGES,v 1.3340 2003/09/12 13:12:56 grant Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3651,3 +3651,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated net-snmp to 5.0.9 [uebayasi 2003-09-12]
 	Updated ijb to 2.0.2nb1 [jmmv 2003-09-12]
 	Updated audit-packages to 1.21 [seb 2003-09-12]
+	Updated fetchmail to 6.2.4nb1 [jlam 2003-09-12]
