@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.104 2000/11/27 14:44:37 rh Exp $
+# $NetBSD: Makefile,v 1.105 2000/11/29 17:24:52 wiz Exp $
 # FreeBSD Id: Makefile,v 1.53 1997/09/28 13:25:40 markm Exp
 #
 
@@ -33,6 +33,7 @@
     SUBDIR += g3d
     SUBDIR += gd
     SUBDIR += gdk-pixbuf
+    SUBDIR += gdk-pixbuf-gnome
     SUBDIR += get_ds7
     SUBDIR += gif2png
     SUBDIR += gif320
