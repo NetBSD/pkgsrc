@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2000/08/29 01:37:16 hubertf Exp $
+# $NetBSD: Makefile,v 1.35 2000/08/31 03:38:46 itohy Exp $
 # FreeBSD Id: Makefile,v 1.23 1997/10/10 09:24:38 tg Exp
 #
 
@@ -10,14 +10,27 @@ MASTER_SITES=	ftp://ftp.tux.org/pub/tux/bagleyd/xlockmore/ \
 MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://www.tux.org/~bagleyd/xlockmore.html
 
+.include "../../mk/bsd.prefs.mk"
+
+.if !defined(XLOCK_LIGHT)
 DEPENDS+=	Mesa-*:../../graphics/Mesa
+.endif
 
 GNU_CONFIGURE=	YES
 USE_X11BASE=	YES
+.if defined(XLOCK_LIGHT)
+CONFIGURE_ARGS+= --without-mesagl --without-xpm # --without-cxx XXX doesn't work
+CONFIGURE_ENV+= "CXX=${CC}"	# no dependency on libstdc++
+.else
 USE_XPM=	YES
-CONFIGURE_ARGS+= --with-mesagl --without-motif --without-sx \
+CONFIGURE_ARGS+= --with-mesagl
+.endif
+CONFIGURE_ARGS+= --without-motif --without-sx \
 		--without-editres --without-dtsaver --without-rplay \
 		--without-nas --without-gtk
+.if ${OPSYS} == "NetBSD"
+CONFIGURE_ARGS+= --enable-def_play='/usr/bin/audioplay ${PREFIX}/lib/X11/xlockmore/'
+.endif
 
 post-patch:
 		for i in xlock/sound.c xlock/resource.c ; do \
@@ -27,6 +40,13 @@ post-patch:
 				-e 's|@PREFIX@|${PREFIX}|g' \
 				<$$f.BAK >$$f ; \
 		done
+.if defined(XLOCK_DEFAULT_MODE) && ${XLOCK_DEFAULT_MODE} != ""
+		cd ${WRKSRC}/xlock; \
+			[ -f XLock.ad.BAK ] || ${MV} XLock.ad XLock.ad.BAK ; \
+			${SED} \
+				-e 's/^\(XLock.mode:[ 	]*\).*/\1${XLOCK_DEFAULT_MODE}/' \
+				XLock.ad.BAK >XLock.ad
+.endif
 
 post-install:
 		${INSTALL_DATA_DIR} ${PREFIX}/lib/X11/xlockmore
