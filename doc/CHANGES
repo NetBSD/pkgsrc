@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7295 2004/09/30 12:23:35 wiz Exp $
+$NetBSD: CHANGES,v 1.7296 2004/09/30 12:45:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4494,3 +4494,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added fillets-ng-data-0.5.1 [salo 2004-09-30]
 	Added fillets-ng-data-cs-0.5.0 [salo 2004-09-30]
 	Added compositeext-2.0 [wiz 2004-09-30]
+	Added Xcomposite-1.0.1 [wiz 2004-09-30]
