@@ -1,7 +1,9 @@
-$NetBSD: distinfo,v 1.2 2004/03/11 13:17:03 recht Exp $
+$NetBSD: distinfo,v 1.3 2004/04/04 11:04:59 mrg Exp $
 
 SHA1 (mjpegtools-1.6.2.tar.gz) = c69ce6cd8a37c133c92d677f21650ae541c86575
 Size (mjpegtools-1.6.2.tar.gz) = 1256280 bytes
 SHA1 (patch-aa) = b47aaacdbe02a3254c1ff58213448d63b39e5a34
 SHA1 (patch-ab) = 392bc09ca0142fb1e435b219e598a70ae4bf258f
 SHA1 (patch-ac) = 0297beecec5947ae153b60a43891c9d373255af5
+SHA1 (patch-ad) = f5f0b017be1fdec1613f256487be1cbb5ba4bea8
+SHA1 (patch-ae) = eeebfd79d18b33065fa28be6315f99752e9d8a88
