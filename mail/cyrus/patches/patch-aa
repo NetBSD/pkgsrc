@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/03/07 00:27:18 kim Exp $
+$NetBSD: patch-aa,v 1.2 1999/06/12 03:01:44 kim Exp $
 
 --- configure.orig	Tue Aug  4 01:52:57 1998
-+++ configure	Thu Oct 22 21:31:35 1998
++++ configure	Fri Jun 11 22:41:23 1999
 @@ -1269,14 +1269,14 @@
  fi
  
@@ -47,6 +47,15 @@ $NetBSD: patch-aa,v 1.1.1.1 1999/03/07 00:27:18 kim Exp $
  	krb|krb_*) login_progs=krbck;;
  esac
  
+@@ -2869,7 +2871,7 @@
+ echo "configure:2870: checking with Tcl on how it says it should be compiled" >&5
+     . ${TclLibBase}/tclConfig.sh
+         
+-    TCL_CPPFLAGS="-I${TCL_PREFIX}/include"
++    TCL_CPPFLAGS="-I${TCL_PREFIX}/include/tcl8.0"
+         TCL_LIBS="${TCL_LD_SEARCH_FLAGS} ${TCL_LIB_SPEC} ${TCL_LIBS}"
+ 
+             
 @@ -3094,11 +3096,11 @@
    with_krb="${withval}"
  fi
