@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6647 2004/07/23 05:16:00 minskim Exp $
+$NetBSD: CHANGES,v 1.6648 2004/07/23 13:03:55 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3516,3 +3516,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated communicator to 4.75nb1(bsdi)/4.80(linux) [atatat 2004-07-23]
 	Updated naim to 0.11.7.2 [snj 2004-07-23]
 	Updated liferea to 0.5.2 [minskim 2004-07-23]
+	Updated wimon to 0.3 [xtraeme 2004-07-23]
