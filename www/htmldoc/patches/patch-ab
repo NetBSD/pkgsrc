@@ -1,0 +1,18 @@
+$NetBSD: patch-ab,v 1.1 2001/05/13 01:16:23 dmcmahill Exp $
+
+--- ps-pdf.cpp.orig	Thu Jan  7 19:28:30 1999
++++ ps-pdf.cpp	Sat May 12 21:09:09 2001
+@@ -2807,5 +2807,5 @@
+ 
+     if (Verbosity)
+-      progress_update(100 - 100 * (*y) / PagePrintLength);
++      progress_update((int)(100 - 100 * (*y) / PagePrintLength));
+ 
+     if (t->halignment == ALIGN_LEFT)
+@@ -2991,5 +2991,5 @@
+ 
+       if (Verbosity)
+-        progress_update(100 - 100 * (*y) / PagePrintLength);
++        progress_update((int)(100 - 100 * (*y) / PagePrintLength));
+     };
+ 
