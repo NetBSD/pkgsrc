@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9368 2005/02/28 22:02:47 adrianp Exp $
+$NetBSD: CHANGES,v 1.9369 2005/02/28 22:43:47 snj Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1209,3 +1209,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated bsflite to 0.73 [reed 2005-02-28]
 	Updated tor to 0.0.9.5 [jschauma 2005-02-28]
 	Updated tinyca to 0.6.8 [adrianp 2005-02-28]
+	Updated gqview to 2.0.0 [snj 2005-02-28]
