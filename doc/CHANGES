@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5134 2004/03/07 14:40:04 taca Exp $
+$NetBSD: CHANGES,v 1.5135 2004/03/07 14:41:32 taca Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1189,7 +1189,7 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated blt to 2.4z [minskim 2004-03-06]
 	Updated abiword to 2.0.4 [xtraeme 2004-03-06]
 	Added ytalk-x11-3.1.1 [grant 2004-03-06]
-        Updated mozilla-gtk2 to 1.6nb3 [jmmv 2004-03-06]
+	Updated mozilla-gtk2 to 1.6nb3 [jmmv 2004-03-06]
 	Added postfix-current-20040209 [grant 2004-03-06]
 	Updated createbuildlink to 3.3 [jlam 2004-03-06]
 	Updated openmortal to 0.6 [xtraeme 2004-03-06]
@@ -1214,10 +1214,10 @@ Changes to the packages collection and infrastructure in 2004:
 	Added cpia2view-0.03 [hamajima 2004-03-07]
 	Updated qcamview to 0.4 [hamajima 2004-03-07]
 	Updated sather to 1.2.1nb3 [seb 2004-03-07]
-        Updated abiword to 2.0.4nb1 [jmmv 2004-03-07]
-        Updated balsa2 to 2.0.16nb3 [recht 2004-03-07]
-        Updated mimedefang to 2.40 [markd 2004-03-07]
-        Updated pure-ftpd to 1.0.18 [recht 2004-03-07]
-        Updated scrollkeeper to 0.3.14nb2 [jmmv 2004-03-07]
+	Updated abiword to 2.0.4nb1 [jmmv 2004-03-07]
+	Updated balsa2 to 2.0.16nb3 [recht 2004-03-07]
+	Updated mimedefang to 2.40 [markd 2004-03-07]
+	Updated pure-ftpd to 1.0.18 [recht 2004-03-07]
+	Updated scrollkeeper to 0.3.14nb2 [jmmv 2004-03-07]
 	Updated ruby-racc to 1.4.4 [taca 2004-03-07]
 	Deleted ruby-racc-runtime [taca 2004-03-07]
