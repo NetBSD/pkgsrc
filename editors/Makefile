@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2002/03/24 19:44:33 magick Exp $
+# $NetBSD: Makefile,v 1.57 2002/04/08 20:03:52 schmonz Exp $
 #
 
 COMMENT=	Editors
@@ -7,6 +7,9 @@ SUBDIR+=	abiword
 SUBDIR+=	beav
 SUBDIR+=	biew
 SUBDIR+=	bvi
+SUBDIR+=	ce
+SUBDIR+=	ce-doc
+SUBDIR+=	ce-x11
 SUBDIR+=	emacs
 SUBDIR+=	gnotepad
 SUBDIR+=	hexedit
