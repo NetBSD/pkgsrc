@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2004/12/10 06:13:03 markd Exp $
+@comment $NetBSD: PLIST,v 1.15 2005/03/06 13:02:59 markd Exp $
 bin/artsbuilder
 bin/artscontrol
 bin/juk
@@ -19,7 +19,6 @@ bin/yaf-splay
 bin/yaf-tplay
 bin/yaf-vorbis
 bin/yaf-yuv
-etc/xdg/menus/applications-merged/kde-multimedia-music.menu
 include/akode/akodelib.h
 include/akode/audiobuffer.h
 include/akode/audioconfiguration.h
@@ -526,6 +525,7 @@ share/doc/kde/HTML/en/kscd/kscd9.png
 share/doc/kde/HTML/en/noatun/common
 share/doc/kde/HTML/en/noatun/index.cache.bz2
 share/doc/kde/HTML/en/noatun/index.docbook
+share/examples/kdemultimedia3/applications-merged/kde-multimedia-music.menu
 share/kde/apps/artsbuilder/artsbuilderui.rc
 share/kde/apps/artsbuilder/examples/README
 share/kde/apps/artsbuilder/examples/example_adsr.arts
@@ -1175,6 +1175,8 @@ share/kde/servicetypes/krec_exportitem.desktop
 @dirrm share/kde/apps/artsbuilder/examples
 @dirrm share/kde/apps/artsbuilder
 @comment in kde: @dirrm share/kde/apps
+@dirrm share/examples/kdemultimedia3/applications-merged
+@dirrm share/examples/kdemultimedia3
 @dirrm share/doc/kde/HTML/en/noatun
 @dirrm share/doc/kde/HTML/en/kscd
 @dirrm share/doc/kde/HTML/en/krec
@@ -1215,4 +1217,3 @@ share/kde/servicetypes/krec_exportitem.desktop
 @dirrm include/libkcddb
 @comment in arts: @dirrm include/arts
 @dirrm include/akode
-@comment dirrm etc/xdg/menus/applications-merged
