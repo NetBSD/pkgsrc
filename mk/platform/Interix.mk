@@ -1,4 +1,4 @@
-# $NetBSD: Interix.mk,v 1.2 2004/10/09 03:49:13 tv Exp $
+# $NetBSD: Interix.mk,v 1.3 2004/10/09 04:12:58 tv Exp $
 #
 # Variable definitions for the Interix operating system.
 
@@ -97,6 +97,8 @@ NOLOGIN?=		/bin/false
 PKG_TOOLS_BIN?=		${LOCALBASE}/sbin
 PKGDIRMODE?=		775
 .if ${BINOWN} == 197108
+# If Administrator, BINOWN is exactly this numeric value, so transform it to
+# a locale-specific name.  (pkgsrc/bootstrap sets all other users to names.)
 ROOT_CMD?=		${SU} - "$$(id -un 197108)" -c
 .else
 ROOT_CMD?=		${SU} - ${ROOT_USER} -c
