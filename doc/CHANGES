@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9014 2005/02/03 13:02:29 abs Exp $
+$NetBSD: CHANGES,v 1.9015 2005/02/03 13:37:47 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -729,4 +729,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated ggv2 to 2.8.3 [jmmv 2005-02-03]
 	Updated exim to 4.44 [abs 2005-02-03]
 	Updated exim-exiscan to 4.44_28 [abs 2005-02-03]
-
+	Updated gdm to 2.6.0.7 [jmmv 2005-02-03]
