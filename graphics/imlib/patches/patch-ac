@@ -1,0 +1,57 @@
+$NetBSD: patch-ac,v 1.3 1999/01/16 02:38:43 tron Exp $
+
+--- ../libpng-1.0.1/scripts/makefile.std.orig	Sat Mar  7 21:12:04 1998
++++ ../libpng-1.0.1/scripts/makefile.std	Tue Jan 12 00:06:13 1999
+@@ -8,25 +8,24 @@
+ ZLIBLIB=../zlib
+ ZLIBINC=../zlib
+ 
+-CC=cc
+-CFLAGS=-I$(ZLIBINC) -O # -g -DPNG_DEBUG=1
+-LDFLAGS=-L. -L$(ZLIBLIB) -lpng -lz -lm
++CC=${LIBTOOL} --mode=compile cc
++CFLAGS=-O # -g -DPNG_DEBUG=5
++LDFLAGS=libpng101.la -lz -lm
+ 
+ #RANLIB=echo
+ RANLIB=ranlib
+ 
+ # where make install puts libpng.a and png.h
+-prefix=/usr/local
++prefix=${PREFIX}
+ 
+ OBJS = png.o pngset.o pngget.o pngrutil.o pngtrans.o pngwutil.o \
+ 	pngread.o pngrio.o pngwio.o pngwrite.o pngrtran.o \
+ 	pngwtran.o pngmem.o pngerror.o pngpread.o
+ 
+-all: libpng.a pngtest
++all: libpng101.la
+ 
+-libpng.a: $(OBJS)
+-	ar rc $@  $(OBJS)
+-	$(RANLIB) $@
++libpng101.la: $(OBJS)
++	${LIBTOOL} --mode=link cc -o $@ ${OBJS:.o=.lo} -rpath ${PREFIX}/lib -version-info 1:0
+ 
+ pngtest: pngtest.o libpng.a
+ 	$(CC) -o pngtest $(CFLAGS) pngtest.o $(LDFLAGS)
+@@ -34,15 +33,10 @@
+ test: pngtest
+ 	./pngtest
+ 
+-install: libpng.a
+-	-@mkdir $(prefix)/include
+-	-@mkdir $(prefix)/lib
+-	cp png.h $(prefix)/include
+-	cp pngconf.h $(prefix)/include
+-	chmod 644 $(prefix)/include/png.h
+-	chmod 644 $(prefix)/include/pngconf.h
+-	cp libpng.a $(prefix)/lib
+-	chmod 644 $(prefix)/lib/libpng.a
++install: libpng101.la
++	${BSD_INSTALL_DATA_DIR} $(prefix)/include/png101
++	${BSD_INSTALL_DATA} png.h pngconf.h $(prefix)/include/png101
++	${LIBTOOL} --mode=install ${BSD_INSTALL_DATA} libpng101.la $(prefix)/lib
+ 
+ clean:
+ 	rm -f *.o libpng.a pngtest pngout.png
