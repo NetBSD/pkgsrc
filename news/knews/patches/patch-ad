@@ -1,6 +1,6 @@
---- src/thread.c.orig	Fri Jul 26 11:59:43 1996
-+++ src/thread.c	Sun Nov 30 18:32:48 1997
-@@ -1120,6 +1120,7 @@
+--- src/thread.c.orig	Fri Jan  9 18:16:23 1998
++++ src/thread.c	Thu Apr 23 00:52:42 1998
+@@ -1108,6 +1108,7 @@
      if (!reply || atoi(reply) != NNTP_OK_GROUP)
  	return reply;
  
