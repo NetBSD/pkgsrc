@@ -1,39 +1,22 @@
-$NetBSD: patch-ac,v 1.4 2000/10/18 03:31:16 hubertf Exp $
+$NetBSD: patch-ac,v 1.5 2002/11/24 21:31:22 hubertf Exp $
 
---- src/Makefile.in.orig	Fri Sep  8 20:28:03 2000
+--- src/Makefile.in.orig	Wed Apr 17 21:47:47 2002
 +++ src/Makefile.in
-@@ -86,10 +86,8 @@
- 	@cd ..; $(MAKE) lint SUBDIRS=src
+@@ -180,7 +180,7 @@
+ cvs_LDADD = \
+ 	../diff/libdiff.a \
+ 	../lib/libcvs.a \
+-	../zlib/libz.a
++	-lz
  
- install: installdirs
--	@for prog in $(PROGS); do \
--	  echo Installing $$prog in $(bindir); \
--	  $(INSTALL) $$prog $(bindir)/$$prog ; \
--	done
-+	$(INSTALL_PROGRAM) cvs $(bindir)/
-+	$(BSD_INSTALL_SCRIPT) cvsbug $(bindir)/
  
- installdirs:
- 	$(SHELL) $(top_srcdir)/mkinstalldirs $(bindir)
-@@ -140,10 +138,10 @@
+ # extra clean targets
+@@ -222,7 +222,7 @@
+ 	update.$(OBJEXT) version.$(OBJEXT) vers_ts.$(OBJEXT) \
+ 	watch.$(OBJEXT) wrapper.$(OBJEXT) zlib.$(OBJEXT)
+ cvs_OBJECTS = $(am_cvs_OBJECTS)
+-cvs_DEPENDENCIES = ../diff/libdiff.a ../lib/libcvs.a ../zlib/libz.a
++cvs_DEPENDENCIES = ../diff/libdiff.a ../lib/libcvs.a
+ cvs_LDFLAGS =
+ SCRIPTS = $(bin_SCRIPTS)
  
- # Linking rules.
- 
--$(PROGS): ../lib/libcvs.a ../zlib/libz.a ../diff/libdiff.a
-+$(PROGS): ../lib/libcvs.a ../diff/libdiff.a
- 
- cvs: $(OBJECTS)
--	$(CC) $(OBJECTS) ../lib/libcvs.a ../zlib/libz.a ../diff/libdiff.a $(LIBS) $(LDFLAGS) -o $@ 
-+	$(CC) $(OBJECTS) ../lib/libcvs.a -lz ../diff/libdiff.a $(LIBS) $(LDFLAGS) -o $@ 
- 
- xlint: $(SOURCES)
- 	files= ; \
-@@ -177,7 +175,7 @@
- 	$(CC) $(CPPFLAGS) $(INCLUDES) -I$(top_srcdir)/diff $(DEFS) $(CFLAGS) -c $(srcdir)/rcscmds.c
- 
- zlib.o: zlib.c $(top_srcdir)/zlib/zlib.h
--	$(CC) $(CPPFLAGS) $(INCLUDES) -I$(top_srcdir)/zlib $(DEFS) $(CFLAGS) -c $(srcdir)/zlib.c
-+	$(CC) $(CPPFLAGS) $(INCLUDES) $(DEFS) $(CFLAGS) -c $(srcdir)/zlib.c
- 
- subdir = src
- Makefile: ../config.status Makefile.in

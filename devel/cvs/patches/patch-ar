@@ -1,24 +1,24 @@
-$NetBSD: patch-ar,v 1.4 2000/10/18 03:31:16 hubertf Exp $
+$NetBSD: patch-ar,v 1.5 2002/11/24 21:31:25 hubertf Exp $
 
---- src/server.c.orig	Fri Jul 28 22:18:40 2000
+--- src/server.c.orig	Tue Mar 19 20:15:45 2002
 +++ src/server.c
-@@ -796,6 +796,7 @@
+@@ -782,6 +782,7 @@
         nothing.  But for rsh, we need to do it now.  */
-     parse_config (CVSroot_directory);
+     parse_config (current_parsed_root->directory);
  
 +    if (!nolock) {
-     path = malloc (strlen (CVSroot_directory)
+     path = malloc (strlen (current_parsed_root->directory)
  		   + sizeof (CVSROOTADM)
- 		   + 10);
-@@ -813,6 +814,7 @@
+ 		   + 2);
+@@ -799,6 +800,7 @@
  	pending_error = save_errno;
      }
      free (path);
 +    }
  
  #ifdef HAVE_PUTENV
-     env = malloc (strlen (CVSROOT_ENV) + strlen (CVSroot_directory) + 1 + 1);
-@@ -2194,6 +2196,8 @@
+     env = malloc (strlen (CVSROOT_ENV) + strlen (current_parsed_root->directory) + 2);
+@@ -2181,6 +2183,8 @@
      {
  	case 'n':
  	    noexec = 1;
@@ -27,7 +27,7 @@ $NetBSD: patch-ar,v 1.4 2000/10/18 03:31:16 hubertf Exp $
  	    break;
  	case 'q':
  	    quiet = 1;
-@@ -5172,6 +5176,7 @@
+@@ -5283,6 +5287,7 @@
      const char *username;
  {
      struct passwd *pw;
@@ -35,19 +35,19 @@ $NetBSD: patch-ar,v 1.4 2000/10/18 03:31:16 hubertf Exp $
  
      pw = getpwnam (username);
      if (pw == NULL)
-@@ -5231,7 +5236,15 @@
+@@ -5342,7 +5347,15 @@
  	}
      }
-     
+ 
 -    if (setuid (pw->pw_uid) < 0)
 +#ifdef SETXID_SUPPORT
 +    /* Honor the setuid bit iff set. */
 +    if (getuid() != geteuid())
-+	rc = setuid (geteuid ());
-+    else
++        rc = setuid (geteuid ());
++    else 
 +#else
 +        rc = setuid (pw->pw_uid);
-+#endif
++#endif 
 +    if (rc < 0)
      {
  	/* Note that this means that if run as a non-root user,
