@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/02/26 22:42:23 is Exp $
+# $NetBSD: Makefile,v 1.4 2005/02/26 22:45:11 is Exp $
 #
 
 DISTNAME=		vs233
@@ -16,8 +16,8 @@ WRKSRC= ${WRKDIR}
 ONLY_FOR_PLATFORM=     NetBSD-*-*
 
 ### Use the second line below for installing if you want to make print-PLIST!
-#DOMOD=
-DOMOD=-pm
+DOMOD=
+#DOMOD=-pm
 
 do-extract:
 
