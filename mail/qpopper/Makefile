@@ -1,11 +1,14 @@
-# $NetBSD: Makefile,v 1.23 2000/09/09 19:40:19 fredb Exp $
+# $NetBSD: Makefile,v 1.24 2000/12/11 17:23:01 itojun Exp $
 #
 
-DISTNAME=		qpopper2.53
-PKGNAME=		qpopper-2.53
+DISTNAME=		qpopper3.1.2
+PKGNAME=		qpopper-3.1.2
 CATEGORIES=		mail
 MASTER_SITES=		ftp://ftp.qualcomm.com/eudora/servers/unix/popper/
-EXTRACT_SUFX=		.tar.Z
+
+PATCH_SITES=		http://www.imasy.or.jp/~ume/ipv6/
+PATCHFILES=		qpopper3.1.2-ipv6-20001210.diff.gz
+PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=		mellon@fugue.com
 HOMEPAGE=		http://eudora.qualcomm.com/freeware/qpop.html
@@ -16,11 +19,6 @@ CONFIGURE_ARGS+=	--libexecdir=${PREFIX}/libexec \
 			--with-apop=/etc/apop.auth --with-apopuid=root
 
 .include "../../mk/bsd.prefs.mk"
-
-.if defined(USE_KERBEROS4)
-CONFIGURE_ARGS+=--enable-kerberos
-CRYPTO=		yes
-.endif
 
 BUILD_DEFS+=		QPOPPER_SERVERMODE USE_INET6
 
@@ -36,12 +34,12 @@ CONFIGURE_ENV+=		O_DEFS="${O_DEFS}" CFLAGS="-DINET6"
 # popper makefile doesn't have an install target...
 do-install:
 	(cd ${WRKSRC}; \
-	 ${INSTALL_PROGRAM} popper	${PREFIX}/libexec/qpopper; \
-	 ${INSTALL} -o root -c -g ${BINGRP} -m 4755 popauth \
+	 ${INSTALL_PROGRAM} popper/popper ${PREFIX}/libexec/qpopper; \
+	 ${INSTALL} -o root -c -g ${BINGRP} -m 4755 popper/popauth \
 		${PREFIX}/bin/qpopauth; \
-	 ${INSTALL_MAN} popper.8	${PREFIX}/man/man8/qpopper.8; \
-	 ${INSTALL_MAN} popauth.8	${PREFIX}/man/man8/qpopauth.8 ; \
-	 ${INSTALL_MAN} License		${PREFIX}/share/doc/qpopper.License \
+	 ${INSTALL_MAN} man/popper.8 ${PREFIX}/man/man8/qpopper.8; \
+	 ${INSTALL_MAN} man/popauth.8 ${PREFIX}/man/man8/qpopauth.8 ; \
+	 ${INSTALL_MAN} License.txt ${PREFIX}/share/doc/qpopper.License \
 	)
 
 .include "../../mk/bsd.pkg.mk"
