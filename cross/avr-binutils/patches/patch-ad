@@ -1,0 +1,14 @@
+$NetBSD: patch-ad,v 1.1.1.1 2003/07/15 21:46:26 wennmach Exp $
+
+--- etc/Makefile.in.orig	Sat Jan 26 22:35:45 2002
++++ etc/Makefile.in	Tue Jun  4 16:50:05 2002
+@@ -52,7 +52,8 @@
+ all:
+ 
+ # We want install to imply install-info as per GNU standards.
+-install: install-info
++#install: install-info
++install:
+ 
+ uninstall:
+ 
