@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.33 2004/02/05 01:42:05 jlam Exp $
+# $NetBSD: gcc.mk,v 1.34 2004/02/05 01:50:55 jlam Exp $
 
 .if !defined(COMPILER_GCC_MK)
 COMPILER_GCC_MK=	defined
@@ -18,17 +18,18 @@ _GCC2_PATTERNS=	2.8 2.8.* 2.9 2.9.* 2.[1-8][0-9] 2.[1-8][0-9].*	\
 _GCC3_PATTERNS=	2.95.[4-9]* 2.95.[1-9][0-9]* 2.9[6-9] 2.9[6-9].*	\
 		2.[1-9][0-9][0-9]* 3.* [4-9]*
 
-_CC=	${CC:C/^/_asdf_/1:M_asdf_*:S/^_asdf_//}
+_CC:=	${CC:C/^/_asdf_/1:M_asdf_*:S/^_asdf_//}
 .for _dir_ in ${PATH:C/\:/ /g}
 .  if empty(_CC:M/*)
 .    if exists(${_dir_}/${CC:C/^/_asdf_/1:M_asdf_*:S/^_asdf_//})
-_CC=	${_dir_}/${CC:C/^/_asdf_/1:M_asdf_*:S/^_asdf_//}
+_CC:=	${_dir_}/${CC:C/^/_asdf_/1:M_asdf_*:S/^_asdf_//}
 .    endif
 .  endif
 .endfor
 
 .if !defined(_GCC_VERSION)
-_GCC_VERSION_STRING!=	( ${_CC} -v 2>&1 | ${GREP} 'gcc version' ) || ${ECHO} 0
+_GCC_VERSION_STRING!=	\
+	( ${_CC} -v 2>&1 | ${GREP} 'gcc version' ) 2>/dev/null || ${ECHO} 0
 .  if !empty(_GCC_VERSION_STRING:Megcs*)
 _GCC_VERSION=	2.8.1		# egcs is considered to be gcc-2.8.1.
 .  elif !empty(_GCC_VERSION_STRING:Mgcc*)
