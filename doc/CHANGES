@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3684 2003/10/13 12:13:56 jmmv Exp $
+$NetBSD: CHANGES,v 1.3685 2003/10/13 15:03:57 salo Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4188,3 +4188,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated openssh to 2.7.1.2nb1 [grant 2003-10-12]
 	Updated xbindkeys to 1.5.5nb2 [jmmv 2003-10-13]
 	Updated xmlcatmgr to 1.1 [jmmv 2003-10-13]
+	Updated nmap to 3.48 [salo 2003-10-13]
+	Updated nmapfe to 0.9.5nb10 [salo 2003-10-13]
