@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2002/02/28 13:26:03 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2002/04/05 23:44:39 wiz Exp $
 
 DISTNAME=	Canna35b2
-PKGNAME=	Canna-server-3.5b2
+PKGNAME=	Canna-server-3.5.2
 CATEGORIES=	japanese
 MASTER_SITES=	ftp://ftp.nec.co.jp/pub/Canna/Canna35/
 
@@ -14,7 +14,7 @@ MAINTAINER=	tech-pkg-ja@jp.netbsd.org
 HOMEPAGE=	http://www.nec.co.jp/japanese/product/computer/soft/canna/
 COMMENT=	Kana-Kanji conversion system (server)
 
-DEPENDS+=	Canna-lib-3.5b2:../../japanese/canna-lib
+DEPENDS+=	Canna-lib>=3.5.2:../../japanese/canna-lib
 
 FILESDIR=	${.CURDIR}/../../japanese/canna-lib/files
 PATCHDIR=	${.CURDIR}/../../japanese/canna-lib/patches
