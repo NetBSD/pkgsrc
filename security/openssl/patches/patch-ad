@@ -1,7 +1,16 @@
-$NetBSD: patch-ad,v 1.11 2004/03/26 06:54:30 jlam Exp $
+$NetBSD: patch-ad,v 1.12 2004/12/17 23:08:36 wiz Exp $
 
---- apps/Makefile.ssl.orig	Thu Aug 14 02:30:31 2003
+--- apps/Makefile.ssl.orig	2003-08-14 08:30:31.000000000 +0200
 +++ apps/Makefile.ssl
+@@ -31,7 +31,7 @@ LIBSSL=-L.. -lssl
+ 
+ PROGRAM= openssl
+ 
+-SCRIPTS=CA.sh CA.pl der_chop
++SCRIPTS=CA.sh CA.pl
+ 
+ EXE= $(PROGRAM)$(EXE_EXT)
+ 
 @@ -100,11 +100,11 @@ install:
  	@for i in $(SCRIPTS); \
  	do  \
