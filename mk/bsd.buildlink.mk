@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink.mk,v 1.57 2002/03/08 19:35:57 jlam Exp $
+# $NetBSD: bsd.buildlink.mk,v 1.58 2002/03/18 17:45:34 jlam Exp $
 #
 # This Makefile fragment is included by package buildlink.mk files.  This
 # file does the following things:
@@ -119,6 +119,8 @@ _BSD_BUILDLINK_MK=	# defined
 
 BUILDLINK_DIR=		${WRKDIR}/.buildlink
 
+.include "../../mk/bsd.prefs.mk"
+
 .if !defined(_BUILDLINK_CPPFLAGS) || !defined(_BUILDLINK_LDFLAGS)
 _BUILDLINK_CPPFLAGS=	-I${BUILDLINK_DIR}/include
 _BUILDLINK_LDFLAGS=	-L${BUILDLINK_DIR}/lib
@@ -138,6 +140,22 @@ MAKE_ENV+=		BUILDLINK_LDFLAGS="${_BUILDLINK_LDFLAGS}"
 .endif
 
 ECHO_BUILDLINK_MSG?=	${ECHO_MSG} "=>"
+
+# _LIBTOOL_ARCHIVE_TRANSFORM creates $${dest} from $${file}, where
+# $${file} is a libtool archive (*.la).  It allows libtool to properly
+# interact with buildlink at link time by linking against the libraries
+# pointed to by symlinks in ${BUILDLINK_DIR}.
+#
+_LIBTOOL_ARCHIVE_TRANSFORM_SED=						\
+	-e "s|${LOCALBASE}\(/lib/[^ 	]*\.la\)|${BUILDLINK_DIR}\1|g"	\
+	-e "s|${X11BASE}\(/lib/[^ 	]*\.la\)|${BUILDLINK_DIR}\1|g"
+
+.if defined(USE_BUILDLINK_ONLY)
+_LIBTOOL_ARCHIVE_TRANSFORM_SED+=	${_BUILDLINK_CONFIG_WRAPPER_SED}
+.endif
+
+_LIBTOOL_ARCHIVE_TRANSFORM=						\
+	${SED} ${_LIBTOOL_ARCHIVE_TRANSFORM_SED} $${file} > $${dest}
 
 _BUILDLINK_USE: .USE
 	${_PKG_SILENT}${_PKG_DEBUG}					\
@@ -161,6 +179,7 @@ _BUILDLINK_USE: .USE
 				${RM} -f $${dest};			\
 				case $${file} in			\
 				*.la)					\
+					${_LIBTOOL_ARCHIVE_TRANSFORM};	\
 					;;				\
 				*)					\
 					${LN} -sf $${file} $${dest};	\
@@ -248,8 +267,6 @@ _BUILDLINK_SUBST_USE: .USE
 			done;						\
 		fi;							\
 	fi
-
-.include "../../mk/bsd.prefs.mk"
 
 MAKEFILE_PATTERNS+=	${MAKEFILE:T}
 MAKEFILE_PATTERNS+=	Makefile
