@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/01/18 17:44:03 peter Exp $
+# $NetBSD: Makefile,v 1.2 2005/01/22 13:26:20 peter Exp $
 #
 
 DISTNAME=		amsn-0_94
 PKGNAME=		${DISTNAME:S/_/./}
+PKGREVISION=		1
 CATEGORIES=		chat
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=amsn/}
 
@@ -22,6 +23,7 @@ do-install:
 	${LN} -sf ${PREFIX}/share/amsn/amsn ${PREFIX}/bin/amsn
 	${CHMOD} +x ${PREFIX}/share/amsn/amsn
 
+.include "../../security/tls/buildlink3.mk"
 .include "../../lang/tcl/buildlink3.mk"
 .include "../../x11/tk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
