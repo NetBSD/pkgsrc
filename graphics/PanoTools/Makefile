@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.9 2003/07/21 16:51:35 martti Exp $
+# $NetBSD: Makefile,v 1.10 2003/08/23 15:18:00 jschauma Exp $
 #
 
 DISTNAME=		PanoTools
 PKGNAME=		${DISTNAME}-2.6b1
 PKGREVISION=		1
 WRKSRC=			${WRKDIR}/PTLinux
-CATEGORIES=		graphics
+CATEGORIES=		graphics java
 MASTER_SITES=		http://www.path.unimelb.edu.au/~dersch/
 
 MAINTAINER=		tech-pkg@NetBSD.org
