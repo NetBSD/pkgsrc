@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.41 2001/09/06 17:33:50 jlam Exp $
+# $NetBSD: Makefile,v 1.42 2001/09/12 18:58:57 jlam Exp $
 
 .include "../../lang/perl5/Makefile.common"
 
 PKGNAME=		perl-${PERL5_VERS}
-PERL5_PKG_VERS=		nb2
+PERL5_PKG_VERS=		nb3
 CATEGORIES+=		lang devel
 
 MAINTAINER=		jlam@netbsd.org
@@ -35,11 +35,11 @@ MKPIC?=			yes
 #
 LIBSWANTED.NetBSD=	m crypt
 
-# SYSLIBPATH should contain the directories in which the system libraries
-# may be found.
+# Nail down the directories in which the system libraries may be found.
+# If this isn't defined, then use the perl defaults for the particular
+# operating system.
 #
 SYSLIBPATH.NetBSD=	/usr/lib
-#SYSLIBPATH.Linux=	/lib /usr/lib
 
 .if defined(LIBSWANTED.${OPSYS})
 CONFIGURE_ARGS+=	-Dlibswanted="${LIBSWANTED.${OPSYS}}"
@@ -71,15 +71,22 @@ PERL5_SITEARCH=		${PREFIX}/lib/perl5/site_perl/${PERL5_DIST_VERS}/${MACHINE_ARCH
 PERL5_PACKLIST=		${PERL5_ARCHLIB}/.packlist
 
 # It's tough to guess which hints file will be used, so add our modifications
-# to all of them.
+# to all of them:
+#
+# - Don't install any manpages in man3; make user use perldoc (to prevent
+#   confusion/conflicts with similarly named man2/man3 pages).
+#
+# - Explicitly set the local compiler search paths to contain only the
+#   pkgsrc-controlled directories.
 #
 post-patch:
 	hintdir="${WRKSRC}/hints";					\
 	for hints in $${hintdir}/*.sh; do				\
 		${CHMOD} +w $${hints};					\
 		( ${ECHO} "";						\
-		  ${ECHO} "locincpth=''";				\
-		  ${ECHO} "loclibpth=''";				\
+		  ${ECHO} "man3dir=none";				\
+		  ${ECHO} "locincpth='${LOCALBASE}/include'";		\
+		  ${ECHO} "loclibpth='${LOCALBASE}/lib'";		\
 		) >> $${hints};						\
 	done
 .if defined(SYSLIBPATH.${OPSYS})

@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.8 2001/09/05 17:13:41 jlam Exp $
+$NetBSD: patch-ab,v 1.9 2001/09/12 18:58:57 jlam Exp $
 
---- hints/netbsd.sh.orig	Thu Feb 22 18:57:55 2001
-+++ hints/netbsd.sh	Sat Sep  1 03:57:59 2001
+--- hints/netbsd.sh.orig	Thu Feb 22 21:57:55 2001
++++ hints/netbsd.sh	Wed Sep 12 14:41:45 2001
 @@ -21,7 +21,11 @@
  	if [ -f /usr/libexec/ld.elf_so ]; then
  		d_dlopen=$define
@@ -15,7 +15,7 @@ $NetBSD: patch-ab,v 1.8 2001/09/05 17:13:41 jlam Exp $
  		cccdlflags="-DPIC -fPIC $cccdlflags"
  		lddlflags="--whole-archive -shared $lddlflags"
  	elif [ "`uname -m`" = "pmax" ]; then
-@@ -59,14 +63,18 @@
+@@ -59,12 +63,13 @@
  d_setruid="$undef"
  
  # there's no problem with vfork.
@@ -30,12 +30,6 @@ $NetBSD: patch-ab,v 1.8 2001/09/05 17:13:41 jlam Exp $
  # Pre-empt the /usr/bin/perl question of installperl.
 -installusrbinperl='n'
 +installusrbinperl="$undef"
-+
-+# Don't install any manpages in man3; make user use perldoc
-+# (to prevent confusion with similarly named man2/man3 pages).
-+man3dir=none
  
  # Recognize the NetBSD packages collection.
--# GDBM might be here.
- test -d /usr/pkg/lib     && loclibpth="$loclibpth /usr/pkg/lib"
- test -d /usr/pkg/include && locincpth="$locincpth /usr/pkg/include"
+ # GDBM might be here.
