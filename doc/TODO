@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2745 2004/12/24 18:30:14 seb Exp $
+$NetBSD: TODO,v 1.2746 2004/12/24 22:02:59 jlam Exp $
 
 Suggested new packages
 ======================
@@ -759,7 +759,6 @@ Suggested package updates
 	o openntpd-3.6.1p1
 	o openoffice-1.1.4
 	o openoffice-linux-1.1.4
-	o openssl-0.9.7e [http://www.cs.stevens-tech.edu/~jschauma/netbsd/openssl.diff]
 	o openvpn-1.6.0
 	o opera7-7.54u1
 	o oregano-0.21
