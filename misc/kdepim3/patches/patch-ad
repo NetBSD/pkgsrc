@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 2002/10/03 12:08:46 markd Exp $
+
+--- kpilot/conduits/null/Makefile.in.orig	Thu Aug  8 06:10:08 2002
++++ kpilot/conduits/null/Makefile.in	Thu Oct  3 15:24:39 2002
+@@ -244,7 +244,7 @@
+ #>+ 1
+ libnullconduit_la_SOURCES= null-conduit.cc null-factory.cc setup_base.cc
+ libnullconduit_la_LDFLAGS = $(KDE_RPATH) -L../../lib
+-libnullconduit_la_LIBADD = -lkpilot
++libnullconduit_la_LIBADD = ../../lib/libkpilot.la
+ subdir = kpilot/conduits/null
+ mkinstalldirs = $(SHELL) $(top_srcdir)/admin/mkinstalldirs
+ CONFIG_HEADER = $(top_builddir)/config.h

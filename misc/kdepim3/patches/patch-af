@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1 2002/10/03 12:08:47 markd Exp $
+
+--- kpilot/conduits/popmail/Makefile.in.orig	Thu Aug  8 06:10:09 2002
++++ kpilot/conduits/popmail/Makefile.in	Thu Oct  3 15:25:17 2002
+@@ -251,7 +251,7 @@
+ 	passworddialog.cc popmail-conduit.cc parsedate.c
+ 
+ libpopmailconduit_la_LDFLAGS = $(KDE_RPATH) -L../../lib
+-libpopmailconduit_la_LIBADD = -lkpilot
++libpopmailconduit_la_LIBADD = ../../lib/libkpilot.la
+ 
+ # this option you can leave out. Just, if you use "make dist", you need it
+ noinst_HEADERS = popmail-conduit.h passworddialog.h setupDialog.h
