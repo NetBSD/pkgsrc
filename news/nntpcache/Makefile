@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2004/01/24 14:51:52 grant Exp $
+# $NetBSD: Makefile,v 1.18 2004/04/21 21:09:33 cube Exp $
 # FreeBSD Id: Makefile,v 1.11 1998/02/01 03:04:11 itojun Exp
 #
 
@@ -13,12 +13,10 @@ COMMENT=		NNTP multi-server caching daemon
 
 LICENSE=		fee-based-commercial-use
 
-# enable ldap support?
-NNTP_USE_LDAP?=		no
 # enable pgp signed nocem support?
 NNTP_USE_PGP?=		no
 
-.if ${NNTP_USE_LDAP} == yes
+.if defined(USE_OPENLDAP) && !empty(USE_OPENLDAP:M[Yy][Ee][Ss])
 DEPENDS+=		openldap-[0-9]*:../../databases/openldap
 .endif
 
@@ -26,7 +24,7 @@ DEPENDS+=		openldap-[0-9]*:../../databases/openldap
 DEPENDS+=		pgp-2.*:../../security/pgp2
 .endif
 
-BUILD_DEFS+=		NNTP_USE_LDAP NNTP_USE_PGP
+BUILD_DEFS+=		USE_OPENLDAP NNTP_USE_PGP
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--localstatedir=/var/spool

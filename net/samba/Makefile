@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.120 2004/04/15 16:26:31 jmmv Exp $
+# $NetBSD: Makefile,v 1.121 2004/04/21 21:09:32 cube Exp $
 
 DISTNAME=		samba-3.0.2a
 PKGREVISION=		1
@@ -68,7 +68,7 @@ CONFIGURE_ARGS+=	--with-readline=${BUILDLINK_PREFIX.readline}
 
 .if defined(SAMBA_WITH_ADS) && !empty(SAMBA_WITH_ADS:M[yY][eE][sS])
 .  include "../../mk/krb5.buildlink3.mk"
-SAMBA_USE_LDAP=		yes
+SAMBA_USE_LDAP=		# defined
 CONFIGURE_ARGS+=	--with-ads
 CONFIGURE_ARGS+=	--with-krb5=${KRB5BASE}
 .else
@@ -93,7 +93,7 @@ PLIST_SRC+=		${PKGDIR}/PLIST.pam
 .endif
 BUILD_DEFS+=		USE_PAM
 
-.if defined(SAMBA_USE_LDAP) && !empty(SAMBA_USE_LDAP:M[yY][eE][sS])
+.if defined(SAMBA_USE_LDAP) || (defined(USE_OPENLDAP) && !empty(USE_OPENLDAP:M[yY][eE][sS]))
 .  include "../../databases/openldap/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-ldap
 .  if defined(SAMBA_USE_LDAP_COMPAT) && \
@@ -103,6 +103,7 @@ CONFIGURE_ARGS+=	--with-ldapsam
 .else
 CONFIGURE_ARGS+=	--without-ldap
 .endif
+BUILD_DEFS+=		USE_OPENLDAP
 BUILD_DEFS+=		SAMBA_USE_LDAP
 BUILD_DEFS+=		SAMBA_USE_LDAP_COMPAT
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2004/03/27 22:07:32 tron Exp $
+# $NetBSD: Makefile,v 1.69 2004/04/21 21:09:31 cube Exp $
 
 .include "../../mail/sendmail/Makefile.common"
 
@@ -21,7 +21,7 @@ USE_DB2?=	NO
 .include "../../databases/db/buildlink2.mk"
 .endif
 
-.if defined(USE_LDAP) && ${USE_LDAP} == YES
+.if defined(USE_OPENLDAP) && ${USE_OPENLDAP} == YES
 .include "../../databases/openldap/buildlink2.mk"
 .endif
 
@@ -45,7 +45,7 @@ post-patch: make-sendmail-siteconfig
 	${CAT} ${FILESDIR}/site.config.m4-tcpwrappers >>${SITECONFIG}
 	${ECHO} -n ' TCPWRAPPERS' >>${DESCR_SRC}
 .endif
-.if defined(USE_LDAP) && ${USE_LDAP} == YES
+.if defined(USE_OPENLDAP) && ${USE_OPENLDAP} == YES
 	${CAT} ${FILESDIR}/site.config.m4-ldap >>${SITECONFIG}
 	${ECHO} -n ' LDAP' >>${DESCR_SRC}
 .endif
