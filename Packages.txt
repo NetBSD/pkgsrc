@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.55 1999/07/09 14:53:11 agc Exp $
+# $NetBSD: Packages.txt,v 1.56 1999/07/09 15:26:42 agc Exp $
 ###########################################################################
 
 			==========================
@@ -1024,6 +1024,10 @@ perform the equivalent of:
    to be used when generating a pkgsrc tree to be written to a CD-ROM.
    This target also produces README.html files, and can be made to refer
    to URLs based on CDROM_PKG_URL_HOST and CDROM_PKG_URL_DIR.
+
+ * show-distfiles:
+   This target shows which distfiles and patchfiles are needed to build
+   the package.
 
 
 
