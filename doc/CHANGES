@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3198 2003/09/02 07:35:44 xtraeme Exp $
+$NetBSD: CHANGES,v 1.3199 2003/09/02 08:36:15 he Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3421,6 +3421,7 @@ Changes to the packages collection and infrastructure in 2003:
 	Added camlimages-2.11 [jtb 2003-08-31]
 	Added advi-1.4.0 [jtb 2003-08-31]
 	Updated xcircuit to 3.1.19 [jtb 2003-08-31]
+	Updated p5-IPC-ShareLite to 0.09 [he 2003-08-31]
 	Deleted bgrep, renamed to bsdgrep-devel [cjep 2003-08-31]
 	Updated libnet to 1.0.1bnb2 [seb 2003-08-31]
 	Updated bsdgrep-devel to 20030831 [cjep 2003-08-31]
