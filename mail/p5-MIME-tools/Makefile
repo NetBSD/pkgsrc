@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2002/09/26 02:01:42 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2002/10/20 17:46:00 seb Exp $
 #
 
 DISTNAME=       MIME-tools-5.411a
@@ -15,13 +15,10 @@ DEPENDS+=	p5-IO-stringy-[0-9]*:../../devel/p5-IO-stringy
 DEPENDS+=	p5-MIME-Base64-[0-9]*:../../converters/p5-MIME-Base64
 DEPENDS+=	p5-MailTools-[0-9]*:../../mail/p5-MailTools
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/MIME-tools/.packlist
 
 WRKSRC=		${WRKDIR}/MIME-tools-5.411
 
-do-configure:
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
-
-.include "../../lang/perl5/buildlink.mk"
+.include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

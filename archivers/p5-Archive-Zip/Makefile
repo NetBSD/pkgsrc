@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/11/27 03:19:21 explorer Exp $
+# $NetBSD: Makefile,v 1.5 2002/10/20 17:46:03 seb Exp $
 
 DISTNAME=		Archive-Zip-0.11
 PKGNAME=		p5-${DISTNAME}
@@ -11,11 +11,8 @@ COMMENT=		perl5 module interface to manipulate zip files
 
 DEPENDS+=		p5-Compress-Zlib-[0-9]*:../../devel/p5-Compress-Zlib
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Archive/Zip/.packlist
 
-do-configure:
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
-
-.include "../../lang/perl5/buildlink.mk"
+.include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
