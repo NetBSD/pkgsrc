@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/12/03 15:15:13 wiz Exp $#
+# $NetBSD: Makefile,v 1.16 2005/01/07 18:55:16 tron Exp $#
 
 DISTNAME=	xservers-3.3.6.3
 CATEGORIES=	x11
@@ -35,12 +35,12 @@ MESSAGE_SUBST+=	X11_SUBDIR=${X11_SUBDIR}
 do-fetch:
 .if defined(BSDXSRCDIR)
 .if !exists(${BSDXSRCDIR}/xc/config/cf/NetBSD.cf)
-	@${ECHO_MSG} "Cannot find NetBSD's X11 sources in ${BSDXSRCDIR}."
+	@${ECHO_MSG} "Cannot find NetBSD 2.0 (or older) X11 sources in ${BSDXSRCDIR}."
 	@${FALSE}
 .endif
 .else
-	@${ECHO_MSG} "Please set BSDXSRCDIR in /etc/mk.conf, pointing it"
-	@${ECHO_MSG} "to a directory that contains NetBSD's X11 sources."
+	@${ECHO_MSG} "Please set BSDXSRCDIR in /etc/mk.conf, pointing it to a"
+	@${ECHO_MSG} "directory that contains NetBSD 2.0 (or older) X11 sources."
 	@${FALSE}
 .endif
 
