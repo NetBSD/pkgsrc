@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5388 2004/03/31 05:51:59 snj Exp $
+$NetBSD: CHANGES,v 1.5389 2004/03/31 06:08:21 snj Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1629,3 +1629,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated xmess to 0.80.1 [xtraeme 2004-03-31]
 	Updated abiword to 2.0.5 [xtraeme 2004-03-31]
 	Updated sqlite to 2.8.13 [snj 2004-03-31]
+	Updated py-sqlite to 0.5.0 [snj 2004-03-31]

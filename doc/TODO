@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1557 2004/03/31 05:51:59 snj Exp $
+$NetBSD: TODO,v 1.1558 2004/03/31 06:08:21 snj Exp $
 
 Suggested new packages
 ======================
@@ -301,7 +301,6 @@ Suggested package updates
 	o postgresql-7.4.2 [pkgsrc-wip]
 	o psi-0.9.1
 	o py-psycopg-1.1.10
-	o py-sqlite-0.5.0 [pkg/24663]
 	o pygtk-0.6.11
 	o pysol-4.82
 	o qt-3.3 [recht]
