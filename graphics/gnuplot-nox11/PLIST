@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.4 2003/06/07 17:39:25 jschauma Exp $
+@comment $NetBSD: PLIST,v 1.1 2003/06/07 17:39:25 jschauma Exp $
 bin/gnuplot
-bin/gnuplot_x11
 @unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/gnuplot.info
 info/gnuplot.info
 @exec ${INSTALL_INFO} --info-dir=%D/info %D/info/gnuplot.info
