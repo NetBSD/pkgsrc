@@ -1,12 +1,12 @@
-$NetBSD: patch-ab,v 1.1 2002/09/04 19:31:44 jlam Exp $
+$NetBSD: patch-ab,v 1.2 2002/11/10 23:55:14 lukem Exp $
 
---- doc/images/Makefile.in.orig	Wed Sep  4 01:49:17 2002
-+++ doc/images/Makefile.in
-@@ -126,7 +126,7 @@ install_sh = @install_sh@
+--- doc/html/images/Makefile.in.orig	Wed Sep 25 14:53:33 2002
++++ doc/html/images/Makefile.in
+@@ -133,7 +133,7 @@ install_sh = @install_sh@
  
  AUTOMAKE_OPTIONS = foreign
  
--docdir = $(datadir)/doc/$(PACKAGE)-$(VERSION)/images
+-docdir = $(datadir)/doc/$(PACKAGE)-$(VERSION)/html/images
 +docdir = $(datadir)/doc/html/$(PACKAGE)/images
  
  doc_DATA = \
