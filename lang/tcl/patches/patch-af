@@ -1,0 +1,47 @@
+$NetBSD: patch-af,v 1.1 2001/05/24 02:58:16 jlam Exp $
+
+--- tcl.m4.orig	Tue Aug  8 15:17:11 2000
++++ tcl.m4
+@@ -595,6 +595,7 @@
+ 
+     do64bit_ok=no
+     fullSrcDir=`cd $srcdir; pwd`
++    TCL_LIB_SPEC_RPATH=""
+     EXTRA_CFLAGS=""
+     TCL_EXPORT_FILE_SUFFIX=""
+     UNSHARED_LIB_SUFFIX=""
+@@ -794,24 +795,29 @@
+ 	    AC_CHECK_HEADER(dlfcn.h, [
+ 		# NetBSD/SPARC needs -fPIC, -fpic will not do.
+ 		SHLIB_CFLAGS="-fPIC"
+-		SHLIB_LD="ld -Bshareable -x"
+ 		SHLIB_LD_LIBS=""
+ 		SHLIB_SUFFIX=".so"
+ 		DL_OBJS="tclLoadDl.o"
+ 		DL_LIBS=""
+ 		LDFLAGS=""
+-		LD_SEARCH_FLAGS='-Wl,-rpath,${LIB_RUNTIME_DIR}'
+ 		AC_MSG_CHECKING(for ELF)
+ 		AC_EGREP_CPP(yes, [
+ #ifdef __ELF__
+ 	yes
+ #endif
+-		],
++		], [
+ 		    AC_MSG_RESULT(yes)
+-		    SHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}\$\{DBGX\}.so',
++		    SHLIB_LD='${TCL_CC} -shared -Wl,-x'
++		    LD_SEARCH_FLAGS='-Wl,-rpath,${LIB_RUNTIME_DIR}'
++		    TCL_LIB_SPEC_RPATH='-Wl,-rpath,${exec_prefix}/lib'
++		    SHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}\$\{DBGX\}.so'
++		], [
+ 		    AC_MSG_RESULT(no)
++		    SHLIB_LD="ld -Bshareable -x"
++		    LD_SEARCH_FLAGS='-R${LIB_RUNTIME_DIR}'
++		    TCL_LIB_SPEC_RPATH='-R${exec_prefix}/lib'
+ 		    SHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}\$\{DBGX\}.so.1.0'
+-		)
++		])
+ 	    ], [
+ 		SHLIB_CFLAGS=""
+ 		SHLIB_LD="echo tclLdAout $CC \{$SHLIB_CFLAGS\} | `pwd`/tclsh -r"
