@@ -1,0 +1,9 @@
+`wdiff' is a front-end to GNU `diff'.  It compares two files, finding
+which words have been deleted or added to the first in order to create
+the second.  It has many output formats and interacts well with
+terminals and pagers (notably with `less').  `wdiff' is particularily
+useful when two texts differ only by a few words and paragraphs have
+been refilled.
+
+GNU `wdiff' has been written by Franc,ois Pinard.  It is an evolving
+product, and specifications might change in future releases.
