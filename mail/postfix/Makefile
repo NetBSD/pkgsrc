@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.104 2003/10/03 15:04:52 christos Exp $
+# $NetBSD: Makefile,v 1.105 2003/11/01 13:34:10 martti Exp $
 
 DISTNAME=	postfix-2.0.16
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.porcupine.org/mirrors/postfix-release/official/
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	martti@NetBSD.org
 HOMEPAGE=	http://www.postfix.org/
 COMMENT=	Postfix SMTP server and tools
 
