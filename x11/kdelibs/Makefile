@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2000/07/15 20:39:26 agc Exp $
+# $NetBSD: Makefile,v 1.51 2000/07/25 22:31:48 dmcmahill Exp $
 # FreeBSD Id: Makefile,v 1.5 1997/11/27 00:25:46 se Exp
 #
 
@@ -28,10 +28,6 @@ CONFIGURE_ARGS=	"--datadir=${PREFIX}/share/kde" \
 CFLAGS+=	-I${LOCALBASE}/include
 
 .include "../../mk/bsd.prefs.mk"
-
-.if (${OBJECT_FMT} == "a.out") && (${MACHINE_ARCH} == "sparc")
-CFLAGS+=	-static
-PLIST_SRC=	${WRKDIR}/PLIST
 
 post-install:
 	@${GREP} -v ^lib/lib.*\.so ${PKGDIR}/PLIST >${PLIST_SRC}
