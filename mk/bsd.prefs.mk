@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.164 2004/07/30 20:59:08 jlam Exp $
+# $NetBSD: bsd.prefs.mk,v 1.165 2004/08/27 06:29:09 jlam Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -356,10 +356,23 @@ XMKMF_CMD?=		${X11PREFIX}/bin/xmkmf
 DEPOT_SUBDIR?=		packages
 DEPOTBASE=		${LOCALBASE}/${DEPOT_SUBDIR}
 
-# RPATH_FLAG publicly exports the linker flag used to specify run-time
-# library search paths.
+# LINK_RPATH_FLAG publicly exports the linker flag used to set the
+# run-time library search path.
 #
-RPATH_FLAG?=	${_OPSYS_RPATH_NAME}
+.if defined(_OPSYS_LINKER_RPATH_FLAG)
+LINKER_RPATH_FLAG=	${_OPSYS_LINKER_RPATH_FLAG}
+.else
+LINKER_RPATH_FLAG?=	${_LINKER_RPATH_FLAG}
+.endif
+
+# COMPILER_RPATH_FLAG publicly exports the compiler flag used to pass
+# run-time library search path directives to the linker.
+#
+.if defined(_OPSYS_COMPILER_RPATH_FLAG)
+COMPILER_RPATH_FLAG=	${_OPSYS_COMPILER_RPATH_FLAG}
+.else
+COMPILER_RPATH_FLAG?=	${_COMPILER_RPATH_FLAG}
+.endif
 
 # WHOLE_ARCHIVE_FLAG and NO_WHOLE_ARCHIVE_FLAG publically export the
 # linker flags to extract all symbols from a static archive.

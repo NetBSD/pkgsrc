@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.6 2003/12/11 16:05:40 adam Exp $
+$NetBSD: patch-ab,v 1.7 2004/08/27 06:29:10 jlam Exp $
 
 --- configure.orig	2003-02-16 11:06:45.000000000 +0000
 +++ configure
@@ -16,7 +16,7 @@ $NetBSD: patch-ab,v 1.6 2003/12/11 16:05:40 adam Exp $
    # It would also be nice to do this for all -L options, not just this one.
    if test -n "$x_libraries"; then
 -    X_LIBS="$X_LIBS -L$x_libraries"
-+    X_LIBS="$X_LIBS -Wl,${RPATH_FLAG}$x_libraries -L$x_libraries"
++    X_LIBS="$X_LIBS ${COMPILER_RPATH_FLAG}$x_libraries -L$x_libraries"
      # For Solaris; some versions of Sun CC require a space after -R and
      # others require no space.  Words are not sufficient . . . .
      case `(uname -sr) 2>/dev/null` in
@@ -25,7 +25,7 @@ $NetBSD: patch-ab,v 1.6 2003/12/11 16:05:40 adam Exp $
    # Check for libraries that X11R6 Xt/Xaw programs need.
    ac_save_LDFLAGS=$LDFLAGS
 -  test -n "$x_libraries" && LDFLAGS="$LDFLAGS -L$x_libraries"
-+  test -n "$x_libraries" && LDFLAGS="$LDFLAGS -Wl,${RPATH_FLAG}$x_libraries -L$x_libraries"
++  test -n "$x_libraries" && LDFLAGS="$LDFLAGS ${COMPILER_RPATH_FLAG}$x_libraries -L$x_libraries"
    # SM needs ICE to (dynamically) link under SunOS 4.x (so we have to
    # check for ICE first), but we must link in the order -lSM -lICE or
    # we get undefined symbols.  So assume we have SM if we have ICE.

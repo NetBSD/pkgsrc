@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2004/08/22 19:32:52 jlam Exp $
+# $NetBSD: options.mk,v 1.8 2004/08/27 06:29:08 jlam Exp $
 
 # Global and legacy options
 #
@@ -71,7 +71,7 @@ PATCH_DIST_STRIP.${TLS_PATCH}=	-p1
 .  endif
 CCARGS+=	-DHAS_SSL
 AUXLIBS+=	-L${BUILDLINK_PREFIX.openssl}/lib			\
-		-Wl,${RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib	\
+		${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib	\
 		-lssl -lcrypto
 PLIST_SRC+=	${PKGDIR}/PLIST.tls
 MESSAGE_SRC+=	${PKGDIR}/MESSAGE.tls
@@ -84,7 +84,7 @@ MESSAGE_SRC+=	${PKGDIR}/MESSAGE.tls
 .  include "../../devel/pcre/buildlink3.mk"
 CCARGS+=	-DHAS_PCRE
 AUXLIBS+=	-L${BUILDLINK_PREFIX.pcre}/lib				\
-		-Wl,${RPATH_FLAG}${BUILDLINK_PREFIX.pcre}/lib		\
+		${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.pcre}/lib	\
 		-lpcre
 .else
 CCARGS+=	-DNO_PCRE
@@ -97,13 +97,13 @@ CCARGS+=	-DNO_PCRE
 .  include "../../databases/openldap/buildlink3.mk"
 CCARGS+=	-DHAS_LDAP
 AUXLIBS+=	-L${BUILDLINK_PREFIX.openldap}/lib			\
-		-Wl,${RPATH_FLAG}${BUILDLINK_PREFIX.openldap}/lib	\
+		${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openldap}/lib	\
 		-lldap -llber
 .  if ${OPSYS} != "Linux"
 .    include "../../databases/db4/buildlink3.mk"
 CCARGS+=	-I${BUILDLINK_PREFIX.db4}/include/db4
 AUXLIBS+=	-L${BUILDLINK_PREFIX.db4}/lib				\
-		-Wl,${RPATH_FLAG}${BUILDLINK_PREFIX.db4}/lib		\
+		${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.db4}/lib	\
 		-ldb4
 .  endif
 .endif
@@ -120,7 +120,7 @@ AUXLIBS+=	`${BUILDLINK_PREFIX.mysql-client}/bin/mysql_config --libs`
 .  include "../../databases/mysql-client/buildlink3.mk"
 CCARGS+=	-DHAS_MYSQL -I${BUILDLINK_PREFIX.mysql-client}/include/mysql
 AUXLIBS+=	-L${BUILDLINK_PREFIX.mysql-client}/lib/mysql		\
-		-Wl,${RPATH_FLAG}${BUILDLINK_PREFIX.mysql-client}/lib/mysql \
+		${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.mysql-client}/lib/mysql \
 		-lmysqlclient -lz -lm
 .endif
 
@@ -147,7 +147,7 @@ SASLLIBDIR=	${PREFIX}/lib/sasl2
 PWCHECK_METHOD=	auxprop
 CCARGS+=	-DUSE_SASL_AUTH
 AUXLIBS+=	-L${BUILDLINK_PREFIX.cyrus-sasl}/lib			\
-		-Wl,${RPATH_FLAG}${BUILDLINK_PREFIX.cyrus-sasl}/lib	\
+		${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.cyrus-sasl}/lib \
 		-lsasl2
 .  elif defined(USE_SASL2) && !empty(USE_SASL2:M[yY][eE][sS])
 .    include "../../security/cyrus-sasl2/buildlink3.mk"
@@ -156,7 +156,7 @@ SASLLIBDIR=	${PREFIX}/lib/sasl2
 PWCHECK_METHOD=	auxprop
 CCARGS+=	-DUSE_SASL_AUTH
 AUXLIBS+=	-L${BUILDLINK_PREFIX.cyrus-sasl}/lib			\
-		-Wl,${RPATH_FLAG}${BUILDLINK_PREFIX.cyrus-sasl}/lib	\
+		${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.cyrus-sasl}/lib \
 		-lsasl2
 .  elif defined(USE_SASL) && !empty(USE_SASL:M[yY][eE][sS])
 .    include "../../security/cyrus-sasl/buildlink3.mk"
@@ -164,7 +164,7 @@ SASLLIBDIR=	${PREFIX}/lib/sasl
 PWCHECK_METHOD=	sasldb
 CCARGS+=	-DUSE_SASL_AUTH
 AUXLIBS+=	-L${BUILDLINK_PREFIX.cyrus-sasl}/lib			\
-		-Wl,${RPATH_FLAG}${BUILDLINK_PREFIX.cyrus-sasl}/lib	\
+		${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.cyrus-sasl}/lib \
 		-lsasl
 .  endif
 PLIST_SRC+=	${PKGDIR}/PLIST.sasl
@@ -177,6 +177,6 @@ MESSAGE_SUBST+=	SASLLIBDIR=${SASLLIBDIR}
 .  include "../../databases/db/buildlink3.mk"
 CCARGS+=	-I${BUILDLINK_PREFIX.db2}/include/db2
 AUXLIBS+=	-L${BUILDLINK_PREFIX.db2}/lib				\
-		-Wl,${RPATH_FLAG}${BUILDLINK_PREFIX.db2}/lib		\
+		${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.db2}/lib	\
 		-ldb2
 .endif
