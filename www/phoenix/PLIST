@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/10/30 15:24:53 taya Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/12/10 16:02:38 taya Exp $
 bin/${MOZILLA}
 @comment begin PROGRAMS
 lib/${MOZILLA}/${MOZILLA_BIN}
@@ -114,7 +114,6 @@ lib/${MOZILLA}/chrome/en-US.jar
 lib/${MOZILLA}/chrome/en-mac.jar
 lib/${MOZILLA}/chrome/en-unix.jar
 lib/${MOZILLA}/chrome/en-win.jar
-lib/${MOZILLA}/chrome/forms.jar
 lib/${MOZILLA}/chrome/help.jar
 lib/${MOZILLA}/chrome/inspector.jar
 lib/${MOZILLA}/chrome/installed-chrome.txt
@@ -176,6 +175,7 @@ lib/${MOZILLA}/components/layout_base.xpt
 lib/${MOZILLA}/components/layout_xul.xpt
 lib/${MOZILLA}/components/layout_xul_tree.xpt
 lib/${MOZILLA}/components/locale.xpt
+lib/${MOZILLA}/components/lwbrk.xpt
 lib/${MOZILLA}/components/mimetype.xpt
 lib/${MOZILLA}/components/mozbrwsr.xpt
 lib/${MOZILLA}/components/mozfind.xpt
@@ -548,20 +548,26 @@ include/${MOZILLA}/commandhandler/nsICommandManager.h
 include/${MOZILLA}/commandhandler/nsICommandParams.h
 include/${MOZILLA}/commandhandler/nsIControllerCommand.h
 include/${MOZILLA}/commandhandler/nsIControllerCommandManager.h
+include/${MOZILLA}/commandhandler/nsIControllerContext.h
 include/${MOZILLA}/commandhandler/nsPICommandUpdater.h
 include/${MOZILLA}/composer/nsIEditingSession.h
 include/${MOZILLA}/content/mozISanitizingSerializer.h
 include/${MOZILLA}/content/nsBidiUtils.h
-include/${MOZILLA}/content/nsCSSAtomList.h
-include/${MOZILLA}/content/nsCSSAtoms.h
+include/${MOZILLA}/content/nsCSSAnonBoxList.h
+include/${MOZILLA}/content/nsCSSAnonBoxes.h
 include/${MOZILLA}/content/nsCSSDeclaration.h
 include/${MOZILLA}/content/nsCSSKeywordList.h
 include/${MOZILLA}/content/nsCSSKeywords.h
 include/${MOZILLA}/content/nsCSSPropList.h
 include/${MOZILLA}/content/nsCSSProps.h
+include/${MOZILLA}/content/nsCSSPseudoClassList.h
+include/${MOZILLA}/content/nsCSSPseudoClasses.h
+include/${MOZILLA}/content/nsCSSPseudoElementList.h
+include/${MOZILLA}/content/nsCSSPseudoElements.h
 include/${MOZILLA}/content/nsCSSValue.h
 include/${MOZILLA}/content/nsChangeHint.h
 include/${MOZILLA}/content/nsContentCID.h
+include/${MOZILLA}/content/nsContentErrors.h
 include/${MOZILLA}/content/nsContentPolicyUtils.h
 include/${MOZILLA}/content/nsContentUtils.h
 include/${MOZILLA}/content/nsDOMCSSDeclaration.h
@@ -634,6 +640,8 @@ include/${MOZILLA}/content/nsIRadioGroupContainer.h
 include/${MOZILLA}/content/nsIRadioVisitor.h
 include/${MOZILLA}/content/nsIRangeUtils.h
 include/${MOZILLA}/content/nsIScriptElement.h
+include/${MOZILLA}/content/nsIScriptEventHandler.h
+include/${MOZILLA}/content/nsIScriptEventManager.h
 include/${MOZILLA}/content/nsIScriptLoader.h
 include/${MOZILLA}/content/nsIScriptLoaderObserver.h
 include/${MOZILLA}/content/nsISelectElement.h
@@ -719,6 +727,8 @@ include/${MOZILLA}/dom/domstubs.h
 include/${MOZILLA}/dom/nsDOMCID.h
 include/${MOZILLA}/dom/nsDOMError.h
 include/${MOZILLA}/dom/nsIBaseDOMException.h
+include/${MOZILLA}/dom/nsIDOM3DocumentEvent.h
+include/${MOZILLA}/dom/nsIDOM3EventTarget.h
 include/${MOZILLA}/dom/nsIDOM3Node.h
 include/${MOZILLA}/dom/nsIDOMAbstractView.h
 include/${MOZILLA}/dom/nsIDOMAttr.h
@@ -748,6 +758,7 @@ include/${MOZILLA}/dom/nsIDOMCompositionListener.h
 include/${MOZILLA}/dom/nsIDOMContextMenuListener.h
 include/${MOZILLA}/dom/nsIDOMCounter.h
 include/${MOZILLA}/dom/nsIDOMCrypto.h
+include/${MOZILLA}/dom/nsIDOMCustomEvent.h
 include/${MOZILLA}/dom/nsIDOMDOMException.h
 include/${MOZILLA}/dom/nsIDOMDOMImplementation.h
 include/${MOZILLA}/dom/nsIDOMDocument.h
@@ -767,6 +778,7 @@ include/${MOZILLA}/dom/nsIDOMEntity.h
 include/${MOZILLA}/dom/nsIDOMEntityReference.h
 include/${MOZILLA}/dom/nsIDOMEvent.h
 include/${MOZILLA}/dom/nsIDOMEventCapturer.h
+include/${MOZILLA}/dom/nsIDOMEventGroup.h
 include/${MOZILLA}/dom/nsIDOMEventListener.h
 include/${MOZILLA}/dom/nsIDOMEventReceiver.h
 include/${MOZILLA}/dom/nsIDOMEventTarget.h
@@ -937,12 +949,10 @@ include/${MOZILLA}/editor/nsICiter.h
 include/${MOZILLA}/editor/nsIDocumentStateListener.h
 include/${MOZILLA}/editor/nsIEditActionListener.h
 include/${MOZILLA}/editor/nsIEditor.h
-include/${MOZILLA}/editor/nsIEditorController.h
 include/${MOZILLA}/editor/nsIEditorIMESupport.h
 include/${MOZILLA}/editor/nsIEditorLogging.h
 include/${MOZILLA}/editor/nsIEditorMailSupport.h
 include/${MOZILLA}/editor/nsIEditorObserver.h
-include/${MOZILLA}/editor/nsIEditorShell.h
 include/${MOZILLA}/editor/nsIEditorSpellCheck.h
 include/${MOZILLA}/editor/nsIEditorStyleSheets.h
 include/${MOZILLA}/editor/nsIHTMLEditor.h
@@ -991,9 +1001,11 @@ include/${MOZILLA}/gfx/nsIDeviceContextSpecPS.h
 include/${MOZILLA}/gfx/nsIDeviceContextSpecXPrint.h
 include/${MOZILLA}/gfx/nsIDeviceContextXPrint.h
 include/${MOZILLA}/gfx/nsIDrawingSurface.h
+include/${MOZILLA}/gfx/nsIFontCatalogService.h
 include/${MOZILLA}/gfx/nsIFontEnumerator.h
 include/${MOZILLA}/gfx/nsIFontList.h
 include/${MOZILLA}/gfx/nsIFontMetrics.h
+include/${MOZILLA}/gfx/nsIFreeType2.h
 include/${MOZILLA}/gfx/nsIGraphics.h
 include/${MOZILLA}/gfx/nsIImage.h
 include/${MOZILLA}/gfx/nsIPrintOptions.h
@@ -1221,11 +1233,11 @@ include/${MOZILLA}/layout/nsITableLayout.h
 include/${MOZILLA}/layout/nsITextControlFrame.h
 include/${MOZILLA}/layout/nsITextFrame.h
 include/${MOZILLA}/layout/nsITreeBoxObject.h
-include/${MOZILLA}/layout/nsITreeColFrame.h
 include/${MOZILLA}/layout/nsITreeContentView.h
 include/${MOZILLA}/layout/nsITreeSelection.h
 include/${MOZILLA}/layout/nsITreeView.h
 include/${MOZILLA}/layout/nsLayoutCID.h
+include/${MOZILLA}/layout/nsLayoutErrors.h
 include/${MOZILLA}/layout/nsPIBoxObject.h
 include/${MOZILLA}/layout/nsReflowType.h
 include/${MOZILLA}/layout/nsStyleChangeList.h
@@ -1267,6 +1279,7 @@ include/${MOZILLA}/lwbrk/nsIBreakState.h
 include/${MOZILLA}/lwbrk/nsILineBreaker.h
 include/${MOZILLA}/lwbrk/nsILineBreakerFactory.h
 include/${MOZILLA}/lwbrk/nsILinearIterator.h
+include/${MOZILLA}/lwbrk/nsISemanticUnitScanner.h
 include/${MOZILLA}/lwbrk/nsIWordBreaker.h
 include/${MOZILLA}/lwbrk/nsIWordBreakerFactory.h
 include/${MOZILLA}/lwbrk/nsLWBrkCIID.h
@@ -1290,7 +1303,6 @@ include/${MOZILLA}/mozldap/nsILDAPServer.h
 include/${MOZILLA}/mozldap/nsILDAPService.h
 include/${MOZILLA}/mozldap/nsILDAPURL.h
 include/${MOZILLA}/mozldap/nsLDAP.h
-include/${MOZILLA}/mpfilelocprovider/nsMPFileLocProvider.h
 include/${MOZILLA}/necko/mozITXTToHTMLConv.h
 include/${MOZILLA}/necko/netCore.h
 include/${MOZILLA}/necko/nsCPasswordManager.h
@@ -1342,7 +1354,6 @@ include/${MOZILLA}/necko/nsIProtocolProxyService.h
 include/${MOZILLA}/necko/nsIProxiedProtocolHandler.h
 include/${MOZILLA}/necko/nsIProxy.h
 include/${MOZILLA}/necko/nsIProxyAutoConfig.h
-include/${MOZILLA}/necko/nsIProxyAutoConfigUtils.h
 include/${MOZILLA}/necko/nsIProxyInfo.h
 include/${MOZILLA}/necko/nsIRequest.h
 include/${MOZILLA}/necko/nsIRequestObserver.h
@@ -1387,6 +1398,7 @@ include/${MOZILLA}/necko/nsIUnicharStreamLoader.h
 include/${MOZILLA}/necko/nsIUploadChannel.h
 include/${MOZILLA}/necko/nsIWebFilters.h
 include/${MOZILLA}/necko/nsNetCID.h
+include/${MOZILLA}/necko/nsNetError.h
 include/${MOZILLA}/necko/nsNetUtil.h
 include/${MOZILLA}/necko/nsReadLine.h
 include/${MOZILLA}/necko/nsUnixColorPrintf.h
@@ -1624,8 +1636,6 @@ include/${MOZILLA}/plugin/nsPluginsCID.h
 include/${MOZILLA}/plugin/nsplugin.h
 include/${MOZILLA}/plugin/nsplugindefs.h
 include/${MOZILLA}/plugin/nspluginroot.h
-include/${MOZILLA}/png/png.h
-include/${MOZILLA}/png/pngconf.h
 include/${MOZILLA}/pref/nsIPref.h
 include/${MOZILLA}/pref/nsIPrefBranch.h
 include/${MOZILLA}/pref/nsIPrefBranchInternal.h
@@ -1640,6 +1650,7 @@ include/${MOZILLA}/prefmigr/nsIPrefMigrationProgress.h
 include/${MOZILLA}/prefmigr/nsPrefMigration.h
 include/${MOZILLA}/prefmigr/nsPrefMigrationCIDs.h
 include/${MOZILLA}/prefmigr/nsPrefMigrationFactory.h
+include/${MOZILLA}/profdirserviceprovider/nsProfileDirServiceProvider.h
 include/${MOZILLA}/profile/nsIProfile.h
 include/${MOZILLA}/profile/nsIProfileChangeStatus.h
 include/${MOZILLA}/profile/nsIProfileInternal.h
@@ -2210,10 +2221,10 @@ include/${MOZILLA}/zlib/zlib.h
 @dirrm include/${MOZILLA}/rdf
 @dirrm include/${MOZILLA}/progressDlg
 @dirrm include/${MOZILLA}/profile
+@dirrm include/${MOZILLA}/profdirserviceprovider
 @dirrm include/${MOZILLA}/prefmigr
 @dirrm include/${MOZILLA}/prefetch
 @dirrm include/${MOZILLA}/pref
-@dirrm include/${MOZILLA}/png
 @dirrm include/${MOZILLA}/plugin
 @dirrm include/${MOZILLA}/pippki
 @dirrm include/${MOZILLA}/pipnss
@@ -2226,7 +2237,6 @@ include/${MOZILLA}/zlib/zlib.h
 @dirrm include/${MOZILLA}/nkcache
 @dirrm include/${MOZILLA}/necko2
 @dirrm include/${MOZILLA}/necko
-@dirrm include/${MOZILLA}/mpfilelocprovider
 @dirrm include/${MOZILLA}/mozldap
 @dirrm include/${MOZILLA}/mork
 @dirrm include/${MOZILLA}/mng
