@@ -1,0 +1,21 @@
+--- config.h.orig	Sat Jun  1 08:54:49 1996
++++ config.h	Sat Mar  7 13:17:30 1998
+@@ -325,6 +325,18 @@
+   #define rindex(s,c) strrchr(s,c)
+ #endif
+ 
++#ifdef __NetBSD__
++#  include <errno.h>
++#  include <math.h>
++#  define PI M_PI
++#endif
++
++#ifdef sgi
++#  include <errno.h>
++#  include <math.h>
++#  define PI M_PI
++#endif
++
+ #ifdef __WIN32__
+ #  include <math.h>
+ #  define PI M_PI
