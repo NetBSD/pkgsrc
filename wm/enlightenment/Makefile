@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2004/03/10 14:12:51 xtraeme Exp $
+# $NetBSD: Makefile,v 1.22 2004/08/26 20:22:18 recht Exp $
 #
 
-DISTNAME=		enlightenment-0.16.6
-PKGREVISION=		1
+DISTNAME=		enlightenment-0.16.7.1
 CATEGORIES=		x11 gnome wm
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=enlightenment/}
 
@@ -12,13 +11,31 @@ COMMENT=		Highly themeable and configurable window manager
 
 USE_BUILDLINK3=		YES
 USE_X11=		YES
+USE_PERL5=		YES
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
+USE_GNU_TOOLS+=		yacc
 
 CONFIGURE_ARGS+=	--enable-fsstd
+CONFIGURE_ARGS+=	--enable-xrandr
+CONFIGURE_ARGS+=	--without-included-gettext
+CONFIGURE_ARGS+=	--disable-hints-gnome
+CONFIGURE_ARGS+=	--disable-hints-kde
+CONFIGURE_ARGS+=	--with-imlib-prefix=${BUILDLINK_PREFIX.imlib2}
 MAKE_ENV+=		USER=${SHAREOWN}:${SHAREGRP}
 
-REPLACE_PERL=		scripts/*.pl scripts/e_gen_menu
+REPLACE_PERL=		sample-scripts/bouncingball.pl
+REPLACE_PERL+=		sample-scripts/testroller.pl
+REPLACE_PERL+=		sample-scripts/shade-pagers.pl
+REPLACE_PERL+=		scripts/e_gen_menu
+
+SUBST_CLASSES+=		paths
+SUBST_STAGE.paths=	pre-configure
+SUBST_FILES.paths=	scripts/e_gen_menu
+
+SUBST_SED.paths=	-e 's,@LOCALBASE@,${LOCALBASE},g'
+SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
+SUBST_SED.paths+=	-e 's,@X11BASE@,${X11BASE},g'
 
 post-install:
 	for FILE in `${GREP} "\.directory$$" ${PKGDIR}/PLIST`; do \
@@ -30,9 +47,9 @@ post-install:
 	${XARGS} ${CHMOD} ${SHAREMODE}
 
 .include "../../audio/esound/buildlink3.mk"
-.include "../../graphics/fnlib/buildlink3.mk"
-.include "../../graphics/freetype-lib/buildlink3.mk"
-.include "../../lang/perl5/buildlink3.mk"
-.include "../../www/libghttp/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../graphics/freetype2/buildlink3.mk"
+.include "../../graphics/imlib2/buildlink3.mk"
+.include "../../x11/Xrandr/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
