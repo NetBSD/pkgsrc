@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2002/08/04 01:53:36 grant Exp $
-
-SHA1 (suse64/xshared-3.3.6-43.i386.rpm) = ce1d4855f8085062fe62e2d0db1e77c573338c73
-Size (suse64/xshared-3.3.6-43.i386.rpm) = 876516 bytes
-SHA1 (suse64/xpm.rpm) = cc9fdcb4b4ba6d9d114b757984bcd94f90d2b624
-Size (suse64/xpm.rpm) = 155144 bytes
