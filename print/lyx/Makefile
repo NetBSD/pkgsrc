@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.41 2002/03/13 17:37:37 fredb Exp $
+# $NetBSD: Makefile,v 1.42 2002/04/17 04:45:16 fredb Exp $
 # FreeBSD Id: Makefile,v 1.14 1998/02/14 16:46:50 andreas Exp
 #
 
 DISTNAME=		lyx-1.1.6fix4
 PKGNAME=		lyx-1.1.6.4
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		print
 MASTER_SITES=		ftp://ftp.lyx.org/pub/lyx/stable/ \
 			ftp://gd.tuwien.ac.at/publishing/tex/lyx/stable/ \
@@ -16,7 +16,8 @@ COMMENT=		Graphical frontend for LaTeX (nearly WYSIWYG)
 
 DEPENDS=		ispell-base-[0-9]*:../../textproc/ispell-base
 DEPENDS+=		teTeX>=1.0.6:../../print/teTeX
-DEPENDS+=		xforms>=0.88nb1:../../x11/xforms
+DEPENDS+=		jpeg-6b:../../graphics/jpeg
+DEPENDS+=		xforms>=0.9999:../../x11/xforms
 
 USE_PERL5=		YES
 USE_XPM=		YES

@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.4 2001/02/26 22:32:09 tron Exp $
+$NetBSD: patch-ad,v 1.5 2002/04/17 04:45:14 fredb Exp $
 
---- config/configure.in.orig	Wed Nov  8 21:14:50 2000
+--- config/configure.in.orig	Wed Nov  8 14:14:50 2000
 +++ config/configure.in
 @@ -62,7 +62,7 @@
      fi])
@@ -20,7 +20,21 @@ $NetBSD: patch-ad,v 1.4 2001/02/26 22:32:09 tron Exp $
  					[int x; x=0], xfmail_cv_permiss=yes, xfmail_cv_permiss=no)])
                 if test x$xfmail_cv_permiss = xno; then
                         CPPFLAGS="-fpermissive $CPPFLAGS"
-@@ -217,14 +217,14 @@
+@@ -95,8 +95,12 @@
+ AC_CHECK_LIB(Xpm, XpmCreateBufferFromImage,LIBS="-lXpm $LIBS",
+   [XFMAIL_LIB_ERROR(libXpm,libXpm)])
+ 
++dnl Check for jpeg library
++AC_CHECK_LIB(jpeg, jpeg_set_defaults,LIBS="-ljpeg $LIBS",
++  [XFMAIL_LIB_ERROR(libjpeg,libjpeg)])
++
+ dnl Check for libforms or libxforms
+-AC_CHECK_LIB(forms, fl_initialize, LIBS="-lforms $LIBS",
++AC_CHECK_LIB(forms, fl_initialize, LIBS="-lforms -ljpeg -lXpm $LIBS",
+   [AC_CHECK_LIB(xforms, fl_initialize, LIBS="-lxforms $LIBS",
+   [XFMAIL_LIB_ERROR(libforms nor libxforms,libforms)])])
+ 
+@@ -217,14 +221,14 @@
  AC_CHECK_HEADER(X11/xpm.h,[],XFMAIL_LIB_ERROR(X11/xpm.h,libXpm))
  
  dnl Check for xforms headers
