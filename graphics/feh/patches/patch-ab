@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2001/08/16 10:52:18 rh Exp $
+
+--- src/Makefile.in.orig	Thu Aug 16 01:44:41 2001
++++ src/Makefile.in
+@@ -73,7 +73,7 @@
+ 
+ MAINTAINERCLEANFILES = Makefile.in				
+ 
+-LDFLAGS = -L/usr/X11R6/lib
++LDFLAGS = @LDFLAGS@
+ INCLUDES = -I/usr/X11R6/include $(X_CFLAGS)                     -I$(prefix)/include -I$(includedir)                     -I. -I$(top_srcdir)/src                     -DPREFIX=\""$(prefix)"\"                     @IMLIB_CFLAGS@
+ 
+ LIBOBJS = @LIBOBJS@
