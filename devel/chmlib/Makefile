@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/01/06 15:34:01 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/22 08:24:28 grant Exp $
 #
 
 DISTNAME=	chmlib-0.31
@@ -11,7 +11,7 @@ HOMEPAGE=	http://66.93.236.84/%7Ejedwin/projects/chmlib/
 COMMENT=	Library for dealing with Microsoft ITSS/CHM format files
 
 USE_BUILDLINK2=		yes
-USE_GMAKE=		yes
+USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		yes
 
 PTHREAD_OPTS=		require

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/01/05 22:14:18 mrauch Exp $
+# $NetBSD: Makefile,v 1.14 2004/01/22 08:24:31 grant Exp $
 
 DISTNAME=	STLport-4.6
 PKGNAME=	stlport-4.6
@@ -10,7 +10,7 @@ HOMEPAGE=	http://www.stlport.org/
 COMMENT=	Complete C++ standard library
 
 USE_BUILDLINK2=	# defined
-USE_GMAKE=	# defined
+USE_GNU_TOOLS+=	make
 USE_LIBTOOL=	# defined
 USE_GCC_SHLIB=	# defined
 

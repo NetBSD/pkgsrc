@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/07/29 16:17:41 agc Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/22 08:24:30 grant Exp $
 
 DISTNAME=	re2c-0.9.1
 CATEGORIES=	devel
@@ -8,7 +8,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.tildeslash.org/
 COMMENT=	Deterministic Finite State Automaton generator
 
-USE_GMAKE=	yes
+USE_GNU_TOOLS+=	make
 ALL_TARGET=	default
 
 do-install:

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2004/01/07 02:21:16 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2004/01/22 08:24:30 grant Exp $
 #
 
 DISTNAME=	libgnome-2.4.0
@@ -18,7 +18,7 @@ BUILDLINK_DEPENDS.esound=	esound>=0.2.26
 
 GNU_CONFIGURE=		YES
 USE_BUILDLINK2=		YES
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
 USE_PKGINSTALL=		YES
