@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.1.1.1 2002/03/14 06:29:03 itojun Exp $
+
+--- agent/mibgroup/mibII/ipAddr.c.orig	Sat Feb  9 00:45:11 2002
++++ agent/mibgroup/mibII/ipAddr.c	Thu Mar 14 12:07:44 2002
+@@ -279,6 +279,8 @@
+ 	    long_return = lowin_ifaddr.BcastAddr;
+ #elif defined(linux) || defined(sunV3)
+ 	    long_return = ntohl(((struct sockaddr_in *) &lowin_ifnet.ifu_broadaddr)->sin_addr.s_addr) & 1;
++#elif defined(netbsd1)
++	    long_return = ((struct sockaddr_in *) &lowin_ifaddr.ia_broadaddr)->sin_addr.s_addr & 1;
+ #else
+ 	    long_return = ntohl(((struct sockaddr_in *) &lowin_ifaddr.ia_broadaddr)->sin_addr.s_addr) & 1;
+ #endif
