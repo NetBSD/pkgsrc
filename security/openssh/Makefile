@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.82 2002/06/28 17:10:16 jlam Exp $
+# $NetBSD: Makefile,v 1.83 2002/06/28 18:00:45 jlam Exp $
 
 DISTNAME=		openssh-3.4p1
 PKGNAME=		openssh-3.4.0.1
@@ -47,10 +47,6 @@ RCD_SCRIPTS_EGDIR=	etc/rc.d
 
 PLIST_SUBST+=		MANDIR=${MANDIR}
 PLIST_SUBST+=		RCD_SCRIPTS_EGDIR=${RCD_SCRIPTS_EGDIR}
-
-.if defined(UPDATE_INTREE_OPENSSH)
-.  include "Makefile.intree"
-.endif
 
 USE_BUILDLINK_ONLY=	yes
 GNU_CONFIGURE=		yes
@@ -121,6 +117,10 @@ PLIST_SRC+=		${.CURDIR}/PLIST
 FILES_SUBST+=		SSH_PID_DIR=${SSH_PID_DIR}
 MESSAGE_SUBST+=		EGDIR=${EGDIR}
 INSTALL_EXTRA_TMPL=	${.CURDIR}/INSTALL
+
+.if defined(UPDATE_INTREE_OPENSSH)
+.  include "Makefile.intree"
+.endif
 
 post-build:
 	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/sshd.sh > ${WRKDIR}/sshd
