@@ -1,47 +1,47 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/02/17 18:47:24 jtb Exp $
-${GPC_SUBPREFIX}/bin/gpc
-${GPC_SUBPREFIX}/bin/gpc-run
-${GPC_SUBPREFIX}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/2.95.3/collect2
-${GPC_SUBPREFIX}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/2.95.3/gpc1
-${GPC_SUBPREFIX}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/2.95.3/gpcpp
-${GPC_SUBPREFIX}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/2.95.3/include/gpc-in-c.h
-${GPC_SUBPREFIX}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/2.95.3/libgpc.a
-${GPC_SUBPREFIX}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/2.95.3/units/crt.inc
-${GPC_SUBPREFIX}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/2.95.3/units/crt.pas
-${GPC_SUBPREFIX}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/2.95.3/units/crtc.c
-${GPC_SUBPREFIX}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/2.95.3/units/crtc.h
-${GPC_SUBPREFIX}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/2.95.3/units/crtdjgpp.h
-${GPC_SUBPREFIX}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/2.95.3/units/crtlinux386.h
-${GPC_SUBPREFIX}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/2.95.3/units/crtx.c
-${GPC_SUBPREFIX}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/2.95.3/units/dos.pas
-${GPC_SUBPREFIX}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/2.95.3/units/dosunix.pas
-${GPC_SUBPREFIX}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/2.95.3/units/fileutils.pas
-${GPC_SUBPREFIX}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/2.95.3/units/gmp.pas
-${GPC_SUBPREFIX}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/2.95.3/units/gmpc.c
-${GPC_SUBPREFIX}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/2.95.3/units/gpc-bp.pas
-${GPC_SUBPREFIX}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/2.95.3/units/gpc.pas
-${GPC_SUBPREFIX}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/2.95.3/units/gpcutil.pas
-${GPC_SUBPREFIX}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/2.95.3/units/heapmon.pas
-${GPC_SUBPREFIX}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/2.95.3/units/intl.pas
-${GPC_SUBPREFIX}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/2.95.3/units/intlc.c
-${GPC_SUBPREFIX}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/2.95.3/units/md5.pas
-${GPC_SUBPREFIX}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/2.95.3/units/overlay.pas
-${GPC_SUBPREFIX}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/2.95.3/units/pipe.pas
-${GPC_SUBPREFIX}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/2.95.3/units/pipec.c
-${GPC_SUBPREFIX}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/2.95.3/units/ports.pas
-${GPC_SUBPREFIX}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/2.95.3/units/printer.pas
-${GPC_SUBPREFIX}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/2.95.3/units/regex.pas
-${GPC_SUBPREFIX}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/2.95.3/units/regexc.c
-${GPC_SUBPREFIX}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/2.95.3/units/rts-config.inc
-${GPC_SUBPREFIX}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/2.95.3/units/strings.pas
-${GPC_SUBPREFIX}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/2.95.3/units/stringutils.pas
-${GPC_SUBPREFIX}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/2.95.3/units/system.pas
-${GPC_SUBPREFIX}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/2.95.3/units/trap.pas
-${GPC_SUBPREFIX}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/2.95.3/units/trapc.c
-${GPC_SUBPREFIX}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/2.95.3/units/turbo3.pas
-${GPC_SUBPREFIX}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/2.95.3/units/wincrt.pas
-${GPC_SUBPREFIX}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/2.95.3/units/windos.pas
-${GPC_SUBPREFIX}/man/man1/gpc.1
+@comment $NetBSD: PLIST,v 1.2 2003/06/06 05:46:22 jtb Exp $
+${GPC_SUBPREFIX}bin/gpc
+${GPC_SUBPREFIX}bin/gpc-run
+${GPC_SUBPREFIX}lib/gcc-lib/${MACHINE_GNU_PLATFORM}/2.95.3/collect2
+${GPC_SUBPREFIX}lib/gcc-lib/${MACHINE_GNU_PLATFORM}/2.95.3/gpc1
+${GPC_SUBPREFIX}lib/gcc-lib/${MACHINE_GNU_PLATFORM}/2.95.3/gpcpp
+${GPC_SUBPREFIX}lib/gcc-lib/${MACHINE_GNU_PLATFORM}/2.95.3/include/gpc-in-c.h
+${GPC_SUBPREFIX}lib/gcc-lib/${MACHINE_GNU_PLATFORM}/2.95.3/libgpc.a
+${GPC_SUBPREFIX}lib/gcc-lib/${MACHINE_GNU_PLATFORM}/2.95.3/units/crt.inc
+${GPC_SUBPREFIX}lib/gcc-lib/${MACHINE_GNU_PLATFORM}/2.95.3/units/crt.pas
+${GPC_SUBPREFIX}lib/gcc-lib/${MACHINE_GNU_PLATFORM}/2.95.3/units/crtc.c
+${GPC_SUBPREFIX}lib/gcc-lib/${MACHINE_GNU_PLATFORM}/2.95.3/units/crtc.h
+${GPC_SUBPREFIX}lib/gcc-lib/${MACHINE_GNU_PLATFORM}/2.95.3/units/crtdjgpp.h
+${GPC_SUBPREFIX}lib/gcc-lib/${MACHINE_GNU_PLATFORM}/2.95.3/units/crtlinux386.h
+${GPC_SUBPREFIX}lib/gcc-lib/${MACHINE_GNU_PLATFORM}/2.95.3/units/crtx.c
+${GPC_SUBPREFIX}lib/gcc-lib/${MACHINE_GNU_PLATFORM}/2.95.3/units/dos.pas
+${GPC_SUBPREFIX}lib/gcc-lib/${MACHINE_GNU_PLATFORM}/2.95.3/units/dosunix.pas
+${GPC_SUBPREFIX}lib/gcc-lib/${MACHINE_GNU_PLATFORM}/2.95.3/units/fileutils.pas
+${GPC_SUBPREFIX}lib/gcc-lib/${MACHINE_GNU_PLATFORM}/2.95.3/units/gmp.pas
+${GPC_SUBPREFIX}lib/gcc-lib/${MACHINE_GNU_PLATFORM}/2.95.3/units/gmpc.c
+${GPC_SUBPREFIX}lib/gcc-lib/${MACHINE_GNU_PLATFORM}/2.95.3/units/gpc-bp.pas
+${GPC_SUBPREFIX}lib/gcc-lib/${MACHINE_GNU_PLATFORM}/2.95.3/units/gpc.pas
+${GPC_SUBPREFIX}lib/gcc-lib/${MACHINE_GNU_PLATFORM}/2.95.3/units/gpcutil.pas
+${GPC_SUBPREFIX}lib/gcc-lib/${MACHINE_GNU_PLATFORM}/2.95.3/units/heapmon.pas
+${GPC_SUBPREFIX}lib/gcc-lib/${MACHINE_GNU_PLATFORM}/2.95.3/units/intl.pas
+${GPC_SUBPREFIX}lib/gcc-lib/${MACHINE_GNU_PLATFORM}/2.95.3/units/intlc.c
+${GPC_SUBPREFIX}lib/gcc-lib/${MACHINE_GNU_PLATFORM}/2.95.3/units/md5.pas
+${GPC_SUBPREFIX}lib/gcc-lib/${MACHINE_GNU_PLATFORM}/2.95.3/units/overlay.pas
+${GPC_SUBPREFIX}lib/gcc-lib/${MACHINE_GNU_PLATFORM}/2.95.3/units/pipe.pas
+${GPC_SUBPREFIX}lib/gcc-lib/${MACHINE_GNU_PLATFORM}/2.95.3/units/pipec.c
+${GPC_SUBPREFIX}lib/gcc-lib/${MACHINE_GNU_PLATFORM}/2.95.3/units/ports.pas
+${GPC_SUBPREFIX}lib/gcc-lib/${MACHINE_GNU_PLATFORM}/2.95.3/units/printer.pas
+${GPC_SUBPREFIX}lib/gcc-lib/${MACHINE_GNU_PLATFORM}/2.95.3/units/regex.pas
+${GPC_SUBPREFIX}lib/gcc-lib/${MACHINE_GNU_PLATFORM}/2.95.3/units/regexc.c
+${GPC_SUBPREFIX}lib/gcc-lib/${MACHINE_GNU_PLATFORM}/2.95.3/units/rts-config.inc
+${GPC_SUBPREFIX}lib/gcc-lib/${MACHINE_GNU_PLATFORM}/2.95.3/units/strings.pas
+${GPC_SUBPREFIX}lib/gcc-lib/${MACHINE_GNU_PLATFORM}/2.95.3/units/stringutils.pas
+${GPC_SUBPREFIX}lib/gcc-lib/${MACHINE_GNU_PLATFORM}/2.95.3/units/system.pas
+${GPC_SUBPREFIX}lib/gcc-lib/${MACHINE_GNU_PLATFORM}/2.95.3/units/trap.pas
+${GPC_SUBPREFIX}lib/gcc-lib/${MACHINE_GNU_PLATFORM}/2.95.3/units/trapc.c
+${GPC_SUBPREFIX}lib/gcc-lib/${MACHINE_GNU_PLATFORM}/2.95.3/units/turbo3.pas
+${GPC_SUBPREFIX}lib/gcc-lib/${MACHINE_GNU_PLATFORM}/2.95.3/units/wincrt.pas
+${GPC_SUBPREFIX}lib/gcc-lib/${MACHINE_GNU_PLATFORM}/2.95.3/units/windos.pas
+${GPC_SUBPREFIX}man/man1/gpc.1
 @unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/gpc.info
 @unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/gpcs.info
 info/gpc.info
@@ -333,7 +333,7 @@ share/doc/gpc/docdemos/whiledemo.pas
 share/doc/gpc/docdemos/wordbooldemo.pas
 share/doc/gpc/docdemos/worddemo.pas
 share/doc/gpc/docdemos/xordemo.pas
-@dirrm ${GPC_SUBPREFIX}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/2.95.3/units
+@dirrm ${GPC_SUBPREFIX}lib/gcc-lib/${MACHINE_GNU_PLATFORM}/2.95.3/units
 @dirrm share/doc/gpc/docdemos
 @dirrm share/doc/gpc/demos
 @dirrm share/doc/gpc
