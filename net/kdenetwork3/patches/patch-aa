@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.9 2004/01/15 11:24:07 markd Exp $
+$NetBSD: patch-aa,v 1.10 2004/02/04 14:42:23 markd Exp $
 
---- configure.orig	2003-12-17 13:51:48.000000000 +1300
+--- configure.orig	2004-01-26 08:10:29.000000000 +1300
 +++ configure
-@@ -28439,65 +28439,6 @@ _ACEOF
+@@ -24856,63 +24856,6 @@ _ACEOF
  
  
  
--  echo "$as_me:$LINENO: checking sizeof(size_t) == sizeof(unsigned long)" >&5
--echo $ECHO_N "checking sizeof(size_t) == sizeof(unsigned long)... $ECHO_C" >&6
+-  echo "$as_me:$LINENO: checking sizeof size_t == sizeof unsigned long" >&5
+-echo $ECHO_N "checking sizeof size_t == sizeof unsigned long... $ECHO_C" >&6
 -  cat >conftest.$ac_ext <<_ACEOF
 -/* #line $LINENO "configure" */
 -/* confdefs.h.  */
@@ -50,11 +50,11 @@ $NetBSD: patch-aa,v 1.9 2004/01/15 11:24:07 markd Exp $
 -      echo "$as_me:$LINENO: result: no" >&5
 -echo "${ECHO_T}no" >&6
 -      { { echo "$as_me:$LINENO: error:
--       Apparently on your system our assumption sizeof(size_t) == sizeof(unsigned long)
+-       Apparently on your system our assumption sizeof size_t == sizeof unsigned long
 -       does not apply. Please mail kde-devel@kde.org with a description of your system!
 -      " >&5
 -echo "$as_me: error:
--       Apparently on your system our assumption sizeof(size_t) == sizeof(unsigned long)
+-       Apparently on your system our assumption sizeof size_t == sizeof unsigned long
 -       does not apply. Please mail kde-devel@kde.org with a description of your system!
 -      " >&2;}
 -   { (exit 1); exit 1; }; }
@@ -63,8 +63,6 @@ $NetBSD: patch-aa,v 1.9 2004/01/15 11:24:07 markd Exp $
 -rm -f conftest.$ac_objext conftest.$ac_ext
 -
 -
--
--
-     if test -z "$LIBPTHREAD"; then
-     if test -z "$USE_THREADS"; then
-       kde_check_threading_default=no
+ # darwin needs this to initialize the environment
+ 
+ for ac_header in crt_externs.h

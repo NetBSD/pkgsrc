@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.9 2003/12/08 14:41:41 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.10 2004/02/04 14:42:23 markd Exp $
 #
 # This Makefile fragment is included by packages that use kdenetwork.
 #
@@ -9,30 +9,60 @@
 KDENETWORK_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			kdenetwork
-BUILDLINK_DEPENDS.kdenetwork?=		kdenetwork>=3.1.4nb1
+BUILDLINK_DEPENDS.kdenetwork?=		kdenetwork>=3.2.0
 BUILDLINK_PKGSRCDIR.kdenetwork?=		../../net/kdenetwork3
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.kdenetwork=kdenetwork
 BUILDLINK_PREFIX.kdenetwork_DEFAULT=	${LOCALBASE}
-BUILDLINK_FILES.kdenetwork+=	include/kmailIface.h
-BUILDLINK_FILES.kdenetwork+=	include/mimelib/*
-BUILDLINK_FILES.kdenetwork+=	lib/kde3/kdictapplet.*
-BUILDLINK_FILES.kdenetwork+=	lib/kde3/knewsticker_applet.*
-BUILDLINK_FILES.kdenetwork+=	lib/kde3/kpfapplet.*
-BUILDLINK_FILES.kdenetwork+=	lib/kde3/kpfpropertiesdialogplugin.*
-BUILDLINK_FILES.kdenetwork+=	lib/kde3/libkcm_kcmkxmlrpcd.*
-BUILDLINK_FILES.kdenetwork+=	lib/kde3/libkcm_ktalkd.*
-BUILDLINK_FILES.kdenetwork+=	lib/kde3/libkcm_lanbrowser.*
-BUILDLINK_FILES.kdenetwork+=	lib/kde3/libkcm_newsticker.*
-BUILDLINK_FILES.kdenetwork+=	lib/kde3/libkcm_xmlrpcd.*
-BUILDLINK_FILES.kdenetwork+=	lib/kio_lan.*
-BUILDLINK_FILES.kdenetwork+=	lib/ksirc.*
-BUILDLINK_FILES.kdenetwork+=	lib/kxmlrpcd.*
-BUILDLINK_FILES.kdenetwork+=	lib/libkdenetwork.*
-BUILDLINK_FILES.kdenetwork+=	lib/libkntsrcfilepropsdlg.*
-BUILDLINK_FILES.kdenetwork+=	lib/libksirc_main.*
-BUILDLINK_FILES.kdenetwork+=	lib/libkxmlrpcd_main.*
-BUILDLINK_FILES.kdenetwork+=	lib/libmimelib.*
+BUILDLINK_FILES.kdenetwork+=	include/rss/*.h
+BUILDLINK_FILES.kdenetwork+=	lib/kde3/kcm_kopete_accountconfig.*
+BUILDLINK_FILES.kdenetwork+=	lib/kde3/kcm_kopete_appearanceconfig.*
+BUILDLINK_FILES.kdenetwork+=	lib/kde3/kcm_kopete_autoreplace.*
+BUILDLINK_FILES.kdenetwork+=	lib/kde3/kcm_kopete_behaviorconfig.*
+BUILDLINK_FILES.kdenetwork+=	lib/kde3/kcm_kopete_cryptography.*
+BUILDLINK_FILES.kdenetwork+=	lib/kde3/kcm_kopete_highlight.*
+BUILDLINK_FILES.kdenetwork+=	lib/kde3/kcm_kopete_history.*
+BUILDLINK_FILES.kdenetwork+=	lib/kde3/kcm_kopete_msn.*
+BUILDLINK_FILES.kdenetwork+=	lib/kde3/kcm_kopete_nowlistening.*
+BUILDLINK_FILES.kdenetwork+=	lib/kde3/kcm_kopete_texteffect.*
+BUILDLINK_FILES.kdenetwork+=	lib/kde3/kcm_kopete_translator.*
+BUILDLINK_FILES.kdenetwork+=	lib/kde3/kcm_kopete_webpresence.*
+BUILDLINK_FILES.kdenetwork+=	lib/kde3/kcm_krfb.*
+BUILDLINK_FILES.kdenetwork+=	lib/kde3/kcm_ktalkd.*
+BUILDLINK_FILES.kdenetwork+=	lib/kde3/kcm_lanbrowser.*
+BUILDLINK_FILES.kdenetwork+=	lib/kde3/kded_kinetd.*
+BUILDLINK_FILES.kdenetwork+=	lib/kde3/kdict_panelapplet.*
+BUILDLINK_FILES.kdenetwork+=	lib/kde3/khtml_kget.*
+BUILDLINK_FILES.kdenetwork+=	lib/kde3/kio_lan.*
+BUILDLINK_FILES.kdenetwork+=	lib/kde3/knewsticker_panelapplet.*
+BUILDLINK_FILES.kdenetwork+=	lib/kde3/kopete_aim.*
+BUILDLINK_FILES.kdenetwork+=	lib/kde3/kopete_autoreplace.*
+BUILDLINK_FILES.kdenetwork+=	lib/kde3/kopete_chatwindow.*
+BUILDLINK_FILES.kdenetwork+=	lib/kde3/kopete_connectionstatus.*
+BUILDLINK_FILES.kdenetwork+=	lib/kde3/kopete_contactnotes.*
+BUILDLINK_FILES.kdenetwork+=	lib/kde3/kopete_cryptography.*
+BUILDLINK_FILES.kdenetwork+=	lib/kde3/kopete_highlight.*
+BUILDLINK_FILES.kdenetwork+=	lib/kde3/kopete_history.*
+BUILDLINK_FILES.kdenetwork+=	lib/kde3/kopete_icq.*
+BUILDLINK_FILES.kdenetwork+=	lib/kde3/kopete_irc.*
+BUILDLINK_FILES.kdenetwork+=	lib/kde3/kopete_jabber.*
+BUILDLINK_FILES.kdenetwork+=	lib/kde3/kopete_msn.*
+BUILDLINK_FILES.kdenetwork+=	lib/kde3/kopete_nowlistening.*
+BUILDLINK_FILES.kdenetwork+=	lib/kde3/kopete_sms.*
+BUILDLINK_FILES.kdenetwork+=	lib/kde3/kopete_texteffect.*
+BUILDLINK_FILES.kdenetwork+=	lib/kde3/kopete_translator.*
+BUILDLINK_FILES.kdenetwork+=	lib/kde3/kopete_webpresence.*
+BUILDLINK_FILES.kdenetwork+=	lib/kde3/kopete_yahoo.*
+BUILDLINK_FILES.kdenetwork+=	lib/kde3/kpf_panelapplet.*
+BUILDLINK_FILES.kdenetwork+=	lib/kde3/kpfpropertiesdialog.*
+BUILDLINK_FILES.kdenetwork+=	lib/kde3/ksirc.*
+BUILDLINK_FILES.kdenetwork+=	lib/kde3/libkntsrcfilepropsdlg.*
+BUILDLINK_FILES.kdenetwork+=	lib/kde3/libkrichtexteditpart.*
+BUILDLINK_FILES.kdenetwork+=	lib/libkdeinit_ksirc.*
+BUILDLINK_FILES.kdenetwork+=	lib/libkopete.*
+BUILDLINK_FILES.kdenetwork+=	lib/libkopete_msn_shared.*
+BUILDLINK_FILES.kdenetwork+=	lib/libkopete_oscar.*
+BUILDLINK_FILES.kdenetwork+=	lib/librss.*
 
 .include "../../converters/uulib/buildlink2.mk"
 .include "../../databases/gdbm/buildlink2.mk"
