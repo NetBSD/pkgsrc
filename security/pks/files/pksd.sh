@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: pksd.sh,v 1.4 2001/11/21 21:38:54 jlam Exp $
+# $NetBSD: pksd.sh,v 1.5 2001/11/26 07:34:06 jlam Exp $
 #
 # PROVIDE: pksd
 # REQUIRE: DAEMON
@@ -18,7 +18,7 @@ run_command="@PREFIX@/bin/pks-queue-run.sh"
 ctl_command="@PREFIX@/bin/pksdctl"
 client_command="@PREFIX@/bin/pksclient"
 
-conf_file="@CONFDIR@/${name}.conf"
+conf_file="@PKG_SYSCONFDIR@/${name}.conf"
 required_files="${conf_file}"
 extra_commands="dbinit"
 

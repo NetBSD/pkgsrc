@@ -1,5 +1,5 @@
 ==========================================================================
-$NetBSD: MESSAGE,v 1.1 2001/11/01 02:16:52 zuntum Exp $
+$NetBSD: MESSAGE,v 1.2 2001/11/26 07:34:07 jlam Exp $
 
 Please refer to the file:
 
@@ -29,7 +29,7 @@ You will also need to make Horde accessible through your HTTP server.  If
 you are running Apache and ap-php, then you can add the following line
 to httpd.conf:
 
-	Include ${APACHE_SYSCONFDIR}/horde.conf
+	Include ${PKG_SYSCONFDIR}/horde.conf
 
 to make Horde accessible through:
 	
