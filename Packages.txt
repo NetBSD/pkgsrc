@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.316 2003/10/10 01:17:55 reed Exp $
+# $NetBSD: Packages.txt,v 1.317 2003/10/29 19:55:19 reed Exp $
 ###########################################################################
 
 			==========================
@@ -1153,6 +1153,9 @@ package Makefile as the quick way to bypass the pkg's own libtool.
 For older libtool using packages, libtool is made by ltconfig script
 during the do-configure step; you can check the libtool script
 location by doing "make configure; find work*/ -name libtool".
+
+If you do not need *.a static libraries built and installed, then use
+SHLIBTOOL_OVERRIDE instead.
 
 If your package makes use of the platform independent library for loading
 dynamic shared objects, that comes with libtool (libltdl), you should
