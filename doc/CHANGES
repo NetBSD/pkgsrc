@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7055 2004/08/31 15:38:45 schmonz Exp $
+$NetBSD: CHANGES,v 1.7056 2004/08/31 15:49:32 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4126,3 +4126,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated drivel to 1.2.0 [jmmv 2004-08-31]
 	Updated libgnome to 2.6.1.2 [jmmv 2004-08-31]
 	Updated getmail to 4.1.3 [schmonz 2004-08-31]
+	Updated bmp to 0.9.7rc2 [jmmv 2004-08-31]
+	Updated bmp-esound to 0.9.7rc2 [jmmv 2004-08-31]
