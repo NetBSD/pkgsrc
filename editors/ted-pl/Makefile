@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2004/01/20 12:14:06 agc Exp $
+# $NetBSD: Makefile,v 1.6 2004/05/11 11:50:01 markd Exp $
 
 DISTNAME=	Ted_pl_PL
-PKGNAME=	ted-pl-2.14
+PKGNAME=	ted-pl-2.16
 CATEGORIES=	editors
 MASTER_SITES=	ftp://ftp.nluug.nl/pub/editors/ted/ \
 		ftp://metalab.unc.edu/pub/packages/editors/ted/
@@ -15,7 +15,7 @@ DEPENDS+=       ted>=2.6:../../editors/ted
 WRKSRC=		${WRKDIR}
 USE_X11BASE=	YES
 
-DIST_SUBDIR=	Ted-2.14
+DIST_SUBDIR=	Ted-2.16
 NO_BUILD=	YES
 
 post-extract:
