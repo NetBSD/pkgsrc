@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.41 2000/10/05 10:27:27 martin Exp $
+# $NetBSD: Makefile,v 1.42 2000/10/14 09:24:46 martin Exp $
 
-DISTNAME=	mozilla-source-M17
-PKGNAME=	mozilla-1.0m17
+DISTNAME=	mozilla-source-M18
+PKGNAME=	mozilla-0.m18
 WRKSRC=		${WRKDIR}/mozilla
 CATEGORIES=	www
-MASTER_SITES=	ftp://ftp.mozilla.org/pub/mozilla/releases/m17/src/
+MASTER_SITES=	ftp://ftp.mozilla.org/pub/mozilla/releases/m18/src/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	packages@netbsd.org
@@ -12,7 +12,7 @@ HOMEPAGE=	http://www.mozilla.org/
 
 BUILD_DEPENDS+=	${LOCALBASE}/bin/perl:../../lang/perl5
 BUILD_DEPENDS+=	autoconf:../../devel/autoconf
-BUILD_DEPENDS+= zip:../../archivers/zip
+BUILD_DEPENDS+=	zip:../../archivers/zip
 DEPENDS+=	gtk+>=1.2.8:../../x11/gtk
 DEPENDS+=	ORBit>=0.5.1:../../net/ORBit
 DEPENDS+=	jpeg-6b:../../graphics/jpeg
@@ -25,7 +25,10 @@ CONFIGURE_ARGS=	--disable-tests \
 		--disable-debug \
 		--enable-optimize \
 		--with-jpeg=${LOCALBASE} \
-		--with-png=${LOCALBASE}
+		--with-png=${LOCALBASE} \
+		--enable-mathml \
+		--enable-svg
+
 MOZ_LIBDIR=	${PREFIX}/lib/mozilla
 MAKE_ENV+=	LIBRUNPATH=${MOZ_LIBDIR}
 LDFLAGS+=	-Wl,-R${MOZ_LIBDIR}
@@ -42,6 +45,7 @@ SCRIPTS_ENV+=	CHMOD=${CHMOD}
 SCRIPTS_ENV+=	BINOWN=${BINOWN}
 SCRIPTS_ENV+=	BINGRP=${BINGRP}
 SCRIPTS_ENV+=	BINMODE=${BINMODE}
+SHAREMODE?=	644
 
 pre-configure:
 	(cd ${WRKSRC} && autoconf)
@@ -52,6 +56,6 @@ post-build:
 	${SETENV} LD_LIBRARY_PATH=. MOZILLA_FIVE_HOME=. ./regchrome )
 
 do-install:
-	 ${SETENV} ${SCRIPTS_ENV} ${SCRIPTDIR}/moz-install
+	${SETENV} ${SCRIPTS_ENV} ${SCRIPTDIR}/moz-install
 
 .include "../../mk/bsd.pkg.mk"
