@@ -1,10 +1,10 @@
-$NetBSD: patch-ab,v 1.2 1999/01/29 19:49:45 tron Exp $
+$NetBSD: patch-ab,v 1.3 1999/07/15 00:15:25 mjl Exp $
 
---- time.c-orig	Wed Jan 14 21:36:09 1998
-+++ time.c	Wed Dec 30 10:48:35 1998
-@@ -232,7 +232,7 @@
- 		dst  = zone - 3600;
- 		dst  = 0;	/* jmorriso@bogomips.ee.ubc.ca 28.8.94 */
+--- time.c.orig	Thu Jul 15 01:28:59 1999
++++ time.c	Thu Jul 15 01:30:08 1999
+@@ -241,7 +241,7 @@
+ 		struct tm *gmt = gmtime(&now);
+ 		zone = (gmt->tm_hour - h) * 3600;
  #else
 -#if defined(bsdi) || defined(SUN) || defined(SVR4) || defined(convex)
 +#if defined(bsdi) || defined(SUN) || defined(SVR4) || defined(convex) || defined(__NetBSD__)
