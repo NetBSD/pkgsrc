@@ -1,4 +1,4 @@
-# $NetBSD: module.mk,v 1.28 2004/01/08 18:03:04 jlam Exp $
+# $NetBSD: module.mk,v 1.29 2004/01/12 15:50:22 jlam Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install perl5 modules.
@@ -80,7 +80,7 @@ do-configure: perl5-configure
 # Repoint all of the site-specific variables to be under the perl5
 # module's ${PREFIX}.
 #
-.for _var_ in ${_PERL5_SITEVARS} INSTALLSCRIPT
+.for _var_ in ${_PERL5_SITEVARS} INSTALLARCHLIB INSTALLSCRIPT
 PERL5_${_var_}=	${PREFIX}/${PERL5_SUB_${_var_}}
 MAKE_FLAGS+=	${_var_}="${PERL5_${_var_}}"
 .endfor

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.7 2003/11/25 19:30:21 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.8 2004/01/12 15:50:22 jlam Exp $
 
 .if !defined(PERL5_BUILDLINK2_MK)
 PERL5_BUILDLINK2_MK=  # defined
@@ -49,6 +49,11 @@ PERL5_SUB_${_var_}!=	\
 	${SED} -e "s,^${_PERL5_SITEPREFIX}/,,"
 MAKEFLAGS+=	PERL5_SUB_${_var_}="${PERL5_SUB_${_var_}}"
 .    endfor
+PERL5_SUB_INSTALLARCHLIB!=	\
+	eval `${PERL5} -V:installarchlib 2>/dev/null`;			\
+	${ECHO} $$installarchlib |					\
+	${SED} -e "s,^${_PERL5_PREFIX}/,,"
+MAKEFLAGS+=	PERL5_SUB_INSTALLARCHLIB="${PERL5_SUB_INSTALLARCHLIB}"
 PERL5_SUB_INSTALLSCRIPT!=	\
 	eval `${PERL5} -V:installscript 2>/dev/null`;			\
 	${ECHO} $$installscript |					\
@@ -58,8 +63,8 @@ MAKEFLAGS+=	PERL5_SUB_INSTALLSCRIPT="${PERL5_SUB_INSTALLSCRIPT}"
 .endif
 
 BUILDLINK_FILES.perl=							\
-	${PERL5_ARCHLIB:S/^${BUILDLINK_PREFIX.perl}\///}/CORE/*		\
-	${PERL5_ARCHLIB:S/^${BUILDLINK_PREFIX.perl}\///}/auto/DynaLoader/DynaLoader.a
+	${PERL5_SUB_INSTALLARCHLIB}/CORE/*				\
+	${PERL5_SUB_INSTALLARCHLIB}/auto/DynaLoader/DynaLoader.a
 
 BUILDLINK_TARGETS+=	perl-buildlink
 
