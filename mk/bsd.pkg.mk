@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1216.2.44 2003/08/29 02:06:10 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1216.2.45 2003/08/29 11:08:12 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -590,8 +590,9 @@ PLIST_SRC=		${PKGDIR}/PLIST.${OPSYS}
 PLIST_SRC=		${PKGDIR}/PLIST
 .    endif
 .  endif
+_PLIST_SRC=		${PLIST_SRC}
 .elif ${PLIST_TYPE} == "dynamic"
-PLIST_SRC=		# empty, since we're using a dynamic PLIST
+_PLIST_SRC=		# empty, since we're using a dynamic PLIST
 .endif
 
 DLIST=			${WRKDIR}/.DLIST
@@ -4724,7 +4725,7 @@ MANCOMPRESSED=	yes
 MAKE_ENV+=	MANZ="${MANZ}"
 .endif
 
-# generate ${PLIST} from ${PLIST_SRC} by:
+# generate ${PLIST} from ${_PLIST_SRC} by:
 # - fixing list of man-pages according to MANCOMPRESSED/MANZ
 #   (we don't take any notice of MANCOMPRESSED as many packages have .gz
 #   pages in PLIST even when they install manpages without compressing them)
@@ -4824,7 +4825,7 @@ ${MESSAGE}: ${MESSAGE_SRC}
 
 # GENERATE_PLIST is a sequence of commands, terminating in a semicolon,
 #	that outputs contents for a PLIST to stdout and is appended to
-#	the contents of ${PLIST_SRC}.
+#	the contents of ${_PLIST_SRC}.
 #
 GENERATE_PLIST?=	${TRUE};
 .if ${PLIST_TYPE} == "dynamic"
@@ -4848,12 +4849,12 @@ _GENERATE_PLIST=							\
 		${SED} -e "s|^${PREFIX}/|@unexec ${RMDIR} -p %D/|"	\
 		       -e "s,$$, 2>/dev/null || ${TRUE},";
 .else
-_GENERATE_PLIST=	${CAT} ${PLIST_SRC}; ${GENERATE_PLIST}
+_GENERATE_PLIST=	${CAT} ${_PLIST_SRC}; ${GENERATE_PLIST}
 .endif
 
 .PHONY: plist
 plist: ${PLIST}
-${PLIST}: ${PLIST_SRC}
+${PLIST}: ${_PLIST_SRC}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	{ ${_GENERATE_PLIST} } | 					\
 		${_MANINSTALL_CMD}					\
