@@ -1,0 +1,19 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2004/10/28 17:00:26 wiz Exp $
+#
+
+DISTNAME=		BitTornado-0.3.7
+CATEGORIES=		net
+MASTER_SITES=		http://e.scarywater.net/bt/download/
+
+MAINTAINER=		wiz@NetBSD.org
+HOMEPAGE=		http://bittornado.com/
+COMMENT=		Experimental bittorrent client
+
+DISTINFO_FILE=		${.CURDIR}/../../net/bittornado/distinfo
+FILESDIR=		${.CURDIR}/../../net/bittornado/files
+PATCHDIR=		${.CURDIR}/../../net/bittornado/patches
+
+WRKSRC=			${WRKDIR}/BitTornado-CVS
+USE_BUILDLINK3=		yes
+
+PYTHON_VERSIONS_ACCEPTED=	23pth 22pth
