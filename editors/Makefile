@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2000/05/15 11:50:51 agc Exp $
+# $NetBSD: Makefile,v 1.34 2000/08/25 01:08:48 jlam Exp $
 # FreeBSD Id: Makefile,v 1.44 1997/09/13 20:19:28 chuckr Exp
 #
 
@@ -28,6 +28,7 @@
     SUBDIR += vim-share
     SUBDIR += vim-xaw
     SUBDIR += wily
+    SUBDIR += wordperfect
     SUBDIR += xcoral
     SUBDIR += xemacs
     SUBDIR += xemacs-packages
