@@ -1,6 +1,6 @@
 #! /bin/sh
 #
-# $NetBSD: INSTALL,v 1.5 2000/12/11 08:42:03 jlam Exp $
+# $NetBSD: INSTALL,v 1.6 2000/12/12 16:03:14 jlam Exp $
 
 PKGNAME=$1
 STAGE=$2
@@ -93,6 +93,17 @@ EOF
 		FILE=${CONFDIR}/${file}
 		echo "	${FILE}"
 	done
+	if [ -f ${SAMPLECONFDIR}/cups.pam ]
+	then
+		${CAT} << EOF
+
+To authenticate for CUPS using PAM, add the contents of the file:
+
+	${SAMPLECONFDIR}/cups.pam
+
+to your PAM configuration file.
+EOF
+	fi
 	${CAT} << EOF
 ===========================================================================
 EOF

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2000/12/11 09:00:51 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2000/12/12 16:03:13 jlam Exp $
 #
 
 DISTNAME=		cups-1.1.4-source
@@ -26,11 +26,20 @@ USE_LIBTOOL=		# defined
 GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--enable-libtool-unsupported="${LIBTOOL}"
 CONFIGURE_ARGS+=	--enable-rootconfig
-CONFIGURE_ARGS+=	--disable-pam
 
 CFLAGS+=		-I${LOCALBASE}/include
 
 .include "../../mk/bsd.prefs.mk"
+
+.if defined(USE_PAM)
+DEPENDS+=		PAM-*:../../security/PAM
+CONFIGURE_ARGS+=	--enable-pam
+PLIST_SRC=		${PKGDIR}/PLIST.pam
+PLIST_SRC+=		${PKGDIR}/PLIST
+.else
+CONFIGURE_ARGS+=	--disable-pam
+PLIST_SRC=		${PKGDIR}/PLIST
+.endif
 
 # CUPS_USER	username of the CUPS administrator
 # CUPS_GROUP	group of the CUPS administrator
@@ -71,6 +80,8 @@ post-configure:
 post-build:
 	${SED}	-e "s,@PREFIX@,${PREFIX},g" \
 		< ${FILESDIR}/cupsd.sh > ${WRKDIR}/cupsd.sh
+	${SED}	-e "s,@PREFIX@,${PREFIX},g" \
+		< ${FILESDIR}/cups.pam > ${WRKDIR}/cups.pam
 
 pre-install:
 	${SED}	-e "s,@CUPS_USER@,${CUPS_USER},g" \
@@ -100,6 +111,9 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/cups
 	cd ${WRKSRC}/conf; ${INSTALL_DATA} *.conf mime.* \
 		${PREFIX}/share/examples/cups
+.if defined(USE_PAM)
+	${INSTALL_DATA} ${WRKDIR}/cups.pam ${PREFIX}/share/examples/cups
+.endif
 	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
 .include "../../mk/bsd.pkg.mk"
