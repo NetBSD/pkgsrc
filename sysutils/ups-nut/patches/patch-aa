@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.4 2002/05/22 18:02:34 fredb Exp $
+
+--- models/upscommon.c.orig	Fri May 17 00:27:55 2002
++++ models/upscommon.c
+@@ -588,6 +588,7 @@
+ 	}
+ 
+ 	memcpy(shared_info, info, info_size);
++	msync(shared_info, info_size, MS_INVALIDATE);
+ 
+ 	if (shmid >= 0) {
+ 		struct	shmid_ds shmbuf;
