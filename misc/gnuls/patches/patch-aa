@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.4 2004/02/11 23:06:42 jmmv Exp $
+
+--- Makefile.in.orig	2003-04-02 16:28:41.000000000 +0200
++++ Makefile.in
+@@ -149,7 +149,7 @@ sharedstatedir = @sharedstatedir@
+ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
+ 
+-SUBDIRS = lib src doc man m4 po tests
++SUBDIRS = lib src
+ EXTRA_DIST = Makefile.cfg Makefile.maint GNUmakefile \
+   .kludge-stamp .prev-version THANKS-to-translators THANKStt.in \
+   announce-gen \
