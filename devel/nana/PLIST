@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2003/06/23 11:32:00 seb Exp $
+@comment $NetBSD: PLIST,v 1.4 2004/02/16 13:08:11 seb Exp $
 bin/nana
 bin/nana-c++lg
 bin/nana-clg
@@ -23,10 +23,6 @@ include/nana-config.h
 include/nana.h
 include/nana_error.h
 include/now.h
-info/nana.info
-info/nana.info-1
-info/nana.info-2
-info/nana.info-3
 lib/libnana.a
 libexec/nana-trace.gdb
 libexec/nanafilter
