@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2117 2004/09/14 07:38:10 wiz Exp $
+$NetBSD: TODO,v 1.2118 2004/09/14 08:27:32 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -483,7 +483,6 @@ Suggested package updates
 	o xmms-crossfade-0.3.5
 	o xmms-iris-0.12
 	o xmmsctrl-0.8
-	o xosd-2.2.12
 	o xpad-1.13.1
 	o xpaint-2.7.1
 	o xps-4.2
