@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8715 2005/01/12 13:41:25 xtraeme Exp $
+$NetBSD: CHANGES,v 1.8716 2005/01/12 13:47:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -260,3 +260,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated poptop to 1.2.1nb1 [cube 2005-01-12]
 	Added monotone-server-0.16 [jmmv 2005-01-12]
 	Added skippy-0.5.0 [xtraeme 2005-01-12]
+	Added pbzip2-0.8.3 [wiz 2005-01-12]
