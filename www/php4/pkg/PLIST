@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/12/17 09:19:32 jlam Exp $
+etc/php.ini-dist
+etc/php.ini-optimized
+share/php4/php4.gif
+@dirrm share/php4

@@ -1,0 +1,41 @@
+# $NetBSD: Makefile.module,v 1.1.1.1 2000/12/17 09:19:32 jlam Exp $
+#
+# This Makefile is provided to ease creating PHP4 packages for the extension
+# modules distributed in the PHP4 sources.
+#
+# Just include this file, define MODNAME, add dependencies, and add the
+# appropriate --with-configure-arg, then include bsd.pkg.mk.
+
+.include "../../www/php4/Makefile.common"
+
+PKGNAME=		php-${MODNAME}-${PHP_VERS}
+
+DEPENDS+=		php-${PHP_VERS}:../../www/php4
+
+EXTDIR=			${WRKSRC}/ext/${MODNAME}
+MODULESDIR=		${WRKSRC}/modules
+PLIST_SUBST+=		MODNAME=${MODNAME}
+
+MESSAGE_SRC=		${.CURDIR}/../../www/php4/pkg/MESSAGE.module
+MESSAGE_FILE=		${WRKDIR}/MESSAGE
+
+PLIST_SRC=		${.CURDIR}/../../www/php4/pkg/PLIST.module
+
+do-build:
+	@cd ${EXTDIR}; ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${ALL_TARGET}
+
+pre-install: pre-module-install
+
+do-install: do-module-install
+
+pre-module-install:
+	${CAT} ${MESSAGE_SRC} | ${SED} \
+		-e "s,@MODNAME@,${MODNAME},g" \
+		-e "s,@PHP_EXTENSION_DIR@,${PHP_EXTENSION_DIR},g" \
+		-e "s,@PREFIX@,${PREFIX},g" \
+		> ${MESSAGE_FILE}
+
+do-module-install:
+	${INSTALL_DATA_DIR} ${PREFIX}/${PHP_EXTENSION_DIR}
+	${INSTALL_DATA} ${MODULESDIR}/${MODNAME}.so \
+		${PREFIX}/${PHP_EXTENSION_DIR}
