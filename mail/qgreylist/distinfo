@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/08/29 15:32:12 schmonz Exp $
+
+SHA1 (qgreylist-0.2.tar.gz) = f9cb178706a3aebe87cc632bdb18e388ddb5c61b
+Size (qgreylist-0.2.tar.gz) = 5397 bytes
+SHA1 (patch-aa) = 6a9ba2369ae43f0df8b0afa9fff400148e4aa6d3
