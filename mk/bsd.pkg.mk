@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1437 2004/04/05 08:06:07 xtraeme Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1438 2004/04/07 14:26:50 tv Exp $
 #
 # This file is in the public domain.
 #
@@ -607,7 +607,7 @@ SCRIPTS_ENV+=	${INSTALL_MACROS}
 .endif
 
 .if !defined(COMMENT)
-COMMENT!=	(${CAT} ${PKGDIR}/COMMENT || ${ECHO} -n "(no description)") 2>/dev/null
+COMMENT!=	(${CAT} ${PKGDIR}/COMMENT || ${ECHO_N} "(no description)") 2>/dev/null
 .endif
 
 DESCR=			${WRKDIR}/.DESCR
@@ -3345,7 +3345,7 @@ _SU_TARGET=								\
 			${PRE_ROOT_CMD};				\
 		fi;                                             	\
 		${ECHO_MSG} "${_PKGSRC_IN}> Becoming root@`${HOSTNAME_CMD}` to $$action ${PKGBASE}."; \
-		${ECHO_MSG} -n "`${ECHO} ${SU_CMD} | ${AWK} '{ print $$1 }'` ";\
+		${ECHO_N} "`${ECHO} ${SU_CMD} | ${AWK} '{ print $$1 }'` ";\
 		${SU_CMD} "cd ${.CURDIR}; ${SETENV} PATH=$${PATH}:${SU_CMD_PATH_APPEND} ${MAKE} $$args ${MAKEFLAGS} $$realtarget $$realflags"; \
 	fi
 
@@ -3871,12 +3871,12 @@ makesum: fetch uptodate-digest
 	newfile=${DISTINFO_FILE}.$$$$;					\
 	if [ -f ${DISTINFO_FILE} ]; then				\
 		${GREP} '^.NetBSD' ${DISTINFO_FILE} > $$newfile ||	\
-			(${ECHO} -n "$$" > $$newfile &&			\
-			 ${ECHO} -n "NetBSD" >> $$newfile && 		\
+			(${ECHO_N} "$$" > $$newfile &&			\
+			 ${ECHO_N} "NetBSD" >> $$newfile && 		\
 			 ${ECHO} "$$" >> $$newfile)			\
 	else								\
-		${ECHO} -n "$$" > $$newfile;				\
-		${ECHO} -n "NetBSD" >> $$newfile; 			\
+		${ECHO_N} "$$" > $$newfile;				\
+		${ECHO_N} "NetBSD" >> $$newfile; 			\
 		${ECHO} "$$" >> $$newfile;				\
 	fi;								\
 	${ECHO} "" >> $$newfile;					\
@@ -3908,8 +3908,8 @@ makepatchsum mps: uptodate-digest
 	if [ -f ${DISTINFO_FILE} ]; then				\
 		${AWK} '$$2 !~ /\(patch-[a-z0-9]+\)/ { print $$0 }' < ${DISTINFO_FILE} >> $$newfile; \
 	else \
-		${ECHO} -n "$$" > $$newfile;				\
-		${ECHO} -n "NetBSD" >> $$newfile; 			\
+		${ECHO_N} "$$" > $$newfile;				\
+		${ECHO_N} "NetBSD" >> $$newfile; 			\
 		${ECHO} "$$" >> $$newfile;				\
 		${ECHO} "" >> $$newfile;				\
 	fi;								\
@@ -4270,34 +4270,34 @@ binpkg-list:
 .PHONY: describe
 .if !target(describe)
 describe:
-	@${ECHO} -n "${PKGNAME}|${.CURDIR}|";				\
-	${ECHO} -n "${PREFIX}|";					\
-	${ECHO} -n ${COMMENT:Q};					\
+	@${ECHO_N} "${PKGNAME}|${.CURDIR}|";				\
+	${ECHO_N} "${PREFIX}|";						\
+	${ECHO_N} ${COMMENT:Q};						\
 	if [ -f ${DESCR_SRC} ]; then					\
-		${ECHO} -n "|${DESCR_SRC}";				\
+		${ECHO_N} "|${DESCR_SRC}";				\
 	else								\
-		${ECHO} -n "|/dev/null";				\
+		${ECHO_N} "|/dev/null";					\
 	fi;								\
-	${ECHO} -n "|${MAINTAINER}|${CATEGORIES}|";			\
+	${ECHO_N} "|${MAINTAINER}|${CATEGORIES}|";			\
 	case "A${BUILD_DEPENDS}B${DEPENDS}C" in	\
 		ABC) ;;							\
-		*) cd ${.CURDIR} && ${ECHO} -n `${MAKE} ${MAKEFLAGS} build-depends-list | ${SORT} -u`;; \
+		*) cd ${.CURDIR} && ${ECHO_N} `${MAKE} ${MAKEFLAGS} build-depends-list | ${SORT} -u`;; \
 	esac;								\
-	${ECHO} -n "|";							\
-	if [ "${DEPENDS}" != "" ]; then				\
-		cd ${.CURDIR} && ${ECHO} -n `${MAKE} ${MAKEFLAGS} run-depends-list | ${SORT} -u`; \
+	${ECHO_N} "|";							\
+	if [ "${DEPENDS}" != "" ]; then					\
+		cd ${.CURDIR} && ${ECHO_N} `${MAKE} ${MAKEFLAGS} run-depends-list | ${SORT} -u`; \
 	fi;								\
-	${ECHO} -n "|";							\
+	${ECHO_N} "|";							\
 	if [ "${ONLY_FOR_ARCHS}" = "" ]; then				\
-		${ECHO} -n "any";					\
+		${ECHO_N} "any";					\
 	else								\
-		${ECHO} -n "${ONLY_FOR_ARCHS}";				\
+		${ECHO_N} "${ONLY_FOR_ARCHS}";				\
 	fi;								\
-	${ECHO} -n "|";							\
+	${ECHO_N} "|";							\
 	if [ "${NOT_FOR_OPSYS}" = "" ]; then				\
-		${ECHO} -n "any";					\
+		${ECHO_N} "any";					\
 	else								\
-		${ECHO} -n "not ${NOT_FOR_OPSYS}";			\
+		${ECHO_N} "not ${NOT_FOR_OPSYS}";			\
 	fi;								\
 	${ECHO} ""
 .endif
@@ -4416,8 +4416,8 @@ show-vars:
 .if !target(print-build-depends-list)
 print-build-depends-list:
 .  if defined(BUILD_DEPENDS) || defined(DEPENDS)
-	@${ECHO} -n 'This package requires package(s) "'
-	@${ECHO} -n `${MAKE} ${MAKEFLAGS} build-depends-list | ${SORT} -u`
+	@${ECHO_N} 'This package requires package(s) "'
+	@${ECHO_N} `${MAKE} ${MAKEFLAGS} build-depends-list | ${SORT} -u`
 	@${ECHO} '" to build.'
 .  endif
 .endif
@@ -4426,8 +4426,8 @@ print-build-depends-list:
 .if !target(print-run-depends-list)
 print-run-depends-list:
 .  if defined(DEPENDS)
-	@${ECHO} -n 'This package requires package(s) "'
-	@${ECHO} -n `${MAKE} ${MAKEFLAGS} run-depends-list | ${SORT} -u`
+	@${ECHO_N} 'This package requires package(s) "'
+	@${ECHO_N} `${MAKE} ${MAKEFLAGS} run-depends-list | ${SORT} -u`
 	@${ECHO} '" to run.'
 .  endif
 .endif
