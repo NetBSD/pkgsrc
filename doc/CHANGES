@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2253 2003/05/17 10:32:29 magick Exp $
+$NetBSD: CHANGES,v 1.2254 2003/05/17 14:02:44 itojun Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1982,3 +1982,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated bsetroot to 0.1nb3 [salo 2003-05-17]
 	Updated fluxbox to 0.1.14nb2 [salo 2003-05-17]
 	Updated nxtvepg to 2.5.1 [magick 2003-05-17]
+	Updated cue to 20030421 [itojun 2003-05-17]
