@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1247 2003/12/27 19:19:51 heinz Exp $
+$NetBSD: TODO,v 1.1248 2003/12/28 01:15:24 heinz Exp $
 
 Suggested new packages
 ======================
@@ -81,10 +81,6 @@ Suggested new packages
 	p5-CGI-AppToolkit-0.051
 	Perl CGI application toolkit
 	${MASTER_SITE_PERL_CPAN:=CGI/}
-
-	p5-Digest-Hashcash-0.02
-	implements hashcash hashes, see www.hashcash.org
-	[heinz, waiting for end of freeze]
 
 	info2man
 	http://freshmeat.net/projects/info2man/
