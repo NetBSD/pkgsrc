@@ -1,5 +1,4 @@
-$NetBSD: distinfo,v 1.7 2004/05/05 09:06:35 drochner Exp $
+$NetBSD: distinfo,v 1.8 2005/01/21 15:18:58 drochner Exp $
 
-SHA1 (ReportLab_1_19.tgz) = e748bc03f94a4780d4fa55b96fbe94c530c7431e
-Size (ReportLab_1_19.tgz) = 1346547 bytes
-SHA1 (patch-aa) = 3263b4f2f240547846c0adb97c0fecf68be673cc
+SHA1 (ReportLab_1_20.tgz) = 888ef5b2a8cc89ac3df9cd007597df1288669e35
+Size (ReportLab_1_20.tgz) = 2457390 bytes
