@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/04/18 23:36:56 snj Exp $
+# $NetBSD: Makefile,v 1.5 2004/04/22 19:40:56 wiz Exp $
 #
 
 DISTNAME=	idesk-0.3.5
@@ -7,7 +7,7 @@ CATEGORIES=	sysutils x11
 MASTER_SITES=	http://idesk.timmfin.net/releases/
 
 MAINTAINER=	pancake@phreaker.net
-HOMEPAGE=	http://idesk.timmfin.net/
+HOMEPAGE=	http://sourceforge.net/projects/idesk/
 COMMENT=	Gives users of minimal WMs icons on their desktop
 
 USE_BUILDLINK3=	yes
