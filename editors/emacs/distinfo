@@ -1,13 +1,13 @@
-$NetBSD: distinfo,v 1.6 2002/09/01 13:41:46 tron Exp $
+$NetBSD: distinfo,v 1.7 2002/10/26 19:47:06 bouyer Exp $
 
 SHA1 (emacs-20.7.tar.gz) = ef0168b927fb633bc9b14e2249431f26ff8b8452
 Size (emacs-20.7.tar.gz) = 15043428 bytes
 SHA1 (patch-aa) = 3b3fd76c058a0a46e0458338ce4c2327a238fb3d
-SHA1 (patch-ab) = cfcdda22c41f2080d31a2560550838ccb9b8935f
+SHA1 (patch-ab) = eb16c1ab30e8aac6e6877e8c0f9388961b8003b2
 SHA1 (patch-ac) = 9586951e581271664b28d5e812ee14105de508cf
 SHA1 (patch-ad) = dd21028a6360ccfb442ecced4c67717f60ea78a6
 SHA1 (patch-ae) = 7aaca5409a71f8a292ac57f828ee5ec7a07e3880
-SHA1 (patch-af) = 185c8e045236eb87fafa585288610bbd7f8ca01c
+SHA1 (patch-af) = 778ae26ac31d0a37736c3aa89331a68229c2649d
 SHA1 (patch-ag) = 14469c8907ea09395031594e7e0d0fe967b915d9
 SHA1 (patch-ah) = 2cfb03c57fad97db9eaaf9cda610f5d6c906aa4a
 SHA1 (patch-ai) = d1e5bb8fe797761f63fad42dbfb48834284f4533
@@ -20,7 +20,7 @@ SHA1 (patch-ay) = bc91b0759ce0b3f3c1be542c043748472cb8d8fc
 SHA1 (patch-az) = 643f927b726d825238b14cd6a4b70e3a0722104e
 SHA1 (patch-bc) = ce6240227e8a7af506c908e0c199e17ce73d7f27
 SHA1 (patch-bf) = 8a55b30ec5992e0408b3693b4f31f7d9e931d731
-SHA1 (patch-bg) = 20b01848039dbf171f8fd4271efff4bccf0ee57a
+SHA1 (patch-bg) = f76d459f0fbcadb0b7df4991c1d5d244accc0748
 SHA1 (patch-bh) = f59b14cc43d5977a5d80d5d1ab4e246df394d86a
 SHA1 (patch-bi) = d97512603b313ee730687e3b5680d45002ade51c
 SHA1 (patch-bj) = 6dba88723ee632b67fcf6a2dd2918e69034837e2

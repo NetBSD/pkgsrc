@@ -1,7 +1,16 @@
-$NetBSD: patch-af,v 1.5 1999/02/04 14:54:25 frueauf Exp $
+$NetBSD: patch-af,v 1.6 2002/10/26 19:47:07 bouyer Exp $
 
---- src/Makefile.in.orig	Sun Aug  2 02:29:21 1998
-+++ src/Makefile.in	Sun Jan 31 14:36:49 1999
+--- src/Makefile.in.orig	Mon Apr 26 07:19:42 1999
++++ src/Makefile.in	Tue Oct 22 15:55:06 2002
+@@ -329,7 +329,7 @@
+ #ifdef USE_X_TOOLKIT
+ #define @X_TOOLKIT_TYPE@
+ #if defined (LUCID) || defined (ATHENA)
+-LIBW= -lXaw
++LIBW= -lXaw @LIBXPM@
+ #endif
+ #ifdef MOTIF
+ #if defined (HAVE_MOTIF_2_1) && defined (HAVE_LIBXP)
 @@ -402,7 +402,7 @@
     ask GCC explicitly where to find libgcc.a.  */
  
