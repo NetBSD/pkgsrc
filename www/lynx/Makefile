@@ -1,28 +1,12 @@
-# $NetBSD: Makefile,v 1.42 2001/09/27 23:18:53 jlam Exp $
+# $NetBSD: Makefile,v 1.43 2001/12/21 03:55:50 fredb Exp $
 #
 
-DISTNAME=		lynx2.8.3rel.1
-PKGNAME=		lynx-2.8.3.1
+DISTNAME=		lynx2.8.4rel.1
+PKGNAME=		lynx-2.8.4.1
 CATEGORIES=		www
-MASTER_SITES=		http://lynx.isc.org/current/ \
-			http://lynx.isc.org/po/ \
-			http://www.iro.umontreal.ca/contrib/po/teams/PO/
-EXTRACT_SUFX=		.tar.bz2		# This is redundant, but it pulls in
-DISTFILES+=		lynx2.8.3rel.1.tar.bz2	# the dependence on bzip2, if needed.
-DISTFILES+=		lynx-2.8.3.rel1.cs.po
-DISTFILES+=		lynx-2.8.4.da.po
-DISTFILES+=		lynx-2.8.3.rel1.de.po
-DISTFILES+=		lynx-2.8.3.rel1.ja.po
-DISTFILES+=		lynx-2.8.3.rel1.nl.po
-DISTFILES+=		lynx-2.8.3.rel1.pt_BR.po
-DISTFILES+=		lynx-2.8.3.rel1.ru.po
-DISTFILES+=		lynx-2.8.3.rel1.sl.po
-
-PATCH_SITES=		http://www.flora.org/lynx-dev/html/month072000/
-PATCHFILES=		gz00000.gz
-PATCH_SITES+=		http://www.moxienet.com/lynx/
-PATCHFILES+= 		lynx-283-ssl.patch.gz
-PATCH_DIST_STRIP=	-p1
+MASTER_SITES=		http://lynx.isc.org/release/ \
+			ftp://lynx.isc.org/lynx/
+EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		fredb@netbsd.org
 HOMEPAGE=		http://lynx.browser.org/
@@ -30,15 +14,13 @@ COMMENT=		Alphanumeric display oriented World-Wide Web Client
 
 BUILD_USES_MSGFMT=	yes
 
-USE_LIBINTL=		yes
-
-DIST_SUBDIR=		lynx
-EXTRACT_ONLY=		${DISTFILES:M*.tar.bz2}
-WRKSRC=			${WRKDIR}/lynx2-8-3
+WRKSRC=			${WRKDIR}/lynx2-8-4
 
 GNU_CONFIGURE=		yes
+USE_LIBINTL=		yes
 USE_SSL=		yes
-INSTALL_TARGET=		install-bin install-man install-cfg install-help install-doc
+INSTALL_TARGET=		install-bin install-cfg install-help install-lss
+INSTALL_TARGET+=	install-doc install-man
 MAKEFILE=       	makefile
 
 BUILD_DEFS+=		LYNX_SCREEN_LIB USE_SOCKS USE_INET6
@@ -47,6 +29,9 @@ BUILD_DEFS+=		LYNX_SCREEN_LIB USE_SOCKS USE_INET6
 CONFIGURE_ARGS+=	--enable-nls
 CONFIGURE_ARGS+=	--with-nls-datadir=${PREFIX}/share
 CONFIGURE_ARGS+=	--without-included-gettext
+
+# With SSL, lynx can get https:// and snews:// URL's.
+CONFIGURE_ARGS+=	--with-ssl
 
 # Note: --enable-{default-colors,scrollbar} are simply ignored
 # for certain settings of --with-screen.
@@ -68,57 +53,13 @@ CONFIGURE_ARGS+=	--enable-justify-elts
 CONFIGURE_ARGS+=	--enable-prettysrc
 CONFIGURE_ARGS+=	--enable-read-eta
 
-post-extract:
-	${CP} ${DISTDIR}/${DIST_SUBDIR}/lynx-2.8.3.rel1.cs.po \
-	  ${WRKSRC}/po/cs.po
-	${CP} ${DISTDIR}/${DIST_SUBDIR}/lynx-2.8.4.da.po \
-	  ${WRKSRC}/po/da.po
-	${CP} ${DISTDIR}/${DIST_SUBDIR}/lynx-2.8.3.rel1.de.po \
-	  ${WRKSRC}/po/de.po
-	${CP} ${DISTDIR}/${DIST_SUBDIR}/lynx-2.8.3.rel1.ja.po \
-	  ${WRKSRC}/po/ja.po
-	${CP} ${DISTDIR}/${DIST_SUBDIR}/lynx-2.8.3.rel1.nl.po \
-	  ${WRKSRC}/po/nl.po
-	${CP} ${DISTDIR}/${DIST_SUBDIR}/lynx-2.8.3.rel1.pt_BR.po \
-	  ${WRKSRC}/po/pt_BR.po
-	${CP} ${DISTDIR}/${DIST_SUBDIR}/lynx-2.8.3.rel1.ru.po \
-	  ${WRKSRC}/po/ru.po
-	${CP} ${DISTDIR}/${DIST_SUBDIR}/lynx-2.8.3.rel1.sl.po \
-	  ${WRKSRC}/po/sl.po
-
-post-configure:
-	(${ECHO}; \
-	${ECHO} '#undef LYNX_CFG_FILE'; \
-	${ECHO} '#define LYNX_CFG_FILE "${PREFIX}/etc/lynx.cfg"'; \
-	${ECHO} '#undef LYNX_LSS_FILE'; \
-	${ECHO} '#define LYNX_LSS_FILE "${PREFIX}/etc/lynx.lss"') \
-	    >> ${WRKSRC}/userdefs.h
-	(${ECHO}; \
-	${ECHO} 'SSL_LIBS= ${SSLLIBS} -ltermcap'; \
-	${ECHO} 'SSL_DEFINES= -DUSE_SSL ${SSLINCS}') \
-	    >> ${WRKSRC}/makefile
-	(${ECHO}; \
-	${ECHO} 'INTLLIB= -L${LOCALBASE}/lib -lintl'; \
-	${ECHO} 'INTLDIR_CPPFLAGS= -I${LOCALBASE}/include') \
-	    >> ${WRKSRC}/src/makefile
-
 post-install:
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/lynx
-	if [ ! -f ${PREFIX}/etc/lynx.cfg ]; then \
-	    ${CP} ${PREFIX}/share/lynx/lynx.cfg ${PREFIX}/etc/; \
-	fi
-	if [ ! -f ${PREFIX}/etc/lynx.lss ]; then \
-	    ${CP} ${PREFIX}/share/lynx/lynx_doc/samples/lynx.lss ${PREFIX}/etc/; \
-	fi
 
 .include "../../mk/bsd.prefs.mk"
 
-# Pick a terminal library. Choice affects support for colors, mouse,
-# "color styles", and more. No library supports all features.
-LYNX_SCREEN_LIB?=	slang
 .if (${LYNX_SCREEN_LIB} == slang)
-DEPENDS+=		libslang-[0-9]*:../../devel/libslang
-LIBS=			-lm -ltermcap
+DEPENDS+=		libslang>=1.4.4:../../devel/libslang
 .elif (${LYNX_SCREEN_LIB} == ncurses)
 DEPENDS+=		ncurses-[0-9]*:../../devel/ncurses
 CONFIGURE_ARGS+=	--enable-color-style
@@ -155,9 +96,8 @@ DEPENDS+=		socks5-1.0.2:../../net/socks5
 .endif
 
 # Do IPV6 on systems which can support it.
-# XXX this clause works only for 1.5, not for current
 .if defined(USE_INET6) && ${USE_INET6} == YES
-CPPFLAGS+=	-DINET6
+CONFIGURE_ARGS+=       --enable-ipv6
 .endif
 
 .include "../../mk/bsd.pkg.mk"
