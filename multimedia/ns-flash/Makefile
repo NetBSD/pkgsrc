@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2004/10/05 18:54:53 jdolecek Exp $
+# $NetBSD: Makefile,v 1.4 2004/10/07 11:48:45 tron Exp $
 
 CATEGORIES=		multimedia www
-MASTER_SITES=		http://fpdownload.macromedia.com/get/shockwave/flash/english/${DISTUNAME}/${FLASH_VERS}
+MASTER_SITES=		http://fpdownload.macromedia.com/get/shockwave/flash/english/${DISTUNAME}/${FLASH_VERS}/
 
 MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.flash.com/
