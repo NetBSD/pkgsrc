@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2376 2004/11/17 07:24:05 jlam Exp $
+$NetBSD: TODO,v 1.2377 2004/11/17 15:28:00 wiz Exp $
 
 Suggested new packages
 ======================
@@ -243,7 +243,6 @@ Suggested new packages
 Suggested package updates
 =========================
 
-	o Addresses-0.4.6 [pkg/28111|rh]
 	o BasiliskII-1.0.20041109
 	o R-2.0.0
 	o TeXmacs-1.0.4.4
@@ -273,7 +272,6 @@ Suggested package updates
 	o bitchx-1.1
 	o blender-2.34
 	o boson-0.10
-	o cairo-0.2.0 [pkg/28106|rh]
 	o capc-calc-2.11.10.1
 	o catdoc-0.92
 	o cdrtools-2.01
@@ -351,11 +349,9 @@ Suggested package updates
 	o ghostscript-8.01 (gnu)
 	o gkrellm-volume-2.1.13
 	o gkrellm1-xmms-0.5.8
-	o glitz-0.2.3 [pkg/28107|rh]
 	o glpk-4.6
 	o gmpc-0.11.2
 	o gnunet-0.6.5
-	o gnustep-ssl-1.10.1 [pkg/28112|rh]
 	o gobo-eiffel-3.3
 	o gogo-3.11p1
 	o gpsdrive-2.09
@@ -363,6 +359,7 @@ Suggested package updates
 	o gramps-1.0.8
 	o gsasl-0.2.0
 	o gtk-send-pr-0.4
+	o gtkballs-3.1.5
 	o gtksee-0.5.6 [pkg/26372]
 	o gtkterm2-0.2.3
 	o gtkyahoo-0.18.3
@@ -370,7 +367,6 @@ Suggested package updates
 	o guile-1.6.5
 	o guile-gtk-0.40.90 [in wip]
 	o guile-pg-0.16 [pkg/24039]
-	o gworkspace-0.6.5 [pkg/28116|rh]
 	o hatari-0.50
 	o hmmer-2.3.2
 	o host-20040812 [cjep,talking to greg woods about this]
@@ -412,7 +408,6 @@ Suggested package updates
 	o libnids-1.19
 	o libole2-2.2.8
 	o libopendaap-0.2.3
-	o libpixman-0.1.2 [pkg/28108|rh]
 	o libsndfile-1.0.11
 	o libtiff-3.7.0 [reed]
 	o licq-1.3.0
@@ -566,7 +561,7 @@ Suggested package updates
 	o vba-1.7.2
 	o vfu-4.03
 	o vipec-3.2.0
-	o vlc-0.8.0
+	o vlc-0.8.1
 	o vnc-4.0 [http://www.realvnc.com/download.html|pkgsrc-wip]
 	o vsftpd-2.01 [pkg/26811]
 	o vttest-20041107
