@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.6 2003/10/27 20:29:52 cube Exp $
+$NetBSD: distinfo,v 1.7 2004/01/17 12:55:05 xtraeme Exp $
 
-SHA1 (thttpd-2.24.tar.gz) = 2a851b225c7af73f22be8a0a4cf29e4200b3248f
-Size (thttpd-2.24.tar.gz) = 130116 bytes
+SHA1 (thttpd-2.25b.tar.gz) = 51bc25ef035d7557c869a02ce353580a1cadfa2c
+Size (thttpd-2.25b.tar.gz) = 132363 bytes
 SHA1 (sitedrivenby.gif) = 7671e9a8ec2cad3961b268befd33c0920e07c658
 Size (sitedrivenby.gif) = 8519 bytes
 SHA1 (patch-aa) = 0f739bebf1ade45a9b9819fc92d48eeb1004eb66
