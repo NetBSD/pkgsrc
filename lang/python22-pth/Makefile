@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2003/05/05 19:05:15 jmmv Exp $
+# $NetBSD: Makefile,v 1.5 2003/05/07 19:36:02 drochner Exp $
 #
 
 DISTNAME=	Python-2.2.2
 PKGNAME=	python22-pth-2.2.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	lang
 MASTER_SITES=	ftp://ftp.python.org/pub/python/2.2.2/
 EXTRACT_SUFX=	.tgz
@@ -19,7 +19,9 @@ GNU_CONFIGURE=		YES
 
 PLIST_SUBST+=	PY_PLATNAME=${LOWER_OPSYS}${OS_VERSION:C/\..*//}
 
-.if ${OPSYS} == "NetBSD"
+PTHREAD_OPTS=	require
+.include "../../mk/pthread.buildlink2.mk"
+.if ${PTHREAD_TYPE} == "pth"
 CONFIGURE_ARGS+=	--with-pth
 .endif
 
@@ -28,7 +30,6 @@ INSTALL_TARGET=	altinstall
 post-extract:
 	${MV} ${WRKSRC}/Tools/scripts/pydoc ${WRKSRC}/Tools/scripts/pydoc2p2
 
-.include "../../devel/pth/buildlink2.mk"
 .include "../../devel/zlib/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
 
