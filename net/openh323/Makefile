@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2004/10/09 16:01:23 mjl Exp $
+# $NetBSD: Makefile,v 1.26 2004/10/17 13:37:43 mjl Exp $
 #
 
 DISTNAME=	openh323-v1_15_1-src
@@ -21,7 +21,7 @@ USE_PKGINSTALL=	yes
 USE_GNU_TOOLS+=	make
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
-ALL_TARGET=	opt
+ALL_TARGET=	opt apps
 
 post-extract:
 	cd ${WRKDIR}; ${TAR} -xf ${DISTNAME:S/$/-tar/}
