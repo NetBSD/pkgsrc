@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7931 2004/11/20 22:08:32 jmmv Exp $
+$NetBSD: CHANGES,v 1.7932 2004/11/20 22:16:41 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5360,3 +5360,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated eblook to 1.6.1 [uebayasi 2004-11-20]
 	Added dasm-2.12 [minskim 2004-11-20]
 	Updated libxml to 1.8.17nb3 [jmmv 2004-11-20]
+	Added xdesktopwaves-1.0 [jmmv 2004-11-20]
