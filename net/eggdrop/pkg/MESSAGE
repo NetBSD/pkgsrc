@@ -1,0 +1,8 @@
+=============================================================================
+$NetBSD: MESSAGE,v 1.1 1998/12/15 01:51:56 tv Exp $
+
+If you run an IRC robot on most IRC nets, you will probably be banned from
+any server to which you connect.  Take care in how you use IRC robots, and
+make sure to get permission before running one on any server.
+
+=============================================================================
