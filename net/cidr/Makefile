@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/01/20 12:22:19 agc Exp $
+# $NetBSD: Makefile,v 1.5 2004/11/03 10:57:54 grant Exp $
 #
 
 DISTNAME=	cidr-current
@@ -11,5 +11,8 @@ HOMEPAGE=	http://home.netcom.com/~naym/cidr.html
 COMMENT=	RFC 1878 subnet calculator / helper
 
 WRKSRC=		${WRKDIR}/cidr-2.3
+
+LIBS.SunOS+=	-lnsl -lsocket
+MAKE_ENV+=	LIBS="${LIBS}"
 
 .include "../../mk/bsd.pkg.mk"
