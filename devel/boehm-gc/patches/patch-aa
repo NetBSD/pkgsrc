@@ -1,11 +1,11 @@
-$NetBSD: patch-aa,v 1.10 2001/05/04 01:28:15 jlam Exp $
+$NetBSD: patch-aa,v 1.11 2001/09/08 00:36:09 kei Exp $
 
---- Makefile.orig	Fri Sep 22 13:27:35 2000
-+++ Makefile
-@@ -10,14 +10,32 @@
+--- Makefile.orig	Fri Jul 27 03:47:41 2001
++++ Makefile	Fri Sep  7 15:58:41 2001
+@@ -11,8 +11,8 @@
+ # cord/de - builds dumb editor based on cords.
  ABI_FLAG= 
  CC=cc $(ABI_FLAG)
- HOSTCC=$(CC)
 -CXX=g++ $(ABI_FLAG)
 -AS=as $(ABI_FLAG)
 +CXX=c++ $(ABI_FLAG)
@@ -13,68 +13,32 @@ $NetBSD: patch-aa,v 1.10 2001/05/04 01:28:15 jlam Exp $
  #  The above doesn't work with gas, which doesn't run cpp.
  #  Define AS as `gcc -c -x assembler-with-cpp' instead.
  #  Under Irix 6, you will have to specify the ABI (-o32, -n32, or -64)
- #  if you use something other than the default ABI on your machine.
+@@ -296,16 +296,23 @@
  
--CFLAGS= -O -DATOMIC_UNCOLLECTABLE -DNO_SIGNALS -DNO_EXECUTE_PERMISSION -DALL_INTERIOR_POINTERS -DSILENT
-+CFLAGS= -O -DATOMIC_UNCOLLECTABLE -DNO_SIGNALS -DNO_EXECUTE_PERMISSION -DALL_INTERIOR_POINTERS -DSILENT $(COPTS)
-+
+ all: gc.a gctest
+ 
+-BSD-pkg-all: bsd-libgc.a
 +LEAKFLAGS=$(CFLAGS) -DFIND_LEAK
 +
 +BSD-pkg-all: bsd-libgc.a bsd-libleak.a
-+
-+bsd-libgc.a:
-+	$(MAKE) CFLAGS="$(CFLAGS)" clean c++-t
-+	mv gc.a bsd-libgc.a
-+
+ 
+ bsd-libgc.a:
+ 	$(MAKE) CFLAGS="$(CFLAGS)" clean c++-t
+ 	mv gc.a bsd-libgc.a
+ 
 +bsd-libleak.a:
 +	$(MAKE) CFLAGS="$(LEAKFLAGS)" clean c++-nt
 +	mv gc.a bsd-libleak.a
 +
-+BSD-pkg-install: BSD-pkg-all
-+	${BSD_INSTALL_DATA} bsd-libgc.a ${PREFIX}/lib/libgc.a
-+	${BSD_INSTALL_DATA} bsd-libleak.a ${PREFIX}/lib/libleak.a
-+	${BSD_INSTALL_DATA} gc.h gc_cpp.h ${PREFIX}/include
-+	${BSD_INSTALL_MAN} gc.man ${PREFIX}/man/man3/gc.3
+ BSD-pkg-install: BSD-pkg-all
+ 	${CP} bsd-libgc.a libgc.a
+ 	${INSTALL_DATA} libgc.a ${PREFIX}/lib
+ 	${INSTALL_DATA} gc.h gc_cpp.h ${PREFIX}/include
++	${INSTALL_MAN} doc/gc.man ${PREFIX}/man/man3/gc.3
  
- # For dynamic library builds, it may be necessary to add flags to generate
- # PIC code, e.g. -fPIC on Linux.
-@@ -181,7 +199,7 @@
-     gcc_support.c mips_ultrix_mach_dep.s include/gc_alloc.h gc_alloc.h \
-     include/new_gc_alloc.h include/javaxfc.h sparc_sunos4_mach_dep.s \
-     solaris_threads.h backptr.h hpux_test_and_clear.s include/gc_gcj.h \
--    dbg_mlc.h $(CORD_SRCS)
-+    dbg_mlc.h sparc_netbsd_mach_dep.s $(CORD_SRCS)
- 
- OTHER_FILES= Makefile PCR-Makefile OS2_MAKEFILE NT_MAKEFILE BCC_MAKEFILE \
-            README test.c test_cpp.cc setjmp_t.c SMakefile.amiga \
-@@ -220,11 +238,9 @@
- # not time-critical anyway.
- # Set SPECIALCFLAGS to -q nodirect_code on Encore.
- 
--all: gc.a gctest
--
- pcr: PCR-Makefile gc_private.h gc_hdrs.h gc.h gcconfig.h mach_dep.o $(SRCS)
--	make -f PCR-Makefile depend
--	make -f PCR-Makefile
-+	$(MAKE) -f PCR-Makefile depend
-+	$(MAKE) -f PCR-Makefile
- 
- $(OBJS) test.o dyn_load.o dyn_load_sunos53.o: $(srcdir)/gc_priv.h $(srcdir)/gc_hdrs.h $(srcdir)/gc.h \
-     $(srcdir)/gcconfig.h $(srcdir)/gc_typed.h Makefile
-@@ -263,6 +279,12 @@
- 	./if_mach HP_PA HPUX $(CXX) $(CXXFLAGS) -o test_cpp $(srcdir)/test_cpp.cc gc_cpp.o gc.a -ldld `./threadlibs`
- 	./if_not_there test_cpp $(CXX) $(CXXFLAGS) -o test_cpp $(srcdir)/test_cpp.cc gc_cpp.o gc.a `./threadlibs`
- 
-+c++-t: c++
-+	./test_cpp 1
-+
-+c++-nt: c++
-+	@echo "Use ./test_cpp 1 to test the leak library"
-+
- c++: gc_cpp.o $(srcdir)/gc_cpp.h test_cpp
- 	rm -f dont_ar_4
- 	./if_mach SPARC SUNOS5 touch dont_ar_4
-@@ -271,7 +293,6 @@
+ pcr: PCR-Makefile include/private/gc_private.h include/private/gc_hdrs.h \
+ include/private/gc_locks.h include/gc.h include/private/gcconfig.h \
+@@ -381,7 +388,6 @@
  	./if_mach M68K AMIGA $(AR) -vrus gc.a gc_cpp.o
  	./if_not_there dont_ar_4 $(AR) ru gc.a gc_cpp.o
  	./if_not_there dont_ar_4 $(RANLIB) gc.a || cat /dev/null
@@ -82,11 +46,3 @@ $NetBSD: patch-aa,v 1.10 2001/05/04 01:28:15 jlam Exp $
  	echo > c++
  
  dyn_load_sunos53.o: dyn_load.c
-@@ -322,6 +343,7 @@
- 	./if_mach SPARC SUNOS5 $(AS) -o mach_dep.o $(srcdir)/sparc_mach_dep.s
- 	./if_mach SPARC SUNOS4 $(AS) -o mach_dep.o $(srcdir)/sparc_sunos4_mach_dep.s
- 	./if_mach SPARC OPENBSD $(AS) -o mach_dep.o $(srcdir)/sparc_sunos4_mach_dep.s
-+	./if_mach SPARC NETBSD $(AS) -o mach_dep.o $(srcdir)/sparc_netbsd_mach_dep.s
- 	./if_mach HP_PA HPUX $(AS) -o hpux_test_and_clear.o $(srcdir)/hpux_test_and_clear.s
- 	./if_mach HP_PA HPUX $(CC) -c -o md_tmp.o $(SPECIALCFLAGS) $(srcdir)/mach_dep.c
- 	./if_mach HP_PA HPUX ld -r -o mach_dep.o md_tmp.o hpux_test_and_clear.o
