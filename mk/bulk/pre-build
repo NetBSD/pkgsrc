@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: pre-build,v 1.36 2004/02/14 04:06:29 grant Exp $
+# $NetBSD: pre-build,v 1.37 2004/04/09 18:29:37 jschauma Exp $
 #
 # Clean up system to be ready for bulk pkg build
 #
@@ -57,7 +57,7 @@ if [ x"$BMAKE" = x"bmake" ]; then
 		share/mk/bsd.nls.mk share/mk/bsd.obj.mk \
 		share/mk/bsd.prog.mk share/mk/bsd.subdir.mk \
 		share/mk/bsd.sys.mk share/mk/bsd.own.mk \
-		bin/bmake bin/ftp bin/digest bin/nbsed \
+		bin/bmake bin/ftp bin/digest bin/nbsed bin/install-sh \
 		bin/pax bin/tar bin/cpio man/cat1/ftp.1 man/cat1/pax.0 \
 		man/cat1/tar.0 man/cat1/cpio.0 man/cat1/pkg_add.0 \
 		man/cat1/pkg_admin.0 man/cat1/pkg_create.0 \
