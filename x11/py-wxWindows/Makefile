@@ -1,17 +1,15 @@
-# $NetBSD: Makefile,v 1.17 2003/08/28 15:01:44 recht Exp $
+# $NetBSD: Makefile,v 1.18 2003/09/09 11:59:03 recht Exp $
 #
 
-DISTNAME=	wxPythonSrc-2.4.0.7
-PKGNAME=	${PYPKGPREFIX}-wxWindows-2.4.0.7
-PKGREVISION=	1
+DISTNAME=	wxPythonSrc-2.4.1.2
+PKGNAME=	${PYPKGPREFIX}-wxWindows-2.4.1.2
+WRKSRC=		${WRKDIR}/wxPythonSrc-2.4.1.2/wxPython
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wxpython/}
 
 MAINTAINER=	tsarna@NetBSD.org
 HOMEPAGE=	http://wxpython.org/
 COMMENT=	wxPython: Python bindings for wxWindows
-
-WRKSRC=	${WRKDIR}/wxPythonSrc-2.4.0.7/wxPython
 
 USE_BUILDLINK2=	yes
 USE_GMAKE=	yes
@@ -20,6 +18,7 @@ USE_GMAKE=	yes
 PYTHON_VERSIONS_ACCEPTED=	23pth 22pth 21pth
 BUILDLINK_DEPENDS.python21-pth=	python21-pth>=2.1.3nb3
 BUILDLINK_DEPENDS.python22-pth=	python22-pth>=2.2.2nb2
+BUILDLINK_DEPENDS.wxGTK=	wxGTK>=2.4.1nb1
 
 PYDISTUTILSPKG=	yes
 # no GL to limit dependencies
@@ -28,6 +27,12 @@ PYDISTUTILSPKG=	yes
 PYSETUPBUILDARGS=	BUILD_GLCANVAS=0 BUILD_OGL=0 NO_SCRIPTS=1
 PYSETUPINSTALLARGS=	BUILD_GLCANVAS=0 BUILD_OGL=0 NO_SCRIPTS=1
 PYBINMODULE=	yes
+
+post-install:
+	${PYTHONBIN} -O ${PREFIX}/${PYLIB}/compileall.py \
+		${PREFIX}/${PYSITELIB}/wx
+	${PYTHONBIN} -O ${PREFIX}/${PYLIB}/compileall.py \
+		${PREFIX}/${PYSITELIB}/wxPython
 
 .include "../../x11/wxGTK/buildlink2.mk"
 .include "../../lang/python/extension.mk"

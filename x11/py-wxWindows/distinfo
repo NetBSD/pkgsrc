@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2003/05/09 11:46:44 drochner Exp $
+$NetBSD: distinfo,v 1.4 2003/09/09 11:59:03 recht Exp $
 
-SHA1 (wxPythonSrc-2.4.0.7.tar.gz) = 6ae07395fb75e3f57f26accf19291073c097bf11
-Size (wxPythonSrc-2.4.0.7.tar.gz) = 11819092 bytes
+SHA1 (wxPythonSrc-2.4.1.2.tar.gz) = 5fe8fe4dcd438f96b57ed012f8c4dfe7ad18930e
+Size (wxPythonSrc-2.4.1.2.tar.gz) = 12443750 bytes
