@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 1999/03/05 00:27:31 hubertf Exp $
+# $NetBSD: Makefile,v 1.7 1999/03/22 15:11:21 hubertf Exp $
 #
 
-DISTNAME=	vfu-1.45-source
-PKGNAME=	vfu-1.45
+DISTNAME=	vfu-1.46-source
+PKGNAME=	vfu-1.46
 WRKSRC=		${WRKDIR}/${PKGNAME}
 CATEGORIES=	misc
 MASTER_SITES=	http://www.biscom.net/~cade/away/
@@ -30,12 +30,10 @@ do-install:
 		${WRKSRC}/vfu/COPYING \
 		${WRKSRC}/vfu/INSTALL \
 		${WRKSRC}/vfu/README \
-		${WRKSRC}/vfu/vfu.txt \
-		${WRKSRC}/vfu/COPYING \
-		${WRKSRC}/vfu/COPYING \
+		${WRKSRC}/vfu/VFU.txt \
 		${PREFIX}/share/doc/vfu
 	${INSTALL_DATA} \
-		${WRKSRC}/vfu/vfurc \
+		${WRKSRC}/vfu.conf \
 		${PREFIX}/share/doc/vfu/vfurc.example
 	[ -f ${PREFIX}/etc/vfurc ] || \
 		${INSTALL_DATA} \
