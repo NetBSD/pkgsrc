@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.1.1.1 2002/11/04 08:28:00 rh Exp $
+
+SHA1 (gnome-panel-2.0.10.tar.bz2) = ccdc527b41eb5c2e7b88e48f4e1b26269332b390
+Size (gnome-panel-2.0.10.tar.bz2) = 1662132 bytes
+SHA1 (patch-aa) = b0fe74dd7a62ae363af20411745f630b6208f6d9
+SHA1 (patch-ab) = 57b266e9795ca58d756a181f403ff211a13e9d0a
+SHA1 (patch-ac) = c8b7ab4200cc5406d7597e278f1f8c2185658578
+SHA1 (patch-ad) = 303a1c898ca52dd6afd37467b006b3e6f3bc76b0
+SHA1 (patch-ae) = 35735fc3e0b2b036a9e9941e2273108f17ad5daf
+SHA1 (patch-af) = f33a32b3786e7842682d348e891b92514b8c50cd
