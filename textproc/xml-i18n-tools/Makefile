@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2001/08/27 19:10:57 tron Exp $
+# $NetBSD: Makefile,v 1.3 2001/08/27 19:15:55 tron Exp $
 
-DISTNAME=	xml-i18n-tools-0.8.1
+DISTNAME=	xml-i18n-tools-0.9
 CATEGORIES=	textproc gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=stable/sources/xml-i18n-tools/}
 
