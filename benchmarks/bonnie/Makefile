@@ -3,7 +3,7 @@
 # Date created:         26 September 1994
 # Whom:                 se
 #
-# $NetBSD: Makefile,v 1.2 1998/02/26 23:32:16 tron Exp $
+# $NetBSD: Makefile,v 1.3 1998/02/28 18:14:09 tron Exp $
 # $FreeBSD Id: Makefile,v 1.5 1997/11/26 23:09:14 jseger Exp
 #
 
@@ -20,8 +20,10 @@ NO_CONFIGURE=	yes
 CAT1=		bonnie.0
 MAN1=		bonnie.1
 
-# Kludge until "bsd.port.mk" gets fixed.
+# MANZ is handled automatically
+.if defined(MANZ)
 MANCOMPRESSED=	1
+.endif
 
 post-extract:
 	${MV} ${WRKSRC}/Bonnie.c ${WRKSRC}/bonnie.c
