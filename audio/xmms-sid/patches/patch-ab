@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1 2001/12/25 00:43:10 mycroft Exp $
+
+--- src/xs_about.c.orig	Sun Nov 18 12:42:08 2001
++++ src/xs_about.c	Tue Dec 25 00:41:07 2001
+@@ -78,7 +78,10 @@
+ 	gtk_box_pack_start (GTK_BOX (hbox1), frame1, TRUE, TRUE, 0);
+ 	gtk_container_set_border_width (GTK_CONTAINER (frame1), 4);
+ 
++	gtk_widget_realize (xs_aboutwin);
++
+ 	/* The pixmap */
++	style = gtk_widget_get_style (xs_aboutwin);
+ 	pixmap = gdk_pixmap_create_from_xpm_d(xs_aboutwin->window, &pixmask,
+ 						&style->bg[GTK_STATE_NORMAL],
+ 						(gchar **) xmms_sid_logo_xpm);
