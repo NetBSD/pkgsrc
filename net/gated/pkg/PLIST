@@ -1,19 +1,12 @@
-@comment $NetBSD: PLIST,v 1.3 1999/11/19 13:23:52 hubertf Exp $
-man/man8/gated.8.gz
-man/man8/ripquery.8.gz
-man/man8/ospf_monitor.8.gz
-man/man8/gdc.8.gz
-sbin/gated
-bin/ripquery
-bin/ospf_monitor
+@comment $NetBSD: PLIST,v 1.4 2001/04/05 16:58:50 wiz Exp $
 bin/gdc
-share/doc/gated/logo.gif
-share/doc/gated/copyright-isis.html
-share/doc/gated/copyright-ospf.html
-share/doc/gated/copyright.html
-share/doc/gated/note.gif
-share/doc/gated/main.html
-share/doc/gated/warning.gif
+bin/ospf_monitor
+bin/ripquery
+man/man8/gated.8
+man/man8/gdc.8
+man/man8/ospf_monitor.8
+man/man8/ripquery.8
+sbin/gated
 share/doc/gated/config_guide/aggr_stmt.html
 share/doc/gated/config_guide/aspath.html
 share/doc/gated/config_guide/bgp_stmt.html
@@ -51,7 +44,12 @@ share/doc/gated/config_guide/snmp_stmt.html
 share/doc/gated/config_guide/statements.html
 share/doc/gated/config_guide/static_stmt.html
 share/doc/gated/config_guide/trace.html
+share/doc/gated/copyright-isis.html
+share/doc/gated/copyright-ospf.html
+share/doc/gated/copyright.html
 share/doc/gated/installation_guide/installation.html
+share/doc/gated/logo.gif
+share/doc/gated/main.html
 share/doc/gated/member_info/licenses/advisory.html
 share/doc/gated/member_info/licenses/commercial_v4.html
 share/doc/gated/member_info/licenses/commercial_v4_new.html
@@ -88,11 +86,13 @@ share/doc/gated/member_info/membership/small_commercial.member.html
 share/doc/gated/member_info/membership/small_service.member.html
 share/doc/gated/member_info/membership/supporting.member.html
 share/doc/gated/member_info/membership/technical_advisory.member.html
+share/doc/gated/note.gif
 share/doc/gated/operation_guide/gated.html
 share/doc/gated/operation_guide/gdc.html
 share/doc/gated/operation_guide/operation.html
 share/doc/gated/operation_guide/ospf_monitor.html
 share/doc/gated/operation_guide/ripquery.html
+share/doc/gated/warning.gif
 @dirrm share/doc/gated/config_guide
 @dirrm share/doc/gated/installation_guide
 @dirrm share/doc/gated/member_info/licenses
