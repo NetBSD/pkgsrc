@@ -1,4 +1,4 @@
-$NetBSD: README,v 1.8 1998/09/01 11:03:23 agc Exp $
+$NetBSD: README,v 1.9 2000/01/14 10:32:35 abs Exp $
 
 Welcome to the NetBSD Packages Collection
 =========================================
@@ -27,11 +27,11 @@ You need to have root privileges to install packages.  We are looking
 at ways to remove this restriction.
 
 + To install a package on your system, you need to change into the
-directory of the package, and type "make && make install".
+directory of the package, and type "make install".
 
 + If you've made a mistake, and decided that you don't want that
 package on your system, then type "pkg_delete <pkg-name>", or "make
-deinstall".
+deinstall" while in the directory for the package.
 
 + To find out all the packages that you have installed on your system,
 type "pkg_info".
@@ -39,6 +39,10 @@ type "pkg_info".
 + To remove the work directory, type "make clean", and "make
 clean-depends" will clean up any working directories for other
 packages that are built in the process of making your package.
+
++ Optionally, you can periodically run "make clean" from the top
+level pkgsrc directory. This will delete extracted and built files,
+but will not affect the retreived source sets in pkgsrc/distfiles.
 
 + You can set variables to customise the behaviour (where packages are
 installed, various options for individual packages etc), by setting
@@ -58,7 +62,7 @@ ftp://ftp.netbsd.org/pub/NetBSD/packages/pkgsrc/README.html.
 
 Another way to find out what packages are in the collection is to
 move to the top-level pkgsrc directory and type "make index". This
-will create pksrc/INDEX which can be viewed via "make print-index | more".
+will create pkgsrc/INDEX which can be viewed via "make print-index | more".
 You can also search for particular packages or keywords via
 "make search key=<somekeyword>".
 
@@ -71,5 +75,17 @@ To see what binary packages are available, see:
 where <release> is the NetBSD release, and <arch> is the hardware
 architecture.
 
+One limitation of using binary packages provided from ftp.netbsd.org
+is that all mk.conf options were set to the defaults at compile time.
+
+LOCALBASE, in particular, is the default /usr/pkg, so non-X binaries
+will be installed in /usr/pkg/bin. Man pages will be installed in
+/usr/pkg/man...
+
+When a packaged tool has major compile time choices, such as support
+for multiple graphic toolkit libraries, the different options may
+be available as separate packages.
+
 For more information on the packages collection see the file
-Packages.txt in this directory.
+Packages.txt where you found this README, or in your top-level pkgsrc
+directory.
