@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1998/04/17 09:37:22 agc Exp $
+# $NetBSD: Makefile,v 1.8 1998/04/22 11:05:02 agc Exp $
 # FreeBSD Id: Makefile,v 1.8 1997/06/13 16:17:01 ache Exp
 #
 
@@ -18,7 +18,7 @@ CONFIGURE_ENV+=        LDFLAGS=-L${PREFIX}/lib # XXX
 #USE_GMAKE=	yes
 MAN1=           rplay.1 xrplay.1 rplayd.1 rptp.1
 MAN5=		rplay.conf.5 rplay.hosts.5 rplay.servers.5
-INFO_FILES=	RPTP RPLAY rplay librplay
+INFO_FILES=	RPTP.info RPLAY.info rplay.info librplay.info
 
 pre-configure:
 	for f in `find ${WRKDIR} -type f -print|xargs $[GREP} -l '/usr/local'`; do \

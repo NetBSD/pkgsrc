@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 1998/04/17 09:37:24 agc Exp $
+# $NetBSD: Makefile,v 1.9 1998/04/22 11:05:03 agc Exp $
 # FreeBSD Id: Makefile,v 1.17 1997/06/16 06:39:51 max Exp
 #
 
@@ -11,7 +11,7 @@ MAINTAINER=	hubertf@netbsd.org
 
 GNU_CONFIGURE=	yes
 MAN1=		screen.1
-INFO_FILES=	screen
+INFO_FILES=	screen.info
 
 post-install:
 	@${MKDIR} ${PREFIX}/share/examples/screen
