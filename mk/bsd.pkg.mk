@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.313 1999/08/13 18:27:19 tron Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.314 1999/08/16 15:37:40 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -1583,7 +1583,7 @@ clean: pre-clean
 .if !defined(NO_WRKDIR)
 .ifdef WRKOBJDIR
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -rf ${WRKOBJDIR}/${PKGSRC_SUBDIR}
-	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${WRKDIR_BASENAME}
+	-${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${WRKDIR_BASENAME}
 .else
 	${_PKG_SILENT}${_PKG_DEBUG}if [ -d ${WRKDIR} ]; then		\
 		if [ -w ${WRKDIR} ]; then				\
