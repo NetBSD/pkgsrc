@@ -1,4 +1,4 @@
-# $NetBSD: pyversion.mk,v 1.28 2004/06/06 16:24:55 tv Exp $
+# $NetBSD: pyversion.mk,v 1.29 2004/07/23 15:35:50 recht Exp $
 
 .if !defined(PYTHON_PYVERSION_MK)
 PYTHON_PYVERSION_MK=	defined
@@ -202,6 +202,20 @@ PYLIB!=	${PYTHONBIN} -c "import distutils.sysconfig; \
 	print distutils.sysconfig.get_python_lib(0, 1, \"\")" || ${ECHO} ""
 PYSITELIB!=	${PYTHONBIN} -c "import distutils.sysconfig; \
 	print distutils.sysconfig.get_python_lib(0, 0, \"\")" || ${ECHO} ""
+
+PRINT_PLIST_AWK+=	/^@dirrm ${PYINC:S|/|\\/|g}$$/ { next; }
+PRINT_PLIST_AWK+=	/^@dirrm ${PYSITELIB:S|/|\\/|g}$$/ { next; }
+PRINT_PLIST_AWK+=	/^@dirrm ${PYLIB:S|/|\\/|g}$$/ { next; }
+
+PRINT_PLIST_AWK+=	/^(@dirrm )?${PYINC:S|/|\\/|g}/ \
+			{ gsub(/${PYINC:S|/|\\/|g}/, "$${PYINC}"); \
+				print; next; }
+PRINT_PLIST_AWK+=	/^(@dirrm )?${PYSITELIB:S|/|\\/|g}/ \
+			{ gsub(/${PYSITELIB:S|/|\\/|g}/, "$${PYSITELIB}"); \
+				print; next; }
+PRINT_PLIST_AWK+=	/^(@dirrm )?${PYLIB:S|/|\\/|g}/ \
+			{ gsub(/${PYLIB:S|/|\\/|g}/, "$${PYLIB}"); \
+				print; next; }
 .endif
 
 .endif	# PYTHON_PYVERSION_MK
