@@ -1,7 +1,9 @@
-$NetBSD: distinfo,v 1.3 2003/10/11 11:27:56 grant Exp $
+$NetBSD: distinfo,v 1.4 2003/12/19 12:24:25 agc Exp $
 
 SHA1 (socks5-v1_0r2_tar.gz) = 57c6e3a17381ce48bed008a86442385dbc2d11de
 Size (socks5-v1_0r2_tar.gz) = 390331 bytes
 SHA1 (patch-aa) = 5960986bf8aa8e8abf96df90b4b9c1940b1adb98
 SHA1 (patch-ab) = 85e70c3a81ee5dc44af24f48fe4d3869c0985854
 SHA1 (patch-ac) = 296da7096e6c6984714f5aa88e3caab7cd11e309
+SHA1 (patch-ad) = bed5faf67a3d7e15693cd526d9554dca85877d7f
+SHA1 (patch-ae) = ee871fc2b3e1b3e8b9c78ab20fe829929bc98b08
