@@ -1,75 +1,21 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/05/31 13:01:33 seb Exp $
+# $NetBSD: Makefile,v 1.2 2002/06/10 09:52:15 sakamoto Exp $
 
-DISTNAME=	Canna35b2
-PKGNAME=	Canna-server-3.5.2
+DISTNAME=	Canna-server-3.5.2
+PKGREVISION=	2
 CATEGORIES=	japanese inputmethod
-MASTER_SITES=	ftp://ftp.nec.co.jp/pub/Canna/Canna35/
-
-PATCH_SITES=	http://www.jaist.ac.jp/~fujieda/canna/
-PATCHFILES=	Canna35b2-unoff1.patch.gz Canna35b2-unoff2.patch.gz \
-		Canna35b2-hack1.patch.gz
-PATCH_DIST_STRIP=	-p1
+MASTER_SITES=	# empty
+DISTFILES=	# empty
 
 MAINTAINER=	tech-pkg-ja@jp.netbsd.org
-HOMEPAGE=	http://www.nec.co.jp/japanese/product/computer/soft/canna/
 COMMENT=	Kana-Kanji conversion system (server)
 
-DEPENDS+=	Canna-lib>=3.5.2:../../inputmethod/canna-lib
+DEPENDS+=	Canna-server-bin>=3.5.2nb2:../canna-server-bin
+DEPENDS+=	Canna-dict>=3.5.2nb2:../canna-dict
 
-FILESDIR=	${.CURDIR}/../../inputmethod/canna-lib/files
-DISTINFO_FILE=	${.CURDIR}/../../inputmethod/canna-lib/distinfo
-PATCHDIR=	${.CURDIR}/../../inputmethod/canna-lib/patches
+EXTRACT_ONLY=	# empty
+NO_BUILD=	YES
+NO_CHECKSUM=	YES
 
-BUILD_DEFS+=	USE_INET6
-USE_X11BASE=	yes
-
-.include "../../mk/bsd.prefs.mk"
-.if 0	# ${USE_INET6} == "YES"
-INET6=		-DINET6
-.else
-INET6=		# empty
-.endif
-CANNAOWNER?=	daemon
-CANNAGROUP?=	daemon
-CANNA_SPOOL=	/var/spool/canna
-CANNA_MODE=	0755
-DICT_DIR?=	/var/dict
-MAKE_ENV+=	CANNAOWNER=${CANNAOWNER} CANNAGROUP=${CANNAGROUP} \
-		CANNA_SPOOL=${CANNA_SPOOL} DICT_DIR=${DICT_DIR} INET6=${INET6}
-PLIST_SUBST=	CANNAOWNER=${CANNAOWNER} CANNAGROUP=${CANNAGROUP} \
-		CANNA_SPOOL=${CANNA_SPOOL} CANNA_MODE=${CANNA_MODE} \
-		DICT_DIR=${DICT_DIR} PREFIX=${PREFIX}
-
-INSTALL_TARGET=	instserver instclient
-
-post-patch:
-	${MV} ${WRKSRC}/Imakefile ${WRKSRC}/Imakefile.orig
-	${SED} -e 's|\(SUBDIRS = .*\) misc\(.*\)|\1\2|' \
-		-e 's|\(SERVERDIR = .*\) dic/phono\(.*\)|\1\2|' \
-		-e 's|\(CLIENTDIR = .*\) dic/phono misc|\1|' \
-		${WRKSRC}/Imakefile.orig > ${WRKSRC}/Imakefile
-	${FIND} ${WRKSRC} -name Imakefile -print | \
-	while read f; do \
-		${CP} $$f $${f}.orig; \
-		( \
-			${ECHO} '/#include ".*\/Canna.conf"$$/a\'; \
-			${ECHO} '#include "${FILESDIR}/LinkFileList.rules"'; \
-		) | ${SED} -f /dev/stdin $${f}.orig >$$f; \
-	done
-
-
-do-configure:
-	@(cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${XMKMF})
-
-post-build:
-	@${SED} -e 's|@PREFIX@|${PREFIX}|g' ${FILESDIR}/canna \
-		> ${WRKDIR}/canna
-
-post-install:
-	@${SH} ${PKGDIR}/INSTALL ${PKGNAME} POST-INSTALL
-	@${INSTALL_SCRIPT} ${WRKDIR}/canna ${PREFIX}/etc/rc.d/canna
-	@${INSTALL_DATA_DIR} ${CANNA_SPOOL}
-	@${CHMOD} ${CANNA_MODE} ${CANNA_SPOOL}
-	@${CHOWN} ${CANNAOWNER}:${CANNAGROUP} ${CANNA_SPOOL}
+do-install:	# empty
 
 .include "../../mk/bsd.pkg.mk"
