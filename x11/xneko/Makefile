@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2003/07/17 22:57:00 grant Exp $
+# $NetBSD: Makefile,v 1.15 2003/09/15 16:27:56 jmmv Exp $
 # FreeBSD Id: Makefile,v 1.6 1997/03/12 08:21:35 asami Exp
 #
 
@@ -15,6 +15,10 @@ USE_X11BASE=	yes
 MANCOMPRESSED_IF_MANZ=	yes
 
 PLIST_SRC=	${WRKDIR}/PLIST
+
+.include "../../mk/bsd.prefs.mk"
+
+BUILD_DEFS+=	MANINSTALL
 
 post-install:
 	@${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
