@@ -1,72 +1,49 @@
-# $NetBSD: Makefile,v 1.2 2001/08/13 09:20:40 agc Exp $
+# $NetBSD: Makefile,v 1.3 2001/12/30 17:13:47 taca Exp $
 # FreeBSD: ports/devel/ruby-racc/Makefile,v 1.20 2001/01/27 09:54:30 knu Exp
 
-DISTNAME=	racc-${RACC_VERSION}
-PKGNAME?=	${RUBY_PKGNAMEPREFIX}${DISTNAME}
+DISTNAME=	${RACC_DISTFILE}
+PKGNAME?=	${RACC_NAME}-${RACC_VERSION}
 CATEGORIES=	devel
-MASTER_SITES=	http://www.xdsl.ne.jp/Cd/aamine/soft/
+MASTER_SITES=	${RACC_SITES}
 
 MAINTAINER=	taca@netbsd.org
-HOMEPAGE=	http://www.xdsl.ne.jp/Cd/aamine/
+HOMEPAGE=	${RACC_HOMEPAGE}
 COMMENT=	LALR(1) parser generator for Ruby
 
-RACC_VERSION=	1.3.9
-
-DIST_SUBDIR=	ruby
-USE_RUBY=	yes
-USE_RUBY_AMSTD=	yes
-USE_RUBY_SETUP=	yes
-
-.if !defined(RUNTIME)
-DEPENDS+= ${RUBY_PKGNAMEPREFIX}racc-runtime-${RACC_VERSION}:../../devel/ruby-racc-runtime
+DEPENDS+= ${RACC_NAME}-runtime>=${RACC_VERSION}:../../devel/ruby-racc-runtime
 DEPENDS+= ${RUBY_PKGNAMEPREFIX}strscan>=0.6.1:../../devel/ruby-strscan
 
-REPLACE_RUBY=	misc/racc2y misc/y2racc
+CONFIGURE_ARGS+=--with=racc
 
-DOCS_EN=	changes.html command.html debug.html grammer.html index.html \
+DOCS=		BUGS.en BUGS.ja README.en README.ja
+DOCS_EN=	changes.html command.html debug.html grammar.html index.html \
 		parser.html usage.html
-DOCS_JA=	changes.html command.html debug.html grammer.html index.html \
+DOCS_JA=	changes.html command.html debug.html grammar.html index.html \
 		parser.html usage.html
 EXAMPLES=	array.y array2.y calc-ja.y calc.y conflict.y hash.y lalr.y \
 		syntax.y yyerr.y
-.endif
 
-pre-patch:
-	${RUBY} -i -ne '/^amstd\b/ || /^strscan\b/ || print' ${WRKSRC}/lib/PATHCONV
-	${RM} -rf ${WRKSRC}/lib/amstd ${WRKSRC}/lib/strscan
-.if defined(RUNTIME)
-	${RUBY} -i -ne '/^racc\b/ || print' ${WRKSRC}/bin/PATHCONV
-	${RM} -rf ${WRKSRC}/bin/racc
-	${RUBY} -i -ne '/^strscanso\b/ || print' ${WRKSRC}/ext/PATHCONV
-	${RM} -rf ${WRKSRC}/ext/strscanso
-	${RUBY} -i -ne '/^racc\b/ || print' ${WRKSRC}/lib/PATHCONV
-	${RM} -rf ${WRKSRC}/lib/racc
-.else
-	${RM} -rf ${WRKSRC}/ext
-	${RUBY} -i -ne '/^raccrt\b/ || print' ${WRKSRC}/lib/PATHCONV
-	${RM} -rf ${WRKSRC}/lib/raccrt
-.endif
+pre-configure:
+	${CP} -p ${WRKSRC}/packages/racc/misc/* ${WRKSRC}/packages/racc/bin
 
-.if defined(RUNTIME)
-pre-install:
-	${INSTALL_DATA_DIR} ${RUBY_SITELIBDIR}/racc
-	${INSTALL_DATA_DIR} ${RUBY_SITEARCHLIBDIR}/racc
-.else
 post-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/bin/racc/racc \
-		${WRKSRC}/misc/racc2y ${WRKSRC}/misc/y2racc ${PREFIX}/bin
 	${INSTALL_DATA_DIR} ${RUBY_EXAMPLESDIR}/racc
 .for f in ${EXAMPLES}
-	${INSTALL_DATA} ${WRKSRC}/sample/${f} ${RUBY_EXAMPLESDIR}/racc
+	${INSTALL_DATA} ${WRKSRC}/packages/racc/sample/${f} \
+		${RUBY_EXAMPLESDIR}/racc
 .endfor
+	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}/racc/en
 	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}/racc/ja
+.for f in ${DOCS}
+	${INSTALL_DATA} ${WRKSRC}/packages/racc/${f} ${RUBY_DOCDIR}/racc
+.endfor
 .for f in ${DOCS_EN}
-	${INSTALL_DATA} ${WRKSRC}/doc.en/${f} ${RUBY_DOCDIR}/racc
+	${INSTALL_DATA} ${WRKSRC}/packages/racc/doc.en/${f} \
+		${RUBY_DOCDIR}/racc/en
 .endfor
 .for f in ${DOCS_JA}
-	${INSTALL_DATA} ${WRKSRC}/doc.ja/${f} ${RUBY_DOCDIR}/racc/ja
+	${INSTALL_DATA} ${WRKSRC}/packages/racc/doc.ja/${f} \
+		${RUBY_DOCDIR}/racc/ja
 .endfor
-.endif
 
-.include "../../lang/ruby-base/Makefile.common"
-.include "../../mk/bsd.pkg.mk"
+.include "Makefile.common"
