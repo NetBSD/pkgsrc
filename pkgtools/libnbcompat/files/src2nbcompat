@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-#	$NetBSD: src2nbcompat,v 1.7 2004/08/20 23:10:32 jlam Exp $
+#	$NetBSD: src2nbcompat,v 1.8 2005/02/04 00:43:42 jlam Exp $
 #
 # Copyright (c) 2003 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -92,7 +92,7 @@ copy_file()
 		# header inclusion.  Protect all system headers with
 		# "#if HAVE_FOO_H ... #endif" guards.
 		#
-		awk '							\
+		gawk '							\
 			BEGIN { config = 0; nbcompat = 0 }		\
 			/^#[ 	]*if[ 	]+HAVE_NBTOOL_CONFIG_H/ {	\
 				if (config == 0) {			\
