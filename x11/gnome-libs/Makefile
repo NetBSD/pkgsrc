@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2001/06/18 20:49:01 jlam Exp $
+# $NetBSD: Makefile,v 1.64 2001/06/19 04:56:34 jlam Exp $
 
 DISTNAME=		gnome-libs-1.2.13
 CATEGORIES=		x11 gnome
@@ -8,7 +8,7 @@ MAINTAINER=		tron@netbsd.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Libaries for the GNU Network Object Model Environment
 
-BUILD_USES_MSGFMT=	yes
+BUILD_USES_MSGFMT=	YES
 
 USE_X11BASE=		YES
 USE_GMAKE=		YES
@@ -24,6 +24,7 @@ CONFIGURE_ENV+=		LOCALBASE=${LOCALBASE} \
 			PKGLOCALEDIR=${PKGLOCALEDIR}
 
 USE_CONFIG_WRAPPER=	YES
+USE_BUILDLINK_ONLY=	YES
 
 .include "../../audio/esound/buildlink.mk"
 .include "../../devel/gettext-lib/buildlink.mk"
