@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.2 1999/07/06 17:59:44 tron Exp $
+$NetBSD: patch-aa,v 1.3 1999/11/19 11:21:26 agc Exp $
 
---- Makefile.orig	Sat Jul 20 01:35:46 1996
-+++ Makefile	Tue Jul  6 19:57:12 1999
-@@ -30,23 +30,23 @@
+--- Makefile.orig	Sat Jul 20 00:35:46 1996
++++ Makefile	Fri Nov 19 11:19:12 1999
+@@ -30,23 +30,29 @@
  # uncomment the following two lines if you want to include X11 support
  # (mpeg2decode)
  
@@ -19,6 +19,12 @@ $NetBSD: patch-aa,v 1.2 1999/07/06 17:59:44 tron Exp $
 -#LIBS = -lXext -lX11
 +USE_SHMEM = -DSH_MEM
 +LIBS = -lXext -lX11
++
++OPSYS!= uname -s
++
++.if ${OPSYS} == "SunOS"
++LIBS+= -lsocket -lnsl
++.endif
  
  # if your X11 include files / libraries are in a non standard location:
  # set INCLUDEDIR to -I followed by the appropriate include file path and
