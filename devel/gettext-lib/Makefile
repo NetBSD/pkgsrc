@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/02/16 14:38:25 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2001/03/16 13:08:48 wiz Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1998/08/09 15:13:33 kuriyama Exp
 #
 
@@ -19,8 +19,6 @@ CONFIGURE_ARGS+=	--with-included-gettext
 PATCHDIR=		${.CURDIR}/../../devel/gettext/patches
 PATCH_SUM_FILE=		${.CURDIR}/../../devel/gettext/files/patch-sum
 INSTALL_TARGET=		install-exec
-
-makepatchsum::
 
 do-build:
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${WRKSRC}/intl && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} ${ALL_TARGET}
