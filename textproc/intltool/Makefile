@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2004/09/01 13:35:10 jmmv Exp $
+# $NetBSD: Makefile,v 1.19 2004/10/02 11:57:04 jmmv Exp $
 #
 
-DISTNAME=		intltool-0.31.2
+DISTNAME=		intltool-0.31.3
 CATEGORIES=		textproc devel gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/intltool/0.31/}
 EXTRACT_SUFX=		.tar.bz2
@@ -22,5 +22,14 @@ GNU_CONFIGURE=		YES
 
 CONFIGURE_ENV+=		PERL=${PERL5}
 
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../lang/perl5/buildlink3.mk"
+
+.include "../../mk/bsd.prefs.mk"
+.include "../../mk/buildlink3/bsd.builtin.mk"
+.if !empty(USE_BUILTIN.gettext:M[Nn][Oo])
+DEPENDS+=		gettext>=0.11.5:../../devel/gettext
+.endif
+
 .include "../../mk/bsd.pkg.mk"
