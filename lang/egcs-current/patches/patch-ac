@@ -1,0 +1,13 @@
+--- gcc/gcc.texi.orig	Tue May 19 20:24:28 1998
++++ gcc/gcc.texi	Wed Jun  3 15:14:41 1998
+@@ -182,6 +182,10 @@
+ 
+ @ifinfo
+ 
++@dircategory Programming
++@direntry
++* gcc: (gcc).			The GNU C and C++ compilers.
++@end direntry
+ @node Top, G++ and GCC,, (DIR)
+ @top Introduction
+ @cindex introduction
