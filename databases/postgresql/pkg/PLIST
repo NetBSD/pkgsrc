@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2001/01/04 15:10:24 agc Exp $
-${PGUSER}/.profile.pgsql
-${PGUSER}/post-install-notes
+@comment $NetBSD: PLIST,v 1.18 2001/03/25 11:29:38 wennmach Exp $
 bin/createdb
 bin/createlang
 bin/createuser
@@ -1037,3 +1035,4 @@ share/postgresql/pg_hba.conf.sample
 share/postgresql/pg_ident.conf.sample
 share/postgresql/pg_options.sample
 share/postgresql/postmaster.opts.default.sample
+share/postgresql/profile.pgsql.sample
