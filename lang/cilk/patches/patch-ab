@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2002/07/17 08:36:12 agc Exp $
+
+--- support/Makefile.in	2002/07/17 08:20:43	1.1
++++ support/Makefile.in	2002/07/17 08:21:04
+@@ -83,7 +83,7 @@
+ CILK_PAGESIZE = @CILK_PAGESIZE@
+ PTHREAD_LIBS = @PTHREAD_LIBS@ @HOARD_LIBS@
+ GNU_LD = "@HAVE_GNU_LD@"
+-CPP_FOR_CILK = @CPP_FOR_CILK@
++CPP_FOR_CILK = cpp0
+ 
+ CC = ./cilk-local
+ 
