@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1998 2004/08/03 19:35:31 salo Exp $
+$NetBSD: TODO,v 1.1999 2004/08/03 20:35:48 wiz Exp $
 
 Suggested new packages
 ======================
@@ -508,23 +508,27 @@ Suggested cleanups in pkgsrc
 	o Deprecate LTCONFIG_OVERRIDE -- replace with appropriate
 	  LIBTOOL_OVERRIDE
 
-	o Fix remaining packages to install documentation into share/doc
-	  instead of share/gtk-doc (usually,
+	o Fix remaining packages to install documentation into
+	  share/doc instead of share/gtk-doc (usually,
 		CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html
 	  does the trick; additionally, one might set
 		CONFIGURE_ARGS+=	--enable-gtk-doc=no
-	  to avoid a gtk-doc dependency if html documentation is shipped
-	  with the package). Please fill in GNOME bug reports if any of
-	  the packages do not honor these configuration options and/or do
-	  not ship with pregenerated html documents.
+	  to avoid a gtk-doc dependency if html documentation is
+	  shipped with the package). Please fill in GNOME bug
+	  reports if any of the packages do not honor these
+	  configuration options and/or do not ship with pregenerated
+	  html documents.
 
-	o Make packages utilize USE_X11 instead of USE_X11BASE if there is no
-	  good reason to install them into X11BASE.
+	o Make packages utilize USE_X11 instead of USE_X11BASE if
+	  there is no good reason to install them into X11BASE.
 
-	o Set USE_LANGUAGES appropriately in packages that use C++, Fortran,
-	  or Objective-C so that the correct type of compiler dependency is
-	  set.
+	o Set USE_LANGUAGES appropriately in packages that use C++,
+	  Fortran, or Objective-C so that the correct type of
+	  compiler dependency is set.
 
 	o Deprecate USE_GCC_SHLIB by using USE_LANGUAGES appropriately.
 
 	o Convert packages to use VARBASE instead of hardcoding /var.
+
+	o Convert packages to use bsd.options.mk instead of various
+	  FOO_USE_* variables.
