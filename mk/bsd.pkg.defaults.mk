@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.255 2004/07/06 11:32:49 abs Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.256 2004/07/06 22:49:16 wiz Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -1500,9 +1500,9 @@ MPLAYER_USE_MEDIALIB?= NO
 # Default: NO
 
 #MOTIF_TYPE?=	openmotif
-# Used by motif.buildlink2.mk to choose which Motif-2.0-compatible
+# Used by motif.buildlink3.mk to choose which Motif-2.0-compatible
 # installation to use.  This value is also automatically set by
-# motif.buildlink2.mk to whichever Motif-2.0 installation represented by
+# motif.buildlink3.mk to whichever Motif-2.0 installation represented by
 # the possible values below is already installed, but defaults to
 # ${MOTIF_TYPE_DEFAULT}.  This value is ignored if MOTIFBASE is
 # explicitly set.
@@ -1510,7 +1510,7 @@ MPLAYER_USE_MEDIALIB?= NO
 # Default: ${MOTIF_TYPE_DEFAULT}
 
 #MOTIF_TYPE_DEFAULT?=	openmotif
-# Used by motif.buildlink2.mk as the final default value for MOTIF_TYPE.
+# Used by motif.buildlink3.mk as the final default value for MOTIF_TYPE.
 # Possible:  openmotif, lesstif, dt (Irix and Solaris only)
 # Default: openmotif, or dt (Irix and Solaris only)
 

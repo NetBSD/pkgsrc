@@ -1,5 +1,5 @@
 #!/usr/bin/awk -f
-# $NetBSD: genreadme.awk,v 1.11 2003/09/11 03:00:21 dmcmahill Exp $
+# $NetBSD: genreadme.awk,v 1.12 2004/07/06 22:49:18 wiz Exp $
 #
 # Copyright (c) 2002, 2003 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -452,7 +452,7 @@ END {
 				printf("Does not exist.  This is probably ") > "/dev/stderr";
 				printf("due to an incorrect DEPENDS line.\n") > "/dev/stderr";
 				printf("Try running:  grep %s */*/Makefile\n", fulldir2pkgdir(pkgdir)) > "/dev/stderr";
-				printf("or:  grep %s */*/buildlink2.mk\n", fulldir2pkgdir(pkgdir)) > "/dev/stderr";
+				printf("or:  grep %s */*/buildlink3.mk\n", fulldir2pkgdir(pkgdir)) > "/dev/stderr";
 				printf("to find the problem\n", pkgdir) > "/dev/stderr";
 				printf("**** ------- ****\n") > "/dev/stderr";
 			} else {
