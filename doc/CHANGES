@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7303 2004/09/30 23:49:50 rh Exp $
+$NetBSD: CHANGES,v 1.7304 2004/10/01 00:09:16 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4501,3 +4501,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added cppunit-1.10.2 [wulf 2004-10-01]
 	Updated pearpc to 0.3.1 [xtraeme 2004-10-01]
 	Added sun-jdk15-5.0 [rh 2004-10-01]
+	Updated dosbox to 0.62 [xtraeme 2004-10-01]
