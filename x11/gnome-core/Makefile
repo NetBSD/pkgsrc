@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.45 2000/06/21 00:47:44 jlam Exp $
+# $NetBSD: Makefile,v 1.46 2000/06/25 17:22:52 rh Exp $
 
-DISTNAME=		gnome-core-1.2.0
+DISTNAME=		gnome-core-1.2.1
 CATEGORIES=		x11 gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=stable/sources/gnome-core/}
 
