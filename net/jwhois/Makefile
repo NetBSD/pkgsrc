@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/08/12 06:29:12 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2001/01/05 01:02:31 wiz Exp $
 #
 
 DISTNAME=		jwhois-2.4.1
@@ -9,15 +9,13 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.gnu.org/software/jwhois/
 
 BUILD_DEPENDS+=		autoreconf:../../devel/autoconf
-DEPENDS+=		gettext>=0.10.35nb1:../../devel/gettext
+BUILD_DEPENDS+=		${LOCALBASE}/share/autoconf/gettext.m4:../../devel/gettext
 
 GNU_CONFIGURE=		# defined
+USE_LIBINTL=		# defined
 CONFIGURE_ARGS+=	--sysconfdir=/etc
 CONFIGURE_ARGS+=	--localstatedir=/var/db
 CONFIGURE_ARGS+=	--with-cache
-CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
-
-CPPFLAGS+=		-I${LOCALBASE}/include		# libintl.h
 
 INFO_FILES=		jwhois.info
 
