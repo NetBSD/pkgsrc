@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/08/30 22:51:21 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2003/09/13 20:09:57 jlam Exp $
 
 DISTNAME=		cyrus-imapd-2.1.14
 SVR4_PKGNAME=		cimap
@@ -42,7 +42,7 @@ CONFIGURE_ARGS+=	--with-cyrus-prefix=${PREFIX}/cyrus
 CONFIGURE_ARGS+=	--with-statedir=/var/run
 CONFIGURE_ARGS+=	--with-bdb-libdir=${BUILDLINK_PREFIX.db3}/lib
 CONFIGURE_ARGS+=	--with-bdb-incdir=${BUILDLINK_PREFIX.db3}/include/db3
-CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl}
+CONFIGURE_ARGS+=	--with-openssl=${SSLBASE}
 CONFIGURE_ARGS+=	--with-sasl=${BUILDLINK_PREFIX.cyrus-sasl}
 CONFIGURE_ARGS+=	--without-ucdsnmp
 CONFIGURE_ARGS+=	--without-notify
@@ -114,9 +114,7 @@ post-patch:
 	done
 
 pre-configure:
-	cd ${WRKSRC};							\
-	${AUTOHEADER};							\
-	${AUTOCONF}
+	cd ${WRKSRC} && ${AUTOHEADER} && ${AUTOCONF}
 
 post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/tools/mkimap ${PREFIX}/cyrus/bin
@@ -124,9 +122,13 @@ post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/tools/rehash ${PREFIX}/cyrus/bin
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA} ${FILESDIR}/imapd.conf ${EGDIR}
-	cd ${WRKSRC}/master/conf; ${INSTALL_DATA} *.conf ${EGDIR}
+	cd ${WRKSRC}/master/conf; for file in *.conf; do		\
+		${INSTALL_DATA} $$file ${EGDIR};			\
+	done
 	${INSTALL_DATA_DIR} ${HTMLDIR}
-	cd ${WRKSRC}/doc; ${INSTALL_DATA} *.html cyrusv2.mc ${HTMLDIR}
+	cd ${WRKSRC}/doc; for file in *.html cyrusv2.mc; do		\
+		${INSTALL_DATA} $$file ${HTMLDIR};			\
+	done
 
 .include "../../databases/db3/buildlink2.mk"
 .include "../../lang/perl5/module.mk"
