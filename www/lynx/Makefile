@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.14 1998/10/04 22:05:42 tv Exp $
+# $NetBSD: Makefile,v 1.15 1998/11/05 02:29:18 mycroft Exp $
 #
 
-DISTNAME=       lynx2-8
-PKGNAME=        lynx-2.8
-WRKSRC=         ${WRKDIR}/lynx2-8
+DISTNAME=       lynx2-8-1
+PKGNAME=        lynx-2.8.1
+WRKSRC=         ${WRKDIR}/lynx2-8-1
 CATEGORIES=	www
-MASTER_SITES=   http://sol.slcc.edu/lynx/release2-8/
+MASTER_SITES=   http://sol.slcc.edu/lynx/release2-8-1/
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://sol.slcc.edu/lynx/
 
-CONFLICTS=	lynx-2.8rel.2
+CONFLICTS=	lynx-2.8rel.2 lynx-2.8
 
 DEPENDS+=	libslang-1.2.2:../../devel/libslang
 
