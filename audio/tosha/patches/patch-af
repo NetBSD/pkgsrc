@@ -1,0 +1,22 @@
+--- ../../work/tosha-0.05/pcmplay.c	Wed May 21 02:11:13 1997
++++ pcmplay.c	Fri Oct 31 01:58:37 1997
+@@ -41,12 +41,18 @@
+ #include <sys/types.h>
+ #include <sys/uio.h>
+ #include <unistd.h>
++#ifdef __NetBSD__
++#include <soundcard.h>
++#define DEV "/dev/audio"
++#else
+ #include <machine/soundcard.h>
++#define DEV "/dev/dsp"
++#endif
+ 
+ #include "utils.h"
+ #include "getlopt.h"
+ 
+-char *audevice = "/dev/dsp";
++char *audevice = DEV;
+ int buffersize = 32;
+ int dsp_samplesize = 16;
+ int dsp_channels = 2;
