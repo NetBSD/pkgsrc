@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.127 2000/12/07 01:23:48 hubertf Exp $
+# $NetBSD: Packages.txt,v 1.128 2000/12/08 10:18:19 wiz Exp $
 ###########################################################################
 
 			==========================
@@ -650,11 +650,6 @@ which does a lot of the donkey work for you.
    around the package's installation, since all pkg_delete knows is how to
    delete the files created in the original distribution. See pkg_delete(1)
    and pkg_create(1) for more information.
-
- * pkg/REQ:
-   Require-script that is invoked before installation and de-installation
-   to ensure things like certain accounts being available, user/sysadmin
-   agreeing with usage policy, etc.
 
  * pkg/MESSAGE
    Display this file after installation of the package.
