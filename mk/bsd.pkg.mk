@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.490 2000/06/28 16:05:44 dmcmahill Exp $			\
+#	$NetBSD: bsd.pkg.mk,v 1.491 2000/06/28 16:39:23 dmcmahill Exp $			\
 #
 # This file is in the public domain.
 #
@@ -2028,7 +2028,7 @@ clean: pre-clean
 .if !target(clean-depends)
 clean-depends:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	for i in `${MAKE} ${MAKEFLAGS} clean-depends-list | ${SED} -e 's;\.\./[^ ]*; ;g' | ${TR} -s "[:space:]" "\n" | sort -u` ;\
+	for i in `${MAKE} ${MAKEFLAGS} CLEAN_DEPENDS_LIST_TOP=YES clean-depends-list | ${SED} -e 's;\.\./[^ ]*; ;g' | ${TR} -s "[:space:]" "\n" | sort -u` ;\
 	do 								\
 		cd ${.CURDIR}/../../$$i &&				\
 		${MAKE} ${MAKEFLAGS} CLEANDEPENDS=NO clean;		\
@@ -2058,11 +2058,15 @@ clean-depends-list:
 		case "$$CLEAN_DEPENDS_LIST_SEEN" in				\
 		*" "$$dir" "*)  ;; 					\
 		*) 							\
-			CLEAN_DEPENDS_LIST_SEEN=" $$dir `cd ${.CURDIR} ; cd $$dir && ${MAKE} ${MAKEFLAGS} CLEAN_DEPENDS_LIST_SEEN="$$CLEAN_DEPENDS_LIST_SEEN" clean-depends-list)`";\
+			CLEAN_DEPENDS_LIST_SEEN=" $$dir `cd ${.CURDIR} ; cd $$dir && ${MAKE} ${MAKEFLAGS} CLEAN_DEPENDS_LIST_SEEN="$$CLEAN_DEPENDS_LIST_SEEN" CLEAN_DEPENDS_LIST_TOP=NO clean-depends-list)`";\
 			;;						\
 		esac							\
 	done ;								\
-	echo " ${PKGPATH} $$CLEAN_DEPENDS_LIST_SEEN"
+	if [ "${CLEAN_DEPENDS_LIST_TOP}" != "YES" ]; then		\
+		echo " ${PKGPATH} $$CLEAN_DEPENDS_LIST_SEEN";		\
+	else								\
+		echo " $$CLEAN_DEPENDS_LIST_SEEN";			\
+	fi
 .endif
 
 .if !target(pre-distclean)
@@ -2786,7 +2790,7 @@ COMMON_DIRS!= 	${AWK} 'BEGIN  { 				\
 
 .if !target(print-PLIST)
 print-PLIST:
-	@${ECHO} '@comment $$NetBSD: bsd.pkg.mk,v 1.490 2000/06/28 16:05:44 dmcmahill Exp $$'
+	@${ECHO} '@comment $$NetBSD: bsd.pkg.mk,v 1.491 2000/06/28 16:39:23 dmcmahill Exp $$'
 	@${FIND} ${PREFIX}/. -newer ${EXTRACT_COOKIE} \! -type d 	\
 	 | ${SED} s@${PREFIX}/./@@ 				\
 	 | sort							\
