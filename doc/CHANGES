@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7439 2004/10/14 22:30:10 dmcmahill Exp $
+$NetBSD: CHANGES,v 1.7440 2004/10/15 00:36:01 grant Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4726,3 +4726,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added libltdl-1.5.10 [tv 2004-10-14]
 	Updated dcraw to 1.211 [kristerw 2004-10-14]
 	Updated verilog to 0.8 [dmcmahill 20040-10-14]
+	Updated evolution14 to 1.4.6nb2 [grant 2004-10-15]
