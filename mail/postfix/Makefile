@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.135 2004/07/18 23:42:48 jlam Exp $
+# $NetBSD: Makefile,v 1.136 2004/07/19 02:33:31 jlam Exp $
 
 DISTNAME=	postfix-2.1.3
 CATEGORIES=	mail
@@ -146,8 +146,8 @@ MAKE_ENV+=	AUXLIBS="${AUXLIBS}" CCARGS="${CCARGS}"
 POSTFIX_CONF_FILES=	conf/main.cf src/util/sys_defs.h postfix-install
 POSTFIX_CONF_FILES+=	src/global/mail_params.h
 
-FILES_SUBST+=	SHAREDIR=${SHAREDIR}
-MESSAGE_SUBST+=	SHAREDIR=${SHAREDIR}
+FILES_SUBST+=	EXAMPLEDIR=${EXAMPLEDIR}
+MESSAGE_SUBST+=	EXAMPLEDIR=${EXAMPLEDIR}
 PLIST_SUBST+=	POSTFIX_SPOOL=${POSTFIX_SPOOL}
 FILES_SUBST+=	POSTFIX_SPOOL=${POSTFIX_SPOOL}
 
@@ -155,22 +155,22 @@ PKG_GROUPS?=	postfix maildrop
 PKG_USERS?=	postfix:postfix::Postfix\\ User:${POSTFIX_SPOOL}
 
 LIBEXECDIR=	${PREFIX}/libexec/${PKGBASE}
-SHAREDIR=	${PREFIX}/share/examples/${PKGBASE}
+EXAMPLEDIR=	${PREFIX}/share/examples/${PKGBASE}
 
-CONF_FILES=	${SHAREDIR}/main.cf ${PKG_SYSCONFDIR}/main.cf
-CONF_FILES+=	${SHAREDIR}/master.cf ${PKG_SYSCONFDIR}/master.cf
+CONF_FILES=	${EXAMPLEDIR}/main.cf ${PKG_SYSCONFDIR}/main.cf
+CONF_FILES+=	${EXAMPLEDIR}/master.cf ${PKG_SYSCONFDIR}/master.cf
 .if defined(USING_SASL)
 .  if defined(USE_SASL2)
 MAKE_DIRS+=	${PREFIX}/lib/sasl2
-CONF_FILES+=	${SHAREDIR}/smtpd.conf	${PREFIX}/lib/sasl2/smtpd.conf
+CONF_FILES+=	${EXAMPLEDIR}/smtpd.conf ${PREFIX}/lib/sasl2/smtpd.conf
 .  else
 MAKE_DIRS+=	${PREFIX}/lib/sasl
-CONF_FILES+=	${SHAREDIR}/smtpd.conf	${PREFIX}/lib/sasl/smtpd.conf
+CONF_FILES+=	${EXAMPLEDIR}/smtpd.conf ${PREFIX}/lib/sasl/smtpd.conf
 .  endif
 .endif
 CONF_FILES_PERMS=	# empty
 .for confscr in post-install postfix-files postfix-script
-CONF_FILES_PERMS+=	${SHAREDIR}/${confscr} ${PKG_SYSCONFDIR}/${confscr} \
+CONF_FILES_PERMS+=	${EXAMPLEDIR}/${confscr} ${PKG_SYSCONFDIR}/${confscr} \
 			${ROOT_USER} ${ROOT_GROUP} 755
 .endfor
 .undef confscr
@@ -195,11 +195,11 @@ post-build:
 
 pre-install:
 	${INSTALL_DATA_DIR} ${PKG_SYSCONFDIR}
-	${INSTALL_DATA_DIR} ${SHAREDIR}
+	${INSTALL_DATA_DIR} ${EXAMPLEDIR}
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/postfix
 	${INSTALL_DATA_DIR} ${LIBEXECDIR}
-	${CHOWN} ${ROOT_USER}:${ROOT_GROUP} ${SHAREDIR} ${LIBEXECDIR}
-	${CHMOD} 755 ${SHAREDIR} ${LIBEXECDIR}
+	${CHOWN} ${ROOT_USER}:${ROOT_GROUP} ${EXAMPLEDIR} ${LIBEXECDIR}
+	${CHMOD} 755 ${EXAMPLEDIR} ${LIBEXECDIR}
 	-${RM} -f ${WRKSRC}/conf/*.orig
 .if defined(USING_SASL)
 .  if defined(USE_SASL2)
@@ -207,17 +207,17 @@ pre-install:
 .  else
 	${ECHO} "pwcheck_method: sasldb" > ${WRKDIR}/smtpd.conf
 .  endif
-	${INSTALL_DATA} ${WRKDIR}/smtpd.conf ${SHAREDIR}
+	${INSTALL_DATA} ${WRKDIR}/smtpd.conf ${EXAMPLEDIR}
 .endif
-	${INSTALL_SCRIPT} ${WRKSRC}/conf/post-install ${SHAREDIR}
-	${INSTALL_SCRIPT} ${WRKSRC}/conf/postfix-files ${SHAREDIR}
-	${INSTALL_SCRIPT} ${WRKSRC}/conf/postfix-script ${SHAREDIR}
-	${INSTALL_DATA} ${WRKSRC}/conf/main.cf ${SHAREDIR}
-	${INSTALL_DATA} ${WRKSRC}/conf/master.cf ${SHAREDIR}
-	${INSTALL_DATA} ${WRKDIR}/mailer.conf.postfix ${SHAREDIR}/mailer.conf
+	${INSTALL_SCRIPT} ${WRKSRC}/conf/post-install ${EXAMPLEDIR}
+	${INSTALL_SCRIPT} ${WRKSRC}/conf/postfix-files ${EXAMPLEDIR}
+	${INSTALL_SCRIPT} ${WRKSRC}/conf/postfix-script ${EXAMPLEDIR}
+	${INSTALL_DATA} ${WRKSRC}/conf/main.cf ${EXAMPLEDIR}
+	${INSTALL_DATA} ${WRKSRC}/conf/master.cf ${EXAMPLEDIR}
+	${INSTALL_DATA} ${WRKDIR}/mailer.conf.postfix ${EXAMPLEDIR}/mailer.conf
 
 do-install:
-	cd ${WRKSRC} && ${SETENV} config_directory="${SHAREDIR}"	\
+	cd ${WRKSRC} && ${SETENV} config_directory="${EXAMPLEDIR}"	\
 		${SH} postfix-install -non-interactive
 
 .if ${OPSYS} == "Linux"
