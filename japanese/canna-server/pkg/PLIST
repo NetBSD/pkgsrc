@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/08/02 04:57:21 sakamoto Exp $
+@comment $NetBSD: PLIST,v 1.2 1999/08/27 04:06:59 sakamoto Exp $
 @cwd ${DICT_DIR}
 @cwd ${DICT_DIR}
 canna/canna/bushu.cld
@@ -41,27 +41,27 @@ bin/mkromdic
 bin/splitword
 bin/wtoc
 etc/rc.d/canna.sh
-man/man1/addwords.1
-man/man1/cannacheck.1
-man/man1/cannakill.1
-man/man1/cannaserver.1
-man/man1/cannastat.1
-man/man1/catdic.1
-man/man1/cpdic.1
-man/man1/cshost.1
-man/man1/ctow.1
-man/man1/delwords.1
-man/man1/dicar.1
-man/man1/dpbindic.1
-man/man1/dpromdic.1
-man/man1/lsdic.1
-man/man1/mkbindic.1
-man/man1/mkdic.1
-man/man1/mkromdic.1
-man/man1/mvdic.1
-man/man1/rmdic.1
-man/man1/splitword.1
-man/man1/wtoc.1
+man/ja_JP.EUC/man1/addwords.1
+man/ja_JP.EUC/man1/cannacheck.1
+man/ja_JP.EUC/man1/cannakill.1
+man/ja_JP.EUC/man1/cannaserver.1
+man/ja_JP.EUC/man1/cannastat.1
+man/ja_JP.EUC/man1/catdic.1
+man/ja_JP.EUC/man1/cpdic.1
+man/ja_JP.EUC/man1/cshost.1
+man/ja_JP.EUC/man1/ctow.1
+man/ja_JP.EUC/man1/delwords.1
+man/ja_JP.EUC/man1/dicar.1
+man/ja_JP.EUC/man1/dpbindic.1
+man/ja_JP.EUC/man1/dpromdic.1
+man/ja_JP.EUC/man1/lsdic.1
+man/ja_JP.EUC/man1/mkbindic.1
+man/ja_JP.EUC/man1/mkdic.1
+man/ja_JP.EUC/man1/mkromdic.1
+man/ja_JP.EUC/man1/mvdic.1
+man/ja_JP.EUC/man1/rmdic.1
+man/ja_JP.EUC/man1/splitword.1
+man/ja_JP.EUC/man1/wtoc.1
 sbin/cannaserver
 @exec mkdir ${CANNA_SPOOL}
 @exec chown ${CANNAOWNER}:${CANNAGROUP} ${CANNA_SPOOL}
