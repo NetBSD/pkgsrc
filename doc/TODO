@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2167 2004/09/25 00:40:53 minskim Exp $
+$NetBSD: TODO,v 1.2168 2004/09/25 20:47:50 epg Exp $
 
 Suggested new packages
 ======================
@@ -419,7 +419,6 @@ Suggested package updates
 	o srp_client-1.7.5 [jlam]
 	o staroffice-7p1
 	o streamtuner-0.12.5
-	o subversion-1.0.8
 	o sweep-0.8.3
 	o sylpheed-claws-0.9.12a
 	o tcl-8.4.7
