@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2003/08/30 22:51:25 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2004/01/16 12:55:21 jlam Exp $
 
 DISTNAME=	ddclient-3.6.2
 CATEGORIES=	net
@@ -8,16 +8,21 @@ MAINTAINER=	hubertf@NetBSD.org
 HOMEPAGE=	http://burry.ca:4141/ddclient/
 COMMENT=	Client to update dynamic DNS entries
 
-USE_BUILDLINK2=		YES
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
 DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
 
 DOCDIR=			${PREFIX}/share/doc/ddclient
 EGDIR=			${PREFIX}/share/examples/ddclient
 RCD_SCRIPTS=		ddclient
+FILES_SUBST+=		PERL5_PATH=${PERL5_PATH}
 CONF_FILES_PERMS=	${EGDIR}/sample-etc_ddclient.conf		\
 			${PKG_SYSCONFDIR}/ddclient.conf			\
 			${ROOT_USER} ${ROOT_GROUP} 0600
+
+INSTALLATION_DIRS=	sbin
 
 do-configure:
 	cd ${WRKSRC}; for file in ddclient; do				\
@@ -41,5 +46,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/README.cisco ${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/sample-* ${EGDIR}
 
-.include "../../lang/perl5/buildlink2.mk"
+.include "../../lang/perl5/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
