@@ -1,265 +1,39 @@
-$NetBSD: patch-aa,v 1.9 2001/06/07 09:23:20 itojun Exp $
+$NetBSD: patch-aa,v 1.10 2002/03/06 15:07:54 martti Exp $
 
---- INSTALL.sh.orig	Tue May  1 23:21:22 2001
-+++ INSTALL.sh	Thu Jun  7 17:50:31 2001
-@@ -7,39 +7,39 @@
- umask 022
- 
- test -t 0 &&
--cat <<EOF
--
--Warning: this script replaces existing sendmail or Postfix programs.
--Make backups if you want to be able to recover.
--
--In addition to doing a fresh install, this script can change an
--existing installation from using a world-writable maildrop to a
--group-writable one. It cannot be used to change Postfix queue
--file/directory ownership.
--
--Before installing files, this script prompts you for some definitions.
--Most definitions will be remembered, so you have to specify them
--only once. All definitions have a reasonable default value.
--
--    install_root - prefix for installed file names (for package building)
--
--    tempdir - where to write scratch files
--
--    config_directory - directory with Postfix configuration files.
--    daemon_directory - directory with Postfix daemon programs.
--    command_directory - directory with Postfix administrative commands.
--    queue_directory - directory with Postfix queues.
--
--    sendmail_path - full pathname of the Postfix sendmail command.
--    newaliases_path - full pathname of the Postfix newaliases command.
--    mailq_path - full pathname of the Postfix mailq command.
--
--    mail_owner - owner of Postfix queue files.
--
--    setgid - groupname, e.g., postdrop (default: no). See INSTALL section 12.
--    manpages - "no" or path to man tree. Example: /usr/local/man.
--
--EOF
-+#cat <<EOF
-+#
-+#Warning: this script replaces existing sendmail or Postfix programs.
-+#Make backups if you want to be able to recover.
-+#
-+#In addition to doing a fresh install, this script can change an
-+#existing installation from using a world-writable maildrop to a
-+#group-writable one. It cannot be used to change Postfix queue
-+#file/directory ownership.
-+#
-+#Before installing files, this script prompts you for some definitions.
-+#Most definitions will be remembered, so you have to specify them
-+#only once. All definitions have a reasonable default value.
-+#
-+#    install_root - prefix for installed file names (for package building)
-+#
-+#    tempdir - where to write scratch files
-+#
-+#    config_directory - directory with Postfix configuration files.
-+#    daemon_directory - directory with Postfix daemon programs.
-+#    command_directory - directory with Postfix administrative commands.
-+#    queue_directory - directory with Postfix queues.
-+#
-+#    sendmail_path - full pathname of the Postfix sendmail command.
-+#    newaliases_path - full pathname of the Postfix newaliases command.
-+#    mailq_path - full pathname of the Postfix mailq command.
-+#
-+#    mail_owner - owner of Postfix queue files.
-+#
-+#    setgid - groupname, e.g., postdrop (default: no). See INSTALL section 12.
-+#    manpages - "no" or path to man tree. Example: /usr/local/man.
-+#
-+#EOF
- 
- # By now, shells must have functions. Ultrix users must use sh5 or lose.
- # The following shell functions replace files/symlinks while minimizing
-@@ -109,35 +109,32 @@
- 
- : ${install_root=/}
+--- postfix-install.orig	Sat Feb 23 14:32:12 2002
++++ postfix-install	Tue Mar  5 13:44:11 2002
+@@ -348,33 +348,13 @@
  : ${tempdir=`pwd`}
--: ${config_directory=/etc/postfix}
--: ${daemon_directory=/usr/libexec/postfix}
--: ${command_directory=/usr/sbin}
-+: ${config_directory=__PREFIX/share/postfix}
-+: ${daemon_directory=__PREFIX/libexec/postfix}
-+: ${command_directory=__PREFIX/sbin}
- : ${queue_directory=/var/spool/postfix}
--if [ -f /usr/lib/sendmail ]
--    then : ${sendmail_path=/usr/lib/sendmail}
--    else : ${sendmail_path=/usr/sbin/sendmail}
--fi
--: ${newaliases_path=/usr/bin/newaliases}
--: ${mailq_path=/usr/bin/mailq}
-+: ${sendmail_path=__PREFIX/libexec/postfix/sendmail}
-+#: ${newaliases_path=/usr/bin/newaliases}
-+#: ${mailq_path=/usr/bin/mailq}
- : ${mail_owner=postfix}
--: ${setgid=no}
--: ${manpages=/usr/local/man}
-+: ${setgid=maildrop}
-+: ${manpages=__PREFIX/man}
+ : ${config_directory=`bin/postconf -h -d config_directory`}
  
- # Find out the location of configuration files.
- 
--test -t 0 &&
--for name in install_root tempdir config_directory
--do
--    while :
--    do
--	eval echo \$n "$name: [\$$name]\  \$c"
--	read ans
--	case $ans in
--	"") break;;
--	 *) eval $name=\$ans; break;;
--	esac
--    done
--done
-+#test -t 0 &&
-+#for name in install_root tempdir config_directory
-+#do
-+#    while :
-+#    do
-+#	eval echo \$n "$name: [\$$name]\  \$c"
-+#	read ans
-+#	case $ans in
-+#	"") break;;
-+#	 *) eval $name=\$ans; break;;
-+#	esac
-+#    done
-+#done
- 
- # Sanity checks
- 
-@@ -159,42 +156,42 @@
- 
- CONFIG_DIRECTORY=$install_root$config_directory
- 
--test -f $CONFIG_DIRECTORY/main.cf && {
--    for name in daemon_directory command_directory queue_directory mail_owner 
--    do
--	eval $name='"`bin/postconf -c $CONFIG_DIRECTORY -h $name`"' || kill $$
--    done
--}
+-# Find out the location of installed configuration files.
 -
--if [ -f $CONFIG_DIRECTORY/install.cf ]
--then
--    . $CONFIG_DIRECTORY/install.cf
--elif [ ! -t 0 -a -z "$install_root" ]
--then
--    echo Non-interactive install needs the $CONFIG_DIRECTORY/install.cf 1>&2
--    echo file from a previous Postfix installation. 1>&2
--    echo 1>&2
--    echo Use interactive installation instead. 1>&2
--    exit 1
--fi
-+#test -f $CONFIG_DIRECTORY/main.cf && {
-+#    for name in daemon_directory command_directory queue_directory mail_owner 
-+#    do
-+#	eval $name='"`bin/postconf -c $CONFIG_DIRECTORY -h $name`"' || kill $$
-+#    done
-+#}
-+
-+#if [ -f $CONFIG_DIRECTORY/install.cf ]
-+#then
-+#    . $CONFIG_DIRECTORY/install.cf
-+#elif [ ! -t 0 -a -z "$install_root" ]
-+#then
-+#    echo Non-interactive install needs the $CONFIG_DIRECTORY/install.cf 1>&2
-+#    echo file from a previous Postfix installation. 1>&2
-+#    echo 1>&2
-+#    echo Use interactive installation instead. 1>&2
-+#    exit 1
-+#fi
- 
- # Override default settings.
- 
--test -t 0 &&
--for name in daemon_directory command_directory \
--    queue_directory sendmail_path newaliases_path mailq_path mail_owner\
--    setgid manpages
+-test -z "$non_interactive" && for name in install_root tempdir config_directory
 -do
 -    while :
 -    do
+-	echo
+-	eval echo Please specify \$${name}_prompt | ${FMT}
 -	eval echo \$n "$name: [\$$name]\  \$c"
 -	read ans
 -	case $ans in
 -	"") break;;
--	 *) eval $name=\$ans; break;;
+-	 *) case $ans in
+-	    /*) eval $name=$ans; break;;
+-	     *) echo; echo $0: Error: $name should be an absolute path name. 1>&2;;
+-	    esac;;
 -	esac
 -    done
 -done
-+#test -t 0 &&
-+#for name in daemon_directory command_directory \
-+#    queue_directory sendmail_path newaliases_path mailq_path mail_owner\
-+#    setgid manpages
-+#do
-+#    while :
-+#    do
-+#	eval echo \$n "$name: [\$$name]\  \$c"
-+#	read ans
-+#	case $ans in
-+#	"") break;;
-+#	 *) eval $name=\$ans; break;;
-+#	esac
-+#    done
-+#done
+-
+ # In case some systems special-case pathnames beginning with //.
  
- # Sanity checks
+ case $install_root in
+ /) install_root=
+ esac
  
-@@ -242,10 +239,10 @@
+-CONFIG_DIRECTORY=$install_root$config_directory
++CONFIG_DIRECTORY=conf
  
- DAEMON_DIRECTORY=$install_root$daemon_directory
- COMMAND_DIRECTORY=$install_root$command_directory
--QUEUE_DIRECTORY=$install_root$queue_directory
-+QUEUE_DIRECTORY=$queue_directory
- SENDMAIL_PATH=$install_root$sendmail_path
--NEWALIASES_PATH=$install_root$newaliases_path
--MAILQ_PATH=$install_root$mailq_path
-+#NEWALIASES_PATH=$install_root$newaliases_path
-+#MAILQ_PATH=$install_root$mailq_path
- MANPAGES=$install_root$manpages
- 
- # Create any missing directories.
-@@ -254,7 +251,7 @@
- test -d $DAEMON_DIRECTORY || mkdir -p $DAEMON_DIRECTORY || exit 1
- test -d $COMMAND_DIRECTORY || mkdir -p $COMMAND_DIRECTORY || exit 1
- test -d $QUEUE_DIRECTORY || mkdir -p $QUEUE_DIRECTORY || exit 1
--for path in $SENDMAIL_PATH $NEWALIASES_PATH $MAILQ_PATH
-+for path in $SENDMAIL_PATH
- do
-     dir=`echo $path|sed -e 's/[/][/]*[^/]*$//' -e 's/^$/\//'`
-     test -d $dir || mkdir -p $dir || exit 1
-@@ -274,8 +271,8 @@
- 
- test -f bin/sendmail && {
-     compare_or_replace a+x,go-w bin/sendmail $SENDMAIL_PATH || exit 1
--    compare_or_symlink $SENDMAIL_PATH $NEWALIASES_PATH
--    compare_or_symlink $SENDMAIL_PATH $MAILQ_PATH
-+#    compare_or_symlink $SENDMAIL_PATH $NEWALIASES_PATH
-+#    compare_or_symlink $SENDMAIL_PATH $MAILQ_PATH
- }
- 
- if [ -f $CONFIG_DIRECTORY/main.cf ]
-@@ -300,13 +297,13 @@
-     "mail_owner = $mail_owner" \
- || exit 1
- 
--(echo "# This file was generated by $0"
--for name in sendmail_path newaliases_path mailq_path setgid manpages
--do
--    eval echo $name=\$$name
--done) >$tempdir/junk || exit 1
--compare_or_move a+x,go-w $tempdir/junk $CONFIG_DIRECTORY/install.cf || exit 1
--rm -f $tempdir/junk
-+#(echo "# This file was generated by $0"
-+#for name in sendmail_path newaliases_path mailq_path setgid manpages
-+#do
-+#    eval echo $name=\$$name
-+#done) >$tempdir/junk || exit 1
-+#compare_or_move a+x,go-w $tempdir/junk $CONFIG_DIRECTORY/install.cf || exit 1
-+#rm -f $tempdir/junk
- 
- # Use set-gid privileges instead of writable maildrop (optional).
- 
+ # If a parameter is not set via the command line or environment,
+ # try to use settings from installed configuration files.

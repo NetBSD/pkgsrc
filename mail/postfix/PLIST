@@ -1,4 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2002/02/15 10:12:48 skrll Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/03/06 15:07:54 martti Exp $
+bin/mailq
+bin/newaliases
 etc/mailer.conf.postfix
 libexec/postfix/bounce
 libexec/postfix/cleanup
@@ -7,63 +9,17 @@ libexec/postfix/flush
 libexec/postfix/lmtp
 libexec/postfix/local
 libexec/postfix/master
+libexec/postfix/nqmgr
 libexec/postfix/pickup
 libexec/postfix/pipe
 libexec/postfix/qmgr
-libexec/postfix/sendmail
+libexec/postfix/qmqpd
 libexec/postfix/showq
 libexec/postfix/smtp
 libexec/postfix/smtpd
 libexec/postfix/spawn
 libexec/postfix/trivial-rewrite
-sbin/postalias
-sbin/postcat
-sbin/postconf
-sbin/postdrop
-sbin/postfix
-sbin/postkick
-sbin/postlock
-sbin/postlog
-sbin/postmap
-sbin/postsuper
-share/postfix/LICENSE
-share/postfix/access
-share/postfix/aliases
-share/postfix/canonical
-share/postfix/main.cf
-share/postfix/main.cf.default
-share/postfix/main.cf.dist
-share/postfix/master.cf
-share/postfix/pcre_table
-share/postfix/postfix-script
-share/postfix/postfix-script-diff
-share/postfix/postfix-script-nosgid
-share/postfix/postfix-script-sgid
-share/postfix/regexp_table
-share/postfix/relocated
-share/postfix/sample-aliases.cf
-share/postfix/sample-auth.cf
-share/postfix/sample-canonical.cf
-share/postfix/sample-compatibility.cf
-share/postfix/sample-debug.cf
-share/postfix/sample-filter.cf
-share/postfix/sample-flush.cf
-share/postfix/sample-ldap.cf
-share/postfix/sample-lmtp.cf
-share/postfix/sample-local.cf
-share/postfix/sample-misc.cf
-share/postfix/sample-pcre.cf
-share/postfix/sample-rate.cf
-share/postfix/sample-regexp.cf
-share/postfix/sample-relocated.cf
-share/postfix/sample-resource.cf
-share/postfix/sample-rewrite.cf
-share/postfix/sample-smtp.cf
-share/postfix/sample-smtpd.cf
-share/postfix/sample-transport.cf
-share/postfix/sample-virtual.cf
-share/postfix/transport
-share/postfix/virtual
+libexec/postfix/virtual
 man/man1/mailq.1
 man/man1/newaliases.1
 man/man1/postalias.1
@@ -75,6 +31,7 @@ man/man1/postkick.1
 man/man1/postlock.1
 man/man1/postlog.1
 man/man1/postmap.1
+man/man1/postqueue.1
 man/man1/postsuper.1
 man/man1/sendmail.1
 man/man5/access.5
@@ -93,20 +50,90 @@ man/man8/flush.8
 man/man8/lmtp.8
 man/man8/local.8
 man/man8/master.8
+man/man8/nqmgr.8
 man/man8/pickup.8
 man/man8/pipe.8
 man/man8/qmgr.8
+man/man8/qmqpd.8
 man/man8/showq.8
 man/man8/smtp.8
 man/man8/smtpd.8
 man/man8/spawn.8
 man/man8/trivial-rewrite.8
-@dirrm share/postfix
-@dirrm share/doc/postfix
-@dirrm libexec/postfix
+man/man8/virtual.8
+sbin/postalias
+sbin/postcat
+sbin/postconf
+sbin/postdrop
+sbin/postfix
+sbin/postkick
+sbin/postlock
+sbin/postlog
+sbin/postmap
+sbin/postqueue
+sbin/postsuper
+sbin/sendmail
+share/doc/postfix/DB_README
+share/doc/postfix/DEBUG_README
+share/doc/postfix/ETRN_README
+share/doc/postfix/FILTER_README
+share/doc/postfix/INSTALL
+share/doc/postfix/LDAP_README
+share/doc/postfix/LINUX_README
+share/doc/postfix/LMTP_README
+share/doc/postfix/MACOSX_README
+share/doc/postfix/MYSQL_README
+share/doc/postfix/NFS_README
+share/doc/postfix/PACKAGE_README
+share/doc/postfix/PCRE_README
+share/doc/postfix/QMQP_README
+share/doc/postfix/RESTRICTION_CLASS_README
+share/doc/postfix/SASL_README
+share/doc/postfix/ULTRIX_README
+share/doc/postfix/UUCP_README
+share/doc/postfix/VERP_README
+share/doc/postfix/VIRTUAL_README
+share/postfix/main.cf
+share/postfix/master.cf
+share/postfix/post-install
+share/postfix/postfix-files
+share/postfix/postfix-script
+share/postfix/sample-aliases.cf
+share/postfix/sample-auth.cf
+share/postfix/sample-canonical.cf
+share/postfix/sample-compatibility.cf
+share/postfix/sample-debug.cf
+share/postfix/sample-filter.cf
+share/postfix/sample-flush.cf
+share/postfix/sample-ldap.cf
+share/postfix/sample-lmtp.cf
+share/postfix/sample-local.cf
+share/postfix/sample-misc.cf
+share/postfix/sample-pcre-access.cf
+share/postfix/sample-pcre-body.cf
+share/postfix/sample-pcre-header.cf
+share/postfix/sample-qmqpd.cf
+share/postfix/sample-rate.cf
+share/postfix/sample-regexp-access.cf
+share/postfix/sample-regexp-body.cf
+share/postfix/sample-regexp-header.cf
+share/postfix/sample-relocated.cf
+share/postfix/sample-resource.cf
+share/postfix/sample-rewrite.cf
+share/postfix/sample-smtp.cf
+share/postfix/sample-smtpd.cf
+share/postfix/sample-transport.cf
+share/postfix/sample-virtual.cf
 @exec ${MKDIR} -p /etc/postfix
 @exec if [ ! -f /etc/postfix/main.cf ]; then cp %D/share/postfix/main.cf /etc/postfix ; fi
 @exec if [ ! -f /etc/postfix/master.cf ]; then cp %D/share/postfix/master.cf /etc/postfix ; fi
 @exec if [ ! -d /var/spool/postfix ]; then ${MKDIR} /var/spool/postfix; ${CHMOD} 755 /var/spool/postfix ; fi
+@exec ln -sf %D/share/postfix/post-install /etc/postfix
+@unexec ${RM} -f /etc/postfix/post-install
+@exec ln -sf %D/share/postfix/postfix-files /etc/postfix
+@unexec ${RM} -f /etc/postfix/postfix-files
 @exec ln -sf %D/share/postfix/postfix-script /etc/postfix
 @unexec ${RM} -f /etc/postfix/postfix-script
+@dirrm libexec/postfix
+@dirrm share/doc/postfix
+@dirrm share/postfix
