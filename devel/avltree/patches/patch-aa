@@ -1,18 +1,62 @@
-$NetBSD: patch-aa,v 1.2 2000/01/20 11:13:05 agc Exp $
+$NetBSD: patch-aa,v 1.3 2000/09/25 18:52:03 skrll Exp $
 
-Use a BSD-style Makefile for this package
-
---- /dev/null	Thu Jan 20 10:30:51 2000
-+++ bsd.mk	Thu Jan 20 10:51:12 2000
-@@ -0,0 +1,11 @@
-+LIB= avltree
-+SRCS= avltree.c
-+SHLIB_MAJOR=1
-+SHLIB_MINOR=1
-+MAN= avltree.3
-+INCS= avltree.h
-+LIBDIR=${PREFIX}/lib
-+MANDIR=${PREFIX}/man
-+INCSDIR=${PREFIX}/include
-+
+--- Makefile.orig	Thu Jan 13 21:04:47 2000
++++ Makefile
+@@ -1,46 +1,15 @@
+-# makefile for:		avltree
+-# version:		1.1
+-# Date created:		13 January 2000
+-# Whom:			Bill Ross <bross@nas.nasa.gov> <ross@cgl.ucsf.edu>
+-#
+-CC=	cc
++LIB=	avltree
++SRCS=	avltree.c
+ 
+-all:		libavltree.a
++SHLIB_MAJOR=	1
++SHLIB_MINOR=	1
++SHLIB_FULLVERSION=${SHLIB_MAJOR}.${SHLIB_MINOR}
+ 
+-libavltree.a:	avltree.o
+-		$(AR) r  libavltree.a avltree.o
+-		strip libavltree.a
++MAN=	avltree.3
++INCS=	avltree.h
+ 
+-avltree.o: 	avltree.c avltree.h
+-		$(CC) -c avltree.c
++LIBDIR=		${PREFIX}/lib
++MANDIR=		${PREFIX}/man
++INCSDIR=	${PREFIX}/include
+ 
+-install:	libavltree.a
+-		install -c libavltree.a $(PREFIX)/lib
+-		install -c avltree.h $(PREFIX)/include
+-		gzip -c avltree.3 > $(PREFIX)/man/man3/avltree.3.gz
+-
+-##################
+-# additional stuff for test, benchmark; not installed
+-
+-extras:		test bench1 bench2
+-
+-test:		test.o libavltree.a
+-		$(CC) -o test test.o libavltree.a
+-
+-bench1:		avl_bench.o libavltree.a
+-		$(CC) -o bench1 avl_bench.o libavltree.a
+-
+-bench2:		avl_bench.o db_avl.o
+-		$(CC) -o bench2 avl_bench.o db_avl.o
+-
+-bench3:		avl_bench.o bp_avl.o
+-		$(CC) -o bench3 avl_bench.o bp_avl.o bplus.a
+-
+-#
+-##################
+-
+-clean:
+-		@rm -f *.o
+-
+-clobber:	clean
+-		@rm -f *.a test bench1 bench2 bench3 *.core
 +.include <bsd.lib.mk>
