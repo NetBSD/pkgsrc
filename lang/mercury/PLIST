@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/02/18 15:14:26 seb Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/03/18 07:58:35 fredb Exp $
 bin/c2init
 bin/canonical_grade
 bin/info_to_mdb
@@ -47,8 +47,8 @@ info/mercury_user_guide.info-2
 info/mercury_user_guide.info-3
 info/mercury_user_guide.info-4
 @exec ${INSTALL_INFO} --info-dir=%D/info %D/info/mercury.info
-lib/mercury/bin/${MACHINE_ARCH}--${LOWER_OPSYS}/mercury_compile
-lib/mercury/bin/${MACHINE_ARCH}--${LOWER_OPSYS}/mercury_profile
+lib/mercury/bin/${MACHINE_GNU_PLATFORM}/mercury_compile
+lib/mercury/bin/${MACHINE_GNU_PLATFORM}/mercury_profile
 lib/mercury/inc/gc.h
 lib/mercury/inc/machdeps/i386_regs.h
 lib/mercury/inc/machdeps/alpha_regs.h
@@ -545,43 +545,43 @@ lib/mercury/ints/varset.int2
 lib/mercury/ints/varset.int3
 lib/mercury/ints/varset.opt
 lib/mercury/ints/varset.trans_opt
-lib/mercury/lib/${MACHINE_ARCH}--${LOWER_OPSYS}/libgc.a
-lib/mercury/lib/asm_fast.gc.memprof/${MACHINE_ARCH}--${LOWER_OPSYS}/libmer_browser.a
-lib/mercury/lib/asm_fast.gc.memprof/${MACHINE_ARCH}--${LOWER_OPSYS}/libmer_rt.a
-lib/mercury/lib/asm_fast.gc.memprof/${MACHINE_ARCH}--${LOWER_OPSYS}/libmer_std.a
-lib/mercury/lib/asm_fast.gc.memprof/${MACHINE_ARCH}--${LOWER_OPSYS}/libmer_trace.a
-lib/mercury/lib/asm_fast.gc.prof/${MACHINE_ARCH}--${LOWER_OPSYS}/libmer_browser.a
-lib/mercury/lib/asm_fast.gc.prof/${MACHINE_ARCH}--${LOWER_OPSYS}/libmer_rt.a
-lib/mercury/lib/asm_fast.gc.prof/${MACHINE_ARCH}--${LOWER_OPSYS}/libmer_std.a
-lib/mercury/lib/asm_fast.gc.prof/${MACHINE_ARCH}--${LOWER_OPSYS}/libmer_trace.a
-lib/mercury/lib/asm_fast.gc.tr.debug/${MACHINE_ARCH}--${LOWER_OPSYS}/libmer_browser.a
-lib/mercury/lib/asm_fast.gc.tr.debug/${MACHINE_ARCH}--${LOWER_OPSYS}/libmer_rt.a
-lib/mercury/lib/asm_fast.gc.tr.debug/${MACHINE_ARCH}--${LOWER_OPSYS}/libmer_std.a
-lib/mercury/lib/asm_fast.gc.tr.debug/${MACHINE_ARCH}--${LOWER_OPSYS}/libmer_trace.a
-lib/mercury/lib/asm_fast.gc.tr/${MACHINE_ARCH}--${LOWER_OPSYS}/libmer_browser.a
-lib/mercury/lib/asm_fast.gc.tr/${MACHINE_ARCH}--${LOWER_OPSYS}/libmer_rt.a
-lib/mercury/lib/asm_fast.gc.tr/${MACHINE_ARCH}--${LOWER_OPSYS}/libmer_std.a
-lib/mercury/lib/asm_fast.gc.tr/${MACHINE_ARCH}--${LOWER_OPSYS}/libmer_trace.a
-lib/mercury/lib/asm_fast.gc/${MACHINE_ARCH}--${LOWER_OPSYS}/libmer_browser.a
-lib/mercury/lib/asm_fast.gc/${MACHINE_ARCH}--${LOWER_OPSYS}/libmer_rt.a
-lib/mercury/lib/asm_fast.gc/${MACHINE_ARCH}--${LOWER_OPSYS}/libmer_std.a
-lib/mercury/lib/asm_fast.gc/${MACHINE_ARCH}--${LOWER_OPSYS}/libmer_trace.a
-lib/mercury/lib/asm_fast.prof/${MACHINE_ARCH}--${LOWER_OPSYS}/libmer_browser.a
-lib/mercury/lib/asm_fast.prof/${MACHINE_ARCH}--${LOWER_OPSYS}/libmer_rt.a
-lib/mercury/lib/asm_fast.prof/${MACHINE_ARCH}--${LOWER_OPSYS}/libmer_std.a
-lib/mercury/lib/asm_fast.prof/${MACHINE_ARCH}--${LOWER_OPSYS}/libmer_trace.a
-lib/mercury/lib/asm_fast/${MACHINE_ARCH}--${LOWER_OPSYS}/libmer_browser.a
-lib/mercury/lib/asm_fast/${MACHINE_ARCH}--${LOWER_OPSYS}/libmer_rt.a
-lib/mercury/lib/asm_fast/${MACHINE_ARCH}--${LOWER_OPSYS}/libmer_std.a
-lib/mercury/lib/asm_fast/${MACHINE_ARCH}--${LOWER_OPSYS}/libmer_trace.a
-lib/mercury/lib/hlc.gc/${MACHINE_ARCH}--${LOWER_OPSYS}/libmer_browser.a
-lib/mercury/lib/hlc.gc/${MACHINE_ARCH}--${LOWER_OPSYS}/libmer_rt.a
-lib/mercury/lib/hlc.gc/${MACHINE_ARCH}--${LOWER_OPSYS}/libmer_std.a
-lib/mercury/lib/hlc.gc/${MACHINE_ARCH}--${LOWER_OPSYS}/libmer_trace.a
-lib/mercury/lib/hlc.par.gc/${MACHINE_ARCH}--${LOWER_OPSYS}/libmer_browser.a
-lib/mercury/lib/hlc.par.gc/${MACHINE_ARCH}--${LOWER_OPSYS}/libmer_rt.a
-lib/mercury/lib/hlc.par.gc/${MACHINE_ARCH}--${LOWER_OPSYS}/libmer_std.a
-lib/mercury/lib/hlc.par.gc/${MACHINE_ARCH}--${LOWER_OPSYS}/libmer_trace.a
+lib/mercury/lib/${MACHINE_GNU_PLATFORM}/libgc.a
+lib/mercury/lib/asm_fast.gc.memprof/${MACHINE_GNU_PLATFORM}/libmer_browser.a
+lib/mercury/lib/asm_fast.gc.memprof/${MACHINE_GNU_PLATFORM}/libmer_rt.a
+lib/mercury/lib/asm_fast.gc.memprof/${MACHINE_GNU_PLATFORM}/libmer_std.a
+lib/mercury/lib/asm_fast.gc.memprof/${MACHINE_GNU_PLATFORM}/libmer_trace.a
+lib/mercury/lib/asm_fast.gc.prof/${MACHINE_GNU_PLATFORM}/libmer_browser.a
+lib/mercury/lib/asm_fast.gc.prof/${MACHINE_GNU_PLATFORM}/libmer_rt.a
+lib/mercury/lib/asm_fast.gc.prof/${MACHINE_GNU_PLATFORM}/libmer_std.a
+lib/mercury/lib/asm_fast.gc.prof/${MACHINE_GNU_PLATFORM}/libmer_trace.a
+lib/mercury/lib/asm_fast.gc.tr.debug/${MACHINE_GNU_PLATFORM}/libmer_browser.a
+lib/mercury/lib/asm_fast.gc.tr.debug/${MACHINE_GNU_PLATFORM}/libmer_rt.a
+lib/mercury/lib/asm_fast.gc.tr.debug/${MACHINE_GNU_PLATFORM}/libmer_std.a
+lib/mercury/lib/asm_fast.gc.tr.debug/${MACHINE_GNU_PLATFORM}/libmer_trace.a
+lib/mercury/lib/asm_fast.gc.tr/${MACHINE_GNU_PLATFORM}/libmer_browser.a
+lib/mercury/lib/asm_fast.gc.tr/${MACHINE_GNU_PLATFORM}/libmer_rt.a
+lib/mercury/lib/asm_fast.gc.tr/${MACHINE_GNU_PLATFORM}/libmer_std.a
+lib/mercury/lib/asm_fast.gc.tr/${MACHINE_GNU_PLATFORM}/libmer_trace.a
+lib/mercury/lib/asm_fast.gc/${MACHINE_GNU_PLATFORM}/libmer_browser.a
+lib/mercury/lib/asm_fast.gc/${MACHINE_GNU_PLATFORM}/libmer_rt.a
+lib/mercury/lib/asm_fast.gc/${MACHINE_GNU_PLATFORM}/libmer_std.a
+lib/mercury/lib/asm_fast.gc/${MACHINE_GNU_PLATFORM}/libmer_trace.a
+lib/mercury/lib/asm_fast.prof/${MACHINE_GNU_PLATFORM}/libmer_browser.a
+lib/mercury/lib/asm_fast.prof/${MACHINE_GNU_PLATFORM}/libmer_rt.a
+lib/mercury/lib/asm_fast.prof/${MACHINE_GNU_PLATFORM}/libmer_std.a
+lib/mercury/lib/asm_fast.prof/${MACHINE_GNU_PLATFORM}/libmer_trace.a
+lib/mercury/lib/asm_fast/${MACHINE_GNU_PLATFORM}/libmer_browser.a
+lib/mercury/lib/asm_fast/${MACHINE_GNU_PLATFORM}/libmer_rt.a
+lib/mercury/lib/asm_fast/${MACHINE_GNU_PLATFORM}/libmer_std.a
+lib/mercury/lib/asm_fast/${MACHINE_GNU_PLATFORM}/libmer_trace.a
+lib/mercury/lib/hlc.gc/${MACHINE_GNU_PLATFORM}/libmer_browser.a
+lib/mercury/lib/hlc.gc/${MACHINE_GNU_PLATFORM}/libmer_rt.a
+lib/mercury/lib/hlc.gc/${MACHINE_GNU_PLATFORM}/libmer_std.a
+lib/mercury/lib/hlc.gc/${MACHINE_GNU_PLATFORM}/libmer_trace.a
+lib/mercury/lib/hlc.par.gc/${MACHINE_GNU_PLATFORM}/libmer_browser.a
+lib/mercury/lib/hlc.par.gc/${MACHINE_GNU_PLATFORM}/libmer_rt.a
+lib/mercury/lib/hlc.par.gc/${MACHINE_GNU_PLATFORM}/libmer_std.a
+lib/mercury/lib/hlc.par.gc/${MACHINE_GNU_PLATFORM}/libmer_trace.a
 lib/mercury/mdb/mdbrc
 lib/mercury/mmake/Mmake.rules
 lib/mercury/mmake/Mmake.vars
@@ -832,30 +832,30 @@ share/examples/mercury/tests/subdir_runtests
 @dirrm lib/mercury/modules
 @dirrm lib/mercury/mmake
 @dirrm lib/mercury/mdb
-@dirrm lib/mercury/lib/hlc.par.gc/${MACHINE_ARCH}--${LOWER_OPSYS}
+@dirrm lib/mercury/lib/hlc.par.gc/${MACHINE_GNU_PLATFORM}}
 @dirrm lib/mercury/lib/hlc.par.gc
-@dirrm lib/mercury/lib/hlc.gc/${MACHINE_ARCH}--${LOWER_OPSYS}
+@dirrm lib/mercury/lib/hlc.gc/${MACHINE_GNU_PLATFORM}
 @dirrm lib/mercury/lib/hlc.gc
-@dirrm lib/mercury/lib/asm_fast/${MACHINE_ARCH}--${LOWER_OPSYS}
-@dirrm lib/mercury/lib/asm_fast.prof/${MACHINE_ARCH}--${LOWER_OPSYS}
+@dirrm lib/mercury/lib/asm_fast/${MACHINE_GNU_PLATFORM}
+@dirrm lib/mercury/lib/asm_fast.prof/${MACHINE_GNU_PLATFORM}
 @dirrm lib/mercury/lib/asm_fast.prof
-@dirrm lib/mercury/lib/asm_fast.gc/${MACHINE_ARCH}--${LOWER_OPSYS}
-@dirrm lib/mercury/lib/asm_fast.gc.tr/${MACHINE_ARCH}--${LOWER_OPSYS}
-@dirrm lib/mercury/lib/asm_fast.gc.tr.debug/${MACHINE_ARCH}--${LOWER_OPSYS}
+@dirrm lib/mercury/lib/asm_fast.gc/${MACHINE_GNU_PLATFORM}
+@dirrm lib/mercury/lib/asm_fast.gc.tr/${MACHINE_GNU_PLATFORM}
+@dirrm lib/mercury/lib/asm_fast.gc.tr.debug/${MACHINE_GNU_PLATFORM}
 @dirrm lib/mercury/lib/asm_fast.gc.tr.debug
 @dirrm lib/mercury/lib/asm_fast.gc.tr
-@dirrm lib/mercury/lib/asm_fast.gc.prof/${MACHINE_ARCH}--${LOWER_OPSYS}
+@dirrm lib/mercury/lib/asm_fast.gc.prof/${MACHINE_GNU_PLATFORM}
 @dirrm lib/mercury/lib/asm_fast.gc.prof
-@dirrm lib/mercury/lib/asm_fast.gc.memprof/${MACHINE_ARCH}--${LOWER_OPSYS}
+@dirrm lib/mercury/lib/asm_fast.gc.memprof/${MACHINE_GNU_PLATFORM}
 @dirrm lib/mercury/lib/asm_fast.gc.memprof
 @dirrm lib/mercury/lib/asm_fast.gc
 @dirrm lib/mercury/lib/asm_fast
-@dirrm lib/mercury/lib/${MACHINE_ARCH}--${LOWER_OPSYS}
+@dirrm lib/mercury/lib/${MACHINE_GNU_PLATFORM}
 @dirrm lib/mercury/lib
 @dirrm lib/mercury/ints/Mercury
 @dirrm lib/mercury/ints
 @dirrm lib/mercury/inc/machdeps
 @dirrm lib/mercury/inc
-@dirrm lib/mercury/bin/${MACHINE_ARCH}--${LOWER_OPSYS}
+@dirrm lib/mercury/bin/${MACHINE_GNU_PLATFORM}
 @dirrm lib/mercury/bin
 @dirrm lib/mercury

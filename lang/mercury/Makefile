@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/02/18 15:14:26 seb Exp $
+# $NetBSD: Makefile,v 1.6 2002/03/18 07:58:35 fredb Exp $
 
 DISTNAME=		mercury-compiler-0.10.1
 PKGNAME=		mercury-0.10.1
@@ -25,9 +25,9 @@ CONFIGURE_ENV+=		BOEHM_GC_DIR=${BOEHM_GC_DIR}
 CONFIGURE_ENV+=		CC=gcc
 
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/lib/mercury/lib/${MACHINE_ARCH}--${LOWER_OPSYS}
+	${INSTALL_DATA_DIR} ${PREFIX}/lib/mercury/lib/${MACHINE_GNU_PLATFORM}
 	${LN} -sf ${PREFIX}/lib/libgc.a \
-		${PREFIX}/lib/mercury/lib/${MACHINE_ARCH}--${LOWER_OPSYS}/libgc.a
+		${PREFIX}/lib/mercury/lib/${MACHINE_GNU_PLATFORM}/libgc.a
 	${LN} -sf ${PREFIX}/include/gc.h ${PREFIX}/lib/mercury/inc/gc.h
 	${FIND} ${WRKSRC} -type d -name "CVS" | ${XARGS} ${RM} -fr
 	${FIND} ${WRKSRC} -type f -name ".cvsignore" | ${XARGS} ${RM} -f
