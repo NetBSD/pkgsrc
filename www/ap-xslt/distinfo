@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2001/10/23 17:21:56 jwise Exp $
+$NetBSD: distinfo,v 1.3 2002/01/05 21:18:03 jwise Exp $
 
 SHA1 (modxslt.tar.gz) = 136edef75ef6caf53eb865102a2ebfa15383df47
 Size (modxslt.tar.gz) = 11693 bytes
-SHA1 (patch-aa) = c5615792fac77828431a9fa6cabe4ff07b5654e4
+SHA1 (patch-aa) = 8261947da9bde091ccbc9e55b40a74e984445649
 SHA1 (patch-ab) = 2c93353e7a296602cb19d2fca3f0213f867e4d42
