@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2463 2004/11/25 19:40:46 snj Exp $
+$NetBSD: TODO,v 1.2464 2004/11/25 19:44:15 minskim Exp $
 
 Suggested new packages
 ======================
@@ -253,7 +253,6 @@ Suggested package updates
 	o AiCA-0.81
 	o ArX-2.1.1
 	o BasiliskII-1.0.20041109
-	o Cg-1.3.0beta2
 	o Chinput-3.0.1
 	o GMT-4.0
 	o GUIlib-1.1.1
