@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/07/13 13:53:01 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2004/01/10 19:14:18 kristerw Exp $
 # FreeBSD Id: Makefile,v 1.8 1998/04/11 04:21:19 jseger Exp
 #
 
@@ -9,7 +9,7 @@ CATEGORIES=	net games
 MASTER_SITES=	ftp://tf.tcp.com/pub/tinyfugue/ \
 		ftp://laurel.actlab.utexas.edu/pub/tinyfugue/
 
-MAINTAINER=	packages@NetBSD.ORG
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://tf.tcp.com/~hawkeye/tf/
 COMMENT=	Popular programmable MUD client, with macro support and more
 
