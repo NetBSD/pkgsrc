@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.3 1998/12/18 23:53:16 tron Exp $
+
+--- Makefile.in.orig	Sat Dec 19 00:07:51 1998
++++ Makefile.in	Sat Dec 19 00:07:22 1998
+@@ -118,7 +118,7 @@
+ xinput_progs = @xinput_progs@
+ 
+ SRC_SUBDIRS = gdk gtk
+-SUBDIRS = po $(SRC_SUBDIRS) docs
++SUBDIRS = $(SRC_SUBDIRS) docs
+ 
+ bin_SCRIPTS = gtk-config
+ 
