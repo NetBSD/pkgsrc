@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/07/23 11:36:01 agc Exp $
+# $NetBSD: Makefile,v 1.4 2002/08/01 05:48:19 jlam Exp $
 
 DISTNAME=		ntop-2.1
 PKGNAME=		ntop2-2.1
@@ -21,7 +21,7 @@ USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 USE_BUILDLINK_ONLY=	yes
 
-USE_PTHREAD=		native pth
+PTHREAD_OPTS+=		require
 
 .include "../../net/libpcap/buildlink.mk"
 .include "../../devel/ncurses/buildlink.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.3 2002/06/08 23:41:56 veego Exp $
+# $NetBSD: Makefile.common,v 1.4 2002/08/01 05:48:13 jlam Exp $
 
 MPLAYER_DIST_VERSION=	0.90pre5
 
@@ -32,7 +32,7 @@ NO_SRC_ON_FTP=		${RESTRICTED}
 USE_GMAKE=		YES
 HAS_CONFIGURE=		YES
 
-USE_PTHREAD=		native pth
+PTHREAD_OPTS+=		require
 
 CONFIGURE_ARGS+=	--prefix="${PREFIX}"
 CONFIGURE_ARGS+=	--with-extraincdir="${BUILDLINK_DIR}/include"
