@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2002/02/13 16:41:40 tron Exp $
+@comment $NetBSD: PLIST,v 1.4 2002/04/09 09:53:54 itojun Exp $
 bin/encode_keychange
 bin/mib2c
 bin/snmpbulkget
@@ -67,15 +67,15 @@ include/ucd-snmp/version.h
 lib/libsnmp.a
 lib/libsnmp.la
 lib/libsnmp.so
-lib/libsnmp-0.4.2.3.so
+lib/libsnmp-0.4.2.4.so
 lib/libucdagent.a
 lib/libucdagent.la
 lib/libucdagent.so
-lib/libucdagent-0.4.2.3.so
+lib/libucdagent-0.4.2.4.so
 lib/libucdmibs.a
 lib/libucdmibs.la
 lib/libucdmibs.so
-lib/libucdmibs-0.4.2.3.so
+lib/libucdmibs-0.4.2.4.so
 man/man1/snmpbulkget.1
 man/man1/snmpbulkwalk.1
 man/man1/snmpcmd.1

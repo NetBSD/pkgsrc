@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.39 2002/02/14 09:40:31 tron Exp $
+# $NetBSD: Makefile,v 1.40 2002/04/09 09:53:54 itojun Exp $
 
-DISTNAME=	ucd-snmp-4.2.3
-PKGREVISION=	1
+DISTNAME=	ucd-snmp-4.2.4
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=net-snmp/} \
 		ftp://ucd-snmp.ucdavis.edu/ \
