@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4092 2003/12/14 12:04:52 markd Exp $
+$NetBSD: CHANGES,v 1.4093 2003/12/14 12:39:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5125,3 +5125,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated diffstat to 1.34 [jmmv 2003-12-14]
 	Updated kile to 1.6 [markd 2003-12-14]
 	Updated ivtools to 1.1.2 [markd 2003-12-14]
+	Updated gperiodic to 2.0.7 [wiz 2003-12-14]
