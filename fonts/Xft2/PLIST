@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/09/19 15:46:52 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/10/03 20:13:52 xtraeme Exp $
 bin/xft-config
 include/X11/Xft/Xft.h
 include/X11/Xft/XftCompat.h
@@ -6,7 +6,7 @@ lib/libXft.a
 lib/libXft.la
 lib/libXft.so
 lib/libXft.so.2
-lib/libXft.so.2.1
+${LIBXFT}lib/libXft.so.2.1
 lib/pkgconfig/xft.pc
 man/man3/Xft.3
 @dirrm include/X11/Xft
