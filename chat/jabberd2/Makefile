@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/06/26 11:21:46 abs Exp $
+# $NetBSD: Makefile,v 1.5 2004/07/06 00:10:57 xtraeme Exp $
 #
 
 DISTNAME=		jabberd-2.0s2
@@ -28,7 +28,6 @@ SUBST_SED.path=		-e "s,/usr/local,${PREFIX},g"			\
 			-e "s,\$sysconfdir/jabberd,\$sysconfdir,g"
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
-#CONFIGURE_ARGS+=	--enable-debug
 
 REPLACE_PERL=		tools/pipe-auth.pl
 
@@ -41,7 +40,7 @@ BUILD_DEFS+=	JABBERD_USER JABBERD_STATIC				\
 # This specify the actual method which will be used for authenticate
 # the users/accounts.
 #
-# JABBERD_AUTH_METHOD has 4 available options:
+# JABBERD_AUTH_METHOD has 5 available options:
 #
 # db (by default)
 # mysql (MySQL)
@@ -147,7 +146,7 @@ post-extract:
 .undef f
 
 pre-configure:
-.for f in ${FILES}
+.for f in ${FILES} jabberd.cfg
 	@${SED}								\
 		-e "s|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g"		\
 		-e "s|@PIDDIR@|${JABBERD_PIDDIR}|g"			\
@@ -158,10 +157,6 @@ pre-configure:
 		${WRKSRC}/etc/${f}.in > ${WRKSRC}/etc/${f}
 .endfor
 .undef f
-	@${SED}								\
-		-e "s|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g"		\
-		-e "s|@BINDIR@|${PREFIX}/bin|g "			\
-		${WRKSRC}/etc/jabberd.cfg.in > ${WRKSRC}/etc/jabberd.cfg
 
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
