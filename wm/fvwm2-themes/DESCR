@@ -1,0 +1,7 @@
+fvwm2-themes gives to a novice fvwm2 user a complete fvwm2 configuration with
+precreated themes. The user doesn't need to know any fvwm2 syntax to start
+using a reasonably powerful and themeable fvwm2 setup. All he needs is to
+install the latest fvwm2, the latest fvwm2-themes and start fvwm-themes-start.
+On the other hand, fvwm2-themes gives to a more experience user an ability to
+create his own personal parts (so called personal theme) to use with other
+theme components or even to create a completely new theme.
