@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.80 2005/02/27 08:52:07 jmmv Exp $
+# $NetBSD: Makefile,v 1.81 2005/03/18 18:56:04 jmmv Exp $
 
 DISTNAME=	gaim-1.1.4
+PKGREVISION=	1
 CATEGORIES=	chat x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gaim/}
 EXTRACT_SUFX=	.tar.bz2
@@ -24,13 +25,17 @@ GNU_CONFIGURE=		yes
 SHLIBTOOL_OVERRIDE=	libtool
 
 CONFIGURE_ARGS+=	--disable-binreloc
-CONFIGURE_ARGS+=	--with-silc-includes=${BUILDLINK_PREFIX.silc-toolkit}/include/silc
-CONFIGURE_ARGS+=	--with-silc-libs=${BUILDLINK_PREFIX.silc-toolkit}/lib/silc
+CONFIGURE_ARGS+=	--disable-gnutls
 CONFIGURE_ARGS+=	--disable-nas
 CONFIGURE_ARGS+=	--disable-perl
-CONFIGURE_ARGS+=	--disable-nss
 CONFIGURE_ARGS+=	--disable-tcl
 CONFIGURE_ARGS+=	--disable-gevolution
+CONFIGURE_ARGS+=	--with-nspr-includes=${BUILDLINK_PREFIX.nspr}/include/nspr
+CONFIGURE_ARGS+=	--with-nspr-libs=${BUILDLINK_PREFIX.nspr}/lib/nspr
+CONFIGURE_ARGS+=	--with-nss-includes=${BUILDLINK_PREFIX.nss}/include/nss/nss
+CONFIGURE_ARGS+=	--with-nss-libs=${BUILDLINK_PREFIX.nss}/lib/nss
+CONFIGURE_ARGS+=	--with-silc-includes=${BUILDLINK_PREFIX.silc-toolkit}/include/silc
+CONFIGURE_ARGS+=	--with-silc-libs=${BUILDLINK_PREFIX.silc-toolkit}/lib/silc
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -43,9 +48,9 @@ CONFIGURE_ARGS+=	--disable-screensaver
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/nss/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../devel/silc-toolkit/buildlink3.mk"
-.include "../../security/gnutls/buildlink3.mk"
 .include "../../textproc/gtkspell/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/startup-notification/buildlink3.mk"
