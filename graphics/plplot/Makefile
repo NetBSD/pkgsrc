@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2001/02/05 09:00:59 tron Exp $
+# $NetBSD: Makefile,v 1.7 2001/02/14 11:19:16 jtb Exp $
 
-DISTNAME=	plplot-5.0.1
+DISTNAME=	plplot-5.0.2
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=plplot/}
 
@@ -21,15 +21,16 @@ USE_X11=	YES
 EVAL_PREFIX+=	TK_PREFIX=tk TCL_PREFIX=tcl
 
 CONFIGURE_ENV+=	"BIN_DIR=${PREFIX}/bin"
-CONFIGURE_ENV+=	"LIB_DIR=${PREFIX}/lib/plplot"
+CONFIGURE_ENV+=	"LIB_DIR=${PREFIX}/lib"
 CONFIGURE_ENV+=	"INCLUDE_DIR=${PREFIX}/include/plplot"
+CONFIGURE_ENV+=	"DATA_DIR=${PREFIX}/libdata/plplot"
 CONFIGURE_ENV+=	"DOC_DIR=${PREFIX}/share/doc/plplot"
 CONFIGURE_ENV+=	"DEMOS_DIR=${PREFIX}/share/examples/plplot"
+CONFIGURE_ENV+=	"TCL_DIR=${PREFIX}/lib/tcl/plplot"
 CONFIGURE_ENV+=	"TKINCDIR=${TK_PREFIX}/include"
 CONFIGURE_ENV+=	"TKLIBDIR=${TK_PREFIX}/lib"
 CONFIGURE_ENV+=	"TCLINCDIR=${TCL_PREFIX}/include"
 CONFIGURE_ENV+=	"TCLLIBDIR=${TCL_PREFIX}/lib"
-CONFIGURE_ENV+=	"TCL_DIR=${PREFIX}/lib/tcl/plplot"
 CONFIGURE_ENV+=	"USER_FLAGS_C=${CFLAGS}"
 CONFIGURE_ENV+=	"USER_FLAGS_LC=${LDFLAGS}"
 CONFIGURE_ENV+=	"USER_FLAGS_CXX=${CXXFLAGS}"
@@ -53,6 +54,6 @@ post-patch:
 
 pre-configure:
 	(cd ${WRKSRC}/cf && ${LOCALBASE}/bin/autoconf)
-	${MV} ${WRKSRC}/cf/configure ${WRKSRC}/configure
+	${CP} ${WRKSRC}/cf/configure ${WRKSRC}
 
 .include "../../mk/bsd.pkg.mk"
