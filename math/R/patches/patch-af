@@ -1,0 +1,22 @@
+$NetBSD: patch-af,v 1.1 1999/05/25 23:51:12 jlam Exp $
+
+--- src/scripts/R.sh.in.orig	Thu May  6 04:32:27 1999
++++ src/scripts/R.sh.in	Mon May 24 19:26:06 1999
+@@ -47,7 +47,7 @@
+ 	echo "*** (maybe use \`run ${args}'  from *inside* ${deb}"
+ 	echo ""
+       fi
+-      exec ${deb} ${RHOME}/bin/${R_BINARY} ;;
++      exec ${deb} @prefix@/bin/${R_BINARY} ;;
+     --no-environ)
+       USE_R_ENVIRON=false ;;
+     --vanilla)
+@@ -106,7 +106,7 @@
+ if ${USE_R_ENVIRON}; then
+   [ -r ${HOME}/.Renviron ] && . ${HOME}/.Renviron
+ fi
+-exec ${RHOME}/bin/${R_BINARY} @R_BATCHSAVE@ ${ARGS}
++exec @prefix@/bin/${R_BINARY} @R_BATCHSAVE@ ${ARGS}
+ 
+ ### Local Variables: ***
+ ### mode: sh ***
