@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9492 2005/03/16 13:29:59 martti Exp $
+$NetBSD: CHANGES,v 1.9493 2005/03/16 13:57:02 tron Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1372,3 +1372,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated mklivecd to 0.10 [xtraeme 2005-03-16]
 	Updated mysqlcc to 0.9.4nb4 [rillig 2005-03-16]
 	Updated dbh to 1.0.22 [martti 2005-03-16]
+	Updated bind to 9.3.0pl1nb1 [tron 2005-03-16]
