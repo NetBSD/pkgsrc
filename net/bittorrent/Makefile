@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.23 2004/10/03 00:17:49 tv Exp $
+# $NetBSD: Makefile,v 1.24 2005/02/13 13:53:34 recht Exp $
 #
 
 .include "Makefile.common"
 
 PKGNAME=	${DISTNAME:S/BitT/bitt/}
-PKGREVISION=	1
+PKGREVISION=	2
 
 PYDISTUTILSPKG=	YES
 

@@ -1,0 +1,32 @@
+$NetBSD: patch-ac,v 1.3 2005/02/13 13:53:34 recht Exp $
+
+--- BitTorrent/Rerequester.py.orig	Sat Apr  3 06:10:45 2004
++++ BitTorrent/Rerequester.py
+@@ -5,7 +5,7 @@ from zurllib import urlopen, quote
+ from btformats import check_peers
+ from bencode import bdecode
+ from threading import Thread, Lock
+-from socket import error
++from socket import error, gethostbyname
+ from time import time
+ from random import randrange
+ from binascii import b2a_hex
+@@ -18,8 +18,7 @@ class Rerequester:
+         self.url = ('%s?info_hash=%s&peer_id=%s&port=%s&key=%s' %
+             (url, quote(infohash), quote(myid), str(port),
+             b2a_hex(''.join([chr(randrange(256)) for i in xrange(4)]))))
+-        if ip != '':
+-            self.url += '&ip=' + quote(ip)
++        self.ip = ip
+         self.interval = interval
+         self.last = None
+         self.trackerid = None
+@@ -81,6 +80,8 @@ class Rerequester:
+ 
+     def rerequest(self, url, set):
+         try:
++            if self.ip:
++                url += '&ip=' + gethostbyname(self.ip)
+             h = urlopen(url)
+             r = h.read()
+             h.close()

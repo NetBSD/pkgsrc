@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1 2005/02/13 13:53:34 recht Exp $
+
+--- btcompletedir.py.orig	Wed Mar  3 18:44:28 2004
++++ btcompletedir.py
+@@ -30,6 +30,8 @@ def completedir(files, url, flag = Event
+         subtotal[0] += x
+         vc(float(subtotal[0]) / total)
+     for i in togen:
++        if flag.isSet():
++            break
+         t = split(i)
+         if t[1] == '':
+             i = t[0]
