@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/07/09 05:37:43 jun Exp $
+# $NetBSD: Makefile,v 1.3 2002/09/14 02:45:40 uebayasi Exp $
 
 DISTNAME=	semi-1.14.4
 CATEGORIES=	devel
@@ -8,8 +8,21 @@ MAINTAINER=	tech-pkg-ja@jp.netbsd.org
 HOMEPAGE=	http://www.m17n.org/SEMI/
 COMMENT=	Emacs lisp library to provide MIME feature
 
-DEPENDS+=	emacs-20.7:../../editors/emacs
 DEPENDS+=	apel-10.*:../../devel/apel
 DEPENDS+=	flim-1.*:../../devel/flim
+
+.include "../../mk/emacs.mk"
+
+.if ${EMACS_FLAVOR} == "emacs"
+ALL_TARGET=     elc
+INSTALL_TARGET= install
+PLIST_SRC=      ${PKGDIR}/PLIST.emacs
+.else   # ${EMACS_FLAVOR} == "xemacs"
+ALL_TARGET=     package
+INSTALL_TARGET= install-package
+PLIST_SRC=      ${PKGDIR}/PLIST.xemacs
+MAKEFLAGS+=     PACKAGEDIR=${EMACS_LISPPREFIX:C|/lisp$||}
+.endif
+DOCDIR=         ${PREFIX}/share/doc/apel
 
 .include "../../mk/bsd.pkg.mk"
