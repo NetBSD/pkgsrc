@@ -1,0 +1,18 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2002/11/29 02:37:21 kim Exp $
+
+You need to install at least one encoder to use with abcde.  It has support
+for the following encoders in pkgsrc:
+
+    audio/bladeenc
+    audio/gogo
+    audio/lame
+    audio/vorbis-tools
+
+Preferences can be set in ~/.abcde.conf for each user, and for all users in
+${PKG_SYSCONFDIR}/abcde.conf system-wide.
+
+See the man page and ${EGDIR}/abcde.conf for
+configuration options.
+
+===========================================================================
