@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.152 2003/03/01 13:04:00 jlam Exp $
+# $NetBSD: Makefile,v 1.153 2003/04/18 15:41:38 mjl Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -89,6 +89,7 @@ SUBDIR+=	mmv
 SUBDIR+=	molden
 SUBDIR+=	most
 SUBDIR+=	mtail
+SUBDIR+=	multitail
 SUBDIR+=	nxtvepg
 SUBDIR+=	ooqstart
 SUBDIR+=	openoffice
