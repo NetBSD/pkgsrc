@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2004/05/31 16:47:47 minskim Exp $
+# $NetBSD: Makefile,v 1.42 2004/09/06 10:46:03 adam Exp $
 #
 
 DISTNAME=	lame-${VERS}
@@ -7,10 +7,10 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lame/} \
 		http://hive.me.gu.edu.au/not_lame/
 
 MAINTAINER=	hubertf@NetBSD.org
-HOMEPAGE=	http://www.mp3dev.org/mp3/
+HOMEPAGE=	http://lame.sourceforge.net/
 COMMENT=	Fast, high quality MP3 encoder
 
-VERS=		3.96
+VERS=		3.96.1
 
 LICENSE=	fee-based-commercial-use
 
