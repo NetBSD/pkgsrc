@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2003/09/28 09:13:55 jlam Exp $
+# $NetBSD: Makefile,v 1.31 2003/11/06 18:31:08 gavan Exp $
 #
 
 VERS=		3.93.1
@@ -23,6 +23,8 @@ LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-vorbis
+
+LDFLAGS.SunOS+=		-lm
 
 .include "../../mk/bsd.prefs.mk"
 
