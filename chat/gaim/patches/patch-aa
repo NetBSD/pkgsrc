@@ -1,18 +1,24 @@
-$NetBSD: patch-aa,v 1.11 2002/10/28 19:39:28 jmc Exp $
+$NetBSD: patch-aa,v 1.12 2003/04/11 15:41:40 jmmv Exp $
 
---- src/Makefile.in.orig	Sat Sep 14 22:28:40 2002
-+++ src/Makefile.in	Mon Oct 28 19:24:10 2002
-@@ -150,11 +150,11 @@
- @GNOMEAPPLET_TRUE@gaim_applet_SOURCES = about.c 			aim.c 			applet.c 			away.c 			browser.c 			buddy.c 			buddy_chat.c 			conversation.c 			core.c 			dialogs.c 			gaimrc.c 			gtkimhtml.c 			gtkspell.c 			gtkticker.c 			html.c 			idle.c 			list.c 			md5.c 			module.c 			multi.c 			perl.c 			plugins.c 			prefs.c 			proxy.c 			prpl.c 			server.c 			sound.c 			ticker.c 			util.c
- @GNOMEAPPLET_TRUE@gaim_applet_DEPENDENCIES = @LIBOBJS@ $(STATIC_LINK_LIBS)
- @GNOMEAPPLET_TRUE@gaim_applet_LDFLAGS = -export-dynamic
--@GNOMEAPPLET_TRUE@gaim_applet_LDADD = @LDADD@ @LIBOBJS@
-+@GNOMEAPPLET_TRUE@gaim_applet_LDADD = @LDADD@ @LIBOBJS@ -liconv
- @GNOMEAPPLET_FALSE@gaim_SOURCES = about.c 		aim.c 		applet.c 		away.c 		browser.c 		buddy.c 		buddy_chat.c 		conversation.c 		core.c 		dialogs.c 		gaimrc.c 		gtkimhtml.c 		gtkspell.c 		gtkticker.c 		html.c 		idle.c 		list.c 		md5.c 		module.c 		multi.c 		perl.c 		plugins.c 		prefs.c 		proxy.c 		prpl.c 		server.c 		sound.c 		ticker.c 		util.c
- @GNOMEAPPLET_FALSE@gaim_DEPENDENCIES = @LIBOBJS@ $(STATIC_LINK_LIBS)
- @GNOMEAPPLET_FALSE@gaim_LDFLAGS = -export-dynamic
--@GNOMEAPPLET_FALSE@gaim_LDADD = @LDADD@ @LIBOBJS@
-+@GNOMEAPPLET_FALSE@gaim_LDADD = @LDADD@ @LIBOBJS@ -liconv
- CFLAGS = @CFLAGS@ $(PERL_CFLAGS) -DLOCALEDIR=\"$(datadir)/locale\" -DLIBDIR=\"$(libdir)/gaim/\" $(DEBUG_CFLAGS)
+--- src/buddy.c.orig	Thu Apr 10 18:11:40 2003
++++ src/buddy.c	Thu Apr 10 18:11:54 2003
+@@ -1112,6 +1112,7 @@
+ 	GtkWidget *sw;
+ 	GtkWidget *button;
+ 	GtkSizeGroup *sg;
++	GtkAccelGroup *accel_group;
+ 	GtkTreeSelection *selection;
+ 	GtkTargetEntry gte[] = {{"GAIM_BLIST_NODE", GTK_TARGET_SAME_APP, DRAG_ROW},
+ 				{"application/x-im-contact", 0, DRAG_BUDDY}};
+@@ -1136,7 +1137,10 @@
+ 	gtk_widget_add_events(gtkblist->window, GDK_VISIBILITY_NOTIFY_MASK);
  
- LIBS = @LIBS@ $(UI_LIBS) $(SOUND_LIBS) $(STATIC_LINK_LIBS) $(PERL_LIBS) $(XSS_LIBS) $(INTLLIBS) $(DEBUG_LIBS)
+ 	/******************************* Menu bar *************************************/
+-	ift = gtk_item_factory_new(GTK_TYPE_MENU_BAR, "<GaimMain>", NULL);
++	accel_group = gtk_accel_group_new();
++	gtk_window_add_accel_group(GTK_WINDOW (gtkblist->window), accel_group);
++	g_object_unref(accel_group);
++	ift = gtk_item_factory_new(GTK_TYPE_MENU_BAR, "<GaimMain>", accel_group);
+ 	gtk_item_factory_set_translate_func (ift,
+ 					     item_factory_translate_func,
+ 					     NULL, NULL);
