@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 1998/04/27 20:03:29 frueauf Exp $
+# $NetBSD: Makefile,v 1.10 1998/05/19 22:18:08 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.4 1997/05/22 07:53:29 tg Exp
 #
 
-DISTNAME=	wget-1.5.0
+DISTNAME=	wget-1.5.1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GNU}
 
