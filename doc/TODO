@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1006 2003/11/08 07:51:57 xtraeme Exp $
+$NetBSD: TODO,v 1.1007 2003/11/08 08:31:16 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -221,7 +221,6 @@ Suggested package updates
 	o host-20030604
 	o hp2xx-3.4.4
 	o hpijs-1.4.1
-	o icbm3d-0.4 [pkg/23348]
 	o icepref-2.2
 	o inn-2.4.0
 	o iozone-3.203
