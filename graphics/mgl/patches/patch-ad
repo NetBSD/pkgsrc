@@ -1,0 +1,17 @@
+$NetBSD: patch-ad,v 1.1.1.1 2000/11/01 16:25:09 hubertf Exp $
+
+--- mgterm/mgterm.c.orig	Mon Mar  6 17:11:11 2000
++++ mgterm/mgterm.c	Wed Jul 19 03:13:05 2000
+@@ -250,6 +250,12 @@
+ 		if (!load_font("k12x10.fnt",12,10)) {
+ 			font_size = 12;
+ 		}
++	} else if (font_size == 9) {
++		if (!load_font("k10x10.fnt",10,10)) {
++			font_size = 12;
++		} else {
++			font_size = 10;
++		}
+ 	} else if (font_size == 8) {
+ 		if (!load_font("k10x8.fnt",10,8)) {
+ 			font_size = 12;
