@@ -1,17 +1,17 @@
-$NetBSD: patch-ah,v 1.3 2003/06/04 09:02:25 jmmv Exp $
+$NetBSD: patch-ah,v 1.4 2003/12/08 21:44:35 wiz Exp $
 
---- configure.orig	Mon Dec 16 17:06:11 2002
-+++ configure	Mon Dec 16 17:07:42 2002
-@@ -7178,7 +7178,7 @@
+--- configure.orig	Wed Nov 12 00:42:20 2003
++++ configure
+@@ -12385,7 +12385,7 @@ if test x"$with_ssl" != x"no"; then
    wget_save_LDFLAGS=$LDFLAGS
    wget_save_CPPFLAGS=$CPPFLAGS
  
 -      CC="$SHELL ./libtool $CC"
 +#      CC="$SHELL ./libtool $CC"
  
-             echo $ac_n "checking for dlopen in -ldl""... $ac_c" 1>&6
- echo "configure:7185: checking for dlopen in -ldl" >&5
-@@ -7283,7 +7283,7 @@
+ 
+ echo "$as_me:$LINENO: checking for dlopen in -ldl" >&5
+@@ -12524,7 +12524,7 @@ fi
              SSL_INCLUDES=
      else
              SSL_INCLUDES=-I$ssl_root/include
@@ -19,4 +19,4 @@ $NetBSD: patch-ah,v 1.3 2003/06/04 09:02:25 jmmv Exp $
 +                  LDFLAGS="${OPENSSL_LDFLAGS} $wget_save_LDFLAGS"
      fi
  
-     echo "$ac_t"""Looking for SSL libraries in $ssl_root"" 1>&6
+     echo "$as_me:$LINENO: result: Looking for SSL libraries in $ssl_root" >&5
