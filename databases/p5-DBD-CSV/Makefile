@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2002/10/20 23:35:11 seb Exp $
+# $NetBSD: Makefile,v 1.11 2003/03/03 11:15:08 mjl Exp $
 #
 
-DISTNAME=	DBD-CSV-0.2001
+DISTNAME=	DBD-CSV-0.2002
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5dcs
 CATEGORIES=	databases perl5
