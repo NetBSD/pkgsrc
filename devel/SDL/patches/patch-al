@@ -1,7 +1,7 @@
-$NetBSD: patch-al,v 1.4 2001/09/24 14:29:39 rh Exp $
+$NetBSD: patch-al,v 1.5 2003/06/04 17:53:13 abs Exp $
 
---- src/audio/openbsd/SDL_openbsdaudio.c.orig	Mon Jul 23 04:58:42 2001
-+++ src/audio/openbsd/SDL_openbsdaudio.c
+--- src/audio/openbsd/SDL_openbsdaudio.c.orig	Wed Mar  6 11:23:02 2002
++++ src/audio/openbsd/SDL_openbsdaudio.c	Wed Jun  4 17:09:16 2003
 @@ -37,6 +37,7 @@
  #include <sys/stat.h>
  #include <sys/types.h>
@@ -52,3 +52,59 @@ $NetBSD: patch-al,v 1.4 2001/09/24 14:29:39 rh Exp $
  
  #ifndef USE_BLOCKING_WRITES /* Not necessary when using blocking writes */
  	/* See if we need to use timed audio synchronization */
+@@ -262,20 +273,20 @@
+ 	return;
+     }
+ 
+-    fprintf(stderr,"
+-[play/record info]
+-buffer size	:   %d bytes
+-sample rate	:   %i Hz
+-channels	:   %i
+-precision	:   %i-bit
+-encoding	:   0x%x
+-seek		:   %i
+-sample count	:   %i
+-EOF count	:   %i
+-paused		:   %s
+-error occured	:   %s
+-waiting		:   %s
+-active		:   %s
++    fprintf(stderr,"\n\
++[play/record info]\n\
++buffer size	:   %d bytes\n\
++sample rate	:   %i Hz\n\
++channels	:   %i\n\
++precision	:   %i-bit\n\
++encoding	:   0x%x\n\
++seek		:   %i\n\
++sample count	:   %i\n\
++EOF count	:   %i\n\
++paused		:   %s\n\
++error occured	:   %s\n\
++waiting		:   %s\n\
++active		:   %s\n\
+ ",
+     info.play.buffer_size,
+     info.play.sample_rate,
+@@ -290,13 +301,13 @@
+     info.play.waiting ? "yes" : "no",
+     info.play.active ? "yes": "no");
+ 
+-    fprintf(stderr,"
+-[audio info]
+-monitor_gain	:   %i
+-hw block size	:   %d bytes
+-hi watermark	:   %i
+-lo watermark	:   %i
+-audio mode	:   %s
++    fprintf(stderr,"\n\
++[audio info]\n\
++monitor_gain	:   %i\n\
++hw block size	:   %d bytes\n\
++hi watermark	:   %i\n\
++lo watermark	:   %i\n\
++audio mode	:   %s\n\
+ ",  
+     info.monitor_gain,
+     info.blocksize,
