@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5126 2004/03/07 07:32:57 snj Exp $
+$NetBSD: CHANGES,v 1.5127 2004/03/07 08:23:13 hamajima Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1210,3 +1210,6 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated foobillard to 2.9 [snj 2004-03-07]
 	Added bibtex2html-1.65 [minskim 2004-03-07]
 	Updated ltris to 1.0.6 [snj 2004-03-07]
+	Added cnxtview-0.00a [hamajima 2004-03-07]
+	Added cpia2view-0.03 [hamajima 2004-03-07]
+	Updated qcamview to 0.4 [hamajima 2004-03-07]
