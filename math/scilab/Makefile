@@ -1,17 +1,23 @@
-# $NetBSD: Makefile,v 1.41 2003/09/12 20:07:23 grant Exp $
+# $NetBSD: Makefile,v 1.42 2003/09/12 20:46:47 dmcmahill Exp $
 #
 
 DISTNAME=	${SCIBASE}.src
 PKGNAME=	${SCIBASE}
-PKGREVISION=	1
-SCIBASE=	scilab-2.7
-WRKSRC=		${WRKDIR}/${DISTNAME:.src=}
+PKGREVISION=	2
+WRKSRC=		${WRKDIR}/${SCIBASE}
 CATEGORIES=	math
 MASTER_SITES=	ftp://ftp.inria.fr/INRIA/Projects/Meta2/Scilab/distributions/
+DISTFILES=	${DISTNAME}${EXTRACT_SUFX}  scicos.tar.gz scicos_blocks.tar.gz
 
 MAINTAINER=	dmcmahill@NetBSD.org
 HOMEPAGE=	http://www-rocq.inria.fr/scilab/
 COMMENT=	High-level scientific math programming environment with graphics
+
+DIST_SUBDIR=	${SCIBASE}
+SCIBASE=	scilab-2.7
+
+SITES_scicos.tar.gz=		ftp://ftp.inria.fr/INRIA/Projects/Meta2/Scilab/misc/
+SITES_scicos_blocks.tar.gz=	ftp://ftp.inria.fr/INRIA/Projects/Meta2/Scilab/misc/
 
 #needs FPC code not found in older versions of NetBSD
 NOT_FOR_PLATFORM=	NetBSD-1.[0-4]*-alpha NetBSD-1.5-alpha \
@@ -57,10 +63,17 @@ pre-fetch:
 		${ECHO} "Without fixing this problem ${PKGNAME} will not work." ; ${FALSE} ; fi
 .endif
 
+EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
+post-extract:
+.for f in scicos scicos_blocks
+	@extract_file=${DISTDIR}/${DIST_SUBDIR}/${f}.tar.gz ; export extract_file ; \
+		cd ${WRKSRC}/macros/${f} && ${EXTRACT_CMD}
+.endfor
+
 # delete some .orig files that got created by patching
 post-install:
-	${RM} -f ${PREFIX}/lib/${PKGNAME}/config/Makeso.incl.in.orig
-	${RM} -f ${PREFIX}/lib/${PKGNAME}/macros/util/scipad.sci.orig
+	${RM} -f ${PREFIX}/lib/${SCIBASE}/config/Makeso.incl.in.orig
+	${RM} -f ${PREFIX}/lib/${SCIBASE}/macros/util/scipad.sci.orig
 
 .if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
 USE_GCC2=	# defined
