@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7619 2004/10/30 10:24:59 grant Exp $
+$NetBSD: CHANGES,v 1.7620 2004/10/30 11:57:05 gehenna Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4983,3 +4983,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated chmlib to 0.35 [minskim 2004-10-30]
 	Updated xchm to 0.9.6 [minskim 2004-10-30]
 	Updated clamav to 0.80nb2 [grant 2004-10-30]
+	Updated cvsync to 0.24.17 [gehenna 2004-10-30]
