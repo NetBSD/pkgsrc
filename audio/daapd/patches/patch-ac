@@ -1,0 +1,12 @@
+$NetBSD: patch-ac,v 1.1.1.1 2004/06/05 19:07:51 nathanw Exp $
+
+--- libhttpd/Site.mm.in.orig	2004-06-04 14:51:42.000000000 -0400
++++ libhttpd/Site.mm.in	2004-06-04 14:52:05.000000000 -0400
+@@ -37,5 +37,5 @@
+ # Any other CFlags required
+ EXTRA_CFLAGS= 
+ 
+-CFLAGS= -g -I$(TOP)/ -I/usr/local/include $(EXTRA_CFLAGS) -D$(OS_TYPE)
+-LDLIBS= -L/usr/local/lib -L$(TOP)/lib @LIBS@ $(EXTRA_LIBS)
++CFLAGS= -g -I$(TOP)/ $(EXTRA_CFLAGS) -D$(OS_TYPE)
++LDLIBS= -L$(TOP)/lib @LIBS@ $(EXTRA_LIBS)
