@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2539 2003/06/19 16:13:06 salo Exp $
+$NetBSD: CHANGES,v 1.2540 2003/06/19 16:45:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2497,3 +2497,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated pkgchk to 1.39 [tron 2003-06-19]
 	Added rc.subr-20030619 [grant 2003-06-19]
 	Updated dovecot to 0.99.10beta14 [salo 2003-06-19]
+	Added majesty-demo-20030310 [wiz 2003-06-19]
