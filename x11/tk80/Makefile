@@ -3,7 +3,7 @@
 # Date created:		19 August 1997
 # Whom:			jkh
 #
-# $NetBSD: Makefile,v 1.7 1998/01/30 14:00:13 agc Exp $
+# $NetBSD: Makefile,v 1.8 1998/02/02 08:11:11 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.4 1997/10/01 09:20:31 tg Exp
 #
 
@@ -54,7 +54,7 @@ MANN=		bell.n bind.n bindtags.n bitmap.n button.n canvas.n \
 		tkerror.n tkvars.n tkwait.n toplevel.n winfo.n wm.n
 
 post-install:
-	${LDCONFIG} -m ${PREFIX}/lib || /usr/bin/true
+	${LDCONFIG} -m ${PREFIX}/lib || ${TRUE}
 
 test:
 	cd ${WRKSRC}; make test

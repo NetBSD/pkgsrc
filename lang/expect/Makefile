@@ -3,7 +3,7 @@
 # Whom:			pst
 # Version required:	5.25
 #
-# $NetBSD: Makefile,v 1.5 1998/02/01 01:58:08 hubertf Exp $
+# $NetBSD: Makefile,v 1.6 1998/02/02 08:11:00 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.29 1998/01/27 01:11:47 fenner Exp
 #
 
@@ -39,6 +39,6 @@ test:
 	@(cd ${WRKSRC}; make test)
 
 post-install:
-	${LDCONFIG} -m ${PREFIX}/lib || /usr/bin/true
+	${LDCONFIG} -m ${PREFIX}/lib || ${TRUE}
 
 .include <bsd.port.mk>
