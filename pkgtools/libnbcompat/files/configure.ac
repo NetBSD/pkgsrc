@@ -1,6 +1,6 @@
 dnl Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.52)
-AC_INIT([libnbcompat], [20030717], [grant@NetBSD.org])
+AC_INIT([libnbcompat], [20030719], [grant@NetBSD.org])
 AC_CONFIG_HEADER(config.h)
 AC_ARG_PROGRAM
 
@@ -24,18 +24,18 @@ AC_SUBST(AUTOHEADER)
 
 dnl Checks for header files.
 AC_HEADER_STDC
+AC_HEADER_TIME
 AC_CHECK_HEADERS([sys/endian.h sys/file.h sys/mkdev.h sys/param.h])
 
 AC_CHECK_HEADERS([assert.h arpa/nameser.h dirent.h err.h errno.h fcntl.h \
 		fts.h libutil.h locale.h machine/endian.h param.h paths.h \
 		poll.h regex.h stringlist.h sys/byteorder.h sys/poll.h \
-		termcap.h tzfile.h unistd.h util.h vis.h limits.h])
+		termcap.h time.h tzfile.h unistd.h util.h vis.h limits.h])
 
 AC_CHECK_HEADERS([bind/bitypes.h inttypes.h sys/bitypes.h sys/cdefs.h \
-		sys/endian.h sys/mount.h sys/queue.h \
+		sys/endian.h sys/mount.h sys/queue.h sys/time.h \
 		sys/stat.h sys/statvfs.h sys/vfs.h sys/types.h \
 		sys/byteorder.h])
-
 
 dnl Checks for typedefs, structures, and compiler characteristics.
 AC_C___ATTRIBUTE__
