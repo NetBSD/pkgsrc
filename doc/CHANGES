@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8047 2004/11/27 01:33:36 kristerw Exp $
+$NetBSD: CHANGES,v 1.8048 2004/11/27 02:15:32 lukem Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5484,3 +5484,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated dtcp to 20040611 [hamajima 2004-11-27]
 	Updated xmame to 0.88 [kristerw 2004-11-27]
 	Updated xmess to 0.88 [kristerw 2004-11-27]
+	Updated cvsweb to 3.0.4 [lukem 2004-11-27]
