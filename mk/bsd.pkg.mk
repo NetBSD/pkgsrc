@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.101 1998/06/18 11:45:33 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.102 1998/06/20 14:01:28 tron Exp $
 #
 # This file is in the public domain.
 #
@@ -108,7 +108,7 @@ PKGDIR?=		${.CURDIR}/pkg.${ARCH}
 PKGDIR?=		${.CURDIR}/pkg
 .endif
 
-.if defined(USE_IMAKE) || defined(USE_X11)
+.if defined(USE_IMAKE) || defined(USE_MOTIF) || defined(USE_X11)
 PREFIX?=		${X11BASE}
 .else
 PREFIX?=		${LOCALBASE}
@@ -229,7 +229,7 @@ EXTRACT_SUFX?=		.tar.gz
 
 # Figure out where the local mtree file is
 .if !defined(MTREE_FILE)
-.if defined(USE_IMAKE) || defined(USE_X11)
+.if defined(USE_IMAKE) || defined(USE_MOTIF) || defined(USE_X11)
 MTREE_FILE=	/etc/mtree/BSD.x11.dist
 .else
 .if (${OPSYS} == "NetBSD")
@@ -606,7 +606,8 @@ IGNORE=	"is not an interactive port"
 IGNORE=	"may not be placed on a CDROM: ${NO_CDROM}"
 .elif (defined(RESTRICTED) && defined(NO_RESTRICTED))
 IGNORE=	"is restricted: ${RESTRICTED}"
-.elif ((defined(USE_IMAKE) || defined(USE_X11)) && !exists(${X11BASE}))
+.elif ((defined(USE_IMAKE) || defined(USE_MOTIF) || defined(USE_X11)) && \
+       !exists(${X11BASE}))
 IGNORE=	"uses X11, but ${X11BASE} not found"
 .elif defined(BROKEN)
 IGNORE=	"is marked as broken: ${BROKEN}"
