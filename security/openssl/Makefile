@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 1999/05/26 15:36:28 tv Exp $
+# $NetBSD: Makefile,v 1.5 1999/06/08 16:58:26 tv Exp $
 #
 
-DISTNAME=		openssl-0.9.3
+DISTNAME=		openssl-0.9.2c
 CATEGORIES=		security
 MASTER_SITES=		ftp://ftp.openssl.org/source/
 
