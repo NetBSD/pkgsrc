@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2004/01/24 14:50:05 grant Exp $
+# $NetBSD: Makefile,v 1.21 2004/04/25 08:35:03 snj Exp $
 #
 
 DISTNAME=	dctc-0.85.4
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.ac2i.tzo.com/dctc/
 COMMENT=	Direct Connect clone (Direct Connect Text Client)
 
 GNU_CONFIGURE=	YES
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 CONFIGURE_ARGS+=	--enable-manual-db-detect
 USE_PERL5=	YES
 USE_GNU_TOOLS+=	make
@@ -25,6 +25,6 @@ post-configure:
 	@${ECHO} '# define MSG_NOSIGNAL 0' >> ${WRKSRC}/config.h
 	@${ECHO} '#endif' >> ${WRKSRC}/config.h
 
-.include "../../databases/db4/buildlink2.mk"
-.include "../../devel/glib2/buildlink2.mk"
+.include "../../databases/db4/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
