@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 1999/04/25 19:10:16 tv Exp $
+# $NetBSD: Makefile,v 1.14 1999/05/23 21:12:01 tv Exp $
 #
 
 DISTNAME=		rsaref
-PKGNAME=		rsaref-2.0
+PKGNAME=		rsaref-2.0p1
 WRKSRC=			${WRKDIR}/install
 CATEGORIES=		security
 MASTER_SITES=		ftp://ftp.spinnaker.com/pub/crypt/rsaref/
@@ -28,19 +28,16 @@ fetch-depends:
 	fi
 
 do-configure:
-	@${RM} -f ${WRKDIR}/source/md5.h
-	@${CP} ${FILESDIR}/md5.h ${WRKDIR}/source/
-	@${LN} -sf . ${WRKDIR}/source/rsaref
+	@${RM} -f ${WRKDIR}/source/md5.h && \
+		${ECHO} '#include_next <md5.h>' >${WRKDIR}/source/md5.h
+	@${RM} -f ${WRKDIR}/source/rsaref && ${LN} -sf . ${WRKDIR}/source/rsaref
 
 do-install:
 	${MKDIR} ${PREFIX}/include/rsaref ${PREFIX}/share/doc/rsaref
-	cd ${WRKSRC} && \
-		${LIBTOOL} --mode=install ${INSTALL_DATA} \
-			librsaref.la ${PREFIX}/lib
-	cd ${WRKDIR}/source && \
-		${INSTALL_DATA} des.h global.h md2.h md5.h rsa.h rsaref.h \
-			${PREFIX}/include/rsaref/
-	cd ${WRKDIR}/doc && \
-		${INSTALL_DATA} info.txt rsaref.txt ${PREFIX}/share/doc/rsaref/
+	cd ${WRKSRC} && ${LIBTOOL} ${INSTALL_DATA} librsaref.la ${PREFIX}/lib
+.for file in des.h global.h md2.h md5.h rsa.h rsaref.h
+	${INSTALL_DATA} ${WRKDIR}/source/${file} ${PREFIX}/include/rsaref/
+.endfor
+	cd ${WRKDIR}/doc && ${INSTALL_DATA} info.txt rsaref.txt ${PREFIX}/share/doc/rsaref/
 
 .include "../../mk/bsd.pkg.mk"
