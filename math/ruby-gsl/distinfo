@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.2 2004/11/27 16:27:45 taca Exp $
+$NetBSD: distinfo,v 1.3 2005/02/23 12:06:58 agc Exp $
 
 SHA1 (ruby/ruby-gsl-0.2.0.tar.gz) = 8a04336cce6547890ad74cecbfc694ff7f5ffe62
+RMD160 (ruby/ruby-gsl-0.2.0.tar.gz) = ea6216e1c1f9fceff8e6c1309b97c3034fba0025
 Size (ruby/ruby-gsl-0.2.0.tar.gz) = 149391 bytes

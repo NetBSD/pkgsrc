@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2003/07/24 16:28:55 jtb Exp $
+$NetBSD: distinfo,v 1.5 2005/02/23 12:06:54 agc Exp $
 
 SHA1 (algae-4.1.3.tar.gz) = 73da6e67e9b73389af97239deda4479096cb7eb0
+RMD160 (algae-4.1.3.tar.gz) = 79b127f3f8983c19f5a9984d14ce9cc2cc913031
 Size (algae-4.1.3.tar.gz) = 1699100 bytes
 SHA1 (patch-aa) = c9808abd82f27eb9b41358d8b962553446b473b8
 SHA1 (patch-ab) = a6ea544d6a76d5d47e0e313d53f34bf4f28041fa

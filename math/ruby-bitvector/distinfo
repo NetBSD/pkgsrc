@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.2 2004/11/27 16:26:09 taca Exp $
+$NetBSD: distinfo,v 1.3 2005/02/23 12:06:58 agc Exp $
 
 SHA1 (ruby/bitvector-0.1.7.tar.gz) = e63f20684b2bfcefa6ab35accd5dcdffa1f9eb79
+RMD160 (ruby/bitvector-0.1.7.tar.gz) = 7651b3fa071748b4b7c185fc1f19b5c5b619fdbd
 Size (ruby/bitvector-0.1.7.tar.gz) = 60777 bytes
