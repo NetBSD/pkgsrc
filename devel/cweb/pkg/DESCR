@@ -1,0 +1,7 @@
+The philosophy behind CWEB is that programmers who want to provide the
+best possible documentation for their programs need two things
+simultaneously: a language like TeX for formatting, and a language
+like C for programming. Neither type of language can provide the best
+documentation by itself. But when both are appropriately combined, we
+obtain a system that is much more useful than either language
+separately.

@@ -1,0 +1,29 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/11/25 17:23:27 jtb Exp $
+bin/ctangle
+bin/cweave
+man/man1/cweb.1
+share/cweb/c++lib.w
+share/doc/cweb/cwebman.tex
+share/emacs/site-lisp/cweb.el
+share/examples/cweb/Makefile
+share/examples/cweb/README
+share/examples/cweb/extex.ch
+share/examples/cweb/extex.w
+share/examples/cweb/kspell.el
+share/examples/cweb/oemacs.el
+share/examples/cweb/oemacs.w
+share/examples/cweb/treeprint.w
+share/examples/cweb/wc-dos.ch
+share/examples/cweb/wc.w
+share/examples/cweb/wmer-os2.ch
+share/examples/cweb/wmerg-pc.ch
+share/examples/cweb/wmerge.w
+share/examples/cweb/wordtest.w
+share/examples/cweb/xlib_types.w
+share/examples/cweb/xview_types.w
+share/texmf/tex/plain/base/cwebmac.tex
+@unexec mktexlsr
+@unexec rmdir share/emacs/site-lisp 2>/dev/null || true
+@dirrm share/examples/cweb
+@dirrm share/doc/cweb
+@dirrm share/cweb
