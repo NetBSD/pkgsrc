@@ -1,3 +1,5 @@
+$NetBSD: patch-ac,v 1.2 1999/05/09 16:41:15 tron Exp $
+
 --- analog.cfg.orig	Wed Nov 25 22:49:33 1998
 +++ analog.cfg	Tue Jan 19 21:24:09 1999
 @@ -8,7 +8,8 @@

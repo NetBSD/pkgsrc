@@ -1,3 +1,5 @@
+$NetBSD: patch-ab,v 1.2 1999/05/09 16:41:15 tron Exp $
+
 *** analhead.h.orig	Thu Apr  9 14:59:28 1998
 --- analhead.h	Fri Apr 10 01:34:18 1998
 ***************
