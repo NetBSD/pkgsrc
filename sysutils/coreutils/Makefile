@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/04/10 13:18:36 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2003/04/10 18:42:29 wiz Exp $
 #
 
 DISTNAME=	coreutils-5.0
@@ -27,6 +27,7 @@ CONFIGURE_ARGS=		--program-prefix=${GNU_PROGRAM_PREFIX}
 # GNU_PROGRAM_PREFIX == 'g'
 .  if ${GNU_PROGRAM_PREFIX} == "g"
 CONFLICTS+=		id-utils-[0-9]*
+CONFLICTS+=		gnome-utils-*
 .  endif
 .endif
 PLIST_SUBST+=		GNU_PROGRAM_PREFIX=${GNU_PROGRAM_PREFIX}
