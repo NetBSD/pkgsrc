@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.4 2001/07/01 22:59:17 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.5 2001/07/01 23:04:11 jlam Exp $
 #
 # This Makefile fragment is included by packages that use ncurses.
 #
@@ -11,6 +11,9 @@
 #     search path, and
 # (4) Add ${BUILDLINK_LIBDIR} to the front of the linker's library search
 #     path.
+
+.if !defined(NCURSES_BUILDLINK_MK)
+NCURSES_BUILDLINK_MK=     # defined
 
 .include "../../mk/bsd.buildlink.mk"
 
@@ -90,3 +93,5 @@ ncurses-extra-includes-buildlink:
 	for file in $${extra_includes}; do				\
 		${TOUCH} ${TOUCH_FLAGS} $${BUILDLINK_DIR}/$${file};	\
 	done
+
+.endif  # NCURSES_BUILDLINK_MK
