@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.37 2004/02/18 10:21:15 jlam Exp $
+# $NetBSD: Makefile,v 1.38 2004/04/13 09:36:17 xtraeme Exp $
 #
 
-DISTNAME=	fltk-1.1.4-source
+DISTNAME=	fltk-1.1.5rc1-source
 PKGNAME=	${DISTNAME:S/-source//}
 VERS=		${DISTNAME:S/fltk-//:S/-source//}
 CATEGORIES=	x11
@@ -22,7 +22,7 @@ USE_BUILDLINK3=		yes
 USE_LANGUAGES=		c c++
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		yes
-USE_X11BASE=		yes
+USE_X11=		yes
 TEST_TARGET=		test
 
 GNU_CONFIGURE=		yes
