@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.2 2002/11/23 23:23:53 wiz Exp $
+$NetBSD: patch-ab,v 1.3 2005/02/04 13:00:10 rillig Exp $
 
 --- icepref.orig	Thu Jan  6 00:16:04 2000
 +++ icepref
@@ -11,18 +11,17 @@ $NetBSD: patch-ab,v 1.2 2002/11/23 23:23:53 wiz Exp $
  	    
  	    if DEBUG:
  		print 'The icewm execuatable is located at %s' % exec_path
-@@ -1898,8 +1898,8 @@
+@@ -1898,8 +1898,7 @@
  		# work on other non Linux systems.  Under Debian, this function requires
  		# the installation of the psmisc package.
  		
 -		os.system('killall -HUP -q icewm')
 -		os.system('killall -HUP -q icewm-gnome')
-+		os.system('killall -HUP icewm')
-+		os.system('killall -HUP icewm-gnome')
++		os.system('kill -HUP `pgrep icewm; pgrep icewm-gnome`')
  	
  	# this is the callback for the OK button
  	
-@@ -2090,7 +2090,7 @@
+@@ -2090,7 +2089,7 @@
  			button.show()
  			
  			# Disable the Restart button in the OS is BSD or the user is root
