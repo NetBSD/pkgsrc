@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.15 2001/11/13 10:38:58 agc Exp $
+$NetBSD: patch-ac,v 1.16 2001/12/15 08:31:38 martti Exp $
 
---- pine/makefile.neb.orig	Tue Jul  3 19:03:58 2001
-+++ pine/makefile.neb	Mon Oct  8 10:05:52 2001
+--- pine/makefile.neb.orig	Tue Oct 23 22:24:49 2001
++++ pine/makefile.neb	Fri Dec 14 19:25:45 2001
 @@ -47,9 +47,11 @@
  MAKE=        make
  OPTIMIZE=    # -O
@@ -22,7 +22,7 @@ $NetBSD: patch-ac,v 1.15 2001/11/13 10:38:58 agc Exp $
  
 -STDLIBS=     -ltermlib
 -LOCLIBS=     $(PICODIR)/libpico.a $(CCLIENTDIR)/c-client.a
--LIBS=        $(EXTRALIBES) $(LOCLIBS) $(LDAPLIBS) $(STDLIBS) \
+-LIBS=        $(LOCLIBS) $(LDAPLIBS) $(STDLIBS) \
 -             `cat $(CCLIENTDIR)/LDFLAGS`
 +STDLIBS=     -ltermlib -lssl -lcrypto -lcrypt
 +LOCLIBS=     -lpico -lc-client
@@ -31,7 +31,7 @@ $NetBSD: patch-ac,v 1.15 2001/11/13 10:38:58 agc Exp $
  STDCFLAGS=   -DNETBSD -DSYSTYPE=\"NEB\" -DMOUSE
  CFLAGS=      $(OPTIMIZE) $(PROFILE) $(DEBUG) $(EXTRACFLAGS) $(LDAPCFLAGS) \
 -	     $(STDCFLAGS)
-+	     $(STDCFLAGS)  -I${CCLIENTINC}
++	     $(STDCFLAGS) -I${CCLIENTINC}
  
  OFILES=	addrbook.o adrbkcmd.o adrbklib.o args.o bldaddr.o context.o filter.o \
  	folder.o help.o helptext.o imap.o init.o mailcap.o mailcmd.o \
