@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.745 2001/05/22 11:43:36 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.746 2001/05/23 09:18:26 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -600,7 +600,7 @@ TOUCH?=		/usr/bin/touch
 TR?=		/usr/bin/tr
 TRUE?=		/usr/bin/true
 TYPE?=		/usr/bin/type
-XARGS?=		xargs
+XARGS?=		/usr/bin/xargs
 .elif (${OPSYS} == "Linux")
 AWK?=		/usr/bin/awk
 BASENAME?=	/bin/basename
@@ -645,7 +645,7 @@ TOUCH?=		/bin/touch
 TR?=		/usr/bin/tr
 TRUE?=		/bin/true
 TYPE?=		type
-XARGS?=		xargs -r
+XARGS?=		/usr/bin/xargs -r
 .else
 AWK?=		/usr/bin/awk
 BASENAME?=	/usr/bin/basename
@@ -690,7 +690,7 @@ TOUCH?=		/usr/bin/touch
 TR?=		/usr/bin/tr
 TRUE?=		true				# Shell builtin
 TYPE?=		type				# Shell builtin
-XARGS?=		xargs
+XARGS?=		/usr/bin/xargs
 .endif # !SunOS
 
 PKG_ADD?=	PKG_DBDIR=${PKG_DBDIR} ${PKG_TOOLS_BIN}/pkg_add
@@ -2103,7 +2103,8 @@ do-su-install:
 	case "$$extractname" in						\
 	"")	${ECHO_MSG} "*** Warning: ${WRKDIR} may contain an older version of ${PKGBASE}" ;; \
 	"${PKGNAME}")	;;						\
-	*)	${ECHO_MSG} "*** Error: Package version $$extractname in ${WRKDIR}, current version ${PKGNAME} in pkgsrc directory"; \
+	*)	${ECHO_MSG} "*** Error: Package version $$extractname in ${WRKDIR}"; \
+		${ECHO_MSG} "*** Current version ${PKGNAME} in pkgsrc directory"; \
 		${ECHO_MSG} "*** Please rebuild the package using the newer version: \"make clean && make\""; \
 		exit 1 ;; \
 	esac
