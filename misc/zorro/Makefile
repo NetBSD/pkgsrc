@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2001/02/25 04:18:03 hubertf Exp $
+# $NetBSD: Makefile,v 1.13 2001/05/05 19:51:18 jlam Exp $
 # FreeBSD Id: Makefile,v 1.9 1997/11/22 19:55:25 jseger Exp
 #
 
@@ -10,7 +10,7 @@ MASTER_SITES=	ftp://ftp.neosoft.com/pub/tcl/sorted/apps/zorro-1.1p8/
 MAINTAINER=	packages@netbsd.org
 COMMENT=	Simple to-do list manager
 
-DEPENDS+=	tk-8.3.2:../../x11/tk
+DEPENDS+=	tk>=8.3.2:../../x11/tk
 
 NO_BUILD=	yes
 USE_X11=	yes
