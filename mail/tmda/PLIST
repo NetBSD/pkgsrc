@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2002/07/23 20:05:47 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.5 2002/08/31 23:08:41 schmonz Exp $
 bin/tmda-address
 bin/tmda-check-address
 bin/tmda-filter
@@ -22,6 +22,8 @@ ${PYSITELIB}/TMDA/HMAC.py
 ${PYSITELIB}/TMDA/HMAC.pyc
 ${PYSITELIB}/TMDA/MTA.py
 ${PYSITELIB}/TMDA/MTA.pyc
+${PYSITELIB}/TMDA/MessageLogger.py
+${PYSITELIB}/TMDA/MessageLogger.pyc
 ${PYSITELIB}/TMDA/SMTP.py
 ${PYSITELIB}/TMDA/SMTP.pyc
 ${PYSITELIB}/TMDA/Util.py
@@ -38,11 +40,13 @@ ${HTMLDIR}/config-server.html
 ${HTMLDIR}/config.html
 ${HTMLDIR}/download.html
 ${HTMLDIR}/features.html
+${HTMLDIR}/filter-sources.html
 ${HTMLDIR}/history.html
 ${HTMLDIR}/howtos.html
 ${HTMLDIR}/index.html
 ${HTMLDIR}/install.html
 ${HTMLDIR}/inuse.html
+${HTMLDIR}/press.html
 ${HTMLDIR}/requirements.html
 ${HTMLDIR}/resources.html
 ${HTMLDIR}/results.html
@@ -60,6 +64,7 @@ ${CONTRIBDIR}/collectaddys
 ${CONTRIBDIR}/printcdb
 ${CONTRIBDIR}/printdbm
 ${CONTRIBDIR}/sample.tmdarc
+${CONTRIBDIR}/tmda.el
 ${CONTRIBDIR}/tmda.spec
 ${SHAREDIR}/bounce.txt
 ${SHAREDIR}/confirm_accept.txt
