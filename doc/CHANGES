@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5680 2004/04/20 14:57:34 markd Exp $
+$NetBSD: CHANGES,v 1.5681 2004/04/20 15:28:44 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2181,3 +2181,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated kdelibdocs3 to 3.2.2 [markd 2004-04-20]
 	Updated kdevelop-base to 3.0.3 [markd 2004-04-20]
 	Updated kdevelop to 3.0.3 [markd 2004-04-20]
+	Updated gnome-icon-theme to 1.2.1nb1 [minskim 2004-04-20]

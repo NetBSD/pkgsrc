@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/04/19 23:57:36 minskim Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/04/20 15:28:44 minskim Exp $
 lib/pkgconfig/gnome-icon-theme.pc
 share/icons/gnome/12x12/emblems/emblem-symbolic-link.png
 share/icons/gnome/12x12/filesystems/gnome-fs-directory-accept.png
@@ -2364,13 +2364,11 @@ share/icons/hicolor/96x96/apps/gnome-starthere.png
 @exec ${MKDIR} %D/share/icons/gnome/72x72/devices
 @dirrm share/icons/gnome/72x72/devices
 @dirrm share/icons/gnome/72x72
-@dirrm share/icons/gnome/48x48/stock
 @dirrm share/icons/gnome/48x48/mimetypes
 @dirrm share/icons/gnome/48x48/filesystems
 @dirrm share/icons/gnome/48x48/emblems
 @dirrm share/icons/gnome/48x48/devices
 @dirrm share/icons/gnome/48x48
-@dirrm share/icons/gnome/36x36/stock
 @exec ${MKDIR} %D/share/icons/gnome/36x36/mimetypes
 @dirrm share/icons/gnome/36x36/mimetypes
 @dirrm share/icons/gnome/36x36/filesystems
@@ -2378,11 +2376,9 @@ share/icons/hicolor/96x96/apps/gnome-starthere.png
 @exec ${MKDIR} %D/share/icons/gnome/36x36/devices
 @dirrm share/icons/gnome/36x36/devices
 @dirrm share/icons/gnome/36x36
-@dirrm share/icons/gnome/32x32/stock
 @dirrm share/icons/gnome/32x32/mimetypes
 @dirrm share/icons/gnome/32x32/filesystems
 @dirrm share/icons/gnome/32x32
-@dirrm share/icons/gnome/24x24/stock
 @dirrm share/icons/gnome/24x24/mimetypes
 @dirrm share/icons/gnome/24x24/filesystems
 @dirrm share/icons/gnome/24x24/emblems
@@ -2395,7 +2391,6 @@ share/icons/hicolor/96x96/apps/gnome-starthere.png
 @dirrm share/icons/gnome/192x192/emblems
 @dirrm share/icons/gnome/192x192/devices
 @dirrm share/icons/gnome/192x192
-@dirrm share/icons/gnome/16x16/stock
 @dirrm share/icons/gnome/16x16/mimetypes
 @dirrm share/icons/gnome/16x16/filesystems
 @dirrm share/icons/gnome/16x16/devices
