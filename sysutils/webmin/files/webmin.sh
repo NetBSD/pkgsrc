@@ -1,13 +1,12 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: webmin.sh,v 1.1.1.1 2004/07/23 19:28:32 jlam Exp $
+# $NetBSD: webmin.sh,v 1.2 2005/01/23 04:36:27 jlam Exp $
 #
+
 # PROVIDE: webmin
 # REQUIRE: LOGIN
 
-if [ -f /etc/rc.subr ]; then
-	. /etc/rc.subr
-fi
+. /etc/rc.subr
 
 name="webmin"
 rcvar=${name}
@@ -16,13 +15,17 @@ command_interpreter="@PERL5@"
 webmin_etcdir="@WEBMIN_ETCDIR@"
 required_files="@WEBMIN_ETCDIR@/miniserv.conf"
 
-start_cmd="webmin_doit"
-stop_cmd="webmin_doit"
+start_cmd="webmin_doit start"
+stop_cmd="webmin_doit stop"
 
 webmin_doit()
 {
-	script="${webmin_etcdir}/${rc_arg}"
-	required_files="${required_files} ${script}"
+	case $1 in
+	start)	script="${webmin_etcdir}/start" ;;
+	stop)	script="${webmin_etcdir}/stop" ;;
+	*)
+	esac
+	required_files="$required_files $script"
 	for f in $required_files; do
 		if [ ! -r "$f" ]; then
 			@ECHO@ 1>&2 "$0: WARNING: $f is not readable"
@@ -31,22 +34,8 @@ webmin_doit()
 			fi
 		fi
 	done
-	${script}
+	$script
 }
 
-if [ -f /etc/rc.subr -a -d /etc/rc.d -a -f /etc/rc.d/DAEMON ]; then
-	load_rc_config $name
-	run_rc_command "$1"
-else
-	if [ -f /etc/rc.conf ]; then
-		. /etc/rc.conf
-	fi
-	case "$1" in
-	stop)
-		eval ${stop_cmd}
-		;;
-	start)
-		eval ${start_cmd}
-		;;
-	esac
-fi
+load_rc_config $name
+run_rc_command "$1"
