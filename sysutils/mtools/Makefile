@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2000/09/26 13:46:34 agc Exp $
+# $NetBSD: Makefile,v 1.20 2000/12/07 14:11:36 is Exp $
 #
 
 DISTNAME=	mtools-3.9.5
+PKGNAME=	mtools-3.9.5nb1
 CATEGORIES=	sysutils
 MASTER_SITES=	ftp://ftp.tux.org/pub/tux/knaff/mtools/
 
