@@ -1,0 +1,21 @@
+$NetBSD: patch-bc,v 1.1 2002/06/28 17:14:00 taca Exp $
+
+--- utils/status.c.orig	Fri Nov  9 18:27:58 2001
++++ utils/status.c
+@@ -513,6 +513,7 @@
+ 	struct session_record *ptr;
+ 	struct connections_data crec;
+ 	pstring unixname;
++	pstring unixcrecname;
+ 
+ 	if (dbuf.dsize != sizeof(crec))
+ 		return 0;
+@@ -555,7 +556,7 @@
+ 						add a sort at some time */
+ 		} else {
+ 			printf("%-10.10s   %-8s %-8s %5d   %-8s (%s) %s",
+-			       crec.name,
++			       dos_to_unix( unixcrecname, crec.name  ),
+ 			       dos_to_unix(unixname, uidtoname(crec.uid)),
+ 			       gidtoname(crec.gid),(int)crec.pid,
+ 			       crec.machine,crec.addr,
