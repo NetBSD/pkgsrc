@@ -1,13 +1,12 @@
-$NetBSD: patch-ab,v 1.1.1.1 1999/08/11 06:04:28 rh Exp $
+$NetBSD: patch-ab,v 1.2 2000/08/29 17:08:38 abs Exp $
 
---- faxd/Getty.c++.orig	Sun Jun 13 09:41:03 1999
-+++ faxd/Getty.c++	Mon Aug  9 21:54:26 1999
-@@ -218,7 +218,7 @@
-     // NB: this is executed in the parent
-     fxStr device = fxStr::format("%s/" | line, _PATH_DEV);
-     Sys::chown(device, UUCPLock::getUUCPUid(), UUCPLock::getUUCPGid());
--    Sys::chmod(device, 0600);			// reset protection
-+    Sys::chmod(device, 0660);			// reset protection
- }
- 
- extern void vlogError(const char* fmt, va_list ap);
+--- config.h.in.orig	Thu Aug  5 12:11:41 1999
++++ config.h.in
+@@ -53,6 +53,7 @@
+  * NB: The Unix-domain support is unfinished.
+  */
+ #define	FAX_USER	"@FAXUID@"	/* account name of the ``fax user'' */
++#define	FAX_GROUP	"@FAXGID@"	/* group name of the ``fax user'' */
+ #define	FAX_SERVICE	"hylafax"	/* client-server service name */
+ #define	FAX_PROTONAME	"tcp"		/* protocol used by client+server */
+ #define	FAX_DEFPORT	4559		/* port to use if service is unknown */

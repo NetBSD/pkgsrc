@@ -1,27 +1,13 @@
-$NetBSD: patch-ac,v 1.1.1.1 1999/08/11 06:04:28 rh Exp $
+$NetBSD: patch-ac,v 1.2 2000/08/29 17:08:38 abs Exp $
 
---- faxd/UUCPLock.c++.orig	Sat Feb 14 11:49:38 1998
-+++ faxd/UUCPLock.c++	Mon Apr 12 17:53:07 1999
-@@ -37,6 +37,7 @@
- }
- #endif
- #include <pwd.h>
-+#include <grp.h>
+--- config/Makefile.in.orig	Mon Oct 12 21:47:47 1998
++++ config/Makefile.in
+@@ -95,6 +95,7 @@
+ PUTSERVER=${INSTALL} -idb ${PRODUCT}.sw.server
  
- /*
-  * UUCP Device Locking Support.
-@@ -146,8 +147,13 @@
- 	if (!pwd)
- 	    faxApp::fatal("Can not deduce identity of UUCP");
- 	UUCPuid = pwd->pw_uid;
--	UUCPgid = pwd->pw_gid;
- 	endpwent();			// paranoia
-+
-+	const group *grp = getgrnam(FAX_GROUP);
-+	if (!grp)
-+	    faxApp::fatal("Can not deduce group identity of '" FAX_GROUP "'");
-+	UUCPgid = grp->gr_gid;
-+	endgrent();			// paranoia
-     }
- }
- uid_t UUCPLock::getUUCPUid() { setupIDs(); return UUCPuid; }
+ install: default ${CONFIGFILES}
++	-${MKDIR} -p -m 0755 ${PREFIX}/etc/hylafax/modem
+ 	for i in ${CONFIGFILES}; do \
+-	    ${PUTSERVER} -F ${SPOOL}/config -m 444 -src ${SRCDIR}/$$i -O $$i; \
++	    ${PUTSERVER} -F ${PREFIX}/etc/hylafax/modem -m 444 -src ${SRCDIR}/$$i -O $$i; \
+ 	done

@@ -1,12 +1,21 @@
-$NetBSD: patch-af,v 1.1.1.1 1999/08/11 06:04:29 rh Exp $
+$NetBSD: patch-af,v 1.2 2000/08/29 17:08:38 abs Exp $
 
---- util/TypeRules.h.orig	Sun Jun 13 09:41:26 1999
-+++ util/TypeRules.h	Mon Aug  9 21:59:31 1999
-@@ -130,6 +130,7 @@
-     bool	cont;	// continuation
-     enum {
- 	ASCII,		// ascii-only string
-+	ASCIIESC,	// ascii-only string + escape char (iso-2022 variants)
- 	STRING,		// byte string
- 	ADDR,		// address of match
- 	BYTE,		// 8 bits
+--- defs.in.orig	Mon Jan  4 09:17:09 1999
++++ defs.in
+@@ -44,6 +44,7 @@
+ # to insufficient; you are better off rerunning the
+ # configure script so that all uses are set correctly.
+ #
++PREFIX		= @PREFIX@
+ SPOOL		= @SPOOL@
+ SBIN		= @SBIN@
+ BIN		= @BIN@
+@@ -255,7 +256,7 @@
+ LDOPTS		= ${VLDOPTS} ${LLDOPTS} ${GLDOPTS}
+ LDLIBS		= ${VLDLIBS} ${LLDLIBS} ${GLDLIBS}
+ 
+-GLDOPTS		= -L/usr/local/lib
++GLDOPTS		= -L${PREFIX}/lib
+ GLDLIBS		= ${SHDLIBC}
+ 
+ #

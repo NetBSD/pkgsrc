@@ -1,21 +1,31 @@
-$NetBSD: patch-an,v 1.1.1.1 1999/08/11 06:04:30 rh Exp $
+$NetBSD: patch-an,v 1.2 2000/08/29 17:08:38 abs Exp $
 
---- defs.in.orig	Mon Jan  4 10:17:09 1999
-+++ defs.in	Tue Aug 10 18:10:07 1999
-@@ -44,6 +44,7 @@
- # to insufficient; you are better off rerunning the
- # configure script so that all uses are set correctly.
- #
-+PREFIX		= @PREFIX@
- SPOOL		= @SPOOL@
- SBIN		= @SBIN@
- BIN		= @BIN@
-@@ -255,7 +256,7 @@
- LDOPTS		= ${VLDOPTS} ${LLDOPTS} ${GLDOPTS}
- LDLIBS		= ${VLDLIBS} ${LLDLIBS} ${GLDLIBS}
- 
--GLDOPTS		= -L/usr/local/lib
-+GLDOPTS		= -L${PREFIX}/lib
- GLDLIBS		= ${SHDLIBC}
- 
- #
+--- hfaxd/User.c++.orig	Sun Jun 13 08:41:16 1999
++++ hfaxd/User.c++
+@@ -218,7 +218,7 @@
+     if (id == uid)				// user currently logged in
+ 	return (const char*) the_user;
+     if (id == FAXUID_ANON)			// anonymous user
+-	return "fax";
++	return FAX_USER;
+     if (idcache == NULL)			// load cache from file
+ 	fillIDCache();
+     const fxStr* hit = idcache->find(id);	// check cache
+@@ -237,7 +237,7 @@
+ {
+     if (name == the_user)
+ 	id = uid;
+-    else if (strcmp(name, "fax") == 0)
++    else if (strcmp(name, FAX_USER) == 0)
+ 	id = FAXUID_ANON;
+     else {
+ 	if (idcache == NULL)
+@@ -324,7 +324,7 @@
+     if (faxuid < FAXUID_MAX)
+ 	SetBit(FAXUID_RESV);			// reserved uid
+     else
+-	logError("Internal error, \"fax\" UID (%u) too large.", faxuid);
++	logError("Internal error, \"" FAX_USER "\" UID (%u) too large.", faxuid);
+     SetBit(FAXUID_ANON);			// anonymous uid is reserved
+     while (nextRecord(db, line, sizeof (line))) {
+ 	if (line[0] == '!')

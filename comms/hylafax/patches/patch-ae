@@ -1,84 +1,188 @@
-$NetBSD: patch-ae,v 1.1.1.1 1999/08/11 06:04:29 rh Exp $
+$NetBSD: patch-ae,v 1.2 2000/08/29 17:08:38 abs Exp $
 
---- util/TypeRules.c++.orig	Sun Jun 13 09:41:26 1999
-+++ util/TypeRules.c++	Tue Aug 10 15:36:51 1999
-@@ -36,6 +36,14 @@
- #include <netinet/in.h>
- }
+--- configure.orig	Mon Jul 26 15:57:29 1999
++++ configure
+@@ -37,21 +37,19 @@
+ #
+ # Setup general configuration parameters.
+ #
+-DIR_BIN=/usr/local/bin
+-DIR_SBIN=/usr/local/sbin
+-DIR_LIBDATA=/usr/local/lib/fax
+-DIR_LIBEXEC=$DIR_SBIN
++DIR_BIN=${PREFIX}/bin
++DIR_SBIN=${PREFIX}/sbin
++DIR_LIBDATA=${PREFIX}/libdata/hylafax
++DIR_LIBEXEC=${PREFIX}/libexec
+ DIR_SPOOL=/var/spool/fax
+-DIR_HTML=/var/httpd/htdocs/hylafax
+-DIR_CGI=/var/httpd/cgi-bin
++DIR_HTML=${PREFIX}/http/htdocs/hylafax
++DIR_CGI=${PREFIX}/http/cgi-bin
+ PATH_DPSRIP=$DIR_LIBEXEC/ps2fax.exe
+-PATH_IMPRIP=/usr/lib/print/psrip
++PATH_IMPRIP=${PREFIX}/lib/print/psrip
+ HTMLPATH=/hylafax
+ CGIPATH=/cgi-bin
+ DEFVRES=98
+ PAGESIZE="North American Letter"
+-FAXUID=uucp
+-FAXGID=
+ SYSUID=bin
+ SYSGID=
+ DSO=auto
+@@ -67,18 +65,18 @@
+ GS=no
+ IMP=no
+ UTMP=auto
+-LIBTIFF="-L/usr/local/lib -ltiff"
+-TIFFINC=/usr/local/include
++LIBTIFF="-Wl,-R${PREFIX}/lib -L${PREFIX}/lib -ltiff -ljpeg -lz -lm"
++TIFFINC=${PREFIX}/include
+ TIFFBIN=
+-ZLIB=yes
+-LIBZ='-L${DEPTH}/zlib -lz'
+-ZLIBINC='${DEPTH}/${TOPSRCDIR}/zlib'
++ZLIB=no
++LIBZ='-lz'
++ZLIBINC='/usr/include'
+ REGEX=yes
+ LIBREGEX='-L${DEPTH}/regex -lregex'
+ REGEXINC='${DEPTH}/${TOPSRCDIR}/regex'
+ DBLIB=no
+-LIBDB="-L/usr/local/lib -ldb"
+-DBLIBINC=/usr/local/include
++LIBDB="-L${PREFIX}/lib -ldb"
++DBLIBINC=${PREFIX}/include
+ CONFIG_OSFCNH=auto
  
-+#ifndef TRUE
-+#define TRUE 1
-+#endif
-+
-+#ifndef FALSE
-+#define FALSE 0
-+#endif
-+
- TypeRule::TypeRule() {}
- TypeRule::~TypeRule() {}
- TypeRule::TypeRule(const TypeRule& other)
-@@ -51,7 +59,7 @@
- }
+ # SVR4 packaging stuff
+@@ -195,6 +193,7 @@
+ PKG_VENDOR
+ PORT
+ PORTFUNCS
++PREFIX
+ PSPACKAGE	PS
+ REGEX
+ RM		RMCMD
+@@ -247,7 +246,7 @@
+ test -d /usr/ucb && PATH=$PATH:/usr/ucb			# Sun and others
+ test -d /usr/contrib/bin && PATH=$PATH:/usr/contrib/bin	# BSDi
+ test -d /usr/5bin && PATH=/usr/5bin:$PATH:/usr/etc	# Sun and others
+-test -d /usr/local/bin && PATH=/usr/local/bin:$PATH	# for GNU stuff
++test -d ${PREFIX}/bin && PATH=${PREFIX}/bin:$PATH	# for packages stuff
+ PATH=$PATH:$OPATH
  
- static const char* typeNames[] =
--    { "ascii", "string", "address", "byte", "short", "long" };
-+    { "ascii", "asciiesc", "string", "address", "byte", "short", "long" };
- static const char* opNames[] =
-     { "<any>", "=", "!=", "<", "<=", ">", ">=", "&", "^", "!" };
- static const char* resultNames[] = { "tiff", "postscript", "error" };
-@@ -68,7 +76,7 @@
- 	);
- 	if (type == STRING)
- 	    printf(" \"%s\"", value.s);
--	else if (type != ASCII) {
-+	else if (type != ASCII && type != ASCIIESC) {
- 	    if (op == ANY)
- 		printf(" <any value>");
- 	    else
-@@ -86,6 +94,7 @@
-     const u_char* cp = (const u_char*) data;
-     switch (type) {
-     case ASCII:
-+      {
- 	u_int i;
- 	for (i = 0; i < size; i++)
- 	    if (!isprint(cp[i]) && !isspace(cp[i])) {
-@@ -95,6 +104,19 @@
- 	    }
- 	ok = true;
- 	goto done;
-+       }
-+    case ASCIIESC:
-+       {
-+	u_int i;
-+	for (i = 0; i < size; i++)
-+	    if (!isprint(cp[i]) && !isspace(cp[i]) && cp[i] != '\033') {
-+		if (verbose)
-+		    printf("failed (unprintable char %#x)\n", cp[i]);
-+		return (FALSE);
-+	    }
-+	ok = TRUE;
-+	goto done;
-+       }
-     case STRING:
- 	ok = (strncmp((const char*)(cp+off), value.s,
- 	    fxmin((u_int) strlen(value.s), (u_int)(size-off))) == 0);
-@@ -311,6 +333,8 @@
- 	    rule.type = TypeRule::STRING;
- 	else if (strncasecmp(tp, "ascii", cp-tp) == 0)
- 	    rule.type = TypeRule::ASCII;
-+	else if (strncasecmp(tp, "asciiesc", cp-tp) == 0)
-+	    rule.type = TypeRule::ASCIIESC;
- 	else if (strncasecmp(tp, "addr", cp-tp) == 0)
- 	    rule.type = TypeRule::ADDR;
- 	else {
-@@ -321,7 +345,8 @@
- 	    cp++;
- 	rule.op = TypeRule::EQ;		// default is '='
- 	const char* vp = cp;
--	if (rule.type != TypeRule::STRING && rule.type != TypeRule::ASCII) {
-+	if (rule.type != TypeRule::STRING && rule.type != TypeRule::ASCII
-+	 && rule.type != TypeRule::ASCIIESC) {
- 	    // numeric value
- 	    switch (*vp) {
- 	    case '=':	rule.op = TypeRule::EQ;	cp++; break;
+ POSIXLY_CORRECT=1; export POSIXLY_CORRECT		# disable GNU extensions
+@@ -617,6 +616,7 @@
+ {
+     echo `(for i do
+ 	case "$i" in
++	-Wl*)			echo "$i" ;;
+ 	/*|-l*|-l[$]{DEPTH}/*)	echo "$i" ;;
+ 	-L|-L/*|-L[$]{DEPTH}/*)	echo "$i" ;;
+ 	-I|-I/*|-I[$]{DEPTH}/*)	echo "$i" ;;
+@@ -2838,7 +2838,7 @@
+ # Location of TIFF binaries
+ #
+ if [ -z "$TIFFBIN" ]; then
+-    DIRS="/usr/local/bin /usr/contrib/bin /usr/gnu/bin /usr/bin"
++    DIRS="${PREFIX}/bin /usr/local/bin /usr/gnu/bin /usr/bin"
+     for i in $DIRS; do
+         test -x $i/tiff2ps && { TIFFBIN=$i; break; }
+     done
+@@ -2865,10 +2865,6 @@
+ 	printf("old include files: version %u\n", TIFFLIB_VERSION);
+         exit(-1);
+     }
+-    if (strncmp(TIFFGetVersion(), "LIBTIFF, Version 3.4", 20) != 0) {
+-	printf("old library: version %s\n", TIFFGetVersion());
+-	exit(-1);
+-    } else
+ 	exit(0);
+ }
+ EOF
+@@ -3414,7 +3410,7 @@
+ if [ -z "$PATH_VGETTY" ]; then
+     PATH_VGETTY=`findApp vgetty /usr/libexec:/sbin:$PATH` 
+     if [ -z "$PATH_VGETTY" ]; then
+-	PATH_VGETTY=/bin/vgetty
++	PATH_VGETTY=${PREFIX}/bin/vgetty
+ 	Note "WARNING, no vgetty program found to handle a voice call, using $PATH_VGETTY."
+     else
+ 	Note "Looks like $PATH_VGETTY is the program to exec for a voice call."
+@@ -3427,7 +3423,7 @@
+ if [ -z "$PATH_EGETTY" ]; then
+     PATH_EGETTY=`findApp egetty /usr/libexec:/sbin:$PATH` 
+     if [ -z "$PATH_EGETTY" ]; then
+-	PATH_EGETTY=/bin/egetty
++	PATH_EGETTY=${PREFIX}/bin/egetty
+ 	Note "WARNING, no egetty program found, using $PATH_EGETTY."
+     else
+ 	Note "Looks like $PATH_EGETTY is the program to exec for an extern call."
+@@ -3497,6 +3493,7 @@
+ {
+     if [ -z "$PATH_GSRIP" ]; then
+ 	GSLOCS="
++	    ${PREFIX}/bin/gs
+ 	    /usr/local/bin/gs
+ 	    /usr/contrib/bin/gs
+ 	    /usr/gnu/bin/gs
+@@ -3544,7 +3541,7 @@
+ on building Ghostscript with the necessary TIFF driver.
+ 
+ EOF
+-	PATH_PSRIP=/usr/local/bin/gs
++	PATH_PSRIP=${PREFIX}/bin/gs
+ 	PATH_GSRIP=$PATH_PSRIP
+     fi
+ }
+@@ -3607,9 +3604,9 @@
+     else
+         DIR_AFMS="
+ 	    /usr/lib/afm
+-	    /usr/local/lib/afm
+-	    /usr/local/share/ghostscript/fonts
+-	    /usr/local/lib/ghostscript/fonts
++	    ${PREFIX}/lib/afm
++	    ${PREFIX}/share/ghostscript/fonts
++	    ${PREFIX}/lib/ghostscript/fonts
+ 	    /usr/share/ghostscript/fonts
+ 	    /usr/gnu/lib/ghostscript/fonts
+ 	    /opt/gnu/lib/ghostscript/fonts
+@@ -3629,7 +3626,7 @@
+ fi
+ if [ -z "$PATH_AFM" ]; then
+     # put it where ghostscript normally puts things
+-    PATH_AFM=/usr/local/lib/ghostscript/fonts
++    PATH_AFM=${PREFIX}/share/ghostscript/fonts
+     Note "WARNING, could not locate a directory with font metric information,"
+     Note "guessing that font metric information goes in $PATH_AFM."
+ else
+@@ -3648,6 +3645,7 @@
+ #
+ if [ -z "$DIR_MAN" ]; then
+     MANPATH="
++	${PREFIX}/man
+ 	$MANPATH
+ 	/usr/local/man
+ 	/usr/contrib/man
+@@ -3657,7 +3655,7 @@
+     for i in $MANPATH; do
+ 	test -d $i && { DIR_MAN=$i; break; }
+     done
+-    test -z "$DIR_MAN" && DIR_MAN=/usr/local/man
++    test -z "$DIR_MAN" && DIR_MAN=${PREFIX}/man
+ fi
+ Note "Looks like manual pages go in $DIR_MAN."
+ if [ -z "$MANSCHEME" ]; then
+@@ -4044,7 +4042,8 @@
+ 	printConfig
+ 	checkForExecutable $PATH_SENDMAIL
+ 	checkForExecutable $PATH_GETTY
+-	prompt "Are these ok [yes]?"; read ok
++#	prompt "Are these ok [yes]?"; read ok
++	ok=yes
+ 	test -z "$ok" && ok=yes
+ 	case "$ok" in
+ 	[1-9]|1[0-6])	promptForParameter $ok;;

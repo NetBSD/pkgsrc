@@ -1,8 +1,8 @@
-$NetBSD: patch-ao,v 1.1.1.1 1999/08/11 06:04:30 rh Exp $
+$NetBSD: patch-ao,v 1.2 2000/08/29 17:08:38 abs Exp $
 
---- util/Makefile.in.orig	Sun Jan 10 10:50:29 1999
-+++ util/Makefile.in	Mon Aug  9 23:09:07 1999
-@@ -150,7 +150,7 @@
+--- util/Makefile.in.orig	Thu Aug  5 10:46:06 1999
++++ util/Makefile.in
+@@ -154,7 +154,7 @@
  PUTCLIENT	= ${INSTALL} -idb ${PRODUCT}.sw.client
  PUTSERVER	= ${INSTALL} -idb ${PRODUCT}.sw.server
  PUTSERV		= ${PUTSERVER} -m 755
@@ -11,7 +11,7 @@ $NetBSD: patch-ao,v 1.1.1.1 1999/08/11 06:04:30 rh Exp $
  PUTSBIN		= ${PUTSERVER} -F ${SBIN}
  
  installClient: default
-@@ -167,6 +167,7 @@
+@@ -171,6 +171,7 @@
  	${PUTSBIN} -m 755 -src xferfaxstats.sh -O xferfaxstats
  	${PUTSBIN} -m 755 -src recvstats.sh -O recvstats
  	${PUTSBIN} -m 755 -idb "config(update)" -src faxcron.sh -O faxcron
@@ -19,7 +19,7 @@ $NetBSD: patch-ao,v 1.1.1.1 1999/08/11 06:04:30 rh Exp $
  	${PUTSUPD} -m 755 -src ${SRCDIR}/ps2fax.gs.sh -O ps2fax.gs
  	${PUTSUPD} -m 755 -src ${SRCDIR}/ps2fax.dps.sh -O ps2fax.dps
  	${PUTSUPD} -m 755 -src ${SRCDIR}/ps2fax.imp.sh -O ps2fax.imp
-@@ -178,9 +179,10 @@
+@@ -182,9 +183,10 @@
  	${PUTSUPD} -m 755 -src ${SRCDIR}/pollrcvd.sh -O pollrcvd
  	${PUTSUPD} -m 755 -src ${SRCDIR}/mkcover.sh -O mkcover
  	${PUTSUPD} -m 755 -src ${SRCDIR}/wedged.sh -O wedged
