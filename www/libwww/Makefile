@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2000/12/27 02:34:12 fredb Exp $
+# $NetBSD: Makefile,v 1.18 2000/12/27 11:52:50 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.10 1998/06/14 23:34:59 jseger Exp
 #
 
@@ -10,6 +10,8 @@ MASTER_SITES=		http://www.w3.org/Library/Distribution/ \
 
 MAINTAINER=		tv@netbsd.org
 HOMEPAGE=		http://www.w3.org/Library/
+
+BUILD_DEPENDS+=		perl:../../lang/perl5
 
 USE_GMAKE=		yes
 USE_LIBTOOL=		yes
