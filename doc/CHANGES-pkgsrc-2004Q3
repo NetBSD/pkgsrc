@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2004Q3,v 1.1.2.41 2004/12/13 10:23:04 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2004Q3,v 1.1.2.42 2004/12/13 18:04:18 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2004Q3 branch:
@@ -85,3 +85,5 @@ Pullup ticket 165 - requested by Julio M. Merino Vidal
 MASTER_SITES fix for shared-mime-info
 Pullup ticket 168 - requested by Todd Vierling
 security fix for ssmtp
+Pullup ticket 171 - requested by Havard Eidnes
+security fix for imlib
