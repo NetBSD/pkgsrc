@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2003/06/23 20:36:14 jtb Exp $
+# $NetBSD: Makefile,v 1.4 2003/06/25 21:01:47 jmc Exp $
 
 DISTNAME=	hevea-1.05
 PKGREVISION=	1
@@ -12,9 +12,9 @@ COMMENT=	LaTeX to HTML translator
 DEPENDS+=	ocaml>=3.00:../../lang/ocaml
 
 .if (${MACHINE_ARCH} == "i386") || (${MACHINE_ARCH} == "powerpc") || (${MACHINE_ARCH} == "sparc")
-ALL_TARGET=opt
+MAKE_ENV+=	TARGET=opt
 .else
-ALL_TARGET=byte
+MAKE_ENV+=	TARGET=byte
 .endif
 
 .include "../../mk/bsd.pkg.mk"
