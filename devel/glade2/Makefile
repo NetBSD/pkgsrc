@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2004/02/14 17:21:37 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2004/02/20 09:23:15 jmmv Exp $
 #
 
 DISTNAME=		glade-2.0.1
@@ -21,9 +21,16 @@ USE_GNU_TOOLS+=		make
 USE_X11=		YES
 USE_LIBTOOL=		YES
 
+.include "../../databases/libgda/buildlink3.mk"
 .include "../../databases/libgnomedb/buildlink3.mk"
 .include "../../devel/gail/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/libbonoboui/buildlink3.mk"
+.include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../graphics/libgnomecanvas/buildlink3.mk"
 .include "../../print/libgnomeprintui/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
