@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/01/25 17:52:51 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2001/01/29 11:34:32 wiz Exp $
 
 DISTNAME=	squirrelmail-1.0pre3
 PKGNAME=	squirrelmail-0.9.3
@@ -17,10 +17,10 @@ NO_BUILD=	# defined
 
 DEINSTALL_FILE=	${WRKDIR}/DEINSTALL
 INSTALL_FILE=	${WRKDIR}/INSTALL
-MESSAGE_FILE=	${WRKDIR}/MESSAGE
 
 SM_SUBDIR=	share/squirrelmail
 SMDIR=		${PREFIX}/${SM_SUBDIR}
+MESSAGE_SUBST+=	SMDIR=${SMDIR}
 
 post-extract:
 	cd ${WRKSRC};							\
@@ -47,8 +47,6 @@ pre-install:
 		-e "s|@CP@|${CP}|g"					\
 		-e "s|@MKDIR@|${MKDIR}|g"				\
 		${PKGDIR}/INSTALL > ${INSTALL_FILE}
-	${SED}	-e "s|@SMDIR@|${SMDIR}|g"				\
-		${PKGDIR}/MESSAGE > ${MESSAGE_FILE}
 	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} PRE-INSTALL
 
 do-install:

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2001/01/26 05:21:49 hubertf Exp $
+# $NetBSD: Makefile,v 1.24 2001/01/29 11:34:47 wiz Exp $
 
 DISTNAME=	wwwoffle-2.6
 CATEGORIES=	www
@@ -17,8 +17,7 @@ HOMEPAGE=	http://www.gedanken.demon.co.uk/wwwoffle/
 USE_GMAKE=	yes
 NO_CONFIGURE=	yes
 
-MESSAGE_FILE=	${WRKDIR}/MESSAGE
-PLIST_SRC=	${WRKDIR}/PLIST
+PLIST_SUBST+=	GTAR=${GTAR}
 
 BUILD_DEFS+=	USE_INET6
 
@@ -31,9 +30,6 @@ MAKE_ENV+=	LIBRARY="-lnsl -lsocket"
 post-build:
 	@${SED} -e 's#@PREFIX@#${PREFIX}#g' <${FILESDIR}/wwwoffle.sh \
 	  >${WRKDIR}/wwwoffle.sh
-	@${SED} -e 's#@PREFIX@#${PREFIX}#g' <${PKGDIR}/MESSAGE \
-	  >${MESSAGE_FILE}
-	@${SED} -e 's#@GTAR@#${GTAR}#g' <${PKGDIR}/PLIST >${PLIST_SRC}
 
 pre-install:
 	${MKDIR} ${PREFIX}/etc/wwwoffle

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2000/12/13 03:49:30 jwise Exp $
+# $NetBSD: Makefile,v 1.12 2001/01/29 11:34:46 wiz Exp $
 
 DISTNAME=	jakarta-tomcat.src
 PKGNAME=	jakarta-tomcat-3.1.1
@@ -18,7 +18,7 @@ WRKSRC=		${WRKDIR}/jakarta-tomcat-3.1.1-src
 JAKARTA_HOME=	${PREFIX}/jakarta
 MAKE_ENV+=	JAVA_HOME=${JAVA_HOME}
 
-MESSAGE_FILE=	${WRKDIR}/MESSAGE
+MESSAGE_SUBST+=	TOMCAT_HOME=${JAKARTA_HOME}
 
 post-patch:
 	${SED} -e s,@JAKARTA_HOME@,${JAKARTA_HOME},g \
@@ -33,10 +33,6 @@ post-patch:
 do-build:
 	cd ${WRKSRC}/../jakarta-ant && ${SH} bootstrap.sh
 	cd ${WRKSRC} && ${SH} ./build.sh
-
-post-build:
-	${SED} 's,@TOMCAT_HOME@,${JAKARTA_HOME}/tomcat,g' \
-		< ${PKGDIR}/MESSAGE > ${WRKDIR}/MESSAGE
 
 do-install:
 	${MKDIR} ${JAKARTA_HOME}/tomcat

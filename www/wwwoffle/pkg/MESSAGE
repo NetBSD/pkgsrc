@@ -1,1 +1,6 @@
-Please add "@PREFIX@/etc/rc.d/wwwoffle.sh" to "/etc/rc.local".
+======================================================================
+$NetBSD: MESSAGE,v 1.5 2001/01/29 11:34:47 wiz Exp $
+
+Please add "${PREFIX}/etc/rc.d/wwwoffle" to "/etc/rc.local".
+
+======================================================================

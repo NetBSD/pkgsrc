@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2000/10/19 04:26:39 hubertf Exp $
+# $NetBSD: Makefile,v 1.11 2001/01/29 11:34:34 wiz Exp $
 # FreeBSD: ports/misc/fd/Makefile,v 1.14 1999/08/25 07:21:37 obrien Exp
 #
 
@@ -11,7 +11,6 @@ MASTER_SITES=	ftp://ftp.ics.es.osaka-u.ac.jp/pub/FDclone/ \
 MAINTAINER=	Nobuhiro Yasutomi <nobu@psrc.isac.co.jp>
 
 MANLANG=	ja
-MAN1=		fd.1
 MAKE_ENV=	LANG=${MANLANG}
 DOCS=		README FAQ HISTORY ToAdmin
 
@@ -25,6 +24,5 @@ post-install:
 	@for i in ${DOCS}; do \
 		${INSTALL_DATA} ${WRKSRC}/$$i ${PREFIX}/share/doc/fd; \
 	done
-	@${CAT} ${PKGDIR}/MESSAGE
 
 .include "../../mk/bsd.pkg.mk"

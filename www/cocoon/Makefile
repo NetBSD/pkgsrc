@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2000/10/19 23:23:34 jwise Exp $
+# $NetBSD: Makefile,v 1.5 2001/01/29 11:34:45 wiz Exp $
 
 DISTNAME=	Cocoon-1.8
 PKGNAME=	cocoon-1.8
@@ -31,13 +31,11 @@ WRKSRC=		${WRKDIR}/${PKGNAME}
 NO_CONFIGURE=
 
 USE_JAVA=	yes
-MESSAGE_FILE=	${WRKDIR}/MESSAGE
 
 post-extract:
 	${RM} ${WRKSRC}/lib/fop_0_13_0.jar ${WRKSRC}/lib/servlet_2_2.jar \
 		${WRKSRC}/lib/xalan_1_2_D02.jar ${WRKSRC}/lib/xerces_1_2.jar \
 		${WRKSRC}/lib/bsf.jar ${WRKSRC}/lib/bsfengines.jar
-	${SED} -e s,@PREFIX@,${PREFIX},g < ${PKGDIR}/MESSAGE > ${WRKDIR}/MESSAGE
 
 # Yes -- you have to run build.sh _twice_.  The first time triggers a bug in JDK-1.1 javac,
 # and the second time completes successfully.  While we're at it, note that we can't

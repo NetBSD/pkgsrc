@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/12/25 09:35:58 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2001/01/29 11:34:22 wiz Exp $
 
 DISTNAME=		rp8_linux20_libc6_i386_cs1
 PKGNAME=		realplayer-8
@@ -35,12 +35,12 @@ NO_CONFIGURE=		# defined
 SCRIPTS_ENV+=		CAT="${CAT}"
 SCRIPTS_ENV+=		CHMOD="${CHMOD}"
 SCRIPTS_ENV+=		RP_INSTALLER="${RP_INSTALLER}"
-MESSAGE_FILE=		${WRKDIR}/MESSAGE
 
 DOWNLOAD=		http://proforma.real.com/real/player/unix/unix.html
 RP_INSTALLER=		${DISTDIR}/${DISTNAME}${EXTRACT_SUFX}
 REALPLAYER_HOME=	${PREFIX}/lib/RealPlayer8
 NS_PLUGINS_DIR=		${PREFIX}/lib/netscape/plugins
+MESSAGE_SUBST+=		REALPLAYER_HOME=${REALPLAYER_HOME}
 
 do-fetch:
 	@if [ ! -f ${RP_INSTALLER} ]; then \
@@ -67,8 +67,6 @@ do-build:
 pre-install:
 	${FIND} ${WRKSRC} \
 		\( -name "*.orig" -o -name "*.old" \) -exec ${RM} {} \;
-	${SED}	-e "s,@REALPLAYER_HOME@,${REALPLAYER_HOME},g" \
-		< ${PKGDIR}/MESSAGE > ${MESSAGE_FILE}
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/realplay.sh ${PREFIX}/bin/realplay
