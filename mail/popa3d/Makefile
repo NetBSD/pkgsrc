@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.35 2004/07/23 14:14:23 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2004/09/23 06:43:45 cube Exp $
 #
 
 DISTNAME=	popa3d-0.6.4.1
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	http://www.openwall.com/popa3d/ \
 		ftp://ftp.openwall.com/pub/projects/popa3d/ \
@@ -27,11 +28,11 @@ RCD_SCRIPTS=	popa3d
 FILES_SUBST+=	POPA3D_USER=${POPA3D_USER}
 FILES_SUBST+=	POPA3D_GROUP=${POPA3D_GROUP}
 
-post-patch:
-	cd ${WRKSRC} && \
-		${SED} "s,/var/empty,${PREFIX}/share/empty," \
-			params.h > params.h.new && \
-		${MV} params.h.new params.h
+SUBST_CLASSES+=		params
+SUBST_STAGE.params=	post-patch
+SUBST_FILES.params=	params.h
+SUBST_SED.params=	-e 's,/var/empty,${PREFIX}/share/empty,'	\
+			-e 's,@@POPA3D_USER@@,"${POPA3D_USER}",'
 
 do-install:
 	${INSTALL_PROGRAM} -m 500 ${WRKSRC}/popa3d ${PREFIX}/sbin
