@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.22 1998/11/04 08:07:10 garbled Exp $
+# $NetBSD: Makefile,v 1.23 1998/12/28 03:16:57 tv Exp $
 #
 
     SUBDIR += amp
+    SUBDIR += bladeenc
     SUBDIR += cam
     SUBDIR += cdd
     SUBDIR += cddbd
