@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/02/25 18:02:08 jmmv Exp $
+# $NetBSD: Makefile,v 1.3 2004/02/27 13:54:49 jmmv Exp $
 #
 
 .include "Makefile.common"
@@ -13,7 +13,6 @@ PLIST_SRC+=		${PKGDIR}/PLIST
 
 .include "../../audio/flac/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
-.include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../graphics/aalib/buildlink3.mk"
