@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2000/12/11 23:02:36 skrll Exp $
+# $NetBSD: Makefile.common,v 1.5 2001/02/06 09:26:16 skrll Exp $
 #
 
 DISTNAME=		qt-x11-${QTVERSION}
@@ -23,6 +23,9 @@ CONFIGURE_SCRIPT=	${ECHO} yes | ./configure
 QTPREFIX=		${PREFIX}/qt2
 
 MAKE_ENV+=		QTPREFIX=${QTPREFIX}
+
+FILESDIR=		${PKGSRCDIR}/x11/qt2-libs/files
+PATCHDIR=		${PKGSRCDIR}/x11/qt2-libs/patches
 
 .include "../../mk/bsd.prefs.mk"
 

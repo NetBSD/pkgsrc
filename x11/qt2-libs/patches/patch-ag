@@ -1,6 +1,6 @@
-$NetBSD: patch-ag,v 1.1.1.1 2000/10/19 07:41:16 skrll Exp $
+$NetBSD: patch-ag,v 1.2 2001/02/06 09:26:17 skrll Exp $
 
---- tools/designer/designer/Makefile.in.orig	Wed Oct  4 10:56:06 2000
+--- tools/designer/designer/Makefile.in.orig	Thu Feb  1 02:29:50 2001
 +++ tools/designer/designer/Makefile.in
 @@ -6,15 +6,15 @@
  CXXFLAGS=	$(SYSCONF_CXXFLAGS_QT) $(SYSCONF_CXXFLAGS) -DDESIGNER
@@ -8,8 +8,8 @@ $NetBSD: patch-ag,v 1.1.1.1 2000/10/19 07:41:16 skrll Exp $
  CFLAGS	=	$(SYSCONF_CFLAGS) -DDESIGNER
 -INCPATH =	-I../shared -I../util -I../../../src/3rdparty/zlib
 -LFLAGS	=	$(SYSCONF_LFLAGS_QT) $(SYSCONF_RPATH_QT) $(SYSCONF_LFLAGS) $(QT_LFLAGS_MT)
--LIBS	=	$(SUBLIBS) -lqutil -L$(QTDIR)/lib -lqutil -L$(QTDIR)/lib $(SYSCONF_LIBS_QT) $(SYSCONF_LIBS) $(SYSCONF_LIBS_QTAPP)
-+INCPATH =	-I../shared -I../util #-I../../../src/3rdparty/zlib
+-LIBS	=	$(SUBLIBS) -lqutil -L$(QTDIR)/lib $(SYSCONF_LIBS_QT) $(SYSCONF_LIBS) $(SYSCONF_LIBS_QTAPP)
++INCPATH =	-I../shared -I../util
 +LFLAGS	=	$(SYSCONF_LFLAGS_QT) $(SYSCONF_RPATH_QT) $(SYSCONF_LFLAGS) $(QT_LFLAGS_MT) $(SYSCONF_RPATH_X11) $(SYSCONF_RPATH_OPENGL)
 +LIBS	=	$(SUBLIBS) ../util/libqutil.la $(SYSCONF_LIBS_QT) $(SYSCONF_LIBS) $(SYSCONF_LIBS_QTAPP)
  MOC	=	$(SYSCONF_MOC)

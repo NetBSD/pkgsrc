@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/01/13 12:37:27 skrll Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/02/06 09:26:16 skrll Exp $
 qt2/examples/Makefile
 qt2/examples/README
 qt2/examples/aclock/Makefile
@@ -488,6 +488,18 @@ qt2/examples/xform/image.any
 qt2/examples/xform/picture.any
 qt2/examples/xform/xform.cpp
 qt2/examples/xform/xform.pro
+qt2/examples/xml/tagreader-with-features/Makefile
+qt2/examples/xml/tagreader-with-features/fnord.xml
+qt2/examples/xml/tagreader-with-features/structureparser.cpp
+qt2/examples/xml/tagreader-with-features/structureparser.h
+qt2/examples/xml/tagreader-with-features/tagreader.cpp
+qt2/examples/xml/tagreader-with-features/tagreader.pro
+qt2/examples/xml/tagreader/Makefile
+qt2/examples/xml/tagreader/animals.xml
+qt2/examples/xml/tagreader/structureparser.cpp
+qt2/examples/xml/tagreader/structureparser.h
+qt2/examples/xml/tagreader/tagreader.cpp
+qt2/examples/xml/tagreader/tagreader.pro
 qt2/examples/xmlquotes/Makefile
 qt2/examples/xmlquotes/README
 qt2/examples/xmlquotes/main.cpp
@@ -592,6 +604,9 @@ qt2/tutorial/tutorial.pro
 @dirrm qt2/tutorial/t1
 @dirrm qt2/tutorial
 @dirrm qt2/examples/xmlquotes
+@dirrm qt2/examples/xml/tagreader-with-features
+@dirrm qt2/examples/xml/tagreader
+@dirrm qt2/examples/xml
 @dirrm qt2/examples/xform
 @dirrm qt2/examples/wizard
 @dirrm qt2/examples/widgets

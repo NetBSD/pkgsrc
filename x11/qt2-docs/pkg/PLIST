@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2001/01/11 17:55:56 skrll Exp $
-
+@comment $NetBSD: PLIST,v 1.5 2001/02/06 09:26:14 skrll Exp $
 qt2/doc/README
 qt2/doc/README.QT
 qt2/doc/html/HOWTO-framebuffer.html
@@ -7,6 +6,7 @@ qt2/doc/html/README
 qt2/doc/html/README.QT
 qt2/doc/html/aboutqt.html
 qt2/doc/html/abstractwidgets.html
+qt2/doc/html/accel.html
 qt2/doc/html/accelerators.html
 qt2/doc/html/aclock-main-cpp.html
 qt2/doc/html/action-main-cpp.html
@@ -212,13 +212,16 @@ qt2/doc/html/drawing.html
 qt2/doc/html/drawlines-connect-cpp.html
 qt2/doc/html/easteregg.html
 qt2/doc/html/easteregg2.html
+qt2/doc/html/embedclasses.html
 qt2/doc/html/environment.html
+qt2/doc/html/envvars.html
 qt2/doc/html/eventsandfilters.html
 qt2/doc/html/examples.html
 qt2/doc/html/face.png
 qt2/doc/html/features.html
 qt2/doc/html/fileiconview-main-cpp.html
 qt2/doc/html/focus.html
+qt2/doc/html/fontdir.html
 qt2/doc/html/fonts-qws.html
 qt2/doc/html/forever-forever-cpp.html
 qt2/doc/html/frames.png
@@ -580,6 +583,8 @@ qt2/doc/html/qfontdlg-w.png
 qt2/doc/html/qfontinfo-h.html
 qt2/doc/html/qfontinfo-members.html
 qt2/doc/html/qfontinfo.html
+qt2/doc/html/qfontmanager-members.html
+qt2/doc/html/qfontmanager_qws-h.html
 qt2/doc/html/qfontmetrics-h.html
 qt2/doc/html/qfontmetrics-members.html
 qt2/doc/html/qfontmetrics.html
@@ -605,6 +610,9 @@ qt2/doc/html/qgdict-members.html
 qt2/doc/html/qgdict.html
 qt2/doc/html/qgdictiterator-members.html
 qt2/doc/html/qgdictiterator.html
+qt2/doc/html/qgfx_qws-h.html
+qt2/doc/html/qgfxraster_qws-h.html
+qt2/doc/html/qgfxrasterbase-members.html
 qt2/doc/html/qgl-h.html
 qt2/doc/html/qgl-members.html
 qt2/doc/html/qgl.html
@@ -774,6 +782,8 @@ qt2/doc/html/qlnode.html
 qt2/doc/html/qlocalfs-h.html
 qt2/doc/html/qlocalfs-members.html
 qt2/doc/html/qlocalfs.html
+qt2/doc/html/qlock-members.html
+qt2/doc/html/qlock_qws-h.html
 qt2/doc/html/qmag-qmag-cpp.html
 qt2/doc/html/qmainwindow-h.html
 qt2/doc/html/qmainwindow-m.png
@@ -943,10 +953,14 @@ qt2/doc/html/qregexp.html
 qt2/doc/html/qregion-h.html
 qt2/doc/html/qregion-members.html
 qt2/doc/html/qregion.html
+qt2/doc/html/qrenderedfont-members.html
 qt2/doc/html/qresizeevent-members.html
 qt2/doc/html/qresizeevent.html
 qt2/doc/html/qscrbar-m.png
 qt2/doc/html/qscrbar-w.png
+qt2/doc/html/qscreen-members.html
+qt2/doc/html/qscreencursor-members.html
+qt2/doc/html/qscreencursor.html
 qt2/doc/html/qscrollbar-h.html
 qt2/doc/html/qscrollbar-members.html
 qt2/doc/html/qscrollbar.html
@@ -1385,13 +1399,18 @@ qt2/doc/html/tutorial.png
 qt2/doc/html/unicode.html
 qt2/doc/html/unsmooth.png
 qt2/doc/html/validator-main-cpp.html
+qt2/doc/html/walkthroughs.html
 qt2/doc/html/whatsthis
 qt2/doc/html/whatsthis.png
 qt2/doc/html/winsystem.html
 qt2/doc/html/wizard-main-cpp.html
 qt2/doc/html/workspace.html
 qt2/doc/html/xform-xform-cpp.html
+qt2/doc/html/xml-dom.html
+qt2/doc/html/xml-sax-walkthrough.html
 qt2/doc/html/xml-sax.html
+qt2/doc/html/xml-tagreader-tagreader-cpp.html
+qt2/doc/html/xml-tagreader-with-features-tagreader-cpp.html
 qt2/doc/html/xml.html
 qt2/doc/html/xt.html
 qt2/doc/html/y2k.html
@@ -1620,6 +1639,7 @@ qt2/man/man3/QRegExp.3
 qt2/man/man3/QRegion.3
 qt2/man/man3/QResizeEvent.3
 qt2/man/man3/QSGIStyle.3
+qt2/man/man3/QScreenCursor.3
 qt2/man/man3/QScrollBar.3
 qt2/man/man3/QScrollView.3
 qt2/man/man3/QSemaphore.3
@@ -1948,6 +1968,7 @@ qt2/man/man3/qrect.3
 qt2/man/man3/qregexp.3
 qt2/man/man3/qregion.3
 qt2/man/man3/qresizeevent.3
+qt2/man/man3/qscreencursor.3
 qt2/man/man3/qscrollbar.3
 qt2/man/man3/qscrollview.3
 qt2/man/man3/qsemaphore.3

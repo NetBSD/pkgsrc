@@ -1,14 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/01/13 12:37:21 skrll Exp $
+# $NetBSD: Makefile,v 1.2 2001/02/06 09:26:15 skrll Exp $
 #
 
 PKGNAME=	qt2-examples-${QTVERSION}
 
 .include "../qt2-libs/Makefile.common"
 
-DEPENDS+=	qt2-libs-*:../../x11/qt2-libs
-
-PATCHFILES+=	${PKGSRCDIR}/x11/qt2-libs/patches/patch-??
-ALLFILES=	${DISTFILES} # don't checksum shared patches
+DEPENDS+=	qt2-libs-${QTVERSION}:../../x11/qt2-libs
 
 CONFIGURE_ENV+=	QTDIR=${QTPREFIX}
 
