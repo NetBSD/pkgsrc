@@ -3,7 +3,7 @@
 # Date created:		23 January 1997
 # Whom:			Thomas Gellekum <tg@FreeBSD.ORG>
 #
-# $NetBSD: Makefile,v 1.5 1997/12/22 07:45:48 hubertf Exp $
+# $NetBSD: Makefile,v 1.6 1998/02/09 07:10:20 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.9 1997/09/23 07:07:32 tg Exp
 #
 
@@ -17,7 +17,7 @@ MAINTAINER=	tg@FreeBSD.ORG
 BUILD_DEPENDS=	${PREFIX}/lib/libgdbm.a:${PORTSDIR}/databases/gdbm
 
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+=	${ARCH}--netbsd
+CONFIGURE_ARGS+=	${MACHINE_ARCH}--netbsd
 USE_GMAKE=	yes
 MAN8=		rpm.8 rpm2cpio.8
 
