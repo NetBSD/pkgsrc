@@ -1,0 +1,31 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/05/11 14:03:13 bad Exp $
+
+--- Makefile.PL.orig	Mon Aug  3 18:59:14 1998
++++ Makefile.PL	Tue May 11 01:07:10 1999
+@@ -32,7 +32,7 @@
+    'PREREQ_PM'    => { Curses     => 0,
+                      },
+    'LIBS'         => "-L$Config{ldflags} -lwais",
+-   'INC'          => "-DWAIS_USES_STDIO -I$Config{cppflags}",
++   'INC'          => "-DWAIS_USES_STDIO $Config{cppflags}",
+    'NAME'         => 'Wais',
+    'VERSION_FROM' => 'lib/Wais.pm',
+    'DEFINE'       => '-DTRACE=0',
+@@ -42,7 +42,7 @@
+                        PREOP    => 'pod2text lib/Wais.pm > README; pod2text install > INSTALL',
+                      },
+    'MAP_TARGET'   => 'waisperl',
+-   'EXE_FILES'    => [ qw(script/inspect script/makedb) ],
++   'EXE_FILES'    => [ qw(script/inspect) ],
+   );
+ 
+ 
+@@ -55,7 +55,7 @@
+   my $self = shift;
+   
+   qq[
+-install :: register
++#install :: register
+ 
+ register ::
+ \t] . $self->{NOECHO} . q[$(PERL) -I$(PERL_ARCHLIB) -I$(PERL_LIB) \
