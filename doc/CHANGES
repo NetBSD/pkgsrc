@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6996 2004/08/25 20:26:37 snj Exp $
+$NetBSD: CHANGES,v 1.6997 2004/08/25 23:26:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4046,3 +4046,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated alee-ttf to 2.7 [minskim 2004-08-25]
 	Updated hre to 0.9.8 [minskim 2004-08-25]
 	Updated quakeforge to 0.5.5 [snj 2004-08-25]
+	Updated libstatgrab to 0.10.3 [wiz 2004-08-25]
