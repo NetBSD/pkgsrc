@@ -1,0 +1,12 @@
+$NetBSD: patch-ad,v 1.1 2004/02/10 21:54:32 garbled Exp $
+--- bin/mklib.freebsd.orig	Thu Dec 11 17:24:35 2003
++++ bin/mklib.freebsd	Tue Feb 10 14:30:35 2004
+@@ -37,7 +37,7 @@
+ 
+ OBJECTS=$*
+ 
+-DEPLIBS="-lGL -lGLU -L${X11BASE}/lib -lXmu"
++DEPLIBS="-Wl,-R${PREFIX}/lib -L${PREFIX}/lib -lGL -lGLU -Wl,-R${X11BASE}/lib -L${X11BASE}/lib -lXmu"
+ 
+ #--platform------------------------------------------------------------
+ 
