@@ -1,10 +1,10 @@
-$NetBSD: patch-ae,v 1.13 2001/05/14 14:52:38 jlam Exp $
+$NetBSD: patch-ae,v 1.14 2003/01/05 20:12:13 jlam Exp $
 
---- src/bin/pgtclsh/Makefile.orig	Fri Feb 23 13:12:17 2001
+--- src/bin/pgtclsh/Makefile.orig	Thu Jun 20 16:29:42 2002
 +++ src/bin/pgtclsh/Makefile
-@@ -22,19 +22,17 @@
- -include Makefile.tkdefs
- endif
+@@ -15,19 +15,17 @@ top_builddir = ../../..
+ include $(top_builddir)/src/Makefile.global
+ 
  
 -libpgtcl_srcdir = $(top_srcdir)/src/interfaces/libpgtcl
 -libpgtcl_builddir = $(top_builddir)/src/interfaces/libpgtcl
@@ -15,26 +15,27 @@ $NetBSD: patch-ae,v 1.13 2001/05/14 14:52:38 jlam Exp $
  
  # If we are here then Tcl is available
  PROGRAMS = pgtclsh
-+INSTALL_TARGET = install-tcl
++INSTALL_TARGETS = install-tcl
  
  # Add Tk targets if Tk is available
  ifeq ($(with_tk), yes)
  PROGRAMS += pgtksh
-+INSTALL_TARGET += install-tk
++INSTALL_TARGETS += install-tk
  endif
  
  all: submake $(PROGRAMS)
-@@ -49,8 +47,12 @@
+@@ -42,9 +40,13 @@ pgtksh: pgtkAppInit.o
  submake:
  	$(MAKE) -C $(libpgtcl_builddir) all
  
 -install: all installdirs
-+install: $(INSTALL_TARGET)
++install: $(INSTALL_TARGETS)
 +
-+install-tcl: installdirs pgtclsh
++install-tcl: pgtclsh installdirs
  	$(INSTALL_PROGRAM) pgtclsh $(DESTDIR)$(bindir)/pgtclsh
 +
-+install-tk: installdirs pgtksh
  ifeq ($(with_tk), yes)
++install-tk: pgtksh installdirs
  	$(INSTALL_PROGRAM) pgtksh $(DESTDIR)$(bindir)/pgtksh
  endif
+ 

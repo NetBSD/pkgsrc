@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2002/10/19 03:03:50 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2003/01/05 20:12:23 jlam Exp $
 
 PKGNAME=		postgresql-lib-${BASE_VERS}
 COMMENT=		PostgreSQL database headers and libraries
 
-USE_BUILDLINK2=		# defined
-
-.include "../../databases/postgresql/Makefile.common"
+.include "../postgresql/Makefile.common"
 
 CONFIGURE_ARGS+=	--with-openssl=${SSLBASE}
 BUILD_DIRS=		${WRKSRC}/src/include
@@ -28,6 +26,8 @@ post-install:
 		${MAKE_PROGRAM} install-all-headers
 	${GTAR} zxCf ${PREFIX}/man ${WRKSRC}/doc/man.tar.gz             \
 		`${SED} -e "s|^#.*||" ${FILESDIR}/man.lib`
+	${RM} -f ${PREFIX}/include/pgsql
+	${LN} -sf postgresql ${PREFIX}/include/pgsql
 
 .include "../../security/openssl/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

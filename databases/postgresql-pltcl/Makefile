@@ -1,13 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2002/10/19 03:03:51 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2003/01/05 20:12:26 jlam Exp $
 
 PKGNAME=		postgresql-pltcl-${BASE_VERS}
 COMMENT=		PL/Tcl procedural language for the PostgreSQL backend
 
 DEPENDS+=		postgresql-server>=${BASE_VERS}:../../databases/postgresql-server
 
-USE_BUILDLINK2=		# defined
-
-.include "../../databases/postgresql/Makefile.common"
+.include "../postgresql/Makefile.common"
 
 CONFIGURE_ARGS+=	--with-openssl=${SSLBASE}
 CONFIGURE_ARGS+=	--with-tcl
@@ -17,7 +15,7 @@ TCLSH=			${LOCALBASE}/bin/tclsh
 
 BUILD_DIRS=		${WRKSRC}/src/pl/tcl
 
-.include "../../databases/postgresql-lib/buildlink2.mk"
+.include "../postgresql-lib/buildlink2.mk"
 .include "../../lang/tcl/buildlink2.mk"
 
 .include "../../mk/bsd.pkg.mk"
