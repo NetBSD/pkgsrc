@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2002/05/03 21:51:56 hubertf Exp $
+# $NetBSD: Makefile,v 1.12 2002/05/24 21:38:07 hubertf Exp $
 
-DISTNAME=		silc-client-0.8.6
+DISTNAME=		silc-client-0.9.1
 CATEGORIES=		chat
 MASTER_SITES=		http://www.silcnet.org/download/client/sources/ \
 			ftp://ftp.silcnet.org/silc/client/sources/ \
