@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1779 2004/05/25 21:52:19 wiz Exp $
+$NetBSD: TODO,v 1.1780 2004/05/26 07:57:00 jlam Exp $
 
 Suggested new packages
 ======================
@@ -189,7 +189,7 @@ Suggested package updates
 	o cvsweb-3.0.1
 	o cxref-1.5e
 	o cyrus-imapd21-2.1.16
-	o cyrus-imapd22-2.2.4
+	o cyrus-imapd22-2.2.4 [jlam]
 	o dact-0.8.37
 	o dar-2.1.2
 	o dctc-0.85.9
