@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.17 2004/12/03 15:14:51 wiz Exp $
+# $NetBSD: Makefile.common,v 1.18 2005/02/17 11:45:49 wiz Exp $
 
 DISTNAME=	mpg123-0.59r
 MPG123_VERSION=	0.59.18
@@ -11,7 +11,7 @@ PATCHFILES=	mpg123-059r-v6-20000713b.diff.gz
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.mpg123.de/
-BUILD_DEFS+=	USE_INET6
+BUILD_DEFS+=	USE_INET6 MPG123_ARM_FIXED64
 DIST_SUBDIR=	mpg123
 PATCHDIR=	${.CURDIR}/../../audio/mpg123/patches
 FILESDIR=	${.CURDIR}/../../audio/mpg123/files
