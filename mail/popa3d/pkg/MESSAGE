@@ -1,0 +1,10 @@
+=================================================================
+
+In order to enable POP service, you should add the following line
+to your /etc/inetd.conf:
+
+ pop3 stream tcp nowait root ${PKG_PREFIX}/libexec/popa3d popa3d
+
+and send a HUP signal to inetd.
+
+=================================================================
