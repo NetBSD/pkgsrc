@@ -1,9 +1,13 @@
-$NetBSD: patch-ac,v 1.2 2003/12/23 11:02:13 xtraeme Exp $
+$NetBSD: patch-ac,v 1.2.8.1 2005/03/05 18:43:13 snj Exp $
 
---- INSTALL.orig	Mon Sep 15 15:01:56 2003
-+++ INSTALL
-@@ -331,7 +331,7 @@ upgrade.
-       for a generic site list in misc/sitelist.cfg to help you with
+--- INSTALL.orig	2004-02-17 18:05:32.000000000 -0500
++++ INSTALL	2005-03-01 19:41:09.000000000 -0500
+@@ -348,10 +348,10 @@
+       information.
+ 
+       Now configure your site list.  There is a convenient template
+-      for a generic site list in data/sitelist.cfg to help you with
++      for a generic site list in support/sitelist.cfg to help you with
        this.  The template can be applied to your site list by running:
  
 -          % bin/config_list -i data/sitelist.cfg mailman
