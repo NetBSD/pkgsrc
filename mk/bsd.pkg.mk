@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1196 2003/06/13 11:29:09 grant Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1197 2003/06/14 16:53:00 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -1668,7 +1668,7 @@ LOCKFILE=	${WRKDIR}/.lockfile
 
 _ACQUIRE_LOCK=								\
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	ppid=`${PS} -p $$$$ -o ppid | ${AWK} 'NR == 2 { print $$0 }'`;	\
+	ppid=`${PS} -p $$$$ -o ppid | ${AWK} 'NR == 2 { print $$1 }'`;	\
 	while true; do							\
 		${SHLOCK} -f ${LOCKFILE} -p $$ppid && break;		\
 		${ECHO} "=> Lock is held by pid `cat ${LOCKFILE}`";	\
