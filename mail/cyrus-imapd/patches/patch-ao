@@ -1,0 +1,22 @@
+$NetBSD: patch-ao,v 1.1 2002/11/04 01:35:31 seb Exp $
+
+--- perl/sieve/lib/Makefile.in.orig	Mon Dec 18 05:53:42 2000
++++ perl/sieve/lib/Makefile.in
+@@ -54,8 +54,8 @@ LIBS = ../../../lib/libcyrus.a @LIB_SASL
+ IMAP_LIBS = @IMAP_LIBS@
+ DEPLIBS = ../../../lib/libcyrus.a @DEPLIBS@
+ 
+-CFLAGS = -g
+-LDFLAGS = -g @LDFLAGS@
++CFLAGS = @CFLAGS@ @PERL_CCCDLFLAGS@
++LDFLAGS = @LDFLAGS@
+ 
+ SHELL = /bin/sh
+ MAKEDEPEND = @MAKEDEPEND@
+@@ -87,4 +87,4 @@ distclean: clean
+ depend: 
+ 	${MAKEDEPEND} $(CPPFLAGS) $(DEFS) $(CFLAGS) *.c $(srcdir)/*.c 1> makedepend.log 2>&1
+ 
+-# DO NOT DELETE THIS LINE -- make depend depends on it.
+\ No newline at end of file
++# DO NOT DELETE THIS LINE -- make depend depends on it.
