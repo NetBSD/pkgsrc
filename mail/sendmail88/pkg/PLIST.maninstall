@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST.maninstall,v 1.1.1.1 2000/02/13 00:14:48 tron Exp $
+man/man1/mailq.1
+man/man1/newaliases.1
+man/man5/aliases.5
+man/man8/makemap.8
+man/man8/smrsh.8
+man/man8/mailstats.8
+man/man8/praliases.8
+man/man8/sendmail.8

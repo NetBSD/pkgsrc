@@ -1,0 +1,21 @@
+$NetBSD: patch-ay,v 1.1.1.1 2000/02/13 00:14:49 tron Exp $
+
+--- src/mailq.1.orig	Sun Feb  2 01:24:53 1997
++++ src/mailq.1	Sat Feb 12 23:28:27 2000
+@@ -34,7 +34,7 @@
+ .\"
+ .Dd February 1, 1997
+ .Dt MAILQ 1
+-.Os BSD 4
++.Os
+ .Sh NAME
+ .Nm mailq
+ .Nd print the mail queue
+@@ -81,6 +81,7 @@
+ .Nm mailq
+ utility exits 0 on success, and >0 if an error occurs.
+ .Sh SEE ALSO
++.Xr mailer.conf 5 ,
+ .Xr sendmail 8
+ .Sh HISTORY
+ The

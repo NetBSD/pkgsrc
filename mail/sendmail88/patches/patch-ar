@@ -1,0 +1,13 @@
+$NetBSD: patch-ar,v 1.1.1.1 2000/02/13 00:14:49 tron Exp $
+
+--- smrsh/smrsh.c.orig	Mon Oct 20 01:04:08 1997
++++ smrsh/smrsh.c	Sat Feb 12 23:28:27 2000
+@@ -80,7 +80,7 @@
+ 
+ /* directory in which all commands must reside */
+ #ifndef CMDDIR
+-# define CMDDIR		"/usr/adm/sm.bin"
++# define CMDDIR		"/usr/libexec/sm.bin"
+ #endif
+ 
+ /* characters disallowed in the shell "-c" argument */

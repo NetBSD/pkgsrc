@@ -1,0 +1,13 @@
+$NetBSD: patch-ai,v 1.1.1.1 2000/02/13 00:14:48 tron Exp $
+
+--- mailstats/mailstats.c.orig	Fri May 30 21:05:20 1997
++++ mailstats/mailstats.c	Sat Feb 12 23:28:26 2000
+@@ -73,7 +73,7 @@
+ 	cfile = _PATH_SENDMAILCF;
+ 	sfile = NULL;
+ 	mnames = TRUE;
+-	while ((ch = getopt(argc, argv, "C:f:o")) != EOF)
++	while ((ch = getopt(argc, argv, "C:f:o")) != -1)
+ 	{
+ 		switch (ch)
+ 		{

@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST.catinstall,v 1.1.1.1 2000/02/13 00:14:48 tron Exp $
+man/cat1/mailq.0
+man/cat1/newaliases.0
+man/cat5/aliases.0
+man/cat8/makemap.0
+man/cat8/smrsh.0
+man/cat8/mailstats.0
+man/cat8/praliases.0
+man/cat8/sendmail.0

@@ -1,0 +1,95 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/02/13 00:14:48 tron Exp $
+
+--- cf/cf/Makefile.orig	Mon Apr  7 23:39:36 1997
++++ cf/cf/Makefile	Sat Feb 12 23:29:03 2000
+@@ -1,3 +1,5 @@
++#	$NetBSD: patch-aa,v 1.1.1.1 2000/02/13 00:14:48 tron Exp $
++#
+ #	@(#)Makefile	8.19 (Berkeley) 1/14/97
+ 
+ #
+@@ -11,7 +13,6 @@
+ #
+ 
+ M4=	m4
+-#M4=	/usr/src/usr.bin/m4/obj/m4
+ CFDIR=	..
+ CHMOD=	chmod
+ ROMODE=	444
+@@ -21,24 +22,29 @@
+ 
+ .mc.cf:
+ 	$(RM) $@
+-	(cd ${.CURDIR} && $(M4) ${CFDIR}/m4/cf.m4 ${@:R}.mc > obj/$@)
++	(cd ${.CURDIR} && $(M4) ${@:R}.mc > ${.OBJDIR}/$@)
+ 	$(CHMOD) $(ROMODE) $@
+ 
+-ALL=	generic-bsd4.4.cf generic-hpux9.cf generic-hpux10.cf \
+-		generic-osf1.cf generic-solaris2.cf \
+-		generic-sunos4.1.cf generic-ultrix4.cf \
+-	cs-hpux9.cf cs-osf1.cf cs-solaris2.cf \
+-		cs-sunos4.1.cf cs-ultrix4.cf \
+-	s2k-osf1.cf s2k-ultrix4.cf \
+-	chez.cs.cf huginn.cs.cf mail.cs.cf mail.eecs.cf mailspool.cs.cf \
+-		python.cs.cf ucbarpa.cf ucbvax.cf vangogh.cs.cf knecht.cf
++ALL= netbsd-proto.cf
++
++OTHERS= clientproto.cf tcpproto.cf uucpproto.cf
++
++FILES=	clientproto.mc netbsd-proto.mc tcpproto.mc uucpproto.mc Makefile
+ 
+-all: $(ALL)
++FILESDIR= ${PREFIX}/share/sendmail/cf
+ 
+-clean cleandir:
++realall: $(ALL)
++
++others: $(OTHERS)
++
++clean cleandir distclean:
+ 	$(RM) $(ALL) core
+ 
+-depend install: 
++realdepend:
++
++distribution:
++	${INSTALL} -c -o root -g wheel -m 444 netbsd-proto.cf \
++	    ${DESTDIR}/etc/sendmail.cf
+ 
+ # this is overkill, but....
+ M4FILES=\
+@@ -78,29 +84,7 @@
+ 	${CFDIR}/mailer/smtp.m4 \
+ 	${CFDIR}/mailer/usenet.m4 \
+ 	${CFDIR}/mailer/uucp.m4 \
+-	${CFDIR}/ostype/aix3.m4 \
+-	${CFDIR}/ostype/amdahl-uts.m4 \
+-	${CFDIR}/ostype/aux.m4 \
+-	${CFDIR}/ostype/bsd4.3.m4 \
+ 	${CFDIR}/ostype/bsd4.4.m4 \
+-	${CFDIR}/ostype/bsdi1.0.m4 \
+-	${CFDIR}/ostype/dgux.m4 \
+-	${CFDIR}/ostype/domainos.m4 \
+-	${CFDIR}/ostype/dynix3.2.m4 \
+-	${CFDIR}/ostype/hpux9.m4 \
+-	${CFDIR}/ostype/irix4.m4 \
+-	${CFDIR}/ostype/irix5.m4 \
+-	${CFDIR}/ostype/linux.m4 \
+-	${CFDIR}/ostype/nextstep.m4 \
+-	${CFDIR}/ostype/osf1.m4 \
+-	${CFDIR}/ostype/ptx2.m4 \
+-	${CFDIR}/ostype/riscos4.5.m4 \
+-	${CFDIR}/ostype/sco3.2.m4 \
+-	${CFDIR}/ostype/solaris2.m4 \
+-	${CFDIR}/ostype/sunos3.5.m4 \
+-	${CFDIR}/ostype/sunos4.1.m4 \
+-	${CFDIR}/ostype/svr4.m4 \
+-	${CFDIR}/ostype/ultrix4.m4 \
+ 	${CFDIR}/siteconfig/uucp.cogsci.m4 \
+ 	${CFDIR}/siteconfig/uucp.old.arpa.m4 \
+ 	${CFDIR}/siteconfig/uucp.ucbarpa.m4 \
+@@ -109,3 +93,4 @@
+ $(ALL):  $(M4FILES)
+ 
+ .include <bsd.prog.mk>
++.include <bsd.files.mk>

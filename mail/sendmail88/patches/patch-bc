@@ -1,0 +1,61 @@
+$NetBSD: patch-bc,v 1.1.1.1 2000/02/13 00:14:49 tron Exp $
+
+--- src/sendmail.8.orig	Sun Feb  2 01:24:50 1997
++++ src/sendmail.8	Sat Feb 12 23:28:27 2000
+@@ -34,7 +34,7 @@
+ .\"
+ .Dd February 1, 1997
+ .Dt SENDMAIL 8
+-.Os BSD 4
++.Os
+ .Sh NAME
+ .Nm sendmail
+ .Nd an electronic mail transport agent
+@@ -142,9 +142,9 @@
+ Verify mode is normally used for validating
+ users or mailing lists.
+ .It Fl C Ns Ar file
+-Use alternate configuration file.
++Use alternative configuration file.
+ .Nm Sendmail
+-refuses to run as root if an alternate configuration file is specified.
++refuses to run as root if an alternative configuration file is specified.
+ .It Fl d Ns Ar X
+ Set debugging value to
+ .Ar X .
+@@ -268,7 +268,7 @@
+ .Ql hdrs
+ to return only the headers.
+ .It Fl r Ns Ar name
+-An alternate and obsolete form of the
++An alternative and obsolete form of the
+ .Fl f
+ flag.
+ .It Fl t
+@@ -324,7 +324,7 @@
+ The options are:
+ .Bl -tag -width Fl
+ .It Li AliasFile= Ns Ar file
+-Use alternate alias file.
++Use alternative alias file.
+ .It Li HoldExpensive
+ On mailers that are considered ``expensive'' to connect to,
+ don't initiate immediate connection.
+@@ -576,13 +576,14 @@
+ The process id of the daemon
+ .El
+ .Sh SEE ALSO
+-.Xr binmail 1 ,
+ .Xr mail 1 ,
+-.Xr rmail 1 ,
+ .Xr syslog 3 ,
+ .Xr aliases 5 ,
++.Xr mailer.conf 5 ,
+ .Xr mailaddr 7 ,
+-.Xr rc 8 ;
++.Xr mail.local 8 ,
++.Xr rc 8 ,
++.Xr rmail 8 ;
+ .Pp
+ DARPA
+ Internet Request For Comments
