@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2000/10/20 04:28:59 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.11 2000/10/20 17:07:25 dmcmahill Exp $
 #
 
 DISTNAME=	icb.2.1.4
@@ -11,6 +11,12 @@ MAINTAINER=	jwise@netbsd.org
 HOMEPAGE=	http://www.icb.net/
 
 DEPENDS=	tk-8.3.2:../../x11/tk
+
+RESTRICTED=		"Author wishes to handle distribution"
+NO_BIN_ON_FTP=		${RESTRICTED}
+NO_SRC_ON_FTP=		${RESTRICTED}
+NO_BIN_ON_CDROM=	${RESTRICTED}
+NO_SRC_ON_CDROM=	${RESTRICTED}
 
 USE_X11=	yes
 NO_CONFIGURE=	yes
