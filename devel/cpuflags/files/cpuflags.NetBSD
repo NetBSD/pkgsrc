@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: cpuflags.NetBSD,v 1.1.1.1 2001/06/07 09:59:28 abs Exp $
+# $NetBSD: cpuflags.NetBSD,v 1.2 2001/06/07 11:56:46 abs Exp $
 
 gcc_ver=`gcc -v 2>&1 | awk '/gcc version/ {print $3}'`
 hw_model=`sysctl -n hw.model`
@@ -45,9 +45,13 @@ else					# Modern gcc
 	MB86930* | MB86934*)	FLAGS="-mcpu=sparclite"		;; # from gcc
 	MB86900/1A*)		FLAGS="-mcpu=cypress"		;; # ss1+
 	#
-	# arm - commented until issue with identifying SA based RiscPCs solved
-	# SA-110*)		FLAGS="-mcpu=strongarm110"	;; # shark
-	SA-110*)		FLAGS=""			;;
+	# arm32
+	ARM610*)		FLAGS="-mcpu=arm610"		;; # risc pc
+	ARM710*)		FLAGS="-mcpu=arm710"		;; # risc pc
+	"SA-110 rev 3 (SA-1 core) DC enabled IC enabled WB enabled EABT")	
+		    FLAGS="-march=armv3m -mtune=strongarm"	;; # risc pc
+	"SA-110 rev 3 DC enabled IC enabled WB enabled EABT")
+				FLAGS="-mcpu=strongarm110"	;; # shark
 	#
 	*)			echo "Unknown hw.model '$hw_model'" >&2
     esac

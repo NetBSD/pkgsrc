@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: cpuflags.Linux,v 1.1.1.1 2001/06/07 09:59:28 abs Exp $
+# $NetBSD: cpuflags.Linux,v 1.2 2001/06/07 11:56:46 abs Exp $
 
 hw_model=`uname -m`
 
