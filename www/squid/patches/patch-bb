@@ -1,0 +1,14 @@
+$NetBSD: patch-bb,v 1.1 2002/03/03 15:44:48 taca Exp $
+
+--- include/autoconf.h.in.orig	Tue Jan  2 07:37:02 2001
++++ include/autoconf.h.in
+@@ -415,6 +415,9 @@
+ /* Define if you have the setpgrp function.  */
+ #undef HAVE_SETPGRP
+ 
++/* Define if you have the setpgrp function.  */
++#undef HAVE_SETPROCTITLE
++
+ /* Define if you have the setrlimit function.  */
+ #undef HAVE_SETRLIMIT
+ 
