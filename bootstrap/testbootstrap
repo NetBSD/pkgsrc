@@ -1,6 +1,6 @@
 #! /bin/sh
 #
-# $NetBSD: testbootstrap,v 1.1 2004/08/21 06:04:35 jlam Exp $
+# $NetBSD: testbootstrap,v 1.2 2004/08/22 04:20:01 jlam Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -47,4 +47,5 @@ pwd=`pwd`
 	--sysconfdir=$pwd/pkg/etc \
 	--pkgdbdir=$pwd/.db \
 	--ignore-case-check \
-	--ignore-user-check
+	--ignore-user-check | \
+tee BOOTSTRAP.LOG
