@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2000/09/01 17:58:05 jwise Exp $
+# $NetBSD: Makefile,v 1.21 2000/09/03 15:04:20 wiz Exp $
 # FreeBSD Id: Makefile,v 1.29 1998/01/27 01:11:47 fenner Exp
 #
 
@@ -7,12 +7,12 @@ PKGNAME=	expect-5.25
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_BACKUP}
 
-BROKEN=		This package has not yet been updated to work with tcl-8.3.2.
-
 MAINTAINER=	jwise@netbsd.org
 HOMEPAGE=	http://expect.nist.gov/
 
 DEPENDS+=	tk-8.3.2:../../x11/tk
+
+BROKEN=		This package has not yet been updated to work with tcl-8.3.2.
 
 WRKSRC=		${WRKDIR}/expect-5.25
 
