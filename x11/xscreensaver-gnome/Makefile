@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.23 2003/12/13 19:22:13 jmmv Exp $
+# $NetBSD: Makefile,v 1.24 2003/12/18 13:49:17 atatat Exp $
 #
 
 PKGNAME=	${DISTNAME:S/-/-gnome-/}
 COMMENT=	Screen saver and locker for the X window system (GNOME applet)
+PKGREVISION=	1
 
 CONFLICTS+=	xscreensaver<4.14 xscreensaver-demo-[0-9]*
 
