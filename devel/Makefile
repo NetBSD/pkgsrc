@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.251 2001/10/18 10:24:25 agc Exp $
+# $NetBSD: Makefile,v 1.252 2001/10/29 18:34:24 dillo Exp $
 #
 
 COMMENT=	Development utilities
@@ -6,6 +6,7 @@ COMMENT=	Development utilities
 SUBDIR+=	GConf
 SUBDIR+=	SDL
 SUBDIR+=	SDL_ttf
+SUBDIR+=	acme
 SUBDIR+=	apel
 SUBDIR+=	argtable
 SUBDIR+=	as31
