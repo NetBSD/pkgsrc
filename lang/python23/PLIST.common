@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/08/06 11:51:31 drochner Exp $
+@comment $NetBSD: PLIST.common,v 1.1 2003/08/18 20:57:12 recht Exp $
 bin/pydoc2.3
 bin/python2.3
 include/python2.3/Python.h
@@ -1126,7 +1126,6 @@ lib/python2.3/lib-dynload/_testcapi.so
 lib/python2.3/lib-dynload/_weakref.so
 lib/python2.3/lib-dynload/array.so
 lib/python2.3/lib-dynload/binascii.so
-lib/python2.3/lib-dynload/bsddb185.so
 lib/python2.3/lib-dynload/bz2.so
 lib/python2.3/lib-dynload/cPickle.so
 lib/python2.3/lib-dynload/cStringIO.so
@@ -1362,13 +1361,13 @@ lib/python2.3/pickletools.pyo
 lib/python2.3/pipes.py
 lib/python2.3/pipes.pyc
 lib/python2.3/pipes.pyo
+lib/python2.3/plat-${PY_PLATNAME}/IN.py
+lib/python2.3/plat-${PY_PLATNAME}/IN.pyc
+lib/python2.3/plat-${PY_PLATNAME}/IN.pyo
+lib/python2.3/plat-${PY_PLATNAME}/regen
 lib/python2.3/pkgutil.py
 lib/python2.3/pkgutil.pyc
 lib/python2.3/pkgutil.pyo
-lib/python2.3/plat-${LOWER_OPSYS}1/IN.py
-lib/python2.3/plat-${LOWER_OPSYS}1/IN.pyc
-lib/python2.3/plat-${LOWER_OPSYS}1/IN.pyo
-lib/python2.3/plat-${LOWER_OPSYS}1/regen
 lib/python2.3/platform.py
 lib/python2.3/platform.pyc
 lib/python2.3/platform.pyo
@@ -1565,7 +1564,6 @@ lib/python2.3/test/output/test_future
 lib/python2.3/test/output/test_global
 lib/python2.3/test/output/test_grammar
 lib/python2.3/test/output/test_httplib
-lib/python2.3/test/output/test_linuxaudiodev
 lib/python2.3/test/output/test_logging
 lib/python2.3/test/output/test_longexp
 lib/python2.3/test/output/test_math
@@ -1982,9 +1980,6 @@ lib/python2.3/test/test_itertools.pyo
 lib/python2.3/test/test_largefile.py
 lib/python2.3/test/test_largefile.pyc
 lib/python2.3/test/test_largefile.pyo
-lib/python2.3/test/test_linuxaudiodev.py
-lib/python2.3/test/test_linuxaudiodev.pyc
-lib/python2.3/test/test_linuxaudiodev.pyo
 lib/python2.3/test/test_locale.py
 lib/python2.3/test/test_locale.pyc
 lib/python2.3/test/test_locale.pyo
@@ -2557,31 +2552,3 @@ lib/python2.3/xmlrpclib.pyo
 lib/python2.3/zipfile.py
 lib/python2.3/zipfile.pyc
 lib/python2.3/zipfile.pyo
-@dirrm lib/python2.3/xml/sax
-@dirrm lib/python2.3/xml/parsers
-@dirrm lib/python2.3/xml/dom
-@dirrm lib/python2.3/xml
-@dirrm lib/python2.3/test/output
-@dirrm lib/python2.3/test
-@dirrm lib/python2.3/site-packages
-@dirrm lib/python2.3/plat-${LOWER_OPSYS}1
-@dirrm lib/python2.3/logging
-@dirrm lib/python2.3/lib-tk
-@dirrm lib/python2.3/lib-old
-@dirrm lib/python2.3/lib-dynload
-@dirrm lib/python2.3/idlelib/Icons
-@dirrm lib/python2.3/idlelib
-@dirrm lib/python2.3/hotshot
-@dirrm lib/python2.3/encodings
-@dirrm lib/python2.3/email/test/data
-@dirrm lib/python2.3/email/test
-@dirrm lib/python2.3/email
-@dirrm lib/python2.3/distutils/command
-@dirrm lib/python2.3/distutils
-@dirrm lib/python2.3/curses
-@dirrm lib/python2.3/config
-@dirrm lib/python2.3/compiler
-@dirrm lib/python2.3/bsddb/test
-@dirrm lib/python2.3/bsddb
-@dirrm lib/python2.3
-@dirrm include/python2.3
