@@ -1,6 +1,6 @@
 #!@PREFIX@/bin/perl -w
 #
-# $NetBSD: if-psprint.pl,v 1.2 2000/10/17 11:12:37 abs Exp $
+# $NetBSD: if-psprint.pl,v 1.3 2000/11/15 12:17:01 abs Exp $
 # 
 #	Copyright (c) 2000 David Brownlee <abs@netbsd.org>. All rights
 #	reserved. Provided as-is without express or implied warranties.
@@ -10,17 +10,19 @@
 #	notice is retained.
 #
 
-=head1 Overview
+=head1 NAME
 
-if-psprint will ssend text, postscript, or native printer language to an
+if-psprint - send text, postscript, or native printer language to
 arbitrary printer.
+
+=head1 OVERVIEW
 
 Designed as a quick fix for the random printers that get hooked up to
 the NetBSD server and random Windows boxes around the office. Uses enscript
 to convert text to postscript, and ghostcript to convert to native printer
 language as required.
 
-=head1 Details
+=head1 DETAILS
 
 =over 4
 
@@ -63,7 +65,7 @@ requires ghostscript, enscript, and samba if printing to smb hosts
 
 =back
 
-=head1 Sample printcap entries
+=head1 SAMPLE PRINTCAP ENTRIES
 
 (Remember to create spool dir [sd])
 
