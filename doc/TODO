@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.828 2003/09/04 09:59:32 chris Exp $
+$NetBSD: TODO,v 1.829 2003/09/04 10:09:10 chris Exp $
 
 Suggested new packages
 ======================
@@ -225,7 +225,6 @@ Suggested package updates
 	o p5-Net-Server-0.85 [pkg/22542]
 	o p5-XML-LibXML-1.54
 	o p5-libapreq-1.2 [pkg/22584]
-	o pan-0.14.2
 	o pdmenu-1.2.81
 	o plib-1.6.0 [pkg/19015,pkg/22612]
 	o pnm2ppa-1.12 [pkg/21667]
