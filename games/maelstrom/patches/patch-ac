@@ -1,8 +1,21 @@
---- mixer.h.orig	Thu Jul 30 03:57:30 1998
-+++ mixer.h	Thu Jul 30 03:59:31 1998
-@@ -40,2 +40,5 @@
+--- mixer.h.orig	Sun May 25 23:18:10 1997
++++ mixer.h	Sun Aug  2 20:06:20 1998
+@@ -22,7 +22,7 @@
+ #include <linux/soundcard.h>
+ #undef sparc				/* For sparc Linux */
+ #else
+-#ifdef sparc
++#if defined(sparc) && !defined(__NetBSD__)
+ #ifdef __SVR4   /* Solaris */
+ #include <sys/audioio.h>
+ #else           /* SunOS */
+@@ -38,6 +38,9 @@
+ #endif /* HPUX */
+ #endif /* sparc */
  #endif /* linux */
 +#ifdef __NetBSD__
 +#include <soundcard.h>
 +#endif
  };
+ 
+ #define _PATH_DEV_AUDIO	"/dev/audio"
