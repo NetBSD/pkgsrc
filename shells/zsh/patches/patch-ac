@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.13 2004/08/04 03:33:40 minskim Exp $
+$NetBSD: patch-ac,v 1.14 2004/08/16 16:17:39 recht Exp $
 
---- configure.orig	Mon Mar 15 13:10:03 2004
-+++ configure
-@@ -13630,6 +13630,10 @@ echo "${ECHO_T}$zsh_cv_sys_elf" >&6
+--- configure.orig	2004-08-13 12:24:24.000000000 +0200
++++ configure	2004-08-16 11:54:09.000000000 +0200
+@@ -13691,6 +13691,10 @@
  	DLLD="${DLLD=/usr/ccs/bin/cc}"
  	DLLDARG="${LDARG}"
        ;;
@@ -13,7 +13,7 @@ $NetBSD: patch-ac,v 1.13 2004/08/04 03:33:40 minskim Exp $
        * )
  	DLLD="${DLLD=$CC}"
  	DLLDARG="${LDARG}"
-@@ -13675,7 +13679,7 @@ echo "${ECHO_T}$zsh_cv_sys_elf" >&6
+@@ -13736,7 +13740,7 @@
      esac
    fi
    case "$host_os" in
