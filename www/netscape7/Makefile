@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/09/20 13:54:53 jschauma Exp $
+# $NetBSD: Makefile,v 1.3 2002/09/22 01:29:00 jlam Exp $
 #
 
 DISTNAME=		netscape-i686-pc-linux-gnu-installer
@@ -31,7 +31,7 @@ WRKSRC=			${WRKDIR}/netscape-installer
 
 pre-build:
 	${SED} -e "s|@PREFIX@|${PREFIX}|g" ${FILESDIR}/netscape.sh > 	\
-		${FILESDIR}/netscape7
+		${WRKDIR}/netscape7
 	@delay=10;							\
 	${SED}  -e "s|@WRKSRC@|${WRKSRC}|g" -e "s|@delay@|$${delay}|g"	\
 		${FILESDIR}/extract_instructions;			\
@@ -44,7 +44,7 @@ do-build:
 do-install:
 	${INSTALL_PROGRAM_DIR} ${PREFIX}/lib/netscape/netscape7
 	cd ${WRKSRC}/dest && ${PAX} -rw . ${PREFIX}/lib/netscape/netscape7
-	${INSTALL_SCRIPT} ${FILESDIR}/netscape7 ${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKDIR}/netscape7 ${PREFIX}/bin
 	${CHMOD} 755 ${PREFIX}/bin/netscape7
 
 .include "../../mk/bsd.prefs.mk"
