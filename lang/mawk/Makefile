@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2003/11/11 16:10:36 abs Exp $
+# $NetBSD: Makefile,v 1.14 2004/04/07 19:10:16 reed Exp $
 #
 
 DISTNAME=       mawk-1.3.3
@@ -8,6 +8,8 @@ MASTER_SITES=   ftp://ftp.whidbey.net/pub/brennan/ \
 
 MAINTAINER=	agc@NetBSD.org
 COMMENT=	Mike Brennan's fast awk clone
+
+INSTALLATION_DIRS=	man/man1
 
 GNU_CONFIGURE=	yes
 TEST_TARGET=	mawk_test fpe_test
