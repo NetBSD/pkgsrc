@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.37 2000/04/15 07:56:15 simonb Exp $
+# $NetBSD: Makefile,v 1.38 2000/08/02 06:35:43 jlam Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/08/04 06:51:28 markm Exp
 #
 
-DISTNAME=	nmh-1.0.4
-CATEGORIES=	mail
-MASTER_SITES=	ftp://ftp.mhost.com/pub/nmh/ \
-		ftp://ftp.gw.com/pub/unix/mail/mh/nmh/
+DISTNAME=		nmh-1.0.4
+CATEGORIES=		mail
+MASTER_SITES=		ftp://ftp.mhost.com/pub/nmh/ \
+			ftp://ftp.gw.com/pub/unix/mail/mh/nmh/
 
-MAINTAINER=	kim@tac.nyc.ny.us
-HOMEPAGE=	http://www.mhost.com/nmh/
+MAINTAINER=		kim@tac.nyc.ny.us
+HOMEPAGE=		http://www.mhost.com/nmh/
 
-CONFLICTS=	ja-mh-*
+CONFLICTS=		ja-mh-*
 
 # We choose DOT_LOCKING in our patches because ".lock" files are
 # the most common locking mechanism supported by mail software.
@@ -21,33 +21,32 @@ CONFLICTS=	ja-mh-*
 .include "../../mk/bsd.prefs.mk"
 
 # Mail Transport Agent - either "smtp" or "sendmail"
-NMH_MTA?=	smtp
+NMH_MTA?=		smtp
 
-GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+= \
-		--libdir=${PREFIX}/libexec/nmh \
-		--sysconfdir=${PREFIX}/etc/nmh \
-		--enable-nmh-pop \
-		--with-mts=${NMH_MTA}
+GNU_CONFIGURE=		# defined
+CONFIGURE_ARGS+=	--libdir=${PREFIX}/libexec/nmh
+CONFIGURE_ARGS+=	--sysconfdir=${PREFIX}/etc/nmh
+CONFIGURE_ARGS+=	--enable-nmh-pop
+CONFIGURE_ARGS+=	--with-mts=${NMH_MTA}
 
 .ifdef NMH_EDITOR
-CONFIGURE_ARGS+=--with-editor=${NMH_EDITOR}
+CONFIGURE_ARGS+=	--with-editor=${NMH_EDITOR}
 .endif
 
 .ifdef NMH_PAGER
-CONFIGURE_ARGS+=--with-pager=${NMH_PAGER}
+CONFIGURE_ARGS+=	--with-pager=${NMH_PAGER}
 .endif
 
 .if defined(KERBEROS) && ${KERBEROS} == 4
-USE_KERBEROS=	yes
-CONFIGURE_ARGS+=--with-krb4=yes
+USE_KERBEROS=		# defined
+CONFIGURE_ARGS+=	--with-krb4
 .else
-CONFIGURE_ARGS+=--with-krb4=no
+CONFIGURE_ARGS+=	--without-krb4
 .endif
 
-DOCDIR=		share/doc/nmh
+DOCDIR=			share/doc/nmh
 
-BUILD_DEFS+=	NMH_MTA NMH_EDITOR NMH_PAGER NMH_HASH_BACKUP
+BUILD_DEFS+=		NMH_MTA NMH_EDITOR NMH_PAGER NMH_HASH_BACKUP
 
 # Since we patch the autoconf files as well as their outputs, avoid attempt
 # to regenerate header input files with 'autoheader' by Makefile.
@@ -71,21 +70,11 @@ post-configure:
 #   upgrading the package
 
 post-install:
-	@${INSTALL_DATA_DIR} ${PREFIX}/${DOCDIR}
-	@for f in `${GREP} '^${DOCDIR}/' ${PKGDIR}/PLIST`; do \
+	${INSTALL_DATA_DIR} ${PREFIX}/${DOCDIR}
+	for f in `${GREP} '^${DOCDIR}/' ${PKGDIR}/PLIST`; do \
 	    ${INSTALL_DATA} ${WRKSRC}/`basename $$f` ${PREFIX}/${DOCDIR}; \
 	done
-	@${INSTALL_DATA} ${FILESDIR}/mhn.defaults.dist ${PREFIX}/etc/nmh
-	@if [ ! -f ${PREFIX}/etc/nmh/mhn.defaults ]; then \
-	    ${CP} -p \
-		${PREFIX}/etc/nmh/mhn.defaults.dist \
-		${PREFIX}/etc/nmh/mhn.defaults; \
-	fi
-	@if [ ! -f ${PREFIX}/etc/nmh/mts.conf ]; then \
-	    ${CP} -p \
-		${PREFIX}/etc/nmh/mts.conf.dist \
-		${PREFIX}/etc/nmh/mts.conf; \
-	fi
-	@PKG_PREFIX='${PREFIX}' ${SH} -f ${PKGDIR}/INSTALL
+	${INSTALL_DATA} ${FILESDIR}/mhn.defaults.dist ${PREFIX}/etc/nmh
+	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
 .include "../../mk/bsd.pkg.mk"
