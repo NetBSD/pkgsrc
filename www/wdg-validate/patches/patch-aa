@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.2 2001/11/28 23:59:29 jlam Exp $
+$NetBSD: patch-aa,v 1.3 2003/01/19 00:41:10 wiz Exp $
 
---- validate.netbsd.orig        Wed May 30 00:53:44 2001
-+++ validate.netbsd     Wed May 30 00:56:20 2001
-@@ -39,10 +39,10 @@
+--- validate.netbsd.orig	Sat Jan 18 17:19:30 2003
++++ validate.netbsd
+@@ -43,10 +43,10 @@ my $usage = "Usage: validate [OPTION] [F
  my $tryHelp = qq{Try "validate --help" for more information.};
  
  # SGML directory (catalog, DTDs, SGML declarations)
--my $sgmlDir = '/usr/local/validate/lib';
-+my $sgmlDir = '@PREFIX@/lib/validate';
+-my $sgmlDir = '/usr/local/share/wdg/sgml-lib';
++my $sgmlDir = '@PREFIX@/share/wdg/sgml-lib';
  
  # Location of lq-nsgmls executable
 -my $nsgmlsLocation = '/usr/local/bin/lq-nsgmls';
