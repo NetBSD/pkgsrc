@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.683 2002/12/04 18:52:56 drochner Exp $
+$NetBSD: CHANGES,v 1.684 2002/12/05 00:45:51 hubertf Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3813,3 +3813,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Added metakit-lib-2.4.8 [drochner 2002-12-04]
 	Added py-metakit-2.4.8 [drochner 2002-12-04]
 	Added py-gnuplot-1.6 [drochner 2002-12-04]
+	Updated xlockmore to 5.06 [hubertf 2002-12-05]
