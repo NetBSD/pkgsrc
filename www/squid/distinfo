@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2002/02/22 10:07:38 tron Exp $
+$NetBSD: distinfo,v 1.11 2002/02/24 12:25:40 veego Exp $
 
 SHA1 (squid-2.4.STABLE4-src.tar.gz) = 417cafe2384e64c454d4e2d3ab129c26efa6b0cc
 Size (squid-2.4.STABLE4-src.tar.gz) = 1080180 bytes
@@ -7,11 +7,11 @@ SHA1 (patch-ab) = afb0c443c708d03fc7ab39120ae9a3c68d9e9b88
 SHA1 (patch-ac) = b962e05bcaccd0d9a0969b2f1419fd73456440cd
 SHA1 (patch-ad) = 03f76c2a781bff4b3a8680ee815f8c5dcbdd70d0
 SHA1 (patch-ae) = 5189de99c6f453ef58b97a4df54c065c87cf7e21
-SHA1 (patch-ag) = a35c10cfa52205a5670dbb7dfc1d61d80627f389
+SHA1 (patch-ag) = 9f7e81052d8134d3da970148dbfe51a7be072e62
 SHA1 (patch-ah) = c80f9d8ce5fae7f399583607aa7f7153824465b7
 SHA1 (patch-aj) = 2a8a7df72d0e978c069a8f273a0ee91ac31aa985
 SHA1 (patch-ak) = a3f3000dbab7ba6f08904008ccf9e08bc70b3e3f
 SHA1 (patch-al) = d0741a93a4df8bf94b07e65680b50c294243c728
 SHA1 (patch-am) = c844378a03ae27ae52eb454958fb9ed7bc0ce21e
-SHA1 (patch-an) = fe6314ad2730021c2728a00eb164faab80bc4575
-SHA1 (patch-ba) = a66094abbf55b1eda9d38204bdcf6a4dd1679cda
+SHA1 (patch-an) = 1db7caccce45fa29d61f6341a22ac29e02ee4b93
+SHA1 (patch-ba) = c29829c4f1fcd094102188e1ef4fd28bb73ba2ce
