@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 1999/04/26 18:47:53 garbled Exp $
+# $NetBSD: Makefile,v 1.11 1999/10/07 17:41:54 tron Exp $
 #
 
 DISTNAME=	tclX8.0.4
@@ -6,7 +6,7 @@ PKGNAME=	tclX-8.0.4
 CATEGORIES=	lang x11
 MASTER_SITES=	ftp://ftp.neosoft.com/pub/tcl/tclx-distrib/
 
-MAINTAINER=	tron@netbsd.org
+MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.neosoft.com/TclX/
 
 DEPENDS+=	tk-8.0.5:../../x11/tk80

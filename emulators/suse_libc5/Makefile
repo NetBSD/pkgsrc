@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 1999/09/19 23:59:34 tron Exp $
+# $NetBSD: Makefile,v 1.11 1999/10/07 17:41:52 tron Exp $
 
 DISTNAME=		shlibs5
 PKGNAME=		suse_libc5-6.1p1
@@ -6,7 +6,7 @@ CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_SUSE:=a1/}
 EXTRACT_SUFX=		.rpm
 
-MAINTAINER=		tron@netbsd.org
+MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.suse.com/
 
 DEPENDS+=		suse_compat-6.1p1:../suse_compat

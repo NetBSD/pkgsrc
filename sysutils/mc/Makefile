@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.29 1999/09/06 20:41:37 hubertf Exp $
+# $NetBSD: Makefile,v 1.30 1999/10/07 17:41:59 tron Exp $
 # FreeBSD Id: Makefile,v 1.16 1997/11/30 19:37:48 vanilla Exp
 #
 
 DISTNAME=	mc-4.5.38
 CATEGORIES=	sysutils
 
-MAINTAINER=	tron@netbsd.org
+MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.gnome.org/mc/
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/mc/}
 

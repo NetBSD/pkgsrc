@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 1999/09/28 20:40:05 soren Exp $
+# $NetBSD: Makefile,v 1.10 1999/10/07 17:41:59 tron Exp $
 # FreeBSD Id: Makefile,v 1.15 1999/03/15 02:01:27 steve Exp
 
 DISTNAME=       analog3.32
@@ -8,7 +8,7 @@ MASTER_SITES=   http://www.statslab.cam.ac.uk/~sret1/analog/ \
 		http://www.web42.com/analog/ \
 		http://ftp.sunet.se/pub/www/utilities/analog/
 
-MAINTAINER=     tron@netbsd.org
+MAINTAINER=     packages@netbsd.org
 HOMEPAGE=	http://www.statslab.cam.ac.uk/~sret1/analog/
 
 ALL_TARGET=	analog

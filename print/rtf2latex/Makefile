@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1999/07/02 09:14:04 agc Exp $
+# $NetBSD: Makefile,v 1.4 1999/10/07 17:41:58 tron Exp $
 # FreeBSD Id: Makefile,v 1.7 1998/08/31 07:51:40 tg Exp
 #
 
@@ -7,7 +7,7 @@ PKGNAME=	rtf2latex-1.5
 CATEGORIES=	print
 MASTER_SITES=	ftp://ftp.dante.de/pub/tex/support/rtf2latex/
 
-MAINTAINER=	tron@netbsd.org
+MAINTAINER=	packages@netbsd.org
 
 WRKSRC=		${WRKDIR}/rtf2LaTeX
 NO_PATCH=	yes

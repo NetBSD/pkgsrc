@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 1998/07/26 14:36:43 tv Exp $
+# $NetBSD: Makefile,v 1.11 1999/10/07 17:41:53 tron Exp $
 
 DISTNAME=	mpeg_lib-1.2.1
 PKGNAME=	mpeg-1.2.1
@@ -7,7 +7,7 @@ MASTER_SITES=	ftp://ftp.mni.mcgill.ca/pub/mpeg/ \
 		ftp://ftp.fu-berlin.de/unix/X11/graphics/gimp/libs/ \
 		ftp://ftp.gimp.org/pub/gimp/libs/
 
-MAINTAINER=	tron@netbsd.org
+MAINTAINER=	packages@netbsd.org
 
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
