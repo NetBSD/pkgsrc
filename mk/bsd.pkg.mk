@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.302 1999/07/24 23:23:04 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.303 1999/07/26 16:46:43 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -995,6 +995,7 @@ do-patch:
 			fi;						\
 		else							\
 			${ECHO_MSG} "===>  Applying ${OPSYS} patches for ${PKGNAME}" ; \
+			fail="";					\
 			for i in ${PATCHDIR}/patch-*; do		\
 				case $$i in				\
 				${PATCHDIR}/patch-local-*) ;;		\
@@ -1007,26 +1008,16 @@ do-patch:
 						calcsum=`${SED} -e '/\$$NetBSD.*/d' $$i | ${MD5}`; \
 						recorded=`${AWK} '$$1 == "MD5" && $$2 == "('$$filename')" { print $$4; }' ${PATCH_SUM_FILE} || ${TRUE}`; \
 						if [ "X$$recorded" = "X" ]; then \
-							case "$$filename" in \
-							patch-local-*)	\
-								${ECHO_MSG} ">> Ignoring \"unofficial\" patch file $$i"; \
-								continue \
-								;;	\
-							*)		\
-								${ECHO_MSG} ">> Unknown patch file: $$i"; \
-								${ECHO_MSG} ">> If this is an obsolete patch, please delete it to build"; \
-								${ECHO_MSG} ">> this package (or run 'make makepatchsum' if you are working"; \
-								${ECHO_MSG} ">> on this package)."; \
-								exit 1;	\
-								;;	\
-							esac ; \
+							${ECHO_MSG} "**************************************"; \
+							${ECHO_MSG} "Ignoring unknown patch file: $$i"; \
+							${ECHO_MSG} "**************************************"; \
+							continue;	\
 						fi;			\
 						if [ "X$$calcsum" != "X$$recorded" ]; then \
-							${ECHO_MSG} ">> Patch file $$i has been modified"; \
-								${ECHO_MSG} ">> If this is an obsolete patch, please delete it to build"; \
-								${ECHO_MSG} ">> this package (or run 'make makepatchsum' if you are working"; \
-								${ECHO_MSG} ">> on this package)."; \
-							exit 1;		\
+							${ECHO_MSG} "**************************************"; \
+							${ECHO_MSG} "Patch file $$i has been modified"; \
+							${ECHO_MSG} "**************************************"; \
+							fail="$$fail $$filename"; \
 						fi;			\
 					fi;				\
 					if [ ${PATCH_DEBUG_TMP} = yes ]; then \
@@ -1037,6 +1028,10 @@ do-patch:
 					;;				\
 				esac;					\
 			done;						\
+			if [ "X$$fail" != "X" ]; then			\
+				${ECHO_MSG} "Patching failed due to modified patch file(s): $$fail"; \
+				exit 1;					\
+			fi;						\
 		fi;							\
 	fi
 .endif
