@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2002/11/25 14:46:14 taca Exp $
+# $NetBSD: Makefile,v 1.74 2002/12/02 03:09:01 grant Exp $
 
 DISTNAME=	squid-2.5.STABLE1
 PKGNAME=	squid-2.5.1
@@ -46,22 +46,24 @@ PKG_SYSCONFSUBDIR?=	squid
 
 .include "../../mk/bsd.prefs.mk"
 
-GNU_CONFIGURE=	YES
-CONFIGURE_ARGS+= --sysconfdir=${PKG_SYSCONFDIR} \
-		--localstatedir=/var/squid \
-		${SQUID_CONFIGURE_ARGS}
-CONFIGURE_ENV+=	PERL=${PERL5}
+GNU_CONFIGURE=		# defined
+USE_BUILDLINK2=		# defined
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR} \
+			--localstatedir=/var/squid \
+			${SQUID_CONFIGURE_ARGS}
+CONFIGURE_ENV+=		PERL=${PERL5}
 
-BUILD_DEFS+=	SQUID_CONFIGURE_ARGS
-MAKE_ENV+=	INSTALL_SCRIPT="${INSTALL_SCRIPT}" PKG_PREFIX="${PREFIX}"
-PLIST_SRC=	${WRKDIR}/PLIST
-WRKSRC=		${WRKDIR}/${DISTNAME:S/-src//}
-RCD_SCRIPTS=	squid
+BUILD_DEFS+=		SQUID_CONFIGURE_ARGS
+MAKE_ENV+=		INSTALL_SCRIPT="${INSTALL_SCRIPT}"
+MAKE_ENV+=		PKG_PREFIX="${PREFIX}"
+PLIST_SRC=		${WRKDIR}/PLIST
+WRKSRC=			${WRKDIR}/${DISTNAME:S/-src//}
+RCD_SCRIPTS=		squid
 
-CONF_FILES+=	${PREFIX}/share/examples/squid/mime.conf \
-			${PKG_SYSCONFDIR}/mime.conf
-CONF_FILES+=	${PREFIX}/share/examples/squid/squid.conf \
-			${PKG_SYSCONFDIR}/squid.conf
+CONF_FILES+=		${PREFIX}/share/examples/squid/mime.conf \
+				${PKG_SYSCONFDIR}/mime.conf
+CONF_FILES+=		${PREFIX}/share/examples/squid/squid.conf \
+				${PKG_SYSCONFDIR}/squid.conf
 
 # Configuration options which can be overwritten by the user.
 SQUID_CONFIGURE_ARGS?=	--disable-internal-dns \
