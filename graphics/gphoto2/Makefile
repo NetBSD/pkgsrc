@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/08/01 15:50:22 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2001/08/02 12:16:05 wiz Exp $
 
 DISTNAME=	gphoto-2.0beta1
 PKGNAME=	gphoto-2.0.0.1nb1
@@ -10,14 +10,12 @@ HOMEPAGE=	http://www.gphoto.org/gphoto2/
 COMMENT=	Download and view files from various digital cameras
 
 BUILD_USES_MSGFMT=	yes
-DEPENDS+=	libusb-*:../../devel/libusb
 
 USE_GMAKE=		yes
 USE_LIBTOOL=		yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 #LIBTOOL_OVERRIDE=	yes
 GNU_CONFIGURE=		yes
-CPPFLAGS+=		-I${LOCALBASE}/include
 CONFIGURE_SCRIPT=	${WRKSRC}/build.sh
 CONFIGURE_ARGS+=	--with-html-dir=${LOCALBASE}/share/doc/html/gphoto2
 .include "../../devel/gettext-lib/buildlink.mk"
@@ -35,4 +33,6 @@ pre-configure:
 		${SED} -e 's/\/\.libs//g' < $$i.NB > $$i;		\
 	done							\
 
+.include "../../devel/glib/buildlink.mk"
+.include "../../devel/libusb/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
