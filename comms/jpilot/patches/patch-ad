@@ -1,0 +1,17 @@
+$NetBSD: patch-ad,v 1.3 2002/01/28 14:23:40 wiz Exp $
+
+--- docs/jpilot.1.orig	Wed Feb  7 06:23:22 2001
++++ docs/jpilot.1
+@@ -7,8 +7,11 @@
+ J-Pilot is a desktop organizer application for the palm pilot and other
+ Palm OS devices.  It is similar in functionality to the one that
+ 3Com distributes.
++.PP
++For a more complete description, see
++@PREFIX@/share/doc/html/jpilot/manual.html.
+ .SH BUGS
+-See /usr/share/doc/jpilot/BUGS
++See @PREFIX@/share/doc/jpilot/BUGS
+ .SH SEE ALSO
+ jpilot-sync(1), jpilot-upgrade-99(1)
+ .SH AUTHOR

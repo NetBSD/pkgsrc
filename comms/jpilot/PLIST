@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 20:44:10 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/01/28 14:23:39 wiz Exp $
 bin/jpilot
 bin/jpilot-dump
 bin/jpilot-sync
@@ -11,6 +11,7 @@ man/man1/jpilot.1
 lib/jpilot/plugins/.directory
 share/doc/html/jpilot/manual.html
 share/doc/html/jpilot/plugin.html
+share/doc/jpilot/BUGS
 share/jpilot/AddressDB.pdb
 share/jpilot/DatebookDB.pdb
 share/jpilot/MemoDB.pdb
@@ -31,6 +32,7 @@ ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/jpilot.mo
 ${PKGLOCALEDIR}/locale/no/LC_MESSAGES/jpilot.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/jpilot.mo
 @dirrm share/jpilot
+@dirrm share/doc/jpilot
 @dirrm share/doc/html/jpilot
 @dirrm lib/jpilot/plugins
 @dirrm lib/jpilot
