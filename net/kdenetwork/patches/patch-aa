@@ -1,0 +1,32 @@
+--- kppp/devices.h.orig	Tue Oct 19 02:27:38 1999
++++ kppp/devices.h	Tue Oct 19 02:34:25 1999
+@@ -8,6 +8,17 @@
+   "/dev/cuaa2",
+   "/dev/cuaa3",
+ #else
++#ifdef __NetBSD__
++  "/dev/modem",
++  "/dev/tty00",
++  "/dev/tty01",
++  "/dev/tty02",
++  "/dev/tty03",
++  "/dev/dty00",
++  "/dev/dty01",
++  "/dev/dty02",
++  "/dev/dty03",
++#else /* !NetBSD */
+   "/dev/modem",
+   "/dev/cua0",
+   "/dev/cua1",
+@@ -23,8 +34,9 @@
+   "/dev/ttyI1",
+   "/dev/ttyI2",
+   "/dev/ttyI3",
+-#endif
+-#endif
++#endif /* ISDNSUPPORT */
++#endif /* NetBSD */
++#endif /* FreeBSD */
+   0};
+ 
+ // default device number from the list above
