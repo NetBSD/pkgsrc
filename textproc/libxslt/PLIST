@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2002/11/06 21:59:30 tron Exp $
+@comment $NetBSD: PLIST,v 1.11 2003/02/24 20:45:19 jmmv Exp $
 bin/xslt-config
 bin/xsltproc
 include/libexslt/exslt.h
@@ -14,6 +14,7 @@ include/libxslt/namespaces.h
 include/libxslt/numbersInternals.h
 include/libxslt/pattern.h
 include/libxslt/preproc.h
+include/libxslt/security.h
 include/libxslt/templates.h
 include/libxslt/transform.h
 include/libxslt/variables.h
@@ -25,12 +26,12 @@ lib/libexslt.a
 lib/libexslt.la
 lib/libexslt.so
 lib/libexslt.so.7
-lib/libexslt.so.7.12
+lib/libexslt.so.7.17
 lib/libxslt.a
 lib/libxslt.la
 lib/libxslt.so
 lib/libxslt.so.1
-lib/libxslt.so.1.21
+lib/libxslt.so.1.26
 lib/libxsltbreakpoint.a
 lib/libxsltbreakpoint.la
 lib/libxsltbreakpoint.so
@@ -41,6 +42,7 @@ lib/xsltConf.sh
 man/man1/xsltproc.1
 man/man4/libexslt.4
 man/man4/libxslt.4
+share/aclocal/libxslt.m4
 share/doc/html/libxslt/API.html
 share/doc/html/libxslt/APIchunk0.html
 share/doc/html/libxslt/APIchunk1.html
@@ -49,6 +51,7 @@ share/doc/html/libxslt/APIchunk3.html
 share/doc/html/libxslt/APIchunk4.html
 share/doc/html/libxslt/APIchunk5.html
 share/doc/html/libxslt/APIchunk6.html
+share/doc/html/libxslt/APIchunk7.html
 share/doc/html/libxslt/APIconstructors.html
 share/doc/html/libxslt/APIfiles.html
 share/doc/html/libxslt/APIfunctions.html
