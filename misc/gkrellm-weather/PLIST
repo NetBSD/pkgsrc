@@ -1,2 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:28:08 zuntum Exp $
-lib/gkrellm/plugins/gkrellweather.so
+@comment $NetBSD: PLIST,v 1.2 2004/02/24 23:15:55 cube Exp $
+bin/GrabWeather
+lib/gkrellm2/plugins/gkrellweather.so
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/gkrellweather.mo
