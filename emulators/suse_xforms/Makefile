@@ -1,38 +1,20 @@
-# $NetBSD: Makefile,v 1.3 1999/05/24 21:27:14 tron Exp $
+# $NetBSD: Makefile,v 1.4 1999/09/19 23:58:43 tron Exp $
 
 DISTNAME=		xforms
-PKGNAME=		suse_xforms-6.1
+PKGNAME=		suse_xforms-6.1p1
 CATEGORIES=		emulators
-MASTER_SITES=		ftp://ftp.suse.com/pub/suse/i386/6.1/suse/xdev1/ \
-			ftp://ftp.cs.unm.edu/mirrors/SuSE61/suse/xdev1/
+MASTER_SITES=		${MASTER_SITE_SUSE:=xdev1/}
 EXTRACT_SUFX=		.rpm
-ONLY_FOR_PLATFORM=	NetBSD-*-i386
 
 MAINTAINER=		tron@netbsd.org
 HOMEPAGE=		http://www.suse.com/
 
-DEPENDS=		suse_x11-6.1:../suse_x11
-
-DIST_SUBDIR=		suse
-MIRROR_DISTFILE=	no
+DEPENDS+=		suse_x11-6.1p1:../suse_x11
 
 EXTRACT_ONLY=		# empty
 NO_BUILD=		yes
-NO_WRKSUBDIR=		yes
-MANCOMPRESSED=		yes
 PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
 
-EMULSUBDIR=		emul/linux
-EMULDIR=		${PREFIX}/${EMULSUBDIR}
-SBINDIR=		${PREFIX}/sbin
+RPMFILES=		${DISTNAME}${EXTRACT_SUFX}
 
-do-install:
-	cd ${_DISTDIR} && \
-	${SBINDIR}/rpm2pkg ${DISTFILES} >${PLIST_SRC}
-	@${ECHO} "@exec %D/${EMULSUBDIR}/sbin/ldconfig -r %D/${EMULSUBDIR}" >>${PLIST_SRC}
-	${EMULDIR}/sbin/ldconfig -r ${EMULDIR} || ${TRUE}
-
-show-shlib-type:
-	@${ECHO} linux-${MACHINE_ARCH}
-
-.include "../../mk/bsd.pkg.mk"
+.include "../suse_linux/suse.mk"
