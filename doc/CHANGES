@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2390 2003/06/01 16:02:40 jmmv Exp $
+$NetBSD: CHANGES,v 1.2391 2003/06/01 16:21:10 salo Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2266,3 +2266,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated mminstance to 1.20 [salo 2003-06-01]
 	Updated t1utils to 1.27 [salo 2003-06-01]
 	Added linuxsms-0.64 [jmmv 2003-06-01]
+	Updated pwm to 1.0.20030528 [salo 2003-06-01]
