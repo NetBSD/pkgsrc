@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/03/31 10:40:29 minskim Exp $
+# $NetBSD: Makefile,v 1.17 2004/06/02 20:28:59 jschauma Exp $
 #
 
 DISTNAME=	cam-1.02
@@ -17,6 +17,15 @@ USE_BUILDLINK3=	yes
 NO_CONFIGURE=	yes
 
 INSTALLATION_DIRS=	bin man/man1
+
+.include "../../mk/bsd.prefs.mk"
+
+CAMLIBS=	-lcurses
+.if ${OPSYS} == "NetBSD"
+CAMLIBS+=	-lossaudio
+.endif
+
+MAKE_ENV+=	CAMLIBS="${CAMLIBS}"
 
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/ossaudio.buildlink3.mk"
