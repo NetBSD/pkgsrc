@@ -1,8 +1,0 @@
-#!/bin/sh
-#
-# $Id: pre-configure,v 1.3 1998/09/22 06:11:35 garbled Exp $
-#
-
-cp ${CURDIR}/files/cdrom_freebsd.c ${WRKSRC}
-cp ${CURDIR}/files/cdrom_freebsd.h ${WRKSRC}
-cp ${WRKSRC}/xcdplayer.1 ${WRKSRC}/xcdplayer.man
