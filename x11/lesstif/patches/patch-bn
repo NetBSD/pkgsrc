@@ -1,16 +1,15 @@
-$NetBSD: patch-bn,v 1.5 2003/12/12 10:11:39 adam Exp $
+$NetBSD: patch-bn,v 1.6 2004/09/28 12:52:14 adam Exp $
 
---- scripts/autoconf/Makefile.in.orig	2003-11-27 19:29:53.000000000 +0000
+--- scripts/autoconf/Makefile.in.orig	2004-09-26 14:15:08.000000000 +0000
 +++ scripts/autoconf/Makefile.in
-@@ -224,9 +224,9 @@ MAINTAINERCLEANFILES = Makefile.in
- 
+@@ -246,8 +246,8 @@ xmVer = @xmVer@
+ #
+ MAINTAINERCLEANFILES = Makefile.in
  EXTRA_DIST = ac_find_motif.m4
- 
 -aclocaldir = @ACLOCALDIR@
-+aclocaldir = ${prefix}/share/aclocal
- 
 -@Aclocal_TRUE@aclocal_DATA = ac_find_motif.m4
++aclocaldir = ${prefix}/share/aclocal
 +aclocal_DATA = ac_find_motif.m4
- subdir = scripts/autoconf
- ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
- mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+ all: all-am
+ 
+ .SUFFIXES:
