@@ -1,4 +1,4 @@
-# $NetBSD: ossaudio.buildlink2.mk,v 1.9 2002/10/03 20:31:14 jlam Exp $
+# $NetBSD: ossaudio.buildlink2.mk,v 1.10 2002/12/19 15:17:10 jlam Exp $
 #
 # This file should be included by Makefiles for packages that use OSS.
 # By checking the value of HAVE_OSS after including this file, it's possible
@@ -81,7 +81,7 @@ ossaudio-buildlink-soundcard-h:
 	if [ ! -f $${mach_soundcard_h} -a -f $${sys_soundcard_h} ]; then \
 		${ECHO_BUILDLINK_MSG} "Creating $${mach_soundcard_h}.";	\
 		${MKDIR} `${DIRNAME} $${mach_soundcard_h}`;		\
-		${LN} $${sys_soundcard_h} $${mach_soundcard_h};		\
+		${LN} -s $${sys_soundcard_h} $${mach_soundcard_h};	\
 	fi
 
 .endif	# OSSAUDIO_BUILDLINK2_MK
