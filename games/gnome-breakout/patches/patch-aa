@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1 2000/04/04 16:18:32 rh Exp $
+
+--- Makefile.in.orig	Tue Apr  4 08:33:18 2000
++++ Makefile.in	Tue Apr  4 17:59:57 2000
+@@ -420,10 +420,6 @@
+ 
+ 
+ install-data-local:
+-	-$(mkinstalldirs) $(DESTDIR)$(scoredir)
+-	-touch $(DESTDIR)$(scoredir)/gnome-breakout.scores
+-	-chown games.games $(DESTDIR)$(scoredir)/gnome-breakout.scores
+-	-chmod 0644 $(DESTDIR)$(scoredir)/gnome-breakout.scores
+ 	-chgrp games $(DESTDIR)$(bindir)/gnome-breakout && chmod 2111 $(DESTDIR)$(bindir)/gnome-breakout
+ 
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
