@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/07/01 00:00:03 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/07/11 16:34:06 taca Exp $
 bin/rd2
 bin/rdswap
 bin/rmi2html
@@ -38,11 +38,6 @@ ${RUBY_SITELIBDIR}/rd/visitor.rb
 @dirrm ${RUBY_SITELIBDIR}/rd
 ${RUBY_EXAMPLESDIR}/rd/dot.rd2rc
 @dirrm ${RUBY_EXAMPLESDIR}/rd
-@comment ${RUBY_DOCDIR}/amstd/ja/amstd-ja.html
-@comment ${RUBY_DOCDIR}/forwardable/forwardable.html
-@comment ${RUBY_DOCDIR}/forwardable/ja/forwardable.html.ja
-${RUBY_DOCDIR}/optparse/ja/optparse.ja.html
-${RUBY_DOCDIR}/optparse/optparse.en.html
 ${RUBY_DOCDIR}/rd/README.html
 ${RUBY_DOCDIR}/rd/README.rd
 ${RUBY_DOCDIR}/rd/ja/README.html.ja
