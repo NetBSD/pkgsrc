@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2003/08/31 00:25:19 xtraeme Exp $
+# $NetBSD: Makefile,v 1.25 2003/09/02 17:46:36 jmmv Exp $
 #
 
 PKGNAME=	gmplayer-${MPLAYER_PKG_VERSION}
@@ -51,7 +51,7 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/mplayer/Skin
 .for SKIN in ${SKINS}
 	@${ECHO_MSG} "Installing skin ${SKIN}..."
-	@${GTAR} xCzf ${PREFIX}/share/mplayer/Skin/ ${DISTDIR}/${DIST_SUBDIR}/${SKIN}
+	@${GTAR} xCmzf ${PREFIX}/share/mplayer/Skin/ ${DISTDIR}/${DIST_SUBDIR}/${SKIN}
 .endfor
 	@${CHMOD} -R a+r ${PREFIX}/share/mplayer/Skin
 	@${CHMOD} a+rx ${PREFIX}/share/mplayer/Skin/*
