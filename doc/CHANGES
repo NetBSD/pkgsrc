@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3504 2003/09/24 07:56:42 xtraeme Exp $
+$NetBSD: CHANGES,v 1.3505 2003/09/24 08:43:31 recht Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3890,7 +3890,7 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated sitecopy to 0.13.4 [wiz 2003-09-23]
 	Updated wv to 0.7.6nb1 [adam 2003-09-23]
 	Updated wu-ftpd to 2.6.2nb2 [wiz 2003-09-23]
-	Updated libart_lgpl2 to 2.3.15nb1 [recht 2003-09-23]
+	Updated libart2 to 2.3.15nb1 [recht 2003-09-23]
 	Updated libexif to 0.5.12nb1 [recht 2003-09-23]	
 	Updated libexif-gtk to 0.3.3nb5 [recht 2003-09-23]	
 	Updated mjpegtools to 1.6.1.90nb2 [recht 2003-09-23]	
