@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7766 2004/11/08 13:42:51 wiz Exp $
+$NetBSD: CHANGES,v 1.7767 2004/11/08 14:36:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5161,3 +5161,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated librfuncs 1.0.5 [shannonjr 2004-11-08]
 	Updated cdl3 to 1.2.5 [adam 2004-11-08]
 	Updated rar-linux to 3.4.1 [wiz 2004-11-08]
+	Updated gtkballs to 3.1.4 [adam 2004-11-08]
