@@ -1,46 +1,32 @@
---- Makefile.orig	Thu Oct  2 01:18:07 1997
-+++ Makefile	Thu Oct  2 01:21:10 1997
-@@ -66,7 +66,7 @@
- ##	-DDEF_ALIAS_CHAR_OPTION=\"b\"
+$NetBSD: patch-aa,v 1.2 1999/12/26 17:20:33 itojun Exp $
+
+--- Makefile.orig	Mon Dec 27 00:23:29 1999
++++ Makefile	Mon Dec 27 00:24:57 1999
+@@ -28,7 +28,8 @@
+ #	-DLOGDEBUG		LOGGING DEBUG
+ #
+ OPTIONS= -DSYSLOG -DISSUE -DSUBJALIAS -DADDVERSION \
+-	-DSYSLOG_FACILITY=LOG_LOCAL4 -DCCMAIL -DUSEMIMEKIT
++	-DSYSLOG_FACILITY=LOG_LOCAL4 -DCCMAIL
++#OPTIONS+= -DMIMEKIT
  
  #
--DESTDIR=
-+DESTDIR= ${PREFIX}
+ # DEFAULT parameters -- YOU SHOULD EDIT THESE
+@@ -71,7 +72,7 @@
  #
- CFLAGS=	-g ${OPTIONS} ${DEFAULTCONFIG} ${RCONFIG}
- # -Wall
-@@ -75,8 +75,8 @@
- MAKE=	make
- CC= 	${PURIFY} ${PURIFYOPTS} cc 
+ # External Library -- you should change this if mimekit is in different loc.
+ #
+-MIMELIB = -L/usr/local/lib -lmimekit
++#MIMELIB = -L/usr/local/lib -lmimekit
  
--WHERE=	/usr/local/libexec
--MANDIR=	/usr/local/man
-+WHERE=	/sbin
-+MANDIR=	/man
+ #
+ DESTDIR=
+@@ -84,7 +85,7 @@
+ CC= 	${PURIFY} ${PURIFYOPTS} gcc
+ #-D__USE_FIXED_PROTOTYPES__
+ 
+-PREFIX= /usr/local
++PREFIX?= /usr/pkg
+ WHERE=	${PREFIX}/libexec
+ MANDIR=	${PREFIX}/man
  MANSEC=	1
- 
- # Install as
-@@ -84,7 +84,7 @@
- GROUP=	daemon
- 
- # install
--INSTALL= install -c
-+#INSTALL= install -c
- 
- # perl
- PERL=perl
-@@ -130,11 +130,11 @@
- 	@size xarchive
- 
- install: xdistribute distribute.1 xarchive
--	${INSTALL} -s -o ${OWNER} -g ${GROUP} -m 511 xdistribute \
-+	${INSTALL} -c -s -o ${OWNER} -g ${GROUP} -m 511 xdistribute \
- 		${DESTDIR}${WHERE}/distribute
--	${INSTALL} -s -o ${OWNER} -g ${GROUP} -m 511 xarchive \
-+	${INSTALL} -c -s -o ${OWNER} -g ${GROUP} -m 511 xarchive \
- 		${DESTDIR}${WHERE}/archive
--	${INSTALL} -m 444 distribute.1 \
-+	${INSTALL_MAN}  distribute.1 \
- 		${DESTDIR}${MANDIR}/man${MANSEC}/distribute.${MANSEC}
- 
- testinst: xdistribute xarchive
