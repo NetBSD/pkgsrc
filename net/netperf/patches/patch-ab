@@ -1,0 +1,20 @@
+--- makefile	Fri Jan 21 21:31:07 2000
++++ makefile Jan 21 21:30:56 2000
+@@ -83,7 +83,7 @@
+ # -U__hpux    - Use this when compiling _on_ HP-UX *for* an HP-RT system
+ 
+ LOG_FILE=DEBUG_LOG_FILE="\"/tmp/netperf.debug\""
+-CFLAGS = %CFLAGS% -D$(LOG_FILE) -DUSE_LOOPER -DHISTOGRAM -DDO_UNIX
++CFLAGS = %CFLAGS% -D$(LOG_FILE) -DUSE_LOOPER -DHISTOGRAM -DDO_UNIX -DDO_IPV6
+ 
+ # Some platforms, and some options, require additional libraries.
+ # you can add to the "LIBS =" line to accomplish this. if you find
+@@ -101,7 +101,7 @@
+ # -lm                   - required for ALL platforms
+ # -lxti                 - required for -DDO_XTI on HP_UX 10.X
+ 
+-LIBS= -lm
++LIBS= -lm -L/usr/local/v6/lib -linet6
+ 
+ # ---------------------------------------------------------------
+ # it should not be the case that anything below this line needs to
