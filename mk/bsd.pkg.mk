@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.906 2002/01/18 22:14:09 tron Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.907 2002/01/19 21:29:41 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -900,6 +900,20 @@ EXTRACT_ONLY?=	${DISTFILES}
 	@${FALSE}
 .endif
 
+.if (${PKGSRC_LOCKTYPE} == "sleep" || ${PKGSRC_LOCKTYPE} == "once") && !defined(OBJHOSTNAME) 
+.BEGIN:
+	@${ECHO_MSG} 'PKGSRC_LOCKTYPE needs OBJHOSTNAME defined.'
+	@${FALSE}
+.endif
+
+.if (${PKGSRC_LOCKTYPE} == "sleep" || ${PKGSRC_LOCKTYPE} == "once") && !exists(${SHLOCK}) 
+.BEGIN:
+	@${ECHO_MSG} 'The ${SHLOCK} utility does not exist, and is necessary for locking.'
+	@${ECHO_MSG} 'Please go to the ${.CURDIR}/../../pkgtools/shlock directory, and type'
+	@${ECHO_MSG} 'make install'
+	@${FALSE}
+.endif
+
 PKGREPOSITORYSUBDIR?=	All
 PKGREPOSITORY?=		${PACKAGES}/${PKGREPOSITORYSUBDIR}
 PKGFILE?=		${PKGREPOSITORY}/${PKGNAME}${PKG_SUFX}
@@ -1372,6 +1386,31 @@ show-pkgsrc-dir:
 .  endif
 .endif
 
+# pkgsrc coarse-grained locking definitions and targets
+.if ${PKGSRC_LOCKTYPE} == "none"
+_ACQUIRE_LOCK=	${_PKG_SILENT}${_PKG_DEBUG}${DO_NADA}
+_RELEASE_LOCK=	${_PKG_SILENT}${_PKG_DEBUG}${DO_NADA}
+.else
+LOCKFILE=	${WRKDIR}/.lockfile
+
+_ACQUIRE_LOCK=								\
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	ppid=`${PS} -p $$$$ -o ppid | ${AWK} 'NR == 2 { print $$0 }'`;	\
+	while true; do							\
+		${SHLOCK} -f ${LOCKFILE} -p $$ppid && break;		\
+		${ECHO} "=> Lock is held by pid `cat ${LOCKFILE}`";	\
+		case "${PKGSRC_LOCKTYPE}" in				\
+		once)	exit 1 ;;					\
+		sleep)	sleep ${PKGSRC_SLEEPSECS} ;;			\
+		esac							\
+	done;								\
+	${ECHO_MSG} "=> Lock acquired on behalf of process $$ppid"
+
+_RELEASE_LOCK=								\
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${ECHO_MSG} "=> Lock released on behalf of process `${CAT} ${LOCKFILE}`"; \
+	${RM} ${LOCKFILE}
+.endif # PKGSRC_LOCKTYPE
 
 # Extract
 
@@ -1439,19 +1478,30 @@ EXTRACT_CMD${__suffix__}?=	${DECOMPRESS_CMD${__suffix__}} ${DOWNLOADED_DISTFILE}
 .  endif
 .endfor
 
-.if !target(do-extract)
-do-extract:
-.  ifndef KEEP_WRKDIR
+${WRKDIR}:
+.if !defined(KEEP_WRKDIR)
+.  if ${PKGSRC_LOCKTYPE} == "sleep" || ${PKGSRC_LOCKTYPE} == "once"
+.    if !exists(${LOCKFILE})
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -rf ${WRKDIR}
+.    endif
 .  endif
+.endif
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${WRKDIR}
-.  ifdef WRKOBJDIR
+.ifdef WRKOBJDIR
+.  if ${PKGSRC_LOCKTYPE} == "sleep" || ${PKGSRC_LOCKTYPE} == "once"
+.    if !exists(${LOCKFILE})
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${RM} -f ${WRKDIR_BASENAME} || ${TRUE};				\
+	${RM} -f ${WRKDIR_BASENAME} || ${TRUE}
+.    endif
+.  endif
+	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if ${LN} -s ${WRKDIR} ${WRKDIR_BASENAME} 2>/dev/null; then	\
 		${ECHO} "${WRKDIR_BASENAME} -> ${WRKDIR}";		\
 	fi
-.  endif # WRKOBJDIR
+.endif # WRKOBJDIR
+
+.if !target(do-extract)
+do-extract: ${WRKDIR}
 .  if defined(EXTRACT_CMD) && !empty(EXTRACT_CMD)
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	for file in "" ${EXTRACT_ONLY}; do				\
@@ -1809,7 +1859,7 @@ real-su-install: ${MESSAGE}
 	if [ X"$$found" != X"" ]; then					\
 		${ECHO} "$$found" >> ${WRKDIR}/.CONFLICTS;		\
 	fi
-.    endfor
+.     endfor
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if [ -s ${WRKDIR}/.CONFLICTS ]; then \
 		found=`${SED} -e s'|${PKG_DBDIR}/||g' ${WRKDIR}/.CONFLICTS | tr '\012' ' '`; \
@@ -2129,6 +2179,23 @@ show-shlib-type:
 .  endif # libc.sylib
 .endif
 
+acquire-extract-lock:
+	${_ACQUIRE_LOCK}
+acquire-patch-lock:
+	${_ACQUIRE_LOCK}
+acquire-configure-lock:
+	${_ACQUIRE_LOCK}
+acquire-build-lock:
+	${_ACQUIRE_LOCK}
+
+release-extract-lock:
+	${_RELEASE_LOCK}
+release-patch-lock:
+	${_RELEASE_LOCK}
+release-configure-lock:
+	${_RELEASE_LOCK}
+release-build-lock:
+	${_RELEASE_LOCK}
 
 ################################################################
 # Skeleton targets start here
@@ -2145,19 +2212,19 @@ fetch:
 .endif
 
 .if !target(extract)
-extract: checksum ${EXTRACT_COOKIE}
+extract: checksum ${WRKDIR} acquire-extract-lock ${EXTRACT_COOKIE} release-extract-lock
 .endif
 
 .if !target(patch)
-patch: extract ${PATCH_COOKIE}
+patch: extract acquire-patch-lock ${PATCH_COOKIE} release-patch-lock
 .endif
 
 .if !target(configure)
-configure: patch ${CONFIGURE_COOKIE}
+configure: patch acquire-configure-lock ${CONFIGURE_COOKIE} release-configure-lock
 .endif
 
 .if !target(build)
-build: configure ${BUILD_COOKIE}
+build: configure acquire-build-lock ${BUILD_COOKIE} release-build-lock
 .endif
 
 .if !target(install)
