@@ -1,17 +1,17 @@
-$NetBSD: patch-ac,v 1.1.1.1 2004/03/28 21:02:15 martin Exp $
+$NetBSD: patch-ac,v 1.2 2004/07/07 19:19:54 schmonz Exp $
 
---- man/Makefile.in.orig	2002-09-06 02:08:49.000000000 +0200
-+++ man/Makefile.in	2004-03-14 10:24:47.000000000 +0100
+--- man/Makefile.in.orig	2002-09-05 20:08:49.000000000 -0400
++++ man/Makefile.in
 @@ -22,7 +22,7 @@
  .PHONY: all install clean distclean
  .SUFFIXES: .man .gz
  
 -MAN_FILES = maildir.5.gz mbox.5.gz pulsar.8.gz pulsar.conf.5.gz \
-+MAN_FILES = maildir.5.gz pulsar.8.gz pulsar.conf.5.gz \
++MAN_FILES = pulsar.8.gz pulsar.conf.5.gz \
   pulsar_crypt.1.gz pulsar_deliver.8.gz
  
  srcdir = @srcdir@
-@@ -63,10 +63,10 @@
+@@ -63,10 +63,10 @@ pulsar_deliver.8.gz: \
  	pulsar_deliver.8.man
  
  install: ${MAN_FILES}
