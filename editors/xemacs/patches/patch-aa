@@ -1,28 +1,28 @@
-$NetBSD: patch-aa,v 1.1 1999/06/29 23:13:39 tron Exp $
+$NetBSD: patch-aa,v 1.2 1999/12/06 14:24:02 bouyer Exp $
 
---- configure.orig	Wed May 12 16:29:01 1999
-+++ configure	Tue Jun 29 21:44:35 1999
-@@ -1007,6 +1007,7 @@
+--- configure.orig	Sun Aug 15 03:29:45 1999
++++ configure	Mon Dec  6 11:20:35 1999
+@@ -1018,6 +1018,7 @@
  machine='' opsys=''
  
  case "$canonical" in
-+  arm*-*-*	   ) machine=arm ;;
++  arm-*-*	   ) machine=arm ;;
    sparc-*-*        ) machine=sparc ;;
    alpha*-*-*       ) machine=alpha ;;
    vax-*-*          ) machine=vax ;;
-@@ -1075,9 +1076,10 @@
+@@ -1086,9 +1087,10 @@
      case "$canonical" in
        i[3-9]86-*-netbsd*) machine=intel386 ;;
        hp300-*-netbsd* | amiga-*-netbsd* | sun3-*-netbsd* | mac68k-*-netbsd* | da30-*-netbsd* | m68k-*-netbsd* )
 -                                            machine=hp9000s300 ;;
-+                                            machine=m68k ;;
++                      machine=m68k ;;
        pc532-*-netbsd* | ns32k-*-netbsd* )  machine=ns32000 ;;
        pmax-*-netbsd*  | mips-*-netbsd*  )  machine=pmax ;;
 +      alpha-*-netbsd* ) machine=alpha ;;
      esac
    ;;
  
-@@ -2527,7 +2529,7 @@
+@@ -2711,7 +2713,7 @@
      decosf* | linux* | irix*) dash_r="-rpath " ;;
      *)
        dash_r=""
@@ -31,3 +31,59 @@ $NetBSD: patch-aa,v 1.1 1999/06/29 23:13:39 tron Exp $
          xe_check_libs="${try_dash_r}/no/such/file-or-directory"
          
  if test "$GCC" = "yes"; then
+@@ -10907,8 +10909,47 @@
+     eval "with_${feature}=no"
+   done
+ fi 
++
++echo $ac_n "checking for main in -lossaudio""... $ac_c" 1>&6
++echo "configure:10915: checking for main in -lossaudio" >&5
++ac_lib_var=`echo ossaudio'_'main | sed 'y%./+-%__p_%'`
++
++xe_check_libs=" -lossaudio "
++cat > conftest.$ac_ext <<EOF
++#line 10920 "configure"
++#include "confdefs.h"
++/* Override any gcc2 internal prototype to avoid an error.  */
++/* We use char because int might match the return type of a gcc2
++    builtin and then its argument prototype would still apply.  */
++
++int main() {
++main()
++; return 0; }
++EOF
++if { (eval echo configure:10931: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
++  rm -rf conftest*
++  eval "ac_cv_lib_$ac_lib_var=yes"
++else
++  echo "configure: failed program was:" >&5
++  cat conftest.$ac_ext >&5
++  rm -rf conftest*
++  eval "ac_cv_lib_$ac_lib_var=no"
++fi
++rm -f conftest*
++xe_check_libs=""
++
++if eval "test \"`echo '$ac_cv_lib_'$ac_lib_var`\" = yes" ; then
++  echo "$ac_t""yes" 1>&6
++  LIBOSSAUDIO=-lossaudio
++else
++  echo "$ac_t""no" 1>&6
++fi
++
++
++
++
+ test "$with_x11" = "yes" -o "$with_tty" = "yes" && extra_objs="$extra_objs event-unixoid.o" &&  if test "$extra_verbose" = "yes"; then
+    echo "    xemacs will be linked with \"event-unixoid.o\""
+  fi
+ 
+ 
+@@ -12626,6 +12667,7 @@
+ s%@dnd_objs@%$dnd_objs%g
+ s%@lwlib_objs@%$lwlib_objs%g
+ s%@ALLOCA@%$ALLOCA%g
++s%@LIBOSSAUDIO@%$LIBOSSAUDIO%g
+ s%@dll_ld@%$dll_ld%g
+ s%@dll_cflags@%$dll_cflags%g
+ s%@dll_oflags@%$dll_oflags%g
