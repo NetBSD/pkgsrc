@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/09/14 03:48:06 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2001/11/19 23:33:03 jlam Exp $
 #
 
 DISTNAME=		xsoldier-0.96
@@ -12,30 +12,18 @@ COMMENT=		Updated xgalaga type game with awesome graphics
 USE_IMAKE=		YES
 NO_INSTALL_MANPAGES=	YES
 
-DEINSTALL_FILE=		${WRKDIR}/DEINSTALL
-INSTALL_FILE=		${WRKDIR}/INSTALL
-
 MAKE_ENV+=		BINOWN=${BINOWN}
 
-FILES_SUBST=		CAT=${CAT:Q}
-FILES_SUBST+=		CHGRP=${CHGRP:Q}
-FILES_SUBST+=		CHMOD=${CHMOD:Q}
-FILES_SUBST+=		CHOWN=${CHOWN:Q}
-FILES_SUBST+=		CMP=${CMP:Q}
-FILES_SUBST+=		CP=${CP:Q}
-FILES_SUBST+=		ECHO=${ECHO:Q}
-FILES_SUBST+=		RM=${RM:Q}
-FILES_SUBST_SED=	${FILES_SUBST:S/=/@!/:S/$/!g/:S/^/ -e s!@/}
+SUPPORT_FILES_PERMS=	${PREFIX}/share/xsoldier/xsoldier.score.dist	\
+			/var/games/xsoldier				\
+			games games 0664
 
 post-patch:
 	${TOUCH} ${WRKSRC}/xsoldier.man
-
-pre-install:
-	${SED} ${FILES_SUBST_SED} ${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
-	${SED} ${FILES_SUBST_SED} ${PKGDIR}/INSTALL > ${INSTALL_FILE}
 
 post-install:
 	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
 .include "../../graphics/xpm/buildlink.mk"
+.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
