@@ -1,8 +1,18 @@
-$NetBSD: patch-ad,v 1.1 2004/02/26 07:47:48 uebayasi Exp $
+$NetBSD: patch-ad,v 1.2 2004/02/26 09:34:43 uebayasi Exp $
 
---- stdenv.h~	Tue May 30 06:13:53 1995
-+++ stdenv.h	Thu Apr 10 09:32:22 1997
-@@ -283,6 +283,7 @@
+--- stdenv.h.orig	1995-05-30 13:13:53.000000000 +0200
++++ stdenv.h	2004-02-26 09:51:16.000000000 +0100
+@@ -44,9 +44,7 @@
+ #include <signal.h>
+ #include <ctype.h>
+ 
+-#if REQUIRE_STAT || REQUIRE_IOCTL
+ #include <sys/types.h>
+-#endif
+ 
+ #if REQUIRE_IOCTL
+ #include <sys/ioctl.h>
+@@ -283,6 +281,7 @@
  
  /* stdlib */
  
@@ -10,7 +20,7 @@ $NetBSD: patch-ad,v 1.1 2004/02/26 07:47:48 uebayasi Exp $
  extern noreturn exit(int);
  extern noreturn abort(void);
  extern long strtol(const char *num, char **end, int base);
-@@ -290,6 +291,7 @@
+@@ -290,6 +289,7 @@
  	void *base, size_t nmemb, size_t size,
  	int (*compar)(const void *, const void *)
  );
