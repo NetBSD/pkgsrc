@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2004/03/10 18:28:51 jmmv Exp $
+# $NetBSD: Makefile,v 1.19 2004/04/11 09:25:50 snj Exp $
 #
 
 DISTNAME=	devtodo-0.1.17
@@ -12,7 +12,7 @@ COMMENT=	Display and manage a list of items that are outstanding
 USE_LIBTOOL=		# defined
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
-USE_BUILDLINK2=		# defined
+USE_BUILDLINK3=		# defined
 GNU_CONFIGURE=		# defined
 
 # We don't need curses, just termcap.
@@ -36,5 +36,5 @@ post-install:
 		${PREFIX}/share/examples/devtodo
 .endfor
 
-.include "../../devel/readline/buildlink2.mk"
+.include "../../devel/readline/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
