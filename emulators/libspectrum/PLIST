@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.2 2003/09/22 22:06:29 dillo Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/10/02 15:08:05 adam Exp $
 include/libspectrum.h
 lib/libspectrum.a
 lib/libspectrum.la
 lib/libspectrum.so
 lib/libspectrum.so.2
-lib/libspectrum.so.2.0
+lib/libspectrum.so.2.1
 share/doc/libspectrum/libspectrum.txt
 @dirrm share/doc/libspectrum
