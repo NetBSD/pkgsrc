@@ -1,0 +1,5 @@
+This is a program to test the compatibility (or to demonstrate the
+non-compatibility) of so-called "VT100-compatible" terminals. In conformance
+of the good old hacker traditions, the only documentation of this program is
+the source code itself. To understand it, you also need a copy of the
+original VT100 manual from DEC.
