@@ -1,6 +1,6 @@
 #!/usr/bin/env perl
 
-# $NetBSD: lintpkgsrc.pl,v 1.31 2000/09/20 06:39:28 abs Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.32 2000/09/21 10:28:44 abs Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -636,16 +636,10 @@ sub parse_makefile_vars
 		    my($how, $from, $to, $global) = ($1, $2, $3, $4);
 		    debug("substitute: $subvar, $how, $from, $to, $global\n");
 
-		    if ($how eq 'S')
-			{
-			if (($_ = index($result, $from)) != -1)
-			    { substr($result, $_, length($from), $to); }
-			}
-		    else
-			{
-			$to =~ s/\\(\d)/\$$1/g; # Change \1 etc to $1
-			eval "\$result =~ s/$from/$to/$global";
-			}
+		    if ($how eq 'S') # Limited substitution - keep ^ and $
+			{ $from =~ s/[?.{}\]\[*+]/\$1/g; }
+		    $to =~ s/\\(\d)/\$$1/g; # Change \1 etc to $1
+		    eval "\$result =~ s/$from/$to/$global";
 		    }
 		$vars{$key} = $left . $result . $right;
 		$loop = 1;
