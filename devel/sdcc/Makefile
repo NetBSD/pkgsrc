@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2002/10/09 18:59:23 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2003/03/10 04:08:21 jmc Exp $
 # FreeBSD: ports/devel/sdcc/Makefile,v 1.5 2000/04/15 15:13:38 knu Exp
 
 DISTNAME=	sdcc-2.2.1-src
@@ -29,6 +29,7 @@ CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/sdcc
 # by default on some, not on others
 CPPFLAGS+=		-fdollars-in-identifiers
 CONFIGURE_ENV+=		MACHINE_ARCH=${MACHINE_ARCH}
+MAKE_ENV+=		_OPSYS_RPATH_NAME=${_OPSYS_RPATH_NAME}
 
 .include "../../mk/bsd.prefs.mk"
 
