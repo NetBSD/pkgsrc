@@ -1,3 +1,5 @@
+$NetBSD: patch-ah,v 1.2 1999/12/26 17:35:43 itojun Exp $
+
 *** agent/maildist.SH.orig	Wed Mar 22 05:51:25 1995
 --- agent/maildist.SH	Thu Jul 25 19:53:05 1996
 ***************

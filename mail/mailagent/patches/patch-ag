@@ -1,3 +1,5 @@
+$NetBSD: patch-ag,v 1.2 1999/12/26 17:35:43 itojun Exp $
+
 *** agent/edusers.SH.orig	Thu Aug 10 15:34:55 1995
 --- agent/edusers.SH	Thu Jul 25 19:55:26 1996
 ***************
