@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.275 2003/02/17 12:54:44 grant Exp $
+$NetBSD: TODO,v 1.276 2003/02/18 07:44:19 wiz Exp $
 
 Suggested new packages
 ======================
@@ -84,7 +84,7 @@ Suggested package updates
 	o balsa-1.4.2
 	o binutils-2.13.2.1
 	o blender-2.26
-	o bluefish-0.8
+	o bluefish-0.9
 	o bonnie++-1.03c
 	o bzflag-1.7g0
 	o canna-3.6p3 [pkg/20208]
@@ -94,6 +94,7 @@ Suggested package updates
 	o clisp-2.30
 	o courier-0.40.2
 	o courier-imap-1.7.0
+	o coreutils-4.5.7 (was fileutils/sh-utils/textutils)
 	o crafty-19.1
 	o crossfire-1.4.0
 	o ctwm-3.6
@@ -101,6 +102,7 @@ Suggested package updates
 	o cyrus-sasl2-2.1.12
 	o dante-1.1.13
 	o db4-4.1.25 [pkg/20289]
+	o dillo-0.7.0
 	o dylan-compiler-2.3.9
 	o dylan-interpreter-2.3.9
 	o elm-me-2.4pl100
@@ -199,7 +201,7 @@ Suggested package updates
 	o mowitz-0.2.2
 	o mpgtx-1.3 [pkg/19082]
 	o mplayer-0.90rc4 [pkg/20307]
-	o mrproject-0.8
+	o mrproject-0.9
 	o mysql-3.23.54
 	o naim-0.11.5.4
 	o napshare-1.2
@@ -270,7 +272,7 @@ Suggested package updates
 	o ted-2.12
 	o teTeX-2.0
 	o texmacs-1.0.1.4
-	o tightvnc-1.2.7
+	o tightvnc-1.2.8
 	o ttf2pt1-3.4.3
 	o tuxpaint-0.9.7
 	o tuxpaint-stamps-2003.01.28
