@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1390 2004/02/17 03:23:21 minskim Exp $
+$NetBSD: TODO,v 1.1391 2004/02/17 03:24:57 minskim Exp $
 
 Suggested new packages
 ======================
@@ -320,9 +320,9 @@ Suggested package updates
 	o tcpreplay-2.0.0
 	o tct-1.14
 	o teapop-0.3.8
-	o tmda-1.0.2
 	o tkcvs-7.2
 	o tkman-2.2
+	o tmda-1.0.2
 	o top-3.5b12.10
 	o transcode-0.6.12
 	o ttf2pt1-3.4.3
