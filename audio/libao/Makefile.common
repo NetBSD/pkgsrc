@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2003/04/11 19:11:09 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.2 2003/10/03 18:31:18 xtraeme Exp $
 
 DISTNAME=	libao-0.8.3
 CATEGORIES=	audio devel
@@ -13,6 +13,14 @@ GNU_CONFIGURE=		yes
 USE_BUILDLINK2=		yes
 USE_GMAKE=		yes
 USE_LIBTOOL=		yes
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "FreeBSD"
+PLIST_SUBST+=		LIBSUN="@comment "
+.else
+PLIST_SUBST+=		LIBSUN=""
+.endif
 
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 

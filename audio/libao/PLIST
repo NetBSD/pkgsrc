@@ -1,13 +1,13 @@
-@comment $NetBSD: PLIST,v 1.5 2002/09/22 17:10:24 mycroft Exp $
+@comment $NetBSD: PLIST,v 1.6 2003/10/03 18:31:18 xtraeme Exp $
 include/ao/ao.h
 include/ao/os_types.h
 include/ao/plugin.h
 lib/ao/plugins-2/liboss.a
 lib/ao/plugins-2/liboss.la
 lib/ao/plugins-2/liboss.so
-lib/ao/plugins-2/libsun.a
-lib/ao/plugins-2/libsun.la
-lib/ao/plugins-2/libsun.so
+${LIBSUN}lib/ao/plugins-2/libsun.a
+${LIBSUN}lib/ao/plugins-2/libsun.la
+${LIBSUN}lib/ao/plugins-2/libsun.so
 lib/libao.a
 lib/libao.la
 lib/libao.so
