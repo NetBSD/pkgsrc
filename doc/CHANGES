@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.118 2002/09/30 00:02:08 rh Exp $
+$NetBSD: CHANGES,v 1.119 2002/09/30 08:38:25 martti Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3042,3 +3042,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated spamassassin to 2.41 [simonb 2002-09-30]
 	Updated gnustep-make to 1.5.0nb3 [rh 2002-09-30]
 	Updated evolution to 1.0.8nb3 [rh 2002-09-30]
+	Added distfetch-20020930 [martti 2002-09-30]
