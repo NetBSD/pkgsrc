@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2002/10/20 20:40:11 jlam Exp $
+# $NetBSD: Makefile,v 1.49 2002/10/26 14:32:49 seb Exp $
 
 # Make sure that the version number in "Makefile.gcc" matches this.
 DISTNAME=		gcc-2.95.3
@@ -20,14 +20,14 @@ USE_BUILDLINK2=		YES
 USE_GMAKE=		YES
 
 HAS_CONFIGURE=		YES
-CONFIGURE_SCRIPT=	${SRCDIR}/configure
+CONFIGURE_SCRIPT=	${WRKSRC}/configure
 CONFIGURE_ARGS=		--host=${MACHINE_GNU_PLATFORM}
 CONFIGURE_ARGS+=	--prefix=${GCC_PREFIX}
 CONFIGURE_ARGS+=	--enable-shared
 
 PLIST_SUBST+=		GCC_VERSION=${PKGVERSION}
-SRCDIR=			${WRKDIR}/${DISTNAME}
-WRKSRC=			${WRKDIR}/objdir
+CONFIGURE_DIRS=		${WRKDIR}/objdir
+BUILD_DIRS=		${CONFIGURE_DIRS}
 
 INFO_FILES=		chill.info cpp.info g77.info gcc.info
 
@@ -54,22 +54,24 @@ FILES_SUBST+=	GCC_PREFIX=${GCC_PREFIX}
 
 post-extract:
 	${MKDIR} ${WRKSRC}
-	${CP} ${FILESDIR}/xm-netbsd.h ${SRCDIR}/gcc/config
-	${CP} ${FILESDIR}/xm-target64.h ${SRCDIR}/gcc/config
+	${CP} ${FILESDIR}/xm-netbsd.h ${WRKSRC}/gcc/config
+	${CP} ${FILESDIR}/xm-target64.h ${WRKSRC}/gcc/config
 	for file in ${FILESDIR}/*_* ; do \
 		arch=`${BASENAME} $${file} | ${SED} -e "s/_.*//"`;	\
 		dest=`${BASENAME} $${file} | ${SED} -e "s/$${arch}_//"`; \
-		${MKDIR} ${SRCDIR}/gcc/config/$${arch};			\
-		${CP} $${file} ${SRCDIR}/gcc/config/$${arch}/$${dest};	\
+		${MKDIR} ${WRKSRC}/gcc/config/$${arch};			\
+		${CP} $${file} ${WRKSRC}/gcc/config/$${arch}/$${dest};	\
 	done
-	${RM} ${SRCDIR}/gcc/config/alpha/netbsd-elf.h
-	${RM} ${SRCDIR}/gcc/config/arm/t-netbsd
-	${RM} ${SRCDIR}/gcc/config/mips/x-netbsd
-	${RM} ${SRCDIR}/libf2c/libF77/dtime_.c
-	${RM} ${SRCDIR}/libf2c/libF77/etime_.c
+	${RM} ${WRKSRC}/gcc/config/alpha/netbsd-elf.h
+	${RM} ${WRKSRC}/gcc/config/arm/t-netbsd
+	${RM} ${WRKSRC}/gcc/config/mips/x-netbsd
+	${RM} ${WRKSRC}/libf2c/libF77/dtime_.c
+	${RM} ${WRKSRC}/libf2c/libF77/etime_.c
 
 pre-configure:
-	${ECHO} "bogus" > ${SRCDIR}/gcc/cstamp-h.in
+	${MKDIR} ${BUILD_DIRS}
+	${TOUCH} ${TOUCH_FLAGS}	${WRKSRC}/gcc/c-gperf.h
+	${ECHO} "bogus" > ${WRKSRC}/gcc/cstamp-h.in
 
 post-build:
 	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/gcc.mk > ${WRKDIR}/gcc.mk
