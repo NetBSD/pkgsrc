@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.11 2000/07/10 11:12:10 wiz Exp $
+$NetBSD: patch-aa,v 1.12 2001/01/14 13:17:55 tron Exp $
 
---- Makefile.config.orig	Thu Jun 22 19:48:03 2000
-+++ Makefile.config	Sun Jul  9 23:54:46 2000
+--- Makefile.config~	Thu Jun 22 19:48:03 2000
++++ Makefile.config	Sun Jan 14 14:09:14 2001
 @@ -29,8 +29,8 @@
  #
  # For cygwin, only static libraries work, so set STATICLIB = Y  .
@@ -42,7 +42,7 @@ $NetBSD: patch-aa,v 1.11 2000/07/10 11:12:10 wiz Exp $
  #INSTALL = installosf
  # ?
 -#INSTALL = install
-+INSTALL = install -c
++#INSTALL = install -c
  
  # Normally the man pages are installed using "install".  But via this
  # variable, you can use something else, for example a script that
@@ -112,6 +112,15 @@ $NetBSD: patch-aa,v 1.11 2000/07/10 11:12:10 wiz Exp $
  # OSF/Tru64:
  #PNGLIB_DIR = /usr/local1/DEC/lib
  #PNGHDR_DIR = /usr/local1/DEC/include
+@@ -222,7 +223,7 @@
+ # network functions is the option in ppmtompeg to run it on multiple
+ # computers simultaneously.
+ 
+-NETWORKLD = 
++#NETWORKLD = 
+ # Solaris, SunOS:
+ #NETWORKLD = -lsocket -lnsl
+ # Don't build network functions:
 @@ -305,8 +306,8 @@
  #be a rule in the makefiles to make whatever the fliename turns out to be.
  #Only .a and .so work.
