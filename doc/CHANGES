@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1881 2003/04/10 04:06:59 dmcmahill Exp $
+$NetBSD: CHANGES,v 1.1882 2003/04/10 08:37:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1518,3 +1518,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Added yasm-0.2.0 [jmmv 2003-04-09]
 	Updated dnetc to 2.8015.469nb1 [jmmv 2003-04-09]
 	Updated xwrits to 2.21 [dmcmahill 2003-04-10]
+	Updated apache to 1.3.27nb4 [wiz 2003-04-10]
+	Updated ap-ssl to 2.8.14 [wiz 2003-04-10]
