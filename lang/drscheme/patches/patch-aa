@@ -1,0 +1,51 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/05/22 20:26:59 groo Exp $
+
+--- sconfig.h.orig	Thu Oct 21 22:06:12 1999
++++ sconfig.h	Wed Jan 12 15:09:48 2000
+@@ -285,6 +285,37 @@
+ 
+ #endif
+ 
++  /********************* NetBSD ***********************/
++
++#if defined(__NetBSD__)
++
++# define SCHEME_PLATFORM_LIBRARY_SUBPATH "netbsd"
++
++# include "uconfig.h"
++
++# undef HAS_STANDARD_IOB
++# define HAS_BSD_IOB
++
++# define STACK_GROWS_DOWN
++
++# define UNDERSCORE_DYNLOAD_SYMBOL_PREFIX
++
++# define USE_IEEE_FP_PREDS
++# define POW_HANDLES_INF_CORRECTLY
++
++# define SIGSET_IS_SIGNAL
++
++# define USE_TM_GMTOFF_FIELD
++
++#if defined(__alpha__)
++# define SIXTY_FOUR_BIT_INTEGERS
++# define USE_DIVIDE_MAKE_INFINITY
++#endif
++
++# define FLAGS_ALREADY_SET
++
++#endif
++
+   /************** x86/OpenBSD with gcc ****************/
+               /* Thanks to Bengt Kleberg */
+ 
+@@ -505,7 +536,7 @@
+ 
+   /************** ALPHA/OSF1 with gcc ****************/
+ 
+-#if defined(__alpha)
++#if defined(__alpha) && !defined(__NetBSD__)
+ 
+ # define SCHEME_PLATFORM_LIBRARY_SUBPATH "alpha-osf1"
+ 
