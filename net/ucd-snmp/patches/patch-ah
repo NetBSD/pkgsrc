@@ -1,7 +1,16 @@
-$NetBSD: patch-ah,v 1.5 2002/10/02 21:10:12 wiz Exp $
+$NetBSD: patch-ah,v 1.6 2003/07/30 21:05:00 jmmv Exp $
 
---- configure.orig	Mon Apr  8 16:45:00 2002
+--- configure.orig	2002-04-08 16:45:00.000000000 +0200
 +++ configure
+@@ -6724,7 +6724,7 @@ EOF
+ fi
+ 
+ SNMPCONFPATH=""
+-tmpset="$sysconfdir/snmp"
++tmpset="$sysconfdir"
+ while test "x$tmpset" != "x$SNMPCONFPATH"; do
+   SNMPCONFPATH="$tmpset"
+   eval tmpset="$tmpset"
 @@ -8180,105 +8180,21 @@ else
  fi
  
