@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2004/02/23 01:46:08 kristerw Exp $
+# $NetBSD: Makefile,v 1.58 2004/04/11 19:23:01 snj Exp $
 #
 
 DISTNAME=	ddd-3.3.7
@@ -9,13 +9,13 @@ MAINTAINER=     martti@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/ddd/
 COMMENT=	Data Display Debugger -- a common graphical front-end for GDB/DBX/XDB
 
-USE_BUILDLINK2=		YES
-USE_X11BASE=		YES
 GNU_CONFIGURE=		YES
+INFO_FILES=		ddd-themes.info ddd.info
+TEST_TARGET=		check
+USE_BUILDLINK3=		YES
 USE_GNU_TOOLS+=		make
 USE_LANGUAGES=		c c++
-TEST_TARGET=		check
-INFO_FILES=		ddd-themes.info ddd.info
+USE_X11BASE=		YES
 
 GCC_REQD+=		3.0
 
@@ -48,8 +48,8 @@ post-install:
 	${GZIP_CMD} ${PREFIX}/share/doc/ddd/ddd-paper.ps
 	${GZIP_CMD} ${PREFIX}/share/doc/ddd/ddd.ps
 
-.include "../../devel/binutils/buildlink2.mk"
-.include "../../graphics/xpm/buildlink2.mk"
-.include "../../mk/motif.buildlink2.mk"
+.include "../../devel/binutils/buildlink3.mk"
+.include "../../graphics/xpm/buildlink3.mk"
+.include "../../mk/motif.buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
