@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3085 2003/08/23 22:22:35 jschauma Exp $
+$NetBSD: CHANGES,v 1.3086 2003/08/23 22:52:30 recht Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3308,13 +3308,13 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated audit-packages to 1.17 [agc 2003-08-21]
 	Added gscmxx-0.4.1 [salo 2003-08-22]
 	Added fastdep-0.15 [jmmv 2003-08-22]
-	Removed 6to4 (renamed to hf6to4) [hubertf 2003-03-23]
-	Added hf6to4-1.0 [hubertf 2003-03-23]
-	Updated qt3-qscintilla to 1.2 [drochner 2003-03-23]
-	Updated py-qt3 to 3.8 [drochner 2003-03-23]
-	Updated mbmon to 2.03 [recht 2003-03-23]
-	Updated xmbmon to 2.03 [recht 2003-03-23]
-	Updated pkgdiff to 0.113 [seb 2003-03-23]
-	Updated imapfilter to 0.9.2 [seb 2003-03-23]
+	Removed 6to4 (renamed to hf6to4) [hubertf 2003-08-23]
+	Added hf6to4-1.0 [hubertf 2003-08-23]
+	Updated qt3-qscintilla to 1.2 [drochner 2003-08-23]
+	Updated py-qt3 to 3.8 [drochner 2003-08-23]
+	Updated mbmon to 2.03 [recht 2003-08-23]
+	Updated xmbmon to 2.03 [recht 2003-08-23]
+	Updated pkgdiff to 0.113 [seb 2003-08-23]
+	Updated imapfilter to 0.9.2 [seb 2003-08-23]
 	Added ser-0.8.10 [itojun 2003-08-23]
 	Updated nbsed to 20030823 [jschauma 2003-08-23]
