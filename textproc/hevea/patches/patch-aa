@@ -1,12 +1,10 @@
-$NetBSD: patch-aa,v 1.2 2003/06/23 20:36:15 jtb Exp $
+$NetBSD: patch-aa,v 1.3 2003/06/29 22:57:15 jtb Exp $
 
 --- Makefile.orig
 +++ Makefile
-@@ -1,12 +1,12 @@
- ################## Configuration parameters
+@@ -2,11 +2,11 @@
  # Compile using ocamlopt, to use ocamlc set TARGET=byte
--TARGET=opt
-+#TARGET=opt
+ TARGET=opt
  # Library directory of hevea
 -LIBDIR=/usr/local/lib/hevea
 +LIBDIR=${PREFIX}/share/hevea
@@ -14,37 +12,37 @@ $NetBSD: patch-aa,v 1.2 2003/06/23 20:36:15 jtb Exp $
 -BINDIR=/usr/local/bin
 +BINDIR=${PREFIX}/bin
  # A replacement for /lib/cpp
--CPP=gcc -E -P -x c 
-+#CPP=gcc -E -P -x c 
+-CPP=gcc -E -P -x c
++#CPP=gcc -E -P -x c
  ############### End of configuration parameters
- 
- HEVEA=./hevea.$(TARGET)
-@@ -14,7 +14,7 @@
- OCAMLCI=ocamlc
- OCAMLOPT=ocamlopt
- OCAMLLEX=ocamllex
+ SUF=
+ #DIR=/usr/bin/
+@@ -18,7 +18,7 @@
+ OCAMLCI=${DIR}ocamlc$(SUF)
+ OCAMLOPT=${DIR}ocamlopt$(SUF)
+ OCAMLLEX=${DIR}ocamllex$(SUF)
 -INSTALL=cp
-+INSTALL=$(BSD_INSTALL_DATA)
- OBJS=version.cmo stack.cmo location.cmo misc.cmo out.cmo table.cmo parse_opts.cmo mylib.cmo myfiles.cmo symb.cmo save.cmo auxx.cmo  lexstate.cmo subst.cmo latexmacros.cmo counter.cmo noimage.cmo image.cmo length.cmo  get.cmo tabular.cmo htmlCommon.cmo htmlMath.cmo mathML.cmo html.cmo  text.cmo infoRef.cmo info.cmo section.cmo foot.cmo entry.cmo index.cmo colscan.cmo color.cmo hot.cmo package.cmo videoc.cmo verb.cmo latexscan.cmo zyva.cmo latexmain.cmo
- OBJSCUT=version.cmo stack.cmo location.cmo misc.cmo  out.cmo thread.cmo cross.cmo mylib.cmo section.cmo length.cmo save.cmo cut.cmo cutmain.cmo
- GENSRC=colscan.ml cut.ml entry.ml get.ml latexscan.ml length.ml save.ml tabular.ml videoc.ml verb.ml infoRef.ml subst.ml
-@@ -36,28 +36,28 @@
- 	$(MAKE) $(MFLAGS) TARGET=byte hevea.byte hacha.byte cutfoot-fra.html cutfoot-eng.html
++INSTALL=${BSD_INSTALL_DATA}
+ 
+ ONLYESPONJA=emisc.cmo buff.cmo htmllex.cmo htmlparse.cmo htmltext.cmo pp.cmo util.cmo explode.cmo ultra.cmo esponja.cmo
+ 
+@@ -46,30 +46,30 @@
+ 	$(MAKE) $(MFLAGS) TARGET=byte hevea.byte hacha.byte esponja.byte cutfoot-fra.html cutfoot-eng.html
  
  install-lib:
 -	-mkdir $(LIBDIR)
 -	$(INSTALL) hevea.sty cutfoot-fra.html cutfoot-eng.html footer.tex ${LIBDIR}
 -	$(INSTALL) contents_motif.gif next_motif.gif previous_motif.gif ${LIBDIR}
 -	$(INSTALL) $(ALLLIB) $(LIBDIR)
--	-mkdir $(LIBDIR)/html
+-	-mkdir  $(LIBDIR)/html
 -	cd html ; $(INSTALL) $(HTMLLIB) $(LIBDIR)/html
--	-mkdir $(LIBDIR)/text
+-	-mkdir  $(LIBDIR)/text
 -	cd text ; $(INSTALL) $(TEXTLIB) $(LIBDIR)/text
 -	-mkdir $(LIBDIR)/info
 -	cd info ; $(INSTALL) $(INFOLIB) $(LIBDIR)/info
 +	$(BSD_INSTALL_DATA_DIR) $(LIBDIR)
-+	$(BSD_INSTALL_DATA) hevea.sty cutfoot-fra.html cutfoot-eng.html footer.tex ${LIBDIR}
-+	$(BSD_INSTALL_DATA) contents_motif.gif next_motif.gif previous_motif.gif ${LIBDIR}
++	$(BSD_INSTALL_DATA) hevea.sty cutfoot-fra.html cutfoot-eng.html footer.tex $(LIBDIR)
++	$(BSD_INSTALL_DATA) contents_motif.gif next_motif.gif previous_motif.gif $(LIBDIR)
 +	$(BSD_INSTALL_DATA) $(ALLLIB) $(LIBDIR)
 +	$(BSD_INSTALL_DATA_DIR) $(LIBDIR)/html
 +	cd html ; $(BSD_INSTALL_DATA) $(HTMLLIB) $(LIBDIR)/html
@@ -58,18 +56,40 @@ $NetBSD: patch-aa,v 1.2 2003/06/23 20:36:15 jtb Exp $
  install-opt: install-lib
 -	$(INSTALL) hevea.opt $(BINDIR)/hevea
 -	$(INSTALL) hacha.opt $(BINDIR)/hacha
+-	$(INSTALL) esponja.opt $(BINDIR)/esponja
 -	$(INSTALL) imagen $(BINDIR)
 +	$(BSD_INSTALL_PROGRAM) hevea.opt $(BINDIR)/hevea
 +	$(BSD_INSTALL_PROGRAM) hacha.opt $(BINDIR)/hacha
++	$(BSD_INSTALL_PROGRAM) esponja.opt $(BINDIR)/esponja
 +	$(BSD_INSTALL_SCRIPT) imagen $(BINDIR)
  
  install-byte: install-lib
 -	$(INSTALL) hevea.byte $(BINDIR)/hevea
 -	$(INSTALL) hacha.byte $(BINDIR)/hacha
+-	$(INSTALL) esponja.byte $(BINDIR)/esponja
 -	$(INSTALL) imagen $(BINDIR)
 +	$(BSD_INSTALL_SCRIPT) hevea.byte $(BINDIR)/hevea
 +	$(BSD_INSTALL_SCRIPT) hacha.byte $(BINDIR)/hacha
++	$(BSD_INSTALL_SCRIPT) esponja.byte $(BINDIR)/esponja
 +	$(BSD_INSTALL_SCRIPT) imagen $(BINDIR)
  
  
  hevea.byte: ${OBJS}
+@@ -103,7 +103,7 @@
+ 	HEVEADIR=. ; export HEVEADIR ; ${HEVEA} < cutfoot.tex | ${ESPONJA}> $@
+ 
+ .SUFFIXES:
+-.SUFFIXES: .ml .cmo .mli .cmi .c .mll .cmx 
++.SUFFIXES: .ml .cmo .mli .cmi .c .mll .cmx
+ 
+ .mll.ml:
+ 	${OCAMLLEX} $<
+@@ -128,7 +128,7 @@
+ 	rm -f *.byte *.opt
+ 	rm -f $(GENSRC)
+ 	rm -f *.o *.cmi *.cmo *.cmx *.o *.ppo *.ppi
+-	rm -f *~ #*# html/*~ html/#*# text/*~ text/#*# info/*~ info/#*# 
++	rm -f *~ #*# html/*~ html/#*# text/*~ text/#*# info/*~ info/#*#
+ 	rm -f cutfoot-fra.html cutfoot-eng.html
+ 
+ depend: $(GENSRC)
