@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.141 2004/01/23 16:49:47 agc Exp $
+# $NetBSD: bsd.prefs.mk,v 1.142 2004/01/23 17:55:17 jlam Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -252,6 +252,17 @@ PHASES_AFTER_BUILD=	build ${PHASES_AFTER_INSTALL}
 PHASES_AFTER_INSTALL=	install ${PHASES_AFTER_PACKAGE}
 PHASES_AFTER_PACKAGE=	package
 
+# Set the style of installation to be performed for the package.  The
+# funky make variable modifiers just select the first word of the value
+# stored in the referenced variable.
+#
+.for _pref_ in ${PKG_INSTALLATION_PREFS}
+.  if !empty(PKG_INSTALLATION_TYPES:M${_pref_})
+PKG_INSTALLATION_TYPE?=	${PKG_INSTALLATION_TYPES:M${_pref_}:S/^/_pkginsttype_/1:M_pkginsttype_*:S/^_pkginsttype_//}
+.  endif
+.endfor
+PKG_INSTALLATION_TYPE?=	none
+
 # if the system is IPv6-ready, compile with IPv6 support turned on.
 .if defined(USE_INET6)
 .  if empty(USE_INET6:M[Yy][Ee][Ss]) || defined(USE_SOCKS)
@@ -274,6 +285,26 @@ X11BASE?=		${DESTDIR}/usr/X11R6
 .endif
 CROSSBASE?=		${LOCALBASE}/cross
 
+# If xpkgwedge.def is found, then clearly we're using xpkgwedge.
+.if exists(${LOCALBASE}/lib/X11/config/xpkgwedge.def) || \
+    exists(${X11BASE}/lib/X11/config/xpkgwedge.def)
+USE_XPKGWEDGE=  yes
+.else
+USE_XPKGWEDGE?=	no
+.endif
+
+.if defined(_OPSYS_NEEDS_XPKGWEDGE) && \
+    !empty(_OPSYS_NEEDS_XPKGWEDGE:M[yY][eE][sS])
+USE_XPKGWEDGE=	yes
+.endif
+
+.if ${PKG_INSTALLATION_TYPE} == "pkgviews"
+USE_XPKGWEDGE=		yes
+_XPKGWEDGE_REQD=	1.9
+.else
+_XPKGWEDGE_REQD=	1.5
+.endif
+
 # Set X11PREFIX to reflect the install directory of X11 packages.
 # Set XMKMF_CMD properly if xpkgwedge is installed.
 #
@@ -282,10 +313,7 @@ CROSSBASE?=		${LOCALBASE}/cross
 #
 XMKMF?=			${XMKMF_CMD} ${XMKMF_FLAGS} -a
 XMKMF_FLAGS?=		# empty
-.if exists(${LOCALBASE}/lib/X11/config/xpkgwedge.def) || \
-    exists(${X11BASE}/lib/X11/config/xpkgwedge.def) || \
-    !empty(USE_XPKGWEDGE:M[Yy][Ee][Ss]) 
-HAVE_XPKGWEDGE=		yes
+.if !empty(USE_XPKGWEDGE:M[Yy][Ee][Ss]) 
 X11PREFIX=		${LOCALBASE}
 XMKMF_CMD?=		${X11PREFIX}/bin/pkgxmkmf
 .else
@@ -321,23 +349,6 @@ DIGEST_VERSION=		20010301
 .elif !defined(DIGEST_VERSION)
 DIGEST_VERSION!= 	${DIGEST} -V 2>/dev/null
 MAKEFLAGS+=		DIGEST_VERSION="${DIGEST_VERSION}"
-.endif
-
-# Set the style of installation to be performed for the package.  The
-# funky make variable modifiers just select the first word of the value
-# stored in the referenced variable.
-#
-.for _pref_ in ${PKG_INSTALLATION_PREFS}
-.  if !empty(PKG_INSTALLATION_TYPES:M${_pref_})
-PKG_INSTALLATION_TYPE?=	${PKG_INSTALLATION_TYPES:M${_pref_}:S/^/_pkginsttype_/1:M_pkginsttype_*:S/^_pkginsttype_//}
-.  endif
-.endfor
-PKG_INSTALLATION_TYPE?=	none
-
-USE_BUILDLINK2?=	no	# default to not using buildlink2
-USE_BUILDLINK3?=	no	# default to not using buildlink3
-.if ${PKG_INSTALLATION_TYPE} == "pkgviews"
-USE_BUILDLINK3=		yes	# pkgviews requires buildlink3
 .endif
 
 # This is the package database directory for the default view.
@@ -395,6 +406,12 @@ MAKEFLAGS+=		PKGTOOLS_VERSION="${PKGTOOLS_VERSION}"
 _NULL_SUFFIX=		-S
 .else
 _NULL_SUFFIX=		-s ""
+.endif
+
+USE_BUILDLINK2?=	no	# default to not using buildlink2
+USE_BUILDLINK3?=	no	# default to not using buildlink3
+.if ${PKG_INSTALLATION_TYPE} == "pkgviews"
+USE_BUILDLINK3=		yes	# pkgviews requires buildlink3
 .endif
 
 .if (${OPSYS} == SunOS) && !defined(ZOULARIS_VERSION)
