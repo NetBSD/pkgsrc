@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7281 2004/09/28 12:36:09 adrianp Exp $
+$NetBSD: CHANGES,v 1.7282 2004/09/28 12:41:13 jdolecek Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4477,3 +4477,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added kbarcode-1.8.1 [seb 2004-09-27]
 	Updated chkrootkit to 0.44 [adrianp 2004-09-28]
 	Updated ircu to 2.10.11.07 [adrianp 2004-09-28]
+	Updated php4 to 4.3.9 [jdolecek 2004-04-28]

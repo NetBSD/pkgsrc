@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.43 2004/07/14 08:03:16 jdolecek Exp $
+# $NetBSD: Makefile.common,v 1.44 2004/09/28 12:41:13 jdolecek Exp $
 
 DISTNAME?=		php-${PHP_DIST_VERS}
 CATEGORIES+=		www php4
@@ -15,7 +15,7 @@ HOMEPAGE?=		http://www.php.net/
 # PHP_DIST_VERS		version number on the php distfile
 # PHP_BASE_VERS		pkgsrc-mangled version number (convert pl -> .)
 #
-PHP_DIST_VERS=		4.3.8
+PHP_DIST_VERS=		4.3.9
 PHP_BASE_VERS=		${PHP_DIST_VERS}
 
 DISTFILES?=		${PHP_DISTFILE}
