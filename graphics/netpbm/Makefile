@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 1998/06/21 01:29:26 tv Exp $
+# $NetBSD: Makefile,v 1.16 1998/07/04 04:14:30 mycroft Exp $
 #
 
 DISTNAME=	netpbm
-PKGNAME=	netpbm-94.3.1
+PKGNAME=	netpbm-19940301
 CATEGORIES=	graphics
 MASTER_SITES=	ftp://ftp.wustl.edu//graphics/graphics/packages/NetPBM/ \
 		ftp://ftp.informatik.uni-oldenburg.de/pub/netpbm/ \
