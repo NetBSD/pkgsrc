@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1999/01/02 02:26:34 hubertf Exp $
+# $NetBSD: Makefile,v 1.6 1999/12/28 04:26:18 wiz Exp $
 
 DISTNAME=		lmbench-2alpha11
 PKGNAME=		lmbench-2.11a
@@ -37,11 +37,11 @@ benchmark:
 	fi
 .if defined(BATCH)
 	@${ECHO} "*** This benchmark should only be run in non-batch mode" ; \
-	if [ `id -u` != 0 ]; then echo "This benchmark must be run as root!" ; exit 1 ; fi ; \
+	if [ `id -u` != 0 ]; then ${ECHO} "This benchmark must be run as root!" ; exit 1 ; fi ; \
 	@${SED} -e 's|@wrksrc@|${WRKSRC}|' < ${FILESDIR}/setup.answers | \
 	(cd ${WRKSRC}/src; ${GMAKE} results)
 .else
-	@if [ `id -u` != 0 ]; then echo "This benchmark must be run as root!" ; exit 1 ; fi
+	@if [ `id -u` != 0 ]; then ${ECHO} "This benchmark must be run as root!" ; exit 1 ; fi
 	@cd ${WRKSRC}/src; ${GMAKE} results
 .endif
 
