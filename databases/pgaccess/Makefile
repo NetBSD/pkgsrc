@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2000/05/24 11:19:30 rh Exp $
+# $NetBSD: Makefile,v 1.7 2001/02/10 23:13:45 jlam Exp $
 #
 
 DISTNAME=	pgaccess-0.98.6
@@ -22,7 +22,7 @@ PGUSER?=	pgsql
 
 PGTKSH=		${PREFIX}/bin/pgtksh
 PGACCESS_HOME=	${PREFIX}/share/pgaccess
-DOCDIR=		${PREFIX}/share/doc/pgaccess
+HTMLDIR=	${PREFIX}/share/doc/html/pgaccess
 EGDIR=		${PREFIX}/share/examples/pgaccess
 
 pre-patch:
@@ -36,13 +36,13 @@ do-configure:
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/pgaccess ${PREFIX}/bin/pgaccess
 	${INSTALL_DATA_DIR} ${PGACCESS_HOME}
-	${INSTALL_DATA_DIR} ${DOCDIR}
+	${INSTALL_DATA_DIR} ${HTMLDIR}
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/main.tcl ${PGACCESS_HOME}
 	${CP} -R ${WRKSRC}/lib ${PGACCESS_HOME}
 	${CP} -R ${WRKSRC}/images ${PGACCESS_HOME}
-	${CP} -R ${WRKSRC}/doc/html/* ${DOCDIR}
+	${CP} -R ${WRKSRC}/doc/html/* ${HTMLDIR}
 	${INSTALL_DATA} ${WRKSRC}/demo/formdemo.sql ${EGDIR}
-	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PGACCESS_HOME} ${DOCDIR} ${EGDIR}
+	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PGACCESS_HOME} ${HTMLDIR} ${EGDIR}
 
 .include "../../mk/bsd.pkg.mk"
