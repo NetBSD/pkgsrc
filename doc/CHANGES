@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6769 2004/08/02 21:23:46 minskim Exp $
+$NetBSD: CHANGES,v 1.6770 2004/08/02 23:55:21 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3696,3 +3696,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated python21 to 2.1.3nb3 [recht 2004-08-02]
 	Updated python21-pth to 2.1.3nb5 [recht 2004-08-02]
 	Updated tnt to 1.9.1nb1 [minskim 2004-08-02]
+	Updated liferea to 0.5.2c [minskim 2004-08-03]
