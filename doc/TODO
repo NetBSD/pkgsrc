@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.549 2003/05/12 20:44:07 agc Exp $
+$NetBSD: TODO,v 1.550 2003/05/12 23:46:36 heinz Exp $
 
 Suggested new packages
 ======================
@@ -230,6 +230,7 @@ Suggested package updates
 	o snortsnarf-20021111.1 [pkg/21540]
 	o soappy-0.9.8 [pkg/20787]
 	o source-highlight-1.7
+	o spamassassin-2.54 [heinz]
 	o sqlite-2.7.5 [pkg/19719]
 	o sqlite-2.7.6
 	o squeak-3.2 [fredb|pkg/17950]
