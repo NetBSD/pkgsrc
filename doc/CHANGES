@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7785 2004/11/09 12:10:38 adam Exp $
+$NetBSD: CHANGES,v 1.7786 2004/11/09 12:31:15 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5182,3 +5182,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated allegro to 4.1.16 [adam 2004-11-09]
 	Updated advancecomp to 1.13 [adam 2004-11-09]
 	Updated ap2-perl to 1.99.17 [adam 2004-11-09]
+	Updated xps to 4.2 [adam 2004-11-09]
