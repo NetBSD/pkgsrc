@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2009 2003/04/22 13:49:41 wiz Exp $
+$NetBSD: CHANGES,v 1.2010 2003/04/22 17:19:29 grant Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1697,3 +1697,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated nmap to 3.25 [salo 2003-04-22]
 	Updated nmapfe to 0.9.5nb2 [salo 2003-04-22]
 	Updated gnet to 2.0.1 [wiz 2003-04-22]
+	Added netbsd-www-1.0 [grant 2003-04-22]
