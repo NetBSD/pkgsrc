@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/05/06 23:22:27 tv Exp $
+$NetBSD: patch-aa,v 1.2 1999/12/13 20:31:52 bad Exp $
 
---- client/Makefile.in.orig	Mon Mar 15 15:49:57 1999
-+++ client/Makefile.in	Sun Mar 21 23:11:42 1999
-@@ -181,7 +181,7 @@
+--- client/Makefile.in.orig	Thu Jul  8 06:33:30 1999
++++ client/Makefile.in	Mon Aug 16 23:15:23 1999
+@@ -174,7 +174,7 @@
  libmysqlclient_la_LDFLAGS = -version-info @SHARED_LIB_VERSION@
- CLEANFILES =		$(libmysqlclient_la_LIBADD) $(SHLIBOBJS) \
- 			libmysqclient.la
--DEFS =			-DUNDEF_THREADS_HACK
-+DEFS =			-DUNDEF_THREADS_HACK -Dunix
+ CLEANFILES = $(libmysqlclient_la_LIBADD) $(SHLIBOBJS) 			libmysqclient.la
+ 
+-DEFS = -DUNDEF_THREADS_HACK
++DEFS = -DUNDEF_THREADS_HACK -Dunix
  mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
  CONFIG_HEADER = ../config.h
  CONFIG_CLEAN_FILES = 
