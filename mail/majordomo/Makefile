@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2000/12/08 10:09:22 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2000/12/28 10:34:03 rh Exp $
 
 DISTNAME=		majordomo-1.94.4
 CATEGORIES=		mail
@@ -20,7 +20,8 @@ ADDGROUP=		${LOCALBASE}/sbin/groupadd
 
 USE_PERL5=		yes
 
-NO_PACKAGE=		requires compiled in uid/gid
+NO_BIN_ON_FTP=		requires compiled-in hardcoded uid/gid
+NO_BIN_ON_CDROM=	${NO_BIN_ON_FTP}
 
 ALL_TARGET=		wrapper
 INSTALL_TARGET=		install install-wrapper
