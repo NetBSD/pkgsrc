@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2002/03/24 18:47:39 dmcmahill Exp $
+$NetBSD: distinfo,v 1.6 2002/08/01 13:36:08 skrll Exp $
 
 SHA1 (pth-1.4.1.tar.gz) = bc5b0847d57d2b78945a6c8d4ebab57e46213972
 Size (pth-1.4.1.tar.gz) = 446287 bytes
@@ -8,3 +8,4 @@ SHA1 (patch-ac) = 77202a5f9f39e63b24288051273a3518e80c47ec
 SHA1 (patch-ad) = 0f1e18cff418b066d37333578f2e5874741f2008
 SHA1 (patch-ae) = fe0714f3d1c71f7f347ba217abf918cb7ea8f31b
 SHA1 (patch-af) = 95ab72c602d6b69e10de9e3218f4c455036f40ca
+SHA1 (patch-ag) = f4c8673837c9b2a06bcd16eaf17ee3e755ebb158
