@@ -1,9 +1,9 @@
-$NetBSD: patch-bn,v 1.2 2003/03/17 16:07:35 taya Exp $
+$NetBSD: patch-bn,v 1.2.2.1 2003/12/05 17:05:26 agc Exp $
 
 diff -ru ../Orig/mozilla/xpcom/io/nsNativeCharsetUtils.cpp ./xpcom/io/nsNativeCharsetUtils.cpp
---- ../Orig/mozilla/xpcom/io/nsNativeCharsetUtils.cpp	2002-10-06 12:42:55.000000000 +0900
-+++ ./xpcom/io/nsNativeCharsetUtils.cpp	2003-03-14 16:59:12.000000000 +0900
-@@ -256,7 +256,12 @@
+--- ../Orig/mozilla/xpcom/io/nsNativeCharsetUtils.cpp	2003-07-30 14:58:28.000000000 +0900
++++ ./xpcom/io/nsNativeCharsetUtils.cpp	2003-10-16 15:37:44.000000000 +0900
+@@ -294,7 +294,12 @@
  {
      const char  *blank_list[] = { "", NULL };
      const char **native_charset_list = blank_list;
