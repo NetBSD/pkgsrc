@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.26 2000/03/16 15:03:10 mrg Exp $
+# $NetBSD: Makefile,v 1.27 2000/03/16 15:32:50 mrg Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/05/14 10:35:13 torstenb Exp
 #
 
-DISTNAME=		ircii-4.4Q
-PKGNAME=		ircII-4.4Q
-WRKSRC=			${WRKDIR}/ircii-4.4Q
+DISTNAME=		ircii-4.4R
+PKGNAME=		ircII-4.4R
+WRKSRC=			${WRKDIR}/ircii-4.4R
 CATEGORIES=		net
 MASTER_SITES=		ftp://ircftp.au.eterna.com.au/pub/ircII/
 
