@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2003/01/03 21:39:58 jmmv Exp $
+# $NetBSD: Makefile,v 1.8 2003/01/05 12:11:22 jmmv Exp $
 #
 
 DISTNAME=		libgnomecanvas-2.0.5
+PKGREVISION=		1
 CATEGORIES=		graphics gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libgnomecanvas/2.0/}
 EXTRACT_SUFX=		.tar.bz2
@@ -21,6 +22,9 @@ USE_X11=		yes
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 PKGCONFIG_OVERRIDE=	${WRKSRC}/libgnomecanvas/libgnomecanvas-2.0.pc.in
+
+CONFIGURE_ARGS+=	--enable-gtk-doc=no
+CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html
 
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../devel/libglade2/buildlink2.mk"
