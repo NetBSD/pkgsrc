@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.8 2000/07/28 21:47:51 jlam Exp $
+$NetBSD: patch-ab,v 1.9 2000/08/31 16:07:43 jwise Exp $
 
 --- Makefile.orig	Sun May 26 05:26:46 1996
 +++ Makefile	Fri Jul 28 17:19:20 2000
@@ -28,7 +28,7 @@ $NetBSD: patch-ab,v 1.8 2000/07/28 21:47:51 jlam Exp $
  # If you change this, it's a good idea to recompile the binary,
  # or you'll need to invoke timidity with the -L option.
 -TIMID_DIR = /usr/local/lib/timidity
-+TIMID_DIR = ${PREFIX}/lib/timidity
++TIMID_DIR = ${PREFIX}/share/timidity
  
  # Where to install the Tcl code, if you use the Tcl code that is.
  TCL_DIR = $(TIMID_DIR)
@@ -78,7 +78,7 @@ $NetBSD: patch-ab,v 1.8 2000/07/28 21:47:51 jlam Exp $
  
  # Select the Tcl/Tk interface
 -SYSTEM += -DTCLTK -DWISH=\"wishx\" -DTKPROGPATH=\"$(TCL_DIR)/tkmidity.tcl\"
-+SYSTEM += -DTCLTK -DWISH=\"wish8.0\" -DTKPROGPATH=\"$(TCL_DIR)/tkmidity.tcl\"
++SYSTEM += -DTCLTK -DWISH=\"wish\" -DTKPROGPATH=\"$(TCL_DIR)/tkmidity.tcl\"
  SYSEXTRAS += tk_c.c
  INST_TK = install.tk
 -#EXTRAINCS +=
@@ -129,7 +129,7 @@ $NetBSD: patch-ab,v 1.8 2000/07/28 21:47:51 jlam Exp $
  
  tclIndex: $(TCLF)
 -	echo 'auto_mkindex . *.tcl; exit' | wish
-+	echo 'auto_mkindex . *.tcl; exit' | tclsh8.0
++	echo 'auto_mkindex . *.tcl; exit' | tclsh
  
  ########## Some special targets
  
