@@ -1,0 +1,51 @@
+$NetBSD: patch-ae,v 1.1.1.1 2002/05/31 13:59:28 skrll Exp $
+
+--- ksirc/Makefile.am.orig	Tue Feb 26 22:20:22 2002
++++ ksirc/Makefile.am
+@@ -17,13 +17,13 @@
+ testview_LDADD = $(LIB_KDEUI)
+ testview_LDFLAGS = $(all_libraries) $(KDE_RPATH)
+ 
+-lib_LTLIBRARIES = ksirc.la
++lib_LTLIBRARIES = libksirc_main.la ksirc.la
+ 
+ noinst_PROGRAMS = getdate
+ 
+ # Which sources should be compiled for ksirc.
+ 
+-ksirc_la_SOURCES = \
++libksirc_main_la_SOURCES = \
+ 	toplevel.cpp \
+ 	charSelector.cpp \
+ 	chanButtons.cpp \
+@@ -57,6 +57,9 @@
+         colorpicker.cpp
+ 
+ # the library search path
++libksirc_main_la_LDFLAGS = $(all_libraries)
++
++ksirc_la_SOURCES = ksirc_main.cpp
+ ksirc_la_LDFLAGS = $(all_libraries) -module -avoid-version
+ 
+ all_ksirc_libraries = \
+@@ -67,10 +70,10 @@
+ 
+ # the libraries to link against. Be aware of the order. First the libraries,
+ # that depend on the following ones.
+-ksirc_la_LIBADD   = $(all_ksirc_libraries)
++libksirc_main_la_LIBADD   = $(all_ksirc_libraries)
+ 
+-ksirc_SOURCES = dummy.cpp
+-ksirc_LDADD = ksirc.la
++ksirc_SOURCES = ksirc_main.cpp
++ksirc_LDADD = libksirc_main.la
+ ksirc_LDFLAGS = $(all_libraries) $(KDE_RPATH)
+ 
+ kdoc:
+@@ -135,6 +138,3 @@
+ 
+ conf_DATA = ksircrc
+ confdir = $(kde_confdir)
+-
+-dummy.cpp:
+-	echo > dummy.cpp

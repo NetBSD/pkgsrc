@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1.1.1 2002/05/31 13:59:28 skrll Exp $
+
+--- knode/Makefile.in.orig	Fri May 10 13:08:58 2002
++++ knode/Makefile.in
+@@ -226,8 +226,8 @@
+ x_includes = @x_includes@
+ x_libraries = @x_libraries@
+ 
+-KDE_CXXFLAGS = $(USE_THREADS)
+-INCLUDES = -I$(top_srcdir)/libkdenetwork $(all_includes)
++KDE_CXXFLAGS =
++INCLUDES = $(USE_THREADS) -I$(top_srcdir)/libkdenetwork $(all_includes)
+ SUBDIRS = pics filters
+ 
+ bin_PROGRAMS = knode
