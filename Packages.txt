@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.301 2003/07/09 16:59:25 agc Exp $
+# $NetBSD: Packages.txt,v 1.302 2003/07/14 15:38:56 martti Exp $
 ###########################################################################
 
 			==========================
@@ -718,7 +718,7 @@ Please pay attention to the following gotchas:
    add the variable HOMEPAGE right after MAINTAINER. The value of this
    variable should be the URL for the home page.
  - Please also set the COMMENT variable to a short description of the
-   package.
+   package. The description should start with a capital letter.
 
 
  4.2 distinfo
