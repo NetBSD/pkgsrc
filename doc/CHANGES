@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7813 2004/11/10 16:48:27 minskim Exp $
+$NetBSD: CHANGES,v 1.7814 2004/11/10 16:54:02 seb Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5218,3 +5218,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated celestia-gnome to 1.3.2 [adam 2004-11-10]
 	Added celestia-gtk-1.3.2 [adam 2004-11-10]
 	Updated mathomatic to 11.5 [minskim 2004-11-10]
+	Added p5-Cache-Simple-TimedExpiry-0.22 [seb 2004-11-10]
