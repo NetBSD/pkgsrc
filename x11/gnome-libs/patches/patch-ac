@@ -1,22 +1,24 @@
-$NetBSD: patch-ac,v 1.4 1999/01/01 23:40:43 tron Exp $
+$NetBSD: patch-ac,v 1.5 1999/01/16 03:26:12 tron Exp $
 
---- support/Makefile.in.orig	Wed Dec 16 10:56:34 1998
-+++ support/Makefile.in	Sat Jan  2 00:14:13 1999
-@@ -160,7 +160,7 @@
+--- gnome-data/Makefile.in.orig	Wed Jan 13 02:32:46 1999
++++ gnome-data/Makefile.in	Sat Jan 16 04:09:18 1999
+@@ -154,7 +154,7 @@
+ 	gnome.mime 		\
+ 	paper.config
  
- popt_sources = findme.c poptconfig.c poptparse.c popt.c popthelp.c
+-scoredir=$(DESTDIR)$(localstatedir)/games
++scoredir=/var/games
+ sysconf_DATA=paper.config mime-magic
  
--libgnomesupport_la_SOURCES = gnomesupport.h $(popt_sources)
-+libgnomesupport_la_SOURCES = gnomesupport.h $(popt_sources) gnome-argp.c
- #libgnomesupport_la_LIBADD  = @LTLIBOBJS@
- libgnomesupport_la_LDFLAGS = -version-info 0:0:0
+ soundlistdir = $(sysconfdir)/sound/events
+@@ -311,8 +311,8 @@
  
-@@ -188,7 +188,7 @@
- X_PRE_LIBS = @X_PRE_LIBS@
- libgnomesupport_la_LIBADD = 
- libgnomesupport_la_OBJECTS =  findme.lo poptconfig.lo poptparse.lo \
--popt.lo popthelp.lo
-+popt.lo popthelp.lo gnome-argp.lo
- COMPILE = $(CC) $(DEFS) $(INCLUDES) $(CPPFLAGS) $(CFLAGS)
- LTCOMPILE = $(LIBTOOL) --mode=compile $(CC) $(DEFS) $(INCLUDES) $(CPPFLAGS) $(CFLAGS)
- LINK = $(LIBTOOL) --mode=link $(CC) $(CFLAGS) $(LDFLAGS) -o $@
+ 
+ install-data-local:
+-	$(mkinstalldirs) $(scoredir)
+-	-chgrp $(GAMES_GROUP) $(scoredir) && chmod g=rwXs $(scoredir)
++#	$(mkinstalldirs) $(scoredir)
++#	-chgrp $(GAMES_GROUP) $(scoredir) && chmod g=rwXs $(scoredir)
+ 	$(top_builddir)/libgnome/gnome-gen-mimedb $(DESTDIR)$(sysconfdir)/mime-magic
+ 
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
