@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/02/08 12:44:43 recht Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/05/09 17:23:21 recht Exp $
 bin/kodos.py
 ${PYSITELIB}/kodos.pth
 ${PYSITELIB}/kodos/__init__.py
@@ -100,5 +100,91 @@ ${PYSITELIB}/kodos/modules/webbrowser.pyo
 ${PYSITELIB}/kodos/modules/xpm.py
 ${PYSITELIB}/kodos/modules/xpm.pyc
 ${PYSITELIB}/kodos/modules/xpm.pyo
+share/kodos/help/examine.html
+share/kodos/help/example.html
+share/kodos/help/importURL.html
+share/kodos/help/kodos.html
+share/kodos/help/mainwin.html
+share/kodos/help/overview.html
+share/kodos/help/pause.html
+share/kodos/help/prefs.html
+share/kodos/help/python/about.html
+share/kodos/help/python/match-objects.html
+share/kodos/help/python/matching-searching.html
+share/kodos/help/python/module-re.html
+share/kodos/help/python/node102.html
+share/kodos/help/python/node99.html
+share/kodos/help/python/re-objects.html
+share/kodos/help/python/re-syntax.html
+share/kodos/help/regex-lib.xml
+share/kodos/help/running.html
+share/kodos/help/toolbar.html
+share/kodos/images/blank.png
+share/kodos/images/book.png
+share/kodos/images/green.png
+share/kodos/images/help.png
+share/kodos/images/kodos.png
+share/kodos/images/kodos_icon.png
+share/kodos/images/kodos_icon_old.png
+share/kodos/images/kodos_icon_small.png
+share/kodos/images/kodos_logo.png
+share/kodos/images/kodos_text_logo.png
+share/kodos/images/kodos_text_logo1.png
+share/kodos/images/library.png
+share/kodos/images/pause.png
+share/kodos/images/pause_toolbar.png
+share/kodos/images/red.png
+share/kodos/images/spacer.png
+share/kodos/images/yellow.png
+share/kodos/kodos.pro
+share/kodos/kodosqt.pro
+share/kodos/modules/aboutBA.ui
+share/kodos/modules/kodosBA.ui
+share/kodos/modules/newUserDialogBA.ui
+share/kodos/modules/prefsBA.ui
+share/kodos/modules/referenceBA.ui
+share/kodos/modules/regexLibraryBA.ui
+share/kodos/modules/reportBugBA.ui
+share/kodos/modules/resultsBA.ui
+share/kodos/modules/urlDialogBA.ui
+share/kodos/screenshots/bug.png
+share/kodos/screenshots/code.png
+share/kodos/screenshots/examine1.png
+share/kodos/screenshots/examine2.png
+share/kodos/screenshots/example.png
+share/kodos/screenshots/flags.png
+share/kodos/screenshots/flags2.png
+share/kodos/screenshots/green.png
+share/kodos/screenshots/group.png
+share/kodos/screenshots/groups.png
+share/kodos/screenshots/groups2.png
+share/kodos/screenshots/groups3.png
+share/kodos/screenshots/groups4.png
+share/kodos/screenshots/kodos.png
+share/kodos/screenshots/match.png
+share/kodos/screenshots/match2.png
+share/kodos/screenshots/matchnum.png
+share/kodos/screenshots/prefs.png
+share/kodos/screenshots/red.png
+share/kodos/screenshots/ref.png
+share/kodos/screenshots/regex.png
+share/kodos/screenshots/regex2.png
+share/kodos/screenshots/statuspaused.png
+share/kodos/screenshots/string.png
+share/kodos/screenshots/string2.png
+share/kodos/screenshots/string3.png
+share/kodos/screenshots/toolbar.png
+share/kodos/screenshots/toolbarpaused.png
+share/kodos/screenshots/yellow.png
+share/kodos/translations/kodos_en.ts
+share/kodos/translations/kodos_pl.qm
+share/kodos/translations/kodos_pl.ts
+@dirrm share/kodos/translations
+@dirrm share/kodos/screenshots
+@dirrm share/kodos/modules
+@dirrm share/kodos/images
+@dirrm share/kodos/help/python
+@dirrm share/kodos/help
+@dirrm share/kodos
 @dirrm ${PYSITELIB}/kodos/modules
 @dirrm ${PYSITELIB}/kodos
