@@ -1,13 +1,15 @@
-$NetBSD: patch-aa,v 1.1 1998/08/18 09:25:17 frueauf Exp $
-
+$NetBSD: patch-aa,v 1.2 1998/09/14 23:38:59 garbled Exp $
 --- Imakefile.orig	Thu Nov 21 18:28:46 1996
-+++ Imakefile	Mon Aug 17 22:46:15 1998
-@@ -26,3 +26,3 @@
++++ Imakefile	Mon Sep 14 16:23:07 1998
+@@ -24,23 +24,23 @@
+ XCOMM This is the directory where the highscore, level & sound data will be 
+ XCOMM placed. Default will be the current directory.
  
 -    XBOING_DIR = .
 +    XBOING_DIR = $(X11BASE)/share/xboing
  
-@@ -31,10 +31,10 @@
+ XCOMM These are some defines that must be set. Some may be overwritten in the
+ XCOMM machine arch section.
  
 -    XPMLIB 				= -L/usr/X11/lib -lXpm
 -    XPMINCLUDE 			= -I/usr/X11/include/X11
@@ -20,29 +22,43 @@ $NetBSD: patch-aa,v 1.1 1998/08/18 09:25:17 frueauf Exp $
      BACKUP_DIR 			= $(XBOING_DIR)/../backups
 -    HIGH_SCORE_FILE 	= $(XBOING_DIR)/.xboing.scr
 -    AUDIO_AVAILABLE 	= False
-+    HIGH_SCORE_FILE 		= $(XBOING_DIR)/.xboing.scr
++    HIGH_SCORE_FILE 		= /var/games/xboing.scr
 +    AUDIO_AVAILABLE 		= False
      AUDIO_SRC 			= audio/NOaudio.c
-@@ -42,3 +42,3 @@
+     AUDIO_INCLUDE 		=
      AUDIO_LIB 			=
 -	CDEBUGFLAGS         = -g
 +    CDEBUGFLAGS         	= -O
  
-@@ -83,3 +83,3 @@
+ XCOMM Uncomment this if you want to use ANY of the AUDIO sound systems
+ #define COMPILE_IN_AUDIO    
+@@ -81,7 +81,7 @@
+     AUDIO_LIB 		= -laudio
+ #endif /* SGIArchitecture */
  
 -#if defined(SparcArchitecture) && defined(COMPILE_IN_AUDIO)
 +#if defined(SparcArchitecture) && defined(COMPILE_IN_AUDIO) && !defined(__NetBSD__)
      AUDIO_AVAILABLE	= True
-@@ -134,4 +134,4 @@
+     AUDIO_SRC 		= audio/SUNaudio.c
+ 
+@@ -132,8 +132,8 @@
+         -DLEVEL_INSTALL_DIR=\"$(LEVEL_INSTALL_DIR)\" \
+         -DAUDIO_AVAILABLE=\"$(AUDIO_AVAILABLE)\" \
          -DSOUNDS_DIR=\"$(SOUNDS_DIR)\" \
 -        -DREADMEP_FILE=\"$(XBOING_DIR)/docs/problems.doc\"
 -XCOMM   -DUSE_FLOCK=\"True\" \
 +        -DREADMEP_FILE=\"$(XBOING_DIR)/docs/problems.doc\" \
 +        -DUSE_FLOCK=\"True\" \
  XCOMM   -DNEED_USLEEP=\"True\" \
-@@ -207,3 +207,4 @@
+ XCOMM   -DNO_LOCKING=\"True\" 
+ 
+@@ -205,7 +205,8 @@
+ 	@:
+ 	@echo "Creating a highscore file " $(HIGH_SCORE_FILE)
  	@touch $(HIGH_SCORE_FILE);
 -	@chmod a+rw $(HIGH_SCORE_FILE);
 +	@chown bin:games $(HIGH_SCORE_FILE);
 +	@chmod 0664 $(HIGH_SCORE_FILE);
+ 
+ XCOMM I use this for my daily backup of my code.
  
