@@ -1,8 +1,14 @@
-$NetBSD: patch-ac,v 1.1 2004/10/16 18:19:54 minskim Exp $
+$NetBSD: patch-ac,v 1.2 2004/10/21 07:39:43 minskim Exp $
 
 --- configure.orig	Sun Aug 15 15:35:57 2004
 +++ configure
-@@ -1492,6 +1492,7 @@ for ac_func in \
+@@ -1487,11 +1487,13 @@ for ac_func in \
+ 	bcopy \
+ 	gethostname \
+ 	getlogin \
++	initgroups \
+ 	memmove \
+ 	strerror \
  	strftime \
  	tcgetattr \
  	waitpid \
