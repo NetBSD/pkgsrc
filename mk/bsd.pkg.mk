@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.177 1998/10/15 10:50:38 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.178 1998/10/15 12:22:40 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -523,7 +523,7 @@ DISTFILES?=		${DISTNAME}${EXTRACT_SUFX}
 PKGNAME?=		${DISTNAME}
 
 # Latest version of pkgtools required for this file.
-PKGTOOLS_REQD=		19980911
+PKGTOOLS_REQD=		19980908
 
 # Check that we're using up-to-date pkg_* tools with this file.
 .ifndef _PKGTOOLS_VER
