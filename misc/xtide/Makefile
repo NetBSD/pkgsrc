@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/07/22 21:14:46 jmmv Exp $
+# $NetBSD: Makefile,v 1.6 2004/04/11 09:18:25 snj Exp $
 
 DISTNAME=	xtide-2.4
 PKGNAME=	${DISTNAME}
@@ -14,7 +14,7 @@ COMMENT=	X11 tide predictor
 EXTRACT_ONLY=	${XTIDE_SRC}
 XTIDE_SRC=	${DISTNAME}${EXTRACT_SUFX}
 
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=	yes
 USE_PKGINSTALL=	yes
 GNU_CONFIGURE=	yes
 USE_X11=	yes
@@ -39,6 +39,6 @@ post-install:
 	${CP} ${WRKDIR}/harmonics.txt ${PREFIX}/share/xtide
 	${CP} ${WRKDIR}/offsets.xml ${PREFIX}/share/xtide
 
-.include "../../graphics/png/buildlink2.mk"
-.include "../../graphics/xpm/buildlink2.mk"
+.include "../../graphics/png/buildlink3.mk"
+.include "../../graphics/xpm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
