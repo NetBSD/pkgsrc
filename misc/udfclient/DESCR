@@ -4,3 +4,6 @@ full read and write kernel level implementation.
 
 UDFclient basically provides a user interface not unlike ftp(1) but always
 fetches files recursively from the disc(s).
+
+Version 0.20 is a renewed and sanitised version pending write support... Mainly
+bug fixes and improved reading support.
