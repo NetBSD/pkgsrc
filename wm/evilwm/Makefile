@@ -1,18 +1,16 @@
-# $NetBSD: Makefile,v 1.8 2003/09/22 20:30:27 jmmv Exp $
+# $NetBSD: Makefile,v 1.9 2003/12/03 17:40:25 sketch Exp $
 #
 
-DISTNAME=	evilwm_0.99.15.orig
+DISTNAME=	evilwm_0.99.17.orig
 PKGNAME=	${DISTNAME:S/.orig//:S/_/-/}
-PKGREVISION=	1
 WRKSRC=		${WRKDIR}/${DISTNAME:S/_/-/}
 CATEGORIES=	wm x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=evilwm/}
 
-MAINTAINER=	jonathan@perkin.org.uk
+MAINTAINER=	sketch@NetBSD.org
 HOMEPAGE=	http://evilwm.sourceforge.net/
 COMMENT=	Minimalist Window Manager for X
 
-USE_GMAKE=	YES
 USE_X11=	YES
 
 ALL_TARGET=	allinone
