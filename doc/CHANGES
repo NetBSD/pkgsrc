@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5803 2004/05/03 15:40:53 jmmv Exp $
+$NetBSD: CHANGES,v 1.5804 2004/05/03 16:34:39 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2333,3 +2333,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gnome-vfs2 to 2.6.1.1 [jmmv 2004-05-03]
 	Updated gnome-vfs2-cdda to 2.6.1.1 [jmmv 2004-05-03]
 	Updated gnome-vfs2-smb to 2.6.1.1 [jmmv 2004-05-03]
+	Updated ffcall to 1.9nb1 [jmmv 2004-05-03]
