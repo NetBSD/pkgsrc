@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2003/02/15 00:36:40 salo Exp $
+# $NetBSD: Makefile,v 1.44 2003/03/31 16:20:01 bouyer Exp $
 
 DISTNAME=		ncurses-${NC_VERS}
 NC_VERS=		5.3
@@ -56,6 +56,7 @@ post-configure:
 .if (${OPSYS} == SunOS)
 	${MV} ${TERMINFO_SRC} ${TERMINFO_SRC}.old
 	${SED} -e "/^screen|/,/^$$/d"  -e "/^screen-w|/,/^$$/d" \
+	    -e "/^screen.teraterm|/,/^$$/d" \
 	   <${TERMINFO_SRC}.old >${TERMINFO_SRC}
 .endif
 
