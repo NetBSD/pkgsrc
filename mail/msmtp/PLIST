@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2004/06/20 21:05:02 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.3 2005/04/04 08:45:24 adam Exp $
 bin/msmtp
 man/man1/msmtp.1
-share/examples/msmtp/msmtprc.example
+share/examples/msmtp/msmtprc-system.example
+share/examples/msmtp/msmtprc-user.example
 @dirrm share/examples/msmtp
