@@ -1,5 +1,5 @@
 #!/usr/pkg/bin/perl
-# $NetBSD: post-build,v 1.43 2004/04/09 18:43:14 jschauma Exp $
+# $NetBSD: post-build,v 1.44 2004/07/15 11:39:11 grant Exp $
 #
 # Collect stuff after a pkg bulk build
 #
@@ -203,7 +203,7 @@ sub pkgResult {
 		'<td align="right" class="pkg-'.$state_style.'">'.$nbrokenby.'</td>'
 		if $nbrokenby > 0;
 
-	if ($pinfo->{nerrors} != 0 && $verbose) {
+	if ($pinfo->{nerrors} != 0 && $verbose && $state eq "broken") {
 		print swrite($report_form, $pkg, $nbrokenby > 0 ? $nbrokenby : "", $maintainer);
 	}
 
@@ -416,8 +416,15 @@ EOHTML
 		"not packaged" => "Not packaged"
 	);
 
+	# only include broken packages in the email, see also pkgResult().
+	if ($verbose && scalar(@{$broken->{"broken"}})) {
+		print "\n\n$state_head{broken}\n\n";
+		print $report_head;
+	}
+
 	foreach my $state ("broken", "broken depends", "not packaged") {
 		next unless scalar(@{$broken->{$state}});
+
 		print HTML <<EOHTML;
 <h2>$state_head{$state}</h2>
 <table width="100%">
@@ -429,10 +436,6 @@ EOHTML
 </tr>
 
 EOHTML
-		if ($verbose && $state ne "not packaged") {
-			print "\n\n$state_head{$state}\n\n";
-			print $report_head;
-		}
 		foreach my $pinfo (@{$broken->{$state}}) {
 			print HTML pkgResult($pinfo, $state);
 		}
