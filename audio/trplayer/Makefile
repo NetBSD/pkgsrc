@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/03/29 12:40:09 jmmv Exp $
+# $NetBSD: Makefile,v 1.7 2003/06/26 18:01:27 seb Exp $
 #
 
 DISTNAME=	trplayer-1.2.0
@@ -34,6 +34,7 @@ NO_BUILD=	YES
 
 EMULDIR=	${LOCALBASE}/emul/linux
 EXTRACT_ONLY=	# nothing
+USE_NEW_TEXINFO=	YES
 INFO_FILES=	trplayer.info
 PLIST_SRC=	${WRKDIR}/PLIST.rpm
 
@@ -50,6 +51,5 @@ post-install:
 		> ${WRKSRC}/trplayer
 	${INSTALL_SCRIPT} ${WRKSRC}/trplayer ${PREFIX}/bin/trplayer
 
-.include "../../mk/texinfo.mk"
 .include "../../emulators/suse_linux/Makefile.application"
 .include "../../mk/bsd.pkg.mk"
