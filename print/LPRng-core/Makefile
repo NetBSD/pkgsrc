@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/11/28 16:03:22 martti Exp $
+# $NetBSD: Makefile,v 1.14 2004/12/31 08:14:35 martti Exp $
 # FreeBSD Id: Makefile,v 1.5 1998/10/21 00:57:27 steve Exp
 
 DISTNAME=	LPRng-3.8.28
@@ -54,7 +54,8 @@ MAKE_ENV+=		POSTINSTALL="NO"
 EXAMPLESDIR=	 	${PREFIX}/share/examples/LPRng
 DEINSTALL_FILE=		${WRKDIR}/DEINSTALL
 INSTALL_FILE=		${WRKDIR}/INSTALL
-#RCD_SCRIPTS=		LPRng
+USE_PKGINSTALL=		YES
+RCD_SCRIPTS=		LPRng
 
 FILES_SUBST=		CAT=${CAT:Q}
 FILES_SUBST+=		CHMOD=${CHMOD:Q}
@@ -85,7 +86,6 @@ pre-install:
 	${SED} ${FILES_SUBST_SED} ${PKGDIR}/INSTALL > ${INSTALL_FILE}
 
 post-install:
-	${INSTALL_SCRIPT} ${WRKDIR}/LPRng.sh ${PREFIX}/etc/rc.d/LPRng
 	${INSTALL_DATA_DIR} ${EXAMPLESDIR}
 	for file in lpd.conf lpd.perms printcap; do \
 		${INSTALL_DATA} ${WRKSRC}/$${file} \
