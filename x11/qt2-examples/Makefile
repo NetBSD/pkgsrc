@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.9 2002/08/26 17:34:01 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2004/04/11 22:52:03 snj Exp $
 #
 
 PKGNAME=	qt2-examples-${QTVERSION}
 PKGREVISION=	2
 COMMENT=	QT2 Tutorial, example code and HTML documentation
 
-USE_BUILDLINK2=		yes
-BUILDLINK_DEPENDS.qt2-libs=	qt2-libs>=${QTVERSION}nb2
+USE_BUILDLINK3=		yes
 
 .include "../qt2-libs/Makefile.common"
 
@@ -37,6 +36,6 @@ do-install:
 	    ${INSTALL_DATA} $${f} ${QTPREFIX}/$${f}; \
 	done)
 
-.include "../../x11/qt2-libs/buildlink2.mk"
+.include "../../x11/qt2-libs/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
