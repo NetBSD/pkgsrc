@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.3 1999/02/04 21:21:23 frueauf Exp $
+$NetBSD: patch-aa,v 1.4 1999/02/19 14:26:57 rh Exp $
 
 --- configure.orig	Sun Jan 24 06:00:00 1999
-+++ configure	Wed Feb  3 20:40:53 1999
++++ configure	Fri Feb 19 13:56:11 1999
 @@ -1327,7 +1327,6 @@
  fi
  
@@ -10,3 +10,27 @@ $NetBSD: patch-aa,v 1.3 1999/02/04 21:21:23 frueauf Exp $
  
  # Check for any special flags to pass to ltconfig.
  libtool_flags=
+@@ -2853,9 +2852,9 @@
+ if eval "test x$gtkdir != x"; then
+ 	CFEXTRA="-I$gtkdir -I$gtkdir/glib"
+ 	LDEXTRA="-L$gtkdir/glib/.libs -L$gtkdir/gdk/.libs -L$gtkdir/gtk/.libs `$GTKCONFIG --libs`"
+-	GTK=-lgtk
+-	GDK=-lgdk
+-	GLIB=-lglib
++	GTK=-lgtk10
++	GDK=-lgdk10
++	GLIB=-lglib10
+ 	X_LDFLAGS=`$GTKCONFIG --libs`
+ 	X_CFLAGS=`$GTKCONFIG --cflags`
+ 	gtkversion=1.0
+@@ -2894,8 +2893,8 @@
+ fi
+ 
+ 
+-CFLAGS="$CFLAGS $CFEXTRA `$GTKCONFIG --cflags`"
+-LDFLAGS="$LDEXTRA `$GTKCONFIG --libs` -lgtk -lgdk -lglib $LDFLAGS -lm"
++CFLAGS="`$GTKCONFIG --cflags` $CFLAGS $CFEXTRA"
++LDFLAGS="$LDEXTRA `$GTKCONFIG --libs` $LDFLAGS -lm"
+ 
+ echo $ac_n "checking for the rest of gtk""... $ac_c" 1>&6
+ echo "configure:2902: checking for the rest of gtk" >&5
