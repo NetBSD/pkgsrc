@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.11 2000/06/24 17:03:38 minoura Exp $
+$NetBSD: patch-ab,v 1.12 2000/09/26 21:42:34 eeh Exp $
 
---- configure.orig	Tue Jun 13 05:05:56 2000
-+++ configure	Sun Jun 18 09:18:13 2000
+--- configure.orig	Mon Jun 12 13:05:56 2000
++++ configure	Tue Sep 26 14:18:05 2000
 @@ -21,6 +21,9 @@
    --with-x-toolkit=KIT    use an X toolkit (KIT = yes/lucid/athena/motif/no)"
  ac_help="$ac_help
@@ -18,8 +18,9 @@ $NetBSD: patch-ab,v 1.11 2000/06/24 17:03:38 minoura Exp $
        mips-*-netbsd*)	machine=pmax ;;
 +      mipsel-*-netbsd*)	machine=pmax ;;
        ns32k-*-netbsd*)	machine=ns32000 ;;
+-      sparc-*-netbsd*)	machine=sparc ;;
 +      powerpc-*-netbsd*) machine=macppc ;;
-       sparc-*-netbsd*)	machine=sparc ;;
++      sparc*-*-netbsd*)	machine=sparc ;;
        vax-*-netbsd*)	machine=vax ;;
 +      arm*-*-netbsd*)	machine=arm ;;
      esac
