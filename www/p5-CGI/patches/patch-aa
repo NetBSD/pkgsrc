@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1 2000/10/15 02:17:16 jlam Exp $
+
+--- Makefile.PL.orig	Tue Nov 24 07:29:59 1998
++++ Makefile.PL	Sun Sep 24 19:23:29 2000
+@@ -2,7 +2,6 @@
+ # See lib/ExtUtils/MakeMaker.pm for details of how to influence
+ # the contents of the Makefile that is written.
+ WriteMakefile(
+-    'INSTALLDIRS' => 'perl',
+     'NAME'	=> 'CGI',
+     'DISTNAME'  => 'CGI.pm',
+     'VERSION_FROM'   => 'CGI.pm',
