@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.4 2003/06/20 10:55:24 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/02/16 13:23:46 seb Exp $
 bin/cm
-info/opencm.info.gz
 share/examples/opencm/opencm.conf
 share/opencm/help/add.help
 share/opencm/help/adduser.help
