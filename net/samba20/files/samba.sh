@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: samba.sh,v 1.1 2001/08/22 15:42:19 jlam Exp $
+# $NetBSD: samba.sh,v 1.2 2001/08/23 04:15:11 jlam Exp $
 #
 # PROVIDE: samba
 # REQUIRE: DAEMON
@@ -40,6 +40,7 @@ fi
 
 name="smbd"
 command="@PREFIX@/sbin/${name}"
+reload_cmd=			# use default reload command for smbd
 
 if [ ! -d /etc/rc.d ]
 then
