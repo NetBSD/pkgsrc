@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.205 2004/01/14 08:23:07 wiz Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.206 2004/01/15 12:48:00 jlam Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -1209,6 +1209,12 @@ JSDK_HOME?= ${JAVA_HOME}/jsdk
 # subsystem.  Requires Kerberos libraries in /usr/lib.
 # Possible: defined, not defined
 # Default: not defined
+
+KERBEROS_PREFIX_CMDS?=	no
+# Use in the Kerberos packages to determine whether to prefix certain
+# application executables with a "k".
+# Possible: yes, no
+# Default: no
 
 #KERMIT_SUID_UUCP
 # If set to YES or yes, install kermit binary set-uid uucp. Permits an 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/01/11 00:00:28 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2004/01/15 12:48:00 jlam Exp $
 
 DISTNAME=		heimdal-0.6
 CATEGORIES=		security
@@ -40,18 +40,28 @@ USE_DB185=		yes
 CONFIGURE_ARGS+=	--with-openssl=${SSLBASE}
 .include "../../security/openssl/buildlink3.mk"
 
-# XXX Using heimdal with an LDAP backend isn't supported yet.
+# XXX Using Heimdal with an LDAP backend isn't supported yet.
 #BUILD_DEFS+=		HEIMDAL_USE_LDAP
 #.if defined(HEIMDAL_USE_LDAP) && !empty(HEIMDAL_USE_LDAP:M[yY][eE][sS])
 #.  include "../../databases/openldap/buildlink3.mk"
 #CONFIGURE_ARGS+=	--with-openldap=${BUILDLINK_PREFIX.openldap}
 #.endif
 
-# Rename heimdal's ftp/ftpd to kftp/kftpd so we don't conflict with
-# net/tnftp and net/tnftpd.
+# Rename some of Heimdal's applications so they won't conflict with
+# other packages.
 #
-CONFIGURE_ARGS+=	--program-transform-name=${HEIMDAL_TRANSFORM}
-HEIMDAL_TRANSFORM=	"s/^ftp/kftp/"
+BUILD_DEFS+=	KERBEROS_PREFIX_CMDS
+.if !empty(KERBEROS_PREFIX_CMDS:M[yY][eE][sS])
+HEIMDAL_TRANSFORM=	s/^ftp/k&/;					\
+			s/^login/k&/;s/^klogin.access/login.access/;	\
+			s/^rcp/k&/;s/^rsh/k&/;				\
+			s/^su/k&/;s/^telnet/k&/
+PLIST_SUBST+=		KRB5_PREFIX=k
+.else
+HEIMDAL_TRANSFORM=	s/^ftp/k&/
+PLIST_SUBST+=		KRB5_PREFIX=
+.endif
+CONFIGURE_ARGS+=	--program-transform-name="${HEIMDAL_TRANSFORM}"
 
 USE_PKGINSTALL=		yes
 OWN_DIRS_PERMS=		${HEIMDAL_STATEDIR} ${ROOT_USER} ${ROOT_GROUP} 0700
