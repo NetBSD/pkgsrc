@@ -1,0 +1,12 @@
+$NetBSD: patch-ae,v 1.1 2000/11/26 14:20:38 mycroft Exp $
+
+--- gnome-stones/objects/Makefile.am.orig	Sun Nov 26 13:55:25 2000
++++ gnome-stones/objects/Makefile.am	Sun Nov 26 13:53:34 2000
+@@ -10,5 +10,7 @@
+ 
+ object_LTLIBRARIES = libgnome-stones.la libgnomekoban.la
+ 
++libgnome_stones_la_LDFLAGS = -module -avoid-version
+ libgnome_stones_la_SOURCES = gnome-stones.c
++libgnomekoban_la_LDFLAGS   = -module -avoid-version
+ libgnomekoban_la_SOURCES   = gnomekoban.c
