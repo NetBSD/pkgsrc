@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.subdir.mk,v 1.32 1999/12/06 23:40:55 abs Exp $
+#	$NetBSD: bsd.pkg.subdir.mk,v 1.33 1999/12/15 15:52:17 abs Exp $
 #	Derived from: FreeBSD Id: bsd.port.subdir.mk,v 1.19 1997/03/09 23:10:56 wosch Exp 
 #	from: @(#)bsd.subdir.mk	5.9 (Berkeley) 2/1/91
 #
@@ -52,6 +52,7 @@ STRIPFLAG?=	-s
 OPSYS!=	uname -s
 .endif
 
+AWK?=		/usr/bin/awk
 BASENAME?=	/usr/bin/basename
 ECHO?=		/bin/echo
 ECHO_MSG?=	${ECHO}
@@ -161,7 +162,7 @@ README.html: .PRECIOUS
 .endif
 .endfor
 	@${SORT} -t '>' +3 -4 $@.tmp > $@.tmp2
-	@${AWK} awk '{ ++n } END { print n-1 }' < $@.tmp2 > $@.tmp4
+	@${AWK} '{ ++n } END { print n }' < $@.tmp2 > $@.tmp4
 .if exists(${.CURDIR}/pkg/DESCR)
 	@${HTMLIFY} ${.CURDIR}/pkg/DESCR > $@.tmp3
 .else
