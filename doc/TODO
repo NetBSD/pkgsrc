@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.356 2003/03/10 09:45:03 wiz Exp $
+$NetBSD: TODO,v 1.357 2003/03/10 10:01:36 wiz Exp $
 
 Suggested new packages
 ======================
@@ -85,7 +85,6 @@ Suggested package updates
 	o balsa-1.4.2
 	o binutils-2.13.2.1
 	o blender-2.26
-	o bonnie++-1.03c
 	o bzflag-1.7g0
 	o canna-3.6p3 [pkg/20208]
 	o cdlabelgen-2.5.0
