@@ -21,7 +21,7 @@ else
 fi
  
 # add in the dependency .jar files
-DIRLIBS="${ANT_HOME}/lib/java/ant.jar ${ANT_HOME}/lib/java/ant-optional.jar ${ANT_HOME}/lib/java/crimson.jar"
+DIRLIBS="${ANT_HOME}/lib/java/ant/ant.jar ${ANT_HOME}/lib/java/ant/optional.jar ${ANT_HOME}/lib/java/crimson.jar"
 for i in ${DIRLIBS}
 do
     # if the directory is empty, then it will return the input string
@@ -59,4 +59,4 @@ if [ "$JIKESPATH" != "" ] ; then
   fi
 fi
 
-$JAVACMD -classpath "$LOCALCLASSPATH" -Dant.home="${ANT_HOME}" $ANT_OPTS org.apache.tools.ant.Main "$@"
+exec $JAVACMD -classpath "$LOCALCLASSPATH" -Dant.home="${ANT_HOME}" $ANT_OPTS org.apache.tools.ant.Main "$@"
