@@ -1,11 +1,11 @@
-#!@LOCALBASE@/bin/perl
+#!/usr/pkg/bin/perl
 #
 #  Setup 6to4 IPv6, for NetBSD (and maybe others)
 #
-# (c) Copyright 2000 Hubert Feyrer <hubert@feyrer.de>
+# (c) Copyright 2000-2002 Hubert Feyrer <hubert@feyrer.de>
 #
 
-$etcdir="@PREFIX@/etc";
+$etcdir="/usr/pkg/etc";
 #$etcdir="/usr/pkg/etc";		# debug
 
 require "$etcdir/6to4.conf";
@@ -42,6 +42,9 @@ if ($opt_h) {
     exit 0;
 }
 
+# Make sure the interface exists
+system("ifconfig stf0 create >/dev/null 2>&1");
+
 #
 # Some sanity checks
 #
@@ -68,13 +71,28 @@ if ($peer eq "6to4-anycast") {
     # magic values from rfc 3068
     $remoteadr4 =  "192.88.99.1";
     $remoteadr6 =  "2002:c058:6301::";
-} 
-else {
-    chomp($remoteadr4 = `host $peer`);
-    $remoteadr4 =~ s/^.*address //;
+} else {
+    if ($remoteadr4 !~ /^[0-9.]+$/ ) {
+	chomp($remoteadr4 = `host $peer`);
+	$remoteadr4 =~ s/^.*address //;
+	
+	print "resolving IPv4 address of peer $peer\n"
+	    if $verbose;
+    } else {
+	print "IPv4 address of peer given numerically, no resolving needed\n"
+	    if $verbose;
+    }
 
-    chomp($remoteadr6 = `host -t AAAA $peer`);
-    $remoteadr6 =~ s/^.*address //;
+    if ($remoteadr6 !~ /^[0-9a-fA-Z:]+$/ ) {
+	chomp($remoteadr6 = `host -t AAAA $peer`);
+	$remoteadr6 =~ s/^.*address //;
+	
+	print "resolving IPv6 address of peer $peer\n"
+	    if $verbose;
+    } else {
+	print "IPv6 address of peer given numerically, no resolving needed\n"
+	    if $verbose;
+    }
 }
 
 
