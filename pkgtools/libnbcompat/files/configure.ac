@@ -1,4 +1,4 @@
-dnl $NetBSD: configure.ac,v 1.45 2004/08/10 18:47:55 jlam Exp $
+dnl $NetBSD: configure.ac,v 1.46 2004/08/13 04:38:02 jlam Exp $
 
 dnl Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.52)
@@ -110,18 +110,22 @@ AC_CHECK_FUNC(SHA1File, [:], [
 	AC_LIBOBJ(sha1hl)
 ])
 
+pkg_use_nbcompat_getopt_long=yes
 AC_CHECK_HEADERS([getopt.h], [
 	AC_MSG_TRY_COMPILE([for struct option], pkg_cv_have_struct_option,
 		[ #include <getopt.h> ], [ struct option X; ],
-		[:], [
-			AC_DEFINE(HAVE_NBCOMPAT_GETOPT_LONG)
-			AH_TEMPLATE([HAVE_NBCOMPAT_GETOPT_LONG], [
-				Define to 1 if the `getopt_long' function is
-				built into the library.
-			])
-			AC_LIBOBJ(getopt_long)
-		])
+		[pkg_use_nbcompat_getopt_long=no],
+		[pkg_use_nbcompat_getopt_long=yes])
 ])
+
+if test $pkg_use_nbcompat_getopt_long = yes; then
+	AC_DEFINE(HAVE_NBCOMPAT_GETOPT_LONG)
+	AH_TEMPLATE([HAVE_NBCOMPAT_GETOPT_LONG], [
+		Define to 1 if the `getopt_long' function is
+		built into the library.
+	])
+	AC_LIBOBJ(getopt_long)
+fi
 
 dnl Check that this vis.h has *vis()-related functions because Solaris'
 dnl vis.h doesn't.  Also, only consider the header found if it defines
