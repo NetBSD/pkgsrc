@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2003/09/08 14:17:19 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2004/01/22 07:51:12 grant Exp $
 #
 
 DISTNAME=		scmxx-0.6.4
@@ -14,7 +14,7 @@ USE_BUILDLINK2=		yes
 CONFIGURE_ARGS+=	--with-iconv=${BUILDLINK_DIR}
 
 GNU_CONFIGURE=		yes
-USE_GMAKE=		yes
+USE_GNU_TOOLS+=		make
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/scmxx

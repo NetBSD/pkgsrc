@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/01/20 12:10:29 agc Exp $
+# $NetBSD: Makefile,v 1.5 2004/01/22 07:52:43 grant Exp $
 #
 
 DISTNAME=		xlhtml.0.5.1
@@ -14,6 +14,6 @@ COMMENT=		Microsoft xls/ppt to HTML converter
 WRKSRC=			${WRKDIR}/xlhtml
 USE_BUILDLINK2=		YES
 GNU_CONFIGURE=		YES
-USE_GMAKE=      	YES
+USE_GNU_TOOLS+=		make
 
 .include "../../mk/bsd.pkg.mk"

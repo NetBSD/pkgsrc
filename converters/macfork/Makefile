@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/01/20 12:10:29 agc Exp $
+# $NetBSD: Makefile,v 1.8 2004/01/22 07:52:43 grant Exp $
 
 DISTNAME=	macfork-1.0
 CATEGORIES=	converters
@@ -11,7 +11,7 @@ COMMENT=	Tool for extracting data from Macintosh resource forks
 WRKSRC=		${WRKDIR}/macfork
 USE_BUILDLINK2=	# defined
 USE_GCC_SHLIB=	# defined
-USE_GMAKE=	# defined
+USE_GNU_TOOLS+=	make
 
 DOCDIR=		${PREFIX}/share/doc/macfork
 

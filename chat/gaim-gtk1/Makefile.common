@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2003/07/17 21:25:44 grant Exp $
+# $NetBSD: Makefile.common,v 1.6 2004/01/22 07:49:20 grant Exp $
 #
 
 DISTNAME=	gaim-0.59.8
@@ -19,7 +19,7 @@ PLIST_SRC=      ${.CURDIR}/../gaim-gtk1/PLIST.common
 
 DEPENDS+=	gnome1-dirs>=1.0:../../misc/gnome1-dirs
 
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 USE_X11BASE=		YES
 USE_PKGLOCALEDIR=	YES
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2003/11/18 17:54:48 xtraeme Exp $
+# $NetBSD: Makefile,v 1.15 2004/01/22 07:49:20 grant Exp $
 
 DISTNAME=	psi-0.9
 PKGREVISION=	3
@@ -13,7 +13,7 @@ COMMENT=	PSI Jabber Client
 DEPENDS+=	psi-ssl>=2.0:../../chat/psi-ssl
 
 USE_BUILDLINK2=	yes
-USE_GMAKE=	yes
+USE_GNU_TOOLS+=	make
 USE_LIBTOOL=	yes
 USE_X11=	yes
 HAS_CONFIGURE=	yes

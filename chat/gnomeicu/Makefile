@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2004/01/03 18:49:35 reed Exp $
+# $NetBSD: Makefile,v 1.18 2004/01/22 07:49:20 grant Exp $
 
 DISTNAME=	gnomeicu-0.96
 PKGREVISION=	9
@@ -14,7 +14,7 @@ USE_BUILDLINK2=		YES
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
 USE_X11BASE=		YES
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 
 .include "../../databases/gdbm/buildlink2.mk"
 .include "../../devel/gettext-lib/buildlink2.mk"

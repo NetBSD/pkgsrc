@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2004/01/12 09:46:04 cjep Exp $
+# $NetBSD: Makefile,v 1.33 2004/01/22 07:51:12 grant Exp $
 #
 
 .include "../../comms/pilot-link/Makefile.common"
@@ -10,7 +10,7 @@ COMMENT=		Tools to talk to the 3Com Pilot PDA
 BUILDLINK_DEPENDS.pilot-link-libs=	pilot-link-libs>=${PILOT_LINK_VERS}
 
 USE_X11=		YES
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 USE_BUILDLINK2=		YES
 USE_GNU_READLINE=	YES
 
