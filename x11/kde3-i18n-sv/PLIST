@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2004/12/10 06:35:01 markd Exp $
+@comment $NetBSD: PLIST,v 1.11 2005/03/23 23:06:39 markd Exp $
 share/doc/kde/HTML/sv/KRegExpEditor/altntool.png
 share/doc/kde/HTML/sv/KRegExpEditor/anychartool.png
 share/doc/kde/HTML/sv/KRegExpEditor/boundarytools.png
@@ -14,6 +14,7 @@ share/doc/kde/HTML/sv/KRegExpEditor/theEditor.png
 share/doc/kde/HTML/sv/amor/common
 share/doc/kde/HTML/sv/amor/index.cache.bz2
 share/doc/kde/HTML/sv/amor/index.docbook
+share/doc/kde/HTML/sv/amor/man-amor.6.docbook
 share/doc/kde/HTML/sv/ark/common
 share/doc/kde/HTML/sv/ark/index.cache.bz2
 share/doc/kde/HTML/sv/ark/index.docbook
@@ -56,6 +57,7 @@ share/doc/kde/HTML/sv/artsbuilder/tools.docbook
 share/doc/kde/HTML/sv/atlantik/common
 share/doc/kde/HTML/sv/atlantik/index.cache.bz2
 share/doc/kde/HTML/sv/atlantik/index.docbook
+share/doc/kde/HTML/sv/atlantik/man-atlantik.6.docbook
 share/doc/kde/HTML/sv/cervisia/annotate.png
 share/doc/kde/HTML/sv/cervisia/checkout.png
 share/doc/kde/HTML/sv/cervisia/commit.png
@@ -84,6 +86,9 @@ share/doc/kde/HTML/sv/common/8.png
 share/doc/kde/HTML/sv/common/9.png
 share/doc/kde/HTML/sv/common/appheader.html
 share/doc/kde/HTML/sv/common/artistic-license.html
+share/doc/kde/HTML/sv/common/bottom-left.png
+share/doc/kde/HTML/sv/common/bottom-middle.png
+share/doc/kde/HTML/sv/common/bottom-right.png
 share/doc/kde/HTML/sv/common/bottom1.png
 share/doc/kde/HTML/sv/common/bottom2.png
 share/doc/kde/HTML/sv/common/bsd-license.html
@@ -119,6 +124,9 @@ share/doc/kde/HTML/sv/common/mainfooter.html
 share/doc/kde/HTML/sv/common/mainheader.html
 share/doc/kde/HTML/sv/common/qpl-license.html
 share/doc/kde/HTML/sv/common/shadow.png
+share/doc/kde/HTML/sv/common/top-left.png
+share/doc/kde/HTML/sv/common/top-middle.png
+share/doc/kde/HTML/sv/common/top-right-konqueror.png
 share/doc/kde/HTML/sv/common/web-docbottom.png
 share/doc/kde/HTML/sv/common/web-doctop.png
 share/doc/kde/HTML/sv/common/x11-license.html
@@ -135,9 +143,11 @@ share/doc/kde/HTML/sv/juk/search-playlist.png
 share/doc/kde/HTML/sv/kaboodle/common
 share/doc/kde/HTML/sv/kaboodle/index.cache.bz2
 share/doc/kde/HTML/sv/kaboodle/index.docbook
+share/doc/kde/HTML/sv/kaddressbook/addhost.png
 share/doc/kde/HTML/sv/kaddressbook/common
 share/doc/kde/HTML/sv/kaddressbook/conf.png
 share/doc/kde/HTML/sv/kaddressbook/contactdlg.png
+share/doc/kde/HTML/sv/kaddressbook/edit_instant_messenging.png
 share/doc/kde/HTML/sv/kaddressbook/exportdlg.png
 share/doc/kde/HTML/sv/kaddressbook/extension.png
 share/doc/kde/HTML/sv/kaddressbook/filtereditdlg.png
@@ -145,6 +155,7 @@ share/doc/kde/HTML/sv/kaddressbook/index.cache.bz2
 share/doc/kde/HTML/sv/kaddressbook/index.docbook
 share/doc/kde/HTML/sv/kaddressbook/mainwin.png
 share/doc/kde/HTML/sv/kaddressbook/resourcedlg.png
+share/doc/kde/HTML/sv/kaddressbook/resourcesdlg.png
 share/doc/kde/HTML/sv/kaddressbook/vieweditdlg.png
 share/doc/kde/HTML/sv/kalarm/alarmmessage.png
 share/doc/kde/HTML/sv/kalarm/common
@@ -155,6 +166,7 @@ share/doc/kde/HTML/sv/kalarm/mainwindow.png
 share/doc/kde/HTML/sv/kalzium/common
 share/doc/kde/HTML/sv/kalzium/index.cache.bz2
 share/doc/kde/HTML/sv/kalzium/index.docbook
+share/doc/kde/HTML/sv/kalzium/man-kalzium.1.docbook
 share/doc/kde/HTML/sv/kalzium/screenshot1.png
 share/doc/kde/HTML/sv/kalzium/screenshot2.png
 share/doc/kde/HTML/sv/kalzium/screenshot3.png
@@ -168,6 +180,7 @@ share/doc/kde/HTML/sv/kamera/index.docbook
 share/doc/kde/HTML/sv/kandy/common
 share/doc/kde/HTML/sv/kandy/index.cache.bz2
 share/doc/kde/HTML/sv/kandy/index.docbook
+share/doc/kde/HTML/sv/kappfinder/man-kappfinder.1.docbook
 share/doc/kde/HTML/sv/karm/common
 share/doc/kde/HTML/sv/karm/copy-this-task.png
 share/doc/kde/HTML/sv/karm/csvexport.png
@@ -218,6 +231,7 @@ share/doc/kde/HTML/sv/kbabel/glossary.docbook
 share/doc/kde/HTML/sv/kbabel/index.cache.bz2
 share/doc/kde/HTML/sv/kbabel/index.docbook
 share/doc/kde/HTML/sv/kbabel/kbabeldict.docbook
+share/doc/kde/HTML/sv/kbabel/man-catalogmanager.1.docbook
 share/doc/kde/HTML/sv/kbabel/menu.docbook
 share/doc/kde/HTML/sv/kbabel/preferences.docbook
 share/doc/kde/HTML/sv/kbabel/roughtranslation.png
@@ -445,6 +459,9 @@ share/doc/kde/HTML/sv/kcron/print.png
 share/doc/kde/HTML/sv/kdat/common
 share/doc/kde/HTML/sv/kdat/index.cache.bz2
 share/doc/kde/HTML/sv/kdat/index.docbook
+share/doc/kde/HTML/sv/kdcop/common
+share/doc/kde/HTML/sv/kdcop/index.cache.bz2
+share/doc/kde/HTML/sv/kdcop/index.docbook
 share/doc/kde/HTML/sv/kde_app_devel/appwizard.png
 share/doc/kde/HTML/sv/kde_app_devel/common
 share/doc/kde/HTML/sv/kde_app_devel/index.cache.bz2
@@ -455,6 +472,11 @@ share/doc/kde/HTML/sv/kdearch/index.docbook
 share/doc/kde/HTML/sv/kdebugdialog/common
 share/doc/kde/HTML/sv/kdebugdialog/index.cache.bz2
 share/doc/kde/HTML/sv/kdebugdialog/index.docbook
+share/doc/kde/HTML/sv/kdelibs/man-artsmessage.1.docbook
+share/doc/kde/HTML/sv/kdelibs/man-checkXML.1.docbook
+share/doc/kde/HTML/sv/kdelibs/man-dcop.1.docbook
+share/doc/kde/HTML/sv/kdelibs/man-kdeoptions.7.docbook
+share/doc/kde/HTML/sv/kdelibs/man-qtoptions.7.docbook
 share/doc/kde/HTML/sv/kdelirc/irkick/common
 share/doc/kde/HTML/sv/kdelirc/irkick/index.cache.bz2
 share/doc/kde/HTML/sv/kdelirc/irkick/index.docbook
@@ -499,6 +521,8 @@ share/doc/kde/HTML/sv/kdesu/index.docbook
 share/doc/kde/HTML/sv/kdevelop/SF-general.png
 share/doc/kde/HTML/sv/kdevelop/SF-indent.png
 share/doc/kde/HTML/sv/kdevelop/SF-other.png
+share/doc/kde/HTML/sv/kdevelop/app-files.docbook
+share/doc/kde/HTML/sv/kdevelop/app-menu.docbook
 share/doc/kde/HTML/sv/kdevelop/applicationwizard.docbook
 share/doc/kde/HTML/sv/kdevelop/automake-file-popup.png
 share/doc/kde/HTML/sv/kdevelop/automake-manager.png
@@ -539,19 +563,23 @@ share/doc/kde/HTML/sv/kdevelop/edit-doctree-TOC-entry.png
 share/doc/kde/HTML/sv/kdevelop/file-selector.png
 share/doc/kde/HTML/sv/kdevelop/filetree.png
 share/doc/kde/HTML/sv/kdevelop/folded-tabs.png
+share/doc/kde/HTML/sv/kdevelop/getting-started.docbook
 share/doc/kde/HTML/sv/kdevelop/importdirectory.png
 share/doc/kde/HTML/sv/kdevelop/index.cache.bz2
 share/doc/kde/HTML/sv/kdevelop/index.docbook
+share/doc/kde/HTML/sv/kdevelop/kdcop_browsing.png
 share/doc/kde/HTML/sv/kdevelop/kdevelop-ideal-mode-0.png
 share/doc/kde/HTML/sv/kdevelop/kdevelop-ideal-mode.png
 share/doc/kde/HTML/sv/kdevelop/kdevelop-install.docbook
 share/doc/kde/HTML/sv/kdevelop/kdevelop-mdi-mode.png
+share/doc/kde/HTML/sv/kdevelop/kdevelop-scripting.docbook
 share/doc/kde/HTML/sv/kdevelop/kdevelop-survey.docbook
 share/doc/kde/HTML/sv/kdevelop/kdevelop-tabbed-mode.png
 share/doc/kde/HTML/sv/kdevelop/kdevelop-toplevel-mode.png
 share/doc/kde/HTML/sv/kdevelop/open-recent-project.png
 share/doc/kde/HTML/sv/kdevelop/project-advanced.docbook
 share/doc/kde/HTML/sv/kdevelop/project-management.docbook
+share/doc/kde/HTML/sv/kdevelop/script_location.png
 share/doc/kde/HTML/sv/kdevelop/select-user-interface-0.png
 share/doc/kde/HTML/sv/kdevelop/select-user-interface.png
 share/doc/kde/HTML/sv/kdevelop/setup.docbook
@@ -588,6 +616,22 @@ share/doc/kde/HTML/sv/keduca/screenshot.png
 share/doc/kde/HTML/sv/kenolaba/common
 share/doc/kde/HTML/sv/kenolaba/index.cache.bz2
 share/doc/kde/HTML/sv/kenolaba/index.docbook
+share/doc/kde/HTML/sv/kenolaba/man-kenolaba.6.docbook
+share/doc/kde/HTML/sv/kfilereplace/addstringsdialog_window.png
+share/doc/kde/HTML/sv/kfilereplace/common
+share/doc/kde/HTML/sv/kfilereplace/general_options.png
+share/doc/kde/HTML/sv/kfilereplace/index.cache.bz2
+share/doc/kde/HTML/sv/kfilereplace/index.docbook
+share/doc/kde/HTML/sv/kfilereplace/kfr_standalone_main_window_1.png
+share/doc/kde/HTML/sv/kfilereplace/optionsdialog_main_window_1.png
+share/doc/kde/HTML/sv/kfilereplace/optionsdialog_main_window_2.png
+share/doc/kde/HTML/sv/kfilereplace/path_options.png
+share/doc/kde/HTML/sv/kfilereplace/projectdialog_main_window_1.png
+share/doc/kde/HTML/sv/kfilereplace/projectdialog_main_window_2.png
+share/doc/kde/HTML/sv/kfilereplace/quick_options.png
+share/doc/kde/HTML/sv/kfilereplace/report_example.png
+share/doc/kde/HTML/sv/kfilereplace/results_view.png
+share/doc/kde/HTML/sv/kfilereplace/strings_view.png
 share/doc/kde/HTML/sv/kfind/common
 share/doc/kde/HTML/sv/kfind/index.cache.bz2
 share/doc/kde/HTML/sv/kfind/index.docbook
@@ -642,9 +686,6 @@ share/doc/kde/HTML/sv/kgpg/keymanage.png
 share/doc/kde/HTML/sv/kgpg/keys.png
 share/doc/kde/HTML/sv/kgpg/menu.png
 share/doc/kde/HTML/sv/kgpg/options.png
-share/doc/kde/HTML/sv/kgpgcertmanager/common
-share/doc/kde/HTML/sv/kgpgcertmanager/index.cache.bz2
-share/doc/kde/HTML/sv/kgpgcertmanager/index.docbook
 share/doc/kde/HTML/sv/khangman/advancedsettings.png
 share/doc/kde/HTML/sv/khangman/common
 share/doc/kde/HTML/sv/khangman/getnewstuff.png
@@ -672,7 +713,10 @@ share/doc/kde/HTML/sv/khelpcenter/faq/moreinfo.docbook
 share/doc/kde/HTML/sv/khelpcenter/faq/nonkdeapps.docbook
 share/doc/kde/HTML/sv/khelpcenter/faq/notrelated.docbook
 share/doc/kde/HTML/sv/khelpcenter/faq/panel.docbook
+share/doc/kde/HTML/sv/khelpcenter/faq/questions.docbook
+share/doc/kde/HTML/sv/khelpcenter/faq/sound.docbook
 share/doc/kde/HTML/sv/khelpcenter/faq/tips.docbook
+share/doc/kde/HTML/sv/khelpcenter/faq/webbrowse.docbook
 share/doc/kde/HTML/sv/khelpcenter/faq/winmng.docbook
 share/doc/kde/HTML/sv/khelpcenter/glossary/common
 share/doc/kde/HTML/sv/khelpcenter/glossary/index.cache.bz2
@@ -686,31 +730,91 @@ share/doc/kde/HTML/sv/khelpcenter/quickstart/common
 share/doc/kde/HTML/sv/khelpcenter/quickstart/index.cache.bz2
 share/doc/kde/HTML/sv/khelpcenter/quickstart/index.docbook
 share/doc/kde/HTML/sv/khelpcenter/support.docbook
+share/doc/kde/HTML/sv/khelpcenter/userguide/a-window.png
 share/doc/kde/HTML/sv/khelpcenter/userguide/about-desktop.docbook
+share/doc/kde/HTML/sv/khelpcenter/userguide/accessibility.docbook
+share/doc/kde/HTML/sv/khelpcenter/userguide/amarok.png
+share/doc/kde/HTML/sv/khelpcenter/userguide/base-kde-applications.docbook
+share/doc/kde/HTML/sv/khelpcenter/userguide/browser-fine-tuning.docbook
+share/doc/kde/HTML/sv/khelpcenter/userguide/burning-cds.docbook
 share/doc/kde/HTML/sv/khelpcenter/userguide/common
+share/doc/kde/HTML/sv/khelpcenter/userguide/control-center.docbook
+share/doc/kde/HTML/sv/khelpcenter/userguide/creating-graphics.docbook
+share/doc/kde/HTML/sv/khelpcenter/userguide/credits-and-license.docbook
+share/doc/kde/HTML/sv/khelpcenter/userguide/desktop.png
+share/doc/kde/HTML/sv/khelpcenter/userguide/email.docbook
+share/doc/kde/HTML/sv/khelpcenter/userguide/file-sharing.docbook
 share/doc/kde/HTML/sv/khelpcenter/userguide/first-impressions.docbook
+share/doc/kde/HTML/sv/khelpcenter/userguide/font-installation.docbook
+share/doc/kde/HTML/sv/khelpcenter/userguide/getting-help.docbook
 share/doc/kde/HTML/sv/khelpcenter/userguide/getting-started.docbook
+share/doc/kde/HTML/sv/khelpcenter/userguide/glossary.docbook
+share/doc/kde/HTML/sv/khelpcenter/userguide/groupware-kontact.docbook
 share/doc/kde/HTML/sv/khelpcenter/userguide/history.docbook
 share/doc/kde/HTML/sv/khelpcenter/userguide/index.cache.bz2
 share/doc/kde/HTML/sv/khelpcenter/userguide/index.docbook
 share/doc/kde/HTML/sv/khelpcenter/userguide/installation.docbook
+share/doc/kde/HTML/sv/khelpcenter/userguide/internet-shortcuts.docbook
 share/doc/kde/HTML/sv/khelpcenter/userguide/intro.docbook
-share/doc/kde/HTML/sv/khelpcenter/userguide/kdeadmin-apps.docbook
-share/doc/kde/HTML/sv/khelpcenter/userguide/kdebase-apps.docbook
-share/doc/kde/HTML/sv/khelpcenter/userguide/kdeedu-apps.docbook
-share/doc/kde/HTML/sv/khelpcenter/userguide/kdegames-apps.docbook
-share/doc/kde/HTML/sv/khelpcenter/userguide/kdegraphics-apps.docbook
-share/doc/kde/HTML/sv/khelpcenter/userguide/kdemultimedia-apps.docbook
-share/doc/kde/HTML/sv/khelpcenter/userguide/kdenetwork-apps.docbook
-share/doc/kde/HTML/sv/khelpcenter/userguide/kdepim-apps.docbook
-share/doc/kde/HTML/sv/khelpcenter/userguide/kdetoys-apps.docbook
-share/doc/kde/HTML/sv/khelpcenter/userguide/kdeutils-apps.docbook
-share/doc/kde/HTML/sv/khelpcenter/userguide/koffice-apps.docbook
+share/doc/kde/HTML/sv/khelpcenter/userguide/juk.png
+share/doc/kde/HTML/sv/khelpcenter/userguide/kaboodle.png
+share/doc/kde/HTML/sv/khelpcenter/userguide/kcontrol.png
+share/doc/kde/HTML/sv/khelpcenter/userguide/kde-as-root.docbook
+share/doc/kde/HTML/sv/khelpcenter/userguide/kde-edutainment.docbook
+share/doc/kde/HTML/sv/khelpcenter/userguide/kde-for-admins.docbook
+share/doc/kde/HTML/sv/khelpcenter/userguide/kmag.png
+share/doc/kde/HTML/sv/khelpcenter/userguide/kmousetool.png
+share/doc/kde/HTML/sv/khelpcenter/userguide/kmouth.png
+share/doc/kde/HTML/sv/khelpcenter/userguide/kmouth2.png
+share/doc/kde/HTML/sv/khelpcenter/userguide/kmouth3.png
+share/doc/kde/HTML/sv/khelpcenter/userguide/knode-identity.png
+share/doc/kde/HTML/sv/khelpcenter/userguide/knode-mail-account.png
+share/doc/kde/HTML/sv/khelpcenter/userguide/knode-news-account.png
+share/doc/kde/HTML/sv/khelpcenter/userguide/knode-start.png
+share/doc/kde/HTML/sv/khelpcenter/userguide/konq-sidebar.png
+share/doc/kde/HTML/sv/khelpcenter/userguide/konq-simple.png
+share/doc/kde/HTML/sv/khelpcenter/userguide/konsole-intro.docbook
+share/doc/kde/HTML/sv/khelpcenter/userguide/kopete.png
+share/doc/kde/HTML/sv/khelpcenter/userguide/kppp-dialer-tab.png
+share/doc/kde/HTML/sv/khelpcenter/userguide/kppp-wizard.png
+share/doc/kde/HTML/sv/khelpcenter/userguide/messaging-intro.docbook
+share/doc/kde/HTML/sv/khelpcenter/userguide/migrator-dictionary.docbook
 share/doc/kde/HTML/sv/khelpcenter/userguide/more-help.docbook
+share/doc/kde/HTML/sv/khelpcenter/userguide/net-connection-setup.docbook
+share/doc/kde/HTML/sv/khelpcenter/userguide/networking-with-windows.docbook
+share/doc/kde/HTML/sv/khelpcenter/userguide/noatun.png
 share/doc/kde/HTML/sv/khelpcenter/userguide/notices-trademarks.docbook
+share/doc/kde/HTML/sv/khelpcenter/userguide/oggfolder.png
+share/doc/kde/HTML/sv/khelpcenter/userguide/open-file-dialog.png
+share/doc/kde/HTML/sv/khelpcenter/userguide/panel-and-desktop.docbook
+share/doc/kde/HTML/sv/khelpcenter/userguide/pdf-files.docbook
+share/doc/kde/HTML/sv/khelpcenter/userguide/playing-audiocds.docbook
+share/doc/kde/HTML/sv/khelpcenter/userguide/playing-movies.docbook
+share/doc/kde/HTML/sv/khelpcenter/userguide/playing-music.docbook
+share/doc/kde/HTML/sv/khelpcenter/userguide/printer-setup.docbook
+share/doc/kde/HTML/sv/khelpcenter/userguide/printing-from-apps.docbook
+share/doc/kde/HTML/sv/khelpcenter/userguide/programs-and-documents.docbook
+share/doc/kde/HTML/sv/khelpcenter/userguide/programs-controlling.docbook
+share/doc/kde/HTML/sv/khelpcenter/userguide/removable-disks.docbook
+share/doc/kde/HTML/sv/khelpcenter/userguide/rip.png
+share/doc/kde/HTML/sv/khelpcenter/userguide/ripsettings.png
+share/doc/kde/HTML/sv/khelpcenter/userguide/screen-captures.docbook
+share/doc/kde/HTML/sv/khelpcenter/userguide/services.png
+share/doc/kde/HTML/sv/khelpcenter/userguide/shared-sessions.docbook
 share/doc/kde/HTML/sv/khelpcenter/userguide/shortcuts.docbook
 share/doc/kde/HTML/sv/khelpcenter/userguide/staff.docbook
+share/doc/kde/HTML/sv/khelpcenter/userguide/standard-menu-entries.docbook
+share/doc/kde/HTML/sv/khelpcenter/userguide/switching-sessions.docbook
+share/doc/kde/HTML/sv/khelpcenter/userguide/the-filemanager.docbook
+share/doc/kde/HTML/sv/khelpcenter/userguide/titlebar-menu.png
+share/doc/kde/HTML/sv/khelpcenter/userguide/troubleshooting-network-x.docbook
+share/doc/kde/HTML/sv/khelpcenter/userguide/troubleshooting-no-open.docbook
 share/doc/kde/HTML/sv/khelpcenter/userguide/ug-faq.docbook
+share/doc/kde/HTML/sv/khelpcenter/userguide/under-the-hood.docbook
+share/doc/kde/HTML/sv/khelpcenter/userguide/usenet.docbook
+share/doc/kde/HTML/sv/khelpcenter/userguide/where-next.docbook
+share/doc/kde/HTML/sv/khelpcenter/userguide/windows-how-to.docbook
+share/doc/kde/HTML/sv/khelpcenter/userguide/your-kde-account.docbook
 share/doc/kde/HTML/sv/khelpcenter/visualdict/common
 share/doc/kde/HTML/sv/khelpcenter/visualdict/index.cache.bz2
 share/doc/kde/HTML/sv/khelpcenter/visualdict/index.docbook
@@ -803,7 +907,7 @@ share/doc/kde/HTML/sv/kinfocenter/usb/index.docbook
 share/doc/kde/HTML/sv/kinfocenter/xserver/common
 share/doc/kde/HTML/sv/kinfocenter/xserver/index.cache.bz2
 share/doc/kde/HTML/sv/kinfocenter/xserver/index.docbook
-share/doc/kde/HTML/sv/kioslave/audiocd.docbook
+share/doc/kde/HTML/sv/kio_audiocd/audiocd.docbook
 share/doc/kde/HTML/sv/kioslave/bzip.docbook
 share/doc/kde/HTML/sv/kioslave/bzip2.docbook
 share/doc/kde/HTML/sv/kioslave/cgi.docbook
@@ -836,7 +940,6 @@ share/doc/kde/HTML/sv/kioslave/nntp.docbook
 share/doc/kde/HTML/sv/kioslave/pop3.docbook
 share/doc/kde/HTML/sv/kioslave/pop3s.docbook
 share/doc/kde/HTML/sv/kioslave/print.docbook
-share/doc/kde/HTML/sv/kioslave/rdate.docbook
 share/doc/kde/HTML/sv/kioslave/rlan.docbook
 share/doc/kde/HTML/sv/kioslave/rlogin.docbook
 share/doc/kde/HTML/sv/kioslave/sftp.docbook
@@ -847,9 +950,6 @@ share/doc/kde/HTML/sv/kioslave/telnet.docbook
 share/doc/kde/HTML/sv/kioslave/thumbnail.docbook
 share/doc/kde/HTML/sv/kioslave/webdav.docbook
 share/doc/kde/HTML/sv/kioslave/webdavs.docbook
-share/doc/kde/HTML/sv/kit/common
-share/doc/kde/HTML/sv/kit/index.cache.bz2
-share/doc/kde/HTML/sv/kit/index.docbook
 share/doc/kde/HTML/sv/kiten/common
 share/doc/kde/HTML/sv/kiten/index.cache.bz2
 share/doc/kde/HTML/sv/kiten/index.docbook
@@ -892,6 +992,7 @@ share/doc/kde/HTML/sv/klines/index.docbook
 share/doc/kde/HTML/sv/klinkstatus/common
 share/doc/kde/HTML/sv/klinkstatus/index.cache.bz2
 share/doc/kde/HTML/sv/klinkstatus/index.docbook
+share/doc/kde/HTML/sv/klinkstatus/screenshot.png
 share/doc/kde/HTML/sv/klipper/common
 share/doc/kde/HTML/sv/klipper/index.cache.bz2
 share/doc/kde/HTML/sv/klipper/index.docbook
@@ -900,6 +1001,9 @@ share/doc/kde/HTML/sv/kmag/images/screenshot.png
 share/doc/kde/HTML/sv/kmag/index.cache.bz2
 share/doc/kde/HTML/sv/kmag/index.docbook
 share/doc/kde/HTML/sv/kmag/screenshot.png
+share/doc/kde/HTML/sv/kmahjongg/common
+share/doc/kde/HTML/sv/kmahjongg/index.cache.bz2
+share/doc/kde/HTML/sv/kmahjongg/index.docbook
 share/doc/kde/HTML/sv/kmail/common
 share/doc/kde/HTML/sv/kmail/configure.docbook
 share/doc/kde/HTML/sv/kmail/credits-and-licenses.docbook
@@ -921,6 +1025,7 @@ share/doc/kde/HTML/sv/kmessedwords/common
 share/doc/kde/HTML/sv/kmessedwords/index.cache.bz2
 share/doc/kde/HTML/sv/kmessedwords/index.docbook
 share/doc/kde/HTML/sv/kmessedwords/kmw1.png
+share/doc/kde/HTML/sv/kmessedwords/kmw1bis.png
 share/doc/kde/HTML/sv/kmessedwords/kmw2.png
 share/doc/kde/HTML/sv/kmessedwords/kmw3.png
 share/doc/kde/HTML/sv/kmessedwords/kmw4.png
@@ -938,6 +1043,7 @@ share/doc/kde/HTML/sv/kmines/kmines2.png
 share/doc/kde/HTML/sv/kmix/common
 share/doc/kde/HTML/sv/kmix/index.cache.bz2
 share/doc/kde/HTML/sv/kmix/index.docbook
+share/doc/kde/HTML/sv/kmix/kmix-window.png
 share/doc/kde/HTML/sv/kmoon/common
 share/doc/kde/HTML/sv/kmoon/index.cache.bz2
 share/doc/kde/HTML/sv/kmoon/index.docbook
@@ -957,6 +1063,7 @@ share/doc/kde/HTML/sv/kmplot/commands.docbook
 share/doc/kde/HTML/sv/kmplot/common
 share/doc/kde/HTML/sv/kmplot/configuration.docbook
 share/doc/kde/HTML/sv/kmplot/credits.docbook
+share/doc/kde/HTML/sv/kmplot/dcop.docbook
 share/doc/kde/HTML/sv/kmplot/developer.docbook
 share/doc/kde/HTML/sv/kmplot/firststeps.docbook
 share/doc/kde/HTML/sv/kmplot/index.cache.bz2
@@ -1024,16 +1131,10 @@ share/doc/kde/HTML/sv/kolf/common
 share/doc/kde/HTML/sv/kolf/index.cache.bz2
 share/doc/kde/HTML/sv/kolf/index.docbook
 share/doc/kde/HTML/sv/kolourpaint/common
-share/doc/kde/HTML/sv/kolourpaint/image_balance.png
-share/doc/kde/HTML/sv/kolourpaint/image_emboss.png
-share/doc/kde/HTML/sv/kolourpaint/image_flatten.png
 share/doc/kde/HTML/sv/kolourpaint/image_flip.png
-share/doc/kde/HTML/sv/kolourpaint/image_invert.png
-share/doc/kde/HTML/sv/kolourpaint/image_reduce_colors.png
 share/doc/kde/HTML/sv/kolourpaint/image_resize_scale.png
 share/doc/kde/HTML/sv/kolourpaint/image_rotate.png
 share/doc/kde/HTML/sv/kolourpaint/image_skew.png
-share/doc/kde/HTML/sv/kolourpaint/image_soften_sharpen.png
 share/doc/kde/HTML/sv/kolourpaint/index.cache.bz2
 share/doc/kde/HTML/sv/kolourpaint/index.docbook
 share/doc/kde/HTML/sv/kommander/basics.docbook
@@ -1120,6 +1221,7 @@ share/doc/kde/HTML/sv/konqueror/index.cache.bz2
 share/doc/kde/HTML/sv/konqueror/index.docbook
 share/doc/kde/HTML/sv/konqueror/introduction.docbook
 share/doc/kde/HTML/sv/konqueror/konqorg.png
+share/doc/kde/HTML/sv/konqueror/man-kbookmarkmerger.1.docbook
 share/doc/kde/HTML/sv/konqueror/parts.png
 share/doc/kde/HTML/sv/konqueror/path-complete.docbook
 share/doc/kde/HTML/sv/konqueror/plugins.docbook
@@ -1134,6 +1236,7 @@ share/doc/kde/HTML/sv/konsole/common
 share/doc/kde/HTML/sv/konsole/index.cache.bz2
 share/doc/kde/HTML/sv/konsole/index.docbook
 share/doc/kde/HTML/sv/konsole/konsole.png
+share/doc/kde/HTML/sv/konsole/tabbar.png
 share/doc/kde/HTML/sv/konsolekalendar/common
 share/doc/kde/HTML/sv/konsolekalendar/index.cache.bz2
 share/doc/kde/HTML/sv/konsolekalendar/index.docbook
@@ -1187,6 +1290,7 @@ share/doc/kde/HTML/sv/korganizer/o2v_importing1.png
 share/doc/kde/HTML/sv/korganizer/o2v_importing2.png
 share/doc/kde/HTML/sv/korganizer/o2v_importing3.png
 share/doc/kde/HTML/sv/korganizer/outlook-to-vcalendar.docbook
+share/doc/kde/HTML/sv/korganizer/plugins-chapter.docbook
 share/doc/kde/HTML/sv/korn/common
 share/doc/kde/HTML/sv/korn/index.cache.bz2
 share/doc/kde/HTML/sv/korn/index.docbook
@@ -1203,6 +1307,9 @@ share/doc/kde/HTML/sv/kpackage/right-change.png
 share/doc/kde/HTML/sv/kpackage/right-files.png
 share/doc/kde/HTML/sv/kpackage/right-prop.png
 share/doc/kde/HTML/sv/kpackage/rpmloc.png
+share/doc/kde/HTML/sv/kpackage/search.png
+share/doc/kde/HTML/sv/kpackage/searchf.png
+share/doc/kde/HTML/sv/kpackage/searchl.png
 share/doc/kde/HTML/sv/kpackage/slackloc.png
 share/doc/kde/HTML/sv/kpackage/uninstall.png
 share/doc/kde/HTML/sv/kpager/common
@@ -1213,7 +1320,7 @@ share/doc/kde/HTML/sv/kpager/settings.png
 share/doc/kde/HTML/sv/kpat/common
 share/doc/kde/HTML/sv/kpat/index.cache.bz2
 share/doc/kde/HTML/sv/kpat/index.docbook
-share/doc/kde/HTML/sv/kpat/man.docbook
+share/doc/kde/HTML/sv/kpat/man-kpat.6.docbook
 share/doc/kde/HTML/sv/kpdf/common
 share/doc/kde/HTML/sv/kpdf/index.cache.bz2
 share/doc/kde/HTML/sv/kpdf/index.docbook
@@ -1496,6 +1603,7 @@ share/doc/kde/HTML/sv/kstars/index.docbook
 share/doc/kde/HTML/sv/kstars/indi.docbook
 share/doc/kde/HTML/sv/kstars/indiclient.png
 share/doc/kde/HTML/sv/kstars/indicontrolpanel.png
+share/doc/kde/HTML/sv/kstars/indiscript.png
 share/doc/kde/HTML/sv/kstars/install.docbook
 share/doc/kde/HTML/sv/kstars/jmoons.docbook
 share/doc/kde/HTML/sv/kstars/jmoons.png
@@ -1507,6 +1615,8 @@ share/doc/kde/HTML/sv/kstars/luminosity.docbook
 share/doc/kde/HTML/sv/kstars/magnitude.docbook
 share/doc/kde/HTML/sv/kstars/meridian.docbook
 share/doc/kde/HTML/sv/kstars/newfov.png
+share/doc/kde/HTML/sv/kstars/observinglist.docbook
+share/doc/kde/HTML/sv/kstars/observinglist.png
 share/doc/kde/HTML/sv/kstars/parallax.docbook
 share/doc/kde/HTML/sv/kstars/popup.png
 share/doc/kde/HTML/sv/kstars/precession.docbook
@@ -1558,6 +1668,9 @@ share/doc/kde/HTML/sv/ktouch/screenshot3.png
 share/doc/kde/HTML/sv/ktron/common
 share/doc/kde/HTML/sv/ktron/index.cache.bz2
 share/doc/kde/HTML/sv/ktron/index.docbook
+share/doc/kde/HTML/sv/kttsd/common
+share/doc/kde/HTML/sv/kttsd/index.cache.bz2
+share/doc/kde/HTML/sv/kttsd/index.docbook
 share/doc/kde/HTML/sv/ktuberling/common
 share/doc/kde/HTML/sv/ktuberling/index.cache.bz2
 share/doc/kde/HTML/sv/ktuberling/index.docbook
@@ -1628,6 +1741,7 @@ share/doc/kde/HTML/sv/kvoctrain/index.cache.bz2
 share/doc/kde/HTML/sv/kvoctrain/index.docbook
 share/doc/kde/HTML/sv/kvoctrain/lang1-dlg.png
 share/doc/kde/HTML/sv/kvoctrain/mainview.png
+share/doc/kde/HTML/sv/kvoctrain/man-spotlight2kvtml.1.docbook
 share/doc/kde/HTML/sv/kvoctrain/mu-query-dlg.png
 share/doc/kde/HTML/sv/kvoctrain/options1-dlg.png
 share/doc/kde/HTML/sv/kvoctrain/options2-dlg.png
@@ -1679,6 +1793,7 @@ share/doc/kde/HTML/sv/kwordquiz/kwq-qanda.png
 share/doc/kde/HTML/sv/kworldclock/common
 share/doc/kde/HTML/sv/kworldclock/index.cache.bz2
 share/doc/kde/HTML/sv/kworldclock/index.docbook
+share/doc/kde/HTML/sv/kworldclock/man-kworldclock.1.docbook
 share/doc/kde/HTML/sv/kworldclock/screenshot-clock-dialog.png
 share/doc/kde/HTML/sv/kworldclock/screenshot-mlb.png
 share/doc/kde/HTML/sv/kworldclock/screenshot-quairading-clock.png
@@ -1718,7 +1833,6 @@ share/doc/kde/HTML/sv/kxsldbg/configure_window.png
 share/doc/kde/HTML/sv/kxsldbg/credits.docbook
 share/doc/kde/HTML/sv/kxsldbg/entities.docbook
 share/doc/kde/HTML/sv/kxsldbg/entities_window.png
-share/doc/kde/HTML/sv/kxsldbg/globals_window.png
 share/doc/kde/HTML/sv/kxsldbg/glossary.docbook
 share/doc/kde/HTML/sv/kxsldbg/index.cache.bz2
 share/doc/kde/HTML/sv/kxsldbg/index.docbook
@@ -1734,6 +1848,7 @@ share/doc/kde/HTML/sv/kxsldbg/systemid_window.png
 share/doc/kde/HTML/sv/kxsldbg/templates.docbook
 share/doc/kde/HTML/sv/kxsldbg/templates_window.png
 share/doc/kde/HTML/sv/kxsldbg/variables.docbook
+share/doc/kde/HTML/sv/kxsldbg/variables_window.png
 share/doc/kde/HTML/sv/kxsldbg/walk_window.png
 share/doc/kde/HTML/sv/lisa/common
 share/doc/kde/HTML/sv/lisa/index.cache.bz2
@@ -1744,6 +1859,14 @@ share/doc/kde/HTML/sv/lskat/index.docbook
 share/doc/kde/HTML/sv/megami/common
 share/doc/kde/HTML/sv/megami/index.cache.bz2
 share/doc/kde/HTML/sv/megami/index.docbook
+share/doc/kde/HTML/sv/multisynk/common
+share/doc/kde/HTML/sv/multisynk/editdialog-conflicts.png
+share/doc/kde/HTML/sv/multisynk/editdialog.png
+share/doc/kde/HTML/sv/multisynk/index.cache.bz2
+share/doc/kde/HTML/sv/multisynk/index.docbook
+share/doc/kde/HTML/sv/multisynk/konnectors-chapter.docbook
+share/doc/kde/HTML/sv/multisynk/logdialog.png
+share/doc/kde/HTML/sv/multisynk/mainwin.png
 share/doc/kde/HTML/sv/noatun/common
 share/doc/kde/HTML/sv/noatun/index.cache.bz2
 share/doc/kde/HTML/sv/noatun/index.docbook
@@ -1766,6 +1889,7 @@ share/doc/kde/HTML/sv/quanta/dtep_doc_img24.png
 share/doc/kde/HTML/sv/quanta/dtep_doc_img25.png
 share/doc/kde/HTML/sv/quanta/dtep_doc_img7.png
 share/doc/kde/HTML/sv/quanta/dtep_doc_img8.png
+share/doc/kde/HTML/sv/quanta/edit-upload-profile.png
 share/doc/kde/HTML/sv/quanta/extending-quanta.docbook
 share/doc/kde/HTML/sv/quanta/fundamentals.docbook
 share/doc/kde/HTML/sv/quanta/glossary.docbook
@@ -1773,6 +1897,7 @@ share/doc/kde/HTML/sv/quanta/index.cache.bz2
 share/doc/kde/HTML/sv/quanta/index.docbook
 share/doc/kde/HTML/sv/quanta/installation.docbook
 share/doc/kde/HTML/sv/quanta/introduction.docbook
+share/doc/kde/HTML/sv/quanta/man-quanta.1.docbook
 share/doc/kde/HTML/sv/quanta/plugin-edit.png
 share/doc/kde/HTML/sv/quanta/project-1.png
 share/doc/kde/HTML/sv/quanta/project-tree-view-dir-rmb-menu.png
@@ -1784,12 +1909,38 @@ share/doc/kde/HTML/sv/quanta/quanta-projects.docbook
 share/doc/kde/HTML/sv/quanta/quantamdi-editor.png
 share/doc/kde/HTML/sv/quanta/quantamdi-treeview.png
 share/doc/kde/HTML/sv/quanta/quantamdi.png
+share/doc/kde/HTML/sv/quanta/script-action.png
+share/doc/kde/HTML/sv/quanta/tag-actions.png
 share/doc/kde/HTML/sv/quanta/taginputex.png
 share/doc/kde/HTML/sv/quanta/template-rmb.png
+share/doc/kde/HTML/sv/quanta/text-action.png
 share/doc/kde/HTML/sv/quanta/toolbars.png
 share/doc/kde/HTML/sv/quanta/using-quanta.docbook
 share/doc/kde/HTML/sv/quanta/vplsourceview.png
 share/doc/kde/HTML/sv/quanta/working-with-quanta.docbook
+share/doc/kde/HTML/sv/scripts/man-adddebug.1.docbook
+share/doc/kde/HTML/sv/scripts/man-cheatmake.1.docbook
+share/doc/kde/HTML/sv/scripts/man-create_cvsignore.1.docbook
+share/doc/kde/HTML/sv/scripts/man-create_makefile.1.docbook
+share/doc/kde/HTML/sv/scripts/man-create_makefiles.1.docbook
+share/doc/kde/HTML/sv/scripts/man-cvscheck.1.docbook
+share/doc/kde/HTML/sv/scripts/man-cvslastchange.1.docbook
+share/doc/kde/HTML/sv/scripts/man-cvslastlog.1.docbook
+share/doc/kde/HTML/sv/scripts/man-cvsrevertlast.1.docbook
+share/doc/kde/HTML/sv/scripts/man-cxxmetric.1.docbook
+share/doc/kde/HTML/sv/scripts/man-demangle.1.docbook
+share/doc/kde/HTML/sv/scripts/man-extend_dmalloc.1.docbook
+share/doc/kde/HTML/sv/scripts/man-extractrc.1.docbook
+share/doc/kde/HTML/sv/scripts/man-fixincludes.1.docbook
+share/doc/kde/HTML/sv/scripts/man-po2xml.1.docbook
+share/doc/kde/HTML/sv/scripts/man-pruneemptydirs.1.docbook
+share/doc/kde/HTML/sv/scripts/man-qtdoc.1.docbook
+share/doc/kde/HTML/sv/scripts/man-reportview.1.docbook
+share/doc/kde/HTML/sv/scripts/man-split2po.1.docbook
+share/doc/kde/HTML/sv/scripts/man-swappo.1.docbook
+share/doc/kde/HTML/sv/scripts/man-transxx.1.docbook
+share/doc/kde/HTML/sv/scripts/man-xml2pot.1.docbook
+share/doc/kde/HTML/sv/scripts/man-zonetab2pot.1.docbook
 share/doc/kde/HTML/sv/umbrello/authors.docbook
 share/doc/kde/HTML/sv/umbrello/code_import_and_generation.docbook
 share/doc/kde/HTML/sv/umbrello/common
@@ -1819,10 +1970,19 @@ share/doc/kde/HTML/sv/umbrello/pics/umbrello-ui.png
 share/doc/kde/HTML/sv/umbrello/pics/use-case-diagram.png
 share/doc/kde/HTML/sv/umbrello/uml_basics.docbook
 share/doc/kde/HTML/sv/umbrello/working_with_umbrello.docbook
-share/kde/apps/khangman/data/sv/animals.txt
-share/kde/apps/khangman/data/sv/easy.txt
-share/kde/apps/khangman/data/sv/hard.txt
-share/kde/apps/khangman/data/sv/medium.txt
+share/doc/kde/HTML/sv/xsldbg/commands.docbook
+share/doc/kde/HTML/sv/xsldbg/common
+share/doc/kde/HTML/sv/xsldbg/credits.docbook
+share/doc/kde/HTML/sv/xsldbg/index.cache.bz2
+share/doc/kde/HTML/sv/xsldbg/index.docbook
+share/doc/kde/HTML/sv/xsldbg/introduction.docbook
+share/doc/kde/HTML/sv/xsldbg/usage.docbook
+share/kde/apps/katepart/syntax/logohighlightstyle.sv.xml
+share/kde/apps/khangman/data/sv/animals.kvtml
+share/kde/apps/khangman/data/sv/easy.kvtml
+share/kde/apps/khangman/data/sv/hard.kvtml
+share/kde/apps/khangman/data/sv/medium.kvtml
+share/kde/apps/khangman/sv.txt
 share/kde/apps/ktuberling/sounds/sv/brosch.wav
 share/kde/apps/ktuberling/sounds/sv/cigarr.wav
 share/kde/apps/ktuberling/sounds/sv/fluga.wav
@@ -1845,7 +2005,17 @@ share/kde/apps/ktuberling/sounds/sv/potatismannen.wav
 share/kde/apps/ktuberling/sounds/sv/rosett.wav
 share/kde/apps/ktuberling/sounds/sv/slips.wav
 share/kde/apps/ktuberling/sounds/sv/solglasogon.wav
-${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/alarmdaemonctrl.mo
+share/kde/apps/kturtle/data/logokeywords.sv.xml
+share/kde/apps/kturtle/examples/sv/dukfarg.logo
+share/kde/apps/kturtle/examples/sv/fyrkant.logo
+share/kde/apps/kturtle/examples/sv/fyrkanter.logo
+share/kde/apps/kturtle/examples/sv/multiplikation.logo
+share/kde/apps/kturtle/examples/sv/pil.logo
+share/kde/apps/kturtle/examples/sv/slumpnamn.logo
+share/kde/apps/kturtle/examples/sv/snurrig.logo
+share/kde/apps/kturtle/examples/sv/triangel.logo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/akregator.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/akregator_konqplugin.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/alsaplayerui.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/amor.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/appletproxy.mo
@@ -1868,7 +2038,7 @@ ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/clockapplet.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/crashesplugin.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/cupsdconf.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/cvsservice.mo
-${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/dcopservice.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/dcoprss.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/devicesapplet.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/dirfilterplugin.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/display.mo
@@ -1901,7 +2071,6 @@ ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kaboodle.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kaccess.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kaddressbook.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kalarm.mo
-${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kalarmdgui.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kalzium.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kandy.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kappfinder.mo
@@ -1918,12 +2087,15 @@ ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/katehelloworld.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/katehtmltools.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kateinsertcommand.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/katekjswrapper.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/katekttsd.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/katemake.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/katemodeline.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kateopenheader.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/katepart.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/katepartkttsd.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kateprojectmanager.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/katepybrowse.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/katesnippets.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/katespell.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/katetabbarextension.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/katetextfilter.mo
@@ -1938,6 +2110,7 @@ ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kbinaryclock.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kblackbox.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kbounce.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kbruch.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kbstateapplet.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kbugbuster.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kcachegrind.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kcalc.mo
@@ -1973,6 +2146,7 @@ ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kcmkabconfig.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kcmkamera.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kcmkclock.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kcmkded.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kcmkdnssd.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kcmkeys.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kcmkicker.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kcmkio.mo
@@ -1982,6 +2156,8 @@ ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kcmkonqhtml.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kcmkonsole.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kcmkontactnt.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kcmktalkd.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kcmkttsd.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kcmkttsmgr.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kcmkuick.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kcmkurifilt.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kcmkvaio.mo
@@ -2007,6 +2183,7 @@ ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kcmperformance.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kcmprintmgr.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kcmsamba.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kcmscreensaver.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kcmshell.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kcmsmartcard.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kcmsmserver.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kcmsocks.mo
@@ -2029,6 +2206,7 @@ ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kdelibs.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kdelibs_colors.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kdelirc.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kdepasswd.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kdepimresources.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kdepimwizards.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kdeprint.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kdeprint_part.mo
@@ -2057,7 +2235,9 @@ ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kfifteenapplet.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kfile_au.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kfile_avi.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kfile_bmp.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kfile_cert.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kfile_cpp.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kfile_dds.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kfile_deb.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kfile_desktop.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kfile_diff.mo
@@ -2070,10 +2250,12 @@ ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kfile_font.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kfile_gif.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kfile_html.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kfile_ico.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kfile_ics.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kfile_jpeg.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kfile_kig.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kfile_lnk.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kfile_m3u.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kfile_mhtml.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kfile_mp3.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kfile_mpc.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kfile_ogg.mo
@@ -2089,12 +2271,15 @@ ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kfile_rgb.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kfile_rpm.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kfile_sid.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kfile_tga.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kfile_theora.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kfile_tiff.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kfile_torrent.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kfile_ts.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kfile_txt.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kfile_vcf.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kfile_wav.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kfile_xbm.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kfile_xpm.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kfileaudiopreview.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kfilereplace.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kfileshare.mo
@@ -2110,10 +2295,13 @@ ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kghostview.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kgoldrunner.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kgpg.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kgreet_classic.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kgreet_winbind.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/khangman.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/khelpcenter.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/khexedit.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/khexedit2part.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/khotkeys.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/khtmlkttsd.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/khtmlsettingsplugin.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kicker.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kiconedit.mo
@@ -2126,26 +2314,31 @@ ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kio_devices.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kio_finger.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kio_fish.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kio_floppy.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kio_groupwise.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kio_help.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kio_imap4.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kio_lan.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kio_ldap.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kio_mac.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kio_man.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kio_media.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kio_mobile.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kio_newimap4.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kio_nfs.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kio_nntp.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kio_pop3.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kio_print.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kio_remote.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kio_settings.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kio_sftp.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kio_sieve.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kio_smb.mo
-${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kio_smbro.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kio_smtp.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kio_svn.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kio_system.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kio_trash.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kio_zeroconf.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kioexec.mo
-${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kit.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kiten.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kjobviewer.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kjots.mo
@@ -2173,6 +2366,7 @@ ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kmenuapplet.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kmenuedit.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kmessedwords.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kmid.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kmilo_delli8k.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kmilo_generic.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kmilo_kvaio.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kmilo_powerbook.mo
@@ -2187,6 +2381,7 @@ ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kmousetool.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kmouth.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kmplot.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kmrml.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/knetattach.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/knewsticker.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/knode.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/knotes.mo
@@ -2197,6 +2392,12 @@ ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kolourpaint.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kolourpicker.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kommander.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kompare.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/konnector_dummy.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/konnector_kabc.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/konnector_kcal.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/konnector_local.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/konnector_qtopia.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/konnector_remote.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/konq_smbmounterplugin.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/konqsidebar_mediaplayer.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/konqsidebar_news.mo
@@ -2230,9 +2431,13 @@ ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/krdc.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kreadconfig.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/krec.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kregexpeditor.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kres_blogging.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kres_bugzilla.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kres_exchange.mo
-${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kres_imap.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kres_featureplan.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kres_groupwise.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kres_kolab.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kres_opengroupware.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kres_remote.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kres_xmlrpc.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kreversi.mo
@@ -2240,6 +2445,7 @@ ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/krfb.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kruler.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/krunapplet.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/ksame.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/ksayit.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kscd.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kscreensaver.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kshisen.mo
@@ -2259,6 +2465,7 @@ ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kstars.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kstart.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kstartperf.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kstyle_keramik_config.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kstyle_phase_config.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kstyle_plastik_config.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/ksvgplugin.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/ksync.mo
@@ -2274,6 +2481,7 @@ ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/ktexteditor_docwordcompletion.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/ktexteditor_insertfile.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/ktexteditor_isearch.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/ktexteditor_kdatatool.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/ktexteditor_kttsd.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kthememanager.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/ktimemon.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/ktimer.mo
@@ -2281,6 +2489,19 @@ ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/ktip.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/ktnef.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/ktouch.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/ktron.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kttsd.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kttsd_commandplugin.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kttsd_eposplugin.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kttsd_festivalintplugin.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kttsd_fliteplugin.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kttsd_freettsplugin.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kttsd_hadifixplugin.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kttsd_sbdplugin.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kttsd_stringreplacerplugin.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kttsd_talkerchooserplugin.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kttsd_xmltransformerplugin.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kttsjobmgr.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kttsmgr.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/ktuberling.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kturtle.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/ktux.mo
@@ -2306,25 +2527,8 @@ ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kweather.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kwifimanager.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kwin.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kwin4.mo
-${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kwin_b2_config.mo
-${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kwin_cde.mo
-${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kwin_cde_config.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kwin_art_clients.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kwin_clients.mo
-${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kwin_default_config.mo
-${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kwin_glow.mo
-${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kwin_glow_config.mo
-${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kwin_icewm.mo
-${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kwin_icewm_config.mo
-${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kwin_kde1.mo
-${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kwin_keramik_config.mo
-${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kwin_kstep.mo
-${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kwin_modernsys_config.mo
-${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kwin_openlook.mo
-${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kwin_plastik.mo
-${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kwin_plastik_config.mo
-${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kwin_quartz_config.mo
-${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kwin_riscos.mo
-${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kwin_system.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kwireless.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kwordquiz.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kworldclock.mo
@@ -2333,8 +2537,11 @@ ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kxkb.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kxmlrpcd.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kxsconfig.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kxsldbg.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/libKTTSD.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/libcalendarresources.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/libdmctl.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/libkaddrbk_geo_xxport.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/libkaddrbk_gmx_xxport.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/libkcal.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/libkcalsystem.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/libkcddb.mo
@@ -2342,14 +2549,19 @@ ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/libkdegames.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/libkdehighscores.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/libkdenetwork.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/libkdepim.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/libkholidays.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/libkicker.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/libkickermenu_kdeprint.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/libkickermenu_konsole.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/libkickermenu_prefmenu.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/libkickermenu_recentdocs.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/libkickermenu_remotemenu.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/libkickermenu_systemmenu.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/libkickermenu_tom.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/libkleopatra.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/libkmime.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/libkonq.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/libkpgp.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/libkpimexchange.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/libkscan.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/libkscreensaver.mo
@@ -2361,8 +2573,10 @@ ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/libtaskmanager.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/lockout.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/lskat.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/lyrics.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/mediaapplet.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/mediacontrol.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/minitoolsplugin.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/multisynk.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/naughtyapplet.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/nexscope.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/noatun.mo
@@ -2382,6 +2596,7 @@ ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/synaescope.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/taskbarextension.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/timezones.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/tippecanoe.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/trashapplet.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/tyler.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/uachangerplugin.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/umbrello.mo
@@ -2394,14 +2609,22 @@ ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/webarchiver.mo
 ${PKGLOCALEDIR}/locale/sv/charset
 ${PKGLOCALEDIR}/locale/sv/entry.desktop
 ${PKGLOCALEDIR}/locale/sv/flag.png
+@dirrm share/kde/apps/kturtle/examples/sv
+@comment in kde: @dirrm share/kde/apps/kturtle/examples
+@comment in kde: @dirrm share/kde/apps/kturtle/data
 @dirrm share/kde/apps/ktuberling/sounds/sv
 @comment in kde: @dirrm share/kde/apps/ktuberling/sounds
 @dirrm share/kde/apps/khangman/data/sv
 @comment in kde: @dirrm share/kde/apps/khangman/data
+@comment in kde: @dirrm share/kde/apps/khangman
+@comment in kde: @dirrm share/kde/apps/katepart/syntax
+@dirrm share/doc/kde/HTML/sv/xsldbg
 @dirrm share/doc/kde/HTML/sv/umbrello/pics
 @dirrm share/doc/kde/HTML/sv/umbrello
+@dirrm share/doc/kde/HTML/sv/scripts
 @dirrm share/doc/kde/HTML/sv/quanta
 @dirrm share/doc/kde/HTML/sv/noatun
+@dirrm share/doc/kde/HTML/sv/multisynk
 @dirrm share/doc/kde/HTML/sv/megami
 @dirrm share/doc/kde/HTML/sv/lskat
 @dirrm share/doc/kde/HTML/sv/lisa
@@ -2424,6 +2647,7 @@ ${PKGLOCALEDIR}/locale/sv/flag.png
 @dirrm share/doc/kde/HTML/sv/kuickshow
 @dirrm share/doc/kde/HTML/sv/kturtle
 @dirrm share/doc/kde/HTML/sv/ktuberling
+@dirrm share/doc/kde/HTML/sv/kttsd
 @dirrm share/doc/kde/HTML/sv/ktron
 @dirrm share/doc/kde/HTML/sv/ktouch
 @dirrm share/doc/kde/HTML/sv/ktnef
@@ -2503,6 +2727,7 @@ ${PKGLOCALEDIR}/locale/sv/flag.png
 @dirrm share/doc/kde/HTML/sv/kmenuedit
 @dirrm share/doc/kde/HTML/sv/kmathtool
 @dirrm share/doc/kde/HTML/sv/kmail
+@dirrm share/doc/kde/HTML/sv/kmahjongg
 @dirrm share/doc/kde/HTML/sv/kmag/images
 @dirrm share/doc/kde/HTML/sv/kmag
 @dirrm share/doc/kde/HTML/sv/klipper
@@ -2515,8 +2740,8 @@ ${PKGLOCALEDIR}/locale/sv/flag.png
 @dirrm share/doc/kde/HTML/sv/kjumpingcube
 @dirrm share/doc/kde/HTML/sv/kjots
 @dirrm share/doc/kde/HTML/sv/kiten
-@dirrm share/doc/kde/HTML/sv/kit
 @dirrm share/doc/kde/HTML/sv/kioslave
+@dirrm share/doc/kde/HTML/sv/kio_audiocd
 @dirrm share/doc/kde/HTML/sv/kinfocenter/xserver
 @dirrm share/doc/kde/HTML/sv/kinfocenter/usb
 @dirrm share/doc/kde/HTML/sv/kinfocenter/sound
@@ -2547,7 +2772,6 @@ ${PKGLOCALEDIR}/locale/sv/flag.png
 @dirrm share/doc/kde/HTML/sv/khelpcenter/faq
 @dirrm share/doc/kde/HTML/sv/khelpcenter
 @dirrm share/doc/kde/HTML/sv/khangman
-@dirrm share/doc/kde/HTML/sv/kgpgcertmanager
 @dirrm share/doc/kde/HTML/sv/kgpg
 @dirrm share/doc/kde/HTML/sv/kgoldrunner
 @dirrm share/doc/kde/HTML/sv/kghostview
@@ -2556,6 +2780,7 @@ ${PKGLOCALEDIR}/locale/sv/flag.png
 @dirrm share/doc/kde/HTML/sv/kfouleggs
 @dirrm share/doc/kde/HTML/sv/kfloppy
 @dirrm share/doc/kde/HTML/sv/kfind
+@dirrm share/doc/kde/HTML/sv/kfilereplace
 @dirrm share/doc/kde/HTML/sv/kenolaba
 @dirrm share/doc/kde/HTML/sv/keduca
 @dirrm share/doc/kde/HTML/sv/kedit
@@ -2569,9 +2794,11 @@ ${PKGLOCALEDIR}/locale/sv/flag.png
 @dirrm share/doc/kde/HTML/sv/kdelirc/kcmlirc
 @dirrm share/doc/kde/HTML/sv/kdelirc/irkick
 @dirrm share/doc/kde/HTML/sv/kdelirc
+@dirrm share/doc/kde/HTML/sv/kdelibs
 @dirrm share/doc/kde/HTML/sv/kdebugdialog
 @dirrm share/doc/kde/HTML/sv/kdearch
 @dirrm share/doc/kde/HTML/sv/kde_app_devel
+@dirrm share/doc/kde/HTML/sv/kdcop
 @dirrm share/doc/kde/HTML/sv/kdat
 @dirrm share/doc/kde/HTML/sv/kcron
 @dirrm share/doc/kde/HTML/sv/kcontrol/windowmanagement
@@ -2644,6 +2871,7 @@ ${PKGLOCALEDIR}/locale/sv/flag.png
 @dirrm share/doc/kde/HTML/sv/kate
 @dirrm share/doc/kde/HTML/sv/kasteroids
 @dirrm share/doc/kde/HTML/sv/karm
+@dirrm share/doc/kde/HTML/sv/kappfinder
 @dirrm share/doc/kde/HTML/sv/kandy
 @dirrm share/doc/kde/HTML/sv/kamera
 @dirrm share/doc/kde/HTML/sv/kalzium
