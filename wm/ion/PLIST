@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2004/02/23 13:40:21 cube Exp $
+@comment $NetBSD: PLIST,v 1.4 2004/05/06 04:38:45 cube Exp $
 bin/ion
 bin/pwm
 lib/ion/de.a
@@ -13,6 +13,11 @@ lib/ion/floatws.so
 lib/ion/ionws.a
 lib/ion/ionws.la
 lib/ion/ionws.so
+lib/ion/lc/ioncore-efbb.lc
+lib/ion/lc/ioncorelib-mplexfns.lc
+lib/ion/lc/ioncorelib.lc
+lib/ion/lc/menulib.lc
+lib/ion/lc/querylib.lc
 lib/ion/menu.a
 lib/ion/menu.la
 lib/ion/menu.so
@@ -55,17 +60,13 @@ share/ion/ion-man
 share/ion/ion-runinxterm
 share/ion/ion-ssh
 share/ion/ion-view
-share/ion/ioncore-efbb.lc
 share/ion/ioncore-efbb.lua
-share/ion/ioncorelib-mplexfns.lc
 share/ion/ioncorelib-mplexfns.lua
-share/ion/ioncorelib.lc
 share/ion/ioncorelib.lua
-share/ion/menulib.lc
 share/ion/menulib.lua
-share/ion/querylib.lc
 share/ion/querylib.lua
 share/ion/welcome_message.txt
+@dirrm lib/ion/lc
 @dirrm lib/ion
 @dirrm share/doc/ion
 @dirrm share/examples/ion
