@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/01/04 11:20:13 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2003/01/05 01:07:57 salo Exp $
 #
 
 DISTNAME=	groff-1.18.1
@@ -12,8 +12,6 @@ COMMENT=	GNU roff text processing suite
 GNU_CONFIGURE=	YES
 USE_PERL5=	YES
 USE_BUILDLINK2=	YES
-
-PLIST_SRC=	${PKGDIR}/PLIST.${LOWER_OPSYS}
 
 INFO_FILES=	groff
 
