@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1511 2003/03/01 11:56:23 jmmv Exp $
+$NetBSD: CHANGES,v 1.1512 2003/03/01 13:03:13 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -873,3 +873,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated gnome-- to 1.2.2nb1 [jmmv 2003-03-01]
 	Updated gtk-- to 1.2.10nb1 [jmmv 2003-03-01]
 	Updated libsigc++ to 1.2.3 [jmmv 2003-03-01]
+	Added elizatalk-0.4 [jlam 2003-03-01]

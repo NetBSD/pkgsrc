@@ -1,0 +1,20 @@
+$NetBSD: patch-ab,v 1.1.1.1 2003/03/01 13:02:11 jlam Exp $
+
+--- splotch.c.orig	Mon Oct 23 04:37:56 2000
++++ splotch.c
+@@ -17,9 +17,12 @@
+ #define NAME      "Eliza"    /* name of robot */
+ #define SP_HIST   4            /* number of slots in old key queue */
+ #define TEMPLSIZ  2000         /* maximum number of templates */
+-#define DICTFILE  "/usr/share/elizatalk/main.dict"  /* name of dictionary file */
+-#define SYNFILE  "/usr/share/elizatalk/syn.dict"  /* name of dictionary file */
+-#define WORDSDIR "/usr/share/elizatalk/words"    /* name of words directory without '/' at the end*/
++#ifndef ELIZADIR
++#define ELIZADIR  "/usr/share/elizatalk"
++#endif
++#define DICTFILE  ELIZADIR "/main.dict"  /* name of dictionary file */
++#define SYNFILE   ELIZADIR "/syn.dict"  /* name of dictionary file */
++#define WORDSDIR  ELIZADIR "/words"    /* name of words directory without '/' at the end*/
+ #define DEBUG 0                /* debug flag */
+ #define VERBOSE 0              /* verbose errors */
+ #define DEB 0
