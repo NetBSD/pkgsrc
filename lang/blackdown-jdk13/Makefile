@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2002/11/25 14:08:22 schmonz Exp $
+# $NetBSD: Makefile,v 1.17 2003/01/29 11:02:58 jlam Exp $
 #
 
 BASENAME=	j2sdk
@@ -11,24 +11,23 @@ DEPENDS=	blackdown-jre13>=1:../../lang/blackdown-jre13
 
 .include "../../lang/blackdown-jre13/Makefile.common"
 
-PLIST_SRC=	${PKGDIR}/PLIST
+PLIST_SRC=	# empty
 .if ${BLACKDOWN_ARCH} == "i386"
 PLIST_SRC+=	${PKGDIR}/PLIST.i386
 .endif
+PLIST_SRC+=	${PKGDIR}/PLIST
 
-# these are part of JRE
+# Remove parts that are in common with the JRE.
+#
 post-extract:
-	cd ${WRKSRC}/jre/bin;						\
-	for i in * .java_wrapper; do					\
-		if [ -f $$i ]; then					\
-			${RM} -f $$i ${WRKSRC}/bin/$$i;			\
-		else							\
+	common=`${SED} -e "s,\\$${BLACKDOWN_ARCH},${BLACKDOWN_ARCH},g" ${FILESDIR}/common | ${AWK} '/^#.*/ { next } /^$$/ { next } { print }'`; \
+	cd ${WRKSRC}; for i in $$common; do				\
+		if [ -d $$i ]; then					\
 			${RM} -rf $$i;					\
-		fi							\
+		else							\
+			${RM} -f $$i;					\
+		fi;							\
 	done
-	${RM} -rf ${WRKSRC}/jre
-	${RM} -f ${WRKSRC}/LICENSE ${WRKSRC}/CHANGES			\
-		${WRKSRC}/COPYRIGHT ${WRKSRC}/README ${WRKSRC}/INSTALL
 
 .include "../../mk/bsd.pkg.mk"
 
