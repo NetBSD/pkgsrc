@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/02/15 10:12:57 skrll Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/06/26 10:29:54 seb Exp $
 sbin/lpstyl
 libexec/stylewriter/direct_stylpbm
 libexec/stylewriter/direct_stylps
@@ -17,5 +17,5 @@ share/examples/stylewriter/styl.ppd
 @dirrm share/examples/stylewriter
 @dirrm share/doc/stylewriter
 @dirrm libexec/stylewriter
-@exec ${MKDIR} -p /var/spool/lpd/stylps
+@exec ${MKDIR} /var/spool/lpd/stylps
 @unexec ${RMDIR} /var/spool/lpd/stylps 2>/dev/null || true

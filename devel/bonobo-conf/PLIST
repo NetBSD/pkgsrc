@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2002/02/05 22:39:02 skrll Exp $
+@comment $NetBSD: PLIST,v 1.5 2002/06/26 10:29:37 seb Exp $
 bin/bonobo-moniker-xmldb
 bin/cedit
 include/bonobo-conf/Bonobo_Config.h
@@ -44,7 +44,7 @@ share/oaf/Bonobo_Moniker_config.oaf
 share/oaf/Bonobo_Moniker_gconf.oaf
 share/oaf/Bonobo_Moniker_xmldb.oaf
 @dirrm share/doc/bonobo-conf
-@exec ${MKDIR} -p %D/share/bonobo-conf/html/bonobo-conf
+@exec ${MKDIR} %D/share/bonobo-conf/html/bonobo-conf
 @dirrm share/bonobo-conf/html/bonobo-conf
 @dirrm share/bonobo-conf/html
 @dirrm share/bonobo-conf

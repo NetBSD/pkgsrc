@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2002/03/18 07:58:46 fredb Exp $
+@comment $NetBSD: PLIST,v 1.5 2002/06/26 10:29:49 seb Exp $
 bin/octave
 bin/octave-bug
 bin/mkoctfile
@@ -237,9 +237,9 @@ lib/${PKGNAME}/liboctinterp.a
 @unexec ${RM} -f %D/lib/octave
 libexec/octave/2.0.16/exec/${MACHINE_GNU_PLATFORM}/info-emacs-info
 libexec/octave/2.0.16/exec/${MACHINE_GNU_PLATFORM}/info-emacs-octave-help
-@exec ${MKDIR} -p %D/libexec/octave/2.0.16/oct/${MACHINE_GNU_PLATFORM}
-@exec ${MKDIR} -p %D/libexec/octave/site/exec/${MACHINE_GNU_PLATFORM}
-@exec ${MKDIR} -p %D/libexec/octave/site/oct/${MACHINE_GNU_PLATFORM}
+@exec ${MKDIR} %D/libexec/octave/2.0.16/oct/${MACHINE_GNU_PLATFORM}
+@exec ${MKDIR} %D/libexec/octave/site/exec/${MACHINE_GNU_PLATFORM}
+@exec ${MKDIR} %D/libexec/octave/site/oct/${MACHINE_GNU_PLATFORM}
 libexec/octave/ls-R
 man/man1/octave.1
 share/octave/2.0.16/doc/Octave-FAQ.ps

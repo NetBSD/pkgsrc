@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/03/22 14:17:47 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/06/26 10:29:39 seb Exp $
 bin/anjuta
 bin/anjuta_import.sh
 bin/anjuta_launcher
@@ -350,9 +350,9 @@ share/pixmaps/anjuta/undo.xpm
 share/pixmaps/anjuta/undock.xpm
 share/pixmaps/anjuta/watch.xpm
 share/pixmaps/anjuta/wizard.xpm
-@exec mkdir -m 755 -p %D/share/gnome/help/anjuta/C/anjuta-faqs/figures
-@exec mkdir -m 755 -p %D/share/gnome/help/anjuta/C/anjuta-faqs/stylesheet-images
-@exec mkdir -m 755 -p %D/share/gnome/help/anjuta/C/anjuta-manual/stylesheet-images
+@exec ${MKDIR} -m 755 %D/share/gnome/help/anjuta/C/anjuta-faqs/figures
+@exec ${MKDIR} -m 755 %D/share/gnome/help/anjuta/C/anjuta-faqs/stylesheet-images
+@exec ${MKDIR} -m 755 %D/share/gnome/help/anjuta/C/anjuta-manual/stylesheet-images
 @exec ln -fs libanjuta_clsGen.so.0.0 %D/lib/anjuta/libanjuta_clsGen.so
 @unexec rm -f %D/lib/anjuta/libanjuta_clsGen.so
 @exec ln -fs libanjuta_clsGen.so.0.0 %D/lib/anjuta/libanjuta_clsGen.so.0
