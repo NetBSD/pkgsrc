@@ -1,31 +1,15 @@
-$NetBSD: patch-ae,v 1.2 2004/05/10 01:15:14 fredb Exp $
+$NetBSD: patch-ae,v 1.3 2004/08/06 09:25:18 drochner Exp $
 
---- pngconf.h.orig	2002-10-03 06:32:27.000000000 -0500
+--- pngconf.h.orig	2004-08-04 13:34:47.000000000 +0200
 +++ pngconf.h
-@@ -252,8 +252,8 @@
- #      undef _BSD_SOURCE
- #    endif
- #    ifdef _SETJMP_H
--      __png.h__ already includes setjmp.h;
--      __dont__ include it again.;
-+#warning      __png.h__ already includes setjmp.h;
-+#warning      __dont__ include it again.;
+@@ -260,8 +260,8 @@
+      /* If you encounter a compiler error here, see the explanation
+       * near the end of INSTALL.
+       */
+-         __png.h__ already includes setjmp.h;
+-         __dont__ include it again.;
++#warning         __png.h__ already includes setjmp.h;
++#warning         __dont__ include it again.;
  #    endif
  #  endif /* __linux__ */
  
-@@ -1280,6 +1280,7 @@
- #  define CVT_PTR(ptr) (png_far_to_near(png_ptr,ptr,CHECK))
- #  define CVT_PTR_NOCHECK(ptr) (png_far_to_near(png_ptr,ptr,NOCHECK))
- #  define png_strcpy _fstrcpy
-+#  define png_strncpy _fstrncpy    /* Added to v 1.2.6 */
- #  define png_strlen _fstrlen
- #  define png_memcmp _fmemcmp      /* SJT: added */
- #  define png_memcpy _fmemcpy
-@@ -1288,6 +1289,7 @@
- #  define CVT_PTR(ptr)         (ptr)
- #  define CVT_PTR_NOCHECK(ptr) (ptr)
- #  define png_strcpy strcpy
-+#  define png_strncpy strncpy   /* Added to v 1.2.6 */
- #  define png_strlen strlen
- #  define png_memcmp memcmp     /* SJT: added */
- #  define png_memcpy memcpy
