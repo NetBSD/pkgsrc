@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/10/21 18:57:04 rh Exp $
+
+--- ISPMan/Config.pm.orig	Tue Aug  1 16:18:21 2000
++++ ISPMan/Config.pm
+@@ -16,7 +16,7 @@
+    my $class = ref($proto) || $proto;   
+    
+    
+-   my $confDir=shift || "/etc/ispman/conf";
++   my $confDir=shift || "/etc/ispman";
+    unless ($Config){
+ 
+       die "\n\nERROR: $confDir does not exists. \nDid you create the configuration directory?\n\n" unless (-e $confDir);

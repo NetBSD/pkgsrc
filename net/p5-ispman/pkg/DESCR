@@ -1,0 +1,3 @@
+  This is the Perl5 module for ispman.  It contains a library of raw LDAP,
+IMAP, and Apache configuration routines that can be used by web front-ends
+and configuration scripts.
