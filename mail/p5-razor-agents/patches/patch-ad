@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.1 2003/09/27 13:20:25 heinz Exp $
+$NetBSD: patch-ad,v 1.2 2003/12/01 00:24:15 heinz Exp $
 
---- lib/Razor2/Client/Core.pm.orig	Wed Nov 13 21:01:10 2002
+--- lib/Razor2/Client/Core.pm.orig	Tue Aug  5 20:07:53 2003
 +++ lib/Razor2/Client/Core.pm
-@@ -216,8 +216,10 @@ sub bootstrap_discovery {
+@@ -218,8 +218,10 @@ sub bootstrap_discovery {
          foreach $rr ($query->answer) { 
              my $pushed = 0;
              if ($rr->type eq "A") { 
