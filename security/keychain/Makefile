@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.6 2002/04/10 17:52:08 schmonz Exp $
+# $NetBSD: Makefile,v 1.7 2003/01/18 05:58:58 martti Exp $
 
-DISTNAME=	keychain-1.9
+DISTNAME=	keychain-2.0.2
 PKGNAME=	${DISTNAME}
 CATEGORIES=	security
 MASTER_SITES=	http://www.ibiblio.org/gentoo/distfiles/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	martti@netbsd.org
-HOMEPAGE=	http://www.gentoo.org/projects/keychain/
+HOMEPAGE=	http://www.gentoo.org/proj/en/keychain.xml
 COMMENT=	Nice ssh-agent front-end
 
 .if !exists(/usr/bin/ssh-agent)
