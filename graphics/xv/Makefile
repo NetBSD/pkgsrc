@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2002/10/06 16:26:56 he Exp $
+# $NetBSD: Makefile,v 1.44 2003/01/13 10:54:08 grant Exp $
 
 DISTNAME=	xv-3.10a
 PKGREVISION=	4
@@ -16,8 +16,7 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.trilon.com/xv/
 COMMENT=	X11 program that displays images of various formats
 
-DEPENDS+=	png>=1.2.1:../../graphics/png
-DEPENDS+=	tiff-[0-9]*:../../graphics/tiff
+USE_BUILDLINK2=	YES
 
 USE_IMAKE=	YES
 
@@ -48,4 +47,6 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/xv
 	${INSTALL_DATA} ${WRKSRC}/docs/xvdocs.ps ${PREFIX}/share/doc/xv
 
+.include "../../graphics/png/buildlink2.mk"
+.include "../../graphics/tiff/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
