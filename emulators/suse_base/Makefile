@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2003/05/31 09:04:49 jklos Exp $
+# $NetBSD: Makefile,v 1.43 2003/05/31 09:12:55 jklos Exp $
 
 DISTNAME=		suse_base-${SUSE_VERSION}
 PKGREVISION=		4
@@ -16,7 +16,6 @@ ONLY_FOR_PLATFORM=	NetBSD-1.5Z[C-Z]-i386 NetBSD-1.6*-i386
 ONLY_FOR_PLATFORM+=	NetBSD-[2-9]*-i386
 ONLY_FOR_PLATFORM+=	NetBSD-1.6[L-Z]-powerpc NetBSD-1.6Z[A-Z]-powerpc
 ONLY_FOR_PLATFORM+=	NetBSD-1.[7-9]*-powerpc NetBSD-[2-9]*-powerpc
-ONLY_FOR_PLATFORM+=	NetBSD-1.6.1*-powerpc
 
 USE_BUILDLINK2=		# defined
 EXTRACT_ONLY=		# empty
