@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/02/03 12:16:43 recht Exp $
+$NetBSD: distinfo,v 1.2 2004/04/04 16:54:22 recht Exp $
 
-SHA1 (cairo-0.1.17.tar.gz) = bfafdb3c6cd7131ceacdf4c89e7d5d04334d4e67
-Size (cairo-0.1.17.tar.gz) = 358124 bytes
+SHA1 (cairo-0.1.18.tar.gz) = 69dd6cbc8716ac96b48509f7084be99786a3d080
+Size (cairo-0.1.18.tar.gz) = 365601 bytes
