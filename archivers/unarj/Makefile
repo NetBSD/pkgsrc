@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2005/01/21 14:30:05 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2005/01/21 14:42:10 wiz Exp $
 
 DISTNAME=       unarj-2.65
+PKGREVISION=	1
 CATEGORIES=	archivers
 MASTER_SITES=	#
 
