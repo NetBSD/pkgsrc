@@ -1,10 +1,20 @@
-$NetBSD: patch-aw,v 1.1 1998/08/25 12:53:10 agc Exp $
+$NetBSD: patch-aw,v 1.2 1999/03/05 11:22:35 frueauf Exp $
 
---- ./pvm3/src/pvmdpack.c.orig	Sat Jul 18 22:31:50 1998
-+++ ./pvm3/src/pvmdpack.c	Sat Jul 18 22:31:50 1998
-@@ -64,4 +64,5 @@
+--- routines/xsci/wf_f_util.c.orig	Fri Dec 18 23:37:39 1998
++++ routines/xsci/wf_f_util.c	Fri Dec 18 23:38:57 1998
+@@ -11,4 +11,8 @@
   */
  
-+#include <sys/types.h>
- #ifdef NEEDMENDIAN
- #include <machine/endian.h>
++#if defined(netbsd) || defined(freebsd)
++#include <unistd.h>
++#endif
++
+ #include "wf_fig.h"
+ #include "wf_resources.h"
+@@ -66,5 +70,5 @@
+ get_directory()
+ {
+-#if defined(SYSV) || defined(SVR4)
++#if defined(SYSV) || defined(SVR4) || defined(netbsd) || defined(freebsd)
+     extern char	   *getcwd();
+ 

@@ -1,25 +1,10 @@
-$NetBSD: patch-bm,v 1.1 1998/08/25 12:53:12 agc Exp $
+$NetBSD: patch-bm,v 1.2 1999/03/05 11:22:36 frueauf Exp $
 
---- /dev/null	Tue Aug 18 10:11:38 1998
-+++ pvm3/conf/NETBSDATARI.m4	Tue Aug 18 14:38:02 1998
-@@ -0,0 +1,20 @@
-+divert(-1)
-+undefine(`len')
-+#
-+# FORTRAN function names are in upper case
-+#
-+define(`FUNCTION',`translit($1,abcdefghijklmnopqrstuvwxyz,ABCDEFGHIJKLMNOPQRSTUVWXYZ)')
-+#
-+# FORTRAN character strings are passed as follows:
-+#   XXX is this right?
-+# a pointer to the base of the string is passed in the normal
-+# argument list, and the length is passed by value as an extra
-+# argument, after all of the other arguments.
-+#
-+define(`ARGS',`($1`'undivert(1))')
-+define(`SAVE',`divert(1)$1`'divert(0)')
-+define(`STRING_ARG',`$1_ptr`'SAVE(`, $1_len')')
-+define(`STRING_ARG_DECL',`char * $1_ptr; int $1_len')
-+define(`STRING_LEN',`$1_len')
-+define(`STRING_PTR',`$1_ptr')
-+divert(0)
+--- geci/scr_applications.c.orig	Wed Jan 13 19:53:58 1999
++++ geci/scr_applications.c	Wed Jan 13 19:54:17 1999
+@@ -6,4 +6,5 @@
+ #include <sys/time.h>
+ #include <stdio.h>
++#include <string.h>
+ #include <fcntl.h>
+ #include <netdb.h>

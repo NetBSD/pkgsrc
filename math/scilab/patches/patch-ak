@@ -1,11 +1,11 @@
-$NetBSD: patch-ak,v 1.1 1998/08/25 12:53:09 agc Exp $
+$NetBSD: patch-ak,v 1.2 1999/03/05 11:22:35 frueauf Exp $
 
 --- ./routines/metanet/saveg.c.orig	Sat Aug  8 14:01:11 1998
 +++ ./routines/metanet/saveg.c	Sat Aug  8 14:06:07 1998
 @@ -1,4 +1,7 @@
  #include <stdio.h>
  #ifndef __MSC__
-+#ifdef __FreeBSD__
++#if defined(netbsd) || defined(freebsd) 
 +#include <sys/types.h>
 +#endif
  #include <dirent.h>

@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.1 1998/08/25 12:53:08 agc Exp $
+$NetBSD: patch-ad,v 1.2 1999/03/05 11:22:34 frueauf Exp $
 
 --- ./routines/sparse/spConfig.h.orig	Sat Jul 18 22:31:40 1998
 +++ ./routines/sparse/spConfig.h	Sat Aug  8 13:15:56 1998
