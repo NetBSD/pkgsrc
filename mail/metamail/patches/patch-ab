@@ -1,8 +1,17 @@
-$NetBSD: patch-ab,v 1.5 2003/03/23 13:39:26 jmmv Exp $
+$NetBSD: patch-ab,v 1.6 2004/06/06 19:33:11 jschauma Exp $
 
---- config.h.orig	1993-11-24 16:36:07.000000000 +0100
-+++ config.h
-@@ -65,6 +65,12 @@ WITHOUT ANY EXPRESS OR IMPLIED WARRANTIE
+--- config.h.orig	1993-11-24 10:36:07.000000000 -0500
++++ config.h	2004-06-06 13:08:50.000000000 -0400
+@@ -40,7 +40,7 @@
+ #define SYSV /* Linux is SysV */
+ #endif
+ 
+-#ifdef SVR3
++#if defined(SVR3) || defined(__sgi)
+ #ifndef SYSV
+ /* Stupid SGI machines define SVR3 but not SYSV */
+ #define SYSV
+@@ -65,6 +65,12 @@
  #endif
  #endif
  
@@ -15,7 +24,7 @@ $NetBSD: patch-ab,v 1.5 2003/03/23 13:39:26 jmmv Exp $
  /* NOTE:  The RESET_PROGRAM resets the terminal to a "normal" state 
     If you comment out the definition, all will be well except that metamail's
     -R switch won't work, and metamail-called programs might be more likely
-@@ -100,7 +106,9 @@ WITHOUT ANY EXPRESS OR IMPLIED WARRANTIE
+@@ -100,7 +106,9 @@
  #endif
  
  #ifdef SYSV
@@ -25,7 +34,7 @@ $NetBSD: patch-ab,v 1.5 2003/03/23 13:39:26 jmmv Exp $
  #define bcopy(a, b, c) memcpy(b, a, c)
  #define bzero(a, b) memset(a, 0, b)
  #define bcmp memcmp
-@@ -155,9 +163,13 @@ WITHOUT ANY EXPRESS OR IMPLIED WARRANTIE
+@@ -155,9 +163,13 @@
  #ifdef NeXT
  #define sigtype void
  #else
@@ -39,7 +48,7 @@ $NetBSD: patch-ab,v 1.5 2003/03/23 13:39:26 jmmv Exp $
  
  #ifdef MSDOS
  #define PATH_SEPARATOR ';'
-@@ -173,7 +185,7 @@ WITHOUT ANY EXPRESS OR IMPLIED WARRANTIE
+@@ -173,7 +185,7 @@
  #else
  #define PATH_SEPARATOR ':'
  #ifndef STDPATH
