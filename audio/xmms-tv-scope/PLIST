@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/02/14 23:56:39 hubertf Exp $
+lib/xmms/Visualization/tv_scope.a
+lib/xmms/Visualization/tv_scope.la
+lib/xmms/Visualization/tv_scope.so
+@dirrm lib/xmms/Visualization
