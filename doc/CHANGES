@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.487 2002/11/08 23:24:16 rh Exp $
+$NetBSD: CHANGES,v 1.488 2002/11/09 00:00:00 rh Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3563,3 +3563,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Added lmclock-1.0 [is 2002-11-08]
 	Updated lmclock to 1.1 [is 2002-11-08]
 	Updated edb to 1.0.3 [rh 2002-11-08]
+	Updated feh to 1.2.2 [rh 2002-11-08]
