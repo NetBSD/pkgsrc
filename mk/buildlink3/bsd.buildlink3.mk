@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.161 2004/11/12 20:25:41 sketch Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.162 2004/11/17 19:40:35 jlam Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -261,7 +261,11 @@ ${_depmethod_}+=	${_BLNK_ADD_TO.${_depmethod_}}
 #				compiler/linker so that building against
 #				<pkg> will work.
 #
-# BUILDLINK_LIBS.<pkg>		contain -l... (library) options that are
+# BUILDLINK_AUTO_LIBS.<pkg>	"yes" or "no" for whether BUILDLINK_LIBS.<pkg>
+#				should automatically be appended to the LIBS
+#				variable.  Defaults to "yes".
+#
+# BUILDLINK_LIBS.<pkg>		contain -l... (library) options that can be
 #				automatically appended to the LIBS
 #				variable when building against <pkg>.
 #
@@ -347,6 +351,7 @@ WRAPPER_VARS+=	BUILDLINK_PREFIX.${_pkg_}
 BUILDLINK_CPPFLAGS.${_pkg_}?=	# empty
 BUILDLINK_LDFLAGS.${_pkg_}?=	# empty
 BUILDLINK_LIBS.${_pkg_}?=	# empty
+BUILDLINK_AUTO_LIBS.${_pkg_}?=	yes
 BUILDLINK_INCDIRS.${_pkg_}?=	include
 BUILDLINK_LIBDIRS.${_pkg_}?=	lib${LIBABISUFFIX}
 .  if !empty(BUILDLINK_DEPMETHOD.${_pkg_}:Mfull)
@@ -383,11 +388,13 @@ BUILDLINK_LDFLAGS+=	${_flag_}
 BUILDLINK_CFLAGS+=	${_flag_}
 .    endif
 .  endfor
-.  for _flag_ in ${BUILDLINK_LIBS.${_pkg_}}
-.    if empty(BUILDLINK_LIBS:M${_flag_})
+.  if !empty(BUILDLINK_AUTO_LIBS.${_pkg_}:M[yY][eE][sS])
+.    for _flag_ in ${BUILDLINK_LIBS.${_pkg_}}
+.      if empty(BUILDLINK_LIBS:M${_flag_})
 BUILDLINK_LIBS+=	${_flag_}
-.    endif
-.  endfor
+.      endif
+.    endfor
+.  endif
 .  if !empty(BUILDLINK_INCDIRS.${_pkg_})
 .    for _dir_ in ${BUILDLINK_INCDIRS.${_pkg_}:S/^/${BUILDLINK_PREFIX.${_pkg_}}\//}
 .      if exists(${_dir_})
