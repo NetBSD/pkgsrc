@@ -1,25 +1,7 @@
-$NetBSD: patch-ad,v 1.9 2003/11/14 15:05:09 fredb Exp $
+$NetBSD: patch-ad,v 1.10 2003/11/14 15:25:16 fredb Exp $
 
 --- driver/Makefile.in.orig	2003-09-07 19:00:00.000000000 -0500
 +++ driver/Makefile.in
-@@ -16,7 +16,7 @@ exec_prefix	= @exec_prefix@
- bindir		= @bindir@
- #datadir	= @datadir@
- datadir		= $(GNOME_DATADIR)
--localedir	= $(datadir)/locale
-+localedir	= /usr/X11R6/share/locale
- mandir		= @mandir@
- mansuffix	= 1
- manNdir		= $(mandir)/man$(mansuffix)
-@@ -39,7 +39,7 @@ CC		= @CC@
- CFLAGS		= @CFLAGS@
- LDFLAGS		= @LDFLAGS@
- DEFS		= @DEFS@
--INTL_DEFS	= -DLOCALEDIR=\"$(localedir)\"
-+INTL_DEFS	= -DLOCALEDIR="\"/usr/X11R6/share/locale\""
- SUBP_DEFS	= $(DEFS) -DDEFAULT_PATH_PREFIX='"@HACKDIR@"'
- GTK_DEFS	= $(DEFS) -DDEFAULT_ICONDIR='"$(GLADE_DATADIR)"'
- CONF_DEFS	= -DHACK_CONFIGURATION_PATH='"$(HACK_CONF_DIR)"'
 @@ -456,7 +456,7 @@ install-pam:
  	  fi ;								\
  	fi
