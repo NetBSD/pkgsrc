@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2003/07/25 09:22:51 jmmv Exp $
+@comment $NetBSD: PLIST.common,v 1.1 2003/09/25 05:36:33 grant Exp $
 bin/wmxmms
 bin/xmms
 bin/xmms-config
@@ -99,7 +99,5 @@ share/xmms/wmxmms.xpm
 @dirrm lib/xmms/Visualization
 @dirrm lib/xmms/Output
 @dirrm lib/xmms/Input
-@dirrm lib/xmms/General
 @dirrm lib/xmms/Effect
-@dirrm lib/xmms
 @dirrm include/xmms
