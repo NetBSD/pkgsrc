@@ -1,0 +1,16 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2001/03/21 14:23:13 ad Exp $
+
+To use this package:
+
+1. Create a group named `i2octl'.
+2. chgrp i2octl /dev/iop?
+3. chmod g=rw /dev/iop?
+4. chgrp i2octl ${PREFIX}/libexec/cgi-bin/i2octl
+5. chmod g+s ${PREFIX}/libexec/cgi-bin/i2octl
+6. Ensure that a HTTP server is installed. If it's running, stop it.
+7. Ensure that the HTTP server will execute SGID CGI programs.
+8. Put HTTP access control in place.  SSL would be a good idea.
+9. Start the HTTP server.
+
+===========================================================================
