@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2003/05/05 19:05:26 jmmv Exp $
+# $NetBSD: Makefile,v 1.22 2003/05/09 08:02:38 wiz Exp $
 #
 
 DISTNAME=		Gtk-Perl-0.7008
@@ -13,7 +13,7 @@ MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Gtk/} \
 MAINTAINER=		root@garbled.net
 COMMENT=		Perl bindings for GTK+
 
-BUILD_DEPENDS+=		p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Writer
+BUILD_DEPENDS+=		p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Parser
 BUILD_DEPENDS+=		p5-XML-Writer-[0-9]*:../../textproc/p5-XML-Writer
 
 USE_BUILDLINK2=		YES
