@@ -1,3 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/12/08 04:21:43 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/11/27 17:52:09 dmcmahill Exp $
 bin/covered
 man/man1/covered.1
+share/covered/scripts/cov_create.tcl
+share/covered/scripts/main_view.tcl
+share/covered/scripts/menu_create.tcl
+share/covered/scripts/process_file.tcl
+@dirrm share/covered/scripts
+@dirrm share/covered

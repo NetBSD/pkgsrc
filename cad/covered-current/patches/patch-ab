@@ -1,0 +1,31 @@
+$NetBSD: patch-ab,v 1.3 2004/11/27 17:52:09 dmcmahill Exp $
+
+--- configure.in.orig	Thu Mar 25 14:40:32 2004
++++ configure.in
+@@ -18,6 +18,26 @@ then
+ 	exit 1
+ fi
+ 
++AC_PATH_PROG(TCLCONFIG, tclConfig.sh)
++if test "X$TCLCONFIG" = "X" ; then
++	AC_ERROR([Could not find tclConfig.sh])
++else
++	. $TCLCONFIG
++fi
++AC_MSG_CHECKING([For libraries needed by tcl])
++AC_MSG_RESULT([TCL_LIBS])
++
++AC_PATH_PROG(TKCONFIG, tkConfig.sh)
++if test "X$TKCONFIG" = "X" ; then
++	AC_ERROR([Could not find tkConfig.sh])
++else
++	. $TKCONFIG
++fi
++AC_MSG_CHECKING([For libraries needed by tk])
++AC_MSG_RESULT([TK_LIBS])
++
++LIBS="$LIBS $TCL_LIBS $TK_LIBS"
++
+ dnl Checks for libraries.
+ AC_CHECK_LIB(tcl, Tcl_Init)
+ AC_CHECK_LIB(tk, Tk_SafeInit)
