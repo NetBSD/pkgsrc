@@ -1,12 +1,12 @@
-$NetBSD: patch-ai,v 1.1 2004/07/23 15:09:57 recht Exp $
+$NetBSD: patch-ai,v 1.2 2004/11/25 09:33:41 adam Exp $
 
---- libbalsa/mailbox_mh.c.orig	2004-03-31 00:27:18.000000000 +0200
+--- libbalsa/mailbox_mh.c.orig	2004-10-30 09:35:58.000000000 +0000
 +++ libbalsa/mailbox_mh.c
 @@ -25,6 +25,7 @@
  #define _XOPEN_SOURCE          500
  #define _XOPEN_SOURCE_EXTENDED 1
  #define _POSIX_SOURCE          1
-+#define	_NETBSD_SOURCE         1
- #include <libgnome/gnome-i18n.h>
++#define _NETBSD_SOURCE         1
+ #include <libgnome/libgnome.h>
  
  #include <unistd.h>

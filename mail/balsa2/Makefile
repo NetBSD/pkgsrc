@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.33 2004/11/14 17:02:03 jmmv Exp $
+# $NetBSD: Makefile,v 1.34 2004/11/25 09:33:41 adam Exp $
 
-DISTNAME=		balsa-2.2.5
-CATEGORIES=		mail gnome
-MASTER_SITES=		http://balsa.gnome.org/				\
-			ftp://ftp.newton.cx/pub/balsa/
-EXTRACT_SUFX=		.tar.bz2
+DISTNAME=	balsa-2.2.6
+CATEGORIES=	mail gnome
+MASTER_SITES=	http://balsa.gnome.org/				\
+		ftp://ftp.newton.cx/pub/balsa/
+EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=		tech-pkg@NetBSD.org
-HOMEPAGE=		http://balsa.gnome.org/
-COMMENT=		GNOME2 EMail client
+MAINTAINER=	tech-pkg@NetBSD.org
+HOMEPAGE=	http://balsa.gnome.org/
+COMMENT=	GNOME2 EMail client
 
 BUILD_USES_MSGFMT=	yes
 
