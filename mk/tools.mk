@@ -1,4 +1,4 @@
-# $NetBSD: tools.mk,v 1.29 2004/02/18 14:23:42 jlam Exp $
+# $NetBSD: tools.mk,v 1.30 2004/03/09 10:07:21 xtraeme Exp $
 #
 # This Makefile creates a ${TOOLS_DIR} directory and populates the bin
 # subdir with tools that hide the ones outside of ${TOOLS_DIR}.
@@ -139,7 +139,7 @@ _TOOLS_OPSYS_HAS_GNU.m4+=	# empty
 _TOOLS_OPSYS_HAS_GNU.make+=	Darwin-*-*
 _TOOLS_OPSYS_HAS_GNU.patch+=	Darwin-*-* FreeBSD-*-* Linux-*-* NetBSD-*-*
 _TOOLS_OPSYS_HAS_GNU.patch+=	OpenBSD-*-*
-_TOOLS_OPSYS_HAS_GNU.sed+=	Linux-*-* NetBSD-*-*
+_TOOLS_OPSYS_HAS_GNU.sed+=	FreBSD-*-* Linux-*-* NetBSD-*-*
 _TOOLS_OPSYS_HAS_GNU.yacc+=	FreeBSD-*-* Linux-*-* NetBSD-*-* OpenBSD-*-*
 
 # These platforms have GNUish versions of the tools available in the base
