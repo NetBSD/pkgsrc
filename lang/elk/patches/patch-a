@@ -1,30 +1,5 @@
-diff -crP -x *.ps elk-3.0.orig/Makefile elk-3.0/Makefile
-*** elk-3.0.orig/Makefile	Tue Feb  8 13:11:23 1994
---- elk-3.0/Makefile	Wed Mar  8 19:11:18 1995
-***************
-*** 16,24 ****
-  	 lib/unix\
-  	 lib/xlib\
-  	 lib/xt\
-! 	 lib/xaw\
-! 	 lib/xm\
-! 	 lib/xm/xt
-  
-  # ----------------------------------------------------------------------
-  
---- 16,24 ----
-  	 lib/unix\
-  	 lib/xlib\
-  	 lib/xt\
-! 	 lib/xaw
-! #	 lib/xm\
-! #	 lib/xm/xt
-  
-  # ----------------------------------------------------------------------
-  
-diff -crP -x *.ps elk-3.0.orig/doc/man/elk.1.orig elk-3.0/doc/man/elk.1
-*** elk-3.0/doc/man/elk.1.orig	Thu Apr  6 14:40:07 1995
---- elk-3.0/doc/man/elk.1	Thu Apr  6 14:41:02 1995
+*** doc/man/elk.1.orig	Thu Apr  6 14:40:07 1995
+--- doc/man/elk.1	Thu Apr  6 14:41:02 1995
 ***************
 *** 2,10 ****
   .TH ELK 1 "15 January 1991"
@@ -74,3 +49,27 @@ diff -crP -x *.ps elk-3.0.orig/doc/man/elk.1.orig elk-3.0/doc/man/elk.1
   This interpreter, together with the standard Scheme toplevel,
   .I Elk
   can be used as an ordinary, stand-alone implementation of the
+--- Makefile.orig	Mon Jul 31 13:56:26 1995
++++ Makefile	Tue Mar 31 11:44:51 1998
+@@ -16,9 +16,9 @@
+ 	 lib/unix\
+ 	 lib/xlib\
+ 	 lib/xt\
+-	 lib/xaw\
+-	 lib/xm\
+-	 lib/xm/xt
++	 lib/xaw
++#	 lib/xm\
++#	 lib/xm/xt
+ 
+ # ----------------------------------------------------------------------
+ 
+@@ -37,7 +37,7 @@
+ 	done
+ 
+ install:
+-	@for i in $(SUBDIRS) ;\
++	@for i in $(SUBDIRS) doc/man;\
+ 	do \
+ 	    echo Installing $$i...; \
+ 	    ( cd $$i ; $(MAKE) install ) || exit $$?; \
