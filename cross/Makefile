@@ -1,4 +1,5 @@
-# $NetBSD: Makefile,v 1.19 2000/12/04 13:18:39 agc Exp $
+# $NetBSD: Makefile,v 1.20 2000/12/12 01:30:45 wiz Exp $
+#
 
     SUBDIR += arm-netbsd
     SUBDIR += armv2-netbsd

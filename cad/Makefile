@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2000/11/27 23:32:11 jtb Exp $
-# FreeBSD Id: Makefile,v 1.8 1997/11/17 10:53:52 tg Exp
+# $NetBSD: Makefile,v 1.32 2000/12/12 01:30:41 wiz Exp $
 #
 
     SUBDIR += acs

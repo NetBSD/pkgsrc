@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2000/07/08 16:08:08 sakamoto Exp $
-# FreeBSD Id: Makefile,v 1.26 1997/10/13 04:41:06 max Exp
+# $NetBSD: Makefile,v 1.30 2000/12/12 01:30:43 wiz Exp $
 #
 
     SUBDIR += binkd
