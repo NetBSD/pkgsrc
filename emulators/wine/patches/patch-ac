@@ -1,44 +1,8 @@
-$NetBSD: patch-ac,v 1.6 2003/06/23 08:13:00 adam Exp $
+$NetBSD: patch-ac,v 1.7 2003/09/15 10:51:38 adam Exp $
 
---- configure.orig	2003-06-18 22:35:38.000000000 +0200
-+++ configure	2003-06-19 11:34:00.000000000 +0200
-@@ -12230,7 +12230,7 @@
-   ac_status=$?
-   echo "$as_me:$LINENO: \$? = $ac_status" >&5
-   (exit $ac_status); }; }; then
--  ac_cv_lib_soname_X11=`$ac_cv_path_LDD conftest$ac_exeext | grep libX11\\.so | sed 's/^[ 	]*\([^ 	]*\)[ 	]*=>.*$/\1/'`
-+  ac_cv_lib_soname_X11=`$ac_cv_path_LDD conftest$ac_exeext | grep libX11\\.so | sed 's/^.*=>[	 ]*\(.*\)[	 ]*/\1/'`
-   if test "x$ac_cv_lib_soname_X11" = "x"
-   then
-      ac_cv_lib_soname_X11="libX11.so"
-@@ -12295,7 +12295,7 @@
-   ac_status=$?
-   echo "$as_me:$LINENO: \$? = $ac_status" >&5
-   (exit $ac_status); }; }; then
--  ac_cv_lib_soname_Xext=`$ac_cv_path_LDD conftest$ac_exeext | grep libXext\\.so | sed 's/^[ 	]*\([^ 	]*\)[ 	]*=>.*$/\1/'`
-+  ac_cv_lib_soname_Xext=`$ac_cv_path_LDD conftest$ac_exeext | grep libXext\\.so | sed 's/^.*=>[	 ]*\(.*\)[	 ]*/\1/'`
-   if test "x$ac_cv_lib_soname_Xext" = "x"
-   then
-      ac_cv_lib_soname_Xext="libXext.so"
-@@ -12360,7 +12360,7 @@
-   ac_status=$?
-   echo "$as_me:$LINENO: \$? = $ac_status" >&5
-   (exit $ac_status); }; }; then
--  ac_cv_lib_soname_Xrender=`$ac_cv_path_LDD conftest$ac_exeext | grep libXrender\\.so | sed 's/^[ 	]*\([^ 	]*\)[ 	]*=>.*$/\1/'`
-+  ac_cv_lib_soname_Xrender=`$ac_cv_path_LDD conftest$ac_exeext | grep libXrender\\.so | sed 's/^.*=>[	 ]*\(.*\)[	 ]*/\1/'`
-   if test "x$ac_cv_lib_soname_Xrender" = "x"
-   then
-      ac_cv_lib_soname_Xrender="libXrender.so"
-@@ -12425,7 +12425,7 @@
-   ac_status=$?
-   echo "$as_me:$LINENO: \$? = $ac_status" >&5
-   (exit $ac_status); }; }; then
--  ac_cv_lib_soname_freetype=`$ac_cv_path_LDD conftest$ac_exeext | grep libfreetype\\.so | sed 's/^[ 	]*\([^ 	]*\)[ 	]*=>.*$/\1/'`
-+  ac_cv_lib_soname_freetype=`$ac_cv_path_LDD conftest$ac_exeext | grep libfreetype\\.so | sed 's/^.*=>[	 ]*\(.*\)[	 ]*/\1/'`
-   if test "x$ac_cv_lib_soname_freetype" = "x"
-   then
-      ac_cv_lib_soname_freetype="libfreetype.so"
-@@ -14770,7 +14770,7 @@
+--- configure.orig	2003-09-12 03:31:07.000000000 +0200
++++ configure
+@@ -15417,7 +15417,7 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
@@ -47,7 +11,7 @@ $NetBSD: patch-ac,v 1.6 2003/06/23 08:13:00 adam Exp $
  else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
-@@ -15656,7 +15656,7 @@
+@@ -16303,7 +16303,7 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
