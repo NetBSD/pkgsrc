@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/07/09 13:42:16 skrll Exp $
+# $NetBSD: Makefile,v 1.11 2001/07/09 16:48:39 skrll Exp $
 #
 
 DISTNAME=	kdelibs-2.1
@@ -34,14 +34,6 @@ MKDIRS=	share/kde/icons/locolor/32x32/actions/kde \
 KDE_RPATH_MAKEFILES=	dcop/Makefile.in
 
 # Add a missing $(KDE_RPATH) to the LDFLAGS setting in several Makefiles.
-fix:
-	@cd ${WRKSRC};							\
-	for file in ${KDE_RPATH_MAKEFILES:S/.in$//}; do			\
-		${SED}	-e "s,\(^LDFLAGS.*\),\1 \$$(KDE_RPATH),"	\
-			$${file} > $${file}.add-kde-rpath;		\
-		${MV} -f $${file}.add-kde-rpath $${file};		\
-	done
-
 post-patch:
 	@cd ${WRKSRC};							\
 	for file in ${KDE_RPATH_MAKEFILES}; do				\
