@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.9 2003/09/17 19:40:59 grant Exp $
+# $NetBSD: Makefile.common,v 1.10 2003/12/19 12:07:43 recht Exp $
 
 DISTNAME=	espgs-${GS_VERS}-source
-BASEGS_VERS=	7.05
-GS_VERS=	${BASEGS_VERS}.6
+BASEGS_VERS=	7.07
+GS_VERS=	${BASEGS_VERS}.1
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-source//}
 CATEGORIES=	print
 MASTER_SITES=	ftp://ftp.easysw.com/pub/ghostscript/ \
