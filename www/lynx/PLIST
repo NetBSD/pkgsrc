@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.7 2004/03/03 21:14:41 ben Exp $
+@comment $NetBSD: PLIST,v 1.8 2004/05/06 19:19:40 wiz Exp $
 bin/lynx
 man/man1/lynx.1
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/lynx.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/lynx.mo
-${PKGLOCALEDIR}/locale/et/LC_MESSAGES/lynx.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/lynx.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/lynx.mo
+${PKGLOCALEDIR}/locale/et/LC_MESSAGES/lynx.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/lynx.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/lynx.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/lynx.mo
@@ -63,9 +63,9 @@ share/lynx/lynx_doc/samples/lynx.com
 share/lynx/lynx_doc/samples/lynx.lss
 share/lynx/lynx_doc/samples/lynxdump
 share/lynx/lynx_doc/samples/mailcap
-share/lynx/lynx_doc/samples/mime.types
-share/lynx/lynx_doc/samples/mild-colors.lss
 share/lynx/lynx_doc/samples/mailto-form.pl
+share/lynx/lynx_doc/samples/mild-colors.lss
+share/lynx/lynx_doc/samples/mime.types
 share/lynx/lynx_doc/test/ALT88592.html
 share/lynx/lynx_doc/test/ISO_LATIN1_test.html
 share/lynx/lynx_doc/test/README.txt
@@ -81,13 +81,10 @@ share/lynx/lynx_doc/test/spaces.html
 share/lynx/lynx_doc/test/tabtest.html
 share/lynx/lynx_doc/test/unicode.html
 share/lynx/lynx_doc/test/utf-8-demo.html
-share/lynx/lynx_help/COPYING
 share/lynx/lynx_help/COPYHEADER
+share/lynx/lynx_help/COPYING
 share/lynx/lynx_help/Lynx_users_guide.html.gz
 share/lynx/lynx_help/about_lynx.html.gz
-share/lynx/lynx_help/lynx-dev.html.gz
-share/lynx/lynx_help/lynx_help_main.html.gz
-share/lynx/lynx_help/lynx_url_support.html.gz
 share/lynx/lynx_help/keystrokes/alt_edit_help.html.gz
 share/lynx/lynx_help/keystrokes/bashlike_edit_help.html.gz
 share/lynx/lynx_help/keystrokes/bookmark_help.html.gz
@@ -107,10 +104,13 @@ share/lynx/lynx_help/keystrokes/scrolling_help.html.gz
 share/lynx/lynx_help/keystrokes/test_display.html.gz
 share/lynx/lynx_help/keystrokes/visited_help.html.gz
 share/lynx/lynx_help/keystrokes/xterm_help.html.gz
+share/lynx/lynx_help/lynx-dev.html.gz
+share/lynx/lynx_help/lynx_help_main.html.gz
+share/lynx/lynx_help/lynx_url_support.html.gz
 @dirrm share/lynx/lynx_help/keystrokes
 @dirrm share/lynx/lynx_help
-@dirrm share/lynx/lynx_doc/samples
 @dirrm share/lynx/lynx_doc/test
+@dirrm share/lynx/lynx_doc/samples
 @dirrm share/lynx/lynx_doc/docs
 @dirrm share/lynx/lynx_doc
-@dirrm share/lynx/
+@dirrm share/lynx
