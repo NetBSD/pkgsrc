@@ -9,7 +9,7 @@ Hubert Feyrer
 
    <hubertf@NetBSD.org>
 
-   $NetBSD: pkgsrc.txt,v 1.1 2003/06/23 07:41:44 grant Exp $
+   $NetBSD: pkgsrc.txt,v 1.2 2003/06/23 13:27:58 grant Exp $
 
    Copyright © 1994-2003 The NetBSD Foundation, Inc
 
@@ -141,17 +141,17 @@ Hubert Feyrer
               12.3. Updating a Package to a Newer Version
               12.4. Moving a Package in pkgsrc
 
-        13. A simple example of a package: bison
+   A. A simple example of a package: bison
 
-              13.1. files
-              13.2. Steps for building, installing, packaging
+        A.1. files
+        A.2. Steps for building, installing, packaging
 
-   A. Build logs
+   B. Build logs
 
-        A.1. Building top
-        A.2. Packaging top
+        B.1. Building top
+        B.2. Packaging top
 
-   B. Layout of the FTP server's package archive
+   C. Layout of the FTP server's package archive
 
 Chapter 1. Introduction
 
@@ -188,7 +188,7 @@ Chapter 1. Introduction
 
    pkgsrc  was  originally  developed  on  NetBSD,  and  now supports the
    following platforms:
-     * Darwin (MacOS X)
+     * Darwin (Mac OS X)
      * FreeBSD
      * IRIX
      * Linux
@@ -285,7 +285,7 @@ Chapter 2. Using pkgsrc on systems other than NetBSD
    build  the  required  tools to use pkgsrc on your platform. As well as
    native  NetBSD  support, pkgsrc and the bootstrap kit have support for
    the following operating systems:
-     * Darwin (MacOS X)
+     * Darwin (Mac OS X)
      * FreeBSD
      * IRIX
      * Linux
@@ -626,7 +626,7 @@ tgz
 [...installation continues...]
 
    Taking  the top system utility as an example, we can install it on our
-   system by building as shown in Appendix A, Build logs.
+   system by building as shown in Appendix B, Build logs.
 
    The program is installed under the default root of the packages tree -
    /usr/pkg.  Should  this  not  conform  to  your tastes, simply set the
@@ -717,7 +717,7 @@ Chapter 4. Creating binary packages
    then  build a binary package from what was installed. You can then use
    the  pkg_*  tools  to  manipulate  it.  Binary packages are created by
    default  in  /usr/pkgsrc/packages,  in the form of a gzip or bzip2 tar
-   file. See Section A.2, "Packaging top" for a continuation of the above
+   file. See Section B.2, "Packaging top" for a continuation of the above
    sysutils/top example.
 
    See  Chapter 12,  Submitting  and Committing for information on how to
@@ -1070,11 +1070,6 @@ pkgsrc developer's guide
         12.3. Updating a Package to a Newer Version
         12.4. Moving a Package in pkgsrc
 
-   13. A simple example of a package: bison
-
-        13.1. files
-        13.2. Steps for building, installing, packaging
-
 Chapter 5. Package components - files, directories and contents
 
    Table of Contents
@@ -1330,7 +1325,7 @@ Chapter 6. PLIST issues
        Be  sure to add a RCS ID line as the first thing in any PLIST file
        you write:
 
-@comment $NetBSD: pkgsrc.txt,v 1.1 2003/06/23 07:41:44 grant Exp $
+@comment $NetBSD: pkgsrc.txt,v 1.2 2003/06/23 13:27:58 grant Exp $
 
      * ${MACHINE_ARCH}, ${MACHINE_GNU_ARCH}
        Some  packages  like  emacs and perl embed information about which
@@ -2910,23 +2905,23 @@ Chapter 12. Submitting and Committing
 
        (and any packages from step 5, of course).
 
-Chapter 13. A simple example of a package: bison
+Appendix A. A simple example of a package: bison
 
    Table of Contents
 
-   13.1. files
-   13.2. Steps for building, installing, packaging
+   A.1. files
+   A.2. Steps for building, installing, packaging
 
    I  checked  to  find  a  piece of software that wasn't in the packages
    collection, and picked GNU bison. Quite why someone would want to have
    bison  when Berkeley yacc is already present in the tree is beyond me,
    but it's useful for the purposes of this exercise.
 
-13.1. files
+A.1. files
 
-13.1.1. Makefile
+A.1.1. Makefile
 
-# $NetBSD: pkgsrc.txt,v 1.1 2003/06/23 07:41:44 grant Exp $
+# $NetBSD: pkgsrc.txt,v 1.2 2003/06/23 13:27:58 grant Exp $
 #
 
 DISTNAME=       bison-1.25
@@ -2942,15 +2937,15 @@ INFO_FILES=     bison.info
 
 .include "../../mk/bsd.pkg.mk"
 
-13.1.2. DESCR
+A.1.2. DESCR
 
 GNU version of yacc.  Can make re-entrant parsers, and numerous other
 improvements.  Why you would want this when Berkeley yacc(1) is part
 of the NetBSD source tree is beyond me.
 
-13.1.3. PLIST
+A.1.3. PLIST
 
-@comment $NetBSD: pkgsrc.txt,v 1.1 2003/06/23 07:41:44 grant Exp $
+@comment $NetBSD: pkgsrc.txt,v 1.2 2003/06/23 13:27:58 grant Exp $
 bin/bison
 man/man1/bison.1.gz
 info/bison.info
@@ -2962,7 +2957,7 @@ info/bison.info-5
 share/bison.simple
 share/bison.hairy
 
-13.1.4. Checking a package with pkglint
+A.1.4. Checking a package with pkglint
 
    The  NetBSD  package system comes with pkgtools/pkglint which helps to
    check the contents of these files. After installation it is quite easy
@@ -2979,7 +2974,7 @@ looks fine.
    verbose  checks  will  be  performed.  Use  e.g. pkglint -v for a very
    verbose check.
 
-13.2. Steps for building, installing, packaging
+A.2. Steps for building, installing, packaging
 
    Create  the  directory  where  the  package  lives, plus any auxiliary
    directories:
@@ -3122,14 +3117,14 @@ Creating gzip'd tar ball in '/u/pkgsrc/lang/bison/bison-1.25.tgz'
 # make clean
 ===>  Cleaning for bison-1.25
 
-Appendix A. Build logs
+Appendix B. Build logs
 
    Table of Contents
 
-   A.1. Building top
-   A.2. Packaging top
+   B.1. Building top
+   B.2. Packaging top
 
-A.1. Building top
+B.1. Building top
 
 # make
 >> top-3.5beta5.tar.gz doesn't seem to exist on this system.
@@ -3202,7 +3197,7 @@ opt.o machine.o -ltermcap -lm -lkvm
 strip /usr/pkg/bin/top
 ===>  Registering installation for top-3.5beta5
 
-A.2. Packaging top
+B.2. Packaging top
 
 # make package
 >> Checksum OK for top-3.5beta5.tar.gz.
@@ -3211,7 +3206,7 @@ Creating package top-3.5beta5.tgz
 Registering depends:.
 Creating gzip'd tar ball in '/u/pkgsrc/sysutils/top/top-3.5beta5.tgz'
 
-Appendix B. Layout of the FTP server's package archive
+Appendix C. Layout of the FTP server's package archive
 
    Layout for precompiled binary packages on ftp.NetBSD.org:
 /pub/NetBSD/packages/
