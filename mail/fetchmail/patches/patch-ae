@@ -1,0 +1,15 @@
+$NetBSD: patch-ae,v 1.1 2000/03/04 02:16:06 wiz Exp $
+
+--- ./conf.c.orig	Fri Feb 18 04:31:22 2000
++++ ./conf.c	Fri Mar  3 01:00:56 2000
+@@ -249,8 +249,9 @@
+ 	    stringdump("via", ctl->server.via); 
+ 	    stringdump("protocol", 
+ 		       using_kpop ? "KPOP" : showproto(ctl->server.protocol));
++#if !INET6_ENABLE
+ 	    numdump("port",  ctl->server.port);
+-#if INET6_ENABLE
++#else
+ 	    stringdump("service", ctl->server.service);
+ #endif
+ 	    numdump("timeout",  ctl->server.timeout);
