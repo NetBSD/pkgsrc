@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/08/03 17:49:25 rh Exp $
+
+--- Browser/Makefile.in.orig	Fri Jan  3 19:24:16 1997
++++ Browser/Makefile.in	Thu Aug  3 19:34:42 2000
+@@ -67,7 +67,7 @@
+ DESTDIR =
+ 
+ install: all installdirs
+-	$(CP) gist $(DESTDIR)$(Y_BINDIR)
++	${BSD_INSTALL_PROGRAM} gist $(DESTDIR)$(Y_BINDIR)
+ 
+ uninstall:
+ 	$(RM) -r $(DESTDIR)$(Y_BINDIR)/gist

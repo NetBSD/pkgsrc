@@ -1,0 +1,16 @@
+Yorick is an interpreted language and is useful for scientific
+computing and numerical analysis.  It is similar to Matlab. 
+
+It can also do interactive graphics package via the X window system,
+including x-y plots, quadrilateral meshes, and cell arrays, and
+includes tools to assist making animated and simple 3D graphs. 
+
+Yorick's binary file package can read or write floating point formats
+foreign to the machine where Yorick is running. 
+										     
+A library of functions written in the Yorick language, including
+Bessel, gamma, and related functions, multiple key sorting, spline,
+rational function, and least squares fitting, and routines to read and
+write netCDF files. 
+
+NetBSD port by John P. Refling <refling@comet.lbl.gov>
