@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: dmesg2gif,v 1.4 2003/11/11 16:30:46 hubertf Exp $
+# $NetBSD: dmesg2gif,v 1.5 2003/11/11 21:22:51 hubertf Exp $
 #
 # Copyright (c) 2003 Hubert Feyrer <hubertf@netbsd.org>
 #
@@ -21,4 +21,4 @@ fi
 			print "\t$from -> $to\n"; 
 		}'
 	echo "}"
-) | tee /tmp/x.debug | dot -Tgif
+) | dot -Tgif
