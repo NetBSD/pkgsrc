@@ -1,4 +1,4 @@
-# $NetBSD: bsd.wrapper.mk,v 1.12.2.3 2004/11/30 15:06:35 tv Exp $
+# $NetBSD: bsd.wrapper.mk,v 1.12.2.4 2004/11/30 15:10:47 tv Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -146,7 +146,11 @@ _WRAPPEES_UNIQUE+=	${_wrappee_}
 # Strip the leading paths from the toolchain variables since we manipulate
 # the PATH to use the correct executable.
 #
+.  if empty(${_wrappee_}:C/^/_asdf_/1:N_asdf_*)
+${_wrappee_}:=		${${_wrappee_}:C/^/_asdf_/1:M_asdf_*:S/^_asdf_//:T}
+.  else
 ${_wrappee_}:=		${${_wrappee_}:C/^/_asdf_/1:M_asdf_*:S/^_asdf_//:T} ${${_wrappee_}:C/^/_asdf_/1:N_asdf_*}
+.  endif
 #
 # WRAPPER_<wrappee> is the full path to the wrapper script, plus any
 # trailing arguments to <wrappee>.
