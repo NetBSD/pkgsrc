@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/04/24 17:27:41 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2002/05/02 20:21:31 drochner Exp $
 # FreeBSD Id: Makefile,v 1.30 1997/12/14 02:03:53 asami Exp
 
 DISTNAME=	emacs-21.2
@@ -13,32 +13,29 @@ CONFLICTS=	mule-[0-9]*
 
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
+USE_BUILDLINK_ONLY=	yes
 
-BUILD_DEFS+=	USE_INET6 EMACS_USE_POP EMACS_USE_X EMACS_USE_X_TOOLKIT
+CONFIGURE_ARGS+=--with-x
+CONFIGURE_ARGS+=--with-x-toolkit=athena
 
-.include "../../mk/bsd.prefs.mk"
+.include "../../graphics/xpm/buildlink.mk"
+CONFIGURE_ARGS+=--with-xpm
+.include "../../graphics/jpeg/buildlink.mk"
+CONFIGURE_ARGS+=--with-jpeg
+.include "../../graphics/tiff/buildlink.mk"
+CONFIGURE_ARGS+=--with-tiff
+# need 4.1.0b1 or higher (a bug in 4.1.0 can crash Emacs)
+BUILDLINK_DEPENDS.libungif=	libungif>=4.1.0.1
+.include "../../graphics/libungif/buildlink.mk"
+CONFIGURE_ARGS+=--with-gif
+.include "../../graphics/png/buildlink.mk"
+CONFIGURE_ARGS+=--with-png
 
-EMACS_USE_POP?=	yes
-.if (defined(EMACS_USE_POP) && \
-    (${EMACS_USE_POP} == yes || ${EMACS_USE_POP} == YES))
-CONFIGURE_ARGS+=--with-pop
-.endif
-.if defined(EMACS_USE_X)
-CONFIGURE_ARGS+=--with-x=${EMACS_USE_X}
-.endif
-.if defined(EMACS_USE_X_TOOLKIT)
-CONFIGURE_ARGS+=--with-x-toolkit=${EMACS_USE_X_TOOLKIT}
-.endif
-.if (defined(USE_INET6) && ${USE_INET6} == NO)
-CONFIGURE_ARGS+=--without-ipv6
-.else
-CONFIGURE_ARGS+=--with-ipv6
-.endif
-MAKE_ENV+=	INSTALL_STRIP=${STRIPFLAG}
 INFO_FILES=	emacs vip viper forms gnus mh-e cl sc dired-x ediff \
 		    ccmode message widget reftex forms
 
-INSTALL_PROGRAM=${INSTALL} ${COPY} -o ${BINOWN} -g ${BINGRP} -m ${BINMODE}
+post-extract:
+	${CP} ${FILESDIR}/site-init.el ${WRKSRC}/lisp
 
 pre-install:
 	@${FIND} ${WRKSRC} -type f -name "*.orig" | ${XARGS} ${RM} -f
@@ -46,5 +43,6 @@ pre-install:
 post-install:
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/emacs
 
+.include "../../mk/x11.buildlink.mk"
 .include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
