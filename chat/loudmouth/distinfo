@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2004/10/22 09:12:26 adam Exp $
+$NetBSD: distinfo,v 1.4 2004/11/02 19:42:41 jmmv Exp $
 
-SHA1 (loudmouth-0.17.1.tar.bz2) = 04618ce612de132a5f215c10e23fe80e1e3463e1
-Size (loudmouth-0.17.1.tar.bz2) = 283627 bytes
+SHA1 (loudmouth-0.17.2.tar.bz2) = 8dcc61ae95c3d852d1cf88f3198e0e023e70db7e
+Size (loudmouth-0.17.2.tar.bz2) = 286981 bytes
