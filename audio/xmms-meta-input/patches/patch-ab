@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.2 2004/02/12 05:59:21 ben Exp $
+$NetBSD: patch-ab,v 1.3 2005/01/29 14:07:24 ben Exp $
 
 --- meta-input.c.orig	2002-05-02 08:29:12.000000000 -0700
 +++ meta-input.c
@@ -42,3 +42,12 @@ $NetBSD: patch-ab,v 1.2 2004/02/12 05:59:21 ben Exp $
  }
  
  static int get_time (void)
+@@ -508,7 +509,7 @@ static char *magic_get (char *filename)
+ 	if (! inited)
+ 	{
+ 		inited = 1;
+-		ret = system ("file -i /dev/zero");
++		ret = system ("file -i /dev/zero >/dev/null");
+ 		if (ret == 0)
+ 		{
+ 			mime_supported = 1;
