@@ -1,0 +1,30 @@
+--- makefile.orig	Thu Apr 10 03:02:19 1997
++++ makefile	Fri Jan 21 21:31:07 2000
+@@ -15,8 +15,8 @@
+ # for the rest of the world, it is probably better to put the binaries
+ # in /usr/local/netperf or /opt/netperf
+ #
+-#NETPERF_HOME = /usr/local/netperf
+-NETPERF_HOME = /opt/netperf
++NETPERF_HOME = ${PREFIX}/netperf
++#NETPERF_HOME = /opt/netperf
+ 
+ # The compiler on your system might be somewhere else, and/or have
+ # a different name.
+@@ -83,7 +83,7 @@
+ # -U__hpux    - Use this when compiling _on_ HP-UX *for* an HP-RT system
+ 
+ LOG_FILE=DEBUG_LOG_FILE="\"/tmp/netperf.debug\""
+-CFLAGS = -O -D$(LOG_FILE) -DUSE_LOOPER
++CFLAGS = %CFLAGS% -D$(LOG_FILE) -DUSE_LOOPER -DHISTOGRAM -DDO_UNIX
+ 
+ # Some platforms, and some options, require additional libraries.
+ # you can add to the "LIBS =" line to accomplish this. if you find
+@@ -181,6 +181,7 @@
+ netserver.o:	netserver.c nettest_bsd.h netlib.h makefile
+ 
+ install:	netperf netserver
++		mkdir -p $(NETPERF_HOME)
+ 		chmod -w *.[ch]
+ 		chmod +x $(NETPERF_SCRIPTS)
+ 		cp netperf $(NETPERF_HOME)
