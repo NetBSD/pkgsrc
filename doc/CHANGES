@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.907 2002/12/25 00:45:38 wiz Exp $
+$NetBSD: CHANGES,v 1.908 2002/12/25 01:13:42 uebayasi Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -4252,3 +4252,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated Speex to 0.99.4 [wiz 2002-12-24]
 	Updated pan to 0.13.2 (gtk2-pan) [wiz 2002-12-24]
 	Updated dnstop to 20021224 [wiz 2002-12-25]
+	Updated bochs to 2.0 [uebayasi 2002-12-25]

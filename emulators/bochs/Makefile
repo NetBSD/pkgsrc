@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2002/07/12 03:39:15 itojun Exp $
+# $NetBSD: Makefile,v 1.23 2002/12/25 01:12:36 uebayasi Exp $
 
-DISTNAME=		bochs-1.4.1
+DISTNAME=		bochs-2.0
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=bochs/}
 
@@ -36,10 +36,11 @@ do-install:
 	${INSTALL_DATA_DIR} ${BOCHS_BIOSDIR}
 	${INSTALL_DATA} ${WRKSRC}/bios/BIOS-bochs-2-processors ${BOCHS_BIOSDIR}
 	${INSTALL_DATA} ${WRKSRC}/bios/BIOS-bochs-4-processors ${BOCHS_BIOSDIR}
+	${INSTALL_DATA} ${WRKSRC}/bios/BIOS-bochs-8-processors ${BOCHS_BIOSDIR}
 	${INSTALL_DATA} ${WRKSRC}/bios/BIOS-bochs-latest ${BOCHS_BIOSDIR}
 	${INSTALL_DATA} ${WRKSRC}/bios/VGABIOS-elpin-2.40 ${BOCHS_BIOSDIR}
 	${INSTALL_DATA} ${WRKSRC}/bios/VGABIOS-elpin-LICENSE ${BOCHS_BIOSDIR}
-	${INSTALL_DATA} ${WRKSRC}/bios/VGABIOS-lgpl-0.3a ${BOCHS_BIOSDIR}
+	${INSTALL_DATA} ${WRKSRC}/bios/VGABIOS-lgpl-latest ${BOCHS_BIOSDIR}
 	${INSTALL_DATA} ${WRKSRC}/bios/VGABIOS-lgpl-README ${BOCHS_BIOSDIR}
 	${INSTALL_DATA_DIR} ${BOCHS_DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/docs-html/00README ${BOCHS_DOCDIR}
@@ -54,6 +55,7 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bximage ${PREFIX}/bin
 	${INSTALL_DATA} ${WRKSRC}/bochsrc ${PREFIX}/share/bochs
 	${INSTALL_MAN} ${WRKSRC}/doc/man/*.1 ${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/doc/man/*.5 ${PREFIX}/man/man5
 	${X11BASE}/bin/mkfontdir ${PREFIX}/share/bochs/xfonts
 
 .include "../../mk/bsd.pkg.mk"
