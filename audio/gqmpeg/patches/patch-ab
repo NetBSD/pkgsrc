@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.7 1999/06/16 03:06:36 hubertf Exp $
+$NetBSD: patch-ab,v 1.8 1999/06/18 00:46:11 hubertf Exp $
 
 From rxg@ms25.url.com.tw Tue Jun 15 02:49:50 1999
 Date: Mon, 14 Jun 1999 13:58:57 +0100
@@ -16,10 +16,10 @@ Can you tell me what you think?
 Thanks!
     [ Part 2: "Attached Text" ]
 
-$NetBSD: patch-ab,v 1.7 1999/06/16 03:06:36 hubertf Exp $
+$NetBSD: patch-ab,v 1.8 1999/06/18 00:46:11 hubertf Exp $
 
 --- mixer.c.orig	Wed Jun  2 05:50:45 1999
-+++ mixer.c	Mon Jun 14 14:14:29 1999
++++ mixer.c	Wed Jun 16 15:32:50 1999
 @@ -24,7 +24,7 @@
  #include <linux/soundcard.h>
  #endif
@@ -63,7 +63,7 @@ $NetBSD: patch-ab,v 1.7 1999/06/16 03:06:36 hubertf Exp $
   			{
  			DeviceData *device = g_new0(DeviceData, 1);
  			device->device_id = i;
-@@ -186,6 +177,199 @@
+@@ -186,6 +177,207 @@
  	return vol;
  }
  
@@ -172,32 +172,37 @@ $NetBSD: patch-ab,v 1.7 1999/06/16 03:06:36 hubertf Exp $
 +  /* from AUDIO_LEFT_BALANCE (0) to AUDIO_RIGHT_BALANCE (64) */
 +  ainfo.play.balance = current_bal * AUDIO_RIGHT_BALANCE / 100;
 +
++  if (device->device_id == 0)
++    /* from AUDIO_MIN_GAIN (0) to AUDIO_MAX_GAIN (255) */
++    ainfo.play.gain = vol * AUDIO_MAX_GAIN / 100;
++
 +  if (ioctl(fd, AUDIO_SETINFO, &ainfo) == -1) {
 +    perror("AUDIO_SETINFO");
 +    close(fd);
 +  }
 +  close(fd);
 +
-+  mixer_device = getenv("MIXERDEVICE");
-+  if (mixer_device == NULL)
-+    mixer_device = "/dev/mixer0";
++  if (device->device_id != 0) {
++    mixer_device = getenv("MIXERDEVICE");
++    if (mixer_device == NULL)
++      mixer_device = "/dev/mixer0";
 +
-+  if ((fd = open(mixer_device, O_RDWR)) == -1) {
-+    perror(mixer_device);
++    if ((fd = open(mixer_device, O_RDWR)) == -1) {
++      perror(mixer_device);
++      close(fd);
++    }
++
++    m = &values[device->device_id];
++    if (ioctl(fd, AUDIO_MIXER_WRITE, m) == -1) {
++      perror("AUDIO_MIXER_WRITE");
++      close(fd);
++    }
++    /* from AUDIO_MIN_GAIN (0) to AUDIO_MAX_GAIN (255) */
++    m->un.value.level[0] = m->un.value.level[1] = vol * AUDIO_MAX_GAIN / 100;
++
 +    close(fd);
 +  }
-+
-+  m = &values[device->device_id];
-+  if (ioctl(fd, AUDIO_MIXER_WRITE, m) == -1) {
-+    perror("AUDIO_MIXER_WRITE");
-+    close(fd);
-+  }
-+  /* from AUDIO_MIN_GAIN (0) to AUDIO_MAX_GAIN (255) */
-+  m->un.value.level[0] = m->un.value.level[1] = vol * AUDIO_MAX_GAIN / 100;
-+
 +  if (debug_mode) printf("volume set to %d (%d)\n", vol, current_bal);
-+
-+  close(fd);
 +}
 +
 +static gint mixer_get_vol(DeviceData *device)
@@ -231,39 +236,42 @@ $NetBSD: patch-ab,v 1.7 1999/06/16 03:06:36 hubertf Exp $
 +    close(fd);
 +    return -1;
 +  }
++  close(fd);
 +
 +  if (ainfo.play.balance > AUDIO_RIGHT_BALANCE)
 +    current_bal = 50;
 +  else
 +    current_bal = ainfo.play.balance * 100 / AUDIO_RIGHT_BALANCE;
 +
-+  close(fd);
++  if (device->device_id == 0)
++    return ainfo.play.gain * 100 / AUDIO_MAX_GAIN;
++  else {
++    mixer_device = getenv("MIXERDEVICE");
++    if (mixer_device == NULL)
++      mixer_device = "/dev/mixer0";
 +
-+  mixer_device = getenv("MIXERDEVICE");
-+  if (mixer_device == NULL)
-+    mixer_device = "/dev/mixer0";
++    if ((fd = open(mixer_device, O_RDWR)) == -1) {
++      perror(mixer_device);
++      close(fd);
++      return -1;
++    }
 +
-+  if ((fd = open(mixer_device, O_RDWR)) == -1) {
-+    perror(mixer_device);
++    m = &values[device->device_id];
++    if (ioctl(fd, AUDIO_MIXER_READ, m) == -1) {
++      perror("AUDIO_MIXER_READ");
++      close(fd);
++      return -1;
++    }
 +    close(fd);
-+    return -1;
-+  }
 +
-+  m = &values[device->device_id];
-+  if (ioctl(fd, AUDIO_MIXER_READ, m) == -1) {
-+    perror("AUDIO_MIXER_READ");
-+    close(fd);
-+    return -1;
++    return m->un.value.level[0] * 100 / AUDIO_MAX_GAIN;
 +  }
-+  close(fd);
-+
-+  return m->un.value.level[0] * 100 / AUDIO_MAX_GAIN;
 +}
 +
  #elif defined(sun) && defined(__svr4__)
  static int device_ids[] = { AUDIO_SPEAKER,
  			    AUDIO_LINE_OUT,
-@@ -444,7 +628,7 @@
+@@ -444,7 +636,7 @@
  
  #endif
  
