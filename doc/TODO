@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.859 2003/09/13 23:03:19 jlam Exp $
+$NetBSD: TODO,v 1.860 2003/09/14 15:55:46 wiz Exp $
 
 Suggested new packages
 ======================
@@ -84,6 +84,7 @@ Suggested package updates
 	o balsa-1.4.4
 	o bins-1.1.23
 	o bogofilter-0.14.5.2
+	o bomberclone-0.10.1
 	o bzflag-1.7g2
 	o cervisia-2.0
 	o clisp-2.31
@@ -169,9 +170,11 @@ Suggested package updates
 	o latd-1.18 [pkg/22735]
 	o lavaps-2.3
 	o lcms-1.0.9
+	o libesmtp-1.0.1
 	o libgcrypt-1.1.42
 	o libgphoto2-2.1.2
 	o libxml-2.5.11
+	o libxslt-1.0.33
 	o licq-1.2.7
 	o libmpeg3-1.5.3
 	o libole2-2.2.8
@@ -201,6 +204,7 @@ Suggested package updates
 	o nano-1.2.2
 	o nap-1.5.2
 	o napshare-1.2
+	o nasm-devel-0.98.38
 	o neXtaW-0.15.0
 	o netatalk-1.6.3 [pkg/21930]
 	o newscache-0.99.22p1
@@ -226,7 +230,9 @@ Suggested package updates
 	o pxe-1.4 [pkg/22323]
 	o pygtk-0.6.11
 	o pysol-4.82
+	o rdiff-backup-0.12.4
 	o rep-gtk-0.17
+	o rocksndiamonds-3.0.4
 	o rosegarden-2.1.4 [pkg/21904]
 	o rox-1.2.2
 	o rox-session-0.1.20
