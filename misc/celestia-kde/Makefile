@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/03/26 02:27:45 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2004/04/19 13:31:41 markd Exp $
 #
 
 .include "../../misc/celestia/Makefile.common"
@@ -8,7 +8,7 @@ PKGREVISION=	7
 
 COMMENT=	KDE frontend for free real-time 3D space simulator
 
-DEPENDS=	celestia-${CELESTIA_VERS}:../../misc/celestia
+DEPENDS=	celestia-${CELESTIA_VERS}*:../../misc/celestia
 
 CONFIGURE_ARGS+=	--without-gtk
 CONFIGURE_ARGS+=	--with-kde
