@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2385 2003/06/01 12:15:41 salo Exp $
+$NetBSD: CHANGES,v 1.2386 2003/06/01 12:29:07 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2262,3 +2262,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated metacity to 2.4.34nb2 [jmmv 2003-06-01]
 	Added metacity-setup-0.7.1 [jmmv 2003-06-01]
 	Updated gifsicle to 1.37 [salo 2003-06-01]
+	Added xmms-liveice-1.0.0 [jmmv 2003-06-01]
