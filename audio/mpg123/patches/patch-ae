@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.2 1999/02/18 17:43:32 is Exp $
+$NetBSD: patch-ae,v 1.3 1999/05/16 11:00:16 simonb Exp $
 
 --- Makefile.mid	Thu Feb 18 18:37:11 1999
 +++ Makefile	Thu Feb 18 18:37:48 1999
@@ -14,10 +14,10 @@ $NetBSD: patch-ae,v 1.2 1999/02/18 17:43:32 is Exp $
  			-DI386_ASSEM -DPENTIUM_OPT -DREAL_IS_FLOAT -DUSE_MMAP \
  			-DREAD_MMAP -DNETBSD' \
  		mpg123-make
-+netbsd-profile:        
++netbsd-profile:
 +	$(MAKE) CC=cc LDFLAGS='-pg -static'\
 +		OBJECTS='decode.o dct64.o audio_sun.o' \
-+		CFLAGS='-Wall -ansi -pedantic -O3 -pg \ 
++		CFLAGS='-Wall -ansi -pedantic -O3 -pg \
 +			-funroll-all-loops -ffast-math \
 +			-DREAL_IS_FLOAT -DUSE_MMAP -DNETBSD -DM68K_ASSEM' \
 +		mpg123-make
