@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.bulk-pkg.mk,v 1.18 2001/02/08 19:17:38 dmcmahill Exp $
+#	$NetBSD: bsd.bulk-pkg.mk,v 1.19 2001/02/13 23:02:23 dmcmahill Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@netbsd.org>
@@ -44,6 +44,14 @@
 
 LS?=	ls
 WC?=	wc
+
+# This variable is set to 'yes' by the pkgsrc/mk/bulk/build script.  It enables
+# the use of several cache files (DEPENDSTREEFILE, DEPENDSFILE, SUPPORTSFILE,
+# and INDEXFILE) for speeding up the processing of dependencies.  If we're not
+# actively in the middle of a bulk build, however, we don't know that these files
+# exist or are up to date and they take quite a while to rebuild.  So unless
+# they're known to exist and be up to date, don't use them.
+USE_BULK_CACHE?=	no
 
 # Shall we remove any packages which are installed, but not required
 # to build this package
@@ -176,14 +184,19 @@ bulk-package:
 			${ECHO_MSG} ${RM} -f ${PKGFILE} ; \
 			${DO}       ${RM} -f ${PKGFILE} ; \
 		fi; \
-			${ECHO_MSG} "BULK> Full rebuild  in progress..." ; \
-			${ECHO_MSG} "BULK> Cleaning package and its depends" ;\
+		${ECHO_MSG} "BULK> Full rebuild  in progress..." ; \
+		${ECHO_MSG} "BULK> Cleaning package and its depends" ;\
+		if [ "${USE_BULK_CACHE}" = "yes" ]; then \
 			thisdir=`${GREP} " ${PKGNAME} " ${INDEXFILE} | ${AWK} '{print $$1}'` ;\
 			for pkgdir in $$thisdir `${GREP} "^$$thisdir " ${DEPENDSFILE} | ${SED} -e 's;^.*:;;g'`; do \
 				${ECHO_MSG} "(cd ${PKGSRCDIR}/$$pkgdir && ${MAKE} clean)" ; \
 				${DO}       (cd ${PKGSRCDIR}/$$pkgdir && ${MAKE} clean) ; \
 			done ;\
-		if [ "${PRECLEAN}" = "yes" ]; then \
+		else \
+			${ECHO_MSG} ${MAKE} clean CLEANDEPENDS=YES;\
+			${DO} ${MAKE} clean CLEANDEPENDS=YES;\
+		fi; \
+		if [ "${PRECLEAN}" = "yes" -a "${USE_BULK_CACHE}" = "yes" ]; then \
 			${ECHO_MSG} "BULK> Removing installed packages which are not needed to build ${PKGNAME}" ; \
 			thisdir=`${GREP} " ${PKGNAME} " ${INDEXFILE} | ${AWK} '{print $$1}'` ;\
 			for pkgname in `${PKG_INFO} | ${AWK} '{print $$1}'` ; \
@@ -209,18 +222,20 @@ bulk-package:
 				fi ;\
 			done ; \
 		fi ;\
-		thisdir=`${GREP} " ${PKGNAME} " ${INDEXFILE} | ${AWK} '{print $$1}'` ;\
-		${ECHO_MSG} "BULK> Installing packages which are required to build ${PKGNAME}." ;\
-		for pkgdir in `${GREP} "^$$thisdir " ${DEPENDSFILE} | ${SED} -e 's;^.*:;;g'`; do \
-			pkgname=`${GREP} "^$$pkgdir " ${INDEXFILE} | ${AWK} '{print $$2}'` ; \
-			pkgfile=${PACKAGES}/All/$${pkgname}.tgz ;\
-			if ! `${PKG_INFO} -qe $$pkgname` ; then \
-				${ECHO_MSG} "BULK> " ${PKG_ADD} $$pkgfile ; \
-				${DO} ${PKG_ADD} $$pkgfile ; \
-			else \
-				${ECHO_MSG} "BULK> Required package $$pkgname ($$pkgdir) is already installed" ; \
-			fi ;\
-		done ;\
+		if [ "${USE_BULK_CACHE}" = "yes" ]; then \
+			thisdir=`${GREP} " ${PKGNAME} " ${INDEXFILE} | ${AWK} '{print $$1}'` ;\
+			${ECHO_MSG} "BULK> Installing packages which are required to build ${PKGNAME}." ;\
+			for pkgdir in `${GREP} "^$$thisdir " ${DEPENDSFILE} | ${SED} -e 's;^.*:;;g'`; do \
+				pkgname=`${GREP} "^$$pkgdir " ${INDEXFILE} | ${AWK} '{print $$2}'` ; \
+				pkgfile=${PACKAGES}/All/$${pkgname}.tgz ;\
+				if ! `${PKG_INFO} -qe $$pkgname` ; then \
+					${ECHO_MSG} "BULK> " ${PKG_ADD} $$pkgfile ; \
+					${DO} ${PKG_ADD} $$pkgfile ; \
+				else \
+					${ECHO_MSG} "BULK> Required package $$pkgname ($$pkgdir) is already installed" ; \
+				fi ;\
+			done ;\
+		fi ;\
 		${ECHO_MSG} ${MAKE} package '(${PKGNAME})' 2>&1 ; \
 		${DO}     ( ${MAKE} package 2>&1 ); \
 		) 2>&1 | tee -a ${BUILDLOG} ; \
@@ -233,40 +248,47 @@ bulk-package:
 			${LS} -la ${BROKENFILE} ; \
 			${ECHO_MSG} ${MAKE} deinstall ; \
 			${DO}       ${MAKE} deinstall ; \
-			${ECHO_MSG} "BULK> Marking all packages which depend upon ${PKGNAME} as broken:"; \
-			thisdir=`${GREP} " ${PKGNAME} " ${INDEXFILE} | ${AWK} '{print $$1}'` ;\
 			nbrokenby=0;\
-			for pkgdir in `${GREP} "^$$thisdir " ${SUPPORTSFILE} | ${SED} -e 's;^.*:;;g'`; do \
-				pkgname=`${GREP} "^$$pkgdir " ${INDEXFILE} | ${AWK} '{print $$2}'` ;\
-				${ECHO_MSG} "BULK> marking package that requires ${PKGNAME} as broken:  $$pkgname ($$pkgdir)";\
-				pkgerr="-1"; \
-				pkgignore=`(cd ${PKGSRCDIR}/$$pkgdir && ${MAKE} show-var VARNAME=IGNORE)`; \
-				if [ ! -z "$$pkgignore" -a ! -f ${PKGSRCDIR}/$$pkgdir/${BROKENFILE} ]; then \
-					 ${ECHO_MSG} "BULK> $$pkgname ($$pkgdir) may not be packaged because:" >> ${PKGSRCDIR}/$$pkgdir/${BROKENFILE};\
-					 ${ECHO_MSG} "BULK> $$pkgignore" >> ${PKGSRCDIR}/$$pkgdir/${BROKENFILE};\
-					if [ -z "`(cd ${PKGSRCDIR}/$$pkgdir && ${MAKE} show-var VARNAME=BROKEN)`" ]; then \
-						pkgerr="0"; \
-					else \
-						pkgerr="1"; \
+			if [ "${USE_BULK_CACHE}" = "yes" ]; then \
+				${ECHO_MSG} "BULK> Marking all packages which depend upon ${PKGNAME} as broken:"; \
+				thisdir=`${GREP} " ${PKGNAME} " ${INDEXFILE} | ${AWK} '{print $$1}'` ;\
+				for pkgdir in `${GREP} "^$$thisdir " ${SUPPORTSFILE} | ${SED} -e 's;^.*:;;g'`; do \
+					pkgname=`${GREP} "^$$pkgdir " ${INDEXFILE} | ${AWK} '{print $$2}'` ;\
+					${ECHO_MSG} "BULK> marking package that requires ${PKGNAME} as broken:  $$pkgname ($$pkgdir)";\
+					pkgerr="-1"; \
+					pkgignore=`(cd ${PKGSRCDIR}/$$pkgdir && ${MAKE} show-var VARNAME=IGNORE)`; \
+					if [ ! -z "$$pkgignore" -a ! -f ${PKGSRCDIR}/$$pkgdir/${BROKENFILE} ]; then \
+						 ${ECHO_MSG} "BULK> $$pkgname ($$pkgdir) may not be packaged because:" >> ${PKGSRCDIR}/$$pkgdir/${BROKENFILE};\
+						 ${ECHO_MSG} "BULK> $$pkgignore" >> ${PKGSRCDIR}/$$pkgdir/${BROKENFILE};\
+						if [ -z "`(cd ${PKGSRCDIR}/$$pkgdir && ${MAKE} show-var VARNAME=BROKEN)`" ]; then \
+							pkgerr="0"; \
+						else \
+							pkgerr="1"; \
+						fi; \
 					fi; \
-				fi; \
-				${ECHO_MSG} "BULK> $$pkgname ($$pkgdir) is broken because it depends upon ${PKGNAME} ($$thisdir) which is broken." \
-					>> ${PKGSRCDIR}/$$pkgdir/${BROKENFILE};\
-				nbrokenby=`expr $$nbrokenby + 1`;\
-				if ! `${GREP} " $$pkgdir/${BROKENFILE}" ${PKGSRCDIR}/${BROKENFILE} >/dev/null 2>&1` ; then \
-					${ECHO} " $$pkgerr $$pkgdir/${BROKENFILE} 0 " >> ${PKGSRCDIR}/${BROKENFILE} ;\
-				fi ;\
-			done ;\
+					${ECHO_MSG} "BULK> $$pkgname ($$pkgdir) is broken because it depends upon ${PKGNAME} ($$thisdir) which is broken." \
+						>> ${PKGSRCDIR}/$$pkgdir/${BROKENFILE};\
+					nbrokenby=`expr $$nbrokenby + 1`;\
+					if ! `${GREP} " $$pkgdir/${BROKENFILE}" ${PKGSRCDIR}/${BROKENFILE} >/dev/null 2>&1` ; then \
+						${ECHO} " $$pkgerr $$pkgdir/${BROKENFILE} 0 " >> ${PKGSRCDIR}/${BROKENFILE} ;\
+					fi ;\
+				done ;\
+			fi ;\
 			nerrors=`${GREP} -c '^\*\*\* Error code' ${BROKENFILE} || true`; \
 			${ECHO_MSG} " $$nerrors ${PKGPATH}/${BROKENFILE} $$nbrokenby " >> ${PKGSRCDIR}/${BROKENFILE} \
 			) 2>&1 | tee -a ${BROKENFILE}; \
 		fi ; \
 		${ECHO_MSG} "BULK> Cleaning packages and its depends" ;\
-		thisdir=`${GREP} " ${PKGNAME} " ${INDEXFILE} | ${AWK} '{print $$1}'` ;\
-		for pkgdir in $$thisdir `${GREP} "^$$thisdir " ${DEPENDSFILE} | ${SED} -e 's;^.*:;;g'`; do \
-			${ECHO_MSG} "(cd ${PKGSRCDIR}/$$pkgdir && ${MAKE} clean)" ; \
-			${DO}       (cd ${PKGSRCDIR}/$$pkgdir && ${MAKE} clean) ; \
-		done ;\
+		if [ "${USE_BULK_CACHE}" = "yes" ]; then \
+			thisdir=`${GREP} " ${PKGNAME} " ${INDEXFILE} | ${AWK} '{print $$1}'` ;\
+			for pkgdir in $$thisdir `${GREP} "^$$thisdir " ${DEPENDSFILE} | ${SED} -e 's;^.*:;;g'`; do \
+				${ECHO_MSG} "(cd ${PKGSRCDIR}/$$pkgdir && ${MAKE} clean)" ; \
+				${DO}       (cd ${PKGSRCDIR}/$$pkgdir && ${MAKE} clean) ; \
+			done ;\
+		else \
+			${ECHO_MSG} ${MAKE} clean CLEANDEPENDS=YES;\
+			${DO} ${MAKE} clean CLEANDEPENDS=YES;\
+		fi ;\
 	fi
 	@if [ ! -f ${PKGFILE} ]; then \
 		${ECHO_MSG} "BULK>" Build for ${PKGNAME} was not successful, aborting. | tee -a ${BROKENFILE} ; \

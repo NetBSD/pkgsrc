@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: build,v 1.8 2001/02/01 08:47:29 dmcmahill Exp $
+# $NetBSD: build,v 1.9 2001/02/13 23:02:23 dmcmahill Exp $
 #
 # Do builk build
 #
@@ -69,6 +69,7 @@ fi
 
 echo "Starting actual build using the order specified in $ORDERFILE..."
 nice -n 20 make \
+		USE_BULK_CACHE=yes \
 		SPECIFIC_PKGS=1 \
 		GROUP_SPECIFIC_PKGS="`cat $ORDERFILE | tr '\012' ' '`" \
 		bulk-package | sed 's/^/'`uname -p`'> /g'
