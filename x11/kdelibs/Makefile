@@ -1,9 +1,10 @@
 # New ports collection makefile for:   kdelibs
-# Version required:    Beta1
+# Version required:    Beta2
 # Date created:        28 October 1997
 # Whom:                Stefan Eßer <se@freebsd.org>
 #
-# $Id: Makefile,v 1.1.1.1 1997/12/29 03:06:45 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 1997/12/29 03:11:19 hubertf Exp $
+# FreeBSD Id: Makefile,v 1.5 1997/11/27 00:25:46 se Exp
 #
 
 DISTNAME=	kdelibs-Beta2-1
@@ -25,7 +26,9 @@ HAS_CONFIGURE=	yes
 CONFIGURE_ARGS=	"--prefix=$(PREFIX)" \
 		"--x-inc=$(X11BASE)/include -I$(PREFIX)/include -I$(PREFIX)/include/giflib" \
 		"--x-lib=$(X11BASE)/lib -L$(PREFIX)/lib" \
-		"--datadir=$(PREFIX)/share/kde"
+		"--datadir=$(PREFIX)/share/kde" \
+		"--with-qt-dir=$(PREFIX)" \
+		"--with-qt-includes=$(PREFIX)/include/qt"
 CONFIGURE_ENV=	CXXFLAGS="$(CFLAGS)"
 
 WRKSRC=		${WRKDIR}/kdelibs
