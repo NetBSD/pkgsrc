@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2002/09/21 23:46:48 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2002/12/26 15:11:50 shell Exp $
 
-DISTNAME=	Optik-1.3
+DISTNAME=	Optik-1.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=optik/}
