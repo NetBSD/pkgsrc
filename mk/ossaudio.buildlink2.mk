@@ -1,4 +1,4 @@
-# $NetBSD: ossaudio.buildlink2.mk,v 1.3 2002/09/26 12:31:08 jlam Exp $
+# $NetBSD: ossaudio.buildlink2.mk,v 1.4 2002/09/27 15:17:18 rh Exp $
 
 .if !defined(OSSAUDIO_BUILDLINK2_MK)
 OSSAUDIO_BUILDLINK2_MK=	# defined
@@ -7,6 +7,7 @@ OSSAUDIO_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PREFIX.ossaudio=	/usr
 BUILDLINK_FILES.ossaudio=	include/sys/soundcard.h
+BUILDLINK_FILES.ossaudio+=	include/machine/soundcard.h
 BUILDLINK_FILES.ossaudio+=	lib/libossaudio.*
 
 BUILDLINK_TARGETS+=		ossaudio-buildlink
@@ -37,7 +38,7 @@ ossaudio-buildlink-soundcard-h:
 	sys_soundcard_h=${BUILDLINK_DIR}/include/sys/soundcard.h;	\
 	if [ ! -f $${sys_soundcard_h} -a				\
 	       -f ${BUILDLINK_PREFIX.ossaudio}/include/soundcard.h ]; then \
-		${ECHO_BUILDLINK_MSG} "Creating $${sys_soundcard_h}.";		\
+		${ECHO_BUILDLINK_MSG} "Creating $${sys_soundcard_h}.";	\
 		${MKDIR} `${DIRNAME} $${sys_soundcard_h}`;		\
 		( ${ECHO} "#ifndef BUILDLINK_SYS_SOUNDCARD_H";		\
 		  ${ECHO} "#define BUILDLINK_SYS_SOUNDCARD_H";		\
@@ -45,6 +46,12 @@ ossaudio-buildlink-soundcard-h:
 		  ${ECHO} "#include <soundcard.h>";			\
 		  ${ECHO} "#endif";					\
 		) > $${sys_soundcard_h};				\
+	fi;								\
+	mach_soundcard_h=${BUILDLINK_DIR}/include/machine/soundcard.h;	\
+	if [ ! -f $${mach_soundcard_h} -a -f $${sys_soundcard_h} ]; then \
+		${ECHO_BUILDLINK_MSG} "Creating $${mach_soundcard_h}.";	\
+		${MKDIR} `${DIRNAME} $${mach_soundcard_h}`;		\
+		${LN} $${sys_soundcard_h} $${mach_soundcard_h};		\
 	fi
 
 .endif	# OSSAUDIO_BUILDLINK2_MK
