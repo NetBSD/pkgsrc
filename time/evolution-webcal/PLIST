@@ -1,0 +1,44 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/10/19 20:29:17 jmmv Exp $
+libexec/evolution-webcal
+share/application-registry/evolution-webcal.applications
+share/gconf/schemas/evolution-webcal.schemas
+${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/evolution-webcal.mo
+${PKGLOCALEDIR}/locale/az/LC_MESSAGES/evolution-webcal.mo
+${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/evolution-webcal.mo
+${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/evolution-webcal.mo
+${PKGLOCALEDIR}/locale/bs/LC_MESSAGES/evolution-webcal.mo
+${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/evolution-webcal.mo
+${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/evolution-webcal.mo
+${PKGLOCALEDIR}/locale/cy/LC_MESSAGES/evolution-webcal.mo
+${PKGLOCALEDIR}/locale/da/LC_MESSAGES/evolution-webcal.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/evolution-webcal.mo
+${PKGLOCALEDIR}/locale/el/LC_MESSAGES/evolution-webcal.mo
+${PKGLOCALEDIR}/locale/en_CA/LC_MESSAGES/evolution-webcal.mo
+${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/evolution-webcal.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/evolution-webcal.mo
+${PKGLOCALEDIR}/locale/eu/LC_MESSAGES/evolution-webcal.mo
+${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/evolution-webcal.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/evolution-webcal.mo
+${PKGLOCALEDIR}/locale/gu/LC_MESSAGES/evolution-webcal.mo
+${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/evolution-webcal.mo
+${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/evolution-webcal.mo
+${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/evolution-webcal.mo
+${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/evolution-webcal.mo
+${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/evolution-webcal.mo
+${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/evolution-webcal.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/evolution-webcal.mo
+${PKGLOCALEDIR}/locale/no/LC_MESSAGES/evolution-webcal.mo
+${PKGLOCALEDIR}/locale/or/LC_MESSAGES/evolution-webcal.mo
+${PKGLOCALEDIR}/locale/pa/LC_MESSAGES/evolution-webcal.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/evolution-webcal.mo
+${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/evolution-webcal.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/evolution-webcal.mo
+${PKGLOCALEDIR}/locale/sq/LC_MESSAGES/evolution-webcal.mo
+${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/evolution-webcal.mo
+${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/evolution-webcal.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/evolution-webcal.mo
+${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/evolution-webcal.mo
+${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/evolution-webcal.mo
+${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/evolution-webcal.mo
+@comment in GConf2: @dirrm share/gconf/schemas
+@comment in xdg-dirs: @dirrm share/application-registry
