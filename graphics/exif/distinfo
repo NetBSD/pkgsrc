@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/10/01 05:57:05 itojun Exp $
+
+SHA1 (exif-0.6.tar.gz) = bd5cc9d0b861597e65618dcab3ea72fdfe1be68f
+Size (exif-0.6.tar.gz) = 339385 bytes
+SHA1 (patch-aa) = fe7a707c66c196bab86cbeb4e2961f063b15cffd
