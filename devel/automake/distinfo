@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2003/05/18 13:10:57 wiz Exp $
+$NetBSD: distinfo,v 1.13 2003/07/12 08:42:35 wiz Exp $
 
-SHA1 (automake-1.7.5.tar.bz2) = 5a12ca97b0989809bf9490b1d9d8b89f72150877
-Size (automake-1.7.5.tar.bz2) = 555516 bytes
-SHA1 (patch-aa) = 1c13380a46dc6c3bbd233164da547526c9cc5679
+SHA1 (automake-1.7.6.tar.bz2) = 60456379e73fc91ea96144dbe95cdb38c61cf285
+Size (automake-1.7.6.tar.bz2) = 558354 bytes
+SHA1 (patch-aa) = 534025f2b52b9292442275dd281b8683fcd9a75b
