@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2003/12/03 00:50:34 magick Exp $
+@comment $NetBSD: PLIST,v 1.14 2004/04/04 16:12:01 magick Exp $
 bin/${EMACSVER}
 bin/ellcc
 bin/gnuattach
@@ -46,6 +46,7 @@ lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/chartab.h
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/cm.h
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/coding-system-slots.h
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/commands.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/compiler.h
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/config.h
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/conslots.h
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/console-gtk-impl.h
@@ -602,8 +603,6 @@ lib/${EMACSVER}/etc/photos/vladimir.png
 lib/${EMACSVER}/etc/photos/vladimirm.png
 lib/${EMACSVER}/etc/photos/wmperry.png
 lib/${EMACSVER}/etc/photos/wmperrym.png
-lib/${EMACSVER}/etc/photos/youngs.png
-lib/${EMACSVER}/etc/photos/youngsm.png
 lib/${EMACSVER}/etc/recycle.xpm
 lib/${EMACSVER}/etc/recycle2.xpm
 lib/${EMACSVER}/etc/refcard.ps.gz

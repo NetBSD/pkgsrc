@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.11 2003/12/03 00:50:34 magick Exp $
+$NetBSD: distinfo,v 1.12 2004/04/04 16:12:01 magick Exp $
 
-SHA1 (xemacs-21.5.16.tar.gz) = f971a4650631db9c620c0b742bc30ede5dbbaf0e
-Size (xemacs-21.5.16.tar.gz) = 12915530 bytes
+SHA1 (xemacs-21.5.17.tar.gz) = 0952c508636276f4b08a43019c9a034913a8784f
+Size (xemacs-21.5.17.tar.gz) = 13818839 bytes
 SHA1 (patch-aa) = 48f0b47ff872338587b3118075e10413febf2639
 SHA1 (patch-ab) = 62a968f19d1b2b9efc5f8c3cf3e612f6a1dc7df2
 SHA1 (patch-ac) = 1ffaa2c5c425de6abd8f76d262762d21d8c7d0af
