@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/06/27 19:45:29 jtb Exp $
+# $NetBSD: Makefile,v 1.8 2001/07/08 13:58:35 jtb Exp $
 
 DISTNAME=	vm-6.93
 CATEGORIES=	mail
@@ -18,7 +18,7 @@ COMMENT=	VM (View Mail) is an advanced mail user agent for Emacs
 DEPENDS+=	xemacs>=19.14:../../editors/xemacs
 MAKE_ENV+=	EMACS=xemacs
 MAKE_ENV+=	LISPDIR=${PREFIX}/lib/xemacs/xemacs-packages/lisp/vm
-MAKE_ENV+=	INFODIR="${PREFIX}/lib/xemacs/xemacs-packages/info
+MAKE_ENV+=	INFODIR=${PREFIX}/lib/xemacs/xemacs-packages/info
 MAKE_ENV+=	PIXMAPDIR=${PREFIX}/lib/xemacs/xemacs-packages/etc/vm
 MAKE_ENV+=	BINDIR=${PREFIX}/bin
 PLIST_SRC=	${PKGDIR}/PLIST.xemacs
