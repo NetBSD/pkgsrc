@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.13 2001/02/17 17:06:17 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2001/10/22 01:05:40 mjl Exp $
 #
 
-DISTNAME=		dxpc-3.7.0
+DISTNAME=		dxpc-3.8.1
 CATEGORIES=		x11
-MASTER_SITES=		${MASTER_SITE_XCONTRIB:=utilities/}
+MASTER_SITES=		http://www.vigor.nu/dxpc/3.8.1/ \
+			${MASTER_SITE_XCONTRIB:=utilities/}
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.vigor.nu/dxpc/
@@ -22,4 +23,5 @@ CONFIGURE_ENV+=	CXX=${LOCALBASE}/egcs/bin/g++
 post-install:
 	@strip ${PREFIX}/bin/dxpc
 
+.include "../../archivers/liblzo/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
