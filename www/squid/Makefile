@@ -1,46 +1,16 @@
-# $NetBSD: Makefile,v 1.133 2005/02/06 08:08:02 taca Exp $
+# $NetBSD: Makefile,v 1.134 2005/02/11 14:47:18 taca Exp $
 
-DISTNAME=	squid-2.5.STABLE7
-PKGNAME=	squid-2.5.7
-PKGREVISION=	12
+DISTNAME=	squid-2.5.STABLE8
+PKGNAME=	squid-2.5.8
 CATEGORIES=	www
 MASTER_SITES=	http://www.squid-cache.org/Versions/v2/2.5/ \
 		ftp://ftp.leo.org/pub/comp/general/infosys/www/daemons/squid/squid-2/STABLE/ \
 		ftp://ftp1.au.squid-cache.org/pub/squid/squid-2/STABLE/
 EXTRACT_SUFX=	.tar.bz2
-
-PATCH_SITES=	http://www.squid-cache.org/Versions/v2/2.5/bugs/
-PATCHFILES=	squid-2.5.STABLE7-half_closed_POST.patch \
-		squid-2.5.STABLE7-LDAP_version_documentation.patch \
-		squid-2.5.STABLE7_req_resp_header.patch \
-		squid-2.5.STABLE7-helper_shutdown.patch \
-		squid-2.5.STABLE7-non_blocking_disk.patch \
-		squid-2.5.STABLE7-blank_response.patch \
-		squid-2.5.STABLE7-dothost.patch \
-		squid-2.5.STABLE7-httpd_accel_vport.patch \
-		squid-2.5.STABLE7-cachemgr_vmobjects.patch \
-		squid-2.5.STABLE7-empty_acls.patch \
-		squid-2.5.STABLE7-close_other.patch \
-		squid-2.5.STABLE7-fakeauth_auth.patch \
-		squid-2.5.STABLE7-gopher_html_parsing.patch \
-		squid-2.5.STABLE7-wccp_denial_of_service.patch \
-		squid-2.5.STABLE7-dns_memleak.patch \
-		squid-2.5.STABLE7-fqdn_truncated.patch \
-		squid-2.5.STABLE7-ldap_spaces.patch \
-		squid-2.5.STABLE7-header_parsing.patch \
-		squid-2.5.STABLE7-httpd_accel_no_pmtu_disc.patch \
-		squid-2.5.STABLE7-ftp_datachannel.patch \
-		squid-2.5.STABLE7-short_icons_urls.patch \
-		squid-2.5.STABLE7-response_splitting.patch \
-		squid-2.5.STABLE7-wccp_buffer_overflow.patch \
-		squid-2.5.STABLE7-oversize_reply_headers.patch \
-		squid-2.5.STABLE7-ldap_search.patch \
-		squid-2.5.STABLE7-ntlm_segfault.patch \
-		squid-2.5.STABLE7-post.patch \
-		squid-2.5.STABLE7-server_post.patch \
-		squid-2.5.STABLE7-wccp_disturb.patch \
-		squid-2.5.STABLE7-ftp_password.patch
-PATCH_DIST_STRIP=       -p1
+#
+#PATCH_SITES=	http://www.squid-cache.org/Versions/v2/2.5/bugs/
+#PATCHFILES=	
+#PATCH_DIST_STRIP=       -p1
 
 MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	http://www.squid-cache.org/
@@ -55,7 +25,7 @@ DATADIR=	${VARBASE}/squid
 
 # Update this time stamp pattern if any of official distfiles has changed.
 #
-DIST_STAMP=	2005020100
+DIST_STAMP=	2005021100
 
 DOCFILES=	ChangeLog RELEASENOTES.html doc/debug-sections.txt
 
