@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/10/04 02:10:06 toshii Exp $
-info/navi2ch.info
+@comment $NetBSD: PLIST,v 1.5 2004/01/12 11:58:24 seb Exp $
 ${EMACS_LISPPREFIX}/navi2ch/navi2ch-article.el
 ${EMACS_LISPPREFIX}/navi2ch/navi2ch-article.elc
 ${EMACS_LISPPREFIX}/navi2ch/navi2ch-articles.el
