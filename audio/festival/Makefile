@@ -1,20 +1,22 @@
-# $NetBSD: Makefile,v 1.5 1999/06/28 11:46:35 agc Exp $
+# $NetBSD: Makefile,v 1.6 1999/10/11 14:13:49 proff Exp $
 
-DISTNAME=	festival-1.3.1
+DISTNAME=	festival-1.4.0
 WRKSRC=		${WRKDIR}
 CATEGORIES=	audio
-MASTER_SITES=	ftp://ftp.cstr.ed.ac.uk/pub/festival/1.3.1/ \
+MASTER_SITES=	ftp://ftp.cstr.ed.ac.uk/pub/festival/1.4.0/ \
 		ftp://cslu.cse.ogi.edu/pub/tts/
 DISTFILES=	${DISTNAME}.tar.gz \
-		speech_tools-1.1.1.tar.gz \
-		OGIresLPC-1.4.tar.gz
+		speech_tools-1.2.0.tar.gz \
+		OGIresLPC-2.0.3.tar.gz \
+		OGIfestpatch-1.4.0.tar.gz
+ 
+# note that OGIfestpatch above file must be extracted last. it is, however
+# this behavior not defined in pkgsrc at the time of writing
 
 MAINTAINER=	proff@iq.org
 HOMEPAGE=	http://www.cstr.ed.ac.uk/projects/festival.html
 
 DEPENDS+=	nas-1.2.5:../nas
-
-LICENSE=	no-commercial-use
 
 USE_GMAKE=	yes
 
@@ -32,7 +34,9 @@ PKG_COMPILER!=	case "`${CC} -v 2>&1`" in *2.6.*) echo gcc26;;\
                                        esac
 
 MAKE_ENV+=	PKG_EST_HOME=${SPEECHTOOLS} \
-		PKG_FESTIVAL_HOME=${FESTIVAL} \
+		EST_HOME=${SPEECHTOOLS} \
+		PKG_FESTIVAL_BUILD_HOME=${FESTIVAL} \
+		PKG_FESTIVAL_HOME=${FHOME} \
 		PKG_COMPILER=${PKG_COMPILER} \
 		PKG_X11BASE=${X11BASE} \
 		PKG_PREFIX=${PREFIX} \
@@ -60,7 +64,7 @@ post-patch:
 do-install:
 	${INSTALL_DATA_DIR} ${FHOME}
 	chmod -R u+w,a+r,og-w ${FESTIVAL}/lib
-	find ${FESTIVAL}/lib -type d -print0| xargs -0 chmod a+x
+	find ${FESTIVAL}/lib -type d -print0| xargs -0 chmod 755
 	cd ${FESTIVAL} && pax -r -w lib examples ${FHOME}
 	${RM} -f ${FHOME}/lib/etc/NetBSD/audsp
 	${INSTALL_PROGRAM} ${FESTIVAL}/lib/etc/NetBSD/audsp ${PREFIX}/libexec

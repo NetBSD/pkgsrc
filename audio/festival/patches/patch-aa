@@ -1,12 +1,20 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/04/04 19:32:33 proff Exp $
+$NetBSD: patch-aa,v 1.2 1999/10/11 14:13:49 proff Exp $
 
---- /tmp/speech_tools/include/EST_unix.h	Mon Jan 11 20:43:14 1999
-+++ speech_tools/include/EST_unix.h	Wed Mar 10 03:20:38 1999
-@@ -49,6 +49,7 @@
- #   include <sys/wait.h>
- #   include <sys/resource.h>
- #   include <dirent.h>
-+#   define unix 1
- #elif defined(SYSTEM_IS_WIN32)
- #   include <io.h>
- #   include "win32/EST_unix_win32.h"
+--- festival/config/config	Mon Oct 11 07:48:44 1999
++++ festival/config/config	Mon Oct 11 05:48:33 1999
+@@ -20,7 +20,7 @@
+ ## You may need to set this explicitly if automounter or NFS
+ ## side effects cause problems
+ 
+-FESTIVAL_HOME := $(shell (cd $(TOP); pwd))
++FESTIVAL_HOME := $(PKG_FESTIVAL_HOME)
+ 
+ ###########################################################################
+ ## Feature selection.
+@@ -70,3 +70,6 @@
+ ## in config/configs/default.mak.
+ 
+ 
++ALSO_INCLUDE += OGIcommon
++ALSO_INCLUDE += OGIdbase
++ALSO_INCLUDE += OGIresLPC
