@@ -1,0 +1,39 @@
+$NetBSD: patch-an,v 1.1.1.1 2003/06/23 07:09:32 mrg Exp $
+
+diff -rcp tools/tcmodinfo.c tools/tcmodinfo.c
+*** tools/tcmodinfo.c	Mon May 12 19:44:12 2003
+--- tools/tcmodinfo.c	Mon Jun  9 17:48:49 2003
+*************** void tc_error(char *string)
+*** 102,108 ****
+  
+  void *load_module(char *mod_name, char *mod_path, int mode)
+  {
+! #if defined(__FreeBSD__) || defined (__APPLE__)
+    const
+  #endif  
+    char *error;
+--- 102,108 ----
+  
+  void *load_module(char *mod_name, char *mod_path, int mode)
+  {
+! #if defined(__FreeBSD__) || defined (__APPLE__) || defined(__NetBSD__)
+    const
+  #endif  
+    char *error;
+*************** void *load_module(char *mod_name, char *
+*** 186,192 ****
+  
+  
+  int load_plugin(char *path, int id) {
+! #if defined(__FreeBSD__) || defined(__APPLE__)
+    const
+  #endif    
+    char *error;
+--- 186,192 ----
+  
+  
+  int load_plugin(char *path, int id) {
+! #if defined(__FreeBSD__) || defined(__APPLE__) || defined(__NetBSD__)
+    const
+  #endif    
+    char *error;

@@ -1,0 +1,22 @@
+$NetBSD: patch-af,v 1.1.1.1 2003/06/23 07:09:32 mrg Exp $
+
+diff -rcp import/import_xvid.c import/import_xvid.c
+*** import/import_xvid.c	Fri May  2 16:28:05 2003
+--- import/import_xvid.c	Mon Jun  9 17:47:11 2003
+*************** static int x_dim, y_dim;
+*** 65,71 ****
+  #define MODULE1 "libxvidcore.so"
+  
+  static int xvid2_init(char *path) {
+! #ifdef __FreeBSD__
+    const
+  #endif    
+    char *error;
+--- 65,71 ----
+  #define MODULE1 "libxvidcore.so"
+  
+  static int xvid2_init(char *path) {
+! #if defined(__FreeBSD__) || defined(__NetBSD__)
+    const
+  #endif    
+    char *error;

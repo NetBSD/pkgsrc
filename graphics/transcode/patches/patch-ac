@@ -1,0 +1,22 @@
+$NetBSD: patch-ac,v 1.1.1.1 2003/06/23 07:09:32 mrg Exp $
+
+diff -rcp export/export_xvidcvs.c export/export_xvidcvs.c
+*** export/export_xvidcvs.c	Fri May  9 16:52:32 2003
+--- export/export_xvidcvs.c	Mon Jun  9 17:48:14 2003
+***************
+*** 48,54 ****
+  # endif
+  #endif
+  
+! #if !defined(__FreeBSD__) && !defined(__APPLE__)
+  #include <malloc.h>
+  #endif
+  
+--- 48,54 ----
+  # endif
+  #endif
+  
+! #if !defined(__FreeBSD__) && !defined(__APPLE__)|| defined(__NetBSD__)
+  #include <malloc.h>
+  #endif
+  

@@ -1,0 +1,16 @@
+$NetBSD: patch-ap,v 1.1.1.1 2003/06/23 07:09:32 mrg Exp $
+
+--- ffmpeg/libavcodec/Makefile.am.orig	2003-05-19 17:27:45.000000000 +1000
++++ ffmpeg/libavcodec/Makefile.am	2003-06-20 20:26:24.000000000 +1000
+@@ -29,9 +29,9 @@
+ 
+ AM_CFLAGS = -O3 -g -Wall -ffast-math $(ALTIVEC) $(X86) $(MMX) -DHAVE_AV_CONFIG_H -D_GNU_SOURCE --include=../av_config.h
+ 
+-noinst_LIBRARIES = libtcavcodec.a
++noinst_LTLIBRARIES = libtcavcodec.la
+ 
+-libtcavcodec_a_SOURCES = \
++libtcavcodec_la_SOURCES = \
+       common.c utils.c mem.c allcodecs.c \
+       mpegvideo.c jrevdct.c jfdctfst.c jfdctint.c\
+       mpegaudio.c ac3enc.c mjpeg.c resample.c dsputil.c \
