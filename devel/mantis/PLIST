@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/11/08 19:05:33 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/12/28 22:14:34 adrianp Exp $
 share/doc/mantis/CUSTOMIZATION
 share/doc/mantis/INSTALL
 share/doc/mantis/README
 share/doc/mantis/UPGRADING
-share/examples/mantis/config_inc.php.sample
+share/examples/mantis/config_inc.php
 share/examples/mantis/db_generate.sql
 share/examples/mantis/mantis.conf
 share/examples/mantis/mantis_offline.php.sample
@@ -88,7 +88,6 @@ share/mantis/bugnote_update.php
 share/mantis/bugnote_view_inc.php
 share/mantis/changelog_page.php
 share/mantis/config_defaults_inc.php
-share/mantis/config_inc.php
 share/mantis/core.php
 share/mantis/core/access_api.php
 share/mantis/core/adodb/adodb-cryptsession.php

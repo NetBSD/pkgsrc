@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2004/11/08 19:11:18 adrianp Exp $
+# $NetBSD: Makefile,v 1.3 2004/12/28 22:14:34 adrianp Exp $
 
 DISTNAME=	mantis-0.19.1
+PKGREVISION=	1
 CATEGORIES=	devel www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mantisbt/}
 
@@ -30,35 +31,25 @@ BUILDLINK_DEPENDS.mysql-client+=	mysql-client>=3.23.2
 PHP_VERSIONS_ACCEPTED=			4
 MYSQL_VERSIONS_ACCEPTED=		30 40
 
-M_DB_HOST?=	localhost
-M_DB_USER?=	root
-M_DB_PASS?=	
-M_DB_DATABASE?=	bugtracker
-M_DOMAIN?=	example.com
 APACHE_USER?=	www
 
-BUILD_DEFS+=	M_DB_HOST M_DB_USER M_DB_PASS M_DB_DATABASE M_DOMAIN APACHE_USER
+BUILD_DEFS+=	APACHE_USER
 MESSAGE_SUBST+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
 
 MANTIS_HOME=	${PREFIX}/share/mantis
 EGDIR=		${PREFIX}/share/examples/mantis
-CONF_FILES+=	${EGDIR}/mantis.conf ${PKG_SYSCONFDIR}/mantis.conf
+CONF_FILES+=	${EGDIR}/mantis.conf ${PKG_SYSCONFDIR}/mantis.conf \
+		${EGDIR}/config_inc.php ${MANTIS_HOME}/config_inc.php
 SPECIAL_PERMS=	${MANTIS_HOME}/config_inc.php ${APACHE_USER} ${SHAREGRP} 0400
 
 SUBST_CLASSES=		conf
 SUBST_STAGE.conf=	pre-install
-SUBST_FILES.conf=	config_inc.php mantis.conf
-SUBST_SED.conf=		-e "s|localhost|${M_DB_HOST}|g"	\
-			-e "s|root|${M_DB_USER}|g" \
-			-e "s|\"\"|\"${M_DB_PASS}\"|g" \
-			-e "s|bugtracker|${M_DB_DATABASE}|g" \
-			-e "s|example.com|${M_DOMAIN}|g" \
-			-e "s|@MANTIS_HOME@|${MANTIS_HOME}|g"
+SUBST_FILES.conf=	mantis.conf
+SUBST_SED.conf=		-e "s|@MANTIS_HOME@|${MANTIS_HOME}|g"
 SUBST_MESSAGE.conf=	"Fixing configuration files."
 
 post-extract:
 	@${CP} ${FILESDIR}/mantis.conf ${WRKSRC}
-	@${CP} ${WRKSRC}/config_inc.php.sample ${WRKSRC}/config_inc.php
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mantis
@@ -109,7 +100,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/javascript/*.js ${MANTIS_HOME}/javascript
 	${INSTALL_DATA} ${WRKSRC}/lang/*.txt ${MANTIS_HOME}/lang
 	${INSTALL_DATA} ${WRKSRC}/sql/*.sql ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/config_inc.php.sample ${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/config_inc.php.sample ${EGDIR}/config_inc.php
 	${INSTALL_DATA} ${WRKSRC}/mantis_offline.php.sample ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/mantis.conf ${EGDIR}
 
