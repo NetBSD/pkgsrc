@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/08/22 05:57:31 itojun Exp $
+# $NetBSD: Makefile,v 1.5 2002/01/24 15:48:19 wiz Exp $
 
 DISTNAME=	sendmail.8.12.0.Beta10
 PKGNAME=	sendmail-8.11.99.10
@@ -19,7 +19,7 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.sendmail.org/
 COMMENT=	The well known Mail Transport Agent
 
-IGNORE=		security issue found, build broken due to lack of useradd
+IGNORE=		"security issue found, build broken due to lack of useradd"
 
 DEPENDS=	m4-1.4:../../devel/m4
 
