@@ -1,13 +1,11 @@
-$NetBSD: patch-ai,v 1.2 2001/09/05 03:52:47 groo Exp $
+$NetBSD: patch-ai,v 1.3 2002/08/31 20:27:49 jschauma Exp $
 
---- ../collects/mzlib/restartr.ss.orig	Thu Mar 11 17:13:43 1999
-+++ ../collects/mzlib/restartr.ss	Sat Jan  8 23:58:48 2000
-@@ -144,7 +144,7 @@
- 			  (lambda () (find-executable-path program "collects"))
- 			  (lambda ()
- 			    (case (system-type)
--			      [(unix beos) "/usr/local/lib/plt/collects"]
-+			      [(unix beos) "XXXPREFIXXXX/lib/plt/collects"]
- 			      [(windows) "c:\\plt\\collects"]
- 			      [else #f]))))
- 			null)))))
+--- mzscheme/src/makeexn.orig	Wed Aug 28 18:40:41 2002
++++ mzscheme/src/makeexn	Wed Aug 28 18:41:07 2002
+@@ -1,5 +1,5 @@
+ #!/bin/sh
+-string=? ; if [ "$PLTHOME" = "" ] ; then PLTHOME=/usr/local/lib/plt ; export PLTHOME ; fi
++string=? ; if [ "$PLTHOME" = "" ] ; then PLTHOME=@PREFIX@/lib/plt ; export PLTHOME ; fi
+ string=? ; exec ${PLTHOME}/bin/mzscheme -gqr $0 "$@"
+ 
+ (define doc? (and (= (vector-length argv) 1)

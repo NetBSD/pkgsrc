@@ -1,13 +1,13 @@
-$NetBSD: patch-aj,v 1.2 2001/09/05 03:52:47 groo Exp $
+$NetBSD: patch-aj,v 1.3 2002/08/31 20:27:49 jschauma Exp $
 
---- ../collects/slibinit/init.ss.orig	Thu Apr 22 19:21:19 1999
-+++ ../collects/slibinit/init.ss	Sun Jan  9 00:00:34 2000
-@@ -46,7 +46,7 @@
- 			       [(base name dir?) (split-path base)])
- 		   (and (string? base) base))))
- 	     (case (system-type)
--	       ((unix) "/usr/local/lib/plt")
-+	       ((unix) "XXXPREFIXXXX/lib/plt")
- 	       ((windows) "C:\\Program Files\\PLT")
- 	       ((macos) "My Disk:plt:")))])
-     (lambda () path)))
+--- ../man/man1/drscheme.1.orig	Wed Aug 28 18:45:30 2002
++++ ../man/man1/drscheme.1	Wed Aug 28 18:45:43 2002
+@@ -31,7 +31,7 @@
+ looks for its libraries using the environment variables
+ PLTHOME and PLTCOLLECTS.  If this variable is not defined,
+ the installation directory is assumed (usually
+-"/usr/local/lib/plt/"). See the documentation for details.
++"@PREFIX@/lib/plt/"). See the documentation for details.
+ .PP
+ Please consult your local administrator to determine whether
+ the on-line documentation has been installed locally.
