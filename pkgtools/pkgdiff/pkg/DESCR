@@ -1,5 +1,5 @@
-This package contains three tools to ease creating and maintaining
-patches for pkgsrc: mkpatches, patchdiff, and pkgdiff.
+This package contains four tools to ease creating and maintaining
+patches for pkgsrc: mkpatches, patchdiff, pkgdiff, and pkgvi.
 
 pkgdiff compares two files (like diff) and produces an output file
 that can be used in pkgsrc.
