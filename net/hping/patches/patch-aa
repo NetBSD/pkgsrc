@@ -1,11 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2002/04/04 17:02:30 atatat Exp $
+$NetBSD: patch-aa,v 1.2 2003/09/25 22:12:15 recht Exp $
 
-Do *ALL* the root stuff right up front and then completely lose
-privileges.
-
---- main.c.orig	Mon Aug 13 20:07:33 2001
-+++ main.c	Fri Mar 29 23:46:01 2002
-@@ -150,6 +150,17 @@
+--- main.c.orig	2003-07-31 12:06:55.000000000 +0200
++++ main.c
+@@ -166,6 +166,17 @@ int main(int argc, char **argv)
  	char setflags[1024] = {'\0'};
  	int c, hdr_size;
  
@@ -20,20 +17,20 @@ privileges.
 +		exit(1);
 +	}
 +
- 	if ( parse_options(argc, argv) == -1 )
- 	{
+ 	if (parse_options(argc, argv) == -1) {
  		printf("hping2: missing host argument\n"
-@@ -187,13 +199,6 @@
- 	{
- 		printf("using %s, addr: %s, MTU: %d\n",
+ 			"Try `hping2 --help' for more information.\n");
+@@ -206,13 +217,6 @@ int main(int argc, char **argv)
  			ifname, ifstraddr, h_if_mtu);
--	}
--
+ 	}
+ 
 -	/* open raw socket */
 -	sockraw = open_sockraw();
 -	if (sockraw == -1) {
 -		printf("[main] can't open raw socket\n");
 -		exit(1);
- 	}
- 
+-	}
+-
  	/* set SO_BROADCAST option */
+ 	socket_broadcast(sockraw);
+ 	/* set SO_IPHDRINCL option */
