@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/12/04 20:35:09 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2004/12/14 18:45:11 minskim Exp $
 #
 
 DISTNAME=		xmms-musepack-1.1
@@ -17,5 +17,6 @@ GNU_CONFIGURE=		yes
 .include "../../audio/libmusepack/buildlink3.mk"
 .include "../../audio/xmms/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../x11/gtk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

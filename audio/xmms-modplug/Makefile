@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/10/03 00:13:11 tv Exp $
+# $NetBSD: Makefile,v 1.5 2004/12/14 18:45:11 minskim Exp $
 #
 
 DISTNAME=		modplugxmms-2.05
@@ -27,6 +27,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 .include "../../audio/libmodplug/buildlink3.mk"
 .include "../../audio/xmms/buildlink3.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../mk/ossaudio.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
