@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2004/04/12 15:14:55 xtraeme Exp $
+# $NetBSD: Makefile,v 1.39 2004/04/21 20:50:41 cube Exp $
 
 DISTNAME=	xemacs-21.5.17
 CATEGORIES=	editors
@@ -11,7 +11,7 @@ COMMENT=	*BETA* XEmacs text editor version 21.5.17
 USE_BUILDLINK3=	YES
 USE_X11=	YES
 
-BUILD_DEFS+=	XEMACS_WIDGETS XEMACS_ESD USE_LDAP USE_XFACE XEMACS_USE_CANNA
+BUILD_DEFS+=	XEMACS_WIDGETS XEMACS_ESD USE_OPENLDAP USE_XFACE XEMACS_USE_CANNA
 PLIST_SUBST+=	EMACSVER=xemacs-21.5-b17
 MESSAGE_SUBST+=	EMACSVER=xemacs-21.5-b17
 
@@ -41,7 +41,7 @@ WITH_WIDGETS=	--with-widgets=lucid
 CONFIGURE_ARGS += --with-sound=none
 .endif
 
-.if defined(USE_LDAP) && (${USE_LDAP} == "YES")
+.if defined(USE_OPENLDAP) && (${USE_OPENLDAP} == "YES")
 WITH_LDAP=	--with-ldap
 .  include "../../databases/openldap/buildlink3.mk"
 .else
