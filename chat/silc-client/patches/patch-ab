@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1.1.1 2001/11/29 16:17:43 hubertf Exp $
+
+--- lib/silcmath/mpi/mpi-priv.h.orig    Sat Nov 24 20:06:50 2001
++++ lib/silcmath/mpi/mpi-priv.h Sat Nov 24 20:07:51 2001
+@@ -242,3 +242,10 @@
+ /* }}} */
+ #endif
+ 
++#if ! (2 < __GNUC__ || (2 == __GNUC__ && 95 <= __GNUC_MINOR__))
++# if defined restrict || 199901L <= __STDC_VERSION__           
++#  define __restrict restrict                       
++# else
++#  define __restrict      
++# endif
++#endif
