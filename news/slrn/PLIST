@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/04/10 18:17:48 mjl Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/10/27 21:48:27 cube Exp $
 bin/slrn
 bin/slrnpull
 man/man1/slrn.1
@@ -12,7 +12,6 @@ share/doc/slrn/README.GroupLens
 share/doc/slrn/README.SSL
 share/doc/slrn/README.macros
 share/doc/slrn/README.multiuser
-share/doc/slrn/SCORE_FAQ
 share/doc/slrn/THANKS
 share/doc/slrn/changes.txt
 share/doc/slrn/help.txt
@@ -22,23 +21,26 @@ share/doc/slrn/score.txt
 share/doc/slrn/slrn-doc.html
 share/doc/slrn/slrn.rc
 share/doc/slrn/slrnfuns.txt
-share/doc/slrn/slrnpull/FAQ
 share/doc/slrn/slrnpull/README
+share/doc/slrn/slrnpull/README.offline
 share/doc/slrn/slrnpull/SETUP
 share/doc/slrn/slrnpull/score
 share/doc/slrn/slrnpull/setgid.txt
 share/doc/slrn/slrnpull/slrn.rc
 share/doc/slrn/slrnpull/slrnpull.conf
 share/doc/slrn/slrnpull/slrnpull.sh
+${PKGLOCALEDIR}/locale/be/LC_MESSAGES/slrn.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/slrn.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/slrn.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/slrn.mo
+${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/slrn.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/slrn.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/slrn.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/slrn.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/slrn.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/slrn.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/slrn.mo
+${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/slrn.mo
 share/slrn/macros/color.sl
 share/slrn/macros/gsort.sl
 share/slrn/macros/ispell.sl
