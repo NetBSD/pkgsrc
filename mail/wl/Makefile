@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2003/07/21 16:56:57 martti Exp $
+# $NetBSD: Makefile,v 1.15 2003/07/31 16:45:40 seb Exp $
 
 DISTNAME=	wl-2.10.0
 CATEGORIES=	mail
@@ -15,6 +15,7 @@ EMACS_VERSIONS_ACCEPTED=	emacs21 emacs20
 MAKE_FLAGS+=	LISPDIR=${EMACS_LISPPREFIX}
 MAKE_FLAGS+=	PIXMAPDIR=${PREFIX}/share/wl
 INSTALL_TARGET=	install install-info
+USE_NEW_TEXINFO=	YES
 INFO_FILES=	wl.info wl-ja.info
 
 .include "../../mk/emacs.mk"
@@ -46,5 +47,4 @@ post-install:
 	@${INSTALL_DATA} ${WRKSRC}/samples/en/dot.* ${EXAMPLESDIR}/en
 	@${INSTALL_DATA} ${WRKSRC}/samples/ja/dot.* ${EXAMPLESDIR}/ja
 
-.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
