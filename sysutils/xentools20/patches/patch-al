@@ -1,0 +1,23 @@
+$NetBSD: patch-al,v 1.1.1.1 2005/03/07 15:59:08 bouyer Exp $
+
+--- python/Makefile.orig	2005-01-22 01:21:14.000000000 +0100
++++ python/Makefile	2005-01-22 01:51:09.000000000 +0100
+@@ -1,14 +1,14 @@
+ 
+ all:
+-	python setup.py build
++	$(PYTHON) setup.py build
+ 
+ install: all
+ 	if [ "$(prefix)" = "" ]; then                   \
+-	    python setup.py install;                    \
++	    $(PYTHON) setup.py install;                    \
+ 	elif [ "$(dist)" = "yes" ]; then                \
+-	    python setup.py install --home="$(prefix)"; \
++	    $(PYTHON) setup.py install --home="$(prefix)"; \
+ 	else                                            \
+-	    python setup.py install --root="$(prefix)"; \
++	    $(PYTHON) setup.py install --root="$(prefix)"; \
+ 	fi
+ 
+ clean:

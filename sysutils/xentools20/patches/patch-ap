@@ -1,0 +1,21 @@
+$NetBSD: patch-ap,v 1.1.1.1 2005/03/07 15:59:08 bouyer Exp $
+
+--- xentrace/xentrace.c.orig	2005-01-24 10:25:49.000000000 +0100
++++ xentrace/xentrace.c	2005-01-24 10:30:32.000000000 +0100
+@@ -123,14 +123,14 @@
+ struct t_buf *map_tbufs(unsigned long tbufs_mach, unsigned int num,
+                         unsigned long size)
+ {
+-    int xc_handle;                  /* file descriptor for /proc/xen/privcmd */
++    int xc_handle;                  /* file descriptor for /kern/xen/privcmd */
+     struct t_buf *tbufs_mapped;
+ 
+     xc_handle = xc_interface_open();
+ 
+     if ( xc_handle < 0 ) 
+     {
+-        PERROR("Open /proc/xen/privcmd when mapping trace buffers\n");
++        PERROR("Open /kern/xen/privcmd when mapping trace buffers\n");
+         exit(EXIT_FAILURE);
+     }
+ 

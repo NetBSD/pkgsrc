@@ -1,0 +1,15 @@
+$NetBSD: patch-ae,v 1.1.1.1 2005/03/07 15:59:08 bouyer Exp $
+
+--- xfrd/xfrd.c.orig	2005-01-22 01:24:53.000000000 +0100
++++ xfrd/xfrd.c	2005-01-22 01:25:08.000000000 +0100
+@@ -1229,8 +1229,8 @@
+ 
+ #ifndef DEBUG
+     freopen(LOGFILE, "w+", stdout);
+-    fclose(stderr);
+-    stderr = stdout;
++    close(2);
++    dup2(1,2);
+ #endif
+     dprintf(">\n");
+     set_defaults(args);

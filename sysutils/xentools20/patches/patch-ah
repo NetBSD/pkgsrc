@@ -1,0 +1,27 @@
+$NetBSD: patch-ah,v 1.1.1.1 2005/03/07 15:59:08 bouyer Exp $
+
+--- xentrace/Makefile.orig	2005-01-12 13:22:22.000000000 +0100
++++ xentrace/Makefile	2005-01-22 18:44:45.000000000 +0100
+@@ -20,15 +20,15 @@
+ all: $(BIN)
+ 
+ install: all
+-	mkdir -p $(prefix)/usr/bin
+-	mkdir -p $(prefix)/usr/man/man1
+-	mkdir -p $(prefix)/usr/man/man8
+-	install -m0755 $(BIN) $(SCRIPTS) $(prefix)/usr/bin
+-	install -m0644 $(MAN1) $(prefix)/usr/man/man1
+-	install -m0644 $(MAN8) $(prefix)/usr/man/man8
++	mkdir -p $(prefix)/${PREFIX}/bin
++	mkdir -p $(prefix)/${PREFIX}/man/man1
++	mkdir -p $(prefix)/${PREFIX}/man/man8
++	install -m0755 $(BIN) $(SCRIPTS) $(prefix)/${PREFIX}/bin
++	install -m0644 $(MAN1) $(prefix)/${PREFIX}/man/man1
++	install -m0644 $(MAN8) $(prefix)/${PREFIX}/man/man8
+ 
+ clean:
+ 	$(RM) *.a *.so *.o *.rpm $(BIN)
+ 
+ %: %.c $(HDRS) Makefile
+-	$(CC) $(CFLAGS) -o $@ $< -L$(XEN_LIBXC) -L$(XEN_LIBXUTIL) -lxc -lxutil
++	$(CC) $(CFLAGS) -o $@ $< -L$(XEN_LIBXC) -L$(XEN_LIBXUTIL) -lxc $(LDFLAGS) -lxutil

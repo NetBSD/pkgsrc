@@ -1,0 +1,25 @@
+$NetBSD: patch-ag,v 1.1.1.1 2005/03/07 15:59:08 bouyer Exp $
+
+--- misc/Makefile.orig	2005-01-12 13:22:25.000000000 +0100
++++ misc/Makefile	2005-01-22 18:44:36.000000000 +0100
+@@ -20,10 +20,10 @@
+ 	$(MAKE) -C miniterm
+ 
+ install: all
+-	mkdir -p $(prefix)/usr/bin
+-	mkdir -p $(prefix)/usr/sbin
+-	install -m0755 $(INSTALL_BIN) $(prefix)/usr/bin
+-	install -m0755 $(INSTALL_SBIN) $(prefix)/usr/sbin
++	mkdir -p $(prefix)/${PREFIX}/bin
++	mkdir -p $(prefix)/${PREFIX}/sbin
++	install -m0755 $(INSTALL_BIN) $(prefix)/${PREFIX}/bin
++	install -m0755 $(INSTALL_SBIN) $(prefix)/${PREFIX}/sbin
+ 	$(MAKE) -C miniterm install
+ 
+ clean:
+@@ -31,4 +31,4 @@
+ 	$(MAKE) -C miniterm clean
+ 
+ %: %.c $(HDRS) Makefile
+-	$(CC) $(CFLAGS) -o $@ $< -L$(XEN_LIBXC) -lxc -L$(XEN_LIBXUTIL) -lxutil
++	$(CC) $(CFLAGS) -o $@ $< -L$(XEN_LIBXC) -lxc -L$(XEN_LIBXUTIL) $(LDFLAGS) -lxutil
