@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/11/16 20:20:04 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2004/11/17 11:35:16 xtraeme Exp $
 #
 
 DISTNAME=		skype_staticQT-${DIST_VERSION}
 PKGNAME=		skype-${DIST_VERSION}
+PKGREVISION=		1
 CATEGORIES=		net
 MASTER_SITES=		http://download.skype.com/linux/
 EXTRACT_SUFX=		.tar.bz2
@@ -14,8 +15,10 @@ COMMENT=		P2P VoIP software
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} != "Linux"
-DEPENDS+=	suse_base>=6.3:../../emulators/${SUSE_DIR_PREFIX}_base
-DEPENDS+=	suse_x11>=6.3:../../emulators/${SUSE_DIR_PREFIX}_x11
+DEPENDS+=	suse_base>=9.1:../../emulators/suse91_base
+DEPENDS+=	suse_fontconfig>=9.1:../../emulators/suse91_fontconfig
+DEPENDS+=	suse_freetype2>=9.1:../../emulators/suse91_freetype2
+DEPENDS+=	suse_x11>=9.1:../../emulators/suse91_x11
 .include "../../emulators/suse_linux/Makefile.application"
 .else
 USE_X11=	yes
