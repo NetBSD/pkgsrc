@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.922 2003/10/05 12:04:29 martti Exp $
+$NetBSD: TODO,v 1.923 2003/10/05 13:06:25 wiz Exp $
 
 Suggested new packages
 ======================
@@ -97,7 +97,6 @@ Suggested package updates
 	o avidemux-2.0.16
 	o avifile-devel-0.7.34-20030319
 	o balsa-1.4.4
-	o bomberclone-0.10.1
 	o bzflag-1.7g2
 	o centericq-4.9.7
 	o cervisia-2.0
@@ -119,7 +118,6 @@ Suggested package updates
 	o dnetc-2.9004-482 [pkg/22390]
 	o dylan-compiler-2.3.11
 	o dylan-interpreter-2.3.11
-	o easytag-0.30
 	o echoping-5.0.1
 	o elk-3.99.5
 	o elm-me-2.4pl107a
@@ -140,7 +138,6 @@ Suggested package updates
 	o gcvs-1.0-1
 	o gdm-2.4.1.3
 	o generator-0.35
-	o gentoo-0.10.35
 	o getmail-3.2.0
 	o gettext-0.12.1
 	o gforth-0.6.2
@@ -156,7 +153,6 @@ Suggested package updates
 	o gnumeric-1.2.0
 	o gnustep-0.9.0
 	o gpa-0.6.1
-	o gphoto2-2.1.2
 	o grace-5.1.12
 	o grepmail-5.20
 	o gstreamer-0.6.3
@@ -181,11 +177,7 @@ Suggested package updates
 	o latd-1.18 [pkg/22735]
 	o lavaps-2.4
 	o lcms-1.0.9
-	o libaudiofile-0.2.4
 	o libgcrypt-1.1.42
-	o libgphoto2-2.1.2
-	o libxml-2.5.11
-	o libxslt-1.0.33
 	o licq-1.2.7
 	o libmpeg3-1.5.3
 	o libole2-2.2.8
@@ -217,26 +209,23 @@ Suggested package updates
 	o nap-1.5.2
 	o napshare-1.2
 	o nasm-0.98.38
-	o neXtaW-0.15.1
 	o neon-0.24.2
 	o nessus-2.0.8
 	o netatalk-1.6.3 [pkg/21930]
 	o newscache-0.99.22p1
 	o ngrep-1.41
 	o ns-flash-6.0.79
-	o nut-9.2
 	o openh323-1.11.2
 	o openoffice-1.1 [skrll]
 	o openssl-0.9.7c [jschauma]
 	o oss-3.9.8a
-	o p5-XML-LibXML-1.54
 	o pdmenu-1.2.81
 	o postfix-2.0.16
 	o prboom-2.3.0
 	o proftpd-1.2.9rc2p
 	o pygtk-0.6.11
 	o pysol-4.82
-	o pthon-2.3.1
+	o python-2.3.1
 	o rep-gtk-0.17
 	o rosegarden-2.1.4 [pkg/21904]
 	o rox-1.2.2
@@ -257,7 +246,6 @@ Suggested package updates
 	o snd-6.12
 	o snes9x-1.41
 	o spamassassin-2.60 [heinz]
-	o speex-1.0.2
 	o squeak-3.2 [fredb|pkg/17950]
 	o squeak-3.5
 	o srp_client-1.7.5 [jlam]
@@ -279,7 +267,6 @@ Suggested package updates
 	o top-3.5b12.7
 	o transcode-0.6.10
 	o ttf2pt1-3.4.3
-	o tuxpaint-0.9.12
 	o vfu-4.03
 	o vnc-3.3.7 [http://www.realvnc.com/download.html]
 	o vttest-20030301
@@ -310,7 +297,6 @@ Suggested package updates
 	o xzgv-0.8
 	o yacas-1.0.55
 	o ysm-2.9.0
-	o yudit-2.7.6
 	o zenicb 1.31 (needs merge with lots of local changes)
 
 Infrastructure problems which need addressing
