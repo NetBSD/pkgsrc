@@ -1,0 +1,22 @@
+$NetBSD: patch-ac,v 1.1 2004/08/15 00:08:58 minskim Exp $
+
+--- etc/Makefile.in.orig	Thu Apr 24 10:11:17 2003
++++ etc/Makefile.in
+@@ -13,7 +13,7 @@ INSTALL_DATA = @INSTALL_DATA@
+ INSTALL = @INSTALL@
+ 
+ CC = @CC@
+-CFLAGS = -I.. -I../lib -I../src @CFLAGS@
++CFLAGS += -I.. -I../lib -I../src @CFLAGS@
+ LDFLAGS = @LDFLAGS@
+ ZILELIBS = ../lib/libzile.a
+ LIBS = $(ZILELIBS) @LIBS@
+@@ -27,7 +27,7 @@ AUTODOCSRCS = $(srcdir)/../src/*.c
+ .SUFFIXES:
+ .SUFFIXES: .c .o
+ .c.o:
+-	$(CC) -c -I. -I$(srcdir)/../src $(CFLAGS) $<
++	$(CC) -c -I. -I$(srcdir)/../src @CPPFLAGS@ $(CFLAGS) $<
+ 
+ all: $(FILES)
+ 
