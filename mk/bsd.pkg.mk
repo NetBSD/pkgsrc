@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.572 2000/09/15 08:35:15 tron Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.573 2000/09/15 09:04:51 tron Exp $
 #
 # This file is in the public domain.
 #
@@ -2858,7 +2858,7 @@ print-pkg-size-this:
 	| ${SED} -e 's, ,\\ ,g'						\
 	| xargs ls -ld							\
 	| ${AWK} 'BEGIN { print("0"); }					\
-		  { print($$1, " +"); }					\
+		  { print($$5, " +"); }					\
 		  END { print("p"); }'					\
 	| ${DC}
 
