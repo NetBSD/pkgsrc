@@ -1,4 +1,4 @@
-# $Id: cpuflags.mk,v 1.9 2003/06/06 15:26:50 abs Exp $
+# $Id: cpuflags.mk,v 1.10 2003/08/07 11:30:05 abs Exp $
 # Makefile include fragment to simplify use of cpuflags in pkgsrc
 # abs@netbsd.org - freely distributable, no warrenties, stick no bills.
 
@@ -30,7 +30,8 @@ CFLAGS+=${CPU_FLAGS}
 CXXFLAGS+=${CPU_FLAGS}
 MAKE_FLAGS+=CCOPTIONS="${CPU_FLAGS}"	# Override CCOPTIONS for imake
 
-.else					# Assume in base system, only COPTS
+.elif !defined(DBG) || ${DBG} != "-Os"
+# Assume in base system and not building distrib optimised for space, set COPTS
 COPTS?=${CPU_FLAGS} ${DEFCOPTS}
 # Include ${DEFCOPTS} and set ?= to allow overriding in kernel builds
 
