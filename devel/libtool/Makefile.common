@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.37 2003/12/11 22:15:30 reed Exp $
+# $NetBSD: Makefile.common,v 1.38 2004/01/05 09:50:47 cube Exp $
 #
 
 DISTNAME=	libtool-ml-20010614
 PKGPFX=		${DISTNAME:C/ml-/1.4./}
-PKGREVISION=	18
+PKGREVISION=	19
 WRKSRC=		${WRKDIR}/libtool-ml
 CATEGORIES=	devel pkgtools
 MASTER_SITES=	${MASTER_SITE_LOCAL}
