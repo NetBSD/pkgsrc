@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2002/12/24 06:09:53 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2003/03/06 07:25:09 jmc Exp $
 #
 
 DISTNAME=		gal2-0-0.0.7
 PKGNAME=		${DISTNAME:S/-0-/-/}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		devel gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gal2-0/0.0/}
 EXTRACT_SUFX=		.tar.bz2
@@ -31,4 +31,5 @@ CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/gal2/html
 .include "../../textproc/libxml2/buildlink2.mk"
 .include "../../devel/libgnomeui/buildlink2.mk"
 .include "../../devel/libglade2/buildlink2.mk"
+.include "../../x11/gnome-libs/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
