@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/18 10:57:16 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/01/20 09:51:56 markd Exp $
 share/kde/locale/is/LC_MESSAGES/aktion.mo
 share/kde/locale/is/LC_MESSAGES/alarmdaemonctrl.mo
 share/kde/locale/is/LC_MESSAGES/alsaplayerui.mo
@@ -170,6 +170,7 @@ share/kde/locale/is/LC_MESSAGES/kdmconfig.mo
 share/kde/locale/is/LC_MESSAGES/kdmgreet.mo
 share/kde/locale/is/LC_MESSAGES/kdvi.mo
 share/kde/locale/is/LC_MESSAGES/kedit.mo
+share/kde/locale/is/LC_MESSAGES/keduca.mo
 share/kde/locale/is/LC_MESSAGES/kenolaba.mo
 share/kde/locale/is/LC_MESSAGES/kfax.mo
 share/kde/locale/is/LC_MESSAGES/kfifteenapplet.mo
@@ -234,6 +235,7 @@ share/kde/locale/is/LC_MESSAGES/kio_sftp.mo
 share/kde/locale/is/LC_MESSAGES/kio_smb.mo
 share/kde/locale/is/LC_MESSAGES/kio_smbro.mo
 share/kde/locale/is/LC_MESSAGES/kio_smtp.mo
+share/kde/locale/is/LC_MESSAGES/kioexec.mo
 share/kde/locale/is/LC_MESSAGES/kit.mo
 share/kde/locale/is/LC_MESSAGES/kjobviewer.mo
 share/kde/locale/is/LC_MESSAGES/kjots.mo
@@ -241,6 +243,7 @@ share/kde/locale/is/LC_MESSAGES/kjumpingcube.mo
 share/kde/locale/is/LC_MESSAGES/klaptopdaemon.mo
 share/kde/locale/is/LC_MESSAGES/klegacyimport.mo
 share/kde/locale/is/LC_MESSAGES/kless.mo
+share/kde/locale/is/LC_MESSAGES/klettres.mo
 share/kde/locale/is/LC_MESSAGES/klickety.mo
 share/kde/locale/is/LC_MESSAGES/klines.mo
 share/kde/locale/is/LC_MESSAGES/klipper.mo
@@ -280,6 +283,7 @@ share/kde/locale/is/LC_MESSAGES/kpaint.mo
 share/kde/locale/is/LC_MESSAGES/kpartapp.mo
 share/kde/locale/is/LC_MESSAGES/kpartsaver.mo
 share/kde/locale/is/LC_MESSAGES/kpat.mo
+share/kde/locale/is/LC_MESSAGES/kpercentage.mo
 share/kde/locale/is/LC_MESSAGES/kpersonalizer.mo
 share/kde/locale/is/LC_MESSAGES/kpf.mo
 share/kde/locale/is/LC_MESSAGES/kpilot.mo
@@ -329,10 +333,12 @@ share/kde/locale/is/LC_MESSAGES/ktexteditor_kdatatool.mo
 share/kde/locale/is/LC_MESSAGES/ktimemon.mo
 share/kde/locale/is/LC_MESSAGES/ktimer.mo
 share/kde/locale/is/LC_MESSAGES/ktip.mo
+share/kde/locale/is/LC_MESSAGES/ktouch.mo
 share/kde/locale/is/LC_MESSAGES/ktron.mo
 share/kde/locale/is/LC_MESSAGES/ktuberling.mo
 share/kde/locale/is/LC_MESSAGES/ktux.mo
 share/kde/locale/is/LC_MESSAGES/kuick_plugin.mo
+share/kde/locale/is/LC_MESSAGES/kuickshow.mo
 share/kde/locale/is/LC_MESSAGES/kuser.mo
 share/kde/locale/is/LC_MESSAGES/kview.mo
 share/kde/locale/is/LC_MESSAGES/kview_scale.mo
