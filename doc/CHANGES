@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.100 2002/09/29 00:14:32 wiz Exp $
+$NetBSD: CHANGES,v 1.101 2002/09/29 03:42:36 rh Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3016,3 +3016,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated mplayer to 0.90rc6nb1 [dillo 2002-09-28]
 	Updated mencoder to 0.90rc6nb1 [dillo 2002-09-28]
 	Added bktr2jpeg-1.0 [wiz 2002-09-29]
+	Added Pantomime-1.0.5 [rh 2002-09-29]
