@@ -1,0 +1,25 @@
+$NetBSD: patch-am,v 1.1 2003/10/02 12:31:30 mycroft Exp $
+
+--- src/libw32dll/wine/ldt_keeper.c.orig	2003-07-13 19:29:04.000000000 +0000
++++ src/libw32dll/wine/ldt_keeper.c	2003-10-02 12:28:23.000000000 +0000
+@@ -147,18 +147,9 @@
+ 
+ void Check_FS_Segment(void)
+ {
+-    int fs;
+-     __asm__ __volatile__(
+-	"movw %%fs,%%ax; mov %%eax,%0" : "=r" (fs) :: "%eax"
++    __asm__ __volatile__(
++	"movl %0,%%eax; movw %%ax, %%fs" : : "i" (TEB_SEL) : "%eax"
+     );
+-    fs = fs & 0xffff;
+-    
+-    if( fs != TEB_SEL ) {
+-      printf("ldt_keeper: FS segment is not set or has being lost!\n");
+-      printf("            Please report this error to xine-devel@sourceforge.net\n");
+-      printf("            Aborting....\n");
+-      abort();
+-    }
+ }
+ 
+ #if defined(__NetBSD__) || defined(__FreeBSD__) || defined(__OpenBSD__)
