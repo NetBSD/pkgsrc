@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2001/04/21 13:32:07 frueauf Exp $
+# $NetBSD: Makefile,v 1.21 2001/05/14 12:12:47 tron Exp $
 
-DISTNAME=	fetchmail-5.8.1
+DISTNAME=	fetchmail-5.8.3
 PKGNAME=	${DISTNAME:S/fetchmail/fetchmailconf/}
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.ccil.org/pub/esr/fetchmail/ \
@@ -20,7 +20,7 @@ USE_X11=	YES
 EXTRACT_ELEMENTS= ${DISTNAME}/fetchmailconf
 
 do-install:
-		${INSTALL_SCRIPT} ${WRKSRC}/fetchmailconf ${PREFIX}/bin/
+		${INSTALL_SCRIPT} ${WRKSRC}/fetchmailconf ${PREFIX}/bin
 		${LN} -s fetchmail.1 ${PREFIX}/man/man1/fetchmailconf.1
 
 .include "../../mk/bsd.pkg.mk"
