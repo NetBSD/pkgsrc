@@ -1,0 +1,26 @@
+$NetBSD: patch-ah,v 1.1 2002/07/16 14:26:20 agc Exp $
+
+--- imlib/port/unix/jnet.c	2002/07/16 13:49:13	1.1
++++ imlib/port/unix/jnet.c	2002/07/16 13:53:23
+@@ -30,6 +30,12 @@
+ #include "macs.hpp"
+ #include "jmalloc.hpp"
+ 
++#if defined(__NetBSD__)
++#define SOCKLEN_TYPE	__socklen_t
++#else
++#define SOCKLEN_TYPE	int
++#endif
++
+ int net_init(int protocol) 
+ { 
+   if (protocol==TCPIP_PROTOCOL)    // UNIX always has TCPIP!
+@@ -146,7 +152,7 @@
+ 
+   if (FD_ISSET(fd,&set))
+   {
+-    int len=sizeof(sockaddr_in);
++    SOCKLEN_TYPE len=sizeof(sockaddr_in);
+     int new_fd=accept(fd, (struct sockaddr *) &host, &len);
+     if (new_fd<0)
+     {
