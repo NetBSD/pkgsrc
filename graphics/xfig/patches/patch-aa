@@ -1,22 +1,26 @@
---- Imakefile.orig	Fri Aug 22 22:59:16 1997
-+++ Imakefile	Sun Feb  8 16:15:29 1998
-@@ -46,12 +46,12 @@
- XCOMM set JPEGLIBDIR after the #else to the directory where you have the source
- XCOMM for jpeg.
+--- Imakefile.orig	Thu Jul  2 19:37:09 1998
++++ Imakefile	Fri Jul  3 14:32:45 1998
+@@ -40,7 +40,8 @@
  
--XCOMM #define USEINSTALLEDJPEG
-+#define USEINSTALLEDJPEG
- 
+ #ifdef USEJPEG
+ #ifdef USEINSTALLEDJPEG
+-JPEGLIBDIR = /usr/local/lib
++JPEGLIBDIR = $(LOCALBASE)/lib
++JPEGINCDIR = -I$(LOCALBASE)/include
+ #else
+ JPEGLIBDIR = ../jpeg
+ #endif
+@@ -54,7 +55,7 @@
  XCOMM Uncomment the following definition for XAWLIB if you want to use
  XCOMM the 3d Athena Widget Set (highly recommended!)
  
 -XCOMM XAWLIB = -lXaw3d
 +XAWLIB = -lXaw3d
  
- XCOMM Uncomment the following if needed for DECstations running older X11R4 
+ XCOMM Uncomment the following if needed for DECstations running older X11R4
  XCOMM INCROOT=/usr/include/mit
-@@ -66,20 +66,20 @@
- XCOMM Change XPMLIB if necessary to point to the xpm library (libXpm)
+@@ -70,12 +71,12 @@
+ XCOMM Change XPMLIBS if necessary to point to the xpm library (libXpm)
  XCOMM Change XPMINC if necessary to point to the include file for xpm (xpm.h)
  
 -XCOMM #define USEXPM
@@ -28,20 +32,10 @@
  XPMLIBDIR = $(USRLIBDIR)
 -XPMINC = -I$(INCDIR)
 +XPMINC = -I$(INCDIR)/X11
- XPMLIB = -L$(XPMLIBDIR) -lXpm
+ XPMLIBS = -L$(XPMLIBDIR) -lXpm
  #endif
  
- #ifdef USEJPEG
- 
- #ifdef USEINSTALLEDJPEG
--JPEGLIBDIR = /usr/local/lib
--JPEGINCDIR = -I/usr/include/X11
-+JPEGLIBDIR = $(LOCALBASE)/lib
-+JPEGINCDIR = -I$(LOCALBASE)/include
- JPEGLIB = -L$(JPEGLIBDIR) -ljpeg
- #else
- JPEGLIBDIR = ../jpeg
-@@ -112,7 +112,7 @@
+@@ -101,7 +102,7 @@
  XCOMM inline functions. With the "INLINE" keyword, you should notice that
  XCOMM the display will be a bit faster in complex figures
  
@@ -50,3 +44,57 @@
  
  XCOMM use (and change) the following if you want the multi-key data base file
  XCOMM somewhere other than the standard X11 library directory
+@@ -110,6 +111,8 @@
+ XCOMM use this if you want the multi-key data base file in the standard X11 tree
+ XFIGLIBDIR = $(LIBDIR)/xfig
+ 
++XFIGDOCDIR = $(X11BASE)/share/doc/xfig
++
+ XCOMM If your system doesn't have strstr undefine the following definition
+ XCOMM HAVE_NO_NOSTRSTR = -DNOSTRSTR
+ 
+@@ -169,7 +172,6 @@
+ 
+ #ifdef USEJPEG
+ #ifdef USEINSTALLEDJPEG
+-JPEGINCDIR = -I/usr/include/X11
+ JPEGLIB = -L$(JPEGLIBDIR) -ljpeg
+ #else
+ JPEGCONF = configure
+@@ -314,22 +316,23 @@
+ 
+ XCOMM Install the object libraries here
+ install::
+-	@echo Copying PDF documentation to $(XFIGLIBDIR)
++	@echo Copying PDF documentation to $(XFIGDOCDIR)
+ 	@(cd Doc ; \
+-	$(INSTALL) -c xfig-howto.pdf $(XFIGLIBDIR) ; \
+-	$(INSTALL) -c xfig.pdf $(XFIGLIBDIR) ; \
+-	echo Copying html files to $(XFIGLIBDIR)/html ; \
+-	if [ -d $(XFIGLIBDIR)/html ]; then set +x; \
+-	   else (set -x; $(MKDIRHIER) $(XFIGLIBDIR)/html ); fi ; \
+-	(cd html ; $(INSTALL) -c *.* $(XFIGLIBDIR)/html ; ) ;\
++	/bin/mkdir -p $(XFIGDOCDIR); \
++	$(INSTALL) -c xfig-howto.pdf $(XFIGDOCDIR) ; \
++	$(INSTALL) -c xfig.pdf $(XFIGDOCDIR) ; \
++	echo Copying html files to $(XFIGDOCDIR)/html ; \
++	if [ -d $(XFIGDOCDIR)/html ]; then set +x; \
++	   else (set -x; $(MKDIRHIER) $(XFIGDOCDIR)/html ); fi ; \
++	(cd html ; $(INSTALL) -c *.* $(XFIGDOCDIR)/html ; ) ;\
+ 	echo "  Copying japanese html files" ; \
+-	if [ -d $(XFIGLIBDIR)/html/japanese ]; then set +x; \
+-	   else (set -x; $(MKDIRHIER) $(XFIGLIBDIR)/html/japanese ); fi ; \
+-	(cd html/japanese ; $(INSTALL) -c * $(XFIGLIBDIR)/html/japanese ; ) ; \
++	if [ -d $(XFIGDOCDIR)/html/japanese ]; then set +x; \
++	   else (set -x; $(MKDIRHIER) $(XFIGDOCDIR)/html/japanese ); fi ; \
++	(cd html/japanese ; $(INSTALL) -c * $(XFIGDOCDIR)/html/japanese ; ) ; \
+ 	echo "  Copying image files for html" ; \
+-	if [ -d $(XFIGLIBDIR)/html/images ]; then set +x; \
+-	   else (set -x; $(MKDIRHIER) $(XFIGLIBDIR)/html/images ); fi ; \
+-	(cd html/images ; $(INSTALL) -c * $(XFIGLIBDIR)/html/images ; ) ; \
++	if [ -d $(XFIGDOCDIR)/html/images ]; then set +x; \
++	   else (set -x; $(MKDIRHIER) $(XFIGDOCDIR)/html/images ); fi ; \
++	(cd html/images ; $(INSTALL) -c * $(XFIGDOCDIR)/html/images ; ) ; \
+ 	) ;
+ 	@echo "Copying Fig Object Libraries"
+ 	@(cd Examples/Libraries ; \
