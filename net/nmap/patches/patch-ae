@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1 2000/11/12 12:43:46 he Exp $
+
+--- libpcap-possiblymodified/bpf/net/bpf.h.orig	Sun Nov 12 13:28:39 2000
++++ libpcap-possiblymodified/bpf/net/bpf.h	Sun Nov 12 13:25:20 2000
+@@ -52,7 +52,7 @@
+  * Alignment macros.  BPF_WORDALIGN rounds up to the next 
+  * even multiple of BPF_ALIGNMENT. 
+  */
+-#define BPF_ALIGNMENT sizeof(bpf_int32)
++#define BPF_ALIGNMENT sizeof(long)
+ #define BPF_WORDALIGN(x) (((x)+(BPF_ALIGNMENT-1))&~(BPF_ALIGNMENT-1))
+ 
+ #define BPF_MAXINSNS 512
