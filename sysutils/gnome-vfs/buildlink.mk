@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.3 2001/10/10 13:39:22 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.4 2001/10/10 13:44:29 jlam Exp $
 #
 # This Makefile fragment is included by packages that use gnome-vfs.
 #
@@ -31,6 +31,10 @@ BUILDLINK_FILES.gnome-vfs+=	lib/vfsConf.sh
 BUILDLINK_CONFIG_WRAPPER_SED+=	\
 	-e "s|-I${BUILDLINK_PREFIX.gnome-vfs}\(/include/gnome-vfs-1.0\)|-I${BUILDLINK_DIR}\1|g" \
 	-e "s|-I${BUILDLINK_PREFIX.gnome-vfs}\(/lib/gnome-vfs-1.0\)|-I${BUILDLINK_DIR}\1|g"
+
+REPLACE_BUILDLINK_SED+=	\
+	-e "s|-I${BUILDLINK_DIR}\(/include/gnome-vfs-1.0\)|-I${BUILDLINK_PREFIX.gnome-vfs}\1|g" \
+	-e "s|-I${BUILDLINK_DIR}\(/lib/gnome-vfs-1.0\)|-I${BUILDLINK_PREFIX.gnome-vfs}\1|g"
 
 .include "../../devel/gettext-lib/buildlink.mk"
 .include "../../devel/GConf/buildlink.mk"
