@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4325 2004/01/02 17:04:40 taca Exp $
+$NetBSD: CHANGES,v 1.4326 2004/01/02 17:08:30 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -24,3 +24,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Added sylpheed-claws-ghostscript-viewer-0.6 [cube 2004-01-02]
 	Updated cue to 20031201 [itojun 2004-01-02]
 	Updated ftpproxy to 1.2.2 [taca 2004-01-02]
+	Updated sun-jdk13 to 1.0.10 [jschauma 2004-01-02]
+	Updated sun-jre13 to 1.0.10 [jschauma 2004-01-02]
