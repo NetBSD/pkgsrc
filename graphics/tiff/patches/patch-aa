@@ -1,24 +1,30 @@
-$NetBSD: patch-aa,v 1.9 2001/02/27 09:45:12 skrll Exp $
+$NetBSD: patch-aa,v 1.10 2001/08/23 00:07:18 abs Exp $
 
---- man/Makefile.in.orig	Mon Jan  3 17:34:03 2000
-+++ man/Makefile.in	Mon Jan  3 17:34:04 2000
-@@ -336,8 +336,7 @@
- 	 ${ECHO} 'install:';						\
- 	 for i in *.1; do						\
- 	    f=${MANAPPNAME};						\
--	    ${ECHO} '	cd ..; ${INSTALL} -m 444 -F ${MAN}/${MANAPPS}	\
--		-idb tiff.man.tools -src' apps/"$$i" '-O' "$$f";	\
-+	    ${ECHO} '	${BSD_INSTALL_DATA}' $$i ${MAN}/${MANAPPS}/$$f;	\
- 	 done								\
- 	)>apps/Makefile
- lib/Makefile:
-@@ -348,8 +347,7 @@
- 	 ${ECHO} 'install:';						\
- 	 for i in *.3t; do						\
- 	    f=${MANLIBNAME};						\
--	    ${ECHO} '	cd ..; ${INSTALL} -m 444 -F ${MAN}/${MANLIB}	\
--		-idb tiff.man.dev -src' lib/"$$i" '-O' "$$f";		\
-+	    ${ECHO} '	${BSD_INSTALL_DATA}' $$i ${MAN}/${MANLIB}/$$f;	\
- 	 done								\
- 	)>lib/Makefile
+--- configure.orig	Mon Mar 20 18:20:42 2000
++++ configure
+@@ -486,7 +486,7 @@
  
+ checkCompiler()
+ {
+-    compiler=$1
++    compiler="$*"
+     if isGNU $compiler; then
+ 	ISGCC=yes
+     else
+@@ -512,7 +512,7 @@
+     $RM dummy dummy.o
+     capture $compiler -o dummy ${C_ANSI} dummy.c && {
+ 	CC=$compiler;
+-	test -z "${CCOMPILER-}" && CCOMPILER=`findApp $compiler $PATH`
++	test -z "${CCOMPILER-}" && CCOMPILER=$compiler
+ 	test -z "${ENVOPTS-}"   && ENVOPTS="${C_ANSI-}"
+ 	return 0
+     }
+@@ -1661,6 +1661,7 @@
+ 	    -[LR]/*)	echo "$i" ;;
+ 	    -L*)	echo "$i" | sed 's;^-L;-L../;' ;;
+ 	    -R*)	echo "$i" | sed 's;^-R;-R../;' ;;
++	    -W*)	echo "$i" ;;
+ 	    *)		echo "../$i" ;;
+ 	    esac
+ 	done) | tr '\012' ' '
