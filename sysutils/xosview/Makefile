@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.43 2003/07/17 22:53:59 grant Exp $
+# $NetBSD: Makefile,v 1.44 2003/10/04 01:42:36 bgrayson Exp $
 
 DISTNAME=       xosview-1.7.0.b
 PKGNAME=	xosview-1.7.0b
 CATEGORIES=	sysutils
-MASTER_SITES=   http://www.ece.utexas.edu/~bgrayson/xosview/ \
-		http://lore.ece.utexas.edu/~bgrayson/xosview/
+MASTER_SITES=   ${MASTER_SITE_SOURCEFORGE:=xosview/}
 
 MAINTAINER=	bgrayson@NetBSD.org
-HOMEPAGE=	http://lore.ece.utexas.edu/~bgrayson/xosview.html
+HOMEPAGE=	http://xosview.sourceforge.net/
 COMMENT=	X11 graphical display of OS statistics
 
 NOT_FOR_PLATFORM=	NetBSD-1.[7-9]*-* NetBSD-[2-9]*-*
