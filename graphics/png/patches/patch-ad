@@ -1,11 +1,11 @@
-$NetBSD: patch-ad,v 1.2 2004/08/06 09:25:18 drochner Exp $
+$NetBSD: patch-ad,v 1.3 2004/08/09 07:37:35 recht Exp $
 
---- scripts/libpng.pc.in.orig	2004-08-04 13:34:51.000000000 +0200
-+++ scripts/libpng.pc.in
-@@ -7,5 +7,5 @@ includedir=${exec_prefix}/include
+--- scripts/libpng.pc.in.orig	2004-08-08 04:42:48.000000000 +0200
++++ scripts/libpng.pc.in	2004-08-08 12:29:46.000000000 +0200
+@@ -7,5 +7,5 @@
  Name: libpng12
  Description: Loads and saves PNG files
- Version: 1.2.6rc1
+ Version: 1.2.6rc2
 -Libs: -L${libdir} -lpng12 -lz -lm
 -Cflags: -I${includedir}/libpng12
 +Libs: -L${libdir} -lpng -lz -lm
