@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2003/07/21 16:30:42 martti Exp $
+# $NetBSD: Makefile,v 1.11 2003/09/03 12:35:12 martin Exp $
 #
 
-DISTNAME=	mserv-0.33
-PKGREVISION=	7
+DISTNAME=	mserv-0.35
 CATEGORIES=	audio
 MASTER_SITES=	http://www.mserv.org/download/
 
@@ -11,9 +10,12 @@ HOMEPAGE=	http://www.mserv.org/
 COMMENT=	Local centralised music server environment
 
 DEPENDS+=	mpg123-[0-9]*:../mpg123
+GNU_CONFIGURE=
 
-ALL_TARGET=	default
 REPLACE_PERL=	mserv/mservedit webclient/main.cgi webclient/margin.cgi webclient/mserv.cgi
+
+post-configure:
+		${MV} ${WRKSRC}/mserv/soundcard.h ${WRKSRC}/mserv/mservsoundcard.h
 
 post-install:
 		${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mserv

@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.6 2002/10/03 15:46:56 abs Exp $
+$NetBSD: patch-ab,v 1.7 2003/09/03 12:35:12 martin Exp $
 
---- mserv/cmd.c.orig	Sat Jul 15 18:52:56 2000
-+++ mserv/cmd.c
-@@ -2789,6 +2789,8 @@ static void mserv_cmd_reset(t_client *cl
-     mserv_response(cl, "RESETER", NULL);
-     return;
-   }
-+  mserv_broadcast("RESETGO", "%s", cl->user);
-+  mserv_flush();
-   mserv_log("Reset initiated by %s", cl->user);
-   mserv_reset();
-   mserv_broadcast("RESET", "%s", cl->user);
+--- mserv/cmd.c.orig	2003-08-02 16:26:19.000000000 +0200
++++ mserv/cmd.c	2003-09-03 13:51:41.000000000 +0200
+@@ -51,7 +51,7 @@
+ #include <math.h>
+ #include "mserv.h"
+ #include "misc.h"
+-#include "soundcard.h"
++#include "mservsoundcard.h"
+ #include "acl.h"
+ #include "filter.h"
+ #include "cmd.h"
