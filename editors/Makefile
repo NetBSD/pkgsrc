@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2000/08/25 01:08:48 jlam Exp $
+# $NetBSD: Makefile,v 1.35 2000/10/19 23:54:58 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.44 1997/09/13 20:19:28 chuckr Exp
 #
 
@@ -15,6 +15,7 @@
     SUBDIR += mg2a
     SUBDIR += ne
     SUBDIR += nedit
+    SUBDIR += ng
     SUBDIR += nvi-m17n
     SUBDIR += pico
     SUBDIR += sam
