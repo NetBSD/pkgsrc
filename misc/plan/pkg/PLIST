@@ -1,0 +1,38 @@
+@comment $NetBSD: PLIST,v 1.1 1998/09/04 08:09:53 frueauf Exp $
+bin/plan
+libexec/plan/pland
+libexec/plan/notifier
+libexec/plan/netplan
+libexec/plan/plan_cal.ps
+@exec mkdir -p %D/libexec/plan/netplan.dir ; chmod 700 %D/libexec/plan/netplan.dir
+@unexec rm -rf %D/libexec/plan/netplan.dir
+man/man1/plan.1
+man/man1/netplan.1
+man/man4/plan.4
+share/plan/HISTORY
+share/plan/README
+share/plan/holiday/holiday_australia
+share/plan/holiday/holiday_austria
+share/plan/holiday/holiday_bavarian
+share/plan/holiday/holiday_belgium
+share/plan/holiday/holiday_canada
+share/plan/holiday/holiday_denmark
+share/plan/holiday/holiday_dutch
+share/plan/holiday/holiday_finnish
+share/plan/holiday/holiday_french
+share/plan/holiday/holiday_frswiss
+share/plan/holiday/holiday_german
+share/plan/holiday/holiday_german.orig
+share/plan/holiday/holiday_hungary
+share/plan/holiday/holiday_italy
+share/plan/holiday/holiday_japan
+share/plan/holiday/holiday_norway
+share/plan/holiday/holiday_quebec
+share/plan/holiday/holiday_spain
+share/plan/holiday/holiday_swedish
+share/plan/holiday/holiday_uk
+share/plan/holiday/holiday_us
+share/plan/plan.help
+@dirrm share/plan/holiday
+@dirrm share/plan
+@dirrm libexec/plan

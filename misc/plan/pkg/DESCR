@@ -1,0 +1,26 @@
+Plan is a schedule planner based on X/Motif. It displays a month calendar
+similar to xcal, but every day box is large enough to show appointments in
+small print. By pressing on a day box, the appointments for that day can be
+listed and edited. Appointments are entered with the following information
+(everything except the time is optional):
+
+- the date, time, and length (time and days) of the appointment,
+- an optional text message to be printed,
+- an optional script to be executed,
+- early-warn and late-warn triggers that precede the alarm time
+- repetitions: [n-th] weekdays, days-of-the-month, every n days, yearly
+- optional fast command-line appointment entry
+- flexible ways to specify holidays and vacations
+- extensive context help
+- multiuser capability using an IP server program (with access lists),
+- grouping of appointments into files, per-user, private, and others
+
+The action being taken when a warn or alarm time is reached is programmable;
+by default a window pops up. In addition, a program can be executed, or mail
+can be sent. Other methods of listing appointments (today, this week, next
+week, or a keyword search for regular expressions) are also available. Plan
+can be configured to display times in 12-hour or 24-hour formats, mmddyy and
+ddmmyy date formats, and can show either Monday or Sunday in the leftmost
+column. Four view modes are supported: month, year, week, day, and a 365-day
+overview. The day, week, and overview plot appointments as colored and
+labeled bars on a time chart.
