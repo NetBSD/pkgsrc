@@ -1,14 +1,20 @@
-$NetBSD: patch-an,v 1.1.1.1 1998/10/21 19:59:30 garbled Exp $
+$NetBSD: patch-an,v 1.2 2003/03/31 03:46:30 jmc Exp $
 
---- glunix/src/rexec/lrexec.cc~	Thu Oct  2 12:34:06 1997
-+++ glunix/src/rexec/lrexec.cc	Fri Feb 27 17:47:23 1998
-@@ -295,2 +295,5 @@
+--- glunix/src/rexec/lrexec.cc.orig	Thu Oct  2 19:34:06 1997
++++ glunix/src/rexec/lrexec.cc	Sun Mar 30 21:55:03 2003
+@@ -293,6 +293,9 @@
+ #include <termios.h>
+ #include <unistd.h>
  #include <limits.h>
 +#ifdef __NetBSD__
 +#include <sys/ioctl.h>
 +#endif
  
-@@ -377,5 +380,4 @@
+ #include "glib/types.h"
+ #include "glib.h"
+@@ -375,39 +378,30 @@
+ {
+     struct termios buf;
  
 -    (void) ioctl(0, TCGETS, (char *)&saveTermios);
 -
@@ -16,7 +22,11 @@ $NetBSD: patch-an,v 1.1.1.1 1998/10/21 19:59:30 garbled Exp $
 +#ifdef __NetBSD__
 +        while(tcgetattr(STDIN_FILENO, &saveTermios) == -1) {
  	if(errno == EINTR) {
-@@ -386,9 +388,12 @@
+ 	    continue;
+ 	} else {
+ 	    D1("tcgetattr() failed: %s\n", strerror(errno));
+-	    return False;
++	    return;
  	}
 -    }*/
 -
@@ -30,10 +40,9 @@ $NetBSD: patch-an,v 1.1.1.1 1998/10/21 19:59:30 garbled Exp $
 +    /*
 +      if(ioctl(STDIN_FILENO, TIOCGWINSZ, (char *) windowSize) == -1) {
  	return False;
--    }*/
-+	}*/
+     }*/
  
-@@ -396,16 +401,5 @@
+     buf = saveTermios;
  
 -    /**/
 -
@@ -52,38 +61,22 @@ $NetBSD: patch-an,v 1.1.1.1 1998/10/21 19:59:30 garbled Exp $
 -//  buf.c_oflag &= ~(OPOST); on non-ultrasparcs, this loses CR's
 +    buf.c_oflag &= ~(OPOST); /*on non-ultrasparcs, this loses CR's*/
      buf.c_lflag &= ~(ECHO | ICANON | IEXTEN | ISIG);
-@@ -418,20 +412,26 @@
-     while(tcsetattr(STDIN_FILENO, TCSAFLUSH, &buf) == -1) {
--	if(errno == EINTR) {
-+      if(errno == EINTR) {
-+	continue;
-+      } else {
-+	D1("tcsetattr(): %s\n", strerror(errno));
-+
-+	while(tcsetattr(STDIN_FILENO, TCSAFLUSH, &saveTermios) == -1) {
-+	  if(errno == EINTR) {
- 	    continue;
--	} else {
-+	  } else {
- 	    D1("tcsetattr(): %s\n", strerror(errno));
--
--	    while(tcsetattr(STDIN_FILENO, TCSAFLUSH, &saveTermios) == -1) {
--		if(errno == EINTR) {
--		    continue;
--		} else {
--		    D1("tcsetattr(): %s\n", strerror(errno));
+     buf.c_cflag &= ~(CSIZE | PARENB);
+     buf.c_cflag |= CS8;
+@@ -426,14 +420,20 @@
+ 		    continue;
+ 		} else {
+ 		    D1("tcsetattr(): %s\n", strerror(errno));
 -		    return False;
--		}
--	    }
--	    
- 	    return False;
-+	  }
++	    return;
+ 		}
+ 	    }
+ 	    
+-	    return False;
++	return;
  	}
 -    }*/
 -
-+	    
-+	return False;
-+      }
 +    }
 +#else
 +	buf.c_iflag &= ~(INLCR|IGNCR|ICRNL|IUCLC|IXON);
@@ -93,3 +86,5 @@ $NetBSD: patch-an,v 1.1.1.1 1998/10/21 19:59:30 garbled Exp $
 +	(void) ioctl(0, TCSETSF, (char *)&buf);
 +#endif
      Comm_SetLineBuffering(False);
+    
+     return;

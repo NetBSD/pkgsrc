@@ -1,14 +1,15 @@
-$NetBSD: patch-aj,v 1.3 2000/06/16 23:40:17 wiz Exp $
+$NetBSD: patch-aj,v 1.4 2003/03/31 03:46:30 jmc Exp $
 
---- glunix/src/idle/didle_sysinfo.cc.orig	Thu Sep 18 21:04:55 1997
-+++ glunix/src/idle/didle_sysinfo.cc	Sat Jun 17 01:07:46 2000
-@@ -95,14 +95,33 @@
+--- glunix/src/idle/didle_sysinfo.cc.orig	Thu Sep 18 19:04:55 1997
++++ glunix/src/idle/didle_sysinfo.cc	Sun Mar 30 21:52:53 2003
+@@ -95,14 +95,34 @@
  #include <kvm.h>
  #include <nlist.h>
  #include <stdio.h>
 +
 +#ifdef __NetBSD__
 +#include <stdlib.h>
++#include <string.h>
 +#include <sys/time.h>
 +#include <sys/param.h>
 +#include <sys/proc.h>
@@ -36,7 +37,7 @@ $NetBSD: patch-aj,v 1.3 2000/06/16 23:40:17 wiz Exp $
  
  #include "clist.h"
  #include "cidle.h"
-@@ -120,12 +139,51 @@
+@@ -120,12 +140,51 @@
  
  #define LOADDOUBLE(la) ((double)(la) / FSCALE)
  #define HASH(x) ((x) >> 1)
@@ -89,7 +90,7 @@ $NetBSD: patch-aj,v 1.3 2000/06/16 23:40:17 wiz Exp $
  /* definitions for indices in the nlist array */
  #define X_AVENRUN		 0
  #define X_MPID			 1
-@@ -165,11 +223,11 @@
+@@ -165,11 +224,11 @@
  
  // These are offsets into kmem for the stats we need
  static ulong avenrunOffset, availrmemOffset, anoninfoOffset, swapfsOffset;
@@ -103,7 +104,7 @@ $NetBSD: patch-aj,v 1.3 2000/06/16 23:40:17 wiz Exp $
  static int cpuStates[NUM_CPUSTATES];
  static int memoryStats[5];
  static char *cpuStateNames[] =
-@@ -237,6 +295,45 @@
+@@ -237,6 +296,45 @@
   *
   * Side effects:
   *****************************************************************************/
@@ -149,7 +150,7 @@ $NetBSD: patch-aj,v 1.3 2000/06/16 23:40:17 wiz Exp $
  Bool
  Idle_InitializeSysinfo(void)
  {
-@@ -301,7 +398,7 @@
+@@ -301,7 +399,7 @@
  
      return True;
  }
@@ -158,7 +159,7 @@ $NetBSD: patch-aj,v 1.3 2000/06/16 23:40:17 wiz Exp $
  /******************************************************************************
   * Idle_CleanupSysinfo --
   *    Description of purpose and function of the procedure
-@@ -333,18 +430,30 @@
+@@ -333,18 +431,30 @@
   *
   * Side effects:
   *****************************************************************************/
@@ -190,7 +191,7 @@ $NetBSD: patch-aj,v 1.3 2000/06/16 23:40:17 wiz Exp $
  	    /* Has this pid been recycled?  Are we hitting a very old process?
  	       If so, then reset the entry */
  	    if (usage < candidate->cpuUsage) {
-@@ -353,7 +462,11 @@
+@@ -353,7 +463,11 @@
  	    return candidate;
  	}
  	if (candidate->pid == -1) {
@@ -202,7 +203,7 @@ $NetBSD: patch-aj,v 1.3 2000/06/16 23:40:17 wiz Exp $
  	    candidate->cpuUsage = 0;
  	    return candidate;
  	}
-@@ -379,10 +492,17 @@
+@@ -379,10 +493,17 @@
   *
   * Side effects:
   *****************************************************************************/
@@ -220,7 +221,7 @@ $NetBSD: patch-aj,v 1.3 2000/06/16 23:40:17 wiz Exp $
      ASSERT(entry != NULL);
      entry->cpuUsage = usage;
  }
-@@ -408,12 +528,24 @@
+@@ -408,12 +529,24 @@
  void
  Idle_GetSysInfo(Idle_Load *total, Idle_Load *seq, List_List *glunixProcs)
  {
@@ -245,7 +246,7 @@ $NetBSD: patch-aj,v 1.3 2000/06/16 23:40:17 wiz Exp $
      static struct timeval  lastTime = {0, 0};
      struct timeval         currTime;
      double                 alpha, beta;
-@@ -459,6 +591,33 @@
+@@ -459,6 +592,33 @@
      vmInUse[TOTAL] = 0; vmInUse[SEQUENTIAL] = 0;
      cpuUsage[TOTAL] = 0; cpuUsage[SEQUENTIAL] = 0;
      numProcs = 0;
@@ -279,7 +280,7 @@ $NetBSD: patch-aj,v 1.3 2000/06/16 23:40:17 wiz Exp $
      rewinddir(procdir);
      
      while ((direntp = readdir(procdir)) != 0) {
-@@ -493,6 +652,7 @@
+@@ -493,6 +653,7 @@
  	(void) close(fd);
  	numProcs++;
      }
@@ -287,7 +288,7 @@ $NetBSD: patch-aj,v 1.3 2000/06/16 23:40:17 wiz Exp $
      total->mem = activeMemory[TOTAL];
      total->cpu = cpuUsage[TOTAL];
      seq->mem = activeMemory[SEQUENTIAL];
-@@ -503,10 +663,21 @@
+@@ -503,10 +664,21 @@
  void
  Idle_GetSystemInfo(Idle_SystemLoad *sysLoad)
  {
@@ -297,13 +298,12 @@ $NetBSD: patch-aj,v 1.3 2000/06/16 23:40:17 wiz Exp $
      long     avenrun[3];
 +    struct anoninfo anoninfo;
      int      ani_max, ani_resv, availrmem, swapfs_minfree;
--    int      i;
 +#else
-+    int i;
+     int      i;
 +    double  avenrun[3];
 +    int mib[2];
 +    struct vmtotal total;
-+    int sizeofvmtotal;
++    size_t sizeofvmtotal;
 +    struct  swapent *sep;
 +    int     totalsize, size, totalinuse, inuse, ncounted;
 +    int     rnswap, nswap;
@@ -311,7 +311,7 @@ $NetBSD: patch-aj,v 1.3 2000/06/16 23:40:17 wiz Exp $
  
      if (kd == NULL) {
  	sysLoad->loadAvg[0] = 0;
-@@ -515,7 +686,48 @@
+@@ -515,7 +687,48 @@
  	sysLoad->memory = 0;
  	return;
      }
@@ -360,7 +360,7 @@ $NetBSD: patch-aj,v 1.3 2000/06/16 23:40:17 wiz Exp $
      /* get load average array */
      ReadKernelData(avenrunOffset, (char *) avenrun, sizeof (avenrun));
      //
-@@ -539,6 +751,7 @@
+@@ -539,6 +752,7 @@
      sysLoad->memory = PAGETOK(MAX(ani_max - ani_resv, 0) +
  			      availrmem - swapfs_minfree);
  

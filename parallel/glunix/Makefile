@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2003/03/29 12:42:08 jmmv Exp $
+# $NetBSD: Makefile,v 1.26 2003/03/31 03:46:29 jmc Exp $
 
 DISTNAME=	glunix-release-1-0a
 PKGNAME=	glunix-1.0a
+PKGREVISION=	1
 WRKSRC=		${WRKDIR}
 CATEGORIES=	parallel
 MASTER_SITES=	http://now.cs.berkeley.edu/Glunix/ \
@@ -28,11 +29,16 @@ NOW_ROOT=	${LOCALBASE}/now
 MESSAGE_SUBST+=	NOW_ROOT=${NOW_ROOT}
 
 .if (${MACHINE} == "i386")
-FLAGS= "-m486 -DL_ENDIAN"
+FLAGS=-m486
+.endif
+
+.include "../../mk/endian.mk"
+.if (${MACHINE_ENDIAN} == "little")
+FLAGS+=-DL_ENDIAN
 .endif
 
 MAKE_ENV+= OPSYS=${OPSYS} ARCH=${MACHINE_ARCH} NOW_ROOT=${NOW_ROOT}
-MAKE_ENV+= PORTSDIR=${PKGDIR} WRKDIR=${WRKDIR} FLAGS=${FLAGS}
+MAKE_ENV+= PORTSDIR=${PKGDIR} WRKDIR=${WRKDIR} FLAGS="${FLAGS}"
 MAKE_ENV+= SSH=${SSH}
 
 SCRIPTS_ENV+= ARCH=${MACHINE_ARCH} RM=${RM} NOW_ROOT=${NOW_ROOT}
@@ -63,7 +69,7 @@ post-patch:
 			${MV} -f $$f $$f.input &&			\
 			${SED} -e 's|%%%NOW_ROOT%%%|${NOW_ROOT}|' $$f.input > $$f; \
 		done;							\
-		${MV} -f glush/Makefile glush/Makefile.input &&		\
+		${MV} -f progs/glush/Makefile progs/glush/Makefile.input && \
 		${SED} -e 's|%%%PLAT%%%|${MACHINE_ARCH}-NetBSD-tcp|'	\
 			progs/glush/Makefile.input > progs/glush/Makefile
 
@@ -90,6 +96,8 @@ pre-install:
 	fi;
 
 post-install:
+	@${LN} -s ../../now/lib/libglunix.so.1.0 ${PREFIX}/now/lib/libglunix.so.1
+	@${LN} -s ../../now/lib/libglunix.so.1.0 ${PREFIX}/now/lib/libglunix.so
 	@${TOUCH} ${NOW_ROOT}/lib/${MACHINE_ARCH}-${OPSYS}-tcp/.keepme
 
 .include "../../mk/bsd.pkg.mk"
