@@ -1,4 +1,4 @@
-# $NetBSD: tools.mk,v 1.12 2003/08/27 20:03:44 jlam Exp $
+# $NetBSD: tools.mk,v 1.13 2003/09/02 06:59:48 jlam Exp $
 #
 # This Makefile creates a ${TOOLS_DIR} directory and populates the bin
 # subdir with tools that hide the ones outside of ${TOOLS_DIR}.

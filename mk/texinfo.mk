@@ -1,4 +1,4 @@
-# $NetBSD: texinfo.mk,v 1.21 2003/08/16 23:19:04 seb Exp $
+# $NetBSD: texinfo.mk,v 1.22 2003/09/02 06:59:48 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk when INFO_FILES is
 # not empty or USE_MAKEINFO is not "no".

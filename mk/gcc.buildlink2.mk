@@ -1,4 +1,4 @@
-# $NetBSD: gcc.buildlink2.mk,v 1.5 2003/08/21 16:16:46 gavan Exp $
+# $NetBSD: gcc.buildlink2.mk,v 1.6 2003/09/02 06:59:46 jlam Exp $
 #
 # USE_GCC2
 #	If defined, use gcc from lang/gcc.

@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.176 2003/08/24 01:58:56 taca Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.177 2003/09/02 06:59:41 jlam Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -152,6 +152,12 @@ DISTDIR?=	${_PKGSRCDIR}/distfiles
 # hold any updated distfiles, for example.
 # Possible:  any directories
 # Default: none
+
+PKG_INSTALLATION_PREFS?= overwrite pkgviews
+# This is a whitespace-separated list of installation types to try when
+# building a package, in order of preference.
+# Possible: any of: overwrite, pkgviews
+# Default: overwrite pkgviews
 
 PACKAGES?=       ${_PKGSRCDIR}/packages
 # Store generated packages on a per-architecture base
@@ -1464,6 +1470,16 @@ PILRC_USE_GTK?=	YES
 # Only works on NetBSD-1.5 and newer.
 # Possible: YES, not defined
 # Default: not defined
+
+PKG_INSTALLATION_TYPES?= overwrite
+# This is a whitespace-separated list of installation types supported
+# by the package.
+#
+# *NOTE*: This variable *must* be set in the package Makefile *before*
+#         the inclusion of bsd.prefs.mk.
+#
+# Possible: any of: overwrite, pkgviews
+# Default: overwrite
 
 #PKG_JVM=
 # Used to choose a java virtual machine for packages which use Java.
