@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2004/04/20 13:02:56 markd Exp $
+@comment $NetBSD: PLIST,v 1.11 2004/06/10 12:09:22 markd Exp $
 bin/dsirc
 bin/feedbrowser
 bin/kdict
@@ -78,6 +78,8 @@ lib/kde3/kopete_connectionstatus.so
 lib/kde3/kopete_contactnotes.la
 lib/kde3/kopete_contactnotes.so
 lib/kde3/kopete_cryptography.la
+lib/kde3/kopete_gadu.la
+lib/kde3/kopete_gadu.so
 lib/kde3/kopete_cryptography.so
 lib/kde3/kopete_highlight.la
 lib/kde3/kopete_highlight.so
@@ -390,6 +392,18 @@ share/kde/apps/kopete/icons/crystalsvg/16x16/actions/aol_icon.png
 share/kde/apps/kopete/icons/crystalsvg/16x16/actions/dt_icon.png
 share/kde/apps/kopete/icons/crystalsvg/16x16/actions/emoticon.png
 share/kde/apps/kopete/icons/crystalsvg/16x16/actions/free_icon.png
+share/kde/apps/kopete/icons/crystalsvg/16x16/actions/gg_away.png
+share/kde/apps/kopete/icons/crystalsvg/16x16/actions/gg_busy.png
+share/kde/apps/kopete/icons/crystalsvg/16x16/actions/gg_busy_d.png
+share/kde/apps/kopete/icons/crystalsvg/16x16/actions/gg_con.mng
+share/kde/apps/kopete/icons/crystalsvg/16x16/actions/gg_connecting.png
+share/kde/apps/kopete/icons/crystalsvg/16x16/actions/gg_ignored.png
+share/kde/apps/kopete/icons/crystalsvg/16x16/actions/gg_invi.png
+share/kde/apps/kopete/icons/crystalsvg/16x16/actions/gg_invi_d.png
+share/kde/apps/kopete/icons/crystalsvg/16x16/actions/gg_offline.png
+share/kde/apps/kopete/icons/crystalsvg/16x16/actions/gg_offline_d.png
+share/kde/apps/kopete/icons/crystalsvg/16x16/actions/gg_online.png
+share/kde/apps/kopete/icons/crystalsvg/16x16/actions/gg_online_d.png
 share/kde/apps/kopete/icons/crystalsvg/16x16/actions/icq_away.png
 share/kde/apps/kopete/icons/crystalsvg/16x16/actions/icq_connecting.mng
 share/kde/apps/kopete/icons/crystalsvg/16x16/actions/icq_dnd.png
@@ -447,6 +461,7 @@ share/kde/apps/kopete/icons/crystalsvg/16x16/actions/yahoo_invisible.png
 share/kde/apps/kopete/icons/crystalsvg/16x16/actions/yahoo_mobile.png
 share/kde/apps/kopete/icons/crystalsvg/16x16/actions/yahoo_tea.png
 share/kde/apps/kopete/icons/crystalsvg/16x16/apps/aim_protocol.png
+share/kde/apps/kopete/icons/crystalsvg/16x16/apps/gadu_protocol.png
 share/kde/apps/kopete/icons/crystalsvg/16x16/apps/icq_protocol.png
 share/kde/apps/kopete/icons/crystalsvg/16x16/apps/irc_protocol.png
 share/kde/apps/kopete/icons/crystalsvg/16x16/apps/jabber_protocol.png
@@ -461,6 +476,7 @@ share/kde/apps/kopete/icons/crystalsvg/32x32/actions/kopeteaway.png
 share/kde/apps/kopete/icons/crystalsvg/32x32/actions/newmessage.mng
 share/kde/apps/kopete/icons/crystalsvg/32x32/apps/aim_protocol.png
 share/kde/apps/kopete/icons/crystalsvg/32x32/apps/autoreplace.png
+share/kde/apps/kopete/icons/crystalsvg/32x32/apps/gadu_protocol.png
 share/kde/apps/kopete/icons/crystalsvg/32x32/apps/highlight.png
 share/kde/apps/kopete/icons/crystalsvg/32x32/apps/icq_protocol.png
 share/kde/apps/kopete/icons/crystalsvg/32x32/apps/irc_protocol.png
@@ -1380,6 +1396,7 @@ share/kde/services/kopete_behaviorconfig.desktop
 share/kde/services/kopete_connectionstatus.desktop
 share/kde/services/kopete_contactnotes.desktop
 share/kde/services/kopete_cryptography.desktop
+share/kde/services/kopete_gadu.desktop
 share/kde/services/kopete_highlight.desktop
 share/kde/services/kopete_history.desktop
 share/kde/services/kopete_icq.desktop
