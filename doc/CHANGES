@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.710 2002/12/07 10:14:26 jmmv Exp $
+$NetBSD: CHANGES,v 1.711 2002/12/07 11:04:48 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3846,3 +3846,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated atari800 to 1.2.5 [cjep 2002-12-06]
 	Added cgoban-java-2.4.55 [rh 2002-12-07]
 	Updated gentoo to 0.11.34 [jmmv 2002-12-07]
+	Updated SDL-image to 1.2.2 [jmmv 2002-12-07]
