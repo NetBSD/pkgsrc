@@ -1,8 +1,18 @@
-$NetBSD: patch-ad,v 1.1 1999/07/13 01:31:09 jlam Exp $
+$NetBSD: patch-ad,v 1.2 2000/04/16 08:56:16 mycroft Exp $
 
---- configure.in.orig	Tue Mar  9 14:02:08 1999
-+++ configure.in	Thu Jul  8 14:40:47 1999
-@@ -49,14 +49,19 @@
+--- configure.in.orig	Sat Jan  1 23:05:50 2000
++++ configure.in	Sun Apr 16 04:44:17 2000
+@@ -47,22 +47,26 @@
+ AC_SUBST(GMP_SUBDIRS)
+ AC_SUBST(GMP_LIBS)
+ 
+-AC_CHECK_LIB(ncurses, tgetent, LIBS="-lncurses $LIBS" termcap=yes,
+-  AC_CHECK_LIB(termcap, tgetent, LIBS="-ltermcap $LIBS" termcap=yes,
+-               termcap=no))
++AC_CHECK_LIB(termcap, tgetent, LIBS="-ltermcap $LIBS" termcap=yes,
++             termcap=no)
+ if test "$termcap" = yes; then
+   AC_CHECK_HEADERS(termcap.h)
    AC_DEFINE(HAVE_LIBTERMCAP)
  fi
  
