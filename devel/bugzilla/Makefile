@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/01/06 13:15:27 adrianp Exp $
+# $NetBSD: Makefile,v 1.3 2005/01/15 09:33:48 adrianp Exp $
 #
 
 DISTNAME=	bugzilla-2.18rc3
@@ -32,7 +32,6 @@ BUILDLINK_DEPENDS.mysql-client+=	mysql-client>=3.23.41
 
 BZ_WEB_GROUP?=	www
 SENDMAIL?=	/usr/sbin/sendmail
-APACHE_USER?=	www
 
 BUILD_DEFS+= 	BZ_WEB_GROUP SENDMAIL APACHE_USER
 
