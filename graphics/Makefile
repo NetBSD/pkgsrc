@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.288 2004/02/03 04:34:06 grant Exp $
+# $NetBSD: Makefile,v 1.289 2004/02/03 12:26:39 recht Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -34,6 +34,7 @@ SUBDIR+=	blender
 SUBDIR+=	blender-doc
 SUBDIR+=	blinkenthemes
 SUBDIR+=	blinkentools
+SUBDIR+=	cairo
 SUBDIR+=	camediaplay
 SUBDIR+=	camlimages
 SUBDIR+=	cdlabelgen
@@ -132,6 +133,7 @@ SUBDIR+=	libggiwmh
 SUBDIR+=	libgii
 SUBDIR+=	libgnomecanvas
 SUBDIR+=	libmpeg2
+SUBDIR+=	libpixman
 SUBDIR+=	librsvg
 SUBDIR+=	librsvg2
 SUBDIR+=	librsvg2-gtk2
