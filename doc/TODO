@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.319 2003/02/26 10:16:54 wiz Exp $
+$NetBSD: TODO,v 1.320 2003/02/26 14:01:53 cjep Exp $
 
 Suggested new packages
 ======================
@@ -167,7 +167,6 @@ Suggested package updates
 	o koth-0.8.0 [http://www.nongnu.org/koth/]
 	o lbreakout2-2.4
 	o lcms-1.0.9
-	o leafnode-1.9.36
 	o lesstif-0.93.40
 	o libgii-0.8.2
 	o libggi-2.0.2
