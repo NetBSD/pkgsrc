@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2004/10/03 00:14:39 tv Exp $
+# $NetBSD: Makefile,v 1.37 2004/10/08 09:18:07 adam Exp $
 
 DISTNAME=	nedit-${VERS}-source
 PKGNAME=	nedit-${VERS}
@@ -21,10 +21,10 @@ USE_X11=		YES
 ALL_TARGET=		netbsd
 
 do-install:
-.for PROGRAM in nc nedit
-	${INSTALL_PROGRAM} ${WRKSRC}/source/${PROGRAM} ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/doc/${PROGRAM}.man ${PREFIX}/man/man1/${PROGRAM}.1
-.endfor
+	${INSTALL_PROGRAM} ${WRKSRC}/source/nedit ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/source/nc ${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/doc/nedit.man ${PREFIX}/man/man1/nedit.1
+	${INSTALL_MAN} ${WRKSRC}/doc/nc.man ${PREFIX}/man/man1/nedit-nc.1
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/nedit
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/nedit
 	${INSTALL_DATA} ${WRKSRC}/ReleaseNotes ${PREFIX}/share/doc/nedit
