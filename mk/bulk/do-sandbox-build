@@ -1,21 +1,10 @@
 #!/bin/sh
-#	$NetBSD: do-sandbox-build,v 1.4 2001/06/27 11:53:03 hubertf Exp $
+#	$NetBSD: do-sandbox-build,v 1.5 2002/03/13 06:30:13 hubertf Exp $
 
 #
 # Script to start a sandbox build
 #
-
-#
-# Important files in sandbox (after extracting sets or doing a
-# "make distribution DESTDIR=/usr/sandbox" in src/etc):
-#  * kernel (/netbsd)
-#  * /dev/*
-#  * working(!) mail config (hostname, sendmail.cf)
-#  * /etc/localtime (security/snmpd)
-#  * /etc/resolv.conf (security/snmpd)
-#  * /usr/src (sysutils/aperture, net/ppp-mppe)
-#
-# !!! Don't forget to install X !!!
+# See pkgsrc/Packages.txt for documentation!
 #
 
 chroot /usr/sandbox sh -c 'cd /usr/cvs.local/pkgsrc/ ; sh mk/bulk/build'
