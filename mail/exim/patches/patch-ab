@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.7 2003/03/22 12:37:25 jmmv Exp $
+$NetBSD: patch-ab,v 1.8 2003/08/02 17:00:10 jmmv Exp $
 
---- Local/Makefile.netbsd.orig	2003-03-22 13:37:47.000000000 +0100
+--- Local/Makefile.netbsd.orig	2003-07-30 20:51:26.000000000 +0200
 +++ Local/Makefile.netbsd
 @@ -98,7 +98,9 @@
  # /usr/local/sbin. The installation script will try to create this directory,
@@ -18,20 +18,21 @@ $NetBSD: patch-ab,v 1.7 2003/03/22 12:37:25 jmmv Exp $
  # configuration if this file does not exist.
  
 -CONFIGURE_FILE=/usr/exim/configure
-+CONFIGURE_FILE=@PREFIX@/etc/exim/configure
++CONFIGURE_FILE=@PKG_SYSCONFDIR@/configure
  
  
  #------------------------------------------------------------------------------
-@@ -126,7 +128,7 @@ CONFIGURE_FILE=/usr/exim/configure
+@@ -126,7 +128,8 @@ CONFIGURE_FILE=/usr/exim/configure
  # owner of a local mailbox.) Specifying these values as root is very strongly
  # discouraged. These values are compiled into the binary.
  
 -EXIM_USER=
-+EXIM_USER=mail
++EXIM_USER=@EXIM_USER@
++EXIM_GROUP=@EXIM_GROUP@
  
  # If the setting of EXIM_USER is numeric (e.g. EXIM_USER=42), there must
  # also be a setting of EXIM_GROUP. If, on the other hand, you use a name
-@@ -207,7 +209,7 @@ TRANSPORT_SMTP=yes
+@@ -207,7 +210,7 @@ TRANSPORT_SMTP=yes
  # This one is special-purpose, and commonly not required, so it is not
  # included by default.
  
@@ -40,7 +41,7 @@ $NetBSD: patch-ab,v 1.7 2003/03/22 12:37:25 jmmv Exp $
  
  
  #------------------------------------------------------------------------------
-@@ -216,9 +218,9 @@ TRANSPORT_SMTP=yes
+@@ -216,9 +219,9 @@ TRANSPORT_SMTP=yes
  # MBX, is included only when requested. If you do not know what this is about,
  # leave these settings commented out.
  
@@ -53,7 +54,7 @@ $NetBSD: patch-ab,v 1.7 2003/03/22 12:37:25 jmmv Exp $
  
  
  #------------------------------------------------------------------------------
-@@ -281,7 +283,7 @@ LOOKUP_LSEARCH=yes
+@@ -281,7 +284,7 @@ LOOKUP_LSEARCH=yes
  # files are defaulted in the OS/Makefile-Default file, but can be overridden in
  # local OS-specific make files.
  
@@ -62,7 +63,7 @@ $NetBSD: patch-ab,v 1.7 2003/03/22 12:37:25 jmmv Exp $
  
  
  
-@@ -302,9 +304,9 @@ EXIM_MONITOR=eximon.bin
+@@ -302,9 +305,9 @@ EXIM_MONITOR=eximon.bin
  # included in the Exim binary. You will then need to set up the run time
  # configuration to make use of the mechanism(s) selected.
  
@@ -75,7 +76,7 @@ $NetBSD: patch-ab,v 1.7 2003/03/22 12:37:25 jmmv Exp $
  
  
  #------------------------------------------------------------------------------
-@@ -315,8 +317,9 @@ EXIM_MONITOR=eximon.bin
+@@ -315,8 +318,9 @@ EXIM_MONITOR=eximon.bin
  # with TLS support. If you don't know what this is all about, leave these
  # settings commented out.
  
@@ -87,7 +88,7 @@ $NetBSD: patch-ab,v 1.7 2003/03/22 12:37:25 jmmv Exp $
  
  # If you are running Exim as a server, note that just building it with TLS
  # support is not all you need to do. You also need to set up a suitable
-@@ -371,7 +374,7 @@ EXIM_MONITOR=eximon.bin
+@@ -371,7 +375,7 @@ EXIM_MONITOR=eximon.bin
  # %s. This will be replaced by one of the strings "main", "panic", or "reject"
  # to form the final file names. Some installations may want something like this:
  
@@ -96,7 +97,7 @@ $NetBSD: patch-ab,v 1.7 2003/03/22 12:37:25 jmmv Exp $
  
  # which results in files with names /var/log/exim_mainlog, etc. The directory
  # in which the log files are placed must exist; Exim does not try to create
-@@ -467,14 +470,14 @@ ZCAT_COMMAND=/usr/bin/zcat
+@@ -467,14 +471,14 @@ ZCAT_COMMAND=/usr/bin/zcat
  # this setting. See the manual section entitled "Use of tcpwrappers" in the
  # chapter on building and installing Exim.
  
@@ -113,7 +114,7 @@ $NetBSD: patch-ab,v 1.7 2003/03/22 12:37:25 jmmv Exp $
  
  # but of course there may need to be other things in CFLAGS and EXTRALIBS_EXIM
  # as well.
-@@ -511,11 +514,11 @@ ZCAT_COMMAND=/usr/bin/zcat
+@@ -511,11 +515,11 @@ ZCAT_COMMAND=/usr/bin/zcat
  # haven't got Perl, Exim will still build and run; you just won't be able to
  # use those utilities.
  
@@ -130,7 +131,7 @@ $NetBSD: patch-ab,v 1.7 2003/03/22 12:37:25 jmmv Exp $
  
  
  #------------------------------------------------------------------------------
-@@ -695,7 +698,7 @@ ZCAT_COMMAND=/usr/bin/zcat
+@@ -695,7 +699,7 @@ ZCAT_COMMAND=/usr/bin/zcat
  # (process id) to a file so that it can easily be identified. The path of the
  # file can be specified here. Some installations may want something like this:
  

@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.4 2002/06/19 16:02:27 ad Exp $
+$NetBSD: patch-ac,v 1.5 2003/08/02 17:00:10 jmmv Exp $
 
 --- OS/Makefile-NetBSD-a.out.orig	Thu Apr 18 08:08:28 2002
 +++ OS/Makefile-NetBSD-a.out	Thu Jun 13 12:37:38 2002
@@ -7,7 +7,7 @@ $NetBSD: patch-ac,v 1.4 2002/06/19 16:02:27 ad Exp $
  
  CHOWN_COMMAND=/usr/sbin/chown
 -CFLAGS=-O
-+CFLAGS=-O2 -pipe
++CFLAGS+=-O2 -pipe
  
  HAVE_SA_LEN=YES
 +HAVE_IPV6=YES
