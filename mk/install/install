@@ -1,6 +1,6 @@
 # start of install
 #
-# $NetBSD: install,v 1.10 2002/06/27 20:46:31 jlam Exp $
+# $NetBSD: install,v 1.11 2002/07/24 20:30:07 jlam Exp $
 
 case ${STAGE} in
 PRE-INSTALL)
@@ -296,7 +296,7 @@ EOF
 	done
 	eval set -- ${RCD_SCRIPTS}
 	for script; do
-		samplefile="${PKG_PREFIX}/etc/rc.d/${script}"
+		samplefile="${RCD_SCRIPTS_EXAMPLEDIR}/${script}"
 		file="${RCD_SCRIPTS_DIR}/${script}"
 
 		if [ "${_PKG_CONFIG}" = "NO" ]; then
