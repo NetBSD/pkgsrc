@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 1999/01/23 15:02:12 tron Exp $
+# $NetBSD: Makefile,v 1.73 1999/01/29 19:20:12 tron Exp $
 # FreeBSD Id: Makefile,v 1.156 1997/09/30 07:54:42 asami Exp
 #
 
@@ -79,7 +79,6 @@
 #    SUBDIR += tkgoodstuff
     SUBDIR += tkicb
     SUBDIR += tkinfo
-    SUBDIR += tkirc
     SUBDIR += tkman
 #    SUBDIR += tvtwm
     SUBDIR += unclutter
