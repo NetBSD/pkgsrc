@@ -1,54 +1,41 @@
-$NetBSD: patch-ae,v 1.8 1999/11/10 08:01:29 soren Exp $
-
---- doc/xmamerc.dist.orig	Tue Oct 12 16:17:14 1999
-+++ doc/xmamerc.dist	Wed Nov 10 07:13:42 1999
-@@ -23,16 +23,16 @@
+--- doc/xmamerc.dist.orig	Fri Mar  3 14:42:02 2000
++++ doc/xmamerc.dist	Tue Mar 14 12:41:39 2000
+@@ -3,15 +3,15 @@
+ ### Digital sound related ###
+ # dsp-driver            <NULL> (not set)
+ bufsize                 0.080000
+-timer                   0
++timer                   1
  
- # Where does your Mame rom files reside? 
- # This option can be overriden by MAMEDIR environment variable
--rompath		/usr/games/lib/xmame:/usr/local/lib/xmame
-+rompath		@ROMPATH@
+ ### Sound mixer related ###
+ # sound-mixer-driver    <NULL> (not set)
  
- # Also Mame needs a public-writable directory to store high scores
--spooldir        /usr/games/lib/xmame
-+spooldir        @SPOOLDIR@
+ ### Video Related ###
+ bpp                     0
+-heightscale             1.000000
+-widthscale              1.000000
++heightscale             2.000000
++widthscale              2.000000
+ autodouble              1
+ dirty                   1
+ scanlines               0
+@@ -61,7 +61,7 @@
+ samples                 1
+ samplefreq              22050
+ volume                  -3
+-# audiodevice           <NULL> (not set)
++audiodevice             /dev/audio0
+ # mixerdevice           <NULL> (not set)
  
- # Where can xmame find the cheat database?
- cheatfile	/usr/games/lib/xmame/CHEAT.DAT
+ ### Input Related ###
+@@ -70,8 +70,8 @@
+ mouse                   1
  
- # What is your loved game? ( remember that mame defaults to "pacman" )
--defaultgame	galturbo
-+defaultgame	pacman
- 
- # Type here the name of the display where play xmame
- # overriden by DISPLAY environment variable. Not usefull in config file but...
-@@ -55,12 +55,12 @@
- # their default card. 
- # not every implementations supports this feature
- # Linux & most others:
--audiodevice	/dev/dsp
-+#audiodevice	/dev/dsp
- #audiodevice	/dev/dsp0
- #audiodevice	/dev/dsp1
- 
- # Sun & some others:
--#audiodevice	/dev/audio
-+audiodevice	/dev/audio
- 
- # select audio sample frequency ( 11050-44100 )
- # not every implementations supports this feature
-@@ -105,11 +105,11 @@
- # Define X and Y axis scale related to original bitmap. Default is 1,
- # since xmame-0.34b5.3 also used to scale vector games, vector games also
- # except values like 1.5 and even 0.5 these are rounded for normal games
--widthscale	2
--heightscale	2
-+#widthscale	2
-+#heightscale	2
- 
- #scale sets both widthscale and heightscale in one option
--#scale 2
-+scale		2
- 
- # We want autoframeskip ;)
- autoframeskip	1
+ ### Fileio Related ###
+-rompath                 /usr/games/lib/xmame
+-spooldir                /usr/games/lib/xmame
++rompath                 @ROMPATH@
++spooldir                @SPOOLDIR@
+ screenshotdir           .
+ cheatfile               /usr/games/lib/xmame/cheat.dat
+ historyfile             /usr/games/lib/xmame/history.dat
