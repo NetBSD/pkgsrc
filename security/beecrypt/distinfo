@@ -1,4 +1,8 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/08/03 15:47:42 jmmv Exp $
+$NetBSD: distinfo,v 1.2 2003/08/03 20:58:18 jmmv Exp $
 
-SHA1 (beecrypt-2.1.0.tar.gz) = 9520a807eb489ec55b11438c082255d4f8351083
-Size (beecrypt-2.1.0.tar.gz) = 252618 bytes
+SHA1 (beecrypt-3.0.0.tar.gz) = a4e63c98e0a75e8a185c0222d1a8e4b1e368c599
+Size (beecrypt-3.0.0.tar.gz) = 450390 bytes
+SHA1 (patch-aa) = 2c9f56e395819982247496a4efa201e5c6295de5
+SHA1 (patch-ab) = 3fe6dd593ae9133602b53cca57417a0e01e9100c
+SHA1 (patch-ac) = 8e48f2edf250f513d90e2e743f789d06b007abef
+SHA1 (patch-ad) = d5706aa4492c76ee3e77340fd32ab4212d30347d
