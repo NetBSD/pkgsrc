@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1 2001/03/07 00:17:29 hubertf Exp $
+$NetBSD: patch-aa,v 1.2 2001/03/07 00:54:19 hubertf Exp $
 
 Index: Makefile
 ===================================================================
@@ -8,11 +8,9 @@ diff -u -r1.5 Makefile
 --- Makefile	2001/01/09 03:13:43	1.5
 +++ Makefile	2001/03/06 23:54:39
 @@ -1,6 +1,7 @@
- # $NetBSD: patch-aa,v 1.1 2001/03/07 00:17:29 hubertf Exp $
  # Original from FreeBSD, no rcs id.
  
 -SUBDIR=lib .WAIT add admin create delete info
 +#HF#SUBDIR=lib .WAIT add admin create delete info
 +SUBDIR=lib add admin create delete info
  
- .include <bsd.subdir.mk>
