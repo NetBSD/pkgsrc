@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.3 1999/11/12 05:17:20 hubertf Exp $
+$NetBSD: patch-aa,v 1.4 2000/09/04 14:54:06 kim Exp $
 
---- ./ar.h	Sat May  1 06:04:22 1993
-+++ /usr/pkgsrc/archivers/zoo/work.i386.unpatched/ar.h	Fri Nov 12 06:19:39 1999
-@@ -15,9 +15,11 @@
+--- ar.h.orig	Sat May  1 00:04:22 1993
++++ ar.h	Mon Sep  4 10:41:33 2000
+@@ -15,11 +15,15 @@
  /* uchar should be 8 bits or more */
  /* typedef unsigned char  uchar;   -- already in zoo.h */
  
@@ -10,7 +10,11 @@ $NetBSD: patch-aa,v 1.3 1999/11/12 05:17:20 hubertf Exp $
  typedef unsigned int   uint;    /* 16 bits or more */
  #if !defined(__386BSD__) || !defined(_TYPES_H_)
  typedef unsigned short ushort;  /* 16 bits or more */
-+#endif
  #endif
  typedef unsigned long  ulong;   /* 32 bits or more */
++#else
++# include <sys/types.h>
++#endif
  
+ /* T_UINT16 must be #defined in options.h to be 
+ a 16-bit unsigned integer type */
