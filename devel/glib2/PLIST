@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2004/04/01 18:13:31 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.13 2004/04/24 04:54:07 minskim Exp $
 bin/glib-genmarshal
 bin/glib-gettextize
 bin/glib-mkenums
@@ -70,7 +70,6 @@ include/glib/glib-2.0/gobject/gvalue.h
 include/glib/glib-2.0/gobject/gvaluearray.h
 include/glib/glib-2.0/gobject/gvaluecollector.h
 include/glib/glib-2.0/gobject/gvaluetypes.h
-@comment belongs to libiconv: lib/charset.alias
 lib/glib-2.0/include/glibconfig.h
 lib/libglib-2.0.a
 lib/libglib-2.0.la
