@@ -1,4 +1,4 @@
-$NetBSD: patch-be,v 1.3 2002/08/25 19:23:54 jlam Exp $
+$NetBSD: patch-be,v 1.4 2002/08/28 07:15:44 skrll Exp $
 
 --- kio/kssl/ksslcertificate.cc.orig	Wed Aug 14 15:48:38 2002
 +++ kio/kssl/ksslcertificate.cc
@@ -20,14 +20,3 @@ $NetBSD: patch-be,v 1.3 2002/08/25 19:23:54 jlam Exp $
  #ifdef HAVE_SSL
    d->m_cert = NULL;
    setCert(KOSSL::self()->X509_dup(const_cast<KSSLCertificate&>(x).getCert()));
-@@ -541,9 +541,8 @@ KSSLCertificate::KSSLValidation KSSLCert
- 
-     //kdDebug(7029) << "KSSL setting CRL.............." << endl;
-     // int X509_STORE_add_crl(X509_STORE *ctx, X509_CRL *x);
--    //
- 
--    // int X509_STORE_CTX_set_purpose(X509_STORE_CTX *ctx, int purpose);
-+    d->kossl->X509_STORE_CTX_set_purpose(certStoreCTX, X509_PURPOSE_SSL_SERVER);
- 
-     //kdDebug(7029) << "KSSL verifying.............." << endl;
-     certStoreCTX->error = X509_V_OK;
