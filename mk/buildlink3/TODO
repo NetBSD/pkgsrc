@@ -1,4 +1,4 @@
-$NetBSD: PKGVIEWS,v 1.1.2.10 2003/08/16 20:20:55 jlam Exp $
+$NetBSD: TODO,v 1.1.2.1 2003/08/31 09:46:14 jlam Exp $
 
 Package views integration plan:
 ==============================
@@ -41,8 +41,3 @@ that depend on them.
 
 (4) Migrate the USE_X11BASE and USE_IMAKE packages to set
     PKG_INSTALLATION_TYPE to "pkgviews".
-
-At this point every package in pkgsrc will be using pkgviews, and we
-can excise all of the "overwrite" code from pkgsrc internals.  From
-this point on, pkgsrc only supports depoted packages via package
-views.
