@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2004/01/05 09:37:05 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2004/01/05 11:05:45 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GETTEXT_BUILDLINK3_MK:=	${GETTEXT_BUILDLINK3_MK}+
@@ -130,4 +130,4 @@ CONFIGURE_ARGS+=	--without-libintl-prefix
 .  endif
 .endif	# GETTEXT_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:C/\+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

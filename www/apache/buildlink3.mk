@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2004/01/04 23:34:07 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2004/01/05 11:05:47 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 APACHE_BUILDLINK3_MK:=	${APACHE_BUILDLINK3_MK}+
@@ -25,4 +25,4 @@ CONFIGURE_ARGS+=	--with-apxs="${APXS}"
 .  endif
 .endif	# APACHE_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:C/\+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
