@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.subdir.mk,v 1.15 1998/05/29 02:34:36 hubertf Exp $
+#	$NetBSD: bsd.pkg.subdir.mk,v 1.16 1998/05/29 03:25:51 hubertf Exp $
 #	Derived from: FreeBSD Id: bsd.port.subdir.mk,v 1.19 1997/03/09 23:10:56 wosch Exp 
 #	from: @(#)bsd.subdir.mk	5.9 (Berkeley) 2/1/91
 #
@@ -123,9 +123,9 @@ README.html: .PRECIOUS
 	@> $@.tmp
 .for entry in ${SUBDIR}
 .if defined(PKGSRCTOP)
-	@echo -n '<a href="'${entry}/README.html'">'"`echo ${entry} | ${HTMLIFY}`"'</a>: ' >> $@.tmp
+	@echo -n '<TR><TD VALIGN=TOP><a href="'${entry}/README.html'">'"`echo ${entry} | ${HTMLIFY}`"'</a>: <TD>' >> $@.tmp
 .else
-	@echo -n '<a href="'${entry}/README.html'">'"`cd ${entry}; ${MAKE} package-name | ${HTMLIFY}`</a>: " >> $@.tmp
+	@echo -n '<TR><TD VALIGN=TOP><a href="'${entry}/README.html'">'"`cd ${entry}; ${MAKE} package-name | ${HTMLIFY}`</a>: <TD>" >> $@.tmp
 .endif
 .if exists(${entry}/pkg/COMMENT)
 	@${HTMLIFY} ${entry}/pkg/COMMENT >> $@.tmp
@@ -133,7 +133,7 @@ README.html: .PRECIOUS
 	@echo "(no description)" >> $@.tmp
 .endif
 .endfor
-	@sort -t '>' +1 -2 $@.tmp > $@.tmp2
+	@sort -t '>' +3 -4 $@.tmp > $@.tmp2
 .if exists(${.CURDIR}/pkg/DESCR)
 	@${HTMLIFY} ${.CURDIR}/pkg/DESCR > $@.tmp3
 .else
