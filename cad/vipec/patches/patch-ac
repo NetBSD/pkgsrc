@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.1 2000/03/28 21:48:42 dmcmahill Exp $
+$NetBSD: patch-ac,v 1.2 2000/04/01 18:54:00 dmcmahill Exp $
 
 --- vipec/Makefile.in.orig	Wed Oct 27 20:01:06 1999
-+++ vipec/Makefile.in	Mon Mar 27 20:13:59 2000
++++ vipec/Makefile.in	Sat Apr  1 13:43:49 2000
 @@ -89,5 +89,5 @@
  LIBSOCKET = @LIBSOCKET@
  LIBTIFF = @LIBTIFF@
@@ -9,3 +9,10 @@ $NetBSD: patch-ac,v 1.1 2000/03/28 21:48:42 dmcmahill Exp $
 +#LIBTOOL = @LIBTOOL@
  LIBUCB = @LIBUCB@
  LIBUTIL = @LIBUTIL@
+@@ -158,5 +158,5 @@
+ bin_PROGRAMS = vipec 
+ vipec_SOURCES = drawingframe.cpp circuiteditor.cpp vipec.cpp view.cpp vector.cpp utils.cpp twoports.cpp table.cpp smith.cpp smallmatrix.cpp setup.cpp parser.cpp paramset.cpp netanal.cpp matrix.cpp main.cpp graphutils.cpp graph.cpp convert.cpp config.cpp block.cpp analyser.cpp 
+-vipec_LDADD = -lqt -lXext -lX11 $(LIBSOCKET)
++vipec_LDADD = -lqt -lXext -lX11 -lz -lpng -lSM $(LIBSOCKET)
+ 
+ SUBDIRS = images ckt help 
