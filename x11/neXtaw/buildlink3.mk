@@ -1,0 +1,24 @@
+# $NetBSD: buildlink3.mk,v 1.1 2004/04/11 23:34:29 xtraeme Exp $
+
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
+NEXTAW_BUILDLINK3_MK:=	${NEXTAW_BUILDLINK3_MK}+
+
+.if !empty(BUILDLINK_DEPTH:M+)
+BUILDLINK_DEPENDS+=	neXtaw
+.endif
+
+BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:NneXtaw}
+BUILDLINK_PACKAGES+=	neXtaw
+
+.if !empty(NEXTAW_BUILDLINK3_MK:M+)
+BUILDLINK_DEPENDS.neXtaw+=	neXtaw>=0.15.1
+BUILDLINK_PKGSRCDIR.neXtaw?=	../../x11/neXtaw
+.endif	# NEXTAW_BUILDLINK3_MK
+
+.include "../../mk/bsd.prefs.mk"
+
+LIBXAW?=	-L${BUILDLINK_PREFIX.neXtaw}/lib					\
+		${_COMPILER_LD_FLAG}${_OPSYS_RPATH_NAME}${BUILDLINK_PREFIX.neXtaw}/lib	\
+		-lneXtaw
+
+BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
