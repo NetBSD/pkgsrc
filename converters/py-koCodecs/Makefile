@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/09/21 23:46:46 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2003/09/21 09:43:27 jmc Exp $
 
 DISTNAME=	KoreanCodecs-2.0.4
 PKGNAME=	${PYPKGPREFIX}-koCodecs-2.0.4
@@ -11,6 +11,7 @@ COMMENT=	Python Unicode codecs for Korean charsets
 
 PYDISTUTILSPKG=	yes
 PYBINMODULE=	yes
+USE_BUILDLINK2=	yes
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
