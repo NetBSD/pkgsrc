@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2002/05/15 20:44:15 mjl Exp $
+# $NetBSD: Makefile,v 1.17 2002/08/12 19:43:20 tron Exp $
 
 DISTNAME=	Guppi-0.40.3
 PKGNAME=	${DISTNAME:S/G/g/}
@@ -10,7 +10,18 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.gnome.org/guppi/
 COMMENT=	Plot program with integrated statistics capabilities
 
-DEPENDS+=	gnumeric>=0.75:../../math/gnumeric0
+# "guppi" only accepts newer versions of the "gnumeric" package which
+# cannot be build on all platforms. We only enable "gnumeric" support
+# on platforms which can build the "gnumeric" 1.0.x packages.
+.if exists(/usr/include/wctype.h)
+DEPENDS+=	gnumeric>=1.0.9:../../math/gnumeric
+
+CONFIGURE_ARGS=	--enable-gnumeric
+PLIST_SUBST+=	GNUMERIC=
+.else
+CONFIGURE_ARGS=	--disable-gnumeric
+PLIST_SUBST+=	GNUMERIC="@comment "
+.endif
 DEPENDS+=	guile>=1.4:../../lang/guile
 
 BUILDLINK_DEPENDS.gnome-core=		gnome-core>=1.4.0.4nb1
