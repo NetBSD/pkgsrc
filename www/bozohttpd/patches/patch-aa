@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.8 2003/09/22 08:38:59 wiz Exp $
+$NetBSD: patch-aa,v 1.9 2003/09/27 15:37:43 wiz Exp $
 
---- bozohttpd.c.orig	Wed Jul  9 17:53:47 2003
+--- bozohttpd.c.orig	2003-07-09 17:53:47.000000000 +0200
 +++ bozohttpd.c
 @@ -2092,6 +2092,9 @@ static struct content_map content_map[] 
  	{ ".ice",	"x-conference/x-cooltalk",	"",		"", NULL },
@@ -12,3 +12,25 @@ $NetBSD: patch-aa,v 1.8 2003/09/22 08:38:59 wiz Exp $
  	{ NULL,		NULL,				NULL,		NULL, NULL, },
  };
  
+@@ -2332,10 +2335,10 @@ error(int code, const char *fmt, ...)
+ /* the follow functions and variables are used in handling HTTP errors */
+ /* ARGSUSED */
+ static void
+-http_error(code, request, log)
++http_error(code, request, logstr)
+ 	int	code;
+ 	http_req *request;
+-	const char *log;
++	const char *logstr;
+ {
+ 	static	char buf[BUFSIZ];	/* static so we don't need to malloc? */
+ 	char portbuf[20];
+@@ -2344,7 +2347,7 @@ http_error(code, request, log)
+ 	const char *proto = (request && request->hr_proto) ? request->hr_proto : http_11;
+ 	int	size;
+ 
+-	debug((DEBUG_FAT, "http_error %d: %s", code, log));
++	debug((DEBUG_FAT, "http_error %d: %s", code, logstr));
+ 	if (header == NULL || reason == NULL)
+ 		error(1, "http_error() failed (short = %p, long = %p)",
+ 		    header, reason);
