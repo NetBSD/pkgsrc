@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2004/12/16 13:11:19 uebayasi Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2004/12/17 01:14:19 uebayasi Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 EB_BUILDLINK3_MK:=	${EB_BUILDLINK3_MK}+
@@ -12,17 +12,18 @@ BUILDLINK_PACKAGES+=	eb
 
 _EB_REQD=		3.3.2nb1
 
+# This variable should be directly passed to shell commands.  (E.g., a
+# configure argument.)
+#
 # XXX We need something generic.
 .include "../../mk/bsd.prefs.mk"
-PKG_SYSCONFDIR.eb!=						\
+PKG_SYSCONFDIR.eb=$$(						\
 	if ${PKG_ADMIN} pmatch 'eb>=${_EB_REQD}'		\
-	    `${PKG_INFO} -e eb` 2>/dev/null; then		\
+	    $$( ${PKG_INFO} -e eb ) 2>/dev/null; then		\
 		${PKG_INFO} -B eb 2>/dev/null |			\
-		    ${SED} -ne '/^PKG_SYSCONFDIR/ {		\
-			s/^PKG_SYSCONFDIR=//; p; }';		\
-	else							\
-		${ECHO};					\
-	fi
+		    ${SED} -ne '/^PKG_SYSCONFDIR/		\
+			{ s/^PKG_SYSCONFDIR=//; p; }';		\
+	else ${ECHO}; fi )
 
 .if !empty(EB_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.eb+=		eb>=${_EB_REQD}
