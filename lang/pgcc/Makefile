@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/02/28 23:51:13 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2001/03/07 15:52:02 wiz Exp $
 
 DISTNAME=		gcc-2.95.2
 PKGNAME=		pgcc-2.95.2.1
@@ -26,7 +26,7 @@ FILESDIR=		${PKGSRCDIR}/lang/gcc/files
 PATCHDIR=		${PKGSRCDIR}/lang/gcc/patches
 PKGDIR=			${PKGSRCDIR}/lang/gcc/pkg
 
-MD5_FILE=		${.CURDIR}/files/md5
+DIGEST_FILE=		${.CURDIR}/files/md5
 DESCR_SRC=		${.CURDIR}/pkg/DESCR
 
 .if (${OPSYS} == "NetBSD") && (${OBJECT_FMT} == "ELF")
