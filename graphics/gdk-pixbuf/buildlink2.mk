@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.2 2002/08/25 18:39:04 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2002/09/11 10:15:33 jlam Exp $
 
 .if !defined(GDK_PIXBUF_BUILDLINK2_MK)
 GDK_PIXBUF_BUILDLINK2_MK=	# defined
@@ -24,8 +24,6 @@ BUILDLINK_FILES.gdk-pixbuf+=	lib/gdk-pixbuf/loaders/libpixbufloader-ras.*
 BUILDLINK_FILES.gdk-pixbuf+=	lib/gdk-pixbuf/loaders/libpixbufloader-tiff.*
 BUILDLINK_FILES.gdk-pixbuf+=	lib/gdk-pixbuf/loaders/libpixbufloader-xbm.*
 BUILDLINK_FILES.gdk-pixbuf+=	lib/gdk-pixbuf/loaders/libpixbufloader-xpm.*
-BUILDLINK_FILES.gdk-pixbuf+=	lib/gdk_pixbufConf.sh
-BUILDLINK_FILES.gdk-pixbuf+=	lib/gdk_pixbuf_xlibConf.sh
 BUILDLINK_FILES.gdk-pixbuf+=	lib/libgdk_pixbuf.*
 BUILDLINK_FILES.gdk-pixbuf+=	lib/libgdk_pixbuf_xlib.*
 
