@@ -1,4 +1,4 @@
-# $NetBSD: defs.Interix.mk,v 1.1 2004/03/11 17:53:16 tv Exp $
+# $NetBSD: defs.Interix.mk,v 1.2 2004/03/11 19:37:42 tv Exp $
 #
 # Variable definitions for the Interix operating system.
 
@@ -88,9 +88,9 @@ MOTIF_TYPE_DEFAULT?=	openmotif	# default 2.0 compatible libs type
 MOTIF12_TYPE_DEFAULT?=	lesstif12	# default 1.2 compatible libs type
 NOLOGIN?=		/sbin/nologin
 PKG_TOOLS_BIN?=		${LOCALBASE}/sbin
-ROOT_CMD?=		${SU} - root -c
-ROOT_USER?=		root
-ROOT_GROUP?=	wheel
+ROOT_CMD?=		${SU} - ${ROOT_USER} -c
+ROOT_USER?=		${BINOWN}
+ROOT_GROUP?=		+Administrators
 TOUCH_FLAGS?=
 ULIMIT_CMD_datasize?=	ulimit -d `ulimit -H -d`
 ULIMIT_CMD_stacksize?=	ulimit -s `ulimit -H -s`
