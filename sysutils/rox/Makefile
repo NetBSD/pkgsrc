@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2002/05/26 19:45:44 cjep Exp $
+# $NetBSD: Makefile,v 1.4 2002/06/01 18:25:46 cjep Exp $
 #
 
 DISTNAME=	rox-1.2.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=rox/}
 EXTRACT_SUFX=	.tgz
@@ -11,7 +11,7 @@ MAINTAINER=	rxg@netbsd.org
 HOMEPAGE=	http://rox.sourceforge.net/
 COMMENT=	RISC OS-like filer for X
 
-DEPENDS+=	rox-base>=1.0.2:../../sysutils/rox-base
+DEPENDS+=	rox-base>=1.0.2nb1:../../sysutils/rox-base
 
 DIST_SUBDIR=	rox
 
@@ -22,23 +22,21 @@ CONFIGURE_ARGS+=	--with-gtk2
 WRKSRC=		${WRKDIR}/${DISTNAME}/ROX-Filer/src
 
 post-patch:
-	${SED} -e "s:APPDIR:"${PREFIX}/share/rox":g" < ${FILESDIR}/rox > \
+	${SED} -e "s:@PREFIX@:"${PREFIX}":g" < ${FILESDIR}/rox > \
 		${WRKDIR}/${DISTNAME}/rox
 
 post-build:
-	${CP} ${WRKSRC}/ROX-Filer ${WRKDIR}/${DISTNAME}/ROX-Filer
+	${MV} ${WRKSRC} ${WRKDIR}/${DISTNAME}/src
 
 pre-install:
 	${RM} -f ${WRKDIR}/${DISTNAME}/ROX-Filer/AppRun.orig
 	${RM} -rf ${WRKSRC}
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/rox
-	${INSTALL_PROGRAM_DIR} ${PREFIX}/libexec/rox
-	${INSTALL} ${WRKDIR}/${DISTNAME}/ROX-Filer/ROX-Filer		\
+	${INSTALL_PROGRAM} ${WRKDIR}/${DISTNAME}/src/ROX-Filer	\
 			${PREFIX}/libexec/rox
-	${RM} -f ${WRKDIR}/${DISTNAME}/ROX-Filer/ROX-Filer
-	${CP} -Rf ${WRKDIR}/${DISTNAME}/ROX-Filer ${PREFIX}/share/rox
+	${CP} -Rf ${WRKDIR}/${DISTNAME}/ROX-Filer			\
+				${PREFIX}/share/rox/ROX-Filer;
 	${SED} -e "s:@PREFIX@:"${PREFIX}":g" <				\
 		${WRKDIR}/${DISTNAME}/ROX-Filer/AppRun > 		\
 		${PREFIX}/share/rox/ROX-Filer/AppRun
