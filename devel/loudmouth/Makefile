@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2004/01/22 08:24:30 grant Exp $
+# $NetBSD: Makefile,v 1.7 2004/01/23 09:45:51 xtraeme Exp $
 #
 
-DISTNAME=	loudmouth-0.14.1
+DISTNAME=	loudmouth-0.15.1
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/loudmouth/0.14/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/loudmouth/0.15/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	xtraeme@NetBSD.org
@@ -25,6 +25,7 @@ CONFIGURE_ARGS+=	--disable-debug
 BUILD_DEFS+=	LOUDMOUTH_USE_SSL
 
 .if defined(LOUDMOUTH_USE_SSL) && !empty(LOUDMOUTH_USE_SSL:M[Yy][Ee][Ss])
+BUILDLINK_DEPENDS.gnutls=	gnutls>=1.0.0
 .include "../../security/gnutls/buildlink2.mk"
 .else
 CONFIGURE_ARGS+=	--with-ssl=no
