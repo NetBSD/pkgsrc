@@ -1,13 +1,11 @@
-$NetBSD: patch-ab,v 1.4 2004/02/22 03:13:07 jlam Exp $
+$NetBSD: patch-ab,v 1.5 2004/07/14 20:07:16 jlam Exp $
 
---- authlib/Makefile.in.orig	Sat Nov 15 10:58:55 2003
-+++ authlib/Makefile.in
-@@ -1279,7 +1279,7 @@ info: info-am
- 
+--- authlib/Makefile.in.orig	Tue Jul 13 03:32:28 2004
++++ authlib/Makefile.in	Tue Jul 13 03:32:54 2004
+@@ -1312,5 +1312,5 @@
  info-am:
  
 -install-data-am: install-data-local
 +install-data-am:
  
  install-exec-am:
- 

@@ -1,18 +1,16 @@
-# $NetBSD: Makefile,v 1.29 2004/05/12 23:40:12 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2004/07/14 20:07:16 jlam Exp $
 
-DISTNAME=	courier-imap-2.2.1
-PKGREVISON=	1
+DISTNAME=	courier-imap-3.0.5
 
-COMMENT=	IMAP server for access to Maildir-style mailboxes
+COMMENT=	IMAP server for access to maildir-style mailboxes
 HOMEPAGE=	http://www.inter7.com/courierimap/
 
 DEPENDS+=	courier-auth>=${BASE_VERS}:../../mail/courier-auth
-DEPENDS+=	courier-maildirmake>=${BASE_VERS}:../../mail/courier-maildirmake
+DEPENDS+=	courier-maildir>=${BASE_VERS}:../../mail/courier-maildir
 
 USE_BUILDLINK3=		yes
 USE_LANGUAGES=		c c++
-USE_PERL5=		yes
-REPLACE_PERL=		sysconftool
+USE_PERL5=		build
 
 USE_PKGINSTALL=		yes
 DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
@@ -24,10 +22,8 @@ CONFIGURE_ENV+=		OPENSSL=${SSLBASE}/bin/openssl
 
 INSTALL_MAKE_FLAGS=	${MAKE_FLAGS} sysconfdir=${EGDIR}
 
-SYSCONFTOOL=		${PREFIX}/sbin/imapd.sysconftool
 GEN_FILES=		imapd imapd-ssl pop3d pop3d-ssl
 SSLCNF_FILES=		imapd.cnf pop3d.cnf
-FILES_SUBST+=		SYSCONFTOOL=${SYSCONFTOOL:Q}
 FILES_SUBST+=		SSLCERTS=${SSLCERTS}
 FILES_SUBST+=		GEN_FILES=${GEN_FILES:Q}
 
@@ -66,10 +62,9 @@ pre-configure:
 
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA_DIR} ${DOCDIR}
-	${INSTALL_SCRIPT} ${WRKSRC}/sysconftool ${SYSCONFTOOL}
-	${INSTALL_DATA} ${WRKSRC}/imap/BUGS ${DOCDIR}/BUGS.imap
-	${INSTALL_DATA} ${WRKSRC}/imap/README ${DOCDIR}/README.imap
+	${INSTALL_DATA_DIR} ${DOCDIR}/imap
+	${INSTALL_DATA} ${WRKSRC}/imap/BUGS ${DOCDIR}/imap
+	${INSTALL_DATA} ${WRKSRC}/imap/README ${DOCDIR}/imap
 	${INSTALL_DATA} ${WRKSRC}/imap/imapd.authpam ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/imap/pop3d.authpam ${EGDIR}
 

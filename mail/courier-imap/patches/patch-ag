@@ -1,14 +1,14 @@
-$NetBSD: patch-ag,v 1.4 2004/02/22 03:13:07 jlam Exp $
+$NetBSD: patch-ag,v 1.5 2004/07/14 20:07:17 jlam Exp $
 
---- pop3d-ssl.rc.in.orig	Thu Nov 27 13:07:35 2003
-+++ pop3d-ssl.rc.in
-@@ -34,12 +34,7 @@ start)
+--- pop3d-ssl.rc.in.orig	Tue Jul 13 03:40:29 2004
++++ pop3d-ssl.rc.in	Tue Jul 13 03:40:51 2004
+@@ -34,12 +34,7 @@
  		LIBAUTHMODULES="$LIBAUTHMODULES @libexecdir@/authlib/$f"
  	done
  
 -	if test -x ${libexecdir}/authlib/authdaemond
 -	then
--		@SETENV@ - ${libexecdir}/authlib/authdaemond start
+-		@SETENV@ - DEBUG_LOGIN="$DEBUG_LOGIN" ${libexecdir}/authlib/authdaemond start
 -	fi
 -
 -	@SETENV@ - @SHELL@ -c " set -a ;
@@ -16,7 +16,7 @@ $NetBSD: patch-ag,v 1.4 2004/02/22 03:13:07 jlam Exp $
  		prefix=@prefix@ ;
  		exec_prefix=@exec_prefix@ ;
  		bindir=@bindir@ ;
-@@ -60,10 +55,6 @@ start)
+@@ -60,10 +55,6 @@
  	;;
  stop)
  	@libexecdir@/couriertcpd -pid=$SSLPIDFILE -stop
