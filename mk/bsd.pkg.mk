@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1208 2003/07/09 16:18:06 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1209 2003/07/10 23:10:07 grant Exp $
 #
 # This file is in the public domain.
 #
@@ -312,6 +312,10 @@ MAKE_ENV+=		CXX="${CXX}"
 .if defined(CPP)
 MAKE_ENV+=		CPP="${CPP}"
 .endif
+
+# export the flags needed to compile and link pthreaded code
+MAKE_ENV+=		PTHREAD_CFLAGS="${PTHREAD_CFLAGS}"
+MAKE_ENV+=		PTHREAD_LDFLAGS="${PTHREAD_LDFLAGS}"
 
 .if exists(${ZOULARISBASE}/bin/ftp)			# Zoularis
 FETCH_CMD?=		${ZOULARISBASE}/bin/ftp
