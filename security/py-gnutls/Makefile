@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/02/10 19:32:26 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2004/02/14 15:00:37 minskim Exp $
 
 DISTNAME=		python-gnutls-0.2
 PKGNAME=		${PYPKGPREFIX}${DISTNAME:S/python//}
@@ -14,7 +14,7 @@ USE_BUILDLINK3=		yes
 PYDISTUTILSPKG=		yes
 NO_CONFIGURE=		yes
 
-PYTHON_VERSIONS_ACCEPTED= 22 22pth 23 23pth
+PYTHON_VERSIONS_ACCEPTED= 23 23pth
 
 .include "../../lang/python/extension.mk"
 .include "../../security/gnutls/buildlink3.mk"
