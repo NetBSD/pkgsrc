@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.6 2004/04/28 15:54:46 wiz Exp $
-
-SHA1 (mplayer-1.0rc4/MPlayer-1.0pre4.tar.bz2) = 1e9f181589d6bf36e4c59ad013f8b5976447e702
-Size (mplayer-1.0rc4/MPlayer-1.0pre4.tar.bz2) = 4913390 bytes
-SHA1 (patch-aa) = 1b09896da6e37512abb1306df4b1674d96b11c4b
-SHA1 (patch-ad) = e01b08da4c46c57a50b5306353391b8f9ba7bf6e
