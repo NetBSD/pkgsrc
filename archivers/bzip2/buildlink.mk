@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.3 2001/07/01 22:59:08 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.4 2001/07/20 01:54:31 jlam Exp $
 #
 # This Makefile fragment is included by packages that use bzip2.
 #
@@ -38,7 +38,7 @@ _NEED_BZIP2=		NO
 
 .if ${_NEED_BZIP2} == "YES"
 DEPENDS+=	${BUILDLINK_DEPENDS.bzip2}:../../archivers/bzip2
-BUILDLINK_PREFIX.bzip2=		${LOCALBASE}
+EVAL_PREFIX+=	BUILDLINK_PREFIX.bzip2=bzip2
 .else
 BUILDLINK_PREFIX.bzip2=		/usr
 .endif

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.1 2001/07/18 22:16:09 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.2 2001/07/20 01:54:48 jlam Exp $
 #
 # This Makefile fragment is included by packages that use blas.
 #
@@ -20,7 +20,7 @@ BLAS_BUILDLINK_MK=	# defined
 BUILDLINK_DEPENDS.blas?=	blas>=1.0
 BUILD_DEPENDS+=			${BUILDLINK_DEPENDS.blas}:../../math/blas
 
-BUILDLINK_PREFIX.blas=		${LOCALBASE}
+EVAL_PREFIX+=			BUILDLINK_PREFIX.blas=blas
 BUILDLINK_FILES.blas=		lib/libblas.*
 
 BUILDLINK_TARGETS.blas=		blas-buildlink

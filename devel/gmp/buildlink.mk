@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.5 2001/07/01 22:59:15 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.6 2001/07/20 01:54:37 jlam Exp $
 #
 # This Makefile fragment is included by packages that use gmp.
 #
@@ -20,7 +20,7 @@ GMP_BUILDLINK_MK=	# defined
 BUILDLINK_DEPENDS.gmp?=	gmp>=3.0
 DEPENDS+=		${BUILDLINK_DEPENDS.gmp}:../../devel/gmp
 
-BUILDLINK_PREFIX.gmp=	${LOCALBASE}
+EVAL_PREFIX+=		BUILDLINK_PREFIX.gmp=gmp
 BUILDLINK_FILES.gmp=	include/gmp.h
 BUILDLINK_FILES.gmp+=	lib/libgmp.*
 

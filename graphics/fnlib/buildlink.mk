@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.1 2001/07/03 16:30:19 zuntum Exp $
+# $NetBSD: buildlink.mk,v 1.2 2001/07/20 01:54:43 jlam Exp $
 #
 # This Makefile fragment is included by packages that use fnlib.
 #
@@ -18,7 +18,7 @@ FNLIB_BUILDLINK_MK=	# defined
 BUILDLINK_DEPENDS.fnlib?=	fnlib>=0.5
 DEPENDS+=	${BUILDLINK_DEPENDS.fnlib}:../../graphics/fnlib
 
-BUILDLINK_PREFIX.fnlib=	${LOCALBASE}
+EVAL_PREFIX+=		BUILDLINK_PREFIX.fnlib=fnlib
 BUILDLINK_FILES.fnlib=	include/Fnlib*
 BUILDLINK_FILES.fnlib+=	lib/libFnlib.*
 
