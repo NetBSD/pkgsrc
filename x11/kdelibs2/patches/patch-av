@@ -1,0 +1,23 @@
+$NetBSD: patch-av,v 1.1 2001/05/01 09:46:37 skrll Exp $
+
+--- kdesu/client.cpp.orig	Sun Feb 18 15:26:55 2001
++++ kdesu/client.cpp
+@@ -31,6 +31,7 @@
+ 
+ #include <kdebug.h>
+ #include <kstddirs.h>
++#include <kapp.h>
+ 
+ #include "client.h"
+ 
+@@ -385,7 +386,9 @@
+ 
+     // kdesud only forks to the background after it is accepting
+     // connections.
+-    int ret = system(QFile::encodeName(d->daemon));
++    // We start it via kdeinit to make sure that it doesn't inherit
++    // any fd's from the parent process.
++    int ret = kapp->kdeinitExecWait(d->daemon);
+     connect();
+     return ret;
+ }
