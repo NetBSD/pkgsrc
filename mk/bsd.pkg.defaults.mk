@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.136 2003/03/24 18:25:11 jschauma Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.137 2003/03/26 20:19:51 agc Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -525,6 +525,16 @@ ATERM_USE_GREEK?= NO
 # accordingly. This is required by the cdrtools license.
 # Possible: any file name
 # Default: ${PKG_SYSCONFDIR}/cdrecord.conf
+
+CLAMAV_GROUP?=	clamav
+# Used in clamav to specify the group to run clamav
+# Possible: any group name
+# Default: clamav
+
+CLAMAV_USER?=	clamav
+# Used in clamav to specify the user to run clamav
+# Possible: any user name
+# Default: clamav
 
 CUPS_GROUP?=	sys
 # Used in cups to specify the group to run CUPS commands as.
