@@ -1,0 +1,20 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/07/28 19:55:17 rh Exp $
+
+--- makefile.orig	Sun May 23 15:40:28 1999
++++ makefile	Sun May 23 15:40:42 1999
+@@ -10,11 +10,11 @@
+ 
+ 
+ # ANSI C compiler
+-CC = gcc
+-CFLAGS = -O3 -Wall -pedantic -ansi
++#CC = gcc
++#CFLAGS = -O3 -Wall -pedantic -ansi
+ # Comment out for compiler other than gcc
+-#CC = cc
+-#CFLAGS = -O 
++CC = cc
++CFLAGS = -O 
+ 
+ # ANSI math library
+ LIBFLAGS = -lm
