@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 10:07:08 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/18 16:11:00 agc Exp $
 
 SHA1 (DBD-CSV-0.1025.tar.gz) = 7f210d78511a33d1a978d7bfe174f7e6b2e9a8bf
+Size (DBD-CSV-0.1025.tar.gz) = 40297 bytes
