@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: axfrdns.sh,v 1.1.1.1 2004/09/01 20:13:04 schmonz Exp $
+# $NetBSD: axfrdns.sh,v 1.2 2004/09/02 08:23:02 schmonz Exp $
 #
 # @PKGNAME@ script to control axfrdns (DNS zone-transfer and TCP service)
 #
@@ -25,11 +25,11 @@ cdb_cmd="axfrdns_cdb"
 # User-settable rc.conf variables and their default values:
 axfrdns_tcpflags=${axfrdns_tcpflags-"-vDRHl0"}
 axfrdns_datalimit=${axfrdns_datalimit-"300000"}
-axfrdns_logcmd=${axfrdns_logcmd-"@LOCALBASE@/bin/setuidgid Gdnslog logger -t nb${name} -p daemon.info"}
+axfrdns_logcmd=${axfrdns_logcmd-"@LOCALBASE@/bin/setuidgid dnslog logger -t nb${name} -p daemon.info"}
 
 axfrdns_precmd()
 {
- 	command="@SETENV@ - ROOT=@PKG_SYSCONFDIR@/tinydns IP=${tinydns_ip} @LOCALBASE@/bin/envuidgid Gaxfrdns @LOCALBASE@/bin/softlimit -d ${axfrdns_datalimit} @LOCALBASE@/bin/argv0 @LOCALBASE@/bin/tcpserver ${name} ${axfrdns_tcpflags} -x @PKG_SYSCONFDIR@/axfrdns/tcp.cdb -- ${tinydns_ip} 53 @LOCALBASE@/bin/axfrdns </dev/null 2>&1 | ${axfrdns_logcmd}"
+ 	command="@SETENV@ - ROOT=@PKG_SYSCONFDIR@/tinydns IP=${tinydns_ip} @LOCALBASE@/bin/envuidgid axfrdns @LOCALBASE@/bin/softlimit -d ${axfrdns_datalimit} @LOCALBASE@/bin/argv0 @LOCALBASE@/bin/tcpserver ${name} ${axfrdns_tcpflags} -x @PKG_SYSCONFDIR@/axfrdns/tcp.cdb -- ${tinydns_ip} 53 @LOCALBASE@/bin/axfrdns </dev/null 2>&1 | ${axfrdns_logcmd}"
 	command_args="&"
 	rc_flags=""
 }
