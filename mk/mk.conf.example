@@ -1,4 +1,4 @@
-# $NetBSD: mk.conf.example,v 1.205 2001/05/06 12:48:56 rh Exp $
+# $NetBSD: mk.conf.example,v 1.206 2001/05/07 12:30:25 hubertf Exp $
 #
 
 # Sample /etc/mk.conf file, which can be used to set specific values
@@ -170,6 +170,9 @@
 #ACCEPTABLE_LICENSES+=	sun-jsdk20-license
 # Enable it if you accept the download license for Sun JSDK and would
 # like to build Sun JSDK.  see pkgsrc/lang/jdk.
+#ACCEPTABLE_LICENSES+= jdk13-license
+# Enable it if you accept the download license for Sun JDK1.3 and would
+# like to build Sun JDK13.  see pkgsrc/langun-jre13.
 #ACCEPTABLE_LICENSES+=	sun-swing-license
 # Enable it if you accept the download license for Sun's Swing (JFC) toolkit
 # and would like to build JFC.  see pkgsrc/x11/swing.
