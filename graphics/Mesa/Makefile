@@ -3,7 +3,7 @@
 # Date created:         Tue Feb  7 12:02:49  1995
 # Whom:                 hsu
 #
-# $NetBSD: Makefile,v 1.5 1997/12/17 08:06:43 hubertf Exp $
+# $NetBSD: Makefile,v 1.6 1998/01/24 05:19:15 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.19 1997/09/30 19:21:40 max Exp
 #
 
@@ -33,13 +33,13 @@ do-install:
 	@ln -fs ${PREFIX}/lib/libMesa${file}_pic.a ${PREFIX}/lib/lib${file}_pic.a
 	@ln -fs ${PREFIX}/lib/libMesa${file}.so.${SHLIB_VERSION} ${PREFIX}/lib/lib${file}.so.${SHLIB_VERSION}
 .endfor
-	@${MKDIR} -p ${PREFIX}/include/GL
+	@${MKDIR} ${PREFIX}/include/GL
 	${INSTALL_DATA} ${WRKSRC}/include/GL/* ${PREFIX}/include/GL
-	@${MKDIR} -p ${PREFIX}/share/examples/Mesa
+	@${MKDIR} ${PREFIX}/share/examples/Mesa
 	${CP} -Rp ${WRKSRC}/samples ${PREFIX}/share/examples/Mesa
 	${CP} -Rp ${WRKSRC}/demos ${PREFIX}/share/examples/Mesa
 	${CP} -Rp ${WRKSRC}/book ${PREFIX}/share/examples/Mesa
 	${CP} -Rp ${WRKSRC}/widgets-sgi ${PREFIX}/share/examples/Mesa
-	${LDCONFIG} -m ${PREFIX}/lib
+	${LDCONFIG} -m ${PREFIX}/lib || /usr/bin/true
 
 .include <bsd.port.mk>
