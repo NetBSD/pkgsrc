@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/02/27 01:05:33 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2005/03/22 15:40:17 wiz Exp $
 # FreeBSD Id: Makefile,v 1.30 1997/12/14 02:03:53 asami Exp
 
 DISTNAME=	emacs-21.4a
@@ -17,9 +17,9 @@ GNU_CONFIGURE=	yes
 USE_GNU_TOOLS+=	make
 USE_BUILDLINK3=	yes
 
-PATCHDIR=	${PKGDIR}/../emacs/patches
-FILESDIR=	${PKGDIR}/../emacs/files
-DISTINFO_FILE=	${PKGDIR}/../emacs/distinfo
+PATCHDIR=	${.CURDIR}/../emacs/patches
+FILESDIR=	${.CURDIR}/../emacs/files
+DISTINFO_FILE=	${.CURDIR}/../emacs/distinfo
 
 # needed for 21.4a, can probably go away on next update
 WRKSRC=         ${WRKDIR}/emacs-21.4
