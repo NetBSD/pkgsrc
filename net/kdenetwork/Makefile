@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2003/07/17 22:51:18 grant Exp $
+# $NetBSD: Makefile,v 1.66 2003/12/23 10:37:56 sketch Exp $
 # FreeBSD Id: Makefile,v 1.3 1997/11/05 04:19:54 asami Exp
 #
 
@@ -32,8 +32,7 @@ CONFIGURE_ENV=  	KDEDIR=${KDEBASEDIR} \
 FIX_RPATH+=		KDE_LDFLAGS
 KDE_LDFLAGS=		-L${LOCALBASE}/lib -Wl,${RPATH_FLAG}${LOCALBASE}/lib -L${X11BASE}/lib -Wl,${RPATH_FLAG}${X11BASE}/lib
 
-GCC_VERSION!=   	gcc --version
-.if (${GCC_VERSION:C/-.*$$//} == egcs)
+.if !empty(CC_VERSION:Megcs*)
 PLIST_SRC=		${PKGDIR}/PLIST.egcs
 .else
 PLIST_SRC=		${PKGDIR}/PLIST.gcc
@@ -51,7 +50,7 @@ CFLAGS+=		-I${LOCALBASE}/include
 .endif
 
 post-install:
-.if (${GCC_VERSION:C/-.*$$//} != egcs)
+.if empty(CC_VERSION:Megcs*)
 	@${FIND} ${KDEBASEDIR}/share/kde/locale -name ksirc.mo | ${XARGS} ${RM}
 .endif
 
