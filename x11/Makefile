@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.310 2003/09/19 13:38:08 wiz Exp $
+# $NetBSD: Makefile,v 1.311 2003/09/19 16:34:47 wiz Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -176,6 +176,7 @@ SUBDIR+=	qt3-tools
 SUBDIR+=	qtarch
 SUBDIR+=	qwspritefield
 SUBDIR+=	qwt
+SUBDIR+=	render
 SUBDIR+=	rep-gtk
 SUBDIR+=	ruby-fox
 SUBDIR+=	ruby-gtk
