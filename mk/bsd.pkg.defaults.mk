@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.178 2003/09/03 13:56:28 jlam Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.179 2003/09/06 11:39:29 jlam Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -162,6 +162,12 @@ PKG_INSTALLATION_PREFS?= overwrite pkgviews
 # building a package, in order of preference.
 # Possible: any of: overwrite, pkgviews
 # Default: overwrite pkgviews
+
+PKG_SYSCONFBASE?= ${PREFIX}/etc
+# This is the main config directory under which all package configuration
+# files should be found.
+# Possible: any path you like
+# Default: ${PREFIX}/etc
 
 PACKAGES?=       ${_PKGSRCDIR}/packages
 # Store generated packages on a per-architecture base
