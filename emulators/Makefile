@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2000/12/13 17:13:53 kei Exp $
+# $NetBSD: Makefile,v 1.45 2000/12/13 20:07:42 jdolecek Exp $
 #
 
     SUBDIR += atari800
@@ -24,6 +24,7 @@
     SUBDIR += suse_gtk
     SUBDIR += suse_libc5
     SUBDIR += suse_libjpeg
+    SUBDIR += suse_libpng
     SUBDIR += suse_linux
     SUBDIR += suse_x11
     SUBDIR += suse_xforms
