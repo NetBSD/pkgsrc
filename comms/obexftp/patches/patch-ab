@@ -1,0 +1,16 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/02/26 12:50:45 jmmv Exp $
+
+--- cobexpe/cobex_pe.c.orig	2003-04-10 00:37:02.000000000 +0200
++++ cobexpe/cobex_pe.c
+@@ -151,7 +151,11 @@ static void cobex_pe_cleanup(cobex_t *c,
+ 
+ 	if(force)	{
+ 		/* Send a break to get out of OBEX-mode */
++#ifdef TCSBRKP
+ 		if(ioctl(c->fd, TCSBRKP, 0) < 0)	{
++#else
++		if(tcsendbreak(c->fd, 0) == -1) 	{
++#endif
+ 			DEBUG(1, "Unable to send break!\n");
+ 		}
+ 		sleep(1);
