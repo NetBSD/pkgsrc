@@ -1,0 +1,2 @@
+This package contains a wrapper script named "maildirmake" to call any of the
+maildirmake executables installed by Courier-IMAP or Maildrop.
