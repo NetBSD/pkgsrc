@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7908 2004/11/19 13:04:05 adam Exp $
+$NetBSD: CHANGES,v 1.7909 2004/11/19 13:05:44 tv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5337,3 +5337,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated libsndfile to 1.0.11 [adam 2004-11-19]
 	Added qalculate-0.7.0 [adam 2004-11-19]
 	Updated smalltalk to 2.1.9 [adam 2004-11-19]
+	Updated icbirc to 1.8 [tv 2004-11-19]
