@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2003/07/17 21:37:00 grant Exp $
+# $NetBSD: Makefile,v 1.10 2004/01/25 20:30:50 wiz Exp $
 #
 
 DISTNAME=	dbz
 PKGNAME=	dbz-ttf-20020507
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	fonts
 MASTER_SITES=	http://www.andrew.cmu.edu/~twm/fonts/
 EXTRACT_SUFX=	.zip
@@ -23,7 +23,7 @@ USE_X11BASE=	YES
 NO_BUILD=	YES
 NO_CONFIGURE=	YES
 
-FONTS_TTF_DIRS=	${PREFIX}/lib/X11/fonts/TrueType
+FONTS_TTF_DIRS=	${PREFIX}/lib/X11/fonts/TTF
 DOCDIR=		${PREFIX}/share/doc/dbz-ttf
 
 do-install:
