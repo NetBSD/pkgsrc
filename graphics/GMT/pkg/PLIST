@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2001/01/27 08:16:03 jtb Exp $
+@comment $NetBSD: PLIST,v 1.5 2001/01/27 10:36:54 jtb Exp $
 bin/backtracker
 bin/binlegs
 bin/blockmean
@@ -942,9 +942,7 @@ share/gmt/binned_border_l.cdf
 share/gmt/binned_river_c.cdf
 share/gmt/binned_river_i.cdf
 share/gmt/binned_river_l.cdf
-@unexec install-info --delete --info-dir=%D/info %D/share/gmt/dbase/grdraster.info
 share/gmt/dbase/grdraster.info
-@exec install-info --info-dir=%D/info %D/share/gmt/dbase/grdraster.info
 share/gmt/gmt.conf
 share/gmt/gmt.conf.orig
 share/gmt/gmtformats.d

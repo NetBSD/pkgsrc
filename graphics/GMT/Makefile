@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/01/27 09:01:01 jtb Exp $
+# $NetBSD: Makefile,v 1.5 2001/01/27 10:36:53 jtb Exp $
 
 DISTNAME=	GMT3.3.6
 PKGNAME=	GMT-3.3.6
@@ -32,6 +32,8 @@ CONFIGURE_ARGS+="--includedir=${PREFIX}/include/gmt"
 CONFIGURE_ARGS+="--datadir=${PREFIX}/share/gmt"
 CONFIGURE_ARGS+="--enable-eps"
 CONFIGURE_ARGS+="--enable-www=${PREFIX}/share/doc/html"
+CONFIGURE_ARGS+="--enable-mansect=1"
+
 ALL_TARGET=	all suppl
 INSTALL_TARGET= install-all
 
@@ -40,13 +42,14 @@ post-extract:
 
 pre-configure:
 	(cd ${WRKSRC} && autoreconf)
-	for e in ${WRKSRC}/examples/*.bat ${WRKSRC}/examples/*/*.bat; do\
-	${RM} -f $$e;							\
+	for e in ${WRKSRC}/examples/*.bat			\
+	${WRKSRC}/examples/*/*.bat; do				\
+	${RM} -f $$e;						\
 	done
-	for h in ${WRKSRC}/examples/do_view.bash	\
-	${WRKSRC}/examples/do_view.csh ; do		\
-	${SED} -e 's:ghostview:gv:g' < $$h > $$h.tmp &&	\
-	${MV} -f $$h.tmp $$h;				\
+	for h in ${WRKSRC}/examples/do_view.bash		\
+	${WRKSRC}/examples/do_view.csh ; do			\
+	${SED} -e 's:ghostview:gv:g' < $$h > $$h.tmp &&		\
+	${MV} -f $$h.tmp $$h;					\
 	done
 
 post-install:
@@ -58,9 +61,9 @@ post-install:
 	../../../gmt ps)
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/gmt/tutorial
 	for f in bermuda.grd quakes.cpt ship.xyz us.grd data quakes.ngdc \
-	topo.cpt ; do							  \
-	${INSTALL_DATA} ${WRKSRC}/tutorial/$$f				  \
-	${PREFIX}/share/examples/gmt/tutorial;				  \
+	topo.cpt ; do							 \
+	${INSTALL_DATA} ${WRKSRC}/tutorial/$$f				 \
+	${PREFIX}/share/examples/gmt/tutorial;				 \
 	done;
 	${INSTALL_DATA} ${WRKSRC}/../share/* ${PREFIX}/share/gmt
 	for i in ${WRKSRC}/examples/*.bash ${WRKSRC}/examples/*.csh	\
