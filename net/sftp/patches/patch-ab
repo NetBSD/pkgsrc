@@ -1,0 +1,19 @@
+$NetBSD: patch-ab,v 1.1 1999/12/27 23:53:45 hubertf Exp $
+
+--- sftp.c.orig	Tue Dec 28 00:36:29 1999
++++ sftp.c	Tue Dec 28 00:39:46 1999
+@@ -19,10 +19,14 @@
+ #include <sys/socket.h>
+ #include <sys/wait.h>
+ 
++#ifdef __NetBSD__
++#include <readline.h>
++#else /* __NetBSD__ */
+ #ifdef HAVE_LIBREADLINE
+ #include <readline/readline.h>
+ #include <readline/history.h>
+ #endif
++#endif /* __NetBSD__ */
+ 
+ #include "sftp.h"
+ 
