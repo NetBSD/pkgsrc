@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4016 2003/12/08 14:52:15 wiz Exp $
+$NetBSD: CHANGES,v 1.4017 2003/12/08 14:56:00 grant Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5020,3 +5020,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated libogg to 1.1 [wiz 2003-12-08]
 	Updated libvorbis to 1.0.1 [wiz 2003-12-08]
 	Updated vorbis-tools to 1.0.1 [wiz 2003-12-08]
+	Updated libnbcompat to 20031208 [grant 2003-12-08]
