@@ -1,42 +1,51 @@
-$NetBSD: patch-aa,v 1.4 2001/06/30 11:58:47 zuntum Exp $
-
---- Makefile.orig	Tue Feb  6 19:52:54 2001
-+++ Makefile
-@@ -1,16 +1,16 @@
+--- Makefile.orig	Sat Sep  8 15:56:18 2001
++++ Makefile	Mon Apr 29 10:27:24 2002
+@@ -1,22 +1,12 @@
 -PREFIX=/usr/local
 -LOCALEDIR=/usr/share/locale
--CFLAGS=-O2 -Wall
++LOCALEDIR=${PREFIX}/${PKGLOCALEDIR}/locale
+ 
+-ifdef LOCALEDIR
+-CFLAGS=-O2 -Wall `gtk-config --cflags` -DMENU -DLOCALEDIR=\"${LOCALEDIR}\" 
+-else
+-CFLAGS=-O2 -Wall `gtk-config --cflags` -DMENU -DDISABLE_NLS
+-endif
+-
 -CC=gcc
 -CP=/bin/cp
 -RM=/bin/rm -f
-+#PREFIX=/usr/local
-+LOCALEDIR=${PREFIX}/${PKGLOCALEDIR}/locale
-+#CFLAGS=-O2 -Wall
-+#CC=gcc
-+#CP=/bin/cp
-+#RM=/bin/rm -f
+-MAKE=make
++CFLAGS+= -Wall `${GTK_CONFIG} --cflags` -DMENU -DLOCALEDIR=\"${LOCALEDIR}\" 
  
  SRCS = main.c chemproc.c graph.c draw.c inout.c 
  OBJS = main.o chemproc.o graph.o draw.o inout.o 
  
  
--EXTRA_INCLUDES = `gtk-config --cflags`  # -DDISABLE_NLS
 -SYS_LIBRARIES = `gtk-config --libs` -lm
-+EXTRA_INCLUDES = `$(GTK_CONFIG) --cflags` # -DDISABLE_NLS
-+SYS_LIBRARIES = `$(GTK_CONFIG) --libs` -lm
++SYS_LIBRARIES = `${GTK_CONFIG} --libs` -lm
  
  all: chemtool cht
  
-@@ -25,9 +25,9 @@
- 	${CC} ${CFLAGS} ${EXTRA_INCLUDES} -c ${SRCS}
+@@ -25,17 +15,15 @@
+ chemtool: ${OBJS}
+ 	${CC} ${OBJS} ${SYS_LIBRARIES} -o chemtool
+ 
+-cht:	src-cht/cht-1.7.c
++cht:	src-cht/cht-1.8.c
+ 	cd src-cht;${MAKE}
+ 
  
  install: chemtool src-cht/cht
 -	${CP} chemtool src-cht/cht ${PREFIX}/bin
 -	${CP} chemtool.1 ${PREFIX}/man/man1
+-	${CP} cht.1	${PREFIX}/man/man1
+-	ifdef LOCALEDIR
 -	for L in `ls locales`; do ${CP} locales/$$L/chemtool.mo ${LOCALEDIR}/$$L/LC_MESSAGES;done
+-	endif 
 +	${BSD_INSTALL_PROGRAM} chemtool src-cht/cht ${PREFIX}/bin
-+	${BSD_INSTALL_MAN} chemtool.1 ${PREFIX}/man/man1
++	${BSD_INSTALL_MAN} chemtool.1 cht.1 ${PREFIX}/man/man1
 +	for L in `ls locales`; do ${BSD_INSTALL_DATA} locales/$$L/chemtool.mo ${LOCALEDIR}/$$L/LC_MESSAGES;done
-  
++
  clean:
  	${RM} *.o *~ src-cht/*.o src-cht/*~ chemtool src-cht/cht
+ 
