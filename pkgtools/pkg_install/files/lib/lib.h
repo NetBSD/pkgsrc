@@ -1,4 +1,4 @@
-/* $NetBSD: lib.h,v 1.7 2003/12/20 04:23:05 grant Exp $ */
+/* $NetBSD: lib.h,v 1.8 2004/01/14 23:55:29 jlam Exp $ */
 
 /* from FreeBSD Id: lib.h,v 1.25 1997/10/08 07:48:03 charnier Exp */
 
@@ -76,6 +76,10 @@
 
 #ifndef FALSE
 #define FALSE	(0)
+#endif
+
+#ifndef OPSYS_NAME
+#define OPSYS_NAME "NetBSD"
 #endif
 
 /* Usually "rm", but often "echo" during debugging! */
