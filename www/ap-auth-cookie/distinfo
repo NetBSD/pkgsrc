@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2001/05/09 12:31:39 wiz Exp $
+$NetBSD: distinfo,v 1.3 2003/02/14 17:46:57 wiz Exp $
 
-SHA1 (mod_auth_cookie.c.gz) = 872d756cfe38b657e2b02e159d0f6fb2a9a10304
-Size (mod_auth_cookie.c.gz) = 3512 bytes
+SHA1 (ap-auth-cookie-1.9/mod_auth_cookie.c.gz) = ffe4aaf5487389699a0d856815aaf6cfa53cf9d5
+Size (ap-auth-cookie-1.9/mod_auth_cookie.c.gz) = 3622 bytes
