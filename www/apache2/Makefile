@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2004/11/23 00:37:04 jlam Exp $
+# $NetBSD: Makefile,v 1.57 2004/11/24 07:39:50 jlam Exp $
 
 .include "Makefile.common"
 
@@ -41,6 +41,11 @@ CONFIGURE_ARGS+=	--with-apr-util=${BUILDLINK_PREFIX.apr}
 APACHE_MPM?=		prefork
 CONFIGURE_ARGS+=	--with-mpm=${APACHE_MPM}
 BUILD_DEFS+=		APACHE_MPM
+.for _mpm_ in prefork worker
+PLIST_SUBST.${_mpm_}?=		MPM_COMMENT.${_mpm_}="@comment "
+PLIST_SUBST+=			${PLIST_SUBST.${_mpm_}}
+.endfor
+PLIST_SUBST.${APACHE_MPM}=	MPM_COMMENT.${APACHE_MPM}=
 
 DFLT_APACHE_MODULES=	all
 DFLT_APACHE_MODULES+=	proxy proxy_connect proxy_ftp proxy_http

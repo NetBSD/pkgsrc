@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2004/10/02 16:38:38 reed Exp $
+@comment $NetBSD: PLIST,v 1.26 2004/11/24 07:39:50 jlam Exp $
 include/httpd/ap_compat.h
 include/httpd/ap_config.h
 include/httpd/ap_config_auto.h
@@ -9,6 +9,7 @@ include/httpd/ap_mpm.h
 include/httpd/ap_provider.h
 include/httpd/ap_regkey.h
 include/httpd/ap_release.h
+${MPM_COMMENT.worker}include/httpd/fdqueue.h
 include/httpd/http_config.h
 include/httpd/http_connection.h
 include/httpd/http_core.h
@@ -32,6 +33,7 @@ include/httpd/mpm_default.h
 include/httpd/os.h
 include/httpd/pcre.h
 include/httpd/pcreposix.h
+${MPM_COMMENT.worker}include/httpd/pod.h
 include/httpd/rfc1413.h
 include/httpd/scoreboard.h
 include/httpd/ssl_expr.h
