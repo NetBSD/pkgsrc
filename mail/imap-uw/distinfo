@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.17 2004/08/12 12:13:54 adam Exp $
+$NetBSD: distinfo,v 1.18 2004/10/11 16:56:28 abs Exp $
 
 SHA1 (imap-2004a.tar.Z) = e5df251f2b8c3f01e94195a2832b5ba5cd809fbb
 Size (imap-2004a.tar.Z) = 2224181 bytes
@@ -12,4 +12,4 @@ SHA1 (patch-ai) = c495ed39fbc01e1d8b05f6acd3d11394978f9b43
 SHA1 (patch-aj) = 0a728d3b5271c048275a4d41002877e86ac275b2
 SHA1 (patch-ak) = a0a1a21ec22a92d086e665b263b51532207d0e3c
 SHA1 (patch-al) = b746d36cb324114468d07d1aba7d22c5bd5b23b2
-SHA1 (patch-am) = b75052f548fad7563c6bf22ad1be4d736d204bef
+SHA1 (patch-am) = 891de03bbc24de9eaf70d74c69b5b66d0b6b94b4
