@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2004/05/06 13:50:32 taca Exp $
+# $NetBSD: Makefile,v 1.7 2004/11/12 00:32:23 seb Exp $
 
 DISTNAME=		Text-ChaSen-1.03
 PKGNAME=		p5-${DISTNAME}
 PKGREVISION=		2
 SVR4_PKGNAME=		p5tcs
-CATEGORIES=		japanese textproc
+CATEGORIES=		japanese textproc perl5
 MASTER_SITES=		http://www.daionet.gr.jp/~knok/chasen/
 
 PATCHFILES=		ChaSen.pm-1.03-pod-fix.diff
