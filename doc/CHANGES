@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5773 2004/04/29 18:27:15 erh Exp $
+$NetBSD: CHANGES,v 1.5774 2004/04/29 19:01:36 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2293,3 +2293,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated p5-GD to 2.11 [abs 2004-04-29]
 	Updated jakarta-tomcat to 5.0.19 [erh 2004-04-29]
 	Added jakarta-tomcat4-4.1.30 [erh 2004-04-29]
+	Updated nbitools to 6.3nb1 [minskim 2004-04-29]
