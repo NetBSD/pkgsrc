@@ -1,0 +1,12 @@
+$NetBSD: patch-af,v 1.1.1.1 2004/02/26 12:50:45 jmmv Exp $
+
+--- vmo/gsm2vmo.c.orig	2003-02-17 22:55:47.000000000 +0100
++++ vmo/gsm2vmo.c
+@@ -32,6 +32,7 @@
+ #include <stdlib.h>
+ #include <string.h>
+ #include <unistd.h>
++#include <limits.h>
+ #include <fcntl.h>
+ #include <netinet/in.h> /* ntohs */
+ 

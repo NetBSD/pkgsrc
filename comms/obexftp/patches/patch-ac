@@ -1,0 +1,12 @@
+$NetBSD: patch-ac,v 1.1.1.1 2004/02/26 12:50:45 jmmv Exp $
+
+--- obexftp/client.c.orig	2003-02-16 19:56:31.000000000 +0100
++++ obexftp/client.c
+@@ -24,6 +24,7 @@
+ #include <unistd.h>
+ #include <fcntl.h>
+ #include <sys/stat.h>
++#include <limits.h>
+ 
+ /* htons */
+ #ifdef _WIN32
