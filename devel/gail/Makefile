@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2004/04/21 15:56:08 recht Exp $
+# $NetBSD: Makefile,v 1.22 2004/05/31 15:30:29 recht Exp $
 #
 
-DISTNAME=	gail-1.6.1
+DISTNAME=	gail-1.6.5
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gail/1.6/}
 EXTRACT_SUFX=	.tar.bz2
@@ -18,6 +18,7 @@ USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 
 PKGCONFIG_OVERRIDE=	gail.pc.in
+PKGCONFIG_OVERRIDE+=	gail-uninstalled.pc.in
 
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html
 

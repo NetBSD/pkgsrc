@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2004/04/21 15:56:08 recht Exp $
+@comment $NetBSD: PLIST,v 1.8 2004/05/31 15:30:29 recht Exp $
 include/gail-1.0/libgail-util/gail-util.h
 include/gail-1.0/libgail-util/gailmisc.h
 include/gail-1.0/libgail-util/gailtextutil.h
@@ -50,6 +50,7 @@ ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/gail.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/gail.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/gail.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/gail.mo
+${PKGLOCALEDIR}/locale/mi/LC_MESSAGES/gail.mo
 ${PKGLOCALEDIR}/locale/mn/LC_MESSAGES/gail.mo
 ${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/gail.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/gail.mo
