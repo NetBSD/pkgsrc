@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/05/04 13:11:44 fredb Exp $
+# $NetBSD: Makefile,v 1.7 2001/05/22 09:32:26 wiz Exp $
 #
 
 DISTNAME=	chimera-2.0a19
@@ -10,7 +10,7 @@ HOMEPAGE=	http://www.chimera.org/
 COMMENT=	World Wide Web Browser for X Windows
 
 DEPENDS+=	jpeg-6b:../../graphics/jpeg
-DEPENDS+=	png>1.0.9:../../graphics/png
+DEPENDS+=	png>=1.0.11:../../graphics/png
 
 USE_IMAKE=	yes
 

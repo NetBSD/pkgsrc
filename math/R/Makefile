@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2001/03/27 03:20:05 hubertf Exp $
+# $NetBSD: Makefile,v 1.22 2001/05/22 09:32:24 wiz Exp $
 #
 
 DISTNAME=		R-1.1.1
@@ -23,7 +23,7 @@ COMMENT=		Statistical language for data analysis and graphics
 BUILD_DEPENDS+=		autoconf-2.13:../../devel/autoconf
 DEPENDS+=		readline>=4.0:../../devel/readline
 DEPENDS+=		jpeg-*:../../graphics/jpeg
-DEPENDS+=		png>1.0.9:../../graphics/png
+DEPENDS+=		png>=1.0.11:../../graphics/png
 
 # Requires IEEE math
 NOT_FOR_PLATFORM=	*-*-alpha
