@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.3 2004/07/26 18:00:17 dillo Exp $
+$NetBSD: distinfo,v 1.4 2004/08/15 20:24:21 wiz Exp $
 
-SHA1 (fceu-0.98.10.src.tar.bz2) = 578e25792f42e8fd640f0bd070241c43a63bbda2
-Size (fceu-0.98.10.src.tar.bz2) = 559750 bytes
+SHA1 (fceu-0.98.11.src.tar.bz2) = 60caac7bb9dd40920fd28ef3d1a823979c17692e
+Size (fceu-0.98.11.src.tar.bz2) = 556643 bytes
 SHA1 (patch-aa) = df9e098102d4c22c2699d5c5bdec79d72b8bac0c
 SHA1 (patch-ab) = 593c40bfe03e8ae8835113972a58a1cf46e882a9
 SHA1 (patch-ac) = 8a5297b11484c6eaf5d70a391bb486ff58475f35
