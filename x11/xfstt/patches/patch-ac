@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2000/09/04 15:49:36 kim Exp $
+
+--- perftest.cpp.orig	Fri Jan  8 21:11:04 1999
++++ perftest.cpp	Sun Sep  3 09:32:37 2000
+@@ -1,7 +1,7 @@
+ // test ttf engine performance
+ // (C) Copyright 1997-1998 Herbert Duerr
+ 
+-#define TTFONTDIR	"/usr/share/fonts/truetype"
++#define TTFONTDIR	"@X11BASE@/lib/X11/fonts/TrueType"
+ #define MAXFONTBUFSIZE (2048*2048)
+ 
+ #include "ttf.h"
