@@ -1,51 +1,51 @@
-$NetBSD: patch-ai,v 1.3 2002/12/03 20:20:37 jdolecek Exp $
+$NetBSD: patch-ai,v 1.4 2004/10/08 21:02:54 mjl Exp $
 
---- make/common.mak.orig	Thu Oct 10 06:43:44 2002
-+++ make/common.mak	Tue Dec  3 20:29:43 2002
-@@ -261,11 +261,11 @@
+--- make/common.mak.orig	2003-07-29 13:25:23.000000000 +0200
++++ make/common.mak	2004-10-08 22:12:34.000000000 +0200
+@@ -273,11 +273,11 @@
  #
  $(OBJDIR)/%.o : %.cxx 
  	@if [ ! -d $(OBJDIR) ] ; then mkdir -p $(OBJDIR) ; fi
--	$(CPLUS) $(STDCCFLAGS) $(OPTCCFLAGS) $(CFLAGS) -c $< -o $@
-+	@LIBTOOL@ --tag=CXX $(CPLUS) $(STDCCFLAGS) $(OPTCCFLAGS) $(CFLAGS) -c $< -o $@
+-	$(CPLUS) $(STDCCFLAGS) $(OPTCCFLAGS) $(CFLAGS) -x c++ -c $< -o $@
++	/usr/pkg/bin/libtool --tag=CXX --mode=compile $(CPLUS) $(STDCCFLAGS) $(OPTCCFLAGS) $(CFLAGS) -c $< -o $@
  
  $(OBJDIR)/%.o : %.c 
  	@if [ ! -d $(OBJDIR) ] ; then mkdir -p $(OBJDIR) ; fi
--	$(CC) $(STDCCFLAGS) $(OPTCCFLAGS) $(CFLAGS) -c $< -o $@
-+	@LIBTOOL@ --tag=CC $(CC) $(STDCCFLAGS) $(OPTCCFLAGS) $(CFLAGS) -c $< -o $@
+-	$(CC) $(STDCCFLAGS) $(OPTCCFLAGS) $(CFLAGS) -x c -c $< -o $@
++	/usr/pkg/bin/libtool --tag=CC --mode=compile $(CC) $(STDCCFLAGS) $(OPTCCFLAGS) $(CFLAGS) -c $< -o $@
  
  #
  # create list of object files 
-@@ -288,12 +288,12 @@
+@@ -300,12 +300,12 @@
  $(DEPDIR)/%.dep : %.cxx 
  	@if [ ! -d $(DEPDIR) ] ; then mkdir -p $(DEPDIR) ; fi
- 	@printf %s $(OBJDIR)/ > $@
+ 	@printf %s $(OBJDIR) > $@
 -	$(CPLUS) $(STDCCFLAGS) -M $< >> $@
-+	@LIBTOOL@ --tag=CXX $(CPLUS) $(STDCCFLAGS) -M $< >> $@
++	/usr/pkg/bin/libtool --tag=CXX --mode=compile $(CPLUS) $(STDCCFLAGS) -M $< >> $@
  
  $(DEPDIR)/%.dep : %.c 
  	@if [ ! -d $(DEPDIR) ] ; then mkdir -p $(DEPDIR) ; fi
- 	@printf %s $(OBJDIR)/ > $@
+ 	@printf %s $(OBJDIR) > $@
 -	$(CC) $(STDCCFLAGS) -M $< >> $@
-+	@LIBTOOL@ --tag=CC $(CC) $(STDCCFLAGS) -M $< >> $@
++	/usr/pkg/bin/libtool --tag=CC --mode=compile $(CC) $(STDCCFLAGS) -M $< >> $@
  
  #
  # add in good files to delete
-@@ -328,7 +328,7 @@
+@@ -344,7 +344,7 @@
  # directory
  	@if [ ! -L $(OBJDIR)/lib ] ; then cd $(OBJDIR); ln -s $(PW_LIBDIR) lib; fi
  endif
 -	$(CPLUS) -o $@ $(CFLAGS) $(LDFLAGS) $(OBJS) $(LDLIBS) $(ENDLDLIBS) $(ENDLDFLAGS)
-+	@LIBTOOL@ --tag=CXX $(CPLUS) -o $@ $(CFLAGS) $(LDFLAGS) $(OBJS) $(LDLIBS) $(ENDLDLIBS) $(ENDLDFLAGS)
++	/usr/pkg/bin/libtool --tag=CXX --mode=link $(CPLUS) -o $@ $(CFLAGS) $(LDFLAGS) $(OBJS) $(LDLIBS) $(ENDLDLIBS) $(ENDLDFLAGS)
  ifeq ($(OSTYPE),VxWorks)
  	$(LD)   --split-by-reloc 65535 -r   $(OBJS) -o $@ 
  endif
-@@ -356,7 +356,7 @@
+@@ -380,7 +380,7 @@
  ifndef INSTALL_OVERRIDE
  
  install:	$(TARGET)
 -	$(INSTALL) $(TARGET) $(INSTALLBIN_DIR)
-+	@LIBTOOL@ $(BSD_INSTALL_PROGRAM) $(TARGET) $(INSTALLBIN_DIR)
++	/usr/pkg/bin/libtool --mode=install $(BSD_INSTALL_PROGRAM) $(TARGET) $(INSTALLBIN_DIR)
  endif
  
  # ifdef PROG
