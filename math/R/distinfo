@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.19 2004/06/24 11:09:06 markd Exp $
+$NetBSD: distinfo,v 1.20 2004/11/18 12:31:29 markd Exp $
 
-SHA1 (R-1.9.1.tgz) = 3423a1810a6a8d838554e49d54d44b05f5647085
-Size (R-1.9.1.tgz) = 9591217 bytes
-SHA1 (patch-aa) = f435eae9f0a348f5f2e105045015039abf8ac102
-SHA1 (patch-ab) = 192044af2d9cd73f19e8324384cab91635e27067
-SHA1 (patch-ac) = 42329fa99c63c3823151f7a18e0ec5b6f2f5d6dd
+SHA1 (R-2.0.1.tar.gz) = 6440c0506b170edcea6bebba5faebc3ee682dcf2
+Size (R-2.0.1.tar.gz) = 10645703 bytes
+SHA1 (patch-aa) = fa1aba5fa71e8ec219ab6cd0f61ad0c22e6e4f10
+SHA1 (patch-ac) = 84a7ab545e5f462d3c62745cc110ffcbc293ca49
 SHA1 (patch-at) = d972e1072a7f6a30b5fbc2e5fa076bc5bdec5952
