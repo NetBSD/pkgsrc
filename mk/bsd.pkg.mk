@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1211 2003/07/11 20:22:11 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1212 2003/07/12 10:21:33 wiz Exp $
 #
 # This file is in the public domain.
 #
@@ -404,6 +404,7 @@ PKG_FAIL_REASON+='assignment of WRKSRC= $${WRKDIR}'
 .endif # NO_WRKSUBDIR
 
 # A few aliases for *-install targets
+PKGDIRMODE?=	755
 INSTALL_PROGRAM?= \
 	${INSTALL} ${COPY} ${_STRIPFLAG_INSTALL} -o ${BINOWN} -g ${BINGRP} -m ${BINMODE}
 INSTALL_SCRIPT?= \
@@ -413,13 +414,13 @@ INSTALL_DATA?= \
 INSTALL_MAN?= \
 	${INSTALL} ${COPY} -o ${MANOWN} -g ${MANGRP} -m ${MANMODE}
 INSTALL_PROGRAM_DIR?= \
-	${INSTALL} -d -o ${BINOWN} -g ${BINGRP} -m ${BINMODE}
+	${INSTALL} -d -o ${BINOWN} -g ${BINGRP} -m ${PKGDIRMODE}
 INSTALL_SCRIPT_DIR?= \
 	${INSTALL_PROGRAM_DIR}
 INSTALL_DATA_DIR?= \
-	${INSTALL} -d -o ${SHAREOWN} -g ${SHAREGRP} -m ${BINMODE}
+	${INSTALL} -d -o ${SHAREOWN} -g ${SHAREGRP} -m ${PKGDIRMODE}
 INSTALL_MAN_DIR?= \
-	${INSTALL} -d -o ${MANOWN} -g ${MANGRP} -m ${BINMODE}
+	${INSTALL} -d -o ${MANOWN} -g ${MANGRP} -m ${PKGDIRMODE}
 
 INSTALL_MACROS=	BSD_INSTALL_PROGRAM="${INSTALL_PROGRAM}"		\
 		BSD_INSTALL_SCRIPT="${INSTALL_SCRIPT}"			\
