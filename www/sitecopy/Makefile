@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2004/03/26 02:27:58 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2004/04/15 21:44:47 snj Exp $
 
 DISTNAME=		sitecopy-0.13.4
 PKGREVISION=		4
@@ -12,7 +12,7 @@ COMMENT=		Utility for synchronizing remote and local web sites
 BUILD_USES_MSGFMT=	# defined
 
 USE_GNU_TOOLS+=		make
-USE_BUILDLINK2=		# defined
+USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	# defined
 
 GNU_CONFIGURE=		# defined
@@ -31,12 +31,12 @@ pre-build:
 	${LN} -sf ${WRKSRC}/lib/fnmatch.h ${WRKSRC}/fnmatch.h
 
 .if !exists(/usr/include/getopt.h)
-.  include "../../pkgtools/libnbcompat/buildlink2.mk"
+.  include "../../pkgtools/libnbcompat/buildlink3.mk"
 .endif
 
-.include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../security/openssl/buildlink2.mk"
-.include "../../textproc/libxml2/buildlink2.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
 
-.include "../../mk/pthread.buildlink2.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
