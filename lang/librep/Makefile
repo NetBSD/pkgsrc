@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2004/02/12 09:10:51 jlam Exp $
+# $NetBSD: Makefile,v 1.34 2004/02/14 00:59:11 jlam Exp $
 #
 
 DISTNAME=		librep-${REP_VERS}
@@ -34,7 +34,7 @@ PLIST_SUBST+=		REP_VERS=${REP_VERS}
 
 post-install:
 	${RM} -f ${REP_LIBTOOL}
-	${LN} -sf ${PKG_LIBTOOL} ${REP_LIBTOOL}
+	${INSTALL_SCRIPT} ${PKG_LIBTOOL} ${REP_LIBTOOL}
 
 .include "../../databases/gdbm/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
