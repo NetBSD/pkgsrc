@@ -1,10 +1,10 @@
-$NetBSD: patch-ab,v 1.7 2001/11/27 03:38:42 itojun Exp $
+$NetBSD: patch-ab,v 1.8 2004/10/03 09:20:41 tron Exp $
 
---- lib/lwres/getnameinfo.c.orig	Sat Jul 14 08:34:02 2001
-+++ lib/lwres/getnameinfo.c	Tue Jul 17 10:14:33 2001
-@@ -66,6 +66,10 @@
- #include <lwres/net.h>
+--- lib/lwres/getnameinfo.c.orig	2004-08-28 08:25:24.000000000 +0200
++++ lib/lwres/getnameinfo.c	2004-10-03 08:56:21.000000000 +0200
+@@ -63,6 +63,10 @@
  #include <lwres/netdb.h>
+ #include "print_p.h"
  
 +#ifdef __KAME__
 +#include <net/if.h>
@@ -13,12 +13,11 @@ $NetBSD: patch-ab,v 1.7 2001/11/27 03:38:42 itojun Exp $
  #include "assert_p.h"
  
  #define SUCCESS 0
-@@ -214,13 +218,11 @@
+@@ -211,13 +215,10 @@
  		    ((const struct sockaddr_in6 *)sa)->sin6_scope_id) {
  			char *p = numaddr + strlen(numaddr);
  			const char *stringscope = NULL;
 -#if 0
-+
 +#ifdef __KAME__
  			if ((flags & NI_NUMERICSCOPE) == 0) {
 -				/*

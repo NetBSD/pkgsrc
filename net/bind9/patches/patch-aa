@@ -1,43 +1,41 @@
-$NetBSD: patch-aa,v 1.7 2003/03/10 02:47:37 hubertf Exp $
+$NetBSD: patch-aa,v 1.8 2004/10/03 09:20:41 tron Exp $
 
---- configure.in.orig	2003-03-10 00:19:25.000000000 +0000
-+++ configure.in
-@@ -586,7 +586,8 @@ then
- [linking with PTL2 is highly experimental and not expected to work])
- 			CC=ptlgcc
- 		else
--			if test ! -d $LOCALBASE/pthreads
-+			if test ! -d $LOCALBASE/pthreads \
-+				-a ! -f /usr/include/pthread.h
- 			then
- 				AC_MSG_RESULT(none)
- 				AC_MSG_ERROR("could not find thread libraries")
-@@ -594,13 +595,21 @@ then
+--- configure.in-	2004-05-16 04:58:44.000000000 +0900
++++ configure.in	2004-05-16 05:00:43.000000000 +0900
+@@ -684,7 +684,7 @@
+ 				AC_MSG_RESULT(native)
+ 				LIBS="-lpthread $LIBS"
+ 			else
+-				if test ! -d $LOCALBASE/pthreads
++				if test ! -d $LOCALBASE/pthreads -a ! -f /usr/include/pthread.h
+ 				then
+ 					AC_MSG_RESULT(none)
+ 					AC_MSG_ERROR("could not find thread libraries")
+@@ -692,13 +692,20 @@
  
- 			if $use_threads
- 			then
--				AC_MSG_RESULT(mit-pthreads/unproven-pthreads)
--				pkg="$LOCALBASE/pthreads"
--				lib1="-L$pkg/lib -Wl,-R$pkg/lib"
--				lib2="-lpthread -lm -lgcc -lpthread"
--				LIBS="$lib1 $lib2 $LIBS"
--				CPPFLAGS="$CPPFLAGS -I$pkg/include"
--				STD_CINCLUDES="$STD_CINCLUDES -I$pkg/include"
-+				if test -f /usr/include/pthread.h
-+				then
-+					AC_MSG_RESULT(native pthreads)
-+					LIBS="-lpthread $LIBS"
-+					CPPFLAGS="$CPPFLAGS -I/usr/include"
-+					STD_CINCLUDES="$STD_CINCLUDES -I/usr/include"
-+				else
-+					AC_MSG_RESULT(mit-pthreads/unproven-pthreads)
-+					pkg="$LOCALBASE/pthreads"
-+					lib1="-L$pkg/lib -Wl,-R$pkg/lib"
-+					lib2="-lpthread -lm -lgcc -lpthread"
-+					LIBS="$lib1 $lib2 $LIBS"
-+					CPPFLAGS="$CPPFLAGS -I$pkg/include"
-+					STD_CINCLUDES="$STD_CINCLUDES -I$pkg/include"
-+				fi
+ 				if $use_threads
+ 				then
+-					AC_MSG_RESULT(mit-pthreads/unproven-pthreads)
+-					pkg="$LOCALBASE/pthreads"
+-					lib1="-L$pkg/lib -Wl,-R$pkg/lib"
+-					lib2="-lpthread -lm -lgcc -lpthread"
+-					LIBS="$lib1 $lib2 $LIBS"
+-					CPPFLAGS="$CPPFLAGS -I$pkg/include"
+-					STD_CINCLUDES="$STD_CINCLUDES -I$pkg/include"
++					if test -f /usr/include/pthread.h
++						AC_MSG_RESULT(native pthreads)
++						LIBS="-lpthread $LIBS"
++						CPPFLAGS="$CPPFLAGS -I/usr/inclue"
++						STD_CINDLUES="$STD_CINDLUES -I/usr/include"
++					else
++						AC_MSG_RESULT(mit-pthreads/unproven-pthreads)
++						pkg="$LOCALBASE/pthreads"
++						lib1="-L$pkg/lib -Wl,-R$pkg/lib"
++						lib2="-lpthread -lm -lgcc -lpthread"
++						LIBS="$lib1 $lib2 $LIBS"
++						CPPFLAGS="$CPPFLAGS -I$pkg/include"
++						STD_CINCLUDES="$STD_CINCLUDES -I$pkg/include"
++					fi
+ 				fi
  			fi
  		fi
- 		;;

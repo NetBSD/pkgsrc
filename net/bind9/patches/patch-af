@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.4 2003/03/10 02:47:38 hubertf Exp $
+$NetBSD: patch-af,v 1.5 2004/10/03 09:20:41 tron Exp $
 
---- lib/bind/configure.in.orig	2003-03-10 01:09:39.000000000 +0000
-+++ lib/bind/configure.in
-@@ -367,7 +367,8 @@ then
+--- lib/bind/configure.in.orig	2004-03-15 10:02:44.000000000 +0900
++++ lib/bind/configure.in	2004-05-16 05:09:55.000000000 +0900
+@@ -367,7 +367,8 @@
  [linking with PTL2 is highly experimental and not expected to work])
  			CC=ptlgcc
  		else
@@ -12,7 +12,7 @@ $NetBSD: patch-af,v 1.4 2003/03/10 02:47:38 hubertf Exp $
  			then
  				AC_MSG_RESULT(none)
  				use_threads=false
-@@ -375,13 +376,21 @@ then
+@@ -375,13 +376,21 @@
  
  			if $use_threads
  			then
