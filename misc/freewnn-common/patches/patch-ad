@@ -1,0 +1,11 @@
+$NetBSD: patch-ad,v 1.1.1.1 1999/08/02 05:45:01 sakamoto Exp $
+
+--- ./configure.in.orig	Tue Apr  6 12:12:19 1999
++++ ./configure.in	Wed Jul 28 11:29:10 1999
+@@ -55,5 +55,5 @@
+     fi
+     ;;
+-"FreeBSD")
++"FreeBSD" | "NetBSD" | "OpenBSD")
+     CCOPTIONS="-DCSRG_BASED"
+     CDEBUGFLAGS="-O2 -fno-strength-reduce"
