@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2004/09/22 08:09:58 jlam Exp $
+@comment $NetBSD: PLIST,v 1.8 2004/10/28 19:13:54 jmmv Exp $
 bin/gnopernicus
 bin/srcore
 include/gnopernicus-1.0/libbrl/brlxmlapi.h
@@ -101,6 +101,7 @@ ${PKGLOCALEDIR}/locale/pa/LC_MESSAGES/gnopernicus.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/gnopernicus.mo
 ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/gnopernicus.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/gnopernicus.mo
+${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/gnopernicus.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/gnopernicus.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/gnopernicus.mo
 ${PKGLOCALEDIR}/locale/sq/LC_MESSAGES/gnopernicus.mo
