@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2004/02/10 01:59:54 jlam Exp $
+# $NetBSD: Makefile,v 1.37 2004/02/18 13:33:41 jlam Exp $
 
 # The following two variables should have empty values unless we're
 # building a perl snapshot or release candidate.
@@ -161,6 +161,8 @@ CONFIGURE_ARGS+=	-Dlibswanted="${LIBSWANTED.${OPSYS}}"
 MKPIC=		no
 .  endif
 .endif
+
+.include "../../mk/compiler.mk"
 
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-sparc64)
 .  if !empty(CC_VERSION:Mgcc*)
