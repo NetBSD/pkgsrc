@@ -1,31 +1,31 @@
-# $NetBSD: Makefile,v 1.31 2001/06/11 06:34:28 jlam Exp $
+# $NetBSD: Makefile,v 1.32 2001/10/04 19:20:05 rh Exp $
 #
 
-DISTNAME=	libglade-0.16
-CATEGORIES=	devel gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=stable/sources/libglade/}
+DISTNAME=		libglade-0.17
+CATEGORIES=		devel gnome
+MASTER_SITES=		${MASTER_SITE_GNOME:=stable/sources/libglade/}
 
-MAINTAINER=	rh@netbsd.org
-HOMEPAGE=	http://www.daa.com.au/~james/gnome/
-COMMENT=	Runtime interpreter for GLADE gui files
+MAINTAINER=		rh@netbsd.org
+HOMEPAGE=		http://www.daa.com.au/~james/gnome/
+COMMENT=		Runtime interpreter for GLADE gui files
 
 BUILD_USES_MSGFMT=	yes
-# do not remove esound pre-requisite
-DEPENDS+=	esound>=0.2.18:../../audio/esound
-DEPENDS+=	gnome-libs>=1.2.1:../../x11/gnome-libs
-DEPENDS+=	libxml>=1.8.5:../../textproc/libxml
 
-USE_LIBINTL=	YES
-USE_LIBTOOL=	YES
-USE_X11BASE=	YES
+USE_LIBTOOL=		YES
+USE_X11BASE=		YES
 
-GNU_CONFIGURE=	YES
-CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-Wl,-R${LOCALBASE}/lib -L${LOCALBASE}/lib
+GNU_CONFIGURE=		YES
+CPPFLAGS+=		-I${LOCALBASE}/include
+LDFLAGS+=		-Wl,-R${LOCALBASE}/lib
 
-LTCONFIG_OVERRIDE= ${WRKSRC}/ltconfig
+LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 pre-configure:
 	${RM} ${WRKSRC}/libgladeConf.sh
 
+.include "../../devel/gettext-lib/buildlink.mk"
+.include "../../textproc/libxml/buildlink.mk"
+.include "../../x11/gnome-libs/buildlink.mk"
+.include "../../audio/esound/buildlink.mk"
+.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
