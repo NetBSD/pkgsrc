@@ -1,26 +1,21 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/01/08 18:26:00 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2004/04/09 00:10:25 minskim Exp $
 
-diff -r -u -b sound.c.orig sound.c
---- sound.c.orig	Thu Jan  6 07:23:56 2000
-+++ sound.c	Sat Jan  8 17:09:02 2000
-@@ -5,7 +5,13 @@
+--- sound.c.orig	2002-12-02 00:03:54.000000000 -0600
++++ sound.c
+@@ -5,7 +5,7 @@
  #include <unistd.h>
  #include <fcntl.h>
  #include <sys/ioctl.h>
-+#ifdef __NetBSD__
-+#include <soundcard.h>
-+#define SOUNDDEV "/dev/sound"
-+#else
- #include <linux/soundcard.h>
-+#define SOUNDDEV "/dev/dsp"
-+#endif
+-#include <linux/soundcard.h>
++#include <sys/soundcard.h>
  #include <sys/time.h>
  #include <signal.h>
  #include <string.h>
-@@ -14,7 +20,6 @@
+@@ -14,7 +15,6 @@
  #include "scav.h"
  #include "sound.h"
  
 -#define SOUNDDEV "/dev/dsp"
  
  char dirlist[512];
+ 
