@@ -1,0 +1,30 @@
+$NetBSD: patch-ac,v 1.7 2002/06/25 18:09:45 toshii Exp $
+
+--- monitor_mm.c.orig	Fri Jun  7 10:57:25 2002
++++ monitor_mm.c
+@@ -71,6 +71,9 @@
+ {
+ 	void *address;
+ 	struct mm_master *mm;
++#if defined(HAVE_MMAP) && !defined(MAP_ANON)
++	int fd;
++#endif
+ 
+ 	if (mmalloc == NULL)
+ 		mm = xmalloc(sizeof(struct mm_master));
+@@ -87,6 +90,15 @@
+ #if  defined(HAVE_MMAP) && defined(MAP_ANON)
+ 	address = mmap(NULL, size, PROT_WRITE|PROT_READ, MAP_ANON|MAP_SHARED,
+ 	    -1, 0);
++	if (address == MAP_FAILED)
++		fatal("mmap(%lu): %s", (u_long)size, strerror(errno));
++#elif defined(HAVE_MMAP) && !defined(MAP_ANON)
++	fd = open("/dev/zero", O_RDWR);
++	if (fd < 0)
++		fatal("open(/dev/zero): %s", strerror(errno));
++	address = mmap(NULL, size, PROT_WRITE|PROT_READ, MAP_SHARED,
++	    fd, 0);
++	close(fd);
+ 	if (address == MAP_FAILED)
+ 		fatal("mmap(%lu): %s", (u_long)size, strerror(errno));
+ #else
