@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2002/10/22 23:53:25 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2002/11/30 14:55:06 grant Exp $
 # FreeBSD Id: Makefile,v 1.13 1999/01/27 07:41:14 fenner Exp $
 
 DISTNAME=	gawk-3.1.0
@@ -16,8 +16,8 @@ BUILD_DEPENDS+=		gettext>=0.10.35nb1:../../devel/gettext
 
 USE_BUILDLINK2=		# defined
 GNU_CONFIGURE=		# defined
+USE_PKGLOCALEDIR=	# defined
 TEXINFO_OVERRIDE=	# defined
-MAKE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR}
 EVAL_PREFIX+=		GETTEXT_PREFIX=gettext
 
 .include "../../mk/bsd.prefs.mk"
