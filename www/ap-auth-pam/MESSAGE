@@ -1,16 +1,13 @@
 =============================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2002/03/06 19:33:38 jlam Exp $
+$NetBSD: MESSAGE,v 1.2 2002/08/26 00:12:48 grant Exp $
 
-In order to use mod_auth_pam in your Apache installation, you need to add
-the following to your httpd.conf file:
+In order to use this module in your Apache installation, you need to
+add the following to your httpd.conf file:
 
   LoadModule pam_auth_module lib/httpd/mod_auth_pam.so
-  AddModule mod_auth_pam.c
 
-Please read the information in
+For more information, see
 
 	${PREFIX}/share/doc/html/mod_auth_pam/configure.html
 
-to learn how to properly enable PAM authentication support in your Apache
-configuration.
 =============================================================================
