@@ -1,18 +1,13 @@
-$NetBSD: patch-ab,v 1.4 2002/05/04 02:32:08 jtb Exp $
+$NetBSD: patch-ab,v 1.5 2003/02/19 22:06:20 jtb Exp $
 
---- vm.texinfo.orig	Sat May  4 03:26:56 2002
-+++ vm.texinfo	Sat May  4 03:29:17 2002
-@@ -14,6 +14,13 @@
- %\global\baselineskip 30pt      % For printing in double spaces
- @end tex
- @ifinfo
-+@format
-+INFO-DIR-SECTION Mail
-+START-INFO-DIR-ENTRY
-+* vm: (vm).             VM mail reader
-+END-INFO-DIR-ENTRY
-+@end format
-+
- This file documents the VM mail reader.
- 
- Copyright (C) 1989, 1991, 1999 Kyle E. Jones
+--- vm.texinfo.orig	Tue May 28 19:45:36 2002
++++ vm.texinfo
+@@ -2,7 +2,7 @@
+ @setfilename vm.info
+ @settitle VM User's Manual
+ @direntry
+-* VM::			A mail reader.
++* VM: (vm).		A mail reader.
+ @end direntry
+ @iftex
+ @finalout
