@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.2 2003/05/11 21:03:37 jmc Exp $
+$NetBSD: patch-ab,v 1.3 2003/05/12 20:17:49 jmc Exp $
 
---- tools/gst-launch.c.orig	Sun Feb  2 00:05:42 2003
-+++ tools/gst-launch.c	Sun May 11 15:35:14 2003
+--- gst-launch.c.orig	Sun Feb  2 00:05:42 2003
++++ gst-launch.c	Mon May 12 12:14:44 2003
 @@ -1,7 +1,9 @@
 +#include <errno.h>
  #include <string.h>
@@ -16,7 +16,7 @@ $NetBSD: patch-ab,v 1.2 2003/05/11 21:03:37 jmc Exp $
  static guint64 max = 0;
  static GstClock *s_clock;
  
-+#ifndef SA_SIGINFO
++#ifndef SI_USER
 +typedef struct {
 +	char *si_addr;
 +	int si_signo;
@@ -32,7 +32,7 @@ $NetBSD: patch-ab,v 1.2 2003/05/11 21:03:37 jmc Exp $
  
  }
  
-+#ifndef SA_SIGINFO
++#ifndef SI_USER
 +void si_handler(int sig, int code, struct sigcontext *scp)
 +{
 +	siginfo_t si;
@@ -53,9 +53,10 @@ $NetBSD: patch-ab,v 1.2 2003/05/11 21:03:37 jmc Exp $
    struct sigaction action;
  
    memset (&action, 0, sizeof (action));
-+#ifdef SA_SIGINFO
++#ifdef SI_USER
    action.sa_sigaction = fault_handler;
-   action.sa_flags = SA_SIGINFO;
+-  action.sa_flags = SA_SIGINFO;
++  action.sa_flags = 0;
 +#else
 +  action.sa_handler = (void (*)(int))si_handler;
 +  action.sa_flags = 0;
