@@ -1,4 +1,4 @@
-# $NetBSD: defs.NetBSD.mk,v 1.42 2002/12/18 06:18:15 schmonz Exp $
+# $NetBSD: defs.NetBSD.mk,v 1.43 2003/01/10 08:44:20 jlam Exp $
 #
 # Variable definitions for the NetBSD operating system.
 
@@ -105,7 +105,6 @@ _OPSYS_HAS_INET6=	no	# IPv6 is not standard
 _OPSYS_HAS_JAVA=	no	# Java is not standard
 _OPSYS_HAS_MANZ=	yes	# MANZ controls gzipping of man pages
 _OPSYS_HAS_OSSAUDIO=	yes	# libossaudio is available
-_OPSYS_LIBTOOL_REQD=	1.4.20010614nb9 # base version of libtool required
 _OPSYS_PERL_REQD=		# no base version of perl required
 _OPSYS_RPATH_NAME=	-R	# name of symbol in rpath directive to linker 
 _PATCH_CAN_BACKUP=	yes	# native patch(1) can make backups
