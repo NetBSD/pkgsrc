@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/10/24 22:10:52 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2002/08/31 02:54:29 wiz Exp $
 #
 
 DISTNAME=	libdockapp-0.4.0
@@ -9,15 +9,15 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://shadowmere.student.utwente.nl/
 COMMENT=	simple library to create dockapps for WindowMaker
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
+USE_X11=		YES
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/libdockapp
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/libdockapp
 
-.include "../../graphics/xpm/buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
+.include "../../graphics/xpm/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
