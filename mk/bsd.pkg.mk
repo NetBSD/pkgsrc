@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.879 2001/12/11 16:28:55 abs Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.880 2001/12/12 12:31:14 abs Exp $
 #
 # This file is in the public domain.
 #
@@ -521,6 +521,7 @@ PLIST_SUBST+=	OPSYS=${OPSYS}						\
 		MACHINE_GNU_PLATFORM=${MACHINE_GNU_PLATFORM}		\
 		LOWER_VENDOR=${LOWER_VENDOR}				\
 		LOWER_OPSYS=${LOWER_OPSYS}				\
+		LOWER_OS_VERSION=${LOWER_OS_VERSION}			\
 		PKGBASE=${PKGBASE}					\
 		PKGNAME=${PKGNAME}					\
 		PKGLOCALEDIR=${PKGLOCALEDIR}				\
@@ -3212,6 +3213,7 @@ print-PLIST:
 		-e  's@${MACHINE_GNU_PLATFORM}@\$${MACHINE_GNU_PLATFORM}@' \
 		-e  's@${LOWER_VENDOR}@\$${LOWER_VENDOR}@' 		\
 		-e  's@${LOWER_OPSYS}@\$${LOWER_OPSYS}@' 		\
+		-e  's@${LOWER_OS_VERSION}@\$${LOWER_OS_VERSION}@' 	\
 		-e  's@${PKGNAME}@\$${PKGNAME}@' 			\
 	 | ( ${GREP} -v emul/linux/proc || ${TRUE} )			\
 	 | ${SORT}							\
@@ -3264,6 +3266,7 @@ print-PLIST:
 		-e  s@${MACHINE_GNU_PLATFORM}@\$${MACHINE_GNU_PLATFORM}@ \
 		-e  s@${LOWER_VENDOR}@\$${LOWER_VENDOR}@ 		\
 		-e  s@${LOWER_OPSYS}@\$${LOWER_OPSYS}@ 			\
+		-e  s@${LOWER_OS_VERSION}@\$${LOWER_OS_VERSION}@ 	\
 		-e  s@${PKGNAME}@\$${PKGNAME}@ 				\
 	 | ${GREP} -v emul/linux/proc || ${TRUE}
 .endif # target(print-PLIST)
