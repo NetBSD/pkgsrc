@@ -1,4 +1,4 @@
-$NetBSD: README.BSD,v 1.1.1.1 1999/03/31 06:34:07 garbled Exp $
+$NetBSD: README.BSD,v 1.2 2004/07/09 12:46:37 wiz Exp $
 This is an excerpt of what you can see with the standalone "system".
  -- Jörg
 
@@ -156,7 +156,3 @@ perhaps they will be included into the regular distribution as well.
 
 Should you wish to contact me regarding the FreeBSD port, you can
 reach me as joerg_wunsch@uriah.heep.sax.de.
-
-
-
-
