@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2001/02/16 15:11:05 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2002/10/21 12:22:21 wiz Exp $
 #
 
 DISTNAME=	xscrabble
 PKGNAME=	xscrabble-1.0
+PKGREVISION=	1
 CATEGORIES=	games x11
 MASTER_SITES=	http://www.belgarath.demon.co.uk/programs/
 
@@ -11,8 +12,9 @@ HOMEPAGE=	http://www.belgarath.demon.co.uk/programs/
 COMMENT=	X version of the popular board game, for 1 to 4 players
 
 WRKSRC=		${WRKDIR}/xscrabble
+DIST_SUBDIR=	${PKGNAME}
+USE_BUILDLINK2=	YES
 USE_X11BASE=	YES
-USE_XPM=	YES
 USE_IMAKE=	YES
 
 post-patch:
@@ -35,4 +37,5 @@ do-install:
 			/var/games/xscrabble.scores ; \
 	fi
 
+.include "../../graphics/xpm/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
