@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1547 2003/03/04 22:06:47 tron Exp $
+$NetBSD: CHANGES,v 1.1548 2003/03/05 03:45:57 grant Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -935,3 +935,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated glib to 1.2.10nb4 [salo 2003-03-04]
 	Updated graphviz to 1.9nb1 [salo 2003-03-04]
 	Updated xemacs-packages to 1.11 [tron 2003-03-04]
+	Added jumpgate-0.7 [grant 2003-03-05]
