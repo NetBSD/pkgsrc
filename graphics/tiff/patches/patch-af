@@ -1,0 +1,12 @@
+$NetBSD: patch-af,v 1.10 2005/01/11 05:29:55 jlam Exp $
+
+--- configure.orig	2004-12-20 14:41:54.000000000 -0500
++++ configure
+@@ -23722,6 +23722,7 @@ if test "${enable_c+++set}" = set; then
+ else
+   HAVE_CXX=yes
+ fi;
++HAVE_CXX=no
+ 
+ if test "$HAVE_CXX" = "yes" ; then
+ 
