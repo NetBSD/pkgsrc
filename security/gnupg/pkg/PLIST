@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.7 2000/11/10 02:35:03 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2001/01/29 11:53:03 wiz Exp $
 bin/gpg
 bin/gpgv
+${IDEA}lib/gnupg/idea
 lib/gnupg/rndegd
 lib/gnupg/rndunix
 lib/gnupg/tiger
