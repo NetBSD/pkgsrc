@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/02/17 17:21:29 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/06/07 00:09:21 jtb Exp $
 #
 
 DISTNAME=	amiwm0.20pl48
@@ -9,6 +9,8 @@ MASTER_SITES=	ftp://ftp.lysator.liu.se/pub/X11/wm/amiwm/
 MAINTAINER=	rh@trapdoor.vip.at
 HOMEPAGE=	http://www.lysator.liu.se/~marcus/amiwm.html
 COMMENT=	X window manager with Amiga look and feel
+
+LICENSE=	amiwm-license
 
 USE_X11=	yes
 GNU_CONFIGURE=	yes
