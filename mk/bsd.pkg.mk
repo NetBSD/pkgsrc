@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1021 2002/07/30 00:09:23 grant Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1022 2002/07/31 14:43:29 wiz Exp $
 #
 # This file is in the public domain.
 #
@@ -440,6 +440,7 @@ PATCH_ARGS+=		--batch
 PATCH_DIST_ARGS+=	--batch
 .endif
 PATCH_ARGS+=		${_PATCH_BACKUP_ARG} .orig
+PATCH_DIST_ARGS+=	${_PATCH_BACKUP_ARG} .orig
 PATCH_FUZZ_FACTOR?=	-F0			# Default to zero fuzz
 
 EXTRACT_SUFX?=		.tar.gz
