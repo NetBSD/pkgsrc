@@ -1,10 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.2 2002/09/22 09:52:36 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2002/10/16 03:14:44 rh Exp $
 
 .if !defined(LIBGNOMEPRINT_BUILDLINK2_MK)
 LIBGNOMEPRINT_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			libgnomeprint
-BUILDLINK_DEPENDS.libgnomeprint?=	libgnomeprint>=1.116.0
+BUILDLINK_DEPENDS.libgnomeprint?=	libgnomeprint>=1.116.0nb1
 BUILDLINK_PKGSRCDIR.libgnomeprint?=	../../print/libgnomeprint
 
 EVAL_PREFIX+=			BUILDLINK_PREFIX.libgnomeprint=libgnomeprint
@@ -17,7 +17,7 @@ BUILDLINK_FILES.libgnomeprint+=	lib/libgnomeprint-2.*
 
 .include "../../devel/libbonobo/buildlink2.mk"
 .include "../../devel/pango/buildlink2.mk"
-.include "../../devel/ptl2/buildlink2.mk"
+.include "../../devel/glib2/buildlink2.mk"
 .include "../../graphics/freetype2/buildlink2.mk"
 .include "../../graphics/libart2/buildlink2.mk"
 

@@ -1,10 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.6 2002/09/23 02:28:37 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.7 2002/10/16 03:14:41 rh Exp $
 
 .if !defined(GLIB2_BUILDLINK2_MK)
 GLIB2_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		glib2
-BUILDLINK_DEPENDS.glib2?=	glib2>=2.0.6nb1
+BUILDLINK_DEPENDS.glib2?=	glib2>=2.0.6nb2
 BUILDLINK_PKGSRCDIR.glib2?=	../../devel/glib2
 
 EVAL_PREFIX+=		BUILDLINK_PREFIX.glib2=glib2
@@ -21,7 +21,11 @@ BUILDLINK_FILES.glib2+=	lib/libgthread-2.0.*
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../devel/pkgconfig/buildlink2.mk"
 
+.include "../../mk/bsd.prefs.mk"
+
+.if defined(USE_PTL2)
 PTHREAD_OPTS+=	native
+.endif
 
 .include "../../mk/pthread.buildlink2.mk"
 
