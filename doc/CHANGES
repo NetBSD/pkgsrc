@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6287 2004/06/23 15:44:11 snj Exp $
+$NetBSD: CHANGES,v 1.6288 2004/06/23 15:49:12 snj Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3032,3 +3032,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated mozilla-bin to 1.7 [grant 2004-06-23]
 	Updated p5-Mail-Mbox-MessageParser to 1.20 [snj 2004-06-23]
 	Updated grepmail to 5.30 [snj 2004-06-23]
+	Updated bomberclone to 0.11.3 [snj 2004-06-23]
