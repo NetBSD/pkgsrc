@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2004/04/08 17:22:59 reed Exp $
+# $NetBSD: Makefile,v 1.4 2004/04/26 06:58:28 jlam Exp $
 
-DISTNAME=	krb5-1.3.2
+DISTNAME=	krb5-1.3.3
 PKGNAME=	mit-${DISTNAME}
 WRKSRC=		${WRKDIR}/${DISTNAME}/src
 CATEGORIES=	security
@@ -9,11 +9,7 @@ MAINTAINER=	jlam@NetBSD.org
 HOMEPAGE=	http://web.mit.edu/kerberos/www/
 COMMENT=	MIT Kerberos 5 authentication system
 
-RESTRICTED=		"Redistribution not permitted"
-NO_SRC_ON_FTP=		${RESTRICTED}
-NO_SRC_ON_CDROM=	${RESTRICTED}
-NO_BIN_ON_FTP=		${RESTRICTED}
-NO_BIN_ON_CDROM=	${RESTRICTED}
+RESTRICTED=	"Redistribution is restricted by U.S. export regulations"
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -93,10 +89,10 @@ INSTALLATION_DIRS=	bin info lib sbin
 
 pre-configure:
 	@cd ${WRKSRC}; ${FIND} . -name configure -print |		\
-	while read file; do						\
-		(dir=`${DIRNAME} $$file`;				\
+	${XARGS} -n 1 ${DIRNAME} |					\
+	while read dir; do						\
 		 ${ECHO} "=> Generating configure in $$dir";		\
-		 cd $$dir && ${AUTOCONF} -I ${WRKSRC} -f);		\
+		 (cd $$dir && ${AUTOCONF} -I ${WRKSRC} -f);		\
 	done
 
 post-install:
@@ -104,7 +100,7 @@ post-install:
 		${INSTALL_MAN} $$info ${PREFIX}/${INFO_DIR} ;		\
 		for file in $$info-[0-9]*; do				\
 			if [ -f "$$file" ]; then			\
-				${INSTALL_MAN} $$file ${PREFIX}/${INFO_DIR} \
+				${INSTALL_MAN} $$file ${PREFIX}/${INFO_DIR}; \
 			fi;						\
 		done;							\
 	done
