@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/04/19 00:28:59 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2004/08/06 20:55:54 tron Exp $
 
 DISTNAME=		libpng
 PKGREVISION=		1
@@ -8,7 +8,7 @@ MASTER_SITES=		${MASTER_SITE_SUSE_UPD:=gra1/}
 DISTFILES=		${RPMFILES}
 EXTRACT_SUFX=		.rpm
 
-MAINTAINER=		tron@NetBSD.org
+MAINTAINER=		jdolecek@NetBSD.org
 HOMEPAGE=		http://www.suse.com/
 COMMENT=		Linux compatibility package for the PNG library
 
