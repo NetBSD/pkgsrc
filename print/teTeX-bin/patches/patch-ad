@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 1999/08/12 20:41:55 tron Exp $
+
+--- texk/xdvik/Makefile.in.orig	Sat May  8 17:56:37 1999
++++ texk/xdvik/Makefile.in	Thu Aug 12 22:24:20 1999
+@@ -19,7 +19,7 @@
+ x_ext_lib = @x_ext_lib@
+ # Follow the library order used in X11R6 itself:
+ #   -lXaw -lXmu -lXt -lSM -lICE -lXext -lX11 (some may not be present).
+-x_link = $(LDLIBWWW) $(x_ldflags) $(x_tool_libs) $(x_pre_libs) $(x_ext_lib) -lX11 $(x_extra_libs)
++x_link = $(LDLIBWWW) $(x_ldflags) $(x_tool_libs) $(x_pre_libs) $(x_ext_lib) -lX11 $(x_extra_libs) -lz
+ 
+ LDLIBWWW=@LDLIBWWW@
+ LIBWWWCPPFLAGS=@LIBWWWCPPFLAGS@
