@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2000/08/04 14:55:09 ad Exp $
+# $NetBSD: Makefile,v 1.15 2000/08/07 02:26:08 wiz Exp $
 
 DISTNAME=	exim-3.16
 CATEGORIES=	mail net
@@ -16,6 +16,7 @@ MESSAGE_FILE=	${WRKDIR}/MESSAGE
 pre-patch:
 	${MKDIR} ${WRKSRC}/Local
 	${CP} ${WRKSRC}/src/EDITME ${WRKSRC}/Local/Makefile.netbsd
+	${SED} "s,@PREFIX@,${PREFIX}," < ${PKGDIR}/MESSAGE > ${MESSAGE_FILE}
 
 pre-configure:
 	${SED} -e 's:@PREFIX@:${PREFIX}:' \
