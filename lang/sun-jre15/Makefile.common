@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2004/09/30 22:11:53 rh Exp $
+# $NetBSD: Makefile.common,v 1.2 2004/10/09 03:53:48 tv Exp $
 
 CATEGORIES=	lang java
 EXTRACT_SUFX=	.bin
@@ -29,6 +29,11 @@ MESSAGE_SUBST+=	JAVA_HOME="${JAVA_HOME}"
 DEPENDS+=	suse_compat-[0-9]*:../../emulators/${SUSE_DIR_PREFIX}_compat
 DEPENDS+=	suse_x11-[0-9]*:../../emulators/${SUSE_DIR_PREFIX}_x11
 .endif
+
+# the following forces compression of jarfiles, which is a huge disk
+# space win and trivial to no speed reduction in the face of the
+# new class sharing in J2SE 5.0... -tvierling
+EXTRACT_ENV.bin+= UNPACK200_FLAGS=-Htrue
 
 USE_BUILDLINK3=	yes
 NO_MTREE=	yes	# since we change PREFIX
