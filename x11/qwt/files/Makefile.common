@@ -1,0 +1,26 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 1999/11/17 18:32:29 drochner Exp $
+#
+# Paths for Qt headers and library
+#
+
+QTDIR=$(PREFIX)
+QTINC=$(QTDIR)/include/qt
+QTLIB=$(QTDIR)/lib
+MOC=$(QTDIR)/bin/moc
+
+#
+# Paths for Qwt headers and library 
+# 	QWTDIR is set autometically
+#
+QWTINC = $(QWTDIR)/include
+QWTLIB = $(QWTDIR)/lib
+
+#
+# Library Names
+#
+LIBSTATIC = libqwt.a
+LIBSHARED =  libqwt.so
+LIBSHARED_0 = libqwt.so.0
+LIBSHARED_1 = libqwt.so.0.2
+
+

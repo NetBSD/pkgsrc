@@ -1,0 +1,39 @@
+# $NetBSD: Makefile.lib,v 1.1.1.1 1999/11/17 18:32:29 drochner Exp $
+#
+#	Makefile rules for the Qwt Library
+#	==================================
+#	
+
+include $(QWTDIR)/Makefile.common
+
+
+# GENERAL SETTINGS
+#
+LCXX	=	$(LIBTOOL) --mode=compile $(CXX)
+INCLUDES =	-I../include -I$(QTINC)
+LLD	=	$(LIBTOOL) --mode=link $(CXX) -rpath $(PREFIX)/lib \
+		-version-info 0:2
+
+#
+# IMPLICIT RULES
+#
+%.lo: %.cpp
+	$(LCXX) $(CXXFLAGS) $(INCLUDES) -c $<
+
+moc_%.cpp: %.h
+	$(MOC) -o $@ $<
+
+#
+# BUILD RULES
+#
+
+all: $(LIBSHARED)
+
+$(LIBSHARED): $(OBJECTS:.o=.lo)
+	$(LLD) $(LDFLAGS) -o libqwt.la $(OBJECTS:.o=.lo)
+
+clean:
+	-rm -f *.o *.so *.so.* *.a *~
+
+depend:
+	makedepend $(QTINC) $(QWTINC) *.cpp
