@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.762 2003/08/01 00:01:48 seb Exp $
+$NetBSD: TODO,v 1.763 2003/08/01 09:50:01 wiz Exp $
 
 Suggested new packages
 ======================
@@ -155,6 +155,7 @@ Suggested package updates
 	o lavaps-2.3
 	o lcms-1.0.9
 	o leafnode-1.9.42
+	o libgcrypt-1.1.42
 	o libgda-0.90.0
 	o libgnomedb-0.90.0
 	o licq-1.2.7
@@ -256,13 +257,14 @@ Suggested package updates
 	o wdm-1.25
 	o wmbiff-0.4.15
 	o wmweather-2.4.0
+	o wv2-0.1.7
 	o wwwoffle-2.7h
 	o wxGTK-2.4.1
 	o xalan-c-1.4
 	o xanim-2.92.0 [pkg/19934]
 	o xerces-c-2.2.0 [heinz]
 	o xerces-j-2.4.0 [pkg/21725]
-	o xfstt-1.5
+	o xfstt-1.5.1
 	o xine-lib-0.9.21 [pkg/21625]
 	o xine-ui-0.9.21 [pkg/21625]
 	o xisp-2.7 [pkg/19566]
