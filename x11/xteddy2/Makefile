@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/06/11 21:36:02 zuntum Exp $
+# $NetBSD: Makefile,v 1.5 2001/07/09 15:49:07 zuntum Exp $
 
 DISTNAME=	xteddy-2.0.1
 CATEGORIES=	x11 games
@@ -8,15 +8,13 @@ MAINTAINER=	johnam@mail.kemper.org
 HOMEPAGE=	http://www.ITN.LiU.SE/~stegu/xteddy/
 COMMENT=	Teddy bear for your desktop
 
-DEPENDS+=	imlib-1.9.*:../../graphics/imlib
-
 CONFLICT+=	xteddy-1.*
 
+USE_BUILDLINK_ONLY=	YES
 GNU_CONFIGURE=	yes
 USE_X11=	yes
 
 CPPFLAGS+=	-I${X11BASE}/include
-LDFLAGS+=	-L${X11BASE}/lib -R${X11BASE}/lib 	# for libImlib
 
 pre-configure:
 	${SED} \
@@ -33,4 +31,5 @@ pre-configure:
 		${WRKSRC}/xtoys >${WRKSRC}/xtoys.new
 	${MV} ${WRKSRC}/xtoys.new ${WRKSRC}/xtoys
 
+.include "../../graphics/imlib/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
