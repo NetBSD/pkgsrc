@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1 2000/10/16 15:34:12 rh Exp $
+
+--- wvCleanLatex.in.orig	Mon Oct 16 17:23:06 2000
++++ wvCleanLatex.in
+@@ -2,7 +2,7 @@
+ 
+ prefix=@prefix@
+ exec_prefix=@exec_prefix@
+-libdir=@libdir@
++libdir=${prefix}/share
+ 
+ # argument checking
+ if [ ${#} -ne "2" ]; then
