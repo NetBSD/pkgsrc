@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 1999/03/03 00:07:43 kim Exp $
+# $NetBSD: Makefile,v 1.13 1999/04/09 23:11:53 tron Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/07/30 11:47:51 tg Exp 
 #
 
-#    SUBDIR += db
+    SUBDIR += db
     SUBDIR += gdbm
 #    SUBDIR += gnats
     SUBDIR += gtksql
