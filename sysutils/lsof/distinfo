@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2001/12/21 21:26:05 atatat Exp $
+$NetBSD: distinfo,v 1.12 2002/01/23 01:34:36 atatat Exp $
 
-SHA1 (lsof_4.60_W.tar.gz) = 6f1a848918323b9a355617948d499d003f2c25e0
-Size (lsof_4.60_W.tar.gz) = 873549 bytes
+SHA1 (lsof_4.61.tar.gz) = 4e118f91f3c46e0d81422a4cf04f03ae34641915
+Size (lsof_4.61.tar.gz) = 878083 bytes
 SHA1 (patch-aa) = 1946122860ad68f1c5e07f6ae82a147eb51e01c5
