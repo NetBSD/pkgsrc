@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.91 2003/09/11 15:48:24 taca Exp $
+# $NetBSD: Makefile,v 1.92 2003/09/16 15:58:39 taca Exp $
 
-DISTNAME=	squid-2.5.STABLE3
-PKGNAME=	squid-2.5.3
-PKGREVISION=	5
+DISTNAME=	squid-2.5.STABLE4
+PKGNAME=	squid-2.5.4
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-src//}
 CATEGORIES=	www
 MASTER_SITES=	http://www.squid-cache.org/Versions/v2/2.5/ \
@@ -10,52 +9,8 @@ MASTER_SITES=	http://www.squid-cache.org/Versions/v2/2.5/ \
 		ftp://ftp1.au.squid-cache.org/pub/squid/squid-2/STABLE/
 EXTRACT_SUFX=	.tar.bz2
 
-PATCH_SITES=	http://www.squid-cache.org/Versions/v2/2.5/bugs/
-PATCHFILES=	squid-2.5.STABLE3-Lithuanian.patch \
-		squid-2.5.STABLE3-HttpHeaderTools.patch \
-		squid-2.5.STABLE3-deny_info.patch \
-		squid-2.5.STABLE3-cache_dir_doc.patch \
-		squid-2.5.STABLE3-devnull.patch \
-		squid-2.5.STABLE3-log_quote.patch \
-		squid-2.5.STABLE3-rfc_reference.patch \
-		squid-2.5.STABLE3-icmpRecv.patch \
-		squid-2.5.STABLE3-external_acl_ident.patch \
-		squid-2.5.STABLE3-aufs-openingfds.patch \
-		squid-2.5.STABLE3-gcc-3_3.patch \
-		squid-2.5.STABLE3-carpfactor.patch \
-		squid-2.5.STABLE3-neighbor_type_domain.patch \
-		squid-2.5.STABLE3-header_access_peer.patch \
-		squid-2.5.STABLE3-memwarnsbrk.patch \
-		squid-2.5.STABLE3-hostscomments.patch \
-		squid-2.5.STABLE3-store_check_cachable_stats.patch \
-		squid-2.5.STABLE3-cachePeerPingsSentsnmp.patch \
-		squid-2.5.STABLE3-minimum_retry_timeout.patch \
-		squid-2.5.STABLE3-ERR_TOO_BIG_Spanish.patch \
-		squid-2.5.STABLE3-tcp_reset_leak.patch \
-		squid-2.5.STABLE3-hostheader.patch \
-		squid-2.5.STABLE3-reply_body_max_size.patch \
-		squid-2.5.STABLE3-ie_refresh.patch \
-		squid-2.5.STABLE3-http_reply_access-denied.patch \
-		squid-2.5.STABLE3-SENT_PASV.patch \
-		squid-2.5.STABLE3-peer_digest_not_found_assertion.patch \
-		squid-2.5.STABLE3-round_robin_max_size.patch \
-		squid-2.5.STABLE3-syscalls.disk-counters.patch \
-		squid-2.5.STABLE3-coss-improvements.patch \
-		squid-2.5.STABLE3-blank-username-log.patch \
-		squid-2.5.STABLE3-coss-improvements-2.patch \
-		squid-2.5.STABLE3-mem_cfd.patch \
-		squid-2.5.STABLE3-aufs_open_fail.patch \
-		squid-2.5.STABLE3-aufs_threads.patch \
-		squid-2.5.STABLE3-digest_compile.patch \
-		squid-2.5.STABLE3-407_user_name.patch \
-		squid-2.5.STABLE3-multicast-ICP-timeout.patch \
-		squid-2.5.STABLE3-forwarded_for.patch \
-		squid-2.5.STABLE3-ncsa_auth_passwdfile.patch \
-		squid-2.5.STABLE3-POST-error.patch \
-		squid-2.5.STABLE3-auth_delay_pools.patch \
-		squid-2.5.STABLE3-http_reply_access_denied.patch \
-		squid-2.5.STABLE3-delay_access_auth.patch \
-		squid-2.5.STABLE3-external_acl_children.patch
+#PATCH_SITES=	http://www.squid-cache.org/Versions/v2/2.5/bugs/
+#PATCHFILES=
 PATCH_DIST_STRIP=       -p1
 
 MAINTAINER=	taca@NetBSD.org
