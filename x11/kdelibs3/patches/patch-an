@@ -1,8 +1,8 @@
-$NetBSD: patch-an,v 1.6 2004/12/11 01:19:29 markd Exp $
+$NetBSD: patch-an,v 1.7 2005/03/06 12:48:09 markd Exp $
 
---- kdecore/kstandarddirs.cpp.orig	2004-01-26 06:24:42.000000000 +1300
+--- kdecore/kstandarddirs.cpp.orig	2004-10-03 20:40:15.000000000 +1300
 +++ kdecore/kstandarddirs.cpp
-@@ -847,33 +847,33 @@ static int tokenize( QStringList& tokens
+@@ -920,33 +920,33 @@ static int tokenize( QStringList& tokens
  
  QString KStandardDirs::kde_default(const char *type) {
      if (!strcmp(type, "data"))
@@ -50,7 +50,7 @@ $NetBSD: patch-an,v 1.6 2004/12/11 01:19:29 markd Exp $
      if (!strcmp(type, "exe"))
  	return "bin/";
      if (!strcmp(type, "lib"))
-@@ -889,7 +889,7 @@ QString KStandardDirs::kde_default(const
+@@ -962,7 +962,7 @@ QString KStandardDirs::kde_default(const
      if (!strcmp(type, "xdgconf-menu"))
          return "menus/";
      if (!strcmp(type, "kcfg"))
@@ -59,11 +59,29 @@ $NetBSD: patch-an,v 1.6 2004/12/11 01:19:29 markd Exp $
      qFatal("unknown resource type %s", type);
      return QString::null;
  }
-@@ -1129,6 +1129,7 @@ void KStandardDirs::addKDEDefaults()
+@@ -1232,6 +1232,7 @@ void KStandardDirs::addKDEDefaults()
          }
  
          xdgdirList.append("/usr/local/share/");
 +        xdgdirList.append(KDEDIR "/share/");
          xdgdirList.append("/usr/share/");
      }
+ 
+@@ -1402,7 +1403,7 @@ bool KStandardDirs::addCustomized(KConfi
+         for (QStringList::ConstIterator it = list.begin(); it != list.end(); it++)
+         {
+             addPrefix(*it, priority);
+-	    addXdgConfigPrefix(*it+"/etc/xdg", priority);
++	    addXdgConfigPrefix(*it+"/xdg", priority);
+ 	    addXdgDataPrefix(*it+"/share", priority);
+ 	}
+ 	// If there are no prefixes defined, check if there is a directory
+@@ -1411,7 +1412,7 @@ bool KStandardDirs::addCustomized(KConfi
+ 	{
+ 	    QString dir = profileDirsPrefix + profile;
+ 	    addPrefix(dir, priority);
+-	    addXdgConfigPrefix(dir+"/etc/xdg", priority);
++	    addXdgConfigPrefix(dir+"/xdg", priority);
+ 	    addXdgDataPrefix(dir+"/share", priority);
+ 	}
  
