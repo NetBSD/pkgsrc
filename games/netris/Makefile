@@ -1,9 +1,14 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/10/28 23:33:14 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2000/12/31 05:18:07 hubertf Exp $
 #
 
 DISTNAME=		netris-0.5
 CATEGORIES=		games
 MASTER_SITES=		ftp://ftp.netris.org/pub/netris/
+
+PATCH_SITES=		ftp://ftp2.v6.linux.or.jp/pub/Linux/IPv6-2/netris/ \
+			http://ftp2.v6.linux.or.jp/pub/Linux/IPv6-2/netris/
+PATCHFILES=		netris-0.5-v6-19991206a.diff.gz
+PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=		uebs@gmx.at
 HOMEPAGE=		http://www.netris.org/
@@ -11,6 +16,17 @@ HOMEPAGE=		http://www.netris.org/
 USE_GMAKE=		YES
 HAS_CONFIGURE=		YES
 CONFIGURE_SCRIPT=	./Configure
+
+BUILD_DEFS+=		USE_INET6
+
+# to get USE_INET6
+.include "../../mk/bsd.prefs.mk"
+
+.if defined(USE_INET6) && ${USE_INET6} == YES
+CONFIGURE_ARGS+=        --enable-ipv6
+.else
+CONFIGURE_ARGS+=	--disable-ipv6
+.endif
 
 do-install:
 	@ ${INSTALL_PROGRAM} ${WRKSRC}/netris ${PREFIX}/bin
