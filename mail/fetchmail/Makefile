@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.140 2004/03/31 02:22:04 jlam Exp $
+# $NetBSD: Makefile,v 1.141 2004/03/31 02:25:11 jlam Exp $
 
 DISTNAME=	fetchmail-6.2.5
 PKGREVISION=	2
@@ -49,7 +49,7 @@ CONFIGURE_ARGS+=	--with-kerberos=no
 CONFIGURE_ARGS+=	--enable-inet6
 .endif
 
-FDOC=		${PREFIX}/share/doc/fetchmail
+DOCDIR=		${PREFIX}/share/doc/fetchmail
 RCD_SCRIPTS=	fetchmail
 
 post-extract:
@@ -76,11 +76,14 @@ post-build:
 	done
 
 post-install:
-	${INSTALL_DATA_DIR} ${FDOC}
-	cd ${WRKSRC} && ${INSTALL_DATA} \
-	   FAQ NOTES FEATURES README COPYING \
-	   fetchmail-FAQ.html fetchmail-features.html \
-	   design-notes.html ${FDOC}
+	${INSTALL_DATA_DIR} ${DOCDIR}
+	cd ${WRKSRC}; for file in					\
+		FAQ NOTES FEATURES README COPYING			\
+		fetchmail-FAQ.html fetchmail-features.html		\
+		design-notes.html;					\
+	do								\
+		${INSTALL_DATA} $$file ${DOCDIR};			\
+	done
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
