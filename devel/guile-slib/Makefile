@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2003/01/24 12:17:21 rh Exp $
+# $NetBSD: Makefile,v 1.14 2003/05/05 00:03:35 seb Exp $
 
 DISTNAME=	guile-slib-2.4.2
 PKGREVISION=	1
@@ -17,8 +17,6 @@ EXTRACT_ONLY=	# empty
 NO_CHECKSUM=	yes
 NO_BUILD=	yes
 
-INFO_FILES=	slib.info
-
 PLIST_SUBST+=	GUILE14_SUBDIR=${GUILE14_SUBDIR}
 
 do-install:
@@ -27,5 +25,4 @@ do-install:
 		${GUILE14} -q -s ${FILESDIR}/gencat.scm
 
 .include "../../lang/guile14/buildlink2.mk"
-.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
