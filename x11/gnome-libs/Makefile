@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 1999/03/22 22:43:42 agc Exp $
+# $NetBSD: Makefile,v 1.20 1999/04/04 20:22:11 tron Exp $
 #
 
-DISTNAME=	gnome-libs-1.0.3
+DISTNAME=	gnome-libs-1.0.5
 CATEGORIES=	x11 gnome
 MASTER_SITES=	ftp://ftp.gnome.org/pub/GNOME/gnome-1.0/sources/ \
 		ftp://ftp.jimpick.com/pub/mirrors/gnome/gnome-1.0/sources/ \
@@ -10,7 +10,7 @@ MASTER_SITES=	ftp://ftp.gnome.org/pub/GNOME/gnome-1.0/sources/ \
 MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.gnome.org/
 
-DEPENDS+=	ORBit-0.4.0:../../corba/ORBit
+DEPENDS+=	ORBit-0.4.2:../../corba/ORBit
 DEPENDS+=	imlib-1.9.4:../../graphics/imlib
 DEPENDS+=	xpm-3.4k:../../graphics/xpm
 
@@ -31,6 +31,11 @@ CONFIGURE_ENV+=		CPPFLAGS="-I${LOCALBASE}/include" \
 LOCALSTATEDIR=	/var/gnome
 
 PLIST_SRC=	${WRKDIR}/PLIST
+
+# Someone should show the GNOME people how to use CVS and how to define
+# dependences in makefiles.
+post-extract:
+	@find ${WRKDIR} -name "*.idl" -type f | xargs ${TOUCH}
 
 pre-build:
 	(cd ${WRKSRC}/support; ${GMAKE} gnomesupport.h)
