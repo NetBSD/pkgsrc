@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2003/01/16 01:18:39 salo Exp $
+# $NetBSD: Makefile,v 1.30 2003/04/04 03:53:54 jschauma Exp $
 #
 
 DISTNAME=	balsa-1.4.0
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	mail gnome
 MASTER_SITES=	http://www.theochem.kth.se/~pawsa/balsa/ \
 		ftp://ftp.newton.cx/pub/balsa/
@@ -18,7 +18,7 @@ USE_BUILDLINK2=		yes
 USE_PKGLOCALEDIR=	yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
-CONFIGURE_ARGS+=	--disable-more-warnings --without-esmtp \
+CONFIGURE_ARGS+=	--disable-more-warnings \
 			--enable-pcre
 
 CONFIGURE_ARGS+=        --with-ssl=${BUILDLINK_PREFIX.openssl}
@@ -27,6 +27,7 @@ CONFIGURE_ARGS+=        --with-ssl=${BUILDLINK_PREFIX.openssl}
 .include "../../devel/libtool/buildlink2.mk"
 .include "../../devel/libproplist/buildlink2.mk"
 .include "../../devel/pcre/buildlink2.mk"
+.include "../../mail/libesmtp/buildlink2.mk"
 .include "../../security/openssl/buildlink2.mk"
 .include "../../textproc/aspell/buildlink2.mk"
 .include "../../x11/gnome-core/buildlink2.mk"
