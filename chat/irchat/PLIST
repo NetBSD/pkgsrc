@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/02/02 02:07:20 jun Exp $
+@comment $NetBSD: PLIST,v 1.1 2001/10/31 19:47:09 zuntum Exp $
 bin/dcc
 share/emacs/site-lisp/irchat-pj/irchat-commands.elc
 share/emacs/site-lisp/irchat-pj/irchat-copyright.elc

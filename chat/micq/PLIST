@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2001/03/18 15:59:13 itojun Exp $
+@comment $NetBSD: PLIST,v 1.1 2001/10/31 19:47:12 zuntum Exp $
 bin/micq
 share/doc/micq/README
 man/man1/micq.1
