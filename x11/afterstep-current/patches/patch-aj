@@ -1,7 +1,7 @@
-$NetBSD: patch-aj,v 1.1 1999/08/24 10:16:40 fredb Exp $
+$NetBSD: patch-aj,v 1.2 1999/08/29 14:16:14 fredb Exp $
 
---- lib/Makefile.in.orig
-+++ lib/Makefile.in
+--- lib/Makefile.in.orig        Mon Aug 23 16:37:48 1999
++++ lib/Makefile.in     Fri Aug 27 22:25:21 1999
 @@ -11,11 +11,9 @@
  
  OBJSDLL         = $(OBJS)
