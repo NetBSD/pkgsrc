@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.1 2002/05/12 22:38:38 martin Exp $
+$NetBSD: patch-ad,v 1.2 2002/05/24 13:32:41 agc Exp $
 
 --- lib/XpmI.h.orig	Thu Mar 19 20:51:00 1998
 +++ lib/XpmI.h	Mon May 13 00:33:23 2002
@@ -10,3 +10,12 @@ $NetBSD: patch-ad,v 1.1 2002/05/12 22:38:38 martin Exp $
  #include "xpm.h"
  
  /*
+@@ -82,7 +83,7 @@
+ #endif
+ 
+ /* the following is defined in X11R6 but not in previous versions */
+-#ifdef __alpha
++#if defined(__alpha) || defined(__arch64__)
+ #ifndef LONG64
+ #define LONG64
+ #endif
