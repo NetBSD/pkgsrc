@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2000/09/02 19:54:25 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2000/12/28 15:04:47 wiz Exp $
 
 DISTNAME=	gdmodule.c
 PKGNAME=	py-gd-1.3
@@ -9,7 +9,7 @@ DISTFILES=	gdmodule.c
 MAINTAINER=	tsarna@netbsd.org
 HOMEPAGE=	http://starship.python.net/~richard/gdmodule/
 
-DEPENDS+=	python-1.5.2:../../lang/python
+DEPENDS+=	python>=2.0:../../lang/python
 DEPENDS+=	gd>=1.8.3:../../graphics/gd
 
 NO_WRKSUBDIR=	yes
@@ -23,7 +23,7 @@ post-extract:
 		${FILESDIR}/Setup.in > ${WRKSRC}/Setup.in
 
 do-configure:
-	${CP} ${PREFIX}/lib/python1.5/config/Makefile.pre.in ${WRKSRC}
+	${CP} ${PREFIX}/lib/python2.0/config/Makefile.pre.in ${WRKSRC}
 	cd ${WRKSRC}; ${MAKE} -f Makefile.pre.in boot
 
 .include "../../mk/bsd.pkg.mk"
