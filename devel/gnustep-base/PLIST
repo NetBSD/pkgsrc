@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.8 2004/09/24 01:56:53 rh Exp $
+@comment $NetBSD: PLIST,v 1.9 2004/11/05 14:25:19 adam Exp $
 bin/openapp
 share/GNUstep/System/Library/DTDs/gsdoc-0_6_5.dtd
 share/GNUstep/System/Library/DTDs/gsdoc-0_6_6.dtd
 share/GNUstep/System/Library/DTDs/gsdoc-0_6_7.dtd
 share/GNUstep/System/Library/DTDs/gsdoc-1_0_0.dtd
+share/GNUstep/System/Library/DTDs/gsdoc-1_0_1.rnc
 share/GNUstep/System/Library/DTDs/plist-0_9.dtd
 share/GNUstep/System/Library/Bundles/SSL.bundle/Resources/Info-gnustep.plist
 share/GNUstep/System/Library/Bundles/SSL.bundle/SSL
@@ -89,6 +90,7 @@ share/GNUstep/System/Library/Headers/Foundation/NSUndoManager.h
 share/GNUstep/System/Library/Headers/Foundation/NSUserDefaults.h
 share/GNUstep/System/Library/Headers/Foundation/NSUtilities.h
 share/GNUstep/System/Library/Headers/Foundation/NSValue.h
+share/GNUstep/System/Library/Headers/Foundation/NSXMLParser.h
 share/GNUstep/System/Library/Headers/Foundation/NSZone.h
 share/GNUstep/System/Library/Headers/GNUstepBase/GCObject.h
 share/GNUstep/System/Library/Headers/GNUstepBase/GNUstep.h
@@ -138,6 +140,7 @@ share/GNUstep/System/Library/Headers/gnustep/unicode/nextstep.h
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/English.lproj/Localizable.strings
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/French.lproj/Localizable.strings
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/German.lproj/Localizable.strings
+share/GNUstep/System/Library/Libraries/Resources/gnustep-base/Info-gnustep.plist
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/Italian.lproj/Localizable.strings
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/Languages/Dutch
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/Languages/English
@@ -164,6 +167,7 @@ share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSCharacterSets/sy
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSCharacterSets/uppercaseLetterCharSet.dat
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSCharacterSets/whitespaceAndNlCharSet.dat
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSCharacterSets/whitespaceCharSet.dat
+share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/.README.swp
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/GNUmakefile
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/GNUstep_zones
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/README
@@ -229,6 +233,17 @@ share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/America/Anguilla
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/America/Antigua
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/America/Araguaina
+share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/America/Argentina/Buenos_Aires
+share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/America/Argentina/Catamarca
+share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/America/Argentina/ComodRivadavia
+share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/America/Argentina/Cordoba
+share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/America/Argentina/Jujuy
+share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/America/Argentina/La_Rioja
+share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/America/Argentina/Mendoza
+share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/America/Argentina/Rio_Gallegos
+share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/America/Argentina/San_Juan
+share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/America/Argentina/Tucuman
+share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/America/Argentina/Ushuaia
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/America/Aruba
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/America/Asuncion
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/America/Atka
@@ -564,6 +579,7 @@ share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/Europe/Luxembourg
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/Europe/Madrid
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/Europe/Malta
+share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/Europe/Mariehamn
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/Europe/Minsk
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/Europe/Monaco
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/Europe/Moscow
@@ -776,6 +792,7 @@ share/GNUstep/System/Tools/xmlparse
 @dirrm share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/America/North_Dakota
 @dirrm share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/America/Kentucky
 @dirrm share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/America/Indiana
+@dirrm share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/America/Argentina
 @dirrm share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/America
 @dirrm share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/Africa
 @dirrm share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones
