@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/10/03 00:18:20 tv Exp $
+# $NetBSD: Makefile,v 1.16 2004/11/20 16:02:53 uebayasi Exp $
 #
 
 DISTNAME=	ndtpd-3.1.5
@@ -9,6 +9,8 @@ MASTER_SITES=	ftp://ftp.sra.co.jp/pub/net/ndtp/ndtpd/
 MAINTAINER=	uebayasi@NetBSD.org
 HOMEPAGE=	http://www.sra.co.jp/people/m-kasahr/ndtpd/
 COMMENT=	Server for accessing CD-ROM books with NDTP
+
+PKG_INSTALLATION_TYPES=	pkgviews overwrite
 
 USE_BUILDLINK3=	YES
 USE_PKGINSTALL=	YES
@@ -22,6 +24,7 @@ CONFIGURE_ARGS+=	--localstatedir=${NDTPD_RUNDIR}
 CONFIGURE_ARGS+=	--with-logdir=${NDTPD_LOGDIR}
 CONFIGURE_ARGS+=	--with-eb
 CONFIGURE_ARGS+=	--with-zlib
+CONFIGURE_ARGS+=	--with-eb-conf=${PKG_SYSCONFDIR.eb}/eb.conf
 
 # For INSTALL/DEINSTALL scripts.
 CONF_FILES=	${EGDIR}/ndtpd.conf.default ${PKG_SYSCONFDIR}/ndtpd.conf
