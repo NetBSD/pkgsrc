@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2004/05/08 01:06:26 tv Exp $
+# $NetBSD: Makefile,v 1.26 2004/08/31 23:16:23 reed Exp $
 
 DISTNAME=	zlib-1.2.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libpng/} \
 		http://www.libpng.org/pub/png/src/ \
