@@ -1,7 +1,8 @@
-$NetBSD: CHANGES-2001,v 1.1 2002/09/19 12:45:30 lukem Exp $
+$NetBSD: CHANGES-2001,v 1.2 2003/02/25 11:49:25 salo Exp $
 
 Changes to the packages collection and infrastructure in 2001:
 
+	Added libiconv-1.5 [rh 2001-01-01]
 	Updated xconq to 7.4.1 [kleink 2001-01-02]
 	Updated delegate to 6.1.22 [rh 2001-01-02]
 	Deleted mutt-current since it has long been replaced by mutt.
