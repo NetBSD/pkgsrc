@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2688 2003/07/06 14:11:02 taca Exp $
+$NetBSD: CHANGES,v 1.2689 2003/07/06 14:24:02 taca Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2684,3 +2684,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated gworkspace to 0.5.3 [rh 2003-07-06]
 	Updated gnome to 2.2.4 (gnome2) [rh 2003-07-06]
 	Updated squid to 2.5.3nb1 [taca 2003-07-06]
+	Updated ruby-openssl to 0.1.3 [taca 2003-07-06]
