@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.3 2004/07/17 19:06:36 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2005/01/05 15:39:15 drochner Exp $
 man/man1/mplayer.1
 share/mplayer/DOCS/HTML/en/amiga.html
 share/mplayer/DOCS/HTML/en/aspect.html
+share/mplayer/DOCS/HTML/en/audio.html
 share/mplayer/DOCS/HTML/en/bsd.html
 share/mplayer/DOCS/HTML/en/bugreports.html
 share/mplayer/DOCS/HTML/en/bugreports_advusers.html
@@ -18,7 +19,6 @@ share/mplayer/DOCS/HTML/en/commandline.html
 share/mplayer/DOCS/HTML/en/control.html
 share/mplayer/DOCS/HTML/en/custommatrices.html
 share/mplayer/DOCS/HTML/en/default.css
-share/mplayer/DOCS/HTML/en/devices.html
 share/mplayer/DOCS/HTML/en/drives.html
 share/mplayer/DOCS/HTML/en/dvd.html
 share/mplayer/DOCS/HTML/en/edl.html
@@ -68,6 +68,7 @@ share/mplayer/DOCS/HTML/en/tv-input.html
 share/mplayer/DOCS/HTML/en/usage.html
 share/mplayer/DOCS/HTML/en/users-vs-dev.html
 share/mplayer/DOCS/HTML/en/vcd.html
+share/mplayer/DOCS/HTML/en/video.html
 share/mplayer/DOCS/HTML/en/windows.html
 share/mplayer/DOCS/HTML/es/amiga.html
 share/mplayer/DOCS/HTML/es/aspect.html
@@ -140,6 +141,7 @@ share/mplayer/DOCS/HTML/es/vcd.html
 share/mplayer/DOCS/HTML/es/windows.html
 share/mplayer/DOCS/HTML/fr/amiga.html
 share/mplayer/DOCS/HTML/fr/aspect.html
+share/mplayer/DOCS/HTML/fr/audio.html
 share/mplayer/DOCS/HTML/fr/bsd.html
 share/mplayer/DOCS/HTML/fr/bugreports.html
 share/mplayer/DOCS/HTML/fr/bugreports_advusers.html
@@ -156,7 +158,6 @@ share/mplayer/DOCS/HTML/fr/commandline.html
 share/mplayer/DOCS/HTML/fr/control.html
 share/mplayer/DOCS/HTML/fr/custommatrices.html
 share/mplayer/DOCS/HTML/fr/default.css
-share/mplayer/DOCS/HTML/fr/devices.html
 share/mplayer/DOCS/HTML/fr/drives.html
 share/mplayer/DOCS/HTML/fr/dvd.html
 share/mplayer/DOCS/HTML/fr/edl.html
@@ -206,9 +207,11 @@ share/mplayer/DOCS/HTML/fr/tv-input.html
 share/mplayer/DOCS/HTML/fr/usage.html
 share/mplayer/DOCS/HTML/fr/users-vs-dev.html
 share/mplayer/DOCS/HTML/fr/vcd.html
+share/mplayer/DOCS/HTML/fr/video.html
 share/mplayer/DOCS/HTML/fr/windows.html
 share/mplayer/DOCS/HTML/hu/amiga.html
 share/mplayer/DOCS/HTML/hu/aspect.html
+share/mplayer/DOCS/HTML/hu/audio.html
 share/mplayer/DOCS/HTML/hu/bsd.html
 share/mplayer/DOCS/HTML/hu/bugreports.html
 share/mplayer/DOCS/HTML/hu/bugreports_advusers.html
@@ -225,7 +228,6 @@ share/mplayer/DOCS/HTML/hu/commandline.html
 share/mplayer/DOCS/HTML/hu/control.html
 share/mplayer/DOCS/HTML/hu/custommatrices.html
 share/mplayer/DOCS/HTML/hu/default.css
-share/mplayer/DOCS/HTML/hu/devices.html
 share/mplayer/DOCS/HTML/hu/drives.html
 share/mplayer/DOCS/HTML/hu/dvd.html
 share/mplayer/DOCS/HTML/hu/edl.html
@@ -236,7 +238,7 @@ share/mplayer/DOCS/HTML/hu/gcc-296.html
 share/mplayer/DOCS/HTML/hu/gui.html
 share/mplayer/DOCS/HTML/hu/history.html
 share/mplayer/DOCS/HTML/hu/howtoread.html
-share/mplayer/DOCS/HTML/hu/hpux.html
+share/mplayer/DOCS/HTML/hu/hp-ux.html
 share/mplayer/DOCS/HTML/hu/index.html
 share/mplayer/DOCS/HTML/hu/install.html
 share/mplayer/DOCS/HTML/hu/intro.html
@@ -275,9 +277,11 @@ share/mplayer/DOCS/HTML/hu/tv-input.html
 share/mplayer/DOCS/HTML/hu/usage.html
 share/mplayer/DOCS/HTML/hu/users-vs-dev.html
 share/mplayer/DOCS/HTML/hu/vcd.html
+share/mplayer/DOCS/HTML/hu/video.html
 share/mplayer/DOCS/HTML/hu/windows.html
 share/mplayer/DOCS/HTML/pl/amiga.html
 share/mplayer/DOCS/HTML/pl/aspect.html
+share/mplayer/DOCS/HTML/pl/audio.html
 share/mplayer/DOCS/HTML/pl/bsd.html
 share/mplayer/DOCS/HTML/pl/bugreports.html
 share/mplayer/DOCS/HTML/pl/bugreports_advusers.html
@@ -294,7 +298,6 @@ share/mplayer/DOCS/HTML/pl/commandline.html
 share/mplayer/DOCS/HTML/pl/control.html
 share/mplayer/DOCS/HTML/pl/custommatrices.html
 share/mplayer/DOCS/HTML/pl/default.css
-share/mplayer/DOCS/HTML/pl/devices.html
 share/mplayer/DOCS/HTML/pl/drives.html
 share/mplayer/DOCS/HTML/pl/dvd.html
 share/mplayer/DOCS/HTML/pl/edl.html
@@ -343,9 +346,11 @@ share/mplayer/DOCS/HTML/pl/tv-input.html
 share/mplayer/DOCS/HTML/pl/usage.html
 share/mplayer/DOCS/HTML/pl/users-vs-dev.html
 share/mplayer/DOCS/HTML/pl/vcd.html
+share/mplayer/DOCS/HTML/pl/video.html
 share/mplayer/DOCS/HTML/pl/windows.html
 share/mplayer/DOCS/HTML/ru/amiga.html
 share/mplayer/DOCS/HTML/ru/aspect.html
+share/mplayer/DOCS/HTML/ru/audio.html
 share/mplayer/DOCS/HTML/ru/bsd.html
 share/mplayer/DOCS/HTML/ru/bugreports.html
 share/mplayer/DOCS/HTML/ru/bugreports_advusers.html
@@ -362,7 +367,6 @@ share/mplayer/DOCS/HTML/ru/commandline.html
 share/mplayer/DOCS/HTML/ru/control.html
 share/mplayer/DOCS/HTML/ru/custommatrices.html
 share/mplayer/DOCS/HTML/ru/default.css
-share/mplayer/DOCS/HTML/ru/devices.html
 share/mplayer/DOCS/HTML/ru/drives.html
 share/mplayer/DOCS/HTML/ru/dvd.html
 share/mplayer/DOCS/HTML/ru/edl.html
@@ -373,7 +377,7 @@ share/mplayer/DOCS/HTML/ru/gcc-296.html
 share/mplayer/DOCS/HTML/ru/gui.html
 share/mplayer/DOCS/HTML/ru/history.html
 share/mplayer/DOCS/HTML/ru/howtoread.html
-share/mplayer/DOCS/HTML/ru/hpux.html
+share/mplayer/DOCS/HTML/ru/hp-ux.html
 share/mplayer/DOCS/HTML/ru/index.html
 share/mplayer/DOCS/HTML/ru/install.html
 share/mplayer/DOCS/HTML/ru/intro.html
@@ -412,6 +416,7 @@ share/mplayer/DOCS/HTML/ru/tv-input.html
 share/mplayer/DOCS/HTML/ru/usage.html
 share/mplayer/DOCS/HTML/ru/users-vs-dev.html
 share/mplayer/DOCS/HTML/ru/vcd.html
+share/mplayer/DOCS/HTML/ru/video.html
 share/mplayer/DOCS/HTML/ru/windows.html
 share/mplayer/DOCS/README
 share/mplayer/DOCS/de/bugreports.html
@@ -436,6 +441,7 @@ share/mplayer/DOCS/it/skin.html
 share/mplayer/DOCS/it/sound.html
 share/mplayer/DOCS/it/users_against_developers.html
 share/mplayer/DOCS/it/video.html
+share/mplayer/DOCS/man/cs/mplayer.1
 share/mplayer/DOCS/man/de/mplayer.1
 share/mplayer/DOCS/man/en/mplayer.1
 share/mplayer/DOCS/man/es/mplayer.1
@@ -443,9 +449,12 @@ share/mplayer/DOCS/man/fr/mplayer.1
 share/mplayer/DOCS/man/hu/mplayer.1
 share/mplayer/DOCS/man/it/mplayer.1
 share/mplayer/DOCS/man/pl/mplayer.1
+share/mplayer/DOCS/man/sv/mplayer.1
 share/mplayer/DOCS/man/zh/mplayer.1
+share/mplayer/DOCS/tech/Doxyfile
 share/mplayer/DOCS/tech/MAINTAINERS
 share/mplayer/DOCS/tech/TODO
+share/mplayer/DOCS/tech/code-documentation.txt
 share/mplayer/DOCS/tech/codec-devel.txt
 share/mplayer/DOCS/tech/codecs-in.html
 share/mplayer/DOCS/tech/codecs.conf.txt
@@ -461,6 +470,7 @@ share/mplayer/DOCS/tech/libmpcodecs.txt
 share/mplayer/DOCS/tech/libvo.txt
 share/mplayer/DOCS/tech/libvo2.txt
 share/mplayer/DOCS/tech/manpage.txt
+share/mplayer/DOCS/tech/mncf.txt
 share/mplayer/DOCS/tech/mpcf.txt
 share/mplayer/DOCS/tech/mpsub.sub
 share/mplayer/DOCS/tech/osd.txt
@@ -480,6 +490,140 @@ share/mplayer/DOCS/tech/swscaler_methods.txt
 share/mplayer/DOCS/tech/translations.txt
 share/mplayer/DOCS/tech/vidix.txt
 share/mplayer/DOCS/tech/wishlist
+share/mplayer/DOCS/xml/Makefile
+share/mplayer/DOCS/xml/Makefile.inc
+share/mplayer/DOCS/xml/README
+share/mplayer/DOCS/xml/README.maintainers
+share/mplayer/DOCS/xml/configure
+share/mplayer/DOCS/xml/default.css
+share/mplayer/DOCS/xml/en/Makefile
+share/mplayer/DOCS/xml/en/audio.xml
+share/mplayer/DOCS/xml/en/bugreports.xml
+share/mplayer/DOCS/xml/en/bugs.xml
+share/mplayer/DOCS/xml/en/cd-dvd.xml
+share/mplayer/DOCS/xml/en/codecs.xml
+share/mplayer/DOCS/xml/en/documentation.xml
+share/mplayer/DOCS/xml/en/faq.xml
+share/mplayer/DOCS/xml/en/features.xml
+share/mplayer/DOCS/xml/en/formats.xml
+share/mplayer/DOCS/xml/en/history.xml
+share/mplayer/DOCS/xml/en/install.xml
+share/mplayer/DOCS/xml/en/mail-lists.xml
+share/mplayer/DOCS/xml/en/mencoder.xml
+share/mplayer/DOCS/xml/en/patches.xml
+share/mplayer/DOCS/xml/en/ports.xml
+share/mplayer/DOCS/xml/en/skin.xml
+share/mplayer/DOCS/xml/en/tvinput.xml
+share/mplayer/DOCS/xml/en/usage.xml
+share/mplayer/DOCS/xml/en/users-vs-dev.xml
+share/mplayer/DOCS/xml/en/video.xml
+share/mplayer/DOCS/xml/es/Makefile
+share/mplayer/DOCS/xml/es/audio.xml
+share/mplayer/DOCS/xml/es/bugreports.xml
+share/mplayer/DOCS/xml/es/bugs.xml
+share/mplayer/DOCS/xml/es/cd-dvd.xml
+share/mplayer/DOCS/xml/es/codecs.xml
+share/mplayer/DOCS/xml/es/documentation.xml
+share/mplayer/DOCS/xml/es/faq.xml
+share/mplayer/DOCS/xml/es/features.xml
+share/mplayer/DOCS/xml/es/formats.xml
+share/mplayer/DOCS/xml/es/history.xml
+share/mplayer/DOCS/xml/es/install.xml
+share/mplayer/DOCS/xml/es/mail-lists.xml
+share/mplayer/DOCS/xml/es/mencoder.xml
+share/mplayer/DOCS/xml/es/patches.xml
+share/mplayer/DOCS/xml/es/ports.xml
+share/mplayer/DOCS/xml/es/skin.xml
+share/mplayer/DOCS/xml/es/tvinput.xml
+share/mplayer/DOCS/xml/es/usage.xml
+share/mplayer/DOCS/xml/es/users-vs-dev.xml
+share/mplayer/DOCS/xml/es/video.xml
+share/mplayer/DOCS/xml/fr/Makefile
+share/mplayer/DOCS/xml/fr/audio.xml
+share/mplayer/DOCS/xml/fr/bugreports.xml
+share/mplayer/DOCS/xml/fr/bugs.xml
+share/mplayer/DOCS/xml/fr/cd-dvd.xml
+share/mplayer/DOCS/xml/fr/codecs.xml
+share/mplayer/DOCS/xml/fr/documentation.xml
+share/mplayer/DOCS/xml/fr/faq.xml
+share/mplayer/DOCS/xml/fr/features.xml
+share/mplayer/DOCS/xml/fr/formats.xml
+share/mplayer/DOCS/xml/fr/history.xml
+share/mplayer/DOCS/xml/fr/install.xml
+share/mplayer/DOCS/xml/fr/mail-lists.xml
+share/mplayer/DOCS/xml/fr/mencoder.xml
+share/mplayer/DOCS/xml/fr/patches.xml
+share/mplayer/DOCS/xml/fr/ports.xml
+share/mplayer/DOCS/xml/fr/skin.xml
+share/mplayer/DOCS/xml/fr/tvinput.xml
+share/mplayer/DOCS/xml/fr/usage.xml
+share/mplayer/DOCS/xml/fr/users-vs-dev.xml
+share/mplayer/DOCS/xml/fr/video.xml
+share/mplayer/DOCS/xml/html-common.xsl
+share/mplayer/DOCS/xml/hu/Makefile
+share/mplayer/DOCS/xml/hu/audio.xml
+share/mplayer/DOCS/xml/hu/bugreports.xml
+share/mplayer/DOCS/xml/hu/bugs.xml
+share/mplayer/DOCS/xml/hu/cd-dvd.xml
+share/mplayer/DOCS/xml/hu/codecs.xml
+share/mplayer/DOCS/xml/hu/documentation.xml
+share/mplayer/DOCS/xml/hu/faq.xml
+share/mplayer/DOCS/xml/hu/features.xml
+share/mplayer/DOCS/xml/hu/formats.xml
+share/mplayer/DOCS/xml/hu/history.xml
+share/mplayer/DOCS/xml/hu/install.xml
+share/mplayer/DOCS/xml/hu/mail-lists.xml
+share/mplayer/DOCS/xml/hu/patches.xml
+share/mplayer/DOCS/xml/hu/ports.xml
+share/mplayer/DOCS/xml/hu/usage.xml
+share/mplayer/DOCS/xml/ldp.dsl
+share/mplayer/DOCS/xml/pl/Makefile
+share/mplayer/DOCS/xml/pl/audio.xml
+share/mplayer/DOCS/xml/pl/bugreports.xml
+share/mplayer/DOCS/xml/pl/bugs.xml
+share/mplayer/DOCS/xml/pl/cd-dvd.xml
+share/mplayer/DOCS/xml/pl/codecs.xml
+share/mplayer/DOCS/xml/pl/documentation.xml
+share/mplayer/DOCS/xml/pl/faq.xml
+share/mplayer/DOCS/xml/pl/features.xml
+share/mplayer/DOCS/xml/pl/formats.xml
+share/mplayer/DOCS/xml/pl/history.xml
+share/mplayer/DOCS/xml/pl/html-chunk.xsl
+share/mplayer/DOCS/xml/pl/html-common.xsl
+share/mplayer/DOCS/xml/pl/html-single.xsl
+share/mplayer/DOCS/xml/pl/install.xml
+share/mplayer/DOCS/xml/pl/mail-lists.xml
+share/mplayer/DOCS/xml/pl/mencoder.xml
+share/mplayer/DOCS/xml/pl/patches.xml
+share/mplayer/DOCS/xml/pl/ports.xml
+share/mplayer/DOCS/xml/pl/skin.xml
+share/mplayer/DOCS/xml/pl/tvinput.xml
+share/mplayer/DOCS/xml/pl/usage.xml
+share/mplayer/DOCS/xml/pl/users-vs-dev.xml
+share/mplayer/DOCS/xml/pl/video.xml
+share/mplayer/DOCS/xml/ru/Makefile
+share/mplayer/DOCS/xml/ru/bugreports.xml
+share/mplayer/DOCS/xml/ru/bugs.xml
+share/mplayer/DOCS/xml/ru/cd-dvd.xml
+share/mplayer/DOCS/xml/ru/codecs.xml
+share/mplayer/DOCS/xml/ru/documentation.xml
+share/mplayer/DOCS/xml/ru/features.xml
+share/mplayer/DOCS/xml/ru/formats.xml
+share/mplayer/DOCS/xml/ru/history.xml
+share/mplayer/DOCS/xml/ru/html-chunk.xsl
+share/mplayer/DOCS/xml/ru/html-common.xsl
+share/mplayer/DOCS/xml/ru/html-single.xsl
+share/mplayer/DOCS/xml/ru/install.xml
+share/mplayer/DOCS/xml/ru/mail-lists.xml
+share/mplayer/DOCS/xml/ru/patches.xml
+share/mplayer/DOCS/xml/ru/ports.xml
+share/mplayer/DOCS/xml/ru/tvinput.xml
+share/mplayer/DOCS/xml/ru/usage.xml
+share/mplayer/DOCS/xml/ru/users-vs-dev.xml
+share/mplayer/DOCS/xml/xsl/ldp-html-chunk.xsl
+share/mplayer/DOCS/xml/xsl/ldp-html-common.xsl
+share/mplayer/DOCS/xml/xsl/ldp-html.xsl
+share/mplayer/DOCS/xml/xsl/ldp-print.xsl
 share/mplayer/DOCS/zh/bugreports.html
 share/mplayer/DOCS/zh/cd-dvd.html
 share/mplayer/DOCS/zh/codecs.html
@@ -571,9 +715,18 @@ share/mplayer/input.conf
 @dirrm share/mplayer/fonts/font-arial-14-cp1250
 @dirrm share/mplayer/fonts
 @dirrm share/mplayer/DOCS/zh
+@dirrm share/mplayer/DOCS/xml/xsl
+@dirrm share/mplayer/DOCS/xml/ru
+@dirrm share/mplayer/DOCS/xml/pl
+@dirrm share/mplayer/DOCS/xml/hu
+@dirrm share/mplayer/DOCS/xml/fr
+@dirrm share/mplayer/DOCS/xml/es
+@dirrm share/mplayer/DOCS/xml/en
+@dirrm share/mplayer/DOCS/xml
 @dirrm share/mplayer/DOCS/tech/realcodecs
 @dirrm share/mplayer/DOCS/tech
 @dirrm share/mplayer/DOCS/man/zh
+@dirrm share/mplayer/DOCS/man/sv
 @dirrm share/mplayer/DOCS/man/pl
 @dirrm share/mplayer/DOCS/man/it
 @dirrm share/mplayer/DOCS/man/hu
@@ -581,6 +734,7 @@ share/mplayer/input.conf
 @dirrm share/mplayer/DOCS/man/es
 @dirrm share/mplayer/DOCS/man/en
 @dirrm share/mplayer/DOCS/man/de
+@dirrm share/mplayer/DOCS/man/cs
 @dirrm share/mplayer/DOCS/man
 @dirrm share/mplayer/DOCS/it
 @dirrm share/mplayer/DOCS/de
