@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: upsdriver.sh,v 1.6 2002/09/20 02:02:01 grant Exp $
+# $NetBSD: upsdriver.sh,v 1.7 2002/12/13 04:23:18 lukem Exp $
 #
 # PROVIDE: upsdriver
 # REQUIRE: NETWORK syslogd mountcritremote
@@ -31,7 +31,7 @@ fi
 
 if [ "${upsdriver_type:-upsdrvctl}" = "upsdrvctl" ]
 then
-	ctl_command="@PREFIX@/sbin/upsdrvctl"
+	ctl_command="@PREFIX@/sbin/ups-drivers/upsdrvctl"
 	required_files="@NUT_CONFDIR@/ups.conf"
 	start_cmd="${ctl_command} start"
 	stop_cmd="${ctl_command} stop"
