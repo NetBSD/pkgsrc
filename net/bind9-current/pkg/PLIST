@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2001/07/17 01:30:31 itojun Exp $
+@comment $NetBSD: PLIST,v 1.10 2001/07/18 05:22:59 itojun Exp $
 bin/dig
 bin/host
 bin/isc-config.sh
@@ -161,6 +161,7 @@ include/lwres/lang.h
 include/lwres/list.h
 include/lwres/lwbuffer.h
 include/lwres/lwpacket.h
+include/lwres/lwres.h
 include/lwres/net.h
 include/lwres/netdb.h
 include/lwres/platform.h
