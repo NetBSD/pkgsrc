@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2002/03/13 17:36:55 fredb Exp $
+# $NetBSD: Makefile,v 1.39 2002/03/15 01:48:06 fredb Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1997/09/03 19:27:57 gj Exp
 
 DISTNAME=	xemacs-21.1.14
@@ -32,6 +32,7 @@ BUILD_DEFS+=	USE_LDAP USE_XFACE
 DIST_SUBDIR=	xemacs
 EXTRA_FILES=	${DISTNAME}-elc.tar.gz ${DISTNAME}-info.tar.gz
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
+PLIST_SUBST+=	DISTNAME
 
 .include "../../mk/bsd.prefs.mk"
 
