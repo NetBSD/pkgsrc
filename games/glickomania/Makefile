@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/07/21 16:49:47 martti Exp $
+# $NetBSD: Makefile,v 1.7 2004/03/07 20:18:57 snj Exp $
 #
 
 DISTNAME=	glickomania-1.0
@@ -11,7 +11,7 @@ HOMEPAGE=	http://hibase.cs.hut.fi/~cessu/glickomania/
 COMMENT=	Clear a board by removing groups of identical, adjacent tiles
 
 GNU_CONFIGURE=		YES
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 
-.include "../../x11/gtk/buildlink2.mk"
+.include "../../x11/gtk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
