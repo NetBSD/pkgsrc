@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.172 2004/10/07 03:03:09 jlam Exp $
+# $NetBSD: bsd.prefs.mk,v 1.173 2004/10/07 13:42:26 jlam Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -464,10 +464,11 @@ PKG_FAIL_REASON+=	'for more details.'
 .endif
 
 PKGPATH?=		${.CURDIR:C|.*/([^/]*/[^/]*)$|\1|}
-.if !defined(PKGSRCDIR)
-PKGSRCDIR!=		cd ${_PKGSRC_TOPDIR} && ${PWD_CMD}
-MAKEFLAGS+=		PKGSRCDIR=${PKGSRCDIR:Q}
+.if !defined(_PKGSRCDIR)
+_PKGSRCDIR!=		cd ${_PKGSRC_TOPDIR} && ${PWD_CMD}
+MAKEFLAGS+=		_PKGSRCDIR=${_PKGSRCDIR:Q}
 .endif
+PKGSRCDIR=		${_PKGSRCDIR}
 
 DISTDIR?=		${PKGSRCDIR}/distfiles
 PACKAGES?=		${PKGSRCDIR}/packages
