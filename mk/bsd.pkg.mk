@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.647 2001/01/22 04:06:45 dmcmahill Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.648 2001/01/22 22:43:10 dmcmahill Exp $
 #
 # This file is in the public domain.
 #
@@ -1316,14 +1316,16 @@ show-depends-dirs:
 .else
 	${_PKG_SILENT}${_PKG_DEBUG}                                     \
 	dlist="";\
+	thisdir=`pwd`;\
 	for reldir in ${DEPENDS:C/^[^:]*://:C/:.*$//} ${BUILD_DEPENDS:C/^[^:]*://:C/:.*$//} ;\
 	do \
-		cd $$reldir ;\
+		cd $$thisdir/$$reldir ;\
 		PWD=`pwd` ;\
 		d=`dirname $$PWD` ;\
 		absdir=`basename $$d`/`basename $$PWD` ;\
 		dlist="$$dlist $$absdir";\
 	done ;\
+	cd $$thisdir ;\
 	${ECHO} "$$dlist"
 .endif
 .endif
