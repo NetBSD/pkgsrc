@@ -1,7 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/09/07 17:38:43 jwise Exp $
---- configure.orig	Tue Sep 22 05:44:19 1998
-+++ configure	Wed Sep  6 13:19:49 2000
-@@ -1059,7 +1059,11 @@
+$NetBSD: patch-aa,v 1.2 2004/05/13 12:07:49 he Exp $
+
+--- configure.orig	1998-11-03 16:16:50.000000000 +0100
++++ configure
+@@ -1059,7 +1059,11 @@ fi
  fi
  
  fi
@@ -13,7 +14,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/09/07 17:38:43 jwise Exp $
  
  #--------------------------------------------------------------------
  #       Check for various system specific things.
-@@ -1480,9 +1484,8 @@
+@@ -1480,9 +1484,8 @@ echo "configure:1472: checking for tkCon
  done
  
  if test "$found" -eq 0 ; then
@@ -25,12 +26,21 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/09/07 17:38:43 jwise Exp $
  . $tnm_cv_path_tk_config/tkConfig.sh
  TK_INCLUDES=-I$TK_PREFIX/include
  if test "$TK_INCLUDES" = "$TCL_INCLUDES" ; then
-@@ -1497,6 +1500,8 @@
- fi
- if test 4 -eq $TK_MAJOR_VERSION -a 1 -gt $TK_MINOR_VERSION; then
+@@ -1499,6 +1502,8 @@ if test 4 -eq $TK_MAJOR_VERSION -a 1 -gt
      { echo "configure: error: "tk 4.1 or later needed"" 1>&2; exit 1; }
-+fi
-+
  fi
  
++fi
++
  #----------------------------------------------------------------------------
+ #	Check for the existence of various libraries.
+ #----------------------------------------------------------------------------
+@@ -2443,6 +2448,8 @@ fi
+ 
+ fi
+ 
++LIBS="$LIBS $TCL_LIBS"
++
+ echo $ac_n "checking for getmntent""... $ac_c" 1>&6
+ echo "configure:2448: checking for getmntent" >&5
+ if eval "test \"`echo '$''{'ac_cv_func_getmntent'+set}'`\" = set"; then
