@@ -40,7 +40,7 @@
   	@echo aix
   	@echo bsd
   	@echo bsd2.11
-+ 	@echo freebsd
++ 	@echo netbsd
   	@echo dynix
   	@echo hpux
   	@echo irix
@@ -50,7 +50,7 @@
   bsd2.11:
   	@$(MAKE) all CC="$(CC)" CFLAGS="-O -DSIGRETURNTYPE=int -DHAVE_ANSIHEADERS"
   
-+ freebsd:
++ netbsd:
 + 	@$(MAKE) all CC="$(CC)" CFLAGS="${CFLAGS} -Wall -DHAVE_ANSIHEADERS"
   
   #
