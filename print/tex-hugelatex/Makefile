@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2004/03/26 02:27:51 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2004/05/08 00:41:24 hubertf Exp $
 #
 
-DISTNAME=	hugelatex-1.0
+DISTNAME=	hugelatex-2.0
 PKGNAME=	tex-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	print
 MASTER_SITES=	# none
 DISTFILES=	# nada
@@ -11,7 +10,7 @@ DISTFILES=	# nada
 MAINTAINER=	hubertf@NetBSD.org
 COMMENT=	LaTeX format files with large limits
 
-DEPENDS+=	teTeX-1.0*:../../print/teTeX1
+DEPENDS+=	teTeX-2.*:../../print/teTeX1
 
 WRKSRC=		${WRKDIR}
 EXTRACT_ONLY=	# nothing
@@ -24,7 +23,11 @@ do-install:
 	${CP} -p ${TEXMF_CNF} ${TEXMF_CNF}-before-hugelatex
 	${CAT} ${FILESDIR}/texmf.cnf-add >>${TEXMF_CNF}
 	cd `dirname ${TEXMF_CNF}`; \
+	${MV} latex.fmt latex.fmt.BAK ; \
 	echo "" | ${PREFIX}/bin/latex -ini -fmt=hugelatex -progname=hugelatex latex.ini || ${TRUE}; \
+	${MV} latex.fmt hugelatex.fmt ; \
+	${MV} latex.log hugelatex.log ; \
+	${MV} latex.fmt.BAK latex.fmt ; \
 	${RM} -f texsys.aux
 	${RM} -f ${PREFIX}/bin/hugelatex
 	${LN} -s latex ${PREFIX}/bin/hugelatex
