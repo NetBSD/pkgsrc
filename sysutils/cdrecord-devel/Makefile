@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2002/09/29 14:34:00 lukem Exp $
+# $NetBSD: Makefile,v 1.4 2002/10/03 05:04:29 lukem Exp $
 
 DISTNAME=	cdrtools-1.11a34
 PKGNAME=	cdrecord-1.10.34
+PKGREVISION=	1
 WRKSRC=		${WRKDIR}/${DISTNAME:C/a.*//}
 CATEGORIES=	sysutils
 MASTER_SITES=	ftp://ftp.fokus.gmd.de/pub/unix/cdrecord/alpha/
@@ -52,6 +53,11 @@ do-install:
 	cd ${WRKSRC}/mkisofs;						\
 		${INSTALL_PROGRAM} OBJ/*/mkisofs ${PREFIX}/bin;		\
 		${INSTALL_MAN} mkisofs.8 ${PREFIX}/man/man8
+	cd ${WRKSRC}/mkisofs/diag;					\
+		for f in devdump isodump isoinfo isovfy; do		\
+			${INSTALL_PROGRAM} OBJ/*/$$f ${PREFIX}/bin;	\
+			${INSTALL_MAN} isoinfo.8 ${PREFIX}/man/man8/$$f.8; \
+		done
 	cd ${WRKSRC}/readcd;						\
 		${INSTALL_PROGRAM} OBJ/*/readcd ${PREFIX}/bin;		\
 		${INSTALL_MAN} readcd.1 ${PREFIX}/man/man1
