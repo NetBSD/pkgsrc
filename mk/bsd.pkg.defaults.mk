@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.175 2003/08/08 12:04:40 agc Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.176 2003/08/24 01:58:56 taca Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -1317,6 +1317,19 @@ MUTT_USE_SSL?= YES
 # database files. 
 # Possible: any directory
 # Default: /var/mysql
+
+#MYSQL_CHARSET=		latin1
+# default character set of mysql.
+# Possible: big5, cp1251, cp1257, croat, czech, danish, dec8, dos, estonia,
+#	    euc_kr, gb2312, gbk, german1, greek, hebrew, hp8, hungarian,
+#	    koi8_ru, koi8_ukr, latin1, latin2, latin5, swe7, usa7, win1250,
+#	    win1251ukr, ujis, sjis and tis620
+# Default: latin1
+
+#MYSQL_EXTRA_CHARSET=	all
+# additional charsets to be compiled in mysql.
+# Possible: none, compolex, all or list selected from MYSQL_CHARSET's
+#	    possible values.
 
 NMH_EDITOR?= vi
 # default editor for use in nmh.
