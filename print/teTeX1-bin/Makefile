@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/03/26 02:27:51 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2004/04/25 21:23:34 snj Exp $
 
 DISTNAME=	teTeX-src-1.0.7
 PKGNAME=	teTeX-bin-1.0.7
@@ -22,7 +22,7 @@ DIST_SUBDIR=		teTeX
 ALL_TARGET=		all
 INSTALL_TARGET=		install strip
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_PKGINSTALL=		yes
 USE_GCC_SHLIB=		yes
 USE_GNU_TOOLS+=		make
@@ -92,7 +92,7 @@ post-install:
 	${LOCALBASE}/bin/texconfig font vardir /var/spool/texfonts
 	${LOCALBASE}/bin/texconfig font options appendonlydir varfonts
 
-.include "../../graphics/png/buildlink2.mk"
-.include "../../www/libwww/buildlink2.mk"
+.include "../../graphics/png/buildlink3.mk"
+.include "../../www/libwww/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
