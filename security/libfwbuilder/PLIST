@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2005/02/26 11:52:04 bad Exp $
+@comment $NetBSD: PLIST,v 1.5 2005/03/07 20:49:24 bad Exp $
 bin/libfwbuilder-config-2
 include/fwb-2.0/fwbuilder/Address.h
 include/fwb-2.0/fwbuilder/AddressRange.h
@@ -60,16 +60,7 @@ include/fwb-2.0/fwcompiler/RuleProcessor.h
 @dirrm include/fwb-2.0/fwcompiler
 @dirrm include/fwb-2.0
 lib/libfwbuilder.la
-lib/libfwbuilder.a
-lib/libfwbuilder.so
-lib/libfwbuilder.so.6
-lib/libfwbuilder.so.6.2
-lib/libfwbuilder.so.6.0.2
 lib/libfwcompiler.la
-lib/libfwcompiler.a
-lib/libfwcompiler.so.6
-lib/libfwcompiler.so.6.2
-lib/libfwcompiler.so.6.0.2
 share/doc/libfwbuilder-${PKGVERSION}/AUTHORS
 share/doc/libfwbuilder-${PKGVERSION}/COPYING
 share/doc/libfwbuilder-${PKGVERSION}/ChangeLog
