@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/02/09 05:41:35 xtraeme Exp $
+include/dfui/dfui.h
+include/dfui/dump.h
+include/dfui/lang.h
+include/dfui/system.h
+lib/libdfui.a
+lib/libdfui.so
+lib/libdfui.so.3
+lib/libdfui.so.${PKGVERSION}
+lib/libdfui_pic.a
+@dirrm include/dfui
