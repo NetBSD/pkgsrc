@@ -1,44 +1,47 @@
-#!/bin/sh
-#
-# $NetBSD: INSTALL,v 1.2 2003/05/06 17:42:22 jmmv Exp $
+# $NetBSD: INSTALL,v 1.3 2004/01/11 16:45:51 cjep Exp $
 
-if [ "$2" != "POST-INSTALL" ]; then
-  exit 0
-fi
+LEAFNODE_CONFDIR=@LEAFNODE_CONFDIR@
+LEAFNODE_SPOOL=@LEAFNODE_SPOOL@
+LEAFNODE_LOCKDIR=@LEAFNODE_LOCKDIR@
+LEAFNODE_HOME=@LEAFNODE_HOME@
 
-mkdir -p @@LEAFNODE_CONFDIR@@
-if [ ! -f @@LEAFNODE_CONFDIR@@/config ]; then
-	cp @@PREFIX@@/share/examples/leafnode/config.example \
-	@@LEAFNODE_CONFDIR@@/config
-	chmod u+w @@LEAFNODE_CONFDIR@@/config
-fi
+if [ "${STAGE}" = "POST-INSTALL" ]; then
 
-echo "Creating leafnode spool directories..."
+	mkdir -p ${LEAFNODE_CONFDIR}
+	if [ ! -f ${LEAFNODE_CONFDIR}/config ]; then
+		cp ${PREFIX}/share/examples/leafnode/config.example \
+		${LEAFNODE_CONFDIR}/config
+		chmod u+w ${LEAFNODE_CONFDIR}/config
+	fi
 
-SPOOL_DIRS="leaf.node failed.postings interesting.groups out.going message.id"
+	echo "Creating leafnode spool directories..."
 
-mkdir -p @@LEAFNODE_SPOOL@@
-chown news:news @@LEAFNODE_SPOOL@@
-chmod 2775	@@LEAFNODE_SPOOL@@
+	SPOOL_DIRS="leaf.node failed.postings interesting.groups out.going message.id"
 
-for D in $SPOOL_DIRS; do
-	mkdir -p @@LEAFNODE_SPOOL@@/$D;
-	chown news:news @@LEAFNODE_SPOOL@@/$D
-	chmod 2775	@@LEAFNODE_SPOOL@@/$D
-done
+	mkdir -p ${LEAFNODE_SPOOL}
+	chown news:news ${LEAFNODE_SPOOL}
+	chmod 2775	${LEAFNODE_SPOOL}
 
-mkdir -p @@LEAFNODE_LOCKDIR@@
-chown news:news @@LEAFNODE_LOCKDIR@@
-chmod 2775 @@LEAFNODE_LOCKDIR@@
+	for D in $SPOOL_DIRS; do
+		mkdir -p ${LEAFNODE_SPOOL}/$D;
+		chown news:news ${LEAFNODE_SPOOL}/$D
+		chmod 2775	${LEAFNODE_SPOOL}/$D
+	done
 
-# Make directories (a la quickmkdir)
-for a in 0 1 2 3 4 5 6 7 8 9; do
-	for b in 0 1 2 3 4 5 6 7 8 9; do
-		for c in 0 1 2 3 4 5 6 7 8 9; do
-			mkdir -m 2775 -p @@LEAFNODE_SPOOL@@/message.id/$a$b$c
-			chown news:news @@LEAFNODE_SPOOL@@/message.id/$a$b$c
+	mkdir -p ${LEAFNODE_LOCKDIR}
+	chown news:news ${LEAFNODE_LOCKDIR}
+	chmod 2775 ${LEAFNODE_LOCKDIR}
+
+	# Make directories (a la quickmkdir)
+	for a in 0 1 2 3 4 5 6 7 8 9; do
+		for b in 0 1 2 3 4 5 6 7 8 9; do
+			for c in 0 1 2 3 4 5 6 7 8 9; do
+				mkdir -m 2775 -p ${LEAFNODE_SPOOL}/message.id/$a$b$c
+				chown news:news ${LEAFNODE_SPOOL}/message.id/$a$b$c
+			done
 		done
 	done
-done
 
-exit 0
+	mkdir -p ${LEAFNODE_HOME}
+	chown news:news ${LEAFNODE_HOME}
+fi
