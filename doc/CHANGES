@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1207 2003/01/23 19:28:54 wiz Exp $
+$NetBSD: CHANGES,v 1.1208 2003/01/23 20:00:07 kristerw Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -385,3 +385,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added bww2tex-2.00 [fredb 2003-01-23]
 	Updated pico to 4.4nb1 [martti 2003-01-23]
 	Added graphopt-0.1 [wiz 2003-01-23]
+	Updated cassowary to 0.60nb1 [kristerw 2003-01-23]
