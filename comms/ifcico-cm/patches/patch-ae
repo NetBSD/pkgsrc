@@ -1,0 +1,12 @@
+$NetBSD: patch-ae,v 1.1.1.1 1998/11/23 17:48:23 tv Exp $
+
+--- ifcico/emsi.c.orig	Sun Nov 22 16:31:44 1998
++++ ifcico/emsi.c	Sun Nov 22 16:31:50 1998
+@@ -28,7 +28,6 @@
+ extern int txwazoo(void);
+ extern unsigned short crc16xmodem(char*,int);
+ extern void rdoptions(node *);
+-extern void setproctitle(char*);
+ 
+ static int rxemsi(void);
+ static int txemsi(void);
