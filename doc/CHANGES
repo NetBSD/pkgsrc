@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.909 2002/12/25 03:48:13 wiz Exp $
+$NetBSD: CHANGES,v 1.910 2002/12/25 03:51:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -4208,7 +4208,6 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated phoenix to 0.5nb1 [wiz 2002-12-24]
 	Updated ploticus to 2.10nb1 [wiz 2002-12-24]
 	Updated psi to 0.8.6nb1 [wiz 2002-12-24]
-	Updated py22-gnome to 1.4.0nb3 [wiz 2002-12-24]
 	Updated qt3-docs to 3.0.6nb1 [wiz 2002-12-24]
 	Updated qt3-libs to 3.0.6nb1 [wiz 2002-12-24]
 	Updated qt3-mysql to 3.0.6nb1 [wiz 2002-12-24]
