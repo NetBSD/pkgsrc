@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1243 2003/01/27 11:06:16 grant Exp $
+$NetBSD: CHANGES,v 1.1244 2003/01/27 11:48:13 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -426,3 +426,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added gnome1-dirs-1.0 [jmmv 2003-01-27]
 	Added gnome2-dirs-1.0 [jmmv 2003-01-27]
 	Updated docbook-xsl to 1.60.1 [grant 2003-01-27]
+	Updated cxunzip to 0.96nb1 [jmmv 2003-01-27]
