@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.11 2003/06/10 06:29:07 wiz Exp $
+$NetBSD: patch-ac,v 1.12 2003/06/10 12:59:47 wiz Exp $
 
 --- abcde.orig  2003-05-25 12:37:53.000000000 +0200
 +++ abcde       2003-05-25 12:40:44.000000000 +0200
@@ -8,8 +8,8 @@ $NetBSD: patch-ac,v 1.11 2003/06/10 06:29:07 wiz Exp $
  # Load system defaults
 -if [ -r /etc/abcde.conf ]; then
 -	. /etc/abcde.conf
-+if [ -r @PKG_SYSCONFDIR@/etc/abcde.conf ]; then
-+	. @PKG_SYSCONFDIR@/etc/abcde.conf
++if [ -r @PKG_SYSCONFDIR@/abcde.conf ]; then
++	. @PKG_SYSCONFDIR@/abcde.conf
  fi
  # Load user preference defaults
  if [ -r $HOME/.abcde.conf ]; then
