@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.31 2004/03/26 02:27:39 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2004/04/01 18:51:56 jmmv Exp $
 #
 
-DISTNAME=		gedit-2.4.1
-PKGREVISION=		8
+DISTNAME=		gedit-2.6.0
 CATEGORIES=		editors gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gedit/2.4/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gedit/2.6/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		tech-pkg@NetBSD.org
@@ -21,6 +20,8 @@ USE_GNU_TOOLS+=		make
 USE_X11=		YES
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
+
+PKGCONFIG_OVERRIDE+=	data/gedit.pc.in
 
 GCONF2_SCHEMAS=		gedit.schemas
 
