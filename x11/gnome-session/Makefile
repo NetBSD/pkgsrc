@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2004/02/08 21:00:04 jmmv Exp $
+# $NetBSD: Makefile,v 1.29 2004/02/09 18:47:38 jmmv Exp $
 #
 
 DISTNAME=		gnome-session-2.4.2
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		x11 gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-session/2.4/}
 EXTRACT_SUFX=		.tar.bz2
