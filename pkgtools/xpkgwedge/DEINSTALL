@@ -1,4 +1,4 @@
-# $NetBSD: DEINSTALL,v 1.7 2003/11/23 07:09:12 jlam Exp $
+# $NetBSD: DEINSTALL,v 1.8 2004/04/27 18:33:52 tv Exp $
 
 FONT_PROGS="@FONT_PROGS@"
 X11BASE=@X11BASE@
@@ -10,7 +10,7 @@ SV4LIB=${PKG_PREFIX}/lib/X11/config/sv4Lib.tmpl
 
 case ${STAGE} in
 VIEW-DEINSTALL)
-	${ECHO} -n "Removing font program symlinks from view..."
+	${ECHO_N} "Removing font program symlinks from view..."
 	for prog in ${FONT_PROGS}; do
 		if [ -f ${PKG_PREFIX}/bin/$prog -a			\
 		     ${PKG_PREFIX} != ${X11BASE} ]; then
@@ -19,7 +19,7 @@ VIEW-DEINSTALL)
 	done
 	${ECHO} "done."
 
-	${ECHO} -n "Updating ${HOSTDEF}..."
+	${ECHO_N} "Updating ${HOSTDEF}..."
 	${CP} -f ${HOSTDEF} ${HOSTDEF}.bak
 	( ${GREP} -v xpkgwedge ${HOSTDEF}.bak || ${TRUE} ) > ${HOSTDEF}
 	${RM} -f ${HOSTDEF}.bak
@@ -36,7 +36,7 @@ VIEW-DEINSTALL)
 	;;
 
 DEINSTALL)
-	${ECHO} -n "Removing font program symlinks..."
+	${ECHO_N} "Removing font program symlinks..."
 	for prog in ${FONT_PROGS}; do
 		if [ -f ${PKG_PREFIX}/bin/$prog -a			\
 		     ${PKG_PREFIX} != ${X11BASE} ]; then
