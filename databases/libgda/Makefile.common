@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.12 2003/09/19 22:19:01 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.13 2003/12/23 13:24:40 xtraeme Exp $
 #
 
 DISTNAME?=		libgda-1.0.0
@@ -29,6 +29,7 @@ CONF_FILES+=		${EGDIR}/config ${PKG_SYSCONFDIR}/config
 
 .include "../../textproc/libxml2/buildlink2.mk"
 .include "../../textproc/libxslt/buildlink2.mk"
+.include "../../devel/readline/buildlink2.mk"
 .include "../../devel/pkgconfig/buildlink2.mk"
 .include "../../devel/glib2/buildlink2.mk"
 .include "../../devel/popt/buildlink2.mk"
