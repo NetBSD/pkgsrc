@@ -1,3 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/07/23 18:16:10 wiz Exp $
-lib/xmms/Input/libxmms-flac.la
+@comment $NetBSD: PLIST,v 1.2 2001/08/13 20:07:17 nra Exp $
 lib/xmms/Input/libxmms-flac.so

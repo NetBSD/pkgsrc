@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1 2001/08/13 20:07:17 nra Exp $
+
+--- Makefile.lite.orig	Thu Jun  7 17:00:48 2001
++++ Makefile.lite
+@@ -20,8 +20,8 @@
+ #
+ 
+ LIB_NAME  = libxmms-flac
+-INCLUDES  = $(shell xmms-config --cflags) -I./include -I../../include
+-LIBS = ../../obj/lib/libFLAC.a
++INCLUDES  = $(shell xmms-config --cflags) -I./include -I${BUILDLINK}/include
++LIBS = ${LOCALBASE}/lib/libFLAC.a
+ 
+ OBJS = \
+ 	plugin.o
