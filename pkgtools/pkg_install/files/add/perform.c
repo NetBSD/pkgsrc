@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.26 2004/12/09 20:10:34 erh Exp $	*/
+/*	$NetBSD: perform.c,v 1.27 2004/12/29 12:16:56 agc Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: perform.c,v 1.44 1997/10/13 15:03:46 jkh Exp";
 #else
-__RCSID("$NetBSD: perform.c,v 1.26 2004/12/09 20:10:34 erh Exp $");
+__RCSID("$NetBSD: perform.c,v 1.27 2004/12/29 12:16:56 agc Exp $");
 #endif
 #endif
 
@@ -58,7 +58,7 @@ __RCSID("$NetBSD: perform.c,v 1.26 2004/12/09 20:10:34 erh Exp $");
 #include <sys/utsname.h>
 #endif
 
-static char LogDir[FILENAME_MAX];
+static char LogDir[MaxPathSize];
 static int zapLogDir;		/* Should we delete LogDir? */
 
 static package_t Plist;
@@ -184,14 +184,14 @@ installprereq(const char *name, int *errc, int doupdate)
 static int
 pkg_do(const char *pkg, lpkg_head_t *pkgs)
 {
-	char    playpen[FILENAME_MAX];
-	char    replace_from[FILENAME_MAX];
-	char    replace_via[FILENAME_MAX];
-	char    replace_to[FILENAME_MAX];
+	char    playpen[MaxPathSize];
+	char    replace_from[MaxPathSize];
+	char    replace_via[MaxPathSize];
+	char    replace_to[MaxPathSize];
 	char   *buildinfo[BI_ENUM_COUNT];
 	int	replacing = 0;
 	char   *where_to;
-	char   dbdir[FILENAME_MAX];
+	char   dbdir[MaxPathSize];
 	const char *exact, *extra1;
 	FILE   *cfile;
 	int     errc, err_prescan;
@@ -214,7 +214,7 @@ pkg_do(const char *pkg, lpkg_head_t *pkgs)
 	/* Are we coming in for a second pass, everything already extracted?
 	 * (Slave mode) */
 	if (!pkg) {
-		fgets(playpen, FILENAME_MAX, stdin);
+		fgets(playpen, MaxPathSize, stdin);
 		playpen[strlen(playpen) - 1] = '\0';	/* remove newline! */
 		if (chdir(playpen) == FAIL) {
 			warnx("add in SLAVE mode can't chdir to %s", playpen);
@@ -484,8 +484,8 @@ pkg_do(const char *pkg, lpkg_head_t *pkgs)
 		char   *s;
 
 		if ((s = strrchr(PkgName, '-')) != NULL) {
-			char    buf[FILENAME_MAX];
-			char    installed[FILENAME_MAX];
+			char    buf[MaxPathSize];
+			char    installed[MaxPathSize];
 
 			/*
 			 * See if the pkg is already installed. If so, we might
@@ -512,7 +512,7 @@ pkg_do(const char *pkg, lpkg_head_t *pkgs)
 						 * (from +REQUIRED_BY) that require this pkg
 						 */
 						FILE *rb;                     /* +REQUIRED_BY file */
-						char pkg2chk[FILENAME_MAX];
+						char pkg2chk[MaxPathSize];
 
 						rb = fopen(replace_from, "r");
 						if (! rb) {
@@ -527,7 +527,7 @@ pkg_do(const char *pkg, lpkg_head_t *pkgs)
 							package_t depPlist;
 							FILE *depf;
 							plist_t *depp;
-							char depC[FILENAME_MAX];
+							char depC[MaxPathSize];
 							
 							s = strrchr(pkg2chk, '\n');
 							if (s)
@@ -551,8 +551,8 @@ pkg_do(const char *pkg, lpkg_head_t *pkgs)
 							fclose(depf);
 							
 							for (depp = depPlist.head; depp; depp = depp->next) {
-								char base_new[FILENAME_MAX];
-								char base_exist[FILENAME_MAX];
+								char base_new[MaxPathSize];
+								char base_exist[MaxPathSize];
 								char *s2;
 								
 								if (depp->type != PLIST_PKGDEP)
@@ -632,7 +632,7 @@ ignore_replace_depends_check:
 
 	/* See if there are conflicting packages installed */
 	for (p = Plist.head; p; p = p->next) {
-		char    installed[FILENAME_MAX];
+		char    installed[MaxPathSize];
 
 		if (p->type != PLIST_PKGCFL)
 			continue;
@@ -650,7 +650,7 @@ ignore_replace_depends_check:
 	 */
 	err_prescan=0;
 	for (p = Plist.head; p; p = p->next) {
-		char installed[FILENAME_MAX];
+		char installed[MaxPathSize];
 		
 		if (p->type != PLIST_PKGDEP)
 			continue;
@@ -683,7 +683,7 @@ ignore_replace_depends_check:
 			}
 			
 			if (skip >= 0) {
-				char    buf[FILENAME_MAX];
+				char    buf[MaxPathSize];
 		
 				(void) snprintf(buf, sizeof(buf),
 				    skip ? "%.*s[0-9]*" : "%.*s-[0-9]*",
@@ -695,7 +695,7 @@ ignore_replace_depends_check:
 					if (Replace > 1)
 					{
 						int errc0 = 0;
-						char tmp[FILENAME_MAX];
+						char tmp[MaxPathSize];
 
 						warnx("Attempting to update `%s' using binary package\n", p->name);
 						/* Yes, append .tgz after the version so the */
@@ -731,7 +731,7 @@ ignore_replace_depends_check:
 
 	/* Now check the packing list for dependencies */
 	for (exact = NULL, p = Plist.head; p; p = p->next) {
-		char    installed[FILENAME_MAX];
+		char    installed[MaxPathSize];
 
 		if (p->type == PLIST_BLDDEP) {
 			exact = p->name;
@@ -842,7 +842,7 @@ ignore_replace_depends_check:
 
 	/* Time to record the deed? */
 	if (!NoRecord && !Fake) {
-		char    contents[FILENAME_MAX];
+		char    contents[MaxPathSize];
 
 #ifndef __INTERIX
 		if (getuid() != 0)

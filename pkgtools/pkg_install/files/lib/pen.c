@@ -1,4 +1,4 @@
-/*	$NetBSD: pen.c,v 1.15 2004/08/20 20:09:53 jlam Exp $	*/
+/*	$NetBSD: pen.c,v 1.16 2004/12/29 12:16:56 agc Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: pen.c,v 1.25 1997/10/08 07:48:12 charnier Exp";
 #else
-__RCSID("$NetBSD: pen.c,v 1.15 2004/08/20 20:09:53 jlam Exp $");
+__RCSID("$NetBSD: pen.c,v 1.16 2004/12/29 12:16:56 agc Exp $");
 #endif
 #endif
 
@@ -56,8 +56,8 @@ __RCSID("$NetBSD: pen.c,v 1.15 2004/08/20 20:09:53 jlam Exp $");
 #endif
 
 /* For keeping track of where we are */
-static char Current[FILENAME_MAX];
-static char Previous[FILENAME_MAX];
+static char Current[MaxPathSize];
+static char Previous[MaxPathSize];
 static int CurrentSet;		/* rm -fr Current only if it's really set! */
                                 /* CurrentSet is set to 0 before strcpy()s
 				 * to prevent rm'ing of a partial string
@@ -161,7 +161,7 @@ make_playpen(char *pen, size_t pensize, size_t sz)
 	}
 	if (Current[0])
 		strlcpy(Previous, Current, sizeof(Previous));
-	else if (!getcwd(Previous, FILENAME_MAX)) {
+	else if (!getcwd(Previous, MaxPathSize)) {
 		cleanup(0);
 		err(EXIT_FAILURE, "fatal error during execution: getcwd");
 	}
