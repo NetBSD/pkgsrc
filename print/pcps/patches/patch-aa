@@ -1,0 +1,46 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/11/23 13:47:00 rh Exp $
+
+--- ./makefile.orig	Tue Apr  4 20:06:22 2000
++++ ./makefile	Mon May 22 13:40:03 2000
+@@ -12,7 +12,7 @@
+ # CC defines the C compiler to be used - must be ansi (ie. old cc no good)
+ #CC=gcc
+ # a good one for HP_UX
+-CC=c89
++#CC=c89
+ 
+ 
+ ###########################################################################
+@@ -41,8 +41,8 @@
+ # the default printer to send the PostScript.  Most systems will have an
+ # alias "PostScript" but some systems may just call it "lp" or "lp0"
+ 
+-DEFP="-DDEFPRINT=\"PostScript\""
+-# DEFP="-DDEFPRINT=\"lp\""
++#DEFP="-DDEFPRINT=\"PostScript\""
++DEFP="-DDEFPRINT=\"lp\""
+ 
+ 
+ #		   DEFAULT PRINT COMMAND				    */
+@@ -51,10 +51,10 @@
+ # HP_UX uses "lp -d" so I have this defined also                            */
+ 
+ # Most older systems
+-#PIPE="-DPIPECMD=\"lpr -P\""
++PIPE="-DPIPECMD=\"lpr -P\""
+ 
+ # HP_UX, AIX, SOLARIS2.4 etc.
+-PIPE="-DPIPECMD=\"lp -d\""
++#PIPE="-DPIPECMD=\"lp -d\""
+ 
+ 
+ 
+@@ -78,7 +78,7 @@
+ # DEC ULTRIX, bull dpx2       :
+ #DEFINES=-DUNIX -DULTRIX
+ # HP_UX using c89	      :
+-DEFINES=-DUNIX -D_PROTOTYPES -D_INCLUDE_POSIX_SOURCE -D_XPG2 -DHP_UX
++#DEFINES=-DUNIX -D_PROTOTYPES -D_INCLUDE_POSIX_SOURCE -D_XPG2 -DHP_UX
+ # NeXT using cc 	      :
+ #DEFINES=-DUNIX -DULTRIX -DNEXT
+ # Linux 		      :
