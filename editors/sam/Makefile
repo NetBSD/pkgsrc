@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2001/02/16 14:40:52 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2001/04/30 20:13:55 jtb Exp $
 # FreeBSD Id: Makefile,v 1.3 1996/11/12 02:19:40 obrien Exp
 #
 
@@ -15,7 +15,7 @@ NO_WRKSUBDIR=		yes
 EXTRACT_CMD=		${GZCAT} ${DOWNLOADED_DISTFILE} | ${SH}
 
 MANCOMPRESSED=		yes
-USE_X11=		yes
+USE_X11BASE=		yes
 MAKE_ENV+=		X11PREFIX=${X11PREFIX}
 
 DEPENDS+=		libXgFonts-1.0:../../fonts/Xg
