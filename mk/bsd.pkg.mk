@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.877 2001/12/08 02:12:38 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.878 2001/12/10 19:36:10 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -1568,7 +1568,7 @@ AUTOMAKE_OVERRIDE?=	YES
 .if defined(AUTOMAKE_OVERRIDE) && (${AUTOMAKE_OVERRIDE} == "YES")
 AUTOMAKE_PATTERNS+=	*.m4
 AUTOMAKE_PATTERNS+=	*.in
-AUTOMAKE_PATTERNS+=	${CONFIGURE_SCRIPT:T}*
+AUTOMAKE_PATTERNS+=	${CONFIGURE_SCRIPT:T}
 _AUTOMAKE_PATTERNS_FIND=	\
 	\( ${AUTOMAKE_PATTERNS:S/$/!/:S/^/-o -name !/:S/!/"/g:S/-o//1} \)
 
