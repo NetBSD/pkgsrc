@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.40 2005/01/25 13:48:54 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.41 2005/01/27 10:37:01 jmmv Exp $
 
 VIM_VERSION=		6.3
 VIM_PATCHLEVEL=		045
@@ -36,8 +36,8 @@ PATCH_ARGS=		-d ${WRKDIR}/vim63 --forward --quiet \
 				-E ${PATCH_STRIP}
 PATCH_DIST_ARGS=	-d ${WRKDIR}/vim63 --forward --quiet \
 				-E ${PATCH_DIST_STRIP}
-PATCHDIR?=		${.CURDIR}/../vim-share/patches
-DISTINFO_FILE?=		${.CURDIR}/../vim-share/distinfo
+PATCHDIR?=		${.CURDIR}/../../editors/vim-share/patches
+DISTINFO_FILE?=		${.CURDIR}/../../editors/vim-share/distinfo
 
 .if empty(PKGNAME:Mvim-share*)
 ALTERNATIVES_SRC=	${.CURDIR}/../../editors/vim-share/ALTERNATIVES
