@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2004/11/10 20:16:57 jlam Exp $
+# $NetBSD: Makefile,v 1.56 2004/11/12 23:27:46 jlam Exp $
 
 # The following two variables should have empty values unless we're
 # building a perl snapshot or release candidate.
@@ -9,7 +9,7 @@ PERL5_RC_VERS=	# empty
 .if empty(PERL5_SNAPSHOT) && empty(PERL5_RC_VERS)
 DISTNAME=	perl-${PERL5_VERS}
 PKGNAME=	perl${PERL5_PKGSUFFIX}-${PERL5_VERS}
-PKGREVISION=	1
+PKGREVISION=	2
 SNAPSHOT_SITES=	# empty
 .else
 .  if !empty(PERL5_SNAPSHOT)
@@ -53,12 +53,15 @@ CONFIGURE_ARGS+=	-sde
 CONFIGURE_ARGS+=	-Dprefix="${PREFIX}"
 CONFIGURE_ARGS+=	-Dscriptdir="${PREFIX}/bin"
 CONFIGURE_ARGS+=	-Darchname="${MACHINE_ARCH}-${LOWER_OPSYS}"
+CONFIGURE_ARGS+=	-Dcc="${CC}"
 CONFIGURE_ARGS+=	-Doptimize="${CFLAGS}"
 CONFIGURE_ARGS+=	-Dinstallstyle="lib/perl5"
 CONFIGURE_ARGS+=	-Duseshrplib
 CONFIGURE_ARGS+=	-Ui_malloc
 CONFIGURE_ARGS+=	-Uusemymalloc
 CONFIGURE_ARGS+=	-Uinstallusrbinperl
+MAKE_ENV+=		LANG=""
+
 TEST_TARGET=		test
 
 # Install Perl man3 pages into a private directory under the the normal
@@ -82,25 +85,6 @@ CONFIGURE_ARGS+=	-Dsiteprefix="${VIEWBASE}"
 CONFIGURE_ARGS+=	-Dsiteman1dir="${VIEWBASE}/man/man1"
 
 .include "../../mk/bsd.prefs.mk"
-
-# If perl58 is built with threads support, then name the package
-# "perl-thread", otherwise it's just "perl" as usual.
-#
-PERL5_USE_THREADS?=	no
-.if !empty(PERL5_USE_THREADS:M[nN][oO])
-PERL5_PKGSUFFIX=	# empty
-CONFLICTS+=		perl-thread-[0-9]*
-CONFIGURE_ARGS+=	-Uuseithreads
-.else
-PERL5_ARCHLIB=		${PREFIX}/lib/perl5/${PERL5_VERS}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi
-PERL5_PKGSUFFIX=	-thread
-CONFLICTS+=		perl-[0-9]*
-CONFIGURE_ARGS+=	-Duseithreads
-.  include "../../mk/pthread.buildlink3.mk"
-.endif
-
-CONFIGURE_ARGS+=	-Dcc="${CC}"
-MAKE_ENV+=		LANG=""
 
 .if ${OPSYS} == "Darwin"
 #
@@ -130,10 +114,7 @@ LIBSWANTED.FreeBSD=	m crypt
 LIBSWANTED.IRIX=	m crypt
 LIBSWANTED.NetBSD=	m crypt
 LIBSWANTED.SunOS=	m crypt dl socket nsl
-. if !empty(PERL5_USE_THREADS:M[nN][oO]) && \
-	!empty(MACHINE_PLATFORM:MNetBSD-[2-9]*-i386)
-LIBSWANTED.NetBSD+=	pthread
-. endif
+LIBSWANTED=		${LIBSWANTED.${OPSYS}}
 
 # Nail down the directories in which the system libraries may be found.
 # If this isn't defined, then use the perl defaults for the particular
@@ -143,6 +124,7 @@ SYSLIBPATH.Darwin=	/usr/lib
 SYSLIBPATH.FreeBSD=	/usr/lib
 SYSLIBPATH.NetBSD=	/usr/lib
 SYSLIBPATH.SunOS=	/usr/lib
+SYSLIBPATH=		${SYSLIBPATH.${OPSYS}}
 
 # Nail down the directories in which headers and libraries of
 # locally-installed software may be found.
@@ -161,10 +143,33 @@ LOCLIBRPATHFLAGS=	${LOCLIBPATH:S/^/${COMPILER_RPATH_FLAG}/g}
 .else
 LOCLIBRPATHFLAGS=	# empty
 .endif
-FIX_RPATH+=		LOCLIBRPATHFLAGS
 
-.if defined(LIBSWANTED.${OPSYS})
-CONFIGURE_ARGS+=	-Dlibswanted="${LIBSWANTED.${OPSYS}}"
+PERL5_HINTS_LDFLAGS=	# empty
+PERL5_HINTS_LDDLFLAGS=	# empty
+
+PERL5_HINTS_LDFLAGS+=	${LOCLIBRPATHFLAGS}
+
+# If perl58 is built with threads support, then name the package
+# "perl-thread", otherwise it's just "perl" as usual.
+#
+PERL5_USE_THREADS?=	no
+.if !empty(PERL5_USE_THREADS:M[nN][oO])
+PERL5_PKGSUFFIX=	# empty
+CONFLICTS+=		perl-thread-[0-9]*
+CONFIGURE_ARGS+=	-Uuseithreads
+.else
+.  include "../../mk/pthread.buildlink3.mk"
+PERL5_ARCHLIB=		${PREFIX}/lib/perl5/${PERL5_VERS}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi
+PERL5_PKGSUFFIX=	-thread
+CONFLICTS+=		perl-[0-9]*
+CONFIGURE_ARGS+=	-Duseithreads
+PERL5_HINTS_LDFLAGS+=	${PTHREAD_LDFLAGS}
+PERL5_HINTS_LDDLFLAGS+=	${PTHREAD_LDFLAGS}
+LIBSWANTED+=		${PTHREAD_LIBS:M-l*:S/^-l//}
+.endif
+
+.if !empty(LIBSWANTED)
+CONFIGURE_ARGS+=	-Dlibswanted="${LIBSWANTED}"
 .endif
 
 .include "../../mk/compiler.mk"
@@ -232,13 +237,14 @@ pre-configure:
 		( ${ECHO} '';						\
 		  ${ECHO} 'locincpth="${LOCINCPATH}"';			\
 		  ${ECHO} 'loclibpth="${LOCLIBPATH}"';			\
-		  ${ECHO} 'ldflags="${LOCLIBRPATHFLAGS} $$ldflags"';	\
+		  ${ECHO} 'ldflags="${PERL5_HINTS_LDFLAGS} $$ldflags"';	\
+		  ${ECHO} 'lddlflags="${PERL5_HINTS_LDFLAGS} $$lddlflags"'; \
 		) >> $${hints};						\
 	done
-.if defined(SYSLIBPATH.${OPSYS})
+.if !empty(SYSLIBPATH)
 	hintdir="${WRKSRC}/hints";					\
 	for hints in $${hintdir}/*.sh; do				\
-		( ${ECHO} "glibpth='${SYSLIBPATH.${OPSYS}}'";		\
+		( ${ECHO} "glibpth='${SYSLIBPATH}'";			\
 		) >> $${hints};						\
 	done
 .endif
