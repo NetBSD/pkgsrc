@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2002/09/07 09:17:11 kristerw Exp $
+# $NetBSD: Makefile,v 1.28 2002/09/21 12:37:12 jlam Exp $
 #
 
 DISTNAME=		vice-1.10
@@ -23,10 +23,11 @@ NO_SRC_ON_FTP=		${RESTRICTED}
 
 EXTRACT_ONLY=		${DISTNAME}${EXTRACT_SUFX}
 
+BUILD_USES_MSGFMT=	YES
+USE_BUILDLINK2=		YES
+USE_X11=		YES
 USE_GMAKE=		YES
 GNU_CONFIGURE=		YES
-BUILD_USES_MSGFMT=	YES
-USE_BUILDLINK_ONLY=	YES
 
 # These changes are rather common, so sed instead of patch:
 post-patch:
@@ -63,13 +64,13 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/vice
 	${MV} ${PREFIX}/share/doc/vice/*.html ${PREFIX}/share/doc/html/vice
 
-.include "../../audio/esound/buildlink.mk"
-.include "../../devel/readline/buildlink.mk"
-.include "../../devel/gettext-lib/buildlink.mk"
-.include "../../devel/zlib/buildlink.mk"
-#.include "../../graphics/png/buildlink.mk"
-.include "../../graphics/xpm/buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
+.include "../../audio/esound/buildlink2.mk"
+.include "../../devel/readline/buildlink2.mk"
+.include "../../devel/gettext-lib/buildlink2.mk"
+.include "../../devel/zlib/buildlink2.mk"
+#.include "../../graphics/png/buildlink2.mk"
+.include "../../graphics/xpm/buildlink2.mk"
+
 .include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
 
