@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.29 1998/10/14 19:19:01 tron Exp $
+# $NetBSD: Makefile,v 1.30 1998/11/01 22:34:11 tron Exp $
 #
 
-DISTNAME=	ImageMagick-4.1.2
+DISTNAME=	ImageMagick-4.1.3
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 
@@ -15,7 +15,7 @@ DEPENDS+=	tiff-3.4:../../graphics/tiff
 
 CONFLICTS=	ImageMagick-4.0 ImageMagick-4.0.1 ImageMagick-4.0.3 \
 		ImageMagick-4.0.5 ImageMagick-4.0.6 ImageMagick-4.0.7 \
-		ImageMagick-4.0.8 ImageMagick-4.1.1
+		ImageMagick-4.0.8 ImageMagick-4.1.1 ImageMagick-4.1.2
 
 pre-configure:
 .if exists(/usr/lib/libbz2.a)
