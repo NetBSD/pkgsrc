@@ -1,8 +1,16 @@
-$NetBSD: patch-ab,v 1.9 2000/06/04 16:46:47 rh Exp $
+$NetBSD: patch-ab,v 1.10 2000/06/04 17:56:17 rh Exp $
 
 --- ltmain.in.orig	Sat May 27 03:53:15 2000
-+++ ltmain.in	Thu Jun  1 11:21:17 2000
-@@ -1154,6 +1154,24 @@
++++ ltmain.in	Sun Jun  4 19:33:08 2000
+@@ -819,6 +819,7 @@
+     old_convenience=
+     deplibs=
+     linkopts=
++    wllinkopts=
+ 
+     if test -n "$shlibpath_var"; then
+       # get the directories listed in $shlibpath_var
+@@ -1154,6 +1155,25 @@
  	continue
  	;;
  
@@ -18,7 +26,8 @@ $NetBSD: patch-ab,v 1.9 2000/06/04 16:46:47 rh Exp $
 +           ;;
 +         esac
 +         arg="$arg $wl$flag"
-+         linkopts="$linkopts $wl$flag"
++         linkopts="$linkopts $flag"
++         wllinkopts="$wllinkopts $wl$flag"
 +       done
 +       IFS="$save_ifs"
 +       arg=`$echo "X$arg" | $Xsed -e "s/^ //"`
@@ -27,3 +36,11 @@ $NetBSD: patch-ab,v 1.9 2000/06/04 16:46:47 rh Exp $
        # Some other compiler flag.
        -* | +*)
  	# Unknown arguments in both finalize_command and compile_command need
+@@ -2146,6 +2166,7 @@
+ 	if test "$thread_safe" = yes && test -n "$thread_safe_flag_spec"; then
+ 	  eval flag=\"$thread_safe_flag_spec\"
+ 	  linkopts="$linkopts $flag"
++          wllinkopts="$wllinkopts $wl$flag"
+ 	fi
+ 
+ 	# Do each of the archive commands.
