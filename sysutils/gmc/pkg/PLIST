@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 1999/10/23 14:06:59 tron Exp $
+@comment $NetBSD: PLIST,v 1.9 2000/01/11 01:33:10 tron Exp $
 bin/gmc
 bin/gmc-client
 bin/mc
@@ -41,6 +41,7 @@ lib/mc/mc.csh
 lib/mc/mc-gnome.ext
 lib/mc/mc.ext
 lib/mc/mc.hint
+lib/mc/mc.hint.cs
 lib/mc/mc.hint.es
 lib/mc/mc.hlp
 lib/mc/mc.lib
@@ -102,6 +103,7 @@ share/locale/ro/LC_MESSAGES/mc.mo
 share/locale/ru/LC_MESSAGES/mc.mo
 share/locale/sv/LC_MESSAGES/mc.mo
 share/locale/wa/LC_MESSAGES/mc.mo
+share/locale/uk/LC_MESSAGES/mc.mo
 share/locale/zh_TW.Big5/LC_MESSAGES/mc.mo
 share/mime-info/mc.keys
 share/pixmaps/mc/directory.xpm
