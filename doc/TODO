@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.129 2003/01/03 20:37:14 wiz Exp $
+$NetBSD: TODO,v 1.130 2003/01/03 20:38:26 lha Exp $
 
 Suggested new packages
 ======================
@@ -210,7 +210,6 @@ Suggested package updates
 	o postfix-2.0
 	o postgresql-7.3.1
 	o povray-3.5
-	o psi-0.8.7 [pkg/19428]
 	o pureftpd-0.13a [pkg/19233]
 	o pygtk-0.6.11
 	o qt3-3.1.1
