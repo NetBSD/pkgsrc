@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2932 2003/07/30 11:00:44 kleink Exp $
+$NetBSD: CHANGES,v 1.2933 2003/07/30 11:38:21 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3066,3 +3066,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated curl to 7.10.6 [wiz 2003-07-30]
 	Updated zephyr to 2.0.4nb1 [jmmv 2003-07-30]
 	Updated xconq to 7.4.1nb1 [kleink 2003-07-30]
+	Updated delegate to 8.5.2nb1 [jmmv 2003-07-30]
