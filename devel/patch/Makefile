@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2004/04/16 20:11:51 tv Exp $
+# $NetBSD: Makefile,v 1.19 2004/05/18 11:58:05 recht Exp $
 #
 
 DISTNAME=	patch-2.5.4
@@ -9,6 +9,8 @@ MASTER_SITES=   ${MASTER_SITE_GNU:=patch/}
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/patch/patch.html
 COMMENT=	Patch files using diff output
+
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=	yes
 

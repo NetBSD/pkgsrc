@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/04/18 23:52:02 recht Exp $
+# $NetBSD: Makefile,v 1.9 2004/05/18 11:58:04 recht Exp $
 #
 
 DISTNAME=	tla-1.2.1pre1
@@ -15,6 +15,8 @@ COMMENT=	Revision control system ideal for widely distributed development
 DEPENDS+=	patch-[0-9]*:../../devel/patch
 DEPENDS+=	diffutils-[0-9]*:../../devel/diffutils
 DEPENDS+=	gtar-base-[0-9]*:../../archivers/gtar-base
+
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/src/=build
 USE_GNU_TOOLS+=	make

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/05/03 21:32:28 reed Exp $
+# $NetBSD: Makefile,v 1.16 2004/05/18 11:58:04 recht Exp $
 #
 
 DISTNAME=       tar-1.13.25
@@ -15,11 +15,14 @@ COMMENT=	Info format documentation for the GNU tape archiver
 
 INFO_FILES=	tar.info
 
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
 USE_BUILDLINK3=	yes
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
 do-install:
+	${INSTALL_DATA_DIR} ${PREFIX}/${INFO_DIR}
 	for i in ${WRKSRC}/doc/tar.info* ; \
 	do \
 	    ${INSTALL_DATA} $${i} ${PREFIX}/${INFO_DIR} ; \
