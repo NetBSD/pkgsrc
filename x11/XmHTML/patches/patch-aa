@@ -1,97 +1,66 @@
-$NetBSD: patch-aa,v 1.2 1999/10/31 12:08:26 mrg Exp $
+$NetBSD: patch-aa,v 1.3 1999/11/13 07:31:40 jlam Exp $
 
-diff -ru /tmp/XmHTML-1.1.5/XmHTML.cf XmHTML-1.1.5/XmHTML.cf
---- /tmp/XmHTML-1.1.5/XmHTML.cf	Sat Aug  8 19:59:31 1998
-+++ XmHTML-1.1.5/XmHTML.cf	Sun Oct 31 21:01:10 1999
-@@ -8,22 +8,32 @@
- XCOMM
- XCOMM See the file LICENSE for the full copyright statement.
+--- Makefile.orig	Wed Feb  3 19:43:27 1999
++++ Makefile	Tue Nov  2 01:28:54 1999
+@@ -64,9 +64,9 @@
+ # Compiler Settings #
+ #                   #
+ #####################
+-CC       = gcc
+-CFLAGS   = -g -funroll-loops -Wall -pipe -ansi 
+-LDFLAGS  = 
++CC       = $(LIBTOOL) gcc
++#CFLAGS   = -g -funroll-loops -Wall -pipe -ansi 
++#LDFLAGS  = 
  
-+XCOMM We don't want Library.tmpl to install libraries.
-+
-+#if !defined (LibInstall)
-+# define LibInstall NO
-+# define XmHTMLLibInstall YES
-+#else
-+# if LibInstall
-+#  define LibInstall	NO
-+#  define XmHTMLLibInstall YES 
-+# else
-+#  define XmHTMLLibInstall NO
-+# endif
-+#endif
-+
- XCOMM ----------------------------------------------------------------------
- XCOMM Root of XmHTML Source Tree
- XCOMM ----------------------------------------------------------------------
--XCOMM If BUILDINCTOP is not or incorrectly set on your system, you can
--XCOMM override it here.
--XCOMM BUILDINCTOP=<path to root of the XmHTML source tree>
--BUILDINCTOP=/home/newt/src/XmHTML/XmHTML
+ # The following flags are *very* usefull if you are getting unresolved
+ # references to functions in libraries that you *know* to exist.
+@@ -114,8 +114,8 @@
+ # HAVE_LIBPNG  => png.h and zlib.h
+ # HAVE_LIBZ => zlib.h
  
- XCOMM ----------------------------------------------------------------------
- XCOMM Installation Directories
- XCOMM ----------------------------------------------------------------------
- XCOMM This specifies where the XmHTML and http library will be installed
--#define XmHTMLLibDir $(USRLIBDIR)
-+#define XmHTMLLibDir ${PREFIX}/lib
+-ZLIBINC       =
+-IMAGEINCLUDES = $(ZLIBINC)
++ZLIBINC       = 
++IMAGEINCLUDES = -I${LOCALBASE}/include $(ZLIBINC)
  
- XCOMM This specifies where the XmHTML and http header files will be installed
--#define XmHTMLIncDir $(INCROOT)/XmHTML
-+#define XmHTMLIncDir ${PREFIX}/include/XmHTML
+ # Image libraries
+ # No need to add -lXpm if you need to include it with LIBS below
+@@ -166,14 +166,14 @@
+ # Add -DDEBUG to enable selective debug output (see the file DEBUGGING for more
+ # info).
+ #
+-CPPFLAGS = -DDEBUG -D_GNU_SOURCE -D_BSD_SOURCE -D_POSIX_SOURCE -DHAVE_REGEX_H $(IMAGEDEFINES) 
++CPPFLAGS = -DHAVE_REGEX_H $(IMAGEDEFINES) 
  
- XCOMM ----------------------------------------------------------------------
- XCOMM Common Desktop Environment
-@@ -49,8 +59,8 @@
- XCOMM paths to xpm.h and libXpm. The defaults are /usr/X11R6/include (or
- XCOMM wherever your X includes live) and /usr/X11R6/lib (or wherever your X
- XCOMM libraries live)
--XCOMM XPMINCLUDES  = -I$(INCROOT)
--XCOMM XPMLIBRARIES = -L$(LIBDIR) -lXpm
-+XPMINCLUDES  = -I${PREFIX}/include
-+XPMLIBRARIES = -L$(LIBDIR) -lXpm
+ # Various include directories
+ LIBINC=-I. -I../include -I../include/common -I../../include -I../../include/common
  
- XCOMM JPEG Support. Enabled by default.
- XCOMM You require libjpeg, version 6 or above. If you don't have this lib
-@@ -60,8 +70,8 @@
- XCOMM Required include files: jpeglib.h, jconfig.h, jmorecfg.h
+ # Platform specific includes
+ ifeq ($(PLATFORM),Motif)
+-PLATFORMINC=-I../../include/XmHTML -I/usr/X11R6/include
++PLATFORMINC=-I../../include/XmHTML -I${X11BASE}/include
+ else
+ ifeq ($(PLATFORM),gtk)
+ PLATFORMINC=-I../../include/gtk-xmhtml -I/usr/local/include
+@@ -192,17 +192,17 @@
+ # Motif version (default)
+ ifeq ($(PLATFORM),Motif)
  
- #define IHaveJPEG YES
--JPEGINC =
--JPEGLIB = -ljpeg
-+JPEGINC = -I${PREFIX}/include
-+JPEGLIB = -L${PREFIX}/lib -ljpeg
+-LIBDIR = -L/usr/X11R6/lib
++LIBDIR = -L${X11BASE}/lib
+ # This is what is required under Linux (Motif 2.0.1).
+ # Your mileage may vary.
+-LIBS   = -lXm -lXpm -lXmu -lXt -lXext -lX11 -lSM -lICE
++LIBS   = ${MOTIFLIB} -lXpm -lXmu -lXt -lXext -lX11 -lSM -lICE
  
- XCOMM PNG Support. Enabled by default.
- XCOMM You require libpng, version 0.96 or above. If you don't have this lib
-@@ -69,8 +79,8 @@
- XCOMM Required include files: png.h, pngconf.h
+ else
  
- #define IHavePNG YES
--PNGINC = 
--PNGLIB = -lpng
-+PNGINC =  -I${PREFIX}/include
-+PNGLIB = -L${PREFIX}/lib -lpng
+ # gtk version (only supported port for now)
+ ifeq($(PLATFORM),gtk)
  
- XCOMM zlib Support. Enabled by default. PNG support implies zlib.
- XCOMM You require libz, version 1.0.4 or above. If you don't have this lib
-@@ -78,8 +88,8 @@
- XCOMM Required include files: zlib.h, zconf.h
+-LIBDIR = -L/usr/local/lib
++LIBDIR = -L${X11BASE}/lib
+ LIBS   = -lgdk -lgtk -lX11
  
- #define IHaveZLIB YES
--ZLIBINC = 
--ZLIBLIB = -lz -lm
-+ZLIBINC =  -I${PREFIX}/include
-+ZLIBLIB = -L${PREFIX}/lib -lz -lm
- 
- XCOMM ----------------------------------------------------------------------
- XCOMM Full Text Searching Using POSIX 1. Regular Expressions
-@@ -238,7 +248,7 @@
- 
- EXTRA_DEFINES  = -DVERSION=$(VERSION) $(DEFINES) $(IMAGEDEFINES) $(REGDEF) \
- $(DEBUG) $(DMALLOC)
--EXTRA_INCLUDES = -I. -I$(BUILDINCTOP)/include $(IMAGEINCS) $(DMALLOCINC)
-+EXTRA_INCLUDES = -I. -I$(TOP)/include $(IMAGEINCS) $(DMALLOCINC)
- EXTRA_LIBRARIES= $(IMAGELIBS) $(DMALLOCLIB) $(SYSLIBS)
- #endif
- 
+ # endif gtk
