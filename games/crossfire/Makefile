@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1998/09/17 14:03:49 agc Exp $
+# $NetBSD: Makefile,v 1.4 1999/04/05 17:23:02 mycroft Exp $
 #
 
 DISTNAME=	crossfire-0.94.2
@@ -41,8 +41,10 @@ post-patch:
 		${PKGDIR}/install > ${INSTALL_FILE}
 
 post-install:
-	${EXTRACT_CMD} -xzmf ${DISTDIR}/${CF_MAPS} -C ${X11BASE}/lib/crossfire
-	${EXTRACT_CMD} -xzmf ${DISTDIR}/${CF_SOUND} -C ${X11BASE}/lib/crossfire
+	cd ${X11BASE}/lib/crossfire && \
+	    ${GZCAT} ${DISTDIR}/${CF_MAPS} | ${GTAR} xmf -
+	cd ${X11BASE}/lib/crossfire && \
+	    ${GZCAT} ${DISTDIR}/${CF_SOUND} | ${GTAR} xmf -
 	@/usr/bin/find ${X11BASE}/lib/crossfire/sounds -name \*.au -type f \
 		> ${WRKDIR}/.RPLAY
 	@${CAT} ${WRKDIR}/.RPLAY >> ${LOCALBASE}/etc/rplay.conf
