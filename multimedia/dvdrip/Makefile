@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.11 2004/01/26 12:48:47 jmmv Exp $
+# $NetBSD: Makefile,v 1.1 2004/03/06 11:39:31 grant Exp $
 #
 
 VERS=		0.50.16
 DISTNAME=	Video-DVDRip-${VERS}
 PKGNAME=	dvdrip-${VERS}
-CATEGORIES=	x11 sysutils
+CATEGORIES=	multimedia x11 sysutils
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Video/}
 
 MAINTAINER=	tech-pkg@NetBSD.org
@@ -20,7 +20,7 @@ DEPENDS+=	cdrecord>=1.10:../../sysutils/cdrecord
 DEPENDS+=	subtitleripper-[0-9]*:../../textproc/subtitleripper
 DEPENDS+=	p5-Gdk-Pixbuf-[0-9]*:../../graphics/p5-Gdk-Pixbuf
 .if (${MACHINE_ARCH} == "i386")
-DEPENDS+=	rar>=2.02:../../archivers/rar
+#DEPENDS+=	rar>=2.02:../../archivers/rar
 .endif
 
 BUILDLINK_DEPENDS.perl= perl>=5.6.0
