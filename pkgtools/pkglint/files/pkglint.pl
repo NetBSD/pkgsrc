@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.124 2004/11/09 17:14:43 seb Exp $
+# $NetBSD: pkglint.pl,v 1.125 2004/12/02 16:40:10 wiz Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
@@ -1212,6 +1212,10 @@ sub checkfile_Makefile($) {
 		log_error(NO_FILE, NO_LINE_NUMBER, "USE_BUILDLINK2 is deprecated, ".
 			"use USE_BUILDLINK3 instead.");
 	}
+	if ($whole =~ /\nALL_TARGET/) {
+		log_error(NO_FILE, NO_LINE_NUMBER, "ALL_TARGET is deprecated, ".
+			"use BUILD_TARGET instead.");
+	}
 	if ($whole =~ /\nIS_INTERACTIVE/) {
 		log_error(NO_FILE, NO_LINE_NUMBER, "IS_INTERACTIVE is deprecated, ".
 			"use INTERACTIVE_STAGE instead.");
@@ -1334,9 +1338,9 @@ EOF
 	$j =~ s/\n#[\n]*/\n#/;
 	# ...nor COMMENTs
 	$j =~ s/\nCOMMENT[\t ]*=[\t ]*[^\n]*\n/\nCOMMENT=#replaced\n/;
-	# ...nor settings of TEST_TARGET & ALL_TARGET
+	# ...nor settings of TEST_TARGET & BUILD_TARGET
 	$j =~ s/\nTEST_TARGET[\t ]*.*=[\t ]*[^\n]*\n/\nTEST_TARGET=#replaced\n/;
-	$j =~ s/\nALL_TARGET[\t ]*.*=[\t ]*[^\n]*\n/\nALL_TARGET=#replaced\n/;
+	$j =~ s/\nBUILD_TARGET[\t ]*.*=[\t ]*[^\n]*\n/\nBUILD_TARGET=#replaced\n/;
 	if ($opt_warn_directcmd) {
 		foreach my $i (keys %cmdnames) {
 			if ($j =~ /[ \t\/@]$i[ \t\n;]/) {
