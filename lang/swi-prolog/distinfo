@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:32:17 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/29 16:01:16 jtb Exp $
 
-MD5 (swi-prolog/pl-lite-4.0.0.tar.gz) = 05dc2f42cb4e2ac059c724573a0fdfb5
-SHA1 (patch-aa) = 179401271ffd2b0336584be07a744e39a1a81197
-SHA1 (patch-ab) = 3de4db0ab11a18381800579db99424fdda7d37e4
+SHA1 (swi-prolog/pl-lite-4.0.4.tar.gz) = e8750945f81aa3188aff2f316d6f4129c919a8ca
+Size (swi-prolog/pl-lite-4.0.4.tar.gz) = 1113073 bytes
+SHA1 (patch-aa) = 57b76926cf19944c014070ba65887b2c5cff1a21
+SHA1 (patch-ab) = aa90b40e699d9b0d038d4a73a8f47d87c8a301ff
