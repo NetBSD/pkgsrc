@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.587 2002/11/24 11:02:45 taca Exp $
+$NetBSD: CHANGES,v 1.588 2002/11/24 13:22:16 tron Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3700,3 +3700,5 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated pkg_install to 20021123 [jschauma 2002-11-23]
 	Added py-kqueue-2.0 [jdolecek 2002-11-24]
 	Updated squid to 2.5.1nb1 [taca 2002-11-24]
+	Updated xchat to 1.8.0nb1 [tron 2002-11-24]
+	Updated xchat-gnome to 1.8.0nb1 [tron 2002-11-24]
