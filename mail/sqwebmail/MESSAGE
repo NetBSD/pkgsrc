@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2002/01/24 20:54:40 jlam Exp $
+$NetBSD: MESSAGE,v 1.3 2002/05/03 14:57:45 schmonz Exp $
 
 You must create a cron job that runs at regular intervals to clean the
 SqWebMail user cache that executes the following script:
@@ -25,5 +25,9 @@ httpd.conf:
 Maildir accounts will be accessible through:
 
     http://www.domain.com/cgi-bin/sqwebmail
+
+If you're using a non-default mailer, you will need to edit:
+
+    ${PKG_SYSCONFDIR}/sendit.sh
 
 ===========================================================================
