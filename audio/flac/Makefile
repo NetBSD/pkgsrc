@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/07/23 13:28:26 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2002/03/05 23:29:08 skrll Exp $
 #
 
 DISTNAME=		flac-1.0-src
@@ -10,8 +10,6 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=flac/}
 MAINTAINER=		collver@linuxfreemail.com
 HOMEPAGE=		http://flac.sourceforge.net
 COMMENT=		free lossless audio codec
-
-BUILD_DEPENDS+=		automake>=1.4:../../devel/automake
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -26,9 +24,8 @@ LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 pre-configure:
 	(cd ${WRKSRC}/src/libFLAC/ia32 && \
-		${MV} Makefile.am Makefile.am.orig && \
-		${CP} Makefile.am.libtool-1.4b Makefile.am)
-	(cd ${WRKSRC} && ${LOCALBASE}/bin/automake)
+		${MV} Makefile.in Makefile.in.orig && \
+		${CP} Makefile.in.libtool-1.4b Makefile.in)
 
 do-install:
 	${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/src/flac/flac \
