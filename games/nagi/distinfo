@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/08/16 15:33:01 drochner Exp $
+
+SHA1 (nagi_src_-_2002-11-14.tar.gz) = 3afeae70e78dd36a3d8b114212992318a8182372
+Size (nagi_src_-_2002-11-14.tar.gz) = 168462 bytes
+SHA1 (patch-aa) = 92da2bdf74408185e5bcf8ca4633f29562fdc041
+SHA1 (patch-ab) = be98a1935d935d0da3b88ec7ae4b74fa4d3d57fe
+SHA1 (patch-ac) = 10ec8958798d0f50af5a3ddd5fb2fedfd53c3f13
+SHA1 (patch-ad) = 138424ecf4d319a697c27f6c2ddbfb221c64dcec
