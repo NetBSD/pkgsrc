@@ -1,22 +1,22 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:17:11 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/01/02 12:39:36 lukem Exp $
 include/vorbis/codec.h
 include/vorbis/vorbisenc.h
 include/vorbis/vorbisfile.h
 lib/libvorbis.a
 lib/libvorbis.la
 lib/libvorbis.so
-lib/libvorbis.so.0
-lib/libvorbis.so.0.1
+lib/libvorbis.so.1
+lib/libvorbis.so.1.0
 lib/libvorbisenc.a
 lib/libvorbisenc.la
 lib/libvorbisenc.so
-lib/libvorbisenc.so.0
-lib/libvorbisenc.so.0.1
+lib/libvorbisenc.so.1
+lib/libvorbisenc.so.1.0
 lib/libvorbisfile.a
 lib/libvorbisfile.la
 lib/libvorbisfile.so
-lib/libvorbisfile.so.1
-lib/libvorbisfile.so.1.0
+lib/libvorbisfile.so.2
+lib/libvorbisfile.so.2.0
 share/aclocal/vorbis.m4
 share/doc/html/${DISTNAME}/programming.html
 share/doc/html/${DISTNAME}/v-comment.html
@@ -29,6 +29,7 @@ share/doc/html/${DISTNAME}/vorbisenc/reference.html
 share/doc/html/${DISTNAME}/vorbisenc/style.css
 share/doc/html/${DISTNAME}/vorbisenc/vorbis_encode_ctl.html
 share/doc/html/${DISTNAME}/vorbisenc/vorbis_encode_init.html
+share/doc/html/${DISTNAME}/vorbisenc/vorbis_encode_init_vbr.html
 share/doc/html/${DISTNAME}/vorbisenc/vorbis_info.html
 share/doc/html/${DISTNAME}/vorbisfile/OggVorbis_File.html
 share/doc/html/${DISTNAME}/vorbisfile/chaining_example_c.html
@@ -55,9 +56,13 @@ share/doc/html/${DISTNAME}/vorbisfile/ov_raw_seek.html
 share/doc/html/${DISTNAME}/vorbisfile/ov_raw_tell.html
 share/doc/html/${DISTNAME}/vorbisfile/ov_raw_total.html
 share/doc/html/${DISTNAME}/vorbisfile/ov_read.html
+share/doc/html/${DISTNAME}/vorbisfile/ov_read_float.html
 share/doc/html/${DISTNAME}/vorbisfile/ov_seekable.html
 share/doc/html/${DISTNAME}/vorbisfile/ov_serialnumber.html
 share/doc/html/${DISTNAME}/vorbisfile/ov_streams.html
+share/doc/html/${DISTNAME}/vorbisfile/ov_test.html
+share/doc/html/${DISTNAME}/vorbisfile/ov_test_callbacks.html
+share/doc/html/${DISTNAME}/vorbisfile/ov_test_open.html
 share/doc/html/${DISTNAME}/vorbisfile/ov_time_seek.html
 share/doc/html/${DISTNAME}/vorbisfile/ov_time_tell.html
 share/doc/html/${DISTNAME}/vorbisfile/ov_time_total.html

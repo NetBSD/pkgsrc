@@ -12,3 +12,5 @@ patent concerns.
 This package doesn't install the example executables:
 chaining_example, decoder_example, encoder_example,
 seeking_example, and vorbisfile_example.
+
+This package is libvorbis 1.0 rc3

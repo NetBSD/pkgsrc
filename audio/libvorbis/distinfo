@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.5 2001/08/14 14:53:20 lukem Exp $
+$NetBSD: distinfo,v 1.6 2002/01/02 12:39:37 lukem Exp $
 
-SHA1 (libvorbis-1.0rc2.tar.gz) = 6ac247880e9f4f51045c1f0eba6b7bf08ee25b73
-Size (libvorbis-1.0rc2.tar.gz) = 599017 bytes
+SHA1 (libvorbis-1.0rc3.tar.gz) = 4addbca3427daa1fd600ac9b0b5c407c2b87a04d
+Size (libvorbis-1.0rc3.tar.gz) = 563834 bytes
 SHA1 (patch-ae) = de04ccf4a3f22cef52a9d9f5cddb9b045c5ff0f6
-SHA1 (patch-af) = 0cf2573621f6e0e481dbdd1885a7edfdfe5f74a3
-SHA1 (patch-ag) = 772aa8e32352385de6b7f82e557aab66e5199b66
+SHA1 (patch-af) = 3218bb39d12d542f5ccfe9d4e23ec6f0e627c1d4
+SHA1 (patch-ag) = e2aedef7eba5f7d8146dcaa0bbe0c8ce50cd09f7
