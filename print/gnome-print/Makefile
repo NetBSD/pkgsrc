@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 1999/09/08 16:13:06 rh Exp $
+# $NetBSD: Makefile,v 1.8 1999/09/08 19:27:16 tron Exp $
 #
 
 DISTNAME=	gnome-print-0.7
 CATEGORIES=	print gnome
-MASTER_SITES=	http://gd.tuwien.ac.at/hci/gnome.org/GNOME/sources/gnome-print/
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-print/}
 
 MAINTAINER=	rh@netbsd.org
 HOMEPAGE=	http://www.levien.com/gnome/print-arch.html
