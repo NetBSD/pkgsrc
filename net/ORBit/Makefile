@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.96 2003/12/04 17:08:51 xtraeme Exp $
+# $NetBSD: Makefile,v 1.97 2004/01/12 00:00:03 grant Exp $
 #
 
 DISTNAME=		ORBit-0.${ORBIT_MAJOR}.${ORBIT_MINOR}
@@ -40,12 +40,6 @@ ORBIT_MINOR=		15
 PLIST_SUBST+=		ORBIT_MAJOR=${ORBIT_MAJOR} ORBIT_MINOR=${ORBIT_MINOR}
 
 INFO_FILES=		libIDL.info
-
-.if ${OPSYS} == "SunOS"
-post-buildlink:
-	${MV} ${BUILDLINK_DIR}/lib/libpthread.la ${BUILDLINK_DIR}/lib/libpthread.la.old
-	${GREP} -v libpthread.a ${BUILDLINK_DIR}/lib/libpthread.la.old >${BUILDLINK_DIR}/lib/libpthread.la
-.endif
 
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../devel/glib/buildlink2.mk"
