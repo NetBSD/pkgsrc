@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2001/05/11 09:20:55 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2001/05/24 08:38:40 manu Exp $
 #
 
-PKGNAME=	blender-2.11.nb2
+PKGNAME=	blender-2.11.nb4
 CATEGORIES=	graphics
 MASTER_SITES=	ftp://www.blender.nl/pub/
 
@@ -14,6 +14,7 @@ NO_BIN_ON_FTP=	${RESTRICTED}
 NO_BIN_ON_CDROM=${RESTRICTED}
 
 NO_BUILD=	yes
+CHECK_SHLIBS=	NO
 
 # To be updated as other platforms PLIST will be built
 ONLY_FOR_PLATFORM= *-*-powerpc
