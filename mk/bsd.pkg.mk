@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1275 2003/09/13 05:55:14 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1276 2003/09/13 06:21:36 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -2351,7 +2351,7 @@ TEST_ENV+=	${MAKE_ENV}
 .PHONY: do-test
 .if !target(do-test)
 do-test:
-.  if defined(TEST_TARGET)
+.  if defined(TEST_TARGET) && !empty(TEST_TARGET)
 .    for DIR in ${TEST_DIRS}
 	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}cd ${DIR} && ${SETENV} ${TEST_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} ${TEST_TARGET}
 .    endfor
