@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 1999/11/02 23:16:18 tron Exp $
+# $NetBSD: Makefile,v 1.26 1999/11/14 18:49:52 tron Exp $
 
 DISTNAME=		libgtop-1.0.5
 CATEGORIES=		devel gnome
@@ -11,6 +11,8 @@ BUILD_DEPENDS=		${PERL}:../../lang/perl5
 DEPENDS+=		gettext-0.10.35:../../devel/gettext
 DEPENDS+=		gnome-libs-*:../../x11/gnome-libs
 DEPENDS+=		guile-1.3.2:../../lang/guile
+
+ONLY_FOR_PLATFORM=	NetBSD-*-arm32 NetBSD-*-i386 NetBSD-*-m68k
 
 GNU_CONFIGURE=		yes
 USE_X11BASE=		yes
