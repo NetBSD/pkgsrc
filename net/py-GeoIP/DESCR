@@ -1,0 +1,2 @@
+Python binding for GeoIP, which enables the user to find the country
+that any IP address or hostname originates from.
