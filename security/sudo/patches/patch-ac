@@ -10,7 +10,7 @@
  .PP
  \fBsudo\fR determines who is an authorized user by consulting the
 -file \fI/etc/sudoers\fR.  By giving \fBsudo\fR the \f(CW-v\fR flag a user
-+file \fI/usr/local/etc/sudoers\fR.  By giving \fBsudo\fR the \f(CW-v\fR flag a user
++file \fI/usr/pkg/etc/sudoers\fR.  By giving \fBsudo\fR the \f(CW-v\fR flag a user
  can update the time stamp without running a \fIcommand.\fR
  The password prompt itself will also time out if the password is
  not entered with N minutes (again, this is defined at installation
@@ -19,7 +19,7 @@
  .PP
  .Vb 1
 -\& /etc/sudoers           file of authorized users.
-+\& /usr/local/etc/sudoers           file of authorized users.
++\& /usr/pkg/etc/sudoers           file of authorized users.
  .Ve
  .SH "ENVIRONMENT VARIABLES"
  .IX Header "ENVIRONMENT VARIABLES"
@@ -95,7 +95,7 @@
  .Vb 2
 -\& /etc/sudoers           file of authorized users.
 -\& /etc/netgroup          list of network groups.
-+\& /usr/local/etc/sudoers     file of authorized users.
++\& /usr/pkg/etc/sudoers     file of authorized users.
 +\& /etc/netgroup              list of network groups.
  .Ve
  .SH "SEE ALSO"
@@ -108,8 +108,8 @@
  .Vb 2
 -\& /etc/sudoers           file of authorized users.
 -\& /etc/stmp              lock file for visudo.
-+\& /usr/local/etc/sudoers     file of authorized users.
-+\& /usr/local/etc/stmp        lock file for visudo.
++\& /usr/pkg/etc/sudoers     file of authorized users.
++\& /usr/pkg/etc/stmp        lock file for visudo.
  .Ve
  .SH "ENVIRONMENT VARIABLES"
  .IX Header "ENVIRONMENT VARIABLES"
