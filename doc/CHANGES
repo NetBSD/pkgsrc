@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7868 2004/11/15 14:29:06 reed Exp $
+$NetBSD: CHANGES,v 1.7869 2004/11/15 15:44:25 dillo Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5289,3 +5289,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated dspam to 3.2.2 [xtraeme 2004-11-15]
 	Updated qemu to 0.6.1 [xtraeme 2004-11-15]
 	Updated libstatgrab to 0.11 [reed 2004-11-15]
+	Updated tin to 1.6.2 [dillo 2004-11-15]
