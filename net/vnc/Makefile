@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 1999/09/02 21:29:31 tron Exp $
+# $NetBSD: Makefile,v 1.9 1999/09/04 10:35:59 tron Exp $
 # FreeBSD Id: Makefile,v 1.2 1998/03/19 01:54:59 msmith Exp
 #
 
@@ -35,10 +35,9 @@ post-install:
 		< ${WRKSRC}/vncserver \
 		> ${WRKSRC}/vncserver.local
 	${INSTALL_SCRIPT} ${WRKSRC}/vncserver.local ${PREFIX}/bin/vncserver
-# The documentation comes with bogus ownerships; this is a little leaky security-wise
 	${MKDIR} ${PREFIX}/share/doc/vnc
-	(cd ${WRKDIR}/vnc_docs ; tar --exclude '*~' --exclude .lastinstall \
-	--exclude makefile -cf - . ) | tar -xf - -C ${PREFIX}/share/doc/vnc
-	chown -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/doc/vnc
+	cd ${WRKDIR}/vnc_docs; \
+	${INSTALL_DATA} *.GIF *.css *.gif *.jpg *.htm *.html *.pdf *.xml \
+	  ${PREFIX}/share/doc/vnc
 
 .include "../../mk/bsd.pkg.mk"
