@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.24 2003/08/05 21:04:51 skrll Exp $
+# $NetBSD: Makefile,v 1.25 2003/08/29 11:25:20 xtraeme Exp $
 
-DISTNAME=	libxslt-1.0.31
+DISTNAME=	libxslt-1.0.32
 PKGNAME=	${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libxslt/1.0/}
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://xmlsoft.org/XSLT/
