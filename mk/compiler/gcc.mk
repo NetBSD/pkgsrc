@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.49 2004/02/09 05:22:43 jlam Exp $
+# $NetBSD: gcc.mk,v 1.50 2004/02/09 05:45:57 jlam Exp $
 
 .if !defined(COMPILER_GCC_MK)
 COMPILER_GCC_MK=	one
@@ -338,7 +338,7 @@ BUILD_DEPENDS+=	${_GCC_DEPENDENCY}
 .      endif
 .    endif
 
-# Create symlinks for the compiler into ${WRKDIR}.
+# Create compiler driver scripts in ${WRKDIR}.
 .    for _target_ in ${_GCC_LINKS}
 .      if !target(${${_target_}})
 override-tools: ${${_target_}}        
