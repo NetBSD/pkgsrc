@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2002/01/15 18:31:14 drochner Exp $
+# $NetBSD: Makefile,v 1.11 2002/01/19 17:44:04 drochner Exp $
 #
 
 DISTNAME=       emma-0.8-1
@@ -19,6 +19,7 @@ GNU_CONFIGURE=	YES
 USE_GMAKE=	YES
 USE_LIBINTL=	yes
 BUILD_USES_MSGFMT=	yes
+CONFIGURE_ENV+=	PYTHONBIN=${PYTHONBIN}
 
 PYTHON_VERSIONS_ACCEPTED=	20
 
