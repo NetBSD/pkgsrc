@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/06/27 23:00:34 schmonz Exp $
+bin/r2e
+man/man1/r2e.1
+share/examples/rss2email/config.py
+share/rss2email/html2text.py
+share/rss2email/rss2email.py
+@dirrm share/rss2email
+@dirrm share/examples/rss2email
