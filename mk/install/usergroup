@@ -1,0 +1,359 @@
+#!@SH@
+#
+# +USERGROUP - users and groups management script
+#
+# Usage: ./+USERGROUP ADD|REMOVE [metadatadir]
+#        ./+USERGROUP CHECK-ADD|CHECK-REMOVE [metadatadir]
+#
+# This script supports two actions, ADD and REMOVE, that will add or
+# remove the users and groups needed by the package associated with
+# <metadatadir>.  The CHECK-ADD action will check whether any users or
+# groups needed by the package are missing, and print an informative
+# message noting those users and groups.  The CHECK-REMOVE action will
+# check whether any users and groups needed by the package still exist,
+# and print an informative message noting those users and groups.  The
+# CHECK-ADD and CHECK-REMOVE actions return non-zero if they detect
+# either missing or existing users/groups, respectively.
+#
+# Lines starting with "# USER: " or "# GROUP: " are data read by this
+# script that name the users and groups that this package requires to
+# exist to function correctly, e.g.
+#
+#	# USER: foo:foogrp::The Foomister
+#	# GROUP: foogrp
+#
+# The USER lines are of the form:
+#
+#	user:group[:[userid][:[descr][:[home][:shell]]]]
+#
+# Only the user and group are required; everything else is optional,
+# but the colons must be in the right places when specifying optional
+# bits.
+#
+# The GROUP lines are of the form:
+#
+#	group[:groupid]
+#
+# Only the group is required; the groupid is optional.
+#
+CAT="@CAT@"
+CHGRP="@CHGRP@"
+ECHO="@ECHO@"
+GREP="@GREP@"
+GROUPADD="@GROUPADD@"
+ID="@ID@"
+MKDIR="@MKDIR@"
+PWD_CMD="@PWD_CMD@"
+RM="@RM@"
+RMDIR="@RMDIR@"
+SED="@SED@"
+SORT="@SORT@"
+TEST="@TEST@"
+USERADD="@USERADD@"
+
+SELF=$0
+ACTION=$1
+PKG_METADATA_DIR="${2-`${PWD_CMD}`}"
+PKG_REFCOUNT_DBDIR="@PKG_REFCOUNT_DBDIR@"
+: ${PKGNAME=${PKG_METADATA_DIR##*/}}
+: ${PKGBASE=${PKGNAME%-[0-9]*}}
+
+PKG_REFCOUNT_USERS_DBDIR="${PKG_REFCOUNT_DBDIR}/users"
+PKG_REFCOUNT_GROUPS_DBDIR="${PKG_REFCOUNT_DBDIR}/groups"
+
+PKG_USER_HOME="@PKG_USER_HOME@"
+PKG_USER_SHELL="@PKG_USER_SHELL@"
+
+group_exists()
+{
+	case $group in
+	"")	return 2 ;;
+	esac
+	# Check using chgrp to work properly in an NIS environment.
+	testfile="./grouptest.tmp.$$"
+	${ECHO} > $testfile
+	if ${CHGRP} $group $testfile >/dev/null 2>&1; then
+		${RM} -f $testfile
+		return 0
+	fi
+	${RM} -f $testfile
+	return 1
+}
+
+user_exists()
+{
+	case $user in
+	"")	return 2 ;;
+	esac
+	# Check using id to work properly in an NIS environment.
+	if ${ID} $user >/dev/null 2>&1; then
+		return 0
+	fi
+	return 1
+}
+
+exitcode=0
+case $ACTION in
+ADD)
+	${SED} -n "/^\# GROUP: /{s/^\# GROUP: //;p;}" ${SELF} | ${SORT} -u |
+	{ while read line; do
+		SAVEIFS="$IFS"; IFS=":"
+		set -- $line
+		group="$1"; groupid="$2"
+		IFS="$SAVEIFS"
+		case $group in
+		"")	continue ;;
+		esac
+		shadow_dir="${PKG_REFCOUNT_GROUPS_DBDIR}/$group"
+		preexist="$shadow_dir/+PREEXISTING"
+		token="$shadow_dir/${PKGNAME}"
+		if ${TEST} ! -d "$shadow_dir"; then
+			${MKDIR} $shadow_dir
+			group_exists $group &&
+				${ECHO} "${PKGNAME}" > $preexist
+		fi
+		group_exists $group ||
+			{ ${ECHO} "Creating group: $group";
+			case $groupid in
+			"")	${GROUPADD} $group ;;
+			*)	${GROUPADD} -g $groupid $group ;;
+			esac; }
+		if ${TEST} -f "$token" && \
+		   ${GREP} "^${PKG_METADATA_DIR}$" $token >/dev/null; then
+			:
+		else
+			${ECHO} "${PKG_METADATA_DIR}" >> $token
+		fi
+	done; }
+	${SED} -n "/^\# USER: /{s/^\# USER: //;p;}" ${SELF} | ${SORT} -u |
+	{ while read line; do
+		SAVEIFS="$IFS"; IFS=":"
+		set -- $line
+		user="$1"; group="$2"; userid="$3"
+		descr="$4"; home="$5" shell="$6"
+		IFS="$SAVEIFS"
+		case $user in
+		"")	continue ;;
+		esac
+		: ${descr:="${PKGBASE} $user user"}
+		: ${home:="${PKG_USER_HOME}"}
+		: ${shell:="${PKG_USER_SHELL}"}
+		shadow_dir="${PKG_REFCOUNT_USERS_DBDIR}/$user"
+		preexist="$shadow_dir/+PREEXISTING"
+		token="$shadow_dir/${PKGNAME}"
+		if ${TEST} ! -d "$shadow_dir"; then
+			${MKDIR} $shadow_dir
+			user_exists $user &&
+				${ECHO} "${PKGNAME}" > $preexist
+		fi
+		{ user_exists $user && group_exists $group; } ||
+			{ ${ECHO} "Creating user: $user";
+			case $userid in
+			"")	${USERADD} -c "$descr" -d "$home" -s "$shell" \
+					-g $group $user ;;
+			*)	${USERADD} -c "$descr" -d "$home" -s "$shell" \
+					-g $group -u $userid $user ;;
+			esac; }
+		if ${TEST} -f "$token" && \
+		   ${GREP} "^${PKG_METADATA_DIR}$" $token >/dev/null; then
+			:
+		else
+			${ECHO} "${PKG_METADATA_DIR}" >> $token
+		fi
+	done; }
+	;;
+
+REMOVE)
+	${SED} -n "/^\# USER: /{s/^\# USER: //;p;}" ${SELF} | ${SORT} -u |
+	{ while read line; do
+		SAVEIFS="$IFS"; IFS=":"
+		set -- $line
+		user="$1"; group="$2"; userid="$3"
+		descr="$4"; home="$5" shell="$6"
+		IFS="$SAVEIFS"
+		case $user in
+		"")	continue ;;
+		esac
+		shadow_dir="${PKG_REFCOUNT_USERS_DBDIR}/$user"
+		preexist="$shadow_dir/+PREEXISTING"
+		token="$shadow_dir/${PKGNAME}"
+		tokentmp="$token.tmp.$$"
+		if ${TEST} -f "$token" && \
+		   ${GREP} "^${PKG_METADATA_DIR}$" $token >/dev/null; then
+			${CAT} "$token" | ${GREP} -v "^${PKG_METADATA_DIR}$" > $tokentmp
+			case `${CAT} $tokentmp | ${SED} -n "$="` in
+			"")
+				${RM} -f $preexist $token $token.tmp.*
+				${RMDIR} -p $shadow_dir 2>/dev/null || ${TRUE}
+				;;
+			*)
+				${MV} -f $tokentmp $token
+				;;
+			esac
+		fi
+	done; }
+	${SED} -n "/^\# GROUP: /{s/^\# GROUP: //;p;}" ${SELF} | ${SORT} -u |
+	{ while read line; do
+		SAVEIFS="$IFS"; IFS=":"
+		set -- $line
+		group="$1"; groupid="$2"
+		IFS="$SAVEIFS"
+		case $group in
+		"")	continue ;;
+		esac
+		shadow_dir="${PKG_REFCOUNT_GROUPS_DBDIR}/$group"
+		preexist="$shadow_dir/+PREEXISTING"
+		token="$shadow_dir/${PKGNAME}"
+		tokentmp="$token.tmp.$$"
+		if ${TEST} -f "$token" && \
+		   ${GREP} "^${PKG_METADATA_DIR}$" $token >/dev/null; then
+			${CAT} "$token" | ${GREP} -v "^${PKG_METADATA_DIR}$" > $tokentmp
+			case `${CAT} $tokentmp | ${SED} -n "$="` in
+			"")
+				${RM} -f $preexist $token $token.tmp.*
+				${RMDIR} -p $shadow_dir 2>/dev/null || ${TRUE}
+				;;
+			*)
+				${MV} -f $tokentmp $token
+				;;
+			esac
+		fi
+	done; }
+	;;
+
+CHECK-ADD)
+	${SED} -n "/^\# GROUP: /{s/^\# GROUP: //;p;}" ${SELF} | ${SORT} -u |
+	{ while read line; do
+		SAVEIFS="$IFS"; IFS=":"
+		set -- $line
+		group="$1"; groupid="$2"
+		IFS="$SAVEIFS"
+		case $group in
+		"")	continue ;;
+		*)	group_exists $group && continue ;;
+		esac
+		case "$printed_header" in
+		yes)	;;
+		*)	printed_header=yes
+			${ECHO} "==========================================================================="
+			${ECHO} "The following groups need to be created for ${PKGNAME}:"
+			${ECHO} ""
+			;;
+		esac
+		case $groupid in
+		"")	${ECHO} "	$group" ;;
+		*)	${ECHO} "	$group ($groupid)" ;;
+		esac
+	done
+	case "$printed_header" in
+	yes)	${ECHO} ""
+		${ECHO} "==========================================================================="
+		exit 1
+		;;
+	esac; }
+	${TEST} $? -eq 0 || exitcode=1
+	${SED} -n "/^\# USER: /{s/^\# USER: //;p;}" ${SELF} | ${SORT} -u |
+	{ while read line; do
+		SAVEIFS="$IFS"; IFS=":"
+		set -- $line
+		user="$1"; group="$2"; userid="$3"
+		descr="$4"; home="$5" shell="$6"
+		IFS="$SAVEIFS"
+		case $user in
+		"")	continue ;;
+		*)	user_exists $user && continue ;;
+		esac
+		case "$printed_header" in
+		yes)	;;
+		*)	printed_header=yes
+			${ECHO} "==========================================================================="
+			${ECHO} "The following users need to be created for ${PKGNAME}:"
+			${ECHO} ""
+			;;
+		esac
+		: ${home:="${PKG_USER_HOME}"}
+		: ${shell:="${PKG_USER_SHELL}"}
+		case $userid in
+		"")	${ECHO} "	$user: $group, $home, $shell" ;;
+		*)	${ECHO} "	$user ($userid): $group, $home, $shell" ;;
+		esac
+	done
+	case "$printed_header" in
+	yes)	${ECHO} ""
+		${ECHO} "==========================================================================="
+		exit 1
+		;;
+	esac; }
+	${TEST} $? -eq 0 || exitcode=1
+	;;
+
+CHECK-REMOVE)
+	${SED} -n "/^\# USER: /{s/^\# USER: //;p;}" ${SELF} | ${SORT} -u |
+	{ while read line; do
+		SAVEIFS="$IFS"; IFS=":"
+		set -- $line
+		user="$1"; group="$2"; userid="$3"
+		descr="$4"; home="$5" shell="$6"
+		IFS="$SAVEIFS"
+		case $user in
+		"")	continue ;;
+		*)	user_exists $user || continue ;;
+		esac
+		shadow_dir="${PKG_REFCOUNT_USERS_DBDIR}/$user"
+		${TEST} -d "$shadow_dir" && continue	# refcount isn't zero
+		case "$printed_header" in
+		yes)	;;
+		*)	printed_header=yes
+			${ECHO} "==========================================================================="
+			${ECHO} "The following users are no longer being used by ${PKGNAME},"
+			${ECHO} "and they can be removed if no other packages are using them:"
+			${ECHO} ""
+			;;
+		esac
+		${ECHO} "	${user}"
+	done
+	case "$printed_header" in
+	yes)	${ECHO} ""
+		${ECHO} "==========================================================================="
+		exit 1
+		;;
+	esac; }
+	${TEST} $? -eq 0 || exitcode=1
+	${SED} -n "/^\# GROUP: /{s/^\# GROUP: //;p;}" ${SELF} | ${SORT} -u |
+	{ while read line; do
+		SAVEIFS="$IFS"; IFS=":"
+		set -- $line
+		group="$1"; groupid="$2"
+		IFS="$SAVEIFS"
+		case $group in
+		"")	continue ;;
+		*)	group_exists $group || continue ;;
+		esac
+		shadow_dir="${PKG_REFCOUNT_GROUPS_DBDIR}/$group"
+		${TEST} -d "$shadow_dir" && continue	# refcount isn't zero
+		case "$printed_header" in
+		yes)	;;
+		*)	printed_header=yes
+			${ECHO} "==========================================================================="
+			${ECHO} "The following groups are no longer being used by ${PKGNAME},"
+			${ECHO} "and they can be removed if no other packages are using them:"
+			${ECHO} ""
+			;;
+		esac
+		${ECHO} "	$group"
+	done
+	case "$printed_header" in
+	yes)	${ECHO} ""
+		${ECHO} "==========================================================================="
+		exit 1
+		;;
+	esac; }
+	${TEST} $? -eq 0 || exitcode=1
+	;;
+
+*)
+	${ECHO} "Usage: ./+USERGROUP ADD|REMOVE [metadatadir]"
+	${ECHO} "       ./+USERGROUP CHECK-ADD|CHECK-REMOVE"
+	;;
+esac
+exit $exitcode
