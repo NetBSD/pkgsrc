@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.4 2004/04/20 16:40:55 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/11/26 09:49:10 adam Exp $
 bin/glade-2
 share/applications/glade-2.desktop
 share/glade-2/gtk/autogen.sh
 share/gnome/help/glade-2/C/figures/edit-menu.png
 share/gnome/help/glade-2/C/figures/file-menu.png
+share/gnome/help/glade-2/C/figures/glade-windows.png
 share/gnome/help/glade-2/C/figures/grid-options.png
 share/gnome/help/glade-2/C/figures/help-menu.png
 share/gnome/help/glade-2/C/figures/menu.png
@@ -55,6 +56,7 @@ ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/glade-2.0.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/glade-2.0.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/glade-2.0.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/glade-2.0.mo
+${PKGLOCALEDIR}/locale/sq/LC_MESSAGES/glade-2.0.mo
 ${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/glade-2.0.mo
 ${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/glade-2.0.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/glade-2.0.mo
