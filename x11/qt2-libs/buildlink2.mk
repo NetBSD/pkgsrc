@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.2 2002/08/25 18:40:43 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2002/09/22 10:06:01 jlam Exp $
 
 .if !defined(QT2_LIBS_BUILDLINK2_MK)
 QT2_LIBS_BUILDLINK2_MK=	# defined
@@ -13,6 +13,9 @@ BUILDLINK_FILES.qt2-libs+=	qt2/include/*.h
 BUILDLINK_FILES.qt2-libs+=	qt2/lib/libqt.*
 
 QTDIR=		${BUILDLINK_PREFIX.qt2-libs}/qt2
+
+BUILDLINK_CPPFLAGS.qt2-libs=	-I${QTDIR}/include
+BUILDLINK_LDFLAGS.qt2-libs=	-L${QTDIR}/lib -Wl,-R${QTDIR}/lib
 
 .include "../../devel/zlib/buildlink2.mk"
 .include "../../graphics/Mesa/buildlink2.mk"
