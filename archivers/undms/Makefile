@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/01/15 01:37:00 tron Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/16 13:15:38 wiz Exp $
 
 DISTNAME=	undms-1.3.c
 PKGNAME=	undms-1.3
@@ -8,6 +8,7 @@ MASTER_SITES=	ftp://de.aminet.net/pub/aminet/misc/unix/ \
 EXTRACT_SUFX=	.Z
 
 MAINTAINER=	packages@netbsd.org
+COMMENT=	Converts .dms Amiga disk images to uncompressed .adf images
 
 NO_WRKSUBDIR=
 EXTRACT_CMD=	${GZCAT} ${DOWNLOADED_DISTFILE} >${DISTNAME}
