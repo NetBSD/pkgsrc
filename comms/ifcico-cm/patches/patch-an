@@ -1,0 +1,13 @@
+$NetBSD: patch-an,v 1.1 1998/12/21 15:45:21 tv Exp $
+
+--- iflib/xutil.h.orig	Mon Dec 21 09:40:25 1998
++++ iflib/xutil.h	Mon Dec 21 09:40:44 1998
+@@ -1,6 +1,5 @@
+-#ifndef size_t
+-#define size_t unsigned int
+-#endif
++#include <stdlib.h>
++#include <string.h>
+ 
+ char *xmalloc(size_t);
+ char *xstrcpy(char *);

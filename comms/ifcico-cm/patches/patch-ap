@@ -1,0 +1,40 @@
+$NetBSD: patch-ap,v 1.1 1998/12/21 15:45:21 tv Exp $
+
+--- ifcico/hydra.c.orig	Mon Dec 21 09:46:45 1998
++++ ifcico/hydra.c	Mon Dec 21 09:50:00 1998
+@@ -89,7 +89,7 @@
+ 
+ static char *put_long(char *buffer, long val)
+ {
+-#if defined(__i386__)
++#if defined(__i386__) || (defined(__NetBSD__) && (BYTE_ORDER == LITTLE_ENDIAN))
+   *(unsigned long *) buffer = (unsigned long) val;
+ #else
+   buffer[0] = (unsigned long) val & 0xff;
+@@ -104,7 +104,7 @@
+ 
+ static long get_long(char *buffer)
+ {
+-#if defined(__i386__)
++#if defined(__i386__) || (defined(__NetBSD__) && (BYTE_ORDER == LITTLE_ENDIAN))
+   return *(long *) buffer;
+ #else
+   return ((unsigned long) ((unsigned char) buffer[0])) |
+@@ -894,7 +894,7 @@
+ 	if (to_send)
+ 	{
+ 	  txlen = sprintf(txbuf, "%08lx%08lx%08lx%08lx%08lx",
+-			  mtime2sl(txstat.st_mtime),
++			  (long)mtime2sl(txstat.st_mtime),
+ 			  txstat.st_size,
+ 			  0UL,
+ 			  0UL,
+@@ -1353,7 +1353,7 @@
+ 	 */
+ 	else if ((rxlen > 41) && (rxbuf[rxlen - 1] == 0))
+ 	{
+-	  time_t timestamp;
++	  long timestamp;
+ 	  long filesize;
+ 	  char dosname[8 + 1 + 3 + 1], *name;
+ 
