@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.1 1998/09/01 21:44:59 tron Exp $
+$NetBSD: patch-ae,v 1.2 1998/09/02 06:42:13 tron Exp $
 
 --- tools/yeomans.pl.orig	Mon Dec  9 11:21:04 1996
 +++ tools/yeomans.pl	Sat Aug 29 11:04:18 1998

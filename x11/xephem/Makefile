@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 1998/09/01 21:44:58 tron Exp $
+# $NetBSD: Makefile,v 1.2 1998/09/02 06:41:16 tron Exp $
 
 DISTNAME=	xephem-3.1
 CATEGORIES=	x11
