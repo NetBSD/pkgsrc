@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5799 2004/05/03 00:40:05 dmcmahill Exp $
+$NetBSD: CHANGES,v 1.5800 2004/05/03 08:46:57 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2325,3 +2325,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated openmortal to 0.7 [xtraeme 2004-05-02]
 	Added muse-0.9 [xtraeme 2004-05-02]
 	Added sge-5.3p6 [dmcmahill 2004-05-02]
+	Updated libusb to 0.1.8 [adam 2004-05-03]
