@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2004/04/01 18:57:26 jmmv Exp $
+$NetBSD: distinfo,v 1.4 2004/09/03 12:48:41 jmmv Exp $
 
-SHA1 (gnome2-user-docs-2.6.0.tar.bz2) = fa78ddb558f76f98eb951133b8f735c1dde6075d
-Size (gnome2-user-docs-2.6.0.tar.bz2) = 1449994 bytes
+SHA1 (gnome2-user-docs-2.6.0.1.tar.bz2) = 6ce65f100ae12228e38fe6367b6feffa45ce13c2
+Size (gnome2-user-docs-2.6.0.1.tar.bz2) = 1018591 bytes
