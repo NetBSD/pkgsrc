@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.97 2000/11/01 15:05:54 tron Exp $
+# $NetBSD: Makefile,v 1.98 2000/11/01 16:30:46 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.53 1997/09/28 13:25:40 markm Exp
 #
 
@@ -56,6 +56,7 @@
     SUBDIR += libungif
     SUBDIR += libwmf
     SUBDIR += magicpoint
+    SUBDIR += mgl
     SUBDIR += mpeg-lib
     SUBDIR += mpeg2codec
     SUBDIR += mpeg_play
