@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2004/02/17 10:55:02 recht Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2004/02/18 16:35:27 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 EXPAT_BUILDLINK3_MK:=	${EXPAT_BUILDLINK3_MK}+
@@ -61,29 +61,31 @@ BUILDLINK_IS_BUILTIN.expat!=		\
 MAKEFLAGS+=	BUILDLINK_IS_BUILTIN.expat=${BUILDLINK_IS_BUILTIN.expat}
 .endif
 
-.if !empty(BUILDLINK_IS_BUILTIN.expat:M[yY][eE][sS])
-BUILDLINK_USE_BUILTIN.expat=	YES
-.else
-BUILDLINK_USE_BUILTIN.expat=	NO
-.endif
-
-.if !empty(PREFER_NATIVE:M[yY][eE][sS]) && \
-    !empty(BUILDLINK_IS_BUILTIN.expat:M[yY][eE][sS])
-BUILDLINK_USE_BUILTIN.expat=	YES
-.endif
-.if !empty(PREFER_PKGSRC:M[yY][eE][sS])
-BUILDLINK_USE_BUILTIN.expat=	NO
-.endif
-.if !empty(PREFER_NATIVE:Mexpat) && \
-    !empty(BUILDLINK_IS_BUILTIN.expat:M[yY][eE][sS])
-BUILDLINK_USE_BUILTIN.expat=	YES
-.endif
-.if !empty(PREFER_PKGSRC:Mexpat)
-BUILDLINK_USE_BUILTIN.expat=	NO
-.endif
-
 .if !empty(BUILDLINK_CHECK_BUILTIN.expat:M[yY][eE][sS])
 BUILDLINK_USE_BUILTIN.expat=	YES
+.endif
+
+.if !defined(BUILDLINK_USE_BUILTIN.expat)
+.  if !empty(BUILDLINK_IS_BUILTIN.expat:M[yY][eE][sS])
+BUILDLINK_USE_BUILTIN.expat=	YES
+.  else
+BUILDLINK_USE_BUILTIN.expat=	NO
+.  endif
+
+.  if !empty(PREFER_NATIVE:M[yY][eE][sS]) && \
+      !empty(BUILDLINK_IS_BUILTIN.expat:M[yY][eE][sS])
+BUILDLINK_USE_BUILTIN.expat=	YES
+.  endif
+.  if !empty(PREFER_PKGSRC:M[yY][eE][sS])
+BUILDLINK_USE_BUILTIN.expat=	NO
+.  endif
+.  if !empty(PREFER_NATIVE:Mexpat) && \
+      !empty(BUILDLINK_IS_BUILTIN.expat:M[yY][eE][sS])
+BUILDLINK_USE_BUILTIN.expat=	YES
+.  endif
+.  if !empty(PREFER_PKGSRC:Mexpat)
+BUILDLINK_USE_BUILTIN.expat=	NO
+.  endif
 .endif
 
 .if !empty(BUILDLINK_USE_BUILTIN.expat:M[nN][oO])

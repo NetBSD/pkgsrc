@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2004/02/18 14:58:37 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2004/02/18 16:35:27 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 FONTCONFIG_BUILDLINK3_MK:=	${FONTCONFIG_BUILDLINK3_MK}+
@@ -64,29 +64,31 @@ MAKEFLAGS+=	\
 	BUILDLINK_IS_BUILTIN.fontconfig=${BUILDLINK_IS_BUILTIN.fontconfig}
 .endif
 
-.if !empty(BUILDLINK_IS_BUILTIN.fontconfig:M[yY][eE][sS])
-BUILDLINK_USE_BUILTIN.fontconfig=	YES
-.else
-BUILDLINK_USE_BUILTIN.fontconfig=	NO
-.endif
-
-.if !empty(PREFER_NATIVE:M[yY][eE][sS]) && \
-    !empty(BUILDLINK_IS_BUILTIN.fontconfig:M[yY][eE][sS])
-BUILDLINK_USE_BUILTIN.fontconfig=	YES
-.endif
-.if !empty(PREFER_PKGSRC:M[yY][eE][sS])
-BUILDLINK_USE_BUILTIN.fontconfig=	NO
-.endif
-.if !empty(PREFER_NATIVE:Mfontconfig) && \
-    !empty(BUILDLINK_IS_BUILTIN.fontconfig:M[yY][eE][sS])
-BUILDLINK_USE_BUILTIN.fontconfig=	YES
-.endif
-.if !empty(PREFER_PKGSRC:Mfontconfig)
-BUILDLINK_USE_BUILTIN.fontconfig=	NO
-.endif
-
 .if !empty(BUILDLINK_CHECK_BUILTIN.fontconfig:M[yY][eE][sS])
 BUILDLINK_USE_BUILTIN.fontconfig=	YES
+.endif
+
+.if !defined(BUILDLINK_USE_BUILTIN.fontconfig)
+.  if !empty(BUILDLINK_IS_BUILTIN.fontconfig:M[yY][eE][sS])
+BUILDLINK_USE_BUILTIN.fontconfig=	YES
+.  else
+BUILDLINK_USE_BUILTIN.fontconfig=	NO
+.  endif
+
+.  if !empty(PREFER_NATIVE:M[yY][eE][sS]) && \
+      !empty(BUILDLINK_IS_BUILTIN.fontconfig:M[yY][eE][sS])
+BUILDLINK_USE_BUILTIN.fontconfig=	YES
+.  endif
+.  if !empty(PREFER_PKGSRC:M[yY][eE][sS])
+BUILDLINK_USE_BUILTIN.fontconfig=	NO
+.  endif
+.  if !empty(PREFER_NATIVE:Mfontconfig) && \
+      !empty(BUILDLINK_IS_BUILTIN.fontconfig:M[yY][eE][sS])
+BUILDLINK_USE_BUILTIN.fontconfig=	YES
+.  endif
+.  if !empty(PREFER_PKGSRC:Mfontconfig)
+BUILDLINK_USE_BUILTIN.fontconfig=	NO
+.  endif
 .endif
 
 .if !empty(BUILDLINK_USE_BUILTIN.fontconfig:M[nN][oO])

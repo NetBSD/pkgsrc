@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.14 2004/02/17 15:57:55 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2004/02/18 16:35:27 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 READLINE_BUILDLINK3_MK:=	${READLINE_BUILDLINK3_MK}+
@@ -98,37 +98,39 @@ BUILDLINK_IS_BUILTIN.readline=	NO
 MAKEFLAGS+=	BUILDLINK_IS_BUILTIN.readline=${BUILDLINK_IS_BUILTIN.readline}
 .endif
 
-.if !empty(BUILDLINK_IS_BUILTIN.readline:M[yY][eE][sS])
-BUILDLINK_USE_BUILTIN.readline=	YES
-.else
-BUILDLINK_USE_BUILTIN.readline=	NO
-.endif
-
-.if !empty(PREFER_NATIVE:M[yY][eE][sS]) && \
-    !empty(BUILDLINK_IS_BUILTIN.readline:M[yY][eE][sS])
-BUILDLINK_USE_BUILTIN.readline=	YES
-.endif
-.if !empty(PREFER_PKGSRC:M[yY][eE][sS])
-BUILDLINK_USE_BUILTIN.readline=	NO
-.endif
-.if !empty(PREFER_NATIVE:Mreadline) && \
-    !empty(BUILDLINK_IS_BUILTIN.readline:M[yY][eE][sS])
-BUILDLINK_USE_BUILTIN.readline=	YES
-.endif
-.if !empty(PREFER_PKGSRC:Mreadline)
-BUILDLINK_USE_BUILTIN.readline=	NO
-.endif
-
-.if defined(USE_GNU_READLINE)
-.  if !empty(BUILDLINK_IS_BUILTIN.readline:M[yY][eE][sS]) && \
-      !empty(_BLNK_LIBREADLINE_FOUND:M[nN][oO]) && \
-      !empty(_BLNK_LIBEDIT_FOUND:M[yY][eE][sS])
-BUILDLINK_USE_BUILTIN.readline=	NO
-.  endif
-.endif
-
 .if !empty(BUILDLINK_CHECK_BUILTIN.readline:M[yY][eE][sS])
 BUILDLINK_USE_BUILTIN.readline=	YES
+.endif
+
+.if !defined(BUILDLINK_USE_BUILTIN.readline)
+.  if !empty(BUILDLINK_IS_BUILTIN.readline:M[yY][eE][sS])
+BUILDLINK_USE_BUILTIN.readline=	YES
+.  else
+BUILDLINK_USE_BUILTIN.readline=	NO
+.  endif
+
+.  if !empty(PREFER_NATIVE:M[yY][eE][sS]) && \
+      !empty(BUILDLINK_IS_BUILTIN.readline:M[yY][eE][sS])
+BUILDLINK_USE_BUILTIN.readline=	YES
+.  endif
+.  if !empty(PREFER_PKGSRC:M[yY][eE][sS])
+BUILDLINK_USE_BUILTIN.readline=	NO
+.  endif
+.  if !empty(PREFER_NATIVE:Mreadline) && \
+      !empty(BUILDLINK_IS_BUILTIN.readline:M[yY][eE][sS])
+BUILDLINK_USE_BUILTIN.readline=	YES
+.  endif
+.  if !empty(PREFER_PKGSRC:Mreadline)
+BUILDLINK_USE_BUILTIN.readline=	NO
+.  endif
+
+.  if defined(USE_GNU_READLINE)
+.    if !empty(BUILDLINK_IS_BUILTIN.readline:M[yY][eE][sS]) && \
+        !empty(_BLNK_LIBREADLINE_FOUND:M[nN][oO]) && \
+        !empty(_BLNK_LIBEDIT_FOUND:M[yY][eE][sS])
+BUILDLINK_USE_BUILTIN.readline=	NO
+.    endif
+.  endif
 .endif
 
 .if !empty(BUILDLINK_USE_BUILTIN.readline:M[nN][oO])

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/02/16 21:50:26 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/02/18 16:35:27 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 RANDREXT_BUILDLINK3_MK:=	${RANDREXT_BUILDLINK3_MK}+
@@ -51,29 +51,31 @@ BUILDLINK_IS_BUILTIN.randrext!=		\
 MAKEFLAGS+=	BUILDLINK_IS_BUILTIN.randrext=${BUILDLINK_IS_BUILTIN.randrext}
 .endif
 
-.if !empty(BUILDLINK_IS_BUILTIN.randrext:M[yY][eE][sS])
-BUILDLINK_USE_BUILTIN.randrext=	YES
-.else
-BUILDLINK_USE_BUILTIN.randrext=	NO
-.endif
-
-.if !empty(PREFER_NATIVE:M[yY][eE][sS]) && \
-    !empty(BUILDLINK_IS_BUILTIN.randrext:M[yY][eE][sS])
-BUILDLINK_USE_BUILTIN.randrext=	YES
-.endif
-.if !empty(PREFER_PKGSRC:M[yY][eE][sS])
-BUILDLINK_USE_BUILTIN.randrext=	NO
-.endif
-.if !empty(PREFER_NATIVE:Mrandr) && \
-    !empty(BUILDLINK_IS_BUILTIN.randrext:M[yY][eE][sS])
-BUILDLINK_USE_BUILTIN.randrext=	YES
-.endif
-.if !empty(PREFER_PKGSRC:Mrandr)
-BUILDLINK_USE_BUILTIN.randrext=	NO
-.endif
-
 .if !empty(BUILDLINK_CHECK_BUILTIN.randrext:M[yY][eE][sS])
 BUILDLINK_USE_BUILTIN.randrext=	YES
+.endif
+
+.if !defined(BUILDLINK_USE_BUILTIN.randrext)
+.  if !empty(BUILDLINK_IS_BUILTIN.randrext:M[yY][eE][sS])
+BUILDLINK_USE_BUILTIN.randrext=	YES
+.  else
+BUILDLINK_USE_BUILTIN.randrext=	NO
+.  endif
+
+.  if !empty(PREFER_NATIVE:M[yY][eE][sS]) && \
+      !empty(BUILDLINK_IS_BUILTIN.randrext:M[yY][eE][sS])
+BUILDLINK_USE_BUILTIN.randrext=	YES
+.  endif
+.  if !empty(PREFER_PKGSRC:M[yY][eE][sS])
+BUILDLINK_USE_BUILTIN.randrext=	NO
+.  endif
+.  if !empty(PREFER_NATIVE:Mrandr) && \
+      !empty(BUILDLINK_IS_BUILTIN.randrext:M[yY][eE][sS])
+BUILDLINK_USE_BUILTIN.randrext=	YES
+.  endif
+.  if !empty(PREFER_PKGSRC:Mrandr)
+BUILDLINK_USE_BUILTIN.randrext=	NO
+.  endif
 .endif
 
 .if !empty(BUILDLINK_USE_BUILTIN.randrext:M[nN][oO])
