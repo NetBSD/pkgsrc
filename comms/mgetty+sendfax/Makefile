@@ -1,15 +1,11 @@
-# $NetBSD: Makefile,v 1.10 2000/07/24 06:28:06 fredb Exp $
+# $NetBSD: Makefile,v 1.11 2000/08/31 19:41:17 fredb Exp $
 # FreeBSD Id: Makefile,v 1.25 1998/07/16 06:44:37 vanilla Exp
 #
 
-DISTNAME=	mgetty1.1.21-Jul24
-PKGNAME=	mgetty-1.1.21
+DISTNAME=	mgetty1.1.22-Aug17
+PKGNAME=	mgetty-1.1.22
 CATEGORIES=	comms
 MASTER_SITES=	ftp://alpha.greenie.net/pub/mgetty/source/1.1/
-
-PATCH_SITES=	http://www-internal.alphanet.ch/~schaefer/vgetty/global_patches/CURRENT/
-PATCHFILES=	mgetty-1.1.21-to-22072000.bz2
-PATCH_DIST_STRIP= -p1
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://alpha.greenie.net/mgetty/
