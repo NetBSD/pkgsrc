@@ -1,0 +1,17 @@
+Flwm is an attempt to combine the best ideas seen in several window managers.
+The primary influence and code base is from wm2 by Chris Cannam.
+
+Primary features are:
+
+     * Nifty sideways titlebars.
+     * No icons. You deiconize by picking off a pop-up menu. This means no
+       space is wasted by icons.
+     * The same pop-up menu controls multiple desktops and lets you launch
+       programs.
+     * Occupies as little screen space as possible. The border and titles are
+       as thin as I could possibly make them. And maximized windows waste
+       zero pixels vertically!
+     * Independent maximize buttons for width & height.
+     * Understands Motif, KDE, and Gnome window manager hints, and works with
+       SGI programs that assumme 4DWM.
+     * Really small and fast code.
