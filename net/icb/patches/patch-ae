@@ -1,0 +1,23 @@
+*** icb/unix.c.orig	Fri Feb 24 16:20:31 1995
+--- icb/unix.c	Thu Sep  3 10:28:33 1998
+***************
+*** 49,56 ****
+  	if (((loginid = getlogin()) == NULL) || *loginid == '\0')
+  		if ((pw = getpwuid(getuid())) == NULL)
+  			loginid = NULL;
+! 		else
+! 			loginid = pw->pw_name;
+  	return(loginid);
+  }
+  
+--- 49,58 ----
+  	if (((loginid = getlogin()) == NULL) || *loginid == '\0')
+  		if ((pw = getpwuid(getuid())) == NULL)
+  			loginid = NULL;
+! 		else {
+! 			loginid = malloc(strlen(pw->pw_name) + 1);
+! 			strcpy(loginid, pw->pw_name);
+! 		}
+  	return(loginid);
+  }
+  
