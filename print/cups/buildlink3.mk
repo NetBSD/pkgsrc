@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2004/12/28 23:18:21 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2005/01/04 14:48:22 jmmv Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 CUPS_BUILDLINK3_MK:=	${CUPS_BUILDLINK3_MK}+
@@ -18,5 +18,6 @@ BUILDLINK_PKGSRCDIR.cups?=	../../print/cups
 
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
