@@ -1,0 +1,20 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/03/30 04:48:43 garbled Exp $
+--- themes/Makefile.in.orig	Mon Mar 29 12:19:26 1999
++++ themes/Makefile.in	Mon Mar 29 12:19:41 1999
+@@ -198,16 +198,12 @@
+ 	done
+ 	$(mkinstalldirs) $(pkgdatadir)/themes
+ 	-@for i in $(THEMES) ; do \
+-	  if test ! -d $(pkgdatadir)/themes/$$i ; then \
+ 	    echo "Installing $$i theme in $(pkgdatadir)/themes" ; \
+ 	    $(mkinstalldirs) $(pkgdatadir)/themes/$$i ; \
+ 	    $(CP) $$i/???* $(pkgdatadir)/themes/$$i ; \
+ 	    $(CHMOD) 755 $(pkgdatadir)/themes/$$i ; \
+ 	    $(CHMOD) 644 $(pkgdatadir)/themes/$$i/???* ; \
+ 	    rm -f $(pkgdatadir)/themes/$$i/MAIN.in ; \
+-	  else \
+-	    echo "ALERT!  Not overwriting theme $$i in $(pkgdatadir)/themes.  You will need to update this theme manually." ; \
+-	  fi ; \
+ 	done
+ 	@if test ! -f $(HOME)/.active.tags ; then $(CP) active.tags $(HOME)/.active.tags ; \
+ 	   else echo "Not installing $(HOME)/.active.tags -- File exists." ; fi
