@@ -1,0 +1,17 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/08/19 15:46:44 agc Exp $
+
+--- Makefile.in	2003/08/19 15:34:20	1.1
++++ Makefile.in	2003/08/19 15:35:01
+@@ -49,9 +49,9 @@
+ 	install -m 755 dropbear $(DESTDIR)$(sbindir)
+ 	install -m 755 dropbearkey $(DESTDIR)$(bindir)
+ 	install -m 755 dropbearconvert $(DESTDIR)$(bindir)
+-	-chown root.root $(DESTDIR)$(sbindir)/dropbear
+-	-chown root.root $(DESTDIR)$(bindir)/dropbearkey
+-	-chown root.root $(DESTDIR)$(bindir)/dropbearconvert
++	-chown ${ROOT_USER}:${ROOT_GROUP} $(DESTDIR)$(sbindir)/dropbear
++	-chown ${ROOT_USER}:${ROOT_GROUP} $(DESTDIR)$(bindir)/dropbearkey
++	-chown ${ROOT_USER}:${ROOT_GROUP} $(DESTDIR)$(bindir)/dropbearconvert
+ 
+ 
+ static: dropbear-static dropbearkey-static dropbearconvert-static
