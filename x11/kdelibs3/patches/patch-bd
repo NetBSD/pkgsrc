@@ -1,8 +1,8 @@
-$NetBSD: patch-bd,v 1.5 2003/03/11 13:10:36 markd Exp $
+$NetBSD: patch-bd,v 1.6 2003/05/13 10:01:54 markd Exp $
 
---- kio/kssl/kopenssl.cc.orig	Fri Jan  3 17:58:50 2003
+--- kio/kssl/kopenssl.cc.orig	2003-03-03 08:02:26.000000000 +1300
 +++ kio/kssl/kopenssl.cc
-@@ -177,7 +177,7 @@
+@@ -177,7 +177,7 @@ void KOpenSSLProxy::destroy() {
    _me = NULL;
  }
  
@@ -11,7 +11,7 @@ $NetBSD: patch-bd,v 1.5 2003/03/11 13:10:36 markd Exp $
  #include <qdir.h>
  #include <qstring.h>
  #include <qstringlist.h>
-@@ -240,26 +240,22 @@
+@@ -240,26 +240,23 @@ KConfig *cfg;
  
     delete cfg;
  
@@ -29,6 +29,7 @@ $NetBSD: patch-bd,v 1.5 2003/03/11 13:10:36 markd Exp $
 -	    #endif
 +#endif
  	    << "/usr/lib/"
++	    << "@LOCALBASE@/lib/"
 +#if !defined(__NetBSD__) && !defined(__OpenBSD__)
  	    << "/usr/ssl/lib/"
              << "/usr/local/lib/"
@@ -43,7 +44,7 @@ $NetBSD: patch-bd,v 1.5 2003/03/11 13:10:36 markd Exp $
  // FIXME: #define here for the various OS types to optimize
     libnamess 
  	     #ifdef hpux
-@@ -294,10 +290,16 @@
+@@ -294,10 +291,16 @@ KConfig *cfg;
  	     << "libcrypto.so.0.9.6"
               #endif
  	     ;
@@ -60,7 +61,7 @@ $NetBSD: patch-bd,v 1.5 2003/03/11 13:10:36 markd Exp $
        for (QStringList::Iterator shit = libnamesc.begin();
                                   shit != libnamesc.end();
                                   ++shit) {
-@@ -311,9 +313,9 @@
+@@ -311,9 +314,9 @@ KConfig *cfg;
              _cryptoLib = ll->globalLibrary(alib.latin1());
           if (_cryptoLib) break;
        }
@@ -71,7 +72,7 @@ $NetBSD: patch-bd,v 1.5 2003/03/11 13:10:36 markd Exp $
  
     if (_cryptoLib) {
  #ifdef KSSL_HAVE_SSL 
-@@ -413,16 +415,14 @@
+@@ -413,16 +416,14 @@ KConfig *cfg;
  #endif
     }
  
@@ -93,7 +94,7 @@ $NetBSD: patch-bd,v 1.5 2003/03/11 13:10:36 markd Exp $
        for (QStringList::Iterator shit = libnamess.begin();
                                   shit != libnamess.end();
                                   ++shit) {
-@@ -436,9 +436,9 @@
+@@ -436,9 +437,9 @@ KConfig *cfg;
           	_sslLib = ll->globalLibrary(alib.latin1());
           if (_sslLib) break;
        }
