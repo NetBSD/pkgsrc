@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2004/04/12 10:53:07 xtraeme Exp $
+# $NetBSD: Makefile,v 1.72 2004/04/19 15:39:34 markd Exp $
 # FreeBSD Id: Makefile,v 1.30 1997/12/14 02:03:53 asami Exp
 
 DISTNAME=	emacs-21.3
@@ -35,11 +35,11 @@ CONFIGURE_ARGS+=	--with-gif
 .include "../../graphics/png/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-png
 
+.include "../../mk/bsd.prefs.mk"
+
 .if defined(EMACS_USE_XAW3D) && !empty(EMACS_USE_XAW3D:M[Yy][Ee][Ss])
 .include "../../x11/Xaw3d/buildlink3.mk"
 .endif
-
-.include "../../mk/bsd.prefs.mk"
 
 # This matches NetBSD <1.7 releases and 1.6A-1.6P, where ld is <2.13.2.1.
 .if ${OPSYS} == "NetBSD" && \
