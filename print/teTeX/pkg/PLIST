@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 1998/08/28 15:23:44 garbled Exp $
+@comment $NetBSD: PLIST,v 1.6 1998/09/22 10:17:38 agc Exp $
 bin/MakeTeXMF
 bin/pslatex
 bin/makeindex.bin
@@ -96,7 +96,6 @@ info/latex-2
 info/dvips.info-1
 info/fontname.info-4
 info/kpathsea.info-1
-@exec [ -f %D/info/dir ] || sed -ne '1,/Menu:/p' /usr/share/info/dir > %D/info/dir
 @exec %D/bin/install-info %D/info/latex %D/info/dir
 @exec %D/bin/install-info %D/info/kpathsea.info %D/info/dir
 @exec %D/bin/install-info %D/info/dvips.info %D/info/dir
