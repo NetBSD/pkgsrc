@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/09/28 23:37:09 jwise Exp $
+# $NetBSD: Makefile,v 1.2 2002/08/26 14:34:38 jwise Exp $
 #
 
 DISTNAME=	TclExpat-1.1
@@ -13,7 +13,11 @@ COMMENT=	XML parser implemented entirely in Tcl
 DEPENDS+=       tcl>=8.3.2:../../lang/tcl
 DEPENDS+=	expat-[0-9]*:../../textproc/expat
 
+pre-install:
+	${INSTALL_DATA_DIR} ${PREFIX}/lib/tcl
+
 post-install:
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/tcl
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/tcl/TclExpat
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/tcl/TclExpat
 
