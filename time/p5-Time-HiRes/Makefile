@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2004/03/12 19:50:37 heinz Exp $
+# $NetBSD: Makefile,v 1.15 2004/08/03 02:36:42 jlam Exp $
 #
 
-DISTNAME=		Time-HiRes-1.56
+DISTNAME=		Time-HiRes-1.59
 PKGNAME=		p5-${DISTNAME}
 PKGREVISION=		# empty
 SVR4_PKGNAME=		p5thr
@@ -15,7 +15,6 @@ COMMENT=		Perl5 module for high resolution time, sleep, and alarm
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=		YES
-
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Time/HiRes/.packlist
 
 .include "../../lang/perl5/module.mk"
