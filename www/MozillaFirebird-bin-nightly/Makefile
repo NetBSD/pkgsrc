@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2003/10/19 08:35:09 grant Exp $
+# $NetBSD: Makefile,v 1.4 2003/12/17 02:57:10 grant Exp $
 #
 
 DISTNAME=		# see Makefile.${OPSYS}.${ARCH}
@@ -30,6 +30,14 @@ PKGVER!=		${DATE} +%Y%m%d
 
 FILES_SUBST+=		PLATFORM=${PLATFORM}
 PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
+
+# everything specific to your OS/Arch goes into it's own Makefile
+# group together i386, i486, i586 and i686 (for Linux)
+ARCH=${MACHINE_ARCH:C/i[3-6]86/i386/g}
+
+.if exists(Makefile.${OPSYS}.${ARCH})
+.  include "Makefile.${OPSYS}.${ARCH}"
+.endif
 
 do-build:
 
@@ -63,6 +71,10 @@ post-install:
 	${LN} -s libglib.so libglib-1.2.so.0;				\
 	${LN} -s libgmodule.so libgmodule-1.2.so.0
 .endif
+.if ${_COMPAT16_LIBSTDCXX} == "YES"
+	@cd ${MOZILLA_LIB} && \
+	${LN} -s ${PREFIX}/emul/netbsd16/usr/lib/libstdc++.so* .
+.endif
 	@${CP} -f ${PKGDIR}/PLIST ${PLIST_SRC}
 	@${ECHO} bin/MozillaFirebird-${PLATFORM} >> ${PLIST_SRC}
 	@${FIND} ${MOZILLA_LIB} \( -type f -o -type l \) -print		\
@@ -71,13 +83,5 @@ post-install:
 	@${FIND} ${MOZILLA_LIB} -type d -print				\
 		| ${SORT} -r | ${SED} -e "s,${PREFIX}/,@dirrm ,g"	\
 		>> ${PLIST_SRC}
-
-# everything specific to your OS/Arch goes into it's own Makefile
-# group together i386, i486, i586 and i686 (for Linux)
-ARCH=${MACHINE_ARCH:C/i[3-6]86/i386/g}
-
-.if exists(Makefile.${OPSYS}.${ARCH})
-.  include "Makefile.${OPSYS}.${ARCH}"
-.endif
 
 .include "../../mk/bsd.pkg.mk"
