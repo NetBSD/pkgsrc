@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.453 2002/11/04 02:58:02 rh Exp $
+$NetBSD: CHANGES,v 1.454 2002/11/04 03:54:30 rh Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3521,3 +3521,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated dc_gui to 0.64 [wiz 2002-11-03]
 	Updated libgtop to 1.0.13 [rh 2002-11-04]
 	Added libgtop2-2.0.0 [rh 2002-11-04]
+	Added gnome2-libole2-2.2.8 [rh 2002-11-04]
