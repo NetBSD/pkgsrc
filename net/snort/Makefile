@@ -1,9 +1,14 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/09/10 15:48:02 rh Exp $
+# $NetBSD: Makefile,v 1.2 2000/01/15 21:58:29 wiz Exp $
 #
 
-DISTNAME=	snort-1.2.1
+DISTNAME=	snort-1.5
 CATEGORIES=	net security
-MASTER_SITES=	http://www.clark.net/~roesch/
+MASTER_SITES=	http://www.clark.net/~roesch/ \
+		ftp://the.wiretapped.net/pub/security/network-intrusion-detection/snort/ \
+		http://www.centus.com/snort/ \
+		http://snort.whitehats.com/ \
+		http://snort.safenetworks.com/ \
+		ftp://gd.tuwien.ac.at/infosys/security/snort/
 
 MAINTAINER=	rh@netbsd.org
 HOMEPAGE=	http://www.clark.net/~roesch/security.html
@@ -11,9 +16,14 @@ HOMEPAGE=	http://www.clark.net/~roesch/security.html
 GNU_CONFIGURE=	YES
 
 post-install:
+	${INSTALL_DATA_DIR} -m 700 -o root -g wheel /var/log/snort
+	${INSTALL_DATA_DIR} ${PREFIX}/share/snort
+.for f in backdoor-lib misc-lib overflow-lib scan-lib snort-lib web-lib
+	${INSTALL_DATA} ${WRKSRC}/${f} ${PREFIX}/share/snort
+.endfor
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/snort
-.for file in README NEWS RULES.SAMPLE USAGE
-	${INSTALL_DATA} ${WRKSRC}/${file} ${PREFIX}/share/doc/snort
+.for f in README README.PLUGINS NEWS RULES.SAMPLE USAGE
+	${INSTALL_DATA} ${WRKSRC}/${f} ${PREFIX}/share/doc/snort
 .endfor
 
 .include "../../mk/bsd.pkg.mk"
