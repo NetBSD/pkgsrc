@@ -1,6 +1,6 @@
 #! /bin/sh
 #
-# $NetBSD: apache.sh,v 1.4 2000/09/12 14:50:51 jlam Exp $
+# $NetBSD: apache.sh,v 1.5 2000/09/13 20:06:24 jlam Exp $
 #
 # PROVIDE: apache
 # REQUIRE: DAEMON
@@ -12,7 +12,7 @@ conffile="@PREFIX@/etc/httpd/httpd.conf"
 
 apache_start="start"
 
-if [ -f @PREFIX@/etc/mod_ssl.conf ]
+if [ -f @PREFIX@/etc/httpd/mod_ssl.conf ]
 then
 	# This file can reset apache_start to "startssl"
 	. @PREFIX@/etc/httpd/mod_ssl.conf
