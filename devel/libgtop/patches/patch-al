@@ -1,7 +1,7 @@
-$NetBSD: patch-al,v 1.5 1999/11/14 18:49:53 tron Exp $
+$NetBSD: patch-al,v 1.6 2000/02/01 16:43:44 rh Exp $
 
---- sysdeps/freebsd/prockernel.c.orig	Thu May 27 16:04:03 1999
-+++ sysdeps/freebsd/prockernel.c	Sun Nov 14 19:02:50 1999
+--- sysdeps/freebsd/prockernel.c.orig	Sat Oct 16 20:31:43 1999
++++ sysdeps/freebsd/prockernel.c	Sun Jan 30 20:00:03 2000
 @@ -48,6 +48,11 @@
  #include <osreldate.h>
  #endif
@@ -14,8 +14,8 @@ $NetBSD: patch-al,v 1.5 1999/11/14 18:49:53 tron Exp $
  static const unsigned long _glibtop_sysdeps_proc_kernel_pstats =
  (1L << GLIBTOP_PROC_KERNEL_MIN_FLT) +
  (1L << GLIBTOP_PROC_KERNEL_MAJ_FLT) +
-@@ -163,14 +168,32 @@
- 			buf->kstk_eip = (u_int64_t) pcb.pcb_pc;
+@@ -167,14 +172,32 @@
+ 			/*xxx FreeBSD/Alpha? */
  #endif
  #else
 +#ifdef __i386__
