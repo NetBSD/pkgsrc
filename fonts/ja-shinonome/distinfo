@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/03/15 20:57:50 kei Exp $
+
+SHA1 (shinonome-0.9.9-src.tar.bz2) = 3d2efa44b2ab3113acf2bb90cd74d2c9a4caa2bc
+Size (shinonome-0.9.9-src.tar.bz2) = 749473 bytes
+SHA1 (patch-zz) = ce44b87c2b49264a1c81443db0c3dd2a5408f92e
