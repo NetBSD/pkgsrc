@@ -1,0 +1,36 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/08 00:33:18 hubertf Exp $
+bin/nicotine
+bin/nicotine-import-winconfig
+lib/python2p2/site-packages/pynicotine/__init__.pyc
+lib/python2p2/site-packages/pynicotine/config.pyc
+lib/python2p2/site-packages/pynicotine/gtkgui/__init__.pyc
+lib/python2p2/site-packages/pynicotine/gtkgui/about.pyc
+lib/python2p2/site-packages/pynicotine/gtkgui/browsetreemodels.pyc
+lib/python2p2/site-packages/pynicotine/gtkgui/chatrooms.pyc
+lib/python2p2/site-packages/pynicotine/gtkgui/checklatest.pyc
+lib/python2p2/site-packages/pynicotine/gtkgui/dirchooser.pyc
+lib/python2p2/site-packages/pynicotine/gtkgui/downloads.pyc
+lib/python2p2/site-packages/pynicotine/gtkgui/frame.pyc
+lib/python2p2/site-packages/pynicotine/gtkgui/glade2py.pyc
+lib/python2p2/site-packages/pynicotine/gtkgui/gtkexcepthook.pyc
+lib/python2p2/site-packages/pynicotine/gtkgui/imagedata.pyc
+lib/python2p2/site-packages/pynicotine/gtkgui/nicotine_glade.pyc
+lib/python2p2/site-packages/pynicotine/gtkgui/privatechat.pyc
+lib/python2p2/site-packages/pynicotine/gtkgui/search.pyc
+lib/python2p2/site-packages/pynicotine/gtkgui/settings_glade.pyc
+lib/python2p2/site-packages/pynicotine/gtkgui/settingswindow.pyc
+lib/python2p2/site-packages/pynicotine/gtkgui/transferlist.pyc
+lib/python2p2/site-packages/pynicotine/gtkgui/uploads.pyc
+lib/python2p2/site-packages/pynicotine/gtkgui/userbrowse.pyc
+lib/python2p2/site-packages/pynicotine/gtkgui/userinfo.pyc
+lib/python2p2/site-packages/pynicotine/gtkgui/userlist.pyc
+lib/python2p2/site-packages/pynicotine/gtkgui/utils.pyc
+lib/python2p2/site-packages/pynicotine/mp3.pyc
+lib/python2p2/site-packages/pynicotine/pynicotine.pyc
+lib/python2p2/site-packages/pynicotine/slskmessages.pyc
+lib/python2p2/site-packages/pynicotine/slskproto.pyc
+lib/python2p2/site-packages/pynicotine/transfers.pyc
+lib/python2p2/site-packages/pynicotine/utils.pyc
+@dirrm lib/python2p2/site-packages/pynicotine/gtkgui
+@dirrm lib/python2p2/site-packages/pynicotine
+@dirrm lib/python2p2/site-packages
