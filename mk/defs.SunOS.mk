@@ -1,4 +1,4 @@
-# $NetBSD: defs.SunOS.mk,v 1.58 2003/03/29 20:49:11 seb Exp $
+# $NetBSD: defs.SunOS.mk,v 1.59 2003/04/10 01:39:52 grant Exp $
 #
 # Variable definitions for the SunOS/Solaris operating system.
 
@@ -107,14 +107,14 @@ ULIMIT_CMD_memorysize?=	ulimit -v `ulimit -H -v`
 USERADD?=		/usr/sbin/useradd
 
 # imake installs manpages in weird places
-IMAKE_MAN_SOURCE_PATH=	share/man/cat
+IMAKE_MAN_SOURCE_PATH=	share/man/man
 IMAKE_MAN_SUFFIX=	1
 IMAKE_LIBMAN_SUFFIX=	3
 IMAKE_FILEMAN_SUFFIX=	5
 IMAKE_MAN_DIR=		${IMAKE_MAN_SOURCE_PATH}1
 IMAKE_LIBMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}3
 IMAKE_FILEMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}5
-IMAKE_MANNEWSUFFIX=	0
+IMAKE_MANNEWSUFFIX=	${IMAKE_MAN_SUFFIX}
 
 _DO_SHLIB_CHECKS=	yes		# fixup PLIST for shared libs
 _IMAKE_MAKE=	/usr/ccs/bin/make	# program which gets invoked by imake
