@@ -1,4 +1,4 @@
-# $NetBSD: defs.Interix.mk,v 1.11 2004/04/20 18:43:17 tv Exp $
+# $NetBSD: defs.Interix.mk,v 1.12 2004/04/21 14:53:51 tv Exp $
 #
 # Variable definitions for the Interix operating system.
 
@@ -130,7 +130,7 @@ _OPSYS_SHLIB_TYPE=	ELF	# shared lib type - not exactly true, but near enough
 _PATCH_CAN_BACKUP=	yes	# native patch(1) can make backups
 _PATCH_BACKUP_ARG?=	-b -V simple -z	# switch to patch(1) for backup suffix
 _PREFORMATTED_MAN_DIR=	cat	# directory where catman pages are
-_USE_GNU_GETTEXT=	no	# Don't use GNU gettext
+_USE_GNU_GETTEXT=	yes	# gettext not in base system
 _USE_RPATH=		yes	# add rpath to LDFLAGS
 
 # flags passed to the linker to extract all symbols from static archives.
@@ -143,12 +143,17 @@ _STRIPFLAG_CC?=		-s	# cc(1) option to strip
 _STRIPFLAG_INSTALL?=	-s	# install(1) option to strip
 .endif
 
-DEFAULT_SERIAL_DEVICE?=	/dev/null
-SERIAL_DEVICES?=	/dev/null
+DEFAULT_SERIAL_DEVICE?=	/dev/tty00
+SERIAL_DEVICES?=	/dev/tty00 /dev/tty01 /dev/tty02 /dev/tty03
 
+# Interix needs -D_ALL_SOURCE everywhere; little compiles without it.
 .if ${CPPFLAGS:M-D_ALL_SOURCE} == ""
 CPPFLAGS+=		-D_ALL_SOURCE
 .endif
+
+# Interix gcc "PIC" is broken, but non-"PIC" is shlib linkable.
+# We need to AVOID -fpic/-fPIC options to gcc.
+BUILDLINK_TRANSFORM+=	S:-fpic: S:-fPIC:
 
 # check for maximum command line length and set it in configure's environment,
 # to avoid a test required by the libtool script that takes forever.
