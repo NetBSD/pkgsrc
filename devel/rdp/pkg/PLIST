@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 1998/07/31 16:32:23 agc Exp $
+bin/rdp
+share/doc/rdp/rdp_case.ps
+share/doc/rdp/rdp_supp.ps
+share/doc/rdp/rdp_tut.ps
+share/doc/rdp/rdp_user.ps
+@dirrm share/doc/rdp
