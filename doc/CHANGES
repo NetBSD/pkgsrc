@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1607 2003/03/10 11:08:36 wiz Exp $
+$NetBSD: CHANGES,v 1.1608 2003/03/10 13:07:24 skrll Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1016,3 +1016,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated glut to 5.0 [jschauma 2003-03-09]
 	Updated bonnie++ to 1.03a [wiz 2003-03-10]
 	Updated iozone to 3.161 [wiz 2003-03-10]
+	Updated wonka to 0.9.5 [skrll 2003-03-10]

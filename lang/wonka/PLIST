@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/11/01 10:49:33 skrll Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/03/10 13:07:25 skrll Exp $
 bin/java
 bin/wonka
 lib/claudia.fr
@@ -35,11 +35,13 @@ lib/taskbar.properties
 lib/taskbar_large.png
 lib/vte.properties
 lib/wonka.policy
+lib/wonka.properties
 lib/wonka.security
 lib/wonkatest.properties
 lib/wre.jar
 test/CLTest.jar
 test/appletViewer.jar
+test/car-image.png
 test/car.png
 test/forest.png
 test/lena1.png
