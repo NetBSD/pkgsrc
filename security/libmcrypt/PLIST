@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:16:53 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/05/09 22:31:08 wiz Exp $
 bin/libmcrypt-config
 include/mcrypt.h
 lib/libmcrypt.a
 lib/libmcrypt.la
 lib/libmcrypt.so
 lib/libmcrypt.so.6
-lib/libmcrypt.so.6.8
+lib/libmcrypt.so.6.22
 lib/libmcrypt/arcfour.a
 lib/libmcrypt/arcfour.la
 lib/libmcrypt/arcfour.so
