@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2003/03/17 21:01:47 agc Exp $
+$NetBSD: MESSAGE,v 1.2 2003/03/23 14:28:32 lukem Exp $
 
 Quick Client Setup:
 
@@ -20,7 +20,7 @@ nfs_server=YES
 sfssd=YES
 
 2. Run: /etc/rc.d/nfsd start
-3. Copy  ${PREFIX}/etc/sfs/sfsrwsd_config.sample to 
+3. Copy  ${SFSEXAMPLEDIR}/sfsrwsd_config.sample to 
    ${PREFIX}/etc/sfs/sfsrwsd_config and modify.
 4. Modify /etc/exports to match your sfsrwsd_config.
 5. Create the root directories in ${SFSDIR}/root.
