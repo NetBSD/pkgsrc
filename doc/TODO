@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2130 2004/09/19 12:32:58 wiz Exp $
+$NetBSD: TODO,v 1.2131 2004/09/19 12:50:33 wiz Exp $
 
 Suggested new packages
 ======================
@@ -285,7 +285,6 @@ Suggested package updates
 	o gqmpeg-0.91.1
 	o gqview-1.4.4
 	o grace-5.1.17
-	o gsasl-0.1.4 [pkg/26974]
 	o gtar-1.14
 	o gtkglext-1.0.6
 	o gtklife-4.1
