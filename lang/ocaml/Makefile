@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2003/07/21 16:54:03 martti Exp $
+# $NetBSD: Makefile,v 1.21 2003/11/10 23:12:47 dmcmahill Exp $
 #
 
 DISTNAME=	ocaml-3.06
@@ -39,6 +39,8 @@ post-build:
 
 .if (${MACHINE_ARCH} == "i386") || (${MACHINE_ARCH} == "powerpc") || (${MACHINE_ARCH} == "sparc")
 PLIST_SRC=	${PKGDIR}/PLIST.opt ${PKGDIR}/PLIST
+.else
+PLIST_SRC=	${PKGDIR}/PLIST
 .endif
 
 PTHREAD_OPTS+=	native
