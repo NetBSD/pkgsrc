@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2004/12/10 06:40:11 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2005/01/19 13:25:29 markd Exp $
 bin/kdbg
 share/doc/kde/HTML/de/kdbg/argspwdenv.html
 share/doc/kde/HTML/de/kdbg/breakptlist.html
@@ -111,8 +111,6 @@ ${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/kdbg.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kdbg.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/kdbg.mo
 ${PKGLOCALEDIR}/locale/zh_CN.GB2312/LC_MESSAGES/kdbg.mo
-@dirrm ${PKGLOCALEDIR}/locale/no_NY/LC_MESSAGES
-@dirrm ${PKGLOCALEDIR}/locale/no_NY
 @comment in kde: @dirrm share/kde/icons/locolor/32x32/apps
 @comment in kde: @dirrm share/kde/icons/locolor/16x16/apps
 @comment in kde: @dirrm share/kde/icons/hicolor/48x48/apps
