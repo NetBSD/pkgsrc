@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/01/17 00:18:39 pooka Exp $
+# $NetBSD: Makefile,v 1.2 2001/01/17 00:31:44 pooka Exp $
 
 DISTNAME=	ncftp-3.0.2-src
 PKGNAME=	ncftp3-3.0.2
@@ -7,6 +7,8 @@ MASTER_SITES=	ftp://ftp.ncftp.com/ncftp/
 
 MAINTAINER=	zuntum@eik.pl
 HOMEPAGE=	http://www.ncftp.com/
+
+DEPENDS+=	ncurses>=5.1:../../devel/ncurses
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-src//}
 GNU_CONFIGURE=	yes
