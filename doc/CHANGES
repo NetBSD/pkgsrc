@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7638 2004/11/01 20:20:32 jdolecek Exp $
+$NetBSD: CHANGES,v 1.7639 2004/11/01 20:29:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5002,3 +5002,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated p5-Pod-Simple to 3.02nb1 [seb 2004-10-31]
 	Updated p5-Test-Pod to 1.20nb1 [seb 2004-10-31]
 	Added pear-DIME-0.3 [jdolecek 2004-11-01]
+	Updated automake to 1.9.3 [wiz 2004-11-01]
