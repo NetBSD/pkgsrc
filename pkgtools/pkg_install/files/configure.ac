@@ -17,6 +17,21 @@ AC_PROG_LN_S
 AC_PROG_RANLIB
 AC_CHECK_PROG(AR, ar, ar)
 
+AC_PATH_PROG(CHMOD, chmod)
+AC_PATH_PROG(CMP, cmp)
+AC_PATH_PROG(CP, cp)
+AC_PATH_PROG(ENV, env)
+AC_PATH_PROG(FIND, find)
+AC_PATH_PROG(GREP, grep)
+AC_PATH_PROG(LN, ln)
+AC_PATH_PROG(MKDIR, mkdir)
+AC_PATH_PROG(PAX, pax)
+AC_PATH_PROG(RMDIR, rmdir)
+AC_PATH_PROG(RM, rm)
+AC_PATH_PROG(SED, sed)
+AC_PATH_PROG(SORT, sort)
+AC_PATH_PROG(TOUCH, touch)
+
 AUTOCONF=${AUTOCONF-"$srcdir/missing --run autoconf"}
 AC_SUBST(AUTOCONF)
 AUTOHEADER=${AUTOHEADER-"$srcdir/missing --run autoheader"}
@@ -49,5 +64,7 @@ AH_BOTTOM(
 #endif
 )
 
-AC_CONFIG_FILES([Makefile add/Makefile admin/Makefile create/Makefile delete/Makefile info/Makefile lib/Makefile view/Makefile])
+AC_CONFIG_FILES([Makefile add/Makefile admin/Makefile create/Makefile \
+	delete/Makefile info/Makefile lib/Makefile view/Makefile \
+	view/linkfarm.sh view/pkg_view.sh])
 AC_OUTPUT
