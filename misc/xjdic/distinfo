@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.2 2003/02/14 17:34:23 wiz Exp $
+$NetBSD: distinfo,v 1.3 2003/11/11 09:56:37 wiz Exp $
 
-SHA1 (edict.gz) = 7ccb9cddbbafb863e3234bac3b96c12f7f1decfa
-Size (edict.gz) = 1819224 bytes
-SHA1 (kanjidic.gz) = fbfa86887d136d6e2c88019be11383ff192de8ed
-Size (kanjidic.gz) = 470494 bytes
-SHA1 (xjdic23.tgz) = f5b364b7b50abaa4ffc862f5140d0c47b4438d16
-Size (xjdic23.tgz) = 136415 bytes
+SHA1 (xjdic-2.3nb2/edict.gz) = d3ca4e6c6110c75172d06400e964f96ec29023d5
+Size (xjdic-2.3nb2/edict.gz) = 1891382 bytes
+SHA1 (xjdic-2.3nb2/kanjidic.gz) = 6239492e5c0645d4ff3b6b085a5002f660b77d1d
+Size (xjdic-2.3nb2/kanjidic.gz) = 496280 bytes
+SHA1 (xjdic-2.3nb2/xjdic23.tgz) = f5b364b7b50abaa4ffc862f5140d0c47b4438d16
+Size (xjdic-2.3nb2/xjdic23.tgz) = 136415 bytes
 SHA1 (patch-aa) = 7e3dad15962b0ac69bf25c6f98cbbff8925aed8d
 SHA1 (patch-ab) = 32dfe757b0a20a72cb336177eec08ba85e89231a
