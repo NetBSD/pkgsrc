@@ -1,8 +1,8 @@
-$NetBSD: patch-ai,v 1.3 2004/03/06 15:08:32 grant Exp $
+$NetBSD: patch-ai,v 1.4 2004/04/14 12:55:20 minskim Exp $
 
---- makedefs.orig	2003-11-05 21:50:15.000000000 +0200
-+++ makedefs	2004-01-23 13:56:57.000000000 +0200
-@@ -175,22 +175,6 @@
+--- makedefs.orig	2004-01-16 18:27:11.000000000 -0600
++++ makedefs
+@@ -178,22 +178,6 @@ case "$SYSTEM.$RELEASE" in
  		SYSLIBS="-ldb"
  		;;
      Linux.2*)	SYSTYPE=LINUX2
@@ -25,3 +25,11 @@ $NetBSD: patch-ai,v 1.3 2004/03/06 15:08:32 grant Exp $
  		# GDBM locks the DBM .pag file after open. This breaks postmap.
  		# if [ -f /usr/include/gdbm-ndbm.h ]
  		# then
+@@ -204,7 +188,6 @@ case "$SYSTEM.$RELEASE" in
+ 		#     CCARGS="$CCARGS -DHAS_DBM -DPATH_NDBM_H='<gdbm/ndbm.h>'"
+ 		#     GDBM_LIBS=gdbm
+ 		# fi
+-		SYSLIBS="-ldb"
+ 		for name in nsl resolv $GDBM_LIBS
+ 		do
+ 		    for lib in /usr/lib64 /lib64 /usr/lib /lib
