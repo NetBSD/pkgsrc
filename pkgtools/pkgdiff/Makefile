@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.18 2001/10/08 15:59:52 seb Exp $
+# $NetBSD: Makefile,v 1.19 2001/10/31 07:31:45 zuntum Exp $
 #
 
-DISTNAME=		pkgdiff-0.102
-CATEGORIES=		pkgtools devel
-MASTER_SITES=		# empty
-DISTFILES=		# empty
+DISTNAME=	pkgdiff-0.102
+CATEGORIES=	pkgtools devel
+MASTER_SITES=	# empty
+DISTFILES=	# empty
 
-MAINTAINER=		wiz@netbsd.org
-HOMEPAGE=		ftp://ftp.netbsd.org/pub/NetBSD/packages/pkgsrc/Packages.txt
-COMMENT=		Tools to ease creating and maintaining patches for pkgsrc
+MAINTAINER=	wiz@netbsd.org
+HOMEPAGE=	ftp://ftp.netbsd.org/pub/NetBSD/packages/pkgsrc/Packages.txt
+COMMENT=	Tools to ease creating and maintaining patches for pkgsrc
 
-USE_PERL5=		YES
+USE_PERL5=	YES
 
 EXTRACT_ONLY=	# empty
 WRKSRC=		${WRKDIR}
