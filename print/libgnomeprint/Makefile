@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2004/04/01 18:29:40 jmmv Exp $
+# $NetBSD: Makefile,v 1.30 2004/05/04 21:39:44 jmmv Exp $
 #
 
-DISTNAME=	libgnomeprint-2.6.0
+DISTNAME=	libgnomeprint-2.6.1
 CATEGORIES=	print gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgnomeprint/2.6/}
 EXTRACT_SUFX=	.tar.bz2
@@ -44,6 +44,8 @@ PLIST_SUBST+=		USE_CUPS="@comment "
 # answer here even if it did).
 CONFIGURE_ENV+=		libltdl_cv_shlibext=so
 .endif
+
+PRINT_PLIST_AWK+=	/cups/ { print "$${USE_CUPS}" $$0; next; }
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
