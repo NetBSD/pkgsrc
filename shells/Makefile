@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.32 2004/05/29 02:07:50 xtraeme Exp $
+# $NetBSD: Makefile,v 1.33 2004/10/21 03:13:02 xtraeme Exp $
 #
 
 COMMENT=	Shells
 
 SUBDIR+=	ast-ksh
+SUBDIR+=	bash
 SUBDIR+=	bash2
 SUBDIR+=	bash2-doc
 SUBDIR+=	es
