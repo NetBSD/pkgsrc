@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2003/08/09 10:44:49 seb Exp $
+# $NetBSD: Makefile,v 1.11 2003/09/04 13:49:41 minoura Exp $
 
 DISTNAME=	semi-1.14.5
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.m17n.org/pub/mule/semi/semi-1.14-for-flim-1.14/
 
@@ -11,6 +11,8 @@ COMMENT=	Emacs lisp library to provide MIME feature
 
 DEPENDS+=	apel>=10.3:../../devel/apel
 DEPENDS+=	flim>=1.6:../../devel/flim
+BUILD_DEPENDS+=	${PKGNAME_PREFIX}w3-*:../../www/w3
+BUILD_DEPENDS+=	${PKGNAME_PREFIX}bbdb-*:../../misc/bbdb
 BUILD_DEPENDS+=	qkc-*:../../converters/qkc
 
 .include "../../mk/emacs.mk"
