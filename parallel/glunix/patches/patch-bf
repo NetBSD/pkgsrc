@@ -1,4 +1,4 @@
-$NetBSD: patch-bf,v 1.1.1.1 1998/10/21 19:59:30 garbled Exp $
+$NetBSD: patch-bf,v 1.2 1998/10/22 16:06:48 garbled Exp $
 
 --- progs/glush/Makefile.ror	Wed May 27 11:19:41 1998
 +++ progs/glush/Makefile	Wed May 27 11:20:21 1998
@@ -648,16 +648,6 @@ $NetBSD: patch-bf,v 1.1.1.1 1998/10/21 19:59:30 garbled Exp $
 +
 +# ----------------------------------------------------------------------
  # start of Imakefile
-@@ -428,3 +632,3 @@
- #
--# $Id: patch-bf,v 1.1.1.1 1998/10/21 19:59:30 garbled Exp $
-+# $Id: patch-bf,v 1.1.1.1 1998/10/21 19:59:30 garbled Exp $
- #
-@@ -435,3 +639,3 @@
- #
--# $Id: patch-bf,v 1.1.1.1 1998/10/21 19:59:30 garbled Exp $
-+# $Id: patch-bf,v 1.1.1.1 1998/10/21 19:59:30 garbled Exp $
- #
 @@ -445,3 +649,3 @@
  
 -# CONFIGH = -DCONFIGH=\"config/sol23\"
