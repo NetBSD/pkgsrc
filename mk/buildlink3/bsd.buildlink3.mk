@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.136 2004/03/31 07:12:31 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.137 2004/04/05 17:00:12 xtraeme Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -224,7 +224,8 @@ _BLNK_PACKAGES+=	${_pkg_}
 # directly or indirectly depends on.
 #
 _BLNK_RECURSIVE_DEPENDS=	# empty
-.for _pkg_ in ${_BLNK_PACKAGES}   
+.for _pkg_ in ${_BLNK_PACKAGES}
+USE_BUILTIN.${_pkg_}?=		no
 .  if empty(_BLNK_RECURSIVE_DEPENDS:M${_pkg_}) && \
       !empty(USE_BUILTIN.${_pkg_}:M[nN][oO])
 _BLNK_RECURSIVE_DEPENDS+=	${_pkg_}
@@ -803,7 +804,7 @@ do-buildlink: ${_target_}
 # The configure process usually tests for outlandish or missing things
 # that we don't want polluting the argument cache.
 #
-CONFIGURE_ENV+=		BUILDLINK_UPDATE_CACHE=no
+CONFIGURE_ENV+=		BUILDLINK_UPDATE_CACHE=yes
 
 # There are three different parts we can add to the common transforming
 # cache to speed things up:
