@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.217 2002/12/15 22:14:14 wiz Exp $
+# $NetBSD: Makefile,v 1.218 2002/12/19 11:30:35 grant Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -208,6 +208,7 @@ SUBDIR+=	xdvipresent
 SUBDIR+=	xfig
 SUBDIR+=	xgraph
 SUBDIR+=	xli
+SUBDIR+=	xmountains
 SUBDIR+=	xpaint
 SUBDIR+=	xplot
 SUBDIR+=	xpm
