@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2004/06/15 16:39:12 jwise Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2004/06/22 18:34:09 drochner Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 TCL_BUILDLINK3_MK:=	${TCL_BUILDLINK3_MK}+
@@ -26,6 +26,8 @@ TCLCONFIG_SH?=		${BUILDLINK_PREFIX.tcl}/lib/tclConfig.sh
 
 .endif	# TCL_BUILDLINK3_MK
 
+.if !defined(_TCL_NOTHREAD)
 .include "../../mk/pthread.buildlink3.mk"
+.endif
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
