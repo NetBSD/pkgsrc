@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.815 2003/08/31 21:18:54 xtraeme Exp $
+$NetBSD: TODO,v 1.816 2003/09/01 05:34:58 wiz Exp $
 
 Suggested new packages
 ======================
@@ -212,6 +212,7 @@ Suggested package updates
 	o net-snmp-5.0.7 [pkg/19939]
 	o net-snmp-5.0.8
 	o netatalk-1.6.3 [pkg/21930]
+	o nethack-3.4.2
 	o newscache-0.99.22p1
 	o ngrep-1.41
 	o ns-2.26 [pkg/22633]
@@ -227,10 +228,8 @@ Suggested package updates
 	o p5-XML-LibXML-1.54
 	o p5-libapreq-1.2 [pkg/22584]
 	o pdmenu-1.2.81
-	o php4-4.3.3
 	o plib-1.6.0 [pkg/19015,pkg/22612]
 	o pnm2ppa-1.12 [pkg/21667]
-	o povray-3.5
 	o proftpd-1.2.9rc1
 	o pure-ftpd-1.0.16
 	o pxe-1.4 [pkg/22323]
