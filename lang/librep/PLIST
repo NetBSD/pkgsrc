@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2003/07/05 15:53:33 seb Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/03/02 14:01:38 seb Exp $
 bin/rep
 bin/rep-config
 bin/rep-remote
@@ -8,16 +8,6 @@ include/rep.h
 include/rep_lisp.h
 include/rep_regexp.h
 include/rep_subrs.h
-info/librep.info
-info/librep.info-1
-info/librep.info-2
-info/librep.info-3
-info/librep.info-4
-info/librep.info-5
-info/librep.info-6
-info/librep.info-7
-info/librep.info-8
-info/librep.info-9
 lib/librep.a
 lib/librep.la
 lib/librep.so
