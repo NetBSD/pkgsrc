@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/06/30 09:46:45 agc Exp $
+# $NetBSD: Makefile,v 1.3 1999/09/19 00:51:36 hubertf Exp $
 #
 
 DISTNAME=		sdbm
@@ -12,7 +12,7 @@ EXTRACT_SUFX=		.tar.Z
 
 MAINTAINER=		packages@netbsd.org
 
-MAKE_ENV+=		LIBDIR=${PREFIX}/lib
+MAKE_ENV+=		LIBDIR=${PREFIX}/lib NOLINT=1
 
 post-extract:
 	@cd ${WRKDIR} && ${SH} sdbm.shar >/dev/null
