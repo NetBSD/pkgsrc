@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2004/02/09 12:38:58 jmmv Exp $
+$NetBSD: distinfo,v 1.5 2004/02/17 23:25:45 jmmv Exp $
 
-SHA1 (conglomerate-0.7.11.tar.gz) = 85106884f40a5afef89770ee2423d561aa7d4b27
-Size (conglomerate-0.7.11.tar.gz) = 1932492 bytes
+SHA1 (conglomerate-0.7.12.tar.gz) = 878c53f8eb837a1548f5cd3ec4cc41980b9d3e58
+Size (conglomerate-0.7.12.tar.gz) = 1996197 bytes
