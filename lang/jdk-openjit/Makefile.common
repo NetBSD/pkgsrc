@@ -1,0 +1,28 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2003/07/01 19:02:34 jlam Exp $
+
+OPENJIT_VERSION=1.1.16
+
+DISTNAME=	OpenJIT-${OPENJIT_VERSION}
+CATEGORIES=	lang
+MASTER_SITES=	http://www.openjit.org/dist/
+
+MAINTAINER=	tv@pobox.com
+HOMEPAGE=	http://www.openjit.org/
+COMMENT=	Reflective JIT compiler for Java
+
+GNU_CONFIGURE=	# defined
+USE_BUILDLINK2=	# defined
+USE_GMAKE=	# defined
+
+.include "../../mk/bsd.prefs.mk"
+.include "../../mk/java-vm.mk"
+
+CONFIGURE_ARGS+=--with-jdk=${PKG_JAVA_HOME}
+
+PLIST_SUBST+=	CLASSDIR=${CLASSDIR} JRELIB=${JRELIB} JAVADIR=${PKG_JAVA_HOME:C|^${PREFIX}/||}
+
+PKGDIR=		${.CURDIR}/../jdk-openjit
+DISTINFO_FILE=	${PKGDIR}/distinfo
+PATCHDIR=	${PKGDIR}/patches
+
+.include "../../mk/bsd.pkg.mk"

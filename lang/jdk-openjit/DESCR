@@ -1,0 +1,9 @@
+The OpenJIT project is an ongoing Java[tm] the programming language JIT
+compiler project as a collaborative effort between Tokyo Institute of
+Technology and Fujitsu Laboratory, partly sponsored by the Information
+Promotion Agency of Japan.
+
+OpenJIT is a "reflective" JIT compiler in that not only it is almost
+entirely written in Java, but also that it bootstraps and compiles
+itself during execution of the user program, and compiler components
+coexist as first-class objects in user heap space.
