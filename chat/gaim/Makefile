@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2002/03/21 02:07:09 hubertf Exp $
+# $NetBSD: Makefile,v 1.16 2002/03/30 23:43:03 reinoud Exp $
 #
 
-DISTNAME=	gaim-0.54
+DISTNAME=	gaim-0.55
 CATEGORIES=	chat x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gaim/} \
 		ftp://ftp.marko.net/pub/gaim/
