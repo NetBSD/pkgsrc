@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.install.mk,v 1.60 2004/04/27 18:31:08 tv Exp $
+# $NetBSD: bsd.pkg.install.mk,v 1.61 2004/07/08 14:58:30 reed Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk to use the common
 # INSTALL/DEINSTALL scripts.  To use this Makefile fragment, simply:
@@ -67,6 +67,7 @@ FILES_SUBST+=		PREFIX=${PREFIX}
 FILES_SUBST+=		LOCALBASE=${LOCALBASE}
 FILES_SUBST+=		X11BASE=${X11BASE}
 FILES_SUBST+=		DEPOTBASE=${DEPOTBASE}
+FILES_SUBST+=		VARBASE=${VARBASE}
 FILES_SUBST+=		PKG_SYSCONFBASE=${PKG_SYSCONFBASE}
 FILES_SUBST+=		PKG_SYSCONFDEPOTBASE=${PKG_SYSCONFDEPOTBASE}
 FILES_SUBST+=		PKG_SYSCONFBASEDIR=${PKG_SYSCONFBASEDIR}
