@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.12 2004/07/12 21:28:28 wiz Exp $
+$NetBSD: patch-aa,v 1.13 2004/07/12 23:10:50 wiz Exp $
 
 --- util/Makefile.in.orig	2004-07-12 22:13:07.000000000 +0200
 +++ util/Makefile.in
@@ -7,7 +7,7 @@ $NetBSD: patch-aa,v 1.12 2004/07/12 21:28:28 wiz Exp $
  # noticing when the version changes.
  texinfo.cat: texinfo-cat.in $(top_srcdir)/doc/version.texi
 -	sed 's/__VERSION__/@VERSION@/g' $< >$@
-+	sed 's/__VERSION__/@VERSION@/g' $(srcdir)/texinfo-cat.in $(top_srcdir)/doc/version.texi >$@
++	sed 's/__VERSION__/@VERSION@/g' $(srcdir)/texinfo-cat.in >$@
  # Tell versions [3.59,3.63) of GNU make to not export all variables.
  # Otherwise a system limit (for SysV at least) may be exceeded.
  .NOEXPORT:
