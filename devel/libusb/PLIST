@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.10 2005/02/14 09:50:18 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2005/02/25 14:19:33 adam Exp $
 bin/libusb-config
 include/usb.h
+include/usbpp.h
 lib/libusb.la
 lib/libusbpp.la
