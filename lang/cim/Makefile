@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2003/08/09 10:59:06 seb Exp $
+# $NetBSD: Makefile,v 1.17 2004/05/11 03:33:57 snj Exp $
 
 DISTNAME=		cim-3.30
 CATEGORIES=		lang
@@ -8,12 +8,21 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.gnu.org/software/cim/cim.html
 COMMENT=		Simula compiler based on the C programming language
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 INFO_FILES=		cim.info
 
-.include "../../lang/perl5/buildlink2.mk"
+SUBST_CLASSES+=	x
+SUBST_STAGE.x=	post-patch
+SUBST_FILES.x=	src/cimcomp.c
+SUBST_SED.x=	-e "s|SCC|\"${CC}\"|"
+SUBST_SED.x+=	-e "s|SCFLAGS|\"${CFLAGS} -I${PREFIX}/include\"|"
+SUBST_SED.x+=	-e "s|SLDFLAGS|\"-L${PREFIX}/lib -Wl,${RPATH_FLAG}${PREFIX}/lib\"|"
+SUBST_SED.x+=	-e "s|= LIBDIR|= \"${PREFIX}/lib\"|"
+SUBST_SED.x+=	-e "s|= INCLUDEDIR|= \"${PREFIX}/include\"|"
+
+.include "../../lang/perl5/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
