@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2004/09/21 00:30:59 wiz Exp $
+$NetBSD: distinfo,v 1.5 2004/11/28 14:35:19 wiz Exp $
 
 SHA1 (physfs-1.0.0.tar.gz) = 4ad9b9cf56b98547c21a894f718d17bce26a52fa
 Size (physfs-1.0.0.tar.gz) = 511883 bytes
 SHA1 (patch-aa) = 932316336724e86530df2212505b616d6c49c781
+SHA1 (patch-ab) = 3f6b3fc14595b20ac6e564dfd19323c036559dda
 SHA1 (patch-ac) = 499c7e7780dacee4bf55df608bd90994079e5f12
