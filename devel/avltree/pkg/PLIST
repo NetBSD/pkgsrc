@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/01/20 01:40:11 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.2 2000/01/20 11:13:05 agc Exp $
 lib/libavltree.a
-lib/libavltree.so.1.0
+lib/libavltree.so.1.1
 include/avltree.h
+man/cat3/avltree.0.gz
 man/man3/avltree.3.gz
