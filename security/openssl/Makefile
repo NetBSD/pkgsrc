@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2000/02/12 14:08:29 fredb Exp $
+# $NetBSD: Makefile,v 1.13 2000/04/21 02:15:37 explorer Exp $
 #
 
-DISTNAME=		openssl-0.9.4
+DISTNAME=		openssl-0.9.5a
 CATEGORIES=		security
 MASTER_SITES=		ftp://ftp.openssl.org/source/
 
@@ -105,7 +105,20 @@ do-install:
 	done
 #	@cd ${WRKSRC}/perl && ${MAKE} install
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/openssl
-	${INSTALL_DATA} ${WRKSRC}/doc/* ${PREFIX}/share/doc/openssl
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/openssl/apps
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/openssl/crypto
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/openssl/ssl
+	${INSTALL_DATA} ${WRKSRC}/doc/apps/* \
+		${PREFIX}/share/doc/openssl/apps/
+	${INSTALL_DATA} ${WRKSRC}/doc/crypto/* \
+		${PREFIX}/share/doc/openssl/crypto/
+	${INSTALL_DATA} ${WRKSRC}/doc/ssl/* \
+		${PREFIX}/share/doc/openssl/ssl/
+	for file in README c-indentation.el openssl.txt openssl_button.gif \
+	openssl_button.html ssleay.txt ; do \
+		${INSTALL_DATA} ${WRKSRC}/doc/$$file \
+			${PREFIX}/share/doc/openssl/; \
+	done
 	${INSTALL_DATA_DIR} ${PREFIX}/certs ${PREFIX}/private
 	@if [ ! -f ${PREFIX}/etc/openssl.cnf ]; then \
 		${CP} -p ${PREFIX}/etc/openssl.cnf.example ${PREFIX}/etc/openssl.cnf; \
