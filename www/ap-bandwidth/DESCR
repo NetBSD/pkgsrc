@@ -1,0 +1,3 @@
+mod_bandwidth is an Apache module to provide bandwidth usage limitation
+either on the whole server or one a per connection basis based on the
+size of files, directory location or remote domain/IP.

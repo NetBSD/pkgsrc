@@ -1,0 +1,9 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2003/02/17 23:32:33 grant Exp $
+
+In order to use this module in your Apache installation, you need to
+add the following to your httpd.conf file:
+
+  LoadModule bandwidth_module lib/httpd/mod_bandwidth.so
+
+===========================================================================
