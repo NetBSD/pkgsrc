@@ -27,14 +27,26 @@ play)
 		fi
 		exit 1
 	fi
+	if [ -f XXXPREFIXXXX/bin/csound32 ]
+	then
+		player=XXXPREFIXXXX/bin/csound32
+	fi
+	if [ -f XXXPREFIXXXX/bin/csound ]
+	then
+		player=XXXPREFIXXXX/bin/csound
+	fi
+	if [ -z "$player" ]
+	then
+		echo "Could not find csound."
+		exit 1
+	fi
 	if [ $channels -eq 1 ]
 	then
-		XXXPREFIXXXX/bin/csound32 -d -ostdout -h -s -r 44100 -k 4410 \
-			"$i" 2>/dev/null | XXXPREFIXXXX/bin/sox -t raw \
-			-r 44100 -s -w -c 1 - -t raw -r 44100 -s -w -c 2 -
+		$player -d -ostdout -h -s -r 44100 -k 4410 "$i" 2>/dev/null |\
+			XXXPREFIXXXX/bin/sox -t raw -r 44100 -s -w -c 1 - \
+				-t raw -r 44100 -s -w -c 2 -
 	else
-		XXXPREFIXXXX/bin/csound32 -d -ostdout -h -s -r 44100 -k 4410 \
-			"$i" 2>/dev/null
+		$player -d -ostdout -h -s -r 44100 -k 4410 "$i" 2>/dev/null
 	fi
 	if [ ! -z "$tempfile" ]
 	then
