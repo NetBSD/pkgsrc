@@ -1,4 +1,4 @@
-# $NetBSD: defs.NetBSD.mk,v 1.63 2004/04/09 22:43:31 jmmv Exp $
+# $NetBSD: defs.NetBSD.mk,v 1.64 2004/04/27 13:43:05 tv Exp $
 #
 # Variable definitions for the NetBSD operating system.
 
@@ -85,9 +85,9 @@ GROUPADD?=	/usr/sbin/groupadd
 .else
 USERADD?=	${LOCALBASE}/sbin/useradd
 GROUPADD?=	${LOCALBASE}/sbin/groupadd
-.if defined(USE_USERADD) || defined(USE_GROUPADD)
-DEPENDS+=	user>=20000313:../../sysutils/user
-.endif
+_USER_DEPENDS=	user>=20000313:../../sysutils/user
+DEPENDS+=	${USE_USERADD:D${_USER_DEPENDS}}
+DEPENDS+=	${USE_GROUPADD:D${_USER_DEPENDS}}
 .endif
 
 CPP_PRECOMP_FLAGS?=	# unset

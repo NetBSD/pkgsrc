@@ -1,4 +1,4 @@
-# $NetBSD: defs.Darwin.mk,v 1.71 2004/04/19 20:19:46 jmmv Exp $
+# $NetBSD: defs.Darwin.mk,v 1.72 2004/04/27 13:43:05 tv Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -98,9 +98,9 @@ GROUPADD?=		${LOCALBASE}/sbin/groupadd
 USERADD?=		${LOCALBASE}/sbin/useradd
 _PKG_USER_HOME?=	/var/empty	# to match other system accounts
 _PKG_USER_SHELL?=	/usr/bin/false	# to match other system accounts
-.if defined(USE_USERADD) || defined(USE_GROUPADD)
-DEPENDS+=	user>=20040331:../../sysutils/user_darwin
-.endif
+_USER_DEPENDS=		user>=20040331:../../sysutils/user_darwin
+DEPENDS+=		${USE_USERADD:D${_USER_DEPENDS}}
+DEPENDS+=		${USE_GROUPADD:D${_USER_DEPENDS}}
 
 # imake installs manpages in weird places
 # these values from /usr/X11R6/lib/X11/config/Imake.tmpl
