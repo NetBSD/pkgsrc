@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2002/02/21 03:02:34 jonb Exp $
+
+--- ../arch/arch/arch.sh.in.orig	Wed Feb 20 13:14:51 2002
++++ ../arch/arch/arch.sh.in
+@@ -34,7 +34,7 @@
+ # Make Sure that the arch libexec Directory is on the Path
+ #
+ 
+-PATH="$sub_cmd_dir/arch:$PATH"
++PATH="$sub_cmd_dir/arch:$sub_cmd_dir/local:$PATH"
+ 
+ # superstition:
+ #

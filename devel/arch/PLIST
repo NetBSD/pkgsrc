@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.3 2002/02/14 17:56:05 jonb Exp $
-bin/arch--release-arch--1.0--patch-7-cfg
+@comment $NetBSD: PLIST,v 1.4 2002/02/21 03:02:33 jonb Exp $
+bin/arch--release-arch--1.0--patch-9-cfg
 bin/arch--release-arch-cfg
 bin/arch-cfg
 bin/as-daemon
@@ -239,6 +239,7 @@ libexec/arch/arch/make-category
 libexec/arch/arch/make-library-browser
 libexec/arch/arch/make-lock
 libexec/arch/arch/make-log
+libexec/arch/arch/make-sync-tree
 libexec/arch/arch/make-version
 libexec/arch/arch/manifest
 libexec/arch/arch/merge-points
@@ -258,7 +259,6 @@ libexec/arch/arch/notify-browser
 libexec/arch/arch/notify-library
 libexec/arch/arch/old-file
 libexec/arch/arch/parse-package-name
-libexec/arch/arch/patch
 libexec/arch/arch/patch-add-log
 libexec/arch/arch/patch-details
 libexec/arch/arch/patch-level-lt
@@ -274,6 +274,7 @@ libexec/arch/arch/putlast
 libexec/arch/arch/reconcile
 libexec/arch/arch/record-config
 libexec/arch/arch/register-archive
+libexec/arch/arch/remove-log
 libexec/arch/arch/replay
 libexec/arch/arch/replay-config
 libexec/arch/arch/revisions
@@ -359,6 +360,7 @@ libexec/arch/branching-and-merging/Help.list
 libexec/arch/branching-and-merging/delta-patch
 libexec/arch/branching-and-merging/finish-branch
 libexec/arch/branching-and-merging/join-branch
+libexec/arch/branching-and-merging/make-sync-tree
 libexec/arch/branching-and-merging/prepare-branch
 libexec/arch/branching-and-merging/reconcile
 libexec/arch/branching-and-merging/replay
@@ -429,6 +431,7 @@ libexec/arch/local-cache/pristines
 libexec/arch/local-cache/take-from-cache
 libexec/arch/local-cache/wd-mv-pristine
 libexec/arch/local-cache/what-changed
+libexec/arch/local/patch
 libexec/arch/naming-conventions/Help.category
 libexec/arch/naming-conventions/Help.category_title
 libexec/arch/naming-conventions/Help.list
@@ -478,6 +481,7 @@ libexec/arch/patch-logs/make-log
 libexec/arch/patch-logs/merge-points
 libexec/arch/patch-logs/new-on-branch
 libexec/arch/patch-logs/patch-list-description.awk
+libexec/arch/patch-logs/remove-log
 libexec/arch/patch-logs/valid-log-file
 libexec/arch/patch-logs/wd-check-for-patch-log
 libexec/arch/patch-sets/Help.category
@@ -573,6 +577,7 @@ share/doc/html/arch/reconciling.html
 share/doc/html/arch/revision-lib.html
 share/doc/html/arch/source-license.html
 share/doc/html/arch/star-topology.html
+share/doc/html/arch/sync.html
 share/doc/html/arch/system-requirements.html
 share/doc/html/arch/theory-of-patches.html
 share/doc/html/arch/triggers.html
