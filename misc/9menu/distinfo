@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2001/04/20 13:52:07 agc Exp $
+$NetBSD: distinfo,v 1.3 2003/06/04 08:50:12 agc Exp $
 
-SHA1 (9menu-1.5.shar.gz) = b7200cb4fa34beca367607987b6afe05fef042e5
-Size (9menu-1.5.shar.gz) = 7021 bytes
-SHA1 (patch-aa) = f0f635683e71ca5f17ba97f94ee7c3c6ec60d77c
+SHA1 (9menu-1.6.shar.gz) = 2be989faa461260c6b5faeb0e0c00f71363dcd96
+Size (9menu-1.6.shar.gz) = 8401 bytes
+SHA1 (patch-aa) = 381ea9092583fc0e91a9cc619ea1ee0d32c49abb
