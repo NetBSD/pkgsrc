@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1 1999/04/07 23:35:56 tron Exp $
+
+--- mkhybrid.8.orig	Thu Dec  4 18:18:08 1997
++++ mkhybrid.8	Thu Apr  8 01:33:53 1999
+@@ -99,8 +99,10 @@
+ .B \-m
+ .I glob
+ ]
++[
+ .B \-o
+ .I filename
++]
+ .I path
+ .SH DESCRIPTION
+ .B mkhybrid
