@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2000/10/15 17:32:44 rh Exp $
+# $NetBSD: Makefile,v 1.41 2000/10/16 10:43:42 abs Exp $
 # FreeBSD Id: Makefile,v 1.52 1997/12/14 00:58:08 asami Exp
 #
 
@@ -16,6 +16,7 @@
     SUBDIR += gv
     SUBDIR += html2ps
     SUBDIR += hugelatex
+    SUBDIR += if-psprint
     SUBDIR += jadetex
     SUBDIR += lgrind
     SUBDIR += lilypond
