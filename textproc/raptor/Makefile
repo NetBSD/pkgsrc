@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2003/09/09 10:03:50 salo Exp $
+# $NetBSD: Makefile,v 1.3 2003/09/25 04:13:06 xtraeme Exp $
 #
 
-DISTNAME=	raptor-0.9.12
+DISTNAME=	raptor-1.0.0
 CATEGORIES=	textproc
 MASTER_SITES=	http://www.redland.opensource.ac.uk/dist/source/
 
