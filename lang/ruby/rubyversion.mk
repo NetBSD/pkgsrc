@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.3 2004/11/29 07:05:00 taca Exp $
+# $NetBSD: rubyversion.mk,v 1.4 2004/12/01 15:30:16 taca Exp $
 #
 
 .ifndef _RUBYVERSION_MK
@@ -37,6 +37,11 @@ RUBY_VERSION?=		${RUBY18_VERSION}
 #	for specific version Ruby.
 #
 RUBY_VERSION_SUPPORTED?= 16 18
+
+# RUBY_VERSION_LIST defines the list of ${RUBY_VER} which is known to
+#	this framework.
+#
+RUBY_VERSION_LIST= 16 18
 
 # RUBY_NOVERSION should be set to "Yes" if the package dosen't depend on
 #	any specific version of ruby command.  In this case, package's
