@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/07/04 00:50:35 hubertf Exp $
+bin/kworldwatch
+share/kde/apps/kworldwatch/pics/flag-blue.xpm
+share/kde/apps/kworldwatch/pics/flag-green.xpm
+share/kde/apps/kworldwatch/pics/flag-yellow.xpm
+share/kde/apps/kworldwatch/pics/flag-red.xpm
+share/kde/apps/kworldwatch/pics/world.gif
+share/kde/apps/kworldwatch/pics/world2.gif
+share/kde/apps/kworldwatch/pics/world_dark.gif
+@dirrm share/kde/apps/kworldwatch/pics
+@dirrm share/kde/apps/kworldwatch
+share/kde/applnk/Utilities/KWorldWatch.kdelnk
+share/kde/icons/mini/kworldwatch.xpm
+share/kde/icons/kworldwatch.xpm

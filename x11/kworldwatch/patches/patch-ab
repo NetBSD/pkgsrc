@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 1999/07/04 00:50:35 hubertf Exp $
+
+--- kworldwatch/Makefile.in.orig	Sun Jul  4 02:14:40 1999
++++ kworldwatch/Makefile.in	Sun Jul  4 02:14:48 1999
+@@ -120,7 +120,7 @@
+ 
+ CLEANFILES = $(BUILT_SOURCES)
+ bin_PROGRAMS = kworldwatch
+-LDADD = $(all_libraries) -lkfm -lkdeui -lkdecore -lqt -lXext $(LIBSOCKET) $(KDE_RPATH)
++LDADD = $(all_libraries) -lkfm -lkdeui -lkdecore -lqt -lXext -lX11 $(LIBSOCKET) $(KDE_RPATH)
+ 
+ ICONSDIR=$(kde_icondir)
+ 
