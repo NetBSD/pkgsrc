@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2003/07/17 22:51:59 grant Exp $
+# $NetBSD: Makefile,v 1.14 2003/07/30 17:56:42 jmmv Exp $
 #
 
 DISTNAME=	upclient-4.2.1.23
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	net
 MASTER_SITES=	http://uptimes.atomicvoid.net/files/
 
@@ -18,6 +18,8 @@ ALL_TARGET=	bsd
 EGDIR=		${PREFIX}/share/examples/upclient
 CONF_FILES=	${EGDIR}/upclient.conf ${PKG_SYSCONFDIR}/upclient.conf
 CFLAGS+=	-DPKG_SYSCONFDIR=\"\\\"${PKG_SYSCONFDIR}\\\"\"
+
+RCD_SCRIPTS=	upclient
 
 BUILD_DIRS=	${WRKSRC}/src
 
@@ -38,11 +40,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/INSTALL ${PREFIX}/share/doc/upclient
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/conf/upclient.conf ${EGDIR}
-	${SED} \
-		-e 's|@PREFIX@|${PREFIX}|g' \
-		-e 's|@INSTALL@|${INSTALL}|g' \
-		-e 's|@SU@|${SU}|g' \
-		${FILESDIR}/upclient.sh >${PREFIX}/etc/rc.d/upclient
-	${CHMOD} +x ${PREFIX}/etc/rc.d/upclient
 
 .include "../../mk/bsd.pkg.mk"

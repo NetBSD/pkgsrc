@@ -1,18 +1,24 @@
-#!/bin/sh
+#!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: upclient.sh,v 1.6 2002/09/23 15:24:13 grant Exp $
+# $NetBSD: upclient.sh,v 1.7 2003/07/30 17:56:43 jmmv Exp $
+#
+# PROVIDE: upclient
+# REQUIRE: NETWORK
 #
 
-pidfile=/var/run/upclient.pid
+if [ -f /etc/rc.subr ]; then
+	. /etc/rc.subr
+fi
 
-if [ "$1" = "stop" ]; then
-	kill `cat $pidfile`
+name="upclient"
+rcvar="${name}"
+command="@PREFIX@/bin/upclient"
+upclient_user="nobody"
 
+if [ -f /etc/rc.subr ]; then
+	load_rc_config "$name"
+	run_rc_command "$1"
 else
-	if [ -x @PREFIX@/bin/upclient ]
-	then
-		@INSTALL@ -o nobody -m 644 /dev/null $pidfile
-		@SU@ -m nobody -c @PREFIX@/bin/upclient
-		echo -n ' upclient'
-	fi
+	printf ' upclient'
+	${command} ${upclient_flags} ${command_args}
 fi
