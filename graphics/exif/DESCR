@@ -1,0 +1,2 @@
+'exif' is a small command-line utility to show EXIF information hidden
+in JPEG files. I wrote it to demonstrate the power of libexif.
