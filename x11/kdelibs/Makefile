@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2002/09/01 04:26:11 hubertf Exp $
+# $NetBSD: Makefile,v 1.62 2002/10/20 14:06:00 wiz Exp $
 # FreeBSD Id: Makefile,v 1.5 1997/11/27 00:25:46 se Exp
 #
 
@@ -12,23 +12,15 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=       http://www.kde.org/
 COMMENT=	Support libraries for the KDE integrated X11 desktop
 
-DEPENDS+=	jpeg-6b:../../graphics/jpeg
-DEPENDS+=	png>=1.2.1:../../graphics/png
-DEPENDS+=	qt1-1.44:../../x11/qt1
-DEPENDS+=	tiff-[0-9]*:../../graphics/tiff
-
+USE_BUILDLINK2=	yes
 USE_X11BASE=	yes
 USE_GMAKE=	yes
 USE_LIBTOOL=	yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/admin/ltconfig
 GNU_CONFIGURE=	yes
 
-EVAL_PREFIX+=	QT1DIR=qt1
 CONFIGURE_ARGS=	"--datadir=${PREFIX}/share/kde" \
-		"--with-qt-dir=${QT1DIR}/qt1"
-CFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	"-Wl,-R${QT1DIR}/qt1/lib" \
-		"-L${QT1DIR}/qt1/lib"
+		"--with-qt-dir=${QTDIR}/qt1"
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -36,4 +28,8 @@ CONFIGURE_ENV=	KDEDIR=${PREFIX} \
 		CXXFLAGS="${CFLAGS}" \
 		all_libraries="-Wl,-R${LOCALBASE}/lib -L${LOCALBASE}/lib -Wl,-R${X11BASE}/lib -L${X11BASE}/lib"
 
+.include "../../graphics/jpeg/buildlink2.mk"
+.include "../../graphics/png/buildlink2.mk"
+.include "../../graphics/tiff/buildlink2.mk"
+.include "../../x11/qt1/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
