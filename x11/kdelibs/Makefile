@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 1999/02/15 21:33:34 tron Exp $
+# $NetBSD: Makefile,v 1.26 1999/02/17 21:55:17 tron Exp $
 # FreeBSD Id: Makefile,v 1.5 1997/11/27 00:25:46 se Exp
 #
 
@@ -21,7 +21,7 @@ CONFLICTS=	kdelibs-*
 USE_X11BASE=	yes
 USE_GMAKE=	yes
 USE_LIBTOOL=	yes
-LIBTOOL_FLAGS=	 --cplusplus --install-la
+LIBTOOL_FLAGS=	--cplusplus --install-la
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	"--x-inc=${X11BASE}/include -I${LOCALBASE}/include" \
 		"--x-lib=${X11BASE}/lib -L${LOCALBASE}/lib" \
