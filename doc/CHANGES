@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3604 2003/10/01 20:22:52 dillo Exp $
+$NetBSD: CHANGES,v 1.3605 2003/10/01 20:49:29 abs Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4039,3 +4039,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated pkgchk to 1.43 [abs 2003-10-01]
 	Updated pkglint to 3.63 [abs 2003-10-01]
 	Updated level9 to 3.0nb1 [dillo 2003-10-01]
+	Updated abcde to 2.1.4nb5 [abs 2003-10-01]
+
