@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 1999/02/02 09:51:45 tron Exp $
+# $NetBSD: Makefile,v 1.51 1999/03/12 15:50:43 agc Exp $
 # FreeBSD Id: Makefile,v 1.78 1997/10/01 08:32:59 cracauer Exp
 #
 
@@ -21,6 +21,7 @@
     SUBDIR += cvs
 #    SUBDIR += cxref
     SUBDIR += ddd
+    SUBDIR += diffutils
 #    SUBDIR += dmake
     SUBDIR += electricfence
 #    SUBDIR += f77flow
