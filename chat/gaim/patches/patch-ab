@@ -1,0 +1,29 @@
+$NetBSD: patch-ab,v 1.14 2005/03/22 09:47:47 jmmv Exp $
+
+--- src/protocols/yahoo/yahoochat.c.orig	Mon Mar 21 20:00:56 2005
++++ src/protocols/yahoo/yahoochat.c	Mon Mar 21 20:03:09 2005
+@@ -342,9 +342,12 @@
+ void yahoo_process_chat_join(GaimConnection *gc, struct yahoo_packet *pkt)
+ {
+ 	struct yahoo_data *yd = (struct yahoo_data *) gc->proto_data;
++	GaimAccount *account;
+ 	GaimConversation *c = NULL;
++	GaimConversationUiOps *ops;
+ 	GSList *l;
+ 	GList *members = NULL;
++	GList *roomies = NULL;
+ 	char *room = NULL;
+ 	char *topic = NULL;
+ 	char *someid, *someotherid, *somebase64orhashosomething, *somenegativenumber;
+@@ -443,10 +446,8 @@
+ 		yahoo_chat_add_users(GAIM_CONV_CHAT(c), members);
+ 	}
+ 
+-	GList *roomies=NULL;
+-	GaimConversationUiOps *ops;
+ 	ops = gaim_conversation_get_ui_ops(c);
+-	GaimAccount *account = gaim_connection_get_account(gc);
++	account = gaim_connection_get_account(gc);
+ 	for (l = account->deny; l != NULL; l = l->next) {
+ 		for (roomies = members; roomies; roomies = roomies->next) {
+ 			if (!gaim_utf8_strcasecmp((char *)l->data, roomies->data)) {
