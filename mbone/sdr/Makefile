@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2000/12/17 09:39:53 hubertf Exp $
+# $NetBSD: Makefile,v 1.32 2000/12/17 09:43:16 hubertf Exp $
 #
 
 DISTNAME=	sdr-3.0
@@ -15,6 +15,10 @@ CRYPTO=		yes
 USE_GMAKE=	yes
 
 .include "../../mk/bsd.prefs.mk"
+
+.if defined(USE_INET6) && ${USE_INET6} == "YES"
+CONFIGURE_ARGS+= --enable-ipv6
+.endif
 
 .if exists(/usr/include/sys/inttypes.h)
 EXTRA_FLAGS+=	-DHAVE_SYS_INTTYPES_H
