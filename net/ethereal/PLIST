@@ -1,29 +1,24 @@
-@comment $NetBSD: PLIST,v 1.6.2.1 2003/03/10 18:26:52 grant Exp $
+@comment $NetBSD: PLIST,v 1.6.2.2 2003/06/19 00:09:16 grant Exp $
 bin/editcap
 bin/ethereal
 bin/idl2eth
 bin/mergecap
 bin/tethereal
 bin/text2pcap
-lib/ethereal/plugins/${PKGVERSION}/coseventcomm.a
+lib/ethereal/plugins/${PKGVERSION}/artnet.la
+lib/ethereal/plugins/${PKGVERSION}/artnet.so
 lib/ethereal/plugins/${PKGVERSION}/coseventcomm.la
 lib/ethereal/plugins/${PKGVERSION}/coseventcomm.so
-lib/ethereal/plugins/${PKGVERSION}/cosnaming.a
 lib/ethereal/plugins/${PKGVERSION}/cosnaming.la
 lib/ethereal/plugins/${PKGVERSION}/cosnaming.so
-lib/ethereal/plugins/${PKGVERSION}/docsis.a
 lib/ethereal/plugins/${PKGVERSION}/docsis.la
 lib/ethereal/plugins/${PKGVERSION}/docsis.so
-lib/ethereal/plugins/${PKGVERSION}/gryphon.a
 lib/ethereal/plugins/${PKGVERSION}/gryphon.la
 lib/ethereal/plugins/${PKGVERSION}/gryphon.so
-lib/ethereal/plugins/${PKGVERSION}/megaco.a
 lib/ethereal/plugins/${PKGVERSION}/megaco.la
 lib/ethereal/plugins/${PKGVERSION}/megaco.so
-lib/ethereal/plugins/${PKGVERSION}/mgcp.a
 lib/ethereal/plugins/${PKGVERSION}/mgcp.la
 lib/ethereal/plugins/${PKGVERSION}/mgcp.so
-lib/ethereal/plugins/${PKGVERSION}/pcli.a
 lib/ethereal/plugins/${PKGVERSION}/pcli.la
 lib/ethereal/plugins/${PKGVERSION}/pcli.so
 man/man1/editcap.1
