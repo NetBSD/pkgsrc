@@ -1,0 +1,4 @@
+libaura is a LIBrary of Assorted Useful Reusable Abstractions.  Notably,
+it provides dictionary and extensible buffer data types, memory management
+functions (wrappers to malloc() and free()), and filesystem predicates
+(is_file(), is_dir(), etc.)

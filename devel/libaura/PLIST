@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/02/09 05:40:28 xtraeme Exp $
+include/aura/buffer.h
+include/aura/dict.h
+include/aura/fspred.h
+include/aura/mem.h
+include/aura/popen.h
+lib/libaura.a
+lib/libaura.so
+lib/libaura.so.2
+lib/libaura.so.${PKGVERSION}
+lib/libaura_pic.a
+@dirrm include/aura

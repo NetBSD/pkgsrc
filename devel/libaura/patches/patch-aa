@@ -1,0 +1,44 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/02/09 05:40:28 xtraeme Exp $
+
+--- fspred.c.orig	2005-02-09 04:36:15.000000000 +0100
++++ fspred.c	2005-02-09 04:41:15.000000000 +0100
+@@ -49,6 +49,12 @@
+ #include <stdlib.h>
+ #include <string.h>
+ 
++#if (__NetBSD_Version__ >= 200040000)
++#define STATFS statvfs
++#else
++#define STATFS statfs
++#endif
++
+ /** PREDICATES **/
+ 
+ int
+@@ -160,7 +166,7 @@
+ int
+ is_mountpoint_mounted(char *mtpt)
+ {
+-	struct statfs *mt_array, *mt_ptr;
++	struct STATFS *mt_array, *mt_ptr;
+ 	int count;
+ 
+ 	count = getmntinfo(&mt_array, MNT_WAIT);
+@@ -174,7 +180,7 @@
+ int
+ is_device_mounted(char *device)
+ {
+-	struct statfs *mt_array, *mt_ptr;
++	struct STATFS *mt_array, *mt_ptr;
+ 	int count;
+ 
+ 	count = getmntinfo(&mt_array, MNT_WAIT);
+@@ -188,7 +194,7 @@
+ int
+ is_any_slice_mounted(char *diskdev)
+ {
+-	struct statfs *mt_array, *mt_ptr;
++	struct STATFS *mt_array, *mt_ptr;
+ 	int count;
+ 
+ 	count = getmntinfo(&mt_array, MNT_WAIT);
