@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.24 2004/02/03 22:35:05 jlam Exp $
+# $NetBSD: gcc.mk,v 1.25 2004/02/04 00:11:07 jlam Exp $
 
 .if !defined(COMPILER_GCC_MK)
 COMPILER_GCC_MK=	defined
@@ -17,6 +17,45 @@ _GCC2_PATTERNS=	2.8 2.8.* 2.9 2.9.* 2.[1-8][0-9] 2.[1-8][0-9].*	\
 # _GCC3_PATTERNS matches N s.t. 2.95.3 < N.
 _GCC3_PATTERNS=	2.95.[4-9]* 2.95.[1-9][0-9]* 2.9[6-9] 2.9[6-9].*	\
 		2.[1-9][0-9][0-9]* 3.* [4-9]*
+
+_CC=	${CC:C/^/_asdf_/1:M_asdf_*:S/^_asdf_//}
+.for _dir_ in ${PATH:C/\:/ /g}
+.  if empty(_CC:M/*)
+.    if exists(${_dir_}/${CC:C/^/_asdf_/1:M_asdf_*:S/^_asdf_//})
+_CC=	${_dir_}/${CC:C/^/_asdf_/1:M_asdf_*:S/^_asdf_//}
+.    endif
+.  endif
+.endfor
+
+.if !defined(_GCC_VERSION)
+_GCC_VERSION_STRING!=	( ${_CC} -v || ${ECHO} 0 ) 2>&1 | ${GREP} 'gcc version'
+.  if !empty(_GCC_VERSION_STRING:Megcs*)
+_GCC_VERSION=	2.8.1		# egcs is considered to be gcc-2.8.1.
+.  elif !empty(_GCC_VERSION_STRING:Mgcc*)
+_GCC_VERSION!=	${_CC} -dumpversion
+.  else
+_GCC_VERSION=	0
+.  endif
+.endif
+
+.if !empty(_CC:M${LOCALBASE}/*)
+_IS_BUILTIN_GCC=	NO
+GCC_REQD+=		${_GCC_VERSION}
+.else
+.  if !empty(_CC:M/*)
+#
+# GCC in older versions of Darwin report "Apple Computer ... based on gcc
+# version ...", so we can't just grep for "^gcc".
+#
+.    if ${_GCC_VERSION} != "0"
+_IS_BUILTIN_GCC=	YES
+.    else
+_IS_BUILTIN_GCC=	NO
+.    endif
+.  else
+_IS_BUILTIN_GCC=	NO
+.  endif
+.endif
 
 # Distill the GCC_REQD list into a single _GCC_REQD value that is the
 # highest version of GCC required.
@@ -125,46 +164,10 @@ USE_GCC_SHLIB?=		yes
 _USE_PKGSRC_GCC=	NO
 .endif
 
-_CC=	${CC:C/^/_asdf_/1:M_asdf_*:S/^_asdf_//}
-.for _dir_ in ${PATH:C/\:/ /g}
-.  if empty(_CC:M/*)
-.    if exists(${_dir_}/${CC:C/^/_asdf_/1:M_asdf_*:S/^_asdf_//})
-_CC=	${_dir_}/${CC:C/^/_asdf_/1:M_asdf_*:S/^_asdf_//}
-.    endif
-.  endif
-.endfor
-
-.if !empty(_CC:M${LOCALBASE}/*)
-_IS_BUILTIN_GCC=	NO
-.else
-.  if !empty(_CC:M/*)
-#
-# GCC in older versions of Darwin report "Apple Computer ... based on gcc
-# version ...", so we can't just grep for "^gcc".
-#
-_IS_BUILTIN_GCC!=	\
-	if ${_CC} -v 2>&1 | ${GREP} -q "gcc version"; then	\
-		${ECHO} "YES";						\
-	else								\
-		${ECHO} "NO";						\
-	fi
-.  else
-_IS_BUILTIN_GCC=	NO
-.  endif
-.endif
-
 .if !defined(_USE_PKGSRC_GCC)
 .  if !empty(_IS_BUILTIN_GCC:M[nN][oO])
 _USE_PKGSRC_GCC=	YES
 .  else
-_GCC_VERSION_STRING!=	${_CC} -v 2>&1 | ${GREP} 'gcc version'
-.    if !empty(_GCC_VERSION_STRING:Megcs*)
-_GCC_VERSION=	2.8.1		# egcs is considered to be gcc-2.8.1.
-.    elif !empty(_GCC_VERSION_STRING:Mgcc*)
-_GCC_VERSION!=	${_CC} -dumpversion
-.    else
-_GCC_VERSION=	0
-.    endif
 _GCC_TEST_DEPENDS=	gcc>=${_GCC_REQD}
 _GCC_PKG=		gcc-${_GCC_VERSION}
 _USE_PKGSRC_GCC!=	\
