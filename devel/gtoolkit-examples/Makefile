@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/04/25 22:17:59 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2004/05/13 13:10:19 wiz Exp $
 #
 .include "../../x11/gtoolkit/Makefile.common"
 
@@ -9,6 +9,7 @@ CATEGORIES=	devel
 COMMENT=	Objective-C examples for GToolKit
 
 DISTINFO_FILE=	${.CURDIR}/../../x11/gtoolkit/distinfo
+PATCHDIR=	${.CURDIR}/../../x11/gtoolkit/patches
 BUILD_DIRS=	${WRKSRC}/Examples
 
 .include "../../x11/gtoolkit/buildlink3.mk"
