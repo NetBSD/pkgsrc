@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2001/02/25 04:17:43 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 2001/02/28 10:45:30 wiz Exp $
 
 DISTNAME=		w32api-0.4-20001122-bjy
 PKGNAME=		w32api-0.4nb2
+WRKSRC=			${WRKDIR}/${DISTNAME:S/-bjy//}
 CATEGORIES=		devel
 MASTER_SITES=		http://my.dreamwiz.com/bangjy/
-WRKSRC=			${WRKDIR}/${DISTNAME:S/-bjy//}
 
 MAINTAINER=		oki@yha.att.ne.jp
 HOMEPAGE=		http://www.acc.umu.se/~anorland/gnu-win32/
@@ -24,7 +24,7 @@ BUILD_DEPENDS+=		${PREFIX}/cross/i386-netbsdpe/bin/gcc:../../cross/i386-netbsdpe
 do-build:
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/cross/i386-netbsdpe/include 
+	${INSTALL_DATA_DIR} ${PREFIX}/cross/i386-netbsdpe/include
 	${CP} ${WRKSRC}/include/*.h ${PREFIX}/cross/i386-netbsdpe/include
 
 .include "../../mk/bsd.pkg.mk"
