@@ -1,0 +1,22 @@
+Welcome to the NetBSD Packages System
+=====================================
+
+Below this directory, you will find packages to build (compiled) programs
+from sources. To do so, cd into one of the sub-directories, and enter:
+
+	make
+	make install
+
+To make a precompiled binary package that can be installed on another
+system, enter
+
+	make package
+
+after that. The precompiled package will be placed in the "packages" 
+subdirectory. A collection of precompiled binary packages can be found
+on ftp.netbsd.org in /pub/NetBSD/packages. To install a precompiled 
+binary package, hand it's filename or an ftp://-URL pointing to it to
+pkg_add(1).
+
+See http://www.netbsd.org/Documentation/netbsd/Packages.txt for more
+information on the packages system.
