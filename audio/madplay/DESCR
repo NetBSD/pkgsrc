@@ -1,15 +1,24 @@
-MAD is a high-quality MPEG audio decoder. It currently supports MPEG 1 as
-well as the MPEG 2 extension to Lower Sampling Frequencies. All three
-audio layers (Layer I, Layer II, and Layer III aka MP3) are fully
-implemented.
+`madplay' is a command-line MPEG audio decoder and player based on the MAD
+library (libmad).
 
-MAD does not yet support MPEG 2 multichannel audio (although it should be
-backward compatible with such streams), nor does it support the so-called
-MPEG 2.5 format.
+After decoding, `madplay' sends the output to an audio output module. The
+following audio output modules are provided:
 
-MAD has the following special features:
+  - an Open Sound System interface module (for Linux, et al.)
+  - a Sun audio interface module (for Solaris, NetBSD, et al.)
+  - a Mac OS Carbon audio interface module (for Mac OS X)
+  - a Win32 audio interface module (for Windows 95/98/NT/2000, et al.)
+  - an ALSA audio interface module
+  - a QNX audio interface module
+  - an EsounD interface module
+  - a CD audio output module (*.cdr, *.cda)
+  - an Audio IFF output module (*.aif, *.aiff)
+  - a Microsoft RIFF/WAVE file output module (*.wav)
+  - a Sun/NeXT audio file output module (*.au, *.snd)
+  - a raw PCM output module
+  - a hex output module (for debugging and compliance testing)
+  - a null module (for timing the decoder)
 
-  - 24-bit PCM output
-  - 100% fixed-point (integer) computation
-  - completely new implementation based on the ISO/IEC standards
-  - distributed under the terms of the GNU General Public License (GPL)
+`madplay' will also read and display ID3 tag information, and further
+supports the relative volume adjustment information (RVA2) in such tags,
+as written by tools like `normalize'.
