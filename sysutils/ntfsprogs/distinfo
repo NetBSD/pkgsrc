@@ -1,0 +1,11 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/10/05 12:39:38 agc Exp $
+
+SHA1 (ntfsprogs-1.9.4.tar.gz) = 1250e161f2ee7182bf6e473d4589b5139e3fda8a
+Size (ntfsprogs-1.9.4.tar.gz) = 701154 bytes
+SHA1 (patch-aa) = 1e63d62190b3d2ca78d96c9ba2398232c656a5dc
+SHA1 (patch-ab) = 6d571d962e702d776792c84a81bdaf8e7b8357e4
+SHA1 (patch-ac) = 3ebaa59a289c4085cfec2e27b7e94ce95ff9e74d
+SHA1 (patch-ad) = 576f8505b95965e0c49ec7e63516b49edd5f5679
+SHA1 (patch-ae) = 7bfacd98899ddb63cf73132a7e070186452bd46b
+SHA1 (patch-af) = f892b293fd235aec9ed4340a7ceb21620b2cbe5c
+SHA1 (patch-ag) = 79883013e1ee78c7d8901601badbe9f1857dab65

@@ -1,0 +1,97 @@
+$NetBSD: patch-ad,v 1.1.1.1 2004/10/05 12:39:38 agc Exp $
+
+--- libntfs/debug.c.orig	Sat Sep  4 06:16:32 2004
++++ libntfs/debug.c
+@@ -25,18 +25,20 @@
+ #include "attrib.h"
+ #include "debug.h"
+ 
++FILE *ntfs_err_out = stderr;
++
+ /**
+- * Sprintf - silencable output to stderr
+- * @silent:	if 0 string is output to stderr
++ * Sprintf - silencable output to ntfs_err_out
++ * @silent:	if 0 string is output to ntfs_err_out
+  * @fmt:	printf style format string
+  * @...:	optional arguments for the printf style format string
+  *
+- * If @silent is 0, output the string @fmt to stderr.
++ * If @silent is 0, output the string @fmt to ntfs_err_out.
+  *
+  * This is basically a replacement for:
+  *
+  *	if (!silent)
+- *		fprintf(stderr, fmt, ...);
++ *		fprintf(ntfs_err_out, fmt, ...);
+  *
+  * It is more convenient to use Sprintf instead of the above code and perhaps
+  * more importantly, Sprintf makes it much easier to turn it into a "do
+@@ -48,41 +50,61 @@
+ 	int eo;
+ 	va_list ap;
+ 
+-	if (silent)
++	if (silent || !ntfs_err_out)
+ 		return;
+ 	eo = errno;
+ 	va_start(ap, fmt);
+-	vfprintf(stderr, fmt, ap);
++	vfprintf(ntfs_err_out, fmt, ap);
+ 	va_end(ap);
++	fflush(ntfs_err_out);
+ 	errno = eo;
+ }
+ 
+ #ifdef DEBUG
+ 
+-/* Debug output to stderr.  To get it run ./configure --enable-debug. */
++#ifdef HAVE_STRING_H
++#include <string.h>
++#endif
++
++/* Debug output to ntfs_err_out.  To get it run ./configure --enable-debug. */
+ 
+ void __Dprintf(const char *fmt, ...)
+ {
+ 	int eo = errno;
+ 	va_list ap;
+ 
++	if (!ntfs_err_out)
++		return;
+ 	va_start(ap, fmt);
+-	vfprintf(stderr, fmt, ap);
++	vfprintf(ntfs_err_out, fmt, ap);
+ 	va_end(ap);
++	fflush(ntfs_err_out);
+ 	errno = eo;
+ }
+ 
+ void __Dputs(const char *s)
+ {
+ 	int eo = errno;
+-	fprintf(stderr, "%s\n", s);
++
++	if (!ntfs_err_out)
++		return;
++	fprintf(ntfs_err_out, "%s\n", s);
++	fflush(ntfs_err_out);
+ 	errno = eo;
+ }
+ 
+ void __Dperror(const char *s)
+ {
+ 	int eo = errno;
+-	perror(s);
++
++	if (!ntfs_err_out)
++		return;
++	if (s && s[0]) {
++		fprintf(ntfs_err_out, "%s: %s\n", s, strerror(eo));
++	} else {
++		fprintf(ntfs_err_out, "%s\n", strerror(eo));
++	}
++	fflush(ntfs_err_out);
+ 	errno = eo;
+ }
+ 

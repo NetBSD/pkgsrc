@@ -1,0 +1,39 @@
+$NetBSD: patch-ae,v 1.1.1.1 2004/10/05 12:39:38 agc Exp $
+
+--- libntfs/device.c.orig	Sat Sep  4 06:16:32 2004
++++ libntfs/device.c
+@@ -52,6 +52,10 @@
+ #define HDIO_GETGEO	0x0301	/* Get device geometry. */
+ #endif
+ 
++#if defined(__NetBSD__)
++#include <sys/disklabel.h> /* XXX autoconf this ? */
++#endif
++
+ /**
+  * ntfs_device_alloc - allocate an ntfs device structure and pre-initialize it
+  * name:	name of the device (must be present)
+@@ -498,6 +502,23 @@ s64 ntfs_device_size_get(struct ntfs_dev
+ 					(unsigned long)this_floppy.size,
+ 					(unsigned long)this_floppy.size);
+ 			return (s64)this_floppy.size * 512 / block_size;
++		}
++	}
++#endif
++#ifdef DIOCGPART
++	{
++		struct stat st;
++		if (dev->d_ops->stat(dev, &st) >= 0) {
++			struct disklabel disklabel;
++			int secsize;
++			s64 psize;
++			if (dev->d_ops->ioctl(dev, DIOCGDINFO, &disklabel) >= 0) {
++				secsize = disklabel.d_secsize;
++				psize = disklabel.d_partitions[DISKPART(st.st_rdev)].p_size;
++				Dprintf("DIOCGPART nr %d byte blocks = %lld (0x%llx)\n",
++						secsize, psize, psize);
++				return psize * secsize / block_size;
++			}
+ 		}
+ 	}
+ #endif

@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/10/05 12:39:38 agc Exp $
+
+--- include/ntfs/debug.h.orig	Sat Sep  4 06:16:32 2004
++++ include/ntfs/debug.h
+@@ -53,6 +53,8 @@ extern void __Dputs(const char *s);
+ extern void __Dperror(const char *s);
+ #define Dperror(s)		__Dperror(s)
+ 
++extern FILE *ntfs_err_out;
++
+ extern void ntfs_debug_runlist_dump(const struct _runlist_element *rl);
+ 
+ #else /* if !DEBUG */
