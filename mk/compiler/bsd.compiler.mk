@@ -1,4 +1,4 @@
-# $NetBSD: bsd.compiler.mk,v 1.1 2004/02/01 00:31:00 jlam Exp $
+# $NetBSD: bsd.compiler.mk,v 1.2 2004/02/01 01:31:58 jlam Exp $
 #
 # This Makefile fragment implements handling for supported C/C++/Fortran
 # compilers.
@@ -19,6 +19,7 @@
 #
 #	The default is "gcc".  You can use ccache and/or distcc with an
 #	appropriate PKGSRC_COMPILER setting, e.g. "ccache distcc gcc".
+#	The chain should always end in a real compiler.
 #
 # GCC_REQD
 #	A list of version numbers used to determine the minimum
