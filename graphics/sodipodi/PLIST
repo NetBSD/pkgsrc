@@ -1,9 +1,11 @@
-@comment $NetBSD: PLIST,v 1.3 2003/01/30 17:57:45 salo Exp $
+@comment $NetBSD: PLIST,v 1.4 2003/03/10 23:02:18 wiz Exp $
 bin/sodipodi
 man/man1/sodipodi.1
-share/gnome/apps/Graphics/sodipodi.desktop
+share/applications/sodipodi.desktop
+${PKGLOCALEDIR}/locale/am/LC_MESSAGES/sodipodi.mo
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/sodipodi.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/sodipodi.mo
+${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/sodipodi.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/sodipodi.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/sodipodi.mo
 ${PKGLOCALEDIR}/locale/el/LC_MESSAGES/sodipodi.mo
@@ -26,7 +28,6 @@ ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/sodipodi.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/sodipodi.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/sodipodi.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/sodipodi.mo
-share/oaf/GNOME_Sodipodi.oaf
 share/pixmaps/sodipodi.png
 share/sodipodi/about.svg
 share/sodipodi/add.xpm
@@ -42,7 +43,6 @@ share/sodipodi/al_right_in.xpm
 share/sodipodi/al_right_out.xpm
 share/sodipodi/al_top_in.xpm
 share/sodipodi/al_top_out.xpm
-share/sodipodi/align.glade
 share/sodipodi/align_bc.xpm
 share/sodipodi/align_bl.xpm
 share/sodipodi/align_br.xpm
@@ -58,7 +58,6 @@ share/sodipodi/angle_90.xpm
 share/sodipodi/angle_any.xpm
 share/sodipodi/arrows_hor.xpm
 share/sodipodi/arrows_ver.xpm
-share/sodipodi/back.xpm
 share/sodipodi/cap_butt.xpm
 share/sodipodi/cap_round.xpm
 share/sodipodi/cap_square.xpm
@@ -67,15 +66,11 @@ share/sodipodi/create_new.xpm
 share/sodipodi/curve.xpm
 share/sodipodi/cusp.xpm
 share/sodipodi/del.xpm
-share/sodipodi/delete.xpm
 share/sodipodi/delete_xml_attribute.xpm
 share/sodipodi/delete_xml_node.xpm
-share/sodipodi/desktop.glade
 share/sodipodi/dimension_hor.xpm
 share/sodipodi/dimension_ver.xpm
-share/sodipodi/display.glade
 share/sodipodi/div.xpm
-share/sodipodi/document.glade
 share/sodipodi/draw_arc.xpm
 share/sodipodi/draw_dynahand.xpm
 share/sodipodi/draw_freehand.xpm
@@ -122,7 +117,7 @@ share/sodipodi/font.xpm
 share/sodipodi/forward.xpm
 share/sodipodi/freehand.xpm
 share/sodipodi/guide_dialog.png
-share/sodipodi/item.glade
+share/sodipodi/icons.svg
 share/sodipodi/join.xpm
 share/sodipodi/join_bevel.xpm
 share/sodipodi/join_miter.xpm
@@ -150,7 +145,6 @@ share/sodipodi/object_flip_hor.xpm
 share/sodipodi/object_flip_ver.xpm
 share/sodipodi/object_font.xpm
 share/sodipodi/object_layout.xpm
-share/sodipodi/object_props.glade
 share/sodipodi/object_reset.xpm
 share/sodipodi/object_rotate.xpm
 share/sodipodi/object_stroke.xpm
@@ -185,13 +179,11 @@ share/sodipodi/skew.xpm
 share/sodipodi/skew_hor.xpm
 share/sodipodi/skew_ver.xpm
 share/sodipodi/smooth.xpm
-share/sodipodi/sodipodi.glade
 share/sodipodi/stroke.xpm
 share/sodipodi/sym.xpm
 share/sodipodi/text.xpm
 share/sodipodi/toback.xpm
 share/sodipodi/tofront.xpm
-share/sodipodi/toolbox.glade
 share/sodipodi/toolbox_draw.xpm
 share/sodipodi/toolbox_edit.xpm
 share/sodipodi/toolbox_file.xpm
@@ -199,11 +191,9 @@ share/sodipodi/toolbox_node.xpm
 share/sodipodi/toolbox_object.xpm
 share/sodipodi/toolbox_select.xpm
 share/sodipodi/toolbox_zoom.xpm
-share/sodipodi/transformation.glade
 share/sodipodi/unknown.xpm
 share/sodipodi/writing_mode_lr.xpm
 share/sodipodi/writing_mode_tb.xpm
-share/sodipodi/xml-tree.glade
 share/sodipodi/zoom.xpm
 share/sodipodi/zoom_1_to_1.xpm
 share/sodipodi/zoom_1_to_2.xpm
