@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5114 2004/03/07 00:09:41 snj Exp $
+$NetBSD: CHANGES,v 1.5115 2004/03/07 01:17:33 itojun Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1196,3 +1196,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added gnats-4.0 [recht 2004-03-06]
 	Added py-Gnosis-Utils-1.1.1 [recht 2004-03-06]
 	Updated bomberclone to 0.11.2 [snj 2004-03-07]
+	Updated cue to 20040301 [itojun 2004-03-07]
