@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2766 2004/12/26 02:44:22 wiz Exp $
+$NetBSD: TODO,v 1.2767 2004/12/26 04:45:56 minskim Exp $
 
 Suggested new packages
 ======================
@@ -1167,7 +1167,6 @@ Suggested package updates
 	o xblast-2.9.22
 	o xboard-4.2.7
 	o xcb-2.4
-	o xchm-0.9.7
 	o xcursor-1.1.2
 	o xdaliclock-2.20
 	o xdialog-2.1.2
