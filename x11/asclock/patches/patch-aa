@@ -1,52 +1,45 @@
-$NetBSD: patch-aa,v 1.1 1999/01/19 00:59:33 hubertf Exp $
+$NetBSD: patch-aa,v 1.2 1999/10/07 17:23:01 jlam Exp $
 
---- asclock.c.orig	Sat Apr 11 07:12:23 1998
-+++ asclock.c	Sat Dec  5 02:57:12 1998
+--- asclock.c.orig	Sat Sep 26 17:05:03 1998
++++ asclock.c	Thu Oct  7 02:57:23 1999
 @@ -19,6 +19,7 @@
  int ONLYSHAPE=0; /* default value is noshape */
  int ITBLINKS=1;  /* default is blinking */
  int ICONIFIED=0; /* default is not iconified */
-+int WITHDRAWN=0; /* default is not withdrawn */
++int ITDOCKS=0;   /* default is not Docking mode */
+ int YEAR=0;      /* default is to show time, not year */
  /* led positions *************************************************************/
  int twelve[5]  = {5, 14, 24, 28, 37};
- int twfour[5]  = {4,  8, 17, 22, 31};
-@@ -91,6 +92,7 @@
+@@ -88,11 +89,12 @@
+ "    -monthxpm <xpm>         month xpm",
+ "    -clockxpm <xpm>         clock xpm",
+ "    -weekdayxpm <xpm>       weekday xpm",
++"    -year                   show year instead of time",
+ "    -position [+|-]x[+|-]y  position of asclock",
  "    -shape                  without groundplate",
  "    -noblink                don't blink",
  "    -iconic                 start up as icon",
-+"    -withdrawn              start up in withdrawn mode",
+-"    -year                   show year instead of time",
++"    -dock                   Window Maker docking",
  NULL
  };
  
-@@ -150,10 +152,18 @@
- 	readmonthxpm = 1;
+@@ -173,6 +175,9 @@
+       case 'n':
+         ITBLINKS = 0;
+         continue;
++      case 'd':
++        ITDOCKS = 1;
++        continue;
+       case 'y':
+ 	YEAR = 1;
  	continue;
-       case 'w':
--	if(++i >=argc) usage();
--	strcpy(&weekxpm[0], argv[i]);
--	readweekxpm = 1;
--	continue;
-+	switch(arg[2]) {
-+	case 'e':
-+	  if(++i >=argc) usage();
-+	  strcpy(&weekxpm[0], argv[i]);
-+	  readweekxpm = 1;
-+	  continue;
-+	case 'i':
-+          WITHDRAWN=1;
-+	  continue;
-+	default:
-+	  usage();
-+	}
-       case 's':
- 	ONLYSHAPE=1;
- 	continue;
-@@ -251,13 +261,17 @@
+@@ -256,13 +261,17 @@
      XShapeCombineMask(dpy, iconwin, ShapeBounding, 0, 0, pixmask, ShapeSet);
    }
    
 -  mywmhints.initial_state = (ICONIFIED ? IconicState : NormalState);
-+  mywmhints.initial_state = WITHDRAWN ? WithdrawnState :
++  mywmhints.initial_state = ITDOCKS ? WithdrawnState :
 +	(ICONIFIED ? IconicState : NormalState);
    mywmhints.icon_window = iconwin;
    mywmhints.icon_x = mysizehints.x;
