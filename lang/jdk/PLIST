@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:23:51 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/07/27 21:32:48 jschauma Exp $
 bin/i386/green_threads/javah_g
 bin/i386/green_threads/javah
 bin/i386/green_threads/java_g
@@ -574,3 +574,4 @@ index.html
 @dirrm bin/i386/green_threads
 @dirrm bin/i386
 @dirrm bin
+@unexec ${RMDIR} %D 2>/dev/null || ${TRUE}
