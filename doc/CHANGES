@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.253 2002/10/14 15:28:42 hubertf Exp $
+$NetBSD: CHANGES,v 1.254 2002/10/14 16:48:01 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3257,3 +3257,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated kde to 3.0.4 [skrll 2002-10-14]
 	Updated pth to 1.4.1nb3 [skrll 2002-10-14]
 	Updated pkg_tarup to 1.2 [hubertf 2002-10-14]
+	Added grep 2.5 [bouyer 2002-10-14]
