@@ -1,12 +1,12 @@
-$NetBSD: patch-aa,v 1.1 2004/04/12 02:41:59 kristerw Exp $
+$NetBSD: patch-aa,v 1.2 2005/01/26 19:28:11 jmmv Exp $
 
---- gnome-spell/Makefile.in.orig	Mon Apr 12 02:19:34 2004
-+++ gnome-spell/Makefile.in	Mon Apr 12 02:21:36 2004
-@@ -138,7 +138,6 @@
-         -DGNOMELOCALEDIR=\""$(datadir)/locale"\"        \
- 	-DGLADE_DATADIR=\"$(gladedir)\"			\
- 	-DPLUGIN_DIR=\""$(PLUGIN_DIR)"\"		\
--	-DGTK_DISABLE_DEPRECATED=1			\
- 	-DASPELL_DICT=\""$(ASPELL_DICT)"\"		\
- 	$(GNOME_SPELL_CFLAGS)				\
- 	$(END)
+--- po/Makefile.in.in.orig	2005-01-24 19:58:52.000000000 +0100
++++ po/Makefile.in.in
+@@ -33,6 +33,7 @@ gnulocaledir = $(datadir)/locale
+ gettextsrcdir = $(datadir)/glib-2.0/gettext/po
+ subdir = po
+ 
++mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+ INSTALL = @INSTALL@
+ INSTALL_DATA = @INSTALL_DATA@
+ 
