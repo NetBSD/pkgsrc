@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2000/07/17 13:58:22 agc Exp $
+# $NetBSD: Makefile,v 1.10 2000/09/03 13:49:08 wiz Exp $
 
 DISTNAME=	korganizer-1.1.2
 CATEGORIES=	kde
@@ -17,7 +17,7 @@ GNU_CONFIGURE=	yes
 
 EVAL_PREFIX+=	QT1DIR=qt1 KDEBASEDIR=kdebase
 CONFIGURE_ARGS=	"--datadir=${KDEBASEDIR}/share/kde" \
-		"--with-qt-dir=${QT1DIR}/qt1" 
+		"--with-qt-dir=${QT1DIR}/qt1"
 CFLAGS+=	-I${LOCALBASE}/include
 CONFIGURE_ENV=	KDEDIR=${KDEBASEDIR} \
 		QTDIR=${QT1DIR}/qt1 \
