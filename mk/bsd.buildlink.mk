@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink.mk,v 1.55 2002/02/26 22:24:00 jlam Exp $
+# $NetBSD: bsd.buildlink.mk,v 1.56 2002/03/08 19:33:38 jlam Exp $
 #
 # This Makefile fragment is included by package buildlink.mk files.  This
 # file does the following things:
@@ -190,6 +190,10 @@ BUILDLINK_CONFIG_WRAPPER_SED?=		# empty
 _BUILDLINK_CONFIG_WRAPPER_POST_SED+=					\
 	-e "s|-I${LOCALBASE}/|-I${BUILDLINK_DIR}/|g"			\
 	-e "s|-L${LOCALBASE}/|-L${BUILDLINK_DIR}/|g"
+_BUILDLINK_CONFIG_WRAPPER_SED=						\
+	${_BUILDLINK_CONFIG_WRAPPER_PRE_SED}				\
+	${BUILDLINK_CONFIG_WRAPPER_SED}					\
+	${_BUILDLINK_CONFIG_WRAPPER_POST_SED}
 
 _BUILDLINK_CONFIG_WRAPPER_USE: .USE
 	${_PKG_SILENT}${_PKG_DEBUG}					\
@@ -200,8 +204,7 @@ _BUILDLINK_CONFIG_WRAPPER_USE: .USE
 		(${ECHO} '#!/bin/sh';					\
 		${ECHO} '';						\
 		${ECHO} '${ECHO} "`${BUILDLINK_CONFIG.${.TARGET:S/-buildlink-config-wrapper//}} $$*`" | ${SED} \'; \
-		${ECHO} '	${BUILDLINK_CONFIG_WRAPPER_SED} \';	\
-		${ECHO} '	${_BUILDLINK_CONFIG_WRAPPER_POST_SED}'; \
+		${ECHO} '	${_BUILDLINK_CONFIG_WRAPPER_SED} \';	\
 		) > ${BUILDLINK_CONFIG_WRAPPER.${.TARGET:S/-buildlink-config-wrapper//}}; \
 		${CHMOD} +x ${BUILDLINK_CONFIG_WRAPPER.${.TARGET:S/-buildlink-config-wrapper//}}; \
 		${ECHO} ${BUILDLINK_CONFIG.${.TARGET:S/-buildlink-config-wrapper//}} >> $${cookie}; \
@@ -338,12 +341,15 @@ REPLACE_BUILDLINK_SED?=		# empty
 _REPLACE_BUILDLINK_POST_SED+=						\
 	-e "s|-I${BUILDLINK_DIR}/|-I${LOCALBASE}/|g"			\
 	-e "s|-L${BUILDLINK_DIR}/|-L${LOCALBASE}/|g"
+_REPLACE_BUILDLINK_SED=							\
+	${_REPLACE_BUILDLINK_PRE_SED}					\
+	${REPLACE_BUILDLINK_SED}					\
+	${_REPLACE_BUILDLINK_POST_SED}
 
 BUILDLINK_SUBST_MESSAGE.unbuildlink=	\
 	"Fixing directory and library names in files-to-be-installed."
 BUILDLINK_SUBST_FILES.unbuildlink=	${REPLACE_BUILDLINK}
-BUILDLINK_SUBST_SED.unbuildlink=	${REPLACE_BUILDLINK_SED}	\
-					${_REPLACE_BUILDLINK_POST_SED}	\
+BUILDLINK_SUBST_SED.unbuildlink=	${_REPLACE_BUILDLINK_SED}	\
 					${REPLACE_LIBNAMES_SED}		\
 					${REPLACE_RPATH_SED}
 
