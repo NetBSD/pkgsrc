@@ -1,0 +1,11 @@
+$NetBSD: patch-ab,v 1.1.1.1 2001/05/14 14:42:20 wiz Exp $
+
+--- appFrame/appFileChooser.c.orig	Mon Mar 27 05:09:43 2000
++++ appFrame/appFileChooser.c	Fri Apr 21 21:34:20 2000
+@@ -633,5 +633,5 @@
+     XtSetArg( al[ac], XmNuserData,	(XtPointer)aci ); ac++;
+     XtSetArg( al[ac], XmNdialogStyle,	XmDIALOG_APPLICATION_MODAL ); ac++;
+-#   if	XmVersion >= 2000
++#   if	XmVersion >= 2000 && !defined(LESSTIF_VERSION)
+     XtSetArg( al[ac], XmNfileFilterStyle,
+ 					XmFILTER_HIDDEN_FILES ); ac++;
