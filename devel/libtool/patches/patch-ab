@@ -1,0 +1,29 @@
+$NetBSD: patch-ab,v 1.8 2000/06/01 09:36:47 rh Exp $
+
+--- ltmain.in.orig	Sat May 27 03:53:15 2000
++++ ltmain.in	Thu Jun  1 11:21:17 2000
+@@ -1154,6 +1154,24 @@
+ 	continue
+ 	;;
+ 
++      -Wl,*)
++       args=`$echo "X$arg" | $Xsed -e "$sed_quote_subst" -e 's/^-Wl,//'`
++       arg=
++       IFS="${IFS=     }"; save_ifs="$IFS"; IFS=','
++       for flag in $args; do
++         IFS="$save_ifs"
++         case "$flag" in
++           *[\[\~\#\^\&\*\(\)\{\}\|\;\<\>\?\'\ \	]*|*]*|"")
++           flag="\"$flag\""
++           ;;
++         esac
++         arg="$arg $wl$flag"
++         linkopts="$linkopts $flag"
++       done
++       IFS="$save_ifs"
++       arg=`$echo "X$arg" | $Xsed -e "s/^ //"`
++       ;;
++
+       # Some other compiler flag.
+       -* | +*)
+ 	# Unknown arguments in both finalize_command and compile_command need
