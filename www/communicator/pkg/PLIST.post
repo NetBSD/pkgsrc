@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.post,v 1.5 1999/06/14 21:40:25 cgd Exp $
+@comment $NetBSD: PLIST.post,v 1.6 1999/09/04 16:37:54 jlam Exp $
 @dirrm lib/netscape/communicator-${NS_VERS}/spell
 @dirrm lib/netscape/communicator-${NS_VERS}/plugins
 @dirrm lib/netscape/communicator-${NS_VERS}/nethelp/netscape/trouble
@@ -18,4 +18,6 @@
 @dirrm lib/netscape/communicator-${NS_VERS}/java/classes
 @dirrm lib/netscape/communicator-${NS_VERS}/java
 @dirrm lib/netscape/communicator-${NS_VERS}
+@exec mkdir -p %D/lib/netscape/plugins
+@unexec rmdir %D/lib/netscape/plugins 2>/dev/null || true
 @unexec rmdir %D/lib/netscape 2>/dev/null || true
