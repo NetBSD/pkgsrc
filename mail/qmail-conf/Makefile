@@ -1,35 +1,32 @@
-# $NetBSD: Makefile,v 1.15 2003/07/21 16:56:54 martti Exp $
+# $NetBSD: Makefile,v 1.16 2004/07/21 23:54:47 schmonz Exp $
 #
 
 DISTNAME=	qmail-conf-0.60
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	mail
 MASTER_SITES=	http://www.din.or.jp/~ushijima/qmail-conf/		\
 		http://cr.yp.to/djbdns/					\
 		ftp://cr.yp.to/djbdns/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} djbdns-1.05${EXTRACT_SUFX}
 
-MAINTAINER=	zuntum@NetBSD.org
-HOMEPAGE=	http://www.din.or.jp/~ushijima/qmail-conf/
+MAINTAINER=	schmonz@NetBSD.org
+HOMEPAGE=	http://www.din.or.jp/~ushijima/qmail-conf.html
 COMMENT=	Collection of tools for setting up qmail services
 
-DEPENDS+=	qmail>=1.03nb1:../../mail/qmail
 DEPENDS+=	checkpassword-[0-9]*:../../sysutils/checkpassword
+DEPENDS+=	daemontools>=0.70:../../sysutils/daemontools
+DEPENDS+=	{qmail>=1.03nb7,netqmail>=1.05}:../../mail/qmail
+DEPENDS+=	ucspi-tcp>=0.86:../../net/ucspi-tcp
 
-ALL_TARGET=	#
+USE_BUILDLINK3=	yes
+
+ALL_TARGET=	it
 INSTALL_TARGET= setup check
 
-.include "../../mk/bsd.prefs.mk"
-
-NO_MTREE=	YES
-LOCALBASE=	/
-
-post-patch:
+do-configure:
 	${ECHO} ${CC} ${CFLAGS} > ${WRKSRC}/conf-cc
 	${ECHO} ${CC} ${_STRIPFLAG_CC} > ${WRKSRC}/conf-ld
-	# derive LOCALBASE from ${DIGEST}, because we have deliberately altered LOCALBASE
-	# and there's no easy way to guess what the real LOCALBASE is
-	${ECHO} ${DIGEST} | ${SED} 's,/bin/digest,,' > ${WRKSRC}/conf-ucspi-tcp
+	${ECHO} ${LOCALBASE} > ${WRKSRC}/conf-ucspi-tcp
 	${ECHO} ${QMAILDIR} > ${WRKSRC}/conf-qmail
 
 pre-build:
