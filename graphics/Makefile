@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 1997/10/06 13:33:26 agc Exp $
+# $NetBSD: Makefile,v 1.3 1997/11/03 01:50:43 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.53 1997/09/28 13:25:40 markm Exp
 #
 
 #    SUBDIR += ImageMagick
-#    SUBDIR += Mesa
+    SUBDIR += Mesa
 #    SUBDIR += aero
 #    SUBDIR += camediaplay
 #    SUBDIR += dc3play
