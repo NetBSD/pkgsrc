@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2003/07/25 02:43:00 grant Exp $
+# $NetBSD: Makefile,v 1.58 2003/07/25 02:44:09 grant Exp $
 #
 
 .include "mk/bsd.prefs.mk"
@@ -145,10 +145,10 @@ ${.CURDIR}/INDEX: ${.CURDIR}/PKGDB
 	@${AWK} -f ./mk/scripts/genindex.awk PKGSRCDIR=${.CURDIR} SORT=${SORT} ${.CURDIR}/PKGDB
 	@${RM} -f ${.CURDIR}/PKGDB
 
-print-index:	${.CURDIR}/INDEX
+print-index: ${.CURDIR}/INDEX
 	@${AWK} -F\| '{ printf("Port:\t%s\nPath:\t%s\nInfo:\t%s\nMaint:\t%s\nIndex:\t%s\nB-deps:\t%s\nR-deps:\t%s\nArch:\t%s\n\n", $$1, $$2, $$4, $$6, $$7, $$8, $$9, $$10); }' < ${.CURDIR}/INDEX
 
-search:	${.CURDIR}/INDEX
+search: ${.CURDIR}/INDEX
 .if !defined(key)
 	@${ECHO} "The search target requires a keyword parameter,"
 	@${ECHO} "e.g.: \"${MAKE} search key=somekeyword\""
