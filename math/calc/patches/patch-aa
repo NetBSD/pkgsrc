@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.3 2002/02/18 15:14:29 seb Exp $
+$NetBSD: patch-aa,v 1.4 2002/12/23 12:50:12 seb Exp $
 
---- Makefile.orig	Mon Dec 16 05:50:45 1996
+--- Makefile.orig	Mon Dec 16 04:50:45 1996
 +++ Makefile
 @@ -29,10 +29,9 @@
  
@@ -14,7 +14,16 @@ $NetBSD: patch-aa,v 1.3 2002/02/18 15:14:29 seb Exp $
  MAKE	 = make
  ECHO	 = @echo
  REMOVE	 = -rm -f
-@@ -54,13 +53,10 @@
+@@ -41,7 +40,7 @@ REMOVE	 = -rm -f
+ 
+ # Other macros.
+ EFLAGS   = -batch
+-MAINT	 = -l calc-maint.elc
++MAINT	 = -l calc-maint.el
+ 
+ # Control whether intermediate files are kept.
+ PURGE	 = -rm -f
+@@ -54,13 +53,10 @@ PURGE	 = -rm -f
  # to make the steps more explicit while the `make' is in progress.
  all:
  	$(MAKE) compile
@@ -28,7 +37,7 @@ $NetBSD: patch-aa,v 1.3 2002/02/18 15:14:29 seb Exp $
  	$(MAKE) info
  	$(ECHO) "Calc is now installed."
  
-@@ -83,9 +79,9 @@
+@@ -83,9 +79,9 @@ private: maint
  # Format the Calc manual for the Info system using makeinfo.
  info: calc.info
  calc.info: calc.texinfo
