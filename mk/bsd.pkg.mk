@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.411 2000/03/01 10:53:07 tron Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.412 2000/03/02 18:35:59 wiz Exp $
 #
 # This file is in the public domain.
 #
@@ -1880,7 +1880,8 @@ clean: pre-clean
 	fi
 .endif
 .else
-	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${WRKDIR}/.*_done
+	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${WRKDIR}/.*_done SizeAll \
+		SizePkg .build_info .build_version .DESCR .PLIST
 .endif
 .endif
 
