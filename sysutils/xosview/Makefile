@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2004/01/24 15:06:58 grant Exp $
+# $NetBSD: Makefile,v 1.49 2004/02/04 22:23:47 abs Exp $
 
 DISTNAME=	xosview-1.8.1
 CATEGORIES=	sysutils
@@ -12,6 +12,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=		YES
 USE_X11BASE=		YES
+USE_LANGUAGES=		c++
 
 HAS_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
