@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.605 2005/02/01 19:12:57 jschauma Exp $
+# $NetBSD: Makefile,v 1.606 2005/02/01 21:52:09 jschauma Exp $
 #
 
 COMMENT=	Development utilities
@@ -288,6 +288,7 @@ SUBDIR+=	noweb
 SUBDIR+=	nqc
 SUBDIR+=	nspr
 SUBDIR+=	nspr-reference
+SUBDIR+=	nss
 SUBDIR+=	oaf
 SUBDIR+=	ode
 SUBDIR+=	ogre
