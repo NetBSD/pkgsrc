@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.29 2005/01/03 11:00:51 wiz Exp $
+$NetBSD: distinfo,v 1.30 2005/01/07 09:37:21 cube Exp $
 
 SHA1 (curl-7.12.3.tar.bz2) = 8e81488b18baabdb61aeb46095fee6f1d7325cdf
 Size (curl-7.12.3.tar.bz2) = 1830712 bytes
+SHA1 (patch-ac) = b5e87774c84ca29c35c48d1f8fa58991c8596d7a
