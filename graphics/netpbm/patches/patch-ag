@@ -1,0 +1,16 @@
+$NetBSD: patch-ag,v 1.5.6.1 2004/07/13 14:05:27 agc Exp $
+
+--- generator/Makefile.orig	2003-09-07 12:09:53.000000000 +1000
++++ generator/Makefile
+@@ -14,9 +14,9 @@ include $(BUILDDIR)/Makefile.config
+ # This package is so big, it's useful even when some parts won't 
+ # build.
+ 
+-PORTBINARIES = pamseq pbmmake pbmtext pbmtextps pbmupc pgmnoise pgmramp \
++PORTBINARIES = pamseq pbmmake pbmtext pbmtextps pbmupc pgmnoise \
+ 	       ppmcolors ppmmake
+-MATHBINARIES = pbmpage pgmcrater pgmkernel \
++MATHBINARIES = pbmpage pgmcrater pgmkernel pgmramp \
+ 	       ppmcie ppmforge ppmpat ppmrough ppmwheel
+ 
+ # We don't include programs that have special library dependencies in the
