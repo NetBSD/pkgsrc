@@ -1,24 +1,28 @@
-# $NetBSD: Makefile,v 1.16 2001/06/20 13:44:12 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2001/07/19 12:22:17 martin Exp $
 #
 
-DISTNAME=		stunnel-3.14
+DISTNAME=		stunnel-3.15
 CATEGORIES=		security
-MASTER_SITES=		http://www.stunnel.org/download/stunnel/src/
+MASTER_SITES=		ftp://stunnel.mirt.net/stunnel/ \
+			http://www.stunnel.org/download/stunnel/src/
 
 MAINTAINER=		martin@NetBSD.ORG
 HOMEPAGE=		http://www.stunnel.org/
 COMMENT=		Universal SSL tunnel
 
 BUILD_DEPENDS+=		autoconf-2.13:../../devel/autoconf
-DEPENDS+=		pth>=1.3.5:../../devel/pth
 
+USE_BUILDLINK_ONLY=	# defined
 USE_SSL=		# defined
 GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--with-ssl=${SSLBASE} \
 			--with-cert-dir="${SSLCERTS}" \
-			--with-pem-dir="${SSLCERTS}"
+			--with-pem-dir="${SSLCERTS}" \
+			--with-tcp-wrappers
 
 pre-configure:
 	cd ${WRKSRC} && ${LOCALBASE}/bin/autoreconf
 
+.include "../../security/openssl/buildlink.mk"
+.include "../../devel/pth/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

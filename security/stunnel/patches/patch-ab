@@ -1,34 +1,57 @@
-$NetBSD: patch-ab,v 1.4 2001/01/22 13:30:36 martin Exp $
+$NetBSD: patch-ab,v 1.5 2001/07/19 12:22:17 martin Exp $
 
---- configure.in.orig	Thu Dec 21 19:12:46 2000
-+++ configure.in	Mon Jan 22 14:14:10 2001
-@@ -134,12 +134,14 @@
+--- configure.in.orig	Sun Jul 15 14:43:33 2001
++++ configure.in	Thu Jul 19 14:02:22 2001
+@@ -108,21 +108,24 @@
+ fi
  
  dnl Check for libwrap library.
- AC_MSG_CHECKING([for hosts_access in -lwrap])
 +wrap_LIB=
- saved_LIBS="$LIBS"
- LIBS="-lwrap $saved_LIBS"
- AC_TRY_LINK([int hosts_access(); int allow_severity, deny_severity;],
- [hosts_access()],
--[AC_MSG_RESULT(yes); AC_DEFINE(HAVE_LIBWRAP)],
--[AC_MSG_RESULT(no)]; LIBS="$saved_LIBS")
-+[AC_MSG_RESULT(yes); AC_DEFINE(HAVE_LIBWRAP) wrap_LIB="-lwrap"],
-+[AC_MSG_RESULT(no)])
-+LIBS="$saved_LIBS"
+ AC_MSG_CHECKING(whether to use the libwrap library)
+ AC_ARG_WITH(tcp-wrappers,
+ [  --with-tcp-wrappers     Use the libwrap library],
+   [
++    saved_LIBS="$LIBS"
+     if test "$withval" = "yes"; then
+       AC_MSG_RESULT(yes)
+       AC_MSG_CHECKING([for hosts_access in -lwrap])
+       LIBS="-lwrap $LIBS"
+       AC_TRY_LINK([int hosts_access(); int allow_severity, deny_severity;],
+         [hosts_access()],
+-        [AC_MSG_RESULT(yes); AC_DEFINE(HAVE_LIBWRAP)],
++        [AC_MSG_RESULT(yes); AC_DEFINE(HAVE_LIBWRAP) wrap_LIB="-lwrap"],
+ 	[AC_MSG_RESULT(not found); exit 1])
+     else
+       AC_MSG_RESULT(no)
+     fi
++    LIBS="$saved_LIBS"
+   ],
+   [
+     AC_MSG_RESULT((default))
+@@ -154,12 +157,7 @@
+ AC_CHECK_LIB(dl, dlopen)
+ AC_CHECK_LIB(nsl, gethostbyname)
+ AC_CHECK_LIB(socket, socket)
+-AC_CHECK_LIB(pthread, pthread_create)
+-# BSD hack
+-AC_CHECK_LIB(c_r, pthread_create,
+-        [ LIBS="$LIBS -pthread"
+-	AC_DEFINE(HAVE_LIBPTHREAD) ]
+-)
++# XXX pthread does not work with stunnel on NetBSD 
+ AC_CHECK_LIB(util, openpty)
  
  dnl Add SSL includes and libraries
- CFLAGS="$CFLAGS -I$ssldir/include"
-@@ -161,7 +163,7 @@
+@@ -182,7 +180,7 @@
  # AC_HEADER_DIRENT
  # AC_HEADER_STDC
  # AC_HEADER_SYS_WAIT
 -AC_CHECK_HEADERS(getopt.h unistd.h sys/select.h tcpd.h pthread.h pty.h stropts.h)
-+AC_CHECK_HEADERS(getopt.h unistd.h sys/select.h tcpd.h pthread.h util.h sys/ioctl.h pty.h stropts.h)
++AC_CHECK_HEADERS(getopt.h unistd.h sys/select.h tcpd.h pthread.h util.h pty.h stropts.h)
  
  # dnl Checks for typedefs, structures, and compiler characteristics.
  # AC_C_CONST
-@@ -179,6 +181,8 @@
+@@ -200,6 +198,8 @@
  AC_CHECK_SIZEOF(unsigned int)
  AC_CHECK_SIZEOF(unsigned long)
  AC_CHECK_SIZEOF(unsigned long long)
