@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/11/25 20:47:00 minskim Exp $
+# $NetBSD: Makefile,v 1.6 2004/12/10 21:55:40 minskim Exp $
 
 DISTNAME=	db2latex-xsl-0.8pre1
 PKGNAME=	${DISTNAME:S/xsl-//}
@@ -30,7 +30,6 @@ post-extract:
 do-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}
 	${INSTALL_DATA_DIR} ${XSLDIR}
-	${INSTALL_DATA_DIR} ${EGDIR}
 	cd ${WRKSRC}/doc && ${PAX} -rwpm . ${DOCDIR}
 	cd ${WRKSRC} && ${PAX} -rwpm AUTHOR COPYING COPYRIGHT README \
 		TODO VERSION ${DOCDIR}
