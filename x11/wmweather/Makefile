@@ -1,28 +1,34 @@
-# $NetBSD: Makefile,v 1.12 2003/07/17 22:56:49 grant Exp $
+# $NetBSD: Makefile,v 1.13 2003/11/08 06:21:14 xtraeme Exp $
 #
 
-DISTNAME=	wmWeather-1.31
-WRKSRC=		${WRKDIR}/${DISTNAME}/Src
+DISTNAME=	wmweather-2.4.2
+WRKSRC=		${WRKDIR}/${DISTNAME}/src
 CATEGORIES=	x11
-MASTER_SITES=	http://nis-www.lanl.gov/~mgh/WindowMaker/
+MASTER_SITES=	http://www.godisch.de/debian/wmweather/
 
 MAINTAINER=	rh@NetBSD.org
-HOMEPAGE=	http://nis-www.lanl.gov/~mgh/WindowMaker/DockApps.shtml
+HOMEPAGE=	http://www.godisch.de/debian/wmweather/
 COMMENT=	WindowMaker DockApp showing local weather conditions
 
-USE_BUILDLINK2=	# defined
-USE_X11BASE=	# defined
-REPLACE_PERL=	GrabWeather
+USE_BUILDLINK2=		# defined
+USE_X11=		yes
 
-MAKE_FLAGS+=    EXTRA_LOCAL_LIBS=${EXTRA_LOCAL_LIBS}
+GNU_CONFIGURE=		yes
+USE_GMAKE=		yes
+
+USE_PKGINSTALL=		yes
+CONFIGURE_ARGS+=	--with-sysconfdir=${PKG_SYSCONFDIR}
+
+EGDIR=		${PREFIX}/share/examples/${PKGBASE}
+CONF_FILES+=	${EGDIR}/wmweather.conf ${PKG_SYSCONFDIR}/wmweather.conf
 
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "SunOS"
-EXTRA_LOCAL_LIBS=       -lsocket
+LDFLAGS+=	-lsocket
 .endif
 
 .include "../../graphics/xpm/buildlink2.mk"
-.include "../../lang/perl5/buildlink2.mk"
+.include "../../www/curl/buildlink2.mk"
 
 .include "../../mk/bsd.pkg.mk"
