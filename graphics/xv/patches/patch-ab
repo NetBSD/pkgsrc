@@ -14,7 +14,7 @@
        !defined(aux)                       && \
        !defined(__bsdi__)                  && \
 !      !defined(sequent)			 && \
-!      !defined(__FreeBSD__)
+!      !defined(__FreeBSD__) && !defined(__NetBSD__)
   
   #  if defined(hp300) || defined(hp800) || defined(NeXT)
   #   include <sys/malloc.h>                /* it's in 'sys' on HPs and NeXT */
