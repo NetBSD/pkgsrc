@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2004/05/28 22:15:15 recht Exp $
+$NetBSD: distinfo,v 1.5 2004/08/19 20:44:31 recht Exp $
 
-SHA1 (Pyrex-0.9.2.1.tar.gz) = 3b7faf8ad36a4dd240b29842a618925deeb04d70
-Size (Pyrex-0.9.2.1.tar.gz) = 174521 bytes
+SHA1 (Pyrex-0.9.3.tar.gz) = bbd534b1905de5f3ad445c6d30a2fd57a4b362be
+Size (Pyrex-0.9.3.tar.gz) = 176072 bytes
