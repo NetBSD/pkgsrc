@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/10/03 00:13:33 tv Exp $
+# $NetBSD: Makefile,v 1.15 2004/12/25 19:46:30 wiz Exp $
 
 DISTNAME=		rapidsvn-0.7.0
 PKGREVISION=		1
@@ -16,9 +16,6 @@ GNU_CONFIGURE=		YES
 
 CONFIGURE_ARGS+=	--with-svn-include=${BUILDLINK_DIR}/include
 CONFIGURE_ARGS+=	--with-svn-lib=${BUILDLINK_DIR}/lib
-
-BUILDLINK_DEPENDS.subversion-base+=	subversion-base>=1.0.0
-BUILDLINK_DEPENDS.wxGTK+=	wxGTK>=2.4.2
 
 INSTALLATION_DIRS+=	include/svncpp
 
