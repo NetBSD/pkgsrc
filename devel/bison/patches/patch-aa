@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.4 1999/02/19 08:55:23 frueauf Exp $
+
+--- bison.texinfo-orig	Thu Feb 18 18:56:43 1999
++++ bison.texinfo	Thu Feb 18 18:56:09 1999
+@@ -38,7 +38,7 @@
+ @ifinfo
+ @format
+ START-INFO-DIR-ENTRY
+-* bison: (bison).	GNU Project parser generator (yacc replacement).
++* bison: (bison).		GNU Project parser generator (yacc replacement).
+ END-INFO-DIR-ENTRY
+ @end format
+ @end ifinfo
