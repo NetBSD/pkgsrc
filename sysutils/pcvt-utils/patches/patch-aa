@@ -1,0 +1,28 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/12/04 13:38:25 hubertf Exp $
+
+--- Makefile.orig	Mon Dec  4 13:31:23 2000
++++ Makefile
+@@ -2,13 +2,18 @@
+ 
+-#SUBDIR=keycap
+ #SUBDIR+=cursor
++SUBDIR+=demo
++SUBDIR+=fed
+ SUBDIR+=fontedit
+-SUBDIR+=fonts
++#SUBDIR+=fonts
++#SUBDIR+=ispcvt
++#SUBDIR+=kbdio
+ #SUBDIR+=kcon
++#SUBDIR+=keycap
+ #SUBDIR+=loadfont
++#SUBDIR+=mcon
+ #SUBDIR+=scon
++#SUBDIR+=set2061
+ #SUBDIR+=userkeys
+-SUBDIR+=vttest
+-#SUBDIR+=ispcvt
+-#SUBDIR+=mcon
++#SUBDIR+=vgaio
++#SUBDIR+=vttest
+ 

@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/12/04 13:38:25 hubertf Exp $
+bin/playvt
+bin/fed
+bin/fontedit
+share/playvt/chardemo.vt
+share/playvt/colors.vt
+share/playvt/cowscene.vt
+share/playvt/outerlimit.vt
+share/playvt/sgr.vt
+share/playvt/twzone.vt
+share/playvt/xmas.vt
