@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2001/05/19 03:56:40 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2002/01/10 23:13:54 wiz Exp $
 # FreeBSD Id: Makefile,v 1.6 1997/04/27 00:11:48 asami Exp
 #
 
@@ -13,7 +13,7 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www-rn.informatik.uni-bremen.de/software/unroff/
 COMMENT=		Programmable troff translator with backend for HTML
 
-DEPENDS=		elk-3.0.2:../../lang/elk
+DEPENDS=		elk>=3.0.2:../../lang/elk
 
 EXTRACT_ONLY=		${DISTNAME}${EXTRACT_SUFX}
 DIST_SUBDIR=		unroff
