@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.175 2002/12/11 21:10:29 jmmv Exp $
+# $NetBSD: Makefile,v 1.176 2002/12/13 09:50:19 salo Exp $
 
 COMMENT=	System utilities
 
@@ -78,6 +78,7 @@ SUBDIR+=	memconf
 SUBDIR+=	memtest86
 SUBDIR+=	mgm
 SUBDIR+=	mksunbootcd
+SUBDIR+=	mktemp
 SUBDIR+=	mtools
 SUBDIR+=	mtoolsfm
 SUBDIR+=	osname
