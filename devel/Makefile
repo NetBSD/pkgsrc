@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.162 2001/01/24 18:06:52 itojun Exp $
+# $NetBSD: Makefile,v 1.163 2001/02/01 14:31:21 wiz Exp $
 #
 
     SUBDIR += GConf
@@ -149,6 +149,7 @@
     SUBDIR += tkcvs
     SUBDIR += tkdiff
     SUBDIR += unproven-pthreads
+    SUBDIR += w32api
     SUBDIR += xdelta
     SUBDIR += xxgdb
     SUBDIR += zlib
