@@ -1,11 +1,11 @@
-$NetBSD: patch-ad,v 1.1 2002/01/29 10:53:42 wiz Exp $
+$NetBSD: patch-ad,v 1.2 2002/08/31 00:15:41 wiz Exp $
 
---- linux/sw_draw.c.orig	Thu Sep 20 11:08:10 2001
+--- linux/sw_draw.c.orig	Sun Jul  7 04:03:16 2002
 +++ linux/sw_draw.c
-@@ -166,6 +166,8 @@
- {
-     DWORD i,j,color32;
+@@ -123,6 +123,8 @@ void sw_clearwin()
  
+ void sw_drawwin()
+ {
 +    pthread_yield_np();
 +
      NGNoTransp = 0;             // Set this value to 1 within the appropriate
