@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4455 2004/01/14 02:00:42 xtraeme Exp $
+$NetBSD: CHANGES,v 1.4456 2004/01/14 02:28:17 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -211,3 +211,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated ttt to 1.8 [xtraeme 2004-01-13]
 	Updated mailmain to 2.1.4 [xtraeme 2004-01-14]
 	Updated xchm to 0.8.10 [xtraeme 2004-01-14]
+	Updated gcalctool to 4.3.35 [xtraeme 2004-01-14]
