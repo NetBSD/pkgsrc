@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.214 2004/02/12 02:35:06 jlam Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.215 2004/02/28 12:22:14 grant Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -2157,6 +2157,11 @@ XCHAT_USE_SSL?=	YES
 #           t3d, tetris, thornbird, tik_tak, triangle, tube, turtle, vines,
 #           voters, wator, wire, world, worm, xcl, xjack, not defined
 # Default: not defined
+
+YTALK_USE_X11?=	NO
+# net/ytalk X11 support
+# Possible: YES, NO
+# Default: NO
 
 #ZIP_ENCRYPTION=
 # Add encryption code to zip1
