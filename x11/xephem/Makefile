@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2004/01/20 12:28:28 agc Exp $
+# $NetBSD: Makefile,v 1.24 2004/01/24 13:25:17 kristerw Exp $
 
 DISTNAME=	xephem-3.5.2
 PKGREVISION=	1
@@ -24,7 +24,7 @@ BUILD_DIRS=	${LIBSRC1} ${LIBSRC2} ${WRKSRC}
 INSTALL_DIRS=	${WRKSRC}
 
 .if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
-USE_PKGSRC_GCC=	# defined
+GCC_REQD=	2.95.3
 .endif
 
 post-install:
