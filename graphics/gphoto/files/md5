@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.1.1.1 1999/11/30 00:01:37 dmcmahill Exp $
+$NetBSD: md5,v 1.2 1999/12/08 17:25:21 hubertf Exp $
 
-MD5 (gphoto-0.4.1.tar.gz) = 37d71ed13c12374eaaeb146918db3e81
+MD5 (gphoto-0.4.2.tar.gz) = 4bfb9fb1d020bf99d54f9c0467cb0a1d

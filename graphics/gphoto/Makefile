@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 1999/11/30 01:31:59 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 1999/12/08 17:25:20 hubertf Exp $
 
-DISTNAME=	gphoto-0.4.1
+DISTNAME=	gphoto-0.4.2
 CATEGORIES=	graphics
 MASTER_SITES=	ftp://ftp.gphoto.org/projects/gphoto/pub/tar/0.4/
 
