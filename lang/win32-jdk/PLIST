@@ -1,0 +1,49 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/10/11 13:37:10 tv Exp $
+bin/win32-appletviewer
+bin/win32-extcheck
+bin/win32-idlj
+bin/win32-jar
+bin/win32-jarsigner
+bin/win32-java
+bin/win32-javac
+bin/win32-javadoc
+bin/win32-javah
+bin/win32-javap
+bin/win32-jdb
+bin/win32-keytool
+bin/win32-orbd
+bin/win32-policytool
+bin/win32-rmic
+bin/win32-rmid
+bin/win32-rmiregistry
+bin/win32-serialver
+bin/win32-servertool
+bin/win32-tnameserv
+java/win32/bin/HtmlConverter
+java/win32/bin/appletviewer
+java/win32/bin/extcheck
+java/win32/bin/idlj
+java/win32/bin/jar
+java/win32/bin/jarsigner
+java/win32/bin/java
+java/win32/bin/javac
+java/win32/bin/javadoc
+java/win32/bin/javah
+java/win32/bin/javap
+java/win32/bin/jdb
+java/win32/bin/keytool
+java/win32/bin/kinit
+java/win32/bin/klist
+java/win32/bin/ktab
+java/win32/bin/native2ascii
+java/win32/bin/orbd
+java/win32/bin/policytool
+java/win32/bin/rmic
+java/win32/bin/rmid
+java/win32/bin/rmiregistry
+java/win32/bin/serialver
+java/win32/bin/servertool
+java/win32/bin/tnameserv
+@exec   ${LN} -sf . %D/java/win32/jre
+@unexec ${RM} -f %D/java/win32/jre
+@dirrm java/win32/bin

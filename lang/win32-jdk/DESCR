@@ -1,0 +1,8 @@
+This package is a wrapper around the standard Win32 Java(tm) 2 Development
+Kit (or optionally the Java(tm) 2 Runtime Environment, if no development
+tools are needed).  This package will install correctly whether or not there
+is a working JDK/JRE on the system; it is up to the user to make sure it
+is correctly installed on the Win32 side.
+
+This package will attempt path conversion, but it is simplistic and flimsy.
+This support will be improved in future package versions.
