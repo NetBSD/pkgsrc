@@ -1,22 +1,22 @@
-$NetBSD: patch-aa,v 1.5 2002/09/25 18:05:18 wiz Exp $
+$NetBSD: patch-aa,v 1.6 2003/01/16 08:21:53 salo Exp $
 
---- src/Makefile.in.orig	Sun Sep  1 17:39:21 2002
+--- src/Makefile.in.orig	Sat Jan 11 19:57:47 2003
 +++ src/Makefile.in
-@@ -8,7 +8,7 @@ bindir = @bindir@
- libexecdir = @libexecdir@
+@@ -9,7 +9,7 @@ libexecdir = @libexecdir@
+ sysconfdir = @sysconfdir@
  
  CC = @CC@ 
--CFLAGS = -I.. -I../lib @CFLAGS@ -Wall -DTHEMES_DIR=\"${datadir}/ekg/themes\"
-+CFLAGS = -I.. -I../lib @CFLAGS@ -Wall -DTHEMES_DIR=\"${PREFIX}/share/ekg/themes\"
+-CFLAGS = -I.. -I../lib @CFLAGS@ -Wall -DDATADIR=\"${datadir}/ekg\" -DSYSCONFDIR=\"${sysconfdir}\"
++CFLAGS = -I.. -I../lib @CFLAGS@ -Wall -DDATADIR=\"${PREFIX}/share/ekg\" -DSYSCONFDIR=\"${PREFIX}/etc\"
+ LDFLAGS = @LDFLAGS@
  LIBS = @LIBS@
  
- MAKE = @MAKE@
-@@ -23,7 +23,7 @@ OBJS = stuff.o commands.o events.o theme
- all:	ekg @ioctld@
+@@ -26,7 +26,7 @@ SRCS = $(OBJS:.o=.c)
+ all:	dep ekg @ioctld@
  
- ekg:	$(OBJS)
--	$(CC) $(CFLAGS) -o ekg $(OBJS) -L../lib $(LIBS) @lgadu@
-+	$(CC) $(CFLAGS) -o ekg $(OBJS) -Wl -R${LOCALBASE}/lib -L../lib $(LIBS) @lgadu@
+ ekg:	$(OBJS) @libgadu_a@
+-	$(CC) $(CFLAGS) -o ekg $(OBJS) -L../lib $(LDFLAGS) $(LIBS) @lgadu@ @libgadu_a@
++	$(CC) $(CFLAGS) -o ekg $(OBJS) -Wl -R${LOCALBASE}/lib -L../lib $(LDFLAGS) $(LIBS) @lgadu@ @libgadu_a@
  
  ioctld:	ioctld.c
- 	$(CC) $(CFLAGS) ioctld.c -o ioctld
+ 	$(CC) $(CFLAGS) ioctld.c -o ioctld $(LIBS)

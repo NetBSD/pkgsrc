@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.8 2002/09/25 18:05:17 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2003/01/16 08:21:51 salo Exp $
 #
 
-DISTNAME=	ekg-20020918
-PKGNAME=	ekg-0.20020918
+DISTNAME=	ekg-20030114
+PKGNAME=	${DISTNAME:S/-/-0./}
 CATEGORIES=	chat
-MASTER_SITES=	http://people.arhea.net/dawszy/NetBSD/ekg/
+MASTER_SITES=	http://dev.null.pl/ekg/ \
+		http://dev.null.pl/ekg/stare/
 
 MAINTAINER=	dawszy@arhea.net
 HOMEPAGE=	http://dev.null.pl/ekg/
