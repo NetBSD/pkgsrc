@@ -1,16 +1,16 @@
-$NetBSD: patch-ab,v 1.1.1.1 2002/08/22 09:21:32 drochner Exp $
+$NetBSD: patch-ab,v 1.2 2002/11/27 17:25:26 drochner Exp $
 
---- ./Ft/Lib/DistExt/BuildScripts.py.orig	Tue Aug 20 15:30:48 2002
-+++ ./Ft/Lib/DistExt/BuildScripts.py	Tue Aug 20 15:32:31 2002
+--- ./Ft/Lib/DistExt/BuildScripts.py.orig	Sat Jul 27 20:09:21 2002
++++ ./Ft/Lib/DistExt/BuildScripts.py	Fri Nov 15 19:44:06 2002
 @@ -5,7 +5,7 @@
  from distutils.dep_util import newer
  
  SCRIPT = """\
 -#!/usr/bin/env python
 +#!%(exec)s
- import os
- cwd = os.getcwd()
- os.chdir(os.path.dirname(os.__file__))
+ import sys
+ sys.path.insert(0, %(install_dir)r)
+ %(import)s
 @@ -136,6 +136,7 @@
                                                              script.identifier)
                  else:
