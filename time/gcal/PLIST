@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/06/14 23:21:46 atatat Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/08/05 11:22:15 seb Exp $
 bin/gcal
 bin/gcal-daily
 bin/gcal-ddiff
@@ -13,7 +13,6 @@ bin/gcal-wlocdrv
 bin/gcal2txt
 bin/tcal
 bin/txt2gcal
-@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/gcal.info
 info/gcal.info
 info/gcal.info-1
 info/gcal.info-10
@@ -29,7 +28,6 @@ info/gcal.info-6
 info/gcal.info-7
 info/gcal.info-8
 info/gcal.info-9
-@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/gcal.info
 man/man1/gcal.1
 man/man1/gcal2txt.1
 man/man1/tcal.1

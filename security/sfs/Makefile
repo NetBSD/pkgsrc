@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/06/02 14:05:08 abs Exp $
+# $NetBSD: Makefile,v 1.6 2003/08/05 11:17:10 seb Exp $
 #
 
 DISTNAME=		sfs-0.7.2
@@ -41,6 +41,8 @@ SFSEXAMPLEDIR=		${PREFIX}/share/examples/sfs
 
 MESSAGE_SUBST+=		SFSDIR=${SFS_ROOT} SFSEXAMPLEDIR=${SFSEXAMPLEDIR}
 
+USE_NEW_TEXINFO=	YES
+USE_MAKEINFO=		YES
 INFO_FILES=		sfs.info
 
 post-install:
@@ -52,5 +54,4 @@ post-install:
 .include "../../security/openssl/buildlink2.mk"
 
 .include "../../mk/gcc.buildlink2.mk"
-.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
