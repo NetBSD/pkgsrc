@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2004/10/31 00:53:10 minskim Exp $
+# $NetBSD: Makefile,v 1.38 2005/02/23 13:04:47 grant Exp $
 
 PKGNAME=	${DISTNAME:C/MesaLib/glu/}
 COMMENT=	GLU polygon tessellation facility for Mesa
@@ -8,8 +8,8 @@ CONFLICTS+=	Mesa<3.2.1
 
 .include "../Mesa/Makefile.common"
 
-USE_LANGUAGES=		c c++
-MESA_REQD+=		${MESA_VERSION}
+USE_LANGUAGES=	c c++
+MESA_REQD+=	${MESA_VERSION}
 
 INSTLIBS=	${WRKSRC}/src/glu/sgi/libGLU.la
 
