@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2002/12/24 09:04:24 tron Exp $
+# $NetBSD: Makefile,v 1.7 2002/12/24 09:35:54 tron Exp $
 
 .include "../xchat/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/-/-gnome-/}
+# Don't set "PKGREVISION" here, set it in "../xchat/Makefile.common".
 CONFLICTS+=	xchat-[0-9]*
 COMMENT+=	and GNOME libraries
 
