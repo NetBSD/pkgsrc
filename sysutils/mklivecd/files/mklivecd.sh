@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: mklivecd.sh,v 1.11 2004/04/27 16:17:26 xtraeme Exp $
+# $NetBSD: mklivecd.sh,v 1.12 2004/04/27 16:33:12 xtraeme Exp $
 #
 # Copyright (c) 2004 Juan RP <xtraeme@NetBSD.org>
 # All rights reserved.
@@ -343,7 +343,7 @@ do_cdlive()
 		cat > $ISODIR/etc/rc.d/root <<_EOF_
 #!/bin/sh
 #
-# \$NetBSD: mklivecd.sh,v 1.11 2004/04/27 16:17:26 xtraeme Exp $
+# \$NetBSD: mklivecd.sh,v 1.12 2004/04/27 16:33:12 xtraeme Exp $
 # 
 
 # PROVIDE: root
@@ -557,8 +557,9 @@ _EOF_
 		if [ ! -f $BASEDIR/$IMAGE_NAME.iso ]; then
 		    echo
 		    showmsg "Creating ISO CD9660 image"
-		    $MKISOFS $MKISOFS_FIXED_ARGS $MKISOFS_ARGS -b $BOOTIMAGE \
-			-o $BASEDIR/$IMAGE_NAME.iso $ISODIR
+		    $MKISOFS $MKISOFS_FIXED_ARGS $MKISOFS_ARGS \
+			-b $BOOTDIR/$BOOTIMAGE -o $BASEDIR/$IMAGE_NAME.iso \
+			$ISODIR
 		fi
 
 	;;
