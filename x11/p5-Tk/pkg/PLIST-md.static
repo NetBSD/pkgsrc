@@ -1,0 +1,66 @@
+@comment $NetBSD: PLIST-md.static,v 1.1 1997/11/22 05:25:00 hubertf Exp $
+lib/perl5/site_perl/<$ARCH>-netbsd/auto/Tk/Bitmap/Bitmap.a
+lib/perl5/site_perl/<$ARCH>-netbsd/auto/Tk/Bitmap/extralibs.ld
+lib/perl5/site_perl/<$ARCH>-netbsd/auto/Tk/Canvas/Canvas.a
+lib/perl5/site_perl/<$ARCH>-netbsd/auto/Tk/Canvas/extralibs.ld
+lib/perl5/site_perl/<$ARCH>-netbsd/auto/Tk/Entry/Entry.a
+lib/perl5/site_perl/<$ARCH>-netbsd/auto/Tk/Entry/extralibs.ld
+lib/perl5/site_perl/<$ARCH>-netbsd/auto/Tk/HList/HList.a
+lib/perl5/site_perl/<$ARCH>-netbsd/auto/Tk/HList/extralibs.ld
+lib/perl5/site_perl/<$ARCH>-netbsd/auto/Tk/IO/IO.a
+lib/perl5/site_perl/<$ARCH>-netbsd/auto/Tk/IO/extralibs.ld
+lib/perl5/site_perl/<$ARCH>-netbsd/auto/Tk/InputO/InputO.a
+lib/perl5/site_perl/<$ARCH>-netbsd/auto/Tk/InputO/extralibs.ld
+lib/perl5/site_perl/<$ARCH>-netbsd/auto/Tk/Listbox/Listbox.a
+lib/perl5/site_perl/<$ARCH>-netbsd/auto/Tk/Listbox/extralibs.ld
+lib/perl5/site_perl/<$ARCH>-netbsd/auto/Tk/Menu/Menu.a
+lib/perl5/site_perl/<$ARCH>-netbsd/auto/Tk/Menu/extralibs.ld
+lib/perl5/site_perl/<$ARCH>-netbsd/auto/Tk/Menubutton/Menubutton.a
+lib/perl5/site_perl/<$ARCH>-netbsd/auto/Tk/Menubutton/extralibs.ld
+lib/perl5/site_perl/<$ARCH>-netbsd/auto/Tk/Mwm/Mwm.a
+lib/perl5/site_perl/<$ARCH>-netbsd/auto/Tk/Mwm/extralibs.ld
+lib/perl5/site_perl/<$ARCH>-netbsd/auto/Tk/NBFrame/NBFrame.a
+lib/perl5/site_perl/<$ARCH>-netbsd/auto/Tk/NBFrame/extralibs.ld
+lib/perl5/site_perl/<$ARCH>-netbsd/auto/Tk/Photo/Photo.a
+lib/perl5/site_perl/<$ARCH>-netbsd/auto/Tk/Photo/extralibs.ld
+lib/perl5/site_perl/<$ARCH>-netbsd/auto/Tk/Pixmap/Pixmap.a
+lib/perl5/site_perl/<$ARCH>-netbsd/auto/Tk/Pixmap/extralibs.ld
+lib/perl5/site_perl/<$ARCH>-netbsd/auto/Tk/Scale/Scale.a
+lib/perl5/site_perl/<$ARCH>-netbsd/auto/Tk/Scale/extralibs.ld
+lib/perl5/site_perl/<$ARCH>-netbsd/auto/Tk/Scrollbar/Scrollbar.a
+lib/perl5/site_perl/<$ARCH>-netbsd/auto/Tk/Scrollbar/extralibs.ld
+lib/perl5/site_perl/<$ARCH>-netbsd/auto/Tk/TList/TList.a
+lib/perl5/site_perl/<$ARCH>-netbsd/auto/Tk/TList/extralibs.ld
+lib/perl5/site_perl/<$ARCH>-netbsd/auto/Tk/Text/Text.a
+lib/perl5/site_perl/<$ARCH>-netbsd/auto/Tk/Text/extralibs.ld
+lib/perl5/site_perl/<$ARCH>-netbsd/auto/Tk/TixGrid/TixGrid.a
+lib/perl5/site_perl/<$ARCH>-netbsd/auto/Tk/TixGrid/extralibs.ld
+lib/perl5/site_perl/<$ARCH>-netbsd/auto/Tk/Tk.a
+lib/perl5/site_perl/<$ARCH>-netbsd/auto/Tk/extralibs.ld
+lib/perl5/site_perl/<$ARCH>-netbsd/auto/Tk/X/X.a
+lib/perl5/site_perl/<$ARCH>-netbsd/auto/Tk/X/extralibs.ld
+lib/perl5/site_perl/<$ARCH>-netbsd/auto/Tk/Xlib/Xlib.a
+lib/perl5/site_perl/<$ARCH>-netbsd/auto/Tk/Xlib/extralibs.ld
+lib/perl5/site_perl/<$ARCH>-netbsd/auto/Tk/pTk/extralibs.ld
+@dirrm lib/perl5/site_perl/<$ARCH>-netbsd/auto/Tk/Bitmap
+@dirrm lib/perl5/site_perl/<$ARCH>-netbsd/auto/Tk/Canvas
+@dirrm lib/perl5/site_perl/<$ARCH>-netbsd/auto/Tk/Entry
+@dirrm lib/perl5/site_perl/<$ARCH>-netbsd/auto/Tk/HList
+@dirrm lib/perl5/site_perl/<$ARCH>-netbsd/auto/Tk/IO
+@dirrm lib/perl5/site_perl/<$ARCH>-netbsd/auto/Tk/InputO
+@dirrm lib/perl5/site_perl/<$ARCH>-netbsd/auto/Tk/Listbox
+@dirrm lib/perl5/site_perl/<$ARCH>-netbsd/auto/Tk/Menu
+@dirrm lib/perl5/site_perl/<$ARCH>-netbsd/auto/Tk/Menubutton
+@dirrm lib/perl5/site_perl/<$ARCH>-netbsd/auto/Tk/Mwm
+@dirrm lib/perl5/site_perl/<$ARCH>-netbsd/auto/Tk/NBFrame
+@dirrm lib/perl5/site_perl/<$ARCH>-netbsd/auto/Tk/Photo
+@dirrm lib/perl5/site_perl/<$ARCH>-netbsd/auto/Tk/Pixmap
+@dirrm lib/perl5/site_perl/<$ARCH>-netbsd/auto/Tk/Scale
+@dirrm lib/perl5/site_perl/<$ARCH>-netbsd/auto/Tk/Scrollbar
+@dirrm lib/perl5/site_perl/<$ARCH>-netbsd/auto/Tk/TList
+@dirrm lib/perl5/site_perl/<$ARCH>-netbsd/auto/Tk/Text
+@dirrm lib/perl5/site_perl/<$ARCH>-netbsd/auto/Tk/TixGrid
+@dirrm lib/perl5/site_perl/<$ARCH>-netbsd/auto/Tk/X
+@dirrm lib/perl5/site_perl/<$ARCH>-netbsd/auto/Tk/Xlib
+@dirrm lib/perl5/site_perl/<$ARCH>-netbsd/auto/Tk/pTk
+@dirrm lib/perl5/site_perl/<$ARCH>-netbsd/auto/Tk
