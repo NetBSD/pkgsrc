@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.29 2002/12/05 12:22:08 wiz Exp $
+$NetBSD: TODO,v 1.30 2002/12/05 15:18:25 jschauma Exp $
 
 Suggested new packages
 ======================
@@ -62,7 +62,6 @@ Suggested new packages
 Suggested package updates
 =========================
 
-	o Mesa-5.0 [jschauma]
 	o SDL-image-1.2.2
 	o acroread-5.1
 	o amaya-7.0
