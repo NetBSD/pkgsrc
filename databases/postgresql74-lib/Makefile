@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2004/11/28 19:19:51 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2004/12/18 14:26:15 darcy Exp $
 
 PKGNAME=		postgresql74-lib-${BASE_VERS}
-PKGREVISION=		# empty
+PKGREVISION=	1
 SVR4_PKGNAME=		pstgl
 COMMENT=		PostgreSQL database headers and libraries
 
@@ -13,6 +13,7 @@ CONFIGURE_ARGS+=	--with-openssl=${SSLBASE}
 
 BUILD_DIRS+=		${WRKSRC}/src/include
 BUILD_DIRS+=		${WRKSRC}/src/interfaces
+BUILD_DIRS+=		${WRKSRC}/src/bin/pg_config
 
 # without this the Darwin build fails
 # (-bundle_loader related)
@@ -47,6 +48,8 @@ do-install:
 		${MAKE_PROGRAM} -C src/include install
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV}		\
 		${MAKE_PROGRAM} -C src/interfaces install
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV}		\
+		${MAKE_PROGRAM} -C src/bin/pg_config install
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV}		\
 		${MAKE_PROGRAM} -C src/pl install
 	cd ${WRKSRC}/src/include && ${SETENV} ${MAKE_ENV}	\
