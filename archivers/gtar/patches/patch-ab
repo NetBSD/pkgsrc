@@ -1,0 +1,124 @@
+--- src/extract.c.orig	Tue Apr 22 20:05:57 1997
++++ src/extract.c	Thu Mar  5 13:59:52 1998
+@@ -103,7 +103,7 @@
+ 
+   if (!keep_old_files_option
+       || (stat_info->st_mode & (S_ISUID | S_ISGID | S_ISVTX)))
+-    if (chmod (file_name, ~current_umask & (int) stat_info->st_mode) < 0)
++    if (lchmod (file_name, ~current_umask & (int) stat_info->st_mode) < 0)
+       ERROR ((0, errno, _("%s: Cannot change mode to %0.4o"),
+ 	      file_name, ~current_umask & (int) stat_info->st_mode));
+ }
+@@ -124,8 +124,10 @@
+ {
+   struct utimbuf utimbuf;
+ 
++#ifndef __NetBSD__
+   if (!symlink_flag)
+     {
++#endif
+       /* We do the utime before the chmod because some versions of utime are
+ 	 broken and trash the modes of the file.  */
+ 
+@@ -137,6 +139,7 @@
+ 
+ 	  /* FIXME: incremental_option should set ctime too, but how?  */
+ 
++#ifndef __NetBSD__
+ 	  if (incremental_option)
+ 	    utimbuf.actime = stat_info->st_atime;
+ 	  else
+@@ -145,6 +148,19 @@
+ 	  utimbuf.modtime = stat_info->st_mtime;
+ 
+ 	  if (utime (file_name, &utimbuf) < 0)
++#else
++	  struct timeval tv[2];
++
++	  if (incremental_option)
++	    tv[0].tv_sec = stat_info->st_atime;
++	  else
++	    tv[0].tv_sec = now;
++	  tv[0].tv_usec = 0;
++	  tv[1].tv_sec = stat_info->st_mtime;
++	  tv[1].tv_usec = 0;
++
++	  if (lutimes (file_name, tv) < 0)
++#endif
+ 	    ERROR ((0, errno,
+ 		    _("%s: Could not change access and modification times"),
+ 		    file_name));
+@@ -155,7 +171,9 @@
+ 	 have to set permissions prior to possibly giving files away.  */
+ 
+       set_mode (file_name, stat_info);
++#ifndef __NetBSD__
+     }
++#endif
+ 
+   /* If we are root, set the owner and group of the extracted file, so we
+      extract as the original owner.  Or else, if we are running as a user,
+--- src/tar.c.orig	Fri Apr 25 16:09:49 1997
++++ src/tar.c	Thu Mar  5 14:32:19 1998
+@@ -163,6 +163,7 @@
+ #define SUFFIX_OPTION			15
+ #define USE_COMPRESS_PROGRAM_OPTION	16
+ #define VOLNO_FILE_OPTION		17
++#define NO_UNLINK_FIRST_OPTION		20
+ 
+ /* Some cleanup is being made in GNU tar long options.  Using old names is
+    allowed for a while, but will also send a warning to stderr.  Take old
+@@ -211,6 +212,7 @@
+   {"exclude", required_argument, NULL, EXCLUDE_OPTION},
+   {"exclude-from", required_argument, NULL, 'X'},
+   {"extract", no_argument, NULL, 'x'},
++  {"fast-read", no_argument, NULL, 1},
+   {"file", required_argument, NULL, 'f'},
+   {"files-from", required_argument, NULL, 'T'},
+   {"force-local", no_argument, &force_local_option, 1},
+@@ -237,6 +239,8 @@
+   {"newer-mtime", required_argument, NULL, NEWER_MTIME_OPTION},
+   {"null", no_argument, NULL, NULL_OPTION},
+   {"no-recursion", no_argument, NULL, NO_RECURSE_OPTION},
++  {"norecurse", no_argument, NULL, NO_RECURSE_OPTION},
++  {"no-unlink-first", no_argument, NULL, NO_UNLINK_FIRST_OPTION},
+   {"numeric-owner", no_argument, &numeric_owner_option, 1},
+   {"old-archive", no_argument, NULL, 'o'},
+   {"one-file-system", no_argument, NULL, 'l'},
+@@ -267,6 +271,7 @@
+   {"touch", no_argument, NULL, 'm'},
+   {"uncompress", no_argument, NULL, 'Z'},
+   {"ungzip", no_argument, NULL, 'z'},
++  {"unlink", no_argument, NULL, 'U'},
+   {"unlink-first", no_argument, NULL, 'U'},
+   {"update", no_argument, NULL, 'u'},
+   {"use-compress-program", required_argument, NULL, USE_COMPRESS_PROGRAM_OPTION},
+@@ -320,7 +325,8 @@
+   -W, --verify               attempt to verify the archive after writing it\n\
+       --remove-files         remove files after adding them to the archive\n\
+   -k, --keep-old-files       don't overwrite existing files when extracting\n\
+-  -U, --unlink-first         remove each file prior to extracting over it\n\
++  -U, --unlink-first         remove each file prior to extracting (default)\n\
++      --no-unlink-first      don't remove each file prior to extracting\n\
+       --recursive-unlink     empty hierarchies prior to extracting directory\n\
+   -S, --sparse               handle sparse files efficiently\n\
+   -O, --to-stdout            extract files to standard output\n\
+@@ -487,6 +493,7 @@
+ 
+   owner_option = -1;
+   group_option = -1;
++  unlink_first_option = 1;
+ 
+   backup_suffix_string = getenv ("SIMPLE_BACKUP_SUFFIX");
+   version_control_string = getenv ("VERSION_CONTROL");
+@@ -780,6 +787,10 @@
+ 
+       case 'U':
+ 	unlink_first_option = 1;
++	break;
++
++      case NO_UNLINK_FIRST_OPTION:
++	unlink_first_option = 0;
+ 	break;
+ 
+       case 'v':
