@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2002/07/15 18:30:32 mycroft Exp $
+@comment $NetBSD: PLIST,v 1.5 2002/08/15 06:54:55 uebayasi Exp $
 bin/zsh
 @exec echo "updating /etc/shells"; cp /etc/shells /etc/shells.bak; (grep -v %D/%F /etc/shells.bak || true; echo %D/%F) >/etc/shells
 @unexec echo "updating /etc/shells"; cp /etc/shells /etc/shells.bak; (grep -v %D/%F /etc/shells.bak || true) >/etc/shells
@@ -38,7 +38,9 @@ share/zsh/${PKGVERSION}/functions/_archie
 share/zsh/${PKGVERSION}/functions/_arg_compile
 share/zsh/${PKGVERSION}/functions/_arguments
 share/zsh/${PKGVERSION}/functions/_arp
+share/zsh/${PKGVERSION}/functions/_arping
 share/zsh/${PKGVERSION}/functions/_arrays
+share/zsh/${PKGVERSION}/functions/_auto-apt
 share/zsh/${PKGVERSION}/functions/_autocd
 share/zsh/${PKGVERSION}/functions/_autoload
 share/zsh/${PKGVERSION}/functions/_bash_completions
@@ -54,7 +56,9 @@ share/zsh/${PKGVERSION}/functions/_cache_invalid
 share/zsh/${PKGVERSION}/functions/_call_function
 share/zsh/${PKGVERSION}/functions/_call_program
 share/zsh/${PKGVERSION}/functions/_cd
+share/zsh/${PKGVERSION}/functions/_cdcd
 share/zsh/${PKGVERSION}/functions/_chflags
+share/zsh/${PKGVERSION}/functions/_chkconfig
 share/zsh/${PKGVERSION}/functions/_chown
 share/zsh/${PKGVERSION}/functions/_combination
 share/zsh/${PKGVERSION}/functions/_command
@@ -76,6 +80,7 @@ share/zsh/${PKGVERSION}/functions/_cvs
 share/zsh/${PKGVERSION}/functions/_cvsup
 share/zsh/${PKGVERSION}/functions/_dd
 share/zsh/${PKGVERSION}/functions/_deb_packages
+share/zsh/${PKGVERSION}/functions/_debfoster
 share/zsh/${PKGVERSION}/functions/_default
 share/zsh/${PKGVERSION}/functions/_describe
 share/zsh/${PKGVERSION}/functions/_description
@@ -90,6 +95,7 @@ share/zsh/${PKGVERSION}/functions/_disable
 share/zsh/${PKGVERSION}/functions/_domains
 share/zsh/${PKGVERSION}/functions/_dpkg
 share/zsh/${PKGVERSION}/functions/_dpkg_source
+share/zsh/${PKGVERSION}/functions/_dput
 share/zsh/${PKGVERSION}/functions/_dupload
 share/zsh/${PKGVERSION}/functions/_dvi
 share/zsh/${PKGVERSION}/functions/_echotc
@@ -105,6 +111,7 @@ share/zsh/${PKGVERSION}/functions/_expand_word
 share/zsh/${PKGVERSION}/functions/_fakeroot
 share/zsh/${PKGVERSION}/functions/_fc
 share/zsh/${PKGVERSION}/functions/_fetchmail
+share/zsh/${PKGVERSION}/functions/_figlet
 share/zsh/${PKGVERSION}/functions/_file_descriptors
 share/zsh/${PKGVERSION}/functions/_files
 share/zsh/${PKGVERSION}/functions/_find
@@ -112,11 +119,14 @@ share/zsh/${PKGVERSION}/functions/_finger
 share/zsh/${PKGVERSION}/functions/_first
 share/zsh/${PKGVERSION}/functions/_flex
 share/zsh/${PKGVERSION}/functions/_floppy
+share/zsh/${PKGVERSION}/functions/_fsh
 share/zsh/${PKGVERSION}/functions/_functions
 share/zsh/${PKGVERSION}/functions/_gcc
 share/zsh/${PKGVERSION}/functions/_gdb
 share/zsh/${PKGVERSION}/functions/_generic
 share/zsh/${PKGVERSION}/functions/_getconf
+share/zsh/${PKGVERSION}/functions/_global
+share/zsh/${PKGVERSION}/functions/_global_tags
 share/zsh/${PKGVERSION}/functions/_gnu_generic
 share/zsh/${PKGVERSION}/functions/_gprof
 share/zsh/${PKGVERSION}/functions/_grep
@@ -130,10 +140,12 @@ share/zsh/${PKGVERSION}/functions/_history
 share/zsh/${PKGVERSION}/functions/_history_complete_word
 share/zsh/${PKGVERSION}/functions/_hosts
 share/zsh/${PKGVERSION}/functions/_iconv
+share/zsh/${PKGVERSION}/functions/_ifconfig
 share/zsh/${PKGVERSION}/functions/_ignored
 share/zsh/${PKGVERSION}/functions/_imagemagick
 share/zsh/${PKGVERSION}/functions/_in_vared
 share/zsh/${PKGVERSION}/functions/_init_d
+share/zsh/${PKGVERSION}/functions/_irssi
 share/zsh/${PKGVERSION}/functions/_ispell
 share/zsh/${PKGVERSION}/functions/_java
 share/zsh/${PKGVERSION}/functions/_jobs
@@ -144,6 +156,7 @@ share/zsh/${PKGVERSION}/functions/_joe
 share/zsh/${PKGVERSION}/functions/_kill
 share/zsh/${PKGVERSION}/functions/_killall
 share/zsh/${PKGVERSION}/functions/_kld
+share/zsh/${PKGVERSION}/functions/_last
 share/zsh/${PKGVERSION}/functions/_limits
 share/zsh/${PKGVERSION}/functions/_links
 share/zsh/${PKGVERSION}/functions/_list
@@ -163,6 +176,7 @@ share/zsh/${PKGVERSION}/functions/_mail
 share/zsh/${PKGVERSION}/functions/_mailboxes
 share/zsh/${PKGVERSION}/functions/_main_complete
 share/zsh/${PKGVERSION}/functions/_make
+share/zsh/${PKGVERSION}/functions/_make-kpkg
 share/zsh/${PKGVERSION}/functions/_man
 share/zsh/${PKGVERSION}/functions/_match
 share/zsh/${PKGVERSION}/functions/_math
@@ -171,14 +185,18 @@ share/zsh/${PKGVERSION}/functions/_mere
 share/zsh/${PKGVERSION}/functions/_message
 share/zsh/${PKGVERSION}/functions/_mh
 share/zsh/${PKGVERSION}/functions/_modutils
+share/zsh/${PKGVERSION}/functions/_mondo
 share/zsh/${PKGVERSION}/functions/_most_recent_file
 share/zsh/${PKGVERSION}/functions/_mount
+share/zsh/${PKGVERSION}/functions/_mozilla
+share/zsh/${PKGVERSION}/functions/_mtools
 share/zsh/${PKGVERSION}/functions/_multi_parts
 share/zsh/${PKGVERSION}/functions/_mutt
 share/zsh/${PKGVERSION}/functions/_my_accounts
 share/zsh/${PKGVERSION}/functions/_mysql_utils
 share/zsh/${PKGVERSION}/functions/_ncftp
 share/zsh/${PKGVERSION}/functions/_nedit
+share/zsh/${PKGVERSION}/functions/_net_interfaces
 share/zsh/${PKGVERSION}/functions/_netscape
 share/zsh/${PKGVERSION}/functions/_newsgroups
 share/zsh/${PKGVERSION}/functions/_next_label
@@ -226,10 +244,14 @@ share/zsh/${PKGVERSION}/functions/_requested
 share/zsh/${PKGVERSION}/functions/_retrieve_cache
 share/zsh/${PKGVERSION}/functions/_rlogin
 share/zsh/${PKGVERSION}/functions/_rpm
+share/zsh/${PKGVERSION}/functions/_rsync
 share/zsh/${PKGVERSION}/functions/_ruby
 share/zsh/${PKGVERSION}/functions/_samba
+share/zsh/${PKGVERSION}/functions/_sccs
 share/zsh/${PKGVERSION}/functions/_sched
 share/zsh/${PKGVERSION}/functions/_sep_parts
+share/zsh/${PKGVERSION}/functions/_service
+share/zsh/${PKGVERSION}/functions/_services
 share/zsh/${PKGVERSION}/functions/_set
 share/zsh/${PKGVERSION}/functions/_setopt
 share/zsh/${PKGVERSION}/functions/_setup
@@ -239,6 +261,7 @@ share/zsh/${PKGVERSION}/functions/_slrn
 share/zsh/${PKGVERSION}/functions/_smit
 share/zsh/${PKGVERSION}/functions/_socket
 share/zsh/${PKGVERSION}/functions/_source
+share/zsh/${PKGVERSION}/functions/_spamassassin
 share/zsh/${PKGVERSION}/functions/_ssh
 share/zsh/${PKGVERSION}/functions/_stat
 share/zsh/${PKGVERSION}/functions/_store_cache
@@ -267,6 +290,7 @@ share/zsh/${PKGVERSION}/functions/_unhash
 share/zsh/${PKGVERSION}/functions/_unsetopt
 share/zsh/${PKGVERSION}/functions/_update-alternatives
 share/zsh/${PKGVERSION}/functions/_urls
+share/zsh/${PKGVERSION}/functions/_urpmi
 share/zsh/${PKGVERSION}/functions/_user_admin
 share/zsh/${PKGVERSION}/functions/_user_at_host
 share/zsh/${PKGVERSION}/functions/_users
@@ -302,11 +326,13 @@ share/zsh/${PKGVERSION}/functions/_x_resource
 share/zsh/${PKGVERSION}/functions/_x_selection_timeout
 share/zsh/${PKGVERSION}/functions/_x_title
 share/zsh/${PKGVERSION}/functions/_x_utils
+share/zsh/${PKGVERSION}/functions/_x_visual
 share/zsh/${PKGVERSION}/functions/_x_window
 share/zsh/${PKGVERSION}/functions/_xargs
 share/zsh/${PKGVERSION}/functions/_xauth
 share/zsh/${PKGVERSION}/functions/_xdvi
 share/zsh/${PKGVERSION}/functions/_xfig
+share/zsh/${PKGVERSION}/functions/_xloadimage
 share/zsh/${PKGVERSION}/functions/_xmodmap
 share/zsh/${PKGVERSION}/functions/_xrdb
 share/zsh/${PKGVERSION}/functions/_xset
@@ -329,6 +355,12 @@ share/zsh/${PKGVERSION}/functions/_zpty
 share/zsh/${PKGVERSION}/functions/_zstyle
 share/zsh/${PKGVERSION}/functions/allopt
 share/zsh/${PKGVERSION}/functions/bash-backward-kill-word
+share/zsh/${PKGVERSION}/functions/bash-backward-word
+share/zsh/${PKGVERSION}/functions/bash-down-case-word
+share/zsh/${PKGVERSION}/functions/bash-forward-word
+share/zsh/${PKGVERSION}/functions/bash-kill-word
+share/zsh/${PKGVERSION}/functions/bash-transpose-words
+share/zsh/${PKGVERSION}/functions/bash-up-case-word
 share/zsh/${PKGVERSION}/functions/checkmail
 share/zsh/${PKGVERSION}/functions/colors
 share/zsh/${PKGVERSION}/functions/compaudit
@@ -360,6 +392,7 @@ share/zsh/${PKGVERSION}/functions/prompt_off_setup
 share/zsh/${PKGVERSION}/functions/prompt_oliver_setup
 share/zsh/${PKGVERSION}/functions/prompt_redhat_setup
 share/zsh/${PKGVERSION}/functions/prompt_suse_setup
+share/zsh/${PKGVERSION}/functions/prompt_walters_setup
 share/zsh/${PKGVERSION}/functions/prompt_zefram_setup
 share/zsh/${PKGVERSION}/functions/promptinit
 share/zsh/${PKGVERSION}/functions/promptnl
