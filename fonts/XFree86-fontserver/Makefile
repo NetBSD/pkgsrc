@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2004/01/24 09:15:19 xtraeme Exp $
+# $NetBSD: Makefile,v 1.3 2004/01/29 06:21:36 xtraeme Exp $
 
 DISTNAME=	${DISTFILES}
 PKGNAME=	XFree86-fontserver-${XF_VER}
-CATEGORIES=	x11
+CATEGORIES=	fonts x11
 MASTER_SITES=	${MASTER_SITE_XFREE}
 DISTFILES=	X430src-1.tgz X430src-2.tgz \
 		X430src-3.tgz X430src-4.tgz
