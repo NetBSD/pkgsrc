@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1799 2004/06/03 12:20:01 adam Exp $
+$NetBSD: TODO,v 1.1800 2004/06/03 20:44:53 abs Exp $
 
 Suggested new packages
 ======================
@@ -162,6 +162,7 @@ Suggested package updates
 	o Xaw3d-1.5E
 	o Xbae-4.50.0
 	o anjuta-1.2.2
+	o ap-jk-5.0.25
 	o ap-python-2.7.10
 	o apcupsd-3.10.13
 	o aqsis-0.9.1
@@ -182,8 +183,8 @@ Suggested package updates
 	o clisp-2.33.1
 	o cocoon-2.1.5
 	o conserver-8.1.5
-	o courier-imap-3.0.0
 	o courier-0.45
+	o courier-imap-3.0.0
 	o crafty-19.5
 	o crossfire-1.5.0
 	o cscope-15.5
