@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1945 2003/04/15 15:04:17 gehenna Exp $
+$NetBSD: CHANGES,v 1.1946 2003/04/15 16:24:42 salo Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1612,3 +1612,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated pan to 0.13.4nb1 [wiz 2003-04-15]
 	Updated gnet to 2.0.0 [wiz 2003-04-15]
 	Updated cvsync to 0.19.4 [gehenna 2003-04-15]
+	Updated subversion to 0.20.1 [salo 2003-04-15]
+	Updated ap2-subversion to 0.20.1 [salo 2003-04-15]
