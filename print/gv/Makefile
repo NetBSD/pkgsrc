@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2003/06/02 01:17:29 jschauma Exp $
+# $NetBSD: Makefile,v 1.38 2003/06/12 15:37:13 jschauma Exp $
 # FreeBSD Id: Makefile,v 1.16 1997/07/13 18:49:29 max Exp
 #
 
@@ -19,6 +19,13 @@ XAW_TYPE?=		3d
 
 .if ${OPSYS} == "Linux"
 USE_GMAKE=		YES
+.elif ${OPSYS} == "IRIX" && !empty(ABI)
+# Hack to put the correct path first -- otherwise, buildlink will first try to link X11BASE/lib
+.  if ${ABI} == "64"
+IMAKEOPTS+=		-DsgiABIopts="-L/usr/lib${ABI} -DLONG64"
+.  else
+IMAKEOPTS+=		-DsgiABIdefs=-L/usr/lib${ABI}
+.  endif
 .endif
 
 # We need Xaw3d to build.
