@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2001/04/20 15:04:55 skrll Exp $
+$NetBSD: distinfo,v 1.3 2002/11/11 20:07:34 jschauma Exp $
 
-SHA1 (detex-2.7.tar) = 1c29b71c4fc4f92325e1d7388be0e783188beefd
+SHA1 (detex-2.7.tar) = 84b975a57ea199a29a795d699bb92dca0bad42d5
 Size (detex-2.7.tar) = 94720 bytes
 SHA1 (patch-aa) = cb83efacc8af3c33130db37c6418887d2fd314d4
