@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.3 2002/03/15 01:07:47 nathanw Exp $
+$NetBSD: distinfo,v 1.4 2003/06/04 04:36:56 simonb Exp $
 
 SHA1 (ctwm-3.5.2.tar.gz) = 938750b798b53262f00436f7cd2228b414ce3057
 Size (ctwm-3.5.2.tar.gz) = 598142 bytes
+SHA1 (patch-aa) = ad06698a5d0694a98c808685b5dbec8ccf47442f
