@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.3 2003/11/01 04:03:18 mrg Exp $
+$NetBSD: patch-ab,v 1.4 2003/11/01 09:25:31 mycroft Exp $
 
 --- xbattbar.c.orig	2001-02-02 16:25:29.000000000 +1100
 +++ xbattbar.c	2003-11-01 14:55:10.000000000 +1100
@@ -16,7 +16,7 @@ $NetBSD: patch-ab,v 1.3 2003/11/01 04:03:18 mrg Exp $
  #include <signal.h>
  #include <stdio.h>
  #include <unistd.h>
-@@ -583,46 +590,161 @@
+@@ -583,46 +590,165 @@
  #define _PATH_APM_CTLDEV       "/dev/apmctl"
  #define _PATH_APM_NORMAL       "/dev/apm"
  
@@ -142,18 +142,22 @@ $NetBSD: patch-ab,v 1.3 2003/11/01 04:03:18 mrg Exp $
 -       }
 +       if (acpi) {
 +		int32_t rtot = 0, maxtot = 0;
-+		p = APM_AC_ON;
++		p = APM_AC_OFF;
 +		for (i = 0 ; i < ns ; i++) {
++			if ((etds[i].validflags & ENVSYS_FCURVALID) == 0)
++				continue;
 +			cc = strlen(ebis[i].desc);
-+			if (strcmp(&ebis[i].desc[cc - 6], "energy") == 0) {
++			if (strncmp(ebis[i].desc, "acpibat", 7) == 0 &&
++			    (strcmp(&ebis[i].desc[cc - 7], " charge") == 0 ||
++			     strcmp(&ebis[i].desc[cc - 7], " energy") == 0)) {
 +				rtot += etds[i].cur.data_s;
 +				maxtot += etds[i].max.data_s;
 +			}
 +			if (ebis[i].units == ENVSYS_INDICATOR &&
 +			    etds[i].cur.data_s &&
 +			    strncmp(ebis[i].desc, "acpiacad", 8) == 0 &&
-+			    strcmp(&ebis[i].desc[cc - 12], "disconnected") == 0) {
-+				p = APM_AC_OFF;
++			    strcmp(&ebis[i].desc[cc - 10], " connected") == 0) {
++				p = APM_AC_ON;
 +			}
 +		}
 +		r = (rtot * 100.0) / maxtot;
