@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7817 2004/11/11 06:17:53 minskim Exp $
+$NetBSD: CHANGES,v 1.7818 2004/11/11 10:38:33 cjep Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5222,3 +5222,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gimageview to 0.2.26nb1 [jmmv 2004-11-10]
 	Updated musicpd to 0.11.5 [simonb 2004-11-11]
 	Added simage-1.6.1 [minskim 2004-11-11]
+	Updated nail to 11.15 [cjep 2004-11-11]
