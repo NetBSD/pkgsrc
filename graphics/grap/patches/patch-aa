@@ -1,0 +1,60 @@
+$NetBSD: patch-aa,v 1.1 2001/07/15 12:22:43 jtb Exp $
+
+--- Makefile.in.orig	Thu Jun 21 14:04:51 2001
++++ Makefile.in
+@@ -6,6 +6,8 @@
+ 
+ BINDIR = @bindir@
+ DEFINESDIR = @datadir@/grap
++DOCDIR = @datadir@/doc/grap
++EXAMPLESDIR = @datadir@/examples/grap
+ MANDIR = @mandir@/man1
+ 
+ PROGS=grap
+@@ -15,7 +17,7 @@
+ INSTALL_DATA=@INSTALL_DATA@
+ RM=rm -f
+ RMDIR=rm -rf
+-MKDIR=mkdir
++MKDIR=mkdir -p
+ LEX=@LEX@
+ YACC=@YACC@
+ CXX=@CXX@
+@@ -90,25 +92,27 @@
+ # The || true lines allow make to continue on systems where install -d
+ # fails on existing directories.
+ install:	grap grap.defines grap.1
+-	strip grap
+ 	$(INSTALL) -d $(BINDIR) || true
+ 	$(INSTALL) -d $(MANDIR) || true
+-	$(INSTALL) -d $(DEFINESDIR)/examples || true
++	$(INSTALL) -d $(DEFINESDIR) || true
++	$(INSTALL) -d $(DOCDIR) || true
++	$(INSTALL) -d $(EXAMPLESDIR) || true
+ 	$(INSTALL_PROGRAM) grap $(BINDIR)
+ 	$(INSTALL_DATA) grap.1 $(MANDIR)
+ 	$(INSTALL_DATA) grap*.defines $(DEFINESDIR)
+-	$(INSTALL_DATA) README $(DEFINESDIR)
+-	$(INSTALL_DATA) CHANGES $(DEFINESDIR)
+-	$(INSTALL_DATA) COPYRIGHT $(DEFINESDIR)
+-	$(INSTALL_DATA) grap.man $(DEFINESDIR)
+-	$(INSTALL_DATA) examples/*.d examples/example.ms examples/*.result examples/Makefile $(DEFINESDIR)/examples
++	$(INSTALL_DATA) README $(DOCDIR)
++	$(INSTALL_DATA) CHANGES $(DOCDIR)
++	$(INSTALL_DATA) COPYRIGHT $(DOCDIR)
++	$(INSTALL_DATA) grap.man $(DOCDIR)
++	$(INSTALL_DATA) examples/*.d examples/example.ms examples/*.result examples/Makefile $(EXAMPLESDIR)
+ 
+ deinstall:
+ 	$(RM) $(BINDIR)/grap
+ 	$(RM) $(MANDIR)/grap.1
+-	$(RM) $(DEFINESDIR)/grap*.defines $(DEFINESDIR)/README $(DEFINESDIR)/CHANGES $(DEFINESDIR)/COPYRIGHT $(DEFINESDIR)/grap.man
+-	$(RM) $(DEFINESDIR)/examples/*.d $(DEFINESDIR)/examples/*.ms $(DEFINESDIR)/examples/Makefile $(DEFINESDIR)/examples/*result
+-	$(RMDIR) $(DEFINESDIR)/examples
++	$(RM) $(DEFINESDIR)/grap*.defines $(DOCDIR)/README $(DOCDIR)/CHANGES $(DOCDIR)/COPYRIGHT $(DOCDIR)/grap.man
++	$(RM) $(EXAMPLESDIR)/*.d $(EXAMPLESDIR)/*.ms $(EXAMPLESDIR)/Makefile $(EXAMPLESDIR)/*result
++	$(RMDIR) $(DOCDIR)
++	$(RMDIR) $(EXAMPLESDIR)
+ 	$(RMDIR) $(DEFINESDIR)
+ 
+ check:	grap grap.defines examples/example.ms
