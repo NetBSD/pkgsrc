@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3799 2003/11/08 10:15:20 xtraeme Exp $
+$NetBSD: CHANGES,v 1.3800 2003/11/08 14:51:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4326,3 +4326,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated xlockmore to 5.10 [hubertf 2003-11-08]
 	Updated python-mode to 4.6nb1 [xtraeme 2003-11-08]
 	Updated Ngraph to 6.3.20 [xtraeme 2003-11-08]
+	Updated oss to 3.9.8b [wiz 2003-11-08]
