@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2003/07/17 21:39:40 grant Exp $
+# $NetBSD: Makefile,v 1.24 2004/01/24 13:30:57 grant Exp $
 
 DISTNAME=		xpuyopuyo-0.9.1
 PKGREVISION=		3
@@ -14,7 +14,7 @@ DEPENDS+=		gnome1-dirs>=1.0:../../misc/gnome1-dirs
 
 AUTOMAKE_REQD=		1.4
 USE_BUILDLINK2=		YES
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 USE_X11BASE=		YES
 USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
