@@ -1,0 +1,31 @@
+$NetBSD: patch-af,v 1.1 1998/12/03 17:30:00 tv Exp $
+
+--- crypto/Makefile.ssl.orig	Thu Apr  9 11:47:17 1998
++++ crypto/Makefile.ssl	Wed Dec  2 19:31:29 1998
+@@ -52,7 +52,7 @@
+ top:
+ 	@(cd ..; $(MAKE) DIRS=$(DIR) all)
+ 
+-all: date.h lib subdirs
++all: date.h subdirs lib
+ 
+ date.h: ../Makefile.ssl ../VERSION
+ 	echo "#define DATE	\"`date`\"" >date.h
+@@ -85,9 +85,15 @@
+ 	$(MAKE) links ); \
+ 	done;
+ 
++OBJDIRS=crypto
++.if defined(USE_RSAREF)
++OBJDIRS+=rsaref
++.endif
++
+ lib:	$(LIBOBJ)
+-	$(AR) $(LIB) $(LIBOBJ)
+-	sh $(TOP)/util/ranlib.sh $(LIB)
++	rm -f ../libcrypto.a
++	(cd ..; ${CC} -o libcrypto.la `find ${OBJDIRS} -name '*.lo'|grep -v ctx_size` \
++		-version-info 0:0 -rpath ${PREFIX}/lib)
+ 	@touch lib
+ 
+ libs:

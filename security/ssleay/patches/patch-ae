@@ -1,4 +1,5 @@
-$NetBSD: patch-ae,v 1.1 1998/09/17 00:48:02 garbled Exp $
+$NetBSD: patch-ae,v 1.2 1998/12/03 17:29:59 tv Exp $
+
 --- crypto/bn/asm/alpha.s.orig	Wed Sep 16 15:41:18 1998
 +++ crypto/bn/asm/alpha.s	Wed Sep 16 15:41:28 1998
 @@ -195,7 +195,7 @@
