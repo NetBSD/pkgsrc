@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2003/02/13 19:22:44 abs Exp $
+# $NetBSD: Makefile,v 1.55 2003/03/31 16:18:04 bouyer Exp $
 
 DISTNAME=       imap-2002b
 PKGNAME=        imap-uw-2002.2
@@ -36,10 +36,10 @@ ALL_TARGET+=	EXTRAAUTHENTICATORS="gss"
 .endif
 
 BUILD_DEFS+=	IMAP_UW_CCLIENT_MBOX_FMT IMAP_UW_NO_CLEARTEXT
-CCLIENT_INCS=	c-client.h env.h env_unix.h flstring.h fs.h ftl.h	\
-		imap4r1.h linkage.c linkage.h mail.h misc.h netmsg.h	\
-		newsrc.h nl.h nntp.h osdep.h pop3.h rfc822.h smtp.h	\
-		tcp.h utf8.h
+CCLIENT_INCS=	c-client.h env.h env_unix.h flocksim.h flstring.h	\
+		fs.h ftl.h imap4r1.h linkage.c linkage.h mail.h misc.h	\
+		netmsg.h newsrc.h nl.h nntp.h osdep.h pop3.h rfc822.h	\
+		smtp.h tcp.h utf8.h
 CCLIENT_LIB=	libc-client.la
 CCLIENT_PICLIB=	libc-client_pic.a
 CCLIENT_MAJOR=	4
