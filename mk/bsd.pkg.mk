@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.833 2001/10/26 15:08:43 wulf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.834 2001/10/26 16:03:26 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -1517,10 +1517,6 @@ do-libtool:
 
 .if !target(do-configure)
 do-configure: ${_CONFIGURE_PREREQ}
-	${_PKG_SILENT}${_PKG_DEBUG}if [ -f ${SCRIPTDIR}/configure ]; then \
-		cd ${.CURDIR} && ${SETENV} ${SCRIPTS_ENV} ${SH} \
-		  ${SCRIPTDIR}/configure; \
-	fi
 .  if defined(HAS_CONFIGURE)
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${WRKSRC} && ${SETENV} \
 	    CC="${CC}" CFLAGS="${CFLAGS}" CPPFLAGS="${CPPFLAGS}" \
@@ -1697,16 +1693,8 @@ real-su-install: ${MESSAGE}
 	fi
 .endif # !NO_MTREE
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${SETENV} ${MAKE_ENV} ${MAKE} ${MAKEFLAGS} pre-install
-	${_PKG_SILENT}${_PKG_DEBUG}if [ -f ${SCRIPTDIR}/pre-install ]; then		\
-		cd ${.CURDIR} && ${SETENV} ${SCRIPTS_ENV} ${SH}		\
-			${SCRIPTDIR}/pre-install;		\
-	fi
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${SETENV} ${MAKE_ENV} ${MAKE} ${MAKEFLAGS} do-install
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${SETENV} ${MAKE_ENV} ${MAKE} ${MAKEFLAGS} post-install
-	${_PKG_SILENT}${_PKG_DEBUG}if [ -f ${SCRIPTDIR}/post-install ]; then	\
-		cd ${.CURDIR} && ${SETENV} ${SCRIPTS_ENV} ${SH}		\
-			${SCRIPTDIR}/post-install;	\
-	fi
 .for f in ${INFO_FILES}
 	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} "install-info --info-dir=${PREFIX}/info ${PREFIX}/info/${f}"; \
 	install-info --remove --info-dir=${PREFIX}/info ${PREFIX}/info/${f}; \
