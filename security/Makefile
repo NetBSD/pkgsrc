@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2001/01/09 06:33:21 itojun Exp $
+# $NetBSD: Makefile,v 1.57 2001/01/15 06:41:03 itojun Exp $
 #
 
     SUBDIR += PAM
@@ -46,6 +46,7 @@
     SUBDIR += rc5des
     SUBDIR += rid
     SUBDIR += rsaref
+    SUBDIR += scanssh
     SUBDIR += smtpd
     SUBDIR += srp_client
     SUBDIR += ssh
