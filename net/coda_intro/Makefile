@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 1998/10/02 20:06:34 rvb Exp $
+# $NetBSD: Makefile,v 1.2 1998/10/05 23:06:16 rvb Exp $
 #
 
-DISTNAME=	coda-intro-4.6.5-1
-PKGNAME=	coda-intro-4.6.5.1
+DISTNAME=	coda-intro-4.6.5-2
+PKGNAME=	coda-intro-4.6.5.2
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.coda.cs.cmu.edu/pub/coda/doc/
 EXTRACT_SUFX=	.tgz

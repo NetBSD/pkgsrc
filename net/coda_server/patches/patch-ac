@@ -1,0 +1,19 @@
+$NetBSD: patch-ac,v 1.1 1998/10/05 23:06:16 rvb Exp $
+
+Index: configs/Makeconf.i386_fbsd3
+===================================================================
+RCS file: /afs/cs/project/coda-src/cvs/coda/configs/Makeconf.i386_fbsd3,v
+retrieving revision 1.1.2.1
+diff -u -r1.1.2.1 Makeconf.i386_fbsd3
+--- Makeconf.i386_fbsd3	1998/09/03 21:11:30	1.1.2.1
++++ Makeconf.i386_fbsd3	1998/10/05 15:39:07
+@@ -54,7 +54,6 @@
+ LIBMATH       = -lm
+ GUIDIR        = /usr/lib/coda
+ 
+-KRBINCLFLAGS  = -I/usr/athena/include -I/usr/include/kerberosIV
+-#LIBKRBS       =    /usr/athena/lib/libkrb4.a /usr/athena/lib/libkrb5.a /usr/athena/lib/libcrypto.a /usr/athena/lib/libcom_err.a  /usr/athena/lib/libdes425.a /usr/athena/lib/libkrb524.a
+-LIBKRBS = /usr/lib/libkrb.a
++KRBINCLFLAGS  =
++LIBKRBS = /usr/lib/aout/libkrb.a /usr/lib/aout/libdes.a
+ 
