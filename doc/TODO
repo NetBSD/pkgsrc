@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.991 2003/11/04 12:51:29 adam Exp $
+$NetBSD: TODO,v 1.992 2003/11/04 15:14:11 cube Exp $
 
 Suggested new packages
 ======================
@@ -295,6 +295,7 @@ Suggested package updates
 	o p5-Net-DNS-0.41 [heinz]
 	o p5-razor-agents-2.36 [heinz]
 	o pdmenu-1.2.81
+	o php-4.3.4
 	o postfix-2.0.16
 	o prboom-2.2.4 [pkg/23346]
 	o proftpd-1.2.9
