@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9052 2005/02/05 22:17:08 jdolecek Exp $
+$NetBSD: CHANGES,v 1.9053 2005/02/05 22:37:31 jdolecek Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -769,3 +769,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated firewalk to 5.0 [adrianp 2005-02-05]
 	Added libgda-sqlite-1.0.4 [jmmv 2005-02-05]
 	Updated elm to 2.5.7 [jdolecek 2005-02-05]
+	Updated elmo to 1.3.1 [jdolecek 2005-02-05]
