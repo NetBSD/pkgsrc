@@ -1,0 +1,20 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/02/08 08:48:37 frueauf Exp $
+
+--- ../../gnuchess-4.0.pl79/src/dspcom.c	Mon Sep 28 08:41:19 1998
++++ ./src/dspcom.c	Thu Dec 10 23:40:57 1998
+@@ -1099,14 +1099,14 @@
+ #ifdef NONDSP
+       s[0] = sx[0] = '\0';
+       while (!sx[0])
+-	(void) gets (sx);
++	(void) fgets (sx, 80, stdin); sx[79] = '\0';
+ #else
+       fflush (stdout);
+ #ifdef MSDOS
+       s[0] = '\0';
+       eof = ( gets (sx) == NULL );
+ #else
+       eof = ( getstr (sx) == ERR );
+ #endif
+ #endif
+       sscanf (sx, "%s", s);
