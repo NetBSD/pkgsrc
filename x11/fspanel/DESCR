@@ -3,4 +3,5 @@ lets you iconify and bring windows to front. FSPanel is tiny, less than
 10k on i386-linux. It does require a EWMH compliant window manager
 though (eg. Enlightenment, SawFish, WindowMaker, IceWM).
 
-Basically it's a tiny, lame, featureless panel.
+Basically it's a tiny, lame, featureless panel. It doesn't provide
+program launchers, menus, nor applets.
