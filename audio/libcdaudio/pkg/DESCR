@@ -1,0 +1,20 @@
+  libcdaudio is a multi-platform CD player development library which works with
+NetBSD, Linux, FreeBSD, OpenBSD, Solaris, and Irix. It includes a basic command
+set for controlling the operation of the CD-ROM drive as well as functions for
+accessing both the CDDB, CD Index, and Cover Art Index.
+
+  It is recommened that all programs wishing to specifically use CDDB data use
+the FreeDB at "http://www.freedb.org/", which works well with libcdaudio.
+
+  The CD Index ("http://www.cdindex.org/") is a rethought track information
+mangement system that uses SQL servers to manage the data.  This is another
+track information method libcdaudio is capable of using.
+
+  The Cover Art Index ("http://coverart.undergrid.net/") provides a method of
+locating cover art for a particular CD based upon the disc's name or CD Index
+ID.
+
+  The entire libcdaudio API may be found in the libcdaudio programmer's manual
+at "http://cdcd.undergrid.net/libcdaudio/manual/".  The interface to the given
+functions will remain as they are specified, although new functions may continue
+to be added. 
