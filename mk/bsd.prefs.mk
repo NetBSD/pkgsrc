@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.84 2002/10/21 01:17:12 wiz Exp $
+# $NetBSD: bsd.prefs.mk,v 1.85 2002/10/21 01:40:57 wiz Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -208,11 +208,6 @@ USE_INET6?=		NO
 .include "${.CURDIR}/../mk/defs.NetBSD.mk"
 .else exists(${.CURDIR}/mk/defs.NetBSD.mk)
 .include "${.CURDIR}/mk/defs.NetBSD.mk"
-.endif
-
-# Set default type of libXaw used during package builds.
-.if defined(USE_XAW)
-XAW_TYPE?=		standard
 .endif
 
 # Check if we got Xpm distributed with XFree86 4.x or Solaris 9 or if we need
