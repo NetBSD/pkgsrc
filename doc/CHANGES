@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3161 2003/08/30 22:25:44 jmmv Exp $
+$NetBSD: CHANGES,v 1.3162 2003/08/30 23:28:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3411,3 +3411,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated gsl to 1.4 [jtb 2003-08-30]
 	Updated bidwatcher to 1.3.10nb1 [tron 2003-08-30]
 	Updated wdm to 1.25 [jmmv 2003-08-30]
+	Updated capc-calc to 2.11.8 [wiz 2003-08-30]
