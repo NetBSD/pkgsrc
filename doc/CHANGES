@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.687 2002/12/05 12:33:30 tron Exp $
+$NetBSD: CHANGES,v 1.688 2002/12/05 14:57:15 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3819,3 +3819,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated kdeadmin2 to 2.2.2nb2 [tron 2002-12-05]
 	Updated kdenetwork2 to 2.2.2nb4 [tron 2002-12-05]
 	Updated kde2 to 2.2.2nb5 [tron 2002-12-05]
+	Added xdvipresent-0.6p12 [jschauma 2002-12-05]
