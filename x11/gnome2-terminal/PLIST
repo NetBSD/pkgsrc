@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2004/04/18 14:00:28 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.9 2004/09/21 16:58:05 jmmv Exp $
 bin/gnome-terminal
 lib/bonobo/servers/gnome-terminal.server
 share/application-registry/gnome-terminal.applications
@@ -76,6 +76,7 @@ ${PKGLOCALEDIR}/locale/en_CA/LC_MESSAGES/gnome-terminal.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/gnome-terminal.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/gnome-terminal.mo
 ${PKGLOCALEDIR}/locale/et/LC_MESSAGES/gnome-terminal.mo
+${PKGLOCALEDIR}/locale/eu/LC_MESSAGES/gnome-terminal.mo
 ${PKGLOCALEDIR}/locale/fa/LC_MESSAGES/gnome-terminal.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/gnome-terminal.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gnome-terminal.mo
