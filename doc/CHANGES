@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6381 2004/06/28 17:57:26 jmmv Exp $
+$NetBSD: CHANGES,v 1.6382 2004/06/28 18:25:04 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3158,3 +3158,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gst-plugins-theora to 0.8.2 [jmmv 2004-06-28]
 	Updated gst-plugins-gnomevfs to 0.8.2 [jmmv 2004-06-28]
 	Updated libgail-gnome to 1.0.4 [jmmv 2004-06-28]
+	Updated libgnomeprint to 2.6.2 [jmmv 2004-06-28]
+	Updated libgnomeprintui to 2.6.2 [jmmv 2004-06-28]
