@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.87 2002/08/23 07:27:54 grant Exp $
+# $NetBSD: Makefile,v 1.88 2002/08/28 04:55:18 jlam Exp $
 
 DISTNAME=		openssh-3.4p1
 PKGNAME=		openssh-3.4.0.1
@@ -43,33 +43,34 @@ RCD_SCRIPTS_EGDIR=	etc/rc.d
 PLIST_SUBST+=		MANDIR=${MANDIR}
 PLIST_SUBST+=		RCD_SCRIPTS_EGDIR=${RCD_SCRIPTS_EGDIR}
 
-USE_BUILDLINK_ONLY=	yes
+USE_BUILDLINK2=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/${MANDIR}
 CONFIGURE_ARGS+=	--with-pid-dir=${SSH_PID_DIR}
-CONFIGURE_ARGS+=	--with-ssl-dir=${BUILDLINK_DIR}
-CONFIGURE_ARGS+=	--with-tcp-wrappers=${BUILDLINK_DIR}
+CONFIGURE_ARGS+=	--with-ssl-dir=${SSLBASE}
+CONFIGURE_ARGS+=	--with-tcp-wrappers=${BUILDLINK_PREFIX.tcp_wrappers}
 CONFIGURE_ARGS+=	--with-privsep-path=/var/chroot/sshd
 
 # XXX: PAM authentication causes memory faults, and I haven't tracked down
 # XXX: why yet.  For the moment, disable PAM authentication.
 #
 #.if defined(USE_PAM)
-#.include "../../security/PAM/buildlink.mk"
+#.include "../../security/PAM/buildlink2.mk"
 #CONFIGURE_ARGS+=	--with-pam
 #PLIST_SRC+=		${.CURDIR}/PLIST.pam
 #MESSAGE_SRC+=		${.CURDIR}/MESSAGE.pam
 #.endif
 
-# XXX: we have 4 args (4: sslen) to skeychallenge instead of 3
-#.if ${OPSYS} == "NetBSD"
+.if (${OPSYS} == "Darwin") || (${OPSYS} == "SunOS")
+.  include "../../security/skey/buildlink2.mk"
+CONFIGURE_ARGS+=	--with-skey=${BUILDLINK_PREFIX.skey}
+.elif ${OPSYS} == "NetBSD"
+# XXX: NetBSD has 4 args (4: sslen) to skeychallenge instead of 3
 #CONFIGURE_ARGS+=	--with-skey=/usr
-#.endif
-
-.if ${OPSYS} == "SunOS"
-DEPENDS+=		skey>=1.1.5:../../security/skey
-CONFIGURE_ARGS+=	--with-skey=${LOCALBASE}
+CONFIGURE_ARGS+=	--without-skey
+.else
+CONFIGURE_ARGS+=	--without-skey
 .endif
 
 # XXX: <krb.h>
@@ -77,6 +78,8 @@ CONFIGURE_ARGS+=	--with-skey=${LOCALBASE}
 #PKG_USE_KERBEROS=		yes
 #CONFIGURE_ARGS+=	--with-kerberos4=/usr
 #.endif
+
+LD=	${CC}
 
 # The ssh-askpass program is in ${X11BASE}/bin or ${X11PREFIX}/bin depending
 # on if it's part of the X11 distribution, or if it's installed from pkgsrc
@@ -135,8 +138,9 @@ post-install:
 #.endif
 	${INSTALL_SCRIPT} ${WRKDIR}/sshd ${PREFIX}/${RCD_SCRIPTS_EGDIR}/sshd
 
-.include "../../devel/zlib/buildlink.mk"
-.include "../../security/openssl/buildlink.mk"
-.include "../../security/tcp_wrappers/buildlink.mk"
+.include "../../devel/zlib/buildlink2.mk"
+.include "../../security/openssl/buildlink2.mk"
+.include "../../security/tcp_wrappers/buildlink2.mk"
+
 .include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
