@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.525 2003/05/08 09:18:56 wiz Exp $
+$NetBSD: TODO,v 1.526 2003/05/08 09:19:55 wiz Exp $
 
 Suggested new packages
 ======================
@@ -50,10 +50,6 @@ Suggested new packages
 	tutos
 	the ultimate team organization software
 	http://www.tutos.org [agc is looking at this one]
-
-	vmsbackup
-	Read VMS backup tapes. [cjep has put a package into pkgsrc-wip.]
-	http://garbo.uwasa.fi/pub/unix/vmsbackup/
 
 	xmltv
 	TV viewing manager
