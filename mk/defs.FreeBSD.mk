@@ -1,4 +1,4 @@
-# $NetBSD: defs.FreeBSD.mk,v 1.35 2004/04/14 11:30:00 xtraeme Exp $
+# $NetBSD: defs.FreeBSD.mk,v 1.36 2004/04/14 11:39:53 xtraeme Exp $
 #
 # Variable definitions for the FreeBSD operating system.
 
@@ -165,4 +165,11 @@ SERIAL_DEVICES?=	/dev/cuaa0
 # check for kqueue(2) support
 .if exists(/usr/include/sys/event.h)
 PKG_HAVE_KQUEUE=	# defined
+.endif
+
+# check for maximum command line length and set it in configure's environment,
+# to avoid a test required by the libtool script that takes forever.
+.if defined(GNU_CONFIGURE) && defined(USE_LIBTOOL)
+_OPSYS_MAX_CMDLEN!=	/sbin/sysctl -n kern.argmax
+CONFIGURE_ENV+=		lt_cv_sys_max_cmd_len=${_OPSYS_MAX_CMDLEN}
 .endif
