@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2004/10/23 06:55:23 jdolecek Exp $
+# $NetBSD: Makefile,v 1.35 2004/10/23 07:13:37 jdolecek Exp $
 #
 
 COMMENT=	Clocks, calendars, daily planners and other time related applications
@@ -40,6 +40,7 @@ SUBDIR+=	phoon
 SUBDIR+=	plan
 SUBDIR+=	polclock
 SUBDIR+=	projclock
+SUBDIR+=	ptimetracker
 SUBDIR+=	py-mxDateTime
 SUBDIR+=	rclock
 SUBDIR+=	remind
