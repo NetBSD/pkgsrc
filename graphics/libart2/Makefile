@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/02/14 17:21:42 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2004/04/24 20:39:20 minskim Exp $
 
 DISTNAME=		libart_lgpl-2.3.16
 PKGNAME=		${DISTNAME:S/_lgpl/2/}
@@ -9,6 +9,8 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		jmmv@NetBSD.org
 HOMEPAGE=		http://www.levien.com/libart/
 COMMENT=		High-performance 2D graphics library
+
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=		YES
 USE_BUILDLINK3=		YES
