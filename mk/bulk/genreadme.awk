@@ -1,5 +1,5 @@
  #!/usr/bin/awk -f
-# $NetBSD: genreadme.awk,v 1.4 2002/11/14 07:10:05 dmcmahill Exp $
+# $NetBSD: genreadme.awk,v 1.5 2002/11/16 02:15:15 dmcmahill Exp $
 #
 # Copyright (c) 2002 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -283,7 +283,8 @@ END {
 		gsub(/&/,"\\\\\\&amp;",nm);
 		gsub(/</,"\\\\\\&lt;",nm);
 		gsub(/>/,"\\\\\\&gt;",nm);
-		htmldeps=htmldeps " <a href=\"../../" pat2dir[dpkgs[i]] "/"readme_name"\">" nm "</a>";
+		htmldeps=sprintf("%s<a href=\"../../%s/%s\">%s</a>\n",
+				 htmldeps,pat2dir[dpkgs[i]],readme_name,nm);
 		i=i+1;
 	    }
 	    if(debug) printf("htmldeps = \"%s\"\n",htmldeps);
@@ -362,7 +363,7 @@ END {
 
 	    while((getline < templatefile) > 0){
 		gsub(/%%PORT%%/,toppkg);
-		gsub(/%%PKG%%/,dir2htmlname[toppkg]);
+		gsub(/%%PKG%%/,pkgdir2name[toppkg]);
 		gsub(/%%COMMENT%%/,comment[toppkg]);
 		if(homepage[toppkg] == "") {
 		    gsub(/%%HOMEPAGE%%/,"");
