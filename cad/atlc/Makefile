@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/11/27 20:49:24 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.8 2004/11/27 20:57:47 dmcmahill Exp $
 #
 
 DISTNAME=	atlc-4.6.0
@@ -21,5 +21,4 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/atlc
 	${INSTALL_DATA} ${WRKSRC}/examples/* ${PREFIX}/share/examples/atlc
 
-.include "../../math/gsl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
