@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 1999/07/21 22:59:22 garbled Exp $
+# $NetBSD: Makefile,v 1.52 1999/07/22 09:15:49 garbled Exp $
 # FreeBSD Id: Makefile,v 1.53 1997/09/28 13:25:40 markm Exp
 #
 
@@ -48,6 +48,7 @@
 #    SUBDIR += mplex
     SUBDIR += mtv
     SUBDIR += netpbm
+    SUBDIR += openptc
 #    SUBDIR += p5-GD
 #    SUBDIR += p5-Image-Size
 #    SUBDIR += pgperl
