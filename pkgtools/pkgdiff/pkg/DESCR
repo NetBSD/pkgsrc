@@ -1,0 +1,11 @@
+This package contains three tools to ease creating and maintaining
+patches for pkgsrc: mkpatches, patchdiff, and pkgdiff.
+
+pkgdiff compares two files (like diff) and produces an output file
+that can be used in pkgsrc.
+
+mkpatches automatically generates a set of patches, if the original
+versions of the files had been saved as filename.orig.
+
+patchdiff compares a previously existing set of patches with another
+one created by mkpatches, and outputs any changes.
