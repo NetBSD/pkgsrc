@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST.netbsd,v 1.1 1999/08/13 20:40:55 abs Exp $
+share/locale/de/LC_MESSAGES/texinfo.cat
+share/locale/fr/LC_MESSAGES/texinfo.cat
