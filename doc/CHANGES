@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6496 2004/07/08 11:51:46 adam Exp $
+$NetBSD: CHANGES,v 1.6497 2004/07/08 12:00:33 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3307,3 +3307,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added ucarp-1.0 [xtraeme 2004-07-08]
 	Added stellarium-0.6.0 [xtraeme 2004-07-08]
 	Updated ImageMagick to 6.0.3.1 [adam 2004-07-08]
+	Updated ekg to 1.5 [adam 2004-07-08]
