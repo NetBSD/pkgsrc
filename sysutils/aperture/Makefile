@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/07/15 06:22:16 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2000/07/21 07:45:49 jlam Exp $
 
 DISTNAME=	apNetBSD
 PKGNAME=	aperture-2.0
@@ -8,7 +8,7 @@ EXTRACT_SUFX=	.shar
 
 MAINTAINER=	packages@netbsd.org
 
-EXTRACT_CMD=	${SH} ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX}
+EXTRACT_CMD=	${SH} ${DISTDIR}/${DIST_SUBDIR}/${DISTNAME}${EXTRACT_SUFX}
 ALL_TARGET=	cleandir depend all
 INSTALL_TARGET=	dirs includes install
 NO_WRKSUBDIR=	yes

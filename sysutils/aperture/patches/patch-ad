@@ -1,18 +1,19 @@
-$NetBSD: patch-ad,v 1.1 2000/07/15 06:11:20 jlam Exp $
+$NetBSD: patch-ad,v 1.2 2000/07/21 07:45:50 jlam Exp $
 
---- module/aperture.c.orig	Sat Jul 15 01:15:06 2000
-+++ module/aperture.c	Sat Jul 15 01:32:13 2000
-@@ -118,11 +118,25 @@
+--- module/aperture.c.orig	Fri Jul 21 03:37:57 2000
++++ module/aperture.c	Fri Jul 21 03:42:51 2000
+@@ -118,11 +118,26 @@
   * allow only section in the vga framebuffer and above main memory 
   * to be mapped
   */
-+#if (__NetBSD_Version__ < 105020000)
 +/*
 + * Technically, the change to the kernel mmap interface happened
 + * during 1.5A, but after the interface changed, the kernel version
-+ * was inexplicably not bumped.  Hence, the test condition is for
-+ * 1.5B.
++ * was inexplicably not bumped.  Starting with 1.5B _and_ with the
++ * 1.5 release, the change to the kernel mmap interface appears.
 + */
++#if (__NetBSD_Version__ < 105000000) || \
++    ((__NetBSD_Version__ > 105000000) && (__NetBSD_Version__ < 105020000))
  int
  xf86mmap(dev, offset, length)
  	dev_t dev;
