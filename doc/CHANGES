@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7537 2004/10/23 14:03:16 jmmv Exp $
+$NetBSD: CHANGES,v 1.7538 2004/10/23 14:50:45 shannonjr Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4832,3 +4832,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Added pinentry-0.7.1 [shannonjr 2004-10-23]
 	Updated gnotime to 2.2.0nb1 [jmmv 2004-10-23]
 	Updated liferea to 0.5.3nb2 [jmmv 2004-10-23]
+	Added dirmngr-0.5.6 [shannonjr 2004-10-23]
+	Added gnupg-devel-1.9.11 [shannonjr 2004-10-23]
