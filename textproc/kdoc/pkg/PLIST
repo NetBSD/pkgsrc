@@ -1,11 +1,12 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/01/16 14:00:24 wulf Exp $
-
+@comment $NetBSD: PLIST,v 1.2 2000/08/23 21:11:37 tron Exp $
 bin/kdoc
 bin/qt2kdoc
 bin/makekdedoc
 man/man1/kdoc.1
 man/man1/qt2kdoc.1
 man/man1/makekdedoc.1
+share/doc/kdoc/kdoc.docbook
+share/doc/kdoc/README
 share/kdoc/kdocUtil.pm
 share/kdoc/kdocAstUtil.pm
 share/kdoc/kdocParseDoc.pm
@@ -20,3 +21,4 @@ share/kdoc/kdocDocHelper.pm
 share/kdoc/kdocCxxDocbook.pm
 share/kdoc/Iter.pm
 @dirrm share/kdoc
+@dirrm share/doc/kdoc
