@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2003/07/17 22:51:24 grant Exp $
+# $NetBSD: Makefile,v 1.7 2003/09/03 21:29:43 seb Exp $
 
-DISTNAME=	nam-src-1.0a11a
-PKGNAME=	${DISTNAME:S/0a/0rc/:S/-src//}
-PKGREVISION=			1
+DISTNAME=	nam-src-1.9
+PKGNAME=	${DISTNAME:S/-src//}
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-src//}
 CATEGORIES=	net
 MASTER_SITES=	http://www.isi.edu/nsnam/dist/
