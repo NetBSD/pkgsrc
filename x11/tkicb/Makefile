@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1998/11/20 17:27:20 tsarna Exp $
+# $NetBSD: Makefile,v 1.4 1998/11/22 11:37:19 tron Exp $
 #
 
 DISTNAME=	icb.2.1.4
@@ -12,7 +12,6 @@ HOMEPAGE=	http://www.icb.net/
 
 DEPENDS=	tk-8.0p2:../../x11/tk80
 
-DIST_SUBDIR=	tkicb
 NO_PATCH=	yes
 NO_CONFIGURE=	yes
 NO_WRKSUBDIR=	yes
