@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2001/06/20 07:44:53 jlam Exp $
+
+--- Makefile.in.orig	Tue May  1 17:31:16 2001
++++ Makefile.in
+@@ -150,7 +150,7 @@
+ 
+ 
+ # top_srcdir is for building outside of the source tree
+-INCLUDES = -I$(top_srcdir) -I. $(IMAP_INCLUDES) 	 -Iintl -I$(includedir)
++INCLUDES = -I$(top_srcdir) -I. $(IMAP_INCLUDES) 	 -Iintl
+ 
+ 
+ non_us_sources = pgp.c pgpinvoke.c pgpkey.c pgplib.c sha1.c 	pgpmicalg.c gnupgparse.c sha1.h 	doc/language.txt doc/language50.txt OPS.PGP doc/PGP-Notes.txt 	OPS.MIX remailer.c remailer.h pgpewrap		contrib/pgp2.rc contrib/pgp5.rc contrib/gpg.rc 	mutt_ssl.c mutt_ssl.h README.SSL mutt_ssl_nss.c 	pgppacket.c pgppacket.h

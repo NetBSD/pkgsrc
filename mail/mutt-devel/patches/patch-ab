@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2001/06/20 07:44:53 jlam Exp $
+
+--- doc/Makefile.in.orig	Wed Apr 11 06:02:02 2001
++++ doc/Makefile.in
+@@ -31,7 +31,7 @@
+ 
+ DEFS=-DSHAREDIR=\"$(sharedir)\" -DSYSCONFDIR=\"$(sysconfdir)\" \
+ 	-DBINDIR=\"$(bindir)\" -DHAVE_CONFIG_H=1
+-INCLUDES=-I. -I.. -I$(includedir) -I$(top_srcdir)
++INCLUDES=-I. -I.. -I$(top_srcdir)
+ 
+ MAKEDOC_CPP=$(CPP) $(INCLUDES) $(DEFS) $(CPPFLAGS) -D_MAKEDOC -C 
+ 
