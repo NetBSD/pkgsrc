@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:46:54 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 15:40:31 agc Exp $
 
 SHA1 (isakmpd-20010403.tar.gz) = 136b6fa148d546d43f01f8b5e7e78aa94ca33550
+Size (isakmpd-20010403.tar.gz) = 291712 bytes
 SHA1 (patch-aa) = d1616a16251ccd770c392e60057b357b7224d38a
 SHA1 (patch-ab) = f30c790f42d72866e95092848e102e4c3728365c
 SHA1 (patch-ac) = 3f36a2bfff793f55c79f67affe142a8807082e70

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:47:21 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 15:40:37 agc Exp $
 
-MD5 (pycrypt100.tgz) = 9b7482b704cb7aa05e0eb60cf3ee96cb
+SHA1 (pycrypt100.tgz) = 765bee2756cd1a97493f95a8e62fcd183648ef84
+Size (pycrypt100.tgz) = 208473 bytes
 SHA1 (patch-aa) = a8835a444175a0e171859f894456a1ef424ac7b4
 SHA1 (patch-ab) = 838cffacf2dbf44bfeb6ccc2be28df3bb22eac19
 SHA1 (patch-ac) = 5d8df92db0e873c956dd69be087ebfbf40de031d
