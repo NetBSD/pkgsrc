@@ -1,0 +1,134 @@
+$NetBSD: patch-ad,v 1.3 2000/11/29 21:38:24 wiz Exp $
+
+--- frontend/xscanimage.c.orig	Sat Aug 12 16:53:36 2000
++++ frontend/xscanimage.c
+@@ -57,6 +57,11 @@
+ 
+ #ifdef HAVE_LIBGIMP_GIMP_H
+ 
++/*
++ * Enable old Gimp API.  Eventually, we should rewrite this frontend
++ * to use the new API. [pere 2000-10-29]
++ */
++#define GIMP_ENABLE_COMPAT_CRUFT
+ #include <libgimp/gimp.h>
+ 
+ static void query (void);
+@@ -119,10 +124,13 @@
+   {
+     {"help", no_argument, NULL, 'h'},
+     {"version", no_argument, NULL, 'V'},
+-    {0, }
++    {0, 0, 0, 0 }
+   };
+ 
+ 
++static int gtk_quit_flag; /* Call gtk_main_quit() only if at least one device
++                             device is found. */
++
+ /* forward declarations: */
+ 
+ int main (int argc, char ** argv);
+@@ -367,24 +375,24 @@
+   if (sane_get_parameters (gsg_dialog_get_device (dialog), &params)
+       == SANE_STATUS_GOOD)
+     {
+-      u_long size = 10 * params.bytes_per_line * params.lines;
++      double size = params.bytes_per_line * params.lines;
+       const char *unit = "B";
+ 
+       if (params.format >= SANE_FRAME_RED && params.format <= SANE_FRAME_BLUE)
+ 	size *= 3;
+ 
+-      if (size >= 10 * 1024 * 1024)
++      if (size >= 1024 * 1024)
+ 	{
+ 	  size /= 1024 * 1024;
+ 	  unit = "MB";
+ 	}
+-      else if (size >= 10 * 1024)
++      else if (size >= 1024)
+ 	{
+ 	  size /= 1024;
+ 	  unit = "KB";
+ 	}
+-      sprintf (buf, "%dx%d: %lu.%01lu %s", params.pixels_per_line,
+-	       params.lines, size / 10, size % 10, unit);
++      sprintf (buf, "%dx%d: %1.1f %s", params.pixels_per_line,
++	       params.lines, size, unit);
+     }
+   else
+     sprintf (buf, "Invalid parameters.");
+@@ -454,11 +462,13 @@
+   if (dialog && gsg_dialog_get_device (dialog))
+     sane_close (gsg_dialog_get_device (dialog));
+   sane_exit ();
+-  gtk_main_quit ();
++  if (gtk_quit_flag == 1)
++    gtk_main_quit ();
+ #ifdef HAVE_LIBGIMP_GIMP_H
+   if (scan_win.mode == SANE_GIMP_EXTENSION)
+     gimp_quit ();
+ #endif
++  fprintf(stderr, "xscanimage exiting.\n");
+   exit (0);
+ }
+ 
+@@ -555,7 +565,7 @@
+ 
+   while (1)
+     {
+-      status = sane_read (dev, buf, sizeof (buf), &len);
++      status = sane_read (dev, (unsigned char *) buf, sizeof (buf), &len);
+       if (status != SANE_STATUS_GOOD)
+ 	{
+ 	  if (status == SANE_STATUS_EOF)
+@@ -1692,10 +1702,15 @@
+ 	}
+       else
+ 	{
+-	  fprintf (stderr, "%s: no devices available.\n", prog_name);
++	  fprintf(stderr, "No scanners were identified. If you were expecting something\n"
++	       "          different, check that the scanner is plugged in, turned on and\n"
++	       "          detected by the find-scanner tool (if appropriate). Please read\n"
++	       "          the documentation which came with this software (README, FAQ,\n"
++	       "          manpages).\n");
+ 	  quit_xscan ();
+ 	}
+     }
++  gtk_quit_flag = 1;
+   gtk_main ();
+   sane_exit ();
+ }
+@@ -1703,8 +1718,10 @@
+ int
+ main (int argc, char **argv)
+ {
++  fprintf(stderr, "xscanimage (version: %s, package: %s) starting\n", VERSION,
++      PACKAGE);
+   scan_win.mode = STANDALONE;
+-
++  gtk_quit_flag = 0;
+   prog_name = strrchr (argv[0], '/');
+   if (prog_name)
+     ++prog_name;
+@@ -1714,6 +1731,7 @@
+ #ifdef HAVE_LIBGIMP_GIMP_H
+   {
+     GPrintFunc old_print_func;
++    GPrintFunc old_printerr_func;
+     int result;
+ 
+     /* Temporarily install a print function that discards all output.
+@@ -1721,9 +1739,11 @@
+        gimp" messages when xscanimage gets invoked in stand-alone
+        mode.  */
+     old_print_func = g_set_print_handler (null_print_func);
++    old_printerr_func = g_set_printerr_handler(null_print_func);
+     /* gimp_main () returns 1 if xscanimage wasn't invoked by GIMP */
+     result = gimp_main (argc, argv);
+     g_set_message_handler (old_print_func);
++    g_set_error_handler(old_printerr_func);
+     if (result)
+       interface (argc, argv);
+   }
