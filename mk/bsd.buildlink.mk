@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink.mk,v 1.26 2001/07/24 11:47:28 jlam Exp $
+# $NetBSD: bsd.buildlink.mk,v 1.27 2001/07/27 14:30:16 jlam Exp $
 #
 # This Makefile fragment is included by package buildlink.mk files.  This
 # file does the following things:
@@ -165,6 +165,42 @@ _BUILDLINK_CONFIG_WRAPPER_USE: .USE
 		${ECHO} ${BUILDLINK_CONFIG.${.TARGET:S/-buildlink-config-wrapper//}} >> $${cookie}; \
 	fi
 
+.include "../../mk/bsd.prefs.mk"
+
+.if (${OBJECT_FMT} == "a.out")
+REPLACE_LIBNAMES+=	\
+	`${FIND} . -name "Makefile" -or -name "Makeconf" -or -name "*.mk" | ${SED} -e 's|\^\./||' | ${SORT}`
+.endif
+
+.if defined(REPLACE_LIBNAMES)
+post-configure: replace-libnames
+
+# Fix linking on a.out platforms by changing library references in Makefiles
+# to the true library names.
+#
+replace-libnames:
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	cookie=${BUILDLINK_DIR}/.replace_libnames_done;			\
+	if [ ! -f $${cookie} ]; then					\
+		replace_libnames="${REPLACE_LIBNAMES}";			\
+		if [ -n "$${replace_libnames}" -a -n "${REPLACE_LIBNAMES_SED:Q}" ]; then \
+			${ECHO_MSG} "Fixing library name references:";	\
+			cd ${WRKSRC};					\
+			for file in ${REPLACE_LIBNAMES}; do		\
+				${ECHO_MSG} "	$${file}";		\
+				${MV} -f $${file} $${file}.fixme;	\
+				${SED}	${REPLACE_LIBNAMES_SED}		\
+					$${file}.fixme > $${file};	\
+				if [ -x $${file}.fixme ]; then		\
+					${CHMOD} +x $${file};		\
+				fi;					\
+				${RM} -f $${file}.fixme;		\
+				${ECHO} $${file} >> $${cookie};		\
+			done;						\
+		fi;							\
+	fi
+.endif	# REPLACE_LIBNAMES
+
 # Note: This hack uses some libtool internals to correctly fix the references
 # to ${BUILDLINK_DIR} into ${LOCALBASE}.
 #
@@ -203,6 +239,6 @@ replace-buildlink:
 			done;						\
 		fi;							\
 	fi
-.endif
+.endif	# REPLACE_BUILDLINK
 
 .endif	# _BSD_BUILDLINK_MK
