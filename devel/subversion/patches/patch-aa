@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.6 2003/08/29 01:58:49 epg Exp $
+$NetBSD: patch-aa,v 1.7 2003/09/27 20:14:41 recht Exp $
 
---- build-outputs.mk.orig	Thu Aug 28 11:53:06 2003
-+++ build-outputs.mk
-@@ -114,10 +114,10 @@ libsvn_swig_perl_OBJECTS = swigutil_pl.l
+--- build-outputs.mk.orig	2003-09-24 17:29:35.000000000 +0200
++++ build-outputs.mk	2003-09-27 12:12:20.000000000 +0200
+@@ -59,10 +59,10 @@
  subversion/bindings/swig/libsvn_swig_perl-1.la: $(libsvn_swig_perl_DEPS)
  	cd subversion/bindings/swig && $(LINK) -o libsvn_swig_perl-1.la $(libsvn_swig_perl_OBJECTS) $(SVN_APRUTIL_LIBS) $(SVN_APR_LIBS) $(LIBS)
  
@@ -13,11 +13,66 @@ $NetBSD: patch-aa,v 1.6 2003/08/29 01:58:49 epg Exp $
 -	cd subversion/bindings/swig && $(LINK) -o libsvn_swig_py-1.la $(libsvn_swig_py_OBJECTS) ../../../subversion/libsvn_subr/libsvn_subr-1.la ../../../subversion/libsvn_delta/libsvn_delta-1.la $(SVN_APRUTIL_LIBS) $(SVN_APR_LIBS) $(LIBS)
 +	cd subversion/bindings/swig && $(LINK) -o libsvn_swig_py-1.la $(libsvn_swig_py_OBJECTS) -lsvn_subr-1 -lsvn_delta-1 $(SVN_APRUTIL_LIBS) $(SVN_APR_LIBS) $(LIBS)
  
- libsvn_test_DEPS = subversion/tests/svn_test_editor.lo subversion/tests/svn_tests_main.lo subversion/libsvn_delta/libsvn_delta-1.la subversion/libsvn_subr/libsvn_subr-1.la 
- libsvn_test_OBJECTS = svn_test_editor.lo svn_tests_main.lo
-@@ -139,15 +139,15 @@ md5args_OBJECTS = md5args.o
- subversion/tests/libsvn_repos/md5args$(EXEEXT): $(md5args_DEPS)
- 	cd subversion/tests/libsvn_repos && $(LINK) -o md5args$(EXEEXT) $(md5args_OBJECTS) ../../../subversion/libsvn_subr/libsvn_subr-1.la $(SVN_APRUTIL_LIBS) $(SVN_APR_LIBS) $(LIBS)
+ perl_client_DEPS = subversion/bindings/swig/perl/svn_client.lo subversion/bindings/swig/libsvn_swig_perl-1.la subversion/libsvn_client/libsvn_client-1.la 
+ perl_client_OBJECTS = svn_client.lo
+@@ -104,40 +104,40 @@
+ subversion/bindings/swig/perl/swigpl.la: $(perl_runtime_DEPS)
+ 	cd subversion/bindings/swig/perl && $(LINK_PL_WRAPPER) -o swigpl.la $(perl_runtime_OBJECTS)  $(LIBS)
+ 
+-python_client_DEPS = subversion/bindings/swig/python/svn_client.lo subversion/bindings/swig/libsvn_swig_py-1.la subversion/libsvn_client/libsvn_client-1.la 
++python_client_DEPS = subversion/bindings/swig/python/svn_client.lo subversion/bindings/swig/libsvn_swig_py-1.la 
+ python_client_OBJECTS = svn_client.lo
+ subversion/bindings/swig/python/_client.la: $(python_client_DEPS)
+-	cd subversion/bindings/swig/python && $(LINK_PY_WRAPPER) -o _client.la $(python_client_OBJECTS) -lswigpy ../../../../subversion/bindings/swig/libsvn_swig_py-1.la ../../../../subversion/libsvn_client/libsvn_client-1.la $(LIBS)
++	cd subversion/bindings/swig/python && $(LINK_PY_WRAPPER) -o _client.la $(python_client_OBJECTS) -lsvn_client-1 -lswigpy ../../../../subversion/bindings/swig/libsvn_swig_py-1.la $(LIBS)
+ 
+-python_core_DEPS = subversion/bindings/swig/python/core.lo subversion/bindings/swig/libsvn_swig_py-1.la subversion/libsvn_subr/libsvn_subr-1.la 
++python_core_DEPS = subversion/bindings/swig/python/core.lo subversion/bindings/swig/libsvn_swig_py-1.la 
+ python_core_OBJECTS = core.lo
+ subversion/bindings/swig/python/_core.la: $(python_core_DEPS)
+-	cd subversion/bindings/swig/python && $(LINK_PY_WRAPPER) -o _core.la $(python_core_OBJECTS) -lswigpy ../../../../subversion/bindings/swig/libsvn_swig_py-1.la ../../../../subversion/libsvn_subr/libsvn_subr-1.la $(SVN_APR_LIBS) $(LIBS)
++	cd subversion/bindings/swig/python && $(LINK_PY_WRAPPER) -o _core.la $(python_core_OBJECTS) -lsvn_subr-1 $(SVN_APR_LIBS) -lswigpy ../../../../subversion/bindings/swig/libsvn_swig_py-1.la $(LIBS)
+ 
+-python_delta_DEPS = subversion/bindings/swig/python/svn_delta.lo subversion/bindings/swig/libsvn_swig_py-1.la subversion/libsvn_delta/libsvn_delta-1.la 
++python_delta_DEPS = subversion/bindings/swig/python/svn_delta.lo subversion/bindings/swig/libsvn_swig_py-1.la 
+ python_delta_OBJECTS = svn_delta.lo
+ subversion/bindings/swig/python/_delta.la: $(python_delta_DEPS)
+-	cd subversion/bindings/swig/python && $(LINK_PY_WRAPPER) -o _delta.la $(python_delta_OBJECTS) -lswigpy ../../../../subversion/bindings/swig/libsvn_swig_py-1.la ../../../../subversion/libsvn_delta/libsvn_delta-1.la $(LIBS)
++	cd subversion/bindings/swig/python && $(LINK_PY_WRAPPER) -o _delta.la $(python_delta_OBJECTS) -lsvn_delta-1 -lswigpy ../../../../subversion/bindings/swig/libsvn_swig_py-1.la $(LIBS)
+ 
+-python_fs_DEPS = subversion/bindings/swig/python/svn_fs.lo subversion/bindings/swig/libsvn_swig_py-1.la subversion/libsvn_fs/libsvn_fs-1.la 
++python_fs_DEPS = subversion/bindings/swig/python/svn_fs.lo subversion/bindings/swig/libsvn_swig_py-1.la 
+ python_fs_OBJECTS = svn_fs.lo
+ subversion/bindings/swig/python/_fs.la: $(python_fs_DEPS)
+-	cd subversion/bindings/swig/python && $(LINK_PY_WRAPPER) -o _fs.la $(python_fs_OBJECTS) -lswigpy ../../../../subversion/bindings/swig/libsvn_swig_py-1.la ../../../../subversion/libsvn_fs/libsvn_fs-1.la $(LIBS)
++	cd subversion/bindings/swig/python && $(LINK_PY_WRAPPER) -o _fs.la $(python_fs_OBJECTS) -lsvn_fs-1 -lswigpy ../../../../subversion/bindings/swig/libsvn_swig_py-1.la $(LIBS)
+ 
+-python_ra_DEPS = subversion/bindings/swig/python/svn_ra.lo subversion/bindings/swig/libsvn_swig_py-1.la subversion/libsvn_ra/libsvn_ra-1.la 
++python_ra_DEPS = subversion/bindings/swig/python/svn_ra.lo subversion/bindings/swig/libsvn_swig_py-1.la 
+ python_ra_OBJECTS = svn_ra.lo
+ subversion/bindings/swig/python/_ra.la: $(python_ra_DEPS)
+-	cd subversion/bindings/swig/python && $(LINK_PY_WRAPPER) -o _ra.la $(python_ra_OBJECTS) -lswigpy ../../../../subversion/bindings/swig/libsvn_swig_py-1.la ../../../../subversion/libsvn_ra/libsvn_ra-1.la $(LIBS)
++	cd subversion/bindings/swig/python && $(LINK_PY_WRAPPER) -o _ra.la $(python_ra_OBJECTS) -lsvn_ra-1 -lswigpy ../../../../subversion/bindings/swig/libsvn_swig_py-1.la $(LIBS)
+ 
+-python_repos_DEPS = subversion/bindings/swig/python/svn_repos.lo subversion/bindings/swig/libsvn_swig_py-1.la subversion/libsvn_repos/libsvn_repos-1.la 
++python_repos_DEPS = subversion/bindings/swig/python/svn_repos.lo subversion/bindings/swig/libsvn_swig_py-1.la 
+ python_repos_OBJECTS = svn_repos.lo
+ subversion/bindings/swig/python/_repos.la: $(python_repos_DEPS)
+-	cd subversion/bindings/swig/python && $(LINK_PY_WRAPPER) -o _repos.la $(python_repos_OBJECTS) -lswigpy ../../../../subversion/bindings/swig/libsvn_swig_py-1.la ../../../../subversion/libsvn_repos/libsvn_repos-1.la $(LIBS)
++	cd subversion/bindings/swig/python && $(LINK_PY_WRAPPER) -o _repos.la $(python_repos_OBJECTS) -lsvn_repos-1 -lswigpy ../../../../subversion/bindings/swig/libsvn_swig_py-1.la $(LIBS)
+ 
+-python_wc_DEPS = subversion/bindings/swig/python/svn_wc.lo subversion/bindings/swig/libsvn_swig_py-1.la subversion/libsvn_wc/libsvn_wc-1.la 
++python_wc_DEPS = subversion/bindings/swig/python/svn_wc.lo subversion/bindings/swig/libsvn_swig_py-1.la 
+ python_wc_OBJECTS = svn_wc.lo
+ subversion/bindings/swig/python/_wc.la: $(python_wc_DEPS)
+-	cd subversion/bindings/swig/python && $(LINK_PY_WRAPPER) -o _wc.la $(python_wc_OBJECTS) -lswigpy ../../../../subversion/bindings/swig/libsvn_swig_py-1.la ../../../../subversion/libsvn_wc/libsvn_wc-1.la $(LIBS)
++	cd subversion/bindings/swig/python && $(LINK_PY_WRAPPER) -o _wc.la $(python_wc_OBJECTS) -lsvn_wc-1 -lswigpy ../../../../subversion/bindings/swig/libsvn_swig_py-1.la $(LIBS)
+ 
+ python_runtime_DEPS = subversion/bindings/swig/python/swigpy.lo 
+ python_runtime_OBJECTS = swigpy.lo
+@@ -204,15 +204,15 @@
+ subversion/libsvn_wc/libsvn_wc-1.la: $(libsvn_wc_DEPS)
+ 	cd subversion/libsvn_wc && $(LINK) -o libsvn_wc-1.la $(libsvn_wc_OBJECTS) ../../subversion/libsvn_delta/libsvn_delta-1.la ../../subversion/libsvn_subr/libsvn_subr-1.la ../../subversion/libsvn_diff/libsvn_diff-1.la $(SVN_APRUTIL_LIBS) $(SVN_APR_LIBS) $(LIBS)
  
 -mod_authz_svn_DEPS = subversion/mod_authz_svn/mod_authz_svn.lo subversion/libsvn_subr/libsvn_subr-1.la 
 +mod_authz_svn_DEPS = subversion/mod_authz_svn/mod_authz_svn.lo
@@ -33,60 +88,5 @@ $NetBSD: patch-aa,v 1.6 2003/08/29 01:58:49 epg Exp $
 -	cd subversion/mod_dav_svn && $(LINK_APACHE_MOD) -o mod_dav_svn.la $(mod_dav_svn_OBJECTS) ../../subversion/libsvn_repos/libsvn_repos-1.la ../../subversion/libsvn_fs/libsvn_fs-1.la ../../subversion/libsvn_delta/libsvn_delta-1.la ../../subversion/libsvn_subr/libsvn_subr-1.la $(LIBS)
 +	cd subversion/mod_dav_svn && $(LINK_APACHE_MOD) -o mod_dav_svn.la $(mod_dav_svn_OBJECTS) -lsvn_repos-1 -lsvn_fs-1 -lsvn_delta-1 -lsvn_subr-1 $(LIBS)
  
- path_test_DEPS = subversion/tests/libsvn_subr/path-test.o subversion/tests/libsvn_test-1.la subversion/libsvn_subr/libsvn_subr-1.la 
- path_test_OBJECTS = path-test.o
-@@ -264,40 +264,40 @@ perl_runtime_OBJECTS = swigpl.lo
- subversion/bindings/swig/perl/swigpl.la: $(perl_runtime_DEPS)
- 	cd subversion/bindings/swig/perl && $(LINK_PL_WRAPPER) -o swigpl.la $(perl_runtime_OBJECTS)  $(LIBS)
- 
--python_client_DEPS = subversion/bindings/swig/python/svn_client.lo subversion/libsvn_client/libsvn_client-1.la subversion/bindings/swig/libsvn_swig_py-1.la 
-+python_client_DEPS = subversion/bindings/swig/python/svn_client.lo subversion/bindings/swig/libsvn_swig_py-1.la 
- python_client_OBJECTS = svn_client.lo
- subversion/bindings/swig/python/_client.la: $(python_client_DEPS)
--	cd subversion/bindings/swig/python && $(LINK_PY_WRAPPER) -o _client.la $(python_client_OBJECTS) ../../../../subversion/libsvn_client/libsvn_client-1.la -lswigpy ../../../../subversion/bindings/swig/libsvn_swig_py-1.la $(LIBS)
-+	cd subversion/bindings/swig/python && $(LINK_PY_WRAPPER) -o _client.la $(python_client_OBJECTS) -lsvn_client-1 -lswigpy ../../../../subversion/bindings/swig/libsvn_swig_py-1.la $(LIBS)
- 
--python_core_DEPS = subversion/bindings/swig/python/core.lo subversion/libsvn_subr/libsvn_subr-1.la subversion/bindings/swig/libsvn_swig_py-1.la 
-+python_core_DEPS = subversion/bindings/swig/python/core.lo subversion/bindings/swig/libsvn_swig_py-1.la 
- python_core_OBJECTS = core.lo
- subversion/bindings/swig/python/_core.la: $(python_core_DEPS)
--	cd subversion/bindings/swig/python && $(LINK_PY_WRAPPER) -o _core.la $(python_core_OBJECTS) ../../../../subversion/libsvn_subr/libsvn_subr-1.la $(SVN_APR_LIBS) -lswigpy ../../../../subversion/bindings/swig/libsvn_swig_py-1.la $(LIBS)
-+	cd subversion/bindings/swig/python && $(LINK_PY_WRAPPER) -o _core.la $(python_core_OBJECTS) -lsvn_subr-1 $(SVN_APR_LIBS) -lswigpy ../../../../subversion/bindings/swig/libsvn_swig_py-1.la $(LIBS)
- 
--python_delta_DEPS = subversion/bindings/swig/python/svn_delta.lo subversion/libsvn_delta/libsvn_delta-1.la subversion/bindings/swig/libsvn_swig_py-1.la 
-+python_delta_DEPS = subversion/bindings/swig/python/svn_delta.lo subversion/bindings/swig/libsvn_swig_py-1.la 
- python_delta_OBJECTS = svn_delta.lo
- subversion/bindings/swig/python/_delta.la: $(python_delta_DEPS)
--	cd subversion/bindings/swig/python && $(LINK_PY_WRAPPER) -o _delta.la $(python_delta_OBJECTS) ../../../../subversion/libsvn_delta/libsvn_delta-1.la -lswigpy ../../../../subversion/bindings/swig/libsvn_swig_py-1.la $(LIBS)
-+	cd subversion/bindings/swig/python && $(LINK_PY_WRAPPER) -o _delta.la $(python_delta_OBJECTS) -lsvn_delta-1 -lswigpy ../../../../subversion/bindings/swig/libsvn_swig_py-1.la $(LIBS)
- 
--python_fs_DEPS = subversion/bindings/swig/python/svn_fs.lo subversion/libsvn_fs/libsvn_fs-1.la subversion/bindings/swig/libsvn_swig_py-1.la 
-+python_fs_DEPS = subversion/bindings/swig/python/svn_fs.lo subversion/bindings/swig/libsvn_swig_py-1.la 
- python_fs_OBJECTS = svn_fs.lo
- subversion/bindings/swig/python/_fs.la: $(python_fs_DEPS)
--	cd subversion/bindings/swig/python && $(LINK_PY_WRAPPER) -o _fs.la $(python_fs_OBJECTS) ../../../../subversion/libsvn_fs/libsvn_fs-1.la -lswigpy ../../../../subversion/bindings/swig/libsvn_swig_py-1.la $(LIBS)
-+	cd subversion/bindings/swig/python && $(LINK_PY_WRAPPER) -o _fs.la $(python_fs_OBJECTS) -lsvn_fs-1 -lswigpy ../../../../subversion/bindings/swig/libsvn_swig_py-1.la $(LIBS)
- 
--python_ra_DEPS = subversion/bindings/swig/python/svn_ra.lo subversion/libsvn_ra/libsvn_ra-1.la subversion/bindings/swig/libsvn_swig_py-1.la 
-+python_ra_DEPS = subversion/bindings/swig/python/svn_ra.lo subversion/bindings/swig/libsvn_swig_py-1.la 
- python_ra_OBJECTS = svn_ra.lo
- subversion/bindings/swig/python/_ra.la: $(python_ra_DEPS)
--	cd subversion/bindings/swig/python && $(LINK_PY_WRAPPER) -o _ra.la $(python_ra_OBJECTS) ../../../../subversion/libsvn_ra/libsvn_ra-1.la -lswigpy ../../../../subversion/bindings/swig/libsvn_swig_py-1.la $(LIBS)
-+	cd subversion/bindings/swig/python && $(LINK_PY_WRAPPER) -o _ra.la $(python_ra_OBJECTS) -lsvn_ra-1 -lswigpy ../../../../subversion/bindings/swig/libsvn_swig_py-1.la $(LIBS)
- 
--python_repos_DEPS = subversion/bindings/swig/python/svn_repos.lo subversion/libsvn_repos/libsvn_repos-1.la subversion/bindings/swig/libsvn_swig_py-1.la 
-+python_repos_DEPS = subversion/bindings/swig/python/svn_repos.lo subversion/bindings/swig/libsvn_swig_py-1.la 
- python_repos_OBJECTS = svn_repos.lo
- subversion/bindings/swig/python/_repos.la: $(python_repos_DEPS)
--	cd subversion/bindings/swig/python && $(LINK_PY_WRAPPER) -o _repos.la $(python_repos_OBJECTS) ../../../../subversion/libsvn_repos/libsvn_repos-1.la -lswigpy ../../../../subversion/bindings/swig/libsvn_swig_py-1.la $(LIBS)
-+	cd subversion/bindings/swig/python && $(LINK_PY_WRAPPER) -o _repos.la $(python_repos_OBJECTS) -lsvn_repos-1 -lswigpy ../../../../subversion/bindings/swig/libsvn_swig_py-1.la $(LIBS)
- 
--python_wc_DEPS = subversion/bindings/swig/python/svn_wc.lo subversion/libsvn_wc/libsvn_wc-1.la subversion/bindings/swig/libsvn_swig_py-1.la 
-+python_wc_DEPS = subversion/bindings/swig/python/svn_wc.lo subversion/bindings/swig/libsvn_swig_py-1.la 
- python_wc_OBJECTS = svn_wc.lo
- subversion/bindings/swig/python/_wc.la: $(python_wc_DEPS)
--	cd subversion/bindings/swig/python && $(LINK_PY_WRAPPER) -o _wc.la $(python_wc_OBJECTS) ../../../../subversion/libsvn_wc/libsvn_wc-1.la -lswigpy ../../../../subversion/bindings/swig/libsvn_swig_py-1.la $(LIBS)
-+	cd subversion/bindings/swig/python && $(LINK_PY_WRAPPER) -o _wc.la $(python_wc_OBJECTS) -lsvn_wc-1 -lswigpy ../../../../subversion/bindings/swig/libsvn_swig_py-1.la $(LIBS)
- 
- python_runtime_DEPS = subversion/bindings/swig/python/swigpy.lo 
- python_runtime_OBJECTS = swigpy.lo
+ svnadmin_DEPS = subversion/svnadmin/main.o subversion/libsvn_repos/libsvn_repos-1.la subversion/libsvn_fs/libsvn_fs-1.la subversion/libsvn_delta/libsvn_delta-1.la subversion/libsvn_subr/libsvn_subr-1.la 
+ svnadmin_OBJECTS = main.o
