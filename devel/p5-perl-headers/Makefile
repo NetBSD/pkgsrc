@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2003/09/18 17:57:55 tron Exp $
+# $NetBSD: Makefile,v 1.16 2003/09/21 21:04:39 tron Exp $
 
 DISTNAME=		p5-perl-headers
 PKGNAME=		${DISTNAME}-${OS_VERSION}
@@ -12,10 +12,10 @@ MAINTAINER=		jlam@NetBSD.org
 HOMEPAGE=		http://language.perl.com/index.html
 COMMENT=		Perl header files
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK2=		yes
 PERL5_PACKLIST=		${PERL5_SITEARCH}/.packlist.h2ph
 
-EXTRACT_ONLY=		yes
+EXTRACT_ONLY=		# empty
 NO_CHECKSUM=		yes
 OSVERSION_SPECIFIC=     yes
 
