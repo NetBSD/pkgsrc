@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/12/06 03:01:58 epg Exp $
+# $NetBSD: Makefile,v 1.9 2003/12/07 01:21:03 epg Exp $
 
 PKGNAME=	subversion-base-${SVNVER}
 COMMENT=	Version control system, base programs and libraries
@@ -6,6 +6,18 @@ COMMENT=	Version control system, base programs and libraries
 PLIST_SUBST+=   INSTALL_INFO=${INSTALL_INFO}
 
 .include "../subversion/Makefile.common"
+
+post-patch:
+	${SED} -e 's|@BUILDLINK_PREFIX.db4@|${BUILDLINK_PREFIX.db4}|g' \
+		< ${WRKSRC}/tools/backup/hot-backup.py.in \
+		> ${WRKSRC}/tools/backup/hot-backup.py.in.new
+	${MV} ${WRKSRC}/tools/backup/hot-backup.py.in.new \
+		${WRKSRC}/tools/backup/hot-backup.py.in
+	${SED} -e 's|@PREFIX@|${PREFIX}|g' \
+		< ${WRKSRC}/contrib/cgi/tweak-log.cgi \
+		> ${WRKSRC}/contrib/cgi/tweak-log.cgi.new
+	${MV} ${WRKSRC}/contrib/cgi/tweak-log.cgi.new \
+		${WRKSRC}/contrib/cgi/tweak-log.cgi
 
 post-install:
 	${INSTALL_DATA_DIR} ${SVNDOC}
