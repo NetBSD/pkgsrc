@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3356 2003/09/13 11:57:07 jlam Exp $
+$NetBSD: CHANGES,v 1.3357 2003/09/13 12:03:17 jdolecek Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3669,4 +3669,7 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated freetype2 to 2.1.5 [adam 2003-09-13]
 	Updated p5-Time-HiRes to 1.50 [jlam 2003-09-13]
 	Updated pkg_install to 20030913 [jlam 2003-09-13]
+	Updated libxml2 to 2.5.10nb1 [jdolecek 2003-09-13]
+	Updated php4-domxml to 4.3.3nb1 [jdolecek 2003-09-13]
+	Updated vmware-module3 to 3.2.1.5 [jdolecek 2003-09-13]
 	Updated p5-Net-DNS to 0.40 [jlam 2003-09-13]
