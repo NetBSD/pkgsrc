@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9465 2005/03/07 21:01:22 xtraeme Exp $
+$NetBSD: CHANGES,v 1.9466 2005/03/07 22:21:55 abs Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1338,3 +1338,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Added e16menuedit2-0.0.1 [agc 2005-03-07]
 	bsd.pkg.mk: started freeze for pkgsrc-2005Q1 branch [agc 2005-03-07]
 	Updated dspam to 3.2.8 [xtraeme 2005-03-07]
+	Updated pkglint to 4.09: [abs 2005-03-07]
+
