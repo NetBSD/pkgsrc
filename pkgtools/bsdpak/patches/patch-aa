@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/12/09 00:44:05 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2001/06/01 01:26:59 wiz Exp $
 
---- bsdpak.pl.orig	Thu Nov  9 08:32:49 2000
-+++ bsdpak.pl	Fri Nov 10 10:36:04 2000
+--- bsdpak.pl.orig	Tue Sep 12 01:57:06 2000
++++ bsdpak.pl	Thu May 24 07:22:09 2001
 @@ -16,7 +16,23 @@
  my @indexPackagesOutput;
  
@@ -107,16 +107,20 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/12/09 00:44:05 wiz Exp $
    print @printOut;
  }
  
-@@ -336,10 +377,11 @@
+@@ -336,10 +377,15 @@
    while(1) {
      ($p1, $v1) = split(/\./, $v1, 2);
      ($p2, $v2) = split(/\./, $v2, 2);
 -  
++    if (!defined($v1)) { $v1 = "" };
++    if (!defined($v2)) { $v2 = "" };
++    if (!defined($p1)) { $p1 = "" };
++    if (!defined($p2)) { $p2 = "" };
 + 
      if (($p1 eq "") && ($p2 eq "")) { return 0; }
 -    elsif ($p1 != $p2) { return $p1 <=> $p2; }
 -    elsif ($p1 ne $p2) { return $p1 cmp $p2; }
-+    if (($p1 =~ /^\d*$/) && ($p2 =~ /^\d*$/)) {
++    if (($p1 =~ /^\d+$/) && ($p2 =~ /^\d+$/)) {
 +      if ($p1 != $p2) { return $p1 <=> $p2; }
 +    } elsif ($p1 ne $p2) { return $p1 cmp $p2; }
    }
