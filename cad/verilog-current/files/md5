@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.11 2001/01/14 19:01:14 dmcmahill Exp $
+$NetBSD: md5,v 1.12 2001/03/31 00:00:35 dmcmahill Exp $
 
-MD5 (verilog-20010113.tar.gz) = 4d871a15c6422a1de562354175128285
+SHA1 (verilog-20010324.tar.gz) = dd79048cf7582937b64f138064d545ca9f4bbbc2
