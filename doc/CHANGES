@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.713 2002/12/07 17:45:55 jmmv Exp $
+$NetBSD: CHANGES,v 1.714 2002/12/07 17:56:50 cjep Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3849,3 +3849,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated SDL-image to 1.2.2 [jmmv 2002-12-07]
 	Added isync-0.8 [cjep 2002-12-07]
 	Updated readline to 4.3 [jmmv 2002-12-07]
+	Added eukleides-0.9.0 [cjep 2002-12-07]
