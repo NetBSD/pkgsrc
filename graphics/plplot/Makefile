@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2002/07/24 19:45:24 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2002/10/03 00:52:48 wiz Exp $
 
 DISTNAME=		plplot-5.0.4
 CATEGORIES=		graphics
@@ -11,8 +11,8 @@ COMMENT=		Scientific plotting package
 DEPENDS+=		tcl>=8.3.0:../../lang/tcl
 DEPENDS+= 		tk>=8.3.0:../../x11/tk
 BUILD_DEPENDS+=		m4>=1.4:../../devel/m4
-BUILD_DEPENDS+=		autoconf>=2.13:../../devel/autoconf
 
+AUTOCONF_REQD=		2.13
 GNU_CONFIGURE=		#defined
 USE_GMAKE=		#defined
 USE_FORTRAN=		#defined
@@ -61,7 +61,7 @@ post-patch:
 		> ${WRKSRC}/src/plctrl.c
 
 pre-configure:
-	(cd ${WRKSRC}/cf && ${LOCALBASE}/bin/autoconf)
+	cd ${WRKSRC}/cf && ${AUTOCONF}
 	${CP} ${WRKSRC}/cf/configure ${WRKSRC}
 
 post-install:
@@ -73,5 +73,6 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/plplotdoc-html-0.4.1/*.html	\
 		${PREFIX}/share/doc/html/plplot
 
+.include "../../mk/autoconf.mk"
 .include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
