@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.4 2000/05/08 17:13:20 drochner Exp $
+@comment $NetBSD: PLIST,v 1.5 2000/08/15 00:54:20 wiz Exp $
 lib/libpdf.a
+lib/libpdf.la
 lib/libpdf.so.0.0
 include/pdflib.h
