@@ -1,14 +1,16 @@
-$NetBSD: patch-ah,v 1.1 1999/12/18 01:46:29 christos Exp $
+$NetBSD: patch-ah,v 1.2 1999/12/18 22:10:02 christos Exp $
 
---- doscmd_loader.c.orig	Fri Dec 17 20:40:25 1999
-+++ doscmd_loader.c	Sun Dec  5 18:11:38 1999
-@@ -31,38 +31,52 @@
+--- doscmd_loader.c.orig	Fri Dec 17 22:48:20 1999
++++ doscmd_loader.c	Sat Dec 18 17:01:53 1999
+@@ -31,38 +31,50 @@
   */
  
  #include <stdio.h>
 -#include <a.out.h>
 +#include <unistd.h>
-+#include "loadfile.h"
++#include <fcntl.h>
++#include <sys/stat.h>
++#include <sys/mman.h>
  
  /*
   * reserve space in "low" memory for the interrupt vector table
@@ -27,23 +29,22 @@ $NetBSD: patch-ah,v 1.1 1999/12/18 01:46:29 christos Exp $
 +	NULL
 +};
 +
-+#define COUNT (COUNT_TEXT|COUNT_DATA|COUNT_BSS)
-+#define LOAD (LOAD_TEXT|LOAD_DATA|LOAD_BSS)
-+
 +u_long
  load_kernel(void)
  {
 -	FILE *fp;
 -	struct exec exec;
- 	int start_address;
-+	int i;
-+	u_long marks[MARK_MAX];
- 
+-	int start_address;
+-
 -	if ((fp = fopen(_PATH_DOS_KERNEL, "r")) == NULL &&
 -	    (fp = fopen("obj/" _PATH_DOS_KERNEL, "r")) == NULL &&
 -	    (fp = fopen(_PATH_DOS_KERNEL_DIR _PATH_DOS_KERNEL, "r")) == NULL)
++	int i, fd;
++	size_t size;
++	struct stat st;
++
 +	for (i = 0; locations[i] != NULL; i++) {
-+		if (access(locations[i], R_OK) != -1)
++		if ((fd = open(locations[i], O_RDONLY)) != -1)
 +			break;
 +	}
 +	if (locations[i] == NULL)
@@ -51,9 +52,8 @@ $NetBSD: patch-ah,v 1.1 1999/12/18 01:46:29 christos Exp $
  
 -	if (fread(&exec, sizeof(exec), 1, fp) != 1 || N_GETMAGIC(exec) != OMAGIC)
 -		errx(1, "bad kernel file format");
-+	memset(marks, 0, sizeof(marks));
-+	if (loadfile(locations[i], marks, COUNT) == -1)
-+		err(1, "loadfile(COUNT)");
++	if (fstat(fd, &st) == -1)
++		err(1, "fstat");
  
 -	start_address = exec.a_entry & (~(getpagesize() - 1));
 -	if (brk(start_address + exec.a_text + exec.a_data + exec.a_bss) < 0)
@@ -62,13 +62,13 @@ $NetBSD: patch-ah,v 1.1 1999/12/18 01:46:29 christos Exp $
 -	bzero((char *)(start_address + exec.a_text + exec.a_data), exec.a_bss);
 -	fclose(fp);
 -	return(exec.a_entry);
-+	if (brk((void *)marks[MARK_END]) == -1)
-+		err(1, "brk");
++	size = st.st_size + START_ADDRESS;
 +
-+	if (loadfile(locations[i], marks, LOAD) == -1)
-+		err(1, "loadfile(LOAD)");
-+
-+	return(marks[MARK_ENTRY]);
++	if (mmap((void *)START_ADDRESS, st.st_size,
++	    PROT_READ|PROT_WRITE|PROT_EXEC, MAP_PRIVATE, fd, 0) == MAP_FAILED)
++		err(1, "mmap");
++		
++	return(START_ADDRESS);
  }
  
  void
