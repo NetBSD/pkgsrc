@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 1998/06/19 23:39:53 frueauf Exp $
+# $NetBSD: Makefile,v 1.9 1998/11/05 08:34:25 garbled Exp $
 # FreeBSD Id: Makefile,v 1.13 1997/10/13 11:11:32 itojun Exp
 #
 
@@ -20,6 +20,8 @@
     SUBDIR += rman
 #    SUBDIR += sgmlformat
 #    SUBDIR += sp
+    SUBDIR += t1lib
+    SUBDIR += t1libx
     SUBDIR += texi2html
     SUBDIR += unroff
 #    SUBDIR += wdiff
