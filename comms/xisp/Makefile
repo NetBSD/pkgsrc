@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1999/05/24 20:39:36 tv Exp $
+# $NetBSD: Makefile,v 1.7 1999/06/20 21:06:17 tron Exp $
 #
 
 DISTNAME=		xisp-2.5p4
@@ -12,7 +12,8 @@ HOMEPAGE=		http://users.hol.gr/~dbouras/
 DEPENDS+=		xforms-0.88:../../x11/xforms
 DEPENDS+=		xpm-3.4k:../../graphics/xpm
 
-ONLY_FOR_PLATFORM=	NetBSD-*-{arm32,i386,m68k,sparc,ns32k}
+ONLY_FOR_PLATFORM=	NetBSD-*-arm32 NetBSD-*-i386 NetBSD-*-m68k \
+			NetBSD-*-sparc NetBSD-*-ns32k
 
 USE_X11BASE=
 

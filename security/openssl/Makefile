@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1999/06/10 05:08:02 tv Exp $
+# $NetBSD: Makefile,v 1.7 1999/06/20 21:06:21 tron Exp $
 #
 
 DISTNAME=		openssl-0.9.2b
@@ -18,7 +18,10 @@ USE_PERL5=		yes
 RESTRICTED=		"Crypto; export-controlled"
 MIRROR_DISTFILE=	no
 # matches what's in `Configure' (except sparc64)
-ONLY_FOR_PLATFORM=	NetBSD-*-{alpha,arm32,i386,m68k,mips,mipse[bl],ns32k,powerpc,sparc,vax}
+ONLY_FOR_PLATFORM=	NetBSD-*-alpha NetBSD-*-arm32 NetBSD-*-i386 \
+			NetBSD-*-m68k NetBSD-*-mips NetBSD-*-mipseb \
+			NetBSD-*-mipsebl NetBSD-*-ns32k NetBSD-*-powerpc \
+			NetBSD-*-sparc NetBSD-*-vax
 
 CONFIGURE_ARGS=		-fPIC -DPIC ${LDFLAGS}
 #CONFIGURE_ENV=		PREFIX=${PREFIX}
