@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9696 2005/03/30 20:07:20 schmonz Exp $
+$NetBSD: CHANGES,v 1.9697 2005/03/30 21:55:49 recht Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1833,3 +1833,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added ruby-xmlscan-0.2.3 [minskim 2005-03-30]
 	Updated ap-jk to 1.2.8 [erh 2005-03-30]
 	Updated qmail-run to 20050330 [schmonz 2005-03-30]
+	Updated icu to 3.2nb1 [recht 2005-03-30]
