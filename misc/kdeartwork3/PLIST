@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2004/03/09 12:23:27 markd Exp $
+@comment $NetBSD: PLIST,v 1.9 2004/06/10 12:28:06 markd Exp $
 bin/kbanner.kss
 bin/kblob.kss
 bin/kclock.kss
@@ -7555,6 +7555,7 @@ share/kde/wallpapers/winter_theme_1.jpg
 @dirrm share/kde/icons/slick/64x64/filesystems
 @dirrm share/kde/icons/slick/64x64/apps
 @dirrm share/kde/icons/slick/64x64/actions
+@dirrm share/kde/icons/slick/64x64
 @dirrm share/kde/icons/slick/48x48/mimetypes
 @dirrm share/kde/icons/slick/48x48/filesystems
 @dirrm share/kde/icons/slick/48x48/devices
