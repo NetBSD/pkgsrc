@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6693 2004/07/27 04:37:43 atatat Exp $
+$NetBSD: CHANGES,v 1.6694 2004/07/27 07:14:55 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3574,7 +3574,7 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gcc34-ada to 3.4.1nb1 [shannonjr 2004-07-26]
 	Updated mathomatic to 11.3b [minskim 2004-07-26]
 	Updated keychain to 2.3.4 [schmonz 2004-07-26]
-	Added gameboy-sdl-1.0.3 [dillo 2004-07-26]
+	Added gnuboy-sdl-1.0.3 [dillo 2004-07-26]
 	Updated vice to 1.14nb2 [dillo 2004-07-26]
 	Updated fceu to 0.98.10nb1 [dillo 2004-07-26]
 	Updated xmame to 0.84.1nb1 [dillo 2004-07-26]
