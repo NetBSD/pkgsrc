@@ -1,0 +1,68 @@
+$NetBSD: patch-an,v 1.1.1.1 2000/12/15 00:36:39 wiz Exp $
+
+diff -x *.orig -urN ./readline/readline.c /usr/pkgsrc/net/icb/work.i386.unpatched/icb-5.0.9/readline/readline.c
+--- ./readline/readline.c	Fri Feb 24 22:20:03 1995
++++ /usr/pkgsrc/net/icb/work.i386.unpatched/icb-5.0.9/readline/readline.c	Fri Nov 26 22:56:30 1999
+@@ -48,7 +48,11 @@
+ #  include <unistd.h>
+ #endif
+ 
++#if !defined(__linux__)
+ #define NEW_TTY_DRIVER
++#else
++#define TERMIOS_TTY_DRIVER
++#endif
+ #define HAVE_BSD_SIGNALS
+ /* #define USE_XON_XOFF */
+ 
+@@ -80,6 +84,10 @@
+ #  if !defined (O_NDELAY)
+ #    define O_NDELAY O_NONBLOCK	/* Posix-style non-blocking i/o */
+ #  endif /* O_NDELAY */
++#else
++#  ifdef TERMIOS_TTY_DRIVER
++#    include <termios.h>
++#  endif /* !TERMIOS_MISSING */
+ #endif /* _POSIX_VERSION */
+ 
+ /* Other (BSD) machines use sgtty. */
+@@ -133,7 +141,7 @@
+ #  endif /* USGr3 */
+ #endif /* USG && hpux */
+ 
+-#if defined (_POSIX_VERSION) || defined (USGr3)
++#if defined (_POSIX_VERSION) || defined (USGr3) || defined(__linux__)
+ #  include <dirent.h>
+ #  define direct dirent
+ #  if defined (_POSIX_VERSION)
+@@ -280,7 +288,7 @@
+ static FILE *in_stream, *out_stream;
+ 
+ /* The names of the streams that we do input and output to. */
+-FILE *rl_instream = stdin, *rl_outstream = stdout;
++FILE *rl_instream = NULL, *rl_outstream = NULL;
+ 
+ /* Non-zero means echo characters as they are read. */
+ int readline_echoing_p = 1;
+@@ -1152,6 +1160,8 @@
+ {
+   /* Find out if we are running in Emacs. */
+   running_in_emacs = getenv ("EMACS");
++  rl_instream = stdin;
++  rl_outstream = stdout;
+ 
+   /* Allocate data structures. */
+   if (!rl_line_buffer)
+@@ -2505,7 +2515,11 @@
+ 
+   tio.c_lflag &= ~(ICANON | ECHO);
+ 
+-  if (otio.c_cc[VEOF] != _POSIX_VDISABLE)
++#ifdef ONLCR
++  tio.c_oflag |= OPOST|ONLCR;
++#endif
++
++  if ((unsigned char)otio.c_cc[VEOF] != (unsigned char)_POSIX_VDISABLE)
+     eof_char = otio.c_cc[VEOF];
+ 
+ #if defined (USE_XON_XOFF)

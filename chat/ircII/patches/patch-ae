@@ -1,0 +1,35 @@
+$NetBSD: patch-ae,v 1.1.1.1 2000/12/15 00:36:33 wiz Exp $
+
+--- source/term.c.orig	Sun Jun 11 09:04:56 2000
++++ source/term.c	Mon Sep 18 00:12:27 2000
+@@ -339,7 +339,7 @@
+ 
+ 	if (CS)
+ 		tputs_x(tgoto(CS, LI - 1, 0));
+-	if (TE)
++	if (!tflag && TE)
+ 		tputs_x(TE);
+ 	term_move_cursor(0, LI - 1);
+ 	term_reset_flag = 1;
+@@ -381,7 +381,7 @@
+ # endif /* mips */
+ #endif /* SIGSTOP && SIGTSTP */
+ 
+-	if (TI)
++	if (!tflag && TI)
+ 		tputs_x(TI);
+ }
+ 
+@@ -461,10 +461,10 @@
+ 		term_clear_to_eol = term_null_function;
+ 
+ 	TE = tgetstr("te", &ptr);
+-	if (TE && (TI = tgetstr("ti", &ptr)) != (char *) 0)
++	if (!tflag && TE && (TI = tgetstr("ti", &ptr)) != (char *) 0 )
+ 		tputs_x(TI);
+ 	else
+-		TI = (char *) 0;
++		TE = TI = (char *) 0;
+ 
+ 	/* if ((ND = tgetstr("nd", &ptr)) || (ND = tgetstr("kr", &ptr))) */
+ 	if ((ND = tgetstr("nd", &ptr)) != NULL)

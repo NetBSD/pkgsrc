@@ -1,0 +1,18 @@
+$NetBSD: patch-ao,v 1.1.1.1 2000/12/15 00:36:39 wiz Exp $
+
+diff -x *.orig -urN ./tcl/strerror.c /usr/pkgsrc/net/icb/work.i386.unpatched/icb-5.0.9/tcl/strerror.c
+--- ./tcl/strerror.c	Fri Feb 24 22:19:50 1995
++++ /usr/pkgsrc/net/icb/work.i386.unpatched/icb-5.0.9/tcl/strerror.c	Fri Nov 26 22:56:30 1999
+@@ -20,6 +20,7 @@
+ #include <stdio.h>
+ #include <string.h>
+ 
++#if !defined(BSD4_4) && !defined(__linux__)
+ /*
+  * List of known errors:
+  */
+@@ -138,3 +139,4 @@
+     (void) sprintf(defaultMsg, "unknown error (%d)", error);
+     return defaultMsg;
+ }
++#endif
