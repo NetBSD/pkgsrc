@@ -1,0 +1,38 @@
+$NetBSD: patch-aa,v 1.1 2005/03/19 15:24:31 wiz Exp $
+
+--- contrib/rpws.orig	2005-01-28 17:32:12.000000000 +0100
++++ contrib/rpws	2005-01-28 17:32:22.000000000 +0100
+@@ -1,4 +1,4 @@
+-#!/bin/bash
++#!/bin/sh
+ #
+ # Workspaces for ratpoison
+ # Copyright (C) 2003 Shawn Betts
+@@ -80,7 +80,7 @@
+ ws_restore ()
+ {
+     ws_save
+-    if [ $1 == 1 ]; then
++    if [ $1 = 1 ]; then
+ 	rp_call gselect default
+     else
+ 	rp_call gselect ws$1
+@@ -104,15 +104,15 @@
+ 
+ echo boom >/tmp/boom
+ 
+-if [ -z $@ ]; then
++if test $# -ne 1; then
+     echo "Usage:"
+     echo "$0 -i      -- initialize the workspaces"
+     echo "$0 -b      -- setup some key bindings"
+     echo "$0 <n>     -- Switch to workspace n"
+ else
+-    if [ $1 == -i ]; then
++    if test $1 = -i	; then
+ 	ws_init
+-    elif [ $1 == -b ]; then
++    elif test $1 = -b ; then
+ 	ws_bindings
+     else
+ 	ws_restore $1
