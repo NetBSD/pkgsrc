@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1998/07/05 12:27:14 tron Exp $
+# $NetBSD: Makefile,v 1.5 1998/08/27 22:18:31 frueauf Exp $
 
 DISTNAME=	magicfilter-1.2
 CATEGORIES=	print
@@ -17,6 +17,7 @@ GNU_CONFIGURE=	yes
 
 PLIST_SRC=	${WRKDIR}/PLIST
 
+PAPERSIZE?=	A4
 FILTER_DIR=	libexec/magicfilter
 
 post-install:
