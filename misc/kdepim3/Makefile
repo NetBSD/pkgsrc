@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2004/10/13 12:29:05 markd Exp $
+# $NetBSD: Makefile,v 1.34 2004/11/08 23:53:20 shannonjr Exp $
 
 DISTNAME=	kdepim-${_KDE_VERSION}
+PKGREVISION=	1
 CATEGORIES=	misc
 COMMENT=	Personal Information Management tools for the KDE desktop
 
@@ -34,4 +35,5 @@ BUILDLINK_DEPMETHOD.qt3-tools=	full
 .include "../../security/gpgme/buildlink3.mk"
 .include "../../x11/kdebase3/buildlink3.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"
+.include "../../devel/librfuncs/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
