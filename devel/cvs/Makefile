@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2000/10/21 22:21:23 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2000/10/26 12:41:21 veego Exp $
 #
 
 DISTNAME=	cvs-1.11
@@ -17,6 +17,7 @@ USE_GTEXINFO=	yes
 
 .if ${OPSYS} == "SunOS"
 DEPENDS+=	zlib-*:../../devel/zlib
+CFLAGS+=	-I${PREFIX}/include		# zlib.h
 .endif
 
 .if defined(KERBEROS) && ${KERBEROS} == 4
