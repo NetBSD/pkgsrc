@@ -1,13 +1,13 @@
-$NetBSD: distinfo,v 1.4 2002/02/19 05:30:39 jmc Exp $
+$NetBSD: distinfo,v 1.5 2002/07/08 01:04:09 kristerw Exp $
 
-SHA1 (s9xs137c.zip) = c0adc6ca41572a6dfd31ab98ea6c6c448777d56f
-Size (s9xs137c.zip) = 653410 bytes
-SHA1 (patch-aa) = 79122a382681b6b1282b5a03fc176ac33aa17c0e
+SHA1 (s9xs139.zip) = 15acf6d8a31dc51b26a42abf747cec1b72c2aa29
+Size (s9xs139.zip) = 666463 bytes
+SHA1 (patch-aa) = 5edce58bf67f994d4f4f03519f1f2da3bf060ffe
 SHA1 (patch-ab) = b99893934074d8693a9609d49e49953ade2b2062
-SHA1 (patch-ac) = 25a054c55774421f1ba133906de9134a0ba233f5
+SHA1 (patch-ac) = e54f4fff397dd4ca3be28711fd23c4fbef57ed54
 SHA1 (patch-ad) = 72cc9904c74e0668cce450fcada24453aec344e4
 SHA1 (patch-ae) = cb2ed8dc3ad409ffb88cb9851b04c6c42c3b2b0e
 SHA1 (patch-af) = 302967c91a1e0b384c4990687fb11bf236202783
-SHA1 (patch-ag) = cd708790ad2f3628263b78154cebdac52d90e0d2
+SHA1 (patch-ag) = 559464862e883b9d8b65a4c0c68d238e1dcdf5af
 SHA1 (patch-ah) = 60bd35e51faca36fbd8d8d6354487554af17fe7a
 SHA1 (patch-ai) = 2f522a560577aff89af9efa7a6b129faa99670fd
