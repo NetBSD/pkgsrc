@@ -1,4 +1,4 @@
-# $NetBSD: motif.buildlink.mk,v 1.9 2001/09/14 01:35:02 jlam Exp $
+# $NetBSD: motif.buildlink.mk,v 1.10 2001/09/21 19:26:45 jlam Exp $
 #
 # This Makefile fragment is included by packages that use Motif.
 #
@@ -160,12 +160,12 @@ motif-buildlink: _BUILDLINK_USE
 
 .if defined(USE_MOTIF12)
 .  if !defined(MOTIF12BASE)
-MOTIF12_TYPE=		${_MOTIF_TYPE}
+MOTIF12_TYPE:=		${_MOTIF_TYPE}
 MOTIF12BASE=		${_MOTIFBASE}
 .  endif
 .else
 .  if !defined(MOTIFBASE)
-MOTIF_TYPE=		${_MOTIF_TYPE}
+MOTIF_TYPE:=		${_MOTIF_TYPE}
 MOTIFBASE=		${_MOTIFBASE}
 .  endif
 .endif
