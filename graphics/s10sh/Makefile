@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2002/10/08 20:08:50 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2002/10/26 14:27:22 drochner Exp $
 #
 
 DISTNAME=	s10sh-0.2.0
@@ -14,7 +14,9 @@ HAS_CONFIGURE=	yes
 CONFIGURE_ENV+=	LOCALBASE=${LOCALBASE}
 
 do-install:
-	${INSTALL} ${WRKSRC}/s10sh ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/s10sh ${PREFIX}/bin
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/s10sh
+	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/s10sh
 
 .include "../../devel/libusb/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
