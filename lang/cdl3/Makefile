@@ -1,20 +1,17 @@
-# $NetBSD: Makefile,v 1.2 2004/10/03 00:14:59 tv Exp $
-#
+# $NetBSD: Makefile,v 1.3 2004/11/08 11:56:10 adam Exp $
 
-DISTNAME=		cdl3-1.2.4
-PKGREVISION=		1
-CATEGORIES=		lang
-MASTER_SITES=		ftp://ftp.cs.kun.nl/pub/cdl3/
-EXTRACT_SUFX=		.tgz
+DISTNAME=	cdl3-1.2.5
+CATEGORIES=	lang
+MASTER_SITES=	ftp://ftp.cs.ru.nl/pub/cdl3/
 
-MAINTAINER=		jaapboen@sci.kun.nl
-HOMEPAGE=		http://www.cs.kun.nl/~kees/cdl3/
-COMMENT=		Programming language for the development of compilers
+MAINTAINER=	jaapboen@kerguelen.org
+HOMEPAGE=	http://www.niii.ru.nl/~kees/cdl3/
+COMMENT=	Programming language for the development of compilers
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_GNU_TOOLS+=		make
 USE_BUILDLINK3=		yes
+USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 
