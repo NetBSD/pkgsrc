@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2001/05/04 11:26:06 skrll Exp $
+# $NetBSD: Makefile,v 1.14 2001/05/11 17:43:21 dmcmahill Exp $
 
 DISTNAME=	kdebase-2.1
 CATEGORIES=	x11 kde
@@ -40,6 +40,7 @@ PLIST_SRC=	${WRKDIR}/PLIST
 PLIST_DIRS=	share/kde/applnk \
 		share/kde/apps/kappfinder
 
+
 post-configure:
 	${MKDIR} ${IMAKEDIR}
 	${LN} -fs ${FILESDIR}/Imakefile ${IMAKEDIR}
@@ -47,11 +48,20 @@ post-configure:
 	${XMKMF} && ${MAKE} hasxdmauth >>${WRKSRC}/kdm/kdm-config.h
 	${RM} -rf ${IMAKEDIR}
 
+pre-install:
+	@# on some systems we only have libXdpms.a which makes libkcm_energy and 
+	@# libkcm_screensaver to only build static libs.
+	${RM} -f ${PLIST_SRC}
+.if !exists(${X11BASE}/lib/libXdpms.a) || exists(${X11BASE}/lib/libXdpms.so)
+	${ECHO} "lib/kde2/libkcm_energy.so" >> ${PLIST_SRC}
+	${ECHO} "lib/kde2/libkcm_screensaver.so" >>${PLIST_SRC}
+.endif
+	${CAT} ${PLIST_INIT} >> ${PLIST_SRC}
+
 post-install:
 	@${CHMOD} u+s ${PREFIX}/bin/konsole_grantpty
 	@${CHMOD} u+s ${PREFIX}/bin/*.kss
 	@${CHMOD} u+s ${PREFIX}/bin/ksysguardd
-	@${CP} ${PLIST_INIT} ${PLIST_SRC}
 	@(cd ${PREFIX}; ${FIND} ${PLIST_DIRS} \! -type d | sort >>${PLIST_SRC})
 	@(cd ${PREFIX}; ${FIND} ${PLIST_DIRS} -type d | sort -r | \
 	    ${SED} "s/^/\@dirrm /" >>${PLIST_SRC})
