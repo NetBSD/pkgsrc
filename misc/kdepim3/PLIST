@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2004/04/20 13:29:12 markd Exp $
+@comment $NetBSD: PLIST,v 1.10 2004/06/10 12:22:08 markd Exp $
 bin/ghns
 bin/ical2vcal
 bin/kabc2mutt
@@ -649,8 +649,11 @@ share/kde/apps/kmail/about/main.html
 share/kde/apps/kmail/about/pointers.png
 share/kde/apps/kmail/about/shadow1.png
 share/kde/apps/kmail/eventsrc
+share/kde/apps/kmail/icons/crystalsvg/16x16/actions/mark_as_ham.png
 share/kde/apps/kmail/icons/crystalsvg/16x16/actions/mark_as_spam.png
+share/kde/apps/kmail/icons/crystalsvg/22x22/actions/mark_as_ham.png
 share/kde/apps/kmail/icons/crystalsvg/22x22/actions/mark_as_spam.png
+share/kde/apps/kmail/icons/crystalsvg/32x32/actions/mark_as_ham.png
 share/kde/apps/kmail/icons/crystalsvg/32x32/actions/mark_as_spam.png
 share/kde/apps/kmail/icons/crystalsvg/48x48/actions/mark_as_spam.png
 share/kde/apps/kmail/kmcomposerui.rc
@@ -686,6 +689,7 @@ share/kde/apps/kmail/pics/kmmsgflag.png
 share/kde/apps/kmail/pics/kmmsgforwarded.png
 share/kde/apps/kmail/pics/kmmsgfullyencrypted.png
 share/kde/apps/kmail/pics/kmmsgfullysigned.png
+share/kde/apps/kmail/pics/kmmsgham.png
 share/kde/apps/kmail/pics/kmmsgignored.png
 share/kde/apps/kmail/pics/kmmsgnew.png
 share/kde/apps/kmail/pics/kmmsgpartiallyencrypted.png
