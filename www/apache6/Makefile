@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2001/07/13 07:09:25 jlam Exp $
+# $NetBSD: Makefile,v 1.33 2001/07/16 15:41:51 itojun Exp $
 #
 # This package does not compile in mod_ssl support hooks, as it conflicts
 # with IPv6-enable patch.
@@ -122,6 +122,9 @@ post-patch:
 		    || ( ${ECHO} "Patch $${file} failed" ; exit 1 ) ;	\
 	done
 	${CHMOD} +x ${CONFIGURE_SCRIPT}
+	cp ${WRKSRC}/conf/httpd.conf-dist ${WRKSRC}/conf/httpd.conf-dist-
+	${SED} -e 's/#Listen ::/Listen ::/' -e 's/#Listen 0.0.0.0/Listen 0.0.0.0/' \
+	    <${WRKSRC}/conf/httpd.conf-dist- >${WRKSRC}/conf/httpd.conf-dist
 
 pre-configure:
 	${SED} ${FILES_SUBST_SED}					\
