@@ -1,10 +1,45 @@
-@comment $NetBSD: PLIST,v 1.2 2003/06/24 13:47:14 agc Exp $
-info/hacking.info
-info/vmintegration.info
+@comment $NetBSD: PLIST,v 1.3 2004/03/07 21:31:09 jmmv Exp $
 lib/awt/font.properties
+lib/classpath/libgtkpeer.a
+lib/classpath/libgtkpeer.la
+lib/classpath/libgtkpeer.so
+lib/classpath/libgtkpeer.so.0
+lib/classpath/libgtkpeer.so.0.0
+lib/classpath/libjavaio.a
+lib/classpath/libjavaio.la
+lib/classpath/libjavaio.so
+lib/classpath/libjavaio.so.0
+lib/classpath/libjavaio.so.0.0
+lib/classpath/libjavalang.a
+lib/classpath/libjavalang.la
+lib/classpath/libjavalang.so
+lib/classpath/libjavalang.so.0
+lib/classpath/libjavalang.so.0.0
+lib/classpath/libjavalangreflect.a
+lib/classpath/libjavalangreflect.la
+lib/classpath/libjavalangreflect.so
+lib/classpath/libjavalangreflect.so.0
+lib/classpath/libjavalangreflect.so.0.0
+lib/classpath/libjavanet.a
+lib/classpath/libjavanet.la
+lib/classpath/libjavanet.so
+lib/classpath/libjavanet.so.0
+lib/classpath/libjavanet.so.0.0
+lib/classpath/libjavanio.a
+lib/classpath/libjavanio.la
+lib/classpath/libjavanio.so
+lib/classpath/libjavanio.so.0
+lib/classpath/libjavanio.so.0.0
+lib/classpath/libjavautil.a
+lib/classpath/libjavautil.la
+lib/classpath/libjavautil.so
+lib/classpath/libjavautil.so.0
+lib/classpath/libjavautil.so.0.0
 lib/security/classpath.security
 share/classpath/glibj.zip
 @exec ${MKDIR} %D/share/classpath/api
 @dirrm share/classpath/api
 @dirrm share/classpath
+@dirrm lib/security
+@dirrm lib/classpath
 @dirrm lib/awt
