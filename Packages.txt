@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.206 2001/10/26 17:15:57 jlam Exp $
+# $NetBSD: Packages.txt,v 1.207 2001/10/30 17:09:43 drochner Exp $
 ###########################################################################
 
 			==========================
@@ -1027,7 +1027,7 @@ libtool is made by ltconfig script at do-configure target. If USE_LIBTOOL
 and LTCONFIG_OVERRIDE are defined, the specified ltconfig is overridden,
 using the pkgsrc/devel/libtool instead of the pkg's own libtool.  For newer
 versions of libtool (without ltconfig) it may be necessary to use
-USE_LIBTOOL_OVERRIDE=${WRKSRC}/libtool instead.
+LIBTOOL_OVERRIDE=${WRKSRC}/libtool instead.
 
 If your package makes use of the platform independent library for loading
 dynamic shared objects, that comes with libtool (libltdl), you should
