@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.6 2004/04/26 14:52:39 tv Exp $
+
+--- tests/wrapper.in.orig	Mon Apr 26 10:49:37 2004
++++ tests/wrapper.in
+@@ -15,7 +15,7 @@ elif test -n "${BASH_VERSION+set}" && (s
+ fi
+ 
+ # Support unset when possible.
+-if ((MAIL=60; unset MAIL) || exit) >/dev/null 2>&1; then
++if ( (MAIL=60; unset MAIL) || exit) >/dev/null 2>&1; then
+   as_unset=unset
+ else
+   as_unset=false
