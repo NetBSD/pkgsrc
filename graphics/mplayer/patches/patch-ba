@@ -1,3 +1,4 @@
+$NetBSD: patch-ba,v 1.2 2001/12/25 18:02:10 wiz Exp $
 --- vcd_read_fbsd.c.orig	Thu Jun 21 04:06:40 2001
 +++ vcd_read_fbsd.c	Mon Jul 30 21:24:00 2001
 @@ -1,6 +1,8 @@

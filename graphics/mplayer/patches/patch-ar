@@ -1,3 +1,4 @@
+$NetBSD: patch-ar,v 1.2 2001/12/25 18:02:09 wiz Exp $
 --- mp3lib/dct36_k7.s.orig	Wed May  9 11:59:55 2001
 +++ mp3lib/dct36_k7.s	Mon Jul 30 21:20:01 2001
 @@ -1,44 +1,44 @@

@@ -1,3 +1,4 @@
+$NetBSD: patch-ah,v 1.2 2001/12/25 18:02:09 wiz Exp $
 --- libao2/ao_oss.c.orig	Fri Jun 22 03:07:15 2001
 +++ libao2/ao_oss.c	Mon Jul 30 22:10:10 2001
 @@ -7,9 +7,14 @@

@@ -1,3 +1,4 @@
+$NetBSD: patch-ax,v 1.2 2001/12/25 18:02:10 wiz Exp $
 --- mplayer.c.orig	Sun Jul  8 17:11:01 2001
 +++ mplayer.c	Mon Jul 30 22:10:10 2001
 @@ -36,6 +36,9 @@

@@ -1,3 +1,4 @@
+$NetBSD: patch-ap,v 1.2 2001/12/25 18:02:09 wiz Exp $
 --- mp3lib/d_cpu.s.orig	Mon Jul  2 12:07:41 2001
 +++ mp3lib/d_cpu.s	Mon Jul 30 21:20:01 2001
 @@ -1,8 +1,8 @@
