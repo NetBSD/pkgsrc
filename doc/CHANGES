@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7424 2004/10/13 22:18:06 ben Exp $
+$NetBSD: CHANGES,v 1.7425 2004/10/14 02:39:19 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4707,3 +4707,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated fprot-workstation-bin to 4.4.7 [ben 2004-10-13]
 	Updated icecast to 2.0.2 [adrianp 2004-10-13]
 	Updated biew to 5.6.2 [ben 2004-10-13]
+	Updated ccache to 2.4 [xtraeme 2004-10-14]
