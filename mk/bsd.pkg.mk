@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.727 2001/04/22 08:00:41 tron Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.728 2001/04/23 20:53:50 wiz Exp $
 #
 # This file is in the public domain.
 #
@@ -2511,7 +2511,7 @@ makesum: fetch uptodate-digest
 	fi;								\
 	if cmp -s $$newfile ${DISTINFO_FILE}; then			\
 		${RM} -f $$newfile;					\
-		${ECHO_MSG} "=> distinfo file unchanged.";		\
+		${ECHO_MSG} "=> distinfo: distfiles part unchanged.";	\
 	else								\
 		${MV} $$newfile ${DISTINFO_FILE};			\
 	fi
@@ -2538,7 +2538,7 @@ makepatchsum mps: uptodate-digest
 	fi;								\
 	if cmp -s $$newfile ${DISTINFO_FILE}; then			\
 		${RM} -f $$newfile;					\
-		${ECHO_MSG} "=> distinfo file unchanged.";		\
+		${ECHO_MSG} "=> distinfo: patches part unchanged.";	\
 	else								\
 		${MV} $$newfile ${DISTINFO_FILE};			\
 	fi
