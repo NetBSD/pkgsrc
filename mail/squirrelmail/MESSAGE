@@ -1,5 +1,11 @@
 ==========================================================================
-$NetBSD: MESSAGE,v 1.1 2001/11/01 01:01:31 zuntum Exp $
+$NetBSD: MESSAGE,v 1.2 2001/11/19 16:23:10 jlam Exp $
+
+Please run the SquirrelMail configuration script:
+
+        cd ${SMDIR}/config && ./conf.pl
+
+to customize the SquirrelMail webmail system for your site.
 
 You will need to make SquirrelMail accessible through your HTTP server.
 If you are running Apache and ap-php, then you may either symlink

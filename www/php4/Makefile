@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2001/10/20 17:46:50 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2001/11/19 16:23:15 jlam Exp $
 
 .include "Makefile.php"
 
@@ -17,17 +17,6 @@ LDFLAGS+=		-Wl,--export-dynamic
 CGIDIR=			${PREFIX}/libexec/cgi-bin
 EGDIR=			${PREFIX}/share/examples/php
 
-DEINSTALL_FILE=		${WRKDIR}/DEINSTALL
-INSTALL_FILE=		${WRKDIR}/INSTALL
-
-FILES_SUBST=		PHP_CONFDIR=${PHP_CONFDIR}
-FILES_SUBST+=		CAT=${CAT:Q}
-FILES_SUBST+=		CHMOD=${CHMOD:Q}
-FILES_SUBST+=		CMP=${CMP:Q}
-FILES_SUBST+=		CP=${CP:Q}
-FILES_SUBST+=		RM=${RM:Q}
-FILES_SUBST_SED=	${FILES_SUBST:S/=/@!/:S/$/!g/:S/^/ -e s!@/}
-
 # On NetBSD ELF platforms, we need to link libgcc.a whole-archive so that
 # certain symbols from the C++ implementation (__get_eh_context, etc.)
 # referenced by DSOs written in C++ will resolve correctly.  We need to
@@ -40,9 +29,9 @@ LINK_LIBGCC_LDFLAGS=	-Wl,--whole-archive -Wl,-lgcc -Wl,--no-whole-archive
 MAKE_ENV+=		LINK_LIBGCC_LDFLAGS="${LINK_LIBGCC_LDFLAGS}"
 .endif
 
+CONF_FILES=	${EGDIR}/php.ini-dist ${CONFDIR}/php.ini
+
 pre-install:
-	${SED} ${FILES_SUBST_SED} ${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
-	${SED} ${FILES_SUBST_SED} ${PKGDIR}/INSTALL > ${INSTALL_FILE}
 	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} PRE-INSTALL
 
 post-install:
@@ -55,4 +44,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/php4.gif ${PREFIX}/share/php
 	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
+.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,5 +1,7 @@
 #! /bin/sh
 #
+# $NetBSD: cupsd.sh,v 1.5 2001/11/19 16:23:11 jlam Exp $
+#
 # Common UNIX Printing System daemon
 #
 # PROVIDE: cupsd
