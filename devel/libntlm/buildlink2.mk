@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1.1.1 2003/12/03 19:18:16 xtraeme Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2003/12/30 22:57:49 cjep Exp $
 #
 # This Makefile fragment is included by packages that use libntlm.
 #
@@ -16,7 +16,6 @@ EVAL_PREFIX+=	BUILDLINK_PREFIX.libntlm=libntlm
 BUILDLINK_PREFIX.libntlm_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.libntlm+=	include/ntlm.h
 BUILDLINK_FILES.libntlm+=	lib/libntlm.*
-
 
 BUILDLINK_TARGETS+=	libntlm-buildlink
 
