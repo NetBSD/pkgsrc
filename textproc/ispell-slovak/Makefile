@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.2 2002/08/10 16:02:49 jschauma Exp $
+# $NetBSD: Makefile,v 1.3 2002/11/19 17:28:29 salo Exp $
 #
 
-DISTNAME=	ispell-sk-0.1.9.1
-PKGNAME=	ispell-slovak-0.1.9.1
+DISTNAME=	ispell-sk-0.1.10
+PKGNAME=	ispell-slovak-0.1.10
 CATEGORIES=	textproc
-MASTER_SITES=    http://ispell.hq.sk/
+MASTER_SITES=	http://ispell.hq.sk/
 
-MAINTAINER=	salo@Xtrmntr.org
+MAINTAINER=	salo@netbsd.org
 HOMEPAGE=	http://ispell.hq.sk/homepage/
 COMMENT=	Slovak dictionary for ispell
 
