@@ -1,6 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2001/01/04 19:31:26 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2001/02/16 15:10:48 wiz Exp $
 
 PKGNAME=		${DISTNAME:S/-/-client-gtk-/}
+
+COMMENT=		Freeciv client with GTK+ interface
 
 DEPENDS+=		freeciv-share-${FC_VERS}:../../games/freeciv-share
 BUILD_DEPENDS+=		msgfmt:../../devel/gettext

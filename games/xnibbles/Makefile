@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/08/23 23:14:25 tron Exp $
+# $NetBSD: Makefile,v 1.4 2001/02/16 15:11:03 wiz Exp $
 #
 
 DISTNAME=		xnibbles-1.0BETA4
@@ -8,6 +8,7 @@ MASTER_SITES=		http://www.tjhsst.edu/xnibbles/
 
 MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.tjhsst.edu/xnibbles/
+COMMENT=		Winding snakes game for X11
 
 USE_X11BASE=		YES
 USE_XPM=		YES

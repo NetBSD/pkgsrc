@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2000/08/23 23:14:26 tron Exp $
+# $NetBSD: Makefile,v 1.16 2001/02/16 15:10:59 wiz Exp $
 #
 
 DISTNAME=	xarchon-0.50
@@ -8,6 +8,7 @@ MASTER_SITES=	http://xarchon.seul.org/ \
 
 MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://xarchon.seul.org/
+COMMENT=	Chess-like strategy game with battle options
 
 DEPENDS+=	gtk+-1.2.*:../../x11/gtk
 DEPENDS+=	esound-*:../../audio/esound

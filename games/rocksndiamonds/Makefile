@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/01/05 01:02:12 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/16 15:10:58 wiz Exp $
 #
 
 DISTNAME=		rocksndiamonds-1.4.0
@@ -7,6 +7,7 @@ MASTER_SITES=		http://www.artsoft.org/rocksndiamonds/RELEASES/
 
 MAINTAINER=		wiz@netbsd.org
 HOMEPAGE=		http://www.artsoft.org/rocksndiamonds/
+COMMENT=		Game like Boulderdash, Emerald Mine, or Sokoban with lots of levels
 
 USE_GMAKE=		YES
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/01/02 03:20:13 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2001/02/16 15:10:59 wiz Exp $
 
 DISTNAME=		svb
 PKGNAME=		svb-1.0
@@ -7,6 +7,7 @@ MASTER_SITES=		http://src.doc.ic.ac.uk/public/computing/graphics/systems/X11/R5c
 EXTRACT_SUFX=		.shar.Z
 
 MAINTAINER=		root@garbled.net
+COMMENT=		Spy Vs. Bob, the timeless classic
 
 USE_IMAKE=		yes
 NO_WRKSUBDIR=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/10/21 22:38:08 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2001/02/16 15:10:51 wiz Exp $
 
 DISTNAME=		small
 PKGNAME=		${CHESS_ENGINE}-book-${DISTNAME}-20000511
@@ -7,6 +7,7 @@ MASTER_SITES=		ftp://ftp.cis.uab.edu/pub/hyatt/common/${DISTNAME}/
 EXTRACT_SUFX=		.zip
 
 MAINTAINER=		jlam@netbsd.org
+COMMENT=		chess opening book for GNU Chess (small)
 
 DEPENDS+=		gnuchess>=5.00nb1:../../games/gnuchess
 
