@@ -1,0 +1,17 @@
+$NetBSD: patch-ac,v 1.1.1.1 2004/10/30 05:06:15 xtraeme Exp $
+
+--- swapd.c.orig	2004-10-30 06:28:26.000000000 +0200
++++ swapd.c	2004-10-30 06:29:03.000000000 +0200
+@@ -114,9 +114,11 @@
+ 		return(-1);
+ 	}
+ 
+-	retval = meminfo->free + meminfo->cache + swapinfo->free;
++	retval = meminfo->free + swapinfo->free;
+ 
++	if (!meminfo)
+ 	free(meminfo);
++	if (!swapinfo)
+ 	free(swapinfo);
+ 
+ 	return(retval);
