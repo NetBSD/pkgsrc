@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.install.mk,v 1.33 2002/10/19 01:33:51 jlam Exp $
+# $NetBSD: bsd.pkg.install.mk,v 1.34 2002/10/20 04:11:39 jlam Exp $
 #
 # This Makefile fragment is included by package Makefiles to use the common
 # INSTALL/DEINSTALL scripts.  To use this Makefile fragment, simply:
@@ -284,25 +284,23 @@ generate-install-scripts:
 # If the source rc.d script is not present, then the automatic handling
 # doesn't occur.
 
+post-build: generate-rcd-scripts
 generate-rcd-scripts:	# do nothing
 install-rcd-scripts:	# do nothing
 
 .for _script_ in ${RCD_SCRIPTS}
 RCD_SCRIPT_SRC.${_script_}?=	${FILESDIR}/${_script_}.sh
 
-generate-rcd-scripts: generate-rcd-${_script_}
-generate-rcd-${_script_}:
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	if [ ! -f ${WRKDIR}/${_script_} ] &&				\
-	   [ -f ${RCD_SCRIPT_SRC.${_script_}} ]; then			\
-		${SED}	${FILES_SUBST_SED}				\
-			${RCD_SCRIPT_SRC.${_script_}}			\
-			> ${WRKDIR}/${_script_};			\
-		${CHMOD} +x ${WRKDIR}/${_script_};			\
-	fi
+.  if !empty(RCD_SCRIPT_SRC.${_script_})
+.    if exists(${RCD_SCRIPT_SRC.${_script_}})
+generate-rcd-scripts: ${WRKDIR}/${_script_}
+${WRKDIR}/${_script_}: ${RCD_SCRIPT_SRC.${_script_}}
+	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC} |			\
+		${SED} ${FILES_SUBST_SED} > ${.TARGET}
+	${_PKG_SILENT}${_PKG_DEBUG}${CHMOD} +x ${.TARGET}
 
 install-rcd-scripts: install-rcd-${_script_}
-install-rcd-${_script_}: generate-rcd-${_script_}
+install-rcd-${_script_}: ${WRKDIR}/${_script_}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if [ ! -d ${RCD_SCRIPTS_EXAMPLEDIR} ]; then			\
 		${INSTALL} -d -o ${SHAREOWN} -g ${SHAREGRP} -m 0755	\
@@ -313,6 +311,8 @@ install-rcd-${_script_}: generate-rcd-${_script_}
 		${INSTALL_SCRIPT} ${WRKDIR}/${_script_}			\
 			${RCD_SCRIPTS_EXAMPLEDIR};			\
 	fi
+.    endif
+.  endif
 .endfor
 
 .endif	# BSD_PKG_INSTALL_MK
