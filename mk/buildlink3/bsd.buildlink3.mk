@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.66 2004/01/31 22:00:51 recht Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.67 2004/02/01 12:04:13 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -1051,7 +1051,7 @@ _BLNK_WRAP_SANITIZE_PATH.SHLIBTOOL=	# empty
 # We need to "unbuildlinkify" any libtool archives.
 _BLNK_WRAP_LT_UNTRANSFORM_SED=		${_UNBUILDLINK_SED}
 
-.if defined(USE_MIPSPRO)
+.if !empty(PKGSRC_COMPILER:Mmipspro)
 _BLNK_WRAP_PRIVATE_PRE_CACHE.CC=	${_BLNK_WRAP_PRE_CACHE}
 _BLNK_WRAP_PRIVATE_CACHE_ADD.CC=	${BUILDLINK_DIR}/bin/.mipspro-cc-cache-add
 _BLNK_WRAP_PRIVATE_CACHE.CC=		${BUILDLINK_DIR}/bin/.mipspro-cc-cache
@@ -1066,9 +1066,9 @@ _BLNK_WRAP_PRIVATE_CACHE_ADD.CXX=	${BUILDLINK_DIR}/bin/.mipspro-cc-cache-add
 _BLNK_WRAP_PRIVATE_CACHE.CXX=		${BUILDLINK_DIR}/bin/.mipspro-cc-cache
 _BLNK_WRAP_PRIVATE_POST_CACHE.CXX=	${BUILDLINK_DIR}/bin/.mipspro-cc-post-cache
 _BLNK_WRAP_POST_LOGIC.CXX=		${BUILDLINK_DIR}/bin/.mipspro-cc-post-logic
-.endif	# USE_MIPSPRO
+.endif	# mipspro
 
-.if defined(USE_SUNPRO)
+.if !empty(PKGSRC_COMPILER:Msunpro)
 _BLNK_WRAP_PRIVATE_PRE_CACHE.CC=	${_BLNK_WRAP_PRE_CACHE}
 _BLNK_WRAP_PRIVATE_CACHE_ADD.CC=	${BUILDLINK_DIR}/bin/.sunpro-cc-cache-add
 _BLNK_WRAP_PRIVATE_CACHE.CC=		${BUILDLINK_DIR}/bin/.sunpro-cc-cache
@@ -1083,7 +1083,7 @@ _BLNK_WRAP_PRIVATE_CACHE_ADD.CXX=	${BUILDLINK_DIR}/bin/.sunpro-cc-cache-add
 _BLNK_WRAP_PRIVATE_CACHE.CXX=		${BUILDLINK_DIR}/bin/.sunpro-cc-cache
 _BLNK_WRAP_PRIVATE_POST_CACHE.CXX=	${BUILDLINK_DIR}/bin/.sunpro-cc-post-cache
 _BLNK_WRAP_POST_LOGIC.CXX=		${BUILDLINK_DIR}/bin/.sunpro-cc-post-logic
-.endif	# USE_SUNPRO
+.endif	# sunpro
 
 _BLNK_WRAP_PRIVATE_PRE_CACHE.LD=	${_BLNK_WRAP_PRE_CACHE}
 _BLNK_WRAP_PRIVATE_CACHE_ADD.LD=	${BUILDLINK_DIR}/bin/.ld-cache-add
@@ -1251,21 +1251,6 @@ ${_alias_}: ${BUILDLINK_${_wrappee_}}
 #
 CONFIGURE_ENV+=	${BUILDLINK_ENV}
 MAKE_ENV+=	${BUILDLINK_ENV}
-
-# OS-specific overrides for buildlink3 wrappers
-#
-.if defined(USE_SUNPRO)
-_BLNK_WRAPPEES.${_BLNK_OPSYS}?=	CC CXX
-SUNWSPROBASE?=		/opt/SUNWspro
-CC.${_BLNK_OPSYS}?=	${SUNWSPROBASE}/bin/cc
-CXX.${_BLNK_OPSYS}?=	${SUNWSPROBASE}/bin/CC
-.endif
-.if defined(USE_MIPSPRO)
-_BLNK_WRAPPEES.${_BLNK_OPSYS}?=	CC CXX
-MIPSPROBASE?=		/usr
-CC.${_BLNK_OPSYS}?=	${MIPSPROBASE}/bin/cc
-CXX.${_BLNK_OPSYS}?=	${MIPSPROBASE}/bin/CC
-.endif
 
 .PHONY: buildlink-${_BLNK_OPSYS}-wrappers
 buildlink-${_BLNK_OPSYS}-wrappers: buildlink-wrappers
