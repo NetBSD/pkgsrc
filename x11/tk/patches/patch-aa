@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/08/29 16:16:07 jwise Exp $
+$NetBSD: patch-aa,v 1.2 2000/09/01 16:22:00 jwise Exp $
 --- Makefile.in.orig	Mon Aug 28 23:29:09 2000
 +++ Makefile.in	Mon Aug 28 23:34:09 2000
 @@ -76,7 +76,7 @@
@@ -74,7 +74,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/08/29 16:16:07 jwise Exp $
  	    fi
  	@echo "Installing $(TK_LIB_FILE) to $(LIB_INSTALL_DIR)/"
 -	@$(INSTALL_DATA) $(TK_LIB_FILE) $(LIB_INSTALL_DIR)/$(TK_LIB_FILE)
-+	@$(INSTALL_DATA) $(TK_LIB_FILE:.so=.la) $(LIB_INSTALL_DIR)/$(TK_LIB_FILE)
++	@$(INSTALL_DATA) $(TK_LIB_FILE:C/\.so.*/.la/) $(LIB_INSTALL_DIR)/$(TK_LIB_FILE)
  	@(cd $(LIB_INSTALL_DIR); $(RANLIB) $(TK_LIB_FILE))
  	@chmod 555 $(LIB_INSTALL_DIR)/$(TK_LIB_FILE)
  	@echo "Installing wish as $(BIN_INSTALL_DIR)/wish$(VERSION)"
