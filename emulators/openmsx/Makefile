@@ -1,0 +1,40 @@
+# $NetBSD: Makefile,v 1.1.1.1 2004/05/29 11:28:43 xtraeme Exp $
+#
+
+DISTNAME=		openmsx-0.4.0
+CATEGORIES=		emulators
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=openmsx/}
+
+MAINTAINER=		xtraeme@NetBSD.org
+HOMEPAGE=		http://openmsx.sourceforge.net/
+COMMENT=		MSX emulator that aims for perfection
+
+USE_BUILDLINK3=		yes
+USE_GNU_TOOLS+=		make
+USE_LANGUAGES=		c c++
+USE_X11=		yes
+HAS_CONFIGURE=		yes
+
+MAKEFILE=		GNUmakefile
+CONFIGURE_ENV+=		OPENMSX_FLAVOUR=pkgsrc
+MAKE_ENV+=		OPENMSX_FLAVOUR=pkgsrc
+
+post-extract:
+	@${CP} ${FILESDIR}/platform-netbsd.mk ${WRKSRC}/build
+	@${ECHO_MSG} "OPENMSX_STRIP:=true" > \
+		${WRKSRC}/build/flavour-pkgsrc.mk
+
+SUBST_CLASSES=		prefix
+SUBST_STAGE.prefix=	post-patch
+SUBST_FILES.prefix=	build/custom.mk
+SUBST_SED.prefix=	-e "s,/opt/openMSX,${PREFIX}/openmsx,"
+SUBST_MESSAGE.prefix=	"Fixing installation directory."
+
+.include "../../devel/SDL/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../graphics/SDL_image/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
+.include "../../lang/tcl/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
+.include "../../mk/bsd.pkg.mk"
