@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2002/07/02 11:39:46 agc Exp $
+# $NetBSD: Makefile,v 1.24 2002/07/17 13:17:21 agc Exp $
 
 DISTNAME=	glunix-release-1-0a
 PKGNAME=	glunix-1.0a
@@ -46,7 +46,11 @@ USER_CMD=       ${LOCALBASE}/sbin/user
 GROUP_CMD=      ${LOCALBASE}/sbin/group
 .endif
 
-pre-fetch:
+.if defined(BATCH)
+BATCH_CHECK_DISTFILES=	batch-check-distfiles
+.endif
+
+pre-fetch: ${BATCH_CHECK_DISTFILES}
 	cd ${.CURDIR} && ${SETENV} ${SCRIPTS_ENV} ${SH} ${SCRIPTDIR}/pre-fetch
 
 post-patch:
