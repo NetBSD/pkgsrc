@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/07/13 16:21:41 wulf Exp $
+# $NetBSD: Makefile,v 1.5 2001/12/19 21:52:49 agc Exp $
 #
 
 DISTNAME=	camlp4-3.01.6
@@ -12,10 +12,12 @@ COMMENT=	Camlp4 is a Pre-Processor-Pretty-Printer for Objective Caml
 DEPENDS+=	ocaml-3.01:../ocaml
 
 USE_GMAKE=	yes
-HAS_CONFIGURE=	yes
 
 ALL_TARGET=	world
 PLIST_SRC=      ${WRKDIR}/PLIST
+
+do-configure:
+		${SED} -e 's|\$${PREFIX}|${PREFIX}|g' < ${FILESDIR}/config-answers | (cd ${WRKSRC} && ./configure)
 
 pre-build:
 		if ! ${TEST} -x ${LOCALBASE}/bin/ocamlc.opt; then \
