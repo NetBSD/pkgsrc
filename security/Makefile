@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2000/04/04 03:02:27 itojun Exp $
+# $NetBSD: Makefile,v 1.32 2000/04/21 10:59:53 mjl Exp $
 # FreeBSD Id: Makefile,v 1.23 1997/11/09 10:17:02 asami Exp
 #
 
@@ -23,6 +23,7 @@
     SUBDIR += racoon
     SUBDIR += rc5des
     SUBDIR += rsaref
+    SUBDIR += smtpd
     SUBDIR += srp_client
     SUBDIR += ssh
     SUBDIR += ssh6
