@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2004/04/14 16:15:26 jmmv Exp $
+# $NetBSD: Makefile,v 1.18 2004/04/21 04:22:09 martti Exp $
 #
 
 DISTNAME=	dc_gui2-0.75
@@ -19,6 +19,8 @@ USE_DIRS+=		xdg-1.1
 USE_PKGLOCALEDIR=	YES
 CONFIGURE_ARGS+=	--enable-manual-db-detect
 USE_GNU_TOOLS+=		make
+
+UNLIMIT_RESOURCES+=	datasize
 
 CPPFLAGS+=	-I${BUILDLINK_PREFIX.db4}/include/db4
 CPPFLAGS+=	-DNO_PRINTF_LOCALE
