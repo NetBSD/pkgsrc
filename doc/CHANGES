@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.527 2002/11/15 12:19:07 mrg Exp $
+$NetBSD: CHANGES,v 1.528 2002/11/15 12:56:08 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3628,3 +3628,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated apache6 to 1.3.27nb1 [martti 2002-11-15]
 	Updated cyrus-imapd21 to 2.1.9nb1 [seb 2002-11-15]
 	Updated ircII to 20021103 [mrg 2002-11-15]
+	Added zope25-ZMySQLDA-2.0.8 [drochner 2002-11-15]
