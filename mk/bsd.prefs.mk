@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.57 2001/08/14 11:00:44 skrll Exp $
+# $NetBSD: bsd.prefs.mk,v 1.58 2001/08/24 09:00:44 abs Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -50,6 +50,7 @@ MACHINE_GNU_ARCH?=	${GNU_ARCH.${MACHINE_ARCH}}
 
 .if ${OPSYS} == "NetBSD"
 LOWER_OPSYS?=		netbsd
+
 .elif ${OPSYS} == "SunOS"
 . if ${MACHINE_ARCH} == "unknown"
 .  if !defined(LOWER_ARCH)
@@ -59,12 +60,12 @@ MAKEFLAGS+=		LOWER_ARCH=${LOWER_ARCH}
 . endif
 LOWER_VENDOR?=		sun
 LOWER_OPSYS?=		solaris
-.if (${MACHINE_ARCH} == sparc)
+. if (${MACHINE_ARCH} == sparc)
 SPARC_TARGET_ARCH?=	sparcv7
-.endif
-
+. endif
 # We need to set this early to get "USE_MESA" and "USE_XPM" working.
 X11BASE?=               ${DESTDIR}/usr/openwin
+
 .elif ${OPSYS} == "Linux"
 LOWER_OPSYS?=		linux
 . if ${MACHINE_ARCH} == "unknown"
@@ -83,6 +84,7 @@ LOWER_VENDOR?=		unknown
 .elif !defined(LOWER_OPSYS)
 LOWER_OPSYS!=		echo ${OPSYS} | tr A-Z a-z
 .endif
+
 MAKEFLAGS+=		LOWER_OPSYS=${LOWER_OPSYS}
 
 LOWER_VENDOR?=
