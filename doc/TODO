@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.596 2003/05/28 06:18:42 jlam Exp $
+$NetBSD: TODO,v 1.597 2003/05/28 15:54:49 jschauma Exp $
 
 Suggested new packages
 ======================
@@ -83,7 +83,6 @@ Suggested package updates
 	o balsa2-2.0.11
 	o beaver-0.3.0 [pkg/21259]
 	o binutils-2.13.2.1
-	o blender-2.27
 	o bogofilter-0.11.2
 	o boolean-6.4
 	o bzflag-1.7g0
