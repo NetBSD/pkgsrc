@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2000/07/20 15:41:04 tron Exp $
+# $NetBSD: Makefile,v 1.8 2001/02/17 09:07:09 agc Exp $
 # FreeBSD Id: ports/lang/ghc/Makefile,v 1.1.1.1 1999/11/10 17:25:28 nectar Exp
 
 DISTNAME=	ghc-4.04
@@ -8,6 +8,7 @@ DISTFILES=	ghc-4.04-src.tar.gz ghc-4.04-x86-hc.tar.gz
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.haskell.org/ghc/
+COMMENT=	Compiler for the functional language Haskell
 
 DEPENDS+=	readline>=4.0:../../devel/readline
 DEPENDS+=	gmp>=2.0.2:../../devel/gmp

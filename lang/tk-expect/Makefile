@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/10/04 13:19:59 rh Exp $
+# $NetBSD: Makefile,v 1.6 2001/02/17 09:07:35 agc Exp $
 #
 
 DISTNAME=	expect
@@ -8,6 +8,7 @@ MASTER_SITES=	http://expect.nist.gov/
 
 MAINTAINER=	jwise@netbsd.org
 HOMEPAGE=	http://expect.nist.gov/
+COMMENT=	tcl interpreter with both the expect and tk extensions built in
 
 DEPENDS+=	tk-8.3.2:../../x11/tk
 DEPENDS+=	tcl-expect-5.32.1:../../lang/tcl-expect

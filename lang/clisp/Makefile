@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2000/08/18 22:46:37 hubertf Exp $
+# $NetBSD: Makefile,v 1.17 2001/02/17 09:07:02 agc Exp $
 
 DISTNAME=		clisp-2000-03-06
 PKGNAME=		clisp-20000306
@@ -9,6 +9,7 @@ EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		mjl@netbsd.org
 HOMEPAGE=		http://clisp.cons.org/
+COMMENT=		CLISP, a Common Lisp implementation
 
 NOT_FOR_PLATFORM=	*-*-alpha	# severe LP64 problems
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/01/25 14:40:10 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2001/02/17 09:07:24 agc Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/07/18 06:16:44 markm Exp
 #
 
@@ -11,6 +11,7 @@ MASTER_SITES=		ftp://ftp.digital.com/pub/plan/perl/CPAN/src/5.0/maint/ \
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://language.perl.com/index.html
+COMMENT=		base installation of Perl
 
 CONFLICTS=		perl-5.00*
 

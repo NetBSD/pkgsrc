@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/11/30 04:56:21 jtb Exp $
+# $NetBSD: Makefile,v 1.2 2001/02/17 09:06:56 agc Exp $
 
 DISTNAME=		rs-0.7.3.1
 PKGNAME=		RScheme-0.7.3.1
@@ -7,6 +7,7 @@ MASTER_SITES=		ftp://ftp.rscheme.org/pub/rscheme/
 
 MAINTAINER=		jtb@netbsd.org
 HOMEPAGE=		http://www.rscheme.org
+COMMENT=		Scheme implementation
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/src
 HAS_CONFIGURE=		YES
