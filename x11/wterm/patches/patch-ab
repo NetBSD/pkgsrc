@@ -1,17 +1,11 @@
-$NetBSD: patch-ab,v 1.3 2002/03/05 15:23:46 tron Exp $
+$NetBSD: patch-ab,v 1.4 2002/03/15 08:48:32 tron Exp $
 
 --- src/utmp.c.orig	Sun Mar  5 12:21:34 2000
 +++ src/utmp.c	Tue Mar  5 16:21:49 2002
-@@ -66,12 +66,18 @@
+@@ -66,12 +66,12 @@
  # endif
  #endif
  
-+#if defined(__NetBSD__) && defined(HAVE_UTMPX_H)
-+#undef HAVE_UTMPX_H
-+#define HAVE_UTMPX_H_KLUDGE
-+#define wterm_update_wtmp	updwtmpx
-+#endif
-+
  /* ------------------------------------------------------------------------- */
  #ifndef HAVE_UTMPX_H		/* supposedly we have updwtmpx ? */
  #ifdef WTMP_SUPPORT
@@ -31,19 +25,6 @@ $NetBSD: patch-ab,v 1.3 2002/03/05 15:23:46 tron Exp $
  
  /* unlocking the file */
      lck.l_type = F_UNLCK;
-@@ -100,6 +106,12 @@
- }
- #endif				/* WTMP_SUPPORT */
- #endif				/* !HAVE_UTMPX_H */
-+
-+#ifdef HAVE_UTMPX_H_KLUDGE
-+#undef HAVE_UTMPX_H_KLUDGE
-+#define HAVE_UTMPX_H
-+#endif
-+
- /* ------------------------------------------------------------------------- */
- #ifdef UTMP_SUPPORT
- /*
 @@ -218,8 +230,13 @@
  #endif				/* HAVE_UTMP_HOST */
  
