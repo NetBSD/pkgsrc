@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2002/06/08 23:41:56 veego Exp $
+$NetBSD: distinfo,v 1.3 2002/06/11 23:22:43 fredb Exp $
 
 SHA1 (mplayer/MPlayer-0.90pre5.tar.bz2) = 1a78063dd055ce99985001072fb2057156f8cd2a
 Size (mplayer/MPlayer-0.90pre5.tar.bz2) = 2438747 bytes
@@ -9,3 +9,4 @@ Size (mplayer/mp-arial-iso-8859-2.zip) = 255907 bytes
 SHA1 (mplayer/koi8r-font.tar.bz2) = d8f44c101aaae32b5674c16da3549f5e520c077e
 Size (mplayer/koi8r-font.tar.bz2) = 68817 bytes
 SHA1 (patch-aa) = 2c1c6f35caf047f188871ac223d672ce453c26ec
+SHA1 (patch-ab) = ba4990ac8df3b79dfd452530fe4aea66e26f4e7e
