@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2001/04/24 18:07:15 rh Exp $
+@comment $NetBSD: PLIST,v 1.27 2001/05/14 17:18:15 rh Exp $
 bin/deskguide_applet
 bin/gmenu
 bin/gnome-about
@@ -409,6 +409,22 @@ share/gnome/help/gen_util_applet/no/stylesheet-images/up.gif
 share/gnome/help/gen_util_applet/no/stylesheet-images/warning.gif
 share/gnome/help/gen_util_applet/no/stylesheet-images/warning.png
 share/gnome/help/gen_util_applet/no/topic.dat
+share/gnome/help/gnome-feedback/C/docbook.css
+share/gnome/help/gnome-feedback/C/gnome-feedback.sgml
+share/gnome/help/gnome-feedback/C/index.html
+share/gnome/help/gnome-feedback/C/ln7.html
+share/gnome/help/gnome-feedback/C/stylesheet-images/caution.gif
+share/gnome/help/gnome-feedback/C/stylesheet-images/home.gif
+share/gnome/help/gnome-feedback/C/stylesheet-images/important.gif
+share/gnome/help/gnome-feedback/C/stylesheet-images/next.gif
+share/gnome/help/gnome-feedback/C/stylesheet-images/note.gif
+share/gnome/help/gnome-feedback/C/stylesheet-images/prev.gif
+share/gnome/help/gnome-feedback/C/stylesheet-images/tip.gif
+share/gnome/help/gnome-feedback/C/stylesheet-images/toc-blank.gif
+share/gnome/help/gnome-feedback/C/stylesheet-images/toc-minus.gif
+share/gnome/help/gnome-feedback/C/stylesheet-images/toc-plus.gif
+share/gnome/help/gnome-feedback/C/stylesheet-images/up.gif
+share/gnome/help/gnome-feedback/C/stylesheet-images/warning.gif
 share/gnome/help/gnome-terminal/C/authors.html
 share/gnome/help/gnome-terminal/C/classes.html
 share/gnome/help/gnome-terminal/C/config.html
@@ -1144,7 +1160,7 @@ share/idl/Terminal.idl
 share/idl/gnome-panel.idl
 share/idl/help-browser.idl
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/gnome-core.mo
-${PKGLOCALEDIR}/locale/bg_BG.cp1251/LC_MESSAGES/gnome-core.mo
+${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/gnome-core.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/gnome-core.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/gnome-core.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/gnome-core.mo
@@ -1197,6 +1213,7 @@ share/omf/gnome-core/fish_applet-it.omf
 share/omf/gnome-core/fish_applet-no.omf
 share/omf/gnome-core/gen_util_applet-de.omf
 share/omf/gnome-core/gen_util_applet-no.omf
+share/omf/gnome-core/gnome-feedback-C.omf
 share/omf/gnome-core/gnome-terminal-C.omf
 share/omf/gnome-core/gnome-terminal-de.omf
 share/omf/gnome-core/gnome-terminal-es.omf
@@ -1453,6 +1470,9 @@ share/pixmaps/vnterm.xpm
 @dirrm share/gnome/help/gnome-terminal/C/stylesheet-images
 @dirrm share/gnome/help/gnome-terminal/C
 @dirrm share/gnome/help/gnome-terminal
+@dirrm share/gnome/help/gnome-feedback/C/stylesheet-images
+@dirrm share/gnome/help/gnome-feedback/C
+@dirrm share/gnome/help/gnome-feedback
 @dirrm share/gnome/help/gen_util_applet/no/stylesheet-images
 @dirrm share/gnome/help/gen_util_applet/no
 @dirrm share/gnome/help/gen_util_applet/de/stylesheet-images
