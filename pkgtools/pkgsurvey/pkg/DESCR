@@ -1,4 +1,4 @@
-pkgsurvey is a small utility to add the pkgsrc people at pkgsrc.org
+pkgsurvey is a small utility to aid the pkgsrc people at pkgsrc.org
 
 Information of currently-installed packages is taken from the current
 machine, along with Operating System type, hardware architecture, and
