@@ -1,13 +1,13 @@
-$NetBSD: patch-ad,v 1.5 2000/05/02 23:35:56 jlam Exp $
+$NetBSD: patch-ad,v 1.6 2001/05/24 04:28:20 jlam Exp $
 
---- src/config/platforms/netbsd.mk.orig	Tue Feb 29 16:37:56 2000
-+++ src/config/platforms/netbsd.mk	Tue May  2 18:14:13 2000
-@@ -85,7 +85,7 @@
- # Which links can this platform create.  Define one or
- # both of these options.
- UNIX_CAN_BUILD_DYNAMIC=1
--UNIX_CAN_BUILD_STATIC=1
-+UNIX_CAN_BUILD_STATIC=0
+--- src/config/require/unix/Makefile.orig	Tue Oct 31 21:23:23 2000
++++ src/config/require/unix/Makefile
+@@ -180,7 +180,7 @@
+ 		fi								
  
- ##################################################################
- ## Here you can choice if you want to use the gnome stuff.
+ else
+-	@if [ ! -r /usr/include/iconv.h -a ! -r /usr/local/include/iconv.h ]; then	\
++	@if [ ! -r /usr/include/iconv.h -a ! -r /usr/local/include/iconv.h -a ! -r ${LOCALBASE}/include/iconv.h ]; then	\
+ 		if [ -d $(ABI_ROOT)/../libiconv ]; then                        	\
+ 			echo Found libiconv in peer directory;                  \
+ 			if [ ! -r $(ABI_ROOT)/../libiconv/src/config.h ]; then  \

@@ -1,7 +1,7 @@
-$NetBSD: patch-ak,v 1.1 2000/05/02 23:35:58 jlam Exp $
+$NetBSD: patch-ah,v 1.4 2001/05/24 04:28:20 jlam Exp $
 
 --- src/pkg/netbsd/Makefile.orig	Tue Feb 29 16:37:58 2000
-+++ src/pkg/netbsd/Makefile	Tue May  2 18:36:23 2000
++++ src/pkg/netbsd/Makefile
 @@ -4,6 +4,7 @@
  
  # The plain "install" common to all Unix targets
