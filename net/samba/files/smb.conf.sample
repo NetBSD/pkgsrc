@@ -1,4 +1,4 @@
-; $NetBSD: smb.conf.sample,v 1.2 1998/08/07 11:10:53 agc Exp $
+; $NetBSD: smb.conf.sample,v 1.3 1998/09/04 19:17:18 bad Exp $
 ; Configuration file for smbd.
 ; ============================================================================
 ; For the format of this file and comprehensive descriptions of all the
@@ -59,15 +59,15 @@
    printcap name = /etc/printcap
    load printers = yes
    guest account = nobody
-;  This next option sets a separate log file for each client. Remove
+;  This next option sets a separate log file for each client. Uncomment
 ;  it if you want a combined log file.
-   log file = __LOGDIR__/sambalog.%m
+;   log file = __LOGDIR__/sambalog.%m
    dont descend = /dev,/proc,/root,/stand
 
 ;  You will need a world readable lock directory and "share modes=yes"
 ;  if you want to support the file sharing modes for multiple users
 ;  of the same files
-;  lock directory = /usr/local/samba/var/locks
+;  lock directory = __SAMBA_LOCKDIR__
 ;  share modes = yes
 
    map archive = no
@@ -87,7 +87,7 @@
 
 [printers]
    comment = All Printers
-   path = __SAMBA_SPOOL__
+   path = /tmp
    browseable = no
    printable = yes
    public = no

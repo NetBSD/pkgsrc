@@ -1,17 +1,17 @@
-$NetBSD: patch-ab,v 1.4 1998/08/07 11:10:54 agc Exp $
+$NetBSD: patch-ab,v 1.5 1998/09/04 19:17:19 bad Exp $
 
---- includes.h.orig	Sat Jun 13 03:44:19 1998
-+++ includes.h	Wed Jun 17 15:03:22 1998
-@@ -198,7 +198,7 @@
+--- includes.h.orig	Thu Aug 20 01:41:46 1998
++++ includes.h	Tue Sep  1 17:35:13 1998
+@@ -200,7 +200,7 @@
  #include <pwdadj.h>
  #endif
  
 -#if defined(SHADOW_PWD) && !defined(NETBSD) && !defined(FreeBSD) && !defined(CONVEX) && !defined(__OpenBSD__)
-+#if defined(SHADOW_PWD) && !defined(CONVEX)
++#if defined(SHADOW_PWD) && !defined(CONVEX)  && !defined(__NetBSD__)
  #include <shadow.h>
  #endif
  
-@@ -510,23 +510,21 @@
+@@ -518,23 +518,22 @@
  #endif
  
  
@@ -32,7 +32,7 @@ $NetBSD: patch-ab,v 1.4 1998/08/07 11:10:54 agc Exp $
 -#include <netinet/in_systm.h> 
 -#include <netinet/ip.h> 
 -/* you may not need this */
--#define NO_GETSPNAM
+ #define NO_GETSPNAM
  #define SIGNAL_CAST (void (*)())
 -#define USE_DIRECT
 -#define REPLACE_INNETGR
