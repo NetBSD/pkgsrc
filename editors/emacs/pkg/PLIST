@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 1998/01/28 15:33:49 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.5 1998/02/09 00:29:17 hubertf Exp $
 bin/etags
 bin/ctags
 bin/emacsclient
@@ -208,7 +208,6 @@ share/emacs/20.2/etc/ulimit.hack
 share/emacs/20.2/etc/vipcard.tex
 share/emacs/20.2/etc/viperCard.tex
 share/emacs/20.2/etc/yow.lines
-share/emacs/20.2/etc/DOC-20.2.1
 share/emacs/20.2/etc/DOC-20.2.2
 share/emacs/20.2/lisp/abbrev.el
 share/emacs/20.2/lisp/abbrevlist.el
