@@ -1,4 +1,4 @@
-# $NetBSD: icc.mk,v 1.1 2005/02/15 07:43:43 grant Exp $
+# $NetBSD: icc.mk,v 1.2 2005/02/16 10:48:40 grant Exp $
 
 .if !defined(COMPILER_ICC_MK)
 COMPILER_ICC_MK=	defined
@@ -56,6 +56,15 @@ _LANGUAGES.icc+=	${LANGUAGES.icc:M${_lang_}}
 # Prepend the path to the compiler to the PATH.
 .if !empty(_LANGUAGES.icc)
 PREPEND_PATH+=	${_ICC_DIR}/bin
+.endif
+
+# icc supports __attribute__, but the GNU configure test uses a nested
+# function, which icc does not support. #undef'ing __attribute__ has the
+# unfortunate side-effect of breaking many of the Linux header files, which
+# cannot be compiled properly without __attribute__. The test must be
+# overridden so that __attribute__ is assumed supported by the compiler.
+.if defined(GNU_CONFIGURE)
+CONFIGURE_ENV+=		ac_cv___attribute__=yes
 .endif
 
 # Create compiler driver scripts in ${WRKDIR}.
