@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.92 2002/11/30 16:49:00 grant Exp $
+# $NetBSD: bsd.prefs.mk,v 1.93 2002/12/10 12:50:48 wiz Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -268,7 +268,7 @@ MAKEFLAGS+=		DIGEST_VERSION="${DIGEST_VERSION}"
 .endif
 
 PKG_DBDIR?=	${DESTDIR}/var/db/pkg
-PKG_ADD?=	PKG_DBDIR=${PKG_DBDIR} ${PKG_TOOLS_BIN}/pkg_add 
+PKG_ADD?=	PKG_DBDIR=${PKG_DBDIR} ${PKG_TOOLS_BIN}/pkg_add
 PKG_ADMIN?=	PKG_DBDIR=${PKG_DBDIR} ${PKG_TOOLS_BIN}/pkg_admin
 PKG_CREATE?=	PKG_DBDIR=${PKG_DBDIR} ${PKG_TOOLS_BIN}/pkg_create
 PKG_DELETE?=	PKG_DBDIR=${PKG_DBDIR} ${PKG_TOOLS_BIN}/pkg_delete
@@ -312,7 +312,7 @@ BUILD_DIR?=		${.CURDIR}
 #
 .if defined(OBJHOSTNAME)
 .  if !defined(_HOSTNAME)
-_HOSTNAME!=		${UNAME} -n 
+_HOSTNAME!=		${UNAME} -n
 MAKEFLAGS+=		_HOSTNAME=${_HOSTNAME}
 .  endif
 WRKDIR_BASENAME?=	work.${_HOSTNAME:C|\..*||}
@@ -322,7 +322,7 @@ WRKDIR_BASENAME?=	work.${MACHINE_ARCH}
 MAKEFLAGS+=		OBJMACHINE="${OBJMACHINE}"
 .else
 WRKDIR_BASENAME?=	work
-.endif  
+.endif
 
 WRKDIR?=		${BUILD_DIR}/${WRKDIR_BASENAME}
 
