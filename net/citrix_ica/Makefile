@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2002/01/18 11:50:40 martti Exp $
+# $NetBSD: Makefile,v 1.7 2002/01/21 13:19:08 martti Exp $
 #
 
 DISTNAME=	citrix_ica-client
@@ -55,6 +55,14 @@ pre-patch:
 	${MKDIR} ${PATCHDIR}
 	${CP} ${.CURDIR}/patches/patch-${MACHINE_ARCH}-* ${PATCHDIR}
 
+pre-install:
+	@if [ -d "${CDIR}" ]; then					\
+		${ECHO} "";						\
+		${ECHO} "*** Please remove ${CDIR} and try again ***";	\
+		${ECHO} "";						\
+		${FALSE};						\
+	fi
+
 do-install:
 	${SED} s%DESTINATION%${CDIR}% ${FILESDIR}/response \
 		> ${WRKSRC}/response
@@ -65,5 +73,8 @@ do-install:
 	cd ${WRKSRC} && ./setupwfc < response
 	${INSTALL_SCRIPT} ${WRKSRC}/wfcmgr.x ${PREFIX}/bin/wfcmgr
 	${INSTALL_SCRIPT} ${WRKSRC}/wfica.x ${PREFIX}/bin/wfica
+	${SED} "s#/usr/lib/ICAClient#${CDIR}#g" \
+		< ${CDIR}/util/icalicense.sh > ${CDIR}/util/icalicense.sh.fixed
+	${MV} ${CDIR}/util/icalicense.sh.fixed ${CDIR}/util/icalicense.sh
 
 .include "../../mk/bsd.pkg.mk"
