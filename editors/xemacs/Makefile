@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 1999/07/14 18:53:34 tron Exp $
+# $NetBSD: Makefile,v 1.10 1999/08/18 09:13:09 agc Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1997/09/03 19:27:57 gj Exp
 
 DISTNAME=	xemacs-21.1.4
@@ -24,6 +24,8 @@ NOT_FOR_PLATFORM=	*-*-alpha *-*-mips	#fails purespace dumping
 HAS_CONFIGURE=	yes
 
 DIST_SUBDIR=	xemacs
+
+BUILD_DEFS+=	USE_XFACE
 
 .include "../../mk/bsd.prefs.mk"
 
