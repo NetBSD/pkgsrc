@@ -1,0 +1,21 @@
+$NetBSD: patch-ac,v 1.1 2002/11/25 20:16:27 jlam Exp $
+
+--- input/xwin/Makefile.in.orig	Sun May 16 13:50:59 1999
++++ input/xwin/Makefile.in
+@@ -334,13 +334,11 @@ mostlyclean-generic distclean-generic cl
+ maintainer-clean-generic clean mostlyclean distclean maintainer-clean
+ 
+ 
+-xev.c:	../x/xev.c
++xev.c:	../x/xev.c ../x/xev.h
+ 	rm -f xev.c
+ 	ln -s ../x/xev.c .
+-
+-xev.lo:
+-	rm -f xev.lo
+-	ln -s ../x/xev.lo .
++	rm -f xev.h
++	ln -s ../x/xev.h .
+ 
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
