@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2001/10/21 22:50:01 mjl Exp $
+
+SHA1 (ipa-1.1.6.tar.gz) = 4046dbbb38629cb5211ba55fecc263a37b0b18ef
+Size (ipa-1.1.6.tar.gz) = 122587 bytes
+SHA1 (patch-aa) = 26764c28ea43cf82fd71f64141d08f309b7902ec
+SHA1 (patch-ab) = 106201f2346edce3834539f7b7b2e39292aadb47
