@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1835 2004/06/16 16:54:11 reed Exp $
+$NetBSD: TODO,v 1.1836 2004/06/18 17:51:32 reed Exp $
 
 Suggested new packages
 ======================
@@ -342,6 +342,7 @@ Suggested package updates
 	o p5-Exception-Class-1.17
 	o p5-Socket6-0.16
 	o p5-Term-Readline-1.14 [pkg/25163]
+	o pax [NetBSD's bin/pax has several fixes: ticket #1021, PR#24481, PR/25934, PR/25299, PR/25310, PR#25200, PR#25207, PR#25131, ticket #155]
 	o pdmenu-1.2.81
 	o pgplot-5.2 [grant]
 	o physfs-1.0.0
