@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/03/26 17:56:10 zuntum Exp $
+# $NetBSD: Makefile,v 1.7 2001/10/03 16:40:06 abs Exp $
 # FreeBSD Id: ports/sysutils/ucspi-tcp/Makefile,v 1.12 2000/07/10 01:41:24 steve Exp
 
 DISTNAME=	ucspi-tcp-0.88
@@ -20,6 +20,10 @@ NO_BIN_ON_FTP=	${RESTRICTED}
 ALL_TARGET=	it
 INSTALL_TARGET=	setup check
 
+.if (${MACHINE_ARCH} == "arm32" && ${CFLAGS} == "-O2")
+CFLAGS=		-O0
+.endif
+	
 post-configure:
 	${ECHO} ${PREFIX} > ${WRKSRC}/conf-home
 	${ECHO} ${CC} ${CFLAGS} > ${WRKSRC}/conf-cc
