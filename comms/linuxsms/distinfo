@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/06/01 15:59:17 jmmv Exp $
+
+SHA1 (linuxsms-0.64.tar.gz) = 3551167f3ca50b70f2369a92cc7651a26992612a
+Size (linuxsms-0.64.tar.gz) = 35683 bytes
+SHA1 (patch-aa) = bed6cf08d3488505a1873f0f7750da8276105fcd
