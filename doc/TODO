@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3224 2005/03/16 13:00:12 wiz Exp $
+$NetBSD: TODO,v 1.3225 2005/03/16 13:29:59 martti Exp $
 
 Suggested new packages
 ======================
@@ -394,7 +394,6 @@ Suggested package updates
 	o dante-1.1.15
 	o dar-2.2.0
 	o dbench-3.03
-	o dbh-1.0.22
 	o dbus-0.23.2
 	o dbus-glib-0.23.2
 	o dc_gui2-0.80
