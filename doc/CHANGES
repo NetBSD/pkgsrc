@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8237 2004/12/03 16:51:46 wiz Exp $
+$NetBSD: CHANGES,v 1.8238 2004/12/03 16:55:15 ben Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5736,3 +5736,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated firefox to 1.0nb2 [taya 2004-12-03]
 	Updated firefox-gtk2 to 1.0nb2 [taya 2004-12-03]
 	Added guile-lib-0.1.2 [wiz 2004-12-03]
+	Added ap2-chroot-0.3 [ben 2004-12-03]
