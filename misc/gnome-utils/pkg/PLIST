@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2000/06/05 19:15:20 tron Exp $
+@comment $NetBSD: PLIST,v 1.7 2000/07/10 18:44:03 tron Exp $
 bin/gcalc
 bin/gcharmap
 bin/gcolorsel
@@ -72,6 +72,7 @@ share/gnome/help/gdict/C/docbook.css
 share/gnome/help/gdict/C/gdict-prefs.png
 share/gnome/help/gdict/C/gdict-spell.png
 share/gnome/help/gdict/C/gdictmain.png
+@exec mkdir -p %D/share/gnome/help/gdict/C/images
 share/gnome/help/gdiskfree/C/images/gdiskfree-prefs.png
 share/gnome/help/gdiskfree/C/ln7.html
 share/gnome/help/gdiskfree/C/prefs.html
@@ -227,6 +228,7 @@ share/pixmaps/gnome-who.png
 @dirrm share/gnome/help/gcolorsel/C/stylesheet-images
 @dirrm share/gnome/help/gcolorsel/C
 @dirrm share/gnome/help/gcolorsel
+@dirrm share/gnome/help/gdict/C/images
 @dirrm share/gnome/help/gdict/C
 @dirrm share/gnome/help/gdict
 @dirrm share/pixmaps/logview
