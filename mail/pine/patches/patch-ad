@@ -1,0 +1,11 @@
+--- pine/osdep/os-neb.h.orig	Sun Jul 19 01:11:15 1998
++++ pine/osdep/os-neb.h	Sun Jul 19 01:11:25 1998
+@@ -223,7 +223,7 @@
+ 
+ 
+ /*--------- Program employed by users to change their password ---------*/
+-#define	PASSWD_PROG	"/bin/passwd"
++#define	PASSWD_PROG	"/usr/bin/passwd"
+ 
+ 
+ /*-------------- A couple constants used to size arrays ----------------*/
