@@ -1,26 +1,29 @@
-# $NetBSD: Makefile,v 1.11 2004/03/26 02:27:34 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2004/03/30 22:42:47 xtraeme Exp $
 #
 
-DISTNAME=	streamtuner-local-0.2.1
-PKGREVISION=	6
+DISTNAME=	streamtuner-local-0.4.0
 CATEGORIES=	audio www
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=streamtuner/}
+MASTER_SITES=	http://savannah.nongnu.org/download/streamtuner/
 
 MAINTAINER=	xtraeme@NetBSD.org
 HOMEPAGE=	http://www.nongnu.org/streamtuner/
 COMMENT=	Streamtuner plugin providing access to your local MP3 repository
 
-USE_BUILDLINK2=	YES
-USE_LIBTOOL=	YES
-GNU_CONFIGURE=	YES
-USE_GNU_TOOLS+=	make
-USE_X11=	YES
+USE_BUILDLINK3=	    yes
+USE_LIBTOOL=	    yes
+USE_PKGLOCALEDIR=   yes
+GNU_CONFIGURE=	    yes
+USE_GNU_TOOLS+=	    make
+USE_X11=	    yes
 
 SHLIBTOOL_OVERRIDE=	libtool
 
-CONFIGURE_ARGS+=	--with-id3lib="${BUILDLINK_PREFIX.id3lib}"
+CONFIGURE_ARGS+=	--enable-id3
+CONFIGURE_ARGS+=	--with-id3tag=${BUILDLINK_DIR}/lib
 
-.include "../../audio/id3lib/buildlink2.mk"
-.include "../../audio/streamtuner/buildlink2.mk"
-.include "../../devel/zlib/buildlink2.mk"
+.include "../../audio/id3lib/buildlink3.mk"
+.include "../../audio/libid3tag/buildlink3.mk"
+.include "../../audio/libvorbis/buildlink3.mk"
+.include "../../audio/streamtuner/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
