@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/07/23 11:46:32 agc Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/02/16 23:50:18 seb Exp $
 bin/flow-capture
 bin/flow-cat
 bin/flow-dscan
@@ -9,20 +9,22 @@ bin/flow-filter
 bin/flow-gen
 bin/flow-header
 bin/flow-import
+bin/flow-mask
 bin/flow-merge
 bin/flow-nfilter
 bin/flow-print
 bin/flow-receive
+bin/flow-report
 bin/flow-send
 bin/flow-split
 bin/flow-stat
 bin/flow-tag
 bin/flow-xlate
-include/ftconfig.h
-include/ftlib.h
-include/ftpaths.h
-include/ftqueue.h
-include/radix.h
+include/flow-tools/ftconfig.h
+include/flow-tools/ftlib.h
+include/flow-tools/ftpaths.h
+include/flow-tools/ftqueue.h
+include/flow-tools/radix.h
 lib/libft.a
 man/man1/flow-capture.1
 man/man1/flow-cat.1
@@ -34,10 +36,12 @@ man/man1/flow-filter.1
 man/man1/flow-gen.1
 man/man1/flow-header.1
 man/man1/flow-import.1
+man/man1/flow-mask.1
 man/man1/flow-merge.1
 man/man1/flow-nfilter.1
 man/man1/flow-print.1
 man/man1/flow-receive.1
+man/man1/flow-report.1
 man/man1/flow-send.1
 man/man1/flow-split.1
 man/man1/flow-stat.1
@@ -45,3 +49,19 @@ man/man1/flow-tag.1
 man/man1/flow-tools-examples.1
 man/man1/flow-tools.1
 man/man1/flow-xlate.1
+share/examples/flow-tools/bin/flow-mirror
+share/examples/flow-tools/bin/flow-rsync
+share/examples/flow-tools/bin/flow-search
+share/examples/flow-tools/cfg/filter
+share/examples/flow-tools/cfg/flow.acl
+share/examples/flow-tools/cfg/map
+share/examples/flow-tools/cfg/stats
+share/examples/flow-tools/sym/asn
+share/examples/flow-tools/sym/ip-prot
+share/examples/flow-tools/sym/ip-type
+share/examples/flow-tools/sym/tcp-port
+@dirrm share/examples/flow-tools/sym
+@dirrm share/examples/flow-tools/cfg
+@dirrm share/examples/flow-tools/bin
+@dirrm share/examples/flow-tools
+@dirrm include/flow-tools
