@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.8 2004/12/14 19:24:29 jlam Exp $
+# $NetBSD: builtin.mk,v 1.9 2004/12/18 17:14:22 jlam Exp $
 
 _OPENSSL_PKGSRC_PKGNAME=	openssl-0.9.6m
 _OPENSSL_OPENSSLV_H=		/usr/include/openssl/opensslv.h
@@ -193,7 +193,7 @@ buildlink-openssl-des-h:
 	if ${TEST} -f "$$odes_old_h"; then				\
 		${ECHO_BUILDLINK_MSG} "<openssl/des.h> supports old DES API."; \
 		exit 0;							\
-	elif ${GREP} -q "des_cblock" "$$ossl_h" 2>/dev/null; then	\
+	elif ${GREP} -q "des_cblock" "$$odes_h" 2>/dev/null; then	\
 		${ECHO_BUILDLINK_MSG} "<openssl/des.h> supports old DES API."; \
 		exit 0;							\
 	elif ${TEST} -f "$$des_h" -a -f "$$odes_h"; then		\
