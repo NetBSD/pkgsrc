@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.553 2000/08/28 22:43:07 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.554 2000/08/28 22:52:08 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -136,9 +136,9 @@ BUILD_DEFS+=		KERBEROS
 PERL5?=			${LOCALBASE}/bin/perl
 .if defined(USE_PERL5)
 DEPENDS+=		perl-5.*:../../lang/perl5
-PERL5_SITELIB!=		eval `${PERL5} -V:installsitelib`; echo $${installsitelib}
-PERL5_SITEARCH!=	eval `${PERL5} -V:installsitearch`; echo $${installsitearch}
-PERL5_ARCHLIB!=		eval `${PERL5} -V:installarchlib`; echo $${installarchlib}
+PERL5_SITELIB!=		eval `${PERL5} -V:installsitelib 2>/dev/null`; echo $${installsitelib}
+PERL5_SITEARCH!=	eval `${PERL5} -V:installsitearch 2>/dev/null`; echo $${installsitearch}
+PERL5_ARCHLIB!=		eval `${PERL5} -V:installarchlib 2>/dev/null`; echo $${installarchlib}
 .endif
 
 .if defined(USE_FORTRAN)
