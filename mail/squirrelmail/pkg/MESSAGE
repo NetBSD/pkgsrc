@@ -1,5 +1,5 @@
 ==========================================================================
-$NetBSD: MESSAGE,v 1.4 2001/02/12 15:15:44 jlam Exp $
+$NetBSD: MESSAGE,v 1.5 2001/03/14 15:33:48 jlam Exp $
 
 You will need to make SquirrelMail accessible through your HTTP server.
 If you are running Apache and ap-php, then you may either symlink
@@ -12,6 +12,6 @@ into DocumentRoot, or add the following line to httpd.conf:
 
 to make IMAP accounts accessible through:
 	
-	http://www.domain.com/mail/
+	http://www.domain.com/squirrelmail/
 
 ==========================================================================

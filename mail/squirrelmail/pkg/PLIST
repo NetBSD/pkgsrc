@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2001/02/12 15:15:44 jlam Exp $
+@comment $NetBSD: PLIST,v 1.6 2001/03/14 15:33:48 jlam Exp $
 etc/httpd/squirrelmail.conf.dist
 share/squirrelmail/AUTHORS
 share/squirrelmail/COPYING
@@ -73,6 +73,15 @@ share/squirrelmail/help/en/main_folder.hlp
 share/squirrelmail/help/en/options.hlp
 share/squirrelmail/help/en/read_mail.hlp
 share/squirrelmail/help/en/search.hlp
+share/squirrelmail/help/fi/FAQ.hlp
+share/squirrelmail/help/fi/addresses.hlp
+share/squirrelmail/help/fi/basic.hlp
+share/squirrelmail/help/fi/compose.hlp
+share/squirrelmail/help/fi/folders.hlp
+share/squirrelmail/help/fi/main_folder.hlp
+share/squirrelmail/help/fi/options.hlp
+share/squirrelmail/help/fi/read_mail.hlp
+share/squirrelmail/help/fi/search.hlp
 share/squirrelmail/help/fr/FAQ.hlp
 share/squirrelmail/help/fr/addresses.hlp
 share/squirrelmail/help/fr/basic.hlp
@@ -130,6 +139,8 @@ share/squirrelmail/locale/fi/LC_MESSAGES/squirrelmail.mo
 share/squirrelmail/locale/fi/LC_MESSAGES/squirrelmail.po
 share/squirrelmail/locale/fr/LC_MESSAGES/squirrelmail.mo
 share/squirrelmail/locale/fr/LC_MESSAGES/squirrelmail.po
+share/squirrelmail/locale/hr/LC_MESSAGES/squirrelmail.mo
+share/squirrelmail/locale/hr/LC_MESSAGES/squirrelmail.po
 share/squirrelmail/locale/hu/LC_MESSAGES/squirrelmail.mo
 share/squirrelmail/locale/hu/LC_MESSAGES/squirrelmail.po
 share/squirrelmail/locale/index.php
@@ -242,8 +253,8 @@ share/squirrelmail/themes/slashdot_theme.php
 @dirrm share/squirrelmail/locale/is
 @dirrm share/squirrelmail/locale/hu/LC_MESSAGES
 @dirrm share/squirrelmail/locale/hu
-@dirrm share/squirrelmail/locale/ger/LC_MESSAGES
-@dirrm share/squirrelmail/locale/ger
+@dirrm share/squirrelmail/locale/hr/LC_MESSAGES
+@dirrm share/squirrelmail/locale/hr
 @dirrm share/squirrelmail/locale/fr/LC_MESSAGES
 @dirrm share/squirrelmail/locale/fr
 @dirrm share/squirrelmail/locale/fi/LC_MESSAGES
@@ -264,6 +275,7 @@ share/squirrelmail/themes/slashdot_theme.php
 @dirrm share/squirrelmail/help/pl
 @dirrm share/squirrelmail/help/ko
 @dirrm share/squirrelmail/help/fr
+@dirrm share/squirrelmail/help/fi
 @dirrm share/squirrelmail/help/en
 @dirrm share/squirrelmail/help/cs
 @dirrm share/squirrelmail/help/ca
