@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.826 2001/10/12 15:40:56 tron Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.827 2001/10/17 23:23:16 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -449,10 +449,8 @@ _PKG_DEBUG=		set -x;
 
 # If WRKOBJDIR is set, use that tree to build
 .ifdef WRKOBJDIR
-BUILD_ROOT=     	${WRKOBJDIR}
 BUILD_DIR?=		${WRKOBJDIR}/${PKGPATH}
 .else
-BUILD_ROOT=     	${PKGSRCDIR}
 BUILD_DIR?=		${.CURDIR}
 .endif # WRKOBJDIR
 
