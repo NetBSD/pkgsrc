@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8339 2004/12/15 13:24:26 taca Exp $
+$NetBSD: CHANGES,v 1.8340 2004/12/15 13:54:19 salo Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5917,3 +5917,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated namazu to 2.0.14 [taca 2004-12-15]
 	Updated yatsvrs to 5.00.6nb3 [taca 2004-12-15]
 	Updated ruby-quota to 0.5.1nb1 [taca 2004-12-15]
+	Updated mkvtoolnix to 1.0.1 [salo 2004-12-15]
+	Updated mmg to 1.0.1 [salo 2004-12-15]
