@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2003/12/04 04:18:13 grant Exp $
+# $NetBSD: Makefile,v 1.18 2004/01/05 20:48:01 jlam Exp $
 
 DISTNAME=	db-2.7.7
 PKGREVISION=	1
@@ -14,13 +14,17 @@ COMMENT=	Sleepycat Software's Berkeley DB version 2
 
 NO_PKGTOOLS_REQD_CHECK=	# defined (needed for pkgtools/pkg_install)
 
-USE_BUILDLINK2=		yes
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	../dist/configure
 CONFIGURE_ARGS+=	--enable-compat185
 
 USE_GNU_TOOLS+=		awk
+
+INSTALLATION_DIRS=	bin include/db2 lib share/doc/html
 
 post-install:
 	${CHOWN} -R ${BINOWN}:${BINGRP} ${PREFIX}/share/doc/html/db
