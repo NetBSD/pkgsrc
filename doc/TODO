@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2040 2004/08/15 12:42:58 wiz Exp $
+$NetBSD: TODO,v 1.2041 2004/08/15 13:17:47 wiz Exp $
 
 Suggested new packages
 ======================
@@ -292,7 +292,6 @@ Suggested package updates
 	o lbreakout-2.5
 	o leafnode-1.10.3
 	o libcddb-0.9.5
-	o libevent-0.9
 	o libggi-2.0.5
 	o libgii-0.8.5
 	o libidn-0.5.4
