@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4761 2004/02/10 08:06:11 minskim Exp $
+$NetBSD: CHANGES,v 1.4762 2004/02/10 09:01:28 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -739,3 +739,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated createbuildlink to 3.1 [jlam 2004-02-10]
 	Updated teixsl-html to 3.1 [minskim 2004-02-10]
 	Updated teixsl-fo to 3.1 [minskim 2004-02-10]
+	Added imhangul-0.9.9 [minskim 2004-02-10]
