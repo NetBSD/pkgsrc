@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.116 2003/09/23 19:33:14 jschauma Exp $
+# $NetBSD: Makefile,v 1.117 2003/09/23 20:53:52 jschauma Exp $
 
 DISTNAME=		openssh-3.7.1p2
 PKGNAME=		openssh-3.7.1.2
@@ -70,7 +70,10 @@ CONFIGURE_ARGS+=	--with-privsep-user=${OPENSSH_USER}
 
 .if ${OPSYS} == "SunOS"
 LIBS+=			-lc
+.else
+LD=${CC}
 .endif
+
 
 .if ${OPSYS} == "Darwin" || ${OPSYS} == "SunOS"
 .  include "../../security/skey/buildlink2.mk"
