@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.949 2002/03/15 10:05:56 tron Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.950 2002/03/17 16:44:28 fredb Exp $
 #
 # This file is in the public domain.
 #
@@ -776,7 +776,6 @@ MASTER_SITE_R_CRAN+=	\
 	http://www.stats.bris.ac.uk/R/src/
 
 MASTER_SITE_TEX_CTAN+=  \
-	ftp://ftp.cdrom.com/pub/tex/ctan/  \
 	ftp://ftp.wustl.edu/packages/TeX/  \
 	ftp://ftp.funet.fi/pub/TeX/CTAN/  \
 	ftp://ftp.tex.ac.uk/public/ctan/tex-archive/  \
