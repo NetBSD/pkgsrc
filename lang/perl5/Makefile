@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 1997/12/22 07:45:43 hubertf Exp $
 # New ports collection makefile for:	perl5
 # Version required:	5.004_01
 # Date created:		16 April 1995
 # Whom:			markm
 #
+# $NetBSD: Makefile,v 1.5 1998/01/24 20:21:44 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/07/18 06:16:44 markm Exp
 #
 
@@ -56,10 +56,9 @@ MAN3=	AnyDBM_File.3 AutoLoader.3 AutoSplit.3 Benchmark.3 Bundle::CPAN.3 \
 	Time::gmtime.3 Time::localtime.3 Time::tm.3 UNIVERSAL.3 \
 	User::grent.3 User::pwent.3 autouse.3 blib.3 constant.3 diagnostics.3 \
 	integer.3 less.3 lib.3 locale.3 ops.3 overload.3 sigtrap.3 strict.3 \
-	subs.3 vars.3
+	subs.3 vars.3 base.3
 
 MAN3PREFIX=	${PREFIX}/lib/perl5
-
 
 test:
 	@(cd ${WRKSRC}; make test)
