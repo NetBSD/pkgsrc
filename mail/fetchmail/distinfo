@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.7 2001/06/26 07:18:09 tron Exp $
+$NetBSD: distinfo,v 1.8 2001/07/29 07:30:59 tron Exp $
 
-SHA1 (fetchmail-5.8.10.tar.gz) = 9617d0bcc36978d6280fa1a8310b654567b9d2bf
-Size (fetchmail-5.8.10.tar.gz) = 844548 bytes
+SHA1 (fetchmail-5.8.14.tar.gz) = 868cc0a13c68c4720c747d0721078cbf6e8e5818
+Size (fetchmail-5.8.14.tar.gz) = 852043 bytes
 SHA1 (patch-aa) = 3c8aaac5d53c1069995ab74ad99bc5e64843a507
 SHA1 (patch-ab) = 009a97639502365f8b6ec4e854622620391a812f
 SHA1 (patch-ac) = ef0e651807bb0942ca79ed3b10ffc000f71bd330
