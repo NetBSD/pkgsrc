@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2000/10/15 14:19:27 wulf Exp $
+# $NetBSD: Makefile,v 1.38 2000/10/15 18:08:01 rh Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/07/30 11:47:51 tg Exp 
 #
 
@@ -7,6 +7,7 @@
     SUBDIR += gdbm
     SUBDIR += freetds
     SUBDIR += geneweb
+    SUBDIR += gq
     SUBDIR += gtksql
     SUBDIR += gtranscript
     SUBDIR += iodbc
