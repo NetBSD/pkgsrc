@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2004/05/15 15:48:36 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.14 2004/06/28 14:50:23 jmmv Exp $
 bin/gnome-desktop-item-edit
 bin/gnome-panel
 bin/gnome-panel-preferences
@@ -26,23 +26,24 @@ libexec/wnck-applet
 man/man1/gnome-panel-preferences.1
 man/man1/gnome-panel.1
 share/control-center-2.0/capplets/gnome-panel-preferences.desktop
-share/doc/html/panel-applet/PanelApplet.html
-share/doc/html/panel-applet/applet-popups.html
-share/doc/html/panel-applet/applet-porting.html
-share/doc/html/panel-applet/applet-writing.html
-share/doc/html/panel-applet/home.png
-share/doc/html/panel-applet/index.html
-share/doc/html/panel-applet/index.sgml
-share/doc/html/panel-applet/left.png
-share/doc/html/panel-applet/multi-applets.html
-share/doc/html/panel-applet/panel-applet-Panel-Applet-GConf-Utilities.html
-share/doc/html/panel-applet/panel-applet.devhelp
-share/doc/html/panel-applet/panel-applet.html
-share/doc/html/panel-applet/panel-signals.html
-share/doc/html/panel-applet/right.png
-share/doc/html/panel-applet/server-files.html
-share/doc/html/panel-applet/session-saving.html
-share/doc/html/panel-applet/up.png
+share/doc/panel-applet/PanelApplet.html
+share/doc/panel-applet/applet-popups.html
+share/doc/panel-applet/applet-porting.html
+share/doc/panel-applet/applet-writing.html
+share/doc/panel-applet/home.png
+share/doc/panel-applet/index.html
+share/doc/panel-applet/index.sgml
+share/doc/panel-applet/left.png
+share/doc/panel-applet/multi-applets.html
+share/doc/panel-applet/panel-applet-Panel-Applet-GConf-Utilities.html
+share/doc/panel-applet/panel-applet.devhelp
+share/doc/panel-applet/panel-applet.html
+share/doc/panel-applet/panel-signals.html
+share/doc/panel-applet/right.png
+share/doc/panel-applet/server-files.html
+share/doc/panel-applet/session-saving.html
+share/doc/panel-applet/style.css
+share/doc/panel-applet/up.png
 share/gconf/schemas/clock.schemas
 share/gconf/schemas/fish.schemas
 share/gconf/schemas/gnome-panel-screenshot.schemas
@@ -262,6 +263,7 @@ ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/gnome-panel-2.0.mo
 ${PKGLOCALEDIR}/locale/li/LC_MESSAGES/gnome-panel-2.0.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/gnome-panel-2.0.mo
 ${PKGLOCALEDIR}/locale/lv/LC_MESSAGES/gnome-panel-2.0.mo
+${PKGLOCALEDIR}/locale/mi/LC_MESSAGES/gnome-panel-2.0.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/gnome-panel-2.0.mo
 ${PKGLOCALEDIR}/locale/ml/LC_MESSAGES/gnome-panel-2.0.mo
 ${PKGLOCALEDIR}/locale/mn/LC_MESSAGES/gnome-panel-2.0.mo
@@ -451,7 +453,7 @@ share/pixmaps/panel-force-quit.png
 @comment in gnome2-dirs: @dirrm share/gnome-2.0/ui
 @comment in gnome2-dirs: @dirrm share/gnome
 @comment in GConf2: @dirrm share/gconf/schemas
-@dirrm share/doc/html/panel-applet
+@dirrm share/doc/panel-applet
 @comment in gnome2-dirs: @dirrm share/control-center-2.0/capplets
 @comment in libbonobo: @dirrm lib/bonobo/servers
 @dirrm include/panel-2.0
