@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/05/11 04:03:26 simonb Exp $
+# $NetBSD: Makefile,v 1.11 2004/05/13 18:48:32 ben Exp $
 #
 
 DISTNAME=		#defined
@@ -25,6 +25,19 @@ LICENSE=		fprot-workstation-license
 WRKSRC=			${WRKDIR}/f-prot
 NO_BUILD=		yes
 USE_BUILDLINK3=		yes
+USE_PKGINSTALL=		yes
+
+DATDIR=			${PREFIX}/share/fprot-workstation-bin
+DOCDIR=			${PREFIX}/share/doc/fprot-workstation-bin
+FPDIR=			${PREFIX}/libexec/fprot-workstation-bin
+
+FILES_SUBST+=		FPDIR=${FPDIR:Q}
+FILES_SUBST+=		DATDIR=${DATDIR:Q}
+
+SUPPORT_FILES=          ${DATDIR}/MACRO.DEF ${FPDIR}/MACRO.DEF
+SUPPORT_FILES+=         ${DATDIR}/SIGN.DEF ${FPDIR}/SIGN.DEF
+SUPPORT_FILES+=         ${DATDIR}/SIGN2.DEF ${FPDIR}/SIGN2.DEF
+OWN_DIRS=               ${FPDIR}
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -38,16 +51,15 @@ MASTER_SITES=		ftp://ftp.f-prot.com/pub/linux/
 DISTNAME=		fp-linux-ws-${PKGVERSION}
 .endif
 
-post-patch:
-	cd ${WRKSRC}/tools && ${MV} check-updates.pl check-updates.pl.bak
-	${SED} -e "s,/usr/local/f-prot,${PREFIX}/lib/fprot-workstation-bin,g" \
-		-e "s,/usr/bin/perl,${PREFIX}/bin/perl,g"\
-		<${WRKSRC}/tools/check-updates.pl.bak \
-		>${WRKSRC}/tools/check-updates.pl
-	${MV} ${WRKSRC}/f-prot.sh ${WRKSRC}/f-prot.sh.bak
-	${SED} -e "s,/usr/local/f-prot,${PREFIX}/lib/fprot-workstation-bin," \
-		<${WRKSRC}/f-prot.sh.bak \
-		>${WRKSRC}/f-prot.sh
+DIST_SUBDIR=		${DISTNAME}
+
+SUBST_CLASSES+=		paths
+SUBST_MESSAGE.paths=	"Configuring default paths."
+SUBST_STAGE.paths=	post-patch
+SUBST_FILES.paths+=	${WRKSRC}/tools/check-updates.pl \
+			${WRKSRC}/f-prot.sh
+SUBST_SED.paths=	-e "s,/usr/local/f-prot,${FPDIR},g" \
+			-e "s,/usr/bin/perl,${PREFIX}/bin/perl,g"
 
 .if ${OPSYS} == "NetBSD"
 pre-install:
@@ -59,17 +71,14 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/tools/check-updates.pl ${PREFIX}/sbin
 	${INSTALL_MAN} ${WRKSRC}/man_pages/check-updates.pl.8 ${PREFIX}/man/man8
 	${INSTALL_MAN} ${WRKSRC}/man_pages/f-prot.1 ${PREFIX}/man/man1
-	${INSTALL_DATA_DIR} ${PREFIX}/lib/fprot-workstation-bin
-	${INSTALL_DATA} ${WRKSRC}/*.DEF ${PREFIX}/lib/fprot-workstation-bin
-	${INSTALL_DATA} ${WRKSRC}/ENGLISH.TX0 \
-		${PREFIX}/lib/fprot-workstation-bin
-	${INSTALL_PROGRAM} ${WRKSRC}/f-prot ${PREFIX}/lib/fprot-workstation-bin
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/fprot-workstation-bin
+	${INSTALL_DATA_DIR} ${DATDIR}
+	${INSTALL_DATA} ${WRKSRC}/*.DEF ${DATDIR}
+	${INSTALL_DATA_DIR} ${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/LICENSE ${WRKSRC}/README ${WRKSRC}/CHANGES \
-		${PREFIX}/share/doc/fprot-workstation-bin
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/fprot-workstation-bin
-	${INSTALL_DATA} ${WRKSRC}/doc_ws/* \
-		${PREFIX}/share/doc/html/fprot-workstation-bin
+		${WRKSRC}/doc_ws/* ${DOCDIR}
+	${INSTALL_PROGRAM_DIR} ${FPDIR}
+	${INSTALL_DATA} ${WRKSRC}/ENGLISH.TX0 ${FPDIR}
+	${INSTALL_PROGRAM} ${WRKSRC}/f-prot ${FPDIR}
 
 .include "../../lang/perl5/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
