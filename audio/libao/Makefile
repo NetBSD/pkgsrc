@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2004/01/07 18:00:16 jlam Exp $
+# $NetBSD: Makefile,v 1.23 2004/01/07 18:07:46 jlam Exp $
 
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_INSTALLATION_TYPES=	overwrite
 
 USE_BUILDLINK3=	yes
 
