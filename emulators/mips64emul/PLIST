@@ -1,10 +1,23 @@
-@comment $NetBSD: PLIST,v 1.2 2004/06/28 04:01:11 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/11/04 12:18:54 xtraeme Exp $
 bin/mips64emul
 man/man1/mips64emul.1
+share/doc/mips64emul/20041024-netbsd-arc-installed.gif
+share/doc/mips64emul/20041024-netbsd-arc-installed_small.gif
+share/doc/mips64emul/20041024-openbsd-arc-installed.gif
+share/doc/mips64emul/20041024-openbsd-arc-installed_small.gif
 share/doc/mips64emul/BUGS
 share/doc/mips64emul/HISTORY
 share/doc/mips64emul/LICENSE
 share/doc/mips64emul/README
 share/doc/mips64emul/RELEASE
 share/doc/mips64emul/TODO
+share/doc/mips64emul/hello.c
+share/doc/mips64emul/netbsd-pmax-20040630.png
+share/doc/mips64emul/netbsd-pmax-20040630_small.png
+share/doc/mips64emul/openbsd-pmax-20040710.png
+share/doc/mips64emul/openbsd-pmax-20040710_small.png
+share/doc/mips64emul/sprite-20040711.png
+share/doc/mips64emul/sprite-20040711_small.png
+share/doc/mips64emul/ultrix4.5-20040706.png
+share/doc/mips64emul/ultrix4.5-20040706_small.gif
 @dirrm share/doc/mips64emul
