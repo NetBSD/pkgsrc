@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2004/04/01 18:26:22 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.4 2004/04/19 15:01:00 jmmv Exp $
 bin/croco-config
 bin/csslint
 include/libcroco/libcroco/cr-additional-sel.h
@@ -30,8 +30,8 @@ include/libcroco/libcroco/libcroco.h
 lib/libcroco.a
 lib/libcroco.la
 lib/libcroco.so
-lib/libcroco.so.2
-lib/libcroco.so.2.0
+lib/libcroco.so.3
+lib/libcroco.so.3.0
 lib/pkgconfig/libcroco.pc
 man/man1/croco-config.1
 man/man1/csslint.1
