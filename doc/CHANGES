@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2522 2003/06/17 14:35:39 agc Exp $
+$NetBSD: CHANGES,v 1.2523 2003/06/17 15:05:25 abs Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2476,3 +2476,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated p5-Compress-Zlib to 1.21 [wiz 2003-06-17]
 	Updated p5-Archive-Tar to 1.02 [wiz 2003-06-17]
 	Updated 9menu to 1.7 [agc 2003-06-17]
+	Updated cpuflags to 0.51 [abs 2003-06-17]
