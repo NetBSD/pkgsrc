@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.use.mk,v 1.1.2.4 2004/12/31 20:25:30 tv Exp $
+#	$NetBSD: bsd.pkg.use.mk,v 1.1.2.5 2005/01/10 16:15:25 tv Exp $
 #
 # Turn USE_* macros into proper depedency logic.  Included near the top of
 # bsd.pkg.mk, after bsd.prefs.mk.
@@ -104,10 +104,6 @@ DEPENDS+=	f2c>=20001205nb3:../../lang/f2c
 .  endif
 FC=             ${PKG_FC}
 F77=            ${PKG_FC}
-CONFIGURE_ENV+=	F77="${F77}"
-CONFIGURE_ENV+=	FFLAGS="${FFLAGS:M*}"
-MAKE_ENV+=	F77="${F77}"
-MAKE_ENV+=	FC="${FC}"
 .endif
 
 ### USE_LIBTOOL, PKG_[SH]LIBTOOL
