@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.171 1998/10/03 16:24:35 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.172 1998/10/04 20:56:58 tron Exp $
 #
 # This file is in the public domain.
 #
@@ -1368,6 +1368,10 @@ clean: pre-clean
 .if !target(pre-distclean)
 pre-distclean:
 	@${DO_NADA}
+.endif
+
+.if !target(cleandir)
+cleandir: clean
 .endif
 
 .if !target(distclean)
