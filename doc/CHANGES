@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4449 2004/01/13 13:06:52 adam Exp $
+$NetBSD: CHANGES,v 1.4450 2004/01/13 19:44:59 jdolecek Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -205,3 +205,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated cyrus-saslauthd to 2.1.17nb1 [jlam 2004-01-13]
 	Added xawtv-3.90 [jmmv 2004-01-13]
 	Updated sylpheed-claws to 0.9.8 [adam 2004-01-13]
+	Updated php4-ftp to 4.3.4nb2 [jdolecek 2004-01-13]
