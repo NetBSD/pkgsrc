@@ -1,10 +1,17 @@
-$NetBSD: patch-aa,v 1.1 2002/05/03 10:39:01 zuntum Exp $
+$NetBSD: patch-aa,v 1.2 2004/04/10 05:30:06 schmonz Exp $
 
-First part of QMAILQUEUE patch, as found on http://www.qmail.org/
-
---- Makefile.orig	Mon Jun 15 04:53:16 1998
-+++ Makefile	Tue Jan 19 10:52:24 1999
-@@ -1483,12 +1483,12 @@
+--- Makefile.orig	1998-06-15 06:53:16.000000000 -0400
++++ Makefile
+@@ -263,7 +263,7 @@ makelib cdbmake_pack.o cdbmake_hash.o cd
+ 	cdbmake_add.o
+ 
+ cdbmake_add.o: \
+-compile cdbmake_add.c cdbmake.h uint32.h
++compile cdbmake_add.c cdbmake.h alloc.h uint32.h
+ 	./compile cdbmake_add.c
+ 
+ cdbmake_hash.o: \
+@@ -1483,12 +1483,12 @@ load qmail-send.o qsutil.o control.o con
  trigger.o fmtqfn.o quote.o now.o readsubdir.o qmail.o date822fmt.o \
  datetime.a case.a ndelay.a getln.a wait.a seek.a fd.a sig.a open.a \
  lock.a stralloc.a alloc.a substdio.a error.a str.a fs.a auto_qmail.o \
@@ -19,3 +26,12 @@ First part of QMAILQUEUE patch, as found on http://www.qmail.org/
  
  qmail-send.0: \
  qmail-send.8
+@@ -1892,7 +1892,7 @@ trylsock.c compile load
+ 
+ spawn.o: \
+ compile chkspawn spawn.c sig.h wait.h substdio.h byte.h str.h \
+-stralloc.h gen_alloc.h select.h exit.h coe.h open.h error.h \
++stralloc.h gen_alloc.h select.h exit.h alloc.h coe.h open.h error.h \
+ auto_qmail.h auto_uids.h auto_spawn.h
+ 	./chkspawn
+ 	./compile spawn.c

@@ -1,0 +1,11 @@
+$NetBSD: patch-ad,v 1.1 2004/04/10 05:30:06 schmonz Exp $
+
+--- cdb_seek.c.orig	1998-06-15 06:53:16.000000000 -0400
++++ cdb_seek.c
+@@ -1,6 +1,5 @@
+ #include <sys/types.h>
+ #include <errno.h>
+-extern int errno;
+ #include "cdb.h"
+ 
+ #ifndef SEEK_SET

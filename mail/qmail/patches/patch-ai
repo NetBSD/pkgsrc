@@ -1,0 +1,13 @@
+$NetBSD: patch-ai,v 1.1 2004/04/10 05:30:06 schmonz Exp $
+
+--- qmail-local.c.orig	1998-06-15 06:53:16.000000000 -0400
++++ qmail-local.c
+@@ -645,7 +645,7 @@ char **argv;
+     {
+      cmds.s[j] = 0;
+      k = j;
+-     while ((k > i) && (cmds.s[k - 1] == ' ') || (cmds.s[k - 1] == '\t'))
++     while ((k > i) && ((cmds.s[k - 1] == ' ') || (cmds.s[k - 1] == '\t')))
+        cmds.s[--k] = 0;
+      switch(cmds.s[i])
+       {

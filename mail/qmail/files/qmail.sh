@@ -1,24 +1,29 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: qmail.sh,v 1.2 2002/09/20 02:01:57 grant Exp $
+# $NetBSD: qmail.sh,v 1.3 2004/04/10 05:30:06 schmonz Exp $
 #
 
-# PROVIDE: mail
+# PROVIDE: mail qmail
 # REQUIRE: LOGIN
 
 . /etc/rc.subr
 
 name="qmail"
 rcvar=${name}
-required_files="@QMAILDIR@/rc @QMAILDIR@/control/me"
+required_files="@QMAILDIR@/control/me"
 command="@QMAILDIR@/bin/qmail-send"
 start_precmd="qmail_precmd"
 extra_commands="reload"
 
+if [ -z "$qmail_flags" ]; then
+	qmail_flags="./Mailbox"
+fi
+
 qmail_precmd()
 {
-	command="@QMAILDIR@/rc"
+	command="@SETENV@ - PATH=@QMAILDIR@/bin:$PATH qmail-start '$qmail_flags' splogger qmail"
 	command_args="&"
+	rc_flags=""
 }
 
 load_rc_config $name

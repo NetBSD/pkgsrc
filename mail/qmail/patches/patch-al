@@ -1,0 +1,27 @@
+$NetBSD: patch-al,v 1.1 2004/04/10 05:30:06 schmonz Exp $
+
+--- qmail-popup.c.orig	1998-06-15 06:53:16.000000000 -0400
++++ qmail-popup.c
+@@ -64,10 +64,10 @@ void die_badauth() { err("authorization 
+ 
+ void err_syntax() { err("syntax error"); }
+ void err_wantuser() { err("USER first"); }
+-void err_authoriz() { err("authorization first"); }
++void err_authoriz(arg) char *arg; { err("authorization first"); }
+ 
+-void okay() { puts("+OK \r\n"); flush(); }
+-void pop3_quit() { okay(); die(); }
++void okay(arg) char *arg; { puts("+OK \r\n"); flush(); }
++void pop3_quit(arg) char *arg; { okay(0); die(); }
+ 
+ 
+ char unique[FMT_ULONG + FMT_ULONG + 3];
+@@ -136,7 +136,7 @@ void pop3_greet()
+ void pop3_user(arg) char *arg;
+ {
+   if (!*arg) { err_syntax(); return; }
+-  okay();
++  okay(0);
+   seenuser = 1;
+   if (!stralloc_copys(&username,arg)) die_nomem(); 
+   if (!stralloc_0(&username)) die_nomem(); 

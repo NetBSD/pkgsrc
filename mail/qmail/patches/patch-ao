@@ -1,0 +1,22 @@
+$NetBSD: patch-ao,v 1.1 2004/04/10 05:30:06 schmonz Exp $
+
+--- qmail.7.orig	1998-06-15 06:53:16.000000000 -0400
++++ qmail.7
+@@ -55,12 +55,14 @@ Miscellaneous documentation includes
+ and
+ .BR qmail-pop3d (8).
+ 
+-This documentation describes version
+-1.03
++This documentation describes netqmail version
++1.05
+ of
+ .BR qmail .
+ See
+ .B http://pobox.com/~djb/qmail.html
+ for other
+ .BR qmail -related
+-software.
++software, and
++.B http://qmail.org/
++for other qmail community contributions.

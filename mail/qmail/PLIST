@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.4 2002/07/28 01:56:14 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/04/10 05:30:06 schmonz Exp $
 ${QMAILDIR}/etc/mailer.conf.qmail
 ${QMAILDIR}/etc/rc.d/qmail
+${QMAILDIR}/etc/rc.d/qmailsmtpd
 ${QMAILDIR}/bin/bouncesaying
 ${QMAILDIR}/bin/condredirect
 ${QMAILDIR}/bin/datemail

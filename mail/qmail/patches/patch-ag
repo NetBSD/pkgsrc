@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.1 2004/04/10 05:30:06 schmonz Exp $
+
+--- error.h.orig	1998-06-15 06:53:16.000000000 -0400
++++ error.h
+@@ -1,7 +1,7 @@
+ #ifndef ERROR_H
+ #define ERROR_H
+ 
+-extern int errno;
++#include <errno.h>
+ 
+ extern int error_intr;
+ extern int error_nomem;
