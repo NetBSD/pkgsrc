@@ -1,20 +1,29 @@
-# $NetBSD: Makefile,v 1.11 1999/10/24 16:43:08 tron Exp $
+# $NetBSD: Makefile,v 1.12 2000/01/02 23:09:49 rh Exp $
 #
 
-DISTNAME=	gEDA-19990516
+DISTNAME=	gEDA-${PKGVERSION}
 CATEGORIES=	cad
-MASTER_SITES=	ftp://ftp.geda.seul.org/pub/geda/dist/ \
-		http://www.geda.seul.org/dist/ \
-		http://www.geda.coelacanth.com/dist/
+MASTER_SITES=	# empty
+DISTFILES=	# empty
 
 MAINTAINER=	rh@netbsd.org
 HOMEPAGE=	http://www.geda.seul.org/
 
-DEPENDS+=	gtk+-1.2.*:../../x11/gtk
-DEPENDS+=	guile-1.3.2:../../lang/guile
+DEPENDS+=	gschem-${PKGVERSION}:../../cad/gschem
+DEPENDS+=	gnetlist-${PKGVERSION}:../../cad/gnetlist
+DEPENDS+=	gsymcheck-${PKGVERSION}:../../cad/gsymcheck
+DEPENDS+=	geda-utils-${PKGVERSION}:../../cad/geda-utils
+DEPENDS+=	geda-docs-${PKGVERSION}:../../cad/geda-docs
 
-GNU_CONFIGURE=	yes
 USE_X11BASE=	yes
-USE_LIBTOOL=	yes
+EXTRACT_ONLY=	# empty
+NO_CHECKSUM=	yes
+NO_PATCH=	yes
+NO_CONFIGURE=	yes
+NO_BUILD=	yes
+
+PKGVERSION=	19991011
+
+do-install:	# empty
 
 .include "../../mk/bsd.pkg.mk"
