@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7333 2004/10/03 23:20:27 reinoud Exp $
+$NetBSD: CHANGES,v 1.7334 2004/10/04 02:16:57 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4534,4 +4534,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated ja-samba to 2.2.11.1.0 [taca 2004-10-03]
 	Updated ntop to 1.1nb4 [wiz 2004-10-03]
 	Updated udfclient to 0.3.1 [reinoud 2004-10-03]
-
+	Updated tcl to 8.4.7nb2 [minskim 2004-10-04]
