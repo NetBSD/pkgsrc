@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2000/07/25 06:18:48 jlam Exp $
+@comment $NetBSD: PLIST,v 1.8 2000/07/31 10:49:16 jlam Exp $
 bin/background-properties-capplet
 bin/gnome-edit-properties-capplet
 bin/gnomecc
@@ -248,7 +248,6 @@ share/locale/zh_TW.Big5/LC_MESSAGES/control-center.mo
 share/pixmaps/ccsplash.png
 share/pixmaps/control-center.png
 @dirrm share/gnome/wm-properties
-@dirrm share/gnome/help/control-center/C/stylesheet-images
 @dirrm share/gnome/help/control-center/C/figs
 @dirrm share/gnome/help/control-center/C
 @dirrm share/gnome/help/control-center
