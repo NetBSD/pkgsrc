@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.259 2001/10/22 14:27:05 martti Exp $
+# $NetBSD: Makefile,v 1.260 2001/10/24 09:43:41 agc Exp $
 #
 
 COMMENT=	Networking tools
@@ -210,6 +210,7 @@ SUBDIR+=	wminet
 SUBDIR+=	wmnet
 SUBDIR+=	wmpload
 SUBDIR+=	wu-ftpd
+SUBDIR+=	x2vnc
 SUBDIR+=	xarchie
 SUBDIR+=	xipdump
 SUBDIR+=	xspeakfree
