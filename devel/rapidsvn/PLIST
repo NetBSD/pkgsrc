@@ -1,4 +1,23 @@
-@comment $NetBSD: PLIST,v 1.2 2004/09/22 08:09:29 jlam Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/09/26 17:15:18 epg Exp $
 bin/rapidsvn
+include/svncpp/annotate_line.hpp
+include/svncpp/apr.hpp
+include/svncpp/client.hpp
+include/svncpp/context.hpp
+include/svncpp/context_listener.hpp
+include/svncpp/datetime.hpp
+include/svncpp/dirent.hpp
+include/svncpp/entry.hpp
+include/svncpp/exception.hpp
+include/svncpp/log_entry.hpp
+include/svncpp/path.hpp
+include/svncpp/pool.hpp
+include/svncpp/property.hpp
+include/svncpp/revision.hpp
+include/svncpp/status.hpp
+include/svncpp/targets.hpp
+include/svncpp/url.hpp
+include/svncpp/wc.hpp
 lib/libsvncpp.la
 man/man1/rapidsvn.1
+@dirrm include/svncpp

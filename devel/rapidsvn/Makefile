@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2004/05/31 00:58:48 epg Exp $
+# $NetBSD: Makefile,v 1.13 2004/09/26 17:15:18 epg Exp $
 
-DISTNAME=		rapidsvn-0.6.0
+DISTNAME=		rapidsvn-0.7.0
 CATEGORIES=		devel x11
 MASTER_SITES=		http://www.rapidsvn.org/download/
 
@@ -18,6 +18,8 @@ CONFIGURE_ARGS+=	--with-svn-lib=${BUILDLINK_DIR}/lib
 
 BUILDLINK_DEPENDS.subversion-base+=	subversion-base>=1.0.0
 BUILDLINK_DEPENDS.wxGTK+=	wxGTK>=2.4.2
+
+INSTALLATION_DIRS+=	include/svncpp
 
 .include "../../devel/apr/buildlink3.mk"
 .include "../../devel/subversion/buildlink3.mk"
