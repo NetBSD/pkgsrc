@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.234 2002/02/18 17:07:20 wiz Exp $
+# $NetBSD: Packages.txt,v 1.235 2002/03/11 19:12:07 fredb Exp $
 ###########################################################################
 
 			==========================
@@ -247,11 +247,6 @@ and adding the definitions there.
 If you don't have a permanent Internet connection and you want to know
 which files to download, "make fetch-list" will tell you what you'll need.
 Put these distfiles into /usr/pkgsrc/distfiles.
-
-If you need to download from a dynamic URL you can set DYNAMIC_MASTER_SITES
-and a 'make fetch' will call files/getsite.sh with the name of each file
-to download as an argument, expecting it to output the URL of the directory
-from which to download it. graphics/ns-cult3d is an example of this usage.
 
 
  2.4 How to build and install
@@ -2214,6 +2209,24 @@ one of the following, whichever is more appropriate:
  b) put TEXINFO_OVERRIDE=YES in the package Makefile to let some sed
     manipulation happen on some packages source files (see contents of
     mk/texinfo.mk).
+
+ 10.24 Packages whose distfiles aren't available for plain downloading
+ =====================================================================
+
+If you need to download from a dynamic URL you can set DYNAMIC_MASTER_SITES
+and a 'make fetch' will call files/getsite.sh with the name of each file
+to download as an argument, expecting it to output the URL of the directory
+from which to download it. graphics/ns-cult3d is an example of this usage.
+
+If the download can't be automated, because the user must submit personal
+information to apply for a password, or must pay for the source, or whatever,
+you can set _FETCH_MESSAGE to a macro which displays a message explaining
+the situation. _FETCH_MESSAGE must be executable shell commands, not just a
+message. (Generally, it executes ${ECHO}). As of this writing, the following
+packages use this: audio/realplayer, cad/simian, devel/ipv6socket,
+emulators/vmare-module, fonts/acroread-jpnfont, sysutils/storage-manager,
+www/ap-aolserver, www/openacs. Try to be consistent with them.
+
 
  11 Submitting & Committing
  ==========================
