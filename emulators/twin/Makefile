@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/08/27 14:35:07 tron Exp $
+# $NetBSD: Makefile,v 1.3 2002/10/02 18:57:18 dillo Exp $
 #
 
 DISTNAME=		twin-src-3.1.14
@@ -10,16 +10,15 @@ MAINTAINER=		collver@linuxfreemail.com
 HOMEPAGE=		http://www.willows.com
 COMMENT=		cross-platform implementation of the win32 api
 
-BUILD_DEPENDS+=		autoconf>=2.13:../../devel/autoconf
-
 GNU_CONFIGURE=		yes
 USE_GMAKE=		yes
 USE_X11=		yes
 WRKSRC=			${WRKDIR}/twin
 ALL_TARGET=		depend world
+AUTOCONF_REQD=		2.13
 
 pre-configure:
-	cd ${WRKSRC} && ${LOCALBASE}/bin/autoreconf --force
+	cd ${WRKSRC} && ${AUTORECONF} --force
 
 pre-build:
 	${CP} ${WRKSRC}/windows/Execfreebsd.c ${WRKSRC}/windows/Execnetbsd.c
@@ -32,4 +31,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/documentation/debugger.1 ${PREFIX}/man/man1
 	${INSTALL_PROGRAM} ${WRKSRC}/tools/rc/rc ${PREFIX}/bin
 
+.include "../../mk/autoconf.mk"
 .include "../../mk/bsd.pkg.mk"
