@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 1999/10/27 11:05:21 tron Exp $
+# $NetBSD: Makefile,v 1.32 1999/11/14 18:57:30 tron Exp $
 
 DISTNAME=		gnome-core-1.0.53
 CATEGORIES=		x11 gnome
@@ -9,7 +9,6 @@ HOMEPAGE=		http://www.gnome.org/
 
 DEPENDS+=		libghttp-*:../../www/libghttp
 DEPENDS+=		gnome-libs-*:../../x11/gnome-libs
-DEPENDS+=		libgtop-*:../../devel/libgtop
 
 GNU_CONFIGURE=		yes
 USE_X11BASE=		yes
@@ -36,8 +35,15 @@ pre-configure:
 
 .include "../../mk/bsd.prefs.mk"
 
-.if (${OPSYS} == "NetBSD") && exists(/usr/include/machine/apmvar.h)
+.if (${OPSYS} == "NetBSD")
+.if (${MACHINE_ARCH} == arm32) || (${MACHINE_ARCH} == i386) || \
+   (${MACHINE_ARCH} == m68k)
+DEPENDS+=		libgtop-*:../../devel/libgtop
+.endif
+
+.if exists(/usr/include/machine/apmvar.h)
 CPPFLAGS+=		-D__NetBSD_APM__
+.endif
 .endif
 
 .include "../../mk/bsd.pkg.mk"
