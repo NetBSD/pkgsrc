@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.3 2003/10/30 11:30:10 grant Exp $
+$NetBSD: distinfo,v 1.4 2003/10/30 11:38:18 grant Exp $
 
+SHA1 (jdk1.1.8-rc1.tgz) = 3589187dedd270278d5a5faf23619e5c134bb471
+Size (jdk1.1.8-rc1.tgz) = 12080592 bytes
 SHA1 (jdk1.1.8-rc1-elf.tgz) = 88483693d388887daf7e6568af924a8ef565c48e
 Size (jdk1.1.8-rc1-elf.tgz) = 9930832 bytes
 SHA1 (patch-aa) = 43b5e49ecaf3e4c4a4e3bf48f6e1e5a2d814042c
