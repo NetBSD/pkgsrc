@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2004/10/03 00:18:25 tv Exp $
+# $NetBSD: Makefile,v 1.4 2004/11/27 00:25:03 sketch Exp $
 #
 
-DISTNAME=	apachetop-0.8.2
-PKGREVISION=	1
+DISTNAME=	apachetop-0.12.5
 CATEGORIES=	sysutils www
 MASTER_SITES=	http://clueful.shagged.org/apachetop/files/
 
@@ -13,10 +12,13 @@ COMMENT=	Real time apache log display
 USE_BUILDLINK3=		YES
 GNU_CONFIGURE=		YES
 
+CONFIGURE_ARGS+=	--with-logfile=${VARBASE}/log/httpd/access_log
+
 # NetBSD releases which do not include wattr_on() et al.
 INCOMPAT_CURSES=	NetBSD-1.5*-*
 INCOMPAT_CURSES=	NetBSD-1.6-* NetBSD-1.6.*-* NetBSD-1.6[A-Q]-*
 
 .include "../../devel/ncurses/buildlink3.mk"
+.include "../../devel/readline/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
