@@ -1,21 +1,47 @@
-$NetBSD: patch-ab,v 1.4 1998/08/07 11:18:05 agc Exp $
-
---- glib/configure.orig	Tue Jun  2 01:31:43 1998
-+++ glib/configure	Sat Jul 18 10:48:59 1998
-@@ -1208,6 +1208,7 @@
-   echo "$ac_t""no" 1>&6
- fi
+--- docs/Makefile.in.orig	Wed Aug  5 07:06:20 1998
++++ docs/Makefile.in	Thu Aug 20 23:57:52 1998
+@@ -90,7 +90,7 @@
+ x_libs = @x_libs@
+ xinput_progs = @xinput_progs@
  
-+if false; then
- # Always use our own libtool.
- LIBTOOL='$(SHELL) $(top_builddir)/libtool'
+-info_TEXINFOS = gdk.texi gtk.texi glib.texi
++info_TEXINFOS = gdk.texi gtk.texi
  
-@@ -1253,7 +1254,7 @@
- ${CONFIG_SHELL-/bin/sh} $ac_aux_dir/ltconfig \
- $libtool_flags --no-verify $ac_aux_dir/ltmain.sh $host \
- || { echo "configure: error: libtool configure failed" 1>&2; exit 1; }
+ man_MANS = gtk-config.1
+ 
+@@ -119,9 +119,9 @@
+ CONFIG_CLEAN_FILES = 
+ TEXI2DVI = texi2dvi
+ TEXINFO_TEX = $(srcdir)/texinfo.tex
+-INFO_DEPS = gdk.info gtk.info glib.info
+-DVIS = gdk.dvi gtk.dvi glib.dvi
+-TEXINFOS = gdk.texi gtk.texi glib.texi
++INFO_DEPS = gdk.info gtk.info
++DVIS = gdk.dvi gtk.dvi
++TEXINFOS = gdk.texi gtk.texi
+ man1dir = $(mandir)/man1
+ MANS = $(man_MANS)
+ 
+@@ -153,10 +153,6 @@
+ gtk.dvi: gtk.texi
+ 
+ 
+-glib.info: glib.texi
+-glib.dvi: glib.texi
 -
-+fi
+-
+ DVIPS = dvips
  
- echo $ac_n "checking whether to enable maintainer-specific portions of Makefiles""... $ac_c" 1>&6
- echo "configure:1260: checking whether to enable maintainer-specific portions of Makefiles" >&5
+ .texi.info:
+@@ -252,10 +248,7 @@
+ 	  gdk.ps gdk.log gdk.pg gdk.toc gdk.tp gdk.tps gdk.vr gdk.vrs \
+ 	  gdk.op gdk.tr gdk.cv gdk.cn gtk.aux gtk.cp gtk.cps gtk.dvi \
+ 	  gtk.fn gtk.fns gtk.ky gtk.kys gtk.ps gtk.log gtk.pg gtk.toc \
+-	  gtk.tp gtk.tps gtk.vr gtk.vrs gtk.op gtk.tr gtk.cv gtk.cn \
+-	  glib.aux glib.cp glib.cps glib.dvi glib.fn glib.fns glib.ky \
+-	  glib.kys glib.ps glib.log glib.pg glib.toc glib.tp glib.tps \
+-	  glib.vr glib.vrs glib.op glib.tr glib.cv glib.cn
++	  gtk.tp gtk.tps gtk.vr gtk.vrs gtk.op gtk.tr gtk.cv gtk.cn
+ 
+ clean-aminfo:
+ 
