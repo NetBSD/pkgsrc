@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/09/06 23:04:16 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2003/11/23 01:23:58 jlam Exp $
 
 DISTNAME=	nc110
 PKGNAME=	netcat-1.10
@@ -17,6 +17,7 @@ MAINTAINER=	kim@tac.nyc.ny.us
 HOMEPAGE=	http://www.atstake.com/research/tools/network_utilities/
 COMMENT=	Read and write data across network connections
 
+USE_BUILDLINK2=	yes
 MAKE_ENV+=	DFLAGS="-DGAPING_SECURITY_HOLE -DTELNET"
 ALL_TARGET=	${LOWER_OPSYS}
 
