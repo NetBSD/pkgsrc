@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6429 2004/07/03 02:52:20 grant Exp $
+$NetBSD: CHANGES,v 1.6430 2004/07/03 03:22:04 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3220,3 +3220,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added p5-Geo-IP-1.21 [minskim 2004-07-03]
 	Updated mips64emul to 0.1.1 [xtraeme 2004-07-03]
 	Updated pax to 20040703 [grant 2004-07-03]
+	Added dd2-0.2.1 [xtraeme 2004-07-03]
