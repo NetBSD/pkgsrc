@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.9 2004/11/27 02:35:53 epg Exp $
+
+--- Makefile.in.orig	2004-09-11 11:45:29.000000000 -0400
++++ Makefile.in
+@@ -573,7 +573,7 @@ install-info: doc-all-info
+ $(SWIG_PL_DIR)/native/Makefile: $(SWIG_PL_DIR)/native/Makefile.PL
+ 	cd $(SWIG_PL_DIR)/native; $(PERL) Makefile.PL
+ 
+-swig-pl_DEPS = libsvn_client libsvn_delta libsvn_diff libsvn_fs libsvn_ra libsvn_repos libsvn_subr libsvn_wc libsvn_swig_perl $(SWIG_PL_DIR)/native/Makefile
++swig-pl_DEPS = libsvn_swig_perl $(SWIG_PL_DIR)/native/Makefile
+ swig-pl: $(swig-pl_DEPS)
+ 	cd $(SWIG_PL_DIR)/native; $(MAKE)
+ 
