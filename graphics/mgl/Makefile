@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2002/03/13 17:37:12 fredb Exp $
+# $NetBSD: Makefile,v 1.10 2002/07/19 08:52:31 toshii Exp $
 #
 
 DISTNAME=       mgl2-alpha-020
@@ -33,12 +33,12 @@ NINEDOCS=	README.txt CHANGES.doc
 MGLFONTUTILS=	mgl_fontcreate.c
 MGLUTILS=	kill_mgl.sh mglcons.sh set_mgl.sh
 
-ONLY_FOR_PLATFORM=	*-*-i386 *-*-mipsel
+ONLY_FOR_PLATFORM=	*-*-arm *-*-i386 *-*-mipsel
 
 .include "../../mk/bsd.prefs.mk"
 
 post-configure:
-.if ${MACHINE_ARCH} == "mipsel"
+.if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "mipsel"
 	@${MV} -f ${WRKSRC}/conf/config.mk-hpcmips ${WRKSRC}/conf/config.mk.tmp
 .else
 	@${MV} -f ${WRKSRC}/conf/config.mk-netbsd-i386-x ${WRKSRC}/conf/config.mk.tmp
