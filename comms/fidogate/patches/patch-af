@@ -1,21 +1,13 @@
-$NetBSD: patch-af,v 1.2 1998/08/07 10:36:37 agc Exp $
+$NetBSD: patch-af,v 1.3 2001/02/22 03:00:15 tv Exp $
 
---- src/gate/Makefile.orig	Thu Jul 16 10:49:22 1998
-+++ src/gate/Makefile	Thu Jul 16 10:53:10 1998
-@@ -27,11 +27,11 @@
+--- scripts/Makefile.orig	Wed Feb 21 20:20:36 2001
++++ scripts/Makefile	Wed Feb 21 20:20:43 2001
+@@ -16,7 +16,7 @@
+ include $(TOPDIR)/rules.make
  
  
- install:
--	$(INSTALL_SETUID) rfc2ftn$(EXE) $(PREFIX)$(LIBDIR)
--	$(INSTALL_PROG) ftn2rfc$(EXE) $(PREFIX)$(LIBDIR)
--	$(INSTALL_PROG) ftnin$(EXE) $(PREFIX)$(LIBDIR)
--	$(INSTALL_PROG) ftninpost $(PREFIX)$(LIBDIR)
--	$(INSTALL_PROG) ftninrecomb $(PREFIX)$(LIBDIR)
-+	$(INSTALL_SETUID) rfc2ftn$(EXE) $(LIBDIR)
-+	$(INSTALL_PROG) ftn2rfc$(EXE) $(LIBDIR)
-+	$(INSTALL_PROG) ftnin$(EXE) $(LIBDIR)
-+	$(INSTALL_SCRIPT) ftninpost $(LIBDIR)
-+	$(INSTALL_SCRIPT) ftninrecomb $(LIBDIR)
+-SUBDIRS		= filebase maintenance misc nodelist outbound run www
++SUBDIRS		= filebase maintenance misc nodelist outbound run
  
  
- clean veryclean:
+ all clean veryclean depend install::
