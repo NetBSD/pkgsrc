@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.73 2005/01/14 05:15:40 jlam Exp $
+# $NetBSD: Makefile,v 1.74 2005/02/03 13:37:03 jmmv Exp $
 #
 
-DISTNAME=	gdm-2.6.0.6
+DISTNAME=	gdm-2.6.0.7
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gdm/2.6/}
 EXTRACT_SUFX=	.tar.bz2
@@ -26,6 +26,10 @@ USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
 USE_X11=		YES
 USE_LIBTOOL=		YES
+
+PKG_OPTIONS_VAR=	PKG_OPTIONS.gdm
+PKG_SUPPORTED_OPTIONS=	inet6 PAM
+.include "../../mk/bsd.options.mk"
 
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
@@ -75,8 +79,6 @@ SUBST_SED.desktop+=	-e 's|^\#RebootCommand=.*$$|RebootCommand=/sbin/shutdown -r 
 SUBST_SED.desktop+=	-e 's|^\#HaltCommand=.*$$|HaltCommand=/sbin/shutdown -p now|g'
 .endif
 
-BUILD_DEFS+=		USE_INET6
-
 .if ${OPSYS} == "SunOS"
 CFLAGS+=	-DSunOS
 GDMOWN=		daemon
@@ -86,7 +88,7 @@ GDMOWN=		daemon
 GDMGRP=		daemon
 .endif
 
-.if !empty(USE_INET6:M[Yy][Ee][Ss])
+.if !empty(PKG_OPTIONS:Minet6)
 CONFIGURE_ARGS+=	--enable-ipv6
 .endif
 
@@ -94,11 +96,14 @@ CONFIGURE_ARGS+=	--enable-ipv6
 CONFIGURE_ARGS+=	X_SERVER_ARGS="vt05"
 .endif
 
-BUILD_DEFS+=	USE_PAM
-.if defined(USE_PAM)
+.if !empty(PKG_OPTIONS:MPAM)
 .  include "../../mk/pam.buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-authentication-scheme=pam
+.  if ${PAM_TYPE} == "linux-pam"
 PLIST_SUBST+=		PAM_MISC=""
+.  else
+PLIST_SUBST+=		PAM_MISC="@comment "
+.  endif
 .elif exists(/etc/shadow)
 CONFIGURE_ARGS+=	--enable-authentication-scheme=shadow
 PLIST_SUBST+=		PAM_MISC="@comment "

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2004/09/22 08:09:58 jlam Exp $
+@comment $NetBSD: PLIST,v 1.15 2005/02/03 13:37:03 jmmv Exp $
 bin/gdm
 bin/gdm-binary
 bin/gdmXnest
@@ -146,6 +146,7 @@ ${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/gdm.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/gdm.mo
 ${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/gdm.mo
 ${PKGLOCALEDIR}/locale/no/LC_MESSAGES/gdm.mo
+${PKGLOCALEDIR}/locale/nso/LC_MESSAGES/gdm.mo
 ${PKGLOCALEDIR}/locale/pa/LC_MESSAGES/gdm.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/gdm.mo
 ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/gdm.mo
@@ -166,6 +167,7 @@ ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/gdm.mo
 ${PKGLOCALEDIR}/locale/wa/LC_MESSAGES/gdm.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/gdm.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/gdm.mo
+${PKGLOCALEDIR}/locale/zu/LC_MESSAGES/gdm.mo
 share/omf/gdm/gdm-C.omf
 share/omf/gdm/gdm-de.omf
 share/omf/gdm/gdm-es.omf
