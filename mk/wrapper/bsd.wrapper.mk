@@ -1,4 +1,4 @@
-# $NetBSD: bsd.wrapper.mk,v 1.5 2004/09/27 12:05:53 jlam Exp $
+# $NetBSD: bsd.wrapper.mk,v 1.6 2004/10/04 20:28:30 jlam Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -174,7 +174,7 @@ _WRAP_GEN_TRANSFORM?=		${WRAPPER_TMPDIR}/gen-transform
 _WRAP_LOG?=			${WRKLOG}
 _WRAP_LOGIC?=			${WRAPPER_TMPDIR}/logic
 _WRAP_REORDERLIBS?=		${WRAPPER_TMPDIR}/reorderlibs
-_WRAP_SCAN?=			${_WRAP_EMPTY_FILE}
+_WRAP_SCAN?=			${WRAPPER_TMPDIR}/scan
 _WRAP_SHELL_LIB?=		${WRAPPER_TMPDIR}/shell-lib
 _WRAP_SKIP_TRANSFORM?=		yes
 _WRAP_TRANSFORM?=		${_WRAP_EMPTY_FILE}
@@ -537,6 +537,13 @@ ${_WRAP_CMD_SINK.${_wrappee_}}: ${WRAPPER_SRCDIR}/cmd-sink
 
 .  if !target(${_WRAP_LOGIC.${_wrappee_}})
 ${_WRAP_LOGIC.${_wrappee_}}: ${WRAPPER_SRCDIR}/logic
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
+	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC}			\
+		| ${_WRAP_SH_CRUNCH_FILTER} > ${.TARGET}
+.  endif
+
+.  if !target(${_WRAP_SCAN.${_wrappee_}})
+${_WRAP_SCAN.${_wrappee_}}: ${WRAPPER_SRCDIR}/scan
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
 	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC}			\
 		| ${_WRAP_SH_CRUNCH_FILTER} > ${.TARGET}
