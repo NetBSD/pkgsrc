@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8064 2004/11/27 12:54:48 gson Exp $
+$NetBSD: CHANGES,v 1.8065 2004/11/27 13:05:39 jdolecek Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5501,3 +5501,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated st to 1.5.1 [gson 2004-11-27]
 	Updated autogen to 5.6.4 [kristerw 2004-11-27]
 	Added p5-Math-FFT 0.25 [gson 2004-11-27]
+	Added pear-Net_SMTP 1.2.6 [jdolecek 2004-11-27]
