@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2004/09/08 16:27:29 jschauma Exp $
+# $NetBSD: Makefile,v 1.36 2004/09/08 18:38:49 jschauma Exp $
 #
 
 DISTNAME=		Eterm-0.9.2
@@ -60,7 +60,6 @@ post-extract:
 	done
 
 .include "../../devel/libast/buildlink3.mk"
-.include "../../devel/libtool/buildlink3.mk"
 .include "../../graphics/imlib2/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
