@@ -1,4 +1,4 @@
-# $NetBSD: module.mk,v 1.42 2005/02/26 00:04:48 jlam Exp $
+# $NetBSD: module.mk,v 1.43 2005/03/24 22:19:06 tv Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install perl5 modules.
@@ -46,11 +46,7 @@ PKG_FAIL_REASON+=	"\`\`${PERL5_MODULE_TYPE}'' is not a supported PERL5_MODULE_TY
 .endif
 
 .if empty(BUILDING_PERL5:M[yY][eE][sS])
-.  if !defined(NO_BUILDLINK)
-.    if empty(USE_BUILDLINK3:M[nN][oO])
-.      include "../../lang/perl5/buildlink3.mk"
-.    endif
-.  endif
+.  include "../../lang/perl5/buildlink3.mk"
 .endif
 
 .if empty(BUILDING_MODULE_BUILD:M[yY][eE][sS]) && \
