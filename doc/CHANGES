@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3558 2003/09/27 23:20:18 jschauma Exp $
+$NetBSD: CHANGES,v 1.3559 2003/09/27 23:38:01 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3984,3 +3984,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added mummer-3.04 [jschauma 2003-09-27]
 	Updated ncftp3 to 3.1.6 [wiz 2003-09-27]
 	Added profit-2.2 [jschauma 2003-09-27]
+	Added sewer-2.6 [jschauma 2003-09-27]
