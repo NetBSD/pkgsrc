@@ -1,0 +1,13 @@
+$NetBSD: patch-aq,v 1.1 2002/10/08 00:02:19 jlam Exp $
+
+--- Makefile.in.orig	Mon Oct  7 15:50:30 2002
++++ Makefile.in
+@@ -174,7 +174,7 @@ l = @l@
+ ms_librarian = @ms_librarian@
+ xinput_progs = @xinput_progs@
+ 
+-SRC_SUBDIRS = gdk-pixbuf gdk gtk modules demos tests contrib
++SRC_SUBDIRS = gdk-pixbuf gdk gtk modules tests contrib
+ SUBDIRS = po $(SRC_SUBDIRS) docs build m4macros
+ 
+ # require automake 1.4
