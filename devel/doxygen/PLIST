@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2004/07/26 08:39:57 martti Exp $
+@comment $NetBSD: PLIST,v 1.8 2005/01/06 10:38:16 adam Exp $
 bin/doxygen
 bin/doxytag
 share/doc/doxygen/doxygen_manual.pdf
@@ -410,6 +410,7 @@ share/doc/doxygen/html/form_2.png
 share/doc/doxygen/html/form_3.png
 share/doc/doxygen/html/form_4.png
 share/doc/doxygen/html/form_5.png
+share/doc/doxygen/html/form_6.png
 share/doc/doxygen/html/formula.repository
 share/doc/doxygen/html/formulas.html
 share/doc/doxygen/html/grouping.html
