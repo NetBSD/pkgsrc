@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2004/11/26 10:14:36 grant Exp $
+# $NetBSD: Makefile,v 1.17 2004/12/28 01:42:19 reed Exp $
 
 DISTNAME=	exim-${EXIM_VERSION}
 PKGNAME=	exim-exiscan-${EXIM_VERSION}_${EXISCAN_VERSION}
 CATEGORIES=	mail net
+PKGREVISION=	2
 
 MAINTAINER=	abs@NetBSD.org
 HOMEPAGE=	http://duncanthrax.net/exiscan-acl/
