@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2002/10/23 18:05:23 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/12/07 18:02:03 drochner Exp $
 ${PYSITELIB}/_rl_accel.so
 ${PYSITELIB}/pyHnj.so
 ${PYSITELIB}/reportlab/README
@@ -67,11 +67,13 @@ ${PYSITELIB}/reportlab/graphics/charts/__init__.py
 ${PYSITELIB}/reportlab/graphics/charts/areas.py
 ${PYSITELIB}/reportlab/graphics/charts/axes.py
 ${PYSITELIB}/reportlab/graphics/charts/barcharts.py
+${PYSITELIB}/reportlab/graphics/charts/dotbox.py
 ${PYSITELIB}/reportlab/graphics/charts/legends.py
 ${PYSITELIB}/reportlab/graphics/charts/linecharts.py
 ${PYSITELIB}/reportlab/graphics/charts/lineplots.py
 ${PYSITELIB}/reportlab/graphics/charts/markers.py
 ${PYSITELIB}/reportlab/graphics/charts/piecharts.py
+${PYSITELIB}/reportlab/graphics/charts/slidebox.py
 ${PYSITELIB}/reportlab/graphics/charts/textlabels.py
 ${PYSITELIB}/reportlab/graphics/charts/utils.py
 ${PYSITELIB}/reportlab/graphics/renderPDF.py
@@ -115,6 +117,7 @@ ${PYSITELIB}/reportlab/lib/pagesizes.py
 ${PYSITELIB}/reportlab/lib/pyHnj.dsp
 ${PYSITELIB}/reportlab/lib/pyHnjmodule.c
 ${PYSITELIB}/reportlab/lib/randomtext.py
+${PYSITELIB}/reportlab/lib/rparsexml.py
 ${PYSITELIB}/reportlab/lib/sequencer.py
 ${PYSITELIB}/reportlab/lib/setup.py
 ${PYSITELIB}/reportlab/lib/setup.py.orig
@@ -143,18 +146,22 @@ ${PYSITELIB}/reportlab/pdfgen/canvas.py
 ${PYSITELIB}/reportlab/pdfgen/pathobject.py
 ${PYSITELIB}/reportlab/pdfgen/pdfgeom.py
 ${PYSITELIB}/reportlab/pdfgen/pdfimages.py
+${PYSITELIB}/reportlab/pdfgen/pycanvas.py
 ${PYSITELIB}/reportlab/pdfgen/textobject.py
 ${PYSITELIB}/reportlab/platypus/__init__.py
 ${PYSITELIB}/reportlab/platypus/doctemplate.py
 ${PYSITELIB}/reportlab/platypus/figures.py
 ${PYSITELIB}/reportlab/platypus/flowables.py
 ${PYSITELIB}/reportlab/platypus/frames.py
+${PYSITELIB}/reportlab/platypus/para.py
 ${PYSITELIB}/reportlab/platypus/paragraph.py
 ${PYSITELIB}/reportlab/platypus/paraparser.py
 ${PYSITELIB}/reportlab/platypus/tableofcontents.py
 ${PYSITELIB}/reportlab/platypus/tables.py
 ${PYSITELIB}/reportlab/platypus/xpreformatted.py
 ${PYSITELIB}/reportlab/rl_config.py
+${PYSITELIB}/reportlab/setup.py
+${PYSITELIB}/reportlab/setup_reportlab.py
 ${PYSITELIB}/reportlab/test/00readme.txt
 ${PYSITELIB}/reportlab/test/__init__.py
 ${PYSITELIB}/reportlab/test/pythonpowered.gif
@@ -183,6 +190,7 @@ ${PYSITELIB}/reportlab/test/test_pdfbase_ttfonts.py
 ${PYSITELIB}/reportlab/test/test_pdfgen_callback.py
 ${PYSITELIB}/reportlab/test/test_pdfgen_general.py
 ${PYSITELIB}/reportlab/test/test_pdfgen_pagemodes.py
+${PYSITELIB}/reportlab/test/test_pdfgen_pycanvas.py
 ${PYSITELIB}/reportlab/test/test_platypus_breaking.py
 ${PYSITELIB}/reportlab/test/test_platypus_general.py
 ${PYSITELIB}/reportlab/test/test_platypus_paragraphs.py
