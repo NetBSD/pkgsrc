@@ -1,0 +1,17 @@
+$NetBSD: patch-aa,v 1.1 2004/11/28 04:38:37 taca Exp $
+
+--- install.rb.orig	2002-06-21 02:11:48.000000000 +0900
++++ install.rb
+@@ -111,7 +111,11 @@ end
+ 
+ # and the executable
+ 
+-installBIN("rdoc.rb", "rdoc")
++ver = nil
++if /(\d+)\.(\d)/ =~ VERSION
++  ver = $1 + $2
++end
++installBIN("rdoc.rb", "rdoc#{ver}")
+ 
+ # Temporary - we used to install html_generator in the rdoc
+ # directory, but now it's moved
