@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.6 1999/06/19 15:19:11 tron Exp $
+# $NetBSD: Makefile,v 1.7 1999/08/22 22:02:32 tron Exp $
 
 DISTNAME=	esound-0.2.8
 CATEGORIES=	audio
-MASTER_SITES=	ftp://ftp.gnome.org/pub/GNOME/gnome-1.0/sources/ \
-		ftp://ftp.sunet.se/pub/X11/GNOME/gnome-1.0/sources/ \
-		ftp://ftp.informatik.uni-bonn.de/pub/os/unix/gnome/gnome-1.0/sources/
+MASTER_SITES=	${MASTER_SITE_GNOME:=gnome-1.0/sources/}
 
 MAINTAINER=	root@garbled.net
 HOMEPAGE=	http://pw1.netcom.com/~ericmit/EsounD.html

@@ -1,12 +1,9 @@
-# $NetBSD: Makefile,v 1.13 1999/08/17 19:24:39 tron Exp $
+# $NetBSD: Makefile,v 1.14 1999/08/22 22:02:34 tron Exp $
 
 DISTNAME=	mc-4.5.37
 PKGNAME=	gmc-4.5.37
 CATEGORIES=	sysutils gnome
-MASTER_SITES=	ftp://ftp.gnome.org/pub/GNOME/sources/mc/ \
-		ftp://ftp.sunet.se/pub/X11/GNOME/sources/mc/ \
-		ftp://ftp.informatik.uni-bonn.de/pub/os/unix/gnome/sources/mc/ \
-		ftp://ftp.tuwien.ac.at/hci/gnome.org/GNOME/sources/mc/
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/mc/}
 
 MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.gnome.org/mc/
