@@ -1,8 +1,8 @@
-$NetBSD: patch-bi,v 1.1 2004/12/18 00:39:31 tron Exp $
+$NetBSD: patch-bi,v 1.1.2.1 2005/03/11 06:45:03 snj Exp $
 
---- lib/Xm/Xpmscan.c.orig	2000-04-28 16:05:21.000000000 +0100
-+++ lib/Xm/Xpmscan.c	2004-12-17 23:42:33.000000000 +0000
-@@ -93,7 +93,8 @@
+--- lib/Xm/Xpmscan.c.orig	2000-04-28 17:05:21.000000000 +0200
++++ lib/Xm/Xpmscan.c
+@@ -93,7 +93,8 @@ LFUNC(MSWGetImagePixels, int, (Display *
  LFUNC(ScanTransparentColor, int, (XpmColor *color, unsigned int cpp,
  				  XpmAttributes *attributes));
  
@@ -12,7 +12,7 @@ $NetBSD: patch-bi,v 1.1 2004/12/18 00:39:31 tron Exp $
  			     Pixel *pixels, unsigned int mask,
  			     unsigned int cpp, XpmAttributes *attributes));
  
-@@ -220,11 +221,17 @@
+@@ -220,11 +221,17 @@ XpmCreateXpmImageFromImage(display, imag
      else
  	cpp = 0;
  
@@ -30,7 +30,7 @@ $NetBSD: patch-bi,v 1.1 2004/12/18 00:39:31 tron Exp $
      pmap.pixels = (Pixel *) XpmMalloc(sizeof(Pixel) * pmap.size);
      if (!pmap.pixels)
  	RETURN(XpmNoMemory);
-@@ -279,7 +286,8 @@
+@@ -279,7 +286,8 @@ XpmCreateXpmImageFromImage(display, imag
       * get rgb values and a string of char, and possibly a name for each
       * color
       */
@@ -40,7 +40,7 @@ $NetBSD: patch-bi,v 1.1 2004/12/18 00:39:31 tron Exp $
      colorTable = (XpmColor *) XpmCalloc(pmap.ncolors, sizeof(XpmColor));
      if (!colorTable)
  	RETURN(XpmNoMemory);
-@@ -327,6 +335,8 @@
+@@ -327,6 +335,8 @@ ScanTransparentColor(color, cpp, attribu
  
      /* first get a character string */
      a = 0;
@@ -49,7 +49,7 @@ $NetBSD: patch-bi,v 1.1 2004/12/18 00:39:31 tron Exp $
      if (!(s = color->string = (char *) XpmMalloc(cpp + 1)))
  	return (XpmNoMemory);
      *s++ = printable[c = a % MAXPRINTABLE];
-@@ -374,7 +384,7 @@
+@@ -374,7 +384,7 @@ static int
  ScanOtherColors(display, colors, ncolors, pixels, mask, cpp, attributes)
      Display *display;
      XpmColor *colors;
@@ -58,7 +58,7 @@ $NetBSD: patch-bi,v 1.1 2004/12/18 00:39:31 tron Exp $
      Pixel *pixels;
      unsigned int mask;
      unsigned int cpp;
-@@ -418,6 +428,8 @@
+@@ -418,6 +428,8 @@ ScanOtherColors(display, colors, ncolors
      }
  
      /* first get character strings and rgb values */
@@ -67,3 +67,13 @@ $NetBSD: patch-bi,v 1.1 2004/12/18 00:39:31 tron Exp $
      xcolors = (XColor *) XpmMalloc(sizeof(XColor) * ncolors);
      if (!xcolors)
  	return (XpmNoMemory);
+@@ -585,6 +597,9 @@ GetImagePixels(image, width, height, pma
+     ibpp = image->bits_per_pixel;
+     offset = image->xoffset;
+ 
++    if (image->bitmap_unit < 0)
++	    return (XpmNoMemory);
++
+     if ((image->bits_per_pixel | image->depth) == 1) {
+ 	ibu = image->bitmap_unit;
+ 	for (y = 0; y < height; y++)
