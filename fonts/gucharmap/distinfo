@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2004/04/01 19:04:59 jmmv Exp $
+$NetBSD: distinfo,v 1.5 2004/05/15 17:07:08 jmmv Exp $
 
-SHA1 (gucharmap-1.4.0.tar.bz2) = 8bfdb7aeda8a6afb8bdd3450aa581dfb518ccd5c
-Size (gucharmap-1.4.0.tar.bz2) = 1468964 bytes
+SHA1 (gucharmap-1.4.1.tar.bz2) = 966ff6cb0e426ca7a3e88cdb7ec28644b18fd3a3
+Size (gucharmap-1.4.1.tar.bz2) = 1482646 bytes
