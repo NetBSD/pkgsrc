@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.3 2000/03/26 14:36:24 itojun Exp $
+$NetBSD: md5,v 1.4 2000/05/31 15:32:44 itojun Exp $
 
-MD5 (openssh-1.2.3.tar.gz) = 6aad0cc9ceca55f138ed1ba4cf660349
+MD5 (openssh-2.1.0p3.tar.gz) = cf4bbd40eb0ea722627760abc8ec1b13

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2000/05/28 11:28:51 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2000/05/31 15:32:44 itojun Exp $
 #
 
-DISTNAME=		openssh-1.2.3
+DISTNAME=		openssh-2.1.0p3
 CATEGORIES=		security
 MASTER_SITES=		http://the.wiretapped.net/security/cryptography/ssh/OpenSSH/files/ \
 			http://www.firedrake.org/openssh/files/ \
@@ -13,6 +13,7 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.openssh.com/
 
 BUILD_DEPENDS+=		${LOCALBASE}/bin/perl:../../lang/perl5
+BUILD_DEPENDS+=		autoreconf:../../devel/autoconf
 
 .if !exists(/usr/include/openssl/rsa.h)
 DEPENDS+=		openssl-[0-9]*:../../security/openssl
@@ -43,6 +44,9 @@ CONFIGURE_ARGS+=	openssl
 .include "../../mk/bsd.prefs.mk"
 SSH_CONF_DIR?=		/etc
 CONFIGURE_ARGS=		--sysconfdir=${SSH_CONF_DIR}
+
+pre-configure:
+	cd ${WRKSRC}; autoreconf
 
 post-build:
 	cd ${PKGDIR}; \
