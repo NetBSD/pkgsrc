@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.82 2002/12/18 19:29:50 jmmv Exp $
+$NetBSD: TODO,v 1.83 2002/12/18 19:36:06 wiz Exp $
 
 Suggested new packages
 ======================
@@ -189,7 +189,7 @@ Suggested package updates
 	o nasm-0.98.35
 	o ncurses-5.3
 	o netpbm-10.8
-	o nessus-1.2.7 [pkg/19438]
+	o nessus-1.2.7 [pkg/19438|frueauf]
 	o netscape-7.01
 	o openoffice-1.0.1 [skrll]
 	o openoffice-643 [post-1.0.1]
