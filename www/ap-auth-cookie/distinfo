@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 12:12:22 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/05/09 12:31:39 wiz Exp $
 
-MD5 (mod_auth_cookie.c.gz) = 8ed6e970f97f1bb4aefde9da738b3bdf
+SHA1 (mod_auth_cookie.c.gz) = 872d756cfe38b657e2b02e159d0f6fb2a9a10304
+Size (mod_auth_cookie.c.gz) = 3512 bytes
