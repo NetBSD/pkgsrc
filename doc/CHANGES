@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2245 2003/05/16 12:20:17 dmcmahill Exp $
+$NetBSD: CHANGES,v 1.2246 2003/05/16 18:13:12 magick Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1970,3 +1970,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated larswm to 7.2.10 [salo 2003-05-16]
 	Updated aewm++ to 1.0.24 [salo 2003-05-16]
 	Added yaz-2.0 [dmcmahill 2003-05-16]
+	Updated xemacs-current to 21.5.13 [magick 2003-05-16]
