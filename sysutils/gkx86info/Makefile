@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/01/03 18:49:52 reed Exp $
+# $NetBSD: Makefile,v 1.9 2004/03/21 02:59:48 wiz Exp $
 #
 
 DISTNAME=	gkx86info0.0.2
@@ -17,5 +17,5 @@ ONLY_FOR_PLATFORM=	*-*-i386
 pre-build:
 	${TOUCH} ${WRKSRC}/Makefile
 
-.include "../../sysutils/gkrellm/buildlink2.mk"
+.include "../../sysutils/gkrellm1/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
