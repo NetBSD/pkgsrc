@@ -1,7 +1,11 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2001/10/31 22:52:53 zuntum Exp $
+$NetBSD: MESSAGE,v 1.2 2004/06/30 14:22:49 kivinen Exp $
 
 This package requires that the APM driver be enabled in your kernel.
 See apm(4) for details.
+
+This package has also special NetBSD modifications to work also with the
+sysmon interface, which allows it also work with the ACPI driver if
+installed in the kernel. 
 
 ===========================================================================
