@@ -1,0 +1,10 @@
+$NetBSD: patch-an,v 1.1 2001/02/15 18:16:56 jtb Exp $
+
+--- flibs/minpack/Makefile.in.orig	Thu Feb 15 17:07:02 2001
++++ flibs/minpack/Makefile.in
+@@ -1,4 +1,4 @@
+-LIBRARY = libminpack.a
++LIBRARY = libminpack_rlab.a
+ 
+ SHELL = 	@MSHELL@
+ F77 =		@F77@
