@@ -1,15 +1,14 @@
-$NetBSD: patch-aa,v 1.10 2003/04/16 15:51:23 salo Exp $
+$NetBSD: patch-aa,v 1.11 2004/01/31 20:43:41 kristerw Exp $
 
---- src/snort.c.orig	2003-04-03 23:10:52.000000000 +0200
-+++ src/snort.c	2003-04-16 08:03:06.000000000 +0200
-@@ -1355,6 +1355,19 @@
+--- src/snort.c.orig	Wed Dec  3 16:22:22 2003
++++ src/snort.c	Sat Jan 31 21:25:32 2004
+@@ -1391,6 +1391,18 @@
  
              break;
  
 +#if defined(__NetBSD__)
 +#  if defined(__NetBSD_Version__)
 +#    if (__NetBSD_Version__ >= 105000000)
-+        case DLT_PPP_SERIAL:         /* PPP over serial (async and sync) */
 +        case DLT_PPP_ETHER:          /* PPP over Ethernet */
 +
 +#    else
@@ -22,7 +21,7 @@ $NetBSD: patch-aa,v 1.10 2003/04/16 15:51:23 salo Exp $
          case DLT_PPP:                /* point-to-point protocol */
              if(!pv.readmode_flag)
              {
-@@ -1729,7 +1742,7 @@
+@@ -1780,7 +1792,7 @@
  {
      struct stat st;
      int i;
