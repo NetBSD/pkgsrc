@@ -1,35 +1,53 @@
-# $NetBSD: Makefile,v 1.21 2004/11/15 17:54:49 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2005/02/18 22:12:53 jlam Exp $
 
-DISTNAME=	maildrop-1.3.9
-PKGREVISION=	2
-EXTRACT_SUFX=	.tar.gz
+DISTNAME=	maildrop-1.8.0
+PKGBASE=	${DISTNAME:C/-[^-]*$//}
+CATEGORIES=     security
+MASTER_SITES=   ${MASTER_SITE_SOURCEFORGE:=courier/}
+EXTRACT_SUFX=   .tar.bz2
+
+MAINTAINER=	jlam@NetBSD.org
 COMMENT=	Courier mail delivery agent with filtering abilities
-HOMEPAGE=	http://www.flounder.net/~mrsam/maildrop/
+HOMEPAGE=	http://www.courier-mta.org/maildrop/
 
-PERL5_REQD+=	5.6.0
-USE_PERL5=	build
-DEPENDS+=	courier-maildir>=0.45.6:../../mail/courier-maildir
+DEPENDS+=	courier-maildir>=0.48.2:../../mail/courier-maildir
 
-USE_BUILDLINK3=	yes
-USE_DB185=	yes
-BDB_ACCEPTED=	db2
-USE_LANGUAGES=	c c++
+USE_GNU_TOOLS+=		make
+USE_LANGUAGES=		c c++
+USE_BUILDLINK3=		yes
+USE_LIBTOOL=		yes
 
-.include "../../mail/courier-auth/Makefile.common"
+PKG_SUPPORTED_OPTIONS+=	authlib
+PKG_DEFAULT_OPTIONS+=	authlib
+
+.include "../../mail/courier-maildir/Makefile.common"
+.include "../../security/courier-authlib/Makefile.common"
+
+# These are the users that may invoke maildrop with the "-d user"
+# argument (mailbox delivery mode).
+#
+MAILDROP_TRUSTED_USERS?=	${ROOT_USER} ${COURIER_USER} qmaild
 
 CONFIGURE_ARGS+=	--with-etcdir=${PKG_SYSCONFDIR}
-CONFIGURE_ARGS+=	--disable-userdb
+CONFIGURE_ARGS+=	--enable-maildirquota
+CONFIGURE_ARGS+=	--enable-maildrop-uid=${ROOT_USER}
+CONFIGURE_ARGS+=	--enable-maildrop-gid=${COURIER_GROUP}
+CONFIGURE_ARGS+=	--enable-trusted-users='${MAILDROP_TRUSTED_USERS}'
+CONFIGURE_ARGS+=	--enable-trusted-groups='${COURIER_GROUP}'
+CONFIGURE_ARGS+=	--enable-syslog=1
 
-.if defined(_STRIPFLAG_INSTALL) && !empty(_STRIPFLAG_INSTALL:M-s)
-INSTALL_TARGET=		install-strip
+.if !empty(PKG_OPTIONS:Mauthlib)
+CONFIGURE_ARGS+=	--enable-authlib
+.  include "../../security/courier-authlib/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-authlib
 .endif
+
+SPECIAL_PERMS=	${PREFIX}/bin/maildrop ${ROOT_USER} ${COURIER_GROUP} 4711
 
 post-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/README ${DOCDIR}/README.maildrop
 	${INSTALL_DATA} ${WRKSRC}/README.postfix ${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/maildroptips.txt ${DOCDIR}
 
-.include "../../lang/perl5/buildlink3.mk"
-.include "../../mk/bdb.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
