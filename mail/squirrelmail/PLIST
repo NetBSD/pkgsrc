@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2002/09/16 10:07:39 martti Exp $
+@comment $NetBSD: PLIST,v 1.8 2002/10/30 07:45:17 martti Exp $
 share/examples/squirrelmail/squirrelmail.conf
 share/squirrelmail/AUTHORS
 share/squirrelmail/COPYING
@@ -29,6 +29,7 @@ share/squirrelmail/doc/ReleaseNotes/1.2/Notes-1.2.4.txt
 share/squirrelmail/doc/ReleaseNotes/1.2/Notes-1.2.5
 share/squirrelmail/doc/ReleaseNotes/1.2/Notes-1.2.6.txt
 share/squirrelmail/doc/ReleaseNotes/1.2/Notes-1.2.7.txt
+share/squirrelmail/doc/ReleaseNotes/1.2/Notes-1.2.8.txt
 share/squirrelmail/doc/addressbook.txt
 share/squirrelmail/doc/compose.txt
 share/squirrelmail/doc/db-backend.txt
@@ -101,6 +102,15 @@ share/squirrelmail/help/da_DK/main_folder.hlp
 share/squirrelmail/help/da_DK/options.hlp
 share/squirrelmail/help/da_DK/read_mail.hlp
 share/squirrelmail/help/da_DK/search.hlp
+share/squirrelmail/help/de_DE/FAQ.hlp
+share/squirrelmail/help/de_DE/addresses.hlp
+share/squirrelmail/help/de_DE/basic.hlp
+share/squirrelmail/help/de_DE/compose.hlp
+share/squirrelmail/help/de_DE/folders.hlp
+share/squirrelmail/help/de_DE/main_folder.hlp
+share/squirrelmail/help/de_DE/options.hlp
+share/squirrelmail/help/de_DE/read_mail.hlp
+share/squirrelmail/help/de_DE/search.hlp
 share/squirrelmail/help/en_US/FAQ.hlp
 share/squirrelmail/help/en_US/addresses.hlp
 share/squirrelmail/help/en_US/basic.hlp
@@ -481,7 +491,6 @@ share/squirrelmail/src/printer_friendly_main.php
 share/squirrelmail/src/printer_friendly_top.php
 share/squirrelmail/src/read_body.php
 share/squirrelmail/src/redirect.php
-share/squirrelmail/src/retrievalerror.php
 share/squirrelmail/src/right_main.php
 share/squirrelmail/src/search.php
 share/squirrelmail/src/signout.php
@@ -637,6 +646,7 @@ share/squirrelmail/themes/spice_of_life_lite.php
 @dirrm share/squirrelmail/help/es_ES
 @dirrm share/squirrelmail/help/en_US
 @dirrm share/squirrelmail/help/da_DK
+@dirrm share/squirrelmail/help/de_DE
 @dirrm share/squirrelmail/help/cs_CZ
 @dirrm share/squirrelmail/help/ca_ES
 @dirrm share/squirrelmail/help
