@@ -1,10 +1,9 @@
-$NetBSD: distinfo,v 1.3 2003/12/03 23:45:29 ben Exp $
+$NetBSD: distinfo,v 1.4 2003/12/04 00:28:02 ben Exp $
 
-SHA1 (fkiss-0.32.tar.gz) = 401cfddfbe117de15c1ff36de404a2c360f17d97
-Size (fkiss-0.32.tar.gz) = 160128 bytes
-SHA1 (patch-ab) = 4b387d82c310bb3d256fff9b1ba7e8f90cc610a8
-SHA1 (patch-ac) = 40e190d4d40dd3bcbc7f803e1f0e0c8155e69bf1
-SHA1 (patch-ad) = c0aa04ce5b030fb82af325d739197149d37766b3
-SHA1 (patch-ae) = 517086e4a5273725b6e4c0928b8bb01804e33b55
-SHA1 (patch-af) = c5104a21e9935a4d44741341f792dabb59f09382
-SHA1 (patch-ag) = 2732e7a219a8002686e10abe9c0688da24d4d4f5
+SHA1 (fkiss-0.33.tar.gz) = df07895a6b2053ca505dce49f5a6ac3f745f4386
+Size (fkiss-0.33.tar.gz) = 164697 bytes
+SHA1 (fkiss-0.33a.diff) = 03c686ab8282cfc6bd5bc07bad28e8718339b3ab
+Size (fkiss-0.33a.diff) = 8909 bytes
+SHA1 (patch-ab) = b22fcd06b72b85ae413ecb970e43d76532ecc65e
+SHA1 (patch-ac) = db3e28fec1a4b1a7ff620023bbf6cf70b6dd99af
+SHA1 (patch-ad) = 7ad3e72cd7aa1f055cfbc3fd348953df843d2bfa
