@@ -1,13 +1,13 @@
-$NetBSD: patch-aj,v 1.1 2004/07/10 17:59:17 thorpej Exp $
+$NetBSD: patch-aj,v 1.2 2005/03/30 12:10:58 adam Exp $
 
---- include/net-snmp/agent/snmp_vars.h.orig	Thu Jul  8 18:17:53 2004
-+++ include/net-snmp/agent/snmp_vars.h	Thu Jul  8 18:18:02 2004
-@@ -74,7 +74,7 @@
-     struct nlist;
- 
-     extern long     long_return;
--    extern uint32_t ipaddr_return;
-+    extern in_addr_t ipaddr_return;
-     extern u_char   return_buf[];
- 
-     extern oid      nullOid[];
+--- net-snmp-config.in.orig	2005-03-30 13:48:27.000000000 +0000
++++ net-snmp-config.in
+@@ -34,7 +34,7 @@ libdir=@libdir@
+ NSC_LDFLAGS="@LDFLAGS@"
+ NSC_INCLUDEDIR=${includedir}
+ NSC_LIBDIR=-L${libdir}
+-NSC_LIBS="@LIBS@ @WRAPLIBS@"
++NSC_LIBS="@LIBS@"
+ NSC_AGENTLIBS="@AGENTLIBS@ @WRAPLIBS@"
+ NSC_PREFIX=$prefix
+ NSC_EXEC_PREFIX=$exec_prefix
