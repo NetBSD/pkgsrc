@@ -1,3 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/02/16 06:00:26 salo Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/03/30 22:26:58 xtraeme Exp $
 lib/streamtuner/plugins/live365.la
 lib/streamtuner/plugins/live365.so
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/streamtuner-live365.mo
