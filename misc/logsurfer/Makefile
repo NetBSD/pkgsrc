@@ -3,7 +3,7 @@
 # Date created:		28 Jul 1996
 # Whom:			shanee@rabbit.augusta.de
 #
-# $Id: Makefile,v 1.1.1.1 1997/10/11 21:54:30 hubertf Exp $
+# $Id: Makefile,v 1.2 1997/10/27 00:26:48 hubertf Exp $
 #
 
 DISTNAME=	logsurfer-1.41
@@ -15,5 +15,10 @@ MASTER_SITES=	ftp://ftp.fh-rosenheim.de/pub/systems/unix/cert/tools/audit/logsur
 MAINTAINER=	shanee@rabbit.augusta.de
 
 GNU_CONFIGURE=	YES
+CONFIGURE_ARGS=	--with-etcdir=${PREFIX}/etc
+
+MANCOMPRESSED=	yes
+MAN1=		logsurfer.1
+MAN4=		logsurfer.conf.4
 
 .include <bsd.port.mk>
