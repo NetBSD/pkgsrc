@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/02/25 04:17:38 hubertf Exp $
+# $NetBSD: Makefile,v 1.9 2001/08/19 18:48:26 jlam Exp $
 # FreeBSD Id: Makefile,v 1.3 1998/08/13 09:20:41 itojun Exp $
 
 DISTNAME=	snooper-19991202
@@ -10,9 +10,10 @@ COMMENT=	serial line protocol analyzer (need two serial interfaces)
 
 WRKSRC=		${WRKDIR}/snooper/build
 GNU_CONFIGURE=	yes
+USE_BUILDLINK_ONLY=	yes
 
 pre-build:
-	cd ${WRKSRC} ; ${MAKE} depend
+	cd ${WRKSRC} ; ${MAKE_PROGRAM} depend
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/snooper
