@@ -1,10 +1,13 @@
-$NetBSD: patch-ag,v 1.1.1.1 2000/11/01 16:25:09 hubertf Exp $
+$NetBSD: patch-ag,v 1.2 2001/03/20 13:54:31 wiz Exp $
 
---- utils/kill_mgl.sh.orig	Thu Aug 31 21:06:51 2000
-+++ utils/kill_mgl.sh	Wed Nov  1 14:44:50 2000
-@@ -1,4 +1,4 @@
--PID=`ps ax |grep mglsvr |grep -v grep |awk '{print $1}'`
-+PID=`ps ax |grep mglsvrcons |grep -v grep |awk '{print $1}'`
+--- utils/mglx.sh.orig	Sun Dec 10 02:49:40 2000
++++ utils/mglx.sh	Thu Mar  8 16:30:51 2001
+@@ -5,7 +5,7 @@
+ MGL_DISPLAY=`basename $TTY`
+ export MGL_DISPLAY
  
- kill  -HUP $PID
+-mglsvrx $1 < $TTY > $TTY &
++mglsvrcons $1 < $TTY > $TTY &
+ sleep 1
+ mgterm -i
  
