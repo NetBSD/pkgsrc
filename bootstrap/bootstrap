@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.21 2004/10/08 17:26:45 tv Exp $
+# $NetBSD: bootstrap,v 1.22 2004/10/08 17:29:00 tv Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -35,7 +35,7 @@
 #
 #set -x
 
-BOOTSTRAP_VERSION=20040821
+BOOTSTRAP_VERSION=20041008
 
 # set defaults for system locations
 prefix=/usr/pkg
