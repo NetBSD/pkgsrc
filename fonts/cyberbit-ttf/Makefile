@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2004/01/25 20:29:30 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2004/12/28 14:38:03 wiz Exp $
 #
 
 PKGNAME=	cyberbit-ttf-2.0
-PKGREVISION=	3
+PKGREVISION=	4
 FONT_FILE=	Cyberbit.ZIP
 
 COMMENT=	Multilingual TrueType font from Bitstream
