@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/03/14 03:05:08 jun Exp $
+bin/smimemsg
+share/doc/smimemsg/COPYRIGHT
+share/doc/smimemsg/README
+share/doc/smimemsg/README-j
+@dirrm share/doc/smimemsg
