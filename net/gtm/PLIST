@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:55:35 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/04/29 17:05:06 magick Exp $
 bin/gtm_applet
 bin/gtm
 etc/sound/events/gtm.soundlist
@@ -40,7 +40,25 @@ share/gnome/help/gtm/C/bugs.html
 share/gnome/help/gtm/C/license.html
 share/gnome/help/gtm/C/prefs.html
 share/gnome/help/gtm/C/usage.html
-share/gnome/help/gtm/C/docbook.css
+share/gnome/help/gtm/C/images/mainwindow.png
+share/gnome/help/gtm/C/images/newwindow.png
+share/gnome/help/gtm/C/images/numericwindow.png
+share/gnome/help/gtm/C/ln7.html
+share/gnome/help/gtm/C/newdownload.html
+share/gnome/help/gtm/C/numericdownload.html
+share/gnome/help/gtm/pt/topic.dat
+share/gnome/help/gtm/pt/images/mainwindow.png
+share/gnome/help/gtm/pt/images/newwindow.png
+share/gnome/help/gtm/pt/images/numericwindow.png
+share/gnome/help/gtm/pt/authors.html
+share/gnome/help/gtm/pt/bugs.html
+share/gnome/help/gtm/pt/index.html
+share/gnome/help/gtm/pt/license.html
+share/gnome/help/gtm/pt/ln10.html
+share/gnome/help/gtm/pt/newdownload.html
+share/gnome/help/gtm/pt/numericdownload.html
+share/gnome/help/gtm/pt/prefs.html
+share/gnome/help/gtm/pt/usage.html
 share/gnome/apps/Internet/gtm.desktop
 share/sounds/gtm/add.wav
 share/sounds/gtm/complete.wav
@@ -50,5 +68,8 @@ share/oaf/GNOME_GTM.oaf
 man/man1/gtm.1
 man/man1/gtm_applet.1
 @dirrm share/sounds/gtm
+@dirrm share/gnome/help/gtm/C/images
 @dirrm share/gnome/help/gtm/C
+@dirrm share/gnome/help/gtm/pt/images
+@dirrm share/gnome/help/gtm/pt
 @dirrm share/gnome/help/gtm
