@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2001/07/29 14:25:05 bouyer Exp $
+$NetBSD: distinfo,v 1.5 2001/11/11 19:29:10 bouyer Exp $
 
-SHA1 (imp-2.2.6.tar.gz) = 7e433007d717d9d213ef5af4fd0424f3b0bbe18b
-Size (imp-2.2.6.tar.gz) = 363565 bytes
+SHA1 (imp-2.2.7.tar.gz) = 76c2de6b7e1c26abeb870850fdc39231fe804b5f
+Size (imp-2.2.7.tar.gz) = 372578 bytes
 SHA1 (patch-aa) = 2149a5a9954d975b9b8c1df5c64c09cd0bf330d3
