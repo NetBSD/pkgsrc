@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.21 2004/06/28 12:52:45 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.22 2004/06/28 13:02:21 jmmv Exp $
 #
 
 DISTNAME=		GConf-2.6.2
@@ -31,7 +31,7 @@ PKGCONFIG_OVERRIDE=	gconf-2.0.pc.in
 PKG_SYSCONFSUBDIR=	gconf
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
-CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html
+CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
 CONFIGURE_ARGS+=	--disable-gtk-doc
 CONFIGURE_ARGS+=	--enable-gconf-source=xml::${PKG_SYSCONFDIR}/gconf.xml.defaults
 
