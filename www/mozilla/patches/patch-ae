@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.14 2002/12/04 15:20:29 taya Exp $
+$NetBSD: patch-ae,v 1.15 2003/03/17 16:07:34 taya Exp $
 
 diff -ru ../Orig/mozilla/xpcom/reflect/xptcall/src/md/unix/xptcstubs_netbsd_m68k.cpp ./xpcom/reflect/xptcall/src/md/unix/xptcstubs_netbsd_m68k.cpp
---- ../Orig/mozilla/xpcom/reflect/xptcall/src/md/unix/xptcstubs_netbsd_m68k.cpp	Sat Sep 29 05:12:52 2001
-+++ ./xpcom/reflect/xptcall/src/md/unix/xptcstubs_netbsd_m68k.cpp	Wed Nov 13 14:21:22 2002
+--- ../Orig/mozilla/xpcom/reflect/xptcall/src/md/unix/xptcstubs_netbsd_m68k.cpp	2001-09-29 05:12:52.000000000 +0900
++++ ./xpcom/reflect/xptcall/src/md/unix/xptcstubs_netbsd_m68k.cpp	2003-03-14 16:58:45.000000000 +0900
 @@ -123,17 +123,27 @@
      }
  }

@@ -1,8 +1,7 @@
-$NetBSD: patch-ac,v 1.18 2002/12/04 15:20:29 taya Exp $
+$NetBSD: patch-ac,v 1.19 2003/03/17 16:07:34 taya Exp $
 
-diff -ru ../Orig/mozilla/xpcom/reflect/xptcall/src/md/unix/Makefile.in ./xpcom/reflect/xptcall/src/md/unix/Makefile.in
---- ../Orig/mozilla/xpcom/reflect/xptcall/src/md/unix/Makefile.in	Tue Sep 24 05:31:30 2002
-+++ ./xpcom/reflect/xptcall/src/md/unix/Makefile.in	Wed Nov 13 14:21:19 2002
+--- ../Orig/mozilla/xpcom/reflect/xptcall/src/md/unix/Makefile.in	2003-01-28 06:52:51.000000000 +0900
++++ ./xpcom/reflect/xptcall/src/md/unix/Makefile.in	2003-03-14 16:58:41.000000000 +0900
 @@ -129,7 +129,7 @@
  # NetBSD/ARM
  #
@@ -21,17 +20,17 @@ diff -ru ../Orig/mozilla/xpcom/reflect/xptcall/src/md/unix/Makefile.in ./xpcom/r
  CPPSRCS		:= xptcinvoke_netbsd_m68k.cpp xptcstubs_netbsd_m68k.cpp
  endif
  endif
-@@ -286,6 +286,13 @@
- ifeq ($(OS_ARCH)$(OS_TEST),NetBSDsparc)
+@@ -287,6 +287,13 @@
  CPPSRCS		:= xptcinvoke_sparc_netbsd.cpp xptcstubs_sparc_netbsd.cpp
  ASFILES		:= xptcinvoke_asm_sparc_netbsd.s xptcstubs_asm_sparc_netbsd.s
-+endif
+ endif
 +#   
 +# NetBSD/SPARC64
 +#   
 +ifeq ($(OS_ARCH)$(OS_TEST),NetBSDsparc64)
 +CPPSRCS                := xptcinvoke_sparc64_netbsd.cpp xptcstubs_sparc64_netbsd.cpp
 +ASFILES                := xptcinvoke_asm_sparc64_netbsd.s xptcstubs_asm_sparc64_netbsd.s
- endif
++endif
  #
  # Solaris/SPARC
+ #
