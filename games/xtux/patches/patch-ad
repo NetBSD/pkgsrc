@@ -1,13 +1,21 @@
-$NetBSD: patch-ad,v 1.1.1.1 2000/11/17 06:45:11 hubertf Exp $
+$NetBSD: patch-ad,v 1.2 2001/12/19 10:04:06 tron Exp $
 
---- src/client/Makefile.orig	Thu Nov 16 07:40:42 2000
-+++ src/client/Makefile
-@@ -23,7 +23,7 @@
+--- src/client/Makefile.orig	Wed Aug 30 08:59:29 2000
++++ src/client/Makefile	Wed Dec 19 11:00:51 2001
+@@ -16,14 +16,14 @@
+ BINARY = $(TOPLEVEL_PATH)/xtux
+ 
+ # Flags used when compiling
+-CFLAGS = -g -Wall -O -DDATADIR=\"$(DATADIR)\"
++CFLAGS = -g -Wall -O -DDATADIR=\"$(DATADIR)\" -I$(PREFIX)/include
+ 
+ # Paths to header files
+ X11_INC = -I$(X11_PATH)/include
  COMMON_INC = -I$(COMMON_PATH)
  
  # Libraries used in linking
 -X11LIB = -L$(X11_PATH)/lib -lX11
-+X11LIB = -Wl,-R${X11_PATH}/lib -L$(X11_PATH)/lib -lX11
++X11LIB = -Wl,-R$(X11_PATH)/lib -L$(X11_PATH)/lib -Wl,-R$(PREFIX)/lib -L$(PREFIX)/lib -lX11
  XPMLIB = -lXpm
  MATHLIB = -lm
  

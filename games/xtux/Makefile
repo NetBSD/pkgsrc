@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/11/14 14:47:54 agc Exp $
+# $NetBSD: Makefile,v 1.4 2001/12/19 10:04:06 tron Exp $
 #
 
 DISTNAME=	xtux-arena-src-nov-15
@@ -11,9 +11,10 @@ MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://xtux.sourceforge.net/
 COMMENT=	2D multi-player shootout using images from the Open Software scene
 
-USE_XPM=	yes
-USE_GMAKE=	yes
+USE_XPM=	YES
+USE_GMAKE=	YES
 
+CFLAGS+=	-I${PREFIX}/include
 WRKSRC=		${WRKDIR}/xtux
 
 do-install:
