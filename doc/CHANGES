@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9546 2005/03/22 09:54:39 seb Exp $
+$NetBSD: CHANGES,v 1.9547 2005/03/22 09:58:38 tron Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1454,3 +1454,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated gaim to 1.2.0 [jmmv 2005-03-22]
 	Updated digikam to 0.7.2 [seb 2005-03-22]
 	Updated digikamimageplugins to 0.7.2 [seb 2005-03-22]
+	Updated mozilla-bin to 1.7.6 [tron 2005-03-22]
