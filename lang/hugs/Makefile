@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 1999/12/18 13:35:54 abs Exp $
+# $NetBSD: Makefile,v 1.9 2000/01/24 12:27:20 augustss Exp $
 
 DISTNAME=	Hugs98-May1999
 PKGNAME=	Hugs98-199905
@@ -8,8 +8,12 @@ MASTER_SITES=	http://www.cse.ogi.edu/~mpj/Hugs98/
 MAINTAINER=	nathanw@mit.edu
 HOMEPAGE=	http://www.haskell.org/hugs/
 
+DEPENDS+=	readline-*:../../devel/readline
+
 WRKSRC=		${WRKDIR}/Hugs98/src
 GNU_CONFIGURE=	yes
+CONFIGURE_ARGS+=--with-readline
+
 ALL_TARGET=	default
 MAKE_ENV=	INSTALL="${INSTALL}" INSTALL_DATA="${INSTALL_DATA}" \
 		INSTALL_PROGRAM="${INSTALL_PROGRAM}"
