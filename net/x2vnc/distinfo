@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2002/10/04 14:57:49 hubertf Exp $
+$NetBSD: distinfo,v 1.3 2003/11/04 07:43:33 wiz Exp $
 
-SHA1 (x2vnc-1.4.tar.gz) = 4bb0f48936864bd90a4269cb36630b5564622441
-Size (x2vnc-1.4.tar.gz) = 57696 bytes
+SHA1 (x2vnc-1.5.1.tar.gz) = bf492481c7dcdb4abe71628faff955c16b43a4d2
+Size (x2vnc-1.5.1.tar.gz) = 60887 bytes
