@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $NetBSD: mkbinarykit,v 1.9 2004/06/28 12:09:09 grant Exp $
+# $NetBSD: mkbinarykit,v 1.10 2004/12/21 14:12:50 grant Exp $
 #
 # Make a binary bootstrap kit and place it in targetdir (or current
 # working directory if not specified). The mk.conf.example file is
@@ -33,6 +33,10 @@ sedprog="sed"
 case "$opsys" in
 AIX)
 	mkfile=/usr/pkg/etc/mk.conf
+	pkgdbdir=/usr/pkg/pkgdb
+	;;
+DragonFly)
+	# Don't use the ports /var/db/pkg
 	pkgdbdir=/usr/pkg/pkgdb
 	;;
 FreeBSD)
