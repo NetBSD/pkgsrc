@@ -1,4 +1,4 @@
-# $NetBSD: compiler.mk,v 1.42 2005/01/10 09:05:01 jlam Exp $
+# $NetBSD: compiler.mk,v 1.43 2005/01/12 15:32:01 jlam Exp $
 #
 # This Makefile fragment implements handling for supported C/C++/Fortran
 # compilers.
@@ -13,6 +13,7 @@
 #		ccc		Compaq C Compilers (Tru64)
 #		ccache		compiler cache (chainable)
 #		distcc		distributed C/C++ (chainable)
+#		f2c		Fortran 77 to C compiler (chainable)
 #		gcc		GNU
 #		mipspro		Silicon Graphics, Inc. MIPSpro (n32/n64)
 #		mipspro-ucode	Silicon Graphics, Inc. MIPSpro (o32)
@@ -20,10 +21,12 @@
 #				ONE Studio
 #		xlc		IBM's XL C/C++ compiler suite
 #
-#	The default is "gcc".  You can use ccache and/or distcc with an
-#	appropriate PKGSRC_COMPILER setting, e.g. "ccache distcc gcc".
-#	The chain should always end in a real compiler.  This should only
-#	be set in /etc/mk.conf.
+#	The default is "gcc".  You can use ccache and/or distcc with
+#	an appropriate PKGSRC_COMPILER setting, e.g. "ccache distcc
+#	gcc".  You can also use "f2c" to overlay the lang/f2c package
+#	over the C compiler instead of using the system Fortran
+#	compiler.  The chain should always end in a real compiler.
+#	This should only be set in /etc/mk.conf.
 #
 # GCC_REQD
 #	A list of version numbers used to determine the minimum
@@ -45,7 +48,7 @@
 #	Lists the languages used in the source code of the package,
 #	and is used to determine the correct compilers to install.
 #	Valid values are: c, c++, fortran, java, objc.  The default
-#	is "c".
+#	is "c" ("c" is actually _always_ implicitly in this list).
 #
 # The following variables are defined, and available for testing in
 # package Makefiles:
@@ -65,20 +68,24 @@ BSD_COMPILER_MK=	defined
 
 .include "../../mk/bsd.prefs.mk"
 
-# By default, assume that the package requires a C compiler.
+# Always require a C compiler for proper compiler detection.
 USE_LANGUAGES?=	c
+.if empty(USE_LANGUAGES:Mc)
+USE_LANGUAGES:=	c ${USE_LANGUAGES}
+.endif
 
 # Default to using gcc.
 PKGSRC_COMPILER?=	gcc
 
 # For environments where there is an external gcc too, but pkgsrc
 # should use the pkgsrc one for consistency.
+#
 .if defined(USE_PKGSRC_GCC)
 _USE_PKGSRC_GCC=	yes
 .endif
 
 _COMPILERS=		ccc gcc mipspro mipspro-ucode sunpro xlc
-_PSEUDO_COMPILERS=	ccache distcc
+_PSEUDO_COMPILERS=	ccache distcc f2c
 
 .if defined(NOT_FOR_COMPILER) && !empty(NOT_FOR_COMPILER)
 .  for _compiler_ in ${_COMPILERS}

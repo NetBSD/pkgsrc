@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8717 2005/01/12 14:04:44 xtraeme Exp $
+$NetBSD: CHANGES,v 1.8718 2005/01/12 15:31:59 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -263,3 +263,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Added pbzip2-0.8.3 [wiz 2005-01-12]
 	Added ladspa-1.12 [xtraeme 2005-01-12]
 	Added terminatorx-3.82 [xtraeme 2005-01-12]
+	bsd.pkg.mk: deprecate USE_FORTRAN in favor of USE_LANGUAGES+=fortran
+		[jlam 2005-01-12]

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2004/11/01 15:07:51 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2005/01/12 15:31:58 jlam Exp $
 
 DISTNAME=		benchfft-2.0
 PKGREVISION=	1
@@ -16,7 +16,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 GNU_CONFIGURE=		yes
 USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
-USE_FORTRAN=		yes
+USE_LANGUAGES=		fortran
 USE_LIBTOOL=		yes
 
 LTCONFIG_OVERRIDE=	${WRKDIR}/fftw-2.0.1/ltconfig
