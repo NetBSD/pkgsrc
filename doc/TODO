@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3077 2005/02/20 11:05:28 wiz Exp $
+$NetBSD: TODO,v 1.3078 2005/02/20 14:03:31 dmcmahill Exp $
 
 Suggested new packages
 ======================
@@ -458,7 +458,6 @@ Suggested package updates
 	o gap-4r4p3
 	o garmin-utils-2.2
 	o gated-3.6
-	o gattrib-20041120
 	o gbib-0.1.3rc1
 	o gcombust-0.1.55
 	o gconfmm26-2.8.0?
@@ -486,7 +485,6 @@ Suggested package updates
 	o gkrellm1-xmms-0.5.8
 	o gliv-1.9.1
 	o gnet1-1.1.9
-	o gnetman-20041117
 	o gnocatan-0.8.1.30
 	o gnome-applets-1.4.1
 	o gnome-pilot-2.0.12
@@ -1074,7 +1072,6 @@ Suggested package updates
 	o vera-1.14
 	o vfu-4.03
 	o vifm-0.2
-	o vipec-3.2.0
 	o vlc-0.8.1
 	o vm-7.19
 	o vmware-module-3.2.2
