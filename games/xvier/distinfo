@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/02/17 14:59:31 zuntum Exp $
+
+SHA1 (xvier.tar.Z) = d508d32610679d8c53fb8c04740a73e55913e67a
+Size (xvier.tar.Z) = 61765 bytes
+SHA1 (patch-aa) = 6adcd552f14722f89a0fc4b481c9a06f42cf24a1
