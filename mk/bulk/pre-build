@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: pre-build,v 1.42 2005/01/18 14:11:11 tv Exp $
+# $NetBSD: pre-build,v 1.43 2005/01/18 15:04:34 tv Exp $
 #
 # Clean up system to be ready for bulk pkg build
 #
@@ -15,7 +15,7 @@ else
     . `dirname $0`/build.conf
 fi
 
-PRUNEDISTFILES=${PRUNEDISTFILES:-"yes"}
+PRUNEDISTFILES=${PRUNEDISTFILES:-"no"}
 PRUNEPACKAGES=${PRUNEPACKAGES:-"yes"}
 PRUNELINKS=${PRUNEPACKAGES:-"yes"}
 
