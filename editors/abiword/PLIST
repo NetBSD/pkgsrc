@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2002/02/25 10:00:07 martti Exp $
+@comment $NetBSD: PLIST,v 1.5 2002/03/19 11:50:19 martti Exp $
 bin/AbiWord
 bin/abiword
 libexec/AbiSuite/AbiWord
@@ -392,6 +392,7 @@ share/AbiSuite/AbiWord/strings/gl-ES.strings
 share/AbiSuite/AbiWord/strings/hu-HU.strings
 share/AbiSuite/AbiWord/strings/id-ID.strings
 share/AbiSuite/AbiWord/strings/it-IT.strings
+share/AbiSuite/AbiWord/strings/ja-JP.strings
 share/AbiSuite/AbiWord/strings/lt-LT.strings
 share/AbiSuite/AbiWord/strings/nb-NO.strings
 share/AbiSuite/AbiWord/strings/nl-NL.strings
@@ -406,6 +407,7 @@ share/AbiSuite/AbiWord/strings/sv-SE.strings
 share/AbiSuite/AbiWord/strings/tr-TR.strings
 share/AbiSuite/AbiWord/strings/uk-UA.strings
 share/AbiSuite/AbiWord/strings/zh-CN.strings
+share/AbiSuite/AbiWord/strings/zh-HK.strings
 share/AbiSuite/AbiWord/strings/zh-TW.strings
 share/AbiSuite/AbiWord/system.profile
 share/AbiSuite/AbiWord/system.profile-CP1254
@@ -439,6 +441,7 @@ share/AbiSuite/AbiWord/system.profile-fr-FR
 share/AbiSuite/AbiWord/system.profile-gl-ES
 share/AbiSuite/AbiWord/system.profile-hu-HU
 share/AbiSuite/AbiWord/system.profile-it-IT
+share/AbiSuite/AbiWord/system.profile-ja-JP
 share/AbiSuite/AbiWord/system.profile-lt-LT
 share/AbiSuite/AbiWord/system.profile-nb-NO
 share/AbiSuite/AbiWord/system.profile-nl-NL
@@ -578,7 +581,10 @@ share/AbiSuite/icons/abiword_48.tif
 share/AbiSuite/icons/abiword_48.xpm
 share/AbiSuite/icons/abiword_logo.xpm
 share/AbiSuite/readme.txt
+share/AbiSuite/templates/2-columns.awt
+share/AbiSuite/templates/a4.awt
 share/AbiSuite/templates/normal.awt
+share/AbiSuite/templates/us-letter.awt
 @dirrm libexec/AbiSuite
 @dirrm share/AbiSuite/AbiWord/help/de-DE/de_DE
 @dirrm share/AbiSuite/AbiWord/help/de-DE/images
