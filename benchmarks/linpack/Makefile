@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 1998/08/30 19:43:51 garbled Exp $
+# $NetBSD: Makefile,v 1.2 1998/09/23 17:00:35 agc Exp $
 
 DISTNAME=		linpackc
 PKGNAME=		linpack-940225
@@ -21,5 +21,9 @@ do-build:
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/linpackd ${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/linpacks ${PREFIX}/bin
+
+benchmark:
+	-@${WRKSRC}/linpacks
+	-@${WRKSRC}/linpackd
 
 .include "../../mk/bsd.pkg.mk"
