@@ -1,104 +1,157 @@
-# $NetBSD: pthread.buildlink.mk,v 1.5 2002/05/29 08:19:55 skrll Exp $
+# $NetBSD: pthread.buildlink.mk,v 1.6 2002/08/01 05:40:29 jlam Exp $
 #
-# This Makefile fragment is included by packages that use pthreads.
-# This Makefile fragment is also included directly by bsd.prefs.mk.
+# The pthreads strategy for pkgsrc is to "bless" a particular pthread
+# package as the Official Pthread Replacement (OPR).  A package that uses
+# pthreads may do one of the following:
 #
-# To use this Makefile fragment, simply:
+#   (1) Simply include pthread.buildlink.mk.  This will make the package
+#	use the native pthread library if it's available, or else the OPR
+#	package.  The value of PTHREAD_TYPE may be checked to be either
+#	"native", or the name of the OPR package, or "none", e.g.
 #
-# (1) Define USE_PTHREAD _before_ including bsd.prefs.mk in the package
-#     Makefile,
-# (2) Optionally set PTHREAD_TYPE to force the use of a specific pthread
-#     implementation,
-# (3) Include bsd.prefs.mk in the package Makefile,
-# (4) And include this Makefile fragment in the package Makefile.
+#	#
+#	# package Makefile stuff...
+#	#
+#	.include "../../mk/pthread.buildlink.mk"
 #
-# The value of ${PTHREAD_TYPE} may be used after the inclusion of
-# bsd.prefs.mk, which indirectly sets this value by including this file.
-# E.g.,
+#	.if defined(PTHREAD_TYPE) && (${PTHREAD_TYPE} == "none")
+#	CONFIGURE_ARGS+=	--without-pthreads
+#	.endif
 #
-# USE_PTHREAD=	native
-# .include "../../mk/bsd.prefs.mk"
+#	.include "../../mk/bsd.pkg.mk"
 #
-# .if defined(PTHREAD_TYPE) && ${PTHREAD_TYPE} == "none"
-# CONFIGURE_ARGS+=	--without-pthreads
-# .endif
+#	Note that it's only safe to check and use the value of PTHREAD_TYPE
+#	after all other buildlink.mk files have been included.
+#
+#   (2) Add "native" to PTHREAD_OPTS prior to including
+#	pthread.buildlink.mk.  This is like case (1), but we only check for
+#	the native pthread library, e.g.,
+#
+#	PTHREAD_OPTS+=	native
+#	#
+#	# package Makefile stuff...
+#	#
+#	.include "../../mk/pthread.buildlink.mk"
+#
+#	.if defined(PTHREAD_TYPE) && (${PTHREAD_TYPE} == "none")
+#	CONFIGURE_ARGS+=	--without-pthreads
+#	.endif
+#
+#	.include "../../mk/bsd.pkg.mk"
+#
+#   (3)	Add "require" to PTHREAD_OPTS prior to including
+#	pthread.buildlink.mk.  This will make the package use the native
+#	pthread library or else use the OPR package, and will otherwise set
+#	IGNORE if neither can be used, e.g.,
+#
+#	PTHREAD_OPTS+=	require
+#	#
+#	# package Makefile stuff...
+#	#
+#	.include "../../mk/pthread.buildlink.mk"
+#	.include "../../mk/bsd.pkg.mk"
+#
+#   (4) Add both "require" and "native" to PTHREAD_OPTS prior to including
+#	pthread.buildlink.mk.  This is like case (3), but we only check for
+#	the native pthread library, e.g.,
+#
+#	PTHREAD_OPTS+=	require native
+#	#
+#	# more package Makefile stuff...
+#	#
+#	.include "../../mk/pthread.buildlink.mk"
+#	.include "../../mk/bsd.pkg.mk"
+#
+#
+# The case where a package must use either the native pthread library or
+# some pthread package aside from the OPR is a special case of (2), e.g.,
+# if the required pthread package is "ptl2", then:
+#
+#	PTHREAD_OPTS+=	native
+#	#
+#	# more package Makefile stuff...
+#	#
+#	.include "../../mk/pthread.buildlink.mk"
+#
+#	.if defined(PTHREAD_TYPE) && (${PTHREAD_TYPE} == "none")
+#	.  include "../../devel/ptl2/buildlink.mk"
+#	.endif
+#
+#	.include "../../mk/bsd.pkg.mk"
 #
 ###########################################################################
 #
-# USE_PTHREAD is a list of pthread implementations that may be used, and is
-#	set in a package Makefile.  Its values are either "native" or any
-#	of the package pthread implementations listed in ${_PKG_PTHREADS},
-#	e.g. "USE_PTHREAD = native pth".
+# PTHREAD_OPTS represents whether this package requires pthreads, and also
+#	whether it needs to be native.  It may include the word "require"
+#	to denote that a pthreads implementation is required, and may also
+#	include the word "native" to denote that only native pthreads are
+#	acceptable.
 #
-# _PKG_PTHREADS is the list of package pthread implementations recognized by
-#	pthread.buildlink.mk
+# _PKG_PTHREAD is the fall-back package pthread implementation use by
+#	pthread.buildlink.mk.
 #
-.if defined(USE_PTHREAD)
-_PKG_PTHREADS?=		pth pth-syscall ptl2 mit-pthreads unproven-pthreads
+# _PKG_PTHREAD_COMPAT_PATTERNS matches the ONLY_FOR_PLATFORMS from the
+#	Makefile for ${_PKG_PTHREAD}.  It's used to see if ${_PKG_PTHREADS}
+#	can actually be used to replace a native pthreads.
+#
+_PKG_PTHREAD?=			pth
+_PKG_PTHREAD_PKGSRCDIR?=	../../devel/${_PKG_PTHREAD}
+_PKG_PTHREAD_BUILDLINK_MK?=	${_PKG_PTHREAD_PKGSRCDIR}/buildlink.mk
+_PKG_PTHREAD_COMPAT_PATTERNS=	*-*-*
 
-.for __valid_pthread__ in ${USE_PTHREAD}
-.  if !empty(_PKG_PTHREADS:M${__valid_pthread__})
-_PKG_PTHREAD_TYPE?=	${__valid_pthread__}
-.  endif
-.endfor
-_PKG_PTHREAD_TYPE?=	none
+.include "../../mk/bsd.prefs.mk"
 
-# We check for a native pthread implementation by checking for the presence
+PTHREAD_OPTS?=	# empty
+# We check for a native pthreads implementation by checking for the presence
 # of /usr/include/pthread.h (we might want to make this check stricter).
 #
-.if !empty(USE_PTHREAD:Mnative)
-.  if exists(/usr/include/pthread.h)
-PTHREAD_TYPE?=		native
+.undef PTHREAD_TYPE
+PREFER_NATIVE_PTHREADS?=	YES
+.if exists(/usr/include/pthread.h) && (${PREFER_NATIVE_PTHREADS} == "YES")
+PTHREAD_TYPE=	native
+.else
+.  if !empty(PTHREAD_OPTS:Mnative)
+PTHREAD_TYPE=	none
+.    if !empty(PTHREAD_OPTS:Mrequire)
+IGNORE=		"${PKGNAME} requires a native pthreads implementation."
+.    endif
 .  else
-PTHREAD_TYPE?=		${_PKG_PTHREAD_TYPE}
+PTHREAD_TYPE=	none
+.    for _pattern_ in ${_PKG_PTHREAD_COMPAT_PATTERNS}
+.      if !empty(MACHINE_PLATFORM:M${_pattern_})
+PTHREAD_TYPE=	${_PKG_PTHREAD}
+.      endif
+.    endfor
+.    if (${PTHREAD_TYPE} == "none") && !empty(PTHREAD_OPTS:Mrequire)
+IGNORE=		"${PKGNAME} requires a working pthreads implementation."
+.    endif
 .  endif
 .endif
-.endif	# USE_PTHREAD
-#
-###########################################################################
-#
-# Only allow the following section to be seen if this file isn't included
-# from bsd.prefs.mk. This allows this file to be included by bsd.prefs.mk
-# and also to be included in a package Makefile as is done normally, and
-# allows us to consolidate the pthread Makefile logic in one place.  We
-# want this, as we'd like for PTHREAD_TYPE to be available to package
-# Makefiles after they pull in bsd.prefs.mk.
-#
-.if !defined(BSD_PREFS_MK)
+
 .if !defined(PTHREAD_BUILDLINK_MK)
 PTHREAD_BUILDLINK_MK=	# defined
 
 .if ${PTHREAD_TYPE} == "native"
 #
-# Link the native pthread libraries and headers into ${BUILDLINK_DIR}.
+# Link the native pthread libraries and headers into ${BUILDLINK_DIR}.  
 #
 .  include "../../mk/bsd.buildlink.mk"
+
 BUILDLINK_PREFIX.pthread=	/usr
 BUILDLINK_FILES.pthread=	include/pthread.h
 BUILDLINK_FILES.pthread+=	lib/libpthread.*
 
-BUILDLINK_TARGETS.pthread=	pthread-buildlink
-BUILDLINK_TARGETS+=		${BUILDLINK_TARGETS.pthread}
+BUILDLINK_TARGETS+=		pthread-buildlink
 
-pre-configure: ${BUILDLINK_TARGETS.pthread}
+pre-configure: pthread-buildlink
 pthread-buildlink: _BUILDLINK_USE
 
-.elif ${PTHREAD_TYPE} == "pth"
-.  include "../../devel/pth/buildlink.mk"
-.elif ${PTHREAD_TYPE} == "pth-syscall"
-.  include "../../devel/pth-syscall/buildlink.mk"
-#
-# XXX The remaining pthread packages here need to have sensible buildlink.mk
-# XXX created that may all be used more-or-less interchangeably.  This is
-# XXX slightly challenging, so please beware in the implementation.
-#
-.elif ${PTHREAD_TYPE} == "ptl2"
-.  include "../../devel/ptl2/buildlink.mk"
-.elif ${PTHREAD_TYPE} == "mit-pthreads"
-DEPENDS+=		mit-pthreads-1.60b6:../../devel/mit-pthreads
-.elif ${PTHREAD_TYPE} == "unproven-pthreads"
-.  include "../../devel/unproven-pthreads/buildlink.mk"
+.elif ${PTHREAD_TYPE} == "${_PKG_PTHREAD}"
+.  if exists(${_PKG_PTHREAD_BUILDLINK_MK})
+.    include "${_PKG_PTHREAD_BUILDLINK_MK}"
+.  else
+IGNORE=		"${PKGNAME} needs pthreads, but ${_PKG_PTHREAD_BUILDLINK_MK} is missing."
+.  endif
 .endif
 
 .endif	# PTHREAD_BUILDLINK_MK
-.endif	# BSD_PREFS_MK
