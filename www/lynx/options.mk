@@ -1,7 +1,8 @@
-# $NetBSD: options.mk,v 1.3 2004/11/17 19:56:49 xtraeme Exp $
+# $NetBSD: options.mk,v 1.4 2004/11/27 08:44:35 xtraeme Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.lynx
 PKG_SUPPORTED_OPTIONS=	curses inet6 ncurses slang socks4 socks5
+PKG_DEFAULT_OPTIONS+=	curses
 .include "../../mk/bsd.options.mk"
 
 ###
@@ -31,7 +32,7 @@ CONFIGURE_ARGS+=	--enable-color-style
 .  endif
 .else
 PKG_FAIL_REASON+=	"${PKG_OPTIONS_VAR} must contain one of" \
-			"one of \"slang\", \"ncurses\", or \"curses\"!"
+			"\"slang\", \"ncurses\", or \"curses\"!"
 .endif
 
 ###
