@@ -1,26 +1,28 @@
-$NetBSD: patch-ab,v 1.7 2004/11/22 13:42:42 adam Exp $
+$NetBSD: patch-ab,v 1.8 2005/03/27 10:33:08 recht Exp $
 
---- runtime/net_1_1/Makefile.in.orig	2004-10-29 16:11:22.000000000 +0000
-+++ runtime/net_1_1/Makefile.in
-@@ -495,17 +495,17 @@ all-local: $(gac_assemblies)
- install-data-local:
- 	@if test -n '$(gac_assemblies)'; then \
- 	  for i in ''$(gac_assemblies); do \
--	    echo "MONO_PATH=$(srcdir) $(mono_runtime) --config ../../data/config $(gacutil) /i $(srcdir)/$$i /f /package 1.0 /gacdir $(GAC_DIR) /root $(GAC_ROOT_DIR)" ; \
-+	    echo "MONO_PATH=$(srcdir) $(mono_runtime) --config ../../data/config $(gacutil) /i $(srcdir)/$$i /f /package 1.0 /root $(GAC_ROOT_DIR)" ; \
- 	    MONO_PATH=$(srcdir) \
--	      $(LIBTOOL) --mode=execute $(mono_runtime) --config ../../data/config $(gacutil) /i $(srcdir)/$$i /f /package 1.0 /gacdir $(GAC_DIR) /root $(GAC_ROOT_DIR) || exit 1 ; \
-+	      $(LIBTOOL) --mode=execute $(mono_runtime) --config ../../data/config $(gacutil) /i $(srcdir)/$$i /f /package 1.0 /root $(GAC_ROOT_DIR) || exit 1 ; \
- 	  done; fi
+--- mono/mini/exceptions-ppc.c.orig	Sat Jan 29 07:13:05 2005
++++ mono/mini/exceptions-ppc.c
+@@ -199,6 +199,7 @@ arch_get_restore_context (void)
+ 	ppc_break (code);
  
- uninstall-local:
- 	@if test -n '$(gac_assemblies_list)'; then \
- 	  for i in ''$(gac_assemblies_list); do \
--	    echo "MONO_PATH=$(srcdir) $(mono_runtime) $(gacutil) /u $$i /gacdir $(GAC_DIR) /root $(GAC_ROOT_DIR)" ; \
-+	    echo "MONO_PATH=$(srcdir) $(mono_runtime) $(gacutil) /u $$i /root $(GAC_ROOT_DIR)" ; \
- 	    MONO_PATH=$(srcdir) \
--	      $(LIBTOOL) --mode=execute $(mono_runtime) --config ../../data/config $(gacutil) /u $$i /gacdir $(GAC_DIR) /root $(GAC_ROOT_DIR) || true ; \
-+	      $(LIBTOOL) --mode=execute $(mono_runtime) --config ../../data/config $(gacutil) /u $$i /root $(GAC_ROOT_DIR) || true ; \
- 	  done; fi
+ 	g_assert ((code - start) < sizeof(start));
++	mono_arch_flush_icache (start, code - start);
+ 	return start;
+ }
  
- copy_dlls:
+@@ -268,6 +269,7 @@ arch_get_call_filter (void)
+ 	ppc_blr (code);
+ 
+ 	g_assert ((code - start) < sizeof(start));
++	mono_arch_flush_icache (start, code - start);
+ 	return start;
+ }
+ 
+@@ -371,6 +373,7 @@ mono_arch_get_throw_exception_generic (g
+ 	/* we should never reach this breakpoint */
+ 	ppc_break (code);
+ 	g_assert ((code - start) < size);
++	mono_arch_flush_icache (start, code - start);
+ 	return start;
+ }
+ 
