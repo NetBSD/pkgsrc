@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.156 2004/09/24 16:15:18 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.157 2004/09/30 16:34:32 jlam Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -1006,12 +1006,6 @@ WRAPPER_TRANSFORM_CMDS+=	${_BLNK_TRANSFORM}
 # wrapper scripts are to be used instead of the actual compiler tools when
 # building software.
 #
-# BUILDLINK_CC, BUILDLINK_LD, etc. are the full paths to the wrapper
-#       scripts.
-#
-# ALIASES.CC, ALIASES.LD, etc. are the other names by which each wrapper
-#       may be invoked.
-#
 .if defined(USE_LIBTOOL)
 _WRAPPEES+=		LIBTOOL
 _WRAPPEES+=		SHLIBTOOL
@@ -1020,14 +1014,9 @@ _SHLIBTOOL=		${WRAPPER_SHLIBTOOL}
 .endif
 _WRAP_ALIASES.LIBTOOL=		libtool
 _WRAP_ALIASES.SHLIBTOOL=	shlibtool
-
-_BLNK_LIBTOOL_FIX_LA=		${WRAPPER_TMPDIR}/libtool-fix-la
-
-# We want libtool to invoke the wrapper scripts, too.
-_WRAPPER_SH.LIBTOOL=		${BUILDLINK_SRCDIR}/libtool.sh
 _WRAP_ENV.LIBTOOL=		PATH="${WRAPPER_BINDIR}:${_WRAP_PATH}"; export PATH
-_WRAPPER_SH.SHLIBTOOL=		${_WRAPPER_SH.LIBTOOL}
 _WRAP_ENV.SHLIBTOOL=		${_WRAP_ENV.LIBTOOL}
+_BLNK_LIBTOOL_FIX_LA=		${WRAPPER_TMPDIR}/libtool-fix-la
 
 # We need to "unbuildlinkify" any libtool archives.
 _BLNK_WRAP_LT_UNTRANSFORM_SED=	${SUBST_SED.unwrap}
