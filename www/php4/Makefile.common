@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.5 2001/01/15 16:38:06 jlam Exp $
+# $NetBSD: Makefile.common,v 1.6 2001/01/25 17:18:07 jlam Exp $
 
 DISTNAME=		php-${PHP_DIST_VERS}
 PHP_DIST_VERS=		4.0.4pl1
-PHP_VERS=		4.0.4.1
+PHP_VERS=		4.0.4.1nb1
 CATEGORIES+=		www php4
 
 # Note the http address is written this way by purpose, so that bsd.pkg.mk DTRT
@@ -33,9 +33,17 @@ GNU_CONFIGURE=		# defined
 CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
 CONFIGURE_ENV+=		LIBS="${LIBS}"
 
+USE_LIBINTL=		# defined
+.if exists(/usr/include/libintl.h)
+GETTEXTDIR=		/usr
+.else
+GETTEXTDIR=		${LOCALBASE}
+.endif
+
 CONFIGURE_ARGS+=	--without-gd
 CONFIGURE_ARGS+=	--without-mysql
 CONFIGURE_ARGS+=	--with-gdbm=${LOCALBASE}
+CONFIGURE_ARGS+=	--with-gettext=${GETTEXTDIR}
 CONFIGURE_ARGS+=	--with-yp --with-zlib
 CONFIGURE_ARGS+=	--with-config-file-path=${PREFIX}/etc
 CONFIGURE_ARGS+=	--with-system-regex
