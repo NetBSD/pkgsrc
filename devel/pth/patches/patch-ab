@@ -1,25 +1,10 @@
-$NetBSD: patch-ab,v 1.5 1999/07/19 06:14:30 sakamoto Exp $
+$NetBSD: patch-ab,v 1.6 1999/08/06 01:03:34 sakamoto Exp $
 
---- ./Makefile.in.orig	Fri Jul 16 20:33:16 1999
-+++ ./Makefile.in	Mon Jul 19 14:54:11 1999
-@@ -43,5 +43,5 @@
- CC          = @CC@
- CFLAGS      = @CFLAGS@ -I.
--LDFLAGS     = @LDFLAGS@ -L.
-+LDFLAGS     = @LDFLAGS@
- LIBS        = @LIBS@
- SHTOOL      = @SHTOOL@
-@@ -199,5 +199,5 @@
- 	$(SHTOOL) install -c -m 644 pth.3 $(mandir)/man3/pth.3
- 	$(SHTOOL) install -c -m 644 pth.h $(includedir)/pth.h
--	@$(LIBTOOL) --mode=install $(SHTOOL) install -c -m 644 libpth.la $(libdir)/libpth.la
-+	@$(LIBTOOL) --mode=install install -c -m 644 libpth.la $(libdir)/libpth.la
- install-pthread:
- 	$(SHTOOL) install -c -m 755 pthread-config $(bindir)/pthread-config
-@@ -205,5 +205,5 @@
- 	$(SHTOOL) install -c -m 644 pthread.h $(includedir)/pthread.h
- 	$(SHTOOL) install -c -m 644 pthread.3 $(mandir)/man3/pthread.3
--	@$(LIBTOOL) --mode=install $(SHTOOL) install -c -m 644 libpthread.la $(libdir)/libpthread.la
-+	@$(LIBTOOL) --mode=install install -c -m 644 libpthread.la $(libdir)/libpthread.la
+--- ./configure.orig	Tue Jul 27 23:49:13 1999
++++ ./configure	Fri Aug  6 09:44:10 1999
+@@ -3008,4 +3008,5 @@
+ s%@PTH_SYSCALL_SOFT@%$PTH_SYSCALL_SOFT%g
+ s%@PTH_SYSCALL_HARD@%$PTH_SYSCALL_HARD%g
++s%@LIBTOOL@%$LIBTOOL%g
  
- #   clean the source tree for re-building
+ CEOF
