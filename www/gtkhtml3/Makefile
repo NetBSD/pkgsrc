@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2005/01/03 03:28:43 rh Exp $
+# $NetBSD: Makefile,v 1.18 2005/02/22 18:22:52 jmmv Exp $
 #
 
-DISTNAME=	gtkhtml-3.2.4
+DISTNAME=	gtkhtml-3.2.5
 PKGNAME=	${DISTNAME:S/gtkhtml/gtkhtml3/}
 CATEGORIES=	www gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtkhtml/3.2/}
