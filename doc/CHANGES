@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8333 2004/12/14 00:09:26 tron Exp $
+$NetBSD: CHANGES,v 1.8334 2004/12/14 14:28:43 taca Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5910,3 +5910,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gconf-editor to 2.8.2nb2 [minskim 2004-12-12]
 	Updated epydoc to 2.1nb1 [minskim 2004-12-13]
 	Updated p5-libapreq2 to 2.4.3 [adrianp 2004-12-13]
+	Updated squid to 2.5.7nb2 [recht 2004-12-13]
