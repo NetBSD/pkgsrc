@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.167 2003/01/10 12:04:28 jmmv Exp $
+$NetBSD: TODO,v 1.168 2003/01/10 12:30:47 wiz Exp $
 
 Suggested new packages
 ======================
@@ -104,7 +104,7 @@ Suggested package updates
 	o evilwm-0.99.11 [pkg/19257]
 	o exim-4.12
 	o fltk-1.1.1
-	o fox-1.0.28
+	o fox-1.0.30
 	o freeciv-1.13.0
 	o fsviewer-0.2.5
 	o g-wrap-1.3.4
@@ -138,6 +138,7 @@ Suggested package updates
 	o hpijs-1.3 [pkg/19213]
 	o icewm-1.2.5
 	o icu-2.2 [heinz]
+	o id3ed-1.10.4
 	o imlib2-1.0.6 [pkg/19144]
 	o imp-3.1 [pkg/19497]
 	o inform-6.21.3 [pkg/19298]
@@ -150,7 +151,6 @@ Suggested package updates
 	o jikes-1.18
 	o joe-2.9 [pkg/18022]
 	o kdevelop-2.1.4
-	o koffice-1.2.1
 	o koth-0.7.7 [http://www.nongnu.org/koth/]
 	o lbreakout2-2.4
 	o lcms-1.0.9
@@ -211,7 +211,6 @@ Suggested package updates
 	o ruby-1.6.8
 	o rxvt-2.7.9
 	o sablotron-0.97
-	o sawfish-1.2
 	o scmxx-0.6.3.5
 	o scribus-0.8
 	o scrollkeeper-0.3.11
@@ -241,7 +240,6 @@ Suggested package updates
 	o wwwoffle-2.7g
 	o wxGTK-2.4.0
 	o xalan-c-1.4
-	o xcdroast-0.98alpha13
 	o xerces-c-2.1.0 [heinz]
 	o xfstt-1.4
 	o xmcd-3.2.0
@@ -256,8 +254,8 @@ Suggested pkgsrc enhancements
 	o Add a sort check to pkglint for PLISTs.
 
 	o Add a PKGLOCALEDIR check to pkglint. Specifically, if
-	PKGLOCALEDIR is in PLIST and USE_BUILDLINK2 and USE_PKGLOCALEDIR
-	are not set to "yes" in the Makefile magic, then flag an error.
+	  PKGLOCALEDIR is in PLIST and USE_BUILDLINK2 and USE_PKGLOCALEDIR
+	  are not set to "yes" in the Makefile magic, then flag an error.
 
 	o Make pkgsrc work on more operating systems.
 
