@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:15:46 zuntum Exp $
+bin/esd
+bin/esd-config
+bin/esdcat
+bin/esdctl
+bin/esdfilt
+bin/esdmon
+bin/esdloop
+bin/esdplay
+bin/esdrec
+bin/esdsample
+etc/esd.conf
+include/esd.h
+lib/libesd.a
+lib/libesd.la
+lib/libesd.so
+lib/libesd.so.2
+lib/libesd.so.2.23
+lib/pkgconfig/esound.pc
+share/aclocal/esd.m4
+@unexec rmdir %D/lib/pkgconfig 2>/dev/null || true

@@ -1,0 +1,15 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2001/11/01 00:16:43 zuntum Exp $
+
+If you want other skins, you can download them from
+
+	http://www.netpedia.net/hosting/gqview/mpeg-skin.html
+
+Unpack them into the directory $HOME/.gqmpeg/skins, then type
+
+	gqmpeg -skin:skindir
+
+to use them, where "skindir" is the directory containing the skin you
+wish to use.
+
+===========================================================================

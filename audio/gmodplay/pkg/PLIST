@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/03/19 19:35:51 wiz Exp $
-bin/gmodplay
-bin/mod2wav
-share/doc/gmodplay/README
-@dirrm share/doc/gmodplay

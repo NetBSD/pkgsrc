@@ -1,0 +1,37 @@
+@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:15:33 zuntum Exp $
+bin/csound
+bin/cvanal
+bin/dnoise
+bin/envelope
+bin/extract
+bin/extractor
+bin/het_export
+bin/het_import
+bin/hetro
+bin/lpanal
+bin/lpc_export
+bin/mixer
+bin/pv_export
+bin/pv_import
+bin/pvanal
+bin/pvlook
+bin/scale
+bin/scot
+bin/scsort
+bin/sndinfo
+bin/srconv
+include/cscore.h
+include/dsputil.h
+include/fft.h
+include/lpc.h
+include/pvoc.h
+include/sfheader.h
+include/sysdep.h
+lib/libcscore.so
+lib/libcscore.so.4
+lib/libcscore.so.4.12.0.1b
+lib/libcsound.so
+lib/libcsound.so.4
+lib/libcsound.so.4.12.0.1b
+share/csound/csound.txt
+@dirrm share/csound

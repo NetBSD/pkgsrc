@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/08/16 05:31:59 lukem Exp $
-bin/cd-discid
-man/man1/cd-discid.1

@@ -1,0 +1,29 @@
+@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:17:04 zuntum Exp $
+bin/audiofile-config
+bin/sfconvert
+bin/sfinfo
+include/af_vfs.h
+include/audiofile.h
+include/aupvlist.h
+lib/libaudiofile.a
+lib/libaudiofile.la
+lib/libaudiofile.so
+lib/libaudiofile.so.0
+lib/libaudiofile.so.0.1
+share/aclocal/audiofile.m4
+share/doc/libaudiofile/afCloseFile
+share/doc/libaudiofile/afGetFrameSize
+share/doc/libaudiofile/afGetTrackBytes
+share/doc/libaudiofile/afIntro
+share/doc/libaudiofile/afNewFileSetup
+share/doc/libaudiofile/afOpenFile
+share/doc/libaudiofile/afQuery
+share/doc/libaudiofile/afReadFrames
+share/doc/libaudiofile/afReadMisc
+share/doc/libaudiofile/afSeekFrame
+share/doc/libaudiofile/afSetErrorHandler
+share/doc/libaudiofile/afSetVirtualByteOrder
+share/doc/libaudiofile/afWriteFrames
+share/doc/libaudiofile/sfconvert
+share/doc/libaudiofile/sfinfo
+@dirrm share/doc/libaudiofile

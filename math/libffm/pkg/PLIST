@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2000/11/15 14:20:22 wiz Exp $
-lib/libffm.a
-include/libffm.h
-share/doc/libffm/README
-@dirrm share/doc/libffm
