@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.116 2003/07/09 16:07:21 salo Exp $
+# $NetBSD: bsd.prefs.mk,v 1.117 2003/07/13 13:10:43 grant Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -335,7 +335,17 @@ WRKDIR_BASENAME?=	work
 
 WRKDIR?=		${BUILD_DIR}/${WRKDIR_BASENAME}
 
-# Set the default compiler to GCC 2.x if different compiler is not selected.
+# Sun C++ compilers don't support passing ld flags with -Wl to CC.
+#
+.if defined(USE_SUNPRO)
+_COMPILER_LD_FLAG=		# pattern for Sun compilers
+.else
+_COMPILER_LD_FLAG=	-Wl,	# pattern for GCC and others
+.endif
+
+# Ensure the correct rpath is passed to the linker to enable packages
+# to find shared libraries from gcc. Has no effect when pkgsrc gcc is
+# not being used.
 #
 # Valid compilers are:
 #
@@ -345,16 +355,6 @@ WRKDIR?=		${BUILD_DIR}/${WRKDIR_BASENAME}
 #	USE_SUNPRO  - Sun Microsystems, Inc. WorkShop/Forte/Sun ONE Studio
 #	              Compiler Collection
 #
-.if !defined(USE_GCC3) && !defined(USE_MIPSPRO) && !defined(USE_SUNPRO)
-USE_GCC2=		YES
-.endif
-
-# Sun C++ compilers don't support passing ld flags with -Wl to CC.
-#
-.if defined(USE_SUNPRO)
-_COMPILER_LD_FLAG=		# pattern for Sun compilers
-.else
-_COMPILER_LD_FLAG=	-Wl,	# pattern for GCC and others
-.endif
+.include "../../mk/gcc.buildlink2.mk"
 
 .endif	# BSD_PKG_MK
