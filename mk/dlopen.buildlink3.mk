@@ -1,4 +1,4 @@
-# $NetBSD: dlopen.buildlink3.mk,v 1.2 2004/11/25 21:43:19 jlam Exp $
+# $NetBSD: dlopen.buildlink3.mk,v 1.3 2004/11/25 22:18:34 jlam Exp $
 #
 # This Makefile fragment is included by package Makefiles and
 # buildlink3.mk files for the packages that use dlopen().
@@ -31,7 +31,7 @@ _DLOPEN_REQUIRE_PTHREADS=	yes
 .endfor
 
 .if defined(DLOPEN_REQUIRE_PTHREADS)
-_DLOPEN_REQUIRE_PTHREADS=	${DLOPEN_REQUIRE_PTHREADS}
+_DLOPEN_REQUIRE_PTHREADS:=	${DLOPEN_REQUIRE_PTHREADS}
 .else
 DLOPEN_REQUIRE_PTHREADS=	${_DLOPEN_REQUIRE_PTHREADS}
 .endif
