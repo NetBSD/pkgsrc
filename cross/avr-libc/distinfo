@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/07/17 18:50:22 wennmach Exp $
+$NetBSD: distinfo,v 1.2 2004/12/30 18:03:16 kristerw Exp $
 
-SHA1 (avr-libc-2003.05.11.tar.bz2) = 3b91d64ed98b059639c6f7ee3e4f603c5a49581b
-Size (avr-libc-2003.05.11.tar.bz2) = 287306 bytes
-SHA1 (patch-aa) = af02c046762ab87be40e5c446449dfcee61cb7ce
+SHA1 (avr-libc-1.0.4.tar.bz2) = 2642cc3f6a4cb4886155280265a44d45190aff22
+Size (avr-libc-1.0.4.tar.bz2) = 302725 bytes
+SHA1 (patch-aa) = 0d1ee96b71812d9d46a30c436318380ed5350c75
