@@ -1,7 +1,7 @@
-  The perl-ldap distribution is a collection of perl modules which provide an
+The perl-ldap distribution is a collection of perl modules which provide an
 object orientated interface to LDAP servers. 
 
-  The perl-ldap distribution has several advantages:
+The perl-ldap distribution has several advantages:
 
   * By using the perl object interface the perl-ldap modules provide
     programmers with an interface which allows complex searches of LDAP
