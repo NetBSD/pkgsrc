@@ -1,14 +1,16 @@
-@comment $NetBSD: PLIST,v 1.2 2004/02/16 12:53:30 seb Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/05/26 14:55:21 wiz Exp $
 bin/idn
+include/idn-free.h
 include/idn-int.h
 include/idna.h
 include/punycode.h
 include/stringprep.h
+include/tld.h
 lib/libidn.a
 lib/libidn.la
 lib/libidn.so
-lib/libidn.so.12
-lib/libidn.so.12.0
+lib/libidn.so.14
+lib/libidn.so.14.1
 lib/pkgconfig/libidn.pc
 man/man1/idn.1
 man/man3/idna_to_ascii_4i.3
@@ -38,3 +40,14 @@ man/man3/stringprep_utf8_nfkc_normalize.3
 man/man3/stringprep_utf8_to_locale.3
 man/man3/stringprep_utf8_to_ucs4.3
 man/man3/stringprep_utf8_to_unichar.3
+man/man3/tld_check_4.3
+man/man3/tld_check_4t.3
+man/man3/tld_check_4tz.3
+man/man3/tld_check_4z.3
+man/man3/tld_check_8z.3
+man/man3/tld_check_lz.3
+man/man3/tld_default_table.3
+man/man3/tld_get_4.3
+man/man3/tld_get_4z.3
+man/man3/tld_get_table.3
+man/man3/tld_get_z.3
