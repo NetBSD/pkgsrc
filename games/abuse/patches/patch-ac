@@ -1,7 +1,9 @@
-$NetBSD: patch-ac,v 1.1 1998/08/27 12:54:56 garbled Exp $
+$NetBSD: patch-ac,v 1.2 1998/08/29 12:19:46 garbled Exp $
 --- abuse/Makefile.in.orig	Wed Jul  9 00:55:21 1997
-+++ abuse/Makefile.in	Sat Jul 25 01:29:21 1998
-@@ -39,6 +39,6 @@
++++ abuse/Makefile.in	Sat Aug 29 04:31:24 1998
+@@ -37,10 +37,10 @@
+ AUTOMAKE = @AUTOMAKE@
+ AUTOHEADER = @AUTOHEADER@
  
 -INSTALL = @INSTALL@
 -INSTALL_PROGRAM = @INSTALL_PROGRAM@
@@ -12,3 +14,20 @@ $NetBSD: patch-ac,v 1.1 1998/08/27 12:54:56 garbled Exp $
 +INSTALL_DATA = $(INSTALL) -o bin -g games -m 0664
 +INSTALL_SCRIPT = $(INSTALL) -o bin -g games -m 0755
  transform = @program_transform_name@
+ 
+ NORMAL_INSTALL = true
+@@ -239,11 +239,11 @@
+ 
+ install-pkglibPROGRAMS: $(pkglib_PROGRAMS)
+ 	@$(NORMAL_INSTALL)
+-	$(mkinstalldirs) $(pkglibdir)
++	$(mkinstalldirs) $(bindir)
+ 	@list='$(pkglib_PROGRAMS)'; for p in $$list; do \
+ 	  if test -f $$p; then \
+-	    echo "  $(INSTALL_PROGRAM) $$p $(pkglibdir)/`echo $$p|sed '$(transform)'`"; \
+-	     $(INSTALL_PROGRAM) $$p $(pkglibdir)/`echo $$p|sed '$(transform)'`; \
++	    echo "  $(INSTALL_PROGRAM) $$p $(bindir)/`echo $$p|sed '$(transform)'`"; \
++	     $(INSTALL_PROGRAM) $$p $(bindir)/`echo $$p|sed '$(transform)'`; \
+ 	  else :; fi; \
+ 	done
+ 
