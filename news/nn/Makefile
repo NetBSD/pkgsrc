@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 1999/09/14 14:07:43 tron Exp $
+# $NetBSD: Makefile,v 1.12 1999/09/20 21:43:32 kim Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/07/30 18:17:48 adam Exp
 #
 
@@ -18,11 +18,30 @@ DEPENDS=	inn-2.2:../inn
 DEPENDS=	nntpclnt-1.6.1:../nntpclnt
 .endif
 
-post-extract:
-	@${MV} ${WRKSRC}/config.h-dist ${WRKSRC}/config.h
-	@${SED} -e 's#@@PREFIX@@#${PREFIX}#; \
-	  s#@@BINOWN@@#${BINOWN}#; \
-	  s#@@BINGRP@@#${BINGRP}#' \
-	  <${FILESDIR}/s-netbsd.h >${WRKSRC}/conf/s-netbsd.h
+.if ${OPSYS} == "SunOS"
+SFILE=		s-sunos5.h
+.elif ${OPSYS} == "Linux"
+SFILE=		s-linux.h
+.else
+SFILE=		s-netbsd.h
+.endif
+
+.if ${LOWER_ARCH} == "i386"
+MFILE=		m-i80386.h
+.else
+MFILE=		m-${LOWER_ARCH}.h
+.endif
+
+MAKE_ENV+=	CC="${CC}"
+
+post-patch:
+	@${SED} -e ' \
+	    s#@PREFIX@#${PREFIX}#; \
+	    s#@BINOWN@#${BINOWN}#; \
+	    s#@BINGRP@#${BINGRP}#; \
+	    s#@MFILE@#${MFILE}#; \
+	    s#@SFILE@#${SFILE}#' \
+	    <${WRKSRC}/config.h-dist >${WRKSRC}/config.h
+	@${CP} ${FILESDIR}/s-netbsd.h ${WRKSRC}/conf/s-netbsd.h
 
 .include "../../mk/bsd.pkg.mk"
