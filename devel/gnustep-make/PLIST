@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/09/27 10:40:16 rh Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/09/28 02:01:40 rh Exp $
 share/GNUstep/System/Makefiles/GNUstep-reset.sh
 share/GNUstep/System/Makefiles/GNUstep.csh
 share/GNUstep/System/Makefiles/GNUstep.sh
@@ -106,15 +106,15 @@ share/GNUstep/System/Tools/openapp
 share/GNUstep/System/Tools/opentool
 share/GNUstep/System/share/config.site
 @dirrm share/GNUstep/System/share
-@exec ${MKDIR} %D/share/GNUstep/System/Tools/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu
-@dirrm share/GNUstep/System/Tools/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu
-@dirrm share/GNUstep/System/Tools/ix86/${LOWER_OPSYS}elf
-@dirrm share/GNUstep/System/Tools/ix86
+@exec ${MKDIR} %D/share/GNUstep/System/Tools/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}/gnu-gnu-gnu
+@dirrm share/GNUstep/System/Tools/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}/gnu-gnu-gnu
+@dirrm share/GNUstep/System/Tools/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}
+@dirrm share/GNUstep/System/Tools/${GNUSTEP_HOST_CPU}
 @exec ${MKDIR} %D/share/GNUstep/System/Tools/Java
 @dirrm share/GNUstep/System/Tools/Java
 @dirrm share/GNUstep/System/Tools
-@dirrm share/GNUstep/System/Makefiles/ix86/${LOWER_OPSYS}elf
-@dirrm share/GNUstep/System/Makefiles/ix86
+@dirrm share/GNUstep/System/Makefiles/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}
+@dirrm share/GNUstep/System/Makefiles/${GNUSTEP_HOST_CPU}
 @dirrm share/GNUstep/System/Makefiles/Master
 @dirrm share/GNUstep/System/Makefiles/Instance/Shared
 @dirrm share/GNUstep/System/Makefiles/Instance
@@ -132,18 +132,18 @@ share/GNUstep/System/share/config.site
 @exec ${MKDIR} %D/share/GNUstep/System/Library/Bundles
 @dirrm share/GNUstep/System/Library/Bundles
 @dirrm share/GNUstep/System/Library
-@exec ${MKDIR} %D/share/GNUstep/System/Libraries/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu
-@dirrm share/GNUstep/System/Libraries/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu
-@dirrm share/GNUstep/System/Libraries/ix86/${LOWER_OPSYS}elf
-@dirrm share/GNUstep/System/Libraries/ix86
+@exec ${MKDIR} %D/share/GNUstep/System/Libraries/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}/gnu-gnu-gnu
+@dirrm share/GNUstep/System/Libraries/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}/gnu-gnu-gnu
+@dirrm share/GNUstep/System/Libraries/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}
+@dirrm share/GNUstep/System/Libraries/${GNUSTEP_HOST_CPU}
 @exec ${MKDIR} %D/share/GNUstep/System/Libraries/Resources
 @dirrm share/GNUstep/System/Libraries/Resources
 @exec ${MKDIR} %D/share/GNUstep/System/Libraries/Java
 @dirrm share/GNUstep/System/Libraries/Java
 @dirrm share/GNUstep/System/Libraries
-@exec ${MKDIR} %D/share/GNUstep/System/Headers/ix86/${LOWER_OPSYS}elf
-@dirrm share/GNUstep/System/Headers/ix86/${LOWER_OPSYS}elf
-@dirrm share/GNUstep/System/Headers/ix86
+@exec ${MKDIR} %D/share/GNUstep/System/Headers/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}
+@dirrm share/GNUstep/System/Headers/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}
+@dirrm share/GNUstep/System/Headers/${GNUSTEP_HOST_CPU}
 @dirrm share/GNUstep/System/Headers
 @exec ${MKDIR} %D/share/GNUstep/System/Documentation/man
 @dirrm share/GNUstep/System/Documentation/man
@@ -165,10 +165,10 @@ share/GNUstep/System/share/config.site
 @exec ${MKDIR} %D/share/GNUstep/Local/Users/Administrator
 @dirrm share/GNUstep/Local/Users/Administrator
 @dirrm share/GNUstep/Local/Users
-@exec ${MKDIR} %D/share/GNUstep/Local/Tools/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu
-@dirrm share/GNUstep/Local/Tools/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu
-@dirrm share/GNUstep/Local/Tools/ix86/${LOWER_OPSYS}elf
-@dirrm share/GNUstep/Local/Tools/ix86
+@exec ${MKDIR} %D/share/GNUstep/Local/Tools/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}/gnu-gnu-gnu
+@dirrm share/GNUstep/Local/Tools/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}/gnu-gnu-gnu
+@dirrm share/GNUstep/Local/Tools/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}
+@dirrm share/GNUstep/Local/Tools/${GNUSTEP_HOST_CPU}
 @exec ${MKDIR} %D/share/GNUstep/Local/Tools/Java
 @dirrm share/GNUstep/Local/Tools/Java
 @dirrm share/GNUstep/Local/Tools
@@ -183,18 +183,18 @@ share/GNUstep/System/share/config.site
 @exec ${MKDIR} %D/share/GNUstep/Local/Library/Bundles
 @dirrm share/GNUstep/Local/Library/Bundles
 @dirrm share/GNUstep/Local/Library
-@exec ${MKDIR} %D/share/GNUstep/Local/Libraries/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu
-@dirrm share/GNUstep/Local/Libraries/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu
-@dirrm share/GNUstep/Local/Libraries/ix86/${LOWER_OPSYS}elf
-@dirrm share/GNUstep/Local/Libraries/ix86
+@exec ${MKDIR} %D/share/GNUstep/Local/Libraries/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}/gnu-gnu-gnu
+@dirrm share/GNUstep/Local/Libraries/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}/gnu-gnu-gnu
+@dirrm share/GNUstep/Local/Libraries/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}
+@dirrm share/GNUstep/Local/Libraries/${GNUSTEP_HOST_CPU}
 @exec ${MKDIR} %D/share/GNUstep/Local/Libraries/Resources
 @dirrm share/GNUstep/Local/Libraries/Resources
 @exec ${MKDIR} %D/share/GNUstep/Local/Libraries/Java
 @dirrm share/GNUstep/Local/Libraries/Java
 @dirrm share/GNUstep/Local/Libraries
-@exec ${MKDIR} %D/share/GNUstep/Local/Headers/ix86/${LOWER_OPSYS}elf
-@dirrm share/GNUstep/Local/Headers/ix86/${LOWER_OPSYS}elf
-@dirrm share/GNUstep/Local/Headers/ix86
+@exec ${MKDIR} %D/share/GNUstep/Local/Headers/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}
+@dirrm share/GNUstep/Local/Headers/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}
+@dirrm share/GNUstep/Local/Headers/${GNUSTEP_HOST_CPU}
 @dirrm share/GNUstep/Local/Headers
 @exec ${MKDIR} %D/share/GNUstep/Local/Documentation/User
 @dirrm share/GNUstep/Local/Documentation/User
