@@ -1,0 +1,4 @@
+Iselect is a curses based interactive selection tool. It can be used
+either as an user interface frontend controlled by a
+Bourne-Shell/Perl/Tcl backend as its wrapper or in batch mode as a
+pipeline filter (usually between grep and the final executing command).
