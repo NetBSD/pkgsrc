@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2002/09/10 16:06:47 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2002/10/08 22:31:55 jlam Exp $
 #
 
 DISTNAME=		linc-0.5.0
@@ -13,10 +13,12 @@ COMMENT=		network client/server library
 
 BUILD_DEPENDS+=		gtk-doc-[0-9]*:../../textproc/gtk-doc
 
+USE_BUILDLINK2=		YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
-.include "../../devel/pkgconfig/buildlink.mk"
-.include "../../devel/glib2/buildlink.mk"
+.include "../../devel/glib2/buildlink2.mk"
+.include "../../devel/pkgconfig/buildlink2.mk"
+
 .include "../../mk/bsd.pkg.mk"
