@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8013 2004/11/26 11:39:52 adam Exp $
+$NetBSD: CHANGES,v 1.8014 2004/11/26 13:06:20 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5449,3 +5449,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated tcl to 8.4.8 [adam 2004-11-26]
 	Updated tk to 8.4.8 [adam 2004-11-26]
 	Updated bitchx to 1.1 [adam 2004-11-26]
+	Added mftrace-1.0.35 [adam 2004-11-26]
