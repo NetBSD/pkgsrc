@@ -1,6 +1,6 @@
 #!@PREFIX@/bin/perl
 
-# $NetBSD: lintpkgsrc.pl,v 1.56 2001/11/01 23:24:44 jmc Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.57 2001/12/03 17:52:25 wiz Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -639,6 +639,11 @@ sub parse_makefile_pkgsrc
 	{ $pkgname = $vars->{'DISTNAME'}; }
     if (defined $pkgname)
 	{
+	if (defined $vars->{'PKGREVISION'})
+	    {
+	    $pkgname .= "nb";
+	    $pkgname .= $vars->{'PKGREVISION'};
+	    }
 	if ( $pkgname =~ /\$/ )
 	    { print "\rBogus: $pkgname (from $file)\n"; }
 	elsif ($pkgname =~ /(.*)-(\d.*)/)
