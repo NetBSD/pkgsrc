@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2000/09/03 23:36:49 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2000/09/27 01:49:34 fredb Exp $
 #
 
 DISTNAME=       bxform-088
@@ -55,9 +55,9 @@ SHLIB_MINOR=	88
 
 MAKE_ENV+=	SHLIB_MAJOR="${SHLIB_MAJOR}" SHLIB_MINOR="${SHLIB_MINOR}"
 
-# XXX ELF linker tries to resolve libGL.so symbols when linking with
-# XXX shared libxforms, so for now, remove the shared lib.
-.if ${OBJECT_FMT} == "ELF"
+# XXX Run-time link editor tries to resolve libGL.so symbols when linking
+# XXX with shared libxforms, but all the packages that requre xforms seem
+# XXX to work OK without -lGL, so for now, remove the shared lib.
 PLIST_SRC=	${PKGDIR}/PLIST.mi
 
 post-install:
@@ -68,6 +68,5 @@ post-install:
 		${PREFIX}/lib/libxforms.so.${SHLIB_MAJOR}.${SHLIB_MINOR} \
 		${PREFIX}/lib/libxforms.so.${SHLIB_MAJOR} \
 		${PREFIX}/lib/libxforms.so
-.endif
 
 .include "../../mk/bsd.pkg.mk"
