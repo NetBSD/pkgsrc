@@ -1,6 +1,6 @@
 #!/bin/sh -e
 #
-# $Id: pkgchk.sh,v 1.17 2001/09/28 11:30:55 abs Exp $
+# $Id: pkgchk.sh,v 1.18 2001/09/29 08:18:09 abs Exp $
 #
 # TODO: Handle and as well as or tags (eg: i386+x11)
 # TODO: Handle updates with dependencies via binary packages
@@ -263,24 +263,25 @@ if [ -n "$opt_c" ];then
     if (alreadyset[$1])
 	{ next; }
     need = 0;
-    for (chk = 1 ; chk<NF ; ++chk)		# For each word on the line
+    for (f = 1 ; f<=NF ; ++f)		# For each word on the line
 	{
-	if (sub("^-", "", $chk))	# If it begins with a '-'
+	if (sub("^-", "", $f))	# If it begins with a '-'
 	    {
-	    if ($chk in taglist)	# If match, discard
+	    if ($f in taglist)	# If match, discard
 		{ next; }
 	    }
 	else
 	    {
-	    if ($chk in taglist)	# If match, note needed
+	    if ($f in taglist)	# If match, note needed
 		{ need = 1; }
 	    }
 	}
-    if (NF == 1 || need)
+    if (NF == 2 || need)
 	{ print $1 }
     }
     ' < $PKGCHK_CONF
     `
+    exit;
 fi
 
 # Check packages are installed
