@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2001/06/12 20:33:07 jlam Exp $
+# $NetBSD: Makefile,v 1.36 2001/06/28 23:34:10 itojun Exp $
 #
 
 DISTNAME=	racoon-20010418a
@@ -25,7 +25,7 @@ BUILD_DEFS+=	USE_INET6
 USE_SSL=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 CFLAGS+=	-I${LOCALBASE}/include
-LIBS=		-L${LOCALBASE}/lib -L${WRKSRC}/../libipsec
+LIBPATH=	-L${LOCALBASE}/lib
 
 CONFLICTS+=	racoon-*
 
