@@ -1,0 +1,43 @@
+$NetBSD: patch-ab,v 1.1 1998/09/08 10:17:26 agc Exp $
+
+Compensate for older versions of the XF86MiscMouseSettings struct,
+which don't have resolution or buttons fields.  Use the configure
+script, and the cpp symbol HAVE_RESOLUTION_FIELD.
+
+--- tclmisc.c	1998/09/08 09:32:45	1.1
++++ tclmisc.c	1998/09/08 09:36:57
+@@ -353,6 +353,7 @@
+ 			name = "Unknown";
+ 		else
+ 			name = msetable[mseinfo.type+1];
++#ifdef HAVE_RESOLUTION_FIELD
+ 		sprintf(tmpbuf, "%s %s %d %d %d %d %s %d %s",
+ 			mseinfo.device==NULL? "{}": mseinfo.device,
+ 			name,
+@@ -361,6 +362,15 @@
+ 			mseinfo.emulate3buttons? "on": "off",
+ 			mseinfo.emulate3timeout,
+ 			mseinfo.chordmiddle? "on": "off");
++#else
++		sprintf(tmpbuf, "%s %s %d %d %s %d %s",
++			mseinfo.device==NULL? "{}": mseinfo.device,
++			name,
++			mseinfo.baudrate, mseinfo.samplerate,
++			mseinfo.emulate3buttons? "on": "off",
++			mseinfo.emulate3timeout,
++			mseinfo.chordmiddle? "on": "off");
++#endif
+ 		if (mseinfo.flags & MF_CLEAR_DTR)
+ 			strcat(tmpbuf, " ClearDTR");
+ 		if (mseinfo.flags & MF_CLEAR_RTS)
+@@ -419,8 +429,10 @@
+         }
+ 	mseinfo.baudrate = atoi(argv[3]);
+ 	mseinfo.samplerate = atoi(argv[4]);
++#ifdef HAVE_RESOLUTION_FIELD
+ 	mseinfo.resolution = atoi(argv[5]);
+ 	mseinfo.buttons = atoi(argv[6]);
++#endif
+ 	if (!StrCaseCmp(argv[7], "on"))
+ 		mseinfo.emulate3buttons = 1;
+ 	else if (!StrCaseCmp(argv[7], "off"))
