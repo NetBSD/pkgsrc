@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.131 2003/07/17 22:55:28 grant Exp $
+# $NetBSD: Makefile,v 1.132 2003/07/19 12:31:05 tron Exp $
 #
 # This pkg does not compile in mod_ssl, only the `mod_ssl EAPI' (a set of
 # code hooks that allow mod_ssl to be compiled separately later, if desired).
 
 DISTNAME=		apache_${APACHE_VERSION}
 PKGNAME=		apache-${APACHE_VERSION}
-PKGREVISION=		4
-APACHE_VERSION=		1.3.27
+APACHE_VERSION=		1.3.28
 CATEGORIES=		www
 MASTER_SITES=		${MASTER_SITE_APACHE:=httpd/} \
 			${MASTER_SITE_APACHE:=httpd/old/}
@@ -19,7 +18,7 @@ COMMENT=		Apache HTTP (Web) server
 NETBSD_LOGO=		sitedrivenby.gif
 SITES_${NETBSD_LOGO}=	http://www.NetBSD.org/images/logos/
 
-MODSSL_VERSION=		2.8.14
+MODSSL_VERSION=		2.8.15
 MODSSL_DISTNAME=	mod_ssl-${MODSSL_VERSION}-${APACHE_VERSION}
 MODSSL_DIST=		${MODSSL_DISTNAME}.tar.gz
 MODSSL_SRC=		${WRKDIR}/${MODSSL_DISTNAME}
