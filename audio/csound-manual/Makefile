@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/03/13 13:23:06 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2001/06/05 16:03:52 zuntum Exp $
 #
 
-DISTNAME=		csound-manual-4.07
+DISTNAME=		csound-manual-4.10
 CATEGORIES=		audio
 MASTER_SITES=		ftp://ftp.csounds.com/manual/current/
 EXTRACT_SUFX=		.zip
@@ -13,9 +13,7 @@ DISTFILES=		ascii.zip \
 			spplmnt1.zip \
 			spplmnt2.zip \
 			spplmtxt.zip \
-			toots.zip \
-			update1.zip \
-			update2.zip
+			toots.zip
 
 MAINTAINER=		collver@softhome.net
 HOMEPAGE=		http://www.csound.org
@@ -35,7 +33,7 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/csound
 	cd ${WRKSRC} && ${INSTALL_DATA} manual.txt spanish4.pdf manual.pdf \
 		manual1.pdf manual2.pdf spplmnt.pdf spplmnt1.pdf spplmnt2.pdf \
-		spplmnt.txt 4_07up.pdf 4_07up1.pdf 4_07up2.pdf \
+		spplmnt.txt \
 		${PREFIX}/share/doc/csound
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/csound
 	cd ${WRKSRC} && ${PAX} -rw appendix command control cscore durctl \
