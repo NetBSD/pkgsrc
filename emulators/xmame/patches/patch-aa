@@ -118,7 +118,7 @@
 +ifeq (${MACHINE},i386)
 +DEFS.netbsd        = -DLSB_FIRST -DX86_ASM -DNETBSD -DUSE_AUDIO
 +else
-+DEFS.netbsd        = -DLSB_FIRST -DNETBSD -DUSE_AUDIO
++DEFS.netbsd        = -DLSB_FIRST -DACORN -DNETBSD -DUSE_AUDIO
 +endif
  DEFS.sunos	   = -Dsun -DCLOCKS_PER_SEC=1000000 -DACORN
  DEFS.solaris	   = -Dsun -DACORN 
