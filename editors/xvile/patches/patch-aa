@@ -1,21 +1,23 @@
-$NetBSD: patch-aa,v 1.3 1998/09/14 22:26:06 garbled Exp $
---- makefile.in.orig	Tue May 26 17:54:37 1998
-+++ makefile.in	Mon Sep 14 15:06:04 1998
-@@ -58,7 +58,7 @@
+$NetBSD: patch-aa,v 1.4 1999/10/21 18:41:15 agc Exp $
+
+--- makefile.in.orig	Thu Oct 21 18:55:31 1999
++++ makefile.in	Thu Oct 21 19:05:02 1999
+@@ -51,7 +51,7 @@
  
- manext		= 1
- bindir		= @bindir@
--datadir		= @datadir@/vile
-+datadir		= @datadir@/xvile
- perldir		= $(datadir)/perl
- mandir		= @mandir@/man$(manext)
+ PERL		= @PERL@
+ PERLLIB		= @perl_lib_path@
+-INSTALL_SCRIPT	= $(srcdir)/sinstall.sh $(PERL) $(INSTALL_PROGRAM)
++INSTALL_SCRIPT	= ${BSD_INSTALL_SCRIPT}
  
-@@ -71,7 +71,7 @@
- 		-DVILE_STARTUP_PATH=\"@VILE_STARTUP_PATH@\" \
- 		-DHAVE_CONFIG_H @CPPFLAGS@
  
--LDFLAGS		= @IMAKE_LOADFLAGS@
-+LDFLAGS		= @IMAKE_LOADFLAGS@ @LDFLAGS@
+ prefix		= @prefix@
+@@ -615,6 +615,9 @@
  
- INSTALL_DIRS    = $(bindir) $(datadir) $(perldir) $(mandir)
+ $(INSTALL_DIRS):
+ 	$(SHELL) ${srcdir}/mkdirs.sh $@
++
++${INSTALL_PERL_DIRS}:
++	${SHELL} ${srcdir}/mkdirs.sh $@
+ 
+ ALWAYS:
  
