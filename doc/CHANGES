@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3505 2003/09/24 08:43:31 recht Exp $
+$NetBSD: CHANGES,v 1.3506 2003/09/24 09:14:28 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3916,3 +3916,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated Canna-lib to 3.6p4 [uebayasi 2003-09-23]
 	Updated Canna-server to 3.6p4 [uebayasi 2003-09-23]
 	Updated abook to 0.5.0 [xtraeme 2003-09-24]
+	Updated libesmtp to 1.0.1 [xtraeme 2003-09-24]
