@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2000/01/21 12:53:42 ad Exp $
+# $NetBSD: Makefile,v 1.12 2000/02/15 16:54:26 ad Exp $
 
 DISTNAME=	exim-3.13
 CATEGORIES=	mail net
@@ -10,7 +10,7 @@ DISTFILES=	exim-3.13.tar.gz exim-html-3.10.tar.gz
 MAINTAINER=	ad@netbsd.org
 HOMEPAGE=	http://www.exim.org/
 
-DEPENDS+=	perl-5.00404:../../lang/perl5
+USE_PERL5=	yes
 
 pre-patch:
 	${MKDIR} ${WRKSRC}/Local
