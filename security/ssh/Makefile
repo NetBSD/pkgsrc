@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.110 2004/02/23 00:33:42 xtraeme Exp $
+# $NetBSD: Makefile,v 1.111 2004/02/23 03:51:47 kristerw Exp $
 # FreeBSD Id: Makefile,v 1.47 1997/11/10 22:04:42 dima Exp
 #
 
@@ -29,6 +29,7 @@ EXTRACT_ONLY=		${DISTNAME}${EXTRACT_SUFX}
 # the next line is needed if you have the gmp package installed
 LDFLAGS+=		-Lgmp-2.0.2-ssh-2
 GNU_CONFIGURE=		YES
+USE_X11=		YES
 USE_BUILDLINK3=		YES
 
 .include "../../mk/bsd.prefs.mk"
