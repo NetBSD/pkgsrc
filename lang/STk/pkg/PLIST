@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 1998/07/02 20:43:19 perry Exp $
+@comment $NetBSD: PLIST,v 1.2 1998/07/21 14:58:44 agc Exp $
 bin/snow
 bin/snow-3.99.2
 bin/stk
@@ -256,16 +256,16 @@ lib/stk/3.99.2/Images/vlines2
 lib/stk/3.99.2/Images/vlines3
 lib/stk/3.99.2/Images/warning
 lib/stk/3.99.2/Images/warning.xpm
-lib/stk/3.99.2/NetBSD-1.3F-i386/hash.so
-lib/stk/3.99.2/NetBSD-1.3F-i386/html.so
-lib/stk/3.99.2/NetBSD-1.3F-i386/jpeg.so
-lib/stk/3.99.2/NetBSD-1.3F-i386/pixmap.so
-lib/stk/3.99.2/NetBSD-1.3F-i386/posix.so
-lib/stk/3.99.2/NetBSD-1.3F-i386/process.so
-lib/stk/3.99.2/NetBSD-1.3F-i386/snow
-lib/stk/3.99.2/NetBSD-1.3F-i386/socket.so
-lib/stk/3.99.2/NetBSD-1.3F-i386/sregexp.so
-lib/stk/3.99.2/NetBSD-1.3F-i386/stk
+lib/stk/3.99.2/${OPSYS}-${OS_VERSION}-${MACHINE_GNU_ARCH}/hash.so
+lib/stk/3.99.2/${OPSYS}-${OS_VERSION}-${MACHINE_GNU_ARCH}/html.so
+lib/stk/3.99.2/${OPSYS}-${OS_VERSION}-${MACHINE_GNU_ARCH}/jpeg.so
+lib/stk/3.99.2/${OPSYS}-${OS_VERSION}-${MACHINE_GNU_ARCH}/pixmap.so
+lib/stk/3.99.2/${OPSYS}-${OS_VERSION}-${MACHINE_GNU_ARCH}/posix.so
+lib/stk/3.99.2/${OPSYS}-${OS_VERSION}-${MACHINE_GNU_ARCH}/process.so
+lib/stk/3.99.2/${OPSYS}-${OS_VERSION}-${MACHINE_GNU_ARCH}/snow
+lib/stk/3.99.2/${OPSYS}-${OS_VERSION}-${MACHINE_GNU_ARCH}/socket.so
+lib/stk/3.99.2/${OPSYS}-${OS_VERSION}-${MACHINE_GNU_ARCH}/sregexp.so
+lib/stk/3.99.2/${OPSYS}-${OS_VERSION}-${MACHINE_GNU_ARCH}/stk
 lib/stk/3.99.2/STk/Balloon.stklos
 lib/stk/3.99.2/STk/Basics.stklos
 lib/stk/3.99.2/STk/Button.stklos
@@ -434,7 +434,7 @@ lib/stk/man
 @dirrm lib/stk/3.99.2/man
 @dirrm lib/stk/3.99.2/STk/Match
 @dirrm lib/stk/3.99.2/STk
-@dirrm lib/stk/3.99.2/NetBSD-1.3F-i386
+@dirrm lib/stk/3.99.2/${OPSYS}-${OS_VERSION}-${MACHINE_GNU_ARCH}
 @dirrm lib/stk/3.99.2/Images
 @dirrm lib/stk/3.99.2/Help/Img
 @dirrm lib/stk/3.99.2/Help
