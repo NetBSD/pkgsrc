@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1 2001/06/11 17:40:48 bouyer Exp $
+$NetBSD: patch-aa,v 1.2 2001/06/11 17:58:00 bouyer Exp $
 
---- koncd/cddata.cpp.orig	Mon Jun 11 19:01:08 2001
-+++ koncd/cddata.cpp	Mon Jun 11 19:02:38 2001
-@@ -17,14 +17,18 @@
+--- koncd/cddata.cpp.orig	Sun Mar 11 12:35:36 2001
++++ koncd/cddata.cpp	Mon Jun 11 19:50:12 2001
+@@ -17,14 +17,22 @@
  struct DEVICES *CurDev;
  
  CDdata::CDdata( QObject * , const char * ) {
@@ -20,14 +20,18 @@ $NetBSD: patch-aa,v 1.1 2001/06/11 17:40:48 bouyer Exp $
 -	proc.start( KProcess::Block, KProcess::AllOutput );
 +	for (i = 0; i < 8; i++) {
 +  		proc.clearArguments();
++#ifdef __i386__
 +		snprintf(prog2, sizeof( prog2 ) - 1, "/dev/rcd%dd",i);	
++#else
++		snprintf(prog2, sizeof( prog2 ) - 1, "/dev/rcd%dc",i);	
++#endif
 +		proc << prog << prog2 << "identify";
 +		proc.start( KProcess::Block, KProcess::AllOutput );
 +	}
    sprintf( dummystr,"dev=unknown" );
  		
  	struct DEVICES *d;
-@@ -105,40 +109,34 @@
+@@ -105,40 +113,39 @@
  		return;
  	}
  	bzero( buf, sizeof( buf ) );
@@ -54,8 +58,13 @@ $NetBSD: patch-aa,v 1.1 2001/06/11 17:40:48 bouyer Exp $
 -    					(CurBus < 32) ? CurBus:0, (dev -> dev < 32) ? dev -> dev:0 );
 -    		for( ; *b && *b != '\''; b++ ); // point to '
 +    		dev -> dev = buf[8] - 0x30;
++#ifdef __i386__
 +    		sprintf( dev -> devstr, "dev=/dev/rcd%dd",
 +    					(dev -> dev < 32) ? dev -> dev:0 );
++#else
++    		sprintf( dev -> devstr, "dev=/dev/rcd%dc",
++    					(dev -> dev < 32) ? dev -> dev:0 );
++#endif
      		if( *b ) b++;	// point to next character
 -    		for( i = 0; *b && *b != '\'' && i < sizeof(dev->vendor)-1; b++, i++ )
 +    		for( i = 0; *b && *b != ',' && i < sizeof(dev->vendor)-1; b++, i++ )
