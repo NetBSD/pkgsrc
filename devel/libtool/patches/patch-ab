@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.19 2001/03/12 11:23:04 skrll Exp $
+$NetBSD: patch-ab,v 1.20 2001/04/03 17:06:17 skrll Exp $
 
 --- ltmain.sh.orig	Mon Feb 19 05:05:23 2001
 +++ ltmain.sh
@@ -39,3 +39,44 @@ $NetBSD: patch-ab,v 1.19 2001/03/12 11:23:04 skrll Exp $
  	  *)
   	    # Add libc to deplibs on all other systems if necessary.
   	    if test $build_libtool_need_lc = "yes"; then
+@@ -2771,6 +2774,40 @@
+ 	    fi
+ 	  done # Gone through all deplibs.
+ 	  ;;
++        match_pattern*)
++          set dummy $deplibs_check_method
++          match_pattern_regex=`expr "$deplibs_check_method" : "$2 \(.*\)"`
++          for a_deplib in $deplibs; do
++            name="`expr $a_deplib : '-l\(.*\)'`"
++            # If $name is empty we are operating on a -L argument.
++            if test "$name" != "" -a "$name" != "0"; then
++              libname=`eval \\$echo \"$libname_spec\"`
++              for i in $lib_search_path $sys_lib_search_path $shlib_search_path; do
++                potential_libs=`ls $i/$libname[.-]* 2>/dev/null`
++                for potent_lib in $potential_libs; do
++                  if eval echo \"$potent_lib\" 2>/dev/null \
++                      | sed 10q \
++                      | egrep "$match_pattern_regex" > /dev/null; then
++                    newdeplibs="$newdeplibs $a_deplib"
++                    a_deplib=""
++                    break 2
++                  fi
++                done
++              done
++              if test -n "$a_deplib" ; then
++                droppeddeps=yes
++                echo
++                echo "*** Warning: This library needs some functionality provided by $a_deplib."
++                echo "*** I have the capability to make that library automatically link in when"
++                echo "*** you link to this library.  But I can only do this if you have a"
++                echo "*** shared version of the library, which you do not appear to have."
++              fi
++            else
++              # Add a -L argument.
++              newdeplibs="$newdeplibs $a_deplib"
++            fi
++          done # Gone through all deplibs.
++          ;;
+ 	none | unknown | *)
+ 	  newdeplibs=""
+ 	  if $echo "X $deplibs" | $Xsed -e 's/ -lc$//' \
