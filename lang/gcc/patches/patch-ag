@@ -1,7 +1,7 @@
-$NetBSD: patch-ag,v 1.5 2003/05/24 19:26:26 jschauma Exp $
+$NetBSD: patch-ag,v 1.6 2003/06/24 16:50:47 jmc Exp $
 
---- gcc/f/Make-lang.in.orig	Sat May 24 14:56:08 2003
-+++ gcc/f/Make-lang.in	Sat May 24 14:58:41 2003
+--- ../gcc-2.95.3/gcc/f/Make-lang.in.orig	Sat May 24 14:56:08 2003
++++ ../gcc-2.95.3/gcc/f/Make-lang.in	Sat May 24 14:58:41 2003
 @@ -355,9 +355,9 @@
  	  chmod a-x $(infodir)/g77.info*; \
  	else true; fi
