@@ -1,4 +1,4 @@
-# $NetBSD: phpversion.mk,v 1.1.1.1 2004/10/31 19:30:30 jdolecek Exp $
+# $NetBSD: phpversion.mk,v 1.2 2004/11/04 18:40:39 jdolecek Exp $
 # PHP wrapper, for module builds
 
 .if !defined(PHPVERSION_MK)
@@ -56,6 +56,14 @@ _PHP_VERSION=	${PHP_VERSION_DEFAULT}
 _PHP_VERSION=	${_PHP_VERSION_FIRSTACCEPTED}
 .endif
 
+# export some of internal variables
+PKG_PHP_VERSION=	${_PHP_VERSION}
+PKG_PHP=		PHP${_PHP_VERSION}
+
+MESSAGE_SUBST+=		PKG_PHP_VERSION=${PKG_PHP_VERSION} \
+			PKG_PHP=${PKG_PHP}
+PLIST_SUBST+=		PKG_PHP_VERSION=${PKG_PHP_VERSION}
+
 #
 # set variables for the version we decided to use:
 #
@@ -65,7 +73,7 @@ PHPPKGSRCDIR=	../../www/php4
 PHPPKGSRCDIR=	../../lang/php5
 .else
 # force an error
-PKG_SKIP_REASON+=	"PHP${_PHP_VERSION} is not a valid package"
+PKG_SKIP_REASON+=	"${PKG_PHP} is not a valid package"
 .endif
 
 .endif	# PHPVERSION_MK
