@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5305 2004/03/28 04:40:59 taca Exp $
+$NetBSD: CHANGES,v 1.5306 2004/03/28 06:35:03 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1527,3 +1527,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated libmilter to 8.12.11 [tron 2004-03-27]
 	Updated naim to 0.11.6.7 [snj 2004-03-28]
 	Updated djbdns to 1.05nb4 [taca 2004-03-28]
+	Updated ntp4 to 4.2.0nb3 [xtraeme 2004-03-28]
