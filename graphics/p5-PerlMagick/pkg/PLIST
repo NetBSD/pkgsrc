@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/04/23 01:59:58 kim Exp $
+lib/perl5/man/man3/Image::Magick.3
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Image/Magick/.packlist
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Image/Magick/Magick.bs
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Image/Magick/Magick.so
+lib/perl5/site_perl/Image/Magick.pm
+lib/perl5/site_perl/auto/Image/Magick/autosplit.ix
+@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Image/Magick
+@dirrm lib/perl5/site_perl/auto/Image/Magick
