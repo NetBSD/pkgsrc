@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/02/14 20:19:47 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/03/12 13:03:30 jmmv Exp $
 include/libgnomeprint-2.2/libgnomeprint/gnome-font-face.h
 include/libgnomeprint-2.2/libgnomeprint/gnome-font.h
 include/libgnomeprint-2.2/libgnomeprint/gnome-glyphlist.h
@@ -76,6 +76,7 @@ ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/libgnomeprint-2.2.mo
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/libgnomeprint-2.2.mo
 ${PKGLOCALEDIR}/locale/be/LC_MESSAGES/libgnomeprint-2.2.mo
 ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/libgnomeprint-2.2.mo
+${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/libgnomeprint-2.2.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/libgnomeprint-2.2.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/libgnomeprint-2.2.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/libgnomeprint-2.2.mo
@@ -83,11 +84,15 @@ ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/libgnomeprint-2.2.mo
 ${PKGLOCALEDIR}/locale/el/LC_MESSAGES/libgnomeprint-2.2.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/libgnomeprint-2.2.mo
 ${PKGLOCALEDIR}/locale/et/LC_MESSAGES/libgnomeprint-2.2.mo
+${PKGLOCALEDIR}/locale/fa/LC_MESSAGES/libgnomeprint-2.2.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/libgnomeprint-2.2.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/libgnomeprint-2.2.mo
+${PKGLOCALEDIR}/locale/ga/LC_MESSAGES/libgnomeprint-2.2.mo
 ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/libgnomeprint-2.2.mo
 ${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/libgnomeprint-2.2.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/libgnomeprint-2.2.mo
+${PKGLOCALEDIR}/locale/id/LC_MESSAGES/libgnomeprint-2.2.mo
+${PKGLOCALEDIR}/locale/is/LC_MESSAGES/libgnomeprint-2.2.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/libgnomeprint-2.2.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/libgnomeprint-2.2.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/libgnomeprint-2.2.mo
