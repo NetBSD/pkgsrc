@@ -1,12 +1,7 @@
-$NetBSD: patch-ab,v 1.1 2001/03/07 00:17:30 hubertf Exp $
+$NetBSD: patch-ab,v 1.2 2001/10/30 14:17:03 agc Exp $
 
-Index: Makefile.inc
-===================================================================
-RCS file: /cvsroot/basesrc/usr.sbin/pkg_install/Makefile.inc,v
-retrieving revision 1.14
-diff -u -r1.14 Makefile.inc
---- Makefile.inc	2001/01/07 08:00:58	1.14
-+++ Makefile.inc	2001/03/06 23:54:39
+--- Makefile.inc	Mon Oct 29 15:55:48 2001
++++ Makefile.inc	Mon Oct 29 15:47:43 2001
 @@ -3,6 +3,9 @@
  
  .include <bsd.own.mk>
@@ -17,3 +12,14 @@ diff -u -r1.14 Makefile.inc
  LIBINSTALL != cd ${.CURDIR}/../lib && ${PRINTOBJDIR}
  CPPFLAGS+=-I${.CURDIR}/../lib ${DEBUG} -DBINDIR='"${BINDIR}"'
  
+@@ -35,6 +38,10 @@
+ CHMOD?= /bin/chmod
+ CHOWN?= /bin/chown
+ CHGRP?= /bin/chgrp
++.elif ${OPSYS} == "Darwin"
++CHMOD?= /bin/chmod
++CHOWN?= /usr/sbin/chown
++CHGRP?= /usr/bin/chgrp
+ .endif
+ 
+ CPPFLAGS+= -DCHMOD='"${CHMOD}"' -DCHOWN='"${CHOWN}"' -DCHGRP='"${CHGRP}"'
