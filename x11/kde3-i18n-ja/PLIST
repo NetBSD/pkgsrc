@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2004/06/10 13:31:36 markd Exp $
+@comment $NetBSD: PLIST,v 1.9 2004/08/21 16:02:41 markd Exp $
 share/doc/kde/HTML/ja/common/1.png
 share/doc/kde/HTML/ja/common/10.png
 share/doc/kde/HTML/ja/common/2.png
@@ -251,7 +251,6 @@ share/kde/locale/ja/LC_MESSAGES/dub.mo
 share/kde/locale/ja/LC_MESSAGES/extensionproxy.mo
 share/kde/locale/ja/LC_MESSAGES/ffrs.mo
 share/kde/locale/ja/LC_MESSAGES/filetypes.mo
-share/kde/locale/ja/LC_MESSAGES/flashkard.mo
 share/kde/locale/ja/LC_MESSAGES/fontinst.mo
 share/kde/locale/ja/LC_MESSAGES/fsview.mo
 share/kde/locale/ja/LC_MESSAGES/htmlsearch.mo
@@ -300,7 +299,6 @@ share/kde/locale/ja/LC_MESSAGES/katexmltools.mo
 share/kde/locale/ja/LC_MESSAGES/katomic.mo
 share/kde/locale/ja/LC_MESSAGES/kaudiocreator.mo
 share/kde/locale/ja/LC_MESSAGES/kbabel.mo
-share/kde/locale/ja/LC_MESSAGES/kbabeldict.mo
 share/kde/locale/ja/LC_MESSAGES/kbackgammon.mo
 share/kde/locale/ja/LC_MESSAGES/kbattleship.mo
 share/kde/locale/ja/LC_MESSAGES/kbinaryclock.mo
@@ -331,7 +329,6 @@ share/kde/locale/ja/LC_MESSAGES/kcmcrypto.mo
 share/kde/locale/ja/LC_MESSAGES/kcmcss.mo
 share/kde/locale/ja/LC_MESSAGES/kcmemail.mo
 share/kde/locale/ja/LC_MESSAGES/kcmenergy.mo
-share/kde/locale/ja/LC_MESSAGES/kcmfileshare.mo
 share/kde/locale/ja/LC_MESSAGES/kcmfonts.mo
 share/kde/locale/ja/LC_MESSAGES/kcmhtmlsearch.mo
 share/kde/locale/ja/LC_MESSAGES/kcmicons.mo
@@ -520,7 +517,10 @@ share/kde/locale/ja/LC_MESSAGES/kmenuapplet.mo
 share/kde/locale/ja/LC_MESSAGES/kmenuedit.mo
 share/kde/locale/ja/LC_MESSAGES/kmessedwords.mo
 share/kde/locale/ja/LC_MESSAGES/kmid.mo
-share/kde/locale/ja/LC_MESSAGES/kmidi.mo
+share/kde/locale/ja/LC_MESSAGES/kmilo_generic.mo
+share/kde/locale/ja/LC_MESSAGES/kmilo_kvaio.mo
+share/kde/locale/ja/LC_MESSAGES/kmilo_powerbook.mo
+share/kde/locale/ja/LC_MESSAGES/kmilod.mo
 share/kde/locale/ja/LC_MESSAGES/kmines.mo
 share/kde/locale/ja/LC_MESSAGES/kminipagerapplet.mo
 share/kde/locale/ja/LC_MESSAGES/kmix.mo
@@ -532,7 +532,6 @@ share/kde/locale/ja/LC_MESSAGES/kmplot.mo
 share/kde/locale/ja/LC_MESSAGES/kmrml.mo
 share/kde/locale/ja/LC_MESSAGES/knewsticker.mo
 share/kde/locale/ja/LC_MESSAGES/knode.mo
-share/kde/locale/ja/LC_MESSAGES/knorskverbs.mo
 share/kde/locale/ja/LC_MESSAGES/knotes.mo
 share/kde/locale/ja/LC_MESSAGES/knotify.mo
 share/kde/locale/ja/LC_MESSAGES/kodo.mo
@@ -552,7 +551,6 @@ share/kde/locale/ja/LC_MESSAGES/korganizer.mo
 share/kde/locale/ja/LC_MESSAGES/korn.mo
 share/kde/locale/ja/LC_MESSAGES/kpackage.mo
 share/kde/locale/ja/LC_MESSAGES/kpager.mo
-share/kde/locale/ja/LC_MESSAGES/kpaint.mo
 share/kde/locale/ja/LC_MESSAGES/kpartapp.mo
 share/kde/locale/ja/LC_MESSAGES/kpartsaver.mo
 share/kde/locale/ja/LC_MESSAGES/kpat.mo
@@ -701,7 +699,6 @@ share/kde/locale/ja/LC_MESSAGES/timezones.mo
 share/kde/locale/ja/LC_MESSAGES/tippecanoe.mo
 share/kde/locale/ja/LC_MESSAGES/tyler.mo
 share/kde/locale/ja/LC_MESSAGES/uachangerplugin.mo
-share/kde/locale/ja/LC_MESSAGES/userinfo.mo
 share/kde/locale/ja/LC_MESSAGES/validatorsplugin.mo
 share/kde/locale/ja/LC_MESSAGES/vimpart.mo
 share/kde/locale/ja/LC_MESSAGES/wakeup.mo
@@ -767,5 +764,5 @@ share/kde/locale/ja/flag.png
 @dirrm share/doc/kde/HTML/ja/kcontrol/bell
 @dirrm share/doc/kde/HTML/ja/kcontrol/arts
 @dirrm share/doc/kde/HTML/ja/kcontrol
-@dirrm share/doc/kde/HTML/ja/common
+@comment dirrm share/doc/kde/HTML/ja/common
 @comment dirrm share/doc/kde/HTML/ja
