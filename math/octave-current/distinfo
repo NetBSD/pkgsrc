@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2001/04/22 23:16:09 jtb Exp $
+$NetBSD: distinfo,v 1.8 2001/04/22 23:49:55 jtb Exp $
 
 SHA1 (octave-2.1.33.tar.bz2) = 15a07d08647a2c2aeedb31917ac41ed3b7bb4245
 Size (octave-2.1.33.tar.bz2) = 3740256 bytes
@@ -10,7 +10,7 @@ SHA1 (patch-ac) = bc02ce0417c8d921eb9aa3dc06e84f99cb45eaf3
 SHA1 (patch-ad) = 9d4e10e9097d98901ff5aa313b81b306d3b4e51b
 SHA1 (patch-ae) = f9c943521ea21ea6e452ffa50862dfbd9efc3cf8
 SHA1 (patch-af) = 5f03d2e78003ce5e256174d56533afc77f824108
-SHA1 (patch-ag) = 2ffd116b1b26d95541d89b5c3d37f2b59cdc413a
+SHA1 (patch-ag) = c848d3dff78de1975b376b133c514068d956db31
 SHA1 (patch-ah) = 5e1b20562559124a33bbdcdff2194805929d06f9
 SHA1 (patch-ai) = 248dbc97c2233c47dc532f86b0fb2fd3ebd18068
 SHA1 (patch-aj) = 8e2bbe9afde5567540b32fc183f58b87fbf9a547
