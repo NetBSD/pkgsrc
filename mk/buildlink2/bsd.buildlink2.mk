@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.114 2004/02/09 01:30:59 jlam Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.115 2004/02/09 03:05:59 jlam Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -636,18 +636,21 @@ _BLNK_WRAPPER_TRANSFORM_SED.${_wrappee_}=				\
 	-e "s|@_BLNK_WRAP_ENV@|${_BLNK_WRAP_ENV.${_wrappee_}:Q}|g"	\
 	-e "s|@_BLNK_WRAP_SANITIZE_PATH@|${_BLNK_WRAP_SANITIZE_PATH.${_wrappee_}:Q}|g"
 
-buildlink-wrappers: ${BUILDLINK_${_wrappee_}}
-.if !target(${BUILDLINK_${_wrappee_}})
-${BUILDLINK_${_wrappee_}}:						\
+_BLNK_WRAPPEE_COOKIE.${_wrappee_}=	\
+	${BUILDLINK_DIR}/.buildlink_wrapper_${_wrappee_}_done
+
+buildlink-wrappers: ${_BLNK_WRAPPEE_COOKIE.${_wrappee_}}
+${_BLNK_WRAPPEE_COOKIE.${_wrappee_}}:					\
 		${_BLNK_WRAPPER_SH.${_wrappee_}}			\
 		${_BLNK_WRAP_PRIVATE_CACHE.${_wrappee_}}		\
 		${_BLNK_WRAP_CACHE.${_wrappee_}}			\
 		${_BLNK_WRAP_LOGIC.${_wrappee_}}			\
 		${_BLNK_WRAP_POST_LOGIC.${_wrappee_}}
 	${_PKG_SILENT}${_PKG_DEBUG}${ECHO_BUILDLINK_MSG}		\
-		"Creating wrapper: ${.TARGET}"
+		"Creating wrapper: ${BUILDLINK_${_wrappee_}}"
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	wrappee="${_BLNK_PKG_${_wrappee_}:C/^/_asdf_/1:M_asdf_*:S/^_asdf_//}"; \
+	gen=yes;							\
 	case $${wrappee} in						\
 	/*)	absdir=;						\
 		;;							\
@@ -669,29 +672,29 @@ ${BUILDLINK_${_wrappee_}}:						\
 		done;							\
 		IFS="$$OLDIFS";						\
 		if [ ! -x "$${wrappee}" ]; then				\
-			${ECHO_MSG} "Unable to create \"$${wrappee}\" wrapper script: no such file"; \
-			exit 1;						\
+			gen=no;						\
+			${ECHO_BUILDLINK_MSG} "Warning: unable to create \"$${wrappee}\" wrapper script"; \
 		fi;							\
 		;;							\
 	esac;								\
-	${MKDIR} ${.TARGET:H};						\
-	${CAT} ${_BLNK_WRAPPER_SH.${_wrappee_}}	|			\
-	${SED}	${_BLNK_WRAPPER_TRANSFORM_SED.${_wrappee_}}		\
-		-e "s|@WRAPPEE@|$${absdir}${_BLNK_PKG_${_wrappee_}:Q}|g" \
-		> ${.TARGET};						\
-	${CHMOD} +x ${.TARGET}
-.endif
-
+	case $$gen in							\
+	yes)								\
+		${MKDIR} ${BUILDLINK_${_wrappee_}:H};			\
+		${CAT} ${_BLNK_WRAPPER_SH.${_wrappee_}}	|		\
+		${SED}	${_BLNK_WRAPPER_TRANSFORM_SED.${_wrappee_}}	\
+			-e "s|@WRAPPEE@|$${absdir}${_BLNK_PKG_${_wrappee_}:Q}|g" \
+			> ${BUILDLINK_${_wrappee_}};			\
+		${CHMOD} +x ${BUILDLINK_${_wrappee_}};			\
+		;;							\
+	esac
 .  for _alias_ in ${_ALIASES.${_wrappee_}:S/^/${BUILDLINK_DIR}\/bin\//}
-.    if !target(${_alias_})
-buildlink-wrappers: ${_alias_}
-${_alias_}: ${BUILDLINK_${_wrappee_}}
-	${_PKG_SILENT}${_PKG_DEBUG}${ECHO_BUILDLINK_MSG}		\
-		"Linking wrapper: ${.TARGET}"
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
-	${_PKG_SILENT}${_PKG_DEBUG}${LN} -f ${BUILDLINK_${_wrappee_}} ${.TARGET}
-.    endif
-.  endfor # _alias_
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	if [ ! -x ${_alias_} -a -x ${BUILDLINK_${_wrappee_}} ]; then	\
+		${ECHO_BUILDLINK_MSG} "Linking wrapper: ${_alias_}";	\
+		${LN} -f ${BUILDLINK_${_wrappee_}} ${_alias_};		\
+	fi
+.  endfor
+	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${.TARGET}
 .endfor   # _wrappee_
 
 # Allow BUILDLINK_ENV to override shell environment settings in
