@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.580 2002/11/23 16:57:22 taca Exp $
+$NetBSD: CHANGES,v 1.581 2002/11/23 18:49:25 seb Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3690,3 +3690,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated cvs2p4 to 2.3.3 [schmonz 2002-11-22]
 	Updated cyrus-sasl2 to 2.1.9nb2 [chris 2002-11-23]
 	Updated tamago to 20020909 [taca 2002-11-23]
+	Updated gtexinfo to 4.3nb1 [seb 2002-11-23]
