@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2001/10/23 03:13:28 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2001/10/23 13:15:08 jlam Exp $
 # FreeBSD Id: Makefile,v 1.6 1999/01/12 16:50:43 vanilla Exp
 #
 
@@ -31,7 +31,7 @@ post-install:
 	${LN} -fs ${PREFIX}/share/aclocal/gtk--.m4 \
 		${LOCALBASE}/share/aclocal/gtk--.m4
 
+.include "../../mk/x11.buildlink.mk"
 .include "../../devel/libsigc++/buildlink.mk"
 .include "../../x11/gtk/buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

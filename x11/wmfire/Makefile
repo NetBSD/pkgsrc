@@ -1,4 +1,4 @@
-#$NetBSD: Makefile,v 1.8 2001/08/29 22:41:31 jlam Exp $
+#$NetBSD: Makefile,v 1.9 2001/10/23 13:15:10 jlam Exp $
 #
 
 DISTNAME=	wmfire-0.0.3.8
@@ -19,6 +19,6 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/CREDITS ${PREFIX}/share/doc/wmfire
 	${INSTALL_DATA} ${WRKSRC}/INSTALL ${PREFIX}/share/doc/wmfire
 
-.include "../../graphics/xpm/buildlink.mk"
 .include "../../mk/x11.buildlink.mk"
+.include "../../graphics/xpm/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
