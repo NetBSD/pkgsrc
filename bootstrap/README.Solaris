@@ -1,15 +1,19 @@
-$NetBSD: README.Solaris,v 1.2 2004/03/15 14:21:37 grant Exp $
+$NetBSD: README.Solaris,v 1.3 2004/03/15 14:36:08 grant Exp $
 
-You will need a working C compiler. Both gcc 2.95.3 and Sun
-WorkShop 5 have been tested.
+You will need a working C compiler. Any version of gcc >2.8 should
+work, 2.95.x and 3.x have been tested. SunPro 5 and 8 have been
+tested, but versions in between should work, too.
 
-The following packages are required on Solaris 8 for the bootstrap
-process and to build packages.
+The following packages are the minimum required on Solaris 8 to
+bootstrap and build packages.
 
 	- SUNWsprot
 	- SUNWarc
 	- SUNWbtool
 	- SUNWtoo
+
+Realistically you will need more, such as SUNWlibm, and SUNWlibC for
+C++ packages if you are using SunPro.
 
 Please note the use of GNU binutils on Solaris is not supported.
 
@@ -29,27 +33,44 @@ http://www.sun.com/bigadmin/common/freewareSearch.html
 
 If you are using Sun WorkShop
 -----------------------------
-You will need at least the following packages installed (from WorkShop
-5.0):
+You will need at least the following packages installed to build C and
+C++ packages.
+
+WorkShop 5.0:
 
 	SPROcc		Sun WorkShop Compiler C 5.0
 	SPROcpl		Sun WorkShop Compiler C++ 5.0
 	SPROild		Sun WorkShop Incremental Linker
 	SPROlang	Sun WorkShop Compilers common components
 
-You should set CC and CXX in /etc/mk.conf, eg.
+Sun ONE Studio 8:
 
-	CC=		cc
-	CXX=		CC
+	SPROcc		Sun ONE Studio 8 Compiler C
+	SPROcpl		Sun ONE Studio 8 Compiler C++
+	SPROdwrfb	DwarfSupportLibrary binaries
+	SPROild		Sun ONE Studio 8 Incremental Linker
+	SPROlang	Sun ONE Studio 8 Compilers Common Components
+	SPROsbld	Sun ONE Studio 8 Linker Stab Library
+	SPROscl		Sun ONE Studio 8 Standard Class Library for C++
+	SPROtlbn7	Sun ONE Studio 8 Tools.h++ 7.1 Class Library for C++
+	SPROutool	Sun ONE Studio 8 Common Tools
 
-You may also want to build 64-bit binaries, eg.
+The corresponding 64-bit packages are also required to build 64-bit
+binaries and libraries.
+
+You should set PKGSRC_COMPILER=sunpro in /etc/mk.conf:
+
+	PKGSRC_COMPILER=sunpro
+
+To build 64-bit binaries:
 
 	CFLAGS=		-xtarget=ultra -xarch=v9
 
+(also see the crle(1) man page to configure the runtime linking
+environment).
 
 Whichever compiler you use, please ensure the compiler tools and
 your $prefix are in your PATH. This includes /usr/ccs/{bin,lib}
 and eg. /usr/pkg/{bin,sbin}.
 
-bootstrap-pkgsrc has been tested on Solaris 2.6 -> 9.
-
+bootstrap-pkgsrc has been tested on Solaris 2.6 -> 10.
