@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 1998/04/19 11:07:49 hubertf Exp $
+# $NetBSD: Makefile,v 1.10 1998/04/19 12:54:06 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/11/05 23:55:31 asami Exp
 #
 
@@ -28,5 +28,7 @@ do-install:
 	 ${PREFIX}/bin
 	@${INSTALL_MAN} ${WRKSRC}/cdrecord/cdrecord.1 ${PREFIX}/man/man1
 #	@cd /dev && ${LN} -sf /dev/rworm0.ctl sgx
+	@[ -f /dev/scgx ] || ln -s /dev/cd0d /dev/scgx
+	@${CAT} ${PKGDIR}/MESSAGE
 
 .include "../../mk/bsd.pkg.mk"
