@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: moz-install,v 1.5 2002/10/22 14:16:33 taya Exp $
+# $NetBSD: moz-install,v 1.5.2.1 2003/03/15 13:04:52 grant Exp $
 
 ${SED} -e "s,@PREFIX@,${PREFIX},g" -e "s,@MOZILLA@,${MOZILLA}," -e "s,@MOZILLA_BIN@,${MOZILLA_BIN}," ${FILESDIR}/mozilla-${OBJECT_FMT}.in > ${PREFIX}/bin/${MOZILLA}
 ${CHOWN} ${BINOWN} ${PREFIX}/bin/${MOZILLA}
@@ -16,7 +16,7 @@ trap "${RM} -f ${TMP_PLIST}" 1 2 15
 ${SED} -e "s/\${MOZILLA}/${MOZILLA}/g" -e "s/\${SO_SUFFIX}/${SO_SUFFIX}/" -e "s/\${MOZILLA_BIN}/${MOZILLA_BIN}/g" < ${PLIST_SRC} > ${TMP_PLIST}
 
 # make directories 
-for i in `${SED} -n -e '/^@comment begin DIRS$/,/^@comment end DIRS$/p' ${TMP_PLIST} | ${EGREP} -v ^@comment | ${SED} -e 's/^@dirrm//'` ; do
+for i in `${SED} -n -e '/^@comment begin DIRS$/,/^@comment end DIRS$/p' ${TMP_PLIST} | ${EGREP} ^@dirrm | ${SED} -e 's/^@dirrm//'` ; do
 	${BSD_INSTALL_DATA_DIR} ${PREFIX}/$i
 done
 
