@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.944 2002/12/29 23:47:51 chris Exp $
+$NetBSD: CHANGES,v 1.945 2002/12/30 00:12:17 kristerw Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -4311,3 +4311,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated p5-PerlMagick to 5.5.1.6nb2 [tron 2002-12-29]
 	Updated sylpheed to 0.8.8 [chris 2002-12-29]
 	Updated sylpheed-claws to 0.8.8 [chris 2002-12-29]
+	Updated manedit to 0.5.6 [kristerw 2002-12-30]
