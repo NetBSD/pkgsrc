@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.289 2003/04/04 20:15:51 jschauma Exp $
+# $NetBSD: Packages.txt,v 1.290 2003/05/06 00:15:52 zuntum Exp $
 ###########################################################################
 
 			==========================
@@ -2500,6 +2500,12 @@ will be carried into any binary package that is made from this pkgsrc
 entry. A "preserved" package will not be deleted using pkg_delete(1),
 unless the "-f" option is used.
 
+ 10.33 Packages containing perl scripts
+ ======================================
+
+If your package contains interpreted perl scripts, set REPLACE_PERL to
+ensure that the proper interpreter path is set. REPLACE_PERL should
+contain a list of scripts, relative to WRKSRC, that you want adjusted.
 
  11 Submitting & Committing
  ==========================
