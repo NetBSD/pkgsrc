@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.2 1997/10/06 13:04:27 agc Exp $
 # New ports collection makefile for:    xvile
-# Version required:     7.2
-# Date created:         Wed Nov 26, 1996
-# Whom:                 pgf
+# Version required:     		7.3
+# Date created:         		Wed Nov 26, 1996
+# Whom:                 		pgf
 #
+# $NetBSD: Makefile,v 1.3 1997/12/19 11:25:31 agc Exp $
 # FreeBSD Id: Makefile,v 1.13 1997/09/06 19:58:03 gj Exp
 #
 
 DISTNAME=	vile
-PKGNAME=	xvile-7.2
-WRKSRC=		${WRKDIR}/vile-7.2c
+PKGNAME=	xvile-7.3
+WRKSRC=		${WRKDIR}/vile-7.3
 CATEGORIES=	editors
 MASTER_SITES=	ftp://ftp.clark.net/pub/dickey/vile/ \
 		ftp://id.wing.net/pub/pgf/vile/
