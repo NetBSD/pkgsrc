@@ -1,4 +1,4 @@
-# $NetBSD: subst.mk,v 1.4 2003/12/11 00:05:36 grant Exp $
+# $NetBSD: subst.mk,v 1.5 2003/12/27 03:02:11 grant Exp $
 #
 # This Makefile fragment implements a general text replacement facility
 # for different classes of files in ${WRKSRC}.  For each class of files,
@@ -25,10 +25,6 @@
 #	files.  Defaults to ${SED} ${SUBST_SED.<class>}.
 
 ECHO_SUBST_MSG?=	${ECHO}
-
-# _SUBST_IS_TEXT_FILE returns 0 if $${file} is a text file.
-_SUBST_IS_TEXT_FILE?= \
-	${FILE_CMD} $${file} | ${EGREP} "(shell script|text)" >/dev/null 2>&1
 
 .for _class_ in ${SUBST_CLASSES}
 _SUBST_COOKIE.${_class_}=	${WRKDIR}/.subst_${_class_}_done
@@ -73,19 +69,17 @@ ${_SUBST_COOKIE.${_class_}}:
 	case "$$files" in						\
 	"")	;;							\
 	*)	for file in $${files}; do				\
-			if ${_SUBST_IS_TEXT_FILE}; then			\
-				${MV} -f $$file $$file.subst.sav;	\
-				${CAT} $$file.subst.sav 		\
-					| ${SUBST_FILTER_CMD.${_class_}} \
-					> $$file;			\
-				if [ -x $$file.subst.sav ]; then	\
-					${CHMOD} +x $$file;		\
-				fi;					\
-				if ${CMP} -s $$file.subst.sav $$file; then \
-					${MV} -f $$file.subst.sav $$file; \
-				else					\
-					${ECHO} $$file >> ${.TARGET};	\
-				fi;					\
+			${MV} -f $$file $$file.subst.sav;		\
+			${CAT} $$file.subst.sav 			\
+				| ${SUBST_FILTER_CMD.${_class_}}	\
+				> $$file;				\
+			if [ -x $$file.subst.sav ]; then		\
+				${CHMOD} +x $$file;			\
+			fi;						\
+			if ${CMP} -s $$file.subst.sav $$file; then	\
+				${MV} -f $$file.subst.sav $$file;	\
+			else						\
+				${ECHO} $$file >> ${.TARGET};		\
 			fi;						\
 		done ;;							\
 	esac
