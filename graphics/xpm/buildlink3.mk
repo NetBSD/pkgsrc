@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2003/09/02 07:12:18 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2003/09/05 11:39:03 jlam Exp $
 
 .if !defined(XPM_BUILDLINK3_MK)
 XPM_BUILDLINK3_MK=	# defined
@@ -9,11 +9,6 @@ BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 BUILDLINK_DEPENDS.xpm?=		xpm>=3.4k
 BUILDLINK_PKGSRCDIR.xpm?=	../../graphics/xpm
 
-# If BUILDLINK_CHECK_BUILTIN.<pkg> is "YES", then _only_ run the check
-# to see whether this is builtin to the system.  The result can be found
-# by checking the value of BUILDLINK_IS_BUILTIN.<pkg> (either "YES" or
-# "NO").
-#
 BUILDLINK_CHECK_BUILTIN.xpm?=	NO
 
 _X11_XPM_H=	${X11BASE}/include/X11/xpm.h

@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.4 2003/09/04 19:38:06 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.5 2003/09/05 11:39:04 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -110,7 +110,11 @@ ${_BLNK_DEPMETHOD.${_pkg_}}+= \
 # BUILDLINK_IS_BUILTIN.<pkg>	"yes" or "no" for whether <pkg> is provided
 #				in the base system.  This check is only
 #				relevant for buildlink3.mk files that
-#				provide a setting for this variable.
+#				provide a setting for this variable.  Where
+#				this variable is set by a buildlink3.mk file,
+#				you can typically force _only_ the check to
+#				run by setting BUILDLINK_CHECK_BUILTIN.<pkg>
+#				to "yes".
 #
 # BUILDLINK_CFLAGS.<pkg>,
 # BUILDLINK_CPPFLAGS.<pkg>,
