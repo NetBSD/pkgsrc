@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.104 2005/01/17 12:38:23 jmmv Exp $
+# $NetBSD: Makefile,v 1.105 2005/01/18 17:45:12 peter Exp $
 #
 
 COMMENT=	Communication programs
 
 SUBDIR+=	aim
+SUBDIR+=	amsn
 SUBDIR+=	bitchbot
 SUBDIR+=	bitchx
 SUBDIR+=	bitlbee
