@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2004/07/29 09:06:20 xtraeme Exp $
+# $NetBSD: Makefile,v 1.15 2004/07/31 01:46:45 xtraeme Exp $
 
 DISTNAME=	${DISTFILES}
 PKGNAME=	imake-${XF_VER}
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XFREE}
 DISTFILES=	XFree86-${XF_VER}-src-1.tgz XFree86-${XF_VER}-src-3.tgz
@@ -13,7 +14,7 @@ COMMENT=	Imake and other utilities from XFree86
 PKG_INSTALLATION_TYPES= overwrite pkgviews
 
 USE_BUILDLINK3=		yes
-USE_DIRS+=		XFree86-1.0
+USE_DIRS+=		XFree86-1.1
 INSTALL_TARGET=		install install.man
 NO_XFREE86_TARGETS=	# defined
 
@@ -33,8 +34,7 @@ PLIST_SUBST+=	LNDIR=
 
 post-extract:
 .for F in ${SYSTEMS}
-	@${MV} ${WRKSRC}/config/cf/${F}.cf \
-		${WRKSRC}/config/cf/${F}.cf.in
+	@${MV} ${WRKSRC}/config/cf/${F}.cf ${WRKSRC}/config/cf/${F}.cf.in
 .endfor
 .undef F
 
@@ -44,8 +44,7 @@ pre-configure:
 		-e "s|@@PKGSRC_CPP@@|${CPP}|g" \
 		-e "s|@@PKGSRC_CXX@@|${CXX}|g" \
 		-e "s|@@PKGSRC_CFLAGS@@|${CFLAGS}|g" \
-		${WRKSRC}/config/cf/${F}.cf.in > \
-		${WRKSRC}/config/cf/${F}.cf
+		${WRKSRC}/config/cf/${F}.cf.in > ${WRKSRC}/config/cf/${F}.cf
 .endfor
 .undef F
 
@@ -58,10 +57,23 @@ do-build:
 		-e "s|@BLNK@|${BUILDLINK_DIR}|g" \
 		-e "s|@LOCALBASE@|${LOCALBASE}|g " \
 		-e "s|@MAKE@|${MAKE_PROGRAM}|" \
-		${FILESDIR}/host.def > \
-		${WRKSRC}/config/cf/host.def
-	( cd ${WRKSRC} && ${MAKE} Makefile.boot && \
-	${MAKE_PROGRAM} -f xmakefile VerifyOS version.def \
-		Makefiles includes )
+		${FILESDIR}/host.def > ${WRKSRC}/config/cf/host.def
+	cd ${WRKSRC} && ${MAKE} Makefile.boot && \
+	${MAKE_PROGRAM} -f xmakefile VerifyOS version.def Makefiles includes
+
+post-install:
+	@${CP} ${X11ROOT}/lib/X11/config/host.def		\
+		${X11ROOT}/lib/X11/config/host.def.orig
+	@${SED} -e "s|\#define ProjectRoot ${X11ROOT}||"	\
+		${X11ROOT}/lib/X11/config/host.def.orig >	\
+		${X11ROOT}/lib/X11/config/host.def
+	@${RM} ${X11ROOT}/lib/X11/config/host.def.orig
+
+	@( \
+	${ECHO};					\
+	${ECHO} "#ifdef BeforeVendorCF";		\
+	${ECHO} "#define ProjectRoot ${X11ROOT}";	\
+	${ECHO} "#endif";				\
+	) >> ${X11ROOT}/lib/X11/config/host.def
 
 .include "../../mk/bsd.pkg.mk"
