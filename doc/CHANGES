@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2225 2003/05/13 12:07:12 wiz Exp $
+$NetBSD: CHANGES,v 1.2226 2003/05/13 23:39:49 salo Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1947,3 +1947,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated libgcrypt to 1.1.12 [salo 2003-05-13]
 	Updated inn to 2.3.5 [tron 2003-05-13]
 	Updated scummvm to 0.4.0 [wiz 2003-05-13]
+	Updated xdialog to 2.0.6 [salo 2003-05-13]
