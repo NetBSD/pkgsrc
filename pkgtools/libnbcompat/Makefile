@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2003/12/10 07:21:43 grant Exp $
+# $NetBSD: Makefile,v 1.31 2004/03/11 14:11:31 grant Exp $
 #
 
-DISTNAME=		libnbcompat-20031210
+DISTNAME=		libnbcompat-20040311
 CATEGORIES=		pkgtools
 MASTER_SITES=		# empty
 DISTFILES=		# empty
