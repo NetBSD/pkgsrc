@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2002/06/15 22:11:24 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.9 2002/09/01 14:33:46 sommerfeld Exp $
 #
 
 DISTNAME=	src
@@ -11,6 +11,7 @@ HOMEPAGE=	http://www.cis.upenn.edu/~bcpierce/unison/
 COMMENT=	file-synchronization tool
 
 BUILD_DEPENDS=	ocaml>=3.00:../../lang/ocaml
+BUILD_DEPENDS+=	../../shells/bash2
 
 DIST_SUBDIR=	${PKGNAME}
 
