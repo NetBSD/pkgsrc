@@ -1,76 +1,31 @@
-$NetBSD: patch-ad,v 1.2 1999/12/23 06:14:50 itohy Exp $
+$NetBSD: patch-ad,v 1.3 1999/12/23 23:12:50 itohy Exp $
 
 --- gram.y.orig	Thu Sep 22 22:14:31 1988
-+++ gram.y	Thu Dec 23 15:11:08 1999
-@@ -111,24 +111,26 @@
- 	|	';'
- 	;
- 
--expr:		keyword '=' compexpr
-+string_slot:	/* empty */
-+
-+expr:		keyword '=' string_slot compexpr
- 			{
- 			    switch (KeywordTable[$1].type) {
++++ gram.y	Thu Dec 23 22:04:02 1999
+@@ -117,18 +117,18 @@
  			        case IsString:
--			            if ($3 == C_STRING) {
-+			            if ($4 == C_STRING) {
+ 			            if ($3 == C_STRING) {
  			                strcpy(KeywordTable[$1].sptr,
 -			                        yylval.sval);
-+			                        $<sval>3);
++			                        $<sval>2);
  			            } else {
  			                yyerror("illegal construct");
  			            }
 -			            free(yylval.sval);
-+			            free($<sval>3);
++			            free($<sval>2);
  			            break;
  			        case IsNumeric:
--			            if ($3 == C_STRING) {
-+			            if ($4 == C_STRING) {
+ 			            if ($3 == C_STRING) {
  			                *(KeywordTable[$1].nptr) =
 -			                                   y_atoi(yylval.sval);
-+			                                   y_atoi($<sval>3);
++			                                   y_atoi($<sval>2);
  			            } else yyerror("illegal construct");
 -			            free(yylval.sval);
-+			            free($<sval>3);
++			            free($<sval>2);
  			            break;
  			        case IsBoolTrue:
  			        case IsBoolFalse:
-@@ -136,7 +138,7 @@
- 			            break;
- 			        case IsQuitFunction:
- 			        case IsFunction:
--			            if ($3 == C_MAP) {
-+			            if ($4 == C_MAP) {
- 			                bindtofunc($1, bkmask, cmask, NULL);
- 			            } else yyerror("illegal construct");
- 			            break;
-@@ -147,7 +149,7 @@
- 			                        KeywordTable[$1].name);
- 			                yyerror(msg);
- 			            }
--			            if ($3 == C_MAP) {
-+			            if ($4 == C_MAP) {
- 			                bindtofunc($1, bkmask, cmask, NULL);
- 			            } else yyerror("illegal construct");
- 			            break;
-@@ -158,13 +160,13 @@
- 			                        KeywordTable[$1].name);
- 			                yyerror(msg);
- 			            }
--			            if ($3 == C_MENUMAP) {
-+			            if ($4 == C_MENUMAP) {
- 			                bindtofunc
- ($1, bkmask, cmask, menu_name);
- 			            } else yyerror("illegal construct");
- 			            break;
- 			        case IsMenu:
--			            if ($3 == C_MENU) {
-+			            if ($4 == C_MENU) {
- 			                menu_info = stashmenuinfo(menu_name, ml_ptr, hcolors);
- 			                menu_link = stashmenulink(menu_info);
- 			                Menus = appendmenulink(Menus, menu_link);
-@@ -197,12 +199,12 @@
+@@ -197,12 +197,12 @@
  			    ml_ptr = $3;
  			}
  	|	STRING
@@ -85,7 +40,7 @@ $NetBSD: patch-ad,v 1.2 1999/12/23 06:14:50 itohy Exp $
  			    switch (KeywordTable[ki].type) {
  			    case IsBoolTrue:
  			        *(KeywordTable[ki].bptr) = TRUE;
-@@ -220,7 +222,7 @@
+@@ -220,7 +220,7 @@
  	;
  
  keyword:	STRING	{
@@ -94,7 +49,7 @@ $NetBSD: patch-ad,v 1.2 1999/12/23 06:14:50 itohy Exp $
  			}
  	;
  
-@@ -246,9 +248,9 @@
+@@ -246,9 +246,9 @@
  			{ $$ = CheckButtonState($1); }
  	;
  
@@ -106,7 +61,7 @@ $NetBSD: patch-ad,v 1.2 1999/12/23 06:14:50 itohy Exp $
  
  buttmodexpr: 	buttmodifier
  			{ $$ = $1; }
-@@ -257,7 +259,7 @@
+@@ -257,7 +257,7 @@
  	;
  
  buttmodifier:	STRING
@@ -115,7 +70,7 @@ $NetBSD: patch-ad,v 1.2 1999/12/23 06:14:50 itohy Exp $
  	;
  
  menuname:	STRING
-@@ -304,7 +306,7 @@
+@@ -304,7 +304,7 @@
  
  menuaction:	STRING
  			{
@@ -124,7 +79,7 @@ $NetBSD: patch-ad,v 1.2 1999/12/23 06:14:50 itohy Exp $
  			    if ((ki != -1) &&
  			        (KeywordTable[ki].type != IsFunction) &&
  			        (KeywordTable[ki].type != IsQuitFunction) &&
-@@ -350,7 +352,7 @@
+@@ -350,7 +350,7 @@
  			}
  	;
  
@@ -133,7 +88,7 @@ $NetBSD: patch-ad,v 1.2 1999/12/23 06:14:50 itohy Exp $
  	|	strings STRING
  			{ $$ = strconcat($1, $2); }
  	;
-@@ -387,7 +389,7 @@
+@@ -387,7 +387,7 @@
  			}
  	;
  
@@ -142,7 +97,7 @@ $NetBSD: patch-ad,v 1.2 1999/12/23 06:14:50 itohy Exp $
  	|	/* empty */	{ $$ = NULL; }
  	;
  %%
-@@ -572,6 +574,8 @@
+@@ -572,6 +572,8 @@
          setbinding(ICON, index, mask, name);
      if (context & WINDOW)
          setbinding(WINDOW, index, mask, name);
@@ -151,7 +106,7 @@ $NetBSD: patch-ad,v 1.2 1999/12/23 06:14:50 itohy Exp $
  }
  
  /*
-@@ -599,12 +603,13 @@
+@@ -599,12 +601,13 @@
  char *mname;		/* Pointer to menu name, if needed. */
  {
      Binding *ptr;
@@ -166,7 +121,7 @@ $NetBSD: patch-ad,v 1.2 1999/12/23 06:14:50 itohy Exp $
  
      switch (m & (LeftMask | MiddleMask | RightMask)) {
      case LeftMask:
-@@ -771,9 +776,8 @@
+@@ -771,9 +774,8 @@
      else {
          for(ptr = list; ptr->next; ptr = ptr->next) /* NULL */;
          ptr->next = link;
