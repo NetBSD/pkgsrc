@@ -1,8 +1,17 @@
-$NetBSD: patch-aa,v 1.21 2001/09/17 18:04:44 tron Exp $
+$NetBSD: patch-aa,v 1.22 2001/10/01 07:05:11 jlam Exp $
 
---- Configure.orig	Mon Mar 19 04:03:33 2001
-+++ Configure	Mon Sep 17 11:59:02 2001
-@@ -6807,9 +6812,12 @@
+--- Configure.orig	Sun Mar 18 22:03:33 2001
++++ Configure
+@@ -6598,7 +6598,7 @@
+ 	esac
+ 	for thisflag in $ldflags; do
+ 		case "$thisflag" in
+-		-L*|-R*)
++		-L*|-R*|-Wl,-R*)
+ 			case " $dflt " in
+ 			*" $thisflag "*) ;;
+ 			*) dflt="$dflt $thisflag" ;;
+@@ -6807,9 +6807,12 @@
  	aix)
  		# We'll set it in Makefile.SH...
  		;;
@@ -16,7 +25,7 @@ $NetBSD: patch-aa,v 1.21 2001/09/17 18:04:44 tron Exp $
  	freebsd)
  		xxx="-Wl,-R$shrpdir"
  		;;
-@@ -14719,7 +14727,7 @@
+@@ -14719,7 +14722,7 @@
  eval $inhdr
  
  : see if this is a ieeefp.h system
