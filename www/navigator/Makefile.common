@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.67 2003/12/04 14:59:22 grant Exp $
+# $NetBSD: Makefile.common,v 1.68 2004/01/27 02:28:51 tacha Exp $
 #
 # Common include file for communicator and navigator packages
 
@@ -40,7 +40,7 @@ WRKNAME=	sparc-sun-solaris2.8
 VENDOR_NAME=	Solaris 2.8
 .  endif
 .  if !defined(NS_NO_FLASH)
-DEPENDS+=	ns-flash>4.0:../../graphics/ns-flash
+DEPENDS+=	ns-flash>4.0:../../multimedia/ns-flash
 .  endif
 
 .elif ${MACHINE_ARCH} == "alpha"
@@ -71,7 +71,7 @@ DIST_DIR_NAME=	supported/linux22
 WRKNAME=	x86-unknown-linux2.2
 VENDOR_NAME=	Linux 2.2
 .  if !defined(NS_NO_FLASH)
-DEPENDS+=	ns-flash>4.0:../../graphics/ns-flash
+DEPENDS+=	ns-flash>4.0:../../multimedia/ns-flash
 .  endif
 
 .elif ((${MACHINE_ARCH} == "sparc" || ${MACHINE_ARCH} == "sparc64") && defined(NS_USE_SUNOS))
