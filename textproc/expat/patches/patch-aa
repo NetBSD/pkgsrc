@@ -1,0 +1,20 @@
+$NetBSD: patch-aa,v 1.1 2001/11/22 00:55:49 abs Exp $
+
+--- configure.orig	Thu Nov 22 00:23:29 2001
++++ configure
+@@ -1757,7 +1757,14 @@
+ 
+ 
+ if test "$GCC" = yes ; then
+-    CFLAGS="$CFLAGS -Wall -Wmissing-prototypes -Wstrict-prototypes -fexceptions"
++    CFLAGS="$CFLAGS -Wall -Wmissing-prototypes -Wstrict-prototypes"
++    ${CC-cc} -v >conftest.c 2>&1
++    gcc_pre_fexceptions=`
++	awk '/gcc version/{sub("^[^0-9]*","",$3);if ($3<2.8){print "true"} }' \
++	conftest.c`
++    if [ -z "$gcc_pre_fexceptions" ]; then
++	CFLAGS="$CFLAGS -fexceptions"
++    fi
+ fi
+ 
+ 
