@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2002/08/31 00:49:24 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2002/10/03 14:06:15 martti Exp $
 bin/xml2-config
 bin/xmlcatalog
 bin/xmllint
@@ -42,7 +42,7 @@ lib/libxml2.a
 lib/libxml2.la
 lib/libxml2.so
 lib/libxml2.so.6
-lib/libxml2.so.6.24
+lib/libxml2.so.6.25
 lib/pkgconfig/libxml-2.0.pc
 lib/xml2Conf.sh
 man/man1/xml2-config.1
@@ -55,26 +55,10 @@ share/doc/libxml2-${LIBXML_VERSION}/examples/testHTML.c
 share/doc/libxml2-${LIBXML_VERSION}/examples/testSAX.c
 share/doc/libxml2-${LIBXML_VERSION}/examples/testXPath.c
 share/doc/libxml2-${LIBXML_VERSION}/examples/xmllint.c
-share/doc/libxml2-python-${LIBXML_VERSION}/examples/attribs.py
-share/doc/libxml2-python-${LIBXML_VERSION}/examples/build.py
-share/doc/libxml2-python-${LIBXML_VERSION}/examples/cutnpaste.py
-share/doc/libxml2-python-${LIBXML_VERSION}/examples/error.py
-share/doc/libxml2-python-${LIBXML_VERSION}/examples/invalid.xml
-share/doc/libxml2-python-${LIBXML_VERSION}/examples/push.py
-share/doc/libxml2-python-${LIBXML_VERSION}/examples/pushSAX.py
-share/doc/libxml2-python-${LIBXML_VERSION}/examples/pushSAXhtml.py
-share/doc/libxml2-python-${LIBXML_VERSION}/examples/serialize.py
-share/doc/libxml2-python-${LIBXML_VERSION}/examples/tst.py
-share/doc/libxml2-python-${LIBXML_VERSION}/examples/tst.xml
-share/doc/libxml2-python-${LIBXML_VERSION}/examples/tstURI.py
-share/doc/libxml2-python-${LIBXML_VERSION}/examples/tstxpath.py
-share/doc/libxml2-python-${LIBXML_VERSION}/examples/valid.xml
-share/doc/libxml2-python-${LIBXML_VERSION}/examples/validate.py
-share/doc/libxml2-python-${LIBXML_VERSION}/examples/xpath.py
-share/doc/libxml2-python-${LIBXML_VERSION}/examples/xpathext.py
-share/doc/libxml2-python-${LIBXML_VERSION}/examples/xpathret.py
 share/doc/libxml2/html/DOM.gif
 share/doc/libxml2/html/FAQ.html
+share/doc/libxml2/html/Libxml2-Logo-180x168.gif
+share/doc/libxml2/html/Libxml2-Logo-90x34.gif
 share/doc/libxml2/html/book1.html
 share/doc/libxml2/html/encoding.html
 share/doc/libxml2/html/index.sgml
@@ -116,8 +100,6 @@ share/doc/libxml2/html/xml.html
 @dirrm include/libxml2
 @dirrm share/doc/libxml2-${LIBXML_VERSION}/examples
 @dirrm share/doc/libxml2-${LIBXML_VERSION}
-@dirrm share/doc/libxml2-python-${LIBXML_VERSION}/examples
-@dirrm share/doc/libxml2-python-${LIBXML_VERSION}
 @dirrm share/doc/libxml2/html
 @dirrm share/doc/libxml2
 @unexec ${RMDIR} -p %D/lib/pkgconfig 2>/dev/null || ${TRUE}
