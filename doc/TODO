@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1960 2004/07/21 01:54:45 minskim Exp $
+$NetBSD: TODO,v 1.1961 2004/07/21 02:48:58 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -183,7 +183,6 @@ Suggested package updates
 	o centericq-4.10.0
 	o cervisia-2.1.2
 	o checkbot-1.75 [pkg/26371]
-	o clamav-0.74
 	o clanlib-0.7.8
 	o classpath-0.10
 	o clisp-2.33.2

@@ -1,17 +1,17 @@
-$NetBSD: patch-ab,v 1.5 2004/06/04 15:43:25 xtraeme Exp $
+$NetBSD: patch-ab,v 1.6 2004/07/21 02:48:58 xtraeme Exp $
 
---- etc/Makefile.in.orig	2004-06-04 15:34:54.000000000 +0000
-+++ etc/Makefile.in	2004-06-04 15:35:42.000000000 +0000
-@@ -120,7 +120,7 @@
- install_sh = @install_sh@
- 
+--- etc/Makefile.in.orig	2004-07-21 04:38:49.000000000 +0200
++++ etc/Makefile.in	2004-07-21 04:39:56.000000000 +0200
+@@ -176,7 +176,7 @@
+ target_os = @target_os@
+ target_vendor = @target_vendor@
  EXTRA_DIST = clamav.conf freshclam.conf
 -CFGINST = @CFGDIR@
 +CFGINST = $(datadir)/examples/clamav
- subdir = etc
- mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
- CONFIG_HEADER = $(top_builddir)/clamav-config.h
-@@ -250,8 +250,8 @@
+ all: all-am
+ 
+ .SUFFIXES:
+@@ -339,8 +339,9 @@
  
  install:
  	$(mkinstalldirs) $(DESTDIR)$(CFGINST)
@@ -19,6 +19,7 @@ $NetBSD: patch-ab,v 1.5 2004/06/04 15:43:25 xtraeme Exp $
 -@INSTALL_FRESHCLAM_CONF_TRUE@	@$(INSTALL_DATA) $(srcdir)/freshclam.conf $(DESTDIR)$(CFGINST)
 +	@$(INSTALL_DATA) clamav.conf $(DESTDIR)$(CFGINST)
 +	@$(INSTALL_DATA) freshclam.conf $(DESTDIR)$(CFGINST)
++
  # Tell versions [3.59,3.63) of GNU make to not export all variables.
  # Otherwise a system limit (for SysV at least) may be exceeded.
  .NOEXPORT:
