@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 12:12:45 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/20 12:02:36 skrll Exp $
 
-MD5 (htdig-3.1.5.tar.gz) = cbf4a0f2b703d9822db555a14dc96ed3
+SHA1 (htdig-3.1.5.tar.gz) = 44f3a8ec59d9eb8c2e9b9ebd551dbdfe7c34081f
+Size (htdig-3.1.5.tar.gz) = 1960580 bytes
 SHA1 (patch-aa) = ff2c8933c3068db9f09f3df972cb54ba8db2b9d6
 SHA1 (patch-ab) = e441ae14f7b44904503c6497f611565351480833
 SHA1 (patch-ac) = d1f6ef3c4c7a2995217f391a4bf9d544e10f5a00

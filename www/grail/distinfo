@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 12:12:42 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/20 12:02:35 skrll Exp $
 
-MD5 (grail-06.tgz) = 527d8400d463560e9c10c7eca0f9f11b
+SHA1 (grail-06.tgz) = d32e0d79cb0017d170734b49a11118beca24d150
+Size (grail-06.tgz) = 385126 bytes

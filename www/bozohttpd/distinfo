@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 12:12:34 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/20 12:02:34 skrll Exp $
 
-MD5 (bozohttpd-5.06.tar.bz2) = 485232daba1661eaa194dab05ef38988
+SHA1 (bozohttpd-5.06.tar.bz2) = 1ab1025707fa4d162a63682be71d36262bdc369a
+Size (bozohttpd-5.06.tar.bz2) = 14382 bytes
 SHA1 (patch-aa) = 3831938ead3fd2792d61878c10aa7ada431e8cd7
 SHA1 (patch-ab) = e821cefe6515ef626e727c90c21cda3284e611fe

@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 12:12:59 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/20 12:02:38 skrll Exp $
 
-MD5 (plugger-3.2-linux-x86-glibc.tar.gz) = 6a1457df52172af0b4a614ca9b6a9edf
+SHA1 (plugger-3.2-linux-x86-glibc.tar.gz) = f300d108b8b0757d10aef5453f1974f45423ed10
+Size (plugger-3.2-linux-x86-glibc.tar.gz) = 23406 bytes
 SHA1 (patch-aa) = 74204a7279b68a930c6631b882383e71cc72fc5f

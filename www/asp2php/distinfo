@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 12:12:33 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/20 12:02:33 skrll Exp $
 
-MD5 (asp2php0.73.4.tgz) = b2e4fa501b91e4c9283eac86dd3fbb30
+SHA1 (asp2php0.73.4.tgz) = ac5c24ac62dc229e1f60d0d62f30fcee95c8bcb5
+Size (asp2php0.73.4.tgz) = 27124 bytes

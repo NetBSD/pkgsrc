@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 12:12:29 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/20 12:02:33 skrll Exp $
 
-MD5 (mod_ssl-2.8.1-1.3.19.tar.gz) = 7d7cd5db29e1081f5c2fb97fc86c8213
+SHA1 (mod_ssl-2.8.1-1.3.19.tar.gz) = 3d93a88015fc3cf108923fd4085c28de617afcab
+Size (mod_ssl-2.8.1-1.3.19.tar.gz) = 749778 bytes
 SHA1 (patch-aa) = 8022bcf24c95e1855ae8165e596f5c407f2cc0d9
 SHA1 (patch-ab) = c3fce083017fb3ce83bfa8638c14184cf63e5e0a
