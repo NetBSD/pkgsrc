@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2004/03/08 20:27:15 minskim Exp $
+# $NetBSD: Makefile,v 1.28 2004/10/01 10:37:33 grant Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/09/11 03:54:53 fenner Exp
 #
 
@@ -9,7 +9,8 @@ CATEGORIES=	mbone tk
 MASTER_SITES=	ftp://ftp.ee.lbl.gov/conferencing/vic/
 
 .include "../../mk/bsd.prefs.mk"
-.if !empty(MACHINE_PLATFORM:MNetBSD-1.[6-9]*)
+
+.if !empty(MACHINE_PLATFORM:MNetBSD-1.6*) || !empty(MACHINE_PLATFORM:MNetBSD-[2-9]*)
 PATCH_SITES=    ftp://tink.ims.ac.jp/pub/NetBSD/vic/
 PATCHFILES=     vic-2.8_ov511p0.diff.gz
 .endif

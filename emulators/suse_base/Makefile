@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2004/07/23 18:25:31 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2004/10/01 10:37:33 grant Exp $
 
 DISTNAME=		suse_base-${SUSE_VERSION}
 PKGREVISION=		6
@@ -15,7 +15,7 @@ CONFLICTS=		linux_SuSE-5.3 linux_lib-2.4 linuxppc_lib-[0-9]*
 ONLY_FOR_PLATFORM=	NetBSD-1.5Z[C-Z]-i386 NetBSD-1.6*-i386
 ONLY_FOR_PLATFORM+=	NetBSD-[2-9]*-i386
 ONLY_FOR_PLATFORM+=	NetBSD-1.6[L-Z]-powerpc NetBSD-1.6Z[A-Z]-powerpc
-ONLY_FOR_PLATFORM+=	NetBSD-1.[7-9]*-powerpc NetBSD-[2-9]*-powerpc
+ONLY_FOR_PLATFORM+=	NetBSD-[2-9]*-powerpc
 ONLY_FOR_PLATFORM+=	FreeBSD-*-i386
 
 NO_BUILDLINK=		YES
