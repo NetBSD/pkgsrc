@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2002/10/31 17:41:53 tron Exp $
+# $NetBSD: Makefile,v 1.16 2002/11/12 14:23:40 tron Exp $
 
 DISTNAME=	opera-${OPERA_PKG_VERSION}
 CATEGORIES=	www
@@ -33,6 +33,8 @@ USE_BUILDLINK2=	# defined
 OPERA_PKG_VERSION=	6.10
 
 .if (${MACHINE_ARCH} == i386)
+PKG_REVISON=	1
+
 DEPENDS+=	suse_compat>=6.3:../../emulators/${SUSE_DIR_PREFIX}_compat
 DEPENDS+=	suse_libjpeg>=6.4:../../emulators/${SUSE_DIR_PREFIX}_libjpeg
 DEPENDS+=	suse_libpng>=6.4:../../emulators/${SUSE_DIR_PREFIX}_libpng
