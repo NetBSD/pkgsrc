@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/10/16 15:59:32 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2002/10/16 23:12:02 jlam Exp $
 
 PKGNAME=	oss-${OSS_VERSION}
 CATEGORIES=	audio sysutils
@@ -9,6 +9,7 @@ HOMEPAGE=	http://www.opensound.com/oss.html
 COMMENT=	Open Sound System(TM) soundcard driver
 
 ONLY_FOR_PLATFORM=	NetBSD-1.[56]-i386 NetBSD-1.[56].*-i386
+ONLY_FOR_PLATFORM+=	NetBSD-1.6_STABLE-i386
 OSVERSION_SPECIFIC=	yes
 
 .include "../../mk/bsd.prefs.mk"
