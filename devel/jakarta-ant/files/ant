@@ -14,7 +14,7 @@ if [ "$JAVA_HOME" != "" ] ; then
     JAVACMD=$JAVA_HOME/bin/java
   fi
 else
-  JAVA_HOME=@PREFIX@/java
+  JAVA_HOME=@JAVA_HOME@
   if [ "$JAVACMD" = "" ] ; then 
     JAVACMD=$JAVA_HOME/bin/java
   fi
