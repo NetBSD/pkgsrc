@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2004/07/06 07:31:56 xtraeme Exp $
+# $NetBSD: Makefile,v 1.3 2004/07/09 14:38:52 xtraeme Exp $
 #
 
-DISTNAME=		aranym-0.8.8beta
+DISTNAME=		aranym-0.8.9beta
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=aranym/}
 
@@ -18,7 +18,24 @@ WRKSRC=			${WRKDIR}/${DISTNAME}/src/Unix
 
 ALL_TARGET=		# void
 
+BUILD_DEFS+=		FIXED_FASTRAM
+
+FIXED_FASTRAM?=		64 # Default value
+
 CONFIGURE_ARGS+=	--enable-opengl
+CONFIGURE_ARGS+=	--enable-fullmmu
+CONFIGURE_ARGS+=	--enable-dsp-disasm
+CONFIGURE_ARGS+=	--enable-blitsdlblit
+CONFIGURE_ARGS+=	--enable-fixedvideoram
+CONFIGURE_ARGS+=	--enable-fixedfastram=${FIXED_FASTRAM}
+CONFIGURE_ARGS+=	--enable-blitmemmove
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} != "NetBSD"
+CONFIGURE_ARGS+=	--enable-nfpci
+.endif
+
 MANCOMPRESSED=		aranym.1.gz
 
 pre-build:
