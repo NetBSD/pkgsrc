@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.4 2001/07/01 22:59:27 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.5 2001/07/15 12:18:04 jlam Exp $
 #
 # This Makefile fragment is included by packages that use socks4.
 #
@@ -24,9 +24,18 @@ BUILDLINK_PREFIX.socks4=	${LOCALBASE}
 BUILDLINK_FILES.socks4=		lib/libsocks4.*
 
 BUILDLINK_TARGETS.socks4=	socks4-buildlink
+BUILDLINK_TARGETS.socks4+=	socks4-buildlink-libsock
 BUILDLINK_TARGETS+=		${BUILDLINK_TARGETS.socks4}
 
 pre-configure: ${BUILDLINK_TARGETS.socks4}
 socks4-buildlink: _BUILDLINK_USE
+
+socks4-buildlink-libsock:
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	cd ${BUILDLINK_DIR}/lib; for lib in libsocks4.*; do		\
+		dest=`${ECHO} $${lib} | ${SED} "s|libsocks4\.|libsocks.|g"`; \
+		${RM} -f $${dest};					\
+		${LN} -sf $${lib} $${dest};				\
+	done
 
 .endif	# SOCKS4_BUILDLINK_MK
