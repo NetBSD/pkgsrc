@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1 2000/11/09 17:59:52 mycroft Exp $
+$NetBSD: patch-aa,v 1.2 2001/02/13 11:47:00 tron Exp $
 
 --- configure.orig	Sun Oct  1 12:40:47 2000
 +++ configure	Thu Nov  9 17:52:48 2000
@@ -6,8 +6,8 @@ $NetBSD: patch-aa,v 1.1 2000/11/09 17:59:52 mycroft Exp $
  
  
  
-+# Set DATADIRNAME to "${LOCALEBASE}"
-+DATADIRNAME="${LOCALEBASE}"
++# Set DATADIRNAME to "${LOCALEDIR}"
++DATADIRNAME="${LOCALEDIR}"
 +INTLDEPS=
 +INTLLIBS="-lintl"
  

@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1 2000/10/23 17:06:56 jlam Exp $
+$NetBSD: patch-ab,v 1.2 2001/02/13 11:47:01 tron Exp $
 
 --- configure.orig	Mon Jul 17 17:42:39 2000
 +++ configure
@@ -6,8 +6,8 @@ $NetBSD: patch-ab,v 1.1 2000/10/23 17:06:56 jlam Exp $
  
  
  
-+# Set DATADIRNAME to "${LOCALEBASE}"
-+DATADIRNAME="${LOCALEBASE}"
++# Set DATADIRNAME to "${LOCALEDIR}"
++DATADIRNAME="${LOCALEDIR}"
 +INTLDEPS=
 +INTLLIBS="-lintl"
  

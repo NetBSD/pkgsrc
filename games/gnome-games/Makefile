@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2001/02/06 03:16:57 fredb Exp $
+# $NetBSD: Makefile,v 1.20 2001/02/13 11:47:01 tron Exp $
 
 DISTNAME=		gnome-games-1.2.0
 CATEGORIES=		games gnome
@@ -24,12 +24,12 @@ USE_LIBINTL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 GNU_CONFIGURE=		YES
-CONFIGURE_ENV+=		LOCALEBASE=${LOCALEBASE}
+CONFIGURE_ENV+=		LOCALEDIR=${LOCALEDIR}
 CONFIGURE_ARGS+=	--localstatedir=/var
 CFLAGS+=		-I${LOCALBASE}/include
 
 INSTALL_FILE=		${WRKDIR}/INSTALL
-PLIST_SUBST+=		LOCALEBASE=${LOCALEBASE}
+PLIST_SUBST+=		LOCALEDIR=${LOCALEDIR}
 
 AUTOGEN_ENV=		NOCONFIGURE=1
 AUTOGEN_ENV+=		srcdir=${WRKSRC}
@@ -45,12 +45,12 @@ post-build:
 
 # The directory in which locale files are found is:
 #
-#	${PREFIX}/${LOCALEBASE}/locale/<lang>/LC_MESSAGES
+#	${PREFIX}/${LOCALEDIR}/locale/<lang>/LC_MESSAGES
 #
 .if ${OPSYS} == "SunOS"
-LOCALEBASE=		lib
+LOCALEDIR=		lib
 .else
-LOCALEBASE=		share
+LOCALEDIR=		share
 .endif
 
 .if ${NEED_NCURSES} == "YES"
