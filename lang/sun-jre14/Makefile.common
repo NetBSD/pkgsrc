@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.18 2004/05/05 17:20:29 xtraeme Exp $
+# $NetBSD: Makefile.common,v 1.19 2004/05/22 21:32:34 jmmv Exp $
 
 CATEGORIES=	lang java
 EXTRACT_SUFX=	.bin
@@ -21,7 +21,11 @@ INTERACTIVE_STAGE=	fetch
 
 .include "../../mk/bsd.prefs.mk"
 
-JVM_HOME=	${LOCALBASE}/java/sun-1.4
+JAVA_HOME=	${LOCALBASE}/java/sun-1.4
+JAVA_NAME=	sun14
+JAVA_UNLIMIT=	datasize
+
+MESSAGE_SUBST+=	JAVA_HOME="${JAVA_HOME}"
 
 .if ${OPSYS} == "NetBSD"
 DEPENDS+=	suse_compat-[0-9]*:../../emulators/${SUSE_DIR_PREFIX}_compat
@@ -61,11 +65,12 @@ post-fetch:
 do-build:	# nothing
 
 do-install:
-	${INSTALL_PROGRAM_DIR} ${PREFIX}
-	cd ${WRKSRC} && ${PAX} -rwp ma . ${PREFIX}
+	${INSTALL_PROGRAM_DIR} ${JAVA_HOME}
+	cd ${WRKSRC} && ${PAX} -rwp ma . ${JAVA_HOME}
 
 .if ${OPSYS} == "NetBSD"
 .  include "../../emulators/suse_linux/Makefile.application"
 .endif
 
+.include "../../mk/java-env.mk"
 .include "../../mk/bsd.pkg.mk"
