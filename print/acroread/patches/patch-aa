@@ -1,10 +1,12 @@
+$NetBSD: patch-aa,v 1.2 1999/06/16 11:08:31 sakamoto Exp $
+
 --- INSTALL.orig	Thu Nov  7 00:04:53 1996
 +++ INSTALL	Wed Nov 20 17:37:14 1996
 @@ -117,6 +117,8 @@
      if [ "$i" -a -f "$i" ] ; then
          if [ `uname -s` = "Linux" ] ; then
            size=`ls -lLn "$i" | ( read perm links owner group size date ; echo $size )`
-+        elif [ `uname -s` = "FreeBSD" ] ; then
++        elif [ `uname -s|sed -e 's|.*\(...\)|\\1|'` = "BSD" ] ; then
 +          size=`ls -lL "$i" | ( read perm links owner group size date ; echo $size )`
          else
            size=`ls -lLon "$i" | ( read perm links owner size date ; echo $size )`
@@ -32,7 +34,7 @@
      DefaultName="Intel/BSDI"
      ;;
 -  Linux)
-+  FreeBSD|Linux)
++  *BSD|Linux)
      AcroDefaultNum="$AcroIntelLinuxNum"
      ExchDefaultNum="$ExchIntelLinuxNum"
      ReadDefaultNum="$ReadIntelLinuxNum"

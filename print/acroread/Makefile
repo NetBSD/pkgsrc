@@ -1,41 +1,39 @@
-# New ports collection makefile for:	acroread
-# Version required:	4.0
-# Date created:		16 November 1996
-# Whom:			Thomas Gellekum <tg@freebsd.org>
-#
-# $Id: Makefile,v 1.1.1.1 1999/06/16 11:04:33 sakamoto Exp $
-#
+# $NetBSD: Makefile,v 1.2 1999/06/16 11:08:30 sakamoto Exp $
+# FreeBSD Id: Makefile,v 1.13 1999/04/08 07:49:18 dima Exp $
 
 DISTNAME=	linux-ar-40
-PKGNAME=	acroread-4.0b
+PKGNAME=	acroread-4.0
 CATEGORIES=	print
-MASTER_SITES=	ftp://ftp.adobe.com/pub/adobe/acrobatreader/unix/4.x/beta/
+MASTER_SITES=	ftp://ftp-pac.adobe.com/pub/adobe/acrobatreader/unix/4.x/
 
-MAINTAINER=	dima@FreeBSD.ORG
+MAINTAINER=	packages@netbsd.org
+HOMEPAGE=	http://www.adobe.com/prodindex/acrobat/readstep.html
 
-RUN_DEPENDS=	/compat/linux/lib/libc.so.5:${PORTSDIR}/emulators/linux_lib
+NO_BUILD=	yes
 
-ONLY_FOR_ARCHS=	i386
-
-NO_FILTER_SHLIBS=	yes
+.if (${MACHINE_ARCH} == "i386")
+.if !exists(/emul/linux/lib/ld-linux.so.2)
+IGNORE=You must have Linux libraries installed - see compat_linux(8)
+.endif
+.endif
+ONLY_FOR_PLATFORM=	*-*-i386
 
 WRKSRC=		${WRKDIR}/ILINXR.install
-
-do-build:
-	@${ECHO_MSG} "Do a \`make install' as root."
+MESSAGE_SRC=	${PKGDIR}/MESSAGE
+MESSAGE_FILE=	${WRKDIR}/.MESSAGE
 
 do-install:
 	@${MKDIR} ${PREFIX}/Acrobat4
 	@ReadInstallDir=${PREFIX}/Acrobat4 ${WRKSRC}/INSTALL
 
 post-install:
+	@${SED} -e 's|$${PREFIX}|${PREFIX}|' ${MESSAGE_SRC} > ${MESSAGE_FILE}
 	@cd ${PREFIX}/Acrobat4/bin && \
 	  ${PATCH} --quiet < ${FILESDIR}/acroread.diff && \
 	  ${INSTALL_SCRIPT} ${PREFIX}/Acrobat4/bin/acroread \
 	     ${PREFIX}/bin/acroread4 && ${RM} acroread.orig
-	@brandelf -t Linux ${PREFIX}/Acrobat4/Reader/intellinux/bin/acroread
 	@chmod +x ${PREFIX}/bin/acroread4
 	@${ECHO_MSG} "Be sure to read the license agreement in"
 	@${ECHO_MSG} "${PREFIX}/Acrobat4/Reader/License.pdf"
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"
