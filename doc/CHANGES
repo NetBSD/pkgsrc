@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5744 2004/04/26 14:01:45 taya Exp $
+$NetBSD: CHANGES,v 1.5745 2004/04/26 14:58:33 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2251,3 +2251,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gd to 2.0.23 [adam 2004-04-26]
 	Updated thunderbird to 0.5nb1 [taya 2004-04-26]
 	Added thunderbird-gtk2-0.5 [taya 2004-04-26]
+	Updated xplanet to 1.0.6 [adam 2004-04-26]
