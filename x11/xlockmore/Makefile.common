@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.22 2005/02/17 07:55:47 dan Exp $
+# $NetBSD: Makefile.common,v 1.23 2005/03/08 21:54:18 lukem Exp $
 #
 # This Makefile.common is included by:
 #
@@ -34,10 +34,6 @@ USE_X11BASE=		YES
 
 XLOCK_SOUNDDIR=		${PREFIX}/lib/X11/xlock/sounds
 XLOCK_MODULEDIR=	${PREFIX}/lib/X11/xlock/modules
-
-.if !exists(${X11BASE}/lib/libXdpms.a)
-XLOCK_NO_DPMS=		YES
-.endif
 
 DEFINES+=		-DDEF_MODULEPATH="\"${XLOCK_MODULEDIR}\""
 CPPFLAGS+=		${DEFINES}
