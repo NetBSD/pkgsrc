@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2003/05/02 11:56:57 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2003/05/03 23:03:12 wiz Exp $
 #
 
 DISTNAME=	eGTK_0.3.4
@@ -12,10 +12,9 @@ MAINTAINER=	jlam@netbsd.org
 HOMEPAGE=	http://www.netlabs.net/hp/richieb/gtk_eiffel.html
 COMMENT=	Eiffel/GTK+ interface for SmallEiffel
 
-DEPENDS+=	gtk+>=1.2.10nb4:../../x11/gtk
 DEPENDS+=	smalleiffel-[0-9]*:../../lang/smalleiffel
 
-USE_X11=	yes
+USE_BUILDLINK2=	yes
 
 post-extract:
 	${FIND} ${WRKSRC} -type d -name "CVS" -print | ${XARGS} ${RM} -rf
@@ -59,4 +58,5 @@ post-install:
 	cd ${WRKSRC} && ${INSTALL_DATA} copyright forum.txt ${PREFIX}/share/egtk
 	${INSTALL_DATA} ${WRKDIR}/loadpath.se ${PREFIX}/share/egtk/se
 
+.include "../../x11/gtk/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
