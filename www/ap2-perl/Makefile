@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/06/28 07:40:29 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2002/07/17 10:31:38 martti Exp $
 #
 # This package tracks a snapshot of modperl-2.0 that is updated every 6
 # hours.  To update to the latest snapshot, simply change DISTNAME to
@@ -8,7 +8,7 @@
 # NOTE: This package is *BETA*.  If it doesn't work, then check the
 #	modperl-2.0 mailing lists for help.
 
-DISTNAME=		modperl-2.0_20020628042432
+DISTNAME=		modperl-2.0_20020717042359
 PKGNAME=		ap2-perl-1.99.5
 WRKSRC=			${WRKDIR}/modperl-2.0
 CATEGORIES=		www perl5
