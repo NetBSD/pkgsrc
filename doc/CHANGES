@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7745 2004/11/06 23:02:04 epg Exp $
+$NetBSD: CHANGES,v 1.7746 2004/11/06 23:20:37 dillo Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5138,3 +5138,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added p5-PerlIO-eol-0.13 [epg 2004-11-06]
 	Updated svk to 0.25 [epg 2004-11-06]
 	Updated p5-SVN-Mirror to 0.49 [epg 2004-11-06]
+	Added malint-0.2 [dillo 2004-11-06]
