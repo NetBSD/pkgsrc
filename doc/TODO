@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1252 2003/12/28 12:33:44 jmmv Exp $
+$NetBSD: TODO,v 1.1253 2003/12/29 23:37:03 grant Exp $
 
 Suggested new packages
 ======================
@@ -169,6 +169,7 @@ Suggested package updates
 	o ghostscript-8.00 (apfl)
 	o gkrellm-2.1.22 [pkgsrc-wip]
 	o gkrellm-volume-2.1.9 [pkgsrc-wip]
+	o glib/gtk-2.3.1
 	o global-4.6
 	o glpk-4.3
 	o gnats-4.0 [pkgsrc-wip]
