@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2001/04/30 03:46:34 jlam Exp $
+# $NetBSD: Makefile,v 1.46 2001/05/01 18:07:48 wennmach Exp $
 
 DISTNAME=	squid-2.4.STABLE1-src
 PKGNAME=	squid-2.4.1
@@ -14,7 +14,7 @@ PATCHFILES=	squid-2.4.stable1-diskd_fixed_path.patch \
 		squid-2.4.stable1-htcp_assertion_fix.patch \
 		squid-2.4.stable1-kill_parent_on_child_sigkill.patch \
 		squid-2.4.stable1-wrong_sign_on_timestamp_check.patch
-		
+
 MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.squid-cache.org/
 COMMENT=	Post-Harvest_cached WWW proxy cache and accelerator
