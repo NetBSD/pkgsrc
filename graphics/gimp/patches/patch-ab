@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.7 2004/04/05 22:07:27 jmmv Exp $
+$NetBSD: patch-ab,v 1.8 2004/04/15 08:37:38 adam Exp $
 
---- configure.orig	2004-03-23 16:51:10.000000000 +0100
+--- configure.orig	2004-04-13 21:08:57.000000000 +0000
 +++ configure
-@@ -32872,7 +32872,7 @@ fi;
+@@ -32586,7 +32586,7 @@ fi;
  
  gimpdatadir="$datadir/$PACKAGE/2.0"
  gimpplugindir="$libdir/$PACKAGE/2.0"
