@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2003/06/23 11:20:39 adam Exp $
+# $NetBSD: Makefile,v 1.27 2003/07/01 14:32:59 jwise Exp $
 #
 
 DISTNAME=	webalizer-2.01-10-src
@@ -33,6 +33,6 @@ post-build:
 		${MV} -f ${WRKSRC}/$${file}.fixed ${WRKSRC}/$${file};	\
 	done
 
-.include "../../graphics/freetype-lib/buildlink2.mk"
+.include "../../graphics/freetype2/buildlink2.mk"
 .include "../../graphics/gd/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
