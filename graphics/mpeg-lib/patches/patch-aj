@@ -1,0 +1,8 @@
+--- 2x2.c.orig	Mon Sep 25 10:16:06 1995
++++ 2x2.c	Sat Jun 20 00:33:29 1998
+@@ -25,2 +25,5 @@
+ #include "proto.h"
++#ifdef __NetBSD__
++#include <stdlib.h>
++#endif
+ 

@@ -1,0 +1,8 @@
+--- globals.c.orig	Mon Sep 25 10:22:06 1995
++++ globals.c	Sat Jun 20 00:33:26 1998
+@@ -64,2 +64,5 @@
+ 
++#ifdef __NetBSD__
++#include <string.h>
++#endif
+ 
