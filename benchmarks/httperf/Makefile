@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/03/16 22:53:28 thorpej Exp $
+# $NetBSD: Makefile,v 1.2 2000/11/02 03:43:08 toshii Exp $
 #
 
 DISTNAME=	httperf-0.6
@@ -6,7 +6,7 @@ CATEGORIES=	benchmarks www
 MASTER_SITES=	ftp://ftp.hpl.hp.com/pub/httperf/
 
 MAINTAINER=	thorpej@netbsd.org
-HOMEPAGE=	http://www.hpl.hp.com/personal/Davis_Mosberger/httperf.html
+HOMEPAGE=	http://www.hpl.hp.com/personal/David_Mosberger/httperf.html
 
 LICENSE=	no-commercial-use
 
