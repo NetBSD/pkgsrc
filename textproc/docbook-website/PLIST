@@ -1,0 +1,173 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/01/11 17:16:18 grant Exp $
+share/doc/docbook-website/ChangeLog
+share/doc/docbook-website/README
+share/doc/docbook-website/VERSION
+share/doc/docbook-website/WhatsNew
+share/docbook-website/VERSION
+share/docbook-website/autolayout.dtd
+share/docbook-website/extensions.mod
+share/docbook-website/extensions/ChangeLog
+share/docbook-website/extensions/saxon64.jar
+share/docbook-website/extensions/saxon64/ChangeLog
+share/docbook-website/extensions/saxon64/com/nwalsh/saxon/ChangeLog
+share/docbook-website/extensions/saxon64/com/nwalsh/saxon/Website.java
+share/docbook-website/extensions/saxon64/prj.el
+share/docbook-website/extensions/xalan2.jar
+share/docbook-website/extensions/xalan2/ChangeLog
+share/docbook-website/extensions/xalan2/com/nwalsh/xalan/ChangeLog
+share/docbook-website/extensions/xalan2/com/nwalsh/xalan/Website.java
+share/docbook-website/extensions/xalan2/prj.el
+share/docbook-website/forms.mod
+share/docbook-website/layout.dtd
+share/docbook-website/namespaces.mod
+share/docbook-website/rddl.mod
+share/docbook-website/website-custom.dtd
+share/docbook-website/website-full.dtd
+share/docbook-website/website.dtd
+share/docbook-website/website.mod
+share/docbook-website/xsl/ChangeLog
+share/docbook-website/xsl/VERSION
+share/docbook-website/xsl/autolayout.xsl
+share/docbook-website/xsl/chunk-common.xsl
+share/docbook-website/xsl/chunk-tabular.xsl
+share/docbook-website/xsl/chunk-website.xsl
+share/docbook-website/xsl/head.xsl
+share/docbook-website/xsl/makefile-dep.xsl
+share/docbook-website/xsl/param.xsl
+share/docbook-website/xsl/rss.xsl
+share/docbook-website/xsl/tabular.xsl
+share/docbook-website/xsl/toc-tabular.xsl
+share/docbook-website/xsl/toc.xsl
+share/docbook-website/xsl/website-common.xsl
+share/docbook-website/xsl/website.xsl
+share/docbook-website/xsl/xbel.xsl
+share/examples/docbook-website/.tabular
+share/examples/docbook-website/.textonly
+share/examples/docbook-website/ChangeLog
+share/examples/docbook-website/about.xml
+share/examples/docbook-website/autolayout.xml
+share/examples/docbook-website/bookmark/ChangeLog
+share/examples/docbook-website/bookmark/bookmark.xml
+share/examples/docbook-website/bookmark/catalog
+share/examples/docbook-website/bookmark/xml.dcl
+share/examples/docbook-website/build-ext.xml
+share/examples/docbook-website/build-make.xml
+share/examples/docbook-website/build-textonly.xml
+share/examples/docbook-website/build.xml
+share/examples/docbook-website/building.xml
+share/examples/docbook-website/custom.xml
+share/examples/docbook-website/dynxbel.js
+share/examples/docbook-website/example.css
+share/examples/docbook-website/full.xml
+share/examples/docbook-website/graphics/ChangeLog
+share/examples/docbook-website/graphics/arrow.gif
+share/examples/docbook-website/graphics/banner.png
+share/examples/docbook-website/graphics/blank.gif
+share/examples/docbook-website/graphics/homebanner.png
+share/examples/docbook-website/graphics/icons/ChangeLog
+share/examples/docbook-website/graphics/icons/iconat.gif
+share/examples/docbook-website/graphics/icons/iconhome.gif
+share/examples/docbook-website/graphics/icons/iconsmallrightarrow.gif
+share/examples/docbook-website/graphics/navicons/arrow/ChangeLog
+share/examples/docbook-website/graphics/navicons/arrow/added.gif
+share/examples/docbook-website/graphics/navicons/arrow/changed.gif
+share/examples/docbook-website/graphics/navicons/arrow/current/ChangeLog
+share/examples/docbook-website/graphics/navicons/arrow/current/leaf.gif
+share/examples/docbook-website/graphics/navicons/arrow/current/open.gif
+share/examples/docbook-website/graphics/navicons/arrow/current/pointer.gif
+share/examples/docbook-website/graphics/navicons/arrow/other/ChangeLog
+share/examples/docbook-website/graphics/navicons/arrow/other/closed.gif
+share/examples/docbook-website/graphics/navicons/arrow/other/leaf.gif
+share/examples/docbook-website/graphics/navicons/arrow/other/open.gif
+share/examples/docbook-website/graphics/navicons/folder/ChangeLog
+share/examples/docbook-website/graphics/navicons/folder/added.gif
+share/examples/docbook-website/graphics/navicons/folder/changed.gif
+share/examples/docbook-website/graphics/navicons/folder/current/ChangeLog
+share/examples/docbook-website/graphics/navicons/folder/current/leaf.gif
+share/examples/docbook-website/graphics/navicons/folder/current/open.gif
+share/examples/docbook-website/graphics/navicons/folder/current/pointer.gif
+share/examples/docbook-website/graphics/navicons/folder/other/ChangeLog
+share/examples/docbook-website/graphics/navicons/folder/other/closed.gif
+share/examples/docbook-website/graphics/navicons/folder/other/leaf.gif
+share/examples/docbook-website/graphics/navicons/folder/other/open.gif
+share/examples/docbook-website/graphics/navicons/folder16/ChangeLog
+share/examples/docbook-website/graphics/navicons/folder16/added.gif
+share/examples/docbook-website/graphics/navicons/folder16/changed.gif
+share/examples/docbook-website/graphics/navicons/folder16/current/ChangeLog
+share/examples/docbook-website/graphics/navicons/folder16/current/leaf.gif
+share/examples/docbook-website/graphics/navicons/folder16/current/open.gif
+share/examples/docbook-website/graphics/navicons/folder16/current/pointer.gif
+share/examples/docbook-website/graphics/navicons/folder16/other/ChangeLog
+share/examples/docbook-website/graphics/navicons/folder16/other/closed.gif
+share/examples/docbook-website/graphics/navicons/folder16/other/leaf.gif
+share/examples/docbook-website/graphics/navicons/folder16/other/open.gif
+share/examples/docbook-website/graphics/navicons/plusminus/ChangeLog
+share/examples/docbook-website/graphics/navicons/plusminus/added.gif
+share/examples/docbook-website/graphics/navicons/plusminus/changed.gif
+share/examples/docbook-website/graphics/navicons/plusminus/current/ChangeLog
+share/examples/docbook-website/graphics/navicons/plusminus/current/leaf.gif
+share/examples/docbook-website/graphics/navicons/plusminus/current/open.gif
+share/examples/docbook-website/graphics/navicons/plusminus/current/pointer.gif
+share/examples/docbook-website/graphics/navicons/plusminus/other/ChangeLog
+share/examples/docbook-website/graphics/navicons/plusminus/other/closed.gif
+share/examples/docbook-website/graphics/navicons/plusminus/other/leaf.gif
+share/examples/docbook-website/graphics/navicons/plusminus/other/open.gif
+share/examples/docbook-website/graphics/navicons/triangle/ChangeLog
+share/examples/docbook-website/graphics/navicons/triangle/added.gif
+share/examples/docbook-website/graphics/navicons/triangle/changed.gif
+share/examples/docbook-website/graphics/navicons/triangle/current/ChangeLog
+share/examples/docbook-website/graphics/navicons/triangle/current/leaf.gif
+share/examples/docbook-website/graphics/navicons/triangle/current/open.gif
+share/examples/docbook-website/graphics/navicons/triangle/current/pointer.gif
+share/examples/docbook-website/graphics/navicons/triangle/other/ChangeLog
+share/examples/docbook-website/graphics/navicons/triangle/other/closed.gif
+share/examples/docbook-website/graphics/navicons/triangle/other/leaf.gif
+share/examples/docbook-website/graphics/navicons/triangle/other/open.gif
+share/examples/docbook-website/layout.xml
+share/examples/docbook-website/olink.xml
+share/examples/docbook-website/param.xml
+share/examples/docbook-website/php.xml
+share/examples/docbook-website/rddl.xml
+share/examples/docbook-website/revflag.xml
+share/examples/docbook-website/rss.xml
+share/examples/docbook-website/subdir/ChangeLog
+share/examples/docbook-website/test1.xml
+share/examples/docbook-website/test1a.xml
+share/examples/docbook-website/test1b.xml
+share/examples/docbook-website/test2.xml
+share/examples/docbook-website/test3.xml
+share/examples/docbook-website/website.xml
+share/examples/docbook-website/wslayout.xml
+@dirrm share/examples/docbook-website/subdir
+@dirrm share/examples/docbook-website/graphics/navicons/triangle/other
+@dirrm share/examples/docbook-website/graphics/navicons/triangle/current
+@dirrm share/examples/docbook-website/graphics/navicons/triangle
+@dirrm share/examples/docbook-website/graphics/navicons/plusminus/other
+@dirrm share/examples/docbook-website/graphics/navicons/plusminus/current
+@dirrm share/examples/docbook-website/graphics/navicons/plusminus
+@dirrm share/examples/docbook-website/graphics/navicons/folder16/other
+@dirrm share/examples/docbook-website/graphics/navicons/folder16/current
+@dirrm share/examples/docbook-website/graphics/navicons/folder16
+@dirrm share/examples/docbook-website/graphics/navicons/folder/other
+@dirrm share/examples/docbook-website/graphics/navicons/folder/current
+@dirrm share/examples/docbook-website/graphics/navicons/folder
+@dirrm share/examples/docbook-website/graphics/navicons/arrow/other
+@dirrm share/examples/docbook-website/graphics/navicons/arrow/current
+@dirrm share/examples/docbook-website/graphics/navicons/arrow
+@dirrm share/examples/docbook-website/graphics/navicons
+@dirrm share/examples/docbook-website/graphics/icons
+@dirrm share/examples/docbook-website/graphics
+@dirrm share/examples/docbook-website/bookmark
+@dirrm share/examples/docbook-website
+@dirrm share/docbook-website/xsl
+@dirrm share/docbook-website/extensions/xalan2/com/nwalsh/xalan
+@dirrm share/docbook-website/extensions/xalan2/com/nwalsh
+@dirrm share/docbook-website/extensions/xalan2/com
+@dirrm share/docbook-website/extensions/xalan2
+@dirrm share/docbook-website/extensions/saxon64/com/nwalsh/saxon
+@dirrm share/docbook-website/extensions/saxon64/com/nwalsh
+@dirrm share/docbook-website/extensions/saxon64/com
+@dirrm share/docbook-website/extensions/saxon64
+@dirrm share/docbook-website/extensions
+@dirrm share/docbook-website
+@dirrm share/doc/docbook-website
