@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/07/17 21:35:39 grant Exp $
+# $NetBSD: Makefile,v 1.5 2003/08/30 19:11:58 jlam Exp $
 #
 
 .if ${MACHINE_ARCH} == "sparc64"
@@ -22,10 +22,14 @@ CONFLICTS=		netbsd32_compat15-[0-9]*
 ONLY_FOR_PLATFORM=	NetBSD-*-sparc64
 
 NO_MTREE=		# defined
+NO_BUILD=		# defined
 SHLIB_HANDLING=		NO
+USE_PKGINSTALL= 	YES
 
-DEINSTALL_FILE=		${WRKDIR}/DEINSTALL
-INSTALL_FILE=		${WRKDIR}/INSTALL
+FILES_SUBST+=		COMPAT_EMULSUBDIR=${COMPAT_EMULSUBDIR}
+FILES_SUBST+=		MACHINE_ARCH=${MACHINE_ARCH}
+FILES_SUBST+=		OBJECT_FMT=${OBJECT_FMT}
+FILES_SUBST+=		LDCONFIG=${LDCONFIG}
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -35,16 +39,6 @@ COMPAT_LIBEXECDIR=	${PREFIX}/${EMULSUBDIR}/usr/libexec
 COMPAT_XLIBDIR=		${PREFIX}/${EMULSUBDIR}/usr/X11R6/lib
 
 PLIST_SUBST+=		COMPAT_EMULSUBDIR=${EMULSUBDIR}
-
-do-build:
-	${SED}	-e "s,@MACHINE_ARCH@,${MACHINE_ARCH},g" \
-		-e "s,@COMPAT_EMULSUBDIR@,${COMPAT_EMULSUBDIR},g" \
-		-e "s,@LDCONFIG@,${LDCONFIG},g" \
-		< ${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
-	${SED}	-e "s,@MACHINE_ARCH@,${MACHINE_ARCH},g" \
-		-e "s,@OBJECT_FMT@,${OBJECT_FMT},g" \
-		-e "s,@LDCONFIG@,${LDCONFIG},g" \
-		< ${PKGDIR}/INSTALL > ${INSTALL_FILE}
 
 # XXX using pax to copy symlinks properly.
 do-install:
@@ -59,8 +53,5 @@ do-install:
 		${COMPAT_XLIBDIR}/lib*.so* ${COMPAT_LIBEXECDIR}/ld.*so
 	chmod 555 ${COMPAT_LIBDIR}/lib*.so* ${COMPAT_LIBDIR}/i18n/lib*.so* \
 		  ${COMPAT_XLIBDIR}/lib*.so* ${COMPAT_LIBEXECDIR}/ld.*so
-
-post-install:
-	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
 .include "../../mk/bsd.pkg.mk"
