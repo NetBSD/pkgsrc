@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2001/09/27 23:18:57 jlam Exp $
+# $NetBSD: Makefile,v 1.31 2001/11/09 17:26:27 hubertf Exp $
 #
 
 DISTNAME=	php-${PHP_VERSION}
@@ -12,7 +12,6 @@ HOMEPAGE=	http://www.php.net/
 COMMENT=	PHP3 HTML-embedded programming language with database connectivity
 
 BUILD_DEPENDS+=	perl>=${PERL5_REQD}:../../lang/perl5
-DEPENDS+=	gdbm>=1.7.3:../../databases/gdbm
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -40,6 +39,7 @@ CONFIGURE_ARGS+=--with-system-regex --without-gd \
 		--enable-discard-path --enable-memory-limit \
 		--enable-sysvsem --enable-sysvshm
 CONFIGURE_ENV+=	PERL_PATH=${PERL5}
+CONFIGURE_ENV+=	PREFIX=${PREFIX}
 
 .if !defined(BUILDING_EXTENSION_MODULE)
 CPPFLAGS+=	-DPHP_INTERNAL_FUNCS
@@ -75,4 +75,5 @@ do-install:
 .endif
 .endif
 
+.include "../../databases/gdbm/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
