@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/11/29 11:41:28 seb Exp $
+bin/hesinfo
+include/hesiod.h
+lib/libhesiod.a
+man/man1/hesinfo.1
+man/man3/hesiod.3
+man/man3/hesiod_end.3
+man/man3/hesiod_free_list.3
+man/man3/hesiod_free_passwd.3
+man/man3/hesiod_free_postoffice.3
+man/man3/hesiod_free_servent.3
+man/man3/hesiod_getmailhost.3
+man/man3/hesiod_getpwnam.3
+man/man3/hesiod_getpwuid.3
+man/man3/hesiod_getservbyname.3
+man/man3/hesiod_init.3
+man/man3/hesiod_resolve.3
+man/man3/hesiod_to_bind.3
+man/man5/hesiod.conf.5
