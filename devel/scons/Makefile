@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/03/09 19:13:52 recht Exp $
+# $NetBSD: Makefile,v 1.2 2004/07/06 23:19:53 recht Exp $
 #
 
 DISTNAME=		scons-0.95
@@ -16,5 +16,6 @@ post-install:
 	${INSTALL_MAN} ${WRKSRC}/scons.1 ${PREFIX}/man/man1
 	${INSTALL_MAN} ${WRKSRC}/sconsign.1 ${PREFIX}/man/man1
 
+.include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
