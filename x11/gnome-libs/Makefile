@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.37 2000/01/15 09:58:16 tron Exp $
+# $NetBSD: Makefile,v 1.38 2000/01/20 13:40:11 tron Exp $
 
-DISTNAME=		gnome-libs-1.0.53
+DISTNAME=		gnome-libs-1.0.55
 CATEGORIES=		x11 gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=stable/sources/gnome-libs/}
 
@@ -24,9 +24,9 @@ CONFIGURE_ENV+=		CPPFLAGS="-I${LOCALBASE}/include" \
 			X11BASE=${X11BASE}
 
 LOCALSTATEDIR=		/var/gnome
-
 PLIST_SRC=		${WRKDIR}/PLIST
-PLIST_SUBST+=		LOCALBASE=${LOCALBASE}
+PLIST_SUBST+=		LOCALBASE=${LOCALBASE} \
+			LOCALSTATEDIR=${LOCALSTATEDIR}
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -46,9 +46,8 @@ pre-build:
 
 post-install:
 	${MKDIR} ${LOCALSTATEDIR}
-	${SED} -e 's#@@LOCALSTATEDIR@@#${LOCALSTATEDIR}#' \
-	    <${PKGDIR}/PLIST >${PLIST_SRC}
-	@cd ${PREFIX}; find lib -name 'libgnome.so.*' >>${PLIST_SRC}
+	${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
+	cd ${PREFIX}; find lib -name 'libgnome.so.*' >>${PLIST_SRC}
 	${TEST} ${PREFIX} = ${LOCALBASE} || \
 	${LN} -fs ${PREFIX}/share/aclocal/libart.m4 \
 	  ${LOCALBASE}/share/aclocal/libart.m4
