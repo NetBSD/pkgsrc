@@ -1,0 +1,13 @@
+This is an Apple StyleWriter driver for un*x.  It was developed on
+NetBSD-mac68k, and has been reported to work on NetBSD-i386,
+linux-pmac, mklinux-ppc, and linux-x86.  
+
+Supported printers include:
+
+StyleWriter I
+StyleWriter II
+StyleWriter III (aka StyleWriter 1200)
+Color StyleWriter 1500
+Color StyleWriter 2200 
+Color StyleWriter 2400 
+Color StyleWriter 2500 

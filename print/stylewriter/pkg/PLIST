@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/09/04 15:56:05 jlam Exp $
+sbin/lpstyl
+libexec/stylewriter/direct_stylpbm
+libexec/stylewriter/direct_stylps
+libexec/stylewriter/stylascii
+libexec/stylewriter/stylascii.a4
+libexec/stylewriter/stylps
+libexec/stylewriter/stylps-color
+libexec/stylewriter/stylps-color.a4
+libexec/stylewriter/stylps.a4
+share/doc/stylewriter/README
+share/doc/stylewriter/README.protocol
+share/doc/stylewriter/README.troubleshooting
+share/examples/stylewriter/printcap
+share/examples/stylewriter/printcap.a4
+share/examples/stylewriter/styl.ppd
+@dirrm share/examples/stylewriter
+@dirrm share/doc/stylewriter
+@dirrm libexec/stylewriter
+@exec mkdir -p /var/spool/lpd/stylps
+@unexec rmdir /var/spool/lpd/stylps 2>/dev/null || true
