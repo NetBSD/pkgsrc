@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2003/05/22 07:35:42 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/08 17:42:43 gson Exp $
 #
 
-DISTNAME=		Time-HiRes-1.47
+DISTNAME=		Time-HiRes-1.49
 PKGNAME=		p5-${DISTNAME}
 SVR4_PKGNAME=		p5thr
 CATEGORIES=		devel perl5
