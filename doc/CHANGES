@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2055 2003/04/27 12:52:56 jmmv Exp $
+$NetBSD: CHANGES,v 1.2056 2003/04/27 13:53:35 kent Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1753,3 +1753,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated nmap to 3.26 [salo 2003-04-27]
 	Updated nmapfe to 0.95nb3 [salo 2003-04-27]
 	Updated gnome2 to 2.2.2 [jmmv 2003-04-27]
+	Updated cross-i386-netbsdpe to 1.4.0 [kent 2003-04-27]
