@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2001/03/27 03:20:27 hubertf Exp $
+# $NetBSD: Makefile,v 1.17 2001/04/24 17:27:57 rh Exp $
 # FreeBSD Id: Makefile,v 1.6 1999/01/12 16:50:43 vanilla Exp
 #
 
-DISTNAME=		gtkmm-1.2.1
-PKGNAME=		gtk---1.2.1
+DISTNAME=		gtkmm-1.2.5
+PKGNAME=		gtk---1.2.5
 CATEGORIES=		x11 devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gtkmm/} \
 			${MASTER_SITE_GNOME:=stable/sources/gtkmm/}
@@ -16,12 +16,12 @@ BUILD_DEPENDS+=		m4-1.4:../../devel/m4
 DEPENDS+=		gtk+>=1.2.7:../../x11/gtk
 DEPENDS+=		libsigc++>=1.0.1:../../devel/libsigc++
 
-USE_X11BASE=		# defined
+USE_X11BASE=		YES
 
-GNU_CONFIGURE=		# defined
-USE_GMAKE=		# defined
-USE_PERL5=		# defined
-USE_LIBTOOL=		# defined
+GNU_CONFIGURE=		YES
+USE_GMAKE=		YES
+USE_PERL5=		YES
+USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/scripts/ltconfig
 
 M4=			${LOCALBASE}/bin/gm4
