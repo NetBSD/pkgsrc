@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 1997/11/01 00:56:20 augustss Exp $
+# $NetBSD: Makefile,v 1.9 1997/11/24 23:01:00 augustss Exp $
 #
 
     SUBDIR += amp
@@ -11,14 +11,14 @@
     #SUBDIR += nas
     SUBDIR += nspmod
     #SUBDIR += rplay
-    #SUBDIR += rsynth
+    #SUBDIR += rsynth		# needs nas
     SUBDIR += sox
     SUBDIR += splay
     SUBDIR += timidity
-    #SUBDIR += tosha		# needs libscsi
+    SUBDIR += tosha
     SUBDIR += tracker
-    #SUBDIR += workman
-    #SUBDIR += xcd
+    #SUBDIR += workman		# needs xview
+    #SUBDIR += xcd		# needs tk80
     #SUBDIR += xcdplayer
     SUBDIR += xmcd
     SUBDIR += xmix
