@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.4 2002/10/11 09:25:55 rh Exp $
+
+--- toc/src/toc-extract.c.orig	Fri Oct 13 00:53:39 2000
++++ toc/src/toc-extract.c
+@@ -97,7 +97,7 @@
+ 
+ 		stack_el = find_first_element (context, element_list);
+ 
+-		if (!stack_el->ignore)
++		if (stack_el != NULL && !stack_el->ignore)
+ 		{
+ 			print_indent(context->depth);
+ 			printf("</tocsect%d>\n", context->depth-1);
+@@ -190,7 +190,7 @@
+ 
+ 	stack_el = find_first_element (context, element_list);
+ 	
+-	if (stack_el->title_output)
++	if (stack_el == NULL || stack_el->title_output)
+ 	{
+ 		list_free (element_list);
+ 		return;
