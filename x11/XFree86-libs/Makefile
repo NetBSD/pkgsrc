@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/05/07 15:25:14 cjep Exp $
+# $NetBSD: Makefile,v 1.11 2004/07/09 08:02:21 xtraeme Exp $
 
 DISTNAME=		${DISTFILES}
 PKGNAME=		XFree86-libs-${XF_VER}
@@ -41,6 +41,11 @@ SUBST_STAGE.mkstrs=	post-patch
 SUBST_FILES.mkstrs=	config/cf/Library.tmpl
 SUBST_SED.mkstrs=	-e 's,@MAKESTRS@,${X11ROOT}/bin/makestrs,g'
 SUBST_MESSAGE.mkstrs=	"Fixing path of makestrs."
+
+.if ${OPSYS} == "Linux"
+post-install:
+	@${LDCONFIG} ${X11ROOT}/lib
+.endif
 
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
