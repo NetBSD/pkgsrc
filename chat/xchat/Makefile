@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/08/12 08:26:56 tron Exp $
+# $NetBSD: Makefile,v 1.9 2001/08/17 19:04:58 fredb Exp $
 
 DISTNAME=	xchat-1.8.2
 CATEGORIES=	chat x11 gnome
@@ -16,7 +16,7 @@ USE_GMAKE=	YES
 USE_PERL5=	YES
 USE_X11BASE=	YES
 GNU_CONFIGURE=	YES
-CPPFLAGS+=	-I${LOCALBASE}/include
+CONFIGURE_ENV+=	ac_cv_lib_intl_bindtextdomain='yes'
 MAKE_ENV+=	PKGLOCALEDIR="${PKGLOCALEDIR}"
 
 # Prevent invokation of "auto*" which caused build failures due to insufficient
@@ -24,7 +24,7 @@ MAKE_ENV+=	PKGLOCALEDIR="${PKGLOCALEDIR}"
 pre-configure:
 	@cd ${WRKSRC} && \
 	${RM} -f po/zh_TW.Big5.po && \
-	${TOUCH} aclocal.m4 stamp-h.in config.status && \
+	${TOUCH} aclocal.m4 stamp-h.in configure && \
 	${FIND} . -name Makefile.in | ${XARGS} ${TOUCH}
 
 post-install:
