@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2718 2004/12/16 02:21:08 taca Exp $
+$NetBSD: TODO,v 1.2719 2004/12/16 16:10:34 minskim Exp $
 
 Suggested new packages
 ======================
@@ -331,6 +331,7 @@ Suggested package updates
 	o balsa-1.4.4
 	o bbsload-0.2.8
 	o bchunk-1.2.0
+	o bdb-xml-2.0.7
 	o benchfft-3.1
 	o bibparse-1.06
 	o bibtex2html-1.74 [requires ocaml>=3.07]
