@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1999/04/05 16:57:57 mycroft Exp $
+# $NetBSD: Makefile,v 1.6 1999/04/05 17:14:12 mycroft Exp $
 
 DISTNAME=		abuse_pd
 PKGNAME=		abuse-2.0
@@ -16,6 +16,6 @@ USE_GMAKE=		yes
 
 post-extract:
 	cd ${WRKSRC}/abuse && \
-	    ${GZCAT} ${DISTDIR}/abuse_data.tar.gz | /usr/bin/tar xf -
+	    ${GZCAT} ${DISTDIR}/abuse_data.tar.gz | ${GTAR} xf -
 
 .include "../../mk/bsd.pkg.mk"
