@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.10 2002/12/26 21:09:11 jmmv Exp $
+# $NetBSD: Makefile,v 1.11 2002/12/29 23:45:30 chris Exp $
 
-DISTNAME=	sylpheed-0.8.6claws
-PKGNAME=	sylpheed-claws-0.8.6
+DISTNAME=	sylpheed-0.8.8claws
+PKGNAME=	sylpheed-claws-0.8.8
 CATEGORIES=	mail news x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sylpheed-claws/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	ptiJo@noos.fr
+MAINTAINER=	chris@netbsd.org
 HOMEPAGE=	http://sylpheed-claws.sourceforge.net/
 COMMENT=	X based e-mail and netnews client
 
@@ -20,6 +20,7 @@ USE_X11BASE=		yes
 USE_GMAKE=		yes
 
 GNU_CONFIGURE=		yes
+# Force gnome detection off to avoid installing some extra files
 CONFIGURE_ENV+=		ac_cv_path_GNOME_CONFIG="no"
 CONFIGURE_ARGS+=	--enable-nls
 CONFIGURE_ARGS+=	--enable-ssl
@@ -29,7 +30,7 @@ CONFIGURE_ARGS+=	--enable-compface
 PKG_SYSCONFSUBDIR=	sylpheed
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
-BUILDLINK_DEPENDS.gpgme=	gpgme>=0.3.5
+BUILDLINK_DEPENDS.gpgme=	gpgme>=0.3.10
 
 .include "../../mk/bsd.prefs.mk"
 BUILD_DEFS+=		USE_INET6 USE_OPENLDAP
@@ -50,7 +51,12 @@ CONFIGURE_ARGS+=	--enable-ldap
 .include "../../databases/openldap/buildlink2.mk"
 .endif
 
-CONF_FILES=	${FILESDIR}/mime.types ${PKG_SYSCONFDIR}/mime.types
+EGDIR=		${PREFIX}/share/examples/sylpheed
+CONF_FILES=	${EGDIR}/mime.types ${PKG_SYSCONFDIR}/mime.types
+
+post-install:
+	${INSTALL_DATA_DIR} ${EGDIR}
+	${INSTALL_DATA} ${FILESDIR}/mime.types ${EGDIR}
 
 .include "../../converters/libiconv/buildlink2.mk"
 .include "../../graphics/gdk-pixbuf/buildlink2.mk"
