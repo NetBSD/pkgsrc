@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2003/07/22 05:14:44 martti Exp $
+# $NetBSD: Makefile,v 1.12 2003/12/08 14:42:44 wiz Exp $
 #
 
 DISTNAME=		flac-1.1.0
+PKGREVISION=				1
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 CATEGORIES=		audio archivers
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=flac/}
