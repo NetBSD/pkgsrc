@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/06/06 08:02:49 agc Exp $
+include/daap/client.h
+lib/libopendaap.a
+lib/libopendaap.la
+lib/libopendaap.so
+lib/libopendaap.so.0
+lib/libopendaap.so.0.1
+lib/pkgconfig/opendaap.pc
+@dirrm include/daap
