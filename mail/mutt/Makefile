@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2000/06/08 12:57:18 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2000/06/09 14:58:30 wiz Exp $
 
 DISTNAME=	mutt-1.2i
 CATEGORIES=	mail
@@ -55,7 +55,15 @@ CURSES_GOOD?=	# defined
 .endif
 .endfor
 
-.if !defined(CURSES_GOOD)
+.if defined(CURSES_GOOD)
+# hack to allow compilation even if ncurses are installed
+pre-configure:
+.for FILE in configure configure.in
+	cd ${WRKSRC}; ${SED} "s/-lncurses/-lcurses/" < ${FILE} \
+		> ${FILE}.patched; ${MV} ${FILE}.patched ${FILE}
+.endfor
+	${CHMOD} 755 ${WRKSRC}/configure
+.else
 DEPENDS+=	ncurses>=4.2:../../devel/ncurses
 CONFIGURE_ARGS+= --with-curses=${LOCALBASE}
 .endif
