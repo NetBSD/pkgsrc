@@ -1,0 +1,146 @@
+# $NetBSD: Makefile,v 1.1.1.1 2004/06/29 18:00:17 shannonjr Exp $
+#
+
+DISTNAME=	gcc-${GCC_VERSION}-${GCC_VERSION_DATE}
+PKGNAME=	gcc34-ada-${GCC_VERSION}
+CATEGORIES=	lang
+MASTER_SITES=	ftp://gcc.gnu.org/pub/gcc/snapshots/${GCC_VERSION}-${VERSION_DATE}/
+#MASTER_SITES=	${MASTER_SITE_GNU:=gcc/gcc-${GCC_VERSION}/}
+EXTRACT_SUFX=	.tar.bz2
+
+MAINTAINER=	shannonjr@NetBSD.org
+HOMEPAGE=	http://www.gnu.org/software/gcc/gcc.html
+COMMENT=	This is the gcc 3.4 Ada compiler
+
+BUILD_USES_MSGFMT=	YES
+
+GCC_VERSION=		3.4.1
+GCC_VERSION_DATE=	20040625
+
+USE_BUILDLINK3=		YES
+USE_PKGINSTALL=		YES
+USE_GNU_TOOLS+=		make
+HAS_CONFIGURE=		YES
+CONFIGURE_ARGS+=	--enable-languages="c,ada"
+PLIST_SRC=	${WRKDIR}/PLIST_DYNAMIC
+
+.include "../../mk/bsd.prefs.mk"
+
+# Ada bootstrap compiler section
+# An Ada compiler is required to build the Ada compiler. Two
+may be used:
+#USE_GCC33	=# Define to use gcc-3.3.x-ada
+#USE_GCC34	=# Define to use gcc34
+# You may also specify the path of a gcc/gnat Ada compiler
+# outside of the pkgsrc system by specifying the full path
+# of the compiler (example) below:
+#ALT_GCC=	prefix/bin/gcc
+.if defined(ALT_GCC)
+.	if exists(${ALT_GCC})
+ALT_GCC_PREFIX:=	${ALT_GCC:H}/..
+ALT_GCC_RTS!=	${FIND} ${ALT_GCC_PREFIX} -name adalib
+RALT_GCC_RTS=	${ALT_GCC_RTS:S%${LOCALBASE}%%:S%/%%}
+.	else
+PKG_SKIP_REASON=	"Missing bootstrap Ada compiler"
+.	endif
+.endif
+.if !defined(USE_GCC33) && !defined(USE_GCC34) && !defined(ALT_GCC)
+PKG_SKIP_REASON=	"An Ada bootstrap compiler must be specified"
+.endif
+
+# Make location overridable, to allow ping-pong bootstraps.
+GCC34_DEFAULT_SUBPREFIX=	gcc34-ada
+GCC34_INSTALLTO_SUBPREFIX?=	${GCC34_DEFAULT_SUBPREFIX}
+.if ${GCC34_INSTALLTO_SUBPREFIX} != ${GCC34_DEFAULT_SUBPREFIX}
+GCC34_PKGMODIF=		${GCC34_INSTALLTO_SUBPREFIX}
+.endif
+
+GCC_SUBPREFIX=		${GCC34_INSTALLTO_SUBPREFIX}
+GCC_PREFIX=		${PREFIX}/${GCC_SUBPREFIX}
+PLIST_SUBST+=		GCC_SUBPREFIX=${GCC_SUBPREFIX}
+FILES_SUBST+=		GCC_PREFIX=${GCC_PREFIX}
+FILES_SUBST+=		PKGNAME=${PKGNAME}
+MESSAGE_SUBST+=		GCC_PREFIX=${GCC_PREFIX}
+CONFIGURE_ARGS+=	--prefix=${GCC_PREFIX}
+GCC_PLATFORM=		${MACHINE_GNU_ARCH}--netbsdelf2.0
+PTHREAD_OPTS+=		require native
+CPPFLAGS+=	-I${BUILDLINK_DIR}/include
+CFLAGS+=	-I${BUILDLINK_DIR}/include
+CONFIGURE_ARGS+=	--host=${GCC_PLATFORM}
+CONFIGURE_ARGS+=	--enable-threads=gnat
+GCC_DIR=	${WRKDIR}/.gcc
+
+post-patch:
+	(cd files; \
+	${CP} adasignal.c ${WRKSRC}/gcc/ada; \
+	${CP} ada_lwp_self.c ${WRKSRC}/gcc/ada; \
+	${CP} dummy_pthreads.c ${WRKSRC}/gcc/ada; \
+	for i in *.adb *.ads ; do \
+		${CP} $$i ${WRKSRC}/gcc/ada; \
+	done )
+
+.if defined(USE_GCC34)
+pre-configure:
+.include "../../lang/gcc34/preconfigure.mk"
+.elif defined(ALT_GCC)
+pre-configure:
+	(cd ${WRKDIR}/.buildlink && ${MKDIR} ${RALT_GCC_RTS} && \
+	cd ${RALT_GCC_RTS} && ${LN} -sf ${ALT_GCC_RTS}/libgnat.a .)
+	(cd ${ALT_GCC:H} && \
+	files=`${FIND} . -type f \( -perm -0100 \)` && \
+	cd ${GCC_DIR}/bin/ && \
+	for file in ${ALT_GCC:T} $${files} ; do \
+		$(ECHO) '#!/bin/sh' > $${file}; \
+		$(ECHO) -n "exec ${ALT_GCC:H}/$${file} " >>$${file}; \
+		$(ECHO) '"$$@"' >>$${file}; \
+		$(CHMOD) +x $${file}; \
+	done )
+.endif
+
+do-configure:
+	((${TEST} -d ${WRKDIR}/obj || ${MKDIR} ${WRKDIR}/obj) && \
+	 (cd ${WRKDIR}/obj && ${SETENV} ${CONFIGURE_ENV} ${WRKSRC}/configure ${CONFIGURE_ARGS}))
+
+do-build:
+	(cd ${WRKDIR}/obj && ${SETENV} ${MAKE_ENV} ${GMAKE} bootstrap)
+	(cd ${WRKDIR}/obj/gcc && ${SETENV} ${MAKE_ENV} ${GMAKE} gnatlib_and_tools)
+
+do-test:
+.if (${MACHINE_GNU_ARCH} == "x86_64")
+	(cd files && ${CP} netbsd64macro.dfs ${WRKSRC}/gcc/testsuite/ada/acats/support/macro.dfs)
+.endif
+	(cd ${WRKDIR}/obj/gcc && ${GMAKE} check-ada)
+
+do-install:
+	(cd ${WRKDIR}/obj && ${SETENV} ${MAKE_ENV} ${GMAKE} ${INSTALL} \
+	 && ${TEST} -f ${GCC_PREFIX}/bin/cc || ${LN} -f ${GCC_PREFIX}/bin/gcc ${GCC_PREFIX}/bin/cc)
+	(SPECPATH=`${GCC_PREFIX}/bin/gcc -print-file-name=specs` && \
+	for EXPANDEDSPECPATH in $${SPECPATH} ; do \
+		SPECDIR=`${DIRNAME} $${EXPANDEDSPECPATH}`; \
+		${ECHO} $${SPECDIR}/adainclude > $${SPECDIR}/ada_source_path;	\
+		${ECHO} $${SPECDIR}/adalib > $${SPECDIR}/ada_object_path;	\
+	done )
+
+post-install:
+	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/ada > ${WRKDIR}/ada
+	${ECHO} '"$$@"' >> ${WRKDIR}/ada
+	${INSTALL_DATA} ${WRKDIR}/ada ${LOCALBASE}/bin/ada
+	${CHMOD} +x ${WRKDIR}/ada ${LOCALBASE}/bin/ada
+	${CP} -f ${PKGDIR}/PLIST ${PLIST_SRC}
+	${FIND} ${GCC_PREFIX} \( -type f -o -type l \) -print	\
+		| ${SORT} | ${SED} -e "s,${PREFIX}/,,g"	\
+		>> ${PLIST_SRC}
+	${FIND} ${GCC_PREFIX} -type d -print	\
+		| ${SORT} -r | ${SED} -e "s,${PREFIX}/,@dirrm ,g"	\
+		>> ${PLIST_SRC}
+
+.if defined(USE_GCC33)
+.include "../../lang/gcc3-ada/buildlink3.mk"
+.elif defined(USE_GCC34)
+BUILDLINK_DEPMETHOD.gcc34=	build
+.include "../../lang/gcc34/buildlink3.mk"
+.endif
+.include "../../converters/libiconv/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
+.include "../../mk/bsd.pkg.mk"
