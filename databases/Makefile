@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.158 2005/01/04 14:05:02 manu Exp $
+# $NetBSD: Makefile,v 1.159 2005/01/16 02:01:08 tv Exp $
 #
 
 COMMENT=	Databases
@@ -142,6 +142,7 @@ SUBDIR+=	ruby-vapor
 SUBDIR+=	sdbm
 SUBDIR+=	shared-mime-info
 SUBDIR+=	sqlite
+SUBDIR+=	sqlite3
 SUBDIR+=	sqlitemanager
 SUBDIR+=	sqlrelay
 SUBDIR+=	sqsh
