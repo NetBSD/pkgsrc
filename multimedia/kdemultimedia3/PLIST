@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2004/03/01 13:18:20 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2004/03/09 11:59:24 markd Exp $
 bin/artsbuilder
 bin/artscontrol
 bin/juk
@@ -306,6 +306,10 @@ lib/libkdeinit_krec.la
 lib/libkdeinit_krec.so
 lib/libkdeinit_noatun.la
 lib/libkdeinit_noatun.so
+lib/libkmidlib.la
+lib/libkmidlib.so
+lib/libkmidlib.so.0
+lib/libkmidlib.so.0.0
 lib/libmpeg-0.3.0.so
 lib/libmpeg.la
 lib/libmpeg.so
@@ -329,7 +333,6 @@ lib/libworkman.la
 lib/libworkman.so
 lib/libworkman.so.6
 lib/libworkman.so.6.0
-lib/libworkmanaudio.a
 lib/libyafcore.la
 lib/libyafcore.so
 lib/libyafcore.so.0
