@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/08/16 19:36:32 minskim Exp $
+
+SHA1 (weewm-0.0.2.tar.bz2) = 2ed619043f11bca71ef62caa255aa2dfb549532b
+Size (weewm-0.0.2.tar.bz2) = 44051 bytes
+SHA1 (patch-aa) = 9a7c9b1a5e85f51ed7c52ae39f5b08b95cbc1c08
