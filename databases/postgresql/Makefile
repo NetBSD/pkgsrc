@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 1999/01/17 00:52:08 frueauf Exp $
+# $NetBSD: Makefile,v 1.26 1999/01/17 00:59:37 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.22 1997/12/24 01:21:37 alex Exp
 
 DISTNAME=	postgresql-6.4.2
@@ -19,7 +19,7 @@ DEPENDS+=	bison-1.25:../../devel/bison
 CONFLICTS=	postgresql-6.3.2
 
 # Needs ELF clue, mips has no TAS implementation
-NOT_FOR_ARCHS=	alpha mips	# Needs ELF clue, mips has no TAS implementation
+NOT_FOR_ARCHS=	alpha mips
 
 NO_PACKAGE=	"Requires pgsql uid"
 
