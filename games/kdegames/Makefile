@@ -1,17 +1,17 @@
-# $NetBSD: Makefile,v 1.32 1999/06/05 21:27:18 tron Exp $
+# $NetBSD: Makefile,v 1.33 1999/09/15 18:26:01 tron Exp $
 # FreeBSD Id: Makefile,v 1.3 1997/11/05 04:19:49 asami Exp
 #
 
-DISTNAME=	kdegames-1.1.1
+DISTNAME=	kdegames-1.1.2
 CATEGORIES=	games kde
-MASTER_SITES=	ftp://ftp.kde.org/pub/kde/stable/1.1.1/distribution/tar/generic/source/bz2/ \
-		ftp://ftp.de.kde.org/pub/kde/stable/1.1.1/distribution/tar/generic/source/bz2/
+MASTER_SITES=	ftp://ftp.kde.org/pub/kde/stable/1.1.2/distribution/tar/generic/source/bz2/ \
+		ftp://ftp.de.kde.org/pub/kde/stable/1.1.2/distribution/tar/generic/source/bz2/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.kde.org/
 
-DEPENDS+=	kdebase-1.1.1:../../x11/kdebase
+DEPENDS+=	kdebase-1.1.2:../../x11/kdebase
 DEPENDS+=	qwspritefield-1.6:../../x11/qwspritefield
 
 USE_X11BASE=	yes
