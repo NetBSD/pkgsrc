@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.219 2004/02/29 19:06:09 recht Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.220 2004/03/01 19:13:16 wiz Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -1354,8 +1354,8 @@ LYNX_SCREEN_LIB?=	curses
 # Default: curses
 
 #M68060=
-# Used mostly by packages (e.g.:  pgp2, ssh) with have fast
-# 68020/030/040 assembler routines for multiprecision arithmetic,
+# Used mostly by packages (e.g.:  gnupg, pgp2, ssh) which have fast
+# 68020/030/040 assembler routines for multiprecision arithmetic
 # which use the 32/64bit mul/div instruction.  These instructions are
 # software emulated on the 68060, thus very slow.  Set to YES when
 # compiling for the 68060 cpu.
