@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 1998/06/06 15:31:17 frueauf Exp $
+# $NetBSD: Makefile,v 1.9 1998/07/16 17:41:10 tron Exp $
 # FreeBSD Id: Makefile,v 1.28 1997/06/27 23:02:54 brian Exp 
 #
 
@@ -20,7 +20,7 @@
 #    SUBDIR += slrn
 #    SUBDIR += slurp
     SUBDIR += suck
-#    SUBDIR += tin
+    SUBDIR += tin
 #    SUBDIR += trn
 #    SUBDIR += xvnews
 
