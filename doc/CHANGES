@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4628 2004/01/28 13:01:28 xtraeme Exp $
+$NetBSD: CHANGES,v 1.4629 2004/01/28 13:20:47 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -514,3 +514,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated mpg123-nas to 0.59.18nb2 [xtraeme 2004-01-28]
 	Updated rosegarden to 2.1.4nb1 [xtraeme 2004-01-28]
 	Updated snd to 19980212nb1 [xtraeme 2004-01-28]
+	Updated xdeview to 0.5.18nb1 [xtraeme 2004-01-28]
