@@ -1,30 +1,12 @@
-$NetBSD: patch-aa,v 1.4 2001/05/16 02:27:53 fredb Exp $
+$NetBSD: patch-aa,v 1.5 2004/04/26 07:10:16 fredb Exp $
 
---- ../src/unix/Makefile.in.orig	Mon Feb 12 16:59:20 2001
-+++ ../src/unix/Makefile.in
-@@ -71,7 +71,7 @@
- datadir=	@datadir@
- mandir=		@mandir@
+--- platforms/unix/config/Makefile	2002-06-05 00:17:14.000000000 -0500
++++ platforms/unix/config/Makefile	2004-04-25 15:13:34.000000000 -0500
+@@ -1,6 +1,6 @@
+ configure : .force
+ 	./mkacinc > acplugins.m4
+-	aclocal
++	aclocal-1.4
+ 	autoconf
+ 	rm acplugins.m4
  
--docdir=		$(prefix)/doc/squeak-$(VERSION)
-+docdir=		$(prefix)/share/doc/squeak
- sqlibdir=	$(libdir)/squeak
- vsqlibdir=	$(sqlibdir)/$(VERSION)
- sqdatadir=	$(datadir)/squeak
-@@ -92,6 +92,7 @@
- INSTALL=	@INSTALL@
- INSTALL_PROG=	@INSTALL_PROGRAM@
- INSTALL_DATA=	@INSTALL_DATA@
-+INSTALL_SCRIPT=	@INSTALL_SCRIPT@
- 
- UNINSTALL=	$(SHELL) $(utldir)/uninstall
- 
-@@ -218,7 +219,7 @@
- 	$(MKINSTALLDIRS) $(DESTDIR)$(vsqlibdir)
- 	$(INSTALL_PROG) squeak $(DESTDIR)$(vsqlibdir)
- #	test -x j3 && $(INSTALL_PROG) squeak $(DESTDIR)$(vsqlibdir)
--	$(INSTALL_PROG) inisqueak $(DESTDIR)$(vsqlibdir)
-+	$(INSTALL_SCRIPT) inisqueak $(DESTDIR)$(vsqlibdir)
- 	$(INSTALL_DATA) squeak.map $(DESTDIR)$(vsqlibdir)
- 	$(MKINSTALLDIRS) $(DESTDIR)$(bindir)
- 	( path=`$(utldir)/relpath $(bindir) $(vsqlibdir)`; \

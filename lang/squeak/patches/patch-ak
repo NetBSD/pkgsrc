@@ -1,0 +1,383 @@
+$NetBSD: patch-ak,v 1.1 2004/04/26 07:10:16 fredb Exp $
+
+--- platforms/unix/vm-sound-NetBSD/sqUnixSoundNetBSD.c	1969-12-31 18:00:00.000000000 -0600
++++ platforms/unix/vm-sound-NetBSD/sqUnixSoundNetBSD.c	2004-04-25 15:05:47.000000000 -0500
+@@ -0,0 +1,378 @@
++/* sqUnixSoundNetBSD.c -- sound support for NetBSD
++ *
++ *   Copyright (C) 1996-2002 Ian Piumarta and other authors/contributors
++ *     as listed elsewhere in this file.
++ *   All rights reserved.
++ *   
++ *   This file is part of Unix Squeak.
++ * 
++ *   This file is distributed in the hope that it will be useful, but WITHOUT
++ *   ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
++ *   FITNESS FOR A PARTICULAR PURPOSE.
++ *   
++ *   You may use and/or distribute this file ONLY as part of Squeak, under
++ *   the terms of the Squeak License as described in `LICENSE' in the base of
++ *   this distribution, subject to the following restrictions:
++ * 
++ *   1. The origin of this software must not be misrepresented; you must not
++ *      claim that you wrote the original software.  If you use this software
++ *      in a product, an acknowledgment to the original author(s) (and any
++ *      other contributors mentioned herein) in the product documentation
++ *      would be appreciated but is not required.
++ * 
++ *   2. This notice must not be removed or altered in any source distribution.
++ * 
++ *   Using (or modifying this file for use) in any context other than Squeak
++ *   changes these copyright conditions.  Read the file `COPYING' in the
++ *   directory `platforms/unix/doc' before proceeding with any such use.
++ * 
++ *   You are not allowed to distribute a modified version of this file
++ *   under its original name without explicit permission to do so.  If
++ *   you change it, rename it.
++ *
++ * Authors: Ian.Piumarta@inria.fr, Lex Spoon <lex@cc.gatech.edu> and
++ * Frederick Bruckman <fredb@NetBSD.org>.
++ *
++ */
++
++#include "sq.h"
++#include "aio.h"
++
++#include <stdio.h>
++#include <unistd.h>
++#include <fcntl.h>
++#include <sys/ioctl.h>
++#include <sys/audioio.h>
++#include <errno.h>
++
++
++/* Globals */
++static int auFd= -1;		/* open file descriptor on AUDIODEVICE */
++static int fmtStereo;		/* whether to use stereo or not */
++static int auBlockCount;	/* VM's block size, in frames */
++static int auBlockSize;		/* hardware blocksize, in bytes */
++static int auDuplexMode;	/* 0: half duplex, !0: full duplex */
++static int auLatency;		/* "fudge factor", to help keep the audio
++				    hardware buffer filled */
++static int auPlaySemaIndex;	/* identifier of audio system semaphore */
++static const char *auDevice;	/* AUDIODEVICE, or "/dev/audio" by default */
++
++
++static int sound_AvailableSpace(void);
++
++
++static void auHandle(int fd, void *data, int flags)
++{
++  if (auFd == -1)
++    return;
++
++  if (sound_AvailableSpace() >= (auBlockSize >> 1))
++    signalSemaphoreWithIndex(auPlaySemaIndex);
++
++  aioHandle(fd, auHandle, flags);
++  return;
++}
++
++
++static int sound_Stop(void)
++{
++  if (auFd == -1)
++    return false;
++
++  aioDisable(auFd);
++  close(auFd);
++  auFd= -1;
++
++  return true;
++}
++
++
++static int sound_Start(int frameCount, int samplesPerSec, int stereo, int semaIndex)
++{
++  struct audio_info info;
++
++  /* Set some globals. */
++  auBlockCount= frameCount;
++  fmtStereo= stereo;
++  auPlaySemaIndex= semaIndex;
++
++  if (auFd != -1)
++    sound_Stop();
++
++  if ((auFd= open(auDevice, O_RDWR|O_NONBLOCK)) == -1)
++    {
++      perror(auDevice);
++      return false;
++    }
++
++  AUDIO_INITINFO(&info);
++  info.play.precision= 16;
++  info.play.encoding= AUDIO_ENCODING_SLINEAR;
++  info.play.channels= stereo ? 2 : 1;
++  info.play.sample_rate= samplesPerSec;
++  /*
++     Request desired HW blocksize to be the same as the VM's blocksize.
++     The blocksize could end up being different than what we asked for.
++   */
++  info.blocksize= auBlockSize= frameCount * (stereo ? 4 : 2);
++  info.mode= AUMODE_PLAY|AUMODE_PLAY_ALL;
++
++  if (ioctl(auFd, AUDIO_SETINFO, &info) == -1)
++    {
++      perror("AUDIO_SETINFO");
++      close(auFd);
++      auFd= -1;
++      return false;
++    }
++
++  if (info.blocksize == auBlockSize && info.hiwat > 1)
++    {
++      /*
++	 Hurrah! Now tune the high- and low- water marks. Because of the
++	 auLatency term, sound_AvailableSpace() will return slightly more
++	 than one block after the VM returns from select(). The VM will
++	 utilize the headroom to "sync up" when necessary, and thereafter
++	 mostly write one full block at a time.
++       */
++      info.hiwat= (info.hiwat > 2) ? 2 : info.hiwat;
++      info.lowat= info.hiwat - 1;
++      if (ioctl(auFd, AUDIO_SETINFO, &info) == -1)
++	{
++	  perror("AUDIO_SETINFO");
++	  close(auFd);
++	  auFd= -1;
++	  return false;
++	}
++      /*
++	 Set the initial fudge factor to 1/8 of the blocksize.
++       */
++      if (auLatency == 0)
++	auLatency= info.blocksize >> 3;
++    }
++  else
++    {
++      /*
++	 The hardware buffer is probably too small, so just use the
++	 defaults for high- and low- water marks. Don't bother with the
++	 latency term, either, as we can't now sensibly calculate it.
++       */
++      warn("%s: asked for blocksize of %d, got %d!",
++	auDevice, auBlockSize, info.blocksize);
++      auBlockSize= info.blocksize;
++    }
++
++  aioEnable(auFd, 0, AIO_EXT);
++  aioHandle(auFd, auHandle, AIO_W);
++  return true;
++}
++
++
++static int sound_AvailableSpace(void)
++{
++  struct audio_info info;
++  int space;
++
++  if (auFd == -1)
++    return 0;
++
++  if (ioctl(auFd, AUDIO_GETINFO, &info) == -1)
++    {
++      perror("AUDIO_GETINFO");
++      return 0;
++    }
++
++  space= info.hiwat * info.blocksize - info.play.seek + auLatency;
++  return space;
++}
++
++
++static int sound_PlaySamplesFromAtLength(int frameCount, int arrayIndex, int startIndex)
++{
++  int size, totalWritten, written;
++  char *start;
++
++  if (auFd == -1 || frameCount == 0)
++    return 0;
++
++  start= (char *)arrayIndex + 4 * startIndex;
++  size= frameCount * (fmtStereo ? 4 : 2);
++  totalWritten= 0;
++
++  while (totalWritten < size)
++    if ((written= write(auFd, start, size)) == -1)
++      {
++	if (errno == EAGAIN)
++	  /*
++	     Astute listeners may now hear a "tick", but only the first
++	     time the audio is started, as auLatency is preserved across
++	     sound_Start() calls.
++	   */
++	  auLatency= auLatency >> 1;
++	else
++	  perror(auDevice);
++	/*
++	   In any case, bail. Typically, we've gotten an EAGAIN because
++	   the auLatency was initially too high. This means the audio
++	   hardware buffer is already full, so there's no sense sitting
++	   here in a tight loop, while if write() failed for some other
++	   reason, then we *really* want to return control to the VM.
++	 */
++#ifdef AUDIO_DEBUG
++	printf("Bytes written: %d; Latency: %d\n", totalWritten, auLatency);
++#endif
++	frameCount= totalWritten/(fmtStereo ? 4 : 2);
++	return frameCount;
++      }
++    else
++      {
++	start += written; 
++	size -= written;
++	totalWritten += written;
++      }
++ 
++#ifdef AUDIO_DEBUG
++  printf("Bytes written: %d; Latency: %d\n", totalWritten, auLatency);
++#endif
++  frameCount= totalWritten/(fmtStereo ? 4 : 2);
++  return frameCount;
++}
++
++
++static int sound_InsertSamplesFromLeadTime(int frameCount, int srcBufPtr,
++				  int samplesOfLeadTime)
++{
++  /*
++     We could actually implement this with an mmap()-able audio device,
++     via double-buffering, but it doesn't seem to be worth the trouble.
++   */
++  success(false);
++  return 0;
++}
++
++
++static int sound_PlaySilence(void)
++{
++  int framesWritten;
++  char *buffer;
++
++  if (auFd == -1 || auBlockCount == 0)
++    return 0;
++
++  if ((buffer= calloc(auBlockCount, (fmtStereo ? 4 : 2))) == 0)
++    {
++      perror("calloc"); 
++      return 0;
++    }
++
++  framesWritten= sound_PlaySamplesFromAtLength(auBlockCount, (int)buffer, 0);
++  return framesWritten;
++}
++
++
++/*
++   Keep it clean, and try to use the simplified "audio" interface to set the
++   level, even though, due to a bug, it will do nothing on most systems older
++   than NetBSD 2.0. In that case, the user may still access the real mixer
++   controls via the command line tool "mixerctl", or various grapical mixers.
++ */
++static int sound_SetRecordLevel(int level)
++{
++  struct audio_info info;
++
++  AUDIO_INITINFO (&info);
++  info.record.gain= (level > AUDIO_MAX_GAIN) ? AUDIO_MAX_GAIN : level;
++
++  if (ioctl(auFd, AUDIO_SETINFO, &info) == -1)
++    perror("AUDIO_SETINFO");
++
++  return;
++}
++
++
++static int sound_StartRecording(int desiredSamplesPerSec, int stereo, int semaIndex)
++{
++  success(false);
++  return 0;
++}
++
++
++static int sound_StopRecording(void)
++{
++  success(false);
++  return 0;
++}
++
++
++static double sound_GetRecordingSampleRate(void)
++{
++  success(false);
++  return 0;
++}
++
++
++static int sound_RecordSamplesIntoAtLength(int buf, int startSliceIndex,
++				  int bufferSizeInBytes)
++{
++  success(false);
++  return 0;
++}
++
++
++/*
++   See the comment associated with sound_SetRecordLevel().
++ */
++static void sound_Volume(double *left, double *right)
++{
++  struct audio_info info;
++
++  if (ioctl(auFd, AUDIO_GETINFO, &info) == -1)
++    {
++      perror("AUDIO_GETINFO");
++      success(false);
++      return;
++    }
++
++  *left= *right= (double)info.play.gain/AUDIO_MAX_GAIN;
++
++  return;
++}
++
++
++/*
++   This may not do anything at all. See the comment associated with
++   sound_SetRecordLevel().
++ */
++static void sound_SetVolume(double left, double right)
++{
++  struct audio_info info;
++
++  AUDIO_INITINFO (&info);
++  info.play.gain= AUDIO_MAX_GAIN * left;
++
++  if (ioctl(auFd, AUDIO_SETINFO, &info) == -1)
++    perror("AUDIO_SETINFO");
++
++  return;
++}
++
++
++#include "SqSound.h"
++
++SqSoundDefine(NetBSD);
++
++
++#include "SqModule.h"
++
++static void  sound_parseEnvironment(void)
++{
++  char *ev= 0;
++  if ((ev= getenv("AUDIODEVICE")))	auDevice=    strdup(ev);
++    else				auDevice=    strdup("/dev/audio");
++}
++
++static int   sound_parseArgument(int argc, char **argv) { return 0; }
++static void  sound_printUsage(void) {}
++static void  sound_printUsageNotes(void) {}
++static void *sound_makeInterface(void) { return &sound_NetBSD_itf; }
++
++SqModuleDefine(sound, NetBSD);
