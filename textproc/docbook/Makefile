@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.6 2000/05/12 18:18:18 drochner Exp $
+# $NetBSD: Makefile,v 1.7 2000/06/07 20:32:00 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.4 1998/06/27 05:19:35 asami Exp
 #
 
-DISTNAME=	docbook-3.1
+DISTNAME=	docbook-4.0
 CATEGORIES=	textproc
-MASTER_SITES=	http://www.oasis-open.org/docbook/sgml/3.1/ \
+MASTER_SITES=	http://www.oasis-open.org/docbook/sgml/4.0/ \
+		http://www.oasis-open.org/docbook/sgml/3.1/ \
 		http://www.oasis-open.org/docbook/sgml/3.0/ \
 		http://www.oasis-open.org/docbook/sgml/2.4.1/
-DISTFILES=	docbk241.zip docbk30.zip docbk31.zip
+DISTFILES=	docbk241.zip docbk30.zip docbk31.zip docbk40.zip
 
 MAINTAINER=	rh@NetBSD.ORG
 HOMEPAGE=	http://www.ora.com/davenport/
@@ -27,6 +28,7 @@ pre-install:
 	@[ -d ${INSTDIR}/2.4.1 ] || ${MKDIR} ${INSTDIR}/2.4.1
 	@[ -d ${INSTDIR}/3.0 ] || ${MKDIR} ${INSTDIR}/3.0
 	@[ -d ${INSTDIR}/3.1 ] || ${MKDIR} ${INSTDIR}/3.1
+	@[ -d ${INSTDIR}/4.0 ] || ${MKDIR} ${INSTDIR}/4.0
 
 do-install:
 	@(cd ${INSTDIR}/2.4.1; unzip ${DISTDIR}/docbk241.zip)
@@ -39,9 +41,13 @@ do-install:
 	@(cd ${INSTDIR}/3.1; unzip ${DISTDIR}/docbk31.zip)
 	@${INSTALL_DATA} ${FILESDIR}/catalog31 ${INSTDIR}/3.1/catalog
 	@${ECHO} "CATALOG \"${ISOCAT}\"" >> ${INSTDIR}/3.1/catalog
+	@(cd ${INSTDIR}/4.0; unzip ${DISTDIR}/docbk40.zip)
+	@${INSTALL_DATA} ${FILESDIR}/catalog40 ${INSTDIR}/4.0/catalog
+	@${ECHO} "CATALOG \"${ISOCAT}\"" >> ${INSTDIR}/4.0/catalog
 	@${CHMOD} ${SHAREMODE} ${INSTDIR}/2.4.1/*
 	@${CHMOD} ${SHAREMODE} ${INSTDIR}/3.0/*
 	@${CHMOD} ${SHAREMODE} ${INSTDIR}/3.1/*
+	@${CHMOD} ${SHAREMODE} ${INSTDIR}/4.0/*
 	@${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${INSTDIR}
 
 .include "../../mk/bsd.pkg.mk"
