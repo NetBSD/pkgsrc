@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.5 2003/06/29 11:45:01 jmmv Exp $
+$NetBSD: distinfo,v 1.6 2003/09/26 11:23:43 jmmv Exp $
 
-SHA1 (xosd-2.2.2.tar.gz) = 60d06c79752478baf94521016ac5d5ffca392298
-Size (xosd-2.2.2.tar.gz) = 295184 bytes
+SHA1 (xosd-2.2.5.tar.gz) = 7773f78da88fa5f05f46cc02a7d78196bf6d4efa
+Size (xosd-2.2.5.tar.gz) = 388861 bytes
 SHA1 (patch-aa) = 0d3f003e6465d9c6b9af4cdfc1992ab403bdc3cb
 SHA1 (patch-ab) = e32cc6675f4758183488d1d00d45d1b93d08d0e1
 SHA1 (patch-ac) = cc28d482cf7b8db2a3c3f74efc70aa22e9bfc043
