@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2002/01/21 11:34:56 wiz Exp $
+
+--- Makefile.orig	Sat Jul 29 08:41:38 2000
++++ Makefile
+@@ -3,7 +3,7 @@
+ CC ?= gcc
+ LOCALBASE ?= /usr/local
+ CFLAGS += -Wall -Werror
+-OPT_FLAGS = -L${LOCALBASE}/lib 
++OPT_FLAGS =
+ OBJS = 	mp3_check.o \
+ 	mp3_check_misc.o
+ 
