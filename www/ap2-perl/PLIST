@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2003/07/21 18:16:06 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/08/04 06:16:36 jmc Exp $
 lib/httpd/mod_perl.so
-${PERL5_SITEARCH}/perllocal.pod
+${PERL5_ARCHLIB}/perllocal.pod
 share/doc/html/mod_perl/TODO
 share/doc/html/mod_perl/api/AUTOGENERATION
 share/doc/html/mod_perl/api/ModPerl-Registry/ModPerl/PerlRun.pod
