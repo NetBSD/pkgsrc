@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8168 2004/11/30 03:43:16 minskim Exp $
+$NetBSD: CHANGES,v 1.8169 2004/11/30 08:23:33 uebayasi Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5659,3 +5659,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated sudo to 1.6.8pl5 [xtraeme 2004-11-29]
 	Updated transcalc to 0.14 [dmcmahill 2004-11-29]
 	Updated molden to 4.2 [minskim 2004-11-30]
+	Removed liece [uebayasi 2004-11-30]
+	Added riece-1.0.5 [uebayasi 2004-11-30]
