@@ -1,10 +1,9 @@
-# $NetBSD: Makefile.common,v 1.16 2004/07/20 22:04:44 salo Exp $
-#
+# $NetBSD: Makefile.common,v 1.17 2004/12/17 22:33:13 tron Exp $
 
-MPLAYER_DIST_VERSION=	1.0pre5
+MPLAYER_DIST_VERSION=	1.0pre5try2
 
 # This variable is used in all packages which depend on this package
-MPLAYER_PKG_VERSION=	1.0rc5
+MPLAYER_PKG_VERSION=	1.0rc5pl2
 
 DISTNAME=		MPlayer-${MPLAYER_DIST_VERSION}
 CATEGORIES?=		multimedia
