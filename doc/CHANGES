@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3156 2003/08/30 21:14:20 jmmv Exp $
+$NetBSD: CHANGES,v 1.3157 2003/08/30 21:30:04 jtb Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3406,3 +3406,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated oo2c to 2.0.11 [jtb 2003-08-30]
 	Updated chemtool to 1.6 [jtb 2003-08-30]
 	Updated pkg_comp to 1.9 [jmmv 2003-08-30]
+	Added ksi-3.4.1 [jtb 2003-08-30]
