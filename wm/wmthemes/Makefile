@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.10 2002/03/13 17:37:49 fredb Exp $
+# $NetBSD: Makefile,v 1.11 2002/03/14 20:22:37 fredb Exp $
 
 #
 # There is no distinfo file since the files change contents so often on the
 # master site
 #
 
-DISTNAME=	wmthemes-0.62nb1
-PKGREVISION=	1
+DISTNAME=	wmthemes-0.62
+PKGREVISION=	2
 CATEGORIES=	x11 wm
 MASTER_SITES=	http://download.themes.org/wm/
 DISTFILES=	${THEME_FILES}
