@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4966 2004/02/23 08:40:51 xtraeme Exp $
+$NetBSD: CHANGES,v 1.4967 2004/02/23 10:23:37 recht Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -988,3 +988,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added jftpgw-0.13.4 [xtraeme 2004-02-23]
 	Updated osh to 040216 [xtraeme 2004-02-23]
 	Added xml2doc-20030510 [xtraeme 2004-02-23]
+	Updated mozilla-gtk2 to 1.6nb2 [recht 2004-02-23]
