@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3676 2003/10/11 11:28:44 grant Exp $
+$NetBSD: CHANGES,v 1.3677 2003/10/11 13:42:27 grant Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4140,3 +4140,23 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated isakmpd to 20030903 [agc 2003-10-10]
 	Updated pkglint to 3.65 [wiz 2003-10-11]
 	Updated socks5 to 1.0.2nb2 [grant 2003-10-11]
+	Updated ser to 0.8.10nb2 [grant 2003-10-11]
+	Updated apr to 0.9.4nb1 [grant 2003-10-11]
+	Updated abiword to 1.0.5nb3 [grant 2003-10-11]
+	Updated fontconfig to 2.2.1nb2 [grant 2003-10-11]
+	Updated graphviz to 1.10nb1 [grant 2003-10-11]
+	Updated xmule to 1.6.0nb1 [grant 2003-10-11]
+	Updated rats to 2.1nb1 [grant 2003-10-11]
+	Updated expatobjc to 1.0nb1 [grant 2003-10-11]
+	Updated p5-XML-Parser to 2.31nb1 [grant 2003-10-11]
+	Updated php4-wddx to 4.3.3nb1 [grant 2003-10-11]
+	Updated py22-expat to 0nb1 [grant 2003-10-11]
+	Updated py22-xml to 0.3.8nb1 [grant 2003-10-11]
+	Updated sablotron to 1.0nb1 [grant 2003-10-11]
+	Updated ap-dav to 1.0.3nb1 [grant 2003-10-11]
+	Updated apache to 1.3.28nb1 [grant 2003-10-11]
+	Updated apache2 to 2.0.47nb1 [grant 2003-10-11]
+	Updated apache6 to 1.3.28nb1 [grant 2003-10-11]
+	Updated cadaver to 0.21.0nb3 [grant 2003-10-11]
+	Updated neon to 0.24.1nb2 [grant 2003-10-11]
+	Updated paragui to 1.0.4nb2 [grant 2003-10-11]
