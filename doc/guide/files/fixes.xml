@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.6 2005/02/04 21:06:38 reed Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.7 2005/02/10 11:26:00 sketch Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
   <title>Notes on fixes for packages</title>
@@ -918,7 +918,7 @@ pre-configure:
           settings in
           <filename>pkgsrc/mk/defaults/mk.conf</filename>.</para>
 
-	<para> Is there is a <emphasis>really</emphasis> pressing need
+	<para> If there is a <emphasis>really</emphasis> pressing need
           to accept all licenses at once, like when trying to download
           or mirror all distfiles or doing a bulk build to test if all
           packages in pkgsrc build, this can be done by setting
