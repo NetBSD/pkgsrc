@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:35:01 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 08:45:40 agc Exp $
 
-MD5 (grpn-1.1.0.tar.gz) = 64379257b174f5ad98dcc25c847b6e5d
+SHA1 (grpn-1.1.0.tar.gz) = c4f49494114946f7690c6a14f097f0a64e2e84e2
+Size (grpn-1.1.0.tar.gz) = 44336 bytes
 SHA1 (patch-aa) = 40cd39e5f77cbe38cc59f4f44ec5ee9efcefcbbf
