@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1998/08/24 04:45:51 thorpej Exp $
+bin/cqcam
+bin/xcqcam
+bin/webcam
+man/man1/cqcam.1
