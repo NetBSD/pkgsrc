@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1.1.1 2005/01/12 13:57:51 xtraeme Exp $
+$NetBSD: patch-ab,v 1.2 2005/03/31 17:06:29 minskim Exp $
 
 --- applyplugin.c.orig	2004-02-28 17:11:28.000000000 +0100
 +++ applyplugin.c	2004-02-28 17:12:19.000000000 +0100
@@ -7,7 +7,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2005/01/12 13:57:51 xtraeme Exp $
  
  #include <dlfcn.h>
 -#include <endian.h>
-+#ifdef __Linux__
++#ifdef __linux__
 +# include <endian.h>
 +#else
 +# include <sys/endian.h>
