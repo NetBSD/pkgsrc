@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5621 2004/04/17 03:06:05 snj Exp $
+$NetBSD: CHANGES,v 1.5622 2004/04/17 03:28:22 gehenna Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2037,3 +2037,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated SDL to 1.2.7 [snj 2004-04-17]
 	Updated gtoolkit to 0.9.5nb5 [rh 2004-04-17]
 	Added quakeforge 0.5.4 [snj 2004-04-17]
+	Updated cvsync to 0.24.15 [gehenna 2004-04-17]
