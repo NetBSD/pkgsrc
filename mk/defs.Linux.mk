@@ -1,4 +1,4 @@
-# $NetBSD: defs.Linux.mk,v 1.53 2003/06/06 19:07:42 jschauma Exp $
+# $NetBSD: defs.Linux.mk,v 1.54 2003/08/23 16:04:26 jschauma Exp $
 #
 # Variable definitions for the Linux operating system.
 
@@ -37,7 +37,13 @@ FGREP?=		/usr/bin/fgrep
 .endif
 FILE_CMD?=	/usr/bin/file
 FIND?=		/usr/bin/find
+.if exists(/usr/bin/make)
 GMAKE?=		/usr/bin/make
+_OPSYS_HAS_GMAKE=	yes 		# GNU make is standard
+.else
+GMAKE?=		${LOCALBASE}/bin/gmake
+_OPSYS_HAS_GMAKE=	no		# rare, but possible
+.endif
 .if exists(/bin/grep)
 GREP?=		/bin/grep
 .elif exists(/usr/bin/grep)
@@ -148,7 +154,6 @@ IMAKE_MANNEWSUFFIX=	${IMAKE_MAN_SUFFIX}
 
 _DO_SHLIB_CHECKS=	no	# on installation, fixup PLIST for shared libs
 _IMAKE_MAKE=		${MAKE}	# program which gets invoked by imake
-_OPSYS_HAS_GMAKE=	yes	# GNU make is standard
 .if exists(/usr/include/netinet6) || exists(/usr/include/linux/in6.h)
 _OPSYS_HAS_INET6=	yes	# IPv6 is standard
 .else
