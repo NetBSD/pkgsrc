@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1321 2003/12/16 12:36:54 seb Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1322 2003/12/18 03:24:49 grant Exp $
 #
 # This file is in the public domain.
 #
@@ -634,6 +634,7 @@ PLIST_SUBST+=	OPSYS=${OPSYS}						\
 		PKGBASE=${PKGBASE}					\
 		PKGNAME=${PKGNAME_NOREV}				\
 		PKGLOCALEDIR=${PKGLOCALEDIR}				\
+		PKG_SYSCONFDIR=${PKG_SYSCONFDIR}			\
 		PKGVERSION=${PKGVERSION:C/nb[0-9]*$//}			\
 		LOCALBASE=${LOCALBASE}					\
 		VIEWBASE=${VIEWBASE}					\
