@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1038 2002/08/28 11:06:17 seb Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1039 2002/08/30 10:46:46 abs Exp $
 #
 # This file is in the public domain.
 #
@@ -95,6 +95,7 @@ _JAVA_PREFIX_DEFAULT=	${LOCALBASE}/java/sun-1.4.0
 _JAVA_HOME=		${_JAVA_PREFIX}
 ${_JDK_DEPMETHOD}+=	sun-jdk14-[0-9]*:../../lang/sun-jdk14
 DEPENDS+=		sun-jre14-[0-9]*:../../lang/sun-jre14
+UNLIMIT_RESOURCES+=	datasize
 .  elif ${PKG_JVM} == "sun-jdk13"
 _JAVA_PKGBASE=		sun-jdk13
 .    if ${OPSYS} == "Darwin"
@@ -127,6 +128,7 @@ _JAVA_HOME=		${_JAVA_PREFIX}
 ${_JDK_DEPMETHOD}+=	sun-jdk1[34]-[0-9]*:../../lang/sun-jdk13
 DEPENDS+=		sun-jre1[34]-[0-9]*:../../lang/sun-jre13
 .    endif
+UNLIMIT_RESOURCES+=	datasize
 .  elif ${PKG_JVM} == "blackdown-jdk13"
 _JAVA_PKGBASE=		blackdown-jdk13
 _JAVA_PREFIX_DEFAULT=	${LOCALBASE}
