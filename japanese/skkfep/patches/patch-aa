@@ -1,0 +1,46 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/12/24 03:21:10 itohy Exp $
+
+--- config.h.orig	Tue Sep 22 01:45:27 1998
++++ config.h	Tue Dec 21 00:09:13 1999
+@@ -2,10 +2,24 @@
+  * Configuration for SKKFEP
+  */
+ 
+-#include "configs/solaris2.h"
++#ifdef sun
++# ifdef __SVR4
++#  include "configs/solaris2.h"
++#  undef TERMINFO
++# else
++#  include "configs/sun.h"
++# endif
++#elif defined(__NetBSD__)
++#include "configs/netbsd.h"
++#elif defined(__FreeBSD__)
++#include "configs/freebsd.h"
++#elif defined(__bsdi__)
++#include "configs/bsdi.h"
++#elif defined(__linux__)
++#include "configs/linux.h"
++#endif
+ 
+ #if makefile_parameter
+-CC=gcc
+ DEFINE=-DUSE_LOCALE
+ OPTIMIZE=-O
+ EXTRALIBS=
+@@ -14,7 +28,7 @@
+ #define DEFAULT_KANAKEY "^j"
+ 
+ /* By Y. Kaneko */
+-/*#define KUTOUTEN        /* "."->maru, ","->ten */
++#define KUTOUTEN        /* "."->maru, ","->ten */
+ 
+ #define KANJIBS			/* do/don't shuft-out BS code in JIS mode */
+ #define KANJIBS_DEFAULT	0	/* 0 -> shift out / 1 -> don't shift out  */
+@@ -28,4 +42,4 @@
+ 
+ #define NATIVECODE	euc	/* EUC Kanji code */
+ 
+-#define SKK_SERVER_HOST	"ei5nazha"	/* SKK server host */
++#define SKK_SERVER_HOST	"localhost"	/* SKK server host */

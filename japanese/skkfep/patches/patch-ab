@@ -1,0 +1,22 @@
+$NetBSD: patch-ab,v 1.1.1.1 1999/12/24 03:21:10 itohy Exp $
+
+--- configs/netbsd.h.orig	Tue Jul  7 00:31:13 1998
++++ configs/netbsd.h	Mon Dec 20 23:53:25 1999
+@@ -1,5 +1,5 @@
+ /*
+- * Configuration for NetBSD-1.2 (x68k)
++ * Configuration for NetBSD
+  */
+ 
+ #define BSD		/* My machine is BSD system */
+@@ -8,7 +8,9 @@
+ #define HAVE_SETENV	/* My machine has setenv() */
+ #define HAVE_BSD_OPENPTY /* BSD type openpty() */
+ 
+-#include <stdlib.h>	/* just in case of NetBSD/Alpha */
++#include <stdlib.h>
++#include <string.h>
++#include <unistd.h>
+ #include <util.h>	/* for openpty() */
+ 
+ #if makefile_parameter

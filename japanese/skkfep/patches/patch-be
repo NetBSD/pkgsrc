@@ -1,0 +1,66 @@
+$NetBSD: patch-be,v 1.1.1.1 1999/12/24 03:21:10 itohy Exp $
+
+--- readwrite.c.orig	Tue Jul  7 00:31:15 1998
++++ readwrite.c	Sun Sep 27 10:24:06 1998
+@@ -4,6 +4,14 @@
+ #include "kanjicode.h"
+ #include "ctrlcode.h"
+ 
++#ifndef STDIN_FILENO
++#define STDIN_FILENO	0
++#endif
++
++#ifndef STDOUT_FILENO
++#define STDOUT_FILENO	1
++#endif
++
+ #ifdef DEBUG
+ extern FILE *wrlog;
+ #endif
+@@ -29,12 +37,10 @@
+ 	SIC_B,SOC_B,"JIS",3,3,
+ };
+ 
+-extern int	tty;
+-
+ char read1()
+ {	char	c;
+ 
+-	if (read(tty,&c,1) != 0)
++	if (read(STDIN_FILENO,&c,1) != 0)
+ 		return c;
+ 	return EOF;
+ }
+@@ -320,13 +326,13 @@
+ char    *s;
+ {       int    l = strlen(s);
+ 	
+-	writeTTYorg(tty,s,l,INTERNALCODE,OutCode,&TInter_Stat,&To_TTY_Stat);
++	writeTTYorg(STDOUT_FILENO,s,l,INTERNALCODE,OutCode,&TInter_Stat,&To_TTY_Stat);
+ }
+ 
+ write1(c)
+ char c;
+ {
+-	writeTTYorg(tty,&c,1,INTERNALCODE,OutCode,&TInter_Stat,&To_TTY_Stat);
++	writeTTYorg(STDOUT_FILENO,&c,1,INTERNALCODE,OutCode,&TInter_Stat,&To_TTY_Stat);
+ }
+ 
+ writeShTty(s,l)
+@@ -334,14 +340,14 @@
+ int	l;
+ {
+ 
+-	writeTTYorg(tty,s,l,WriteCode,OutCode,&From_SH_Stat,&To_TTY_Stat);
++	writeTTYorg(STDOUT_FILENO,s,l,WriteCode,OutCode,&From_SH_Stat,&To_TTY_Stat);
+ }
+ 
+ writeTty(s,l)
+ char	*s;
+ int	l;
+ {
+-	writeTTYorg(tty,s,l,INTERNALCODE,OutCode,&TInter_Stat,&To_TTY_Stat);
++	writeTTYorg(STDOUT_FILENO,s,l,INTERNALCODE,OutCode,&TInter_Stat,&To_TTY_Stat);
+ }
+ 
+ 
