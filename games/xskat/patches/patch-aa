@@ -1,15 +1,10 @@
-$NetBSD: patch-aa,v 1.1 2000/01/27 17:07:30 pooka Exp $
+$NetBSD: patch-aa,v 1.2 2000/12/16 01:30:13 wiz Exp $
 
---- Imakefile.orig	Sat May 29 22:35:59 1999
-+++ Imakefile	Thu Jan 27 18:30:52 2000
-@@ -7,10 +7,10 @@
-     Use it at your own risk; there is NO WARRANTY.
- */
- 
--DEFL=-DDEFAULT_LANGUAGE=\"german\"
--/*DEFL=-DDEFAULT_LANGUAGE=\"english\"*/
-+/*DEFL=-DDEFAULT_LANGUAGE=\"german\"*/
-+DEFL=-DDEFAULT_LANGUAGE=\"english\"
+--- Imakefile.orig	Sat Dec 16 02:24:30 2000
++++ Imakefile
+@@ -21,7 +21,7 @@
+ /*DEFL=-DDEFAULT_LANGUAGE=\"german\"*/
+ DEFL=-DDEFAULT_LANGUAGE=\"english\"
  
 -DEFI=-DDEFAULT_IRC_SERVER=\"irc.fu-berlin.de\"
 +DEFI=-DDEFAULT_IRC_SERVER=\"${IRC_SERVER}\"
