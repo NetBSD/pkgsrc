@@ -1,0 +1,20 @@
+$NetBSD: patch-aq,v 1.1.1.1 2003/12/20 16:00:43 martti Exp $
+
+--- include/Makefile.in.orig	Mon Oct 13 17:24:51 2003
++++ include/Makefile.in	Mon Oct 13 17:30:05 2003
+@@ -205,13 +205,8 @@
+ vio_dir = @vio_dir@
+ vio_libs = @vio_libs@
+ 
+-BUILT_SOURCES = mysql_version.h m_ctype.h my_config.h
+-pkginclude_HEADERS = my_dbug.h m_string.h my_sys.h my_list.h \
+-			mysql.h mysql_com.h mysqld_error.h mysql_embed.h \
+-		  	my_semaphore.h my_pthread.h my_no_pthread.h raid.h \
+-			errmsg.h my_global.h my_net.h my_alloc.h \
+-			my_getopt.h sslopt-longopts.h my_dir.h \
+-			sslopt-vars.h sslopt-case.h $(BUILT_SOURCES)
++BUILT_SOURCES = 
++pkginclude_HEADERS = $(BUILT_SOURCES)
+ 
+ noinst_HEADERS = config-win.h config-os2.h config-netware.h \
+ 			nisam.h heap.h merge.h my_bitmap.h\
