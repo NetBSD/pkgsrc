@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.3 2000/03/21 11:10:39 he Exp $
+
+--- gd.h.dist	Mon Mar 13 19:25:57 2000
++++ gd.h	Tue Mar 21 11:32:30 2000
+@@ -114,6 +114,7 @@
+ gdImagePtr gdImageCreateFromGd2PartCtx(gdIOCtxPtr in, int srcx, int srcy, int w, int h);
+ 
+ gdImagePtr gdImageCreateFromXbm(FILE *fd);
++gdImagePtr gdImageCreateFromXpm(char *filename);
+ 
+ void gdImageDestroy(gdImagePtr im);
+ void gdImageSetPixel(gdImagePtr im, int x, int y, int color);
