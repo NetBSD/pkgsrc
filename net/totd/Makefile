@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/03/23 14:55:53 itojun Exp $
+# $NetBSD: Makefile,v 1.11 2001/03/23 16:47:13 itojun Exp $
 #
 
 DISTNAME=	totd-1.2
@@ -17,7 +17,7 @@ BUILD_DEFS+=	USE_INET6
 
 post-install:
 	${MKDIR} ${PREFIX}/share/examples/totd
-	${INSTALL_SCRIPT} ${FILESDIR}/totd.conf.sample \
+	${INSTALL_DATA} ${FILESDIR}/totd.conf.sample \
 		${PREFIX}/share/examples/totd/totd.conf.sample
 
 .include "../../mk/bsd.pkg.mk"
