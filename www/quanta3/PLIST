@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/02/05 02:25:36 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/03/09 11:47:08 markd Exp $
 bin/kmdr-editor
 bin/kmdr-executor
 bin/kxsldbg
@@ -1158,6 +1158,7 @@ share/kde/apps/quanta/toolbar/check_grey.png
 share/kde/apps/quanta/toolbar/close.png
 share/kde/apps/quanta/toolbar/color.png
 share/kde/apps/quanta/toolbar/copy.png
+share/kde/apps/quanta/toolbar/css.png
 share/kde/apps/quanta/toolbar/customlayout.png
 share/kde/apps/quanta/toolbar/cut.png
 share/kde/apps/quanta/toolbar/date.png
@@ -1308,7 +1309,9 @@ share/kde/apps/quanta/toolbar/textarea.png
 share/kde/apps/quanta/toolbar/tree_win.png
 share/kde/apps/quanta/toolbar/ttab.png
 share/kde/apps/quanta/toolbar/undo.png
+share/kde/apps/quanta/toolbar/view_text.png
 share/kde/apps/quanta/toolbar/vpl.png
+share/kde/apps/quanta/toolbar/vpl_text.png
 share/kde/apps/quanta/toolbar/wiznewprjfin.png
 share/kde/apps/quanta/toolbar/wiznewprjglb.png
 share/kde/apps/quanta/toolbar/wiznewprjloc.png
