@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2003/07/21 17:38:35 martti Exp $
+# $NetBSD: Makefile,v 1.8 2004/01/20 12:28:29 agc Exp $
 
 DISTNAME=	xpmicons-1.0
-WRKSRC=		${WRKDIR}
 CATEGORIES=	x11
 MASTER_SITES=	http://www.plig.org/xwinman/ \
 		ftp://ftp.cit.gu.edu.au/pub/AIcons/ \
@@ -17,6 +16,7 @@ DISTFILES=	icons.tar.gz KDEicons.tgz \
 MAINTAINER=	root@garbled.net
 COMMENT=	Huge collection of icons for any windowmanager
 
+WRKSRC=		${WRKDIR}
 DIST_SUBDIR=	icons
 USE_X11BASE=	yes
 NO_BUILD=	yes

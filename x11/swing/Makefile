@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2003/08/23 15:27:00 jschauma Exp $
+# $NetBSD: Makefile,v 1.24 2004/01/20 12:28:27 agc Exp $
 
 DISTNAME=	swing1_1_1
 PKGNAME=	swing-1.1.1
 PKGREVISION=	1
-WRKSRC=		${WRKDIR}/swing-1.1.1fcs
 CATEGORIES=	devel x11 java
 MASTER_SITES=	# empty
 EXTRACT_SUFX=	.zip
@@ -21,6 +20,7 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 
 LICENSE=	sun-swing-license
 
+WRKSRC=		${WRKDIR}/swing-1.1.1fcs
 USE_JAVA=	run
 NO_CONFIGURE=	yes
 NO_BUILD=	yes

@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2003/07/17 22:56:19 grant Exp $
+# $NetBSD: Makefile,v 1.29 2004/01/20 12:28:26 agc Exp $
 
 DISTNAME=		XF86Setup-3.3.6
 PKGREVISION=		1
-WRKSRC=			${WRKDIR}/hw/xfree86/XF86Setup
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_LOCAL}
 EXTRACT_SUFX=		.tar.bz2
@@ -16,6 +15,7 @@ BUILD_DEPENDS+=		tk>=8.3.2:../../x11/tk
 
 ONLY_FOR_PLATFORM=	*-*-i386
 
+WRKSRC=			${WRKDIR}/hw/xfree86/XF86Setup
 TCLLIB=			${LOCALBASE}/lib/libtcl83.a
 TKLIB=			${LOCALBASE}/lib/libtk83.a
 

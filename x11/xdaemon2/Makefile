@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2003/07/17 22:56:53 grant Exp $
+# $NetBSD: Makefile,v 1.9 2004/01/20 12:28:28 agc Exp $
 
 DISTNAME=	xdaemon-2.0
 PKGREVISION=	1
-#WRKSRC=	${WRKDIR}
 CATEGORIES=	games x11
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 DISTFILES=	${PIX} Daemon.README
@@ -15,7 +14,8 @@ DEPENDS+=	xteddy-2.*:../xteddy2
 
 CONFLICT+=	xdaemon-1.*
 
-DIST_SUBDIR=xdaemon
+#WRKSRC=	${WRKDIR}
+DIST_SUBDIR=	xdaemon
 PIX=		xdaemon.png xdaemon2.png
 NO_CONFIGURE=	yes
 NO_BUILD=	yes

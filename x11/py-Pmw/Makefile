@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2003/07/21 17:38:31 martti Exp $
+# $NetBSD: Makefile,v 1.10 2004/01/20 12:28:27 agc Exp $
 #
 
 DISTNAME=	Pmw.0.8.5
 PKGNAME=	${PYPKGPREFIX}-Pmw-0.8.5
-WRKSRC=		${WRKDIR}/Pmw
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pmw/}
 
@@ -13,6 +12,7 @@ COMMENT=	Python meta widgets
 
 PLIST_SRC=      ${WRKDIR}/.PLIST_SRC
 
+WRKSRC=		${WRKDIR}/Pmw
 USE_BUILDLINK2=	YES
 
 do-build:

@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2003/11/08 06:21:14 xtraeme Exp $
+# $NetBSD: Makefile,v 1.14 2004/01/20 12:28:28 agc Exp $
 #
 
 DISTNAME=	wmweather-2.4.2
-WRKSRC=		${WRKDIR}/${DISTNAME}/src
 CATEGORIES=	x11
 MASTER_SITES=	http://www.godisch.de/debian/wmweather/
 
@@ -10,6 +9,7 @@ MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://www.godisch.de/debian/wmweather/
 COMMENT=	WindowMaker DockApp showing local weather conditions
 
+WRKSRC=			${WRKDIR}/${DISTNAME}/src
 USE_BUILDLINK2=		# defined
 USE_X11=		yes
 
