@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 1998/11/04 21:45:07 mycroft Exp $
+# $NetBSD: Makefile,v 1.4 1998/11/22 12:00:58 tron Exp $
 
 DISTNAME=	gtk+-1.0.6
 CATEGORIES=	x11
-MASTER_SITES=	ftp://ftp.gimp.org/pub/gtk/v1.0/ \
+MASTER_SITES=	ftp://ftp.gtk.org/pub/gtk/v1.0/ \
 		ftp://infosoc.uni-koeln.de/pub/ftp.gimp.org/pub/gtk/v1.0/ \
 		ftp://ftp.flirble.org/pub/X/gimp/pub/gtk/v1.0/
 
