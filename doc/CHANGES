@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3467 2003/09/20 16:58:24 salo Exp $
+$NetBSD: CHANGES,v 1.3468 2003/09/20 17:05:54 fredb Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3861,3 +3861,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated p5-Convert-UUlib to 0.31 [chris 2003-09-20]
 	Updated p5-MailTools to 1.59 [chris 2003-09-20]
 	Updated pure-ftpd to 1.0.16a [salo 2003-09-20]
+	Updated mgetty to 1.1.30 [fredb 2003-09-20]
