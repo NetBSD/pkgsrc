@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.90 2003/01/24 20:13:42 hubertf Exp $
+# $NetBSD: Makefile,v 1.91 2003/01/25 06:45:48 hubertf Exp $
 
 DISTNAME=		ImageMagick-${IM_MAJOR_VER}-${IM_MINOR_VER}
 PKGNAME=		ImageMagick-${IM_MAJOR_VER}.${IM_MINOR_VER}
@@ -30,10 +30,16 @@ WRKSRC=			${WRKDIR}/ImageMagick-${IM_MAJOR_VER}
 
 PLIST_SUBST+=		IM_MAJOR_VER=${IM_MAJOR_VER}
 
+.include "../../mk/bsd.prefs.mk"
+
 # c++ broken as of 'gcc version 2.95.3 20010315 (release) (NetBSD nb1)'
 NOT_FOR_PLATFORM=	NetBSD-*-sparc64
 
-.include "../../mk/bsd.prefs.mk"
+# NetBSD 1.5's gcc is too old to compile this pkg
+.if (${OPSYS} == "NetBSD") && !empty(OS_VERSION:M1.[345]*)
+.include "../../lang/gcc/buildlink2.mk"
+USE_PKGSRC_GCC=                yes
+.endif
 
 # Avoid compiler bug on "arm32" and "mipsel" (cobalt?)
 .if (${MACHINE_ARCH} == arm32) || (${MACHINE_ARCH} == mipsel)
