@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/11/25 18:59:45 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2001/11/26 20:38:31 jlam Exp $
 #
 
 DISTNAME=	gale-0.99a
@@ -24,8 +24,8 @@ CPPFLAGS+=		-I${BUILDLINK_DIR}/include/w3c-libwww
 PKG_SYSCONFSUBDIR?=	gale
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
 
-PKG_USER=		gale
-PKG_GROUP=		gale
+PKG_GROUPS=		gale
+PKG_USERS=		gale:gale
 
 SUPPORT_FILES=		${EGDIR}/COPYING ${PKG_SYSCONFDIR}/gale/COPYING
 SUPPORT_FILES+=		${EGDIR}/ROOT ${PKG_SYSCONFDIR}/gale/auth/trusted/ROOT

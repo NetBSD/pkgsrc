@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2001/11/20 07:00:13 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2001/11/26 20:38:32 jlam Exp $
 # FreeBSD Id: Makefile,v 1.9 1997/03/08 05:00:11 gpalmer Exp
 #
 
@@ -34,10 +34,8 @@ CONFIGURE_ENV+=		ac_cv_lib_ncurses_tgetent=no
 CONFIGURE_ENV+=		ac_cv_lib_ncurses_tgetent=no
 CONFIGURE_ENV+=		ac_cv_lib_readline_readline=no
 
-PKG_USER=		${AMANDA_USER}
-PKG_USER_DESCR=		Amanda user
-PKG_USER_SHELL=		${SH}
-PKG_GROUP=		${AMANDA_GROUP}
+PKG_GROUPS=		${AMANDA_GROUP}
+PKG_USERS=		${AMANDA_USER}:${AMANDA_GROUP}::Amanda\\ user::${SH}
 
 OWN_DIRS_PERMS=		${AMANDA_VAR} ${AMANDA_USER} ${AMANDA_GROUP} 0700
 OWN_DIRS_PERMS+=	${AMANDA_VAR}/gnutar-lists  ${AMANDA_USER} ${AMANDA_GROUP} 0700
