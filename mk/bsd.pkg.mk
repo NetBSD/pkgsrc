@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1216.2.15 2003/08/01 19:00:28 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1216.2.16 2003/08/14 07:37:01 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -32,32 +32,34 @@ MAKE_ENV+=	USETOOLS="${USETOOLS}"
 
 # This has to come first to avoid showing all BUILD_DEFS added by this
 # Makefile, which are usually not customizable.
-.PHONY: pre-fetch build-defs-message
-pre-fetch: build-defs-message
-.if !target(build-defs-message)
+.PHONY: pre-extract build-defs-message
+pre-extract: build-defs-message
+.if ${PKGSRC_SHOW_BUILD_DEFS} != "YES" && ${PKGSRC_SHOW_BUILD_DEFS} != "yes"
+build-defs-message:
+.elif !target(build-defs-message)
 build-defs-message: ${WRKDIR}
-.if defined(BUILD_DEFS) && !empty(BUILD_DEFS)
-.if !exists(${WRKDIR}/.bdm_done)
+.  if defined(BUILD_DEFS) && !empty(BUILD_DEFS)
+.    if !exists(${WRKDIR}/.bdm_done)
 	@${ECHO} "=========================================================================="
 	@${ECHO} "The following variables will affect the build process of this package,"
 	@${ECHO} "${PKGNAME}.  Their current value is shown below:"
 	@${ECHO} ""
-.  for var in ${BUILD_DEFS:O:u}
-.    if !defined(${var})
+.      for var in ${BUILD_DEFS:O}
+.        if !defined(${var})
 	@${ECHO} "        * ${var} (not defined)"
-.    elif defined(${var}) && empty(${var})
+.        elif defined(${var}) && empty(${var})
 	@${ECHO} "        * ${var} (defined)"
-.    else
+.        else
 	@${ECHO} "        * ${var} = ${${var}}"
-.    endif
-.  endfor
+.        endif
+.      endfor
 	@${ECHO} ""
 	@${ECHO} "You may want to abort the process now with CTRL+C and change their value"
 	@${ECHO} "before continuing.  Be sure to run \`${MAKE} clean' after the changes."
 	@${ECHO} "=========================================================================="
 	@${TOUCH} ${WRKDIR}/.bdm_done
-.endif
-.endif
+.    endif
+.  endif
 .endif
 
 ##### Some NetBSD platforms permitted the user to set the binary format while
@@ -89,10 +91,19 @@ INTERACTIVE_STAGE?=	none
 # that if no buildlink2.mk files are included, then they still point to
 # where headers and libraries for installed packages and X11R6 may be found.
 #
-USE_BUILDLINK2?=	no		# default to not using buildlink2
 BUILDLINK_DIR?=		${LOCALBASE}
 BUILDLINK_X11PKG_DIR?=	${X11BASE}
 BUILDLINK_X11_DIR?=	${X11BASE}
+
+USE_BUILDLINK2?=	no		# default to not using buildlink2
+.if ${PKG_INSTALLATION_TYPE} == "pkgviews"
+_USE_BUILDLINK3=	yes
+.else
+_USE_BUILDLINK3=	no
+.endif
+.if empty(USE_BUILDLINK2:M[nN][oO]) && empty(_USE_BUILDLINK3:M[nN][oO])
+PKG_FAIL_REASON=	"Please undefine USE_BUILDLINK2 when using pkgviews"
+.endif
 
 .if defined(USE_IMAKE)
 USE_X11BASE?=		implied
@@ -340,7 +351,7 @@ X11_LDFLAGS=		# empty
 X11_LDFLAGS+=		-Wl,${RPATH_FLAG}${X11BASE}/lib
 X11_LDFLAGS+=		-L${X11BASE}/lib
 .endif
-.if !empty(USE_BUILDLINK2:M[nN][oO])
+.if !empty(USE_BUILDLINK2:M[nN][oO]) && !empty(_USE_BUILDLINK3:M[nN][oO])
 .  if ${PKG_INSTALLATION_TYPE} == "overwrite"
 LDFLAGS+=		-Wl,${RPATH_FLAG}${LOCALBASE}/lib
 LDFLAGS+=		-L${LOCALBASE}/lib
@@ -372,7 +383,7 @@ MAKE_ENV+=		CC="${CC}"
 .if defined(CXX)
 MAKE_ENV+=		CXX="${CXX}"
 .endif
-.if defined(CPP)
+.if defined(CPP) && !defined(NO_EXPORT_CPP)
 MAKE_ENV+=		CPP="${CPP}"
 .endif
 
@@ -580,12 +591,15 @@ PLIST_SUBST+=	PERL5_SITEARCH=${PERL5_SITEARCH:S/^${LOCALBASE}\///}
 PLIST_SUBST+=	PERL5_ARCHLIB=${PERL5_ARCHLIB:S/^${LOCALBASE}\///}
 .endif
 
-.if defined(USE_NEW_TEXINFO)
-INFO_FILES?=
+# base vs. GNU tools
+. include "../../mk/tools.mk"
+
+# Handle info files
+#
+INFO_FILES?=			# default to no info files to handle 
 USE_MAKEINFO?=	no		# default to not using makeinfo
-.  if !empty(INFO_FILES) || empty(USE_MAKEINFO:M[nN][oO])
-.    include "../../mk/texinfo.mk"
-.  endif
+.if !empty(INFO_FILES) || empty(USE_MAKEINFO:M[nN][oO])
+. include "../../mk/texinfo.mk"
 .endif
 
 .if defined(USE_PKGINSTALL) && !empty(USE_PKGINSTALL:M[yY][eE][sS])
@@ -1232,12 +1246,16 @@ SCRIPTS_ENV+= CURDIR=${.CURDIR} DISTDIR=${DISTDIR} \
 SCRIPTS_ENV+=	BATCH=yes
 .endif
 
-.if !empty(USE_BUILDLINK2:M[nN][oO])
+.if !empty(USE_BUILDLINK2:M[nN][oO]) && !empty(_USE_BUILDLINK3:M[nN][oO])
 NO_BUILDLINK=		# defined
 .endif
 
 .if !defined(NO_BUILDLINK)
-.  include "../../mk/buildlink2/bsd.buildlink2.mk"
+.  if empty(_USE_BUILDLINK3:M[nN][oO])
+.    include "../../mk/buildlink3/bsd.buildlink3.mk"
+.  elif empty(USE_BUILDLINK2:M[nN][oO])
+.    include "../../mk/buildlink2/bsd.buildlink2.mk"
+.  endif
 .endif
 
 .MAIN: all
@@ -1415,7 +1433,7 @@ checksum: fetch
 
 # Disable buildlink
 .PHONY: buildlink
-.if defined(NO_BUILDLINK) && !target(configure)
+.if defined(NO_BUILDLINK) && !target(buildlink)
 buildlink: patch
 	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${BUILDLINK_COOKIE}
 .endif
@@ -1669,7 +1687,6 @@ show-depends-dirs:
 
 # Show all build and run depends, reverse-breadth first, with options.
 .if make(show-all-depends-dirs) || make(show-all-depends-dirs-excl) || make (show-root-dirs)
-.PHONY: show-all-depends-dirs show-all-depends-dirs-excl show-root-dirs
 
 # "awk" macro to recurse over the dependencies efficiently, never running in
 # the same same directory twice. You may set the following options via "-v":
@@ -2193,7 +2210,7 @@ do-pkgconfig-override:
 .  endfor
 .endif
 
-.if empty(USE_BUILDLINK2:M[nN][oO])
+.if empty(USE_BUILDLINK2:M[nN][oO]) || empty(_USE_BUILDLINK3:M[nN][oO])
 #
 # By default, prevent invocation of GNU "auto*" driven by the generated
 # Makefiles during the build process by touching various auto{conf,make}
@@ -2489,6 +2506,8 @@ real-su-install: ${MESSAGE}
 		${ECHO_MSG} "Warning: not superuser, can't run mtree."; \
 		${ECHO_MSG} "Become root and try again to ensure correct permissions."; \
 	fi
+.else
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${PREFIX}
 .endif # !NO_MTREE
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} pre-install-script
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} pre-install
@@ -2506,13 +2525,6 @@ real-su-install: ${MESSAGE}
 	${_PKG_SILENT}#
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} ${PLIST}
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} post-install-script
-.if !defined(USE_NEW_TEXINFO)
-.  for f in ${INFO_FILES}
-	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} "${INSTALL_INFO} --info-dir=${PREFIX}/info ${PREFIX}/info/${f}"; \
-	${INSTALL_INFO} --remove --info-dir=${PREFIX}/info ${PREFIX}/info/${f}; \
-	${INSTALL_INFO} --info-dir=${PREFIX}/info ${PREFIX}/info/${f}
-.  endfor
-.endif # !USE_NEW_TEXINFO
 	${_PKG_SILENT}${_PKG_DEBUG}newmanpages=`${EGREP} -h		\
 		'^([^@/]*/)*man/([^/]*/)?(man[1-9ln]/.*\.[1-9ln]|cat[1-9ln]/.*\.0)(\.gz)?$$' \
 		${PLIST} 2>/dev/null || ${TRUE}`;			\
@@ -2556,7 +2568,7 @@ real-su-install: ${MESSAGE}
 	fi
 .if ${_DO_SHLIB_CHECKS} == "yes"
 .  if ${PKG_INSTALLATION_TYPE} == "overwrite"
-	${_PKG_SILENT}${_PKG_DEBUG}\
+	${_PKG_SILENT}${_PKG_DEBUG}					\
 	${MAKE} ${MAKEFLAGS} do-shlib-handling SHLIB_PLIST_MODE=0
 .  endif
 .endif
@@ -2565,6 +2577,16 @@ real-su-install: ${MESSAGE}
 	@${ECHO_MSG} ""
 	@${CAT} ${MESSAGE}
 	@${ECHO_MSG} ""
+.  if !empty(PKGSRC_MESSAGE_RECIPIENTS)
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	(${ECHO} "The ${PKGNAME} package was installed on `${HOSTNAME_CMD}` at `date`"; \
+	${ECHO} "";							\
+	${ECHO} "Please note the following:";				\
+	${ECHO} "";							\
+	${CAT} ${MESSAGE};						\
+	${ECHO} "") |							\
+	mail -s"Package ${PKGNAME} installed" ${PKGSRC_MESSAGE_RECIPIENTS}
+.  endif
 .endif
 .if !defined(NO_PKG_REGISTER)
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} ${PKG_DBDIR_MAKEFLAGS} fake-pkg
@@ -3453,53 +3475,11 @@ clean: pre-clean
 clean-depends:
 .  if defined(BUILD_DEPENDS) || defined(DEPENDS)
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	for i in `${MAKE} ${MAKEFLAGS} CLEAN_DEPENDS_LIST_TOP=YES clean-depends-list | ${SED} -e 's;\.\./[^ ]*; ;g' | ${TR} -s "[:space:]" "\n" | ${SORT} -u` ;\
+	for i in `${MAKE} ${MAKEFLAGS} show-all-depends-dirs-excl` ;\
 	do 								\
 		cd ${.CURDIR}/../../$$i &&				\
 		${MAKE} ${MAKEFLAGS} CLEANDEPENDS=NO clean;		\
 	done
-.  endif
-.endif
-
-
-# The clean-depends-list target will produce a list of all
-# BUILD_DEPENDS and DEPENDS packages.
-# As each *DEPENDS package is visited, it is added to the
-# CLEAN_DEPENDS_LIST_SEEN variable.  Once a pkg is in the list
-# it will not be visited again.  This prevents traversing the same
-# part of the dependency tree multiple times.  Each depending package
-# ends up in the list twice.  Once as the relative path from the depending
-# package and once as the path from pkgsrc.  Eg, "../../foo/bar foo/bar"
-# The "../../foo/bar" version is later removed from the list in the
-# clean-depends target.  The remaining bit of redundancy is that some
-# packages list their depends as "../bar" instead of "../../foo/bar"
-# In this case its possible for a dependency to be visited twice.
-
-.PHONY: clean-depends-list
-.if !target(clean-depends-list)
-clean-depends-list:
-.  if defined(BUILD_DEPENDS) || defined(DEPENDS)
-	@for dir in `${ECHO} ${BUILD_DEPENDS:C/^[^:]*://:C/:.*//}	\
-			${DEPENDS:C/^[^:]*://:C/:.*//} |		\
-			${TR} '\040' '\012' `; do			\
-		case "$$CLEAN_DEPENDS_LIST_SEEN" in			\
-		*" "$$dir" "*)  ;; 					\
-		*) 							\
-			CLEAN_DEPENDS_LIST_SEEN=" $$dir `cd ${.CURDIR} ; cd $$dir && ${MAKE} ${MAKEFLAGS} CLEAN_DEPENDS_LIST_SEEN="$$CLEAN_DEPENDS_LIST_SEEN" CLEAN_DEPENDS_LIST_TOP=NO clean-depends-list`";\
-			;;						\
-		esac							\
-	done ;								\
-	if [ "${CLEAN_DEPENDS_LIST_TOP}" != "YES" ]; then		\
-		${ECHO} " ${PKGPATH} $$CLEAN_DEPENDS_LIST_SEEN";	\
-	else								\
-		${ECHO} " $$CLEAN_DEPENDS_LIST_SEEN";			\
-	fi
-.  else
-	@if [ "${CLEAN_DEPENDS_LIST_TOP}" != "YES" ]; then		\
-		${ECHO} " ${PKGPATH} $$CLEAN_DEPENDS_LIST_SEEN";	\
-	else								\
-		${ECHO} " $$CLEAN_DEPENDS_LIST_SEEN";			\
-	fi
 .  endif
 .endif
 
@@ -4306,18 +4286,19 @@ print-pkg-size-depends:
 # Common (system) directories not to generate @dirrm statements for
 # Reads MTREE_FILE and extracts a list of sed commands that will
 # sort out which directories NOT to include into the PLIST @dirrm list
-SUBST_PLIST_REPLACEMENT=\
+SUBST_PLIST_REPLACEMENT1=						\
 		-e  's@${OPSYS}@\$${OPSYS}@' 				\
 		-e  's@${OS_VERSION:S/./\./g}@\$${OS_VERSION}@'		\
 		-e  's@${MACHINE_GNU_PLATFORM}@\$${MACHINE_GNU_PLATFORM}@' \
 		-e  's@${MACHINE_ARCH}@\$${MACHINE_ARCH}@' 		\
 		-e  's@${MACHINE_GNU_ARCH}@\$${MACHINE_GNU_ARCH}@'	\
 		-e  's@${LOWER_VENDOR}@\$${LOWER_VENDOR}@' 		\
-		-e  's@${LOWER_OPSYS}@\$${LOWER_OPSYS}@' 		\
-		-e  's@${LOWER_OS_VERSION:S/./\./g}@\$${LOWER_OS_VERSION}@' 	\
-		-e  's@${PKGNAME:S/./\./g}@\$${PKGNAME}@' 			\
+		-e  's@${LOWER_OS_VERSION:S/./\./g}@\$${LOWER_OS_VERSION}@' \
+		-e  's@${LOWER_OPSYS}@\$${LOWER_OPSYS}@'
+SUBST_PLIST_REPLACEMENT2=						\
+		-e  's@${PKGNAME:S/./\./g}@\$${PKGNAME}@' 		\
 		-e  's@${PKGVERSION:S/./\./g}@\$${PKGVERSION}@'		\
-		-e  's@${PKGLOCALEDIR}/locale@\$${PKGLOCALEDIR}/locale@' \
+		-e  's@${PKGLOCALEDIR}/locale@\$${PKGLOCALEDIR}/locale@'
 
 .if make(print-PLIST)
 COMMON_DIRS!= 	${AWK} 'BEGIN  { 					\
@@ -4335,12 +4316,13 @@ COMMON_DIRS!= 	${AWK} 'BEGIN  { 					\
 				if ( i == 0 ){ 				\
 					cwd = $$1 ; 			\
 				} else {				\
-					cwd = cwd "\\\\/" $$1 ; 	\
+					cwd = cwd "\\/" $$1 ; 	\
 				} 					\
-				print "-e \"/^" cwd "$$$$/d\"";		\
+				print "/^" cwd "$$$$/ { next; }";	\
 				i=i+1 ; 				\
 			} 						\
 		} 							\
+		END { print "{ print $$$$0; }"; }			\
 	' <${MTREE_FILE}
 .endif
 
@@ -4364,9 +4346,8 @@ print-PLIST:
 	${FIND} ${PREFIX}/. -xdev -newer ${EXTRACT_COOKIE} \! -type d	\
 	 | ( ${GREP} -v emul/linux/proc || ${TRUE} )			\
 	 | ${SORT}							\
-	 | ${SED}							\
-		-e  's@${PREFIX}/./@@' 					\
-		${SUBST_PLIST_REPLACEMENT}				\
+	 | ${SED} -e 's@${PREFIX}/./@@' ${SUBST_PLIST_REPLACEMENT1}	\
+	 | ${SED} ${SUBST_PLIST_REPLACEMENT2}				\
 	 | ${AWK} '							\
 		/^@/ { print $$0; next }				\
 		/.*\/lib[^\/]+\.so\.[0-9]+\.[0-9]+\.[0-9]+$$/ { 	\
@@ -4398,7 +4379,7 @@ print-PLIST:
 			| ${SED}					\
 				-e 's@${PREFIX}/./@@'			\
 				-e '/^${PREFIX:S/\//\\\//g}\/.$$/d'	\
-			| ${SORT} -r | ${SED} ${COMMON_DIRS}` ;		\
+			| ${SORT} -r | ${AWK} '${COMMON_DIRS}'` ;	\
 	do								\
 		if [ `${LS} -la ${PREFIX}/$$i | ${WC} -l` = 3 ]; then	\
 			${ECHO} @exec \$${MKDIR} %D/$$i ;		\
@@ -4406,8 +4387,8 @@ print-PLIST:
 		${ECHO} @dirrm $$i ;					\
 	done								\
 	| ( ${GREP} -v emul/linux/proc || ${TRUE} )			\
-	| ${SED}							\
-		${SUBST_PLIST_REPLACEMENT}
+	| ${SED} ${SUBST_PLIST_REPLACEMENT1}				\
+	| ${SED} ${SUBST_PLIST_REPLACEMENT2}
 .endif # target(print-PLIST)
 
 # By default, all packages attempt to link into the views.

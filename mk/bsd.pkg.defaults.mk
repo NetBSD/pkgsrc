@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.160.2.5 2003/08/14 07:08:16 jlam Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.160.2.6 2003/08/14 07:37:00 jlam Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -84,6 +84,18 @@ PKGSRC_SLEEPSECS?= 5
 # Automatically register shells in /etc/shells
 # Possible: YES, NO
 # Default: YES
+
+PKGSRC_MESSAGE_RECIPIENTS?=
+# login names of recipients of any MESSAGE files which will be mailed
+# Possible: any login names
+# Default: none
+
+PKGSRC_SHOW_BUILD_DEFS?=yes
+# Show BUILD_DEFS definitions for a package when it is being built
+# (BUILD_DEFS are extra definitions which govern how some packages are
+# built and behave)
+# Possible: "yes", not "yes"
+# Default: "yes"
 
 PKGSRC_RUN_TEST?=	no
 # Run test target before install
@@ -736,6 +748,16 @@ EMACS_USE_XAW3D?= NO
 # Possible: YES, NO
 # Default: NO
 
+EXIM_GROUP?=	mail
+# Used in the exim package to specify the server group.
+# Possible: any group name
+# Default: mail
+
+EXIM_USER?=	mail
+# Used in the exim package to specify the server user.
+# Possible: any user name
+# Default: mail
+
 FETCHMAIL_USE_SSL?=	YES
 # Enable SSL in fetchmail (for pop and imap connections)
 # Possible: YES, NO
@@ -746,6 +768,26 @@ FLOW_TOOLS_USE_MYSQL?=	NO
 # into a MySQL database.
 # Possible: YES, NO
 # Default: NO
+
+#FLUXBOX_USE_XINERAMA?=	NO
+# Compile flukebox with xinerama extensions
+# Possible: YES, NO
+# Default: NO
+
+#FLUXBOX_USE_KDE?=	NO
+# Compile flukebox with KDE support
+# Possible: YES, NO
+# Default: NO
+
+#FLUXBOX_USE_GNOME?=	NO
+# Compile flukebox with GNOME support
+# Possible: YES, NO
+# Default: NO
+
+#FLUXBOX_USE_XFT?=	YES
+# Compile flukebox with Xft support
+# Possible: YES, NO
+# Default: YES
 
 FOX_USE_XUNICODE?=	YES
 # Used in fox to build in support for Unicode by XUnicode. See
@@ -1183,7 +1225,7 @@ MOZILLA_USE_XFT?=	NO
 MPLAYER_DISABLE_DRIVERS?=
 # Whitespace separated list of output drivers that are not wanted in
 # mplayer/gmplayer's binary.
-# Possible: arts esd faad nas sdl
+# Possible: arts esd nas sdl
 # Default: empty
 
 MPLAYER_ENABLE_RUNTIME_CPU_DETECTION?= YES
