@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/12/24 09:53:50 jmmv Exp $
+# $NetBSD: Makefile,v 1.7 2004/04/17 04:32:16 ben Exp $
 #
 
 DISTNAME=		su2-1.3
@@ -11,5 +11,25 @@ COMMENT=		Enhanced su, users su with own password + more
 
 LICENSE=		no-profit
 NO_CONFIGURE=		yes
+
+SUBST_CLASSES+=		preproc
+SUBST_MESSAGE.preproc=	"Correcting C preprocessor directives."
+SUBST_STAGE.preproc=	post-patch
+SUBST_FILES.preproc=	su2.c
+SUBST_SED.preproc=	-e 's,^\(\# *else\).*,\1,' \
+			-e 's,^\(\# *endif\).*,\1,'
+
+LDLIBS=			-lcrypt
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD"
+LDLIBS+=		-lcompat
+.endif
+
+MAKE_ENV+=		LDLIBS="${LDLIBS}"
+
+post-extract:
+	${CHMOD} -R og+w ${WRKSRC}
 
 .include "../../mk/bsd.pkg.mk"
