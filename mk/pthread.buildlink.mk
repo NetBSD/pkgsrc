@@ -1,4 +1,4 @@
-# $NetBSD: pthread.buildlink.mk,v 1.2 2001/12/26 19:18:40 jlam Exp $
+# $NetBSD: pthread.buildlink.mk,v 1.3 2002/02/08 06:24:45 jlam Exp $
 #
 # This Makefile fragment is included by packages that use pthreads.
 # This Makefile fragment is also included directly by bsd.prefs.mk.
@@ -95,7 +95,7 @@ DEPENDS+=		ptl>=2.1.7:../../devel/ptl2
 .elif ${PTHREAD_TYPE} == "mit-pthreads"
 DEPENDS+=		mit-pthreads-1.60b6:../../devel/mit-pthreads
 .elif ${PTHREAD_TYPE} == "unproven-pthreads"
-DEPENDS+=		unproven-threads>=0.17:../../devel/unproven-pthreads
+.  include "../../devel/unproven-pthreads/buildlink.mk"
 .endif
 
 .endif	# PTHREAD_BUILDLINK_MK
