@@ -1,9 +1,3 @@
-                             TOP
-                         Version 3.5beta7
-
-                       William LeFebvre
-		     and a cast of dozens
-
 "top" is a program that will give continual reports about the state of
 the system, including a list of the top cpu using processes.  Version 3
 of "top" has three primary design goals: provide an accurate snapshot of

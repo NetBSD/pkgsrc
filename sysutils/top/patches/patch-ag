@@ -1,9 +1,0 @@
-$NetBSD: patch-ag,v 1.1 1999/12/08 16:18:50 agc Exp $
-
---- top.c	Thu Sep 12 21:50:53 1996
-+++ top.c	Sat Oct  4 03:25:02 1997
-@@ -716,3 +716,3 @@
- 				clear();
--				show_help();
-+				show_help(&statics);
- 				standout("Hit any key to continue: ");
