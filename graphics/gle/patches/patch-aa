@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/05/14 17:00:32 rh Exp $
+
+--- examples/Makefile.in.orig	Wed Apr 25 21:57:44 2001
++++ examples/Makefile.in
+@@ -100,7 +100,7 @@
+ INCLUDES =    @X_CFLAGS@   -I${top_srcdir}   -I${top_srcdir}/src 
+ 
+ 
+-LDADD = @X_LIBS@  -L../src/.libs
++LDADD = @X_LIBS@  -L../src -L../src/.libs
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+ CONFIG_HEADER = ../config.h
+ CONFIG_CLEAN_FILES = 
