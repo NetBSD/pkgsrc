@@ -4,5 +4,9 @@ CFLAGS=`cat /tmp/build-ports-misc-amanda-cflags`
 rm /tmp/build-ports-misc-amanda-cflags
 echo $CFLAGS
 
-mv $WRKSRC/config/config.h-freebsd2 $WRKSRC/config/config.h
+if [ "X`uname -s`" = "NetBSD" ]; then
+	mv $WRKSRC/config/config.h-netbsd1 $WRKSRC/config/config.h
+else
+	mv $WRKSRC/config/config.h-freebsd2 $WRKSRC/config/config.h
+fi
 sed "s/#define MK_CCOPTS -g/#define MK_CCOPTS $CFLAGS/" < $WRKSRC/config/options.h-vanilla > $WRKSRC/config/options.h
