@@ -1,4 +1,4 @@
-#	$NetBSD: FreeBSD.pkg.dist,v 1.23.4.2 2003/08/01 19:00:20 jlam Exp $
+#	$NetBSD: FreeBSD.pkg.dist,v 1.23.4.3 2003/08/27 11:44:28 jlam Exp $
 #
 
 /set type=dir uname=root gname=wheel mode=0755
@@ -636,6 +636,10 @@
                 ..
             ..
             ms
+                LC_MESSAGES
+                ..
+            ..
+            ne
                 LC_MESSAGES
                 ..
             ..
