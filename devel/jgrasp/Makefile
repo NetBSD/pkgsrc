@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/06/05 22:51:25 jschauma Exp $
+# $NetBSD: Makefile,v 1.6 2004/08/27 06:29:07 jlam Exp $
 #
 
 DISTNAME=		jgrasp170
@@ -21,7 +21,7 @@ do-build:
 	${CC} ${CFLAGS} -lutil -o ${WRKSRC}/jbin/${LOWER_OPSYS}_run 	\
 		${WRKSRC}/src/linux_run.c
 	${CC} ${CFLAGS} -I${X11BASE}/include				\
-		-L${X11BASE}/lib -Wl,${RPATH_FLAG}${X11BASE}/lib -lX11 		\
+		-L${X11BASE}/lib ${COMPILER_RPATH_FLAG}${X11BASE}/lib -lX11 \
 		-o ${WRKSRC}/bin/${LOWER_OPSYS}/jgrasp 			\
 		${WRKSRC}/src/linux_exec.c
 
