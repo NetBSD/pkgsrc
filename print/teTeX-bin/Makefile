@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2004/03/26 02:27:51 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2004/05/03 12:43:47 wiz Exp $
 
 DISTNAME=	tetex-src-${TETEX_BIN_VERS}
 PKGNAME=	teTeX-bin-${TETEX_BIN_VERS}
@@ -48,5 +48,6 @@ post-install:
 	${LOCALBASE}/bin/texconfig font options appendonlydir varfonts
 
 .include "../../print/teTeX-bin/Makefile.common"
+.include "../../mk/xaw.buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
