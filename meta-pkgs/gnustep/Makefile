@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/04/11 03:38:26 rh Exp $
+# $NetBSD: Makefile,v 1.13 2004/04/11 09:28:45 jmmv Exp $
 #
 
 DISTNAME=	gnustep-1.9.1
@@ -18,7 +18,7 @@ DEPENDS+=	ImageViewer>=0.6.2:../../graphics/ImageViewer
 DEPENDS+=	GNUMail>=1.1.2:../../mail/GNUMail
 DEPENDS+=	Gorm>=0.6.0:../../devel/Gorm
 DEPENDS+=	ProjectCenter>=0.3.6:../../devel/ProjectCenter
-DEPENDS+=	Renaissance>=0.7.0:../../devel/ProjectCenter
+DEPENDS+=	Renaissance>=0.7.0:../../devel/Renaissance
 DEPENDS+=	gworkspace>=0.6.3:../../sysutils/gworkspace
 
 USE_X11=	yes
