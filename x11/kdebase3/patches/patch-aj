@@ -1,13 +1,13 @@
-$NetBSD: patch-aj,v 1.7 2004/08/21 12:35:15 markd Exp $
+$NetBSD: patch-aj,v 1.8 2005/03/23 21:44:37 markd Exp $
 
---- kdm/kfrontend/Makefile.in.orig	2004-08-14 12:19:31.000000000 +1200
+--- kdm/kfrontend/Makefile.in.orig	2005-03-05 02:14:56.000000000 +1300
 +++ kdm/kfrontend/Makefile.in
-@@ -595,7 +595,7 @@ xdg_directorydir = @xdg_directorydir@
+@@ -616,7 +616,7 @@ xdg_directorydir = @xdg_directorydir@
  xdg_menudir = @xdg_menudir@
  
  # use 'make GENKDMCONF_FLAGS=... install' to override
 -GENKDMCONF_FLAGS = 
 +GENKDMCONF_FLAGS = --no-old
- SUBDIRS = pics sessions
- AM_CPPFLAGS = -I$(srcdir)/../backend -I$(top_srcdir)/kcontrol/background \
-     $(all_includes) $(XDM_DEFINES)
+ SUBDIRS = themer themes pics sessions
+ AM_CPPFLAGS = -I$(srcdir)/../backend -I.. -I$(top_srcdir)/kcontrol/background \
+     -I$(top_srcdir)/kdmlib $(all_includes)
