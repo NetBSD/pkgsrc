@@ -1,11 +1,45 @@
-$NetBSD: patch-ab,v 1.5 2003/02/22 04:31:06 dmcmahill Exp $
+$NetBSD: patch-ab,v 1.6 2003/11/01 12:26:21 dmcmahill Exp $
 
---- configure.orig	Thu Feb 20 22:05:02 2003
-+++ configure	Fri Feb 21 06:47:13 2003
-@@ -10229,5 +10229,5 @@
+--- configure.orig	2003-02-06 02:42:04.000000000 -0500
++++ configure
+@@ -7085,8 +7085,8 @@ echo "$as_me: error: Unable to configure
+   *-*-solaris*)
+     # standard compilers
+     CC=cc
+-    CC_OPTIONS='-O -DSVR4 -DSYSV -Dsolaris'
+-    CC_LDFLAGS=
++    CC_OPTIONS="${CFLAGS} -DSVR4 -DSYSV -Dsolaris"
++    CC_LDFLAGS="${LDFLAGS}"
+     if test "$WITH_G77" != yes; then
+       #AC_CHECK_PROG(F77,f77,yes,no)
+       for ac_prog in f77 f90 f2c-f77
+@@ -7137,9 +7137,9 @@ echo "$as_me: error: Unable to configure
+     #FC="$F77"
+     FC_OPTIONS=-O
+     FC_OPTIONS_O0=
+-    FC_LDFLAGS=
++    FC_LDFLAGS="${LDFLAGS}"
+     LD=ld
+-    LD_LDFLAGS=
++    LD_LDFLAGS="${LDFLAGS}"
+     if test "$enable_debug" = yes; then
+       CC_OPTIONS='-g -DSVR4 -DSYSV -Dsolaris'
+       FC_OPTIONS=-g
+@@ -7156,7 +7156,7 @@ echo "$as_me: error: Unable to configure
+       FC=g77
+       FC_OPTIONS=-O2
+       FC_OPTIONS_O0=
+-      FC_LDFLAGS='-t'
++      FC_LDFLAGS="${LDFLAGS} -t"
+ #     for solaris 2.7 with gcc/g77 2.95.2, binutils 2.9
+ #     the correct value should be
+ #     FC_LDFLAGS='-t -Wl,-export-dynamic'
+@@ -10228,7 +10228,7 @@ ac_compiler_gnu=$ac_cv_c_compiler_gnu
+    FC="$F77"
     FC_OPTIONS="${FFLAGS}"
     FC_OPTIONS_O0=`echo $FC_OPTIONS | sed 's/-O0-9*//g'`
 -   FC_LDFLAGS="${LDLAGS} -Wl,-R${X11BASE}/lib"
 +   FC_LDFLAGS="${LDFLAGS} -Wl,-R${X11BASE}/lib"
     FC_PICFLAGS='-fPIC'
     # check for --export-dynamic
+    ac_save_LDFLAGS="$LDFLAGS"
