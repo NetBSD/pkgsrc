@@ -1,4 +1,4 @@
-# $NetBSD: pgsql.buildlink3.mk,v 1.3.2.1 2005/02/11 15:27:57 tv Exp $
+# $NetBSD: pgsql.buildlink3.mk,v 1.3.2.2 2005/03/21 15:43:00 tv Exp $
 
 .if !defined(PGVERSION_MK)
 PGVERSION_MK=	defined
@@ -62,19 +62,23 @@ _PGSQL_VERSION=	${_PGSQL_VERSION_FIRSTACCEPTED}
 # set variables for the version we decided to use:
 #
 .if ${_PGSQL_VERSION} == "80"
+PGSQL_TYPE=	postgresql80-lib
 PGPKGSRCDIR=	../../databases/postgresql80-lib
 .elif ${_PGSQL_VERSION} == "74"
+PGSQL_TYPE=	postgresql74-lib
 PGPKGSRCDIR=	../../databases/postgresql74-lib
 .elif ${_PGSQL_VERSION} == "73"
+PGSQL_TYPE=	postgresql73-lib
 PGPKGSRCDIR=	../../databases/postgresql73-lib
 .else
 # force an error
+PGSQL_TYPE=		none
 PKG_SKIP_REASON+=	"${_PGSQL_VERSION} is not a valid package"
 .endif
 
 .if (defined(USE_BUILDLINK3) && empty(USE_BUILDLINK3:M[nN][oO]))
-.    include "${PGPKGSRCDIR}/buildlink3.mk"
-PGSQL_PREFIX=	${BUILDLINK_PREFIX.postgresql${_PGSQL_VERSION}-lib}
+.  include "${PGPKGSRCDIR}/buildlink3.mk"
+PGSQL_PREFIX=	${BUILDLINK_PREFIX.${PGSQL_TYPE}}
 .endif
 
 .endif	# PGVERSION_MK

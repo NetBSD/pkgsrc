@@ -1,4 +1,4 @@
-# $NetBSD: bsd.sites.mk,v 1.20.2.6 2005/02/25 14:46:51 tv Exp $
+# $NetBSD: bsd.sites.mk,v 1.20.2.7 2005/03/21 15:43:00 tv Exp $
 #
 # Default MASTER_SITES
 
@@ -7,6 +7,7 @@ BSD_SITES_MK=	1
 
 MASTER_SITE_XCONTRIB+=  \
 	ftp://ftp.gwdg.de/pub/x11/x.org/contrib/ \
+	ftp://sunsite.doc.ic.ac.uk/sites/ftp.x.org/contrib/ \
 	ftp://sunsite.sut.ac.jp/pub/archives/X11/contrib/ \
 	ftp://sunsite.icm.edu.pl/pub/X11/contrib/ \
 	ftp://sunsite.cnlab-switch.ch/mirror/X11/contrib/ \
@@ -55,18 +56,14 @@ MASTER_SITE_R_CRAN+=    \
 	http://cran.uk.r-project.org/src/ \
 	http://cran.us.r-project.org/src/ \
 	http://lib.stat.cmu.edu/R/CRAN/src/ \
-	ftp://ftp.biostat.washington.edu/mirrors/R/CRAN/src/ \
-	http://cran.stat.wisc.edu/src/ \
-	http://SunSITE.auc.dk/R/src/ \
 	http://www.stat.unipg.it/pub/stat/statlib/R/CRAN/src/ \
 	ftp://ftp.u-aizu.ac.jp/pub/lang/R/CRAN/src/ \
-	ftp://dola.snu.ac.kr/pub/R/CRAN/src/ \
 	http://stat.ethz.ch/CRAN/src/ \
 	http://www.stats.bris.ac.uk/R/src/
 
 MASTER_SITE_TEX_CTAN+= \
 	ftp://ftp.funet.fi/pub/TeX/CTAN/ \
-	ftp://ftp.tex.ac.uk/public/ctan/tex-archive/ \
+	ftp://ftp.tex.ac.uk/tex-archive/ \
 	ftp://ftp.dante.de/tex-archive/
 
 MASTER_SITE_SUNSITE+=   \
@@ -96,15 +93,19 @@ MASTER_SITE_GNOME+=     \
 
 MASTER_SITE_SOURCEFORGE+=	\
 	http://belnet.dl.sourceforge.net/sourceforge/ \
-	http://cesnet.dl.sourceforge.net/sourceforge/ \
+	http://citkit.dl.sourceforge.net/sourceforge/ \
+	http://cogent.dl.sourceforge.net/sourceforge/ \
+	http://easynews.dl.sourceforge.net/sourceforge/ \
 	http://heanet.dl.sourceforge.net/sourceforge/ \
 	http://internap.dl.sourceforge.net/sourceforge/ \
 	http://jaist.dl.sourceforge.net/sourceforge/ \
+	http://kent.dl.sourceforge.net/sourceforge/ \
 	http://mesh.dl.sourceforge.net/sourceforge/ \
+	http://nchc.dl.sourceforge.net/sourceforge/ \
 	http://optusnet.dl.sourceforge.net/sourceforge/ \
 	http://ovh.dl.sourceforge.net/sourceforge/ \
 	http://puzzle.dl.sourceforge.net/sourceforge/ \
-	http://umn.dl.sourceforge.net/sourceforge/ \
+	http://switch.dl.sourceforge.net/sourceforge/ \
 	http://unc.dl.sourceforge.net/sourceforge/ \
 	http://voxel.dl.sourceforge.net/sourceforge/ \
 	ftp://ftp2.sourceforge.net/pub/sourceforge/
@@ -112,21 +113,19 @@ MASTER_SITE_SOURCEFORGE+=	\
 #	http://sf.gds.tuwien.ac.at/
 
 MASTER_SITE_SUSE+=	\
-	http://altruistic.lbl.gov/mirrors/suse/${MACHINE_ARCH}/${SUSE_VERSION}/suse/ \
 	ftp://rpmfind.net/linux/SuSE-Linux/${MACHINE_ARCH}/update/${SUSE_VERSION}/ \
 	ftp://fr.rpmfind.net/linux/SuSE-Linux/${MACHINE_ARCH}/update/${SUSE_VERSION}/ \
 	ftp://fr2.rpmfind.net/linux/SuSE-Linux/${MACHINE_ARCH}/update/${SUSE_VERSION}/ \
 	ftp://speakeasy.rpmfind.net/linux/SuSE-Linux/${MACHINE_ARCH}/update/${SUSE_VERSION}/ \
-	ftp://ftp.duth.gr/pub/suse/${MACHINE_ARCH}/${SUSE_VERSION}/suse/ \
+	ftp://ftp.duth.gr/pub/suse/suse/${MACHINE_ARCH}/${SUSE_VERSION}/suse/ \
 	ftp://ftp.kddlabs.co.jp/Linux/packages/SuSE/suse/${MACHINE_ARCH}/${SUSE_VERSION}/suse/ \
 	ftp://sunsite.cnlab-switch.ch/mirror/SuSE/suse/${MACHINE_ARCH}/${SUSE_VERSION}/suse/ \
-	ftp://ftp.mirror.ac.uk/sites/ftp.suse.com/pub/suse/${MACHINE_ARCH}/${SUSE_VERSION}/suse/ \
+	ftp://ftp.mirror.ac.uk/sites/ftp.suse.com/${MACHINE_ARCH}/${SUSE_VERSION}/suse/ \
 	ftp://mirror.mcs.anl.gov/pub/ftp.suse.com/${MACHINE_ARCH}/${SUSE_VERSION}/suse/
 
 MASTER_SITE_MOZILLA+=   \
 	ftp://ftp.mozilla.org/pub/mozilla.org/mozilla/releases/ \
 	ftp://ftp.fu-berlin.de/unix/network/www/mozilla/releases/ \
-	ftp://sunsite.utk.edu/pub/netscape-source/ \
 	ftp://ftp.informatik.uni-bonn.de/pub/www/mozilla/ \
 	ftp://ftp-stud.fht-esslingen.de/pub/Mirrors/ftp.mozilla.org/pub/ \
 	ftp://sunsite.auc.dk/pub/mozilla/ \
@@ -141,47 +140,33 @@ MASTER_SITE_MOZILLA+=   \
 MASTER_SITE_XEMACS+=    \
 	ftp://ftp.xemacs.org/pub/xemacs/ \
 	ftp://ftp.dti.ad.jp/pub/unix/editor/xemacs/ \
-	ftp://ftp.jaist.ac.jp/pub/GNU/xemacs/ \
 	ftp://ftp.pasteur.fr/pub/computing/xemacs/ \
 	http://public.planetmirror.com.au/pub/xemacs/ \
 	ftp://mirror.aarnet.edu.au/pub/xemacs/ \
 	ftp://mirror.cict.fr/xemacs/ \
-	ftp://mirror.nucba.ac.jp/mirror/xemacs/ \
 	ftp://ring.aist.go.jp/pub/text/xemacs/ \
 	ftp://ring.asahi-net.or.jp/pub/text/xemacs/
 
 MASTER_SITE_APACHE+=    \
 	http://www.apache.org/dist/ \
 	http://mirrors.midco.net/pub/apache.org/ \
-	http://apache.mirror.digitalspace.net/ \
-	http://apache.mirrorcentral.com/dist/ \
-	http://www.rge.com/pub/infosystems/apache/ \
 	http://mirrors.ccs.neu.edu/Apache/dist/ \
-	http://www.apache.inetcosmos.org/dist/ \
-	http://www.ibiblio.org/pub/packages/infosystems/WWW/servers/apache/ \
-	http://apache.ttlhost.com/ \
+	http://www.ibiblio.org/pub/mirrors/apache/ \
 	http://apache.towardex.com/ \
-	http://mirrors.theonlinerecordstore.com/apache/ \
 	http://apache.oregonstate.edu/ \
-	http://mirror.telentente.com/pub/apache/dist/ \
 	http://www.tux.org/pub/net/apache/dist/ \
 	http://apache.secsup.org/dist/ \
 	http://ftp.epix.net/apache/ \
 	http://public.planetmirror.com.au/pub/apache/dist/ \
+	http://apache.osuosl.org/ \
 	ftp://ftp.rge.com/pub/infosystems/apache/ \
 	ftp://ftp.epix.net/pub/apache/ \
 	ftp://ftp.ccs.neu.edu/net/mirrors/Apache/dist/ \
 	ftp://ftp.tux.org/pub/net/apache/dist/ \
-	ftp://ftp.apache.inetcosmos.org/pub/apache/dist/ \
-	ftp://www.ibiblio.org/pub/packages/infosystems/WWW/servers/apache/ \
-	ftp://ftp.knowledge.com/pub/mirrors/apache/dist/ \
-	ftp://ftp.sunsite.utk.edu/pub/apache/dist/ \
+	ftp://www.ibiblio.org/pub/mirrors/apache/ \
 	ftp://ftp.oregonstate.edu/pub/apache/ \
 	ftp://apache.secsup.org/pub/apache/dist/ \
-	ftp://mirror.telentente.com/pub/apache/dist/ \
-	ftp://mirrors.midco.net/pub/apache.org/ \
-	ftp://ftp.fu-berlin.de/unix/network/www/apache/ \
-	http://nagoya.apache.org/mirror/ \
+	ftp://ftp.fu-berlin.de/unix/network/www/apache/
 
 MASTER_SITE_DEBIAN+= \
 	http://ftp.debian.org/debian/ \

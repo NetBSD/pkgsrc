@@ -1,4 +1,4 @@
-# $NetBSD: OSF1.mk,v 1.1.2.1 2005/02/11 15:27:57 tv Exp $
+# $NetBSD: OSF1.mk,v 1.1.2.2 2005/03/21 15:43:00 tv Exp $
 #
 # Variable definitions for the OSF1 operating system.
 
@@ -143,3 +143,5 @@ SERIAL_DEVICES?=	/dev/tty00 \
 
 _INCOMPAT_ICONV=   OSF1-*-*
 
+_STRIPFLAG_CC?=		${_INSTALL_UNSTRIPPED:D:U}	# cc(1) option to strip
+_STRIPFLAG_INSTALL?=	${_INSTALL_UNSTRIPPED:D:U}	# install(1) option to strip

@@ -1,4 +1,4 @@
-# $NetBSD: bsd.wrapper.mk,v 1.12.2.10 2005/02/25 14:46:51 tv Exp $
+# $NetBSD: bsd.wrapper.mk,v 1.12.2.11 2005/03/21 15:43:00 tv Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -36,7 +36,10 @@
 
 .include "../../mk/wrapper/wrapper-defs.mk"
 
-.if ${PKG_DEBUG_LEVEL} > 0
+# pkgsrc bmake does not (yet) correctly handle ${VAR} > 0 because
+# ${VAR} is treated as a string, so we must use a string comparison
+# operator.
+.if ${PKG_DEBUG_LEVEL} != "0" || defined(PKG_VERBOSE)
 ECHO_WRAPPER_MSG?=	${ECHO}
 .else
 ECHO_WRAPPER_MSG?=	${TRUE}

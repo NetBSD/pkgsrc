@@ -1,4 +1,4 @@
-# $NetBSD: Interix.mk,v 1.13.2.2 2005/02/11 15:27:57 tv Exp $
+# $NetBSD: Interix.mk,v 1.13.2.3 2005/03/21 15:43:00 tv Exp $
 #
 # Variable definitions for the Interix operating system.
 
@@ -33,9 +33,22 @@
 #   (main lib)	0x48000000
 # zsh		*
 
+BULK_PREREQ+=	lang/gawk sysutils/coreutils
+
 # "catinstall" not yet supported as there's no shipped [gn]roff
 MANINSTALL=	maninstall
 MAKE_FLAGS+=	MKCATPAGES=no NOLINT=1
+
+# Use some pkgsrc versions as "better" replacements, if installed
+.if exists(${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}awk)
+AWK?=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}awk
+.endif
+.if exists(${LOCALBASE}/bin/gtar)
+GTAR?=		${LOCALBASE}/bin/gtar
+.endif
+.if exists(${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}sort)
+SORT?=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}sort
+.endif
 
 AWK?=		/usr/contrib/bin/gawk
 BASENAME?=	/bin/basename
@@ -58,11 +71,7 @@ FILE_CMD?=	/bin/file
 FIND?=		/bin/find
 GMAKE?=		${LOCALBASE}/bin/gmake
 GREP?=		/bin/grep
-.if exists(${LOCALBASE}/bin/gtar)
-GTAR?=		${LOCALBASE}/bin/gtar
-.else
 GTAR?=		${LOCALBASE}/bin/tar
-.endif
 GUNZIP_CMD?=	/usr/contrib/bin/gunzip -f
 GZCAT?=		/usr/contrib/bin/gunzip -c
 GZIP?=		-9
@@ -82,11 +91,7 @@ MTREE?=		${LOCALBASE}/sbin/mtree
 MV?=		/bin/mv
 NICE?=		/bin/nice
 PATCH?=		${LOCALBASE}/bin/gpatch
-.if exists(${LOCALBASE}/bin/pax)
 PAX?=		${LOCALBASE}/bin/pax
-.else
-PAX?=		/bin/pax
-.endif
 PERL5?=		${LOCALBASE}/bin/perl
 PKGLOCALEDIR?=	share
 PS?=		/bin/ps
@@ -179,10 +184,8 @@ BUILD_DEPENDS+=		${USE_X11BASE:D${_XPKGWEDGE_DEPENDS}}
 _OPSYS_WHOLE_ARCHIVE_FLAG=	-Wl,--whole-archive
 _OPSYS_NO_WHOLE_ARCHIVE_FLAG=	-Wl,--no-whole-archive
 
-.if (!defined(INSTALL_UNSTRIPPED) || empty(INSTALL_UNSTRIPPED:M[yY][eE][sS])) && !defined(DEBUG_FLAGS)
-_STRIPFLAG_CC?=		-s	# cc(1) option to strip
-_STRIPFLAG_INSTALL?=	-s	# install(1) option to strip
-.endif
+_STRIPFLAG_CC?=		${_INSTALL_UNSTRIPPED:D:U-s}	# cc(1) option to strip
+_STRIPFLAG_INSTALL?=	${_INSTALL_UNSTRIPPED:D:U-s}	# install(1) option to strip
 
 DEFAULT_SERIAL_DEVICE?=	/dev/tty00
 SERIAL_DEVICES?=	/dev/tty00 /dev/tty01 /dev/tty02 /dev/tty03
