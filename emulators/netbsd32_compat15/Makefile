@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/02/17 18:38:20 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/12/05 16:03:57 agc Exp $
 #
 
 .if ${MACHINE_ARCH} == "sparc64"
@@ -49,18 +49,18 @@ do-build:
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/${COMPAT_LIBDIR}
 	(cd ${WRKDIR}/lib; pax -rwv lib*.so* ${PREFIX}/${COMPAT_LIBDIR}; \
-	 chown root:wheel ${PREFIX}/${COMPAT_LIBDIR}/lib*.so*; \
+	 chown ${ROOT_USER}:${ROOT_GROUP} ${PREFIX}/${COMPAT_LIBDIR}/lib*.so*; \
 	 chmod 555 ${PREFIX}/${COMPAT_LIBDIR}/lib*.so* )
 	if [ -d ${WRKDIR}/X11R6/lib ]; then \
 		${INSTALL_DATA_DIR} ${PREFIX}/${COMPAT_XLIBDIR}; \
 		(cd ${WRKDIR}/X11R6/lib; pax -rwv lib*.so* ${PREFIX}/${COMPAT_XLIBDIR}; \
-		 chown root:wheel ${PREFIX}/${COMPAT_XLIBDIR}/lib*.so*; \
+		 chown ${ROOT_USER}:${ROOT_GROUP} ${PREFIX}/${COMPAT_XLIBDIR}/lib*.so*; \
 		 chmod 555 ${PREFIX}/${COMPAT_XLIBDIR}/lib*.so* ) \
 	fi
 	if [ -d ${WRKDIR}/libexec ]; then \
 		${INSTALL_DATA_DIR} ${PREFIX}/${COMPAT_LIBEXECDIR}; \
 		(cd ${WRKDIR}/libexec; pax -rwv ld.*so ${PREFIX}/${COMPAT_LIBEXECDIR}; \
-		 chown root:wheel ${PREFIX}/${COMPAT_LIBEXECDIR}/ld.*so; \
+		 chown ${ROOT_USER}:${ROOT_GROUP} ${PREFIX}/${COMPAT_LIBEXECDIR}/ld.*so; \
 		 chmod 555 ${PREFIX}/${COMPAT_LIBEXECDIR}/ld.*so ) \
 	fi
 
