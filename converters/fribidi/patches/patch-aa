@@ -1,0 +1,10 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/12/14 01:16:39 xtraeme Exp $
+
+--- run.tests.orig	Mon Oct  6 14:12:47 2003
++++ run.tests	Mon Oct  6 14:12:57 2003
+@@ -1,4 +1,4 @@
+-#!/bin/bash
++#!/bin/sh
+ # run.tests - Check that the algorithm does what it is supposed to
+ # Copyright (C) 1999,2000 Dov Grobgeld, and
+ # Copyright (C) 2001,2002 Behdad Esfahbod.
