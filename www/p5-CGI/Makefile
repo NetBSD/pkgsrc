@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2002/02/27 16:28:48 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2002/10/07 22:34:27 seb Exp $
 #
 
 DISTNAME=       	CGI.pm-2.79
@@ -21,12 +21,9 @@ COMMENT=		perl5 module for writing forms-based CGI programs
 # Can't simply define USE_PERL5.
 BUILDLINK_DEPENDS.perl=	{perl-5.0*,perl-5.6.0nb2,perl-base>=5.6.0,perl>=5.6.1nb2}
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/CGI/.packlist
 HTMLDIR=		${PREFIX}/share/doc/html/p5-CGI
-
-do-configure:
-	cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
 
 post-build:
 	cd ${WRKSRC}/examples;						\
@@ -46,5 +43,5 @@ post-install:
 	${INSTALL_DATA} *.gif *.html *.txt *.xbm ${HTMLDIR}/examples;	\
 	${INSTALL_SCRIPT} *.cgi ${HTMLDIR}/examples
 
-.include "../../lang/perl5/buildlink.mk"
+.include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

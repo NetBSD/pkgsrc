@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2002/06/03 13:06:20 shell Exp $
+# $NetBSD: Makefile,v 1.28 2002/10/07 22:34:25 seb Exp $
 # FreeBSD Id: Makefile,v 1.13 1997/06/27 18:38:15 jfitz Exp
 #
 
@@ -12,11 +12,8 @@ MAINTAINER=	shell@netbsd.org
 HOMEPAGE=	http://theory.uwinnipeg.ca/CPAN/data/libnet/Net/libnetFAQ.html
 COMMENT=	perl5 modules to access and use network protocols
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Net/.packlist
 
-do-configure:
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
-
-.include "../../lang/perl5/buildlink.mk"
+.include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

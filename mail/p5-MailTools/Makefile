@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2002/08/31 01:37:14 mjl Exp $
+# $NetBSD: Makefile,v 1.19 2002/10/07 22:34:26 seb Exp $
 
 DISTNAME=	MailTools-1.49
 PKGNAME=	p5-${DISTNAME}
@@ -11,11 +11,8 @@ COMMENT=	perl5 modules related to mail applications
 
 BUILD_DEPENDS+=	p5-Net>=1.09:../../net/p5-Net
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Mail/.packlist
 
-do-configure:
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
-
-.include "../../lang/perl5/buildlink.mk"
+.include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
