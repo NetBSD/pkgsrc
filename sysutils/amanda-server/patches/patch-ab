@@ -1,13 +1,30 @@
-$NetBSD: patch-ab,v 1.3 1999/09/04 01:19:50 bad Exp $
+$NetBSD: patch-ab,v 1.4 2001/01/16 21:59:39 cjones Exp $
 
---- client-src/Makefile.in.old	Tue Feb 23 10:34:37 1999
-+++ client-src/Makefile.in	Tue Feb 23 10:35:09 1999
-@@ -167,7 +167,7 @@
+--- Makefile.in.orig	Sat Nov 25 07:01:53 2000
++++ Makefile.in	Mon Jan 15 15:44:03 2001
+@@ -33,7 +33,7 @@
  
- SUFFIXES =		.sh .pl
+ DESTDIR =
  
--libexec_PROGRAMS =	versionsuffix		@BUILD_CLIENT_PROGS_LIBEXEC@
-+libexec_PROGRAMS =	@BUILD_CLIENT_PROGS_LIBEXEC@
+-pkgdatadir = $(datadir)/@PACKAGE@
++pkgdatadir = $(datadir)/doc/@PACKAGE@
+ pkglibdir = $(libdir)/@PACKAGE@
+ pkgincludedir = $(includedir)/@PACKAGE@
  
- # these are used for testing only:
- TEST_PROGS = getfsent
+@@ -154,7 +154,7 @@
+ ACINCLUDE_M4_DEPS = $(ACINCLUDE_M4I) $(LIBTOOL_M4I)
+ 
+ @WANT_CLIENT_TRUE@CLIENT_SUBDIRS = @WANT_CLIENT_TRUE@client-src
+-@WANT_TAPE_TRUE@TAPE_SUBDIRS = @WANT_TAPE_TRUE@tape-src
++#TAPE_SUBDIRS = #tape-src
+ @WANT_SERVER_TRUE@SERVER_SUBDIRS = @WANT_SERVER_TRUE@server-src changer-src
+ @WANT_RESTORE_TRUE@RESTORE_SUBDIRS = @WANT_RESTORE_TRUE@ restore-src
+ @WANT_RECOVER_TRUE@RECOVER_SUBDIRS = @WANT_RECOVER_TRUE@ recover-src
+@@ -162,7 +162,6 @@
+ # order is significant, don't change it arbitrarily
+ SUBDIRS = \
+ 	config \
+-	common-src \
+ 	$(CLIENT_SUBDIRS) \
+ 	$(TAPE_SUBDIRS) \
+ 	$(SERVER_SUBDIRS) \
