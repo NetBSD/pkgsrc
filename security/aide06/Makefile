@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2004/06/27 13:23:40 grant Exp $
+# $NetBSD: Makefile,v 1.7 2004/09/21 14:14:27 agc Exp $
 #
 
 DISTNAME=       aide-0.6
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=   ftp://ftp.cs.tut.fi/pub/src/gnu/
 
