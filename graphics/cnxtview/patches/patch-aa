@@ -1,0 +1,26 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/03/07 08:13:56 hamajima Exp $
+
+--- cnxtshot.c.orig	2004-01-14 02:16:20.000000000 +0900
++++ cnxtshot.c	2004-03-07 08:21:38.000000000 +0900
+@@ -61,7 +61,7 @@
+ {
+     int i;
+     int ret;
+-    int fd = NULL, efd = NULL;
++    int fd = 0, efd = 0;
+ 
+     /* check option */
+     if (argc == 1) {
+--- cnxtview.c.orig	2004-01-14 02:20:15.000000000 +0900
++++ cnxtview.c	2004-03-07 08:22:03.000000000 +0900
+@@ -78,8 +78,8 @@
+     int i;
+     int ret;
+     
+-    fd = NULL;
+-    efd = NULL;
++    fd = 0;
++    efd = 0;
+ 
+     gtk_init(&argc, &argv);
+     gdk_imlib_init();
