@@ -1,7 +1,7 @@
-$NetBSD: patch-ad,v 1.5 2003/03/22 04:07:11 salo Exp $
+$NetBSD: patch-ad,v 1.6 2003/09/20 14:15:28 salo Exp $
 
---- nbase/configure.orig	2003-03-22 04:36:20.000000000 +0100
-+++ nbase/configure	2003-03-22 04:39:41.000000000 +0100
+--- nbase/configure.orig	2003-09-13 06:24:43.000000000 +0200
++++ nbase/configure	2003-09-17 02:08:19.000000000 +0200
 @@ -10,6 +10,8 @@
  ## M4sh Initialization.  ##
  ## --------------------- ##
@@ -11,3 +11,66 @@ $NetBSD: patch-ad,v 1.5 2003/03/22 04:07:11 salo Exp $
  # Be Bourne compatible
  if test -n "${ZSH_VERSION+set}" && (emulate sh) >/dev/null 2>&1; then
    emulate sh
+@@ -3314,7 +3316,7 @@
+ 
+ 
+ # If they didn't specify it, we try to find it
+-if test "$use_openssl" == "yes" -a "${specialssldir+set}" == "set" ; then
++if test "$use_openssl" = "yes" -a "${specialssldir+set}" = "set" ; then
+   if test "${ac_cv_header_openssl_ssl_h+set}" = set; then
+   echo "$as_me:$LINENO: checking for openssl/ssl.h" >&5
+ echo $ECHO_N "checking for openssl/ssl.h... $ECHO_C" >&6
+@@ -3456,7 +3458,7 @@
+ 
+ 
+ 
+- if test "$use_openssl" == "yes"; then
++ if test "$use_openssl" = "yes"; then
+    if test "${ac_cv_header_openssl_err_h+set}" = set; then
+   echo "$as_me:$LINENO: checking for openssl/err.h" >&5
+ echo $ECHO_N "checking for openssl/err.h... $ECHO_C" >&6
+@@ -3599,7 +3601,7 @@
+ 
+  fi
+ 
+- if test "$use_openssl" == "yes"; then
++ if test "$use_openssl" = "yes"; then
+    if test "${ac_cv_header_openssl_rand_h+set}" = set; then
+   echo "$as_me:$LINENO: checking for openssl/rand.h" >&5
+ echo $ECHO_N "checking for openssl/rand.h... $ECHO_C" >&6
+@@ -3742,7 +3744,7 @@
+ 
+  fi
+ 
+- if test "$use_openssl" == "yes"; then
++ if test "$use_openssl" = "yes"; then
+ 
+ echo "$as_me:$LINENO: checking for SSL_new in -lssl" >&5
+ echo $ECHO_N "checking for SSL_new in -lssl... $ECHO_C" >&6
+@@ -3750,7 +3752,7 @@
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-lssl  $LIBS"
++LIBS="-lssl -lcrypto $LIBS"
+ cat >conftest.$ac_ext <<_ACEOF
+ #line $LINENO "configure"
+ /* confdefs.h.  */
+@@ -3803,7 +3805,7 @@
+ #define HAVE_LIBSSL 1
+ _ACEOF
+ 
+-  LIBS="-lssl $LIBS"
++  LIBS="-lssl -lcrypto $LIBS"
+ 
+ else
+    use_openssl="no"
+@@ -3816,7 +3818,7 @@
+  fi
+ fi
+ 
+-if test "$use_openssl" == "yes"; then
++if test "$use_openssl" = "yes"; then
+   cat >>confdefs.h <<\_ACEOF
+ #define HAVE_OPENSSL 1
+ _ACEOF
