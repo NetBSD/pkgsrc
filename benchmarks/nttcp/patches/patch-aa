@@ -1,13 +1,18 @@
-$NetBSD: patch-aa,v 1.2 2002/08/21 06:36:35 simonb Exp $
+$NetBSD: patch-aa,v 1.3 2003/09/19 18:11:45 wiz Exp $
 
---- Makefile.orig	Mon Dec 18 21:17:20 2000
-+++ Makefile
-@@ -108,8 +108,16 @@
+--- Makefile.orig	Mon Dec 18 10:17:20 2000
++++ Makefile	Fri Sep 19 16:31:34 2003
+@@ -108,13 +108,13 @@
  #DBG=	-Wall -g
  #INC=	
  
 -# For FreeBSD
 -ARCH=	-DFreeBSD
+-LIB=
+-OPT=	-O2
+-CC=	cc
+-DBG=	
+-INC=	
 +## For FreeBSD
 +#ARCH=	-DFreeBSD
 +#LIB=
@@ -15,13 +20,10 @@ $NetBSD: patch-aa,v 1.2 2002/08/21 06:36:35 simonb Exp $
 +#CC=	cc
 +#DBG=	
 +#INC=	
-+
-+# For NetBSD
-+ARCH=	
- LIB=
- OPT=	-O2
- CC=	cc
-@@ -151,9 +159,12 @@
+ 
+ ## For SGI IRIX 5.3, 6.2 (cc or gcc)
+ #ARCH=
+@@ -151,10 +151,13 @@
  VERSION=	1.47
  #prefix=		/usr/local/dist/DIR/nttcp-$(VERSION)
  #prefix=		/usr/local
@@ -30,8 +32,8 @@ $NetBSD: patch-aa,v 1.2 2002/08/21 06:36:35 simonb Exp $
 +prefix=		${PREFIX}
  CFLAGS =	$(ARCH) $(DBG) $(DEF) $(INC) $(OPT) -DVERSION=\"$(VERSION)\"
  LFLAGS = 	$(DBG) 
-+
-+all:		nttcp
  
++all:		nttcp
++
  nttcp:		nttcp.o support.o
  		$(CC) $(LFLAGS) nttcp.o -o nttcp support.o $(LIB)
