@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2002/04/20 12:54:08 cjep Exp $
+# $NetBSD: Makefile,v 1.10 2002/04/20 15:04:19 cjep Exp $
 #
 
 DISTNAME=		angband-283
@@ -17,13 +17,13 @@ CONFLICTS=		angband-x11-[0-9]*
 EXTRACT_ONLY=		${DISTNAME}${EXTRACT_SUFX}
 WRKSRC=			${WRKDIR}/${DISTNAME}/src
 MAKEFILE=		Makefile.std
-MAKE_ENV+= 		CC=${CC}
 ALL_TARGET=		angband
 
 SPOILERFILE=		angband-spoilers.tar.gz
 
 .if (${MACHINE_ARCH} == arm32)
 . include "../../lang/gcc/Makefile.gcc"
+MAKE_FLAGS+= 		CC=${CC}
 .endif
 
 do-install:
