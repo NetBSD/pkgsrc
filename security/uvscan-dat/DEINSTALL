@@ -1,76 +1,24 @@
 #!/bin/sh
 #
-# $NetBSD: DEINSTALL,v 1.1 2001/11/01 01:18:02 zuntum Exp $
+# $NetBSD: DEINSTALL,v 1.2 2001/12/13 06:42:47 jlam Exp $
 
-PKGNAME=$1
-STAGE=$2
-
-CAT="@CAT@"
-CMP="@CMP@"
-RM="@RM@"
-RMDIR="@RMDIR@"
-TRUE="@TRUE@"
-
-SAMPLECONFDIR=${PKG_PREFIX}/share/uvscan
-CONFDIR=${PKG_PREFIX}/libexec/uvscan
-CONFFILES="@DATFILES@"
+UVSCANDIR=@PREFIX@/libexec/uvscan
+DATFILES="@DATFILES@"
+for file in ${DATFILES}
+do
+	ALL_FILES="${ALL_FILES} @PREFIX@/share/uvscan/${file}"
+	ALL_FILES="${ALL_FILES} ${UVSCANDIR}/${file}.bak"
+done
 
 case ${STAGE} in
 DEINSTALL)
-	# Remove VirusScan data files if they don't differ from the
-	# default files.
-	#
-	for file in ${CONFFILES}
-	do
-		FILE=${CONFDIR}/${file}
-		BAKFILE=${CONFDIR}/${file}.bak
-		SAMPLEFILE=${SAMPLECONFDIR}/${file}
-		if ${CMP} -s ${FILE} ${SAMPLEFILE}
-		then
-			${RM} -f ${FILE}
-		fi
-		if ${CMP} -s ${BAKFILE} ${SAMPLEFILE}
-		then
-			${RM} -f ${BAKFILE}
-		fi
-        done
 	;;
 
 POST-DEINSTALL)
-	modified_files=''
-	OLDFILES=`cd ${CONFDIR}; /bin/ls -1 *.bak *.old *.tar 2>/dev/null`
-	for file in ${CONFFILES} ${OLDFILES}
+	OLDFILES=`cd ${UVSCANDIR}; /bin/ls -1 *.old *.tar 2>/dev/null`
+	for file in ${OLDFILES}
 	do
-		FILE=${CONFDIR}/${file}
-		if [ -f ${FILE} ]
-		then
-			modified_files="${modified_files} ${FILE}"
-		fi
+		ALL_FILES="${ALL_FILES} /dev/null ${UVSCANDIR}/${file}"
 	done
-
-	${RMDIR} ${CONFDIR} 2>/dev/null || ${TRUE}
-
-	if [ -n "${modified_files}" ]
-	then
-		${CAT} << EOF
-===========================================================================
-If you won't be using ${PKGNAME} any longer, you may want to remove
-the following files created by the update_dat script:
-
-EOF
-		for file in ${modified_files}
-		do
-			echo "	${file}"
-		done
-		${CAT} << EOF
-===========================================================================
-EOF
-	fi
-	;;
-
-*)
-	echo "Unexpected argument: ${STAGE}"
-	exit 1
 	;;
 esac
-exit 0
