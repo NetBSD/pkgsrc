@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2004/03/10 18:07:16 jlam Exp $
+# $NetBSD: Makefile,v 1.23 2004/03/26 18:48:52 jlam Exp $
 #
 
 DISTNAME=	Linux-PAM-0.77
@@ -19,7 +19,6 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 USE_BUILDLINK3=		yes
 USE_PKGINSTALL=		yes
 USE_GNU_TOOLS+=		make
-USE_DB185=		yes
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-docdir=${PREFIX}/share/doc/PAM
