@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/06/28 19:22:45 tsarna Exp $
+@comment $NetBSD: PLIST,v 1.2 2000/01/10 01:13:35 wiz Exp $
 lib/python1.5/site-packages/DateTime/mxDateTime/mxDateTime.so
 lib/python1.5/site-packages/DateTime/mxDateTime/__init__.py
 lib/python1.5/site-packages/DateTime/mxDateTime/__init__.pyc
