@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.23 2004/10/31 22:04:26 wiz Exp $
+# $NetBSD: bootstrap,v 1.24 2004/11/20 04:31:35 grant Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -137,6 +137,11 @@ opsys_finish()
 		fi
 		patch -d / --forward --quiet -E -p0 \
 			< files/irix.patch 2>/dev/null || true
+		;;
+	OSF1)
+		if [ ! -e /usr/X11R6 ]; then
+			ln -sf /usr /usr/X11R6
+		fi
 		;;
 	esac
 }
@@ -335,6 +340,14 @@ UnixWare)
 	whoamiprog=/usr/ucb/whoami
 	set_opsys=no
 	CC="gcc -DUNIXWARE"; export CC
+	;;
+OSF1)
+	root_group=system
+	need_pax=yes
+	need_mtree=yes
+	need_bsd_install=yes
+	need_sed=yes
+	set_opsys=no
 	;;
 *)
 	echo "This platform ($opsys) is untried - good luck, and thanks for using pkgsrc"
