@@ -1,6 +1,6 @@
-$NetBSD: patch-af,v 1.9 2004/03/26 02:22:38 wiz Exp $
+$NetBSD: patch-af,v 1.10 2004/03/26 08:13:24 jlam Exp $
 
---- Makefile.org.orig	Thu Jul  3 23:43:50 2003
+--- Makefile.org.orig	Thu Jul  3 17:43:50 2003
 +++ Makefile.org
 @@ -169,7 +169,7 @@ SDIRS=  \
  MAKEFILE= Makefile.ssl
@@ -21,7 +21,12 @@ $NetBSD: patch-af,v 1.9 2004/03/26 02:22:38 wiz Exp $
  		-Wl,--whole-archive lib$$i.a \
  		-Wl,--no-whole-archive $$libs ${EX_LIBS} -lc ) || exit 1; \
  	libs="$$libs -l$$i"; \
-@@ -640,10 +639,10 @@ install: all install_docs
+@@ -636,14 +635,14 @@ dist:   
+ dist_pem_h:
+ 	(cd crypto/pem; $(MAKE) CC='${CC}' SDIRS='${SDIRS}' CFLAG='${CFLAG}' pem.h; $(MAKE) clean)
+ 
+-install: all install_docs
++install: install_docs
  	@$(PERL) $(TOP)/util/mkdir-p.pl $(INSTALL_PREFIX)$(INSTALLTOP)/bin \
  		$(INSTALL_PREFIX)$(INSTALLTOP)/lib \
  		$(INSTALL_PREFIX)$(INSTALLTOP)/include/openssl \
