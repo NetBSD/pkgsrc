@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 1998/06/11 16:17:36 agc Exp $
+# $NetBSD: Makefile,v 1.24 1998/06/12 20:39:25 tv Exp $
 # FreeBSD Id: Makefile,v 1.47 1997/11/10 22:04:42 dima Exp
 #
 
-DISTNAME=		ssh-1.2.23
+DISTNAME=		ssh-1.2.25
 CATEGORIES=		security net
 MASTER_SITES=		ftp://ftp.cs.hut.fi/pub/ssh/ \
 			ftp://ftp.funet.fi/pub/unix/security/login/ssh/
@@ -116,7 +116,7 @@ post-install:
 	@${MKDIR} ${PREFIX}/share/examples/ssh
 	@${MKDIR} ${WRKDIR}${SSH_CONF_DIR}
 	(cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} \
-		-f ${MAKEFILE} install_prefix=${WRKDIR} install-configs)
+		${MAKEFILE} install_prefix=${WRKDIR} install-configs)
 	${INSTALL_DATA} ${WRKDIR}${SSH_CONF_DIR}/ssh_config \
 		${WRKDIR}${SSH_CONF_DIR}/sshd_config ${PREFIX}/share/examples/ssh
 	@${RM} -rf ${WRKDIR}${SSH_CONF_DIR}
