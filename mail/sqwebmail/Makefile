@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2004/02/24 00:22:45 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2004/02/24 01:20:21 jlam Exp $
 
 DISTNAME=	sqwebmail-3.6.2
 CATEGORIES=	www
@@ -25,23 +25,24 @@ INSTALL_TARGET=         install-strip
 .endif
 INSTALL_MAKE_FLAGS=	${MAKE_FLAGS} sysconfdir=${EGDIR}
 
-STATEDIR=		/var/sqwebmail
-CACHEDIR=		${STATEDIR}/cache
-CALENDARDIR=		${STATEDIR}/calendar
+SQWEBMAIL_STATEDIR=	/var/sqwebmail
+SQWEBMAIL_CACHEDIR=	${SQWEBMAIL_STATEDIR}/cache
+SQWEBMAIL_CALENDARDIR=	${SQWEBMAIL_STATEDIR}/calendar
 SQWEBMAIL_HTMLDIR=	${DATADIR}/sqwebmail/html
 SQWEBMAIL_IMAGEDIR=	${DATADIR}/sqwebmail/images
 SQWEBMAIL_IMAGEURL?=	/sqwebmail
 BUILD_DEFS+=		SQWEBMAIL_IMAGEURL
+FILES_SUBST+=		SQWEBMAIL_STATEDIR=${SQWEBMAIL_STATEDIR:Q}
 
 SENDMAIL?=		/usr/sbin/sendmail
 
 # This is used by the sqwebmail configure script to set the location of
 # the sqwebmaild socket file, lockfile, and pidfile.
 #
-CONFIGURE_ARGS+=	--localstatedir=${STATEDIR}
+CONFIGURE_ARGS+=	--localstatedir=${SQWEBMAIL_STATEDIR}
 
-CONFIGURE_ARGS+=	--with-cachedir=${CACHEDIR}
-CONFIGURE_ARGS+=	--with-calendardir=${CALENDARDIR}
+CONFIGURE_ARGS+=	--with-cachedir=${SQWEBMAIL_CACHEDIR}
+CONFIGURE_ARGS+=	--with-calendardir=${SQWEBMAIL_CALENDARDIR}
 CONFIGURE_ARGS+=	--with-cacheowner=${ROOT_USER}
 CONFIGURE_ARGS+=	--with-mailer=${SENDMAIL}
 CONFIGURE_ARGS+=	--enable-https=auto
@@ -59,12 +60,12 @@ CONFIGURE_ENV+=		ldapsearch="${LOCALBASE}/bin/ldapsearch"
 MAIL_GROUP?=		mail
 PKG_GROUPS=             ${MAIL_GROUP}
 
-OWN_DIRS=		${STATEDIR}
-OWN_DIRS_PERMS=		${CACHEDIR} ${ROOT_USER} ${ROOT_GROUP} 0755
-OWN_DIRS_PERMS+=	${CALENDARDIR} ${ROOT_USER} ${MAIL_GROUP} 0755
-OWN_DIRS_PERMS+=	${CALENDARDIR}/public ${ROOT_USER} ${MAIL_GROUP} 0755
-OWN_DIRS_PERMS+=	${CALENDARDIR}/private ${ROOT_USER} ${MAIL_GROUP} 0750
-OWN_DIRS_PERMS+=	${CALENDARDIR}/localcache ${ROOT_USER} ${MAIL_GROUP} 0700
+OWN_DIRS=		${SQWEBMAIL_STATEDIR}
+OWN_DIRS_PERMS=		${SQWEBMAIL_CACHEDIR} ${ROOT_USER} ${ROOT_GROUP} 0755
+OWN_DIRS_PERMS+=	${SQWEBMAIL_CALENDARDIR} ${ROOT_USER} ${MAIL_GROUP} 0755
+OWN_DIRS_PERMS+=	${SQWEBMAIL_CALENDARDIR}/public ${ROOT_USER} ${MAIL_GROUP} 0755
+OWN_DIRS_PERMS+=	${SQWEBMAIL_CALENDARDIR}/private ${ROOT_USER} ${MAIL_GROUP} 0750
+OWN_DIRS_PERMS+=	${SQWEBMAIL_CALENDARDIR}/localcache ${ROOT_USER} ${MAIL_GROUP} 0700
 
 SYSCONFTOOL=		${PREFIX}/sbin/sqwebmail.sysconftool
 GEN_FILES=		ldapaddressbook
@@ -84,7 +85,7 @@ CONF_FILES_PERMS+=	${DATADIR}/sqwebmail/${FILE}			\
 			${PKG_SYSCONFDIR}/${FILE}			\
 			${ROOT_USER} ${ROOT_GROUP} 0755
 .endfor
-RCD_SCRIPTS=		pcpd sqwebmaild
+RCD_SCRIPTS=		pcpd sqwebmail sqwebmaild
 
 .include "../../databases/db/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
