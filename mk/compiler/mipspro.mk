@@ -1,4 +1,4 @@
-# $NetBSD: mipspro.mk,v 1.13 2004/02/06 04:37:02 jlam Exp $
+# $NetBSD: mipspro.mk,v 1.14 2004/02/07 02:58:10 jlam Exp $
 
 .if !defined(COMPILER_MIPSPRO_MK)
 COMPILER_MIPSPRO_MK=	one
@@ -15,17 +15,23 @@ _LANGUAGES.mipspro=	# empty
 _LANGUAGES.mipspro+=	${LANGUAGES.mipspro:M${_lang_}}
 .  endfor
 
+_MIPSPRO_DIR=		${WRKDIR}/.mipspro
+_MIPSPRO_LINKS=		# empty
 .  if !empty(_LANGUAGES.mipspro:Mc)
-CC=	${MIPSPROBASE}/bin/cc
-CPP=	${MIPSPROBASE}/bin/cc -E
+_MIPSPRO_CC=		${_MIPSPRO_DIR}/bin/cc
+_MIPSPRO_LINKS+=	_MIPSPRO_CC
+CC=			${_MIPSPRO_CC}
+CPP=			${_MIPSPRO_CC} -E
 .  endif
 .  if !empty(_LANGUAGES.mipspro:Mc++)
-CXX=	${MIPSPROBASE}/bin/CC
+_MIPSPRO_CXX=		${_MIPSPRO_DIR}/bin/CC
+_MIPSPRO_LINKS+=	_MIPSPRO_CXX
+CXX=			${_MIPSPRO_CXX}
 .  endif
 
-.  if exists(${CC})
+.  if exists(${MIPSPROBASE}/bin/cc)
 # MIPSpro Compilers: Version 7.3.1.2m
-CC_VERSION!=	${CC} -version 2>&1 | ${GREP} '^MIPSpro'
+CC_VERSION!=	${MIPSPROBASE}/bin/cc -version 2>&1 | ${GREP} '^MIPSpro'
 .  else
 CC_VERSION=	MIPSpro
 .  endif
@@ -40,10 +46,21 @@ COMPILER_MIPSPRO_MK+=	two
 
 # Prepend the path to the compiler to the PATH.
 .    if !empty(_LANGUAGES.mipspro)
-.      if empty(PREPEND_PATH:M${MIPSPROBASE}/bin)
-PREPEND_PATH+=	${MIPSPROBASE}/bin
-PATH:=		${MIPSPROBASE}/bin:${PATH}
+.      if empty(PREPEND_PATH:M${_MIPSPRO_DIR}/bin)
+PREPEND_PATH+=	${_MIPSPRO_DIR}/bin
+PATH:=		${_MIPSPRO_DIR}/bin:${PATH}
 .      endif
 .    endif
+
+# Create symlinks for the compiler into ${WRKDIR}.
+.    for _target_ in ${_MIPSPRO_LINKS}
+.      if !target(${${_target_}})
+override-tools: ${${_target_}}
+${${_target_}}:
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${LN} -fs ${MIPSPROBASE}/bin/${${_target_}:T} ${.TARGET}
+.      endif
+.    endfor
 .  endif # COMPILER_MIPSPRO_MK
 .endif	 # BSD_PREFS_MK

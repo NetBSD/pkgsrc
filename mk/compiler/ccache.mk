@@ -1,4 +1,4 @@
-# $NetBSD: ccache.mk,v 1.10 2004/02/06 04:37:02 jlam Exp $
+# $NetBSD: ccache.mk,v 1.11 2004/02/07 02:58:10 jlam Exp $
 
 .if !defined(COMPILER_CCACHE_MK)
 COMPILER_CCACHE_MK=	one
@@ -38,12 +38,14 @@ _CCACHEBASE?=		${LOCALBASE}
 _CCACHE_DIR=	${WRKDIR}/.ccache
 _CCACHE_LINKS=	# empty
 .      if !empty(_LANGUAGES.ccache:Mc)
-CC:=	${_CCACHE_DIR}/bin/${CC:T}
-_CCACHE_LINKS+=	CC
+_CCACHE_CC:=	${_CCACHE_DIR}/bin/${CC:T}
+_CCACHE_LINKS+=	_CCACHE_CC
+CC=		${_CCACHE_CC}
 .      endif
 .      if !empty(_LANGUAGES.ccache:Mc++)
-CXX:=	${_CCACHE_DIR}/bin/${CXX:T}
-_CCACHE_LINKS+=	CXX
+_CCACHE_CXX:=	${_CCACHE_DIR}/bin/${CXX:T}
+_CCACHE_LINKS+=	_CCACHE_CXX
+CXX=		${_CCACHE_CXX}
 .      endif
 .    endif
 .  endif
@@ -56,6 +58,7 @@ _CCACHE_LINKS+=	CXX
 .  if empty(COMPILER_CCACHE_MK:Mtwo)
 COMPILER_CCACHE_MK+=	two
 
+# Prepend the path the to the compiler to the PATH
 .    if !empty(_USE_CCACHE:M[yY][eE][sS])
 .      if !empty(_LANGUAGES.ccache)
 .        if empty(PREPEND_PATH:M${_CCACHE_DIR}/bin)
@@ -64,15 +67,19 @@ PATH:=		${_CCACHE_DIR}/bin:${PATH}
 .        endif
 .      endif
 
+# Add the dependency on ccache.
 BUILD_DEPENDS+=	ccache-[0-9]*:../../devel/ccache
 
+# Create symlinks for the compiler into ${WRKDIR}.
 .      if exists(${_CCACHEBASE}/bin/ccache)
 .        for _target_ in ${_CCACHE_LINKS}
+.          if !target(${${_target_}})
 override-tools: ${${_target_}}
 ${${_target_}}:
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	${LN} -fs ${_CCACHEBASE}/bin/ccache ${.TARGET}
+.          endif
 .        endfor
 .      endif
 .    endif

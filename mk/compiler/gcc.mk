@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.43 2004/02/06 20:15:49 jlam Exp $
+# $NetBSD: gcc.mk,v 1.44 2004/02/07 02:58:10 jlam Exp $
 
 .if !defined(COMPILER_GCC_MK)
 COMPILER_GCC_MK=	one
@@ -27,9 +27,7 @@ _CC:=	${_dir_}/${CC:C/^/_asdf_/1:M_asdf_*:S/^_asdf_//}
 .        endif
 .      endif
 .    endfor
-.    if !empty(_CC:M/*)
 MAKEFLAGS+=	_CC=${_CC:Q}
-.    endif
 .  endif
 
 .  if !defined(_GCC_VERSION)
@@ -249,20 +247,34 @@ LDFLAGS+=	${_GCC_LDFLAGS}
 # Point the variables that specify the compiler to the installed
 # GCC executables.
 #
+_GCC_DIR=	${WRKDIR}/.gcc
+_GCC_LINKS=	# empty
+
 .  if !empty(_USE_PKGSRC_GCC:M[yY][eE][sS])
-.    if exists(${_GCC_PREFIX}bin/gcc) && !empty(_LANGUAGES.gcc:Mc)
-CC=		${_GCC_PREFIX}bin/gcc
-.    endif
-.    if exists(${_GCC_PREFIX}bin/cpp) && !empty(_LANGUAGES.gcc:Mc)
-CPP=		${_GCC_PREFIX}bin/cpp
-.    endif
-.    if exists(${_GCC_PREFIX}bin/g++) && !empty(_LANGUAGES.gcc:Mc++)
-CXX=		${_GCC_PREFIX}bin/g++
-.    endif
-.    if exists(${_GCC_PREFIX}bin/g77) && !empty(_LANGUAGES.gcc:Mfortran)
-F77=		${_GCC_PREFIX}bin/g77
+_GCCBINDIR=	${_GCC_PREFIX}bin
+.  elif !empty(_IS_BUILTIN_GCC:M[yY][eE][sS])
+_GCCBINDIR=	${_CC:H}
+.  endif
+.  if exists(${_GCCBINDIR}/gcc) && !empty(_LANGUAGES.gcc:Mc)
+_GCC_CC=	${_GCC_DIR}/bin/gcc
+_GCC_LINKS+=	_GCC_CC
+CC=		${_GCC_CC}
+.  endif
+.  if exists(${_GCCBINDIR}/cpp) && !empty(_LANGUAGES.gcc:Mc)
+_GCC_CPP=	${_GCC_DIR}/bin/cpp
+_GCC_LINKS+=	_GCC_CPP
+CPP=		${_GCC_CPP}
+.  endif
+.  if exists(${_GCCBINDIR}/g++) && !empty(_LANGUAGES.gcc:Mc++)
+_GCC_CXX=	${_GCC_DIR}/bin/g++
+_GCC_LINKS+=	_GCC_CXX
+CXX=		${_GCC_CXX}
+.  endif
+.  if exists(${_GCCBINDIR}/g77) && !empty(_LANGUAGES.gcc:Mfortran)
+_GCC_F77=	${_GCC_DIR}/bin/g77
+_GCC_LINKS+=	_GCC_F77
+F77=		${_GCC_F77}
 PKG_FC:=	${F77}
-.    endif
 .  endif
 
 # GCC passes flags to the linker using "-Wl,".
@@ -274,9 +286,9 @@ IMAKEOPTS+=	-DHasGcc2=YES -DHasGcc2ForCplusplus=YES
 .  endif
 
 .  if !empty(_USE_PKGSRC_GCC:M[yY][eE][sS])
-.    if exists(${CC})
-CC_VERSION!=	if ${CC} -dumpversion > /dev/null 2>&1; then		\
-			${ECHO} "gcc-`${CC} -dumpversion`";		\
+.    if exists(${_GCCBINDIR}/gcc)
+CC_VERSION!=	if ${_GCCBINDIR}/gcc -dumpversion > /dev/null 2>&1; then \
+			${ECHO} "gcc-`${_GCCBINDIR}/gcc -dumpversion`";	\
 		else							\
 			${ECHO} "gcc-${_GCC_REQD}";			\
 		fi
@@ -296,20 +308,10 @@ CC_VERSION=	${_GCC_PKG}
 COMPILER_GCC_MK+=	two
 
 # Prepend the path to the compiler to the PATH.
-.    if !empty(_USE_PKGSRC_GCC:M[yY][eE][sS])
-.      if exists(${_GCC_PREFIX}bin/gcc) && !empty(_LANGUAGES.gcc)
-.        if empty(PREPEND_PATH:M${_GCC_PREFIX}bin)
-PREPEND_PATH+=	${_GCC_PREFIX}bin
-PATH:=		${_GCC_PREFIX}bin:${PATH}
-.        endif
-.      endif
-.    elif !empty(_IS_BUILTIN_GCC:M[yY][eE][sS])
-_CC_DIRPATH=	${_CC:H}
-.      if !empty(_CC_DIRPATH:M/*)
-.        if empty(PREPEND_PATH:M${_CC_DIRPATH})
-PREPEND_PATH+=	${_CC_DIRPATH}
-PATH:=		${_CC_DIRPATH}:${PATH}
-.        endif
+.    if !empty(_LANGUAGES.gcc)
+.      if empty(PREPEND_PATH:M${_GCC_DIR}/bin)
+PREPEND_PATH+=	${_GCC_DIR}/bin
+PATH:=		${_GCC_DIR}/bin:${PATH}
 .      endif
 .    endif
 
@@ -331,5 +333,16 @@ BUILD_DEPENDS+=	${_GCC_DEPENDENCY}
 .        endif
 .      endif
 .    endif
+
+# Create symlinks for the compiler into ${WRKDIR}.
+.    for _target_ in ${_GCC_LINKS}
+.      if !target(${${_target_}})
+override-tools: ${${_target_}}        
+${${_target_}}:
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${LN} -fs ${_GCCBINDIR}/${${_target_}:T} ${.TARGET}
+.      endif
+.    endfor
 .  endif # COMPILER_GCC_MK
 .endif	 # BSD_PREFS_MK
