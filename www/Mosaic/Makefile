@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 1999/05/24 20:39:49 tv Exp $
+# $NetBSD: Makefile,v 1.13 1999/06/07 21:40:20 tron Exp $
 # FreeBSD Id: Makefile,v 1.15 1998/05/27 08:44:56 dburr Exp
 #
 
@@ -27,9 +27,14 @@ LDFLAGS+=		-L${X11BASE}/lib
 CONFIGURE_ENV=		CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include -Dunix"
 CONFIGURE_ARGS=		--with-zdir=/usr --with-jpegdir=${LOCALBASE} --with-pngdir=${LOCALBASE}
 
+post-configure:
+	@${ECHO} '' >>${WRKSRC}/config.h
+	@${ECHO} '#define PREFIX "${PREFIX}"' >>${WRKSRC}/config.h
+
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/Mosaic ${PREFIX}/bin
 	${LN} -sf Mosaic ${PREFIX}/bin/mosaic
 	${INSTALL_DATA} ${WRKSRC}/app-defaults.color ${PREFIX}/lib/X11/app-defaults/Mosaic
+	${MKDIR} ${PREFIX}/share/mosaic
 
 .include "../../mk/bsd.pkg.mk"
