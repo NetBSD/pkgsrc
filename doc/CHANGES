@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6320 2004/06/26 10:36:36 jmmv Exp $
+$NetBSD: CHANGES,v 1.6321 2004/06/26 10:40:04 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3071,3 +3071,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added ivan-0.430 [ben 2004-06-25]
 	Updated navi2ch to 1.7.3 [uebayasi 2004-06-26]
 	Updated libxklavier to 1.03 [jmmv 2004-06-26]
+	Updated gedit to 2.6.2 [jmmv 2004-06-26]
