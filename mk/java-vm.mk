@@ -1,4 +1,4 @@
-# $NetBSD: java-vm.mk,v 1.3 2002/12/31 14:39:59 jlam Exp $
+# $NetBSD: java-vm.mk,v 1.4 2002/12/31 14:42:21 jlam Exp $
 #
 # This Makefile fragment handles Java dependencies and make variables,
 # and is meant to be included by packages that require Java either at
@@ -12,7 +12,10 @@
 #	  must explicitly set USE_JAVA=run to _not_ add the build dependency
 #	  on the JDK;
 #
-# There are two variables used to tweak the JVM selection:
+# There are three variables used to tweak the JVM selection:
+#
+# USE_JAVA2 is used to note that the package requires a Java2 implementation.
+#	It's undefined by default, but may be set to "yes".
 #
 # PKG_JVM_DEFAULT is a user-settable variable whose value is the default
 #	JVM to use.
@@ -37,7 +40,11 @@ PKG_JVMS_ACCEPTED?=	${_PKG_JVMS}
 # This is a list of all of the JVMs that may be used with java-vm.mk.
 # Note: The wonka configuration is still under development
 #
+.if defined(USE_JAVA2) && !empty(USE_JAVA2:M[yY][eE][sS])
+_PKG_JVMS?=		sun-jdk13 sun-jdk14 blackdown-jdk13 wonka
+.else
 _PKG_JVMS?=		jdk sun-jdk13 sun-jdk14 blackdown-jdk13 kaffe wonka
+.endif
 
 # To be deprecated: if PKG_JVM is explicitly set, then use it as the
 # default JVM.  Note that this has lower precedence than PKG_JVM_DEFAULT.
