@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2001/02/17 17:51:54 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2002/01/29 12:12:07 drochner Exp $
 #
 
 DISTNAME=	ReportLab_1_01
-PKGNAME=	py-reportlab-1.01
+PKGNAME=	${PYPKGPREFIX}-reportlab-1.01
 CATEGORIES=	print
 MASTER_SITES=   ftp://ftp.reportlab.com/
 EXTRACT_SUFX=	.tgz
@@ -16,26 +16,28 @@ WRKSRC=		${WRKDIR}/reportlab/lib
 ALL_TARGET=	default
 PLIST_SRC=      ${WRKDIR}/.PLIST_SRC
 
+PYTHON_VERSIONS_ACCEPTED= 20 21 # no 22 - uses Makefile.pre.in
+PYBINMODULE= yes
+
 do-configure:
 	(cd ${WRKSRC} ;\
-	  ${CP} ${PY_CONFIGDIR}/Makefile.pre.in . ;\
+	  ${CP} ${LOCALBASE}/${PYLIB}/config/Makefile.pre.in . ;\
 	  ${MAKE} -f Makefile.pre.in boot)
 
 post-build:
 	(cd ${WRKDIR}; \
-	${PY_PROG} ${PY_LIBDIR}/compileall.py . ; \
-	${PY_PROG} -O ${PY_LIBDIR}/compileall.py . )
+	${PYTHONBIN} ${LOCALBASE}/${PYLIB}/compileall.py . ; \
+	${PYTHONBIN} -O ${LOCALBASE}/${PYLIB}/compileall.py . )
 	(cd ${WRKSRC}; \
 	${MAKE} clean; ${RM} -f *.c *.orig Makefile* Setup* sedscript )
 
 do-install:
-	${INSTALL_SCRIPT_DIR} ${PY_LIBDIR}
 	${CAT} ${PKGDIR}/PLIST.pre >${PLIST_SRC}
-	(cd ${WRKDIR}; ${PAX} -r -w -v -p p reportlab ${PY_SITEPKG})
-	(cd ${PREFIX}; ${FIND} ${PY_SITEPATH}/reportlab \
+	(cd ${WRKDIR}; ${PAX} -r -w -v -p p reportlab ${PREFIX}/${PYSITELIB})
+	(cd ${PREFIX}; ${FIND} ${PYSITELIB}/reportlab \
 		-type f -print >>${PLIST_SRC})
-	(cd ${PREFIX}; ${FIND} -d ${PY_SITEPATH}/reportlab \
+	(cd ${PREFIX}; ${FIND} -d ${PYSITELIB}/reportlab \
 		-type d -print | ${SED} -e "s/^/@dirrm /" >>${PLIST_SRC})
 
-.include "../../lang/python/Makefile.inc"
+.include "../../lang/python/extension.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
