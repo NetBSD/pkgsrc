@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: winbindd.sh,v 1.2 2002/09/20 02:02:01 grant Exp $
+# $NetBSD: winbindd.sh,v 1.3 2004/01/11 00:38:17 jlam Exp $
 #
 # PROVIDE: winbindd
 # REQUIRE: nmbd
@@ -22,6 +22,6 @@ then
 	load_rc_config $name
 	run_rc_command "$1"
 else
-	@ECHO@ -n ' ${name}'
+	@ECHO@ -n " ${name}"
 	${command} ${winbindd_flags}
 fi
