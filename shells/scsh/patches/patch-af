@@ -1,0 +1,40 @@
+$NetBSD: patch-af,v 1.1 1999/06/04 16:00:04 sommerfeld Exp $
+
+*** scsh/bsd/sigset.h.original	Fri Oct 13 23:33:55 1995
+--- scsh/bsd/sigset.h	Fri Jun  4 10:55:41 1999
+***************
+*** 2,10 ****
+--- 2,34 ----
+  ** These macros are OS-dependent, and must be defined per-OS.
+  */
+  
++ #if defined(__NetBSD__)
++ #include <sys/param.h>
++ #endif
++ 
++ #if defined(__NetBSD__) && defined(__NetBSD_Version__) && (__NetBSD_Version__ >= 103080000)
++ /* Barf */
++ 
++ #if _NSIG > 48
++ #error Too many signals!  Fix scsh to save more of them!
++ #endif
++ 
++ #define make_sigset(maskp, hi, lo) do { __sigemptyset(maskp); \
++ 	(maskp)->__bits[0] = ((hi)<<24)|(lo);	\
++ 	(maskp)->__bits[1] = ((hi)>>8); \
++         } while(0)
++ 
++ /* Not a procedure: */
++ #define split_sigset(mask, hip, lop) \
++ 	((*(hip)=((mask.__bits[0]>>24)&0xff) | (mask.__bits[1]<<8)), \
++ 	 (*(lop)=(mask.__bits[0]&0xffffff)))
++ 
++ #else
++ 
+  #define make_sigset(maskp, hi, lo) (*maskp=((hi)<<24)|(lo))
+  
+  /* Not a procedure: */
+  #define split_sigset(mask, hip, lop) \
+  	((*(hip)=(mask>>24)&0xff), \
+  	 (*(lop)=(mask&0xffffff)))
++ #endif
