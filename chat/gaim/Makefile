@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2002/10/22 05:59:40 itojun Exp $
+# $NetBSD: Makefile,v 1.23 2002/10/29 18:52:01 wiz Exp $
 #
 
 .include "Makefile.common"
@@ -15,6 +15,5 @@ PLIST_SRC+=		${.CURDIR}/../gaim/PLIST
 .include "../../audio/esound/buildlink2.mk"
 .include "../../graphics/gdk-pixbuf/buildlink2.mk"
 .include "../../lang/perl5/buildlink2.mk"
-.include "../../converters/libiconv/buildlink2.mk"
 
 .include "../../mk/bsd.pkg.mk"
