@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.3 2000/08/31 16:48:11 jwise Exp $
+$NetBSD: patch-ab,v 1.4 2000/09/01 16:22:00 jwise Exp $
 --- configure.orig	Tue Aug  8 15:19:32 2000
 +++ configure	Thu Aug 31 12:35:15 2000
 @@ -1873,6 +1873,7 @@
@@ -32,7 +32,7 @@ $NetBSD: patch-ab,v 1.3 2000/08/31 16:48:11 jwise Exp $
      TK_SHLIB_CFLAGS="${SHLIB_CFLAGS}"
      TK_LIB_FILE=libtk${TK_SHARED_LIB_SUFFIX}
 -    MAKE_LIB="\${SHLIB_LD} -o \${TK_LIB_FILE} \${OBJS} \$(TK_LD_SEARCH_FLAGS) ${TCL_STUB_LIB_SPEC} \${LIBS}"
-+    MAKE_LIB="\${SHLIB_LD} -o \${TK_LIB_FILE:.so=.la} \${OBJS:.o=.lo} \$(TK_LD_SEARCH_FLAGS) ${TCL_STUB_LIB_SPEC} \${LIBS} -version-info 1:0"
++    MAKE_LIB="\${SHLIB_LD} -o \${TK_LIB_FILE:C/\.so.*/.la/} \${OBJS:.o=.lo} \$(TK_LD_SEARCH_FLAGS) ${TCL_STUB_LIB_SPEC} \${LIBS} -version-info 1:0"
      RANLIB=":"
  
  #    TCL_STUB_FLAGS="-DUSE_TCL_STUBS"
