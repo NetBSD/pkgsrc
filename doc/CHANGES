@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4556 2004/01/22 15:48:10 adam Exp $
+$NetBSD: CHANGES,v 1.4557 2004/01/22 16:14:47 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -403,3 +403,8 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gle to 3.1.0 [adam 2004-01-22]
 	Updated swish-e to 2.4.1 [xtraeme 2004-01-22]
 	Updated wine to 20040121 [adam 2004-01-22]
+	Updated xine-lib to 1rc0anb3 [jmmv 2004-01-22]
+	Added xine-arts-1rc0a [jmmv 2004-01-22]
+	Added xine-esound-1rc0a [jmmv 2004-01-22]
+	Updated kmplayer to 0.8.2rc5nb1 [jmmv 2004-01-22]
+	Updated kdemultimedia3 to 3.1.5nb1 [jmmv 2004-01-22]
