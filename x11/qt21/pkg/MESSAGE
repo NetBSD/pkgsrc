@@ -1,0 +1,18 @@
+$NetBSD: MESSAGE,v 1.1.1.1 2000/04/28 17:18:24 drochner Exp $
+
+To allow this
+package to coexist with other versions of Qt, it has been installed
+in ${X11BASE}/qt21/{bin,include,lib,doc}.
+
+You should be able to select this version of Qt when compiling
+programs which use it by ensuring that
+
+1) QTDIR is set to ${X11BASE}/qt21
+
+2) Use the "configure" argument "--with-qt-dir=${X11BASE}/qt21"
+
+3) you may also have to put ${X11BASE}/qt21/bin in your PATH
+
+To access Qt-2.1 man pages add ${X11BASE}/qt21/doc/man to your MANPATH
+environment variable.  Note that the Qt-2.1 man pages are installed
+here to avoid conflicts with man pages of other Qt versions.
