@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.6 2001/04/03 06:06:50 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.7 2001/04/22 21:30:39 zuntum Exp $
 bin/epic
-bin/epic-EPIC4-1.0
+bin/epic-EPIC4-1.0.1
 libexec/wserv
 man/man1/epic.1
 share/epic/script/2.8script
@@ -17,6 +17,8 @@ share/epic/script/debug.irc
 share/epic/script/dig
 share/epic/script/dns
 share/epic/script/edit
+share/epic/script/edit_topic
+share/epic/script/efnext
 share/epic/script/environment
 share/epic/script/events
 share/epic/script/events.hop

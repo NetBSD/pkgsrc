@@ -1,12 +1,14 @@
-# $NetBSD: Makefile,v 1.12 2001/04/03 06:06:49 zuntum Exp $
+# $NetBSD: Makefile,v 1.13 2001/04/22 21:30:38 zuntum Exp $
 #
 
-DISTNAME=	epic4-1.0
+DISTNAME=	epic4-1.0.1
 CATEGORIES=	chat
-MASTER_SITES=	ftp://ftp.magenet.com/pub/epic/EPIC4-PRODUCTION/	\
-		ftp://ftp.icm.edu.pl/vol/rzm0/irc/EPIC/EPIC4-PRODUCTION/	\
-		ftp://ftp.archive.de.uu.net/pub/unix/irc/epic/EPIC4-PRODUCTION/ \
-		ftp://ftp.nl.uu.net/pub/unix/irc/epic/EPIC4-PRODUCTION/
+MASTER_SITES=	ftp://ftp.epicsol.org/pub/epic/EPIC4-PRODUCTION/	\
+		ftp://ftp.icm.edu.pl/pub/unix/irc/EPIC/EPIC4-PRODUCTION/ \
+		ftp://ftp.archive.de.uu.net/pub/unix/irc/epic/EPIC4-PRODUCTION/	\
+		ftp://ftp.nl.uu.net/pub/unix/irc/epic/EPIC4-PRODUCTION/	\
+		ftp://ftp.epicsol.org/pub/epic/EPIC4-BETA/		\
+		ftp://ftp.icm.edu.pl/pub/unix/irc/EPIC/EPIC4-BETA/
 EXTRACT_SUFX=	.tar.bz2
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}				\
 		epic4pre2-help.tar.gz
@@ -15,9 +17,9 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX}				\
 .include "../../mk/bsd.prefs.mk"
 .if defined(USE_INET6) && ${USE_INET6} == "YES"
 PATCH_SITES=    http://www.t17.ds.pwr.wroc.pl/~misiek/ipv6/		\
-		http://zuntum.net/patches/				\
-		http://flis.utech.lublin.pl/~zuntum/patches/
-PATCHFILES=     epic4-0.10.1-ipv6-20010331.patch.gz
+		http://zuntum.invisible.yi.org/patches/			\
+		http://zuntum.net/patches/
+PATCHFILES=     epic4-1.0.1-ipv6-20010418.patch.gz
 PATCH_DIST_STRIP=	-p1
 .endif
 
