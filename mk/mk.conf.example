@@ -1,4 +1,4 @@
-# $NetBSD: mk.conf.example,v 1.12 1998/06/15 19:06:23 tv Exp $
+# $NetBSD: mk.conf.example,v 1.13 1998/06/18 11:38:35 agc Exp $
 #
 # Sample /etc/mk.conf file, which can be used to set specific values
 # for building either NetBSD or some of the NetBSD packages collection
@@ -52,9 +52,9 @@ MANZ=		1		# gzip manual pages at installation time
                                 # Default: backup
 
 #BOOTSTRAP_EGCS=		# Used in egcs-current package to set
-				# bootstrap compile (two-stage) mode.
-				# Possible: defined, not defined
-				# Default: not defined
+                                # bootstrap compile (two-stage) mode.
+                                # Possible: defined, not defined
+                                # Default: not defined
 
 #DOMAIN_NAME=			# Used in the knews package to set the domain
                                 # name.
