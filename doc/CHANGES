@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8603 2005/01/04 15:51:35 adam Exp $
+$NetBSD: CHANGES,v 1.8604 2005/01/04 23:49:46 lukem Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -94,3 +94,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated glut to 6.2.1 [adam 2005-01-04]
 	Updated MesaDemos to 6.2.1 [adam 2005-01-04]
 	Updated Mesa to 6.2.1 [adam 2005-01-04]
+	Updated tnftp to 20050103 [lukem 2005-01-04]
