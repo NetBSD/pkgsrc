@@ -1,0 +1,12 @@
+# $NetBSD: DEINSTALL,v 1.1.1.1 2003/03/17 21:01:47 agc Exp $
+
+case "${STAGE}" in
+POST-DEINSTALL)
+	${ECHO} ===========================================================================
+	${ECHO}
+	${ECHO} If you will not be reinstalling SFS, manually remove ${SFSDIR}
+	${ECHO} and ${PREFIX}/etc/sfs.
+	${ECHO}
+	${ECHO} ===========================================================================
+	;;
+esac
