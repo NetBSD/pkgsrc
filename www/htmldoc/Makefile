@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2001/03/04 09:06:20 tron Exp $
+# $NetBSD: Makefile,v 1.12 2001/05/13 01:16:23 dmcmahill Exp $
 #
 
 DISTNAME=		${PKGNAME}-source
@@ -14,7 +14,7 @@ COMMENT=		Converts HTML to indexed HTML, PDF and/or PostScript
 DEPENDS+=		jpeg-6b:../../graphics/jpeg
 DEPENDS+=		png>1.0.9:../../graphics/png
 
-NOT_FOR_PLATFORM=	*-*-alpha	#ps-pdf.cpp:3229: Internal compiler error. on 1.4 - 1.7 unknown
+NOT_FOR_PLATFORM=	NetBSD-1.[3-4]*-alpha	#ps-pdf.cpp:3229: Internal compiler error. on 1.4 - 1.7 unknown
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--with-x
