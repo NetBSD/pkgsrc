@@ -1,11 +1,11 @@
-$NetBSD: patch-ag,v 1.1.1.1 2004/01/18 12:42:11 recht Exp $
+$NetBSD: patch-ag,v 1.2 2004/05/26 22:18:05 recht Exp $
 
---- sieve/Makefile.in~	2003-11-12 05:02:12.000000000 +0100
-+++ sieve/Makefile.in	2004-01-15 23:05:12.000000000 +0100
+--- sieve/Makefile.in.orig	2004-03-11 16:25:35.000000000 +0100
++++ sieve/Makefile.in	2004-05-26 23:59:02.000000000 +0200
 @@ -38,7 +38,7 @@
  
  DEFS = @DEFS@
- CPPFLAGS = -I. -I.. -I$(srcdir) -I$(srcdir)/../lib @COM_ERR_CPPFLAGS@ @CPPFLAGS@ @SASLFLAGS@
+ CPPFLAGS = -I.. -I$(srcdir)/../lib @COM_ERR_CPPFLAGS@ @CPPFLAGS@ @SASLFLAGS@
 -CFLAGS = @CFLAGS@
 +CFLAGS = @CFLAGS@ @PERL_CCCDLFLAGS@
  LDFLAGS = @LDFLAGS@
