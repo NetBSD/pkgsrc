@@ -1,9 +1,9 @@
 #!/bin/sh
 #
-# $NetBSD: mklivecd.sh,v 1.1.1.1 2004/02/26 03:58:56 xtraeme Exp $
+# $NetBSD: mklivecd.sh,v 1.2 2004/02/27 01:32:31 xtraeme Exp $
 #
 # Copyright (c) 2004 Juan RP <xtraeme@NetBSD.org>
-# All rights Reserved.
+# All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions
@@ -35,13 +35,14 @@
 # ====================================================================== #
 
 progname=$(basename $0)
-config_dir="$HOME/.mklivecd/"
-config_file="$config_dir/mklivecd.conf"
+config_dir="$HOME/.mklivecd"
 pers_conffile="personal_config"
 tmp_file="/tmp/${progname}.$$"
 
 MKISOFS="@PREFIX@/bin/mkisofs"
 CDRECORD="@PREFIX@/bin/cdrecord"
+
+trap "echo; showmsg \"Process cancelled!\"; bye 127" INT QUIT
 
 # ====================================================================== #
 #  My functions :-)							 #
@@ -51,7 +52,7 @@ usage()
 {
 	cat <<_usage_
 
-	${progname}: [target]
+	${progname}: [-c config_file] [target]
 
 	Target operations:
 
@@ -166,14 +167,10 @@ EOF
 		echo >> $config_file
 
 		echo "=> Configuration file created, now please edit it."
+		echo "=> Path: $config_file"
 	else
-		. $config_file
-
-		if [ ! -d $SOURCEDIR/sys ]; then
-		    showmsg "Cannot find $SOURCEDIR, please download"
-		    showmsg "the src module."
-		    bye 1
-		fi
+		showmsg "$config_file already exists!"
+		bye 1
 	fi
 }
 
@@ -200,6 +197,11 @@ do_cdlive()
 
 	case "$1" in
 	kernel)
+		if [ ! -d $SOURCEDIR/sys ]; then
+		    showmsg "Can't find NetBSD sources, exiting!"
+		    bye 1
+		fi
+
 		showmsg "Building boot image on $(date)"
 		echo
 		showmsg "Using the following values:"
@@ -321,7 +323,7 @@ do_cdlive()
 		cat > $ISODIR/etc/rc.d/root <<_EOF_
 #!/bin/sh
 #
-# \$NetBSD: mklivecd.sh,v 1.1.1.1 2004/02/26 03:58:56 xtraeme Exp $
+# \$NetBSD: mklivecd.sh,v 1.2 2004/02/27 01:32:31 xtraeme Exp $
 # 
 
 # PROVIDE: root
@@ -446,18 +448,18 @@ _EOF_
 		    fi
 		fi
 
-		if [ "${PERSONAL_CONFIG}" = "yes" -a -f $config_dir/$pers_conffile ]; then
+		if [ "${PERSONAL_CONFIG}" = "yes" -a			    \
+			-f $config_dir/$pers_conffile ]; then
 		    echo
 		    showmsg "Running personal config file"
 		    . $config_dir/$pers_conffile
 		    showmsg "Done!"
 		    echo
-		elif [ "${PERSONAL_CONFIG}" = "yes" -a ! -f $config_dir/$pers_conffile ]; then
+		elif [ "${PERSONAL_CONFIG}" = "yes" -a			    \
+			! -f $config_dir/$pers_conffile ]; then
 		    echo
-		    showmsg "Can't find personal configuration file, please"
-		    showmsg "disable it if you don't want to use it, or otherwise"
-		    showmsg "use the example file to see how to create your"
-		    showmsg "own custom file."
+		    showmsg "Can't find the personal configuration file."
+		    showmsg "Skipping it..."
 		    echo
 		else
 		    continue
@@ -487,11 +489,11 @@ _EOF_
 	iso)
 		if [ ! -f $ISODIR/netbsd ]; then
 			showmsg "Target iso failed!"
-			showmsg "Can't find NetBSD kernel"
+			showmsg "Can't find NetBSD kernel."
 			bye 1
 		elif [ ! -f $ISODIR/stand/mfs_etc.tbz ]; then
 			showmsg "Target iso failed!"
-			showmsg "Can't find mfs_etc.tbz file"
+			showmsg "Can't find mfs_etc.tbz file."
 			bye 1
 		fi
 
@@ -518,7 +520,7 @@ _EOF_
 	;;
 	burn)
 		if [ ! -f $BASEDIR/$IMAGE_NAME.iso ]; then
-		    showmsg "Can't find iso image!"
+		    showmsg "Can't find iso image!, exiting."
 		    bye 1
 		fi
 
@@ -534,49 +536,71 @@ _EOF_
 
 checkconf()
 {
-    if [ -f $config_file ]; then
-	[ `id -u` -ne 0 ] && showmsg "must be run as root" && bye 1
-	    do_conf_reset; . $config_file; do_conf
-    else
-	showmsg "$config_file does not exist"
-	bye 1
-    fi
+	if [ -f $config_file ]; then
+	    [ `id -u` -ne 0 ] && showmsg "must be run as root" && bye 1
+	    do_conf_reset; do_conf
+	else
+	    showmsg "$config_file does not exist, exiting."
+	    bye 1
+	fi
 }
 
 # =========================================================================== #
 #  Main program								      #
 # =========================================================================== #
 
+args=`getopt c: $*`
+if [ $? -ne 0 ]; then
+	usage
+fi
+set -- $args
+while [ $# -gt 0 ]; do
+	case "$1" in
+	    -c)
+		config_file="$config_dir/$2"
+		shift
+		;;
+	    --)
+		shift; break
+		;;
+	esac
+	shift
+done
+
 if [ $# -lt 1 ]; then
 	usage
 fi
 
+if [ -z "$config_file" ]; then
+	config_file=$config_dir/mklivecd.conf
+fi
+
 case "$1" in
 	iso)
-		checkconf
-		do_cdlive iso
+	    checkconf
+	    do_cdlive iso
 	;;
 	kernel)
-		do_cdlive kernel
+	    do_cdlive kernel
 	;;
 	base)
-		checkconf
-		do_cdlive base
+	    checkconf
+	    do_cdlive base
 	;;
 	chroot)
-		checkconf
-		do_cdlive chroot
+	    checkconf
+	    do_cdlive chroot
 	;;
 	clean)
-		checkconf
-		do_cdlive clean
+	    checkconf
+	    do_cdlive clean
 	;;
 	config)
-		do_conf
+	    do_conf
 	;;
 	burn)
-		checkconf
-		do_cdlive burn
+	    checkconf
+	    do_cdlive burn
 	;;
 esac
 
