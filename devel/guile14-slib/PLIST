@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/12/03 15:39:15 wiz Exp $
+${GUILE14_SUBDIR}/share/guile/slibcat
+@exec	ln -sf %D/share/slib %D/${GUILE14_SUBDIR}/share/guile/slib
+@unexec	rm -f %D/${GUILE14_SUBDIR}/share/guile/slib
