@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.2 2000/03/12 20:36:27 tron Exp $
+$NetBSD: patch-ae,v 1.3 2000/05/02 18:48:36 danw Exp $
 
 --- configure.orig	Mon Jan 31 19:43:50 2000
 +++ configure	Sun Mar 12 21:20:08 2000
@@ -36,33 +36,3 @@ $NetBSD: patch-ae,v 1.2 2000/03/12 20:36:27 tron Exp $
  cat > conftest.$ac_ext <<EOF
  #line 3301 "configure"
  #include "confdefs.h"
-@@ -5311,10 +5313,10 @@
-     top_srcdir="$ac_dots$ac_given_srcdir" ;;
-   esac
- 
--  case "$ac_given_INSTALL" in
--  [/$]*) INSTALL="$ac_given_INSTALL" ;;
--  *) INSTALL="$ac_dots$ac_given_INSTALL" ;;
--  esac
-+#  case "$ac_given_INSTALL" in
-+#  [/$]*) INSTALL="$ac_given_INSTALL" ;;
-+#  *) INSTALL="$ac_dots$ac_given_INSTALL" ;;
-+#  esac
- 
-   echo creating "$ac_file"
-   rm -f "$ac_file"
-@@ -5535,10 +5537,10 @@
-       *) # Relative path.
-         ac_sub_cache_file="$ac_dots$cache_file" ;;
-       esac
--  case "$ac_given_INSTALL" in
--        [/$]*) INSTALL="$ac_given_INSTALL" ;;
--        *) INSTALL="$ac_dots$ac_given_INSTALL" ;;
--        esac
-+#  case "$ac_given_INSTALL" in
-+#        [/$]*) INSTALL="$ac_given_INSTALL" ;;
-+#        *) INSTALL="$ac_dots$ac_given_INSTALL" ;;
-+#        esac
- 
-       echo "running ${CONFIG_SHELL-/bin/sh} $ac_sub_configure $ac_sub_configure_args --cache-file=$ac_sub_cache_file --srcdir=$ac_sub_srcdir"
-       # The eval makes quoting arguments work.
