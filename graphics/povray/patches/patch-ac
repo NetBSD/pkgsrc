@@ -1,9 +1,9 @@
-$NetBSD: patch-ac,v 1.2 2000/01/04 16:28:43 agc Exp $
+$NetBSD: patch-ac,v 1.3 2001/01/20 00:36:20 pooka Exp $
 
 Small Makefile to drive NetBSD package
 
---- /dev/null	Mon Aug 24 13:46:39 1998
-+++ Makefile	Mon Aug 24 13:46:32 1998
+--- Makefile.orig	Sat Jan 20 02:06:46 2001
++++ Makefile	Sat Jan 20 02:23:39 2001
 @@ -0,0 +1,17 @@
 +POVLIB=		${PREFIX}/lib/povray31
 +
@@ -15,9 +15,9 @@ Small Makefile to drive NetBSD package
 +	${INSTALL} -m 0755 -s -c source/unix/x-povray ${PREFIX}/bin/povray
 +	tar cpf - scenes include | (cd ${POVLIB}; tar xpf -)
 +	${INSTALL} -c -m 0644 *.ini ${POVLIB}/
-+	${INSTALL} -c -m 0644 *.doc ${POVLIB}/
++	${INSTALL} -c -m 0644 povuser.txt gamma.gif.txt *.doc ${POVLIB}/
 +	${INSTALL} -c -m 0644 *.gif *.xpm ${POVLIB}/
-+	${INSTALL} -c -m 0644 allscene.sh ${POVLIB}/
++	${INSTALL} -c -m 0644 *.sh ${POVLIB}/
 +	rm -f ${PREFIX}/man/man1/povray.1*
 +	${INSTALL} -c -m 0644 povray.1 ${PREFIX}/man/man1
 +	chmod -R og-r ${POVLIB}
