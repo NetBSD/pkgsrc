@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.6 2004/05/15 11:16:45 grant Exp $
+$NetBSD: patch-aa,v 1.7 2004/11/19 11:05:54 adam Exp $
 
---- Makefile.orig	2004-05-13 04:49:26.000000000 +1000
+--- Makefile.orig	2004-08-26 19:47:44.000000000 +0000
 +++ Makefile
 @@ -26,7 +26,7 @@
  
@@ -47,7 +47,7 @@ $NetBSD: patch-aa,v 1.6 2004/05/15 11:16:45 grant Exp $
  
  
  #### For LOCALE support (non-roman alphabets & collation), uncomment the following..
-@@ -249,9 +250,10 @@ GD16 = grgd16.o devstuff16.o gd16.o gd_i
+@@ -250,9 +251,10 @@ GD16 = grgd16.o devstuff16.o gd16.o gd_i
  GD = gdfontg.o gdfontl.o gdfontmb.o gdfonts.o gdfontt.o
  
  
