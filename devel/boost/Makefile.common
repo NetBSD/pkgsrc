@@ -1,9 +1,10 @@
-# $NetBSD: Makefile.common,v 1.1 2004/06/06 23:51:36 tv Exp $
+# $NetBSD: Makefile.common,v 1.2 2004/06/07 04:45:11 tv Exp $
 #
 
 BOOST_VERSION=		1.31.0
 
 DISTNAME=		boost_${BOOST_VERSION:S/./_/g}
+PKGREVISION=		1
 PKGNAME=		boost${BOOST_PKGNAME_ADD}-${BOOST_VERSION}
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=boost/}
@@ -46,8 +47,8 @@ post-build:
 	@cd ${WRKSRC}/stage && \
 		${LS} -1 lib/libboost_* >${WRKSRC}/PLIST.libs
 
-# depend on main package for subpackages
+# depend on main package for subpackages (exact version match)
 .ifdef BOOST_PKGNAME_ADD
 .include "../../devel/boost/buildlink3.mk"
-BUILDLINK_DEPENDS.boost=	boost-${BOOST_VERSION} # exact match
+BUILDLINK_DEPENDS.boost=	${PKGNAME:S/${BOOST_PKGNAME_ADD}//}
 .endif
