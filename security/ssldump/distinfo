@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2001/04/19 15:40:40 agc Exp $
+$NetBSD: distinfo,v 1.3 2002/12/01 21:48:10 seb Exp $
 
-SHA1 (ssldump-0.9a2.tar.gz) = 2eb71877839bc7bda384ab8722b86b3216679e7b
-Size (ssldump-0.9a2.tar.gz) = 102482 bytes
+SHA1 (ssldump-0.9b3.tar.gz) = a633a9a811a138eac5ed440d583473b644135ef5
+Size (ssldump-0.9b3.tar.gz) = 137435 bytes
