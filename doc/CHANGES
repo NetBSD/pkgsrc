@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4 2002/09/19 22:06:14 atatat Exp $
+$NetBSD: CHANGES,v 1.5 2002/09/19 22:36:25 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -2906,3 +2906,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated rconfig to 0.13 [abs 2002-09-19]
 	Updated blackbox to 0.65.0 [jschauma 2002-09-19]
 	Added rt-mysql-2.0.13 and rt-pgsql-2.0.13 [atatat 2002-09-19]
+	Added netscape7 [jschauma 2002-09-19]
