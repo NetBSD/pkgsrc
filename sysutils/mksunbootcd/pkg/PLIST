@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/03/25 16:38:54 dmcmahill Exp $
+sbin/mksunbootcd
+man/man8/mksunbootcd.8
+man/cat8/mksunbootcd.0

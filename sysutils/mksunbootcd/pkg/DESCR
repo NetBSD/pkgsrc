@@ -1,0 +1,13 @@
+The mksunbootcd program combines filesystem partitions for Sun Microsys-
+tems, Inc. computers into an image suitable for writing to a compact
+disc, that will allow the disc to be booted on the sun3, sun3x, sun4,
+sun4c, sun4m and sun4u platforms.  This hardware is supported by the
+NetBSD sparc, sparc64 and sun3 ports.  The architecture arguments above
+must be the bootable filesystem images for the named architecture.
+filesystem is typically an iso9660 filesystem, see mount_cd9660(8) for
+details, but can be any type as long as the first 512 bytes of the image
+are not used.  This image is modified, and the additional partitions
+added after this partition, in order.  If any architecture image is miss-
+ing, that partition is not used.  If a disc with sun4 and sun4m support
+only was to be created, a dummy image would need to be in place for
+sun4c.
