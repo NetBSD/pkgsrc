@@ -1,6 +1,8 @@
---- Makefile.orig	Mon May 17 23:11:01 1999
-+++ Makefile	Tue May 18 13:38:58 1999
-@@ -1,12 +1,10 @@
+$NetBSD: patch-aa,v 1.5 1999/06/29 00:58:30 hubertf Exp $
+
+--- Makefile.orig	Tue May 25 06:22:37 1999
++++ Makefile	Sun Jun 13 09:21:33 1999
+@@ -1,19 +1,14 @@
  
 -PREFIX=/usr/local
 -
@@ -13,17 +15,11 @@
 +CFLAGS += $(GTK_INCLUDE) $(IMLIB_INCLUDE)
  LDFLAGS = $(GTK_LIB) $(IMLIB_LIB)
  
- CC = gcc -g -Wall
-@@ -107,10 +105,10 @@
- # targets:
+ #The following commented out lines are for replacing the stock defines on
+ #the named platforms.
+-
+-#for NetBSD:
+-#LDFLAGS = $(GTK_LIB) $(IMLIB_LIB) -lossaudio
  
- gqmpeg: $(OBJS)
--	$(CC) $(OBJS) -o gqmpeg $(LDFLAGS)
-+	$(CC) $(OBJS) -o gqmpeg $(LDFLAGS) 
- 
- static: $(OBJS)
--	$(CC) $(OBJS) -o gqmpeg.static -static $(LDFLAGS)
-+	$(CC) $(OBJS) -o gqmpeg.static -static $(LDFLAGS)
- 
- install: gqmpeg
- 	install -c gqmpeg $(PREFIX)/bin/gqmpeg
+ #for IRIX
+ #LDFLAGS = $(GTK_LIB) $(IMLIB_LIB) -laudio
