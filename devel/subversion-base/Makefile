@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2004/11/19 04:01:59 epg Exp $
+# $NetBSD: Makefile,v 1.21 2004/11/23 00:37:04 jlam Exp $
 
 PKGNAME=	subversion-base-${SVNVER}
 COMMENT=	Version control system, base programs and libraries
@@ -7,13 +7,16 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 .include "../subversion/Makefile.common"
 
-BUILD_DEFS+=		APR_USE_DB4
-
 CONFIGURE_ARGS+=	--without-apache
 CONFIGURE_ARGS+=	--without-apxs
 
-.include "../../mk/bsd.prefs.mk"
-.if !empty(APR_USE_DB4:M[yY][eE][sS])
+BUILDLINK_DEPENDS.apr+=		apr>=0.9.5
+BUILDLINK_DEPENDS.neon+=	neon>=0.24.7
+
+.include "../../devel/apr/buildlink3.mk"
+.include "../../www/neon/buildlink3.mk"
+
+.if !empty(PKG_OPTIONS.apr:Mdb4)
 PLIST_SRC=		${PKGDIR}/PLIST ${PKGDIR}/PLIST.bdb
 .else
 CONFIGURE_ARGS+=	--without-berkeley-db
@@ -51,13 +54,4 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/tools/hook-scripts/svnperms* \
 		${SVNEXAMPLES}/hook-scripts
 
-BUILDLINK_DEPENDS.apr+=		apr>=0.9.5
-BUILDLINK_DEPENDS.neon+=	neon>=0.24.7
-
-.if !empty(APR_USE_DB4:M[yY][eE][sS])
-.  include "../../databases/db4/buildlink3.mk"
-.endif
-
-.include "../../devel/apr/buildlink3.mk"
-.include "../../www/neon/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
