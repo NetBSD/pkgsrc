@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2002/12/22 01:34:38 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2002/12/22 17:15:33 wiz Exp $
 #
 
 DISTNAME=       tar-1.13.25
@@ -35,7 +35,7 @@ post-patch:
 	@${ECHO} '' >>${WRKSRC}/po/fr.po
 
 post-install:
-	${INSTALL_DATA} ${FILESDIR}/${GNU_PROGRAM_PREFIX}tar.1 \
+	${INSTALL_DATA} ${FILESDIR}/gtar.1 \
 		${PREFIX}/man/man1/${GNU_PROGRAM_PREFIX}tar.1
 
 .include "../../mk/bsd.pkg.mk"
