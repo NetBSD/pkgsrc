@@ -1,9 +1,9 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/05/29 05:45:40 tron Exp $
+$NetBSD: patch-aa,v 1.2 2001/07/04 19:04:16 magick Exp $
 
---- Makefile.orig	Wed May 16 12:13:25 2001
-+++ Makefile	Tue May 29 07:33:03 2001
-@@ -1,12 +1,14 @@
- WMBIFF_VERSION="0.3.0"
+--- Makefile.orig	Sun Jun 24 20:31:25 2001
++++ Makefile
+@@ -2,7 +2,9 @@
+ WMBIFF_VERSION="0.3.1"
  DESTDIR=
 -prefix=/usr/local
 +prefix=${PREFIX}
@@ -13,15 +13,18 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/05/29 05:45:40 tron Exp $
 +datadir=${prefix}/share/examples/wmbiff
 +
  CONF=/etc
+ 
+@@ -10,7 +12,7 @@
  LIBDIR = -L/usr/X11R6/lib
  LIBS   = -lXpm -lXext -lX11
 -CFLAGS = -O2 -Wall
-+CFLAGS += -Wall -I${PREFIX}/include -I${X11BASE}/include
  #CFLAGS = -g -Wall -pedantic 
- 
+-
++#CFLAGS += -Wall -I${PREFIX}/include -I${X11BASE}/include
++CFLAGS+= -I${X11BASE}/include
  EXTRAFLAGS = -DWMBIFF_VERSION='$(WMBIFF_VERSION)'
-@@ -21,12 +23,6 @@
- 	../wmgeneral/list.o \
+ #EXTRAFLAGS += -DDEBUG_POP3 -DDEBUG_IMAP4 -DDEBUG_LICQ \
+@@ -25,12 +27,6 @@
  	charutil.o
  
 -INSTALL = /usr/bin/install
@@ -31,19 +34,18 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/05/29 05:45:40 tron Exp $
 -
 -
  .c.o:
- 	gcc  $(CFLAGS) $(EXTRAFLAGS) -c $< -o $*.o
+-	$(CC) $(CFLAGS) $(EXTRAFLAGS) -c $< -o $*.o
++	${CC} ${CFLAGS} $(EXTRAFLAGS) -c $< -o $*.o
  
-@@ -36,7 +32,7 @@
- 	ln -s wmbiff-master-led.xpm wmbiff-master.xpm
+ all: wmbiff-master.xpm wmbiff
+@@ -40,5 +36,5 @@
  
  wmbiff:	$(OBJS)
--	gcc $(CFLAGS) $(EXTRAFLAGS) -o wmbiff -lX11 -lnsl $^ $(LIBDIR) $(LIBS)
-+	gcc $(CFLAGS) $(EXTRAFLAGS) -o wmbiff -lX11 $^ ${LDFLAGS} $(LIBDIR) $(LIBS)
+-	$(CC) $(CFLAGS) $(EXTRAFLAGS) -o wmbiff -lX11 -lnsl $^ $(LIBDIR) $(LIBS)
++	$(CC) ${CFLAGS} ${LDFLAGS} $(EXTRAFLAGS) -o wmbiff -lX11 $^ $(LIBDIR) $(LIBS)
  
  clean:
- 	for i in $(OBJS) ; do \
-@@ -45,12 +41,11 @@
- 	rm -f wmbiff *~ tags core wmbiff-master.xpm
+@@ -51,10 +47,9 @@
  
  install: wmbiff
 -	$(INSTALL_DIR) $(DESTDIR)$(bindir)
@@ -59,4 +61,3 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/05/29 05:45:40 tron Exp $
 +	${BSD_INSTALL_DATA} sample.wmbiffrc $(DESTDIR)$(datadir)/
  
  # CODING STYLE AND INDENTATION [2001-Mar-12]:
- #
