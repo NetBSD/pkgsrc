@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/08/14 12:20:01 zuntum Exp $
+# $NetBSD: Makefile,v 1.3 2004/04/21 04:56:25 snj Exp $
 #
 
 DISTNAME=		qmail-qfilter-1.5
@@ -9,7 +9,7 @@ MAINTAINER=		zuntum@NetBSD.org
 HOMEPAGE=		http://untroubled.org/qmail-qfilter/
 COMMENT=		qmail-queue multi-filter front end
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 
 REPLACE_PERL=		samples/block-long-dates			\
 			samples/deny-filetypes				\

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/03/26 02:27:42 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2004/04/21 04:51:52 snj Exp $
 #
 
 DISTNAME=	xdvipresent-0.6p14
@@ -14,7 +14,7 @@ COMMENT=	Slide Presentations Using LaTeX/xdvi
 DEPENDS+=	latex2html>=2002.2:../../textproc/latex2html
 
 WRKSRC=		${WRKDIR}/xdvipresent
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=	yes
 NO_BUILD=	yes
 NO_CONFIGURE=	yes
 
@@ -35,5 +35,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/xdvipresent_html/* ${HTML_DIR}
 	${PREFIX}/bin/texconfig rehash
 
-.include "../../print/teTeX-bin/kpathsea.buildlink2.mk"
+.include "../../print/teTeX-bin/kpathsea.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
