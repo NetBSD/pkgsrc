@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9334 2005/02/27 10:41:36 rillig Exp $
+$NetBSD: CHANGES,v 1.9335 2005/02/27 12:04:39 veego Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1168,3 +1168,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated emacs-nox11 to 21.4a [wiz 2005-02-27]
 	Updated gaim to 1.1.4 [jmmv 2005-02-27]
 	Updated bidwatcher to 1.3.17nb1 [rillig 2005-02-27]
+	Updated transcode to 0.6.12nb4 [veego 2005-02-27]
