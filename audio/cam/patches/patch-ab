@@ -1,11 +1,16 @@
-$NetBSD: patch-ab,v 1.4 1999/07/06 07:54:06 jlam Exp $
+$NetBSD: patch-ab,v 1.5 2000/09/30 17:24:50 hubertf Exp $
 
-diff -ru ../cam-1.02-virgin/cam.h ./cam.h
---- ../cam-1.02-virgin/cam.h	Mon Oct 21 13:08:08 1996
-+++ ./cam.h	Sun Nov 10 12:19:52 1996
-@@ -23,7 +23,13 @@
+--- cam.h.orig	Mon Oct 21 20:08:08 1996
++++ cam.h
+@@ -21,9 +21,19 @@
+ */ 
+  
  #include <stdio.h>
++#ifdef __NetBSD__
++#include <curses.h>
++#else
  #include <ncurses.h>
++#endif
  #include <signal.h>
 +#if defined(__FreeBSD__)
 +#include <machine/soundcard.h>

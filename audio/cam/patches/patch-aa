@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.6 2000/04/27 16:45:13 mycroft Exp $
+$NetBSD: patch-aa,v 1.7 2000/09/30 17:24:49 hubertf Exp $
 
---- sounds.c.orig	Mon Oct 21 14:33:55 1996
-+++ sounds.c	Sat Apr 15 19:33:31 2000
+--- sounds.c.orig	Mon Oct 21 20:33:55 1996
++++ sounds.c
 @@ -36,7 +36,7 @@
  
  
@@ -20,3 +20,12 @@ $NetBSD: patch-aa,v 1.6 2000/04/27 16:45:13 mycroft Exp $
            draw_handle( Y+1, X+14+dev_vol[dev_count].vol_left, FALSE, 4);
            if (STEREO(dev_nr))
               draw_handle( Y+2, X+14+dev_vol[dev_count].vol_right, FALSE, 4);          
+@@ -301,7 +301,7 @@
+     int ch;
+     int X,Y;
+     int left = TRUE;   
+-    int locked = FALSE;  
++    int locked = TRUE;  
+     FILE *save_file; 
+     int dev_nr = 0; 
+     char *SAVE_FILE; 
