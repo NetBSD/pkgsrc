@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1 2005/03/22 16:27:52 jmmv Exp $
+
+--- src/united-states-of-bug-buddy.c.orig	2004-11-21 17:48:18.000000000 +0100
++++ src/united-states-of-bug-buddy.c
+@@ -26,6 +26,7 @@
+ #include "save-buddy.h"
+ 
+ #include <gnome.h>
++#include <signal.h>
+ #include <string.h>
+ 
+ #include <libgnomevfs/gnome-vfs-mime-utils.h>
