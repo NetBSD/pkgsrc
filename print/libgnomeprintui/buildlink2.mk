@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1.1.1 2002/09/12 04:28:27 rh Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2002/09/22 09:52:37 jlam Exp $
 
 .if !defined(LIBGNOMEPRINTUI_BUILDLINK2_MK)
 LIBGNOMEPRINTUI_BUILDLINK2_MK=	# defined
@@ -11,7 +11,6 @@ EVAL_PREFIX+=		BUILDLINK_PREFIX.libgnomeprintui=libgnomeprintui
 BUILDLINK_PREFIX.libgnomeprintui_DEFAULT=	${X11PREFIX}
 BUILDLINK_FILES.libgnomeprintui=	include/libgnomeprintui-2.0/libgnomeprintui/*
 BUILDLINK_FILES.libgnomeprintui+=	lib/libgnomeprintui-2.*
-BUILDLINK_FILES.libgnomeprintui+=	lib/pkgconfig/libgnomeprintui-2.0.pc
 
 .include "../../devel/GConf2/buildlink2.mk"
 .include "../../devel/bonobo-activation/buildlink2.mk"
