@@ -1,0 +1,36 @@
+$NetBSD: patch-ai,v 1.1.1.1 2004/10/04 20:50:57 cube Exp $
+
+--- system-ac.mk.in.orig	2004-09-06 20:25:27.000000000 +0200
++++ system-ac.mk.in
+@@ -16,11 +16,11 @@ exec_prefix=@exec_prefix@
+ # Main binaries
+ BINDIR=@bindir@
+ # Configuration .lua files
+-ETCDIR=@sysconfdir@/@PACKAGE_TARNAME@
++ETCDIR=@sysconfdir@
+ # Some .lua files and ion-* shell scripts
+ SHAREDIR=@datadir@/@PACKAGE_TARNAME@
+ # Manual pages
+-MANDIR=@datadir@/man
++MANDIR=@prefix@/man
+ # Some documents
+ DOCDIR=@datadir@/doc/@PACKAGE_TARNAME@
+ # Nothing at the moment
+@@ -37,7 +37,8 @@ EXTRABINDIR=@libexecdir@/@PACKAGE_TARNAM
+ #VARDIR=@localstatedir@/cache/@PACKAGE_TARNAME@
+ VARDIR=/var/cache/@PACKAGE_TARNAME@
+ # Message catalogs
+-LOCALEDIR=@prefix@/share/locale
++LOCALEDIR=@PKGLOCALEDIR@
++EXDIR=@datadir@/examples/@PACKAGE_TARNAME@
+ 
+ 
+ ##
+@@ -50,6 +51,7 @@ PRELOAD_MODULES=@PRELOAD_MODULES@
+ 
+ # Flags to link with libdl.
+ DL_LIBS=@DL_LIBS@
++INTL_LIBS=@INTL_LIBS@
+ 
+ 
+ ##
