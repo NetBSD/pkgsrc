@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2004/04/20 01:29:52 minskim Exp $
+# $NetBSD: Makefile,v 1.32 2004/06/28 12:33:25 jmmv Exp $
 #
 
-DISTNAME=		eel-2.6.1
+DISTNAME=		eel-2.6.2
 PKGNAME=		${DISTNAME:S/-/2-/}
 CATEGORIES=		devel gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/eel/2.6/}
