@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2003/01/11 23:04:11 jlam Exp $
+$NetBSD: distinfo,v 1.5 2005/02/23 16:33:08 agc Exp $
 
 SHA1 (pgaccess-0.98.8.tar.gz) = c02d6b0f014931101b864c6f2d2da2b2552aa6be
+RMD160 (pgaccess-0.98.8.tar.gz) = 7827ae7ddfef432bde237ca94bf086ca738d4c2a
 Size (pgaccess-0.98.8.tar.gz) = 862387 bytes
 SHA1 (patch-aa) = 0a24cb462d7dd9816b657df4483c46a4eba27b79
 SHA1 (patch-ab) = 007d1c407f418f087871e686568c6fdfacc5ca1d

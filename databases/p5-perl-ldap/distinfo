@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.7 2003/12/20 17:37:26 veego Exp $
+$NetBSD: distinfo,v 1.8 2005/02/23 16:33:08 agc Exp $
 
 SHA1 (perl-ldap-0.30.tar.gz) = 924f3fcf51bc745789d371a66c3de8c47bdb3828
+RMD160 (perl-ldap-0.30.tar.gz) = a976d1a09972de93c180968e900e747051bcd443
 Size (perl-ldap-0.30.tar.gz) = 221013 bytes

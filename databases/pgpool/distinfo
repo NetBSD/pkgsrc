@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/02/11 16:40:43 minskim Exp $
+$NetBSD: distinfo,v 1.2 2005/02/23 16:33:08 agc Exp $
 
 SHA1 (pgpool-2.5.tar.gz) = c2d0a500bdd3de08be097d155f32af190e9870b8
+RMD160 (pgpool-2.5.tar.gz) = ba112e6040b2a5f0532ad195afc58e74a746261a
 Size (pgpool-2.5.tar.gz) = 142174 bytes
 SHA1 (patch-aa) = d290697fcdf66972c18fa6f7dbd9b47dc8ea640b

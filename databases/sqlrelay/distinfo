@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/04/15 10:37:24 grant Exp $
+$NetBSD: distinfo,v 1.2 2005/02/23 16:33:10 agc Exp $
 
 SHA1 (sqlrelay-0.33.1.tar.gz) = 41d169fd4221577a594bde3415eb3c734146b746
+RMD160 (sqlrelay-0.33.1.tar.gz) = 270e56f80bf688fdd34fa58ee9d44c9bf5667745
 Size (sqlrelay-0.33.1.tar.gz) = 1240926 bytes

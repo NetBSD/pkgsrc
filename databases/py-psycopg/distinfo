@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2004/07/22 18:00:37 drochner Exp $
+$NetBSD: distinfo,v 1.5 2005/02/23 16:33:09 agc Exp $
 
 SHA1 (psycopg-1.1.14.tar.gz) = dc941bf9e0f5145b5077bc53f3ed3f478548262c
+RMD160 (psycopg-1.1.14.tar.gz) = 1125176a6bccae28d0259d27bc87056d4ec39b73
 Size (psycopg-1.1.14.tar.gz) = 252001 bytes
 SHA1 (patch-aa) = 6423305271831d3d493dc3e47b42b5641f9149a0

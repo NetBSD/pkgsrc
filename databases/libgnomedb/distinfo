@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.10 2004/12/17 18:22:44 reed Exp $
+$NetBSD: distinfo,v 1.11 2005/02/23 16:33:06 agc Exp $
 
 SHA1 (libgnomedb-1.0.4.tar.bz2) = 9c50cbe53d554c4b1581035681932f2f6b46d40b
+RMD160 (libgnomedb-1.0.4.tar.bz2) = b694cb3fe19f36e99553173c9a969b725e95564d
 Size (libgnomedb-1.0.4.tar.bz2) = 621983 bytes
 SHA1 (patch-aa) = c2b274299c89f66925d67cd1c49bacbe8d1f529b
 SHA1 (patch-ab) = ee7da278677dcc63f21edd994b52b62577ce5058

@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.2 2001/04/18 16:10:59 agc Exp $
+$NetBSD: distinfo,v 1.3 2005/02/23 16:33:06 agc Exp $
 
 SHA1 (MyODBC-2.50.36.tar.gz) = 86c5d94c1099b8dac67246151824eb3f7c19b93a
+RMD160 (MyODBC-2.50.36.tar.gz) = e2a4357c0e596efd809e538d639ce3f1e2228224
 Size (MyODBC-2.50.36.tar.gz) = 413650 bytes

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.5 2004/01/21 16:26:37 cube Exp $
+$NetBSD: distinfo,v 1.6 2005/02/23 16:33:05 agc Exp $
 
 SHA1 (gq-1.0beta1.tar.gz) = fcfeb2874326962e891433d54df7932840fab6ff
+RMD160 (gq-1.0beta1.tar.gz) = 6d757f39d2543a41f4c99b5aa39890de726e4d9c
 Size (gq-1.0beta1.tar.gz) = 475081 bytes
 SHA1 (patch-aa) = 65c7e14f38e20862cace92b36fbd2ca091f60e10
 SHA1 (patch-ab) = f1ade063dad913f334cb47c9cfb0b1d49c3ac22f

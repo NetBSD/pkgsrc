@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2004/10/08 09:13:30 martti Exp $
+$NetBSD: distinfo,v 1.5 2005/02/23 16:33:05 agc Exp $
 
 SHA1 (dbh-1.0.20.tar.gz) = bf5bfb30a0ad03b3aee56da9b80f2ef297edb499
+RMD160 (dbh-1.0.20.tar.gz) = 8e38bc021f03d0c127e6d005f3fcd87c20194030
 Size (dbh-1.0.20.tar.gz) = 365743 bytes
 SHA1 (patch-aa) = 148244e98be8b8e387be379a56a303268f3840fb
