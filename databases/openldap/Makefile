@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.76 2004/04/17 10:56:21 xtraeme Exp $
+# $NetBSD: Makefile,v 1.77 2004/05/10 19:15:53 danw Exp $
 
 DISTNAME=		openldap-2.1.30
 SVR4_PKGNAME=		oldap
@@ -41,6 +41,8 @@ CONFIGURE_ARGS+=	--with-tls=openssl
 CONFIGURE_ARGS+=	--without-readline
 
 BUILD_DEFS+=		USE_SASL USE_SASL2
+
+CPPFLAGS.Darwin+=	-DBIND_8_COMPAT
 
 .include "../../mk/bsd.prefs.mk"
 
