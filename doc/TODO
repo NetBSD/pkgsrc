@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2703 2004/12/07 14:48:08 wiz Exp $
+$NetBSD: TODO,v 1.2704 2004/12/08 08:57:08 martti Exp $
 
 Suggested new packages
 ======================
@@ -1144,6 +1144,8 @@ Suggested package updates
 	o xerces-j-2.4.0 [pkg/21725]
 	o xerces-j-2.6.2
 	o xeukleides-1.0.0
+	o xfce4-minicmd-plugin-0.3.0
+	o xfce4-taskbar-plugin-0.2.2
 	o xfe-0.72
 	o xfmail-1.5.4
 	o xine-lib-1-rc7
