@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/03/07 09:53:33 uebayasi Exp $
+# $NetBSD: Makefile,v 1.15 2005/03/07 10:01:12 uebayasi Exp $
 # FreeBSD: ports/mail/distribute/Makefile,v 1.2 1999/08/25 06:50:06 obrien Exp
 #
 
@@ -34,7 +34,7 @@ DEF_DOMAINNAME?=	your.domain.here
 
 MAKE_ENV+=	DEFAULTCONFIG='-DDEF_SEQ_PATH="\"${MAILINGLIST_DIR}\"" \
 			-DDEF_RECIPIENT_PATH="\"${MAILINGLIST_DIR}\"" \
-			-DDEF_MAJORDOMO_RECIPIENT_PATH=\\\"${MAJORDOMO_LIST_DIR}\\\" \
+			-DDEF_MAJORDOMO_RECIPIENT_PATH="\"${MAJORDOMO_LIST_DIR}\"" \
 			-DDEF_DOMAINNAME="\"${DEF_DOMAINNAME}\"" \
 			-DDEF_ARCHIVE_PATH="\"${ARCHIVE_DIR}\""' \
 		INSTALL="${INSTALL}" \
