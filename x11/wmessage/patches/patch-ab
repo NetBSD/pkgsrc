@@ -1,31 +1,13 @@
-$NetBSD: patch-ab,v 1.2 2001/03/22 14:00:40 wiz Exp $
+$NetBSD: patch-ab,v 1.3 2001/07/23 20:38:48 wiz Exp $
 
---- panel.c.orig	Mon Aug 30 02:28:35 1999
+--- panel.c.orig	Tue Jan  9 01:43:47 2001
 +++ panel.c
-@@ -128,7 +128,7 @@
- 		return (-2);
+@@ -409,7 +409,7 @@
  
- 	if (settings->centre == True) {
--		WMSetWindowUPosition (panel->win,
-+		WMSetWindowInitialPosition (panel->win,
- 			(WidthOfScreen (DefaultScreenOfDisplay (settings->dpy)) - WMWidgetWidth(panel->win))/2,
- 			(HeightOfScreen (DefaultScreenOfDisplay (settings->dpy)) - WMWidgetHeight(panel->win))/2);
+ 	WMSetWindowTitle(panel->win, "");
  
-@@ -136,7 +136,7 @@
- 			(WidthOfScreen (DefaultScreenOfDisplay (settings->dpy)) - WMWidgetWidth(panel->win))/2,
- 			(HeightOfScreen (DefaultScreenOfDisplay (settings->dpy)) - WMWidgetHeight(panel->win))/2);
- 		
--		WMSetWindowUSize (panel->win, WMWidgetWidth (panel->win), WMWidgetHeight (panel->win));
-+		WMSetWindowBaseSize (panel->win, WMWidgetWidth (panel->win), WMWidgetHeight (panel->win));
- 	} else if (settings->nearmouse == True) {
- 		int x, y, x2, y2;
- 		unsigned int mask;
-@@ -144,7 +144,7 @@
+-	if ((appicon = WMGetApplicationIconImage (scrPtr))) {
++	if ((appicon = WMGetApplicationIconPixmap (scrPtr))) {
+ 		WMSize ais;
  
- 		XQueryPointer (settings->dpy, DefaultRootWindow (settings->dpy), &root, &child, &x, &y, &x2, &y2, &mask);
- 
--		WMSetWindowUPosition (panel->win, x - (WMWidgetWidth(panel->win)/2), y - (WMWidgetHeight(panel->win)/2));
-+		WMSetWindowInitialPosition (panel->win, x - (WMWidgetWidth(panel->win)/2), y - (WMWidgetHeight(panel->win)/2));
- 		WMMoveWidget (panel->win, x - (WMWidgetWidth(panel->win)/2), y - (WMWidgetHeight(panel->win)/2));
- 	}
- 
+ 		ais = WMGetPixmapSize (appicon);
