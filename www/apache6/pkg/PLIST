@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 1999/09/01 07:41:04 itojun Exp $
+@comment $NetBSD: PLIST,v 1.4 2000/02/21 07:14:45 itojun Exp $
 bin/dbmmanage
 bin/htdigest
 bin/htpasswd
@@ -40,7 +40,9 @@ include/httpd/multithread.h
 include/httpd/os-inline.c
 include/httpd/os.h
 include/httpd/rfc1413.h
+include/httpd/sa_len.h
 include/httpd/scoreboard.h
+include/httpd/sockaddr_storage.h
 include/httpd/util_date.h
 include/httpd/util_md5.h
 include/httpd/util_script.h
@@ -76,7 +78,19 @@ sbin/httpd
 sbin/logresolve
 sbin/rotatelogs
 share/httpd/htdocs/apache_pb.gif
-share/httpd/htdocs/index.html
+share/httpd/htdocs/index.html.ca
+share/httpd/htdocs/index.html.cz
+share/httpd/htdocs/index.html.de
+share/httpd/htdocs/index.html.dk
+share/httpd/htdocs/index.html.ee
+share/httpd/htdocs/index.html.en
+share/httpd/htdocs/index.html.es
+share/httpd/htdocs/index.html.fr
+share/httpd/htdocs/index.html.it
+share/httpd/htdocs/index.html.lu
+share/httpd/htdocs/index.html.nl
+share/httpd/htdocs/index.html.pt
+share/httpd/htdocs/index.html.se
 share/httpd/htdocs/manual/LICENSE
 share/httpd/htdocs/manual/bind.html
 share/httpd/htdocs/manual/cgi_path.html
@@ -123,6 +137,7 @@ share/httpd/htdocs/manual/misc/perf-dec.html
 share/httpd/htdocs/manual/misc/perf-hp.html
 share/httpd/htdocs/manual/misc/perf-tuning.html
 share/httpd/htdocs/manual/misc/perf.html
+share/httpd/htdocs/manual/misc/rewriteguide.html
 share/httpd/htdocs/manual/misc/security_tips.html
 share/httpd/htdocs/manual/misc/vif-info.html
 share/httpd/htdocs/manual/misc/windoz_keepalive.html
@@ -177,6 +192,7 @@ share/httpd/htdocs/manual/mod/mod_userdir.html
 share/httpd/htdocs/manual/mod/mod_usertrack.html
 share/httpd/htdocs/manual/mod/mod_vhost_alias.html
 share/httpd/htdocs/manual/multilogs.html
+share/httpd/htdocs/manual/netware.html
 share/httpd/htdocs/manual/new_features_1_0.html
 share/httpd/htdocs/manual/new_features_1_1.html
 share/httpd/htdocs/manual/new_features_1_2.html
