@@ -1,0 +1,17 @@
+$NetBSD: patch-ab,v 1.1.1.1 2002/09/02 17:22:26 agc Exp $
+
+--- Makefile.in	2002/09/02 17:17:33	1.1
++++ Makefile.in	2002/09/02 17:19:05
+@@ -819,9 +819,9 @@
+ 	$(INSTALL) -m 755 -c ./rxstack$(EXE) $(bindir)/rxstack$(EXE)
+ 	$(INSTALL) -m 755 -c ./trexx$(EXE) $(bindir)/trexx$(EXE)
+ 	$(INSTALL) -m 755 -c ./regina-config $(bindir)/$(SHLFILE)-config
+-	-$(INSTALL) -m 755 -c ./rxstack.init.d $(STARTUPDIR)/rxstack
+-	echo "The system startup/shutdown script; rxstack, may have been installed into $(STARTUPDIR)"
+-	echo "You need to create the appropriate links to this script to start and stop rxstack automatically."
++	#-$(INSTALL) -m 755 -c ./rxstack.init.d $(STARTUPDIR)/rxstack
++	#echo "The system startup/shutdown script; rxstack, may have been installed into $(STARTUPDIR)"
++	#echo "You need to create the appropriate links to this script to start and stop rxstack automatically."
+ 	$(INSTALL) -m 755 -c ./$(LIBPRE)$(LIBFILE)$(LIBPST) $(libdir)/$(LIBPRE)$(LIBFILE)$(LIBPST)
+ 	-$(RANLIB) $(libdir)/$(LIBPRE)$(LIBFILE)$(LIBPST)
+ 	$(INSTALL) -m 744 -c $(srcdir)/regina.1 $(mandir)/man1/regina.1
