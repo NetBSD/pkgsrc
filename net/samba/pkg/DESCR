@@ -3,14 +3,18 @@ operating systems. These programs deliver most of the important
 functionality of a Microsoft Lan Manager server. That is, they support
 remote access to Un*x filespace and Un*x printers from Lan Manager
 compatible clients. In practical terms, this means that such clients
-can connect to and use FreeBSD filespace as if it was a local disk drive,
-or FreeBSD printers as if they were local printers.
+can connect to and use Un*x filespace as if it was a local disk drive,
+or Un*x printers as if they were local printers.
 
 Some of the most popular Lan Manager compatible clients include Lan
 Manager itself, Windows for Workgroups, OS/2 and Windows NT.
 
-Please note that if you want to use Windows NT 4.0 + Service Pack 3
-or above as clients, you have to use -des version of samba ports.
--des version is not redistributable as a binary package because of 
-the export control of US.  Please type make install at net/samba-des 
-in ports collection.
+*Security Notes*
+The users' encrypted passwords stored in ${PREFIX}/private/smbpasswd 
+(default: /usr/local/private/smbpasswd) file *ARE PASSWORD EQUIVALENT*
+from the viewpoint of SMB protocol.  Do not weaken the permission 
+mode of this file (default: root.wheel and rw-------) without any special 
+reasons.  And please note that even if you pkg_delete this port, 
+pkg_delete will *NOT* remove smbpaswd file because pkg_delete can be used 
+for upgrading this package.  If you won't use this package anymore, I 
+strongly recommend you to remove smbpasswd file manually.
