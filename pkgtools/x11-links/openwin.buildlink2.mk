@@ -1,9 +1,10 @@
-# $NetBSD: openwin.buildlink2.mk,v 1.2 2002/08/23 05:22:57 jlam Exp $
+# $NetBSD: openwin.buildlink2.mk,v 1.3 2002/08/26 06:28:21 jlam Exp $
 
 .if defined(_FOR_X11_LINKS_ONLY)
 .if !defined(X11_LINKS_BUILDLINK_MK)
 X11_LINKS_BUILDLINK_MK=	# defined
 
+BUILDLINK_PACKAGES+=		openwin
 BUILDLINK_PREFIX.openwin=	${X11BASE}
 
 # Filelist for Solaris based on files existing in Solaris 9.
