@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.2 1998/08/12 22:44:52 tv Exp $
+
 --- scp.c.orig	Wed Aug 12 18:21:13 1998
 +++ scp.c	Wed Aug 12 18:24:25 1998
 @@ -240,6 +240,7 @@
