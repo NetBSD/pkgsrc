@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2694 2003/07/07 23:37:03 seb Exp $
+$NetBSD: CHANGES,v 1.2695 2003/07/07 23:42:10 gehenna Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2692,3 +2692,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated rc.subr to 20030706 [grant 2003-07-06]
 	Updated pari to 2.1.5 [jtb 2003-07-06]
 	Updated twelf to 1.4nb1 [seb 2003-07-07]
+	Updated cvsync to 0.23.6 [gehenna 2003-07-07]
