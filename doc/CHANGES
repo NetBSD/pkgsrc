@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5956 2004/05/15 15:49:25 jmmv Exp $
+$NetBSD: CHANGES,v 1.5957 2004/05/15 16:03:43 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2555,3 +2555,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gnome2-control-center to 2.6.1 [jmmv 2004-05-15]
 	Updated gnome-themes to 2.6.1 [jmmv 2004-05-15]
 	Updated gnome-panel to 2.6.1 [jmmv 2004-05-15]
+	Updated gnome2-applets to 2.6.1 [jmmv 2004-05-15]
