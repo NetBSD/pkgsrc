@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9608 2005/03/24 16:06:04 jmcneill Exp $
+$NetBSD: CHANGES,v 1.9609 2005/03/24 16:31:35 agc Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1717,3 +1717,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated firefox to 1.0.2 [taya 2005-03-24]
 	Updated firefox-gtk1 to 1.0.2 [taya 2005-03-24]
 	Updated fluxbox to 0.9.12 [jmcneill 2005-03-24]
+	Updated tinyscheme to 1.35 [agc 2005-03-24]
