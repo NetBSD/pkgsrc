@@ -1,0 +1,18 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/01/17 19:26:04 gson Exp $
+
+--- setup.py.orig	Sun Dec 22 00:44:30 2002
++++ setup.py
+@@ -70,10 +70,10 @@
+         sys.exit(1)
+ 
+     # figure out from the base setting where the lib and .h are
+-    if not incdir: incdir = os.path.join(BERKELEYDB_DIR, 'include')
++    if not incdir: incdir = os.path.join(BERKELEYDB_DIR, 'include/db4')
+     if not libdir: libdir = os.path.join(BERKELEYDB_DIR, 'lib')
+-    if not '-ldb' in LIBS:
+-        libname = ['db']
++    if not '-ldb4' in LIBS:
++        libname = ['db4']
+     else:
+         libname = []
+     utils = []

@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/01/17 19:26:04 gson Exp $
+
+SHA1 (bsddb3-4.1.1.tar.gz) = c30d9d06c760b2c73c4987fb7fd79f17421d10d4
+Size (bsddb3-4.1.1.tar.gz) = 484382 bytes
+SHA1 (patch-aa) = c5012b82afda6e47a2cfcaa102811c0510fe65ec
+SHA1 (patch-ab) = 7ac97eae4ae0663cbb594010d24c2ddcde2cf15e
