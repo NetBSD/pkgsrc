@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6847 2004/08/11 15:44:21 recht Exp $
+$NetBSD: CHANGES,v 1.6848 2004/08/11 20:45:15 shannonjr Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3789,3 +3789,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated java-wrapper to 1.1 [tv 2004-08-11]
 	Updated xorg-libs to 6.7.0nb1 [recht 2004-08-11]
 	Updated xorg-server to 6.7.0nb1 [recht 2004-08-11]
+	Updated gcc34 to 3.4.1nb4 [shannonjr 2004-08-11]
