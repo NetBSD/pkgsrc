@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2003/05/02 11:54:43 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2003/05/05 14:29:27 jmmv Exp $
 #
 
 DISTNAME=		xdelta-1.1.1
-PKGREVISION=	1
+PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		ftp://ftp.xcf.berkeley.edu/pub/xdelta/
 
