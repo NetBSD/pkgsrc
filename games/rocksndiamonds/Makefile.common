@@ -1,7 +1,6 @@
-# $NetBSD: Makefile.common,v 1.9 2004/03/07 00:39:43 snj Exp $
-#
+# $NetBSD: Makefile.common,v 1.10 2004/11/03 15:14:17 adam Exp $
 
-DISTNAME=	rocksndiamonds-3.0.8
+DISTNAME=	rocksndiamonds-3.1.0
 CATEGORIES=	games x11
 MASTER_SITES=	http://www.artsoft.org/RELEASES/unix/rocksndiamonds/
 
@@ -10,8 +9,8 @@ HOMEPAGE=	http://www.artsoft.org/rocksndiamonds/
 
 USE_BUILDLINK3=		YES
 USE_GNU_TOOLS+=		make
-USE_X11=		YES
 USE_PKGINSTALL=		YES
+USE_X11=		YES
 
 PLIST_SRC=	${WRKDIR}/PLIST ../rocksndiamonds/PLIST
 PLIST_SUBST+=	SCORE_PATH=${SCORE_PATH}
@@ -28,11 +27,11 @@ RND_GROUP=	games
 MAKE_ENV+=	HAVE_JOYSTICK=1
 .endif
 
-SCORE_PATH=		/var/games/rocksndiamonds
+SCORE_PATH=	${VARBASE}/games/rocksndiamonds
 
 pre-configure:
 	@${SED} -e "s,@SCORE_PATH@,${SCORE_PATH},g" \
-	        ${WRKSRC}/Makefile > ${WRKSRC}/Makefile.fixed && \
+		${WRKSRC}/Makefile > ${WRKSRC}/Makefile.fixed && \
 	  ${MV} ${WRKSRC}/Makefile.fixed ${WRKSRC}/Makefile
 
 do-install:
@@ -57,9 +56,7 @@ do-install:
 	${CHOWN} -R ${RND_USER}:${RND_GROUP} ${SCORE_PATH}
 	# auto-generated PLIST
 	${RM} -f ${WRKDIR}/PLIST
-.for levdir in Boulderdash Classic_Games Contributions_1995-2000 \
-	Contributions_2001 Contributions_2002 Contributions_2003 Examples \
-	Tutorials
+.for levdir in Classic_Games Tutorials
 	cd ${PREFIX} && \
 	${FIND} share/rocksndiamonds/levels/${levdir} -type f -print >>${WRKDIR}/PLIST
 .endfor
