@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:49:52 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/02/26 03:40:54 jschauma Exp $
 bin/xcircuit
 lib/X11/app-defaults/XCircuit
 lib/xcircuit-2.2/analog.lps
@@ -36,7 +36,7 @@ lib/xcircuit-2.2/musiclib.lps
 lib/xcircuit-2.2/signal.lps
 lib/xcircuit-2.2/startup.script
 lib/xcircuit-2.2/xcircps2.pro
-man/man1/xcircuit.0
+man/man1/xcircuit.${IMAKE_MANNEWSUFFIX}
 share/examples/xcircuit/USAflag.ps
 share/examples/xcircuit/analog1.ps
 share/examples/xcircuit/analog2.ps
