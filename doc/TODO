@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.537 2003/05/09 20:58:33 salo Exp $
+$NetBSD: TODO,v 1.538 2003/05/09 21:00:18 salo Exp $
 
 Suggested new packages
 ======================
@@ -178,7 +178,6 @@ Suggested package updates
 	o multitail-2.5
 	o mysql-3.23.54
 	o napshare-1.2
-	o neon-0.23.9 [pkg/20987]
 	o nessus-2.0.1 [pkg/20796]
 	o nessus-2.0.4
 	o net-snmp-5.0.7 [pkg/19939]
