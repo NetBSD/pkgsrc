@@ -1,0 +1,35 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/11/25 19:02:27 jtb Exp $
+
+--- config.mk.orig	Thu Oct 26 13:08:33 2000
++++ config.mk
+@@ -6,9 +6,9 @@
+ # Set the C compiler to use, and options for it.
+ # This is likely to be what you'll want for most systems:
+ #
+-CC=gcc
+-CFLAGS=-O2 -Wall
+-
++#CC=gcc
++CFLAGS=-O2 -Wall -I${LOCALBASE}/include -I${X11BASE}/include
++LDFLAGS= -L${LOCALBASE}/lib -L${X11BASE}/lib
+ # Set the awk interpreter to use for a script used while compiling.
+ # (This should be a `new' awk, such as gawk or mawk.)
+ #
+@@ -27,7 +27,7 @@
+ # On non-x86-based machines (e.g. Alpha, Sparc, PPC), you should
+ # comment it out.
+ #
+-CFLAGS+=-DINTERP_MMX
++#CFLAGS+=-DINTERP_MMX
+ 
+ 
+ # --------------------- Installation options ----------------------
+@@ -37,7 +37,7 @@
+ # MANDIR to directory for man page.
+ # Usually it will be simpler to just set PREFIX.
+ #
+-PREFIX=/usr/local
++#PREFIX=/usr/local
+ 
+ # In theory it would be nice to put the info file and man page under
+ # /usr/local/share. However, it's not clear if this is widely
