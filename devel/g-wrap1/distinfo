@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/12/03 16:02:25 wiz Exp $
+
+SHA1 (g-wrap-1.3.4.tar.gz) = 764f1c878e18341bf437f3e1ddc5f8618019bfc2
+Size (g-wrap-1.3.4.tar.gz) = 403570 bytes
+SHA1 (patch-aa) = 284e62e9a3456ab03a8337298fde587b2729c786
+SHA1 (patch-ab) = 92f8e1ed55a3ba563837b36e2f39888734aebefe
+SHA1 (patch-ac) = 7bd1543e1941668d71507d8ee6e1c5f1614f6472
