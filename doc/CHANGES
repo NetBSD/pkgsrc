@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2751 2003/07/12 10:23:52 wiz Exp $
+$NetBSD: CHANGES,v 1.2752 2003/07/12 11:30:52 zuntum Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2770,3 +2770,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated racoon to 20030711a [itojun 2003-07-12]
 	Updated dopewars to 1.5.9 [wiz 2003-07-12]
 	Updated getmail to 3.1.7 [wiz 2003-07-12]
+	Updated gimageview to 0.2.23 [zuntum 2003-07-12]
