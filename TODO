@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.80 2002/05/20 22:07:09 jwise Exp $
+$NetBSD: TODO,v 1.81 2002/09/07 07:34:36 thorpej Exp $
 
 packages TODO (Suggested new packages)
 ^^^^^^^^^^^^^
@@ -75,3 +75,6 @@ pksgrc TODO (Suggested pkgsrc features and enhancements)
 	  modifications for bsd.pkg.mk and will commit them after freeze.  The
 	  remaining and harder part is to make the cross-environment for HP-UX.
 	  [kei]
+
+	o cross-building of packages which are capable of doing so (e.g.
+	  ones that use GNU autoconf properly).
