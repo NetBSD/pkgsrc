@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.7 2003/03/11 23:37:27 wiz Exp $
+$NetBSD: distinfo,v 1.8 2003/04/13 01:29:15 salo Exp $
 
-SHA1 (eb/eb-3.2.3.tar.gz) = 1812f7773f5352403d3fd40a5d7c75b0f02c4ea8
-Size (eb/eb-3.2.3.tar.gz) = 1011232 bytes
-SHA1 (eb/LIST) = d1d476a5a529c61aa30b99f48d1f22da9cbf57ff
-Size (eb/LIST) = 9253 bytes
-SHA1 (eb/LIST-ja) = 85647a7aadf3197d27cbe285dc410aa94dbbc8c2
-Size (eb/LIST-ja) = 10841 bytes
+SHA1 (eb/eb-3.3.2.tar.gz) = b865897e2e7dff8eb8c0d88f37ac0c5c35528e53
+Size (eb/eb-3.3.2.tar.gz) = 1056979 bytes
+SHA1 (eb/LIST) = 9c059b159f624b8f962daa695d52f60598ba1a3e
+Size (eb/LIST) = 11210 bytes
+SHA1 (eb/LIST-ja) = b9278c27bcf952aa84812c4c9440bb1b2fd2561a
+Size (eb/LIST-ja) = 13396 bytes
 SHA1 (eb/cencro-1.0.tar.gz) = 3b5c692fc8273e0e61c6b28e29a30875d9f609ad
 Size (eb/cencro-1.0.tar.gz) = 1666 bytes
 SHA1 (eb/chujiten-2.3.tar.gz) = 7d995a898666ab611e58d3d0087df0c1a62938d1
@@ -28,6 +28,8 @@ SHA1 (eb/daijirin-2.0.tar.gz) = 0a4dd911fb196155fae32904873bd3a21060f4d5
 Size (eb/daijirin-2.0.tar.gz) = 2095 bytes
 SHA1 (eb/dd75-2.0.tar.gz) = f2a0141a259bcaeddb972d2b228fa1ed8e712c37
 Size (eb/dd75-2.0.tar.gz) = 4062 bytes
+SHA1 (eb/gendai2000-1.0.tar.gz) = 030c72e8bfccad041551c95d9c95c6e29e80f12b
+Size (eb/gendai2000-1.0.tar.gz) = 1063 bytes
 SHA1 (eb/genius-1.0.tar.gz) = 4dc04040ee19ed5d0817015db8b621fc4ead9b46
 Size (eb/genius-1.0.tar.gz) = 2241 bytes
 SHA1 (eb/genius2-1.1.tar.gz) = 16b3b16aa30f42088074f006b3103a9aad47e56e
@@ -60,7 +62,10 @@ SHA1 (eb/readers-2.2.tar.gz) = b8948b2f466cd017cc71d418ab2a96edce59ad00
 Size (eb/readers-2.2.tar.gz) = 2194 bytes
 SHA1 (eb/readers2-2.0.tar.gz) = 08f6dc279a09ef1094d1b36152c857f6e3890d84
 Size (eb/readers2-2.0.tar.gz) = 2698 bytes
+SHA1 (eb/ruigigo-1.0.tar.gz) = a50a361e2d022919672ffe08fc1875c1913f7d77
+Size (eb/ruigigo-1.0.tar.gz) = 1326 bytes
 SHA1 (eb/superdic98-1.0.tar.gz) = 4e74ecf887e0c1cf257b718d0e0922d03dfe8138
 Size (eb/superdic98-1.0.tar.gz) = 5252 bytes
 SHA1 (patch-aa) = 9dde77605b151e22c0b0ea96cb9d58788d259360
 SHA1 (patch-ab) = c135fd66475eac600226b672e7963b696720a3cf
+SHA1 (patch-ac) = 1b3dabf92cf820dbb5d56e6384502366b2e9a314
