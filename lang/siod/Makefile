@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/02/17 09:07:28 agc Exp $
+# $NetBSD: Makefile,v 1.4 2001/03/31 11:14:30 zuntum Exp $
 
 DISTNAME=		siod
 PKGNAME=		siod-3.0
@@ -15,7 +15,7 @@ ONLY_FOR_PLATFORM=	SunOS-*-*	# untested on NetBSD
 NO_WRKSUBDIR=		yes
 MAKEFILE=		makefile
 ALL_TARGET=		${OPSYS}
-MAKE_ENV+=		CC=${CC}
+MAKE_ENV+=		CC="${CC}"
 
 .include "../../mk/bsd.prefs.mk"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2001/03/27 03:20:15 hubertf Exp $
+# $NetBSD: Makefile,v 1.24 2001/03/31 11:14:30 zuntum Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/08/27 13:06:01 ache Exp
 #
 
@@ -43,7 +43,7 @@ post-extract:
 
 post-build:
 		cd ${WRKSRC} && 				\
-		${CC} -shared -Wl,-Bshareable -fPIC -o idea idea.c
+		${CC} ${CFLAGS} -shared -Wl,-Bshareable -fPIC -o idea idea.c
 
 post-install:
 		${INSTALL_PROGRAM} ${WRKSRC}/idea ${PREFIX}/lib/gnupg

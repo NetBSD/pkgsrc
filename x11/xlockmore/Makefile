@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2001/02/17 17:07:14 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2001/03/31 11:14:31 zuntum Exp $
 # FreeBSD Id: Makefile,v 1.23 1997/10/10 09:24:38 tg Exp
 #
 
@@ -28,7 +28,7 @@ USE_X11BASE=	YES
 .if defined(XLOCK_LIGHT)
 CONFIGURE_ARGS+=--without-gltt --without-ttf --without-opengl --without-mesagl \
 		--without-xpm # --without-cxx XXX doesn't work
-CONFIGURE_ENV+= "CXX=${CC}"	# no dependency on libstdc++
+CONFIGURE_ENV+= CXX="${CC}"	# no dependency on libstdc++
 .else
 USE_XPM=	YES
 CONFIGURE_ARGS+= --with-mesagl
