@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2002/02/18 15:14:45 seb Exp $
+# $NetBSD: Makefile,v 1.15 2003/06/27 08:14:24 wiz Exp $
 
 DISTNAME=	gtk+-1.0.6
 PKGNAME=	gtk10-1.0.6
@@ -11,18 +11,18 @@ COMMENT=	Gimp toolkit. Libraries for building X11 user interfaces
 
 CONFLICTS=	gtk+-1.0.*
 
-USE_LIBTOOL=	yes
-USE_X11BASE=	yes
+USE_BUILDLINK2=		yes
+USE_LIBTOOL=		yes
+USE_MAKEINFO=		yes
+USE_NEW_TEXINFO=	yes
+USE_X11BASE=		yes
 
 GNU_CONFIGURE=  yes
 CONFIGURE_ARGS=	--includedir=${PREFIX}/include/gtk10
 
-CFLAGS=		-pipe -O2
 INFO_FILES=	gdk10.info glib10.info gtk10.info
-TEXINFO_OVERRIDE=	YES
 
 post-extract:
 	cd ${WRKSRC}/docs && ${RM} -f ${INFO_FILES}
 
-.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
