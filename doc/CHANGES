@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5067 2004/03/03 10:52:20 adam Exp $
+$NetBSD: CHANGES,v 1.5068 2004/03/03 10:55:19 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1123,6 +1123,10 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated mono to 0.30.2 [recht 2004-03-03]
 	Updated opencdk to 0.5.4 [minskim 2004-03-03]
 	Updated trac to 0.5.2 [epg 2004-03-03]
+	Updated gcc3 to 3.3.3 [drochner 2004-03-03]
+	Updated gimp-print to 4.2.6 [drochner 2004-03-03]
+	Updated verilog-current to 20040220 [drochner 2004-03-03]
+	Updated expat to 1.95.7 [drochner 2004-03-03]
 	Updated bittorrent to 3.3nb5 [recht 2004-03-03]
 	Added bittorrent-gui-3.3 [recht 2004-03-03]
 	Updated py-soappy to 0.11.3 [recht 2004-03-03]
