@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2003/07/17 21:42:45 grant Exp $
+# $NetBSD: Makefile,v 1.19 2003/07/21 16:51:51 martti Exp $
 #
 
 DISTNAME=	scigraphica-0.8.0
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=scigraphica/}
 
 MAINTAINER=	drochner@NetBSD.org
 HOMEPAGE=	http://scigraphica.sourceforge.net/
-COMMENT=	data analysis and technical graphics
+COMMENT=	Data analysis and technical graphics
 
 DEPENDS+=	gnome1-dirs>=1.0:../../misc/gnome1-dirs
 

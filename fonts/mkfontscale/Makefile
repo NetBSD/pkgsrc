@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/07/17 21:37:28 grant Exp $
+# $NetBSD: Makefile,v 1.9 2003/07/21 16:47:08 martti Exp $
 
 DISTNAME=	mkfontscale-20020524
 PKGREVISION=	1
@@ -8,7 +8,7 @@ MASTER_SITES=	http://www.pps.jussieu.fr/~jch/software/files/
 
 MAINTAINER=	rxg@NetBSD.org
 HOMEPAGE=	http://www.pps.jussieu.fr/~jch/software/files/
-COMMENT=	create an index of scalable font files for X
+COMMENT=	Create an index of scalable font files for X
 
 USE_IMAKE=	YES
 

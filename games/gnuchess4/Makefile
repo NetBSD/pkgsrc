@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/07/17 21:38:40 grant Exp $
+# $NetBSD: Makefile,v 1.8 2003/07/21 16:49:49 martti Exp $
 # FreeBSD Id: Makefile,v 1.6 1999/01/27 07:41:12 fenner Exp
 #
 
@@ -10,7 +10,7 @@ MASTER_SITES=		${MASTER_SITE_LOCAL}
 
 MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.gnu.org/software/chess/chess.html
-COMMENT=		the "classic" GNU chess
+COMMENT=		The "classic" GNU chess
 
 CONFLICTS=		gnuchess-4.*
 

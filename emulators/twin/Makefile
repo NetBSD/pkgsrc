@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/07/19 08:54:30 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2003/07/21 16:45:56 martti Exp $
 #
 
 DISTNAME=		twin-src-3.1.14
@@ -10,7 +10,7 @@ MASTER_SITES=		ftp://ftp.willows.com/pub/twin/
 
 MAINTAINER=		collver1@comcast.net
 HOMEPAGE=		http://www.willows.com
-COMMENT=		cross-platform implementation of the win32 api
+COMMENT=		Cross-platform implementation of the win32 api
 
 GNU_CONFIGURE=		yes
 USE_GMAKE=		yes
