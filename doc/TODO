@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3239 2005/03/19 17:52:53 wiz Exp $
+$NetBSD: TODO,v 1.3240 2005/03/19 19:42:08 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1023,6 +1023,7 @@ Suggested package updates
 	o snd-7.11
 	o snes9x-1.43
 	o snownews-1.5.6.1
+	o socat-1.4.2.0
 	o sox-12.17.7
 	o spim-7.1
 	o splint-3.1.1
@@ -1150,6 +1151,7 @@ Suggested package updates
 	o xdaliclock-2.20
 	o xdesktopwaves-1.3
 	o xdialog-2.1.2
+	o xemacs-current-21.5.20
 	o xerces-c-2.5.0 [heinz?|p5-XML-Xerces requires xerces-c-2.3.0]
 	o xerces-j-2.4.0 [pkg/21725]
 	o xerces-j-2.6.2
