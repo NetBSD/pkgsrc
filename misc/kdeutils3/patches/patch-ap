@@ -1,8 +1,8 @@
-$NetBSD: patch-ap,v 1.1 2003/03/11 13:22:32 markd Exp $
+$NetBSD: patch-ap,v 1.2 2003/12/27 14:35:16 mrg Exp $
 
---- ksim/monitors/cpu/ksimcpu.cpp.orig	Tue May 14 02:47:51 2002
-+++ ksim/monitors/cpu/ksimcpu.cpp
-@@ -269,6 +269,9 @@ void CpuView::updateCpu(CpuData &cpu, in
+--- ksim/monitors/cpu/ksimcpu.cpp.orig	2003-09-02 11:49:19.000000000 +0000
++++ ksim/monitors/cpu/ksimcpu.cpp	2003-12-27 14:28:38.000000000 +0000
+@@ -277,11 +277,14 @@
    cpu.idle = cpuTime[CP_IDLE];
  #endif
  
@@ -12,3 +12,9 @@ $NetBSD: patch-ap,v 1.1 2003/03/11 13:22:32 markd Exp $
  #if defined(Q_OS_OPENBSD) || defined(Q_OS_NETBSD)
  #warning "add support for SMP on OpenBSD and NetBSD"
    int name2oid[2] = { CTL_KERN, KERN_CPTIME };
+   long cpuTime[CPUSTATES];
+-  unsigned int cpuTimeLen = sizeof(cpuTime);
++  size_t cpuTimeLen = sizeof(cpuTime);
+ 
+   if (sysctl(name2oid, 2, &cpuTime, &cpuTimeLen,
+      0, 0) < 0)
