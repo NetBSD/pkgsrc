@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2004/11/02 20:55:29 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2004/11/02 23:22:50 kristerw Exp $
 
 DISTNAME=		GTL-1.2.1
 PKGNAME=		gtl-1.2.1
@@ -23,6 +23,8 @@ GNU_CONFIGURE=		# defined
 CONFIGURE_ENV+=		CXXFLAGS="${CXXFLAGS}"
 
 DOCDIR=		${PREFIX}/share/doc/GTL
+
+INTERACTIVE_STAGE=	fetch
 
 _FETCH_MESSAGE= \
 	${ECHO} "======================================================================"; \
