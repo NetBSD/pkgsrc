@@ -1,12 +1,14 @@
-@comment $NetBSD: PLIST,v 1.3 1999/10/28 00:32:00 jlam Exp $
+@comment $NetBSD: PLIST,v 1.4 2000/08/16 00:41:14 wiz Exp $
 bin/Esetroot
 bin/Etbg
 bin/Etcolors.sh
 bin/Eterm
 bin/Etmenu.sh
 lib/libEterm.a
+lib/libEterm.la
 lib/libEterm.so.8.9
 lib/libmej.a
+lib/libmej.la
 lib/libmej.so.8.9
 man/man1/Eterm.1
 share/Eterm/pix/004.png
