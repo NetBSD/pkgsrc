@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.4 2002/03/07 13:33:53 wiz Exp $
+$NetBSD: patch-aa,v 1.5 2002/11/22 16:37:07 jschauma Exp $
 
---- Makefile.orig	Mon Jan 21 08:50:02 2002
-+++ Makefile
+--- Makefile.orig	Fri Nov 22 11:14:40 2002
++++ Makefile	Fri Nov 22 11:15:41 2002
 @@ -52,20 +52,20 @@
  #  acknowledgment is not required but would be appreciated.
  #
@@ -23,8 +23,8 @@ $NetBSD: patch-aa,v 1.4 2002/03/07 13:33:53 wiz Exp $
  
 -INSTALLDIR= /usr/local/
 -MANPAGESDIR= /usr/local/man/
-+INSTALLDIR= ${PREFIX}/
++INSTALLDIR= ${PREFIX}
 +MANPAGESDIR= ${PREFIX}/man/
  
- OFILES=		$(OBJDIR)attrs.o         $(OBJDIR)istack.o        $(OBJDIR)parser.o        $(OBJDIR)tags.o \
- 		$(OBJDIR)entities.o      $(OBJDIR)lexer.o         $(OBJDIR)pprint.o        $(OBJDIR)clean.o \
+ OFILES=	$(OBJDIR)access.o \
+ 		$(OBJDIR)attrs.o         $(OBJDIR)istack.o        $(OBJDIR)parser.o        $(OBJDIR)tags.o \

@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.4 2002/03/08 11:55:43 wiz Exp $
+$NetBSD: distinfo,v 1.5 2002/11/22 16:37:06 jschauma Exp $
 
-SHA1 (tidy_src_020307.tgz) = ee6723886eea723e7267434694ce0a711d9162fb
-Size (tidy_src_020307.tgz) = 121922 bytes
-SHA1 (tidy_docs_000804.tgz) = 4a65d4edbacf00b85ee4a8d5475403624df83ceb
-Size (tidy_docs_000804.tgz) = 55569 bytes
-SHA1 (patch-aa) = e5822a63c68ae342710b96374e1217115ac7e6bb
+SHA1 (tidy_src_021108.tgz) = ae7073ddf173ba5cd60a60995fe7e73260fc0c6a
+Size (tidy_src_021108.tgz) = 155401 bytes
+SHA1 (tidy_docs_021021.tgz) = 3617130b37299712862ff282eca7b64ed11bdbfb
+Size (tidy_docs_021021.tgz) = 67435 bytes
+SHA1 (patch-aa) = ed8c096031c01a211c6476783755f322acc92b58
 SHA1 (patch-ab) = d2e56dfc74e5eac3044256ab4cf433e6fa888a91
