@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/10/30 10:32:14 rh Exp $
+# $NetBSD: Makefile,v 1.2 2002/12/13 20:13:50 jmmv Exp $
 #
 
 DISTNAME=		gnome-terminal-2.0.1
@@ -26,4 +26,5 @@ LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 .include "../../devel/GConf2/buildlink2.mk"
 .include "../../devel/libglade2/buildlink2.mk"
 .include "../../devel/libgnomeui/buildlink2.mk"
+.include "../../textproc/scrollkeeper/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
