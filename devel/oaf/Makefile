@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2003/10/10 16:31:08 reed Exp $
+# $NetBSD: Makefile,v 1.30 2003/10/18 13:08:49 cjep Exp $
 #
 
 DISTNAME=		oaf-0.6.10
@@ -30,7 +30,7 @@ LEX=			${LOCALBASE}/bin/flex
 
 .if !exists(/usr/bin/yacc)
 BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
-YACC=			${LOCALBASE}/bin/bison 
+YACC=			${LOCALBASE}/bin/bison
 .endif
 
 .include "../../devel/popt/buildlink2.mk"

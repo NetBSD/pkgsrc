@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.83 2003/10/11 13:40:20 grant Exp $
+# $NetBSD: Makefile,v 1.84 2003/10/18 13:08:49 cjep Exp $
 #
 # This package does not compile in mod_ssl support hooks, as it conflicts
 # with IPv6-enable patch.
@@ -19,7 +19,7 @@ PATCH_SITES+=		http://www.tendra.org/~asmodai/ipv6/
 PATCHFILES+=		apache-1.3.28-v6-20030912.diff.gz
 
 NETBSD_LOGO=		sitedrivenby.gif
-SITES_${NETBSD_LOGO}=	
+SITES_${NETBSD_LOGO}=	# defined
 
 MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://httpd.apache.org/
