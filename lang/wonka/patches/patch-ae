@@ -1,0 +1,12 @@
+$NetBSD: patch-ae,v 1.1.1.1 2002/11/01 10:49:33 skrll Exp $
+
+--- wonka/resource/system/system.properties.orig	Wed Aug 14 11:09:07 2002
++++ wonka/resource/system/system.properties
+@@ -1,5 +1,5 @@
+ # Wonka system properties file
+ com.acunia.wonka.System.out.autoflush=true
+ com.acunia.wonka.System.err.autoflush=true
+-com.acunia.wonka.Init.linux.start=com.acunia.wonka.test.awt.VisualTestEngine
+-com.acunia.wonka.jarfiles = /test/vte.jar:/test/mauve-suite.jar
++com.acunia.wonka.Init.netbsd.start=com.acunia.wonka.test.awt.VisualTestEngine
++com.acunia.wonka.jarfiles = @PREFIX@/test/vte.jar:@PREFIX@/test/mauve-suite.jar

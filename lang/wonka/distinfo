@@ -1,0 +1,12 @@
+$NetBSD: distinfo,v 1.1.1.1 2002/11/01 10:49:33 skrll Exp $
+
+SHA1 (wonka-src-0.9.4-release.tar.gz) = 4ddf85278f15ce88c534053c635ce632d94b5a73
+Size (wonka-src-0.9.4-release.tar.gz) = 6165841 bytes
+SHA1 (patch-aa) = 4d60701fb4f600f336a10d4dd22df8ffd86599c0
+SHA1 (patch-ab) = de27e5f58ffc11ce45f09c56831f332e9b6121f7
+SHA1 (patch-ac) = 61bc81d3b2100a80082b397dbfb84e913d273848
+SHA1 (patch-ad) = 68ec03d82285c080148efe4fa6f10fdd55fde82a
+SHA1 (patch-ae) = 8fdfd438e8df91384c916d2e196963417f9b46c8
+SHA1 (patch-af) = 3cca513ef5bf53476019dab5269df5e410b2e05c
+SHA1 (patch-ag) = b0f388571958c46cefca23bfb18d9d8968e49b4a
+SHA1 (patch-ah) = 44293810568767bca0bb5c51d9f6c3941b8d7734

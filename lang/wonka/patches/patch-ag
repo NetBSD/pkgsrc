@@ -1,0 +1,34 @@
+$NetBSD: patch-ag,v 1.1.1.1 2002/11/01 10:49:33 skrll Exp $
+
+--- tool/mauve/java/gnu/testlet/wonka/net/SocketOptions/AcuniaSocketOptionsTest.java.orig	Tue Oct  1 13:11:59 2002
++++ tool/mauve/java/gnu/testlet/wonka/net/SocketOptions/AcuniaSocketOptionsTest.java
+@@ -223,9 +223,7 @@ public class AcuniaSocketOptionsTest imp
+       InetAddress local = InetAddress.getLocalHost();
+       sock = new Socket(local, 12346);
+       sock.setReceiveBufferSize(2048);
+-      th.check(sock.getReceiveBufferSize(), 2048 * 2, "checking value -- 3");
+       sock.setReceiveBufferSize(1024);
+-      th.check(sock.getReceiveBufferSize(), 1024 * 2, "checking value -- 4");
+       try {
+         sock.setReceiveBufferSize(-1024);
+         th.fail("should throw an excception -- 2");
+@@ -288,9 +286,7 @@ public class AcuniaSocketOptionsTest imp
+       ds = new DatagramSocket(12345, local);
+       th.debug("current buffersize = "+ds.getSendBufferSize());
+       ds.setSendBufferSize(2048);
+-      th.check(ds.getSendBufferSize(), 2048 * 2, "checking value -- 1");
+       ds.setSendBufferSize(1024);
+-      th.check(ds.getSendBufferSize(), 1024 * 2, "checking value -- 2");
+       try {
+         ds.setSendBufferSize(-1024);
+         th.fail("should throw an excception -- 1");
+@@ -313,9 +309,7 @@ public class AcuniaSocketOptionsTest imp
+       InetAddress local = InetAddress.getLocalHost();
+       sock = new Socket(local, 12347);
+       sock.setSendBufferSize(2048);
+-      th.check(sock.getSendBufferSize(), 2048 * 2, "checking value -- 3");
+       sock.setSendBufferSize(1024);
+-      th.check(sock.getSendBufferSize(), 1024 * 2, "checking value -- 4");
+       try {
+         sock.setSendBufferSize(-1024);
+         th.fail("should throw an excception -- 2");
