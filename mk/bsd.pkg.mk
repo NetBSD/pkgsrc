@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.752 2001/06/07 16:21:24 tron Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.753 2001/06/09 12:15:59 wiz Exp $
 #
 # This file is in the public domain.
 #
@@ -293,14 +293,6 @@ DIGEST_ALGORITHM?=	SHA1
 SHCOMMENT?=		${ECHO_MSG} >/dev/null '***'
 
 DISTINFO_FILE?=		${.CURDIR}/distinfo
-
-.if exists(${DISTINFO_FILE})
-DIGEST_FILE?=		${DISTINFO_FILE}
-PATCH_SUM_FILE?=	${DISTINFO_FILE}
-.else
-DIGEST_FILE?=		${FILESDIR}/md5
-PATCH_SUM_FILE?=	${FILESDIR}/patch-sum
-.endif
 
 .if exists(/usr/bin/m4)
 M4?=			/usr/bin/m4
@@ -1310,13 +1302,13 @@ _FETCH_FILE=								\
 		for site in $$sites; do					\
 			${ECHO_MSG} "=> Attempting to fetch $$bfile from $${site}."; \
 			if ${FETCH_CMD} ${FETCH_BEFORE_ARGS} $${site}$${bfile} ${FETCH_AFTER_ARGS}; then \
-				if [ -n "${FAILOVER_FETCH}" -a -f ${DIGEST_FILE} -a -f ${_DISTDIR}/$$bfile ]; then \
-					alg=`${AWK} 'NF == 4 && $$2 == "('$$file')" && $$3 == "=" {print $$1;}' ${DIGEST_FILE}`; \
+				if [ -n "${FAILOVER_FETCH}" -a -f ${DISTINFO_FILE} -a -f ${_DISTDIR}/$$bfile ]; then \
+					alg=`${AWK} 'NF == 4 && $$2 == "('$$file')" && $$3 == "=" {print $$1;}' ${DISTINFO_FILE}`; \
 					if [ -z "$$alg" ]; then		\
 						alg=${DIGEST_ALGORITHM};\
 					fi;				\
 					CKSUM=`${DIGEST} $$alg < ${_DISTDIR}/$$bfile`; \
-					CKSUM2=`${AWK} '$$1 == "'$$alg'" && $$2 == "('$$file')" {print $$4;}' <${DIGEST_FILE}`; \
+					CKSUM2=`${AWK} '$$1 == "'$$alg'" && $$2 == "('$$file')" {print $$4;}' <${DISTINFO_FILE}`; \
 					if [ "$$CKSUM" = "$$CKSUM2" -o "$$CKSUM2" = "IGNORE" ]; then \
 						continue 2;		\
 					else				\
@@ -1525,9 +1517,9 @@ do-patch: uptodate-digest
 				${PATCHDIR}/patch-local-*) 		\
 					;;				\
 				*)					\
-					if [ -f ${PATCH_SUM_FILE} ]; then \
+					if [ -f ${DISTINFO_FILE} ]; then \
 						filename=`expr $$i : '.*/\(.*\)'`; \
-						algsum=`${AWK} 'NF == 4 && $$2 == "('$$filename')" && $$3 == "=" {print $$1 " " $$4}' ${PATCH_SUM_FILE} || ${TRUE}`; \
+						algsum=`${AWK} 'NF == 4 && $$2 == "('$$filename')" && $$3 == "=" {print $$1 " " $$4}' ${DISTINFO_FILE} || ${TRUE}`; \
 						if [ "X$$algsum" != "X" ]; then \
 							alg=`${ECHO} $$algsum | ${AWK} '{ print $$1 }'`; \
 							recorded=`${ECHO} $$algsum | ${AWK} '{ print $$2 }'`; \
@@ -2535,8 +2527,8 @@ makesum: fetch uptodate-digest
 		if [ "X$$ignore" = "X" ]; then continue; fi;		\
 		${ECHO} "${DIGEST_ALGORITHM} ($$ignore) = IGNORE" >> $$newfile; \
 	done;								\
-	if [ -f ${PATCH_SUM_FILE} ]; then				\
-		${AWK} '$$2 ~ /\(patch-[a-z0-9]+\)/ { print $$0 }' < ${PATCH_SUM_FILE} >> $$newfile; \
+	if [ -f ${DISTINFO_FILE} ]; then				\
+		${AWK} '$$2 ~ /\(patch-[a-z0-9]+\)/ { print $$0 }' < ${DISTINFO_FILE} >> $$newfile; \
 	fi;								\
 	if cmp -s $$newfile ${DISTINFO_FILE}; then			\
 		${RM} -f $$newfile;					\
@@ -2550,8 +2542,8 @@ makesum: fetch uptodate-digest
 makepatchsum mps: uptodate-digest
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	newfile=${DISTINFO_FILE}.$$$$;					\
-	if [ -f ${DIGEST_FILE} ]; then					\
-		${AWK} '$$2 !~ /\(patch-[a-z0-9]+\)/ { print $$0 }' < ${DIGEST_FILE} >> $$newfile; \
+	if [ -f ${DISTINFO_FILE} ]; then					\
+		${AWK} '$$2 !~ /\(patch-[a-z0-9]+\)/ { print $$0 }' < ${DISTINFO_FILE} >> $$newfile; \
 	fi;								\
 	if [ -d ${PATCHDIR} ]; then					\
 		(cd ${PATCHDIR};					\
@@ -2573,7 +2565,7 @@ makepatchsum mps: uptodate-digest
 	fi
 .endif
 
-# This target is done by invoking a sub-make so that DIGEST_FILE gets
+# This target is done by invoking a sub-make so that DISTINFO_FILE gets
 # re-evaluated after the "makepatchsum" target is made. This can be
 # made into:
 #makedistinfo mdi: makepatchsum makesum
@@ -2586,19 +2578,19 @@ makedistinfo mdi distinfo: makepatchsum
 .if !target(checksum)
 checksum: fetch uptodate-digest
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	if [ ! -f ${DIGEST_FILE} ]; then				\
+	if [ ! -f ${DISTINFO_FILE} ]; then				\
 		${ECHO_MSG} "=> No checksum file.";			\
 	else								\
 		(cd ${DISTDIR}; OK="true";				\
 		  for file in "" ${_CKSUMFILES}; do			\
 		  	if [ "X$$file" = X"" ]; then continue; fi; 	\
-			alg=`${AWK} 'NF == 4 && $$2 == "('$$file')" && $$3 == "=" {print $$1;}' ${DIGEST_FILE}`; \
+			alg=`${AWK} 'NF == 4 && $$2 == "('$$file')" && $$3 == "=" {print $$1;}' ${DISTINFO_FILE}`; \
 			if [ "X$$alg" = "X" ]; then			\
 				${ECHO_MSG} "=> No checksum recorded for $$file."; \
 				OK="false";				\
 			else						\
 				CKSUM=`${DIGEST} $$alg < $$file`;	\
-				CKSUM2=`${AWK} '$$1 == "'$$alg'" && $$2 == "('$$file')"{print $$4;}' ${DIGEST_FILE}`; \
+				CKSUM2=`${AWK} '$$1 == "'$$alg'" && $$2 == "('$$file')"{print $$4;}' ${DISTINFO_FILE}`; \
 				if [ "$$CKSUM2" = "IGNORE" ]; then	\
 					${ECHO_MSG} "=> Checksum for $$file is set to IGNORE in checksum file even though"; \
 					${ECHO_MSG} "   the file is not in the "'$$'"{IGNOREFILES} list."; \
@@ -2613,7 +2605,7 @@ checksum: fetch uptodate-digest
 		  done;							\
 		  for file in "" ${_IGNOREFILES}; do			\
 		  	if [ "X$$file" = X"" ]; then continue; fi; 	\
-			CKSUM2=`${AWK} 'NF == 4 && $$3 == "=" && $$2 == "('$$file')"{print $$4;}' ${DIGEST_FILE}`; \
+			CKSUM2=`${AWK} 'NF == 4 && $$3 == "=" && $$2 == "('$$file')"{print $$4;}' ${DISTINFO_FILE}`; \
 			if [ "$$CKSUM2" = "" ]; then			\
 				${ECHO_MSG} "=> No checksum recorded for $$file, file is in "'$$'"{IGNOREFILES} list."; \
 				OK="false";				\
@@ -2624,7 +2616,7 @@ checksum: fetch uptodate-digest
 			fi;						\
 		  done;							\
 		  if [ "$$OK" != "true" ]; then				\
-			${ECHO_MSG} "Make sure the Makefile and checksum file (${DIGEST_FILE})"; \
+			${ECHO_MSG} "Make sure the Makefile and checksum file (${DISTINFO_FILE})"; \
 			${ECHO_MSG} "are up to date.  If you want to override this check, type"; \
 			${ECHO_MSG} "\"${MAKE} NO_CHECKSUM=yes [other args]\"."; \
 			exit 1;						\
@@ -3246,8 +3238,8 @@ fake-pkg: ${PLIST} ${DESCR} ${MESSAGE}
 			files="$$files $$f";				\
 		fi;							\
 	done;								\
-	if [ -f ${PATCH_SUM_FILE} ]; then				\
-		for f in `${AWK} 'NF == 4 && $$3 == "=" { gsub("[()]", "", $$2); print $$2 }' < ${PATCH_SUM_FILE}`; do \
+	if [ -f ${DISTINFO_FILE} ]; then				\
+		for f in `${AWK} 'NF == 4 && $$3 == "=" { gsub("[()]", "", $$2); print $$2 }' < ${DISTINFO_FILE}`; do \
 			if [ -f ${PATCHDIR}/$$f ]; then			\
 				files="$$files ${PATCHDIR}/$$f";	\
 			fi;						\
