@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2003/09/17 23:04:32 markd Exp $
+# $NetBSD: Makefile,v 1.28 2003/09/30 12:24:19 seb Exp $
 
 DISTNAME=	kdemultimedia-3.1.4
 CATEGORIES=	audio
@@ -13,6 +13,10 @@ USE_BUILDLINK2=		YES
 REPLACE_PERL=		kscd/workman2cddb.pl
 
 .include "../../mk/bsd.prefs.mk"
+.if !empty(CC_VERSION:Mgcc-3.*)
+BUILDLINK_DEPENDS.xine-lib=	xine-lib>=1rc0anb1
+.endif
+
 .if defined(USE_OSS)
 CONFIGURE_ARGS+=	--enable-audio=oss
 .endif
