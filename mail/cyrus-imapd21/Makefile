@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2002/11/16 10:39:22 seb Exp $
+# $NetBSD: Makefile,v 1.3 2002/12/08 00:39:42 chris Exp $
 
-DISTNAME=		cyrus-imapd-2.1.9
-PKGREVISION=		1
+DISTNAME=		cyrus-imapd-2.1.11
 SVR4_PKGNAME=		cimap
 CATEGORIES=		mail
 MASTER_SITES=		ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/ \
@@ -20,7 +19,7 @@ AUTOCONF_REQD=		2.13
 
 .if defined(CYRUS_USE_INET6) && ${CYRUS_USE_INET6} == "YES"
 PATCH_SITES=		http://www.imasy.or.jp/~ume/ipv6/
-PATCHFILES=		${DISTNAME}-ipv6-20020902.diff.gz
+PATCHFILES=		${DISTNAME}-ipv6-20021205.diff.gz
 .endif
 
 # CYRUS_USER		username of the Cyrus administrator
@@ -44,6 +43,18 @@ CONFIGURE_ARGS+=	--without-ucdsnmp
 CONFIGURE_ARGS+=	--without-notify
 CONFIGURE_ARGS+=	--without-zephyr
 CONFIGURE_ARGS+=	--enable-netscapehack
+CONFIGURE_ARGS+=	--with-perl=${PERL5}
+
+# Follow the recommended methods for database types to use:
+.if defined(CYRUS_DB_RECOMMENDED)
+CONFIGURE_ARGS+=	--with-duplicate-db=db3_nosync
+CONFIGURE_ARGS+=	--with-mboxlist-db=skiplist
+CONFIGURE_ARGS+=	--with-seen-db=skiplist
+CONFIGURE_ARGS+=	--with-subs-db=flat
+CONFIGURE_ARGS+=	--with-tls-db=db3_nosync
+# I'm not 100% ready to override the defaults till I've checked any side
+# effects - chris@nb.org
+.endif
 
 CONFIGURE_ARGS+=	--with-libwrap=${BUILDLINK_PREFIX.tcp_wrappers}
 CONFIGURE_ENV+=		ac_cv_lib_wrap_request_init=yes
