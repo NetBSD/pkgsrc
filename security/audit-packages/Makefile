@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2003/08/22 10:11:57 agc Exp $
+# $NetBSD: Makefile,v 1.27 2003/09/02 10:20:27 agc Exp $
 
-DISTNAME=	audit-packages-1.17
+DISTNAME=	audit-packages-1.18
 WRKSRC=		${WRKDIR}
 CATEGORIES=	security pkgtools
 MASTER_SITES=	# empty
@@ -31,18 +31,24 @@ do-build:
 			-e 's|@PKGSRCDIR@|${_PKGSRCDIR}|g'		\
 			-e 's|@PKG_TOOLS_BIN@|${PKG_TOOLS_BIN}|g'	\
 			-e 's|@SH@|${SH}|g'				\
-			-e 's|@WC@|${WC}|g'				\
+			-e 's|@DIGEST@|${DIGEST}|g'			\
+			-e 's|@CHMOD@|${CHMOD}|g'			\
+			-e 's|@MV@|${MV}|g'				\
+			-e 's|@RM@|${RM}|g'				\
+			-e 's|@MKDIR@|${MKDIR}|g'			\
 			${FILESDIR}/$$f > ${WRKSRC}/$$f;		\
 	done
 	${NROFF} ${WRKSRC}/audit-packages.8 >${WRKSRC}/audit-packages.0
 
 do-install:
 	@for f in audit-packages download-vulnerability-list; do	\
-		${INSTALL_SCRIPT} ${WRKSRC}/$$f ${PREFIX}/sbin;	\
+		${INSTALL_SCRIPT} ${WRKSRC}/$$f ${PREFIX}/sbin;		\
 	done
 	${INSTALL_MAN} ${WRKSRC}/audit-packages.0 ${PREFIX}/man/cat8
 	${INSTALL_MAN} ${WRKSRC}/audit-packages.8 ${PREFIX}/man/man8
-	${LN} -sf audit-packages.0 ${PREFIX}/man/cat8/download-vulnerability-list.0
-	${LN} -sf audit-packages.8 ${PREFIX}/man/man8/download-vulnerability-list.8
+	${RM} -f ${PREFIX}/man/cat8/download-vulnerability-list.0
+	${LN} -s audit-packages.0 ${PREFIX}/man/cat8/download-vulnerability-list.0
+	${RM} -f ${PREFIX}/man/man8/download-vulnerability-list.8
+	${LN} -s audit-packages.8 ${PREFIX}/man/man8/download-vulnerability-list.8
 
 .include "../../mk/bsd.pkg.mk"
