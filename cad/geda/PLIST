@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.4 2005/01/11 03:16:22 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.5 2005/03/24 02:05:11 dmcmahill Exp $
 bin/geda
 bin/graphman
 bin/raw2gw
 ${PKGLOCALEDIR}/locale/fr_FR/LC_MESSAGES/geda.mo
-${PKGLOCALEDIR}/locale/it_IT/LC_MESSAGES/geda.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/geda.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/geda.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/geda.mo

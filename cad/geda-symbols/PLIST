@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2005/01/11 03:16:23 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.12 2005/03/24 02:05:11 dmcmahill Exp $
 share/doc/geda-doc/nc.pdf
 share/gEDA/sym/4000/4000-1.sym
 share/gEDA/sym/4000/4000-2.sym
@@ -750,13 +750,16 @@ share/gEDA/sym/font/8.sym
 share/gEDA/sym/font/9.sym
 share/gEDA/sym/font/A-acute-accent.sym
 share/gEDA/sym/font/A-diaeresis.sym
+share/gEDA/sym/font/A-ogonek.sym
 share/gEDA/sym/font/A-ring.sym
 share/gEDA/sym/font/A.sym
 share/gEDA/sym/font/AE-lig.sym
 share/gEDA/sym/font/B.sym
+share/gEDA/sym/font/C-acute-accent.sym
 share/gEDA/sym/font/C.sym
 share/gEDA/sym/font/D.sym
 share/gEDA/sym/font/E-acute-accent.sym
+share/gEDA/sym/font/E-ogonek.sym
 share/gEDA/sym/font/E.sym
 share/gEDA/sym/font/F.sym
 share/gEDA/sym/font/G.sym
@@ -765,8 +768,10 @@ share/gEDA/sym/font/I-acute-accent.sym
 share/gEDA/sym/font/I.sym
 share/gEDA/sym/font/J.sym
 share/gEDA/sym/font/K.sym
+share/gEDA/sym/font/L-slash.sym
 share/gEDA/sym/font/L.sym
 share/gEDA/sym/font/M.sym
+share/gEDA/sym/font/N-acute-accent.sym
 share/gEDA/sym/font/N-tilde.sym
 share/gEDA/sym/font/N.sym
 share/gEDA/sym/font/O-acute-accent.sym
@@ -776,6 +781,7 @@ share/gEDA/sym/font/O.sym
 share/gEDA/sym/font/P.sym
 share/gEDA/sym/font/Q.sym
 share/gEDA/sym/font/R.sym
+share/gEDA/sym/font/S-acute-accent.sym
 share/gEDA/sym/font/S.sym
 share/gEDA/sym/font/T.sym
 share/gEDA/sym/font/U-acute-accent.sym
@@ -785,9 +791,12 @@ share/gEDA/sym/font/V.sym
 share/gEDA/sym/font/W.sym
 share/gEDA/sym/font/X.sym
 share/gEDA/sym/font/Y.sym
+share/gEDA/sym/font/Z-acute-accent.sym
+share/gEDA/sym/font/Z-dot.sym
 share/gEDA/sym/font/Z.sym
 share/gEDA/sym/font/a_-acute-accent.sym
 share/gEDA/sym/font/a_-diaeresis.sym
+share/gEDA/sym/font/a_-ogonek.sym
 share/gEDA/sym/font/a_-ring.sym
 share/gEDA/sym/font/a_.sym
 share/gEDA/sym/font/ae_-lig.sym
@@ -799,6 +808,7 @@ share/gEDA/sym/font/b_.sym
 share/gEDA/sym/font/backslash.sym
 share/gEDA/sym/font/backtick.sym
 share/gEDA/sym/font/box.sym
+share/gEDA/sym/font/c_-acute-accent.sym
 share/gEDA/sym/font/c_.sym
 share/gEDA/sym/font/caret.sym
 share/gEDA/sym/font/colon.sym
@@ -806,6 +816,7 @@ share/gEDA/sym/font/comma.sym
 share/gEDA/sym/font/d_.sym
 share/gEDA/sym/font/dollar.sym
 share/gEDA/sym/font/e_-acute-accent.sym
+share/gEDA/sym/font/e_-ogonek.sym
 share/gEDA/sym/font/e_.sym
 share/gEDA/sym/font/equal.sym
 share/gEDA/sym/font/excl-open.sym
@@ -817,6 +828,7 @@ share/gEDA/sym/font/i_-acute-accent.sym
 share/gEDA/sym/font/i_.sym
 share/gEDA/sym/font/j_.sym
 share/gEDA/sym/font/k_.sym
+share/gEDA/sym/font/l_-slash.sym
 share/gEDA/sym/font/l_.sym
 share/gEDA/sym/font/lbrace.sym
 share/gEDA/sym/font/lbrack.sym
@@ -825,6 +837,7 @@ share/gEDA/sym/font/lparen.sym
 share/gEDA/sym/font/m_.sym
 share/gEDA/sym/font/minus.sym
 share/gEDA/sym/font/more.sym
+share/gEDA/sym/font/n_-acute-accent.sym
 share/gEDA/sym/font/n_-tilde.sym
 share/gEDA/sym/font/n_.sym
 share/gEDA/sym/font/newline.sym
@@ -845,6 +858,7 @@ share/gEDA/sym/font/r_.sym
 share/gEDA/sym/font/rbrace.sym
 share/gEDA/sym/font/rbrack.sym
 share/gEDA/sym/font/rparen.sym
+share/gEDA/sym/font/s_-acute-accent.sym
 share/gEDA/sym/font/s_.sym
 share/gEDA/sym/font/semi.sym
 share/gEDA/sym/font/slash.sym
@@ -860,6 +874,8 @@ share/gEDA/sym/font/vbar.sym
 share/gEDA/sym/font/w_.sym
 share/gEDA/sym/font/x_.sym
 share/gEDA/sym/font/y_.sym
+share/gEDA/sym/font/z_-acute-accent.sym
+share/gEDA/sym/font/z_-dot.sym
 share/gEDA/sym/font/z_.sym
 share/gEDA/sym/gnetman/capacitor-1.sym
 share/gEDA/sym/gnetman/ccvs-1.sym
@@ -978,9 +994,11 @@ share/gEDA/sym/maxim/max1208-1.sym
 share/gEDA/sym/maxim/max1209-1.sym
 share/gEDA/sym/maxim/max1211-1.sym
 share/gEDA/sym/maxim/max122-1.sym
+share/gEDA/sym/maxim/max12527-1.sym
 share/gEDA/sym/maxim/max12553-1.sym
 share/gEDA/sym/maxim/max12554-1.sym
 share/gEDA/sym/maxim/max12555-1.sym
+share/gEDA/sym/maxim/max12557-1.sym
 share/gEDA/sym/maxim/max135-1.sym
 share/gEDA/sym/maxim/max1407-1.sym
 share/gEDA/sym/maxim/max147-1.sym
@@ -1133,7 +1151,6 @@ share/gEDA/sym/micro/MSP430x43x.sym
 share/gEDA/sym/micro/MSP430x44x.sym
 share/gEDA/sym/micro/TINIm390-RevD.sym
 share/gEDA/sym/micro/basicstamp-1.sym
-share/gEDA/sym/micro/gschem.log.old
 share/gEDA/sym/micro/mc68hc05j1a-1.sym
 share/gEDA/sym/micro/mc68hc705kj1-1.sym
 share/gEDA/sym/micro/mc68hc811e2fn-1.sym
@@ -1184,7 +1201,6 @@ share/gEDA/sym/misc/L293.sym
 share/gEDA/sym/misc/MAC160-1.sym
 share/gEDA/sym/misc/MC34063-1.sym
 share/gEDA/sym/misc/NE-592-1.sym
-share/gEDA/sym/misc/PCF8563-1.sym
 share/gEDA/sym/misc/PCF8591.sym
 share/gEDA/sym/misc/PCM2702E-1.sym
 share/gEDA/sym/misc/QT60040-1.sym
@@ -1330,9 +1346,12 @@ share/gEDA/sym/spice/nullor-1.sym
 share/gEDA/sym/spice/spice-directive-1.sym
 share/gEDA/sym/spice/spice-include-1.sym
 share/gEDA/sym/spice/spice-model-1.sym
+share/gEDA/sym/spice/spice-npn-1.sym
 share/gEDA/sym/spice/spice-options-1.sym
+share/gEDA/sym/spice/spice-pnp-1.sym
 share/gEDA/sym/spice/spice-subcircuit-IO-1.sym
 share/gEDA/sym/spice/spice-subcircuit-LL-1.sym
+share/gEDA/sym/spice/spice-vc-switch-1.sym
 share/gEDA/sym/spice/tline.sym
 share/gEDA/sym/spice/vac-1.sym
 share/gEDA/sym/spice/vccs-1.sym
@@ -1592,7 +1611,7 @@ share/gEDA/sym/xilinx/XC2S50-5PQ208C.sym
 share/gEDA/sym/xilinx/XC2S50-5PQ208I.sym
 share/gEDA/sym/xilinx/XC2S50-6PQ208C.sym
 share/gEDA/sym/xilinx/XC95108-PC84.sym
-share/gEDA/system-commonrc
+share/gEDA/system-gafrc
 @dirrm share/gEDA/sym/xilinx
 @dirrm share/gEDA/sym/vhdl
 @dirrm share/gEDA/sym/verilog
