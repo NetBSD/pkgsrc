@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1999/07/19 22:55:48 dante Exp $
+# $NetBSD: Makefile,v 1.5 1999/09/21 18:18:50 tron Exp $
 #
 
 DISTNAME=	wterm-6.2.6
@@ -10,7 +10,7 @@ MAINTAINER=	rh@netbsd.org
 HOMEPAGE=	http://wm.current.nu/files.html\#wterm
 
 DEPENDS+=	xpm-3.4k:../../graphics/xpm
-DEPENDS+=	windowmaker-0.60.0:../../x11/windowmaker
+DEPENDS+=	windowmaker-*:../../x11/windowmaker
 
 USE_X11=	YES
 GNU_CONFIGURE=	YES
