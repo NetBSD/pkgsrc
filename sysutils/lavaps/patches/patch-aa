@@ -1,0 +1,28 @@
+--- process_scan_freebsd.cc.orig	Tue Nov  2 16:27:39 1999
++++ process_scan_freebsd.cc	Tue Nov  2 16:53:24 1999
+@@ -112,7 +112,7 @@
+ 	ENTRY_TRACE(__FILE__,__LINE__);
+ 	static int pages_per_kb = 0;
+ 	if (!pages_per_kb)
+-		pages_per_kb = getpagesize() / 1024;
++		pages_per_kb = sysconf(_SC_PAGESIZE) / 1024;
+ 	return pages * pages_per_kb;
+ }
+ 
+@@ -246,6 +246,16 @@
+ 	// xxx: skip p_iticks
+ 
+ 	int size, resident;
++
++#ifdef __NetBSD__
++#  ifndef UPAGES
++#    ifdef USPACE
++#      define UPAGES	( USPACE / sysconf(_SC_PAGESIZE) )
++#    else /* !USPACE */
++#      error No UPAGES, no USPACE, no fun!
++#    endif /* USPACE */
++#  endif /* !UPAGES */
++#endif /* __NetBSD__ */
+ 
+ #if __FreeBSD__ < 3
+ 	size = UPAGES + cur_kp_->kp_eproc.e_vm.vm_tsize
