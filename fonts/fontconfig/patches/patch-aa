@@ -1,28 +1,24 @@
-$NetBSD: patch-aa,v 1.3 2003/12/18 15:07:00 recht Exp $
+$NetBSD: patch-aa,v 1.4 2004/04/27 15:09:10 adam Exp $
 
---- Makefile.in.orig	2003-06-09 20:40:48.000000000 +0200
+--- Makefile.in.orig	2004-04-14 15:12:47.000000000 +0000
 +++ Makefile.in
-@@ -201,14 +201,14 @@ fontconfig-zip: $(top_builddir)/config.s
- 
+@@ -282,12 +282,12 @@ uninstall-info-am:
+ configDATA_INSTALL = $(INSTALL_DATA)
  install-configDATA: $(config_DATA)
  	@$(NORMAL_INSTALL)
 -	$(mkinstalldirs) $(DESTDIR)$(configdir)
 +	$(mkinstalldirs) $(DESTDIR)$(datadir)/examples/fontconfig
  	@list='$(config_DATA)'; for p in $$list; do \
- 	  if test -f $(srcdir)/$$p; then \
--	    echo " $(INSTALL_DATA) $(srcdir)/$$p $(DESTDIR)$(configdir)/$$p"; \
--	    $(INSTALL_DATA) $(srcdir)/$$p $(DESTDIR)$(configdir)/$$p; \
-+	    echo " $(INSTALL_DATA) $(srcdir)/$$p $(DESTDIR)$(datadir)/examples/fontconfig/$$p"; \
-+	    $(INSTALL_DATA) $(srcdir)/$$p $(DESTDIR)$(datadir)/examples/fontconfig/$$p; \
- 	  else if test -f $$p; then \
--	    echo " $(INSTALL_DATA) $$p $(DESTDIR)$(configdir)/$$p"; \
--	    $(INSTALL_DATA) $$p $(DESTDIR)$(configdir)/$$p; \
-+	    echo " $(INSTALL_DATA) $$p $(DESTDIR)$(datadir)/examples/fontconfig/$$p"; \
-+	    $(INSTALL_DATA) $$p $(DESTDIR)$(datadir)/examples/fontconfig/$$p; \
- 	  fi; fi; \
+ 	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
+ 	  f="`echo $$p | sed -e 's|^.*/||'`"; \
+-	  echo " $(configDATA_INSTALL) $$d$$p $(DESTDIR)$(configdir)/$$f"; \
+-	  $(configDATA_INSTALL) $$d$$p $(DESTDIR)$(configdir)/$$f; \
++	  echo " $(INSTALL_DATA) $$d$$p $(DESTDIR)$(datadir)/examples/fontconfig/$$f"; \
++	  $(INSTALL_DATA) $$d$$p $(DESTDIR)$(datadir)/examples/fontconfig/$$f; \
  	done
  
-@@ -465,16 +465,15 @@ mostlyclean distclean maintainer-clean
+ uninstall-configDATA:
+@@ -671,16 +671,15 @@ uninstall-info: uninstall-info-recursive
  
  
  install-data-local:
@@ -42,6 +38,6 @@ $NetBSD: patch-aa,v 1.3 2003/12/18 15:07:00 recht Exp $
 +	  $(INSTALL_DATA) local.conf $(DESTDIR)$(datadir)/examples/fontconfig/local.conf; \
  	fi; fi; fi
 -	if [ x$(DESTDIR) = x ]; then fc-cache/fc-cache -f -v; fi
- 
  # Tell versions [3.59,3.63) of GNU make to not export all variables.
  # Otherwise a system limit (for SysV at least) may be exceeded.
+ .NOEXPORT:
