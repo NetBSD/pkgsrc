@@ -1,5 +1,6 @@
-$NetBSD: patch-av,v 1.2 1999/11/12 04:50:00 hubertf Exp $
+$NetBSD: patch-av,v 1.3 1999/12/12 19:06:40 jdolecek Exp $
 
+Obsolete, kvt is not part of KDE2	jdolecek 1999/12/12
 --- ./kvt/xsetup.c	Tue Mar 30 10:23:20 1999
 +++ /usr/pkgsrc/x11/kdebase/work.i386.unpatched/kdebase-1.1.2/kvt/xsetup.c	Fri Nov 12 05:10:31 1999
 @@ -135,8 +135,6 @@
