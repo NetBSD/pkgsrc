@@ -1,0 +1,190 @@
+Tclgdbm was hacked together by John Ellson (ellson@lucent.com)
+It was derived from tcl+gdbm by Christian Lindig <lindig@ips.cs.tu-bs.de>
+
+The latest version of Tclgdbm is kept at:
+	
+	http://www.tcltk.com/ftp/ellson/
+	
+
+tclgdbm 0.1.3  - JE - upgrade to tcl7.5 loadable library
+tclgdbm 0.2    - JE - upgrade to tcl7.6 package (loadable library)
+tclgdbm 0.3    - JE - fixes for tcl8.0
+tclgdbm 0.4    - JE - fix mem leak with patch from: t-tange@ats.nis.nec.co.jp
+tclgdbm 0.5    - JE - add gdbm error, and gdbm writemode
+                      with patch from: Scott Beasley <jscottb@InfoAve.Com>
+tclgdbm 0.6    - JE - support for Stubs (8.0.6, 8.1.1, or later)
+
+NOTE: Dynamic loading requires that libgdbm.a be built with -fpic
+   otherwise you may get all kinds of relocation errors from ld.
+
+NOTE: This extension has not yet been converted to use Tcl_Obj
+so the database cannot yet be used to store strings containing NULLs.
+
+
+Tclgdbm
+-------
+
+This directory contains the source of tclgdbm, a dynamically loaded
+extension for accessing GNU gdbm files from tcl/tk. GNU gdbm files
+provide persistent mappings from arbitrary keys to values. tclgdbm 
+uses these features to provide mappings from (short) key
+strings to (larger) data strings. The following example illustrates
+the basic new commands, see below for details:
+
+##
+## load dll
+##
+package require Tclgdbm
+
+##
+## open database "test.data" for read/write (create if not existent)
+##
+set db [gdbm open test.data rwc];
+foreach i {1 2 3 4 5 6} {
+   # key is $i, store string "This data for $i"
+   gdbm store $db $i "This data for $i" ;
+}
+
+##
+## gdbm list $db gives list of all keys in $db
+##
+foreach key [lsort [gdbm list $db]] {
+   # retrieve each content and display it
+   puts stdout "$key [gdbm fetch $db $key]" ;
+}
+
+gdbm close $db ;
+
+Commands
+--------
+
+gdbm open <file> [r|rw|rwc|rwn]
+
+Opens a gdbm database <file> with an optional mode. If the mode is not
+given it is opened for reading (r). The mode can be (r) (read only),
+(rw) (read,write), (rwc) (read,write and create if not already
+existent), and (rwn) (read,write and create a new database regardless
+if one exists). The command returns a handle <name> which is used to
+refer to the open database.
+ 
+gdbm close <name>  
+
+Close a gdbm database with the name <name>.
+ 
+gdbm insert <name> <key> <content>  
+
+<name> is the name of a gdbm database previously opened with gdbm
+open.  Inserts the data <content> giving it the key <key>.  If data
+with <key> is already in the database an error is generated. Nothing
+returned.
+ 
+gdbm store  <name> <key> <content>  
+
+<name> is the name of a gdbm database previously opened with gdbm
+open.  Inserts <content> to the database. If <key> already exists
+the new <content> replaces the old. Nothing returned.
+ 
+gdbm fetch  <name> <key>  
+ 
+<name> is the name of a gdbm database previously opened with gdbm
+open.  Searches for <key> in the database and returns the associated
+contents, or returns a tcl error if the key is not found.
+ 
+gdbm delete  <name> <key> 
+ 
+<name> is the name of a gdbm database previously opened with gdbm
+open.  Searches for <key> and deletes it in the database.  If <key> is
+not found an error is generated.  Nothing returned.
+ 
+gdbm list  <name>  
+
+<name> is the name of a gdbm database previously opened with gdbm
+open.  Returns a list of all keys in the database.
+ 
+gdbm reorganize  <name>  
+
+<name> is the name of a gdbm database previously opened with gdbm
+open.  This routine can be used to shrink the size of the database
+file if there have been a lot of deletions.  Nothing returned.
+
+gdbm exists <name> <key>
+
+Returns "0" if <key> is not found within the previously opened
+database <name>, "1" otherwise.
+
+gdbm firstkey <name> 
+gdbm nextkey <name> <lastkey>
+
+A first/next scheme permits retrieving all keys from a database in
+sequential (but unsorted!) order. gdbm firstkey <name> returns a
+starting key, which may be used to retrieve the following key with
+nextkey. nextkey returns the next key to a given previous key. When no
+next key is available, the empty string is returned.
+
+
+Speed
+-----
+
+Here are some (real) execution times on a SparcStation 2 (SunOS
+4.1.1). The file was stored on a local and a remote filesystem.
+See torture.tcl for details.
+
+				local fs	network fs
+
+create 1000 short entries	2.2 sec		50.0 sec
+read 1000 entries (first/next)	1.2 sec		1.5 sec
+read 1000 entries (list)	1.1 sec		1.3 sec
+delete 100 entries out of 1000	8.7 sec		23.2 sec
+lookup 1000 keys out of 900	0.63 sec	0.82 sec
+
+Summary: write access is expensive, especially on remote file
+systems. 
+
+Copyright
+---------
+
+see the file COPYRIGHT
+
+History
+-------
+
+The first version was derived from tclgdbm1.0 by
+<tdoan@x400gate.bnr.ca> from the tcl distribution. The actual version
+is nearly totally rewritten and uses much more of the data structures
+provided by tcl.
+
+Future Plans
+------------
+
+The current version maps a key string to a data string. Future
+versions should map a key string to a list of datastrings i.e.:
+
+gdbm store <db> <key> <list of strings>		
+gdbm fetch <db> <key> 				returns a list
+
+Credits
+-------
+
+Juergen Schoenwaelder <schoenw@ibr.cs.tu-bs.de> gave much hints that
+improved portability and elegance of the code.
+
+Bugs
+----
+
+- <key> strings are not allowed to be longer than 1023 Bytes. 	
+- No man page yet - any volunteers?
+- not extensively tested yet
+
+Report bugs, ports, improvements and successful compilation on
+platforms different from the ones mentioned above to the author.
+
+
+Author
+------
+
+Christian Lindig <lindig@ips.cs.tu-bs.de>
+TU Braunschweig
+Institut fuer Programmiersprachen
+Abteilung Softwaretechnologie
+D-38106 Braunschweig	
+Germany

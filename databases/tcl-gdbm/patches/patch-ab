@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 1999/07/07 15:14:26 bouyer Exp $
+
+--- tclgdbm.c.orig	Tue Jul  6 14:55:30 1999
++++ tclgdbm.c	Tue Jul  6 14:55:41 1999
+@@ -7,7 +7,7 @@
+ #endif
+ 
+ #include <stdio.h>
+-#include <tcl.h>
++#include <tcl8.0/tcl.h>
+ #include <gdbm.h>
+ 
+ /*
