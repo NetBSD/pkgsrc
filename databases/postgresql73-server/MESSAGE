@@ -1,0 +1,17 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2004/07/24 22:20:31 recht Exp $
+
+To enable this package, put the following into your /etc/rc.conf:
+
+	pgsql=yes
+	pgsql_flags="-i"        # allows TCP/IP connections
+	pgsql_flags="-i -l"     # enables SSL connections (TCP/IP and
+				# ~pgsql/data/server.crt required)
+
+and ensure that
+
+	${RCD_SCRIPTS_DIR}/pgsql start
+
+is run at the appropriate time.
+
+===========================================================================
