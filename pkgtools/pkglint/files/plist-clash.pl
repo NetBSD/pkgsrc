@@ -1,9 +1,8 @@
 #!@PERL@
 #
-# $NetBSD: plist-clash.pl,v 1.2 2004/01/10 22:31:51 wiz Exp $
+# $NetBSD: plist-clash.pl,v 1.3 2005/02/14 22:14:48 cube Exp $
 #
 # Scan all ports and look for filenames used by more than one port.
-#
 
 if(`uname -s` eq "FreeBSD"){
     $OS="FreeBSD";
