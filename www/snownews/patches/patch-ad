@@ -1,7 +1,11 @@
-$NetBSD: patch-ad,v 1.1 2004/02/15 23:52:29 wiz Exp $
---- conversions.h.orig	2003-11-02 14:41:22.000000000 -0600
-+++ conversions.h	2003-11-04 18:27:51.000000000 -0600
-@@ -1,4 +1,4 @@
+$NetBSD: patch-ad,v 1.2 2004/04/20 18:28:11 minskim Exp $
+
+--- conversions.h.orig	2004-03-07 15:41:07.000000000 -0600
++++ conversions.h
+@@ -23,7 +23,7 @@
+ #ifndef CONVERSIONS_H
+ #define CONVERSIONS_H
+ 
 -char * iconvert (char * inbuf, char * from, char * to);
 +char * iconvert (const char * inbuf, char * from, char * to);
  char * UIDejunk (char * feed_description);
