@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/09/11 23:31:16 rh Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/01/03 23:26:22 jmmv Exp $
 etc/gconf/gconf.xml.defaults/desktop/%gconf.xml
 etc/gconf/gconf.xml.defaults/desktop/gnome/%gconf.xml
 etc/gconf/gconf.xml.defaults/desktop/gnome/accessibility/%gconf.xml
@@ -99,12 +99,16 @@ lib/pkgconfig/libgnome-2.0.pc
 libexec/gnome2-db2html
 libexec/gnome2-info2html
 libexec/gnome2-man2html
+${PKGLOCALEDIR}/locale/am/LC_MESSAGES/libgnome-2.0.mo
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/libgnome-2.0.mo
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/libgnome-2.0.mo
+${PKGLOCALEDIR}/locale/be/LC_MESSAGES/libgnome-2.0.mo
 ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/libgnome-2.0.mo
 ${PKGLOCALEDIR}/locale/bs/LC_MESSAGES/libgnome-2.0.mo
+${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/libgnome-2.0.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/libgnome-2.0.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/libgnome-2.0.mo
+${PKGLOCALEDIR}/locale/el/LC_MESSAGES/libgnome-2.0.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/libgnome-2.0.mo
 ${PKGLOCALEDIR}/locale/eu/LC_MESSAGES/libgnome-2.0.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/libgnome-2.0.mo

@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2003/01/03 15:26:57 jmmv Exp $
+# $NetBSD: Makefile,v 1.6 2003/01/03 23:26:21 jmmv Exp $
 #
 
-DISTNAME=	libgnome-2.0.4
-PKGREVISION=	1
+DISTNAME=	libgnome-2.0.6
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgnome/2.0/}
 EXTRACT_SUFX=	.tar.bz2
@@ -14,14 +13,13 @@ COMMENT=	Core GNOME2 library (non-graphical)
 BUILD_DEPENDS+=		gtk-doc-[0-9]*:../../textproc/gtk-doc
 BUILD_USES_MSGFMT=	YES
 
-BUILDLINK_DEPENDS.libxml2=libxml2>=2.4.22
-BUILDLINK_DEPENDS.esound=esound>=0.2.26
+BUILDLINK_DEPENDS.libxml2=	libxml2>=2.4.22
+BUILDLINK_DEPENDS.esound=	esound>=0.2.26
 
 USE_BUILDLINK2=		YES
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
 USE_GMAKE=		YES
-USE_GNU_GETTEXT=	YES
 
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
