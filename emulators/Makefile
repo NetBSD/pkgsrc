@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 1999/05/23 05:17:58 tv Exp $
+# $NetBSD: Makefile,v 1.27 1999/06/19 14:40:08 tron Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/07/31 07:23:58 max Exp
 #
 
@@ -31,6 +31,7 @@
     SUBDIR += suse_x11
     SUBDIR += suse_xforms
 #    SUBDIR += tkhfs
+    SUBDIR += uae
 #    SUBDIR += vgb
     SUBDIR += vice
 #    SUBDIR += vmsbackup
