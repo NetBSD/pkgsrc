@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2001/09/02 15:35:37 veego Exp $
+$NetBSD: distinfo,v 1.2 2001/10/14 07:14:24 veego Exp $
 
-SHA1 (jhead/jhead.zip) = 6cea04ea736623c5a58b16240f5a08ba5e6c6b33
-Size (jhead/jhead.zip) = 27186 bytes
+SHA1 (jhead-1.4/jhead.zip) = 6e54737293fcb15130d0fe79c18266e16bb157db
+Size (jhead-1.4/jhead.zip) = 29987 bytes
