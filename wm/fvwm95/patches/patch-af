@@ -1,8 +1,17 @@
-$NetBSD: patch-af,v 1.1.1.1 2000/12/12 02:03:48 wiz Exp $
+$NetBSD: patch-af,v 1.2 2001/05/01 16:34:11 jlam Exp $
 
---- configure.orig	Wed Dec 11 03:55:16 1996
-+++ configure	Tue Jan 11 10:23:21 2000
-@@ -2126,7 +2126,7 @@
+--- configure.orig	Tue Dec 10 11:55:16 1996
++++ configure
+@@ -518,8 +518,6 @@
+ 
+ 
+ 
+-CFLAGS=-O
+-
+ #-------------------------------------------------------------------
+ #
+ # Remove the ./config.cache file and rerun configure if
+@@ -2126,7 +2124,7 @@
  fvwm_icons="$x_includes/X11/bitmaps:$x_includes/X11/pixmaps:$prefix/icons"
  
  if test "x$x_libraries" != x ; then
@@ -11,7 +20,7 @@ $NetBSD: patch-af,v 1.1.1.1 2000/12/12 02:03:48 wiz Exp $
  fi
  if test "x$x_includes" != x ; then
    x_includes="-I$x_includes"
-@@ -2247,7 +2247,6 @@
+@@ -2247,7 +2245,6 @@
            libs/Makefile \
            mini-icons/Makefile \
            utils/Makefile \
@@ -19,7 +28,7 @@ $NetBSD: patch-af,v 1.1.1.1 2000/12/12 02:03:48 wiz Exp $
            sample.fvwmrc/Makefile \
            modules/Makefile \
            modules/FvwmAudio/Makefile \
-@@ -2329,7 +2328,6 @@
+@@ -2329,7 +2326,6 @@
            libs/Makefile \
            mini-icons/Makefile \
            utils/Makefile \
