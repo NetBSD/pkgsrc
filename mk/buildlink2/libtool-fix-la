@@ -1,4 +1,4 @@
-# $NetBSD: libtool-fix-la,v 1.6 2002/09/23 22:32:08 jlam Exp $
+# $NetBSD: libtool-fix-la,v 1.7 2002/09/23 23:49:01 jlam Exp $
 #
 # For *.la files, in the "relink_command" line, we make the following
 # replacements:
@@ -66,7 +66,7 @@ if [ -f $lafile ]; then
 		*.la)
 			ltlibsdir=`@DIRNAME@ $i`/.libs
 			case "$ltlibsdir" in
-			@WRKSRC@/*)
+			../*|@WRKSRC@/*)
 				case "$relink" in
 				*"-L$ltlibsdir "*) ;;
 				*"-L$ltlibsdir") ;;
