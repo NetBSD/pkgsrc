@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2004/01/06 08:00:28 jlam Exp $
+# $NetBSD: Makefile,v 1.45 2004/01/07 07:16:13 jlam Exp $
 #
 
 DISTNAME=       gd-2.0.17
@@ -25,5 +25,5 @@ LIBS+=			-lpthread
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/xpm/buildlink3.mk"
 
-.include "../../mk/pthread.buildlink2.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
