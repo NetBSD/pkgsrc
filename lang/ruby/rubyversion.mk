@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.4 2004/12/01 15:30:16 taca Exp $
+# $NetBSD: rubyversion.mk,v 1.5 2004/12/04 16:05:06 taca Exp $
 #
 
 .ifndef _RUBYVERSION_MK
@@ -41,7 +41,7 @@ RUBY_VERSION_SUPPORTED?= 16 18
 # RUBY_VERSION_LIST defines the list of ${RUBY_VER} which is known to
 #	this framework.
 #
-RUBY_VERSION_LIST= 16 18
+RUBY_VERSION_LIST= 16,18
 
 # RUBY_NOVERSION should be set to "Yes" if the package dosen't depend on
 #	any specific version of ruby command.  In this case, package's
@@ -119,6 +119,15 @@ RUBY_ARCH?= ${LOWER_ARCH}-${LOWER_OPSYS}-gnu
 .endif
 
 #
+# RUBY_DLEXT is suffix of extention library.
+#
+.if ${OPSYS} == "Darwin"
+RUBY_DLEXT=	bundle
+.else
+RUBY_DLEXT=	so
+.endif
+
+#
 # common PATH
 #
 RUBY_LIBDIR?=		${LOCALBASE}/lib/ruby/${RUBY_VER_DIR}
@@ -146,7 +155,8 @@ PLIST_RUBY_DIRS=	RUBY_LIBDIR="${RUBY_LIBDIR}" \
 			RUBY_SITELIBDIR="${RUBY_SITELIBDIR}" \
 			RUBY_SITEARCHLIBDIR="${RUBY_SITEARCHLIBDIR}" \
 			RUBY_DOCDIR="${RUBY_DOCDIR}" \
-			RUBY_EXAMPLESDIR="${RUBY_EXAMPLESDIR}"
+			RUBY_EXAMPLESDIR="${RUBY_EXAMPLESDIR}" \
+			RUBY_DLEXT="${RUBY_DLEXT}"
 
 PLIST_SUBST+=		RUBY_VER="${RUBY_VER}" \
 			${PLIST_RUBY_DIRS:S,DIR="${LOCALBASE}/,DIR=",}
