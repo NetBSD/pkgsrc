@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.9 1999/12/10 00:26:14 ad Exp $
+# $NetBSD: Makefile,v 1.10 2000/01/09 01:29:30 wiz Exp $
 
 DISTNAME=	exim-3.12
 CATEGORIES=	mail net
-
 MASTER_SITES=	ftp://ftp.exim.org/pub/exim/ \
 		ftp://ftp.cus.cam.ac.uk/pub/software/programs/exim/ \
 		ftp://ftp.esat.net/pub/networking/mail/mta/exim/
-
 DISTFILES=	exim-3.12.tar.gz exim-html-3.10.tar.gz
+
 MAINTAINER=	ad@netbsd.org
 HOMEPAGE=	http://www.exim.org/
 
@@ -41,7 +40,7 @@ post-install:
 	${SED} -e 's:@PREFIX@:${PREFIX}:' \
 	    < ${FILESDIR}/exim_newaliases \
 	    > ${PREFIX}/sbin/exim_newaliases
-	chmod ugo+x ${PREFIX}/sbin/exim_newaliases
+	${CHMOD} ugo+x ${PREFIX}/sbin/exim_newaliases
 	${SED} -e 's:@PREFIX@:${PREFIX}:' \
 	    < ${FILESDIR}/mailer.conf.exim \
 	    > ${PREFIX}/etc/exim/mailer.conf.exim
