@@ -1,31 +1,27 @@
-# $NetBSD: Makefile,v 1.7 2003/06/10 09:54:41 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2003/12/07 00:51:07 epg Exp $
 
-DISTNAME=	db-4.1.25
-PKGNAME=	db4-4.1.25
+DISTNAME=		db-4.2.52
+PKGNAME=		${DISTNAME:S/db/db4/}
 WRKSRC=		${WRKDIR}/${DISTNAME}/build_unix
-CATEGORIES=	databases
+CATEGORIES=		databases
 MASTER_SITES=	http://www.sleepycat.com/update/snapshot/
 
-PATCHFILES=		patch.4.1.25.1
-PATCH_DIST_ARGS=	-d ${WRKDIR}/${DISTNAME} --forward --quiet -E ${PATCH_DIST_STRIP}
-PATCH_SITES=		http://www.sleepycat.com/update/4.1.25/
+MAINTAINER=		tech-pkg@NetBSD.org
+HOMEPAGE=		http://www.sleepycat.com/
+COMMENT=		Berkeley DB version 4 from Sleepycat Software
 
-MAINTAINER=	dolemite@wuli.nu
-HOMEPAGE=	http://www.sleepycat.com/
-COMMENT=	Sleepycat Software's Berkeley DB version 4
-
-USE_BUILDLINK2=		yes
-USE_GCC_SHLIB=		yes
-USE_LIBTOOL=		yes
+USE_BUILDLINK2=	YES
+USE_GCC_SHLIB=	YES
+USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKDIR}/${DISTNAME}/build_unix/libtool
-GNU_CONFIGURE=		yes
+GNU_CONFIGURE=	YES
 CONFIGURE_SCRIPT=	../dist/configure
 
-CONFIGURE_ARGS+=	--enable-rpc
-CONFIGURE_ARGS+=        --program-transform-name=s,db_,db4_,
-CONFIGURE_ARGS+=        --includedir=${PREFIX}/include/db4
 CONFIGURE_ARGS+=	--enable-cxx
+CONFIGURE_ARGS+=	--enable-rpc
 CONFIGURE_ARGS+=	--enable-shared
+CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/db4
+CONFIGURE_ARGS+=	--program-transform-name=s,db_,db4_,
 
 .if defined(WITH_JAVA) && (${WITH_JAVA} == "YES")
 CONFIGURE_ARGS+=	--enable-java
@@ -33,6 +29,6 @@ CONFIGURE_ARGS+=	--enable-java
 .endif
 
 post-install:
-	${CHOWN} -R ${BINOWN}:${BINGRP} ${PREFIX}/share/doc/db4
+	${CHOWN} -R ${DOCOWN}:${DOCGRP} ${PREFIX}/share/doc/db4
 
 .include "../../mk/bsd.pkg.mk"
