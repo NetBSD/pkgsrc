@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.2 1998/08/11 19:30:48 tv Exp $
+# $NetBSD: bsd.prefs.mk,v 1.3 1998/08/19 16:23:40 tv Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -9,6 +9,9 @@
 OPSYS!= /usr/bin/uname -s
 .endif
 
+# Don't complain about environment settings on recursive makes.
+__PREFIX_SET__=${PREFIX}
+
 .if defined(MAKECONF) && exists(${MAKECONF})
 .include "${MAKECONF}"
 .elif ${OPSYS} == "FreeBSD" && exists(/etc/make.conf)
@@ -17,7 +20,7 @@ OPSYS!= /usr/bin/uname -s
 .include "/etc/mk.conf"
 .endif
 
-.if defined(PREFIX)
+.if defined(PREFIX) && (${PREFIX} != ${__PREFIX_SET__})
 .BEGIN:
 	@${ECHO_MSG} "You can NOT set PREFIX manually or in mk.conf.  Set LOCALBASE or X11BASE"
 	@${ECHO_MSG} "depending on your needs.  See the pkg system documentation for more info."
