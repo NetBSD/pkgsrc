@@ -1,4 +1,4 @@
-# $NetBSD: NetBSD.mk,v 1.3 2004/11/11 22:29:40 tv Exp $
+# $NetBSD: NetBSD.mk,v 1.4 2004/11/16 16:21:40 tv Exp $
 #
 # Variable definitions for the NetBSD operating system.
 
@@ -91,7 +91,6 @@ DEPENDS+=	${USE_USERADD:D${_USER_DEPENDS}}
 DEPENDS+=	${USE_GROUPADD:D${_USER_DEPENDS}}
 .endif
 
-CPP_PRECOMP_FLAGS?=	# unset
 DEF_UMASK?=		0022
 .if ${OBJECT_FMT} == "ELF"
 EXPORT_SYMBOLS_LDFLAGS?=-Wl,-E	# add symbols to the dynamic symbol table
