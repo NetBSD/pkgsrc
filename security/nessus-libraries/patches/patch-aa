@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.2 2002/05/10 13:18:46 frueauf Exp $
+$NetBSD: patch-aa,v 1.3 2002/12/19 18:30:14 frueauf Exp $
 
---- nessus-config.pre.in-orig	Wed Nov 14 17:18:04 2001
-+++ nessus-config.pre.in	Fri May 10 13:27:27 2002
+--- nessus-config.pre.in.orig	Sat Dec 14 15:13:20 2002
++++ nessus-config.pre.in	Thu Dec 19 15:24:39 2002
 @@ -48,7 +48,7 @@
  		;;
  	--libs)
  	
 -		echo $Xn "-lc -L$LIBDIR -lnessus -lhosts_gatherer @pcap_flag@ $CIPHER $EXTRA $Xc"
-+		echo $Xn "-lc -Wl,-R$LIBDIR -L$LIBDIR -lnessus -lhosts_gatherer @pcap_flag@ $CIPHER $EXTRA $Xc"
++		echo $Xn "-lc -Wl,-R$LIBDIR  -L$LIBDIR -lnessus -lhosts_gatherer @pcap_flag@ $CIPHER $EXTRA $Xc"
  		;;
  	--cflags)
- 		echo $Xn "-I$INCLUDEDIR $DEFS -I$INCLUDEDIR/nessus $CIPHER_CFLAGS $SSL_CFLAGS $Xc"
+ 		echo $Xn "$DEFS -I$INCLUDEDIR/nessus $CIPHER_CFLAGS $SSL_CFLAGS $Xc"
