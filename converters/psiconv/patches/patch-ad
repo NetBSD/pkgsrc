@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.1 2000/07/08 15:22:32 sakamoto Exp $
+$NetBSD: patch-ad,v 1.2 2000/08/30 16:13:13 sakamoto Exp $
 
 --- psiconv/gen_image.c.orig	Sat Dec  4 09:46:15 1999
 +++ psiconv/gen_image.c	Sat Jul  8 18:49:11 2000
-@@ -33,8 +33,23 @@
+@@ -33,8 +33,24 @@
  static Image *get_paint_data_section(psiconv_paint_data_section sec)
  {
    Image *image;
@@ -10,6 +10,7 @@ $NetBSD: patch-ad,v 1.1 2000/07/08 15:22:32 sakamoto Exp $
 -                             sec->blue,NULL);
 +  float *pixel, *p, *red, *green, *blue;
 +  int x,y;
++  ExceptionInfo exception;
 +
 +  red = sec->red;
 +  green = sec->green;
@@ -22,7 +23,7 @@ $NetBSD: patch-ad,v 1.1 2000/07/08 15:22:32 sakamoto Exp $
 +      *p++ = *blue++;
 +    }
 +  }
-+  image = CreateImage(sec->xsize,sec->ysize,"RGB",FloatPixel,pixel);
++  image = ConstituteImage(sec->xsize,sec->ysize,"RGB",FloatPixel,pixel,&exception);
 +  free(pixel);
 +
    return image;
