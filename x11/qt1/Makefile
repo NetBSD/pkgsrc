@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/03/30 16:40:47 tron Exp $
+# $NetBSD: Makefile,v 1.4 2000/04/13 10:13:20 dmcmahill Exp $
 #
 
 DISTNAME=	qt-1.44
@@ -39,7 +39,6 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/moc ${QTPREFIX}/bin
 	${INSTALL_DATA_DIR} ${QTPREFIX}/lib
 	@${LIBTOOL} ${INSTALL_DATA} ${WRKSRC}/src/libqt.la ${QTPREFIX}/lib/
-	${LN} -fs ${QTPREFIX}/lib/libqt.so.1.44 ${PREFIX}/lib/libqt.so.1.44
 	${INSTALL_DATA_DIR} ${QTPREFIX}/include
 	${INSTALL_DATA} ${WRKSRC}/include/* ${QTPREFIX}/include/
 	${INSTALL_MAN_DIR} ${QTPREFIX}/man/man1
