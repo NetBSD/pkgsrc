@@ -1,26 +1,28 @@
-$NetBSD: patch-ad,v 1.1 2001/03/11 13:46:12 martin Exp $
+$NetBSD: patch-ad,v 1.2 2001/09/28 04:37:27 lukem Exp $
 
---- configure.in.orig	Sat Mar 10 15:32:25 2001
-+++ configure.in	Sat Mar 10 15:32:27 2001
-@@ -350,12 +350,16 @@
+--- configure.in.orig	Tue Jun 12 07:47:56 2001
++++ configure.in	Fri Sep 28 10:41:01 2001
+@@ -396,13 +396,17 @@
  dnl | let's test it for sanity before proceeding.  It's better to      |
  dnl | catch them here rather than in the program itself at runtime.    |
  
--temp_group=`grep ^$RUN_AS_GROUP: /etc/group`
--if ( test x"$temp_group" = "x" )
+-grep "^$RUN_AS_GROUP:" /etc/group >/dev/null 2>/dev/null
+-if (test "$?" = "1")
 -then
--   AC_MSG_WARN($RUN_AS_GROUP not found in /etc/group!)
--   AC_MSG_ERROR(Restart configure using --with-group and another group name.)
+-	# not found, fatal error
+-	AC_MSG_WARN($RUN_AS_GROUP not found in /etc/group!)
+-	AC_MSG_WARN(You might want to rerun configure using --with-group and another group name.)
 -fi  
 +dnl | NetBSD's pkgsrc setup creates the user and group AFTER the build
 +dnl | and BEFORE install.  This gives the configure and build a chance
 +dnl | to fail before modifying the group and passwd files.
 +dnl
-+dnl temp_group=`grep ^$RUN_AS_GROUP: /etc/group`
-+dnl if ( test x"$temp_group" = "x" )
++dnl grep "^$RUN_AS_GROUP:" /etc/group >/dev/null 2>/dev/null
++dnl if (test "$?" = "1")
 +dnl then
-+dnl    AC_MSG_WARN($RUN_AS_GROUP not found in /etc/group!)
-+dnl    AC_MSG_ERROR(Restart configure using --with-group and another group name.)
++dnl 	# not found, fatal error
++dnl 	AC_MSG_WARN($RUN_AS_GROUP not found in /etc/group!)
++dnl 	AC_MSG_WARN(You might want to rerun configure using --with-group and another group name.)
 +dnl fi  
  
  dnl | All done with group tests.                                       |

@@ -1,10 +1,9 @@
-$NetBSD: distinfo,v 1.2 2001/04/19 11:29:10 agc Exp $
+$NetBSD: distinfo,v 1.3 2001/09/28 04:37:27 lukem Exp $
 
-SHA1 (nut-0.44.3-pre5.tar.gz) = 066d62ec6ebd522aa9b7d0f046856cfb1a34f61a
-Size (nut-0.44.3-pre5.tar.gz) = 241901 bytes
+SHA1 (nut-0.45.1.tar.gz) = 2da78c22dd7162140c2b332bde69dde7a67d7b2c
+Size (nut-0.45.1.tar.gz) = 306332 bytes
+SHA1 (upsmon-pdflag.diff) = 463978fc9c0ab0b8a31bb7562991d9c3cca57166
+Size (upsmon-pdflag.diff) = 2160 bytes
 SHA1 (patch-aa) = 2919c36f928d7b3a22574f8ca0633cd11bb99c70
-SHA1 (patch-ab) = da464964fd63f2c3cb34d06f2d6de9e5c1aa356a
-SHA1 (patch-ad) = 2e325eb1a8bd85ef81d265df76e866d8a31a6b57
-SHA1 (patch-ae) = 22f61a60b3f707514d67ebd0ec7ba9a0ba50e781
-SHA1 (patch-af) = 6bc9661388928d6a294cdfa156e77aa5fe9669cb
-SHA1 (patch-ag) = e46760b14601313ddd61c40a09965c01be9060fb
+SHA1 (patch-ab) = 76a764c47c6832154aa20369d7ba46145bc73535
+SHA1 (patch-ad) = 1132a678cc53882cc92764ed17bbd4cf4152c58d

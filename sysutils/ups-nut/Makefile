@@ -1,10 +1,14 @@
-# $NetBSD: Makefile,v 1.9 2001/08/27 14:35:14 tron Exp $
+# $NetBSD: Makefile,v 1.10 2001/09/28 04:37:27 lukem Exp $
 #
 
-DISTNAME=		nut-0.44.3-pre5
-PKGNAME=		ups-nut-0.44.3pre5
+DISTNAME=		nut-0.45.1
+PKGNAME=		ups-nut-0.45.1
 CATEGORIES=		sysutils
-MASTER_SITES=		http://www.exploits.org/nut/testing/0.44.3-pre/
+MASTER_SITES=		http://www.exploits.org/nut/release/
+
+PATCH_SITES=		http://www.exploits.org/nut/testing/0.45.2-pre/
+PATCHFILES=		upsmon-pdflag.diff
+PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=		collver@linuxfreemail.com
 HOMEPAGE=		http://www.exploits.org/nut/
@@ -30,7 +34,6 @@ ADDGROUP=		groupadd
 USERDEL=		userdel
 GROUPDEL=		groupdel
 .endif
-WRKSRC=			${WRKDIR}/nut-0.44.3
 DEINSTALL_FILE=         ${WRKDIR}/DEINSTALL
 INSTALL_FILE=           ${WRKDIR}/INSTALL
 BUILD_DEPENDS+=		autoconf>=2.13:../../devel/autoconf
@@ -78,6 +81,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/docs/FAQ ${NUT_DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/docs/Changes.trust ${NUT_DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/README ${NUT_DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/QUICKSTART ${NUT_DOCDIR}
 
 .include "../../mk/bsd.pkg.mk"
