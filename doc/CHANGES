@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5540 2004/04/11 18:16:48 jmmv Exp $
+$NetBSD: CHANGES,v 1.5541 2004/04/11 18:27:27 snj Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1913,3 +1913,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated lcms to 1.12nb1 [dmcmahill 2004-04-11]
 	Added bmp-0.9.6 [jmmv 2004-04-11]
 	Added bmp-esound-0.9.6 [jmmv 2004-04-11]
+	Added liferea-0.3.3 [snj 2004-04-11]
