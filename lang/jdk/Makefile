@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.28 2002/07/27 21:32:48 jschauma Exp $
+# $NetBSD: Makefile,v 1.29 2002/07/28 12:38:50 schmonz Exp $
 #
 
 VERSION=	1.1.8
 PKGNAME=	jdk-${VERSION}
 PKGREVISION=	1
-CATEGORIES=     lang
-MASTER_SITES=   ftp://ftp.netbsd.org/pub/NetBSD/misc/java/i386/${VERSION}/ \
+CATEGORIES=	lang
+MASTER_SITES=	ftp://ftp.netbsd.org/pub/NetBSD/misc/java/i386/${VERSION}/ \
 		ftp://ftp.de.netbsd.org/pub/NetBSD/misc/java/i386/${VERSION}/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=     jwise@netbsd.org
-HOMEPAGE=       http://www.quick.com.au/java/
+MAINTAINER=	jwise@netbsd.org
+HOMEPAGE=	http://www.quick.com.au/java/
 COMMENT=	Sun's Java(tm) Development Kit
 
 LICENSE=	jdk-license
@@ -25,7 +25,7 @@ DISTNAME=	jdk${VERSION}-rc1-elf
 WRKSRC=		${WRKDIR}/jdk${VERSION}-elf
 PLIST_SRC=	${PKGDIR}/PLIST-elf
 .else
-DISTNAME=       jdk${VERSION}-rc1
+DISTNAME=	jdk${VERSION}-rc1
 WRKSRC=		${WRKDIR}/jdk${VERSION}
 PLIST_SRC=	${PKGDIR}/PLIST-aout
 .endif
@@ -56,7 +56,7 @@ pre-install:
 			${LN} -s $$X.* $$X; 				\
 		elif [ -f "$$X" ] ;then					\
 			${MV} $$X $$X.${VERSION} ;			\
-			${LN} -s $$X.${VERSION} $$X;  			\
+			${LN} -s $$X.${VERSION} $$X;			\
 		fi ;							\
 	done)
 .endif
