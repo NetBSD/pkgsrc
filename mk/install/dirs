@@ -1,11 +1,11 @@
 #!@SH@
 #
-# $NetBSD: dirs,v 1.3 2005/01/31 17:42:20 jlam Exp $
+# $NetBSD: dirs,v 1.4 2005/01/31 20:32:58 jlam Exp $
 #
 # +DIRS - reference-counted directory management script
 #
 # Usage: ./+DIRS ADD|REMOVE [metadatadir]
-#        ./+DIRS CHECK-ADD|CHECK-REMOVE
+#        ./+DIRS CHECK-ADD|CHECK-REMOVE [metadatadir]
 #
 # This script supports two actions, ADD and REMOVE, that will add or
 # remove the directories needed by the package associated with
