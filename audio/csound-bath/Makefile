@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/03/23 02:22:59 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2002/12/24 18:55:33 wiz Exp $
 #
 
 DISTNAME=		Csound4.18
@@ -6,7 +6,7 @@ PKGNAME=		csound-bath-4.18
 CATEGORIES=		audio
 MASTER_SITES=		ftp://ftp.cs.bath.ac.uk/pub/dream/newest/
 
-MAINTAINER=		collver@linuxfreemail.com
+MAINTAINER=		collver1@attbi.com
 HOMEPAGE=		http://www.csound.org
 COMMENT=		software synthesizer and sequencer
 

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2002/09/21 12:55:07 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2002/12/24 18:55:38 wiz Exp $
 #
 
 DISTNAME=		fkiss-0.32
 CATEGORIES=		games
 MASTER_SITES=		http://www.oersted.co.jp/~yav/soft/fkiss/
 
-MAINTAINER=		collver@linuxfreemail.com
+MAINTAINER=		collver1@attbi.com
 HOMEPAGE=		http://www.oersted.co.jp/~yav/soft/indexe.html#fkiss
 COMMENT=		kisekae viewer
 

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2001/12/19 20:05:02 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2002/12/24 18:55:39 wiz Exp $
 
 DISTNAME=		ularn
 PKGNAME=		ularn-6.12.92
 CATEGORIES=		games
 MASTER_SITES=		ftp://ftp.win.tue.nl/pub/games/larn/
 
-MAINTAINER=		collver@linuxfreemail.com
+MAINTAINER=		collver1@attbi.com
 HOMEPAGE=		http://www.win.tue.nl/games/roguelike/larn/
 COMMENT=		fantasy roguelike game based on vintage larn
 
