@@ -1,10 +1,10 @@
-$NetBSD: patch-an,v 1.1 2000/08/14 14:20:59 wiz Exp $
+$NetBSD: patch-an,v 1.2 2001/05/20 20:52:25 rh Exp $
 
---- Input/cdaudio/Makefile.in.orig	Mon Jan 31 19:44:37 2000
-+++ Input/cdaudio/Makefile.in	Mon Aug 14 16:00:37 2000
-@@ -139,7 +139,7 @@
+--- Input/cdaudio/Makefile.in.orig	Tue Nov 28 01:56:12 2000
++++ Input/cdaudio/Makefile.in
+@@ -166,7 +166,7 @@
  
- INCLUDES = @GTK_CFLAGS@
+ INCLUDES = @GTK_CFLAGS@ @XML_CFLAGS@ -I$(top_buiddir)/intl
  libcdaudio_la_LDFLAGS = $(cdaudioldflags)
 -libcdaudio_la_LIBADD = @GTK_LIBS@ @XML_LIBS@
 +libcdaudio_la_LIBADD = @GTK_LIBS@ @XML_LIBS@ -lossaudio
