@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1999/01/30 23:18:48 agc Exp $
+# $NetBSD: Makefile,v 1.4 2000/07/11 08:41:32 agc Exp $
 #
 
 DISTNAME=		tanked-0.90
@@ -15,7 +15,7 @@ USE_X11BASE=		yes
 post-patch:
 	@${TOUCH} ${WRKSRC}/client/tanked.man
 	@${MV} ${WRKSRC}/server/maps.list ${WRKSRC}/server/maps.list.bak
-	@${SED} -e 's@XXX@${X11BASE}/share/tanked/@' \
+	@${SED} -e 's@XXX@${X11PREFIX}/share/tanked/@' \
 		< ${WRKSRC}/server/maps.list.bak > ${WRKSRC}/server/maps.list
 
 .include "../../mk/bsd.pkg.mk"
