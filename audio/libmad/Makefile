@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/07/10 08:21:44 adam Exp $
+# $NetBSD: Makefile,v 1.2 2003/07/10 08:32:58 wiz Exp $
 #
 
 DISTNAME=	libmad-0.15.0b
@@ -11,7 +11,6 @@ HOMEPAGE=	http://sourceforge.net/projects/mad/
 COMMENT=	High-quality MPEG audio decoder
 
 USE_BUILDLINK2=		YES
-USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
