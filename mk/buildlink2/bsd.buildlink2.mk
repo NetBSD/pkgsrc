@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.118 2004/02/18 13:32:38 jlam Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.119 2004/02/18 14:23:43 jlam Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -125,9 +125,7 @@ LDFLAGS+=	${FLAG}
 # Prepend ${BUILDLINK_DIR}/bin to the PATH so that the wrappers are found
 # first when searching for executables.
 #
-.if empty(PREPEND_PATH:M${BUILDLINK_DIR}/bin)
 PREPEND_PATH+=	${BUILDLINK_DIR}/bin
-.endif
 
 .for _pkg_ in ${BUILDLINK_PACKAGES}
 #
