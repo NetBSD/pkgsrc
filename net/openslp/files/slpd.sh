@@ -5,7 +5,7 @@
 # PROVIDE: slpd
 # REQUIRE: DAEMON
 
-if [ -e /etc/rc.subr ]
+if [ -f /etc/rc.subr ]
 then
 	. /etc/rc.subr
 fi
@@ -16,7 +16,7 @@ command="@PREFIX@/sbin/${name}"
 pidfile="/var/run/${name}.pid"
 required_files="/etc/slp.conf"
 
-if [ -e /etc/rc.subr ]
+if [ -f /etc/rc.subr ]
 then
 	load_rc_config $name
 	run_rc_command "$1"

@@ -1,10 +1,10 @@
 #!/bin/sh
 #
-# $NetBSD: ups.sh,v 1.6 2002/01/10 12:01:38 jlam Exp $
+# $NetBSD: ups.sh,v 1.7 2002/02/05 06:04:41 jlam Exp $
 #
 # KEYWORD: nostart
 
-if [ -e /etc/rc.subr ]
+if [ -f /etc/rc.subr ]
 then
 	. /etc/rc.subr
 fi
@@ -39,7 +39,7 @@ stop_cmd="reverse_commands"
 status_cmd="forward_commands"
 extra_commands="status"
 
-if [ -e /etc/rc.subr ]
+if [ -f /etc/rc.subr ]
 then
         run_rc_command "$1"
 else

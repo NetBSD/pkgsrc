@@ -1,13 +1,13 @@
 #!/bin/sh
 #
-# $NetBSD: ddclient.sh,v 1.2 2001/12/09 21:44:52 jlam Exp $
+# $NetBSD: ddclient.sh,v 1.3 2002/02/05 06:04:38 jlam Exp $
 #
 # Dynamic DNS update client
 #
 # PROVIDE: ddclient
 # REQUIRE: DAEMON
 
-if [ -e /etc/rc.subr ]
+if [ -f /etc/rc.subr ]
 then
 	. /etc/rc.subr
 fi
@@ -27,7 +27,7 @@ ddclient_start()
 	${daemon} ${ddclient_flags} ${command_args}
 }
 
-if [ -e /etc/rc.subr ]
+if [ -f /etc/rc.subr ]
 then
 	load_rc_config $name
 	run_rc_command "$1"

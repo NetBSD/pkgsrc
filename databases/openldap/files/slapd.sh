@@ -1,13 +1,13 @@
 #! /bin/sh
 #
-# $NetBSD: slapd.sh,v 1.1 2002/01/30 07:34:01 jlam Exp $
+# $NetBSD: slapd.sh,v 1.2 2002/02/05 06:04:37 jlam Exp $
 #
 # OpenLDAP standalone LDAP daemon
 #
 # PROVIDE: slapd
 # REQUIRE: DAEMON
 
-if [ -e /etc/rc.subr ]
+if [ -f /etc/rc.subr ]
 then
 	. /etc/rc.subr
 fi
@@ -19,7 +19,7 @@ pidfile="/var/openldap/slapd.pid"
 required_files="@PKG_SYSCONFDIR@/${name}.conf"
 extra_commands="reload"
 
-if [ -e /etc/rc.subr ]
+if [ -f /etc/rc.subr ]
 then
 	load_rc_config $name
 	run_rc_command "$1"

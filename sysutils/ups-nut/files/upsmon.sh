@@ -1,11 +1,11 @@
 #! /bin/sh
 #
-# $NetBSD: upsmon.sh,v 1.2 2001/11/21 21:38:55 jlam Exp $
+# $NetBSD: upsmon.sh,v 1.3 2002/02/05 06:04:42 jlam Exp $
 #
 # PROVIDE: upsmon
 # REQUIRE: upsd
 
-if [ -e /etc/rc.subr ]
+if [ -f /etc/rc.subr ]
 then
 	. /etc/rc.subr
 fi
@@ -16,7 +16,7 @@ command="@PREFIX@/sbin/${name}"
 pidfile="/var/run/${name}.pid"
 required_files="@NUT_CONFDIR@/${name}.conf"
 
-if [ -e /etc/rc.subr ]
+if [ -f /etc/rc.subr ]
 then
 	load_rc_config $name
 	run_rc_command "$1"

@@ -1,6 +1,6 @@
 #! /bin/sh
 #
-# $NetBSD: upslog.sh,v 1.3 2002/01/08 18:33:17 jlam Exp $
+# $NetBSD: upslog.sh,v 1.4 2002/02/05 06:04:41 jlam Exp $
 #
 # PROVIDE: upslog
 # REQUIRE: upsd
@@ -14,7 +14,7 @@
 # Please refer to upslog(8) for more information about the arguments to pass
 # to upslog.
 
-if [ -e /etc/rc.subr ]
+if [ -f /etc/rc.subr ]
 then
 	. /etc/rc.subr
 fi
@@ -24,7 +24,7 @@ rcvar="${name}"
 command="@PREFIX@/bin/${name}"
 pidfile="/var/run/${name}.pid"
 
-if [ -e /etc/rc.subr ]
+if [ -f /etc/rc.subr ]
 then
 	load_rc_config $name
 	run_rc_command "$1"
