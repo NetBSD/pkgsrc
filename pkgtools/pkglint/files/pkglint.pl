@@ -1,6 +1,7 @@
 #!@PREFIX@/bin/perl
 #
-# portlint - lint for port directory
+# portlint - lint for package directory
+#
 # implemented by:
 #	Jun-ichiro itojun Itoh <itojun@itojun.org>
 #	Yoshishige Arai <ryo2@on.rim.or.jp>
@@ -11,7 +12,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.14 1999/11/23 20:34:27 hubertf Exp $
+# $NetBSD: pkglint.pl,v 1.15 1999/11/26 03:28:17 hubertf Exp $
 #
 # This version contains some changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org> and
@@ -149,7 +150,7 @@ EOF
 @checker = ('pkg/COMMENT', 'pkg/DESCR', 'Makefile');
 %checker = ('pkg/COMMENT', 'checkdescr',
 	    'pkg/DESCR', 'checkdescr',
-	    'Makefile', 'checkmakefile');
+	    'Makefile', 'checkmakefile' );
 if ($extrafile) {
 	foreach $i ((<$portdir/scripts/*>, <$portdir/pkg/*>)) {
 		next if (! -T $i);
@@ -171,6 +172,12 @@ foreach $i (<$portdir/patches/patch-*>) {
 	next if (defined $checker{$i});
 	push(@checker, $i);
 	$checker{$i} = 'checkpatch';
+}
+if (-f "$portdir/files/patch-sum") {
+	$i="files/patch-sum";
+	next if (defined $checker{$i});
+	push(@checker, $i);
+	$checker{$i} = 'checkpatchsum';
 }
 {
 	# Make sure there's a files/patch-sum if there are patches
@@ -208,8 +215,8 @@ foreach $i (@checker) {
 	}
 }
 if ($committer) {
-	if (scalar(@_ = <$portdir/work/*>) || -d "$portdir/work") {
-		&perror("WARN: be sure to cleanup $portdir/work ".
+	if (scalar(@_ = <$portdir/work*/*>) || -d "$portdir/work*") {
+		&perror("WARN: be sure to cleanup $portdir/work* ".
 			"before committing the port.");
 	}
 	if (scalar(@_ = <$portdir/*/*~>) || scalar(@_ = <$portdir/*~>)) {
@@ -263,6 +270,53 @@ sub checkdescr {
 			"plain ascii file.");
 	}
 	close(IN);
+}
+
+#
+# files/patch-sum
+#
+sub checkpatchsum {
+	local($file) = @_;	# files/patch-sum
+	local(%inpatchsumfile);
+
+	undef(%seen);
+
+	open(SUM,"<$portdir/$file") || return 0;
+	while(<SUM>) {
+		next if !/^MD5 \(([^)]+)\) = (.*)$/;
+		$patch=$1;
+		$sum=$2;
+
+		# bitch about *~
+		if ($patch =~ /~$/) {
+			&perror("WARN: possible backup file '$patch' in $portdir/$file?");
+		}
+
+		if (-T "$portdir/patches/$patch") {
+			$calcsum=`sed -e '/\$NetBSD.*/d' $portdir/patches/$patch | md5`;
+			chomp($calcsum);
+			if ( "$sum" ne "$calcsum" ) {
+				&perror("FATAL: checksum of $patch differs between $portdir/$file and\n"
+				       ."       $portdir/patches/$patch. Rerun 'make makepatchsum'.");
+			}
+		} else {
+			&perror("FATAL: patchfile '$patch' is in $file\n"
+			       ."       but not in $portdir/patches/$patch. Rerun 'make makepatchsum'.");
+		}
+
+		$inpatchsumfile{$patch} = 1;
+	}
+	close(SUM);
+
+	foreach $patch ( <$portdir/patches/patch-*> ) {
+		$patch =~ /\/([^\/]+)$/;
+		if (! $inpatchsumfile{$1}) {
+			&perror("FATAL: patchsum of '$1' is in $portdir/patches/$1 but not in\n"
+			       ."       $file. Rerun 'make makepatchsum'.");
+		}
+	}
+
+	return 1;
 }
 
 #
@@ -453,6 +507,11 @@ sub checkpatch {
 	local($file) = @_;
 	local($rcsidseen) = 0;
 	local($whole);
+
+	if ($file =~ /.*~$/) {
+		&perror("WARN: is $file a backup file? If so, please remove it \n"
+		       ."      and rerun 'make makepatchsum'");
+	}
 
 	open(IN, "< $portdir/$file") || return 0;
 	$whole = '';
