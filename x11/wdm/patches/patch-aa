@@ -1,18 +1,17 @@
-$NetBSD: patch-aa,v 1.2 2003/05/06 21:03:26 jmmv Exp $
+$NetBSD: patch-aa,v 1.3 2003/06/03 13:06:57 jmmv Exp $
 
---- Makefile.in.orig	2003-03-31 18:37:40.000000000 +0200
+--- Makefile.in.orig	2003-06-01 10:00:09.000000000 +0200
 +++ Makefile.in
-@@ -55,7 +55,8 @@ INSTALL_DATA=@INSTALL_DATA@
+@@ -48,7 +48,7 @@ INSTALL_DATA=@INSTALL_DATA@
  prefix=@prefix@
  exec_prefix=@exec_prefix@
  bindir=@bindir@
 -DMDIR=@DMDIR@
 +DMDIR=@prefix@/share/examples/wdm
-+GFXDIR=@prefix@/share/pixmaps/wdm
+ GFXDIR=@GFXDIR@
  MANDIR=@mandir@
  PAMDIR=@PAMDIR@
- USE_PAM=@USE_PAM@
-@@ -77,22 +78,19 @@ install-bin: $(DESTDIR)$(bindir)/wdm $(D
+@@ -71,15 +71,12 @@ install-bin: $(DESTDIR)$(bindir)/wdm $(D
  
  all-config: configs/Xclients configs/Xservers configs/Xservers.ws configs/Xsession configs/Xsetup_0 configs/wdm-config configs/wdmReconfig
  
@@ -29,24 +28,16 @@ $NetBSD: patch-aa,v 1.2 2003/05/06 21:03:26 jmmv Exp $
  all-doc: doc/wdm.man
  
  all-nls: po/de.mo po/ja.mo po/ru.mo
- 
- install-doc: $(DESTDIR)$(MANDIR)/man1/wdmLogin.1 $(DESTDIR)$(MANDIR)/man1/wdm.1
- 
--install-gfx: $(DESTDIR)$(DMDIR)/pixmaps/Eagle.xpm $(DESTDIR)$(DMDIR)/pixmaps/Earth.jpg $(DESTDIR)$(DMDIR)/pixmaps/Earth200x130.xpm $(DESTDIR)$(DMDIR)/pixmaps/GnuLinux-logo.jpg $(DESTDIR)$(DMDIR)/pixmaps/Stars.jpg $(DESTDIR)$(DMDIR)/pixmaps/StarsLogo.jpg $(DESTDIR)$(DMDIR)/pixmaps/gnuLogo.xpm
-+install-gfx: $(DESTDIR)$(GFXDIR)/Eagle.xpm $(DESTDIR)$(GFXDIR)/Earth.jpg $(DESTDIR)$(GFXDIR)/Earth200x130.xpm $(DESTDIR)$(GFXDIR)/GnuLinux-logo.jpg $(DESTDIR)$(GFXDIR)/Stars.jpg $(DESTDIR)$(GFXDIR)/StarsLogo.jpg $(DESTDIR)$(GFXDIR)/gnuLogo.xpm
- 
- install-nls: $(DESTDIR)$(NLSDIR)/de/LC_MESSAGES/wdm.mo $(DESTDIR)$(NLSDIR)/ja/LC_MESSAGES/wdm.mo $(DESTDIR)$(NLSDIR)/ru/LC_MESSAGES/wdm.mo
- 
-@@ -188,21 +186,21 @@ bin/TestLogin: src/TestLogin/TestLogin.o
+@@ -185,21 +182,21 @@ bin/TestLogin: src/TestLogin/TestLogin.o
  	$(CC) $(TestLogin_ldflags) src/TestLogin/TestLogin.o $(TestLogin_libs) -o bin/TestLogin
  
  $(DESTDIR)$(bindir)/TestLogin: bin/TestLogin
 -	$(INSTALL_PROGRAM) -D bin/TestLogin $@
 +	$(INSTALL_PROGRAM)  bin/TestLogin $@
  
- bin/wdm: src/wdm/Greet.o src/wdm/access.o src/wdm/auth.o src/wdm/choose.o src/wdm/daemon.o src/wdm/dm.o src/wdm/dpylist.o src/wdm/error.o src/wdm/file.o src/wdm/genauth.o src/wdm/mitauth.o src/wdm/netaddr.o src/wdm/policy.o src/wdm/protodpy.o src/wdm/reset.o src/wdm/resource.o src/wdm/server.o src/wdm/session.o src/wdm/socket.o src/wdm/streams.o src/wdm/util.o src/wdm/verify.o src/wdm/xdmcp.o bin/libwdm.a
+ bin/wdm: src/wdm/Greet.o src/wdm/access.o src/wdm/auth.o src/wdm/choose.o src/wdm/daemon.o src/wdm/dm.o src/wdm/dpylist.o src/wdm/file.o src/wdm/genauth.o src/wdm/loghelpers.o src/wdm/mitauth.o src/wdm/netaddr.o src/wdm/policy.o src/wdm/protodpy.o src/wdm/reset.o src/wdm/resource.o src/wdm/server.o src/wdm/session.o src/wdm/socket.o src/wdm/streams.o src/wdm/util.o src/wdm/verify.o src/wdm/xdmcp.o bin/libwdm.a
  	mkdir -p bin
- 	$(CC) $(wdm_ldflags) src/wdm/Greet.o src/wdm/access.o src/wdm/auth.o src/wdm/choose.o src/wdm/daemon.o src/wdm/dm.o src/wdm/dpylist.o src/wdm/error.o src/wdm/file.o src/wdm/genauth.o src/wdm/mitauth.o src/wdm/netaddr.o src/wdm/policy.o src/wdm/protodpy.o src/wdm/reset.o src/wdm/resource.o src/wdm/server.o src/wdm/session.o src/wdm/socket.o src/wdm/streams.o src/wdm/util.o src/wdm/verify.o src/wdm/xdmcp.o $(wdm_libs) -o bin/wdm
+ 	$(CC) $(wdm_ldflags) src/wdm/Greet.o src/wdm/access.o src/wdm/auth.o src/wdm/choose.o src/wdm/daemon.o src/wdm/dm.o src/wdm/dpylist.o src/wdm/file.o src/wdm/genauth.o src/wdm/loghelpers.o src/wdm/mitauth.o src/wdm/netaddr.o src/wdm/policy.o src/wdm/protodpy.o src/wdm/reset.o src/wdm/resource.o src/wdm/server.o src/wdm/session.o src/wdm/socket.o src/wdm/streams.o src/wdm/util.o src/wdm/verify.o src/wdm/xdmcp.o $(wdm_libs) -o bin/wdm
  
  $(DESTDIR)$(bindir)/wdm: bin/wdm
 -	$(INSTALL_PROGRAM) -D bin/wdm $@
@@ -60,9 +51,9 @@ $NetBSD: patch-aa,v 1.2 2003/05/06 21:03:26 jmmv Exp $
 -	$(INSTALL_PROGRAM) -D bin/wdmLogin $@
 +	$(INSTALL_PROGRAM)  bin/wdmLogin $@
  
- bin/libwdm.a: src/libwdm/debug.o src/libwdm/names.o src/libwdm/plcheckers.o
+ bin/libwdm.a: src/libwdm/debug.o src/libwdm/environment.o src/libwdm/names.o src/libwdm/plcheckers.o
  	mkdir -p bin
-@@ -210,149 +208,149 @@ bin/libwdm.a: src/libwdm/debug.o src/lib
+@@ -207,140 +204,140 @@ bin/libwdm.a: src/libwdm/debug.o src/lib
  	$(RANLIB) bin/libwdm.a
  
  $(DESTDIR)$(MANDIR)/man1/wdmLogin.1: doc/wdmLogin.man
@@ -76,48 +67,32 @@ $NetBSD: patch-aa,v 1.2 2003/05/06 21:03:26 jmmv Exp $
 -	$(INSTALL_DATA) -D doc/wdm.man $@
 +	$(INSTALL_DATA)  doc/wdm.man $@
  
- include/Eagle.xpm: pixmaps/Eagle.xpm
- 	ln -s ../pixmaps/Eagle.xpm $@
- 
--$(DESTDIR)$(DMDIR)/pixmaps/Eagle.xpm: pixmaps/Eagle.xpm
+ $(DESTDIR)$(GFXDIR)/Eagle.xpm: pixmaps/Eagle.xpm
 -	$(INSTALL_DATA) -D pixmaps/Eagle.xpm $@
-+$(DESTDIR)$(GFXDIR)/Eagle.xpm: pixmaps/Eagle.xpm
 +	$(INSTALL_DATA)  pixmaps/Eagle.xpm $@
  
--$(DESTDIR)$(DMDIR)/pixmaps/Earth.jpg: pixmaps/Earth.jpg
+ $(DESTDIR)$(GFXDIR)/Earth.jpg: pixmaps/Earth.jpg
 -	$(INSTALL_DATA) -D pixmaps/Earth.jpg $@
-+$(DESTDIR)$(GFXDIR)/Earth.jpg: pixmaps/Earth.jpg
 +	$(INSTALL_DATA)  pixmaps/Earth.jpg $@
  
- include/Earth200x130.xpm: pixmaps/Earth200x130.xpm
- 	ln -s ../pixmaps/Earth200x130.xpm $@
- 
--$(DESTDIR)$(DMDIR)/pixmaps/Earth200x130.xpm: pixmaps/Earth200x130.xpm
+ $(DESTDIR)$(GFXDIR)/Earth200x130.xpm: pixmaps/Earth200x130.xpm
 -	$(INSTALL_DATA) -D pixmaps/Earth200x130.xpm $@
-+$(DESTDIR)$(GFXDIR)/Earth200x130.xpm: pixmaps/Earth200x130.xpm
 +	$(INSTALL_DATA)  pixmaps/Earth200x130.xpm $@
  
--$(DESTDIR)$(DMDIR)/pixmaps/GnuLinux-logo.jpg: pixmaps/GnuLinux-logo.jpg
+ $(DESTDIR)$(GFXDIR)/GnuLinux-logo.jpg: pixmaps/GnuLinux-logo.jpg
 -	$(INSTALL_DATA) -D pixmaps/GnuLinux-logo.jpg $@
-+$(DESTDIR)$(GFXDIR)/GnuLinux-logo.jpg: pixmaps/GnuLinux-logo.jpg
 +	$(INSTALL_DATA)  pixmaps/GnuLinux-logo.jpg $@
  
--$(DESTDIR)$(DMDIR)/pixmaps/Stars.jpg: pixmaps/Stars.jpg
+ $(DESTDIR)$(GFXDIR)/Stars.jpg: pixmaps/Stars.jpg
 -	$(INSTALL_DATA) -D pixmaps/Stars.jpg $@
-+$(DESTDIR)$(GFXDIR)/Stars.jpg: pixmaps/Stars.jpg
 +	$(INSTALL_DATA)  pixmaps/Stars.jpg $@
  
--$(DESTDIR)$(DMDIR)/pixmaps/StarsLogo.jpg: pixmaps/StarsLogo.jpg
+ $(DESTDIR)$(GFXDIR)/StarsLogo.jpg: pixmaps/StarsLogo.jpg
 -	$(INSTALL_DATA) -D pixmaps/StarsLogo.jpg $@
-+$(DESTDIR)$(GFXDIR)/StarsLogo.jpg: pixmaps/StarsLogo.jpg
 +	$(INSTALL_DATA)  pixmaps/StarsLogo.jpg $@
  
- include/gnuLogo.xpm: pixmaps/gnuLogo.xpm
- 	ln -s ../pixmaps/gnuLogo.xpm $@
- 
--$(DESTDIR)$(DMDIR)/pixmaps/gnuLogo.xpm: pixmaps/gnuLogo.xpm
+ $(DESTDIR)$(GFXDIR)/gnuLogo.xpm: pixmaps/gnuLogo.xpm
 -	$(INSTALL_DATA) -D pixmaps/gnuLogo.xpm $@
-+$(DESTDIR)$(GFXDIR)/gnuLogo.xpm: pixmaps/gnuLogo.xpm
 +	$(INSTALL_DATA)  pixmaps/gnuLogo.xpm $@
  
  po/de.mo: po/de.po
