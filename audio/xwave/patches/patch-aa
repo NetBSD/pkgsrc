@@ -1,11 +1,9 @@
-$NetBSD: patch-aa,v 1.2 1998/08/07 10:36:22 agc Exp $
-
---- orig/xwave/src/XWave	Tue Nov 19 13:25:36 1996
-+++ src/XWave	Fri Feb 20 20:13:48 1998
+--- src/XWave.orig	Thu Aug 13 01:27:09 1998
++++ src/XWave	Mon Feb  8 16:41:18 1999
 @@ -2,7 +2,7 @@
  
  XWave*wdir: 					/usr/share/data/sounds/prosonus
- XWave*tdir:					/tmp
+ XWave*tdir:					/mnt/d/tmp
 -XWave*device:					/dev/dsp
 +XWave*device:					/dev/audio
  XWave*maxmem:					1000
