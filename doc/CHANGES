@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2049 2003/04/27 02:04:02 rh Exp $
+$NetBSD: CHANGES,v 1.2050 2003/04/27 02:08:21 rh Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1746,3 +1746,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added ruby-rexml-2.4.8 [taca 2003-04-26]
 	Added balsa-2.0.10 as balsa2 [rh 2003-04-27]
 	Updated gnome-vfs2 to 2.2.4 [rh 2003-04-27]
+	Added nautilus-2.2.3.1 [rh 2003-04-27]
