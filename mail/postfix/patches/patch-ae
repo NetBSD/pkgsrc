@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.7 2004/03/05 22:59:32 grant Exp $
+$NetBSD: patch-ae,v 1.8 2004/06/21 16:13:23 martti Exp $
 
---- src/global/mail_params.h.orig	2003-03-04 09:07:03.000000000 +1100
-+++ src/global/mail_params.h
-@@ -64,7 +64,7 @@ extern uid_t var_owner_uid;
+--- src/global/mail_params.h.orig	2004-04-21 14:56:04.000000000 -0400
++++ src/global/mail_params.h	2004-05-23 22:44:13.000000000 -0400
+@@ -64,7 +64,7 @@
  extern gid_t var_owner_gid;
  
  #define VAR_SGID_GROUP		"setgid_group"
@@ -11,14 +11,8 @@ $NetBSD: patch-ae,v 1.7 2004/03/05 22:59:32 grant Exp $
  extern char *var_sgid_group;
  extern gid_t var_sgid_gid;
  
-@@ -187,18 +187,18 @@ extern char *var_queue_dir;
+@@ -202,13 +202,13 @@
    */
- #define VAR_PROGRAM_DIR		"program_directory"
- #ifndef DEF_PROGRAM_DIR
--#define DEF_PROGRAM_DIR		"/usr/libexec/postfix"
-+#define DEF_PROGRAM_DIR		"__PREFIX/libexec/postfix"
- #endif
- 
  #define VAR_DAEMON_DIR		"daemon_directory"
  #ifndef DEF_DAEMON_DIR
 -#define DEF_DAEMON_DIR		"/usr/libexec/postfix"
@@ -33,14 +27,3 @@ $NetBSD: patch-ae,v 1.7 2004/03/05 22:59:32 grant Exp $
  #endif
  extern char *var_command_dir;
  
-@@ -324,6 +324,10 @@ extern char *var_send_canon_maps;
- #define DEF_RCPT_CANON_MAPS	""
- extern char *var_rcpt_canon_maps;
- 
-+#define VAR_CANON_ENV_RCPT	"canonicalize_envelope_recipient"
-+#define DEF_CANON_ENV_RCPT	1
-+extern bool var_canon_env_rcpt;
-+
- #define VAR_TRANSPORT_MAPS	"transport_maps"
- #define DEF_TRANSPORT_MAPS	""
- extern char *var_transport_maps;
