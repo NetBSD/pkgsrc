@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 1998/08/07 22:13:44 tsarna Exp $
+bin/lintpkgsrc
+bin/pkglint
+bin/plist-clash
+man/man1/pkglint.1
+man/cat1/pkglint.0
