@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 1999/11/14 18:57:30 tron Exp $
+# $NetBSD: Makefile,v 1.33 1999/11/14 23:28:31 tron Exp $
 
 DISTNAME=		gnome-core-1.0.53
 CATEGORIES=		x11 gnome
@@ -29,9 +29,19 @@ CONFIGURE_ENV+=		ESD_CFLAGS="${ESD_CFLAGS}" \
 			LOCALBASE=${LOCALBASE} X11BASE=${X11BASE} \
 			CPPFLAGS="${CPPFLAGS}"
 
+PLIST_SRC=		${WRKDIR}/PLIST
+
 pre-configure:
 	@${MKDIR} ${WRKDIR}/sys
 	@${LN} -s /usr/include/soundcard.h ${WRKDIR}/sys
+
+post-install:
+	@if [ -x ${PREFIX}/bin/cpumemusage_applet ]; then \
+	  ${CP} ${PKGDIR}/PLIST ${PLIST_SRC}; \
+	else \
+	  ${EGREP} -v '/((cpumem|disk)usage|(cpu|mem|multi|swap)load)_applet' \
+	  <${PKGDIR}/PLIST >${PLIST_SRC}; \
+	fi
 
 .include "../../mk/bsd.prefs.mk"
 
