@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2003/04/12 10:16:39 uebayasi Exp $
+@comment $NetBSD: PLIST,v 1.8 2003/04/12 13:46:29 wiz Exp $
 bin/emacs
 bin/emacs-${PKGVERSION}
 bin/emacs-b2m
@@ -1857,8 +1857,8 @@ share/emacs/${PKGVERSION}/lisp/xscheme.elc
 share/emacs/${PKGVERSION}/lisp/xt-mouse.el
 share/emacs/${PKGVERSION}/lisp/xt-mouse.elc
 share/emacs/${PKGVERSION}/site-lisp/subdirs.el
-@unexec ${RMDIR} %D/share/emacs/site-lisp 2>/dev/null || ${TRUE}
 share/emacs/site-lisp/subdirs.el
+@unexec ${RMDIR} %D/share/emacs/site-lisp 2>/dev/null || ${TRUE}
 @dirrm share/emacs/${PKGVERSION}/site-lisp
 @dirrm share/emacs/${PKGVERSION}/lisp/toolbar
 @dirrm share/emacs/${PKGVERSION}/lisp/textmodes
@@ -1880,6 +1880,7 @@ share/emacs/site-lisp/subdirs.el
 @dirrm share/emacs/${PKGVERSION}/etc/e
 @dirrm share/emacs/${PKGVERSION}/etc
 @dirrm share/emacs/${PKGVERSION}
+@unexec ${RMDIR} %D/share/emacs 2>/dev/null || ${TRUE}
 @dirrm libexec/emacs/${PKGVERSION}/${MACHINE_GNU_PLATFORM}
 @dirrm libexec/emacs/${PKGVERSION}
 @dirrm libexec/emacs
