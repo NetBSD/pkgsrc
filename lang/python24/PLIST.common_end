@@ -1,3 +1,4 @@
+@comment $NetBSD: PLIST.common_end,v 1.2 2005/01/23 20:41:48 recht Exp $
 @dirrm lib/python${PY_VER_SUFFIX}/xml/sax
 @dirrm lib/python${PY_VER_SUFFIX}/xml/parsers
 @dirrm lib/python${PY_VER_SUFFIX}/xml/dom
