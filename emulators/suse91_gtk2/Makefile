@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/09/02 20:34:08 recht Exp $
+# $NetBSD: Makefile,v 1.2 2004/11/06 01:37:51 wiz Exp $
 
 DISTNAME=		suse_gtk2-${SUSE_VERSION}
+PKGREVISION=		1
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_SUSE91}
 DISTFILES=		${RPMFILES}
@@ -11,6 +12,7 @@ COMMENT=		Linux compatibility package for GTK2 binaries
 
 DEPENDS+=		suse_fontconfig>=${SUSE_VERSION}:../../emulators/suse91_fontconfig
 DEPENDS+=		suse_freetype2>=${SUSE_VERSION}:../../emulators/suse91_freetype2
+DEPENDS+=		suse_libpng>=${SUSE_VERSION}:../../emulators/suse91_libpng
 DEPENDS+=		suse_libtiff>=${SUSE_VERSION}:../../emulators/suse91_libtiff
 DEPENDS+=		suse_x11>=${SUSE_VERSION}:../../emulators/suse91_x11
 
