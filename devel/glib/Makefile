@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2003/09/17 19:40:13 grant Exp $
+# $NetBSD: Makefile,v 1.64 2004/01/05 20:57:52 jlam Exp $
 # FreeBSD Id: Makefile,v 1.2 1998/08/06 14:55:12 vanilla Exp
 #
 
@@ -15,7 +15,9 @@ COMMENT=		Some useful routines for C programming
 
 CONFLICTS=		gtk+-1.0.*
 
-USE_BUILDLINK2=		yes
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
@@ -83,5 +85,5 @@ post-configure:
 	done
 .endif
 
-.include "../../mk/pthread.buildlink2.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/12/08 23:15:05 seb Exp $
+# $NetBSD: Makefile,v 1.10 2004/01/05 20:48:01 jlam Exp $
 
 DISTNAME=		db-4.2.52
 PKGNAME=		${DISTNAME:S/db/db4/}
@@ -10,11 +10,13 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.sleepycat.com/
 COMMENT=		Berkeley DB version 4 from Sleepycat Software
 
-USE_BUILDLINK2=	YES
-USE_GCC_SHLIB=	YES
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+USE_BUILDLINK3=		YES
+USE_GCC_SHLIB=		YES
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKDIR}/${DISTNAME}/build_unix/libtool
-GNU_CONFIGURE=	YES
+GNU_CONFIGURE=		YES
 CONFIGURE_SCRIPT=	../dist/configure
 
 CONFIGURE_ARGS+=	--enable-cxx
