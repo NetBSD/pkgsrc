@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.1 2001/08/27 20:10:17 tron Exp $
+$NetBSD: patch-ag,v 1.2 2001/10/05 06:56:46 rh Exp $
 
---- configure.in.orig	Fri May  4 03:35:41 2001
-+++ configure.in	Mon Aug 27 21:56:10 2001
-@@ -483,7 +483,6 @@
+--- configure.in.orig	Tue Sep 11 09:20:37 2001
++++ configure.in
+@@ -573,7 +573,6 @@
  data/Makefile
  data/mime/Makefile
  idl/Makefile
@@ -10,10 +10,10 @@ $NetBSD: patch-ag,v 1.1 2001/08/27 20:10:17 tron Exp $
  libgnomevfs-pthread/Makefile
  libgnomevfs/Makefile
  modules/Makefile
-@@ -503,7 +502,9 @@
- po/Makefile.in
+@@ -593,7 +592,9 @@
  test/Makefile
  test/vfs-run
+ doc/Makefile
 -macros/Makefile
 +xml-i18n-extract
 +xml-i18n-merge
