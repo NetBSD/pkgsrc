@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1283 2004/01/07 16:57:35 wiz Exp $
+$NetBSD: TODO,v 1.1284 2004/01/07 17:36:20 cjep Exp $
 
 Suggested new packages
 ======================
@@ -216,7 +216,7 @@ Suggested package updates
 	o koffice-1.2.94 [pkg/23412|kleink]
 	o lavaps-2.4
 	o lcms-1.0.9
-	o leafnode-1.9.47
+	o leafnode-1.9.47 [cjep]
 	o libcaca-0.6
 	o libesmtp-1.0.2
 	o libidn-0.3.6
