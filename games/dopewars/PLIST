@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2004/03/08 19:40:38 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.7 2004/03/30 16:12:38 jmmv Exp $
 bin/dopewars
 man/man6/dopewars.6
 share/doc/${PKGNAME}/help/cops.html
@@ -37,7 +37,6 @@ share/dopewars/punch.wav
 share/dopewars/run.wav
 share/dopewars/shotdown.wav
 share/dopewars/train.wav
-share/gnome/apps/Games/dopewars.desktop
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/dopewars.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/dopewars.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/dopewars.mo
@@ -47,6 +46,7 @@ ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/dopewars.mo
 share/pixmaps/dopewars-pill.png
 share/pixmaps/dopewars-shot.png
 share/pixmaps/dopewars-weed.png
+@comment in xdg-dirs: @dirrm share/pixmaps
 @dirrm share/dopewars
 @dirrm share/doc/${PKGNAME}/help
 @dirrm share/doc/${PKGNAME}
