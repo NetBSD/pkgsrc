@@ -1,6 +1,6 @@
 # start of install
 #
-# $NetBSD: install,v 1.30 2004/01/08 14:19:29 grant Exp $
+# $NetBSD: install,v 1.31 2004/07/10 20:42:37 salo Exp $
 
 if [ -z "${CONF_FILES}" -a -z "${CONF_FILES_PERMS}" -a			\
      -z "${SUPPORT_FILES}" -a -z "${SUPPORT_FILES_PERMS}" -o		\
@@ -117,7 +117,7 @@ PRE-INSTALL)
 				print;					\
 			}'						\
 		`
-		if [ -d $sysconfdir -a ! -e ${PKG_SYSCONFDIR} ]; then
+		if [ -d $sysconfdir -a ! -d ${PKG_SYSCONFDIR} ]; then
 			${MKDIR} -p `${DIRNAME} ${PKG_SYSCONFDIR}`
 			${LN} -sf $sysconfdir ${PKG_SYSCONFDIR}
 		fi
@@ -241,13 +241,13 @@ EOF
 				msgadd ""
 			fi
 			msgadd "#${file} (m=@CONF_FILES_MODE@)"
-		elif [ -e "${file}" ]; then
+		elif [ -f "${file}" ]; then
 			if [ ! "${file}" -ef "${samplefile}" ]; then
 				${ECHO} "	${file} already exists, example file is"
 				${ECHO} "           ${samplefile}"
 			fi
 		else
-			if [ -e "${samplefile}" ]; then
+			if [ -f "${samplefile}" ]; then
 				${ECHO} "	${file}"
 				${CP} "${samplefile}" "${file}"
 				${CHMOD} @CONF_FILES_MODE@ "${file}"
@@ -267,13 +267,13 @@ EOF
 				msgadd ""
 			fi
 			msgadd "#${file} (m=@SUPPORT_FILES_MODE@)"
-		elif [ -e "${file}" ]; then
+		elif [ -f "${file}" ]; then
 			if [ ! "${file}" -ef "${samplefile}" ]; then
 				${ECHO} "	${file} already exists, example file is"
 				${ECHO} "	    ${samplefile}"
 			fi
 		else
-			if [ -e "${samplefile}" ]; then
+			if [ -f "${samplefile}" ]; then
 				${ECHO} "	${file}"
 				${CP} "${samplefile}" "${file}"
 				${CHMOD} @SUPPORT_FILES_MODE@ "${file}"
@@ -294,13 +294,13 @@ EOF
 				msgadd ""
 			fi
 			msgadd "#${file} (o=${owner}, g=${group}, m=${mode})"
-		elif [ -e ${file} ]; then
+		elif [ -f ${file} ]; then
 			if [ ! "${file}" -ef "${samplefile}" ]; then
 				${ECHO} "	${file} already exists, example file is"
 				${ECHO} "	    ${samplefile}"
 			fi
 		else
-			if [ -e "${samplefile}" ]; then
+			if [ -f "${samplefile}" ]; then
 				${ECHO} "	${file}"
 				${CP} "${samplefile}" "${file}"
 				${CHOWN} "${owner}" "${file}"
@@ -323,13 +323,13 @@ EOF
 				msgadd ""
 			fi
 			msgadd "#${file} (m=@RCD_SCRIPTS_MODE@)"
-		elif [ -e "${file}" ]; then
+		elif [ -f "${file}" ]; then
 			if [ ! "${file}" -ef "${samplefile}" ]; then
 				${ECHO} "	${file} already exists, example file is"
 				${ECHO} "	    ${samplefile}"
 			fi
 		else
-			if [ -e "${samplefile}" ]; then
+			if [ -f "${samplefile}" ]; then
 				${ECHO} "	${file}"
 				${CP} "${samplefile}" "${file}"
 				${CHMOD} @RCD_SCRIPTS_MODE@ "${file}"
