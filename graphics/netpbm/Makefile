@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1997/12/15 00:48:27 hubertf Exp $
+# $NetBSD: Makefile,v 1.7 1997/12/15 00:52:26 hubertf Exp $
 # New ports collection makefile for:	netpbm
 # Version required:	1mar1994
 # Date created:		?
@@ -76,7 +76,7 @@ post-extract:
 	chmod -R +w ${WRKSRC}
 
 pre-configure:
-	for f in `find ${WRKDIR} -type f -print|xargs grep -l '/usr/local'`; do \
+	for f in `find ${WRKSRC} -type f -print|xargs grep -l '/usr/local'`; do \
 		${SED} -e 's:/usr/local:'${LOCALBASE}':g' < $$f > $$f.pdone && mv $$f.pdone $$f; \
 	done
 .endif
