@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3610 2003/10/02 01:08:26 itojun Exp $
+$NetBSD: CHANGES,v 1.3611 2003/10/02 02:42:26 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4045,3 +4045,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added py-psyco-1.1.1 [recht 2003-10-01]
 	Updated p0f to 2.0.2 [recht 2003-10-01]
 	Updated aspell to 0.50.3nb4 [itojun 2003-10-02]
+	Updated openssl to 0.9.6k [jschauma 2003-10-01]
