@@ -1,6 +1,6 @@
 #!@BUILDLINK_SHELL@
 #
-# $NetBSD: gen-transform.sh,v 1.8 2004/01/06 21:39:07 jlam Exp $
+# $NetBSD: gen-transform.sh,v 1.9 2004/01/07 07:10:05 jlam Exp $
 
 transform="@_BLNK_TRANSFORM_SEDFILE@"
 untransform="@_BLNK_UNTRANSFORM_SEDFILE@"
@@ -78,16 +78,16 @@ EOF
 		case "$action" in
 		transform)
 			@CAT@ >> $sedfile << EOF
-s|-$1$2\([ 	\`"':;]\)$|-$1$3\1|g
+s|-$1$2\([ 	\`"':;]\)|-$1$3\1|g
 s|-$1$2$|-$1$3|g
 s|-$1$2/|-$1$3/|g
 EOF
 			;;
 		untransform)
 			@CAT@ >> $sedfile << EOF
-s|-$1$3\([ 	\`"':;]\)$|-$1$2\1|g
+s|-$1$3\([ 	\`"':;]\)|-$1$2\1|g
 s|-$1$3$|-$1$2|g
-s|-$1$3/$|-$1$2/|g
+s|-$1$3/|-$1$2/|g
 EOF
 			;;
 		esac
