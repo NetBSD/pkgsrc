@@ -1,0 +1,71 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/10/21 19:02:32 rh Exp $
+etc/ispman/ispman.ldif
+etc/ispman/ispman.conf.default
+etc/ispman/templates/domain.ldif.template.default
+etc/ispman/templates/named.conf.footer.default
+etc/ispman/templates/named.conf.header.default
+etc/ispman/templates/vhosts.conf.footer.default
+etc/ispman/templates/vhosts.conf.header.default
+etc/ispman/templates/vhosts.conf.template.default
+etc/openldap/ldap.conf.ispman
+etc/openldap/slapd.conf.ispman
+share/ispman/bin/adddomain
+share/ispman/bin/adduser
+share/ispman/bin/addvhost
+share/ispman/bin/deletedomain
+share/ispman/bin/deletevhost
+share/ispman/bin/dnsshow
+share/ispman/bin/ldap2named
+share/ispman/bin/ldap2vhosts
+share/ispman/bin/mailproxy
+share/ispman/bin/senduseraliases
+share/ispman/bin/showdomains
+share/ispman/bin/showusers
+share/ispman/cgi-bin/ispdump.cgi
+share/ispman/cgi-bin/ispman.cgi
+share/ispman/cgi-bin/tmpl/addVhost.tmpl
+share/ispman/cgi-bin/tmpl/adduser.tmpl
+share/ispman/cgi-bin/tmpl/editVhost.tmpl
+share/ispman/cgi-bin/tmpl/edituser.tmpl
+share/ispman/cgi-bin/tmpl/headers.tmpl
+share/ispman/cgi-bin/tmpl/index.tmpl
+share/ispman/cgi-bin/tmpl/ispman.tmpl
+share/ispman/cgi-bin/tmpl/menu.tmpl
+share/ispman/htdocs/about.html
+share/ispman/htdocs/gfx/bg_blue.gif
+share/ispman/htdocs/gfx/bg_grey.gif
+share/ispman/htdocs/gfx/bg_lila.gif
+share/ispman/htdocs/gfx/bg_menu.gif
+share/ispman/htdocs/gfx/but/but_apply_chg_0.gif
+share/ispman/htdocs/gfx/but/but_apply_chg_1.gif
+share/ispman/htdocs/gfx/but/but_create_entry_0.gif
+share/ispman/htdocs/gfx/but/but_create_entry_1.gif
+share/ispman/htdocs/gfx/but/but_del_entry_0.gif
+share/ispman/htdocs/gfx/but/but_del_entry_1.gif
+share/ispman/htdocs/gfx/but/but_discard_chg_0.gif
+share/ispman/htdocs/gfx/but/but_discard_chg_1.gif
+share/ispman/htdocs/gfx/but/but_new_entry_0.gif
+share/ispman/htdocs/gfx/but/but_new_entry_1.gif
+share/ispman/htdocs/gfx/but/but_search_0.gif
+share/ispman/htdocs/gfx/but/but_search_1.gif
+share/ispman/htdocs/gfx/false.gif
+share/ispman/htdocs/gfx/ispmgr.gif
+share/ispman/htdocs/gfx/ispmgr_logo.gif
+share/ispman/htdocs/gfx/minus.gif
+share/ispman/htdocs/gfx/pixeltrans.gif
+share/ispman/htdocs/gfx/plus.gif
+share/ispman/htdocs/gfx/true.gif
+share/ispman/htdocs/index.html
+share/ispman/htdocs/ispman_menu.html
+share/ispman/htdocs/js/list.js
+share/ispman/htdocs/title.html
+@dirrm share/ispman/htdocs/js
+@dirrm share/ispman/htdocs/gfx/but
+@dirrm share/ispman/htdocs/gfx
+@dirrm share/ispman/htdocs
+@dirrm share/ispman/cgi-bin/tmpl
+@dirrm share/ispman/cgi-bin
+@dirrm share/ispman/bin
+@dirrm share/ispman
+@dirrm etc/ispman/templates
+@dirrm etc/ispman
