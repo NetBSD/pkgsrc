@@ -1,4 +1,4 @@
-# $NetBSD: motif.buildlink3.mk,v 1.2 2004/05/10 00:11:14 xtraeme Exp $
+# $NetBSD: motif.buildlink3.mk,v 1.3 2004/06/14 01:18:16 grant Exp $
 #
 # USE_MOTIF12
 #	use a Motif-1.2-compatible installation, otherwise, assume
@@ -140,6 +140,8 @@ MOTIFBASE=		${_MOTIFBASE}
 USE_X11?=		# defined
 MAKE_ENV+=		MOTIFLIB="${MOTIFLIB}"
 MAKE_ENV+=		MOTIFBASE="${_MOTIFBASE}"
+CPPFLAGS+=		-I${_MOTIFBASE}/include
+LDFLAGS+=		-L${_MOTIFBASE}/lib
 LDFLAGS+=		${_COMPILER_LD_FLAG}${_OPSYS_RPATH_NAME}${_MOTIFBASE}/lib
 MOTIFLIB?=		${_COMPILER_LD_FLAG}${_OPSYS_RPATH_NAME}${_MOTIFBASE}/lib \
 				-L${_MOTIFBASE}/lib -lXm -lXp
