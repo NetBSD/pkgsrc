@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9743 2005/04/04 09:31:42 wiz Exp $
+$NetBSD: CHANGES,v 1.9744 2005/04/04 09:33:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1890,3 +1890,8 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated epic4 to 2.2 [wiz 2005-04-04]
 	Updated epic4-doc to 1.0.20050313 [wiz 2005-04-04]
 	Updated p5-Log-Agent to 0.306 [wiz 2005-04-04]
+	Updated nessus-libraries to 2.2.4 [adam 2005-04-04]
+	Updated libnasl to 2.2.4 [adam 2005-04-04]
+	Updated nessus-core to 2.2.4 [adam 2005-04-04]
+	Updated nessus-plugins to 2.2.4 [adam 2005-04-04]
+	Updated nessus to 2.2.4 [adam 2005-04-04]
