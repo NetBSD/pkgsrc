@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1600 2003/03/09 09:56:54 jmmv Exp $
+$NetBSD: CHANGES,v 1.1601 2003/03/09 10:55:11 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1006,3 +1006,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated gsymcheck to 20030223 [dmcmahill 2003-03-09]
 	Updated geda to 20030223 [dmcmahill 2003-03-09]
 	Updated wmcpuload to 1.0.1 [jmmv 2003-03-09]
+	Added wmmemmon-1.0.0 [jmmv 2003-03-09]
