@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/02/05 19:49:20 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2000/02/12 20:49:49 dmcmahill Exp $
 #
 
 DISTNAME=	Squeak2.6-src
@@ -24,12 +24,8 @@ do-config:
 	cd ${WRKSRC}; ${GMAKE} config
 
 do-install:
-	${MKDIR} ${PREFIX}/share/squeak;				\
-	case ${OPSYS} in						\
-	SunOS)	maker=sun; version=`${ECHO} ${OS_VERSION} | ${SED} -e 's|^5|2|'` ;; \
-	*)	maker=""; version=${OS_VERSION} ;;			\
-	esac;								\
-	${INSTALL_PROGRAM} ${WRKSRC}/${MACHINE_GNU_ARCH}-$$maker-${LOWER_OPSYS}$$version/squeak ${PREFIX}/bin; \
+	${MKDIR} ${PREFIX}/share/squeak
+	${INSTALL_PROGRAM} ${WRKSRC}/`${WRKSRC}/conf/config.guess`/squeak ${PREFIX}/bin
 	for f in Squeak2.6.changes Squeak2.6.image; do			\
 		${GZCAT} ${DISTDIR}/${DIST_SUBDIR}/$$f.gz > ${PREFIX}/share/squeak/$$f; \
 	done
