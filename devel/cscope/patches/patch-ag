@@ -1,0 +1,19 @@
+$NetBSD: patch-ag,v 1.1 2000/05/04 01:33:07 hubertf Exp $
+
+diff -x *.orig -urN ./common/library.h /disk1/cvs/pkgsrc/devel/cscope/work.i386.unpatched/cscope-13.0/common/library.h
+--- ./common/library.h	Tue Apr 18 03:41:11 2000
++++ /disk1/cvs/pkgsrc/devel/cscope/work.i386.unpatched/cscope-13.0/common/library.h	Thu May  4 03:24:27 2000
+@@ -53,7 +53,12 @@
+ char	*ctime(), *getcwd(), *getenv(), *mktemp();
+ char	*strcat(), *strcpy(), *strncpy(), *strpbrk(), *strchr(), *strrchr();
+ char	*strtok();
+-long	lseek(), time();
++#if BSD
++off_t	lseek();
++time_t	time();
++#else
++long	lseek();
++#endif
+ unsigned sleep();
+ void	exit(), free(), qsort();
+ #if BSD
