@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.128 2000/12/08 10:18:19 wiz Exp $
+# $NetBSD: Packages.txt,v 1.129 2000/12/15 14:03:31 abs Exp $
 ###########################################################################
 
 			==========================
@@ -552,9 +552,8 @@ successively in alphabetic order (as returned by a shell "patches/patch-*"
 glob expansion), so patch-aa is applied before patch-ab etc.
 
 The patch-?? files should be in diff -bu format, and apply without
-a fuzz to avoid problems. (The latter condition is ensured by
-setting PKG_DEVELOPER in /etc/mk.conf - the build will fail if a
-patch applies with fuzz only).  Furthermore, do not put changes
+a fuzz to avoid problems (To force patches to apply with fuzz you
+can set PATCH_FUZZ_FACTOR=-F2).  Furthermore, do not put changes
 for more than one file into a single patch-file, as this will make
 future modifications more difficult.
 
@@ -1112,11 +1111,11 @@ The main targets used during the build process defined in bsd.pkg.mk are:
    options to patch(1) can be handed in PATCH_DIST_ARGS.  See section
    4.3 for more details.
    
-   If PKG_DEVELOPER is set in /etc/mk.conf, patch is given special args
-   to make it fail if the patches with some lines of fuzz. Please fix
-   (regen) the patches so that they apply cleanly. The rationale behind
-   this is that patches that apply cleanly may end up being applied in the
-   wrong place, and cause severe harm there.
+   By default patch is given special args to make it fail if the
+   patches with some lines of fuzz. Please fix (regen) the patches
+   so that they apply cleanly. The rationale behind this is that
+   patches that apply cleanly may end up being applied in the wrong
+   place, and cause severe harm there.
 
  * configure:
    Most pieces of software need information on the header files,
