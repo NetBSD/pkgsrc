@@ -1,0 +1,4 @@
+RealPlayer8 Codecs for use by MPlayer, without having to install RealPlayer8
+itself.  This contains several Real codecs (all the ones MPlayer supports.)
+
+This package supports i386, powerpc and alpha platforms.
