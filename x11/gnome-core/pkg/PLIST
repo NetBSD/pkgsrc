@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2000/10/18 00:06:27 jlam Exp $
+@comment $NetBSD: PLIST,v 1.20 2000/11/07 04:39:14 rh Exp $
 bin/deskguide_applet
 bin/gmenu
 bin/gnome-about
@@ -184,7 +184,7 @@ share/gnome/help/fish_applet/da/stylesheet-images/warning.png
 share/gnome/help/fish_applet/da/topic.dat
 share/gnome/help/fish_applet/no/docbook.css
 share/gnome/help/fish_applet/no/index.html
-share/gnome/help/fish_applet/no/ln7.html
+share/gnome/help/fish_applet/no/ln10.html
 share/gnome/help/fish_applet/no/stylesheet-images/caution.png
 share/gnome/help/fish_applet/no/stylesheet-images/important.png
 share/gnome/help/fish_applet/no/stylesheet-images/note.png
