@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2000/08/23 23:14:32 tron Exp $
+# $NetBSD: Makefile,v 1.70 2000/08/30 22:17:14 tron Exp $
 # FreeBSD Id: Makefile,v 1.6 1997/11/27 00:35:27 se Exp
 
 DISTNAME=	kdebase-1.1.2
@@ -20,10 +20,12 @@ DEPENDS+=	kdelibs-1.1.2:../../x11/kdelibs
 #
 DEPENDS+=	libungif-*:../../graphics/libungif
 
-USE_X11BASE=	YES
-USE_XPM=	YES
-USE_GMAKE=	YES
-GNU_CONFIGURE=	YES
+USE_X11BASE=		YES
+USE_XPM=		YES
+USE_GMAKE=		YES
+USE_LIBTOOL=		YES
+LTCONFIG_OVERRIDE=	${WRKSRC}/admin/ltconfig
+GNU_CONFIGURE=		YES
 
 EVAL_PREFIX+=	QT1DIR=qt1
 CONFIGURE_ARGS=	"--datadir=${PREFIX}/share/kde" \
