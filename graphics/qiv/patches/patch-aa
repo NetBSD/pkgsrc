@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.2 2002/09/11 18:18:21 wiz Exp $
+$NetBSD: patch-aa,v 1.3 2003/09/18 19:16:20 wiz Exp $
 
---- Makefile.orig	Sun Jun 10 14:35:06 2001
+--- Makefile.orig	2001-06-10 14:35:06.000000000 +0200
 +++ Makefile
 @@ -4,7 +4,7 @@
  ######################################################################
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.2 2002/09/11 18:18:21 wiz Exp $
  
  # Font to use for statusbar in fullscreen mode
  STATUSBAR_FONT = "fixed"
-@@ -24,11 +24,11 @@
+@@ -24,11 +24,11 @@ FILTER = 1
  EXTNS = GIF TIFF XPM XBM PNG PPM PNM PGM PCX BMP EIM JPEG TGA
  
  # Comment this line out if your system doesn't have getopt_long().
@@ -25,7 +25,18 @@ $NetBSD: patch-aa,v 1.2 2002/09/11 18:18:21 wiz Exp $
  
  ######################################################################
  
-@@ -112,13 +112,13 @@
+@@ -53,8 +53,8 @@ SS_RANDOMIZE = -r
+ # Do not edit below here!
+ ######################################################################
+ 
+-CC        = gcc
+-CFLAGS    = -O2 -Wall -fomit-frame-pointer -finline-functions \
++CC        ?= gcc
++CFLAGS    += -Wall -fomit-frame-pointer -finline-functions \
+ 	    -fcaller-saves -ffast-math -fno-strength-reduce \
+ 	    -fthread-jumps #-march=pentium #-DSTAT_MACROS_BROKEN
+ 
+@@ -112,13 +112,13 @@ clean :  
  
  install: $(PROGRAM)
  	@echo "Installing..."
