@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3385 2003/09/15 11:18:27 agc Exp $
+$NetBSD: CHANGES,v 1.3386 2003/09/15 12:03:14 markd Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3702,3 +3702,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated wine to 20030911 [adam 2003-09-15]
 	Updated papersize to 1.0.8 [agc 2003-09-15]
 	Updated abcde to 2.1.4nb4 [agc 2003-09-15]
+	Updated sendmail to 8.12.9nb5 [markd 2003-09-15]
