@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.366 2002/10/26 19:39:25 dmcmahill Exp $
+$NetBSD: CHANGES,v 1.367 2002/10/26 20:03:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3394,3 +3394,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated less to 378 [grant 2002-10-26]
 	Updated freetds to 0.60 [grant 2002-10-26]
 	Updated bins to 1.1.18 [dmcmahill 2002-10-26]
+	Updated bozohttpd to 0.15nb1 [wiz 2002-10-26]
