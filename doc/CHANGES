@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5117 2004/03/07 01:53:22 heinz Exp $
+$NetBSD: CHANGES,v 1.5118 2004/03/07 02:02:22 snj Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1201,3 +1201,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated p5-Net-DNS to 0.46 [heinz 2004-03-07]
 	Updated p5-Mail-SPF-Query to 1.996 [heinz 2004-03-07]
 	Updated nicotine to 1.0.7nb1 [minskim 2004-03-07]
+	Updated tuxpaint to 0.9.13 [snj 2004-03-07]
