@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 1999/06/27 00:11:02 christos Exp $
+# $NetBSD: Makefile,v 1.10 1999/06/27 20:09:23 christos Exp $
 
 DISTNAME=	postfix-19990601
 CATEGORIES=	mail
@@ -8,7 +8,6 @@ MAINTAINER=	christos@netbsd.org
 HOMEPAGE=	http://www.postfix.org/
 
 MIRROR_DISTFILE= no
-EXTRACT_SUFX=_tar.gz
 
 pre-patch:
 	${CP} ${WRKSRC}/Makefile ${WRKSRC}/Makefile.dist
