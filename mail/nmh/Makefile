@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 1998/05/21 07:16:41 agc Exp $
+# $NetBSD: Makefile,v 1.17 1998/06/01 13:15:58 agc Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/08/04 06:51:28 markm Exp
 #
 
-DISTNAME=	nmh-0.25
+DISTNAME=	nmh-0.26
 CATEGORIES=	mail
 MASTER_SITES=   ftp://ftp.math.gatech.edu/pub/nmh/
 
