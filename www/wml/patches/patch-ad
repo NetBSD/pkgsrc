@@ -1,0 +1,45 @@
+$NetBSD: patch-ad,v 1.1 2004/09/24 00:58:30 kim Exp $
+
+--- wml_aux/iselect/aclocal.m4.orig	2000-05-02 14:38:48.000000000 -0400
++++ wml_aux/iselect/aclocal.m4	2004-09-23 20:10:03.000000000 -0400
+@@ -172,40 +172,6 @@
+ ])dnl
+ dnl
+ dnl
+-dnl
+-dnl ##########################################################
+-dnl ##
+-dnl ##  check for ANSI compiler
+-dnl ##
+-dnl ##  Copyright (C) 1992, 1994 Free Software Foundation, Inc.
+-dnl ##  Francois Pinard <pinard@iro.umontreal.ca>, 1992.
+-dnl ##  Check for function prototypes.  Including a few ideas from
+-dnl ##  Brook G. Milligan <brook@trillium.botany.utexas.edu>.
+-dnl ##
+-dnl ##  taken from shar-4.0's aclocal.m4
+-dnl ##
+-dnl ##########################################################
+-dnl
+-AC_DEFUN(AC_C_PROTOTYPES,
+-[AC_MSG_CHECKING([for function prototypes])
+-AC_CACHE_VAL(ac_cv_c_prototypes,
+-[AC_TRY_LINK([#ifndef __STDC__
+-Syntax Error
+-#endif], [extern int test (int i, double x);
+-struct s1 {int (*f) (int a);};
+-struct s2 {int (*f) (double a);};],
+-  ac_cv_c_prototypes=yes, ac_cv_c_prototypes=no)])dnl
+-AC_MSG_RESULT([$ac_cv_c_prototypes])
+-if test $ac_cv_c_prototypes = yes; then
+-  AC_DEFINE(HAVE_PROTOTYPES)
+-  ANSI_CC=yes
+-else
+-  ANSI_CC=no
+-fi
+-AC_SUBST(ANSI_CC)
+-])dnl
+-dnl
+-dnl
+ dnl ##########################################################
+ dnl ##
+ dnl ##  check for supported system type
