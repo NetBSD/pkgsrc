@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2003/09/10 23:43:35 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.19 2003/11/04 20:46:57 dmcmahill Exp $
 #
 
 DISTNAME=		geda-utils-${PKGVERSION}
@@ -13,6 +13,11 @@ HOMEPAGE=		http://www.geda.seul.org/
 COMMENT=		Set of utilites for gEDA
 
 BUILD_DEPENDS+=		geda-symbols>=${PKGVERSION}:../../cad/geda-symbols
+.if !exists(/usr/bin/lex) && !exists(/usr/bin/flex)
+BUILD_DEPENDS+=		flex-[0-9]*:../../devel/flex
+EVAL_PREFIX+=		LEXDIR=flex
+LEX=			${LEXDIR}/bin/flex
+.endif
 
 CONFLICTS+=		gEDA<19991011
 
@@ -22,6 +27,11 @@ PKGVERSION=		20030901
 GNU_CONFIGURE=		YES
 USE_BUILDLINK2=		YES
 USE_PERL5=		YES
+
+# let (f)lex rebuild this file.  The distributed one doesn't
+# always work.
+post-patch:
+	${RM} -f ${WRKSRC}/src/olib.c
 
 EVAL_PREFIX+=		PYDIR=python
 
