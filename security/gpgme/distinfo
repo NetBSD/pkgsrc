@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2002/03/17 13:33:40 uebayasi Exp $
+
+SHA1 (gpgme-0.3.0.tar.gz) = 2eb0170d854d3277fa2211d507b2dca3527fbba3
+Size (gpgme-0.3.0.tar.gz) = 434635 bytes
+SHA1 (patch-aa) = bd140dbcfe9834ec4c80d5ede5dfb76f61fc04a8
+SHA1 (patch-ab) = d73b151c643d6ae5b2a321e58291a6b48892fd03
