@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: radiusd.sh,v 1.2 2004/09/23 19:51:22 adrianp Exp $
+# $NetBSD: radiusd.sh,v 1.3 2004/12/21 22:16:01 adrianp Exp $
 #
 # PROVIDE: radiusd
 # REQUIRE: network
@@ -14,6 +14,16 @@ fi
 name="radiusd"
 command="@PREFIX@/sbin/radiusd"
 pidfile="@VARBASE@/run/radiusd/radiusd.pid"
+start_precmd="radiusd_precmd"
+
+radiusd_precmd()
+{
+	if [ ! -d @VARBASE@/run/radiusd ]; then
+		@MKDIR@ @VARBASE@/run/radiusd
+		@CHMOD@ 0750 @VARBASE@/run/radiusd
+		@CHOWN@ root:wheel @VARBASE@/run/radiusd
+	fi
+}
 
 if [ -f /etc/rc.subr ]
 then
