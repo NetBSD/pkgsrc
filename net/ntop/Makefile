@@ -1,22 +1,41 @@
-# $NetBSD: Makefile,v 1.30 2004/10/03 20:51:23 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2005/01/06 11:52:35 adam Exp $
 
-DISTNAME=		ntop-1.1
-PKGREVISION=		4
-CATEGORIES=		net
-MASTER_SITES=		ftp://ftp.unipi.it/pub/local/ntop/source/
-EXTRACT_SUFX=		-src.tar.gz
+DISTNAME=	ntop-3.1
+CATEGORIES=	net
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ntop/}
+EXTRACT_SUFX=	.tgz
 
-MAINTAINER=		kim@tac.nyc.ny.us
-HOMEPAGE=		http://www.ntop.org/
-COMMENT=		Shows network usage (similar to "top" for processes)
+MAINTAINER=	adam@NetBSD.org
+HOMEPAGE=	http://www.ntop.org/
+COMMENT=	Shows network usage (similar to "top" for processes)
+
+CONFLICTS=	ntop-[0-9]*
+
+WRKSRC=		${WRKDIR}/ntop
 
 USE_BUILDLINK3=		yes
+USE_GNU_TOOLS+=		make
+USE_LIBTOOL=		yes
+USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--enable-threads=no
+CONFIGURE_ARGS+=	--sysconfdir=${PREFIX}/share/ntop
+CONFIGURE_ARGS+=	--with-gd-root=${BUILDLINK_PREFIX.gd}
+CONFIGURE_ARGS+=	--with-gdbm-root=${BUILDLINK_PREFIX.gdbm}
+CONFIGURE_ARGS+=	--with-gdchart-root=${BUILDLINK_PREFIX.gdchart}
+CONFIGURE_ARGS+=	--with-localedir=${LOCALBASE}/${PKGLOCALEDIR}
+CONFIGURE_ARGS+=	--with-libpng-root=${BUILDLINK_PREFIX.png}
+CONFIGURE_ARGS+=	--with-ossl-root=${BUILDLINK_PREFIX.openssl}
+CONFIGURE_ARGS+=	--with-pcap-root=${BUILDLINK_PREFIX.libpcap}
+CONFIGURE_ARGS+=	--with-zlib-root=${BUILDLINK_PREFIX.zlib}
+# ntop-3.x crashes with IPv6
+CONFIGURE_ARGS+=	--disable-ipv6
 
-INSTALL_TARGET=		install install-man
+PTHREAD_OPTS+=		require
 
+.include "../../databases/gdbm/buildlink3.mk"
+.include "../../graphics/gdchart/buildlink3.mk"
 .include "../../net/libpcap/buildlink3.mk"
-.include "../../devel/ncurses/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
