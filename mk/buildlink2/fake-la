@@ -1,6 +1,6 @@
 #!@BUILDLINK_SHELL@
 #
-# $NetBSD: fake-la,v 1.9 2003/12/30 12:09:27 gavan Exp $
+# $NetBSD: fake-la,v 1.10 2004/02/05 09:57:53 jlam Exp $
 
 AR="@AR@"
 AWK="@AWK@"
@@ -79,6 +79,7 @@ case $libname in
 esac
 
 if ${TEST} ! -f $tmpdir/inst/$libbase.la; then
+	PATH="@PATH@"; export PATH
 	${MKDIR} $tmpdir/inst
 	cd $tmpdir
 	${ECHO} "static int i;" > nonempty.c	# create a nonempty input file
