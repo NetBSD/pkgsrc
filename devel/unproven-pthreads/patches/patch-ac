@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.2 2002/04/13 12:53:41 fredb Exp $
+$NetBSD: patch-ac,v 1.3 2002/07/18 09:17:27 agc Exp $
 
 --- config/configure.in.orig	Mon Jul 10 14:03:06 2000
 +++ config/configure.in
@@ -39,6 +39,15 @@ $NetBSD: patch-ac,v 1.2 2002/04/13 12:53:41 fredb Exp $
      i386-*-netbsd1.4*)
  #	CFLAGS="$CFLAGS -Werror"
  	name=i386-netbsd-1.3
+@@ -112,7 +126,7 @@
+ 		;;
+ changequote([,])dnl
+ changequote(,)dnl
+-    i386-*-netbsd1.5*)
++    i386-*-netbsd1.5*|i386-*-netbsdelf*)
+ #	CFLAGS="$CFLAGS -Werror"
+ 	name=i386-netbsd-1.3
+ 	except="fork lseek ftruncate pipe fstat"
 @@ -121,6 +135,20 @@
  changequote([,])dnl
  changequote(,)dnl
