@@ -1,9 +1,9 @@
-$NetBSD: patch-ah,v 1.5 2000/12/05 11:15:42 wulf Exp $
+$NetBSD: patch-ah,v 1.6 2001/09/24 13:10:48 wulf Exp $
 
---- src/Makefile.in.orig	Thu Sep 14 15:34:27 2000
-+++ src/Makefile.in	Tue Dec  5 20:42:01 2000
-@@ -86,12 +86,7 @@
- TCL_SHLIB_SUFFIX = @TCL_SHLIB_SUFFIX@
+--- src/Makefile.in.orig	Thu Feb 22 12:07:34 2001
++++ src/Makefile.in
+@@ -87,12 +87,7 @@
+ TROFF = @TROFF@
  VERSION = @VERSION@
  
 -CGI_LIB_DIR = $(top_srcdir)/@CGI_LIB_DIR@
@@ -16,7 +16,7 @@ $NetBSD: patch-ah,v 1.5 2000/12/05 11:15:42 wulf Exp $
  
  #COMPILE   = $(CC) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) $(CFLAGS_EXTRA)
  #LTCOMPILE = $(LIBTOOL) --mode=compile $(CC) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) $(CFLAGS_EXTRA)
-@@ -107,7 +102,7 @@
+@@ -108,7 +103,7 @@
  # creates a ./.lib/*.al file that contains the PIC compiled object
  # files.
  
@@ -25,7 +25,7 @@ $NetBSD: patch-ah,v 1.5 2000/12/05 11:15:42 wulf Exp $
  
  
  lib_LTLIBRARIES = librrd.la
-@@ -142,18 +137,12 @@
+@@ -146,18 +141,12 @@
  DEFS = @DEFS@ -I. -I$(srcdir) -I../config
  CPPFLAGS = @CPPFLAGS@
  LDFLAGS = @LDFLAGS@
@@ -45,7 +45,7 @@ $NetBSD: patch-ah,v 1.5 2000/12/05 11:15:42 wulf Exp $
  librrd_private_la_OBJECTS =  gdpng.lo getopt.lo getopt1.lo gifsize.lo \
  parsetime.lo pngsize.lo rrd_create.lo rrd_diff.lo rrd_dump.lo \
  rrd_info.lo rrd_error.lo rrd_fetch.lo rrd_format.lo rrd_graph.lo \
-@@ -272,8 +261,8 @@
+@@ -279,8 +268,8 @@
  librrd.la: $(librrd_la_OBJECTS) $(librrd_la_DEPENDENCIES)
  	$(LINK) -rpath $(libdir) $(librrd_la_LDFLAGS) $(librrd_la_OBJECTS) $(librrd_la_LIBADD) $(LIBS)
  
@@ -56,7 +56,7 @@ $NetBSD: patch-ah,v 1.5 2000/12/05 11:15:42 wulf Exp $
  
  mostlyclean-binPROGRAMS:
  
-@@ -300,7 +289,7 @@
+@@ -307,7 +296,7 @@
  	  rm -f $(DESTDIR)$(bindir)/`echo $$p|sed 's/$(EXEEXT)$$//'|sed '$(transform)'|sed 's/$$/$(EXEEXT)/'`; \
  	done
  
@@ -65,76 +65,53 @@ $NetBSD: patch-ah,v 1.5 2000/12/05 11:15:42 wulf Exp $
  	@rm -f rrdcgi
  	$(LINK) $(rrdcgi_LDFLAGS) $(rrdcgi_OBJECTS) $(rrdcgi_LDADD) $(LIBS)
  
-@@ -367,49 +356,49 @@
+@@ -378,49 +367,6 @@
  	    || cp -p $$d/$$file $(distdir)/$$file || :; \
  	  fi; \
  	done
--gdpng.lo gdpng.o : gdpng.c ../libpng-1.0.6/png.h ../zlib-1.1.3/zlib.h \
--	../zlib-1.1.3/zconf.h ../libpng-1.0.6/pngconf.h ../gd1.3/gd.h
-+gdpng.lo gdpng.o : gdpng.c ${PREFIX}/include/png.h /usr/include/zlib.h \
-+	/usr/include/zconf.h ${PREFIX}/include/pngconf.h ${PREFIX}/include/gd.h
- getopt.lo getopt.o : getopt.c ../config/config.h getopt.h
- getopt1.lo getopt1.o : getopt1.c ../config/config.h getopt.h
- gifsize.lo gifsize.o : gifsize.c
- parsetime.lo parsetime.o : parsetime.c rrd_tool.h ../config/config.h \
+-gdpng.lo gdpng.o : gdpng.c ../libpng-1.0.9/png.h ../zlib-1.1.3/zlib.h \
+-	../zlib-1.1.3/zconf.h ../libpng-1.0.9/pngconf.h ../gd1.3/gd.h
+-getopt.lo getopt.o : getopt.c ../config/config.h getopt.h
+-getopt1.lo getopt1.o : getopt1.c ../config/config.h getopt.h
+-gifsize.lo gifsize.o : gifsize.c
+-parsetime.lo parsetime.o : parsetime.c rrd_tool.h ../config/config.h \
 -	rrd.h getopt.h rrd_format.h ../gd1.3/gd.h
--pngsize.lo pngsize.o : pngsize.c ../libpng-1.0.6/png.h \
+-pngsize.lo pngsize.o : pngsize.c ../libpng-1.0.9/png.h \
 -	../zlib-1.1.3/zlib.h ../zlib-1.1.3/zconf.h \
--	../libpng-1.0.6/pngconf.h
-+	rrd.h getopt.h rrd_format.h ${PREFIX}/include/gd.h
-+pngsize.lo pngsize.o : pngsize.c ${PREFIX}/include/png.h \
-+	/usr/include/zlib.h /usr/include/zconf.h \
-+	${PREFIX}/include/pngconf.h
- rrd_cgi.o: rrd_cgi.c rrd_tool.h ../config/config.h rrd.h getopt.h \
+-	../libpng-1.0.9/pngconf.h
+-rrd_cgi.o: rrd_cgi.c rrd_tool.h ../config/config.h rrd.h getopt.h \
 -	rrd_format.h ../gd1.3/gd.h ../cgilib-0.4/cgi.h
-+	rrd_format.h ${PREFIX}/include/gd.h ${PREFIX}/include/cgi.h
- rrd_create.lo rrd_create.o : rrd_create.c rrd_tool.h ../config/config.h \
+-rrd_create.lo rrd_create.o : rrd_create.c rrd_tool.h ../config/config.h \
 -	rrd.h getopt.h rrd_format.h ../gd1.3/gd.h
-+	rrd.h getopt.h rrd_format.h ${PREFIX}/include/gd.h
- rrd_diff.lo rrd_diff.o : rrd_diff.c rrd_tool.h ../config/config.h rrd.h \
+-rrd_diff.lo rrd_diff.o : rrd_diff.c rrd_tool.h ../config/config.h rrd.h \
 -	getopt.h rrd_format.h ../gd1.3/gd.h
-+	getopt.h rrd_format.h ${PREFIX}/include/gd.h
- rrd_dump.lo rrd_dump.o : rrd_dump.c rrd_tool.h ../config/config.h rrd.h \
+-rrd_dump.lo rrd_dump.o : rrd_dump.c rrd_tool.h ../config/config.h rrd.h \
 -	getopt.h rrd_format.h ../gd1.3/gd.h
-+	getopt.h rrd_format.h ${PREFIX}/include/gd.h
- rrd_error.lo rrd_error.o : rrd_error.c rrd_tool.h ../config/config.h \
+-rrd_error.lo rrd_error.o : rrd_error.c rrd_tool.h ../config/config.h \
 -	rrd.h getopt.h rrd_format.h ../gd1.3/gd.h
-+	rrd.h getopt.h rrd_format.h ${PREFIX}/include/gd.h
- rrd_fetch.lo rrd_fetch.o : rrd_fetch.c rrd_tool.h ../config/config.h \
+-rrd_fetch.lo rrd_fetch.o : rrd_fetch.c rrd_tool.h ../config/config.h \
 -	rrd.h getopt.h rrd_format.h ../gd1.3/gd.h
-+	rrd.h getopt.h rrd_format.h ${PREFIX}/include/gd.h
- rrd_format.lo rrd_format.o : rrd_format.c rrd_tool.h ../config/config.h \
+-rrd_format.lo rrd_format.o : rrd_format.c rrd_tool.h ../config/config.h \
 -	rrd.h getopt.h rrd_format.h ../gd1.3/gd.h
-+	rrd.h getopt.h rrd_format.h ${PREFIX}/include/gd.h
- rrd_graph.lo rrd_graph.o : rrd_graph.c rrd_tool.h ../config/config.h \
+-rrd_graph.lo rrd_graph.o : rrd_graph.c rrd_tool.h ../config/config.h \
 -	rrd.h getopt.h rrd_format.h ../gd1.3/gd.h \
 -	../gd1.3/gdlucidan10.h ../gd1.3/gdlucidab12.h
-+	rrd.h getopt.h rrd_format.h ${PREFIX}/include/gd.h \
-+	${PREFIX}/include/gdfontt.h ${PREFIX}/include/gdfonts.h
- rrd_info.lo rrd_info.o : rrd_info.c rrd_tool.h ../config/config.h rrd.h \
+-rrd_info.lo rrd_info.o : rrd_info.c rrd_tool.h ../config/config.h rrd.h \
 -	getopt.h rrd_format.h ../gd1.3/gd.h
-+	getopt.h rrd_format.h ${PREFIX}/include/gd.h
- rrd_last.lo rrd_last.o : rrd_last.c rrd_tool.h ../config/config.h rrd.h \
+-rrd_last.lo rrd_last.o : rrd_last.c rrd_tool.h ../config/config.h rrd.h \
 -	getopt.h rrd_format.h ../gd1.3/gd.h
-+	getopt.h rrd_format.h ${PREFIX}/include/gd.h
- rrd_open.lo rrd_open.o : rrd_open.c rrd_tool.h ../config/config.h rrd.h \
+-rrd_open.lo rrd_open.o : rrd_open.c rrd_tool.h ../config/config.h rrd.h \
 -	getopt.h rrd_format.h ../gd1.3/gd.h
-+	getopt.h rrd_format.h ${PREFIX}/include/gd.h
- rrd_resize.lo rrd_resize.o : rrd_resize.c rrd_tool.h ../config/config.h \
+-rrd_resize.lo rrd_resize.o : rrd_resize.c rrd_tool.h ../config/config.h \
 -	rrd.h getopt.h rrd_format.h ../gd1.3/gd.h
-+	rrd.h getopt.h rrd_format.h ${PREFIX}/include/gd.h
- rrd_restore.lo rrd_restore.o : rrd_restore.c rrd_tool.h \
+-rrd_restore.lo rrd_restore.o : rrd_restore.c rrd_tool.h \
 -	../config/config.h rrd.h getopt.h rrd_format.h ../gd1.3/gd.h
-+	../config/config.h rrd.h getopt.h rrd_format.h ${PREFIX}/include/gd.h
- rrd_tool.o: rrd_tool.c rrd_tool.h ../config/config.h rrd.h getopt.h \
+-rrd_tool.o: rrd_tool.c rrd_tool.h ../config/config.h rrd.h getopt.h \
 -	rrd_format.h ../gd1.3/gd.h
-+	rrd_format.h ${PREFIX}/include/gd.h
- rrd_tune.lo rrd_tune.o : rrd_tune.c rrd_tool.h ../config/config.h rrd.h \
+-rrd_tune.lo rrd_tune.o : rrd_tune.c rrd_tool.h ../config/config.h rrd.h \
 -	getopt.h rrd_format.h ../gd1.3/gd.h
-+	getopt.h rrd_format.h ${PREFIX}/include/gd.h
- rrd_update.lo rrd_update.o : rrd_update.c rrd_tool.h ../config/config.h \
+-rrd_update.lo rrd_update.o : rrd_update.c rrd_tool.h ../config/config.h \
 -	rrd.h getopt.h rrd_format.h ../gd1.3/gd.h
-+	rrd.h getopt.h rrd_format.h ${PREFIX}/include/gd.h
  
  info-am:
  info: info-am
