@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.70 2003/01/03 10:23:25 tron Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.71 2003/01/07 21:56:10 jlam Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -665,6 +665,7 @@ BUILDLINK_${_wrappee_}=	\
 
 _BLNK_WRAPPER_TRANSFORM_SED.${_wrappee_}=				\
 	-e "s|@BUILDLINK_DIR@|${BUILDLINK_DIR}|g"			\
+	-e "s|@BUILDLINK_X11_DIR@|${BUILDLINK_X11_DIR}|g"		\
 	-e "s|@BUILDLINK_SHELL@|${BUILDLINK_SHELL}|g"			\
 	-e "s|@WRKDIR@|${WRKDIR}|g"					\
 	-e "s|@WRKSRC@|${WRKSRC}|g"					\
@@ -909,6 +910,7 @@ ${_BLNK_FAKE_LA}: ${.CURDIR}/../../mk/buildlink2/fake-la
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
 	${_PKG_SILENT}${_PKG_DEBUG}${SED}				\
 		-e "s|@BUILDLINK_DIR@|${BUILDLINK_DIR}|g"		\
+		-e "s|@BUILDLINK_X11_DIR@|${BUILDLINK_X11_DIR}|g"	\
 		-e "s|@BUILDLINK_SHELL@|${BUILDLINK_SHELL}|g"		\
 		-e "s|@BASENAME@|${BASENAME:Q}|g"			\
 		-e "s|@CC@|${BUILDLINK_CC:Q}|g"				\
