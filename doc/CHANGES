@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.908 2002/12/25 01:13:42 uebayasi Exp $
+$NetBSD: CHANGES,v 1.909 2002/12/25 03:48:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -4253,3 +4253,8 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated pan to 0.13.2 (gtk2-pan) [wiz 2002-12-24]
 	Updated dnstop to 20021224 [wiz 2002-12-25]
 	Updated bochs to 2.0 [uebayasi 2002-12-25]
+	Updated mplayer-share to 0.90rc12 [wiz 2002-12-25]
+	Updated mplayer to 0.90rc12 [wiz 2002-12-25]
+	Updated gmplayer to 0.90rc12 [wiz 2002-12-25]
+	Updated mencoder to 0.90rc12 [wiz 2002-12-25]
+	Updated aspell to 0.33.7.1nb1 [wiz 2002-12-25]
