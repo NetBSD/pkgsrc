@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.314 2003/10/04 19:59:38 agc Exp $
+# $NetBSD: Packages.txt,v 1.315 2003/10/04 23:44:29 wiz Exp $
 ###########################################################################
 
 			==========================
@@ -722,13 +722,11 @@ one is used, they need to be separated by spaces:
 	news
 	packages
 	parallel
-	pkglocate
 	pkgtools
 	print
 	security
 	shells
 	sysutils
-	templates
 	textproc
 	time
 	wm
