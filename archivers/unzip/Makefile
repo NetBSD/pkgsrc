@@ -1,20 +1,19 @@
 # New ports collection makefile for:    unzip
-# Version required:     5.3.1
+# Version required:     5.3.2
 # Date created:         17 October 1994
 # Whom:                 jmz
 #
-# $NetBSD: Makefile,v 1.3 1997/10/27 03:22:25 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 1998/01/15 14:11:18 agc Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/06/19 05:30:04 ache Exp 
 #
 
-DISTNAME=       unzip-5.3.1
+DISTNAME=       unzip-5.32
 CATEGORIES=	archivers
 MASTER_SITES=   ftp://ftp.cdrom.com/pub/infozip/src/
-DISTFILES=      unzip531.tar.gz
+DISTFILES=      unzip532.tar.gz
 
 MAINTAINER=     ache@FreeBSD.ORG
 
-NO_WRKSUBDIR=   YES
 MAKEFILE=       unix/Makefile
 ALL_TARGET=     bsd
 MAKE_FLAGS=     LOCAL_UNZIP="${CFLAGS} -DUSE_UNSHRINK" -f
@@ -30,6 +29,6 @@ do-install:
 		${INSTALL_MAN} ${MAN1} ${PREFIX}/man/man1
 	install -d -m 555 -o ${SHAREOWN} -g ${SHAREGRP} ${PREFIX}/share/doc/unzip
 	cd ${WRKSRC} && \
-		${INSTALL_DATA} README Where COPYING ${PREFIX}/share/doc/unzip
+		${INSTALL_DATA} README WHERE COPYING ${PREFIX}/share/doc/unzip
 
 .include <bsd.port.mk>
