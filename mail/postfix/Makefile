@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.133 2004/06/22 05:12:43 martti Exp $
+# $NetBSD: Makefile,v 1.134 2004/07/18 19:16:31 jlam Exp $
 
 DISTNAME=	postfix-2.1.3
 CATEGORIES=	mail
@@ -179,9 +179,7 @@ INSTALL_EXTRA_TMPL+=	${PKGDIR}/INSTALL
 pre-configure:
 	@for i in ${POSTFIX_CONF_FILES}; do				\
 		${CP} ${WRKSRC}/$${i} ${WRKSRC}/$${i}.dist;		\
-		${SED} -e 's|__PREFIX|'${PREFIX}'|g'			\
-			-e 's|__PKG_SYSCONFDIR|'${PKG_SYSCONFDIR}'|g'	\
-			< ${WRKSRC}/$${i}.dist				\
+		${SED} ${FILES_SUBST_SED} ${WRKSRC}/$${i}.dist		\
 			> ${WRKSRC}/$${i};				\
 	done
 
@@ -191,8 +189,8 @@ do-configure:
 		'CCARGS=${CCARGS}' 'AUXLIBS=${AUXLIBS}'
 
 post-build:
-	${SED} -e 's#@@PREFIX@@#${PREFIX}#g' \
-	    <${FILESDIR}/mailer.conf >${WRKDIR}/mailer.conf.postfix
+	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/mailer.conf		\
+		> ${WRKDIR}/mailer.conf.postfix
 
 pre-install:
 	${INSTALL_DATA_DIR} ${PKG_SYSCONFDIR}
