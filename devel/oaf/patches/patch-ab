@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/07/16 19:44:18 rh Exp $
+
+--- liboaf/oaf-mainloop.c.orig	Wed May 31 14:14:53 2000
++++ liboaf/oaf-mainloop.c	Sun Jul 16 20:33:37 2000
+@@ -15,7 +15,7 @@
+ #include <stdlib.h>
+ 
+ #include <glib.h>
+-#include <popt.h>
++#include <popt-gnome.h>
+ 
+ /****************** ORBit-specific stuff ****************/
+ 
