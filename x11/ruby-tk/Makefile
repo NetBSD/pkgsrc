@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2003/12/19 12:04:20 sketch Exp $
+# $NetBSD: Makefile,v 1.6 2004/01/20 12:28:27 agc Exp $
 # FreeBSD: ports/x11-toolkits/ruby-tk/Makefile,v 1.21 2000/10/20 19:56:04 knu Exp
 
 DISTNAME=	${RUBY_DISTNAME}
 PKGNAME=	${RUBY_PKGNAMEPREFIX}tk-${RUBY_VERSION}
 PKGREVISION=	1
-WRKSRC=		${RUBY_WRKSRC}/ext/tk
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_RUBY}
 
@@ -14,6 +13,7 @@ COMMENT=	Ruby interface to the Tk widget set
 
 DEPENDS+=	${RUBY_PKGNAMEPREFIX}tcltklib>=${RUBY_VERSION}:../../x11/ruby-tcltklib
 
+WRKSRC=		${RUBY_WRKSRC}/ext/tk
 DIST_SUBDIR=	ruby
 
 EXTRACT_ELEMENTS= ${RUBY_DISTNAME}/ext/tk

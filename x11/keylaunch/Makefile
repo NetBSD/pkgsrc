@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2003/07/17 22:56:35 grant Exp $
+# $NetBSD: Makefile,v 1.6 2004/01/20 12:28:26 agc Exp $
 #
 
 DISTNAME=	keylaunch-1.3.0
-WRKSRC=		${WRKDIR}/keylaunch
 CATEGORIES=	x11
 MASTER_SITES=	http://www.kensden.pwp.blueyonder.co.uk/Oroborus/files/
 
@@ -10,6 +9,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.kensden.pwp.blueyonder.co.uk/Oroborus/download.htm
 COMMENT=	X utility for binding commands to a hot key
 
+WRKSRC=		${WRKDIR}/keylaunch
 USE_BUILDLINK2=	YES
 USE_X11BASE=	YES
 USE_GMAKE=	YES

@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2003/03/29 12:43:14 jmmv Exp $
+# $NetBSD: Makefile,v 1.13 2004/01/20 12:28:29 agc Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/06/29 09:38:20 obrien Exp
 #
 
 DISTNAME=	pns_source
 PKGNAME=	xpns-1.0
-WRKSRC=		${WRKDIR}
 CATEGORIES=	x11 cad
 MASTER_SITES=	ftp://ftp.informatik.uni-stuttgart.de/pub/petri-nets/
 EXTRACT_SUFX=	.tar.Z
@@ -13,6 +12,7 @@ MAINTAINER=	pgiffuni@fps.biblos.unal.edu.co
 HOMEPAGE=	http://www.informatik.uni-stuttgart.de/ipvr/bv/pns/pns.html
 COMMENT=	Petri-Net Simulator for Xwindows
 
+WRKSRC=		${WRKDIR}
 USE_X11BASE=	yes
 MAKEFILE=	makefile
 ALL_TARGET=	pns

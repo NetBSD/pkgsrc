@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2003/07/17 22:56:23 grant Exp $
+# $NetBSD: Makefile,v 1.16 2004/01/20 12:28:26 agc Exp $
 #
 
 DISTNAME=	eGTK_0.3.4
 PKGNAME=	egtk-0.3.4
 PKGREVISION=	2
-WRKSRC=		${WRKDIR}/eGTK
 CATEGORIES=	x11
 MASTER_SITES=	http://www.netlabs.net/hp/richieb/downloads/
 
@@ -14,6 +13,7 @@ COMMENT=	Eiffel/GTK+ interface for SmallEiffel
 
 DEPENDS+=	smalleiffel-[0-9]*:../../lang/smalleiffel
 
+WRKSRC=		${WRKDIR}/eGTK
 USE_BUILDLINK2=	yes
 
 post-extract:

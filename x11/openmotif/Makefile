@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2003/11/20 11:13:51 heinz Exp $
+# $NetBSD: Makefile,v 1.24 2004/01/20 12:28:26 agc Exp $
 # FreeBSD: /c/ncvs/ports/x11-toolkits/open-motif/Makefile,v 1.18 2000/10/09 01:40:02 asami Exp
 # OpenBSD: Makefile,v 1.5 2000/10/23 16:08:12 espie Exp
 
@@ -6,7 +6,6 @@ PKGVER=		2.1.30
 DISTNAME=	openmotif${PKGVER}
 PKGNAME=	openmotif-${PKGVER}
 PKGREVISION=	2
-WRKSRC=		${WRKDIR}/motif
 CATEGORIES=	x11
 MOTIF_SITES=	ftp://openmotif.opengroup.org/pub/openmotif/R${PKGVER}/ \
 		ftp://ftp.opengroup.org/pub/openmotif/R${PKGVER}/ \
@@ -23,6 +22,7 @@ COMMENT=		The Open Group Motif toolkit for the X Window System
 
 CONFLICTS+=		lesstif-[0-9]*
 
+WRKSRC=			${WRKDIR}/motif
 DIST_SUBDIR=		openmotif
 USE_X11BASE=		yes
 USE_BUILDLINK2=		yes
