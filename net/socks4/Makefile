@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.3 1998/08/20 15:17:19 tsarna Exp $
+# $NetBSD: Makefile,v 1.4 1999/01/20 00:48:12 ross Exp $
 #
 
 DISTNAME=	export.socks.cstc.4.2.2
 PKGNAME=	socks4-2.2
 CATEGORIES=	net security
-MASTER_SITES=	http://www.ibs.net.pl/archive/Firewalls/socks/socks4/
+MASTER_SITES=	http://www.ibs.net.pl/archive/Firewalls/socks/socks4/\
+		ftp://ftp.nec.com/pub/socks/socks4/
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.socks.nec.com/socksv4.html
