@@ -1,0 +1,22 @@
+Mirrordir is a suite of functions in one package.  It contains the
+following programs: 
+
+* pslogin:  A remote login utility and daemon that provides a secure
+shell.  This can be considered as a GPL replacement to Ssh. 
+
+* copydir:  A cp equivalent which additionally copies to and from ftp
+servers.  Use it to upload and download via ftp and via mirrordir's
+secure daemon.  Use it as a rigorous cp to correctly reproduce
+hardlinks, permissions and access times. 
+
+* mirrordir:  Mirrors filesystems over ftp or locally via a minimal
+set of changes.  It is optimised for locally mirroring a device as
+an alternative to RAID devices.  It duplicates file-systems in every
+detail, even correctly recreating hardlinks, devices and access
+times.  It works well mirroring ftp sites that don't support ls-lR
+summaries.  Mirrordir can take a C script to customise the kind of
+files to mirror based on their stat info, name, or other
+information. 
+
+* recursdir:  Pass a C script to recursdir to recursively perform
+operations on files.  This is a fast and overkill equivalent of find.
