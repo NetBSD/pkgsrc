@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.3 2001/06/28 23:12:16 jlam Exp $
+$NetBSD: patch-ab,v 1.4 2001/08/17 19:49:10 kim Exp $
 
---- configure.in.orig	Mon May 28 13:21:44 2001
-+++ configure.in
+--- configure.in.orig	Mon May 28 20:21:44 2001
++++ configure.in	Fri Aug 17 22:06:34 2001
 @@ -131,7 +131,7 @@
          )
  	;;
@@ -20,3 +20,38 @@ $NetBSD: patch-ab,v 1.3 2001/06/28 23:12:16 jlam Exp $
  	AC_DEFINE(PAM_SUN_CODEBASE)
  	AC_DEFINE(LOGIN_NEEDS_UTMPX)
  	AC_DEFINE(LOGIN_NEEDS_TERM)
+@@ -432,6 +432,7 @@
+ 
+ # Check whether user wants TCP wrappers support
+ TCPW_MSG="no" 
++TCPW_LIB=""
+ AC_ARG_WITH(tcp-wrappers,
+ 	[  --with-tcp-wrappers     Enable tcpwrappers support],
+ 	[
+@@ -441,6 +442,8 @@
+ 			AC_MSG_CHECKING(for libwrap)
+ 			AC_TRY_LINK(
+ 				[
++#include <sys/cdefs.h>
++#include <stdio.h>
+ #include <tcpd.h>
+ 					int deny_severity = 0, allow_severity = 0;
+ 				],
+@@ -449,14 +452,17 @@
+ 					AC_MSG_RESULT(yes)
+ 					AC_DEFINE(LIBWRAP)
+ 					TCPW_MSG="yes" 
++					TCPW_LIB="-lwrap" 
+ 				],
+ 				[
+ 					AC_MSG_ERROR([*** libwrap missing])
+ 				]
+ 			)
++			LIBS="$saved_LIBS"
+ 		fi
+ 	]
+ )
++AC_SUBST(TCPW_LIB)
+ 
+ dnl    Checks for library functions.
+ AC_CHECK_FUNCS(arc4random atexit b64_ntop bcopy bindresvport_sa clock fchown fchmod freeaddrinfo futimes gai_strerror getcwd getaddrinfo getgrouplist getnameinfo getrlimit getrusage getttyent getusershell glob inet_aton inet_ntoa inet_ntop innetgr login_getcapbool md5_crypt memmove mkdtemp on_exit openpty realpath rresvport_af setdtablesize setenv setegid seteuid setlogin setproctitle setresgid setreuid setrlimit setsid setvbuf sigaction sigvec snprintf strerror strlcat strlcpy strmode strsep strtok_r sysconf tcgetpgrp utimes vsnprintf vhangup vis waitpid _getpty __b64_ntop)
