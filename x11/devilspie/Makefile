@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/02/28 09:16:17 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2005/02/28 16:07:41 wiz Exp $
 
 DISTNAME=		devilspie-0.8
 CATEGORIES=		x11
@@ -7,6 +7,8 @@ MASTER_SITES=		http://www.burtonini.com/computing/
 MAINTAINER=		wiz@NetBSD.org
 HOMEPAGE=		http://www.burtonini.com/blog/computers/devilspie/
 COMMENT=		Window-matching utility to customize window behavior
+
+BUILD_DEPENDS+=		libxslt>=1.0:../../textproc/libxslt
 
 GNU_CONFIGURE=		YES
 USE_BUILDLINK3=		YES
