@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 1998/09/05 18:44:34 hubertf Exp $
+# $NetBSD: Makefile,v 1.18 1998/09/05 19:26:02 tron Exp $
 #
 
 DISTNAME=       MesaLib-2.6
@@ -23,6 +23,7 @@ GLUT_VERSION=	3.6
 
 post-extract:
 	@chmod +r ${WRKSRC}/demos/*
+	@find ${WRKSRC} -type f -name "*~" | xargs ${RM} -f
 
 do-install:
 .for file in ${MESA_LIBS}
@@ -46,7 +47,6 @@ do-install:
 	${CP} -Rp ${WRKSRC}/demos ${PREFIX}/share/examples/Mesa
 	${CP} -Rp ${WRKSRC}/book ${PREFIX}/share/examples/Mesa
 	${CP} -Rp ${WRKSRC}/widgets-sgi ${PREFIX}/share/examples/Mesa
-	${RM} ${PREFIX}/share/examples/Mesa/*~
 	chown -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/examples/Mesa
 	${LN} -f ${PREFIX}/lib/libMesaGL.so.2.6 ${PREFIX}/lib/libGL.so.2.6
 	${LN} -f ${PREFIX}/lib/libMesaGLU.so.2.6 ${PREFIX}/lib/libGLU.so.2.6
