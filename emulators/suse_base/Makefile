@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.7 1999/05/24 20:39:40 tv Exp $
+# $NetBSD: Makefile,v 1.8 1999/06/29 22:48:19 tron Exp $
 
 DISTNAME=		suse_base-6.1
 CATEGORIES=		emulators
 MASTER_SITES=		ftp://ftp.suse.com/pub/suse/i386/6.1/suse/a1/ \
 			ftp://ftp.cs.unm.edu/mirrors/SuSE61/suse/a1/
-DISTFILES=		aaa_dir.rpm shlibs.rpm ldso.rpm gppshare.rpm
+DISTFILES=		aaa_dir.rpm shlibs.rpm ldso.rpm \
+			bash.rpm gppshare.rpm ncurses.rpm
 ONLY_FOR_PLATFORM=	NetBSD-*-i386
 
 MAINTAINER=		tron@netbsd.org
@@ -24,6 +25,7 @@ PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
 
 EMULSUBDIR=		emul/linux
 EMULDIR=		${PREFIX}/${EMULSUBDIR}
+LDD=			${PREFIX}/${EMULSUBDIR}/usr/bin/ldd
 SBINDIR=		${PREFIX}/sbin
 
 do-build:
@@ -50,6 +52,10 @@ do-install:
 	${EGREP} -v '${EMULSUBDIR}/(tmp|usr/tmp|var)' >>${PLIST_SRC}
 	@cd ${EMULDIR} && ${RM} -rf tmp usr/tmp var
 	${INSTALL_DATA} ${FILESDIR}/ld.so.conf ${EMULDIR}/etc
+	${SED} -e 's:#! :#! /${EMULSUBDIR}:' \
+	       -e 's:^RTLD=:RTLD=/${EMULSUBDIR}:' <${LDD} >${LDD}.new
+	${MV} ${LDD}.new ${LDD}
+	${CHMOD} +x ${LDD}
 	@${ECHO} "@unexec rm -rf %D/${EMULSUBDIR}" >>${PLIST_SRC}
 	@${SETENV} PKG_PREFIX="${PREFIX}" ${SH} ${INSTALL_FILE} - POST-INSTALL
 
