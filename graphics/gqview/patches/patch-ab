@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.6 2001/11/15 10:57:32 wiz Exp $
+$NetBSD: patch-ab,v 1.7 2001/12/29 11:40:29 zuntum Exp $
 
---- src/Makefile.in.orig	Thu Nov 15 08:38:34 2001
+--- src/Makefile.in.orig	Sun Dec 16 02:43:25 2001
 +++ src/Makefile.in
 @@ -103,7 +103,7 @@
  INCLUDES = -I$(srcdir) -I$(builddir)    \
