@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.10 2004/07/18 22:08:46 jlam Exp $
+# $NetBSD: Makefile.common,v 1.11 2004/07/20 04:53:09 xtraeme Exp $
 
 DISTNAME=		mysql-4.0.20
 CATEGORIES=		databases
@@ -19,7 +19,7 @@ EXTRACT_USING_PAX=	# defined
 #			location of the databases
 MYSQL_USER?=		mysql
 MYSQL_GROUP?=		mysql
-MYSQL_DATADIR?=		/var/mysql
+MYSQL_DATADIR?=		${VARBASE}/mysql
 
 # MYSQL_CHARSET		default character set
 # MYSQL_EXTRA_CHARSET	additonal character set to be compiled in.
