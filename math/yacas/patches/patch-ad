@@ -1,0 +1,25 @@
+$NetBSD: patch-ad,v 1.1.1.1 2000/02/20 14:40:35 dmcmahill Exp $
+
+--- /dev/null	Sun Feb 20 09:00:11 2000
++++ yacas.sh.in	Sun Feb 20 09:07:01 2000
+@@ -0,0 +1,20 @@
++#!/bin/sh
++
++# save the tty settings
++stty -a | grep "\-extproc" 2>&1 > /dev/null
++if [ $? = 0 ]; then
++  OLD=-extproc
++else
++  OLD=extproc
++fi
++#OLD=`stty -g`
++
++# make sure one critical tty setting is correct
++stty -extproc
++
++# run yacas
++@prefix@/bin/yacas $*
++
++# restore the tty setting
++stty $OLD
++

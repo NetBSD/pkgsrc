@@ -1,0 +1,15 @@
+$NetBSD: patch-ac,v 1.1.1.1 2000/02/20 14:40:35 dmcmahill Exp $
+
+needed to remove the -O2 from this line.  Otherwise NetBSD-1.4.1/pmax
+assembler never finishes.
+
+--- ./triage/Makefile.in.orig	Thu Feb 10 23:58:10 2000
++++ ./triage/Makefile.in	Sat Feb 19 22:05:27 2000
+@@ -222,4 +222,7 @@
+ 	$(CXXLINK) $(example3_LDFLAGS) $(example3_OBJECTS) $(example3_LDADD) $(LIBS)
+ 
++example4.o: example4.cc
++	$(CXX) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) -g -c example4.cc
++
+ example4: $(example4_OBJECTS) $(example4_DEPENDENCIES)
+ 	@rm -f example4
