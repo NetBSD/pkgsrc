@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1540.2.12 2005/01/24 18:25:28 tv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1540.2.13 2005/01/24 18:37:36 tv Exp $
 #
 # This file is in the public domain.
 #
@@ -35,6 +35,8 @@ MAKEFLAGS+=		_PATH_ORIG=${_PATH_ORIG:Q}
 # Transform package Makefile variables and set defaults
 ############################################################################
 
+CHECK_FILES?=		YES	# run check-files after install
+CHECK_FILES_STRICT?=	NO	# make check-files very strict on errors
 CHECK_SHLIBS?=		YES	# run check-shlibs after install
 CLEANDEPENDS?=		NO
 DEINSTALLDEPENDS?=	NO	# add -R to pkg_delete
@@ -42,6 +44,17 @@ MKCRYPTO?=		YES	# build crypto packages by default
 NOCLEAN?=		NO	# don't clean up after update
 REINSTALL?=		NO	# reinstall upon update
 SHLIB_HANDLING?=	YES	# do automatic shared lib handling
+
+# A list of file names that will be skipped when analyzing file lists in
+# the check-files target.  This is useful to avoid getting errors triggered
+# by changes in directories not really handled by pkgsrc.
+CHECK_FILES_SKIP+=	emul/linux/proc
+
+CHECK_FILES_SKIP_CMD=
+.for name in ${CHECK_FILES_SKIP}
+CHECK_FILES_SKIP_CMD+=	| ${GREP} -v ${name}
+.endfor
+.undef name
 
 ##### Variant spellings
 
@@ -1282,6 +1295,20 @@ init-install:
 		${ECHO_MSG} "If this is not desired, set it to an appropriate value (${DEF_UMASK})"; \
 		${ECHO_MSG} "and install this package again by \`\`${MAKE} deinstall reinstall''."; \
 	fi
+.  if defined(PKG_DEVELOPER) && (${CHECK_FILES} == "YES")
+	${_PKG_SILENT}${_PKG_DEBUG}${ECHO_MSG} "${_PKGSRC_IN}> Generating pre-install file lists"
+	${_PKG_SILENT}${_PKG_DEBUG}${FIND} ${PREFIX} -type f -or -type l \
+		2>/dev/null ${CHECK_FILES_SKIP_CMD} >${WRKDIR}/.prefix.pre \
+		|| ${TRUE}
+.    if ${CHECK_FILES_STRICT} == "YES"
+	${_PKG_SILENT}${_PKG_DEBUG}${FIND} ${PKG_SYSCONFDIR} \
+		2>/dev/null ${CHECK_FILES_SKIP_CMD} >${WRKDIR}/.sysconfdir.pre \
+		|| ${TRUE}
+	${_PKG_SILENT}${_PKG_DEBUG}${FIND} ${VARBASE} \
+		2>/dev/null ${CHECK_FILES_SKIP_CMD} >${WRKDIR}/.varbase.pre \
+		|| ${TRUE}
+.    endif
+.  endif
 .  if defined(INSTALLATION_DIRS) && !empty(INSTALLATION_DIRS)
 	${_PKG_SILENT}${_PKG_DEBUG}${ECHO_MSG} "${_PKGSRC_IN}> Creating installation directories"
 	${_PKG_SILENT}${_PKG_DEBUG}					\
@@ -1359,6 +1386,26 @@ post-install: .OPTIONAL
 _REAL_TARGETS.su-install+=	plist
 .PHONY: plist
 plist: ${PLIST}
+
+#===> "post-install-check-files"
+
+.if defined(PKG_DEVELOPER) && (${CHECK_FILES} == "YES")
+_REAL_TARGETS.su-install+=	post-install-check-files
+.PHONY: post-install-check-files
+post-install-check-files:
+	${_PKG_SILENT}${_PKG_DEBUG}${ECHO_MSG} "${_PKGSRC_IN}> Generating post-install file lists"
+	${_PKG_SILENT}${_PKG_DEBUG}${FIND} ${PREFIX} -type f -or -type l \
+		2>/dev/null ${CHECK_FILES_SKIP_CMD} >${WRKDIR}/.prefix.post \
+		|| ${TRUE}
+.  if ${CHECK_FILES_STRICT} == "YES"
+	${_PKG_SILENT}${_PKG_DEBUG}${FIND} ${PKG_SYSCONFDIR} \
+		2>/dev/null ${CHECK_FILES_SKIP_CMD} >${WRKDIR}/.sysconfdir.post\
+		|| ${TRUE}
+	${_PKG_SILENT}${_PKG_DEBUG}${FIND} ${VARBASE} \
+		2>/dev/null ${CHECK_FILES_SKIP_CMD} >${WRKDIR}/.varbase.post \
+		|| ${TRUE}
+.  endif
+.endif
 
 #===> "post-install-script"
 
@@ -1457,6 +1504,12 @@ _REAL_TARGETS.su-install+=	fake-pkg
 
 .  if defined(PKG_DEVELOPER) && (${CHECK_SHLIBS} == "YES")
 _REAL_TARGETS.su-install+=	check-shlibs
+.  endif
+
+#===> "check-files"
+
+.  if defined(PKG_DEVELOPER) && (${CHECK_FILES} == "YES")
+_REAL_TARGETS.su-install+=	check-files
 .  endif
 
 .endif	# !empty(PKG_PHASES:Minstall)
@@ -2682,6 +2735,59 @@ check-shlibs:
 		exit 1;							\
 	fi
 .endif # NO_PKG_REGISTER
+
+# Check if the generated PLIST matches the list of really installed files.
+#
+.PHONY: check-files
+check-files:
+.if !defined(NO_PKG_REGISTER)
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	errors=0;							\
+	diff -u ${WRKDIR}/.prefix.pre ${WRKDIR}/.prefix.post		\
+		>${WRKDIR}/.files.diff;					\
+	${GREP} '^+/' ${WRKDIR}/.files.diff | ${SED} 's|^+${PREFIX}/||'	\
+		| ${SORT} >${WRKDIR}/.files.added;			\
+	${GREP} '^-/' ${WRKDIR}/.files.diff | ${SED} 's|^-${PREFIX}/||'	\
+		| ${SORT} >${WRKDIR}/.files.deleted;			\
+	if ${TEST} `${WC} -l ${WRKDIR}/.files.deleted | 		\
+		${AWK} '{ print $$1; }'` -gt 0;				\
+	then								\
+		echo "*** The following files have been deleted from"	\
+		     "${PREFIX}!";					\
+		${SED} "s|^|        |" <${WRKDIR}/.files.deleted;	\
+		errors=1;						\
+	fi;								\
+	${GREP} '^[A-Za-z]' ${PLIST} | ${SORT} >${WRKDIR}/.files.expected; \
+	if ! ${CMP} -s ${WRKDIR}/.files.expected ${WRKDIR}/.files.added; then \
+		echo "*** The PLIST does not match installed files!";	\
+		echo "    The following files were not expected in ${PREFIX}:";\
+		diff -u ${WRKDIR}/.files.expected ${WRKDIR}/.files.added | \
+			${GREP} '^+[^+]' | ${SED} "s|^+|        |";	\
+		errors=1;						\
+	fi;								\
+	if [ ${CHECK_FILES_STRICT} = "YES" ] &&				\
+	   ! ${CMP} -s ${WRKDIR}/.sysconfdir.pre ${WRKDIR}/.sysconfdir.post; \
+	then								\
+		echo "*** The package has modified ${PKG_SYSCONFDIR}"	\
+		     "contents directly!";				\
+		echo "    The offending files/directories are:";	\
+		diff -u ${WRKDIR}/.sysconfdir.pre ${WRKDIR}/.sysconfdir.post | \
+			${GREP} '^+[^+]' | ${SED} "s|^+|        |";	\
+		errors=1;						\
+	fi;								\
+	if [ ${CHECK_FILES_STRICT} = "YES" ] &&				\
+	   ! ${CMP} -s ${WRKDIR}/.varbase.pre ${WRKDIR}/.varbase.post; then \
+		echo "*** The package has modified ${VARBASE} contents"	\
+		     "directly!";					\
+		echo "    The offending files/directories are:";	\
+		diff -u ${WRKDIR}/.varbase.pre ${WRKDIR}/.varbase.post |\
+			${GREP} '^+[^+]' | ${SED} "s|^+|        |";	\
+		errors=1;						\
+	fi;								\
+	${RM} -f ${WRKDIR}/.files.added ${WRKDIR}/.files.deleted	\
+	         ${WRKDIR}/.files.diff ${WRKDIR}/.files.expected;	\
+	${TEST} $$errors -eq 0
+.endif
 
 LOCKFILE=	${WRKDIR}/.lockfile
 .for targ in ${_PKG_PHASES_WRKDIR}
