@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/03/22 16:41:48 jmmv Exp $
+$NetBSD: distinfo,v 1.2 2005/03/26 16:22:19 jmmv Exp $
 
-SHA1 (ximian-connector-2.2.0.tar.bz2) = e157bc28070e6c2584f3c71d0baa663ee64f7dec
-RMD160 (ximian-connector-2.2.0.tar.bz2) = 19892bf8a061aac8e16e17513d8b902fee482fc6
-Size (ximian-connector-2.2.0.tar.bz2) = 1242512 bytes
+SHA1 (ximian-connector-2.2.1.tar.bz2) = 619171079d9be0601c360e75280739d5ef4b9a1c
+RMD160 (ximian-connector-2.2.1.tar.bz2) = fc98b9941415f8e13955066fd0ae4fc810fe833b
+Size (ximian-connector-2.2.1.tar.bz2) = 1350693 bytes
