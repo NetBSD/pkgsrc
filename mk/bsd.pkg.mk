@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1080 2002/10/30 02:25:29 rh Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1081 2002/11/07 04:22:29 dillo Exp $
 #
 # This file is in the public domain.
 #
@@ -328,6 +328,7 @@ EXTRACT_COOKIE=		${WRKDIR}/.extract_done
 BUILDLINK_COOKIE=	${WRKDIR}/.buildlink_done
 CONFIGURE_COOKIE=	${WRKDIR}/.configure_done
 INSTALL_COOKIE=		${WRKDIR}/.install_done
+TEST_COOKIE=		${WRKDIR}/.test_done
 BUILD_COOKIE=		${WRKDIR}/.build_done
 PATCH_COOKIE=		${WRKDIR}/.patch_done
 PACKAGE_COOKIE=		${WRKDIR}/.package_done
@@ -1984,6 +1985,21 @@ do-build:
 .  endfor
 .endif
 
+#Test
+
+TEST_DIRS?=	${BUILD_DIRS}
+
+.if !target(do-test)
+do-test:
+.  if defined(TEST_TARGET)
+.    for DIR in ${TEST_DIRS}
+	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}cd ${DIR} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} ${TEST_TARGET}
+.    endfor
+.  else
+	@${DO_NADA}
+.  endif
+.endif
+
 # Install
 
 INSTALL_DIRS?=	${BUILD_DIRS}
@@ -2513,8 +2529,16 @@ configure: buildlink acquire-configure-lock ${CONFIGURE_COOKIE} release-configur
 build: configure acquire-build-lock ${BUILD_COOKIE} release-build-lock
 .endif
 
+.if !target(test)
+test: build ${TEST_COOKIE}
+.endif
+
 .if !target(install)
+.  if ${PKGSRC_RUN_TEST} == "YES" || ${PKGSRC_RUN_TEST} == "yes"
+install: uptodate-pkgtools build test ${INSTALL_COOKIE}
+.  else
 install: uptodate-pkgtools build ${INSTALL_COOKIE}
+.  endif
 .endif
 
 .if !target(package)
@@ -2555,6 +2579,9 @@ ${BUILD_COOKIE}:
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} real-build
 .endif
 
+${TEST_COOKIE}:
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} real-test
+
 ${INSTALL_COOKIE}:
 .if ${INTERACTIVE_STAGE:Minstall} == "install" && defined(BATCH)
 	@${ECHO} "*** The installation stage of this package requires user interaction"
@@ -2578,6 +2605,8 @@ configure-message:
 	@${ECHO_MSG} "${_PKGSRC_IN}> Configuring for ${PKGNAME}"
 build-message:
 	@${ECHO_MSG} "${_PKGSRC_IN}> Building for ${PKGNAME}"
+test-message:
+	@${ECHO_MSG} "${_PKGSRC_IN}> Testing for ${PKGNAME}"
 
 extract-cookie:
 	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} ${PKGNAME} >> ${EXTRACT_COOKIE}
@@ -2589,6 +2618,8 @@ configure-cookie:
 	${_PKG_SILENT}${_PKG_DEBUG} ${TOUCH} ${TOUCH_FLAGS} ${CONFIGURE_COOKIE}
 build-cookie:
 	${_PKG_SILENT}${_PKG_DEBUG} ${TOUCH} ${TOUCH_FLAGS} ${BUILD_COOKIE}
+test-cookie:
+	${_PKG_SILENT}${_PKG_DEBUG} ${TOUCH} ${TOUCH_FLAGS} ${TEST_COOKIE}
 
 .ORDER: pre-fetch do-fetch post-fetch
 .ORDER: extract-message install-depends pre-extract do-extract post-extract extract-cookie
@@ -2596,6 +2627,7 @@ build-cookie:
 .ORDER: buildlink-message pre-buildlink do-buildlink post-buildlink buildlink-cookie
 .ORDER: configure-message pre-configure do-configure post-configure configure-cookie
 .ORDER: build-message pre-build do-build post-build build-cookie
+.ORDER: test-message pre-test do-test post-test test-cookie
 
 # Please note that the order of the following targets is important, and
 # should not be modified (.ORDER is not recognised by make(1) in a serial
@@ -2606,6 +2638,7 @@ real-patch: patch-message pre-patch do-patch post-patch patch-cookie
 real-buildlink: buildlink-message pre-buildlink do-buildlink post-buildlink buildlink-cookie
 real-configure: configure-message pre-configure do-configure post-configure configure-cookie
 real-build: build-message pre-build do-build post-build build-cookie
+real-test: test-message pre-test do-test post-test test-cookie
 real-install: do-su-install
 real-package: do-su-package
 real-replace: do-su-replace
@@ -2674,7 +2707,7 @@ do-su-undo-replace:
 
 # Empty pre-* and post-* targets
 
-.for name in fetch extract patch buildlink configure build install-script install package
+.for name in fetch extract patch buildlink configure build test install-script install package
 
 .  if !target(pre-${name})
 pre-${name}:
