@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2001/12/01 12:24:23 martti Exp $
+# $NetBSD: Makefile,v 1.49 2001/12/01 12:30:31 martti Exp $
 
 DISTNAME=	postfix-20010228-pl08
 PKGNAME=	postfix-20010228pl8
@@ -18,6 +18,12 @@ DIST_SUBDIR=	postfix
 POSTFIX_SPOOL=	/var/spool/postfix
 
 .include "../../mk/bsd.prefs.mk"
+
+.if defined(POSTFIX_USE_INET6) && ${POSTFIX_USE_INET6} == "YES"
+PATCHFILES+=	postfix-20010228pl04-v6-20010809a.diff.gz
+PATCH_SITES+=	ftp://ftp.kame.net/pub/kame/misc/
+BUILD_DEFS+=	POSTFIX_USE_INET6
+.endif
 
 .if defined(POSTFIX_USE_PCRE) && ${POSTFIX_USE_PCRE} == "YES"
 DEPENDS+=	pcre>=2.08:../../devel/pcre
