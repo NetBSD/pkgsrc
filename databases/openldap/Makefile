@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.95 2005/01/06 11:10:55 adam Exp $
+# $NetBSD: Makefile,v 1.96 2005/01/12 04:04:36 jlam Exp $
 
 DISTNAME=	openldap-2.2.20
+PKGREVISION=	1
 SVR4_PKGNAME=	oldap
 CATEGORIES=	databases
 MASTER_SITES=	ftp://ftp.openldap.org/pub/OpenLDAP/openldap-release/
@@ -61,7 +62,7 @@ EGDIR=			${PREFIX}/share/examples/openldap
 MAKE_DIRS=		${OPENLDAP_ETCDIR} ${OPENLDAP_ETCDIR}/schema
 OWN_DIRS=		${OPENLDAP_VARDIR} ${OPENLDAP_VARDIR}/run
 OWN_DIRS_PERMS=		${OPENLDAP_VARDIR}/openldap-data ${OPENLDAP_DIRPERMS}
-OWN_DIRS_PERMS=		${OPENLDAP_VARDIR}/openldap-ldbm ${OPENLDAP_DIRPERMS}
+OWN_DIRS_PERMS+=	${OPENLDAP_VARDIR}/openldap-ldbm ${OPENLDAP_DIRPERMS}
 OWN_DIRS_PERMS+=	${OPENLDAP_VARDIR}/openldap-slurp ${OPENLDAP_DIRPERMS}
 
 CNFS=			ldap.conf					\
