@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/09/27 23:46:56 jschauma Exp $
+
+SHA1 (stride.tar.gz) = f85cca717c79200bf33fa3a80323ccd9da471669
+Size (stride.tar.gz) = 56441 bytes
+SHA1 (patch-aa) = b9f0469f078b4018af0de5e3aff524b831fc3703
