@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.2 1998/08/07 13:21:38 agc Exp $
+$NetBSD: md5,v 1.3 1998/12/20 14:18:02 christos Exp $
 
-MD5 (xpaint-2.5.tar.gz) = 62438af07c1b7ed777c57be35b7db2a3
+MD5 (xpaint-2.5.6.tar.gz) = 16ca24ab07a59ed1a69ef59b7a541f2c

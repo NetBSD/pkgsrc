@@ -1,0 +1,40 @@
+$NetBSD: patch-ab,v 1.1 1998/12/20 14:18:02 christos Exp $
+*** rw/libpnmrw.c.orig	Tue Jun  9 17:08:57 1998
+--- rw/libpnmrw.c	Sun Dec 20 09:06:23 1998
+***************
+*** 46,52 ****
+  
+  void *malloc(int);
+  void free(void *);
+! #if defined(__EMX__) || defined(__CYGWIN32__)
+  #include <errno.h>
+  #endif
+  
+--- 46,52 ----
+  
+  void *malloc(int);
+  void free(void *);
+! #if defined(__EMX__) || defined(__CYGWIN32__) || defined(__NetBSD__)
+  #include <errno.h>
+  #endif
+  
+***************
+*** 131,136 ****
+--- 131,137 ----
+  static void
+  pm_perror(char *reason)
+  {
++ #if !defined(__NetBSD__)
+  #if defined(BSD4_4)
+      __const extern char *__const sys_errlist[];
+  #else
+***************
+*** 140,145 ****
+--- 141,147 ----
+  #endif
+  #if !defined(__EMX__) || defined(__CYGWIN32__)
+      extern int errno;
++ #endif
+  #endif
+      char *e;
+  
