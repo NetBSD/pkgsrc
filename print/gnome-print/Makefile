@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2000/06/21 06:57:42 jlam Exp $
+# $NetBSD: Makefile,v 1.29 2000/10/15 17:35:28 rh Exp $
 #
 
-DISTNAME=		gnome-print-0.20
+DISTNAME=		gnome-print-0.23
 CATEGORIES=		print gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=stable/sources/gnome-print/}
 
@@ -10,13 +10,14 @@ HOMEPAGE=		http://www.levien.com/gnome/print-arch.html
 
 DEPENDS+=		gnome-libs>=1.0.56:../../x11/gnome-libs
 DEPENDS+=		libxml>=1.8.5:../../textproc/libxml
+DEPENDS+=		libunicode>=0.4:../../textproc/libunicode
 DEPENDS+=		ghostscript{,-nox11}-[6-9]*:../../print/ghostscript
 
-USE_X11BASE=		# defined
-USE_LIBTOOL=		# defined
+USE_X11BASE=		yes
+USE_LIBTOOL=		yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
-GNU_CONFIGURE=		# defined
+GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		GHOSTSCRIPT=${LOCALBASE}/bin/gs
 CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
 #override HOME to avoid trying to install ${HOME}/.gnome
