@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/01/20 12:22:19 agc Exp $
+# $NetBSD: Makefile,v 1.9 2004/04/12 13:36:37 seb Exp $
 #
 
 DISTNAME=	iperf-1.7.0-source
@@ -6,25 +6,32 @@ PKGNAME=	${DISTNAME:C/-source//}
 CATEGORIES=	net
 MASTER_SITES=	http://dast.nlanr.net/Projects/Iperf/
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	seb@NetBSD.org
 HOMEPAGE=	http://dast.nlanr.net/Projects/Iperf/
 COMMENT=	TCP and UDP bandwidth performance measurement tool
 
-NOT_FOR_PLATFORM=	*-*-sparc64	# internal g++ error
+.include "../../mk/bsd.prefs.mk"
+
+.if !empty(MACHINE_PLATFORM:MNetBSD-*-sparc64)
+GCC_REQD+=	3.0
+.endif
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 CONFIGURE_DIRS=		${WRKSRC}/cfg
 INSTALL_DIRS=		${WRKSRC}/src
 GNU_CONFIGURE=		YES
 MAKE_ENV+=		INSTALL_DIR=${PREFIX}/bin
-USE_GCC_SHLIB=		YES
+USE_LANGUAGES=		c c++
+
+INSTALLATION_DIRS+=	share/doc/html/${PKGBASE}
 
 PTHREAD_OPTS=	native optional
-.include "../../mk/pthread.buildlink2.mk"
+.include "../../mk/pthread.buildlink3.mk"
 
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/${PKGBASE}
-	${INSTALL_DATA} ${WRKSRC}/doc/*.html ${WRKSRC}/doc/*.gif ${PREFIX}/share/doc/html/${PKGBASE}
+	for f in ${WRKSRC}/doc/*.html ${WRKSRC}/doc/*.gif; do		\
+		${INSTALL_DATA} $$f ${PREFIX}/share/doc/html/${PKGBASE}; \
+	done
 
 .include "../../mk/bsd.pkg.mk"
