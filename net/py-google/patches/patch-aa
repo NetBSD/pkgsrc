@@ -1,13 +1,65 @@
-$NetBSD: patch-aa,v 1.1 2003/03/19 11:55:11 drochner Exp $
+$NetBSD: patch-aa,v 1.2 2003/08/11 22:08:34 recht Exp $
 
---- google.py.orig	2003-03-19 10:53:37.000000000 +0100
-+++ google.py	2003-03-19 10:54:00.000000000 +0100
-@@ -43,7 +43,7 @@
+--- google.py.orig	2002-04-18 22:11:18.000000000 +0200
++++ google.py	2003-05-31 12:17:35.000000000 +0200
+@@ -43,7 +43,8 @@
  Erik Max Francis, for the command line interface
  Michael Twomey, for HTTP proxy support"""
  
 -import SOAP
-+from SOAPpy import SOAP
++from SOAPpy import SOAPProxy
++from SOAPpy import Types
  import os, sys, getopt
  
  LICENSE_KEY = None
+@@ -53,8 +54,8 @@
+ class NoLicenseKey(Exception): pass
+ _url = 'http://api.google.com/search/beta2'
+ _namespace = 'urn:GoogleSearch'
+-_false = SOAP.booleanType(0)
+-_true = SOAP.booleanType(1)
++_false = Types.booleanType(0)
++_true = Types.booleanType(1)
+ _googlefile1 = ".googlekey"
+ _googlefile2 = "googlekey.txt"
+ _licenseLocations = (
+@@ -201,10 +202,10 @@
+ class _SearchBase:
+     def __init__(self, params):
+         for k, v in params.items():
+-            if isinstance(v, SOAP.structType):
++            if isinstance(v, Types.structType):
+                 v = v._asdict
+             try:
+-                if isinstance(v[0], SOAP.structType):
++                if isinstance(v[0], Types.structType):
+                     v = [node._asdict for node in v]
+             except:
+                 pass
+@@ -303,7 +304,7 @@
+     See documentation of these individual classes for list of available attributes
+     """
+     http_proxy = getProxy(http_proxy)
+-    remoteserver = SOAP.SOAPProxy(_url, namespace=_namespace, http_proxy=http_proxy)
++    remoteserver = SOAPProxy(_url, namespace=_namespace, http_proxy=http_proxy)
+     license_key = getLicense(license_key)
+     filter = _marshalBoolean(filter)
+     safeSearch = _marshalBoolean(safeSearch)
+@@ -330,7 +331,7 @@
+     Returns: string, text of cached page    
+     """
+     http_proxy = getProxy(http_proxy)
+-    remoteserver = SOAP.SOAPProxy(_url, namespace=_namespace, http_proxy=http_proxy)
++    remoteserver = SOAPProxy(_url, namespace=_namespace, http_proxy=http_proxy)
+     license_key = getLicense(license_key)
+     return remoteserver.doGetCachedPage(license_key, url)
+ 
+@@ -348,7 +349,7 @@
+     Returns: text of suggested replacement, or None
+     """
+     http_proxy = getProxy(http_proxy)
+-    remoteserver = SOAP.SOAPProxy(_url, namespace=_namespace, http_proxy=http_proxy)
++    remoteserver = SOAPProxy(_url, namespace=_namespace, http_proxy=http_proxy)
+     license_key = getLicense(license_key)
+     return remoteserver.doSpellingSuggestion(license_key, phrase)
+ 

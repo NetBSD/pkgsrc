@@ -1,14 +1,61 @@
-$NetBSD: patch-ab,v 1.1 2003/03/19 11:55:11 drochner Exp $
+$NetBSD: patch-ab,v 1.2 2003/08/11 22:08:34 recht Exp $
 
---- googletest.py.orig	2003-03-19 10:52:18.000000000 +0100
-+++ googletest.py	2003-03-19 10:52:53.000000000 +0100
-@@ -6,7 +6,8 @@
+--- googletest.py.orig	2002-04-18 22:11:18.000000000 +0200
++++ googletest.py	2003-05-31 12:23:19.000000000 +0200
+@@ -6,7 +6,9 @@
  __copyright__ = "Copyright (c) 2002 Mark Pilgrim"
  __license__ = "Python"
  
 -import google, SOAP
 +import google
-+from SOAPpy import SOAP
++from SOAPpy import SOAPProxy
++from SOAPpy import Types
  import unittest
  import sys, os
  from StringIO import StringIO
+@@ -251,33 +253,33 @@
+         self.assertRaises(google.NoLicenseKey, google.doGoogleSearch, q=self.q)
+         
+     def testPassInvalidKey(self):
+-        """passing invalid license key should fail with SOAP.faultType"""
+-        self.assertRaises(SOAP.faultType, google.doGoogleSearch, q=self.q, license_key=self.badkey)
++        """passing invalid license key should fail with Types.faultType"""
++        self.assertRaises(Types.faultType, google.doGoogleSearch, q=self.q, license_key=self.badkey)
+     
+     def testSetInvalidKey(self):
+-        """setting invalid module-level license key should fail with SOAP.faultType"""
++        """setting invalid module-level license key should fail with Types.faultType"""
+         google.setLicense(self.badkey)
+-        self.assertRaises(SOAP.faultType, google.doGoogleSearch, q=self.q)
++        self.assertRaises(Types.faultType, google.doGoogleSearch, q=self.q)
+     
+     def testEnvInvalidKey(self):
+-        """invalid environment variable license key should fail with SOAP.faultType"""
++        """invalid environment variable license key should fail with Types.faultType"""
+         os.environ[self.envkey] = self.badkey
+-        self.assertRaises(SOAP.faultType, google.doGoogleSearch, q=self.q)
++        self.assertRaises(Types.faultType, google.doGoogleSearch, q=self.q)
+     
+     def testHomeDirKey(self):
+-        """invalid license key in home directory should fail with SOAP.faultType"""
++        """invalid license key in home directory should fail with Types.faultType"""
+         self.createfile(os.environ["HOME"], self.licensefile, self.badkey)
+-        self.assertRaises(SOAP.faultType, google.doGoogleSearch, q=self.q)
++        self.assertRaises(Types.faultType, google.doGoogleSearch, q=self.q)
+ 
+     def testCurDirKey(self):
+-        """invalid license key in current directory should fail with SOAP.faultType"""
++        """invalid license key in current directory should fail with Types.faultType"""
+         self.createfile("", self.licensefile, self.badkey)
+-        self.assertRaises(SOAP.faultType, google.doGoogleSearch, q=self.q)
++        self.assertRaises(Types.faultType, google.doGoogleSearch, q=self.q)
+ 
+     def testScriptDirKey(self):
+-        """invalid license key in script directory should fail with SOAP.faultType"""
++        """invalid license key in script directory should fail with Types.faultType"""
+         self.createfile(google._getScriptDir(), self.licensefile, self.badkey)
+-        self.assertRaises(SOAP.faultType, google.doGoogleSearch, q=self.q)
++        self.assertRaises(Types.faultType, google.doGoogleSearch, q=self.q)
+ 
+ if __name__ == "__main__":
+     unittest.main()
