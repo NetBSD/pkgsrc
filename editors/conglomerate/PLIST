@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/02/09 12:38:58 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/02/17 23:25:45 jmmv Exp $
 bin/conglomerate
 share/application-registry/conglomerate.applications
 share/applications/conglomerate.desktop
@@ -10,6 +10,7 @@ share/conglomerate/dispspecs/forrest-document.xds
 share/conglomerate/dispspecs/kernel-traffic-newsletter.xds
 share/conglomerate/dispspecs/readme.xds
 share/conglomerate/dispspecs/relax-ng.xds
+share/conglomerate/dispspecs/teixlite.xds
 share/conglomerate/dispspecs/website-layout.xds
 share/conglomerate/dispspecs/website-webpage.xds
 share/conglomerate/dispspecs/xhtml1-strict.xds
@@ -136,6 +137,8 @@ ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/conglomerate.mo
 ${PKGLOCALEDIR}/locale/el/LC_MESSAGES/conglomerate.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/conglomerate.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/conglomerate.mo
+${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/conglomerate.mo
+${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/conglomerate.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/conglomerate.mo
 ${PKGLOCALEDIR}/locale/no/LC_MESSAGES/conglomerate.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/conglomerate.mo
