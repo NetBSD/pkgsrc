@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.30 2003/12/19 19:22:28 veego Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.31 2004/01/04 20:57:31 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -65,7 +65,7 @@ PATH:=		${BUILDLINK_DIR}/bin:${PATH}
 # BUILDLINK_DEPENDS contains the list of packages for which we add
 # dependencies.
 #
-BUILDLINK_DEPENDS?=	${BUILDLINK_PACKAGES}
+BUILDLINK_DEPENDS?=	# empty
 
 X11_LINKS_SUBDIR=		share/x11-links
 .if defined(USE_X11)
@@ -127,20 +127,6 @@ ${_BLNK_DEPMETHOD.${_pkg_}}+= \
 
 # Generate default values for:
 #
-# _BLNK_PKG_DBDIR.<pkg>		contains all of the package metadata
-#				files for <pkg>
-#
-# _BLNK_PKG_INFO.<pkg>		pkg_info(1) with correct dbdir to get
-#				information for <pkg>
-#
-# BUILDLINK_PKGNAME.<pkg>	the name of the package
-#
-# BUILDLINK_PREFIX.<pkg>	contains all of the installed files
-#				for <pkg>
-#
-# BUILDLINK_IS_DEPOT.<pkg>	"yes" or "no" for whether <pkg> is a
-#				depoted package.
-#
 # BUILDLINK_IS_BUILTIN.<pkg>	"yes" or "no" for whether <pkg> is provided
 #				in the base system.  This check is only
 #				relevant for buildlink3.mk files that
@@ -149,6 +135,23 @@ ${_BLNK_DEPMETHOD.${_pkg_}}+= \
 #				you can typically force _only_ the check to
 #				run by setting BUILDLINK_CHECK_BUILTIN.<pkg>
 #				to "yes".
+#
+# BUILDLINK_USE_BUILTIN.<pkg>	"yes" or "no" for whether <pkg> from the
+#				base system is used.
+#
+# _BLNK_PKG_DBDIR.<pkg>		contains all of the package metadata
+#				files for <pkg>
+#
+# _BLNK_PKG_INFO.<pkg>		pkg_info(1) with correct dbdir to get
+#				information for <pkg>
+#
+# BUILDLINK_PKGNAME.<pkg>	the name of the package
+#
+# BUILDLINK_IS_DEPOT.<pkg>	"yes" or "no" for whether <pkg> is a
+#				depoted package.
+#
+# BUILDLINK_PREFIX.<pkg>	contains all of the installed files
+#				for <pkg>
 #
 # BUILDLINK_CFLAGS.<pkg>,
 # BUILDLINK_CPPFLAGS.<pkg>,
@@ -166,6 +169,30 @@ ${_BLNK_DEPMETHOD.${_pkg_}}+= \
 #				paths.
 #
 .for _pkg_ in ${_BLNK_PACKAGES} ${_BLNK_X11_LINKS_PACKAGE}
+BUILDLINK_IS_BUILTIN.${_pkg_}?=		no
+#
+# If the "built-in" package (the software supplied by the base operating
+# system) is available, then use it by default.
+#
+.  if (BUILDLINK_IS_BUILTIN.${_pkg_}:M[yY][eE][sS])
+BUILDLINK_USE_BUILTIN.${_pkg_}?=	yes
+.  else
+BUILDLINK_USE_BUILTIN.${_pkg_}?=	no
+.  endif
+#
+# If we're using the built-in package, then provide sensible defaults.
+#
+.  if !empty(BUILDLINK_USE_BUILTIN.${_pkg_}:M[yY][eE][sS])
+_BLNK_PKG_DBDIR.${_pkg_}?=	not_found
+_BLNK_PKG_INFO.${_pkg_}?=	${TRUE}
+BUILDLINK_PKGNAME.${_pkg_}?=	${_pkg_}
+BUILDLINK_IS_DEPOT.${_pkg_}?=	no
+BUILDLINK_PREFIX.${_pkg_}?=	/usr
+.  endif
+#
+# Set a default for _BLNK_PKG_DBDIR.<pkg>, which is the directory
+# containing the package metadata.
+#
 .  if !defined(_BLNK_PKG_DBDIR.${_pkg_})
 _BLNK_PKG_DBDIR.${_pkg_}!=	\
 	dir="";								\
@@ -183,8 +210,12 @@ _BLNK_PKG_DBDIR.${_pkg_}!=	\
 MAKEFLAGS+=	_BLNK_PKG_DBDIR.${_pkg_}=${_BLNK_PKG_DBDIR.${_pkg_}}
 .    endif
 .  endif
-_BLNK_PKG_INFO.${_pkg_}=	\
-	${PKG_INFO_CMD} -K ${_BLNK_PKG_DBDIR.${_pkg_}:H}
+
+.  if empty(_BLNK_PKG_DBDIR.${_pkg_}:Mnot_found)
+_BLNK_PKG_INFO.${_pkg_}=	${PKG_INFO_CMD} -K ${_BLNK_PKG_DBDIR.${_pkg_}:H}
+.  else
+_BLNK_PKG_INFO.${_pkg_}=	${PKG_INFO_CMD} -K ${_PKG_DBDIR}
+.  endif
 
 BUILDLINK_PKGNAME.${_pkg_}?=	${_BLNK_PKG_DBDIR.${_pkg_}:T}
 .  if exists(${_BLNK_PKG_DBDIR.${_pkg_}}/+VIEWS)
@@ -192,22 +223,25 @@ BUILDLINK_IS_DEPOT.${_pkg_}?=	yes
 .  else
 BUILDLINK_IS_DEPOT.${_pkg_}?=	no
 .  endif
+#
+# Set BUILDLINK_PREFIX.<pkg> to the "PREFIX" value for the package.
+#
 .  if !defined(BUILDLINK_PREFIX.${_pkg_})
 .    if !empty(BUILDLINK_IS_DEPOT.${_pkg_}:M[yY][eE][sS])
-BUILDLINK_PREFIX.${_pkg_}?=	${_BLNK_PKG_DBDIR.${_pkg_}}
+BUILDLINK_PREFIX.${_pkg_}=	${_BLNK_PKG_DBDIR.${_pkg_}}
 .    else
-.      if empty(_BLNK_PKG_DBDIR.${_pkg_}:Mnot_found)
+.      if empty(BUILDLINK_PKGNAME.${_pkg_}:Mnot_found)
 BUILDLINK_PREFIX.${_pkg_}!=	\
 	${_BLNK_PKG_INFO.${_pkg_}} -qp ${BUILDLINK_PKGNAME.${_pkg_}} | ${SED}  -e "s,^[^/]*,,"
 .      else
-BUILDLINK_PREFIX.${_pkg_}?=	not_found
+BUILDLINK_PREFIX.${_pkg_}=	not_found
 .      endif
 .    endif
 .    if empty(BUILDLINK_PREFIX.${_pkg_}:Mnot_found)
 MAKEFLAGS+=	BUILDLINK_PREFIX.${_pkg_}=${BUILDLINK_PREFIX.${_pkg_}}
 .    endif
 .  endif
-BUILDLINK_IS_BUILTIN.${_pkg_}?=	no
+
 BUILDLINK_CPPFLAGS.${_pkg_}?=	# empty
 BUILDLINK_LDFLAGS.${_pkg_}?=	# empty
 BUILDLINK_INCDIRS.${_pkg_}?=	include
@@ -349,16 +383,12 @@ do-buildlink: buildlink-wrappers buildlink-${_BLNK_OPSYS}-wrappers
 #
 # BUILDLINK_FILES_CMD.<pkg>
 #	shell pipeline that outputs to stdout a list of files relative
-#	to ${BUILDLINK_PREFIX.<pkg>}; the shell variable $${pkg_prefix}
-#	may be used and is the subdirectory (ending in /) of
-#	${BUILDLINK_PREFIX.<pkg>} to which the +CONTENTS is relative,
-#	e.g. if `pkg_info -qp kaffe' returns "/usr/pkg/java/kaffe",
-#	then $${pkg_prefix} is "java/kaffe/".  The resulting files are
-#	to be symlinked into ${BUILDLINK_DIR}.  By default for
-#	overwrite packages, BUILDLINK_FILES_CMD.<pkg> outputs the
-#	contents of the include and lib directories in the package
-#	+CONTENTS, and for pkgviews packages, it outputs any libtool
-#	archives in lib directories.
+#	to ${BUILDLINK_PREFIX.<pkg>}.  The resulting files are to be
+#	symlinked into ${BUILDLINK_DIR}.  By default for overwrite
+#	packages, BUILDLINK_FILES_CMD.<pkg> outputs the contents of the
+#	include and lib directories in the package +CONTENTS, and for
+#	pkgviews packages, it outputs any libtool archives in lib
+#	directories.
 #
 # BUILDLINK_TRANSFORM.<pkg>
 #	sed arguments used to transform the name of the source filename
@@ -392,42 +422,38 @@ buildlink-${_pkg_}-cookie:
 BUILDLINK_FILES_CMD.${_pkg_}?=						\
 	${_BLNK_PKG_INFO.${_pkg_}} -f ${BUILDLINK_PKGNAME.${_pkg_}} |	\
 	${SED} -n '/File:/s/^[ 	]*File:[ 	]*//p' |		\
-	${GREP} 'lib.*/lib[^/]*\.la$$' |				\
-	${SED} "s,^,$${pkg_prefix},"
+	${GREP} 'lib.*/lib[^/]*\.la$$'
 .  else
 BUILDLINK_FILES_CMD.${_pkg_}?=						\
 	${_BLNK_PKG_INFO.${_pkg_}} -f ${BUILDLINK_PKGNAME.${_pkg_}} |	\
 	${SED} -n '/File:/s/^[ 	]*File:[ 	]*//p' |		\
-	${GREP} '\(include.*/\|lib.*/lib[^/]*$$\)' |			\
-	${SED} "s,^,$${pkg_prefix},"
+	${GREP} '\(include.*/\|lib.*/lib[^/]*$$\)'
 .  endif
+
+# _BLNK_FILES_CMD.<pkg> combines BUILDLINK_FILES_CMD.<pkg> and
+# BUILDLINK_FILES.<pkg> into one command that outputs all of the files
+# for <pkg> relative to ${BUILDLINK_PREFIX.<pkg>}.
+#
+_BLNK_FILES_CMD.${_pkg_}=	(
+_BLNK_FILES_CMD.${_pkg_}+=	${BUILDLINK_FILES_CMD.${_pkg_}};
+.for _filepattern_ in ${BUILDLINK_FILES.${_pkg_}}
+_BLNK_FILES_CMD.${_pkg_}+=	${LS} -1 ${_filepattern_};
+.endfor
+_BLNK_FILES_CMD.${_pkg_}+=	)
 
 ${_BLNK_COOKIE.${_pkg_}}:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	case ${BUILDLINK_PREFIX.${_pkg_}} in				\
-	${X11BASE})	buildlink_dir="${BUILDLINK_X11_DIR}" ;;		\
-	*)		buildlink_dir="${BUILDLINK_DIR}" ;;		\
+	${X11BASE})     buildlink_dir="${BUILDLINK_X11_DIR}" ;;		\
+	*)              buildlink_dir="${BUILDLINK_DIR}" ;;		\
 	esac;								\
 	cd ${BUILDLINK_PREFIX.${_pkg_}};				\
-	pkg_prefix=`							\
-		${ECHO} ${BUILDLINK_PREFIX.${_pkg_}} |			\
-		${SED}	-e "s,^${BUILDLINK_PREFIX.${_pkg_}},,"		\
-			-e "s,^/,,"					\
-	`;								\
-	case "$$pkg_prefix" in						\
-	"")	;;							\
-	*)	pkg_prefix="$${pkg_prefix}/" ;;				\
-	esac;								\
-	files=`${BUILDLINK_FILES_CMD.${_pkg_}}`;			\
-	files="$$files ${BUILDLINK_FILES.${_pkg_}}";			\
-	case "$$files" in						\
-	"")	;;							\
-	*)	for file in $$files; do					\
-			src="${BUILDLINK_PREFIX.${_pkg_}}/$$file";	\
-			if [ ! -f $$src ]; then				\
-				${ECHO} "$$src: not found" >> ${.TARGET}; \
-				continue;				\
-			fi;						\
+	${_BLNK_FILES_CMD.${_pkg_}} |					\
+	while read file; do						\
+		src="${BUILDLINK_PREFIX.${_pkg_}}/$$file";		\
+		if [ ! -f $$src ]; then					\
+			msg="$$src: not found";				\
+		else							\
 			if [ -z "${BUILDLINK_TRANSFORM.${_pkg_}:Q}" ]; then \
 				dest="$$buildlink_dir/$$file";		\
 				msg="$$src";				\
@@ -445,16 +471,16 @@ ${_BLNK_COOKIE.${_pkg_}}:
 			*.la)						\
 				${CAT} $$src |				\
 				${_BLNK_LT_ARCHIVE_FILTER.${_pkg_}}	\
-				> $$dest;				\
+					> $$dest;			\
+				msg="$$msg (created)";			\
 				;;					\
 			*)						\
 				${LN} -sf $$src $$dest;			\
 				;;					\
 			esac;						\
-			${ECHO} "$$msg" >> ${.TARGET};			\
-		done;							\
-		;;							\
-	esac
+		fi;							\
+		${ECHO} "$$msg" >> ${.TARGET};				\
+	done
 
 # _BLNK_LT_ARCHIVE_FILTER.${_pkg_} is a command-line filter used in
 # the previous target for transforming libtool archives (*.la) to
