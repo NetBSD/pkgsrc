@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2005/01/17 12:56:13 martti Exp $
+@comment $NetBSD: PLIST,v 1.10 2005/03/18 07:59:09 martti Exp $
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/xffm.mo
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/xffm.mo
 ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/xffm.mo
@@ -219,6 +219,6 @@ share/xfce4/xffm/xffm.spec.in
 @dirrm share/xffm/pixmaps
 @dirrm share/xffm
 @dirrm share/xfce4/xffm
-@dirrm share/icons/hicolor/48x48/stock/generic
-@dirrm share/icons/hicolor/48x48/stock
+@unexec ${RMDIR} %D/share/icons/hicolor/48x48/stock/generic 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/icons/hicolor/48x48/stock 2>/dev/null || ${TRUE}
 @dirrm lib/xfce4/xffm
