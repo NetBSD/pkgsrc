@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/03 12:06:07 manu Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/09/30 07:11:48 xtraeme Exp $
 bin/bogofilter
-bin/bogoutil
 bin/bogolexer
 bin/bogoupgrade
-etc/bogofilter.cf.example
+bin/bogoutil
 man/man1/bogofilter.1
-man/man1/bogoutil.1
-man/man1/bogoupgrade.1
 man/man1/bogolexer.1
+man/man1/bogoupgrade.1
+man/man1/bogoutil.1
+share/examples/bogofilter/bogofilter.cf
+@dirrm share/examples/bogofilter
