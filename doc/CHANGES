@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8778 2005/01/16 22:28:01 epg Exp $
+$NetBSD: CHANGES,v 1.8779 2005/01/16 22:36:39 epg Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -342,3 +342,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added imp-4.0.1 [adrianp 2004-01-16]
 	Updated p5-TimeDate to 1.16 [epg 2005-01-16]
 	Updated subversion to 1.1.3 [epg 2005-01-16]
+	Updated p5-SVN-Mirror to 0.54 [epg 2005-01-16]
