@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.36 2004/06/05 16:21:44 taca Exp $
+# $NetBSD: Makefile,v 1.36.2.1 2004/07/14 12:39:00 agc Exp $
 
 PKGNAME=		apache-${APACHE_VERSION}
-PKGREVISION=		2
 CATEGORIES=		www
 
 HOMEPAGE=		http://httpd.apache.org/
@@ -10,7 +9,7 @@ COMMENT=		Apache HTTP (Web) server, version 2
 CONFLICTS=		apache-*ssl-[0-9]* apache-[0-9]* apache6-[0-9]*
 CONFLICTS+=		ap-*-[0-9]*	# Apache-1.x DSOs
 
-BUILD_DEFS+=		USE_INET6
+BUILD_DEFS+=		USE_INET6 APACHE_DEFAULT_FILES
 
 USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
@@ -27,6 +26,32 @@ CONFIGURE_ARGS+=	--with-mpm=prefork
 # Apache Portable Runtime library configure options
 CONFIGURE_ARGS+=	--with-apr=${LOCALBASE}
 CONFIGURE_ARGS+=	--with-apr-util=${LOCALBASE}
+
+#
+# APACHE_DEFAULT_FILES Notes:
+#
+# If this is defined as YES then you will basically get all the default files
+# that apapche installs.  On a default install this includes: 
+#
+#	${PREFIX}/share/httpd/htdocs
+# 	${PREFIX}/libexec/cgi-bin
+#	${PREFIX}/share/httpd/manual
+#	${PREFIX}/share/httpd/icons
+#
+# The basic idea is that if you have customised your web root and you don't 
+# want the apache install/upgrade to add any files to your default web 
+# directories simply set this to YES.
+#
+# NOTE: Default error pages will always be installed regardless of what
+# APACHE_DEFAULT_FILES is set to.
+#
+.if defined(APACHE_DEFAULT_FILES) && !empty(APACHE_DEFAULT_FILES:M[Nn][Oo])
+INSTALL_TARGET=install install-error install-other install-include \
+	install-suexec install-man install-build
+.else
+APACHE_DEFAULT_FILES?=	YES
+PLIST_SRC+=	${PKGDIR}/PLIST.deffiles
+.endif
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -79,6 +104,27 @@ MAKE_DIRS+=		${PREFIX}/share/httpd/htdocs
 OWN_DIRS= 		/var/log/httpd
 OWN_DIRS+=		/var/db/httpd
 OWN_DIRS_PERMS+=	/var/db/httpd/proxy ${APACHE_USER} ${APACHE_GROUP} 0755
+FIX_PERMS=		apachectl apxs dbmmanage envvars-std
+
+SUBST_CLASSES=		paths
+SUBST_STAGE.paths=	pre-configure
+SUBST_FILES.paths=	config.layout	
+SUBST_SED.paths=	-e "s|@PREFIX@|${PREFIX}|g"
+SUBST_MESSAGE.paths=	"Fixing paths."
+
+SUBST_CLASSES+=		confs
+SUBST_STAGE.confs=	post-install
+SUBST_FILES.confs=	${EGDIR}/highperformance-std.conf \
+			${EGDIR}/httpd-std.conf \
+			${EGDIR}/ssl-std.conf
+SUBST_SED.confs=	-e "s|${EGDIR}|${PKG_SYSCONFDIR}|g" \
+			-e "s|${PREFIX}/htdocs|${PREFIX}/share/httpd/htdocs|g" \
+			-e "s|${PREFIX}/conf|${PKG_SYSCONFDIR}|g" \
+			-e "s|logs/|/var/log/httpd/|g" \
+			-e "s|/var/log/httpd/foo\.log|logs/foo.log/|g" \
+			-e "s|^\(User[	 ]\).*|\1${APACHE_USER}|g" \
+			-e "s|^\(Group[	 ]\).*|\1${APACHE_GROUP}|g"
+SUBST_MESSAGE.confs=	"Fixing configuration files."
 
 # Add dependencies for the modules that will be built.  For each module
 # ap_mod listed in ${APACHE_MODULES}, _AP_DEPENDS.ap_mod is a whitespace
@@ -107,32 +153,19 @@ CONFIGURE_ARGS+=	${_AP_CFG_ARGS.${_ap_mod}}
 .  endif
 .endfor
 
-AP_CONF_FILE_SED=	-e "s|${EGDIR}|${PKG_SYSCONFDIR}|g"
-AP_CONF_FILE_SED+=	-e "s|${PREFIX}/htdocs|${PREFIX}/share/httpd/htdocs|g"
-AP_CONF_FILE_SED+=	-e "s|${PREFIX}/conf|${PKG_SYSCONFDIR}|g"
-AP_CONF_FILE_SED+=	-e "s|logs/|/var/log/httpd/|g"
-AP_CONF_FILE_SED+=	-e "s|/var/log/httpd/foo\.log|logs/foo.log/|g"
-AP_CONF_FILE_SED+=	-e "s|^\(User[	 ]\).*|\1${APACHE_USER}|g"
-AP_CONF_FILE_SED+=	-e "s|^\(Group[	 ]\).*|\1${APACHE_GROUP}|g"
-
-pre-configure:
-	${SED} -e 's|@PREFIX@|${PREFIX}|g' < ${WRKSRC}/config.layout	\
-		> ${WRKSRC}/config.layout.new
-	${MV} ${WRKSRC}/config.layout.new ${WRKSRC}/config.layout
-
-post-install:
-	${LN} -sf ${LOCALBASE}/libexec/apr/libtool ${PREFIX}/share/httpd/build
+pre-install:
 	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV}				\
 		${MAKE_PROGRAM} install-conf sysconfdir="${EGDIR}"
+ 
+post-install:
+	@${LN} -sf ${LOCALBASE}/libexec/apr/libtool ${PREFIX}/share/httpd/build
 	@cd ${EGDIR};							\
 	for file in							\
 		highperformance-std.conf				\
 		httpd-std.conf						\
 		ssl-std.conf;						\
 	do								\
-		${CAT} $${file}						\
-		| ${SED} ${AP_CONF_FILE_SED}				\
-		| ${AWK} '						\
+		${CAT} $${file}	| ${AWK} '				\
 			/^Listen[ 	]*80/	{			\
 				print;					\
 				printf "%s", "Listen 0.0.0.0:80\n";	\
@@ -146,6 +179,16 @@ post-install:
 			{ print; }					\
 			' >> $${file}.new;				\
 		${MV} -f $${file}.new $${file};				\
+	done
+
+.if defined(APACHE_DEFAULT_FILES) && !empty(APACHE_DEFAULT_FILES:M[Yy][Ee][Ss])
+	@${INSTALL_DATA_DIR} ${PREFIX}/share/httpd/manual
+	@cd ${WRKSRC}/docs/manual && ${PAX} -rw . ${PREFIX}/share/httpd/manual
+.endif
+
+	for file in ${FIX_PERMS}; do \
+		${CHOWN} ${BINOWN}:${BINGRP} ${PREFIX}/sbin/$$file && \
+		${CHMOD} ${BINMODE} ${PREFIX}/sbin/$$file; \
 	done
 
 .include "Makefile.common"
