@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/10/03 00:18:23 tv Exp $
+# $NetBSD: Makefile,v 1.15 2004/10/05 10:30:35 agc Exp $
 #
 
 DISTNAME=	matchbox-window-manager-0.8.4
@@ -17,6 +17,7 @@ USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
 
 .include "../../devel/libmatchbox/buildlink3.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../graphics/xpm/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
