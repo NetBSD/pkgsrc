@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.11 2004/02/22 16:03:29 jlam Exp $
+# $NetBSD: Makefile.common,v 1.12 2004/02/23 23:24:32 jlam Exp $
 
 DISTNAME?=	courier-${DIST_VERS}
 CATEGORIES+=	mail
@@ -54,6 +54,7 @@ CONFIGURE_ARGS+=	--with-waitfunc=wait3
 # a template authentication method.
 #
 CONFIGURE_ARGS+=	--with-authdaemon
+CONFIGURE_ARGS+=	--with-authdaemonvar=/var/authdaemon
 CONFIGURE_ARGS+=	--without-authcustom
 CONFIGURE_ARGS+=	--without-authldap
 CONFIGURE_ARGS+=	--without-authmysql
