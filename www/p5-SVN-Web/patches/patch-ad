@@ -1,0 +1,22 @@
+$NetBSD: patch-ad,v 1.1.1.1 2003/12/03 16:13:29 epg Exp $
+
+--- lib/SVN/Web/Checkout.pm.orig	Tue Aug 26 02:26:30 2003
++++ lib/SVN/Web/Checkout.pm
+@@ -19,13 +19,12 @@ sub run {
+     my $rev = $self->{cgi}->param('rev') || $fs->youngest_rev;
+     my $root = $fs->revision_root ($rev);
+ 
+-    die "not a file" unless SVN::Fs::check_path ($root, $self->{path})
+-	== $SVN::Core::node_file;
++    die "not a file" unless $root->is_file ($self->{path});
+ 
+-    my $file = SVN::Fs::file_contents ($root, $self->{path});
++    my $file = $root->file_contents ($self->{path});
+     local $/;
+-    return {mimetype => SVN::Fs::node_prop ($root, $self->{path},
+-					    'svn:mime-type') ||'text/plain',
++    return {mimetype => $root->node_prop ($self->{path},
++					  'svn:mime-type') ||'text/plain',
+ 	    body => <$file>};
+ }
+ 1;

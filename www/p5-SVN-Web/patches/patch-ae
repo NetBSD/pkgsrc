@@ -1,0 +1,29 @@
+$NetBSD: patch-ae,v 1.1.1.1 2003/12/03 16:13:29 epg Exp $
+
+--- lib/SVN/Web/Diff.pm.orig	Tue Aug 26 07:15:37 2003
++++ lib/SVN/Web/Diff.pm
+@@ -21,19 +21,19 @@ sub run {
+     my $rev2 = $self->{cgi}->param('rev2');
+ 
+     my $root1 = $fs->revision_root ($rev1);
+-    my $kind = SVN::Fs::check_path ($root1, $self->{path});
++    my $kind = $root1->check_path ($self->{path});
+ 
+-    die "path does not exist" if $kind == $SVN::Core::node_none;
++    die "path does not exist" if $kind == $SVN::Node::none;
+     # TODO: a diff editor using SVN::Editor::Simple
+-    die "directory diff not implemented yet" if $kind == $SVN::Core::node_dir;
++    die "directory diff not implemented yet" if $kind == $SVN::Node::dir;
+ 
+     my $root2 = $fs->revision_root ($rev2);
+ 
+     # TODO: different type of presentation, download, etc
+     return { mimetype => 'text/plain',
+ 	     body => Text::Diff::diff
+-	     (SVN::Fs::file_contents($root1, $self->{path}),
+-	      SVN::Fs::file_contents($root2, $self->{path}),
++	     ($root1->file_contents ($self->{path}),
++	      $root2->file_contents ($self->{path}),
+ 	      { STYLE => "Unified" })
+ 	     };
+ }
