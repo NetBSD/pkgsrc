@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.203 2004/01/24 17:46:11 jmmv Exp $
+# $NetBSD: Makefile,v 1.204 2004/01/26 13:11:36 jmmv Exp $
 #
 
 COMMENT=	Audio tools
@@ -143,7 +143,6 @@ SUBDIR+=	p5-Audio-Wav
 SUBDIR+=	p5-MP3-Info
 SUBDIR+=	p5-MP3-Tag
 SUBDIR+=	py-cddb
-SUBDIR+=	realplayer
 SUBDIR+=	rhythmbox
 SUBDIR+=	rio
 SUBDIR+=	rio500
