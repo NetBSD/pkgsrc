@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2003/07/22 14:05:18 wiz Exp $
+$NetBSD: distinfo,v 1.5 2005/02/23 12:06:58 agc Exp $
 
 SHA1 (tasp-vsipl/tvcpp0p8.tar.gz) = e1f0dc818458393807a7a5c6e3357305720039a8
+RMD160 (tasp-vsipl/tvcpp0p8.tar.gz) = 5443143cacb6612f0454a50d210e7ffaad23b5c2
 Size (tasp-vsipl/tvcpp0p8.tar.gz) = 1461591 bytes
 SHA1 (patch-aa) = 225d275620785928564b9db187fead28d535e839
 SHA1 (patch-ab) = b3f18f45ad52657ce4f8143f210aa9f3c9d3d7de

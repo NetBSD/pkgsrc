@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.5 2003/01/23 19:57:28 kristerw Exp $
+$NetBSD: distinfo,v 1.6 2005/02/23 12:06:54 agc Exp $
 
 SHA1 (cassowary-0.60.tar.gz) = 1c9bb84c3e6936cc85d8f660a9ac12017dd631a7
+RMD160 (cassowary-0.60.tar.gz) = 79b537541b6a79e6b884ec8ea6cf5f8e6949742f
 Size (cassowary-0.60.tar.gz) = 1605222 bytes
 SHA1 (patch-aa) = 32c7d9db43bea9b9114c4091cd0687b558211a94
 SHA1 (patch-ab) = 66119674c748ea04a16b1c91850b4e6acc831ec4

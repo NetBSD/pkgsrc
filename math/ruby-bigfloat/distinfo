@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.3 2004/11/28 07:29:45 taca Exp $
+$NetBSD: distinfo,v 1.4 2005/02/23 12:06:58 agc Exp $
 
 SHA1 (ruby/bigfloat-1.2.1.tar.gz) = afa7b6140ef34e609c885dc78ddfb7ce222c6740
+RMD160 (ruby/bigfloat-1.2.1.tar.gz) = cd8787e3c5027420885087feb910d8868ee000f8
 Size (ruby/bigfloat-1.2.1.tar.gz) = 57297 bytes
