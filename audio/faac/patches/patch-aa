@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/05/16 01:51:21 xtraeme Exp $
+
+--- frontend/main.c.orig	2004-05-16 03:43:03.000000000 +0200
++++ frontend/main.c	2004-05-16 03:44:22.000000000 +0200
+@@ -39,11 +39,16 @@
+ #include <windows.h>
+ #include <fcntl.h>
+ #else
++#include <sys/param.h>
+ #include <signal.h>
+ #endif
+ 
+-#if defined(__unix__) || defined(__APPLE__)
++#if defined(BSD) || defined(__APPLE__)
++#ifdef __NetBSD__
++#include <time.h>
++#else
+ #include <sys/time.h>
++#endif
+ #include <sys/resource.h>
+ #include <unistd.h>
+ #endif
