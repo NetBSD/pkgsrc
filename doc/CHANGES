@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9676 2005/03/29 14:40:35 wiz Exp $
+$NetBSD: CHANGES,v 1.9677 2005/03/29 16:03:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1812,3 +1812,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated aalib-x11 to 1.4.0.5 [wiz 2005-03-29]
 	Updated ImageMagick to 6.2.1.0 [adam 2005-03-29]
 	Updated putty to 0.57 [wiz 2005-03-29]
+	Updated openexr to 1.2.2 [wiz 2005-03-29]
