@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 2002/03/08 16:45:36 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2002/03/11 05:23:55 jmc Exp $
 
---- Makefile.orig	Fri Feb  8 23:12:31 2002
-+++ Makefile
+--- Makefile.orig	Fri Feb  8 22:12:31 2002
++++ Makefile	Mon Mar 11 05:16:28 2002
 @@ -54,7 +54,7 @@
  
  
@@ -54,6 +54,15 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/03/08 16:45:36 wiz Exp $
  COCO_ESD_LIBS=-lesd
  
  
+@@ -127,7 +127,7 @@
+ # Files that bring in gnomish headers must use CFLAGS_UNANSI.
+ CFLAGS_UNANSI=-Wall ${COCO_OPTIMIZATION_FLAGS}
+ # While everything else uses CFLAGS.
+-CFLAGS=-ansi -pedantic ${CFLAGS_UNANSI}
++CFLAGS=${CFLAGS_UNANSI}
+ # CFLAGS=${CFLAGS_UNANSI}
+ 
+ # COMMON LISP COMPILER
 @@ -155,7 +155,7 @@
  COCO_SOUND_LINK_LINE=-L${COCO_OPENAL_LIB_DIRECTORY} ${COCO_OPENAL_LIBS}
  else
@@ -77,9 +86,12 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/03/08 16:45:36 wiz Exp $
  
  # build other objects the standard way
  %.o: %.c 
-@@ -367,10 +367,10 @@
+@@ -365,12 +365,12 @@
+ ${ALL_OBJ_FILES}: ${HDR_FILES} Makefile ${COCO_RASTER_DIRECTORY}/built
+ 
  GNOME_LINK_LINE=\
- ${CC} ${CFLAGS} -o $@ ${GAME_OBJ_FILES} ${GNOME_OBJ_FILES} ${USED_SOUND_OBJ_FILES} ${COCO_RASTER_DIRECTORY}/*.o \
+-${CC} ${CFLAGS} -o $@ ${GAME_OBJ_FILES} ${GNOME_OBJ_FILES} ${USED_SOUND_OBJ_FILES} ${COCO_RASTER_DIRECTORY}/*.o \
++${CC} ${CFLAGS_UNANSI} -o $@ ${GAME_OBJ_FILES} ${GNOME_OBJ_FILES} ${USED_SOUND_OBJ_FILES} ${COCO_RASTER_DIRECTORY}/*.o \
  ${COCO_BASIC_LIBS} \
 --L${COCO_LIBTIFF_LIB_DIRECTORY} -ltiff \
 --L${COCO_GL_LIB_DIRECTORY} -lGL \
@@ -91,9 +103,12 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/03/08 16:45:36 wiz Exp $
  ${COCO_GII_LINK_ARGUMENTS}
  
  
-@@ -380,9 +380,9 @@
+@@ -378,11 +378,11 @@
+ 	${GNOME_LINK_LINE} ${COCO_SOUND_LINK_LINE}
+ 
  GLX_LINK_LINE=\
- ${CC} ${CFLAGS} -o $@ ${GAME_OBJ_FILES} ${GLX_OBJ_FILES} ${USED_SOUND_OBJ_FILES} ${COCO_RASTER_DIRECTORY}/*.o \
+-${CC} ${CFLAGS} -o $@ ${GAME_OBJ_FILES} ${GLX_OBJ_FILES} ${USED_SOUND_OBJ_FILES} ${COCO_RASTER_DIRECTORY}/*.o \
++${CC} ${CFLAGS_UNANSI} -o $@ ${GAME_OBJ_FILES} ${GLX_OBJ_FILES} ${USED_SOUND_OBJ_FILES} ${COCO_RASTER_DIRECTORY}/*.o \
  ${COCO_BASIC_LIBS} \
 --L${COCO_LIBTIFF_LIB_DIRECTORY} -ltiff \
 --L${COCO_X11_LIB_DIRECTORY} -lX11 -lXext \
