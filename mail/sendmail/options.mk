@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2004/08/30 20:16:28 adrianp Exp $
+# $NetBSD: options.mk,v 1.2 2004/09/02 21:09:17 adrianp Exp $
 
 # Global and legacy options
 .if defined(USE_DB2) && !empty(USE_DB2:M[yY][eE][sS])
@@ -20,6 +20,9 @@ PKG_DEFAULT_OPTIONS+=	tcpwrappers
 .if defined(USE_INET6) && !empty(USE_INET6:M[yY][eE][sS])
 PKG_DEFAULT_OPTIONS+=	inet6
 .endif
+.if defined(USE_STARTTLS) && !empty(USE_STARTTLS:M[yY][eE][sS])
+PKG_DEFAULT_OPTIONS+=	starttls
+.endif
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.sendmail
 PKG_SUPPORTED_OPTIONS=	inet6 db2 db4 ldap sasl sasl2 starttls tcpwrappers \
@@ -30,6 +33,14 @@ PKG_DEFAULT_OPTIONS+=	inet6 tcpwrappers
 .endif
 
 .include "../../mk/bsd.options.mk"
+
+###
+### Can't support SASLv1 and SASLv2
+###
+.if !empty(PKG_OPTIONS:Msasl) && !empty(PKG_OPTIONS:Msasl2)
+PKG_FAIL_REASON+=	"SASLv1 and SASLv2 cannot both be compiled in." \
+			"Please change ${PKG_OPTIONS_VAR} to one or the other."
+.endif
 
 ###
 ### Berkeley DB version 2/4 format for on disk databases e.g. aliases
