@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/07/05 23:33:31 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/08/17 19:29:22 recht Exp $
 lib/win32/3ivX.qtx
 lib/win32/AvidQTAVUICodec.qtx
 lib/win32/BeHereiVideo.qtx
@@ -13,6 +13,7 @@ lib/win32/QuickTimeInternetExtras.qtx
 lib/win32/ZyGoVideo.qtx
 lib/win32/acelpdec.ax
 lib/win32/alf2cd.acm
+lib/win32/aslcodec_vfw.dll
 lib/win32/asusasv2.dll
 lib/win32/asusasvd.dll
 lib/win32/ativcr2.dll
@@ -69,6 +70,7 @@ lib/win32/qdv.dll
 lib/win32/qpeg32.dll
 lib/win32/qtmlClient.dll
 lib/win32/rt32dcmp.dll
+lib/win32/scg726.acm
 lib/win32/sipr3260.dll
 lib/win32/sp5x_32.dll
 lib/win32/tm20dec.ax
