@@ -1,0 +1,17 @@
+$NetBSD: patch-ac,v 1.1.1.1 2004/10/06 00:13:20 wiz Exp $
+
+--- src/pwsafe/Util.h.orig	2004-05-05 00:47:07.000000000 +0200
++++ src/pwsafe/Util.h
+@@ -10,8 +10,12 @@
+ #include <assert.h>
+ 
+ #ifndef WIN32
++#ifdef __NetBSD__
++#include <sys/endian.h>
++#else
+ #include <endian.h>
+ #endif
++#endif
+ 
+ #include <string>
+ using std::string;
