@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.4 2000/12/21 14:59:38 jlam Exp $
+$NetBSD: patch-ac,v 1.5 2000/12/21 16:59:32 jlam Exp $
 
---- backend/serial.c.orig	Wed Dec  6 17:56:08 2000
+--- backend/serial.c.orig	Thu Dec 21 08:45:21 2000
 +++ backend/serial.c
 @@ -48,9 +48,9 @@
  #  include <unistd.h>
@@ -18,11 +18,11 @@ $NetBSD: patch-ac,v 1.4 2000/12/21 14:59:38 jlam Exp $
  void
  list_devices(void)
  {
--#if defined(__hpux) || defined(__sgi) || defined(__sun)
+-#if defined(__hpux) || defined(__sgi) || defined(__sun) || defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__NetBSD__)
 +#if defined(__hpux) || defined(__sgi) || defined(__sun) || defined(__FreeBSD__) || defined(__OpenBSD__)
    static char	*funky_hex = "0123456789abcdefghijklmnopqrstuvwxyz";
  				/* Funky hex numbering used for some devices */
--#endif /* __hpux || __sgi || __sun */
+-#endif /* __hpux || __sgi || __sun || __FreeBSD__ || __NetBSD__ || __OpenBSD__ */
 +#endif /* __hpux || __sgi || __sun || __FreeBSD__ || __OpenBSD__ */
  
  #ifdef __linux
@@ -36,11 +36,11 @@ $NetBSD: patch-ac,v 1.4 2000/12/21 14:59:38 jlam Exp $
    int	i, j;		/* Looping vars */
    int	fd;		/* File descriptor */
    char	device[255];	/* Device filename */
-@@ -800,6 +800,42 @@
+@@ -800,6 +800,43 @@
               device, i + 1);
      }
    }
-+#elif defined(__NetBSD__)
+++#elif defined(__NetBSD__)
 +  int	i, j;		/* Looping vars */
 +  int	fd;		/* File descriptor */
 +  char	device[255];	/* Device filename */
@@ -72,10 +72,11 @@ $NetBSD: patch-ac,v 1.4 2000/12/21 14:59:38 jlam Exp $
 +      if ((fd = open(device, O_WRONLY | O_NOCTTY | O_NDELAY)) >= 0)
 +      {
 +	close(fd);
-+	printf("serial serial:%s?baud=115200 \"Unknown\" \"Cyclades #%d Serial Port #%d\"\n",
-+               device, i, j + 1);
++	printf("serial serial:%s?baud=115200 \"Unknown\" \"Cyclades #%d Serial Prt #%d\"\n",
++	       device, i, j + 1);
 +      }
 +    }
++
  #endif
  }
  
