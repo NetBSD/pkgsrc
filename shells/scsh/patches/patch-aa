@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.5 2001/04/12 21:29:50 jtb Exp $
+$NetBSD: patch-aa,v 1.6 2001/10/02 11:07:15 seb Exp $
 
---- Makefile.in.orig	Wed Sep 15 14:54:48 1999
+--- Makefile.in.orig	Mon Jun  4 07:18:51 2001
 +++ Makefile.in
-@@ -139,7 +139,7 @@
+@@ -148,7 +148,7 @@
  
  # The following is the first rule and therefore the "make" command's
  # default target.
@@ -11,17 +11,7 @@ $NetBSD: patch-aa,v 1.5 2001/04/12 21:29:50 jtb Exp $
  
  # The developers are curious to know.  Don't be concerned if this fails.
  # You may comment these lines out if you wish to be discourteous.
-@@ -156,6 +156,9 @@
- .scm.c:
- 	$(srcdir)/$(VM) -o $(srcdir)/$(VM) -i $(CIG) < $< > $*.c
- 
-+scsh/rdelim.c: 
-+	$(srcdir)/$(VM) -o $(srcdir)/$(VM) -i $(CIG) < $< > $*.c
-+
- # These .h files mediate between the code exported from foo1.c
- # and imported into foo.scm's stub foo.c.
- 
-@@ -277,6 +280,7 @@
+@@ -286,6 +286,7 @@
  	$(RM) -r $(LIB).old
  	if [ -d $(LIB) ] ; then mv $(LIB) $(LIB).old ; fi
  	mkdir $(LIB)
@@ -29,7 +19,7 @@ $NetBSD: patch-aa,v 1.5 2001/04/12 21:29:50 jtb Exp $
  	mkdir $(LIB)/big
  	mkdir $(LIB)/cig
  	mkdir $(LIB)/doc
-@@ -286,6 +290,9 @@
+@@ -295,6 +296,9 @@
  	mkdir $(LIB)/misc
  	mkdir $(LIB)/opt
  	mkdir $(LIB)/scsh
@@ -39,7 +29,7 @@ $NetBSD: patch-aa,v 1.5 2001/04/12 21:29:50 jtb Exp $
  	mkdir $(LIB)/rts
  	mkdir $(LIB)/vm
  
-@@ -301,11 +308,11 @@
+@@ -310,11 +314,11 @@
            else echo "No man directory, not installing man page"; fi
  
  install-inc: scheme48.h
@@ -54,7 +44,7 @@ $NetBSD: patch-aa,v 1.5 2001/04/12 21:29:50 jtb Exp $
  	$(INSTALL_DATA) $(srcdir)/$(LIBCIG) $(LIB)/cig
  	$(INSTALL_DATA) $(srcdir)/cig/libcig.h $(LIB)/cig
  
-@@ -313,6 +320,7 @@
+@@ -322,6 +326,7 @@
  	      $(LIB)/misc $(LIB)/link $(LIB)/vm $(LIB)/doc
  	for f in $(srcdir)/rts/*num.scm; \
  	    do $(INSTALL_DATA) $$f $(LIB)/rts/; done
@@ -62,25 +52,7 @@ $NetBSD: patch-aa,v 1.5 2001/04/12 21:29:50 jtb Exp $
  	for f in $(srcdir)/env/*.scm; do $(INSTALL_DATA) $$f $(LIB)/env/; done
  	for f in $(srcdir)/big/*.scm; do $(INSTALL_DATA) $$f $(LIB)/big/; done
  	for f in $(srcdir)/opt/*.scm; do $(INSTALL_DATA) $$f $(LIB)/opt/; done
-@@ -627,7 +635,8 @@
- 	scsh/time.scm \
- 	scsh/top.scm \
- 	scsh/tty.scm \
--	scsh/utilities.scm
-+	scsh/utilities.scm \
-+	scsh/rx/let-match.scm
- 
- #    	scsh/dbm.scm db.scm ndbm.scm
- #	static.scm static-heap.scm static1.scm
-@@ -656,6 +665,7 @@
-          $(srcdir)/scsh/machine/packages.scm \
- 	 $(srcdir)/scsh/rx/packages.scm \
- 	 $(srcdir)/scsh/rx/cond-package.scm \
-+         $(srcdir)/scsh/rx/let-match.scm \
- 	 $(srcdir)/scsh/scsh-package.scm \
- 	 $(srcdir)/scsh/lib/string-pack.scm \
- 	 $(srcdir)/scsh/lib/list-pack.scm \
-@@ -711,13 +721,20 @@
+@@ -727,13 +732,20 @@
  
  install-scsh: scsh
  	$(RM) $(bindir)/$(RUNNABLE)$(EXEEXT)
@@ -88,19 +60,18 @@ $NetBSD: patch-aa,v 1.5 2001/04/12 21:29:50 jtb Exp $
 +	$(INSTALL_SCRIPT) $(srcdir)/scsh/scsh$(EXEEXT) \
  	    $(bindir)/$(RUNNABLE)$(EXEEXT)
 -	$(INSTALL_PROGRAM) $(srcdir)/scsh/scsh.image $(LIB)/scsh.image
--	$(INSTALL_PROGRAM) $(srcdir)/$(LIBSCSH) $(libdir)/$(LIBSCSH)
-+	$(INSTALL_SCRIPT) $(srcdir)/scsh/scsh.image $(LIB)/scsh.image
-+	$(INSTALL_DATA) $(srcdir)/$(LIBSCSH) $(libdir)/$(LIBSCSH)
++	$(INSTALL_DATA) $(srcdir)/scsh/scsh.image $(LIB)/scsh.image
+ 	$(INSTALL_PROGRAM) $(srcdir)/$(LIBSCSH) $(libdir)/$(LIBSCSH)
  	$(RANLIB) $(libdir)/$(LIBSCSH)
  	for f in $(srcdir)/scsh/*.scm; \
  	    do $(INSTALL_DATA) $$f $(LIB)/scsh/; done
 +	for f in $(srcdir)/scsh/lib/*.scm; \
-+            do $(INSTALL_DATA) $$f $(LIB)/scsh/lib/; done
++	    do $(INSTALL_DATA) $$f $(LIB)/scsh/lib/; done
 +	for f in $(srcdir)/scsh/rx/*.scm; \
-+            do $(INSTALL_DATA) $$f $(LIB)/scsh/rx/; done
++	    do $(INSTALL_DATA) $$f $(LIB)/scsh/rx/; done
 +	for f in $(srcdir)/scsh/machine/*.scm; \
-+            do $(INSTALL_DATA) $$f $(LIB)/scsh/machine/; done
++	    do $(INSTALL_DATA) $$f $(LIB)/scsh/machine/; done
 +
  
  clean-scsh:
- 	$(RM) scsh/*.o scsh/regexp/*.o scsh/rx/*.o scsh/machine/*.o 
+ 	$(RM) scsh/*.o

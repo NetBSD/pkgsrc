@@ -1,12 +1,22 @@
-$NetBSD: patch-ai,v 1.2 2001/02/27 19:37:47 wiz Exp $
+$NetBSD: patch-ai,v 1.3 2001/10/02 11:07:15 seb Exp $
 
---- configure.in.orig	Tue Feb 27 20:13:07 2001
-+++ configure.in
-@@ -291,6 +291,7 @@
-   
-   ## NetBSD and FreeBSD ( and maybe 386BSD also)
-   *-*-*bsd* )
-+    LDFLAGS="-Wl,--export-dynamic"
-     dir=bsd
-     SCSH_ELF
-   ;;
+--- scsh/scsh.scm.orig	Sat Jun  2 19:43:12 2001
++++ scsh/scsh.scm
+@@ -283,7 +283,7 @@
+ 
+ ;;; Create a new temporary file and return its name.
+ ;;; The optional argument specifies the filename prefix to use, and defaults
+-;;; to "/usr/tmp/<pid>.", where <pid> is the current process' id. The procedure
++;;; to "/var/tmp/<pid>.", where <pid> is the current process' id. The procedure
+ ;;; scans through the files named <prefix>0, <prefix>1, ... until it finds a
+ ;;; filename that doesn't exist in the filesystem. It creates the file with 
+ ;;; permission #o600, and returns the filename.
+@@ -301,7 +301,7 @@
+ 				    ".~a"))))))
+ 
+ (define *temp-file-template*
+-  (make-fluid (string-append "/usr/tmp/" (number->string (pid)) ".~a")))
++  (make-fluid (string-append "/var/tmp/" (number->string (pid)) ".~a")))
+ 
+ 
+ (define (temp-file-iterate maker . maybe-template)

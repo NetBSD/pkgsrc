@@ -1,40 +1,14 @@
-$NetBSD: patch-af,v 1.1 1999/06/04 16:00:04 sommerfeld Exp $
+$NetBSD: patch-af,v 1.2 2001/10/02 11:07:15 seb Exp $
 
-*** scsh/bsd/sigset.h.original	Fri Oct 13 23:33:55 1995
---- scsh/bsd/sigset.h	Fri Jun  4 10:55:41 1999
-***************
-*** 2,10 ****
---- 2,34 ----
-  ** These macros are OS-dependent, and must be defined per-OS.
-  */
-  
-+ #if defined(__NetBSD__)
-+ #include <sys/param.h>
-+ #endif
-+ 
-+ #if defined(__NetBSD__) && defined(__NetBSD_Version__) && (__NetBSD_Version__ >= 103080000)
-+ /* Barf */
-+ 
-+ #if _NSIG > 48
-+ #error Too many signals!  Fix scsh to save more of them!
-+ #endif
-+ 
-+ #define make_sigset(maskp, hi, lo) do { __sigemptyset(maskp); \
-+ 	(maskp)->__bits[0] = ((hi)<<24)|(lo);	\
-+ 	(maskp)->__bits[1] = ((hi)>>8); \
-+         } while(0)
-+ 
-+ /* Not a procedure: */
-+ #define split_sigset(mask, hip, lop) \
-+ 	((*(hip)=((mask.__bits[0]>>24)&0xff) | (mask.__bits[1]<<8)), \
-+ 	 (*(lop)=(mask.__bits[0]&0xffffff)))
-+ 
-+ #else
-+ 
-  #define make_sigset(maskp, hi, lo) (*maskp=((hi)<<24)|(lo))
-  
-  /* Not a procedure: */
-  #define split_sigset(mask, hip, lop) \
-  	((*(hip)=(mask>>24)&0xff), \
-  	 (*(lop)=(mask&0xffffff)))
-+ #endif
+--- scsh/bsd/signals.scm.orig	Fri Aug  6 15:28:16 1999
++++ scsh/bsd/signals.scm
+@@ -65,6 +65,9 @@
+   ;; User defined
+   (usr1 30)	; user defined signal 1 
+   (usr2 31)	; user defined signal 2 
++
++  ;; NetBSD 1.4 and up
++  (pwr 32)	; impending power failure 
+   )
+ 
+ (define signals-ignored-by-default
