@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.598 2000/11/09 14:02:46 itojun Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.599 2000/11/09 23:46:29 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -2854,16 +2854,14 @@ README.html: .PRECIOUS
 	@[ -s $@.tmp1 ] || ${ECHO} "<I>(none)</I>" >> $@.tmp1
 	@${MAKE} ${MAKEFLAGS} run-depends-list PACKAGE_NAME_TYPE=html | sort -u >> $@.tmp2
 	@[ -s $@.tmp2 ] || ${ECHO} "<I>(none)</I>" >> $@.tmp2
-	@${ECHO} '${PKGNAME:S/&/\&amp;/g:S/>/\&gt;/g:S/</\&lt;/g}' >> $@.tmp3
 	@${MAKE} ${MAKEFLAGS} binpkg-list  >> $@.tmp4
 	@[ -s $@.tmp4 ] || ${ECHO} "<TR><TD><I>(no precompiled binaries available)</I>" >> $@.tmp4
 	@${MAKE} ${MAKEFLAGS} show-vulnerabilities-html >> $@.tmp5
 	@[ -s $@.tmp5 ] || ${ECHO} "<I>(no vulnerabilities known)</I>" >> $@.tmp5
 	@${LS} -l ${DISTDIR}/vulnerabilities 2>&1 | ${AWK} 'NF > 7 { printf("at %s %s %s\n", $$6, $$7, $$8) }' >> $@.tmp6
 	@[ -s $@.tmp6 ] || ${ECHO} "<TR><TD><I>(no vulnerabilities list available)</I>" >> $@.tmp6
-	@${SED} -e 's|%%PORT%%|${PKGPATH}|g' \
-		-e '/%%PKG%%/r $@.tmp3'					\
-		-e '/%%PKG%%/d'						\
+	@${SED} -e 's|%%PORT%%|${PKGPATH}|g'				\
+		-e 's|%%PKG%%|${PKGNAME}|'				\
 		${SED_LICENSE_EXPR}					\
 		${SED_HOMEPAGE_EXPR}					\
 		-e '/%%VULNERABILITIES%%/r $@.tmp5'			\
@@ -2882,7 +2880,7 @@ README.html: .PRECIOUS
 	@cmp -s $@.tmp $@ || 						\
 		(${ECHO_MSG} "${_PKGSRC_IN}> Creating README.html for ${_THISDIR_}${PKGNAME}"; \
 		${MV} -f $@.tmp $@)
-	@${RM} -f $@.tmp $@.tmp1 $@.tmp2 $@.tmp3 $@.tmp4 $@.tmp5 $@.tmp6
+	@${RM} -f $@.tmp $@.tmp1 $@.tmp2 $@.tmp4 $@.tmp5 $@.tmp6
 
 .if !target(show-pkgtools-version)
 show-pkgtools-version:
