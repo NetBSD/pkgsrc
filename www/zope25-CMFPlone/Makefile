@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/06/12 16:40:00 drochner Exp $
+# $NetBSD: Makefile,v 1.8 2003/06/12 16:54:25 drochner Exp $
 
 DISTNAME=	CMFPlone1.0.2
 PKGNAME=	zope25-CMFPlone-1.0.2
@@ -16,7 +16,6 @@ DEPENDS+=	zope25-Formulator-[0-9]*:../../www/zope25-Formulator
 
 # no ActivePak with Zope 2.6.x!
 PRODNAMES=	CMFPlone DCWorkflow
-ZOPE_COPYPRODUCT= zope-std-copyproduct-short
 
 .include "../../www/zope25/product.mk"
 .include "../../mk/bsd.pkg.mk"
