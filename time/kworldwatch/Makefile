@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/12/21 15:03:46 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2001/01/05 01:40:38 wiz Exp $
 #
 
 DISTNAME=	kworldwatch-0.6
@@ -8,11 +8,12 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	hubertf@netbsd.org
 
-DEPENDS+=	gettext>=0.10.35nb1:../../devel/gettext
+BUILD_DEPENDS+=	msgfmt:../../devel/gettext
 DEPENDS+=	kdebase-1.1.2:../../x11/kdebase
 
 CONFLICTS+=	kdetoys-*
 
+USE_LIBINTL=	YES
 USE_X11BASE=	YES
 GNU_CONFIGURE=	YES
 
