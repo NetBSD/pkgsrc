@@ -1,0 +1,9 @@
+cdlabelgen was designed to simplify the process of
+generating labels for CD's. It originated as a program
+to allow auto generation of frontcards and traycards
+for CD's burned via an automated mechanism
+(specifically for archiving data), but has now become
+popular for labelling CD compilations of mp3's, and
+copies of CDs. Note that cdlabelgen does not
+actually print anything--it just spits out postscript,
+which you can then do with as you please. 
