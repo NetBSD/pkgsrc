@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 1998/03/11 02:46:32 agc Exp $
+# $NetBSD: Makefile,v 1.26 1998/03/19 12:34:01 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.156 1997/09/30 07:54:42 asami Exp
 #
 
@@ -26,7 +26,7 @@
 #    SUBDIR += fbsd-icons
     SUBDIR += filerunner
 #    SUBDIR += freefonts
-#    SUBDIR += fvwm
+    SUBDIR += fvwm1
     SUBDIR += fvwm2
 #    SUBDIR += fvwm2-english
     SUBDIR += fvwm95
@@ -65,8 +65,8 @@
     SUBDIR += tkcron
 #    SUBDIR += tkdesk
 #    SUBDIR += tkgoodstuff
-    SUBDIR += tkirc
     SUBDIR += tkinfo
+    SUBDIR += tkirc
     SUBDIR += tkman
 #    SUBDIR += tvtwm
     SUBDIR += unclutter
@@ -103,6 +103,7 @@
 #    SUBDIR += xmold
     SUBDIR += xmove
     SUBDIR += xneko
+#    SUBDIR += xplot
     SUBDIR += xpns
 #    SUBDIR += xpostit
 #    SUBDIR += xpostitPlus
