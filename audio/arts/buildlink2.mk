@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.8 2003/05/26 07:52:28 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.9 2003/05/30 12:49:10 markd Exp $
 #
 # This Makefile fragment is included by packages that use arts.
 
@@ -14,6 +14,7 @@ BUILDLINK_PREFIX.arts_DEFAULT=	${X11PREFIX}
 BUILDLINK_FILES.arts+=	include/arts/gsl/*.h
 BUILDLINK_FILES.arts+=	include/arts/*.h
 BUILDLINK_FILES.arts+=	include/arts/*.idl
+BUILDLINK_FILES.arts+=	include/artsc/*.h
 BUILDLINK_FILES.arts+=	lib/libartsc.*
 BUILDLINK_FILES.arts+=	lib/libartscbackend.*
 BUILDLINK_FILES.arts+=	lib/libartsdsp.*
@@ -55,7 +56,9 @@ BUILDLINK_FILES.arts+=	lib/mcop/soundserver.mcoptype
 BUILDLINK_FILES.arts+=	lib/mcop/x11globalcomm.mcopclass
 BUILDLINK_FILES.arts+=	lib/mcop/x11globalcomm.mcoptype
 
-#.include "../../audio/libaudiofile/buildlink2.mk"
+.include "../../audio/libaudiofile/buildlink2.mk"
+.include "../../audio/libogg/buildlink2.mk"
+.include "../../audio/libvorbis/buildlink2.mk"
 #.include "../../x11/kde3/buildlink2.mk"
 .include "../../mk/ossaudio.buildlink2.mk"
 
