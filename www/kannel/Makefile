@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/02/17 17:22:11 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2001/03/01 10:47:21 wiz Exp $
 #
 
 DISTNAME=	gateway-0.8
@@ -16,8 +16,8 @@ DEPENDS+=	pth>=1.3.5:../../devel/pth
 USE_PERL5=	YES
 USE_GMAKE=	YES
 GNU_CONFIGURE=	YES
-CONFIGURE_ENV+=	CFLAGS="${CFLAGS} -I${PREFIX}/include"
-CONFIGURE_ENV+=	CPPFLAGS="${CPPFLAGS} -I${PREFIX}/include"
+CONFIGURE_ENV+=	CFLAGS="${CFLAGS} -I${LOCALBASE}/include"
+CONFIGURE_ENV+=	CPPFLAGS="${CPPFLAGS} -I${LOCALBASE}/include"
 CONFIGURE_ARGS+=--disable-docs
 
 .include "../../mk/bsd.pkg.mk"
