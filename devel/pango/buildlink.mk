@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.2 2002/05/10 00:45:51 rh Exp $
+# $NetBSD: buildlink.mk,v 1.3 2002/06/30 01:51:30 jschauma Exp $
 #
 # This Makefile fragment is included by packages that use pango.
 #
@@ -17,7 +17,7 @@ PANGO_BUILDLINK_MK=	# defined
 
 .include "../../mk/bsd.buildlink.mk"
 
-BUILDLINK_DEPENDS.pango?=	pango>=1.0.1nb1
+BUILDLINK_DEPENDS.pango?=	pango>=1.0.3
 DEPENDS+=	${BUILDLINK_DEPENDS.pango}:../../devel/pango
 
 EVAL_PREFIX+=		BUILDLINK_PREFIX.pango=pango
