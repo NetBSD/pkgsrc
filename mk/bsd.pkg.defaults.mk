@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.268 2004/07/27 15:59:31 xtraeme Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.269 2004/07/30 07:48:56 xtraeme Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -159,6 +159,21 @@ VARBASE?=	/var
 # Possible: any path
 # Default: /var
 
+# Default installation prefix for meta-pkgs/XFree86 and
+# meta-pkgs/xorg.
+.if defined(X11_TYPE) && !empty(X11_TYPE:MXFree86)
+X11ROOT_PREFIX?=	XFree86
+.elif defined(X11_TYPE) && !empty(X11_TYPE:Mxorg)
+X11ROOT_PREFIX?=	xorg
+.else
+X11ROOT_PREFIX?=	# empty
+.endif
+
+.if ((defined(X11_TYPE) && !empty(X11_TYPE:MXFree86) || \
+     defined(X11_TYPE) && !empty(X11_TYPE:Mxorg)) && \
+     defined(X11_TYPE) && empty(X11_TYPE:Mnative))
+X11BASE?=		${LOCALBASE}/${X11ROOT_PREFIX}
+.endif
 #X11BASE?=	/usr/X11R6
 # Where X11 is installed on the system.
 # (and the default install path of X11 pkgs)
