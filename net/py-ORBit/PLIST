@@ -1,7 +1,13 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/05/09 16:33:38 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/08/09 12:51:02 recht Exp $
 include/pyorbit-2/pyorbit.h
 lib/pkgconfig/pyorbit-2.pc
+${PYSITELIB}/CORBA.py
+${PYSITELIB}/CORBA.pyc
+${PYSITELIB}/CORBA.pyo
 ${PYSITELIB}/ORBit.a
 ${PYSITELIB}/ORBit.la
 ${PYSITELIB}/ORBit.so
+${PYSITELIB}/PortableServer.py
+${PYSITELIB}/PortableServer.pyc
+${PYSITELIB}/PortableServer.pyo
 @dirrm include/pyorbit-2
