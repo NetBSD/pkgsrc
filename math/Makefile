@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2001/12/31 21:33:40 fredb Exp $
+# $NetBSD: Makefile,v 1.70 2002/01/17 13:13:28 martti Exp $
 #
 
 COMMENT=	Mathematics
@@ -20,6 +20,7 @@ SUBDIR+=	fftpack
 SUBDIR+=	fftw
 SUBDIR+=	geg
 SUBDIR+=	gnumeric
+SUBDIR+=	gnumeric0
 SUBDIR+=	grace
 SUBDIR+=	grpn
 SUBDIR+=	gsl
