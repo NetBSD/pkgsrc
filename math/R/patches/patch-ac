@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.9 2003/01/23 21:24:58 markd Exp $
+$NetBSD: patch-ac,v 1.10 2003/12/03 12:05:18 markd Exp $
 
---- configure.orig	Sat Jan 11 03:52:06 2003
+--- configure.orig	2003-10-08 22:59:51.000000000 +1300
 +++ configure
-@@ -2095,7 +2095,7 @@
+@@ -2108,7 +2108,7 @@ else
    WANT_R_SHLIB_FALSE=
  fi
  if test "${want_R_shlib}" = yes; then
@@ -11,149 +11,15 @@ $NetBSD: patch-ac,v 1.9 2003/01/23 21:24:58 markd Exp $
  else
    LIBR=
  fi
-@@ -11123,13 +11123,13 @@
- fi
- 
- 
--echo "$as_me:$LINENO: checking for main in -lncurses" >&5
--echo $ECHO_N "checking for main in -lncurses... $ECHO_C" >&6
--if test "${ac_cv_lib_ncurses_main+set}" = set; then
-+echo "$as_me:$LINENO: checking for main in -ltermcap" >&5
-+echo $ECHO_N "checking for main in -ltermcap... $ECHO_C" >&6
-+if test "${ac_cv_lib_termcap_main+set}" = set; then
-   echo $ECHO_N "(cached) $ECHO_C" >&6
- else
-   ac_check_lib_save_LIBS=$LIBS
--LIBS="-lncurses  $LIBS"
-+LIBS="-ltermcap  $LIBS"
- cat >conftest.$ac_ext <<_ACEOF
- #line $LINENO "configure"
- /* confdefs.h.  */
-@@ -11159,34 +11159,34 @@
-   ac_status=$?
-   echo "$as_me:$LINENO: \$? = $ac_status" >&5
-   (exit $ac_status); }; }; then
--  ac_cv_lib_ncurses_main=yes
-+  ac_cv_lib_termcap_main=yes
- else
-   echo "$as_me: failed program was:" >&5
- sed 's/^/| /' conftest.$ac_ext >&5
- 
--ac_cv_lib_ncurses_main=no
-+ac_cv_lib_termcap_main=no
- fi
- rm -f conftest.$ac_objext conftest$ac_exeext conftest.$ac_ext
- LIBS=$ac_check_lib_save_LIBS
- fi
--echo "$as_me:$LINENO: result: $ac_cv_lib_ncurses_main" >&5
--echo "${ECHO_T}$ac_cv_lib_ncurses_main" >&6
--if test $ac_cv_lib_ncurses_main = yes; then
-+echo "$as_me:$LINENO: result: $ac_cv_lib_termcap_main" >&5
-+echo "${ECHO_T}$ac_cv_lib_termcap_main" >&6
-+if test $ac_cv_lib_termcap_main = yes; then
-   cat >>confdefs.h <<_ACEOF
--#define HAVE_LIBNCURSES 1
-+#define HAVE_LIBTERMCAP 1
- _ACEOF
- 
--  LIBS="-lncurses $LIBS"
-+  LIBS="-ltermcap $LIBS"
- 
- else
- 
--echo "$as_me:$LINENO: checking for main in -ltermcap" >&5
--echo $ECHO_N "checking for main in -ltermcap... $ECHO_C" >&6
--if test "${ac_cv_lib_termcap_main+set}" = set; then
-+echo "$as_me:$LINENO: checking for main in -ltermlib" >&5
-+echo $ECHO_N "checking for main in -ltermlib... $ECHO_C" >&6
-+if test "${ac_cv_lib_termlib_main+set}" = set; then
-   echo $ECHO_N "(cached) $ECHO_C" >&6
- else
-   ac_check_lib_save_LIBS=$LIBS
--LIBS="-ltermcap  $LIBS"
-+LIBS="-ltermlib  $LIBS"
- cat >conftest.$ac_ext <<_ACEOF
- #line $LINENO "configure"
- /* confdefs.h.  */
-@@ -11216,34 +11216,34 @@
-   ac_status=$?
-   echo "$as_me:$LINENO: \$? = $ac_status" >&5
-   (exit $ac_status); }; }; then
--  ac_cv_lib_termcap_main=yes
-+  ac_cv_lib_termlib_main=yes
- else
-   echo "$as_me: failed program was:" >&5
- sed 's/^/| /' conftest.$ac_ext >&5
- 
--ac_cv_lib_termcap_main=no
-+ac_cv_lib_termlib_main=no
- fi
- rm -f conftest.$ac_objext conftest$ac_exeext conftest.$ac_ext
- LIBS=$ac_check_lib_save_LIBS
- fi
--echo "$as_me:$LINENO: result: $ac_cv_lib_termcap_main" >&5
--echo "${ECHO_T}$ac_cv_lib_termcap_main" >&6
--if test $ac_cv_lib_termcap_main = yes; then
-+echo "$as_me:$LINENO: result: $ac_cv_lib_termlib_main" >&5
-+echo "${ECHO_T}$ac_cv_lib_termlib_main" >&6
-+if test $ac_cv_lib_termlib_main = yes; then
-   cat >>confdefs.h <<_ACEOF
--#define HAVE_LIBTERMCAP 1
-+#define HAVE_LIBTERMLIB 1
- _ACEOF
- 
--  LIBS="-ltermcap $LIBS"
-+  LIBS="-ltermlib $LIBS"
- 
- else
- 
--echo "$as_me:$LINENO: checking for main in -ltermlib" >&5
--echo $ECHO_N "checking for main in -ltermlib... $ECHO_C" >&6
--if test "${ac_cv_lib_termlib_main+set}" = set; then
-+echo "$as_me:$LINENO: checking for main in -lncurses" >&5
-+echo $ECHO_N "checking for main in -lncurses... $ECHO_C" >&6
-+if test "${ac_cv_lib_ncurses_main+set}" = set; then
-   echo $ECHO_N "(cached) $ECHO_C" >&6
- else
-   ac_check_lib_save_LIBS=$LIBS
--LIBS="-ltermlib  $LIBS"
-+LIBS="-lncurses  $LIBS"
- cat >conftest.$ac_ext <<_ACEOF
- #line $LINENO "configure"
- /* confdefs.h.  */
-@@ -11273,24 +11273,24 @@
-   ac_status=$?
-   echo "$as_me:$LINENO: \$? = $ac_status" >&5
-   (exit $ac_status); }; }; then
--  ac_cv_lib_termlib_main=yes
-+  ac_cv_lib_ncurses_main=yes
- else
-   echo "$as_me: failed program was:" >&5
- sed 's/^/| /' conftest.$ac_ext >&5
- 
--ac_cv_lib_termlib_main=no
-+ac_cv_lib_ncurses_main=no
- fi
- rm -f conftest.$ac_objext conftest$ac_exeext conftest.$ac_ext
- LIBS=$ac_check_lib_save_LIBS
- fi
--echo "$as_me:$LINENO: result: $ac_cv_lib_termlib_main" >&5
--echo "${ECHO_T}$ac_cv_lib_termlib_main" >&6
--if test $ac_cv_lib_termlib_main = yes; then
-+echo "$as_me:$LINENO: result: $ac_cv_lib_ncurses_main" >&5
-+echo "${ECHO_T}$ac_cv_lib_ncurses_main" >&6
-+if test $ac_cv_lib_ncurses_main = yes; then
-   cat >>confdefs.h <<_ACEOF
--#define HAVE_LIBTERMLIB 1
-+#define HAVE_LIBNCURSES 1
- _ACEOF
- 
--  LIBS="-ltermlib $LIBS"
-+  LIBS="-lncurses $LIBS"
- 
- fi
- 
-@@ -15432,6 +15432,9 @@
+@@ -15834,6 +15834,7 @@ cat > conftest.c <<EOF
+ #else
+ # define F77_SYMBOL(x)   x
+ #endif
++int MAIN__ () { return 0; }
+ int main () {
+   exit(0);
+ }
+@@ -15902,6 +15903,9 @@ cat > conftest.c <<EOF
  
  extern void F77_SYMBOL(cftest)(int *a, int *b, double *x, double *y);
  
@@ -163,7 +29,7 @@ $NetBSD: patch-ac,v 1.9 2003/01/23 21:24:58 markd Exp $
  int main () {
    int a[3] = {17, 237, 2000000000}, b[2], res = 0;
    double x[3] = {3.14159265, 123.456789, 2.3e34}, z[3];
-@@ -15520,6 +15523,9 @@
+@@ -15990,6 +15994,9 @@ typedef struct {
  
  extern void F77_SYMBOL(cftest)(Rcomplex *x);
  
@@ -173,12 +39,12 @@ $NetBSD: patch-ac,v 1.9 2003/01/23 21:24:58 markd Exp $
  int main () {
      Rcomplex z[3];
  
-@@ -16510,123 +16516,6 @@
+@@ -17020,135 +17027,6 @@ echo "${ECHO_T}no" >&6
  fi
  
      fi
 -    if test "${G77}" = yes; then
--      ac_safe=`echo "-mieee" | sed 'y%./+-:=%__p___%'`
+-      ac_safe=_mieee
 -echo "$as_me:$LINENO: checking whether ${F77} accepts -mieee" >&5
 -echo $ECHO_N "checking whether ${F77} accepts -mieee... $ECHO_C" >&6
 -if eval "test \"\${r_cv_prog_f77_flag_${ac_safe}+set}\" = set"; then
@@ -229,14 +95,20 @@ $NetBSD: patch-ac,v 1.9 2003/01/23 21:24:58 markd Exp $
 -if eval "test \"`echo '$r_cv_prog_f77_flag_'$ac_safe`\" = yes"; then
 -  echo "$as_me:$LINENO: result: yes" >&5
 -echo "${ECHO_T}yes" >&6
--  R_XTRA_FFLAGS="${R_XTRA_FFLAGS} -mieee"
+-  separator=""
+-test -z "${separator}" && separator=" "
+-if test -z "${R_XTRA_FFLAGS}"; then
+-  R_XTRA_FFLAGS="-mieee"
+-else
+-  R_XTRA_FFLAGS="${R_XTRA_FFLAGS}${separator}-mieee"
+-fi
 -else
 -  echo "$as_me:$LINENO: result: no" >&5
 -echo "${ECHO_T}no" >&6
 -fi
 -
 -    else
--      ac_safe=`echo "-fpe3" | sed 'y%./+-:=%__p___%'`
+-      ac_safe=_fpe3
 -echo "$as_me:$LINENO: checking whether ${F77} accepts -fpe3" >&5
 -echo $ECHO_N "checking whether ${F77} accepts -fpe3... $ECHO_C" >&6
 -if eval "test \"\${r_cv_prog_f77_flag_${ac_safe}+set}\" = set"; then
@@ -287,7 +159,13 @@ $NetBSD: patch-ac,v 1.9 2003/01/23 21:24:58 markd Exp $
 -if eval "test \"`echo '$r_cv_prog_f77_flag_'$ac_safe`\" = yes"; then
 -  echo "$as_me:$LINENO: result: yes" >&5
 -echo "${ECHO_T}yes" >&6
--  R_XTRA_FFLAGS="${R_XTRA_FFLAGS} -fpe3"
+-  separator=""
+-test -z "${separator}" && separator=" "
+-if test -z "${R_XTRA_FFLAGS}"; then
+-  R_XTRA_FFLAGS="-fpe3"
+-else
+-  R_XTRA_FFLAGS="${R_XTRA_FFLAGS}${separator}-fpe3"
+-fi
 -else
 -  echo "$as_me:$LINENO: result: no" >&5
 -echo "${ECHO_T}no" >&6
@@ -295,9 +173,9 @@ $NetBSD: patch-ac,v 1.9 2003/01/23 21:24:58 markd Exp $
 -
 -    fi
      if test "${GXX}" = yes; then
-       ac_safe=`echo "-mieee" | sed 'y%./+-:=%__p___%'`
+       ac_safe=_mieee
  echo "$as_me:$LINENO: checking whether ${CXX-c++} accepts -mieee" >&5
-@@ -17397,6 +17286,7 @@
+@@ -18017,6 +17895,7 @@ fi ;;
      fpicflags=
      ;;
    netbsd*)

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.2 2003/03/14 19:37:48 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2003/12/03 12:05:18 markd Exp $
 #
 # This Makefile fragment is included by packages that use the R shared library.
 #
@@ -7,7 +7,7 @@
 R_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		R
-BUILDLINK_DEPENDS.R?=		R>=1.6.1
+BUILDLINK_DEPENDS.R?=		R>=1.7.0
 BUILDLINK_PKGSRCDIR.R?=		../../math/R
 
 EVAL_PREFIX+=			BUILDLINK_PREFIX.R=R
