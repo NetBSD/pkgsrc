@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2003/02/01 23:52:47 tron Exp $
+# $NetBSD: Makefile,v 1.9 2003/02/02 17:30:42 tron Exp $
 
 DISTNAME=	wmbiff-0.4.13
+PKGREVISION=	1
 CATEGORIES=	mail x11
 MASTER_SITES=	$(MASTER_SITE_SOURCEFORGE:=wmbiff/)
 
@@ -21,4 +22,5 @@ post-install:
 
 .include "../../graphics/xpm/buildlink2.mk"
 .include "../../wm/windowmaker/buildlink2.mk"
+.include "../../security/libgcrypt/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
