@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 1998/06/22 13:04:38 agc Exp $
+# $NetBSD: Makefile,v 1.13 1999/02/04 19:07:51 agc Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/08/05 06:56:41 tg Exp
 #
 
@@ -18,6 +18,7 @@ DEPENDS+=	dialog-0.6z:../../misc/dialog
 DIST_SUBDIR=	teTeX
 NO_CONFIGURE=	yes
 USE_GMAKE=	yes
+USE_X11=	yes
 ALL_TARGET=	config clean texhash all
 INSTALL_TARGET=	install ini
 INFO_FILES=	latex kpathsea.info dvips.info fontname.info
