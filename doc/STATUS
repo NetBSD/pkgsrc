@@ -1,4 +1,4 @@
-# $NetBSD: STATUS,v 1.5 2003/04/20 20:43:49 cjep Exp $
+# $NetBSD: STATUS,v 1.6 2003/04/21 00:11:56 cjep Exp $
 
 Below is a list of packages known to build on various non-NetBSD
 platforms.
@@ -40,8 +40,8 @@ Package                 Darwin   FreeBSD   IRIX   Linux   OpenBSD   Solaris
 ---------------------------------------------------------------------------
 audio/mpg123                                 Y      Y                  Y
 devel/cvs                  Y        Y        Y      Y        Y         Y
-devel/gettext              Y        Y        Y      Y                  Y
-devel/libtool              Y        Y        Y      Y                  Y
+devel/gettext              Y        Y        Y      Y        Y         Y
+devel/libtool              Y        Y        Y      Y        Y         Y
 devel/ncurses                                                          Y
 editors/vim                Y        Y        Y      Y                  Y
 editors/xemacs                                      Y
