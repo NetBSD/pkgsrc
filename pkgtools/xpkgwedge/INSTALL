@@ -1,4 +1,4 @@
-# $NetBSD: INSTALL,v 1.7 2003/11/23 06:46:54 jlam Exp $
+# $NetBSD: INSTALL,v 1.8 2003/11/23 07:09:12 jlam Exp $
 
 FONT_PROGS="@FONT_PROGS@"
 X11BASE=@X11BASE@
@@ -16,6 +16,7 @@ SITEDEF_SUBST_SED="-e s/\#endif.*VendorCF.*/\#include <host.def>\\
 
 case ${STAGE} in
 POST-INSTALL)
+	${ECHO} -n "Symlinking font programs..."
 	for prog in ${FONT_PROGS}; do
 		if [ -f ${X11BASE}/bin/$prog -a				\
 		     ${PKG_PREFIX} != ${X11BASE} ]; then
@@ -23,6 +24,7 @@ POST-INSTALL)
 				${PKG_PREFIX}/bin/$prog
 		fi
 	done
+	${ECHO} "done."
 	;;
 
 VIEW-INSTALL)
