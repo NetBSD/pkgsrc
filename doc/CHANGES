@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1766 2003/03/25 10:38:52 wiz Exp $
+$NetBSD: CHANGES,v 1.1767 2003/03/25 11:04:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1296,3 +1296,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated sox to 12.17.4 [wiz 2003-03-25]
 	Updated xscreensaver to 4.09 [wiz 2003-03-25]
 	Updated xscreensaver-gnome to 4.09 [wiz 2003-03-25]
+	Updated libpcap to 0.7.2 [wiz 2003-03-25]
+	Updated tcpdump to 3.7.2 [wiz 2003-03-25]
