@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.2 1998/02/01 02:21:00 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.3 1998/08/14 23:11:20 tron Exp $
 bin/mattrib
 bin/mcd
 bin/mcopy
 bin/mdel
 bin/mdeltree
 bin/mdir
+bin/mdu
 bin/mformat
 bin/minfo
 bin/mlabel
@@ -16,8 +17,8 @@ bin/mpartition
 bin/mrd
 bin/mread
 bin/mren
+bin/mshowfat
 bin/mtype
-bin/mwrite
 bin/mtoolstest
 bin/mbadblocks
 bin/mzip
@@ -25,14 +26,16 @@ bin/mcheck
 bin/mxtar
 bin/uz
 bin/tgz
-bin/xcopy
 bin/mcomp
 bin/lz
 bin/mkmanifest
 @unexec %D/bin/install-info --delete %D/info/mtools.info %D/info/dir
 info/mtools.info
-@exec [ -f %D/info/dir ] || sed -ne '1,/Menu:/p' /usr/share/info/dir > %D/info/dir
 @exec %D/bin/install-info %D/info/mtools.info %D/info/dir
+man/man1/floppyd.1
+man/man1/mdu.1
+man/man1/mpartition.1
+man/man1/mshowfat.1
 man/man1/mattrib.1
 man/man1/mbadblocks.1
 man/man1/mcd.1
@@ -52,6 +55,5 @@ man/man1/mren.1
 man/man1/mtoolstest.1
 man/man1/mtools.1
 man/man1/mtype.1
-man/man1/mwrite.1
 man/man1/mzip.1
 man/man5/mtools.5
