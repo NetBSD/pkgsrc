@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/08/01 14:06:53 grant Exp $
+# $NetBSD: Makefile,v 1.3 2002/11/19 07:42:45 schmonz Exp $
 
 PKGNAME=	acroread5-5.06
 CATEGORIES=	print
@@ -36,13 +36,13 @@ IGNORE=		'${PKGNAME} requires Solaris libraries - see compat_svr4(8)'
 .  endif
 DISTNAME=	solaris-506
 PLATFORM=	sparcsolaris
-. else
-DISTNAME=	${PKGNAME}
-PLATFORM=	unknown
 . endif
 .elif ${OPSYS} == "SunOS"
 DISTNAME=	solaris-506
 PLATFORM=	sparcsolaris
+.else
+DISTNAME=	${PKGNAME}
+PLATFORM=	unknown
 .endif
 
 PLIST_SUBST+=	PLATFORM=${PLATFORM}
