@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/11/30 00:51:16 jtb Exp $
+# $NetBSD: Makefile,v 1.2 2000/11/30 01:37:22 jtb Exp $
 
 DISTNAME=		odepack-20001129
 CATEGORIES=		math
@@ -10,7 +10,7 @@ WRKSRC=			${WRKDIR}/odepack
 USE_LIBTOOL=		YES
 USE_FORTRAN=		YES
 
-FOPTS?=			=-O3
+FOPTS?=			-O3
 
 .include "../../mk/bsd.prefs.mk"
 
