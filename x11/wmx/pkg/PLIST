@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/10/01 15:10:23 fredb Exp $
+bin/wmx
+share/doc/wmx/README
+share/doc/wmx/README.contrib
+@exec mkdir -p %D/etc/wmx
+@unexec (rmdir %D/etc/wmx && echo "Removed empty directory %D/etc/wmx") || true
+@dirrm share/doc/wmx
