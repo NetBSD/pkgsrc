@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2005/03/10 17:26:18 tv Exp $
+$NetBSD: distinfo,v 1.7 2005/03/13 01:26:45 tv Exp $
 
 SHA1 (gnuplot-4.0.0.tar.gz) = a862bc311724c263aa1ef1c646291d73dc37c978
 RMD160 (gnuplot-4.0.0.tar.gz) = 7b1fc84c161c132c776269b6e9a49abd29251a18
 Size (gnuplot-4.0.0.tar.gz) = 2160918 bytes
-SHA1 (patch-aa) = cbb6d3aa3761c12579d75e512a1078aea674d8fc
+SHA1 (patch-aa) = ff4f1ca9d64d9d946948e736ea69411dc729e9b0
