@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2003/07/17 22:56:41 grant Exp $
+# $NetBSD: Makefile,v 1.17 2003/08/28 15:01:44 recht Exp $
 #
 
 DISTNAME=	wxPythonSrc-2.4.0.7
@@ -17,7 +17,7 @@ USE_BUILDLINK2=	yes
 USE_GMAKE=	yes
 
 # we depend on glib which pulls in threads
-PYTHON_VERSIONS_ACCEPTED=	22pth 21pth
+PYTHON_VERSIONS_ACCEPTED=	23pth 22pth 21pth
 BUILDLINK_DEPENDS.python21-pth=	python21-pth>=2.1.3nb3
 BUILDLINK_DEPENDS.python22-pth=	python22-pth>=2.2.2nb2
 
