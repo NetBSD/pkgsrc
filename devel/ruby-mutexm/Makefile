@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/07/01 12:02:57 taca Exp $
+# $NetBSD: Makefile,v 1.2 2002/01/05 08:27:59 taca Exp $
 #
 
 DISTNAME=	mutexm-1.0.1
@@ -14,15 +14,14 @@ DIST_SUBDIR=	ruby
 USE_RUBY=	yes
 NO_BUILD=	yes
 
-DOCS_JA=	mutexm.rd.ja
+DOCS=		mutexm.rd.ja
 
 do-install:
 	@cd ${WRKSRC}; ${RUBY} install.rb
 
 post-install:
-	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}/mutexm/ja
-	${INSTALL_DATA} ${WRKSRC}/doc/mutexm.rd.ja ${RUBY_DOCDIR}/mutexm/ja
-#	${INSTALL_DATA_DIR} ${RUBY_EXAMPLESDIR}/mutexm
+	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}/mutexm
+	${INSTALL_DATA} ${WRKSRC}/doc/mutexm.rd.ja ${RUBY_DOCDIR}/mutexm
 
 .include "../../lang/ruby-base/Makefile.common"
 .include "../../mk/bsd.pkg.mk"
