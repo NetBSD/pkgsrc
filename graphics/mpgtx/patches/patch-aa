@@ -1,0 +1,70 @@
+$NetBSD: patch-aa,v 1.1.1.1 2002/06/17 11:39:35 grant Exp $
+
+--- Makefile.orig	Mon Jul 23 12:30:24 2001
++++ Makefile
+@@ -1,5 +1,4 @@
+ # installation dirs : Edit at your convenance
+-PREFIX=/usr
+ INSTALLDIR=$(PREFIX)/bin
+ MANDIR=$(PREFIX)/man/man1
+ 
+@@ -12,19 +11,19 @@
+ STATIC_LFLAGS= -static -s
+ DEVEL_LFLAGS= #-lefence
+ 
+-default : devel
++all : shared
+ 
+ # here are the default targets
+ nocatch:
+-	make mpgtx 'CFLAGS=$(DEVEL_CFLAGS) -DNOSIGNAL_H' 'LFLAGS=$(DEVEL_LFLAGS)'
++	$(MAKE) mpgtx 'CFLAGS=$(DEVEL_CFLAGS) -DNOSIGNAL_H' 'LFLAGS=$(DEVEL_LFLAGS)'
+ debug:
+-	make mpgtx 'CFLAGS=$(DEVEL_CFLAGS) -D_DEBUG_' 'LFLAGS=$(DEVEL_LFLAGS)'
++	$(MAKE) mpgtx 'CFLAGS=$(DEVEL_CFLAGS) -D_DEBUG_' 'LFLAGS=$(DEVEL_LFLAGS)'
+ devel:	
+-	make mpgtx 'CFLAGS=$(DEVEL_CFLAGS)' 'LFLAGS=$(DEVEL_LFLAGS)'
++	$(MAKE) mpgtx 'CFLAGS=$(DEVEL_CFLAGS)' 'LFLAGS=$(DEVEL_LFLAGS)'
+ shared:
+-	make mpgtx 'CFLAGS=$(RELEASE_CFLAGS)' 'LFLAGS=$(SHARED_LFLAGS)'
++	$(MAKE) mpgtx 'CFLAGS=$(RELEASE_CFLAGS)' 'LFLAGS=$(SHARED_LFLAGS)'
+ static:
+-	make mpgtx 'CFLAGS=$(RELEASE_CFLAGS)' 'LFLAGS=$(STATIC_LFLAGS)'
++	$(MAKE) mpgtx 'CFLAGS=$(RELEASE_CFLAGS)' 'LFLAGS=$(STATIC_LFLAGS)'
+ 
+ 
+ 
+@@ -42,20 +41,19 @@
+ 	rm -f *.o mpgtx mpgjoin mpgcat mpgsplit mpginfo mpgdemux tagmp3 man/mpginfo.1 man/mpgsplit.1 man/mpgcat.1 man/mpgjoin.1 man/mpgdemux.1
+ 
+ install: 
+-	ln -sf mpgtx mpgjoin  
+-	ln -sf mpgtx mpgsplit 
+-	ln -sf mpgtx mpgcat   
+-	ln -sf mpgtx mpginfo  
+-	ln -sf mpgtx mpgdemux
+-	ln -sf mpgtx tagmp3
+-	install -d -m 755  $(INSTALLDIR)
+-	install -d -m 755  $(MANDIR)
+-	install -s -m 755 mpgtx $(INSTALLDIR)
+-	cp  -df   mpgdemux mpgjoin mpgcat mpginfo mpgsplit tagmp3 $(INSTALLDIR)
+-	install -m 644 man/mpgtx.1 man/tagmp3.1 $(MANDIR) 
+-	cd man ; make
+-	cd ..
+-	cp -df   ./man/mpgdemux.1 ./man/mpgjoin.1 man/mpgsplit.1 man/mpgcat.1 man/mpginfo.1 $(MANDIR)
++	$(BSD_INSTALL_PROGRAM) mpgtx $(INSTALLDIR)
++	$(BSD_INSTALL) -l sr $(INSTALLDIR)/mpgtx $(INSTALLDIR)/mpgjoin
++	$(BSD_INSTALL) -l sr $(INSTALLDIR)/mpgtx $(INSTALLDIR)/mpgsplit
++	$(BSD_INSTALL) -l sr $(INSTALLDIR)/mpgtx $(INSTALLDIR)/mpgcat
++	$(BSD_INSTALL) -l sr $(INSTALLDIR)/mpgtx $(INSTALLDIR)/mpginfo
++	$(BSD_INSTALL) -l sr $(INSTALLDIR)/mpgtx $(INSTALLDIR)/mpgdemux
++	$(BSD_INSTALL) -l sr $(INSTALLDIR)/mpgtx $(INSTALLDIR)/tagmp3
++	$(BSD_INSTALL_MAN) man/mpgtx.1 man/tagmp3.1 $(MANDIR) 
++	$(BSD_INSTALL) -l h $(MANDIR)/mpgtx.1 $(MANDIR)/mpgdemux.1
++	$(BSD_INSTALL) -l h $(MANDIR)/mpgtx.1 $(MANDIR)/mpgjoin.1
++	$(BSD_INSTALL) -l h $(MANDIR)/mpgtx.1 $(MANDIR)/mpgsplit.1
++	$(BSD_INSTALL) -l h $(MANDIR)/mpgtx.1 $(MANDIR)/mpgcat.1
++	$(BSD_INSTALL) -l h $(MANDIR)/mpgtx.1 $(MANDIR)/mpginfo.1
+ 
+ uninstall:
+ 	rm -f 	$(INSTALLDIR)/mpgtx     
