@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6403 2004/06/30 11:29:13 shannonjr Exp $
+$NetBSD: CHANGES,v 1.6404 2004/06/30 12:36:19 martti Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3187,3 +3187,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Added p5-Log-Dispatch-DBI-0.02 [grant 2004-06-30]
 	Updated pkg_chk to 1.49 [abs 2004-06-30]
 	Added florist-3.15p [shannonjr 2004-06-30]
+	Updated xfce4-weather-plugin to 0.3.9.1 [martti 2004-06-30]
+	Updated xfce4-cpugraph-plugin to 0.2.2 [martti 2004-06-30]
