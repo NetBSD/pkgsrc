@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.638 2001/01/10 11:54:59 tron Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.639 2001/01/10 13:10:46 tron Exp $
 #
 # This file is in the public domain.
 #
@@ -2986,7 +2986,7 @@ print-pkg-size-depends:
 	@${MAKE} ${MAKEFLAGS} run-depends-list PACKAGE_DEPENDS_QUICK=true \
 	| xargs -n 1 ${SETENV} ${PKG_INFO} -e				\
 	| sort -u							\
-	| xargs ${SETENV} ${PKG_INFO} -qs				\
+	| xargs -n 256 ${SETENV} ${PKG_INFO} -qs			\
 	| ${AWK} -- 'BEGIN { print("0 "); }				\
 		/^[0-9]+$$/ { print($$1, " + "); }			\
 		END { print("p"); }'					\
