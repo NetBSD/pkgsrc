@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5271 2004/03/17 07:08:15 soren Exp $
+$NetBSD: CHANGES,v 1.5272 2004/03/17 15:50:31 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1479,4 +1479,6 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated ruby-tcltklib to 1.6.8nb3 [minskim 2004-03-16]
 	Updated cpuflags to 0.63 [abs 2004-03-17]
 	Updated gsmlib to 1.10 [soren 2004-03-17]
-
+	Updated postgresql-pltcl to 7.3.4nb2 [minskim 2004-03-17]
+	Updated tcl-postgresql to 7.3.4nb2 [minskim 2004-03-17]
+	Updated tk-postgresql to 7.3.4nb2 [minskim 2004-03-17]
