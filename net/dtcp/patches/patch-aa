@@ -1,0 +1,133 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/06/05 07:43:25 hamajima Exp $
+
+--- Makefile.orig	2003-02-28 03:18:03.000000000 +0900
++++ Makefile	2004-06-05 15:30:10.000000000 +0900
+@@ -21,21 +21,16 @@
+ MAN=	dtcps.8 dtcpc.8 dtcpauth.8
+ .endif
+ 
+-.if (${OPSYS} == "NetBSD")
+-LPREFIX=	/usr/pkg/bin
+-.else
+-LPREFIX=	/usr/local/bin
+-.endif
+ CLEANFILES+=	dtcps dtcpc dtcpauth
+ 
+ all: dtcps dtcpc dtcpauth
+ 
+ dtcps: dtcps.rb
+-	sed -e 's#@PREFIX@#${LPREFIX}#' < dtcps.rb > dtcps
++	sed -e 's#@PREFIX@#${PREFIX}#' < dtcps.rb > dtcps
+ dtcpc: dtcpc.rb
+-	sed -e 's#@PREFIX@#${LPREFIX}#' < dtcpc.rb > dtcpc
++	sed -e 's#@PREFIX@#${PREFIX}#' < dtcpc.rb > dtcpc
+ dtcpauth: dtcpauth.rb
+-	sed -e 's#@PREFIX@#${LPREFIX}#' < dtcpauth.rb > dtcpauth
++	sed -e 's#@PREFIX@#${PREFIX}#' < dtcpauth.rb > dtcpauth
+ 
+ realinstall:
+ 	install ${COPY} -o ${BINOWN} -g ${BINGRP} -m 555 dtcps \
+--- dtcpauth.rb.orig	2002-11-29 00:46:59.000000000 +0900
++++ dtcpauth.rb	2004-06-05 15:40:03.000000000 +0900
+@@ -1,4 +1,4 @@
+-#! @PREFIX@/ruby
++#! @PREFIX@/bin/ruby
+ 
+ #
+ # dtcpauth, manipulate POP authorization DB
+@@ -37,7 +37,12 @@
+ require 'etc'
+ 
+ POPAUTHUID = 'pop'
+-POPAUTHDB = '/usr/local/etc/qpopper/pop.auth'
++# FreeBSD port of qpopper 4.X
++#POPAUTHDB = '/usr/local/etc/qpopper/pop.auth'
++# FreeBSD port of qpopper 2.X
++#POPAUTHDB = '/usr/local/etc/popper/pop.auth'
++# NetBSD pkg of qpopper 4.X
++POPAUTHDB = '@PREFIX@/etc/apop.auth'
+ 
+ #$debug = true
+ 
+--- dtcpc.rb.orig	2003-02-28 20:18:56.000000000 +0900
++++ dtcpc.rb	2004-06-05 15:30:24.000000000 +0900
+@@ -1,4 +1,4 @@
+-#! @PREFIX@/ruby
++#! @PREFIX@/bin/ruby
+ 
+ #
+ # dtcpc, Turmpet Dynamic Tunel Configuration Protocol client
+@@ -50,7 +50,7 @@
+ TIMEOUT = 60
+ TUNTIMEOUT = 300
+ DEBUG = false
+-PASSWDFILE = '/usr/local/etc/dtcpc.auth'
++PASSWDFILE = '@PREFIX@/etc/dtcpc.auth'
+ PIDFILE = '/var/run/dtcpc.pid'
+ 
+ ROUTE_GATEWAY = 0
+@@ -59,11 +59,11 @@
+ ROUTE_IFP = 3
+ 
+ # NetBSD 1.6 or later
+-#TUNIF = "gif0"
+-#TUNIF_CLONING = true
+-#TUNNEL_CREATE = 'ifconfig %s tunnel %s %s'
+-#TUNNEL_DELETE = 'ifconfig %s deletetunnel'
+-#ROUTE_METHOD = ROUTE_IFP
++TUNIF = "gif0"
++TUNIF_CLONING = true
++TUNNEL_CREATE = 'ifconfig %s tunnel %s %s'
++TUNNEL_DELETE = 'ifconfig %s deletetunnel'
++ROUTE_METHOD = ROUTE_IFP
+ #
+ # NetBSD 1.5.x or earlier
+ # 	and OpenBSD
+@@ -74,11 +74,11 @@
+ #ROUTE_METHOD = ROUTE_CHANGE
+ #
+ # FreeBSD 4.6-RELEASE or later
+-TUNIF = "gif"
+-TUNIF_CLONING = true
+-TUNNEL_CREATE = 'ifconfig %s tunnel %s %s'
+-TUNNEL_DELETE = 'ifconfig %s deletetunnel'
+-ROUTE_METHOD = ROUTE_IFP
++#TUNIF = "gif"
++#TUNIF_CLONING = true
++#TUNNEL_CREATE = 'ifconfig %s tunnel %s %s'
++#TUNNEL_DELETE = 'ifconfig %s deletetunnel'
++#ROUTE_METHOD = ROUTE_IFP
+ #ROUTE_METHOD = ROUTE_INTERFACE
+ #
+ # FreeBSD 4.4-RELEASE or 4.5-RELEASE
+--- dtcps.rb.orig	2003-02-28 13:36:04.000000000 +0900
++++ dtcps.rb	2004-06-05 15:30:30.000000000 +0900
+@@ -1,4 +1,4 @@
+-#! @PREFIX@/ruby
++#! @PREFIX@/bin/ruby
+ 
+ #
+ # dtcpd, Turmpet Dynamic Tunel Configuration Protocol daemon
+@@ -56,7 +56,7 @@
+ # must be less than 10, against RIPng and PIM6 - useless
+ TRAFFICTIMEOUT = 0
+ POPAUTHUID = 'pop'
+-ROUTETABLE = '/usr/local/etc/routetable'
++ROUTETABLE = '@PREFIX@/etc/routetable'
+ PIDFILE = '/var/run/dtcps.pid'
+ 
+ ROUTE_GATEWAY = 0
+@@ -65,11 +65,11 @@
+ ROUTE_IFP = 3
+ 
+ # FreeBSD port of qpopper 4.X
+-POPAUTHDB = '/usr/local/etc/qpopper/pop.auth'
++#POPAUTHDB = '/usr/local/etc/qpopper/pop.auth'
+ # FreeBSD port of qpopper 2.X
+ #POPAUTHDB = '/usr/local/etc/popper/pop.auth'
+ # NetBSD pkg of qpopper 4.X
+-#POPAUTHDB = '/usr/pkg/etc/apop.auth'
++POPAUTHDB = '@PREFIX@/etc/apop.auth'
+ 
+ # NetBSD 1.5.x or earlier
+ # 	and OpenBSD
