@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.39 2003/01/28 22:03:02 jlam Exp $
+# $NetBSD: Makefile,v 1.40 2003/03/15 08:58:43 jmmv Exp $
 
 DISTNAME=		esound-0.2.29
+PKGREVISION=		1
 CATEGORIES=		audio
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/esound/0.2/}
 
@@ -20,6 +21,11 @@ MAKE_ENV+=		AM_CPPFLAGS='-DDEV_DSP=\"${DEVOSSAUDIO}\"'
 
 EGDIR=			${PREFIX}/share/examples/esound
 CONF_FILES=		${EGDIR}/esd.conf ${PKG_SYSCONFDIR}/esd.conf
+
+post-install:
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/esound
+	cd ${WRKSRC}/docs/html && \
+		${PAX} -rwpppm . ${PREFIX}/share/doc/html/esound
 
 .include "../../audio/libaudiofile/buildlink2.mk"
 .include "../../mk/ossaudio.buildlink2.mk"
