@@ -1,4 +1,4 @@
-#	$NetBSD: FreeBSD.pkg.dist,v 1.23 2003/06/09 23:04:19 jmmv Exp $
+#	$NetBSD: FreeBSD.pkg.dist,v 1.24 2003/07/21 17:50:06 jmmv Exp $
 #
 
 /set type=dir uname=root gname=wheel mode=0755
@@ -539,6 +539,10 @@
                 LC_MESSAGES
                 ..
             ..
+            fo
+                LC_MESSAGES
+                ..
+            ..
             fr
                 LC_MESSAGES
                 ..
@@ -655,6 +659,10 @@
                 LC_MESSAGES
                 ..
             ..
+            nso
+                LC_MESSAGES
+                ..
+            ..
             pl
                 LC_MESSAGES
                 ..
@@ -723,11 +731,23 @@
                 LC_MESSAGES
                 ..
             ..
+            ven
+                LC_MESSAGES
+                ..
+            ..
             vi
                 LC_MESSAGES
                 ..
             ..
             wa
+                LC_MESSAGES
+                ..
+            ..
+            xh
+                LC_MESSAGES
+                ..
+            ..
+            xx
                 LC_MESSAGES
                 ..
             ..
@@ -752,6 +772,10 @@
                 ..
             ..
             zh_TW.Big5
+                LC_MESSAGES
+                ..
+            ..
+            zu
                 LC_MESSAGES
                 ..
             ..
