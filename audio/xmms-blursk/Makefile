@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/03/09 19:52:07 minskim Exp $
+# $NetBSD: Makefile,v 1.8 2004/03/11 23:01:16 snj Exp $
 
 DISTNAME=	Blursk-1.3
 PKGNAME=	xmms-blursk-1.3
@@ -13,7 +13,7 @@ COMMENT=	Visualization plugin for XMMS inspired by "Blur Scope"
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 GNU_CONFIGURE=	YES
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 USE_LIBTOOL=	YES
 USE_X11=	YES
 
@@ -26,6 +26,6 @@ PKG_FAIL_REASON=	"${PKGNAME} requires libXv.a"
 post-install:
 	${INSTALL_DATA} ${DISTDIR}/blursk-presets ${PREFIX}/share/xmms/blursk-presets
 
-.include "../../audio/xmms/buildlink2.mk"
-.include "../../x11/gtk/buildlink2.mk"
+.include "../../audio/xmms/buildlink3.mk"
+.include "../../x11/gtk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
