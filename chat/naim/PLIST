@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2003/09/24 10:14:12 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.8 2004/03/28 01:14:04 snj Exp $
 bin/extractbuddy.sh
 bin/naim
 bin/nicq
@@ -12,10 +12,9 @@ man/man1/naim.1
 man/man1/nicq.1
 man/man1/nirc.1
 man/man1/nlily.1
-share/doc/${PKGNAME}/COLORS
-share/doc/${PKGNAME}/FAQ
-share/doc/${PKGNAME}/README
-share/doc/${PKGNAME}/commands.txt
-share/doc/${PKGNAME}/keyboard.txt
-@dirrm share/doc/${PKGNAME}
+share/doc/naim/FAQ
+share/doc/naim/README
+share/doc/naim/commands.txt
+share/doc/naim/keyboard.txt
+@dirrm share/doc/naim
 @dirrm include/naim
