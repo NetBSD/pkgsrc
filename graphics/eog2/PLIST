@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/11/02 04:09:34 rh Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/12/18 18:45:41 jmmv Exp $
 bin/eog
 etc/gconf/gconf.xml.defaults/apps/eog/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/eog/full_screen/%gconf.xml
@@ -21,6 +21,7 @@ share/gnome/help/eog/C/legal.xml
 share/idl/Eog.idl
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/eog.mo
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/eog.mo
+${PKGLOCALEDIR}/locale/be/LC_MESSAGES/eog.mo
 ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/eog.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/eog.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/eog.mo
