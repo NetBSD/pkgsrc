@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/03/26 02:27:46 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2004/05/03 03:42:22 snj Exp $
 
 DISTNAME=	koffice-1.1.1
 PKGREVISION=	6
@@ -18,7 +18,7 @@ COMMENT=	KDE Office Suite with text processor, spreadsheet, etc.
 .include "../../mk/bsd.prefs.mk"
 .include "../../x11/kde2/Makefile.kde2"
 
-USE_BUILDLINK2=		# defined
+USE_BUILDLINK3=		yes
 REPLACE_PERL=		kpresenter/kprconverter.pl
 
 # Ensure we export symbols in the linked shared object.
@@ -44,7 +44,7 @@ post-install:
 	@# their local directories.
 	${CHMOD} u+w ${PREFIX}/share/kde/templates/.source/*
 
-.include "../../x11/kde2/buildlink2.mk"
-.include "../../x11/kdebase2/buildlink2.mk"
+.include "../../x11/kde2/kde2.mk"
+.include "../../x11/kdebase2/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
