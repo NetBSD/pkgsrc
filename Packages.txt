@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.21 1998/03/05 16:37:14 hubertf Exp $
+# $NetBSD: Packages.txt,v 1.22 1998/03/07 14:18:40 tron Exp $
 ###########################################################################
 
 			==========================
@@ -910,22 +910,8 @@ variables look like:
 See section 4.3 on how to remove RCS IDs from patch files. 
 
 
- 9.9 Distribution Makefile compresses manual pages automatically
- ===============================================================
-
-Some distribution files used to create our packages come with BSDish
-Makefiles that compress manual pages automatically if "MANZ" is defined.
-To avoid an error on "make install" because the manual pages can't be
-compressed by <bsd.port.mk> add this work arround to the package's Makefile:
-
-# MANZ is handled automatically
-.if defined(MANZ)
-MANCOMPRESSED=	1
-.endif
-
-
- 9.10 How to pull in variables from /etc/mk.conf
- ===============================================
+ 9.9 How to pull in variables from /etc/mk.conf
+ ==============================================
 
 The problem with package-defined variables that can be overridden via
 /etc/mk.conf is that the values of these variables aren't known at the
