@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.81 2003/09/02 22:34:04 jlam Exp $
+# $NetBSD: Makefile,v 1.82 2003/09/11 07:14:42 reed Exp $
 
 # Notes to package maintainers:
 #
@@ -14,8 +14,8 @@ MASTER_SITES=		# empty
 DISTFILES=		# empty
 
 MAINTAINER=		tech-pkg@NetBSD.org
-HOMEPAGE=		http://www.NetBSD.org/
-COMMENT=		NetBSD-current's pkg_* tools
+HOMEPAGE=		http://www.pkgsrc.org/
+COMMENT=		Package installation and administration tools
 
 USE_BUILDLINK2=		# defined
 GNU_CONFIGURE=		# defined
