@@ -3,7 +3,7 @@
 # Date created:         2 Oct 1994
 # Whom:                 swallace
 #
-# $NetBSD: Makefile,v 1.4 1998/01/19 01:16:29 hubertf Exp $
+# $NetBSD: Makefile,v 1.5 1998/01/22 10:26:37 agc Exp $
 # FreeBSD Id: Makefile,v 1.29 1996/12/20 23:46:22 ache Exp 
 #
 
@@ -18,6 +18,7 @@ MAINTAINER=     ache@FreeBSD.ORG
 EXEC_DEPENDS=	${PREFIX}/bin/install-info:${PORTSDIR}/devel/gtexinfo
 
 RESTRICTED=     "Non-redistributable beta"
+MIRROR_DISTFILE=	no
 
 WRKSRC=         ${WRKDIR}/tracker
 MAKE_FLAGS=     MACHINE=netbsd CC=${CC} INSTALL="${INSTALL}" \

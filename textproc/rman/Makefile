@@ -3,7 +3,7 @@
 # Date created:         27 Dec 1994
 # Whom:                 Thomas Gellekum <tg@FreeBSD.org>
 #
-# $Id: Makefile,v 1.3 1997/12/17 16:00:29 hubertf Exp $
+# $Id: Makefile,v 1.4 1998/01/22 10:26:40 agc Exp $
 #
 
 DISTNAME=       rman-3.0.4
@@ -14,6 +14,7 @@ EXTRACT_SUFX=	.tar.Z
 MAINTAINER=	tg@FreeBSD.org
 
 NO_CDROM=	"License required"
+MIRROR_DISTFILE=	no
 MAN1=		rman.1
 
 post-install:
