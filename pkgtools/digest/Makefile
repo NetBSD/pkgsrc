@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.23.2.3 2002/06/23 18:57:41 jlam Exp $
+# $NetBSD: Makefile,v 1.23.2.4 2002/08/23 05:09:10 jlam Exp $
 #
 # When adding new digest algorithms, please use rmd160 as the template,
 # and bump the VERSION definition.
 
 DISTNAME=	digest-${VERSION}
 CATEGORIES=	pkgtools
-MASTER_SITES=   # empty
-DISTFILES=      # empty
+MASTER_SITES=	# empty
+DISTFILES=	# empty
 
 MAINTAINER=	agc@netbsd.org
-HOMEPAGE=       http://www.netbsd.org/Documentation/software/packages.html
+HOMEPAGE=	http://www.netbsd.org/Documentation/software/packages.html
 COMMENT=	Message digest wrapper utility
 
 VERSION=	20010807
@@ -18,7 +18,9 @@ USE_BUILDLINK2=	# defined
 
 EXTRACT_ONLY=   # empty
 WRKSRC=		${WRKDIR}
-NO_CHECKSUM=    # defined
+NO_CHECKSUM=	# defined
+NO_PATCH=	# defined
+NO_CONFIGURE=	# defined
 MANCOMPRESSED_IF_MANZ=	YES
 BUILD_DEFS+=	MANINSTALL
 

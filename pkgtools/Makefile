@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.38 2002/04/29 11:04:37 rh Exp $
+# $NetBSD: Makefile,v 1.38.2.1 2002/08/23 05:09:06 jlam Exp $
 #
 
 COMMENT=	Tools for use in the packages collection
 
 SUBDIR+=	bsdpak
-#SUBDIR+=	buildlink-x11	# Only under instruction of user
 SUBDIR+=	cdpack
 SUBDIR+=	createbuildlink
 SUBDIR+=	digest
@@ -14,7 +13,6 @@ SUBDIR+=	gensolpkg
 SUBDIR+=	pkg_tarup
 SUBDIR+=	pkgchk
 SUBDIR+=	pkgconflict
-SUBDIR+=	pkgcvsupdate
 SUBDIR+=	pkgdep
 SUBDIR+=	pkgdiff
 SUBDIR+=	pkglint

@@ -1,6 +1,6 @@
 #!@PREFIX@/bin/perl
 #
-# $NetBSD: patchdiff.pl,v 1.4 2001/09/14 22:40:57 wiz Exp $
+# $NetBSD: patchdiff.pl,v 1.4.2.1 2002/08/23 05:09:24 jlam Exp $
 #
 # patchdiff: compares a set of patches patch-aa, patch-ab, ... in
 #   $WRKDIR/.newpatches in the with another set in patches.
@@ -63,7 +63,9 @@ EOF
 %new=();
 $thisdir=cwd();
 chomp($thisdir);
-$oldpatchdir=$thisdir."/patches";
+$oldpatchdir=`@MAKE@ show-var VARNAME=PATCHDIR` or
+    die ("can't find PATCHDIR -- wrong dir?");
+chomp($oldpatchdir);
 
 $wrkdir=`@MAKE@ show-var VARNAME=WRKDIR` or 
     die ("can't find WRKDIR -- wrong dir?");

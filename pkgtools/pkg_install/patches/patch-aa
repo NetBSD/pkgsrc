@@ -1,13 +1,57 @@
-$NetBSD: patch-aa,v 1.5 2002/03/04 13:48:31 seb Exp $
+$NetBSD: patch-aa,v 1.5.2.1 2002/08/23 05:09:12 jlam Exp $
 
---- Makefile.orig	Fri Feb  8 19:18:50 2002
-+++ Makefile
-@@ -2,5 +2,7 @@
- # Original from FreeBSD, no rcs id.
+--- Makefile.inc.orig	Thu Aug  1 04:46:30 2002
++++ Makefile.inc
+@@ -3,6 +3,9 @@
  
--SUBDIR=lib .WAIT add admin create delete info
-+SUBDIR=lib add admin create delete info
-+
-+all-add all-admin all-create all-delete all-info: all-lib
+ .include <bsd.own.mk>
  
- .include <bsd.subdir.mk>
++.if !defined(PRINTOBJDIR)
++PRINTOBJDIR=   printf "xxx: .MAKE\n\t@echo \$${.OBJDIR}\n" | ${MAKE} -B -s -f-
++.endif
+ LIBINSTALL != cd ${.CURDIR}/../lib && ${PRINTOBJDIR}
+ CPPFLAGS+=-I${.CURDIR}/../lib ${DEBUG} -DBINDIR='"${BINDIR}"'
+ 
+@@ -20,11 +23,11 @@ OPSYS="unknown"
+ CHMOD?= /bin/chmod
+ CHOWN?= /usr/sbin/chown
+ CHGRP?= /usr/bin/chgrp
+-WARNS=2
++WARNS=1
+ .elif ${OPSYS} == "SunOS"
+ LOCALBASE?= /usr/pkg
+ TAR_CMD?= tar
+-FTP_CMD?= tar
++FTP_CMD?= ftp
+ ZOULARISBASE?=	${LOCALBASE}/bsd
+ TAR_FULLPATHNAME?= ${ZOULARISBASE}/bin/${TAR_CMD}
+ FTP_FULLPATHNAME?= ${ZOULARISBASE}/bin/${FTP_CMD}
+@@ -36,9 +39,28 @@ CHOWN?= /usr/bin/chown
+ CHGRP?= /usr/bin/chgrp
+ WARNS=0
+ .elif ${OPSYS} == "Linux"
++LOCALBASE?= /usr/pkg
+ CHMOD?= /bin/chmod
+ CHOWN?= /bin/chown
+ CHGRP?= /bin/chgrp
++LDADD+= -ldb1
++.PATH: ${DIGESTDIR}
++CPPFLAGS+= -I${DIGESTDIR}
++MKCATPAGES=     no
++TAR_CMD?= tar
++TAR_FULLPATHNAME?= /bin/${TAR_CMD}
++CPPFLAGS+=-DTAR_CMD='"${TAR_CMD}"' -DTAR_FULLPATHNAME='"${TAR_FULLPATHNAME}"'
++CPPFLAGS+=-DTAR_MISSING_FAST_READ -DFGETLN_MISSING
++.elif ${OPSYS} == "Darwin"
++CHMOD?= /bin/chmod
++CHOWN?= /usr/sbin/chown
++CHGRP?= /usr/bin/chgrp
++TAR_CMD?= gnutar
++TAR_FULLPATHNAME?= /usr/bin/${TAR_CMD}
++CPPFLAGS+=-DTAR_CMD='"${TAR_CMD}"' -DTAR_FULLPATHNAME='"${TAR_FULLPATHNAME}"'
++CPPFLAGS+=-DTAR_MISSING_FAST_READ
++.PATH: ${DIGESTDIR}
++CPPFLAGS+= -I${DIGESTDIR}
+ .endif
+ 
+ CPPFLAGS+= -DCHMOD='"${CHMOD}"' -DCHOWN='"${CHOWN}"' -DCHGRP='"${CHGRP}"'
