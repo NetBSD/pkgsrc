@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2001/04/03 14:47:18 wiz Exp $
+# $NetBSD: Makefile.common,v 1.8 2001/05/02 17:05:23 wiz Exp $
 
 DISTNAME=		ghostscript-${GS_VERS}
 GS_VERS=		6.01
@@ -47,7 +47,7 @@ BJ10V_DRV=		gdev10v
 DISTFILES+=		${BJ10V_DRV}.tar.gz
 EXTRACT_LIST+=		${BJ10V_DRV}.tar.gz
 
-# This driver doesn't compile ... missing header "gsprops.h".
+# EPSON MJ-700V2C
 MJC_DRV=		gdevmjc-0.8
 DISTFILES+=		${MJC_DRV}.tar.gz
 EXTRACT_LIST+=		${MJC_DRV}.tar.gz
