@@ -1,6 +1,6 @@
 #!@BUILDLINK_SHELL@
 #
-# $NetBSD: libtool.sh,v 1.14 2004/01/30 10:56:11 jlam Exp $
+# $NetBSD: libtool.sh,v 1.15 2004/02/12 20:29:34 jlam Exp $
 
 Xsed='@SED@ -e 1s/^X//'
 sed_quote_subst='s/\([\\`\\"$\\\\]\)/\\\1/g'
@@ -169,7 +169,10 @@ esac
 # Reorder the libraries so that the library dependencies are correct.
 case $reorder in
 yes)
-	. $reorderlibs
+	if $test -n "$libs"; then
+		. $reorderlibs
+	fi
+	;;
 esac
 
 cmd="$cmd $ldflags $libs"
