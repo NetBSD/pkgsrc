@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2002/08/01 05:48:05 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2002/08/05 13:12:43 lukem Exp $
 
-DISTNAME=	vorbis-tools-1.0rc3
-PKGNAME=	vorbis-tools-1.0.0.7
-PKGREVISION=	1
+DISTNAME=	vorbis-tools-1.0
+PKGNAME=	vorbis-tools-1.0.0.8
 CATEGORIES=	audio
-MASTER_SITES=	http://www.vorbis.com/files/rc3/unix/
+MASTER_SITES=	http://www.vorbis.com/files/1.0/unix/
 
 MAINTAINER=	lukem@netbsd.org
 HOMEPAGE=	http://www.vorbis.com/
@@ -20,7 +19,7 @@ CONFLICTS=	vorbis-[0-9]*
 USE_BUILDLINK_ONLY=	yes
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
-LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 CONFIGURE_ARGS+=	--with-ogg-prefix=${BUILDLINK_DIR}		\
 			--with-vorbis-prefix=${BUILDLINK_DIR}		\
 			--with-ao-prefix=${BUILDLINK_DIR}
