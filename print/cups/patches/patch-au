@@ -1,7 +1,43 @@
-$NetBSD: patch-au,v 1.2.10.1 2005/02/05 17:47:19 salo Exp $
+$NetBSD: patch-au,v 1.2.10.2 2005/03/04 04:56:26 snj Exp $
 
 --- pdftops/XRef.cxx.orig	2004-10-13 22:55:53.000000000 +0200
 +++ pdftops/XRef.cxx
+@@ -76,7 +76,7 @@ XRef::XRef(BaseStream *strA, GString *ow
+ 
+   // trailer is ok - read the xref table
+   } else {
+-    if (size*sizeof(XRefEntry)/sizeof(XRefEntry) != size) {
++    if (size*(int)sizeof(XRefEntry)/sizeof(XRefEntry) != size) {
+       error(-1, "Invalid 'size' inside xref table.");
+       ok = gFalse;
+       errCode = errDamaged;
+@@ -291,7 +291,7 @@ GBool XRef::readXRef(Guint *pos) {
+     // table size
+     if (first + n > size) {
+       newSize = first + n;
+-      if (newSize*sizeof(XRefEntry)/sizeof(XRefEntry) != newSize) {
++      if (newSize*(int)sizeof(XRefEntry)/sizeof(XRefEntry) != newSize) {
+         error(-1, "Invalid 'newSize'");
+         goto err2;
+       }
+@@ -445,7 +445,7 @@ GBool XRef::constructXRef() {
+ 	    if (!strncmp(p, "obj", 3)) {
+ 	      if (num >= size) {
+ 		newSize = (num + 1 + 255) & ~255;
+-	        if (newSize*sizeof(XRefEntry)/sizeof(XRefEntry) != newSize) {
++	        if (newSize*(int)sizeof(XRefEntry)/sizeof(XRefEntry) != newSize) {
+ 	          error(-1, "Invalid 'obj' parameters.");
+ 	          return gFalse;
+ 	        }
+@@ -470,7 +470,7 @@ GBool XRef::constructXRef() {
+     } else if (!strncmp(p, "endstream", 9)) {
+       if (streamEndsLen == streamEndsSize) {
+ 	streamEndsSize += 64;
+-        if (streamEndsSize*sizeof(int)/sizeof(int) != streamEndsSize) {
++        if (streamEndsSize*(int)sizeof(int)/sizeof(int) != streamEndsSize) {
+           error(-1, "Invalid 'endstream' parameter.");
+           return gFalse;
+         }
 @@ -527,6 +527,9 @@ GBool XRef::checkEncrypted(GString *owne
  	} else {
  	  keyLength = 5;
