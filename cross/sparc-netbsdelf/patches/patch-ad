@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.1 2000/05/07 02:12:39 mycroft Exp $
+$NetBSD: patch-ad,v 1.2 2000/05/07 02:46:42 mycroft Exp $
 
 --- ../egcs-1.1.1/gcc/config/sparc/netbsdelf.h.orig	Sat May  6 21:59:07 2000
 +++ ../egcs-1.1.1/gcc/config/sparc/netbsdelf.h	Sat May  6 21:59:59 2000
@@ -7,11 +7,11 @@ $NetBSD: patch-ad,v 1.1 2000/05/07 02:12:39 mycroft Exp $
  
  #undef SIZE_TYPE
 -#define SIZE_TYPE "unsigned int"
-+#define SIZE_TYPE "unsigned long"
++#define SIZE_TYPE "long unsigned int"
  
  #undef PTRDIFF_TYPE
 -#define PTRDIFF_TYPE "int"
-+#define PTRDIFF_TYPE "long"
++#define PTRDIFF_TYPE "long int"
  
  #undef WCHAR_TYPE
  #define WCHAR_TYPE "int"
