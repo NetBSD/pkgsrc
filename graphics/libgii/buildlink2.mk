@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1 2002/11/25 20:33:36 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2002/11/25 20:34:36 jlam Exp $
 
 .if !defined(LIBGII_BUILDLINK2_MK)
 LIBGII_BUILDLINK2_MK=	# defined
@@ -23,6 +23,8 @@ BUILDLINK_FILES.libgii+=	include/ggi/keyboard.h
 BUILDLINK_FILES.libgii+=	include/ggi/system.h
 BUILDLINK_FILES.libgii+=	lib/libgg.*
 BUILDLINK_FILES.libgii+=	lib/libgii.*
+
+USE_X11=		# defined
 
 BUILDLINK_TARGETS+=	libgii-buildlink
 
