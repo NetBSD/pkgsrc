@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.11 2000/09/14 10:20:46 skrll Exp $
+$NetBSD: patch-ab,v 1.12 2000/11/26 11:22:40 mycroft Exp $
 
---- ltmain.in.orig	Sat May 27 02:53:15 2000
-+++ ltmain.in
+--- ltmain.in.orig	Sat May 27 01:53:15 2000
++++ ltmain.in	Sun Nov 26 11:19:57 2000
 @@ -819,6 +819,7 @@
      old_convenience=
      deplibs=
@@ -36,7 +36,26 @@ $NetBSD: patch-ab,v 1.11 2000/09/14 10:20:46 skrll Exp $
        # Some other compiler flag.
        -* | +*)
  	# Unknown arguments in both finalize_command and compile_command need
-@@ -2146,6 +2166,7 @@
+@@ -1772,7 +1792,7 @@
+ 	fi
+ 
+ 	# Remove version info from name if versioning should be avoided
+-	if test "$avoid_version" = yes && test "$need_version" = no; then
++	if test "$avoid_version" = yes; then
+ 	  major=
+ 	  versuffix=
+ 	  verstring=""
+@@ -1799,6 +1819,9 @@
+ 	  # rhapsody is a little odd...
+ 	  deplibs="$deplibs -framework System"
+ 	  ;;
++        *-*-netbsd*)
++	  # Don't link with libc until the a.out ld.so is fixed.
++	  ;;
+ 	*)
+ 	  # Add libc to deplibs on all other systems.
+ 	  deplibs="$deplibs -lc"
+@@ -2146,6 +2169,7 @@
  	if test "$thread_safe" = yes && test -n "$thread_safe_flag_spec"; then
  	  eval flag=\"$thread_safe_flag_spec\"
  	  linkopts="$linkopts $flag"
