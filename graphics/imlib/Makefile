@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.9 1998/12/31 23:54:54 garbled Exp $
+# $NetBSD: Makefile,v 1.10 1999/01/04 21:47:16 tron Exp $
 #
 
 DISTNAME=	imlib-1.8.2
 CATEGORIES=	graphics
-MASTER_SITES=	ftp://gnomeftp.wgn.net/pub/gnome/sources/
+MASTER_SITES=	ftp://gnomeftp.wgn.net/pub/gnome/sources/ \
+		ftp://ftp.jimpick.com/pub/mirrors/gnome/sources/
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.labs.redhat.com/imlib/
