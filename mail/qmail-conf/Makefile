@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2002/01/21 18:51:30 zuntum Exp $
+# $NetBSD: Makefile,v 1.10 2002/01/21 18:51:51 zuntum Exp $
 #
 
 DISTNAME=	qmail-conf-0.60
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	http://www.din.or.jp/~ushijima/qmail-conf/		\
 		http://cr.yp.to/djbdns/					\
