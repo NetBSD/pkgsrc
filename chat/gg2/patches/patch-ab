@@ -1,0 +1,26 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/10/22 10:30:06 adam Exp $
+
+--- src/main.c.orig	2004-03-29 07:03:22.000000000 +0000
++++ src/main.c
+@@ -43,6 +43,12 @@
+ #include "ggadu_repo.h"
+ #include "perl_embed.h"
+ 
++#ifdef __Darwin__
++#define DYLIB_SUFX ".dylib"
++#else
++#define DYLIB_SUFX ".so"
++#endif
++
+ GGaduConfig *config;
+ 
+ gboolean gnu_gadu_init(gpointer data);
+@@ -80,7 +86,7 @@ void load_available_modules()
+     {
+ 	gchar *fullfilename = g_build_filename(dirpath, namepl, NULL);
+ 
+-	if ((!g_file_test(fullfilename, G_FILE_TEST_IS_DIR)) && (str_has_suffix(namepl, ".so")))
++	if ((!g_file_test(fullfilename, G_FILE_TEST_IS_DIR)) && (str_has_suffix(namepl, DYLIB_SUFX)))
+ 	{
+ 	    print_debug("core : load_avilable_modules : %s\n", namepl);
+ 
