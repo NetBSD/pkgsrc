@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/12/12 17:22:38 drochner Exp $
+# $NetBSD: Makefile,v 1.4 2000/12/12 19:16:56 drochner Exp $
 #
 
 DISTNAME=		MesaLib-3.4
@@ -9,7 +9,7 @@ MASTER_SITES= 		ftp://ftp.mesa3d.org/mesa/ \
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		rh@netbsd.org
-HOMEPAGE=		http://www.ssec.wisc.edu/~brianp/Mesa.html
+HOMEPAGE=		http://www.mesa3d.org/
 
 CHECK_MESA=		yes
 USE_X11BASE=		yes
@@ -35,7 +35,7 @@ do-install:
 
 post-install:
 	${INSTALL_DATA_DIR} ${X11PREFIX}/include/GL
-.for hdr in gl.h gl_mangle.h glx.h glx_mangle.h osmesa.h \
+.for hdr in gl.h gl_mangle.h glext.h glx.h glx_mangle.h osmesa.h \
 		xmesa.h xmesa_x.h xmesa_xf86.h
 	${INSTALL_DATA} ${WRKSRC}/include/GL/${hdr} ${X11PREFIX}/include/GL
 .endfor
