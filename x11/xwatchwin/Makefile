@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/07/21 17:38:35 martti Exp $
+# $NetBSD: Makefile,v 1.10 2004/03/11 16:19:03 xtraeme Exp $
 
 DISTNAME=	xwatchwin
 PKGNAME=	xwatchwin-1.1.1
@@ -9,7 +9,7 @@ MASTER_SITES=	ftp://sunsite.uio.no/pub/X11/contrib/utilities/
 MAINTAINER=	tech-pkg@NetBSD.org
 COMMENT=	Watch a window on another X server
 
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=	yes
 USE_IMAKE=	yes
 
 .include "../../mk/bsd.pkg.mk"
