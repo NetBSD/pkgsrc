@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8243 2004/12/04 02:19:07 taya Exp $
+$NetBSD: CHANGES,v 1.8244 2004/12/04 03:51:50 taya Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5744,3 +5744,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated libksba to 0.9.10 [shannonjr 2004-12-03]
 	Updated thunderbird to 0.9nb1 [taya 2004-12-04]
 	Updated thunderbird-gtk2 to 0.9nb1 [taya 2004-12-04]
+	Updated mozilla-stable to 1.7.3 [taya 2004-12-04]
