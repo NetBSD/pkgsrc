@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: sysbuild.sh,v 1.9 2003/01/01 21:16:52 jmmv Exp $
+# $NetBSD: sysbuild.sh,v 1.10 2003/01/08 17:45:09 jmmv Exp $
 #
 # sysbuild - Automatic NetBSD system builds
 # Copyright (c) 2002, Julio Merino <jmmv@netbsd.org>
@@ -284,7 +284,7 @@ sysbuild_build_sets() {
         echo " done."
 
         printf "Making sets:"
-        mkdir -p $RELEASEDIR/binary/sets
+        mkdir -p $RELEASEDIR/$MACHINE/binary/sets
         cd $SRCDIR/distrib/sets
         $BUILDDIR/tools/bin/nbmake-`uname -m` sets BSDSRCDIR=$SRCDIR OBJMACHINE=yes MKOBJDIRS=yes TOOLDIR=$BUILDDIR/tools DESTDIR=$BUILDDIR/root RELEASEDIR=$RELEASEDIR UNPRIVED=yes >> $_log 2>&1
         if [ $? -ne 0 ]; then
@@ -307,10 +307,10 @@ sysbuild_install_sets() {
 
     for _s in $SETS; do
         printf "Installing $_s:"
-        if [ ! -f $RELEASEDIR/binary/sets/$_s ]; then
+        if [ ! -f $RELEASEDIR/$MACHINE/binary/sets/$_s ]; then
             echo " not built yet"
         else
-            cd / && tar xzpf $RELEASEDIR/binary/sets/$_s > /dev/null 2>&1
+            cd / && tar xzpf $RELEASEDIR/$MACHINE/binary/sets/$_s > /dev/null 2>&1
             if [ $? -ne 0 ]; then
                 echo " failed."
             else
@@ -328,10 +328,10 @@ sysbuild_install_x_sets() {
 
     for _s in $XSETS; do
         printf "Installing $_s:"
-        if [ ! -f $RELEASEDIR/binary/sets/$_s ]; then
+        if [ ! -f $RELEASEDIR/$MACHINE/binary/sets/$_s ]; then
             echo " not built yet"
         else
-            cd / && tar xzpf $RELEASEDIR/binary/sets/$_s > /dev/null 2>&1
+            cd / && tar xzpf $RELEASEDIR/$MACHINE/binary/sets/$_s > /dev/null 2>&1
             if [ $? -ne 0 ]; then
                 echo " failed."
             else
@@ -409,17 +409,17 @@ sysbuild_build_x_release() {
 
     if [ "$_mnt" = "ok" ]; then
         printf "Building full X11R6 release:"
-        mkdir -p $RELEASEDIR
+        mkdir -p $RELEASEDIR/$MACHINE
         ( cd $BUILDDIR/obj && \
-            BSDSRCDIR=$SRCDIR NETBSDSRCDIR=$SRCDIR $BUILDDIR/tools/bin/nbmake-`uname -m` DESTDIR=$BUILDDIR/root release >> $_log 2>&1 )
+            BSDSRCDIR=$SRCDIR NETBSDSRCDIR=$SRCDIR RELEASEDIR=$RELEASEDIR/$MACHINE $BUILDDIR/tools/bin/nbmake-`uname -m` DESTDIR=$BUILDDIR/root release >> $_log 2>&1 )
         if [ $? -ne 0 ]; then
             echo " failed."
         else
             echo " done."
         fi
 
-        chmod 644 $RELEASEDIR/binary/sets/x*.tgz
-        chown $USER:$OBJGROUP $RELEASEDIR/binary/sets/*
+        chmod 644 $RELEASEDIR/$MACHINE/binary/sets/x*.tgz
+        chown $USER:$OBJGROUP $RELEASEDIR/$MACHINE/binary/sets/*
     fi
 
     printf "Unmounting $BUILDDIR/obj:"
@@ -483,7 +483,7 @@ sysbuild_etcupdate() {
     check_root
 
     tmp=`mktemp -d /tmp/sysbuild.XXXX`
-    if [ ! -f $RELEASEDIR/binary/sets/etc.tgz ]; then
+    if [ ! -f $RELEASEDIR/$MACHINE/binary/sets/etc.tgz ]; then
         err "etc.tgz is not yet built."
     fi
     printf "Backing up /etc to /etc.old:"
@@ -491,7 +491,7 @@ sysbuild_etcupdate() {
     cp -rf /etc /etc.old > /dev/null 2>&1
     echo " done."
     printf "Unpacking etc.tgz:"
-    cd $tmp && tar xzpf $RELEASEDIR/binary/sets/etc.tgz > /dev/null 2>&1
+    cd $tmp && tar xzpf $RELEASEDIR/$MACHINE/binary/sets/etc.tgz > /dev/null 2>&1
     if [ $? -ne 0 ]; then
         echo " failed."
     else
