@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.29 2000/08/21 18:59:57 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.30 2000/08/31 13:54:04 mrg Exp $
 bin/irc
-bin/irc-4.4X
+bin/irc-4.4Z
 bin/ircbug
 bin/ircflush
 bin/ircio
@@ -348,6 +348,7 @@ share/irc/help/set/help_pager@.GZ@
 share/irc/help/set/help_path@.GZ@
 share/irc/help/set/help_prompt@.GZ@
 share/irc/help/set/help_window@.GZ@
+share/irc/help/set/hide_channel_keys@.GZ@
 share/irc/help/set/hide_private_channels@.GZ@
 share/irc/help/set/highlight_char@.GZ@
 share/irc/help/set/history@.GZ@
@@ -476,6 +477,7 @@ share/irc/help/window/move@.GZ@
 share/irc/help/window/name@.GZ@
 share/irc/help/window/new@.GZ@
 share/irc/help/window/next@.GZ@
+share/irc/help/window/nostatus@.GZ@
 share/irc/help/window/notify@.GZ@
 share/irc/help/window/notify_level@.GZ@
 share/irc/help/window/number@.GZ@
