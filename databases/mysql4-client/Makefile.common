@@ -1,10 +1,10 @@
-# $NetBSD: Makefile.common,v 1.13 2004/10/22 01:10:04 xtraeme Exp $
+# $NetBSD: Makefile.common,v 1.15 2004/10/28 01:12:44 xtraeme Exp $
 
-DISTNAME=		mysql-4.0.21
+DISTNAME=		mysql-4.1.7
 CATEGORIES=		databases
-MASTER_SITES=		http://mirrors.sunsite.dk/mysql/Downloads/MySQL-4.0/ \
-			ftp://sunsite.dk/mirrors/mysql/Downloads/MySQL-4.0/ \
-			ftp://ftp.sunet.se/pub/unix/databases/relational/mysql/Downloads/MySQL-4.0/
+MASTER_SITES=		http://mirrors.sunsite.dk/mysql/Downloads/MySQL-4.1/ \
+			ftp://sunsite.dk/mirrors/mysql/Downloads/MySQL-4.1/ \
+			ftp://ftp.sunet.se/pub/unix/databases/relational/mysql/Downloads/MySQL-4.1/
 
 MAINTAINER=		xtraeme@NetBSD.org
 HOMEPAGE=		http://www.mysql.com/
