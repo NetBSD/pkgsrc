@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2001/06/30 10:25:01 zuntum Exp $
+# $NetBSD: Makefile.common,v 1.5 2001/08/24 05:35:17 jlam Exp $
 #
 
 DISTNAME=	icewm-1.0.4
@@ -37,5 +37,3 @@ post-install:
 		${INSTALL_DATA} ${WRKSRC}/$${file} ${DOCDIR}; \
 	done
 	${INSTALL_DATA} ${WRKSRC}/doc/icewm*.html ${HTMLDIR}
-
-.include "../../mk/bsd.pkg.mk"
