@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2002/12/24 06:09:58 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2003/02/13 14:37:57 agc Exp $
 #
 
 DISTNAME=		mrproject-0.5.1
@@ -22,6 +22,8 @@ CFLAGS+=		-I${BUILDLINK_DIR}/include/gconf/1
 LIBTOOL_OVERRIDE=       ${WRKSRC}/libtool
 
 DEPENDS+=		skill-[0-9]*:../../sysutils/skill
+
+BROKEN=			needs to be updated for gnome2
 
 post-extract:
 	# This is an ugly hack to fix the missing file error in 0.5.1
