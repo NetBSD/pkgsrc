@@ -1,17 +1,168 @@
-$NetBSD: patch-ad,v 1.1.1.1 1999/10/11 05:48:25 jlam Exp $
+$NetBSD: patch-ad,v 1.2 2000/01/17 16:02:34 jlam Exp $
 
---- soundbyte.c.orig	Tue Sep 14 08:55:17 1999
-+++ soundbyte.c	Mon Oct 11 01:38:35 1999
-@@ -27,9 +27,11 @@
- #else
- #include <sun/audioio.h>
+--- mike.c.orig	Tue Sep 14 09:27:51 1999
++++ mike.c	Sat Jan 15 12:52:38 2000
+@@ -23,8 +23,10 @@
+     char deskey[9];		      /* Destination DES key, if any */
+     char rtpdeskey[9];		      /* Destination RTP DES key, if any */
+     char vatdeskey[9];		      /* Destination VAT DES key, if any */
++#ifdef USE_IDEA
+     char ideakey[17];		      /* Destination IDEA key, if any */
+     char pgpkey[17];		      /* Destination PGP key, if any */
++#endif
+     char blowfish_spec; 	      /* Nonzero if Blowfish key specified */
+ #ifdef CRYPTO
+     BF_KEY blowfishkey; 	      /* Destination Blowfish key, if any */
+@@ -87,8 +89,10 @@
+ static char curkey[9] = "";           /* Current DES key if curkey[0] != 0 */
+ static char currtpkey[9] = "";        /* Current RTP DES key if currtpkey[0] != 0 */
+ static char curvatkey[9] = "";        /* Current VAT DES key if currtpkey[0] != 0 */
++#ifdef USE_IDEA
+ static char curideakey[17] = "";      /* Current IDEA key if curideakey[0] != 0 */
+ static char curpgpkey[17] = "";       /* Current PGP key if curpgpkey[0] != 0 */
++#endif
+ static char curblowfish_spec = FALSE; /* Nonzero if Blowfish key specified */
+ #ifdef CRYPTO
+ static BF_KEY curblowfishkey;	      /* Blowfish key */
+@@ -485,8 +489,10 @@
+     bcopy(curkey, d->deskey, 9);
+     bcopy(currtpkey, d->rtpdeskey, 9);
+     bcopy(curvatkey, d->vatdeskey, 9);
++#ifdef USE_IDEA
+     bcopy(curideakey, d->ideakey, 17);
+     bcopy(curpgpkey, d->pgpkey, 17);
++#endif
+     d->blowfish_spec = curblowfish_spec;
+ #ifdef CRYPTO
+     bcopy(&curblowfishkey, &(d->blowfishkey), sizeof(BF_KEY));
+@@ -655,8 +661,12 @@
  #endif
--#else /* FreeBSD / Linux */
-+#else /* NetBSD / FreeBSD / Linux */
- #ifdef LINUX
- #include <linux/soundcard.h>
-+#elif defined(__NetBSD__)
-+#include <soundcard.h>
+ 
+ #ifdef CRYPTO
++#ifdef USE_IDEA
+ 	if (d->deskey[0] || d->ideakey[0] || d->blowfish_spec ||
+ 	    d->pgpkey[0] || d->otp != NULL) {
++#else
++	if (d->deskey[0] || d->blowfish_spec || d->otp != NULL) {
++#endif
+ 	    soundbuf ebuf;
+ 	    int i;
+ 	    LONG slen, plen = 0;
+@@ -733,6 +743,7 @@
+ 		}
+ 	    }
+ 
++#ifdef USE_IDEA
+ 	    /* IDEA encryption. */
+ 
+ 	    if (d->ideakey[0]) {
+@@ -755,6 +766,7 @@
+ 		close_idea();
+ 		ebuf.compression |= fEncIDEA;
+ 	    }
++#endif
+ 
+ 	    /* Blowfish encryption. */
+ 
+@@ -779,6 +791,7 @@
+ 		ebuf.compression |= fEncBF;
+ 	    }
+ 
++#ifdef USE_IDEA
+ 	    /* PGP encryption. */
+ 
+ 	    if (d->pgpkey[0]) {
+@@ -801,6 +814,7 @@
+ 		close_idea();
+ 		ebuf.compression |= fEncPGP;
+ 	    }
++#endif
+ 
+ 	    /* Key file encryption. */
+ 
+@@ -1659,7 +1673,7 @@
+     MD5Init(&md5c);
+     MD5Update(&md5c, s, strlen(s));
+     MD5Final(md5key1, &md5c);
+-#ifdef CRYPTO
++#if defined(CRYPTO) && defined(USE_IDEA)
+     init_idearand(md5key, md5key1, time(NULL));
+ #define nextrand    idearand()
  #else
- #include <machine/soundcard.h>
+@@ -1683,7 +1697,7 @@
+ 	    key[j] = nextrand;
+ 	}
+     }
+-#ifdef CRYPTO
++#if defined(CRYPTO) && defined(USE_IDEA)
+     close_idearand();
+ #endif
+ #undef nextrand
+@@ -1723,7 +1737,9 @@
+     V fprintf(stderr, "           -F         ADPCM compression\n");
+     V fprintf(stderr, "           -G         Automatic gain control\n");
+ #ifdef CRYPTO
++#ifdef USE_IDEA
+     V fprintf(stderr, "           -Ikey      IDEA encrypt with key\n");
++#endif
+     V fprintf(stderr, "           -Kkey      DES encrypt with key\n");
+ #endif
+     V fprintf(stderr, "           -L         Remote loopback\n");
+@@ -1753,7 +1769,7 @@
+ #ifdef AUDIO_DEVICE_FILE
+     V fprintf(stderr, "           -Yindev[:ctldev] Override default audio device file name or specify open #fd\n");
+ #endif
+-#ifdef CRYPTO
++#if defined(CRYPTO) && defined(USE_IDEA)
+     V fprintf(stderr, "           -Z\"user..\" Send PGP session key for user(s)\n");
+ #endif
+     V fprintf(stderr, "\n");
+@@ -1946,6 +1962,7 @@
+ 		    break;
+ 
+ #ifdef CRYPTO
++#ifdef USE_IDEA
+                 case 'I':             /* -Ikey  --  Set IDEA key */
+ 		    if (strlen(op + 1) == 0) {
+ 			curideakey[0] = FALSE;
+@@ -1963,6 +1980,7 @@
+ 			}
+ 		    }
+ 		    break;
++#endif
+ 
+                 case 'K':             /* -Kkey  --  Set DES key */
+ 		    desinit(1);       /* Initialise the DES library */
+@@ -2181,6 +2199,7 @@
+ #endif
+ 
+ #ifdef CRYPTO
++#ifdef USE_IDEA
+                 case 'Z':             /* -Z"user1 user2..."  --  Send PGP
+ 						 encrypted session key to
+ 						 named users */
+@@ -2270,6 +2289,7 @@
+ 		    }
+ 		    break;
+ #endif
++#endif
+ 	    }
+ 	} else {
+ 
+@@ -2281,10 +2301,15 @@
+ 	    }
+ 
+ 	    if (rtp || vat) {
+-#ifdef CRYPTO
++#if defined(CRYPTO) && defined(USE_IDEA)
+ 		if (curideakey[0] || curpgpkey[0] ||
+ 		    curblowfish_spec || curotp != NULL) {
+                     fprintf(stderr, "Blowfish, IDEA, PGP, and Key File encryption cannot be used\n    with -RTP or -VAT protocols.\n");
++		    return 2;
++		}
++#else
++		if (curblowfish_spec || curotp != NULL) {
++                    fprintf(stderr, "Blowfish and Key File encryption cannot be used\n    with -RTP or -VAT protocols.\n");
+ 		    return 2;
+ 		}
  #endif
