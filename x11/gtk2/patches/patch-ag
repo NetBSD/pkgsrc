@@ -1,13 +1,13 @@
-$NetBSD: patch-ag,v 1.1.1.1 2002/03/24 20:34:37 dmcmahill Exp $
+$NetBSD: patch-ag,v 1.2 2002/03/30 20:01:39 dmcmahill Exp $
 
---- gtk/Makefile.in.orig	Sun Mar 17 15:03:23 2002
-+++ gtk/Makefile.in
-@@ -665,7 +665,7 @@
- bin_PROGRAMS = gtk-query-immodules-2.0
+--- gdk-pixbuf/Makefile.am.orig	Tue Mar  5 16:04:01 2002
++++ gdk-pixbuf/Makefile.am
+@@ -227,7 +227,7 @@
+ @STRIP_END@
  
- gtk_query_immodules_2_0_DEPENDENCIES = $(DEPS)
--gtk_query_immodules_2_0_LDADD = $(LDADDS)
-+gtk_query_immodules_2_0_LDADD = $(LDADDS) @LDFLAGS@
+ AM_CPPFLAGS = "-DPIXBUF_LIBDIR=\"$(loaderdir)\"" "-DBUILT_MODULES_DIR=\"$(srcdir)/.libs\""
+-LDADDS = libgdk_pixbuf-$(GTK_API_VERSION).la
++LDADDS = @LDFLAGS@ libgdk_pixbuf-$(GTK_API_VERSION).la
  
- gtk_query_immodules_2_0_SOURCES = queryimmodules.c
- mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+ noinst_PROGRAMS = test-gdk-pixbuf test-loaders
+ test_gdk_pixbuf_LDADD = $(LDADDS)

@@ -1,12 +1,13 @@
-$NetBSD: patch-ak,v 1.1.1.1 2002/03/24 20:34:37 dmcmahill Exp $
+$NetBSD: patch-ak,v 1.2 2002/03/30 20:01:39 dmcmahill Exp $
 
---- demos/gtk-demo/Makefile.in.orig	Sun Mar 17 15:03:23 2002
-+++ demos/gtk-demo/Makefile.in
-@@ -215,6 +215,7 @@
- 	$(top_builddir)/gdk-pixbuf/libgdk_pixbuf-$(GTK_API_VERSION).la	\
- 	$(top_builddir)/gdk/@gdktargetlib@        			\
- 	$(top_builddir)/gtk/@gtktargetlib@ 				\
-+	@LDFLAGS@							\
- @STRIP_END@
+--- gtk/Makefile.in.orig	Fri Mar 29 18:51:26 2002
++++ gtk/Makefile.in
+@@ -667,7 +667,7 @@
+ bin_PROGRAMS = gtk-query-immodules-2.0
  
+ gtk_query_immodules_2_0_DEPENDENCIES = $(DEPS)
+-gtk_query_immodules_2_0_LDADD = $(LDADDS)
++gtk_query_immodules_2_0_LDADD = @LDFLAGS@ $(LDADDS)
  
+ gtk_query_immodules_2_0_SOURCES = queryimmodules.c
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
