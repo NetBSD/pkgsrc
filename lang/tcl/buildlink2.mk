@@ -1,10 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.6 2004/03/08 19:55:35 minskim Exp $
+# $NetBSD: buildlink2.mk,v 1.7 2004/03/24 15:24:36 jwise Exp $
 
 .if !defined(TCL_BUILDLINK2_MK)
 TCL_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		tcl
-BUILDLINK_DEPENDS.tcl?=		tcl>=8.4.5
+BUILDLINK_DEPENDS.tcl?=		tcl>=8.4.6nb1
 BUILDLINK_PKGSRCDIR.tcl?=	../../lang/tcl
 
 EVAL_PREFIX+=		BUILDLINK_PREFIX.tcl=tcl
@@ -27,5 +27,7 @@ BUILDLINK_TARGETS+=	tcl-buildlink
 tcl-buildlink: _BUILDLINK_USE
 
 TCLCONFIG_SH?=		${BUILDLINK_PREFIX.tcl}/lib/tclConfig.sh
+
+.include "../../mk/pthread.buildlink2.mk"
 
 .endif	# TCL_BUILDLINK2_MK
