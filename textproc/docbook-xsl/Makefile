@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/12/18 17:45:28 jmmv Exp $
+# $NetBSD: Makefile,v 1.2 2002/12/26 22:52:36 jmmv Exp $
 #
 
 DISTNAME=	docbook-xsl-1.58.1
@@ -28,6 +28,8 @@ do-install:
 	cd ${WRKSRC}/template && ${PAX} -rwpppm . ${EGDIR}
 	${INSTALL_DATA_DIR} ${XSLDIR}
 	@for d in ${XSLMODS}; do \
+	    ${ECHO} "${INSTALL_DATA_DIR} ${XSLDIR}/$$d"; \
+	    ${INSTALL_DATA_DIR} ${XSLDIR}/$$d; \
 	    ${ECHO} "cd ${WRKSRC} && ${PAX} -rwpppm $$d ${XSLDIR}/$$d"; \
 	    cd ${WRKSRC} && ${PAX} -rwpppm $$d ${XSLDIR}/$$d; \
 	done
