@@ -1,16 +1,18 @@
-@comment $NetBSD: PLIST,v 1.3 1998/09/07 10:17:19 garbled Exp $
-bin/x64
-bin/x128
-bin/xvic
-bin/xpet
+@comment $NetBSD: PLIST,v 1.4 1999/05/18 08:45:51 tv Exp $
 bin/c1541
 bin/petcat
+bin/x128
+bin/x64
+bin/xcbm2
+bin/xpet
+bin/xvic
 @unexec install-info --delete %D/info/vice.info %D/info/dir
 info/vice.info
 info/vice.info-1
 info/vice.info-2
 info/vice.info-3
 info/vice.info-4
+info/vice.info-5
 @exec install-info %D/info/vice.info %D/info/dir
 man/man1/c1541.1
 man/man1/petcat.1
@@ -18,6 +20,7 @@ man/man1/vice.1
 share/doc/vice/64doc.txt
 share/doc/vice/Evaluation
 share/doc/vice/PETdoc.txt
+share/doc/vice/Readme.dos
 share/doc/vice/cbm_basic_tokens.txt
 share/doc/vice/drive_info.txt
 share/doc/vice/mnemonics.txt
@@ -37,48 +40,97 @@ share/doc/vice/vice_11.html
 share/doc/vice/vice_12.html
 share/doc/vice/vice_13.html
 share/doc/vice/vice_14.html
+share/doc/vice/vice_15.html
+share/doc/vice/vice_16.html
 share/doc/vice/vice_toc.html
-share/vice/C64/basic
-share/vice/C64/chargen
-share/vice/C64/ccs64.vpl
-share/vice/C64/frodo.vpl
-share/vice/C64/godot.vpl
-share/vice/C64/default.vkm
-share/vice/C64/position.vkm
-share/vice/C64/default.vpl
-share/vice/C64/dos1541
-share/vice/C64/kernal
 share/vice/C128/basic
 share/vice/C128/chargen
+share/vice/C128/c64s.vpl
 share/vice/C128/ccs64.vpl
 share/vice/C128/frodo.vpl
 share/vice/C128/default.vkm
 share/vice/C128/default.vpl
-share/vice/C128/dos1541
+share/vice/C128/default.vrs
+share/vice/C128/godot.vpl
 share/vice/C128/kernal
+share/vice/C128/pc64.vpl
+share/vice/C128/position.vkm
+share/vice/C64/4064.vrs
+share/vice/C64/64gs.vrs
+share/vice/C64/basic
+share/vice/C64/basic.64gs
+share/vice/C64/c64s.vpl
+share/vice/C64/chargen
+share/vice/C64/ccs64.vpl
+share/vice/C64/default.vkm
+share/vice/C64/default.vpl
+share/vice/C64/default.vrs
+share/vice/C64/frodo.vpl
+share/vice/C64/godot.vpl
+share/vice/C64/kernal
+share/vice/C64/kernal.4064
+share/vice/C64/kernal.64gs
+share/vice/C64/kernal.sx64
+share/vice/C64/pc64.vpl
+share/vice/C64/position.vkm
+share/vice/C64/sx64.vrs
+share/vice/CBM-II/amber.vpl
+share/vice/CBM-II/basic.128
+share/vice/CBM-II/basic.256
+share/vice/CBM-II/busi_uk.vkm
+share/vice/CBM-II/chargen.600
+share/vice/CBM-II/chargen.700
+share/vice/CBM-II/default.vpl
+share/vice/CBM-II/kernal
+share/vice/CBM-II/rom128h.vrs
+share/vice/CBM-II/rom128l.vrs
+share/vice/CBM-II/rom256h.vrs
+share/vice/CBM-II/rom256l.vrs
+share/vice/CBM-II/white.vpl
+share/vice/DRIVES/dos1541
+share/vice/DRIVES/dos1541II
+share/vice/DRIVES/dos1571
+share/vice/DRIVES/dos1581
+share/vice/DRIVES/dos2031
+share/vice/PET/amber.vpl
+share/vice/PET/basic1
+share/vice/PET/basic2
+share/vice/PET/basic4
+share/vice/PET/busi_de.vkm
+share/vice/PET/busi_uk.vkm
+share/vice/PET/chargen
+share/vice/PET/chargen.de
+share/vice/PET/default.vpl
+share/vice/PET/edit1g
+share/vice/PET/edit2b
+share/vice/PET/edit2g
+share/vice/PET/edit4b40
+share/vice/PET/edit4b80
+share/vice/PET/edit4g40
+share/vice/PET/graphics.vkm
+share/vice/PET/kernal1
+share/vice/PET/kernal2
+share/vice/PET/kernal4
+share/vice/PET/posg_de.vkm
+share/vice/PET/rom1g.vrs
+share/vice/PET/rom2b.vrs
+share/vice/PET/rom2g.vrs
+share/vice/PET/rom4b40.vrs
+share/vice/PET/rom4b80.vrs
+share/vice/PET/rom4g40.vrs
+share/vice/PET/white.vpl
 share/vice/VIC20/basic
 share/vice/VIC20/chargen
 share/vice/VIC20/default.vkm
 share/vice/VIC20/default.vpl
-share/vice/VIC20/dos1541
+share/vice/VIC20/default.vrs
 share/vice/VIC20/kernal
 share/vice/VIC20/position.vkm
-share/vice/PET/busi_uk.vkm
-share/vice/PET/graphics.vkm
-share/vice/PET/posg_de.vkm
-share/vice/PET/edit2.b
-share/vice/PET/edit4.b80
-share/vice/PET/pet2001
-share/vice/PET/pet4032
-share/vice/PET/chargen
-share/vice/PET/edit4.b40
-share/vice/PET/pet3032
-share/vice/PET/amber.vpl
-share/vice/PET/default.vpl
-share/vice/PET/white.vpl
 @dirrm share/doc/vice
-@dirrm share/vice/C64
 @dirrm share/vice/C128
-@dirrm share/vice/VIC20
+@dirrm share/vice/C64
+@dirrm share/vice/CBM-II
+@dirrm share/vice/DRIVES
 @dirrm share/vice/PET
+@dirrm share/vice/VIC20
 @dirrm share/vice

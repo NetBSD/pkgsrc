@@ -1,3 +1,6 @@
-$NetBSD: md5,v 1.2 1998/09/12 17:47:03 garbled Exp $
+$NetBSD: md5,v 1.3 1999/05/18 08:45:48 tv Exp $
 
-MD5 (vice-0.15.0.tar.gz) = efe3336519932d067dceca8760897438
+MD5 (vice-1.0.tar.gz) = ac0302262270fec358a1c89bfb008e82
+MD5 (64gs.390852-01.bin) = 049e657afafbdd802e8c6a4f88f3d730
+MD5 (kernal.4064.901246-01.bin) = da92801e3a03b005b746a4dd0b639c7c
+MD5 (kernal.sx.251104-04.bin) = 187b8c713b51931e070872bd390b472a
