@@ -1,20 +1,25 @@
-$NetBSD: patch-sum,v 1.2 1999/09/20 18:04:11 christos Exp $
+$NetBSD: patch-sum,v 1.3 1999/11/14 13:25:58 rh Exp $
 
 MD5 (patch-aa) = 77f91c256a0b0f6cbac5673684c8d585
-MD5 (patch-ab) = 00f294e7b19382652e8fa9de3545e907
+MD5 (patch-ab) = 1da2c2fd872eb392a48f132bbd4bf63c
 MD5 (patch-ac) = 7aae919c8c4b5894f04c531cff23934b
 MD5 (patch-ad) = bb5894cc304cf79a79c236eaf035547c
 MD5 (patch-ae) = 5836b41c1360daf8c29dc25bc32473a7
 MD5 (patch-af) = 5d9d3addb26000dddae35a827e382b5e
 MD5 (patch-ag) = 872417731f001f1ab01cf099304efd91
 MD5 (patch-png1) = 0656b2d14390e377e83abc1054a2bdbd
-MD5 (patch-png2) = f2b0b37bedd7fc434d4715171f380bd9
 MD5 (patch-png2-Imakefile) = d7255aa55e9b7a56b5f48c4b91e89409
 MD5 (patch-png2-Makefile) = 1c26627ba95fb3b2bfd8dd3c1815167b
 MD5 (patch-png2-Makefile.std) = 27b1c478033a9a92eef4968ac51f28f6
 MD5 (patch-png2-xv.c) = 26bd1c5c20fcc8be9e2e0b3c7c09a42a
 MD5 (patch-png2-xv.h) = cb0ad8942b1a329a9d6ecfe444ac04ea
 MD5 (patch-png2-xvbrowse.c) = e1f70e29c9c96324f7814b83a7682b4f
+MD5 (patch-png2-xvdial.c) = f636989ed681e14ae063bb9af68fc7f3
 MD5 (patch-png2-xvdir.c) = daeac18cd308ea2b012ed56a0fc1e42c
 MD5 (patch-png2-xvevent.c) = 657e2631ecab928e2c450a318875ec97
+MD5 (patch-png2-xvgam.c) = 1585c474440b72b51464285b1f323fb6
+MD5 (patch-png2-xvjpeg.c) = a0c51759ad215dbb492e69ad34d787dc
+MD5 (patch-png2-xvmisc.c) = c7e1f6cf348f8a6fc89d19cb9027900b
+MD5 (patch-png2-xvpopup.c) = 306099c32b6705e562d4a2b5a8cf0dd8
+MD5 (patch-png2-xvps.c) = 4fcdb366eb318bc707880e6fdcb61627
 MD5 (patch-png3) = 84057565efcd7d28e6864ab0808610f2
