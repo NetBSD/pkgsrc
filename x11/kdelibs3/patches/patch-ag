@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.5 2003/05/22 02:42:41 markd Exp $
+$NetBSD: patch-ag,v 1.6 2004/01/15 09:52:51 markd Exp $
 
---- dcop/Makefile.in.orig	Thu May  8 05:24:03 2003
+--- dcop/Makefile.in.orig	2003-12-29 11:16:52.000000000 +1300
 +++ dcop/Makefile.in
-@@ -404,7 +404,7 @@ INCLUDES = $(all_includes)
+@@ -406,7 +406,7 @@ INCLUDES = $(all_includes)
  bin_PROGRAMS = dcopserver dcopserver_shutdown
  check_PROGRAMS = testdcop testdcopc
  
@@ -11,7 +11,7 @@ $NetBSD: patch-ag,v 1.5 2003/05/22 02:42:41 markd Exp $
  libDCOP_la_LIBADD = KDE-ICE/libkICE.la $(LIB_QT)
  libDCOP_la_LDFLAGS = $(KDE_RPATH) -version-info 5:0:1 -no-undefined $(all_libraries)
  
-@@ -420,13 +420,17 @@ noinst_HEADERS = version.h dcopglobal.h 
+@@ -418,13 +418,17 @@ noinst_HEADERS = version.h dcopglobal.h 
  # dcopstub needs to go first for --enable-final to work
  libDCOP_la_SOURCES = dcopstub.cpp dcopref.cpp dcopobject.cpp dcopclient.cpp
  
@@ -33,7 +33,7 @@ $NetBSD: patch-ag,v 1.5 2003/05/22 02:42:41 markd Exp $
  
  dcopserver_shutdown_SOURCES = dcopserver_shutdown.c
  
-@@ -448,14 +452,11 @@ CONFIG_HEADER = $(top_builddir)/config.h
+@@ -447,14 +451,11 @@ CONFIG_HEADER = $(top_builddir)/config.h
  CONFIG_CLEAN_FILES = dcop-path.h
  LTLIBRARIES = $(lib_LTLIBRARIES)
  
@@ -52,7 +52,7 @@ $NetBSD: patch-ag,v 1.5 2003/05/22 02:42:41 markd Exp $
  libDCOP_la_DEPENDENCIES = KDE-ICE/libkICE.la
  am_libDCOP_la_OBJECTS = dcopstub.lo dcopref.lo dcopobject.lo \
  	dcopclient.lo
-@@ -466,15 +467,23 @@ libDCOP_la_nofinal_OBJECTS = dcopstub.lo
+@@ -465,15 +466,23 @@ libDCOP_la_nofinal_OBJECTS = dcopstub.lo
  	dcopclient.lo
  @KDE_USE_FINAL_FALSE@libDCOP_la_OBJECTS = $(libDCOP_la_nofinal_OBJECTS)
  @KDE_USE_FINAL_TRUE@libDCOP_la_OBJECTS = $(libDCOP_la_final_OBJECTS)
@@ -79,7 +79,7 @@ $NetBSD: patch-ag,v 1.5 2003/05/22 02:42:41 markd Exp $
  am_dcopserver_shutdown_OBJECTS = dcopserver_shutdown.$(OBJEXT)
  #>- dcopserver_shutdown_OBJECTS = $(am_dcopserver_shutdown_OBJECTS)
  #>+ 1
-@@ -502,25 +511,31 @@ am__depfiles_maybe = depfiles
+@@ -501,25 +510,31 @@ am__depfiles_maybe = depfiles
  #>- @AMDEP_TRUE@DEP_FILES = ./$(DEPDIR)/dcopc.Po ./$(DEPDIR)/dcopclient.Plo \
  #>- @AMDEP_TRUE@	./$(DEPDIR)/dcopobject.Plo ./$(DEPDIR)/dcopref.Plo \
  #>- @AMDEP_TRUE@	./$(DEPDIR)/dcopserver.Plo \
@@ -119,7 +119,7 @@ $NetBSD: patch-ag,v 1.5 2003/05/22 02:42:41 markd Exp $
  
  COMPILE = $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \
  	$(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
-@@ -548,8 +563,9 @@ CXXLD = $(CXX)
+@@ -547,8 +562,9 @@ CXXLD = $(CXX)
  CXXLINK = $(LIBTOOL) --mode=link --tag=CXX $(CXXLD) $(AM_CXXFLAGS) $(CXXFLAGS) $(KDE_CXXFLAGS) \
  	$(AM_LDFLAGS) $(LDFLAGS) -o $@
  DIST_SOURCES = $(dcopserver_la_SOURCES) $(libDCOP_la_SOURCES) \
@@ -131,7 +131,7 @@ $NetBSD: patch-ag,v 1.5 2003/05/22 02:42:41 markd Exp $
  HEADERS = $(include_HEADERS) $(noinst_HEADERS)
  
  
-@@ -562,7 +578,7 @@ DIST_COMMON = $(include_HEADERS) $(noins
+@@ -561,7 +577,7 @@ DIST_COMMON = $(include_HEADERS) $(noins
  	$(srcdir)/../admin/Doxyfile.am Makefile.am Makefile.in \
  	dcop-path.h.in
  DIST_SUBDIRS = $(SUBDIRS)
@@ -140,7 +140,7 @@ $NetBSD: patch-ag,v 1.5 2003/05/22 02:42:41 markd Exp $
  
  #>- all: all-recursive
  #>+ 1
-@@ -616,6 +632,8 @@ dcopserver.la: $(dcopserver_la_OBJECTS) 
+@@ -615,6 +631,8 @@ dcopserver.la: $(dcopserver_la_OBJECTS) 
  @KDE_USE_CLOSURE_TRUE@libDCOP.la: libDCOP.la.closure $(libDCOP_la_OBJECTS) $(libDCOP_la_DEPENDENCIES) 
  @KDE_USE_CLOSURE_FALSE@libDCOP.la: $(libDCOP_la_OBJECTS) $(libDCOP_la_DEPENDENCIES) 
  	$(CXXLINK) -rpath $(libdir) $(libDCOP_la_LDFLAGS) $(libDCOP_la_OBJECTS) $(libDCOP_la_LIBADD) $(LIBS)
@@ -149,7 +149,7 @@ $NetBSD: patch-ag,v 1.5 2003/05/22 02:42:41 markd Exp $
  binPROGRAMS_INSTALL = $(INSTALL_PROGRAM)
  install-binPROGRAMS: $(bin_PROGRAMS)
  	@$(NORMAL_INSTALL)
-@@ -676,10 +694,11 @@ distclean-compile:
+@@ -675,10 +693,11 @@ distclean-compile:
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/dcopobject.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/dcopref.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/dcopserver.Plo@am__quote@
@@ -162,7 +162,16 @@ $NetBSD: patch-ag,v 1.5 2003/05/22 02:42:41 markd Exp $
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/testdcop.Po@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/testdcopc.Po@am__quote@
  
-@@ -1059,9 +1078,6 @@ uninstall-info: uninstall-info-recursive
+@@ -904,7 +923,7 @@ distclean-tags:
+ 	-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
+ #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
+ #>+ 4
+-KDE_DIST=dcopc.h configure.in.in 
++KDE_DIST=configure.in.in Makefile.in.rej dcopc.h 
+ 
+ DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
+ 
+@@ -1064,9 +1083,6 @@ uninstall-info: uninstall-info-recursive
  	uninstall-info-recursive uninstall-libLTLIBRARIES \
  	uninstall-local uninstall-recursive
  
@@ -172,7 +181,40 @@ $NetBSD: patch-ag,v 1.5 2003/05/22 02:42:41 markd Exp $
  apidox-am-yes:
  	@if test "$(subdir)" != "."; then \
  		$(mkinstalldirs) $(top_builddir)/apidocs/$(subdir) ;\
-@@ -1266,18 +1282,6 @@ force-reedit:
+@@ -1250,17 +1266,17 @@ testdcop.moc: $(srcdir)/testdcop.h
+ #>+ 1
+ mocs: testdcop.moc
+ #>+ 3
+-dcopserver.moc: $(srcdir)/dcopserver.h
+-	$(MOC) $(srcdir)/dcopserver.h -o dcopserver.moc
+-
+-#>+ 1
+-mocs: dcopserver.moc
+-#>+ 3
+ dcopclient.moc: $(srcdir)/dcopclient.h
+ 	$(MOC) $(srcdir)/dcopclient.h -o dcopclient.moc
+ 
+ #>+ 1
+ mocs: dcopclient.moc
++#>+ 3
++dcopserver.moc: $(srcdir)/dcopserver.h
++	$(MOC) $(srcdir)/dcopserver.h -o dcopserver.moc
++
++#>+ 1
++mocs: dcopserver.moc
+ #>+ 8
+ libDCOP.la.closure: $(libDCOP_la_OBJECTS) $(libDCOP_la_DEPENDENCIES)
+ 	@echo "int main() {return 0;}" > libDCOP_la_closure.cpp
+@@ -1272,7 +1288,7 @@ libDCOP.la.closure: $(libDCOP_la_OBJECTS
+ 
+ #>+ 3
+ clean-metasources:
+-	-rm -f  testdcop.moc dcopserver.moc dcopclient.moc
++	-rm -f  testdcop.moc dcopclient.moc dcopserver.moc
+ 
+ #>+ 3
+ clean-closures:
+@@ -1289,18 +1305,6 @@ force-reedit:
  
  
  #>+ 11
@@ -191,7 +233,7 @@ $NetBSD: patch-ag,v 1.5 2003/05/22 02:42:41 markd Exp $
  libDCOP_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/dcopstub.cpp $(srcdir)/dcopref.cpp $(srcdir)/dcopobject.cpp $(srcdir)/dcopclient.cpp  dcopclient.moc
  	@echo 'creating libDCOP_la.all_cpp.cpp ...'; \
  	rm -f libDCOP_la.all_cpp.files libDCOP_la.all_cpp.final; \
-@@ -1289,22 +1293,34 @@ libDCOP_la.all_cpp.cpp: $(srcdir)/Makefi
+@@ -1312,22 +1316,34 @@ libDCOP_la.all_cpp.cpp: $(srcdir)/Makefi
  	cat libDCOP_la.all_cpp.final libDCOP_la.all_cpp.files > libDCOP_la.all_cpp.cpp; \
  	rm -f libDCOP_la.all_cpp.final libDCOP_la.all_cpp.files
  
@@ -231,15 +273,15 @@ $NetBSD: patch-ag,v 1.5 2003/05/22 02:42:41 markd Exp $
  #>+ 3
  cvs-clean:
  	$(MAKE) admindir=$(top_srcdir)/admin -f $(top_srcdir)/admin/Makefile.common cvs-clean
-@@ -1314,9 +1330,9 @@ kde-rpo-clean:
+@@ -1337,9 +1353,9 @@ kde-rpo-clean:
  	-rm -f *.rpo
  
  #>+ 7
-+dcopclient.lo: dcopclient.moc 
+-dcopclient.o: dcopclient.moc 
+ dcopclient.lo: dcopclient.moc 
  testdcop.lo: testdcop.moc 
+ dcopserver.o: dcopserver.moc 
+-dcopserver.lo: dcopserver.moc 
++dcopclient.o: dcopclient.moc 
  testdcop.o: testdcop.moc 
--dcopclient.lo: dcopclient.moc 
--dcopserver.o: dcopserver.moc 
- dcopclient.o: dcopclient.moc 
-+dcopserver.o: dcopserver.moc 
- dcopserver.lo: dcopserver.moc 
++dcopserver.lo: dcopserver.moc 

@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.46 2004/01/12 09:46:05 cjep Exp $
+# $NetBSD: Makefile,v 1.47 2004/01/15 09:52:51 markd Exp $
 
-DISTNAME=	kdelibs-3.1.4
-PKGREVISION=	3
+DISTNAME=	kdelibs-3.1.5
 CATEGORIES=	x11
 COMMENT=	Support libraries for the KDE integrated X11 desktop
 
@@ -146,4 +145,10 @@ CFLAGS:=        ${CFLAGS:C/-O[0-9]*/-O/g}
 CONFIGURE_ENV+= CXXFLAGS="${CXXFLAGS}"
 CONFIGURE_ENV+= CFLAGS="${CFLAGS}"
 .  endif
+.endif
+
+.if ${OPSYS} == "SunOS"
+# We require use of a recent enough libbz2 to have the BZ2_ prefixes
+# so force this as configure gets this wrong on Solaris 9
+CONFIGURE_ENV+= ac_cv_lib_bzip2='no'
 .endif
