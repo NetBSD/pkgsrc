@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/06/28 21:45:42 xtraeme Exp $
+# $NetBSD: Makefile,v 1.10 2004/10/01 10:37:33 grant Exp $
 #
 
 DISTNAME=	linunace22
@@ -17,8 +17,8 @@ MAINTAINER=	dillo@NetBSD.org
 HOMEPAGE=	http://www.winace.com/
 COMMENT=	Extract, list and test files in ACE archives (2.2 linux binary)
 
-ONLY_FOR_PLATFORM= NetBSD-1.5Z[A-Z]-i386 NetBSD-1.[6-9]*-i386 \
-		NetBSD-[2-9]*-i386 Linux-*-i[3-6]86
+ONLY_FOR_PLATFORM=	NetBSD-1.5Z[A-Z]-i386 NetBSD-1.6*-i386 \
+			NetBSD-[2-9]*-i386 Linux-*-i[3-6]86
 
 WRKSRC=		${WRKDIR}
 

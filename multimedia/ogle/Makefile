@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/07/24 21:47:09 jdc Exp $
+# $NetBSD: Makefile,v 1.10 2004/10/01 10:37:33 grant Exp $
 
 DISTNAME=	ogle-0.9.2
 PKGREVISION=	1
@@ -10,8 +10,8 @@ HOMEPAGE=	http://www.dtek.chalmers.se/groups/dvd/
 COMMENT=	DVD player with menus
 
 ONLY_FOR_PLATFORM=	NetBSD-1.5.[23]*-i386 NetBSD-1.5[Y-Z]*-i386
-ONLY_FOR_PLATFORM+=	NetBSD-1.[6-9]*-i386 NetBSD-[2-9]*-i386
-ONLY_FOR_PLATFORM+=	NetBSD-1.6[D-Z]*-powerpc NetBSD-1.[7-9]*-powerpc
+ONLY_FOR_PLATFORM+=	NetBSD-1.6*-i386 NetBSD-[2-9]*-i386
+ONLY_FOR_PLATFORM+=	NetBSD-1.6[D-Z]*-powerpc
 ONLY_FOR_PLATFORM+=	NetBSD-[2-9]*-powerpc
 ONLY_FOR_PLATFORM+=	NetBSD-1.6Z*-alpha NetBSD-[2-9]*-alpha
 ONLY_FOR_PLATFORM+=	NetBSD-1.6Z*-sparc64 NetBSD-[2-9]*-sparc64
