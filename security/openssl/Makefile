@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2001/01/14 01:52:23 tron Exp $
+# $NetBSD: Makefile,v 1.27 2001/01/17 10:46:30 wiz Exp $
 #
 
 DISTNAME=		openssl-0.9.5a
@@ -34,6 +34,10 @@ CONFIGURE_ENV=		CC="${CC}"
 PATCHDIR=		${WRKDIR}/.patches
 .if ${OPSYS} == "NetBSD"
 MAKE_ENV=		LD_LIBRARY_PATH=${WRKSRC} MAKELIB=${FILESDIR}/makelib
+.endif
+
+.if ${OPSYS} == "SunOS"
+PATCH_SUM_FILE=		${FILESDIR}/patch-sum.solaris
 .endif
 
 PLIST_SRC=		${WRKDIR}/.PLIST_SRC
