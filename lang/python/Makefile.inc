@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.inc,v 1.1 2000/10/22 20:01:48 tsarna Exp $
+# $NetBSD: Makefile.inc,v 1.2 2001/05/30 04:59:36 jlam Exp $
 #
 
 PY_VERSION=	2.0
@@ -27,13 +27,16 @@ ALL_TARGET?=	default
 IGNORE="${PKGNAME} needs dynamic loading"
 .endif
 
+# Set PY_SETUP_SUBST to substitute "${variable}" for "@value@" in Setup.in.
+PY_SETUP_SUBST+=	LOCALBASE=${LOCALBASE}
+PY_SETUP_SUBST+=	X11BASE=${X11BASE}
+
 # This is used for standard modules shipped with Python but build as
 # separate packages.
 
 python-std-do-configure:
-	${SED} -e 's%@LOCALBASE@%${LOCALBASE}%g' \
-	-e 's%@X11BASE@%${X11BASE}%g' ${FILESDIR}/Setup.in \
-	 >${WRKSRC}/Setup.in
+	${SED} ${PY_SETUP_SUBST:S/=/@!/:S/$/!g/:S/^/ -e s!@/}		\
+		${FILESDIR}/Setup.in > ${WRKSRC}/Setup.in
 	( cd ${WRKSRC} ;\
 	 ${CP} ${PY_CONFIGDIR}/Makefile.pre.in .;\
 	 ${MAKE} -f Makefile.pre.in boot)
