@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2004/04/19 15:05:00 jmmv Exp $
+# $NetBSD: Makefile,v 1.62 2004/04/25 18:47:55 snj Exp $
 #
 
 DISTNAME=	gdm-2.6.0.0
@@ -87,7 +87,7 @@ CONFIGURE_ARGS+=	X_SERVER_ARGS="vt05"
 BUILD_DEFS+=	USE_PAM
 
 .if defined(USE_PAM)
-.include "../../security/PAM/buildlink2.mk"
+.include "../../security/PAM/buildlink3.mk"
 CONFIGURE_ENV+=		USE_PAM=yes
 PLIST_SUBST+=		PAM_MISC=""
 .else
