@@ -1,12 +1,12 @@
-$NetBSD: patch-ag,v 1.2 2000/12/10 12:20:48 jtb Exp $
+$NetBSD: patch-ag,v 1.3 2001/01/21 02:04:56 jtb Exp $
 
---- benchmarks/benchmark.orig	Wed May 19 15:50:11 1999
+--- benchmarks/benchmark.orig	Sun Dec 10 09:09:13 2000
 +++ benchmarks/benchmark
 @@ -1,6 +1,6 @@
  #!/bin/sh
  gcc -o unbuff unbuff.c
 -../stalin -q -On -db benchmarks-to-latex
-+%%STALIN%% -q -On -db benchmarks-to-latex
++@PREFIX@/bin/stalin -I @PREFIX@/lib/stalin -I @PREFIX@/include -I @PREFIX@/lib -I @GC_PREFIX@/include -I @GC_PREFIX@/lib -q -On -db benchmarks-to-latex
  ./compile-benchmarks
  ./run-benchmarks
  ./benchmarks-to-latex
