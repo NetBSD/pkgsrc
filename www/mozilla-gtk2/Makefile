@@ -1,14 +1,17 @@
-# $NetBSD: Makefile,v 1.11 2004/08/09 14:19:20 taya Exp $
+# $NetBSD: Makefile,v 1.12 2004/09/17 14:01:45 taya Exp $
 
 MOZILLA=	mozilla-gtk2
 MOZILLA_BIN=	mozilla-bin
-MOZ_VER=	1.7.2
+MOZ_VER=	1.7.3
 EXTRACT_SUFX=	.tar.bz2
 
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 DISTINFO_FILE=	${.CURDIR}/../../www/mozilla/distinfo
 PATCHDIR=	${.CURDIR}/../../www/mozilla/patches
 FILESDIR=	${.CURDIR}/../../www/mozilla/files
+
+DISTFILES+=	mozilla-source-1.7.3-libart_lgpl.tar.bz2
+SITES_mozilla-source-1.7.3-libart_lgpl.tar.bz2=${MASTER_SITE_LOCAL}
 
 COMMENT=	Full featured gecko-based browser built with GTK2
 
