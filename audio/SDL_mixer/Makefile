@@ -1,24 +1,21 @@
-# $NetBSD: Makefile,v 1.17 2004/10/20 10:55:46 adam Exp $
-#
+# $NetBSD: Makefile,v 1.18 2005/01/05 12:20:37 adam Exp $
 
-DISTNAME=		SDL_mixer-1.2.5
-PKGREVISION=		4
-CATEGORIES=		audio
-MASTER_SITES=		http://www.libsdl.org/projects/SDL_mixer/release/
+DISTNAME=	SDL_mixer-1.2.6
+CATEGORIES=	audio
+MASTER_SITES=	http://www.libsdl.org/projects/SDL_mixer/release/
 
-MAINTAINER=		tech-pkg@NetBSD.org
-HOMEPAGE=		http://www.libsdl.org/projects/SDL_mixer/
-COMMENT=		Multi-channel audio mixer library
+MAINTAINER=	tech-pkg@NetBSD.org
+HOMEPAGE=	http://www.libsdl.org/projects/SDL_mixer/
+COMMENT=	Multi-channel audio mixer library
 
 CONFLICTS=		SDL-mixer-[0-9]*
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=		YES
-GNU_CONFIGURE=		YES
-USE_X11=		YES
 USE_LIBTOOL=		YES
-
+USE_X11=		YES
+GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=        --enable-music-ogg
 
 CPPFLAGS=		-Dunix=1
