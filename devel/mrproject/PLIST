@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2002/10/07 09:36:53 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2002/11/30 14:25:58 grant Exp $
 bin/mrproject
 bin/mrproject-engine
 bin/run-mrproject
@@ -78,22 +78,22 @@ share/images/mrproject/cflogo_bw_67x87.png
 share/images/mrproject/gantt.png
 share/images/mrproject/network.png
 share/images/mrproject/resources.png
-share/locale/da/LC_MESSAGES/mrproject.mo
-share/locale/de/LC_MESSAGES/mrproject.mo
-share/locale/el/LC_MESSAGES/mrproject.mo
-share/locale/es/LC_MESSAGES/mrproject.mo
-share/locale/fr/LC_MESSAGES/mrproject.mo
-share/locale/ja/LC_MESSAGES/mrproject.mo
-share/locale/nn/LC_MESSAGES/mrproject.mo
-share/locale/no/LC_MESSAGES/mrproject.mo
-share/locale/pl/LC_MESSAGES/mrproject.mo
-share/locale/pt/LC_MESSAGES/mrproject.mo
-share/locale/ru/LC_MESSAGES/mrproject.mo
-share/locale/sk/LC_MESSAGES/mrproject.mo
-share/locale/sv/LC_MESSAGES/mrproject.mo
-share/locale/tr/LC_MESSAGES/mrproject.mo
-share/locale/zh_CN/LC_MESSAGES/mrproject.mo
-share/locale/zh_TW/LC_MESSAGES/mrproject.mo
+${PKGLOCALEDIR}/locale/da/LC_MESSAGES/mrproject.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/mrproject.mo
+${PKGLOCALEDIR}/locale/el/LC_MESSAGES/mrproject.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/mrproject.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/mrproject.mo
+${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/mrproject.mo
+${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/mrproject.mo
+${PKGLOCALEDIR}/locale/no/LC_MESSAGES/mrproject.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/mrproject.mo
+${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/mrproject.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/mrproject.mo
+${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/mrproject.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/mrproject.mo
+${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/mrproject.mo
+${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/mrproject.mo
+${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/mrproject.mo
 share/mime-info/mrproject.keys
 share/mime-info/mrproject.mime
 share/mrproject/gantt-component.etspec
