@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2001/02/04 21:33:11 tron Exp $
+# $NetBSD: Makefile,v 1.12 2001/02/17 18:38:32 wiz Exp $
 
 DISTNAME=	uae-0.8.15
 CATEGORIES=	emulators
@@ -6,6 +6,7 @@ MASTER_SITES=	ftp://ftp.freiburg.linux.de/pub/uae/sources/develop/
 
 MAINTAINER=	kristerw@netbsd.org
 HOMEPAGE=	http://www.freiburg.linux.de/~uae/
+COMMENT=	The UAE Amiga Emulator
 
 USE_GMAKE=	yes
 USE_X11=	yes
