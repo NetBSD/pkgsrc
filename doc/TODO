@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1373 2004/02/13 11:19:32 jmmv Exp $
+$NetBSD: TODO,v 1.1374 2004/02/13 14:46:08 minskim Exp $
 
 Suggested new packages
 ======================
@@ -211,7 +211,6 @@ Suggested package updates
 	o host-20031203 [cjep, in wip, awaiting greg woods response on 1 issue]
 	o hp2xx-3.4.4
 	o hpijs-1.4.1
-	o html2text-1.3.2 [pkg/24166]
 	o icepref-2.3
 	o inn-2.4.1
 	o jakarta-tomcat-3.3.1a
