@@ -1,4 +1,7 @@
-$NetBSD: patch-aa,v 1.3 1999/02/14 21:14:04 tron Exp $
+$NetBSD: patch-aa,v 1.4 1999/03/31 10:05:57 agc Exp $
+
+NetBSD patches for ELF/a.out calculation
+Solaris patches to mimic NetBSD ones, for use in pkgsrc
 
 --- ltconfig.orig	Fri Mar 20 09:00:29 1998
 +++ ltconfig	Sun Feb 14 17:49:16 1999
@@ -34,6 +37,17 @@ $NetBSD: patch-aa,v 1.3 1999/02/14 21:14:04 tron Exp $
    shlibpath_var=LD_LIBRARY_PATH
    ;;
  
+@@ -1208,8 +1220,8 @@
+   ;;
+ 
+ solaris2*)
+-  version_type=linux
+-  library_names_spec='${libname}${release}.so.$versuffix ${libname}${release}.so.$major $libname.so'
++  version_type=sunos
++  library_names_spec='${libname}${release}.so.$versuffix ${libname}${release}.so.$major ${libname}${release}.so'
+   soname_spec='${libname}${release}.so.$major'
+   shlibpath_var=LD_LIBRARY_PATH
+   ;;
 @@ -1482,6 +1494,9 @@
  # Set to yes if using SHLIBPATH_VAR=DIR during linking hardcodes DIR into
  # the resulting binary.
