@@ -1,0 +1,116 @@
+$NetBSD: patch-ae,v 1.3 2003/12/28 14:24:49 jmmv Exp $
+
+--- gconf/gconftool.c.orig	2003-08-18 20:13:20.000000000 +0200
++++ gconf/gconftool.c
+@@ -59,6 +59,7 @@ static char* long_desc = NULL;
+ static char* owner = NULL;
+ static char* schema_file = NULL;
+ static char* entry_file = NULL;
++static char* unload_entry_file = NULL;
+ static const char* config_source = NULL;
+ static int use_local_source = FALSE;
+ static int makefile_install_mode = FALSE;
+@@ -167,6 +168,15 @@ struct poptOption options[] = {
+     NULL
+   },
+   {
++    "unload",
++    '\0',
++    POPT_ARG_STRING,
++    &unload_entry_file,
++    0,
++    N_("Unload a set of values described in an XML file."),
++    NULL
++  },
++  {
+     "recursive-list",
+     'R',
+     POPT_ARG_NONE,
+@@ -838,6 +848,18 @@ main (int argc, char** argv)
+       return retval;
+     }
+   
++  if (unload_entry_file != NULL)
++    {
++      const gchar** args = poptGetArgs(ctx);
++      gint retval;
++
++      retval = do_load_file(conf, LOAD_ENTRY_FILE, unload_entry_file, args);
++
++      gconf_engine_unref(conf);
++
++      return retval;
++    }
++
+   if (spawn_gconfd)
+     {
+       do_spawn_daemon(conf);
+@@ -2760,15 +2782,14 @@ set_values(GConfEngine* conf, const gcha
+   else
+     full_key = g_strdup(key);
+ 
+-  if (schema_key)
++  full_schema_key = NULL;
++  if (unload_entry_file == NULL && schema_key)
+     {
+       if (base_dir && *schema_key != '/')
+         full_schema_key = gconf_concat_dir_and_key(base_dir, schema_key);
+       else
+         full_schema_key = g_strdup(schema_key);
+     }
+-  else
+-    full_schema_key = NULL;
+ 
+   tmp = values;
+   while (tmp)
+@@ -2776,21 +2797,21 @@ set_values(GConfEngine* conf, const gcha
+       GConfValue* value = tmp->data;
+       GError* error;
+ 
+-      if (full_schema_key)
++      error = NULL;
++      if (!gconf_engine_associate_schema(conf, full_key, full_schema_key,  &error))
+         {
+-          error = NULL;
+-          if (!gconf_engine_associate_schema(conf, full_key, full_schema_key,  &error))
+-            {
+-              g_assert(error != NULL);
+-          
+-              g_printerr (_("WARNING: failed to associate schema `%s' with key `%s': %s\n"),
+-			  full_schema_key, full_key, error->message);
+-              g_error_free(error);
+-            }
++          g_assert(error != NULL);
++
++          g_printerr (_("WARNING: failed to associate schema `%s' with key `%s': %s\n"),
++                      full_schema_key, full_key, error->message);
++          g_error_free(error);
+         }
+ 
+       error = NULL;
+-      gconf_engine_set(conf, full_key, value, &error);
++      if (unload_entry_file != NULL)
++        gconf_engine_unset(conf, full_key, &error);
++      else
++        gconf_engine_set(conf, full_key, value, &error);
+       if (error != NULL)
+         {
+           g_printerr (_("Error setting value: %s\n"), error->message);
+@@ -3307,7 +3328,7 @@ process_key_list(GConfEngine* conf, cons
+   GSList* tmp;
+   GError* error = NULL;
+ 
+-  if (makefile_uninstall_mode)
++  if (makefile_uninstall_mode || unload_entry_file != NULL)
+     {
+       schema_name = NULL;
+     }
+@@ -3504,7 +3525,7 @@ process_schema(GConfEngine* conf, xmlNod
+ 
+       hash_foreach_info.conf = conf;
+       hash_foreach_info.key = schema_key;
+-      if (makefile_uninstall_mode)
++      if (makefile_uninstall_mode || unload_entry_file != NULL)
+         g_hash_table_foreach(schemas_hash, hash_uninstall_foreach, &hash_foreach_info);
+       else 
+         g_hash_table_foreach(schemas_hash, hash_install_foreach, &hash_foreach_info);

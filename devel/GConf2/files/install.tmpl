@@ -1,9 +1,10 @@
-# $NetBSD: install.tmpl,v 1.3 2003/06/20 10:49:18 jmmv Exp $
+# $NetBSD: install.tmpl,v 1.4 2003/12/28 14:24:49 jmmv Exp $
 #
 # Register GConf2 schema files into GConf2's database at install time.
 #
 
 GCONFTOOL2="@GCONFTOOL2@"
+GCONF2_ENTRIES="@GCONF2_ENTRIES@"
 GCONF2_SCHEMAS="@GCONF2_SCHEMAS@"
 GCONF2_SCHEMAS_DIR="@GCONF2_SCHEMAS_DIR@"
 GCONF2_CONFIG_SOURCE="@GCONF2_CONFIG_SOURCE@"
@@ -14,6 +15,10 @@ POST-INSTALL)
 		GCONF_CONFIG_SOURCE="${GCONF2_CONFIG_SOURCE}" \
 			${GCONFTOOL2} --makefile-install-rule \
 			${GCONF2_SCHEMAS_DIR}/$f >/dev/null
+	done
+	for f in ${GCONF2_ENTRIES}; do
+		${GCONFTOOL2} --config-source=${GCONF2_CONFIG_SOURCE} \
+			--direct --load ${GCONF2_SCHEMAS_DIR}/$f >/dev/null
 	done
 	;;
 *)
