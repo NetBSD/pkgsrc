@@ -1,0 +1,33 @@
+$NetBSD: patch-af,v 1.1 2000/08/24 01:25:47 kim Exp $
+
+--- zebra/Makefile.am.orig	Thu Aug 17 04:28:47 2000
++++ zebra/Makefile.am	Wed Aug 23 16:25:31 2000
+@@ -4,6 +4,8 @@
+ DEFS = @DEFS@ -DSYSCONFDIR=\"$(sysconfdir)/\"
+ INSTALL_SDATA=@INSTALL@ -m 600
+ 
++sysconfdatadir=$(datadir)/examples/zebra
++
+ LIB_IPV6 = @LIB_IPV6@
+ 
+ ipforward = @IPFORWARD@
+@@ -50,14 +52,14 @@
+ 
+ install-sysconfDATA: $(sysconf_DATA)
+ 	@$(NORMAL_INSTALL)
+-	$(mkinstalldirs) $(DESTDIR)$(sysconfdir)
++	$(mkinstalldirs) $(DESTDIR)$(sysconfdatadir)
+ 	@list='$(sysconf_DATA)'; for p in $$list; do \
+ 	  if test -f $(srcdir)/$$p; then \
+-	    echo " $(INSTALL_SDATA) $(srcdir)/$$p $(DESTDIR)$(sysconfdir)/$$p"; \
+-	    $(INSTALL_SDATA) $(srcdir)/$$p $(DESTDIR)$(sysconfdir)/$$p; \
++	    echo " $(INSTALL_SDATA) $(srcdir)/$$p $(DESTDIR)$(sysconfdatadir)/$$p"; \
++	    $(INSTALL_SDATA) $(srcdir)/$$p $(DESTDIR)$(sysconfdatadir)/$$p; \
+ 	  else if test -f $$p; then \
+-	    echo " $(INSTALL_SDATA) $$p $(DESTDIR)$(sysconfdir)/$$p"; \
+-	    $(INSTALL_SDATA) $$p $(DESTDIR)$(sysconfdir)/$$p; \
++	    echo " $(INSTALL_SDATA) $$p $(DESTDIR)$(sysconfdatadir)/$$p"; \
++	    $(INSTALL_SDATA) $$p $(DESTDIR)$(sysconfdatadir)/$$p; \
+ 	  fi; fi; \
+ 	done
+ 

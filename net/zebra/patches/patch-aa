@@ -1,0 +1,33 @@
+$NetBSD: patch-aa,v 1.5 2000/08/24 01:25:38 kim Exp $
+
+--- bgpd/Makefile.am.orig	Thu Aug 17 04:27:58 2000
++++ bgpd/Makefile.am	Wed Aug 23 16:19:15 2000
+@@ -4,6 +4,8 @@
+ DEFS = @DEFS@ -DSYSCONFDIR=\"$(sysconfdir)/\"
+ INSTALL_SDATA=@INSTALL@ -m 600
+ 
++sysconfdatadir=$(datadir)/examples/zebra
++
+ noinst_LIBRARIES = libbgp.a
+ sbin_PROGRAMS = bgpd
+ #noinst_PROGRAMS = bgp_btoa
+@@ -36,14 +38,14 @@
+ 
+ install-sysconfDATA: $(sysconf_DATA)
+ 	@$(NORMAL_INSTALL)
+-	$(mkinstalldirs) $(DESTDIR)$(sysconfdir)
++	$(mkinstalldirs) $(DESTDIR)$(sysconfdatadir)
+ 	@list='$(sysconf_DATA)'; for p in $$list; do \
+ 	  if test -f $(srcdir)/$$p; then \
+-	    echo " $(INSTALL_SDATA) $(srcdir)/$$p $(DESTDIR)$(sysconfdir)/$$p"; \
+-	    $(INSTALL_SDATA) $(srcdir)/$$p $(DESTDIR)$(sysconfdir)/$$p; \
++	    echo " $(INSTALL_SDATA) $(srcdir)/$$p $(DESTDIR)$(sysconfdatadir)/$$p"; \
++	    $(INSTALL_SDATA) $(srcdir)/$$p $(DESTDIR)$(sysconfdatadir)/$$p; \
+ 	  else if test -f $$p; then \
+-	    echo " $(INSTALL_SDATA) $$p $(DESTDIR)$(sysconfdir)/$$p"; \
+-	    $(INSTALL_SDATA) $$p $(DESTDIR)$(sysconfdir)/$$p; \
++	    echo " $(INSTALL_SDATA) $$p $(DESTDIR)$(sysconfdatadir)/$$p"; \
++	    $(INSTALL_SDATA) $$p $(DESTDIR)$(sysconfdatadir)/$$p; \
+ 	  fi; fi; \
+ 	done
+ 
