@@ -1,0 +1,23 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2002/09/28 02:19:53 rh Exp $
+#
+
+DISTNAME=		gworkspace-0.4
+CATEGORIES?=		sysutils gnustep
+MASTER_SITES=		http://www.gnustep.it/enrico/gworkspace/	\
+			http://www.imago.ro/gworkspace/
+
+MAINTAINER?=		packages@netbsd.org
+HOMEPAGE?=		http://www.gnustep.it/enrico/gworkspace/
+
+WRKSRC=			${WRKDIR}/gworkspace
+
+USE_BUILDLINK2=		YES
+USE_GMAKE=		YES
+USE_X11=		YES
+MAKEFILE=		GNUmakefile
+GNU_CONFIGURE=		YES
+GNU_CONFIGURE_PREFIX=	${PREFIX}/share/GNUstep
+
+.include "../../x11/gnustep-back/buildlink2.mk"
+.include "../../mk/pthread.buildlink2.mk"
+.include "../../mk/ghostscript.mk"
