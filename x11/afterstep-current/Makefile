@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 1999/08/29 14:16:12 fredb Exp $
+# $NetBSD: Makefile,v 1.8 1999/08/30 02:32:12 fredb Exp $
 
 DISTNAME=		AfterStep-1.7.142
-PKGNAME=		AfterStep-1.7.143
+PKGNAME=		afterstep-1.7.143
 CATEGORIES=		x11
 MASTER_SITES=		ftp://ftp.afterstep.org/devel/snapshots/ \
 			ftp://ftp.afterstep.org/devel/archives/1.7/ \
