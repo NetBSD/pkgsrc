@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/02/16 22:05:36 reed Exp $
+# $NetBSD: Makefile,v 1.17 2005/02/16 22:13:47 reed Exp $
 
 DISTNAME=	xterm-200
 PKGREVISION=	1
@@ -13,7 +13,7 @@ COMMENT=	Latest terminal emulator for the X Window System
 GNU_CONFIGURE=	yes
 USE_BUILDLINK3=	yes
 USE_X11=	yes
-WRKSRC=		${WRKDIR}/${PKGNAME}
+WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
 .include "../../mk/bsd.prefs.mk"
 
