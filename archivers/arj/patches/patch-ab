@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.4 2004/07/10 17:39:50 salo Exp $
+$NetBSD: patch-ab,v 1.5 2005/01/16 16:57:12 tv Exp $
 
---- gnu/configure.in.orig	Sat Apr 17 13:28:06 2004
-+++ gnu/configure.in	Sat Jul 10 19:24:37 2004
-@@ -12,7 +12,7 @@
+--- gnu/configure.in.orig	2004-04-17 07:28:06.000000000 -0400
++++ gnu/configure.in
+@@ -12,13 +12,23 @@ dnl Installation script (let it be, temp
  AC_PROG_INSTALL([e:/os2apps/autoconf/install-sh])
  
  dnl Configuration parameters
@@ -11,7 +11,6 @@ $NetBSD: patch-ab,v 1.4 2004/07/10 17:39:50 salo Exp $
  
  dnl Checks for the canonical system name
  AC_CANONICAL_HOST
-@@ -19,6 +19,16 @@
  
  dnl Checks for programs.
  AC_PROG_CC
@@ -28,7 +27,7 @@ $NetBSD: patch-ab,v 1.4 2004/07/10 17:39:50 salo Exp $
  
  dnl Checks for header files.
  AC_HEADER_STDC
-@@ -36,6 +46,7 @@
+@@ -36,6 +46,7 @@ AC_FUNC_SETVBUF_REVERSED
  AC_TYPE_SIGNAL
  AC_FUNC_VPRINTF
  AC_CHECK_FUNCS([getcwd min max mkdir mkdtemp rmdir fcloseall strcasecmp setpriority strdup strerror strstr strupr strlwr strtol strtoul])
@@ -36,7 +35,19 @@ $NetBSD: patch-ab,v 1.4 2004/07/10 17:39:50 salo Exp $
  
  dnl Platform-specific tuning
  PROG_EXT=
-@@ -68,7 +79,9 @@
+@@ -57,6 +68,11 @@ linux*)
+         DLL_FLAGS="-shared -export-dynamic"
+         LD_STRIP="gnu/stripgcc.lnk"
+ 	;;
++interix3*)
++	# not ELF
++	DLL_FLAGS="-shared"
++	DLL_CFLAGS=""
++	;;
+ *qnx*)
+ 	AC_DEFINE(ELF_EXECUTABLES)
+         DLL_FLAGS="-shared -fPIC"
+@@ -68,7 +84,9 @@ linux*)
          CFLAGS="-DSUNOS -D_UNIX"
          DLL_FLAGS="-shared -fPIC"
          DLL_CFLAGS="-shared -fPIC"
@@ -46,7 +57,7 @@ $NetBSD: patch-ab,v 1.4 2004/07/10 17:39:50 salo Exp $
  	;;
  os2*)
  	PROG_EXT=".exe"
-@@ -115,7 +128,7 @@
+@@ -115,7 +133,7 @@ dnl Initial setup
  
  test -z "$CONFIG_SHELL" && CONFIG_SHELL=/bin/sh
  AC_SUBST(CONFIG_SHELL)
