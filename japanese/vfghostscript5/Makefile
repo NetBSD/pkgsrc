@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/09/03 06:14:16 sakamoto Exp $
+# $NetBSD: Makefile,v 1.2 1999/12/01 01:27:19 sakamoto Exp $
 #
 
 DISTNAME=	ja-vfghostscript-5.50
@@ -8,7 +8,7 @@ MASTER_SITES=	ftp://ftp.cs.wisc.edu/ghost/aladdin/gs550/ \
 		http://www.erdw.ethz.ch/~bonk/ftp/gs-driver-distrib/ \
 		http://www.ozemail.com.au/~geoffk/pdfencrypt/
 MASTER_SITES+=  ftp://ftp.cs.wisc.edu/ghost/aladdin/gs510/ \
-                ftp://ftp.cs.wisc.edu/ghost/aladdin/fonts/ \
+		ftp://ftp.cs.wisc.edu/ghost/aladdin/fonts/ \
 		ftp://ftp.uu.net/graphics/png/src/ \
 		ftp://ftp.uu.net/graphics/jpeg/ \
 		${MASTER_SITE_LOCAL} \
@@ -23,7 +23,7 @@ MASTER_SITES+=  ftp://ftp.cs.wisc.edu/ghost/aladdin/gs510/ \
 DISTFILES=	${GS_SOURCES} ${GS_FONTS_STD} ${GS_FONTS_OTHER} \
 		${HP850_DRV} ${PDF_SEC} gs5.50-vflib-1.0.tar.gz
 DISTFILES+=     gdevlips-2.3.3.tar.gz gdevmjc-0.8.tar.gz gdevrpdl.tar.gz \
-                gdev10v.tar.gz dmprt-2.01.tar.gz gdevalps-0.1.tar.gz
+		gdev10v.tar.gz dmprt-2.01.tar.gz gdevalps-0.1.tar.gz
 
 MAINTAINER=	oishi@ims.ac.jp
 HOMEPAGE=	http://www.cs.wisc.edu/~ghost/index.html
@@ -34,11 +34,13 @@ DEPENDS=	png-1.0.3:../../graphics/png \
 		ja-vflib-2.24.2:../../japanese/vflib \
 		ghostscript-5.50:../../print/ghostscript5
 
+DIST_SUBDIR=	ghostscript
+
 .include "../../mk/bsd.prefs.mk"
 
 EXTRACT_ONLY=	${GS_SOURCES} gs5.50-vflib-1.0.tar.gz
 EXTRACT_ONLY+=	gdevlips-2.3.3.tar.gz gdevmjc-0.8.tar.gz gdevrpdl.tar.gz \
-                gdev10v.tar.gz dmprt-2.01.tar.gz gdevalps-0.1.tar.gz
+		gdev10v.tar.gz dmprt-2.01.tar.gz gdevalps-0.1.tar.gz
 WRKSRC=		${WRKDIR}/gs5.50
 MAKEFILE=	unix-gcc.mak
 ALL_TARGET=	std
@@ -78,9 +80,9 @@ post-extract:
 	${LN} -s ${BUILD_ROOT}/graphics/jpeg/${WRKDIR:T}/jpeg-6b ${WRKSRC}/jpeg
 	cd ${WRKSRC} && unzip -uLa ${DISTDIR}/${HP850_DRV}
 	${CP} ${DISTDIR}/${PDF_SEC} ${WRKSRC}
-	
+
 pre-patch:
-	cd ${WRKDIR} ; ${PATCH} -s -p0 < gs5.50-vflib-1.0/gs5.50-vflib-1.0.diff 
+	cd ${WRKDIR} ; ${PATCH} -s -p0 < gs5.50-vflib-1.0/gs5.50-vflib-1.0.diff
 	cd ${WRKDIR}/gdevmjc-0.8; ${PATCH} -s -p0 < ${FILESDIR}/gdevmjc.c.patch
 	cd ${WRKDIR}/gdevmjc-0.8; ${PATCH} -s -p0 < ${FILESDIR}/mjc.dev.patch
 
