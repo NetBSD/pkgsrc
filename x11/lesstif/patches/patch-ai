@@ -1,14 +1,13 @@
-$NetBSD: patch-ai,v 1.9 1999/11/24 17:38:50 hubertf Exp $
+$NetBSD: patch-ai,v 1.10 2000/01/31 20:45:45 drochner Exp $
 
-diff -x *.orig -urN ./doc/www.lesstif.org/images/Makefile.in /usr/pkgsrc/x11/lesstif/work.i386.unpatched/lesstif-0.89.4/doc/www.lesstif.org/images/Makefile.in
---- ./doc/www.lesstif.org/images/Makefile.in	Fri Nov  5 21:14:59 1999
-+++ /usr/pkgsrc/x11/lesstif/work.i386.unpatched/lesstif-0.89.4/doc/www.lesstif.org/images/Makefile.in	Wed Nov 24 17:30:52 1999
+--- doc/www.lesstif.org/images/Makefile.in.orig	Fri Jan 14 23:42:41 2000
++++ doc/www.lesstif.org/images/Makefile.in	Sat Jan 29 16:57:47 2000
 @@ -126,7 +126,7 @@
  # Lets put the informational stuff in a sub directory to avoid 
  # poluting /usr/local for default installs.
  #
 -rootdir = $(exec_prefix)/LessTif/doc/images
 +rootdir = $(exec_prefix)/share/doc/lesstif/images
- root_DATA = hungry.gif \
- 		lesstif-realsmall.gif lesstif-small.gif lesstif.gif \
- 		ltsunlogo.gif
+ root_DATA = hungry.png \
+ 		lesstif-realsmall.png lesstif-small.png lesstif.png \
+ 		ltsunlogo.png lesstif.jpg ltsunlogo.jpg
