@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5110 2004/03/06 17:32:11 xtraeme Exp $
+$NetBSD: CHANGES,v 1.5111 2004/03/06 18:38:25 recht Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1188,3 +1188,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added postfix-current-20040209 [grant 2004-03-06]
 	Updated createbuildlink to 3.3 [jlam 2004-03-06]
 	Updated openmortal to 0.6 [xtraeme 2004-03-06]
+	Added gnats-4.0 [recht 2004-03-06]
