@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/11/26 06:50:37 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2002/10/27 20:48:57 seb Exp $
 #
 
 DISTNAME=	HTTP-Request-Form-0.7
@@ -15,11 +15,8 @@ DEPENDS+=       p5-URI-[0-9]*:../../www/p5-URI
 DEPENDS+=       p5-HTML-Tagset-[0-9]*:../../www/p5-HTML-Tagset
 DEPENDS+=       p5-HTML-Tree-[0-9]*:../../www/p5-HTML-Tree
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/HTTP/Request/Form/.packlist
 
-do-configure:
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/perl Makefile.PL
-
-.include "../../lang/perl5/buildlink.mk"
+.include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

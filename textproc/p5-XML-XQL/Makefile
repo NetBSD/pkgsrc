@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2002/07/26 12:09:20 mjl Exp $
+# $NetBSD: Makefile,v 1.7 2002/10/27 20:49:01 seb Exp $
 #
 
 DISTNAME=	XML-XQL-0.67
@@ -16,11 +16,8 @@ DEPENDS+=	p5-Date-Manip-[0-9]*:../../devel/p5-Date-Manip
 
 CONFLICTS+=	p5-libxml-enno-[0-9]*
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/XML/XQL/.packlist
 
-do-configure:
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
-
-.include "../../lang/perl5/buildlink.mk"
+.include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
