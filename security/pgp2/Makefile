@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2000/09/26 19:59:54 fredb Exp $
+# $NetBSD: Makefile,v 1.27 2000/10/10 11:42:15 itojun Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/08/27 13:06:01 ache Exp
 #
 
@@ -13,6 +13,9 @@ HOMEPAGE=	http://www.pgpi.com/
 
 CRYPTO=		yes
 USE_RSAREF2=	NO
+
+# use of IDEA as crypto function
+LICENCE=	fee-based-commercial-use
 
 .include "../../mk/bsd.prefs.mk"
 

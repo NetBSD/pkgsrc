@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2000/09/28 16:31:15 hubertf Exp $
+# $NetBSD: Makefile,v 1.23 2000/10/10 11:42:18 itojun Exp $
 #
 
 DISTNAME=		openssl-0.9.5a
@@ -14,6 +14,9 @@ CONFLICTS=		SSLeay-* ssleay-* kth-krb4-*
 CRYPTO=			YES
 USE_PERL5=		YES
 USE_RSAREF2=		NO
+
+# supplies IDEA/RC5
+LICENCE=		fee-based-commercial-use
 
 # matches what's in `Configure' (except sparc64 and alpha, see PR 10984)
 ONLY_FOR_PLATFORM=	NetBSD-*-arm32 NetBSD-*-i386 \
