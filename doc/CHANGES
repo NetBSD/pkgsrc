@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6253 2004/06/20 22:31:51 schmonz Exp $
+$NetBSD: CHANGES,v 1.6254 2004/06/21 01:34:16 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2988,3 +2988,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added p5-Class-XPath-1.4 [schmonz 2004-06-20]
 	Added p5-XML-RSS-Parser-2.15 [schmonz 2004-06-20]
 	Added p5-XML-RAI-0.51 [schmonz 2004-06-20]
+	Updated websvn to 1.40 [xtraeme 2004-06-21]
