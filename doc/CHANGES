@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4684 2004/02/05 14:04:11 salo Exp $
+$NetBSD: CHANGES,v 1.4685 2004/02/05 17:32:42 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -595,3 +595,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Removed umbrello [markd 2004-02-05]
 	Added kdeaccessibility-3.2.0 [markd 2004-02-05]
 	Updated fhist to 1.13 [salo 2004-02-05]
+	Updated mozilla-gtk2 to 1.6nb1 [jmmv 2004-02-05]
