@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2001/02/25 04:18:09 hubertf Exp $
+# $NetBSD: Makefile,v 1.32 2001/03/04 13:28:45 itojun Exp $
 # FreeBSD Id: Makefile,v 1.18 1998/04/06 20:50:31 andreas Exp
 #
 
@@ -8,10 +8,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=net-snmp/} \
 		ftp://ucd-snmp.ucdavis.edu/ \
 		ftp://sunsite.cnlab-switch.ch/mirror/ucd-snmp/ \
 		ftp://ftp.win.or.jp/pub/network/snmp/ucd-snmp/
-
-#PATCH_SITES=	ftp://ftp.kame.net/pub/kame/misc/
-#PATCHFILES=	ucd-snmp-4.0.1-v6-20000124b.diff.gz
-#PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://net-snmp.sourceforge.net/
