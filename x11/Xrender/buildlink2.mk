@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.7 2004/02/05 07:06:15 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.8 2004/02/05 07:17:14 jlam Exp $
 
 .if !defined(XRENDER_BUILDLINK2_MK)
 XRENDER_BUILDLINK2_MK=	# defined
@@ -52,11 +52,9 @@ _NEED_XRENDER!= \
 BUILDLINK_FILES.Xrender=	include/X11/extensions/Xrender.h
 BUILDLINK_FILES.Xrender+=	lib/libXrender.*
 
-.if defined(PREFER_PKGSRC)
-.  if empty(PREFER_PKGSRC) || !empty(PREFER_PKGSRC:M[yY][eE][sS]) || \
-      !empty(PREFER_PKGSRC:MXrender)
+.if !empty(PREFER_PKGSRC:M[yY][eE][sS]) || \
+    !empty(PREFER_PKGSRC:MXrender)
 _NEED_XRENDER=	YES
-.  endif
 .endif
 
 .if ${_NEED_XRENDER} == "YES"
