@@ -1,0 +1,2 @@
+posh is a stripped-down version of pdksh that aims for compliance with
+Debian's policy, and also has a few extra features.
