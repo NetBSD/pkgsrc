@@ -1,17 +1,24 @@
-# $NetBSD: buildlink2.mk,v 1.4 2002/12/24 06:10:23 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.5 2003/02/14 20:20:47 jmmv Exp $
+#
+# This Makefile fragment is included by packages that use libgnomeprintui.
+#
+# This file was created automatically using createbuildlink 2.4.
+#
 
 .if !defined(LIBGNOMEPRINTUI_BUILDLINK2_MK)
 LIBGNOMEPRINTUI_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			libgnomeprintui
-BUILDLINK_DEPENDS.libgnomeprintui?=	libgnomeprintui>=1.116.0nb2
+BUILDLINK_DEPENDS.libgnomeprintui?=	libgnomeprintui>=2.2.1.1
 BUILDLINK_PKGSRCDIR.libgnomeprintui?=	../../print/libgnomeprintui
 
-EVAL_PREFIX+=		BUILDLINK_PREFIX.libgnomeprintui=libgnomeprintui
+EVAL_PREFIX+=	BUILDLINK_PREFIX.libgnomeprintui=libgnomeprintui
 BUILDLINK_PREFIX.libgnomeprintui_DEFAULT=	${LOCALBASE}
-BUILDLINK_FILES.libgnomeprintui=	include/libgnomeprintui-2.0/libgnomeprintui/*
-BUILDLINK_FILES.libgnomeprintui+=	lib/libgnomeprintui-2.*
+BUILDLINK_FILES.libgnomeprintui+=	include/libgnomeprintui-2.2/libgnomeprintui/*
+BUILDLINK_FILES.libgnomeprintui+=	lib/libgnomeprintui-2-2.*
+BUILDLINK_FILES.libgnomeprintui+=	lib/pkgconfig/libgnomeprintui-2.2.pc
 
+.include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../devel/GConf2/buildlink2.mk"
 .include "../../devel/bonobo-activation/buildlink2.mk"
 .include "../../devel/libbonobo/buildlink2.mk"
