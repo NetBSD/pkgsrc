@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2459 2004/11/25 19:24:01 minskim Exp $
+$NetBSD: TODO,v 1.2460 2004/11/25 19:27:26 snj Exp $
 
 Suggested new packages
 ======================
@@ -553,7 +553,6 @@ Suggested package updates
 	o glpk-4.7
 	o gmpc-0.11.2
 	o gnet1-1.1.9
-	o gnetcat-0.7.1
 	o gnetman-20041117
 	o gnocatan-0.8.1.30
 	o gnome-applets-1.4.1
