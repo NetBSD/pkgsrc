@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3057 2005/02/19 11:23:05 wiz Exp $
+$NetBSD: TODO,v 1.3058 2005/02/19 11:30:11 wiz Exp $
 
 Suggested new packages
 ======================
@@ -811,7 +811,6 @@ Suggested package updates
 	o p5-Text-Autoformat-1.12
 	o p5-Text-Balanced-1.95
 	o p5-Text-BibTeX-0.34
-	o p5-Text-Kakasi-1.05
 	o p5-Text-Template-1.44
 	o p5-Tie-EncryptedHash-1.21
 	o p5-Time-Piece-2.00.01
