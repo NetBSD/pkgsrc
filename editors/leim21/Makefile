@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/05/04 22:47:23 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2002/07/17 17:59:34 wiz Exp $
 
 DISTNAME=	leim-${VERSION}
 CATEGORIES=	editors
@@ -9,7 +9,7 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.gnu.org/software/emacs/emacs.html
 COMMENT=	Libraries of Emacs Input Methods (for emacs21)
 
-DEPENDS+=	emacs-${VERSION}:../emacs
+DEPENDS+=	emacs-${VERSION}:../emacs21
 
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
