@@ -1,12 +1,13 @@
-$NetBSD: distinfo,v 1.12 2002/08/01 09:31:14 martti Exp $
+$NetBSD: distinfo,v 1.13 2002/08/01 14:43:38 schmonz Exp $
 
 SHA1 (pkg_install-20020723.tar.gz) = c16763363a8ff4341c866d50e40dfa2639288009
 Size (pkg_install-20020723.tar.gz) = 81502 bytes
 SHA1 (patch-aa) = f7e8c1c445545d549e4b0655066877d43015bf1f
 SHA1 (patch-ab) = 0b5effbb41b34f96877d3f9494d6cf5054795414
 SHA1 (patch-ac) = fb24ffdc0fbf4ca85d588afcfac39a960b763706
-SHA1 (patch-ad) = a4f9bef5d5861c8778cc492a2cb2cfcfff4603c5
+SHA1 (patch-ad) = a4dbed4ec4be7f008064bc50f17f20aacc4cf8b5
 SHA1 (patch-ae) = ea360800e97e0cfdaf7cfe5790f70d8145aa0e23
 SHA1 (patch-af) = b1d9ce8d3c3e592a67db7ac9676a72317a1485c5
 SHA1 (patch-ag) = e30435f0a626a893934c725c605486a145e27690
 SHA1 (patch-ah) = ae0cee4e6f6efd740fc0d4288f8f71dd0039a913
+SHA1 (patch-ai) = fc16e812952f20a2db10e6b947521b5d18a7b6ae
