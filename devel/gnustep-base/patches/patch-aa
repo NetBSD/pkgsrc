@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2002/09/27 10:58:44 rh Exp $
+$NetBSD: patch-aa,v 1.2 2003/01/21 12:43:38 rh Exp $
 
 --- configure.orig	Wed Sep 25 21:30:54 2002
 +++ configure
@@ -7,13 +7,13 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/09/27 10:58:44 rh Exp $
    echo "$as_me:$LINENO: result: NeXT" >&5
  echo "${ECHO_T}NeXT" >&6
 -  LIBOBJC='-lobjc'
-+  LIBOBJC='-lobjc -lpthread -lpth'
++  LIBOBJC="-lobjc @PTHREAD_LIBS@"
    CPPFLAGS="$CPPFLAGS -fnext-runtime -DNeXT_RUNTIME"
  else
    echo "$as_me:$LINENO: result: GNU" >&5
  echo "${ECHO_T}GNU" >&6
 -  LIBOBJC='-lobjc'
-+  LIBOBJC='-lobjc -lpthread -lpth'
++  LIBOBJC='-lobjc @PTHREAD_LIBS@'
    CPPFLAGS="$CPPFLAGS -fgnu-runtime"
  fi
  
