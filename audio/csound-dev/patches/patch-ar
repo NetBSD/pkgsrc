@@ -1,7 +1,16 @@
-$NetBSD: patch-ar,v 1.1 2003/12/13 20:26:03 ben Exp $
+$NetBSD: patch-ar,v 1.2 2004/03/08 23:40:18 wiz Exp $
 
---- utils/util1/cs/Makefile.orig	2003-02-25 19:24:01.000000000 -0800
+--- utils/util1/cs/Makefile.orig	Wed Feb 26 04:24:01 2003
 +++ utils/util1/cs/Makefile
+@@ -10,7 +10,7 @@ OBJ1 = cs.o
+ all: $(PGM1)
+ 
+ $(PGM1): $(OBJ1)
+-	$(LD) $(CFLAGS) -o $@ $(OBJ1) $(LIBS)
++	$(LD) $(CFLAGS) $(LDFLAGS) -o $@ $(OBJ1) $(LIBS)
+ 
+ %.o: %.c
+ 	$(CC) $(CFLAGS) $(C_FLAGS) -c $< -o $@
 @@ -19,10 +19,10 @@ $(BINDIR):
  	mkdir -p -m 0755 $@
  
