@@ -1,0 +1,13 @@
+--- graphics.c.orig	Sun Aug  9 03:51:32 1998
++++ graphics.c	Sun Aug  9 03:52:35 1998
+@@ -46,2 +46,3 @@
+ 
++extern AppData app_data;
+ 
+@@ -65,4 +66,4 @@
+ 
+-  fgcolor.pixel = fg;
+-  bgcolor.pixel = bg;
++  fgcolor.pixel = app_data.fg;
++  bgcolor.pixel = app_data.bg;
+   fgcolor.flags =  DoRed | DoGreen | DoBlue;
