@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.449 2002/11/03 09:18:44 rh Exp $
+$NetBSD: CHANGES,v 1.450 2002/11/03 12:44:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3515,3 +3515,5 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated xpmroot to 2.4.13 [martti 2002-11-03]
 	Updated fvwm2 to 2.4.13 [martti 2002-11-03]
 	Added ggv-1.99.95 as ggv2 [rh 2002-11-03]
+	Updated links to 2.1.0.5 [wiz 2002-11-03]
+	Updated links-gui to 2.1.0.5 [wiz 2002-11-03]
