@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/07/17 21:29:36 grant Exp $
+# $NetBSD: Makefile,v 1.9 2003/08/09 10:44:36 seb Exp $
 
 DISTNAME=	autogen-5.5.3
 PKGREVISION=	3
@@ -14,7 +14,6 @@ USE_GMAKE=		yes
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
-USE_NEW_TEXINFO=	YES
 USE_MAKEINFO=		YES
 INFO_FILES=		autogen.info
 

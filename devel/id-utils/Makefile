@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2003/07/17 21:31:07 grant Exp $
+# $NetBSD: Makefile,v 1.34 2003/08/09 10:44:43 seb Exp $
 # FreeBSD Id: Makefile,v 1.4 1996/11/18 10:22:47 asami Exp
 #
 
@@ -18,7 +18,6 @@ BUILD_USES_MSGFMT=	yes
 USE_BUILDLINK2=		yes
 USE_PKGLOCALEDIR=	yes
 
-USE_NEW_TEXINFO=	YES
 INFO_FILES=	id-utils.info
 GNU_CONFIGURE=	yes
 

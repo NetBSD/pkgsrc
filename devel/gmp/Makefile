@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2003/07/17 21:30:48 grant Exp $
+# $NetBSD: Makefile,v 1.19 2003/08/09 10:44:42 seb Exp $
 #
 
 DISTNAME=		gmp-4.1.2
@@ -17,7 +17,6 @@ CONFIGURE_ARGS+=	--enable-cxx --without-readline
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 M4=			${PREFIX}/bin/gm4
-USE_NEW_TEXINFO=	YES
 INFO_FILES=		gmp.info
 
 .include "../../mk/bsd.pkg.mk"

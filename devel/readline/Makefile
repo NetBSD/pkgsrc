@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2003/07/17 21:33:35 grant Exp $
+# $NetBSD: Makefile,v 1.27 2003/08/09 10:44:48 seb Exp $
 #
 
 DISTNAME=	readline-4.3
@@ -21,7 +21,6 @@ USE_LIBTOOL=		# defined
 ALL_TARGET=		all-la
 INSTALL_TARGET=		install-la
 
-USE_NEW_TEXINFO=	YES
 INFO_FILES=		readline.info history.info rluserman.info
 
 .include "../../mk/bsd.pkg.mk"
