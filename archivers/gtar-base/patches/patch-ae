@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.2 1999/09/18 14:52:32 kim Exp $
+
+--- Makefile.in.orig	Fri Apr 25 20:21:38 1997
++++ Makefile.in	Fri Sep 17 22:46:37 1999
+@@ -104,7 +104,7 @@
+ 
+ BABYL = rmail/* admin/*/RMAIL
+ EXTRA_DIST = AC-PATCHES AM-PATCHES BI-PATCHES PORTS rebox.el
+-SUBDIRS = doc lib intl src scripts po tests
++SUBDIRS = lib intl src scripts po tests
+ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
+ CONFIG_HEADER_IN = config.h.in
+ CONFIG_HEADER_FULL = config.h
