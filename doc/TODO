@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.484 2003/04/22 10:19:05 wiz Exp $
+$NetBSD: TODO,v 1.485 2003/04/22 10:35:36 salo Exp $
 
 Suggested new packages
 ======================
@@ -189,7 +189,6 @@ Suggested package updates
 	o net-snmp-5.0.8
 	o netscape-7.02
 	o newscache-0.99.22p1
-	o nmap-3.25 [pkg/21245]
 	o ns-flash-6.0.79
 	o ntop2-2.2
 	o nut-7.22
