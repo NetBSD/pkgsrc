@@ -1,4 +1,4 @@
-# $NetBSD: pthread.builtin.mk,v 1.6 2004/12/09 15:27:13 jlam Exp $
+# $NetBSD: pthread.builtin.mk,v 1.7 2005/01/17 08:29:30 jlam Exp $
 
 .for _lib_ in pthread c_r rt
 .  if !defined(_BLNK_LIB_FOUND.${_lib_})
@@ -45,7 +45,8 @@ BUILDLINK_LDFLAGS.pthread=	# empty
 # XXX
 # XXX This should really be a check for GCC!
 # XXX
-.  if ${OPSYS} == "FreeBSD" || ${OPSYS} == "Linux" || ${OPSYS} == "NetBSD"
+BUILDLINK_OPSYS_SUPPORT_PTHREAD=	DragonFly FreeBSD Linux NetBSD
+.  if !empty(BUILDLINK_OPSYS_SUPPORT_PTHREAD:M${OPSYS})
 BUILDLINK_CFLAGS.pthread+=	-pthread
 BUILDLINK_LDFLAGS.pthread+=	-pthread
 .  elif ${OPSYS} == "OSF1"
