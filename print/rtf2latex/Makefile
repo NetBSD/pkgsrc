@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1998/12/30 18:00:03 tron Exp $
+# $NetBSD: Makefile,v 1.3 1999/07/02 09:14:04 agc Exp $
 # FreeBSD Id: Makefile,v 1.7 1998/08/31 07:51:40 tg Exp
 #
 
@@ -16,4 +16,10 @@ NO_CONFIGURE=	yes
 post-extract:
 	${LN} -fs ${FILESDIR}/Makefile ${WRKSRC}
 
-.include <../../mk/bsd.pkg.mk>
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "SunOS"
+MAKE_ENV+=	XCFLAGS="${CPPFLAGS} -DSYSV" CC="${CC}"
+.endif
+
+.include "../../mk/bsd.pkg.mk"
