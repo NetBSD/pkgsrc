@@ -1,12 +1,8 @@
-$NetBSD: distinfo,v 1.6 2003/11/02 17:24:07 salo Exp $
+$NetBSD: distinfo,v 1.7 2003/12/09 04:06:37 xtraeme Exp $
 
-SHA1 (dovecot-0.99.10.tar.gz) = 0a1d83cbd27c3aa3e0732416a0871afc23ee5e19
-Size (dovecot-0.99.10.tar.gz) = 735615 bytes
-SHA1 (auth-home.patch) = 5af6aa64c81d4bf8b0bc0f7684a1c500198b981a
-Size (auth-home.patch) = 612 bytes
-SHA1 (bodystructure.patch) = f9a94981a4b8527001203725d22ac74f21968d57
-Size (bodystructure.patch) = 3010 bytes
+SHA1 (dovecot-0.99.10.4.tar.gz) = e4eabc78894e2c204d788521812497e021f45c08
+Size (dovecot-0.99.10.4.tar.gz) = 859856 bytes
+SHA1 (dovecot-crammd5-0.99.10.2.diff) = bd879993f2275bcafd9f6ae1e673114b0fbd82a2
+Size (dovecot-crammd5-0.99.10.2.diff) = 16476 bytes
 SHA1 (patch-aa) = 6ed31ba47883903e5a7b2fcb715432e0c3e8947c
-SHA1 (patch-ab) = 0aca5084186f7faa812351e83d1c9535248da2b0
-SHA1 (patch-ac) = 6593c335779aacd0bf285a4faf6411150d4acdcf
-SHA1 (patch-ad) = b96fe0aa1d6d0f846624802b37b72f7213568a87
+SHA1 (patch-ab) = 05efdd1f833cdf6a8df942f071c9961b31bd55e7
