@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2834 2003/07/19 18:53:24 jmmv Exp $
+$NetBSD: CHANGES,v 1.2835 2003/07/19 21:04:43 kristerw Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2867,3 +2867,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated apache to 1.3.28 [tron 2003-07-19]
 	Updated ap-ssl to 2.8.15 [tron 2003-07-19]
 	Added kopete-0.6.2 [jmmv 2003-07-19]
+	Updated xmame to 0.71.1 [kristerw 2003-07-19]
+	Updated xmess to 0.71.1 [kristerw 2003-07-19]
