@@ -1,0 +1,33 @@
+--- battalion.c.orig	Thu Jan 16 09:31:59 1997
++++ battalion.c	Sat Jul 25 08:58:02 1998
+@@ -2876,7 +2876,12 @@
+ 	    strcat(dataPath, "/");
+-
+-	strcpy(fullPath, dataPath);
+-	strcat(fullPath, "battalion.sho");
+-	roadFile = fopen(fullPath, "rb");
+ 	}
++    else {
++	strcat(dataPath, DATADIR);
++	if (dataPath[strlen(dataPath)-1] != '/')
++	    strcat(dataPath, "/");
++	}
++    strcpy(fullPath, dataPath);
++    strcat(fullPath, "battalion.sho");
++    roadFile = fopen(fullPath, "rb");
++
+ #endif
+@@ -2900,6 +2905,6 @@
+ 	    {
+-	    roadFile = fopen("./battalion.data/battalion.sho", "rb");
++	    roadFile = fopen(DATADIR "battalion.data/battalion.sho", "rb");
+ 	    if (roadFile != NULL)
+ 		{
+-		strcpy(dataPath, "./battalion.data/");
++		strcpy(dataPath, DATADIR "battalion.data/");
+ 		fclose(roadFile);
+@@ -2992,3 +2997,3 @@
+     else
+-	strcpy(scoredataPath, "/usr/tmp");
++	strcpy(scoredataPath, DATADIR);
+ 

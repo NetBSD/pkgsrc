@@ -1,0 +1,16 @@
+Battalion was a game written in 1994 on a Silicon Graphics Indy in GL for
+the IndiZone contest. This version also ran in the CAVE(tm) as a virtual
+reality game at the EVE 4 art show in May 1995. The GL version won 'best
+indy software' and is available on the Indizone3 CDROM. It was then
+converted to OpenGL (with several enhancements) and modified in late 1996
+to work with the Mesa graphics library. In 1997 it won the Hot Mix 17 game
+contest from SGI, and was availableon the Hot Mix 17 CDROM. 
+
+Here is the description of battalion from the Silicon Graphics homepage 
+in Japan. 
+                                                                        
+        Battalion wa 'kaiju ga bakuhatsu, hakai' wo kuri-kaesu game desu. 
+        Battalion is a game where 'A monster blows up, destroys' repeats. 
+... pretty much says it all ... 
+
+http://www.evl.uic.edu/aej/AndyBattalion.html
