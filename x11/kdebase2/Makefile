@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2001/11/13 21:10:45 jlam Exp $
+# $NetBSD: Makefile,v 1.29 2001/11/15 06:22:04 jlam Exp $
 
 DISTNAME=	kdebase-2.2.1
 CATEGORIES=	x11
@@ -45,6 +45,12 @@ CONFIGURE_ARGS+=	--with-motif-libraries="${BUILDLINK_DIR}/lib"
 .else
 CONFIGURE_ARGS+=	--without-motif
 .endif
+
+# Don't execute kappfinder_install at install-time.  This causes random
+# applications to be found which causes random .desktop files to be created
+# in the applnk directory.
+#
+CONFIGURE_ENV+=		RUN_KAPPFINDER=no
 
 PLIST_SRC+=		${PKGDIR}/PLIST
 
