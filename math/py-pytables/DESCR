@@ -1,0 +1,7 @@
+PyTables is a hierarchical database package designed to efficiently
+manage very large amounts of data. PyTables is built on top of the
+HDF5 library and the numarray package. It features an object-oriented
+interface that, combined with natural naming and C-code generated from
+Pyrex sources, makes it a fast, yet extremely easy-to-use tool for
+interactively saving and retrieving very large amounts of data.  It also
+provides flexible indexed access on disk to anywhere in the data.

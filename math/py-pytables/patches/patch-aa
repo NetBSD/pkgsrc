@@ -1,0 +1,11 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/04/22 15:17:08 drochner Exp $
+
+--- setup.py.orig	2004-04-22 17:03:28.000000000 +0200
++++ setup.py	2004-04-22 17:06:58.000000000 +0200
+@@ -551,5 +551,5 @@
+                                 runtime_library_dirs = rlib_dirs,
+                                 )],
+       cmdclass = cmdclass,
+-      scripts = ['utils/ptdump', 'utils/ptrepack'],
++      scripts = ['utils/ptdump' + sys.version[0:3], 'utils/ptrepack' + sys.version[0:3]],
+ )
