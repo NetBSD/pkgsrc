@@ -1,0 +1,25 @@
+$NetBSD: patch-ab,v 1.1 2004/01/11 20:31:44 jschauma Exp $
+
+--- format.C.orig	2004-01-11 15:24:46.000000000 -0500
++++ format.C	2004-01-11 15:28:14.000000000 -0500
+@@ -34,10 +34,9 @@
+  /***************************************************************************/
+ 
+ 
+-#include <strstream.h>
+-
+ #include <stdlib.h>
+ #include <ctype.h>
++#include <strstream>
+ #include <vector>
+ #include <map>
+ 
+@@ -374,7 +374,7 @@
+   case CUSTOM3:   bullet = custom3_bullet; break;
+   case ARABIC_NUMBERS:
+     {
+-      ostrstream oss;
++      std::ostrstream oss;
+       oss << number << '.' << std::ends;
+       bullet = oss.str();
+       oss.rdbuf()->freeze(0);
