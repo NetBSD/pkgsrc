@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2003/08/09 10:44:37 seb Exp $
+# $NetBSD: Makefile,v 1.16 2003/08/12 14:15:38 seb Exp $
 #
 
 DISTNAME=	binutils-2.14
@@ -14,6 +14,8 @@ GNU_CONFIGURE=		YES
 USE_BUILDLINK2=		YES
 USE_MAKEINFO=		YES
 USE_PKGLOCALEDIR=	YES
+
+TEXINFO_REQD=		4.0
 
 CONFIGURE_ARGS+=	--with-lib-path='/lib:/usr/lib'
 
