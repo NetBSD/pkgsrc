@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.37 2004/03/11 16:19:03 xtraeme Exp $
+# $NetBSD: Makefile,v 1.38 2005/02/11 21:59:18 reed Exp $
 #
 
 DISTNAME=	Xaw3d-1.5
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XCONTRIB:=widgets/Xaw3d/R6.3/}
 
@@ -36,4 +37,5 @@ post-install:
 .endif
 	cd ${PREFIX} && ${LS} lib/libXaw3d* >>${PLIST_SRC}
 
+.include "../../graphics/xpm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
