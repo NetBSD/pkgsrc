@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/04/14 21:43:47 jtb Exp $
+# $NetBSD: Makefile,v 1.4 2001/04/21 01:19:09 jtb Exp $
 
 DISTNAME=		pfthunix19
 PKGNAME=		pforth-19
@@ -18,29 +18,20 @@ post-extract:
 	${MKDIR} ${WRKSRC}/objects
 
 post-patch:
-	@for i in ${WRKSRC}/csrc/pf_main.c; do \
-		${SED} -e 's:@PREFIX@:${PREFIX}:g' \
-		< $$i > $$i.tmp && ${MV} -f $$i.tmp $$i; \
-	done
+	${MV} ${WRKSRC}/csrc/pf_main.c ${WRKSRC}/csrc/pf_main.c.dist
+	${SED} -e 's:@PREFIX@:${PREFIX}:g' ${WRKSRC}/csrc/pf_main.c.dist \
+	> ${WRKSRC}/csrc/pf_main.c
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/pforth ${PREFIX}/bin
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/pforth
 	${INSTALL_DATA} ${WRKSRC}/pforth.dic ${PREFIX}/lib/pforth
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/pforth
-	@for d in ${WRKSRC}/readme.txt ${WRKSRC}/docs/*; do \
-		c="${INSTALL_DATA} $$d ${PREFIX}/share/doc/pforth/"; \
-		${ECHO} $$c; $$c; \
-	done
+	${INSTALL_DATA} ${WRKSRC}/readme.txt ${WRKSRC}/docs/* 		\
+		${PREFIX}/share/doc/pforth/
 	${INSTALL_DATA_DIR} ${PREFIX}/share/pforth
-	@for f in ${WRKSRC}/*.fth; do \
-		c="${INSTALL_DATA} $$f ${PREFIX}/share/pforth/"; \
-		${ECHO} $$c; $$c; \
-	done
+	${INSTALL_DATA} ${WRKSRC}/*.fth ${PREFIX}/share/pforth/
 	${INSTALL_DATA_DIR} ${PREFIX}/share/pforth/utils
-	@for u in  ${WRKSRC}/utils/*.fth; do \
-		c="${INSTALL_DATA} $$u ${PREFIX}/share/pforth/utils/"; \
-		${ECHO} $$c; $$c; \
-	done
+	${INSTALL_DATA}  ${WRKSRC}/utils/*.fth ${PREFIX}/share/pforth/utils/
 
 .include "../../mk/bsd.pkg.mk"
