@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.49 2002/09/24 15:03:04 wiz Exp $
+$NetBSD: CHANGES,v 1.50 2002/09/24 17:18:26 abs Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -2956,3 +2956,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated pkglint to 3.34 [wiz 2002-09-24]
 	Updated libxslt to 1.0.20 [martti 2002-09-24]
 	Updated bbkeys to 0.8.5 [jschauma 2002-09-24]
+	Updated msudir to 0.12 [abs 2002-09-24]
