@@ -1,7 +1,9 @@
-# $NetBSD: buildlink2.mk,v 1.1.2.2 2002/06/24 06:01:05 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.1.2.3 2002/06/29 22:58:08 jlam Exp $
 
 .if !defined(BINUTILS_BUILDLINK2_MK)
 BINUTILS_BUILDLINK2_MK=	# defined
+
+.include "../../mk/bsd.prefs.mk"
 
 BUILDLINK_DEPENDS.binutils?=		binutils>=2.11.2
 BUILDLINK_PKGSRCDIR.binutils?=		../../devel/binutils
