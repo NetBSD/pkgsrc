@@ -1,0 +1,91 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/02/08 10:25:56 wiz Exp $
+
+--- Makefile.orig	Sun Dec 17 14:09:39 2000
++++ Makefile
+@@ -348,18 +348,18 @@
+ # ${CUSTOMHELPDIR}	where custom help files are installed.
+ # ${SCRIPTDIR}		where calc shell scripts are installed.
+ #
+-BINDIR= /usr/local/bin
++BINDIR= ${PREFIX}/bin
+ #BINDIR= /usr/bin
+ #BINDIR= /usr/contrib/bin
+ #
+-TOPDIR= /usr/local/lib
++TOPDIR= ${PREFIX}/lib
+ #TOPDIR= /usr/lib
+ #TOPDIR= /usr/libdata
+ #TOPDIR= /usr/contrib/lib
+ #
+ LIBDIR= ${TOPDIR}/calc
+ HELPDIR= ${LIBDIR}/help
+-INCDIR= /usr/local/include
++INCDIR= ${PREFIX}/include
+ INCDIRCALC= ${INCDIR}/calc
+ CUSTOMLIBDIR= ${LIBDIR}/custom
+ CUSTOMHELPDIR= ${HELPDIR}/custhelp
+@@ -369,7 +369,7 @@
+ #
+ # Use MANDIR= to disable installation of the calc man (source) page.
+ #
+-MANDIR=
++MANDIR= ${PREFIX}/man/man1
+ #MANDIR= /usr/local/man/man1
+ #MANDIR= /usr/man/man1
+ #MANDIR= /usr/share/man/man1
+@@ -380,7 +380,7 @@
+ #
+ # Use CATDIR= to disable installation of the calc cat (formatted) page.
+ #
+-CATDIR=
++CATDIR= ${PREFIX}/man/cat1
+ #CATDIR= /usr/local/man/cat1
+ #CATDIR= /usr/local/catman/cat1
+ #CATDIR= /usr/man/cat1
+@@ -399,8 +399,8 @@
+ #
+ # This is ignored if CATDIR is empty.
+ #
+-CATEXT= 1
+-#CATEXT= 0
++#CATEXT= 1
++CATEXT= 0
+ #CATEXT= l
+ 
+ # how to format a man page
+@@ -456,10 +456,10 @@
+ #
+ # If in doubt, set USE_READLINE, READLINE_LIB and READLINE_INCLUDE to nothing.
+ #
+-USE_READLINE=
+-#USE_READLINE= -DUSE_READLINE
++#USE_READLINE=
++USE_READLINE= -DUSE_READLINE
+ #
+-READLINE_LIB=
++READLINE_LIB= -ledit -ltermcap
+ #READLINE_LIB= -L/usr/gnu/lib -lreadline -lhistory
+ #READLINE_LIB= -lreadline -lhistory
+ #READLINE_LIB= -L/usr/local/lib -lreadline -lhistory
+@@ -470,10 +470,10 @@
+ 
+ # If $PAGER is not set, use this program to display a help file
+ #
+-CALCPAGER= more
++#CALCPAGER= more
+ #CALCPAGER= pg
+ #CALCPAGER= cat
+-#CALCPAGER= less
++CALCPAGER= less
+ 
+ # Debug/Optimize options for ${CC} and ${LCC}
+ #
+@@ -489,7 +489,7 @@
+ #
+ #DEBUG= -O2
+ #DEBUG= -O2 -g
+-DEBUG= -O2 -g3
++#DEBUG= -O2 -g3
+ #DEBUG= -O2 -ipa
+ #DEBUG= -O2 -g3 -ipa
+ #
