@@ -1,16 +1,18 @@
-# $NetBSD: Makefile,v 1.2 2002/03/13 17:38:02 fredb Exp $
+# $NetBSD: Makefile,v 1.3 2002/03/19 17:54:35 drochner Exp $
 #
 
 .include "../qt3-libs/Makefile.common"
 
 PKGNAME=		qt3-libs-${QTVERSION}
-PKGREVISION=		1
 COMMENT=		C++ X GUI toolkit
 
 USE_BUILDLINK_ONLY=	yes
 BUILDLINK_QTDIR=	${WRKSRC}
 
 ALL_TARGET=		sub-src
+
+post-extract:
+	${RM} -f ${WRKSRC}/include/qt_windows.h
 
 do-install:
 	${INSTALL_DATA_DIR} ${QTPREFIX}

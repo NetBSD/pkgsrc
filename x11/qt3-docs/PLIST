@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/01/07 08:10:44 skrll Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/03/19 17:54:35 drochner Exp $
 qt3/doc/html/README
 qt3/doc/html/README.QT
 qt3/doc/html/aboutqt.html
+qt3/doc/html/abstract-connections.png
 qt3/doc/html/abstractwidgets.html
 qt3/doc/html/accelerators.html
 qt3/doc/html/aclock-example.html
@@ -31,6 +32,7 @@ qt3/doc/html/buttongroup-w.png
 qt3/doc/html/buttongroups-example.html
 qt3/doc/html/buyhowto.html
 qt3/doc/html/callbacks.png
+qt3/doc/html/canvas-example.html
 qt3/doc/html/canvas.html
 qt3/doc/html/checklists-example.html
 qt3/doc/html/classchart.html
@@ -38,6 +40,7 @@ qt3/doc/html/classes.html
 qt3/doc/html/clientserver-example.html
 qt3/doc/html/collection.html
 qt3/doc/html/commonproblems.html
+qt3/doc/html/concrete-connections.png
 qt3/doc/html/coordsys.html
 qt3/doc/html/coordsys.png
 qt3/doc/html/credits.html
@@ -52,13 +55,14 @@ qt3/doc/html/datastreamformat.html
 qt3/doc/html/datetimewidgets.png
 qt3/doc/html/dclock-example.html
 qt3/doc/html/debug.html
-qt3/doc/html/design.html
+qt3/doc/html/demo-example.html
 qt3/doc/html/designer-manual-1.html
 qt3/doc/html/designer-manual-10.html
 qt3/doc/html/designer-manual-11.html
 qt3/doc/html/designer-manual-12.html
 qt3/doc/html/designer-manual-13.html
 qt3/doc/html/designer-manual-14.html
+qt3/doc/html/designer-manual-15.html
 qt3/doc/html/designer-manual-2.html
 qt3/doc/html/designer-manual-3.html
 qt3/doc/html/designer-manual-4.html
@@ -79,6 +83,7 @@ qt3/doc/html/dnd.html
 qt3/doc/html/doc.png
 qt3/doc/html/doneandnext.png
 qt3/doc/html/draganddrop.html
+qt3/doc/html/dragdrop-example.html
 qt3/doc/html/drawdemo-example.html
 qt3/doc/html/drawlines-example.html
 qt3/doc/html/edit-dbtable-dialog.png
@@ -138,6 +143,7 @@ qt3/doc/html/hello-example.html
 qt3/doc/html/helpsystem.html
 qt3/doc/html/helpviewer-example.html
 qt3/doc/html/hierarchy.html
+qt3/doc/html/how-to-learn-qt.html
 qt3/doc/html/httpd-example.html
 qt3/doc/html/i18n-example.html
 qt3/doc/html/i18n.html
@@ -180,6 +186,7 @@ qt3/doc/html/mainlyQt-editor-example.html
 qt3/doc/html/mainlyXt-editor-example.html
 qt3/doc/html/mainwindow-m.png
 qt3/doc/html/mainwindow-w.png
+qt3/doc/html/makeqpf.html
 qt3/doc/html/mdi-example.html
 qt3/doc/html/menu-example.html
 qt3/doc/html/menubar.png
@@ -200,6 +207,15 @@ qt3/doc/html/nsplugin.html
 qt3/doc/html/object.html
 qt3/doc/html/objectmodel.html
 qt3/doc/html/objecttrees.html
+qt3/doc/html/opengl-box-example.html
+qt3/doc/html/opengl-examples.html
+qt3/doc/html/opengl-gear-example.html
+qt3/doc/html/opengl-overlay-example.html
+qt3/doc/html/opengl-overlay-x11-example.html
+qt3/doc/html/opengl-pixmap-example.html
+qt3/doc/html/opengl-sharedbox-example.html
+qt3/doc/html/opengl-texture-example.html
+qt3/doc/html/opengl-x11-overlays.html
 qt3/doc/html/opengl.html
 qt3/doc/html/organizers.html
 qt3/doc/html/outliner-example.html
@@ -399,6 +415,42 @@ qt3/doc/html/qcustomevent.html
 qt3/doc/html/qcustommenuitem-members.html
 qt3/doc/html/qcustommenuitem.html
 qt3/doc/html/qd-buttonstoolbuttons3.png
+qt3/doc/html/qd-chapdialog-previewing2.png
+qt3/doc/html/qd-chapdialog-signalsandslots.png
+qt3/doc/html/qd-chapdialog-taborder.png
+qt3/doc/html/qd-chapdialogs-addingwidgets.png
+qt3/doc/html/qd-chapdialogs-creatingmulticlipform3.png
+qt3/doc/html/qd-chapdialogs-creatingnewprojects.png
+qt3/doc/html/qd-chapdialogs-layoutwidgets-part2-stepone-twogroups.png
+qt3/doc/html/qd-chapdialogs-layoutwidgets-part2-steptwo-layoutform.png
+qt3/doc/html/qd-chapdialogs-layoutwidgets-part3-stepfive-layoutform.png
+qt3/doc/html/qd-chapdialogs-layoutwidgets-part3-steptwo-addspacer.png
+qt3/doc/html/qd-chapdialogs-layoutwidgets-stepone-after.png
+qt3/doc/html/qd-chapdialogs-layoutwidgets-stepthree-groupedwidgets.png
+qt3/doc/html/qd-chapdialogs-layoutwidgets-stepthree-rubberband.png
+qt3/doc/html/qd-chapdialogs-objectexplorer.png
+qt3/doc/html/qd-chapdialogs-propertyeditor.png
+qt3/doc/html/qd-chapmainwin-actioneditor1.png
+qt3/doc/html/qd-chapmainwin-actioneditor2.png
+qt3/doc/html/qd-chapmainwin-actiongroup.png
+qt3/doc/html/qd-chapmainwin-addtextedit.png
+qt3/doc/html/qd-chapmainwin-addwidg.png
+qt3/doc/html/qd-chapmainwin-alignactiongroup.png
+qt3/doc/html/qd-chapmainwin-connaction.png
+qt3/doc/html/qd-chapmainwin-connalign1.png
+qt3/doc/html/qd-chapmainwin-connfontsize.png
+qt3/doc/html/qd-chapmainwin-deleteaction.png
+qt3/doc/html/qd-chapmainwin-dragtomenu.png
+qt3/doc/html/qd-chapmainwin-dropinmenu1.png
+qt3/doc/html/qd-chapmainwin-mainwinwiz1.png
+qt3/doc/html/qd-chapmainwin-mainwinwiz2.png
+qt3/doc/html/qd-chapmainwin-mainwinwiz3.png
+qt3/doc/html/qd-chapmainwin-namemenu.png
+qt3/doc/html/qd-chapmainwin-previewing.png
+qt3/doc/html/qd-chapmainwin-propeditnewact.png
+qt3/doc/html/qd-chapmainwin-toolbaractiongroup1.png
+qt3/doc/html/qd-chapmainwin-toolbarhandle.png
+qt3/doc/html/qd-chapmainwin-toolbarhandle2.png
 qt3/doc/html/qd-chooseanimage.png
 qt3/doc/html/qd-chooseapixmap.png
 qt3/doc/html/qd-chooseimages.png
@@ -539,6 +591,9 @@ qt3/doc/html/qdir-example.html
 qt3/doc/html/qdir-h.html
 qt3/doc/html/qdir-members.html
 qt3/doc/html/qdir.html
+qt3/doc/html/qdirectpainter-members.html
+qt3/doc/html/qdirectpainter.html
+qt3/doc/html/qdirectpainter_qws-h.html
 qt3/doc/html/qdns-h.html
 qt3/doc/html/qdns-members.html
 qt3/doc/html/qdns.html
@@ -712,6 +767,7 @@ qt3/doc/html/qhbox.html
 qt3/doc/html/qhbox.png
 qt3/doc/html/qhboxlayout-members.html
 qt3/doc/html/qhboxlayout.html
+qt3/doc/html/qhboxlayout.png
 qt3/doc/html/qhbuttongroup-h.html
 qt3/doc/html/qhbuttongroup-members.html
 qt3/doc/html/qhbuttongroup.html
@@ -1307,6 +1363,7 @@ qt3/doc/html/qtimer-members.html
 qt3/doc/html/qtimer.html
 qt3/doc/html/qtimerevent-members.html
 qt3/doc/html/qtimerevent.html
+qt3/doc/html/qtl-qvaluelist-example.html
 qt3/doc/html/qtl.html
 qt3/doc/html/qtlogo.png
 qt3/doc/html/qtmultilineedit-h.html
@@ -1491,7 +1548,10 @@ qt3/doc/html/simple-application-example.html
 qt3/doc/html/simple-application.html
 qt3/doc/html/simple-font-demo-example.html
 qt3/doc/html/simple-qfont-demo-walkthrough.html
+qt3/doc/html/simple_dd-example.html
+qt3/doc/html/small-table-example-example.html
 qt3/doc/html/smooth.png
+qt3/doc/html/sound-example.html
 qt3/doc/html/splitter-example.html
 qt3/doc/html/splitter-views-m.png
 qt3/doc/html/splitter-views-w.png
@@ -1532,6 +1592,7 @@ qt3/doc/html/sql-overview-table4-main-h.html
 qt3/doc/html/sql-overview-update-main-cpp.html
 qt3/doc/html/sql.html
 qt3/doc/html/sqltable-example.html
+qt3/doc/html/statistics-example.html
 qt3/doc/html/step-by-step-examples.html
 qt3/doc/html/t1.html
 qt3/doc/html/t1.png
@@ -1619,12 +1680,14 @@ qt3/doc/html/table-examples.html
 qt3/doc/html/table-small-table-demo-main-cpp.html
 qt3/doc/html/table-statistics-statistics-cpp.html
 qt3/doc/html/table.html
+qt3/doc/html/tablet-example.html
 qt3/doc/html/tagreader-example.html
 qt3/doc/html/tagreader-with-features-example.html
 qt3/doc/html/templates.html
 qt3/doc/html/test.png
 qt3/doc/html/tetrix-example.html
 qt3/doc/html/text.html
+qt3/doc/html/textedit-example.html
 qt3/doc/html/themes-example.html
 qt3/doc/html/thread.html
 qt3/doc/html/threads.html
@@ -1634,6 +1697,7 @@ qt3/doc/html/timers.html
 qt3/doc/html/titleindex
 qt3/doc/html/toggleaction-example.html
 qt3/doc/html/toolbar.png
+qt3/doc/html/tools-list.html
 qt3/doc/html/tools.html
 qt3/doc/html/tooltip-example.html
 qt3/doc/html/trivial-nsplugin-example.html
@@ -1651,6 +1715,7 @@ qt3/doc/html/tt3_11_en.png
 qt3/doc/html/tt3_11_pt.png
 qt3/doc/html/tutorial.html
 qt3/doc/html/tutorial.png
+qt3/doc/html/uic.html
 qt3/doc/html/unicode.html
 qt3/doc/html/unsmooth.png
 qt3/doc/html/validateaccelerators.png
@@ -1658,6 +1723,7 @@ qt3/doc/html/validatephrases.png
 qt3/doc/html/validatepunctuation.png
 qt3/doc/html/whatsthis
 qt3/doc/html/whatsthis.png
+qt3/doc/html/widgets-example.html
 qt3/doc/html/winsystem.html
 qt3/doc/html/wizard-example.html
 qt3/doc/html/wizard-wizard-cpp.html
@@ -1745,6 +1811,7 @@ qt3/man/man3/QDialog.3
 qt3/man/man3/QDict.3
 qt3/man/man3/QDictIterator.3
 qt3/man/man3/QDir.3
+qt3/man/man3/QDirectPainter.3
 qt3/man/man3/QDns.3
 qt3/man/man3/QDockArea.3
 qt3/man/man3/QDockWindow.3
@@ -2119,6 +2186,7 @@ qt3/man/man3/qdialog.3
 qt3/man/man3/qdict.3
 qt3/man/man3/qdictiterator.3
 qt3/man/man3/qdir.3
+qt3/man/man3/qdirectpainter.3
 qt3/man/man3/qdns.3
 qt3/man/man3/qdockarea.3
 qt3/man/man3/qdockwindow.3
