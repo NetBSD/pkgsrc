@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.19 2005/03/06 16:45:47 chris Exp $
+$NetBSD: distinfo,v 1.20 2005/03/12 16:03:30 chris Exp $
 
-SHA1 (sylpheed-claws-1.0.1.tar.bz2) = c445b01a252e094812be63237275c9583a6f3d2f
-RMD160 (sylpheed-claws-1.0.1.tar.bz2) = 1e0596c736355e80396f6c05081bbd3a9d0032d1
-Size (sylpheed-claws-1.0.1.tar.bz2) = 3084322 bytes
+SHA1 (sylpheed-claws-1.0.3.tar.bz2) = c0510225e4d75953ffdec860d471c1534077aa5d
+RMD160 (sylpheed-claws-1.0.3.tar.bz2) = 77f9aecd434c08fb326940117be60128c867f2ed
+Size (sylpheed-claws-1.0.3.tar.bz2) = 3087021 bytes
 SHA1 (patch-aa) = f663f67f16cb1f1662a57a84d88c1a6ab386b215
