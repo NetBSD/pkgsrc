@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2002/12/19 12:16:17 grant Exp $
+# $NetBSD: Makefile,v 1.62 2002/12/30 18:05:11 sommerfeld Exp $
 #
 
 COMMENT=	communication programs
@@ -62,6 +62,7 @@ SUBDIR+=	tirc
 SUBDIR+=	tkicb
 SUBDIR+=	tkirc
 SUBDIR+=	tkirc2
+SUBDIR+=	tzc
 SUBDIR+=	vicq
 SUBDIR+=	xaric
 SUBDIR+=	xchat
@@ -70,6 +71,8 @@ SUBDIR+=	ymessenger
 SUBDIR+=	ysm
 SUBDIR+=	zenicb
 SUBDIR+=	zenirc
+SUBDIR+=	zephyr-current
+SUBDIR+=	zephyr-mode
 SUBDIR+=	zircon
 
 .include "../mk/bsd.pkg.subdir.mk"
