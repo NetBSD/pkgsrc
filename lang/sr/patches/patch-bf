@@ -1,9 +1,9 @@
-$NetBSD: patch-bf,v 1.1 2005/03/09 20:38:26 is Exp $
+$NetBSD: patch-bf,v 1.2 2005/03/11 23:24:14 is Exp $
 
---- /dev/null	2005-03-09 09:36:06.000000000 +0100
+--- vsuite/quick/ptrstr/Script.orig	2005-03-11 09:46:25.000000000 +0100
 +++ vsuite/quick/ptrstr/Script
 @@ -0,0 +1,4 @@
-+#  ignatios  Wed Mar  9 09:17:45 CET 2005
-+0 sr /usr/home/is/srtest/pointer.sr
-+0 run
++#  ignatios  Fri Mar 11 10:07:24 CET 2005
++0 sr pointer.sr
++1 run
 +0 rm -rf Interfaces core *.out
