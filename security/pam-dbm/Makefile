@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/09/05 10:01:19 grant Exp $
+# $NetBSD: Makefile,v 1.2 2004/09/05 10:22:12 grant Exp $
 #
 
 DISTNAME=		pam_dbm-0.2
+PKGNAME=		pam-dbm-0.2
 CATEGORIES=		security
 MASTER_SITES=		ftp://ftp.feep.net/pub/software/PAM/pam_dbm/
 
