@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7525 2004/10/22 18:25:07 jmmv Exp $
+$NetBSD: CHANGES,v 1.7526 2004/10/22 18:30:42 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4817,3 +4817,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated nail to 11.12 [cjep 2004-10-22]
 	Updated evolution-data-server to 1.0.2nb2 [jmmv 2004-10-22]
 	Updated kmymoney2 to 0.6.2 [jdolecek 2004-10-22]
+	Updated aumix to 2.8nb6 [jmmv 2004-10-22]
+	Added aumix-gtk-2.8 [jmmv 2004-10-22]
