@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/03 08:17:21 wiz Exp $
+bin/playmus
+bin/playwave
+include/SDL/SDL_mixer.h
+lib/libSDL_mixer-1.2.so
+lib/libSDL_mixer-1.2.so.2
+lib/libSDL_mixer-1.2.so.2.2
+lib/libSDL_mixer.a
+lib/libSDL_mixer.la
+lib/libSDL_mixer.so
