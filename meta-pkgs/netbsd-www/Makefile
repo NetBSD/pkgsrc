@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/02/28 11:02:10 grant Exp $
+# $NetBSD: Makefile,v 1.7 2004/02/28 11:37:56 grant Exp $
 #
 
 DISTNAME=	netbsd-www-1.0
@@ -14,6 +14,7 @@ DEPENDS+=	libxslt>=1.0.20:../../textproc/libxslt
 DEPENDS+=	ImageMagick>=5.5.7.11nb1:../../graphics/ImageMagick
 DEPENDS+=	xearth>=1.1:../../x11/xearth
 DEPENDS+=	perl-[0-9]*:../../lang/perl5
+DEPENDS+=	opensp>=1.1:../../textproc/opensp
 
 EXTRACT_ONLY=	# defined
 NO_CHECKSUM=	# defined
