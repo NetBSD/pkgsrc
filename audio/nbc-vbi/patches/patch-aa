@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/04/22 08:19:54 tron Exp $
+$NetBSD: patch-aa,v 1.2 2001/04/22 09:59:33 tron Exp $
 
 --- Makefile.orig	Sun Oct 29 14:03:25 2000
-+++ Makefile	Sun Apr 22 10:17:35 2001
++++ Makefile	Sun Apr 22 11:55:45 2001
 @@ -2,7 +2,7 @@
  MP3DIR=mp3
  COVERDIR=covers
