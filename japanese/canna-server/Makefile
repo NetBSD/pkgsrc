@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2000/12/15 03:27:04 itojun Exp $
+# $NetBSD: Makefile,v 1.8 2001/01/26 05:21:44 hubertf Exp $
 
 DISTNAME=	Canna35b2
 PKGNAME=	Canna-server-3.5b2
@@ -38,7 +38,7 @@ PLIST_SUBST=	CANNAOWNER=${CANNAOWNER} CANNAGROUP=${CANNAGROUP} \
 		CANNA_SPOOL=${CANNA_SPOOL} CANNA_MODE=${CANNA_MODE} \
 		DICT_DIR=${DICT_DIR} PREFIX=${PREFIX}
 
-STARTUP_SCRIPT=	etc/rc.d/canna.sh
+STARTUP_SCRIPT=	etc/rc.d/canna
 STARTUP_SCRIPT_SRC=${WRKDIR}/STARTUP
 
 INSTALL_TARGET=	instserver instclient
@@ -54,12 +54,12 @@ do-configure:
 	@(cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${XMKMF})
 
 post-build:
-	@${ECHO} '#!/bin/sh' > ${STARTUP_SCRIPT_SRC}
-	@${ECHO} 'canna=${PREFIX}/sbin/cannaserver' >> ${STARTUP_SCRIPT_SRC}
-	@${ECHO} 'if [ -f $$canna ]; then' >> ${STARTUP_SCRIPT_SRC}
-	@${ECHO} "    echo -n ' Canna'" >> ${STARTUP_SCRIPT_SRC}
-	@${ECHO} '     $$canna' >> ${STARTUP_SCRIPT_SRC}
-	@${ECHO} "fi" >> ${STARTUP_SCRIPT_SRC}
+	@${ECHO} '#!/bin/sh'				 > ${STARTUP_SCRIPT_SRC}
+	@${ECHO} 'canna=${PREFIX}/sbin/cannaserver'	>> ${STARTUP_SCRIPT_SRC}
+	@${ECHO} 'if [ -f $$canna ]; then'		>> ${STARTUP_SCRIPT_SRC}
+	@${ECHO} "    echo -n ' Canna'"			>> ${STARTUP_SCRIPT_SRC}
+	@${ECHO} '     $$canna'				>> ${STARTUP_SCRIPT_SRC}
+	@${ECHO} "fi"					>> ${STARTUP_SCRIPT_SRC}
 
 post-install:
 	@${SH} ${PKGDIR}/INSTALL ${PKGNAME} POST-INSTALL
