@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2004/02/09 18:47:37 jmmv Exp $
+# $NetBSD: Makefile,v 1.23 2004/02/11 06:22:08 xtraeme Exp $
 #
 
 .include "Makefile.common"
@@ -8,13 +8,13 @@ PKGREVISION=		6
 
 CONFIGURE_ARGS+=	--disable-pixbuf-loader
 
-.include "../../graphics/freetype2/buildlink2.mk"
-.include "../../graphics/libart2/buildlink2.mk"
-.include "../../textproc/libxml2/buildlink2.mk"
-.include "../../devel/glib2/buildlink2.mk"
-.include "../../devel/libgsf/buildlink2.mk"
-.include "../../devel/pango/buildlink2.mk"
-.include "../../devel/pkgconfig/buildlink2.mk"
-.include "../../devel/popt/buildlink2.mk"
-.include "../../textproc/libcroco/buildlink2.mk"
+.include "../../graphics/freetype2/buildlink3.mk"
+.include "../../graphics/libart2/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/libgsf/buildlink3.mk"
+.include "../../devel/pango/buildlink3.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/popt/buildlink3.mk"
+.include "../../textproc/libcroco/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
