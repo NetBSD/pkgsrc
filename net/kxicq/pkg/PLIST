@@ -1,0 +1,84 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/07/06 16:51:23 tron Exp $
+bin/kxicq
+lib/kxicq/plugins/libesound.a
+lib/kxicq/plugins/libesound.la
+lib/kxicq/plugins/libesound.so.0.1
+lib/kxicq/plugins/liblastOnline.a
+lib/kxicq/plugins/liblastOnline.la
+lib/kxicq/plugins/liblastOnline.so.0.1
+lib/kxicq/plugins/librussianConverter.a
+lib/kxicq/plugins/librussianConverter.la
+lib/kxicq/plugins/librussianConverter.so.0.1
+share/doc/kde/HTML/en/kxicq/index-1.html
+share/doc/kde/HTML/en/kxicq/index-2.html
+share/doc/kde/HTML/en/kxicq/index-3.html
+share/doc/kde/HTML/en/kxicq/index-4.html
+share/doc/kde/HTML/en/kxicq/index-5.html
+share/doc/kde/HTML/en/kxicq/index-6.html
+share/doc/kde/HTML/en/kxicq/index-7.html
+share/doc/kde/HTML/en/kxicq/index.html
+share/doc/kde/HTML/en/kxicq/index.sgml
+share/doc/kde/HTML/en/kxicq/layout_default.gif
+share/doc/kde/HTML/en/kxicq/registration-1.html
+share/doc/kde/HTML/en/kxicq/registration-2-KXicq.html
+share/doc/kde/HTML/en/kxicq/registration-3.html
+share/doc/kde/HTML/en/kxicq/registration-4.html
+share/doc/kde/HTML/en/kxicq/registration-5.html
+share/kde/applnk/Applications/kxicq.kdelnk
+share/kde/apps/kxicq/icons/default/available.xpm
+share/kde/apps/kxicq/icons/default/away.xpm
+share/kde/apps/kxicq/icons/default/dnd.xpm
+share/kde/apps/kxicq/icons/default/exit.xpm
+share/kde/apps/kxicq/icons/default/ffc.xpm
+share/kde/apps/kxicq/icons/default/history.xpm
+share/kde/apps/kxicq/icons/default/invisible.xpm
+share/kde/apps/kxicq/icons/default/na.xpm
+share/kde/apps/kxicq/icons/default/newmsg.xpm
+share/kde/apps/kxicq/icons/default/occupied.xpm
+share/kde/apps/kxicq/icons/default/offline.xpm
+share/kde/apps/kxicq/icons/default/online.xpm
+share/kde/apps/kxicq/icons/default/selectcolor.xpm
+share/kde/apps/kxicq/icons/default/selecttext.xpm
+share/kde/apps/kxicq/icons/default/send.xpm
+share/kde/apps/kxicq/icons/icq/available.xpm
+share/kde/apps/kxicq/icons/icq/away.xpm
+share/kde/apps/kxicq/icons/icq/dnd.xpm
+share/kde/apps/kxicq/icons/icq/exit.xpm
+share/kde/apps/kxicq/icons/icq/ffc.xpm
+share/kde/apps/kxicq/icons/icq/history.xpm
+share/kde/apps/kxicq/icons/icq/invisible.xpm
+share/kde/apps/kxicq/icons/icq/na.xpm
+share/kde/apps/kxicq/icons/icq/newmsg.xpm
+share/kde/apps/kxicq/icons/icq/occupied.xpm
+share/kde/apps/kxicq/icons/icq/offline.xpm
+share/kde/apps/kxicq/icons/icq/online.xpm
+share/kde/apps/kxicq/icons/icq/selectcolor.xpm
+share/kde/apps/kxicq/icons/icq/selecttext.xpm
+share/kde/apps/kxicq/icons/icq/send.xpm
+share/kde/apps/kxicq/pics/startlogo.bmp
+share/kde/apps/kxicq/skins/computer/Frame.xpm
+share/kde/apps/kxicq/skins/computer/MenuButtonDown.xpm
+share/kde/apps/kxicq/skins/computer/MenuButtonUp.xpm
+share/kde/apps/kxicq/skins/computer/computer.kxskin
+share/kde/apps/kxicq/skins/computer/field.xpm
+share/kde/apps/kxicq/utils/pine.kxutil
+share/kde/apps/kxicq/utils/ping.kxutil
+share/kde/apps/kxicq/wavs/message.wav
+share/kde/locale/de/LC_MESSAGES/kxicq.mo
+share/kde/locale/hr/LC_MESSAGES/kxicq.mo
+share/kde/locale/it/LC_MESSAGES/kxicq.mo
+share/kde/locale/ja/LC_MESSAGES/kxicq.mo
+share/kde/locale/nl/LC_MESSAGES/kxicq.mo
+share/kde/locale/sv/LC_MESSAGES/kxicq.mo
+@dirrm share/kde/apps/kxicq/wavs
+@dirrm share/kde/apps/kxicq/utils
+@dirrm share/kde/apps/kxicq/skins/computer
+@dirrm share/kde/apps/kxicq/skins
+@dirrm share/kde/apps/kxicq/pics
+@dirrm share/kde/apps/kxicq/icons/icq
+@dirrm share/kde/apps/kxicq/icons/default
+@dirrm share/kde/apps/kxicq/icons
+@dirrm share/kde/apps/kxicq
+@dirrm share/doc/kde/HTML/en/kxicq
+@dirrm lib/kxicq/plugins
+@dirrm lib/kxicq
