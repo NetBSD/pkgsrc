@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.86 2003/09/18 23:43:37 grant Exp $
+# $NetBSD: Makefile,v 1.87 2003/09/23 07:44:48 grant Exp $
 
 # Notes to package maintainers:
 #
@@ -19,6 +19,10 @@ COMMENT=		Package installation and administration tools
 
 GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--with-pkgdbdir=${PKG_DBDIR}
+CONFIGURE_ARGS+=	--with-ftp=${FETCH_CMD}
+CONFIGURE_ARGS+=	--with-mtree=${MTREE}
+CONFIGURE_ARGS+=	--with-pax=${PAX}
+CONFIGURE_ARGS+=	--with-tar=${TAR}
 
 NO_PKGTOOLS_REQD_CHECK=	# defined
 NO_BUILDLINK=		# defined
