@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3483 2003/09/22 20:32:02 jmmv Exp $
+$NetBSD: CHANGES,v 1.3484 2003/09/22 21:00:40 hubertf Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3880,3 +3880,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated jove to 4.16.0.63 [jmmv 2003-09-22]
 	Added jchkmail-1.3.1a [manu 2003-09-22]
 	Updated evilwm to 0.99.15nb1 [jmmv 2003-09-22]
+	Updated screen to 4.0.1 [hubertf 2003-09-22]
