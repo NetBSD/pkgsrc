@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2003/06/11 20:50:51 abs Exp $
+# $NetBSD: Makefile,v 1.39 2003/06/13 09:35:47 abs Exp $
 
 PKGNAME=		${DISTNAME:S/-/-server-/}
 PKGREVISION=		3
@@ -28,7 +28,7 @@ ONLY_FOR_PLATFORM+=	NetBSD-*-*
 CONFIGURE_ARGS+=	--with-mit-threads
 
 # platforms on which included mit-pthreads is usable
-ONLY_FOR_PLATFORM+=	NetBSD-*-alpha NetBSD-arm NetBSD-*-arm32	\
+ONLY_FOR_PLATFORM+=	NetBSD-*-alpha NetBSD-*-arm NetBSD-*-arm32	\
 			NetBSD-*-i386 NetBSD-*-sparc NetBSD-*-m68k	\
 			NetBSD-*-powerpc
 .  endif
