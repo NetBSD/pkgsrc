@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/06/03 06:49:59 tron Exp $
+# $NetBSD: Makefile,v 1.2 2001/06/04 18:58:33 tron Exp $
 
 DISTNAME=		mutt-1.3.18i
 CATEGORIES=		mail
-MASTER_SITES=		ftp://ftp.mutt.org/pub/mutt/snapshots/
+MASTER_SITES=		ftp://ftp.mutt.org/pub/mutt/devel/
 
 MAINTAINER=		tron@netbsd.org
 HOMEPAGE=		http://www.mutt.org/
