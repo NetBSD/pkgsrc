@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2004/04/13 13:50:05 adam Exp $
+# $NetBSD: Makefile,v 1.16 2004/06/02 22:06:01 recht Exp $
 #
 
 DISTNAME=	ngrep-1.42
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ngrep/}
 EXTRACT_SUFX=	.tar.bz2
@@ -18,6 +19,10 @@ CONFIGURE_ARGS+=	--includedir=${BUILDLINK_PREFIX.libpcap}/include
 ALL_TARGET=		ngrep
 
 .include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} = "FreeBSD"
+CONFIGURE_ARGS+=	--disable-pcap-restart
+.endif
 
 .if ${OPSYS} == "SunOS" || ${OPSYS} == "Linux"
 do-configure:
