@@ -1,3 +1,5 @@
+$NetBSD: patch-ak,v 1.2 1999/10/28 02:40:24 hubertf Exp $
+
 --- common/configure.orig	Mon Jun 21 12:53:35 1999
 +++ common/configure	Sat Oct  2 21:51:43 1999
 @@ -53,7 +53,7 @@

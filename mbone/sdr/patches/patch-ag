@@ -1,3 +1,5 @@
+$NetBSD: patch-ag,v 1.6 1999/10/28 02:40:24 hubertf Exp $
+
 --- common/config_unix.h.orig	Sat Oct  2 20:58:55 1999
 +++ common/config_unix.h	Sat Oct  2 20:58:28 1999
 @@ -73,7 +73,7 @@
