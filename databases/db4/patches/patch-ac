@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.1 2003/12/08 23:15:05 seb Exp $
+$NetBSD: patch-ac,v 1.2 2004/11/10 15:51:23 jlam Exp $
 
---- ../hmac/sha1.c.orig	2002-04-09 13:40:36.000000000 +0000
-+++ ../hmac/sha1.c
+--- hmac/sha1.c.orig	2002-04-09 13:40:36.000000000 +0000
++++ hmac/sha1.c
 @@ -102,6 +102,63 @@ A million repetitions of "a"
  #define R3(v,w,x,y,z,i) z+=(((w|x)&y)|(w&x))+blk(i)+0x8F1BBCDC+rol(v,5);w=rol(w,30);
  #define R4(v,w,x,y,z,i) z+=(w^x^y)+blk(i)+0xCA62C1D6+rol(v,5);w=rol(w,30);

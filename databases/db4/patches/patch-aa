@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.5 2004/06/28 22:11:38 jlam Exp $
+$NetBSD: patch-aa,v 1.6 2004/11/10 15:51:23 jlam Exp $
 
---- ../dist/Makefile.in.orig	Fri Nov 28 13:50:06 2003
-+++ ../dist/Makefile.in
+--- dist/Makefile.in.orig	Fri Nov 28 13:50:06 2003
++++ dist/Makefile.in
 @@ -11,7 +11,7 @@ exec_prefix=@exec_prefix@
  bindir=	@bindir@
  includedir=@includedir@

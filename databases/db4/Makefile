@@ -1,10 +1,13 @@
-# $NetBSD: Makefile,v 1.24 2004/11/05 09:24:39 grant Exp $
+# $NetBSD: Makefile,v 1.25 2004/11/10 15:51:23 jlam Exp $
 
 DISTNAME=		db-4.2.52
 PKGNAME=		${DISTNAME:S/db/db4/}
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		databases
 MASTER_SITES=		http://www.sleepycat.com/update/snapshot/
+
+PATCHFILES=		patch.4.2.52.1 patch.4.2.52.2
+PATCH_SITES=		http://www.sleepycat.com/update/4.2.52/
 
 MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.sleepycat.com/
@@ -12,14 +15,13 @@ COMMENT=		Berkeley DB version 4 from Sleepycat Software
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-WRKSRC=			${WRKDIR}/${DISTNAME}/build_unix
 USE_BUILDLINK3=		yes
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
+CONFIGURE_DIRS=		${WRKSRC}/build_unix
+BUILD_DIRS=		${CONFIGURE_DIRS}
 CONFIGURE_SCRIPT=	../dist/configure
-CONFIG_SUB_OVERRIDE=	${WRKDIR}/${DISTNAME}/dist/config.sub
-CONFIG_GUESS_OVERRIDE=	${WRKDIR}/${DISTNAME}/dist/config.guess
 
 CONFIGURE_ARGS+=	--enable-cxx
 CONFIGURE_ARGS+=	--enable-rpc
