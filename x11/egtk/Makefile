@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/02/17 17:06:18 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2001/05/19 03:56:41 jlam Exp $
 #
 
 DISTNAME=	eGTK_0.3.4
@@ -18,9 +18,9 @@ USE_X11=	yes
 WRKSRC=		${WRKDIR}/eGTK
 
 post-extract:
-	${FIND} ${WRKSRC} -type d -name "CVS" -print0 | xargs -0 ${RM} -rf
-	${FIND} ${WRKSRC} -type d -name "ise" -print0 | xargs -0 ${RM} -rf
-	${FIND} ${WRKSRC} -type f -name "*.ace" -print0 | xargs -0 ${RM} -f
+	${FIND} ${WRKSRC} -type d -name "CVS" -print0 | ${XARGS} -0 ${RM} -rf
+	${FIND} ${WRKSRC} -type d -name "ise" -print0 | ${XARGS} -0 ${RM} -rf
+	${FIND} ${WRKSRC} -type f -name "*.ace" -print0 | ${XARGS} -0 ${RM} -f
 	${RMDIR} ${WRKSRC}/examples/toolbar
 	${RM} ${WRKSRC}/examples/Makefile
 	cd ${WRKSRC}/C/se; ${MAKE_PROGRAM} ${MAKE_FLAGS} -f Makefile.se clean

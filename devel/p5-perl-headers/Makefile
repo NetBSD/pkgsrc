@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/02/16 14:38:55 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2001/05/19 03:56:33 jlam Exp $
 
 DISTNAME=		p5-perl-headers
 PKGNAME=		${DISTNAME}-${OS_VERSION}
@@ -34,7 +34,7 @@ do-build:
 do-install:
 	${CP} -R ${WRKSRC}/h2ph/* ${PERL5_SITEARCH}
 	${INSTALL_DATA} ${WRKSRC}/packlist ${PERL5_PACKLIST}
-	${CAT} ${PERL5_PACKLIST} | xargs ${CHMOD} a-w
-	${CAT} ${PERL5_PACKLIST} | xargs ${CHOWN} ${SHAREOWN}:${SHAREGRP}
+	${CAT} ${PERL5_PACKLIST} | ${XARGS} ${CHMOD} a-w
+	${CAT} ${PERL5_PACKLIST} | ${XARGS} ${CHOWN} ${SHAREOWN}:${SHAREGRP}
 
 .include "../../mk/bsd.pkg.mk"

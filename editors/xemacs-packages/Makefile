@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2001/05/03 16:00:02 agc Exp $
+# $NetBSD: Makefile,v 1.17 2001/05/19 03:56:34 jlam Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1999/06/22 22:16:53 gj Exp
 
 DISTNAME=	xemacs-packages
@@ -59,7 +59,7 @@ do-install:
 	@cd ${PREFIX} && \
 	${GREP} '\$${ELSUFX}$$' ${PLIST_SRC} | \
 	${SED} -e 's#\$${ELSUFX}$$##' | \
-	xargs ${GZIP_CMD}
+	${XARGS} ${GZIP_CMD}
 	@${ECHO_MSG} "done"
 .endif
 

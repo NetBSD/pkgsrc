@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/05/17 15:20:50 abs Exp $
+# $NetBSD: Makefile,v 1.8 2001/05/19 03:56:37 jlam Exp $
 #
 
 # MASTER_SITES is very special, and must end in "=":
@@ -42,7 +42,7 @@ post-fetch:
 	@${CHMOD} +x ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX}
 
 post-patch:
-	@${FIND} ${WRKSRC} -name '*.orig' -print | xargs ${RM} -f
+	@${FIND} ${WRKSRC} -name '*.orig' -print | ${XARGS} ${RM} -f
 
 # This is ugly.  The chown should happen after copying, or tar should have
 # a way to override permissions.
