@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2000/12/17 21:50:56 david Exp $
+# $NetBSD: Makefile,v 1.10 2001/02/16 14:17:32 wiz Exp $
 #
 
 DISTNAME=		Msql-Mysql-modules-1.2215
@@ -8,6 +8,7 @@ MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=DBD/}
 
 MAINTAINER=		bad@netbsd.org
 HOMEPAGE=		http://www.mysql.com.org/
+COMMENT=		perl DBI/DBD driver for MySQL databases
 
 DEPENDS+=		mysql-client-3.22.32:../../databases/mysql-client
 DEPENDS+=		p5-DBI>=1.13:../../databases/p5-DBI
