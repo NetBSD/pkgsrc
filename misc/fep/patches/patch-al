@@ -1,0 +1,40 @@
+$NetBSD: patch-al,v 1.1 2003/11/07 16:36:12 christos Exp $
+
+--- fep_util.c.orig	1988-12-28 07:24:01.000000000 -0500
++++ fep_util.c	2003-11-07 11:26:03.000000000 -0500
+@@ -3,7 +3,7 @@
+ #ifndef lint
+ static char rcsid[]=
+ "$Header: /cvsroot/pkgsrc/misc/fep/patches/patch-al,v 1.1 2003/11/07 16:36:12 christos Exp $ (SRA)";
+-#endif lint
++#endif /* lint */
+ 
+ #ifndef MKARGDEBUG
+ 
+@@ -178,9 +178,9 @@
+ {
+     return (d1 > d2 ? d1 : d2);
+ }
+-#endif max
++#endif /* max */
+ 
+-#else MKARGDEBUG
++#else /* MKARGDEBUG */
+ 
+ #include <stdio.h>
+ #include <ctype.h>
+@@ -198,7 +198,7 @@
+ 	showArgs (s);
+     }
+ }
+-#endif MKARGDEBUG
++#endif /* MKARGDEBUG */
+ 
+ showArgs (comline)
+     char *comline;
+@@ -402,4 +402,4 @@
+     else
+ 	return (iskanji (*cp));
+ }
+-#endif KANJI
++#endif /* KANJI */
