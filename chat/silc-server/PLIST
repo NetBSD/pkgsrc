@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2002/12/06 19:52:37 salo Exp $
+@comment $NetBSD: PLIST,v 1.10 2003/03/17 20:12:47 salo Exp $
 etc/rc.d/silcd
 lib/silcd/libsilc-1.0.so
 lib/silcd/libsilc-1.0.so.1
@@ -36,7 +36,7 @@ share/examples/silcd/silcalgs.conf.default
 share/examples/silcd/silcd.conf.default
 share/examples/silcd/silcd.prv
 share/examples/silcd/silcd.pub
+@dirrm share/examples/silcd
+@dirrm share/doc/silcd
 @dirrm lib/silcd/modules
 @dirrm lib/silcd
-@dirrm share/doc/silcd
-@dirrm share/examples/silcd
