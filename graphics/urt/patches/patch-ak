@@ -1,7 +1,7 @@
-$NetBSD: patch-ak,v 1.1 1999/11/22 11:11:33 agc Exp $
+$NetBSD: patch-ak,v 1.2 2001/02/23 13:33:06 wiz Exp $
 
---- lib/makefile.src	Wed Mar  4 16:32:53 1992
-+++ lib/makefile.src	Sat Sep 16 10:44:35 1995
+--- lib/makefile.src.orig	Wed Mar  4 20:32:53 1992
++++ lib/makefile.src
 @@ -26,7 +26,10 @@
  	vaxshort.o \
  	$(OPT_OBJS)
@@ -14,7 +14,7 @@ $NetBSD: patch-ak,v 1.1 1999/11/22 11:11:33 agc Exp $
  
  # Just rebuild the object files.
  objs: $(OBJS)
-@@ -37,23 +40,13 @@
+@@ -37,23 +40,15 @@
  # Do nothing if $(DEST) is empty (or not defined)
  install: buildlib
  	@sh -c "if test '$(DEST)x' != x ; then \
@@ -24,6 +24,8 @@ $NetBSD: patch-ak,v 1.1 1999/11/22 11:11:33 agc Exp $
 +		cp $(LIBANAME) $(DEST)/$(LIBANAME) ; \
 +		echo cp $(LIBSONAME) $(DEST)/$(LIBSONAME) ; \
 +		cp $(LIBSONAME) $(DEST)/$(LIBSONAME) ; \
++		ln -sf $(LIBSONAME) $(DEST)/librle.so.1 ; \
++		ln -sf $(LIBSONAME) $(DEST)/librle.so ; \
  		if test x$(RANLIB) != x ; then \
 -			echo ranlib $(DEST)/$(LIBNAME) ; \
 -			ranlib $(DEST)/$(LIBNAME) ; \
@@ -44,7 +46,7 @@ $NetBSD: patch-ak,v 1.1 1999/11/22 11:11:33 agc Exp $
  		else \
  			true ; \
  		fi ; \
-@@ -63,14 +56,24 @@
+@@ -63,14 +58,24 @@
  	touch install
  
  # Rebuild the library from all the .o files.
@@ -75,7 +77,7 @@ $NetBSD: patch-ak,v 1.1 1999/11/22 11:11:33 agc Exp $
  
  # Clean up installed stuff and binaries
  pristine: clean
-@@ -86,9 +89,12 @@
+@@ -86,9 +91,12 @@
  # Get rid of everything which must be recompiled on a different computer.
  clean:
  	-rm -f *.o
