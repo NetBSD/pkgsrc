@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7489 2004/10/20 14:42:39 reed Exp $
+$NetBSD: CHANGES,v 1.7490 2004/10/20 16:37:14 cube Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4780,3 +4780,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated poppassd to 4.0.5nb3 [taca 2004-10-20]
 	Updated ja-squirrelmail-1.4.3anb2 [taca 2004-10-20]
 	Updated xorg-clients to 6.8.1nb3 [reed 2004-10-20]
+	Updated dovecot to 0.99.11 [cube 2004-10-20]
