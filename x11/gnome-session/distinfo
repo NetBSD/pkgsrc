@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.3 2003/02/14 21:08:39 jmmv Exp $
+$NetBSD: distinfo,v 1.4 2003/02/18 20:52:09 jmmv Exp $
 
 SHA1 (gnome-session-2.2.0.2.tar.bz2) = 7a40ddad89135a5bcd26d54e71871d3531040229
 Size (gnome-session-2.2.0.2.tar.bz2) = 736370 bytes
-SHA1 (patch-aa) = 74b3ecc90f529c070826de2de7c29652e5980967
 SHA1 (patch-ab) = 6a7b9394c41442c4181f4efb33f7ea7c61ee6f6b
 SHA1 (patch-ac) = 2b467144bbf8f42a7a0796840c42ba8537aa8634
 SHA1 (patch-ad) = 24901462a72294008ef4f219668323fc159eaea0

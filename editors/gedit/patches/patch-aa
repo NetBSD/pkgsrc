@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1 2003/02/14 21:10:14 jmmv Exp $
+$NetBSD: patch-aa,v 1.2 2003/02/18 20:52:06 jmmv Exp $
 
 --- data/Makefile.in.orig	2003-02-14 17:59:17.000000000 +0100
 +++ data/Makefile.in
@@ -11,12 +11,3 @@ $NetBSD: patch-aa,v 1.1 2003/02/14 21:10:14 jmmv Exp $
  schemas_in_files = gedit.schemas.in
  schemas_DATA = $(schemas_in_files:.schemas.in=.schemas)
  
-@@ -412,7 +412,7 @@ maintainer-clean-generic clean mostlycle
- @INTLTOOL_SERVER_RULE@
- 
- install-data-local:
--	        if test -z "$(DESTDIR)" ; then \
-+	        if false; then \
- 	                for p in $(schemas_DATA) ; do \
- 	                        GCONF_CONFIG_SOURCE=$(GCONF_CONFIG_SOURCE) $(GCONFTOOL) --makefile-install-rule $(srcdir)/$$p ; \
- 	                done \

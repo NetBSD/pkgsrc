@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/02/18 14:56:01 jmmv Exp $
+# $NetBSD: Makefile,v 1.6 2003/02/18 20:52:07 jmmv Exp $
 #
 
 DISTNAME=		ggv-1.99.98
@@ -21,7 +21,6 @@ USE_LIBTOOL=		YES
 USE_GMAKE=		YES
 USE_X11=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
-CONFIGURE_ARGS+=	--disable-install-schemas
 
 GCONF2_SCHEMAS= 	ggv.schemas
 
