@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/08/02 15:51:41 jmmv Exp $
+bin/avidemux
