@@ -1,0 +1,74 @@
+# $NetBSD: buildlink3.mk,v 1.1.1.1 2004/11/27 13:57:21 taca Exp $
+
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
+RUBY_BASE_BUILDLINK3_MK:=	${RUBY_BASE_BUILDLINK3_MK}+
+
+.include "../../lang/ruby/rubyversion.mk"
+
+RUBY_MD_LIBDIR=			${RUBY_ARCH}
+
+.if !empty(BUILDLINK_DEPTH:M+)
+BUILDLINK_DEPENDS+=	${RUBY_NAME}
+.endif
+
+BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nruby}
+BUILDLINK_PACKAGES+=	${RUBY_NAME}
+
+.if !empty(RUBY_BASE_BUILDLINK3_MK:M+)
+.if ${RUBY_VER} == "16"
+RUBYSRCDIR=			../../lang/ruby16
+BUILDLINK_DEPENDS.ruby16?=	ruby16>=1.6.8
+BUILDLINK_PKGSRCDIR.ruby16?=	${RUBYSRCDIR}
+EVAL_PREFIX+=			BUILDLINK_PREFIX.ruby16=ruby16
+BUILDLINK_PREFIX.ruby16_DEFAULT=	${LOCALBASE}
+BUILDLINK_FILES.ruby16=	lib/libruby${RUBY_VER}.*
+BUILDLINK_FILES.ruby16+= lib/ruby/${RUBY_VER_DIR}/${RUBY_MD_LIBDIR}/config.h
+BUILDLINK_FILES.ruby16+= lib/ruby/${RUBY_VER_DIR}/${RUBY_MD_LIBDIR}/defines.h
+BUILDLINK_FILES.ruby16+= lib/ruby/${RUBY_VER_DIR}/${RUBY_MD_LIBDIR}/dln.h
+BUILDLINK_FILES.ruby16+= lib/ruby/${RUBY_VER_DIR}/${RUBY_MD_LIBDIR}/env.h
+BUILDLINK_FILES.ruby16+= lib/ruby/${RUBY_VER_DIR}/${RUBY_MD_LIBDIR}/intern.h
+BUILDLINK_FILES.ruby16+= lib/ruby/${RUBY_VER_DIR}/${RUBY_MD_LIBDIR}/libruby${RUBY_VER}.a
+BUILDLINK_FILES.ruby16+= lib/ruby/${RUBY_VER_DIR}/${RUBY_MD_LIBDIR}/node.h
+BUILDLINK_FILES.ruby16+= lib/ruby/${RUBY_VER_DIR}/${RUBY_MD_LIBDIR}/rbconfig.rb
+BUILDLINK_FILES.ruby16+= lib/ruby/${RUBY_VER_DIR}/${RUBY_MD_LIBDIR}/re.h
+BUILDLINK_FILES.ruby16+= lib/ruby/${RUBY_VER_DIR}/${RUBY_MD_LIBDIR}/regex.h
+BUILDLINK_FILES.ruby16+= lib/ruby/${RUBY_VER_DIR}/${RUBY_MD_LIBDIR}/ruby.h
+BUILDLINK_FILES.ruby16+= lib/ruby/${RUBY_VER_DIR}/${RUBY_MD_LIBDIR}/rubyio.h
+BUILDLINK_FILES.ruby16+= lib/ruby/${RUBY_VER_DIR}/${RUBY_MD_LIBDIR}/rubysig.h
+BUILDLINK_FILES.ruby16+= lib/ruby/${RUBY_VER_DIR}/${RUBY_MD_LIBDIR}/st.h
+BUILDLINK_FILES.ruby16+= lib/ruby/${RUBY_VER_DIR}/${RUBY_MD_LIBDIR}/util.h
+BUILDLINK_FILES.ruby16+= lib/ruby/${RUBY_VER_DIR}/${RUBY_MD_LIBDIR}/version.h
+.elif ${RUBY_VER} == "18"
+RUBYSRCDIR=			../../lang/ruby18
+BUILDLINK_DEPENDS.ruby18?=	ruby18>=1.8.1
+BUILDLINK_PKGSRCDIR.ruby18?=	${RUBYSRCDIR}
+EVAL_PREFIX+=			BUILDLINK_PREFIX.ruby18=ruby18
+BUILDLINK_FILES.ruby18=	lib/libruby${RUBY_VER}.*
+BUILDLINK_FILES.ruby18+= lib/ruby/${RUBY_VER_DIR}/${RUBY_MD_LIBDIR}/config.h
+BUILDLINK_FILES.ruby18+= lib/ruby/${RUBY_VER_DIR}/${RUBY_MD_LIBDIR}/defines.h
+BUILDLINK_FILES.ruby18+= lib/ruby/${RUBY_VER_DIR}/${RUBY_MD_LIBDIR}/dl.h
+BUILDLINK_FILES.ruby18+= lib/ruby/${RUBY_VER_DIR}/${RUBY_MD_LIBDIR}/dlconfig.h
+BUILDLINK_FILES.ruby18+= lib/ruby/${RUBY_VER_DIR}/${RUBY_MD_LIBDIR}/dln.h
+BUILDLINK_FILES.ruby18+= lib/ruby/${RUBY_VER_DIR}/${RUBY_MD_LIBDIR}/env.h
+BUILDLINK_FILES.ruby18+= lib/ruby/${RUBY_VER_DIR}/${RUBY_MD_LIBDIR}/intern.h
+BUILDLINK_FILES.ruby18+= lib/ruby/${RUBY_VER_DIR}/${RUBY_MD_LIBDIR}/libruby${RUBY_VER}.a
+BUILDLINK_FILES.ruby18+= lib/ruby/${RUBY_VER_DIR}/${RUBY_MD_LIBDIR}/missing.h
+BUILDLINK_FILES.ruby18+= lib/ruby/${RUBY_VER_DIR}/${RUBY_MD_LIBDIR}/node.h
+BUILDLINK_FILES.ruby18+= lib/ruby/${RUBY_VER_DIR}/${RUBY_MD_LIBDIR}/rbconfig.rb
+BUILDLINK_FILES.ruby18+= lib/ruby/${RUBY_VER_DIR}/${RUBY_MD_LIBDIR}/re.h
+BUILDLINK_FILES.ruby18+= lib/ruby/${RUBY_VER_DIR}/${RUBY_MD_LIBDIR}/regex.h
+BUILDLINK_FILES.ruby18+= lib/ruby/${RUBY_VER_DIR}/${RUBY_MD_LIBDIR}/ruby.h
+BUILDLINK_FILES.ruby18+= lib/ruby/${RUBY_VER_DIR}/${RUBY_MD_LIBDIR}/rubyio.h
+BUILDLINK_FILES.ruby18+= lib/ruby/${RUBY_VER_DIR}/${RUBY_MD_LIBDIR}/rubysig.h
+BUILDLINK_FILES.ruby18+= lib/ruby/${RUBY_VER_DIR}/${RUBY_MD_LIBDIR}/st.h
+BUILDLINK_FILES.ruby18+= lib/ruby/${RUBY_VER_DIR}/${RUBY_MD_LIBDIR}/util.h
+BUILDLINK_FILES.ruby18+= lib/ruby/${RUBY_VER_DIR}/${RUBY_MD_LIBDIR}/version.h
+.endif
+
+BUILDLINK_PREFIX.ruby-base_DEFAULT=	${LOCALBASE}
+
+.endif	# RUBY_BASE_BUILDLINK3_MK
+
+.include "../../devel/ncurses/buildlink3.mk"
+
+BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
