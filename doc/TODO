@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1224 2003/12/18 06:05:29 xtraeme Exp $
+$NetBSD: TODO,v 1.1225 2003/12/18 14:24:55 grant Exp $
 
 Suggested new packages
 ======================
@@ -179,7 +179,6 @@ Suggested package updates
 	o gnumeric-1.2.2
 	o gpsim-0.21.0 [bouyer]
 	o grace-5.1.12
-	o grepmail-5.22
 	o gstreamer-0.6.4
 	o gtetrinet-0.7.4
 	o gtk-gnutella-0.93
