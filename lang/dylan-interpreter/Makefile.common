@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2002/10/03 14:25:04 wiz Exp $
+# $NetBSD: Makefile.common,v 1.6 2002/11/14 21:45:52 jlam Exp $
 #
 
 DISTNAME=		gwydion-dylan-${DYLAN_VERSION}
@@ -16,9 +16,11 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.gwydiondylan.org/
 COMMENT=		functional language
 
+USE_BUILDLINK2=		yes
 USE_GMAKE=		yes
 MAKEFILE=		GNUmakefile
 ALL_TARGET=		default
+
 GNU_CONFIGURE=		yes
 AUTOMAKE_REQD=		1.4
 
@@ -26,8 +28,6 @@ DYLAN_VERSION=		2.3.6
 
 # other architecture changes will be gratefully received
 ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-*-sparc NetBSD-*-powerpc
-
-USE_PERL5=		yes
 
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
@@ -48,8 +48,8 @@ PLIST_SUBST+=		DYLAN_VERSION=${DYLAN_VERSION}
 post-patch:
 	cd ${WRKSRC};							\
 	for f in tools/melange/netbsd-portability.dylan; do		\
-		${MV} $$f $$f.in &&					\
-		${SED} -e 's|@prefix@|${PREFIX}|g' $$f.in > $$f;	\
+		${SED} -e "s|@prefix@|${PREFIX}|g" $$f > $$f.new;	\
+		${MV} -f $$f.new $$f;					\
 	done
 
 pre-configure:
@@ -58,6 +58,8 @@ pre-configure:
 	cd ${WRKSRC} && ${AUTOHEADER}
 	cd ${WRKSRC} && ${AUTOCONF}
 
-.include "../../x11/gtk/buildlink.mk"
+.include "../../lang/perl5/buildlink2.mk"
+.include "../../x11/gtk/buildlink2.mk"
+
 .include "../../mk/automake.mk"
 .include "../../mk/bsd.pkg.mk"
