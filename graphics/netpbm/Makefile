@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2001/06/19 04:22:08 jlam Exp $
+# $NetBSD: Makefile,v 1.58 2001/07/14 16:19:08 jlam Exp $
 
 DISTNAME=	netpbm-9.7
 CATEGORIES=	graphics
@@ -9,8 +9,9 @@ MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://netpbm.sourceforge.net/
 COMMENT=	toolkit for conversion of images between different formats
 
-USE_GMAKE=	yes
-USE_LIBTOOL=	yes
+USE_BUILDLINK_ONLY=	yes
+USE_GMAKE=		yes
+USE_LIBTOOL=		yes
 
 INSTALL_TARGET=	install-dev install
 MAKE_ENV+=	CC="${CC}" INSTALL="${INSTALL}"
@@ -21,11 +22,6 @@ MAKEFILE=	GNUmakefile
 .if (${OPSYS} == NetBSD) && (${MACHINE_ARCH} == arm32)
 CFLAGS=
 .endif
-
-USE_BUILDLINK_ONLY=	yes
-
-.include "../../graphics/png/buildlink.mk"
-.include "../../graphics/tiff/buildlink.mk"
 
 .if (${OPSYS} == SunOS)
 MAKE_ENV+=	NETWORKLD="-lsocket -lnsl"
@@ -40,4 +36,6 @@ post-patch:
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/shhopt/shhopt.h ${PREFIX}/include
 
+.include "../../graphics/png/buildlink.mk"
+.include "../../graphics/tiff/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
