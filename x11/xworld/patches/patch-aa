@@ -1,0 +1,8 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/07/28 17:21:48 hubertf Exp $
+
+--- defaults/customize.csh.orig	Wed Jul 28 18:29:43 1999
++++ defaults/customize.csh	Wed Jul 28 18:30:57 1999
+@@ -1,2 +1,2 @@
+-set PREFIX = /usr/local
++#set PREFIX = /usr/local
+ set BINDIR = $PREFIX/bin
