@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.15 2004/02/14 07:45:36 jlam Exp $
+# $NetBSD: Makefile.common,v 1.16 2004/02/14 13:55:19 jlam Exp $
 #
 # This Makefile fragment should be included _below_ any SASL_PLUGIN
 # definition and _above_ any CONFIGURE_ARGS definitions.
@@ -28,9 +28,7 @@ DEFAULT_VIEW.${PKGBASE}=	${DEFAULT_VIEW.cyrus-sasl}
 
 USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
-
 GNU_CONFIGURE=		YES
-CONFIG_STATUS_OVERRIDE=	config.status
 
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
