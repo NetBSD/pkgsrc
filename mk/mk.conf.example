@@ -1,4 +1,4 @@
-# $NetBSD: mk.conf.example,v 1.191 2001/03/26 00:45:05 fredb Exp $
+# $NetBSD: mk.conf.example,v 1.192 2001/03/29 22:22:53 kim Exp $
 #
 
 # Sample /etc/mk.conf file, which can be used to set specific values
@@ -699,6 +699,12 @@ PAPERSIZE=	A4
 # Possible: 8, 16, 32
 # Default: 8
 
+#SDIST_PAWD= pawd
+# If you are using amd you'll want to use pawd instead of pwd to derive
+# the current working directory.
+# Possible: pawd, pwd
+# Default: pwd
+
 #SERIAL_DEVICES=
 # Used to provide a default setting for all the serial devices for
 # various packages which communicate over the serial port.
@@ -739,6 +745,12 @@ PAPERSIZE=	A4
 # Used in ssh to enable setuid installation of "ssh" binary.
 # Possible: YES, or NO.
 # Default: NO
+
+#SSYNC_PAWD= pawd
+# If you are using amd you'll want to use pawd instead of pwd to derive
+# the current working directory.
+# Possible: pawd, pwd
+# Default: pwd
 
 #TIN_USE_INN_SPOOL
 # Used to enable reading directly in an inn spool.
