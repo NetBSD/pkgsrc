@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2000/07/21 09:10:17 agc Exp $
+# $NetBSD: Makefile,v 1.7 2000/10/15 12:06:44 rh Exp $
 #
 
 DISTNAME=	qt-x11-2.1.1
@@ -11,7 +11,6 @@ MASTER_SITES=	ftp://ftp.troll.no/qt/source/ \
 MAINTAINER=	drochner@netbsd.org
 HOMEPAGE=	http://www.troll.no/products/qt.html
 
-DEPENDS+=	Mesa-*:../../graphics/Mesa
 DEPENDS+=	png-*:../../graphics/png
 DEPENDS+=	jpeg-*:../../graphics/jpeg
 
@@ -19,6 +18,7 @@ NOT_FOR_PLATFORM=    *-*-alpha	# builds, but programs linked to qt crash
 
 HAS_CONFIGURE=		yes
 USE_X11BASE=		yes
+USE_MESA=		yes
 USE_GMAKE=		yes
 USE_LIBTOOL=		yes
 CONFIGURE_ENV+=		QTDIR=${WRKSRC}
