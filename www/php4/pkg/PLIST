@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2001/01/22 05:49:14 jlam Exp $
+@comment $NetBSD: PLIST,v 1.6 2001/01/25 17:18:08 jlam Exp $
 bin/pear
 bin/php
 bin/php-config
@@ -147,11 +147,6 @@ include/php/regex/regex.h
 include/php/regex/regex2.h
 include/php/regex/regex_extra.h
 include/php/regex/utils.h
-lib/libphp4.a
-lib/libphp4.la
-lib/libphp4.so
-lib/libphp4.so.0
-lib/libphp4.so.0.0
 lib/php/Benchmark/Iterate.php
 lib/php/Benchmark/Timer.php
 lib/php/Crypt/HCEMD5.php

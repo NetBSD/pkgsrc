@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/01/22 05:49:14 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2001/01/25 17:18:07 jlam Exp $
 
 .include "../../www/php4/Makefile.common"
 
@@ -18,10 +18,7 @@ pre-install:
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/libexec/cgi-bin
-	${LIBTOOL} ${INSTALL_DATA} ${WRKSRC}/libphp4.la ${PREFIX}/lib
-	${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/php ${PREFIX}/libexec/cgi-bin
-	${RM} -f ${PREFIX}/bin/php
-	${LN} -sf ../libexec/cgi-bin/php ${PREFIX}/bin/php
+	${LN} -sf ../../bin/php ${PREFIX}/libexec/cgi-bin/php
 	${TOUCH} ${PREFIX}/${PHP_EXTENSION_DIR}/.directory
 	${INSTALL_DATA} ${WRKSRC}/php.ini-dist ${PREFIX}/etc
 	${INSTALL_DATA} ${WRKSRC}/php.ini-optimized ${PREFIX}/etc
