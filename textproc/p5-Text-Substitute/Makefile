@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2002/09/26 11:08:23 seb Exp $
+# $NetBSD: Makefile,v 1.5 2002/12/09 19:18:11 abs Exp $
 
-DISTNAME=		Text-Substitute-0.14
+DISTNAME=		Text-Substitute-0.15
 PKGNAME=		p5-${DISTNAME}
 CATEGORIES=		www perl5
 MASTER_SITES=		http://www.mono.org/abs/tools/Text-Substitute/
