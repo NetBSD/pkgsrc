@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/09/17 00:48:26 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 2000/03/23 23:27:24 dmcmahill Exp $
 # FreeBSD: ports/audio/xamp/Makefile,v 1.5 1999/08/25 04:36:22 obrien Exp
 #
 
@@ -11,13 +11,19 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	rxg@ms25.url.com.tw
 HOMEPAGE=	http://edu.lahti.fi/xamp/
 
-DEPENDS+=	qt-1.44:../../x11/qt
+DEPENDS+=	qt1-1.44:../../x11/qt1
 
 WRKSRC=		${WRKDIR}/xamp-0.8/xamp-0.8
 GNU_CONFIGURE=	yes
-CONFIGURE_ENV=	CXXFLAGS="${CFLAGS}"
+CONFIGURE_ENV+=	CXXFLAGS="${CFLAGS}"
 USE_GMAKE=	yes
 USE_X11BASE=	yes
+
+CONFIGURE_ARGS+=	--with-qt-includes=${X11BASE}/include/qt1 \
+			--with-qt-libs=${X11BASE}/lib \
+
+tst:
+	echo ${INSTALL}
 
 do-install:
 		${INSTALL_PROGRAM} ${WRKSRC}/xamp ${PREFIX}/bin

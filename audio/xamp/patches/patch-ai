@@ -1,13 +1,41 @@
-$NetBSD: patch-ai,v 1.1 1999/11/15 13:07:13 rh Exp $
+$NetBSD: patch-ai,v 1.2 2000/03/23 23:27:25 dmcmahill Exp $
 
---- configure.orig	Sun Oct 26 17:55:34 1997
-+++ configure	Mon Nov 15 13:58:45 1999
-@@ -1700,7 +1700,7 @@
-     CFLAGS="-O3 -ffast-math -funroll-loops"
+--- configure.orig	Sun Oct 26 11:55:34 1997
++++ configure	Thu Mar 23 18:12:08 2000
+@@ -841,6 +841,6 @@
+ fi
+ 
+-# Extract the first word of "moc", so it can be a program name with args.
+-set dummy moc; ac_word=$2
++# Extract the first word of "moc1", so it can be a program name with args.
++set dummy moc1; ac_word=$2
+ echo $ac_n "checking for $ac_word""... $ac_c" 1>&6
+ echo "configure:841: checking for $ac_word" >&5
+@@ -862,5 +862,5 @@
+   done
+   IFS="$ac_save_ifs"
+-  test -z "$ac_cv_path_MOC" && ac_cv_path_MOC="/usr/bin/moc"
++  test -z "$ac_cv_path_MOC" && ac_cv_path_MOC="/usr/bin/moc1"
+   ;;
+ esac
+@@ -970,5 +970,5 @@
+ #try to guess qt locations
+ 
+-qt_incdirs="/usr/lib/qt/include /usr/local/qt/include /usr/include/qt /usr/include /usr/X11R6/include/X11/qt /usr/X11R6/include/qt $x_includes $QTINC"
++qt_incdirs="/usr/lib/qt/include /usr/local/qt/include /usr/include/qt /usr/include /usr/X11R6/include/X11/qt /usr/X11R6/include/qt1 $x_includes $QTINC"
+ test -n "$QTDIR" && qt_incdirs="$QTDIR/include $QTDIR $qt_incdirs"
+ 
+@@ -993,5 +993,5 @@
+ for i in $qt_libdirs;
+ do
+-  for j in libqt.so libqt.a libqt.sl;
++  for j in libqt1.so libqt1.a libqt1.sl;
+   do
+     if test -r "$i/$j"; then
+@@ -1701,5 +1701,5 @@
      ;;
  
 -  Linux|FreeBSD)
 +  Linux|FreeBSD|NetBSD)
      CC="gcc"
      if test "$ARCH_TYPE" = "i486" ; then
-       CFLAGS_ARCH="-m486"
