@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2004/08/19 15:27:24 adam Exp $
+@comment $NetBSD: PLIST,v 1.20 2004/09/06 13:09:43 adam Exp $
 bin/Magick++-config
 bin/Magick-config
 bin/Wand-config
@@ -109,17 +109,17 @@ lib/libMagick++.a
 lib/libMagick++.la
 lib/libMagick++.so
 lib/libMagick++.so.6
-lib/libMagick++.so.6.5
+lib/libMagick++.so.6.7
 lib/libMagick.a
 lib/libMagick.la
 lib/libMagick.so
 lib/libMagick.so.6
-lib/libMagick.so.6.5
+lib/libMagick.so.6.7
 lib/libWand.a
 lib/libWand.la
 lib/libWand.so
 lib/libWand.so.6
-lib/libWand.so.6.5
+lib/libWand.so.6.7
 lib/pkgconfig/ImageMagick++.pc
 lib/pkgconfig/ImageMagick.pc
 lib/pkgconfig/Wand.pc
