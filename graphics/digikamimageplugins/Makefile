@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/01/09 11:19:56 seb Exp $
+# $NetBSD: Makefile,v 1.2 2005/03/22 09:50:49 seb Exp $
 
-DISTNAME=		digikamimageplugins-0.7.1
+DISTNAME=		digikamimageplugins-0.7.2
 CATEGORIES=		graphics kde
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=digikam/}
 EXTRACT_SUFX=		.tar.bz2
@@ -17,7 +17,6 @@ GNU_CONFIGURE=		yes
 MANCOMPRESSED=		yes
 
 .include "../../graphics/digikam/buildlink3.mk"
-.include "../../graphics/imlib2/buildlink3.mk"
 .include "../../meta-pkgs/kde3/kde3.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
