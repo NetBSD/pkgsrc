@@ -3,7 +3,8 @@
 # Date created:        28 October 1997
 # Whom:                Stefan Eßer <se@freebsd.org>
 #
-# $Id: Makefile,v 1.1.1.1 1997/12/29 03:28:25 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 1997/12/29 03:31:44 hubertf Exp $
+# FreeBSD Id: Makefile,v 1.4 1997/11/28 00:04:18 se Exp
 #
 
 DISTNAME=	kdeutils-Beta2-1
@@ -30,7 +31,9 @@ LIB_DEPENDS=	qt\\.1\\.3[0-9]:${PORTSDIR}/x11/qt \
 HAS_CONFIGURE=	yes
 CONFIGURE_ARGS=	"--prefix=$(PREFIX)" \
 		"--x-inc=$(X11BASE)/include -I$(PREFIX)/include -I$(PREFIX)/include/giflib" \
-		"--x-lib=$(X11BASE)/lib -L$(PREFIX)/lib"
+		"--x-lib=$(X11BASE)/lib -L$(PREFIX)/lib" \
+		"--with-qt-dir=$(PREFIX)" \
+		"--with-qt-includes=$(PREFIX)/include/qt"
 
 WRKSRC=		${WRKDIR}/kdeutils
 
