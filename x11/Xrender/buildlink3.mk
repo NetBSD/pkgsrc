@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.23 2004/02/17 09:13:33 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.24 2004/02/17 13:44:34 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 XRENDER_BUILDLINK3_MK:=	${XRENDER_BUILDLINK3_MK}+
@@ -38,9 +38,9 @@ BUILDLINK_IS_BUILTIN.Xrender= ${_IS_BUILTIN.Xrender}
 # approximate determination of the Xrender version.
 #
 _XRENDER_VERSIONS=	0.8.3  0.8.2  0.8.1  0.8  0.2  0.1
-_XRENDER_0.1=		4.0 4.0.* 4.1 4.1.[0-8][0-9]* 4.1.9[0-8]*
-_XRENDER_0.2=		4.1.99.* 4.2 4.2.[0-8][0-9]* 4.2.9[0-8]*
-_XRENDER_0.8=		4.2.99.* 4.3 4.3.[0-8][0-9]* 4.3.9[0-8]*
+_XRENDER_0.1=	4.0 4.0.* 4.1 4.1.[0-9] 4.1.[0-9].* 4.1.[1-8][0-9]* 4.1.9[0-8]*
+_XRENDER_0.2=	4.1.99.* 4.2 4.2.[0-9] 4.2.[0-9].* 4.2.[1-8][0-9]* 4.2.9[0-8]*
+_XRENDER_0.8=	4.2.99.* 4.3 4.3.[0-9] 4.3.[0-9].* 4.3.[1-8][0-9]* 4.3.9[0-8]*
 .      if !defined(_XF86_VERSION)
 _X11_CONFIG_VERSION_DEF=	${X11BASE}/lib/X11/config/version.def
 .        if !exists(${_X11_CONFIG_VERSION_DEF})
