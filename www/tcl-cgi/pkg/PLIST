@@ -1,0 +1,43 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/07/07 15:15:12 bouyer Exp $
+lib/cgi0.8/cgi.tcl
+lib/cgi0.8/pkgIndex.tcl
+man/man3/cgi.tcl.3
+share/doc/cgi-tcl/ref.txt
+share/examples/cgi-tcl/README
+share/examples/cgi-tcl/cookie.cgi
+share/examples/cgi-tcl/creditcard.cgi
+share/examples/cgi-tcl/display-in-frame.cgi
+share/examples/cgi-tcl/display.cgi
+share/examples/cgi-tcl/download.cgi
+share/examples/cgi-tcl/error.cgi
+share/examples/cgi-tcl/evaljs.cgi
+share/examples/cgi-tcl/example.tcl
+share/examples/cgi-tcl/examples.cgi
+share/examples/cgi-tcl/form-tour-result.cgi
+share/examples/cgi-tcl/form-tour.cgi
+share/examples/cgi-tcl/format-tour.cgi
+share/examples/cgi-tcl/frame.cgi
+share/examples/cgi-tcl/image.cgi
+share/examples/cgi-tcl/kill.cgi
+share/examples/cgi-tcl/nistguest.cgi
+share/examples/cgi-tcl/oratcl.cgi
+share/examples/cgi-tcl/parray.cgi
+share/examples/cgi-tcl/passwd-form.cgi
+share/examples/cgi-tcl/passwd.cgi
+share/examples/cgi-tcl/passwd.tcl
+share/examples/cgi-tcl/push.cgi
+share/examples/cgi-tcl/rm.cgi
+share/examples/cgi-tcl/stopwatch.cgi
+share/examples/cgi-tcl/unimail.cgi
+share/examples/cgi-tcl/upload.cgi
+share/examples/cgi-tcl/uploadbin.cgi
+share/examples/cgi-tcl/validate.cgi
+share/examples/cgi-tcl/vclock-src-frame.cgi
+share/examples/cgi-tcl/vclock.cgi
+share/examples/cgi-tcl/vclock.pl
+share/examples/cgi-tcl/visitor.cgi
+share/examples/cgi-tcl/visitor.cnt
+share/examples/cgi-tcl/vote.cgi
+@dirrm lib/cgi0.8
+@dirrm share/doc/cgi-tcl
+@dirrm share/examples/cgi-tcl

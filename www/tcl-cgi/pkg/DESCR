@@ -1,0 +1,146 @@
+This is the README to cgi.tcl, a library of Tcl procedures to assist
+in writing CGI scripts.  Review the HISTORY file for significant changes.
+
+The cgi.tcl home page is http://expect.nist.gov/cgi.tcl
+
+--------------------
+Introduction
+--------------------
+
+This is the README file for cgi.tcl, a set of procedures for writing
+CGI scripts in Tcl.  The procedures implement the code described in
+the paper "Writing CGI scripts in Tcl" which was published in the
+Proceedings of the Fourth Tcl Workshop (Tcl '96).
+
+--------------------
+Getting Started
+--------------------
+
+First, read the paper "Writing CGI Scripts in Tcl", from Tcl '96.  If
+you can't find the paper in this archive, it can also be found at:
+
+	http://www.nist.gov/msidlibrary/doc/libes96c.ps
+
+That paper will give you a lot of good ideas for using Tcl, not only
+with CGI but plain everyday HTML as well.
+
+Next, try some of the examples in the example directory.  Please read
+the "Instructions" section in example/README first.
+
+A rough draft of complete documentation of the individual functions
+can be found in ref.txt in the doc directory.  
+
+Note that you are expected to understand Tcl.  I'm not going to
+explain how to write Tcl scripts here.  (If you're looking for a Tcl
+tutorial, please consider my Expect book which includes a very nice
+tutorial on Tcl.)
+
+Similarly, you are expected to understand HTML.  There are plenty of
+web tutorials and books on it.  Go read one.  You don't have to become
+an expert on HTML, but it is important to get a feel for it.  (The
+cgi.tcl package will take care of the details.)  If you plan to do
+CGI, you should know a couple more basic things.  Here's a simple CGI
+intro:
+
+	http://hoohoo.ncsa.uiuc.edu/cgi/intro.html
+
+
+--------------------
+Status
+--------------------
+
+The library is reasonably complete.  It supports forms, tables,
+cookies, Netscape extensions, file upload, plug-ins, etc, etc.  On the
+other hand, there are some things missing - such as certain deprecated
+things in HTML, things I can't believe anyone would use, things that
+are special extensions to a browser I'm not familiar with, etc.
+
+This library should run on any system (UNIX, Win, or Mac) which
+supports Tcl 8.0.
+
+----------------------
+Examples
+----------------------
+
+This distribution contains example scripts.  They can be found in the
+example directory of this distribution.  Please read the
+"Instructions" section in example/README first.
+
+--------------------
+Installation
+--------------------
+
+If you are on UNIX, read the INSTALL file.
+If you are on W95/NT, read the install.win file.
+If you are on Mac, read the install.mac file.
+
+--------------------
+How to get the latest version of this code
+--------------------
+
+The latest version of this code may be received from:
+
+	http://expect.nist.gov/cgi.tcl/cgi.tcl.tar.gz
+or	ftp://ftp.nist.gov/mel/div826/subject/expect/cgi.tcl/cgi.tcl.tar.gz
+
+Request email delivery by mailing to "library@cme.nist.gov".  The
+contents of the message should be (no subject line) "send
+pub/cgi/cgi.tcl.tar.gz".
+
+--------------------
+Support from Don Libes or NIST
+--------------------
+
+Although I can't promise anything in the way of support, I'd be
+interested to hear about your experiences using it (good or bad).  I'm
+also interested in hearing bug reports and suggestions for improvement
+even though I can't promise to implement them.
+
+If you send me a bug, fix, or question, include the version of
+cgi.tcl, version of Tcl, and name and version of the OS that you are
+using.  Before sending mail, it may be helpful to verify that your
+problem still exists in the latest version.  You can check on the
+current release and whether it addresses your problems by retrieving
+the latest HISTORY file (see "History" above).
+
+
+Awards, love letters, and bug reports may be sent to:
+
+Don Libes
+National Institute of Standards and Technology
+Bldg 220, Rm A-127
+Gaithersburg, MD  20899
+(301) 975-3535
+libes@nist.gov
+
+I hereby place this software in the public domain.  NIST and I would
+appreciate credit if this program or parts of it are used.
+
+Design and implementation of this program was funded primarily by
+myself.  Funding contributors include the NIST Automated Manufacturing
+Research Facility (funded by the Navy Manufacturing Technology
+Program), the NIST Scientific and Technical Research Services, the
+ARPA Persistent Object Bases project and the Computer-aided
+Acquisition and the Logistic Support (CALS) program of the Office of
+the Secretary of Defense.
+
+--------------------
+Support for Don Libes or NIST
+--------------------
+
+NIST accepts external funding and other resources (hardware, software,
+and personnel).  This can be a fine way to work more closely with NIST
+and encourage particular areas of research.
+
+Funding can be earmarked for specific purposes or for less-specific
+purposes.  For example, if you simply like the work I do, you can
+contribute directly to my funding which will reduce the amount of time
+I have to spend writing proposals and submitting them to other people
+for funding on my own.
+
+I can also participate in the NIST Fellows program allowing me to
+spend several months to a year working directly with your company and
+potentially even at your location.  I am also interested in returning
+to an academic program.  I presently have an MS and am hunting for
+Ph.D. topics and advisors.  Let me know if you have ideas or are
+interested in being my advisor.
