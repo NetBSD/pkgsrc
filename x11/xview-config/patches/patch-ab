@@ -1,40 +1,53 @@
-$NetBSD: patch-ab,v 1.6 2000/10/23 18:02:56 jlam Exp $
-
---- XView.cf.orig	Sun Jun 26 22:09:19 1994
-+++ XView.cf
-@@ -101,7 +101,7 @@
-  *	the appropriate value.
+$NetBSD: patch-ab,v 1.7 2001/05/02 21:46:08 dmcmahill Exp $
+ 
+--- ./XView.cf.orig	Sun Jun 26 22:09:19 1994
++++ ./XView.cf	Tue May  1 22:40:31 2001
+@@ -102,5 +102,5 @@
   */
  #ifndef XVDestDir
 -#define XVDestDir /usr/X11/xview
 +#define XVDestDir ProjectRoot
  #endif
  /*
-  *	Command to add object modules to the library.
-@@ -139,7 +139,7 @@
-  *	installed in $(DESTDIR)/lib/X11/config (aka $(CONFIGDIR)).
+@@ -140,5 +140,5 @@
   */ 
  #ifndef OnlyNeedsNewXViewConfigInstalled 
 -#define OnlyNeedsNewXViewConfigInstalled NO 
 +#define OnlyNeedsNewXViewConfigInstalled YES 
  #endif 
  /*
-  *	If you would like the XView man pages to be installed in 
-@@ -305,7 +305,7 @@
-  *	malloc() and read() will be used instead.
+@@ -196,5 +196,5 @@
+ # define LibXViewDefines -DPRE_R4_ICCCM
+ # else
+-# define LibXViewDefines -DFULL_R5 -I$(OPENWINHOME)/include -DSUNOS41 -DX11R6
++# define LibXViewDefines -DNO_CAST_VATOAV -DFULL_R5 -I$(OPENWINHOME)/include -DSUNOS41 -DX11R6
+ # endif
+ #endif
+@@ -232,5 +232,5 @@
+  */
+ #ifndef DebugLibXView
+-#define DebugLibXView NO
++#define DebugLibXView NO
+ #endif
+ /*
+@@ -260,5 +260,5 @@
+  */
+ #ifndef InstallAllImages
+-#define InstallAllImages NO
++#define InstallAllImages YES
+ #endif
+ /*
+@@ -306,5 +306,5 @@
   */
  #ifndef OsHasMmap
 -#define OsHasMmap YES
 +#define OsHasMmap NO
  #endif
  /*
-  *	The implementation of internationalization support in XView depends
-@@ -360,7 +360,7 @@
-  *    	be defined as -PIC
+@@ -361,5 +361,5 @@
   */
  #ifndef PositionIndependentCodeFlag
 -#define PositionIndependentCodeFlag -PIC
 +#define PositionIndependentCodeFlag -fPIC
  #endif
  
- /*

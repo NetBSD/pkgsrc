@@ -1,18 +1,15 @@
-$NetBSD: patch-ae,v 1.5 2000/10/23 18:02:56 jlam Exp $
-
---- XView.tmpl.orig	Sun Jun 26 22:10:00 1994
-+++ XView.tmpl
-@@ -96,7 +96,7 @@
-  *      Work around small conflict with Project.tmpl file
+$NetBSD: patch-ae,v 1.6 2001/05/02 21:46:08 dmcmahill Exp $
+ 
+--- ./XView.tmpl.orig	Sun Jun 26 22:10:00 1994
++++ ./XView.tmpl	Tue May  1 22:40:31 2001
+@@ -97,5 +97,5 @@
   */
  #if UseInstalled
 -              MKDIRHIER = BourneShell BinDir/mkdirhier
 +              MKDIRHIER = mkdirhier
  #endif
  
- #if OsHasLocale
-@@ -192,14 +192,6 @@
-                      AS = as
+@@ -193,12 +193,4 @@
   */
  /*
 - *	use the same trick X11R5 does for defining rules for installed libs
@@ -25,18 +22,14 @@ $NetBSD: patch-ae,v 1.5 2000/10/23 18:02:56 jlam Exp $
 -/*
   *	Temporary directory used during build process before the include
   *	files are installed.  This is just a place where symbolic links are
-  *	placed to point back to the actual files in the build hierarchy to
-@@ -224,7 +216,7 @@
-  *	afterwards.
+@@ -225,5 +217,5 @@
   */
  #ifndef XVIncludeDirName
 -#define XVIncludeDirName /include
 +#define XVIncludeDirName include
  #endif
                   INCDIR = XVIncludeDirName
- /*
-@@ -356,10 +348,10 @@
- 
+@@ -357,8 +349,8 @@
  #if SystemV4
               SYSV_CLIENT_LIB = -lintl -ldl
 -	     XVCLIENTSYSDEFINES = -DSVR4 -DSYSV
@@ -47,9 +40,7 @@ $NetBSD: patch-ae,v 1.5 2000/10/23 18:02:56 jlam Exp $
 +             XVCLIENTSYSDEFINES = -DSUNOS41
  #endif
  
- /*
-@@ -371,16 +363,16 @@
-  */
+@@ -372,14 +364,14 @@
  
  #if XvI18nLevel == 4
 -	XVCLIENTI18NDEFINES = -DOW_I18N_L4 -DOW_I18N_L3 -DOW_I18N -DFULL_R5
@@ -71,4 +62,3 @@ $NetBSD: patch-ae,v 1.5 2000/10/23 18:02:56 jlam Exp $
 +        XVCLIENTDEFINES = $(XVCLIENTSYSDEFINES) $(XVCLIENTI18NDEFINES)
  
  /*
-  *	Define libraries for XView clients
