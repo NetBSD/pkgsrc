@@ -1,14 +1,19 @@
-$NetBSD: patch-ac,v 1.6 2002/12/06 19:52:38 salo Exp $
+$NetBSD: patch-ac,v 1.7 2003/01/08 23:56:44 salo Exp $
 
---- lib/Makefile.in.orig	Fri Dec  6 19:08:55 2002
-+++ lib/Makefile.in	Fri Dec  6 19:12:26 2002
-@@ -544,9 +544,6 @@
- @SILC_DIST_TOOLKIT_FALSE@install-exec-hook:
- @SILC_DIST_TOOLKIT_FALSE@	-mkdir -p $(libdir)
- @SILC_DIST_TOOLKIT_FALSE@	-$(LIBTOOL) $(INSTALL) libsilc.la $(libdir)/
--@SILC_DIST_TOOLKIT_FALSE@	-$(LIBTOOL) $(INSTALL) libsilcclient.la $(libdir)/
--@SILC_DIST_TOOLKIT_FALSE@	-rm -rf $(libdir)/libsilc.a
--@SILC_DIST_TOOLKIT_FALSE@	-rm -rf $(libdir)/libsilcclient.a
+--- lib/silccrypt/Makefile.in.orig	Wed Jan  8 17:25:45 2003
++++ lib/silccrypt/Makefile.in	Thu Jan  9 00:15:00 2003
+@@ -366,6 +366,14 @@
+ .c.obj:
+ 	$(COMPILE) -c `if test -f '$<'; then $(CYGPATH_W) '$<'; else $(CYGPATH_W) '$(srcdir)/$<'`
  
- # WIN32 DLL generation
- @SILC_DIST_WIN32DLL_TRUE@silc.dll: libsilc.a
++# Workaround a bug in GCC which causes momory exhaustion
++# when compiling sha1 with optimizations on UltraSPARC.
++#
++ifeq (sparc64, $(host_cpu))
++sha1.lo:
++	$(LTCOMPILE) -O0 -c -o $@ `test -f 'sha1.c' || echo '$(srcdir)/'`sha1.c
++ endif
++
+ .c.lo:
+ 	$(LTCOMPILE) -c -o $@ `test -f '$<' || echo '$(srcdir)/'`$<
+ 
