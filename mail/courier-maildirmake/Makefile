@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2004/02/22 03:52:08 kristerw Exp $
+# $NetBSD: Makefile,v 1.18 2004/02/24 00:18:08 jlam Exp $
 
 PKGNAME=	courier-maildirmake-${BASE_VERS}
 COMMENT=	Courier Maildir utilities
@@ -37,6 +37,10 @@ INSTALL_TARGET=		install-strip
 .endif
 
 CONF_FILES=	${EGDIR}/quotawarnmsg ${PKG_SYSCONFDIR}/quotawarnmsg
+
+.if ${OPSYS} == "SunOS"
+.  include "../../databases/db/buildlink3.mk"
+.endif
 
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
