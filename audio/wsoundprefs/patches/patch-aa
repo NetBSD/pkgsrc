@@ -1,0 +1,17 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/04/06 17:39:40 tron Exp $
+
+--- Imakefile.orig	Mon Mar  8 03:17:43 1999
++++ Imakefile	Sun Mar 21 03:13:13 1999
+@@ -1,10 +1,10 @@
+ #define IHaveSubdirs
+ #define PassCDebugFlags CDEBUGFLAGS="$(CDEBUGFLAGS)"
+ 
+-PREFIX = /usr/X11R6
++XCOMM PREFIX = /usr/X11R6
+ 
+ XCOMM CDEBUGFLAGS = -Wall -ggdb -DDEBUG
+-CDEBUGFLAGS = -O6 -m486 
++XCOMM CDEBUGFLAGS = -O6 -m486 
+ 
+ SUBDIRS = src
+ 
