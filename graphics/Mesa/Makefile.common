@@ -1,30 +1,29 @@
-# $NetBSD: Makefile.common,v 1.21 2004/01/20 02:48:33 jschauma Exp $
+# $NetBSD: Makefile.common,v 1.22 2004/01/22 12:58:07 adam Exp $
+#
 
-DISTNAME?=		MesaLib-${MESA_VERSION}
-CATEGORIES?=		graphics
-MASTER_SITES?= 		${MASTER_SITE_SOURCEFORGE:=mesa3d/}
-EXTRACT_SUFX?=		.tar.bz2
+DISTNAME=	MesaLib-${MESA_VERSION}
+DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
+DISTFILES+=	${DISTNAME:S/MesaLib/MesaDemos/}${EXTRACT_SUFX}
+WRKSRC=		${WRKDIR}/${DISTNAME:S/Lib//}
+CATEGORIES=	graphics
+MASTER_SITES= 	${MASTER_SITE_SOURCEFORGE:=mesa3d/}
+EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER?=		tech-pkg@NetBSD.org
-HOMEPAGE?=		http://www.mesa3d.org/
+MAINTAINER=	tech-pkg@NetBSD.org
+HOMEPAGE=	http://www.mesa3d.org/
 
 ALL_TARGET=             pkgsrc
 USE_LIBTOOL=		yes
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+USE_X11=		yes
 
-NO_CONFIGURE?=		yes
+NO_CONFIGURE=		yes
 DIST_SUBDIR=		Mesa-${MESA_VERSION}
 PATCHDIR?=		${.CURDIR}/../../graphics/MesaLib/patches
 DISTINFO_FILE?=		${.CURDIR}/../../graphics/MesaLib/distinfo
 
 pre-install:
-	for lib in ${INSTLIBS}; do					\
-		${INSTALL_DATA} ${WRKSRC}/lib/$${lib} ${PREFIX}/lib/;	\
-		cd ${PREFIX}/lib && ${LN} -s $${lib} $${lib%%.[0-9]};	\
-		cd ${PREFIX}/lib && ${LN} -s $${lib%%.[0-9]}		\
-						$${lib%%.[0-9].[0-9]};	\
-		${INSTALL_DATA} ${WRKSRC}/lib/$${lib%%.*}_pic.a		\
-					${PREFIX}/lib/;			\
+	for lib in ${INSTLIBS}; do	\
+	    ${LIBTOOL} --mode=install ${INSTALL_DATA} $${lib} ${PREFIX}/lib ; \
 	done;
 
 .include "../../graphics/Mesa/version.mk"
