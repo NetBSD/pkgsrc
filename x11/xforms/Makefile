@@ -1,18 +1,16 @@
-# $NetBSD: Makefile,v 1.17 1999/09/14 03:16:23 jwise Exp $
+# $NetBSD: Makefile,v 1.18 1999/09/23 03:42:29 jlam Exp $
 #
 
-# for OBJECT_FORMAT, LOWER_OPSYS, MACHINE_PLATFORM, ...
-.include "../../mk/bsd.prefs.mk"
-
-.if ((${LOWER_OPSYS} == "netbsd") && (${MACHINE_ARCH} == "i386") && (${OBJECT_FMT} == "ELF"))
-DISTNAME=	bxform-088-ELF
-.else
 DISTNAME=       bxform-088
-.endif
 PKGNAME=	xforms-0.88
 WRKSRC=		${WRKDIR}/xforms
 CATEGORIES=	x11
 MASTER_SITES=	ftp://bragg.phys.uwm.edu/pub/xforms/${ARCH_SUBDIR}/
+EXTRACT_SUFX=	.tgz
+
+MAINTAINER=	packages@netbsd.org
+HOMEPAGE=	http://bragg.phys.uwm.edu/xforms/
+
 .if (${MACHINE_ARCH} == "arm32")
 ARCH_SUBDIR=	netBSD-arm
 .elif (${MACHINE_ARCH} == "i386")
@@ -22,17 +20,18 @@ ARCH_SUBDIR=	netBSD-pc532
 .else
 ARCH_SUBDIR=	netBSD-${MACHINE_ARCH}
 .endif
-EXTRACT_SUFX=	.tgz
-
-MAINTAINER=	lamj@stat.cmu.edu
-HOMEPAGE=	http://bragg.phys.uwm.edu/xforms/
 
 ONLY_FOR_PLATFORM=	*-*-arm32 *-*-i386 *-*-m68k *-*-ns32k *-*-sparc
 
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD" && ${OBJECT_FMT} == "ELF"
+.if ${MACHINE_ARCH} == "i386"
+DISTNAME=	bxform-088-ELF
+.endif
+.if ${MACHINE_ARCH} == "sparc"
 # XXX no ELF objects for sparc on NetBSD
-.if (${LOWER_OPSYS} == "netbsd") && (${MACHINE_ARCH} == "sparc")
-.if (${OBJECT_FMT} == "ELF")
-IGNORE="is not available for ${MACHINE_PLATFORE} using the ELF object format."
+IGNORE="is not available for ${MACHINE_PLATFORM} using the ELF object format."
 .endif
 .endif
 
@@ -50,7 +49,7 @@ post-patch:
 	${CP} ${FILESDIR}/mkconfig.h ${WRKSRC}
 
 post-install:
-	(cd ${PREFIX}/lib; ${LN} -fs libforms.a libxforms.a)
-	(cd ${PREFIX}/lib; ${LN} -fs libforms.so.0.88 libxforms.so.0.88)
+	${LN} -fs libforms.a ${PREFIX}/lib/libxforms.a
+	${LN} -fs libforms.so.0.88 ${PREFIX}/lib/libxforms.so.0.88
 
 .include "../../mk/bsd.pkg.mk"
