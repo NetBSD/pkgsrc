@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.81 2004/04/12 03:07:50 jschauma Exp $
+# $NetBSD: Makefile,v 1.82 2004/04/23 17:25:28 tv Exp $
 
 .include "../../lang/perl5/Makefile.common"
 
@@ -15,7 +15,7 @@ CONFLICTS=		perl-5.00* perl-base-[0-9]* \
 			p5-Devel-DProf-[0-9]* p5-Devel-Peek-[0-9]* \
 			perl-mk-[0-9]*
 
-NOT_FOR_PLATFORM=	Darwin-*-*
+NOT_FOR_PLATFORM=	Darwin-*-* Interix-*-*
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
