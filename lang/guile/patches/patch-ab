@@ -1,10 +1,20 @@
---- libguile/Makefile.in.orig	Sun Nov  2 15:47:39 1997
-+++ libguile/Makefile.in	Sun Nov  2 15:47:48 1997
-@@ -40,7 +40,6 @@
- INSTALL = @INSTALL@
- INSTALL_PROGRAM = @INSTALL_PROGRAM@
- INSTALL_DATA = @INSTALL_DATA@
--INSTALL_SCRIPT = @INSTALL_SCRIPT@
- transform = @program_transform_name@
+--- configure.orig	Fri Jul 17 15:25:15 1998
++++ configure	Fri Jul 17 15:25:40 1998
+@@ -1167,7 +1167,7 @@
  
- NORMAL_INSTALL = true
+ 
+ 
+-
++if false; then
+ # Always use our own libtool.
+ LIBTOOL='$(top_builddir)/libtool'
+ 
+@@ -1216,7 +1216,7 @@
+ ${CONFIG_SHELL-/bin/sh} $ac_aux_dir/ltconfig \
+ $libtool_flags --no-verify $ac_aux_dir/ltmain.sh $host \
+ || { echo "configure: error: libtool configure failed" 1>&2; exit 1; }
+-
++fi
+ 
+ echo $ac_n "checking for AIX""... $ac_c" 1>&6
+ echo "configure:1223: checking for AIX" >&5
