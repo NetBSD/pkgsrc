@@ -1,40 +1,26 @@
-$NetBSD: patch-ac,v 1.4 1999/01/04 23:29:46 frueauf Exp $
+$NetBSD: patch-ac,v 1.5 1999/11/19 09:38:19 agc Exp $
 
-*** /tmp/T0a03151	Mon Feb 13 18:35:11 1995
---- config.h	Mon Feb 13 18:34:49 1995
-***************
-*** 13,18 ****
-   * definition appropriately. (use 'which gunzip' to find if you have gunzip, 
-   * and where it lives)
-   */
-! #undef USE_GUNZIP
-  
-  #ifdef USE_GUNZIP
---- 13,18 ----
-   * definition appropriately. (use 'which gunzip' to find if you have gunzip, 
-   * and where it lives)
-   */
-! #define USE_GUNZIP
-  
-  #ifdef USE_GUNZIP
-***************
-*** 88,96 ****
-   * should not need to be changed
-   */
-  
-! /* #define GS_PATH "/usr/local/bin/gs" */
-! /* #define GS_LIB  "."                 */
-! /* #define GS_DEV  "ppmraw"            */
-  
-  
-  /***************************************************************************
---- 88,96 ----
-   * should not need to be changed
-   */
-  
-! #define GS_PATH "@LOCALBASE@/bin/gs"
-! #define GS_LIB  "@LOCALBASE@/share/ghostscript"
-! #define GS_DEV  "ppmraw"
-  
-  
-  /***************************************************************************
+--- config.h.orig	Fri Nov 19 09:32:02 1999
++++ config.h	Fri Nov 19 09:32:57 1999
+@@ -13,7 +13,7 @@
+  * definition appropriately. (use 'which gunzip' to find if you have gunzip, 
+  * and where it lives)
+  */
+-#undef USE_GUNZIP
++#define USE_GUNZIP
+ 
+ #ifdef USE_GUNZIP
+ #  ifdef VMS
+@@ -98,9 +98,9 @@
+  * should not need to be changed
+  */
+ 
+-/* #define GS_PATH "/usr/local/bin/gs" */
+-/* #define GS_LIB  "."                 */
+-/* #define GS_DEV  "ppmraw"            */
++#define GS_PATH "@LOCALBASE@/bin/gs"
++#define GS_LIB  "@LOCALBASE@/share/ghostscript"
++#define GS_DEV  "ppmraw"
+ 
+ 
+ /***************************************************************************
