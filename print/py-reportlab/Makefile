@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/01/20 12:24:29 agc Exp $
+# $NetBSD: Makefile,v 1.16 2004/01/23 15:31:58 recht Exp $
 #
 
 DISTNAME=	ReportLab_1_18
@@ -21,5 +21,5 @@ post-install:
 	${RM} -rf ${PREFIX}/${PYSITELIB}/reportlab/lib/build
 
 .include "../../lang/python/extension.mk"
-.include "../../textproc/pyxml/buildlink2.mk"
+.include "../../textproc/py-xml/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/12/24 11:42:02 recht Exp $
+# $NetBSD: Makefile,v 1.9 2004/01/23 15:31:58 recht Exp $
 #
 
 DISTNAME=	SOAPpy-0.11.1
@@ -19,5 +19,5 @@ PY_PATCHPLIST=	YES
 PYTHON_VERSIONS_ACCEPTED=	23pth 22pth 21pth
 
 .include "../../lang/python/extension.mk"
-.include "../../textproc/pyxml/buildlink2.mk"
+.include "../../textproc/py-xml/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
