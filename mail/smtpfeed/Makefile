@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2001/03/19 05:28:23 itojun Exp $
+# $NetBSD: Makefile,v 1.18 2001/04/22 22:06:19 zuntum Exp $
 # Based on FreeBSD Id: Makefile,v 1.27 1999/04/03 08:25:18 itojun Exp
 #
 
@@ -36,11 +36,9 @@ CONFIGURE_ARGS+=--enable-ipv6
 .endif
 
 post-install:
-.if !defined(NOPORTDOCS)
 	${INSTALL_DATA_DIR} ${DOCDIR}
 	for i in ${DOCS}; do \
 		${INSTALL_DATA} ${WRKSRC}/$$i ${DOCDIR}; \
 	done
-.endif
 
 .include "../../mk/bsd.pkg.mk"
