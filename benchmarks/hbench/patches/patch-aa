@@ -1,0 +1,111 @@
+$NetBSD: patch-aa,v 1.1 1998/09/05 22:02:19 garbled Exp $
+--- scripts/interactive-setup.orig	Thu Jun 26 17:37:25 1997
++++ scripts/interactive-setup	Sat Sep  5 09:59:03 1998
+@@ -35,7 +35,7 @@
+ 
+ # Setup defaults.
+ SYSTEMNAME=$HOSTNAME
+-HOSTTYPE=`${SHELL} ./scripts/config.guess`
++HOSTTYPE=`${SHELL} XXXPREFIXXXX/bin/hbench/config.guess`
+ ARCH=`echo ${HOSTTYPE} | sed 's/-.*-.*$//'`
+ OSTYPE=`echo ${HOSTTYPE} | sed 's/^.*-.*-//'`
+ CYCLECOUNTER=NO
+@@ -44,8 +44,8 @@
+ TESTFILE=full.test
+ NRUNS=10
+ RAWDISK=none
+-SCRATCHFILE=/usr/tmp/XXX
+-SCRATCHDIR=/usr/tmp
++SCRATCHFILE=/tmp/XXX
++SCRATCHDIR=/tmp
+ REMOTE=""
+ NETWORKS=""
+ PLAINBINDIR=
+@@ -63,8 +63,8 @@
+ Welcome to HBench-OS! Before you can run the benchmarks, you need to
+ set up a few configuration parameters. This script will allow you to
+ interactively build a configuration file for this particular system;
+-it will be saved by default in ./conf/${HOSTNAME}.run, unless you
+-specify otherwise below. Once you have created ./conf/${HOSTNAME}.run,
++it will be saved by default in XXXPREFIXXXX/share/hbench/conf/${HOSTNAME}.run, unless you
++specify otherwise below. Once you have created XXXPREFIXXXX/share/hbench/conf/${HOSTNAME}.run,
+ either via this script, or manually, you can run the benchmarks by invoking
+ 
+         make run
+@@ -108,8 +108,8 @@
+ 
+ # Now that we've got the hostname, try to read an existing run file
+ # to provide defaults.
+-if [ -f ./conf/${SYSTEMNAME}.run ]; then
+-    . ./conf/${SYSTEMNAME}.run
++if [ -f XXXPREFIXXXX/share/hbench/conf/${SYSTEMNAME}.run ]; then
++    . XXXPREFIXXXX/share/hbench/conf/${SYSTEMNAME}.run
+ fi
+ 
+ 
+@@ -119,7 +119,7 @@
+     echo $ECHON "    System type (arch-vendor-os)? [default ${HOSTTYPE}] $ECHOC"
+     read PLATFORMIN
+     if [ X${PLATFORMIN}X != XX ]; then
+-	PLATFORMCHK=`${SHELL} ./scripts/config.sub $PLATFORMIN 2>&1`
++	PLATFORMCHK=`${SHELL} XXXPREFIXXXX/bin/hbench/config.sub $PLATFORMIN 2>&1`
+ 	if [ $? -eq 0 ]; then
+ 	    HOSTTYPE=$PLATFORMCHK
+ 	    AGAIN=N
+@@ -191,10 +191,10 @@
+ 
+ HBench-OS determines what benchmarks to run by reading in a file that 
+ specifies which benchmarks to include and what parameters to pass them.
+-By default, the file ./conf/full.test is used, which runs the entire 
++By default, the file XXXPREFIXXXX/share/hbench/conf/full.test is used, which runs the entire 
+ HBench-OS benchmark suite. This is recommended for basic use; however,
+ if you are interested is a specific set of benchmarks, create a new
+-test file in the ./conf directory and enter its name below (without
++test file in the XXXPREFIXXXX/share/hbench/conf directory and enter its name below (without
+ a directory specifier):
+ 
+ EOF
+@@ -297,7 +297,7 @@
+ lat_rpc, lat_connect) run and measure the clients locally, but execute
+ the servers on a remote networked machine. Standard (non-counter-enabled)
+ binaries for each remote machine's architecture MUST be available in the
+-./bin directory for the remote tests to work. Also, note that, for best
++XXXPREFIXXXX/bin/hbench directory for the remote tests to work. Also, note that, for best
+ results, the remote machines should be identical to the local machine,
+ and the network connecting them should be dedicated and quiescent.
+ 
+@@ -345,13 +345,14 @@
+ 
+ By default, HBench-OS places results in a subdirectory <hostname>.run#/
+ of the base result directory. The default for the base run directory
+-is ./Results/<os>-<arch>/, in this case ./Results/${OSTYPE}-${ARCH}/. If 
++is XXXPREFIXXXX/share/hbench/Results/<os>-<arch>/, in this case 
++XXXPREFIXXXX/share/hbench/Results/${OSTYPE}-${ARCH}/. If 
+ you wish to alter the base directory location, enter the new directory now, 
+ or just press Enter for the default:
+ 
+ EOF
+ 
+-echo $ECHON "    Alternate resultbase directory? [default ./Results/${OSTYPE}-${ARCH}] $ECHOC"
++echo $ECHON "    Alternate resultbase directory? [default XXXPREFIXXXX/share/hbench/Results/${OSTYPE}-${ARCH}] $ECHOC"
+ read RDBIN
+ if [ X${RDBIN}X != XX ]; then
+     RESULTDIRBASE=$RDBIN
+@@ -360,7 +361,7 @@
+ fi
+ 
+ # Pick a run filename
+-RUNFILE=./conf/${SYSTEMNAME}.run
++RUNFILE=XXXPREFIXXXX/share/hbench/conf/${SYSTEMNAME}.run
+ cat <<EOF
+ 
+ By default, HBench-OS selects a .run file based on the machine's hostname.
+@@ -380,7 +381,7 @@
+ 
+ Finally, note that if you have not built the HBench-OS binaries for your
+ architecture and counter selections in the default location 
+-(./bin/${OSTYPE}-${ARCH}/), then you must edit the generated run file 
++(XXXPREFIXXXX/bin/hbench/${OSTYPE}-${ARCH}/), then you must edit the generated run file 
+ manually to indicate where those binaries are.
+ 
+ ===========

@@ -1,0 +1,76 @@
+$NetBSD: patch-ah,v 1.1 1998/09/05 22:02:20 garbled Exp $
+--- scripts/maindriver.orig	Sat Sep  5 09:24:50 1998
++++ scripts/maindriver	Sat Sep  5 09:28:52 1998
+@@ -48,9 +48,6 @@
+ fi
+ 
+ 
+-# Step 1: Discover hbench root path
+-HBENCHROOT=`(cd \`dirname $0\`/.. ; pwd)`
+-
+ # Step 2: Get run file name, check arguments, etc
+ if [ $# -lt 1 ]; then
+     echo "Usage: `basename $0` <run_file>"
+@@ -94,16 +91,16 @@
+ fi 
+   
+ if [ X${PLAINBINDIR}X = XX ]; then
+-    PLAINBINDIR=${HBENCHROOT}/bin/${OSTYPE}-${ARCH}
++    PLAINBINDIR=XXXPREFIXXXX/bin/hbench/${OSTYPE}-${ARCH}
+ fi
+ if [ X${CYCLECOUNTERBINDIR}X = XX ]; then
+-    CYCLECOUNTERBINDIR=${HBENCHROOT}/bin/${OSTYPE}-${ARCH}-c
++    CYCLECOUNTERBINDIR=XXXPREFIXXXX/bin/hbench/${OSTYPE}-${ARCH}-c
+ fi
+ if [ X${EVENTCOUNTERBINDIR}X = XX ]; then
+-    EVENTCOUNTERBINDIR=${HBENCHROOT}/bin/${OSTYPE}-${ARCH}-ec
++    EVENTCOUNTERBINDIR=XXXPREFIXXXX/bin/hbench/${OSTYPE}-${ARCH}-ec
+ fi
+ if [ X${RESULTDIRBASE}X = XX ]; then
+-    RESULTDIRBASE=${HBENCHROOT}/Results/${OSTYPE}-${ARCH}
++    RESULTDIRBASE=XXXPREFIXXXX/share/hbench/Results/${OSTYPE}-${ARCH}
+ fi
+ 
+ RESULTDIRB=${RESULTDIRBASE}/${SYSTEMNAME}
+@@ -120,10 +117,10 @@
+     TESTS=${TESTFILE}
+ elif [ -f ${TESTFILE}.test ]; then
+     TESTS=${TESTFILE}.test
+-elif [ -f ${HBENCHROOT}/conf/${TESTFILE} ]; then
+-    TESTS=${HBENCHROOT}/conf/${TESTFILE}
+-elif [ -f ${HBENCHROOT}/conf/${TESTFILE}.test ]; then
+-    TESTS=${HBENCHROOT}/conf/${TESTFILE}.test
++elif [ -f XXXPREFIXXXX/share/hbench/conf/${TESTFILE} ]; then
++    TESTS=XXXPREFIXXXX/share/hbench/conf/${TESTFILE}
++elif [ -f XXXPREFIXXXX/share/hbench/conf/${TESTFILE}.test ]; then
++    TESTS=XXXPREFIXXXX/share/hbench/conf/${TESTFILE}.test
+ else
+     echo "Unable to locate test file ${TESTFILE}."
+     echo "Fix run file $1 and retry"
+@@ -427,9 +424,9 @@
+ 		    ;;
+ 	    esac
+ 	else
+-	    ${RCP} ${HBENCHROOT}/scripts/config.guess ${machine}:/tmp/get-os
++	    ${RCP} XXXPREFIXXXX/bin/hbench/config.guess ${machine}:/tmp/get-os
+ 	    REMOTEOS=`$RSH $machine -n /tmp/get-os | sed 's/^.*-.*-//`
+-	    ${RCP} ${HBENCHROOT}/bin/${REMOTEOS}/$1 ${machine}:/tmp
++	    ${RCP} XXXPREFIXXXX/bin/hbench/${REMOTEOS}/$1 ${machine}:/tmp
+ 
+ 	    $RSH $machine -n /tmp/$1 0 $3 -s 2>> $STDERR &
+ 	fi
+@@ -788,12 +785,12 @@
+ if [ X`perl -e 'print "perltest\n";' 2>&1`X = XperltestX ]; then
+     echo $ECHON "Generating summary information...${ECHOC}"
+     rm -f ${RESULTDIR}/summary
+-    ${HBENCHROOT}/scripts/gen-summary ${RESULTDIR} > ${RESULTDIR}/summary
++    XXXPREFIXXXX/bin/hbench/gen-summary ${RESULTDIR} > ${RESULTDIR}/summary
+     echo "done."
+ 
+     echo $ECHON "Performing basic automated data analysis...${ECHOC}"
+     rm -f ${RESULTDIR}/analysis
+-    ${HBENCHROOT}/scripts/gen-analysis ${RESULTDIR} > ${RESULTDIR}/analysis
++    XXXPREFIXXXX/bin/hbench/gen-analysis ${RESULTDIR} > ${RESULTDIR}/analysis
+     echo "done."
+ 
+     if [ `cat $RESULTDIR/errors | wc -l` -gt 0 ]; then

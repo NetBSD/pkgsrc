@@ -1,0 +1,9 @@
+HBench-OS is a suite of portable benchmarks designed to measure the
+performance of primitive functionality provided by an operating
+system/hardware platform. HBench-OS was designed primarily as a
+research tool for the systems research and OS development communities,
+and thus its major design goal is to provide a flexible system for
+reproducible, accurate, and statistically-sound performance analysis
+and evaluation. These characteristics make it ideal for both
+performance research as well as more traditional consumer-oriented
+performance measurement and analysis.
