@@ -1,0 +1,239 @@
+$NetBSD: patch-ah,v 1.1.1.1 1999/07/21 22:56:35 garbled Exp $
+--- Makefile.in.orig	Fri Jun  4 08:44:28 1999
++++ Makefile.in	Tue Jul 20 20:16:34 1999
+@@ -96,7 +96,6 @@
+ 		OutputFiles/cardplayback_clan.o \
+ 		OutputFiles/clansound.o \
+ 		OutputFiles/mixer.o \
+-		OutputFiles/mixer_asm.o \
+ 		OutputFiles/oss.o \
+ 		OutputFiles/sample.o \
+ 		OutputFiles/session.o \
+@@ -209,11 +208,11 @@
+ 
+ display_targets: @display_targets@
+ 
+-sound_targets: libclan-sound.so
++sound_targets: libclan-sound.so.0.0
+ 
+-network_targets: libclan-network.so
++network_targets: libclan-network.so.0.0
+ 
+-core_libs: libclan.so libclanlayer1.so libclanlayer2.so libclancommon.so 
++core_libs: libclan.so.0.0 libclanlayer1.so.0.0 libclanlayer2.so.0.0 libclancommon.so.0.0 
+ 
+ install: all
+ 	@echo ""
+@@ -225,33 +224,33 @@
+ 	@for i in `find Layer1 -name 'API'`; do install -d $(INC_PREFIX)/ClanLib/$$i; done
+ 	@for i in `find Layer2 -type d|grep -v CVS`; do install -d $(INC_PREFIX)/ClanLib/$$i; done
+ 	@install -d $(INC_PREFIX)/ClanLib/Common
+-	@for i in `find Layer1 -name '*.h'|grep API`; do install -m 0644 $$i $(INC_PREFIX)/ClanLib/$$i; done
+-	@for i in `find Layer2 -name '*.h'`; do install -m 0644 $$i $(INC_PREFIX)/ClanLib/$$i; done
+-	@for i in `find Common -name '*.h'`; do install -m 0644 $$i $(INC_PREFIX)/ClanLib/$$i; done
+-	@install -m 0644 clanlib.h $(INC_PREFIX)/ClanLib/clanlib.h
+-	@install -m 0644 clanlayer2.h $(INC_PREFIX)/ClanLib/clanlayer2.h
++	@for i in `find Layer1 -name '*.h'|grep API`; do install -c -m 0644 $$i $(INC_PREFIX)/ClanLib/$$i; done
++	@for i in `find Layer2 -name '*.h'`; do install -c -m 0644 $$i $(INC_PREFIX)/ClanLib/$$i; done
++	@for i in `find Common -name '*.h'`; do install -c -m 0644 $$i $(INC_PREFIX)/ClanLib/$$i; done
++	@install -c -m 0644 clanlib.h $(INC_PREFIX)/ClanLib/clanlib.h
++	@install -c -m 0644 clanlayer2.h $(INC_PREFIX)/ClanLib/clanlayer2.h
+ 	@strip Utils/DatafileCompiler/datafile_compiler
+ 	@echo "Datafile compiler is being installed in $(BIN_PREFIX)."
+ 	@install Utils/DatafileCompiler/datafile_compiler $(BIN_PREFIX)
+ 	@echo "Libraries are being installed in $(LIB_PREFIX)."
+-	@install libclan.so $(LIB_PREFIX)
+-	@install libclanlayer1.so $(LIB_PREFIX)
+-	@install libclanlayer2.so $(LIB_PREFIX)
+-	@install libclancommon.so $(LIB_PREFIX)
+-	@install libclan-network.so $(LIB_PREFIX)
+-	@install libclan-sound.so $(LIB_PREFIX)
+-	@if [ -f libclan-display-x11.so ]; then install libclan-display-x11.so $(LIB_PREFIX); fi
+-	@if [ -f libclan-display-mesa.so ]; then install libclan-display-mesa.so $(LIB_PREFIX); fi
+-	@if [ -f libclan-display-fbdev.so ]; then install libclan-display-fbdev.so $(LIB_PREFIX); fi
+-	@if [ -f libclan-display-ptc.so ]; then install libclan-display-ptc.so $(LIB_PREFIX); fi
+-	@if [ -f libclan-display-svgalib.so ]; then install libclan-display-svgalib.so $(LIB_PREFIX); fi
+-	@if [ -f libclan-display-ggi.so ]; then install libclan-display-ggi.so $(LIB_PREFIX); fi
++	@install libclan.so.0.0 $(LIB_PREFIX)
++	@install libclanlayer1.so.0.0 $(LIB_PREFIX)
++	@install libclanlayer2.so.0.0 $(LIB_PREFIX)
++	@install libclancommon.so.0.0 $(LIB_PREFIX)
++	@install libclan-network.so.0.0 $(LIB_PREFIX)
++	@install libclan-sound.so.0.0 $(LIB_PREFIX)
++	@if [ -f libclan-display-x11.so.0.0 ]; then install libclan-display-x11.so.0.0 $(LIB_PREFIX); fi
++	@if [ -f libclan-display-mesa.so.0.0 ]; then install libclan-display-mesa.so.0.0 $(LIB_PREFIX); fi
++	@if [ -f libclan-display-fbdev.so.0.0 ]; then install libclan-display-fbdev.so.0.0 $(LIB_PREFIX); fi
++	@if [ -f libclan-display-ptc.so.0.0 ]; then install libclan-display-ptc.so.0.0 $(LIB_PREFIX); fi
++	@if [ -f libclan-display-svgalib.so.0.0 ]; then install libclan-display-svgalib.so.0.0 $(LIB_PREFIX); fi
++	@if [ -f libclan-display-ggi.so.0.0 ]; then install libclan-display-ggi.so.0.0 $(LIB_PREFIX); fi
+ 
+ docs:	configure
+-	cd Docs; make
++	cd Docs; gmake
+ 
+ docs_install: docs
+-	cd Docs; make install
++	cd Docs; gmake install
+ 
+ configure: configure.in
+ 	@autoconf
+@@ -263,16 +262,16 @@
+ 	@echo ""
+ 	@cat ascii-logo
+ 
+-utils:  libclan.so
+-	@cd Utils; make
++utils:  libclan.so.0.0
++	@cd Utils; gmake
+ 
+ examples:
+-	@cd Docs/examples; make
++	@cd Docs/examples; gmake
+ 
+ clean:
+ 	@echo "Cleaning project..."
+ 	@find . -name '*.o' -exec rm "{}" \;
+-	@find . -name '*.so' -exec rm "{}" \;
++	@find . -name '*.so.0.0' -exec rm "{}" \;
+ 	@find . -name '*.a' -exec rm "{}" \;
+ 	@if [ -d "OutputFiles" ]; then rm -rf OutputFiles; fi
+ 	@rm -f ./Utils/DatafileCompiler/datafile_compiler
+@@ -286,8 +285,8 @@
+ 	@rm -f Docs/perceps
+ 	@rm -f Docs/reference/.perceps
+ 	@find . -name '.#*' -exec rm "{}" \;
+-	@cd Docs && make distclean
+-	@cd Docs/examples && make distclean
++	@cd Docs && gmake distclean
++	@cd Docs/examples && gmake distclean
+ 	@autoconf
+ 
+ dep:
+@@ -305,55 +304,79 @@
+ 
+ # Dynamic linking:
+ 
+-LIB_OPTIONS = -fPIC -fpic -g -shared
++LIB_OPTIONS = -fPIC -g -shared $(LDFLAGS)
+ 
+-libclancommon.so: $(OBJF_COMMON)
+-	@echo "Building dynamic library (libclancommon.so)"
+-	@g++ $(LIB_OPTIONS) -o libclancommon.so $(OBJF_COMMON)
+-
+-libclanlayer1.so: libclancommon.so $(OBJF_GENERIC_ALL) $(OBJF_UNIX)
+-	@echo "Building dynamic library (libclanlayer1.so)"
+-	@g++ $(LIB_OPTIONS) -ldl -o libclanlayer1.so -L. -lclancommon $(LINK_LIBS1) $(OBJF_GENERIC_ALL) $(OBJF_UNIX)
+-
+-libclanlayer2.so: $(OBJF_LAYER2)
+-	@echo "Building dynamic library (libclanlayer2.so)"
+-	@g++ $(LIB_OPTIONS) -o libclanlayer2.so $(LINK_LIBS2) $(OBJF_LAYER2)
+-
+-libclan.so: $(OBJF_COMMON) $(OBJF_GENERIC_ALL) $(OBJF_UNIX)
+-	@echo "Building dynamic library (libclan.so)"
+-	@g++ $(LIB_OPTIONS) -ldl -o libclan.so $(LINK_LIBS1) $(OBJF_COMMON) $(OBJF_GENERIC_ALL) $(OBJF_UNIX)
+-
+-libclan-network.so: $(OBJF_NETWORK_UNIX)
+-	@echo "Building dynamic library (libclan-network.so)"
+-	@g++ $(LIB_OPTIONS) -o libclan-network.so $(OBJF_NETWORK_UNIX)
+-
+-libclan-sound.so: $(OBJF_SOUND_CLANSOUND)
+-	@echo "Building dynamic library (libclan-sound.so)"
+-	@g++ $(LIB_OPTIONS) -o libclan-sound.so $(OBJF_SOUND_CLANSOUND)
+-
+-libclan-display-x11.so: $(OBJF_DISP_X11)
+-	@echo "Building dynamic library (libclan-display-x11.so)"
+-	@g++ $(LIB_OPTIONS) @x_libraries@ -o libclan-display-x11.so $(OBJF_DISP_X11)
+-
+-libclan-display-ptc.so: $(OBJF_DISP_PTC) libclan-display-x11.so
+-	@echo "Building dynamic library (libclan-display-ptc.so)"
+-	@g++ $(LIB_OPTIONS) -L . -lclan-display-x11 -lptc -o libclan-display-ptc.so $(OBJF_DISP_PTC)
+-
+-libclan-display-mesa.so: $(OBJF_DISP_MESA) libclan-display-x11.so
+-	@echo "Building dynamic library (libclan-display-mesa.so)"
+-	@g++ $(LIB_OPTIONS) -L . -lclan-display-x11 @x_libraries@ -lMesaGL -o libclan-display-mesa.so $(OBJF_DISP_MESA)
+-
+-libclan-display-ggi.so: $(OBJF_DISP_GGI)
+-	@echo "Building dynamic library (libclan-display-ggi.so)"
+-	@g++ $(LIB_OPTIONS) -lggi -o libclan-display-ggi.so $(OBJF_DISP_GGI)
+-
+-libclan-display-fbdev.so: $(OBJF_DISP_FBDEV)
+-	@echo "Building dynamic library (libclan-display-fbdev.so)"
+-	@g++ $(LIB_OPTIONS) -o libclan-display-fbdev.so $(OBJF_DISP_FBDEV)
+-
+-libclan-display-svgalib.so: $(OBJF_DISP_SVGALIB)
+-	@echo "Building dynamic library (libclan-display-svgalib.so)"
+-	@g++ $(LIB_OPTIONS) -lvga -o libclan-display-svgalib.so $(OBJF_DISP_SVGALIB)
++libclancommon.so.0.0: $(OBJF_COMMON)
++	@echo "Building dynamic library (libclancommon.so.0.0)"
++	@g++ $(LIB_OPTIONS) -o libclancommon.so.0.0 $(OBJF_COMMON)
++	-@ln -s libclancommon.so.0.0 libclancommon.so.0
++	-@ln -s libclancommon.so.0.0 libclancommon.so
++
++libclanlayer1.so.0.0: libclancommon.so.0.0 $(OBJF_GENERIC_ALL) $(OBJF_UNIX)
++	@echo "Building dynamic library (libclanlayer1.so.0.0)"
++	@g++ $(LIB_OPTIONS) -o libclanlayer1.so.0.0 -L. -lclancommon $(LINK_LIBS1) $(OBJF_GENERIC_ALL) $(OBJF_UNIX)
++	-@ln -s libclanlayer1.so.0.0 libclanlayer1.so.0
++	-@ln -s libclanlayer1.so.0.0 libclanlayer1.so
++
++libclanlayer2.so.0.0: $(OBJF_LAYER2)
++	@echo "Building dynamic library (libclanlayer2.so.0.0)"
++	@g++ $(LIB_OPTIONS) -o libclanlayer2.so.0.0 $(LINK_LIBS2) $(OBJF_LAYER2)
++	-@ln -s libclanlayer2.so.0.0 libclanlayer2.so.0
++	-@ln -s libclanlayer2.so.0.0 libclanlayer2.so
++
++libclan.so.0.0: $(OBJF_COMMON) $(OBJF_GENERIC_ALL) $(OBJF_UNIX)
++	@echo "Building dynamic library (libclan.so.0.0)"
++	@g++ $(LIB_OPTIONS) -o libclan.so.0.0 $(LINK_LIBS1) $(OBJF_COMMON) $(OBJF_GENERIC_ALL) $(OBJF_UNIX)
++	-@ln -s libclan.so.0.0 libclan.so.0
++	-@ln -s libclan.so.0.0 libclan.so
++
++libclan-network.so.0.0: $(OBJF_NETWORK_UNIX)
++	@echo "Building dynamic library (libclan-network.so.0.0)"
++	@g++ $(LIB_OPTIONS) -o libclan-network.so.0.0 $(OBJF_NETWORK_UNIX)
++	-@ln -s libclan-network.so.0.0 libclan-network.so.0
++	-@ln -s libclan-network.so.0.0 libclan-network.so
++
++libclan-sound.so.0.0: $(OBJF_SOUND_CLANSOUND)
++	@echo "Building dynamic library (libclan-sound.so.0.0)"
++	@g++ $(LIB_OPTIONS) -lossaudio -o libclan-sound.so.0.0 $(OBJF_SOUND_CLANSOUND)
++	-@ln -s libclan-sound.so.0.0 libclan-sound.so.0
++	-@ln -s libclan-sound.so.0.0 libclan-sound.so
++
++libclan-display-x11.so.0.0: $(OBJF_DISP_X11)
++	@echo "Building dynamic library (libclan-display-x11.so.0.0)"
++	@g++ $(LIB_OPTIONS) @x_libraries@ -o libclan-display-x11.so.0.0 $(OBJF_DISP_X11)
++	-@ln -s libclan-display-x11.so.0.0 libclan-display-x11.so.0
++	-@ln -s libclan-display-x11.so.0.0 libclan-display-x11.so
++
++libclan-display-ptc.so.0.0: $(OBJF_DISP_PTC) libclan-display-x11.so.0.0
++	@echo "Building dynamic library (libclan-display-ptc.so.0.0)"
++	@g++ $(LIB_OPTIONS) -L . -lclan-display-x11 -lptc -o libclan-display-ptc.so.0.0 $(OBJF_DISP_PTC)
++	-@ln -s libclan-display-ptc.so.0.0 libclan-display-ptc.so.0
++	-@ln -s libclan-display-ptc.so.0.0 libclan-display-ptc.so
++
++libclan-display-mesa.so.0.0: $(OBJF_DISP_MESA) libclan-display-x11.so.0.0
++	@echo "Building dynamic library (libclan-display-mesa.so.0.0)"
++	@g++ $(LIB_OPTIONS) -L . -lclan-display-x11 @x_libraries@ -lMesaGL -o libclan-display-mesa.so.0.0 $(OBJF_DISP_MESA)
++	-@ln -s libclan-display-mesa.so.0.0 libclan-display-mesa.so.0
++	-@ln -s libclan-display-mesa.so.0.0 libclan-display-mesa.so
++
++libclan-display-ggi.so.0.0: $(OBJF_DISP_GGI)
++	@echo "Building dynamic library (libclan-display-ggi.so.0.0)"
++	@g++ $(LIB_OPTIONS) -lggi -o libclan-display-ggi.so.0.0 $(OBJF_DISP_GGI)
++	-@ln -s libclan-display-ggi.so.0.0 libclan-display-ggi.so.0
++	-@ln -s libclan-display-ggi.so.0.0 libclan-display-ggi.so
++
++libclan-display-fbdev.so.0.0: $(OBJF_DISP_FBDEV)
++	@echo "Building dynamic library (libclan-display-fbdev.so.0.0)"
++	@g++ $(LIB_OPTIONS) -o libclan-display-fbdev.so.0.0 $(OBJF_DISP_FBDEV)
++	-@ln -s libclan-display-fbdev.so.0.0 libclan-display-fbdev.so.0
++	-@ln -s libclan-display-fbdev.so.0.0 libclan-display-fbdev.so
++
++libclan-display-svgalib.so.0.0: $(OBJF_DISP_SVGALIB)
++	@echo "Building dynamic library (libclan-display-svgalib.so.0.0)"
++	@g++ $(LIB_OPTIONS) -lvga -o libclan-display-svgalib.so.0.0 $(OBJF_DISP_SVGALIB)
++	-@ln -s libclan-display-svgalib.so.0.0 libclan-display-svgalib.so.0
++	-@ln -s libclan-display-svgalib.so.0.0 libclan-display-svgalib.so
+ 
+ include Makefile.dep
+ 

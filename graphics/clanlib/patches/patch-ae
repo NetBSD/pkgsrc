@@ -1,0 +1,31 @@
+$NetBSD: patch-ae,v 1.1.1.1 1999/07/21 22:56:35 garbled Exp $
+--- Layer1/Input/X11/joystick_linux.h.orig	Thu Jul  8
+11:36:50 1999
++++ Layer1/Input/X11/joystick_linux.h	Thu Jul  8 11:41:55 1999
+@@ -21,13 +21,16 @@
+ #define header_joystick_linux
+ 
+ // TODO: ifdef this out if it isn't a linux system.
+-
+-#include <linux/version.h>
+-
+ #ifndef KERNEL_VERSION
+ #define KERNEL_VERSION(a,b,c) (((a) << 16) + ((b) << 8) + (c))
+ #endif
+ 
++#ifdef __NetBSD__
++#define LINUX_VERSION_CODE KERNEL_VERSION(1,0,0)
++#else
++
++#include <linux/version.h>
++
+ #ifndef LINUX_VERSION_CODE
+ #error "You need to use at least 2.0 Linux kernel." 
+ #endif
+@@ -109,5 +112,5 @@
+ };
+ 
+ #endif
+-
++#endif
+ #endif

@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1.1.1 1999/07/21 22:56:35 garbled Exp $
+--- Common/formatted_data.h.BAK	Sat Apr 17 00:41:13 1999
++++ Common/formatted_data.h	Sat Apr 17 00:41:36 1999
+@@ -8,6 +8,8 @@
+ #ifdef WIN32
+ #include <winsock.h>
+ #else
++#include <sys/param.h>
++#include <sys/types.h>
+ #include <netinet/in.h>
+ #endif
+ 

@@ -1,0 +1,15 @@
+$NetBSD: patch-ad,v 1.1.1.1 1999/07/21 22:56:35 garbled Exp $
+--- Makefile.conf.in.orig	Sun May 30 15:43:50 1999
++++ Makefile.conf.in	Thu Jul  8 11:27:24 1999
+@@ -9,9 +9,9 @@
+ INC_PREFIX = @includedir@
+ BIN_PREFIX = @bindir@
+ 
+-INCLUDE_DIRS =	-I . -I Layer1 -I Layer2 -I Layer2/StreamSoundProviders/mikmod/include @x_includes@
++INCLUDE_DIRS =	-I . -I Layer1 -I Layer2 -I Layer2/StreamSoundProviders/mikmod/include @x_includes@ -I$(LOCALBASE)/include
+ 
+-COMP_OPTIONS =	-Wall -g $(INCLUDE_DIRS) -fPIC -O2 @DEFS@
++COMP_OPTIONS =	-g $(CFLAGS) $(INCLUDE_DIRS) -fPIC -O2 @DEFS@
+ 
+ LINK_LIBS1 = @libs1@
+ LINK_LIBS2 = @libs2@
