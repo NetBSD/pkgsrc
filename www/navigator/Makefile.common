@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.15 2000/07/28 13:53:44 tron Exp $
+# $NetBSD: Makefile.common,v 1.16 2000/08/18 15:44:45 tron Exp $
 #
 # Common include file for communicator and navigator packages
 
@@ -6,7 +6,7 @@
 
 # Note - the version will be overridden for certain architectures which
 #	 do not have the latest version available (eg: SunOS sparc)
-NS_VERS=	4.74
+NS_VERS=	4.75
 NS_ENCRYPTION=	us
 LDAP_VERS=	40
 #
