@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/12/24 10:30:33 recht Exp $
+
+SHA1 (ZSI-1.4.1.tar.gz) = 998cb9cc1909ac187e6fc0d8c2179b931a6a7d44
+Size (ZSI-1.4.1.tar.gz) = 345491 bytes
+SHA1 (patch-aa) = 030157c727a75304c76691742a7d1813b925c4ab
