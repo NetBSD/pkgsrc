@@ -1,0 +1,13 @@
+$NetBSD: patch-ak,v 1.1 2002/02/09 07:30:22 taca Exp $
+
+--- mkchadic/Makefile.in.orig	Fri Feb  8 15:31:51 2002
++++ mkchadic/Makefile.in
+@@ -82,7 +82,7 @@
+ LDADD = $(top_builddir)/lib/libchasen.la
+ DEFS = -DRCPATH=\""$(RCPATH)\"" @DEFS@
+ 
+-pkglibexecdir = ${libexecdir}/chasen
++pkglibexecdir = ${sbindir}
+ pkglibexec_PROGRAMS = convdic makeint makemat mkary pattool sortdic convary
+ 
+ convdic_SOURCES = convdic.c
