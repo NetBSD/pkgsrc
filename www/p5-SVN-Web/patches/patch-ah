@@ -1,0 +1,30 @@
+$NetBSD: patch-ah,v 1.1.1.1 2003/12/03 16:13:29 epg Exp $
+
+--- lib/SVN/Web/Revision.pm.orig	Tue Aug 26 13:31:16 2003
++++ lib/SVN/Web/Revision.pm
+@@ -16,7 +16,6 @@ sub _log {
+     my ($self, $paths, $rev, $author, $date, $msg, $pool) = @_;
+     my $data = {rev => $rev, author => $author,
+ 		date => $date, msg => $msg};
+-
+     $data->{paths} = {map { $_ => {action => $paths->{$_}->action,
+ 				   copyfrom => $paths->{$_}->copyfrom_path,
+ 				   copyfromrev => $paths->{$_}->copyfrom_rev,
+@@ -24,7 +23,7 @@ sub _log {
+     my $root = $self->{repos}->fs->revision_root ($rev, $pool);
+     for (keys %{$data->{paths}}) {
+ 	$data->{paths}{$_}{isdir} = 1
+-	    if SVN::Fs::check_path ($root, $_) == $SVN::Core::node_dir;
++	    if $data->{paths}{$_}{action} eq 'D' || $root->is_dir ($_);
+     }
+     return $data;
+ }
+@@ -55,7 +54,7 @@ revision [% rev %] - [% author || '(no a
+ [% FOREACH path = paths %]
+ [% path.value.action %] -
+ [% IF path.value.isdir %]
+-<a href="[% script %]/[% repos %]/browse[% path.key %]?rev=[% rev %]">[% path.key %]</a>
++<a href="[% script %]/[% repos %]/browse[% path.key %]/?rev=[% rev %]">[% path.key %]</a>
+ [% IF path.value.copyfrom %]
+ (from
+ <a href="[% script %]/[% repos %]/browse[% path.value.copyfrom %]/?rev=[% path.value.copyfromrev %]">[% path.value.copyfrom %]:[% path.value.copyfromrev %]</a>

@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.1.1.1 2003/12/03 16:13:29 epg Exp $
+
+--- lib/SVN/Web/RSS.pm.orig	Tue Aug 26 10:53:02 2003
++++ lib/SVN/Web/RSS.pm
+@@ -9,7 +9,7 @@ sub run {
+     my $data = $self->SUPER::run(@_)->{data};
+ 
+     my $rss = new XML::RSS (version => '1.0');
+-    my $url = "http://$ENV{HTTP_HOST}$ENV{SCRIPT_NAME}/$self->{reposname}";
++    my $url = "http://$ENV{HTTP_HOST}$self->{script}/$self->{reposname}";
+ 
+     $rss->channel(title        => "subversion revisions of $self->{path}",
+ 		  link         => "$url/log$self->{path}",
