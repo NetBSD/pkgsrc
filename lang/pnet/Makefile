@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/01/24 13:51:15 grant Exp $
+# $NetBSD: Makefile,v 1.4 2004/02/27 07:37:04 xtraeme Exp $
 #
 
 DISTNAME=	pnet-0.6.2
@@ -17,7 +17,7 @@ CONFLICTS=	mono-[0-9]*
 USE_GNU_TOOLS+=	make
 USE_MAKEINFO=	yes
 GNU_CONFIGURE=	yes
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=	yes
 
 INFO_FILES=	pnettools.info
 
