@@ -1,7 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2003/02/14 20:24:44 salo Exp $
---- bg/Makefile.in.orig	Fri Feb  7 17:33:33 2003
-+++ bg/Makefile.in	Fri Feb  7 17:33:42 2003
-@@ -237,7 +237,7 @@
+$NetBSD: patch-aa,v 1.5 2005/01/11 14:02:06 adam Exp $
+
+--- bg/Makefile.in.orig	2004-12-14 18:46:52.000000000 +0000
++++ bg/Makefile.in
+@@ -250,7 +250,7 @@ install-data-hook:
  	    $(INSTALL_DATA) $$i $(DESTDIR)${pixmapdir}/$$j/ ; \
  	  done) ; \
  	done)

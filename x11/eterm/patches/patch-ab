@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.5 2003/05/08 17:25:08 jmmv Exp $
+$NetBSD: patch-ab,v 1.6 2005/01/11 14:02:06 adam Exp $
 
---- configure.orig	2002-10-31 18:48:54.000000000 +0100
+--- configure.orig	2004-12-14 18:46:33.000000000 +0000
 +++ configure
-@@ -10117,8 +10117,8 @@ fi
+@@ -10486,8 +10486,8 @@ fi
  
  fi
  
