@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2454 2004/11/25 18:17:37 snj Exp $
+$NetBSD: TODO,v 1.2455 2004/11/25 18:38:52 minskim Exp $
 
 Suggested new packages
 ======================
@@ -1104,7 +1104,6 @@ Suggested package updates
 	o py-gnuplot-1.7
 	o py-gtk2-2.4.1
 	o py-ldap-2.0.5
-	o py-libxml2-2.6.16
 	o py-logging-0.4.9.5
 	o py-m2crypto-0.13
 	o py-mad-0.5.2
