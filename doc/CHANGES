@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1299 2003/02/01 16:10:22 jmmv Exp $
+$NetBSD: CHANGES,v 1.1300 2003/02/02 08:09:41 taya Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -530,3 +530,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated postfix to 2.0.3nb1 [lukem 2003-02-01]
 	Updated atlc to 4.2.10 [dmcmahill 2003-02-01]
 	Updated intltool to 0.25 [jmmv 2003-02-01]
+	Updated mozilla to 1.2.1nb5 [taya 2003-02-02]
