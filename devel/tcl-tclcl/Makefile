@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/01/20 12:13:29 agc Exp $
+# $NetBSD: Makefile,v 1.7 2004/03/08 20:27:14 minskim Exp $
 
 DISTNAME=	tclcl-src-1.0b13
 PKGNAME=	tcl-${DISTNAME:S/b/rc/:S/-src//}
@@ -21,5 +21,5 @@ CONFIGURE_ARGS+=	--with-tk=${BUILDLINK_PREFIX.tk}
 CPPFLAGS+=	-I${BUILDLINK_PREFIX.tcl}/include/tcl/generic
 
 .include  "../../lang/tcl-otcl/buildlink2.mk"
-.include "../../x11/tk/buildlink2.mk"
+.include "../../x11/tk83/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
