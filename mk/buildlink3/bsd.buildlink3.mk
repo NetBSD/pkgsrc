@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.1.2.19 2003/08/26 20:56:38 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.1.2.20 2003/08/27 01:47:34 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -47,13 +47,19 @@ BUILDLINK_DEPENDS.x11-links=	x11-links>=0.13
 BUILDLINK_DEPMETHOD.x11-links=	build
 BUILDLINK_PKGSRCDIR.x11-links=	../../pkgtools/x11-links
 
+.  if !defined(BUILDLINK_X11_DIR)
 BUILDLINK_X11_DIR!=							\
 	cd ${_PKG_DBDIR};						\
 	dir=`${PKG_ADMIN} -s "" lsbest "${BUILDLINK_DEPENDS.x11-links}" || ${TRUE}`; \
 	case "$$dir" in							\
-	"")	${ECHO} "not_found" ;;					\
-	*)	${ECHO} "$$dir/${X11_LINKS_SUBDIR}" ;;			\
-	esac
+	"")	dir="not_found" ;;					\
+	*)	dir="$$dir/${X11_LINKS_SUBDIR}" ;;			\
+	esac;								\
+	${ECHO} $$dir
+.    if empty(BUILDLINK_X11_DIR:Mnot_found)
+MAKEFLAGS+=	BUILDLINK_X11_DIR=${BUILDLINK_X11_DIR}
+.    endif
+.  endif
 .endif
 
 .for _pkg_ in ${BUILDLINK_DEPENDS}
@@ -101,14 +107,17 @@ ${_BLNK_DEPMETHOD.${_pkg_}}+= \
 .  if !defined(BUILDLINK_PKGBASE.${_pkg_})
 BUILDLINK_PKGBASE.${_pkg_}?=	${_pkg_}
 .  endif
-.  if !defined(BUILDLINK_PREFIX.${_pkg_})
+.  if !defined(BUILDLINK_DEPOT.${_pkg_})
 BUILDLINK_DEPOT.${_pkg_}!=						\
 	cd ${_PKG_DBDIR};						\
 	dir=`${PKG_ADMIN} -s "" lsbest "${BUILDLINK_DEPENDS.${_pkg_}}" || ${TRUE}`; \
 	case "$$dir" in							\
-	"")	${ECHO} "not_found" ;;					\
-	*)	${ECHO} "$$dir" ;;					\
-	esac
+	"")	dir="not_found" ;;					\
+	esac;								\
+	${ECHO} $$dir
+.    if empty(BUILDLINK_DEPOT.${_pkg_}:Mnot_found)
+MAKEFLAGS+=	BUILDLINK_DEPOT.${_pkg_}=${BUILDLINK_DEPOT.${_pkg_}}
+.    endif
 .  endif
 .  if !defined(BUILDLINK_PREFIX.${_pkg_})
 BUILDLINK_PREFIX.${_pkg_}?=	${BUILDLINK_DEPOT.${_pkg_}}

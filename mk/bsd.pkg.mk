@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1216.2.37 2003/08/27 00:59:41 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1216.2.38 2003/08/27 01:47:32 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -115,14 +115,6 @@ PKG_FAIL_REASON+=	"PLIST_TYPE must be \`\`dynamic'' or \`\`static''."
 PKG_FAIL_REASON+=	"PLIST_TYPE must be \`\`static'' for \`\`overwrite'' packages."
 .endif
 
-# Set the default BUILDLINK_DIR, BUILDLINK_X11PKG_DIR,  BUILDLINK_X11_DIR so
-# that if no buildlink2.mk files are included, then they still point to
-# where headers and libraries for installed packages and X11R6 may be found.
-#
-BUILDLINK_DIR?=		${LOCALBASE}
-BUILDLINK_X11PKG_DIR?=	${X11BASE}
-BUILDLINK_X11_DIR?=	${X11BASE}
-
 USE_BUILDLINK2?=	no	# default to not using buildlink2
 .if ${PKG_INSTALLATION_TYPE} == "pkgviews"
 _USE_BUILDLINK3=	yes	# pkgviews requires buildlink3
@@ -131,6 +123,17 @@ _USE_BUILDLINK3=	no
 .endif
 .if empty(USE_BUILDLINK2:M[nN][oO]) && empty(_USE_BUILDLINK3:M[nN][oO])
 PKG_FAIL_REASON+=	"Please undefine USE_BUILDLINK2 when using pkgviews."
+.endif
+
+.if empty(_USE_BUILDLINK3:M[yY][eE][sS])
+#
+# Set the default BUILDLINK_DIR, BUILDLINK_X11PKG_DIR,  BUILDLINK_X11_DIR so
+# that if no buildlink2.mk files are included, then they still point to
+# where headers and libraries for installed packages and X11R6 may be found.
+#
+BUILDLINK_DIR?=		${LOCALBASE}
+BUILDLINK_X11PKG_DIR?=	${X11BASE}
+BUILDLINK_X11_DIR?=	${X11BASE}
 .endif
 
 .if defined(USE_IMAKE)
