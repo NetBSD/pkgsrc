@@ -1,42 +1,26 @@
-#!/bin/sh
+#!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: snmpd.sh,v 1.8 2003/03/06 23:00:15 hubertf Exp $
+# $NetBSD: snmpd.sh,v 1.9 2003/07/30 21:05:00 jmmv Exp $
 #
 # PROVIDE: snmpd
 # REQUIRE: DAEMON LOGIN network
 #
-# PID file:
-PF=/var/run/snmpd.pid
 
-
-if [ -f /etc/snmp/snmpd.conf ]
-then
-    SNMPD_CFG="-c /etc/snmp/snmpd.conf"
+if [ -f /etc/rc.subr ]; then
+	. /etc/rc.subr
 fi
 
-case $1 in
-start)
-	if [ -x @PREFIX@/sbin/snmpd ]
-	then
-	    echo 'Starting snmpd.'
-	    @PREFIX@/sbin/snmpd -s -P ${PF} -A ${SNMPD_CFG}
-	fi
-	;;
-stop)
-	if [ -f ${PF} ]; then
-		kill `cat ${PF}`
-		rm -f ${PF}
-	else
-		echo "$0: snmpd not running or PID not recorded!" 1>&2
-	fi
-	;;
-restart)
-	sh $0 stop
-	sleep 5
-	sh $0 start
-	;;
-*)
-	echo "Usage: $0 {start|stop|restart}"
-	exit 1
-esac
+name="snmpd"
+rcvar="${name}"
+pidfile="/var/run/snmpd.pid"
+required_files="@PKG_SYSCONFDIR@/${name}.conf"
+command="@PREFIX@/sbin/snmpd"
+command_args="-s -P ${pidfile} -A -c @PKG_SYSCONFDIR@/${name}.conf"
 
+if [ -f /etc/rc.subr ]; then
+	load_rc_config "$name"
+	run_rc_command "$1"
+else
+	printf " $name"
+	${command} ${snmpd_flags} ${command_args}
+fi
