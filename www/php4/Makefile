@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2001/05/14 14:12:28 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2001/07/13 07:09:26 jlam Exp $
 
 .include "../../www/php4/Makefile.common"
 
@@ -15,17 +15,17 @@ EGDIR=			${PREFIX}/share/examples/php
 DEINSTALL_FILE=		${WRKDIR}/DEINSTALL
 INSTALL_FILE=		${WRKDIR}/INSTALL
 
+FILES_SUBST=		PHP_CONFDIR=${PHP_CONFDIR}
+FILES_SUBST+=		CAT=${CAT:Q}
+FILES_SUBST+=		CHMOD=${CHMOD:Q}
+FILES_SUBST+=		CMP=${CMP:Q}
+FILES_SUBST+=		CP=${CP:Q}
+FILES_SUBST+=		RM=${RM:Q}
+FILES_SUBST_SED=	${FILES_SUBST:S/=/@!/:S/$/!g/:S/^/ -e s!@/}
+
 pre-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/thttpd
-	${SED}	-e "s|@PHP_CONFDIR@|${PHP_CONFDIR}|g"			\
-		-e "s|@CAT@|${CAT}|g"					\
-		-e "s|@RM@|${RM}|g"					\
-		${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
-	${SED}	-e "s|@PHP_CONFDIR@|${PHP_CONFDIR}|g"			\
-		-e "s|@CAT@|${CAT}|g"					\
-		-e "s|@CHMOD@|${CHMOD}|g"				\
-		-e "s|@CP@|${CP}|g"					\
-		${PKGDIR}/INSTALL > ${INSTALL_FILE}
+	${SED} ${FILES_SUBST_SED} ${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
+	${SED} ${FILES_SUBST_SED} ${PKGDIR}/INSTALL > ${INSTALL_FILE}
 	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} PRE-INSTALL
 
 post-install:

@@ -1,11 +1,12 @@
 #!/bin/sh
 #
-# $NetBSD: DEINSTALL,v 1.1.1.1 2001/04/23 20:05:44 kim Exp $
+# $NetBSD: DEINSTALL,v 1.2 2001/07/13 07:09:26 jlam Exp $
 
 PKGNAME=$1
 STAGE=$2
 
 CAT="@CAT@"
+CMP="@CMP@"
 CP="@CP@"
 RM="@RM@"
 
@@ -23,7 +24,7 @@ DEINSTALL)
 	do
 		FILE=${CONFDIR}/${file}
 		SAMPLEFILE=${SAMPLECONFDIR}/${file}.default
-		if diff -q ${FILE} ${SAMPLEFILE} >/dev/null
+		if ${CMP} -s ${FILE} ${SAMPLEFILE}
 		then
 			${RM} -f ${FILE}
 		fi

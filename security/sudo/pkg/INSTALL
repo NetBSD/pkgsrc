@@ -1,9 +1,14 @@
 #! /bin/sh
 #
-# $NetBSD: INSTALL,v 1.3 2000/12/06 06:33:40 jlam Exp $
+# $NetBSD: INSTALL,v 1.4 2001/07/13 07:09:24 jlam Exp $
 
 PKGNAME=$1
 STAGE=$2
+
+CAT="@CAT@"
+CHOWN="@CHOWN@"
+CHMOD="@CHMOD@"
+CP="@CP@"
 
 SAMPLECONFDIR=${PKG_PREFIX}/share/examples/sudo
 CONFDIR=/etc
@@ -12,6 +17,7 @@ CONFFILES="sudoers"
 case ${STAGE} in
 PRE-INSTALL)
 	;;
+
 POST-INSTALL)
 	echo "Installing configuration files:"
 	for file in ${CONFFILES}
@@ -23,12 +29,12 @@ POST-INSTALL)
 			echo "    ${FILE} already exists"
 		else
 			echo "    ${FILE}"
-			cp ${SAMPLEFILE} ${FILE}
-			chown 0:0 ${FILE}
-			chmod 0440 ${FILE}
+			${CP} ${SAMPLEFILE} ${FILE}
+			${CHOWN} 0:0 ${FILE}
+			${CHMOD} 0440 ${FILE}
 		fi
 	done
-	cat << EOF
+	${CAT} << EOF
 ===========================================================================
 Some files you might need to customize include the following:
 
@@ -38,10 +44,11 @@ EOF
 		FILE=${CONFDIR}/${file}
 		echo "	${FILE}"
 	done
-	cat << EOF
+	${CAT} << EOF
 ===========================================================================
 EOF
 	;;
+
 *)
 	echo "Unexpected argument: ${STAGE}"
 	exit 1

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2001/05/18 06:01:36 jlam Exp $
+# $NetBSD: Makefile,v 1.32 2001/07/13 07:09:25 jlam Exp $
 #
 # This package does not compile in mod_ssl support hooks, as it conflicts
 # with IPv6-enable patch.
@@ -93,12 +93,27 @@ BUILD_DEFS+=		APACHE_SUEXEC
 DEINSTALL_FILE=		${WRKDIR}/DEINSTALL
 INSTALL_FILE=		${WRKDIR}/INSTALL
 
+# Given foo=${bar}, replace @foo@ with ${bar}.
+#
+FILES_SUBST=		APACHE_SYSCONFDIR=${APACHE_SYSCONFDIR}
+FILES_SUBST+=		CAT=${CAT:Q}
+FILES_SUBST+=		CHMOD=${CHMOD:Q}
+FILES_SUBST+=		CHOWN=${CHOWN:Q}
+FILES_SUBST+=		CMP=${CMP:Q}
+FILES_SUBST+=		CP=${CP:Q}
+FILES_SUBST+=		MKDIR=${MKDIR:Q}
+FILES_SUBST+=		PREFIX=${PREFIX}
+FILES_SUBST+=		RM=${RM:Q}
+FILES_SUBST+=		RMDIR=${RMDIR:Q}
+FILES_SUBST+=		TRUE=${TRUE:Q}
+FILES_SUBST_SED=	${FILES_SUBST:S/=/@!/:S/$/!g/:S/^/-e s!@/}
+
 # Note that there is NO static compile module hook here.  This is intentional.
 # Under Apache 1.3, modules can be compiled to link dynamically to the server
 # using the "apxs" program.  See apxs(8).
 
 pre-patch:
-	${FIND} ${WRKSRC} -name '*.orig' -exec ${RM} -f {} \;
+	${FIND} ${WRKSRC} -name '*.orig' -print | ${XARGS} ${RM} -f
 
 post-patch:
 	for file in ${IPV6_PATCH}; do					\
@@ -109,38 +124,24 @@ post-patch:
 	${CHMOD} +x ${CONFIGURE_SCRIPT}
 
 pre-configure:
-	${SED}	-e "s|@PREFIX@|${PREFIX}|g"				\
-		-e "s|@APACHE_SYSCONFDIR@|${APACHE_SYSCONFDIR}|g"	\
+	${SED} ${FILES_SUBST_SED}					\
 		${FILESDIR}/config.layout > ${WRKDIR}/config.layout
 
 pre-install:
-	${FIND} ${WRKSRC}/htdocs -name '*.orig' -exec ${RM} -f {} \;
-	${SED}	-e "s|@PREFIX@|${PREFIX}|g"				\
-		-e "s|@APACHE_SYSCONFDIR@|${APACHE_SYSCONFDIR}|g"	\
-		${FILESDIR}/apache.sh > ${WRKDIR}/apache.sh
-	${SED}	-e "s|@CAT@|${CAT}|g"					\
-		-e "s|@RM@|${RM}|g"					\
-		-e "s|@RMDIR@|${RMDIR}|g"				\
-		-e "s|@TRUE@|${TRUE}|g"					\
-		-e "s|@APACHE_SYSCONFDIR@|${APACHE_SYSCONFDIR}|g"	\
-		${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
-	${SED}	-e "s|@CAT@|${CAT}|g"					\
-		-e "s|@CHMOD@|${CHMOD}|g"				\
-		-e "s|@CHOWN@|${CHOWN}|g"				\
-		-e "s|@CP@|${CP}|g"					\
-		-e "s|@MKDIR@|${MKDIR}|g"				\
-		-e "s|@APACHE_SYSCONFDIR@|${APACHE_SYSCONFDIR}|g"	\
-		${PKGDIR}/INSTALL > ${INSTALL_FILE}
+	${FIND} ${WRKSRC}/htdocs -name '*.orig' -print | ${XARGS} ${RM} -f
+	${SED} ${FILES_SUBST_SED} ${FILESDIR}/apache.sh > ${WRKDIR}/apache.sh
+	${SED} ${FILES_SUBST_SED} ${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
+	${SED} ${FILES_SUBST_SED} ${PKGDIR}/INSTALL > ${INSTALL_FILE}
 
 post-install:
 .if !defined(NOPIC)
 	cd ${PREFIX}/lib/httpd; ${MV} libproxy.so mod_proxy.so
 .endif
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/httpd
-	for i in httpd.conf magic mime.types; do			\
-		${INSTALL_DATA} ${APACHE_SYSCONFDIR}/$$i.default	\
+	for file in httpd.conf magic mime.types; do			\
+		${INSTALL_DATA} ${APACHE_SYSCONFDIR}/$${file}.default	\
 			${PREFIX}/share/examples/httpd;			\
-		${RM} -f ${APACHE_SYSCONFDIR}/$$i.default;		\
+		${RM} -f ${APACHE_SYSCONFDIR}/$${file}.default;		\
 	done
 	${INSTALL_DATA} ${DISTDIR}/sitedrivenby.gif ${PREFIX}/share/httpd/htdocs
 	${INSTALL_SCRIPT} ${WRKDIR}/apache.sh ${PREFIX}/etc/rc.d/apache

@@ -1,12 +1,12 @@
 #!/bin/sh
 #
-# $NetBSD: DEINSTALL,v 1.1.1.1 2001/07/02 21:00:44 jlam Exp $
+# $NetBSD: DEINSTALL,v 1.2 2001/07/13 07:09:21 jlam Exp $
 
 PKGNAME=$1
 STAGE=$2
 
+CMP="@CMP@"
 CP="@CP@"
-DIFF="@DIFF@"
 GREP="@GREP@"
 RM="@RM@"
 RMDIR="@RMDIR@"
@@ -26,7 +26,7 @@ POST-DEINSTALL)
 	( ${GREP} -v buildlinkX11 ${HOSTDEF}.bak || ${TRUE} ) > ${HOSTDEF}
 	${RM} -f ${HOSTDEF}.bak
 	if [ ${PKG_PREFIX} != ${X11BASE} ] && \
-		${DIFF} -q ${X11_HOSTDEF} ${HOSTDEF} >/dev/null
+		${CMP} -s ${X11_HOSTDEF} ${HOSTDEF}
 	then
 		${RM} -f ${HOSTDEF}
 	fi

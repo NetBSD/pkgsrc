@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2001/06/20 05:29:22 jlam Exp $
+# $NetBSD: Makefile,v 1.23 2001/07/13 07:09:20 jlam Exp $
 #
 
 DISTNAME=	vfu-3.01
@@ -22,6 +22,7 @@ INSTALL_FILE=		${WRKDIR}/INSTALL
 
 FILES_SUBST=		CAT=${CAT:Q}
 FILES_SUBST+=		CHMOD=${CHMOD:Q}
+FILES_SUBST+=		CMP=${CMP:Q}
 FILES_SUBST+=		CP=${CP:Q}
 FILES_SUBST+=		RM=${RM:Q}
 FILES_SUBST_SED=	${FILES_SUBST:S/=/@!/:S/$/!g/:S/^/ -e s!@/}

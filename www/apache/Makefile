@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.74 2001/07/09 02:45:09 hubertf Exp $
+# $NetBSD: Makefile,v 1.75 2001/07/13 07:09:24 jlam Exp $
 #
 # This pkg does not compile in mod_ssl, only the `mod_ssl EAPI' (a set of
 # code hooks that allow mod_ssl to be compiled separately later, if desired).
@@ -97,6 +97,7 @@ FILES_SUBST=		APACHE_SYSCONFDIR=${APACHE_SYSCONFDIR}
 FILES_SUBST+=		CAT=${CAT:Q}
 FILES_SUBST+=		CHMOD=${CHMOD:Q}
 FILES_SUBST+=		CHOWN=${CHOWN:Q}
+FILES_SUBST+=		CMP=${CMP:Q}
 FILES_SUBST+=		CP=${CP:Q}
 FILES_SUBST+=		MKDIR=${MKDIR:Q}
 FILES_SUBST+=		PREFIX=${PREFIX}

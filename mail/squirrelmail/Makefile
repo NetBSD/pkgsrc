@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/04/30 05:35:45 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2001/07/13 07:09:19 jlam Exp $
 
 DISTNAME=	squirrelmail-1.0.6
 CATEGORIES=	mail www
@@ -30,6 +30,20 @@ MESSAGE_SUBST+=		SMDIR=${SMDIR}
 DEINSTALL_FILE=		${WRKDIR}/DEINSTALL
 INSTALL_FILE=		${WRKDIR}/INSTALL
 
+FILES_SUBST=		SMDIR=${SMDIR:S/^${PREFIX}\///}
+FILES_SUBST+=		APACHE_SYSCONFDIR=${APACHE_SYSCONFDIR}
+FILES_SUBST+=		CAT=${CAT:Q}
+FILES_SUBST+=		CHGRP=${CHGRP:Q}
+FILES_SUBST+=		CHMOD=${CHMOD:Q}
+FILES_SUBST+=		CHOWN=${CHOWN:Q}
+FILES_SUBST+=		CMP=${CMP:Q}
+FILES_SUBST+=		CP=${CP:Q}
+FILES_SUBST+=		MKDIR=${MKDIR:Q}
+FILES_SUBST+=		RM=${RM:Q}
+FILES_SUBST+=		RMDIR=${RMDIR:Q}
+FILES_SUBST+=		TRUE=${TRUE:Q}
+FILES_SUBST_SED=	${FILES_SUBST:S/=/@!/:S/$/!g/:S/^/ -e s!@/}
+
 post-extract:
 	cd ${WRKSRC};							\
 	${MV} config/conf.pl config/conf.pl.orig;			\
@@ -45,22 +59,8 @@ pre-install:
 	${SED}	-e "s|@SMDIR@|${SMDIR}|g"				\
 		${FILESDIR}/squirrelmail.conf.dist			\
 		> ${WRKDIR}/squirrelmail.conf.dist
-	${SED}	-e "s|@APACHE_SYSCONFDIR@|${APACHE_SYSCONFDIR}|g"	\
-		-e "s|@SMDIR@|${SMDIR:S/^${PREFIX}\///}|g"		\
-		-e "s|@CAT@|${CAT}|g"					\
-		-e "s|@RM@|${RM}|g"					\
-		-e "s|@RMDIR@|${RMDIR}|g"				\
-		-e "s|@TRUE@|${TRUE}|g"					\
-		${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
-	${SED}	-e "s|@APACHE_SYSCONFDIR@|${APACHE_SYSCONFDIR}|g"	\
-		-e "s|@SMDIR@|${SMDIR:S/^${PREFIX}\///}|g"		\
-		-e "s|@CAT@|${CAT}|g"					\
-		-e "s|@CHGRP@|${CHGRP}|g"				\
-		-e "s|@CHMOD@|${CHMOD}|g"				\
-		-e "s|@CHOWN@|${CHOWN}|g"				\
-		-e "s|@CP@|${CP}|g"					\
-		-e "s|@MKDIR@|${MKDIR}|g"				\
-		${PKGDIR}/INSTALL > ${INSTALL_FILE}
+	${SED} ${FILES_SUBST_SED} ${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
+	${SED} ${FILES_SUBST_SED} ${PKGDIR}/INSTALL > ${INSTALL_FILE}
 	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} PRE-INSTALL
 
 do-install:

@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: DEINSTALL,v 1.6 2001/01/28 02:05:38 jlam Exp $
+# $NetBSD: DEINSTALL,v 1.7 2001/07/13 07:09:23 jlam Exp $
 
 PKGNAME=$1
 STAGE=$2
@@ -9,6 +9,7 @@ USER="@CUPS_USER@"
 GROUP="@CUPS_GROUP@"
 
 CAT="@CAT@"
+CMP="@CMP@"
 RM="@RM@"
 RMDIR="@RMDIR@"
 TRUE="@TRUE@"
@@ -29,7 +30,7 @@ DEINSTALL)
 	do
 		FILE=${CONFDIR}/${file}
 		SAMPLEFILE=${SAMPLECONFDIR}/${file}
-		if diff -q ${FILE} ${SAMPLEFILE} >/dev/null
+		if ${CMP} -s ${FILE} ${SAMPLEFILE}
 		then
 			${RM} -f ${FILE}
 		fi

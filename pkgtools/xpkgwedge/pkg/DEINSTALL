@@ -1,12 +1,12 @@
 #!/bin/sh
 #
-# $NetBSD: DEINSTALL,v 1.8 2001/07/10 00:57:11 hubertf Exp $
+# $NetBSD: DEINSTALL,v 1.9 2001/07/13 07:09:22 jlam Exp $
 
 PKGNAME=$1
 STAGE=$2
 
+CMP="@CMP@"
 CP="@CP@"
-DIFF="@DIFF@"
 GREP="@GREP@"
 RM="@RM@"
 RMDIR="@RMDIR@"
@@ -27,7 +27,7 @@ POST-DEINSTALL)
 	${RM} -f ${HOSTDEF}.bak
 	if [ ${PKG_PREFIX} != ${X11BASE} ] && \
 		[ -f ${X11_HOSTDEF} ] && \
-		${DIFF} -q ${X11_HOSTDEF} ${HOSTDEF} >/dev/null
+		${CMP} -s ${X11_HOSTDEF} ${HOSTDEF}
 	then
 		${RM} -f ${HOSTDEF}
 	fi

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/07/05 17:23:00 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2001/07/13 07:09:21 jlam Exp $
 
 DISTNAME=	buildlink-x11-0.6
 CATEGORIES=	pkgtools devel x11
@@ -19,19 +19,10 @@ USE_X11BASE=	# defined
 DEINSTALL_FILE=	${WRKDIR}/DEINSTALL
 INSTALL_FILE=	${WRKDIR}/INSTALL
 
-.include "../../mk/bsd.prefs.mk"
-
-.if (${OPSYS} == SunOS)
-DEPENDS+=	diffutils>=2.7:../../devel/diffutils
-DIFF=		${LOCALBASE}/bin/gdiff
-.else
-DIFF=		/usr/bin/diff
-.endif
-
 FILES_SUBST=		X11BASE=${X11BASE}
 FILES_SUBST+=		PREFIX=${PREFIX}
+FILES_SUBST+=		CMP=${CMP:Q}
 FILES_SUBST+=		CP=${CP:Q}
-FILES_SUBST+=		DIFF=${DIFF:Q}
 FILES_SUBST+=		GREP=${GREP:Q}
 FILES_SUBST+=		RM=${RM:Q}
 FILES_SUBST+=		RMDIR=${RMDIR:Q}
