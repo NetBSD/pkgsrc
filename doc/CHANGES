@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6453 2004/07/05 14:29:33 taya Exp $
+$NetBSD: CHANGES,v 1.6454 2004/07/05 15:08:48 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3261,3 +3261,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated mozilla-gtk2 to 1.7nb1 [taya 2004-07-05]
 	Updated firefox to 0.9.1nb1 [taya 2004-07-05]
 	Updated firefox-gtk2 to 0.9.1nb1 [taya 2004-07-05]
+	Updated xmms-meta-input to 0.4nb1 [minskim 2004-07-05]
