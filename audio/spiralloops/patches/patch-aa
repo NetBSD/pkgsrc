@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/08/12 22:27:05 zuntum Exp $
+$NetBSD: patch-aa,v 1.2 2002/06/12 00:07:35 wiz Exp $
 
 --- Makefile.in.orig	Mon May  7 14:42:59 2001
 +++ Makefile.in
@@ -8,11 +8,11 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/08/12 22:27:05 zuntum Exp $
  CXXFLAGS=	-pipe -Wall -O3 -ffast-math -DNO_DEBUG -Wno-unused 
 -INCPATH	=	-I/usr/X11R6/include
 -LINK	=	g++
-+INCPATH	=	-I${X11BASE}/include
-+LINK	=	g++ -Wl,-R${X11BASE}/lib
++INCPATH	=	-I${BUILDLINK_X11_DIR}/include -I${BUILDLINK_DIR}/include
++LINK	=	g++ -Wl,-R${X11BASE}/lib -Wl,-R${X11PREFIX}/lib
  LFLAGS	=	
 -LIBS	=   -L/usr/X11R6/lib -lfltk -lGL -lXext -lX11 -lm -ldl
-+LIBS	=   -L${X11BASE}/lib -lfltk -lGL -lXext -lX11 -lm -lossaudio
++LIBS	=   -L${BUILDLINK_X11_DIR}/lib -L${BUILDLINK_DIR}/lib -lfltk -lGL -lXext -lX11 -lm -lossaudio
  MOC	=	moc
  UIC	=	
  TAR	=	tar -cf
