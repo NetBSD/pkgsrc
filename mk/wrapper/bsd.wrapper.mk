@@ -1,4 +1,4 @@
-# $NetBSD: bsd.wrapper.mk,v 1.15 2004/12/05 09:29:26 grant Exp $
+# $NetBSD: bsd.wrapper.mk,v 1.16 2005/01/10 03:40:25 jlam Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -225,11 +225,7 @@ _WRAP_LOGIC.${_wrappee_}?=		${_WRAP_LOGIC}
 _WRAP_SCAN.${_wrappee_}?=		${_WRAP_SCAN}
 _WRAP_TRANSFORM.${_wrappee_}?=		${_WRAP_TRANSFORM}
 _WRAP_TRANSFORM_SED.${_wrappee_}?=	${_WRAP_TRANSFORM_SED}
-.  if !empty(_WRAP_TRANSFORM_SED.${_wrappee_})
-_WRAP_SKIP_TRANSFORM.${_wrappee_}?=	no
-.  else
 _WRAP_SKIP_TRANSFORM.${_wrappee_}?=	${_WRAP_SKIP_TRANSFORM}
-.  endif
 .endfor	# _WRAPPEES
 
 .if !empty(PKGSRC_COMPILER:Maix-xlc)
