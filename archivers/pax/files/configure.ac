@@ -15,7 +15,7 @@ AC_CHECK_LIB(util, fparseln)
 # Checks for header files.
 AC_HEADER_STDC
 AC_CHECK_HEADERS([ctype.h grp.h regex.h regexp.h rmt.h stdarg.h])
-AC_CHECK_HEADERS([sys/ioctl.h sys/mtio.h sys/resource.h sys/uio.h sys/wait.h])
+AC_CHECK_HEADERS([sys/ioctl.h sys/tape.h sys/mtio.h sys/resource.h sys/uio.h sys/wait.h])
 
 # Checks for library functions.
 AC_CHECK_FUNCS([getrlimit setrlimit])
