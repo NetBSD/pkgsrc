@@ -1,0 +1,48 @@
+--- misc.c.orig	Tue Aug 24 19:50:58 1999
++++ misc.c	Tue Aug 24 20:24:24 1999
+@@ -44,7 +44,7 @@
+  URL *Url=(URL*)malloc(sizeof(URL));
+  char *copyurl,*mallocurl=malloc(strlen(url)+2);
+  int i=0,n=0;
+- char *colon,*slash,*at,*temppath,root[2];
++ char *colon,*slash,*escr,*at,*temppath,root[2];
+ 
+  copyurl=mallocurl;
+  strcpy(copyurl,url);
+@@ -174,12 +174,17 @@
+     strcpy(Url->host,copyurl);
+    }
+ 
+- for(i=0;Url->host[i] && Url->host[i]!=':';i++)
++ colon=strrchr(Url->host,':');
++ escr=strrchr(Url->host,']');
++ if (escr && colon < escr)
++     colon = strrchr(escr+1,':');
++
++ for(i=0;Url->host[i] && (i != colon - Url->host);i++)
+     Url->host[i]=tolower(Url->host[i]);
+ 
+- if(Url->host[i]==':')
+-    if(atoi(&Url->host[i+1])==(Url->Protocol?Url->Protocol->defport:80))
+-       Url->host[i]=0;
++ if(colon)
++    if(atoi(colon+1)==(Url->Protocol?Url->Protocol->defport:80))
++       *colon=0;
+ 
+  if(!Url->local && IsLocalHost(Url->host,1) && Url->Protocol && Url->Protocol==&Protocols[0])
+    {
+@@ -394,12 +399,13 @@
+           *match=0;
+ 
+        match=&path[strlen(path)-3];
+-       if(match>=path && !strcmp(match,"/.."))
++       if(match>=path && !strcmp(match,"/..")) {
+           if(match==path)
+              *match=0;
+           else
+              while(match>path && *--match!='/')
+                 *match=0;
++       }
+ 
+        new=(char*)malloc(strlen(Url->proto)+strlen(Url->host)+strlen(path)+8);
+        sprintf(new,"%s://%s%s",Url->proto,Url->host,path);

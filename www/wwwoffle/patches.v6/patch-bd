@@ -1,0 +1,286 @@
+--- sockets.c.orig	Mon Aug 23 17:02:36 1999
++++ sockets.c	Wed Aug 25 18:20:28 1999
+@@ -15,6 +15,7 @@
+ 
+ #include <stdio.h>
+ #include <string.h>
++#include <stdlib.h>
+ 
+ #include <errno.h>
+ #include <unistd.h>
+@@ -44,47 +45,79 @@
+ int OpenClientSocket(char* host, int port)
+ {
+  int s;
+- int retval,err=0;
+- struct sockaddr_in server;
+- struct hostent* hp;
+- int retries=4;
+-
+- server.sin_family=AF_INET;
+- server.sin_port=htons((unsigned short)port);
+-
+- hp=gethostbyname(host);
+- if(!hp)
+-   {
+-    unsigned long int addr=inet_addr(host);
+-    if(addr!=-1)
+-       hp=gethostbyaddr((char*)addr,sizeof(addr),AF_INET);
+-
+-    if(!hp)
+-      {errno=-1;PrintMessage(Warning,"Unknown host '%s' for server [%!s].",host);return(-1);}
+-   }
+- memcpy((char*)&server.sin_addr,(char*)hp->h_addr,sizeof(server.sin_addr));
+-
+- do{
+-    s=socket(PF_INET,SOCK_STREAM,0);
+-    if(s==-1)
+-      {PrintMessage(Warning,"Cannot create client socket [%!s].");return(-1);}
+-
+-    retval=connect(s,(struct sockaddr *)&server,sizeof(server));
+-    if(retval==-1)
+-      {
+-       err=errno;
+-       if(--retries && errno==ECONNREFUSED)
+-          PrintMessage(Inform,"Connect fail [%!s]; trying again.");
+-       else
+-          PrintMessage(Warning,"Connect fail [%!s].");
+-       close(s);
+-       s=-1;
+-       sleep(1);
+-      }
+-   }
+- while(retval==-1 && retries && err==ECONNREFUSED);
+-
+- return(s);
++ int connected, err;
++ struct addrinfo hints, *r, *res;
++ char *aport;
++
++ err = asprintf(&aport, "%d", port);
++ if (err < 0) {
++     errno=-1;
++     PrintMessage(Warning,"Memory Alloc Fails [%!s].");
++     return(-1);
++ }
++ 
++ memset(&hints, 0, sizeof(hints));
++ hints.ai_flags = AI_NUMERICHOST;
++ hints.ai_family = AF_UNSPEC;
++ hints.ai_socktype= SOCK_STREAM;
++ err = getaddrinfo(host, aport, &hints, &res);
++ if (!err) {
++     /*numeric*/
++     freeaddrinfo(res);
++     memset(&hints, 0, sizeof(hints));
++     hints.ai_flags = AI_CANONNAME;
++     hints.ai_family = AF_UNSPEC;
++     hints.ai_socktype = SOCK_STREAM;
++     hints.ai_protocol = 0;
++     err = getaddrinfo(host, aport, &hints, &res);
++ } else {
++     /*non-numeric*/
++     memset(&hints, 0, sizeof(hints));
++     hints.ai_family = AF_UNSPEC;
++     hints.ai_socktype = SOCK_STREAM;
++     hints.ai_protocol = 0;
++     err = getaddrinfo(host, aport, &hints, &res);
++ }
++ if (err) {
++     if (aport) free(aport);
++     if (res) freeaddrinfo(res);
++     errno=-1;
++     PrintMessage(Warning,"%s '%s', server [%!s].", gai_strerror(err), host);
++     return(-1);
++ }
++
++ err = 0;
++ s = -1;
++ connected = 0;
++ for (r = res; r && !connected; r = r->ai_next) {
++     s = socket(r->ai_family, r->ai_socktype, r->ai_protocol);
++     if (s < 0) {
++	 PrintMessage(Warning,"Cannot create client socket [%!s].");
++	 continue;
++     }
++
++     if (connect(s, r->ai_addr, r->ai_addrlen) < 0) {
++	 PrintMessage(Inform,"Connect fail [%!s]; continue trying.");
++	 err = errno;
++	 s = -1;
++	 close(s);
++	 continue;
++     }
++     PrintMessage(Inform,"Connected ok to client [%!s].");
++
++     connected++;
++     break;
++ } 
++
++ if (res) freeaddrinfo(res);
++ if (aport) free(aport);
++
++ if (s < 0 || connected == 0) {
++     PrintMessage(Warning,"OSC Connect fail [%!s].");
++     return (-1); /* error */
++ }
++ 
++ return (s);
+ }
+ 
+ 
+@@ -96,30 +129,72 @@
+   int port The port number to use.
+   ++++++++++++++++++++++++++++++++++++++*/
+ 
+-int OpenServerSocket(int port)
++int *OpenServerSockets(int port)
+ {
+- int s;
+- int retval;
+- struct sockaddr_in server;
+- int reuse_addr=1;
+-
+- s=socket(PF_INET,SOCK_STREAM,0);
+- if(s==-1)
+-   {PrintMessage(Warning,"Cannot create server socket [%!s].");return(-1);}
+-
+- setsockopt(s,SOL_SOCKET,SO_REUSEADDR,&reuse_addr,sizeof(reuse_addr));
++ int *s, *slist, maxs, error;
++ int reuse_addr = 1;
++ struct addrinfo hints, *r, *res;
++ char *aport;
++
++ error = asprintf(&aport, "%d", port);
++ if (error < 0) {
++     errno = -1;
++     PrintMessage(Warning,"Memory Alloc Fails [%!s].");
++     return(NULL);
++ }
++
++ memset(&hints, 0, sizeof(hints));
++ hints.ai_flags = AI_PASSIVE;
++ hints.ai_family = AF_UNSPEC;
++ hints.ai_socktype = SOCK_STREAM;
++ hints.ai_protocol = 0;
++ error = getaddrinfo(NULL, aport, &hints, &res);
++
++ if (aport) 
++     free (aport);
++ 
++ if (error) {
++     errno = -1;
++     PrintMessage(Warning,"%s  [%!s].",gai_strerror(error));
++     return(NULL);
++ }
++
++ for (maxs = 0, r = res; r; r = r->ai_next, maxs++);
++ slist = malloc ((maxs+1) * sizeof(int));
++ if (!slist) {
++     errno = -1;
++     PrintMessage(Warning,"Memory Alloc Fails [%!s].");
++     return(NULL);
++ }
++ slist[0] = maxs; /* max. num of sockets */
++
++ s = slist+1;
++ for (r = res; r; r = r->ai_next) {
++     *s = socket(r->ai_family, r->ai_socktype, r->ai_protocol);
++     if (*s < 0) {
++	 PrintMessage(Warning,"Cannot create server socket [%!s].");
++	 continue;
++     }
++     setsockopt(*s,SOL_SOCKET,SO_REUSEADDR,&reuse_addr,sizeof(reuse_addr));
++
++     if (bind(*s, r->ai_addr, r->ai_addrlen) < 0) {
++	 PrintMessage(Warning,"Failed to bind server socket [%!s].");
++	 close (*s);
++	 continue;
++     }
++
++     listen(*s,4);
++     s++;
++ }
++
++ if (slist[0] < 0) {
++     PrintMessage(Warning,"Failed to bind server socket [%!s].");
++     free (slist);
++     errno = -1;
++     return NULL;
++ }
+ 
+- server.sin_family=AF_INET;
+- server.sin_addr.s_addr=INADDR_ANY;
+- server.sin_port=htons((unsigned int)port);
+-
+- retval=bind(s,(struct sockaddr*)&server,sizeof(server));
+- if(retval==-1)
+-   {PrintMessage(Warning,"Failed to bind server socket [%!s].");return(-1);}
+-
+- listen(s,4);
+-
+- return(s);
++ return (slist);
+ }
+ 
+ 
+@@ -160,34 +235,36 @@
+ 
+ int SocketRemoteName(int socket,char **name,char **ipname,int *port)
+ {
+- struct sockaddr_in server;
++ struct sockaddr_storage server;
+  int length=sizeof(server),retval;
+- static char host[MAXHOSTNAMELEN],ip[16];
+- struct hostent* hp=NULL;
++ static char host[NI_MAXHOST],ip[NI_MAXHOST],portstr[NI_MAXSERV];
+ 
+- retval=getpeername(socket,(struct sockaddr*)&server,&length);
+- if(retval==-1)
+-    PrintMessage(Warning,"Failed to get socket peername [%!s].");
++ retval = getpeername(socket,(struct sockaddr*)&server,&length);
++ if(retval) 
++     PrintMessage(Warning,"Failed to get socket peername [%!s].");
+  else
+-   {
+-    hp=gethostbyaddr((char*)&server.sin_addr,sizeof(server.sin_addr),AF_INET);
+-    if(hp)
+-       strcpy(host,hp->h_name);
+-    else
+-       strcpy(host,inet_ntoa(server.sin_addr));
+-
+-    strcpy(ip,inet_ntoa(server.sin_addr));
+-
+-    if(name)
+-       *name=host;
++ {
++     retval = getnameinfo((struct sockaddr*)&server, length, host,
++			  NI_MAXHOST, NULL, 0, 0);
++     if (retval)
++	 retval = getnameinfo((struct sockaddr*)&server, length, ip,
++			      NI_MAXHOST, portstr, NI_MAXSERV, 
++			      NI_NUMERICHOST|NI_NUMERICSERV);
++     if (retval)
++	 PrintMessage(Warning,"Failed Name Lookup [%!s]: %s.", gai_strerror(retval));
++     else 
++     {
++	 if(name)
++	     *name=host;
+ #ifdef __CYGWIN__
+-    if(!strcmp(ip,"127.0.0.1"))
+-       *name="localhost";
++	 if(!strcmp(ip,"127.0.0.1"))
++	     *name="localhost";
+ #endif
+-    if(ipname)
+-       *ipname=ip;
+-    if(port)
+-       *port=ntohs(server.sin_port);
++	 if(ipname)
++	     *ipname=ip;
++	 if(port)
++	     *port=atoi(portstr);
++     }
+    }
+ 
+  return(retval);
