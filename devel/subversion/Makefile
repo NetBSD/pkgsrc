@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/10/03 02:44:49 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2002/11/09 15:18:31 wiz Exp $
 
 DISTNAME=	subversion-r2667
 PKGNAME=	subversion-0.2667
@@ -9,19 +9,18 @@ MAINTAINER=	joelw@unix.se
 HOMEPAGE=	http://subversion.tigris.org
 COMMENT=	Version control system, meant to replace CVS
 
-DEPENDS=	db4>=4.0.14:../../databases/db4
-DEPENDS+=	neon>=0.21.3:../../www/neon
-DEPENDS+=	apr-[0-9]*:../../devel/apr-devel
 DEPENDS+=	python22-[0-9]*:../../lang/python22
 
 AUTOCONF_REQD=	2.50
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-ssl
-CONFIGURE_ARGS+= --with-berkeley-db=${LOCALBASE}/include/db4:${LOCALBASE}
-CONFIGURE_ARGS+= --with-neon=${LOCALBASE}
-CONFIGURE_ARGS+= --with-apr=${LOCALBASE}
-CONFIGURE_ARGS+= --with-apr-util=${LOCALBASE}
+CONFIGURE_ARGS+= --with-berkeley-db=${BUILDLINK_PREFIX.db4}/include/db4:${LOCALBASE}
+CONFIGURE_ARGS+= --with-neon=${BUILDLINK_PREFIX.neon}
+CONFIGURE_ARGS+= --with-apr=${BUILDLINK_PREFIX.apr}
+CONFIGURE_ARGS+= --with-apr-util=${BUILDLINK_PREFIX.apr}
+USE_BUILDLINK2=	YES
 USE_LIBTOOL=	YES
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 PLIST_SUBST+=   INSTALL_INFO=${INSTALL_INFO}
 INFO_FILES+=	svn-design.info
@@ -36,6 +35,9 @@ post-extract:
 pre-configure:
 	cd ${WRKSRC} && ${SH} ./autogen.sh
 
+.include "../../databases/db4/buildlink2.mk"
+.include "../../devel/apr-devel/buildlink2.mk"
+.include "../../www/neon/buildlink2.mk"
 .include "../../mk/autoconf.mk"
 .include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
