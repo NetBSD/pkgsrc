@@ -1,15 +1,234 @@
-$NetBSD: patch-ac,v 1.1.1.1 2001/11/30 23:33:34 hubertf Exp $
+$NetBSD: patch-ac,v 1.2 2001/12/17 00:43:11 hubertf Exp $
 
---- lib/silcmath/mpi/mpi-priv.h.orig    Sat Nov 24 20:06:50 2001
-+++ lib/silcmath/mpi/mpi-priv.h Sat Nov 24 20:07:51 2001
-@@ -242,3 +242,10 @@
- /* }}} */
- #endif
+--- doc/example_silcd.conf.in.orig	Thu Nov 29 21:23:19 2001
++++ doc/example_silcd.conf.in	Sun Dec  9 23:47:33 2001
+@@ -8,25 +8,27 @@
+ # Configured ciphers.
+ #
+ # Format: <name>:<module path>:<key length>:<block length>
++# Example: aes-256-cbc:/usr/local/lib/silc/aes.sim.so:32:16
+ #
+ # If the cipher is builtin the <module path> maybe omitted.
+ #
+ [Cipher]
+-aes-256-cbc:@MODULESDIR@/aes.sim.so:32:16
+-aes-192-cbc:@MODULESDIR@/aes.sim.so:24:16
+-aes-128-cbc:@MODULESDIR@/aes.sim.so:16:16
+-twofish-256-cbc:@MODULESDIR@/twofish.sim.so:32:16
+-twofish-192-cbc:@MODULESDIR@/twofish.sim.so:24:16
+-twofish-128-cbc:@MODULESDIR@/twofish.sim.so:16:16
+-mars-256-cbc:@MODULESDIR@/mars.sim.so:32:16
+-mars-192-cbc:@MODULESDIR@/mars.sim.so:24:16
+-mars-128-cbc:@MODULESDIR@/mars.sim.so:16:16
+-none:@MODULESDIR@/none.sim.so:0:0
++aes-256-cbc::32:16
++aes-192-cbc::24:16
++aes-128-cbc::16:16
++twofish-256-cbc::32:16
++twofish-192-cbc::24:16
++twofish-128-cbc::16:16
++mars-256-cbc::32:16
++mars-192-cbc::24:16
++mars-128-cbc::16:16
++none::0:0
  
-+#if ! (2 < __GNUC__ || (2 == __GNUC__ && 95 <= __GNUC_MINOR__))
-+# if defined restrict || 199901L <= __STDC_VERSION__           
-+#  define __restrict restrict                       
-+# else
-+#  define __restrict      
-+# endif
-+#endif
+ #
+ # Configured hash functions.
+ #
+ # Format: <name>:<module path>:<block length>:<digest length>
++# Example: sha1::64:20
+ #
+ # If the hash function is builtin the <module path> maybe omitted.
+ #
+@@ -39,6 +41,7 @@
+ # configured to the [hash] section.
+ #
+ # Format: <name>:<hash name>:<mac length>
++# Example: hmac-sha1-96:sha1:12
+ #
+ [hmac]
+ hmac-sha1-96:sha1:12
+@@ -50,6 +53,7 @@
+ # Configured PKCS.
+ #
+ # Format: <name>
++# Example: rsa
+ #
+ [PKCS]
+ rsa
+@@ -59,6 +63,7 @@
+ # run as root.
+ #
+ # Format: <user>:<group>
++# Example: silcd:silcd
+ #
+ [Identity]
+ nobody:nobody
+@@ -67,22 +72,25 @@
+ # Server's administrative information.
+ #
+ # Format: <location>:<server type>:<admin's name>:<admin's email address>
++# Example: Kuopio, Finland:Test Server:Pekka Riikonen:priikone@poseidon.pspt.fi
+ #
+ [AdminInfo]
+-Kuopio, Finland:Test Server:Pekka Riikonen:priikone@poseidon.pspt.fi
++Default Location:NetBSD Test Server:Root of All Evil:root@localhost
+ 
+ #
+ # Server information.
+ #
+-# Format: +<server FQDN>:<server IP>:<geographic location>:<port>
++# Format: <server FQDN>:<server IP>:<geographic location>:<port>
++# Example: lassi.kuo.fi.ssh.com:10.2.1.6:Kuopio, Finland:706
+ #
+ [ServerInfo]
+-lassi.kuo.fi.ssh.com:10.2.1.6:Kuopio, Finland:706
++localhost:127.0.0.1:Default Location:706
+ 
+ #
+ # Server keys
+ #
+-# Format: +<public key>:<private key>
++# Format: <public key>:<private key>
++# Example: /usr/local/silc/etc/silcd.pub:/usr/local/silc/etc/silcd.prv
+ #
+ [ServerKeys]
+ @ETCDIR@/silcd.pub:@ETCDIR@/silcd.prv
+@@ -91,9 +99,10 @@
+ # Listenning ports.
+ #
+ # Format: <local IP>:<Listener IP>:<port>
++# Example: 10.2.1.6:10.2.1.6:706
+ #
+ [ListenPort]
+-10.2.1.6:10.2.1.6:706
++127.0.0.1:127.0.0.1:706
+ 
+ #
+ # Log files.
+@@ -107,12 +116,13 @@
+ #         warninglogile:<path>:<max byte size>
+ #         errorlogile:<path>:<max byte size>
+ #         fatallogile:<path>:<max byte size>
++# Example: infologfile:/usr/local/silc/logs/silcd.log:10000
+ #
+ [Logging]
+ infologfile:@LOGSDIR@/silcd.log:10000
+-#warninglogfile:@LOGSDIR@/silcd_warning.log:10000
+-#errorlogfile:@LOGSDIR@/error.log:10000
+-#fatallogfile:@LOGSDIR@/silcd_error.log:
++warninglogfile:@LOGSDIR@/silcd_warning.log:10000
++errorlogfile:@LOGSDIR@/error.log:10000
++fatallogfile:@LOGSDIR@/silcd_error.log:
+ 
+ #
+ # Connection classes.
+@@ -121,6 +131,7 @@
+ # used to optimize the server and the connections.#
+ #
+ # Format: <class number>:<ping freq>:<connect freq>:<max links>
++# Example: 1:100:100:100
+ #
+ [ConnectionClass]
+ 1:100:100:100
+@@ -130,6 +141,7 @@
+ # Configured client connections.
+ #
+ # Format: <remote host>:<auth method>:<auth data>:<port>:<class>
++# Example: :::706:1
+ #
+ # The <auth data> is either passphrase or file path to the public key
+ # file.
+@@ -141,12 +153,13 @@
+ # Configured server administrator connections
+ #
+ # Format: <host>:<username>:<nickname>:<auth method>:<auth data>
++# Example: 10.2.1.199:priikone:pekka:passwd:veryscret
+ #
+ # The <auth data> is either passphrase or file path to the public key
+ # file.
+ #
+ [AdminConnection]
+-10.2.1.199:priikone:pekka:passwd:veryscret
++127.0.0.1:admin:admin:passwd:verysecret
+ 
+ #
+ # Configured server connections.
+@@ -158,6 +171,10 @@
+ #
+ # Format: <remote host>:<auth method>:<auth data>:<port>:
+ #         <version ID>:<class>:<backup connection>
++# Example: 10.2.1.7:passwd:veryscret:706:1:1:0
++#          10.2.1.17:passwd:veryscret13:706:1:1:1   backup connection, that
++#                                                   host will use this server
++#                                                   as backup router.
+ #
+ # The <auth data> is either passphrase or file path to the public key
+ # file. If the connection is backup connection then set the <backup 
+@@ -165,10 +182,6 @@
+ # set to value 1 then this server will be backup router.
+ #
+ [ServerConnection]
+-10.2.1.7:passwd:veryscret:706:1:1:0
+-10.2.1.17:passwd:veryscret13:706:1:1:1   # backup connection, that host
+-                                         # will use this server as backup
+-                                         # router.
+ 
+ #
+ # Configured router connections.
+@@ -181,6 +194,9 @@
+ # Format: <remote host>:<auth method>:<auth data>:<port>:<version ID>:
+ #         <class>:<initiator>:<backup replace IP>:<backup replace port>:
+ #         <local backup>
++# Example: 10.2.1.100:passwd:veryverysecret:706:1:1:1
++#          10.2.100.131:pubkey:/path/to/the/publickey:706:1:1:1
++#          10.2.100.100:pubkey:/path/to/the/publickey:706:1:1:0:10.2.1.6:706:1
+ #
+ # The <auth data> is either passphrase or file path to the public key
+ # file. If you are the initiator of the connection then set the <initiator>
+@@ -195,9 +211,6 @@
+ # If the backup router is in other cell then set it to value 0.
+ #
+ [RouterConnection]
+-#10.2.1.100:passwd:veryverysecret:706:1:1:1
+-#10.2.100.131:pubkey:/path/to/the/publickey:706:1:1:1
+-#10.2.100.100:pubkey:/path/to/the/publickey:706:1:1:0:10.2.1.6:706:1
+ 
+ #
+ # Denied connections.
+@@ -205,22 +218,28 @@
+ # These connections are denied to connect our server.
+ #
+ # Format: <remote host>:<port>:<comment>
++# Example: 10.2.1.99:0:Your connection has been denied
+ #
+ [DenyConnection]
+-#10.2.1.99:0:Your connection has been denied
+ 
+ #
+ # Message Of The Day
+ #
+-# specify the text file containing the motd:
++# Specify the text file containing the motd.
+ #
+-#[motd]
+-#@ETCDIR@/motd.txt
++# Format: <filename>
++# Example: /usr/local/silc/etc/motd.txt
++#
++[motd]
++@ETCDIR@/motd.txt
+ 
+ #
+-# Pid File
++# Pidfile
++#
++# Specify the pidfile where it will be written.
+ #
+-# specify the pidfile where it will be written:
++# Format: <filename>
++# Example: /var/run/silcd.pid
+ #
+ [pid]
+-@PIDFILE@
++/var/run/silcd.pid

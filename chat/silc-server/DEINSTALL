@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: DEINSTALL,v 1.1.1.1 2001/11/30 23:33:34 hubertf Exp $
+# $NetBSD: DEINSTALL,v 1.2 2001/12/17 00:43:10 hubertf Exp $
 
 PKGNAME=$1
 STAGE=$2
@@ -17,7 +17,7 @@ LOGDIR=/var/log/silcd
 SAMPLECONFDIR=${PKG_PREFIX}/share/doc/silcd
 CONFDIR=${SERVERROOT}
 RCSCRIPT="@CONF_DIR@/rc.d/silcd"
-CONFFILES="silcd.conf"
+CONFFILES="silcd.conf motd.txt"
 NONCONFFILES="silcd.pub silcd.prv"
 
 case ${STAGE} in
