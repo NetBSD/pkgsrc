@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/07/17 21:26:59 grant Exp $
+# $NetBSD: Makefile,v 1.9 2004/08/30 21:33:54 recht Exp $
 #
 
 DISTNAME=	qpage-3.3
@@ -11,6 +11,8 @@ HOMEPAGE=	http://www.qpage.org/
 COMMENT=	Simple and efficient paging (SNPP) client and server
 
 GNU_CONFIGURE=	yes
+
+CONFIGURE_ENV+=	MKDIR_PATH=${MKDIR:Q}
 
 CPPFLAGS+=	`${AWK} -F: '/^uucp:/ { 				\
 		printf(\"-DDAEMONUSER=%s -DDAEMONGROUP=%s\", $$3, $$4); }' \
