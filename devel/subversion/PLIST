@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/11/25 20:09:50 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/12/06 14:04:09 wiz Exp $
 bin/svn
 bin/svn-config
 bin/svnadmin
@@ -22,9 +22,11 @@ include/subversion-1/svn_pools.h
 include/subversion-1/svn_props.h
 include/subversion-1/svn_quoprint.h
 include/subversion-1/svn_ra.h
+include/subversion-1/svn_ra_svn.h
 include/subversion-1/svn_repos.h
 include/subversion-1/svn_sorts.h
 include/subversion-1/svn_string.h
+include/subversion-1/svn_subst.h
 include/subversion-1/svn_test.h
 include/subversion-1/svn_time.h
 include/subversion-1/svn_types.h

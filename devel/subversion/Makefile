@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2002/11/25 20:09:50 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2002/12/06 14:04:09 wiz Exp $
 
-DISTNAME=	subversion-r3687
-PKGNAME=	subversion-0.3687
+DISTNAME=	subversion-r3987
+PKGNAME=	subversion-0.3987
 CATEGORIES=	devel
-MASTER_SITES=	http://subversion.tigris.org/files/documents/15/1698/
+MASTER_SITES=	http://subversion.tigris.org/files/documents/15/2123/
 
 MAINTAINER=	joelw@unix.se
 HOMEPAGE=	http://subversion.tigris.org
