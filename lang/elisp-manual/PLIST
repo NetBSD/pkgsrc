@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2003/06/09 09:02:28 uebayasi Exp $
-@unexec ${INSTALL_INFO} --delete %D/info/elisp %D/info/dir
+@comment $NetBSD: PLIST,v 1.4 2003/06/19 22:18:05 seb Exp $
 info/elisp
 info/elisp-1
 info/elisp-2
@@ -49,4 +48,3 @@ info/elisp-45
 info/elisp-46
 info/elisp-47
 info/elisp-48
-@exec ${INSTALL_INFO} %D/info/elisp %D/info/dir
