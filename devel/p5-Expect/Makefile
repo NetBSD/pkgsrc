@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2001/09/27 23:17:57 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2001/10/18 15:20:15 veego Exp $
 
 DISTNAME=	Expect-1.11
 PKGNAME=	p5-expect-1.11
+SVR4_PKGNAME=	p5exp
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Expect/}
 

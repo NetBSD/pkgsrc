@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.14 2001/05/02 08:22:28 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2001/10/18 15:20:05 veego Exp $
 #
 
 .include "../../databases/mysql-client/Makefile.common"
 
 PKGNAME=		${DISTNAME:S/-/-client-/}
+SVR4_PKGNAME=		mysqc
 COMMENT=		MySQL, a free SQL database (client)
 
 INFO_FILES=		mysql.info
