@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/01/12 15:03:43 abs Exp $
+$NetBSD: patch-aa,v 1.2 2005/03/08 20:15:14 bad Exp $
 
---- remote.c.orig	Mon Jan 10 20:59:24 2000
-+++ remote.c	Mon Jan 10 21:41:58 2000
+--- remote.c.orig	2005-03-08 21:09:05.000000000 +0100
++++ remote.c	2005-03-08 21:09:34.000000000 +0100
 @@ -118,8 +118,12 @@
  				       &version);
        if (! version)
@@ -42,16 +42,25 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/01/12 15:03:43 abs Exp $
        XFree (tenative_version);
        return tenative;
      }
-@@ -675,6 +683,12 @@
- 	      exit (-1);
+@@ -566,7 +574,7 @@
+ }
+ 
+ 
+-void
++int
+ main (int argc, char **argv)
+ {
+   Display *dpy;
+@@ -676,6 +684,12 @@
  	    }
  	}
-+    }
+     }
 +  if (! remote_commands)
 +    {
 +    fprintf (stderr, "%s: No valid commands given\n", progname);
 +    usage ();
 +    exit (-1);
-     }
++    }
  
    dpy = XOpenDisplay (dpy_string);
+   if (! dpy)
