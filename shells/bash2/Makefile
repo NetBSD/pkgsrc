@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2004/06/22 14:05:39 minskim Exp $
+# $NetBSD: Makefile,v 1.54 2004/07/11 01:23:29 salo Exp $
 #
 
 DISTNAME=	bash-2.05b
@@ -30,10 +30,10 @@ PKG_SHELL=		${PREFIX}/bin/bash
 
 .include "../../mk/bsd.prefs.mk"
 
-.if defined(BASH_STATIC)
-.  if !empty(BASH_STATIC:M[yY][eE][sS])
+BUILD_DEFS+=	BASH_STATIC
+
+.if defined(BASH_STATIC) && !empty(BASH_STATIC:M[yY][eE][sS])
 CONFIGURE_ARGS+=	--enable-static-link
-.  endif
 .endif
 
 post-install:
