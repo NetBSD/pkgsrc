@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2002/03/15 12:28:49 martti Exp $
+$NetBSD: distinfo,v 1.6 2002/04/27 08:04:15 shell Exp $
 
-SHA1 (Test-Harness-2.02.tar.gz) = 9b0836103cd146d13e2965ed23d5a76ba706fe12
-Size (Test-Harness-2.02.tar.gz) = 46740 bytes
+SHA1 (Test-Harness-2.03.tar.gz) = 17b088d8db583105f241e66a66e71313e7176ea4
+Size (Test-Harness-2.03.tar.gz) = 47330 bytes
 SHA1 (patch-aa) = 6d1b83acfafcbd419e391021b6c0f5a58a2d4beb
