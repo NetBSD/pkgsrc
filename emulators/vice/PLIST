@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2004/07/16 22:59:11 kristerw Exp $
+@comment $NetBSD: PLIST,v 1.12 2004/08/31 15:53:09 dillo Exp $
 bin/c1541
 bin/petcat
 bin/vsid
@@ -38,6 +38,7 @@ share/doc/vice/NLS-Howto.txt
 share/doc/vice/PETdoc.txt
 share/doc/vice/Readme.beos
 share/doc/vice/Readme.dos
+share/doc/vice/ReadmeMacOSX.txt
 share/doc/vice/TODO
 share/doc/vice/Walkthrough-Howto.txt
 share/doc/vice/Win32-Howto.txt
