@@ -1,16 +1,9 @@
-$NetBSD: patch-ag,v 1.1.1.1 2004/02/22 16:32:45 jmmv Exp $
+$NetBSD: patch-ag,v 1.2 2004/04/02 05:51:03 jmmv Exp $
 
---- gnome-cd/bsd-cdrom.c.orig	2003-01-11 06:23:03.000000000 -0600
-+++ gnome-cd/bsd-cdrom.c
-@@ -20,7 +20,7 @@
- #endif
- #include <errno.h>
- 
--#include "freebsd-cdrom.h"
-+#include "bsd-cdrom.h"
- 
- #define CD_FRAMES	75
- 
+http://bugzilla.gnome.org/show_bug.cgi?id=135139
+
+--- gnome-cd/freebsd-cdrom.c.orig	2003-01-11 06:23:03.000000000 -0600
++++ gnome-cd/freebsd-cdrom.c
 @@ -166,7 +166,12 @@ freebsd_cdrom_update_cd (GnomeCDRom *cdr
  {
  	FreeBSDCDRom *lcd = FREEBSD_CDROM (cdrom);
