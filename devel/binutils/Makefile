@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2002/09/29 07:32:55 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2002/12/25 16:53:51 grant Exp $
 #
 
 DISTNAME=	binutils-2.11.2
@@ -19,14 +19,14 @@ GNU_CONFIGURE=		YES
 .if ${OPSYS} == "NetBSD"
 PATCHFILES=	binutils-NetBSD-diff-20020418.patch.bz2
 PATCH_SITES=	${MASTER_SITE_LOCAL}
-PLIST_SRC=	${WRKDIR}/PLIST_DYNAMIC ${PKGDIR}/PLIST
+PLIST_SRC=	${PKGDIR}/PLIST.common
+PLIST_SRC+=	${WRKDIR}/PLIST_DYNAMIC
+PLIST_SRC+=	${WRKDIR}/PLIST.common_end
 
 post-install:
 	${FIND} ${PREFIX}/${MACHINE_GNU_PLATFORM}/lib/ldscripts -type f -print | \
 		${SORT} -r | ${SED} 's;${PREFIX}/;;g' > ${WRKDIR}/PLIST_DYNAMIC
 
-.else
-PLIST_SRC=	${PKGDIR}/PLIST.${OPSYS}
 .endif
 
 .include "../../mk/bsd.pkg.mk"
