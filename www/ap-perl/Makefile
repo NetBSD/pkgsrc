@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2001/02/17 17:21:50 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2001/04/09 22:24:51 hubertf Exp $
 #
 
 DISTNAME=		mod_perl-1.25
@@ -25,6 +25,7 @@ do-configure:
 	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL ${MAKE_PARAMS}
 
 post-install:
+	${INSTALL_DATA_DIR} ${PREFIX}/share/httpd/htdocs/manual/mod
 	${INSTALL_DATA} ${WRKSRC}/htdocs/manual/mod/mod_perl.html \
 		${PREFIX}/share/httpd/htdocs/manual/mod
 
