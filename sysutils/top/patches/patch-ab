@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.7 1999/02/06 21:41:25 hubertf Exp $
+$NetBSD: patch-ab,v 1.8 1999/06/28 22:19:12 tron Exp $
 
---- machine/m_netbsd13.c.orig	Sat Feb  6 22:37:29 1999
-+++ machine/m_netbsd13.c	Sat Feb  6 22:38:29 1999
-@@ -0,0 +1,882 @@
+--- machine/m_netbsd13.c.orig	Tue Jun 29 00:14:19 1999
++++ machine/m_netbsd13.c	Tue Jun 29 00:16:18 1999
+@@ -0,0 +1,884 @@
 +/*
 + * top - a top users display for Unix
 + *
@@ -31,7 +31,7 @@ $NetBSD: patch-ab,v 1.7 1999/02/06 21:41:25 hubertf Exp $
 + *		matthew green <mrg@eterna.com.au>
 + *
 + *
-+ * $Id: patch-ab,v 1.7 1999/02/06 21:41:25 hubertf Exp $
++ * $Id: patch-ab,v 1.8 1999/06/28 22:19:12 tron Exp $
 + */
 +
 +#include <sys/types.h>
@@ -410,8 +410,10 @@ $NetBSD: patch-ab,v 1.7 1999/02/06 21:41:25 hubertf Exp $
 +	memory_stats[5] = dbtob(totalsize) / 1024 - memory_stats[4];
 +	/*  Free here, before we malloc again in the next
 +	 *  iteration of this loop.  */
-+	if (seporig)
++	if (seporig) {
 +		free(seporig);
++		seporig = NULL;
++	}
 +    } while (0);
 +    /*  Catch the case where we malloc'd, but then exited the
 +     *  loop due to nswap != rnswap.  */
