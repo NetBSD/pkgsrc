@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/11/26 06:50:23 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2002/09/26 11:25:08 seb Exp $
 #
 
 DISTNAME=	DelimMatch-1.03
@@ -11,11 +11,8 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://theory.uwinnipeg.ca/CPAN/data/DelimMatch/
 COMMENT=	Find regexp delimited strings with proper nesting
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Text/DelimMatch/.packlist
 
-do-configure:
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
-
-.include "../../lang/perl5/buildlink.mk"
+.include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
