@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4670 2004/02/03 06:38:56 epg Exp $
+$NetBSD: CHANGES,v 1.4671 2004/02/03 12:39:37 recht Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -554,4 +554,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated zsh to 4.0.9 [uebayasi 2004-02-02]
 	Updated XFree86 to 4.3.0nb1 [xtraeme 2004-02-02]
 	Added tpb-0.6.1 [soren 2004-02-02]
-	Updated rapidsvn to 0.5.0 [epg 2004-02-04]
+	Updated rapidsvn to 0.5.0 [epg 2004-02-03]
