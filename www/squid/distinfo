@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.45 2003/12/25 16:28:14 taca Exp $
+$NetBSD: distinfo,v 1.46 2004/01/18 14:30:37 taca Exp $
 
 SHA1 (squid-2.5.4/squid-2.5.STABLE4.tar.bz2) = 470a2697625cf6edb83ad6fe59af2e147f557e24
 Size (squid-2.5.4/squid-2.5.STABLE4.tar.bz2) = 1036704 bytes
@@ -66,6 +66,12 @@ SHA1 (squid-2.5.4/squid-2.5.STABLE4-pinger.patch) = a11373dc135f03c7b9a6f96400da
 Size (squid-2.5.4/squid-2.5.STABLE4-pinger.patch) = 738 bytes
 SHA1 (squid-2.5.4/squid-2.5.STABLE4-partial_reload.patch) = 8d7d1bba09ba674e41f635e80c51bd7d78c105c7
 Size (squid-2.5.4/squid-2.5.STABLE4-partial_reload.patch) = 751 bytes
+SHA1 (squid-2.5.4/squid-2.5.STABLE4-ldap_tls.patch) = 3d20ba0a993cb9fcc3c2193207f5d8f7ebe57644
+Size (squid-2.5.4/squid-2.5.STABLE4-ldap_tls.patch) = 1853 bytes
+SHA1 (squid-2.5.4/squid-2.5.STABLE4-ldap_group_bufsize.patch) = 7f9415c2068a0df5560c853696823816781ce950
+Size (squid-2.5.4/squid-2.5.STABLE4-ldap_group_bufsize.patch) = 762 bytes
+SHA1 (squid-2.5.4/squid-2.5.STABLE4-http_workarounds.patch) = 14d632a3ee7be49da727d8e58978880083ce1744
+Size (squid-2.5.4/squid-2.5.STABLE4-http_workarounds.patch) = 10277 bytes
 SHA1 (patch-aa) = 2e0d96f6ccb9d0c42db2da49e76846edad09624f
 SHA1 (patch-ab) = 1224ba4cee98a26d2c9d670eb6d57c6187ff2d56
 SHA1 (patch-ac) = 1b283f0a573c02c82ce26f75e67d19b1ec5ff9f0

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.99 2003/12/25 16:28:14 taca Exp $
+# $NetBSD: Makefile,v 1.100 2004/01/18 14:30:37 taca Exp $
 
 DISTNAME=	squid-2.5.STABLE4
 PKGNAME=	squid-2.5.4
-PKGREVISION=	6
+PKGREVISION=	7
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-src//}
 CATEGORIES=	www
 MASTER_SITES=	http://www.squid-cache.org/Versions/v2/2.5/ \
@@ -42,7 +42,10 @@ PATCHFILES=	squid-2.5.STABLE4-reconfigure_message.patch \
 		squid-2.5.STABLE4-russian.patch \
 		squid-2.5.STABLE4-redirlog.patch \
 		squid-2.5.STABLE4-pinger.patch \
-		squid-2.5.STABLE4-partial_reload.patch
+		squid-2.5.STABLE4-partial_reload.patch \
+		squid-2.5.STABLE4-ldap_tls.patch \
+		squid-2.5.STABLE4-ldap_group_bufsize.patch \
+		squid-2.5.STABLE4-http_workarounds.patch
 PATCH_DIST_STRIP=       -p1
 
 MAINTAINER=	taca@NetBSD.org
