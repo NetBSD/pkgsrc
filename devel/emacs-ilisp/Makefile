@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2002/09/14 03:12:06 uebayasi Exp $
+# $NetBSD: Makefile,v 1.3 2003/01/11 10:27:49 uebayasi Exp $
 #
 
-DISTNAME=	ilisp-5.11
+DISTNAME=	ilisp-20021222
 PKGNAME=	emacs-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ilisp/}
@@ -13,8 +13,6 @@ COMMENT=	emacs interface to embedded Lisp process
 MAKE_ENV+=	EMACS=${EMACS_BIN}
 ALL_TARGET=	compile
 
-.include "../../mk/emacs.mk"
-
 SITELISP=	${EMACS_LISPPREFIX}/ilisp
 
 do-install:
@@ -25,14 +23,11 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/ilisp.emacs \
 		${PREFIX}/share/examples/emacs-ilisp
 	${INSTALL_DATA_DIR} ${SITELISP}
-	${INSTALL_DATA} ${WRKSRC}/*.elc ${SITELISP}
-	${INSTALL_DATA} ${WRKSRC}/ild.el ${SITELISP}
-	${INSTALL_DATA} ${WRKSRC}/ilisp-imenu.el ${SITELISP}
-	${INSTALL_DATA} ${WRKSRC}/ilisp-cl-easy-menu.el ${SITELISP}
-	${INSTALL_DATA} ${WRKSRC}/ilisp-scheme-easy-menu.el ${SITELISP}
+	${INSTALL_DATA} ${WRKSRC}/*.el* ${SITELISP}
 	${INSTALL_DATA} ${WRKSRC}/*.lisp ${SITELISP}
 	${INSTALL_DATA} ${WRKSRC}/*.scm ${SITELISP}
 	${INSTALL_DATA_DIR} ${SITELISP}/extra
-	${INSTALL_DATA} ${WRKSRC}/extra/hyperspec.elc ${SITELISP}/extra
+	${INSTALL_DATA} ${WRKSRC}/extra/*.el* ${SITELISP}/extra
 
+.include "../../mk/emacs.mk"
 .include "../../mk/bsd.pkg.mk"
