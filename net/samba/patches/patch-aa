@@ -1,8 +1,9 @@
-$NetBSD: patch-aa,v 1.8 1999/08/10 16:38:09 bouyer Exp $
+$NetBSD: patch-aa,v 1.9 1999/11/16 21:01:05 jlam Exp $
 
---- Makefile.in.orig	Tue Jul 20 21:24:31 1999
-+++ Makefile.in	Sun Aug  8 21:31:11 1999
-@@ -26,8 +26,9 @@
+--- Makefile.in.orig	Wed Nov 10 21:35:55 1999
++++ Makefile.in	Tue Nov 16 10:36:48 1999
+@@ -25,10 +25,11 @@
+ BINDIR = @bindir@
  # we don't use sbindir because we want full compatibility with
  # the previous releases of Samba
 -SBINDIR = @bindir@
@@ -14,7 +15,9 @@ $NetBSD: patch-aa,v 1.8 1999/08/10 16:38:09 bouyer Exp $
 +LOGDIR?= $(BASEDIR)/log
  
  # The permissions to give the executables
-@@ -37,10 +38,10 @@
+ INSTALLPERMS = 0755
+@@ -36,12 +37,12 @@
+ # set these to where to find various files
  # These can be overridden by command line switches (see smbd(8))
  # or in smb.conf (see smb.conf(5))
 -SMBLOGFILE = $(VARDIR)/log.smb
@@ -31,7 +34,9 @@ $NetBSD: patch-aa,v 1.8 1999/08/10 16:38:09 bouyer Exp $
 +PASSWD_PROGRAM = /usr/bin/passwd
  # This is where smbpasswd et al go
  PRIVATEDIR = @privatedir@
-@@ -443,6 +444,6 @@
+ 
+@@ -458,8 +459,8 @@
+ 	@$(SHELL) $(srcdir)/script/installbin.sh $(INSTALLPERMS) $(BASEDIR) $(SBINDIR) $(LIBDIR) $(VARDIR) $(SPROGS)
  
  installbin: all installdirs
 -	@$(SHELL) $(srcdir)/script/installbin.sh $(INSTALLPERMS) $(BASEDIR) $(SBINDIR) $(LIBDIR) $(VARDIR) $(SPROGS)
@@ -40,7 +45,9 @@ $NetBSD: patch-aa,v 1.8 1999/08/10 16:38:09 bouyer Exp $
 +	@$(SHELL) $(srcdir)/script/installbin.sh $(INSTALLPERMS) $(BASEDIR) $(BINDIR) $(ETCDIR) $(LOGDIR) $(PROGS)
  
  installscripts: installdirs
-@@ -469,6 +470,6 @@
+ 	@$(SHELL) $(srcdir)/script/installscripts.sh $(INSTALLPERMS) $(BINDIR) $(SCRIPTS)
+@@ -484,8 +485,8 @@
+ 	@$(SHELL) $(srcdir)/script/uninstallman.sh $(MANDIR) $(srcdir)
  
  uninstallbin:
 -	@$(SHELL) $(srcdir)/script/uninstallbin.sh $(INSTALLPERMS) $(BASEDIR) $(SBINDIR) $(LIBDIR) $(VARDIR) $(SPROGS)
@@ -49,3 +56,4 @@ $NetBSD: patch-aa,v 1.8 1999/08/10 16:38:09 bouyer Exp $
 +	@$(SHELL) $(srcdir)/script/uninstallbin.sh $(INSTALLPERMS) $(BASEDIR) $(BINDIR) $(ETCDIR) $(LOGDIR) $(PROGS)
  
  uninstallscripts:
+ 	@$(SHELL) $(srcdir)/script/uninstallscripts.sh $(INSTALLPERMS) $(BINDIR) $(SCRIPTS)
