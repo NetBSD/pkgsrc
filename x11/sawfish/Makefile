@@ -1,28 +1,12 @@
-# $NetBSD: Makefile,v 1.3 2000/10/27 08:07:46 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2000/10/29 23:45:35 jlam Exp $
 #
 
-DISTNAME=		sawfish-${SF_VERS}
-SF_VERS=		0.32
-CATEGORIES=		x11 gnome
-MASTER_SITES=		ftp://mirror.capital-internet.net/pub/sawmill/sawfish/ \
-			ftp://eprom.dhs.org/pub/mirrors/sawmill/ \
-			http://ftp.fi.muni.cz/pub/linux/sawmill/ \
-			ftp://ftp.dcs.warwick.ac.uk/people/John.Harper/ \
-			ftp://ftp.du.se/pub/mirrors/sawfish/ \
-			ftp://sawmill.sourceforge.net/pub/sawmill/
+PKGNAME=		sawfish-${SF_VERS}
 
-MAINTAINER=		danw@netbsd.org
-HOMEPAGE=		http://sawmill.sourceforge.net/
-
-DEPENDS+=		librep>=0.13:../../lang/librep
-DEPENDS+=		rep-gtk>=0.14:../../x11/rep-gtk
-DEPENDS+=		imlib>=1.8.2:../../graphics/imlib
-DEPENDS+=		control-center-*:../../x11/controlcenter
+DEPENDS+=		sawfish-replibs-${SF_VERS}:../../x11/sawfish-replibs
 
 USE_X11BASE=		# defined
-USE_GMAKE=		# defined
 
-GNU_CONFIGURE=		# defined
 CONFIGURE_ENV+=		LOCALEBASE=${LOCALEBASE}
 MAKE_ENV+=		LOCALEBASE=${LOCALEBASE}
 
@@ -47,4 +31,4 @@ post-install:
 	${MKDIR} ${PREFIX}/share/sawfish/sounds
 	${TOUCH} ${PREFIX}/share/sawfish/sounds/.directory
 
-.include "../../mk/bsd.pkg.mk"
+.include "../../x11/sawfish/Makefile.common"
