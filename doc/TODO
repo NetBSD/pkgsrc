@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.64 2002/12/15 18:02:26 tron Exp $
+$NetBSD: TODO,v 1.65 2002/12/15 19:41:25 cjep Exp $
 
 Suggested new packages
 ======================
@@ -74,7 +74,6 @@ Suggested package updates
 	o balsa-2.0.3
 	o binutils-2.13.1
 	o bins-1.1.19
-	o bison-1.75
 	o bitchx-1.0c19 [pkg/19296]
 	o bonnie++-1.03
 	o bzflag-1.7g0
