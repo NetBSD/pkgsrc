@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.9 2004/01/20 15:46:12 adam Exp $
+$NetBSD: distinfo,v 1.10 2004/03/27 17:33:28 he Exp $
 
 SHA1 (lame-3.95.1.tar.gz) = 6547f289ae2f078eb5f053a54e2724f0de72ca94
 Size (lame-3.95.1.tar.gz) = 1244071 bytes
 SHA1 (patch-aa) = 6ade10e302c6f848cdc9392fed89d87b40d0eb77
 SHA1 (patch-ab) = da88c3c130e8b1420baf52c36e657378bdb58a36
 SHA1 (patch-ac) = 8e1495493c534943608baeab18c1063c66509dbc
+SHA1 (patch-ad) = 976c3364ca70f90a5f7b3aabfa3b228dcf0d010f
