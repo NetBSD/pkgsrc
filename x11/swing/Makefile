@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2001/03/27 03:20:28 hubertf Exp $
+# $NetBSD: Makefile,v 1.14 2001/04/05 19:27:42 jwise Exp $
 
 DISTNAME=	swing1_1_1
 PKGNAME=	swing-1.1.1
@@ -39,7 +39,8 @@ ROOT_GROUP?=	wheel
 TEMPDIR?=	/tmp
 TEMPFILE!=echo ${TEMPDIR}/swing.location.$$$$
 
-pre-fetch: install-build-depends
+pre-fetch:
+	${MAKE} install-depends DEPENDS=
 
 do-fetch:
 	-if [ ! -f ${DISTDIR}/${DISTFILES} ] ; then \
