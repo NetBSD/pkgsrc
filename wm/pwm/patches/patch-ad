@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.1 2001/07/11 07:58:49 abs Exp $
+$NetBSD: patch-ad,v 1.2 2001/07/28 21:44:37 jlam Exp $
 
---- system.mk.orig	Sat Jul  1 13:37:50 2000
+--- system.mk.orig	Sat Jul  1 08:37:50 2000
 +++ system.mk
 @@ -7,7 +7,7 @@
  ## Installation directory prefix
@@ -20,11 +20,22 @@ $NetBSD: patch-ad,v 1.1 2001/07/11 07:58:49 abs Exp $
  
  # SunOS/Solaris
  #X11_PREFIX=/usr/openwin
-@@ -58,7 +58,7 @@
+@@ -31,7 +31,7 @@
+ ## C compiler
+ ##
+ 
+-CC=gcc
++#CC=gcc
+ 
+ # The POSIX_SOURCE, XOPEN_SOURCE and WARN options should not be necessary,
+ # they're mainly for development use. So, if they cause trouble (not
+@@ -57,8 +57,8 @@
+ 	-Wtrigraphs -Wformat -Wchar-subscripts -Wuninitialized \
  	-Wparentheses -pedantic-errors
  
- CFLAGS=-g -O2 $(WARN) $(DEFINES) $(INCLUDES) $(EXTRA_INCLUDES)
+-CFLAGS=-g -O2 $(WARN) $(DEFINES) $(INCLUDES) $(EXTRA_INCLUDES)
 -LDFLAGS=-g $(LIBS) $(EXTRA_LIBS)
++CFLAGS+=-g -O2 $(WARN) $(DEFINES) $(INCLUDES) $(EXTRA_INCLUDES)
 +LDFLAGS+=$(LIBS)
  
  
