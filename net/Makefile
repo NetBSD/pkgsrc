@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.149 2000/08/25 16:13:56 mjl Exp $
+# $NetBSD: Makefile,v 1.150 2000/08/27 20:43:26 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.117 1997/08/16 03:11:52 gpalmer Exp 
 #
 
@@ -6,6 +6,7 @@
 
     SUBDIR += archie
     SUBDIR += arla
+    SUBDIR += arpd
     SUBDIR += arpwatch
     SUBDIR += batchftp
     SUBDIR += bind4
@@ -22,8 +23,13 @@
     SUBDIR += coda_doc
     SUBDIR += coda_intro
     SUBDIR += coda_server
+<<<<<<< Makefile
+    SUBDIR += delegate
+    SUBDIR += ddclient
+=======
     SUBDIR += ddclient
     SUBDIR += delegate
+>>>>>>> 1.142
     SUBDIR += dhid
     SUBDIR += dip
     SUBDIR += dlint
