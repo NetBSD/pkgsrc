@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2000/01/02 03:08:47 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2001/02/16 14:04:58 wiz Exp $
 #
 
 DISTVERSION=		2.02.0
@@ -9,6 +9,7 @@ MASTER_SITES=		ftp://ftp.simtel.net/pub/simtelnet/gnu/djgpp/v2/ \
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.delorie.com/djgpp/
+COMMENT=		Cross-compile environment for MS-DOS on 386 and higher
 
 BUILD_DEPENDS=		unzip:../../archivers/unzip
 
