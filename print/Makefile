@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2001/04/03 14:47:15 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2001/04/14 00:52:10 jtb Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -28,6 +28,7 @@ SUBDIR+=	lgrind
 SUBDIR+=	lilypond
 SUBDIR+=	lyx
 SUBDIR+=	magicfilter
+SUBDIR+=	mgv
 SUBDIR+=	mp
 SUBDIR+=	mpage
 SUBDIR+=	p5-Font-AFM
