@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/02/17 19:07:07 hubertf Exp $
+# $NetBSD: Makefile,v 1.10 2001/03/04 20:42:02 hubertf Exp $
 # FreeBSD Id: ports/net/djbdns/Makefile,v 1.4 2000/09/28 18:18:41 nbm Exp
 
 DISTNAME=	djbdns-1.05
@@ -45,8 +45,8 @@ post-patch:
 .endfor
 
 post-install:
-	${INSTALL_SCRIPT} ${WRKDIR}/tinydns-log.pl ${PREFIX}/bin/tinydns-log.pl
-	${INSTALL_SCRIPT} ${WRKDIR}/dnscache-log.pl ${PREFIX}/bin/dnscache-log.pl
+	${INSTALL_SCRIPT} ${WRKDIR}/tinydns-log.pl ${PREFIX}/bin/tinydns-log
+	${INSTALL_SCRIPT} ${WRKDIR}/dnscache-log.pl ${PREFIX}/bin/dnscache-log
 	${INSTALL_DATA} ${WRKSRC}/dnsroots.global ${PREFIX}/etc/dnsroots.global
 	cd ${WRKDIR}/djbdns-man && ${INSTALL_MAN} dnsfilter.1 dnsip.1	\
 	dnsipq.1 dnsmx.1 dnsname.1 dnsq.1 dnsqr.1 dnstrace.1 dnstxt.1	\
