@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2004/01/25 15:29:51 kristerw Exp $
+# $NetBSD: Makefile,v 1.24 2004/02/09 19:57:55 jlam Exp $
 
 DISTNAME=		Sablot-1.0.1
 PKGNAME=		${DISTNAME:S/Sablot/sablotron/}
@@ -30,7 +30,7 @@ LIBS+=			${_BLNK_ICONV_LDFLAGS}
 # SunPro needs libCrun and libm.
 #
 # XXX any extra libs needed on IRIX?
-.if defined(USE_SUNPRO)
+.if !empty(PKGSRC_COMPILER:Msunpro)
 LIBS+=			-lCrun -lm
 .elif !empty(CC_VERSION:Mgcc-2*)
 LIBS+=			-lstdc++ -lm
