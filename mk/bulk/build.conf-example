@@ -1,5 +1,5 @@
 # build.conf
-# $NetBSD: build.conf-example,v 1.8 2001/03/19 11:25:39 dmcmahill Exp $
+# $NetBSD: build.conf-example,v 1.9 2001/06/23 23:27:18 hubertf Exp $
 #
 # config file in /bin/sh syntax for {,pre,post}-build
 #
@@ -36,6 +36,10 @@ PRUNEDISTFILES=yes
 # Proxies (optional):
 #ftp_proxy=http://proxy.machi.ne:3128/
 #http_proxy=http://proxy.machi.ne:3128/
+
+# Uploading binary packages:
+RSYNC_DST=$CVS_USR@ftp.netbsd.org:/pub/NetBSD/packages/x.y/arch
+RSYNC_OPTS='-e ssh'
 
 ###########################################################################
 ### No changes should be needed below this line !!!
