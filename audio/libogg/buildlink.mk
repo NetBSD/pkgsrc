@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.4 2001/07/27 13:33:19 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.5 2001/08/08 09:46:53 lukem Exp $
 #
 # This Makefile fragment is included by packages that use libogg.
 #
@@ -17,7 +17,7 @@ LIGOGG_BUILDLINK_MK=	# defined
 
 .include "../../mk/bsd.buildlink.mk"
 
-BUILDLINK_DEPENDS.libogg?=	libogg>=1.0.0.4
+BUILDLINK_DEPENDS.libogg?=	libogg>=1.0.0.5
 DEPENDS+=	${BUILDLINK_DEPENDS.libogg}:../../audio/libogg
 
 EVAL_PREFIX+=			BUILDLINK_PREFIX.libogg=libogg
