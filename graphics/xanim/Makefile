@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 1999/03/28 07:55:05 rh Exp $
+# $NetBSD: Makefile,v 1.15 1999/07/07 23:11:18 tron Exp $
 #
 
 DISTNAME=	xanim2801
@@ -22,19 +22,6 @@ HOMEPAGE=	http://xanim.va.pubnix.com/
 
 EXTRACT_ONLY=   ${DISTNAME}.tar.gz
 
-.if (${MACHINE_ARCH} == "i386")
-EXTRA_FILES=	xa2.0_cvid_netbsd386.o.Z \
-		xa2.0_iv32_netbsd386.o.Z \
-		xa1.0_cyuv_netbsd386.o.Z
-.elif (${MACHINE_ARCH} == "m68k")
-EXTRA_FILES=	xa2.0_cvid_netbsd68k.o.Z \
-		xa2.0_iv32_netbsd68k.o.Z \
-		xa1.0_cyuv_netbsd68k.o.Z
-.elif (${MACHINE_ARCH} == "sparc")
-EXTRA_FILES=	xa2.0_cvid_sparcCOFF.o.Z \
-		xa2.0_iv32_sparcCOFF.o.Z \
-		xa1.0_cyuv_sparcAOUT.o.Z
-.endif
 # we can't mirror/distribute iv32 or cyuv object modules
 MIRROR_DISTFILE=	no
 
@@ -48,8 +35,32 @@ post-extract:
 	  ${GUNZIP_CMD} ${WRKSRC}/mods/$$file; \
 	done
 
+pre-configure:
+	@${ECHO} >${WRKSRC}/objarch.tmpl \
+	  "MACHINE_OBJ_ARCH = ${MACHINE_OBJ_ARCH}"
+
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/xanim ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/xanim.0 ${PREFIX}/man/cat1
 
 .include "../../mk/bsd.pkg.mk"
+
+MACHINE_OBJ_ARCH=	${MACHINE_ARCH}-${OBJECT_FMT}
+
+.if (${MACHINE_OBJ_ARCH} == "i386-a.out")
+EXTRA_FILES=	xa2.0_cvid_netbsd386.o.Z \
+		xa2.0_iv32_netbsd386.o.Z \
+		xa1.0_cyuv_netbsd386.o.Z
+.elif (${MACHINE_OBJ_ARCH} == "i386-ELF")
+EXTRA_FILES=	xa2.0_cvid_linuxELF.o.Z \
+		xa2.0_iv32_linuxELF.o.Z \
+		xa1.0_cyuv_linuxELF.o.Z
+.elif (${MACHINE_OBJ_ARCH} == "m68k-a.out")
+EXTRA_FILES=	xa2.0_cvid_netbsd68k.o.Z \
+		xa2.0_iv32_netbsd68k.o.Z \
+		xa1.0_cyuv_netbsd68k.o.Z
+.elif (${MACHINE_OBJ_ARCH} == "sparc-a.out")
+EXTRA_FILES=	xa2.0_cvid_sparcCOFF.o.Z \
+		xa2.0_iv32_sparcCOFF.o.Z \
+		xa1.0_cyuv_sparcAOUT.o.Z
+.endif
