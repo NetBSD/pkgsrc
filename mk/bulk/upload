@@ -12,6 +12,11 @@ esac
 
 export BMAKE
 
+# Bring in variables for bulk-install
+BATCH=1
+DEPENDS_TARGET=bulk-install
+export BATCH DEPENDS_TARGET
+
 # Pull in RSYNC_DST, RSYNC_OPTS:
 if [ -f "$BULK_BUILD_CONF" ]; then
     . $BULK_BUILD_CONF
