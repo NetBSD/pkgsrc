@@ -1,0 +1,12 @@
+--- config/i386/netbsd1/config.frag.orig	Tue Mar 31 14:10:53 1998
++++ config/i386/netbsd1/config.frag	Sun Nov  8 18:13:28 1998
+@@ -6,3 +6,9 @@
+ PIC=-fpic
+ LIBSHARE=-Bshareable
+ LIBEXT=.so
++
++#
++# Unfortunately, it doesn't pass GCTest when preemption is enabled,
++# so old threads only for now.  XXX
++#
++with_threads=unix-internal
