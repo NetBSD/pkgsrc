@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1369 2004/02/11 11:37:57 xtraeme Exp $
+$NetBSD: TODO,v 1.1370 2004/02/11 13:24:39 wiz Exp $
 
 Suggested new packages
 ======================
@@ -125,6 +125,7 @@ Suggested package updates
 	o Xbae-4.50.0
 	o abcde-2.1.14
 	o amanda-2.4.4p1
+	o amule-1.2.5
 	o anjuta-1.2.0 [cube]
 	o asc-1.14.0
 	o autogen-5.5.6
@@ -143,7 +144,7 @@ Suggested package updates
 	o cervisia-2.1
 	o clisp-2.32
 	o clusterit-2.2
-	o conserver-8.0.9
+	o conserver-8.1.1
 	o courier-0.42.2 [pkg/22373]
 	o courier-0.44.2
 	o courier-auth-0.42.2 [pkg/22371]
@@ -238,7 +239,7 @@ Suggested package updates
 	o maildrop-1.6.3
 	o mailsync-5.1.0
 	o marbles-1.0.6
-	o matchbox-0.7
+	o matchbox-0.8
 	o memtest86-3.0
 	o micq-0.4.10.5
 	o midnight-commander-4.6.0
@@ -259,7 +260,7 @@ Suggested package updates
 	o nicotine-1.0.7 [pkg/24343]
 	o ns-flash-6.0.79
 	o nsd-1.2.3 [pkg/24034]
-	o nut-9.8
+	o nut-9.9
 	o ocaml-3.07pl2
 	o onyx-5.0.1
 	o openh323-1.11.2
