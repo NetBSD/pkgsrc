@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2004/04/20 17:52:48 ben Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/04/22 16:31:20 ben Exp $
 # XXX
 # XXX This file was created automatically using createbuildlink-3.3.
 # XXX After this file as been verified as correct, the comment lines
@@ -17,7 +17,7 @@ BUILDLINK_PACKAGES+=	portaudio
 
 .if !empty(PORTAUDIO_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.portaudio+=	portaudio>=18.1
-BUILDLINK_PKGSRCDIR.portaudio?=	../../wip/portaudio
+BUILDLINK_PKGSRCDIR.portaudio?=	../../audio/portaudio
 .endif	# PORTAUDIO_BUILDLINK3_MK
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
