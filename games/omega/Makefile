@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2004/03/10 02:49:38 snj Exp $
+# $NetBSD: Makefile,v 1.22 2004/03/23 04:41:00 jlam Exp $
 
 DISTNAME=	omega-0.90.4-src
 PKGNAME=	omega-0.90.4
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.alcyone.com/max/projects/omega/
 COMMENT=	Complex rogue-like game of exploration with a sense of humor
 
 WRKSRC=			${WRKDIR}/omega
-USE_BUILDLINK3=		# defined
+USE_BUILDLINK3=		yes
 ALL_TARGET=		# empty
 
 do-install:

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2004/02/25 23:16:42 minskim Exp $
+# $NetBSD: Makefile,v 1.23 2004/03/23 04:41:02 jlam Exp $
 
 DISTNAME=	wmessage-0.10
 PKGREVISION=	3
@@ -9,7 +9,7 @@ MAINTAINER=	jlam@NetBSD.org
 HOMEPAGE=	http://www.ozemail.com.au/~crn/wmessage/
 COMMENT=	WINGs based message viewer similar to xmessage
 
-USE_BUILDLINK3=	# defined
+USE_BUILDLINK3=	yes
 USE_X11=	# defined
 
 .include "../../wm/windowmaker/buildlink3.mk"

@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2004/03/05 19:09:22 minskim Exp $
+# $NetBSD: Makefile,v 1.8 2004/03/23 04:41:01 jlam Exp $
 #
 .include "../canna/Makefile.common"
 
 CANNA_MODULE=	server
 
-USE_BUILDLINK3=	# defined
+USE_BUILDLINK3=	yes
 INSTALL_TARGET=	instserver
 
 USE_PKGINSTALL=	YES
