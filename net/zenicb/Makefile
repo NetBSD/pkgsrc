@@ -1,4 +1,5 @@
-#	$NetBSD: Makefile,v 1.1.1.1 1998/12/09 06:18:21 thorpej Exp $
+# $NetBSD: Makefile,v 1.2 1998/12/09 10:52:10 frueauf Exp $
+#
 
 DISTNAME=		zenicb-19981202
 CATEGORIES=		net
@@ -33,7 +34,7 @@ do-build:
 do-install:
 	@for file in ${WRKSRC}/src/*.el; do \
 		j="${INSTALL_DATA} $$file ${ELISPDIR}/"; \
-		echo $$j; $$j; \
+		${ECHO} $$j; $$j; \
 	done
 
 .include "../../mk/bsd.pkg.mk"
