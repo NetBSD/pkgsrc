@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.3 2001/07/24 09:27:58 jlam Exp $
+$NetBSD: patch-aa,v 1.4 2004/06/10 22:42:42 jschauma Exp $
 
---- Makefile.orig	Mon Jul 17 13:07:03 2000
-+++ Makefile
+--- Makefile.orig	2000-07-17 16:07:03.000000000 -0400
++++ Makefile	2004-06-10 18:02:25.000000000 -0400
 @@ -8,19 +8,19 @@
  # after "=", this is parsed and rewritten by the configure script.
  #
@@ -54,6 +54,15 @@ $NetBSD: patch-aa,v 1.3 2001/07/24 09:27:58 jlam Exp $
  #------------------------- end of configuration section ----------------------
  
  OPT=$(DEBUG) $(PLANRULE) -DPLANLOCK=\"$(PLANLOCK)\" -DPLANDLOCK=\"$(PLANDLOCK)\"
+@@ -102,7 +102,7 @@
+ 
+ SGI4_C	=
+ SGI5_C	= -DSYSV -DSVR4 -DDESKTOP
+-SGI6_C	= -n32 -mips3 -woff 1110,1167,1185 -DSYSV -DSVR4 -DDESKTOP -D_BSD_SIGNALS
++SGI6_C	= ${CFLAGS} -woff 1110,1167,1185 -DSYSV -DSVR4 -DDESKTOP -D_BSD_SIGNALS
+ HP8_C	= -Aa -I/usr/include/Motif1.1 -I/usr/include/X11R4 -I/usr/include\
+ 	  -D_INCLUDE_HPUX_SOURCE -D_INCLUDE_POSIX_SOURCE\
+ 	  -D_INCLUDE_XOPEN_SOURCE -DNOREGEX -DFIXMBAR -DRABBITS
 @@ -140,8 +140,7 @@
  USL_C	= -DNOKILL0 -I/usr/X/include
  BSDI_C	= -DBSD -DRABBITS -I/usr/X11/include -DFLOCK -DNOREGEX -Dbsdi
