@@ -1,0 +1,6 @@
+This is a POSIX-based version of the Win32::Serialport module ported by
+Joe Doss for the MisterHouse Home Automation Package from Version 0.08
+of the Win32 module. He replaced calls to the Win32 API with similar
+functions implemented using POSIX calls. While most of the testing has
+occurred on linux, the package should work on other POSIX-compliant
+Operating Systems.
