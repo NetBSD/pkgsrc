@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7709 2004/11/05 14:26:11 adam Exp $
+$NetBSD: CHANGES,v 1.7710 2004/11/05 15:06:36 shannonjr Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5086,3 +5086,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gok to 0.11.15 [jmmv 2004-11-05]
 	Updated lwm to 1.2.1 [adam 2004-11-05]
 	Updated gnustep-base to 1.10.1 [adam 2004-11-05]
+	Updated librfuncs to 1.0.3 [shannonjr 2004-11-05]
