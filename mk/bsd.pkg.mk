@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.109 1998/07/09 17:47:03 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.110 1998/07/09 18:18:43 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -1658,7 +1658,6 @@ README_NAME=	${TEMPLATES}/README.port
 .endif
 
 README.html:
-	@${ECHO_MSG} "===>  Creating README.html for ${_THISDIR_}${PKGNAME}"
 	@${MAKE} depends-list PACKAGE_NAME_AS_LINK=YES >> $@.tmp1
 	@[ -s $@.tmp1 ] || echo "<I>(none)</I>" >> $@.tmp1
 	@${MAKE} package-depends PACKAGE_NAME_AS_LINK=YES >> $@.tmp2
@@ -1689,6 +1688,7 @@ README.html:
 		mv $@.BAK $@ ; \
 		rm $@.tmp ; \
 	else \
+		${ECHO_MSG} "===>  Creating README.html for ${_THISDIR_}${PKGNAME}" ; \
 		mv $@.tmp $@ ; \
 		rm -f $@.BAK ; \
 	fi
