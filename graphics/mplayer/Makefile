@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2003/01/20 07:10:42 fredb Exp $
+# $NetBSD: Makefile,v 1.30 2003/01/20 22:42:39 fredb Exp $
 
 .include "../../graphics/mplayer-share/Makefile.common"
 
@@ -15,6 +15,6 @@ do-install:
 .include "../../graphics/mplayer-share/Makefile.depends"
 
 .include "../../audio/nas/buildlink2.mk"
+.include "../../mk/bsd.pkg.mk"
 
 .include "../../graphics/mplayer-share/Makefile.cflags"
-.include "../../mk/bsd.pkg.mk"
