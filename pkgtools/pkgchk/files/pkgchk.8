@@ -1,9 +1,9 @@
-.\"	$NetBSD: pkgchk.8,v 1.17 2003/10/01 11:25:02 abs Exp $
+.\"	$NetBSD: pkgchk.8,v 1.18 2003/10/04 12:02:12 seb Exp $
 .\"
 .\" Copyright (c) 2001 by David Brownlee (abs@netbsd.org)
 .\" Absolutely no warranty.
 .\"
-.Dd September 16, 2003
+.Dd October 4, 2003
 .Dt PKGCHK 1
 .Sh NAME
 .Nm pkg_chk
@@ -125,7 +125,7 @@ and all packages checked.
 .El
 .Sh FILE FORMAT
 Each non comment line in
-.Pa pkgsrc.conf
+.Pa pkgchk.conf
 should contain a package
 directory (such as sysutils/skill) followed by an optional list of
 tags.
@@ -161,7 +161,7 @@ match the current machine.
 .Pp
 The default set of tags used to determine which packages to match
 in
-.Pa pkgsrc.conf
+.Pa pkgchk.conf
 are equivalent to the output of the following with
 any spaces converted to hypens (-): hostname -s, hostname, uname
 -srm, uname -sr, uname -sm, uname -s, uname -r, uname -m.
