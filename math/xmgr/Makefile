@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2001/10/23 13:15:00 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2001/10/24 22:11:04 jlam Exp $
 # FreeBSD Id: Makefile,v 1.13 1998/12/12 22:27:21 jseger Exp
 #
 
@@ -29,8 +29,8 @@ EXTRA_INCDIRS=		${BUILDLINK_DIR}/include/X11:${BUILDLINK_DIR}/include
 ALL_TARGET=		# empty
 INSTALL_TARGET=		install
 
-.include "../../mk/x11.buildlink.mk"
 .include "../../devel/netcdf/buildlink.mk"
 .include "../../graphics/xpm/buildlink.mk"
 .include "../../mk/motif.buildlink.mk"
+.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

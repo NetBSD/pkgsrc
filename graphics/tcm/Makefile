@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/10/23 13:14:59 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2001/10/24 22:11:02 jlam Exp $
 
 DISTNAME=		tcm-2.01.src
 PKGNAME=		tcm-2.01
@@ -84,8 +84,8 @@ do-install:
 	${INSTALL_DATA} ${TCM_SRC}/doc/wishlist/* 			\
 		${PREFIX}/share/doc/html/tcm/wishlist/
 
-.include "../../mk/x11.buildlink.mk"
 .include "../../mk/motif.buildlink.mk"
+.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
 
 .if defined(MOTIF_TYPE) && (${MOTIF_TYPE} == "lesstif")

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/10/23 13:14:54 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2001/10/24 22:10:56 jlam Exp $
 #
 
 DISTNAME=	lbreakout-010315
@@ -13,6 +13,6 @@ USE_BUILDLINK_ONLY=	YES
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--disable-sound
 
-.include "../../mk/x11.buildlink.mk"
 .include "../../devel/SDL/buildlink.mk"
+.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

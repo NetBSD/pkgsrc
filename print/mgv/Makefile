@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/10/23 13:15:01 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2001/10/24 22:11:06 jlam Exp $
 
 DISTNAME=		mgv-3.1.5
 CATEGORIES=		print
@@ -21,7 +21,7 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html
 	${LN} -fs ${PREFIX}/share/mgv/3.1.5/help ${PREFIX}/share/doc/html/mgv
 
-.include "../../mk/x11.buildlink.mk"
 .include "../../graphics/xpm/buildlink.mk"
 .include "../../mk/motif.buildlink.mk"
+.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

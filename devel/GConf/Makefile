@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2001/10/23 13:14:49 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2001/10/24 22:10:50 jlam Exp $
 #
 
 DISTNAME=		GConf-1.0.4
@@ -30,8 +30,8 @@ post-install:
 	    ${CP} -p ${PREFIX}/etc/gconf/1/path.example \
 	    ${PREFIX}/etc/gconf/1/path
 
-.include "../../mk/x11.buildlink.mk"
 .include "../../devel/gettext-lib/buildlink.mk"
 .include "../../databases/db3/buildlink.mk"
 .include "../../devel/oaf/buildlink.mk"
+.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2001/10/23 21:02:17 jlam Exp $
+# $NetBSD: Makefile,v 1.25 2001/10/24 22:11:13 jlam Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/09/14 04:00:00 jfitz Exp
 #
 
@@ -22,6 +22,6 @@ MAKE_PARAMS=		X11=${BUILDLINK_X11_DIR}
 do-configure:
 	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL ${MAKE_PARAMS}
 
-.include "../../mk/x11.buildlink.mk"
 .include "../../x11/tk/buildlink.mk"
+.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

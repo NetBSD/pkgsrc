@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2001/10/23 13:15:02 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2001/10/24 22:11:06 jlam Exp $
 # FreeBSD Id: Makefile,v 1.5 1998/11/29 12:43:12 asami Exp
 #
 
@@ -23,6 +23,6 @@ CONFIGURE_ARGS+=	--with-xpm
 CONFIGURE_ARGS+=	--with-xpm-includes=${BUILDLINK_DIR}/include
 CONFIGURE_ARGS+=	--with-xpm-library=${BUILDLINK_DIR}/lib
 
-.include "../../mk/x11.buildlink.mk"
 .include "../../graphics/xpm/buildlink.mk"
+.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

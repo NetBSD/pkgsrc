@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/10/23 13:14:59 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2001/10/24 22:11:03 jlam Exp $
 
 DISTNAME=	xzgv-0.7
 CATEGORIES=	graphics
@@ -22,6 +22,6 @@ do-install:
 	@for f in xzgv xzgv-1 xzgv-2 xzgv-3 ; do \
 	${INSTALL_DATA} ${WRKSRC}/doc/$$f ${PREFIX}/info ; done
 
-.include "../../mk/x11.buildlink.mk"
 .include "../../graphics/imlib/buildlink.mk"
+.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
