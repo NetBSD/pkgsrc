@@ -1,0 +1,12 @@
+$NetBSD: patch-an,v 1.5 2004/08/05 13:41:54 markd Exp $
+
+--- kopete/protocols/gadu/libgadu/libgadu-config.h.in.orig	2004-05-30 22:44:14.000000000 +1200
++++ kopete/protocols/gadu/libgadu/libgadu-config.h.in
+@@ -25,6 +25,6 @@
+ #undef __GG_LIBGADU_HAVE_OPENSSL
+ 
+ /* Include file containing uintXX_t declarations. */
+-#include <stdint.h>
++#include <inttypes.h>
+ 
+ #endif /* __GG_LIBGADU_CONFIG_H */
