@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1420 2003/02/17 14:20:26 jmmv Exp $
+$NetBSD: CHANGES,v 1.1421 2003/02/17 14:35:24 taya Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -724,3 +724,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added scrot-0.6 [zuntum 2003-02-17]
 	Added spamprobe-0.8b [zuntum 2003-02-17]
 	Updated xchat2 to 2.0.0nb1 [jmmv 2003-02-17]
+        Updated galeon to 1.2.8 [taya 2003-02-17]
