@@ -1,29 +1,21 @@
-$NetBSD: patch-af,v 1.5 1999/07/11 20:00:43 bad Exp $
+$NetBSD: patch-af,v 1.6 1999/09/19 04:24:54 jlam Exp $
 
-*** include/storage/s_lock.h  Sat Apr 10 19:43:01 1999
---- include/storage/s_lock.h  Wed Apr  7 03:06:53 1999
-***************
-*** 124,129 ****
---- 124,145 ----
-  
-  
-  
-+ #if defined(__arm32__)
-+ #define TAS(lock) tas(lock)
-+ 
-+ static __inline__ int
-+ tas(volatile slock_t *lock)
-+ {
-+         register slock_t _res = 1;
-+ 
-+ __asm__("swpb %0, %0, [%3]": "=r"(_res), "=m"(*lock):"0"(_res), "r" (lock));
-+         return (int) _res;
-+ }
-+ 
-+ #endif   /* __arm32__ */
-+ 
-+ 
-+ 
-  #if defined(sparc)
-  #define TAS(lock) tas(lock)
-  
+--- ./bin/pgtclsh/Makefile.orig	Tue Oct 27 16:51:54 1998
++++ ./bin/pgtclsh/Makefile	Sat Sep 18 03:14:32 1999
+@@ -22,15 +22,12 @@
+ include Makefile.tkdefs
+ endif
+ 
+-CFLAGS+= $(X_CFLAGS) -I$(SRCDIR)/interfaces/libpgtcl 
++CFLAGS+= $(X_CFLAGS) -I$(LIBPGTCLDIR)
+ 
+ ifdef KRBVERS
+ LDFLAGS+= $(KRBLIBS)
+ CFLAGS+= $(KRBFLAGS)
+ endif
+-
+-LIBPGTCL= -L$(SRCDIR)/interfaces/libpgtcl -lpgtcl
+-LIBPQ= -L$(LIBPQDIR) -lpq
+ 
+ # If we are here then TCL is available
+ PGMS = pgtclsh

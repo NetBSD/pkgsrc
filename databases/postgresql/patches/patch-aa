@@ -1,35 +1,50 @@
-$NetBSD: patch-aa,v 1.1 1999/01/04 13:05:01 frueauf Exp $
+$NetBSD: patch-aa,v 1.2 1999/09/19 04:24:54 jlam Exp $
 
---- include/utils/memutils.h.orig	Mon Sep  7 07:35:48 1998
-+++ include/utils/memutils.h	Tue Dec 29 00:50:38 1998
-@@ -58,13 +58,17 @@
- #define SHORTALIGN(LEN)\
- 		(((long)(LEN) + (sizeof (short) - 1)) & ~(sizeof (short) - 1))
+--- ./Makefile.global.in.orig	Thu Jun 24 20:13:45 1999
++++ ./Makefile.global.in	Sat Sep 18 03:20:03 1999
+@@ -54,6 +54,15 @@
+ ELF_SYSTEM= @ELF_SYS@
  
-+#if defined(m68k)
-+#define INTALIGN(LEN)	 SHORTALIGN(LEN)
-+#else
- #define INTALIGN(LEN)\
- 		(((long)(LEN) + (sizeof (int) - 1)) & ~(sizeof (int) -1))
-+#endif
+ LIBPQDIR:= $(SRCDIR)/interfaces/libpq
++LIBPGTCLDIR:= $(SRCDIR)/interfaces/libpgtcl
++
++ifneq ($(LIBTOOL),)
++LIBPQ:= $(LIBPQDIR)/libpq.la
++LIBPGTCL:= $(LIBPGTCLDIR)/libpgtcl.la
++else
++LIBPQ:= -L$(LIBPQDIR) -lpq
++LIBPGTCL:= -L$(LIBPGTCLDIR) -lpgtcl
++endif
  
- /*
-  *		LONGALIGN(LEN)	- length (or address) aligned for longs
-  */
--#if defined(sun) && ! defined(sparc)
-+#if (defined(sun) && ! defined(sparc)) || defined(m68k)
- #define LONGALIGN(LEN)	SHORTALIGN(LEN)
- #elif defined (__alpha)
+ # For convenience, POSTGRESDIR is where BINDIR, and LIBDIR
+ # and other target destinations are rooted.  Of course, each of these is
+@@ -200,6 +209,7 @@
+ #-------------------------------------------------------------
+ CC= @CC@
+ CPP= @CPP@
++CXX= @CXX@
+ YFLAGS= @YFLAGS@
+ YACC= @YACC@
+ LEX= @LEX@
+@@ -242,7 +252,7 @@
+ ##############################################################################
  
-@@ -81,7 +85,10 @@
- 		(((long)(LEN) + (sizeof (long) - 1)) & ~(sizeof (long) -1))
- #endif
+ ifneq ($(CUSTOM_INSTALL),)
+-INSTALL= $(CUSTOM_INSTALL)
++INSTALL:= $(CUSTOM_INSTALL)
+ endif
  
--#if ! defined(sco)
-+#if defined(m68k)
-+#define DOUBLEALIGN(LEN) SHORTALIGN(LEN)
-+#define MAXALIGN(LEN)	 SHORTALIGN(LEN)
-+#elif ! defined(sco)
- #define DOUBLEALIGN(LEN)\
- 		(((long)(LEN) + (sizeof (double) - 1)) & ~(sizeof (double) -1))
+ #
+@@ -273,7 +283,11 @@
+ # using a i486 or better.
  
+ ifneq ($(CUSTOM_CC),)
+-  CC= $(CUSTOM_CC)
++  CC:= $(CUSTOM_CC)
++endif
++
++ifneq ($(CUSTOM_CXX),)
++  CXX:= $(CUSTOM_CXX)
+ endif
+ 
+ ifneq ($(CUSTOM_COPT),)

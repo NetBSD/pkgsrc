@@ -1,30 +1,101 @@
-$NetBSD: patch-ab,v 1.5 1999/01/04 13:05:01 frueauf Exp $
+$NetBSD: patch-ab,v 1.6 1999/09/19 04:24:54 jlam Exp $
 
---- backend/storage/buffer/s_lock.c.orig	Fri Sep 18 19:18:39 1998
-+++ backend/storage/buffer/s_lock.c	Tue Dec 29 00:50:38 1998
-@@ -117,6 +117,25 @@
+--- ./Makefile.shlib.orig	Fri Jul 16 18:46:16 1999
++++ ./Makefile.shlib	Sat Sep 18 17:34:59 1999
+@@ -50,6 +50,7 @@
+ # on a platform where we don't know how to build a shared library.
+ shlib := 
+ install-shlib-dep :=
++lib_to_install :=	lib$(NAME).a
  
- #endif	 /* PPC */
+ # For each platform we support shlibs on, set shlib and install-shlib-dep,
+ # and update flags as needed to build a shared lib.  Note we depend on
+@@ -64,7 +65,7 @@
+ endif
  
-+#if defined(__m68k__)
-+static void
-+tas_dummy()	/* really means: extern int tas(slock_t **lock); */
-+{
-+	__asm__("		\n\
-+.global		_tas		\n\
-+_tas:				\n\
-+	movel   sp@(0x4),a0	\n\
-+	tas a0@			\n\
-+	beq _success		\n\
-+	moveq   #-128,d0	\n\
-+	rts			\n\
-+_success:			\n\
-+	moveq   #0,d0		\n\
-+	rts			\n\
-+	");
-+}
+ ifeq ($(PORTNAME), freebsd)
+-  ifdef BSD_SHLIB
++  ifneq $(BSD_SHLIB),)
+     install-shlib-dep	:= install-shlib
+     ifdef ELF_SYSTEM
+       shlib		:= lib$(NAME)$(DLSUFFIX).$(SO_MAJOR_VERSION)
+@@ -78,7 +79,8 @@
+ endif
+ 
+ ifeq ($(PORTNAME), bsd)
+-  ifdef BSD_SHLIB
++  ifneq ($(BSD_SHLIB),)
++  ifeq ($(LIBTOOL),)
+     install-shlib-dep	:= install-shlib
+     shlib		:= lib$(NAME)$(DLSUFFIX).$(SO_MAJOR_VERSION).$(SO_MINOR_VERSION)
+     ifdef ELF_SYSTEM
+@@ -87,11 +89,16 @@
+       LDFLAGS_SL	:= -x -Bshareable -Bforcearchive
+     endif
+     CFLAGS		+= $(CFLAGS_SL)
+-  endif
++  else
++    lalib		:= lib$(NAME).la
++    lib_to_install	:= $(lalib)
++    LIBTOOL_FLAGS	+= -rpath $(LIBDIR) -version-info $(SO_MAJOR_VERSION):$(SO_MINOR_VERSION)
++  endif # !LIBTOOL
++  endif # BSD_SHLIB
+ endif
+ 
+ ifeq ($(PORTNAME), bsdi)
+-  ifdef BSD_SHLIB
++  ifneq ($(BSD_SHLIB),)
+     ifeq ($(DLSUFFIX), .so)
+       install-shlib-dep := install-shlib
+       shlib			:= lib$(NAME)$(DLSUFFIX).$(SO_MAJOR_VERSION).$(SO_MINOR_VERSION)
+@@ -183,7 +190,7 @@
+ 
+ # Default target definition.  Note shlib is empty if not building a shlib.
+ 
+-all: lib$(NAME).a $(shlib)
++all: $(lib_to_install) $(shlib)
+ 
+ # Rules to build regular and shared libraries
+ 
+@@ -197,6 +204,21 @@
+ 	$(RANLIB) $@
+ endif
+ 
++ifneq ($(LIBTOOL),)
++ifneq ($(PORTNAME), win)
 +
-+#endif	 /* __m68k__ */
++ifeq ($(CXXLIB), true)
++LINKER=	CXX
++else
++LINKER=	CC
++endif
++
++$(lalib): $(OBJS)
++	$($(LINKER)) $(CPPFLAGS) $($(LINKER)FLAGS) -o $@ $(OBJS:.o=.lo) $(LIBTOOL_FLAGS)
++
++endif
++endif
++
+ ifneq ($(shlib),)
+ ifneq ($(PORTNAME), win)
  
+@@ -228,8 +250,8 @@
  
- #else							/* defined(__GNUC__) */
+ .PHONY: all install-lib install-shlib
+ 
+-install-lib: lib$(NAME).a
+-	$(INSTALL) $(INSTL_LIB_OPTS) lib$(NAME).a $(LIBDIR)/lib$(NAME).a
++install-lib: $(lib_to_install)
++	$(INSTALL) $(INSTL_LIB_OPTS) $(lib_to_install) $(LIBDIR)
+ 
+ install-shlib: $(shlib)
+ 	$(INSTALL) $(INSTL_SHLIB_OPTS) $(shlib) $(LIBDIR)/$(shlib)
+@@ -251,4 +273,8 @@
+ .PHONY: clean-shlib
+ 
+ clean-shlib:
++ifneq ($(LIBTOOL),)
++	$(LIBTOOL) rm -rf $(lalib)
++else
+ 	rm -f $(shlib) lib$(NAME)$(DLSUFFIX).$(SO_MAJOR_VERSION) lib$(NAME)$(DLSUFFIX)
++endif
