@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: etcupdate,v 1.7 2001/11/23 19:16:38 martti Exp $
+# $NetBSD: etcupdate,v 1.8 2001/12/01 11:42:09 martti Exp $
 #
 # Copyright (c) 2001 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -53,7 +53,7 @@ PATH=/sbin:/usr/sbin:/bin:/usr/bin
 
 # Default settings
 TEMPROOT="${TEMPROOT:=/tmp/temproot}"
-SRCDIR="${SRCDIR:=/usr/src}"
+SRCDIR="${SRCDIR:=/usr/src/etc}"
 PAGER="${PAGER:=/usr/bin/more}"
 WIDTH="${WIDTH:=80}"
 VERBOSE=
@@ -73,7 +73,7 @@ Usage: `basename $0` [options]
 
 Options:
 
-  -b           Use binary distributions
+  -b srcdir    Location of the extracted sets
   -p pager     Which pager to use              (default: /usr/bin/more)
   -s srcdir    Location of the source files    (default: /usr/src)
   -t temproot  Where to store temporary files  (default: /tmp/temproot)
@@ -161,6 +161,14 @@ diff_and_merge_file() {
 	fi
 
 	STAY_HERE=YES
+	ALREADY_MERGED=
+
+	# Determine name for the backup file (/foo/._etcupdate.bar)
+	D=`dirname  "${TEMPROOT}${1}"`
+	F=`basename "${TEMPROOT}${1}"`
+	B="${D}/.etcupdate.${F}"
+	F="${D}/${F}"
+
 	while [ "x${STAY_HERE}" = "xYES" ]; do
 
 		# Ask the user if (s)he wants to install the new
@@ -183,7 +191,7 @@ diff_and_merge_file() {
   v  Show the missing file
 
 EOF
-		else
+		elif [ -z "${ALREADY_MERGED}" ]; then
 			cat << EOF
   d  Don't install the new file
   i  Install the new file (overwrites your modifications!)
@@ -192,10 +200,21 @@ EOF
   v  Show the new file
 
 EOF
+		else
+			cat << EOF
+  d  Don't install the new file
+  i  Install the new file (overwrites your modifications!)
+  m  Merge again the currently installed and new files
+  s  Show the differences between the currently installed and new files
+  u  Undo merge and restore the temporary file from backup
+  v  Show the merged file
+
+EOF
 		fi
 		echo -n "What do you want to do? [Leave it for later] "
 		read ANSWER
 		case "${ANSWER}" in
+
 		[dD])
 			verbose "Removing ${TEMPROOT}${1}"
 			rm -f "${TEMPROOT}${1}"
@@ -207,16 +226,25 @@ EOF
 			;;
 		[mM])
 			[ -z "${DOES_EXIST}" ] && continue
+			[ ! -f "${B}" ] && cp "${F}" "${B}"
 			cp "${TEMPROOT}${1}" "${TEMPROOT}${1}.merged"
 			sdiff -o "${TEMPROOT}${1}.merged"	\
 				--width=${WIDTH}		\
 				--suppress-common-lines --text	\
 				"${1}" "${TEMPROOT}${1}"
 			mv -f "${TEMPROOT}${1}.merged" "${TEMPROOT}${1}"
+			ALREADY_MERGED=YES
 			;;
 		[sS])
 			[ -z "${DOES_EXIST}" ] && continue
 			diff -u "${1}" "${TEMPROOT}${1}" | ${PAGER}
+			;;
+		[uU])
+			if [ -f "${B}" ]; then
+				echo "*** Restoring ${F}"
+				mv -f "${B}" "${F}"
+			fi
+			ALREADY_MERGED=
 			;;
 		[vV])
 			${PAGER} "${TEMPROOT}${1}"
@@ -229,6 +257,7 @@ EOF
 			;;
 		esac
 	done
+	rm -f "._etcupdate_${TEMPROOT}${1}"
 }
 
 #
@@ -244,14 +273,15 @@ USERRC="${HOME}/.`basename $0`rc"
 [ -r ${USERRC} ] && . ${USERRC}
 
 # Read command line arguments
-ARGV=`getopt bhp:s:t:vw: $*`
+ARGV=`getopt b:hp:s:t:vw: $*`
 [ $? != 0 ] && usage
 set -- ${ARGV}
 for i; do
 	case "${i}" in
 	-b)
 		BINARY=YES
-		shift
+		SRCDIR="${2}"
+		shift 2
 		;;
 	-h)
 		usage
@@ -323,12 +353,12 @@ if [ -z "${CONTINUE}" ]; then
 		fi
 
 		# Populate ${TEMPROOT} from ${SRCDIR}
-		if [ ! -f "${SRCDIR}/etc/Makefile" ]; then
-			echo "*** ERROR: Unable to find ${SRCDIR}/etc/Makefile"
+		if [ ! -f "${SRCDIR}/Makefile" ]; then
+			echo "*** ERROR: Unable to find ${SRCDIR}/Makefile"
 			exit 1
 		fi
 		echo "*** Populating ${TEMPROOT} from ${SRCDIR}"
-		cd ${SRCDIR}/etc
+		cd ${SRCDIR}
 		if [ -z "${VERBOSE}" ]; then
 			make DESTDIR="${TEMPROOT}" MTREE="mtree"	\
 				INSTALL_DONE=1 NO_SENDMAIL=1		\
