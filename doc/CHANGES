@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7163 2004/09/18 12:34:09 blymn Exp $
+$NetBSD: CHANGES,v 1.7164 2004/09/18 21:48:01 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4262,3 +4262,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated xsidplay to xsidplay-1.6.5.1a [hubertf 2004-09-17]
 	Updated xerces-c to 2.3.0nb1 [minskim 2004-09-18]
 	Updated tvtwm to 11nb2 [blymn 2004-09-18]
+	Updated gtk2 to 2.4.10 [jmmv 2004-09-18]
