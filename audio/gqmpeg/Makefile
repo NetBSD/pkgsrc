@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2001/11/27 04:14:55 hubertf Exp $
+# $NetBSD: Makefile,v 1.48 2001/11/27 05:12:33 lukem Exp $
 # FreeBSD Id: Makefile,v 1.6 1998/12/28 01:02:05 vanilla Exp
 
 DISTNAME=		gqmpeg-0.11.0
@@ -24,7 +24,8 @@ CONFIGURE_ARGS+=	--enable-japanese
 .if !defined(GQMPEG_NO_RUSSIAN)
 CONFIGURE_ARGS+=	--enable-russian
 .endif
-CONFIGURE_ENV+=		PKGLOCALEDIR="${PKGLOCALEDIR}"
+CONFIGURE_ENV+=		PKGLOCALEDIR="${PKGLOCALEDIR}" \
+			GNOME_DATADIR=${PREFIX}/share
 
 # in case gnome isn't installed, we need to create the directories
 pre-install:
