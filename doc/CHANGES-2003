@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2003,v 1.4 2005/02/26 15:40:26 wiz Exp $
+$NetBSD: CHANGES-2003,v 1.5 2005/04/01 11:36:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1114,7 +1114,7 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated ethereal to 0.9.11 [salo 2003-03-12]
 	Updated gedit to 2.2.1 [jmmv 2003-03-12]
 	Updated bkpupsd to 2.1.2 [taca 2003-03-12]
-	Updated qpopper to 4.0.5 [itojun 2002-03-13]
+	Updated qpopper to 4.0.5 [itojun 2003-03-13]
 	Added tex-textpos-1.2b [mjl 2003-03-13]
 	Updated bozohttpd to 20030313 [mrg 2003-03-13]
 	Updated poppassd to 4.0.5 [taca 2003-03-13]
@@ -1683,7 +1683,7 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated gnucap to 0.33 [dmcmahill 2003-04-21]
 	Added gnome2-utils-2.2.1 [rh 2003-04-21]
 	Updated postfix to 2.0.9 [martti 2003-04-21]
-	Updated ruby-ri to 0.8a [taca 2002-04-21]
+	Updated ruby-ri to 0.8a [taca 2003-04-21]
 	Updated p5-Class-ReturnValue to 0.51 [mjl 2003-04-21]
 	Updated p5-DBIx-SearchBuilder to 0.80 [mjl 2003-04-21]
 	Updated p5-CGI to 2.91 [mjl 2003-04-21]
