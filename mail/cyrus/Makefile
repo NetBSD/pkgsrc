@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2000/03/16 13:03:48 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2000/08/25 00:36:10 wiz Exp $
 
 DISTNAME=		cyrus-imapd-v1.5.14
 PKGNAME=		cyrus-1.5.14
@@ -11,6 +11,8 @@ HOMEPAGE=		http://asg.web.cmu.edu/cyrus/imapd/
 DEPENDS+=		tcl-8.0.5:../../lang/tcl80
 
 GNU_CONFIGURE=		yes
+
+BROKEN=			Unfinished package.
 
 # XXX This package is not ready for general use!
 # XXX I've imported it because my work on it has
