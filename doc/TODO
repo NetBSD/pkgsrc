@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1518 2004/03/20 15:56:18 jmmv Exp $
+$NetBSD: TODO,v 1.1519 2004/03/20 16:37:40 taca Exp $
 
 Suggested new packages
 ======================
@@ -138,6 +138,7 @@ Suggested package updates
 	o afio-2.5
 	o amanda-2.4.4p2 [pkg/24550]
 	o ap-python-2.7.10
+	o apache-2.0.49
 	o apache-ant.1.6.1
 	o atk-1.6.0 [jmmv]
 	o audacity-1.2.0
