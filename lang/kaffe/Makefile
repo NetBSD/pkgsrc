@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2002/09/08 09:03:37 zuntum Exp $
+# $NetBSD: Makefile,v 1.41 2002/10/13 07:33:28 jlam Exp $
 #
 
 DISTNAME=		kaffe-1.0.7
@@ -17,10 +17,10 @@ LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 ONLY_FOR_PLATFORM=	*-*-arm32 *-*-i386 *-*-m68k *-*-mips* *-*-sparc *-*-powerpc
 
 GNU_CONFIGURE=		yes
-GNU_CONFIGURE_PREFIX=	${PREFIX}/java/kaffe
-CONFIGURE_ARGS+=	--with-includes=""
-CONFIGURE_ARGS+=	--with-libraries=""
 CPPFLAGS+=		-Dunix
+
+JVM_HOME=		${LOCALBASE}/java/kaffe
+NO_MTREE=		# defined, since we change PREFIX below
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -32,10 +32,8 @@ CPPFLAGS+=		-Dunix
 CONFIGURE_ENV+=		VM_LIBS="-lc"
 .endif
 
-
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/license.terms \
-		${PREFIX}/java/kaffe/share
+	${INSTALL_DATA} ${WRKSRC}/license.terms ${PREFIX}
 
 test:
 	@cd ${WRKSRC}/test && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} check
@@ -47,3 +45,5 @@ test:
 .include "../../graphics/png/buildlink2.mk"
 
 .include "../../mk/bsd.pkg.mk"
+
+PREFIX=		${JVM_HOME}
