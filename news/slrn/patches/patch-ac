@@ -1,6 +1,7 @@
-$NetBSD: patch-ac,v 1.1.1.1 1998/10/31 21:09:13 hwr Exp $
+$NetBSD: patch-ac,v 1.2 1999/02/09 01:06:47 hubertf Exp $
+
 --- src/slrnfeat.h.orig	Tue Sep  8 14:59:21 1998
-+++ src/slrnfeat.h	Sat Oct 31 17:39:02 1998
++++ src/slrnfeat.h	Tue Feb  9 02:03:45 1999
 @@ -7,10 +7,10 @@
   * NOTE: if you intend to use slrnpull, make sure you enable SPOOL_SUPPORT
   *       in addition to PULL_SUPPORT.
@@ -24,3 +25,12 @@ $NetBSD: patch-ac,v 1.1.1.1 1998/10/31 21:09:13 hwr Exp $
  
  /* If you want mapping ISO Latin <--> native character set, set this to 1.
   * Supported character sets: isolatin, ibm850, and next
+@@ -196,7 +196,7 @@
+ #   define SLRN_ARTICLE_FILENAME	".article"
+ #   define SLRN_FOLLOWUP_FILENAME	".followup"
+ #   define SLRN_SIGNATURE_FILE		".signature"
+-#   define SLRN_SENDMAIL_COMMAND	"/usr/lib/sendmail -oi -t -oem -odb"
++#   define SLRN_SENDMAIL_COMMAND	"/usr/sbin/sendmail -oi -t -oem -odb"
+ #   ifndef SLRN_LIB_DIR
+ #    define SLRN_LIB_DIR		"/usr/local/lib/slrn"
+ #   endif
