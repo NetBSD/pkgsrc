@@ -1,10 +1,9 @@
-@comment $NetBSD: PLIST,v 1.5 2003/07/15 09:23:34 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.6 2003/09/10 23:43:35 dmcmahill Exp $
 bin/gnetlist
 bin/gschem2pcb
 bin/mk_verilog_syms
 bin/sw2asc
 man/man1/gnetlist.1
-share/gEDA/system-gnetlistrc
 share/gEDA/scheme/gnet-PCB.scm
 share/gEDA/scheme/gnet-PCBboard.scm
 share/gEDA/scheme/gnet-allegro.scm
@@ -12,8 +11,10 @@ share/gEDA/scheme/gnet-bae.scm
 share/gEDA/scheme/gnet-bom.scm
 share/gEDA/scheme/gnet-bom2.scm
 share/gEDA/scheme/gnet-drc.scm
+share/gEDA/scheme/gnet-drc2.scm
 share/gEDA/scheme/gnet-geda.scm
 share/gEDA/scheme/gnet-gossip.scm
+share/gEDA/scheme/gnet-gsch2pcb.scm
 share/gEDA/scheme/gnet-maxascii.scm
 share/gEDA/scheme/gnet-pads.scm
 share/gEDA/scheme/gnet-partslist-common.scm
@@ -21,8 +22,8 @@ share/gEDA/scheme/gnet-partslist1.scm
 share/gEDA/scheme/gnet-partslist2.scm
 share/gEDA/scheme/gnet-partslist3.scm
 share/gEDA/scheme/gnet-protelII.scm
-share/gEDA/scheme/gnet-spice.scm
 share/gEDA/scheme/gnet-spice-sdb.scm
+share/gEDA/scheme/gnet-spice.scm
 share/gEDA/scheme/gnet-switcap.scm
 share/gEDA/scheme/gnet-tango.scm
 share/gEDA/scheme/gnet-vams.scm
@@ -30,5 +31,6 @@ share/gEDA/scheme/gnet-verilog.scm
 share/gEDA/scheme/gnet-vhdl.scm
 share/gEDA/scheme/gnet-vipec.scm
 share/gEDA/scheme/gnetlist.scm
+share/gEDA/system-gnetlistrc
 @unexec ${RMDIR} %D/share/gEDA/scheme 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/share/gEDA 2>/dev/null || ${TRUE}
