@@ -1,0 +1,40 @@
+$NetBSD: patch-ak,v 1.9 2002/10/20 18:57:38 jlam Exp $
+
+--- doc/Makefile.orig	Sun Oct 20 13:19:53 2002
++++ doc/Makefile
+@@ -96,7 +96,7 @@ WEBIMAGES	=	images/accept-jobs.gif \
+ #
+ 
+ all:	$(DOCUMENTS:.shtml=.pdf) $(DOCUMENTS:.shtml=.html) overview.pdf
+-	cd fr; make all
++	cd fr; $(MAKE) $(MFLAGS) all
+ 
+ 
+ #
+@@ -104,7 +104,7 @@ all:	$(DOCUMENTS:.shtml=.pdf) $(DOCUMENT
+ #
+ 
+ ps:	$(DOCUMENTS:.shtml=.ps) overview.ps
+-	cd fr; make ps
++	cd fr; $(MAKE) $(MFLAGS) ps
+ 
+ 
+ #
+@@ -115,7 +115,7 @@ clean:
+ 	$(RM) $(DOCUMENTS:.shtml=.pdf)
+ 	$(RM) $(DOCUMENTS:.shtml=.html)
+ 	$(RM) overview.pdf
+-	cd fr; make clean
++	cd fr; $(MAKE) $(MFLAGS) clean
+ 
+ 
+ #
+@@ -139,7 +139,7 @@ install:
+ 	for file in $(WEBIMAGES) $(DOCIMAGES); do \
+ 		$(INSTALL_MAN) $$file $(DOCDIR)/images; \
+ 	done
+-	cd fr; make install
++	cd fr; $(MAKE) $(MFLAGS) install
+ 
+ 
+ #

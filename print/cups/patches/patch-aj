@@ -1,0 +1,23 @@
+$NetBSD: patch-aj,v 1.9 2002/10/20 18:57:38 jlam Exp $
+
+--- pdftops/Makefile.orig	Wed Sep 18 12:58:19 2002
++++ pdftops/Makefile
+@@ -24,7 +24,6 @@ LIBOBJS	=	Annot.o \
+ 		Decrypt.o \
+ 		Dict.o \
+ 		Error.o \
+-		FTFont.o \
+ 		FontEncoding.o \
+ 		FontEncodingTables.o \
+ 		FontFile.o \
+@@ -47,10 +46,7 @@ LIBOBJS	=	Annot.o \
+ 		Page.o \
+ 		Params.o \
+ 		Parser.o \
+-		SFont.o \
+ 		Stream.o \
+-		T1Font.o \
+-		TTFont.o \
+ 		UnicodeMap.o \
+ 		XRef.o \
+ 		gfile.o \
