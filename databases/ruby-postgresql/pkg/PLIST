@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/07/08 15:24:05 mjl Exp $
+${RUBY_SITELIBDIR}/postgres.so
