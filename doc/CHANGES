@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.853 2002/12/20 19:08:00 jmmv Exp $
+$NetBSD: CHANGES,v 1.854 2002/12/20 21:38:48 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -4030,3 +4030,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated matchbox to 0.3.6 [tsarna 2002-12-20]
 	Updated png to 1.2.5nb2 [fredb 2002-12-20]
 	Updated waimea to 0.4.0nb1 [jmmv 2002-12-20]
+	Updated pvs to 3.0nb1 [jschauma 2002-12-20]
