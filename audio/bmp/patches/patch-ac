@@ -1,0 +1,39 @@
+$NetBSD: patch-ac,v 1.1.1.1 2004/04/11 18:11:06 jmmv Exp $
+
+--- Input/mpg123/mpg123.c.orig	Wed Dec 24 13:55:45 2003
++++ Input/mpg123/mpg123.c
+@@ -669,12 +669,13 @@ void mpg123_return_tag_value_by_name(gch
+ 	if (!id3) {
+ 
+ 
++	    int result_read;
+ 	    int result_seek = fseek(file, -1 * sizeof(id3v1tag), SEEK_END);
+ 	    if (result_seek)
+ 		return;
+ 
+ 
+-	    int result_read = fread(&id3v1tag, 1, sizeof(id3v1tag), file);
++	    result_read = fread(&id3v1tag, 1, sizeof(id3v1tag), file);
+ 	    if (result_read != sizeof(id3v1tag))
+ 		return;
+ 	    if (strncmp(id3v1tag.tag, "TAG", 3) != 0)
+@@ -1111,6 +1112,7 @@ static void *decode_loop(void *arg)
+ 
+ static void play_file(char *filename)
+ {
++    pthread_attr_t pta;
+     memset(&fr, 0, sizeof(struct frame));
+     memset(&temp_fr, 0, sizeof(struct frame));
+ 
+@@ -1124,9 +1126,10 @@ static void play_file(char *filename)
+     output_opened = FALSE;
+     dopause = FALSE;
+ 
+-    pthread_attr_t pta;
+     (void) pthread_attr_init(&pta);
++#if defined(_POSIX_PRIORITY_SCHEDULING)
+     (void) pthread_attr_setschedpolicy(&pta, PTHREAD_INHERIT_SCHED);
++#endif
+     (void) pthread_attr_setscope(&pta, PTHREAD_SCOPE_SYSTEM);
+ 
+     pthread_create(&decode_thread, &pta, decode_loop, g_strdup(filename));

@@ -1,0 +1,22 @@
+$NetBSD: patch-ae,v 1.1.1.1 2004/04/11 18:11:06 jmmv Exp $
+
+--- Input/vorbis/vorbis.c.orig	Wed Dec 24 13:57:29 2003
++++ Input/vorbis/vorbis.c
+@@ -521,14 +521,16 @@ static void *vorbis_play_loop(void *arg)
+ 
+ static void vorbis_play(char *filename)
+ {
++    pthread_attr_t pta;
+     vorbis_playing = 1;
+     vorbis_bytes_streamed = 0;
+     vorbis_eos = 0;
+     output_error = FALSE;
+ 
+-    pthread_attr_t pta;
+     (void) pthread_attr_init(&pta);
++#if defined(_POSIX_PRIORITY_SCHEDULING)
+     (void) pthread_attr_setschedpolicy(&pta, PTHREAD_INHERIT_SCHED);
++#endif
+     (void) pthread_attr_setscope(&pta, PTHREAD_SCOPE_SYSTEM);
+ 
+     pthread_create(&tid, &pta, vorbis_play_loop, g_strdup(filename));

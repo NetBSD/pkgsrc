@@ -1,0 +1,45 @@
+$NetBSD: patch-aj,v 1.1.1.1 2004/04/11 18:11:14 jmmv Exp $
+
+--- beep/skin.c.orig	Wed Dec 24 14:03:17 2003
++++ beep/skin.c
+@@ -168,6 +168,7 @@ static gboolean skin_load_pixmap_id(Skin
+     const SMID_Mapping *sm_inf;
+     GdkPixmap *gpm;
+     gboolean retval = FALSE;
++    SkinPixmap *pm;
+ 
+     if (id >= SKIN_PMID_LAST) {
+ 	g_warning("skin pixmap id out of range (%u).", id);
+@@ -201,7 +202,7 @@ static gboolean skin_load_pixmap_id(Skin
+     }
+     g_free(tmpstr);
+ 
+-    SkinPixmap *pm = &sk->pixmaps[id];
++    pm = &sk->pixmaps[id];
+     gpm = read_bmp(filename);
+ 
+     if (!gpm) {
+@@ -733,10 +734,10 @@ static SkinPixmap *get_skin_pixmap(SkinI
+ GdkBitmap *skin_get_mask(MaskIndex mi, gboolean doublesize,
+ 			 gboolean shaded)
+ {
+-    g_assert(skin != NULL);
+-
+     GdkBitmap **masks;
+ 
++    g_assert(skin != NULL);
++
+     g_assert(mi < SKIN_MID_LAST);
+     masks = (doublesize ? skin->ds_masks : skin->masks);
+     return masks[mi];
+@@ -813,8 +814,9 @@ void skin_get_eq_spline_colors(guint32(*
+     gint i;
+     GdkPixmap *pixmap;
+     GdkImage *img;
++    SkinPixmap *eqmainpm;
+     g_assert(skin != NULL);
+-    SkinPixmap *eqmainpm = &skin->pixmaps[SKIN_EQMAIN];
++    eqmainpm = &skin->pixmaps[SKIN_EQMAIN];
+     if (eqmainpm->pixmap != NULL &&
+ 	eqmainpm->current_width >= 116 && eqmainpm->current_height >= 313)
+ 	pixmap = eqmainpm->pixmap;
