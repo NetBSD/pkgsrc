@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/08/27 06:29:11 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2004/09/29 21:17:52 wiz Exp $
 
 DISTNAME=	galeon-1.2.14
 CATEGORIES=	www
@@ -49,15 +49,6 @@ LDFLAGS+=       ${COMPILER_RPATH_FLAG}${MOZ_LIBDIR}
 
 # Ensure we export symbols in the linked shared object.
 LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}
-
-.include "../../mk/compiler.mk"
-.if !empty(CC_VERSION:Mgcc-3*)
-# Workaround for gcc3 build issue
-post-buildlink:
-	${CP} ${BUILDLINK_DIR}/bin/cc ${BUILDLINK_DIR}/bin/cc.orig
-	${SED} 's:\(exec \$$cmd\):\1 -lstdc++ -lm:' ${BUILDLINK_DIR}/bin/cc.orig\
-						> ${BUILDLINK_DIR}/bin/cc
-.endif
 
 pre-install:
 	${GCONF_PREFIX}/bin/gconftool --shutdown
