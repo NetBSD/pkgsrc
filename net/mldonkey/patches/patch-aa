@@ -1,54 +1,9 @@
-$NetBSD: patch-aa,v 1.3 2004/02/10 15:49:56 wiz Exp $
+$NetBSD: patch-aa,v 1.4 2004/02/11 16:27:03 wiz Exp $
 
---- config/configure.orig	Tue Feb 10 00:06:46 2004
+--- config/configure.orig	Wed Feb 11 00:26:18 2004
 +++ config/configure
-@@ -8284,22 +8284,6 @@ if test `eval echo '${'$as_ac_Header'}'`
- #define `echo "HAVE_$ac_header" | $as_tr_cpp` 1
- _ACEOF
- 
--else
--
--	  echo "Do you want this script to install endian.h to /usr/include (y/n)?"
--	  read i
--	  case "$i" in
--	   y* | Y*)
--		echo "Will now try to copy endian.h to /usr/include/"
--		cp -i ../include/endian.h /usr/include
--		mkdir -vp /usr/include/bits
--		cp -i ../include/bits/endian.h /usr/include/bits/
--                  ;;
--	   *)
--		exit 1
--                  ;;
--	  esac
--
- fi
- 
- done
-@@ -8443,21 +8427,6 @@ if test `eval echo '${'$as_ac_Header'}'`
- #define `echo "HAVE_$ac_header" | $as_tr_cpp` 1
- _ACEOF
- 
--else
--
--	  echo "Do you want this script to install byteswap.h to /usr/include (y/n)?"
--	  read i
--	  case "$i" in
--	   y* | Y*)
--		echo "Will now try to copy byteswap.h to /usr/include/"
--		cp -i ../include/byteswap.h /usr/include
--		mkdir -vp /usr/include/bits
--		cp -i ../include/bits/byteswap.h /usr/include/bits/
--                  ;;
--	   *)
--		exit 1
--                  ;;
--	  esac
- 
- fi
- 
-@@ -10725,7 +10694,7 @@ s,@PERL@,$PERL,;t t
- s,@EGREP@,$EGREP,;t t
+@@ -9961,7 +9961,7 @@ s,@CAMLP4@,$CAMLP4,;t t
+ s,@PERL@,$PERL,;t t
  s,@GTK_CONFIG@,$GTK_CONFIG,;t t
  s,@PTHREAD_CC@,$PTHREAD_CC,;t t
 -s,@PTHREAD_LIBS@,$PTHREAD_LIBS,;t t
