@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2001/11/22 13:08:41 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.3 2001/11/26 13:32:49 hubertf Exp $
 bin/sk2ps
 bin/sketch
 share/doc/sketch/BUGS
@@ -565,6 +565,8 @@ share/sketch/sketch.py
 @dirrm share/sketch/Resources/Messages/es
 @dirrm share/sketch/Resources/Messages/de/LC_MESSAGES
 @dirrm share/sketch/Resources/Messages/de
+@dirrm share/sketch/Resources/Messages/ru/LC_MESSAGES
+@dirrm share/sketch/Resources/Messages/ru
 @dirrm share/sketch/Resources/Messages
 @dirrm share/sketch/Resources/Fontmetrics
 @dirrm share/sketch/Resources
