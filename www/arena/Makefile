@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2000/08/23 23:14:32 tron Exp $
+# $NetBSD: Makefile,v 1.28 2001/01/04 17:54:27 wiz Exp $
 # FreeBSD Id: Makefile,v 1.10 1998/05/04 20:22:31 jseger Exp
 #
 
@@ -11,7 +11,7 @@ MAINTAINER=		tv@netbsd.org
 HOMEPAGE=		http://www.yggdrasil.com/Products/Arena/
 
 BUILD_DEPENDS+=		autoconf:../../devel/autoconf
-DEPENDS+=		gettext>=0.10.35nb1:../../devel/gettext
+BUILD_DEPENDS+=		msgfmt:../../devel/gettext
 DEPENDS+=		jpeg-6b:../../graphics/jpeg
 DEPENDS+=		libwww>=5.2.8:../../www/libwww
 DEPENDS+=		png>=1.0.6:../../graphics/png
@@ -19,6 +19,7 @@ DEPENDS+=		png>=1.0.6:../../graphics/png
 GNU_CONFIGURE=		YES
 MAKEFILE=		makefile
 USE_GMAKE=		YES
+USE_LIBINTL=		YES
 USE_X11=		YES
 USE_XPM=		YES
 
