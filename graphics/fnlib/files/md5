@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.2 1999/03/30 04:52:45 garbled Exp $
+$NetBSD: md5,v 1.3 1999/10/28 00:27:39 jlam Exp $
 
-MD5 (fnlib-0.4.tar.gz) = e05ca794e7ff510f420caa7258eff80f
+MD5 (fnlib-0.5.tar.gz) = 42093ed5b684da01e7a674b2adac52c7
