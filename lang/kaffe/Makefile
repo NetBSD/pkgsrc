@@ -3,7 +3,7 @@
 # Date created:         20 February 1995
 # Whom:                 Tim Wilkinson <tim@sarc.city.ac.uk>
 #
-# $NetBSD: Makefile,v 1.2 1998/01/28 10:55:19 agc Exp $
+# $NetBSD: Makefile,v 1.3 1998/02/01 01:59:50 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.30 1997/12/08 09:37:16 obrien Exp
 #
 
@@ -28,6 +28,6 @@ MAN1=		kaffe.1
 post-install:
 	${MKDIR} ${PREFIX}/share/kaffe
 	${INSTALL_DATA} ${WRKSRC}/ENVIRONMENT ${WRKSRC}/license.terms ${PREFIX}/share/kaffe
-	${LDCONFIG} -m ${PREFIX}/lib
+	${LDCONFIG} -m ${PREFIX}/lib || /usr/bin/true
 
 .include <bsd.port.mk>
