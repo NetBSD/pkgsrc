@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.3 1998/08/07 10:40:55 agc Exp $
+$NetBSD: patch-aa,v 1.4 1999/01/05 21:37:55 frueauf Exp $
 
 --- Imakefile.orig	Thu Jul  2 19:37:09 1998
-+++ Imakefile	Fri Jul  3 14:32:45 1998
++++ Imakefile	Tue Jan  5 21:40:08 1999
 @@ -40,7 +40,8 @@
  
  #ifdef USEJPEG
@@ -55,14 +55,25 @@ $NetBSD: patch-aa,v 1.3 1998/08/07 10:40:55 agc Exp $
  XCOMM If your system doesn't have strstr undefine the following definition
  XCOMM HAVE_NO_NOSTRSTR = -DNOSTRSTR
  
-@@ -169,7 +172,6 @@
+@@ -169,8 +172,7 @@
  
  #ifdef USEJPEG
  #ifdef USEINSTALLEDJPEG
 -JPEGINCDIR = -I/usr/include/X11
- JPEGLIB = -L$(JPEGLIBDIR) -ljpeg
+-JPEGLIB = -L$(JPEGLIBDIR) -ljpeg
++JPEGLIB = -Wl,-R$(JPEGLIBDIR) -L$(JPEGLIBDIR) -ljpeg
  #else
  JPEGCONF = configure
+ JPEGINCDIR = -I$(JPEGLIBDIR)
+@@ -185,7 +187,7 @@
+ I18N_OBJ = w_i18n.o
+ #endif
+ 
+-DIR_DEFS=		-DXFIGLIBDIR=\"$(XFIGLIBDIR)\"
++DIR_DEFS=		-DXFIGLIBDIR=\"$(XFIGLIBDIR)\" -DXFIGDOCDIR=\"$(XFIGDOCDIR)\"
+ 
+ XCOMM location of Fig object libraries
+ OBJLIBDIR =		$(XFIGLIBDIR)/Libraries
 @@ -314,22 +316,23 @@
  
  XCOMM Install the object libraries here
