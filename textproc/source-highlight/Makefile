@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/06/12 01:17:30 seb Exp $
+# $NetBSD: Makefile,v 1.7 2003/06/12 01:24:57 seb Exp $
 #
 
 DISTNAME=	source-highlight-1.7
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_GNU:=source-highlight/}
 
 MAINTAINER=	seb@netbsd.org
 HOMEPAGE=	http://www.gnu.org/software/src-highlite/source-highlight.html
-COMMENT=	Highlight syntax of C, C++ or Java source into HTML document
+COMMENT=	Highlight syntax of various languages source into HTML document
 
 GNU_CONFIGURE=	YES
 USE_BUILDLINK2=	YES
