@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.25 2004/07/30 15:50:37 minskim Exp $
+# $NetBSD: Makefile,v 1.26 2004/10/28 16:49:45 wiz Exp $
 
 DISTNAME=		hbench-OS-1.0
 PKGNAME=		hbench-1.0
 PKGREVISION=		1
 CATEGORIES=		benchmarks
-MASTER_SITES=		ftp://ftp.eecs.harvard.edu/pub/hbench-OS/
+MASTER_SITES=		http://www.eecs.harvard.edu/vino/perf/hbench/
 
 MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.eecs.harvard.edu/vino/perf/hbench/
@@ -20,6 +20,8 @@ OSVERSION_SPECIFIC=	YES
 ALL_TARGET=		build
 
 PLIST_SRC=		${WRKDIR}/PLIST-src
+
+DIST_SUBDIR=		${PKGNAME_NOREV}
 
 post-patch:
 	@machfiles="";							\
