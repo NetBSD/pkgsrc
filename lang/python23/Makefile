@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/01/11 11:04:43 recht Exp $
+# $NetBSD: Makefile,v 1.14 2004/01/24 13:47:56 grant Exp $
 #
 
 DISTNAME=	Python-2.3.3
@@ -60,7 +60,7 @@ OSSAUDIODEV_SUBST=
 PLIST_SUBST+=  X86_ONLY=${X86_SUBST}
 PLIST_SUBST+=  OSSAUDIODEV=${OSSAUDIODEV_SUBST}
 
-# ensure that the bsddb185 module is build on all platforms
+# ensure that the bsddb185 module is built on all platforms
 .include "../../databases/db/buildlink2.mk"
 
 SUBST_CLASSES+=		setup
