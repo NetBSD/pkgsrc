@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2000/08/23 23:14:21 tron Exp $
+# $NetBSD: Makefile,v 1.18 2000/09/22 06:50:06 minoura Exp $
 #
 
 DISTNAME=		snd
@@ -16,6 +16,7 @@ USE_MOTIF=		YES
 USE_XPM=		YES
 MAKEFILE=		makefile.netbsd
 ALL_TARGET=		snd
+MAKE_ENV+=		MOTIFBASE=${MOTIFBASE}
 
 do-install:
 	cd ${WRKSRC} ; ${INSTALL_PROGRAM} snd ${PREFIX}/bin
