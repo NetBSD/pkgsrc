@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.1.1.1 2002/06/03 09:53:47 sakamoto Exp $
+$NetBSD: patch-af,v 1.2 2004/04/29 18:59:25 minskim Exp $
 
 --- config/util/Imakefile.orig	Thu May 29 22:59:30 1997
 +++ config/util/Imakefile
@@ -7,7 +7,7 @@ $NetBSD: patch-af,v 1.1.1.1 2002/06/03 09:53:47 sakamoto Exp $
  #else
  AllTarget(ProgramTargetName(xmkmf))
 -CppScriptTarget(ProgramTargetName(xmkmf),xmkmf.cpp,-DCONFIGDIRSPEC='"'"-I$(CONFIGDIR)"'"',$(ICONFIGFILES))
-+CppScriptTarget(ProgramTargetName(xmkmf),xmkmf.cpp,-DCONFIGDIRSPEC='"'"-I$(CONFIGDIR)"'"' -DBINDIRSPEC="$(BINDIR)",$(ICONFIGFILES))
++CppScriptTarget(ProgramTargetName(xmkmf),xmkmf.cpp,-DCONFIGDIRSPEC='"'"$(CONFIGDIR)"'"' -DBINDIRSPEC="$(BINDIR)",$(ICONFIGFILES))
  install:: install.ProgramTargetName(xmkmf)
  InstallMultipleDestFlags(install.ProgramTargetName(xmkmf),ProgramTargetName(xmkmf),$(BINDIR),$(INSTBINFLAGS))
  #endif
