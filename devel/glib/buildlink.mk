@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.13 2001/12/31 22:25:19 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.14 2002/03/18 15:48:19 wiz Exp $
 #
 # This Makefile fragment is included by packages that use glib.
 #
@@ -36,6 +36,7 @@ USE_PTHREAD=	native pth
 
 BUILDLINK_TARGETS.glib=		glib-buildlink
 BUILDLINK_TARGETS.glib+=	glib-buildlink-config-wrapper
+BUILDLINK_TARGETS.glib+=	glib-fix-glib-h
 BUILDLINK_TARGETS+=		${BUILDLINK_TARGETS.glib}
 
 BUILDLINK_CONFIG.glib=		${BUILDLINK_PREFIX.glib}/bin/glib-config
@@ -52,5 +53,19 @@ MAKE_ENV+=		GLIB_CONFIG="${GLIB_CONFIG}"
 pre-configure: ${BUILDLINK_TARGETS.glib}
 glib-buildlink: _BUILDLINK_USE
 glib-buildlink-config-wrapper: _BUILDLINK_CONFIG_WRAPPER_USE
+
+glib-fix-glib-h:
+.if exists(/usr/include/sys/null.h)
+	@cd ${BUILDLINK_DIR}/include/glib/glib-1.2;			\
+	if grep "^\#define.NULL" glib.h > /dev/null; then		\
+		${ECHO} WARNING\!;					\
+		${ECHO} The installed glib package is broken, please rebuild it from source.;\
+		${ECHO} For more information, see PR 14150.;		\
+		${SED}  -e "s|^#define.NULL.*|#include <sys/null.h>|"	\
+			glib.h > glib.h.fixed;				\
+		${RM} glib.h;						\
+		${MV} glib.h.fixed glib.h;				\
+	fi
+.endif
 
 .endif	# GLIB_BUILDLINK_MK
