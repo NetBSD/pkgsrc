@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.233 1999/03/29 14:55:43 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.234 1999/03/30 00:47:01 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -625,9 +625,12 @@ DISTFILES?=		${DISTNAME}${EXTRACT_SUFX}
 PKGNAME?=		${DISTNAME}
 
 # Latest version of pkgtools required for this file.
+# XXX There's a conditional test around "pkg_delete -O" for
+#     _PKGTOOLS_VER>=${PKGTOOLS_PKGDB_VERSION} below which
+#     should be backed out if this is bumped beyond 19990302.  - HF
 PKGTOOLS_REQD=		19990119
 
-# Version of pkgtools which use the pkgdb cache
+# Version of pkgtools which supported pkg_delete -O
 PKGTOOLS_PKGDB_VERSION=	19990302
 
 # Check that we're using up-to-date pkg_* tools with this file.
