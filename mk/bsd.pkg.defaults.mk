@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.124 2003/01/02 20:12:15 wiz Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.125 2003/01/20 23:15:34 kristerw Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -503,12 +503,6 @@ ATERM_USE_GREEK?= NO
 # Used in battleball to build in support for OpenGL/Mesa. Will use
 # Mesa-glx (rather than Mesa) if Mesa-glx is already installed.
 # Possible: not defined, YES
-# Default: not defined
-
-#BOOTSTRAP_EGCS=
-# Used in egcs-current package to set bootstrap compile (two-stage)
-# mode.
-# Possible: defined, not defined
 # Default: not defined
 
 #BULK_PREREQ=
