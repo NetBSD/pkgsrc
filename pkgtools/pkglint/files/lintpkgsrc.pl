@@ -1,6 +1,6 @@
 #!@PREFIX@/bin/perl
 
-# $NetBSD: lintpkgsrc.pl,v 1.62 2001/12/27 12:42:08 abs Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.63 2001/12/27 13:31:45 abs Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -406,21 +406,38 @@ sub get_default_makefile_vars
 #
 sub invalid_version
     {
-    my($pkgver) = @_;
-    my($pkg, $badver, $fail);
+    my($pkgmatch) = @_;
+    my($fail);
+    my(@pkgmatches, @todo);
 
-    ($pkg, $badver) = package_globmatch($pkgver);
+    @todo = ($pkgmatch);
 
-    if (defined($badver))
+    while ($pkgmatch = shift @todo)
 	{
-	my($pkgs);
-	if ($pkgs = $pkglist->pkgs($pkg))
+	if ($pkgmatch =~ /(.*){([^{}]+)}(.*)/)
 	    {
-	    $fail = "Version mismatch: '$pkg' $badver vs ".
-				join(',', $pkgs->versions)."\n";
+	    foreach (split(',', $2))
+		{ push(@todo, "$1$_$3"); }
 	    }
 	else
-	    { $fail = "Unknown package: '$pkg' version $badver\n"; }
+	    { push (@pkgmatches, $pkgmatch); }
+	}
+
+    foreach $pkgmatch (@pkgmatches)
+	{
+	my($pkg, $badver) = package_globmatch($pkgmatch);
+
+	if (defined($badver))
+	    {
+	    my($pkgs);
+	    if ($pkgs = $pkglist->pkgs($pkg))
+		{
+		$fail .= "Version mismatch: '$pkg' $badver vs ".
+				    join(',', $pkgs->versions)."\n";
+		}
+	    else
+		{ $fail .= "Unknown package: '$pkg' version $badver\n"; }
+	    }
 	}
     $fail;
     }
@@ -577,7 +594,6 @@ sub package_globmatch
     elsif ( $pkgmatch =~ /^([^[]+)-([\d*?{[].*)$/ )	# }
 	{					 	# (package)-(globver)
 	my(@pkgnames);
-	# print "XXX $pkgmatch\n";
 
 	($matchpkgname, $matchver) = ($1, $2);
 
@@ -613,14 +629,10 @@ sub package_globmatch
 	#
 	if ($matchver && ($regex = glob2regex($pkgmatch)))	# (large-glob)
 	    {
-	    # print "XXX $matchver $pkgmatch $regex\n";
 	    foreach my $pkgver ($pkglist->pkgver)
 		{
 		if( $pkgver->pkgname =~ /$regex/ )
-		    {
-		    # print "XXX FOUND\n";
-		    $matchver = undef; last
-		    }
+		    { $matchver = undef; last }
 		}
 	    }
 	}
@@ -672,10 +684,7 @@ sub parse_makefile_pkgsrc
 		}
 	    }
 	else
-	    {
-	    print "Cannot extract $pkgname version ($file)\n";
-	    next;
-	    }
+	    { print "Cannot extract $pkgname version ($file)\n"; }
 	return($pkgname, $vars);
 	}
     else
@@ -891,24 +900,43 @@ sub parse_expand_vars
     $line;
     }
 
+sub parse_expand_vars_dumb
+    {
+    my($line, $vars) = @_;
+
+    while ( $line =~ /\$\{([-\w.]+)\}/ )
+	{
+	if (defined(${$vars}{$1}))
+	    { $line = $`.${$vars}{$1}.$'; }
+	else
+	    { $line = $`.'UNDEFINED'.$'; }
+	}
+    $line;
+    }
+
 sub parse_eval_make_false
     {
     my($line, $vars) = @_;
     my($false, $test);
 
     $false = 0;
-    $test = parse_expand_vars($line, $vars);
-    # XX This is _so_ wrong - need to parse this correctly
+    $test = parse_expand_vars_dumb($line, $vars);
+    # XXX This is _so_ wrong - need to parse this correctly
     $test =~ s/""/\r/g;
     $test =~ s/"//g;
     $test =~ s/\r/""/g;
 
     debug("conditional: $test\n");
-    while ( $test =~ /defined\((\S+)\)/ )
+    # XXX Could do something with target and empty
+    while ( $test =~ /(target|empty|make|defined|exists)\s*\(([^()]+)\)/ )
 	{
-	$_ = (defined($${vars}{$1}) ?1 :0);
-	$test =~ s/defined\([^\s()]+\)/$_/;
-	debug("conditional: $test\n");
+	if ($1 eq 'exists')
+	    { $_ = (-e $2) ?1 :0; }
+	elsif( $1 eq 'defined')
+	    { $_ = (defined($${vars}{$2}) ?1 :0); }
+	else
+	    { $_ = 0; }
+	$test =~ s/$1\s*\([^()]+\)/$_/;
 	}
     while ( $test =~ /([^\s()]+)\s+(!=|==)\s+([^\s()]+)/ )
 	{
@@ -917,16 +945,19 @@ sub parse_eval_make_false
 	else
 	    { $_ = ($1 ne $3) ?1 :0; }
 	$test =~ s/[^\s()]+\s+(!=|==)\s+[^\s()]+/$_/;
-	debug("conditional: $test\n");
 	}
-    if ($test !~ /[^\d()\s&|]/ )
+    if ($test !~ /[^<>\d()\s&|.]/ )
 	{
 	$false = eval "($test)?0:1";
 	if (!defined $false)
 	    { fail("Eval failed $line - $test"); }
+	debug("conditional: evaluated to ".($false?0:1)."\n");
 	}
     else
-	{ $false = 0; }
+	{
+	$false = 0;
+	debug("conditional: defaulting to 0\n");
+	}
     $false;
     }
 
@@ -1023,6 +1054,7 @@ sub pkgsrc_check_depends
 		if (!defined($err))
 		    { print $pkgver->pkgname." DEPENDS errors:\n"; }
 		$err = 1;
+		$msg =~ s/(\n)(.)/$1\t$2/g;
 		print "\t$msg";
 		}
 	    }
