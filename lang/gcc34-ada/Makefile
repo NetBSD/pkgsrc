@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2004/07/26 17:28:40 shannonjr Exp $
+# $NetBSD: Makefile,v 1.4 2004/07/28 12:04:08 shannonjr Exp $
 #
 
 DISTNAME=	gcc-${GCC_VERSION}
 PKGNAME=	gcc34-ada-${GCC_VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GNU:=gcc/gcc-${GCC_VERSION}/}
 EXTRACT_SUFX=	.tar.bz2
@@ -57,9 +57,8 @@ CONFIGURE_ARGS+=	--with-gnu-ld
 .endif
 
 # Ada bootstrap compiler section
-# An Ada compiler is required to build the Ada compiler. Two
-may be used:
-#USE_GCC33	=# Define to use gcc-3.3.x-ada
+# An Ada compiler is required to build the Ada compiler. You
+# may specify:
 #USE_GCC34	=# Define to use gcc34
 # You may also specify the path of a gcc/gnat Ada compiler
 # outside of the pkgsrc system by specifying the full path
@@ -74,7 +73,7 @@ RALT_GCC_RTS=	${ALT_GCC_RTS:S%${LOCALBASE}%%:S%/%%}
 PKG_SKIP_REASON=	"Missing bootstrap Ada compiler"
 .	endif
 .endif
-.if !defined(USE_GCC33) && !defined(USE_GCC34) && !defined(ALT_GCC)
+.if !defined(USE_GCC34) && !defined(ALT_GCC)
 PKG_SKIP_REASON=	"An Ada bootstrap compiler must be specified"
 .endif
 
@@ -87,6 +86,11 @@ GCC34_PKGMODIF=		${GCC34_INSTALLTO_SUBPREFIX}
 
 GCC_SUBPREFIX=		${GCC34_INSTALLTO_SUBPREFIX}
 GCC_PREFIX=		${PREFIX}/${GCC_SUBPREFIX}
+LOWER_OPSYS_VERSUFFIX!=	echo ${LOWER_OS_VERSION} | ${CUT} -d _ -f 1
+GCC_PLATFORM=		${LOWER_ARCH}--${LOWER_OPSYS}${APPEND_ELF}${LOWER_OPSYS_VERSUFFIX}
+CONFIGURE_ARGS+=	--host=${GCC_PLATFORM}
+GCC_ARCHSUBDIR=		${GCC_SUBPREFIX}/lib/gcc/${GCC_PLATFORM}/${GCC_VERSION}
+GCC_ARCHDIR=		${PREFIX}/${GCC_ARCHSUBDIR}
 PLIST_SUBST+=		GCC_SUBPREFIX=${GCC_SUBPREFIX}
 FILES_SUBST+=		GCC_PREFIX=${GCC_PREFIX}
 FILES_SUBST+=		PKGNAME=${PKGNAME}
@@ -164,9 +168,7 @@ post-install:
 		| ${SORT} -r | ${SED} -e "s,${PREFIX}/,@dirrm ,g"	\
 		>> ${PLIST_SRC}
 
-.if defined(USE_GCC33)
-.include "../../lang/gcc3-ada/buildlink3.mk"
-.elif defined(USE_GCC34)
+.if defined(USE_GCC34)
 BUILDLINK_DEPMETHOD.gcc34=	build
 .include "../../lang/gcc34/buildlink3.mk"
 .endif
