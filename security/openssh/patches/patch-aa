@@ -1,8 +1,10 @@
-$NetBSD: patch-aa,v 1.23 2002/05/19 07:43:24 itojun Exp $
+$NetBSD: patch-aa,v 1.24 2002/06/25 02:13:12 itojun Exp $
 
---- configure.orig	Thu May 16 08:42:51 2002
-+++ configure	Sun May 19 16:36:33 2002
-@@ -3941,8 +3941,6 @@
+use libcrypt before libcrypto, as crypt() in libcrypt is more than just for DES
+
+--- configure.orig	Sat Jun 22 00:56:52 2002
++++ configure	Tue Jun 25 10:54:48 2002
+@@ -3943,8 +3943,6 @@
  	CFLAGS="$CFLAGS"
  	;;
  *-*-solaris*)
@@ -32,7 +34,16 @@ $NetBSD: patch-aa,v 1.23 2002/05/19 07:43:24 itojun Exp $
  #include <tcpd.h>
  					int deny_severity = 0, allow_severity = 0;
  
-@@ -17642,7 +17647,7 @@
+@@ -8051,7 +8056,7 @@
+ 
+ 
+ fi;
+-LIBS="$LIBS -lcrypto"
++LIBS="$LIBS -lcrypt -lcrypto"
+ cat >conftest.$ac_ext <<_ACEOF
+ #line $LINENO "configure"
+ #include "confdefs.h"
+@@ -17485,7 +17490,7 @@
  echo "                     User binaries: $B"
  echo "                   System binaries: $C"
  echo "               Configuration files: $D"
