@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/12/13 02:48:41 hubertf Exp $
-bin/emixer
-share/doc/emixer.readme

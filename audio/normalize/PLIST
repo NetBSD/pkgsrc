@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:17:35 zuntum Exp $
+bin/normalize
+bin/normalize-mp3
+bin/normalize-ogg
+man/man1/normalize.1
+share/locale/en_GB/LC_MESSAGES/normalize.mo
+share/locale/fr/LC_MESSAGES/normalize.mo

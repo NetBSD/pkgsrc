@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:15:12 zuntum Exp $
+bin/mcsim
+bin/mod
+@unexec install-info --delete --info-dir=%D/info %D/info/mcsim
+info/mcsim
+info/mcsim-1
+info/mcsim-2
+info/mcsim-3
+@exec install-info --info-dir=%D/info %D/info/mcsim
+share/doc/html/mcsim/mcsim.html
+share/doc/mcsim/About-Datasets.txt
+share/doc/mcsim/About-Doc.txt
+share/doc/mcsim/About-MCSim.txt
+share/doc/mcsim/MCSim-changelog
+share/doc/mcsim/MCSim-to-do
+share/doc/mcsim/Manual-Update.txt
+share/doc/mcsim/Programming-notes.txt
+share/doc/mcsim/mcsim.dvi
+@dirrm share/doc/html/mcsim
+@dirrm share/doc/mcsim
