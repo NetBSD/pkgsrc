@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.7 2002/06/27 02:15:13 grant Exp $
+$NetBSD: MESSAGE,v 1.8 2002/06/28 16:58:38 jlam Exp $
 
                            *===* NOTICE *===*
 
@@ -7,7 +7,12 @@ The config files for ${PKGNAME} must be located in:
 
 	${PKG_SYSCONFDIR}
 
-and the example files are located in ${EGDIR}.
+and the example files are located in ${EGDIR}.  If you have existing
+config files for OpenSSH located at /etc/ssh.conf and /etc/sshd.conf,
+then you will have to copy them:
+
+	/etc/ssh.conf  --> ${PKG_SYSCONFDIR}/ssh_config
+	/etc/sshd.conf --> ${PKG_SYSCONFDIR}/sshd_config
 
 You need to create UID sshd, and GID sshd, for privilege separation.  For
 security reasons, UsePrivilegeSeparation has to be yes (the default value).
