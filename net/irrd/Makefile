@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/03/30 20:28:12 fredb Exp $
+# $NetBSD: Makefile,v 1.4 2000/05/24 23:29:48 fredb Exp $
 #
 
 DISTNAME=	irrd-1.5-beta-Sept-24-1999
@@ -9,8 +9,7 @@ MASTER_SITES=	http://www.merit.edu/radb/irrd/source/
 MAINTAINER=	kim@tac.nyc.ny.us
 HOMEPAGE=	http://www.irrd.net/
 
-BUILD_DEPENDS=	autoreconf:../../devel/autoconf
-BUILD_DEPENDS=	bison:../../devel/bison
+BUILD_DEPENDS+=	autoreconf:../../devel/autoconf
 
 .include "../../mk/bsd.prefs.mk"
 
