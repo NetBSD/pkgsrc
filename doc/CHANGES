@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4555 2004/01/22 15:18:35 xtraeme Exp $
+$NetBSD: CHANGES,v 1.4556 2004/01/22 15:48:10 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -402,3 +402,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Removed xmule [jmmv 2004-01-22]
 	Updated gle to 3.1.0 [adam 2004-01-22]
 	Updated swish-e to 2.4.1 [xtraeme 2004-01-22]
+	Updated wine to 20040121 [adam 2004-01-22]
