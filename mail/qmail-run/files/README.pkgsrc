@@ -5,7 +5,7 @@ You've installed an automated and customized qmail-run package. If
 you're having trouble getting the qmail daemons to run, ask the
 package's maintainer:
 
-<URL:mailto:schmonz-nbqmail@schmonz.com>
+<URL:mailto:schmonz-pkgsrc-qmail@schmonz.com>
 
 Many members of the qmail mailing list recommend following the
 install instructions in Dave Sill's "Life with qmail" document:
