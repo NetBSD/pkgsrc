@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8537 2004/12/31 10:17:11 darcy Exp $
+$NetBSD: CHANGES,v 1.8538 2004/12/31 11:22:31 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -6716,3 +6716,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated db4 to 4.3.21nb1 [minskim 2004-12-30]
 	Updated mrtg to 2.10.15nb2 [minskim 2004-12-31]
 	Added Pyro-3.4 [darcy 2004-12-31]
+	Updated cbrowser to 0.6nb1 [minskim 2004-12-31]
