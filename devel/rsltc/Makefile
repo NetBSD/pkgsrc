@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/11/30 08:24:18 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2004/12/02 13:09:24 wiz Exp $
 #
 
 DISTNAME=		rsltcsrc
@@ -11,6 +11,7 @@ MAINTAINER=		MarkoSchuetz@web.de
 HOMEPAGE=		http://www.iist.unu.edu/newrh/III/3/1/page.html
 COMMENT=		RAISE Specification Language Type Checker
 
+BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
 DEPENDS+=		gentle>=97:../../devel/gentle
 
 MAKEFILE=		make_sunos
