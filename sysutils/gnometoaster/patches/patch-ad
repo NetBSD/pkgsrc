@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1.1.1 2002/03/25 11:24:29 drochner Exp $
+
+--- Makefile.in.orig	Sat Mar 23 21:07:07 2002
++++ Makefile.in	Sat Mar 23 21:10:34 2002
+@@ -117,7 +117,7 @@
+ 
+ CPPFLAGS = @CPPFLAGS@
+ LDFLAGS = @LDFLAGS@
+-LIBS = @LIBS@
++LIBS = @LIBS@ -lossaudio
+ gtoaster_OBJECTS =  main.o destcontrol.o fsedit.o getdir.o source.o \
+ filelist.o menubar.o menufunc.o trackedit.o isotrack.o record.o \
+ piping.o dirlow.o dndsetup.o selectlist.o colors.o rterm.o tracks.o \
