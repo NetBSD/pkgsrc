@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3003 2005/02/07 14:18:02 wiz Exp $
+$NetBSD: TODO,v 1.3004 2005/02/07 15:12:45 wiz Exp $
 
 Suggested new packages
 ======================
@@ -630,7 +630,6 @@ Suggested package updates
 	o libsmi-0.4.3
 	o libtcl-nothread-8.4.9
 	o libtecla-1.6.1
-	o libtheora-1.0alpha4
 	o licq-core-1.3.0
 	o liferea-0.9.0b
 	o links-2.1pre16
