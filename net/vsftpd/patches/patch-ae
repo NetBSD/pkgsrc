@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1 2003/05/09 23:31:41 salo Exp $
+
+--- vsftpd.8.orig	2001-03-12 02:14:07.000000000 +0100
++++ vsftpd.8	2003-05-10 00:26:17.000000000 +0200
+@@ -20,7 +20,7 @@
+ An optional
+ .Op configuration file
+ may be given on the command line.  The default configuration file is
+-.Pa /etc/vsftpd.conf .
++.Pa @PKG_SYSCONFDIR@/vsftpd.conf .
+ .Sh SEE ALSO
+ .Xr vsftpd.conf 5
+ 
