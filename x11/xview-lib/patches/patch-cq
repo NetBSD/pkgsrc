@@ -1,0 +1,17 @@
+$NetBSD: patch-cq,v 1.1 2001/12/20 09:20:03 tron Exp $
+
+--- lib/libxview/ttysw/termsw.c.orig	Tue Jun 29 07:17:15 1993
++++ lib/libxview/ttysw/termsw.c	Thu Dec 20 10:10:10 2001
+@@ -252,8 +252,12 @@
+ 
+     /* Generate a new temporary file name and open the file up. */
+     (void) strcpy(tmpfile_name, "/tmp/tty.txt.XXXXXX");
++#if (defined(BSD) && (BSD >= 199103))
++    if ((fd = mkstemp(tmpfile_name)) < 0) {
++#else
+     (void) mktemp(tmpfile_name);
+     if ((fd = open(tmpfile_name, O_CREAT | O_RDWR | O_EXCL, 0600)) < 0) {
++#endif
+ 	return (XV_ERROR);
+     }
+     (void) close(fd);

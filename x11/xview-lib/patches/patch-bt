@@ -1,0 +1,13 @@
+$NetBSD: patch-bt,v 1.1 2001/12/20 09:20:00 tron Exp $
+
+--- lib/libxview/panel/item_set.c.orig	Tue Jun 29 07:16:50 1993
++++ lib/libxview/panel/item_set.c	Thu Dec 20 10:09:16 2001
+@@ -28,6 +28,8 @@
+ 
+ extern Notify_value panel_base_event_handler();
+ 
++static fix_positions();
++
+ Pkg_private     Xv_opaque
+ item_set_avlist(item_public, avlist)
+     Panel_item      item_public;

@@ -1,18 +1,65 @@
-$NetBSD: patch-ai,v 1.1 1998/12/28 18:52:05 tron Exp $
+$NetBSD: patch-ai,v 1.2 2001/12/20 09:19:55 tron Exp $
 
---- lib/libxview/notify/ntfy.h~	Sun Dec  6 18:45:02 1998
-+++ lib/libxview/notify/ntfy.h	Sat Dec 19 13:49:24 1998
-@@ -188,9 +188,12 @@
- extern	sigset_t ntfy_sigs_delayed;/* Bit mask of signals received while in
- 				      critical section */
+--- lib/libxview/canvas/cnvs_input.c.orig	Tue Jun 29 07:14:46 1993
++++ lib/libxview/canvas/cnvs_input.c	Thu Dec 20 10:10:42 2001
+@@ -415,20 +415,25 @@
+     register Event *event;
+ {
+     Xv_Window       paint_window;
+-    Event           tmp_event;
++    Event           *tmp_event;
+     int             x, y;
  
--#ifdef SVR4
-+#if defined(SVR4)
- #define sigisempty(s)   (!(((s)->__sigbits[0]) | ((s)->__sigbits[1])   \
-                         | ((s)->__sigbits[2]) | ((s)->__sigbits[3])))
-+#elif defined(__NetBSD__) && (__NetBSD_Version__ > 103080000)
-+#define sigisempty(s)   (!(((s)->__bits[0]) | ((s)->__bits[1])   \
-+                        | ((s)->__bits[2]) | ((s)->__bits[3])))
- #else
- #define sigisempty(s)   (!(*(s)))
- #endif
++    if ( (tmp_event = (Event *) malloc(sizeof(Event))) == NULL){
++	fprintf(stderr,"canvas_window_event: malloc failed\n");
++	exit(1);
++    }
+     paint_window = xv_get(canvas_public, CANVAS_NTH_PAINT_WINDOW, 0);
+     if (paint_window == NULL) {
+ 	/* call xv_error */
+ 	return (event);
+     }
+-    tmp_event = *event;
++
++    memcpy(tmp_event,event,sizeof(Event));
+     win_translate_xy(paint_window, canvas_public,
+ 		     event_x(event), event_y(event), &x, &y);
+-    event_set_x(&tmp_event, x);
+-    event_set_y(&tmp_event, y);
+-    return (&tmp_event);
++    event_set_x(tmp_event, x);
++    event_set_y(tmp_event, y);
++    return (tmp_event);
+ }
+ 
+ /*
+@@ -440,20 +445,24 @@
+     register Event *event;
+ {
+     Xv_Window       paint_window;
+-    Event           tmp_event;
++    Event           *tmp_event;
+     int             x, y;
+ 
++    if ( (tmp_event = (Event *) malloc(sizeof(Event))) == NULL){
++	fprintf(stderr,"canvas_window_event: malloc failed\n");
++	exit(1);
++    }
+     paint_window = xv_get(canvas_public, CANVAS_NTH_PAINT_WINDOW, 0);
+     if (paint_window == NULL) {
+ 	/* call xv_error */
+ 	return (event);
+     }
+-    tmp_event = *event;
++    memcpy(tmp_event,event,sizeof(Event));
+     win_translate_xy(paint_window, canvas_public,
+ 		     event_x(event), event_y(event), &x, &y);
+-    event_set_x(&tmp_event, x);
+-    event_set_y(&tmp_event, y);
+-    return (&tmp_event);
++    event_set_x(tmp_event, x);
++    event_set_y(tmp_event, y);
++    return (tmp_event);
+ }
+ 
+ 

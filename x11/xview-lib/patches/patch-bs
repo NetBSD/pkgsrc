@@ -1,0 +1,12 @@
+$NetBSD: patch-bs,v 1.1 2001/12/20 09:20:00 tron Exp $
+
+--- lib/libxview/openwin/ow_view.c.orig	Tue Jun 29 07:16:43 1993
++++ lib/libxview/openwin/ow_view.c	Thu Dec 20 10:09:16 2001
+@@ -48,6 +48,7 @@
+ static          openwin_init_view();
+ static          openwin_free_view();
+ static          openwin_remove_scrollbars();
++static int	openwin_check_view();
+ static          openwin_create_viewwindow();
+ static          openwin_test_for_sb();
+ static          openwin_link_view();

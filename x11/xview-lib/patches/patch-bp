@@ -1,0 +1,32 @@
+$NetBSD: patch-bp,v 1.1 2001/12/20 09:19:59 tron Exp $
+
+--- lib/libxview/misc/expandname.c.orig	Tue Jun 29 07:16:30 1993
++++ lib/libxview/misc/expandname.c	Thu Dec 20 10:09:49 2001
+@@ -23,6 +23,9 @@
+ #include <string.h>
+ #include <sgtty.h>
+ 
++#if defined(BSD) && (BSD >= 199306)
++#include <unistd.h>
++#else
+ #ifdef sparc
+ #ifdef SVR4
+ #include <unistd.h>
+@@ -30,6 +33,7 @@
+ #include <vfork.h>
+ #endif SVR4
+ #endif
++#endif
+ 
+ #ifdef SVR4
+ #include <sys/signal.h>
+@@ -120,7 +124,9 @@
+     }
+     (void) close(pivec[0]);
+ #ifndef SVR4
++#if !(defined(BSD) && (BSD >= 199103))
+     while (wait((union wait *) & status) != pid);
++#endif
+ #else SVR4
+     while (wait( & status) != pid);
+ #endif SVR4

@@ -1,0 +1,13 @@
+$NetBSD: patch-cn,v 1.1 2001/12/20 09:20:03 tron Exp $
+
+--- lib/libxview/ttysw/ttyselect.c.orig	Sun Jun 26 03:05:23 1994
++++ lib/libxview/ttysw/ttyselect.c	Thu Dec 20 10:09:17 2001
+@@ -75,6 +75,8 @@
+ #endif
+                 ttysel_reply();
+ 
++static ttysel_resynch();
++
+ static struct ttyselection *
+                 ttysel_from_rank();
+ 

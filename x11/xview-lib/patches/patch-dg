@@ -1,0 +1,77 @@
+$NetBSD: patch-dg,v 1.1 2001/12/20 09:20:06 tron Exp $
+
+--- lib/libxview/textsw/txt_incl.c.orig	Tue Jun 29 07:17:32 1993
++++ lib/libxview/textsw/txt_incl.c	Thu Dec 20 10:10:06 2001
+@@ -35,6 +35,12 @@
+ #include <string.h>
+ #endif /* SVR4 */
+ 
++#include <sys/param.h>
++
++#if (defined(SVR4) || (__NetBSD_Version__ >= 103080000))
++#define GETCWD
++#endif
++
+ #define		MAX_DISPLAY_LENGTH	50
+ #define   	MAX_STR_LENGTH		1024
+ 
+@@ -108,18 +114,18 @@
+ 
+     /* if "cd" is not disabled and the "cd" dir is not the current dir */
+ #ifdef OW_I18N
+-#ifdef SVR4
++#ifdef GETCWD
+     (void) getcwd(curr_dir_mb, MAX_STR_LENGTH);
+ #else
+     (void) getwd(curr_dir_mb);
+-#endif /* SVR4 */
++#endif /* GETCWD */
+     (void) mbstowcs(curr_dir, curr_dir_mb, MAX_STR_LENGTH);
+ #else /* OW_I18N */
+-#ifdef SVR4
++#ifdef GETCWD
+     (void) getcwd(curr_dir, MAX_STR_LENGTH);
+ #else
+     (void) getwd(curr_dir);
+-#endif /* SVR4 */
++#endif /* GETCWD */
+ #endif /* OW_I18N */
+ 
+     textsw_changed_directory = FALSE;
+@@ -272,11 +278,11 @@
+     include_string[0] = NULL;
+     (void) textsw_get_selection(view, &dummy, &dummy, include_string,
+ 				MAX_STR_LENGTH);
+-#ifdef SVR4
++#ifdef GETCWD
+  (void) getcwd(current_dir_include_string, MAX_STR_LENGTH);
+ #else
+   (void) getwd(current_dir_include_string);
+-#endif /* SVR4 */
++#endif /* GETCWD */
+     include_panel_items[(int) DIR_STRING_ITEM] =
+ 	panel_create_item(panel, PANEL_TEXT,
+ 			  PANEL_LABEL_X, ATTR_COL(0),
+@@ -384,18 +390,18 @@
+ 
+     /* if "cd" is not disabled and the "cd" dir is not the current dir */
+ #ifdef OW_I18N
+-#ifdef SVR4
++#ifdef GETCWD
+     (void) getcwd(curr_dir_mb, MAX_STR_LENGTH);
+ #else
+     (void) getwd(curr_dir_mb);
+-#endif /* SVR4 */
++#endif /* GETCWD */
+     (void) mbstowcs(curr_dir, curr_dir_mb, MAX_STR_LENGTH);
+ #else /* OW_I18N */
+-#ifdef SVR4
++#ifdef GETCWD
+     (void) getcwd(curr_dir, MAX_STR_LENGTH);
+ #else
+     (void) getwd(curr_dir);
+-#endif /* SVR4 */
++#endif /* GETCWD */
+ #endif /* OW_I18N */
+ 
+     textsw_changed_directory = FALSE;

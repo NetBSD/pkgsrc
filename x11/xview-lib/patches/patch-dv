@@ -1,0 +1,16 @@
+$NetBSD: patch-dv,v 1.1 2001/12/20 09:20:08 tron Exp $
+
+--- lib/libxview/notify/ndet_fd.c.orig	Tue Jun 29 07:18:08 1993
++++ lib/libxview/notify/ndet_fd.c	Thu Dec 20 10:09:23 2001
+@@ -27,8 +27,9 @@
+ #define GETDTABLESIZE() \
+ (dtablesize_cache?dtablesize_cache:(dtablesize_cache=(int)sysconf(_SC_OPEN_MAX)))
+ #else
+-#define GETDTABLESIZE() \
+-    (dtablesize_cache?dtablesize_cache:(dtablesize_cache=getdtablesize()))
++#define GETDTABLESIZE()						\
++    (dtablesize_cache ? dtablesize_cache :			\
++    (dtablesize_cache = MIN(getdtablesize(), FD_SETSIZE)))
+ #endif SVR4
+ 
+ static int      ndet_fd_table_size;	/* Number of descriptor slots

@@ -1,0 +1,27 @@
+$NetBSD: patch-cr,v 1.1 2001/12/20 09:20:04 tron Exp $
+
+--- lib/libxview/wmgr/wmgr_menu.c.orig	Tue Jun 29 07:17:24 1993
++++ lib/libxview/wmgr/wmgr_menu.c	Thu Dec 20 10:09:53 2001
+@@ -10,16 +10,22 @@
+  *	file for terms of the license.
+  */
+ 
++#include <sys/param.h>
+ #include <sys/types.h>
+ #include <stdio.h>
+ #include <ctype.h>
+ #include <string.h>
++
++#if defined(BSD) && (BSD >= 199306)
++#include <unistd.h>
++#else
+ #ifdef sparc
+ #ifdef SVR4
+ #include <unistd.h>
+ #else
+ #include <vfork.h>
+ #endif SVR4
++#endif sparc
+ #endif
+ 
+ #include <xview/frame.h>

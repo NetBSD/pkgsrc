@@ -1,0 +1,15 @@
+$NetBSD: patch-dz,v 1.1 2001/12/20 09:20:09 tron Exp $
+
+--- lib/pixrect/Imakefile.orig	Tue Jun 29 07:18:39 1993
++++ lib/pixrect/Imakefile	Thu Dec 20 10:09:16 2001
+@@ -41,8 +41,8 @@
+ all:: 
+ 
+ #if InstallPixrectHeaders
+-BuildIncludes($(HEADERS),$(PIXRECT_INCDIR),/**/)
+-BuildIncludes($(HEADERS2),$(INCDIR),/**/)
++BuildIncludes($(HEADERS),$(PIXRECT_INCDIR),.)
++BuildIncludes($(HEADERS2),$(INCDIR),.)
+  
+ install::
+ 	$(MKDIRHIER) $(PIXRECT_HEADER_DEST)

@@ -1,0 +1,13 @@
+$NetBSD: patch-eb,v 1.1 2001/12/20 09:20:09 tron Exp $
+
+--- util/Imakefile.orig	Tue Jun 29 07:14:22 1993
++++ util/Imakefile	Thu Dec 20 10:10:14 2001
+@@ -16,7 +16,7 @@
+ 
+ CONV_DIR = conversion
+ 
+-MSG_UTIL = xgettext msgfmt
++#MSG_UTIL = xgettext msgfmt
+ 
+ SUBDIRS = $(CPP_DIR) $(SOELIM_DIR) $(CONV_DIR) $(MSG_UTIL)
+ 

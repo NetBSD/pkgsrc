@@ -1,0 +1,22 @@
+$NetBSD: patch-da,v 1.1 2001/12/20 09:20:05 tron Exp $
+
+--- lib/libxview/textsw/txt_move.c.orig	Tue Jun 29 07:17:47 1993
++++ lib/libxview/textsw/txt_move.c	Thu Dec 20 10:09:17 2001
+@@ -55,7 +55,7 @@
+ 
+ static int dnd_data_key = 0; /* XXX: Don't do this at home kids. */
+ static int dnd_view_key = 0; 
+-static int DndConvertProc();
++int DndConvertProc();
+ 
+ Pkg_private Es_handle textsw_esh_for_span();
+ Pkg_private Es_index ev_resolve_xy();
+@@ -688,7 +688,7 @@
+     xv_destroy(dnd_accept_cursor);
+ }
+ 
+-static int
++int
+ DndConvertProc(dnd, type, data, length, format)
+     Dnd      	 dnd;
+     Atom        *type;

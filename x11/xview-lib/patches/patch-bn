@@ -1,0 +1,15 @@
+$NetBSD: patch-bn,v 1.1 2001/12/20 09:19:59 tron Exp $
+
+--- lib/libxview/misc/i18n_impl.h.orig	Tue Jun 29 07:16:31 1993
++++ lib/libxview/misc/i18n_impl.h	Thu Dec 20 10:09:16 2001
+@@ -25,6 +25,10 @@
+ 
+ #include  <locale.h>
+ 
++#ifndef LC_MESSAGES
++#define LC_MESSAGES     0
++#endif
++
+ extern char	*dgettext();
+ 
+ #define XV_I18N_MSG(d,s)	(dgettext(d,s))

@@ -1,0 +1,12 @@
+$NetBSD: patch-cs,v 1.1 2001/12/20 09:20:04 tron Exp $
+
+--- lib/libxview/textsw/ei_text.c.orig	Tue Jun 29 07:17:37 1993
++++ lib/libxview/textsw/ei_text.c	Thu Dec 20 10:09:17 2001
+@@ -121,6 +121,7 @@
+ #endif
+ static struct ei_span_result ei_plain_text_span_of_group();
+ static struct ei_process_result ei_plain_text_expand();
++static paint_batch();
+ 
+ struct ei_ops   ei_plain_text_ops = {
+     ei_plain_text_destroy,

@@ -1,0 +1,13 @@
+$NetBSD: patch-ca,v 1.1 2001/12/20 09:20:01 tron Exp $
+
+--- lib/libxview/panel/p_slider.c.orig	Tue Jun 29 07:17:02 1993
++++ lib/libxview/panel/p_slider.c	Thu Dec 20 10:09:17 2001
+@@ -54,6 +54,8 @@
+ static Panel_setting get_value();
+ static void     paint_slider();
+ static void     update_rects();
++static int	etoi();
++static int	itoe();
+ 
+ static Panel_ops ops = {
+     panel_default_handle_event,		/* handle_event() */

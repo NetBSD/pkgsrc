@@ -1,0 +1,13 @@
+$NetBSD: patch-cf,v 1.1 2001/12/20 09:20:02 tron Exp $
+
+--- lib/libxview/panel/p_mlinetxt.c.orig	Tue Jun 29 07:17:05 1993
++++ lib/libxview/panel/p_mlinetxt.c	Thu Dec 20 10:10:38 2001
+@@ -449,7 +449,7 @@
+ 	return (Xv_opaque) dp->rows_displayed;
+ 
+       case PANEL_ITEM_NTH_WINDOW:
+-	switch (*(int *) valist) {
++	switch (va_arg(valist, int)) {
+ 	  case 0:
+ 	    return dp->view;
+ 	  case 1:

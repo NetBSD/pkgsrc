@@ -1,0 +1,13 @@
+$NetBSD: patch-bi,v 1.1 2001/12/20 09:19:58 tron Exp $
+
+--- lib/libxview/menu/Imakefile.orig	Tue Jun 29 07:16:27 1993
++++ lib/libxview/menu/Imakefile	Thu Dec 20 10:09:16 2001
+@@ -28,7 +28,7 @@
+ TEXT_OBJS =\
+ 	omi.o\
+ 	om_public.o\
+-	om_render.o\ 
++	om_render.o\
+ 	om_set.o\
+ 	om_get.o\
+ 	om_compat.o

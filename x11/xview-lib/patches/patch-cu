@@ -1,0 +1,14 @@
+$NetBSD: patch-cu,v 1.1 2001/12/20 09:20:04 tron Exp $
+
+--- lib/libxview/textsw/ev_op_bdry.c.orig	Tue Jun 29 07:17:30 1993
++++ lib/libxview/textsw/ev_op_bdry.c	Thu Dec 20 10:09:17 2001
+@@ -28,6 +28,9 @@
+ static Ev_finger_handle ev_insert_finger();
+ static Ev_mark_object last_generated_id;
+ 
++static int ev_find_finger_internal();
++static ev_remove_finger_internal();
++
+ #define FORALL(index_var)						\
+ 	for (index_var = 0; index_var < fingers->last_plus_one; index_var++)
+ 

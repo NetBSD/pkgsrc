@@ -1,67 +1,15 @@
-$NetBSD: patch-aw,v 1.1 2001/05/02 21:46:09 dmcmahill Exp $
+$NetBSD: patch-aw,v 1.2 2001/12/20 09:19:56 tron Exp $
 
---- lib/libxview/panel/p_list.c.orig	Tue May  1 21:23:17 2001
-+++ lib/libxview/panel/p_list.c	Tue May  1 21:23:24 2001
-@@ -1240,5 +1240,5 @@
+--- lib/libxview/dnd/dnd.c.orig	Tue Jun 29 07:15:57 1993
++++ lib/libxview/dnd/dnd.c	Thu Dec 20 10:09:16 2001
+@@ -38,6 +38,10 @@
+ extern int  DndContactDSDM();
+ extern int  DndFindSite();
+ extern XID  DndGetCursor();
++static int SendTrigger();
++static int SendOldDndEvent();
++static int WaitForAck();
++static int IsV2App();
  
-       case PANEL_ITEM_NTH_WINDOW:
--	if (*(int *) valist == 0)
-+	if (va_arg(valist, int *) == 0)
- 	    return (Xv_opaque) dp->list_sb;
- 	else
-@@ -1267,5 +1267,5 @@
- 
-       case PANEL_LIST_SELECTED:
--	row = *(int *) valist;
-+	row = *va_arg(valist, int *);
- 	node = find_or_create_nth_row(dp, row, FALSE);
- 	return (node ? (Xv_opaque) node->f.selected : (Xv_opaque) XV_ERROR);
-@@ -1279,5 +1279,5 @@
- 	
-       case PANEL_LIST_NEXT_SELECTED:
--	row = *(int *) valist;
-+	row = va_arg(valist, int);
- 	node = find_or_create_nth_row(dp, row, FALSE);
- 	if (!node)
-@@ -1290,5 +1290,5 @@
- 
-       case PANEL_LIST_CLIENT_DATA:
--	row = *(int *) valist;
-+	row = va_arg(valist, int);
- 	node = find_or_create_nth_row(dp, row, FALSE);
- 	return (node ? (Xv_opaque) node->client_data : (Xv_opaque) XV_ERROR);
-@@ -1298,5 +1298,5 @@
-       case PANEL_LIST_STRING_WCS:
- #endif
--	row = *(int *) valist;
-+	row = va_arg(valist, int);
- 	node = find_or_create_nth_row(dp, row, FALSE);
- #ifdef OW_I18N
-@@ -1313,5 +1313,5 @@
- 
-       case PANEL_LIST_GLYPH:
--	row = *(int *) valist;
-+	row = va_arg(valist, int);
- 	node = find_or_create_nth_row(dp, row, FALSE);
- 	return (node ? (Xv_opaque) node->glyph : (Xv_opaque) XV_ERROR);
-@@ -1329,5 +1329,5 @@
- 
-       case PANEL_LIST_FONT:
--	row = *(int *) valist;
-+	row = va_arg(valist, int);
- 	node = find_or_create_nth_row(dp, row, FALSE);
- 	return (node ? (Xv_opaque) node->font : (Xv_opaque) XV_ERROR);
-@@ -1353,5 +1353,5 @@
- 
-     case PANEL_LIST_INACTIVE:
--	row = *(int *) valist;
-+        row = va_arg(valist, int);
- 	node = find_or_create_nth_row(dp, row, FALSE);
- 	return (node ? (Xv_opaque) node->f.row_inactive : (Xv_opaque) XV_ERROR);
-@@ -1408,5 +1408,5 @@
- 
-     case PANEL_LIST_EXTENSION_DATA:
--	row = *(int *) valist;
-+	row = va_arg(valist, int);
- 	node = find_or_create_nth_row(dp, row, FALSE);
- 	return (node ? (Xv_opaque) node->exten_data : (Xv_opaque) XV_ERROR);
+ Xv_public int
+ dnd_send_drop(dnd_public)

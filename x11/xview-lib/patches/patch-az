@@ -1,10 +1,25 @@
-$NetBSD: patch-az,v 1.1 2001/05/11 20:41:32 dmcmahill Exp $
+$NetBSD: patch-az,v 1.2 2001/12/20 09:19:56 tron Exp $
 
---- lib/libxview/win/win_env.c.orig	Tue Jun 29 01:15:40 1993
-+++ lib/libxview/win/win_env.c	Fri May 11 15:16:15 2001
-@@ -16,4 +16,5 @@
-  */
+--- lib/libxview/selection/sel_req.c.orig	Sun Jun 26 03:05:21 1994
++++ lib/libxview/selection/sel_req.c	Thu Dec 20 10:09:17 2001
+@@ -55,7 +55,10 @@
+ static int GetSelection();
+ static int ProcessReply();
+ static Requestor *SelGetReq();
+-
++static int XvGetRequestedValue();
++static int ProcessNonBlkIncr();
++static int ProcessReq();
++static int OldPkgIsOwner();
  
-+#include <string.h>
- #include <xview/rect.h>
- #include <xview/win_env.h>
+ /*ARGSUSED*/
+ Pkg_private int
+@@ -1226,7 +1229,7 @@
+ }
+ 
+ 
+-static XID 
++Pkg_private XID 
+ SelGetOwnerXID( selReq )
+ Sel_req_info  *selReq;
+ {

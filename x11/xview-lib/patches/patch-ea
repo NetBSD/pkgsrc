@@ -1,0 +1,14 @@
+$NetBSD: patch-ea,v 1.1 2001/12/20 09:20:09 tron Exp $
+
+--- misc/support/Imakefile.orig	Tue Jun 29 07:14:23 1993
++++ misc/support/Imakefile	Thu Dec 20 10:09:31 2001
+@@ -5,8 +5,7 @@
+ /**/# Imakefile for misc/support files.
+ 
+ SUPPORTFILES = text_extras_menu textswrc ttyswrc
+-INFOFILES = textsw.info ttysw.info xview.info clock.info olwm.info props.info \  
+-		textedit.info
++INFOFILES = textsw.info ttysw.info xview.info props.info textedit.info
+ 
+ ALLFILES = $(SUPPORTFILES) $(INFOFILES)
+ 
