@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7376 2004/10/08 06:25:07 martti Exp $
+$NetBSD: CHANGES,v 1.7377 2004/10/08 09:13:49 martti Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4583,3 +4583,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated xfce4-showdesktop-plugin to 0.3.0 [martti 2004-10-08]
 	Updated xfce4-datetime-plugin to 0.3.1 [martti 2004-10-08]
 	Updated xfce4-clipman-plugin to 0.4.1 [martti 2004-10-08]
+	Updated dbh to 1.0.20 [martti 2004-10-08]
