@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2000/07/17 14:31:12 agc Exp $
+# $NetBSD: Makefile,v 1.8 2000/07/17 15:37:15 agc Exp $
 #
 
 DISTNAME=		nethack-3.3.0
@@ -19,7 +19,7 @@ DEINSTALL_FILE=		${WRKDIR}/DEINSTALL
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "SunOS"
-MAKE_FLAGS+=     	CC=gcc
+MAKE_FLAGS+=     	CC=gcc CPPFLAGS=
 .endif
 
 pre-configure:
