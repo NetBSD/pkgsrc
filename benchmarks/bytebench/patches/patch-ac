@@ -1,0 +1,43 @@
+$NetBSD: patch-ac,v 1.1 1998/09/03 04:30:28 garbled Exp $
+--- src/looper.c.orig	Sat May 13 12:32:00 1995
++++ src/looper.c	Wed Sep  2 21:10:45 1998
+@@ -22,6 +22,9 @@
+ 
+ #include <stdio.h>
+ #include "timeit.c"
++#include <sys/time.h>
++#include <sys/wait.h>
++#include <sys/param.h>
+ 
+ unsigned long iter;
+ char *cmd_argv[28];
+@@ -84,14 +87,22 @@
+ 		perror("Reason");
+ 		exit(2);
+ 		} 
+-	else
++	else {
+ 		/* master */
+-		wait(&status);
+-	if (status != 0) 
+-		{
+-		printf("Bad wait status: 0x%x\n", status);
+-		exit(2);
+-		}
++		wait(&status); /* NetBSD 1.3H and lower have a bug in dc */
++		if (NetBSD < 199810 && strcmp(cmd_argv[0],"dc") != 0) {
++		  if (WIFSIGNALED(status)) {
++		    printf("signaled: %d\n",WTERMSIG(status));
++		    exit(2);
++		  }
++		  if (WIFEXITED(status)) {
++		    if (WEXITSTATUS(status) != 0) {
++			printf("Exit code: %d\n",WEXITSTATUS(status));
++			exit(2);
++		    }
++		  }
++	        } /* NetBSD 1.3H */
++	     }  /* else */
+ 	iter++;
+ 	}
+ }
