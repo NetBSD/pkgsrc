@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.8 2004/09/21 16:51:01 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.9 2005/03/22 16:04:44 jmmv Exp $
 #
 
-DISTNAME=	librsvg-2.8.1
+DISTNAME=	librsvg-2.9.5
 CATEGORIES=	graphics gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/librsvg/2.8/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/librsvg/2.9/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jmmv@NetBSD.org
@@ -19,6 +19,7 @@ USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
 PKGCONFIG_OVERRIDE=	librsvg-2.0.pc.in
 
+CONFIGURE_ARGS+=	--disable-gnome-vfs
 CONFIGURE_ARGS+=	--disable-gtk-doc
 CONFIGURE_ARGS+=	--with-gimp=no
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/librsvg2
