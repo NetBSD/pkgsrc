@@ -1,11 +1,11 @@
-# $NetBSD: buildlink2.mk,v 1.17 2004/02/12 02:35:06 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.18 2004/05/18 10:21:16 wiz Exp $
 
 .if !defined(FREETYPE2_BUILDLINK2_MK)
 FREETYPE2_BUILDLINK2_MK=	# defined
 
 .include "../../mk/bsd.prefs.mk"
 
-BUILDLINK_DEPENDS.freetype2?=	freetype2>=2.1.3
+BUILDLINK_DEPENDS.freetype2?=	freetype2>=2.1.8
 BUILDLINK_PKGSRCDIR.freetype2?=	../../graphics/freetype2
 
 # Check if we got FreeType2 distributed with XFree86 4.x or if we need to
