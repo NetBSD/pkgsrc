@@ -1,5 +1,7 @@
---- defsysp.c.old	Wed Jul  7 02:21:11 1999
-+++ defsysp.c	Wed Jul  7 02:21:32 1999
+$NetBSD: patch-ac,v 1.2 2001/02/24 15:45:53 jtb Exp $
+
+--- defsysp.c.orig	Wed Jul  7 02:21:11 1999
++++ defsysp.c		Wed Jul  7 02:21:32 1999
 @@ -932,9 +932,9 @@
    t1 = t2 = Nnum_val(0.0,TEMPORAL);
  #else

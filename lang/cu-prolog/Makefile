@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/02/24 15:38:48 jtb Exp $
+# $NetBSD: Makefile,v 1.2 2001/02/24 15:45:52 jtb Exp $
 # New ports collection makefile for:	cu-Prolog
 # Date created:		7 July 1999
 # Whom:			Issei Suzuki <issei@jp.FreeBSD.ORG>
@@ -6,31 +6,32 @@
 # FreeBSD: ports/lang/cu-prolog/Makefile,v 1.2 2000/04/12 06:18:03 obrien Exp
 #
 
-PORTNAME=	cu-prolog
-PORTVERSION=	3.94
+DISTNAME=	cu-prolog-3.94
 CATEGORIES=	lang
 MASTER_SITES=	ftp://ftp.icot.or.jp/ifs/kbms-clp/unix/cuprolog/
-DISTFILES=	${DISTNAME}.tar.gz cupdoc.tar.gz
-DISTNAME=	cupsrc
+DISTFILES=	cupsrc.tar.gz cupdoc.tar.gz
 
-MAINTAINER=	issei@jp.FreeBSD.ORG
+MAINTAINER=	jtb@netbsd.org
+COMMENT=	Experimental constraint logic programming language
 
+DIST_SUBDIR=	${DISTNAME}
+NO_WRKSUBDIR=	#defined
 WRKSRC=		${WRKDIR}/src
 MAKEFILE=	makefile
 ALL_TARGET=	cup
-PORTDOCS=	CHANGES COPYRIGHT COPYRIGHT.j INSTALL INSTALL.j README \
-		README.j doc/cu3eman.dvi doc/cu3man.dvi doc/newpred_e.doc \
-		doc/newpred_j.doc
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/cup3 ${PREFIX}/bin/cuprolog
-	${MKDIR} ${PREFIX}/share/examples/cu-prolog
-	${INSTALL_DATA} ${WRKDIR}/sample/* ${PREFIX}/share/examples/cu-prolog
-.if !defined(NOPORTDOCS)
-	${MKDIR} ${PREFIX}/share/doc/cu-prolog
-.for i in ${PORTDOCS}
-	${INSTALL_DATA} ${WRKDIR}/$i ${PREFIX}/share/doc/cu-prolog
-.endfor
-.endif
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/cu-prolog
+	@for f in ${WRKDIR}/README* ${WRKDIR}/COPYRIGHT*		\
+	${WRKDIR}/CHANGES ${WRKDIR}/doc/*.dvi ${WRKDIR}/doc/*.doc; do	\
+	i="${INSTALL_DATA} $$f ${PREFIX}/share/doc/cu-prolog/";		\
+	${ECHO} $$i; $$i;						\
+	done
+	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/cu-prolog
+	@for f in ${WRKDIR}/sample/*; do				\
+	i="${INSTALL_DATA} $$f ${PREFIX}/share/examples/cu-prolog/";	\
+	${ECHO} $$i; $$i;						\
+	done
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"
