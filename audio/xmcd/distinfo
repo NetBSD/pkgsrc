@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2001/07/24 16:00:01 nra Exp $
+$NetBSD: distinfo,v 1.6 2001/08/05 15:22:11 fredb Exp $
 
 SHA1 (xmcd-3.0.1.tar.gz) = 936363e5cd984666cba3494b2aa3d3cc845c58ac
 Size (xmcd-3.0.1.tar.gz) = 689345 bytes
@@ -8,3 +8,4 @@ SHA1 (patch-ac) = 19440a72fda657bf73811c20aabab5c955369516
 SHA1 (patch-ad) = b62086c7f1801cf500cb8bc93e262e97f015b540
 SHA1 (patch-ae) = 3de0e9fd004fcb6012f033739ff1b66bd059d655
 SHA1 (patch-af) = 276e4f5ad9041f977be602165334efd0a5895571
+SHA1 (patch-ag) = cdca79fa131a6b2e74c7cea377167f8d0290c162
