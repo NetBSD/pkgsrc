@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/12/03 15:15:12 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2005/03/02 20:43:19 minskim Exp $
 
 DISTNAME=	emacs-w3m-1.3.3
 CATEGORIES=	www
@@ -42,7 +42,7 @@ DOCUMENTS=	COPYING ChangeLog ChangeLog.1 FAQ FAQ.ja README README.ja README.nama
 ETCDIR=	lib/xemacs/site-packages/etc
 ICONDIR=	${ETCDIR}/w3m
 .else
-ETCDIR=	share/emacs/${EMACS_VERSION}/etc
+ETCDIR=	share/emacs/${EMACS_VERSION:C/[^0-9]*$//}/etc
 ICONDIR=	${ETCDIR}/w3m/icons
 .endif
 DOCDIR=	${ETCDIR}/w3m/doc
