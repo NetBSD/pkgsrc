@@ -1,0 +1,31 @@
+$NetBSD: patch-aa,v 1.1 2001/02/16 05:44:05 jtb Exp $
+
+--- aclocal.m4.orig	Fri Feb 16 05:23:28 2001
++++ aclocal.m4
+@@ -30,7 +30,7 @@
+ [
+ AC_MSG_CHECKING(grepping libtool to find link_static_flag)
+ AC_CACHE_VAL(cim_cv_link_static_flag,[
+-eval `grep link_static_flag libtool`
++eval `grep ^link_static_flag libtool`
+ cim_cv_link_static_flag=$link_static_flag
+ ])
+ AC_MSG_RESULT($cim_cv_link_static_flag)
+@@ -41,7 +41,7 @@
+ [
+ AC_MSG_CHECKING(grepping libtool to find pic_flag)
+ AC_CACHE_VAL(cim_cv_pic_flag,[
+-eval `grep pic_flag libtool`
++eval `grep ^pic_flag libtool`
+ cim_cv_pic_flag=$pic_flag
+ ])
+ AC_MSG_RESULT($cim_cv_pic_flag)
+@@ -52,7 +52,7 @@
+ [
+ AC_MSG_CHECKING(grepping libtool to find wl_flag)
+ AC_CACHE_VAL(cim_cv_wl_flag,[
+-eval `grep wl= libtool`
++eval `grep ^wl= libtool`
+ cim_cv_wl_flag=$pic_flag
+ ])
+ AC_MSG_RESULT($cim_cv_wl_flag)
