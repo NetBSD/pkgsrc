@@ -1,0 +1,24 @@
+$NetBSD: patch-ai,v 1.1 2002/07/11 14:24:00 abs Exp $
+
+--- Plugin/plugin.c.orig	Mon Jun 12 09:24:09 2000
++++ Plugin/plugin.c
+@@ -162,7 +162,11 @@ NPP_New(NPMIMEType pluginType,
+ 
+ 		FlashSetCursorOnOffMethod(This->fh, cursorOnOff, (void*)instance);
+ 
++#ifdef __NetBSD__
++		FlashSoundInit(This->fh, "/dev/sound");
++#else
+ 		FlashSoundInit(This->fh, "/dev/dsp");
++#endif
+ 
+ 		return NPERR_NO_ERROR;
+ 	}
+@@ -193,6 +197,7 @@ NPP_Destroy(NPP instance, NPSavedData** 
+ 			XSync(This->dpy,False);
+ 			XFreePixmap(This->dpy, This->canvas);
+ 			shmdt(This->segInfo.shmaddr);
++			shmctl(This->segInfo.shmid, IPC_RMID, 0);
+ 
+ 			FlashClose(This->fh);
+ 			This->fh = 0;

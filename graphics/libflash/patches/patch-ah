@@ -1,24 +1,39 @@
-$NetBSD: patch-ah,v 1.3 2002/01/03 11:10:36 abs Exp $
+$NetBSD: patch-ah,v 1.4 2002/07/11 14:24:00 abs Exp $
 
---- Plugin/plugin.c.orig	Mon Jun 12 09:24:09 2000
-+++ Plugin/plugin.c
-@@ -162,7 +162,11 @@
+--- Plugin/Makefile.orig	Tue Sep 28 13:13:38 1999
++++ Plugin/Makefile
+@@ -21,7 +21,7 @@
  
- 		FlashSetCursorOnOffMethod(This->fh, cursorOnOff, (void*)instance);
+ PLUGIN_DEFINES= -DXP_UNIX
+ OPTIMIZER=
+-FLASH=../Lib
++FLASH=${LOCALBASE}/include/flash
  
-+#ifdef __NetBSD__
-+		FlashSoundInit(This->fh, "/dev/sound");
-+#else
- 		FlashSoundInit(This->fh, "/dev/dsp");
-+#endif
+ # Solaris
+ #LIBCXX=/usr/lib/libC.so
+@@ -31,12 +31,12 @@ LIBCXX=
+ # Solaris (Sun compiler/linker)
+ #SHARED=-G
+ # FreeBSD
+-#SHARED=-Bshareable
++SHARED=-Bshareable
+ # Linux
+-SHARED=-shared
++#SHARED=-shared
  
- 		return NPERR_NO_ERROR;
- 	}
-@@ -193,6 +197,7 @@
- 			XSync(This->dpy,False);
- 			XFreePixmap(This->dpy, This->canvas);
- 			shmdt(This->segInfo.shmaddr);
-+			shmctl(This->segInfo.shmid, IPC_RMID, 0);
+-CFLAGS=  $(OPTIMIZER) $(PLUGIN_DEFINES) -I$(FLASH) -I/usr/X11R6/include
+-LDFLAGS= $(FLASH)/libflash.a $(LIBCXX) ../Jpeg/libjpeg.a ../Zlib/libz.a
++CFLAGS=  $(OPTIMIZER) -fPIC $(PLUGIN_DEFINES) -I$(FLASH) -I${X11BASE}/include
++LDFLAGS= -lflash $(LIBCXX) -L${LOCALBASE}/lib -R${LOCALBASE}/lib -L${X11BASE}/lib -R${X11BASE}/lib -lXt -lX11 -ljpeg -lz -lossaudio
  
- 			FlashClose(This->fh);
- 			This->fh = 0;
+ SRC= plugin.c npunix.c
+ OBJ= plugin.o npunix.o
+@@ -48,7 +48,7 @@ default all: $(SHAREDTARGET)
+ $(SHAREDTARGET): $(OBJ) $(FLASH)/libflash.a
+ 	$(LD) $(SHARED) -o $(SHAREDTARGET) $(OBJ) $(LDFLAGS)
+ 
+-plugin.o: $(FLASH)/flash.h
++plugin.o: ${LOCALBASE}/include/flash/flash.h
+ 
+ clean:
+ 	$(RM) $(OBJ) $(SHAREDTARGET)

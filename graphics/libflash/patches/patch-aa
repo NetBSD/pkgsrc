@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.2 2002/01/03 11:10:35 abs Exp $
+$NetBSD: patch-aa,v 1.3 2002/07/11 14:24:00 abs Exp $
 
 --- Kflash/kflash.cc.orig	Mon Jun 12 08:46:38 2000
 +++ Kflash/kflash.cc
-@@ -443,7 +443,11 @@
+@@ -443,7 +443,11 @@ void KFlashSaver::initialise()
  	FlashSettings(flashHandle, PLAYER_LOOP);
  
  	if (enableSound) {

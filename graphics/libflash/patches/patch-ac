@@ -1,55 +1,12 @@
-$NetBSD: patch-ac,v 1.4 2002/01/03 11:10:36 abs Exp $
+$NetBSD: patch-ac,v 1.5 2002/07/11 14:24:00 abs Exp $
 
---- Lib/sound.cc.orig	Wed Sep  1 16:10:03 1999
-+++ Lib/sound.cc
-@@ -27,6 +27,10 @@
- #include <sys/ioctl.h>
- #ifndef NOSOUND
-+#ifdef __NetBSD__
-+#include <soundcard.h>
-+#else
- #include <linux/soundcard.h>
- #endif
-+#endif
- 
- #ifdef RCSID
-@@ -57,14 +61,14 @@
- 	switch (GET_SOUND_RATE_CODE(f)) {
- 		case 0:
--			soundRate = 5500;
-+			soundRate = 5512;
+--- Lib/flash.cc.orig	Thu Jul 11 15:07:01 2002
++++ Lib/flash.cc
+@@ -100,6 +100,7 @@ long FlashGraphicInit(FlashHandle flashH
  			break;
- 		case 1:
--			soundRate = 11000;
-+			soundRate = 11025;
- 			break;
- 		case 2:
--			soundRate = 22000;
-+			soundRate = 22050;
- 			break;
- 		case 3:
--			soundRate = 44000;
-+			soundRate = 44100;
- 			break;
- 	}
-@@ -163,5 +167,5 @@
- 
- 	// Reset device
--	status = ioctl(dsp, SNDCTL_DSP_RESET);
-+	status = ioctl(dsp, SNDCTL_DSP_RESET, NULL);
- 	if (status < 0) perror("ioctl SNDCTL_DSP_RESET");
- 
-@@ -188,5 +192,5 @@
- 
- 	// Set sound rate in Hertz
--	soundRate = 11000;
-+	soundRate = 11025;
- 	status = ioctl(dsp, SNDCTL_DSP_SPEED, &soundRate);
- 	if (status < 0) perror("ioctl SNDCTL_DSP_SPEED");
-@@ -325,5 +329,5 @@
- 		// At last ! Play It !
- 		write(dsp,buffer,nbBytes);
--		status = ioctl(dsp, SNDCTL_DSP_POST);
-+		status = ioctl(dsp, SNDCTL_DSP_POST, NULL);
+ 		default:
+ 			fprintf(stderr, "Unsupported depth\n");
++			return 0;
  	}
  
+ 	fh->gd->setMovieDimension(fh->main->frameRect.xmax - fh->main->frameRect.xmin,
