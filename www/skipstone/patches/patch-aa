@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/08/09 07:56:24 simonb Exp $
+$NetBSD: patch-aa,v 1.2 2001/08/09 14:17:18 rh Exp $
 
---- config.mk.orig	Mon Jul  2 21:41:30 2001
-+++ config.mk	Thu Jul 19 14:53:31 2001
+--- config.mk.orig	Fri Jul 13 19:25:24 2001
++++ config.mk
 @@ -1,17 +1,12 @@
 -PREFIX=/usr/local
 +#PREFIX=/usr/local
@@ -14,13 +14,13 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/08/09 07:56:24 simonb Exp $
 -	-I/usr/local/include/nspr \
 -	-I/usr/include/mozilla/nspr \
 -	-I/usr/local/include/mozilla/nspr
-+	-I${PREFIX}/include/mozilla/nspr \
-+	-I${PREFIX}/include/mozilla
++	-I${X11PREFIX}/include/mozilla/nspr \
++	-I${X11PREFIX}/include/mozilla
  
  MOZILLA_LIBS = \
 -	-L/usr/lib/mozilla \
 -	-L/usr/local/lib/mozilla \
-+	-L${PREFIX}/lib/mozilla -Wl,-R${PREFIX}/lib/mozilla \
++	-L${X11PREFIX}/lib/mozilla -Wl,-R${X11PREFIX}/lib/mozilla \
  	-lgtkembedmoz -lplds4 -lplc4 -lnspr4 -lgtksuperwin -lxpcom
  
  GTK_LIBS = $(shell gtk-config --libs)
