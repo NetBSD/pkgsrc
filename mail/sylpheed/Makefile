@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/03/08 10:21:08 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2001/07/15 13:11:18 jlam Exp $
 
 DISTNAME=	sylpheed-0.3.23
 CATEGORIES=	mail x11
@@ -9,15 +9,11 @@ MAINTAINER=	oishi@ims.ac.jp
 HOMEPAGE=	http://sylpheed.good-day.net/index.cgi.en
 COMMENT=	X based e-mail client
 
-DEPENDS+=	gtk+>=1.2.6:../../x11/gtk
+USE_BUILDLINK_ONLY=	yes
+USE_GMAKE=		yes
+USE_X11BASE=		yes
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--enable-nls
 
-USE_GMAKE=	yes
-USE_X11=	yes
-USE_X11BASE=	yes
-HAS_CONFIGURE=	yes
-CONFIGURE_ARGS+=--prefix=${X11BASE} \
-		--includedir=${LOCALBASE}/include \
-		--libdir=${LOCALBASE}/lib \
-		--enable-nls
-
+.include "../../x11/gtk/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
