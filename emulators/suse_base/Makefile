@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2002/02/21 17:27:05 martti Exp $
+# $NetBSD: Makefile,v 1.27 2002/02/22 12:39:23 tron Exp $
 
 DISTNAME=		suse_base-${SUSE_VERSION}
 PKGREVISION=		4
@@ -11,7 +11,7 @@ MAINTAINER=		tron@netbsd.org
 HOMEPAGE=		http://www.suse.com/
 COMMENT=		Linux compatibility package
 
-CONFLICTS=		linux_SuSE-5.3 linux_lib-2.4 suse_base-6.1
+CONFLICTS=		linux_SuSE-5.3 linux_lib-2.4
 ONLY_FOR_PLATFORM=	NetBSD-*-i386
 
 EXTRACT_ONLY=		# empty
