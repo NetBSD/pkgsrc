@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.19 2001/10/24 22:11:06 jlam Exp $
-# FreeBSD Id: Makefile,v 1.5 1998/11/29 12:43:12 asami Exp
+# $NetBSD: Makefile,v 1.20 2001/11/26 19:55:40 wiz Exp $
 #
 
-DISTNAME=		asapm-2.10
+DISTNAME=		asapm-2.11
 CATEGORIES=		sysutils x11
-MASTER_SITES=		http://www.tigr.net/afterstep/as-apps/download/asapm/ \
+MASTER_SITES=		http://www.tigr.net/afterstep/download/asapm/ \
 			ftp://ftp.afterstep.org/apps/asapm/ \
 			ftp://fuf.sh.cvut.cz/pub/AfterStep/apps/asapm/
 
