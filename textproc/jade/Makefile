@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/03/29 11:34:34 drochner Exp $
+# $NetBSD: Makefile,v 1.7 2001/03/29 13:43:44 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.15 1999/01/31 11:15:57 dirk Exp
 #
 
@@ -26,8 +26,8 @@ post-install:
 .endfor
 	${INSTALL_DATA_DIR} ${PREFIX}/include/sp
 	${INSTALL_DATA} ${WRKSRC}/include/* ${PREFIX}/include/sp
-	${MKDIR} ${PREFIX}/share/doc/jade
-	${INSTALL_DATA} ${WRKSRC}/doc/*.htm ${PREFIX}/share/doc/jade
+	${MKDIR} ${PREFIX}/share/doc/sp
+	${INSTALL_DATA} ${WRKSRC}/doc/*.htm ${PREFIX}/share/doc/sp
 	${MKDIR} ${PREFIX}/share/sgml/jade
 	${INSTALL_DATA} ${WRKSRC}/dsssl/* ${PREFIX}/share/sgml/jade
 
