@@ -1,4 +1,4 @@
-# $NetBSD: pear.mk,v 1.5 2004/12/12 11:03:33 jdolecek Exp $
+# $NetBSD: pear.mk,v 1.6 2005/03/25 12:45:09 jmmv Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install pear packages.
@@ -13,8 +13,6 @@
 
 .if !defined(_PEAR_PACKAGE_MK)
 _PEAR_PACKAGE_MK=       # defined
-
-USE_BUILDLINK3=			YES
 
 .include "../../mk/bsd.prefs.mk"
 
