@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2000/07/21 14:10:15 simonb Exp $
+# $NetBSD: Makefile,v 1.16 2000/08/03 14:42:29 veego Exp $
 # FreeBSD Id: Makefile,v 1.24 1997/05/14 14:40:34 ache Exp
 #
 
@@ -35,7 +35,7 @@ do-install:
 	for f in procmailex.5 procmailrc.5 procmailsc.5; do		\
 		${INSTALL_MAN} $$f ${LOCALBASE}/man/man5/$$f;		\
 	done
-	${WRKSRC}/suid.sh
+	${SH} ${WRKSRC}/suid.sh
 .endif
 
 .include "../../mk/bsd.pkg.mk"
