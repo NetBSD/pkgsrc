@@ -1,5 +1,8 @@
-$NetBSD: distinfo,v 1.3 2002/08/20 21:51:56 itojun Exp $
+$NetBSD: distinfo,v 1.4 2003/05/21 19:43:03 seb Exp $
 
-SHA1 (chicken-0.1072.tar.gz) = 8386fa737e6d08da99ea858e41cb3eec044e8564
-Size (chicken-0.1072.tar.gz) = 2027291 bytes
-SHA1 (patch-aa) = bb9b2e0a8f43fe5495086c8893861c1461a3d45e
+SHA1 (chicken-1.0.tar.gz) = 687c2f9b8ee651c154de525ebe852c24ceb53299
+Size (chicken-1.0.tar.gz) = 2518831 bytes
+SHA1 (patch-aa) = 2bf71e9e3650f3bb35b6991e51143758cff75b37
+SHA1 (patch-ab) = 5500fcac8fe9c0749b76fa2e3006a493faaf0850
+SHA1 (patch-ac) = f666a50c992af1fbcff4da107a69c0a598cf8b58
+SHA1 (patch-ad) = fb80d8782aa6310f9fa31b219ad65adf9034debb

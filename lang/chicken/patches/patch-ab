@@ -1,8 +1,17 @@
-$NetBSD: patch-aa,v 1.3 2003/05/21 19:43:04 seb Exp $
+$NetBSD: patch-ab,v 1.1 2003/05/21 19:43:04 seb Exp $
 
---- Makefile.am.orig	2003-03-12 21:23:00.000000000 +0000
-+++ Makefile.am
-@@ -242,10 +242,10 @@ pkgdata_DATA = match.scm moremacros.scm 
+--- Makefile.in.orig	2003-03-18 22:35:53.000000000 +0000
++++ Makefile.in
+@@ -456,7 +456,7 @@ am__CONFIG_DISTCLEAN_FILES = config.stat
+  configure.lineno
+ $(srcdir)/Makefile.in:  Makefile.am  $(top_srcdir)/configure.in $(ACLOCAL_M4)
+ 	cd $(top_srcdir) && \
+-	  $(AUTOMAKE) --foreign  Makefile
++	  $(AUTOMAKE) --foreign  --ignore-deps Makefile
+ Makefile:  $(srcdir)/Makefile.in  $(top_builddir)/config.status
+ 	cd $(top_builddir) && $(SHELL) ./config.status $@ $(am__depfiles_maybe)
+ 
+@@ -1226,10 +1226,10 @@ formatprofile:
  
  # Install docs and sources.
  install-data-local : doc-html
@@ -17,9 +26,12 @@ $NetBSD: patch-aa,v 1.3 2003/05/21 19:43:04 seb Exp $
  	$(mkinstalldirs) $(DESTDIR)$(pkgdatadir)/src
  	-cp $(srcdir)/*.scm $(srcdir)/runtime.c $(DESTDIR)$(pkgdatadir)/src
  	$(mkinstalldirs) $(DESTDIR)$(pkglibdir)
-@@ -466,4 +466,4 @@ doc-html :
+@@ -1420,7 +1420,7 @@ doc-html :
  .PHONY : test
  
  test :
 -	cd testsuites; $(MAKE) CC="$(CC)" CHICKEN="$(CHICKEN)" LIBDIR=../.libs CFLAGS="$(CFLAGS)"; cd ..
 +	cd testsuites; $(MAKE)
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
+ .NOEXPORT:
