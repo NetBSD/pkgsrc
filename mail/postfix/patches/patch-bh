@@ -1,0 +1,21 @@
+$NetBSD: patch-bh,v 1.1 1999/05/30 18:18:33 tron Exp $
+
+--- smtpd/Makefile.orig	Sun May 30 18:49:14 1999
++++ smtpd/Makefile	Sun May 30 18:49:14 1999
+@@ -0,0 +1,16 @@
++#	$NetBSD: patch-bh,v 1.1 1999/05/30 18:18:33 tron Exp $
++.include "../conf/main.cf"
++
++PROG=	smtpd
++BINDIR=${daemon_directory}
++
++SRCS	= smtpd.c smtpd_token.c smtpd_check.c smtpd_chat.c smtpd_state.c
++
++
++DPADD+= ${LIBPMASTER} ${LIBPGLOBAL} ${LIBPDNS} ${LIBPUTIL}
++LDADD+= ${LIBPMASTER} ${LIBPGLOBAL} ${LIBPDNS} ${LIBPUTIL}
++
++# XXX
++NOMAN=1
++
++.include <bsd.prog.mk>
