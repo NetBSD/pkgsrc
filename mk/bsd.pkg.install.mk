@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.install.mk,v 1.20 2002/06/22 02:48:35 jlam Exp $
+# $NetBSD: bsd.pkg.install.mk,v 1.21 2002/06/27 00:54:30 lukem Exp $
 #
 # This Makefile fragment is included by package Makefiles to use the common
 # INSTALL/DEINSTALL scripts.  To use this Makefile fragment, simply:
@@ -145,7 +145,10 @@ FILES_SUBST+=		RCD_SCRIPTS_DIR=${RCD_SCRIPTS_DIR}
 #
 MAKE_DIRS?=		# empty
 MAKE_DIRS_PERMS?=	# empty
-_MAKE_DIRS=		${PKG_SYSCONFDIR} ${RCD_SCRIPTS_DIR} ${MAKE_DIRS}
+_MAKE_DIRS=		${PKG_SYSCONFDIR} ${MAKE_DIRS}
+.if !empty(RCD_SCRIPTS)
+_MAKE_DIRS+=		${RCD_SCRIPTS_DIR}
+.endif
 OWN_DIRS?=		# empty
 OWN_DIRS_PERMS?=	# empty
 FILES_SUBST+=		MAKE_DIRS=${_MAKE_DIRS:Q}
