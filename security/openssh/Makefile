@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.125 2004/04/23 22:07:58 reed Exp $
+# $NetBSD: Makefile,v 1.126 2004/04/25 23:36:52 wiz Exp $
 
 DISTNAME=		openssh-3.8p1
 PKGNAME=		openssh-3.8.1
@@ -46,7 +46,7 @@ MANDIR=			man
 
 PLIST_SUBST+=		MANDIR=${MANDIR}
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_PKGINSTALL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-mantype=man
@@ -62,7 +62,7 @@ CONFIGURE_ARGS+=	--with-privsep-user=${OPENSSH_USER}
 # XXX: why yet.  For the moment, disable PAM authentication.
 #
 #.if defined(USE_PAM)
-#.include "../../security/PAM/buildlink2.mk"
+#.include "../../security/PAM/buildlink3.mk"
 #CONFIGURE_ARGS+=	--with-pam
 #PLIST_SRC+=		${.CURDIR}/PLIST.pam
 #MESSAGE_SRC+=		${.CURDIR}/MESSAGE.pam
@@ -78,7 +78,7 @@ CONFIGURE_ENV+=		LD=${CC:Q}
 # (4: sslen) to skeychallenge instead of 3, so disable s/key support.
 #
 .if ${OPSYS} == "Darwin" || ${OPSYS} == "SunOS"
-.  include "../../security/skey/buildlink2.mk"
+.  include "../../security/skey/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-skey=${BUILDLINK_PREFIX.skey}
 .elif ${OPSYS} == "NetBSD"
 #CONFIGURE_ARGS+=	--with-skey=/usr
@@ -153,8 +153,8 @@ post-install:
 #	${INSTALL_DATA} ${WRKSRC}/contrib/sshd.pam.freebsd ${EGDIR}/sshd.pam
 #.endif
 
-.include "../../devel/zlib/buildlink2.mk"
-.include "../../security/openssl/buildlink2.mk"
-.include "../../security/tcp_wrappers/buildlink2.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
+.include "../../security/tcp_wrappers/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
