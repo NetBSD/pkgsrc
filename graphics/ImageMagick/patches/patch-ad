@@ -1,14 +1,12 @@
-$NetBSD: patch-ad,v 1.4 2001/07/02 16:48:32 jlam Exp $
+$NetBSD: patch-ad,v 1.5 2002/02/10 12:51:00 abs Exp $
 
---- configure.orig	Sat Jan 27 12:09:13 2001
-+++ configure
-@@ -4079,9 +4079,6 @@
- eval "eval INFO_DIR=$infodir"
- eval "eval MAN_DIR=$mandir"
- 
--LDFLAGS="$LDFLAGS -L$LIB_DIR"
--CPPFLAGS="$CPPFLAGS -I$INCLUDE_DIR"
--
- # Extend includedir to include magick subdirectory offset
- includedir="$includedir/magick"
- 
+--- magick/delegate.c.orig	Fri Aug 24 21:26:43 2001
++++ magick/delegate.c
+@@ -267,7 +267,6 @@
+   assert(image_info->signature == MagickSignature);
+   assert(image != (Image *) NULL);
+   assert(image->signature == MagickSignature);
+-  assert(decode!= (char *) NULL);
+   delegate_info=GetDelegateInfo(decode,encode,&image->exception);
+   if (delegate_info == (DelegateInfo *) NULL)
+     {

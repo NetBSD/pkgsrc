@@ -1,12 +1,13 @@
-$NetBSD: patch-af,v 1.1 2001/11/24 01:42:01 lukem Exp $
+$NetBSD: patch-af,v 1.2 2002/02/10 12:51:00 abs Exp $
 
---- magick/delegate.c.orig	Sat Aug 25 07:26:43 2001
-+++ magick/delegate.c
-@@ -267,7 +267,6 @@
-   assert(image_info->signature == MagickSignature);
-   assert(image != (Image *) NULL);
-   assert(image->signature == MagickSignature);
--  assert(decode!= (char *) NULL);
-   delegate_info=GetDelegateInfo(decode,encode,&image->exception);
-   if (delegate_info == (DelegateInfo *) NULL)
-     {
+--- magick/magick.h.orig	Wed Aug 15 02:20:26 2001
++++ magick/magick.h
+@@ -11,8 +11,6 @@
+ /*
+   System include declarations.
+ */
+-#define _XOPEN_SOURCE  500
+-#define _POSIX_C_SOURCE  199506L
+ 
+ #define _MAGICK_CONFIG_H
+ #if !defined(vms) && !defined(macintosh)

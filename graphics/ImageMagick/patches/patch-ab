@@ -1,13 +1,14 @@
-$NetBSD: patch-ab,v 1.11 2001/09/17 15:17:32 tron Exp $
+$NetBSD: patch-ab,v 1.12 2002/02/10 12:51:00 abs Exp $
 
---- magick/magick.h.orig	Wed Aug 15 04:20:26 2001
-+++ magick/magick.h	Mon Sep 17 16:39:59 2001
-@@ -11,8 +11,6 @@
- /*
-   System include declarations.
- */
--#define _XOPEN_SOURCE  500
--#define _POSIX_C_SOURCE  199506L
+--- configure.in.orig	Wed Sep 12 17:39:19 2001
++++ configure.in
+@@ -423,9 +423,6 @@
+ eval "eval MAN_DIR=$mandir"
  
- #define _MAGICK_CONFIG_H
- #if !defined(vms) && !defined(macintosh)
+ 
+-LDFLAGS="$LDFLAGS -L$LIB_DIR"
+-CPPFLAGS="$CPPFLAGS -I$INCLUDE_DIR"
+-
+ # Extend includedir to include magick subdirectory offset
+ includedir="$includedir/magick"
+ 
