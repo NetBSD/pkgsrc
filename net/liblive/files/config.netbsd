@@ -1,0 +1,20 @@
+.SUFFIXES: .la .lo .cpp
+COMPILE_OPTS =		${INCLUDES} -I. ${CPPFLAGS} -DBSD=1 -DSOCKLEN_T=socklen_t
+C =			c
+C_COMPILER =		${LIBTOOL} --mode=compile ${CC}
+C_FLAGS =		${COMPILE_OPTS}
+CPP =			cpp
+CPLUSPLUS_COMPILER =	${LIBTOOL} --mode=compile c++
+CPLUSPLUS_FLAGS =	${COMPILE_OPTS} -Wall
+OBJ =			lo
+LINK =			${LIBTOOL} --mode=link c++ -o
+LINK+=			# this is needed to add a space!
+LINK_OPTS =		-Wl,-R${PREFIX}/lib -lm
+CONSOLE_LINK_OPTS =	${LINK_OPTS}
+LIBRARY_LINK =		${LIBTOOL} --mode=link c++ -rpath ${PREFIX}/lib -version-info 0:0 -o
+LIBRARY_LINK+=		# this is needed to add a space!
+LIBRARY_LINK_OPTS =	${LINK_OPTS}
+LIB_SUFFIX =		la
+LIBS_FOR_CONSOLE_APPLICATION =
+LIBS_FOR_GUI_APPLICATION =
+EXE =
