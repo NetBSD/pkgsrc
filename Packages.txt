@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.199 2001/10/11 11:11:15 martti Exp $
+# $NetBSD: Packages.txt,v 1.200 2001/10/11 13:21:08 wiz Exp $
 ###########################################################################
 
 			==========================
@@ -315,6 +315,7 @@ LOCALBASE.
  3 Making precompiled packages
  =============================
 
+
  3.1 Packaging a single package
  ==============================
  
@@ -499,6 +500,7 @@ demand to disk space. Afterwards, if the package is needed again, it will
 be installed via pkg_add instead of building again, so there are no cycles
 wasted by recompiling. 
 
+
  3.3 Creating a multiple CD-ROM packages collection
  ==================================================
 
@@ -508,6 +510,7 @@ other machines.  The package pkgsrc/pkgtools/cdpack provides a simple tool for
 creating the ISO 9660 images.  `cdpack' arranges the packages on the CD-ROM's
 in a way that keeps all the dependencies for given package on the same
 CD as that package.
+
 
  3.3.1 Example of cdpack
  =======================
@@ -540,6 +543,7 @@ Now create the images with
 and each image will contain "README", "COPYING", and "bin/myscript"
 in their root directories.
 
+
 ====================================
 Part II: Package Constructor's Guide
 ====================================
@@ -547,10 +551,8 @@ Part II: Package Constructor's Guide
  4 Package components - files, directories and contents
  ======================================================
 
-Whenever you're preparing a package from the FreeBSD ports collection or
-doing it from scratch, there are a number of files involved which are
-described in the following sections. Special directions are given for what
-differs from FreeBSD ports for each file.
+Whenever you're preparing a package, there are a number of files involved
+which are described in the following sections.
 
 
  4.1 Makefile
@@ -607,31 +609,13 @@ one is used, they need to be separated by spaces:
 See the NetBSD packages(7) manual page for a description of all available
 options and variables.
 
-Please pay attention to the following gotchas, especially when preparing a
-package from the FreeBSD ports collection:
+Please pay attention to the following gotchas:
 
- - Remove all MANx and CATx definitions from the package Makefile -
-   NetBSD has implemented automatic manual page handling, and these
-   definitions are now obsolete.
  - Add MANCOMPRESSED (if not already there) if manpages are installed in
    compressed form by the package; see comment in bsd.pkg.mk
  - Replace /usr/local by ${PREFIX} in all files  (see patches below)
- - Delete any ldconfig commands - this will be done automatically for you
-   if the NetBSD platform supports ldconfig, and other measures will be
-   taken on platforms which do not support ldconfig (e.g. NetBSD/Alpha)
- - If modifying a package from the FreeBSD ports collection, preserve
-   their RCS ID: remove the '$'s around the FreeBSD RCS Id, and insert the
-   word FreeBSD, then add a <$>NetBSD<$> (Without the <>s, please remember
-   the Terminology section), i.e.:
-
-   before:
-	# <$>Id: Makefile,v 1.17 1997/06/16 06:39:51 max Exp <$>
-
-   after:
-	# <$>NetBSD<$>
-	# FreeBSD Id: Makefile,v 1.17 1997/06/16 06:39:51 max Exp
  - If the package installs any info files, the main info directory file
-   needs to be updated to reflect this fact. NetBSD now has an INFO_FILES
+   needs to be updated to reflect this fact. NetBSD has an INFO_FILES
    definition, which is used to do this. For example, to install the
    indent.info entry into the info directory file, simply use the
 
@@ -643,16 +627,12 @@ package from the FreeBSD ports collection:
    system.
  - Adjust MAINTAINER to be either yourself, if you plan to maintain the
    package for future updates, or set it to the default MAINTAINER
-   packages@netbsd.org, as it is unlikely that the FreeBSD people will
-   care about NetBSD packages.
+   packages@netbsd.org.
  - If there exists a home page for the software in question, please
    add the variable HOMEPAGE right after MAINTAINER. The value of this
    variable should be the URL for the home page.
  - Please also set the COMMENT variable to a short description of the
    package.
-
- port2pkg (pkgsrc/pkgtools/port2pkg) does many of the mentioned steps
- for you -- operator discretion is advised, though.
 
 
  4.2 distinfo
@@ -717,22 +697,9 @@ care of any RCS Ids by itself.
 For even more automation, we recommend using mkpatches from the same
 package to make a whole set of patches. You just have to backup files
 before you edit them to "filename.orig", e.g. with "cp -p filename
-filename.orig". If you upgrade a package this way, you can easily compare
-the new set of patches with the previously existing one with patchdiff.
-
-When preparing a FreeBSD port for the NetBSD packages system, it's likely
-that the FreeBSD port will work on NetBSD. However, check that the person
-who ported the software to FreeBSD has not played fast and loose with the
-__FreeBSD__ cpp definition without good cause - a simple way to do this is
-to do
-
-	% grep -i freebsd patches/patch-??
-
-in the package directory.
-
-Besides taking care of any FreeBSDisms, be sure to provide patches to
-replace any occurrence of /usr/local in any "Makefile"s in the original
-package with ${PREFIX}.
+filename.orig" or, easier, by using pkgvi from the same package. If you
+upgrade a package this way, you can easily compare the new set of patches
+with the previously existing one with patchdiff.
 
 When you have finished a package, remember to generate the checksums
 for the patch files by using the "make makepatchsum" command, see
@@ -758,6 +725,7 @@ and will thus be installed on other machines, so you should be aware that
 there is a wider audience than you might think for your comments and
 witticisms.
 
+
  4.4.1 Mandatory files
  =====================
 
@@ -772,18 +740,6 @@ witticisms.
    binaries, manual pages, etc. There are other directives which may be
    entered in this file, to control the creation and deletion of
    directories, and the location of inserted files.
-
-If you're updating a FreeBSD package to work for NetBSD, please pay special
-attention to the following things in pkg/PLIST:
-
- - If there are any "@exec ldconfig ..." statements, or any "@unexec
-   ldconfig ...", delete them. NetBSD works out automatically whether to
-   call ldconfig, since some NetBSD architectures do not have ldconfig.
- - Add any missing @dirrm statements
- - Remove any MANx= definitions in the package Makefile
-
-You could also investigate the port2pkg package (pkgsrc/pkgtools/port2pkg),
-which does a lot of the donkey work for you.
 
 
  4.4.2 Optional files
@@ -880,23 +836,6 @@ to when dealing with the PLIST file (or files, see below!).
 
 	@comment <$>NetBSD<$>
 
- * ranlib:
-   Don't put any ranlib commands into your PLIST files, as they will cause
-   troubles when the package is removed. Just make sure the build-process
-   does run ranlib - it usually does - and you can leave this out. This is
-   usually only a problem when using ports from FreeBSD.
-
- * ldconfig:
-   Don't put any ldconfig commands into your PLIST files, as they will
-   cause problems.  All shared object caching is done automatically in
-   NetBSD (this takes place when you see the "Automatic shared object
-   handling" message), and so you can leave this out.  If any shared
-   objects are found in the package, they will be dealt with
-   automatically, running ldconfig on platforms which need it, and not
-   otherwise.  This is usually only a problem when using ports from
-   FreeBSD.  To prevent this automatic handling from taking place,
-   set SHLIB_HANDLING to NO in the package Makefile.
-
  * ${MACHINE_ARCH}, ${MACHINE_GNU_ARCH}:
    Some packages like emacs and perl embed information about which
    architecture they were built on into the pathnames where they install
@@ -984,12 +923,6 @@ To port an application to NetBSD, it's usually necessary for the compiler
 to be able to judge the system on which it's compiling, and we use
 definitions so that the C pre-processor can do this.
 
-The really impatient should just note that a number of the FreeBSD ports
-(which are called packages in the NetBSD world) rely on the CPP definition
-__FreeBSD__. This should be used sparingly, for FreeBSD-specific features,
-but unfortunately this is not always the case. A number also rely on the
-fact that the CPU type is an Intel-based little-endian CPU.
-
 To test whether you are working on a 4.4 BSD-derived system, you should use
 the BSD definition, which is defined in <sys/param.h> on said systems.
 
@@ -1004,10 +937,6 @@ conditional:
 
 Please use the __NetBSD__ definition sparingly - it should only apply to
 features of NetBSD that are not present in other 4.4-lite derived BSDs.
-
-You should also avoid defining __FreeBSD__=1 and then simply using the
-FreeBSD port, if only from an aesthetic viewpoint.
-
 
  6.2 Shared libraries - libtool
  ==============================
@@ -1051,8 +980,8 @@ Here's how to use libtool in a pkg in seven simple steps:
 
    The -rpath argument is the install directory of the library being built.
 
-   PLIST should include all of the .a, .la and so, .so.major and .so.major.minor
-   entries.
+   PLIST should include all of the .a, .la and so, .so.major and
+   .so.major.minor entries.
 
 4. When linking shared object (.so) files, i.e. files that are loaded via
    dlopen(3), NOT shared libraries, use "-module -avoid-version" to prevent
@@ -1091,11 +1020,13 @@ Here's how to use libtool in a pkg in seven simple steps:
  6.3 Using libtool on GNU packages that already support libtool
  ==============================================================
 
-Add USE_LIBTOOL=yes and LTCONFIG_OVERRIDE=${WRKSRC}/ltconfig to the
-package Makefile as the quick way to bypass the pkg's own libtool.
-The pkg's own libtool is made by ltconfig script at do-configure target.
-If USE_LIBTOOL and LTCONFIG_OVERRIDE are defined, the specified ltconfig is
-overridden, using the pkgsrc/devel/libtool instead of the pkg's own libtool.
+Add USE_LIBTOOL=yes and LTCONFIG_OVERRIDE=${WRKSRC}/ltconfig to the package
+Makefile as the quick way to bypass the pkg's own libtool. The pkg's own
+libtool is made by ltconfig script at do-configure target. If USE_LIBTOOL
+and LTCONFIG_OVERRIDE are defined, the specified ltconfig is overridden,
+using the pkgsrc/devel/libtool instead of the pkg's own libtool.  For newer
+versions of libtool (without ltconfig) it may be necessary to use
+USE_LIBTOOL_OVERRIDE=${WRKSRC}/libtool instead.
 
 If your package makes use of the platform independent library for loading
 dynamic shared objects, that comes with libtool (libltdl), you should
@@ -1116,49 +1047,8 @@ build in some circumstances. Some common errors are
    The function lt_dlinit() should be called and the macro 
    LTDL_SET_PRELOADED_SYMBOLS included in executables.
 
- 6.4 Gotchas of FreeBSD ports
- ============================
 
-See section 4.1 for Makefile issues (MANx, CATx, MANCOMPRESSED, ldconfig,
-RCS IDs) and section 4.3 for gotchas on using patches from FreeBSD ports.
-
-One of the biggest problems with FreeBSD ports is that too many of
-them assume they will install into /usr/local, instead of honouring
-any ${PREFIX} setting properly.  To change this, add something like the
-following into your package Makefile:
-
-	pre-configure:
-	        for f in `find ${WRKDIR} -type f -print|xargs grep -l '/usr/local'`; do \
-	                ${SED} -e 's:/usr/local:'${PREFIX}':g' < $$f > $$f.pdone && ${MV} $$f.pdone $$f; \
-	        done
-
-This is taken from the pkgsrc/sysutils/rtty package; be sure this works for
-your package - it may actually make sense to look for some things in
-/usr/local, for example. So don't blindly replace all occurrences of
-/usr/local!
-
-FreeBSD has decided to list manual pages in the package Makefile, with
-no corresponding entry in the PLIST.  You will thus need to add any
-MAN[1-8ln] files to the PLIST, before deleting the MAN[1-8ln]
-definition.  Similarly with MLINKS and CAT[1-8ln] entries.
-
-Side note on manpages in PLIST:  we don't take any notice of any .gz
-suffix there, as many FreeBSD ports seem to have .gz pages in PLIST
-even when they install manpages without compressing them; rather, we
-add our own .gz suffix there according to MANZ.  In short, it does not
-matter whether the manual page name in the PLIST has a .gz suffix or
-not - if it needs one which is not already there, it will be appended
-automatically, and if there is a .gz suffix which is not needed, it
-will be deleted automatically.
-
-Some packages use bsd-style .mk files when building, and so any manual
-pages that are installed will be gzip-compressed, if MANZ is set, or
-not if MANZ is not set.  If the package uses bsd-style .mk files, the
-variable MANCOMPRESSED_IF_MANZ should be set to a value of "yes" in
-the package Makefile.
-
-
- 6.5 Feedback to the author
+ 6.4 Feedback to the author
  ==========================
 
 If you have found any bugs in the package you make available, if you had to
@@ -1685,62 +1575,50 @@ USE_BUILDLINK_ONLY.
  9 Debugging
  ===========
 
-To check out all the gotchas when building a package (either from
-a FreeBSD port, or from scratch), here are the steps that I do in
-order to get a package working. Please note this is basically the
-same as what was explained in the previous sections, only with some
+To check out all the gotchas when building a package, here are the steps
+that I do in order to get a package working. Please note this is basically
+the same as what was explained in the previous sections, only with some
 debugging aids.
 
  * Make sure PKG_DEVELOPER=1 is in /etc/mk.conf
- * Retrieve port from FreeBSD collection
- * Fix RCS-ID in the package's Makefile, see section 4.1. 
- * Import unchanged FreeBSD source (ONLY if you have cvs access, not needed
-   otherwise):
-   
-	% (cd .../pkgsrc/category/pkgname ; cvs import pkgsrc/category/pkgname \
-		FREEBSD FreeBSD-current-yyyy-mm-dd)
-	
- * If you did a CVS import, check it out to apply the following fixes
-   (not needed if you don't have CVS access!)
- * Look at Makefile, fix if necessary; see section 4.1. 
- * Look at patches, remember if not appropriate
- * Have a look at pkg/PLIST, add a "@comment <$>NetBSD<$>" line at the
-   beginning of any PLIST file (see section 5). 
- * Build the package:
- 
-	% make
+ * Create a new directory, and run
+
+	# url2pkg http://www.example.com/path/to/distfile.tar.gz
+
+   You'll need to have pkgsrc/pkgtools/url2pkg installed for that.
+ * Edit the Makefile as requested.
+ * Fill in pkg/DESCR
+ * ``make configure''
+ * Add any dependancies glimpsed from the configure step to the package's
+   Makefile.
+ * Make the package compile, doing multiple rounds of
+
+	# make
+	# pkgvi ${WRKSRC}/some/file/that/does/not/compile
+	# mkpatches
+	# patchdiff
+	# mv ${WRKDIR}/.newpatches/* patches
+	# make mps
+	# make clean
+   [ mkpatches, patchdiff and pkgvi are from pkgsrc/pkgtools/pkgdiff ]
 
    Doing as non-root user will assure that no files are modified that
    shouldn't, esp. not during the build phase.
- * If something is not ok, fix; for patches: fix the file, then re-generate
-   the diff: 'diff -bu foo.orig foo >../../patches/patch-xx' (mv patch-xx
-   patch-xx.orig before); If there's no foo.orig from a previous patch, be
-   sure to have an old version of the file somewhere; re-iterate :)
- * If all builds OK: touch /tmp/bla
- * Install the package:
-	# make install
-   You usually need to be root to do this. 
- * Find all files installed by the package:
- 
-	# find /usr/pkg/ /usr/X11R6/ -newer /tmp/bla >/tmp/x
-	
-   If you have set LOCALBASE and X11BASE in /etc/mk.conf, use the values
-   from there instead. As an alternative to this find command, you can run
-   "make print-PLIST". 
- * Deinstall the package:
- 
-	# pkg_delete blub
-	
- * Look if there are any files left:
- 
-	# find /usr/pkg/ /usr/X11R6/ -newer /tmp/bla
+ * Look at Makefile, fix if necessary; see section 4.1. 
+ * Generate a PLIST:
 
-   If this brings up any files, that are missing in pkg/PLIST*, add them.
- * Compare pkg/PLIST* against /tmp/x, fix the former one. You can use some
-   magic like:
-   
-	% ( sort /tmp/x >/tmp/x2 ; sort pkg/PLIST >/tmp/P ; sdiff /tmp/x2 /tmp/P )
-	
+	# make install
+	# make print-PLIST > pkg/PLIST
+	# make deinstall
+	# make install
+	# make deinstall
+
+   You usually need to be root to do this. 
+ * Look if there are any files left:
+
+	# make print-PLIST
+
+   If this brings up any files that are missing in pkg/PLIST*, add them.
  * Now that the PLIST is ok, install the package again and make a binary
    package:
    
@@ -1752,21 +1630,18 @@ debugging aids.
 	
  * Repeat the above find command, which shouldn't find anything now:
 
-	# find /usr/pkg/ /usr/X11R6/ -type f -newer /tmp/bla
+	# make print-PLIST
 
  * Reinstall the binary package:
  
-	# pkg_add .../blub.tgz
+	# pkg_add ..../blub.tgz
 	
- * Play with it. Make sure everything works. 
- * Deinstall the package again using pkg_delete(8). Still no file should be
-   left. Re-run the above find(1) command to make sure. 
- * make clean && touch /tmp/bla && make install && make clean && make deinstall
-   then run the find again. Yes, some software authors write Makefiles that
-   install files during the build target. Sigh. Re-run the find, and fix the
-   PLIST. Repeat until certain the software does not install any files that
-   aren't in PLIST.
- * submit (or commit, if you have cvs access); see section 10.
+ * Play with it. Make sure everything works.
+ * Run pkglint from pkgsrc/pkgtools/pkglint, and fix the problems it reports.
+
+	# pkglint
+
+ * Submit (or commit, if you have cvs access); see section 11.
 
 
  10 FAQs & features of the package system
@@ -1888,7 +1763,7 @@ variables look like:
  10.8 If your patch contains an RCS ID
  =====================================
 
-See section 4.3 on how to remove RCS IDs from patch files. 
+See section 4.3 on how to remove RCS IDs from patch files.
 
 
  10.9 How to pull in variables from /etc/mk.conf
@@ -1947,12 +1822,10 @@ active transfers.
 
 Your package may depend on some other package being present - and there are
 various ways of expressing this dependency. NetBSD supports the
-BUILD_DEPENDS and DEPENDS definitions (beware: the DEPENDS definition is
-not the same as FreeBSD's deprecated one, and NetBSD does not use the
-FreeBSD LIB_DEPENDS definition any more - it proved problematic on ELF
-NetBSD platforms).
+BUILD_DEPENDS and DEPENDS definitions, as well as dependencies via
+buildlink.mk (see section 8).
 
-The basic difference between the two definitions is as follows:  the
+The basic difference between the two definitions is as follows: The
 DEPENDS definition registers that pre-requisite in the binary package,
 whilst the BUILD_DEPENDS definition does not.
 
@@ -2252,7 +2125,7 @@ Look at what e.g. pkgsrc/sysutils/amanda-common/{Makefile,pkg/INSTALL} do.
  11.1 Submitting your packages
  =============================
 
-You have to separate between binary and "normale" (source) packages here:
+You have to separate between binary and "normal" (source) packages here:
 
  * precompiled binary packages:
    Our policy is that we accept binaries only from NetBSD developers to
@@ -2297,21 +2170,9 @@ the way, or cvs will complain the next time you "cvs update" your
 source tree.  Also don't forget to add the new package to the
 category's Makefile.
 
-Packages derived from a FreeBSD port should be imported with a vendor tag
-of "FREEBSD" and a release tag of "FreeBSD-current-YYYY-MM-DD" (YYYY-MM-DD
-being the date when the snapshot of the port were taken form the FreeBSD
-tree), and then doing the necessary modifications by normal CVS operations.
-E.g:
-
-	% cd .../pkgsrc/<category>/<pkgname>
-	% cvs import pkgsrc/<category>/<pkgname> FREEBSD FreeBSD-current-1998-04-01
-	% cvs rm patches/patch-a
-	% cvs add patches/patch-aa
-	% cvs ci
-
 The commit message of the initial import should include part of the
-pkg/DESCR file, so people reading the mailing lists know what the
-package is/does.
+pkg/DESCR file, so people reading the mailing lists know what the package
+is/does.
 
 Please note all package updates/additions in doc/pkg-CHANGES! It's very
 important to keep this file up to date and conforming to the existing
@@ -2322,7 +2183,7 @@ www.netbsd.org and other sites.
  12 A simple example of a package: bison
  =======================================
 
-I checked to find a piece of software that isn't in the FreeBSD ports
+I checked to find a piece of software that wasn't in the packages
 collection, and picked GNU bison. Quite why someone would want to have
 bison when Berkeley yacc is already present in the tree is beyond me, but
 it's useful for the purposes of this exercise.
@@ -2342,7 +2203,7 @@ The file contents in this section must be used without the "> " prefix.
 	DISTNAME=       bison-1.25
 	CATEGORIES=     devel
 	MASTER_SITES=   ${MASTER_SITE_GNU}
-	> MAINTAINER=     thorpej@netbsd.org
+	MAINTAINER=     thorpej@netbsd.org
 	HOMEPAGE=       http://www.gnu.org/software/bison/bison.html
 	COMMENT=        GNU yacc clone
 	 
@@ -2406,7 +2267,7 @@ Create the directory where the package lives, plus any auxiliary directories:
 	# cd /usr/pkgsrc/lang
 	# mkdir bison
 	# cd bison
-	# mkdir files patches pkg
+	# mkdir patches pkg
 
 Create Makefile, pkg/DESCR and pkg/PLIST as in section 11.1,
 then continue with fetching the distfile:
