@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/10/15 03:11:49 reed Exp $
+# $NetBSD: Makefile,v 1.2 2004/11/29 14:55:38 wiz Exp $
 #
 
 DISTNAME=		inkscape-0.39
@@ -29,6 +29,7 @@ USE_GNU_TOOLS+=		make
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libsigc++/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
 .include "../../x11/gtkmm/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
