@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 1998/02/19 21:47:54 tron Exp $
+@comment $NetBSD: PLIST,v 1.2 1998/02/28 20:27:12 frueauf Exp $
 bin/vim-ctags
 bin/vim-etags
 bin/ex
@@ -11,18 +11,18 @@ bin/rview
 bin/view
 bin/vim
 bin/xxd
-man/man1/vim-ctags.1
-man/man1/vim-etags.1
-man/man1/ex.1
-man/man1/gview.1
-man/man1/gvim.1
-man/man1/rgview.1
-man/man1/rgvim.1
-man/man1/rview.1
-man/man1/rvim.1
-man/man1/view.1
-man/man1/vim.1
-man/man1/xxd.1
+man/man1/vim-ctags.1.gz
+man/man1/vim-etags.1.gz
+man/man1/ex.1.gz
+man/man1/gview.1.gz
+man/man1/gvim.1.gz
+man/man1/rgview.1.gz
+man/man1/rgvim.1.gz
+man/man1/rview.1.gz
+man/man1/rvim.1.gz
+man/man1/view.1.gz
+man/man1/vim.1.gz
+man/man1/xxd.1.gz
 share/vim/menu.vim
 share/vim/bugreport.vim
 share/vim/doc/autocmd.txt
@@ -155,6 +155,6 @@ share/vim/syntax/vrml.vim
 share/vim/syntax/xmath.vim
 share/vim/syntax/yacc.vim
 share/vim/syntax/zsh.vim
-@unexec rmdir %D/share/vim/syntax
-@unexec rmdir %D/share/vim/doc
-@unexec rmdir %D/share/vim
+@dirrm share/vim/syntax
+@dirrm share/vim/doc
+@dirrm share/vim

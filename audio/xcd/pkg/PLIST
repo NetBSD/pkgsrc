@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 1998/01/19 01:19:04 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.4 1998/02/28 20:27:12 frueauf Exp $
 bin/cdplayer
 bin/xcd
 lib/xcd/eject.xbm
@@ -19,3 +19,4 @@ lib/xcd/stop.xbm
 lib/xcd/stop_s.xbm
 man/man1/cdplayer.1.gz
 man/man1/xcd.1.gz
+@dirrm lib/xcd
