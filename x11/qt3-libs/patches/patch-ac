@@ -1,0 +1,52 @@
+$NetBSD: patch-ac,v 1.1.1.1 2002/01/07 08:07:59 skrll Exp $
+
+--- src/tools/qdir_unix.cpp.orig	Wed Dec 12 06:58:31 2001
++++ src/tools/qdir_unix.cpp
+@@ -81,10 +81,19 @@
+ 
+ bool QDir::mkdir( const QString &dirName, bool acceptAbsPath ) const
+ {
+-#ifdef Q_OS_MACX  // Mac X doesn't support trailing /'s
++#ifdef Q_TRAILING_DIR_SEP  // Some OSes doesn't support trailing /'s
+     QString name = dirName;
+-    if (dirName[dirName.length() - 1] == "/")
+-	name = dirName.left( dirName.length() - 1 );
++    int pos = name.length();
++    if (pos > 0) {
++	while ( (pos - 1) >= 0 && name[pos - 1] == '/' ) {
++	    --pos;
++	};
++	if ( pos == 0 ) {
++	    name = QDir::rootDirPath();
++	} else {
++	    name.truncate( pos );
++	}
++    }
+     return QT_MKDIR( QFile::encodeName(filePath(name,acceptAbsPath)), 0777 )
+ 	== 0;
+ #else
+@@ -95,7 +104,24 @@
+ 
+ bool QDir::rmdir( const QString &dirName, bool acceptAbsPath ) const
+ {
++#ifdef Q_TRAILING_DIR_SEP  // Some OSes doesn't support trailing /'s
++    QString name = dirName;
++    int pos = name.length();
++    if (pos > 0) {
++	while ( (pos - 1) >= 0 && name[pos - 1] == '/' ) {
++	    --pos;
++	};
++	if ( pos == 0 ) {
++	    name = QDir::rootDirPath();
++	} else {
++	    name.truncate( pos );
++	}
++    }
++    return QT_RMDIR( QFile::encodeName(filePath(name,acceptAbsPath)) )
++	== 0;
++#else
+     return QT_RMDIR( QFile::encodeName(filePath(dirName,acceptAbsPath)) ) == 0;
++#endif
+ }
+ 
+ bool QDir::isReadable() const
