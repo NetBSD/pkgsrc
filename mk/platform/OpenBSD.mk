@@ -1,4 +1,4 @@
-# $NetBSD: OpenBSD.mk,v 1.7 2004/11/20 04:38:09 grant Exp $
+# $NetBSD: OpenBSD.mk,v 1.8 2004/12/27 06:41:50 jlam Exp $
 #
 # Variable definitions for the OpenBSD operating system.
 
@@ -77,15 +77,6 @@ TSORT?=		/usr/bin/tsort
 TYPE?=		type				# Shell builtin
 WC?=		/usr/bin/wc
 XARGS?=		/usr/bin/xargs
-
-.if exists(/usr/sbin/user)
-USERADD?=	/usr/sbin/useradd
-GROUPADD?=	/usr/sbin/groupadd
-.else
-USERADD?=	${LOCALBASE}/sbin/useradd
-GROUPADD?=	${LOCALBASE}/sbin/groupadd
-_USER_DEPENDS=	user>=20000313:../../sysutils/user
-.endif
 
 CPP_PRECOMP_FLAGS?=	# unset
 DEF_UMASK?=		0022
