@@ -1,6 +1,6 @@
-# $NetBSD: Makefile.common,v 1.2 2004/12/05 21:53:51 epg Exp $
+# $NetBSD: Makefile.common,v 1.3 2005/04/06 05:28:40 epg Exp $
 
-DISTNAME=		clearsilver-0.9.13
+DISTNAME=		clearsilver-0.9.14
 CLEARSILVER_BASE=       ${DISTNAME:S/-/-base-/}
 CATEGORIES=		www
 MASTER_SITES=		http://www.clearsilver.net/downloads/
