@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1182 2003/12/13 19:30:14 jmmv Exp $
+$NetBSD: TODO,v 1.1183 2003/12/13 20:26:03 ben Exp $
 
 Suggested new packages
 ======================
@@ -137,7 +137,6 @@ Suggested package updates
 	o courier-imap-2.1
 	o crafty-19.5
 	o crossfire-1.5.0
-	o csound-4.24.1
 	o cssc-0.16alpha.pl0
 	o cvs-1.12.3
 	o cvsup-16.1.h [pkg/22870]
