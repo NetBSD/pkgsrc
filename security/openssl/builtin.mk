@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.3 2004/03/26 06:54:30 jlam Exp $
+# $NetBSD: builtin.mk,v 1.4 2004/04/02 21:42:32 jlam Exp $
 
 _OPENSSL_PKGSRC_PKGNAME=	openssl-0.9.6m
 _OPENSSL_OPENSSLV_H=		/usr/include/openssl/opensslv.h
@@ -58,21 +58,31 @@ _OPENSSL_PATCHLEVEL!=							\
 	' ${_OPENSSL_OPENSSLV_H}
 _OPENSSL_VERSION=	${_OPENSSL_MAJOR}.${_OPENSSL_MINOR}.${_OPENSSL_TEENY}${_OPENSSL_PATCHLEVEL}
 BUILTIN_PKG.openssl=	openssl-${_OPENSSL_VERSION}
+.    if !empty(_OPENSSL_VERSION:M0\.9\.6g)
 #
-# If the built-in OpenSSL software is 0.9.6g, then check whether it
-# contains the security fixes pulled up to netbsd-1-6 on 2003-11-07.
-# If it does, then treat it as the equivalent of openssl-0.9.6l.  This
-# is not strictly true, but is good enough since the main differences
-# between 0.9.6g and 0.9.6l are security fixes that NetBSD has already
-# patched into its built-in OpenSSL software.
+# If the native OpenSSL contains the security fixes pulled up to the
+# netbsd-1-6 branch on 2003-11-07, and pretend it's openssl-0.9.6l.
 #    
-_OPENSSL_HAS_FIX!=							\
+_OPENSSL_HAS_20031107_FIX!=						\
 	${AWK} 'BEGIN { ans = "no" }					\
 		/OPENSSL_HAS_20031107_FIX/ { ans = "yes" }		\
 		END { print ans; exit 0 }				\
 	' ${_OPENSSL_OPENSSLV_H}
-.    if !empty(_OPENSSL_VERSION:M0\.9\.6g) && (${_OPENSSL_HAS_FIX} == "yes")
+.      if !empty(_OPENSSL_HAS_20031107_FIX:M[yY][eE][sS])
 BUILTIN_PKG.openssl=	openssl-0.9.6l
+.      endif
+#
+# If the native OpenSSL contains the security fixes pulled up to the
+# netbsd-1-6 branch on 2004-04-01, and pretend it's openssl-0.9.6m.
+#    
+_OPENSSL_HAS_20040401_FIX!=						\
+	${AWK} 'BEGIN { ans = "no" }					\
+		/OPENSSL_HAS_20040401_FIX/ { ans = "yes" }		\
+		END { print ans; exit 0 }				\
+	' ${_OPENSSL_OPENSSLV_H}
+.      if !empty(_OPENSSL_HAS_20040401_FIX:M[yY][eE][sS])
+BUILTIN_PKG.openssl=	openssl-0.9.6m
+.      endif
 .    endif
 BUILDLINK_VARS+=	BUILTIN_PKG.openssl
 .  endif
