@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.options,v 1.5 2004/07/30 21:05:41 jlam Exp $
+# $NetBSD: Makefile.options,v 1.6 2004/07/30 21:38:07 jlam Exp $
 
 # Global and legacy options
 #
@@ -7,14 +7,14 @@
 # XXX
 # XXX	POSTFIX_USE_INET6	POSTFIX_USE_TLS
 # XXX	POSTFIX_USE_PCRE	POSTFIX_USE_MYSQL
-# XXX	POSTFIX_USE_PGSQL	POSTFIX_USE_VERP
-# XXX	POSTFIX_USE_SASL_AUTH	POSTFIX_OPTIONS
+# XXX	POSTFIX_USE_PGSQL	POSTFIX_OPTIONS
+# XXX	POSTFIX_USE_SASL_AUTH
 #
 .if defined(USE_SASL) || defined(USE_SASL2) || defined(USE_OPENLDAP) || \
     defined(POSTFIX_USE_INET6) || defined(POSTFIX_USE_TLS) || \
     defined(POSTFIX_USE_PCRE) || defined(POSTFIX_USE_MYSQL) || \
-    defined(POSTFIX_USE_PGSQL) || defined(POSTFIX_USE_VERP) || \
-    defined(POSTFIX_USE_SASL_AUTH)
+    defined(POSTFIX_USE_PGSQL) || defined(POSTFIX_USE_SASL_AUTH) || \
+    defined(POSTFIX_OPTIONS)
 .  if !defined(PKG_OPTIONS.postfix)
 .    if defined(USE_SASL) && !empty(USE_SASL:M[yY][eE][sS])
 PKG_OPTIONS.postfix+=	sasl
@@ -39,9 +39,6 @@ PKG_OPTIONS.postfix+=	mysql
 .    endif
 .    if defined(POSTFIX_USE_PGSQL) && !empty(POSTFIX_USE_PGSQL:M[yY][eE][sS])
 PKG_OPTIONS.postfix+=	pgsql
-.    endif
-.    if defined(POSTFIX_USE_VERP) && !empty(POSTFIX_USE_VERP:M[yY][eE][sS])
-PKG_OPTIONS.postfix+=	verp
 .    endif
 .    if defined(POSTFIX_USE_SASL_AUTH) && defined(POSTFIX_USE_SASL_AUTH)
 PKG_OPTIONS.postfix+=	sasl
