@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1999/09/08 09:29:46 sakamoto Exp $
+# $NetBSD: Makefile,v 1.5 2000/11/30 15:48:10 itojun Exp $
 
 DISTNAME=	Canna35b2
 PKGNAME=	Canna-server-3.5b2
@@ -19,7 +19,14 @@ MASTERDIR=	${.CURDIR}/../../japanese/canna-lib
 FILESDIR=	${MASTERDIR}/files
 PATCHDIR=	${MASTERDIR}/patches
 
+BUILD_DEFS+=	USE_INET6
+
 .include "../../mk/bsd.prefs.mk"
+.if ${USE_INET6} == "YES"
+INET6=		-DINET6
+.else
+INET6=		# empty
+.endif
 CANNAOWNER?=	daemon
 CANNAGROUP?=	daemon
 CANNA_SPOOL=	/var/spool/canna
