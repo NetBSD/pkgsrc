@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.82 2004/02/12 08:28:58 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.83 2004/02/15 13:34:33 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -943,17 +943,11 @@ SUBST_SED.unbuildlink=		${_UNBUILDLINK_SED}
 #       may be invoked.
 #
 _BLNK_WRAPPEES+=	AS
-.if !empty(USE_LANGUAGES:Mc)
 _BLNK_WRAPPEES+=	CC
 _BLNK_WRAPPEES+=	CPP
-.endif
-.if !empty(USE_LANGUAGES:Mc++)
 _BLNK_WRAPPEES+=	CXX
-.endif
 _BLNK_WRAPPEES+=	LD
-.if !empty(USE_LANGUAGES:Mfortran) || defined(USE_FORTRAN)
 _BLNK_WRAPPEES+=	FC
-.endif
 _BLNK_WRAPPEES+=	LIBTOOL SHLIBTOOL
 .if defined(USE_LIBTOOL)
 _LIBTOOL=		${BUILDLINK_LIBTOOL}

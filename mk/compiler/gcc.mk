@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.51 2004/02/12 08:54:48 jlam Exp $
+# $NetBSD: gcc.mk,v 1.52 2004/02/15 13:34:33 jlam Exp $
 
 .if !defined(COMPILER_GCC_MK)
 COMPILER_GCC_MK=	one
@@ -256,25 +256,25 @@ _GCCBINDIR=	${_GCC_PREFIX}bin
 .  elif !empty(_IS_BUILTIN_GCC:M[yY][eE][sS])
 _GCCBINDIR=	${_CC:H}
 .  endif
-.  if exists(${_GCCBINDIR}/gcc) && !empty(_LANGUAGES.gcc:Mc)
+.  if exists(${_GCCBINDIR}/gcc)
 _GCC_CC=	${_GCC_DIR}/bin/gcc
 _GCC_LINKS+=	_GCC_CC
 PKG_CC=		${_GCC_CC}
 CC=		${PKG_CC:T}
 .  endif
-.  if exists(${_GCCBINDIR}/cpp) && !empty(_LANGUAGES.gcc:Mc)
+.  if exists(${_GCCBINDIR}/cpp)
 _GCC_CPP=	${_GCC_DIR}/bin/cpp
 _GCC_LINKS+=	_GCC_CPP
 PKG_CPP=	${_GCC_CPP}
 CPP=		${PKG_CPP:T}
 .  endif
-.  if exists(${_GCCBINDIR}/g++) && !empty(_LANGUAGES.gcc:Mc++)
+.  if exists(${_GCCBINDIR}/g++)
 _GCC_CXX=	${_GCC_DIR}/bin/g++
 _GCC_LINKS+=	_GCC_CXX
 PKG_CXX=	${_GCC_CXX}
 CXX=		${PKG_CXX:T}
 .  endif
-.  if exists(${_GCCBINDIR}/g77) && !empty(_LANGUAGES.gcc:Mfortran)
+.  if exists(${_GCCBINDIR}/g77)
 _GCC_FC=	${_GCC_DIR}/bin/g77
 _GCC_LINKS+=	_GCC_FC
 PKG_FC=		${_GCC_FC}
