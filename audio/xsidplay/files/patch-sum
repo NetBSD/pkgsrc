@@ -1,4 +1,4 @@
-$NetBSD: patch-sum,v 1.4 2000/06/20 21:14:04 pooka Exp $
+$NetBSD: patch-sum,v 1.5 2000/10/29 08:54:54 pooka Exp $
 
-MD5 (patch-aa) = 44a716355657ae0f102ad2f099f29f79
-MD5 (patch-ab) = 97dea313cca22234fdbf4555f1e2734e
+MD5 (patch-aa) = 36bef5273f726e98f4b577f63ba5a6ad
+MD5 (patch-ab) = 26d9df1e1ff0dc7935f1d5bc00fd5755
