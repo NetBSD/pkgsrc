@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/09/22 08:09:57 jlam Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/10/13 12:05:51 markd Exp $
 bin/kimagemapeditor
 bin/klinkstatus
 bin/kmdr-editor
@@ -155,6 +155,9 @@ share/kde/applnk/Development/quanta.desktop
 share/kde/applnk/Editors/kmdr-editor.desktop
 share/kde/applnk/Utilities/kfilereplacepart.desktop
 share/kde/applnk/Utilities/klinkstatus.desktop
+share/kde/apps/kafkapart/entities
+share/kde/apps/kafkapart/pics/comment.png
+share/kde/apps/kafkapart/pics/php.png
 share/kde/apps/kfilereplacepart/kfilereplacepartui.rc
 share/kde/apps/kfilereplacepart/pics/about.png
 share/kde/apps/kfilereplacepart/pics/error.png
@@ -1574,6 +1577,8 @@ share/kde/servicetypes/quantadebugger.desktop
 @dirrm share/kde/apps/kfilereplacepart/toolbar
 @dirrm share/kde/apps/kfilereplacepart/pics
 @dirrm share/kde/apps/kfilereplacepart
+@dirrm share/kde/apps/kafkapart/pics
+@dirrm share/kde/apps/kafkapart
 @comment dirrm share/kde/apps
 @comment dirrm share/kde/applnk/Utilities
 @comment dirrm share/kde/applnk/Editors
