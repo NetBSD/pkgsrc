@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/11/12 03:39:40 jschauma Exp $
+# $NetBSD: Makefile,v 1.10 2003/11/17 00:11:43 recht Exp $
 #
 
 DISTNAME=	Python-2.3
@@ -44,6 +44,15 @@ LOWER_OPSYS=   sunos
 PLIST_SUBST+=  PY_PLATNAME=${LOWER_OPSYS}
 .else
 PLIST_SUBST+=  PY_PLATNAME=${LOWER_OPSYS}${OS_VERSION:C/\..*//}
+.endif
+
+# the dl module isn't built for 64 bit archs and Darwin
+.if ${MACHINE_ARCH} == "alpha" || ${MACHINE_ARCH} == "amd64" \
+	|| ${MACHINE_ARCH} == "sparc64" || ${MACHINE_ARCH} == "x86_64" \
+	|| ${OPSYS} == "Darwin"
+PLIST_SUBST+=  DLMODULE="@comment "
+.else
+PLIST_SUBST+=  DLMODULE=
 .endif
 
 .if ${OPSYS} != "NetBSD"

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.1 2003/08/18 20:57:14 recht Exp $
+@comment $NetBSD: PLIST.common,v 1.2 2003/11/17 00:11:43 recht Exp $
 bin/pydoc2p3
 bin/python2p3
 include/python2p3/Python.h
@@ -1133,7 +1133,7 @@ lib/python2p3/lib-dynload/cmath.so
 lib/python2p3/lib-dynload/crypt.so
 lib/python2p3/lib-dynload/datetime.so
 lib/python2p3/lib-dynload/dbm.so
-lib/python2p3/lib-dynload/dl.so
+${DLMODULE}lib/python2p3/lib-dynload/dl.so
 lib/python2p3/lib-dynload/fcntl.so
 lib/python2p3/lib-dynload/grp.so
 lib/python2p3/lib-dynload/itertools.so
