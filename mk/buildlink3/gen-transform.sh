@@ -1,6 +1,6 @@
 #!@BUILDLINK_SHELL@
 #
-# $NetBSD: gen-transform.sh,v 1.18 2004/01/30 10:56:11 jlam Exp $
+# $NetBSD: gen-transform.sh,v 1.19 2004/01/30 11:29:56 jlam Exp $
 
 transform="@_BLNK_TRANSFORM_SEDFILE@"
 untransform="@_BLNK_UNTRANSFORM_SEDFILE@"
@@ -342,7 +342,6 @@ done
 	done
 	prevlibs="\$libs"
 	libs="\${_libs}"
-	echo "==> reorderlibs (\$libs) <<==" 1>&2	# !!!
 done
 
 # This section suppress duplicate libraries in sequence.
