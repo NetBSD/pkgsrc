@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2003/06/13 03:18:20 itojun Exp $
+@comment $NetBSD: PLIST,v 1.10 2003/09/16 21:01:08 xtraeme Exp $
 bin/editcap
 bin/ethereal
 bin/idl2eth
@@ -15,6 +15,8 @@ lib/ethereal/plugins/${PKGVERSION}/docsis.la
 lib/ethereal/plugins/${PKGVERSION}/docsis.so
 lib/ethereal/plugins/${PKGVERSION}/gryphon.la
 lib/ethereal/plugins/${PKGVERSION}/gryphon.so
+lib/ethereal/plugins/${PKGVERSION}/lwres.la
+lib/ethereal/plugins/${PKGVERSION}/lwres.so
 lib/ethereal/plugins/${PKGVERSION}/megaco.la
 lib/ethereal/plugins/${PKGVERSION}/megaco.so
 lib/ethereal/plugins/${PKGVERSION}/mgcp.la
