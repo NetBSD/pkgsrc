@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1192 2003/06/07 09:22:37 abs Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1193 2003/06/10 05:21:42 grant Exp $
 #
 # This file is in the public domain.
 #
@@ -4155,16 +4155,16 @@ fake-pkg: ${PLIST} ${DESCR} ${MESSAGE}
 	fi;								\
 	eval ${GREP} '\$$NetBSD' $$files | ${SED} -e 's|^${_PKGSRCDIR}/||' > ${BUILD_VERSION_FILE}
 .  for def in ${BUILD_DEFS}
-	@${ECHO} ${def}=	${${def}:Q} | ${SED} -e 's|^PATH=[^ 	]*|PATH=...|' >> ${BUILD_INFO_FILE}
+	@${ECHO} ${def}=${${def}:Q} | ${SED} -e 's|^PATH=[^ 	]*|PATH=...|' >> ${BUILD_INFO_FILE}
 .  endfor
 	@if ${CC} -dumpversion >/dev/null 2>&1; then \
-	  ${ECHO} "CC=	${CC}-`${CC} -dumpversion`" >> ${BUILD_INFO_FILE}; \
+	  ${ECHO} "CC=${CC}-`${CC} -dumpversion`" >> ${BUILD_INFO_FILE}; \
 	fi
 .  if defined(USE_PERL5) && (${USE_PERL5} == "run")
-	@${ECHO} "PERL=	`${PERL5} --version 2>/dev/null | ${GREP} 'This is perl'`" >> ${BUILD_INFO_FILE}
+	@${ECHO} "PERL=`${PERL5} --version 2>/dev/null | ${GREP} 'This is perl'`" >> ${BUILD_INFO_FILE}
 .  endif
 .  ifdef USE_GMAKE
-	@${ECHO} "GMAKE=	`${GMAKE} --version | ${GREP} Make`" >> ${BUILD_INFO_FILE}
+	@${ECHO} "GMAKE=`${GMAKE} --version | ${GREP} Make`" >> ${BUILD_INFO_FILE}
 .  endif
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	${ECHO} "_PKGTOOLS_VER=${PKGTOOLS_VERSION}" >> ${BUILD_INFO_FILE}
