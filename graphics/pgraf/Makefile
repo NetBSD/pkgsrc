@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/05/23 20:58:42 danw Exp $
+# $NetBSD: Makefile,v 1.10 2005/03/31 20:59:47 reed Exp $
 
 DISTNAME=		pgraf-20010131
 CATEGORIES=		graphics
@@ -10,6 +10,7 @@ COMMENT=		Portable graphics system
 NO_SRC_ON_FTP=		Already in MASTER_SITE_LOCAL
 USE_X11=		YES
 USE_BUILDLINK3=		YES
+INSTALLATION_DIRS=	bin include lib man/man1 man/man3 man/man5
 
 CONFLICTS=		pgp5-[0-9]*		# Both have a `pgps' executable
 
