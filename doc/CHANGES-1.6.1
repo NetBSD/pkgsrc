@@ -1,4 +1,4 @@
-#	$NetBSD: CHANGES-1.6.1,v 1.1.2.32 2003/06/19 00:39:10 grant Exp $
+#	$NetBSD: CHANGES-1.6.1,v 1.1.2.33 2003/06/19 00:55:00 grant Exp $
 
 Changes to the pkgsrc-1-6-1 branch:
 
@@ -652,3 +652,31 @@ chat/bitchx/patches/patch-aj			1.2
 
 	Patch from BitchX CVS.
 	[salo, ticket #1289]
+
+devel/zlib/buildlink2.mk			1.5-1.7
+devel/zlib/Makefile				1.17-1.18
+devel/zlib/distinfo				1.4
+devel/zlib/patches/patch-aa			1.1 (new)
+devel/zlib/patches/patch-ac			1.1 (new)
+devel/zlib/patches/patch-ad			1.1 (new)
+
+	Darwin has no static libz, mark it incompatible.
+
+	mark Linux zlib as incompatible to avoid using base zlib which can
+	cause problems with pkgsrc libtool, eg.
+
+	libtool: link: AGE `4' is greater than the current interface number `1'
+	libtool: link: `1:1:4' is not valid version information
+	libtool: install: `libz.la' is not a valid libtool archive
+
+	Added fix for CAN-2003-0107 -
+	Buffer overflow in the gzprintf function in zlib 1.1.4, when zlib is
+	compiled without vsnprintf or when long inputs are truncated using
+	vsnprintf, allows attackers to cause a denial of service or possibly
+	execute arbitrary code.
+	From OpenBSD.
+
+	Restore configure target and add check for [v]snprintf.
+
+	Bump PKGREVISION.
+	[salo, ticket #1291]
