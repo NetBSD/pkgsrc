@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/07/06 19:52:01 jdolecek Exp $
+# $NetBSD: Makefile,v 1.12 2004/10/31 21:28:51 jdolecek Exp $
 
 MODNAME=		pdf
 PKGNAME=		php-pdflib-${PHP_BASE_VERS}
@@ -8,7 +8,8 @@ COMMENT=		PHP4 extension for PDFlib on-the-fly PDF generation
 
 USE_BUILDLINK3=		YES
 
-.include "../../www/php4/Makefile.module"
+PHP_VERSION_REQD=	4
+.include "../../lang/php/ext.mk"
 
 CONFIGURE_ARGS+=	--with-pdflib=shared,${BUILDLINK_PREFIX.pdflib}
 CONFIGURE_ARGS+=	--with-jpeg-dir=shared,${BUILDLINK_PREFIX.jpeg}
