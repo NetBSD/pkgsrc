@@ -1,12 +1,10 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/03/11 06:01:56 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2001/02/06 18:13:52 wiz Exp $
 
---- ./configure.orig	Fri Jul 18 23:43:30 1997
-+++ ./configure	Sat Mar 11 03:56:00 2000
-@@ -1,6 +1,6 @@
- #!/bin/sh
- 
--if autoconf "$@" > config.m4.tmp; then
-+if ./autoconf "$@" > config.m4.tmp; then
- 	rm -f config.m4
- 	mv config.m4.tmp config.m4
- else
+--- ./doc/head.orig	Thu Jan 25 07:23:12 2001
++++ ./doc/head	Thu Jan 25 07:22:50 2001
+@@ -0,0 +1,5 @@
++[This document is publically posted at ftp://ftp.snobol4.com/vanilla.zip
++ and zipped within PM.EXE as SNOBOL4.MAN.  This is actually for the MSDOS
++ version of SNOBOL4, but is a very good starting point to learn the Unix
++ version.  Pardon the references to DOS.  References to code snippets may
++ be found in vanilla.zip.  This is a NetBSD package, John Refling, 2001.]
