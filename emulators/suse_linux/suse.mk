@@ -1,7 +1,6 @@
-# $NetBSD: suse.mk,v 1.4 2000/01/09 07:11:21 tls Exp $
+# $NetBSD: suse.mk,v 1.5 2000/08/10 08:33:00 tron Exp $
 
-MASTER_SITE_SUSE=	ftp://ftp.suse.com/pub/suse/i386/6.3/suse/ \
-			ftp://ftp.varesearch.com/pub/mirrors/suse/suse/i386/6.3/suse/ 
+MASTER_SITE_SUSE=	ftp://ftp.suse.com/pub/suse/i386/6.3/suse/
 
 DIST_SUBDIR?=		suse63
 
