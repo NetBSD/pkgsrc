@@ -1,0 +1,26 @@
+--- doc/liboctave/liboctave.texi.orig	Tue May 20 21:42:48 1997
++++ doc/liboctave/liboctave.texi	Sat Nov 21 00:58:49 1998
+@@ -5,6 +5,14 @@
+ \input texinfo  @c -*-texinfo-*-
+ @setfilename liboctave.info
+ 
++@ifinfo
++@format
++START-INFO-DIR-ENTRY
++* LibOctave: (liboctave).     Octave library for numerical computations.
++END-INFO-DIR-ENTRY
++@end format
++@end ifinfo
++
+ @c @smallbook
+ @c @setchapternewpage odd
+ @c @cropmarks
+@@ -98,7 +106,7 @@
+ * Copying::                     
+ * Introduction::                
+ * Arrays::                      
+-* Matrix and Vector @var{Operations}::  
++* Matrix and Vector OPERATIONS::  
+ * Matrix Factorizations::       
+ * Ranges::                      
+ * Nonlinear Functions::         
