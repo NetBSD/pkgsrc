@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2003/06/02 01:21:21 jschauma Exp $
+# $NetBSD: Makefile,v 1.32 2003/06/14 14:42:15 wiz Exp $
 # FreeBSD Id: Makefile,v 1.13 1998/01/03 10:58:40 obrien Exp
 #
 
@@ -6,8 +6,9 @@ DISTNAME=	${PKGNAME}.src
 PKGNAME=	minicom-1.83.1
 WRKSRC=		${WRKDIR}/${PKGNAME}/src
 CATEGORIES=	comms
-MASTER_SITES=	${MASTER_SITE_SUNSITE:=apps/serialcomm/dialout/} \
-		http://www.pp.clinet.fi/~walker/
+MASTER_SITES=	${MASTER_SITE_BACKUP}
+#MASTER_SITES=	${MASTER_SITE_SUNSITE:=apps/serialcomm/dialout/} \
+#		http://www.pp.clinet.fi/~walker/
 
 MAINTAINER=     tech-pkg@netbsd.org
 HOMEPAGE=	http://alioth.debian.org/projects/minicom/
