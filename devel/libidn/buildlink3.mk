@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2004/03/18 09:12:10 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2004/05/26 14:55:21 wiz Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LIBIDN_BUILDLINK3_MK:=	${LIBIDN_BUILDLINK3_MK}+
@@ -11,7 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibidn}
 BUILDLINK_PACKAGES+=	libidn
 
 .if !empty(LIBIDN_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.libidn+=	libidn>=0.3.3
+BUILDLINK_DEPENDS.libidn+=	libidn>=0.4.6
 BUILDLINK_PKGSRCDIR.libidn?=	../../devel/libidn
 .endif	# LIBIDN_BUILDLINK3_MK
 
