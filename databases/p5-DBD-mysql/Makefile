@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2003/07/17 21:28:34 grant Exp $
+# $NetBSD: Makefile,v 1.21 2004/04/27 02:27:36 snj Exp $
 #
 
 DISTNAME=		DBD-mysql-2.1017
@@ -15,12 +15,12 @@ DEPENDS+=		p5-Data-ShowTable-3.3:../../devel/p5-Data-ShowTable
 
 BUILDLINK_DEPENDS.mysql-client?=	mysql-client>=3.23.49nb1
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/DBD/mysql/.packlist
 
 MAKE_PARAMS+=		--nocatchstderr
 
-.include "../../databases/mysql-client/buildlink2.mk"
-.include "../../databases/p5-DBI/buildlink2.mk"
+.include "../../databases/mysql-client/buildlink3.mk"
+.include "../../databases/p5-DBI/buildlink3.mk"
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
