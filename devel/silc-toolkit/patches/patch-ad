@@ -1,0 +1,15 @@
+$NetBSD: patch-ad,v 1.1 2004/06/11 10:05:06 salo Exp $
+
+--- includes/silcdefs.h.in.orig	Wed Jan 14 14:33:17 2004
++++ includes/silcdefs.h.in	Wed Jun  9 10:22:31 2004
+@@ -42,6 +42,10 @@
+ #undef SILC_MP_GMP
+ #undef SILC_MP_NSS_MPI
+ 
++/* contrib library */
++#undef HAVE_REGEX
++#undef HAVE_GETOPT_LONG
++
+ /* Redefs for SOCKS5 library */
+ /* macros/curses checks */
+ #undef HAS_CURSES
