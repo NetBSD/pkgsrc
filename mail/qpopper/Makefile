@@ -3,7 +3,7 @@
 # Date created:				February 12, 1998
 # Whom:					Ted Lemon <mellon@fugue.com>
 #
-# $NetBSD: Makefile,v 1.1 1998/02/13 02:26:03 mellon Exp $
+# $NetBSD: Makefile,v 1.2 1998/02/13 15:06:24 agc Exp $
 #
 
 DISTNAME=	qpopper2.41beta1
@@ -17,6 +17,9 @@ MAINTAINER=     mellon@fugue.com
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+= --libexecdir=${PREFIX}/libexec --sysconfdir=${PREFIX}/etc \
 	--with-apop=/etc/apop.auth --with-apopuid=root
+
+CAT8=		qpopper.0
+MAN8=		qpopper.8 qpopauth.8
 
 # popper makefile doesn't have an install target...
 do-install:
