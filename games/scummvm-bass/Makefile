@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/08/22 13:22:27 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2004/04/14 21:15:20 wiz Exp $
 #
 
 DISTNAME=		BASS-Floppy
@@ -11,8 +11,8 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://scummvm.sourceforge.net/
 COMMENT=		Beneath a Steel Sky
 
-WRKSRC=		${WRKDIR}/sky-floppy
-USE_BUILDLINK2=		yes
+WRKSRC=			${WRKDIR}/sky-floppy
+NO_BUILDLINK=		yes
 
 BASSDIR=	${PREFIX}/share/games/bass
 
