@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 1998/02/08 23:33:31 hubertf Exp $
+# $NetBSD: Makefile,v 1.12 1998/02/12 14:19:40 agc Exp $
 # FreeBSD Id: Makefile,v 1.53 1997/09/28 13:25:40 markm Exp
 #
 
@@ -51,7 +51,7 @@
 #    SUBDIR += urt
 #    SUBDIR += vcg
 #    SUBDIR += whirlgif
-#    SUBDIR += xanim
+    SUBDIR += xanim
 #    SUBDIR += xaos
     SUBDIR += xbmbrowser
 #    SUBDIR += xdl
