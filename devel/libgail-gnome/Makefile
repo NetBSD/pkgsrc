@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2004/06/28 17:56:16 jmmv Exp $
+# $NetBSD: Makefile,v 1.3 2004/09/21 16:59:22 jmmv Exp $
 #
 
-DISTNAME=	libgail-gnome-1.0.4
+DISTNAME=	libgail-gnome-1.1.0
 CATEGORIES=	devel gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgail-gnome/1.0/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgail-gnome/1.1/}
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://developer.gnome.org/projects/gap/
