@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1.1.1 2001/03/12 21:10:25 wiz Exp $
+
+--- wslib/config.c.orig	Fri Mar 31 22:10:25 2000
++++ wslib/config.c
+@@ -37,7 +37,7 @@
+ #include <limits.h>
+ #include "wsound.h"
+ 
+-#include <WUtil.h>
++#include <WINGs/WUtil.h>
+ #include <assert.h>
+ 
+ 
