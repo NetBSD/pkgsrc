@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1 2003/03/15 20:32:40 jmmv Exp $
+$NetBSD: patch-ab,v 1.2 2003/07/16 15:35:27 adam Exp $
 
---- docs/FAQ/Makefile.in.orig	2003-03-15 18:38:26.000000000 +0000
-+++ docs/FAQ/Makefile.in
-@@ -158,7 +158,7 @@ web_path_gtkmm2 = /home/groups/g/gt/gtkm
+--- docs/FAQ/Makefile.in.orig	2003-05-22 22:51:21.000000000 +0200
++++ docs/FAQ/Makefile.in	2003-07-16 16:42:39.000000000 +0200
+@@ -170,7 +170,7 @@
  web_path_docs = $(web_path_gtkmm2)docs/
  rsync_args = -vz --rsh ssh --delete --delete-after
  
