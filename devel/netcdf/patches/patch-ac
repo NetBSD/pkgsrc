@@ -1,0 +1,27 @@
+$NetBSD: patch-ac,v 1.1.1.1 1999/01/14 20:28:54 frueauf Exp $
+
+--- rules.make.orig	Fri Dec 19 23:07:52 1997
++++ rules.make	Sun Sep 27 22:34:28 1998
+@@ -55,8 +55,7 @@
+ lib:		$(LIBRARY)
+ 
+ $(LIBRARY):	$(LIB_OBJS) FORCE
+-	$(AR) $(ARFLAGS) $@ $(LIB_OBJS)
+-	$(RANLIB) $@
++	$(AR) $(ARFLAGS) -o ${.TARGET:.a=.la} ${LIB_OBJS:.o=.lo}
+ 
+ #-------------------------------------------------------------------------------
+ # Shared Libraries:
+@@ -122,10 +121,10 @@
+ 	cp $(HEADER2) $@
+ 
+ $(LIBDIR)/$(LIBRARY):	$(LIBDIR) $(LIBRARY)
+-	cp $(LIBRARY) $@
++	${LIBTOOL} --mode=install cp $(LIBRARY) $@
+ 
+ $(BINDIR)/$(PROGRAM):	$(BINDIR) $(PROGRAM)
+-	cp $(PROGRAM) $@
++	${LIBTOOL} --mode=install cp $(PROGRAM) $@
+ 
+ $(BINDIR) \
+ $(INCDIR) \

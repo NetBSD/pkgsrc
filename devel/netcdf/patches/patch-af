@@ -1,0 +1,38 @@
+$NetBSD: patch-af,v 1.1.1.1 1999/01/14 20:28:54 frueauf Exp $
+
+--- libsrc/Makefile.orig	Mon Dec  8 23:04:42 1997
++++ libsrc/Makefile	Sun Sep 27 20:23:07 1998
+@@ -7,7 +7,7 @@
+ 
+ INCLUDES = -I.
+ 
+-LIBRARY 	= libnetcdf.a
++LIBRARY 	= libnetcdf.la
+ ld_netcdf	= -L. -lnetcdf
+ 
+ HEADER	= netcdf.h
+@@ -54,7 +54,23 @@
+ 	t_ncxx.c \
+ 	t_ncx.c
+ 
+-LIB_OBJS = $(LIB_CSRCS:.c=.o)
++FLIB_OBJS = \
++	../fortran/fort-attio.o  \
++	../fortran/fort-control.o \
++	../fortran/fort-dim.o    \
++	../fortran/fort-genatt.o \
++	../fortran/fort-geninq.o \
++	../fortran/fort-genvar.o \
++	../fortran/fort-lib.o    \
++	../fortran/fort-misc.o   \
++	../fortran/fort-v2compat.o \
++	../fortran/fort-vario.o  \
++	../fortran/fort-var1io.o \
++	../fortran/fort-varaio.o \
++	../fortran/fort-varmio.o \
++	../fortran/fort-varsio.o
++
++LIB_OBJS = $(LIB_CSRCS:.c=.o) $(FLIB_OBJS)
+ 
+ GARBAGE		= t_ncio.o t_ncio t_ncx.o t_ncx t_ncxx.o t_ncxx \
+ 	t_nc.o t_nc test.nc *.so
