@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.136 2001/05/14 23:07:27 hubertf Exp $
+# $NetBSD: Makefile,v 1.137 2001/05/17 16:02:45 hubertf Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -20,6 +20,7 @@ SUBDIR+=	clanlib
 SUBDIR+=	cqcam
 SUBDIR+=	denemo
 SUBDIR+=	dia
+SUBDIR+=	dumpmpeg
 SUBDIR+=	dvdview
 SUBDIR+=	dx
 SUBDIR+=	dxsamples
