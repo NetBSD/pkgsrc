@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1998/07/18 04:22:25 tv Exp $
+# $NetBSD: Makefile,v 1.3 1998/07/18 14:50:38 tv Exp $
 #
 
 DISTNAME=	fidogate-4.2.9
@@ -10,12 +10,13 @@ MAINTAINER=	tv@netbsd.org	# aka "Todd Vierling" @ 1:396/1.5
 BUILD_DEPENDS=	${PREFIX}/bin/libtool:../../devel/libtool
 
 USE_GMAKE=	yes
-USE_GTEXINFO=	yes
 USE_PERL5=	yes
 MAKE_ENV=	LIBTOOL=${PREFIX}/bin/libtool
 WRKSRC=		${WRKDIR}/fidogate
 
 NO_CDROM=	"extremely limited usefulness to the general public"
+
+INFO_FILES=	fidogate.info
 
 pre-install:
 	${INSTALL_DATA_DIR} -m 0755 ${PREFIX}/lib/fidogate
