@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2001/02/17 17:22:44 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2001/02/23 06:46:30 jun Exp $
 
 DISTNAME=	w3m-0.1.11-pre
 PKGNAME=	w3m-0.1.10.pre11
@@ -9,7 +9,7 @@ MAINTAINER=	tech-pkg-ja@jp.netbsd.org
 HOMEPAGE=	http://ei5nazha.yz.yamagata-u.ac.jp/~aito/w3m/
 COMMENT=	Terminal-based WWW browser with HTML tables and frames support
 
-DEPENDS=	boehm-gc>=5:../../devel/boehm-gc
+DEPENDS=	boehm-gc-5.*:../../devel/boehm-gc
 
 HELPDIR=	share/doc/w3m
 HELPERDIR=	lib/w3m
@@ -122,7 +122,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/w3mhelp-w3m_ja.html ${LOCALBASE}/${HELPDIR}
 	${INSTALL_DATA} ${WRKSRC}/w3mhelp-lynx_en.html ${LOCALBASE}/${HELPDIR}
 	${INSTALL_DATA} ${WRKSRC}/w3mhelp-lynx_ja.html ${LOCALBASE}/${HELPDIR}
-	# Use pax to discard uid/gid
+	# Use ${PAX} to discard uid/gid
 	(cd ${WRKSRC}; ${PAX} -w doc doc-jp) | \
 	    (cd ${LOCALBASE}/${HELPDIR}; ${PAX} -r)
 	${INSTALL_DATA_DIR} ${LOCALBASE}/${HELPERDIR}
