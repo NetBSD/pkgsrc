@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2000/07/25 14:42:00 jlam Exp $
+# $NetBSD: Makefile.common,v 1.2 2000/07/30 01:33:11 dmcmahill Exp $
 
 DISTNAME=		lesstif-${LESSTIF_VERSION}
 LESSTIF_VERSION=	0.91.4
@@ -30,6 +30,8 @@ FILESDIR=		${.CURDIR}/../../x11/lesstif/files
 PATCHDIR=		${.CURDIR}/../../x11/lesstif/patches
 
 pre-configure:
-	cd ${WRKSRC} && autoreconf && automake
+	for d in . lib/Xlt lib/Xbae test ; do \
+		cd ${WRKSRC}/$$d && libtoolize --force && aclocal && autoheader && automake -a -i && autoconf; \
+	done
 
 .include "../../mk/bsd.pkg.mk"
