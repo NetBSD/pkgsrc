@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.netbsd-alpha,v 1.1 1999/08/13 21:24:12 abs Exp $
+lib/netscape/navigator-${NS_VERS}/plugins/libnullplugin.so

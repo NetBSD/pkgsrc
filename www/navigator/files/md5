@@ -1,6 +1,7 @@
-$NetBSD: md5,v 1.7 1999/06/21 08:45:05 jlam Exp $
+$NetBSD: md5,v 1.8 1999/08/13 21:24:11 abs Exp $
 
 MD5 (navigator-v461-export.alpha-dec-osf4.0.tar.gz) = c044e2d82b043254de019875ca0ce91d
+MD5 (navigator-v461-export.sparc-sun-solaris2.5.1.tar.gz) = 14405703ab2c25354b77516eef52fe21
 MD5 (navigator-v461-export.sparc-sun-sunos4.1.3_U1.tar.gz) = a1bc10d5dfce9f36ddae55930d683b6d
 MD5 (navigator-v461-export.x86-unknown-linuxglibc2.0.tar.gz) = 420a7618848a884e7b408a80fe283b80
 MD5 (navigator-v461-us.alpha-dec-osf4.0.tar.gz) = 043592386899a96a94c3530c32488660
