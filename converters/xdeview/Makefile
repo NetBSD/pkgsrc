@@ -3,7 +3,7 @@
 # Date Created:		9 Feb 1997
 # Whom:			Tim Vanderhoek <ac199@freenet.hamilton.on.ca>
 #
-# $NetBSD: Makefile,v 1.2 1998/03/02 00:35:27 tron Exp $
+# $NetBSD: Makefile,v 1.3 1998/03/02 00:37:49 tron Exp $
 # $FreeBSD Id: Makefile,v 1.11 1998/02/24 21:43:45 jseger Exp
 #
 
@@ -15,8 +15,8 @@ MASTER_SITES=	http://www.uni-frankfurt.de/~fp/uudeview/Apps/frank/ \
 
 MAINTAINER=	hoek@FreeBSD.ORG
 
-LIB_DEPENDS=    tk80\\.1\\.:${PORTSDIR}/x11/tk80 \
-		uu\\.1\\.:${PORTSDIR}/converters/uulib
+LIB_DEPENDS=    tk80.1.:${PORTSDIR}/x11/tk80 \
+		uu.1.:${PORTSDIR}/converters/uulib
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-tcl="${PREFIX}" --enable-tk="${PREFIX}"
