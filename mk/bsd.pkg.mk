@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1547 2004/12/17 16:24:22 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1548 2004/12/18 00:14:04 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -336,9 +336,6 @@ MAKEFLAGS+=		PERL5_ARCHLIB=${PERL5_ARCHLIB:Q}
 .endif       # USE_PERL5 == run
 
 .if defined(USE_FORTRAN)
-.  if defined(USE_LIBTOOL)
-LIBTOOL_REQD?=		1.5.10nb7
-.  endif
 .  if !exists(/usr/bin/f77)
 PKG_FC?=		f2c-f77
 .  endif
@@ -408,8 +405,13 @@ _SHLIBTOOL?=		${PKG_SHLIBTOOL}
 LIBTOOL?=		${PKG_LIBTOOL}
 SHLIBTOOL?=		${PKG_SHLIBTOOL}
 .if defined(USE_LIBTOOL)
+.  if defined(USE_FORTRAN)
+LIBTOOL_REQD?=		1.5.10nb7
+BUILD_DEPENDS+=		libtool-base>=${LIBTOOL_REQD}:../../devel/libtool-base
+.  else
 LIBTOOL_REQD?=		1.5.10nb1
 BUILD_DEPENDS+=		libtool-base>=${_OPSYS_LIBTOOL_REQD:U${LIBTOOL_REQD}}:../../devel/libtool-base
+.  endif
 CONFIGURE_ENV+=		LIBTOOL="${LIBTOOL} ${LIBTOOL_FLAGS}"
 MAKE_ENV+=		LIBTOOL="${LIBTOOL} ${LIBTOOL_FLAGS}"
 LIBTOOL_OVERRIDE?=	libtool */libtool */*/libtool
