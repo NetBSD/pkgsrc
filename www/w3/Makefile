@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2002/03/14 17:04:38 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2002/10/18 14:50:14 minoura Exp $
 
-DISTNAME=	w3-4.0pre.46
-PKGNAME=	w3-4.0b46
+DISTNAME=	w3-4.0pre.47
+PKGNAME=	w3-4.0b47
 CATEGORIES=	www
 MASTER_SITES=	ftp://ftp.xemacs.org/pub/xemacs/emacs-w3/ \
 		ftp://ftp.mpi-sb.mpg.de/pub/gnu/mirror/ftp.xemacs.org/xemacs/emacs-w3/ \
@@ -15,19 +15,17 @@ COMMENT=	World Wide Web browser for Emacs
 
 CONFIGURE_ARGS+=--enable-site-install
 
-.include "../../mk/bsd.prefs.mk"
+.include "../../mk/emacs.mk"
 
-.if defined(USE_XEMACS)
+.if ${EMACS_FLAVOR} == "xemacs"
 HAS_CONFIGURE=	yes
-DEPENDS+=	xemacs-[0-9]*:../../editors/xemacs
 CONFIGURE_ARGS+=--with-xemacs
 CONFIGURE_ARGS+=--with-package-dir=${PREFIX}/lib/xemacs/xemacs-packages
 PLIST_SRC=	${PKGDIR}/PLIST.xemacs
 .else
 GNU_CONFIGURE=	yes
-DEPENDS+= 	emacs-[0-9]*:../../editors/emacs
 CONFIGURE_ARGS+=--with-emacs
-CONFIGURE_ARGS+=--with-lispdir=${PREFIX}/share/emacs/site-lisp/w3
+CONFIGURE_ARGS+=--with-lispdir=${EMACS_LISPPREFIX}/w3
 INFO_FILES=	w3.info w3-faq.info
 PLIST_SRC=	${PKGDIR}/PLIST.emacs
 .endif
