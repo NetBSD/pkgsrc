@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.849 2001/11/14 21:38:29 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.850 2001/11/16 20:35:19 tron Exp $
 #
 # This file is in the public domain.
 #
@@ -840,8 +840,7 @@ MASTER_SITE_SUNSITE+=	\
 MASTER_SITE_GNOME+=	\
 	ftp://ftp.gnome.org/pub/GNOME/ \
 	ftp://ftp.sunet.se/pub/X11/GNOME/ \
-	ftp://ftp.tuwien.ac.at/hci/gnome.org/GNOME/ \
-	ftp://ftp.fh-rosenheim.de/pub/mirror/ftp.gnome.org/GNOME/
+	ftp://ftp.tuwien.ac.at/hci/gnome.org/GNOME/
 
 MASTER_SITE_SOURCEFORGE+=	\
 	http://prdownloads.sourceforge.net/ \
