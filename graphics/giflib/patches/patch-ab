@@ -1,0 +1,36 @@
+--- util/Makefile.orig	Wed Sep 24 05:11:17 1997
++++ util/Makefile	Wed Sep 24 05:13:59 1997
+@@ -22,12 +22,13 @@
+ # X_INC_DIR = /server/sun4/usr/new/lib/X11R4
+ 
+ # Declare the include files and libraries for the GIF utils:
+-INC = -I../lib
+-GIF_LIB = ../lib/libgif.a
++CFLAGS+= -I../lib
++GIF_LIB = -L../lib -lgif
+ GIF_INC_DEPEND = ../lib/libgif.a ../lib/gif_lib.h ../lib/getarg.h
++LDFLAGS = -s
+ 
+ # Where to copy executables to:
+-DEST = /usr/bin
++DEST = ${PREFIX}/bin
+ 
+ # These are the flags for gcc, in BSD4.3 or Sun O.S. 4.0.3
+ #
+@@ -81,12 +82,12 @@
+ 
+ # Linux using XFree86
+ #
+-CC = gcc
++#CC = gcc
+ #CFLAGS = $(INC) -fno-builtin -O -s -W -Wreturn-type -Wcomment
+-CFLAGS = $(INC) -fno-builtin -g -W -Wreturn-type -Wcomment
++#CFLAGS = $(INC) -fno-builtin -g -W -Wreturn-type -Wcomment
+ XLIBS = -lX11
+-X_INC_DIR = /usr/X11/include
+-X_LIB_DIR = /usr/X11/lib
++X_INC_DIR = ${X11BASE}/include
++X_LIB_DIR = ${X11BASE}/lib
+ 
+ BINARIES = gif2epsn gif2ps gif2rgb gif2x11 gifasm gifbg \
+ 	gifclip gifclrmp gifcomb giffix gifflip gifhisto \
