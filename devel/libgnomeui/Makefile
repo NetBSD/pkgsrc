@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2004/05/04 21:11:16 jmmv Exp $
+# $NetBSD: Makefile,v 1.34 2004/05/06 22:03:36 grant Exp $
 #
 
 DISTNAME=	libgnomeui-2.6.1.1
@@ -28,6 +28,8 @@ CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html
 
 PKGCONFIG_BASE=		${WRKSRC}/libgnomeui/libgnomeui-2.0.pc
 PKGCONFIG_OVERRIDE=	${PKGCONFIG_BASE}.in
+
+BUILDLINK_DEPENDS.gtk2=	gtk2+>=2.4.1
 
 # Needed because part of the pc files doesn't get filled in till after 
 # configure does its pass
