@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.30 2004/06/07 05:56:00 minskim Exp $
+# $NetBSD: Makefile,v 1.31 2004/07/02 08:04:18 minskim Exp $
 #
 
-DISTNAME=	xchat-2.0.9
+DISTNAME=	xchat-2.0.10
 CATEGORIES=	chat gnome
 MASTER_SITES=	http://www.xchat.org/files/source/2.0/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://www.xchat.org/
 COMMENT=	X11 (X Window System) IRC client, using the GTK2 toolkit
 
