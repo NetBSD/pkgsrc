@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/05/05 10:57:05 mjl Exp $
+# $NetBSD: Makefile,v 1.2 2003/05/12 21:27:10 jmc Exp $
 #
 
 VERS=		0.43b
@@ -14,6 +14,8 @@ COMMENT=	ELF format exploration shell
 
 WRKSRC=		${WRKDIR}/elfsh_0.43
 
+USE_BUILDLINK2=	yes
+
 # XXX This package should be converted to use libtool
 
 do-install:
@@ -25,4 +27,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/README ${PREFIX}/share/doc/elfsh/README
 	${INSTALL_DATA} ${WRKSRC}/doc/libelfsh-ref.txt ${PREFIX}/share/doc/elfsh/libelfsh-ref.txt
 
+.include "../../devel/readline/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
