@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6361 2004/06/28 08:15:42 adam Exp $
+$NetBSD: CHANGES,v 1.6362 2004/06/28 09:56:44 abs Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3122,3 +3122,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated mips64emul to 20040627 [xtraeme 2004-06-28]
 	Added txt2pdbdoc-1.4.4 [minskim 2004-06-28]
 	Updated libsndfile to 1.0.10 [adam 2004-06-28]
+	Updated pkglint to 3.81 [abs 2004-06-28]
+
