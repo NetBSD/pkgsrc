@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.35 2001/10/25 15:42:56 jlam Exp $
+# $NetBSD: Makefile,v 1.36 2002/03/28 12:12:31 dmcmahill Exp $
 
-DISTNAME=		PTL-2.1.7
-PKGNAME=		ptl-2.1.7
+DISTNAME=		PTL-2.1.8
+PKGNAME=		ptl-2.1.8
 CATEGORIES=		devel
 MASTER_SITES=		ftp://ftp.media.osaka-cu.ac.jp/pub/PTL/PTL2/
 
