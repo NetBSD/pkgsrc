@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/11/11 17:49:22 tron Exp $
+# $NetBSD: Makefile,v 1.4 2000/12/31 02:56:58 wiz Exp $
 
 DISTNAME=	aumix-2.7
 CATEGORIES=	audio
@@ -11,9 +11,11 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=aumix/} \
 MAINTAINER=	trevor@jpj.net
 HOMEPAGE=	http://jpj.net/~trevor/aumix.html
 
-BUILD_DEPENDS+=	${LOCALBASE}/bin/msgfmt:../../devel/gettext
+BUILD_DEPENDS+=	msgfmt:../../devel/gettext
 DEPENDS+=	gtk+-1.2.*:../../x11/gtk
 DEPENDS+=	ncurses>=4.2:../../devel/ncurses
+
+USE_LIBINTL=	yes
 
 CFLAGS+=        -I${WRKSRC}/src -I${LOCALBASE}/include
 
