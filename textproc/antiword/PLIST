@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:56:15 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/08/21 03:39:42 rh Exp $
 bin/antiword
 bin/kantiword
 share/doc/antiword/COPYING
@@ -13,6 +13,7 @@ share/antiword/8859-10.txt
 share/antiword/8859-13.txt
 share/antiword/8859-14.txt
 share/antiword/8859-15.txt
+share/antiword/8859-16.txt
 share/antiword/8859-2.txt
 share/antiword/8859-3.txt
 share/antiword/8859-4.txt
@@ -29,9 +30,13 @@ share/antiword/Unicode
 share/antiword/cp1250.txt
 share/antiword/cp1251.txt
 share/antiword/cp1252.txt
+share/antiword/cp437.txt
+share/antiword/cp850.txt
+share/antiword/cp852.txt
 share/antiword/fontnames
 share/antiword/fontnames.russian
 share/antiword/koi8-r.txt
+share/antiword/koi8-u.txt
 share/antiword/roman.txt
 man/man1/antiword.1
 @dirrm share/antiword
