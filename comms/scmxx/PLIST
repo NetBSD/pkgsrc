@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.9 2005/02/18 18:23:31 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2005/02/20 23:05:54 wiz Exp $
 bin/scmxx
-man/man1/scmxx.1
 man/de/man1/scmxx.1
 man/it/man1/scmxx.1
+man/man1/scmxx.1
 man/ru/man1/scmxx.1
 share/doc/scmxx/doc_sources.txt
 share/doc/scmxx/gsmcharset.txt
