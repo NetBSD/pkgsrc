@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/01/28 14:19:35 taca Exp $
+# $NetBSD: Makefile,v 1.4 2005/03/06 13:42:12 taca Exp $
 #
 
 DISTNAME=	iconv-0.5
@@ -26,6 +26,5 @@ post-install:
 .endfor
 
 .include "../../lang/ruby/modules.mk"
-.include "../../lang/ruby/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
