@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1198 2003/12/14 17:47:38 wiz Exp $
+$NetBSD: TODO,v 1.1199 2003/12/14 17:57:35 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -218,10 +218,12 @@ Suggested package updates
 	o libbonoboui-2.4.1 [jmmv]
 	o libgnome-2.4.0 [jmmv]
 	o libgnomecanvas-2.4.0 [jmmv]
+	o libgnomeui-2.4.0.1 [jmmv]
 	o libmpeg3-1.5.3
 	o libole2-2.2.8
 	o libtiff-3.6.0
 	o libtool-1.5 [skrll]
+	o libwnck-2.4.0.1 [jmmv]
 	o licq-1.2.7
 	o lilypond-2.0.0
 	o lmbench-2.0.4
