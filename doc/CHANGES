@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1337 2003/02/12 00:58:55 mjl Exp $
+$NetBSD: CHANGES,v 1.1338 2003/02/12 01:03:45 atatat Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -584,3 +584,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated p5-Device-SerialPort to 0.12 [mjl 2003-02-12]
 	Added p5-Device-Modem-1.24 [mjl 2003-02-12]
 	Added p5-Device-Gsm-1.16 [mjl 2003-02-12]
+	Updated fvwm2 to 2.4.15nb2 [atatat 2003-02-12]
+	Updated mozilla to 1.2.1nb5 [atatat 2003-02-12]
