@@ -1,12 +1,11 @@
-$NetBSD: patch-ar,v 1.1.1.1 2004/01/26 15:42:05 jmmv Exp $
+$NetBSD: patch-ar,v 1.2 2004/04/20 13:13:42 markd Exp $
 
---- mpeglib/lib/util/audio/Makefile.in.orig	Tue May 14 01:53:27 2002
+--- mpeglib/lib/util/audio/Makefile.in.orig	2004-04-06 02:48:26.000000000 +1200
 +++ mpeglib/lib/util/audio/Makefile.in
-@@ -311,7 +311,7 @@
+@@ -55,6 +55,7 @@ mkinstalldirs = $(SHELL) $(top_srcdir)/a
+ CONFIG_HEADER = $(top_builddir)/config.h
  CONFIG_CLEAN_FILES =
  LTLIBRARIES = $(noinst_LTLIBRARIES)
- 
--libaudio_la_LDFLAGS =
 +libaudio_la_LDFLAGS = $(LIBOSSAUDIO)
  libaudio_la_LIBADD =
  am_libaudio_la_OBJECTS = audioIO.lo dspWrapper.lo
