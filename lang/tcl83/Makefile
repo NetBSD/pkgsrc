@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/03/08 13:03:23 tv Exp $
+# $NetBSD: Makefile,v 1.6 2005/03/08 13:04:14 tv Exp $
 #
 
 DISTNAME=		tcl8.3.4
@@ -45,7 +45,7 @@ CONFIGURE_ENV+=		TCL_PACKAGE_PATH="${VIEWBASE}/lib/tcl"
 CONFIGURE_ENV+=		COMPILER_OPTIMIZATION_BUG=YES
 .endif
 
-.if defined(ABI) && !empty(ABI) && ${ABI} == "64"
+.if defined(ABI) && ${ABI} == "64"
 CONFIGURE_ARGS+=	--enable-64bit
 .endif
 
