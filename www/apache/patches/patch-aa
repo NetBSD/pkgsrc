@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.14 2001/02/02 16:39:57 jlam Exp $
+$NetBSD: patch-aa,v 1.15 2001/10/17 19:17:00 jlam Exp $
 
---- Makefile.tmpl.orig	Fri Feb  2 00:42:14 2001
+--- Makefile.tmpl.orig	Wed Oct 17 11:47:02 2001
 +++ Makefile.tmpl
-@@ -385,34 +385,6 @@
+@@ -387,34 +387,6 @@
  			file=`echo $${mod} | sed -e 's;^.*/\([^/]*\);\1;'`; \
  			echo "$(INSTALL_DSO) $(TOP)/$(SRC)/$${mod} $(root)$(libexecdir)/$${file}"; \
  			$(INSTALL_DSO) $(TOP)/$(SRC)/$${mod} $(root)$(libexecdir)/$${file}; \
@@ -37,18 +37,18 @@ $NetBSD: patch-aa,v 1.14 2001/02/02 16:39:57 jlam Exp $
  		done; \
  	fi
  	@echo "<=== [programs]"
-@@ -538,15 +510,16 @@
- 		find $(root)$(htdocsdir)/ -type d -exec chmod a+rx {} \; ; \
- 		find $(root)$(htdocsdir)/ -type f -exec chmod a+r {} \; ; \
+@@ -547,15 +519,16 @@
+ 		find $(root)$(manualdir)/ -type d -exec chmod a+rx {} \; ; \
+ 		find $(root)$(manualdir)/ -type f -print | xargs chmod a+r ; \
  	fi
 -	-@if [ -f $(root)$(cgidir)/printenv ]; then \
 +	-@if false; then \
- 		echo "[PRESERVING EXISTING DATA SUBDIR: $(root)$(cgidir)/]"; \
+ 		echo "[PRESERVING EXISTING CGI SUBDIR: $(root)$(cgidir)/]"; \
  	else \
  		for script in printenv test-cgi; do \
  			cat $(TOP)/cgi-bin/$${script} |\
  			sed -e 's;^#!/.*perl;#!$(PERL);' \
-+			-e 's;LD_LIBRARY_PATH=.*;LD_LIBRARY_PATH=/usr/lib:$(prefix)/lib:/usr/local/lib;' \
++			    -e 's;LD_LIBRARY_PATH=.*;LD_LIBRARY_PATH=/usr/lib:$(prefix)/lib:/usr/local/lib;' \
  			> $(TOP)/$(SRC)/.apaci.install.tmp; \
 -			echo "$(INSTALL_DATA) $(TOP)/conf/$${script}[*] $(root)$(cgidir)/$${script}"; \
 -			$(INSTALL_DATA) $(TOP)/$(SRC)/.apaci.install.tmp $(root)$(cgidir)/$${script}; \
@@ -57,7 +57,7 @@ $NetBSD: patch-aa,v 1.14 2001/02/02 16:39:57 jlam Exp $
  		done; \
  	fi
  	@echo "Copying tree $(TOP)/icons/ -> $(root)$(iconsdir)/"; \
-@@ -560,7 +533,7 @@
+@@ -569,7 +542,7 @@
  #   and initial config files while preserving existing ones.
  install-config:
  	@echo "===> [config: Installing Apache configuration files]"
