@@ -1,8 +1,13 @@
-$NetBSD: patch-bb,v 1.1 2003/04/08 18:32:59 drochner Exp $
+$NetBSD: patch-bb,v 1.2 2004/08/29 10:44:19 recht Exp $
 
---- Lib/test/test_fcntl.py.orig	Tue Apr  8 16:07:57 2003
-+++ Lib/test/test_fcntl.py	Tue Apr  8 16:08:04 2003
-@@ -20,7 +20,7 @@
+--- Lib/test/test_fcntl.py.orig	2002-08-23 18:06:46.000000000 +0200
++++ Lib/test/test_fcntl.py	2004-08-28 12:01:15.000000000 +0200
+@@ -16,11 +16,11 @@
+ else:
+     start_len = "qq"
+ 
+-if sys.platform in ('netbsd1', 'Darwin1.2', 'darwin',
++if sys.platform in ('netbsd1', 'netbsd2', 'Darwin1.2', 'darwin',
                      'freebsd2', 'freebsd3', 'freebsd4', 'freebsd5',
                      'bsdos2', 'bsdos3', 'bsdos4',
                      'openbsd', 'openbsd2', 'openbsd3'):
