@@ -1,7 +1,15 @@
-# $NetBSD: Makefile,v 1.59 2005/01/25 10:07:56 adam Exp $
+# $NetBSD: Makefile,v 1.60 2005/01/31 19:09:16 tv Exp $
+#
+# NOTE:
+# When updating, it is necessary to change the shlib version, located in
+# patch-aa.  If you do not KNOW that the new version is backwards ABI
+# compatible (usually not, in the case of libpico), bump the major version,
+# and then bump the BUILDLINK_DEPENDS in buildlink3.mk.
+#
 
 DISTNAME=	pine4.62
 PKGNAME=	pico-4.9
+PKGREVISION=	1
 CATEGORIES=	editors
 MASTER_SITES=	ftp://ftp.cac.washington.edu/pine/ \
 		ftp://ftp.fu-berlin.de/unix/mail/pine/
