@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1999/08/30 23:11:15 tron Exp $
+# $NetBSD: Makefile,v 1.8 1999/09/03 17:58:02 tron Exp $
 #
 
 DISTNAME=	ggv-0.50
@@ -13,6 +13,6 @@ DEPENDS+=	gnome-core-1.0.9:../../x11/gnome-core
 
 GNU_CONFIGURE=	YES
 USE_LIBTOOL=	YES
-USE_X11=	YES
+USE_X11BASE=	YES
 
 .include "../../mk/bsd.pkg.mk"
