@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2004/11/12 06:39:20 jlam Exp $
+# $NetBSD: Makefile,v 1.62 2004/11/29 17:00:01 jklos Exp $
 
 DISTNAME=	gd-2.0.33
 CATEGORIES=	graphics
@@ -14,6 +14,7 @@ USE_BUILDLINK3=		YES
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
 REPLACE_PERL=		bdftogd
+PTHREAD_AUTO_VARS=	yes
 
 BUILDLINK_DEPENDS.freetype2=	freetype2>=2.1.4
 
