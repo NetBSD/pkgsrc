@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/09/07 00:34:03 jwise Exp $
+@comment $NetBSD: PLIST,v 1.2 1999/10/18 23:16:56 jwise Exp $
 bin/xfce
 bin/xfwm
 bin/xftree
@@ -11,6 +11,7 @@ bin/xfplay
 bin/xfhelp
 bin/xfprint
 bin/xftrash
+bin/xfterm
 bin/xfce_setup
 bin/xfce_remove
 man/man1/xfce.1
@@ -24,6 +25,7 @@ man/man1/xfsound.1
 man/man1/xfhelp.1
 man/man1/xfprint.1
 man/man1/xftrash.1
+man/man1/xfterm.1
 share/XFCE/COPYING
 share/XFCE/XFce3.logo
 share/XFCE/sample.Xclients
@@ -34,6 +36,7 @@ share/XFCE/system.xfwmrc
 share/XFCE/sample.mwm.xinitrc
 share/XFCE/sample.xfbdrc
 share/XFCE/sample.xfce3rc
+share/XFCE/sample.xfce3rc.ja
 share/XFCE/sample.xfmouserc
 share/XFCE/sample.xfsoundrc
 share/XFCE/sample.xinitrc
@@ -395,12 +398,13 @@ share/locale/de/LC_MESSAGES/xfce.mo
 share/locale/es/LC_MESSAGES/xfce.mo
 share/locale/fr/LC_MESSAGES/xfce.mo
 share/locale/it/LC_MESSAGES/xfce.mo
+share/locale/ja/LC_MESSAGES/xfce.mo
 share/locale/pl/LC_MESSAGES/xfce.mo
 share/locale/ru/LC_MESSAGES/xfce.mo
 share/locale/ca/LC_MESSAGES/xfce.mo
 @dirrm share/XFCE/backdrops
-@dirrm share/XFCE/help
 @dirrm share/XFCE/icons
 @dirrm share/XFCE/palettes
 @dirrm share/XFCE/sounds
+@dirrm share/XFCE/help
 @dirrm share/XFCE
