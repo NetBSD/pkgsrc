@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/12/04 05:24:42 grant Exp $
+# $NetBSD: Makefile,v 1.2 2003/12/13 04:01:50 grant Exp $
 #
 
 DISTNAME=		# see Makefile.${OPSYS}.${ARCH}
-PKGNAME=		thunderbird-bin-0.3
+PKGNAME=		thunderbird-bin-0.4
 WRKSRC=			${WRKDIR}/thunderbird
 CATEGORIES=		mail
 
@@ -10,7 +10,7 @@ MAINTAINER=		grant@NetBSD.org
 HOMEPAGE=		http://www.mozilla.org/projects/thunderbird/
 COMMENT=		Redesign of the Mozilla mail client (binary pkg)
 
-ONLY_FOR_PLATFORM=	Linux-*-i[3-6]86 SunOS-5.[89]*-i386
+ONLY_FOR_PLATFORM=	Linux-*-i[3-6]86 SunOS-5.[89]*-i386 SunOS-5.[89]*-sparc
 
 NO_CONFIGURE=		# defined
 
