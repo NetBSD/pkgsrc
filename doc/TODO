@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3270 2005/03/23 12:28:21 adam Exp $
+$NetBSD: TODO,v 1.3271 2005/03/23 13:25:16 schmonz Exp $
 
 Suggested new packages
 ======================
@@ -519,7 +519,6 @@ Suggested package updates
 	o hitchhiker-0.7
 	o host-20040812 [cjep,talking to greg woods about this]
 	o hot-babe-0.2.2
-	o howl-0.9.10 [pkg/29259]
 	o html2wml-0.4.11
 	o httperf-0.8
 	o httptunnel-3.3
