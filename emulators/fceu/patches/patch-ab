@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/07/19 18:37:15 wiz Exp $
+
+SOL_TCP is 6, the same as IPPROTO_TCP and ISOPROTO_TCP on NetBSD.
+
+--- src/drivers/pc/unix-netplay.c.orig	2004-05-17 07:28:06.000000000 +0200
++++ src/drivers/pc/unix-netplay.c
+@@ -86,7 +86,7 @@ int FCEUD_NetworkConnect(void)
+   return(0);
+  }
+  int tcpopt = 1;  
+- if(setsockopt(TSocket, SOL_TCP, TCP_NODELAY, &tcpopt, sizeof(int)))
++ if(setsockopt(TSocket, 6, TCP_NODELAY, &tcpopt, sizeof(int)))
+   puts("Nodelay fail");
+ 
+  memset(&sockin,0,sizeof(sockin));

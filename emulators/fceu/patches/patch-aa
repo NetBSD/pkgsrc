@@ -1,0 +1,17 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/07/19 18:37:15 wiz Exp $
+
+Make default keys match documentation.
+
+--- src/drivers/pc/input.c.orig	2004-05-17 01:48:26.000000000 +0200
++++ src/drivers/pc/input.c
+@@ -286,8 +286,8 @@ static void KeyboardCommands(void)
+ ButtConfig GamePadConfig[4][10]={
+         /* Gamepad 1 */
+         { 
+-	 MK(KP3), MK(KP2), MK(TAB), MK(ENTER), MK(W),MK(Z),
+-                MK(A), MK(S), MKZ(), MKZ()
++         MK(LEFTALT), MK(LEFTCONTROL), MK(TAB), MK(ENTER), MK(CURSORUP),
++	 MK(CURSORDOWN), MK(CURSORLEFT), MK(CURSORRIGHT), MKZ(), MKZ()
+ 	},
+ 
+         /* Gamepad 2 */
