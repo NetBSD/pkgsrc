@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2003/09/25 11:23:00 tron Exp $
+# $NetBSD: Makefile,v 1.28 2003/10/26 14:01:26 tron Exp $
 
 PKGNAME=	gmplayer-${MPLAYER_PKG_VERSION}
 PKGREVISION=	2
@@ -41,9 +41,8 @@ DISTFILES+=	${DISTNAME}${EXTRACT_SUFX}
 DISTFILES+=	${SKINS}
 
 USE_BUILDLINK2=		# defined
-CONFIGURE_ARGS+=	--enable-gui
-CONFIGURE_ARGS+=	--disable-mencoder
-CONFIGURE_ARGS+=	--confdir=${PREFIX}/share/mplayer
+CONFIGURE_ARGS+=	--enable-gui --disable-gcc-checking \
+			--disable-mencoder --confdir=${PREFIX}/share/mplayer
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/mplayer ${PREFIX}/bin/gmplayer
