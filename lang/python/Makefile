@@ -1,31 +1,27 @@
-# $NetBSD: Makefile,v 1.14 1999/01/17 00:23:40 frueauf Exp $
+# $NetBSD: Makefile,v 1.15 1999/04/14 04:51:27 tsarna Exp $
 #
 
-DISTNAME=	pyth151
-PKGNAME=	python-1.5.1
-WRKSRC=		${WRKDIR}/Python-1.5.1
+DISTNAME=	py152
+PKGNAME=	python-1.5.2
 CATEGORIES=	lang
 MASTER_SITES=	ftp://ftp.python.org/pub/python/src/
 EXTRACT_SUFX=	.tgz
-DIST_SUBDIR=	python
-
-PATCH_SITES=	http://www.python.org/1.5/patches-1.5.1/
-PATCHFILES= 	freeze.1.txt _tkinter.1.txt configure.1.txt \
-		object.1.txt parsermodule.1.txt zlibmodule.1.txt \
-		string.1.txt bltinmodule.1.txt timemodule.1.txt \
-		fileobject.1.txt urllib.1.txt pcre.1.txt \
-		configure.2.txt imaplib.1.txt urllib.2.txt \
-		sgmllib.1.txt bltinmodule.2.txt ceval.1.txt gzip.1.txt \
-		imaplib.2.txt import.1.txt imaplib.3.txt \
-		stringobject.1.txt sgmllib.2.txt classobject.1.txt \
-		SocketServer.1.txt bltinmodule.3.txt longobject.1.txt \
-		stropmodule.1.txt
 
 MAINTAINER=	tsarna@netbsd.org
 HOMEPAGE=	http://www.python.org/
 
+PLIST_SRC=	${WRKDIR}/.PLIST_SRC
+
+DIST_SUBDIR=	python
+
+WRKSRC=		${WRKDIR}/Python-1.5.2
 GNU_CONFIGURE=	yes
-MAKE_FLAGS+=	'OPT=${CFLAGS}'
+
+# Make sure having environment variable OPT doesn't affect the
+# installed module-building Makefile
+MAKE_ENV+=	'OPT=${CFLAGS}'
+CONFIGURE_ENV+=	'OPT=${CFLAGS}'
+SCRIPTS_ENV+=	'OPT=${CFLAGS}'
 
 # Handle the module setup file:
 #   - disable a few broken modules on 64 bit platforms (nothing important)
@@ -34,7 +30,7 @@ MAKE_FLAGS+=	'OPT=${CFLAGS}'
 .if ${MACHINE_ARCH} == "alpha" || ${MACHINE_ARCH} == "sparc64"
 NO64BIT=\#
 .endif
-.if ${MACHINE_ARCH} == "powerpc" || ${MACHINE_ARCH} == "vax"
+.if ${MACHINE_ARCH} == "sparc64"
 NOSHARED=\#
 .endif
 
@@ -43,6 +39,15 @@ post-configure:
 		${FILESDIR}/Setup >${WRKSRC}/Modules/Setup
 
 post-install:
-	strip ${PREFIX}/bin/python
+	${CAT} ${PKGDIR}/PLIST.pre >${PLIST_SRC}
+	(cd ${PREFIX}; find lib/python1.5 -type f -print >>${PLIST_SRC})
+	(cd ${PREFIX}; find include/python1.5 -type f -print >>${PLIST_SRC})
+	(cd ${PREFIX}; find -d include/python1.5 -type d -print | \
+	${SED} -e "s/^/@dirrm /" >>${PLIST_SRC})
+	${ECHO} "@unexec ${RM} -rf %D/lib/python1.5" >>${PLIST_SRC}
+	# Reinstall Python binary to get it stripped
+	${RM} ${PREFIX}/bin/python ${PREFIX}/bin/python1.5
+	${INSTALL_PROGRAM} ${WRKSRC}/python ${PREFIX}/bin
+	${LN} ${PREFIX}/bin/python ${PREFIX}/bin/python1.5
 
 .include "../../mk/bsd.pkg.mk"
