@@ -1,0 +1,50 @@
+$NetBSD: patch-ac,v 1.1.1.1 2001/03/27 12:06:55 wennmach Exp $
+
+--- Makeconf.in.orig	Sat Dec  9 07:41:37 2000
++++ Makeconf.in	Fri Dec 29 21:03:25 2000
+@@ -39,7 +39,7 @@
+ 
+ RUNTEST = @RUNTEST@
+ 
+-TEXI2DVI = $(top_srcdir)/texi2dvi
++TEXI2DVI = /usr/bin/texi2dvi
+ 
+ DEFAULT_PAGER = @DEFAULT_PAGER@
+ 
+@@ -56,7 +56,7 @@
+ SHLEXT = @SHLEXT@
+ SHLEXT_VER = $(SHLEXT).$(version)
+ 
+-LIBEXT = a
++LIBEXT = la
+ 
+ # Fortran to C translator and associated flags.
+ 
+@@ -128,7 +128,7 @@
+ 	$(LD_STATIC_FLAG) $(CPICFLAG) $(LDFLAGS)
+ 
+ SH_LD = @SH_LD@
+-SH_LDFLAGS = @SH_LDFLAGS@
++SH_LDFLAGS = #@SH_LDFLAGS@
+ 
+ SONAME_FLAGS = @SONAME_FLAGS@
+ 
+@@ -284,16 +284,12 @@
+ # How to make .o files:
+ 
+ %.o : %.c
+-	$(CC) -c $(CPPFLAGS) $(ALL_CFLAGS) $< -o $@
++	${LIBTOOL} --mode=compile $(CC) -c $(CPPFLAGS) $(ALL_CFLAGS) $<
+ 
+ %.o : %.cc
+-	$(CXX) -c $(CPPFLAGS) $(ALL_CXXFLAGS) $< -o $@
++	${LIBTOOL} --mode=compile $(CXX) -c $(CPPFLAGS) $(ALL_CXXFLAGS) $<
+ 
+-pic/%.o : %.c
+-	$(CC) -c $(CPPFLAGS) $(CPICFLAG) $(ALL_CFLAGS) $< -o $@
+ 
+-pic/%.o : %.cc
+-	$(CXX) -c $(CPPFLAGS) $(CXXPICFLAG) $(ALL_CXXFLAGS) $< -o $@
+ 
+ # Here is a rule for generating dependencies for .cc files:
+ 

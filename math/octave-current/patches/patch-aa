@@ -1,0 +1,165 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/03/27 12:06:55 wennmach Exp $
+
+--- configure.orig	Fri Jan  5 18:37:51 2001
++++ configure	Mon Mar 26 16:05:52 2001
+@@ -798,9 +798,9 @@
+ ### Allow the user disable support for command line editing using GNU
+ ### readline.
+ 
+-READLINE_DIR=readline
++READLINE_DIR=""
+ USE_READLINE=true
+-LIBREADLINE='$(TOPDIR)/readline/libreadline.$(LIBEXT)'
++LIBREADLINE='${LOCALBASE}/lib/libreadline.so'
+ # Check whether --enable-readline or --disable-readline was given.
+ if test "${enable_readline+set}" = set; then
+   enableval="$enable_readline"
+@@ -820,7 +820,7 @@
+ 
+ 
+ 
+-LIBKPATHSEA='$(TOPDIR)/kpathsea/libkpathsea.$(LIBEXT)'
++LIBKPATHSEA='$(TOPDIR)/kpathsea/libkpathsea.a'
+ 
+ 
+ ### Make it possible to have Octave's array and matrix classes do bounds
+@@ -2434,7 +2434,7 @@
+   echo "$ac_t""defining F77 to be $F77" 1>&6
+ elif $use_g77; then
+   if test "$with_g77" = yes; then
+-    F77=g77
++    F77=${CC}
+   else
+     F77="$with_g77"
+   fi
+@@ -2724,13 +2724,8 @@
+ 
+ 
+ 
+-if test "$cross_compiling" = yes; then
++if true; then
+   octave_cv_f2c_f77_compat=yes
+-  if test "$octave_cv_f77_is_g77" = yes; then
+-    echo "$ac_t""assuming ${F77-f77} cross compiler is f2c compatible" 1>&6
+-  else
+-    echo "configure: warning: assuming ${F77-f77} cross compiler is f2c compatible" 1>&2
+-  fi
+ else
+   echo $ac_n "checking ${F77-f77}/f2c compatibility""... $ac_c" 1>&6
+ echo "configure:2737: checking ${F77-f77}/f2c compatibility" >&5
+@@ -2864,10 +2859,8 @@
+ %.c : %.f
+ 
+ %.o : %.f
+-	$(FC) -c $(ALL_FFLAGS) -o $@ $<
++	${LIBTOOL} --mode=compile $(FC) -c $(ALL_FFLAGS) $<
+ 
+-pic/%.o : %.f
+-	$(FC) -c $(FPICFLAG) $(ALL_FFLAGS) $< -o $@
+ 
+ EOF
+ elif $have_f2c; then
+@@ -3046,11 +3039,11 @@
+ fi
+ 
+ FORTRAN_MAIN_FLAG=
+-case "$canonical_host_type" in
+-  *-linux-*)
+-    FORTRAN_MAIN_FLAG="-u MAIN__"
+-  ;;
+-esac
++if test "${OBJECT_FMT}" = "ELF"; then
++FORTRAN_MAIN_FLAG="-u MAIN__"
++else
++FORTRAN_MAIN_FLAG="-Wl,-u_MAIN__"
++fi
+ if test -n "$FORTRAN_MAIN_FLAG"; then
+   echo "$ac_t""defining FORTRAN_MAIN_FLAG to be $FORTRAN_MAIN_FLAG" 1>&6
+ fi
+@@ -5065,7 +5058,7 @@
+ 
+ GLOB_DIR=glob
+ LIBGLOB='$(TOPDIR)/glob/glob.o $(TOPDIR)/glob/fnmatch.o'
+-GLOB_INCFLAGS='-I$(top_srcdir)/glob -I$(TOPDIR)/glob'
++GLOB_INCFLAGS='-I$(top_srcdir)/glob -I$(TOPDIR)/glob -I${LOCALBASE}/include'
+ if test "$ac_cv_header_fnmatch_h" = yes \
+   && test "$ac_cv_header_glob_h" = yes; then
+   cat > conftest.$ac_ext <<EOF
+@@ -6225,7 +6218,7 @@
+ 
+ 
+ TERMLIBS=""
+-for termlib in ncurses curses termcap terminfo termlib; do
++for termlib in curses termcap termlib; do
+   echo $ac_n "checking for tputs in -l${termlib}""... $ac_c" 1>&6
+ echo "configure:6231: checking for tputs in -l${termlib}" >&5
+ ac_lib_var=`echo ${termlib}'_'tputs | sed 'y%./+-%__p_%'`
+@@ -6276,13 +6269,11 @@
+ 
+ 
+ if test "$ac_cv_lib_termcap_tputs" = yes \
+-    || test "$ac_cv_lib_terminfo_tputs" = yes \
+-    || test "$ac_cv_lib_ncurses_tputs" = yes \
+     || test "$ac_cv_lib_curses_tputs" = yes \
+     || test "$ac_cv_lib_termlib_tputs" = yes; then
+   true
+ else
+-  warn_termlibs="I couldn't find -ltermcap, -lterminfo, -lncurses, -lcurses, or -ltermlib!"
++  warn_termlibs="I couldn't find -ltermcap, -lcurses, or -ltermlib!"
+   echo "configure: warning: $warn_termlibs" 1>&2
+ fi
+ 
+@@ -6989,19 +6980,19 @@
+     cat << \EOF > $bsd_gcc_kluge_targets_frag
+ 
+ lex.o: lex.cc 
+-	$(CXX) -c $(CPPFLAGS) $(CXXFLAGS_NO_PT_FLAGS) $<
++	${LIBTOOL} --mode=compile $(CXX) -c $(CPPFLAGS) $(CXXFLAGS_NO_PT_FLAGS) $<
+ 
+ pt-plot.o: pt-plot.cc
+-	$(CXX) -c $(CPPFLAGS) $(CXXFLAGS_NO_PT_FLAGS) $<
++	${LIBTOOL} --mode=compile $(CXX) -c $(CPPFLAGS) $(CXXFLAGS_NO_PT_FLAGS) $<
+ 
+ symtab.o: symtab.cc
+-	$(CXX) -c $(CPPFLAGS) $(CXXFLAGS_NO_PT_FLAGS) $<
++	${LIBTOOL} --mode=compile $(CXX) -c $(CPPFLAGS) $(CXXFLAGS_NO_PT_FLAGS) $<
+ 
+ toplev.o: toplev.cc
+-	$(CXX) -c $(CPPFLAGS) $(CXXFLAGS_NO_PT_FLAGS) $<
++	${LIBTOOL} --mode=compile $(CXX) -c $(CPPFLAGS) $(CXXFLAGS_NO_PT_FLAGS) $<
+ 
+ unwind-prot.o: unwind-prot.cc 
+-	$(CXX) -c $(CPPFLAGS) $(CXXFLAGS_NO_PT_FLAGS) $<
++	${LIBTOOL} --mode=compile $(CXX) -c $(CPPFLAGS) $(CXXFLAGS_NO_PT_FLAGS) $<
+ 
+ EOF
+   ;;
+@@ -7270,7 +7261,7 @@
+ # ./install, which can be erroneously created by make from ./install.sh.
+ echo $ac_n "checking for a BSD compatible install""... $ac_c" 1>&6
+ echo "configure:7273: checking for a BSD compatible install" >&5
+-if test -z "$INSTALL"; then
++if true; then
+ if eval "test \"`echo '$''{'ac_cv_path_install'+set}'`\" = set"; then
+   echo $ac_n "(cached) $ac_c" 1>&6
+ else
+@@ -7914,7 +7905,7 @@
+ done
+ 
+ ac_given_srcdir=$srcdir
+-ac_given_INSTALL="$INSTALL"
++ac_given_INSTALL="${INSTALL}"
+ 
+ trap 'rm -fr `echo "Makefile octMakefile Makeconf install-octave \
+   test/Makefile dlfcn/Makefile \
+@@ -8153,10 +8144,6 @@
+     top_srcdir="$ac_dots$ac_given_srcdir" ;;
+   esac
+ 
+-  case "$ac_given_INSTALL" in
+-  [/$]*) INSTALL="$ac_given_INSTALL" ;;
+-  *) INSTALL="$ac_dots$ac_given_INSTALL" ;;
+-  esac
+ 
+   echo creating "$ac_file"
+   rm -f "$ac_file"
