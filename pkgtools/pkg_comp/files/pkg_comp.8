@@ -1,4 +1,4 @@
-.\" $NetBSD: pkg_comp.8,v 1.1.1.1 2002/09/07 00:08:50 rh Exp $
+.\" $NetBSD: pkg_comp.8,v 1.2 2002/09/07 13:54:55 wiz Exp $
 .\"
 .\" pkg_comp - Build packages inside a clean chroot environment
 .\" Copyright (c) 2002, Julio Merino <jmmv@hispabsd.org>
@@ -41,21 +41,20 @@
 .Sh DESCRIPTION
 .Nm
 is a tool that makes easy the compilation of packages inside a clean
-chroot environment. This allows an easy tracking of exact dependancies
-and the correct behaviour of a package in a fresh system installation.
+chroot environment. This allows an easy tracking of exact dependencies
+and the correct behavior of a package in a fresh system installation.
 .Pp
 The behavior of
 .Nm
-is controlled trought a small configuration file and a target (keep
+is controlled through a small configuration file and a target (keep
 reading to learn more). The configuration file tells
 .Nm
 how to configure the new chroot environment, and the target specifies
 which action to take.
-.Pp
 .Ss What to use it for?
 You can use
 .Nm
-to achieve many goals when buildling packages. Here are some ideas:
+to achieve many goals when building packages. Here are some ideas:
 .Bl -bullet -item
 .It
 Build packages for other system versions. For example, build packages for
@@ -75,7 +74,6 @@ properly.
 Avoid autoconf's side effects by keeping a separate chroot for each
 project, like one for GNOME2 and another one for KDE3.
 .El
-.Pp
 .Sh CONTROL DIRECTORY
 .Nm
 needs to store several information when it is running. Instead of
@@ -83,7 +81,6 @@ using normal system trees, it uses a special directory inside the
 chroot to avoid polluting the system. It stores there scripts, object
 files, built packages, etc.  This directory is located by default in
 .Pa $DESTDIR/pkg_comp .
-.Pp
 .Sh CONFIGURATION
 With
 .Nm
@@ -101,7 +98,7 @@ variables. The default values shown here are those written in the
 template when issuing a maketemplate.
 .Bl -tag -width indent
 .It BUILD_TARGET
-The target to use when buildling packages. It can contain any target
+The target to use when building packages. It can contain any target
 supported by the pkgsrc system, but reasonable values are:
 .Ql install
 and
@@ -174,35 +171,35 @@ chroot. This takes care of setting up
 .Pa /etc/profile
 and
 .Pa /etc/csh.login
-for xpkgwedge to work. Has no effect if X is unconfiguerd. Defaults to
+for xpkgwedge to work. Has no effect if X is unconfigured. Defaults to
 .Ql yes .
 .El
-.Ss Mounted filesystems
+.Ss Mounted file systems
 In order to avoid duplicating huge system trees,
 .Nm
-takes advantadge of filesystem layers. By default, it uses
+takes advantage of file system layers. By default, it uses
 .Xr mount_null 8 ,
-which duplicates a filesystem tree into another directory; although
+which duplicates a file system tree into another directory; although
 you may want to use
 .Xr mount_union 8 ,
 or even
 .Xr mount_overlay 8 .
 If the
-content of these variables is empty, that filesystem is not mounted.
+content of these variables is empty, that file system is not mounted.
 .Pp
 You can control which layer to use and which options you want with
 special configuration options, as explained below.
 .Pp
-These filesystems are mounted before entering the chroot and unmounted
-after exiting. In order to know if filesystems are mounted or not, the
+These file systems are mounted before entering the chroot and unmounted
+after exiting. In order to know if file systems are mounted or not, the
 program uses a temporary file, called
 .Pa $DESTDIR/pkg_comp/tmp/mount.stat ,
 which controls the number of
 .Nm
 processes using the chroot environment. If some of them crashes
 unexpectedly and you notice it does not try to unmount the
-filesystems, this status file may get out of sync. Be sure to check if
-NO filesystems are mounted when issuing a
+file systems, this status file may get out of sync. Be sure to check if
+NO file systems are mounted when issuing a
 .Sy removeroot .
 .Bl -tag -width indent
 .It REAL_DISTFILES
@@ -220,7 +217,7 @@ Mount options. Defaults to
 .Sy -t null -o ro .
 .It REAL_PKGSRC
 The pkgsrc tree. This can be useful if you want to use several pkgsrc trees
-independantly. Defaults to
+independently. Defaults to
 .Pa /usr/pkgsrc .
 .It REAL_PKGSRC_OPTS
 Mount options. Defaults to
@@ -233,7 +230,6 @@ like sysutils/aperture. Defaults to
 Mount options. Defaults to
 .Sy -t null -o rw .
 .El
-.Pp
 .Sh TARGETS
 A target specifies what
 .Nm
@@ -275,22 +271,20 @@ This executes several targets automatically, setting
 .Sy BUILD_TARGET
 to package. The order is: makeroot, build and removeroot. This is
 useful to create binary packages of several pkgsrc and their
-dependancies automatically. For this to be useful, you need to set
+dependencies automatically. For this to be useful, you need to set
 .Sy REAL_PACKAGES
 and use
 .Sy MAKE_PACKAGES
-or pass package names trought the command line.
+or pass package names through the command line.
 .El
-.Pp
 .Sh NOTES
 This program uses nullfs to create virtual copies of real trees inside the
 chroot environment.
-.Pp
-.Sh AUTHORS
-Julio Merino <jmmv@hispabsd.org>
 .Sh SEE ALSO
 .Xr pkg_delete 1 ,
 .Xr packages 7 ,
-.Xr mount_null 8 .
+.Xr mount_null 8
+.Sh AUTHORS
+.An Julio Merino Aq jmmv@hispabsd.org
 .Sh BUGS
-Probably many, specially error checking.
+Probably many, especially error checking.
