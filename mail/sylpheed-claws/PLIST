@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2004/07/18 09:56:47 recht Exp $
+@comment $NetBSD: PLIST,v 1.15 2004/10/05 15:37:45 adam Exp $
 bin/sylpheed
 include/sylpheed-claws/account.h
 include/sylpheed-claws/action.h
@@ -28,6 +28,7 @@ include/sylpheed-claws/common/log.h
 include/sylpheed-claws/common/md5.h
 include/sylpheed-claws/common/mgutils.h
 include/sylpheed-claws/common/nntp.h
+include/sylpheed-claws/common/partial_download.h
 include/sylpheed-claws/common/passcrypt.h
 include/sylpheed-claws/common/plugin.h
 include/sylpheed-claws/common/prefs.h
@@ -129,7 +130,6 @@ include/sylpheed-claws/news.h
 include/sylpheed-claws/news_gtk.h
 include/sylpheed-claws/noticeview.h
 include/sylpheed-claws/passphrase.h
-include/sylpheed-claws/pgpmime.h
 include/sylpheed-claws/pine.h
 include/sylpheed-claws/pop.h
 include/sylpheed-claws/prefs_account.h
@@ -144,11 +144,13 @@ include/sylpheed-claws/prefs_folder_item.h
 include/sylpheed-claws/prefs_fonts.h
 include/sylpheed-claws/prefs_gtk.h
 include/sylpheed-claws/prefs_matcher.h
+include/sylpheed-claws/prefs_msg_colors.h
 include/sylpheed-claws/prefs_spelling.h
 include/sylpheed-claws/prefs_summary_column.h
 include/sylpheed-claws/prefs_template.h
 include/sylpheed-claws/prefs_themes.h
 include/sylpheed-claws/prefs_toolbar.h
+include/sylpheed-claws/prefs_wrapping.h
 include/sylpheed-claws/privacy.h
 include/sylpheed-claws/procheader.h
 include/sylpheed-claws/procmime.h
@@ -162,7 +164,6 @@ include/sylpheed-claws/rfc2015.h
 include/sylpheed-claws/select-keys.h
 include/sylpheed-claws/send_message.h
 include/sylpheed-claws/setup.h
-include/sylpheed-claws/sgpgme.h
 include/sylpheed-claws/sourcewindow.h
 include/sylpheed-claws/ssl_manager.h
 include/sylpheed-claws/statusbar.h
@@ -175,6 +176,7 @@ include/sylpheed-claws/undo.h
 include/sylpheed-claws/unmime.h
 include/sylpheed-claws/vcard.h
 lib/pkgconfig/sylpheed-claws.pc
+lib/sylpheed-claws/plugins/pgpmime.la
 man/man1/sylpheed.1
 share/examples/sylpheed/mime.types
 ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/sylpheed-claws.mo
