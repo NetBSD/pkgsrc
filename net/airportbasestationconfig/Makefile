@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2002/03/29 15:41:46 tron Exp $
+# $NetBSD: Makefile,v 1.11 2002/03/31 20:25:04 dmcmahill Exp $
 
 DISTNAME=	configurator_152
 PKGNAME=	${BINNAME}-1.5.2
@@ -14,6 +14,8 @@ USE_JAVA=	YES
 
 PLIST_SUBST+=	BINNAME=${BINNAME} JARNAME=${JARNAME}
 
+ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-*-powerpc
+
 BINNAME=	airportbasestationconfig
 DOCDIR=		${PREFIX}/share/doc/${BINNAME}
 JARNAME=	AirportBaseStationConfig.jar
@@ -26,6 +28,8 @@ LIBDIR=		${PREFIX}/lib/${BINNAME}
 PKG_JVM=	sun-jdk
 .elif ${MACHINE_ARCH} == powerpc
 PKG_JVM=	blackdown-jdk13
+.else
+PKG_JVM=	none
 .endif
 
 .if ${PKG_JVM} == blackdown-jdk13
