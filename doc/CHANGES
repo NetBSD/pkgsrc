@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7764 2004/11/08 11:51:51 shannonjr Exp $
+$NetBSD: CHANGES,v 1.7765 2004/11/08 11:57:11 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5159,3 +5159,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gentoo to 0.11.53 [adam 2004-11-08]
 	Updated dillo to 0.8.3 [adam 2004-11-08]
 	Updated librfuncs 1.0.5 [shannonjr 2004-11-08]
+	Updated cdl3 to 1.2.5 [adam 2004-11-08]
