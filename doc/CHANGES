@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5362 2004/03/29 20:30:57 xtraeme Exp $
+$NetBSD: CHANGES,v 1.5363 2004/03/29 22:20:32 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1594,3 +1594,8 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated subversion to 1.0.1 [epg 2004-03-29]
 	Updated trac to 0.6 [epg 2004-03-29]
 	Added vls-0.5.6 [xtraeme 2004-03-29]
+	Renamed gimp to gimp1 [xtraeme 2004-03-29]
+	Renamed gimp-base to gimp1-base [xtraeme 2004-03-29]
+	Renamed gimp-data to gimp1-data [xtraeme 2004-03-29]
+	Renamed gimp-wideangle to gimp1-wideangle [xtraeme 2004-03-29]
+	Updated gimp to 2.0.0 [xtraeme 2004-03-29]
