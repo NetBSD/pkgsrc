@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 1998/09/12 22:13:02 frueauf Exp $
+# $NetBSD: Makefile,v 1.3 2000/01/03 20:58:53 christos Exp $
 
-DISTNAME=	mush-7.2.6.b4
+DISTNAME=	mush-7.2.6.b4.pl1
 CATEGORIES=	mail
 MASTER_SITES=	ftp://cse.ogi.edu/pub/mush/ \
 		ftp://cse.ogi.edu/pub/mush/CONTRIB/
@@ -23,7 +23,7 @@ MIRROR_DISTFILE= no
 NO_WRKSUBDIR=	yes
 
 post-extract:
-	@${ECHO} "===>  Applying mush-7.2.6/beta4 patches"
+	@${ECHO} "===>  Applying mush-7.2.6/beta4.pl1 patches"
 	@(cd ${WRKDIR}; \
 	for i in ${STD_PATCH_FILES}; do \
 		${PATCH} < ${_DISTDIR}/$$i; \
@@ -37,6 +37,6 @@ post-extract:
 
 pre-configure:
 	${SED} -e 's:__PREFIX:'${PREFIX}':g'< ${WRKSRC}/config.h-dist > ${WRKSRC}/config.h
-	${SED} -e 's:__PREFIX:'${PREFIX}':g'< ${WRKSRC}/makefile.netbsd > ${WRKSRC}/Makefile
+	${SED} -e 's:__PREFIX:'${PREFIX}':g'< ${WRKSRC}/makefile.${LOWER_OPSYS} > ${WRKSRC}/Makefile
 
 .include "../../mk/bsd.pkg.mk"
