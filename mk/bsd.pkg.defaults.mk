@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.158 2003/06/30 07:34:37 jlam Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.159 2003/07/02 16:07:01 grant Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -1162,7 +1162,9 @@ MAJORDOMO_USER?= majordom
 # flags to be passed to makeinfo(1), if any.  Warning: only use if you
 # know what you're doing, may break PLISTs.
 # Possible: any valid flag for makeinfo(1)
-# Default: defaults for various machine_archs may be set in mk/defs.${OPSYS}.mk
+# Default: may set info files size for consistency across platforms and
+# makeinfo version, also various machine_archs arguments may be set in
+# mk/defs.${OPSYS}.mk with the _OPSYS_MAKEINFO_ARGS variable.
 
 MOZILLA_USE_XFT?=	NO
 # Used by mozilla packages to enable Xft support where available.
