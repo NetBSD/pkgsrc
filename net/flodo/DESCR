@@ -1,0 +1,11 @@
+i frequently want to know what the top few network flows are... and yet
+there didn't seem to be any tool which was as simple to use as "vmstat"
+or "iostat".  this tool fills that void for me.
+
+with the default options flodo will dump the top 20 flows every 5 seconds.
+
+flodo is quite basic at this point, understanding only ethernet frames,
+ipv4, tcp, and udp.
+
+flodo can't even do reverse DNS and doesn't bother mapping port numbers
+to services or display icmp or ethernet protocol names.
