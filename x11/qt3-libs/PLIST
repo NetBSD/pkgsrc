@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2002/08/25 18:40:45 jlam Exp $
+@comment $NetBSD: PLIST,v 1.6 2002/08/27 09:13:49 skrll Exp $
 qt3/bin/moc
 qt3/include/jri.h
 qt3/include/jri_md.h
@@ -27,9 +27,8 @@ qt3/include/private/qmutex_p.h
 qt3/include/private/qpainter_p.h
 qt3/include/private/qpluginmanager_p.h
 qt3/include/private/qpsprinter_p.h
-qt3/include/private/qremoteinterface_p.h
-qt3/include/private/qremotemessage_p.h
 qt3/include/private/qrichtext_p.h
+qt3/include/private/qsharedmemory_p.h
 qt3/include/private/qsqldriverinterface_p.h
 qt3/include/private/qsqlmanager_p.h
 qt3/include/private/qstyleinterface_p.h
@@ -134,6 +133,7 @@ qt3/include/qframe.h
 qt3/include/qftp.h
 qt3/include/qgarray.h
 qt3/include/qgb18030codec.h
+qt3/include/qgbkcodec.h
 qt3/include/qgcache.h
 qt3/include/qgdict.h
 qt3/include/qgeneric.h
@@ -260,8 +260,6 @@ qt3/include/qrangect.h
 qt3/include/qrect.h
 qt3/include/qregexp.h
 qt3/include/qregion.h
-qt3/include/qremotefactory.h
-qt3/include/qremoteplugin.h
 qt3/include/qrtlcodec.h
 qt3/include/qscrbar.h
 qt3/include/qscrollbar.h
@@ -274,7 +272,6 @@ qt3/include/qsessionmanager.h
 qt3/include/qsettings.h
 qt3/include/qsgistyle.h
 qt3/include/qshared.h
-qt3/include/qsharedmemory.h
 qt3/include/qsignal.h
 qt3/include/qsignalmapper.h
 qt3/include/qsignalslotimp.h
@@ -386,6 +383,7 @@ qt3/plugins/imageformats/libqmng.a
 qt3/plugins/imageformats/libqmng.la
 qt3/plugins/imageformats/libqmng.so
 @dirrm qt3/plugins/imageformats
+@dirrm qt3/plugins
 @dirrm qt3/lib
 @dirrm qt3/include/private
 @dirrm qt3/include
