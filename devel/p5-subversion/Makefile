@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/01/13 21:17:04 epg Exp $
+# $NetBSD: Makefile,v 1.6 2004/01/21 10:09:09 jlam Exp $
 
 PKGNAME=	p5-subversion-${SVNVER}
 COMMENT=	Perl bindings for Subversion
@@ -6,8 +6,6 @@ COMMENT=	Perl bindings for Subversion
 .include "../../devel/subversion/Makefile.common"
 
 CONFIGURE_ENV+=		PERL=${PERL5}
-
-BUILDLINK_PKGSRCDIR.perl=      ../../lang/perl58
 
 PERL5_REQD=		5.8
 PERL_DIR=		${WRKSRC}/subversion/bindings/swig/perl
