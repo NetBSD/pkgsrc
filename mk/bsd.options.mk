@@ -1,4 +1,4 @@
-# $NetBSD: bsd.options.mk,v 1.3 2004/08/04 23:25:14 jlam Exp $
+# $NetBSD: bsd.options.mk,v 1.4 2004/08/05 02:10:20 jlam Exp $
 #
 # This Makefile fragment provides boilerplate code for standard naming
 # conventions for handling per-package build options.
@@ -157,11 +157,6 @@ PKG_FAIL_REASON+=	"\"${_opt_}\" is not a supported build option."
 .    endif
 .  endif
 .endfor
-
-# Store the result in the +BUILD_INFO file so we can query for the build
-# options using "pkg_info -Q PKG_OPTIONS <pkg>".
-#
-BUILD_DEFS+=		PKG_OPTIONS
 
 .PHONY: pre-install-depends supported-options-message
 pre-install-depends: supported-options-message
