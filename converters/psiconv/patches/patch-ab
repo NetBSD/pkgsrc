@@ -1,7 +1,8 @@
-$NetBSD: patch-ab,v 1.1.1.1 1999/12/06 01:58:07 sakamoto Exp $
+$NetBSD: patch-ab,v 1.2 2001/12/19 20:08:51 wiz Exp $
 
---- ./Makefile.am.orig	Wed Oct 27 23:03:37 1999
-+++ ./Makefile.am	Mon Dec  6 10:02:34 1999
-@@ -1 +1 @@
--SUBDIRS = compat lib psiconv formats docs
+--- Makefile.am.orig	Sun Jun 17 20:52:33 2001
++++ Makefile.am
+@@ -1,2 +1,2 @@
+-SUBDIRS = compat lib program formats extra docs
 +SUBDIRS = compat lib psiconv docs
+ EXTRA_DIST=autogen.sh
