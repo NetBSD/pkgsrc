@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.5 2002/08/25 19:23:32 jlam Exp $
+$NetBSD: patch-ae,v 1.6 2002/12/24 04:07:34 wiz Exp $
 
---- demos/gtk-demo/Makefile.in.orig	Sun Jun 16 01:16:32 2002
+--- demos/gtk-demo/Makefile.in.orig	Sat Dec 21 02:35:05 2002
 +++ demos/gtk-demo/Makefile.in
-@@ -216,6 +216,7 @@
+@@ -210,6 +210,7 @@ DEPS = \
  
  
  LDADDS = @STRIP_BEGIN@ 							\
