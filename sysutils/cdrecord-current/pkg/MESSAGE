@@ -1,9 +1,0 @@
----------------------------------------------------------------------------
-  You may want to create a link /dev/suB-D-L to point to your system's
-  CD-R device (B, D  and L are the number of the SCSI bus, the device ID
-  and LUN of your CD writer). For e.g. a CD-R device named "cd0" connected
-  as unit 3 lun 0 to the first SCSI bus use this command:
-
-  ln -s cd0d /dev/su0-3-0
-
----------------------------------------------------------------------------
