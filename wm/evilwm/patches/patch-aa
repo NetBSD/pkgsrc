@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.6 2003/01/30 14:27:47 salo Exp $
+$NetBSD: patch-aa,v 1.7 2003/04/24 21:15:18 jmmv Exp $
 
 --- Makefile.orig	Fri Dec  6 07:35:00 2002
 +++ Makefile
@@ -13,7 +13,7 @@ $NetBSD: patch-aa,v 1.6 2003/01/30 14:27:47 salo Exp $
 +prefix = ${PREFIX}
  
 -XROOT    = /usr/X11R6
-+XROOT    = ${X11PREFIX}
++XROOT    = ${X11BASE}
  INCLUDES = -I$(XROOT)/include
  LDPATH   = -L$(XROOT)/lib
  LIBS     = -lX11
