@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2000/01/09 01:19:11 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2000/02/21 21:23:28 jlam Exp $
 #
 
 DISTNAME=	se
-PKGNAME=	smalleiffel-0.78
+PKGNAME=	smalleiffel-0.77
 WRKSRC=		${WRKDIR}/SmallEiffel
 CATEGORIES=	lang
 MASTER_SITES=	ftp://ftp.loria.fr/pub/loria/genielog/SmallEiffel/ \
@@ -14,76 +14,82 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	jlam@netbsd.org
 HOMEPAGE=	http://smalleiffel.loria.fr/
 
-DOCDIR=		${PREFIX}/share/doc/smalleiffel
-EGDIR=		${PREFIX}/share/examples/smalleiffel
-LIBDIR=		${PREFIX}/share/smalleiffel
-LIBEXECDIR=	${PREFIX}/libexec/smalleiffel
+MAKE_ENV+=	SmallEiffel=${WRKSRC}/sys/system.se
+ALL_TARGET=	./bin/compile_to_c
 
-BINNAME=	smalleiffel
-SE_BINARIES=	clean compile compile_to_c compile_to_jvm \
-		finder pretty print_jvm_class short
+DIST_SUBDIR=	${PKGNAME}
+DOCDIR=		share/doc/smalleiffel
+EGDIR=		share/examples/smalleiffel
+LIBDIR=		share/smalleiffel
+LIBEXECDIR=	libexec/smalleiffel
+
+PLIST_SRC=	${WRKDIR}/.PLIST_SRC
 
 post-extract:
-	${FIND} ${WRKSRC} -type f -print | xargs ${CHMOD} 644
-	${FIND} ${WRKSRC} -name ".gdb*" -print | xargs ${RM} -f
-	cd ${WRKSRC}/man; ${RM} -f *.txt
-	cd ${WRKSRC}/sys; ${RM} -f compiler.se gc loadpath.* system.se
-	cd ${FILESDIR}; \
-		${CP} -f compiler.se gc system.se ${WRKSRC}/sys
-	${SED} -e "s,@@SE_LIB@@,${LIBDIR},g" \
-		${FILESDIR}/loadpath.UNIX.in > ${WRKSRC}/sys/loadpath.UNIX
+	${FIND} ${WRKSRC} -type f -print0 | xargs -0 ${CHMOD} 644
 
-do-build:
-	@${ECHO} '*** Building Eiffel compiler system (pass 1) ***'
-	@cd ${WRKSRC}/bin_c; \
-	for file in ${SE_BINARIES}; do \
-		${ECHO} Building $$file...; \
-		${SH} $$file.make; \
-		${CP} -f ${WRKSRC}/bin_c/$$file ${WRKSRC}/bin/$$file; \
-	done; \
-	${RM} -f *
-
-	@${ECHO} '*** Building Eiffel compiler system (pass 2) ***'
-	@cd ${WRKSRC}/bin_c; \
-	(${ECHO} ${WRKSRC}/lib_std/; \
-	 ${ECHO} ${WRKSRC}/lib_rand/; \
-	 ${ECHO} ${WRKSRC}/lib_se/) > loadpath.se; \
-	for file in ${SE_BINARIES}; do \
-		${ECHO} Building $$file...; \
-		SmallEiffel=${WRKSRC}/sys/system.se ${WRKSRC}/bin/compile \
-			-boost -no_gc -no_split -O2 -o $$file $$file; \
-	done
+post-patch:
+	${CHMOD} +x ${WRKSRC}/misc/GC.SH
 
 post-build:
-	${SED}	-e "s,@@SE_LIB@@,${LIBDIR},g" \
-		-e "s,@@SE_LIBEXEC@@,${LIBEXECDIR},g" \
-		${FILESDIR}/${BINNAME}.sh > ${WRKDIR}/${BINNAME}.sh
+	${SED}	-e "s,@@SE_LIB@@,${PREFIX}/${LIBDIR},g" \
+		-e "s,@@SE_LIBEXEC@@,${PREFIX}/${LIBEXECDIR},g" \
+		${FILESDIR}/smalleiffel.sh > ${WRKDIR}/smalleiffel.sh
+	${SED}	-e "s,@@SE_LIB@@,${PREFIX}/${LIBDIR},g" \
+		${FILESDIR}/loadpath.UNIX.in > ${WRKDIR}/loadpath.UNIX
 
 pre-install:
-	${FIND} ${WRKSRC} -name "*.orig" -print | xargs ${RM} -f
+	${RM} -f ${WRKSRC}/sys/loadpath.*
+	${FIND} ${WRKSRC} -name ".gdb*" -print0 | xargs -0 ${RM} -f
+	${FIND} ${WRKSRC} -name "*.orig" -print0 | xargs -0 ${RM} -f
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKDIR}/${BINNAME}.sh ${PREFIX}/bin/${BINNAME}
-	${INSTALL_PROGRAM_DIR} ${LIBEXECDIR}
-	for file in ${SE_BINARIES}; do \
-		${INSTALL_PROGRAM} ${WRKSRC}/bin_c/$$file ${LIBEXECDIR}; \
+	${INSTALL_SCRIPT} ${WRKDIR}/smalleiffel.sh ${PREFIX}/bin/smalleiffel
+
+	${INSTALL_PROGRAM_DIR} ${PREFIX}/${LIBEXECDIR}
+	${INSTALL_PROGRAM} ${WRKSRC}/bin/* ${PREFIX}/${LIBEXECDIR}
+
+	${INSTALL_DATA_DIR} ${PREFIX}/${LIBDIR}
+	cd ${WRKSRC}; for dir in \
+	    lib_iterator lib_number lib_random lib_se lib_std short sys; do \
+		${PAX} -rw $${dir} ${PREFIX}/${LIBDIR}; \
 	done
-	${INSTALL_DATA_DIR} ${LIBDIR}
-	cd ${WRKSRC}; \
-	for dir in lib_rand lib_se lib_std short sys; do \
-		${PAX} -rw $$dir ${LIBDIR}; \
+	${INSTALL_DATA} ${WRKDIR}/loadpath.UNIX ${PREFIX}/${LIBDIR}/sys
+	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/${LIBDIR}
+
+	${INSTALL_DATA_DIR} ${PREFIX}/${DOCDIR}
+	${INSTALL_DATA} \
+		${WRKSRC}/COPYING \
+		${WRKSRC}/misc/WeNeedFeedBack.txt \
+		${PREFIX}/${DOCDIR}
+	cd ${WRKSRC}/misc; \
+		${INSTALL_DATA} \
+			HISTORY.html NOT_YET_IMPLEMENTED.html \
+			THANKS.html people.html \
+			${PREFIX}/${DOCDIR}
+	cd ${WRKSRC}/man; \
+		${INSTALL_DATA} Eiffel.FAQ *.html *.gif ${PREFIX}/${DOCDIR}
+
+	${INSTALL_DATA_DIR} ${PREFIX}/${EGDIR}
+	cd ${WRKSRC}; for dir in contrib lib_show; do \
+		${PAX} -rw $${dir} ${PREFIX}/${EGDIR}; \
 	done
-	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${LIBDIR}
-	${INSTALL_DATA_DIR} ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/COPYING ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/misc/NOT_YET_IMPLEMENTED.txt ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/misc/WeNeedFeedBack.txt ${DOCDIR}
-	cd ${WRKSRC}/man; ${INSTALL_DATA} *.html *.gif *.FAQ ${DOCDIR}
-	${INSTALL_DATA_DIR} ${EGDIR}
-	cd ${WRKSRC}; \
-	for dir in contrib lib_show; do \
-		${PAX} -rw $$dir ${EGDIR}; \
-	done
-	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${EGDIR}
+	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/${EGDIR}
+
+post-install:
+	${RM} -f ${PLIST_SRC}
+	${CAT} ${PKGDIR}/PLIST > ${PLIST_SRC}
+	( cd ${PREFIX}; \
+	  ${FIND} ${LIBEXECDIR} -type f -print; \
+	  ${FIND} ${LIBDIR} -type f -print; \
+	  ${FIND} ${DOCDIR} -type f -print; \
+	  ${FIND} ${EGDIR} -type f -print; \
+	) | sort >> ${PLIST_SRC}
+	( cd ${PREFIX}; \
+	  ${FIND} ${LIBEXECDIR} -type d; \
+	  ${FIND} ${LIBDIR} -type d; \
+	  ${FIND} ${DOCDIR} -type d; \
+	  ${FIND} ${EGDIR} -type d; \
+	) | sort -r | ${SED} "s,^,@dirrm ," >> ${PLIST_SRC}
 
 .include "../../mk/bsd.pkg.mk"
