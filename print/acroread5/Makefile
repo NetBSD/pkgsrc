@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2003/05/04 18:04:21 jmmv Exp $
+# $NetBSD: Makefile,v 1.9 2003/05/05 13:34:45 jmmv Exp $
 
 DISTNAME=	acroread5	# Overridden below
-PKGNAME=	acroread5-5.06
+PKGNAME=	acroread-5.06
 PKGREVISION=	1
 WRKSRC=		${WRKDIR}
 CATEGORIES=	print
