@@ -1,0 +1,38 @@
+--- ./pnm/pnmtotiff.c.orig	Sun Aug 13 00:32:57 1995
++++ ./pnm/pnmtotiff.c	Sun Aug 13 00:34:21 1995
+@@ -196,6 +196,7 @@
+ 	    samplesperpixel = 1;
+ 	    bitspersample = pm_maxvaltobits( maxval );
+ 	    photometric = PHOTOMETRIC_MINISBLACK;
++	    i = 8 / bitspersample;
+ 	    bytesperrow = ( cols + i - 1 ) / i;
+ 	    }
+ 	else
+@@ -276,20 +277,20 @@
+ 		for ( col = 0, xP = xels[row], tP = buf;
+ 		      col < cols; ++col, ++xP )
+ 		    {
+-		    register unsigned char s;
++		    register xelval s;
+ 
+ 		    s = PPM_GETR( *xP );
+ 		    if ( maxval != 255 )
+-			s = (long) s * 255 / maxval;
+-		    *tP++ = s;
++			s = s * 255 / maxval;
++		    *tP++ = (unsigned char)s;
+ 		    s = PPM_GETG( *xP );
+ 		    if ( maxval != 255 )
+-			s = (long) s * 255 / maxval;
+-		    *tP++ = s;
++			s = s * 255 / maxval;
++		    *tP++ = (unsigned char)s;
+ 		    s = PPM_GETB( *xP );
+ 		    if ( maxval != 255 )
+-			s = (long) s * 255 / maxval;
+-		    *tP++ = s;
++			s = s * 255 / maxval;
++		    *tP++ = (unsigned char)s;
+ 		    }
+ 		}
+ 	    else
