@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2000/06/20 23:20:13 jlam Exp $
+@comment $NetBSD: PLIST,v 1.26 2000/06/25 19:06:21 rh Exp $
 bin/dns-helper
 bin/gconfigger
 bin/gnome-bug
@@ -29,6 +29,7 @@ include/gtk-xmhtml/toolkit.h
 include/libart_lgpl/art_affine.h
 include/libart_lgpl/art_alphagamma.h
 include/libart_lgpl/art_bpath.h
+include/libart_lgpl/art_config.h
 include/libart_lgpl/art_filterlevel.h
 include/libart_lgpl/art_gray_svp.h
 include/libart_lgpl/art_misc.h
@@ -534,7 +535,10 @@ share/locale/ro/LC_MESSAGES/gnome-libs.mo
 share/locale/ru/LC_MESSAGES/gnome-libs.mo
 share/locale/sk/LC_MESSAGES/gnome-libs.mo
 share/locale/sl/LC_MESSAGES/gnome-libs.mo
+share/locale/sp/LC_MESSAGES/gnome-libs.mo
+share/locale/sr/LC_MESSAGES/gnome-libs.mo
 share/locale/sv/LC_MESSAGES/gnome-libs.mo
+share/locale/tr/LC_MESSAGES/gnome-libs.mo
 share/locale/wa/LC_MESSAGES/gnome-libs.mo
 share/locale/zh_TW.Big5/LC_MESSAGES/gnome-libs.mo
 share/mime-info/gnome.mime
