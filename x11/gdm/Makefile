@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2000/11/19 19:40:17 rh Exp $
+# $NetBSD: Makefile,v 1.15 2000/11/19 19:42:59 rh Exp $
 
 DISTNAME=	gdm-2.0beta4
 PKGNAME=	gdm-2.0b4
@@ -47,8 +47,9 @@ GDMCFGFILES=	Default:Init.default/Default \
 
 .include "../../mk/bsd.prefs.mk"
 
-.if !defined(USE_PAM)
+.if defined(USE_PAM)
 DEPENDS+=	PAM-*:../../security/PAM
+.else
 
 post-patch:
 	cd ${WRKSRC} &&					\
