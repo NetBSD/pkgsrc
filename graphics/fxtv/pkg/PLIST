@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/05/07 20:34:13 tron Exp $
+bin/fxtv
+lib/X11/app-defaults/Fxtv
+lib/X11/fxtv/bitmaps/mini-camera.xpm
+lib/X11/fxtv/bitmaps/mini-down.xbm
+lib/X11/fxtv/bitmaps/mini-resize.xpm
+lib/X11/fxtv/bitmaps/mini-sound.xbm
+lib/X11/fxtv/bitmaps/mini-up.xbm
+lib/X11/fxtv/bitmaps/radio_off.xbm
+lib/X11/fxtv/bitmaps/radio_on.xbm
+lib/X11/fxtv/README
+lib/X11/fxtv/fxtv_cnvt.sh
+man/man1/fxtv.1
+@dirrm lib/X11/fxtv/bitmaps
+@dirrm lib/X11/fxtv
