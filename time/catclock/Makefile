@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2004/04/11 20:40:15 snj Exp $
+# $NetBSD: Makefile,v 1.12 2004/04/20 19:41:35 minskim Exp $
 #
 
 DISTNAME=	catclock
 PKGNAME=	catclock-0.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11 time
 MASTER_SITES=	http://www2.cenaath.cena.dgac.fr/ftp/decwindows/ \
 		ftp://ftp2.cnam.fr/decwindows/ \
@@ -17,7 +17,7 @@ COMMENT=	Variant of the MIT xclock with a "cat" mode
 USE_BUILDLINK3=	yes
 USE_IMAKE=	yes
 
-post-extract:
+post-patch:
 	${RM} ${WRKSRC}/makefile ${WRKSRC}/pwd.h
 	${MV} ${WRKSRC}/xclock.man ${WRKSRC}/catclock.man
 	${SED} 's/^XClock/Catclock/g' <${WRKSRC}/xclock.ad >${WRKSRC}/Catclock.ad
