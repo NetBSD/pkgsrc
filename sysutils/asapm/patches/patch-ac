@@ -1,0 +1,12 @@
+$NetBSD: patch-ac,v 1.1 1999/07/12 00:04:58 jlam Exp $
+
+--- autoconf/Makefile.defines.in.orig	Tue Feb 23 04:56:05 1999
++++ autoconf/Makefile.defines.in	Sun Jul 11 04:58:26 1999
+@@ -28,6 +28,7 @@
+ INCS_XPM	= @XPM_CFLAGS@
+ INCLUDES	= $(INCS_X) $(INCS_XPM)
+ 
++LDFLAGS		= @LDFLAGS@
+ LIBS_X		= @X_LIBS@ @x_libs@
+ LIBS_XPM	= 
+ LIBS_JPEG	= @JPEG_LIB@

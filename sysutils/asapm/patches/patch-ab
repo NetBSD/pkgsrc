@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 1999/07/12 00:04:58 jlam Exp $
+
+--- autoconf/Makefile.common.in.orig	Sun Jul 11 04:53:01 1999
++++ autoconf/Makefile.common.in	Sun Jul 11 04:57:53 1999
+@@ -34,7 +34,7 @@
+ 		done
+ 
+ $(PROG):        $(OBJS)
+-		$(CC) $(OBJS) $(LIBRARIES) $(EXTRA_LIBRARIES) -o $(@)
++		$(CC) -o $(@) $(OBJS) $(LDFLAGS) $(LIBRARIES) $(EXTRA_LIBRARIES)
+ 
+ .c.o:
+ 		$(CC) $(CCFLAGS) $(EXTRA_DEFINES) $(INCLUDES) $(EXTRA_INCLUDES) -c $*.c
