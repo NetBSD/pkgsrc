@@ -1,3 +1,0 @@
-Xpkgwedge, not a "real" program in the traditional sense, is a hack that
-allows NetBSD users to compile X11 pkgs from pkgsrc and install them in
-/usr/pkg - even if they use Imake.
