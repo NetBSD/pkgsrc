@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1475 2004/07/06 22:49:16 wiz Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1476 2004/07/25 06:51:33 grant Exp $
 #
 # This file is in the public domain.
 #
@@ -874,7 +874,6 @@ PKG_ARGS_BINPKG+=	-E	# create an empty views file in the binpkg
 .endif
 
 PKG_SUFX?=		.tgz
-#PKG_SUFX?=		.tbz		# bzip2(1) pkgs
 
 # Define SMART_MESSAGES in /etc/mk.conf for messages giving the tree
 # of dependencies for building, and the current target.
