@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/04/09 00:10:25 minskim Exp $
+# $NetBSD: Makefile,v 1.7 2004/04/09 00:10:59 minskim Exp $
 #
 
 DISTNAME=	xscavenger-1.4.4
@@ -10,12 +10,16 @@ MAINTAINER=	wiz@NetBSD.org
 HOMEPAGE=	http://www.xdr.com/dash/scavenger.html
 COMMENT=	Loderunner clone with sound for X11
 
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
 WRKSRC=		${WRKDIR}/${DISTNAME}/src
 USE_BUILDLINK3=	yes
 USE_IMAKE=	yes
 NO_INSTALL_MANPAGES=	yes
 
 CPPFLAGS+=	-DSOUNDDEV=\\\"${DEVOSSSOUND}\\\"
+
+INSTALLATION_DIRS=	man/man6
 
 .include "../../mk/ossaudio.buildlink3.mk"
 
