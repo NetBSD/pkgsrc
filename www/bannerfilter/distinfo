@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/08/14 12:49:45 mjl Exp $
+
+SHA1 (bannerfilter-1.31.tar.gz) = 734277149b5180b3213e558ac02fe5f465103378
+Size (bannerfilter-1.31.tar.gz) = 36294 bytes
+SHA1 (patch-aa) = 6ebc088bc68f650dbcc7d70a9ee8ab8dbe0e1c14
