@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.12 2004/10/01 13:35:53 adam Exp $
+$NetBSD: patch-aa,v 1.13 2004/11/26 10:31:08 adam Exp $
 
---- Makefile.in.orig	Mon Mar  1 19:04:48 2004
+--- Makefile.in.orig	2004-11-19 18:50:17.000000000 +0000
 +++ Makefile.in
 @@ -80,7 +80,7 @@ MANN_INSTALL_DIR	= $(MAN_INSTALL_DIR)/ma
  # The directory containing the Tcl sources and headers appropriate
@@ -41,7 +41,7 @@ $NetBSD: patch-aa,v 1.12 2004/10/01 13:35:53 adam Exp $
  TK_SHLIB_LD_EXTRAS	= @TK_SHLIB_LD_EXTRAS@
 @@ -274,7 +275,8 @@ TOOL_DIR		= @TCL_SRC_DIR@/tools
  # should be compressed and linked with softlinks
- MKLINKS_FLAGS           = @MKLINKS_FLAGS@
+ MAN_FLAGS		= @MAN_FLAGS@
  
 -CC			= @CC@
 +CC			= ${LIBTOOL} --mode=compile @CC@
@@ -96,7 +96,7 @@ $NetBSD: patch-aa,v 1.12 2004/10/01 13:35:53 adam Exp $
  		@TK_BUILD_LIB_SPEC@ \
  		$(WISH_LIBS) $(LD_SEARCH_FLAGS) -lXt -o xttest
  
-@@ -507,7 +509,7 @@ install-strip:
+@@ -513,7 +515,7 @@ install-strip:
  # some ranlibs write to current directory, and this might not always be
  # possible (e.g. if installing as root).
  
