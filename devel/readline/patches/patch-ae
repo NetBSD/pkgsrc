@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.9 2004/04/26 08:01:20 jlam Exp $
+$NetBSD: patch-ae,v 1.10 2004/08/20 17:32:50 tv Exp $
 
 --- Makefile.in.orig	Thu Jan 24 16:15:24 2002
 +++ Makefile.in
@@ -70,8 +70,8 @@ $NetBSD: patch-ae,v 1.9 2004/04/26 08:01:20 jlam Exp $
  	$(MAKE) $(MFLAGS) CCFLAGS='$(GCC_LINT_CFLAGS)' static
 +
 +install-la: installdirs $(LIBTOOL_LIBS) install-headers
-+	${LIBTOOL} --mode=install ${INSTALL_DATA} libreadline.la $(libdir)
-+	${LIBTOOL} --mode=install ${INSTALL_DATA} libhistory.la $(libdir)
++	${LIBTOOL} --mode=install ${BSD_INSTALL_LIB} libreadline.la $(libdir)
++	${LIBTOOL} --mode=install ${BSD_INSTALL_LIB} libhistory.la $(libdir)
 +	-( if test -d doc ; then \
 +		cd doc && \
 +		${MAKE} ${MFLAGS} infodir=$(infodir) install; \
