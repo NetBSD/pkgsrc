@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2002/12/22 19:20:22 cjep Exp $
+@comment $NetBSD: PLIST,v 1.6 2002/12/31 18:40:43 cjep Exp $
 bin/gap
 lib/gap4.3/bin/${MACHINE_GNU_PLATFORM}-cc/gac
 lib/gap4.3/bin/${MACHINE_GNU_PLATFORM}-cc/gap
@@ -1180,6 +1180,39 @@ lib/gap4.3/pkg/tomlib/gap/tmadmin.tmi
 lib/gap4.3/pkg/tomlib/gap/tmstdrd.tom
 lib/gap4.3/pkg/tomlib/init.g
 lib/gap4.3/pkg/tomlib/read.g
+lib/gap4.3/prim/grps/prim9.grp
+lib/gap4.3/prim/grps/prim10.grp
+lib/gap4.3/prim/grps/prim11.grp
+lib/gap4.3/prim/grps/prim12.grp
+lib/gap4.3/prim/grps/prim13.grp
+lib/gap4.3/prim/grps/prim14.grp
+lib/gap4.3/prim/grps/prim15.grp
+lib/gap4.3/prim/grps/prim16.grp
+lib/gap4.3/prim/grps/prim17.grp
+lib/gap4.3/prim/grps/prim18.grp
+lib/gap4.3/prim/grps/prim19.grp
+lib/gap4.3/prim/grps/prim2.grp
+lib/gap4.3/prim/grps/prim20.grp
+lib/gap4.3/prim/grps/prim21.grp
+lib/gap4.3/prim/grps/prim22.grp
+lib/gap4.3/prim/grps/prim23.grp
+lib/gap4.3/prim/grps/prim24.grp
+lib/gap4.3/prim/grps/prim25.grp
+lib/gap4.3/prim/grps/prim26.grp
+lib/gap4.3/prim/grps/prim3.grp
+lib/gap4.3/prim/grps/prim4.grp
+lib/gap4.3/prim/grps/prim5.grp
+lib/gap4.3/prim/grps/prim6.grp
+lib/gap4.3/prim/grps/prim7.grp
+lib/gap4.3/prim/grps/prim8.grp
+lib/gap4.3/prim/grps/prim1.grp
+lib/gap4.3/prim/irredsol.gd
+lib/gap4.3/prim/irredsol.gi
+lib/gap4.3/prim/irredsol.grp
+lib/gap4.3/prim/primitiv.gd
+lib/gap4.3/prim/primitiv.gi
+lib/gap4.3/prim/cohorts.grp
+lib/gap4.3/prim/primitiv.grp
 lib/gap4.3/small/gap3cat.g
 lib/gap4.3/small/id2/id100.z
 lib/gap4.3/small/id2/id1000.z
@@ -4241,6 +4274,8 @@ lib/gap4.3/tst/zmodnz.tst
 @dirrm lib/gap4.3/small/id3
 @dirrm lib/gap4.3/small/id2
 @dirrm lib/gap4.3/small
+@dirrm lib/gap4.3/prim/grps
+@dirrm lib/gap4.3/prim
 @dirrm lib/gap4.3/pkg/tomlib/gap
 @dirrm lib/gap4.3/pkg/tomlib/data
 @dirrm lib/gap4.3/pkg/tomlib
