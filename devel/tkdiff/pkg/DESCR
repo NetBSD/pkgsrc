@@ -1,0 +1,5 @@
+TkDiff is an Open Source graphical 2-way diff/merge Tool.
+
+Feature List
+ - Works on Unix/NT
+ - Integrated with Accurev, RCS, SCCS, PVCS, Perforce, more to come
