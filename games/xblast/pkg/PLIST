@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 1998/02/08 23:41:25 hubertf Exp $
+lib/X11/app-defaults/XBlast
+bin/xblast
+man/cat1/xblast.0
