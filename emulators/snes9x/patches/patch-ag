@@ -1,12 +1,95 @@
-$NetBSD: patch-ag,v 1.1 2000/11/16 02:27:05 wiz Exp $
+$NetBSD: patch-ag,v 1.2 2001/07/17 15:31:25 wiz Exp $
 
---- apudebug.cpp.orig	Fri Oct  6 23:02:38 2000
-+++ apudebug.cpp
-@@ -41,7 +41,6 @@
- #include "apu.h"
- #include "soundux.h"
- #include "cpuexec.h"
--#include "spctool/spc700.h"
+--- unix/unix.cpp.orig	Wed Feb 28 22:12:23 2001
++++ unix/unix.cpp
+@@ -51,7 +51,7 @@
+ #include <ctype.h>
  
+ 
+-#if defined(__linux) || defined(__sun)
++#if defined(__linux) || defined(__sun) || defined(__NetBSD__)
+ #undef USE_THREADS
+ #define USE_THREADS
+ #include <unistd.h>
+@@ -62,7 +62,11 @@
+ 
+ #ifdef USE_THREADS
+ #include <pthread.h>
++#ifdef __NetBSD__
++#include <sys/sched.h>
++#else
+ #include <sched.h>
++#endif
+ 
+ pthread_t thread;
+ pthread_mutex_t mutex;
+@@ -81,7 +85,14 @@
+ #endif
+ #endif
+ 
+-#if defined(__sun) && defined(__GNUC__)
++#ifdef __NetBSD__
++#include <sys/ioctl.h>
++#include <sys/audioio.h>
++#endif
++
++#if defined(__NetBSD__)
++typedef void (*SIG_PF)(int);
++#elif defined(__sun) && defined(__GNUC__)
+ typedef void (*SIG_PF)();
+ #endif
+ 
+@@ -168,7 +179,7 @@
+ char *rom_filename = NULL;
+ char *snapshot_filename = NULL;
+ 
+-#if defined(__linux) || defined(__sun)
++#if defined(__linux) || defined(__sun) || defined(__NetBSD__)
+ static void sigbrkhandler(int)
+ {
  #ifdef DEBUGGER
- extern int NoiseFreq [32];
+@@ -1368,7 +1379,7 @@
+ }
+ #endif
+ 
+-#ifdef __sun
++#if defined(__sun) || defined(__NetBSD__)
+ static int Rates[8] =
+ {
+     0, 8000, 11025, 16000, 22050, 32000, 37800, 44100
+@@ -1541,7 +1552,7 @@
+ }
+ #endif
+ 
+-#if defined (__linux) || defined (__sun)
++#if defined (__linux) || defined (__sun) || defined(__NetBSD__)
+ void S9xUnixProcessSound (void)
+ {
+ }
+@@ -1664,7 +1675,7 @@
+ #endif
+ 
+ #endif
+-#ifdef __sun
++#if defined(__sun) || defined(__NetBSD__)
+     audio_info_t audio;
+     if (!Settings.ThreadSound)
+     {
+@@ -1766,7 +1777,7 @@
+     } while (Settings.ThreadSound);
+ #endif
+ 
+-#ifdef __sun
++#if defined(__sun) || defined(__NetBSD__)
+     if (!Settings.ThreadSound)
+ 	write (so.sound_fd, NULL, 0);
+ #endif
+@@ -1786,7 +1797,7 @@
+     return (0);
+ }
+ 
+-#ifdef __sun
++#if defined(__sun) || defined(__NetBSD__)
+ uint8 int2ulaw(int ch)
+ {
+     int mask;

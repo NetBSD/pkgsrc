@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.1.1.1 2000/11/09 16:43:42 wiz Exp $
+$NetBSD: patch-ac,v 1.2 2001/07/17 15:31:25 wiz Exp $
 
---- i386/fxemu2.asm.orig	Fri Sep 10 19:18:40 1999
+--- i386/fxemu2.asm.orig	Fri Sep 10 21:18:39 1999
 +++ i386/fxemu2.asm
 @@ -2683,4 +2683,3 @@
  SECTION .data

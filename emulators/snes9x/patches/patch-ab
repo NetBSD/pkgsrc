@@ -1,11 +1,11 @@
-$NetBSD: patch-ab,v 1.1.1.1 2000/11/09 16:43:40 wiz Exp $
+$NetBSD: patch-ab,v 1.2 2001/07/17 15:31:25 wiz Exp $
 
---- i386/asmstruc.h.orig	Mon Jan 24 16:13:54 2000
+--- i386/asmstruc.h.orig	Wed Feb 28 22:12:23 2001
 +++ i386/asmstruc.h
-@@ -36,7 +36,7 @@
+@@ -38,7 +38,7 @@
+  * Super NES and Super Nintendo Entertainment System are trademarks of
   * Nintendo Co., Limited and its subsidiary companies.
   */
- 
 -#if defined(__DJGCC) || defined(MICROSOFT_C) || defined(_WINDOWS)
 +#if defined(__DJGCC) || defined(MICROSOFT_C) || defined(_WINDOWS) || defined(_ASM_UNDERBARS)
  #define S9xTraceMessage _S9xTraceMessage
