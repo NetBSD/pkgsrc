@@ -1,4 +1,4 @@
-# $NetBSD: catalogs.mk,v 1.4 2004/02/01 10:12:58 jlam Exp $
+# $NetBSD: catalogs.mk,v 1.5 2004/02/01 10:17:21 jlam Exp $
 #
 # This Makefile fragment is intended to be included by packages that install
 # catalog files or DTDs.  It takes care of registering them into the right
@@ -19,6 +19,8 @@
 .if !defined(XMLCATMGR_CATALOGS_MK)
 XMLCATMGR_CATALOGS_MK=	# defined
 
+.include "../../mk/bsd.prefs.mk"
+
 # Catalogs to be registered.
 SGML_CATALOGS?=
 XML_CATALOGS?=
@@ -29,16 +31,16 @@ XML_ENTRIES?=
 
 # Convert SGML_CATALOGS files into arguments for SGML_ENTRIES.
 .if !empty(SGML_CATALOGS)
-.for c in ${SGML_CATALOGS}
+.  for c in ${SGML_CATALOGS}
 SGML_ENTRIES+=	CATALOG ${PREFIX:=$c} --
-.endfor
+.  endfor
 .endif
 
 # Convert XML_CATALOGS files into arguments for XML_ENTRIES.
 .if !empty(XML_CATALOGS)
-.for c in ${XML_CATALOGS}
+.  for c in ${XML_CATALOGS}
 XML_ENTRIES+=	nextCatalog ${PREFIX:=$c} --
-.endfor
+.  endfor
 .endif
 
 # If there are any entries to register, export required variables and
@@ -54,7 +56,7 @@ DEINSTALL_EXTRA_TMPL+=	../../textproc/xmlcatmgr/files/deinstall.tmpl
 USE_PKGINSTALL=	YES
 .endif # !empty(SGML_ENTRIES) || !empty(XML_ENTRIES)
 
-.if !empty(USE_BUILDLINK3:[yY][eE][sS])
+.if !empty(USE_BUILDLINK3:M[yY][eE][sS])
 .  include "../../textproc/xmlcatmgr/buildlink3.mk"
 .else
 USE_BUILDLINK2=	YES
