@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/01/22 07:18:44 grant Exp $
+# $NetBSD: Makefile,v 1.4 2004/03/30 06:44:53 uebayasi Exp $
 
 DISTNAME=	upx-1.24-src
 PKGNAME=	${DISTNAME:S/-src//}
@@ -11,14 +11,14 @@ COMMENT=	Ultimate packer for executables
 
 DEPENDS+=	ucl>=1.01:../../devel/ucl
 
-WRKSRC=		${WRKDIR}/${PKGNAME}
+WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
 USE_GNU_TOOLS+=	make
 USE_PERL5=	build
 
 do-build:
-	(cd ${WRKSRC}/src && ${GMAKE} PREFIX=${PREFIX} target=netbsd)
-	(cd ${WRKSRC}/doc && ${GMAKE})
+	cd ${WRKSRC}/src && ${GMAKE} PREFIX=${PREFIX} target=netbsd
+	cd ${WRKSRC}/doc && ${GMAKE}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/upx ${PREFIX}/bin
