@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/02/18 13:33:41 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2004/04/11 20:42:28 snj Exp $
 
 DISTNAME=	plan-1.8.4
 CATEGORIES=	x11 time
@@ -9,7 +9,7 @@ HOMEPAGE=	http://www.in-berlin.de/User/bitrot/plan.html
 COMMENT=	Schedule planner based on X/Motif
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/src
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 USE_X11BASE=	YES
 ALL_TARGET=	netbsd
 
@@ -29,5 +29,5 @@ pre-install:
 		${INSTALL_DATA} ${WRKDIR}/${DISTNAME}/$$f ${PREFIX}/share/plan; \
 	done
 
-.include "../../mk/motif.buildlink2.mk"
+.include "../../mk/motif.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
