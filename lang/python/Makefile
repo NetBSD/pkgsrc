@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 1999/05/15 17:00:14 tsarna Exp $
+# $NetBSD: Makefile,v 1.17 1999/08/02 10:59:34 agc Exp $
 #
 
 DISTNAME=	py152
@@ -36,7 +36,8 @@ NO64BIT=\#
 NOSHARED=\#
 .endif
 .if ${OPSYS} == "SunOS"
-MODADD=-I${ZOULARIS}/include -L${ZOULARIS}/lib -R${ZOULARIS}/lib
+ZOULARIS?=	${PREFIX}/bsd
+MODADD=		-I${ZOULARIS}/include -L${ZOULARIS}/lib -R${ZOULARIS}/lib
 .endif
 
 post-configure:
