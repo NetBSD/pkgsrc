@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/03/23 06:48:13 snj Exp $
+# $NetBSD: Makefile,v 1.3 2004/04/18 07:11:29 snj Exp $
 #
 
 DISTNAME=	xawtv_3.90
@@ -13,7 +13,7 @@ COMMENT=	TV application for Brooktree 848 compatible cards
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 GNU_CONFIGURE=		YES
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_GNU_TOOLS+=		make
 USE_X11=		YES
 USE_PERL5=		build
@@ -37,12 +37,12 @@ SUBST_SED.devoss=	-e 's|/dev/dsp|${DEVOSSAUDIO}|g'
 CONFIGURE_ARGS+=	--enable-mmx
 .endif
 
-.include "../../devel/ncurses/buildlink2.mk"
-.include "../../fonts/Xft2/buildlink2.mk"
-.include "../../graphics/MesaLib/buildlink2.mk"
-.include "../../graphics/jpeg/buildlink2.mk"
-.include "../../graphics/xpm/buildlink2.mk"
-.include "../../x11/Xaw3d/buildlink2.mk"
-.include "../../mk/ossaudio.buildlink2.mk"
-.include "../../mk/pthread.buildlink2.mk"
+.include "../../devel/ncurses/buildlink3.mk"
+.include "../../fonts/Xft2/buildlink3.mk"
+.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../graphics/xpm/buildlink3.mk"
+.include "../../x11/Xaw3d/buildlink3.mk"
+.include "../../mk/ossaudio.buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
