@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2002/08/31 13:01:59 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2003/02/21 15:43:58 mycroft Exp $
 #
 
 DISTNAME=	TiMidity++-2.11.3
@@ -14,13 +14,14 @@ COMMENT=	MIDI to WAV renderer and player
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--enable-vt100 --enable-audio=sun,vorbis --disable-debug \
-		--enable-gtk --enable-wrd \
+		--enable-gtk --enable-wrd --enable-xaw --enable-ncurses \
 		--with-ogg-prefix="${BUILDLINK_DIR}/include" \
 		--with-vorbis-prefix="${BUILDLINK_DIR}/include"
 
 USE_BUILDLINK2=	yes
 
 .include "../../audio/libvorbis/buildlink2.mk"
+.include "../../devel/ncurses/buildlink2.mk"
 .include "../../graphics/png/buildlink2.mk"
 .include "../../x11/gtk/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
