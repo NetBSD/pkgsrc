@@ -1,23 +1,18 @@
-$NetBSD: patch-ad,v 1.2 1998/08/07 11:14:07 agc Exp $
+$NetBSD: patch-ad,v 1.3 2000/03/17 15:54:53 jlam Exp $
 
---- pstree.c.orig	Tue Aug 26 17:09:05 1997
-+++ pstree.c	Sun Jul 19 15:20:24 1998
-@@ -2,6 +2,14 @@
+--- pstree.c.orig	Sat May  1 15:40:56 1999
++++ pstree.c	Thu Mar 16 23:22:45 2000
+@@ -2,6 +2,9 @@
  
- /* Copyright 1993-1996 Werner Almesberger. See file COPYING for details. */
+ /* Copyright 1993-1999 Werner Almesberger. See file COPYING for details. */
  
-+#ifdef __NetBSD__
-+#define HAVE_SYS_SYSLIMITS_H
-+#define BSD_44_PROC
-+#define BSD_TERMCAP
-+#else /* Linux */
++#ifdef linux
 +#define HAVE_GETOPT_H
-+#define ENABLE_PRINT_ARGS
 +#endif
  
  #include <stdlib.h>
  #include <stdio.h>
-@@ -9,12 +17,17 @@
+@@ -9,17 +12,26 @@
  #include <ctype.h>
  #include <unistd.h>
  #include <fcntl.h>
@@ -28,63 +23,64 @@ $NetBSD: patch-ad,v 1.2 1998/08/07 11:14:07 agc Exp $
  #include <dirent.h>
  #include <termios.h>
  #include <termcap.h>
++#include <sys/param.h>
  #include <sys/types.h>
-+#ifdef HAVE_SYS_SYSLIMITS_H
-+#include <sys/syslimits.h>
-+#endif
  #include <sys/stat.h>
  #include <sys/ioctl.h>
  
-@@ -251,7 +264,10 @@
-     CHILD *walk,*next,**scan;
+ #include "comm.h"
+ 
++#if (defined(BSD) && BSD >= 199306)
++#define BSD_44_PROC
++#if (defined(__NetBSD_Version__) && __NetBSD_Version__ >= 104180000)
++#define BSD_PROC_CMDLINE
++#endif
++#endif
+ 
+ #ifndef MAX_DEPTH
+ #define MAX_DEPTH    100
+@@ -252,6 +264,7 @@
      const struct passwd *pw;
      int lvl,i,add,offset,len,swapped,info,count,comm_len,first;
      const char *tmp,*here;
-+#ifdef BSD_TERMCAP
-+    char tbuf[1024], *tbufptr;
-+#endif
++    char tbuf[1024], *pbuf;
      char comm_tmp[5];
  
      if (!current) return;
-@@ -270,7 +286,12 @@
+@@ -270,7 +283,8 @@
  	add = out_int(rep)+2;
  	out_string("*[");
      }
-+#ifdef BSD_TERMCAP
-+    tbufptr = tbuf;
-+    if (current->highlight && (tmp = tgetstr("md",&tbufptr))) tputs(tmp,1,putchar);
-+#else
-     if (current->highlight && (tmp = tgetstr("md",NULL))) tputs(tmp,1,putchar);
-+#endif
+-    if (current->highlight && (tmp = tgetstr("md",NULL))) tputs(tmp,1,putchar);
++    pbuf = tbuf;
++    if (current->highlight && (tmp = tgetstr("md",&pbuf))) tputs(tmp,1,putchar);
      if (swapped = print_args && current->argc < 0) out_char('(');
      comm_len = 0;
      for (here = current->comm; *here; here++)
-@@ -297,7 +318,12 @@
+@@ -297,7 +311,8 @@
  	else (void) out_int(current->uid);
      }
      if (info || swapped) out_char(')');
-+#ifdef BSD_TERMCAP
-+    tbufptr = tbuf;
-+    if (current->highlight && (tmp = tgetstr("me",&tbufptr))) tputs(tmp,1,putchar);
-+#else
-     if (current->highlight && (tmp = tgetstr("me",NULL))) tputs(tmp,1,putchar);
-+#endif
+-    if (current->highlight && (tmp = tgetstr("me",NULL))) tputs(tmp,1,putchar);
++    pbuf = tbuf;
++    if (current->highlight && (tmp = tgetstr("me",&pbuf))) tputs(tmp,1,putchar);
      if (print_args) {
  	for (i = 0; i < current->argc; i++) {
  	    out_char(' ');
-@@ -387,8 +413,10 @@
+@@ -387,8 +402,11 @@
      char path[PATH_MAX+1],comm[COMM_LEN+1];
      char *buffer;
      pid_t pid,ppid;
-+#ifndef BSD_44_PROC
++#if !defined(BSD_44_PROC) || defined(BSD_PROC_CMDLINE)
      int fd,size;
 -    int empty,dummy;
++    int dummy;
 +#endif
 +    int empty;
  
      if (!print_args) buffer = NULL;
      else if (!(buffer = malloc((size_t) (output_width+1)))) {
-@@ -402,17 +430,28 @@
+@@ -402,15 +420,26 @@
      empty = 1;
      while (de = readdir(dir))
  	if (pid = atoi(de->d_name)) {
@@ -99,23 +95,19 @@ $NetBSD: patch-ad,v 1.2 1998/08/07 11:14:07 agc Exp $
  		    perror(path);
  		    exit(1);
  		}
--		if (fscanf(file,"%d (%[^)]) %c %d",&dummy,comm,(char *) &dummy,
--		  &ppid) == 4) {
 +#ifdef BSD_44_PROC
-+		if (fscanf(file, "%s %*d %d", comm, &ppid) == 2) {
++		if (fscanf(file,"%s %*d %d",comm,&ppid) == 2) {
 +#else
-+		if (fscanf(file,"%*d (%[^)]) %*c %d",comm,&ppid) == 2) {
+ 		if (fscanf(file,"%d (%[^)]) %c %d",&dummy,comm,(char *) &dummy,
+ 		  &ppid) == 4) {
 +#endif
++#if defined(BSD_44_PROC) && !defined(BSD_PROC_CMDLINE)
++		    add_proc(comm,pid,ppid,st,st_uid,NULL,0);
++#else
  		    if (!print_args) add_proc(comm,pid,ppid,st.st_uid,NULL,0);
  		    else {
-+#ifdef BSD_44_PROC
-+			/* NetBSD 1.3 /proc doesn't seem to do command-lines */
-+			add_proc(comm,pid,ppid,st.st_uid,buffer,0);
-+#else
  			sprintf(path,"%s/%d/cmdline",PROC_BASE,pid);
- 			if ((fd = open(path,O_RDONLY)) < 0) {
- 			    perror(path);
-@@ -426,6 +465,7 @@
+@@ -426,6 +455,7 @@
  			(void) close(fd);
  			if (size) buffer[size++] = 0;
  			add_proc(comm,pid,ppid,st.st_uid,buffer,size);
