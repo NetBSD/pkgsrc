@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/04/14 21:43:40 jtb Exp $
+# $NetBSD: Makefile,v 1.9 2001/04/28 23:59:18 jtb Exp $
 
 DISTNAME=	libctl-1.4
 CATEGORIES=	devel
@@ -14,13 +14,8 @@ GNU_CONFIGURE=	#defined
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/libctl
-	@for f in ${WRKSRC}/doc/*; do					\
-	i="${INSTALL_DATA} $$f ${PREFIX}/share/doc/libctl/";		\
-	${ECHO} $$i; $$i;						\
-	done
-	@for f in COPYING COPYRIGHT ChangeLog NEWS README ; do		\
-	i="${INSTALL_DATA} ${WRKSRC}/$$f ${PREFIX}/share/doc/libctl/";	\
-	${ECHO} $$i; $$i;						\
-	done
+	${INSTALL_DATA} ${WRKSRC}/doc/* ${PREFIX}/share/doc/libctl/
+	cd ${WRKSRC} && ${INSTALL_DATA} COPYING COPYRIGHT ChangeLog 	\
+		NEWS README ${PREFIX}/share/doc/libctl/
 
 .include "../../mk/bsd.pkg.mk"

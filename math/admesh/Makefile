@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/04/14 21:43:50 jtb Exp $
+# $NetBSD: Makefile,v 1.4 2001/04/28 23:59:20 jtb Exp $
 
 DISTNAME=		admesh-0.95
 CATEGORIES=		math
@@ -13,10 +13,8 @@ GNU_CONFIGURE=		yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/admesh ${PREFIX}/bin
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/admesh
-	@for f in README ADMESH.DOC; do					\
-	i="${INSTALL_DATA} ${WRKSRC}/$$f ${PREFIX}/share/doc/admesh/";	\
-	${ECHO} $$i; $$i;						\
-	done
+	cd ${WRKSRC} && ${INSTALL_DATA} README ADMESH.DOC		\
+		${PREFIX}/share/doc/admesh/
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/admesh
 	${INSTALL_DATA} ${WRKSRC}/block.stl ${PREFIX}/share/examples/admesh
 

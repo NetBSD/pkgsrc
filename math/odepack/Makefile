@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/04/14 21:43:54 jtb Exp $
+# $NetBSD: Makefile,v 1.7 2001/04/28 23:59:21 jtb Exp $
 
 DISTNAME=		odepack-20001130
 CATEGORIES=		math
@@ -16,7 +16,6 @@ pre-build:
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/odepack
-	${INSTALL_DATA} ${WRKSRC}/doc ${PREFIX}/share/doc/odepack
-	${INSTALL_DATA} ${WRKSRC}/readme ${PREFIX}/share/doc/odepack
+	cd ${WRKSRC} && ${INSTALL_DATA} doc readme ${PREFIX}/share/doc/odepack
 
 .include "../../mk/bsd.pkg.mk"
