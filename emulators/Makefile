@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2002/04/04 10:13:39 tron Exp $
+# $NetBSD: Makefile,v 1.66 2002/04/14 10:11:56 tron Exp $
 #
 
 COMMENT=	Emulators for other operating systems
@@ -54,6 +54,7 @@ SUBDIR+=	suse_libc5
 SUBDIR+=	suse_libjpeg
 SUBDIR+=	suse_libpng
 SUBDIR+=	suse_linux
+SUBDIR+=	suse_openmotif
 SUBDIR+=	suse_vmware
 SUBDIR+=	suse_x11
 SUBDIR+=	suse_xforms
