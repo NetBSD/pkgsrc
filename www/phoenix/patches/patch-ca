@@ -1,0 +1,13 @@
+$NetBSD: patch-ca,v 1.1 2003/02/02 11:47:59 drochner Exp $
+
+--- ./nsprpub/pr/src/misc/prtime.c.orig	Sat Feb  1 00:51:02 2003
++++ ./nsprpub/pr/src/misc/prtime.c	Sat Feb  1 00:51:24 2003
+@@ -1666,7 +1666,7 @@
+  * values for these two fields.
+  */
+ 
+-#if defined(SUNOS4) || (__GLIBC__ >= 2) || defined(XP_BEOS)
++#if defined(SUNOS4) || (__GLIBC__ >= 2) || defined(XP_BEOS) || defined(__NetBSD__)
+     if (mktime(&a) == -1) {
+         PR_snprintf(buf, buflen, "can't get timezone");
+         return 0;
