@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.php,v 1.2 2001/10/16 12:44:17 tron Exp $
+# $NetBSD: Makefile.php,v 1.3 2001/10/18 17:16:43 jlam Exp $
 
 .include "../../www/php4/Makefile.common"
 
@@ -25,6 +25,21 @@ CONFIGURE_ARGS+=	--enable-discard-path
 CONFIGURE_ARGS+=	--enable-force-cgi-redirect
 CONFIGURE_ARGS+=	--enable-memory-limit
 CONFIGURE_ARGS+=	--enable-track-vars
+
+# Support for linking some PHP4 extensions statically into the php CGI and
+# into the apache mod_php.so DSO.
+#
+# PHP4_CONFIGURE_ARGS should contain GNU configure options, a complete
+# list of which may be found at:
+#
+#	http://www.php.net/manual/en/install.configure.php
+#
+# Note that this is generally not needed as many of the extensions (session,
+# mysql, pgsql, pcre) may be dynamically loaded, and are separately packaged
+# in pkgsrc.
+#
+PHP4_CONFIGURE_ARGS?=	# empty
+CONFIGURE_ARGS+=	${PHP4_CONFIGURE_ARGS}
 
 CONFIGURE_ENV+=		ac_cv_lib_pam_pam_start=no
 
