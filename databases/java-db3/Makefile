@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.4 2001/10/23 11:55:57 martti Exp $
+# $NetBSD: Makefile,v 1.5 2001/11/30 11:58:31 martti Exp $
 
-DISTNAME=	db-3.2.9
-PKGNAME=	java-db3-2.9.2
+DISTNAME=	db-3.3.11
+PKGNAME=	java-db3-3.11.2
 CATEGORIES=	databases
-MASTER_SITES=	http://www.sleepycat.com/update/3.2.9/
+MASTER_SITES=	http://www.sleepycat.com/update/3.3.11/
 
 MAINTAINER=	jlam@netbsd.org
 HOMEPAGE=	http://www.sleepycat.com/
 COMMENT=	Java interface to Sleepycat Software's Berkeley DB version 3
 
 PATCH_SITES=		${MASTER_SITES}
-PATCHFILES=		patch.3.2.9.1 patch.3.2.9.2
+PATCHFILES=		patch.3.3.11.1 patch.3.3.11.2
 PATCH_DIST_ARGS=	-d ${WRKSRC}/.. --forward --quiet
 
 DISTINFO_FILE?=		${.CURDIR}/../db3/distinfo
