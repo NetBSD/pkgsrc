@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1998/05/20 06:31:29 tron Exp $
+# $NetBSD: Makefile,v 1.4 1998/05/22 08:51:32 tron Exp $
 # $FreeBSD Id: Makefile,v 1.14 1997/07/30 18:17:48 adam Exp
 #
 
@@ -10,6 +10,8 @@ MASTER_SITES=	ftp://uniwa.uwa.edu.au/pub/nn/old/beta/ \
 
 MAINTAINER=     tron@netbsd.org
 
+DEPENDS=	nntpclnt-1.6.1:../../news/nntpclnt
+
 MAN1=		nn.1 nncheck.1 nngoback.1 nngrab.1  nngrep.1 nnpost.1 \
 		nntidy.1 nnacct.1 nnadmin.1 nnstats.1 nnusage.1
 MAN8=		nnmaster.8 nnspew.8
@@ -20,14 +22,5 @@ post-extract:
 	  s#@@BINOWN@@#${BINOWN}#; \
 	  s#@@BINGRP@@#${BINGRP}#' \
 	  <${FILESDIR}/s-netbsd.h >${WRKSRC}/conf/s-netbsd.h
-
-post-build:
-	(cd ${WRKSRC}/inews; ${MAKE} all)
-
-pre-install:
-	(cd ${WRKSRC}/inews; ${MAKE} install)
-
-post-install:
-	@${ECHO} "Put your NNTP host into \"${PREFIX}/etc/nntp_server\" file."
 
 .include <../../mk/bsd.pkg.mk>
