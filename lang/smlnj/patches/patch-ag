@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.1.1.1 2003/03/21 22:20:56 wiz Exp $
+$NetBSD: patch-ag,v 1.2 2003/03/21 22:54:39 wiz Exp $
 
 --- src/runtime/objs/mk.sparc-netbsd.orig	Thu Sep 19 03:54:01 2002
 +++ src/runtime/objs/mk.sparc-netbsd
@@ -11,7 +11,7 @@ $NetBSD: patch-ag,v 1.1.1.1 2003/03/21 22:20:56 wiz Exp $
 +MAKE =		gmake
 +GCC =		gcc
 +ARFLAGS =	Trcv
-+CFLAGS =	-O2 -Wall 
++CFLAGS =	@CFLAGS@ 
 +LDFLAGS=
 +CPP =		$(GCC) -x c -E -P
 +

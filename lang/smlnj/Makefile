@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/03/21 22:20:55 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2003/03/21 22:54:38 wiz Exp $
 #
 
 DISTNAME=	boot.${BOX}-unix
 PKGNAME=	smlnj-${SML_VERSION}
 CATEGORIES=	lang
-MASTER_SITES=	ftp://ftp.research.bell-labs.com/dist/smlnj/working/${SML_VERSION}/ \
+MASTER_SITES=	http://www.smlnj.org/dist/working/${SML_VERSION}/ \
+		http://smlnj.cs.uchicago.edu/dist/working/${SML_VERSION}/ \
 		ftp://flint.cs.yale.edu/pub/smlnj/working/${SML_VERSION}/
 DISTFILES=	MLRISC.tgz			\
 		boot.${BOX}-unix.tgz		\
@@ -23,23 +24,18 @@ DISTFILES=	MLRISC.tgz			\
 		smlnj-lib.tgz			\
 		system.tgz
 
-MAINTAINER=	packages@netbsd.org
-HOMEPAGE=	http://cm.bell-labs.com/cm/cs/what/smlnj/index.html
+MAINTAINER=	richards+netbsd@CS.Princeton.EDU
+HOMEPAGE=	http://www.smlnj.org/index.html
 COMMENT=	Popular functional language from Bell Labs
 
-SML_VERSION=	110.41
-
-# smlnj also supports hppa, sparc, ppc, mlrisc & alpha
-# pkg support for those platforms, and say, solaris-x86
-# is left as an (easy) exercise for the reader.
-ONLY_FOR_PLATFORM=	NetBSD-*-i386 SunOS-*-sparc NetBSD-*-sparc
+SML_VERSION=	110.42
 
 # Other mirror sites that generally carry only released versions of SML
 # 	ftp://rodin.stanford.edu/pub/smlnj/release/
 # 	ftp://ftp.cl.cam.ac.uk/MIRRORED/smlnj/release/
 # 	ftp://ftp.ntua.gr/pub/lang/smlnj/release/
 
-DIST_SUBDIR=	sml-nj-${SML_VERSION}
+DIST_SUBDIR=	smlnj-${SML_VERSION}
 WRKSRC=		${WRKDIR}
 USE_GMAKE=	yes
 
@@ -49,21 +45,9 @@ CONFLICTS=	sml-nj-[0-9]*
 SML_BASE=	${PREFIX}/lib/smlnj
 SML_LIBDIR=	${SML_BASE}/lib
 SML_BINDIR=	${SML_BASE}/bin
+SML_SCRIPTS=	_link-sml _run-sml _ml-build _ml-makedepend
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "SunOS" && ${MACHINE_ARCH} == "sparc"
-BOX=		sparc
-OS=		${LOWER_OPSYS}
-.elif ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "i386"
-BOX=		x86
-OS=		bsd
-.elif ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "sparc"
-BOX=		sparc
-OS=		bsd
-.endif
-
-PLIST_SUBST+=	BOX=${BOX} OS=${OS}
+.include "../../lang/smlnj/Makefile.common"
 
 # create parent directory for the runtime system
 pre-extract:
@@ -82,28 +66,35 @@ do-extract:
 post-extract:
 	cd ${WRKDIR} && ${LN} -sf ${_DISTDIR}/*  .
 
+# resolve definition of SML_BASE, CFLAGS in patched files
+do-configure:
+	cd ${WRKDIR}/config;				\
+	for f in ${SML_SCRIPTS}; do			\
+		${CP} "$${f}" "$${f}.tmp";		\
+		${SED} -e 's|@SML_BASE@|${SML_BASE}|g'	\
+			< "$${f}.tmp" > "$${f}";	\
+	done;						\
+	cd ${WRKDIR}/src/runtime/objs;			\
+	for f in *; do					\
+		${CP} "$${f}" "$${f}.tmp";		\
+		${SED} -e 's|@CFLAGS@|${CFLAGS}|g'	\
+			< "$${f}.tmp" > "$${f}";	\
+	done
+
 # The build target needs to run $WRKDIR/config/install.sh
 do-build:
 	cd ${WRKDIR} && unset PWD && \
 	FILESDIR="${FILESDIR}" PATCH="${PATCH}" PATCH_ARGS="${PATCH_ARGS}" \
-		./config/install.sh
+		SMLNJ_HOME="${WRKDIR}" ./config/install.sh
 
 # install target
 # (see ftp://ftp.research.bell-labs.com/dist/smlnj/working/110.38/INSTALL)
 # 1. create installation directories
 # 2. copy the ./bin and ./lib directories across
-# 3. edit scripts to override BIN_DIR and CM_PATHCONFIG
-# 4. install links to executables in $PREFIX/bin
+# 3. install links to executables in $PREFIX/bin
 do-install:
 	${INSTALL_DATA_DIR} ${SML_BASE}
-	(cd ${WRKDIR} && ${PAX} -rw -pam bin lib ${SML_BASE})
-.for script in .link-sml .run-sml ml-build ml-makedepend
-	${RM} -f ${SML_BINDIR}/${script}
-	${SED} -e "s,^BIN_DIR=.*\$$,BIN_DIR=${SML_BINDIR}," \
-	       -e "s,^exec,CM_PATHCONFIG=${SML_LIBDIR}/pathconfig exec," \
-		${WRKDIR}/bin/${script} > ${SML_BINDIR}/${script}
-	${CHMOD} ${BINMODE} ${SML_BINDIR}/${script}
-.endfor
-	(cd ${PREFIX}/bin && ${LN} -sf ${SML_BINDIR}/* .)
+	cd ${WRKDIR} && ${PAX} -rw -pam bin lib ${SML_BASE}
+	cd ${PREFIX}/bin && ${LN} -sf ../lib/smlnj/bin/* .
 
 .include "../../mk/bsd.pkg.mk"
