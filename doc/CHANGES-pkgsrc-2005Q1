@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q1,v 1.1.2.30 2005/04/01 07:50:29 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q1,v 1.1.2.31 2005/04/02 11:33:30 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q1 branch:
@@ -61,3 +61,5 @@ Pullup ticket 409 - requested by Takahiro Kambe
 bugfix update for squid
 Pullup ticket 408 - requested by Takahiro Kambe
 PLIST fix for ruby18-base
+Pullup ticket 416 - requested by Klaus Heinz
+build infrastructure fix for perl5
