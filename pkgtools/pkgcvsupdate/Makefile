@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2001/11/30 12:16:07 seb Exp $
+# $NetBSD: Makefile,v 1.3 2002/01/07 12:39:24 seb Exp $
 
-DISTNAME=	pkgcvsupdate-0.2
+DISTNAME=	pkgcvsupdate-0.3
 CATEGORIES=	pkgtools devel
 MASTER_SITES=	# empty
 DISTFILES=	# empty
