@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2000/02/09 20:55:27 hubertf Exp $
+# $NetBSD: Makefile,v 1.5 2000/04/07 10:11:54 itojun Exp $
 
-DISTNAME=	thttpd-2.15
+DISTNAME=	thttpd-2.16
 CATEGORIES=	www
 MASTER_SITES=	http://www.acme.com/software/thttpd/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
@@ -13,7 +13,8 @@ EXTRACT_ONLY=	${DISTFILES:N*.gif}
 GNU_CONFIGURE=	yes
 
 # Note: this pkg auto-detects IPv6 without regarding USE_INET6.
-# (Leave the above line in to still get it into the README-IPv6.html!)
+.include "../../mk/bsd.prefs.mk"
+BUILD_DEFS+=	USE_INET6
 
 pre-build:
 	${MV} ${WRKSRC}/extras/htpasswd.1 ${WRKSRC}/extras/thtpasswd.1
