@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:38:11 agc Exp $
+
+MD5 (iselect-1.2.0.tar.gz) = e2421e7b883171eb8082239c44bcd872
+SHA1 (patch-aa) = eb484508d29e0f5ac3307ed18de6992b4ebd19ac

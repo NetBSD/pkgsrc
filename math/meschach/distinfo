@@ -1,0 +1,12 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:35:13 agc Exp $
+
+MD5 (mesch12b.tar.gz) = 723c03eb7c167e11bf5c3f3ac67c46a0
+SHA1 (patch-aa) = 8a9687ce01e2dd0960604267af6a9f87eb4e306b
+SHA1 (patch-ab) = 5bf405c19105c6d18e2c1318d36ca114b14cd852
+SHA1 (patch-ac) = 1b5f0ed7398b324933fa7bff2b0327fd90fdd05f
+SHA1 (patch-ad) = 8e9d0c0f9f6550b013b8b0c57ef5e2d92fa74853
+SHA1 (patch-ae) = 11f84c6346cf944729dcd2bd3812beee3291bb03
+SHA1 (patch-af) = 46b42cc8cee6a271b8c68bc8ce83b2c692c57cd9
+SHA1 (patch-ag) = 4a7dbe5acb15da5ff6174643ff63773bc86d017d
+SHA1 (patch-ah) = 003de69807be3187eabf41fc6e1c29145d32fe22
+SHA1 (patch-ai) = fde52f9287b8c5d239232463992e10e796482435

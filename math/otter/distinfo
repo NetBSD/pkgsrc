@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:35:30 agc Exp $
+
+MD5 (otter-3.0.6.tar.gz) = b6e9c2f13d6de2409c883582fa91daeb
+SHA1 (patch-aa) = b867015c299c2d56115cc3a10b27f2d2323ffb62
+SHA1 (patch-ab) = ea7da3af08c16c8bccb6c7a950debc96c7cf2388
