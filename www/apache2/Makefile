@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2004/10/03 00:18:24 tv Exp $
+# $NetBSD: Makefile,v 1.50 2004/11/10 01:09:10 epg Exp $
 
 PKGNAME=		apache-${APACHE_VERSION}
 PKGREVISION=		2
@@ -19,6 +19,7 @@ USE_PKGINSTALL=		YES
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--enable-layout=NetBSD
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-port=80
 CONFIGURE_ARGS+=	--with-mpm=prefork
