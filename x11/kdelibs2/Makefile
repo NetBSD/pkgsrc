@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2001/12/03 15:37:20 skrll Exp $
+# $NetBSD: Makefile,v 1.24 2001/12/07 07:22:47 jlam Exp $
 
 DISTNAME=	kdelibs-2.2.2
 CATEGORIES=	x11
@@ -10,7 +10,6 @@ COMMENT=	Support libraries for the KDE integrated X11 desktop
 BUILDLINK_DEPENDS.audiofile=  libaudiofile>=0.1.9
 
 USE_BUILDLINK_ONLY=	YES
-USE_PERL5=		YES
 USE_OPENSSL_VERSION=	${OPENSSL_VERSION_096}
 
 CONFIGURE_ARGS+=	--with-ssl-dir="${BUILDLINK_DIR}"
@@ -32,6 +31,7 @@ MAKE_FLAGS+=		QT_INCLUDES="-I${BUILDLINK_QTDIR}/include"
 #
 CONFIGURE_ENV+=		XML_CONFIG="${XML2_CONFIG}"
 KDEDIR=			${PREFIX}
+BUILDLINK_KDEDIR=	${BUILDLINK_DIR}
 
 REPLACE_PERL= \
 	${WRKSRC}/kio/proxytype.pl \
@@ -71,6 +71,7 @@ post-install:
 .include "../../audio/libaudiofile/buildlink.mk"
 .include "../../devel/pcre/buildlink.mk"
 .include "../../graphics/tiff/buildlink.mk"
+.include "../../lang/perl5/buildlink.mk"
 .include "../../print/cups/buildlink.mk"
 .include "../../security/openssl/buildlink.mk"
 .include "../../textproc/libxml2/buildlink.mk"
