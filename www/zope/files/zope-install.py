@@ -1,6 +1,6 @@
 #!/usr/pkg/bin/python
 #
-#	$NetBSD: zope-install.py,v 1.4 1999/09/23 17:42:59 tsarna Exp $
+#	$NetBSD: zope-install.py,v 1.5 2000/02/15 02:48:40 tsarna Exp $
 #
 # Copyright (c) 1998,1999 Endicor Technologies, Inc.
 # All rights reserved. Written by Ty Sarna <tsarna@endicor.com>
@@ -177,5 +177,6 @@ RewriteEngine on
 RewriteCond %%{HTTP:Authorization}  ^(.*)
 RewriteRule ^/%(instance)s($|/)(.*) %(cgidir)s/%(instance)s.cgi/$2  [e=HTTP_CGI_AUTHORIZATION:%%1,t=application/x-httpd-cgi,l]
 
-You may need to add Options ExecCGI on "<Directory />" for this to work.
+You may need to add Options ExecCGI on "<Directory />" and your cgi-bin
+directory for this to work.
 """ % vars())
