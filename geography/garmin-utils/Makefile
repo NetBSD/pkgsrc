@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/08/22 18:35:24 gson Exp $
+# $NetBSD: Makefile,v 1.2 2004/09/08 22:20:17 salo Exp $
 #
 
 DISTNAME=		garmin-utils-2.1
+PKGREVISION=		1
 CATEGORIES=		geography
 MASTER_SITES=		ftp://ftp.snafu.org/pub/
 
