@@ -1,4 +1,4 @@
-# $NetBSD: texinfo.mk,v 1.23 2003/09/09 09:10:55 seb Exp $
+# $NetBSD: texinfo.mk,v 1.24 2003/10/07 09:09:56 seb Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk when INFO_FILES is
 # not empty or USE_MAKEINFO is not "no".
@@ -24,7 +24,7 @@ INFO_DIR?=	info
 # Any version will fit (really?).
 _INSTALL_INFO=
 .  for _i_ in /usr/bin/install-info /sbin/install-info
-.    if exists(${_i_})
+.    if exists(${_i_}) && (${LOCALBASE} != ${_i_:C|/[^/]+/install-info$||})
 _INSTALL_INFO=			${_i_}
 .    endif
 .  endfor
