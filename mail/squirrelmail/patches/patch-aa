@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.8 2004/11/16 14:18:01 martti Exp $
+
 --- config/config_default.php.orig	2004-04-21 20:21:54.000000000 +0300
 +++ config/config_default.php	2004-05-31 21:32:43.000000000 +0300
 @@ -383,7 +383,7 @@
