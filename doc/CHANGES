@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6898 2004/08/16 06:21:55 minskim Exp $
+$NetBSD: CHANGES,v 1.6899 2004/08/16 06:24:31 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3855,3 +3855,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated xterm to 196 [minskim 2004-08-16]
 	Added un-core-ttf-1.0 [minskim 2004-08-16]
 	Added un-extra-ttf-1.0.1 [minskim 2004-08-16]
+	Removed un-ttf [minskim 2004-08-16]
