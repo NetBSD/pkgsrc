@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/12/11 19:24:33 ben Exp $
+# $NetBSD: Makefile,v 1.7 2003/12/11 20:16:10 ben Exp $
 #
 
 DISTNAME=		MemMgr-1.04
@@ -17,7 +17,7 @@ post-patch:
 	${MV} ${WRKSRC}/Makefile ${WRKSRC}/Makefile.bak
 	${SED} <${WRKSRC}/Makefile.bak >${WRKSRC}/Makefile \
 		-e 's|/usr/local|${PREFIX}|' \
-		-e 's|/usr/ucb/install|${INSTALL}|'
+		-e 's|/usr/ucb/install|$${BSD_INSTALL}|'
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/libmemmgr

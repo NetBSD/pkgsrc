@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/12/11 19:24:33 ben Exp $
+# $NetBSD: Makefile,v 1.6 2003/12/11 20:16:10 ben Exp $
 #
 
 DISTNAME=		troffcvt-1.04
@@ -27,7 +27,7 @@ post-patch:
 			-e "s| -Xc||" \
 			-e "s|/usr/include/sys/feature_tests.h||" \
 			-e "s|/usr/tmp|/tmp|g" \
-			-e "s|/usr/ucb/install|${INSTALL}|" \
+			-e 's|/usr/ucb/install|$${BSD_INSTALL}|' \
 			-e "s|/usr/local|${PREFIX}|g" \
 			-e "s|/usr/local/man|${PREFIX}/man|" ;\
 	done
