@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.118 2002/01/27 22:40:59 jlam Exp $
+# $NetBSD: Makefile,v 1.119 2002/01/28 22:30:52 zuntum Exp $
 #
 
 COMMENT=	Electronic mail utilities
 
+SUBDIR+=	autorespond
 SUBDIR+=	balsa
 SUBDIR+=	bulk_mailer
 SUBDIR+=	coolmail
