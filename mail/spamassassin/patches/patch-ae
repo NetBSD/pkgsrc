@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.9 2004/10/12 00:11:10 heinz Exp $
+$NetBSD: patch-ae,v 1.10 2005/01/15 21:44:55 schmonz Exp $
 
---- spamd/spamd.raw.orig	Tue Sep 14 01:34:05 2004
+--- spamd/spamd.raw.orig	2004-10-22 11:21:26.000000000 -0400
 +++ spamd/spamd.raw
-@@ -1810,8 +1810,9 @@ sub restart_handler {
+@@ -1811,8 +1811,9 @@ sub restart_handler {
  
  sub daemonize {
  
@@ -14,7 +14,7 @@ $NetBSD: patch-ae,v 1.9 2004/10/12 00:11:10 heinz Exp $
  
    # Be a nice daemon and chdir() to the root so we don't block any unmount attempts
    chdir '/' or die "Can't chdir to /: $!\n";
-@@ -1987,12 +1988,12 @@ Create user preferences files if they do
+@@ -1988,12 +1989,12 @@ Create user preferences files if they do
  =item B<-C> I<path>, B<--configpath>=I<path>
  
  Use the specified path for locating the distributed configuration files.
