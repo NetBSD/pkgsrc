@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/05/22 03:55:16 sakamoto Exp $
+# $NetBSD: Makefile,v 1.2 2000/12/16 04:02:27 hubertf Exp $
 #
 
-DISTNAME=	ttt-1.4
+DISTNAME=	ttt-1.5
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.csl.sony.co.jp/pub/kjc/
 
