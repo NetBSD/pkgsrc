@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2004/01/20 12:07:43 agc Exp $
+# $NetBSD: Makefile,v 1.24 2004/01/22 08:46:00 grant Exp $
 
 PKGNAME=		realplayer-8.0.1
 CATEGORIES=		audio
@@ -6,6 +6,7 @@ MASTER_SITES=		# empty
 EXTRACT_SUFX=		.bin
 
 .include "../../mk/bsd.prefs.mk"
+
 .if ${MACHINE_ARCH} == "i386"
 DISTNAME=		rp8_linux20_libc6_i386_cs2
 .elif ${MACHINE_ARCH} == "sparc"
@@ -19,13 +20,13 @@ HOMEPAGE=		http://www.real.com/products/player/
 COMMENT=		RealAudio and RealVideo player
 
 .if ${OPSYS} == "NetBSD"
-. if ${MACHINE_ARCH} == "i386"
+.  if ${MACHINE_ARCH} == "i386"
 DEPENDS+=		suse_x11>=6.1:../../emulators/${SUSE_DIR_PREFIX}_x11
-. elif ${MACHINE_ARCH} == "sparc"
-.  if !exists(/emul/svr4/usr/lib/ld.so)
+.  elif ${MACHINE_ARCH} == "sparc"
+.    if !exists(/emul/svr4/usr/lib/ld.so)
 PKG_FAIL_REASON= "${PKGNAME} requires Solaris libraries - see compat_svr4(8)"
+.    endif
 .  endif
-. endif
 .endif
 
 RESTRICTED=		"Redistribution not permitted"
