@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2004/01/24 15:30:33 grant Exp $
+# $NetBSD: Makefile,v 1.10 2004/03/04 16:13:35 wiz Exp $
 
-DISTNAME=	lablgtk-1.2.5
-PKGREVISION=	3
+DISTNAME=	lablgtk-1.2.6
 CATEGORIES=	x11
 MASTER_SITES=	http://wwwfun.kurims.kyoto-u.ac.jp/soft/olabl/dist/
 
@@ -9,7 +8,7 @@ MAINTAINER=	dillo@NetBSD.org
 HOMEPAGE=	http://wwwfun.kurims.kyoto-u.ac.jp/soft/olabl/lablgtk.html
 COMMENT=	GTK+ bindings for ocaml
 
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 USE_GNU_TOOLS+=	make
 
 .include "../../mk/bsd.prefs.mk"
@@ -39,6 +38,6 @@ post-build:
 		opt
 .endif
 
-.include "../../x11/gtk/buildlink2.mk"
-.include "../../lang/ocaml/buildlink2.mk"
+.include "../../x11/gtk/buildlink3.mk"
+.include "../../lang/ocaml/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
