@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2004/05/07 01:14:47 xtraeme Exp $
+# $NetBSD: Makefile,v 1.15 2004/05/15 12:20:00 jmmv Exp $
 #
 
-DISTNAME=		at-spi-1.4.0
+DISTNAME=		at-spi-1.4.2
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/at-spi/1.4/}
 EXTRACT_SUFX=		.tar.bz2
@@ -18,7 +18,7 @@ GNU_CONFIGURE=		yes
 USE_X11=		yes
 
 CONFIGURE_ARGS+=	--disable-gtk-doc
-CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html
+CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
 
 PKGCONFIG_OVERRIDE+=    cspi-1.0.pc.in
 PKGCONFIG_OVERRIDE+=    libspi-1.0.pc.in
