@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2051 2003/04/27 02:17:19 rh Exp $
+$NetBSD: CHANGES,v 1.2052 2003/04/27 04:21:13 rh Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1748,3 +1748,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated gnome-vfs2 to 2.2.4 [rh 2003-04-27]
 	Added nautilus-2.2.3.1 [rh 2003-04-27]
 	Updated gnome2 to 2.2.1 [rh 2003-04-27]
+	Updated gnome-mime-data to 2.2.0 [rh 2003-04-27]
