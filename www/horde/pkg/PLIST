@@ -1,0 +1,297 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/02/12 15:26:04 jlam Exp $
+etc/httpd/horde.conf.dist
+sbin/horde_setup
+sbin/horde_secure
+share/doc/horde/CHANGES
+share/doc/horde/COPYING
+share/doc/horde/CREDITS
+share/doc/horde/DATABASE
+share/doc/horde/HELP
+share/doc/horde/INSTALL
+share/doc/horde/README
+share/doc/horde/SECURITY
+share/horde-phplib/README
+share/horde-phplib/ct_dba.inc
+share/horde-phplib/ct_dbm.inc
+share/horde-phplib/ct_file.inc
+share/horde-phplib/ct_informix.inc
+share/horde-phplib/ct_ldap.inc
+share/horde-phplib/ct_null.inc
+share/horde-phplib/ct_shm.inc
+share/horde-phplib/ct_split_sql.inc
+share/horde-phplib/ct_sql.inc
+share/horde-phplib/ct_sql_compat.inc
+share/horde-phplib/db_msql.inc
+share/horde-phplib/db_mssql.inc
+share/horde-phplib/db_mysql.inc
+share/horde-phplib/db_oci8.inc
+share/horde-phplib/db_odbc.inc
+share/horde-phplib/db_oracle.inc
+share/horde-phplib/db_pgsql.inc
+share/horde-phplib/db_sybase.inc
+share/horde-phplib/db_usql.inc
+share/horde-phplib/horde_loginform.ihtml
+share/horde-phplib/horde_perminvalid.ihtml
+share/horde-phplib/local.inc.dist
+share/horde-phplib/page.inc
+share/horde-phplib/prepend.php3.dist
+share/horde-phplib/session.inc
+share/horde/config/MOTD.html.dist
+share/horde/config/header.txt.dist
+share/horde/config/horde.php3.dist
+share/horde/config/html.php3.dist
+share/horde/config/lang.php3.dist
+share/horde/config/menu.txt.dist
+share/horde/config/mime.php3.dist
+share/horde/graphics/bottom_left_corner.gif
+share/horde/graphics/bottom_right_corner.gif
+share/horde/graphics/close.gif
+share/horde/graphics/edit.gif
+share/horde/graphics/exclamation.gif
+share/horde/graphics/filler_block.gif
+share/horde/graphics/help.gif
+share/horde/graphics/help1.gif
+share/horde/graphics/horde.small.gif
+share/horde/graphics/login.gif
+share/horde/graphics/logout.gif
+share/horde/graphics/search.gif
+share/horde/graphics/thumbsup.gif
+share/horde/graphics/top_left_corner.gif
+share/horde/graphics/top_right_corner.gif
+share/horde/graphics/trash.gif
+share/horde/help.php3
+share/horde/index.php3
+share/horde/lib/horde.lib
+share/horde/lib/js/browser_detect.js
+share/horde/lib/js/msie_generic_help.js
+share/horde/lib/js/ns_generic_help.js
+share/horde/lib/mime.lib
+share/horde/lib/version.php
+share/horde/locale/de/help.lang
+share/horde/locale/de/horde.lang
+share/horde/locale/de/login.lang
+share/horde/locale/de/logo.lang
+share/horde/locale/de/menu.lang
+share/horde/locale/de/modules.lang
+share/horde/locale/de/problem.lang
+share/horde/locale/de/setup.lang
+share/horde/locale/de/signup.help
+share/horde/locale/de/signup.lang
+share/horde/locale/de/status.lang
+share/horde/locale/defines/signup.help
+share/horde/locale/en/help.lang
+share/horde/locale/en/horde.lang
+share/horde/locale/en/login.lang
+share/horde/locale/en/logo.lang
+share/horde/locale/en/menu.lang
+share/horde/locale/en/modules.lang
+share/horde/locale/en/problem.lang
+share/horde/locale/en/setup.lang
+share/horde/locale/en/signup.help
+share/horde/locale/en/signup.lang
+share/horde/locale/en/status.lang
+share/horde/locale/es/help.lang
+share/horde/locale/es/horde.lang
+share/horde/locale/es/login.lang
+share/horde/locale/es/logo.lang
+share/horde/locale/es/menu.lang
+share/horde/locale/es/modules.lang
+share/horde/locale/es/problem.lang
+share/horde/locale/es/setup.lang
+share/horde/locale/es/signup.help
+share/horde/locale/es/signup.lang
+share/horde/locale/es/status.lang
+share/horde/locale/fi/help.lang
+share/horde/locale/fi/horde.lang
+share/horde/locale/fi/login.lang
+share/horde/locale/fi/logo.lang
+share/horde/locale/fi/menu.lang
+share/horde/locale/fi/modules.lang
+share/horde/locale/fi/problem.lang
+share/horde/locale/fi/setup.lang
+share/horde/locale/fi/signup.help
+share/horde/locale/fi/signup.lang
+share/horde/locale/fi/status.lang
+share/horde/locale/fr/help.lang
+share/horde/locale/fr/horde.lang
+share/horde/locale/fr/login.lang
+share/horde/locale/fr/logo.lang
+share/horde/locale/fr/menu.lang
+share/horde/locale/fr/modules.lang
+share/horde/locale/fr/problem.lang
+share/horde/locale/fr/setup.lang
+share/horde/locale/fr/signup.help
+share/horde/locale/fr/signup.lang
+share/horde/locale/fr/status.lang
+share/horde/locale/it/help.lang
+share/horde/locale/it/horde.lang
+share/horde/locale/it/login.lang
+share/horde/locale/it/logo.lang
+share/horde/locale/it/menu.lang
+share/horde/locale/it/modules.lang
+share/horde/locale/it/problem.lang
+share/horde/locale/it/setup.lang
+share/horde/locale/it/signup.help
+share/horde/locale/it/signup.lang
+share/horde/locale/it/status.lang
+share/horde/locale/kr/help.lang
+share/horde/locale/kr/horde.lang
+share/horde/locale/kr/login.lang
+share/horde/locale/kr/logo.lang
+share/horde/locale/kr/menu.lang
+share/horde/locale/kr/modules.lang
+share/horde/locale/kr/problem.lang
+share/horde/locale/kr/setup.lang
+share/horde/locale/kr/signup.help
+share/horde/locale/kr/signup.lang
+share/horde/locale/kr/status.lang
+share/horde/locale/local/help.lang
+share/horde/locale/local/horde.lang
+share/horde/locale/local/lang.lang
+share/horde/locale/local/login.lang
+share/horde/locale/local/logo.lang
+share/horde/locale/local/menu.lang
+share/horde/locale/local/modules.lang
+share/horde/locale/local/problem.lang
+share/horde/locale/local/setup.lang
+share/horde/locale/local/signup.help
+share/horde/locale/local/signup.lang
+share/horde/locale/local/status.lang
+share/horde/locale/nl/help.lang
+share/horde/locale/nl/horde.lang
+share/horde/locale/nl/login.lang
+share/horde/locale/nl/logo.lang
+share/horde/locale/nl/menu.lang
+share/horde/locale/nl/modules.lang
+share/horde/locale/nl/problem.lang
+share/horde/locale/nl/setup.lang
+share/horde/locale/nl/signup.help
+share/horde/locale/nl/signup.lang
+share/horde/locale/nl/status.lang
+share/horde/locale/pt-BR/help.lang
+share/horde/locale/pt-BR/horde.lang
+share/horde/locale/pt-BR/login.lang
+share/horde/locale/pt-BR/logo.lang
+share/horde/locale/pt-BR/menu.lang
+share/horde/locale/pt-BR/modules.lang
+share/horde/locale/pt-BR/problem.lang
+share/horde/locale/pt-BR/setup.lang
+share/horde/locale/pt-BR/signup.help
+share/horde/locale/pt-BR/signup.lang
+share/horde/locale/pt-BR/status.lang
+share/horde/locale/sk/help.lang
+share/horde/locale/sk/horde.lang
+share/horde/locale/sk/login.lang
+share/horde/locale/sk/logo.lang
+share/horde/locale/sk/menu.lang
+share/horde/locale/sk/modules.lang
+share/horde/locale/sk/problem.lang
+share/horde/locale/sk/setup.lang
+share/horde/locale/sk/signup.help
+share/horde/locale/sk/signup.lang
+share/horde/locale/sk/status.lang
+share/horde/login.php3
+share/horde/logo.php3
+share/horde/menu.php3
+share/horde/modules.php3
+share/horde/problem.php3
+share/horde/scripts/add_horde_string.pl
+share/horde/scripts/add_lang_string.pl
+share/horde/scripts/database/INFORMIX
+share/horde/scripts/database/MYSQL
+share/horde/scripts/database/ORACLE
+share/horde/scripts/database/POSTGRESQL
+share/horde/scripts/database/SYBASE
+share/horde/scripts/database/dbpasswd.sh
+share/horde/scripts/database/ifmx_create.sql
+share/horde/scripts/database/mysql_alter.sql
+share/horde/scripts/database/mysql_create.sql
+share/horde/scripts/database/mysql_drop.sql
+share/horde/scripts/database/oracle_create.sql
+share/horde/scripts/database/pgsql_create.sql
+share/horde/scripts/database/pgsql_cuser.sh
+share/horde/scripts/database/sybase_create.sql
+share/horde/scripts/horde-rsync.sh
+share/horde/setup.php3
+share/horde/signup.php3
+share/horde/status.php3
+share/horde/templates/doctype.inc
+share/horde/templates/form/form_hidden_elem.inc
+share/horde/templates/form/form_multiselect_elem.inc
+share/horde/templates/form/form_password_elem.inc
+share/horde/templates/form/form_section_title.inc
+share/horde/templates/form/form_text_elem.inc
+share/horde/templates/form/form_true_false_elem.inc
+share/horde/templates/generic-footer.inc
+share/horde/templates/generic-header.inc
+share/horde/templates/help/body.inc
+share/horde/templates/index/frames_index.inc
+share/horde/templates/index/horde_configurable.inc
+share/horde/templates/index/horde_notconfigured.inc
+share/horde/templates/index/imp_frames.inc
+share/horde/templates/index/sub_frames_index.inc
+share/horde/templates/index/unknown_browser.inc
+share/horde/templates/login/login.inc
+share/horde/templates/logo/horde_logo.inc
+share/horde/templates/logo/logo.inc
+share/horde/templates/menu/menu.inc
+share/horde/templates/modules/modules.inc
+share/horde/templates/problem/javascript.inc
+share/horde/templates/problem/lynx_problem.inc
+share/horde/templates/problem/problem.inc
+share/horde/templates/setup/form_elem_desc.inc
+share/horde/templates/setup/form_footer.inc
+share/horde/templates/setup/form_header.inc
+share/horde/templates/setup/form_hidden_elem.inc
+share/horde/templates/setup/form_multiselect_elem.inc
+share/horde/templates/setup/form_text_elem.inc
+share/horde/templates/setup/form_true_false_elem.inc
+share/horde/templates/setup/imp/database.inc
+share/horde/templates/setup/imp/external_binaries.inc
+share/horde/templates/setup/imp/language.inc
+share/horde/templates/setup/imp/mail_server.inc
+share/horde/templates/setup/imp/message_options.inc
+share/horde/templates/setup/imp/new_mail_popup.inc
+share/horde/templates/setup/imp/server_specific.inc
+share/horde/templates/setup/imp/user_abilites.inc
+share/horde/templates/setup/imp/verify_write_file.inc
+share/horde/templates/setup/imp/web_server.inc
+share/horde/templates/setup/imp/write_file.inc
+share/horde/templates/setup/session.lib
+share/horde/templates/setup/stub_form.inc
+share/horde/templates/signup/lynx_signup.inc
+share/horde/templates/signup/signup.inc
+share/horde/templates/status/status.inc
+share/horde/test.php3
+@dirrm share/horde/templates/status
+@dirrm share/horde/templates/signup
+@dirrm share/horde/templates/setup/imp
+@dirrm share/horde/templates/setup
+@dirrm share/horde/templates/problem
+@dirrm share/horde/templates/modules
+@dirrm share/horde/templates/menu
+@dirrm share/horde/templates/logo
+@dirrm share/horde/templates/login
+@dirrm share/horde/templates/index
+@dirrm share/horde/templates/help
+@dirrm share/horde/templates/form
+@dirrm share/horde/templates
+@dirrm share/horde/scripts/database
+@dirrm share/horde/scripts
+@dirrm share/horde/locale/sk
+@dirrm share/horde/locale/pt-BR
+@dirrm share/horde/locale/nl
+@dirrm share/horde/locale/local
+@dirrm share/horde/locale/kr
+@dirrm share/horde/locale/it
+@dirrm share/horde/locale/fr
+@dirrm share/horde/locale/fi
+@dirrm share/horde/locale/es
+@dirrm share/horde/locale/en
+@dirrm share/horde/locale/defines
+@dirrm share/horde/locale/de
+@dirrm share/horde/locale
+@dirrm share/horde/lib/js
+@dirrm share/horde/lib
+@dirrm share/horde/graphics
+@dirrm share/doc/horde
