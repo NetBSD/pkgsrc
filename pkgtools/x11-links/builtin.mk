@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.1 2004/03/15 01:07:59 jlam Exp $
+# $NetBSD: builtin.mk,v 1.2 2004/03/15 10:35:13 tron Exp $
 
 .if !defined(XF86_VERSION)
 _X11_CONFIG_VERSION_DEF=	${X11BASE}/lib/X11/config/version.def
@@ -23,7 +23,7 @@ _XF86_TEENY=	${_XF86_PATCH}.${_XF86_SNAP}
 _XF86_VERSION=	${_XF86_MAJOR}.${_XF86_MINOR}
 .    else
 _XF86_VERSION=	${_XF86_MAJOR}.${_XF86_MINOR}.${_XF86_TEENY}
-XF86_VERSION=	${XF86_VERSION}
+XF86_VERSION=	${_XF86_VERSION}
 .    endif
 .  endif
 MAKEFLAGS+=	XF86_VERSION=${XF86_VERSION}
