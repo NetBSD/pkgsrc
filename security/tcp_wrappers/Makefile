@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2002/12/24 04:23:09 jschauma Exp $
+# $NetBSD: Makefile,v 1.11 2003/06/10 17:58:34 jschauma Exp $
 
 DISTNAME= 	tcp_wrappers_7.6-ipv6.1
 PKGNAME=	tcp_wrappers-7.6.1
@@ -21,15 +21,13 @@ USE_LIBTOOL=	# defined
 ALL_TARGET=	netbsd
 .elif ${OPSYS} == "SunOS"
 ALL_TARGET=	sunos5
-.elif ${OPSYS} == "Linux"
-ALL_TARGET=	linux
-.elif ${OPSYS} == "IRIX"
+.elif ${OPSYS} == "IRIX" || ${OPSYS} == "Linux"
 ALL_TARGET=	${LOWER_OPSYS}
 .else
 ALL_TARGET=	generic		# good luck!
 .endif
 
-.if defined(USE_INET6) && ${USE_INET6} == "YES"
+.if defined(USE_INET6) && ${USE_INET6} == "YES" && ${OPSYS} != "Linux"
 MAKE_ENV+=	IPV6=-DHAVE_IPV6
 .endif
 
