@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4140 2003/12/16 07:53:10 recht Exp $
+$NetBSD: CHANGES,v 1.4141 2003/12/16 08:06:44 recht Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5190,3 +5190,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated loudmouth to 0.14.1 [recht 2003-12-16]
 	Updated gossip to 0.6 [recht 2003-12-16]
 	Updated bug-buddy to 2.4.1.1 [recht 2003-12-16]
+	Updated p5-Socket6 to 0.12 [recht 2003-12-16]
