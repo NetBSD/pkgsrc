@@ -1,0 +1,29 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/10/05 14:17:15 kim Exp $
+
+--- src/jwhois.c.orig	Sun Sep 26 06:03:17 1999
++++ src/jwhois.c	Tue Oct  5 09:48:03 1999
+@@ -138,6 +138,7 @@
+ {
+   struct jconfig *j;
+   struct re_pattern_buffer	rpb;
++  struct servent *sp = NULL;
+   char *error, *host = DEFAULTHOST, *ret, *tmphost;
+   int ind, port;
+ 
+@@ -165,7 +166,15 @@
+     }
+   jconfig_end();
+   
+-  port = htons(IPPORT_WHOIS);
++#ifndef IPPORT_WHOIS
++# define IPPORT_WHOIS 43
++#endif
++
++  if ((sp = getservbyname("whois", "tcp")) == NULL)
++    port = htons(IPPORT_WHOIS);
++  else
++    port = sp->s_port;
++
+   if (strchr(host, ':'))
+     {
+       tmphost = (char *)strchr(host, ':');
