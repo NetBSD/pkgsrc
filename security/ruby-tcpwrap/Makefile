@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2005/01/28 14:08:01 taca Exp $
+# $NetBSD: Makefile,v 1.10 2005/03/06 17:19:07 taca Exp $
 # FreeBSD: ports/security/ruby-tcpwrap/Makefile,v 1.6 2000/09/26 08:02:10 knu Exp
 
 DISTNAME=	ruby-tcpwrap-0.6
 PKGNAME=	${RUBY_PKGPREFIX}-tcpwrap-0.6
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security ruby
 MASTER_SITES=	http://www.shugo.net/archive/ruby-tcpwrap/
 

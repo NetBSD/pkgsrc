@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2005/01/28 14:08:02 taca Exp $
+# $NetBSD: Makefile,v 1.4 2005/03/06 17:19:07 taca Exp $
 
 PKGNAME=			${RUBY_PKGPREFIX}-${DISTNAME}
-PKGREVISION=			1
+PKGREVISION=			2
 
 .include "../../www/clearsilver/Makefile.common"
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2005/03/05 09:19:45 jmmv Exp $
+# $NetBSD: Makefile,v 1.23 2005/03/06 17:19:08 taca Exp $
 
 DISTNAME=	FXRuby-1.0.29
 PKGNAME=	${RUBY_PKGPREFIX}-fox-1.0.29
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	x11 ruby
 MASTER_SITES=	http://rubyforge.org/frs/download.php/983/ \
 		${MASTER_SITE_SOURCEFORGE:=fxruby/}
