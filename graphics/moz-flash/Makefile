@@ -1,19 +1,20 @@
-# $NetBSD: Makefile,v 1.10 2003/05/02 11:55:26 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2003/05/23 09:23:05 salo Exp $
 #
 
-.include "../libflash/Makefile.common"
+.include "../../graphics/libflash/Makefile.common"
 
 PKGNAME=	moz-flash-1.0
-PKGREVISION=	3
+PKGREVISION=	4
 
 MAINTAINER=	joda@netbsd.org
 COMMENT=	Mozilla open source Flash(tm) plugin
 
 DEPENDS+=	mozilla>=0.9.9:../../www/mozilla
 
-USE_BUILDLINK2=	yes
-USE_X11BASE=	yes
-USE_LIBTOOL=	yes
+USE_BUILDLINK2=	YES
+USE_X11=	YES
+USE_LIBTOOL=	YES
+
 BUILD_DIRS=	${WRKSRC}/Plugin
 CPPFLAGS+=	-DDEV_DSP=\\\"${DEVOSSSOUND}\\\"
 MAKE_ENV+=	SHLIBTOOL="${PKGSHLIBTOOL}"
@@ -26,5 +27,6 @@ do-install:
 	cd ${WRKSRC}/Plugin && \
 		${INSTALL_PROGRAM} .libs/npflash.so ${MOZ_PLUGDIR}
 
-.include "../libflash/buildlink2.mk"
+.include "../../graphics/libflash/buildlink2.mk"
+
 .include "../../mk/bsd.pkg.mk"
