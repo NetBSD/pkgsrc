@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2421 2004/11/22 20:16:18 wiz Exp $
+$NetBSD: TODO,v 1.2422 2004/11/22 22:09:34 wiz Exp $
 
 Suggested new packages
 ======================
@@ -394,6 +394,7 @@ Suggested package updates
 	o daapd-0.2.3
 	o dact-0.8.37
 	o db4-4.3.21
+	o dbench-3.01
 	o dc_gui2-0.80
 	o dctc-0.85.9
 	o ddd-3.3.9
@@ -481,6 +482,7 @@ Suggested package updates
 	o g2-0.50
 	o galeon-1.3.18
 	o gated-3.6
+	o gattrib-20041120
 	o gbib-0.1.2
 	o gcombust-0.1.55
 	o gdb6-6.3.0
@@ -512,6 +514,7 @@ Suggested package updates
 	o gmpc-0.11.2
 	o gnet1-1.1.9
 	o gnetcat-0.7.1
+	o gnetman-20041117
 	o gnocatan-0.8.1.30
 	o gnotime-2.2.1
 	o gnugk-2.2.0
@@ -1084,6 +1087,7 @@ Suggested package updates
 	o userppp-030706
 	o uvscan-4.3.2 [jlam]
 	o vba-1.7.2
+	o verilog-current-20041004
 	o vfu-4.03
 	o vifm-0.2
 	o vipec-3.2.0
