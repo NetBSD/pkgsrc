@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/01/21 22:44:16 rh Exp $
+bin/makeztxt
+share/doc/makeztxt/COPYING
+share/doc/makeztxt/ChangeLog
+share/doc/makeztxt/README
+@dirrm share/doc/makeztxt
