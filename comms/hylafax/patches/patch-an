@@ -1,0 +1,21 @@
+$NetBSD: patch-an,v 1.1.1.1 1999/08/11 06:04:30 rh Exp $
+
+--- defs.in.orig	Mon Jan  4 10:17:09 1999
++++ defs.in	Tue Aug 10 18:10:07 1999
+@@ -44,6 +44,7 @@
+ # to insufficient; you are better off rerunning the
+ # configure script so that all uses are set correctly.
+ #
++PREFIX		= @PREFIX@
+ SPOOL		= @SPOOL@
+ SBIN		= @SBIN@
+ BIN		= @BIN@
+@@ -255,7 +256,7 @@
+ LDOPTS		= ${VLDOPTS} ${LLDOPTS} ${GLDOPTS}
+ LDLIBS		= ${VLDLIBS} ${LLDLIBS} ${GLDLIBS}
+ 
+-GLDOPTS		= -L/usr/local/lib
++GLDOPTS		= -L${PREFIX}/lib
+ GLDLIBS		= ${SHDLIBC}
+ 
+ #

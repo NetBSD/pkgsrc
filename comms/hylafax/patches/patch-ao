@@ -1,0 +1,34 @@
+$NetBSD: patch-ao,v 1.1.1.1 1999/08/11 06:04:30 rh Exp $
+
+--- util/Makefile.in.orig	Sun Jan 10 10:50:29 1999
++++ util/Makefile.in	Mon Aug  9 23:09:07 1999
+@@ -150,7 +150,7 @@
+ PUTCLIENT	= ${INSTALL} -idb ${PRODUCT}.sw.client
+ PUTSERVER	= ${INSTALL} -idb ${PRODUCT}.sw.server
+ PUTSERV		= ${PUTSERVER} -m 755
+-PUTSUPD		= ${PUTSERVER} -F ${SPOOL}/bin -idb "config(update)"
++PUTSUPD		= ${PUTSERVER} -F ${LIBEXEC}/hylafax -idb "config(update)"
+ PUTSBIN		= ${PUTSERVER} -F ${SBIN}
+ 
+ installClient: default
+@@ -167,6 +167,7 @@
+ 	${PUTSBIN} -m 755 -src xferfaxstats.sh -O xferfaxstats
+ 	${PUTSBIN} -m 755 -src recvstats.sh -O recvstats
+ 	${PUTSBIN} -m 755 -idb "config(update)" -src faxcron.sh -O faxcron
++	-${MKDIR} -m 755 ${LIBEXEC}/hylafax
+ 	${PUTSUPD} -m 755 -src ${SRCDIR}/ps2fax.gs.sh -O ps2fax.gs
+ 	${PUTSUPD} -m 755 -src ${SRCDIR}/ps2fax.dps.sh -O ps2fax.dps
+ 	${PUTSUPD} -m 755 -src ${SRCDIR}/ps2fax.imp.sh -O ps2fax.imp
+@@ -178,9 +179,10 @@
+ 	${PUTSUPD} -m 755 -src ${SRCDIR}/pollrcvd.sh -O pollrcvd
+ 	${PUTSUPD} -m 755 -src ${SRCDIR}/mkcover.sh -O mkcover
+ 	${PUTSUPD} -m 755 -src ${SRCDIR}/wedged.sh -O wedged
+-	${PUTSERVER} -F ${SPOOL}/etc -m 444 -idb "config(update)" \
++	-${MKDIR} -m 755 ${PREFIX}/etc/hylafax
++	${PUTSERVER} -F ${PREFIX}/etc/hylafax -m 444 -idb "config(update)" \
+ 	    -src ${SRCDIR}/dpsprinter.ps -O dpsprinter.ps
+-	${PUTSERVER} -F ${SPOOL}/etc -idb "config(suggest)" \
++	${PUTSERVER} -F ${PREFIX}/etc/hylafax -idb "config(suggest)" \
+ 	    -m 444 -src ${SRCDIR}/cover.templ -O cover.templ
+ 
+ @MAKEDSOINCLUDE@ @MAKELQUOTE@${SRCDIR}/Makefile.@DSO@dso@MAKERQUOTE@

@@ -1,0 +1,84 @@
+$NetBSD: patch-ae,v 1.1.1.1 1999/08/11 06:04:29 rh Exp $
+
+--- util/TypeRules.c++.orig	Sun Jun 13 09:41:26 1999
++++ util/TypeRules.c++	Tue Aug 10 15:36:51 1999
+@@ -36,6 +36,14 @@
+ #include <netinet/in.h>
+ }
+ 
++#ifndef TRUE
++#define TRUE 1
++#endif
++
++#ifndef FALSE
++#define FALSE 0
++#endif
++
+ TypeRule::TypeRule() {}
+ TypeRule::~TypeRule() {}
+ TypeRule::TypeRule(const TypeRule& other)
+@@ -51,7 +59,7 @@
+ }
+ 
+ static const char* typeNames[] =
+-    { "ascii", "string", "address", "byte", "short", "long" };
++    { "ascii", "asciiesc", "string", "address", "byte", "short", "long" };
+ static const char* opNames[] =
+     { "<any>", "=", "!=", "<", "<=", ">", ">=", "&", "^", "!" };
+ static const char* resultNames[] = { "tiff", "postscript", "error" };
+@@ -68,7 +76,7 @@
+ 	);
+ 	if (type == STRING)
+ 	    printf(" \"%s\"", value.s);
+-	else if (type != ASCII) {
++	else if (type != ASCII && type != ASCIIESC) {
+ 	    if (op == ANY)
+ 		printf(" <any value>");
+ 	    else
+@@ -86,6 +94,7 @@
+     const u_char* cp = (const u_char*) data;
+     switch (type) {
+     case ASCII:
++      {
+ 	u_int i;
+ 	for (i = 0; i < size; i++)
+ 	    if (!isprint(cp[i]) && !isspace(cp[i])) {
+@@ -95,6 +104,19 @@
+ 	    }
+ 	ok = true;
+ 	goto done;
++       }
++    case ASCIIESC:
++       {
++	u_int i;
++	for (i = 0; i < size; i++)
++	    if (!isprint(cp[i]) && !isspace(cp[i]) && cp[i] != '\033') {
++		if (verbose)
++		    printf("failed (unprintable char %#x)\n", cp[i]);
++		return (FALSE);
++	    }
++	ok = TRUE;
++	goto done;
++       }
+     case STRING:
+ 	ok = (strncmp((const char*)(cp+off), value.s,
+ 	    fxmin((u_int) strlen(value.s), (u_int)(size-off))) == 0);
+@@ -311,6 +333,8 @@
+ 	    rule.type = TypeRule::STRING;
+ 	else if (strncasecmp(tp, "ascii", cp-tp) == 0)
+ 	    rule.type = TypeRule::ASCII;
++	else if (strncasecmp(tp, "asciiesc", cp-tp) == 0)
++	    rule.type = TypeRule::ASCIIESC;
+ 	else if (strncasecmp(tp, "addr", cp-tp) == 0)
+ 	    rule.type = TypeRule::ADDR;
+ 	else {
+@@ -321,7 +345,8 @@
+ 	    cp++;
+ 	rule.op = TypeRule::EQ;		// default is '='
+ 	const char* vp = cp;
+-	if (rule.type != TypeRule::STRING && rule.type != TypeRule::ASCII) {
++	if (rule.type != TypeRule::STRING && rule.type != TypeRule::ASCII
++	 && rule.type != TypeRule::ASCIIESC) {
+ 	    // numeric value
+ 	    switch (*vp) {
+ 	    case '=':	rule.op = TypeRule::EQ;	cp++; break;

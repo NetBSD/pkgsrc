@@ -1,0 +1,26 @@
+$NetBSD: patch-ai,v 1.1.1.1 1999/08/11 06:04:29 rh Exp $
+
+--- etc/faxaddmodem.sh.in.orig	Sat Feb 14 11:47:03 1998
++++ etc/faxaddmodem.sh.in	Fri Apr 16 00:13:52 1999
+@@ -46,6 +46,7 @@
+ SPOOL=@SPOOL@
+ 
+ SPEED=
++TTY=
+ while [ x"$1" != x"" ] ; do
+     case $1 in
+     -s)	    SPEED=$2; shift;;
+@@ -91,10 +92,11 @@
+ SVR4UULCKN=$LIBEXEC/lockname	# SVR4 UUCP lock name construction program
+ ONDELAY=$LIBEXEC/ondelay	# prgm to open devices blocking on carrier
+ CAT="$CAT -u"			# something to do unbuffered reads and writes
+-FAX=fax				# identity of the fax user
++FAX=@FAXUID@			# identity of the fax user
++FAXGID=@FAXGID@
+ GROUP=/etc/group		# where to go for group entries
+ PROTOGID=$FAXGID		# group who's gid we use for FAX user
+-defPROTOGID=10			# use this gid if PROTOGID doesn't exist
++defPROTOGID=117			# use this gid if PROTOGID doesn't exist
+ MODEMCONFIG=$SPOOL/config	# location of prototype modem config files
+ RMCMD="$RM -f"			# forced removal
+ 

@@ -1,0 +1,80 @@
+$NetBSD: patch-aj,v 1.1.1.1 1999/08/11 06:04:29 rh Exp $
+
+--- etc/faxsetup.sh.in.orig	Sun Jan 10 12:37:07 1999
++++ etc/faxsetup.sh.in	Mon Aug  9 22:04:50 1999
+@@ -41,7 +41,9 @@
+ # This script interactively prepares and verifies 
+ # a HylaFAX client and/or server machine for use.
+ #
+-PATH=/bin:/usr/bin:/etc
++PREFIX=@PREFIX@
++#
++PATH=/bin:/usr/bin:${PREFIX}/bin:${PREFIX}/sbin
+ test -d /usr/ucb  && PATH=$PATH:/usr/ucb		# Sun and others
+ test -d /usr/bsd  && PATH=$PATH:/usr/bsd		# Silicon Graphics
+ test -d /usr/5bin && PATH=/usr/5bin:$PATH:/usr/etc	# Sun and others
+@@ -58,13 +60,14 @@
+ GREP=@GREP@			# grep command for use below
+ LN=@LN@				# ln command for use below
+ LN_S=@LN_S@			# ln option for creating a symbolic link
++MKDIR=@MKDIR@			# directory creation program for use below
+ MKFIFO=@MKFIFO@			# FIFO creation program for use below
+ MV=@MV@				# move file for use below
+ RMCMD=@RM@			# remove file for use below
+ SCRIPT_SH=@SCRIPT_SH@		# shell for use below
+ SED=@SED@			# sed for use below
+ 
+-FAX=fax				# identity of the fax user
++FAX=@FAXUID@			# identity of the fax user
+ SERVICES=/etc/services		# location of services database
+ INETDCONF=/usr/etc/inetd.conf	# default location of inetd configuration file
+ ALIASES=/usr/lib/aliases	# default location of mail aliases database file
+@@ -138,6 +141,7 @@
+ LIBEXEC		DIR_LIBEXEC
+ LN
+ MANDIR		DIR_MAN
++MKDIR
+ MKFIFO
+ MV
+ PATH
+@@ -741,6 +745,40 @@
+     bitch "Sorry, but you must run this script as the super-user!"
+     boom
+ fi
++
++createspool()
++{
++    if [ -d "${DIR_SPOOL}" ]; then
++	cat <<EOF
++=================================================================
++
++  @SPOOL@ already exists, probably from a previous run of
++  faxsetup.sh --  I'm not touching it!
++
++  If you encounter problems, deinstall the HylaFax package,
++  remove @SPOOL@ and reinstall the package.
++
++=================================================================
++EOF
++    else
++	${MKDIR} -p -m 0755 ${DIR_SPOOL}
++	${MKFIFO} -m 0600 ${DIR_SPOOL}/FIFO
++	for i in archive docq doneq pollq sendq tmp ; do
++	    ${MKDIR} -m 0700 ${DIR_SPOOL}/$i
++	done
++	for i in client cover dev info log recvq status ; do
++	    ${MKDIR} -m 0755 ${DIR_SPOOL}/$i
++	done
++	${LN} ${LN_S} ${PREFIX}/etc/hylafax ${DIR_SPOOL}/etc
++	${LN} ${LN_S} ${PREFIX}/etc/hylafax/modem ${DIR_SPOOL}/config
++	${LN} ${LN_S} ${PREFIX}/libexec/hylafax ${DIR_SPOOL}/bin
++	${CHOWN} -R ${PROTOUID}:${PROTOGID} ${DIR_SPOOL}
++    fi
++}
++
++Note "Creating spool directory structure"
++
++createspool
+ 
+ onClient && Note "Checking system for proper client configuration."
+ onServer && Note "Checking system for proper server configuration."
