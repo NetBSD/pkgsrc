@@ -1,6 +1,20 @@
---- sysdeps/freebsd/prockernel.c.old	Thu May 27 16:04:03 1999
-+++ sysdeps/freebsd/prockernel.c	Wed Nov  3 01:50:50 1999
-@@ -163,14 +163,27 @@
+$NetBSD: patch-al,v 1.5 1999/11/14 18:49:53 tron Exp $
+
+--- sysdeps/freebsd/prockernel.c.orig	Thu May 27 16:04:03 1999
++++ sysdeps/freebsd/prockernel.c	Sun Nov 14 19:02:50 1999
+@@ -48,6 +48,11 @@
+ #include <osreldate.h>
+ #endif
+ 
++#if defined(__NetBSD__) && defined(__arm32__)
++#include <machine/vmparam.h>
++#define	KERNBASE	KERNEL_BASE
++#endif
++
+ static const unsigned long _glibtop_sysdeps_proc_kernel_pstats =
+ (1L << GLIBTOP_PROC_KERNEL_MIN_FLT) +
+ (1L << GLIBTOP_PROC_KERNEL_MAJ_FLT) +
+@@ -163,14 +168,32 @@
  			buf->kstk_eip = (u_int64_t) pcb.pcb_pc;
  #endif
  #else
@@ -12,14 +26,19 @@
  			buf->kstk_eip = (u_int64_t) pcb.pcb_tss.__tss_eip;
  #endif
 +#else
-+#if defined(__m68k__) && defined(__NetBSD__)
++#if defined(__NetBSD__) && defined(__m68k__)
 +			buf->kstk_esp = (u_int64_t) pcb.pcb_usp;
++			buf->kstk_eip = (u_int64_t) 0;
++#else
++#if defined(__NetBSD__) && defined(__arm32__)
++			buf->kstk_esp = (u_int64_t) pcb.pcb_sp;
 +			buf->kstk_eip = (u_int64_t) 0;
 +#else
 +#ifdef __NetBSD__
 +			/* provide some defaults for other platforms */
 +			buf->kstk_esp = (u_int64_t) 0;
 +			buf->kstk_eip = (u_int64_t) 0;
++#endif
 +#endif
 +#endif
  
