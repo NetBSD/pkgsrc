@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1 2004/10/06 09:19:00 adam Exp $
+
+--- cfg/configure.orig	2003-03-31 20:25:20.000000000 +0000
++++ cfg/configure
+@@ -1687,7 +1687,7 @@ ac_link='$CC -o conftest$ac_exeext $CFLA
+ ac_compiler_gnu=$ac_cv_c_compiler_gnu
+ 
+ if test "$ac_cv_c_compiler_gnu" = yes ; then
+-  CFLAGS="$OLD_CFLAGS -Wall -O2"
++  CFLAGS="$OLD_CFLAGS -Wall"
+ else
+   if test `uname -s` = "HP-UX"; then
+     CFLAGS="$OLD_CFLAGS -Ae +O2"
+@@ -1999,7 +1999,7 @@ ac_link='$CC -o conftest$ac_exeext $CFLA
+ ac_compiler_gnu=$ac_cv_c_compiler_gnu
+ 
+ if test "$ac_cv_c_compiler_gnu" = yes ; then
+-  CXXFLAGS="$OLD_CXXFLAGS -Wall -O2"
++  CXXFLAGS="$OLD_CXXFLAGS -Wall"
+ else
+   if test `uname -s` = "HP-UX"; then
+     CXXFLAGS="$OLD_CXXFLAGS -Ae +O2"
