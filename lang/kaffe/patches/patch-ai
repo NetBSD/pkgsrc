@@ -1,3 +1,5 @@
+$NetBSD: patch-ai,v 1.2 1998/11/12 23:37:59 frueauf Exp $
+
 --- config/arm/netbsd1/config.frag.orig	Thu Jun  4 22:15:46 1998
 +++ config/arm/netbsd1/config.frag	Sat Nov  7 13:07:45 1998
 @@ -1,10 +1,14 @@

@@ -1,3 +1,5 @@
+$NetBSD: patch-aj,v 1.2 1998/11/12 23:37:59 frueauf Exp $
+
 --- config/i386/netbsd1/config.frag.orig	Tue Mar 31 14:10:53 1998
 +++ config/i386/netbsd1/config.frag	Sun Nov  8 18:13:28 1998
 @@ -6,3 +6,9 @@
