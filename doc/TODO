@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1248 2003/12/28 01:15:24 heinz Exp $
+$NetBSD: TODO,v 1.1249 2003/12/28 01:35:47 wiz Exp $
 
 Suggested new packages
 ======================
@@ -118,7 +118,6 @@ Suggested package updates
 	o bidwatcher-1.3.11
 	o blender-2.31a
 	o boehm-gc-6.3alpha2
-	o bogofilter-0.15.13
 	o cervisia-2.0
 	o clisp-2.31
 	o clusterit-2.2
