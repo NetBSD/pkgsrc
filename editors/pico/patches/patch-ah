@@ -1,4 +1,4 @@
-$NetBSD: patch-ah,v 1.1 2005/01/18 03:15:07 jschauma Exp $
+$NetBSD: patch-ah,v 1.2 2005/02/15 18:13:41 tv Exp $
 
 --- pico/makefile.sgi.orig	Mon Jan 17 22:03:01 2005
 +++ pico/makefile.sgi	Mon Jan 17 22:04:34 2005
@@ -39,7 +39,7 @@ $NetBSD: patch-ah,v 1.1 2005/01/18 03:15:07 jschauma Exp $
 -		$(RANLIB) libpico.a
 +libpico.la:	$(OFILES)
 +		$(CC) -o libpico.la $(OFILES:.o=.lo) -rpath $(PREFIX)/lib \
-+			-version-info 4:0
++			-version-info 5:0
  
  clean:
  		rm -f *.a *.o *~ pico_os.c os.h pico pilot
