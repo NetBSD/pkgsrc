@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/04/17 12:25:33 tron Exp $
+
+--- Makefile.orig	Thu Oct 28 19:37:44 1999
++++ Makefile	Tue Apr 17 14:16:41 2001
+@@ -57,6 +57,8 @@
+ watt32:
+ 	$(MAKE) all CC="gcc -g -O2" O=.o X=.exe OUT=-o \
+         CFLAGS="-DWATT32 -I../../inc" LIBS="../../lib/libwatt.a"
++pkgsrc:
++	$(MAKE) all O=.o X= CFLAGS="$(CFLAGS) -DLINUX" OUT=-o
+ 
+ INC = -I.
+ 

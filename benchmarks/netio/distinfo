@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2001/04/17 12:25:33 tron Exp $
+
+SHA1 (netio113.zip) = f68a8476d3ef0f5b16e2e7829d6bb3c175ec2980
+Size (netio113.zip) = 34 bytes
+SHA1 (patch-aa) = af0a4123d226cb7ddc03434413c15edaf11b9f27
