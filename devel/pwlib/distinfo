@@ -1,15 +1,13 @@
-$NetBSD: distinfo,v 1.4 2002/02/19 04:24:36 jmc Exp $
+$NetBSD: distinfo,v 1.5 2002/12/01 18:31:41 jdolecek Exp $
 
-SHA1 (pwlib_min_1.1pl17.tar.gz) = 85008dde337b9d03b24e9441dcbc19906b1bb163
-Size (pwlib_min_1.1pl17.tar.gz) = 606093 bytes
-SHA1 (patch-aa) = 7ee7cb8840f979150818ce143607a08a8f8b81b9
-SHA1 (patch-ab) = 7e458854415708c7c35c9039d68f74d84b2107c9
-SHA1 (patch-ac) = 376d32495c2b1bf711680aa967403099c7db3e94
-SHA1 (patch-ad) = 1b59a8281c465b82334e1454bd7861402d590ae6
-SHA1 (patch-ae) = b2b7f21bdef6a05d17da564bc99c3c6bdf3b949f
-SHA1 (patch-af) = a2ddeef36b1f7d280a39270902b45ae5fb6bebf1
-SHA1 (patch-ag) = 1607f6e50c73ca0cd017c93b87ad97ef8873a492
-SHA1 (patch-ah) = 9119804a6229a50a0cecdc5d2c5c5ae0aa3c29d6
-SHA1 (patch-ai) = 029e5f77e17f080c06545c9c14b5f65a9aca2e03
-SHA1 (patch-aj) = 263f1479719e8b216a36796cd06fbf267235527d
-SHA1 (patch-ak) = baf989b0000b96fe6ed862d9571388b57c091b79
+SHA1 (pwlib_1.4.4.tar.gz) = 5432ba3e4771fb281283161bb956b5a19e5200c7
+Size (pwlib_1.4.4.tar.gz) = 907721 bytes
+SHA1 (patch-aa) = 13d2e40664a725bf59569d837df54c06d707eda2
+SHA1 (patch-ab) = 9da2c47c9c8b09ac0f7f74171f1ff5895075b39f
+SHA1 (patch-ac) = 07fa4e45663840e273e21b8f240ec749fff4a13a
+SHA1 (patch-ae) = 02d323e53908049146c4b389e2b2d32ebf2c4a61
+SHA1 (patch-af) = e410a5e918e4e957ad8902b29f0a2f385c116bde
+SHA1 (patch-ag) = a2a7e8929c125f827c4e078f4a578497cbaff94b
+SHA1 (patch-ai) = 40902c75b1a5fe06e3ca47f360f2349d2684f9e4
+SHA1 (patch-aj) = 93e039bb60c5cb75abb916e2797c644b67a6b9b0
+SHA1 (patch-al) = 29256c9f08e9e76779676651f4dd9569a747ced0

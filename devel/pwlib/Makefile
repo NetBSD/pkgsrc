@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.14 2002/10/09 10:29:24 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2002/12/01 18:31:41 jdolecek Exp $
 #
 
-DISTNAME=		pwlib_min_1.1pl17
-PKGNAME=		pwlib-1.1pl17
+DISTNAME=		pwlib_1.4.4
+PKGNAME=		pwlib-1.4.4
 CATEGORIES=		devel
 MASTER_SITES=		http://www.openh323.org/bin/
-COUNTRY_MIRRORS=	au au2 us1 us2 ru de at cz pl
+COUNTRY_MIRRORS=	at us1 us2 ru de cz
 .for COUNTRY in ${COUNTRY_MIRRORS}
 MASTER_SITES+=		ftp://www.${COUNTRY}.openh323.org/bin/
 .endfor
@@ -18,39 +18,41 @@ BUILD_DEPENDS=		bison-[0-9]*:../../devel/bison
 
 WRKSRC=			${WRKDIR}/pwlib
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK_ONLY=	yes
 USE_GMAKE=		yes
 USE_LIBTOOL=		yes
-PTHREAD_OPTS+=		native
 
-MAKE_ENV+=		PWLIBDIR=${WRKSRC}
-MAKE_ENV+=		CC="${PGCC}" CPLUS="${PGXX}"
+MAKE_ENV+=		PWLIBDIR="${WRKSRC}"
+MAKE_ENV+=		CC="${CC}"
+MAKE_ENV+=		CPLUS="${CXX}"
 ALL_TARGET=		opt
 
-do-configure:
+FILES_SUBST+=		LIBTOOL="${LIBTOOL}"
+FILES_SUBST+=		PTHREADS_PREFIX="${BUILDLINK_PREFIX.pthread}"
+
+post-patch:
+	${_PKG_SILENT}cd ${WRKSRC}/make;				\
+	for f in unix.mak lib.mak common.mak; do			\
+		${SED} ${FILES_SUBST_SED} $$f > $$f.sed;		\
+		${MV} -f $$f.sed $$f;						\
+	done
 	${LN} -sf ${WRKDIR} ${WRKSRC}/share
 
-pre-install:
-	${FIND} ${WRKSRC} \( -name CVS -o -name "*.orig" \) -print |	\
-		${XARGS} ${RM} -rf
-
-post-install:
+do-install:
+	${_PKG_SILENT}cd ${WRKSRC}/src/ptlib/unix && ${MAKE_ENV} ${GMAKE} install
+	${_PKG_SILENT}cd ${WRKSRC}/tools/asnparser && ${MAKE_ENV} ${GMAKE} install
 	${INSTALL_DATA_DIR} ${PREFIX}/include/ptclib
 	${INSTALL_DATA_DIR} ${PREFIX}/include/ptlib/unix/ptlib
 	cd ${WRKSRC}/include;						\
-	for f in `${FIND} . -type f -print`; do				\
+	for f in `${FIND} . -type f -a ! -path '*/CVS/*' -print`; do	\
 		${INSTALL_DATA} $$f ${PREFIX}/include/`${DIRNAME} $$f`;	\
 	done
 	${INSTALL_DATA_DIR} ${PREFIX}/share/pwlib/make
 	cd ${WRKSRC}/make;						\
-	for f in unix.mak common.mak lib.mak ptlib.mak; do		\
+	for f in *.mak; do		\
 		${INSTALL_DATA} $$f ${PREFIX}/share/pwlib/make;		\
 	done
 
 .include "../../mk/pthread.buildlink2.mk"
-
-.if defined(PTHREAD_TYPE) && (${PTHREAD_TYPE} == "none")
-.  include "../../devel/unproven-pthreads/buildlink2.mk"
-.endif
-
+.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
