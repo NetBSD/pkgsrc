@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.517 2002/11/14 00:57:36 hubertf Exp $
+$NetBSD: CHANGES,v 1.518 2002/11/14 01:00:26 hubertf Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3606,3 +3606,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated mhash to 0.8.17 [jschauma 2002-11-13]
 	Updated aide to 0.9 [jschauma 2002-11-13]
 	Added i2cb-6.0_ALPHA [hubertf 2002-11-14]
+	Added i2cbd-2.0_BETA0 [hubertf 2002-11-14]
