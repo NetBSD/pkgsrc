@@ -1,9 +1,12 @@
-# $NetBSD: Makefile,v 1.15 2001/09/21 20:16:18 jdolecek Exp $
+# $NetBSD: Makefile,v 1.16 2001/09/22 10:45:09 skrll Exp $
 #
 
 DISTNAME=	kdelibs-2.1.2
 CATEGORIES=	x11 kde
 .include "../../x11/kde2/Makefile.part1"
+MASTER_SITES=   ftp://ftp.kde.org/pub/kde/stable/2.1.2/distribution/tar/generic/src/ \
+                ftp://ftp.us.kde.org/pub/kde/stable/2.1.2/distribution/tar/generic/src/ \
+                ftp://ftp.de.kde.org/pub/kde/stable/2.1.2/distribution/tar/generic/src/
 COMMENT=	Support libraries for the KDE integrated X11 desktop
 
 DEPENDS+=		jade>=1.2.1:../../textproc/jade
