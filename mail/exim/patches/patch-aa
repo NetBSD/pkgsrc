@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.7 2004/03/05 12:28:45 abs Exp $
+$NetBSD: patch-aa,v 1.7.2.1 2004/05/30 08:59:43 grant Exp $
 
---- Local/Makefile.pkgsrc.orig	2004-03-05 12:23:22.000000000 +0000
+--- Local/Makefile.pkgsrc.orig	Fri May  7 18:22:09 2004
 +++ Local/Makefile.pkgsrc
 @@ -98,7 +98,7 @@
  # /usr/local/sbin. The installation script will try to create this directory,
@@ -20,15 +20,16 @@ $NetBSD: patch-aa,v 1.7 2004/03/05 12:28:45 abs Exp $
  
  # It is possible to specify a colon-separated list of files for CONFIGURE_FILE.
  # In this case, Exim will use the first of them that exists when it is run.
-@@ -132,14 +132,14 @@ CONFIGURE_FILE=/usr/exim/configure
+@@ -132,7 +132,7 @@ CONFIGURE_FILE=/usr/exim/configure
  # owner of a local mailbox.) Specifying these values as root is very strongly
- # discouraged. These values are compiled into the binary.
+ # discouraged.
  
 -EXIM_USER=
-+EXIM_USER=@EXIM_USER@
++EXIM_USER=ref:@EXIM_USER@
  
- # If the setting of EXIM_USER is numeric (e.g. EXIM_USER=42), there must
- # also be a setting of EXIM_GROUP. If, on the other hand, you use a name
+ # If you specify EXIM_USER as a name, this is looked up at build time, and the
+ # uid number is built into the binary. However, you can specify that this
+@@ -153,7 +153,7 @@ EXIM_USER=
  # for EXIM_USER (e.g. EXIM_USER=exim), you don't need to set EXIM_GROUP unless
  # you want to use a group other than the default group for the given user.
  
@@ -37,7 +38,7 @@ $NetBSD: patch-aa,v 1.7 2004/03/05 12:28:45 abs Exp $
  
  # Many sites define a user called "exim", with an appropriate default group,
  # and use
-@@ -213,7 +213,7 @@ TRANSPORT_SMTP=yes
+@@ -227,7 +227,7 @@ TRANSPORT_SMTP=yes
  # This one is special-purpose, and commonly not required, so it is not
  # included by default.
  
@@ -46,7 +47,7 @@ $NetBSD: patch-aa,v 1.7 2004/03/05 12:28:45 abs Exp $
  
  
  #------------------------------------------------------------------------------
-@@ -222,9 +222,9 @@ TRANSPORT_SMTP=yes
+@@ -236,9 +236,9 @@ TRANSPORT_SMTP=yes
  # MBX, is included only when requested. If you do not know what this is about,
  # leave these settings commented out.
  
@@ -59,7 +60,7 @@ $NetBSD: patch-aa,v 1.7 2004/03/05 12:28:45 abs Exp $
  
  
  #------------------------------------------------------------------------------
-@@ -289,7 +289,7 @@ LOOKUP_LSEARCH=yes
+@@ -310,7 +310,7 @@ LOOKUP_LSEARCH=yes
  # files are defaulted in the OS/Makefile-Default file, but can be overridden in
  # local OS-specific make files.
  
@@ -68,7 +69,7 @@ $NetBSD: patch-aa,v 1.7 2004/03/05 12:28:45 abs Exp $
  
  
  
-@@ -310,9 +310,9 @@ EXIM_MONITOR=eximon.bin
+@@ -386,9 +386,9 @@ FIXED_NEVER_USERS=root
  # included in the Exim binary. You will then need to set up the run time
  # configuration to make use of the mechanism(s) selected.
  
@@ -81,7 +82,7 @@ $NetBSD: patch-aa,v 1.7 2004/03/05 12:28:45 abs Exp $
  
  
  #------------------------------------------------------------------------------
-@@ -390,10 +390,11 @@ HEADER_DECODE_TO="ISO-8859-1"
+@@ -466,10 +466,11 @@ HEADERS_CHARSET="ISO-8859-1"
  # leave these settings commented out.
  
  # This setting is required for any TLS support (either OpenSSL or GnuTLS)
@@ -95,7 +96,7 @@ $NetBSD: patch-aa,v 1.7 2004/03/05 12:28:45 abs Exp $
  
  # Uncomment these settings if you are using GnuTLS
  # USE_GNUTLS=yes
-@@ -457,7 +458,7 @@ HEADER_DECODE_TO="ISO-8859-1"
+@@ -533,7 +534,7 @@ HEADERS_CHARSET="ISO-8859-1"
  # %s. This will be replaced by one of the strings "main", "panic", or "reject"
  # to form the final file names. Some installations may want something like this:
  
@@ -104,7 +105,7 @@ $NetBSD: patch-aa,v 1.7 2004/03/05 12:28:45 abs Exp $
  
  # which results in files with names /var/log/exim_mainlog, etc. The directory
  # in which the log files are placed must exist; Exim does not try to create
-@@ -587,7 +588,8 @@ ZCAT_COMMAND=/usr/bin/zcat
+@@ -663,7 +664,8 @@ ZCAT_COMMAND=/usr/bin/zcat
  # this setting. See the manual section entitled "Use of tcpwrappers" in the
  # chapter on building and installing Exim.
  #
@@ -114,7 +115,7 @@ $NetBSD: patch-aa,v 1.7 2004/03/05 12:28:45 abs Exp $
  #
  # You may well also have to specify a local "include" file and an additional
  # library for TCP wrappers, so you probably need something like this:
-@@ -643,11 +645,11 @@ SYSTEM_ALIASES_FILE=/etc/aliases
+@@ -719,11 +721,11 @@ SYSTEM_ALIASES_FILE=/etc/aliases
  # haven't got Perl, Exim will still build and run; you just won't be able to
  # use those utilities.
  
@@ -131,7 +132,7 @@ $NetBSD: patch-aa,v 1.7 2004/03/05 12:28:45 abs Exp $
  
  
  #------------------------------------------------------------------------------
-@@ -841,7 +843,7 @@ TMPDIR="/tmp"
+@@ -917,7 +919,7 @@ TMPDIR="/tmp"
  # (process id) to a file so that it can easily be identified. The path of the
  # file can be specified here. Some installations may want something like this:
  
