@@ -1,0 +1,10 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2003/01/09 20:14:00 wiz Exp $
+
+You will need to add something like the following to your .emacs.el (or
+default.el) file to autoload the PSGML mode for Emacs.
+
+(autoload 'sgml-mode "psgml" "Major mode to edit SGML files." t)
+(autoload 'xml-mode "psgml" "Major mode to edit XML files." t)
+
+===========================================================================
