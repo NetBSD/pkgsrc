@@ -1,13 +1,13 @@
-$NetBSD: patch-aj,v 1.1 2000/08/29 16:26:21 rh Exp $
+$NetBSD: patch-aj,v 1.2 2001/04/06 21:55:40 rh Exp $
 
---- test/Makefile.in.orig	Tue Aug 29 17:15:25 2000
+--- test/Makefile.in.orig	Fri Mar  2 04:16:48 2001
 +++ test/Makefile.in
-@@ -489,7 +489,7 @@
+@@ -468,7 +468,7 @@
  	touch empty_built
  
  oaf-slay: $(srcdir)/oaf-slay.tmpl
 -	sed 's|@oafdir@|'$(pkgdatadir)'|g' < $< > $@
 +	sed 's|@oafdir@|'$(pkgdatadir)'|g' < $(srcdir)/oaf-slay.tmpl > $@
  
- # Tell versions [3.59,3.63) of GNU make to not export all variables.
- # Otherwise a system limit (for SysV at least) may be exceeded.
+ check:
+ 	OAF_INFO_PATH="$(top_srcdir)/test:$$OAF_INFO_PATH" PATH="$(top_builddir)/test:$$PATH" $(top_builddir)/test/oaf-test-client

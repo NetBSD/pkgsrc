@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2001/01/04 15:10:32 agc Exp $
+@comment $NetBSD: PLIST,v 1.5 2001/04/06 21:55:40 rh Exp $
 bin/oafd
 bin/oaf-client
 bin/oaf-run-query
@@ -36,16 +36,21 @@ share/locale/fi/LC_MESSAGES/oaf.mo
 share/locale/fr/LC_MESSAGES/oaf.mo
 share/locale/ga/LC_MESSAGES/oaf.mo
 share/locale/gl/LC_MESSAGES/oaf.mo
+share/locale/hu/LC_MESSAGES/oaf.mo
 share/locale/it/LC_MESSAGES/oaf.mo
 share/locale/ja/LC_MESSAGES/oaf.mo
 share/locale/ko/LC_MESSAGES/oaf.mo
 share/locale/no/LC_MESSAGES/oaf.mo
+share/locale/pl/LC_MESSAGES/oaf.mo
+share/locale/pt_BR/LC_MESSAGES/oaf.mo
+share/locale/ro/LC_MESSAGES/oaf.mo
 share/locale/ru/LC_MESSAGES/oaf.mo
+share/locale/sk/LC_MESSAGES/oaf.mo
 share/locale/sl/LC_MESSAGES/oaf.mo
 share/locale/sv/LC_MESSAGES/oaf.mo
 share/locale/tr/LC_MESSAGES/oaf.mo
 share/locale/uk/LC_MESSAGES/oaf.mo
-share/oaf/oafd.oafinfo
+share/oaf/OAF_naming-service.oaf
 share/oaf/empty.oafinfo
 @exec mkdir -p %D/share/oaf/html/liboaf
 @dirrm etc/oaf

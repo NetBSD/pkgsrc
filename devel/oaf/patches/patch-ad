@@ -1,14 +1,14 @@
-$NetBSD: patch-ad,v 1.3 2001/01/02 22:11:32 tron Exp $
+$NetBSD: patch-ad,v 1.4 2001/04/06 21:55:40 rh Exp $
 
---- oafd/main.c.orig	Tue Nov  7 01:19:45 2000
-+++ oafd/main.c	Tue Jan  2 23:02:40 2001
-@@ -26,7 +26,8 @@
- #include "config.h"
- #include "oaf-i18n.h"
- 
+--- oafd/main.c.orig	Wed Feb 21 10:50:43 2001
++++ oafd/main.c
+@@ -37,7 +37,8 @@
+ #include <sys/types.h>
+ #include <sys/stat.h>
+ #include <fcntl.h>
 -#include <popt.h>
 +#include <locale.h>
 +#include <popt-gnome.h>
  #include <signal.h>
  #include <stdlib.h>
- 
+ #include <unistd.h>

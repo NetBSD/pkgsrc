@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2001/02/16 14:38:45 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2001/04/06 21:55:39 rh Exp $
 #
 
-DISTNAME=		oaf-0.6.1
+DISTNAME=		oaf-0.6.5
 CATEGORIES=		devel gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=unstable/sources/oaf/}
 
@@ -11,7 +11,6 @@ COMMENT=		new object activation framework for GNOME
 
 DEPENDS+=		gnome-libs>=1.2.3:../../x11/gnome-libs
 DEPENDS+=		libxml>=1.8.10:../../textproc/libxml
-DEPENDS+=		popt-*:../../devel/popt
 
 GNU_CONFIGURE=		YES
 USE_X11BASE=		YES
