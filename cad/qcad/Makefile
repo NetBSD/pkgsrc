@@ -1,19 +1,26 @@
-# $NetBSD: Makefile,v 1.2 2001/04/14 21:43:39 jtb Exp $
+# $NetBSD: Makefile,v 1.3 2001/05/03 22:02:59 jtb Exp $
 
-DISTNAME=	qcad-1.4.7-src
-PKGNAME=	qcad-1.4.7
-CATEGORIES=	cad
-MASTER_SITES=	http://www.qcad.org/archives/
+DISTNAME=		qcad-1.4.7-src
+PKGNAME=		qcad-1.4.7
+CATEGORIES=		cad
+MASTER_SITES=		http://www.qcad.org/archives/
 
-MAINTAINER=	packages@netbsd.org
-HOMEPAGE=	http://www.qcad.org/
-COMMENT=	2D CAD System
+MAINTAINER=		packages@netbsd.org
+HOMEPAGE=		http://www.qcad.org/
+COMMENT=		2D CAD System
 
-DEPENDS+=	qt2-libs>=2.2.4:../../x11/qt2-libs
+DEPENDS+=		qt2-libs>=2.2.4:../../x11/qt2-libs
 
-USE_X11=	#defined
-EVAL_PREFIX+=	QT2_PREFIX=qt2 JPEG_PREFIX=jpeg PNG_PREFIX=png
-MAKE_ENV+=	QTDIR=${QT2_PREFIX}/qt2
+USE_X11=		#defined
+
+EVAL_PREFIX+=		QT2_PREFIX=qt2
+MAKE_ENV+=		QTDIR=${QT2_PREFIX}/qt2
+
+JPEG_PREFIX_DEFAULT=	${LOCALBASE}
+EVAL_PREFIX+=		JPEG_PREFIX=jpeg
+
+PNG_PREFIX_DEFAULT=	${LOCALBASE}
+EVAL_PREFIX+=		PNG_PREFIX=png
 
 do-configure:
 	@for f in rappwin.cpp rconfig.cpp relement.cpp rfile.cpp	\
