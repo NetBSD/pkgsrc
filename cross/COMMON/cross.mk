@@ -1,4 +1,4 @@
-#	$NetBSD: cross.mk,v 1.5 1999/01/06 01:14:20 tv Exp $
+#	$NetBSD: cross.mk,v 1.6 1999/01/13 14:56:38 tv Exp $
 
 # Shared definitions for building a cross-compile environment.
 
@@ -53,7 +53,7 @@ binutils-configure:
 	@cd ${BINUTILS_WRKSRC} && ${SETENV} CC="${CC}" ac_cv_path_CC="${CC}" \
 		CFLAGS="${CFLAGS}" ${CONFIGURE_ENV} ./configure \
 		--prefix=${PREFIX} --host=${MACHINE_GNU_ARCH}--netbsd \
-		--target=${TARGET_ARCH}
+		--target=${TARGET_ARCH} --enable-64-bit-bfd
 
 binutils-build:
 	@cd ${BINUTILS_WRKSRC}/bfd && ${SETENV} ${MAKE_ENV} \
