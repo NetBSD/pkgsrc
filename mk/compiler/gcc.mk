@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.11 2004/02/02 12:27:12 jlam Exp $
+# $NetBSD: gcc.mk,v 1.12 2004/02/02 12:44:22 jlam Exp $
 
 .if !defined(COMPILER_GCC_MK)
 COMPILER_GCC_MK=	defined
@@ -174,7 +174,15 @@ _GCC_SUBPREFIX!=	\
 		${GREP} "File:.*bin/gcc" |				\
 		${SED} -e "s/.*File: *//;s/bin\/gcc.*//;q";		\
 	else								\
-		${ECHO} "not_found/";					\
+		gccpath="`${TYPE} ${CC} | ${AWK} '{ print $$NF }'`";	\
+		case $$gccpath in					\
+		${LOCALBASE}/*)						\
+			${ECHO} "`${BASENAME} $$gccpath`/";		\
+			;;						\
+		*)							\
+			${ECHO} "not_found/";				\
+			;;						\
+		esac
 	fi
 _GCC_PREFIX=		${LOCALBASE}/${_GCC_SUBPREFIX}
 _GCC_ARCHDIR!=		\
