@@ -1,69 +1,64 @@
-$NetBSD: patch-aa,v 1.4 2002/01/22 02:13:02 hubertf Exp $
+$NetBSD: patch-aa,v 1.5 2002/03/25 18:23:37 wiz Exp $
 
---- Makefile.orig	Sun May 20 23:16:39 2001
+--- Makefile.orig	Sun Mar 10 01:24:16 2002
 +++ Makefile
-@@ -1,6 +1,6 @@
- #Define your C compiler.  I recommend gcc if you have it.
+@@ -1,7 +1,7 @@
+ # Define your C compiler.  I recommend gcc if you have it.
+ # MacOS users should use "cc" even though it's really "gcc".
+ #
 -CC = gcc
--#CC = cc
-+#CC = gcc
-+CC = cc
++CC ?= cc
+ #CC = cc
  
  # Define your optimization flags.  Most compilers understand -O and -O2,
- # Standard (note: Solaris on UltraSparc using gcc 2.8.x might not like this.)
-@@ -10,42 +10,42 @@
- #-malign-jumps=2
+@@ -14,7 +14,7 @@
  
  # Define where you want Frotz to be installed.  Usually this is /usr/local
+ #
 -PREFIX = /usr/local
 +#PREFIX = /usr/local
  #PREFIX =
  
+ #Define where manpages should go.
+@@ -24,7 +24,7 @@
+ 
  # Define where you want Frotz to look for frotz.conf.
+ #
 -CONFIG_DIR = /usr/local/etc
-+#CONFIG_DIR = /usr/local/etc
++CONFIG_DIR = ${PREFIX}/etc
  #CONFIG_DIR = /etc
  #CONFIG_DIR = /usr/pkg/etc
--#CONFIG_DIR =
-+CONFIG_DIR = ${PREFIX}/etc
- 
- # Uncomment this if you want color support.  Usually this requires ncurses.
- COLOR_DEFS = -DCOLOR_SUPPORT
- 
+ #CONFIG_DIR =
+@@ -36,16 +36,16 @@
  # Uncomment this if you have an OSS soundcard driver and want classical
  # Infocom sound support.  Currently this works only for Linux.
--# SOUND_DEFS = -DOSS_SOUND
+ #
+-#SOUND_DEFS = -DOSS_SOUND
 +SOUND_DEFS = -DOSS_SOUND
  
- # Uncomment the type of sound driver you want to use.
- # OSS
+ # Also uncomment this if you want sound through the OSS driver.
+ #
 -#SOUND_LIB = -lossaudio
 +SOUND_LIB = -lossaudio
  
  # This should point to the location of your curses.h or ncurses.h include
  # file if your compiler doesn't know about it.
+ #
 -INCL = -I/usr/local/include
-+#INCL = -I/usr/local/include
++INCL = -I${BUILDLINK_DIR}/include
  #INCL = -I/usr/pkg/include
  #INCL = -I/usr/freeware/include
  #INCL = -I/5usr/include
--#INCL =
-+INCL = -I${BUILDLINK_DIR}/include
- 
- # This should define the location and name of whatever curses library you're
+@@ -55,7 +55,7 @@
  # linking with.  Usually, this isn't necessary if /etc/ld.so.conf is set
  # up correctly.
+ #
 -LIB = -L/usr/local/lib
-+#LIB = -L/usr/local/lib
++LIB = -L${BUILDLINK_DIR}/lib -Wl,-R${PREFIX}/lib
  #LIB = -L/usr/pkg/lib
  #LIB = -L/usr/freeware/lib
  #LIB = -L/5usr/lib
--#LIB =
-+LIB = -L${BUILDLINK_DIR}/lib -Wl,-R${PREFIX}/lib
- 
- # One of these must be uncommented, use ncurses if you have it. 
- CURSES = -lncurses	# Linux always uses ncurses.
-@@ -85,11 +85,12 @@
+@@ -109,11 +109,12 @@
  COMP_DEFS = $(OPT_DEFS) $(COLOR_DEFS) $(SOUND_DEFS) $(SOUNDCARD) \
  	$(MEMMOVE_DEF)
  
@@ -78,3 +73,12 @@ $NetBSD: patch-aa,v 1.4 2002/01/22 02:13:02 hubertf Exp $
  
  all: $(BINNAME)
  
+@@ -161,7 +162,7 @@
+ 	rm -f $(BINNAME)$(EXTENSION)
+ 	-rm -rf $(distdir)
+ 	-rm -f $(distdir).tar $(distdir).tar.gz
+-	
++
+ realclean: distclean
+ 
+ clobber: distclean
