@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2004/02/19 01:24:01 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2004/03/20 02:05:48 snj Exp $
 
 DISTNAME=	curl-7.11.0
 CATEGORIES=	www
@@ -18,6 +18,9 @@ GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 CONFIGURE_ARGS+=	--with-ssl=${BUILDLINK_PREFIX.openssl}
 CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib}
+
+# Work around an ICE on sparc64 with gcc2
+CONFIGURE_ENV+=		F77=${FALSE}
 
 .include "../../mk/bsd.prefs.mk"
 
