@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6740 2004/07/31 01:42:06 xtraeme Exp $
+$NetBSD: CHANGES,v 1.6741 2004/07/31 07:24:02 jdolecek Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3659,3 +3659,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated dvdrip to 0.50.18 [recht 2004-07-30]
 	Updated glib2 to 2.4.5 [jmmv 2004-07-30]
 	Updated xpkgwedge to 1.12 [xtraeme 2004-07-31]
+	Updated opera7 to 7.53 [jdolecek 2004-07-31]
