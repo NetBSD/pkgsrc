@@ -1,3 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/04/21 10:57:33 mjl Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/04/27 13:52:18 abs Exp $
 sbin/smtpd
 sbin/smtpfwdd
+share/doc/smtpd/INSTALL
+share/doc/smtpd/README
