@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.25 1999/10/01 22:59:38 jlam Exp $
+# $NetBSD: Makefile,v 1.26 1999/10/22 23:35:37 tron Exp $
 #
 
-DISTNAME=	ORBit-0.4.3
+DISTNAME=	ORBit-0.5.0
 CATEGORIES=	corba
-MASTER_SITES=	${MASTER_SITE_GNOME:=gnome-1.0/sources/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=gnome-1.0.53/sources/}
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.gnome.org/
 
-DEPENDS+=	glib-1.2.4:../../devel/glib
+DEPENDS+=	glib-1.2.*:../../devel/glib
 DEPENDS+=	gindent-*:../../devel/gindent
 
 GNU_CONFIGURE=	yes
