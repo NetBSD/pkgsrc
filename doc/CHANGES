@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8516 2004/12/29 13:22:53 adrianp Exp $
+$NetBSD: CHANGES,v 1.8517 2004/12/29 13:54:43 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -6694,3 +6694,4 @@ Changes to the packages collection and infrastructure in 2004:
 		[agc 2004-12-29]
 	Updated p5-User-Identity to 0.90 [adrianp 2004-12-29]
 	Updated p5-MIME-Types to 1.13 [adrianp 2004-12-29]
+	Updated oinkmaster to 1.1 [adrianp 2004-12-29]
