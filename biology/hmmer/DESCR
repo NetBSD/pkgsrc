@@ -1,0 +1,6 @@
+HMMER is an implementation of profile HMM methods for sensitive database 
+searches using multiple sequence alignments as queries. HMMER takes 
+multiple sequence alignement as input and builds statistical model 
+called "Hidden Markov Model" which can be used as a query into a 
+sequence database to find and/or align additional homologues of the 
+sequence family.
