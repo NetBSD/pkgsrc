@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2002/03/14 20:44:21 tron Exp $
+# $NetBSD: Makefile,v 1.38 2002/03/25 14:43:00 cjep Exp $
 
 # Make sure that the version number in "Makefile.gcc" matches this.
 DISTNAME=		gcc-2.95.3
@@ -13,7 +13,7 @@ BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
 
 # The platforms listed below are the only tested platforms so far.
 # If you get gcc working on other platforms, then please add them.
-ONLY_FOR_PLATFORM=	NetBSD-*-i386 SunOS-*-*
+ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-*-arm32 SunOS-*-*
 
 USE_GMAKE=		YES
 HAS_CONFIGURE=		YES
