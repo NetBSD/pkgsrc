@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2001/02/25 04:18:11 hubertf Exp $
+# $NetBSD: Makefile,v 1.26 2001/07/19 12:09:24 tron Exp $
 # FreeBSD Id: Makefile,v 1.13 1999/04/08 07:49:18 dima Exp $
 
 PKGNAME=	acroread-4.05
@@ -17,7 +17,9 @@ NO_BIN_ON_FTP=	${RESTRICTED}
 NO_SRC_ON_FTP=	${RESTRICTED}
 LICENSE=	adobe-acrobat-license
 
+CHECK_SHLIBS=	NO
 NO_BUILD=	YES
+SHLIB_HANDLING=	NO
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -27,8 +29,6 @@ DEPENDS=	suse_x11>=6.1:../../emulators/suse_x11
 DISTNAME=	linux-ar-405
 PLATFORM=	intellinux
 WRKSRC=		${WRKDIR}/ILINXR.install
-CHECK_SHLIBS=	NO
-SHLIB_HANDLING=	NO
 .elif (${MACHINE_ARCH} == "alpha")
 .if !exists(/emul/osf1/sbin/loader)
 IGNORE=	'${PKGNAME} requires Digital UNIX libraries - see compat_osf1(8)'
@@ -36,7 +36,6 @@ IGNORE=	'${PKGNAME} requires Digital UNIX libraries - see compat_osf1(8)'
 DISTNAME=	fdec-rs-405
 PLATFORM=       alphaosf
 WRKSRC=		${WRKDIR}/AOSFRS.install
-LDD?=		${TRUE}
 .elif (${MACHINE_ARCH} == "sparc")
 .if !exists(/emul/svr4/usr/lib/ld.so)
 IGNORE=		'${PKGNAME} requires Solaris libraries - see compat_svr4(8)'
@@ -44,10 +43,8 @@ IGNORE=		'${PKGNAME} requires Solaris libraries - see compat_svr4(8)'
 DISTNAME=	sunsparc-rs-405
 WRKSRC=		${WRKDIR}/SSOLRS.install
 PLATFORM=	sparcsolaris
-LDD?=		${TRUE}
 .else
 DISTNAME=	${PKGNAME}
-LDD?=		${TRUE}
 .endif
 ONLY_FOR_PLATFORM=	*-*-i386 *-1.4[L-Z]-sparc *-1.[5-9]*-sparc *-[2-9]*-sparc
 # *-*-alpha 
@@ -55,6 +52,7 @@ ONLY_FOR_PLATFORM=	*-*-i386 *-1.4[L-Z]-sparc *-1.[5-9]*-sparc *-[2-9]*-sparc
 DISTNAME=	sunsparc-rs-405
 WRKSRC=		${WRKDIR}/SSOLRS.install
 PLATFORM=	sparcsolaris
+
 post-patch:
 	${CHMOD} -R o+rwx ${WRKSRC}
 .endif
@@ -67,13 +65,19 @@ PLIST_SRC=	${PKGDIR}/PLIST.pre \
 
 NS_PLUGINS_DIR=	${PREFIX}/lib/netscape/plugins
 
+.if (${OPSYS} == "SunOS")
+BIN_PATCH=	${PATCH} --quiet -V simple -z .orig
+.else
+BIN_PATCH=	${PATCH} --quiet -V simple -b .orig
+.endif
+
 do-install:
 	@${INSTALL_DATA_DIR} ${PREFIX}/Acrobat4
 	@( ${ECHO} accept ) | PAGER=${CAT} ReadInstallDir=${PREFIX}/Acrobat4 ${WRKSRC}/INSTALL
 
 post-install:
 	@cd ${PREFIX}/Acrobat4/bin && \
-	  ${PATCH} --quiet < ${FILESDIR}/acroread.diff && \
+	  ${BIN_PATCH} <${FILESDIR}/acroread.diff && \
 	  ${INSTALL_SCRIPT} ${PREFIX}/Acrobat4/bin/acroread \
 	     ${PREFIX}/bin/acroread && ${RM} -f acroread.orig
 	${CHMOD} +x ${PREFIX}/bin/acroread
@@ -83,5 +87,12 @@ post-install:
 		${NS_PLUGINS_DIR}
 	@${ECHO_MSG} "Be sure to read the license agreement in"
 	@${ECHO_MSG} "${PREFIX}/Acrobat4/Reader/License.pdf"
+.if (${PLATFORM} == "sparcsolaris")
+	@cd ${PREFIX}/Acrobat4/Reader/${PLATFORM}/lib && \
+	for LIB in AGM.so.3 CoolType.so.1 ICC.so.1 readcore.so.4; do \
+	  ${RM} -f lib$${LIB} && \
+	  ${LN} -s lib$${LIB}.* lib$${LIB}; \
+	done
+.endif
 
 .include "../../mk/bsd.pkg.mk"
