@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.2 2001/07/28 00:15:13 thorpej Exp $
+
 --- Makefile.orig	Tue Apr 27 14:03:25 1999
 +++ Makefile	Fri Jul 27 16:20:10 2001
 @@ -13,7 +13,7 @@
