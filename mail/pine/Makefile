@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2002/01/02 00:46:55 hubertf Exp $
+# $NetBSD: Makefile,v 1.57 2002/01/02 13:24:54 tron Exp $
 # FreeBSD Id: Makefile,v 1.21 1997/03/26 02:12:07 ache Exp
 #
 
@@ -29,8 +29,6 @@ LDAPCFLAGS=    LDAPCFLAGS="-DENABLE_LDAP"
 LDAPLIBS=      LDAPLIBS="-lldap -llber"
 .endif
 
-USE_SSL=	yes
-
 pre-patch:
 	# Make sure the imap lib that comes with pine isn't
 	# used (see http://www.securityfocus.com/advisories/2646)
@@ -47,7 +45,7 @@ do-configure:
 
 do-build:
 	cd ${WRKSRC} && ./build ${BUILDNAME} ${LDAPCFLAGS} ${LDAPLIBS} PREFIX=${PREFIX} \
-		CC="${CC} ${CFLAGS}"
+		CC="${CC} ${CFLAGS} ${LDFLAGS}"
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/pine ${PREFIX}/bin/
@@ -76,6 +74,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/contrib/utils/* ${PREFIX}/share/pine/contrib/utils
 	${CHMOD} +x ${PREFIX}/share/pine/contrib/utils/*.sh
 
+.include "../../security/openssl/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
 .if ${OPSYS} == "SunOS"
 BUILDNAME= gs5
