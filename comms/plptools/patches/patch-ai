@@ -1,0 +1,13 @@
+$NetBSD: patch-ai,v 1.1 2004/05/24 16:09:35 kristerw Exp $
+
+--- lib/rpcsfactory.cc.orig	2004-05-24 17:48:59.000000000 +0200
++++ lib/rpcsfactory.cc	2004-05-24 17:49:16.000000000 +0200
+@@ -73,7 +73,7 @@
+ 			return NULL;
+ 		}
+ 		// Invalid protocol version
+-		cerr << "rpcsfactory::create received odd protocol version from
++		cerr << "rpcsfactory::create received odd protocol version from \
+ ncpd! (" << a << ")" << endl;
+ 	} else {
+ 		cerr << "rpcsfactory::create sent, response not 1" << endl;
