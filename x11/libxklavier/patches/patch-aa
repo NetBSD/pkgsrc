@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.1 2004/06/27 21:01:58 kristerw Exp $
+
+--- libxklavier/xklavier_config_xkb.c.orig	Sun Jun 27 22:57:28 2004
++++ libxklavier/xklavier_config_xkb.c	Sun Jun 27 22:58:08 2004
+@@ -173,9 +173,10 @@
+ 
+   if ( supportState == UNCHECKED )
+   {
++    XkbRF_RulesPtr rulesPtr;
+     XklDebug( 100, "!!! Checking multiple layouts support\n" );
+     supportState = NON_SUPPORTED;
+-    XkbRF_RulesPtr rulesPtr = _XklLoadRulesSet();
++    rulesPtr = _XklLoadRulesSet();
+     if ( rulesPtr )
+     {
+       XkbRF_VarDefsRec varDefs;
