@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2001/01/30 03:09:02 minoura Exp $
-bin/${TARGET_ARCH}-dlltool
-bin/${TARGET_ARCH}-windres
-${TARGET_ARCH}/bin/dlltool
-${TARGET_ARCH}/bin/windres

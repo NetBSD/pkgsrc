@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:12:15 zuntum Exp $
+bin/xless
+lib/X11/xless.help
+lib/X11/app-defaults/XLess
+lib/X11/app-defaults/XLess-color
+man/cat1/xless.0.gz

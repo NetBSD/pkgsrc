@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:12:11 zuntum Exp $
+bin/xgas
+lib/X11/app-defaults/XGas
+man/cat1/xgas.0.gz

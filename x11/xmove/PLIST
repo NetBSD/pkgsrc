@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:12:22 zuntum Exp $
+bin/xmove
+bin/xmovectrl
+man/cat1/xmove.0.gz
+man/cat1/xmovectrl.0.gz
+share/doc/xmove/features.txt
+share/doc/xmove/limitations.txt
+share/doc/xmove/using_xmove.txt
+@dirrm share/doc/xmove
