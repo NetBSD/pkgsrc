@@ -1,4 +1,4 @@
-/*	$NetBSD: main.c,v 1.13 2004/03/29 20:28:05 tv Exp $	*/
+/*	$NetBSD: main.c,v 1.14 2004/11/02 00:10:15 erh Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static char *rcsid = "from FreeBSD Id: main.c,v 1.11 1997/10/08 07:46:48 charnier Exp";
 #else
-__RCSID("$NetBSD: main.c,v 1.13 2004/03/29 20:28:05 tv Exp $");
+__RCSID("$NetBSD: main.c,v 1.14 2004/11/02 00:10:15 erh Exp $");
 #endif
 #endif
 
@@ -42,10 +42,11 @@ __RCSID("$NetBSD: main.c,v 1.13 2004/03/29 20:28:05 tv Exp $");
 #include "lib.h"
 #include "delete.h"
 
-static char Options[] = "DFK:ORVdfhnp:rv";
+static char Options[] = "DFK:NORVdfhnp:rv";
 
 char   *Prefix = NULL;
 char   *ProgramPath = NULL;
+Boolean NoDeleteFiles = FALSE;
 Boolean NoDeInstall = FALSE;
 Boolean CleanDirs = FALSE;
 Boolean File2Pkg = FALSE;
@@ -97,6 +98,11 @@ main(int argc, char **argv)
 		case 'n':
 			Fake = TRUE;
 			Verbose = TRUE;
+			break;
+
+		case 'N':
+			NoDeleteFiles = TRUE;
+			NoDeInstall = TRUE;
 			break;
 
 		case 'O':
