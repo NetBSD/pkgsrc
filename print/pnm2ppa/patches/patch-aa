@@ -1,0 +1,62 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/04/28 03:10:59 kei Exp $
+
+--- Makefile.orig	Fri Nov  3 03:33:08 2000
++++ Makefile	Fri Apr 27 17:00:51 2001
+@@ -2,16 +2,17 @@
+ # Makefile for pnm2ppa
+ #
+ 
+-INSTALLDIR=/usr/local/bin
+-CONFDIR=/etc
+-MANDIR=/usr/local/man/man1
++INSTALLDIR=${PREFIX}/bin
++CONFDIR=${PREFIX}/etc
++MANDIR=${PREFIX}/man/man1
+ 
+-CC=gcc
+-INSTALL=install
++#CC=gcc
++#INSTALL=install
+ 
+ # production build
+-CFLAGS=-Wall -pedantic -O2 -g -DNDEBUG 
+-LDFLAGS=-lm
++CPPFLAGS=-I${PREFIX}/include
++CFLAGS=-Wall -pedantic -O2 -g -DNDEBUG
++LDFLAGS=-lm #-L${PREFIX}/lib -R${PREFIX}/lib
+ OBJS = pnm2ppa.o syslog.o ppa.o image.o dither.o cutswath.o hash_ink.o gamma.o
+ SRC =  pnm2ppa.c syslog.c ppa.c image.c dither.c cutswath.c hash_ink.c gamma.c
+ 
+@@ -89,23 +90,23 @@
+ 
+ 
+ install: pnm2ppa calibrate_ppa 
+-	$(INSTALL) -m 755 pnm2ppa $(INSTALLDIR)
+-	$(INSTALLD) $(MANDIR)
+-	$(INSTALL) -m 644 docs/en/pnm2ppa.1 $(MANDIR)
++	${INSTALL_PROGRAM} -m 755 pnm2ppa $(INSTALLDIR)
++	${INSTALL_MAN} -m 644 docs/en/pnm2ppa.1 $(MANDIR)
+ # development only - allows root to edit
+-	$(INSTALL) -m 644 pnm2ppa.conf $(CONFDIR)
++	${INSTALL_DATA} -m 644 pnm2ppa.conf $(CONFDIR)/pnm2ppa.conf.default
+ # calibration tool
+-	$(INSTALL) -m 755 calibrate_ppa $(INSTALLDIR) 
++	${INSTALL_PROGRAM} -m 755 calibrate_ppa $(INSTALLDIR)
+ # final production - much tighter
+-#	$(INSTALL) -m 444 pnm2ppa.conf $(CONFDIR)
+-	@@echo 
+-	@@echo Now, edit /etc/pnm2ppa.conf to choose your printer
++#	${INSTALL_DATA} -m 444 pnm2ppa.conf $(CONFDIR)/pnm2ppa.conf.default
++	@${ECHO}
++	@${ECHO} Now, copy ${CONFDIR}/pnm2ppa.conf.default to /etc/pnm2ppa.conf
++	@${ECHO} and edit to choose your printer
+ 
+ uninstall: 
+ 	rm -f $(INSTALLDIR)/pnm2ppa
+ 	rm -f $(INSTALLDIR)/calibrate_ppa
+ 	rm -f $(MANDIR)/pnm2ppa.1
+-	rm -f $(CONFDIR)/pnm2ppa.conf
++	rm -f $(CONFDIR)/pnm2ppa.conf.default
+ 
+ pnm2ppa: $(OBJS) 
+ 	$(CC) $(LDFLAGS) $(CFLAGS) -o pnm2ppa $(OBJS)
