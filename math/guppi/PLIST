@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2002/06/26 10:29:48 seb Exp $
-bin/guppi-gnumeric
+@comment $NetBSD: PLIST,v 1.11 2002/07/25 17:43:56 jschauma Exp $
 include/gnome-1.0/libguppi/gnan.h
 include/gnome-1.0/libguppi/guppi-2d.h
 include/gnome-1.0/libguppi/guppi-alpha-template.h
@@ -199,9 +198,7 @@ share/gnome/help/guppi/C/docbook.css
 share/gnome/help/guppi/C/guppi.html
 share/gnome/help/guppi/C/ln14.html
 share/gnome/help/guppi/C/topic.dat
-share/guppi/glade/guppi-gnumeric-format-guru.glade
 share/guppi/glade/view-properties.glade
-share/guppi/scripts/guppi-gnumeric-plots.xml
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/Guppi.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/Guppi.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/Guppi.mo
@@ -221,7 +218,6 @@ ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/Guppi.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/Guppi.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/Guppi.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/Guppi.mo
-share/oaf/GNOME_Guppi_Gnumeric.oaf
 share/pixmaps/gnome-guppi.png
 share/pixmaps/guppi/area.xpm
 share/pixmaps/guppi/bar.xpm
@@ -302,7 +298,6 @@ share/pixmaps/guppi/scatter.xpm
 share/pixmaps/guppi/stock.xpm
 share/pixmaps/guppi/surface.xpm
 @dirrm share/pixmaps/guppi
-@dirrm share/guppi/scripts
 @dirrm share/guppi/glade
 @dirrm share/guppi
 @dirrm share/gnome/help/guppi/C/images
