@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2002/07/07 14:14:14 tron Exp $
+# $NetBSD: Makefile,v 1.26 2002/07/07 14:25:52 tron Exp $
 
 DISTNAME=	faces-1.6.1
-PKGREVISION=	1
+PKGREVISION=	2
 WRKSRC=		${WRKDIR}/faces
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.cs.indiana.edu/pub/faces/faces/
@@ -10,7 +10,7 @@ EXTRACT_SUFX=	.tar.Z
 MAINTAINER=	packages@netbsd.org
 COMMENT=	visual mail, user and print face server
 
-DEPENDS+=	netpbm>=9.25:../../graphics/netpbm
+DEPENDS+=	netpbm>=9.2:../../graphics/netpbm
 
 LICENSE=	limited-redistribution
 RESTRICTED=	"Distribution not allowed if money exchanged"

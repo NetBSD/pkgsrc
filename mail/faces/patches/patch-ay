@@ -1,0 +1,21 @@
+$NetBSD: patch-ay,v 1.1 2002/07/07 14:25:53 tron Exp $
+
+--- filters/fs2xbm.orig	Tue Nov 19 05:02:32 1991
++++ filters/fs2xbm	Sun Jul  7 16:19:16 2002
+@@ -35,14 +35,14 @@
+ 
+ if test $x -ge $y
+ then
+-	ppmscale -width 48 $tmp1 | ppmtopgm | pgmtopbm > $tmp2
++	pnmscale -width 48 $tmp1 | ppmtopgm | pgmtopbm > $tmp2
+ 	set `sed -n -e 2p -e 2q $tmp2`
+ 	yo=`expr '(' 48 - $2 ')' / 2`
+ 	pbmmake 48 48 |
+ 	    pnmpaste $tmp2 0 $yo |
+ 	    pbmtoxbm 
+ else
+-	ppmscale -height 48 $tmp1 | ppmtopgm | pgmtopbm > $tmp2
++	pnmscale -height 48 $tmp1 | ppmtopgm | pgmtopbm > $tmp2
+ 	set `sed -n -e 2p -e 2q $tmp2`
+ 	xo=`expr '(' 48 - $1 ')' / 2`
+ 	pbmmake 48 48 |
