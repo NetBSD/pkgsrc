@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3028 2003/08/12 07:13:25 wiz Exp $
+$NetBSD: CHANGES,v 1.3029 2003/08/12 16:39:24 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3249,3 +3249,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated py-soappy to 0.10.1 [recht 2003-08-12]
 	Updated py-google to 0.5.2nb2 [recht 2003-08-12]
 	Added xmms-alarm-0.3.3 [wiz 2003-08-12]
+	Updated sun-jre13 to 1.0.9 [jschauma 2003-08-12]
+	Updated sun-jdk13 to 1.0.9 [jschauma 2003-08-12]
