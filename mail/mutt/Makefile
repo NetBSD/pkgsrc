@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2000/07/31 04:14:08 jlam Exp $
+# $NetBSD: Makefile,v 1.57 2000/11/02 03:15:14 wiz Exp $
 
 DISTNAME=	mutt-1.2.5i
 CATEGORIES=	mail
@@ -28,6 +28,10 @@ WRKSRC=		${WRKDIR}/${DISTNAME:S/i//}
 
 .include "../../mk/bsd.prefs.mk"
 
+.if defined(NEED_NCURSES) && ${NEED_NCURSES} == "YES"
+CONFIGURE_ARGS+= --with-curses=${LOCALBASE}
+.endif
+
 MUTT_USE_SSL?=	YES
 
 .if defined(MUTT_USE_SSL) && ${MUTT_USE_SSL} == "YES"
@@ -46,7 +50,3 @@ PLIST_SUBST+=	LOCALEBASE=share
 .endif
 
 .include "../../mk/bsd.pkg.mk"
-
-.if defined(NEED_NCURSES) && ${NEED_NCURSES} == "YES"
-CONFIGURE_ARGS+= --with-curses=${LOCALBASE}
-.endif
