@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/07/13 07:09:19 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2001/10/29 05:43:47 jmc Exp $
 
 DISTNAME=	squirrelspell.0.3.5-1.0.6
 PKGNAME=	sq-squirrelspell-0.3.5
@@ -11,7 +11,7 @@ HOMEPAGE=	http://mricon.com/xmlparse/SM/index.xml
 COMMENT=	SquirrelMail spell-checker plugin
 
 DEPENDS+=	ispell-base-[0-9]*:../../textproc/ispell-base
-DEPENDS+=	php-mcrypt>=4.0.4.1:../../www/php4-mcrypt
+DEPENDS+=	php-mcrypt>=4.0.4.1:../../security/php4-mcrypt
 DEPENDS+=	squirrelmail>=1.0.6:../../mail/squirrelmail
 
 SMDIR=		${PREFIX}/share/squirrelmail
