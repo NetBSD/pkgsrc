@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/03/12 01:15:45 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.13 2004/03/18 01:35:49 dmcmahill Exp $
 #
 
 DISTNAME=	yacas-1.0.56
@@ -15,6 +15,7 @@ USE_GCC_SHLIB=	YES
 USE_GNU_TOOLS+=	make
 USE_LIBTOOL=	YES
 USE_X11=	YES
+USE_PERL5=	build
 
 TEST_TARGET=	test
 
