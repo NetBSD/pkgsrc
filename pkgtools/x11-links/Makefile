@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.35 2003/08/26 01:43:48 jschauma Exp $
+# $NetBSD: Makefile,v 1.36 2003/09/02 07:14:39 jlam Exp $
 #
 # NOTE:	If you update this package, then you'll likely need to also update
-#	the x11-links dependency in mk/buildlink2/bsd.buildlink2.mk to the
-#	correct version, usually the most recent.
+#	the x11-links dependency in mk/buildlink[23]/bsd.buildlink[23].mk
+#	to the correct version, usually the most recent.
 
-DISTNAME=	x11-links-0.12
+DISTNAME=	x11-links-0.13
 WRKSRC=		${WRKDIR}
 CATEGORIES=	pkgtools x11
 MASTER_SITES=	# empty
@@ -12,37 +12,72 @@ DISTFILES=	# empty
 
 MAINTAINER=	jlam@NetBSD.org
 HOMEPAGE=	ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/Packages.txt
-COMMENT=	Shadow tree of links to X11R6 headers and libraries
+COMMENT=	Shadow tree of links to ${X11BASE} headers and libraries
 
-USE_BUILDLINK2=	# defined
-EXTRACT_ONLY=	# empty
-NO_CHECKSUM=	# defined
-NO_BUILD=	# defined
-NO_MTREE=	# defined
-USE_X11=	# defined
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_X11_LINKS=			NO
-_REQUIRE_BUILTIN_FREETYPE2=	YES
-_REQUIRE_BUILTIN_XPM=		YES
-_REQUIRE_BUILTIN_XRENDER=	YES
+USE_BUILDLINK3=		yes
+EXTRACT_ONLY=		yes
+NO_CHECKSUM=		yes
+NO_MTREE=		yes
+USE_X11=		yes
+USE_X11_LINKS=		no
 
 PLIST_SRC=		${WRKDIR}/.PLIST_SRC
-BUILDLINK_X11_SUBDIR=	share/x11-links
+PLIST_SRC.dirs=		${PLIST_SRC}.dirs
+PLIST_SRC.files=	${PLIST_SRC}.files
 
 .include "../../mk/bsd.prefs.mk"
 
 .if !exists(${X11BASE}/include/X11/X.h)
-PKG_FAIL_REASON= "${PKGNAME} requires X headers to be installed"
+PKG_FAIL_REASON=	"${PKGNAME} requires X headers to be installed"
 .endif
 
+.if ${OPSYS} == "IRIX"
+.  include "xsgi.mk"
+.elif !empty(X11BASE:M*openwin)
+.  include "openwin.mk"
+.else
+.  include "xfree.mk"
+.endif
+
+X11_LINKS_SUBDIR=	share/x11-links
+X11_LINKS_BUILD_DIR=	${WRKSRC}/${X11_LINKS_SUBDIR}
+X11_LINKS_DIR=		${PREFIX}/${X11_LINKS_SUBDIR}
+
+FILES_LIST_CMD=	${CAT} ${FILES_LIST} | ${GREP} -v "^\#"
+
+do-build:
+	${MKDIR} ${X11_LINKS_BUILD_DIR}
+	${RM} -f ${PLIST_SRC.dirs}
+	${FILES_LIST_CMD} | ${SED} -e "s,/[^/]*$$,," | ${SORT} -u |	\
+	while read dir; do						\
+		if [ -d ${X11BASE}/$$dir ]; then			\
+			${MKDIR} ${X11_LINKS_BUILD_DIR}/$$dir;		\
+			${ECHO} "@dirrm ${X11_LINKS_SUBDIR}/$$dir"	\
+				>> ${PLIST_SRC.dirs};			\
+		fi;							\
+	done
+	${RM} -f ${PLIST_SRC.files}
+	${FILES_LIST_CMD} | ${SORT} -u |				\
+	while read file; do						\
+		if [ -e ${X11BASE}/$$file ]; then			\
+			${LN} -fs ${X11BASE}/$$file			\
+				${X11_LINKS_BUILD_DIR}/$$file;		\
+			${ECHO} "${X11_LINKS_SUBDIR}/$$file"		\
+				>> ${PLIST_SRC.files};			\
+		fi;							\
+	done
+
+post-build:
+	( ${CAT} ${PKGDIR}/PLIST;					\
+	  ${SORT} -u ${PLIST_SRC.files};				\
+	  ${SORT} -ur ${PLIST_SRC.dirs};				\
+	  ${ECHO} "@dirrm ${X11_LINKS_SUBDIR}";				\
+	) > ${PLIST_SRC}
+
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/${BUILDLINK_X11_SUBDIR}
-	cd ${BUILDLINK_DIR} && { ${ECHO} include ; ${ECHO} lib${ABI} ; } | \
-		${PAX} -rw ${PREFIX}/${BUILDLINK_X11_SUBDIR}
-	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/${BUILDLINK_X11_SUBDIR}
-	${CAT} ${PKGDIR}/PLIST > ${PLIST_SRC}
-	cd ${PREFIX}; ${FIND} ${BUILDLINK_X11_SUBDIR} \! -type d -print	\
-		| ${SED} "s|^\./||g" | ${SORT} -u >> ${PLIST_SRC}
-	${ECHO} "@unexec ${RM} -rf %D/${BUILDLINK_X11_SUBDIR}" >> ${PLIST_SRC}
+	${INSTALL_DATA_DIR} ${X11_LINKS_DIR:H}
+	cd ${WRKSRC}; ${CP} -R ${X11_LINKS_BUILD_DIR} ${X11_LINKS_DIR}
 
 .include "../../mk/bsd.pkg.mk"
