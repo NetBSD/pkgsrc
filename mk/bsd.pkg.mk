@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.111 1998/07/10 05:24:19 mycroft Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.112 1998/07/11 21:12:59 tron Exp $
 #
 # This file is in the public domain.
 #
@@ -1519,7 +1519,7 @@ lib-depends:
 misc-depends:
 .if defined(DEPENDS)
 .if !defined(NO_DEPENDS)
-	@for dir in "${DEPENDS}"; do					\
+	@for dir in ${DEPENDS}; do					\
 		package="`${ECHO} \"$$dir\" | ${SED} -e 's/:.*//'`";	\
 		dir=`${ECHO} '$$dir' | ${SED} -e 's/.*://'`;		\
 		if /usr/sbin/pkg_info -qe "$$package"; then		\
