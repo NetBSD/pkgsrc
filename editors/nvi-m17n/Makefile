@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2004/04/12 11:09:01 xtraeme Exp $
+# $NetBSD: Makefile,v 1.27 2004/09/16 10:51:17 agc Exp $
 # FreeBSD Id: Makefile,v 1.11 1999/04/17 10:51:03 itojun Exp
 
 DISTNAME=	nvi-1.79
@@ -54,6 +54,11 @@ AUTODETECT.iso-2022-kr=kr
 
 ENCODING+=	iso-2022-cn iso-2022-jp iso-2022-kr
 ENCODING+=	euc-jp euc-cn euc-kr sjis big5 euc-tw hz
+
+.if ${OPSYS} == "NetBSD"
+# XXX ignore NetBSD 2.0F and later's grantpt(3) and SysV pty for just now
+CONFIGURE_ENV+=         vi_cv_sys5_pty=no
+.endif
 
 post-patch:
 .if ${OPSYS} == "NetBSD"
