@@ -1,10 +1,10 @@
-# $NetBSD: Makefile.common,v 1.9 2004/06/22 23:53:52 xtraeme Exp $
+# $NetBSD: Makefile.common,v 1.10 2004/07/13 13:24:37 markd Exp $
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--libexecdir=${LOCALBASE}/libexec \
 			--sysconfdir=${LOCALBASE}/etc \
 			--enable-apop=${QPOPPER_APOP_AUTH} \
-			--with-popuid=${QPOPPER_USER} \
+			--enable-popuid=${QPOPPER_USER} \
 			--enable-log-facility=LOG_${QPOPPER_FAC} \
 			--disable-update-abort --without-gdbm
 
