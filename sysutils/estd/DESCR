@@ -1,0 +1,15 @@
+The estd daemon dynamically sets the CPU-frequency on
+SpeedStep-enabled CPUs depending on current cpu-utilization.  It is
+written for systems running NetBSD.
+
+Examples:
+
+Maximize battery lifetime by limiting CPU-frequency to 1000 MHz and
+switching to lower speeds fast:
+
+	estd -d -b -M 1000
+
+Maximize performance by running at least at 1400MHz and switching to
+higher speeds real fast:
+
+	estd -d -a -m 1400
