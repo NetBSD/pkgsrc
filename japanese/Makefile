@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 1999/12/26 23:16:26 itohy Exp $
+# $NetBSD: Makefile,v 1.23 2000/05/01 22:02:29 jlam Exp $
 #
 
     SUBDIR += a2ps
@@ -32,6 +32,8 @@
     SUBDIR += skkserv
     SUBDIR += vfghostscript5
     SUBDIR += vflib
+    SUBDIR += vflib-lib
+    SUBDIR += vflib-utils
     SUBDIR += xjman
 
 .include "../mk/bsd.pkg.subdir.mk"
