@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.3 1999/05/27 07:40:29 tron Exp $
+$NetBSD: patch-aa,v 1.4 1999/06/04 21:59:01 tron Exp $
 
---- x11.c.orig	Mon Sep 25 02:12:44 1995
-+++ x11.c	Thu May 27 09:36:30 1999
+--- x11.c.orig	Fri Jun  4 23:55:15 1999
++++ x11.c	Fri Jun  4 23:55:18 1999
 @@ -59,8 +59,10 @@
  #define COLOR_8  (2)
  #define MONO_16  (3)
@@ -23,7 +23,38 @@ $NetBSD: patch-aa,v 1.3 1999/05/27 07:40:29 tron Exp $
  static void         pack_32 _P((u16or32 *, Pixel *, u_char *));
  static void         x11_row _P((u_char *));
  static void         x11_cleanup _P((void));
-@@ -715,16 +718,29 @@
+@@ -376,6 +379,7 @@
+   case MONO_1:
+   case MONO_8:
+   case MONO_16:
++  case MONO_24:
+   case MONO_32:
+     mono_dither_setup();
+     pels = (Pixel *) malloc((unsigned) sizeof(Pixel) * 2);
+@@ -386,6 +390,7 @@
+ 
+   case COLOR_8:
+   case COLOR_16:
++  case COLOR_24:
+   case COLOR_32:
+     if (XAllocNamedColor(dsply, cmap, "red", &xc, &junk) != 0)
+       hlight = xc.pixel;
+@@ -689,6 +694,14 @@
+     bits_per_pixel = 16;
+     break;
+ 
++    /* added this. -wsr */
++  case MONO_24:
++  case COLOR_24:
++    dith_size      = wdth;
++    xbuf_size      = dith_size * 3;
++    bits_per_pixel = 24;
++    break;
++
+   case MONO_32:
+   case COLOR_32:
+     dith_size      = wdth;
+@@ -715,16 +728,29 @@
                       xbuf_size);
  
    if (xim->bits_per_pixel != bits_per_pixel)
@@ -63,7 +94,7 @@ $NetBSD: patch-aa,v 1.3 1999/05/27 07:40:29 tron Exp $
  
    if (x_type == MONO_1)
    {
-@@ -817,6 +833,43 @@
+@@ -817,6 +843,43 @@
  }
  
  
@@ -107,7 +138,7 @@ $NetBSD: patch-aa,v 1.3 1999/05/27 07:40:29 tron Exp $
  /* pack pixels into ximage format (assuming bits_per_pixel == 32)
   */
  static void pack_32(src, map, dst)
-@@ -876,6 +929,11 @@
+@@ -876,6 +939,11 @@
      pack_16(dith, pels, xbuf);
      break;
  
@@ -119,7 +150,7 @@ $NetBSD: patch-aa,v 1.3 1999/05/27 07:40:29 tron Exp $
    case MONO_32:
      mono_dither_row(row, dith);
      pack_32(dith, pels, xbuf);
-@@ -889,6 +947,11 @@
+@@ -889,6 +957,11 @@
    case COLOR_16:
      dither_row(row, dith);
      pack_16(dith, pels, xbuf);
