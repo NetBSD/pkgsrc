@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7910 2004/11/19 13:25:06 adam Exp $
+$NetBSD: CHANGES,v 1.7911 2004/11/19 13:36:31 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5339,3 +5339,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated smalltalk to 2.1.9 [adam 2004-11-19]
 	Updated icbirc to 1.8 [tv 2004-11-19]
 	Updated xcircuit to 3.3.0 [adam 2004-11-19]
+	Updated slrn to 0.9.8.1 [adam 2004-11-19]
