@@ -1,11 +1,11 @@
-$NetBSD: patch-cc,v 1.2 2004/04/28 15:55:25 tv Exp $
+$NetBSD: patch-cc,v 1.3 2005/01/06 06:46:52 tv Exp $
 
 --- hints/interix.sh.orig	Fri Apr 23 12:29:09 2004
 +++ hints/interix.sh	Fri Apr 23 12:32:55 2004
 @@ -0,0 +1,26 @@
 +# hints/interix.sh
 +#
-+# Please check with packages@netbsd.org before making modifications
++# Please check with tech-pkg@netbsd.org before making modifications
 +# to this file.
 +
 +cc='gcc'
