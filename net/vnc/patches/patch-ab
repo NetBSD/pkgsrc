@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.6 2001/03/16 15:24:54 dmcmahill Exp $
+$NetBSD: patch-ab,v 1.7 2001/03/20 15:57:22 wiz Exp $
 
 Sync this with what we shipped with NetBSD-1.5 with the exception that 
 HasXdmAuth is set to NO (since vnc doesn't have the Wraphelp.c file).
@@ -175,7 +175,7 @@ This fixes problems on pmax, alpha, and maybe others.
 -#  define ServerExtraDefines GccGasOption
 +#  define OptimizedCDebugFlags 	-O2
  # endif
-@@ -172,2 +232,178 @@
+@@ -172,2 +232,171 @@
  
 +/*
 + * On mips, all libs are compiled with ABIcalls, not just sharedlibs.
@@ -184,13 +184,6 @@ This fixes problems on pmax, alpha, and maybe others.
 +#if defined(MipsArchitecture)
 +# define SeparateSharedCompile NO
 +# undef MipsArchitecture
-+#endif
-+
-+/*
-+ * XXX always build XKBuilib, override xfree86.cf
-+ */
-+#if defined(arm32Architecture) || defined(i386Architecture) || defined(atariArchitecture)
-+# define BuildXKBuilib		YES
 +#endif
 +
 +#if defined(SparcArchitecture)
