@@ -1,28 +1,60 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/04/05 05:05:28 xtraeme Exp $
+$NetBSD: patch-aa,v 1.2 2004/06/05 17:14:14 xtraeme Exp $
 
---- makefile.orig	2004-04-05 06:00:31.000000000 +0200
-+++ makefile	2004-04-05 06:08:35.000000000 +0200
-@@ -171,10 +171,10 @@
+--- makefile.orig	2004-06-05 18:53:01.000000000 +0200
++++ makefile	2004-06-05 18:58:51.000000000 +0200
+@@ -27,30 +27,7 @@
+ # Use asm video core ? (comment to use C core)
+ ASM_VIDEO_CORE = 1
  
+-# Try to detect mingw... If you want to build the dos and the mingw
+-# version on the same system you should unset djdir before making
+-# the mingw version.
+-ifeq ($(shell uname -o),GNU/Linux)
+-OSTYPE=linux-gnu
+-endif
+-
+-ifeq ("$(OSTYPE)","msys")
+-MINGDIR=1
+-OSTYPE=mingw32
+-ifeq (`nasm -r`,)
+-ifdef VERBOSE
+-ASM=nasmw
+-else
+-ASM=@nasmw
+-endif
+-else
+-ifdef VERBOSE
+ ASM=nasm
+-else
+-ASM=@nasm
+-endif
+-endif
+-endif
+ 
+ ifdef mingdir
+ MINGDIR=1
+@@ -176,10 +153,10 @@
  #	SDL = 1
  
+    prefix = $(DESTDIR)
 -   bindir = $(prefix)/usr/games
 -   sharedir = $(prefix)/usr/share
+-   mandir = $(sharedir)/man/man6
+-   rainedata = $(sharedir)/games/raine
 +   bindir = $(PREFIX)/bin
 +   sharedir = $(PREFIX)/share
-    mandir = $(sharedir)/man/man6
--   rainedata = $(sharedir)/games/raine
++   mandir = $(PREFIX)/man/man6
 +   rainedata = $(sharedir)/raine
     langdir = $(rainedata)/languages
     romdir = $(rainedata)/roms
  
-@@ -197,10 +197,10 @@
+@@ -202,10 +179,10 @@
     DEFINE = -D__RAINE__ \
  	   -DRAINE_UNIX \
  
--   LIBS = -lz `allegro-config --libs` -lvga # -lreadline -lefence
+-   LIBS = -lz `allegro-config --libs` -lvga # -lefence
 -   LIBS_DEBUG = -lz -lvga `allegro-config --libs debug`
-+   LIBS = -lz `allegro-config --libs` # -lreadline -lefence
++   LIBS = -lz `allegro-config --libs`
 +   LIBS_DEBUG = -lz `allegro-config --libs debug`
  
 -   LIBS_STATIC = -lz -lvga `allegro-config --static`
@@ -30,7 +62,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/04/05 05:05:28 xtraeme Exp $
  
  endif # linux / mingw32
  endif # djgpp
-@@ -950,11 +950,7 @@
+@@ -942,11 +919,7 @@
  make.dep:
  	./makedep $(OBJDIR) $(OBJS) > make.dep
  
@@ -42,15 +74,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/04/05 05:05:28 xtraeme Exp $
  
  # create directories
  
-@@ -983,7 +979,6 @@
- 	$(RM) -r $(OBJDIR)
- 	@echo Deleting $(RAINE_EXE)...
- 	$(RM) $(RAINE_EXE) make.dep
--	$(RM) cpuinfo
- 
- vclean:
- 	@echo make vclean is no longer necessary, just type make clean
-@@ -992,14 +987,16 @@
+@@ -984,14 +957,16 @@
  install: install_dirs $(RAINE_LNG)
  ifdef RAINE_LINUX
  
