@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/02/22 02:15:12 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 2000/03/10 19:17:51 hubertf Exp $
 #
 
 DISTNAME=	fmlinux
@@ -6,7 +6,7 @@ PKGNAME=	framemaker-5.5.6.2
 CATEGORIES=	editors textproc
 MASTER_SITES=	ftp://ftp.adobe.com/pub/adobe/magic/framemaker/unix/5.x/ \
 		ftp://ftp.adobe.com/pub/adobe/magic/framemaker/unix/5.x/beta/
-DISTFILES=	fmlinux.txt fmlinux2.tar.gz dictionaries.txt \
+DISTFILES=	fmlinux2.txt fmlinux2.tar.gz dictionaries.txt \
 		dictionaries.tar.gz help.txt help.tar.gz manuals.txt \
 		manuals.tar.gz
 
