@@ -1,0 +1,78 @@
+$NetBSD: patch-ab,v 1.1.1.1 2001/07/17 15:00:48 nra Exp $
+
+--- systems/freebsd/logcheck.sh.orig	Sun Oct 31 16:07:29 1999
++++ systems/freebsd/logcheck.sh	Thu Jun 21 08:42:39 2001
+@@ -31,7 +31,7 @@
+ 
+ # CONFIGURATION SECTION
+ 
+-PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/ucb:/usr/local/bin
++PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/pkg/sbin:/usr/pkg/bin
+ 
+ # Logcheck is pre-configured to work on most BSD like systems, however it
+ # is a rather dumb program and may need some help to work on other
+@@ -44,7 +44,7 @@
+ # Full path to logtail program.
+ # This program is required to run this script and comes with the package.
+ 
+-LOGTAIL=/usr/local/bin/logtail
++LOGTAIL=/usr/pkg/bin/logtail
+ 
+ # Full path to SECURED (non public writable) /tmp directory.
+ # Prevents Race condition and potential symlink problems. I highly
+@@ -52,7 +52,7 @@
+ # You would also be well advised to make sure all your system/cron scripts
+ # use this directory for their "scratch" area. 
+ 
+-TMPDIR=/usr/local/etc/tmp
++TMPDIR=/var/adm/tmp
+ 
+ # The 'grep' command. This command MUST support the
+ # '-i' '-v' and '-f' flags!! The GNU grep does this by default (that's
+@@ -89,7 +89,7 @@
+ # look for generic ISS probes (who the hell else looks for 
+ # "WIZ" besides ISS?), and obvious sendmail attacks/probes.
+ 
+-HACKING_FILE=/usr/local/etc/logcheck.hacking
++HACKING_FILE=/usr/pkg/etc/logcheck.hacking
+ 
+ # File of security violation patterns to specifically look for.
+ # This file should contain keywords of information administrators should
+@@ -98,7 +98,7 @@
+ # some items, but these will be caught by the next check. Move suspicious
+ # items into this file to have them reported regularly.
+ 
+-VIOLATIONS_FILE=/usr/local/etc/logcheck.violations
++VIOLATIONS_FILE=/usr/pkg/etc/logcheck.violations
+ 
+ # File that contains more complete sentences that have keywords from
+ # the violations file. These keywords are normal and are not cause for 
+@@ -115,14 +115,14 @@
+ #
+ # Again, be careful what you put in here and DO NOT LEAVE IT EMPTY!
+ 
+-VIOLATIONS_IGNORE_FILE=/usr/local/etc/logcheck.violations.ignore
++VIOLATIONS_IGNORE_FILE=/usr/pkg/etc/logcheck.violations.ignore
+ 
+ # This is the name of a file that contains patterns that we should
+ # ignore if found in a log file. If you have repeated false alarms
+ # or want specific errors ignored, you should put them in here.
+ # Once again, be as specific as possible, and go easy on the wildcards
+ 
+-IGNORE_FILE=/usr/local/etc/logcheck.ignore
++IGNORE_FILE=/usr/pkg/etc/logcheck.ignore
+ 
+ # The files are reported in the order of hacking, security 
+ # violations, and unusual system events. Notice that this
+@@ -170,9 +170,10 @@
+ #$LOGTAIL /var/log/secure >> $TMPDIR/check.$$
+ #$LOGTAIL /var/log/maillog >> $TMPDIR/check.$$
+ 
+-# FreeBSD 2.x
++# NetBSD
+ $LOGTAIL /var/log/messages > $TMPDIR/check.$$
+ $LOGTAIL /var/log/maillog >> $TMPDIR/check.$$
++$LOGTAIL /var/log/authlog >> $TMPDIR/check.$$
+ 
+ # BSDI 2.x
+ #$LOGTAIL /var/log/messages > $TMPDIR/check.$$
