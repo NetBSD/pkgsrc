@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.56 2004/04/14 16:15:30 jmmv Exp $
+# $NetBSD: Makefile,v 1.57 2004/04/20 12:22:22 markd Exp $
 
 DISTNAME=	kdelibs-${_KDE_VERSION}
-PKGREVISION=	1
 CATEGORIES=	x11
 COMMENT=	Support libraries for the KDE integrated X11 desktop
 
@@ -9,8 +8,9 @@ COMMENT=	Support libraries for the KDE integrated X11 desktop
 
 CONFLICTS+=	koffice3<=1.1.1
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_DIRS+=		xdg-1.1
+USE_PERL5=		run
 USE_PKGINSTALL=		YES
 
 CONFIGURE_ARGS+=	--with-ssl-dir="${BUILDLINK_PREFIX.openssl}"
@@ -24,8 +24,6 @@ SGML_CATALOGS+=		${PREFIX}/share/kde/apps/ksgmltools2/docbook/xml-dtd-4.2/docboo
 .if ${OPSYS} == "NetBSD"
 LIBS+=			${EXPORT_SYMBOLS_LDFLAGS}
 .endif
-
-KDEDIR=			${PREFIX}
 
 REPLACE_PERL= \
 	kio/proxytype.pl \
@@ -54,7 +52,7 @@ pre-configure:
 	done
 
 .if defined(USE_CUPS) && (${USE_CUPS} == "YES")
-.include "../../print/cups/buildlink2.mk"
+.include "../../print/cups/buildlink3.mk"
 BUILD_DEFS+=		USE_CUPS
 
 PLIST_SUBST+=		CUPS=
@@ -109,20 +107,21 @@ post-install:
 USE_PKGSRC_GCC=		# defined
 .endif
 
-.include "../../archivers/bzip2/buildlink2.mk"
-.include "../../audio/arts/buildlink2.mk"
-.include "../../audio/libaudiofile/buildlink2.mk"
-.include "../../devel/pcre/buildlink2.mk"
-.include "../../graphics/libart2/buildlink2.mk"
-.include "../../graphics/tiff/buildlink2.mk"
-.include "../../lang/perl5/buildlink2.mk"
-.include "../../meta-pkgs/kde3/buildlink2.mk"
-.include "../../security/openssl/buildlink2.mk"
-.include "../../textproc/libxml2/buildlink2.mk"
-.include "../../textproc/libxslt/buildlink2.mk"
+.include "../../meta-pkgs/kde3/kde3.mk"
+
+.include "../../archivers/bzip2/buildlink3.mk"
+.include "../../audio/arts/buildlink3.mk"
+.include "../../audio/libaudiofile/buildlink3.mk"
+.include "../../devel/pcre/buildlink3.mk"
+.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../graphics/libart2/buildlink3.mk"
+.include "../../graphics/tiff/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
+.include "../../textproc/libxslt/buildlink3.mk"
 .include "../../textproc/xmlcatmgr/catalogs.mk"
-.include "../../x11/qt3-libs/buildlink2.mk"
-.include "../../mk/ossaudio.buildlink2.mk"
+.include "../../x11/qt3-libs/buildlink3.mk"
+.include "../../mk/ossaudio.buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
 
