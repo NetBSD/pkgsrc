@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4205 2003/12/20 20:14:57 fredb Exp $
+$NetBSD: CHANGES,v 1.4206 2003/12/21 03:51:02 ben Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5266,3 +5266,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated p5-perl-ldap to 0.30 [veego 2003-12-20]
 	Updated rapidsvn to 0.4.0nb1 [epg 2003-12-20]
 	Updated mgetty to 1.1.30nb1 [fredb 2003-12-20]
+	Removed wx1Motif [ben 2003-12-20]
