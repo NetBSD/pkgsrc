@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2004/05/14 11:24:49 grant Exp $
+$NetBSD: distinfo,v 1.3 2004/08/16 04:53:46 minskim Exp $
 
-SHA1 (xterm-188/xterm.tar.gz) = 5447c10569ff9dfa45d87d793cfc01a8bf652876
-Size (xterm-188/xterm.tar.gz) = 670363 bytes
+SHA1 (xterm-196/xterm.tar.gz) = 7e1493d2578cb8d1d6038108e48aad44f40e2a61
+Size (xterm-196/xterm.tar.gz) = 678177 bytes

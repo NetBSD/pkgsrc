@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2004/05/14 11:35:55 grant Exp $
+# $NetBSD: Makefile,v 1.11 2004/08/16 04:53:46 minskim Exp $
 
 DISTNAME=	${PKGBASE}
-PKGNAME=	xterm-188
+PKGNAME=	xterm-196
 CATEGORIES=	x11
 MASTER_SITES=	ftp://invisible-island.net/xterm/
 
