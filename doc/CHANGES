@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9686 2005/03/30 10:24:32 tron Exp $
+$NetBSD: CHANGES,v 1.9687 2005/03/30 11:16:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1823,3 +1823,4 @@ Changes to the packages collection and infrastructure in 2005:
         Removed mips64emul [xtraeme 2005-03-30]
 	Updated libkver to 0.6 [seb 2005-03-30]
 	Updated xine-lib to 1.0nb1 [tron 2005-03-30]
+	Updated gnucash to 1.8.11nb2 [wiz 2005-03-30]
