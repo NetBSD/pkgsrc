@@ -1,9 +1,11 @@
-$NetBSD: distinfo,v 1.15 2004/10/19 03:51:10 ben Exp $
+$NetBSD: distinfo,v 1.16 2004/10/20 20:02:13 tron Exp $
 
 SHA1 (gmplayer-1.0rc5-20041018/MPlayer-1.0pre5.tar.bz2) = cf64892871b8673e452b5d390be25144d85fe307
 Size (gmplayer-1.0rc5-20041018/MPlayer-1.0pre5.tar.bz2) = 5072836 bytes
 SHA1 (gmplayer-1.0rc5-20041018/AlienMind-1.2.tar.bz2) = e109214c4d2008696faf3704f8d0f995a6dd5779
 Size (gmplayer-1.0rc5-20041018/AlienMind-1.2.tar.bz2) = 131300 bytes
+SHA1 (gmplayer-1.0rc5-20041018/Blue-1.4.tar.bz2) = 2c96cbbc2c141767ad01a5a0327228e2fd2569aa
+Size (gmplayer-1.0rc5-20041018/Blue-1.4.tar.bz2) = 221756 bytes
 SHA1 (gmplayer-1.0rc5-20041018/BlueHeart-1.5.tar.bz2) = c20459cab420f3d41d27af4965f9382c9c80a930
 Size (gmplayer-1.0rc5-20041018/BlueHeart-1.5.tar.bz2) = 281114 bytes
 SHA1 (gmplayer-1.0rc5-20041018/CornerMP-1.2.tar.bz2) = 695167365a977e4535186cd933b9b0b8c92c60a5
