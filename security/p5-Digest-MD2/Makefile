@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/09/19 03:07:00 mjl Exp $
+# $NetBSD: Makefile,v 1.2 2001/09/19 03:12:30 mjl Exp $
 #
 
 DISTNAME=		Digest-MD2-2.00
@@ -9,7 +9,7 @@ MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Digest/}
 MAINTAINER=		packages@netbsd.org
 COMMENT=		perl5 module for MD2
 
-CONFLICTS+=		p5-Digest-MD5-2.12
+CONFLICTS+=		p5-Digest-MD5<=2.12
 
 USE_PERL5=		# defined
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Digest/MD2/.packlist
