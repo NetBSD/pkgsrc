@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/01/17 00:18:39 pooka Exp $
+man/man1/ncftp.1
+man/man1/ncftpget.1
+man/man1/ncftpput.1
+man/man1/ncftpbatch.1
+man/man1/ncftpls.1
+bin/ncftp3
+bin/ncftpget
+bin/ncftpput
+bin/ncftpbatch
+bin/ncftpls
+bin/ncftpbookmarks
