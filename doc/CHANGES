@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9145 2005/02/15 12:26:09 drochner Exp $
+$NetBSD: CHANGES,v 1.9146 2005/02/15 14:40:10 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -880,3 +880,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated taglib to 1.3.1 [chris 2005-02-14]
 	Updated p5-Mail-ClamAV to 0.13 [grant 2005-02-15]
 	Updated python23 to 2.3.5 [drochner 2005-02-15]
+	Updated fontforge to 20050209 [adam 2005-02-15]
