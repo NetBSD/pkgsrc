@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/10/04 15:13:03 hubertf Exp $
+@unexec rm -f /usr/lib/c++rt0.o
+@unexec mv /usr/lib/c++rt0.o.unPKGd /usr/lib/c++rt0.o
+lib/c++rt0/c++rt0.o.PIC
+lib/c++rt0/c++rt0.o.pic
+lib/c++rt0/README
+@exec mv /usr/lib/c++rt0.o /usr/lib/c++rt0.o.unPKGd
+@exec install -c -m 444 -o root -g wheel %B/c++rt0.o.PIC /usr/lib/c++rt0.o
+@dirrm lib/c++rt0

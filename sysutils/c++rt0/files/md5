@@ -1,0 +1,5 @@
+$NetBSD: md5,v 1.1.1.1 2000/10/04 15:13:03 hubertf Exp $
+
+MD5 (c++rt0/c++rt0.o.PIC) = 52d3fc1fd5fe947243a82666bc18fc5c
+MD5 (c++rt0/c++rt0.o.pic) = 48f84ae8e4e0ba82ea4a5d4de3f946cf
+MD5 (c++rt0/README) = 5ea0940aab417f3443b82315c4e2f0dc
