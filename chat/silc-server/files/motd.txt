@@ -18,7 +18,7 @@
 -  are located in the following      ,'  ,-----'   |       \ 
 -  directory:                        `--{__________)       \/
 -                                                    (FL)
--   @PREFIX@/share/examples/silcd/
+-   @PREFIX@/share/examples/silc-server/
 -
 --------------------------------------------------------------
 - For more information about SILC browse to http://silcnet.org
