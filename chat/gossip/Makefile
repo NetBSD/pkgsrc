@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/09/02 07:32:04 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2003/09/02 08:43:46 xtraeme Exp $
 #
 
 DISTNAME=	gossip-${VER}
@@ -10,7 +10,7 @@ MAINTAINER=	xtraeme@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	GTK2 Jabber Instant Messaging client
 
-DEPENDS=		gnome2-dirs>=1.0:../../misc/gnome2-dirs
+DEPENDS=		gnome2-dirs>=1.2:../../misc/gnome2-dirs
 BUILD_USES_MSGFMT=	yes
 
 USE_BUILDLINK2=		yes
