@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2000/12/12 02:03:48 wiz Exp $
+# $NetBSD: Makefile.common,v 1.2 2001/03/03 22:01:11 tron Exp $
 #
 
 DISTNAME=	icewm-1.0.4
@@ -27,6 +27,9 @@ CONFIGURE_ENV+=	CPPFLAGS="${CPPFLAGS}"
 
 DOCDIR=		${PREFIX}/share/doc/icewm
 HTMLDIR=	${PREFIX}/share/doc/html/icewm
+
+post-extract:
+	${CP} ${FILES} ${FILESDIR}/bsd-daemon.xpm ${WRKSRC}/lib/taskbar
 
 post-install:
 	${INSTALL_DATA_DIR} ${DOCDIR} ${HTMLDIR}
