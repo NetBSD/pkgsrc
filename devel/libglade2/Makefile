@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2003/07/17 21:31:28 grant Exp $
+# $NetBSD: Makefile,v 1.16 2003/08/10 03:15:29 grant Exp $
 #
 
 DISTNAME=		libglade-2.0.1
@@ -9,7 +9,7 @@ MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libglade/2.0/}
 
 MAINTAINER=		jmmv@NetBSD.org
 HOMEPAGE=		http://www.daa.com.au/~james/gnome/
-COMMENT=		Runtime interpreter for GLADE gui files (v2)
+COMMENT=		Runtime interpreter for GLADE GUI files (v2)
 
 BUILD_USES_MSGFMT=	YES
 
