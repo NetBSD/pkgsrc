@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1669 2004/04/25 12:12:39 dillo Exp $
+$NetBSD: TODO,v 1.1670 2004/04/25 21:40:29 recht Exp $
 
 Suggested new packages
 ======================
@@ -153,7 +153,6 @@ Suggested package updates
 	o centericq-4.9.12
 	o cervisia-2.1.2
 	o checkbot-1.74
-	o clamav-0.70
 	o cocoon-2.1.4
 	o conserver-8.1.4
 	o courier-imap-3.0.0
