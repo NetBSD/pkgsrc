@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST-gcc-objc,v 1.1 2001/01/30 03:11:28 minoura Exp $
-lib/gcc-lib/${TARGET_ARCH}/${GCC_INTVERSION}/cc1obj

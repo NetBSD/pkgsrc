@@ -1,5 +1,5 @@
-#	$NetBSD: cross.mk,v 1.10 2002/03/20 13:22:12 kent Exp $
-#	$PEACE: cross.mk,v 1.9 2002/03/18 01:18:11 kent Exp $
+#	$NetBSD: cross.mk,v 1.11 2002/08/21 12:42:45 kent Exp $
+#	$PEACE: cross.mk,v 1.12 2002/08/21 02:48:24 kent Exp $
 #	based on pkgsrc/cross/COMMON/cross.mk
 #	NetBSD: cross.mk,v 1.16 2000/11/09 13:04:55 wiz Exp 
 
@@ -30,46 +30,29 @@ pre-install-dirs:
 	${INSTALL_DATA_DIR} ${TARGET_DIR}/lib
 
 .if defined(USE_CROSS_BINUTILS)
-BINUTILS_DISTNAME=	binutils-2.11.92-20011113-src
-#BINUTILS_WRKSRC=	${WRKDIR}/${BINUTILS_DISTNAME}
-BINUTILS_WRKSRC=	${WRKDIR}/binutils-2.11.92-20011113
-
-CROSS_DISTFILES+=	${BINUTILS_DISTNAME}.tar.gz
-#MASTER_SITES+=		${MASTER_SITE_GNU:=binutils/}
-MASTER_SITES+=		http://prdownloads.sourceforge.net/mingw/
-CONFIGURE_ARGS+=	--with-gnu-as --with-gnu-ld --disable-nls
-#DEPENDS+=		cross-binutils>=2.9.1.1:../../cross/binutils
+BINUTILS_DISTNAME=	binutils-2.13
+DISTFILES+=		${BINUTILS_DISTNAME}.tar.bz2
+SITES_binutils-020711.tar.bz2=	ftp://ftp.netbsd.org/pub/NetBSD/misc/kent/
+MASTER_SITES+=		${MASTER_SITE_GNU:=binutils/}
+#MASTER_SITES+=		http://prdownloads.sourceforge.net/mingw/
+CONFIGURE_ARGS+=	--with-gnu-as --with-gnu-ld --data-dir=${TARGET_DIR}/share
 PLIST_PRE+=		${COMMON_DIR}/PLIST-binutils
 
-AS_FOR_TARGET=		${BINUTILS_WRKSRC}/gas/as-new
-AR_FOR_TARGET=		${BINUTILS_WRKSRC}/binutils/ar
-NM_FOR_TARGET=		${BINUTILS_WRKSRC}/binutils/nm-new
-RANLIB_FOR_TARGET=	${BINUTILS_WRKSRC}/binutils/ranlib
-LD_FOR_TARGET=		${BINUTILS_WRKSRC}/ld/ld-new
+AS_FOR_TARGET=		${WRKOBJ}/gas/as-new
+AR_FOR_TARGET=		${WRKOBJ}/binutils/ar
+NM_FOR_TARGET=		${WRKOBJ}/binutils/nm-new
+RANLIB_FOR_TARGET=	${WRKOBJ}/binutils/ranlib
+LD_FOR_TARGET=		${WRKOBJ}/ld/ld-new
 
-pre-configure: binutils-configure
-do-build: binutils-build
 do-install: binutils-install
 
-BFD64ARG=	--enable-64-bit-bfd
-
-binutils-configure:
-	@cd ${BINUTILS_WRKSRC} && ${SETENV} CC="${CC}" ac_cv_path_CC="${CC}" \
-		CFLAGS="${CFLAGS}" ${CONFIGURE_ENV} ./configure \
-		--prefix=${PREFIX} --host=${MACHINE_GNU_ARCH}--netbsd \
-		--target=${TARGET_ARCH} --disable-nls ${BFD64ARG}
-
-binutils-build:
-	@cd ${BINUTILS_WRKSRC} && ${SETENV} ${MAKE_ENV} \
-		${MAKE_PROGRAM} ${MAKE_FLAGS}
-
 binutils-install:
-	${INSTALL_PROGRAM} ${BINUTILS_WRKSRC}/gas/as-new ${TARGET_DIR}/bin/as
-	${INSTALL_PROGRAM} ${BINUTILS_WRKSRC}/ld/ld-new ${TARGET_DIR}/bin/ld
-	${INSTALL_PROGRAM} ${BINUTILS_WRKSRC}/binutils/nm-new ${TARGET_DIR}/bin/nm
-	${INSTALL_PROGRAM} ${BINUTILS_WRKSRC}/binutils/strip-new ${TARGET_DIR}/bin/strip
+	${INSTALL_PROGRAM} ${WRKOBJ}/gas/as-new ${TARGET_DIR}/bin/as
+	${INSTALL_PROGRAM} ${WRKOBJ}/ld/ld-new ${TARGET_DIR}/bin/ld
+	${INSTALL_PROGRAM} ${WRKOBJ}/binutils/nm-new ${TARGET_DIR}/bin/nm
+	${INSTALL_PROGRAM} ${WRKOBJ}/binutils/strip-new ${TARGET_DIR}/bin/strip
 	for i in addr2line ar objcopy objdump ranlib size strings ${BINUTILS_EXTRAS}; do \
-		${INSTALL_PROGRAM} ${BINUTILS_WRKSRC}/binutils/$$i ${TARGET_DIR}/bin/$$i; \
+		${INSTALL_PROGRAM} ${WRKOBJ}/binutils/$$i ${TARGET_DIR}/bin/$$i; \
 	done
 	for i in addr2line ar as ld nm objcopy objdump ranlib size strings strip ${BINUTILS_EXTRAS}; do \
 		${LN} -f ${TARGET_DIR}/bin/$$i ${PREFIX}/bin/${TARGET_ARCH}-$$i; \
@@ -79,7 +62,7 @@ binutils-install:
 .if defined(USE_CROSS_GCC)
 GCC_DISTNAME=		gcc-2.95.2
 GCC_INTVERSION=		2.95.2
-GCC_WRKSRC=		${WRKDIR}/${GCC_DISTNAME}
+MASTER_SITES+=		${MASTER_SITE_GNU:=gcc/}
 GCC_LANGUAGES=		c # add to these below
 BUILD_DEPENDS+= 	autoconf-*:../../devel/autoconf
 
@@ -92,28 +75,12 @@ PLIST_PRE+=		${GCC_PLIST_DIR}/PLIST-gcc-cxx-runtime
 .endif
 .endif
 
-.if defined(GCC_F77)
-GCC_LANGUAGES+=		f77
-PLIST_PRE+=		${GCC_PLIST_DIR}/PLIST-gcc-f77
-.if defined(GCC_F77_RUNTIME)
-PLIST_PRE+=		${GCC_PLIST_DIR}/PLIST-gcc-f77-runtime
-.endif
-.endif
-
-.if defined(GCC_OBJC)
-GCC_LANGUAGES+=		objc
-PLIST_PRE+=		${GCC_PLIST_DIR}/PLIST-gcc-objc
-.if defined(GCC_OBJC_RUNTIME)
-PLIST_PRE+=		${GCC_PLIST_DIR}/PLIST-gcc-objc-runtime
-.endif
-.endif
-
 # the main PLIST needs to go last to get the @dirrm's right
 PLIST_PRE+=		${GCC_PLIST_DIR}/PLIST-gcc
-CROSS_DISTFILES+=	${GCC_DISTNAME}.tar.gz #${EGCS_PATCHBUNDLE}
+DISTFILES+=		${GCC_DISTNAME}.tar.gz
 USE_GMAKE=		yes
 
-CC_FOR_TARGET=		${GCC_WRKSRC}/gcc/xgcc -B${GCC_WRKSRC}/gcc/ ${CFLAGS_FOR_TARGET}
+CC_FOR_TARGET=		${WRKOBJ}/gcc/xgcc -B${WRKOBJ}/gcc/ ${CFLAGS_FOR_TARGET}
 CXX_FOR_TARGET=		${CC_FOR_TARGET}
 
 GCC_MAKE_FLAGS=	CFLAGS="${CFLAGS}" CXXFLAGS="${CXXFLAGS}" \
@@ -142,24 +109,18 @@ GCC_MAKE_FLAGS+=	SYSTEM_HEADER_DIR="${CROSS_SYS_INCLUDE}"
 LDFLAGS_FOR_TARGET+=	-L${SYS_LIB}
 .endif
 
-#pre-patch: gcc-patch
 pre-configure: gcc-configure
 do-build: gcc-build
 do-install: gcc-install
 
-#gcc-patch:
-#	@${GZCAT} ${_DISTDIR}/${EGCS_PATCHBUNDLE} | \
-#		${PATCH} -d ${EGCS_WRKSRC} --forward --quiet -E
-#	@for i in ${COMMON_DIR}/patches-egcs/patch-*; do \
-#		${PATCH} -d ${EGCS_WRKSRC} --forward --quiet -E < $$i; \
-#	done
-
+WRKOBJ=	${WRKDIR}/obj
 gcc-configure:
-	@cd ${GCC_WRKSRC} && ${SETENV} CC="${CC}" ac_cv_path_CC="${CC}" \
+	@-mkdir ${WRKOBJ}
+	@cd ${WRKOBJ} && ${SETENV} CC="${CC}" ac_cv_path_CC="${CC}" \
 		CFLAGS="${CFLAGS}" CXXFLAGS="${CXXFLAGS}" LDFLAGS="${LDFLAGS}" \
 		INSTALL="${INSTALL} -c -o ${BINOWN} -g ${BINGRP}" \
 		INSTALL_PROGRAM="${INSTALL_PROGRAM}" \
-		./configure --prefix=${PREFIX} \
+		${WRKSRC}/configure --prefix=${PREFIX} \
 		--host=${MACHINE_GNU_ARCH}--netbsd  --target=${TARGET_ARCH} \
 		${GCC_CONFIGURE_ARGS} ${CXX_CONFIGURE_ARGS}
 .if defined(GCC_FAKE_RUNTIME)
@@ -169,46 +130,29 @@ gcc-configure:
 .endif
 
 gcc-build:
-	@${LN} -sf ${AS_FOR_TARGET} ${GCC_WRKSRC}/gcc/as
-	@${LN} -sf ${LD_FOR_TARGET} ${GCC_WRKSRC}/gcc/ld
-	@cd ${GCC_WRKSRC} && make all-libiberty
-	@cd ${GCC_WRKSRC}/gcc && ${GCC_MAKE} all
+	@cd ${WRKOBJ} && make all-libiberty all-binutils all-gas all-ld
+	@cd ${WRKOBJ}/gcc && ${GCC_MAKE} all
 .if defined(GCC_CXX) && defined(GCC_CXX_RUNTIME)
-	@cd ${GCC_WRKSRC} && ${GCC_MAKE} configure-target-libio configure-target-libstdc++ all-target-libio all-target-libstdc++
-.endif
-.if defined(GCC_F77) && defined(GCC_F77_RUNTIME)
-	@cd ${GCC_WRKSRC} && ${GCC_MAKE} configure-target-libf2c all-target-libf2c
-.endif
-.if defined(GCC_OBJC) && defined(GCC_OBJC_RUNTIME)
-	@cd ${GCC_WRKSRC}/gcc && ${GCC_MAKE} objc-runtime
+	@cd ${WRKOBJ} && ${GCC_MAKE} configure-target-libio \
+		configure-target-libstdc++ all-target-libio all-target-libstdc++
 .endif
 
 gcc-install:
-	@cd ${GCC_WRKSRC}/gcc && ${SETENV} ${MAKE_ENV} \
+	@cd ${WRKOBJ}/gcc && ${SETENV} ${MAKE_ENV} \
 		${MAKE_PROGRAM} ${MAKE_FLAGS} ${GCC_MAKE_FLAGS} \
 		install-common install-headers install-libgcc install-driver
 	${CHOWN} -R ${BINOWN}:${BINGRP} ${PREFIX}/lib/gcc-lib/${TARGET_ARCH}/${GCC_INTVERSION}
 	${LN} -f ${PREFIX}/bin/${TARGET_ARCH}-gcc ${PREFIX}/bin/${TARGET_ARCH}-cc
 	${LN} -f ${PREFIX}/bin/${TARGET_ARCH}-gcc ${TARGET_DIR}/bin/cc
 	${RM} ${PREFIX}/bin/${TARGET_ARCH}-gcj # install-driver installs gcj but we need not it
-.if defined(GCC_F77)
-.if defined(GCC_F77_RUNTIME)
-	@cd ${GCC_WRKSRC} && ${GCC_MAKE} install-target-libf2c
-.endif
-	${LN} -f ${PREFIX}/bin/${TARGET_ARCH}-g77 ${PREFIX}/bin/${TARGET_ARCH}-f77
-	${LN} -f ${PREFIX}/bin/${TARGET_ARCH}-g77 ${PREFIX}/bin/${TARGET_ARCH}-fort77
-	for file in f77 fort77 g77; do \
-		${LN} -f ${PREFIX}/bin/${TARGET_ARCH}-$$file ${TARGET_DIR}/bin/$$file; \
-	done
-.endif
 .if defined(GCC_CXX)
 	@${MKDIR} ${TARGET_DIR}/include/c++
 	@for file in exception new new.h typeinfo; do \
-		${INSTALL_DATA} ${GCC_WRKSRC}/gcc/cp/inc/$$file ${TARGET_DIR}/include/c++; \
+		${INSTALL_DATA} ${WRKSRC}/gcc/cp/inc/$$file ${TARGET_DIR}/include/c++; \
 	done
 .if defined(GCC_CXX_RUNTIME)
 	@${MKDIR} ${TARGET_DIR}/include/g++/std
-	@cd ${GCC_WRKSRC} && ${GCC_MAKE} install-target-libstdc++
+	@cd ${WRKSRC} && ${GCC_MAKE} install-target-libstdc++
 .endif
 	for file in c++ c++filt g++; do \
 		${LN} -f ${PREFIX}/bin/${TARGET_ARCH}-$$file ${TARGET_DIR}/bin/$$file; \
@@ -218,14 +162,6 @@ gcc-install:
 	@${RMDIR} -p ${PREFIX}/man/man1 2>/dev/null || ${TRUE}
 .endif
 
-.if defined(CROSS_DISTFILES)
-DISTFILES+=		${CROSS_DISTFILES}
-.if defined(EXTRACT_ONLY)
-EXTRACT_ONLY+=		${CROSS_DISTFILES:N*.diff.gz}
-.else
-EXTRACT_ONLY=		${DISTFILES:N*.diff.gz}
-.endif
-.endif
 
 .if defined(CROSS_SYS_INCLUDE) && !defined(GCC_FAKE_RUNTIME)
 pre-install: pre-install-includes

@@ -1,0 +1,11 @@
+--- binutils/dlltool.c.orig	Tue May 21 03:23:05 2002
++++ binutils/dlltool.c	Mon Jul 15 18:55:11 2002
+@@ -1355,6 +1355,8 @@
+   for (excl_item = excludes; excl_item; excl_item = excl_item->next)
+     if (strcmp (string, excl_item->string) == 0)
+       return true;
++  if (string[0] != '_')
++      return true;
+   return false;
+ }
+ 
