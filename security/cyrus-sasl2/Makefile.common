@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2003/10/06 16:48:04 christos Exp $
+# $NetBSD: Makefile.common,v 1.8.2.1 2003/12/20 19:40:53 agc Exp $
 #
 # This Makefile fragment should be included _below_ and SASL_PLUGIN
 # definition and _above_ any CONFIGURE_ARGS definitions.
@@ -35,6 +35,7 @@ MAKE_ENV+=		SHLIBTOOL="${PKGSHLIBTOOL}"
 CYRUS_USER?=		cyrus
 CYRUS_GROUP?=		mail
 FILES_SUBST+=		CYRUS_USER=${CYRUS_USER}
+FILES_SUBST+=		ROOT_USER=${ROOT_USER}
 
 HTMLDIR=		${PREFIX}/share/doc/html/cyrus-sasl
 PLUGINDIR=		${PREFIX}/lib/sasl2
