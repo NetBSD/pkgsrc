@@ -1,10 +1,7 @@
-$NetBSD: distinfo,v 1.4 2001/10/07 09:51:46 veego Exp $
+$NetBSD: distinfo,v 1.5 2002/04/05 11:32:20 wennmach Exp $
 
-SHA1 (krb4-1.0.9.tar.gz) = 23e1e93e025f5b33c26592b6355c982458c9544a
-Size (krb4-1.0.9.tar.gz) = 1402551 bytes
-SHA1 (patch-aa) = c5e312bc29c5c947c7838ebb221bb6307727c81f
-SHA1 (patch-ad) = 01b2a8957ac22cc4cc28c7da44d1a956fc8f3c1b
-SHA1 (patch-ae) = 421445ebd2d3afccfdf6514b68847beb13f1cffa
+SHA1 (krb4-1.1.1.tar.gz) = db192908ec8510a22161c7607f83c8779dc7294a
+Size (krb4-1.1.1.tar.gz) = 1817919 bytes
 SHA1 (patch-ag) = e39c3159fe89cedbb34dd5dadcb95826cd8d4576
-SHA1 (patch-ah) = 95cbf045bf327ebcff920b9416a9f0eba04cb5ca
-SHA1 (patch-ai) = 5082b47d658a94f27cbfefd79391a48cb11c2ec1
+SHA1 (patch-ah) = f60b4c67dc6fbd08a337f75585f9597e508c4c4c
+SHA1 (patch-ai) = 716ae2b9675d1d83e5e27edfa90c792d72b37ea5
