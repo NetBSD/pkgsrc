@@ -1,7 +1,5 @@
-$NetBSD: distinfo,v 1.4 2003/06/17 15:31:40 fredb Exp $
+$NetBSD: distinfo,v 1.5 2004/11/09 12:30:40 adam Exp $
 
-SHA1 (xps-3.14.tar.gz) = 0c21a13b99f3375d8fc1b94b9bdabec2dd232a59
-Size (xps-3.14.tar.gz) = 168772 bytes
-SHA1 (patch-aa) = 53b9c9a7b6cf3f24b3667a9b528f378392d45507
-SHA1 (patch-ab) = 7dc58c1627b61f85e5656d364dd67c33281ce82f
-SHA1 (patch-ac) = b65deba1ffa57fdfd64ea2df9e1c20315f81a688
+SHA1 (xps-4.2.tar.gz) = 55c9176086e019a58d632580a31d70618235e149
+Size (xps-4.2.tar.gz) = 279690 bytes
+SHA1 (patch-ac) = 6a94bd17251f440c2af8302b0c842191420e4efc
