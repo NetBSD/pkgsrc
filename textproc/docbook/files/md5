@@ -1,6 +1,7 @@
-$NetBSD: md5,v 1.4 2000/06/07 20:32:02 hubertf Exp $
+$NetBSD: md5,v 1.5 2000/06/27 00:51:41 hubertf Exp $
 
 MD5 (docbk241.zip) = 1c2ad8f5ad5e2e06ba8840263901330d
 MD5 (docbk30.zip) = 9a7f5b1b7dd52d0ca4fb080619f0459c
 MD5 (docbk31.zip) = 432749c0c806dbae81c8bcb70da3b5d3
 MD5 (docbk40.zip) = fabcf7dd1d88b94797b7e5344389eab9
+MD5 (docbk41.zip) = 489f6ff2a2173eb1e14216c10533ede2
