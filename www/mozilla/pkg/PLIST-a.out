@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST-a.out,v 1.12 2001/06/09 04:13:27 taya Exp $
+@comment $NetBSD: PLIST-a.out,v 1.13 2001/07/01 13:05:10 taya Exp $
 bin/mozilla
 @comment begin PROGRAMS
 lib/mozilla/mozilla-bin
@@ -30,6 +30,7 @@ lib/mozilla/components/libembedcomponents.so.1.0
 lib/mozilla/components/libgfx2.so.1.0
 lib/mozilla/components/libgfx_gtk.so.1.0
 lib/mozilla/components/libgfxps.so.1.0
+lib/mozilla/components/libgfxxprint.so.1.0
 lib/mozilla/components/libgkcontent.so.1.0
 lib/mozilla/components/libgklayout.so.1.0
 lib/mozilla/components/libgkplugin.so.1.0
@@ -78,9 +79,10 @@ lib/mozilla/components/libprofile.so.1.0
 lib/mozilla/components/librdf.so.1.0
 lib/mozilla/components/libregviewer.so.1.0
 lib/mozilla/components/libshistory.so.1.0
-lib/mozilla/components/libsmime.so.1.0
+lib/mozilla/components/libsmimestb.so.1.0
 lib/mozilla/components/libstrres.so.1.0
 lib/mozilla/components/libtimer_gtk.so.1.0
+lib/mozilla/components/libtransformiix.so.1.0
 lib/mozilla/components/libtxmgr.so.1.0
 lib/mozilla/components/libtxtsvc.so.1.0
 lib/mozilla/components/libuconv.so.1.0
@@ -117,6 +119,7 @@ lib/mozilla/libnssckbi.so.1.0
 lib/mozilla/libnullplugin.so.1.0
 lib/mozilla/libplc4.so.1.0
 lib/mozilla/libplds4.so.1.0
+lib/mozilla/libxlibrgb.so.1.0
 lib/mozilla/libxpcom.so.1.0
 lib/mozilla/libxpistub.so.1.0
 lib/mozilla/plugins/libnullplugin.so.1.0
@@ -124,13 +127,14 @@ lib/mozilla/plugins/libnullplugin.so.1.0
 @comment begin DATA
 lib/mozilla/bloaturls.txt
 lib/mozilla/chrome/US.jar
-lib/mozilla/chrome/chatzilla.jar
 lib/mozilla/chrome/classic.jar
 lib/mozilla/chrome/comm.jar
+lib/mozilla/chrome/content-packs.jar
 lib/mozilla/chrome/embed.jar
 lib/mozilla/chrome/en-US.jar
 lib/mozilla/chrome/en-unix.jar
 lib/mozilla/chrome/en-win.jar
+lib/mozilla/chrome/help.jar
 lib/mozilla/chrome/installed-chrome.txt
 lib/mozilla/chrome/messenger.jar
 lib/mozilla/chrome/modern.jar
@@ -145,7 +149,6 @@ lib/mozilla/components/autocomplete.xpt
 lib/mozilla/components/bookmarks.xpt
 lib/mozilla/components/caps.xpt
 lib/mozilla/components/chardet.xpt
-lib/mozilla/components/chatzilla-service.js
 lib/mozilla/components/chrome.xpt
 lib/mozilla/components/content_base.xpt
 lib/mozilla/components/cookie.xpt
@@ -211,6 +214,7 @@ lib/mozilla/components/necko_viewsource.xpt
 lib/mozilla/components/nsDictionary.js
 lib/mozilla/components/nsFilePicker.js
 lib/mozilla/components/nsHelperAppDlg.js
+lib/mozilla/components/nsLDAPPrefsService.js
 lib/mozilla/components/nsProxyAutoConfig.js
 lib/mozilla/components/nsSidebar.js
 lib/mozilla/components/nsXmlRpcClient.js
@@ -232,6 +236,7 @@ lib/mozilla/components/shistory.xpt
 lib/mozilla/components/sidebar.xpt
 lib/mozilla/components/signonviewer.xpt
 lib/mozilla/components/timebomb.xpt
+lib/mozilla/components/transformiix.xpt
 lib/mozilla/components/txmgr.xpt
 lib/mozilla/components/txtsvc.xpt
 lib/mozilla/components/uconv.xpt
@@ -268,11 +273,15 @@ lib/mozilla/defaults/pref/security-prefs.js
 lib/mozilla/defaults/pref/unix.js
 lib/mozilla/defaults/pref/xpinstall.js
 lib/mozilla/defaults/profile/US/bookmarks.html
+lib/mozilla/defaults/profile/US/chrome/userChrome.css
+lib/mozilla/defaults/profile/US/chrome/userContent.css
 lib/mozilla/defaults/profile/US/localstore.rdf
 lib/mozilla/defaults/profile/US/mimeTypes.rdf
 lib/mozilla/defaults/profile/US/panels.rdf
 lib/mozilla/defaults/profile/US/search.rdf
 lib/mozilla/defaults/profile/bookmarks.html
+lib/mozilla/defaults/profile/chrome/userChrome.css
+lib/mozilla/defaults/profile/chrome/userContent.css
 lib/mozilla/defaults/profile/localstore.rdf
 lib/mozilla/defaults/profile/mimeTypes.rdf
 lib/mozilla/defaults/profile/panels.rdf
@@ -289,10 +298,6 @@ lib/mozilla/dtd/mathml.dtd
 lib/mozilla/gtkEmbed
 lib/mozilla/icons/mozicon16.xpm
 lib/mozilla/icons/mozicon50.xpm
-lib/mozilla/profile/defaults/profile/US/chrome/userChrome.css
-lib/mozilla/profile/defaults/profile/US/chrome/userContent.css
-lib/mozilla/profile/defaults/profile/chrome/userChrome.css
-lib/mozilla/profile/defaults/profile/chrome/userContent.css
 lib/mozilla/res/acceptlanguage.properties
 lib/mozilla/res/arrow.gif
 lib/mozilla/res/builtin/htmlBindings.xml
@@ -638,6 +643,7 @@ include/mozilla/nsFrameTraversal.h
 include/mozilla/nsGUIEvent.h
 include/mozilla/nsGfxCIID.h
 include/mozilla/nsGfxPSCID.h
+include/mozilla/nsGfxXPrintCID.h
 include/mozilla/nsHTMLAtomList.h
 include/mozilla/nsHTMLAtoms.h
 include/mozilla/nsHTMLEntities.h
@@ -995,6 +1001,8 @@ include/mozilla/nsIDeviceContextPS.h
 include/mozilla/nsIDeviceContextSpec.h
 include/mozilla/nsIDeviceContextSpecFactory.h
 include/mozilla/nsIDeviceContextSpecPS.h
+include/mozilla/nsIDeviceContextSpecXPrint.h
+include/mozilla/nsIDeviceContextXPrint.h
 include/mozilla/nsIDialogParamBlock.h
 include/mozilla/nsIDictionary.h
 include/mozilla/nsIDirectoryService.h
@@ -1191,6 +1199,7 @@ include/mozilla/nsILDAPErrors.h
 include/mozilla/nsILDAPMessage.h
 include/mozilla/nsILDAPMessageListener.h
 include/mozilla/nsILDAPOperation.h
+include/mozilla/nsILDAPPrefsService.h
 include/mozilla/nsILDAPServer.h
 include/mozilla/nsILDAPService.h
 include/mozilla/nsILDAPURL.h
@@ -1387,6 +1396,7 @@ include/mozilla/nsIPluginStreamPeer.h
 include/mozilla/nsIPluginStreamPeer2.h
 include/mozilla/nsIPluginTagInfo.h
 include/mozilla/nsIPluginTagInfo2.h
+include/mozilla/nsIPluginViewer.h
 include/mozilla/nsIPop3IncomingServer.h
 include/mozilla/nsIPop3Service.h
 include/mozilla/nsIPop3Sink.h
@@ -1470,6 +1480,8 @@ include/mozilla/nsIRequestObserverProxy.h
 include/mozilla/nsIResChannel.h
 include/mozilla/nsIResProtocolHandler.h
 include/mozilla/nsIRollupListener.h
+include/mozilla/nsIRuleNode.h
+include/mozilla/nsIRuleWalker.h
 include/mozilla/nsIRunnable.h
 include/mozilla/nsISHContainer.h
 include/mozilla/nsISHEntry.h
@@ -1578,6 +1590,7 @@ include/mozilla/nsISupportsPrimitives.h
 include/mozilla/nsISupportsUtils.h
 include/mozilla/nsISymantecDebugManager.h
 include/mozilla/nsISymantecDebugger.h
+include/mozilla/nsISyncLoader.h
 include/mozilla/nsITXTToHTMLConv.h
 include/mozilla/nsITableCellLayout.h
 include/mozilla/nsITableEditor.h
@@ -1682,6 +1695,7 @@ include/mozilla/nsIXPCSecurityManager.h
 include/mozilla/nsIXPConnect.h
 include/mozilla/nsIXPINotifier.h
 include/mozilla/nsIXPIProgressDlg.h
+include/mozilla/nsIXPathNodeSelector.h
 include/mozilla/nsIXRemoteClient.h
 include/mozilla/nsIXULBrowserWindow.h
 include/mozilla/nsIXULContent.h
@@ -1906,6 +1920,7 @@ include/mozilla/nsSmtpService.h
 include/mozilla/nsSmtpUrl.h
 include/mozilla/nsSoftwareUpdateIIDs.h
 include/mozilla/nsSpecialSystemDirectory.h
+include/mozilla/nsStaticComponent.h
 include/mozilla/nsStaticNameTable.h
 include/mozilla/nsStatistics.h
 include/mozilla/nsStatusBarBiffManager.h
@@ -2093,6 +2108,7 @@ include/mozilla/typedefs.h
 include/mozilla/typedefs_md.h
 include/mozilla/uconvutil.h
 include/mozilla/winfile.h
+include/mozilla/xlibrgb.h
 include/mozilla/xmlparse.h
 include/mozilla/xp_core.h
 include/mozilla/xp_file.h
@@ -2150,16 +2166,12 @@ include/mozilla/zipstub.h
 @dirrm lib/mozilla/res/entityTables
 @dirrm lib/mozilla/res/builtin
 @dirrm lib/mozilla/res
-@dirrm lib/mozilla/profile/defaults/profile/chrome
-@dirrm lib/mozilla/profile/defaults/profile/US/chrome
-@dirrm lib/mozilla/profile/defaults/profile/US
-@dirrm lib/mozilla/profile/defaults/profile
-@dirrm lib/mozilla/profile/defaults
-@dirrm lib/mozilla/profile
 @dirrm lib/mozilla/plugins
 @dirrm lib/mozilla/icons
 @dirrm lib/mozilla/dtd
 @dirrm lib/mozilla/defaults/wallet
+@dirrm lib/mozilla/defaults/profile/chrome
+@dirrm lib/mozilla/defaults/profile/US/chrome
 @dirrm lib/mozilla/defaults/profile/US
 @dirrm lib/mozilla/defaults/profile
 @dirrm lib/mozilla/defaults/pref
