@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1999/08/29 15:29:40 jlam Exp $
+# $NetBSD: Makefile,v 1.5 1999/11/10 10:48:29 agc Exp $
 #
 
 DISTNAME=		latestCDK
@@ -12,7 +12,6 @@ MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.vexus.ca/CDK.html
 
 BUILD_DEPENDS+=		${LOCALBASE}/bin/autoconf:../../devel/autoconf
-DEPENDS+=		ncurses-4.2:../../devel/ncurses
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
@@ -20,6 +19,14 @@ CPPFLAGS+=		-I${LOCALBASE}/include	# for ncurses.h
 CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
 
 ALL_TARGET=		default
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD"
+DEPENDS+=		ncurses-4.2:../../devel/ncurses
+.elif ${OPSYS} == "SunOS"
+MAKE_ENV+=		CPPFLAGS=
+.endif
 
 pre-configure:
 	cd ${WRKSRC}; ${LOCALBASE}/bin/autoconf
