@@ -1,4 +1,4 @@
-#     $NetBSD: SunOS.x11.dist,v 1.28.2.2 2003/08/01 19:00:25 jlam Exp $
+#     $NetBSD: SunOS.x11.dist,v 1.28.2.3 2003/08/27 11:44:30 jlam Exp $
 #     FreeBSD Id: BSD.x11.dist,v 1.2 1997/06/10 07:55:10 asami Exp
 #
 
@@ -369,6 +369,10 @@
                 ..
             ..
             ms
+                LC_MESSAGES
+                ..
+            ..
+            ne
                 LC_MESSAGES
                 ..
             ..
