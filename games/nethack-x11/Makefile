@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1999/04/16 20:24:44 abs Exp $
+# $NetBSD: Makefile,v 1.5 1999/04/26 18:38:29 garbled Exp $
 #
 
 DISTNAME=		nethack-3.2.2
@@ -12,6 +12,7 @@ HOMEPAGE=		http://www.win.tue.nl/games/roguelike/nethack/
 DEPENDS+=		nethack-lib-3.2.2:../nethack-lib
 DEPENDS+=		xpm-3.4k:../../graphics/xpm
 
+USE_X11=		yes
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	sys/unix/setup.sh
 ALL_TARGET=		nethack
