@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.138 2003/04/03 22:47:42 rh Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.139 2003/04/10 20:32:29 grant Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -1786,16 +1786,16 @@ XCHAT_USE_SSL?=	YES
 
 # Australia.
 #
-#MASTER_SITE_GNOME=	ftp://www.planetmirror.com.au/pub/GNOME/
-#MASTER_SITE_GNU=	ftp://www.planetmirror.com.au/pub/gnu/
-#MASTER_SITE_MOZILLA=	ftp://www.planetmirror.com.au/pub/mozilla/releases/
-#MASTER_SITE_PERL_CPAN=	ftp://www.planetmirror.com.au/pub/perl/CPAN/modules/by-module/
-#MASTER_SITE_SUNSITE=	ftp://www.planetmirror.com.au/pub/sunsite/
-#MASTER_SITE_SUSE=	ftp://www.planetmirror.com.au/pub/suse/${MACHINE_ARCH}/${SUSE_VERSION}/suse/ 
-#MASTER_SITE_TEX_CTAN=	ftp://www.planetmirror.com.au/pub/tex-archive/
+#MASTER_SITE_GNOME=	http://public.planetmirror.com.au/pub/GNOME/
+#MASTER_SITE_GNU=	http://public.planetmirror.com.au/pub/gnu/
+#MASTER_SITE_MOZILLA=	http://public.planetmirror.com.au/pub/mozilla/releases/
+#MASTER_SITE_PERL_CPAN=	http://public.planetmirror.com.au/pub/perl/CPAN/modules/by-module/
+#MASTER_SITE_SUNSITE=	http://public.planetmirror.com.au/pub/sunsite/
+#MASTER_SITE_SUSE=	http://public.planetmirror.com.au/pub/suse/${MACHINE_ARCH}/${SUSE_VERSION}/suse/ 
+#MASTER_SITE_TEX_CTAN=	http://public.planetmirror.com.au/pub/tex-archive/
 #MASTER_SITE_SOURCEFORGE=http://flow.dl.sourceforge.net/sourceforge/ \
-#			ftp://www.planetmirror.com.au/pub/sourceforge/
-#MASTER_SITE_XCONTRIB=	ftp://www.planetmirror.com.au/pub/X11/contrib/
+#			http://public.planetmirror.com.au/pub/sourceforge/
+#MASTER_SITE_XCONTRIB=	http://public.planetmirror.com.au/pub/X11/contrib/
 #MASTER_SITE_XEMACS=	ftp://ftp.au.xemacs.org/pub/xemacs/
 #MASTER_SITE_BACKUP=	ftp://ftp.au.netbsd.org/pub/NetBSD/packages/distfiles/ \
 #			ftp://ftp.netbsd.org/pub/NetBSD/packages/distfiles/
