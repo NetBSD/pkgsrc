@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2001/05/31 10:07:59 dent Exp $
-#
+# $NetBSD: Makefile,v 1.5 2001/07/01 15:12:44 tron Exp $
 
-DISTNAME=	g-wrap-0.9.5
+DISTNAME=	g-wrap-1.1.10
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.gnucash.org/pub/g-wrap/source/
 
@@ -11,10 +10,11 @@ COMMENT=	tool for importing types, functions, and constants into guile
 
 DEPENDS+=	guile>=1.3.4:../../lang/guile
 
-GNU_CONFIGURE=	# defined
-CONFIGURE_ENV+=	ac_cv_path_RSCHEME="nope"
+GNU_CONFIGURE=	YES
+USE_GMAKE=	YeS
+USE_LIBTOOL=	YES
 
-USE_LIBTOOL=	# defined
-LTCONFIG_OVERRIDE= ${WRKSRC}/ltconfig
+CONFIGURE_ENV+=		ac_cv_path_RSCHEME="nope"
+LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 .include "../../mk/bsd.pkg.mk"
