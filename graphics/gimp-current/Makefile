@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2000/08/23 23:14:28 tron Exp $
+# $NetBSD: Makefile,v 1.25 2000/11/28 18:06:32 mycroft Exp $
 
 DISTNAME=		gimp-1.1.24
 CATEGORIES=		graphics
@@ -22,6 +22,7 @@ USE_XPM=		YES
 USE_GMAKE=		YES
 USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
+
 GNU_CONFIGURE=		YES
 EVAL_PREFIX+=		GTKDIR=gtk+
 CONFIGURE_ARGS+=	--with-gtk-prefix="${GTKDIR}" \
@@ -38,11 +39,6 @@ PLIST_SUBST+=		LOCALBASE=${LOCALBASE}
 
 .if (${OBJECT_FMT} == ELF)
 LDFLAGS+=		-Wl,-E
-.else
-PLIST_SRC=		${WRKDIR}/PLIST
-
-post-build:
-	@${GREP} -vx lib/gimp/.*/modules/.*\.so.* ${PKGDIR}/PLIST >${PLIST_SRC}
 .endif
 
 post-install:
