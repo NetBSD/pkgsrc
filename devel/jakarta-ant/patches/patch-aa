@@ -1,0 +1,10 @@
+--- build.xml.orig	Wed Apr  3 15:37:20 2002
++++ build.xml	Wed Apr  3 15:40:10 2002
+@@ -248,6 +248,7 @@
+       <exclude name="${optional.package}/sitraka/**" unless="jakarta.oro.present"/>
+       <exclude name="${optional.package}/metamata/MAudit*" unless="jakarta.oro.present"/>
+       <exclude name="${optional.package}/metamata/**" unless="jdk1.2+" />
++      <exclude name="${optional.package}/TraXLiaison.java" unless="trax.impl.present" />
+     </javac>
+     
+     <copy todir="${build.classes}">
