@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2002/10/13 16:04:48 wiz Exp $
+
+--- doc/Makefile.in.orig	Sun Oct 13 17:44:07 2002
++++ doc/Makefile.in
+@@ -86,7 +86,7 @@ ogg_includes = @ogg_includes@
+ ogg_libraries = @ogg_libraries@
+ src = @src@
+ 
+-docdir = $(prefix)/share/doc
++docdir = $(prefix)/share/doc/speex
+ 
+ doc_DATA = manual.pdf
+ 
