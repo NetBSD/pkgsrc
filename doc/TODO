@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3362 2005/04/05 09:19:24 wiz Exp $
+$NetBSD: TODO,v 1.3363 2005/04/05 09:25:11 wiz Exp $
 
 Suggested new packages
 ======================
@@ -620,7 +620,6 @@ Suggested package updates
 	o lq-sp-1.3.4.11
 	o lsh-2.0.1
 	o lv-451 [pkg/29890]
-	o m4-1.4.3
 	o mDNSResponder-98
 	o maelstrom-x11-2.0.7
 	o magicpoint-1.11b
