@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2001/05/25 06:12:53 rh Exp $
+@comment $NetBSD: PLIST,v 1.12 2001/08/11 18:32:25 rh Exp $
 include/gal/util/e-util.h
 include/gal/util/e-xml-utils.h
 include/gal/util/e-cache.h
@@ -9,7 +9,6 @@ include/gal/util/e-text-event-processor-emacs-like.h
 include/gal/util/e-text-event-processor-types.h
 include/gal/util/e-text-event-processor.h
 include/gal/widgets/e-hsv-utils.h
-include/gal/widgets/e-reflow-sorted.h
 include/gal/widgets/e-selection-model-array.h
 include/gal/widgets/e-selection-model-simple.h
 include/gal/widgets/e-selection-model.h
@@ -103,6 +102,7 @@ include/gal/e-table/e-table-subset.h
 include/gal/e-table/e-table-subset-variable.h
 include/gal/e-table/e-tree-model.h
 include/gal/e-table/e-table-tooltip.h
+include/gal/e-text/e-completion-match.h
 include/gal/menus/gal-define-views-dialog.h
 include/gal/menus/gal-define-views-model.h
 include/gal/menus/gal-view-collection.h
@@ -117,25 +117,53 @@ include/gal/shortcut-bar/e-icon-bar.h
 include/gal/shortcut-bar/e-shortcut-bar.h
 include/gal/shortcut-bar/e-shortcut-model.h
 include/gal/shortcut-bar/e-vscrolled-bar.h
-lib/libgal.so.6.0
-lib/libgal.so.6
+include/gal/unicode/gunicode.h
+include/gal/util/e-sorter-array.h
+include/gal/widgets/e-categories-master-list-array.h
+include/gal/widgets/e-categories-master-list-combo.h
+include/gal/widgets/e-categories-master-list-dialog-model.h
+include/gal/widgets/e-categories-master-list-dialog.h
+include/gal/widgets/e-categories-master-list.h
+include/gal/widgets/e-reflow-model.h
+lib/libgal.so.9.0
+lib/libgal.so.9
 lib/libgal.so
 lib/libgal.la
 lib/libgal.a
 lib/galConf.sh
-share/etable/0.7/glade/e-table-config.glade
-share/etable/0.7/glade/e-table-field-chooser.glade
-share/etable/0.7/glade/e-table-group.glade
-share/gal/0.7/glade/gal-categories.glade
-share/gal/0.7/glade/gal-define-views.glade
-share/gal/0.7/glade/gal-view-new-dialog.glade
+share/etable/0.10/glade/e-table-config.glade
+share/etable/0.10/glade/e-table-field-chooser.glade
+share/etable/0.10/glade/e-table-group.glade
+share/gal/0.10/glade/e-categories-master-list-dialog.glade
+share/gal/0.10/glade/gal-categories.glade
+share/gal/0.10/glade/gal-define-views.glade
+share/gal/0.10/glade/gal-view-new-dialog.glade
 share/gal/html/gal-api.sgml
 share/gal/html/gal.hierarchy
 share/gal/html/gal.signals
 share/gal/html/gal.types
 share/gal/html/gal-decl.txt
 share/gal/html/gal-sections.txt
+share/pixmaps/gal/categories/category_birthday_16.png
+share/pixmaps/gal/categories/category_business_16.png
+share/pixmaps/gal/categories/category_favorites_16.png
+share/pixmaps/gal/categories/category_gifts_16.png
+share/pixmaps/gal/categories/category_goals_16.png
+share/pixmaps/gal/categories/category_holiday-cards_16.png
+share/pixmaps/gal/categories/category_holiday_16.png
+share/pixmaps/gal/categories/category_hot-contacts_16.png
+share/pixmaps/gal/categories/category_ideas_16.png
+share/pixmaps/gal/categories/category_international_16.png
+share/pixmaps/gal/categories/category_key-customer_16.png
+share/pixmaps/gal/categories/category_miscellaneous_16.png
+share/pixmaps/gal/categories/category_personal_16.png
+share/pixmaps/gal/categories/category_phonecalls_16.png
+share/pixmaps/gal/categories/category_status_16.png
+share/pixmaps/gal/categories/category_strategies_16.png
+share/pixmaps/gal/categories/category_suppliers_16.png
+share/pixmaps/gal/categories/category_time-and-expenses_16.png
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/gal.mo
+${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/gal.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/gal.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/gal.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/gal.mo
@@ -146,6 +174,7 @@ ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/gal.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/gal.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/gal.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/gal.mo
+${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/gal.mo
 ${PKGLOCALEDIR}/locale/no/LC_MESSAGES/gal.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gal.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/gal.mo
@@ -156,19 +185,24 @@ ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/gal.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/gal.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/gal.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/gal.mo
+${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/gal.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/gal.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/gal.mo
+${PKGLOCALEDIR}/locale/zh_TW.Big5/LC_MESSAGES/gal.mo
 @exec mkdir -p -m 0755 %D/share/gal/html/gal
+@dirrm share/pixmaps/gal/categories
+@dirrm share/pixmaps/gal
 @dirrm share/gal/html/gal
 @dirrm share/gal/html
-@dirrm share/gal/0.7/glade
-@dirrm share/gal/0.7
+@dirrm share/gal/0.10/glade
+@dirrm share/gal/0.10
 @dirrm share/gal
-@dirrm share/etable/0.7/glade
-@dirrm share/etable/0.7
+@dirrm share/etable/0.10/glade
+@dirrm share/etable/0.10
 @dirrm share/etable
 @dirrm include/gal/widgets
 @dirrm include/gal/util
+@dirrm include/gal/unicode
 @dirrm include/gal/shortcut-bar
 @dirrm include/gal/menus
 @dirrm include/gal/e-text
