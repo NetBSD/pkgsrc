@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.40 2003/07/17 21:34:46 grant Exp $
+# $NetBSD: Makefile,v 1.41 2003/07/28 14:35:33 adam Exp $
 
-DISTNAME=	pine4.53
-PKGNAME=	pico-4.4
-PKGREVISION=	2
+DISTNAME=	pine4.56
+PKGNAME=	pico-4.6
 CATEGORIES=	editors
 MASTER_SITES=	ftp://ftp.cac.washington.edu/pine/ \
 		ftp://ftp.fu-berlin.de/pub/unix/mail/pine/
@@ -34,7 +33,7 @@ MAKE_ENV+=	_STRIPFLAG_INSTALL=	# debug...
 do-build:
 	cd ${WRKSRC} && \
 	./build ${BUILDNAME} CC="${PKGLIBTOOL} ${BUILDLINK_CC}" \
-	  PREFIX=${PREFIX}
+	  PREFIX=${PREFIX} OPTIMIZE="${CFLAGS}"
 
 do-install:
 	${PKGLIBTOOL} --mode=install ${INSTALL_DATA} \
