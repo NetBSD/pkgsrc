@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2001/03/10 12:37:20 drochner Exp $
+# $NetBSD: Makefile,v 1.15 2001/05/21 19:45:04 rh Exp $
 #
 
-DISTNAME=		libxml-1.8.11
+DISTNAME=		libxml-1.8.13
 CATEGORIES=		textproc devel lang gnome
 MASTER_SITES=		ftp://rpmfind.net/pub/veillard/ \
 			${MASTER_SITE_GNOME:=stable/sources/libxml/}
@@ -16,8 +16,8 @@ COMMENT=		XML parser, mainly used by the GNOME project
 DEPENDS+=		zlib-*:../../devel/zlib
 .endif
 
-GNU_CONFIGURE=		# defined
-USE_LIBTOOL=		# defined
+GNU_CONFIGURE=		YES
+USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 .include "../../mk/bsd.pkg.mk"

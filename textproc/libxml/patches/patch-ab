@@ -1,11 +1,11 @@
-$NetBSD: patch-ab,v 1.7 2000/07/15 08:09:28 jlam Exp $
+$NetBSD: patch-ab,v 1.8 2001/05/21 19:45:05 rh Exp $
 
---- Makefile.in.orig	Sun Jul  9 04:33:19 2000
-+++ Makefile.in	Fri Jul 14 23:05:08 2000
-@@ -159,7 +159,7 @@
+--- Makefile.in.orig	Mon May 14 12:39:15 2001
++++ Makefile.in
+@@ -162,7 +162,7 @@
  libxml_la_OBJECTS =  SAX.lo entities.lo encoding.lo error.lo parser.lo \
- HTMLparser.lo HTMLtree.lo debugXML.lo tree.lo xpath.lo xmlIO.lo \
- xmlmemory.lo nanohttp.lo nanoftp.lo valid.lo xlink.lo
+ parserold.lo HTMLparser.lo HTMLtree.lo debugXML.lo tree.lo xpath.lo \
+ xmlIO.lo xmlmemory.lo nanohttp.lo nanoftp.lo valid.lo xlink.lo uri.lo
 -PROGRAMS =  $(noinst_PROGRAMS)
 +PROGRAMS =
  
