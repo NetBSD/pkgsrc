@@ -1,4 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/03/30 23:20:37 xtraeme Exp $
+$NetBSD: distinfo,v 1.2 2004/04/27 21:58:15 dmcmahill Exp $
 
 SHA1 (poedit-1.2.5.tar.gz) = 3bcb1009c8687887ae5c53ebebe186bc6c98fb3a
 Size (poedit-1.2.5.tar.gz) = 1313243 bytes
+SHA1 (patch-aa) = b581d7d9c0f8a7e9503da04a4574e9b04a235cb3
+SHA1 (patch-ab) = dade8088c126722a4f83bf92b8db96c6410ed690
