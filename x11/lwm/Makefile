@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/07/09 18:37:17 jwise Exp $
+# $NetBSD: Makefile,v 1.2 2000/02/16 13:59:14 he Exp $
 #
 
 DISTNAME=	lwm
-PKGNAME=	lwm-0.8
+PKGNAME=	lwm-1.00
+WRKSRC=		${WRKDIR}/lwm-1.00
 CATEGORIES=	x11
 MASTER_SITES=	http://users.ch.genedata.com/~enh/lwm/
 
