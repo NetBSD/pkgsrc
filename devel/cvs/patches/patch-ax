@@ -1,3 +1,4 @@
+$NetBSD: patch-ax,v 1.2 1999/12/28 04:58:38 wiz Exp $
 --- diff/Makefile.in.orig	Tue Nov  2 20:08:02 1999
 +++ diff/Makefile.in	Tue Nov  2 20:07:31 1999
 @@ -35,7 +35,7 @@
