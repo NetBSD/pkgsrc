@@ -1,0 +1,11 @@
+$NetBSD: patch-af,v 1.1 2004/08/02 00:07:40 kristerw Exp $
+
+--- config.h.in.orig	Mon Aug  2 01:59:03 2004
++++ config.h.in	Mon Aug  2 01:59:13 2004
+@@ -92,6 +92,3 @@
+ 
+ /* If socken_t is defined */
+ #undef socklen_t
+-
+-/* Define to `unsigned int' if <sys/types.h> does not define. */
+-#undef u_int32_t
