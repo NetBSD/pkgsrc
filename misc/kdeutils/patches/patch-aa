@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.5 1999/02/15 21:36:05 tron Exp $
+$NetBSD: patch-aa,v 1.6 1999/02/22 00:08:45 tron Exp $
 
 --- configure.orig	Sat Feb  6 18:57:29 1999
-+++ configure	Mon Feb 15 21:10:42 1999
++++ configure	Mon Feb 22 00:59:54 1999
 @@ -506,9 +506,9 @@
  # Prefer explicitly selected file to automatically selected ones.
  if test -z "$CONFIG_SITE"; then
@@ -14,7 +14,7 @@ $NetBSD: patch-aa,v 1.5 1999/02/15 21:36:05 tron Exp $
    fi
  fi
  for ac_site_file in $CONFIG_SITE; do
-@@ -3939,37 +3941,37 @@
+@@ -3939,37 +3939,37 @@
  echo "configure:3940: checking for KDE paths" >&5
  
    if test -z "$kde_htmldir"; then
@@ -62,3 +62,19 @@ $NetBSD: patch-aa,v 1.5 1999/02/15 21:36:05 tron Exp $
    fi
    if test -z "$kde_bindir"; then
      kde_bindir="\$(exec_prefix)/bin"
+@@ -4290,6 +4290,7 @@
+     fi
+ 
+ 
++if false; then
+ echo $ac_n "checking for giflib""... $ac_c" 1>&6
+ echo "configure:4295: checking for giflib" >&5
+ if eval "test \"`echo '$''{'ac_cv_lib_gif'+set}'`\" = set"; then
+@@ -4336,6 +4337,7 @@
+ 
+ else
+   { echo "configure: error: You need giflib23. Please install the kdesupport package" 1>&2; exit 1; }
++fi
+ fi
+ 
+ echo $ac_n "checking for jpeglib""... $ac_c" 1>&6
