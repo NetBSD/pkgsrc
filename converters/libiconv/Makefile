@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2002/10/29 14:36:55 agc Exp $
+# $NetBSD: Makefile,v 1.15 2003/01/03 12:32:59 wiz Exp $
 #
 
 DISTNAME=		libiconv-1.8
@@ -31,6 +31,6 @@ pre-install:
 	${RM} -f ${PREFIX}/lib/charset.alias
 
 test: build
-	cd ${WRKSRC} && ${MAKE_ENV} ${MAKE_PROGRAM} check |& tee ${WRKDIR}/check.log
+	cd ${WRKSRC} && ${MAKE_ENV} ${MAKE_PROGRAM} check 2>&1 | tee ${WRKDIR}/check.log
 
 .include "../../mk/bsd.pkg.mk"
