@@ -1,0 +1,12 @@
+$NetBSD: patch-ac,v 1.1 2005/01/23 17:37:48 taca Exp $
+
+--- lib/tk/bindtag.rb.orig	2004-12-16 16:12:44.000000000 +0900
++++ lib/tk/bindtag.rb
+@@ -23,6 +23,7 @@ class TkBindTag
+       @id = name
+       BTagID_TBL[@id] = self
+       bind(*args, &b) if args != []
++      self
+     }
+   end
+ 
