@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/09/22 08:09:47 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2005/02/19 22:46:44 wiz Exp $
 include/soup-2.0/libsoup/soup-address.h
 include/soup-2.0/libsoup/soup-context.h
 include/soup-2.0/libsoup/soup-error.h
@@ -14,5 +14,6 @@ include/soup-2.0/libsoup/soup-uri.h
 include/soup-2.0/libsoup/soup.h
 lib/libsoup-2.0.la
 lib/pkgconfig/soup-2.0.pc
+libexec/libsoup-ssl-proxy
 @dirrm include/soup-2.0/libsoup
 @dirrm include/soup-2.0
