@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/07/16 11:49:15 jdolecek Exp $
+# $NetBSD: Makefile,v 1.3 2004/07/17 07:53:34 jdolecek Exp $
 #
 
 DISTNAME=		libapache-mod-auth-mysql_4.3.1
@@ -9,7 +9,7 @@ MASTER_SITES=		${MASTER_SITE_DEBIAN:=pool/main/liba/libapache-mod-auth-mysql/}
 
 MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://packages.debian.org/unstable/web/libapache-mod-auth-mysql.html
-COMMENT=		Apache module to allow authentication against a MySQL database
+COMMENT=		Apache (${PKG_APACHE}) module to allow authentication against a MySQL database
 
 USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
@@ -18,14 +18,16 @@ CONFIGURE_ARGS+=	--with-mysql-includes=${BUILDLINK_PREFIX.mysql-client}/include/
 			--with-mysql-libs=${BUILDLINK_PREFIX.mysql-client}/lib/mysql
 CPPFLAGS+=		-I${BUILDLINK_PREFIX.mysql-client}/include/mysql
 
+APACHE_MODULE=		YES
 APACHE_MODULE_NAME=	mod_auth_mysql.so
 
-post-install:
+do-install:
+	${INSTALL_DATA} ${WRKSRC}/${PKG_APACHE}_${APACHE_MODULE_NAME} \
+		${PREFIX}/lib/httpd/${APACHE_MODULE_NAME}
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mod_auth_mysql
 	${INSTALL_DATA} ${WRKSRC}/DIRECTIVES ${PREFIX}/share/doc/mod_auth_mysql
 	${INSTALL_DATA} ${WRKSRC}/USAGE ${PREFIX}/share/doc/mod_auth_mysql
 
 .include "../../databases/mysql-client/buildlink3.mk"
-.include "../../www/apache/module.mk"
-
+.include "../../mk/apache.mk"
 .include "../../mk/bsd.pkg.mk"
