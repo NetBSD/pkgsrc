@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/01/06 03:43:04 tv Exp $
+# $NetBSD: Makefile,v 1.2 1999/05/21 09:37:07 mrg Exp $
 #
 
 DISTVERSION=		1.3.0.0
@@ -16,5 +16,7 @@ USE_CROSS_EGCS=		yes
 EGCS_FAKE_RUNTIME=	yes
 
 TARGET_ARCH=		sparc64-netbsd
+
+BROKEN=			kills sparc-netbsdelf support
 
 .include "../COMMON/cross.mk"
