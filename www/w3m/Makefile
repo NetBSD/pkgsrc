@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/09/27 05:37:35 sakamoto Exp $
+# $NetBSD: Makefile,v 1.2 1999/09/27 11:17:49 agc Exp $
 
 DISTNAME=	w3m-990902
+PKGNAME=	w3m-19990902
 CATEGORIES=	www
 MASTER_SITES=	ftp://ei5nazha.yz.yamagata-u.ac.jp/w3m/
 
@@ -17,20 +18,23 @@ HAS_CONFIGURE=	yes
 .include "../../mk/bsd.prefs.mk"
 
 # Set this to NO for ISO-8859-1 support (exclusive to Japanese).
-W3M_USE_JAPANESE=	YES
+W3M_USE_JAPANESE?=	YES
 # Set this to YES to use lynx like key binding.
-W3M_USE_LYNX_KEY=	NO
+W3M_USE_LYNX_KEY?=	NO
 
 .if defined(W3M_USE_JAPANESE) && ${W3M_USE_JAPANESE} == YES
 CONFIGURE_ENV+=	def_lg=1
 CONFIGURE_ENV+=	def_dcode=n
 CONFIGURE_ENV+=	def_kanji_symbols=y
+HELP_LANG=	_ja
 .else
 CONFIGURE_ENV+=	def_lg=2
 CONFIGURE_ENV+=	def_kanji_symbols=n
+HELP_LANG=	_en
 .endif
 .if defined(W3M_USE_LYNX_KEY) && ${W3M_USE_LYNX_KEY} == YES
 CONFIGURE_ENV+=	def_lynx_key=y
+HELP_LYNX=	-lynx
 .else
 CONFIGURE_ENV+=	def_lynx_key=n
 .endif
@@ -57,22 +61,8 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/doc-jp/* ${LOCALBASE}/${HELPDIR}/doc-jp
 
 post-install:
-.if defined(W3M_USE_JAPANESE) && ${W3M_USE_JAPANESE} == YES
-.if defined(W3M_USE_LYNX_KEY) && ${W3M_USE_LYNX_KEY} == YES
-	${LN} -s ${LOCALBASE}/${HELPDIR}/w3mhelp-lynx_ja.html \
-	    ${LOCALBASE}/${HELPDIR}/w3mhelp.html
-.else # W3M_USE_JAPANESE && ! W3M_USE_LYNX_KEY
-	${LN} -s ${LOCALBASE}/${HELPDIR}/w3mhelp_ja.html \
-	    ${LOCALBASE}/${HELPDIR}/w3mhelp.html
-.endif
-.else # ! W3M_USE_JAPANESE
-.if defined(W3M_USE_LYNX_KEY) && ${W3M_USE_LYNX_KEY} == YES
-	${LN} -s ${LOCALBASE}/${HELPDIR}/w3mhelp-lynx_en.html \
-	    ${LOCALBASE}/${HELPDIR}./w3mhelp.html
-.else # ! W3M_USE_JAPANESE && ! W3M_USE_LYNX_KEY
-	${LN} -s ${LOCALBASE}/${HELPDIR}/w3mhelp_en.html \
-	    ${LOCALBASE}/${HELPDIR}/w3mhelp.html
-.endif
-.endif
+	${RM} -f ${LOCALBASE}/${HELPDIR}/w3mhelp.html
+	${LN} -s ${LOCALBASE}/${HELPDIR}/w3mhelp${HELP_LYNX}${HELP_LANG}.html \
+			${LOCALBASE}/${HELPDIR}/w3mhelp.html
 
 .include "../../mk/bsd.pkg.mk"
