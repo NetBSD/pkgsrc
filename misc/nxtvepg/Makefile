@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2004/03/12 20:32:55 magick Exp $
+# $NetBSD: Makefile,v 1.33 2004/03/12 20:38:59 magick Exp $
 
 DISTNAME=	nxtvepg-2.6.0
 PKGREVISION=	1
@@ -36,5 +36,5 @@ pre-configure:
 #	cd ${WRKSRC};							\
 #	${GMAKE} depend
 
-.include "../../x11/tk83/buildlink2.mk"
+.include "../../x11/tk/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
