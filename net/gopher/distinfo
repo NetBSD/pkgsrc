@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2003/06/30 10:20:14 wiz Exp $
+$NetBSD: distinfo,v 1.3 2003/08/24 00:06:54 wiz Exp $
 
-SHA1 (gopher-3.0.5.tar.gz) = 8c7170f75d643c5a98dce02a89b0b49b1f8296cc
-Size (gopher-3.0.5.tar.gz) = 508713 bytes
+SHA1 (gopher_3.0.6.tar.gz) = c5b17445c7be11658fe9247edd1767f4f58eacbd
+Size (gopher_3.0.6.tar.gz) = 677753 bytes
