@@ -1,4 +1,4 @@
-# $NetBSD: ccache.mk,v 1.11 2004/02/07 02:58:10 jlam Exp $
+# $NetBSD: ccache.mk,v 1.12 2004/02/08 02:59:14 jlam Exp $
 
 .if !defined(COMPILER_CCACHE_MK)
 COMPILER_CCACHE_MK=	one
@@ -38,14 +38,16 @@ _CCACHEBASE?=		${LOCALBASE}
 _CCACHE_DIR=	${WRKDIR}/.ccache
 _CCACHE_LINKS=	# empty
 .      if !empty(_LANGUAGES.ccache:Mc)
-_CCACHE_CC:=	${_CCACHE_DIR}/bin/${CC:T}
+_CCACHE_CC:=	${_CCACHE_DIR}/bin/${PKG_CC:T}
 _CCACHE_LINKS+=	_CCACHE_CC
-CC=		${_CCACHE_CC}
+PKG_CC=		${_CCACHE_CC}
+CC=		${PKG_CC:T}
 .      endif
 .      if !empty(_LANGUAGES.ccache:Mc++)
-_CCACHE_CXX:=	${_CCACHE_DIR}/bin/${CXX:T}
+_CCACHE_CXX:=	${_CCACHE_DIR}/bin/${PKG_CXX:T}
 _CCACHE_LINKS+=	_CCACHE_CXX
-CXX=		${_CCACHE_CXX}
+PKG_CXX=	${_CCACHE_CXX}
+CXX=		${PKG_CXX:T}
 .      endif
 .    endif
 .  endif
