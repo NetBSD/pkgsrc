@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/02/17 18:18:59 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/11/02 09:49:59 zuntum Exp $
 #
 
 DISTNAME=	isic-0.05
@@ -10,12 +10,11 @@ MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://expert.cc.purdue.edu/~frantzen/
 COMMENT=	Ip Stack Integrity Checker (IP, TCP, UDP, ICMP et. al.)
 
-DEPENDS+=	libnet-1.*:../../devel/libnet
-
+USE_BUILDLINK_ONLY=	YES
 GNU_CONFIGURE=	YES
-CONFIGURE_ENV+=	CFLAGS="-I${LOCALBASE}/include"
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/isic.README
 
+.include "../../devel/libnet/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
