@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/11/26 17:50:22 jtb Exp $
+include/randlib.h
+lib/librandlib.a
+lib/librandlib.la
+lib/librandlib.so.1.3
+share/doc/randlib/Basegen.c.doc
+share/doc/randlib/README
+share/doc/randlib/randlib.c.chs
+share/doc/randlib/randlib.c.fdoc
+share/examples/randlib/randlib.h
+share/examples/randlib/tstbot.c
+share/examples/randlib/tstgmn.c
+share/examples/randlib/tstmid.c
+@dirrm share/examples/randlib
+@dirrm share/doc/randlib
