@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7795 2004/11/09 16:39:02 adam Exp $
+$NetBSD: CHANGES,v 1.7796 2004/11/09 17:16:38 seb Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5192,3 +5192,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated delegate to 8.9.6 [adam 2004-11-09]
 	Updated horde to 2.2.7 [adam 2004-11-09]
 	Updated imp to 3.2.6 [adam 2004-11-09]
+	Updated pkglint to 3.97 [seb 2004-11-09]
