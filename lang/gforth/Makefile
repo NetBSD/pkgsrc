@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2003/03/24 23:36:33 jtb Exp $
+# $NetBSD: Makefile,v 1.12 2003/07/05 10:29:16 seb Exp $
 
 DISTNAME=		gforth-0.5.0
 CATEGORIES=		lang
@@ -13,6 +13,7 @@ ONLY_FOR_PLATFORM=	*-*-alpha *-*-i386 *-*-m68k *-*-powerpc *-*-sparc
 GNU_CONFIGURE=		YES
 # Make sure elisp will be installed even if no emacs installed.
 CONFIGURE_ENV+=		EMACS=${PREFIX}/bin/emacs
+USE_NEW_TEXINFO=	YES
 INFO_FILES=		gforth.info
 
 PLIST_SRC=	${WRKDIR}/PLIST
@@ -28,5 +29,4 @@ post-build:
 pre-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/emacs/site-lisp
 
-.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
