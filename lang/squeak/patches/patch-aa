@@ -1,0 +1,45 @@
+$NetBSD: patch-aa,v 1.1 2000/02/16 22:02:33 dmcmahill Exp $
+
+-Get the right flag for exporting symbols from program
+-Use the CFLAGS set by the package system
+-Don't override everything on alpha
+
+--- ./conf/configure.in.orig	Mon Oct 18 12:25:06 1999
++++ ./conf/configure.in	Wed Feb 16 11:08:18 2000
+@@ -104,8 +104,8 @@
+       ac_cv_prog_egcs="yes", ac_cv_prog_egcs="no"))
+ 
+-  CFLAGS="-g -O2"
+-  WFLAGS="-Wall"
++  #CFLAGS="-g -O2"
++  #WFLAGS="-Wall"
+   LD="$CC"
+-  LDFLAGS="-rdynamic"
++  LDFLAGS="-Wl,--export-dynamic"
+ 
+   SHCC="$CC"
+@@ -120,10 +120,11 @@
+   case "$host" in
+     i?86*)		CFLAGS="$CFLAGS -fomit-frame-pointer" ;;
+-    alpha*)		CC="$srcdir/../util/decgcc"
+-			LD="cc"
+-			LDFLAGS="-taso -call_shared"
+-			SHCC="../$CC"
+-			SHLD="cc"
+-			SHLDFLAGS="-taso -shared -expect_unresolved \"*\"" ;;
++    alpha*)		#CC="$srcdir/../util/decgcc"
++			#LD="cc"
++			#LDFLAGS="-taso -call_shared"
++			#SHCC="../$CC"
++			#SHLD="cc"
++			#SHLDFLAGS="-taso -shared -expect_unresolved \"*\"" 
++			;;
+   esac
+ 
+@@ -188,5 +189,5 @@
+   test ! -f /usr/include/X11/Intrinsic.h -a "$x_includes" != NONE && \
+     INCS="-I${x_includes}"
+-  test "$x_libraries" != NONE -a ! -z "$x_libraries" && LIBS="$LIBS -L${x_libraries}"
++  test "$x_libraries" != NONE -a ! -z "$x_libraries" && LIBS="$LIBS -L${x_libraries} -Wl,-R${x_libraries}"
+   AC_CHECK_LIB(Xext, XShmAttach)
+   if test -z "ac_cv_lib_Xext_XShmAttach"; then
