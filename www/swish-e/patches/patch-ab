@@ -1,3 +1,5 @@
+$NetBSD: patch-ab,v 1.2 1999/12/14 16:30:02 bouyer Exp $
+
 *** Makefile.orig	Mon May  3 12:23:45 1999
 --- Makefile	Mon May  3 12:24:04 1999
 ***************
