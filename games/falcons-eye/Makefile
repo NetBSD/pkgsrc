@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/02/16 17:43:58 ben Exp $
+# $NetBSD: Makefile,v 1.19 2005/02/16 18:56:22 ben Exp $
 #
 
 DISTNAME=		nethack_source_331_jtp_193
@@ -15,7 +15,7 @@ COMMENT=		Falcon's Eye NetHack
 EXTRACT_CMD=		unzip -aq ${DOWNLOADED_DISTFILE}
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	./sys/unix/setup.sh
-DIST_SUBDIR=		${PKGNAME}-20050216
+DIST_SUBDIR=		${PKGNAME}-20050216-2
 
 WRKSRC=			${WRKDIR}
 USE_BUILDLINK3=		yes
