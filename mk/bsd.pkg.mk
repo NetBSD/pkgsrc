@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.950 2002/03/17 16:44:28 fredb Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.951 2002/03/20 11:31:33 tron Exp $
 #
 # This file is in the public domain.
 #
@@ -743,7 +743,6 @@ MASTER_SITE_XCONTRIB+=	\
 
 MASTER_SITE_GNU+=	\
 	ftp://ftp.gnu.org/pub/gnu/ \
-	ftp://ftp.cs.columbia.edu/archives/gnu/prep/ \
 	ftp://ftp.gwdg.de/pub/gnu/ \
 	ftp://ftp.progsoc.uts.edu.au/pub/gnu/
 
