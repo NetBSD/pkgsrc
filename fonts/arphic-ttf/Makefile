@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2002/05/25 19:21:20 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2002/06/28 20:50:14 agc Exp $
 #
 
 DISTNAME=	arphic-ttf-2.11
 CATEGORIES=	fonts
-MASTER_SITES=	ftp://linux.cis.nctu.edu.tw/chinese/fonts/arphic/font/ \
-		ftp://linux.cis.nctu.edu.tw/chinese/fonts/arphic/license/ENGLISH/ \
-		ftp://linux.cis.nctu.edu.tw/chinese/fonts/arphic/
+MASTER_SITES=	ftp://ftp.netbsd.org/pub/NetBSD/packages/distfiles/${DIST_SUBDIR}/
 DISTFILES=	${FONT_FILES} ${MISC_FILES}
 
 MAINTAINER=	rxg@ms25.url.com.tw
