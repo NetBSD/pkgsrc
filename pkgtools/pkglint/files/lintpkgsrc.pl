@@ -1,6 +1,6 @@
 #!@PERL@
 
-# $NetBSD: lintpkgsrc.pl,v 1.93 2004/09/05 23:12:37 seb Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.94 2004/11/04 12:37:02 wiz Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -744,7 +744,7 @@ sub parse_makefile_pkgsrc
     if (defined $vars->{DISTNAME})
 	{ debug("$file: DISTNAME=$vars->{DISTNAME}\n"); }
 
-    if ($pkgname !~ /(.*)-(\d.*)/)
+    if (! defined $pkgname || $pkgname !~ /(.*)-(\d.*)/)
 	{
 	# invoke make here as a last resort
 	my($pkgsrcdir) = ($file =~ m:(/.*)/:);
