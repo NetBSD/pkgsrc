@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 1998/05/03 20:49:44 frueauf Exp $
+# $NetBSD: Makefile,v 1.2 1998/05/06 08:49:12 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.3 1998/04/30 02:38:03 obrien Exp
 #
 
@@ -8,7 +8,7 @@ MASTER_SITES=	ftp://ftp.mostang.com/pub/sane/
 
 MAINTAINER=	packages@netbsd.org
 
-LIB_DEPENDS=	gtk.1.:../../x11/gtk
+DEPENDS+=	gtk+-1.0.0:../../x11/gtk
 
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
