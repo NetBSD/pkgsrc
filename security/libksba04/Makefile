@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/01/25 00:46:34 kleink Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/25 00:49:39 kleink Exp $
 #
 
 DISTNAME=	libksba-0.4.7
@@ -7,7 +7,7 @@ MASTER_SITES=	ftp://ftp.gnupg.org/gcrypt/alpha/aegypten/
 
 MAINTAINER=	kleink@NetBSD.org
 HOMEPAGE=	http://www.g10code.com/p-libksba.html
-COMMENT=	X.509 library
+COMMENT=	X.509 library (0.4 branch)
 
 USE_BUILDLINK2=	YES
 USE_LIBTOOL=	YES
