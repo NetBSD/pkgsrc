@@ -1,10 +1,15 @@
 Tomcat can be started and stopped with the following commands:
 
-	cd ${JAVAHOME}/jakarta/tomcat && ./startup.sh
-	cd ${JAVAHOME}/jakarta/tomcat && ./shutdown.sh
+	cd @TOMCAT_HOME@ && ./startup.sh
+	cd @TOMCAT_HOME@ && ./shutdown.sh
 
 By default, this will start the Tomcat webserver on port 8080
 
-To get Tomcat working with Apache Server, see
+To get Tomcat working with Apache Server quickly, install the
+ap-jserv package and add the following line to your httpd.conf:
 
-	${JAVAHOME}/jakarta/tomcat/Tomcat+Apache-HOWTO
+	Include @TOMCAT_HOME@/etc/tomcat.conf
+
+and make sure that apache and tomcat are not set to run on the
+same http port, and that jserv.conf from mod_jserv is not also
+included.
