@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.4 2002/09/30 23:41:31 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.5 2002/10/01 00:11:54 jlam Exp $
 
 .if !defined(STLPORT_BUILDLINK2_MK)
 STLPORT_BUILDLINK2_MK=	# defined
@@ -13,6 +13,8 @@ BUILDLINK_PREFIX.stlport_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.stlport=	include/stlport/*
 BUILDLINK_FILES.stlport+=	include/stlport/*/*
 BUILDLINK_FILES.stlport+=	lib/libstlport*
+
+BUILDLINK_CPPFLAGS.stlport=	-I${BUILDLINK_PREFIX.stlport}/include/stlport
 
 BUILDLINK_TARGETS+=	stlport-buildlink
 
