@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2004/12/02 17:51:19 reed Exp $
+# $NetBSD: Makefile,v 1.21 2004/12/05 20:19:50 minskim Exp $
 
 DISTNAME=	libmng-1.0.8
 PKGNAME=	${DISTNAME:S/lib//}
@@ -12,7 +12,8 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.libmng.com/
 COMMENT=	Multiple-image Network Graphics (MNG) reference library
 
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
+# Waiting for automake to be pkgviews-enabled
+#PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
