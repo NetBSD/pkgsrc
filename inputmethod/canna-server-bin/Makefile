@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/06/10 09:08:44 sakamoto Exp $
+# $NetBSD: Makefile,v 1.2 2002/10/25 17:04:09 wiz Exp $
 
 DISTNAME=	Canna35b2
 PKGNAME=	Canna-server-bin-3.5.2
@@ -20,6 +20,8 @@ DISTINFO_FILE=	${.CURDIR}/../canna-lib/distinfo
 PATCHDIR=	${.CURDIR}/../canna-lib/patches
 
 BUILD_DEFS+=	USE_INET6
+
+USE_BUILDLINK2=	YES
 
 .include "../../mk/bsd.prefs.mk"
 .if 0	# ${USE_INET6} == "YES"
@@ -61,6 +63,6 @@ post-install:
 	@${CHMOD} ${CANNA_MODE} ${CANNA_SPOOL}
 	@${CHOWN} ${CANNAOWNER}:${CANNAGROUP} ${CANNA_SPOOL}
 
-.include "../../devel/nbitools/nbitools.mk"
-.include "../canna-lib/buildlink.mk"
+.include "../../devel/nbitools/buildlink2.mk"
+.include "../../inputmethod/canna-lib/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
