@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.4 2000/05/02 18:48:41 danw Exp $
+$NetBSD: patch-aa,v 1.5 2000/08/28 16:00:19 rh Exp $
 
---- configure.orig	Wed Nov  3 19:39:12 1999
-+++ configure	Thu Nov 11 12:36:07 1999
+--- configure.orig	Thu Jul 27 14:59:24 2000
++++ configure
 @@ -9,7 +9,7 @@
  
  # Defaults:
@@ -11,7 +11,15 @@ $NetBSD: patch-aa,v 1.4 2000/05/02 18:48:41 danw Exp $
  # Any additions from configure.in:
  ac_help="$ac_help
    --enable-intl-patch     add -lintl to check for sane"
-@@ -4743,7 +4743,7 @@
+@@ -1364,7 +1364,6 @@
+ fi
+ 
+ 
+-INCLUDES="${INCLUDES} -I/usr/local/include"
+ CPPFLAGS="${CPPFLAGS} -D_GNU_SOURCE"
+ if test "${ac_cv_prog_gcc}" = "yes"; then
+   CFLAGS="${CFLAGS} -Wall"
+@@ -4739,7 +4738,7 @@
  #  so we have to use x_includes and x_libraries to test for png
  #  and all following checks (=sane)
  # saved_CPPFLAGS is still up to date
@@ -20,7 +28,7 @@ $NetBSD: patch-aa,v 1.4 2000/05/02 18:48:41 danw Exp $
  if test "${USE_PNG}" = "yes"; then
    for ac_hdr in png.h
  do
-@@ -4844,6 +4844,7 @@
+@@ -4840,6 +4839,7 @@
  # check must stand at end of list because of the missing libintl in libsane.so
  # check needs x_libraries and x_includes because they may be needed by png
  if test "${ADD_LIBINTL}" = "no"; then
