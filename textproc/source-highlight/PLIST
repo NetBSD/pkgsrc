@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/06/12 01:17:30 seb Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/10/03 14:42:38 seb Exp $
 bin/cpp2html
 bin/java2html
 bin/source-highlight
@@ -27,6 +27,7 @@ share/doc/html/source-highlight/mono-alt.css
 share/doc/html/source-highlight/mono.css
 share/doc/html/source-highlight/source-highlight.html
 share/doc/html/source-highlight/startapp.cc.html
+share/doc/html/source-highlight/test.js.html
 share/doc/html/source-highlight/test.php3.html
 share/doc/html/source-highlight/test.pl.html
 share/doc/html/source-highlight/test.pm.html
