@@ -1,0 +1,22 @@
+$NetBSD: patch-ae,v 1.1.1.1 2000/11/01 16:25:09 hubertf Exp $
+
+--- bin/Makefile.orig	Fri Sep  1 15:04:11 2000
++++ bin/Makefile	Fri Sep  1 15:22:18 2000
+@@ -58,12 +58,12 @@
+ ifdef SERVER_X11
+ 	$(INSTALL) -c -s ${PRIV_BIN} ${SERVER_X11} ${MGL_BIN_DIR}
+ endif
+-ifdef IM_DYNAMIC
+-	${INSTALL} -c -s ${PRIV_BIN} ${IM_PROG} ${MGLDIR}
+-endif
++#ifdef IM_DYNAMIC
++#	${INSTALL} -c -s ${PRIV_BIN} ${IM_PROG} ${MGLDIR}
++#endif
+ 	${INSTALL} -c -s ${PRIV_BIN} imsoft.so ${MGLDIR}
+-	${INSTALL} -c -s ${PRIV_BIN} mgl_fontinfo ${MGL_BIN_DIR}
+-	${INSTALL} -c -s ${PRIV_BIN} bdftomgl ${MGL_BIN_DIR}
++#	${INSTALL} -c -s ${PRIV_BIN} mgl_fontinfo ${MGL_BIN_DIR}
++#	${INSTALL} -c -s ${PRIV_BIN} bdftomgl ${MGL_BIN_DIR}
+ ifdef CALIB_PROGS
+ 	${INSTALL} -c -s ${PRIV_BIN} ${CALIB_PROGS} ${MGL_SBIN_DIR}
+ 	${INSTALL} -c  ${PRIV_BIN} calibdata-update ${MGL_SBIN_DIR}
