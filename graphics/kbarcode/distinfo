@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/09/27 23:24:23 seb Exp $
+$NetBSD: distinfo,v 1.2 2005/02/24 08:45:08 agc Exp $
 
 SHA1 (kbarcode-1.8.1.tar.gz) = 0164236b8af10c249cb5c4882f81c0ece4aebf45
+RMD160 (kbarcode-1.8.1.tar.gz) = 460b2374979def4f3365bcfeea9b151c93b8e5a5
 Size (kbarcode-1.8.1.tar.gz) = 969743 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.10 2004/10/27 19:30:23 drochner Exp $
+$NetBSD: distinfo,v 1.11 2005/02/24 08:45:09 agc Exp $
 
 SHA1 (libexif-0.6.11.tar.gz) = f522e097edfccac420c7779209aafeebbf09aa7c
+RMD160 (libexif-0.6.11.tar.gz) = 306637ba3ce8b8a0c095ef5da5792d178bda37fb
 Size (libexif-0.6.11.tar.gz) = 546277 bytes
 SHA1 (patch-aa) = bcbdc84fc26c64ecac62699ab11bf55afe6b65c7
