@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9603 2005/03/24 11:34:35 adam Exp $
+$NetBSD: CHANGES,v 1.9604 2005/03/24 13:58:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1708,3 +1708,6 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated bzflag to 1.10.6nb2 [wiz 2005-03-24]
 	Updated ocaml to 3.08.3 [adam 2005-03-24]
 	Updated ocaml-graphics to 3.08.3 [adam 2005-03-24]
+	Updated xscreensaver to 4.21 [wiz 2005-03-24]
+	Updated xscreensaver-demo to 4.21 [wiz 2005-03-24]
+	Removed xscreensaver-gnome [wiz 2005-03-24]
