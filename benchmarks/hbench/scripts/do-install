@@ -1,0 +1,34 @@
+#!/bin/sh
+
+cd $WRKSRC
+DIRS=`ls -d bin/*`
+SCRIPTS="argsort config.guess config.sub create-all-analyses create-all-latgraphs create-all-summaries depend gen-analysis gen-latgraph gen-summary getostype interactive-setup maindriver stats-full stats-single"
+DOCS="README benchmark-descriptions interpreting-results sigmetrics97-paper.ps.gz using-hbench"
+
+mkdir -p $PREFIX/bin/hbench
+mkdir -p $PREFIX/share/hbench
+
+for basedir in $DIRS; do
+	OSDIR=`basename $basedir`
+	mkdir -p $PREFIX/bin/hbench/$OSDIR
+	/usr/bin/install -c -s -o bin -g bin -m 0755 bin/$OSDIR/* $PREFIX/bin/hbench/$OSDIR
+done
+
+for files in $SCRIPTS; do
+	/usr/bin/install -c -o bin -g bin -m 0755 scripts/$files $PREFIX/bin/hbench
+done
+mkdir -p $PREFIX/share/doc/hbench
+for files in $DOCS; do
+	/usr/bin/install -c -o bin -g bin -m 0444 doc/$files $PREFIX/share/doc/hbench
+done
+cat <<EOF >$PREFIX/bin/run-hbench
+#!/bin/sh
+${PREFIX}/bin/hbench/interactive-setup
+${PREFIX}/bin/hbench/maindriver ${PREFIX}/share/hbench/conf/`hostname`.run
+EOF
+chown bin:bin ${PREFIX}/bin/run-hbench
+chmod 0755 ${PREFIX}/bin/run-hbench
+cp -R Results $PREFIX/share/hbench
+rm $PREFIX/share/hbench/Results/Makefile.orig
+cp -R conf $PREFIX/share/hbench
+
