@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2004/10/03 00:18:07 tv Exp $
+# $NetBSD: Makefile,v 1.16 2004/12/01 16:42:53 wiz Exp $
 #
 
-DISTNAME=       aide-0.9
-PKGREVISION=	1
+DISTNAME=       aide-0.10
 CATEGORIES=	security
-MASTER_SITES=   http://www.cs.tut.fi/~rammer/ \
-		ftp://ftp.cs.tut.fi/pub/src/gnu/
+MASTER_SITES=   ${MASTER_SITE_SOURCEFORGE:=aide/}
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.cs.tut.fi/~rammer/aide.html
@@ -16,7 +14,7 @@ BUILDLINK_DEPENDS.mhash?=	mhash>=0.8.17
 USE_BUILDLINK3= yes
 
 GNU_CONFIGURE=	yes
-USE_GNU_TOOLS+=	lex yacc
+USE_GNU_TOOLS+=	lex make yacc
 
 .include "../../security/mhash/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
