@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2004/11/22 20:25:26 jlam Exp $
+# $NetBSD: Makefile,v 1.55 2004/11/22 22:52:53 jlam Exp $
 
 PKGNAME=		apache-${APACHE_VERSION}
 PKGREVISION=		2
@@ -13,16 +13,13 @@ BUILD_DEFS+=		USE_INET6
 
 USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
-
-#USE_LIBTOOL=		YES
-#LIBTOOL_OVERRIDE=	libtool
+USE_LIBTOOL=		YES
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--enable-layout=NetBSD
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-port=80
-CONFIGURE_ARGS+=	--with-mpm=prefork
 CONFIGURE_ARGS+=	--enable-so
 
 # Apache Portable Runtime library configure options
@@ -30,6 +27,15 @@ CONFIGURE_ARGS+=	--with-apr=${BUILDLINK_PREFIX.apr}
 CONFIGURE_ARGS+=	--with-apr-util=${BUILDLINK_PREFIX.apr}
 
 .include "../../mk/bsd.prefs.mk"
+
+# Set the "Multi-Processing Model" used by Apache to handle requests.
+# Valid values are:
+#	prefork		non-threaded, pre-forking web server
+#	worker		hybrid multi-threaded multi-process web server
+#
+APACHE_MPM?=		prefork
+CONFIGURE_ARGS+=	--with-mpm=${APACHE_MPM}
+BUILD_DEFS+=		APACHE_MPM
 
 DFLT_APACHE_MODULES=	all
 DFLT_APACHE_MODULES+=	proxy proxy_connect proxy_ftp proxy_http
@@ -80,6 +86,12 @@ SUBST_FILES.paths=	config.layout
 SUBST_SED.paths=	-e "s|@PREFIX@|${PREFIX}|g"
 SUBST_MESSAGE.paths=	"Fixing paths."
 
+SUBST_CLASSES=		apr-lt
+SUBST_STAGE.apr-lt=	post-configure
+SUBST_FILES.apr-lt=	build/config_vars.mk
+SUBST_SED.apr-lt=	-e "s|^\(LIBTOOL =\) [^ ]*|\1 \$$(SHELL) \$$(top_builddir)/libtool|g"
+SUBST_MESSAGE.apr-lt=	"Fixing libtool references."
+
 SUBST_CLASSES+=		confs
 SUBST_STAGE.confs=	post-install
 SUBST_FILES.confs=	${EGDIR}/highperformance-std.conf \
@@ -123,6 +135,9 @@ DEPENDS+=		${_ap_depend}
 CONFIGURE_ARGS+=	${_AP_CFG_ARGS.${_ap_mod}}
 .  endif
 .endfor
+
+post-extract:
+	${TOUCH} ${WRKSRC}/libtool
 
 pre-install:
 	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV}				\
