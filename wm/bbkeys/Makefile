@@ -1,5 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2001/06/26 20:48:20 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2001/06/26 20:55:37 jlam Exp $
 #
+
+.include "Makefile.common"
 
 PKGNAME=	bbkeys-0.3.5
 COMMENT=	General X Window keygrabber
@@ -7,4 +9,4 @@ COMMENT=	General X Window keygrabber
 GNU_CONFIGURE=		YES
 USE_BUILDLINK_ONLY=	YES
 
-.include "Makefile.common"
+.include "../../mk/bsd.pkg.mk"
