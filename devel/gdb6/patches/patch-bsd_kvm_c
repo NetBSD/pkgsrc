@@ -1,0 +1,16 @@
+$NetBSD: patch-bsd_kvm_c,v 1.1 2004/10/04 22:35:17 shannonjr Exp $
+
+--- ./gdb/bsd-kvm.c.orig	2004-07-03 07:17:33.000000000 -0600
++++ ./gdb/bsd-kvm.c
+@@ -228,7 +228,11 @@ bsd_kvm_proc_cmd (char *arg, int fromtty
+     error ("No kernel memory image.");
+ 
+   addr = parse_and_eval_address (arg);
++#ifdef HAVE_STRUCT_LWP
++  addr += offsetof (struct lwp, l_addr);
++#else
+   addr += offsetof (struct proc, p_addr);
++#endif
+ 
+   if (kvm_read (core_kd, addr, &bsd_kvm_paddr, sizeof bsd_kvm_paddr) == -1)
+     error ("%s", kvm_geterr (core_kd));
