@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2124 2004/09/16 12:49:05 cjep Exp $
+$NetBSD: TODO,v 1.2125 2004/09/16 16:01:14 snj Exp $
 
 Suggested new packages
 ======================
@@ -393,6 +393,7 @@ Suggested package updates
 	o plib-1.7.0
 	o ploticus-2.30
 	o poedit-1.3.1
+	o postfix-2.1.5
 	o povray-3.6.1
 	o pptp-1.5.0 [http://pptpclient.sourceforge.net/]
 	o prc-tools-2.3
