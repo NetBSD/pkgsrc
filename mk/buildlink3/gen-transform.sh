@@ -1,6 +1,6 @@
 #!@BUILDLINK_SHELL@
 #
-# $NetBSD: gen-transform.sh,v 1.6 2004/01/06 18:43:10 jlam Exp $
+# $NetBSD: gen-transform.sh,v 1.7 2004/01/06 19:08:59 jlam Exp $
 
 transform="@_BLNK_TRANSFORM_SEDFILE@"
 untransform="@_BLNK_UNTRANSFORM_SEDFILE@"
@@ -94,16 +94,22 @@ EOF
 		case "$action" in
 		transform|untransform)
 			shift
+			tolibs=
 			fromlib="-l$1"; shift
-			tolibs="-l$1"; shift
 			while [ $# -gt 0 ]; do
-				tolibs="$tolibs -l$1"
+				case $1 in
+				"")	;;
+				*)	case $tolibs in
+					"")	tolibs="-l$1" ;;
+					*)	tolibs="$tolibs -l$1"
+					esac
+					;;
+				esac
 				shift
 			done
 			@CAT@ >> $sedfile << EOF
 s|$fromlib\([ 	"':;]\)|$tolibs\1|g
 s|$fromlib$|$tolibs|g
-s|$fromlib/|$tolibs/|g
 EOF
 			;;
 		esac
