@@ -1,42 +1,16 @@
-$NetBSD: patch-ac,v 1.7 2002/11/19 20:58:04 reinoud Exp $
+$NetBSD: patch-ac,v 1.8 2003/03/22 06:46:21 wiz Exp $
 
---- ../amaya/Makefile.libwww.orig	Mon Jun 17 10:10:03 2002
-+++ ../amaya/Makefile.libwww
-@@ -20,7 +20,6 @@ AMAYA_LIBWWW_OPTION_LIBS=
+--- ../thotlib/include/ustring.h.orig	Mon Jun 17 04:10:14 2002
++++ ../thotlib/include/ustring.h
+@@ -6,6 +6,11 @@
+ #include <windows.h>
+ #endif /* _WINDOWS */
  
- #MKP: added -lwwwdav
- AMAYA_LIBWWW_LIBS= \
--		-L../$(LIBWWW)/Library/src/.libs \
- 			-lwwwapp \
- 			-lwwwhttp \
- 			-lwwwxml \
-@@ -36,23 +35,20 @@ AMAYA_LIBWWW_LIBS= \
- 			-lwwwzip \
- 			-lwwwftp \
- 			$(WWWDAV) \
--		-L../$(LIBWWW)/modules/md5/.libs \
- 			-lmd5 \
--		-L../$(LIBWWW)/modules/expat/xmlparse/.libs \
-+			-lwwwnews \
-+			-lwwwtelnet \
-+			-lwwwgopher \
- 			-lxmlparse \
--		-L../$(LIBWWW)/modules/expat/xmltok/.libs \
- 			-lxmltok
- 
- AMAYA_LIBWWW_EXTRA_LIBS=
- 
--AMAYA_LIBWWW_INCLUDES= -I../libwww \
--		-I$(THOTDIR)/../libwww/Library/src \
--		-I$(THOTDIR)../libwww/modules/md5 \
--		-I$(THOTDIR)../libwww/modules/expat/xmlparse \
--		-I$(THOTDIR)../libwww/modules/expat/xmltok
-+AMAYA_LIBWWW_INCLUDES= -I${BUILDLINK_DIR}/include/w3c-libwww
- 
- # this dependency calls the ../Makefile rule that compiles libwww
--AMAYA_LIBWWW_SRC= ../libz.a amaya_comp_libwww
-+# Use an installed libwww library
-+AMAYA_LIBWWW_SRC= # empty
- 
- amaya_comp_libwww : force
- 		@(cd .. ; $(MAKE) libwww)
++#include "config.h"
++#ifdef HAVE_WCHAR_H
++#include <wchar.h>
++#endif
++
+ #ifdef _WINDOWS
+ #define strncasecmp _strnicmp
+ #endif /* _WINDOWS */

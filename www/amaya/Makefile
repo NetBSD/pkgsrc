@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2002/11/19 20:58:03 reinoud Exp $
+# $NetBSD: Makefile,v 1.20 2003/03/22 06:46:19 wiz Exp $
+#
 
-DISTNAME=	amaya-src-6.4
-PKGNAME=	amaya-6.4
-#PKGREVISION=	1
+DISTNAME=	amaya-src-7.2
+PKGNAME=	amaya-7.2
 WRKSRC=		${WRKDIR}/Amaya/work
 CATEGORIES=	www
 MASTER_SITES=	http://www.w3.org/Amaya/Distribution/ \
@@ -10,28 +10,20 @@ MASTER_SITES=	http://www.w3.org/Amaya/Distribution/ \
 		ftp://mirror.aarnet.edu.au/pub/amaya/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	drochner@netbsd.org
+MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.w3.org/Amaya/
-COMMENT=	Web Browser/Editor from the World Wide Web Consortium
+COMMENT=	Web browser/editor from the World Wide Web Consortium (W3C)
 
-EXTRACT_ELEMENTS=	Amaya
-USE_BUILDLINK2=		yes
+EXTRACT_ELEMENTS=	Amaya libwww
+USE_BUILDLINK2=	YES
+
 USE_X11BASE=		yes
 USE_GMAKE=		yes
 
 GNU_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	../configure
-CONFIGURE_ARGS+=	--without-graphic-libs	# use pkgsrc libraries
-CONFIGURE_ARGS+=	--with-motif
-CONFIGURE_ENV+=		ac_cv_path_motif="${ac_cv_path_motif}"
+CONFIGURE_ARGS+=	--without-graphic-libs	# Use pkgsrc libraries
 CFLAGS+=		-Dunix
-
-# Craft the ac_cv_path_motif variable so that configure "finds" the Motif
-# files in the right place.
-#
-ac_cv_path_motif=	no_motif=
-ac_cv_path_motif+=	ac_motif_includes=${MOTIFBASE}/include
-ac_cv_path_motif+=	ac_motif_libraries=${MOTIFBASE}/lib
 
 post-extract:
 	${MKDIR} ${WRKSRC}
@@ -49,9 +41,9 @@ post-patch:
 pre-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/Amaya
 
+.include "../../graphics/imlib/buildlink2.mk"
 .include "../../graphics/jpeg/buildlink2.mk"
 .include "../../graphics/png/buildlink2.mk"
-.include "../../www/libwww/buildlink2.mk"
-.include "../../mk/motif.buildlink2.mk"
+.include "../../x11/gtk/buildlink2.mk"
 
 .include "../../mk/bsd.pkg.mk"
