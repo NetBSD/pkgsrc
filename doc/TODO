@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3182 2005/03/02 22:31:03 wiz Exp $
+$NetBSD: TODO,v 1.3183 2005/03/02 22:45:45 wiz Exp $
 
 Suggested new packages
 ======================
@@ -783,7 +783,6 @@ Suggested package updates
 	o p5-IO-Zlib-1.04
 	o p5-Lchown-1.00
 	o p5-Locale-Codes-2.07
-	o p5-Locale-Maketext-Lexicon-0.45
 	o p5-Log-Agent-0.306
 	o p5-MARC-1.38
 	o p5-MIME-tools-5.417
