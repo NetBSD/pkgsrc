@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2003/09/18 01:42:33 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/01/12 09:46:04 cjep Exp $
 share/doc/kde/HTML/it/amor/common
 share/doc/kde/HTML/it/amor/index.cache.bz2
 share/doc/kde/HTML/it/amor/index.docbook
@@ -1244,4 +1244,3 @@ share/kde/locale/it/flag.png
 @dirrm share/doc/kde/HTML/it/artsbuilder
 @dirrm share/doc/kde/HTML/it/amor
 @comment @dirrm share/doc/kde/HTML/it
-

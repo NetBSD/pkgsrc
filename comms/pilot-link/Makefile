@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2003/07/13 13:50:52 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2004/01/12 09:46:04 cjep Exp $
 #
 
 .include "../../comms/pilot-link/Makefile.common"
@@ -31,7 +31,6 @@ post-patch:
 		${SED} -e 's|..top_builddir./lib[^/]*/\(lib[^\.]*\.la\)|${PREFIX}/lib/\1|g'	\
 			< $$mf.old > $$mf ;				\
 	done
-
 
 .include "../../comms/pilot-link-libs/buildlink2.mk"
 .include "../../devel/readline/buildlink2.mk"
