@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.59 1999/08/21 02:15:23 hubertf Exp $
+# $NetBSD: Packages.txt,v 1.60 1999/08/22 01:31:16 hubertf Exp $
 ###########################################################################
 
 			==========================
@@ -1030,6 +1030,13 @@ perform the equivalent of:
    directory /usr/packages, set FTP_PKG_URL_HOST=file://localhost and
    FTP_PKG_URL_DIR=/usr/packages. The ${PACKAGES} directory and its
    subdirectories will be searched for all the binary packages.)
+
+ * readme-all: 
+   Use this target to create a file README-all.html which contains a
+   list of all packages currently available in the NetBSD Packages
+   Collection, together with the category they belong to and a short
+   description. This file is compiled from the pkgsrc/*/README.html
+   files, so be sure to run this _after_ a "make readme".
 
  * cdrom-readme:
    This is very much the same as the readme: target (see above), but is
