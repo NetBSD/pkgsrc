@@ -1,5 +1,7 @@
-# $NetBSD: pre-cache,v 1.1.2.3 2002/06/30 08:55:40 jlam Exp $
+# $NetBSD: pre-cache,v 1.1.2.4 2002/06/30 09:30:28 jlam Exp $
 
 case $arg in
 -[IL]@WRKDIR@*|-[IL]@BUILDLINK_DIR@*|-[IL]@BUILDLINK_X11_DIR@*|-[IL]@_BLNK_X11PKG_DIR@*)
+	;;
+-[IL].|-[IL]./..*|-[IL]..*)
 	;;
