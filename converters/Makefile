@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2001/05/26 13:05:44 fredb Exp $
+# $NetBSD: Makefile,v 1.32 2001/06/13 15:12:32 zuntum Exp $
 #
 
 COMMENT=	Character code converters
@@ -20,6 +20,7 @@ SUBDIR+=	recode
 SUBDIR+=	rpm2cpio
 SUBDIR+=	rtf2html
 SUBDIR+=	txt2html
+SUBDIR+=	txt2man
 SUBDIR+=	unix2dos
 SUBDIR+=	uudeview
 SUBDIR+=	uulib
