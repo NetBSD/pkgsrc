@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 1998/12/30 20:51:19 tv Exp $
+
+--- src/projdesc.cc.orig	Wed Dec 30 15:52:28 1998
++++ src/projdesc.cc	Wed Dec 30 15:52:37 1998
+@@ -1600,7 +1600,7 @@
+     return true;
+ }
+ 
+-extern int hash(const char*& s, int M);
++extern int hash(const char*const& s, int M);
+ 
+ int attrs_hash(const PrcsAttrs*const & s, int M)
+ {
