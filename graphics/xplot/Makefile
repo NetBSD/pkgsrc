@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 1998/06/19 23:01:28 tron Exp $
+# $NetBSD: Makefile,v 1.8 1999/01/29 20:18:28 tron Exp $
 #
 
 DISTNAME=	xplot-0.90
-CATEGORIES=	x11
+CATEGORIES=	graphics x11
 MASTER_SITES=	ftp://mercury.lcs.mit.edu/pub/shep/
 
 MAINTAINER=	thorpej@netbsd.org
