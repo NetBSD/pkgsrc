@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2003/03/06 22:30:57 salo Exp $
+
+--- doc/juke.1.orig	2003-02-26 17:37:02.000000000 +0100
++++ doc/juke.1	2003-02-26 17:37:20.000000000 +0100
+@@ -34,7 +34,7 @@
+ give the user the possibily of choosing audio files and queue them
+ for playback. Juke will play mp3, mod, wav and other formats.
+ .SH FILES
+-/etc/juke.conf, ~/.juke.conf
++@PKG_SYSCONFDIR@/juke.conf, ~/.juke.conf
+ .SH SEE ALSO
+ .BR mpg123 (1),
+ .BR play (1),
