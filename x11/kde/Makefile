@@ -3,7 +3,7 @@
 # Date created:        4 November 1997
 # Whom:                Satoshi Asami <asami@freebsd.org>
 #
-# $NetBSD: Makefile,v 1.2 1997/12/29 04:17:13 hubertf Exp $
+# $NetBSD: Makefile,v 1.3 1998/01/30 13:57:49 agc Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/11/27 00:47:46 se Exp
 #
 
@@ -14,7 +14,7 @@ DISTFILES=	# empty
 
 MAINTAINER=	se@freebsd.org
 
-LIB_DEPENDS=	kdecore\\.0\\.11:${PORTSDIR}/x11/kdelibs
+LIB_DEPENDS=	kdecore.0.11:${PORTSDIR}/x11/kdelibs
 RUN_DEPENDS=	kwm:${PORTSDIR}/x11/kdebase \
 		kcalc:${PORTSDIR}/misc/kdeutils \
 		kmahjongg:${PORTSDIR}/games/kdegames \

@@ -3,7 +3,7 @@
 # Date created:         1997/11/11
 # Whom:                 Hubert Feyrer <hubert.feyrer@rz.uni-regensburg.de>
 #
-# $NetBSD: Makefile,v 1.3 1998/01/24 23:59:08 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 1998/01/30 13:57:40 agc Exp $
 #
 
 DISTNAME=		asclock
@@ -15,7 +15,7 @@ EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		hubertf@netbsd.org
 
-LIB_DEPENDS=		Xpm\\.4:${PORTSDIR}/graphics/xpm
+LIB_DEPENDS=		Xpm.4:${PORTSDIR}/graphics/xpm
 
 # Choose language from:
 # 1) english [DEFAULT]

@@ -4,7 +4,7 @@
 # Whom:			handy@physics.montana.edu (FreeBSD)
 # 			explorer@netbsd.org (NetBSD)
 #
-# $NetBSD: Makefile,v 1.3 1998/01/25 00:27:34 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 1998/01/30 13:57:47 agc Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1997/11/04 10:33:43 tg Exp
 #
 
@@ -16,9 +16,9 @@ MASTER_SITES=	http://isolation.ml.org/oxygen/wm/bin/ \
 
 MAINTAINER=	handy@physics.montana.edu
 
-LIB_DEPENDS=	Xpm\\.4\\.:${PORTSDIR}/graphics/xpm \
-		png\\.0\\.:${PORTSDIR}/graphics/png \
-		jpeg\\.7\\.:${PORTSDIR}/graphics/jpeg
+LIB_DEPENDS=	Xpm.4.:${PORTSDIR}/graphics/xpm \
+		png.0.:${PORTSDIR}/graphics/png \
+		jpeg.7.:${PORTSDIR}/graphics/jpeg
 
 USE_X11=	yes
 GNU_CONFIGURE=	yes

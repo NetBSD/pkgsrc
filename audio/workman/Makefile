@@ -3,7 +3,7 @@
 # Date created:         25 Now 1995
 # Whom:                 Donald Burr <d_burr@ix.netcom.com>
 #
-# $NetBSD: Makefile,v 1.2 1998/01/19 01:17:30 hubertf Exp $
+# $NetBSD: Makefile,v 1.3 1998/01/30 13:57:01 agc Exp $
 # FreeBSD Id: Makefile,v 1.4 1997/11/28 19:55:18 jseger Exp
 #
 
@@ -15,7 +15,7 @@ MASTER_SITE_SUBDIR=	applications/WorkMan
 
 MAINTAINER=	d_burr@ix.netcom.com
 
-LIB_DEPENDS=	xview\\.3\\.:${PORTSDIR}/x11/xview-lib
+LIB_DEPENDS=	xview.3.:${PORTSDIR}/x11/xview-lib
 
 WRKSRC=		${WRKDIR}/workman
 USE_IMAKE=	yes
