@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.524 2000/07/30 08:52:41 tron Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.525 2000/07/30 14:26:11 tron Exp $
 #
 # This file is in the public domain.
 #
@@ -731,7 +731,7 @@ FETCH_BEFORE_ARGS += -p
 # Check if we got a real Motif, LessTif or no Motif at all.
 .if defined(USE_MOTIF)
 .if defined(USE_MOTIF12)
-LESSTIF_DEPENDS=	lesstif12-*:../../x11/lesstif
+LESSTIF_DEPENDS=	lesstif12-*:../../x11/lesstif12
 .else
 LESSTIF_DEPENDS=	lesstif-*:../../x11/lesstif
 .endif
