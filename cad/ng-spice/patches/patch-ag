@@ -1,14 +1,0 @@
-$NetBSD: patch-ag,v 1.1 2004/12/02 00:06:40 dmcmahill Exp $
-
---- src/spicelib/analysis/cktncdump.c.orig	Sun Jan 11 18:38:20 2004
-+++ src/spicelib/analysis/cktncdump.c
-@@ -4,7 +4,8 @@ Author: 1999 Alan Gillespie
- **********/
- 
- #include "ngspice.h"
--#include "cktdefs.h"#include "suffix.h"
-+#include "cktdefs.h"
-+#include "suffix.h"
- 
- void
- CKTncDump(ckt) 
