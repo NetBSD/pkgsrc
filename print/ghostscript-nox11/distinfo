@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2001/05/03 04:50:05 jlam Exp $
+$NetBSD: distinfo,v 1.4 2001/05/03 05:11:43 jlam Exp $
 
 SHA1 (ghostscript/ghostscript-6.01.tar.bz2) = 405a8ab16453a8c3f846eae2aa4abbea6a093300
 Size (ghostscript/ghostscript-6.01.tar.bz2) = 2974476 bytes
@@ -26,6 +26,7 @@ SHA1 (ghostscript/gdevprsc-0.2.1.tar.gz) = 2f20889b06b2fee27a47e0aa0ef2de65a63be
 Size (ghostscript/gdevprsc-0.2.1.tar.gz) = 12206 bytes
 SHA1 (ghostscript/gs6.01-jpdf-exp.patch.gz) = 21f427a4c80871edab8c4d748b1fe1b7796cd876
 Size (ghostscript/gs6.01-jpdf-exp.patch.gz) = 59034 bytes
+SHA1 (patch-bug-workaround) = 99f4e197b35a8f33b8a1219a38f6d9fc2c307eb6
 SHA1 (patch-aa) = 0d3591e0b50530c2b2dc517979757c9b6304bf3d
 SHA1 (patch-ab) = 26cea522dbe2e2cc57a5fdc60130f309c76c6991
 SHA1 (patch-ac) = 576e0bc659d771f9d634921a0cc6752ab9739a92
@@ -45,7 +46,7 @@ SHA1 (patch-ap) = f742c454b1a058786be0239d84e5fc0b09dc538f
 SHA1 (patch-aq) = 5ff3c415eaae3398a2f39037e439955b95161942
 SHA1 (patch-ar) = 71d21692dfcbd95798743169d73f6b0611f4c007
 SHA1 (patch-as) = 9c1581562be288aba109a2c42db50e1923d60f02
-SHA1 (patch-at) = 47fa47098098ca3db32543a94b21c63a19bac0ba
+SHA1 (patch-at) = f92ad91b5a8278f019a2b4f496447a58e5abf299
 SHA1 (patch-au) = 07c99b2988c34396901594ab635a209e08766303
 SHA1 (patch-av) = 87f3c9e01a4e2fa63c75c348b1a5ec2be07948a5
 SHA1 (patch-aw) = 9855cacc48db068f87aa37568b198e22e6c391a0

@@ -1,4 +1,4 @@
-$NetBSD: patch-at,v 1.1.1.1 2000/05/07 02:04:35 jlam Exp $
+$NetBSD: patch-at,v 1.2 2001/05/03 05:11:43 jlam Exp $
 
 --- src/unix-gcc.mak.orig	Mon May  1 22:07:38 2000
 +++ src/unix-gcc.mak	Mon May  1 22:08:39 2000
@@ -17,7 +17,7 @@ $NetBSD: patch-at,v 1.1.1.1 2000/05/07 02:04:35 jlam Exp $
  
 -docdir=$(gsdatadir)/doc
 -exdir=$(gsdatadir)/examples
-+docdir=$(datadir)/doc/ghostscript
++docdir=$(datadir)/doc/html/ghostscript
 +exdir=$(datadir)/examples/ghostscript
  vfdir=$(gsdatadir)/vflib
  GS_DOCDIR=$(docdir)
