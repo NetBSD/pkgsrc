@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST-mi,v 1.1 1997/11/22 05:25:01 hubertf Exp $
+@comment $NetBSD: PLIST-mi,v 1.2 1998/01/28 15:34:09 hubertf Exp $
 bin/pgs
 bin/tkpod
 bin/tkweb
@@ -529,82 +529,82 @@ lib/perl5/site_perl/auto/Tk/lsearch.al
 lib/perl5/site_perl/auto/Tk/tkinit.al
 lib/perl5/site_perl/auto/Tk/updateWidgets.al
 lib/perl5/site_perl/blib.pm
-lib/perl5/site_perl/<$ARCH>-netbsd/Tk/Config.pm
-lib/perl5/site_perl/<$ARCH>-netbsd/Tk/TkXSUB.def
-lib/perl5/site_perl/<$ARCH>-netbsd/Tk/leak_util.h
-lib/perl5/site_perl/<$ARCH>-netbsd/Tk/pTk/Lang.h
-lib/perl5/site_perl/<$ARCH>-netbsd/Tk/pTk/Lang.m
-lib/perl5/site_perl/<$ARCH>-netbsd/Tk/pTk/Lang.t
-lib/perl5/site_perl/<$ARCH>-netbsd/Tk/pTk/LangIO.h
-lib/perl5/site_perl/<$ARCH>-netbsd/Tk/pTk/Lang_f.h
-lib/perl5/site_perl/<$ARCH>-netbsd/Tk/pTk/Xlib.h
-lib/perl5/site_perl/<$ARCH>-netbsd/Tk/pTk/Xlib.m
-lib/perl5/site_perl/<$ARCH>-netbsd/Tk/pTk/Xlib.t
-lib/perl5/site_perl/<$ARCH>-netbsd/Tk/pTk/Xlib_f.h
-lib/perl5/site_perl/<$ARCH>-netbsd/Tk/pTk/compat/limits.h
-lib/perl5/site_perl/<$ARCH>-netbsd/Tk/pTk/compat/stdlib.h
-lib/perl5/site_perl/<$ARCH>-netbsd/Tk/pTk/compat/unistd.h
-lib/perl5/site_perl/<$ARCH>-netbsd/Tk/pTk/default.h
-lib/perl5/site_perl/<$ARCH>-netbsd/Tk/pTk/ks_names.h
-lib/perl5/site_perl/<$ARCH>-netbsd/Tk/pTk/patchlevel.h
-lib/perl5/site_perl/<$ARCH>-netbsd/Tk/pTk/tix.h
-lib/perl5/site_perl/<$ARCH>-netbsd/Tk/pTk/tix.m
-lib/perl5/site_perl/<$ARCH>-netbsd/Tk/pTk/tix.t
-lib/perl5/site_perl/<$ARCH>-netbsd/Tk/pTk/tixBitmaps.h
-lib/perl5/site_perl/<$ARCH>-netbsd/Tk/pTk/tixDef.h
-lib/perl5/site_perl/<$ARCH>-netbsd/Tk/pTk/tixForm.h
-lib/perl5/site_perl/<$ARCH>-netbsd/Tk/pTk/tixGrData.h
-lib/perl5/site_perl/<$ARCH>-netbsd/Tk/pTk/tixGrid.h
-lib/perl5/site_perl/<$ARCH>-netbsd/Tk/pTk/tixHList.h
-lib/perl5/site_perl/<$ARCH>-netbsd/Tk/pTk/tixImgXpm.h
-lib/perl5/site_perl/<$ARCH>-netbsd/Tk/pTk/tixImgXpm.m
-lib/perl5/site_perl/<$ARCH>-netbsd/Tk/pTk/tixImgXpm.t
-lib/perl5/site_perl/<$ARCH>-netbsd/Tk/pTk/tixImgXpm_f.h
-lib/perl5/site_perl/<$ARCH>-netbsd/Tk/pTk/tixInt.h
-lib/perl5/site_perl/<$ARCH>-netbsd/Tk/pTk/tixInt.m
-lib/perl5/site_perl/<$ARCH>-netbsd/Tk/pTk/tixInt.t
-lib/perl5/site_perl/<$ARCH>-netbsd/Tk/pTk/tixInt_f.h
-lib/perl5/site_perl/<$ARCH>-netbsd/Tk/pTk/tixItcl.h
-lib/perl5/site_perl/<$ARCH>-netbsd/Tk/pTk/tixPort.h
-lib/perl5/site_perl/<$ARCH>-netbsd/Tk/pTk/tixTList.h
-lib/perl5/site_perl/<$ARCH>-netbsd/Tk/pTk/tixUnixInt.h
-lib/perl5/site_perl/<$ARCH>-netbsd/Tk/pTk/tixUnixPort.h
-lib/perl5/site_perl/<$ARCH>-netbsd/Tk/pTk/tix_f.h
-lib/perl5/site_perl/<$ARCH>-netbsd/Tk/pTk/tk.h
-lib/perl5/site_perl/<$ARCH>-netbsd/Tk/pTk/tk.m
-lib/perl5/site_perl/<$ARCH>-netbsd/Tk/pTk/tk.t
-lib/perl5/site_perl/<$ARCH>-netbsd/Tk/pTk/tkCanvas.h
-lib/perl5/site_perl/<$ARCH>-netbsd/Tk/pTk/tkCanvases.h
-lib/perl5/site_perl/<$ARCH>-netbsd/Tk/pTk/tkConfig.h
-lib/perl5/site_perl/<$ARCH>-netbsd/Tk/pTk/tkFileFilter.h
-lib/perl5/site_perl/<$ARCH>-netbsd/Tk/pTk/tkImgPhoto.h
-lib/perl5/site_perl/<$ARCH>-netbsd/Tk/pTk/tkImgPhoto.m
-lib/perl5/site_perl/<$ARCH>-netbsd/Tk/pTk/tkImgPhoto.t
-lib/perl5/site_perl/<$ARCH>-netbsd/Tk/pTk/tkImgPhoto_f.h
-lib/perl5/site_perl/<$ARCH>-netbsd/Tk/pTk/tkInt.h
-lib/perl5/site_perl/<$ARCH>-netbsd/Tk/pTk/tkInt.m
-lib/perl5/site_perl/<$ARCH>-netbsd/Tk/pTk/tkInt.t
-lib/perl5/site_perl/<$ARCH>-netbsd/Tk/pTk/tkInt_f.h
-lib/perl5/site_perl/<$ARCH>-netbsd/Tk/pTk/tkOption.h
-lib/perl5/site_perl/<$ARCH>-netbsd/Tk/pTk/tkOption.m
-lib/perl5/site_perl/<$ARCH>-netbsd/Tk/pTk/tkOption.t
-lib/perl5/site_perl/<$ARCH>-netbsd/Tk/pTk/tkOption_f.h
-lib/perl5/site_perl/<$ARCH>-netbsd/Tk/pTk/tkPatch.h
-lib/perl5/site_perl/<$ARCH>-netbsd/Tk/pTk/tkPort.h
-lib/perl5/site_perl/<$ARCH>-netbsd/Tk/pTk/tkSelect.h
-lib/perl5/site_perl/<$ARCH>-netbsd/Tk/pTk/tkText.h
-lib/perl5/site_perl/<$ARCH>-netbsd/Tk/pTk/tkUnixDefault.h
-lib/perl5/site_perl/<$ARCH>-netbsd/Tk/pTk/tkUnixInt.h
-lib/perl5/site_perl/<$ARCH>-netbsd/Tk/pTk/tkUnixPort.h
-lib/perl5/site_perl/<$ARCH>-netbsd/Tk/pTk/tkVMacro.h
-lib/perl5/site_perl/<$ARCH>-netbsd/Tk/pTk/tkXrm.h
-lib/perl5/site_perl/<$ARCH>-netbsd/Tk/pTk/tk_f.h
-lib/perl5/site_perl/<$ARCH>-netbsd/Tk/tkGlue.def
-lib/perl5/site_perl/<$ARCH>-netbsd/Tk/tkGlue.h
-lib/perl5/site_perl/<$ARCH>-netbsd/Tk/tkGlue.m
-lib/perl5/site_perl/<$ARCH>-netbsd/Tk/tkGlue.t
-lib/perl5/site_perl/<$ARCH>-netbsd/Tk/tkGlue_f.h
-lib/perl5/site_perl/<$ARCH>-netbsd/auto/Tk/.packlist
+lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/Tk/Config.pm
+lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/Tk/TkXSUB.def
+lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/Tk/leak_util.h
+lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/Tk/pTk/Lang.h
+lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/Tk/pTk/Lang.m
+lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/Tk/pTk/Lang.t
+lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/Tk/pTk/LangIO.h
+lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/Tk/pTk/Lang_f.h
+lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/Tk/pTk/Xlib.h
+lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/Tk/pTk/Xlib.m
+lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/Tk/pTk/Xlib.t
+lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/Tk/pTk/Xlib_f.h
+lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/Tk/pTk/compat/limits.h
+lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/Tk/pTk/compat/stdlib.h
+lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/Tk/pTk/compat/unistd.h
+lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/Tk/pTk/default.h
+lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/Tk/pTk/ks_names.h
+lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/Tk/pTk/patchlevel.h
+lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/Tk/pTk/tix.h
+lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/Tk/pTk/tix.m
+lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/Tk/pTk/tix.t
+lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/Tk/pTk/tixBitmaps.h
+lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/Tk/pTk/tixDef.h
+lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/Tk/pTk/tixForm.h
+lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/Tk/pTk/tixGrData.h
+lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/Tk/pTk/tixGrid.h
+lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/Tk/pTk/tixHList.h
+lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/Tk/pTk/tixImgXpm.h
+lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/Tk/pTk/tixImgXpm.m
+lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/Tk/pTk/tixImgXpm.t
+lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/Tk/pTk/tixImgXpm_f.h
+lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/Tk/pTk/tixInt.h
+lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/Tk/pTk/tixInt.m
+lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/Tk/pTk/tixInt.t
+lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/Tk/pTk/tixInt_f.h
+lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/Tk/pTk/tixItcl.h
+lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/Tk/pTk/tixPort.h
+lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/Tk/pTk/tixTList.h
+lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/Tk/pTk/tixUnixInt.h
+lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/Tk/pTk/tixUnixPort.h
+lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/Tk/pTk/tix_f.h
+lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/Tk/pTk/tk.h
+lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/Tk/pTk/tk.m
+lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/Tk/pTk/tk.t
+lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/Tk/pTk/tkCanvas.h
+lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/Tk/pTk/tkCanvases.h
+lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/Tk/pTk/tkConfig.h
+lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/Tk/pTk/tkFileFilter.h
+lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/Tk/pTk/tkImgPhoto.h
+lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/Tk/pTk/tkImgPhoto.m
+lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/Tk/pTk/tkImgPhoto.t
+lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/Tk/pTk/tkImgPhoto_f.h
+lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/Tk/pTk/tkInt.h
+lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/Tk/pTk/tkInt.m
+lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/Tk/pTk/tkInt.t
+lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/Tk/pTk/tkInt_f.h
+lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/Tk/pTk/tkOption.h
+lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/Tk/pTk/tkOption.m
+lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/Tk/pTk/tkOption.t
+lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/Tk/pTk/tkOption_f.h
+lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/Tk/pTk/tkPatch.h
+lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/Tk/pTk/tkPort.h
+lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/Tk/pTk/tkSelect.h
+lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/Tk/pTk/tkText.h
+lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/Tk/pTk/tkUnixDefault.h
+lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/Tk/pTk/tkUnixInt.h
+lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/Tk/pTk/tkUnixPort.h
+lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/Tk/pTk/tkVMacro.h
+lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/Tk/pTk/tkXrm.h
+lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/Tk/pTk/tk_f.h
+lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/Tk/tkGlue.def
+lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/Tk/tkGlue.h
+lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/Tk/tkGlue.m
+lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/Tk/tkGlue.t
+lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/Tk/tkGlue_f.h
+lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/auto/Tk/.packlist
 @dirrm lib/perl5/site_perl/Tk/DragDrop
 @dirrm lib/perl5/site_perl/Tk/HTML
 @dirrm lib/perl5/site_perl/Tk/Menu
@@ -642,6 +642,6 @@ lib/perl5/site_perl/<$ARCH>-netbsd/auto/Tk/.packlist
 @dirrm lib/perl5/site_perl/auto/Tk/Wm
 @dirrm lib/perl5/site_perl/auto/Tk/X
 @dirrm lib/perl5/site_perl/auto/Tk
-@dirrm lib/perl5/site_perl/<$ARCH>-netbsd/Tk/pTk/compat
-@dirrm lib/perl5/site_perl/<$ARCH>-netbsd/Tk/pTk
-@dirrm lib/perl5/site_perl/<$ARCH>-netbsd/Tk
+@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/Tk/pTk/compat
+@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/Tk/pTk
+@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/Tk
