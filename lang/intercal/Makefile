@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.4 2003/07/21 16:54:02 martti Exp $
+# $NetBSD: Makefile,v 1.5 2004/04/25 11:40:56 dillo Exp $
 #
 
 DISTNAME=	intercal-0.20
 CATEGORIES=	lang
-MASTER_SITES=	http://www.tuxedo.org/~esr/intercal/
+MASTER_SITES=	http://www.catb.org/~esr/intercal/
 
-MAINTAINER=	dillo@giga.or.at
-HOMEPAGE=	http://www.tuxedo.org/~esr/intercal/
+MAINTAINER=	dillo@NetBSD.org
+HOMEPAGE=	http://www.catb.org/~esr/intercal/
 COMMENT=	The ultimate language for obfuscation and job security
 
 .include "../../mk/bsd.pkg.mk"
