@@ -1,43 +1,104 @@
 #!/bin/sh
-# $NetBSD: cpuflags.Linux,v 1.5 2001/11/27 12:26:12 abs Exp $
+# $NetBSD: cpuflags.Linux,v 1.6 2004/07/27 19:25:44 abs Exp $
+PATH=/sbin:/usr/sbin:/bin:/usr/bin:$PATH
 
-hw_model=`uname -m`
+if [ -n "$1" ]; then
+    CC=$1
+else
+    CC=gcc
+fi
 
-case $hw_model in
+hw_machine_arch=$(uname -m)
+if [ ! -f /proc/cpuinfo ] ; then
+    echo "Unable to open /proc/cpuinfo"
+    hw_model=Unknown
+else
+    hw_model=$(awk -F: '/model name/{sub(" ","",$2);print $2}' /proc/cpuinfo)
+fi
+
+case $hw_machine_arch in
     # i386
-    i386)	FLAGS='-march=i386'		;;
-    i486)	FLAGS='-march=i486'		;;
-    i586)	FLAGS='-march=pentium'		;;
-    i686)	FLAGS='-march=pentiumpro'	;;
+    i386)				FLAGS='-march=i386'	;;
+    i486)				FLAGS='-march=i486'	;;
+    i586)				FLAGS='-march=pentium'	;;
+    i686) case $hw_model in
+	"AMD Duron(TM)")		FLAGS='-march=athlon'	;;
+    esac
+    ;;
     #
-    *)		echo "Unknown hw.model '$hw_model'"			>&2
-		echo "Please send machine details to abs@netbsd.org"	>&2
-						;;
 esac
 
-# Fixup flags for old gcc
+if [ -z "$FLAGS" -a -z "$NONE" ] ; then
+    echo 'Unknown machine - please send details to abs@netbsd.org'	>&2
+    echo "  hw.model        : '$hw_model'"				>&2
+    echo "  hw.machine_arch : '$hw_machine_arch'"			>&2
+fi
+
+# Fixup options for older gccs.
+# Entries can be recursive - eg:
+#   -march=k6-3 -> -march=k6 -> -march=pentium -> -march=i486
+#
+# The format of table is
+#   gcc_version_in_which_option_was_introduced	new_option  old_option
+
 if [ -n "$FLAGS" ]; then
-    gcc_ver=`gcc -v 2>&1 | awk '/gcc version/ {sub("egcs-","");print $3}'`
-    FLAGS=`awk -v "flags=$FLAGS" -v "gcc_ver=$gcc_ver" '
-	{if (gcc_ver < $1){map["-m"$2] = "-m"$3}}
-	END{if (map[flags]) {print map[flags]}else {print flags}}
+    gcc_ver=`${CC} -dumpversion | sed 's/^egcs-//'`
+    FLAGS=`awk -F: -v "flags=$FLAGS" -v "gcc_ver=$gcc_ver" '
+	{ if (gcc_ver < $1){map[$2] = ""$3} }
+	END { while (flags in map) {flags = map[flags]} print flags }
 	' <<EOD
-2.90	arch=i386		no-486
-2.90	arch=i486		486
-2.90	arch=pentium		486
-2.90	arch=pentiumpro		486
-2.90	cpu=supersparc		supersparc
-2.90	cpu=sparclite		sparclite
-2.90	cpu=cypress		cypress
-2.90	cpu=v9			v8
-2.90	cpu=arm610		6
-2.90	cpu=strongarm110	6
-2.90	cpu=arm710		6
-2.95	arch=k6			arch=pentium
+2.90:-march=i386:-mno-486
+2.90:-march=i486:-m486
+2.90:-march=pentium:-m486
+2.90:-march=pentiumpro:-m486
+2.90:-mcpu=21164a:
+2.90:-mcpu=arm610:-m6
+2.90:-mcpu=arm710:-m6
+2.90:-mcpu=cypress:-mcypress
+2.90:-mcpu=sparclite:-msparclite
+2.90:-mcpu=strongarm110:-m6
+2.90:-mcpu=supersparc:-msupersparc
+2.90:-mcpu=v9:-mv8
+2.95:-march=k6:-march=pentium
+3.0:-march=athlon:-march=pentiumpro
+3.1:-march=athlon-4:-march=pentiumpro
+3.1:-march=athlon-mp:-march=pentiumpro
+3.1:-march=athlon-tbird:-march=pentiumpro
+3.1:-march=athlon-xp:-march=pentiumpro
+3.1:-march=k6-2:-march=k6
+3.1:-march=k6-3:-march=k6
+3.1:-march=pentium-mmx:-march=pentium
+3.1:-march=pentium2:-march=pentiumpro
+3.1:-march=pentium3 -mno-sse:-march=pentiumpro
+3.1:-march=pentium3:-march=pentiumpro
+3.1:-march=pentium4:-march=pentiumpro
+3.1:-march=r2000:-cpu=r2000
+3.1:-march=r3000:-cpu=r3000
+3.1:-march=r3900:-cpu=r3900
+3.1:-march=r4000:-cpu=r4000
+3.1:-march=r4100:-cpu=r4100
+3.1:-march=r4300:-cpu=r4300
+3.1:-march=r4400:-cpu=r4400
+3.1:-march=r4600:-cpu=r4600
+3.1:-march=r5000:-cpu=r5000
+3.1:-march=r6000:-cpu=r6000
+3.1:-march=r8000:-cpu=r8000
+3.1:-mcpu=21264a:-mcpu=21264
+3.1:-mtune=r2000:-cpu=r2000
+3.1:-mtune=r3000:-cpu=r3000
+3.1:-mtune=r3900:-cpu=r3900
+3.1:-mtune=r4000:-cpu=r4000
+3.1:-mtune=r4100:-cpu=r4100
+3.1:-mtune=r4300:-cpu=r4300
+3.1:-mtune=r4400:-cpu=r4400
+3.1:-mtune=r4600:-cpu=r4600
+3.1:-mtune=r5000:-cpu=r5000
+3.1:-mtune=r6000:-cpu=r6000
+3.1:-mtune=r8000:-cpu=r8000
+3.3:-march=c3:-march=i586
 EOD
 `
 fi
-
 
 echo $FLAGS
 
