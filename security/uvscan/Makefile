@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2002/04/04 12:29:50 tron Exp $
+# $NetBSD: Makefile,v 1.14 2002/08/07 05:42:13 jlam Exp $
 
 DISTNAME=		vlnx416e
 PKGNAME=		uvscan-4.16.0
+PKGREVISION=		1
 CATEGORIES=		security
 MASTER_SITES=		http://download.nai.com/products/evaluation/virusscan/english/cmdline/linux/version_4.16/
 EXTRACT_SUFX=		.tar.Z
@@ -10,11 +11,11 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.mcafeeb2b.com/products/virusscan/default.asp
 COMMENT=		evaluation version of a DOS/Windows file virus scanner
 
+CONFLICTS=		uvscan-dat-[0-9]*
+
 DEPENDS+=		suse_compat>=6.1:../../emulators/${SUSE_DIR_PREFIX}_compat
-DEPENDS+=		uvscan-dat>=4171:../../security/uvscan-dat
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386
-NO_BUILD=		YES
 CHECK_SHLIBS=		NO
 
 LICENSE=		shareware
@@ -26,18 +27,32 @@ NO_SRC_ON_CDROM=	${RESTRICTED}
 
 WRKSRC=			${WRKDIR}
 DOCDIR=			${PREFIX}/share/doc/uvscan
+DATDIR=			${PREFIX}/share/uvscan
 UVSCANDIR=		${PREFIX}/libexec/uvscan
+DATFILES=		clean.dat internet.dat names.dat scan.dat readme.txt
 
-do-configure:
-	${SED}	-e "s|@PREFIX@|${PREFIX}|g"				\
-		${FILESDIR}/uvscan.sh > ${WRKDIR}/uvscan.sh
+FILES_SUBST+=		UVSCANDIR=${UVSCANDIR:Q}
+FILES_SUBST+=		DATFILES=${DATFILES:Q}
+
+DEINSTALL_EXTRA_TMPL=	${.CURDIR}/DEINSTALL
+SUPPORT_FILES=		${DATDIR}/clean.dat ${UVSCANDIR}/clean.dat
+SUPPORT_FILES+=		${DATDIR}/names.dat ${UVSCANDIR}/names.dat
+SUPPORT_FILES+=		${DATDIR}/scan.dat ${UVSCANDIR}/scan.dat
+SUPPORT_FILES+=		${DATDIR}/readme.txt ${UVSCANDIR}/readme.txt
+OWN_DIRS=		${UVSCANDIR}
+
+do-build:
+	@${SED}	${FILES_SUBST_SED}					\
+		${FILESDIR}/update_dat.sh > ${WRKDIR}/update_dat
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKDIR}/uvscan.sh ${PREFIX}/bin/uvscan
+	${INSTALL_SCRIPT} ${WRKDIR}/update_dat ${PREFIX}/sbin
 	${INSTALL_MAN} ${WRKSRC}/uvscan.1 ${PREFIX}/man/man1
 
 	${INSTALL_PROGRAM_DIR} ${UVSCANDIR}
 	${INSTALL_SCRIPT} ${WRKSRC}/uvscan ${UVSCANDIR}
+	${RM} -f ${PREFIX}/bin/uvscan
+	${LN} -sf ../${UVSCANDIR:S/${PREFIX}\///}/uvscan ${PREFIX}/bin/uvscan
 	${INSTALL_DATA} ${WRKSRC}/liblnxfv.so.4 ${UVSCANDIR}
 	${RM} -f ${UVSCANDIR}/liblnxfv.so
 	${LN} -s liblnxfv.so.4 ${UVSCANDIR}/liblnxfv.so
@@ -49,10 +64,16 @@ do-install:
 	for file in license.dat messages.dat; do			\
 		${INSTALL_DATA} ${WRKSRC}/$${file} ${UVSCANDIR};	\
 	done
+	${INSTALL_DATA_DIR} ${DATDIR}
+	for file in ${DATFILES}; do					\
+		if [ -f ${WRKSRC}/$${file} ]; then			\
+			${INSTALL_DATA} ${WRKSRC}/$${file} ${DATDIR};	\
+		fi;							\
+	done
 	${INSTALL_DATA_DIR} ${DOCDIR}
 	for file in contact.txt license.txt unxadmin.pdf; do		\
 		${INSTALL_DATA} ${WRKSRC}/$${file} ${DOCDIR};		\
 	done
 
+.include "../../mk/bsd.pkg.install.mk"
 .include "../../emulators/suse_linux/Makefile.application"
-
