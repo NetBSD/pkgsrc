@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.101 2000/07/28 01:19:43 hubertf Exp $
+# $NetBSD: Packages.txt,v 1.102 2000/07/28 01:40:05 hubertf Exp $
 ###########################################################################
 
 			==========================
@@ -321,6 +321,7 @@ Become root and type:
 
 	$ su
         # cd /usr/pkgsrc
+	# pkg_delete -rR \*
 	# rm */*/.broken*
         # make bulk-package
 
