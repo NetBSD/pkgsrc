@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2002/06/15 20:07:45 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.14 2002/06/27 16:46:30 agc Exp $
 # FreeBSD Id: Makefile,v 1.19 1998/10/31 18:05:31 jseger Exp
 #
 
@@ -46,16 +46,17 @@ post-install:
 	if [ ! -f "${PCB_CONFDIR}/local.inc" ]; then \
 		${ECHO} "# list your local includes here" > ${PCB_CONFDIR}/local.inc ; \
 	fi
-	${MV} -f ${X11BASE}/lib/X11/pcb/m4/common.m4 ${X11BASE}/lib/X11/pcb/m4/common.m4.bak
+	${MV} -f ${X11PREFIX}/lib/X11/pcb/m4/common.m4 ${X11PREFIX}/lib/X11/pcb/m4/common.m4.bak
 	${AWK} '/^divert\(0\)dnl/ { \
 			printf("include(${PCB_CONFDIR}/local.inc)\n"); \
 			printf("sinclude(site-config.inc)\n"); \
 			printf("sinclude(user-config.inc)\n"); \
 			printf("sinclude(proj-config.inc)\n"); \
 			} \
-		{gsub(/^include\(/,"include(${X11BASE}/lib/X11/pcb/m4/"); print } ' \
-		${X11BASE}/lib/X11/pcb/m4/common.m4.bak > ${X11BASE}/lib/X11/pcb/m4/common.m4
-	${RM} -f ${X11BASE}/lib/X11/pcb/m4/common.m4.bak
+		{gsub(/^include\(/,"include(${X11PREFIX}/lib/X11/pcb/m4/"); print } ' \
+		${X11PREFIX}/lib/X11/pcb/m4/common.m4.bak > ${X11PREFIX}/lib/X11/pcb/m4/common.m4
+	${RM} -f ${X11PREFIX}/lib/X11/pcb/m4/common.m4.bak
 
 .include "../../mk/texinfo.mk"
+.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
