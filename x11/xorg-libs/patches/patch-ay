@@ -1,0 +1,40 @@
+$NetBSD: patch-ay,v 1.1 2005/02/21 16:45:40 hira Exp $
+
+--- programs/Xserver/hw/xfree86/loader/elfloader.c.orig	2005-02-20 23:45:37.000000000 +0900
++++ programs/Xserver/hw/xfree86/loader/elfloader.c	2005-02-20 23:45:46.000000000 +0900
+@@ -922,7 +922,7 @@
+ 	    ErrorF("ELFCreateGOT() Unable to reallocate memory!!!!\n");
+ 	    return FALSE;
+ 	}
+-#   if defined(linux) || defined(__OpenBSD__)
++#   if defined(linux) || defined(__OpenBSD__) || defined(__NetBSD__)
+ 	{
+ 	    unsigned long page_size = getpagesize();
+ 	    unsigned long round;
+@@ -1097,7 +1097,7 @@
+ 	ErrorF("ELFCreatePLT() Unable to allocate memory!!!!\n");
+ 	return;
+     }
+-#   if defined(linux) || defined(__OpenBSD__)
++#   if defined(linux) || defined(__OpenBSD__) || defined(__NetBSD__)
+     {
+ 	unsigned long page_size = getpagesize();
+ 	unsigned long round;
+@@ -2775,7 +2775,7 @@
+ 	elffile->lsection[j].size = SecSize(i);
+ 	elffile->lsection[j].flags = flags;
+ 	switch (SecType(i)) {
+-#if defined(linux) || defined(__OpenBSD__)
++#if defined(linux) || defined(__OpenBSD__) || defined(__NetBSD__)
+ 	case SHT_PROGBITS:
+ 	    {
+ 		unsigned long page_size = getpagesize();
+@@ -2979,7 +2979,7 @@
+ 	ErrorF("Unable to allocate ELF sections\n");
+ 	return NULL;
+     }
+-#  if defined(linux) || defined(__OpenBSD__)
++#  if defined(linux) || defined(__OpenBSD__) || defined(__NetBSD__)
+     {
+ 	unsigned long page_size = getpagesize();
+ 	unsigned long round;

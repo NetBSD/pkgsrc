@@ -1,12 +1,12 @@
-$NetBSD: patch-as,v 1.1 2004/11/15 11:15:48 hira Exp $
+$NetBSD: patch-as,v 1.2 2005/02/21 16:45:40 hira Exp $
 
---- programs/Xserver/hw/xfree86/loader/loader.c.orig	2004-11-03 17:26:20.000000000 +0900
-+++ programs/Xserver/hw/xfree86/loader/loader.c	2004-11-03 17:29:53.000000000 +0900
+--- programs/Xserver/hw/xfree86/loader/loader.c.orig	2004-08-30 06:06:00.000000000 +0900
++++ programs/Xserver/hw/xfree86/loader/loader.c	2005-02-21 10:39:41.000000000 +0900
 @@ -472,6 +472,13 @@
  #ifdef UseMMAP
      unsigned long ret;
  
-+# if defined(__NetBSD__) && defined(__amd64__)
++# if defined(__NetBSD__) && defined(__amd64__) && defined(PassHintToMMAP)
 +#  define LOADER_MMAP_AREA_SIZE (256*1024*1024)
 +#  define LOADER_MMAP_AREA_START ((2U*1024*1024*1024) - LOADER_MMAP_AREA_SIZE)
 +    static char *mm_addr = (char *)LOADER_MMAP_AREA_START;
@@ -21,14 +21,14 @@ $NetBSD: patch-as,v 1.1 2004/11/15 11:15:48 hira Exp $
  	new_size += pagesize;
      ret = (unsigned long)mmap(0, new_size, MMAP_PROT, MAP_PRIVATE
 -#  ifdef __amd64__
-+#  if defined(__amd64__) && !defined(__NetBSD__)
++#  if defined(__amd64__) && !defined(PassHintToMMAP)
  			      | MAP_32BIT
  #  endif
  			      , fd, new_off);
      if (ret == -1)
  	FatalError("mmap() failed: %s\n", strerror(errno));
 +
-+#  if defined(__amd64__) && defined(__NetBSD__)
++#  if defined(__amd64__) && defined(__NetBSD__) && defined(PassHintToMMAP)
 +    mm_addr += new_size:
 +#  endif
 +
@@ -36,14 +36,14 @@ $NetBSD: patch-as,v 1.1 2004/11/15 11:15:48 hira Exp $
  # else
      ret = (unsigned long)mmap(0, size, MMAP_PROT, MAP_PRIVATE
 -#  ifdef __amd64__
-+#  if defined(__amd64__) && !defined(__NetBSD__)
++#  if defined(__amd64__) && !defined(PassHintToMMAP)
  			      | MAP_32BIT
  #  endif
  			      , fd, offset + offsetbias);
      if (ret == -1)
  	FatalError("mmap() failed: %s\n", strerror(errno));
 +
-+#  if defined(__amd64__) && defined(__NetBSD__)
++#  if defined(__amd64__) && defined(__NetBSD__) && defined(PassHintToMMAP)
 +    mm_addr += (size + 4095) & ~4095;
 +#  endif
 +
