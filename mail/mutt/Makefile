@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 1999/12/12 15:28:37 soren Exp $
+# $NetBSD: Makefile,v 1.34 1999/12/13 11:06:00 soren Exp $
 
 DISTNAME=	mutt-${MUTT_VERSION}
 CATEGORIES=	mail
@@ -13,11 +13,11 @@ HOMEPAGE=	http://www.mutt.org/
 
 BUILD_DEPENDS+=	${LOCALBASE}/bin/autoconf:../../devel/autoconf
 BUILD_DEPENDS+=	${LOCALBASE}/bin/automake:../../devel/automake
-DEPENDS+=	libslang-*:../../devel/libslang
+DEPENDS+=	ncurses-4.2:../../devel/ncurses
 
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
-CONFIGURE_ARGS+= --with-slang=${LOCALBASE} --with-exec-shell=/bin/ksh \
+CONFIGURE_ARGS+= --with-curses=${LOCALBASE} --with-exec-shell=/bin/ksh \
 		 --with-docdir=${PREFIX}/share/doc/mutt \
 		 --enable-pop --enable-imap
 LDFLAGS+=	-s
