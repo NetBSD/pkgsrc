@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: pre-build,v 1.9 2000/12/31 17:38:32 dmcmahill Exp $
+# $NetBSD: pre-build,v 1.10 2001/02/01 08:25:39 dmcmahill Exp $
 #
 # Clean up system to be ready for bulk pkg build
 #
@@ -70,13 +70,17 @@ if [ -d /var/db/pkg ]; then
 	cd /var/db/pkg
 	for pkg in *
 	do
-		echo pkg_delete -rR $pkg
-		pkg_delete -rR $pkg
+		if `pkg_info -qe $pkg`; then 
+			echo pkg_delete -rR $pkg
+			pkg_delete -rR $pkg
+		fi
 	done
 	for pkg in *
 	do
-		echo pkg_delete -rR $pkg
-		pkg_delete -rR -f $pkg
+		if `pkg_info -qe $pkg`; then 
+			echo pkg_delete -rR $pkg
+			pkg_delete -rR -f $pkg
+		fi
 	done
 	
 	# We've tried our best to get rid of the pkgs, now do it the hard way
@@ -104,7 +108,7 @@ rm -fr /nonexistant		# broken useradd on pop3d
 cd ${USR_PKGSRC}
 rm -f $BROKENF */*/$BROKENF
 rm -f $BLDLOG */*/$BLDLOG
-rm -f .start*
+rm -f .start.${arch}
 
 mount -o noasync -u /usr
 
