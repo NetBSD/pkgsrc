@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2004/02/17 23:25:45 jmmv Exp $
+# $NetBSD: Makefile,v 1.20 2004/02/20 12:43:28 jmmv Exp $
 #
 
 DISTNAME=	conglomerate-0.7.12
@@ -15,7 +15,7 @@ DEPENDS+=		docbook-xsl>=1.64.1:../../textproc/docbook-xsl
 DEPENDS+=		docbook-xml>=4.2nb6:../../textproc/docbook-xml
 
 GNU_CONFIGURE=		yes
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
 USE_GNU_TOOLS+=		make
 USE_PERL5=		yes
@@ -28,19 +28,19 @@ CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html
 GCONF2_SCHEMAS=		conglomerate.schemas
 
 .include "../../devel/GConf2/schemas.mk"
-.include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../devel/libbonobo/buildlink2.mk"
-.include "../../devel/libbonoboui/buildlink2.mk"
-.include "../../devel/libglade2/buildlink2.mk"
-.include "../../devel/libgnomeui/buildlink2.mk"
-.include "../../devel/pkgconfig/buildlink2.mk"
-.include "../../print/libgnomeprint/buildlink2.mk"
-.include "../../print/libgnomeprintui/buildlink2.mk"
-.include "../../textproc/intltool/buildlink2.mk"
-.include "../../textproc/libxml2/buildlink2.mk"
-.include "../../textproc/libxslt/buildlink2.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/libbonobo/buildlink3.mk"
+.include "../../devel/libbonoboui/buildlink3.mk"
+.include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/libgnomeui/buildlink3.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../print/libgnomeprint/buildlink3.mk"
+.include "../../print/libgnomeprintui/buildlink3.mk"
+.include "../../textproc/intltool/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
+.include "../../textproc/libxslt/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
-.include "../../x11/gtksourceview/buildlink2.mk"
+.include "../../x11/gtksourceview/buildlink3.mk"
 
-.include "../../mk/pthread.buildlink2.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
