@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.2 2001/05/26 05:44:10 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.3 2001/05/26 07:26:51 jlam Exp $
 #
 # This Makefile fragment is included by packages that use libpam.
 #
@@ -17,15 +17,12 @@
 PAM_BUILDLINK_MK=	# defined
 
 PAM_REQD?=		0.72
-
-PAM_INCDIR=		${LOCALBASE}/include/security
-LIBPAM=			${LOCALBASE}/lib/libpam.a
-LIBPAM+=		${LOCALBASE}/lib/libpam.so*
-LIBPAMC=		${LOCALBASE}/lib/libpamc.a
-LIBPAMC+=		${LOCALBASE}/lib/libpamc.so*
-LIBPAMMISC=		${LOCALBASE}/lib/libpam_misc.a
-LIBPAMMISC+=		${LOCALBASE}/lib/libpam_misc.so*
 DEPENDS+=		PAM>=${PAM_REQD}:../../security/PAM
+
+PAM_HEADERS=		${LOCALBASE}/include/security/*
+PAM_LIBS=		${LOCALBASE}/lib/libpam.*
+PAM_LIBS+=		${LOCALBASE}/lib/libpamc.*
+PAM_LIBS+=		${LOCALBASE}/lib/libpam_misc.*
 
 BUILDLINK_INCDIR?=	${WRKDIR}/include
 BUILDLINK_LIBDIR?=	${WRKDIR}/lib
@@ -39,7 +36,8 @@ BUILDLINK_TARGETS+=	link-pam-libs
 link-pam-headers:
 	@${ECHO} "Linking pam headers into ${BUILDLINK_INCDIR}."
 	@${MKDIR} ${BUILDLINK_INCDIR}/security
-	@for inc in ${PAM_INCDIR}/*; do					\
+	@${RM} -f ${BUILDLINK_INCDIR}/security/*
+	@for inc in ${PAM_HEADERS}; do					\
 		dest=${BUILDLINK_INCDIR}/security/`${BASENAME} $${inc}`; \
 		if [ -f $${inc} ]; then					\
 			${RM} -f $${dest};				\
@@ -53,7 +51,7 @@ link-pam-headers:
 link-pam-libs:
 	@${ECHO} "Linking pam libraries into ${BUILDLINK_LIBDIR}."
 	@${MKDIR} ${BUILDLINK_LIBDIR}
-	@for lib in ${LIBPAM} ${LIBPAMC} ${LIBPAMMISC}; do		\
+	@for lib in ${PAM_LIBS}; do					\
 		dest=${BUILDLINK_LIBDIR}/`${BASENAME} $${lib}`;		\
 		if [ -f $${lib} ]; then					\
 			${RM} -f $${dest};				\
