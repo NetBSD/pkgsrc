@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9453 2005/03/07 12:38:00 adam Exp $
+$NetBSD: CHANGES,v 1.9454 2005/03/07 12:55:53 augustss Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1326,3 +1326,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated abiword to 2.2.5 [adam 2005-03-07]
 	Updated abiword-plugins to 2.2.5 [adam 2005-03-07]
 	Updated gimp-docs to 2.0.7 [adam 2005-03-07]
+	Updated wxhaskell to 0.9 [augustss 2005-03-07]
