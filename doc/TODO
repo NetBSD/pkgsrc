@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2253 2004/10/25 09:05:27 xtraeme Exp $
+$NetBSD: TODO,v 1.2254 2004/10/25 09:37:44 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -192,7 +192,6 @@ Suggested package updates
 	o balsa-1.4.4
 	o bioperl-1.4
 	o bitchx-1.1
-	o bitlbee-0.91
 	o blender-2.34
 	o boson-0.10
 	o capc-calc-2.11.10.1
