@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/09/15 03:23:41 jlam Exp $
+
+--- doc/Makefile.in.orig	Fri Sep 10 19:57:44 1999
++++ doc/Makefile.in	Tue Sep 14 22:33:35 1999
+@@ -89,7 +89,7 @@
+ VERSION = @VERSION@
+ l = @l@
+ 
+-docdir = ${prefix}/doc/quicklist-$(VERSION)
++docdir = ${prefix}/share/doc/quicklist-$(VERSION)
+ 
+ docs = file_format functionality functions
+ 
