@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2000/06/25 17:21:04 rh Exp $
+@comment $NetBSD: PLIST,v 1.4 2000/11/09 19:46:11 mycroft Exp $
 bin/GnomeScott
 bin/ctali
 bin/freecell
@@ -187,6 +187,33 @@ share/gturing/examples/bin2dec.tur
 share/gturing/examples/dashnumbers.tur
 share/gturing/examples/dec2bin.tur
 share/gturing/examples/subst.tur
+share/locale/cs/LC_MESSAGES/gnome-games.mo
+share/locale/da/LC_MESSAGES/gnome-games.mo
+share/locale/de/LC_MESSAGES/gnome-games.mo
+share/locale/el/LC_MESSAGES/gnome-games.mo
+share/locale/en_GB/LC_MESSAGES/gnome-games.mo
+share/locale/es/LC_MESSAGES/gnome-games.mo
+share/locale/et/LC_MESSAGES/gnome-games.mo
+share/locale/fi/LC_MESSAGES/gnome-games.mo
+share/locale/fr/LC_MESSAGES/gnome-games.mo
+share/locale/ga/LC_MESSAGES/gnome-games.mo
+share/locale/gl/LC_MESSAGES/gnome-games.mo
+share/locale/hu/LC_MESSAGES/gnome-games.mo
+share/locale/it/LC_MESSAGES/gnome-games.mo
+share/locale/ja/LC_MESSAGES/gnome-games.mo
+share/locale/ko/LC_MESSAGES/gnome-games.mo
+share/locale/lt/LC_MESSAGES/gnome-games.mo
+share/locale/nl/LC_MESSAGES/gnome-games.mo
+share/locale/no/LC_MESSAGES/gnome-games.mo
+share/locale/pl/LC_MESSAGES/gnome-games.mo
+share/locale/pt/LC_MESSAGES/gnome-games.mo
+share/locale/pt_BR/LC_MESSAGES/gnome-games.mo
+share/locale/ru/LC_MESSAGES/gnome-games.mo
+share/locale/sv/LC_MESSAGES/gnome-games.mo
+share/locale/uk/LC_MESSAGES/gnome-games.mo
+share/locale/wa/LC_MESSAGES/gnome-games.mo
+share/locale/zh_CN.GB2312/LC_MESSAGES/gnome-games.mo
+share/locale/zh_TW.Big5/LC_MESSAGES/gnome-games.mo
 share/mime-info/gnome-stones.keys
 share/mime-info/gnome-stones.mime
 share/pixmaps/cards/backs/beige.png
