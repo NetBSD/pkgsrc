@@ -1,6 +1,17 @@
-@comment $NetBSD: PLIST,v 1.6 2002/05/24 21:38:08 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.7 2002/09/12 23:05:37 hubertf Exp $
 bin/silc
 etc/silc/silc.conf
+lib/silc/modules/aes.sim.so
+lib/silc/modules/blowfish.sim.so
+lib/silc/modules/cast.sim.so
+lib/silc/modules/mars.sim.so
+lib/silc/modules/md5.sim.so
+lib/silc/modules/none.sim.so
+lib/silc/modules/rc5.sim.so
+lib/silc/modules/rc6.sim.so
+lib/silc/modules/rsa.sim.so
+lib/silc/modules/sha1.sim.so
+lib/silc/modules/twofish.sim.so
 share/doc/silc/CHANGES
 share/doc/silc/COPYING
 share/doc/silc/CREDITS
