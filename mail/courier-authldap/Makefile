@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/02/21 14:43:16 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2004/03/11 16:45:26 jlam Exp $
 
 PKGNAME=	courier-authldap-${BASE_VERS}
 COMMENT=	Courier LDAP authentication module
@@ -26,8 +26,11 @@ CONF_FILES_PERMS+=	${EGDIR}/${FILE}.dist ${PKG_SYSCONFDIR}/${FILE}	\
 .include "../../databases/openldap/buildlink3.mk"
 
 do-install:
+	${INSTALL_PROGRAM_DIR} ${AUTHLIBDIR}
 	${INSTALL_PROGRAM} ${WRKSRC}/authlib/authdaemond.ldap ${AUTHLIBDIR}
+	${INSTALL_MAN_DIR} ${DOCDIR}
 	${INSTALL_MAN} ${WRKSRC}/authlib/README.ldap ${DOCDIR}
+	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/authlib/authldap.schema ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/authlib/authldaprc ${EGDIR}/authldaprc.dist
 
