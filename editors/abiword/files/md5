@@ -1,0 +1,7 @@
+$NetBSD: md5,v 1.1.1.1 1999/09/11 18:27:49 jlam Exp $
+
+MD5 (abisuite/abi-0.7.5.tar.gz) = 8ae9d28cbd5905b2f0869114f1259510
+MD5 (abisuite/abidistfiles-0.7.5.tar.gz) = 57bf3b793de91edb6fc0f06c483c66ed
+MD5 (abisuite/unixfonts-0.7.5.tar.gz) = b19603bf0a1f6a2c8f962122f48cb7cf
+MD5 (abisuite/expat-0.7.5.tar.gz) = 415a6b3be9fab57964b1f5114ef6bce0
+MD5 (abisuite/wv-0.7.5.tar.gz) = adf037852c2587c7db35c5fefd09e776

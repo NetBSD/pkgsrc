@@ -1,0 +1,13 @@
+$NetBSD: patch-ai,v 1.1.1.1 1999/09/11 18:27:49 jlam Exp $
+
+--- src/wp/main/unix/Makefile.orig	Mon Jul 19 15:22:06 1999
++++ src/wp/main/unix/Makefile	Sat Sep 11 11:01:10 1999
+@@ -24,7 +24,7 @@
+ 
+ CPPSRCS=		UnixMain.cpp
+ 
+-INCLUDES=		`gtk-config --cflags`
++INCLUDES=		$(GTK_CFLAGS)
+ 
+ PROGRAM=		$(BINDIR)/AbiWord_d
+ PROGRAM_S=		$(BINDIR)/AbiWord_s
