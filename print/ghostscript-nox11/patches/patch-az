@@ -1,3 +1,4 @@
+$NetBSD: patch-az,v 1.2 2002/11/26 21:48:21 cjep Exp $
 --- ../gimp-print-4.2.0/src/ghost/Makefile.in.orig	Thu Oct 24 18:17:52 2002
 +++ ../gimp-print-4.2.0/src/ghost/Makefile.in	Thu Oct 24 18:18:25 2002
 @@ -316,22 +316,22 @@
