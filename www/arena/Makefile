@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2004/03/26 02:27:56 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2004/04/25 05:54:15 snj Exp $
 
 DISTNAME=		arena-0.3.62
 PKGREVISION=		4
@@ -12,7 +12,7 @@ COMMENT=	Experimental HTML 3 browser, supports math and style sheets
 WRKSRC=			${WRKDIR}/Arena-0.3.62
 BUILD_USES_MSGFMT=	YES
 GNU_CONFIGURE=		YES
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_GNU_TOOLS+=		make
 USE_PKGLOCALEDIR=	YES
 USE_X11=		YES
@@ -63,9 +63,9 @@ EXTRACT_ELEMENTS=	${GLOBAL_EXCLUDE_ARG}
 EXTRACT_ELEMENTS+=	${EXCLUDE_ARG} Arena-*/Auxiliary/${DONT_EXTRACT_SUBDIR}
 .endfor
 
-.include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../graphics/jpeg/buildlink2.mk"
-.include "../../graphics/png/buildlink2.mk"
-.include "../../graphics/xpm/buildlink2.mk"
-.include "../../www/libwww/buildlink2.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
+.include "../../graphics/xpm/buildlink3.mk"
+.include "../../www/libwww/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
