@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.2 2000/11/29 13:24:00 hubertf Exp $
+$NetBSD: md5,v 1.3 2000/12/13 21:04:33 jdolecek Exp $
 
-MD5 (opera-4.0-b3-static.i386.tar.gz) = 49784111f40eaedc1bcc31d13e32bccc
+MD5 (opera-4.0-b4-20001211.012-static.i386.tar.gz) = b212737b27048199b22d1763fa627280
