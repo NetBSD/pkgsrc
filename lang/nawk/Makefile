@@ -1,13 +1,15 @@
-# $NetBSD: Makefile,v 1.1.1.1 1998/10/15 13:19:21 agc Exp $
+# $NetBSD: Makefile,v 1.2 2000/04/20 08:26:11 agc Exp $
 #
 
 DISTNAME=       awk
-PKGNAME=        nawk-19980211
+PKGNAME=        nawk-19990620
 CATEGORIES=	lang
 MASTER_SITES=   http://cm.bell-labs.com/who/bwk/
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://cm.bell-labs.com/who/bwk/
+
+DIST_SUBDIR=	${PKGNAME}
 
 NO_WRKSUBDIR=	yes
 MAKEFILE=	makefile
