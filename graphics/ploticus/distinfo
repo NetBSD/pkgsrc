@@ -1,10 +1,5 @@
-$NetBSD: distinfo,v 1.3 2001/07/08 08:09:39 rh Exp $
+$NetBSD: distinfo,v 1.4 2002/09/20 11:41:16 rh Exp $
 
-SHA1 (ploticus-1.41/plsrc141.tar.gz) = 675ee667d4b0561abf9f271fdaf7a081db86b0c7
-Size (ploticus-1.41/plsrc141.tar.gz) = 257913 bytes
-SHA1 (ploticus-1.41/plman141.tar.gz) = c353434240574e77d8098ac695b4969a750c53f1
-Size (ploticus-1.41/plman141.tar.gz) = 147028 bytes
-SHA1 (patch-aa) = 4bb627cfedaf0d3692c9700533f7551ca0e133ea
-SHA1 (patch-ab) = a1e7b090bf6f13c9f3659a81dcdf6a284b67a978
-SHA1 (patch-ac) = 0038991b57d5537a8c9af9a2b92e374ec50f6689
-SHA1 (patch-ad) = 49e77b3fc5794d3ec9005ac632bb5226dd748704
+SHA1 (plsrc204.tar.gz) = b3fa59be04ffb91b23f01fc129bdb504843ed5f5
+Size (plsrc204.tar.gz) = 755995 bytes
+SHA1 (patch-aa) = 43ab10ab37ae8d77884e01973fd40f113f57cfb7
