@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 1999/09/03 17:04:42 kim Exp $
+
+--- test/arch/unix/Makefile.in.orig	Mon Jun  1 17:59:05 1998
++++ test/arch/unix/Makefile.in	Fri Sep  3 12:46:05 1999
+@@ -17,7 +17,7 @@
+ INSTALL_PROGRAM = @INSTALL_PROGRAM@
+ 
+ CC = @CC@
+-LIBTOOL = $(top_builddir)/libtool
++LIBTOOL = @LIBTOOL@
+ MKINSTALLDIRS = $(srcdir)/../mkinstalldirs
+ 
+ include $(top_builddir)/MakeSub
