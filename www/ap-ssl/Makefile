@@ -1,20 +1,22 @@
-# $NetBSD: Makefile,v 1.9 1999/07/23 18:20:04 itojun Exp $
+# $NetBSD: Makefile,v 1.10 1999/12/01 01:00:17 bad Exp $
 #
 
-DISTNAME=	mod_ssl-2.2.8-1.3.6
-PKGNAME=	ap-ssl-2.2.8
+DISTNAME=	mod_ssl-2.4.8-1.3.9
+PKGNAME=	ap-ssl-2.4.8
 CATEGORIES=	www
 MASTER_SITES=	ftp://ftp.modssl.org/source/
 
 MAINTAINER=	tv@netbsd.org
 HOMEPAGE=	http://www.modssl.org/
 
-DEPENDS=	openssl-0.9.2b:../../security/openssl \
-		apache-1.3.6p0:../../www/apache
+DEPENDS=	openssl-0.9.4:../../security/openssl \
+		apache-1.3.9p0:../../www/apache
 # For "apxs":
 BUILD_DEPENDS=	${LOCALBASE}/bin/perl:../../lang/perl5
 
-CONFLICTS=	apache-1.3.[012] apache-*modssl-* apache6-*
+CONFLICTS=	apache-1.3.[012345678] apache-*modssl-* apache6-*
+
+HAS_CONFIGURE=	yes
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -29,31 +31,22 @@ fetch-depends:
 	@${FALSE}
 .endif
 
-LDFLAGS+=	-L${PREFIX}/lib -lcrypto -lssl
-CPPFLAGS+=	-I${PREFIX}/include/openssl
+CONFIGURE_ARGS+=	--with-apxs=${PREFIX}/sbin/apxs --with-ssl=${PREFIX}
 .if defined(USE_RSAREF2) && ${USE_RSAREF2} == YES
-LDFLAGS+=	-lrsaref
+CONFIUGRE_ARGS+=	--with-rsa=${PREFIX}
 .endif
 
-# Since we don't have the Apache source tree to work with, we have to pretend
-# to get all the appropriate config information and compile with apxs.
-do-build:
-	@cd ${WRKSRC}/pkg.sslmod && ${PREFIX}/sbin/apxs -c -o mod_ssl.so \
-		${CPPFLAGS} -DSSL_COMPAT -DMOD_SSL_VERSION=\\\"2.2.8\\\" \
-		-DSSL_PRODUCT_NAME=\\\"mod_ssl\\\" \
-		-DSSL_PRODUCT_VERSION=\\\"2.2.8\\\" *.c
-	cd ${WRKSRC}/pkg.sslsup && ${LINK.c} -o ca-fix ca-fix.c
-
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/pkg.sslsup/ca-fix ${PREFIX}/bin/
-	@cd ${WRKSRC}/pkg.sslmod && ${PREFIX}/sbin/apxs -i mod_ssl.so
+post-install:
+	@${MV} ${PREFIX}/lib/httpd/libssl.so ${PREFIX}/lib/httpd/mod_ssl.so
 	${INSTALL_DATA_DIR} ${PREFIX}/share/httpd/htdocs/manual/mod/mod_ssl
 	cd ${WRKSRC}/pkg.ssldoc && \
 		${INSTALL_DATA} *.html *.gif *.jpg ${PREFIX}/share/httpd/htdocs/manual/mod/mod_ssl/
 	${INSTALL_DATA_DIR} ${PREFIX}/share/mod_ssl
 	cd ${WRKSRC}/pkg.contrib && \
 		${INSTALL_SCRIPT} *.sh *.cgi ${PREFIX}/share/mod_ssl/
-	${INSTALL_DATA} ${WRKSRC}/pkg.sslcfg/Makefile ${WRKSRC}/pkg.sslcfg/README.CRT \
+	${INSTALL_DATA} ${WRKSRC}/pkg.sslcfg/README.CRL \
+		${WRKSRC}/pkg.sslcfg/*.crl ${PREFIX}/etc/httpd/ssl.crl/
+	${INSTALL_DATA} ${WRKSRC}/pkg.sslcfg/README.CRT \
 		${WRKSRC}/pkg.sslcfg/*.crt ${PREFIX}/etc/httpd/ssl.crt/
 	${INSTALL_DATA} ${WRKSRC}/pkg.sslcfg/README.CSR \
 		${WRKSRC}/pkg.sslcfg/*.csr ${PREFIX}/etc/httpd/ssl.csr/

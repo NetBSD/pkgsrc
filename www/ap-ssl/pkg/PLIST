@@ -1,26 +1,36 @@
-@comment $NetBSD: PLIST,v 1.2 1999/04/30 17:05:22 tv Exp $
-bin/ca-fix
-etc/httpd/ssl.crt/Makefile
+@comment $NetBSD: PLIST,v 1.3 1999/12/01 01:00:18 bad Exp $
+etc/httpd/ssl.crl/Makefile.crl
+etc/httpd/ssl.crl/README.CRL
+etc/httpd/ssl.crt/Makefile.crt
 etc/httpd/ssl.crt/README.CRT
 etc/httpd/ssl.crt/ca-bundle.crt
 etc/httpd/ssl.crt/server.crt
-etc/httpd/ssl.crt/snakeoil-ca.crt
-etc/httpd/ssl.crt/snakeoil.crt
+etc/httpd/ssl.crt/snakeoil-ca-dsa.crt
+etc/httpd/ssl.crt/snakeoil-ca-rsa.crt
+etc/httpd/ssl.crt/snakeoil-dsa.crt
+etc/httpd/ssl.crt/snakeoil-rsa.crt
 etc/httpd/ssl.csr/README.CSR
 etc/httpd/ssl.csr/server.csr
 etc/httpd/ssl.key/README.KEY
 etc/httpd/ssl.key/server.key
-etc/httpd/ssl.key/snakeoil-ca.key
-etc/httpd/ssl.key/snakeoil.key
+etc/httpd/ssl.key/snakeoil-ca-dsa.key
+etc/httpd/ssl.key/snakeoil-ca-rsa.key
+etc/httpd/ssl.key/snakeoil-dsa.key
+etc/httpd/ssl.key/snakeoil-rsa.key
 lib/httpd/mod_ssl.so
+share/mod_ssl/cca.sh
+share/mod_ssl/gid-mkcert.sh
+share/mod_ssl/loadcacert.cgi
+share/mod_ssl/sign.sh
 share/httpd/htdocs/manual/mod/mod_ssl/apache_pb.gif
+share/httpd/htdocs/manual/mod/mod_ssl/feather.jpg
 share/httpd/htdocs/manual/mod/mod_ssl/index.html
 share/httpd/htdocs/manual/mod/mod_ssl/mod_ssl_sb.gif
 share/httpd/htdocs/manual/mod/mod_ssl/openssl_ics.gif
 share/httpd/htdocs/manual/mod/mod_ssl/ssl_compat.gfont000.gif
 share/httpd/htdocs/manual/mod/mod_ssl/ssl_compat.html
 share/httpd/htdocs/manual/mod/mod_ssl/ssl_cover_logo.jpg
-share/httpd/htdocs/manual/mod/mod_ssl/ssl_cover_title.gif
+share/httpd/htdocs/manual/mod/mod_ssl/ssl_cover_title.jpg
 share/httpd/htdocs/manual/mod/mod_ssl/ssl_faq.gfont000.gif
 share/httpd/htdocs/manual/mod/mod_ssl/ssl_faq.html
 share/httpd/htdocs/manual/mod/mod_ssl/ssl_glossary.html
@@ -61,10 +71,5 @@ share/httpd/htdocs/manual/mod/mod_ssl/ssl_template.title-preface.gif
 share/httpd/htdocs/manual/mod/mod_ssl/ssl_template.title-ref.gif
 share/httpd/htdocs/manual/mod/mod_ssl/ssl_template.title-toc.gif
 share/httpd/htdocs/manual/mod/mod_ssl/ssl_template.title-tutor.gif
-share/mod_ssl/cca.sh
-share/mod_ssl/gid-mkcert.sh
-share/mod_ssl/loadcacert.cgi
-share/mod_ssl/mca.sh
-share/mod_ssl/sign.sh
 @dirrm share/httpd/htdocs/manual/mod/mod_ssl
 @dirrm share/mod_ssl
