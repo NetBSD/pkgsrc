@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1 2004/11/19 10:10:08 adam Exp $
+
+--- configure.orig	2004-11-19 10:59:03.000000000 +0000
++++ configure
+@@ -2158,7 +2158,6 @@ test -z "$INSTALL_DATA" && INSTALL_DATA=
+ 
+ # Use the following lines for a release versions:
+ if test x"${GCC}" = xyes; then
+-  CFLAGS="-O3 -fomit-frame-pointer"
+ fi
+ 
+ # extra command line options
