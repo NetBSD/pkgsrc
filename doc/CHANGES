@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3049 2003/08/16 09:09:20 recht Exp $
+$NetBSD: CHANGES,v 1.3050 2003/08/16 09:25:45 recht Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3277,4 +3277,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Update if-psprint to 1.7 [abs 2003-08-15]
 	Update subversion to 0.27.0 [recht 2003-08-15]
 	Update cyrus-sasl2 to 2.1.15 [recht 2003-08-16]
+	Update cyrus-imapd21 to 2.1.14 [recht 2003-08-16]
 
