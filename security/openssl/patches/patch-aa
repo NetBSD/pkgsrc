@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.11 2002/08/25 19:23:18 jlam Exp $
+$NetBSD: patch-aa,v 1.12 2004/02/17 14:26:47 jlam Exp $
 
 --- config.orig	Sun Jun 16 05:32:14 2002
 +++ config
@@ -9,7 +9,7 @@ $NetBSD: patch-aa,v 1.11 2002/08/25 19:23:18 jlam Exp $
 -  sun3*-*-netbsd) OUT="NetBSD-m68" ;;
 -  *-*-netbsd) OUT="NetBSD-sparc" ;;
 +  sun3*-*-netbsd) OUT="NetBSD-m68k" ;;
-+  *-*-netbsd) OUT="NetBSD-`sysctl -n hw.machine_arch`" ;;
++  *-*-netbsd) OUT="NetBSD-${MACHINE_ARCH}" ;;
    *86*-*-openbsd) OUT="OpenBSD-x86" ;;
    alpha*-*-openbsd) OUT="OpenBSD-alpha" ;;
    pmax*-*-openbsd) OUT="OpenBSD-mips" ;;
