@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.198 2002/09/06 00:54:25 rh Exp $
+# $NetBSD: Makefile,v 1.199 2002/09/07 04:42:38 rh Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -102,6 +102,7 @@ SUBDIR+=	libflash
 SUBDIR+=	libgdgeda
 SUBDIR+=	libggi
 SUBDIR+=	libgii
+SUBDIR+=	libgnomecanvas
 SUBDIR+=	librsvg
 SUBDIR+=	libungif
 SUBDIR+=	libwmf
