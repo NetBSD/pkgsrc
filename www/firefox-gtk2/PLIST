@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/03/03 17:54:38 bouyer Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/03/10 12:58:13 taya Exp $
 bin/${MOZILLA}
 @comment begin PROGRAMS
 lib/${MOZILLA}/${MOZILLA_BIN}
@@ -18,7 +18,6 @@ lib/${MOZILLA}/xpt_link
 @comment end PROGRAMS
 @comment begin SCRIPTS
 lib/${MOZILLA}/mozilla-config
-lib/${MOZILLA}/run-mozilla.sh
 @comment end SCRIPTS
 @comment begin DSO
 lib/${MOZILLA}/components/libaccessibility.${SO_SUFFIX}
@@ -83,6 +82,7 @@ lib/${MOZILLA}/components/libxpinstall.${SO_SUFFIX}
 lib/${MOZILLA}/components/libxremote_client.${SO_SUFFIX}
 lib/${MOZILLA}/components/libxremoteservice.${SO_SUFFIX}
 lib/${MOZILLA}/ipc/modules/liblockmodule.${SO_SUFFIX}
+lib/${MOZILLA}/ipc/modules/libtransmgr.${SO_SUFFIX}
 lib/${MOZILLA}/libgkgfx.${SO_SUFFIX}
 lib/${MOZILLA}/libgtkembedmoz.${SO_SUFFIX}
 lib/${MOZILLA}/libgtkxtbin.${SO_SUFFIX}
@@ -119,6 +119,7 @@ lib/${MOZILLA}/chrome/en-mac.jar
 lib/${MOZILLA}/chrome/en-unix.jar
 lib/${MOZILLA}/chrome/en-win.jar
 lib/${MOZILLA}/chrome/help.jar
+lib/${MOZILLA}/chrome/icons/default/default.xpm
 lib/${MOZILLA}/chrome/inspector.jar
 lib/${MOZILLA}/chrome/installed-chrome.txt
 lib/${MOZILLA}/chrome/modern.jar
@@ -126,8 +127,8 @@ lib/${MOZILLA}/chrome/pipnss.jar
 lib/${MOZILLA}/chrome/pippki.jar
 lib/${MOZILLA}/chrome/toolkit.jar
 lib/${MOZILLA}/chrome/venkman.jar
-lib/${MOZILLA}/components/accessibility.xpt
 lib/${MOZILLA}/components/accessibility-atk.xpt
+lib/${MOZILLA}/components/accessibility.xpt
 lib/${MOZILLA}/components/appshell.xpt
 lib/${MOZILLA}/components/autocomplete.xpt
 lib/${MOZILLA}/components/autoconfig.xpt
@@ -322,7 +323,6 @@ lib/${MOZILLA}/res/entityTables/html40Symbols.properties
 lib/${MOZILLA}/res/entityTables/htmlEntityVersions.properties
 lib/${MOZILLA}/res/entityTables/mathml20.properties
 lib/${MOZILLA}/res/entityTables/transliterate.properties
-lib/${MOZILLA}/res/fonts/fontEncoding.properties
 lib/${MOZILLA}/res/fonts/mathfont.properties
 lib/${MOZILLA}/res/fonts/mathfontCMEX10.properties
 lib/${MOZILLA}/res/fonts/mathfontCMSY10.properties
@@ -1773,6 +1773,8 @@ include/${MOZILLA}/string/nsStringIteratorUtils.h
 include/${MOZILLA}/string/nsStringTraits.h
 include/${MOZILLA}/string/nsUTF8Utils.h
 include/${MOZILLA}/string/nsXPIDLString.h
+include/${MOZILLA}/system-pref/nsSystemPrefLog.h
+include/${MOZILLA}/system-pref/nsSystemPrefService.h
 include/${MOZILLA}/toolkitcomps/nsToolkitCompsCID.h
 include/${MOZILLA}/txmgr/nsITransaction.h
 include/${MOZILLA}/txmgr/nsITransactionList.h
@@ -2257,6 +2259,8 @@ include/${MOZILLA}/zlib/zlib.h
 @dirrm lib/${MOZILLA}/defaults
 @dirrm lib/${MOZILLA}/components/myspell
 @dirrm lib/${MOZILLA}/components
+@dirrm lib/${MOZILLA}/chrome/icons/default
+@dirrm lib/${MOZILLA}/chrome/icons
 @dirrm lib/${MOZILLA}/chrome
 @dirrm lib/${MOZILLA}
 @dirrm include/${MOZILLA}/zlib
@@ -2299,6 +2303,7 @@ include/${MOZILLA}/zlib/zlib.h
 @dirrm include/${MOZILLA}/txtsvc
 @dirrm include/${MOZILLA}/txmgr
 @dirrm include/${MOZILLA}/toolkitcomps
+@dirrm include/${MOZILLA}/system-pref
 @dirrm include/${MOZILLA}/string
 @dirrm include/${MOZILLA}/spellchecker
 @dirrm include/${MOZILLA}/sidebar
