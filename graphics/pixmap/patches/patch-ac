@@ -1,20 +1,37 @@
-$NetBSD: patch-ac,v 1.2 1998/08/07 10:40:53 agc Exp $
+$NetBSD: patch-ac,v 1.3 2002/01/09 02:37:47 fredb Exp $
 
---- ./Imakefile.org	Fri May 13 04:04:38 1994
-+++ ./Imakefile	Mon Feb 27 16:31:46 1995
-@@ -27,10 +27,9 @@
+--- Imakefile.orig	Fri May 13 06:04:38 1994
++++ Imakefile
+@@ -8,7 +8,7 @@
+ XCOMM
+ 
+ XCOMM def/undef USE_MOTIF there if you want Pixmap to use Motif or not.
+-#undef USE_MOTIF
++#define USE_MOTIF
+ #ifdef HPArchitecture
+ CCOPTIONS = -Aa -D_HPUX_SOURCE -DNO_EDITRES
+ #if ProjectX > 4
+@@ -27,16 +27,14 @@
  PIXMAPDIR = $(LIBDIR)/Pixmap
  
  XCOMM Specify here your Xpm installation directories
 -        XPM_INCLUDEDIR = /usr/local/include
-         XPM_LIBDIR = $(LIBDIR)/xpm
+-        XPM_LIBDIR = $(LIBDIR)/xpm
 -        XPM_INCLUDEDIR = /net/koala/include
 -        XPM_LIBDIR = /net/koala/lib/sun4
-+        XPM_INCLUDEDIR = $(INCDIR)
+-        EXTRA_INCLUDES = $(R5EXT) -I. -I.. -I$(XPM_INCLUDEDIR) -I/usr/include/$(MOTIFVER)
++        XPM_INCLUDEDIR = $(BUILDLINK_DIR)/include
 +        XPM_LIBDIR = $(USRLIBDIR)
-         EXTRA_INCLUDES = $(R5EXT) -I. -I.. -I$(XPM_INCLUDEDIR) -I/usr/include/$(MOTIFVER)
++        EXTRA_INCLUDES = $(R5EXT) -I. -I.. -I$(XPM_INCLUDEDIR) -I$(MOTIFBASE)/include
  
  #ifdef USE_MOTIF
+ XCOMM Motif configuration
+   LOCAL_DEFINES = $(IEEE_DEFS) $(SIGNAL_DEFINES) -D_NO_PROTO
+-LOCAL_LIBRARIES = -L$(XPM_LIBDIR) -lXpm -L/usr/lib/$(MOTIFVER) -lXm $(XMULIB) $(XTOOLLIB) $(XLIB)
++LOCAL_LIBRARIES = -L$(XPM_LIBDIR) -lXpm ${MOTIFLIB} -lXm $(XMULIB) $(XTOOLLIB) $(XLIB)
+         BITMAPS = MDown MFlipHoriz MFlipVert MFold  MLeft MRight MRotateLeft \
+                   MRotateRight Stipple MUp
+ #else
 @@ -89,7 +88,7 @@
  
  Pixmap.ad: APixmap.ad

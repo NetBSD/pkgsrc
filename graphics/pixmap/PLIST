@@ -1,17 +1,14 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:52:55 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/01/09 02:37:47 fredb Exp $
 bin/pixmap
 lib/X11/app-defaults/Pixmap
-lib/X11/Pixmap/Down
-lib/X11/Pixmap/FlipHoriz
-lib/X11/Pixmap/FlipVert
-lib/X11/Pixmap/Fold
-lib/X11/Pixmap/Left
-lib/X11/Pixmap/Right
-lib/X11/Pixmap/RotateLeft
-lib/X11/Pixmap/RotateRight
+lib/X11/Pixmap/MDown
+lib/X11/Pixmap/MFlipHoriz
+lib/X11/Pixmap/MFlipVert
+lib/X11/Pixmap/MFold
+lib/X11/Pixmap/MLeft
+lib/X11/Pixmap/MRight
+lib/X11/Pixmap/MRotateLeft
+lib/X11/Pixmap/MRotateRight
 lib/X11/Pixmap/Stipple
-lib/X11/Pixmap/Up
-lib/X11/Pixmap/Term
-lib/X11/Pixmap/Excl
+lib/X11/Pixmap/MUp
 man/cat1/pixmap.0
-lib/libXgnu.a
