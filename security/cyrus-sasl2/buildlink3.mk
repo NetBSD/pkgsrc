@@ -1,0 +1,19 @@
+# $NetBSD: buildlink3.mk,v 1.1 2004/01/03 23:06:45 jlam Exp $
+
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
+CYRUS_SASL_BUILDLINK3_MK:=	${CYRUS_SASL_BUILDLINK3_MK}+
+
+.if !empty(CYRUS_SASL_BUILDLINK3_MK:M\+)
+BUILDLINK_DEPENDS.cyrus-sasl?=		cyrus-sasl>=2.1.12
+BUILDLINK_PKGSRCDIR.cyrus-sasl?=	../../security/cyrus-sasl2
+.endif	# CYRUS_SASL_BUILDLINK3_MK
+
+.if !empty(BUILDLINK_DEPTH:M\+)
+BUILDLINK_DEPENDS+=	cyrus-sasl
+.endif
+
+.if !empty(CYRUS_SASL_BUILDLINK3_MK:M\+)
+BUILDLINK_PACKAGES+=	cyrus-sasl
+.endif	# CYRUS_SASL_BUILDLINK3_MK
+
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:C/\+$//}
