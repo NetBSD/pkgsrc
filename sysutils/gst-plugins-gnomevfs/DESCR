@@ -1,0 +1,3 @@
+This package provides the gnomevfs plugin for GStreamer, which allows file
+access through the GNOME VFS abstraction layer.  This means that it can open
+files using any of the methods supported by the GNOME VFS library.
