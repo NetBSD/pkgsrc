@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.647 2003/06/18 10:39:11 drochner Exp $
+$NetBSD: TODO,v 1.648 2003/06/19 18:10:25 wiz Exp $
 
 Suggested new packages
 ======================
@@ -85,7 +85,6 @@ Suggested package updates
 	o bzflag-1.7g0
 	o centericq-4.9.4
 	o cervisia-2.0
-	o cfengine-1.6.5 [pkg/19459|seb]
 	o clisp-2.30
 	o courier-0.42.2
 	o courier-imap-1.7.0
@@ -110,7 +109,6 @@ Suggested package updates
 	o fox-1.0.40
 	o fsviewer-0.2.5
 	o gabber-0.8.8
-	o galeon-1.2.11
 	o gauche-0.7 [kei]
 	o gawk-3.1.2
 	o gcpio-2.5 [pkg/20799]
@@ -188,6 +186,7 @@ Suggested package updates
 	o napshare-1.2
 	o net-snmp-5.0.7 [pkg/19939]
 	o net-snmp-5.0.8
+	o netatalk-1.6.3 [pkg/21930]
 	o newscache-0.99.22p1
 	o ns-flash-6.0.79
 	o ntop2-2.2
@@ -247,14 +246,15 @@ Suggested package updates
 	o tcpreplay-1.4.4
 	o tightvnc-1.2.8
 	o tkman-2.2
-	o top-3.5b12.3
+	o top-3.5b12.5
 	o ttf2pt1-3.4.3
+	o tuxpaint-0.9.11
 	o vfu-4.00
 	o vice-1.12
 	o vnc-3.3.7 [http://www.realvnc.com/download.html]
 	o vttest-20030301
 	o wdm-1.25
-	o wine-20030508
+	o wine-20030618
 	o wmbiff-0.4.15
 	o wmweather-2.4.0
 	o wwwoffle-2.7h
@@ -279,6 +279,7 @@ Suggested package updates
 	o ysm-2.9.0
 	o yudit-2.7.5
 	o zenicb 1.31 (needs merge with lots of local changes)
+	o zsh-4.0.7
 
 Infrastructure problems which need addressing
 =============================================
