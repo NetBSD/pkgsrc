@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.4 2001/02/27 17:41:07 hubertf Exp $
-sbin/mouse-pppoe
-share/doc/mouse_pppoe/pppoe.readme
-@dirrm share/doc/mouse_pppoe

@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 1998/01/23 11:41:18 bouyer Exp $
-bin/xbmbrowser
-lib/X11/app-defaults/XbmBrowser
-lib/X11/app-defaults/XbmBrowser-color
-lib/X11/xbmbrowser/xbmbrowser.menu
-lib/X11/xbmbrowser/xbmbrowser.menu.tut
-man/cat1/xbmbrowser.0

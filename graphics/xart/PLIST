@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:54:34 zuntum Exp $
+bin/xart
+man/cat1/xart.0
+lib/X11/app-defaults/XArt

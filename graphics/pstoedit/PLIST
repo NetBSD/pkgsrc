@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:53:31 zuntum Exp $
+bin/pstoedit
+man/man1/pstoedit.1
+share/pstoedit/doc/changelog.htm
+share/pstoedit/doc/index.htm
+share/pstoedit/doc/pstoedit.htm
+share/pstoedit/doc/readme.txt
+@dirrm share/pstoedit/doc
+share/pstoedit/latex2e.fmp
+share/pstoedit/mpost.fmp
+@dirrm share/pstoedit

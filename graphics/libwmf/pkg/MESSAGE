@@ -1,8 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.2 2001/02/06 14:24:09 wiz Exp $
-
-For getting the most out of libwmf, please consider getting the default
-MS Windows TrueType fonts and installing xfstt, a free TrueType font
-server for X11.
-
-===========================================================================

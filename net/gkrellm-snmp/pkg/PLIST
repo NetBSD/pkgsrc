@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/10/31 00:28:26 damon Exp $
-lib/gkrellm/plugins/gkrellm_snmp.so

@@ -1,0 +1,17 @@
+#!/bin/sh
+#
+# $NetBSD: DEINSTALL,v 1.1 2001/10/31 23:27:30 zuntum Exp $
+
+PKGNAME=$1
+
+case "$2" in
+	DEINSTALL) cat << EOF
+===========================================================================
+If you won't be using ${PKGNAME} any longer, you may want to
+remove apsfilter's configuration directory (usually /etc/apsfilter) and
+SETUP.cfg from apsfilter's directory
+(usually @LOCALBASE@/share/apsfilter/SETUP.cfg)
+===========================================================================
+EOF
+	;;
+esac

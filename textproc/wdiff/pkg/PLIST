@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2000/03/16 14:09:22 wiz Exp $
-bin/wdiff
-@unexec install-info --delete %D/info/wdiff.info %D/info/dir
-info/wdiff.info
-@exec install-info %D/info/wdiff.info %D/info/dir

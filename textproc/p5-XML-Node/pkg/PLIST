@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2001/05/25 02:47:10 hubertf Exp $
-${PERL5_SITELIB}/XML/orders.xml
-${PERL5_SITELIB}/XML/test.xml
-${PERL5_SITELIB}/XML/foo.xml
-${PERL5_SITELIB}/XML/README

@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/09/26 05:49:31 jlam Exp $
-sbin/tcpslice
-man/man1/tcpslice.1

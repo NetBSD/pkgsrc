@@ -1,0 +1,13 @@
+#! /bin/sh
+#	$NetBSD: INSTALL,v 1.1 2001/10/31 23:29:39 zuntum Exp $
+
+case "$2" in
+POST-INSTALL)
+	if egrep '^skkserv[ 	]' /etc/services >/dev/null; then
+		:
+	else
+		echo '
+skkserv		1178/tcp		# SKK server' >>/etc/services
+	fi
+	;;
+esac

@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:52:25 zuntum Exp $
+lib/netscape/plugins/ShockwaveFlash.class
+lib/netscape/plugins/libflashplayer.so
+@unexec rmdir %D/lib/netscape/plugins 2>/dev/null || true

@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/09/12 15:32:17 kim Exp $
-sbin/cpogm
-man/man8/cpogm.8

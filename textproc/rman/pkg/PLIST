@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.5 2000/08/18 00:15:34 fredb Exp $
-bin/rman
-man/man1/rman.1

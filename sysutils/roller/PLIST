@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:53:40 zuntum Exp $
+sbin/logprune
+sbin/logroll
+sbin/roller
+share/roller/proc-cron
+share/roller/proc-httpd-access
+share/roller/proc-httpd-errors
+share/roller/proc-ipmon
+share/roller/proc-messages
+share/roller/proc-news
+share/roller/proc-newstally
+share/roller/proc-radius
+share/roller/proc-sendmail.st
+share/roller/proc-wtmp
+share/roller/proc-xferlog
+@dirrm share/roller
