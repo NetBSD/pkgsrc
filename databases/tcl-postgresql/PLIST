@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:12:54 zuntum Exp $
+bin/pgtclsh
+include/pgsql/libpgtcl.h
+lib/libpgtcl.a
+lib/libpgtcl.so
+lib/libpgtcl.so.2
+lib/libpgtcl.so.2.1
+man/man1/pgtclsh.1

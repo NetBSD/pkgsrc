@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2001/04/22 16:03:27 wiz Exp $
-bin/gogo
-share/doc/gogo/readme.txt
-@dirrm share/doc/gogo
