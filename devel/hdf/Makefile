@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/02/28 22:18:38 jtb Exp $
+# $NetBSD: Makefile,v 1.2 2001/03/02 19:40:51 jtb Exp $
 
 DISTNAME=	HDF4.1r4
 PKGNAME=	hdf-4.1r4
@@ -13,21 +13,22 @@ COMMENT=	NCSA Hierarchical Data Format
 DEPENDS+=	f2c-[0-9]*:../../lang/f2c
 DEPENDS+=	jpeg-[0-9]*:../../graphics/jpeg
 
+USE_FORTRAN=	#defined
+
 EVAL_PREFIX+=	JPEGBASE=jpeg F2CBASE=f2c
-MAKE_ENV+=	"JPEGBASE=${JPEGBASE}"
-MAKE_ENV+=	"F2CBASE=${F2CBASE}"
 
 post-patch:
-	(cd ${WRKSRC}/hdf/src; for i in *.f; do			\
-		${F2CBASE}/bin/f2c $$i;				\
-	done)
-	(cd ${WRKSRC}/mfhdf/fortran; for i in *.f; do		\
-		${F2CBASE}/bin/f2c $$i;				\
-	done)
-	for i in `${FIND} ${WRKSRC}/mfhdf/ -type f -print`; do	\
+	for i in fortran/config/jackets-fbsd.c			\
+	fortran/fort_ps/mfhdfp.h fortran/jackets.src		\
+	libsrc/cdftest.cmf libsrc/globdef.c libsrc/local_nc.h	\
+	libsrc/xdrposix.c libsrc/xdrstdio.c ncdump/dumplib.c	\
+	ncdump/vardata.c ncgen/generate.c ncgen/ncgen.h		\
+	libsrc/mfhdf.h; do					\
 	${SED} -e 's:"netcdf.h":"netcdf_hdf.h":g'		\
 		-e 's:\<netcdf.h\>:\<netcdf_hdf.h\>:g'		\
-		< $$i > $$i.tmp && ${MV} -f $$i.tmp $$i;	\
+	< ${WRKSRC}/mfhdf/$$i > ${WRKSRC}/mfhdf/$$i.tmp		\
+	&& ${MV} -f ${WRKSRC}/mfhdf/$$i.tmp			\
+	${WRKSRC}/mfhdf/$$i;					\
 	done
 	${MV} -f ${WRKSRC}/mfhdf/libsrc/netcdf.h.in 		\
 	${WRKSRC}/mfhdf/libsrc/netcdf_hdf.h
@@ -35,6 +36,14 @@ post-patch:
 	${WRKSRC}/mfhdf/ncdump/hdfncdump.1
 	${MV} -f ${WRKSRC}/mfhdf/ncgen/ncgen.1			\
 	${WRKSRC}/mfhdf/ncgen/hdfncgen.1
+
+pre-build:
+	(cd ${WRKSRC}/hdf/src; for i in *.f; do			\
+		${F2CBASE}/bin/f2c $$i;				\
+	done)
+	(cd ${WRKSRC}/mfhdf/fortran; for i in *.f; do		\
+		${F2CBASE}/bin/f2c $$i;				\
+	done)
 
 pre-configure:
 	${CC} ${FILESDIR}/bytesex.c -o ${WRKSRC}/bytesex
