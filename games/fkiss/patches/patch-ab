@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.1.1.1 2002/07/14 09:40:30 rh Exp $
+
+--- Makefile.am.orig	Mon Oct 16 22:22:57 2000
++++ Makefile.am
+@@ -6,8 +6,7 @@
+  extern.h fkiss.h headers.h kiss.h timer.h ulaw.h version.h work.h\
+  grip0.xbm grip1.xbm hand0.xbm hand1.xbm icon.xbm\
+  coptions
+-LDFLAGS = @X_LIBS@
+-LDADD = -lX11
++LDADD = -lX11 -lossaudio @X_LIBS@
+ INCLUDES = -I@x_includes@
+ 
+ EXTRA_DIST = fkiss.man fkissrc.smp\
