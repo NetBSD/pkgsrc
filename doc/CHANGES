@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6718 2004/07/28 21:16:42 tv Exp $
+$NetBSD: CHANGES,v 1.6719 2004/07/28 21:41:52 shannonjr Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3623,3 +3623,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated cpuflags to 0.74 [abs 2004-07-28]
 	Added jdk12-2.0.11 [tv 2004-07-28]
 	Added jdk12-openjit-1.1.16 [tv 2004-07-28]
+	Updated gcc34 to 3.4.1nb3 [shannonjr 2004-07-28]
+	Updated gcc34-ada to 3.4.1nb3 [shannonjr 2004-07-28]
