@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.86 2001/03/03 12:27:50 frueauf Exp $
+# $NetBSD: Makefile,v 1.87 2001/03/04 03:26:50 assar Exp $
 #
 
 DISTNAME=       fetchmail-5.7.0
@@ -34,7 +34,7 @@ CONFIGURE_ARGS+=--without-ssl
 
 BUILD_DEFS+=	FETCHMAIL_USE_SSL
 
-.if defined(KERBEROS) && ${KERBEROS} == 4
+.if defined(KERBEROS)
 USE_KERBEROS=	yes
 CONFIGURE_ARGS+=--with-kerberos=yes
 .else

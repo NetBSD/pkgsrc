@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2001/02/17 17:49:41 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2001/03/04 03:26:51 assar Exp $
 
 DISTNAME=		cyrus-sasl-1.5.24
 PKGNAME=		${DISTNAME}nb3
@@ -52,20 +52,17 @@ CONFIGURE_ARGS+=	--disable-sia		# --- no SIA
 CONFIGURE_ARGS+=	--disable-srp		# --- no SRP
 CONFIGURE_ARGS+=	--disable-x509		# --- no X.509
 
-.if defined(KERBEROS) && ${KERBEROS} == 4
-CONFIGURE_ARGS+=	--enable-krb4=${PREFIX}	# KERBEROS_V4
+.if defined(KERBEROS)
+USE_KERBEROS=		# defined
+CONFIGURE_ARGS+=	--enable-krb4=${PREFIX} --enable-gssapi=/usr # KERBEROS_V4
 DEPENDS+=		kth-krb4-*:../../security/kth-krb4
-PLIST_SRC+=		${PKGDIR}/PLIST.krb4
-.else
-CONFIGURE_ARGS+=	--disable-krb4		# --- no KERBEROS_V4
-.endif
-
-.if ${OPSYS} == "SunOS" || (defined(KERBEROS) && ${KERBEROS} == 5)
+PLIST_SRC+=		${PKGDIR}/PLIST.krb4 ${PKGDIR}/PLIST.krb5
+.elif ${OPSYS} == "SunOS"
 USE_KERBEROS=		# defined
 CONFIGURE_ARGS+=	--enable-gssapi=/usr	# GSSAPI
 PLIST_SRC+=		${PKGDIR}/PLIST.krb5
 .else
-CONFIGURE_ARGS+=	--disable-gssapi	# --- no GSSAPI
+CONFIGURE_ARGS+=	--disable-krb4 --disable-gssapi # --- no KERBEROS_V4
 .endif
 
 PLIST_SRC+=		${PKGDIR}/PLIST.plugins

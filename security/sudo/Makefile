@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2001/02/23 08:11:35 itojun Exp $
+# $NetBSD: Makefile,v 1.33 2001/03/04 03:26:52 assar Exp $
 # FreeBSD Id: Makefile,v 1.9 1997/11/12 03:24:41 obrien Exp
 #
 
@@ -26,18 +26,11 @@ CONFIGURE_ARGS+=	--with-skey
 CONFIGURE_ARGS+=	--without-skey
 .endif
 
-.if defined(KERBEROS) && ${KERBEROS} == 4
+.if defined(KERBEROS)
 USE_KERBEROS=		# defined
-CONFIGURE_ARGS+=	--with-kerb4
+CONFIGURE_ARGS+=	--with-kerb4 --with-kerb5
 .else
-CONFIGURE_ARGS+=	--without-kerb4
-.endif
-
-.if defined(KERBEROS) && ${KERBEROS} == 5
-USE_KERBEROS=		# defined
-CONFIGURE_ARGS+=	--with-kerb5
-.else
-CONFIGURE_ARGS+=	--without-kerb5
+CONFIGURE_ARGS+=	--without-kerb4 --without-kerb5
 .endif
 
 CONFIGURE_ARGS+=	--with-nbsdops --disable-path-info

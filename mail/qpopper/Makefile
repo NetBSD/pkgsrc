@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2001/02/17 18:25:03 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2001/03/04 03:26:51 assar Exp $
 #
 
 DISTNAME=		qpopper3.1.2
@@ -20,6 +20,11 @@ CONFIGURE_ARGS+=	--libexecdir=${PREFIX}/libexec \
 			--with-apop=/etc/apop.auth --with-apopuid=root
 
 .include "../../mk/bsd.prefs.mk"
+
+.if defined(KERBEROS)
+USE_KERBEROS=		# defined
+CONFIGURE_ARGS+=	--enable-kerberos
+.endif
 
 BUILD_DEFS+=		QPOPPER_SERVERMODE USE_INET6
 
