@@ -1,17 +1,17 @@
-$NetBSD: patch-ad,v 1.10 2003/03/18 15:06:21 jmmv Exp $
+$NetBSD: patch-ad,v 1.11 2003/07/11 23:28:06 wiz Exp $
 
---- doc/Makefile.in.orig	2003-02-24 20:15:02.000000000 +0000
+--- doc/Makefile.in.orig	Sun Jul  6 23:14:59 2003
 +++ doc/Makefile.in
-@@ -138,7 +138,7 @@ XPTR_OBJ = @XPTR_OBJ@
- Z_CFLAGS = @Z_CFLAGS@
+@@ -139,7 +139,7 @@ Z_CFLAGS = @Z_CFLAGS@
  Z_LIBS = @Z_LIBS@
+ pythondir = @pythondir@
  
 -DOC_MODULE = libxml2-$(VERSION)
 +DOC_MODULE = libxml2
  
  # The top-level SGML file.
- DOC_MAIN_SGML_FILE = gnome-xml.sgml
-@@ -148,7 +148,7 @@ DOC_SOURCE_DIR = ..
+ DOC_MAIN_XML_FILE = gnome-xml.xml
+@@ -149,7 +149,7 @@ DOC_SOURCE_DIR = ..
  
  HTML_DIR = $(datadir)/doc
  
@@ -20,7 +20,7 @@ $NetBSD: patch-ad,v 1.10 2003/03/18 15:06:21 jmmv Exp $
  PAGES = architecture.html bugs.html contribs.html docs.html DOM.html \
      downloads.html entities.html example.html help.html index.html \
      interface.html intro.html library.html namespaces.html news.html \
-@@ -370,8 +370,8 @@ install-data-local: 
+@@ -379,8 +379,9 @@ install-data-local: 
  	-@INSTALL@ -m 0644 $(srcdir)/xml.html $(srcdir)/encoding.html $(srcdir)/FAQ.html $(srcdir)/structure.gif $(srcdir)/DOM.gif $(srcdir)/smallfootonly.gif $(srcdir)/redhat.gif $(srcdir)/libxml.gif $(srcdir)/w3c.png $(srcdir)/Libxml2-Logo-180x168.gif $(srcdir)/Libxml2-Logo-90x34.gif $(DESTDIR)$(TARGET_DIR)
  	-@INSTALL@ -m 0644 $(srcdir)/html/*.html $(DESTDIR)$(TARGET_DIR)
  	-@INSTALL@ -m 0644 $(srcdir)/html/index.sgml $(DESTDIR)$(TARGET_DIR)
@@ -28,6 +28,7 @@ $NetBSD: patch-ad,v 1.10 2003/03/18 15:06:21 jmmv Exp $
 -	-@(tar cf - tutorial | (cd $(DESTDIR)$(TARGET_DIR) && tar xvf -))
 +	$(mkinstalldirs) $(DESTDIR)$(TARGET_DIR)/tutorial
 +	-@(cd tutorial && $(PAX) -rwpppm . $(DESTDIR)$(TARGET_DIR)/tutorial)
++
  
- .PHONY : html sgml templates scan
+ .PHONY : html xml templates scan
  
