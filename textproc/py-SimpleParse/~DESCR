@@ -1,0 +1,7 @@
+Initial import of py-SimpleParse 2.0.0 
+pkg provided by adam at mo pkgsrc-wip
+
+SimpleParse is a BSD-licensed Python package providing a simple parser 
+generator for use with the mxTextTools  text-tagging engine. SimpleParse 
+allows you to generate tagging tables for use with the text-tagging engine 
+directly from your EBNF grammar.
