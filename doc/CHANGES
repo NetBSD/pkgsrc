@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8724 2005/01/12 21:07:52 reed Exp $
+$NetBSD: CHANGES,v 1.8725 2005/01/12 21:52:55 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -272,3 +272,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added xvidcap-gtk2-1.1.3 [reed 2005-01-12]
 	Updated drscheme to 209 [jschauma 2005-01-12]
 	Updated inkscape to 0.40 [reed 2005-01-12]
+	Updated gcalctool to 4.4.22 [jmmv 2005-01-12]
