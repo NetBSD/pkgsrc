@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/04/23 01:32:43 markd Exp $
+# $NetBSD: Makefile,v 1.2 2002/09/09 01:19:34 markd Exp $
 
 R_PKGNAME=	cluster
-R_PKGVER=	1.4-0
+R_PKGVER=	1.4-2
 
 MAINTAINER=	markd@netbsd.org
 COMMENT=	Functions for clustering (by Rousseeuw et al.)

@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2002/04/23 01:31:30 markd Exp $
+$NetBSD: distinfo,v 1.2 2002/09/09 01:19:34 markd Exp $
 
-SHA1 (R/boot_1.2-7.tar.gz) = 9beced90eb9595f01292918b1891eb26bf93005b
-Size (R/boot_1.2-7.tar.gz) = 191383 bytes
+SHA1 (R/boot_1.2-8.tar.gz) = 528cb945bf5e998a6083550370afaf6d48142b38
+Size (R/boot_1.2-8.tar.gz) = 182135 bytes

@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2002/04/23 01:40:18 markd Exp $
+$NetBSD: distinfo,v 1.2 2002/09/09 01:19:37 markd Exp $
 
-SHA1 (R/survival_2.8-2.tar.gz) = ab057ab99f65eb4057c807272df4617b77a58043
-Size (R/survival_2.8-2.tar.gz) = 1007886 bytes
+SHA1 (R/survival_2.9-4.tar.gz) = ac8e61d1a5544902ebdbdfa1029ca760666cb93d
+Size (R/survival_2.9-4.tar.gz) = 1067335 bytes
