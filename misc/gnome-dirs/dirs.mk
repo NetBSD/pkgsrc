@@ -1,4 +1,4 @@
-# $NetBSD: dirs.mk,v 1.1 2004/04/14 15:26:41 jmmv Exp $
+# $NetBSD: dirs.mk,v 1.2 2004/05/15 13:35:51 jmmv Exp $
 #
 # This file is intended to be included by misc/gnome1/dirs.mk and
 # misc/gnome2/dirs.mk, not directly by packages.
@@ -7,7 +7,8 @@
 .if !defined(DIRS_GNOME_MK)
 DIRS_GNOME_MK=		# defined
 
-GNOME_DIRS=		share/gnome/apps
+GNOME_DIRS=		share/gnome
+GNOME_DIRS+=		share/gnome/apps
 GNOME_DIRS+=		share/gnome/apps/Applications
 GNOME_DIRS+=		share/gnome/apps/Development
 GNOME_DIRS+=		share/gnome/apps/Games
