@@ -1,0 +1,11 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 10:33:53 agc Exp $
+
+MD5 (plp_1_8.tar.gz) = 63c0871eb0504c69677c8e16f2d43ea2
+SHA1 (patch-aa) = c63110d134d400cbb18e5ac12fb11d66e1d4300a
+SHA1 (patch-ab) = 8f272d487b78508fe083b649f181b270a95e975f
+SHA1 (patch-ac) = 1eaa86ad1e20aa1580c86c9bb52877004dd9ff89
+SHA1 (patch-ad) = 4083bd57bb74d11e50eb873997ecc56659c803fe
+SHA1 (patch-ae) = bf71655dff0406c304ac7baafdb7acb960e70e99
+SHA1 (patch-af) = 979c46bbc833b74cc4303be05c9f0f7ffb776400
+SHA1 (patch-ag) = 354183a25f00d951e5cbc25e64b11b1daac21939
+SHA1 (patch-ah) = e0a90f7f8f70ab94f252af28d0d6ecbb878265df
