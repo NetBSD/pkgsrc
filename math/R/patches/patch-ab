@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.9 2001/05/03 01:54:16 jtb Exp $
+
+--- aclocal.m4.orig	Sun Jul 30 22:46:45 2000
++++ aclocal.m4
+@@ -400,6 +400,9 @@
+   printf("number of errors %d\n", res);
+   return(res);
+ }
++
++void MAIN__(void){abort();}
++
+ EOF
+       changequote([, ])
+       if ${CC-cc} ${CFLAGS} -c conftest.c 1>&AC_FD_CC 2>&AC_FD_CC; then
