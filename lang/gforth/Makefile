@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2004/05/02 04:59:23 snj Exp $
+# $NetBSD: Makefile,v 1.18 2004/07/18 09:38:26 schmonz Exp $
 
 DISTNAME=		gforth-0.6.2
 CATEGORIES=		lang
@@ -27,9 +27,7 @@ TEST_TARGET=	test
 KERNEL_FI=	`cd ${WRKSRC} && (${ECHO} 'prkern:'; ${ECHO} '	@${ECHO} $$(kernel_fi)'; ${ECHO}; ${CAT} Makefile) | ${MAKE} -f - prkern`
 
 # XXX Need test.
-#.if ${OPSYS} == "Darwin"
-#.  include "../../devel/dlcompat/buildlink3.mk"
-#.endif
+#.include "../../devel/dlcompat/buildlink3.mk"
 
 post-build:
 	@${ECHO}; ${ECHO} building PLIST...
