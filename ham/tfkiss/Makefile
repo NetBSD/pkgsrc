@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2001/02/16 15:13:51 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2001/09/09 08:16:22 wulf Exp $
 #
 
-DISTNAME=	tfkiss-1.2.3
+DISTNAME=	tfkiss-1.2.4
 CATEGORIES=	ham
 MASTER_SITES=	ftp://ftp.ping.net.au/pub/unix/ham/
 
