@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.2 1998/08/07 11:10:48 agc Exp $
+$NetBSD: patch-ac,v 1.3 1999/12/06 21:09:12 abs Exp $
 
---- Makefile.tail	1998/07/23 14:17:28	1.1
-+++ Makefile.tail	1998/07/23 14:22:07
+--- Makefile.tail.orig	Fri Jul 31 19:01:10 1998
++++ Makefile.tail	Tue Nov 23 23:20:28 1999
 @@ -14,6 +14,7 @@
  	@[ -d $(BINDIR) ]  || mkdir $(BINDIR)
  	@[ -d $(DATADIR) ] || mkdir $(DATADIR)
