@@ -1,9 +1,4 @@
-# New ports collection makefile for:    lsof
-# Version required:     4.29
-# Date created:         Sat July 20, 1996
-# Whom:                 David O'Brien (obrien@FreeBSD.org)
-#
-# $NetBSD: Makefile,v 1.2 1998/04/02 09:35:38 frueauf Exp $
+# $NetBSD: Makefile,v 1.3 1998/04/15 10:38:49 agc Exp $
 # FreeBSD Id: Makefile,v 1.19 1998/03/08 06:44:48 obrien Exp
 #
 
@@ -56,4 +51,4 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/scripts/* ${PREFIX}/share/lsof
 	@chmod 0444 ${PREFIX}/share/lsof/00*
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

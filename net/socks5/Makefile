@@ -1,9 +1,4 @@
-# New ports collection makefile for:	socks5
-# Version required:			beta-0.17.2-exportable
-# Date created:				24 Apr 1996
-# Whom:					pst
-#
-# $NetBSD: Makefile,v 1.8 1998/02/02 08:59:30 hubertf Exp $
+# $NetBSD: Makefile,v 1.9 1998/04/15 10:38:40 agc Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/08/28 06:49:06 obrien Exp
 #
 
@@ -42,4 +37,4 @@ post-install:
 	ln -fs ${PREFIX}/lib/libsocks5_sh.so ${PREFIX}/lib/libsocks5_sh.so.0.0
 	${LDCONFIG} || ${TRUE}
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

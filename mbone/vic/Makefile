@@ -1,9 +1,4 @@
-# New ports collection makefile for:    vic
-# Version required:			2.8
-# Date created:				1997 Nov 19
-# Whom:					is
-#
-# $NetBSD: Makefile,v 1.4 1998/01/30 13:57:57 agc Exp $
+# $NetBSD: Makefile,v 1.5 1998/04/15 10:38:33 agc Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/09/11 03:54:53 fenner Exp
 #
 
@@ -24,4 +19,4 @@ post-install:
 	strip ${PREFIX}/bin/vic
 	strip ${PREFIX}/bin/histtolut
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

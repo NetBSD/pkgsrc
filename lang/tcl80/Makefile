@@ -1,9 +1,4 @@
-# New ports collection makefile for:	tcl8.0
-# Version required:	8.0p2
-# Date created:		19 August 1997
-# Whom:			jkh
-#
-# $NetBSD: Makefile,v 1.8 1998/02/14 01:00:51 tron Exp $
+# $NetBSD: Makefile,v 1.9 1998/04/15 10:38:30 agc Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1997/08/20 10:33:35 jkh Exp
 #
 
@@ -121,4 +116,4 @@ post-install:
 test:
 	cd ${WRKSRC} && ${MAKE} test
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

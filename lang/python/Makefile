@@ -1,9 +1,4 @@
-# New ports collection makefile for:	python
-# Version required:	1.5
-# Date created:		1 January 1998
-# Whom:			tsarna@endicor.com
-#
-# $NetBSD: Makefile,v 1.2 1998/02/01 01:54:43 tron Exp $
+# $NetBSD: Makefile,v 1.3 1998/04/15 10:38:29 agc Exp $
 #
 
 DISTNAME=	python1.5
@@ -36,4 +31,4 @@ post-configure:
 post-install:
 	strip ${PREFIX}/bin/python
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

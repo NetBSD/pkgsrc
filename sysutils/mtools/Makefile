@@ -1,9 +1,4 @@
-# Packages collection makefile for:    mtools
-# Version required:     3.6
-# Date created:         22 Jan 1998
-# Whom:                 is
-#
-# $NetBSD: Makefile,v 1.5 1998/02/16 07:41:31 hubertf Exp $
+# $NetBSD: Makefile,v 1.6 1998/04/15 10:38:49 agc Exp $
 #
 
 DISTNAME=	mtools-3.8
@@ -29,4 +24,4 @@ MAN5=		mtools.5
 post-install:
 	${PREFIX}/bin/install-info ${PREFIX}/info/mtools.info ${PREFIX}/info/dir
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

@@ -1,9 +1,4 @@
-# New ports collection makefile for:	xblast
-# Version required:			2.2.1
-# Date Created:				30 January 1998
-# Whom:					root@garbled.futureone.com
-#
-# $NetBSD: Makefile,v 1.1 1998/02/08 23:37:13 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 1998/04/15 10:38:24 agc Exp $
 #
 
 DISTNAME=		xblast-2.2
@@ -21,4 +16,4 @@ USE_IMAKE=		yes
 post-patch:
 	cd ${WRKSRC} ; ${SED} '/file_appl_def/s@/usr/lib/X11@'${PREFIX}'/lib/X11@' defaults.h >xx ; ${MV} xx defaults.h
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

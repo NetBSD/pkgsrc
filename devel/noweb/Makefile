@@ -1,9 +1,4 @@
-# New ports collection makefile for:	noweb
-# Version required:	noweb-2.8a
-# Date created:		29 July 1995
-# Whom:			Thomas Gellekum <tg@freebsd.org>
-#
-# $NetBSD: Makefile,v 1.5 1998/02/24 12:27:00 agc Exp $
+# $NetBSD: Makefile,v 1.6 1998/04/15 10:38:21 agc Exp $
 # FreeBSD Id: Makefile,v 1.10 1997/09/15 07:22:06 tg Exp
 #
 
@@ -24,4 +19,4 @@ MAN1=		cpif.1 nodefs.1 noroots.1 noweb.1 noindex.1 \
 		nountangle.1 noweave.1
 MAN7=		nowebstyle.7 nowebfilters.7
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

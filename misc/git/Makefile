@@ -1,9 +1,4 @@
-# New ports collection makefile for:	git
-# Version required:	4.3.11
-# Date created:		12 Jul 1995
-# Whom:			torstenb@FreeBSD.ORG
-#
-# $NetBSD: Makefile,v 1.7 1998/03/28 21:37:35 frueauf Exp $
+# $NetBSD: Makefile,v 1.8 1998/04/15 10:38:35 agc Exp $
 # FreeBSD Id: Makefile,v 1.8 1996/11/21 11:54:39 asami Exp
 #
 
@@ -31,4 +26,4 @@ post-install:
 	${MKDIR} ${PREFIX}/share/doc
 	${MV} ${PREFIX}/lib/git/html ${PREFIX}/share/doc/git
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

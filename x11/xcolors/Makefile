@@ -1,9 +1,4 @@
-# New ports collection makefile for:	xcolors
-# Version required:	R6 contrib
-# Date created:		10 May 1995
-# Whom:			asami
-#
-# $NetBSD: Makefile,v 1.2 1998/01/23 12:08:35 bouyer Exp $
+# $NetBSD: Makefile,v 1.3 1998/04/15 10:38:56 agc Exp $
 # FreeBSD: Makefile,v 1.9 1998/01/22 00:41:36 fenner Exp
 #
 
@@ -19,4 +14,4 @@ USE_IMAKE=	yes
 IGNOREFILES=	xcolors.tar.gz
 CAT1=    xcolors.0
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

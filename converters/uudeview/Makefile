@@ -1,9 +1,4 @@
-# New ports collection makefile for:	uudeview
-# Version Required:     0.5.9
-# Date Created:		04 Aug 1996
-# Whom:			Tim Vanderhoek <ac199@freenet.hamilton.on.ca>
-#
-# $NetBSD: Makefile,v 1.3 1998/03/02 00:06:45 tron Exp $
+# $NetBSD: Makefile,v 1.4 1998/04/15 10:38:17 agc Exp $
 # $FreeBSD Id: Makefile,v 1.15 1998/02/18 22:19:58 hoek Exp
 #
 
@@ -34,4 +29,4 @@ post-install:
 	@${ECHO_MSG} "===>  Not copying available documents"
 .endif
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

@@ -1,9 +1,4 @@
-# New ports collection makefile for:	tcptrace
-# Version required:	4.1.3
-# Date created:		3 March 1997
-# Whom:			fenner
-#
-# $NetBSD: Makefile,v 1.4 1998/01/24 21:47:07 hubertf Exp $
+# $NetBSD: Makefile,v 1.5 1998/04/15 10:38:40 agc Exp $
 # FreeBSD Id: Makefile,v 1.3 1997/07/19 19:43:36 fenner Exp
 #
 
@@ -29,4 +24,4 @@ do-install:
 .endfor
 .endif
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

@@ -1,9 +1,4 @@
-# New ports collection makefile for:    FD
-# Version required:     1.01h
-# Date created:         20 Feb 1996
-# Whom:                 Nobuhiro Yasutomi <nobu@psrc.isac.co.jp>
-#
-# $NetBSD: Makefile,v 1.3 1998/01/24 21:01:49 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 1998/04/15 10:38:34 agc Exp $
 # FreeBSD Id: Makefile,v 1.5 1997/01/06 06:38:33 max Exp
 #
 
@@ -34,4 +29,4 @@ post-install:
 	@strip ${PREFIX}/bin/fd
 	cd ${WRKSRC} ; [ -f .fdrc ] && ${CP} .fdrc ${PREFIX}/etc/fdrc
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

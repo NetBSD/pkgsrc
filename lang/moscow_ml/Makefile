@@ -1,9 +1,4 @@
-# New ports collection makefile for:    moscow-ml
-# Version required:     1.42
-# Date created:         17 February 1998
-# Whom:                 lamj@stat.cmu.edu
-#
-# $NetBSD: Makefile,v 1.1 1998/02/17 10:18:36 agc Exp $
+# $NetBSD: Makefile,v 1.2 1998/04/15 10:38:29 agc Exp $
 #
 
 DISTNAME=       mos14src
@@ -27,4 +22,4 @@ post-install:
 	${CP} -R ${WRKDIR}/mosml/examples/* ${PREFIX}/share/examples/moscow_ml
 .endif
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

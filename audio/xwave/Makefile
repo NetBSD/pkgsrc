@@ -1,9 +1,4 @@
-# New ports collection makefile for:	xwave
-# Version required:			0.6
-# Date created:				1998-02-21
-# Whom:					hubertf@netbsd.org
-#
-# $NetBSD: Makefile,v 1.1 1998/02/21 22:43:46 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 1998/04/15 10:38:15 agc Exp $
 #
 
 DISTNAME=		xwave-0.6
@@ -23,4 +18,4 @@ post-patch:
 	cd ${WRKSRC} ; ${MV} src/XWave src/XWave.ad
 	cd ${WRKSRC} ; ${TOUCH} src/xwave.man
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

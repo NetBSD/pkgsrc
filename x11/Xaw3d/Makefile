@@ -1,9 +1,4 @@
-# New ports collection Makefile for: Xaw3d
-# Version required:	1.3
-# Date created:         30th November 1997
-# Whom:                 tron@lyssa.owl.de, soren@t.dk
-#
-# $NetBSD: Makefile,v 1.11 1998/03/12 00:58:06 agc Exp $
+# $NetBSD: Makefile,v 1.12 1998/04/15 10:38:52 agc Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/06/19 09:33:26 asami Exp
 #
 
@@ -32,4 +27,4 @@ post-install:
 			< ${PKGDIR}/PLIST > ${PLIST_SRC};	\
 	fi
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

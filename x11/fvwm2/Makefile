@@ -1,9 +1,4 @@
-# New ports collection makefile for:	Internationalized fvwm2
-# Version required:	2.0.46
-# Date created:		20 Jan 1996
-# Whom:			peter
-#
-# $NetBSD: Makefile,v 1.6 1998/03/24 23:18:40 tron Exp $
+# $NetBSD: Makefile,v 1.7 1998/04/15 10:38:53 agc Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/10/11 10:42:43 jkh Exp
 #
 
@@ -45,4 +40,4 @@ post-install:
 		${PREFIX}/lib/X11/fvwm2/pixmaps
 	@${CAT} ${PKGDIR}/MESSAGE
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

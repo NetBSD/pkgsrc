@@ -1,10 +1,4 @@
-# New ports collection makefile for:	sniffit
-# Version required:	0.3.5
-# Date created:		28 Mar 1998
-# Whom:			bsdx
-#
-# $NetBSD: Makefile,v 1.2 1998/03/30 09:57:56 hubertf Exp $
-# FreeBSD 
+# $NetBSD: Makefile,v 1.3 1998/04/15 10:38:40 agc Exp $
 #
 
 DISTNAME=	sniffit.0.3.5
@@ -25,4 +19,4 @@ do-install:
 	${INSTALL_MAN}     ${WRKSRC}/sniffit.5 ${PREFIX}/man/man5
 	${INSTALL_MAN}     ${WRKSRC}/sniffit.8 ${PREFIX}/man/man8
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

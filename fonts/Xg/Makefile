@@ -1,9 +1,4 @@
-# New ports collection makefile for:    libXg
-# Version required:     ????? arbitrarily picked 1.0 for version
-# Date created:         Sun Aug 13 12:36:14 CDT 1995
-# Whom:                 erich@rrnet.com
-#
-# $NetBSD: Makefile,v 1.3 1998/01/24 22:15:53 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 1998/04/15 10:38:44 agc Exp $
 # FreeBSD Id: Makefile,v 1.4 1997/01/27 15:59:35 erich Exp
 #
 
@@ -17,4 +12,4 @@ MAINTAINER=	erich@FreeBSD.org
 NO_WRKSUBDIR=	yes
 USE_X11=	yes
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

@@ -1,9 +1,4 @@
-# New packages collection makefile for: bison
-# Version required:                     1.25
-# Date created:                         20 March 1998
-# Whom:                                 Jason R. Thorpe
-#
-# $NetBSD: Makefile,v 1.2 1998/04/13 10:11:28 tron Exp $
+# $NetBSD: Makefile,v 1.3 1998/04/15 10:38:19 agc Exp $
 
 DISTNAME=	bison-1.25
 CATEGORIES=	devel
@@ -19,4 +14,4 @@ MAN1=		bison.1
 post-install:
 		@install-info ${PREFIX}/info/bison.info ${PREFIX}/info/dir
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

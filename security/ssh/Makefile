@@ -1,9 +1,4 @@
-# New ports collection makefile for:	ssh
-# Version required:     		1.2.22
-# Date created:				19971214
-# Whom:					hubertf@netbsd.org
-#
-# $NetBSD: Makefile,v 1.15 1998/03/19 02:20:53 tv Exp $
+# $NetBSD: Makefile,v 1.16 1998/04/15 10:38:47 agc Exp $
 # FreeBSD Id: Makefile,v 1.47 1997/11/10 22:04:42 dima Exp
 #
 
@@ -23,8 +18,8 @@ GNU_CONFIGURE=		YES
 
 # Include local make config file here.  It is essential to have this
 # precede any override targets (those that override defaults in
-# <bsd.port.mk> that test variables that may be set here.  Note that
-# this inclusion is otherwise redundant, since <bsd.port.mk> includes
+# <bsd.pkg.mk> that test variables that may be set here.  Note that
+# this inclusion is otherwise redundant, since <bsd.pkg.mk> includes
 # <bsd.own.mk>, which includes it.
 # XXX: FIXME ! We need a simple way of doing this in many dozen pkgs.
 
@@ -149,7 +144,7 @@ post-install:
 pre-clean:
 	@${RM} -f ${PKGDIR}/PLIST ${PKGDIR}/MESSAGE ${PKGDIR}/DEINSTALL
 
-# Include <bsd.port.mk> here.  It is essential to have all the override
+# Include <bsd.pkg.mk> here.  It is essential to have all the override
 # targets precede inclusion of this.
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

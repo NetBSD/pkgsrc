@@ -1,9 +1,4 @@
-# New ports collection makefile for:	boehm-gc
-# Version required:	4.12
-# Date created:		15 November 1996
-# Whom:			Mike McGaughey <mmcg@cs.monash.edu.au>
-#
-# $NetBSD: Makefile,v 1.4 1998/02/26 16:48:55 agc Exp $
+# $NetBSD: Makefile,v 1.5 1998/04/15 10:38:19 agc Exp $
 # FreeBSD Id: Makefile,v 1.1 1996/11/16 01:51:25 jdp Exp
 #
 
@@ -22,4 +17,4 @@ MAKE_ENV+=	CP="${CP}"
 MAKE_ENV+=	INSTALL_DATA="${INSTALL_DATA}"
 MAKE_ENV+=	INSTALL_MAN="${INSTALL_MAN}"
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

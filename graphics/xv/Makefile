@@ -1,9 +1,4 @@
-# New ports collection makefile for:	xv
-# Version required:	3.10a
-# Date created:		30 October 1994
-# Whom:			smace
-#
-# $NetBSD: Makefile,v 1.6 1998/02/05 14:22:41 frueauf Exp $
+# $NetBSD: Makefile,v 1.7 1998/04/15 10:38:28 agc Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/07/03 07:37:08 asami Exp
 #
 
@@ -42,4 +37,4 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/docs/xvdocs.ps ${PREFIX}/share/doc/xv
 .endif
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

@@ -1,7 +1,4 @@
-# Makefile for:		rpm
-# Version required:	2.4.12
-#
-# $NetBSD: Makefile,v 1.8 1998/03/20 05:54:42 mycroft Exp $
+# $NetBSD: Makefile,v 1.9 1998/04/15 10:38:37 agc Exp $
 #
 
 DISTNAME=	rpm-2.4.12
@@ -21,4 +18,4 @@ MAN8=		rpm.8 rpm2cpio.8
 pre-install:
 	${MKDIR} ${PREFIX}/include/rpm
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

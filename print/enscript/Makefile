@@ -1,9 +1,4 @@
-# New ports collection makefile for:	enscript
-# Version required:     	1.5.0
-# Date created:			24 Jul, 1997
-# Whom:				kline
-#
-# $NetBSD: Makefile,v 1.3 1998/02/23 14:27:51 agc Exp $
+# $NetBSD: Makefile,v 1.4 1998/04/15 10:38:45 agc Exp $
 # FreeBSD Id: Makefile,v 1.4 1997/11/27 08:10:30 tg Exp
 #
 
@@ -50,4 +45,4 @@ post-install:
 	strip ${PREFIX}/bin/${file}
 .endfor
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

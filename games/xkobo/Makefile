@@ -1,9 +1,4 @@
-# New ports collection makefile for:    xkobo
-# Version required:     1.11
-# Date created:         18 Jul 1995
-# Whom:                 jkh
-#
-# $NetBSD: Makefile,v 1.3 1998/01/24 05:12:53 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 1998/04/15 10:38:25 agc Exp $
 # FreeBSD Id: Makefile,v 1.10 1997/11/12 09:57:17 tg Exp
 #
 
@@ -20,4 +15,4 @@ ALL_TARGET+=	xkobo all
 
 CAT1=		xkobo.0
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

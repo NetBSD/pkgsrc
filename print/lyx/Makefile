@@ -1,9 +1,4 @@
-# New ports collection makefile for:	lyx
-# Version required:	0.12.0
-# Date created:		Sa  12 Okt 1996 19:20:51 MET DST
-# Whom:			Andreas Klemm <andreas@klemm.gtn.com>
-#
-# $NetBSD: Makefile,v 1.4 1998/03/20 12:37:50 frueauf Exp $
+# $NetBSD: Makefile,v 1.5 1998/04/15 10:38:46 agc Exp $
 # FreeBSD Id: Makefile,v 1.14 1998/02/14 16:46:50 andreas Exp
 #
 
@@ -27,4 +22,4 @@ CONFIGURE_ARGS= --with-extra-lib=${X11BASE}/lib --with-extra-inc="${X11BASE}/inc
 
 MAN1=		lyx.1
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

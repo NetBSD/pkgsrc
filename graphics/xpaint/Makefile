@@ -1,9 +1,4 @@
-# New ports collection makefile for:    xpaint
-# Version required:     2.4.8
-# Date created:         2 Jan 1995
-# Whom:                 swallace
-#
-# $NetBSD: Makefile,v 1.2 1998/02/05 11:39:00 agc Exp $
+# $NetBSD: Makefile,v 1.3 1998/04/15 10:38:27 agc Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/08/29 12:17:50 tg Exp
 #
 
@@ -28,4 +23,4 @@ pre-configure:
 		< ${WRKSRC}/Local.config > ${WRKSRC}/Local.config.new && \
 	${MV} ${WRKSRC}/Local.config.new ${WRKSRC}/Local.config
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

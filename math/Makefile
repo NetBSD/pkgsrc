@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 1998/04/13 15:40:16 frueauf Exp $
+# $NetBSD: Makefile,v 1.2 1998/04/15 10:38:32 agc Exp $
 # FreeBSD Id: Makefile,v 1.38 1998/04/13 00:51:58 jseger Exp
 #
 
@@ -35,4 +35,4 @@
 #    SUBDIR += xplot
 #    SUBDIR += xspread
 
-.include <bsd.port.subdir.mk>
+.include "../mk/bsd.pkg.subdir.mk"

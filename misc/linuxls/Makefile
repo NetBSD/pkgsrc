@@ -1,9 +1,4 @@
-# New ports collection makefile for:	Linux-style colorized `ls'
-# Version required:			3.12.0.2 (GNU fileutils 3.12)
-# Date created:				06 January 1996
-# Whom:					bmc@WillsCreek.COM
-#
-# $NetBSD: Makefile,v 1.3 1998/01/24 21:06:58 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 1998/04/15 10:38:35 agc Exp $
 # FreeBSD Id: Makefile,v 1.6 1997/04/30 04:43:34 asami Exp
 #
 
@@ -22,4 +17,4 @@ MAINTAINER=	bmc@WillsCreek.COM
 GNU_CONFIGURE=	yes
 MAN1=		linuxls.1 dircolors.1
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

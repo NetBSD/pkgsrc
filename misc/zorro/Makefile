@@ -1,9 +1,4 @@
-# New ports collection makefile for:	zorro
-# Version required:     1.1p8
-# Date created:         03 Aug 1996
-# Whom:                 shanee@rabbit.augusta.de
-#
-# $NetBSD: Makefile,v 1.4 1998/01/30 13:57:28 agc Exp $
+# $NetBSD: Makefile,v 1.5 1998/04/15 10:38:38 agc Exp $
 # FreeBSD Id: Makefile,v 1.9 1997/11/22 19:55:25 jseger Exp
 #
 
@@ -30,4 +25,4 @@ do-install:
 	@echo "Take a look at ${PREFIX}/share/zorro/DOTzorrorc"
 	@echo ""
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

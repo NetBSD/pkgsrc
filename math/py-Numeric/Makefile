@@ -1,9 +1,4 @@
-# New ports collection makefile for:	Numeric Python
-# Version required:	1.1
-# Date created:		18 March 1998
-# Whom:			tsarna@endicor.com
-#
-# $NetBSD: Makefile,v 1.3 1998/04/12 23:19:32 tron Exp $
+# $NetBSD: Makefile,v 1.4 1998/04/15 10:38:32 agc Exp $
 
 DISTNAME=	NumPy-11
 PKGNAME=	py-Numeric-1.1
@@ -35,4 +30,4 @@ post-install:
 	@${MKDIR} ${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/Doc/*.html ${DOCDIR}
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

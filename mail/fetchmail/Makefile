@@ -1,9 +1,4 @@
-# New ports collection makefile for:	fetchmail
-# Version required:     4.3.6
-# Date created:		26 Oct 1996
-# Whom:			Ville Eerola <ve@sci.fi>
-#
-# $NetBSD: Makefile,v 1.4 1998/03/16 08:24:49 mycroft Exp $
+# $NetBSD: Makefile,v 1.5 1998/04/15 10:38:31 agc Exp $
 # $FreeBSD Id: Makefile,v 1.55 1998/01/29 17:13:07 ache Exp
 #
 
@@ -33,4 +28,4 @@ post-install:
 	   fetchmail-FAQ.html fetchmail-features.html \
 	   design-notes.html ${FDOC}
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

@@ -1,9 +1,4 @@
-# New ports collection makefile for:    icon
-# Version required:     9.3
-# Date created:         05 April 1995
-# Whom:                 thomas@ghpc8.ihf.rwth-aachen.de
-#
-# $NetBSD: Makefile,v 1.5 1998/02/01 10:26:26 frueauf Exp $
+# $NetBSD: Makefile,v 1.6 1998/04/15 10:38:29 agc Exp $
 # FreeBSD Id: Makefile,v 1.8 1997/02/12 08:39:15 tg Exp
 #
 
@@ -25,4 +20,4 @@ MANCOMPRESSED=	yes
 
 MAN1=		icon.1
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

@@ -1,9 +1,4 @@
-# New packages collection makefile for: hugs
-# Version required:	1.4
-# Date created:		22-Mar-98
-# Whom:			nathanw@mit.edu
-#
-# $NetBSD: Makefile,v 1.2 1998/04/03 22:11:43 tron Exp $
+# $NetBSD: Makefile,v 1.3 1998/04/15 10:38:28 agc Exp $
 
 DISTNAME=	hugs-January1998-source
 PKGNAME=	hugs-1.4
@@ -23,4 +18,4 @@ MAKE_ENV=	INSTALL="${INSTALL}" INSTALL_DATA="${INSTALL_DATA}" \
 post-extract:
 	@${LN} -s ${FILESDIR}/configure ${WRKSRC}
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

@@ -1,9 +1,4 @@
-# New ports collection makefile for:	tkcron-2.12
-# Version required:	2.12
-# Date created:		30 July 1996
-# Whom:			Sander Vesik <sander@haldjas.folklore.ee>
-#
-# $NetBSD: Makefile,v 1.3 1998/01/25 00:17:57 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 1998/04/15 10:38:55 agc Exp $
 # FreeBSD Id: Makefile,v 1.5 1997/11/22 20:10:39 jseger Exp
 #
 
@@ -24,4 +19,4 @@ NO_WRKSUBDIR=	yes
 post-extract:
 	@${CP} ${FILESDIR}/Makefile ${WRKSRC}
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

@@ -1,10 +1,4 @@
-#
-# New ports collection makefile for:	vim
-# Version required:			vim-5.0
-# Date Created:				19 February 1998
-# Whom:					tron
-#
-# $NetBSD: Makefile,v 1.4 1998/03/01 13:35:54 tron Exp $
+# $NetBSD: Makefile,v 1.5 1998/04/15 10:38:23 agc Exp $
 
 DISTNAME=	vim-5.0
 CATEGORIES=	editors
@@ -21,4 +15,4 @@ GNU_CONFIGURE=	yes
 MAN1=	ex.1 gview.1 gvim.1 rgview.1 rgvim.1 rview.1 rvim.1 view.1 vim.1 \
 	xxd.1 vim-ctags.1 vim-etags.1
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

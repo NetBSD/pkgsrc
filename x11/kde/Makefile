@@ -1,9 +1,4 @@
-# New ports collection makefile for:   kde
-# Version required:    Beta3
-# Date created:        4 November 1997
-# Whom:                Satoshi Asami <asami@freebsd.org>
-#
-# $NetBSD: Makefile,v 1.5 1998/04/14 11:41:54 hubertf Exp $
+# $NetBSD: Makefile,v 1.6 1998/04/15 10:38:54 agc Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/11/27 00:47:46 se Exp
 #
 
@@ -28,4 +23,4 @@ NO_BUILD=	yes
 
 do-install:	# empty
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

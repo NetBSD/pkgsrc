@@ -1,9 +1,4 @@
-# New ports collection makefile for:	PostgreSQL
-# Version required:	6.2.1
-# Date created:		April 2, 1997
-# Whom:			Marc G. Fournier <scrappy@FreeBSD.ORG>
-#
-# $NetBSD: Makefile,v 1.6 1998/03/16 14:40:48 hubertf Exp $
+# $NetBSD: Makefile,v 1.7 1998/04/15 10:38:18 agc Exp $
 # FreeBSD Id: Makefile,v 1.22 1997/12/24 01:21:37 alex Exp
 
 DISTNAME=	postgresql-6.2.1
@@ -105,4 +100,4 @@ post-install:
 	@${CAT} ${FILESDIR}/post-install-notes
 .endif
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

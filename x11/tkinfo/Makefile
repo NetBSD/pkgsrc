@@ -1,9 +1,4 @@
-# New ports collection makefile for:	tkinfo
-# Version required:     1.5
-# Date created:         16 Jan 1995
-# Whom:                 thomas@ghpc8.ihf.rwth-aachen.de
-#
-# $NetBSD: Makefile,v 1.3 1998/01/25 00:19:55 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 1998/04/15 10:38:55 agc Exp $
 # FreeBSD Id: Makefile,v 1.15 1997/12/16 09:26:12 tg Exp
 #
 
@@ -25,4 +20,4 @@ post-patch:
 	( cd ${WRKSRC} ; ${SED} 's|@PREFIX@|'${PREFIX}'|g' \
 		<tkinfo >tkinfo.BAK ; ${MV} tkinfo.BAK tkinfo )
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

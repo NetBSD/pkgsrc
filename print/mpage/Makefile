@@ -1,9 +1,4 @@
-# New ports collection makefile for:	mpage
-# Version required:	2.5
-# Date created:		19 February 1998
-# Whom:			Kapil Chowksey
-#
-# $NetBSD: Makefile,v 1.2 1998/04/01 21:06:09 tron Exp $
+# $NetBSD: Makefile,v 1.3 1998/04/15 10:38:46 agc Exp $
 # $FreeBSD Id: Makefile,v 1.1.1.1 1998/02/20 04:37:31 steve Exp
 
 DISTNAME=	mpage-2.5
@@ -16,4 +11,4 @@ MAINTAINER=	kchowksey@hss.hns.com
 MAN1=		mpage.1
 ALL_TARGET=	default
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"
