@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2002/04/10 04:22:19 itojun Exp $
+
+SHA1 (flash-0.4.10.tgz) = 41f2b8bba3e551e611913069e6e650bc4c8ab420
+Size (flash-0.4.10.tgz) = 358995 bytes
+SHA1 (patch-aa) = 82109ae32c5bb3c81c3b98c4163695eef4a07656
+SHA1 (patch-ab) = 044fd59b909c0763237a0e06f1c1953b05fa2f33
+SHA1 (patch-ac) = c8ea7f90e96b2a6eb381275c9dfe5d8d16425302

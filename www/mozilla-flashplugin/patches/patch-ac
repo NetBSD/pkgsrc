@@ -1,0 +1,11 @@
+$NetBSD: patch-ac,v 1.1.1.1 2002/04/10 04:22:19 itojun Exp $
+
+--- Player/Makefile-	Wed Apr 10 13:10:32 2002
++++ Player/Makefile	Wed Apr 10 13:10:44 2002
+@@ -1,5 +1,5 @@
+ FLASH=../Lib
+-CPPFLAGS=-I$(FLASH)
++CPPFLAGS=-I$(FLASH) -I/usr/X11R6/include
+ CFLAGS=-O3
+ LIBS = $(FLASH)/libflash.a ../Zlib/libz.a ../Jpeg/libjpeg.a -L/usr/X11R6/lib -lX11 -lXext -lm
+ CC=gcc
