@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1 1998/12/23 06:40:15 tsarna Exp $
+
+--- lib/python/Setup.orig	Wed Dec 23 00:13:53 1998
++++ lib/python/Setup	Wed Dec 23 00:17:20 1998
+@@ -12,4 +12,6 @@
+ cStringIO      ../Components/cPickle/cStringIO.c
+ cPickle        ../Components/cPickle/cPickle.c
+ 
+-zlib ../Components/zlib/zlib.c -I../Components/zlib ../Components/zlib/adler32.c ../Components/zlib/compress.c ../Components/zlib/crc32.c ../Components/zlib/gzio.c ../Components/zlib/uncompr.c ../Components/zlib/deflate.c ../Components/zlib/trees.c ../Components/zlib/zutil.c ../Components/zlib/inflate.c ../Components/zlib/infblock.c ../Components/zlib/inftrees.c ../Components/zlib/infcodes.c ../Components/zlib/infutil.c ../Components/zlib/inffast.c
++# This is already in NetBSD's Python package
++#
++#zlib ../Components/zlib/zlib.c -I../Components/zlib ../Components/zlib/adler32.c ../Components/zlib/compress.c ../Components/zlib/crc32.c ../Components/zlib/gzio.c ../Components/zlib/uncompr.c ../Components/zlib/deflate.c ../Components/zlib/trees.c ../Components/zlib/zutil.c ../Components/zlib/inflate.c ../Components/zlib/infblock.c ../Components/zlib/inftrees.c ../Components/zlib/infcodes.c ../Components/zlib/infutil.c ../Components/zlib/inffast.c
