@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2003/06/29 02:04:20 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2003/06/29 19:41:08 jlam Exp $
 #
 
 DISTNAME=	centericq-4.9.4
@@ -17,12 +17,6 @@ USE_GMAKE=		yes
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-ssl --with-openssl=${SSLBASE}
-#
-# libiconv depends on configure scripts to include <iconv.h> before
-# trying to link against -liconv.  Unfortunately, centericq's script
-# doesn't do this, so fake it.
-#
-CONFIGURE_ENV+=		ac_cv_lib_iconv_iconv=yes
 LIBS=			${LDFLAGS}
 
 USE_PERL5=		run
@@ -36,6 +30,15 @@ INCOMPAT_CURSES+=	NetBSD-1.6_*-* NetBSD-1.6.[1-9]_*-* NetBSD-1.6[A-T]-*
 .include "../../devel/ncurses/buildlink2.mk"
 .include "../../lang/perl5/buildlink2.mk"
 .include "../../security/openssl/buildlink2.mk"
+
+.if defined(BUILDLINK_LIBICONV_LDADD) && !empty(BUILDLINK_LIBICONV_LDADD)
+#
+# libiconv depends on configure scripts to include <iconv.h> before
+# trying to link against -liconv.  Unfortunately, centericq's script
+# doesn't do this, so fake it.
+#
+CONFIGURE_ENV+=		ac_cv_lib_iconv_iconv=yes
+.endif
 
 .include "../../mk/bsd.pkg.mk"
 
