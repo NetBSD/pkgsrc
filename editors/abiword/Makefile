@@ -1,15 +1,17 @@
-# $NetBSD: Makefile,v 1.8 2000/03/21 22:40:51 tron Exp $
+# $NetBSD: Makefile,v 1.9 2000/05/02 23:35:55 jlam Exp $
 #
 
-# According to the AbiSource license, compilations/distributions of AbiWord
-# not provided by AbiSource must be named "AbiWord Personal".
+# According to AbiSource's explanation of their trademark rights,
+# compilations/distributions of AbiWord not provided by AbiSource must
+# be named "AbiWord Personal" or some name completely unlike AbiSource's
+# registered trademarks.
 #
 DISTNAME=	abi-${ABIWORD_VERS}
 PKGNAME=	abiword-personal-${ABIWORD_VERS}
-ABIWORD_VERS=	0.7.8
+ABIWORD_VERS=	0.7.9
 CATEGORIES=	editors
 MASTER_SITES=	http://www.abisource.com/downloads/Version-${ABIWORD_VERS}/lf/
-DISTFILES=	${ABISRC} ${ABIDISTFILES} ${ICONVSRC} ${EXPATSRC} \
+DISTFILES=	${ABISRC} ${ABIDISTFILES} ${EXPATSRC} ${ICONVSRC} \
 		${UNIXFONTS} ${WVSRC}
 
 MAINTAINER=	jlam@netbsd.org
@@ -20,9 +22,9 @@ DEPENDS+=	gtk+-1.2.*:../../x11/gtk
 DEPENDS+=	png>=1.0.6:../../graphics/png
 DEPENDS+=	xpm-3.4k:../../graphics/xpm
 
-USE_X11=	yes
-USE_GMAKE=	yes
-NO_CONFIGURE=	yes
+USE_X11=	# defined
+USE_GMAKE=	# defined
+NO_CONFIGURE=	# defined
 ALL_TARGET=	compile canonical
 
 DIST_SUBDIR=	abisuite
@@ -33,20 +35,11 @@ ICONVSRC=	libiconv-${ABIWORD_VERS}${EXTRACT_SUFX}
 UNIXFONTS=	unixfonts-${ABIWORD_VERS}${EXTRACT_SUFX}
 WVSRC=		wv-${ABIWORD_VERS}${EXTRACT_SUFX}
 
-ABISUITE_HOME=		${PREFIX}/share/AbiSuite
-ABISUITE_LIBEXEC=	${PREFIX}/libexec/AbiSuite
-
-CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-Wl,-R${LOCALBASE}/lib -L${LOCALBASE}/lib
+CPPFLAGS+=	-I${LOCALBASE}/include				# png.h
+LDFLAGS+=	-Wl,-R${LOCALBASE}/lib -L${LOCALBASE}/lib	# -lpng
 
 MAKE_ENV+=	ABI_BUILD_VERSION="${ABIWORD_VERS}" \
-		ABISUITE_HOME="${ABISUITE_HOME}" \
-		ABISUITE_LIBEXEC="${ABISUITE_LIBEXEC}" \
 		OS_CFLAGS="${CPPFLAGS}" \
 		OS_DLLFLAGS="${LDFLAGS}"
-
-post-patch:
-	${MKDIR} ${WRKSRC}/src/pkg/netbsd
-	${CP} ${FILESDIR}/GNUMakefile.install ${WRKSRC}/src/pkg/netbsd/Makefile
 
 .include "../../mk/bsd.pkg.mk"
