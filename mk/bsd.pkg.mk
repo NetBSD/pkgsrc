@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1240 2003/08/22 13:32:40 grant Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1241 2003/08/22 22:04:03 seb Exp $
 #
 # This file is in the public domain.
 #
@@ -2442,7 +2442,7 @@ real-su-install: ${MESSAGE}
 .endif # !NO_PKG_REGISTER
 	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${INSTALL_COOKIE}
 .if defined(PKG_DEVELOPER) && (${CHECK_SHLIBS} == "YES")
-	@${MAKE} ${MAKEFLAGS} check-shlibs
+	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} ${MAKEFLAGS} check-shlibs
 .endif
 
 
