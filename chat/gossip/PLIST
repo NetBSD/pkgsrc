@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2004/06/25 08:52:39 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.9 2004/09/04 14:29:13 jmmv Exp $
 bin/gossip
 share/applications/gossip.desktop
 share/gconf/schemas/gossip.schemas
@@ -52,6 +52,7 @@ ${PKGLOCALEDIR}/locale/eo/LC_MESSAGES/gossip.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/gossip.mo
 ${PKGLOCALEDIR}/locale/eu/LC_MESSAGES/gossip.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gossip.mo
+${PKGLOCALEDIR}/locale/ga/LC_MESSAGES/gossip.mo
 ${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/gossip.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/gossip.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/gossip.mo
@@ -63,6 +64,7 @@ ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/gossip.mo
 ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/gossip.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/gossip.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/gossip.mo
+${PKGLOCALEDIR}/locale/sq/LC_MESSAGES/gossip.mo
 ${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/gossip.mo
 ${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/gossip.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gossip.mo
