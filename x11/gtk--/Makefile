@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2001/10/24 22:11:12 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2001/11/30 17:54:39 jlam Exp $
 # FreeBSD Id: Makefile,v 1.6 1999/01/12 16:50:43 vanilla Exp
 #
 
@@ -19,7 +19,6 @@ USE_X11BASE=		YES
 USE_BUILDLINK_ONLY=	YES
 GNU_CONFIGURE=		YES
 USE_GMAKE=		YES
-USE_PERL5=		YES
 USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/scripts/ltconfig
 
@@ -32,6 +31,7 @@ post-install:
 		${LOCALBASE}/share/aclocal/gtk--.m4
 
 .include "../../devel/libsigc++/buildlink.mk"
+.include "../../lang/perl5/buildlink.mk"
 .include "../../x11/gtk/buildlink.mk"
 .include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
