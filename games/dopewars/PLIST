@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2003/01/27 23:45:48 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.4 2003/07/12 10:07:35 wiz Exp $
 bin/dopewars
 man/man6/dopewars.6
 share/doc/${PKGNAME}/help/cops.html
@@ -47,8 +47,8 @@ ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/dopewars.mo
 share/pixmaps/dopewars-pill.png
 share/pixmaps/dopewars-shot.png
 share/pixmaps/dopewars-weed.png
-@dirrm in gnome-dirs: @dirrm share/gnome/apps/Games
-@dirrm in gnome-dirs: @dirrm share/gnome/apps
+@comment in gnome-dirs: @dirrm share/gnome/apps/Games
+@comment in gnome-dirs: @dirrm share/gnome/apps
 @dirrm share/dopewars
 @dirrm share/doc/${PKGNAME}/help
 @dirrm share/doc/${PKGNAME}
