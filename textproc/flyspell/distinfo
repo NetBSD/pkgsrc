@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2005/02/24 14:48:41 agc Exp $
+$NetBSD: distinfo,v 1.7 2005/03/27 20:37:11 wiz Exp $
 
-SHA1 (flyspell-1.7fnb1/flyspell-1.7f.el) = bec12b017923c0e2fa1887bbb3d016ea332acb2a
-RMD160 (flyspell-1.7fnb1/flyspell-1.7f.el) = 79d2fc823ebfac901567e15bb0cd595f2fa06a53
-Size (flyspell-1.7fnb1/flyspell-1.7f.el) = 92928 bytes
+SHA1 (flyspell-1.7h.el) = 93d0d6ab51aade91e833329566e64021a45ddcc6
+RMD160 (flyspell-1.7h.el) = 55f1845ed81faacce9cc195d6403d9c21b47c653
+Size (flyspell-1.7h.el) = 93784 bytes
