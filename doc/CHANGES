@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8930 2005/01/26 03:45:45 wiz Exp $
+$NetBSD: CHANGES,v 1.8931 2005/01/26 04:51:28 itojun Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -606,3 +606,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated wget to 1.9.1nb4 [bouyer 2005-01-25]
 	Updated libglade2 to 2.4.1nb1 [jmmv 2005-01-25]
 	Updated pkgfind to 20050125 [cube 2005-01-25]
+	Updated bind8 to 8.4.6 [cube 2005-01-26]
