@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.248 2002/10/14 09:32:43 wiz Exp $
+$NetBSD: CHANGES,v 1.249 2002/10/14 09:48:27 rh Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3236,3 +3236,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Added php4-curl-4.2.3 [martti 2002-10-14]
 	Updated links to 2.1.0.4 [wiz 2002-10-14]
 	Updated links-gui to 2.1.0.4 [wiz 2002-10-14]
+	Updated xmms to 1.2.7nb2 [rh 2002-10-14]
