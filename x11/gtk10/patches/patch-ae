@@ -1,0 +1,58 @@
+$NetBSD: patch-ae,v 1.1 1999/02/19 14:22:47 rh Exp $
+
+--- gdk/Makefile.in.orig	Mon Sep 21 06:20:35 1998
++++ gdk/Makefile.in	Tue Feb 16 15:09:06 1999
+@@ -81,9 +81,9 @@
+ 
+ gdkincludedir = $(includedir)/gdk
+ 
+-lib_LTLIBRARIES = libgdk.la
++lib_LTLIBRARIES = libgdk10.la
+ 
+-libgdk_la_SOURCES = \
++libgdk10_la_SOURCES = \
+ 	gdk.c		\
+ 	gdkcc.c		\
+ 	gdkcolor.c	\
+@@ -122,7 +122,7 @@
+ 	gdktypes.h	\
+ 	gdkx.h
+ 
+-libgdk_la_LDFLAGS = -version-info $(GTK_MAJOR_VERSION):$(GTK_MICRO_VERSION):0 \
++libgdk10_la_LDFLAGS = -version-info $(GTK_MAJOR_VERSION):$(GTK_MICRO_VERSION):0 \
+ 	@x_ldflags@ @x_libs@
+ 
+ INCLUDES = -I$(top_srcdir) -I../glib -I$(top_srcdir)/glib @x_cflags@ 
+@@ -155,8 +155,8 @@
+ X_LIBS = @X_LIBS@
+ X_EXTRA_LIBS = @X_EXTRA_LIBS@
+ X_PRE_LIBS = @X_PRE_LIBS@
+-libgdk_la_LIBADD = 
+-libgdk_la_OBJECTS =  gdk.lo gdkcc.lo gdkcolor.lo gdkcursor.lo gdkdnd.lo \
++libgdk10_la_LIBADD = 
++libgdk10_la_OBJECTS =  gdk.lo gdkcc.lo gdkcolor.lo gdkcursor.lo gdkdnd.lo \
+ gdkdraw.lo gdkfont.lo gdkgc.lo gdkglobals.lo gdkimage.lo gdkinput.lo \
+ gdkpixmap.lo gdkproperty.lo gdkrectangle.lo gdkregion.lo \
+ gdkselection.lo gdkvisual.lo gdkwindow.lo gdkxid.lo gxid_lib.lo
+@@ -178,8 +178,8 @@
+ 
+ TAR = tar
+ GZIP = --best
+-SOURCES = $(libgdk_la_SOURCES) $(gxid_SOURCES)
+-OBJECTS = $(libgdk_la_OBJECTS) $(gxid_OBJECTS)
++SOURCES = $(libgdk10_la_SOURCES) $(gxid_SOURCES)
++OBJECTS = $(libgdk10_la_OBJECTS) $(gxid_OBJECTS)
+ 
+ all: Makefile $(LTLIBRARIES) $(PROGRAMS) $(HEADERS)
+ 
+@@ -256,8 +256,8 @@
+ 
+ maintainer-clean-libtool:
+ 
+-libgdk.la: $(libgdk_la_OBJECTS) $(libgdk_la_DEPENDENCIES)
+-	$(LINK) -rpath $(libdir) $(libgdk_la_LDFLAGS) $(libgdk_la_OBJECTS) $(libgdk_la_LIBADD) $(LIBS)
++libgdk10.la: $(libgdk10_la_OBJECTS) $(libgdk10_la_DEPENDENCIES)
++	$(LINK) -rpath $(libdir) $(libgdk10_la_LDFLAGS) $(libgdk10_la_OBJECTS) $(libgdk10_la_LIBADD) $(LIBS)
+ 
+ mostlyclean-binPROGRAMS:
+ 

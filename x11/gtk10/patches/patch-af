@@ -1,0 +1,115 @@
+$NetBSD: patch-af,v 1.1 1999/02/19 14:22:47 rh Exp $
+
+--- gtk/Makefile.in.orig	Mon Sep 21 06:20:39 1998
++++ gtk/Makefile.in	Tue Feb 16 15:13:16 1999
+@@ -81,9 +81,9 @@
+ 
+ gtkincludedir = $(includedir)/gtk
+ 
+-lib_LTLIBRARIES = libgtk.la
++lib_LTLIBRARIES = libgtk10.la
+ 
+-libgtk_la_SOURCES = \
++libgtk10_la_SOURCES = \
+ 	gtkaccelerator.c	\
+ 	gtkadjustment.c		\
+ 	gtkaspectframe.c	\
+@@ -271,7 +271,7 @@
+ 	gtkwindow.h             \
+ 	gtktypebuiltins.h
+ 
+-libgtk_la_LDFLAGS = -version-info $(GTK_MAJOR_VERSION):$(GTK_MICRO_VERSION):0
++libgtk10_la_LDFLAGS = -version-info $(GTK_MAJOR_VERSION):$(GTK_MICRO_VERSION):0
+ 
+ EXTRA_DIST = \
+ 	line-arrow.xbm 		\
+@@ -299,41 +299,41 @@
+ noinst_PROGRAMS = testgtk testinput testselection simple 
+ 
+ testgtk_LDADD = \
+-	libgtk.la				\
+-	$(top_builddir)/gdk/libgdk.la		\
++	libgtk10.la				\
++	$(top_builddir)/gdk/libgdk10.la		\
+ 	@x_ldflags@				\
+ 	@x_libs@				\
+-	$(top_builddir)/glib/libglib.la		\
++	$(top_builddir)/glib/libglib10.la	\
+ 	-lm
+ 
+ testinput_LDADD = \
+-	libgtk.la				\
+-	$(top_builddir)/gdk/libgdk.la		\
++	libgtk10.la				\
++	$(top_builddir)/gdk/libgdk10.la		\
+ 	@x_ldflags@				\
+ 	@x_libs@				\
+-	$(top_builddir)/glib/libglib.la		\
++	$(top_builddir)/glib/libglib10.la	\
+ 	-lm
+ 
+ testselection_LDADD = \
+-	libgtk.la				\
+-	$(top_builddir)/gdk/libgdk.la		\
++	libgtk10.la				\
++	$(top_builddir)/gdk/libgdk10.la		\
+ 	@x_ldflags@				\
+ 	@x_libs@				\
+-	$(top_builddir)/glib/libglib.la		\
++	$(top_builddir)/glib/libglib10.la	\
+ 	-lm
+ 
+ simple_LDADD = \
+-	libgtk.la				\
+-	$(top_builddir)/gdk/libgdk.la		\
++	libgtk10.la				\
++	$(top_builddir)/gdk/libgdk10.la		\
+ 	@x_ldflags@				\
+ 	@x_libs@				\
+-	$(top_builddir)/glib/libglib.la		\
++	$(top_builddir)/glib/libglib10.la	\
+ 	-lm
+ 
+ DEPS = \
+-	libgtk.la		                \
+-	$(top_builddir)/gdk/libgdk.la		\
+-	$(top_builddir)/glib/libglib.la
++	libgtk10.la		                \
++	$(top_builddir)/gdk/libgdk10.la		\
++	$(top_builddir)/glib/libglib10.la
+ 
+ testgtk_DEPENDENCIES = $(DEPS)
+ testinput_DEPENDENCIES = $(DEPS)
+@@ -353,8 +353,8 @@
+ X_LIBS = @X_LIBS@
+ X_EXTRA_LIBS = @X_EXTRA_LIBS@
+ X_PRE_LIBS = @X_PRE_LIBS@
+-libgtk_la_LIBADD = 
+-libgtk_la_OBJECTS =  gtkaccelerator.lo gtkadjustment.lo \
++libgtk10_la_LIBADD = 
++libgtk10_la_OBJECTS =  gtkaccelerator.lo gtkadjustment.lo \
+ gtkaspectframe.lo gtkalignment.lo gtkarrow.lo gtkbin.lo gtkbbox.lo \
+ gtkbox.lo gtkbutton.lo gtkcheckbutton.lo gtkcheckmenuitem.lo \
+ gtkclist.lo gtkcolorsel.lo gtkcombo.lo gtkcontainer.lo gtkcurve.lo \
+@@ -401,8 +401,8 @@
+ 
+ TAR = tar
+ GZIP = --best
+-SOURCES = $(libgtk_la_SOURCES) testgtk.c testinput.c testselection.c simple.c
+-OBJECTS = $(libgtk_la_OBJECTS) testgtk.o testinput.o testselection.o simple.o
++SOURCES = $(libgtk10_la_SOURCES) testgtk.c testinput.c testselection.c simple.c
++OBJECTS = $(libgtk10_la_OBJECTS) testgtk.o testinput.o testselection.o simple.o
+ 
+ all: Makefile $(LTLIBRARIES) $(PROGRAMS) $(HEADERS)
+ 
+@@ -481,8 +481,8 @@
+ 
+ maintainer-clean-libtool:
+ 
+-libgtk.la: $(libgtk_la_OBJECTS) $(libgtk_la_DEPENDENCIES)
+-	$(LINK) -rpath $(libdir) $(libgtk_la_LDFLAGS) $(libgtk_la_OBJECTS) $(libgtk_la_LIBADD) $(LIBS)
++libgtk10.la: $(libgtk10_la_OBJECTS) $(libgtk10_la_DEPENDENCIES)
++	$(LINK) -rpath $(libdir) $(libgtk10_la_LDFLAGS) $(libgtk10_la_OBJECTS) $(libgtk10_la_LIBADD) $(LIBS)
+ 
+ mostlyclean-noinstPROGRAMS:
+ 

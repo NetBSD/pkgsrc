@@ -1,0 +1,87 @@
+$NetBSD: patch-ah,v 1.1 1999/02/19 14:22:47 rh Exp $
+
+--- docs/Makefile.in.orig	Mon Sep 21 06:20:43 1998
++++ docs/Makefile.in	Thu Feb 18 11:29:24 1999
+@@ -79,9 +79,9 @@
+ x_libs = @x_libs@
+ xinput_progs = @xinput_progs@
+ 
+-info_TEXINFOS = gdk.texi gtk.texi glib.texi
++info_TEXINFOS = gdk10.texi gtk10.texi glib10.texi
+ 
+-man_MANS = gtk-config.1
++man_MANS = gtk10-config.1
+ 
+ EXTRA_DIST =	\
+ 	texinfo.tex 		\
+@@ -107,9 +107,9 @@
+ CONFIG_CLEAN_FILES = 
+ TEXI2DVI = texi2dvi
+ TEXINFO_TEX = $(srcdir)/texinfo.tex
+-INFO_DEPS = gdk.info gtk.info glib.info
+-DVIS = gdk.dvi gtk.dvi glib.dvi
+-TEXINFOS = gdk.texi gtk.texi glib.texi
++INFO_DEPS = gdk10.info gtk10.info glib10.info
++DVIS = gdk10.dvi gtk10.dvi glib10.dvi
++TEXINFOS = gdk10.texi gtk10.texi glib10.texi
+ man1dir = $(mandir)/man1
+ MANS = $(man_MANS)
+ 
+@@ -133,16 +133,27 @@
+ 	  && CONFIG_FILES=$(subdir)/$@ CONFIG_HEADERS= $(SHELL) ./config.status
+ 
+ 
+-gdk.info: gdk.texi
+-gdk.dvi: gdk.texi
++gdk10.texi: gdk.texi
++	cp gdk.texi gdk10.texi
+ 
++gdk10.info: gdk10.texi
++gdk10.dvi: gdk10.texi
+ 
+-gtk.info: gtk.texi
+-gtk.dvi: gtk.texi
++gtk10.texi: gtk.texi
++	cp gtk.texi gtk10.texi
+ 
++gtk10.info: gtk10.texi
++gtk10.dvi: gtk10.texi
+ 
+-glib.info: glib.texi
+-glib.dvi: glib.texi
++
++glib10.texi: glib.texi
++	cp glib.texi glib10.texi
++
++glib10.info: glib10.texi
++glib10.dvi: glib10.texi
++
++gtk10-config.1: gtk-config.1
++	cp gtk-config.1 gtk10-config.1
+ 
+ 
+ DVIPS = dvips
+@@ -204,22 +215,12 @@
+ 	  done; \
+ 	done
+ 	@$(POST_INSTALL)
+-	@if $(SHELL) -c 'install-info --version | sed 1q | fgrep -s -v -i debian' >/dev/null 2>&1; then \
+-	  for file in $(INFO_DEPS); do \
+-	    echo " install-info --info-dir=$(DESTDIR)$(infodir) $(DESTDIR)$(infodir)/$$file";\
+-	    install-info --info-dir=$(DESTDIR)$(infodir) $(DESTDIR)$(infodir)/$$file || :;\
+-	  done; \
+-	else : ; fi
+ 
+ uninstall-info:
+ 	$(PRE_UNINSTALL)
+ 	@if $(SHELL) -c 'install-info --version | sed 1q | fgrep -s -v -i debian' >/dev/null 2>&1; then \
+ 	  ii=yes; \
+-	else ii=; fi; \
+-	for file in $(INFO_DEPS); do \
+-	  test -z "$ii" \
+-	    || install-info --info-dir=$(DESTDIR)$(infodir) --remove $$file; \
+-	done
++	else ii=; fi
+ 	@$(NORMAL_UNINSTALL)
+ 	for file in $(INFO_DEPS); do \
+ 	  (cd $(DESTDIR)$(infodir) && rm -f $$file $$file-[0-9] $$file-[0-9][0-9]); \

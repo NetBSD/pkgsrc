@@ -1,0 +1,32 @@
+$NetBSD: patch-aj,v 1.1 1999/02/19 14:22:47 rh Exp $
+
+--- docs/gdk.texi.orig	Sun Mar  1 21:24:38 1998
++++ docs/gdk.texi	Thu Feb 18 11:26:37 1999
+@@ -1,7 +1,7 @@
+ \input texinfo @c -*-texinfo-*-
+ @c %**start of header
+-@setfilename gdk.info
+-@settitle GDK
++@setfilename gdk10.info
++@settitle GDK10
+ @setchapternewpage odd
+ @c %**end of header
+ 
+@@ -10,7 +10,7 @@
+ @set update-month May 1996
+ 
+ @ifinfo
+-This file documents GDK, the General Drawing Kit
++This file documents GDK10, the General Drawing Kit Version 1.0
+ 
+ Copyright (C) 1996 Peter Mattis
+ 
+@@ -63,7 +63,7 @@
+ 
+ @dircategory User Interface Toolkit
+ @direntry
+-* GDK: (gdk).		The General Drawing Kit
++* GDK10: (gdk10).	The General Drawing Kit, Version 1.0
+ @end direntry
+ 
+ @node Top, Copying, (dir), (dir)
