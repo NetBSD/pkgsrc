@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/07/21 16:43:18 martti Exp $
+# $NetBSD: Makefile,v 1.8 2004/04/25 04:02:39 snj Exp $
 #
 
 DISTNAME=	cvs2html-1.82
@@ -9,12 +9,12 @@ MAINTAINER=	zuntum@NetBSD.org
 HOMEPAGE=	http://cvs.sslug.dk/cvs2html/
 COMMENT=	Perl script to turn ``cvs log'' output into HTML
 
-USE_BUILDLINK2=	YES
+NO_BUILDLINK=	YES
 NO_BUILD=	YES
+USE_PERL5=	# defined
 REPLACE_PERL=	cvs2html
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/cvs2html ${PREFIX}/bin
 
-.include "../../lang/perl5/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
