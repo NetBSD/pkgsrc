@@ -1,0 +1,10 @@
+$NetBSD: patch-af,v 1.1 2001/02/09 00:06:37 taca Exp $
+
+--- lib/Makefile.am.orig	Tue Dec  5 23:26:43 2000
++++ lib/Makefile.am
+@@ -10,4 +10,4 @@
+ libchasen_la_LDFLAGS = -version-info $(LTVERSION)
+ 
+ INCLUDES  = -I.. 
+-DEFS = -DRCPATH=\"$(pkgdatadir)/dic/ipadic/chasenrc\" @DEFS@
++DEFS = -DRCPATH=\"$(sysconfdir)/chasenrc\" @DEFS@
