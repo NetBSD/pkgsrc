@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/10/15 22:46:10 kristerw Exp $
+# $NetBSD: Makefile,v 1.13 2005/03/15 04:28:25 tv Exp $
 #
 
 DISTNAME=	NewsCache-0.99.22p1
@@ -12,6 +12,7 @@ COMMENT=	Free cache server for USENET News
 
 GNU_CONFIGURE=	YES
 USE_BUILDLINK3=	YES
+USE_GNU_TOOLS+=	make
 USE_LANGUAGES=	c c++
 USE_PKGINSTALL=	YES
 INFO_FILES=	NewsCache.info
