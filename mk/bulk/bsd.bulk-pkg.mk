@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.bulk-pkg.mk,v 1.17 2001/02/01 08:47:29 dmcmahill Exp $
+#	$NetBSD: bsd.bulk-pkg.mk,v 1.18 2001/02/08 19:17:38 dmcmahill Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@netbsd.org>
@@ -233,10 +233,9 @@ bulk-package:
 			${LS} -la ${BROKENFILE} ; \
 			${ECHO_MSG} ${MAKE} deinstall ; \
 			${DO}       ${MAKE} deinstall ; \
-			nerrors=`${GREP} -c '^\*\*\* Error code' ${BROKENFILE} || true`; \
-			${ECHO_MSG} " $$nerrors ${PKGPATH}/${BROKENFILE}" >> ${PKGSRCDIR}/${BROKENFILE}; \
 			${ECHO_MSG} "BULK> Marking all packages which depend upon ${PKGNAME} as broken:"; \
 			thisdir=`${GREP} " ${PKGNAME} " ${INDEXFILE} | ${AWK} '{print $$1}'` ;\
+			nbrokenby=0;\
 			for pkgdir in `${GREP} "^$$thisdir " ${SUPPORTSFILE} | ${SED} -e 's;^.*:;;g'`; do \
 				pkgname=`${GREP} "^$$pkgdir " ${INDEXFILE} | ${AWK} '{print $$2}'` ;\
 				${ECHO_MSG} "BULK> marking package that requires ${PKGNAME} as broken:  $$pkgname ($$pkgdir)";\
@@ -253,10 +252,13 @@ bulk-package:
 				fi; \
 				${ECHO_MSG} "BULK> $$pkgname ($$pkgdir) is broken because it depends upon ${PKGNAME} ($$thisdir) which is broken." \
 					>> ${PKGSRCDIR}/$$pkgdir/${BROKENFILE};\
+				nbrokenby=`expr $$nbrokenby + 1`;\
 				if ! `${GREP} " $$pkgdir/${BROKENFILE}" ${PKGSRCDIR}/${BROKENFILE} >/dev/null 2>&1` ; then \
-					${ECHO} " $$pkgerr $$pkgdir/${BROKENFILE}" >> ${PKGSRCDIR}/${BROKENFILE} ;\
+					${ECHO} " $$pkgerr $$pkgdir/${BROKENFILE} 0 " >> ${PKGSRCDIR}/${BROKENFILE} ;\
 				fi ;\
-			done \
+			done ;\
+			nerrors=`${GREP} -c '^\*\*\* Error code' ${BROKENFILE} || true`; \
+			${ECHO_MSG} " $$nerrors ${PKGPATH}/${BROKENFILE} $$nbrokenby " >> ${PKGSRCDIR}/${BROKENFILE} \
 			) 2>&1 | tee -a ${BROKENFILE}; \
 		fi ; \
 		${ECHO_MSG} "BULK> Cleaning packages and its depends" ;\
