@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5214 2004/03/11 16:56:12 xtraeme Exp $
+$NetBSD: CHANGES,v 1.5215 2004/03/11 17:26:56 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1415,3 +1415,6 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated ap-ruby-1.0.7 [taca 2004-03-11]
 	Updated gcalctool to 4.3.50 [jmmv 2004-03-11]
 	Updated fbdesk to 1.1.5 [xtraeme 2004-03-11]
+	Updated xine-lib to 1rc3a [jmmv 2004-03-11]
+	Updated xine-arts to 1rc3a [jmmv 2004-03-11]
+	Updated xine-esound to 1rc3a [jmmv 2004-03-11]
