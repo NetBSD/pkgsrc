@@ -1,30 +1,39 @@
-# $NetBSD: Makefile,v 1.13 2003/05/02 11:55:12 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2003/05/09 15:21:29 drochner Exp $
 
-DISTNAME=		dia-0.90
-PKGREVISION=		1
-CATEGORIES=		devel
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/dia/0.90/}
+DISTNAME=	dia-0.91
+CATEGORIES=	graphics
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/dia/0.91/}
 
 MAINTAINER=		jmcneill@invisible.yi.org
 HOMEPAGE=		http://www.lysator.liu.se/~alla/dia/
 COMMENT=		program for creating diagrams of all kinds
 
-BUILD_DEPENDS+=		bison>=1.35:../../devel/bison
+MAINTAINER=	jmcneill@invisible.yi.org
+HOMEPAGE=	http://www.lysator.liu.se/~alla/dia/
+COMMENT=	program for creating diagrams of all kinds
 
+DEPENDS=		gnome2-dirs>=1.0:../../misc/gnome2-dirs
+
+USE_BUILDLINK2=		YES
+USE_PKGLOCALEDIR=	YES
 USE_X11=		YES
 USE_GMAKE=		YES
 USE_LIBTOOL=		YES
-USE_BUILDLINK2=		YES
-USE_PKGLOCALEDIR=	YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 GNU_CONFIGURE=		YES
+CONFIGURE_ENV+=		PYTHON=${PYTHONBIN}
 CONFIGURE_ARGS+=	--enable-gnome
+CONFIGURE_ARGS+=	--with-python
 
-.include "../../graphics/gdk-pixbuf/buildlink2.mk"
-.include "../../x11/gnome-libs/buildlink2.mk"
-.include "../../textproc/libxml/buildlink2.mk"
-.include "../../devel/popt/buildlink2.mk"
-.include "../../textproc/libunicode/buildlink2.mk"
+PYTHON_PATCH_SCRIPTS=	plug-ins/python/gtkcons.py
 
+XSLT_FILE=	${WRKSRC}/plug-ins/xslt/xslt.c
+post-patch:
+	${MV} ${XSLT_FILE} ${XSLT_FILE}.pre
+	${SED}  -e "s,%%PREFIX%%,${PREFIX},g" ${XSLT_FILE}.pre > ${XSLT_FILE}
+
+.include "../../devel/libgnomeui/buildlink2.mk"
+.include "../../x11/py-gtk2/buildlink2.mk"
+.include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
