@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7355 2004/10/05 18:58:02 jdolecek Exp $
+$NetBSD: CHANGES,v 1.7356 2004/10/05 20:07:04 tron Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4556,3 +4556,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated rconfig to 0.39 [abs 2004-10-05]
 	Updated galeon to 1.3.17 [abs 2004-10-05]
 	Updated ns-flash to 7.0.25 [jdolecek 2004-10-05]
+	Updated qt3 to 3.3.3 [tron 2004-10-05]
