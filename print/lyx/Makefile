@@ -1,12 +1,13 @@
-# $NetBSD: Makefile,v 1.36 2001/09/27 23:18:36 jlam Exp $
+# $NetBSD: Makefile,v 1.37 2001/10/25 13:55:47 martti Exp $
 # FreeBSD Id: Makefile,v 1.14 1998/02/14 16:46:50 andreas Exp
 #
 
-DISTNAME=		lyx-1.1.6fix1
+DISTNAME=		lyx-1.1.6fix3
+PKGNAME=		lyx-1.1.6.3
 CATEGORIES=		print
-# XXX temporary: problems with the ftp server
-#MASTER_SITES=		ftp://ftp.lyx.org/pub/lyx/stable/
-MASTER_SITES=		ftp://gd.tuwien.ac.at/publishing/tex/lyx/stable/
+MASTER_SITES=		ftp://ftp.lyx.org/pub/lyx/stable/ \
+			ftp://gd.tuwien.ac.at/publishing/tex/lyx/stable/ \
+			ftp://ftp.sdsc.edu/pub/other/lyx/stable/
 
 MAINTAINER=		frueauf@netbsd.org
 HOMEPAGE=		http://www.lyx.org/
