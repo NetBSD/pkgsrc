@@ -1,4 +1,4 @@
-# $NetBSD: module.mk,v 1.33 2004/01/21 09:40:49 jlam Exp $
+# $NetBSD: module.mk,v 1.34 2004/05/05 08:29:44 recht Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install perl5 modules.
@@ -58,6 +58,7 @@ MAKE_PARAMS+=  CC="${CC}"
 .undef USE_GCC3
 .endif
 
+MAKE_ENV+=	LC_ALL=C
 .PHONY: perl5-configure
 perl5-configure:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
