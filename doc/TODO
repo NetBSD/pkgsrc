@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1140 2003/12/07 13:53:56 martti Exp $
+$NetBSD: TODO,v 1.1141 2003/12/07 15:17:20 martti Exp $
 
 Suggested new packages
 ======================
@@ -117,7 +117,6 @@ Suggested package updates
 	o avifile-devel-0.7.34-20030319
 	o awstats-5.9
 	o balsa-1.4.4
-	o bins-1.1.24
 	o blender-2.31a
 	o bzflag-1.7g2
 	o centericq-4.9.9
