@@ -1,0 +1,13 @@
+$NetBSD: patch-ak,v 1.1.1.1 2000/11/21 05:21:10 kei Exp $
+
+--- src/keyboard.c.orig	Mon Sep 20 23:36:21 1999
++++ src/keyboard.c	Mon Sep 20 23:37:10 1999
+@@ -301,7 +301,7 @@
+ 
+ /* The timestamp of the last input event we received from the X server.
+    X Windows wants this for selection ownership.  */
+-unsigned long last_event_timestamp;
++extern unsigned long last_event_timestamp;
+ 
+ Lisp_Object Qself_insert_command;
+ Lisp_Object Qforward_char;

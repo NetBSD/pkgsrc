@@ -1,0 +1,19 @@
+$NetBSD: patch-aw,v 1.1.1.1 2000/11/21 05:21:10 kei Exp $
+
+*** man/gnus.texi.orig	Fri Nov 17 13:57:09 2000
+--- man/gnus.texi	Fri Nov 17 15:09:32 2000
+***************
+*** 3,8 ****
+--- 3,14 ----
+  @comment %**start of header (This is for running Texinfo on a region.)
+  @setfilename ../info/gnus
+  @settitle GNUS 3.15 Manual
++ 
++ @dircategory Editors
++ @direntry
++ * GNUS: (gnus).		The newsreader GNUS.
++ @end direntry
++ 
+  @iftex
+  @finalout
+  @end iftex
