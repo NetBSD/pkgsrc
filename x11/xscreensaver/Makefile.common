@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2000/08/01 10:48:19 jlam Exp $
+# $NetBSD: Makefile.common,v 1.7 2000/08/01 11:05:05 jlam Exp $
 #
 
 DISTNAME=		xscreensaver-3.25
@@ -15,7 +15,6 @@ DEPENDS+=		gtk+-1.2.*:../../x11/gtk
 
 USE_X11BASE=		yes
 USE_PERL5=		yes
-USE_XAW=		yes
 
 EVAL_PREFIX+=		GTKDIR=gtk+
 EVAL_PREFIX+=		XPMDIR=xpm
@@ -41,8 +40,6 @@ post-patch:
 	${SED} -e 's|@PREFIX@|${PREFIX}|g' < $$f.BAK > $$f
 
 .include "../../mk/bsd.prefs.mk"
-
-XAW_TYPE?=	3d
 
 .if (${OPSYS} == "NetBSD")
 .if defined(KERBEROS)
