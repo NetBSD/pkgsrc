@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.349 2003/03/07 11:51:47 wiz Exp $
+$NetBSD: TODO,v 1.350 2003/03/07 18:23:22 salo Exp $
 
 Suggested new packages
 ======================
@@ -204,8 +204,6 @@ Suggested package updates
 	o pnm2ppa-1.12
 	o povray-3.5
 	o pth-2.0 [skrll]
-	o pureftpd-0.13a [pkg/19233]
-	o pureftpd-0.14
 	o py-mysqldb-0.9.2 [pkg/19056]
 	o py-wxWindows-2.4.0.2
 	o pygtk-0.6.11
