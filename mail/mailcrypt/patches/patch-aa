@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1 2003/07/09 14:24:36 seb Exp $
+$NetBSD: patch-aa,v 1.2 2003/07/31 16:07:04 seb Exp $
 
 --- Makefile.in.orig	2000-10-29 10:41:52.000000000 +0000
 +++ Makefile.in
@@ -11,3 +11,11 @@ $NetBSD: patch-aa,v 1.1 2003/07/09 14:24:36 seb Exp $
  
  # Where to put the Info files
  infodir=$(prefix)/info
+@@ -27,7 +27,6 @@ INSTALL_DATA = @INSTALL_DATA@
+ INSTALL_INFO = @INSTALL_INFO@
+ 
+ # Various auxiliary programs
+-MAKEINFO=makeinfo
+ DVIPS=dvips
+ TEXI2DVI=texi2dvi
+ TEXI2HTML=texi2html
