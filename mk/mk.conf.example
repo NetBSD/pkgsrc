@@ -1,4 +1,4 @@
-# $NetBSD: mk.conf.example,v 1.121 2000/02/16 18:47:55 wiz Exp $
+# $NetBSD: mk.conf.example,v 1.122 2000/02/19 04:00:44 wiz Exp $
 #
 
 # Sample /etc/mk.conf file, which can be used to set specific values
@@ -30,12 +30,6 @@
 #WRKOBJDIR=	/usr/tmp
 # build here instead of in pkgsrc
 # Possible: any path
-# Default: not defined
-
-#UVM=
-# Use the new UVM virtual memory subsystem XXX this variable is
-# obsolete - UVM is no longer optional for NetBSD 1.4 and on
-# Possible: defined, not defined
 # Default: not defined
 
 #USETBL=
