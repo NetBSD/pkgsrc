@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1358 2003/02/14 20:59:16 wiz Exp $
+$NetBSD: CHANGES,v 1.1359 2003/02/14 21:17:22 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -617,3 +617,25 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated gnuboy to 1.0.3 [salo 2003-02-14]
 	Updated libast to 0.5nb1 [salo 2003-02-14]
 	Updated fluxbox to 0.1.14nb1 [wiz 2003-02-14]
+	Updated GConf2 to 2.2.0 [jmmv 2003-02-14]
+	Updated GConf2-ui to 2.2.0 [jmmv 2003-02-14]
+	Updated gnome-vfs2 to 2.2.2 [jmmv 2003-02-14]
+	Updated libgnome to 2.2.0.1 [jmmv 2003-02-14]
+	Updated libbonoboui to 2.2.0 [jmmv 2003-02-14]
+	Updated libgnomecanvas to 2.2.0.1 [jmmv 2003-02-14]
+	Updated libgnomeui to 2.2.0.1 [jmmv 2003-02-14]
+	Updated libgnomedb to 0.10.0 [jmmv 2003-02-14]
+	Updated libgnomeprint to 2.2.1.1 [jmmv 2003-02-14]
+	Updated libgnomeprintui to 2.2.1.1 [jmmv 2003-02-14]
+	Updated gail to 1.2.0 [jmmv 2003-02-14]
+	Updated gnome-desktop to 2.2.0.1 [jmmv 2003-02-14]
+	Updated eel2 to 2.2.1 [jmmv 2003-02-14]
+	Updated file-roller to 2.2.1 [jmmv 2003-02-14]
+	Updated metacity to 2.4.34 [jmmv 2003-02-14]
+	Updated gnome2-control-center to 2.2.0.1 [jmmv 2003-02-14]
+	Updated gnome-panel to 2.2.0.1 [jmmv 2003-02-14]
+	Updated gnome-session to 2.2.0.2 [jmmv 2003-02-14]
+	Updated gedit to 2.2.0.1 [jmmv 2003-02-14]
+	Updated eog2 to 2.2.0 [jmmv 2003-02-14]
+	Updated ggv2 to 1.99.98 [jmmv 2003-02-14]
+	Updated gnome2-terminal to 2.0.1nb2 [jmmv 2003-02-14]
