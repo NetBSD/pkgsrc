@@ -1,15 +1,15 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/10/30 03:02:23 itojun Exp $
---- misc.c-	Sun Oct 29 18:04:16 2000
-+++ misc.c	Sun Oct 29 18:04:33 2000
-@@ -903,11 +903,2 @@
- {
--#if defined(linux) && defined(__GLIBC__)
--    extern const char *const sys_errlist[];
--#else
--#if (defined(BSD) && (BSD >= 199306))
--    /* in *BSD, should be null because it is already declared */
--#else
--    extern char *sys_errlist[];
+$NetBSD: patch-aa,v 1.2 2001/05/03 18:46:08 fredb Exp $
+
+--- misc.c.orig	Tue Jun  1 15:46:49 1999
++++ misc.c
+@@ -35,10 +35,7 @@
+ #include <pwd.h>
+ #include <errno.h>
+ 
+-/* added by cjh. for detecting *BSD family correctly */
+-#if (defined(__unix__) || defined(unix)) && !defined(USG)
+ #include <sys/param.h>
 -#endif
--#endif
-     extern int sys_nerr;
+ 
+ #include <X11/Xatom.h>
+ #include <X11/cursorfont.h>
