@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.394 2002/10/28 18:43:55 uebayasi Exp $
+$NetBSD: CHANGES,v 1.395 2002/10/28 22:29:58 agc Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3427,3 +3427,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Added aqsis-0.6.4 [agc 2002-10-28]
 	Updated hdf5 to 1.4.4 [drochner 2002-10-28]
 	Added navi2ch-1.6.0 [uebayasi 2002-10-28]
+	Added piewm-1.02 [agc 2002-10-28]
