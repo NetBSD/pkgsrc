@@ -1,43 +1,57 @@
-$NetBSD: patch-ab,v 1.2 1998/08/07 10:40:18 agc Exp $
+$NetBSD: patch-ab,v 1.3 1998/08/10 15:29:40 tv Exp $
 
---- Makefile.in.orig	Sun May 15 11:28:49 1994
-+++ Makefile.in	Fri May  8 14:22:13 1998
-@@ -74,9 +74,7 @@
+--- Makefile.in.orig	Mon Aug 10 11:13:23 1998
++++ Makefile.in	Mon Aug 10 11:22:25 1998
+@@ -3,7 +3,7 @@
+ srcdir = @srcdir@
+ VPATH = @srcdir@
  
- TEXI_F = gdbm.info
-      
--SRCS = $(DBM_CF) $(NDBM_CF) $(GDBM_CF) $(TEST_CF)
+-CC = @CC@
++CC = $(LIBTOOL) @CC@
+ 
+ INSTALL = @INSTALL@
+ INSTALL_PROGRAM = @INSTALL_PROGRAM@
+@@ -19,11 +19,10 @@
+ LIBS = @LIBS@ -lc
+ 
+ # SunOS users might wish to add '-fpcc-struct-return' to CFLAGS. see INSTALL.
+-CFLAGS = -O
+-LDFLAGS =
++CPPFLAGS = $(DEFS) -I. -I$(srcdir)
+ 
+ # Common prefix for installation directories
+-prefix = /usr/local
++prefix = @prefix@
+ exec_prefix = $(prefix)
+ binprefix = $(exec_prefix)
+ manprefix = $(prefix)
+@@ -39,9 +38,6 @@
+ 
+ #### End of system configuration section. ####
+ 
+-.c.o:
+-	$(CC) -c $(CPPFLAGS) $(DEFS) -I. -I$(srcdir) $(CFLAGS) $<
 -
--OBJS = $(DBM_OF) $(NDBM_OF) $(GDBM_OF) @ALLOCA@
-+SRCS = $(DBM_CF) $(NDBM_CF) $(GDBM_CF)
+ SHELL = /bin/sh
  
- HDRS = gdbmdefs.h extern.h gdbmerrno.h systems.h dbm.h ndbm.h gdbmconst.h \
- 	proto.h
-@@ -88,12 +86,21 @@
+ PROGS = libgdbm.a testgdbm testdbm testndbm tndbm tdbm conv2gdbm
+@@ -88,12 +84,12 @@
  
  DISTFILES = $(SRCS) $(HDRS) $(MSCFILES)
  
 -all: libgdbm.a
-+# for bsd.lib.mk to build shared lib easily
-+LIB = gdbm
-+SHLIB_MAJOR=1
-+SHLIB_MINOR=73
-+NOPROFILE=1
-+NOLINT=1
-+
-+all: libgdbm.a libgdbm_pic.a libgdbm.so.${SHLIB_MAJOR}.${SHLIB_MINOR}
++all: libgdbm.la
  
  progs: $(PROGS)
  
 -install: libgdbm.a gdbm.h gdbm.info
-+install: libgdbm.a libgdbm_pic.a libgdbm.so.${SHLIB_MAJOR}.${SHLIB_MINOR} gdbm.h gdbm.info
- 	$(INSTALL_DATA) libgdbm.a $(libdir)/libgdbm.a
-+	$(INSTALL_DATA) libgdbm_pic.a $(libdir)/libgdbm_pic.a
-+	$(INSTALL_DATA) libgdbm.so.${SHLIB_MAJOR}.${SHLIB_MINOR} $(libdir)
+-	$(INSTALL_DATA) libgdbm.a $(libdir)/libgdbm.a
++install: libgdbm.la gdbm.h gdbm.info
++	@$(LIBTOOL) $(INSTALL_DATA) libgdbm.la $(libdir)/
  	$(INSTALL_DATA) gdbm.h $(includedir)/gdbm.h
  	$(INSTALL_DATA) $(srcdir)/gdbm.3 $(man3dir)/gdbm.3
  	$(INSTALL_DATA) $(srcdir)/gdbm.info $(infodir)/gdbm.info
-@@ -102,11 +109,6 @@
+@@ -102,10 +98,8 @@
  	$(INSTALL_DATA) $(srcdir)/dbm.h $(includedir)/dbm.h
  	$(INSTALL_DATA) $(srcdir/ndbm.h $(includedir)/ndbm.h
  
@@ -45,23 +59,8 @@ $NetBSD: patch-ab,v 1.2 1998/08/07 10:40:18 agc Exp $
 -	rm -f libgdbm.a
 -	ar q libgdbm.a $(OBJS)
 -	$(RANLIB) libgdbm.a
--
++libgdbm.la: $(OBJS) gdbm.h
++	$(CC) -o $@ $(OBJS:.o=.lo) -rpath $(PREFIX)/lib -version-info 1:73
+ 
  gdbm.h:	gdbm.proto gdbmerrno.h gdbm.proto2
  	rm -f gdbm.h
- 	cp $(srcdir)/gdbm.proto gdbm.h
-@@ -157,9 +159,6 @@
- gdbm.dvi:
- 	$(TEXI2DVI) $(srcdir)/gdbm.texinfo
- 
--clean:
--	rm -f $(PROGS) $(TEX_F) *.o core junk*
--
- mostlyclean: clean
- 
- distclean: clean
-@@ -227,3 +226,5 @@
- testndbm.o:	autoconf.h ndbm.h
- tdbm.o:		autoconf.h
- conv2gdbm.o:	autoconf.h gdbm.h
-+
-+.include <bsd.lib.mk>
