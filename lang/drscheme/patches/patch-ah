@@ -1,7 +1,7 @@
-$NetBSD: patch-ah,v 1.1.1.1 2000/05/22 20:26:59 groo Exp $
+$NetBSD: patch-ah,v 1.2 2001/09/05 03:52:47 groo Exp $
 
---- ../../man/man1/mzscheme.1.orig	Fri Jan 29 00:31:45 1999
-+++ ../../man/man1/mzscheme.1	Sat Jan  8 23:30:27 2000
+--- ../man/man1/mzscheme.1.orig	Fri Jan 29 00:31:45 1999
++++ ../man/man1/mzscheme.1	Sat Jan  8 23:30:27 2000
 @@ -223,7 +223,7 @@
  "mzscheme") are checked. Links are followed as in the 
  first case.

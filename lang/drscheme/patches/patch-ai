@@ -1,7 +1,7 @@
-$NetBSD: patch-ai,v 1.1.1.1 2000/05/22 20:26:59 groo Exp $
+$NetBSD: patch-ai,v 1.2 2001/09/05 03:52:47 groo Exp $
 
---- ../../collects/mzlib/restartr.ss.orig	Thu Mar 11 17:13:43 1999
-+++ ../../collects/mzlib/restartr.ss	Sat Jan  8 23:58:48 2000
+--- ../collects/mzlib/restartr.ss.orig	Thu Mar 11 17:13:43 1999
++++ ../collects/mzlib/restartr.ss	Sat Jan  8 23:58:48 2000
 @@ -144,7 +144,7 @@
  			  (lambda () (find-executable-path program "collects"))
  			  (lambda ()

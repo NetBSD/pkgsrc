@@ -1,7 +1,7 @@
-$NetBSD: patch-ak,v 1.1.1.1 2000/05/22 20:26:59 groo Exp $
+$NetBSD: patch-ak,v 1.2 2001/09/05 03:52:48 groo Exp $
 
---- src/makeexn.orig	Tue Dec 15 21:13:56 1998
-+++ src/makeexn	Sun Jan  9 00:02:04 2000
+--- mzscheme/src/makeexn.orig	Tue Dec 15 21:13:56 1998
++++ mzscheme/src/makeexn	Sun Jan  9 00:02:04 2000
 @@ -1,5 +1,5 @@
  #!/bin/sh
 -string=? ; if [ "$PLTHOME" = "" ] ; then PLTHOME=/usr/local/lib/plt ; export PLTHOME ; fi

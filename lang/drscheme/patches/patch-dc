@@ -1,7 +1,7 @@
-$NetBSD: patch-dc,v 1.1.1.1 2000/05/22 20:26:59 groo Exp $
+$NetBSD: patch-dc,v 1.2 2001/09/05 03:52:48 groo Exp $
 
---- ../../bin/drscheme.orig	Sat May 20 16:33:51 2000
-+++ ../../bin/drscheme	Sat May 20 16:34:28 2000
+--- ../bin/drscheme.orig	Sat May 20 16:33:51 2000
++++ ../bin/drscheme	Sat May 20 16:34:28 2000
 @@ -1,13 +1,12 @@
  #!/bin/sh
  # This script was created by make-mred-launcher

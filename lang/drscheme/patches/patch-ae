@@ -1,7 +1,7 @@
-$NetBSD: patch-ae,v 1.1.1.1 2000/05/22 20:26:59 groo Exp $
+$NetBSD: patch-ae,v 1.2 2001/09/05 03:52:47 groo Exp $
 
---- ../../bin/mzscheme.orig	Sun Dec 21 03:47:24 1997
-+++ ../../bin/mzscheme	Sat Jan  8 23:15:58 2000
+--- ../bin/mzscheme.orig	Sun Dec 21 03:47:24 1997
++++ ../bin/mzscheme	Sat Jan  8 23:15:58 2000
 @@ -1,14 +1,11 @@
  #!/bin/sh
  
