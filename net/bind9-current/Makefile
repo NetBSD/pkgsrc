@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2002/03/29 04:04:30 itojun Exp $
+# $NetBSD: Makefile,v 1.35 2002/06/01 08:14:43 wiz Exp $
 #
 
 DISTNAME=	bind-${BIND_VERSION}
@@ -52,7 +52,7 @@ post-install:
 	${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
 	(cd ${PREFIX}; ${FIND} share/doc/bind9 -type f -print ) >> ${PLIST_SRC}
 	(cd ${PREFIX}; ${FIND} share/doc/bind9 -type d -print ) | \
-		${SED} -e 's/^/@dirrm /' | sort -r >> ${PLIST_SRC}
+		${SED} -e 's/^/@dirrm /' | ${SORT} -r >> ${PLIST_SRC}
 	${INSTALL_DATA} ${WRKDIR}/named ${PREFIX}/etc/rc.d/named9
 	${INSTALL_DATA} ${WRKDIR}/lwresd ${PREFIX}/etc/rc.d/lwresd
 
