@@ -1,4 +1,4 @@
-/*	$NetBSD: extern.h,v 1.2 2004/06/13 13:04:02 grant Exp $	*/
+/*	$NetBSD: extern.h,v 1.3 2004/08/23 03:03:08 jlam Exp $	*/
 
 /*-
  * Copyright (c) 1992, 1993
@@ -32,7 +32,7 @@
  * SUCH DAMAGE.
  *
  *	from: @(#)extern.h	8.1 (Berkeley) 6/6/93
- *	$NetBSD: extern.h,v 1.2 2004/06/13 13:04:02 grant Exp $
+ *	$NetBSD: extern.h,v 1.3 2004/08/23 03:03:08 jlam Exp $
  */
 
 /*-
@@ -70,7 +70,7 @@
  * SUCH DAMAGE.
  *
  *	from: @(#)extern.h	8.1 (Berkeley) 6/6/93
- *	$NetBSD: extern.h,v 1.2 2004/06/13 13:04:02 grant Exp $
+ *	$NetBSD: extern.h,v 1.3 2004/08/23 03:03:08 jlam Exp $
  */
 
 extern struct s_command *prog;
@@ -88,6 +88,7 @@ void	 cfclose(struct s_command *, struct s_command *);
 void	 compile(void);
 void	 cspace(SPACE *, char *, size_t, enum e_spflag);
 char	*cu_fgets(char *, int);
+#define err sederr
 void	 err(int, const char *, ...)
      __attribute__((__format__(__printf__, 2, 3)));
 int	 mf_fgets(SPACE *, enum e_spflag);
