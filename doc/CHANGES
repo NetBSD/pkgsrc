@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4471 2004/01/16 02:32:26 xtraeme Exp $
+$NetBSD: CHANGES,v 1.4472 2004/01/16 02:36:32 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -295,3 +295,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated nhc98 to 1.16nb2 [kristerw 2004-01-16]
 	Updated racoon to 20040116a [itojun 2004-01-16]
 	Updated gnome-panel to 2.4.2 [xtraeme 2004-01-16]
+	Updated gnome-session to 2.4.2 [xtraeme 2004-01-16]
