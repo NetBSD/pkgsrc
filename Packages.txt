@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.20 1998/03/05 15:26:03 tron Exp $
+# $NetBSD: Packages.txt,v 1.21 1998/03/05 16:37:14 hubertf Exp $
 ###########################################################################
 
 			==========================
@@ -922,6 +922,23 @@ compressed by <bsd.port.mk> add this work arround to the package's Makefile:
 .if defined(MANZ)
 MANCOMPRESSED=	1
 .endif
+
+
+ 9.10 How to pull in variables from /etc/mk.conf
+ ===============================================
+
+The problem with package-defined variables that can be overridden via
+/etc/mk.conf is that the values of these variables aren't known at the
+beginning of the Makefile, and thus can't be used in .if statements. It's
+OK to use them like any other variable in expansions ("${VAR}"), but not in
+.if-statements, though.
+
+Here's the preferred way to handle things if you want to include variables
+in .if statements:
+
+1. in the pkg Makefile, set all the pre-install etc targets.
+2. in the pkg Makefile, .include <bsd.port.mk>
+3. Then put all the .if defined(USE_SOCKS), .if defined(USE_IDEA) etc
 
 
  10 Submitting
