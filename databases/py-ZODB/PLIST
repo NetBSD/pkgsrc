@@ -1,25 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 2004/02/25 21:24:44 minskim Exp $
-bin/fsdump.py
-bin/fsrefs.py
-bin/fstail.py
-bin/fstest.py
-bin/repozo.py
-bin/zeopack.py
-bin/zconfig
-bin/runzeo.py
-bin/mkzeoinst.py
-bin/zdrun.py
-bin/zdctl.py
+@comment $NetBSD: PLIST,v 1.3 2004/03/03 16:38:16 recht Exp $
 ${PYINC}/ZODB3/ExtensionClass.h
 ${PYINC}/ZODB3/cPersistence.h
 ${PYSITELIB}/Acquisition.so
-${PYSITELIB}/ComputedAttribute.so
-${PYSITELIB}/ExtensionClass.so
-${PYSITELIB}/MethodObject.so
-${PYSITELIB}/Missing.so
-${PYSITELIB}/MultiMapping.so
-${PYSITELIB}/Record.so
-${PYSITELIB}/ThreadLock.so
 ${PYSITELIB}/BDBStorage/BDBFullStorage.py
 ${PYSITELIB}/BDBStorage/BDBFullStorage.pyc
 ${PYSITELIB}/BDBStorage/BDBFullStorage.pyo
@@ -122,12 +104,109 @@ ${PYSITELIB}/BTrees/tests/testSetOps.pyo
 ${PYSITELIB}/BTrees/tests/test_check.py
 ${PYSITELIB}/BTrees/tests/test_check.pyc
 ${PYSITELIB}/BTrees/tests/test_check.pyo
+${PYSITELIB}/ComputedAttribute.so
+${PYSITELIB}/ExtensionClass.so
+${PYSITELIB}/MethodObject.so
+${PYSITELIB}/Missing.so
+${PYSITELIB}/MultiMapping.so
+${PYSITELIB}/Persistence/__init__.py
+${PYSITELIB}/Persistence/__init__.pyc
+${PYSITELIB}/Persistence/__init__.pyo
+${PYSITELIB}/Record.so
+${PYSITELIB}/ThreadLock.so
 ${PYSITELIB}/ThreadedAsync/LoopCallback.py
 ${PYSITELIB}/ThreadedAsync/LoopCallback.pyc
 ${PYSITELIB}/ThreadedAsync/LoopCallback.pyo
 ${PYSITELIB}/ThreadedAsync/__init__.py
 ${PYSITELIB}/ThreadedAsync/__init__.pyc
 ${PYSITELIB}/ThreadedAsync/__init__.pyo
+${PYSITELIB}/ZConfig/__init__.py
+${PYSITELIB}/ZConfig/__init__.pyc
+${PYSITELIB}/ZConfig/__init__.pyo
+${PYSITELIB}/ZConfig/cfgparser.py
+${PYSITELIB}/ZConfig/cfgparser.pyc
+${PYSITELIB}/ZConfig/cfgparser.pyo
+${PYSITELIB}/ZConfig/cmdline.py
+${PYSITELIB}/ZConfig/cmdline.pyc
+${PYSITELIB}/ZConfig/cmdline.pyo
+${PYSITELIB}/ZConfig/datatypes.py
+${PYSITELIB}/ZConfig/datatypes.pyc
+${PYSITELIB}/ZConfig/datatypes.pyo
+${PYSITELIB}/ZConfig/info.py
+${PYSITELIB}/ZConfig/info.pyc
+${PYSITELIB}/ZConfig/info.pyo
+${PYSITELIB}/ZConfig/loader.py
+${PYSITELIB}/ZConfig/loader.pyc
+${PYSITELIB}/ZConfig/loader.pyo
+${PYSITELIB}/ZConfig/matcher.py
+${PYSITELIB}/ZConfig/matcher.pyc
+${PYSITELIB}/ZConfig/matcher.pyo
+${PYSITELIB}/ZConfig/schema.py
+${PYSITELIB}/ZConfig/schema.pyc
+${PYSITELIB}/ZConfig/schema.pyo
+${PYSITELIB}/ZConfig/substitution.py
+${PYSITELIB}/ZConfig/substitution.pyc
+${PYSITELIB}/ZConfig/substitution.pyo
+${PYSITELIB}/ZConfig/tests/__init__.py
+${PYSITELIB}/ZConfig/tests/__init__.pyc
+${PYSITELIB}/ZConfig/tests/__init__.pyo
+${PYSITELIB}/ZConfig/tests/input/base-datatype1.xml
+${PYSITELIB}/ZConfig/tests/input/base-datatype2.xml
+${PYSITELIB}/ZConfig/tests/input/base-keytype1.xml
+${PYSITELIB}/ZConfig/tests/input/base-keytype2.xml
+${PYSITELIB}/ZConfig/tests/input/base.xml
+${PYSITELIB}/ZConfig/tests/input/include.conf
+${PYSITELIB}/ZConfig/tests/input/inner.conf
+${PYSITELIB}/ZConfig/tests/input/library.xml
+${PYSITELIB}/ZConfig/tests/input/logger.xml
+${PYSITELIB}/ZConfig/tests/input/outer.conf
+${PYSITELIB}/ZConfig/tests/input/simple.conf
+${PYSITELIB}/ZConfig/tests/input/simple.xml
+${PYSITELIB}/ZConfig/tests/input/simplesections.conf
+${PYSITELIB}/ZConfig/tests/input/simplesections.xml
+${PYSITELIB}/ZConfig/tests/library/__init__.py
+${PYSITELIB}/ZConfig/tests/library/__init__.pyc
+${PYSITELIB}/ZConfig/tests/library/__init__.pyo
+${PYSITELIB}/ZConfig/tests/library/thing/__init__.py
+${PYSITELIB}/ZConfig/tests/library/thing/__init__.pyc
+${PYSITELIB}/ZConfig/tests/library/thing/__init__.pyo
+${PYSITELIB}/ZConfig/tests/library/thing/component.xml
+${PYSITELIB}/ZConfig/tests/library/thing/extras/extras.xml
+${PYSITELIB}/ZConfig/tests/library/widget/__init__.py
+${PYSITELIB}/ZConfig/tests/library/widget/__init__.pyc
+${PYSITELIB}/ZConfig/tests/library/widget/__init__.pyo
+${PYSITELIB}/ZConfig/tests/library/widget/component.xml
+${PYSITELIB}/ZConfig/tests/library/widget/extra.xml
+${PYSITELIB}/ZConfig/tests/runtests.py
+${PYSITELIB}/ZConfig/tests/runtests.pyc
+${PYSITELIB}/ZConfig/tests/runtests.pyo
+${PYSITELIB}/ZConfig/tests/support.py
+${PYSITELIB}/ZConfig/tests/support.pyc
+${PYSITELIB}/ZConfig/tests/support.pyo
+${PYSITELIB}/ZConfig/tests/test_cfgimports.py
+${PYSITELIB}/ZConfig/tests/test_cfgimports.pyc
+${PYSITELIB}/ZConfig/tests/test_cfgimports.pyo
+${PYSITELIB}/ZConfig/tests/test_cmdline.py
+${PYSITELIB}/ZConfig/tests/test_cmdline.pyc
+${PYSITELIB}/ZConfig/tests/test_cmdline.pyo
+${PYSITELIB}/ZConfig/tests/test_config.py
+${PYSITELIB}/ZConfig/tests/test_config.pyc
+${PYSITELIB}/ZConfig/tests/test_config.pyo
+${PYSITELIB}/ZConfig/tests/test_datatypes.py
+${PYSITELIB}/ZConfig/tests/test_datatypes.pyc
+${PYSITELIB}/ZConfig/tests/test_datatypes.pyo
+${PYSITELIB}/ZConfig/tests/test_loader.py
+${PYSITELIB}/ZConfig/tests/test_loader.pyc
+${PYSITELIB}/ZConfig/tests/test_loader.pyo
+${PYSITELIB}/ZConfig/tests/test_schema.py
+${PYSITELIB}/ZConfig/tests/test_schema.pyc
+${PYSITELIB}/ZConfig/tests/test_schema.pyo
+${PYSITELIB}/ZConfig/tests/test_subst.py
+${PYSITELIB}/ZConfig/tests/test_subst.pyc
+${PYSITELIB}/ZConfig/tests/test_subst.pyo
+${PYSITELIB}/ZConfig/url.py
+${PYSITELIB}/ZConfig/url.pyc
+${PYSITELIB}/ZConfig/url.pyo
 ${PYSITELIB}/ZODB/ActivityMonitor.py
 ${PYSITELIB}/ZODB/ActivityMonitor.pyc
 ${PYSITELIB}/ZODB/ActivityMonitor.pyo
@@ -365,12 +444,10 @@ ${PYSITELIB}/zLOG/tests/testzLog.pyo
 ${PYSITELIB}/zLOG/tests/testzLogConfig.py
 ${PYSITELIB}/zLOG/tests/testzLogConfig.pyc
 ${PYSITELIB}/zLOG/tests/testzLogConfig.pyo
-${PYSITELIB}/zdaemon/Daemon.py
-${PYSITELIB}/zdaemon/Daemon.pyc
-${PYSITELIB}/zdaemon/Daemon.pyo
 ${PYSITELIB}/zdaemon/__init__.py
 ${PYSITELIB}/zdaemon/__init__.pyc
 ${PYSITELIB}/zdaemon/__init__.pyo
+${PYSITELIB}/zdaemon/component.xml
 ${PYSITELIB}/zdaemon/sample.conf
 ${PYSITELIB}/zdaemon/schema.xml
 ${PYSITELIB}/zdaemon/tests/__init__.py
@@ -383,9 +460,6 @@ ${PYSITELIB}/zdaemon/tests/nokill.pyo
 ${PYSITELIB}/zdaemon/tests/parent.py
 ${PYSITELIB}/zdaemon/tests/parent.pyc
 ${PYSITELIB}/zdaemon/tests/parent.pyo
-${PYSITELIB}/zdaemon/tests/testDaemon.py
-${PYSITELIB}/zdaemon/tests/testDaemon.pyc
-${PYSITELIB}/zdaemon/tests/testDaemon.pyo
 ${PYSITELIB}/zdaemon/tests/testzdoptions.py
 ${PYSITELIB}/zdaemon/tests/testzdoptions.pyc
 ${PYSITELIB}/zdaemon/tests/testzdoptions.pyo
@@ -401,94 +475,29 @@ ${PYSITELIB}/zdaemon/zdoptions.pyo
 ${PYSITELIB}/zdaemon/zdrun.py
 ${PYSITELIB}/zdaemon/zdrun.pyc
 ${PYSITELIB}/zdaemon/zdrun.pyo
-${PYSITELIB}/ZConfig/Config.py
-${PYSITELIB}/ZConfig/Config.pyc
-${PYSITELIB}/ZConfig/Config.pyo
-${PYSITELIB}/ZConfig/Context.py
-${PYSITELIB}/ZConfig/Context.pyc
-${PYSITELIB}/ZConfig/Context.pyo
-${PYSITELIB}/ZConfig/__init__.py
-${PYSITELIB}/ZConfig/__init__.pyc
-${PYSITELIB}/ZConfig/__init__.pyo
-${PYSITELIB}/ZConfig/cfgparser.py
-${PYSITELIB}/ZConfig/cfgparser.pyc
-${PYSITELIB}/ZConfig/cfgparser.pyo
-${PYSITELIB}/ZConfig/cmdline.py
-${PYSITELIB}/ZConfig/cmdline.pyc
-${PYSITELIB}/ZConfig/cmdline.pyo
-${PYSITELIB}/ZConfig/datatypes.py
-${PYSITELIB}/ZConfig/datatypes.pyc
-${PYSITELIB}/ZConfig/datatypes.pyo
-${PYSITELIB}/ZConfig/info.py
-${PYSITELIB}/ZConfig/info.pyc
-${PYSITELIB}/ZConfig/info.pyo
-${PYSITELIB}/ZConfig/loader.py
-${PYSITELIB}/ZConfig/loader.pyc
-${PYSITELIB}/ZConfig/loader.pyo
-${PYSITELIB}/ZConfig/matcher.py
-${PYSITELIB}/ZConfig/matcher.pyc
-${PYSITELIB}/ZConfig/matcher.pyo
-${PYSITELIB}/ZConfig/schema.py
-${PYSITELIB}/ZConfig/schema.pyc
-${PYSITELIB}/ZConfig/schema.pyo
-${PYSITELIB}/ZConfig/substitution.py
-${PYSITELIB}/ZConfig/substitution.pyc
-${PYSITELIB}/ZConfig/substitution.pyo
-${PYSITELIB}/ZConfig/tests/__init__.py
-${PYSITELIB}/ZConfig/tests/__init__.pyc
-${PYSITELIB}/ZConfig/tests/__init__.pyo
-${PYSITELIB}/ZConfig/tests/input/include.conf
-${PYSITELIB}/ZConfig/tests/input/inner.conf
-${PYSITELIB}/ZConfig/tests/input/library.xml
-${PYSITELIB}/ZConfig/tests/input/logger.xml
-${PYSITELIB}/ZConfig/tests/input/outer.conf
-${PYSITELIB}/ZConfig/tests/input/simple.conf
-${PYSITELIB}/ZConfig/tests/input/simple.xml
-${PYSITELIB}/ZConfig/tests/input/simplesections.conf
-${PYSITELIB}/ZConfig/tests/library/thing/component.xml
-${PYSITELIB}/ZConfig/tests/library/widget/component.xml
-${PYSITELIB}/ZConfig/tests/library/widget/extra.xml
-${PYSITELIB}/ZConfig/tests/runtests.py
-${PYSITELIB}/ZConfig/tests/runtests.pyc
-${PYSITELIB}/ZConfig/tests/runtests.pyo
-${PYSITELIB}/ZConfig/tests/support.py
-${PYSITELIB}/ZConfig/tests/support.pyc
-${PYSITELIB}/ZConfig/tests/support.pyo
-${PYSITELIB}/ZConfig/tests/test_cmdline.py
-${PYSITELIB}/ZConfig/tests/test_cmdline.pyc
-${PYSITELIB}/ZConfig/tests/test_cmdline.pyo
-${PYSITELIB}/ZConfig/tests/test_config.py
-${PYSITELIB}/ZConfig/tests/test_config.pyc
-${PYSITELIB}/ZConfig/tests/test_config.pyo
-${PYSITELIB}/ZConfig/tests/test_datatypes.py
-${PYSITELIB}/ZConfig/tests/test_datatypes.pyc
-${PYSITELIB}/ZConfig/tests/test_datatypes.pyo
-${PYSITELIB}/ZConfig/tests/test_loader.py
-${PYSITELIB}/ZConfig/tests/test_loader.pyc
-${PYSITELIB}/ZConfig/tests/test_loader.pyo
-${PYSITELIB}/ZConfig/tests/test_schema.py
-${PYSITELIB}/ZConfig/tests/test_schema.pyc
-${PYSITELIB}/ZConfig/tests/test_schema.pyo
-${PYSITELIB}/ZConfig/tests/test_subst.py
-${PYSITELIB}/ZConfig/tests/test_subst.pyc
-${PYSITELIB}/ZConfig/tests/test_subst.pyo
-${PYSITELIB}/ZConfig/url.py
-${PYSITELIB}/ZConfig/url.pyc
-${PYSITELIB}/ZConfig/url.pyo
-${PYSITELIB}/Persistence/__init__.py
-${PYSITELIB}/Persistence/__init__.pyc
-${PYSITELIB}/Persistence/__init__.pyo
+bin/fsdump.py
+bin/fsrefs.py
+bin/fstail.py
+bin/fstest.py
+bin/mkzeoinst.py
+bin/repozo.py
+bin/runzeo.py
+bin/zconfig
+bin/zdctl.py
+bin/zdrun.py
+bin/zeopack.py
+@dirrm ${PYINC}/ZODB3
 @dirrm ${PYSITELIB}/BDBStorage/tests
 @dirrm ${PYSITELIB}/BDBStorage
 @dirrm ${PYSITELIB}/BTrees/tests
 @dirrm ${PYSITELIB}/BTrees
 @dirrm ${PYSITELIB}/Persistence
 @dirrm ${PYSITELIB}/ThreadedAsync
-@dirrm ${PYSITELIB}/ZConfig/tests/library/widget
-@dirrm ${PYSITELIB}/ZConfig/tests/library/thing/ext
-@dirrm ${PYSITELIB}/ZConfig/tests/library/thing
-@dirrm ${PYSITELIB}/ZConfig/tests/library
 @dirrm ${PYSITELIB}/ZConfig/tests/input
+@dirrm ${PYSITELIB}/ZConfig/tests/library/thing/extras
+@dirrm ${PYSITELIB}/ZConfig/tests/library/thing
+@dirrm ${PYSITELIB}/ZConfig/tests/library/widget
+@dirrm ${PYSITELIB}/ZConfig/tests/library
 @dirrm ${PYSITELIB}/ZConfig/tests
 @dirrm ${PYSITELIB}/ZConfig
 @dirrm ${PYSITELIB}/ZODB/tests
@@ -497,4 +506,3 @@ ${PYSITELIB}/Persistence/__init__.pyo
 @dirrm ${PYSITELIB}/zLOG
 @dirrm ${PYSITELIB}/zdaemon/tests
 @dirrm ${PYSITELIB}/zdaemon
-@dirrm ${PYINC}/ZODB3
