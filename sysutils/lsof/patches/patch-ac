@@ -1,0 +1,26 @@
+$NetBSD: patch-ac,v 1.18 2004/11/07 18:16:27 kim Exp $
+
+--- Configure.orig	2004-10-19 15:36:21.000000000 -0400
++++ Configure	2004-11-07 13:13:33.000000000 -0500
+@@ -2298,7 +2298,11 @@
+ 	;;
+       2.99.9)
+ 	LSOF_TSTBIGF=" "
+-	LSOF_VERS="2999"
++	LSOF_VERS="2990"
++	;;
++      2.99.1[0-9])
++	LSOF_TSTBIGF=" "
++	LSOF_VERS="2991"
+ 	;;
+       2*)
+ 	LSOF_VERS=2000
+@@ -2316,7 +2320,7 @@
+     # Test for legal NetBSD version.
+ 
+     case $LSOF_VERS in	# {
+-    1000|1010|1020|1030|1040|1050|1060|2000|2999)
++    1000|1010|1020|1030|1040|1050|1060|2000|2990|2991)
+       ;;
+     *)
+       echo "Unknown NetBSD version: $LSOF_VERS"

@@ -1,0 +1,16 @@
+$NetBSD: patch-ab,v 1.30 2004/11/07 18:16:27 kim Exp $
+
+--- dialects/n+obsd/dlsof.h.orig	2004-03-10 18:51:36.000000000 -0500
++++ dialects/n+obsd/dlsof.h	2004-11-07 13:12:14.000000000 -0500
+@@ -245,6 +245,11 @@
+ #undef	DIRENT_DIRBLKSIZ
+ # endif	/*defined(DIRENT_BLKSIZ) */
+ 
++# if	defined(NETBSDV) && NETBSDV>=2991
++#define	_KERNEL
++#include <sys/bufq.h>
++#undef	_KERNEL
++# endif	/* defined(NETBSDV) && NETBSDV>=2991 */
+ #undef KERNEL
+ #include <ufs/mfs/mfsnode.h>
+ 
