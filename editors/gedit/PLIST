@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/11/03 08:52:25 rh Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/12/18 19:26:23 jmmv Exp $
 bin/gedit
 bin/gnome-text-editor
 etc/gconf/gconf.xml.defaults/apps/gedit-2/%gconf.xml
@@ -84,6 +84,7 @@ share/gnome/help/gedit/C/topic.dat
 share/idl/GNOME_Gedit.idl
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/gedit-2.0.mo
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/gedit-2.0.mo
+${PKGLOCALEDIR}/locale/be/LC_MESSAGES/gedit-2.0.mo
 ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/gedit-2.0.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/gedit-2.0.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/gedit-2.0.mo
