@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2001/11/29 01:12:41 hubertf Exp $
+# $NetBSD: Makefile,v 1.71 2001/12/28 23:19:46 abs Exp $
 #
 
 DISTNAME=		ORBit-0.${ORBIT_MAJOR}.${ORBIT_MINOR}
@@ -12,6 +12,8 @@ HOMEPAGE=		http://www.gnome.org/
 COMMENT=		high-performance CORBA ORB with support for the C language
 
 DEPENDS+=		gindent-[0-9]*:../../devel/gindent
+
+BUILD_DEPENDS+=		automake>=1.4:../../devel/automake
 
 USE_GMAKE=		YES
 USE_LIBTOOL=		YES
@@ -30,6 +32,8 @@ ORBIT_MINOR=		8
 PLIST_SUBST+=		ORBIT_MAJOR=${ORBIT_MAJOR} ORBIT_MINOR=${ORBIT_MINOR}
 
 INFO_FILES=		libIDL.info
+
+AUTOMAKE_OVERRIDE=	NO	# Otherwise breaks 1.5 arm32
 
 .include "../../devel/gettext-lib/buildlink.mk"
 .include "../../devel/glib/buildlink.mk"
