@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5830 2004/05/05 16:35:28 tv Exp $
+$NetBSD: CHANGES,v 1.5831 2004/05/06 04:40:04 cube Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2366,3 +2366,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated libmatroska to 0.7.0 [salo 2004-05-05]
 	Updated mkvtoolnix to 0.8.8 [salo 2004-05-05]
 	Added antonym-1.9 [tv 2004-05-05]
+	Updated ion to 20040407 [cube 2004-05-06]
