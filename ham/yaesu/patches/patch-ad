@@ -1,10 +1,10 @@
-$NetBSD: patch-ad,v 1.5 2002/06/15 21:57:54 dmcmahill Exp $
+$NetBSD: patch-ad,v 1.6 2004/07/10 17:08:53 kristerw Exp $
 
 the addition of the -p flag is required for non-PC machines which
 might use a different serial device.
 
---- main.c.orig	Sat Nov  4 17:48:33 1995
-+++ main.c
+--- main.c.orig	1995-11-04 23:48:33.000000000 +0100
++++ main.c	2004-07-10 19:01:57.000000000 +0200
 @@ -5,7 +5,6 @@
  #include <stdlib.h>
  #include <termios.h>
@@ -67,3 +67,38 @@ might use a different serial device.
      } else {
         printf("usage:  yaesu [port #]\n");
         exit(3);
+@@ -139,20 +147,20 @@
+ 
+ bye_msg() {
+ 
+-printf("\n
+-Thank you for using KG0CQ's 'yaesu' program, this is version .1lx.
+-You may use this program for as long as you like, it will always  
+-be free to use, no matter what version.  You may distribute this  
+-program freely so long as it distributed in and with the original 
+-zipfile or tar file.  Please do not distribute modifed versions.  
+-A nice Windows version, DOS console version, Linux console, and   
+-Linux X version should be on their way in the coming months.      
+-If you wish to support the author's efforts just say thanks via
+-email or packet!
+-
+-    email:   drranu@holly.ColoState.EDU
+-    packet:  KG0CQ@KF0UW.#NECO.USA.NOAM
+-
++printf("\n\n\
++Thank you for using KG0CQ's 'yaesu' program, this is version .1lx.\n\
++You may use this program for as long as you like, it will always  \n\
++be free to use, no matter what version.  You may distribute this  \n\
++program freely so long as it distributed in and with the original \n\
++zipfile or tar file.  Please do not distribute modifed versions.  \n\
++A nice Windows version, DOS console version, Linux console, and   \n\
++Linux X version should be on their way in the coming months.      \n\
++If you wish to support the author's efforts just say thanks via\n\
++email or packet!\n\
++\n\
++    email:   drranu@holly.ColoState.EDU\n\
++    packet:  KG0CQ@KF0UW.#NECO.USA.NOAM\n\
++\n\
+ Having fun hamming, hope to catch you on the air!!!\n\n");
+ 
+ }
