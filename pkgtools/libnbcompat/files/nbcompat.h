@@ -1,4 +1,4 @@
-/*	$NetBSD: nbcompat.h,v 1.21 2003/09/14 05:35:57 grant Exp $	*/
+/*	$NetBSD: nbcompat.h,v 1.22 2003/09/14 14:10:17 grant Exp $	*/
 
 /*-
  * Copyright (c) 2003 The NetBSD Foundation, Inc.
@@ -249,9 +249,6 @@ struct {								\
 #define _PATH_TMP	"/tmp/"
 #endif
 
-#if HAVE_STRINGLIST_H
-# include <stringlist.h>
-#else
 typedef struct _stringlist {
 	char	**sl_str;
 	size_t	  sl_max;
@@ -262,7 +259,6 @@ StringList *sl_init(void);
 int	 sl_add(StringList *, char *);
 void	 sl_free(StringList *, int);
 char	*sl_find(StringList *, char *);
-#endif
 
 #if HAVE_TERMCAP_H
 # include <termcap.h>
