@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.4 2002/09/02 11:43:39 abs Exp $
+$NetBSD: patch-ac,v 1.5 2002/09/02 11:52:59 abs Exp $
 
 --- etc/afpd/ofork.c.orig	Thu Feb  7 23:57:27 2002
 +++ etc/afpd/ofork.c
@@ -18,8 +18,8 @@ $NetBSD: patch-ac,v 1.4 2002/09/02 11:43:39 abs Exp $
 +	struct rlimit rlp;
 +
 +	getrlimit(RLIMIT_NOFILE, &rlp);
-+	if (rlp.rlim_cur < 128)
-+	    rlp.rlim_cur = 128;
++	if (rlp.rlim_cur < 256)
++	    rlp.rlim_cur = 256;
 +	setrlimit(RLIMIT_NOFILE, &rlp);
 +	getrlimit(RLIMIT_NOFILE, &rlp);
 +
