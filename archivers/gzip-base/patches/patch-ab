@@ -1,0 +1,22 @@
+$NetBSD: patch-ab,v 1.1 2004/10/12 18:28:29 tv Exp $
+
+From http://www.gzip.org/gzip-1.2.4b.patch - security fix for filenames
+over 1020 caharacters long.
+
+--- gzip.c	Thu Aug 19 15:39:43 1993
++++ gzip.c	Tue Jan  8 21:44:18 2002
+@@ -1005,7 +1005,14 @@
+ #ifdef NO_MULTIPLE_DOTS
+     char *dot; /* pointer to ifname extension, or NULL */
+ #endif
++    int max_suffix_len = (z_len > 3 ? z_len : 3);
+ 
++    /* Leave enough room in ifname or ofname for suffix: */
++    if (strlen(iname) >= sizeof(ifname) - max_suffix_len) {
++        strncpy(ifname, iname, sizeof(ifname) - 1);
++	/* last byte of ifname is already zero and never overwritten */
++        error("file name too long");
++    }
+     strcpy(ifname, iname);
+ 
+     /* If input file exists, return OK. */
