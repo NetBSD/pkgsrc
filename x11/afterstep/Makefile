@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1998/09/24 16:53:19 garbled Exp $
+# $NetBSD: Makefile,v 1.5 1998/11/19 15:40:47 agc Exp $
 
 DISTNAME=		AfterStep-1.4.5.0
 PKGNAME=		afterstep-1.450
@@ -11,7 +11,7 @@ MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.afterstep.org/
 
 DEPENDS+=		xpm-3.4k:../../graphics/xpm
-RUN_DEPENDS+=		asclock:../../x11/asclock
+DEPENDS+=		asclock-11:../../x11/asclock
 
 WRKSRC=			${WRKDIR}/AfterStep
 USE_X11=		yes

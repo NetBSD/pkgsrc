@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 1998/11/07 20:04:48 mycroft Exp $
+# $NetBSD: Makefile,v 1.18 1998/11/19 15:40:45 agc Exp $
 #
 
 DISTNAME=       timidity-0.2i
@@ -11,7 +11,6 @@ MAINTAINER=     mycroft@NetBSD.ORG
 HOMEPAGE=	http://www.cgs.fi/~tt/timidity/
 
 BUILD_DEPENDS=  unzip:../../archivers/unzip
-RUN_DEPENDS=	wish8.0:../../x11/tk80
 DEPENDS+=	ncurses-1.9.9g:../../devel/ncurses
 DEPENDS+=	tk-8.0p2:../../x11/tk80
 
