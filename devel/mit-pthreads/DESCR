@@ -1,6 +1,0 @@
-This is Chris Provenzano's MIT Pthreads library.
-
-Pthreads stands for POSIX threads and is based on the POSIX 1003.1c 1995
-thread standard. This standard passed international Standards Organization
-(ISO) Committee Document (CD) balloting in February 1995 and got the
-IEEE Standards Board approval in June 1995.
