@@ -1,0 +1,4 @@
+G-Kermit is a small, command-line-only implementation of the
+``kermit'' protocol, suitable for invocation via remote shell
+through a local full-featured comm package--maybe C-Kermit.
+G-Kermit is distributed under the GNU General Public License.
