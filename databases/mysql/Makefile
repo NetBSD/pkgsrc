@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 1998/10/28 18:18:07 bad Exp $
+# $NetBSD: Makefile,v 1.13 1998/12/28 16:17:12 bad Exp $
 #
 
 # note: if updated, update shlib version number in patch-aa
@@ -35,7 +35,7 @@ pre-install:
 	${INSTALL_DATA} ${WRKSRC}/Docs/mysql.info ${PREFIX}/info
 	@${CP} ${PKGDIR}/PLIST-client ${PLIST_SRC}
 
-.if (${MACHINE_ARCH} != "i386") && (${MACHINE_ARCH} != "alpha") && (${MACHINE_ARCH} != "sparc")
+.if (${MACHINE_ARCH} != "i386") && (${MACHINE_ARCH} != "alpha") && (${MACHINE_ARCH} != "arm32") && (${MACHINE_ARCH} != "sparc")
 CONFIGURE_ARGS+=--without-server
 pre-configure:
 	@${ECHO} '########## Client-only support! ##########'
