@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 10:33:47 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/20 09:04:22 agc Exp $
 
-MD5 (malsync_2.0.5.src.tar.gz) = d6b0aef7b177ca58aee9344377c9aa35
+SHA1 (malsync_2.0.5.src.tar.gz) = 47e0097f051b1ffb0be67cd092657ff9d80ade3c
+Size (malsync_2.0.5.src.tar.gz) = 178522 bytes
 SHA1 (patch-aa) = 3adfed58edf49c14db1ed3ba5415359ed7ca0ea4
 SHA1 (patch-ab) = dc5247e4b4a8df76b4d19c4b298bbb7c50e1fc3a

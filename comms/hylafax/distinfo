@@ -1,7 +1,9 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 10:33:41 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/20 09:04:19 agc Exp $
 
-MD5 (hylafax/hylafax-4.1beta2.tar.gz) = d8560726e4f75093b9d6c7d1403694ce
-MD5 (hylafax/tiff-3.5-interfaces.patch) = c1d2847c9967a10961bb7fe123ecd8e6
+SHA1 (hylafax/hylafax-4.1beta2.tar.gz) = 850908ce35392c0aa7265fd1c6bed44b176eeda9
+Size (hylafax/hylafax-4.1beta2.tar.gz) = 1369356 bytes
+SHA1 (hylafax/tiff-3.5-interfaces.patch) = 54d885f213e6b8130a62c0d22487a21e712132b6
+Size (hylafax/tiff-3.5-interfaces.patch) = 8229 bytes
 SHA1 (patch-aa) = a75c65ac39cda121b3fabb96f9103b1322d9d90a
 SHA1 (patch-ab) = b521e363f0098827bb9341467f272d109e08a2eb
 SHA1 (patch-ac) = 49dd31a6c86d1854c32aa5f997232b1ef8e53d2e
