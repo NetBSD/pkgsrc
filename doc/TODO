@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.744 2003/07/26 21:29:43 chris Exp $
+$NetBSD: TODO,v 1.745 2003/07/28 11:17:45 adam Exp $
 
 Suggested new packages
 ======================
@@ -133,7 +133,6 @@ Suggested package updates
 	o gq-0.6.0 [pkg/21284]
 	o grace-5.1.12
 	o gtetrinet-0.7.3
-	o gtk-gnutella-0.92 [pkg/21551]
 	o gtkglext-1.0.0
 	o guile-1.6.4
 	o hatari-0.40
