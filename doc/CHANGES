@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4178 2003/12/18 14:24:55 grant Exp $
+$NetBSD: CHANGES,v 1.4179 2003/12/18 15:10:39 recht Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5230,3 +5230,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated cgoban-java to 2.5.5 [rh 2003-12-18]
 	Updated freetype2 to 2.1.7 [adam 2003-12-18]
 	Updated grepmail to 5.22 [grant 2003-12-18]
+	Updated fontconfig to 2.2.1nb3 [recht 2003-12-18]
