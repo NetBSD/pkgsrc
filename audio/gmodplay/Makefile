@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/04/11 17:04:29 xtraeme Exp $
+# $NetBSD: Makefile,v 1.16 2004/04/18 00:49:02 ben Exp $
 
 DISTNAME=	gmodplay-0.08
 PKGREVISION=	3
@@ -32,4 +32,5 @@ do-install:
 .include "../../devel/libslang/buildlink3.mk"
 .include "../../devel/glib/buildlink3.mk"
 .include "../../mk/ossaudio.buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
