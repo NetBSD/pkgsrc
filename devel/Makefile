@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 1999/04/05 19:49:45 hubertf Exp $
+# $NetBSD: Makefile,v 1.55 1999/04/08 18:47:00 tron Exp $
 # FreeBSD Id: Makefile,v 1.78 1997/10/01 08:32:59 cracauer Exp
 #
 
@@ -19,6 +19,7 @@
 #    SUBDIR += cs
 #    SUBDIR += cutils
     SUBDIR += cvs
+    SUBDIR += cvslock
 #    SUBDIR += cxref
     SUBDIR += ddd
     SUBDIR += diffutils
