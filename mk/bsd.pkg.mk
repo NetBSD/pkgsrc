@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.810 2001/09/12 10:38:12 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.811 2001/09/14 01:52:41 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -121,27 +121,7 @@ XMKMF_CMD?=		${X11PREFIX}/bin/xmkmf
 #
 BUILDLINK_X11_DIR?=	${X11BASE}
 
-.if defined(USE_MOTIF12)
-USE_MOTIF=		# defined
-.endif
-
-.if defined(USE_MOTIF)
-.  if ${OPSYS} == "SunOS"
-MOTIFBASE?=		/usr/dt
-.  elif exists(${X11BASE}/include/Xm/Xm.h)
-.    if defined(USE_MOTIF12) && exists(${X11BASE}/include/Xm/Gadget.h)
-MOTIFBASE?=		${X11PREFIX}/LessTif/Motif1.2
-.    else
-MOTIFBASE?=		${X11BASE}
-.    endif
-.  elif defined(USE_MOTIF12)
-MOTIFBASE?=		${X11PREFIX}/LessTif/Motif1.2
-.  else
-MOTIFBASE?=		${X11PREFIX}
-.  endif
-.endif  # USE_MOTIF
-
-.if defined(USE_IMAKE) || defined(USE_MOTIF) || defined(USE_X11BASE)
+.if defined(USE_IMAKE) || defined(USE_X11BASE)
 .  if exists(${LOCALBASE}/lib/X11/config/xpkgwedge.def) || \
       exists(${X11BASE}/lib/X11/config/xpkgwedge.def)
 BUILD_DEPENDS+=		xpkgwedge>=1.5:../../pkgtools/xpkgwedge
@@ -328,13 +308,7 @@ DISTINFO_FILE?=		${.CURDIR}/distinfo
 M4?=			/usr/bin/m4
 .endif
 
-.if defined(USE_MOTIF) || defined(USE_X11BASE) || defined(USE_X11)
-.  if defined(USE_MOTIF)
-LDFLAGS+=		-Wl,-R${MOTIFBASE}/lib
-.    if !defined(USE_BUILDLINK_ONLY) || (${MOTIFBASE} != ${LOCALBASE})
-LDFLAGS+=		-L${MOTIFBASE}/lib
-.    endif
-.  endif
+.if defined(USE_X11BASE) || defined(USE_X11)
 LDFLAGS+=		-Wl,-R${X11BASE}/lib
 .  if !defined(X11_BUILDLINK_MK)
 LDFLAGS+=		-L${X11BASE}/lib
@@ -350,10 +324,6 @@ CONFIGURE_ENV+=		LDFLAGS="${LDFLAGS}" M4="${M4}" YACC="${YACC}"
 MAKE_FLAGS?=
 MAKEFILE?=		Makefile
 MAKE_ENV+=		PATH=${PATH}:${LOCALBASE}/bin:${X11BASE}/bin PREFIX=${PREFIX} LOCALBASE=${LOCALBASE} X11BASE=${X11BASE} CFLAGS="${CFLAGS}" CPPFLAGS="${CPPFLAGS}"
-
-.if defined(USE_MOTIF)
-MAKE_ENV+=		MOTIFLIB="${MOTIFLIB}"
-.endif
 
 .if exists(${ZOULARISBASE}/bin/ftp)			# Zoularis
 FETCH_CMD?=		${ZOULARISBASE}/bin/ftp
@@ -436,7 +406,7 @@ EXTRACT_CMD?=		${DECOMPRESS_CMD} ${DOWNLOADED_DISTFILE} | ${GTAR} -xf - ${EXTRAC
 
 # Figure out where the local mtree file is
 .if !defined(MTREE_FILE)
-.  if defined(USE_IMAKE) || defined(USE_MOTIF) || defined(USE_X11BASE)
+.  if defined(USE_IMAKE) || defined(USE_X11BASE)
 MTREE_FILE=	${PKGSRCDIR}/mk/${OPSYS}.x11.dist
 .  else
 MTREE_FILE=	${PKGSRCDIR}/mk/${OPSYS}.pkg.dist
@@ -683,11 +653,6 @@ PKG_SUFX?=		.tgz
 # where pkg_add records its dirty deeds.
 PKG_DBDIR?=		${DESTDIR}/var/db/pkg
 
-# shared/dynamic motif libs
-.if defined(USE_MOTIF)
-MOTIFLIB?=	-L${MOTIFBASE}/lib -L${X11BASE}/lib -L${LOCALBASE}/lib -Wl,-R${MOTIFBASE}/lib -Wl,-R${X11BASE}/lib -Wl,-R${LOCALBASE}/lib -lXm -lXp
-.endif
-
 # Define SMART_MESSAGES in /etc/mk.conf for messages giving the tree
 # of dependencies for building, and the current target.
 .ifdef SMART_MESSAGES
@@ -715,26 +680,12 @@ INSTALL_TARGET+=	install.man
 FETCH_BEFORE_ARGS += -p
 .endif
 
-# Check if we got a real Motif, LessTif or no Motif at all.
+# If USE_MOTIF (deprecated) is set, then include motif.buildlink.mk for the
+# Motif discovery logic.
+#
 .if defined(USE_MOTIF)
-.  if defined(USE_MOTIF12)
-LESSTIF_DEPENDS=	lesstif12-*:../../x11/lesstif12
-.  else
-LESSTIF_DEPENDS=	lesstif-*:../../x11/lesstif
-.  endif
-.  if exists(${MOTIFBASE}/include/Xm/Xm.h)
-.    if !defined(IS_LESSTIF)
-IS_LESSTIF!=	${EGREP} -c LESSTIF ${MOTIFBASE}/include/Xm/Xm.h || ${TRUE}
-MAKEFLAGS+=	IS_LESSTIF=${IS_LESSTIF}
-.    endif	# !IS_LESSTIF
-.    if (${IS_LESSTIF} != "0") || \
-	(defined(USE_MOTIF12) && exists(${MOTIFBASE}/include/Xm/Gadget.h))
-DEPENDS+=		${LESSTIF_DEPENDS}
-.    endif
-.  else
-DEPENDS+=		${LESSTIF_DEPENDS}
-.  endif
-.endif	# USE_MOTIF
+.  include "../../mk/motif.buildlink.mk"
+.endif
 
 # If USE_XPM is set, depend on xpm.
 .if defined(USE_XPM)
@@ -1037,8 +988,7 @@ IGNORE+= "${PKGNAME} is restricted:" \
 IGNORE+= "${PKGNAME} may not be built, because it utilizes strong cryptography"
 .    endif
 .  endif
-.  if ((defined(USE_IMAKE) || defined(USE_MOTIF) || \
-	defined(USE_X11BASE) || defined(USE_X11)) && \
+.  if ((defined(USE_IMAKE) || defined(USE_X11BASE) || defined(USE_X11)) && \
        !exists(${X11BASE}))
 IGNORE+= "${PKGNAME} uses X11, but ${X11BASE} not found"
 .  endif

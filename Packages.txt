@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.187 2001/09/09 20:36:08 agc Exp $
+# $NetBSD: Packages.txt,v 1.188 2001/09/14 01:52:40 jlam Exp $
 ###########################################################################
 
 			==========================
@@ -1185,10 +1185,9 @@ and which variables influence this.
 The automatic variable PREFIX indicates where all files of the final
 program shall be installed.  It is usually set to $LOCALBASE (/usr/pkg),
 or $CROSSBASE for pkgs in the "cross" category, though its value becomes
-that of $X11BASE if USE_IMAKE, USE_MOTIF, or USE_X11BASE is set.  The value
-${PREFIX} needs to be put into the various places in the program's source
-where paths to these files are encoded; see sections 4.3 and 6.2 for
-details on this.
+that of $X11BASE if USE_IMAKE or USE_X11BASE is set.  The value ${PREFIX}
+needs to be put into the various places in the program's source where paths
+to these files are encoded; see sections 4.3 and 6.2 for details on this.
 
 When choosing which of these variables to use, follow the following rules:
 
@@ -1207,8 +1206,8 @@ When choosing which of these variables to use, follow the following rules:
    X11BASE or LOCALBASE. To install X11 packages in LOCALBASE, simply
    install the xpkgwedge package (pkgsrc/pkgtools/xpkgwedge).
    If you need to find includes or libraries installed by a pkg that has
-   USE_IMAKE, USE_MOTIF, or USE_X11BASE in its pkg Makefile, you need to use
-   _both_ ${X11BASE} and ${LOCALBASE}.
+   USE_IMAKE  or USE_X11BASE in its pkg Makefile, you need to use _both_
+   ${X11BASE} and ${LOCALBASE}.
 
  * ${X11PREFIX} should be used to refer to the installed location of an X11
    package. X11PREFIX will be set to ${X11BASE} if xpkgwedge is not installed,
@@ -1624,7 +1623,6 @@ buildlink.mk files:
     USE_LTDL	-->	.include "../../devel/libtool/buildlink.mk"
     USE_MESA	-->	.include "../../graphics/Mesa/buildlink.mk"
     USE_MOTIF	-->	.include "../../mk/motif.buildlink.mk"
-    USE_MOTIF12	-->	.include "../../x11/lesstif12/buildlink.mk"
     USE_SSL	-->	.include "../../security/openssl/buildlink.mk"
     USE_X11	-->	.include "../../mk/x11.buildlink.mk"
     USE_XAW	-->	.include "../../mk/xaw.buildlink.mk"
@@ -1636,6 +1634,11 @@ to the reason why the system curses is insufficient, and include
 where the system curses differs from ncurses, and when the development of
 the system curses catches up in functionality, the USE_NCURSES setting may
 be removed.
+
+Package that need a Motif-1.2-compatible installation should define
+USE_MOTIF12, otherwise assume the need for a Motif-2.0-compatible
+installation.  If MOTIFBASE or MOTIF12BASE is set, then it is assumed that
+they point to valid 1.2-compatible or 2.0-compatible Motif, respectively.
 
 Packages that use OpenSSL that require a specific version of OpenSSL should
 define USE_OPENSSL_VERSION to the minimum version number required prior to
