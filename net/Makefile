@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1997/11/09 22:16:03 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 1997/11/10 10:53:09 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.117 1997/08/16 03:11:52 gpalmer Exp 
 #
 
@@ -69,6 +69,7 @@
 #    SUBDIR += tinyfugue
 #    SUBDIR += traceroute
 #    SUBDIR += trafshow
+    SUBDIR += sirc
 #    SUBDIR += ucd-snmp
 #    SUBDIR += wais
 #    SUBDIR += wide-dhcp
