@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.2 1999/05/06 08:06:15 sakamoto Exp $
-#
+# $NetBSD: Makefile,v 1.3 1999/05/21 05:07:19 sakamoto Exp $
 
 DISTNAME=	plp_1_7
 PKGNAME=	plp-1.7
 CATEGORIES=	comms
-MASTER_SITES=	http://www.btinternet.com/~philip.proudman/psion/
+MASTER_SITES=	http://www.proudman51.freeserve.co.uk/psion/
 
 MAINTAINER=	packages@netbsd.org
-HOMEPAGE=	http://www.btinternet.com/~philip.proudman/psion/
+HOMEPAGE=	http://www.proudman51.freeserve.co.uk/psion/ncp.html
 
 USE_GMAKE=	yes
 USE_LIBTOOL=	yes
