@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2001/04/17 12:44:22 tron Exp $
+# $NetBSD: Makefile,v 1.3 2001/04/19 14:34:52 tron Exp $
 
-DISTNAME=	netio113
-PKGNAME=	netio-1.13
+DISTNAME=	netio114
+PKGNAME=	netio-1.14
 CATEGORIES=	benchmarks net
 MASTER_SITES=	ftp://ftp.leo.org/pub/comp/os/os2/leo/systools/
 EXTRACT_SUFX=	.zip
