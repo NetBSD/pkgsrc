@@ -1,0 +1,35 @@
+--- Makefile.orig	Mon Feb 23 22:37:07 1998
++++ Makefile	Mon Feb 23 22:37:18 1998
+@@ -6,13 +6,14 @@
+ 
+ CC     = gcc
+ CFLAGS = -Wall -O2
+-LIBS   = -lncurses
++CFLAGS+= -I${PREFIX}/include
++LIBS   = -L${PREFIX}/lib -lncurses -lossaudio
+ INSTALL = install
+-BINDIR = /usr/local/bin
++BINDIR = ${PREFIX}/bin
+ MANFILE= cam.1
+-MANDIR = /usr/man/man1
++MANDIR = ${PREFIX}/man/man1
+ EFILE  = cam
+-XEFILE = xcam
++#XEFILE = xcam
+ OBJS   = cam.o screens.o sounds.o
+ ###############################################################################
+ 
+@@ -68,11 +69,8 @@
+ install:$(EFILE) $(MANFILE)
+ 	@echo ""
+ 	@echo "installing $(EFILE) in directory $(BINDIR)"
+-	@$(INSTALL) -m 755 -o root -g root $(EFILE) $(BINDIR)
+-	@$(INSTALL) -m 755 -o root -g root $(XEFILE) $(BINDIR)
++	@$(INSTALL) -m 755 -o root -g bin $(EFILE) $(BINDIR)
+ 	@echo ""
+ 	@echo "installing manpages for cam"
+-	@$(INSTALL) -m 644 -o root -g root $(MANFILE) $(MANDIR)
+-	@echo ""
+-	@. installvgafont.sh
++	@$(INSTALL) -m 644 -o root -g bin $(MANFILE) $(MANDIR)
+ 	@echo ""
