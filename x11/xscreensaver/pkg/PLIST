@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.6 1998/10/22 17:00:28 frueauf Exp $
+@comment $NetBSD: PLIST,v 1.7 1998/10/29 21:28:27 frueauf Exp $
 bin/xscreensaver
 bin/xscreensaver-command
+bin/xscreensaver-demo
 libexec/xscreensaver/ant
 libexec/xscreensaver/atlantis
 libexec/xscreensaver/attraction
