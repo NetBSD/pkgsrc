@@ -1,0 +1,10 @@
+$NetBSD: patch-at,v 1.6 2000/07/25 14:43:17 jlam Exp $
+
+--- lib/config/mxmkmf.in.orig	Thu Sep  2 19:51:36 1999
++++ lib/config/mxmkmf.in	Tue Jul 25 08:18:13 2000
+@@ -7,4 +7,4 @@
+ #
+ prefix=@prefix@
+ exec_prefix=@exec_prefix@
+-imake -DUseInstalled -I@libdir@/X11/config -I@x_libraries@/X11/config
++imake -DUseInstalled -I@libdir@/X11/lesstif -I@x_libraries@/X11/config
