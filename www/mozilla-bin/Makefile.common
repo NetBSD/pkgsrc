@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.14 2004/05/15 13:22:27 grant Exp $
+# $NetBSD: Makefile.common,v 1.15 2004/05/22 12:32:40 grant Exp $
 #
 
 DISTNAME=		# see Makefile.${OPSYS}.${ARCH}
@@ -85,9 +85,13 @@ DEPENDS+=	compat16>=1.6.0:../../emulators/compat16
 _COMPAT16_LIBSTDCXX=	YES
 .    endif
 .  endif
-.  if defined(MOZ_GTK2) && ${MOZ_GTK2} == "YES"
 # gtk2 builds.
+.  if defined(MOZ_GTK2) && ${MOZ_GTK2} == "YES"
+.    if ${OPSYS} == "NetBSD" && ${MOZ_PLATFORM} == "netbsd"
+DEPENDS+=	gtk2+>=2.4:../../x11/gtk2
+.    else
 DEPENDS+=	gtk2+>=2.2:../../x11/gtk2
+.    endif
 .  else
 # default to at least gtk-1.2.
 DEPENDS+=	gtk+>=1.2:../../x11/gtk
