@@ -1,0 +1,26 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/07/03 23:27:47 hubertf Exp $
+bin/kcmdf
+bin/kdf
+bin/kwikdisk
+share/kde/locale/de/LC_MESSAGES/kdf.mo
+share/kde/locale/fi/LC_MESSAGES/kdf.mo
+share/kde/locale/fr/LC_MESSAGES/kdf.mo
+share/kde/applnk/System/kdf.kdelnk
+share/kde/applnk/Settings/Information/kcmdf.kdelnk
+share/kde/applnk/System/kwikdisk.kdelnk
+share/kde/doc/HTML/de/kcontrol/kdf/index.html
+share/kde/doc/HTML/de/kdf/index.html
+share/kde/doc/HTML/en/kcontrol/kdf/index.html
+share/kde/doc/HTML/en/kdf/index.html
+@dirrm share/kde/doc/HTML/de/kcontrol/kdf
+@dirrm share/kde/doc/HTML/de/kdf
+@dirrm share/kde/doc/HTML/en/kcontrol/kdf
+@dirrm share/kde/doc/HTML/en/kdf
+share/kde/icons/kdf.xpm
+share/kde/icons/kcmdf.xpm
+share/kde/icons/kwikdisk.xpm
+share/kde/icons/mini/kdf.xpm
+share/kde/icons/mini/kcmdf.xpm
+share/kde/icons/mini/kwikdisk.xpm
+share/kde/icons/mini/nfs_mount.xpm
+share/kde/icons/mini/nfs_unmount.xpm
