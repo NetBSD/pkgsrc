@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1242 2003/08/23 03:57:49 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1243 2003/08/23 08:09:17 grant Exp $
 #
 # This file is in the public domain.
 #
@@ -2464,7 +2464,7 @@ real-su-install: ${MESSAGE}
 do-shlib-handling:
 .if ${SHLIB_HANDLING} == "YES"
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	sos=`${EGREP} -h -x '.*/lib[^/]+\.so\.[0-9]+(\.[0-9]+)+' ${PLIST} || ${TRUE}`; \
+	sos=`${EGREP} -h -x '.*/lib[^/]+\.so' ${PLIST} || ${TRUE}`; \
 	if [ "$$sos" != "" ]; then					\
 		shlib_type=`${MAKE} ${MAKEFLAGS} show-shlib-type`;	\
 		if [ "${SHLIB_PLIST_MODE}" = "0" ]; then 		\
@@ -2511,7 +2511,7 @@ do-shlib-handling:
 				}					\
 				{ lines[NR] = $$0 }			\
 				END {					\
-					for (i = 1 ; i <= linkc ; i++)	\
+					for (i = 0 ; i <= linkc ; i++)	\
 						for (j = 1 ; j < NR ; j++) \
 							if (lines[j] == links[i]) \
 								lines[j] = "@comment " lines[j]; \
@@ -2604,7 +2604,7 @@ do-shlib-handling:
 				}					\
 				{ lines[NR] = $$0 }			\
 				END {					\
-					for (i = 1 ; i <= linkc ; i++)	\
+					for (i = 0 ; i <= linkc ; i++)	\
 						for (j = 1 ; j <= NR ; j++) \
 							if (lines[j] == links[i]) \
 								lines[j] = "@comment " lines[j]; \
