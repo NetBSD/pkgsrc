@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/10/18 09:35:40 itojun Exp $
+# $NetBSD: Makefile,v 1.2 2001/02/17 17:37:54 wiz Exp $
 #
 
 DISTNAME=	untex-1.3
@@ -6,6 +6,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	ftp://hal6000.uni-duisburg.de/pub/source/
 
 MAINTAINER=	packages@netbsd.org
+COMMENT=	remove LaTeX commands
 
 NO_WRKSUBDIR=	yes
 

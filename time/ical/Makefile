@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/12/18 00:21:55 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/17 17:32:04 wiz Exp $
 # $FreeBSD Id: Makefile,v 1.15 1998/02/07 22:59:16 hoek Exp
 #
 
@@ -8,6 +8,7 @@ MASTER_SITES=	http://members.nbci.com/majahj/ical/
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://members.nbci.com/majahj/ical/
+COMMENT=	Calendar application
 
 DEPENDS+=	tk>=8.3.2:../../x11/tk
 

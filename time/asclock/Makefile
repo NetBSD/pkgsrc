@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/12/17 23:32:12 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2001/02/17 17:31:58 wiz Exp $
 #
 
 DISTNAME=	asclock-classic-1.0
@@ -8,6 +8,7 @@ MASTER_SITES=	http://www.asclock.org/tar/
 
 MAINTAINER=	jlam@netbsd.org
 HOMEPAGE=	http://www.asclock.org/
+COMMENT=	NeXTstep-like clock and calendar
 
 USE_IMAKE=	YES
 USE_XPM=	YES
