@@ -1,18 +1,14 @@
-$NetBSD: patch-ab,v 1.1.1.1 1999/11/11 12:53:17 agc Exp $
-
-Small portability mods.
-
---- Makefile	1999/11/11 12:30:44	1.1
-+++ Makefile	1999/11/11 12:32:11
+--- Makefile.orig	Tue Jan 16 06:36:38 1996
++++ Makefile	Fri Nov 26 15:04:05 1999
 @@ -15,15 +15,17 @@
  #
  # add -DUSE_READLINE	To compile in support for the GNU readline library.
  
 -CFLAGS= -s -O2 -DUSE_READLINE
--CC= gcc
-+CFLAGS+= -I${PREFIX}/include -DUSE_READLINE
-+CC= gcc
- LIBS= -lreadline -ltermcap
++CFLAGS+= -I${LOCALBASE}/include -DUSE_READLINE
+ CC= gcc
+-LIBS= -lreadline -ltermcap
++LIBS= -L${LOCALBASE}/lib -lreadline -ltermcap
  ALLFILES= makefile cdgram.y cdlex.l cdecl.c cdecl.1 testset testset++
 -BINDIR= /usr/bin
 -MANDIR= /usr/man/man1
