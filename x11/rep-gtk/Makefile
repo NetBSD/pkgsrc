@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2000/11/17 14:38:50 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2000/12/15 19:26:01 wiz Exp $
 #
 
 DISTNAME=		rep-gtk-0.14
@@ -12,7 +12,7 @@ DEPENDS+=		gtk+-1.2.*:../../x11/gtk
 DEPENDS+=		librep>=0.13.1:../../lang/librep
 DEPENDS+=		libglade-*:../../devel/libglade
 DEPENDS+=		gnome-libs-*:../../x11/gnome-libs
-DEPENDS+=		gdk-pixbuf>=0.2.5:../../graphics/gdk-pixbuf
+DEPENDS+=		gdk-pixbuf-gnome>=0.9.0:../../graphics/gdk-pixbuf-gnome
 
 USE_X11=		# defined
 USE_GMAKE=		# defined
