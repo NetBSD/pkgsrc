@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2003/08/09 10:44:42 seb Exp $
+# $NetBSD: Makefile,v 1.20 2003/08/21 20:09:29 heinz Exp $
 #
 
 DISTNAME=		gmp-4.1.2
@@ -18,5 +18,7 @@ USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 M4=			${PREFIX}/bin/gm4
 INFO_FILES=		gmp.info
+
+TEST_TARGET=		check
 
 .include "../../mk/bsd.pkg.mk"
