@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 1999/12/27 11:08:15 tron Exp $
+# $NetBSD: Makefile,v 1.17 2000/01/05 22:58:13 tron Exp $
 # FreeBSD Id: Makefile,v 1.13 1998/01/03 10:58:40 obrien Exp
 #
 
@@ -12,7 +12,7 @@ MAINTAINER=     packages@netbsd.org
 HOMEPAGE=	http://www.clinet.fi/~walker/minicom.html
 
 BUILD_DEPENDS+=	${LOCALBASE}/bin/msgfmt:../../devel/gettext
-DEPENDS+=	kermit-*:../../comms/kermit
+DEPENDS+=	gkermit-*:../../comms/gkermit
 DEPENDS+=	lrzsz-*:../../comms/lrzsz
 
 USE_GMAKE=	yes
