@@ -1,8 +1,8 @@
-$NetBSD: patch-ao,v 1.6 2004/04/20 18:14:37 drochner Exp $
+$NetBSD: patch-ao,v 1.7 2005/02/24 16:25:38 adam Exp $
 
---- hdf/src/hdfi.h.orig	2003-11-01 01:17:14.000000000 +0100
-+++ hdf/src/hdfi.h	2004-04-20 17:02:01.000000000 +0200
-@@ -153,6 +153,8 @@
+--- hdf/src/hdfi.h.orig	2005-01-25 03:36:44.000000000 +0000
++++ hdf/src/hdfi.h
+@@ -147,6 +147,8 @@
   * Define options for each platform
   *-------------------------------------------------------------------------*/
  
@@ -11,7 +11,7 @@ $NetBSD: patch-ao,v 1.6 2004/04/20 18:14:37 drochner Exp $
  /*
   * Meaning of each defined macros (not completed yet)
   *
-@@ -1384,6 +1386,71 @@
+@@ -1386,6 +1388,71 @@ typedef long              hdf_pint_t;   
  
  #endif /* IA64 */
  

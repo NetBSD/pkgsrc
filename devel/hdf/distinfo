@@ -1,12 +1,12 @@
-$NetBSD: distinfo,v 1.6 2005/02/23 22:24:16 agc Exp $
+$NetBSD: distinfo,v 1.7 2005/02/24 16:25:38 adam Exp $
 
-SHA1 (HDF4.2r0.tar.gz) = 499d8c249a18a78ae81fe1d80095290ffc4d8b54
-RMD160 (HDF4.2r0.tar.gz) = 3d9608721a55b250e9b2793402bb3357d7b79715
-Size (HDF4.2r0.tar.gz) = 3712651 bytes
+SHA1 (HDF4.2r1.tar.gz) = 8a9259a22180204a27d8dca3581614066fc6dcd3
+RMD160 (HDF4.2r1.tar.gz) = 1a0b7b4bf2a60d32d1e3ed69d40bf23dce912331
+Size (HDF4.2r1.tar.gz) = 3911745 bytes
 SHA1 (patch-ai) = ca2ea7f69d201fb5fd9b4b43201b96aec5c9c0d8
-SHA1 (patch-aj) = 848515c038b1c89abc3f4aaad7c816e4429a3780
-SHA1 (patch-ao) = 313ea577ddc7c6f55bd8536dc34625c232ebd168
+SHA1 (patch-aj) = a3e96cdeebfaf54b25df94742d1fd9a13b85362f
+SHA1 (patch-ao) = cf461ca847ddef05c4876fe3527beda3242ee2f2
 SHA1 (patch-ap) = b7d704321653cbf95d8784c6364b880bdc8d67df
 SHA1 (patch-ar) = 5fbb6e8c56ccf05db0217e9551a0c72ecd9f5c06
 SHA1 (patch-as) = b4fa7cd3bcafd75c9bfc045c2849bde21becd2de
-SHA1 (patch-ba) = a54063eec83563a7ee785ad6120beba4e096ef1a
+SHA1 (patch-ba) = a5df16f8f577d8ce45e590e37f24ade88684afda

@@ -1,8 +1,8 @@
-$NetBSD: patch-ba,v 1.1 2004/04/20 18:14:37 drochner Exp $
+$NetBSD: patch-ba,v 1.2 2005/02/24 16:25:38 adam Exp $
 
---- configure.orig	2004-04-20 14:41:07.000000000 +0200
-+++ configure	2004-04-20 14:41:38.000000000 +0200
-@@ -7512,6 +7512,7 @@
+--- configure.orig	2005-02-08 18:29:27.000000000 +0000
++++ configure
+@@ -7515,6 +7515,7 @@ case "$host" in
    mips*-sgi-irix4*)     BAR="irix4"       ;;
    *-linux*)             BAR="linux"       ;;
    *-freebsd*)           BAR="fbsd"        ;;
