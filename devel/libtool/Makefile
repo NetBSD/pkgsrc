@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2001/01/04 13:05:23 bad Exp $
+# $NetBSD: Makefile,v 1.29 2001/01/15 14:40:32 jlam Exp $
 #
 
 DISTNAME=	libtool-1.3.5
@@ -20,7 +20,7 @@ USE_GTEXINFO=	yes
 post-extract:
 	${RM} -f ${WRKSRC}/doc/libtool.info*
 
-test check: build
+test: build
 	cd ${WRKSRC} && ${MAKE} check
 
 .include "../../mk/bsd.prefs.mk"
