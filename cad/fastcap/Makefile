@@ -1,23 +1,24 @@
-# $NetBSD: Makefile,v 1.1 1998/06/06 22:42:58 frueauf Exp $
+# $NetBSD: Makefile,v 1.2 1998/08/20 15:16:41 tsarna Exp $
 #
 
-DISTNAME=		fastcap-2.0-15Jul92
-PKGNAME=		fastcap-2.0.15Jul92
-WRKSRC=			${WRKDIR}/fastcap
-CATEGORIES=		cad
-MASTER_SITES=		ftp://rle-vlsi.mit.edu/pub/fastcap/
-DISTFILES=		fastcap-2.0-15Jul92.tar.Z \
-			postscript/ug.ps.Z \
-			postscript/mtt.ps.Z \
-			postscript/tcad.ps.Z
+DISTNAME=	fastcap-2.0-15Jul92
+PKGNAME=	fastcap-2.0.15Jul92
+WRKSRC=		${WRKDIR}/fastcap
+CATEGORIES=	cad
+MASTER_SITES=	ftp://rle-vlsi.mit.edu/pub/fastcap/
+DISTFILES=	fastcap-2.0-15Jul92.tar.Z \
+		postscript/ug.ps.Z \
+		postscript/mtt.ps.Z \
+		postscript/tcad.ps.Z
 
-MAINTAINER=		mcmahill@alum.mit.edu
+MAINTAINER=	mcmahill@alum.mit.edu
+HOMEPAGE=	http://kontiki.mit.edu/rle/research/info_research_proj.html
 
-DIST_SUBDIR=		fastcap
-EXTRACT_ONLY=		fastcap-2.0-15Jul92.tar.Z
-IGNOREFILES=		postscript/ug.ps.Z \
-			postscript/mtt.ps.Z \
-			postscript/tcad.ps.Z
+DIST_SUBDIR=	fastcap
+EXTRACT_ONLY=	fastcap-2.0-15Jul92.tar.Z
+IGNOREFILES=	postscript/ug.ps.Z \
+		postscript/mtt.ps.Z \
+		postscript/tcad.ps.Z
 
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	config

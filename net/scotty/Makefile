@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 1998/06/22 12:58:35 agc Exp $
+# $NetBSD: Makefile,v 1.12 1998/08/20 15:17:19 tsarna Exp $
 # FreeBSD Id: Makefile,v 1.21 1997/08/27 23:01:53 cwt Exp
 #
 
@@ -7,6 +7,7 @@ CATEGORIES=	net tk80
 MASTER_SITES=	ftp://ftp.ibr.cs.tu-bs.de/pub/local/tkined/
 
 MAINTAINER=	packages@netbsd.org
+HOMEPAGE=	http://wwwhome.cs.utwente.nl/~schoenw/scotty/
 
 DEPENDS+=	tk-8.0p2:../../x11/tk80
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 1998/07/22 01:56:09 tsarna Exp $
+# $NetBSD: Makefile,v 1.2 1998/08/20 15:17:30 tsarna Exp $
 #
 
 DISTNAME=	grail_04
@@ -8,6 +8,7 @@ MASTER_SITES=	http://monty.cnri.reston.va.us/grail-0.4/source/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	tsarna@netbsd.org
+HOMEPAGE=	http://grail.cnri.reston.va.us/grail/
 
 DEPENDS+=       python-1.5.1:../../lang/python
 DEPENDS+=	py-Tk-1.5.1:../../x11/py-Tk

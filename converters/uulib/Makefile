@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 1998/07/24 01:56:59 tv Exp $
+# $NetBSD: Makefile,v 1.12 1998/08/20 15:16:43 tsarna Exp $
 # FreeBSD Id: Makefile,v 1.14 1998/02/18 22:20:02 hoek Exp
 #
 
@@ -9,6 +9,7 @@ MASTER_SITES=	http://www.uni-frankfurt.de/~fp/uudeview/Apps/frank/  \
 		ftp://tsx-11.mit.edu/pub/linux/sources/usr.bin/
 
 MAINTAINER=	packages@netbsd.org
+HOMEPAGE=	http://www.informatik.uni-frankfurt.de/~fp/uudeview/
 
 # "kdesupport-2.1b" included "uu" library.
 CONFLICTS=	kdesupport-2.1b

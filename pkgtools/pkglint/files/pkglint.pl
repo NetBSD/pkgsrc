@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.1 1998/08/07 22:13:44 tsarna Exp $
+# $NetBSD: pkglint.pl,v 1.2 1998/08/20 15:16:50 tsarna Exp $
 #
 # This version contains some changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org> and
@@ -878,6 +878,21 @@ EOF
 		if ($verbose);
 	$tmp = $sections[$idx++];
 
+	# check the order of items.
+        @tocheck=split(/\s+/, <<EOF);
+MAINTAINER
+EOF
+	if ($osname eq "NetBSD") {
+	    push(@tocheck,"HOMEPAGE");
+	}
+        &checkorder('MAINTAINER', $tmp, @tocheck);
+
+	# warnings for missing HOMEPAGE
+	$tmp = "\n" . $tmp;
+	if ($tmp !~ /\nHOMEPAGE=/) {
+		&perror("WARN: please add HOMEPAGE if the package has one.");
+	}
+
 	&checkearlier($tmp, @varnames);
 	$tmp = "\n" . $tmp;
 	if ($tmp =~ /\nMAINTAINER=[^\n]+/) {
@@ -888,9 +903,9 @@ EOF
 	}
 	$tmp =~ s/\n\n+/\n/g;
 
-	&checkextra($tmp, 'MAINTAINER');
-
-	push(@varnames, 'MAINTAINER');
+	push(@varnames, split(/\s+/, <<EOF));
+MAINTAINER HOMEPAGE
+EOF
 
 	#
 	# section 5: *_DEPENDS (may not be there)

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1998/07/24 01:56:59 tv Exp $
+# $NetBSD: Makefile,v 1.5 1998/08/20 15:16:41 tsarna Exp $
 #
 
 DISTNAME=	fidogate-4.2.9
@@ -6,6 +6,7 @@ CATEGORIES=	comms
 MASTER_SITES=	ftp://ftp.fido.de/pub/fidogate/
 
 MAINTAINER=	tv@netbsd.org	# aka "Todd Vierling" @ 1:396/1.5
+HOMEPAGE=	http://www.fido.de/fidogate/
 
 USE_GMAKE=	yes
 USE_PERL5=	yes

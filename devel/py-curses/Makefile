@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 1998/08/12 01:46:38 tsarna Exp $
+# $NetBSD: Makefile,v 1.2 1998/08/20 15:16:50 tsarna Exp $
 #
 
 DISTNAME=	cursesmodule-1.5b1
@@ -7,6 +7,7 @@ CATEGORIES=	devel
 MASTER_SITES=	ftp://starship.skyport.net/pub/crew/andrich/Unsupported/
 
 MAINTAINER=	tsarna@netbsd.org
+HOMEPAGE=	http://starship.skyport.net/crew/amk/howto/curses/curses.html
 
 DEPENDS+=	python-1.5.1:../../lang/python
 DEPENDS+=       ncurses-1.9.9g:../../devel/ncurses                      

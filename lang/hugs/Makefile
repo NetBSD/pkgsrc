@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1998/04/15 10:38:28 agc Exp $
+# $NetBSD: Makefile,v 1.4 1998/08/20 15:17:05 tsarna Exp $
 
 DISTNAME=	hugs-January1998-source
 PKGNAME=	hugs-1.4
@@ -8,6 +8,7 @@ MASTER_SITES=	ftp://haskell.org/pub/haskell/hugs/January1998/ \
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	nathanw@mit.edu
+HOMEPAGE=	http://haskell.systemsz.cs.yale.edu/hugs/
 
 WRKSRC=		${WRKDIR}/hugs/src
 GNU_CONFIGURE=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 1998/08/20 10:05:55 thorpej Exp $
+# $NetBSD: Makefile,v 1.20 1998/08/20 15:17:34 tsarna Exp $
 # FreeBSD Id: Makefile,v 1.5 1997/11/27 00:25:46 se Exp
 #
 
@@ -8,6 +8,7 @@ MASTER_SITES=	ftp://ftp.us.kde.org/pub/kde/stable/1.0/distribution/tar/generic/s
 		ftp://ftp.kde.org/pub/kde/stable/1.0/distribution/tar/generic/source/
 
 MAINTAINER=	tron@netbsd.org
+HOMEPAGE=       http://www.kde.org/
 
 DEPENDS+=	jpeg-6b:../../graphics/jpeg
 DEPENDS+=	qt-1.40:../../x11/qt

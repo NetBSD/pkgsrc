@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 1998/08/07 22:42:29 kim Exp $
+# $NetBSD: Makefile,v 1.2 1998/08/20 15:17:18 tsarna Exp $
 
 DISTNAME=	ntop-0.4-src
 PKGNAME=	ntop-0.4
@@ -7,6 +7,7 @@ CATEGORIES=	net
 MASTER_SITES=	http://jake.unipi.it/~deri/ntop/
 
 MAINTAINER=	kim@tac.nyc.ny.us
+HOMEPAGE=	http://jake.unipi.it/~deri/ntop/
 
 DEPENDS+=	autoconf-2.12:../../devel/autoconf
 DEPENDS+=	ncurses-1.9.9g:../../devel/ncurses

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1998/06/22 12:52:33 agc Exp $
+# $NetBSD: Makefile,v 1.6 1998/08/20 15:17:15 tsarna Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1997/06/27 01:51:12 jfitz Exp
 #
 
@@ -9,6 +9,7 @@ MASTER_SITES=		${MASTER_SITE_PERL_CPAN}
 MASTER_SITE_SUBDIR=	Locale
 
 MAINTAINER=		packages@netbsd.org
+HOMEPAGE=		http://theory.uwinnipeg.ca/CPAN/data/Locale-Codes/Locale/Country.html
 
 USE_PERL5=		YES
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 1998/07/26 22:20:23 tv Exp $
+# $NetBSD: Makefile,v 1.11 1998/08/20 15:17:05 tsarna Exp $
 #
 
 DISTNAME=	kaffe-1.0.b1
@@ -6,6 +6,7 @@ CATEGORIES=	lang
 MASTER_SITES=	ftp://ftp.transvirtual.com/pub/kaffe/
 
 MAINTAINER=	packages@netbsd.org
+HOMEPAGE=	http://www.transvirtual.com/kaffe.html
 
 DEPENDS+=	jpeg-6b:../../graphics/jpeg
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 1998/08/15 14:19:52 frueauf Exp $
+# $NetBSD: Makefile,v 1.2 1998/08/20 15:16:56 tsarna Exp $
 #
 
 DISTNAME=		xbill-2.0
@@ -8,6 +8,7 @@ MASTER_SITE_SUBDIR=	games
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		root@garbled.net
+HOMEPAGE=		http://www.triangolo.it/~fede/giochi/xbill.html
 
 DEPENDS+=		xpm-3.4k:../../graphics/xpm
 

@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.4 1998/08/04 14:05:48 frueauf Exp $
+# $NetBSD: Makefile,v 1.5 1998/08/20 15:16:54 tsarna Exp $
 #
 
 DISTNAME=		freeciv-1.6.6
 CATEGORIES=		games x11
-MASTER_SITES=		freeciv.ultraviolet.org:/pub/freeciv/
+MASTER_SITES=		ftp://freeciv.ultraviolet.org/pub/freeciv/
 
 MAINTAINER=		root@garbled.net
+HOMEPAGE=		http://freeciv.ultraviolet.org/index.html
 
 DEPENDS=		xpm-3.4k:../../graphics/xpm
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 1998/07/11 20:44:52 tsarna Exp $
+# $NetBSD: Makefile,v 1.9 1998/08/20 15:17:08 tsarna Exp $
 #
 
 DISTNAME=	pyth151
@@ -18,6 +18,7 @@ PATCHFILES= 	freeze.1.txt _tkinter.1.txt configure.1.txt \
 		stringobject.1.txt sgmllib.2.txt
 
 MAINTAINER=	tsarna@netbsd.org
+HOMEPAGE=	http://www.python.org/
 
 WRKSRC=		${WRKDIR}/Python-1.5.1
 GNU_CONFIGURE=	yes

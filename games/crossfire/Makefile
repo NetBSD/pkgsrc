@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 1998/07/25 17:40:41 frueauf Exp $
+# $NetBSD: Makefile,v 1.2 1998/08/20 15:16:54 tsarna Exp $
 #
 
 DISTNAME=	crossfire-0.94.2
@@ -7,6 +7,7 @@ MASTER_SITES=	ftp://ftp.ifi.uio.no/pub/crossfire/
 DISTFILES=	${CF_SRC} ${CF_MAPS} ${CF_SOUND}
 
 MAINTAINER=	root@garbled.net
+HOMEPAGE=	http://www.fak14.uni-muenchen.de/~h729ihqu/games/crossfire.html
 
 DEPENDS+=	rplay-3.2.0b6:../../audio/rplay
 DEPENDS+=	xpm-3.4k:../../graphics/xpm

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 1998/07/31 08:03:09 tron Exp $
+# $NetBSD: Makefile,v 1.2 1998/08/20 15:16:58 tsarna Exp $
 
 DISTNAME=		xevil1.5.1e
 PKGNAME=		xevil-1.5.1e
@@ -7,6 +7,7 @@ MASTER_SITES=		ftp://ftp.xevil.com/xevil1.5.1e/
 EXTRACT_SUFX=		.tar.Z
 
 MAINTAINER=		root@garbled.net
+HOMEPAGE=		http://www.xevil.com/
 
 NO_WRKSUBDIR=		yes
 MAKE_ENV=		HOSTTYPE="netbsd" \

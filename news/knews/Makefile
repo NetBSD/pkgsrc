@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 1998/07/15 18:03:53 tron Exp $
+# $NetBSD: Makefile,v 1.15 1998/08/20 15:17:22 tsarna Exp $
 #
 
 DISTNAME=	knews-1.0b.0
@@ -7,6 +7,7 @@ CATEGORIES=	news
 MASTER_SITES=	http://www.matematik.su.se/~kjj/
 
 MAINTAINER=	tron@netbsd.org
+HOMEPAGE=	http://www.matematik.su.se/~kjj/
 
 DEPENDS+=	jpeg-6b:../../graphics/jpeg
 DEPENDS+=	png-1.0.2:../../graphics/png

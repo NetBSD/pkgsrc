@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1998/05/15 21:30:51 tron Exp $
+# $NetBSD: Makefile,v 1.3 1998/08/20 15:17:35 tsarna Exp $
 #
 
 DISTNAME=	pyth151
@@ -8,6 +8,7 @@ MASTER_SITES=	ftp://ftp.python.org/pub/python/src/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	dolecek@ics.muni.cz
+HOMEPAGE=	http://www.python.org/topics/tkinter/
 
 DEPENDS+=	python-1.5.1:../../lang/python
 DEPENDS+=	tk-8.0p2:../../x11/tk80

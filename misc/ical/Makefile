@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1998/06/22 12:52:32 agc Exp $
+# $NetBSD: Makefile,v 1.7 1998/08/20 15:17:13 tsarna Exp $
 # $FreeBSD Id: Makefile,v 1.15 1998/02/07 22:59:16 hoek Exp
 #
 
@@ -7,6 +7,7 @@ CATEGORIES=	misc
 MASTER_SITES=	http://www.research.digital.com/SRC/personal/Sanjay_Ghemawat/ical/icalbins/
 
 MAINTAINER=	packages@netbsd.org
+HOMEPAGE=	http://www.research.digital.com/SRC/personal/Sanjay_Ghemawat/ical/
 
 DEPENDS+=	tk-8.0p2:../../x11/tk80
 

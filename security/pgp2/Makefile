@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.11 1998/07/07 21:36:09 is Exp $
+# $NetBSD: Makefile,v 1.12 1998/08/20 15:17:24 tsarna Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/08/27 13:06:01 ache Exp
 #
 
 DISTNAME=	pgp263is
 WRKSRC=		${WRKDIR}/src
 CATEGORIES=	security
-# International PGP homepage is http://www.ifi.uio.no/pgp/
 MASTER_SITES=	ftp://ftp.ifi.uio.no/pub/pgp/2.x/src/ \
 		ftp://ftp.kiarchive.ru/pub/unix/crypto/pgp/
 
 MAINTAINER=	packages@NetBSD.ORG
+HOMEPAGE=	http://www.pgpi.com/
 
 .include "../../mk/bsd.prefs.mk"
 

@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.7 1998/06/22 12:58:35 agc Exp $
+# $NetBSD: Makefile,v 1.8 1998/08/20 15:17:19 tsarna Exp $
 
 DISTNAME=	sirc-2.21
 CATEGORIES=	net
 MASTER_SITES=	http://www.eleves.ens.fr:8080/home/espel/sirc/
 
 MAINTAINER=	hubertf@netbsd.org
+HOMEPAGE=	http://www.eleves.ens.fr:8080/home/espel/sirc/
 
 RUN_DEPENDS=    ${PREFIX}/bin/perl:../../lang/perl5
 

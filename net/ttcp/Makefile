@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 1998/06/20 09:20:40 agc Exp $
+# $NetBSD: Makefile,v 1.12 1998/08/20 15:17:20 tsarna Exp $
 #
 
 DISTNAME=	ttcp
@@ -7,7 +7,8 @@ CATEGORIES=	net
 MASTER_SITES=	http://www.ccci.com/tools/ttcp/
 EXTRACT_SUFX=	.tar.Z
 
-MAINTAINER=	thorpej@NetBSD.ORG
+MAINTAINER=	thorpej@netbsd.org
+HOMEPAGE=	http://www.ccci.com/tools/ttcp/
 
 NO_CONFIGURE=	yes
 NO_WRKSUBDIR=	yes
