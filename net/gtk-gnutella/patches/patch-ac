@@ -1,13 +1,10 @@
-$NetBSD: patch-ac,v 1.1 2002/09/25 17:29:05 wiz Exp $
-
---- src/hosts.c.orig	Fri Jun 21 07:21:25 2002
-+++ src/hosts.c
-@@ -257,7 +257,7 @@ void host_save_valid(guint32 ip, guint16
+--- src/getdate.y	2002/08/10 11:30:23	1.1
++++ src/getdate.y	2002/10/26 01:24:23
+@@ -39,6 +39,7 @@
+ */
  
- void host_init(void)
- {
--	static void pcache_init(void);
-+	void pcache_init(void);
+ #include "config.h"
++#include <stdlib.h>
  
- 	ht_known_hosts = g_hash_table_new(host_hash, host_eq);
- 	pcache_init();
+ #ifdef HAVE_CONFIG_H
+ # ifdef FORCE_ALLOCA_H

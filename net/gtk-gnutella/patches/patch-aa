@@ -1,12 +1,10 @@
-$NetBSD: patch-aa,v 1.1 2002/09/25 17:29:05 wiz Exp $
-
---- src/filter.c.orig	Mon Jun 24 18:53:53 2002
-+++ src/filter.c
-@@ -23,6 +23,7 @@
+--- src/walloc.c	2002/10/14 13:46:32	1.1
++++ src/walloc.c	2002/10/26 01:44:07
+@@ -25,6 +25,7 @@
   *----------------------------------------------------------------------
   */
  
-+#include <sys/types.h>
- #include <netinet/in.h>
- #include <arpa/inet.h>
++#include <stdlib.h>
+ #include "walloc.h"
+ #include "zalloc.h"
  

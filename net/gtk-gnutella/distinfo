@@ -1,7 +1,9 @@
-$NetBSD: distinfo,v 1.9 2002/09/25 17:29:05 wiz Exp $
+$NetBSD: distinfo,v 1.10 2002/10/29 22:35:38 rh Exp $
 
-SHA1 (gtk-gnutella-0.90.tar.gz) = b31984b6e83b0471a5ee2de2486d85b3400ecb67
-Size (gtk-gnutella-0.90.tar.gz) = 469236 bytes
-SHA1 (patch-aa) = 0ab24e5e1fd58d5b36b891b73b9144cf038afed2
-SHA1 (patch-ab) = 23c2cbb171b55d8fd4a14b419c3bb2a1767ef980
-SHA1 (patch-ac) = 11390fbda764df5861a38f91c3f938617488c760
+SHA1 (gtk-gnutella-0.91.tar.gz) = dbb0f5e870d8bd528ad9c883b303260921543e4e
+Size (gtk-gnutella-0.91.tar.gz) = 649623 bytes
+SHA1 (patch-aa) = 06500d803c0857d57ef34727d8ff807aa63a5317
+SHA1 (patch-ab) = 3941a447422eb3433193ac077ef1634542b6a30e
+SHA1 (patch-ac) = 7114973950562d63b094051e5b2dd44e42f39ccb
+SHA1 (patch-ad) = 13b39e70e8156278e479e6c93f2c03b3c8bc4ddd
+SHA1 (patch-ae) = c40fabc6856e9756198b13607f9b3236b0a2f0da
