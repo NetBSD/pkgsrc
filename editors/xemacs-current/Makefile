@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/04/01 18:15:52 magick Exp $
+# $NetBSD: Makefile,v 1.6 2002/04/05 18:44:01 magick Exp $
 
 DISTNAME=	xemacs-21.5.5
 CATEGORIES=	editors
@@ -51,6 +51,13 @@ WITH_XFACE=	--with-xface=yes
 WITH_XFACE=	--with-xface=no
 .endif
 
+.if defined(EMACS_CANNA) && ${EMACS_CANNA} == YES
+WITH_CANNA=	--with-canna=yes
+DEPENDS+=	Canna-lib-3*:../../japanese/canna-lib
+.else
+WITH_CANNA=	--with-canna=no
+.endif
+
 .include "../../databases/gdbm/buildlink.mk"
 .include "../../graphics/jpeg/buildlink.mk"
 .include "../../graphics/png/buildlink.mk"
@@ -60,6 +67,7 @@ CONFIGURE_ARGS+=	${MACHINE_GNU_PLATFORM} --prefix=${PREFIX} \
 			--with-clash-detection --with-mule=yes \
 			--with-ncurses=no ${WITH_WIDGETS} \
 			${WITH_LDAP} ${WITH_XFACE} \
+			${WITH_CANNA} \
 			--infopath="${PREFIX}/info:${X11BASE}/info:/usr/local/info" \
 			--site-includes=${PREFIX}/include:${WRKDIR} \
 			--site-libraries=${PREFIX}/lib \
