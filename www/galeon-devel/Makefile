@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/03/31 11:36:24 jmmv Exp $
+# $NetBSD: Makefile,v 1.3 2004/04/02 16:00:50 xtraeme Exp $
 #
 
 DISTNAME=	galeon-1.3.14a
@@ -24,6 +24,7 @@ GNU_CONFIGURE=		yes
 WRKSRC=			${WRKDIR}/${DISTNAME:S/14a/14/}
 
 BUILDLINK_RPATHDIRS.mozilla-gtk2+=  lib/mozilla-gtk2
+BUILDLINK_DEPENDS.glib2+=	    glib2>=2.4.0
 
 GCONF2_SCHEMAS=		galeon.schemas
 
@@ -33,15 +34,6 @@ CONFIGURE_ARGS+=	--enable-nautilus-view=yes
 EGDIR=			${PREFIX}/share/examples/galeon2
 CONF_FILES=		${EGDIR}/galeon.soundlist \
 			${PKG_SYSCONFDIR}/galeon.soundlist
-
-# ATTENTION: glib2<=2.2.x uses g_value_set_FOO_take_ownership, but these
-# functions has been deprecated when using glib2>=2.4.x. So if you are
-# using 2.4.x, comment out this block.
-SUBST_CLASSES=		    glib2
-SUBST_STAGE.glib2=	    post-patch
-SUBST_FILES.glib2=	    utils/galeon-marshal.c
-SUBST_SED.glib2=	    -e s,g_value_take_string,g_value_set_string_take_ownership,g
-SUBST_MESSAGE.glib2=	    "Fixing g_value_take_string."
 
 .include "../../devel/GConf2/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
