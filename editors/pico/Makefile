@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2005/01/31 19:09:16 tv Exp $
+# $NetBSD: Makefile,v 1.61 2005/02/15 18:04:02 tv Exp $
 #
 # NOTE:
 # When updating, it is necessary to change the shlib version, located in
@@ -35,6 +35,8 @@ BUILDNAME=	sg6
 .  else
 BUILDNAME=	sgi
 .  endif
+.elif ${OPSYS} == "Interix"
+BUILDNAME=	sfu
 .elif ${OPSYS} == "Linux"
 BUILDNAME=	lnx
 .elif ${OPSYS} == "SunOS"
@@ -44,6 +46,16 @@ BUILDNAME=	neb
 .endif
 
 MAKE_ENV+=	_STRIPFLAG_INSTALL=	# debug...
+
+pre-patch:
+.if ${OPSYS} == "Interix"
+	${CP} -f \
+		${WRKSRC}/pico/osdep/os-sol.h ${WRKSRC}/pico/osdep/os-sfu.h
+	${SED} -e 's,read.pol,read.sel,' \
+		${WRKSRC}/pico/osdep/os-sv4.ic >${WRKSRC}/pico/osdep/os-sfu.ic
+	${SED} -e 's,-ltermlib,-lcurses,g;s,sv4,sfu,g' \
+		${WRKSRC}/pico/makefile.sv4 >${WRKSRC}/pico/makefile.sfu
+.endif
 
 do-build:
 	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ./build ${BUILDNAME} \
