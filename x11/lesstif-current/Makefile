@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1998/06/21 11:06:31 frueauf Exp $
+# $NetBSD: Makefile,v 1.7 1998/07/03 11:04:09 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.13 1997/09/08 08:34:13 tg Exp
 #
 
@@ -10,7 +10,7 @@ MASTER_SITES=	${MASTER_SITE_LOCAL}
 MAINTAINER=	packages@netbsd.org
 
 CONFLICTS=	lesstif-0.82 lesstif-0.83 lesstif-0.84 lesstif-0.85 \
-		lesstif-0.85.2
+		lesstif-0.85.2 lesstif-0.85.3
 
 GNU_CONFIGURE=  yes
 USE_X11=	yes
