@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8896 2005/01/24 14:02:42 wulf Exp $
+$NetBSD: CHANGES,v 1.8897 2005/01/24 15:25:02 kei Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -534,3 +534,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated gnome2-games to 2.8.2nb1 [hira 2005-01-24]
 	Updated openldap to 2.2.20nb2 [seb 2005-01-24]
 	Updated kannel to 1.4.0 [wulf 2005-01-24]
+	Updated teTeX-bin to 2.0.2nb5 [kei 2005-01-24]
