@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2004/12/04 12:03:42 wiz Exp $
+
+--- qsubst.c.orig	2001-04-22 07:35:35.000000000 +0200
++++ qsubst.c
+@@ -181,7 +181,7 @@ static void limit_above_below(void)
+   }
+ }
+ 
+-static int issymchar(char c)
++static int issymchar(unsigned char c)
+ {
+  return( isascii(c) &&
+ 	 ( isalnum(c) ||
