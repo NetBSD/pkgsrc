@@ -1,0 +1,10 @@
+$NetBSD: patch-ab,v 1.1.1.1 2001/12/10 19:49:46 veego Exp $
+
+--- configure.in-orig	Fri Aug 31 11:36:47 2001
++++ configure.in	Thu Oct 11 00:13:14 2001
+@@ -92,4 +92,4 @@
+ 
+ AC_C_ATTRIBUTE_ALIGNED
+ 
+-AC_OUTPUT(Makefile autotools/Makefile include/Makefile test/Makefile doc/Makefile src/Makefile liba52/Makefile libao/Makefile)
++AC_OUTPUT(Makefile autotools/Makefile include/Makefile liba52/Makefile)
