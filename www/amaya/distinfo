@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 12:12:18 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/05/04 10:49:04 agc Exp $
 
 SHA1 (amaya-src-4.3.2.tgz) = 045e5162fb12df65d5bc0ea798f4f77e35b8f599
+Size (amaya-src-4.3.2.tgz) = 5022936 bytes
 SHA1 (patch-aa) = cfeacf95e8cd2b3638acc9451aaa60eb29fa524d
 SHA1 (patch-ab) = 7a2c449b42814bb71544d4d4fcbc93d98b7ec336
 SHA1 (patch-af) = 66042e4a4299645d809150b3d70806892ed3f203
