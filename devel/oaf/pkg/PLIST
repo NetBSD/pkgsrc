@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2000/10/22 07:35:45 rh Exp $
+@comment $NetBSD: PLIST,v 1.4 2001/01/04 15:10:32 agc Exp $
 bin/oafd
 bin/oaf-client
 bin/oaf-run-query
@@ -20,6 +20,8 @@ include/liboaf/oaf-plugin.h
 include/liboaf/oaf-registration.h
 include/liboaf/oaf-servreg.h
 include/liboaf/oaf-util.h
+lib/liboaf.so
+lib/liboaf.so.0
 lib/liboaf.so.0.0
 lib/liboaf.la
 lib/liboaf.a

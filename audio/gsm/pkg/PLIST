@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2000/08/15 13:43:54 wiz Exp $
+@comment $NetBSD: PLIST,v 1.12 2001/01/04 15:10:19 agc Exp $
 bin/tcat
 bin/toast
 bin/untoast
@@ -8,6 +8,8 @@ include/gsm/proto.h
 include/gsm/unproto.h
 lib/libgsm.a
 lib/libgsm.la
+lib/libgsm.so
+lib/libgsm.so.1
 lib/libgsm.so.1.10
 man/man1/toast.1
 man/man3/gsm.3

@@ -1,8 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/12/12 02:03:49 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/01/04 15:10:57 agc Exp $
 include/scwmexec.h
 lib/X11/scwm/system.scwmrc
 lib/libscwmexec.a
 lib/libscwmexec.la
+lib/libscwmexec.so
+lib/libscwmexec.so.0
 lib/libscwmexec.so.0.0
 lib/scwm-modules/app/scwm/libxpm-menus.la
 lib/scwm-modules/app/scwm/libxpm-menus.a

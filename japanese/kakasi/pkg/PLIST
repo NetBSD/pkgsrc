@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2000/09/12 17:13:29 kei Exp $
+@comment $NetBSD: PLIST,v 1.6 2001/01/04 15:10:45 agc Exp $
 bin/atoc_conv
 bin/kakasi
 bin/mkkanwa
@@ -7,6 +7,8 @@ bin/wx2_conv
 include/libkakasi.h
 lib/libkakasi.a
 lib/libkakasi.la
+lib/libkakasi.so
+lib/libkakasi.so.2
 lib/libkakasi.so.2.2
 man/ja_JP.EUC/cat1/kakasi.cat
 man/ja_JP.EUC/man1/kakasi.1

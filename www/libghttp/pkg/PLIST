@@ -1,7 +1,9 @@
-@comment $NetBSD: PLIST,v 1.3 2000/11/25 17:22:16 rh Exp $
+@comment $NetBSD: PLIST,v 1.4 2001/01/04 15:10:58 agc Exp $
 include/ghttp.h
 include/ghttp_constants.h
 lib/ghttpConf.sh
 lib/libghttp.a
 lib/libghttp.la
+lib/libghttp.so
+lib/libghttp.so.1
 lib/libghttp.so.1.0

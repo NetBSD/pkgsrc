@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2000/07/15 09:50:01 jlam Exp $
+@comment $NetBSD: PLIST,v 1.4 2001/01/04 15:10:30 agc Exp $
 bin/sigc-config
 include/sigc++/adaptor.h
 include/sigc++/basic_signal.h
@@ -32,6 +32,8 @@ include/sigc++/type.h
 lib/sigc++/include/sigc++config.h
 lib/libsigc.a
 lib/libsigc.la
+lib/libsigc.so
+lib/libsigc.so.0
 lib/libsigc.so.0.0
 share/aclocal/sigc++.m4
 share/doc/sigc++/API

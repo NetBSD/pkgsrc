@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2000/04/16 17:42:26 mycroft Exp $
+@comment $NetBSD: PLIST,v 1.5 2001/01/04 15:10:40 agc Exp $
 man/man7/libggi.7
 man/man6/cube3d.6
 man/man3/ggiResourceMustAcquire.3
@@ -75,8 +75,12 @@ man/man3/ggiCheckMode.3
 man/man3/ggiCheckGraphMode.3
 man/man3/ggiAddFlags.3
 lib/libggimisc.la
+lib/libggimisc.so
+lib/libggimisc.so.2
 lib/libggimisc.so.2.0
 lib/libggi.la
+lib/libggi.so
+lib/libggi.so.2
 lib/libggi.so.2.0
 lib/ggi/default/iplanar_2p.la
 lib/ggi/default/iplanar_2p.so

@@ -1,7 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/09/06 16:43:34 jwise Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/01/04 15:10:47 agc Exp $
 bin/wishx
 bin/tclhelp
 lib/tkxConfig.sh
+lib/libtkx82.so
+lib/libtkx82.so.1
 lib/libtkx82.so.1.0
 lib/libtkx82.la
 lib/libtkx82.a

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2000/10/18 00:01:13 jlam Exp $
+@comment $NetBSD: PLIST,v 1.11 2001/01/04 15:10:59 agc Exp $
 bin/background-properties-capplet
 bin/gnome-edit-properties-capplet
 bin/gnomecc
@@ -16,6 +16,8 @@ include/capplet-widget.h
 lib/cappletConf.sh
 lib/libcapplet.a
 lib/libcapplet.la
+lib/libcapplet.so
+lib/libcapplet.so.0
 lib/libcapplet.so.0.0
 share/control-center/.directory
 share/control-center/Desktop/.directory
