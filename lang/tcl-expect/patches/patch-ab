@@ -1,0 +1,9 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/09/05 16:20:30 jwise Exp $
+--- pkgIndex.in.orig	Fri Sep  1 22:24:40 2000
++++ pkgIndex.in	Fri Sep  1 22:24:53 2000
+@@ -7,4 +7,4 @@
+ # script is sourced, the variable $dir must contain the
+ # full path name of this file's directory.
+ 
+-package ifneeded Expect @EXP_VERSION_FULL@ [list load [file join $dir .. @EXP_SHARED_LIB_FILE@]]
++package ifneeded Expect @EXP_VERSION_FULL@ [list load [file join $dir ../.. @EXP_SHARED_LIB_FILE@]]
