@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2001/12/10 18:24:10 martti Exp $
+
+SHA1 (cvsps-1.3.tar.gz) = 065edfc3d4a4c3f1a877a30889f498baa1a8f9fe
+Size (cvsps-1.3.tar.gz) = 25082 bytes
+SHA1 (patch-aa) = 4b712246eaab4fa13b7e6fa1419dfe35486a3598
