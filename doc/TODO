@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1721 2004/05/07 17:48:43 abs Exp $
+$NetBSD: TODO,v 1.1722 2004/05/07 17:49:46 abs Exp $
 
 Suggested new packages
 ======================
@@ -195,7 +195,6 @@ Suggested package updates
 	o elk-3.99.6
 	o elm-me-2.4pl115
 	o evolution-1.5.2
-	o exim-4.33
 	o festival-1.4.3
 	o ffmpeg-0.4.8
 	o file-4.09
