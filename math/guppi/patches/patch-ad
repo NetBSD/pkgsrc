@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 2002/01/28 09:36:56 drochner Exp $
+
+--- python-modules/Guppi/data_impl/Makefile.in.orig	Sat Jan 26 21:50:47 2002
++++ python-modules/Guppi/data_impl/Makefile.in	Sat Jan 26 21:51:53 2002
+@@ -332,7 +332,7 @@
+ 	cat $(srcdir)/start.py $(python_wrappers) $(srcdir)/end.py > __init__.py
+ 
+ %.pyc: %.py
+-	python $(srcdir)/../compilefile.py $<
++	${PYTHONBIN} $(srcdir)/../compilefile.py $<
+ 
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.

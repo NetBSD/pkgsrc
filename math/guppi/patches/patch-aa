@@ -1,13 +1,73 @@
-$NetBSD: patch-aa,v 1.3 2001/11/13 03:16:51 damon Exp $
+$NetBSD: patch-aa,v 1.4 2002/01/28 09:36:53 drochner Exp $
 
---- configure.orig	Thu Oct 18 13:39:03 2001
-+++ configure
-@@ -10821,7 +10821,7 @@
- LIBGUPPI_INCLUDEDIR='-I${includedir} -I${includedir}/libguppi -I${includedir}/libguppitank' 
- LIBGUPPI_INCLUDEDIR="$LIBGUPPI_INCLUDEDIR $STANDARD_CFLAGS"
- LIBGUPPI_LIBS="-lguppitank -lguppi"
--LIBGUPPI_LIBS="$LIBGUPPI_LIBS $STANDARD_LDFLAGS"
-+LIBGUPPI_LIBS="$LIBGUPPI_LIBS -L$LOCALBASE/lib/python2.0/config -lpython2.0 $STANDARD_LDFLAGS"
+--- configure.orig	Thu Oct 18 19:39:03 2001
++++ configure	Sat Jan 26 21:08:28 2002
+@@ -10350,42 +10350,13 @@
+ 
+ python_msg=no
+ 
+-if test "$enable_python" = "yes"; then
+-# Extract the first word of "python", so it can be a program name with args.
+-set dummy python; ac_word=$2
+-echo $ac_n "checking for $ac_word""... $ac_c" 1>&6
+-echo "configure:10358: checking for $ac_word" >&5
+-if eval "test \"`echo '$''{'ac_cv_prog_python_val'+set}'`\" = set"; then
+-  echo $ac_n "(cached) $ac_c" 1>&6
+-else
+-  if test -n "$python_val"; then
+-  ac_cv_prog_python_val="$python_val" # Let the user override the test.
+-else
+-  IFS="${IFS= 	}"; ac_save_ifs="$IFS"; IFS=":"
+-  ac_dummy="$PATH"
+-  for ac_dir in $ac_dummy; do
+-    test -z "$ac_dir" && ac_dir=.
+-    if test -f $ac_dir/$ac_word; then
+-      ac_cv_prog_python_val="true"
+-      break
+-    fi
+-  done
+-  IFS="$ac_save_ifs"
+-  test -z "$ac_cv_prog_python_val" && ac_cv_prog_python_val="false"
+-fi
+-fi
+-python_val="$ac_cv_prog_python_val"
+-if test -n "$python_val"; then
+-  echo "$ac_t""$python_val" 1>&6
+-else
+-  echo "$ac_t""no" 1>&6
+-fi
++python_val=true
+ 
+ if $python_val; then
+ 
+-          PY_PREFIX=`python -c 'import sys ; print sys.prefix'`
+-          PY_EXEC_PREFIX=`python -c 'import sys ; print sys.exec_prefix'`
+-                    PY_VERSION=`python -c 'import sys ; print sys.version[0:3]'`
++          PY_PREFIX=`${PYTHONBIN} -c 'import sys ; print sys.prefix'`
++          PY_EXEC_PREFIX=`${PYTHONBIN} -c 'import sys ; print sys.exec_prefix'`
++                    PY_VERSION=`${PYTHONBIN} -c 'import sys ; print sys.version[0:3]'`
+                     if test -f $PY_PREFIX/include/python$PY_VERSION/Python.h; then
+                   PY_LIBS="-lpython$PY_VERSION"
+                   PY_LIB_LOC="-L$PY_EXEC_PREFIX/lib/python$PY_VERSION/config"
+@@ -10400,7 +10371,7 @@
+                   
+                   
+ 	
+-                  PY_BUILD_CMD='python $(top_srcdir)/build-tools/gen-py.py'
++                  PY_BUILD_CMD='${PYTHONBIN} $(top_srcdir)/build-tools/gen-py.py'
+                   
+ 
+ 		  python_val=true
+@@ -10455,12 +10426,6 @@
+ 
+ fi ### Closes if $python_val; then
+ 
+-else
+-	echo "$ac_t""***" 1>&6	
+-	echo "$ac_t""*** Python support explicitly blocked by --disable-python option." 1>&6
+-	echo "$ac_t""***" 1>&6		
+-	python_val=false
+-fi
  
  
  

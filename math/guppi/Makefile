@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2002/01/25 02:00:11 rh Exp $
+# $NetBSD: Makefile,v 1.13 2002/01/28 09:36:52 drochner Exp $
 
 DISTNAME=	Guppi-0.40.0
 PKGNAME=	${DISTNAME:S/G/g/}
@@ -23,12 +23,15 @@ USE_X11BASE=	YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 PLIST_SUBST+=		LOCALBASE=${LOCALBASE}
 
+CONFIGURE_ENV+=	PYTHONBIN=${PYTHONBIN}
+MAKE_ENV+=	PYTHONBIN=${PYTHONBIN}
+
 post-install:
 	${TEST} ${PREFIX} = ${LOCALBASE} || \
 	${LN} -fs ${PREFIX}/share/aclocal/libguppi.m4 \
 	  ${LOCALBASE}/share/aclocal/libguppi.m4
 
-.include "../../lang/python/pyversion.mk"
+.include "../../lang/python/application.buildlink.mk"
 .include "../../devel/libglade/buildlink.mk"
 .include "../../devel/readline/buildlink.mk"
 .include "../../x11/gnome-core/buildlink.mk"
