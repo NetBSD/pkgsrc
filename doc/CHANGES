@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1234 2003/01/26 00:14:51 fredb Exp $
+$NetBSD: CHANGES,v 1.1235 2003/01/26 06:58:06 grant Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -413,3 +413,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated libbonobo to 2.2.0 [jmmv 2003-01-25]
 	Updated adzap to 20030125 [rh 2003-01-26]
 	Added divxplayer-0.2.0 [fredb 2003-01-26]
+	Updated ethereal to 0.9.9 [grant 2003-01-26]
