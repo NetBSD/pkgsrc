@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2002/12/22 19:04:08 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2003/03/22 11:35:44 jmmv Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1998/08/09 15:13:33 kuriyama Exp
 #
 
@@ -29,6 +29,12 @@ MAKE_ENV+=		PKGLOCALEDIR="${PKGLOCALEDIR}"
 ALL_TARGET=		all-yes
 INSTALL_TARGET=		install-exec
 BUILD_DIRS=		${WRKSRC}/intl
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Darwin"
+CPPFLAGS+=		-D_INTL_REDIRECT_MACROS=1
+.endif
 
 .include "../../converters/libiconv/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
