@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2004/10/03 00:18:24 tv Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2004/11/23 20:17:55 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 APACHE_BUILDLINK3_MK:=	${APACHE_BUILDLINK3_MK}+
@@ -23,12 +23,12 @@ BUILDLINK_DEPMETHOD.apache+=	full
 USE_PERL5?=	build	# for "apxs"
 APXS?=		${BUILDLINK_PREFIX.apache}/sbin/apxs
 
-.include "../../devel/apr/buildlink3.mk"
-
 .if !empty(APACHE_BUILDLINK3_MK:M+)
 .  if defined(GNU_CONFIGURE)
 CONFIGURE_ARGS+=	--with-apxs2="${APXS}"
 .  endif
 .endif	# APACHE_BUILDLINK3_MK
+
+.include "../../devel/apr/buildlink3.mk"
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
