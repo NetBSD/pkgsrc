@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/03/08 19:52:51 minskim Exp $
+# $NetBSD: Makefile,v 1.7 2004/03/08 20:27:14 minskim Exp $
 #
 
 DISTNAME=	imp1.1b9
@@ -13,7 +13,7 @@ COMMENT=	WYSIWYG vector graphics application
 
 DEPENDS+=	pstoedit>=3.19:../../graphics/pstoedit
 DEPENDS+=	tcl>=8.3.2nb2:../../lang/tcl83
-DEPENDS+=	tk>=8.3.2nb1:../../x11/tk
+DEPENDS+=	tk>=8.3.2nb1:../../x11/tk83
 
 WRKSRC=		${WRKDIR}/impress-1.1b9
 

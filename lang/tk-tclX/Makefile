@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/03/08 19:52:51 minskim Exp $
+# $NetBSD: Makefile,v 1.15 2004/03/08 20:27:14 minskim Exp $
 #
 
 DISTNAME=	tclX8.2.0
@@ -10,7 +10,7 @@ MAINTAINER=	jwise@NetBSD.org
 HOMEPAGE=	http://www.neosoft.com/TclX/
 COMMENT=	Extended Tcl (TclX), a set of Tcl extensions for system programming
 
-DEPENDS+=	tk>=8.3.4:../../x11/tk
+DEPENDS+=	tk>=8.3.4:../../x11/tk83
 DEPENDS+=	tcl-tclX-8.2.0:../../lang/tcl-tclX
 
 CONFLICTS+=	tclX-[0-9]*
@@ -40,12 +40,12 @@ post-extract:
 		cd ../../lang/tcl83 && ${MAKE} extract;			\
 	fi
 	@if [ ! -e ${_PKGSRCDIR}/x11/tk/${WRKDIR:T}/tk8.3.4 ]; then	\
-		cd ../../x11/tk && ${MAKE} extract;			\
+		cd ../../x11/tk83 && ${MAKE} extract;			\
 	fi
 
 pre-clean:
 	@cd ../../lang/tcl83 && ${MAKE} clean
-	@cd ../../x11/tk && ${MAKE} clean
+	@cd ../../x11/tk83 && ${MAKE} clean
 
 do-build:
 	@cd ${WRKSRC}/../tk/unix && ${MAKE_ENV} ${MAKE}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/01/22 07:49:21 grant Exp $
+# $NetBSD: Makefile,v 1.4 2004/03/08 20:27:13 minskim Exp $
 #
 
 DISTNAME=	quirc-0.9.82
@@ -14,5 +14,5 @@ GNU_CONFIGURE=	YES
 USE_GNU_TOOLS+=	make
 USE_X11=	YES
 
-.include "../../x11/tk/buildlink2.mk"
+.include "../../x11/tk83/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2004/01/24 14:00:13 grant Exp $
+# $NetBSD: Makefile,v 1.32 2004/03/08 20:27:15 minskim Exp $
 #
 
 DISTNAME=		nt.1.5a23
@@ -10,7 +10,7 @@ MAINTAINER=		mycroft@NetBSD.org
 HOMEPAGE=		http://www-mice.cs.ucl.ac.uk/multimedia/software/nte/
 COMMENT=		Multicast Network Text Editor
 
-DEPENDS+=		tk>=8.3.2:../../x11/tk
+DEPENDS+=		tk>=8.3.2:../../x11/tk83
 
 WRKSRC=			${WRKDIR}
 CRYPTO=			yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/02/15 23:24:36 lukem Exp $
+# $NetBSD: Makefile,v 1.8 2004/03/08 20:27:16 minskim Exp $
 #
 
 DISTNAME=       pclock0.7
@@ -16,5 +16,5 @@ WRKSRC=		${WRKDIR}/projclock
 USE_BUILDLINK2=	# defined
 NO_BUILD=	# defined
 
-.include "../../x11/tk/buildlink2.mk"
+.include "../../x11/tk83/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

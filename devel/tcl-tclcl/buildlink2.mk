@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1.1.1 2002/08/28 10:00:11 seb Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2004/03/08 20:27:14 minskim Exp $
 
 .if !defined(TCL_TCLCL_BUILDLINK2_MK)
 TCL_TCLCL_BUILDLINK2_MK=	# defined
@@ -21,7 +21,7 @@ BUILDLINK_FILES.tcl-tclcl+=		include/tracedvar.h
 BUILDLINK_FILES.tcl-tclcl+=		lib/libtclcl.*
 
 .include  "../../lang/tcl-otcl/buildlink2.mk"
-.include "../../x11/tk/buildlink2.mk"
+.include "../../x11/tk83/buildlink2.mk"
 
 BUILDLINK_TARGETS+=		tcl-tclcl-buildlink
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2004/01/20 14:11:50 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2004/03/08 20:27:14 minskim Exp $
 
 PKGNAME=		tk-postgresql-${BASE_VERS}
 PKGREVISION=		1
@@ -28,6 +28,6 @@ post-install:
 
 .include "../postgresql-lib/buildlink2.mk"
 .include "../tcl-postgresql/buildlink2.mk"
-.include "../../x11/tk/buildlink2.mk"
+.include "../../x11/tk83/buildlink2.mk"
 
 .include "../../mk/bsd.pkg.mk"

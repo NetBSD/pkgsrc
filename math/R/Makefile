@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2004/03/01 11:42:13 markd Exp $
+# $NetBSD: Makefile,v 1.50 2004/03/08 20:27:14 minskim Exp $
 
 DISTNAME=		R-1.8.1
 PKGREVISION=		1
@@ -119,5 +119,5 @@ post-install:
 .include "../../graphics/jpeg/buildlink2.mk"
 .include "../../graphics/png/buildlink2.mk"
 .include "../../math/blas/buildlink2.mk"
-.include "../../x11/tk/buildlink2.mk"
+.include "../../x11/tk83/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2004/02/24 14:29:34 grant Exp $
+# $NetBSD: Makefile,v 1.20 2004/03/08 20:27:14 minskim Exp $
 #
 
 DISTNAME=	graphviz-1.10
@@ -78,7 +78,7 @@ post-install:
 .include "../../converters/libiconv/buildlink2.mk"
 .include "../../graphics/jpeg/buildlink2.mk"
 .include "../../graphics/freetype2/buildlink2.mk"
-.include "../../x11/tk/buildlink2.mk"
+.include "../../x11/tk83/buildlink2.mk"
 # .include "../../www/curl/buildlink2.mk"
 .include "../../textproc/expat/buildlink2.mk"
 .include "../../mk/xaw.buildlink2.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/07/21 16:43:16 martti Exp $
+# $NetBSD: Makefile,v 1.6 2004/03/08 20:27:14 minskim Exp $
 #
 
 DISTNAME=       cbrowser-0.6
@@ -25,5 +25,5 @@ do-install:
 		${INSTALL_SCRIPT} ${WRKSRC}/$$f ${PREFIX}/share/cbrowser; \
 	done
 
-.include "../../x11/tk/buildlink2.mk"
+.include "../../x11/tk83/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

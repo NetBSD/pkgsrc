@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2004/03/08 19:52:50 minskim Exp $
+# $NetBSD: Makefile,v 1.35 2004/03/08 20:27:13 minskim Exp $
 #
 
 .include "../../comms/pilot-link/Makefile.common"
@@ -37,6 +37,6 @@ post-patch:
 .include "../../graphics/png/buildlink2.mk"
 .include "../../lang/perl5/buildlink2.mk"
 .include "../../lang/tcl83/buildlink2.mk"
-.include "../../x11/tk/buildlink2.mk"
+.include "../../x11/tk83/buildlink2.mk"
 
 .include "../../mk/bsd.pkg.mk"

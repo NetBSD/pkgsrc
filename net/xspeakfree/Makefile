@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/07/17 22:52:05 grant Exp $
+# $NetBSD: Makefile,v 1.7 2004/03/08 20:27:15 minskim Exp $
 
 DISTNAME=	xspeakfree-0.8.1
 CATEGORIES=	net audio x11
@@ -9,7 +9,7 @@ HOMEPAGE=	http://www.spearce.org/projects/xspeakfree/
 COMMENT=	Tcl/Tk (wish) frontend to Speak Freely
 
 DEPENDS+=	speakfreely>=7.1:../../net/speakfreely
-DEPENDS+=	tk>=8.3.2:../../x11/tk
+DEPENDS+=	tk>=8.3.2:../../x11/tk83
 
 NO_BUILD=	yes
 
