@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.6 2001/07/02 05:34:01 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.7 2001/07/02 14:22:21 jlam Exp $
 #
 # This Makefile fragment is included by packages that use gnome-libs.
 #
@@ -39,17 +39,17 @@ BUILDLINK_FILES.gnome-libs+=	lib/libgnorbagtk.*
 BUILDLINK_FILES.gnome-libs+=	lib/libgtkxmhtml.*
 BUILDLINK_FILES.gnome-libs+=	lib/libzvt.*
 
+REPLACE_BUILDLINK_SED+=	\
+	-e "s|-I${BUILDLINK_DIR}/\(lib/gnome-libs/\)|-I${X11PREFIX}/\1|g"
+BUILDLINK_CONFIG_WRAPPER_SED+=	\
+	-e "s|-I${X11PREFIX}/\(lib/gnome-libs/\)|-I${BUILDLINK_DIR}/\1|g"
+
 .include "../../audio/esound/buildlink.mk"
 .include "../../devel/gettext-lib/buildlink.mk"
 .include "../../graphics/imlib/buildlink.mk"
 .include "../../graphics/xpm/buildlink.mk"
 .include "../../net/ORBit/buildlink.mk"
 .include "../../x11/gtk/buildlink.mk"
-
-REPLACE_BUILDLINK_SED+=	\
-	-e "s|-I${BUILDLINK_DIR}/\(lib/gnome-libs/\)|-I${X11PREFIX}/\1|g"
-BUILDLINK_CONFIG_WRAPPER_SED+=	\
-	-e "s|-I${X11PREFIX}/\(lib/gnome-libs/\)|-I${BUILDLINK_DIR}/\1|g"
 
 BUILDLINK_TARGETS.gnome-libs=	gnome-libs-buildlink
 BUILDLINK_TARGETS.gnome-libs+=	gnome-libs-buildlink-config-wrapper
