@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.340 2003/03/05 10:31:40 wiz Exp $
+$NetBSD: TODO,v 1.341 2003/03/05 12:55:01 wiz Exp $
 
 Suggested new packages
 ======================
@@ -142,7 +142,6 @@ Suggested package updates
 	o icepref-2.2
 	o icewm-1.2.5
 	o icu-2.4 [heinz]
-	o id3v2-0.1.8
 	o imp-3.1 [pkg/19497]
 	o imp-3.2
 	o inform-6.21.3 [pkg/19298]
