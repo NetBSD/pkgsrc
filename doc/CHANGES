@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7118 2004/09/07 21:41:17 adrianp Exp $
+$NetBSD: CHANGES,v 1.7119 2004/09/08 12:08:06 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4216,3 +4216,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated apache to 2.0.50nb1 [adrianp 2004-09-07]
 	Updated tidy to 20040811nb1 [reed 2004-09-07]
 	Updated cxref to 1.5g [adrianp 2004-09-07]
+	Updated bmp to 0.9.7rc2nb1 [jmmv 2004-09-08]
