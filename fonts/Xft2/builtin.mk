@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.4 2004/03/30 17:10:16 jlam Exp $
+# $NetBSD: builtin.mk,v 1.5 2004/07/24 06:50:19 grant Exp $
 
 _X11_TMPL=	${X11BASE}/lib/X11/config/X11.tmpl
 
@@ -26,9 +26,29 @@ _XFT2_VERSIONS=	2.1.2  2.1.1  2.1.0
 _XFT2_2.1.0=	4.2.99.* 4.3 4.3.[0-9] 4.3.[0-9].* 4.3.[1-8][0-9]* 4.3.9[0-8]*
 _XFT2_2.1.0+=	4.3.99.* 4.[4-9]* 4.[1-9][0-9]*
 .      if !defined(XF86_VERSION)
-_X11_CONFIG_VERSION_DEF=	${X11BASE}/lib/X11/config/version.def
 XF86_VERSION=	3.3
-.        if exists(${_X11_CONFIG_VERSION_DEF})
+.        if exists(${X11BASE}/lib/X11/config/xorg.cf)
+_X11_CONFIG_VERSION_DEF=	${X11BASE}/lib/X11/config/xorg.cf
+_XORG_MAJOR!=	\
+	${AWK} '/\#define[ 	]*XORG_VERSION_MAJOR/ { print $$3 }'	\
+		${_X11_CONFIG_VERSION_DEF}
+_XORG_MINOR!=	\
+	${AWK} '/\#define[ 	]*XORG_VERSION_MINOR/ { print $$3 }'	\
+		${_X11_CONFIG_VERSION_DEF}
+_XORG_PATCH!=	\
+	${AWK} '/\#define[ 	]*XORG_VERSION_PATCH/ { print $$3 }'	\
+		${_X11_CONFIG_VERSION_DEF}
+_XORG_SNAP!=	\
+	${AWK} '/\#define[ 	]*XORG_VERSION_SNAP/ { print $$3 }'	\
+		${_X11_CONFIG_VERSION_DEF}
+_XORG_TEENY=	${_XORG_PATCH}.${_XORG_SNAP}
+.          if !empty(_XORG_TEENY:M0.0)
+XF86_VERSION=	4.4
+.          else
+XF86_VERSION=	4.4.${_XORG_TEENY}
+.          endif
+.        elif exists(${X11BASE}/lib/X11/config/version.def)
+_X11_CONFIG_VERSION_DEF=	${X11BASE}/lib/X11/config/version.def
 _XF86_MAJOR!=	\
 	${AWK} '/\#define[ 	]*XF86_VERSION_MAJOR/ { print $$3 }'	\
 		${_X11_CONFIG_VERSION_DEF}
@@ -48,8 +68,8 @@ XF86_VERSION=	${_XF86_MAJOR}.${_XF86_MINOR}
 XF86_VERSION=	${_XF86_MAJOR}.${_XF86_MINOR}.${_XF86_TEENY}
 .          endif
 .        endif
+.      endif	# defined(XF86_VERSION)
 BUILDLINK_VARS+=	XF86_VERSION
-.      endif
 .      for _xrender_version_ in ${_XFT2_VERSIONS}
 .        for _pattern_ in ${_XFT2_${_xrender_version_}}
 .          if !empty(XF86_VERSION:M${_pattern_})
