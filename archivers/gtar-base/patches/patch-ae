@@ -1,21 +1,18 @@
-$NetBSD: patch-ae,v 1.4 2002/11/20 16:57:55 bouyer Exp $
+$NetBSD: patch-ae,v 1.5 2004/09/27 16:12:04 wiz Exp $
 
---- Makefile.in.orig	Wed Sep 26 22:35:05 2001
-+++ Makefile.in	Sun Nov 17 18:32:32 2002
-@@ -102,10 +102,15 @@
- rmt_LDADD = @rmt_LDADD@
- tar_LDADD = @tar_LDADD@
- 
-+OPSYS!= uname -s
- AUTOMAKE_OPTIONS = gnits dist-bzip2 dist-shar
+--- Makefile.in.orig	2004-05-11 10:13:22.000000000 +0200
++++ Makefile.in
+@@ -229,7 +229,12 @@ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
  ACLOCAL_AMFLAGS = -I m4
  EXTRA_DIST = ChangeLog.1 PORTS
--SUBDIRS = doc intl lib m4 src scripts po tests
+-SUBDIRS = doc lib src scripts po tests
++OPSYS!= uname -s
 +.if ${OPSYS} == "Darwin"
-+SUBDIRS = intl lib m4 src scripts tests
++SUBDIRS = lib src scripts tests
 +.else
-+SUBDIRS = intl lib m4 src scripts po tests
++SUBDIRS = lib src scripts po tests
 +.endif
- subdir = .
- ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
- mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+ all: config.h
+ 	$(MAKE) $(AM_MAKEFLAGS) all-recursive
+ 
