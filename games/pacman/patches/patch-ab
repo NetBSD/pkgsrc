@@ -1,0 +1,10 @@
+$NetBSD: patch-ab,v 1.1.1.1 1999/07/21 22:58:26 garbled Exp $
+--- config.h.in.orig	Tue Jul 20 23:50:42 1999
++++ config.h.in	Tue Jul 20 23:51:30 1999
+@@ -2,6 +2,4 @@
+ #ifndef header_config
+ #define header_config
+ 
+-#define DATAFILE "/usr/share/pacman/pacman.dat"
+-
+ #endif
