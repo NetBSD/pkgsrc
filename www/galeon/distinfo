@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.36 2004/07/20 17:37:23 abs Exp $
+$NetBSD: distinfo,v 1.37 2004/10/05 16:54:29 abs Exp $
 
-SHA1 (galeon-1.3.16.tar.bz2) = d5cdbfbb5a94285f5a41ae40d78094ddce187c76
-Size (galeon-1.3.16.tar.bz2) = 3572080 bytes
-SHA1 (patch-aa) = 0bda66e7c4e1f735057aa4fcdcbe0b27b3b739ba
-SHA1 (patch-ab) = f04d9ffbe497c53ab60849f103f1d1d3205ba7ab
-SHA1 (patch-ac) = 07a25a915a2d636d7a79cd607c865c064bbb9744
-SHA1 (patch-ad) = 9015275a6a73627b44e228e049a29477bb3bc150
+SHA1 (galeon-1.3.17.tar.bz2) = 03bb667acbf61eeca98ae5f39ddf1713ee18246b
+Size (galeon-1.3.17.tar.bz2) = 3635524 bytes
+SHA1 (patch-aa) = f90eceea62d12ebcaed72d8b8871cf35eda51256
+SHA1 (patch-ab) = 2bea5878588c98b66c31dd5b7eda63912fe9ff1d
+SHA1 (patch-ac) = 9f5b88e605c846d566615322cb1cc21ff585028a
+SHA1 (patch-ad) = 5f125f07451cbd7969cba6c254d7a5bd6ae00788
+SHA1 (patch-ae) = 054715c68a1a278331e9e20be107b0e1717b08f6

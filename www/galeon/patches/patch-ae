@@ -1,0 +1,14 @@
+$NetBSD: patch-ae,v 1.4 2004/10/05 16:54:29 abs Exp $
+
+--- mozilla/mozilla-embed.cpp.orig	2004-10-05 13:03:37.000000000 +0100
++++ mozilla/mozilla-embed.cpp
+@@ -1388,7 +1388,8 @@ impl_set_encoding (GaleonEmbed *embed,
+ 	rv = wrapper->ForceEncoding (charset);
+ 	if (NS_FAILED (rv)) return G_FAILED;
+ 
+-#if MOZILLA_CHECK_VERSION4 (1,8,MOZILLA_ALPHA,3)
++#if MOZILLA_CHECK_VERSION4 (1,8,MOZILLA_ALPHA,3) || \
++    (MOZILLA_IS_BRANCH (1,7) && MOZILLA_CHECK_VERSION3(1,7,3))
+ 	gtk_moz_embed_reload (GTK_MOZ_EMBED (embed),
+ 			      GTK_MOZ_EMBED_FLAG_RELOADCHARSETCHANGE);
+ #else
