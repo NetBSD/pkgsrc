@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.360 2004/09/29 11:33:38 hubertf Exp $
+# $NetBSD: Packages.txt,v 1.361 2004/10/16 00:36:10 dan Exp $
 ###########################################################################
 
 			==========================
@@ -2895,7 +2895,7 @@ you can set _FETCH_MESSAGE to a macro which displays a message explaining
 the situation. _FETCH_MESSAGE must be executable shell commands, not just a
 message. (Generally, it executes ${ECHO}). As of this writing, the following
 packages use this: audio/realplayer, cad/simian, devel/ipv6socket,
-emulators/vmare-module, fonts/acroread-jpnfont, sysutils/storage-manager,
+emulators/vmware-module, fonts/acroread-jpnfont, sysutils/storage-manager,
 www/ap-aolserver, www/openacs. Try to be consistent with them.
 
 
