@@ -1,10 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.3 2003/08/31 19:29:07 jmmv Exp $
+# $NetBSD: buildlink2.mk,v 1.4 2003/09/05 18:50:33 jmmv Exp $
 
 .if !defined(BUILDTOOL_BUILDLINK2_MK)
 BUILDTOOL_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		buildtool
-BUILDLINK_DEPENDS.buildtool?=	buildtool>=0.13
+BUILDLINK_DEPENDS.buildtool?=	buildtool>=0.14
 BUILDLINK_PKGSRCDIR.buildtool?=	../../devel/buildtool
 BUILDLINK_DEPMETHOD.buildtool?=	build
 
