@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.11 1999/06/18 16:48:45 cgd Exp $
+# $NetBSD: Makefile,v 1.12 1999/06/19 02:59:44 abs Exp $
 #
 # Every effort has been made to keep the communicator and navigator
 # Makefiles as similar as possible.
 
 BINNAME=	communicator
-NS_VERS=	4.6
-NS_VERS_SHORT=	46
+NS_VERS=	4.61
+NS_VERS_SHORT=	461
 #
 .if (${MACHINE_ARCH} == "alpha")
 .if !exists(/emul/osf1/sbin/loader)
@@ -19,7 +19,7 @@ WRKNAME=	alpha-dec-osf4.0
 IGNORE=You must have Linux libraries installed - see compat_linux(8)
 .endif
 UNAME=		x86-unknown-linuxglibc2.0
-DIST_DIR_NAME=	unsupported/linux20_glibc2
+DIST_DIR_NAME=	supported/linux20_glibc2
 WRKNAME=	x86-unknown-linux2.0
 .elif (${MACHINE_ARCH} == "sparc")
 .if !exists(/emul/sunos/usr/lib/ld.so)
@@ -33,11 +33,11 @@ WRKNAME=	${UNAME}
 DISTNAME=	${BINNAME}-v${NS_VERS_SHORT}-export.${UNAME}
 PKGNAME=	${BINNAME}-${NS_VERS}
 CATEGORIES=	www
-SUB=		english/unix/${DIST_DIR_NAME}/complete_install
-MASTER_SITES=	ftp://ftp.netscape.org/pub/communicator/${NS_VERS}/${SUB}/ \
-		ftp://sunsite.utk.edu/pub/netscape/communicator/${NS_VERS}/${SUB}/ \
-		ftp://ftp-uk.netscape.com/pub/communicator/${NS_VERS}/${SUB}/ \
-		ftp.informatik.rwth-aachen.de:/pub/mirror/ftp.netscape.com/pub/communicator/${NS_VERS}/${SUB}/
+SUB=		english/${NS_VERS}/unix/${DIST_DIR_NAME}/complete_install
+MASTER_SITES=	ftp://ftp.netscape.org/pub/communicator/${SUB}/ \
+		ftp://sunsite.utk.edu/pub/netscape/communicator/${SUB}/ \
+		ftp://ftp-uk.netscape.com/pub/communicator/${SUB}/ \
+		ftp.informatik.rwth-aachen.de:/pub/mirror/ftp.netscape.com/pub/communicator/${SUB}/
 ONLY_FOR_PLATFORM= *-*-alpha *-*-i386 *-*-sparc
 
 MAINTAINER=	packages@netbsd.org
