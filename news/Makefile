@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.26 2002/06/16 11:34:38 cjep Exp $
+# $NetBSD: Makefile,v 1.27 2002/10/02 03:11:19 rh Exp $
 #
 
 COMMENT=	Network news
 
 SUBDIR+=	cg
+SUBDIR+=	gtk2-pan
 SUBDIR+=	inn
 SUBDIR+=	knews
 SUBDIR+=	leafnode
