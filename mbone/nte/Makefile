@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.11 1998/09/22 06:11:38 garbled Exp $
+# $NetBSD: Makefile,v 1.12 1998/11/13 01:26:58 frueauf Exp $
 #
 
 DISTNAME=	nt.1.5a23
 PKGNAME=	nte-1.5a23
 CATEGORIES=	mbone tk80
 MASTER_SITES=	ftp://cs.ucl.ac.uk/mice/nte/
-
-NOT_FOR_ARCHS=	alpha	# ANSI headers cause LP64 problems
 
 MAINTAINER=	mycroft@netbsd.org
 
@@ -23,6 +21,8 @@ DEPENDS+=	tk-8.0p2:../../x11/tk80
 
 TK_DIR=         ${BUILD_ROOT}/x11/tk80
 TK_SRC=		${TK_DIR}/${WRKDIR:T}/tk8.0
+
+NOT_FOR_ARCHS=	alpha	# ANSI headers cause LP64 problems
 
 RESTRICTED=	"Contains DES encryption"
 MIRROR_DISTFILE=no
