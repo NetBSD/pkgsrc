@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/02/06 13:21:45 taca Exp $
+# $NetBSD: Makefile,v 1.3 2005/02/07 11:35:42 jlam Exp $
 
 PKGNAME=		postgresql80-server-${BASE_VERS}
 PKGREVISION=		# empty
@@ -19,8 +19,12 @@ CONFIGURE_ARGS+=	--with-openssl
 BUILD_DIRS=		${WRKSRC}/src/backend
 BUILD_DIRS+=		${WRKSRC}/src/backend/utils/mb/conversion_procs
 
-.if defined(USE_PAM)
-.  include "../../security/PAM/buildlink3.mk"
+PKG_OPTIONS_VAR=	PKG_OPTIONS.postgresql80-server
+PKG_SUPPORTED_OPTIONS=	PAM
+.include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:MPAM)
+.  include "../../mk/pam.buildlink3.mk"
 CONFIGURE_ARGS+=	--with-pam
 .endif
 
