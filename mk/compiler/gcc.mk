@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.14 2004/02/03 03:47:45 jlam Exp $
+# $NetBSD: gcc.mk,v 1.15 2004/02/03 04:09:27 jlam Exp $
 
 .if !defined(COMPILER_GCC_MK)
 COMPILER_GCC_MK=	defined
@@ -174,7 +174,6 @@ _USE_PKGSRC_GCC!=	\
 # Ensure that the correct rpath is passed to the linker if we need to
 # link against gcc shared libs.
 #
-_COMPILER_LD_FLAG=	-Wl,
 .  if !empty(_CC:M${LOCALBASE}/*)
 _GCC_SUBPREFIX=		${_CC:T:S/\/bin$//:S/${LOCALBASE}\///:S/${LOCALBASE}//}/
 .  else
@@ -265,6 +264,9 @@ PATH:=		${_CC:H}:${PATH}
 .    endif
 .  endif
 .endif
+
+# GCC passes flags to the linker using "-Wl,".
+_COMPILER_LD_FLAG=	-Wl,
 
 # Pass the required flags to imake to tell it we're using gcc on Solaris.
 .if ${OPSYS} == "SunOS"
