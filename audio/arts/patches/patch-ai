@@ -1,10 +1,10 @@
-$NetBSD: patch-ai,v 1.4 2004/02/07 14:39:39 xtraeme Exp $
+$NetBSD: patch-ai,v 1.5 2004/04/20 12:15:51 markd Exp $
 
---- flow/gsl/Makefile.in.orig	2004-01-26 18:20:17.000000000 +1100
-+++ flow/gsl/Makefile.in	2004-02-08 00:43:18.000000000 +1100
-@@ -446,7 +446,7 @@
- LTCOMPILE = $(LIBTOOL) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) \
- 	$(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
+--- flow/gsl/Makefile.in.orig	2004-04-06 02:30:07.000000000 +1200
++++ flow/gsl/Makefile.in
+@@ -172,7 +172,7 @@ LTCOMPILE = $(LIBTOOL) --mode=compile $(
+ 	$(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) \
+ 	$(AM_CFLAGS) $(CFLAGS)
  CCLD = $(CC)
 -LINK = $(LIBTOOL) --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) \
 +LINK = $(LIBTOOL) --mode=link $(CXXLD) $(AM_CFLAGS) $(CFLAGS) \
