@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2001/04/18 12:14:40 agc Exp $
+$NetBSD: distinfo,v 1.3 2004/01/23 09:02:15 agc Exp $
 
 SHA1 (xcdplayer-2.2.tar.Z) = e518f2df9fcc5e21e1123fe6f5b1193f232b76ef
 Size (xcdplayer-2.2.tar.Z) = 89435 bytes
@@ -8,7 +8,7 @@ SHA1 (patch-ac) = 4e3b501bd16f14183fa0e8970f8b1666ed524a45
 SHA1 (patch-ad) = 1c1b3ac0661095c239228de69c5c8f161b5cdb99
 SHA1 (patch-ae) = 19a4a70a4c83ae147c8cc653cf95c32370fd084f
 SHA1 (patch-af) = 54c96ac87764c222e48e0dcf4267a93cdd966843
-SHA1 (patch-ag) = c05179debd97b1f6b53c891fe85e4c1b0b8f9b62
+SHA1 (patch-ag) = cb787b19c00d8bda99367eb71dc5e234857a4539
 SHA1 (patch-ah) = b2d4bd7fe5ab0089fd1e05827e9be6ca18a01233
 SHA1 (patch-ai) = 2a3a3726aed4e295c5546d11fd0b3948cecc239a
 SHA1 (patch-aj) = 74e92d2096e5d6ffd6f24dbf2501ed349e9c834f
