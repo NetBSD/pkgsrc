@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.13 2005/01/06 22:09:52 jmmv Exp $
+$NetBSD: distinfo,v 1.14 2005/02/03 11:20:03 jmmv Exp $
 
-SHA1 (ggv-2.8.2.tar.bz2) = 3c75d8bfb031474e103a2b45a11ab902d2c31ef7
-Size (ggv-2.8.2.tar.bz2) = 1270192 bytes
+SHA1 (ggv-2.8.3.tar.bz2) = ba6b78cb894dfc11153d7a193fb9f2ea59ed4235
+Size (ggv-2.8.3.tar.bz2) = 1285862 bytes
