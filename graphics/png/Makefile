@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2004/03/18 22:40:40 ben Exp $
+# $NetBSD: Makefile,v 1.56 2004/03/19 18:36:46 ben Exp $
 
 # On update, don't forget to increase shared library major/minor's in
 # accordance with changes (patch-aa).
@@ -35,15 +35,10 @@ PLIST_SUBST+=	LIBPNG_SO_MINOR=${LIBPNG_SO_MINOR}
 
 INSTALLATION_DIRS=	include lib man/man3 man/man5
 
-post-build:
-	cd ${WRKSRC}/scripts && \
-		${SED} -e s\!@PREFIX@!${PREFIX}! <libpng.pc.in >libpng12.pc
-
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/libpng.3 ${PREFIX}/man/man3
 	${INSTALL_MAN} ${WRKSRC}/libpngpf.3 ${PREFIX}/man/man3
 	${INSTALL_MAN} ${WRKSRC}/png.5 ${PREFIX}/man/man5
-	${INSTALL_DATA} ${WRKSRC}/scripts/libpng12.pc ${PREFIX}/lib/pkgconfig/
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
