@@ -99,7 +99,7 @@ GCC_INTVERSION=		2.95.2
 #EGCS_PATCHBUNDLE=	${EGCS_DISTNAME}-NetBSD-19980104.diff.gz
 GCC_WRKSRC=		${WRKDIR}/${GCC_DISTNAME}
 GCC_LANGUAGES=		c # add to these below
-BUILD_DEPENDS+= autoheader:../../devel/autoconf
+BUILD_DEPENDS+= ${LOCALBASE}/bin/autoheader:../../devel/autoconf
 
 .if defined(GCC_NO_RUNTIME) || defined(GCC_FAKE_RUNTIME)
 GCC_NO_CXX_RUNTIME=	yes
