@@ -1,19 +1,10 @@
 #! /bin/sh
 #
-# $NetBSD: INSTALL,v 1.1 2001/10/31 23:28:06 zuntum Exp $
-#
+# $NetBSD: INSTALL,v 1.2 2002/09/21 01:48:02 jlam Exp $
 
-case $2 in
-    PRE-INSTALL)
-	if [ ! -d /var/spool/texfonts ]; then
-	    install -d -m 755 -o root -g wheel /var/spool/texfonts
-	    for SUBDIR in pk source tfm; do
-		install -d -m 1777 -o root -g wheel /var/spool/texfonts/$SUBDIR
-	    done
-	fi
-        ;;
-    POST-INSTALL)
-	cat <<EOT
+case ${STAGE} in
+POST-INSTALL)
+	${CAT} << EOT
 ---------------------------------------------------------------------------
 You may consider running ${PKG_PREFIX}/bin/texconfig to adjust for your
 local environment, e.g. configure font generation to use a temporary
@@ -23,10 +14,4 @@ For further information have a look at ${PKG_PREFIX}/share/texmf/doc/tetex/.
 ---------------------------------------------------------------------------
 EOT
 	;;
-    *)
-	echo "Unexpected Argument $2!!"
-	exit 1
-	;;
 esac
-
-exit 0
