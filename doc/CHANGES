@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9286 2005/02/24 11:36:02 wiz Exp $
+$NetBSD: CHANGES,v 1.9287 2005/02/24 11:37:05 bad Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1062,3 +1062,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated abiword-plugins to 2.2.4 [adam 2005-02-24]
 	Added pmccabe-2.2 [agc 2005-02-24]
 	Updated htmllint to 20050220 [wiz 2005-02-24]
+	Updated libfwbuilder to 2.0.5 [bad 2005-02-24]
+	Added fwbuilder-2.05 [bad 2005-02-24]
