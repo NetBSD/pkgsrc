@@ -1,10 +1,8 @@
-$NetBSD: patch-ag,v 1.2 2000/05/20 18:45:04 kim Exp $
-
---- protos.h.orig	Tue Mar  7 06:13:38 2000
-+++ protos.h	Sat May 20 14:43:55 2000
-@@ -114,6 +114,7 @@
- char *mutt_charset_hook (const char *);
+--- protos.h.orig	Tue May 16 17:23:12 2000
++++ protos.h	Wed Jun 21 08:29:26 2000
+@@ -115,6 +115,7 @@
  char *mutt_expand_path (char *, size_t);
+ char *_mutt_expand_path (char *, size_t, int);
  char *mutt_find_hook (int, const char *);
 +char *mutt_gecos_name (char *, size_t, struct passwd *);
  char *mutt_gen_msgid (void);
