@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/02/12 17:56:41 kim Exp $
+
+SHA1 (cisco-mibs/v1.tar.gz) = 83bb52ad3687cfef139e40c46b9684b24c44b5e1
+Size (cisco-mibs/v1.tar.gz) = 4040787 bytes
+SHA1 (cisco-mibs/v2.tar.gz) = 74046230039bec46eae15b595d20418f192ec7d4
+Size (cisco-mibs/v2.tar.gz) = 4303216 bytes
