@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/07/17 18:39:39 nra Exp $
+# $NetBSD: Makefile,v 1.2 2001/07/17 23:04:10 wiz Exp $
 
 DISTNAME=	HTTPD-User-Manage-1.58
-PKGNAME=	p5-HTTPD-User-Manage-1.58
+PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=HTTPD/}
 
@@ -11,6 +11,7 @@ COMMENT=	Perl script/modules for managing web access control
 
 USE_PERL5=              # defined
 PERL5_PACKLIST=         ${PERL5_SITEARCH}/auto/HTTPD-User-Manage/.packlist
+REPLACE_PERL=		user_manage
 
 do-configure:
 	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
