@@ -1,0 +1,77 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2002/05/26 17:22:48 cjep Exp $
+share/examples/Wrappers/AbiWord/AppIcon.xpm
+share/examples/Wrappers/AbiWord/AppInfo.xml
+share/examples/Wrappers/AbiWord/AppRun
+share/examples/Wrappers/Emacs/AppIcon.xpm
+share/examples/Wrappers/Emacs/AppInfo.xml
+share/examples/Wrappers/Emacs/AppRun
+share/examples/Wrappers/Emacs/Config
+share/examples/Wrappers/GMix/AppIcon.xpm
+share/examples/Wrappers/GMix/AppInfo.xml
+share/examples/Wrappers/GMix/AppRun
+share/examples/Wrappers/GQView/AppIcon.xpm
+share/examples/Wrappers/GQView/AppInfo.xml
+share/examples/Wrappers/GQView/AppRun
+share/examples/Wrappers/Galeon/AppIcon.xpm
+share/examples/Wrappers/Galeon/AppInfo.xml
+share/examples/Wrappers/Galeon/AppRun
+share/examples/Wrappers/GhostView/AppIcon.xpm
+share/examples/Wrappers/GhostView/AppInfo.xml
+share/examples/Wrappers/GhostView/AppRun
+share/examples/Wrappers/Gimp/AppIcon.xpm
+share/examples/Wrappers/Gimp/AppInfo.xml
+share/examples/Wrappers/Gimp/AppRun
+share/examples/Wrappers/Gnumeric/AppIcon.xpm
+share/examples/Wrappers/Gnumeric/AppInfo.xml
+share/examples/Wrappers/Gnumeric/AppRun
+share/examples/Wrappers/Lock/AppIcon.xpm
+share/examples/Wrappers/Lock/AppInfo.xml
+share/examples/Wrappers/Lock/AppRun
+share/examples/Wrappers/Lyx/AppIcon.xpm
+share/examples/Wrappers/Lyx/AppInfo.xml
+share/examples/Wrappers/Lyx/AppRun
+share/examples/Wrappers/Mozilla/AppIcon.xpm
+share/examples/Wrappers/Mozilla/AppInfo.xml
+share/examples/Wrappers/Mozilla/AppRun
+share/examples/Wrappers/Netscape/.AppRun.swp
+share/examples/Wrappers/Netscape/AppIcon.xpm
+share/examples/Wrappers/Netscape/AppInfo.xml
+share/examples/Wrappers/Netscape/AppRun
+share/examples/Wrappers/README
+share/examples/Wrappers/Spruce/AppIcon.xpm
+share/examples/Wrappers/Spruce/AppInfo.xml
+share/examples/Wrappers/Spruce/AppRun
+share/examples/Wrappers/TCD/AppIcon.xpm
+share/examples/Wrappers/TCD/AppInfo.xml
+share/examples/Wrappers/TCD/AppRun
+share/examples/Wrappers/Terminal/AppIcon.xpm
+share/examples/Wrappers/Terminal/AppInfo.xml
+share/examples/Wrappers/Terminal/AppRun
+share/examples/Wrappers/Vim/AppIcon.xpm
+share/examples/Wrappers/Vim/AppInfo.xml
+share/examples/Wrappers/Vim/AppRun
+share/examples/Wrappers/XMMS/AppIcon.xpm
+share/examples/Wrappers/XMMS/AppInfo.xml
+share/examples/Wrappers/XMMS/AppRun
+share/examples/Wrappers/XPaint/AppIcon.xpm
+share/examples/Wrappers/XPaint/AppInfo.xml
+share/examples/Wrappers/XPaint/AppRun
+@dirrm share/examples/Wrappers/XPaint
+@dirrm share/examples/Wrappers/XMMS
+@dirrm share/examples/Wrappers/Vim
+@dirrm share/examples/Wrappers/Terminal
+@dirrm share/examples/Wrappers/TCD
+@dirrm share/examples/Wrappers/Spruce
+@dirrm share/examples/Wrappers/Netscape
+@dirrm share/examples/Wrappers/Mozilla
+@dirrm share/examples/Wrappers/Lyx
+@dirrm share/examples/Wrappers/Lock
+@dirrm share/examples/Wrappers/Gnumeric
+@dirrm share/examples/Wrappers/Gimp
+@dirrm share/examples/Wrappers/GhostView
+@dirrm share/examples/Wrappers/Galeon
+@dirrm share/examples/Wrappers/GQView
+@dirrm share/examples/Wrappers/GMix
+@dirrm share/examples/Wrappers/Emacs
+@dirrm share/examples/Wrappers/AbiWord
+@dirrm share/examples/Wrappers
