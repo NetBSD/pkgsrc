@@ -1,17 +1,17 @@
-$NetBSD: patch-aa,v 1.5 2004/12/31 21:38:52 kristerw Exp $
-
---- configure.orig	Fri Dec 31 21:48:06 2004
-+++ configure	Fri Dec 31 21:48:59 2004
-@@ -1036,12 +1036,6 @@
-   disable_thread=yes
- fi;
- 
--# Check whether --enable-thread or --disable-thread was given.
--if test "${enable_thread+set}" = set; then
--  enableval="$enable_thread"
--  disable_thread=no
--fi;
--
- # Check whether --enable-wall or --disable-wall was given.
- if test "${enable_wall+set}" = set; then
-   enableval="$enable_wall"
+--- configure.in.orig	2003-11-17 15:29:46.000000000 -0500
++++ configure.in	2004-12-31 17:19:53.000000000 -0500
+@@ -120,7 +120,13 @@
+                 THREAD_CFLAGS="-D_THREAD_SAFE -pthread"
+         fi
+ 	CRYPT_LIB="-lcrypt"
+-        ac_pthrlib="c_r"
++	case "${host_os}" in
++	    netbsd* )
++	    ;;
++	    * )
++		ac_pthrlib="c_r"
++	    ;;
++	esac
+     ;;
+     linux* )
+ 	CRYPT_LIB="-lcrypt"
