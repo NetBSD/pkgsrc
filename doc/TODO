@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.598 2003/05/28 17:28:40 wiz Exp $
+$NetBSD: TODO,v 1.599 2003/05/28 21:03:55 salo Exp $
 
 Suggested new packages
 ======================
@@ -216,6 +216,7 @@ Suggested package updates
 	o pine-4.55
 	o plib-1.6.0 [pkg/19015]
 	o pnm2ppa-1.12
+	o postgresql-7.3.3
 	o povray-3.5
 	o py-mysqldb-0.9.2 [pkg/19056]
 	o pygtk-0.6.11
