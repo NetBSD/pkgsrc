@@ -1,0 +1,38 @@
+@comment $NetBSD: PLIST,v 1.1 1997/12/14 01:39:38 agc Exp $
+bin/xtp
+bin/display
+bin/montage
+bin/import
+bin/animate
+bin/convert
+bin/identify
+bin/mogrify
+bin/combine
+include/magick/magick.h
+include/magick/image.h
+include/magick/gems.h
+include/magick/compress.h
+include/magick/monitor.h
+include/magick/error.h
+include/magick/utility.h
+include/magick/X.h
+include/magick/widget.h
+include/magick/PreRvIcccm.h
+include/magick/plug-ins.h
+@dirrm include/magick
+lib/libMagick.a
+lib/libMagick.so.3.9.3
+@exec /sbin/ldconfig -m %B || true
+@unexec /sbin/ldconfig -m %B || true
+man/cat1/display.0
+man/cat1/montage.0
+man/cat1/import.0
+man/cat1/animate.0
+man/cat1/convert.0
+man/cat1/identify.0
+man/cat1/mogrify.0
+man/cat1/combine.0
+man/cat1/ImageMagick.0
+man/cat1/quantize.0
+man/cat1/miff.0
+man/cat1/xtp.0
