@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/06/26 10:30:47 jmmv Exp $
+# $NetBSD: Makefile,v 1.6 2004/06/27 06:47:07 minskim Exp $
 #
 
 DISTNAME=	libxklavier-1.03
@@ -8,6 +8,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gswitchit/}
 MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://pdx.freedesktop.org/Software/LibXklavier
 COMMENT=	High-level API for the X Keyboard Extension (XKB)
+
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=		YES
 USE_BUILDLINK3=		YES
