@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7831 2004/11/12 05:43:17 erh Exp $
+$NetBSD: CHANGES,v 1.7832 2004/11/12 06:26:54 erh Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5240,3 +5240,6 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated mozilla to 1.7.3nb2 [wiz 2004-11-12]
 	Updated mozilla-gtk2 to 1.7.3nb2 [wiz 2004-11-12]
 	Updated mc to 4.5.51nb5 [erh 2004-11-12]
+	Added p5-XML-Filter-DetectWS-0.01 [erh 2004-11-12]
+	Added p5-XML-Filter-Reindent-0.03 [erh 2004-11-12]
+	Added p5-XML-Filter-SAXT-0.01 [erh 2004-11-12]
