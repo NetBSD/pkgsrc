@@ -1,6 +1,5 @@
-$NetBSD: patch-aa,v 1.5 1998/09/13 20:40:39 garbled Exp $
---- Makefile.orig	Thu Jan 16 09:31:58 1997
-+++ Makefile	Sun Sep 13 12:55:28 1998
+--- Makefile.orig	Thu Jan 16 17:31:58 1997
++++ Makefile	Wed Apr 12 21:03:39 2000
 @@ -23,7 +23,7 @@
  # (the program should compile with no warning messages - if you
  #  see a warning message please let me know about it)
@@ -10,18 +9,6 @@ $NetBSD: patch-aa,v 1.5 1998/09/13 20:40:39 garbled Exp $
  
  
  # STEP 2: IF YOU WANT TO COMPILE WITH THE MESA LIBRARIES THEN
-@@ -37,9 +37,9 @@
- #         MESA OR OPENGL
- #
- # ------------------------------------------------------------
--#GLIB = -lMesaGL -lMesaGLU
-+GLIB = -lMesaGL -lMesaGLU
- # or
--GLIB =  -lGL -lGLU
-+#GLIB =  -lGL -lGLU
- 
- 
- # STEP 4: CHOOSE WHICH HARDWARE / OS YOU ARE RUNNING
 @@ -51,7 +51,7 @@
  #         with the other Makefile.)
  #
