@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1768 2004/05/21 13:46:00 adam Exp $
+$NetBSD: TODO,v 1.1769 2004/05/22 10:12:39 adam Exp $
 
 Suggested new packages
 ======================
@@ -240,7 +240,6 @@ Suggested package updates
 	o gnumeric-1.2.12
 	o gnunet-0.6.2a
 	o gnuplot-4.0.0 [pkg/25450]
-	o gnutls-1.0.10
 	o gogo-3.11p1
 	o gqmpeg-0.91.1
 	o grepmail-5.23
@@ -277,7 +276,6 @@ Suggested package updates
 	o lftp-3.0.3
 	o libcaca-0.9
 	o libesmtp-1.0.3
-	o libgcrypt-1.2.0
 	o libidn-0.4.4
 	o libmpeg3-1.5.4
 	o libnet-1.1.1
