@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.42 2005/02/06 21:56:11 salo Exp $
+# $NetBSD: Makefile,v 1.43 2005/02/09 13:58:41 salo Exp $
 #
 
-DISTNAME=	nmap-3.80
+DISTNAME=	nmap-3.81
 CATEGORIES=	net security
 MASTER_SITES=	http://www.insecure.org/nmap/dist/
 EXTRACT_SUFX=	.tar.bz2
