@@ -1,4 +1,4 @@
-.\"	$NetBSD: cpuflags.1,v 1.13 2004/03/17 00:26:55 abs Exp $
+.\"	$NetBSD: cpuflags.1,v 1.14 2004/03/17 00:40:24 wiz Exp $
 .Dd May 31, 2001
 .Dt CPUFLAGS 1
 .Os
@@ -61,7 +61,7 @@ kernel or userland by adding the following to
 .Pp
 Those desiring further optimisation can install the lang/gcc3 package, and
 add the following to
-.Pa /etc/mk.conf 
+.Pa /etc/mk.conf
 instead:
 .Bd -literal -offset indent
  .sinclude "@PREFIX@/share/examples/gcc/mk.conf"
@@ -83,11 +83,11 @@ following to /etc/mk.conf. (Note this will not affect the binaries produced)
 COPTS+=-pipe
 CFLAGS+=-pipe
 .Ed
-.Pp
 .Sh BUGS
 .Nm
 still needs to learn about more cpu types - updates welcomed
-to <abs@netbsd.org>.
+to
+.Aq abs@NetBSD.org .
 .Pp
 Currently
 .Nm
