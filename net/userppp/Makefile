@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2000/11/08 16:04:54 tron Exp $
+# $NetBSD: Makefile,v 1.6 2000/12/17 21:11:49 ad Exp $
 
 DISTNAME=		ppp-001107.src
 PKGNAME=		userppp-001107
 CATEGORIES=		net
-MASTER_SITES=		http://www.awfulhak.org/~brian/
+MASTER_SITES=		http://www.netbsd.org/~ad/
 
 MAINTAINER=		ad@netbsd.org
 HOMEPAGE=		http://www.awfulhak.org/~brian/
