@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 10:22:41 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/18 13:04:21 agc Exp $
 
-MD5 (festlex_OALD.tar.gz) = 45a03689025849d02ec963a5b338ef37
+SHA1 (festlex_OALD.tar.gz) = 53c9470d62da9754db85b11c2c82a3dd6b5ddc71
+Size (festlex_OALD.tar.gz) = 1472516 bytes

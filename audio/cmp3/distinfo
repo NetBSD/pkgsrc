@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 10:22:31 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/18 13:04:19 agc Exp $
 
-MD5 (cmp3-2.0pre5.tar.gz) = 830b2bcf3c7d7daba67bf8752ddb102b
+SHA1 (cmp3-2.0pre5.tar.gz) = 9f8953fb34fdff8bafe198e1cd860d772e69cb7d
+Size (cmp3-2.0pre5.tar.gz) = 40207 bytes
 SHA1 (patch-aa) = e0bd98ecf8332608f98433b0b4ee541fc3a61d19
 SHA1 (patch-ab) = a2acdb49e97578c5ef3e7daa38b7eee378260879
 SHA1 (patch-ac) = f242ccaeed2b194938fad2978c24dc8619dcfaf4

@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 10:22:45 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/18 13:04:22 agc Exp $
 
-MD5 (festvox_don.tar.gz) = 90442079e34a3a694077f8715d15fbdf
+SHA1 (festvox_don.tar.gz) = c841345bf3ad02067b38010e8a1dcb827d85c361
+Size (festvox_don.tar.gz) = 645583 bytes
