@@ -1,82 +1,76 @@
-$NetBSD: patch-ad,v 1.1.1.1 1999/05/06 07:23:28 sakamoto Exp $
+$NetBSD: patch-ad,v 1.2 1999/10/31 03:00:37 jlam Exp $
 
---- test/Makefile.orig	Fri Mar 26 00:26:43 1999
-+++ test/Makefile	Mon Apr 26 13:52:17 1999
-@@ -48,53 +48,55 @@
+--- test/Makefile.orig	Thu Mar 25 10:26:43 1999
++++ test/Makefile	Sat Oct 30 00:58:02 1999
+@@ -48,12 +48,14 @@
  
  include ../makeinclude
  
 -$(ALL):  ../lib/$(LIBNAME)
-+CXX_:=	$(LIBTOOL) --mode=link $(CXX)
-+LDLIBS:= ../src/$(LIBNAME) $(LDLIBS)
-+GLDLIBS:= ../src/$(LIBNAME) $(GLDLIBS)
++LIB_TO_LINK = ../src/$(LIBNAME)
++
++$(ALL):  $(LIB_TO_LINK)
  
--.SUFFIXES: .cxx .c .o .fl .h
-+$(ALL):  ../src/$(LIBNAME)
+ .SUFFIXES: .cxx .c .o .fl .h
  
--.cxx:
+ .cxx:
 -	$(CXX) -I.. $(CXXFLAGS) $< -L../lib -lfltk $(LDLIBS) -o $@
-+.SUFFIXES: .cxx .c .lo .fl .h
++	$(LIBTOOL) --mode=link $(CXX) -I.. $(CXXFLAGS) $< $(LIB_TO_LINK) $(LDLIBS) $(GLDLIBS) -o $@
  
--.cxx.o:
--	$(CXX) -I.. $(CXXFLAGS) $< -c
-+.cxx.lo:
-+	$(LIBTOOL) --mode=compile $(CXX) -I.. $(CXXFLAGS) -c $<
- 
- .fl.cxx .fl.h:
- 	../fluid/fluid -c $<
+ .cxx.o:
+ 	$(CXX) -I.. $(CXXFLAGS) $< -c
+@@ -63,41 +65,40 @@
  
  .fl:
  	../fluid/fluid -c $<
 -	$(CXX) -I.. $(CXXFLAGS) $@.cxx -L../lib -lfltk $(LDLIBS) -o $@
-+	$(LIBTOOL) --mode=link $(CXX) -I.. $(CXXFLAGS) $@.cxx \
-+		$(LIB_) $(LDLIBS) -o $@
++	$(LIBTOOL) --mode=link $(CXX) -I.. $(CXXFLAGS) $@.cxx $(LIB_TO_LINK) $(LDLIBS) $(GLDLIBS) -o $@
  
  # Other programs needing special "help"...
--CubeView: CubeMain.o CubeView.o CubeViewUI.o
+ CubeView: CubeMain.o CubeView.o CubeViewUI.o
 -	$(CXX) -I.. $(CXXFLAGS) CubeMain.o CubeView.o CubeViewUI.o \
 -		-L../lib -lfltk $(GLDLIBS) -o $@
--CubeMain.o: CubeViewUI.h CubeView.h
--CubeView.o: CubeView.h
-+CubeView: CubeMain.lo CubeView.lo CubeViewUI.lo
-+	$(CXX_) -I.. $(CXXFLAGS) CubeMain.lo CubeView.lo CubeViewUI.lo \
-+		$(GLDLIBS) -o $@
-+CubeMain.lo: CubeViewUI.h CubeView.h
-+CubeView.lo: CubeView.h
++	$(LIBTOOL) --mode=link $(CXX) -I.. $(CXXFLAGS) CubeMain.o CubeView.o CubeViewUI.o $(LIB_TO_LINK) $(GLDLIBS) -o $@
+ CubeMain.o: CubeViewUI.h CubeView.h
+ CubeView.o: CubeView.h
  
  cube: cube.cxx
 -	$(CXX) -I.. $(CXXFLAGS) cube.cxx -L../lib -lfltk $(GLDLIBS) -o $@
-+	$(CXX_) -I.. $(CXXFLAGS) cube.cxx $(GLDLIBS) -o $@
++	$(LIBTOOL) --mode=link $(CXX) -I.. $(CXXFLAGS) cube.cxx $(LIB_TO_LINK) $(GLDLIBS) -o $@
  fractals: fractals.cxx
 -	$(CXX) -I.. $(CXXFLAGS) fractals.cxx -L../lib -lfltk $(GLDLIBS) -o $@
-+	$(CXX_) -I.. $(CXXFLAGS) fractals.cxx $(GLDLIBS) -o $@
++	$(LIBTOOL) --mode=link $(CXX) -I.. $(CXXFLAGS) fractals.cxx $(LIB_TO_LINK) $(GLDLIBS) -o $@
  fullscreen: fullscreen.cxx
 -	$(CXX) -I.. $(CXXFLAGS) fullscreen.cxx -L../lib -lfltk $(GLDLIBS) -o $@
-+	$(CXX_) -I.. $(CXXFLAGS) fullscreen.cxx $(GLDLIBS) -o $@
++	$(LIBTOOL) --mode=link $(CXX) -I.. $(CXXFLAGS) fullscreen.cxx $(LIB_TO_LINK) $(GLDLIBS) -o $@
  glpuzzle: glpuzzle.cxx
 -	$(CXX) -I.. $(CXXFLAGS) glpuzzle.cxx -L../lib -lfltk $(GLDLIBS) -o $@
-+	$(CXX_) -I.. $(CXXFLAGS) glpuzzle.cxx $(GLDLIBS) -o $@
++	$(LIBTOOL) --mode=link $(CXX) -I.. $(CXXFLAGS) glpuzzle.cxx $(LIB_TO_LINK) $(GLDLIBS) -o $@
  gl_overlay: gl_overlay.cxx
 -	$(CXX) -I.. $(CXXFLAGS) gl_overlay.cxx -L../lib -lfltk $(GLDLIBS) -o $@
-+	$(CXX_) -I.. $(CXXFLAGS) gl_overlay.cxx $(GLDLIBS) -o $@
++	$(LIBTOOL) --mode=link $(CXX) -I.. $(CXXFLAGS) gl_overlay.cxx $(LIB_TO_LINK) $(GLDLIBS) -o $@
  shiny: shiny.cxx shiny_panel.cxx
 -	$(CXX) -I.. $(CXXFLAGS) shiny.cxx -L../lib -lfltk $(GLDLIBS) -o $@
-+	$(CXX_) -I.. $(CXXFLAGS) shiny.cxx $(GLDLIBS) -o $@
++	$(LIBTOOL) --mode=link $(CXX) -I.. $(CXXFLAGS) shiny.cxx $(LIB_TO_LINK) $(GLDLIBS) -o $@
  keyboard: keyboard.cxx keyboard_ui.cxx
 -	$(CXX) -I.. $(CXXFLAGS) keyboard.cxx -L../lib -lfltk $(LDLIBS) -o $@
-+	$(CXX_) -I.. $(CXXFLAGS) keyboard.cxx $(LDLIBS) -o $@
++	$(LIBTOOL) --mode=link $(CXX) -I.. $(CXXFLAGS) keyboard.cxx $(LIB_TO_LINK) $(LDLIBS) $(GLDLIBS) -o $@
  mandelbrot: mandelbrot.cxx mandelbrot_ui.cxx
 -	$(CXX) -I.. $(CXXFLAGS) mandelbrot.cxx -L../lib -lfltk $(LDLIBS) -o $@
-+	$(CXX_) -I.. $(CXXFLAGS) mandelbrot.cxx $(LDLIBS) -o $@
++	$(LIBTOOL) --mode=link $(CXX) -I.. $(CXXFLAGS) mandelbrot.cxx $(LIB_TO_LINK) $(LDLIBS) $(GLDLIBS) -o $@
  shape: shape.cxx
 -	$(CXX) -I.. $(CXXFLAGS) shape.cxx -L../lib -lfltk $(GLDLIBS) -o $@
-+	$(CXX_) -I.. $(CXXFLAGS) shape.cxx $(GLDLIBS) -o $@
++	$(LIBTOOL) --mode=link $(CXX) -I.. $(CXXFLAGS) shape.cxx $(LIB_TO_LINK) $(GLDLIBS) -o $@
  
  # If you have libjpeg installed, you might want to try this test program:
  
  jpeg_image: jpeg_image.cxx
 -	$(CXX) -I.. $(CXXFLAGS) -I../../../local/jpeg-6b -L../../../local/jpeg-6b jpeg_image.cxx -L../lib -lfltk $(LDLIBS) -ljpeg -lXext -o $@
-+	$(CXX_) -I.. $(CXXFLAGS) -I../../../local/jpeg-6b -L../../../local/jpeg-6b jpeg_image.cxx $(LDLIBS) -ljpeg -lXext -o $@
++	$(LIBTOOL) --mode=link $(CXX) -I.. $(CXXFLAGS) -I../../../local/jpeg-6b -L../../../local/jpeg-6b jpeg_image.cxx $(LIB_TO_LINK) $(LDLIBS) -ljpeg -lXext -o $@
  
  depend:
- 	$(MAKEDEPEND) -I.. $(CXXFLAGS) $(CPPFILES) > makedepend
+-	$(MAKEDEPEND) -I.. $(CXXFLAGS) $(CPPFILES) > makedepend
++	$(LIBTOOL) --mode=link $(MAKEDEPEND) -I.. $(CXXFLAGS) $(CPPFILES) > makedepend
+ 
+ clean:
+ 	-@ rm -f $(ALL) jpeg_image *.o core *~
