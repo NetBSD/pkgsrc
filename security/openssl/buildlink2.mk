@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.21 2004/02/12 02:35:07 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.22 2004/02/12 09:38:43 jlam Exp $
 
 .if !defined(OPENSSL_BUILDLINK2_MK)
 OPENSSL_BUILDLINK2_MK=	# defined
@@ -106,14 +106,14 @@ _NEED_OPENSSL=	YES
 .endif
 
 .if !empty(PREFER_NATIVE:M[yY][eE][sS]) && \
-    ${_BUILTIN_OPENSSL} == "YES"
+    ${BUILDLINK_IS_BUILTIN.openssl} == "YES"
 _NEED_OPENSSL=	NO
 .endif
 .if !empty(PREFER_PKGSRC:M[yY][eE][sS])
 _NEED_OPENSSL=	YES
 .endif
 .if !empty(PREFER_NATIVE:Mopenssl) && \
-    ${_BUILTIN_OPENSSL} == "YES"
+    ${BUILDLINK_IS_BUILTIN.openssl} == "YES"
 _NEED_OPENSSL=	NO
 .endif
 .if !empty(PREFER_PKGSRC:Mopenssl)
