@@ -1,4 +1,5 @@
-*** mush.1.orig	Fri Oct  9 07:24:11 1998
+$NetBSD: patch-aj,v 1.2 1998/10/25 17:10:01 christos Exp $
+*** old/mush.1	Fri Oct  9 07:24:11 1998
 --- mush.1	Fri Oct  9 07:29:26 1998
 ***************
 *** 2766,2771 ****
