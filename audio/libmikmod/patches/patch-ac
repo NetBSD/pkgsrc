@@ -1,0 +1,20 @@
+$NetBSD: patch-ac,v 1.1 2000/03/07 22:45:10 tron Exp $
+
+--- configure.orig	Mon Jun 28 05:57:18 1999
++++ configure	Tue Mar  7 23:38:45 2000
+@@ -1618,6 +1618,7 @@
+ 
+ 
+ 
++if false; then
+ # Check for any special flags to pass to ltconfig.
+ libtool_flags="--cache-file=$cache_file"
+ test "$enable_shared" = no && libtool_flags="$libtool_flags --disable-shared"
+@@ -1771,6 +1772,7 @@
+ 
+ # Always use our own libtool.
+ LIBTOOL='$(SHELL) $(top_builddir)/libtool'
++fi
+ 
+ # Redirect the config.log output again, so that the ltconfig log is not
+ # clobbered by the next message.
