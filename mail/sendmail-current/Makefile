@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/04/15 01:19:59 itojun Exp $
+# $NetBSD: Makefile,v 1.2 2001/05/05 16:16:08 hubertf Exp $
 
 DISTNAME=	sendmail.8.12.0.Beta7
 PKGNAME=	sendmail-8.11.99.7
@@ -18,6 +18,8 @@ MASTER_SITES=	ftp://ftp.sendmail.org/pub/sendmail/ \
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.sendmail.org/
 COMMENT=	The well known Mail Transport Agent
+
+DEPENDS=	m4-1.4:../../devel/m4
 
 LICENSE=	no-profit
 
