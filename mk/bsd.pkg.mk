@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1143 2003/02/18 10:36:44 lukem Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1144 2003/02/22 05:47:00 uebayasi Exp $
 #
 # This file is in the public domain.
 #
@@ -842,6 +842,18 @@ MASTER_SITE_MOZILLA+=	\
 	ftp://ftp.is.co.za/networking/info-service/www/clients/netscape/mozilla/ \
 	ftp://ftp.rediris.es/mirror/mozilla/ \
 	ftp://ftp.chg.ru/pub/WWW/mozilla/ 
+
+MASTER_SITE_XEMACS+=	\
+	ftp://ftp.xemacs.org/pub/xemacs/ \
+	ftp://ftp.dti.ad.jp/pub/unix/editor/xemacs/ \
+	ftp://ftp.jaist.ac.jp/pub/GNU/xemacs/ \
+	ftp://ftp.pasteur.fr/pub/computing/xemacs/ \
+	ftp://ftp.tu-darmstadt.de/pub/editors/xemacs/ \
+	ftp://mirror.aarnet.edu.au/pub/xemacs/ \
+	ftp://mirror.cict.fr/xemacs/ \
+	ftp://mirror.nucba.ac.jp/mirror/xemacs/ \
+	ftp://ring.aist.go.jp/pub/text/xemacs/ \
+	ftp://ring.asahi-net.or.jp/pub/text/xemacs/
 
 # The primary backup site.
 MASTER_SITE_BACKUP?=	\
