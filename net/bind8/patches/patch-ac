@@ -1,24 +1,13 @@
-$NetBSD: patch-ac,v 1.5 2002/03/23 05:43:48 itojun Exp $
+$NetBSD: patch-ac,v 1.6 2002/12/07 21:34:04 cjep Exp $
 
---- port/netbsd/Makefile.set.orig	Thu Mar 19 19:50:33 1998
-+++ port/netbsd/Makefile.set
-@@ -1,11 +1,13 @@
- 'CC=cc'
- 'CDEBUG=-O2 -g'
--'DESTBIN=/usr/bin'
--'DESTSBIN=/usr/sbin'
--'DESTEXEC=/usr/libexec'
--'DESTMAN=/usr/share/man'
--'DESTHELP=/usr/share/misc'
--'DESTETC=/etc'
-+'DESTBIN=${PREFIX}/bin'
-+'DESTLIB=${PREFIX}/lib'
-+'DESTINC=${PREFIX}/include/bind'
-+'DESTSBIN=${PREFIX}/sbin'
-+'DESTEXEC=${PREFIX}/libexec'
-+'DESTMAN=${PREFIX}/man'
-+'DESTHELP=${PREFIX}/share/doc/bind8'
-+'DESTETC=${PREFIX}/etc'
- 'DESTRUN=/var/run'
- 'LEX=lex -I'
- 'YACC=yacc -d'
+--- lib/irs/getaddrinfo.c.orig	Wed Feb 27 03:57:17 2002
++++ lib/irs/getaddrinfo.c
+@@ -595,7 +595,7 @@ explore_fqdn(pai, hostname, servname, re
+ 	char tmp[NS_MAXDNAME];
+ 	const char *cp;
+ 
+-	result = NULL;
++	*res = NULL;
+ 
+ 	/*
+ 	 * if the servname does not match socktype/protocol, ignore it.
