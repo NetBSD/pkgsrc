@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.7 2001/05/29 00:55:35 hubertf Exp $
+$NetBSD: patch-ac,v 1.8 2001/10/10 02:41:17 hubertf Exp $
 
---- configure.orig	Wed Apr 18 16:17:26 2001
+--- configure.orig	Tue Sep 25 20:25:48 2001
 +++ configure
-@@ -4699,7 +4699,7 @@
+@@ -4681,7 +4681,7 @@
  #define USE_GL 1
  EOF
  
