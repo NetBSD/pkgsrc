@@ -1,3 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/04/29 11:03:54 rh Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/09/06 00:36:14 rh Exp $
 bin/createbuildlink
+bin/createbuildlink1
 man/man8/createbuildlink.8
