@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.33 2001/04/22 04:52:31 jlam Exp $
+# $NetBSD: bsd.prefs.mk,v 1.34 2001/05/02 04:53:11 jlam Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -133,7 +133,7 @@ HAVE_BUILTIN_MESA=	YES
 .if (defined(CHECK_FREETYPE2) || defined(USE_FREETYPE2))
 X11BASE?=		/usr/X11R6
 .if exists(${X11BASE}/include/freetype2/freetype/freetype.h)
-__BUILTIN_FREETYPE2=	egrep -c BuildFreetype2Library ${X11BASE}/lib/X11/config/X11.tmpl || true
+__BUILTIN_FREETYPE2!=	egrep -c BuildFreetype2Library ${X11BASE}/lib/X11/config/X11.tmpl || true
 .else
 __BUILTIN_FREETYPE2=	0
 .endif
