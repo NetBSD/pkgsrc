@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.276 2003/02/18 07:44:19 wiz Exp $
+$NetBSD: TODO,v 1.277 2003/02/19 11:00:25 wiz Exp $
 
 Suggested new packages
 ======================
@@ -171,7 +171,7 @@ Suggested package updates
 	o koth-0.8.0 [http://www.nongnu.org/koth/]
 	o lbreakout2-2.4
 	o lcms-1.0.9
-	o leafnode-1.9.33
+	o leafnode-1.9.34
 	o lesstif-0.93.40
 	o libbonobo-2.0.1
 	o libdvdcss-1.2.5
@@ -189,7 +189,7 @@ Suggested package updates
 	o lmbench-2.0.4
 	o lout-3.26 [pkg/18687]
 	o lynx-current-2.8.5dev9
-	o lyx-1.3.0
+	o lyx-1.3.0 [pkg/20417]
 	o maildrop-1.5.2
 	o mcrypt-2.6.3
 	o memtest86-3.0
@@ -262,6 +262,7 @@ Suggested package updates
 	o squeak-3.2 [fredb|pkg/17950]
 	o srp_client-1.7.5 [jlam]
 	o star-1.4.3
+	o stella-1.3
 	o suck-4.3.1
 	o sun-jdk14-1.4.1_01 [pkg/19853]
 	o sun-jre14-1.4.1_01 [pkg/19853]
@@ -294,6 +295,7 @@ Suggested package updates
 	o xpaint-2.6.8
 	o xpuyopuyo-0.9.5
 	o xsane-0.90
+	o xscreensaver-4.08
 	o xsidplay-1.6.5pre20
 	o yudit-2.7.2
 
