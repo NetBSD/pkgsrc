@@ -1,15 +1,15 @@
-$NetBSD: patch-ae,v 1.1 2000/03/07 23:03:13 tron Exp $
+$NetBSD: patch-ae,v 1.2 2000/03/12 20:36:27 tron Exp $
 
 --- configure.orig	Mon Jan 31 19:43:50 2000
-+++ configure	Tue Mar  7 23:25:18 2000
-@@ -1340,6 +1340,7 @@
++++ configure	Sun Mar 12 21:20:08 2000
+@@ -1339,6 +1339,7 @@
+ fi
  
  
- # Check for any special flags to pass to ltconfig.
 +if false; then
+ # Check for any special flags to pass to ltconfig.
  libtool_flags="--cache-file=$cache_file"
  test "$enable_shared" = no && libtool_flags="$libtool_flags --disable-shared"
- test "$enable_static" = no && libtool_flags="$libtool_flags --disable-static"
 @@ -1492,6 +1493,7 @@
  
  # Always use our own libtool.
@@ -18,3 +18,51 @@ $NetBSD: patch-ae,v 1.1 2000/03/07 23:03:13 tron Exp $
  
  # Redirect the config.log output again, so that the ltconfig log is not
  # clobbered by the next message.
+@@ -3017,7 +3019,7 @@
+   echo $ac_n "(cached) $ac_c" 1>&6
+ else
+   ac_save_LIBS="$LIBS"
+-LIBS="-lxml -lz $LIBS"
++LIBS="`$XML_CONFIG --libs` -lz $LIBS"
+ cat > conftest.$ac_ext <<EOF
+ #line 3023 "configure"
+ #include "confdefs.h"
+@@ -3295,7 +3297,7 @@
+   echo $ac_n "(cached) $ac_c" 1>&6
+ else
+   ac_save_LIBS="$LIBS"
+-LIBS="-lesd  $LIBS"
++LIBS="`$ESD_CONFIG --libs`  $LIBS"
+ cat > conftest.$ac_ext <<EOF
+ #line 3301 "configure"
+ #include "confdefs.h"
+@@ -5311,10 +5313,10 @@
+     top_srcdir="$ac_dots$ac_given_srcdir" ;;
+   esac
+ 
+-  case "$ac_given_INSTALL" in
+-  [/$]*) INSTALL="$ac_given_INSTALL" ;;
+-  *) INSTALL="$ac_dots$ac_given_INSTALL" ;;
+-  esac
++#  case "$ac_given_INSTALL" in
++#  [/$]*) INSTALL="$ac_given_INSTALL" ;;
++#  *) INSTALL="$ac_dots$ac_given_INSTALL" ;;
++#  esac
+ 
+   echo creating "$ac_file"
+   rm -f "$ac_file"
+@@ -5535,10 +5537,10 @@
+       *) # Relative path.
+         ac_sub_cache_file="$ac_dots$cache_file" ;;
+       esac
+-  case "$ac_given_INSTALL" in
+-        [/$]*) INSTALL="$ac_given_INSTALL" ;;
+-        *) INSTALL="$ac_dots$ac_given_INSTALL" ;;
+-        esac
++#  case "$ac_given_INSTALL" in
++#        [/$]*) INSTALL="$ac_given_INSTALL" ;;
++#        *) INSTALL="$ac_dots$ac_given_INSTALL" ;;
++#        esac
+ 
+       echo "running ${CONFIG_SHELL-/bin/sh} $ac_sub_configure $ac_sub_configure_args --cache-file=$ac_sub_cache_file --srcdir=$ac_sub_srcdir"
+       # The eval makes quoting arguments work.
