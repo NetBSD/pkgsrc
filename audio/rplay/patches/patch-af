@@ -1,14 +1,14 @@
-$NetBSD: patch-af,v 1.2 1998/08/07 10:36:07 agc Exp $
+$NetBSD: patch-af,v 1.3 2000/01/26 22:11:36 jlam Exp $
 
---- doc/RPTP.texi.orig	Sun Jan 18 20:59:52 1998
-+++ doc/RPTP.texi	Sun Jan 18 21:04:57 1998
-@@ -3,6 +3,10 @@
- @setfilename RPTP.info
- @settitle The RPTP Protocol
- @defindex ev
+--- doc/librplay.texi.orig	Tue Jul 14 18:35:23 1998
++++ doc/librplay.texi	Tue Jan 18 16:15:33 2000
+@@ -2,6 +2,10 @@
+ @c %**start of header
+ @setfilename librplay.info
+ @settitle The rplay Programmer's Manual
 +@dircategory Network Audio Systems
 +@direntry
-+* RPTP: (RPTP).                The RPTP Protocol
++* librplay: (librplay)		The rplay Programmer's Manual
 +@end direntry
  @iftex
  @finalout
