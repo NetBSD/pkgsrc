@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2004/01/15 10:30:03 markd Exp $
+# $NetBSD: Makefile,v 1.33 2004/01/22 16:13:56 jmmv Exp $
 
 DISTNAME=	kdemultimedia-3.1.5
+PKGREVISION=	1
 CATEGORIES=	audio
 COMMENT=	Audio tools for the KDE integrated X11 desktop
 
@@ -9,6 +10,7 @@ CONFLICTS=	timidity-[0-9]*
 .include "../../meta-pkgs/kde3/Makefile.kde3"
 
 DEPENDS+=	xanim>=2.80.0:../../graphics/xanim
+DEPENDS+=	xine-arts>=1rc0a:../../audio/xine-arts
 
 USE_BUILDLINK2=		YES
 
