@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2000/10/18 04:26:53 garbled Exp $
+# $NetBSD: Makefile,v 1.9 2001/02/17 09:06:57 agc Exp $
 #
 
 DISTNAME=       STk-3.99.2
@@ -7,6 +7,7 @@ MASTER_SITES=	ftp://kaolin.unice.fr/pub/STk/
 
 MAINTAINER=	perry@netbsd.org
 HOMEPAGE=	http://kaolin.unice.fr/STk/
+COMMENT=	Scheme interpreter with full access to the Tk graphical package
 
 OSVERSION_SPECIFIC=	yes
 GNU_CONFIGURE=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/06/19 19:59:32 drochner Exp $
+# $NetBSD: Makefile,v 1.6 2001/02/17 09:07:02 agc Exp $
 
 DISTNAME=		cint5.14
 PKGNAME=		cint-5.14.40
@@ -8,6 +8,7 @@ MASTER_SITES=		ftp://root.cern.ch/root/
 
 MAINTAINER=		drochner@netbsd.org
 HOMEPAGE=		http://root.cern.ch/root/Cint.html
+COMMENT=		C/C++ interpreter
 
 #same distribution file name for minor versions
 DIST_SUBDIR=		${PKGNAME}

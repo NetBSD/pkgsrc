@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2000/10/22 20:01:53 tsarna Exp $
+# $NetBSD: Makefile,v 1.9 2001/02/17 09:07:26 agc Exp $
 #
 
 DISTNAME=	Zope-2.2.2-src
@@ -9,6 +9,7 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	tsarna@netbsd.org
 HOMEPAGE=	http://www.digicool.com/releases/ExtensionClass
+COMMENT=	Python-extensible C "classes" and Acquisition for Python
 
 EXTRACT_ELEMENTS=       ${DISTNAME}/lib/Components/ExtensionClass
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/01/23 22:21:12 jdolecek Exp $
+# $NetBSD: Makefile,v 1.4 2001/02/17 09:07:22 agc Exp $
 #
 
 DISTNAME=       awk
@@ -8,6 +8,7 @@ MASTER_SITES=   http://cm.bell-labs.com/who/bwk/
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://cm.bell-labs.com/who/bwk/
+COMMENT=	Brian Kernighan's pattern-directed scanning and processing language
 
 DIST_SUBDIR=	${PKGNAME}
 

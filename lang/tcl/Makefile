@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/01/24 18:42:33 he Exp $
+# $NetBSD: Makefile,v 1.6 2001/02/17 09:07:34 agc Exp $
 #
 
 DISTNAME=		tcl8.3.2
@@ -11,6 +11,7 @@ MASTER_SITES=		ftp://ftp.scriptics.com/pub/tcl/tcl8_3/ \
 
 MAINTAINER=		jwise@netbsd.org
 HOMEPAGE=		http://www.tcltk.com/
+COMMENT=		Ousterhout's Tool Command Language, a scripting language
 
 CONFLICTS+=		tclman80-*
 

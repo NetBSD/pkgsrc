@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/01/21 03:11:54 jtb Exp $
+# $NetBSD: Makefile,v 1.5 2001/02/17 09:07:31 agc Exp $
 
 DISTNAME=		stalin
 PKGNAME=		stalin-0.8
@@ -8,6 +8,7 @@ EXTRACT_SUFX=		.tar.Z
 
 MAINTAINER=		jtb@netbsd.org
 HOMEPAGE=		http://www.neci.nj.nec.com/homepages/qobi/software.html
+COMMENT=		Aggressively optimizing Scheme compiler
 
 DEPENDS+=		boehm-gc-[0-9]*:../../devel/boehm-gc
 DEPENDS+=		Mesa-[0-9]*:../../graphics/Mesa

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/11/18 00:43:42 tv Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/17 09:07:15 agc Exp $
 #
 
 DISTNAME=	unix_jb35foundation
@@ -8,6 +8,7 @@ MASTER_SITES=	ftp://ftpc.inprise.com/pub/jbuilder/jb35foundation/unix/
 
 MAINTAINER=	tv@netbsd.org
 HOMEPAGE=	http://www.inprise.com/jbuilder/linux/download/
+COMMENT=	Just-In-Time compiler for Linux Java Virtual Machine
 
 # works with both 1.2.2 and 1.3 JVMs
 DEPENDS=	sun-jre-*:../../lang/sun-jre13

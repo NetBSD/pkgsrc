@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/07/22 17:16:48 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/17 09:07:01 agc Exp $
 #
 
 DISTNAME=	camlp4-3.00
@@ -7,6 +7,7 @@ MASTER_SITES=	ftp://ftp.inria.fr/INRIA/Projects/cristal/camlp4/
 
 MAINTAINER=	wulf@netbsd.org
 HOMEPAGE=	http://caml.inria.fr/camlp4/
+COMMENT=	Camlp4 is a Pre-Processor-Pretty-Printer for Objective Caml
 
 DEPENDS+=	ocaml-3.*:../ocaml
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2000/09/07 04:37:54 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2001/02/17 09:07:18 agc Exp $
 
 DISTNAME=		perl-${PERL_VERSION}
 PKGNAME=		libperl-${PERL_VERSION}nb1
@@ -9,6 +9,7 @@ MASTER_SITES=		ftp://ftp.digital.com/pub/plan/perl/CPAN/src/5.0/ \
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://language.perl.com/index.html
+COMMENT=		PERL core library and DynaLoader as a shared object
 
 USE_PERL5=		# defined
 DEPENDS+=		perl>=${PERL_VERSION}:../../lang/perl5

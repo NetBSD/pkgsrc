@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2000/08/21 21:01:31 hubertf Exp $
+# $NetBSD: Makefile,v 1.7 2001/02/17 09:07:06 agc Exp $
 #
 
 DISTNAME=		fort77-1.14a
@@ -6,6 +6,7 @@ CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_SUNSITE:=devel/lang/fortran/}
 
 MAINTAINER=		packages@netbsd.org
+COMMENT=		the driver for f2c, a fortran to C translator
 
 DEPENDS+=		f2c-*:../../lang/f2c
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2000/01/09 01:19:09 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2001/02/17 09:07:05 agc Exp $
 
 DISTNAME=	f2c-19991025
 PKGNAME=	f2c-19991025p1
@@ -8,6 +8,7 @@ MASTER_SITES=	${MASTER_SITE_LOCAL}
 
 MAINTAINER=	dmcmahill@netbsd.org
 HOMEPAGE=	http://www.netlib.org/f2c/index.html
+COMMENT=	Fortran to C compiler (translates fortran to C)
 
 CONFLICTS=	egcs-current-19980608
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/10/15 02:59:34 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2001/02/17 09:07:14 agc Exp $
 
 DISTNAME=		langspec-2.0.html
 PKGNAME=		java-lang-spec-2.0
@@ -8,6 +8,7 @@ EXTRACT_SUFX=		.zip
 
 MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://java.sun.com/docs/books/jls/index.html
+COMMENT=		The Java(TM) Language Specification (HTML)
 
 NO_WRKSUBDIR=	 	# defined
 NO_CONFIGURE=		# defined

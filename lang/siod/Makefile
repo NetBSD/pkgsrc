@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/08/06 10:39:30 agc Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/17 09:07:28 agc Exp $
 
 DISTNAME=		siod
 PKGNAME=		siod-3.0
@@ -8,6 +8,7 @@ EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		ftp://ftp.std.com/pub/gjc/siod.html
+COMMENT=		Small-footprint implementation of the Scheme programming language
 
 ONLY_FOR_PLATFORM=	SunOS-*-*	# untested on NetBSD
 

@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/11/02 11:59:07 itojun Exp $
+# $NetBSD: Makefile,v 1.2 2001/02/17 09:07:37 agc Exp $
 
 DISTNAME=	umb-scheme-2.12
 CATEGORIES=	lang
 MASTER_SITES=	ftp://ftp.cs.indiana.edu/pub/scheme-repository/imp/umb/
 
 MAINTAINER=	packages@netbsd.org
+COMMENT=	UMB scheme interpreter
 
 WRKSRC=		${WRKDIR}/scheme-2.12
 ALL_TARGET=	default

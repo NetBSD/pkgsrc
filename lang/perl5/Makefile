@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2000/09/05 09:20:44 jlam Exp $
+# $NetBSD: Makefile,v 1.32 2001/02/17 09:07:24 agc Exp $
 
 DISTNAME=		perl-5.6.0nb3
 CATEGORIES=		lang devel perl5
@@ -7,6 +7,7 @@ DISTFILES=		# empty
 
 MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://language.perl.com/index.html
+COMMENT=		Practical Extraction and Report Language
 
 DEPENDS+=		perl-base>=5.6.0:../../lang/perl5-base
 DEPENDS+=		p5-Data-Dumper>=2.101:../../devel/p5-Data-Dumper

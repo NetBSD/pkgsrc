@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/02/07 05:16:39 fredb Exp $
+# $NetBSD: Makefile,v 1.10 2001/02/17 09:07:31 agc Exp $
 #
 
 DISTNAME=	Squeak2.7-src
@@ -9,6 +9,7 @@ DISTFILES=	Squeak2.7-src.tar.gz Squeak2.7.image.gz Squeak2.7.changes.gz SqueakV2
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.squeak.org/
+COMMENT=	Full Smalltalk 80 with portability to UN*X, Mac, and Windows
 
 BUILD_DEPENDS+=	${LOCALBASE}/bin/autoconf:../../devel/autoconf
 

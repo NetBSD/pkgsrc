@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2000/12/16 01:57:01 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2001/02/17 09:07:19 agc Exp $
 #
 
 DISTNAME=		librep-${REP_VERS}
@@ -8,6 +8,7 @@ MASTER_SITES=		ftp://librep.sourceforge.net/pub/librep/
 
 MAINTAINER=		danw@netbsd.org
 HOMEPAGE=		http://librep.sourceforge.net/
+COMMENT=		Emacs Lisp-like runtime library, interpreter, compiler and VM
 
 DEPENDS+=		gmp>=3.0:../../devel/gmp
 DEPENDS+=		gdbm>=1.8.0:../../databases/gdbm

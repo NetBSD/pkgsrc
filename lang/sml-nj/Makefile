@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/02/05 19:47:46 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2001/02/17 09:07:30 agc Exp $
 # FreeBSD Id: ports/lang/sml-nj/Makefile,v 1.9 1999/08/25 06:35:27 obrien Exp
 
 DISTNAME=	${SML_VERSION}-bin.${BOX}-unix
@@ -16,6 +16,7 @@ DISTFILES=	${SML_VERSION}-bin.${BOX}-unix.tar.Z ${SML_VERSION}-cm.tar.Z ${SML_VE
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://cm.bell-labs.com/cm/cs/what/smlnj/index.html
+COMMENT=	Popular functional language from Bell Labs
 
 SML_VERSION=	110.9.1
 
