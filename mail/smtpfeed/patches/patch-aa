@@ -1,12 +1,10 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/11/29 08:06:32 itojun Exp $
+$NetBSD: patch-aa,v 1.2 2000/02/22 01:31:26 dmcmahill Exp $
 
---- Makefile.in.orig	Sun Jan 18 23:02:21 1998
-+++ Makefile.in	Sun Jan 18 23:02:34 1998
-@@ -70,7 +70,6 @@
- 	${RM} -f ${OBJS} ${OBJADDS} ${TARGET} res_send.c
+--- Makefile.in.orig	Mon Feb 21 20:24:39 2000
++++ Makefile.in	Mon Feb 21 20:29:43 2000
+@@ -68,5 +68,4 @@
  
  install:
 -	-mv -f ${DEST}/${TARGET} ${DEST}/${TARGET}.old
  	${INSTALL} ${TARGET} ${DEST}
  
- gcc2-lint:
