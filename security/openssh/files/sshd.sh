@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: sshd.sh,v 1.8 2002/04/02 10:14:42 seb Exp $
+# $NetBSD: sshd.sh,v 1.9 2002/08/19 17:30:05 wiz Exp $
 #
 # PROVIDE: sshd
 # REQUIRE: DAEMON LOGIN
@@ -57,7 +57,7 @@ sshd_precmd()
 keygen_cmd=sshd_keygen
 start_precmd=sshd_precmd
 
-if [ -f /etc/rc.subr ]
+if [ -f /etc/rc.subr -a -f /etc/rc.conf -a -d /etc/rc.d -a -f /etc/rc.d/DAEMON ]
 then
 	load_rc_config $name
 	run_rc_command "$1"
