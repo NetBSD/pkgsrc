@@ -1,9 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2002/09/20 21:17:14 jlam Exp $
+$NetBSD: patch-aa,v 1.4.2.1 2003/03/15 12:13:17 grant Exp $
 
 --- Makefile.orig	Sun Mar 25 06:17:10 2001
-+++ Makefile
-@@ -7,13 +7,14 @@
- 
++++ Makefile	Fri Mar 14 07:13:56 2003
+@@ -8,11 +8,13 @@
  ####### Compiler, tools and options
  
 -CC	=	g++
@@ -11,6 +10,7 @@ $NetBSD: patch-aa,v 1.4 2002/09/20 21:17:14 jlam Exp $
 +#CC	=	g++
 +CXXFLAGS+=	-fno-strength-reduce
 +CFLAGS+=	-fno-strength-reduce
++CXXFLAGS_NOOPT=	${CXXFLAGS:C/-O[0-9]*//g}
  INCPATH	=	-I$(QTDIR)/include
 -LINK	=	g++
 -LFLAGS	=	-static
@@ -22,9 +22,7 @@ $NetBSD: patch-aa,v 1.4 2002/09/20 21:17:14 jlam Exp $
 +MOC	=	$(QTDIR)/bin/moc
  
  ####### Files
- 
-@@ -367,13 +368,13 @@
- .SUFFIXES: .cpp .cxx .cc .C .c
+@@ -368,11 +370,11 @@
  
  .cpp.o:
 -	$(CC) -c $(CFLAGS) $(INCPATH) -o $@ $<
@@ -39,4 +37,35 @@ $NetBSD: patch-aa,v 1.4 2002/09/20 21:17:14 jlam Exp $
 +	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o $@ $<
  
  .C.o:
- 	$(CC) -c $(CFLAGS) $(INCPATH) -o $@ $<
+@@ -1791,4 +1793,7 @@
+ 		ractiondef.h \
+ 		rprgdef.h
++.if (${MACHINE_ARCH} == "alpha")
++	$(CXX) -c $(CXXFLAGS_NOOPT) $(INCPATH) -o $@ moc_rappwin.cpp
++.endif
+ 
+ moc_rattribdialog.o: moc_rattribdialog.cpp \
+@@ -1869,4 +1874,7 @@
+ 		rfontdialog.h \
+ 		rgraphdef.h
++.if (${MACHINE_ARCH} == "alpha")
++	$(CXX) -c $(CXXFLAGS_NOOPT) $(INCPATH) -o $@ moc_rfontdialog.cpp
++.endif
+ 
+ moc_rgraphic.o: moc_rgraphic.cpp \
+@@ -1882,4 +1890,7 @@
+ 		rmath.h \
+ 		rmathdef.h
++.if (${MACHINE_ARCH} == "alpha")
++	$(CXX) -c $(CXXFLAGS_NOOPT) $(INCPATH) -o $@ moc_rgraphic.cpp
++.endif
+ 
+ moc_rgroupbox.o: moc_rgroupbox.cpp \
+@@ -1963,4 +1974,7 @@
+ 		rlistboxitem.h \
+ 		rwidget.h
++.if (${MACHINE_ARCH} == "alpha")
++	$(CXX) -c $(CXXFLAGS_NOOPT) $(INCPATH) -o $@ moc_rlayerwidget.cpp
++.endif
+ 
+ moc_rlibrarybrowser.o: moc_rlibrarybrowser.cpp \
