@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/05/02 11:54:47 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2003/05/05 17:34:53 grant Exp $
 
 DISTNAME=	xemacs-21.4.12
 PKGNAME=	xemacs-nox11-21.4.12
@@ -102,7 +102,7 @@ CONFIGURE_ARGS+=	--without-xpm	# XXX -nox
 CFLAGS+=		-Dunix
 
 post-extract:
-	for FILE in ${EXTRA_FILES}; do					\
+	for FILE in ${EXTRA_FILES}; do \
 		${GTAR} xzCf ${WRKDIR} ${DISTDIR}/${DIST_SUBDIR}/$$FILE; \
 	done
 
@@ -110,8 +110,8 @@ post-patch:
 	@${RM} -f ${WRKSRC}/etc/ctags.1.orig
 
 post-install:
-	@${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/lib/${DISTNAME}
-	@${INSTALL_DATA_DIR} ${PREFIX}/lib/xemacs
+	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/lib/${DISTNAME}
+	${INSTALL_DATA_DIR} ${PREFIX}/lib/xemacs
 	@if [ "X${MANZ}" != X"" ]; then \
 		${WRKSRC}/lib-src/gzip-el.sh ${PREFIX}/lib/${DISTNAME}; \
 	fi
