@@ -1,2 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/04/10 00:24:46 itojun Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/04/13 04:37:37 itojun Exp $
 bin/cue
+share/examples/cue/sample.cuerc
+@dirrm share/examples/cue

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/04/10 00:27:58 itojun Exp $
+# $NetBSD: Makefile,v 1.3 2001/04/13 04:37:37 itojun Exp $
 
 DISTNAME=	cue-snap-20010410
 PKGNAME=	cue-20010410
@@ -29,5 +29,7 @@ CONFIGURE_ARGS+=--with-canna=${LOCALBASE}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/cue ${PREFIX}/bin
+	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/cue
+	${INSTALL_DATA} ${WRKSRC}/sample.cuerc ${PREFIX}/share/examples/cue
 
 .include "../../mk/bsd.pkg.mk"
