@@ -1,4 +1,4 @@
-# $NetBSD: emacs.mk,v 1.16 2003/09/02 06:59:46 jlam Exp $
+# $NetBSD: emacs.mk,v 1.17 2005/03/07 17:48:08 jwise Exp $
 #
 # A Makefile fragment for Emacs Lisp packages.
 #
@@ -175,7 +175,7 @@ EMACS_BIN=	${PREFIX}/bin/xemacs
 EMACS_PKG_VERSION=	${_EMACS_VERSION_XEMACS_FULL:C|^.*-||}
 EMACS_LISPPREFIX=	${PREFIX}/lib/xemacs/site-packages/lisp
 PKGNAME_PREFIX=		xemacs-
-PKGNAME=		${PKGNAME_PREFIX}${DISTNAME}
+PKGNAME:=		${PKGNAME_PREFIX}${PKGNAME}
 CONFLICTS+=		${PKGBASE:C|^xemacs-||}-[0-9]*
 .endif
 # strip out nb?
