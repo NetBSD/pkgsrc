@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/06/02 01:18:50 jschauma Exp $
+# $NetBSD: Makefile,v 1.9 2003/06/07 17:48:34 jmmv Exp $
 #
 
 DISTNAME=       cucipop-1.31
@@ -27,7 +27,7 @@ MAKE_ENV+=	CFLAGS_INET6=-DINET6
 LDFLAGS+=	-lnsl -lsocket
 .endif
 
-post-patch:
+pre-configure:
 	@(cd ${WRKSRC};							\
 	for f in config.h cucipop.8 makevpopdb.8; do			\
 		${SED} -e 's|@prefix@|${PREFIX}|g' $$f > $$f.fixed &&	\
