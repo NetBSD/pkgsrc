@@ -1,4 +1,4 @@
-.\"	$NetBSD: etcupdate.8,v 1.4 2001/11/22 15:39:31 martti Exp $
+.\"	$NetBSD: etcupdate.8,v 1.5 2001/11/23 19:16:38 martti Exp $
 .\"
 .\" Copyright (c) 2001 The NetBSD Foundation, Inc.
 .\" All rights reserved.
@@ -43,7 +43,7 @@
 .Pa /etc
 .Sh SYNOPSIS
 .Nm
-.Op Fl b Ar binfile
+.Op Fl b
 .Op Fl h
 .Op Fl p Ar pager
 .Op Fl s Ar srcdir
@@ -108,6 +108,25 @@ but it can be changed either with the
 argument or by defining the
 .Ev SRCDIR
 variable.
+.Pp
+If the
+.Fl b
+flag is not used,
+.Nm
+expects to find
+.Pa etc/Makefile
+within the source directory. This will be used to create the temporary
+files in
+.Pa /tmp/temproot .
+.Pp
+If the
+.Fl b
+flag is used (maybe together with the
+.Fl s Ar srcdir
+argument),
+.Nm
+uses the source directory directly as the temporary directory
+.Pa ( /tmp/temproot ) .
 .It Ev PAGER
 The pager to use when displaying files.  By default this is
 .Xr more 1
@@ -131,10 +150,10 @@ users with wider shell windows.
 The environment variables can also be defined in the following configuration
 files.  The user's personal configuration file settings override the global
 settings.
-.Bl -tag -offset indent
-.It Pa /etc/etcupdate.conf
-.It Pa ~/.etcupdaterc
-.El
+.Pp
+/etc/etcupdate.conf
+.Pp
+~/.etcupdaterc
 .Sh EXAMPLES
 You have just upgraded your
 .Nx
@@ -143,6 +162,7 @@ to update the configuration files as well.
 To update the configuration files from the sources (if you have the
 .Pa /usr/src
 directory):
+.Pp
 .Dl etcupdate
 .Pp
 The default location of the source files is
@@ -150,17 +170,29 @@ The default location of the source files is
 but this may be overridden with the
 .Fl s Ar srcdir
 command line argument:
+.Pp
 .Dl etcupdate -s /some/where/src
 .Pp
 To update the configuration files from binary distribution packages
-(note that you can specify more than one
-.Fl b Ar binfile
-argument):
-.Dl etcupdate -b /some/where/etc.tgz
+do something like this:
+.Pp
+.Dl mkdir /tmp/etc
+.Dl cd /tmp/etc
+.Dl tar xf /some/where/etc.tgz
+.Dl etcupdate -b -s /tmp/etc
+.Pp
+The
+.Fl b
+flag tells
+.Nm
+that the source directory does not have any
+.Pa etc/Makefile
+but the files from the binary distribution set(s).
 .Pp
 To get a better idea what's going on, use the
 .Fl v
 flag:
+.Pp
 .Dl etcupdate -v
 .Sh AUTHORS
 The
