@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2004/07/25 06:15:24 grant Exp $
+# $NetBSD: Makefile,v 1.18 2004/08/27 13:16:16 drochner Exp $
 
-DISTNAME=	gnutls-1.0.13
+DISTNAME=	gnutls-1.0.20
 CATEGORIES=	security devel
 MASTER_SITES=	ftp://ftp.gnutls.org/pub/gnutls/ \
 		ftp://ftp.gnupg.org/gcrypt/alpha/gnutls/ \
@@ -16,6 +16,8 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 USE_BUILDLINK3=		YES
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
+
+BUILDLINK_DEPENDS.opencdk=	opencdk>=0.5.5
 
 MAKE_ENV+=		RM="${RM}"
 
@@ -38,4 +40,5 @@ post-install:
 .include "../../security/libgcrypt/buildlink3.mk"
 .include "../../security/libtasn1/buildlink3.mk"
 .include "../../security/opencdk/buildlink3.mk"
+.include "../../devel/cfg+/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
