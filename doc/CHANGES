@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6132 2004/06/05 06:23:54 atatat Exp $
+$NetBSD: CHANGES,v 1.6133 2004/06/05 07:46:36 hamajima Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2784,3 +2784,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added p5-Unicode-IMAPUtf7-2.00 [taca 2004-06-05]
 	Updated tkined to 1.4.11nb1 [minskim 2004-06-05]
 	Updated pkgdepgraph to 2.6 [atatat 2004-06-05]
+	Added snx101util-0.2 [hamajima 2004-06-05]
