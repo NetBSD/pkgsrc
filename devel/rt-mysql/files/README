@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: README,v 1.2 2004/02/04 22:19:10 abs Exp $
+$NetBSD: README,v 1.3 2004/02/20 00:50:58 abs Exp $
 
 You must now do post-installation configuration:
 
@@ -9,7 +9,10 @@ You must now do post-installation configuration:
 
 (3) Run rtconfig (located in @RT_PATH@/etc) to set up the database.
 
-(4) Read the README.rt file located in the same directory as this
+(4) Ensure /var/pkg/rt/sessiondata is writable as the user under which your
+    web server runs.
+
+(5) Read the README.rt file located in the same directory as this
 file.  This covers issues such as how to configure your web server
 for use with rt, how to set up aliases for the email gateway, and
 cron jobs for cleaning out stale data.
