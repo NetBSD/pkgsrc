@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2929 2003/07/30 10:07:27 wiz Exp $
+$NetBSD: CHANGES,v 1.2930 2003/07/30 10:29:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3063,3 +3063,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated skkserv to 3.9.4nb2 [jmmv 2003-07-29]
 	Updated imap-uw to 2002.4nb1 [adam 2003-07-30]
 	Updated libdvdcss to 1.2.8 [wiz 2003-07-30]
+	Updated curl to 7.10.6 [wiz 2003-07-30]
