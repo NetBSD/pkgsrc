@@ -1,23 +1,12 @@
-$NetBSD: patch-ad,v 1.3 2002/08/25 19:22:56 jlam Exp $
---- server/misc.c~	Fri Jul 29 12:03:54 1994
-+++ server/misc.c	Fri Jun 30 10:16:39 2000
-@@ -788,12 +788,19 @@
- 
-     if (client->username && client->username[0]) {
-       if (client->groupname && client->groupname[0]) {
-+	if (strlen(DDUSER) + strlen(client->username) +
-+	    strlen(DDGROUP) + strlen(client->groupname) +
-+	    strlen(DDPATH) + 4 >= 256)
-+	  return ( -1 );
- 	sprintf(dichome, "%s/%s:%s/%s:%s",
- 		DDUSER, client->username,
- 		DDGROUP, client->groupname,
- 		DDPATH);
-       }
-       else {
-+	if (strlen(DDUSER) + strlen(client->username) +
-+	    strlen(DDPATH) + 2 >= 256)
-+	  return ( -1 );
- 	sprintf(dichome, "%s/%s:%s",
- 		DDUSER, client->username,
- 		DDPATH);
+$NetBSD: patch-ad,v 1.4 2002/12/27 08:41:24 uebayasi Exp $
+--- dic/ideo/pubdic/Imakefile.orig	Thu Dec  5 23:43:40 2002
++++ dic/ideo/pubdic/Imakefile	Thu Dec  5 23:43:52 2002
+@@ -9,7 +9,7 @@
+       CANNAROOT = ../../..
+     CANNACMDDIR = $(CANNAROOT)/cmd
+           MERGE = $(CANNACMDDIR)/mergewd/mergeword
+-       INCLUDES = -I$(CANNAROOT)/include
++       INCLUDES = -I$(CANNAROOT)/canna
+ #endif
+         TARGETS = iroha.t
+         PUBDICS = a.p k.p s.p t.p n.p h.p m.p y.p r.p w.p x.p
