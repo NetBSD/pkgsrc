@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/08/19 15:46:44 agc Exp $
+
+SHA1 (dropbear-0.36.tar.bz2) = 89977e99411c5bc67c2de006665afde7bfc3dff2
+Size (dropbear-0.36.tar.bz2) = 724179 bytes
+SHA1 (patch-aa) = c2d54d4e96ce101435ae2793bd175c7aa1418877
