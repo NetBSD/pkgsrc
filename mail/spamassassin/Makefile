@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2003/09/13 15:21:27 jlam Exp $
+# $NetBSD: Makefile,v 1.30 2003/09/13 17:17:09 jlam Exp $
 
 DISTNAME=	Mail-SpamAssassin-2.55
 PKGNAME=	spamassassin-2.55
@@ -15,6 +15,8 @@ COMMENT=	Mail filter to identify spam
 CONFLICTS=	p5-Mail-SpamAssassin-[1-9]*
 
 .include "../../mk/bsd.prefs.mk"
+
+BUILDLINK_DEPENDS.perl=	perl>=5.6.0
 
 DEPENDS+=	p5-Net-DNS-[0-9]*:../../net/p5-Net-DNS
 DEPENDS+=	p5-HTML-Parser>=3.0:../../www/p5-HTML-Parser
@@ -33,7 +35,6 @@ CONFIGURE_ARGS+=	--disable-ssl
 .endif
 BUILD_DEFS+=		SPAMASSASSIN_USE_SSL
 
-BUILDLINK_DEPENDS.perl=	perl>=5.6.0
 USE_BUILDLINK2=		YES
 USE_PKGINSTALL=		YES
 PKG_SYSCONFSUBDIR=	spamassassin
