@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.150 2003/05/22 16:53:40 salo Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.151 2003/05/24 17:32:02 salo Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -1109,13 +1109,6 @@ MPLAYER_ENABLE_RUNTIME_CPU_DETECTION?= YES
 # CPU type.
 # Possible: YES, NO
 # Default: YES
-
-MPLAYER_USE_REALMEDIA?= NO
-# Used by mplayer to enable realmedia support by using the realplayer
-# libraries. Note that this only works on i386 and also adds a
-# dependency for the linux emulation to this package.
-# Possible: YES, NO
-# Default: NO
 
 #MOTIF_TYPE?=	openmotif
 # Used by motif.buildlink2.mk to choose which Motif-2.0-compatible
