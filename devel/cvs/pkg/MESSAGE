@@ -1,5 +1,5 @@
 =============================================================================
-$NetBSD: MESSAGE,v 1.1 1998/08/21 19:06:52 tv Exp $
+$NetBSD: MESSAGE,v 1.2 1998/09/05 03:31:18 kim Exp $
 
     Set up the master source repository.  See the "Setting up the repository"
     section of cvs.info for details; the one-line summary is (if you are
@@ -10,12 +10,12 @@ $NetBSD: MESSAGE,v 1.1 1998/08/21 19:06:52 tv Exp $
     variable appropriately to reflect the placement of your source
     repository.  If the above example is used, the following commands
     can be placed in user's ~/.profile, ~/.bash_profile file; or in the
-    site-wide /etc/profile:
+    system-wide /etc/profile:
 
 	CVSROOT=/src/master; export CVSROOT
 
     for sh/bash/ksh users, or place the following commands in the user's
-    ~/.cshrc, ~/.login, or /etc/chsrc file:
+    ~/.login, or system-wide in the /etc/csh.login file:
 
 	setenv CVSROOT /src/master
 
