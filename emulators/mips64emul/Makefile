@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2004/08/27 06:29:07 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2004/11/04 12:18:54 xtraeme Exp $
 #
 
-DISTNAME=	mips64emul-0.2
+DISTNAME=	mips64emul-0.2.2
 CATEGORIES=	emulators
 MASTER_SITES=	http://www.mdstud.chalmers.se/~md1gavan/mips64emul/src/
 
@@ -25,11 +25,15 @@ do-install:
 .for f in README HISTORY BUGS TODO RELEASE LICENSE 
 	${INSTALL_DATA} ${WRKSRC}/${f} ${PREFIX}/share/doc/${PKGBASE}
 .endfor
+	${INSTALL_DATA} ${WRKSRC}/doc/*.gif ${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/doc/*.png ${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/doc/*.c ${PREFIX}/share/doc/${PKGBASE}
 
 SUBST_CLASSES=		x11
 SUBST_STAGE.x11=	post-patch
 SUBST_FILES.x11=	configure
-SUBST_SED.x11=		-e "s|-L/usr/X11R6/lib|${GLOBAL_LDFLAGS}|g"
+SUBST_SED.x11=		-e "s|-L/usr/X11R6/lib|${GLOBAL_LDFLAGS}|g" \
+			-e "s|/usr/X11R6|${X11BASE}|g"
 SUBST_MESSAGE.x11=	"Fixing linking flags."
 
 .include "../../mk/bsd.pkg.mk"
