@@ -1,5 +1,5 @@
 Another HTML-Lint is another HTML checker written in Perl.  This package
-includes individual command and CGI gateway.  Invokng htmllint without any
+includes individual command and CGI gateway.  Invoking htmllint without any
 argument puts the usage string.
 
 It supports various HTML versions and variants.  From usage string:
