@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2003/07/03 15:56:37 drochner Exp $
+@comment $NetBSD: PLIST,v 1.7 2003/07/04 16:11:57 seb Exp $
 @unexec ${INSTALL_INFO} --delete %D/info/cpp.info %D/info/dir
 info/cpp.info
 @exec ${INSTALL_INFO} %D/info/cpp.info %D/info/dir
@@ -14,5 +14,5 @@ info/gccint.info
 @unexec ${INSTALL_INFO} --delete %D/info/cppinternals.info %D/info/dir
 info/cppinternals.info
 @exec ${INSTALL_INFO} %D/info/cppinternals.info %D/info/dir
-share/examples/gcc/mk.conf
-@dirrm share/examples/gcc
+share/examples/${DISTNAME}/mk.conf
+@dirrm share/examples/${DISTNAME}
