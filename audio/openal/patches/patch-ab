@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1.1.1 2003/03/17 15:57:05 jmmv Exp $
+$NetBSD: patch-ab,v 1.2 2004/12/01 13:59:43 adam Exp $
 
---- configure.orig	2003-01-25 23:04:57.000000000 +0000
+--- configure.orig	2004-08-16 15:27:18.000000000 +0000
 +++ configure
-@@ -3121,8 +3121,67 @@ LIBS=$ac_check_lib_save_LIBS
+@@ -3123,8 +3123,67 @@ LIBS=$ac_check_lib_save_LIBS
  fi
  echo "$as_me:$LINENO: result: $ac_cv_lib_dl_dlopen" >&5
  echo "${ECHO_T}$ac_cv_lib_dl_dlopen" >&6
@@ -70,7 +70,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2003/03/17 15:57:05 jmmv Exp $
  else
  
  cat >>confdefs.h <<\_ACEOF
-@@ -5694,9 +5753,7 @@ else
+@@ -5749,9 +5808,7 @@ else
  echo "${ECHO_T}no" >&6
  fi
  
