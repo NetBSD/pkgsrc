@@ -4,7 +4,8 @@
 # Date created:		03 September 1994
 # Whom:			mr
 #
-# $Id: Makefile,v 1.2 1997/11/22 05:41:33 hubertf Exp $
+# $NetBSD: Makefile,v 1.3 1997/11/22 05:42:42 hubertf Exp $
+# FreeBSD Id: Makefile,v 1.21 1997/03/26 02:12:07 ache Exp
 #
 
 DISTNAME=       pine3.96
