@@ -1,22 +1,17 @@
-$NetBSD: patch-aa,v 1.6 2001/07/21 15:23:52 jlam Exp $
+$NetBSD: patch-aa,v 1.7 2001/08/09 19:03:19 jlam Exp $
 
---- ../configure.orig	Wed Feb 28 02:34:16 2001
+--- ../configure.orig	Tue Jul  3 07:23:50 2001
 +++ ../configure
-@@ -1651,7 +1651,7 @@
-   :
- fi
+@@ -6425,12 +6425,6 @@
  
--if test "$with_graphic-libs" = "no" ; then
-+if test "$with_graphic_libs" = "no" ; then
-     echo $ac_n "checking for libjpeg version = 6b""... $ac_c" 1>&6
- echo "configure:1657: checking for libjpeg version = 6b" >&5
-     cat > conftest.$ac_ext <<EOF
-@@ -1686,7 +1686,7 @@
-   rm -rf conftest*
-           echo "$ac_t""yes" 1>&6
-         LIBPNG='-lpng'
--        LIBZ=''
-+        LIBZ='-lz'
- 	MAKEPNG='#'
- else
-   rm -rf conftest*
+ 
+ if test "$build_amaya" = "yes" ; then
+-    if test ! -f $srcdir/../libwww/Makefile.in ; then
+-	echo "configure: warning: libwww sources not found !!" 1>&2
+-	echo "configure: warning: Disabling Amaya build !" 1>&2
+-	build_amaya="no"
+-    fi
+-
+     if test ! -f $srcdir/amaya/MathML.S ; then
+ 	if test "$with_math" = "yes" ; then
+ 	    echo "configure: warning: MathML sources not found !!" 1>&2

@@ -1,22 +1,42 @@
-$NetBSD: patch-ac,v 1.5 2001/07/21 15:23:52 jlam Exp $
+$NetBSD: patch-ac,v 1.6 2001/08/09 19:03:19 jlam Exp $
 
---- ../../libwww/Library/src/Makefile.in.orig	Fri Sep 15 08:45:58 2000
-+++ ../../libwww/Library/src/Makefile.in
-@@ -123,7 +123,7 @@
- have_tn3270 = @have_tn3270@
- subdirs = @subdirs@
+--- ../amaya/Makefile.libwww.orig	Tue Aug 29 12:18:03 2000
++++ ../amaya/Makefile.libwww
+@@ -19,7 +19,6 @@
+ AMAYA_LIBWWW_OPTION_LIBS=
  
--LDFLAGS = -version-info "1:0:1"
-+LDFLAGS = @LDFLAGS@ -version-info "1:0:1"
+ AMAYA_LIBWWW_LIBS= \
+-		-L../$(LIBWWW)/Library/src/.libs \
+ 			-lwwwapp \
+ 			-lwwwhttp \
+ 			-lwwwxml \
+@@ -34,23 +33,19 @@
+ 			-lwwwutils \
+ 			-lwwwzip \
+ 			-lwwwftp \
+-		-L../$(LIBWWW)/modules/md5/.libs \
++			-lwwwnews \
++			-lwwwtelnet \
++			-lwwwgopher \
+ 			-lmd5 \
+-		-L../$(LIBWWW)/modules/expat/xmlparse/.libs \
+ 			-lxmlparse \
+-		-L../$(LIBWWW)/modules/expat/xmltok/.libs \
+ 			-lxmltok
  
- lib_LTLIBRARIES =  	libwwwutils.la 	libwwwcore.la 	libwwwtrans.la 	libwwwstream.la 	libwwwcache.la 	libwwwdir.la 	libwwwfile.la 	libwwwftp.la 	libwwwgopher.la 	libwwwmime.la 	libwwwhttp.la 	libwwwnews.la 	libwwwtelnet.la 	libwwwhtml.la 	libwwwapp.la 	libwwwinit.la 	libwwwmux.la 	@WWWXML@ 	@WWWZIP@ 	@WWWWAIS@ 	@WWWSQL@
+ AMAYA_LIBWWW_EXTRA_LIBS=
  
-@@ -217,7 +217,7 @@
+-AMAYA_LIBWWW_INCLUDES= -I../libwww \
+-		-I$(THOTDIR)/../libwww/Library/src \
+-		-I$(THOTDIR)../libwww/modules/md5 \
+-		-I$(THOTDIR)../libwww/modules/expat/xmlparse \
+-		-I$(THOTDIR)../libwww/modules/expat/xmltok
++AMAYA_LIBWWW_INCLUDES= -I${BUILDLINK_DIR}/include/w3c-libwww
  
- libwwwsql_la_LDFLAGS = -rpath $(libdir)
+-# this dependency calls the ../Makefile rule that compiles libwww
+-AMAYA_LIBWWW_SRC= ../libz.a amaya_comp_libwww
++# Use an installed libwww library
++AMAYA_LIBWWW_SRC= # empty
  
--INCLUDES =  	-I/usr/local/include 	-I${top_srcdir}/modules/md5 	-I${top_srcdir}/modules/expat/xmlparse
-+INCLUDES =  	-I${top_srcdir}/modules/md5 	-I${top_srcdir}/modules/expat/xmlparse
- 
- 
- BUILT_SOURCES =  	wwwsys.h 	HTAABrow.h 	HTAAUtil.h 	HTANSI.h 	HTAccess.h 	HTAlert.h 	HTAncMan.h 	HTAnchor.h 	HTArray.h 	HTAssoc.h 	HTAtom.h 	HTBInit.h 	HTBTree.h 	HTBind.h 	HTBind.h 	HTBound.h 	HTBufWrt.h 	HTCache.h 	HTChannl.h 	HTChunk.h 	HTConLen.h 	HTCookie.h 	HTDNS.h 	HTDemux.h 	HTDescpt.h 	HTDialog.h 	HTDigest.h 	HTDir.h 	HTEPtoCl.h 	HTError.h 	HTEscape.h 	HTEvent.h 	HTEvtLst.h 	HTFSave.h 	HTFTP.h 	HTFTPDir.h 	HTFWrite.h 	HTFile.h 	HTFilter.h 	HTFormat.h 	HTGopher.h 	HTGuess.h 	HTHInit.h 	HTHash.h 	HTHeader.h 	HTHist.h 	HTHome.h 	HTHost.h 	HTHstMan.h 	HTIOStream.h 	HTIcons.h 	HTInet.h 	HTInit.h 	HTLib.h 	HTLink.h 	HTList.h 	HTLocal.h 	HTLog.h 	HTMIME.h 	HTMIMERq.h 	HTMIMImp.h 	HTMIMPrs.h 	HTML.h 	HTMLGen.h 	HTMLPDTD.h 	HTMemLog.h 	HTMemory.h 	HTMerge.h 	HTMethod.h 	HTMulpar.h 	HTMulti.h 	HTMuxCh.h 	HTMuxHeader.h 	HTMuxTx.h 	HTNDir.h 	HTNet.h 	HTNetMan.h 	HTNetTxt.h 	HTNews.h 	HTNewsLs.h 	HTNewsRq.h 	HTNoFree.h 	HTPEP.h 	HTParse.h 	HTPlain.h 	HTProfil.h 	HTProt.h 	HTProxy.h 	HTRDF.h 	HTReader.h 	HTReq.h 	HTReqMan.h 	HTResMan.h 	HTResponse.h 	HTRules.h 	HTSChunk.h 	HTSQL.h 	HTSQLLog.h 	HTSocket.h 	HTStream.h 	HTString.h 	HTStruct.h 	HTStyle.h 	HTTCP.h 	HTTChunk.h 	HTTP.h 	HTTPGen.h 	HTTPReq.h 	HTTPRes.h 	HTTPServ.h 	HTTPUtil.h 	HTTeXGen.h 	HTTee.h 	HTTelnet.h 	HTTimer.h 	HTTrans.h 	HTUTree.h 	HTUU.h 	HTUser.h 	HTUtils.h 	HTWAIS.h 	HTWSRC.h 	HTWWWStr.h 	HTWriter.h 	HTXML.h 	HTXParse.h 	HTZip.h 	HText.h 	HTextImp.h 	SGML.h 	WWWApp.h 	WWWCache.h 	WWWCore.h 	WWWDir.h 	WWWFTP.h 	WWWFile.h 	WWWGophe.h 	WWWHTML.h 	WWWHTTP.h 	WWWInit.h 	WWWLib.h 	WWWMIME.h 	WWWMux.h 	WWWNews.h 	WWWSQL.h 	WWWStream.h 	WWWTelnt.h 	WWWTrans.h 	WWWUtil.h 	WWWWAIS.h 	WWWXML.h 	WWWZip.h
+ amaya_comp_libwww : force
+ 		@(cd .. ; $(MAKE) libwww)
