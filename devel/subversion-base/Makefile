@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/09/08 04:47:52 epg Exp $
+# $NetBSD: Makefile,v 1.5 2003/10/07 08:06:38 epg Exp $
 
 PKGNAME=	subversion-base-${SVNVER}
 COMMENT=	Version control system, base programs and libraries
@@ -24,6 +24,7 @@ post-install:
 		${SVNEXAMPLES}/hook-scripts
 
 BUILDLINK_DEPENDS.apr?=		apr>=0.9.4
+BUILDLINK_DEPENDS.neon?=	neon>=0.24.1
 
 .include "../../databases/db4/buildlink2.mk"
 .include "../../devel/apr/buildlink2.mk"
