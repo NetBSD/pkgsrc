@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE.NetBSD,v 1.1.1.1 2003/03/26 12:55:04 grant Exp $
+$NetBSD: MESSAGE.NetBSD,v 1.1 2003/04/14 20:11:48 grant Exp $
 
 	Phoenix requires your kernel to include 'COMPAT_LINUX' (plus in
 	NetBSD systems before 1.5 'EXEC_ELF32').
