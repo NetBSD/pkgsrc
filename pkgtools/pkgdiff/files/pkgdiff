@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: pkgdiff,v 1.8 2002/06/27 23:09:01 lukem Exp $
+# $NetBSD: pkgdiff,v 1.9 2002/12/30 18:27:54 sommerfeld Exp $
 #
 # Usage: pkgdiff newfile
 #        pkgdiff oldfile newfile
@@ -19,7 +19,7 @@ then
 		old="$1.orig"
 		new="$1"
 	else
-		echo $0: need at least one arguments >&2
+		echo $0: need at least one argument >&2
 		exit 1;
 	fi
 else
