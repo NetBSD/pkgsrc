@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 1999/05/24 20:39:35 tv Exp $
+# $NetBSD: Makefile,v 1.17 1999/11/23 16:54:39 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.7 1997/08/10 22:31:27 fenner Exp 
 #
 
@@ -12,7 +12,9 @@ ONLY_FOR_PLATFORM=	NetBSD-*-i386
 
 MAINTAINER=		packages@netbsd.org
 
-NO_PACKAGE=		Only unmodified original package can be distributed
+RESTRICTED=		Only unmodified original package can be distributed
+NO_PACKAGE=		${RESTRICTED}
+NO_CDROM=		${RESTRICTED}
 
 NO_WRKSUBDIR=		yes
 EXTRACT_CMD=		${DOWNLOADED_DISTFILE} >/dev/null
