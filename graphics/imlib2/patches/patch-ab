@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2001/11/14 23:17:10 enami Exp $
+
+--- loaders/Makefile.in.orig	Sun Apr 29 14:54:41 2001
++++ loaders/Makefile.in
+@@ -93,7 +93,7 @@
+ # A list of all the files in the current directory which can be regenerated
+ MAINTAINERCLEANFILES = Makefile.in
+ 
+-LDFLAGS = -L/usr/X11R6/lib -L$(top_srcdir)/src
++LDFLAGS = @LDFLAGS@ -L$(top_srcdir)/src
+ INCLUDES = -I/usr/X11R6/include -I$(top_srcdir)/libltdl                        $(X_CFLAGS) -I$(prefix)/include -I$(includedir) 		       -I. -I$(top_srcdir) -I$(top_srcdir)/src 		       -I$(top_srcdir)/loaders
+ 
+ 
