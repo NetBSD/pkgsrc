@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.6 2001/07/27 13:33:32 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.7 2001/10/23 13:02:11 jlam Exp $
 #
 # This Makefile fragment is included by packages that use tcl.
 #
@@ -35,16 +35,22 @@ BUILDLINK_TARGETS+=	${BUILDLINK_TARGETS.tcl}
 pre-configure: ${BUILDLINK_TARGETS.tcl}
 tcl-buildlink: _BUILDLINK_USE
 
+_TCLCONFIG_SED=	\
+	-e "/^TCL_PREFIX/s|${BUILDLINK_PREFIX.tcl}|${BUILDLINK_DIR}|g"
+_TCLCONFIG_SED+=	\
+	-e "s|-L${BUILDLINK_PREFIX.tcl}/lib|-L${BUILDLINK_DIR}/lib|g"
+_TCLCONFIG_SED+=	\
+	-e "s|${BUILDLINK_PREFIX.tcl}/lib/libtclstub|${BUILDLINK_DIR}/lib/libtclstub|g"
+
 tclConfig-buildlink:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	cookie=${BUILDLINK_DIR}/.tclConfig_buildlink_done;		\
 	if [ ! -f $${cookie} ]; then					\
 		file=lib/tclConfig.sh;					\
 		${ECHO_MSG} "Creating script ${BUILDLINK_DIR}/$${file}."; \
-		${SED}	-e "/^TCL_PREFIX/s|${BUILDLINK_PREFIX.tcl}|${BUILDLINK_DIR}|g" \
-			-e "s|-L${BUILDLINK_PREFIX.tcl}/lib|-L${BUILDLINK_DIR}/lib|g" \
-			-e "s|${BUILDLINK_PREFIX.tcl}/lib/libtclstub|${BUILDLINK_DIR}/lib/libtclstub|g" \
-			${BUILDLINK_PREFIX.tcl}/$${file} > ${BUILDLINK_DIR}/$${file}; \
+		${SED}	${_TCLCONFIG_SED}				\
+			${BUILDLINK_PREFIX.tcl}/$${file}		\
+			> ${BUILDLINK_DIR}/$${file}; \
 		${CHMOD} +x ${BUILDLINK_DIR}/$${file};			\
 		${ECHO} ${BUILDLINK_PREFIX.tcl}/$${file} >> $${cookie};	\
 	fi

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.6 2001/07/27 13:33:39 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.7 2001/10/23 13:02:11 jlam Exp $
 #
 # This Makefile fragment is included by packages that use tk.
 #
@@ -39,16 +39,23 @@ BUILDLINK_TARGETS+=	${BUILDLINK_TARGETS.tk}
 pre-configure: ${BUILDLINK_TARGETS.tk}
 tk-buildlink: _BUILDLINK_USE
 
+_TKCONFIG_SED=	-e "/^TK_PREFIX/s|${BUILDLINK_PREFIX.tcl}|${BUILDLINK_DIR}|g"
+_TKCONFIG_SED+=	-e "s|-L${BUILDLINK_PREFIX.tk}/lib|-L${BUILDLINK_DIR}/lib|g"
+_TKCONFIG_SED+=	-e "s|${BUILDLINK_PREFIX.tk}/lib/libtkstub|-L${BUILDLINK_DIR}/lib/libtkstub|g"
+.if defined(X11_BUILDLINK_MK)
+_TKCONFIG_SED+=	-e "s|-I${X11BASE}/|-I${BUILDLINK_X11_DIR}/|g"
+_TKCONFIG_SED+=	-e "s|-L${X11BASE}/|-L${BUILDLINK_X11_DIR}/|g"
+.endif
+
 tkConfig-buildlink:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	cookie=${BUILDLINK_DIR}/.tkConfig_buildlink_done;		\
 	if [ ! -f $${cookie} ]; then					\
 		file=lib/tkConfig.sh;					\
 		${ECHO_MSG} "Creating script ${BUILDLINK_DIR}/$${file}."; \
-		${SED}  -e "/^TK_PREFIX/s|${BUILDLINK_PREFIX.tcl}|${BUILDLINK_DIR}|g" \
-			-e "s|-L${BUILDLINK_PREFIX.tk}/lib|-L${BUILDLINK_DIR}/lib|g" \
-			-e "s|${BUILDLINK_PREFIX.tk}/lib/libtkstub|-L${BUILDLINK_DIR}/lib/libtkstub|g" \
-			${BUILDLINK_PREFIX.tk}/$${file} > ${BUILDLINK_DIR}/$${file}; \
+		${SED}  ${_TKCONFIG_SED}				\
+			${BUILDLINK_PREFIX.tk}/$${file}			\
+			> ${BUILDLINK_DIR}/$${file};			\
 		${CHMOD} +x ${BUILDLINK_DIR}/$${file};			\
 		${ECHO} ${BUILDLINK_PREFIX.tk}/$${file} >> $${cookie};	\
 		${TOUCH} ${TOUCH_FLAGS} $${cookie};			\
