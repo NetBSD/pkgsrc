@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.14 2001/01/03 16:21:58 hubertf Exp $
+# $NetBSD: Makefile,v 1.15 2001/01/07 14:44:18 tron Exp $
 
-DISTNAME=	plex86-20001225
+DISTNAME=	plex86-20010106
 PKGNAME=	${DISTNAME:S/-/-0./}
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_LOCAL}
+EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	hubertf@netbsd.org
+MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.plex86.org/
 
 WRKSRC=		${WRKDIR}/plex86
@@ -49,15 +50,14 @@ post-build:
 	${GZIP_CMD} -9 ${WRKSRC}/misc/vga.pcf
 
 do-install: do-install-dirs do-install-binaries do-install-bios \
-		do-install-font do-install-conf do-install-docs
+		do-install-font do-install-conf
 	${SED} -e 's,@PREFIX@,${PREFIX},g' <${PKGDIR}/MESSAGE >${MESSAGE_FILE}
 
 do-install-dirs:
 	${INSTALL_DATA_DIR} ${PREFIX}/lkm \
 		${PREFIX}/lib/plex86 \
 		${PREFIX}/lib/plex86/bios \
-		${PREFIX}/share/examples/plex86 \
-		${PREFIX}/share/doc/html/plex86
+		${PREFIX}/share/examples/plex86
 
 do-install-binaries:
 	${INSTALL_PROGRAM} ${WRKSRC}/user/plex86 ${PREFIX}/bin/
@@ -82,10 +82,6 @@ do-install-conf:
 			-e 's,\./plugins/bochs/,${PREFIX}/lib/plex86/,' \
 			$$f >${WRKDIR}/$$f.conf; \
 	done
-	${INSTALL_DATA} ${WRKDIR}/*.conf ${PREFIX}/share/examples/plex86/
-
-do-install-docs:
-	@${INSTALL_DATA} ${WRKSRC}/output/html/* ${WRKSRC}/docs/html/*.* \
-		${PREFIX}/share/doc/html/plex86/
+	${INSTALL_DATA} ${WRKDIR}/*.conf ${PREFIX}/share/examples/plex86
 
 .include "../../mk/bsd.pkg.mk"
