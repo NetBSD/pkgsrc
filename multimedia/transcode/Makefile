@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/10/19 02:15:05 sekiya Exp $
+# $NetBSD: Makefile,v 1.7 2004/10/19 03:11:38 sekiya Exp $
 
 DISTNAME=	transcode-0.6.12
 PKGREVISION=	3
@@ -35,8 +35,10 @@ post-patch:
 	${MV} configure.new configure && ${CHMOD} a+x configure
 	${CP} ${FILESDIR}/strip_fPIC.sh ${WRKSRC}
 
+.if ${MACHINE_ARCH} == "i386"
 post-install:
 	${LN} -sf ../libxvidcore.so.4.0  ${PREFIX}/lib/transcode/libxvidcore.so.4
+.endif
 
 .include "../../archivers/liblzo/buildlink3.mk"
 .include "../../audio/liba52/buildlink3.mk"
@@ -52,7 +54,9 @@ post-install:
 .include "../../multimedia/libdvdread/buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
 .include "../../multimedia/mjpegtools/buildlink3.mk"
+.if ${MACHINE_ARCH} == "i386"
 .include "../../multimedia/xvidcore/buildlink3.mk"
+.endif
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/gtk/buildlink3.mk"
 
