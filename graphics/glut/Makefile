@@ -1,28 +1,22 @@
-# $NetBSD: Makefile,v 1.26 2004/01/20 12:18:16 agc Exp $
+# $NetBSD: Makefile,v 1.27 2004/01/22 13:00:55 adam Exp $
+#
 
-PKGNAME=		${DISTNAME:S/MesaLib/glut/}
-DISTFILES=		${DISTNAME}${EXTRACT_SUFX}
-DISTFILES+=		${DISTNAME:S/MesaLib/MesaDemos/}${EXTRACT_SUFX}
-MAINTAINER=		rh@NetBSD.org
-COMMENT=		GLUT Graphics library similar to SGI's OpenGL
+PKGNAME=	${DISTNAME:S/MesaLib/glut/}
+COMMENT=	GLUT Graphics library similar to SGI's OpenGL
 
-CONFLICTS+=		Mesa-glx-[0-9]*
-CONFLICTS+=		Mesa<3.2.1
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
+CONFLICTS+=	Mesa-glx-[0-9]*
+CONFLICTS+=	Mesa<3.2.1
 
 .include "../../graphics/Mesa/Makefile.common"
 
-WRKSRC=			${WRKDIR}/${DISTNAME:S/Lib//}
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
 USE_BUILDLINK3=		yes
-USE_X11=		yes
-USE_LIBTOOL=		yes
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
-INSTLIBS=		libglut.so.3.7
+
+INSTLIBS=	${WRKSRC}/src/glut/glx/libglut.la
 
 pre-build:
-	${RM} -fr ${WRKSRC}/src/mesa ${WRKSRC}/src/glw 			\
-		${WRKSRC}/src/glu ${WRKSRC}/progs
+	cd ${WRKSRC} && ${RM} -fr src/mesa src/glu src/glw progs
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/include/GL
