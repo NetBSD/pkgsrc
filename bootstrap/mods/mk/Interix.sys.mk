@@ -1,7 +1,7 @@
-#	$NetBSD: Interix.sys.mk,v 1.1 2004/03/11 17:28:11 tv Exp $
+#	$NetBSD: Interix.sys.mk,v 1.2 2004/03/29 02:20:55 tv Exp $
 
 unix?=		We run Unix
-OS?=		Interix
+OS!=		uname -s
 
 .SUFFIXES: .out .a .ln .o .s .S .c .cc .cpp .cxx .C .F .f .r .y .l .cl .p .h
 .SUFFIXES: .sh .m4
@@ -28,7 +28,7 @@ CFLAGS?=	${DBG}
 COMPILE.c?=	${CC} ${CFLAGS} ${CPPFLAGS} -c
 LINK.c?=	${CC} ${CFLAGS} ${CPPFLAGS} ${LDFLAGS}
 
-CXX?=		g++
+CXX?=		c++
 CXXFLAGS?=	${CFLAGS}
 COMPILE.cc?=	${CXX} ${CXXFLAGS} ${CPPFLAGS} -c
 LINK.cc?=	${CXX} ${CXXFLAGS} ${CPPFLAGS} ${LDFLAGS}
@@ -78,7 +78,7 @@ SHELL?=		sh
 
 SIZE?=		size
 
-TSORT?= 	tsort
+TSORT?= 	tsort -q
 
 YACC?=		yacc
 YFLAGS?=
