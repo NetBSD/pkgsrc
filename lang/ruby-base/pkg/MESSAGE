@@ -1,0 +1,12 @@
+====
+Note that some stuff that comes with the standard Ruby 1.6
+distribution is provided as separate package:
+
+	databases/ruby-gdbm:		GDBM module
+	security/ruby-md5:		MD5 module
+	devel/ruby-readline:		readline module
+	x11/ruby-tcltklib:		Tcl/Tk libraries
+	x11/ruby-tk:			Tk modules
+
+They could install with ruby meta package.
+====
