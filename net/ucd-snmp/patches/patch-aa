@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.12 2001/01/26 02:02:35 hubertf Exp $
+$NetBSD: patch-aa,v 1.13 2001/01/26 04:38:04 hubertf Exp $
 
 --- configure.in.orig	Fri May  5 12:46:26 2000
-+++ configure.in	Thu Jan 25 11:34:44 2001
++++ configure.in	Thu Jan 25 21:55:51 2001
 @@ -459,7 +459,8 @@
      else
        SHLIB_CFLAGS="-KPIC"
@@ -12,22 +12,28 @@ $NetBSD: patch-aa,v 1.12 2001/01/26 02:02:35 hubertf Exp $
      SHLIB_VERSION=
      SHLIB_LD_CMD="ld -r -o"
      SHLIB_LDCONFIG_CMD=
-@@ -1045,12 +1046,12 @@
- dnl
- dnl now check for rpm using the appropriate db library
- dnl
+@@ -1042,15 +1043,15 @@
+   CPPFLAGS=${_cppflags} LDFLAGS=${_ldflags})
+ fi
+ 
+-dnl
+-dnl now check for rpm using the appropriate db library
+-dnl
 -AC_CHECK_LIB(rpm, rpmdbOpen,[
 -  AC_DEFINE(HAVE_LIBRPM)
 -  LIBS="-lrpm $LIBS"
 -  CFLAGS="$CFLAGS -I/usr/include/rpm"
 -],,-lz)
 -
-+AC_CHECK_HEADERS(rpm/rpmlib.h rpm/header.h,
-+  AC_CHECK_LIB(rpm, rpmdbOpen,[
-+    AC_DEFINE(HAVE_LIBRPM)
-+    LIBS="-lrpm $LIBS"
-+], CPPFLAGS=${_cppflags} LDFLAGS=${_ldflags}),
-+CPPFLAGS=${_cppflags} LDFLAGS=${_ldflags})
++#dnl
++#dnl now check for rpm using the appropriate db library
++#dnl
++#AC_CHECK_HEADERS(rpm/rpmlib.h rpm/header.h,
++#  AC_CHECK_LIB(rpm, rpmdbOpen,[
++#    AC_DEFINE(HAVE_LIBRPM)
++#    LIBS="-lrpm $LIBS"
++#], CPPFLAGS=${_cppflags} LDFLAGS=${_ldflags}),
++#CPPFLAGS=${_cppflags} LDFLAGS=${_ldflags})
  
  dnl Replace `main' with a function in -lkstat:
  AC_CHECK_LIB(kstat, kstat_lookup)
