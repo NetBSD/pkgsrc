@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2000/05/26 14:07:31 veego Exp $
+# $NetBSD: Makefile,v 1.15 2000/05/26 14:35:58 veego Exp $
 #
 
 DISTNAME=	php-${PHP_VERSION}
@@ -61,7 +61,8 @@ do-install:
 	if [ ! -d ${PREFIX}/libexec/cgi-bin ]; then \
 	  ${MKDIR}  ${PREFIX}/libexec/cgi-bin ; fi
 	${LN} -sf ../../bin/php ${PREFIX}/libexec/cgi-bin/php
-	${INSTALL_DATA_DIR} ${PREFIX}/lib/php3 ${PREFIX}/share/php3
+	${INSTALL_DATA_DIR} ${PREFIX}/lib/php3
+	${INSTALL_DATA_DIR} ${PREFIX}/share/php3
 	${INSTALL_DATA} ${WRKSRC}/extra/icons/* ${PREFIX}/share/php3/
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/php3
 	${INSTALL_DATA} ${WRKSRC}/examples/README* ${WRKSRC}/examples/*.php3 \
