@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink.mk,v 1.10 2001/06/19 04:19:50 jlam Exp $
+# $NetBSD: bsd.buildlink.mk,v 1.11 2001/06/20 23:14:28 jlam Exp $
 #
 # This Makefile fragment is included by package buildlink.mk files.  This
 # file does the following things:
@@ -22,7 +22,9 @@
 # BUILDLINK_PREFIX.<pkgname>	installation prefix of the package
 #
 # BUILDLINK_FILES.<pkgname>	files relative to ${BUILDLINK_PREFIX.<pkgname>}
-#				to be symlinked into ${BUILDLINK_DIR}
+#				to be symlinked into ${BUILDLINK_DIR};
+#				libtool archive files are automatically
+#				filtered out and not linked
 #
 # BUILDLINK_TARGETS		targets to be invoked during pre-configure;
 #				the targets should be appended to this variable
@@ -103,7 +105,9 @@ _BUILDLINK_USE: .USE
 	if [ ! -f $${cookie} ]; then					\
 		${ECHO_MSG} "Linking ${.TARGET:S/-buildlink//} files into ${BUILDLINK_DIR}."; \
 		${MKDIR} ${BUILDLINK_DIR};				\
-		for file in ${BUILDLINK_FILES.${.TARGET:S/-buildlink//}:S/^/${BUILDLINK_PREFIX.${.TARGET:S/-buildlink//}}\//g}; do \
+		files="${BUILDLINK_FILES.${.TARGET:S/-buildlink//}:S/^/${BUILDLINK_PREFIX.${.TARGET:S/-buildlink//}}\//g}"; \
+		files="`${ECHO} $${files} | ${SED} -e 's|lib/[^[:blank:]]*.la||g'`"; \
+		for file in $${files}; do				\
 			rel_file=`${ECHO} $${file} | ${SED} -e "s|${BUILDLINK_PREFIX.${.TARGET:S/-buildlink//}}/||"` ; \
 			if [ -z "${BUILDLINK_TRANSFORM.${.TARGET:S/-buildlink//}:Q}" ]; then \
 				dest=${BUILDLINK_DIR}/$${rel_file};	\
