@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5737 2004/04/26 01:22:36 minskim Exp $
+$NetBSD: CHANGES,v 1.5738 2004/04/26 03:30:46 snj Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2241,3 +2241,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated p5-HTML-SimpleParse to 0.12 [minskim 2004-04-25]
 	Updated osh to 040421 [minskim 2004-04-25]
 	Updated clamav to 0.70 [recht 2004-04-25]
+	Added swiggle-0.3.2 [snj 2004-04-26]
