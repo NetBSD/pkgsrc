@@ -1,4 +1,4 @@
-# $NetBSD: compiler.mk,v 1.10 2003/09/23 19:19:33 gavan Exp $
+# $NetBSD: compiler.mk,v 1.11 2003/09/24 03:01:02 grant Exp $
 
 # This Makefile fragment implements handling for supported
 # C/C++/fortran compilers.
@@ -108,8 +108,8 @@ USE_GCC2=		# defined
 GCC_REQD=		2.95.3
 
 # we need to define these early, as they are used by gcc/buildlink2.mk.
-_GCC_SUBPREFIX=         gcc-2.95.3/
-_GCC_ARCHDIR=           ${_GCC_PREFIX}${_GCC_ARCHSUBDIR}
+_GCC_SUBPREFIX=		gcc-2.95.3/
+_GCC_ARCHDIR=		${_GCC_PREFIX}${_GCC_ARCHSUBDIR}
 _GCC_PREFIX=		${LOCALBASE}/${_GCC_SUBPREFIX}
 _GCC_LIBGCCDIR!=						\
   if [ -x ${_GCC_PREFIX}bin/gcc ]; then				\
@@ -123,7 +123,6 @@ _GCC_ARCHSUBDIR= \
 .  if empty(USE_BUILDLINK2:M[nN][oO])
 .    include "../lang/gcc/buildlink2.mk"
 .  else
-_GCC_PREFIX=            ${LOCALBASE}/${_GCC_SUBPREFIX}
 
 # Packages that link against gcc shared libraries need a full
 # dependency.
