@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.3 2002/09/26 22:34:09 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.4 2003/10/20 15:28:23 agc Exp $
 
 .if !defined(DB3_BUILDLINK2_MK)
 DB3_BUILDLINK2_MK=	# defined
@@ -11,6 +11,7 @@ EVAL_PREFIX+=		BUILDLINK_PREFIX.db3=db3
 BUILDLINK_PREFIX.db3_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.db3=	include/db3/db_cxx.h
 BUILDLINK_FILES.db3+=	include/db3/db.h
+BUILDLINK_FILES.db3+=	include/db3/db_185.h
 BUILDLINK_FILES.db3+=	lib/libdb3.*
 BUILDLINK_FILES.db3+=	lib/libdb3_cxx.*
 
