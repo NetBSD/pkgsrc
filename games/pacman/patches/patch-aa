@@ -1,29 +1,19 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/07/21 22:58:26 garbled Exp $
---- Makefile.in.orig	Mon Jun  7 10:49:02 1999
-+++ Makefile.in	Tue Jul 20 23:59:02 1999
-@@ -4,9 +4,10 @@
- datadir =	@datadir@
- bindir =	@bindir@
+$NetBSD: patch-aa,v 1.2 2000/12/15 03:18:33 garbled Exp $
+--- Makefile.in.orig	Thu Dec 14 20:00:59 2000
++++ Makefile.in	Thu Dec 14 20:04:31 2000
+@@ -8,7 +8,8 @@
  
-+CPPFLAGS+=	$(CFLAGS)
- OBJF =          pacman.o objects.o fontblowup.o
+ OBJF =          .build/pacman.o .build/objects.o .build/fontblowup.o
  DATAFILES =     pacman.dat
--EXTERN_LIBS =   -lclan -lclanlayer2
-+EXTERN_LIBS =   $(LDFLAGS) -lclan -lclanlayer2
+-EXTERN_LIBS =   -lclanCore
++EXTERN_LIBS =   -L$(X11BASE)/lib -Wl,-R$(X11BASE)/lib -lclanCore \
++		-L$(LOCALBASE)/lib -Wl,-R$(LOCALBASE)/lib -lHermes -lpth -lz
  
- all: pacman
+ all: pacman $(DATAFILES)
  
-@@ -29,11 +30,11 @@
+@@ -40,4 +41,4 @@
  
- pacman: $(OBJF) $(DATAFILES)
- 	@echo "Building executable pacman..."
--	@g++ $(EXTERN_LIBS) -o pacman $(OBJF)
-+	@g++ $(EXTERN_LIBS) -DDATAFILE=\"$(datadir)/pacman/pacman.dat\" -o pacman $(OBJF)
- 
- %.o : %.cpp
- 	@echo "Compiling $<"
--	@$(CXX) -c $(CPPFLAGS) $(CXXFLAGS) -O3 -Wall $< -o $@
-+	@$(CXX) -c $(CPPFLAGS) $(CXXFLAGS) -DDATAFILE=\"$(datadir)/pacman/pacman.dat\" -O3 -Wall  $< -o $@
  %.dat : %.scr
  	@echo "Building datafile $<"
- 	@datafile_compiler $< $@
+-	@./pacman -datafile $< $@
++	@echo "x11" | ./pacman -datafile $< $@
