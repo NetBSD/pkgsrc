@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8811 2005/01/19 09:06:25 adam Exp $
+$NetBSD: CHANGES,v 1.8812 2005/01/19 09:34:11 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -415,3 +415,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated getmail to 4.3.1 [schmonz 2005-01-18]
 	Updated nsd to 2.2.0 [itojun 2005-01-19]
 	Updated gdchart to 0.11.5 [adam 2005-01-18]
+	Added gdome2-0.8.1 [adam 2005-01-18]
