@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2319 2003/05/25 10:18:21 epg Exp $
+$NetBSD: CHANGES,v 1.2320 2003/05/25 14:13:47 taca Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2155,3 +2155,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated neon to 0.23.9nb1 [epg 2003-05-25]
 	Updated cadaver to 0.21.0nb2 [epg 2003-05-25]
 	Removed apr-devel [epg 2003-05-25]
+	Updated namazu2 to 2.0.12nb2 [taca 2003-05-25]
