@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.4 2003/03/16 08:02:40 martti Exp $
+$NetBSD: patch-ad,v 1.5 2003/06/02 07:27:26 martti Exp $
 
---- src/Makefile.orig	Sat Mar 15 16:55:18 2003
-+++ src/Makefile	Sun Mar 16 09:12:33 2003
-@@ -1013,26 +1013,31 @@
+--- src/Makefile.orig	Sun Jun  1 16:18:29 2003
++++ src/Makefile	Mon Jun  2 09:54:45 2003
+@@ -1045,26 +1045,31 @@
  ### Athena GUI
  ### Use Xaw3d to make the menus look a little bit nicer
  #XAW_LIB = -lXaw3d
