@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1009 2003/11/08 14:59:21 wiz Exp $
+$NetBSD: TODO,v 1.1010 2003/11/09 23:38:43 heinz Exp $
 
 Suggested new packages
 ======================
@@ -101,6 +101,10 @@ Suggested new packages
 	p5-CGI-FormBuilder-2.12
 	Perl CGI Form builder
 	${MASTER_SITE_PERL_CPAN:=CGI/}
+
+	p5-Digest-Hashcash-0.02
+	implements hashcash hashes, see www.hashcash.org
+	[heinz, waiting for end of freeze]
 
 	info2man
 	http://freshmeat.net/projects/info2man/
@@ -291,7 +295,7 @@ Suggested package updates
 	o openldap-2.1.23
 	o openoffice-1.1 [skrll]
 	o openssl-0.9.7c [jschauma]
-	o opera-7.21
+	o opera-7.21 [heinz, for Solaris/sparc]
 	o p5-BSD-Resource-1.23 [grant]
 	o p5-CGI-3.00
 	o p5-CGI-Application-3.1
