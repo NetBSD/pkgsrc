@@ -1,11 +1,19 @@
---- sysincludes.h.original	Wed Jan 21 17:53:59 1998
-+++ sysincludes.h	Wed Jan 21 17:44:09 1998
-@@ -11,6 +11,8 @@
- /*                                                                     */
- /***********************************************************************/
+--- Makefile.in.orig	Mon Feb 16 08:24:09 1998
++++ Makefile.in	Mon Feb 16 08:24:40 1998
+@@ -47,6 +47,7 @@
  
-+#include <sys/param.h>
-+
- #ifdef BSD
- /* on BSD we prefer gettimeofday, ... */
- # ifdef HAVE_GETTIMEOFDAY
+ INSTALL         = @INSTALL@
+ INSTALL_PROGRAM = @INSTALL_PROGRAM@
++INSTALL_SCRIPT  = ${BSD_INSTALL_SCRIPT}
+ INSTALL_DATA    = @INSTALL_DATA@
+ 
+ .SUFFIXES:
+@@ -195,7 +196,7 @@
+ install-scripts: $(bindir)/mtools
+ 	@$(top_srcdir)/mkinstalldirs $(bindir)
+ 	@for j in $(SCRIPTS) ; do \
+-		$(INSTALL_PROGRAM) $(srcdir)/scripts/$$j $(bindir)/$$j ; \
++		$(INSTALL_SCRIPT) $(srcdir)/scripts/$$j $(bindir)/$$j ; \
+ 		echo $(bindir)/$$j ; \
+ 	done
+ 	rm -f $(bindir)/lz
