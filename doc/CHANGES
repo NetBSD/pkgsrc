@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1584 2003/03/07 01:26:19 salo Exp $
+$NetBSD: CHANGES,v 1.1585 2003/03/07 11:46:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -982,3 +982,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated rconfig to 0.15 [abs 2003-03-06]
 	Added juke-0.7 [salo 2003-03-06]
 	Updated ion to 20020207 [salo 2003-03-07]
+	Updated tuxpaint to 0.9.10 [wiz 2003-03-07]
+	Updated tuxpaint-stamps to 2003.02.22 [wiz 2003-03-07]
