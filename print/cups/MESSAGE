@@ -1,13 +1,23 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.7 2003/05/28 02:33:59 jlam Exp $
+$NetBSD: MESSAGE,v 1.8 2003/06/24 16:46:19 reinoud Exp $
 
-You will need to also install print/ghostscript-esp{,-nox11} if you wish
-to print to non-Postscript printers.
+READ carefully...
 
-You may install additional PPD files for other printer models into
-${PREFIX}/share/cups/model.
+* You NEED to copy the userland print commands into /usr/bin or make sure
+  ${PREFIX}/bin/ is in front of the path : 
 
-You may want to backup /etc/printcap before starting CUPS for the first
-time, as the CUPS scheduler may overwrite this file with automatically
-generated content.
+	mkdir /root/lp-backup
+	cp ${PREFIX}/bin/lp* /root/lp-backup
+	cp ${PREFIX}/bin/lp* /usr/bin/
+
+* You will need to also install print/ghostscript-esp{,-nox11} if you wish
+  to print to non-Postscript printers.
+
+* You may install additional PPD files for other printer models into
+ ${PREFIX}/share/cups/model.
+
+* You may want to backup /etc/printcap before starting CUPS for the first
+ time, as the CUPS scheduler may overwrite this file with automatically
+ generated content.
+
 ===========================================================================
