@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7215 2004/09/23 09:16:10 seb Exp $
+$NetBSD: CHANGES,v 1.7216 2004/09/23 11:38:04 abs Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4393,3 +4393,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated hamlib to 1.2.2 [wulf 2004-09-23]
 	Updated popa3d to 0.6.4.1nb1 [cube 2004-09-23]
 	Updated dcraw to 1.205 [seb 2004-09-23]
+	Updated rconfig to 0.37 [abs 2004-09-23]
+
