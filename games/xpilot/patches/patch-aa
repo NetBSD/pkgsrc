@@ -1,0 +1,18 @@
+--- Local.config.orig	Tue Apr 28 09:40:19 1998
++++ Local.config	Sat Aug  1 15:50:01 1998
+@@ -25,12 +25,12 @@
+ #define	LocalGuru xpilot@xpilot.org	/* The one to contact for problems */
+ #endif /* LocalGuru */
+ 
+-PREFIX = /usr/local/games
++PREFIX = $(X11BASE)
+ 
+ /* Manual pages for games usually go to section 6. */
+ MANSUFFIX = 6
+-INSTMANDIR = $(PREFIX)/man/man$(MANSUFFIX)
+-INSTLIBDIR = $(PREFIX)/lib/xpilot
++INSTMANDIR = $(PREFIX)/man/cat$(MANSUFFIX)
++INSTLIBDIR = $(PREFIX)/share/xpilot
+ INSTBINDIR = $(PREFIX)/bin
+ 
+ /* #define Log		/* Try to log every server start to log file */
