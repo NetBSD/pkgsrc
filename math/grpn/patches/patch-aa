@@ -1,0 +1,28 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/06/08 14:34:48 frueauf Exp $
+
+--- Makefile.orig	Fri Jun  4 23:09:07 1999
++++ Makefile	Sat Jun  5 06:59:43 1999
+@@ -20,5 +20,6 @@
+ CFLAGS = -g -O2 -I/usr/X11/include  `$(GTK_DIR)gtk-config --cflags` -DGTK_VER_1_1
+ 
+-DFLAGS =  -L/usr/X11/lib 
++#DFLAGS =  -L/usr/X11/lib 
++DFLAGS =  
+ 
+ # end of user configurable section
+@@ -37,4 +38,5 @@
+ LIBS   = `$(GTK_DIR)gtk-config --libs` -lX11 -lm 
+ 
++all: grpn
+ 
+ grpn:	$(OBJS)
+@@ -45,6 +47,7 @@
+ 
+ install:	grpn
+-	cp grpn /usr/local/bin
+-	chmod 755 /usr/local/bin/grpn
++	#cp grpn /usr/local/bin
++	#chmod 755 /usr/local/bin/grpn
++	$(BSD_INSTALL_PROGRAM) grpn $(PREFIX)/bin
+ 
+ .c.o:
