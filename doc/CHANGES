@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3266 2003/09/06 17:03:06 magick Exp $
+$NetBSD: CHANGES,v 1.3267 2003/09/07 09:17:28 jdolecek Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3560,3 +3560,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated pkglint to 3.60 [wiz 2003-09-06]
 	Updated nawk to 20030731 [cjep 2003-09-06]
 	Updated xemacs-current to 21.5.15 [magick 2003-09-06]
+	Updated apache-ant to 1.5.4 [jdolecek 2003-09-06]
