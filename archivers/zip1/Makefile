@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2000/08/18 22:46:29 hubertf Exp $
+# $NetBSD: Makefile,v 1.9 2000/09/09 19:40:17 fredb Exp $
 #
 
 DISTNAME=	zip1-1.1
@@ -28,9 +28,7 @@ BUILD_DEFS+=	ZIP_ENCRYPTION
 .if defined(ZIP_ENCRYPTION)
 DISTFILES+=	zcrypt10.zip
 ALL_TARGET+=	zipcloak
-RESTRICTED=	crypto
-NO_SRC_ON_FTP=	${RESTRICTED}
-NO_SRC_ON_CDROM=	${RESTRICTED}
+CRYPTO=		yes
 .endif
 
 do-install:

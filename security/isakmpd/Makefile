@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2000/09/03 13:12:52 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2000/09/09 19:40:21 fredb Exp $
 #
 
 DISTNAME=		isakmpd-000220
@@ -12,9 +12,8 @@ PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=		itojun@kame.net
 
-RESTRICTED=		"Crypto; export-controlled"
-
 BROKEN=			"broken by PF_KEY API change"
+CRYPTO=			yes
 
 # this is not compatible with cross build - there's no other way
 .if !exists(/usr/include/netinet6/ipsec.h)
@@ -28,9 +27,6 @@ IGNORE+=		"${PKGNAME} requires ipsec-ready NetBSD"
 DEPENDS+=		openssl-0.9.*:../../security/openssl
 .endif
 DEPENDS+=		gmp-*:../../devel/gmp
-
-RESTRICTED=		"Crypto; export-controlled"
-NO_SRC_ON_FTP=		${RESTRICTED}
 
 ALL_TARGET=		depend all
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2000/08/18 22:46:49 hubertf Exp $
+# $NetBSD: Makefile,v 1.25 2000/09/09 19:40:22 fredb Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/08/27 13:06:01 ache Exp
 #
 
@@ -10,6 +10,8 @@ MASTER_SITES=	ftp://ftp.ifi.uio.no/pub/pgp/2.x/src/ \
 
 MAINTAINER=	packages@NetBSD.ORG
 HOMEPAGE=	http://www.pgpi.com/
+
+CRYPTO=		yes
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -27,9 +29,6 @@ RSALIBS=
 RSAOBJS=	rsaglue1.o
 CFLAGS=
 .endif
-
-RESTRICTED=	"Cryptographic software"
-NO_SRC_ON_FTP=	${RESTRICTED}
 
 PGPLIB=		${PREFIX}/share/pgp
 CFLAGS+=	-DPGP_SYSTEM_DIR=\\\"${PGPLIB}/\\\"
