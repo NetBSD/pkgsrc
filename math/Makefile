@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1998/08/25 13:00:35 agc Exp $
+# $NetBSD: Makefile,v 1.4 1998/10/03 20:41:00 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.38 1998/04/13 00:51:58 jseger Exp
 #
 
@@ -28,10 +28,12 @@
 #    SUBDIR += simpack
 #    SUBDIR += ss
 #    SUBDIR += umatrix
+    SUBDIR += vista
 #    SUBDIR += wingz
 #    SUBDIR += xgfe
 #    SUBDIR += xgraph
-#    SUBDIR += xlispstat
+    SUBDIR += xldlas
+    SUBDIR += xlispstat
 #    SUBDIR += xplot
 #    SUBDIR += xspread
 
