@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4214 2003/12/21 10:18:43 xtraeme Exp $
+$NetBSD: CHANGES,v 1.4215 2003/12/21 21:27:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5276,3 +5276,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated docbook-xsl to 1.64.1 [jmmv 2003-12-21]
 	Updated opencdk to 0.5.3nb1 [xtraeme 2003-12-21]
 	Updated gnutls to 1.0.2 [xtraeme 2003-12-21]
+	Added libcaca-0.3 [wiz 2003-12-21]
