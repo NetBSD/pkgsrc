@@ -1,0 +1,11 @@
+--- icb/c_shell.c.orig	Tue Jun  1 10:38:15 1999
++++ icb/c_shell.c	Tue Jun  1 10:38:47 1999
+@@ -14,7 +14,7 @@ TARGDEFS
+ 	static char *usage = "usage: c_shell [command]";
+ 	int w, pid;
+ 	int shellout = 0;
+-	union wait status;
++	int status;
+ 	char *shell, *getenv();
+ 	
+ 	/* disallow use if restricted mode set */
