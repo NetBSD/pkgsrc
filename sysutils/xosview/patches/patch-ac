@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.5 1999/04/11 12:15:42 tron Exp $
+$NetBSD: patch-ac,v 1.6 2000/06/27 08:15:51 tron Exp $
 
 --- configure.orig	Tue Feb 16 17:06:16 1999
 +++ configure	Sun Apr 11 14:11:30 1999
@@ -6,7 +6,7 @@ $NetBSD: patch-ac,v 1.5 1999/04/11 12:15:42 tron Exp $
    host_dir=bsd
  
  ;;
-+netbsd1.4*)  
++netbsd1.[45]*)  
 +	host_os=netbsd
 +        EXTRALIBS="-lkvm $XPMLIB"
 +        INSTALL_ARGS='-s -g kmem -m 02555'
