@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 1998/06/22 13:04:38 agc Exp $
+# $NetBSD: Makefile,v 1.9 1998/08/14 20:59:43 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.15 1998/01/08 18:52:13 fenner Exp
 #
 
@@ -18,7 +18,7 @@ USE_PERL5=	YES
 
 pre-configure:
 	@case "X${PAPERSIZE}" in					\
-	XA4|XLetter)							\
+	XA4|Xletter)							\
 		;;							\
 	XA3|XA5|XB5|Xledger|Xstatement|Xexecutive|Xfolio|Xquarto|X10x14)\
 		${ECHO} "Other packages do not recognise ${PAPERSIZE}";	\
