@@ -1,0 +1,4 @@
+Streamtuner is a stream directory browser. It offers an intuitive and unified 
+interface to various streaming directories through the use of a plugin system.
+Streamtuner implements a GTK+ 2.0 graphical user interface, and the official 
+distribution ships with the SHOUTcast plugin.
