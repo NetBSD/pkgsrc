@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/01/16 17:58:02 cube Exp $
+
+SHA1 (rubber-0.99.8.tar.gz) = 6894e9b4508230026efee3150de7cbe9b160fc4e
+Size (rubber-0.99.8.tar.gz) = 75860 bytes
+SHA1 (patch-aa) = 13063478ceac61e64375773084e824f5b4471f2d
