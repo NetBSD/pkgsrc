@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/01/23 03:56:11 mellon Exp $
+$NetBSD: patch-aa,v 1.2 2000/02/28 02:34:44 dmcmahill Exp $
 
 diff -rc2 --exclude=Makefile Makefile.in Makefile.in
 *** Makefile.in	Tue Jan  5 23:58:02 1999
@@ -190,22 +190,6 @@ diff -rc2 --exclude=Makefile src/motif/FileBox.c src/motif/FileBox.c
 !       *previous_path = 0x0;
     }
   
-diff -rc2 --exclude=Makefile src/motif/Makefile.in src/motif/Makefile.in
-*** src/motif/Makefile.in	Sun Jan  3 01:51:20 1999
---- src/motif/Makefile.in	Fri Jan 22 12:28:38 1999
-***************
-*** 41,45 ****
-  LIBS     = -L$(prefix)/lib \
-             @X_PRE_LIBS@ @MOTIF_LIBS@ @X_EXTRA_LIBS@ @X_LIBS@ \
-!            $(GUILELIBS) @LIBS@  -lnana
-  
-  # Have to use wildcard here otherwise filters below won't get the expanded
---- 41,45 ----
-  LIBS     = -L$(prefix)/lib \
-             @X_PRE_LIBS@ @MOTIF_LIBS@ @X_EXTRA_LIBS@ @X_LIBS@ \
-!            $(GUILELIBS) @LIBS@
-  
-  # Have to use wildcard here otherwise filters below won't get the expanded
 diff -rc2 --exclude=Makefile src/swig/Makefile.in src/swig/Makefile.in
 *** src/swig/Makefile.in	Sun Jan  3 03:22:06 1999
 --- src/swig/Makefile.in	Fri Jan 22 22:02:13 1999
