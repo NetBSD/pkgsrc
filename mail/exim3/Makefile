@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/07/06 22:38:00 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2004/07/07 08:51:52 wiz Exp $
 
 DISTNAME=	exim-3.36
 PKGREVISION=	2
@@ -45,11 +45,13 @@ EXIM_DB.db1?=		YES
 .if ${EXIM_DB.db1} == "YES"
 USE_DB185=		YES
 .endif
+# does not compile with db4
+BDB_ACCEPTED=	native db3 db2
 
 .if defined(EXIM_DB.mysql) && ${EXIM_DB.mysql} == "YES"
 LOOKUP_INCLUDE+=	-I${BUILDLINK_PREFIX.mysql-client}/include/mysql
 LOOKUP_LIBS+=		-L${BUILDLINK_PREFIX.mysql-client}/lib/mysql
-LOOKUP_LIBS+=		-Wl,-R${BUILDLINK_PREFIX.mysql-client}/lib/mysql
+LOOKUP_LIBS+=		-Wl,${RPATH_FLAG}${BUILDLINK_PREFIX.mysql-client}/lib/mysql
 LOOKUP_LIBS+=		-lmysqlclient
 MAKE_ENV+=		LOOKUP_MYSQL=YES
 .  include "../../databases/mysql-client/buildlink3.mk"
@@ -57,13 +59,25 @@ MAKE_ENV+=		LOOKUP_MYSQL=YES
 .if defined(EXIM_DB.pgsql) && ${EXIM_DB.pgsql} == "YES"
 LOOKUP_INCLUDE+=	-I${BUILDLINK_PREFIX.postgresql-lib}/include/postgresql
 LOOKUP_LIBS+=		-L${BUILDLINK_PREFIX.postgresql-lib}/lib
-LOOKUP_LIBS+=		-Wl,-R${BUILDLINK_PREFIX.postgresql-lib}/lib -lpq
+LOOKUP_LIBS+=		-Wl,${RPATH_FLAG}${BUILDLINK_PREFIX.postgresql-lib}/lib -lpq
 MAKE_ENV+=		LOOKUP_PGSQL=YES
 .  include "../../databases/postgresql-lib/buildlink3.mk"
 .endif
 
 # buildlink3 decides which libdb to use on this platform.
-MAKE_ENV+=		DBMLIB="${BUILDLINK_LDFLAGS.db} ${BUILDLINK_LIBS.db}"
+.include "../../mk/bdb.buildlink3.mk"
+.if ${BDB_TYPE} == "db3"
+DBMLIB+=		-Wl,${RPATH_FLAG}${LOCALBASE}/${BUILDLINK_LIBDIRS.db3}
+DBMLIB+=		-L${LOCALBASE}/${BUILDLINK_LIBDIRS.db3} -ldb3
+DBMLIB+=		-I${PREFIX}/${BUILDLINK_INCDIRS.db3}
+.elif ${BDB_TYPE} == "db2"
+DBMLIB+=		-Wl,${RPATH_FLAG}${LOCALBASE}/${BUILDLINK_LIBDIRS.db2}
+DBMLIB+=		-L${LOCALBASE}/${BUILDLINK_LIBDIRS.db2} -ldb2
+DBMLIB+=		-I${PREFIX}/${BUILDLINK_INCDIRS.db2}
+.  else # using native
+DBMLIB+=		"-I/usr/${BUILDLINK_INCDIRS.db-native}"
+.endif
+MAKE_ENV+=		DBMLIB=${DBMLIB:Q}
 MAKE_ENV+=		LOOKUP_INCLUDE="${LOOKUP_INCLUDE}"
 MAKE_ENV+=		LOOKUP_LIBS="${LOOKUP_LIBS}"
 
@@ -94,5 +108,4 @@ post-install:
 	${INSTALL_DATA} ${WRKDIR}/mailer.conf ${EGDIR}
 	${CP} ${FILESDIR}/exim.8 ${PREFIX}/man/man8/exim.8
 
-.include "../../mk/bdb.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
