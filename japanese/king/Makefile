@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2000/08/31 02:35:27 hubertf Exp $
+# $NetBSD: Makefile,v 1.10 2000/09/07 03:41:55 sakamoto Exp $
 #
 
 DISTNAME=	king-1.00-tb40-1
@@ -10,6 +10,7 @@ ONLY_FOR_PLATFORM=	NetBSD-*-i386
 MAINTAINER=	sakamoto@netbsd.org
 HOMEPAGE=	http://www.ibm.co.jp/software/internet/king/
 
+IS_INTERACTIVE=	yes
 RESTRICTED=	"A commercial licence needs to be purchased from IBM Corp"
 NO_BIN_ON_CDROM=${RESTRICTED}
 NO_SRC_ON_CDROM=${RESTRICTED}
