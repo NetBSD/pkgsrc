@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2005/01/06 05:32:29 tv Exp $
+# $NetBSD: Makefile,v 1.6 2005/01/18 22:03:55 tv Exp $
 
-DISTNAME=	pkgfind-20041023
+DISTNAME=	pkgfind-20050118
 CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -10,30 +10,32 @@ COMMENT=	Find packages by package name in pkgsrc
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-NO_BUILDLINK=	yes
+USE_BUILDLINK3=	yes
 NO_CONFIGURE=	yes
 NO_CHECKSUM=	yes
 
-INSTALLATION_DIRS=	bin man/cat1 man/man1
-
-NROFF=		nroff -mandoc
+INSTALLATION_DIRS=	bin man/man1
 
 do-extract:
 	@${CP} -R ${FILESDIR} ${WRKSRC}
 
 do-build:
-	${CC} ${CFLAGS} -o ${WRKSRC}/pkgfind ${WRKSRC}/pkgfind.c
-	${NROFF} ${WRKSRC}/pkgfind.1 > ${WRKSRC}/pkgfind.cat1
+	${COMPILE.c} -o ${WRKSRC}/pkgfind ${WRKSRC}/pkgfind.c
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/pkgfind ${PREFIX}/bin/pkgfind
 	${INSTALL_MAN} ${WRKSRC}/pkgfind.1 ${PREFIX}/man/man1/pkgfind.1
-	${INSTALL_MAN} ${WRKSRC}/pkgfind.cat1 ${PREFIX}/man/cat1/pkgfind.0
 
 SUBST_CLASSES=		path
 SUBST_STAGE.path=	post-patch
 SUBST_FILES.path=	pkgfind.c pkgfind.1
 SUBST_SED.path=		-e "s,/usr/pkgsrc,${PKGSRCDIR},g"
 SUBST_MESSAGE.path=	"Adjusting pkgsrc directory."
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Interix"
+.  include "../../devel/libiberty/application.mk" # need asprintf(3)
+.endif
 
 .include "../../mk/bsd.pkg.mk"
