@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2004/12/20 11:31:01 grant Exp $
+# $NetBSD: Makefile,v 1.3 2005/03/31 22:42:31 seb Exp $
 #
 
-DISTNAME=	Module-ScanDeps-0.50
+DISTNAME=	Module-ScanDeps-0.51
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5msd
-PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Module/}
 
