@@ -1,25 +1,21 @@
-$NetBSD: patch-aa,v 1.2 1998/08/07 10:36:07 agc Exp $
+$NetBSD: patch-aa,v 1.3 2000/01/26 22:11:36 jlam Exp $
 
-*** configure.bak	Fri Feb  2 03:30:38 1996
---- configure	Fri Jun 13 19:14:52 1997
-***************
-*** 2589,2597 ****
-  
-  
-  if test "$no_x" = "yes" -o "$HAVE_FORMS" = "no"; then
-! 	BUILD_TARGETS="include lib adpcm gsm librplay rplayd rplay rptp doc"
-  else
-! 	BUILD_TARGETS="include lib adpcm gsm librplay rplayd rplay rptp xrplay doc"
-  fi
-  
-  
---- 2589,2597 ----
-  
-  
-  if test "$no_x" = "yes" -o "$HAVE_FORMS" = "no"; then
-! 	BUILD_TARGETS="include lib adpcm librplay rplayd rplay rptp doc"
-  else
-! 	BUILD_TARGETS="include lib adpcm librplay rplayd rplay rptp xrplay doc"
-  fi
-  
-  
+--- Makefile.config.in.orig	Thu Aug 13 02:12:59 1998
++++ Makefile.config.in	Tue Jan 18 16:15:32 2000
+@@ -43,6 +43,7 @@
+ #CC_OPTIONS=	-O -cckr			# SGI 
+ #CC_OPTIONS=	-O				# generic
+ #CC_OPTIONS=	-g				# debug 
++CC_OPTIONS=	@CPPFLAGS@			# hack to add CPPFLAGS
+ 
+ ##
+ ## Extra linker options.
+@@ -53,7 +54,7 @@
+ ##
+ ## Name of the rplay library to build.
+ ##
+-LIBRPLAY_NAME=	librplay.a
++LIBRPLAY_NAME=	librplay.la
+ #LIBRPLAY_NAME=	librplay.sl			# HP-UX
+ 
+ ##
