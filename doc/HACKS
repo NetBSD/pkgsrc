@@ -1,4 +1,4 @@
-# $NetBSD: HACKS,v 1.23 2004/01/31 01:25:51 kristerw Exp $
+# $NetBSD: HACKS,v 1.24 2004/04/11 19:44:27 seb Exp $
 #
 # This file is intended to document workarounds for currently unsolved
 # (mostly) compiler bugs.
@@ -399,4 +399,16 @@ who	kristerw
 port	arm
 file	databases/cdb/patches/patch-aa : 1.1
 descr	Compilation of the tryulong32.c configuration test takes ~forever.
+kcah
+
+hack	perl 5.8/openssl/sparc64 bug
+cdate	Wed Feb 16 13:24:06 2000
+who	seb
+port	sparc64
+file	security/openssl/patches/patch-ak
+descr
+	Perl's int() function gives bad result on sparc64.
+	Hence openssl's bn_prime.pl perl script fails.
+	Use POSIX::floor() as a workaround.
+	See perl ticket #25249.
 kcah
