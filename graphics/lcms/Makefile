@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2004/10/25 21:43:20 minskim Exp $
+# $NetBSD: Makefile,v 1.15 2005/01/17 12:11:46 adam Exp $
 # FreeBSD: ports/graphics/lcms/Makefile,v 1.2 2000/12/19 15:36:26 sobomax Exp
 
-DISTNAME=	lcms-1.13
+DISTNAME=	lcms-1.14
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.littlecms.com/ \
 		http://www.abaforum.es/martim/
