@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2004/02/15 11:10:50 markd Exp $
+@comment $NetBSD: PLIST,v 1.10 2004/03/09 12:47:42 markd Exp $
 bin/adddebug
 bin/build-progress.sh
 bin/catalogmanager
@@ -657,25 +657,39 @@ share/kde/apps/umbrello/pics/vline.xpm
 share/kde/apps/umbrello/tips
 share/kde/apps/umbrello/umbrelloui.rc
 share/kde/icons/crystalsvg/128x128/apps/kompare.png
+share/kde/icons/crystalsvg/128x128/apps/umbrello.png
+share/kde/icons/crystalsvg/128x128/mimetypes/umbrellofile.png
 share/kde/icons/crystalsvg/16x16/apps/catalogmanager.png
 share/kde/icons/crystalsvg/16x16/apps/cervisia.png
 share/kde/icons/crystalsvg/16x16/apps/kbabel.png
 share/kde/icons/crystalsvg/16x16/apps/kbabeldict.png
 share/kde/icons/crystalsvg/16x16/apps/kbugbuster.png
 share/kde/icons/crystalsvg/16x16/apps/kompare.png
+share/kde/icons/crystalsvg/16x16/apps/umbrello.png
+share/kde/icons/crystalsvg/16x16/mimetypes/umbrellofile.png
 share/kde/icons/crystalsvg/22x22/apps/cervisia.png
+share/kde/icons/crystalsvg/22x22/apps/umbrello.png
+share/kde/icons/crystalsvg/22x22/mimetypes/umbrellofile.png
 share/kde/icons/crystalsvg/32x32/apps/catalogmanager.png
 share/kde/icons/crystalsvg/32x32/apps/cervisia.png
 share/kde/icons/crystalsvg/32x32/apps/kbabel.png
 share/kde/icons/crystalsvg/32x32/apps/kbabeldict.png
 share/kde/icons/crystalsvg/32x32/apps/kbugbuster.png
 share/kde/icons/crystalsvg/32x32/apps/kompare.png
+share/kde/icons/crystalsvg/32x32/apps/umbrello.png
+share/kde/icons/crystalsvg/32x32/mimetypes/umbrellofile.png
 share/kde/icons/crystalsvg/48x48/apps/catalogmanager.png
 share/kde/icons/crystalsvg/48x48/apps/cervisia.png
 share/kde/icons/crystalsvg/48x48/apps/kbabel.png
 share/kde/icons/crystalsvg/48x48/apps/kbabeldict.png
 share/kde/icons/crystalsvg/48x48/apps/kbugbuster.png
 share/kde/icons/crystalsvg/48x48/apps/kompare.png
+share/kde/icons/crystalsvg/48x48/apps/umbrello.png
+share/kde/icons/crystalsvg/48x48/mimetypes/umbrellofile.png
+share/kde/icons/crystalsvg/64x64/apps/umbrello.png
+share/kde/icons/crystalsvg/64x64/mimetypes/umbrellofile.png
+share/kde/icons/crystalsvg/scalable/apps/umbrello.svgz
+share/kde/icons/crystalsvg/scalable/mimetypes/umbrellofile.svgz
 share/kde/icons/hicolor/16x16/apps/kuiviewer.png
 share/kde/icons/hicolor/16x16/apps/umbrello.png
 share/kde/icons/hicolor/16x16/mimetypes/umbrellofile.png
