@@ -1,13 +1,13 @@
-$NetBSD: patch-ae,v 1.1 2001/08/26 16:55:46 rh Exp $
+$NetBSD: patch-ae,v 1.2 2002/01/15 23:59:47 rh Exp $
 
---- gconf/Makefile.in.orig	Thu Aug 16 00:01:16 2001
+--- gconf/Makefile.in.orig	Tue Oct 30 04:55:38 2001
 +++ gconf/Makefile.in
-@@ -546,7 +546,7 @@
+@@ -597,7 +597,7 @@
  
  install-data-local:
  	-mkdir -p $(DESTDIR)$(sysconfdir)/gconf/$(MAJOR_VERSION)
 -	$(INSTALL_DATA) default.path $(DESTDIR)$(sysconfdir)/gconf/$(MAJOR_VERSION)/path
 +	$(INSTALL_DATA) default.path $(DESTDIR)$(sysconfdir)/gconf/$(MAJOR_VERSION)/path.example
- 	-mkdir -p $(DESTDIR)$(datadir)/oaf
- 	$(INSTALL_DATA) gconfd.oafinfo $(DESTDIR)$(datadir)/oaf/gconfd-$(MAJOR_VERSION).oafinfo
  
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
