@@ -1,0 +1,12 @@
+$NetBSD: patch-ac,v 1.1.1.1 2000/01/14 20:59:02 jwise Exp $
+--- docs/api/Makefile.in.orig	Fri Jan 14 14:53:18 2000
++++ docs/api/Makefile.in	Fri Jan 14 14:53:44 2000
+@@ -112,7 +112,7 @@
+ 
+ FILES = org *.html *.css package-list
+ 
+-docdir = ${prefix}/docs/api
++docdir = ${prefix}/share/httpd/htdocs/jserv-docs/api
+ mkinstalldirs = $(SHELL) $(top_srcdir)/src/scripts/build/unix/mkinstalldirs
+ CONFIG_CLEAN_FILES = 
+ DIST_COMMON =  Makefile.am Makefile.in

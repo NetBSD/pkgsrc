@@ -1,0 +1,158 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/01/14 20:59:02 jwise Exp $
+etc/httpd/jserv/jserv.conf
+etc/httpd/jserv/jserv.properties
+etc/httpd/jserv/zone.properties
+lib/httpd/mod_jserv.so
+lib/httpd/ApacheJServ.jar
+share/httpd/htdocs/jserv-docs/api/org/apache/java/io/ReadFullyInputStream.html
+share/httpd/htdocs/jserv-docs/api/org/apache/java/io/package-tree.html
+share/httpd/htdocs/jserv-docs/api/org/apache/java/io/package-frame.html
+share/httpd/htdocs/jserv-docs/api/org/apache/java/io/Logger.html
+share/httpd/htdocs/jserv-docs/api/org/apache/java/io/LogRecord.html
+share/httpd/htdocs/jserv-docs/api/org/apache/java/io/LogWriter.html
+share/httpd/htdocs/jserv-docs/api/org/apache/java/io/LogWriter.Agent.html
+share/httpd/htdocs/jserv-docs/api/org/apache/java/io/package-summary.html
+share/httpd/htdocs/jserv-docs/api/org/apache/java/lang/TimeoutException.html
+share/httpd/htdocs/jserv-docs/api/org/apache/java/lang/package-tree.html
+share/httpd/htdocs/jserv-docs/api/org/apache/java/lang/package-frame.html
+share/httpd/htdocs/jserv-docs/api/org/apache/java/lang/Stoppable.html
+share/httpd/htdocs/jserv-docs/api/org/apache/java/lang/AdaptiveClassLoader.html
+share/httpd/htdocs/jserv-docs/api/org/apache/java/lang/AdaptiveClassLoader.ClassCacheEntry.html
+share/httpd/htdocs/jserv-docs/api/org/apache/java/lang/Bytes.html
+share/httpd/htdocs/jserv-docs/api/org/apache/java/lang/Lock.html
+share/httpd/htdocs/jserv-docs/api/org/apache/java/lang/Semaphore.html
+share/httpd/htdocs/jserv-docs/api/org/apache/java/lang/package-summary.html
+share/httpd/htdocs/jserv-docs/api/org/apache/java/net/package-summary.html
+share/httpd/htdocs/jserv-docs/api/org/apache/java/net/package-tree.html
+share/httpd/htdocs/jserv-docs/api/org/apache/java/net/package-frame.html
+share/httpd/htdocs/jserv-docs/api/org/apache/java/net/AuthenticatedServerSocket.html
+share/httpd/htdocs/jserv-docs/api/org/apache/java/net/AuthenticatedSocket.html
+share/httpd/htdocs/jserv-docs/api/org/apache/java/net/AuthenticationException.html
+share/httpd/htdocs/jserv-docs/api/org/apache/java/recycle/pool/package-summary.html
+share/httpd/htdocs/jserv-docs/api/org/apache/java/recycle/pool/package-tree.html
+share/httpd/htdocs/jserv-docs/api/org/apache/java/recycle/pool/package-frame.html
+share/httpd/htdocs/jserv-docs/api/org/apache/java/recycle/pool/Worker.html
+share/httpd/htdocs/jserv-docs/api/org/apache/java/recycle/pool/WorkerContainer.html
+share/httpd/htdocs/jserv-docs/api/org/apache/java/recycle/pool/WorkerPool.html
+share/httpd/htdocs/jserv-docs/api/org/apache/java/recycle/package-tree.html
+share/httpd/htdocs/jserv-docs/api/org/apache/java/recycle/package-frame.html
+share/httpd/htdocs/jserv-docs/api/org/apache/java/recycle/Controller.html
+share/httpd/htdocs/jserv-docs/api/org/apache/java/recycle/Recyclable.html
+share/httpd/htdocs/jserv-docs/api/org/apache/java/recycle/RecycleBin.html
+share/httpd/htdocs/jserv-docs/api/org/apache/java/recycle/AdaptiveController.html
+share/httpd/htdocs/jserv-docs/api/org/apache/java/recycle/Container.html
+share/httpd/htdocs/jserv-docs/api/org/apache/java/recycle/ControlledContainer.html
+share/httpd/htdocs/jserv-docs/api/org/apache/java/recycle/ControllerFactory.html
+share/httpd/htdocs/jserv-docs/api/org/apache/java/recycle/DefaultController.html
+share/httpd/htdocs/jserv-docs/api/org/apache/java/recycle/GaussianController.html
+share/httpd/htdocs/jserv-docs/api/org/apache/java/recycle/LimitedContainer.html
+share/httpd/htdocs/jserv-docs/api/org/apache/java/recycle/MinMaxController.html
+share/httpd/htdocs/jserv-docs/api/org/apache/java/recycle/RecycleBinIsEmpty.html
+share/httpd/htdocs/jserv-docs/api/org/apache/java/recycle/package-summary.html
+share/httpd/htdocs/jserv-docs/api/org/apache/java/recycle/RecycleBinIsFull.html
+share/httpd/htdocs/jserv-docs/api/org/apache/java/security/package-summary.html
+share/httpd/htdocs/jserv-docs/api/org/apache/java/security/package-tree.html
+share/httpd/htdocs/jserv-docs/api/org/apache/java/security/package-frame.html
+share/httpd/htdocs/jserv-docs/api/org/apache/java/security/MD5.html
+share/httpd/htdocs/jserv-docs/api/org/apache/java/security/MessageDigest.html
+share/httpd/htdocs/jserv-docs/api/org/apache/java/util/SimpleQueue.html
+share/httpd/htdocs/jserv-docs/api/org/apache/java/util/package-tree.html
+share/httpd/htdocs/jserv-docs/api/org/apache/java/util/package-frame.html
+share/httpd/htdocs/jserv-docs/api/org/apache/java/util/Configurations.html
+share/httpd/htdocs/jserv-docs/api/org/apache/java/util/ConfigurationsRepository.html
+share/httpd/htdocs/jserv-docs/api/org/apache/java/util/ExtendedProperties.html
+share/httpd/htdocs/jserv-docs/api/org/apache/java/util/ExtendedProperties.PropertiesReader.html
+share/httpd/htdocs/jserv-docs/api/org/apache/java/util/ExtendedProperties.PropertiesTokenizer.html
+share/httpd/htdocs/jserv-docs/api/org/apache/java/util/package-summary.html
+share/httpd/htdocs/jserv-docs/api/org/apache/jserv/JServUtils.html
+share/httpd/htdocs/jserv-docs/api/org/apache/jserv/package-tree.html
+share/httpd/htdocs/jserv-docs/api/org/apache/jserv/package-frame.html
+share/httpd/htdocs/jserv-docs/api/org/apache/jserv/JServDefs.html
+share/httpd/htdocs/jserv-docs/api/org/apache/jserv/JServLogChannels.html
+share/httpd/htdocs/jserv-docs/api/org/apache/jserv/JServSendError.html
+share/httpd/htdocs/jserv-docs/api/org/apache/jserv/Ajpv12InputStream.html
+share/httpd/htdocs/jserv-docs/api/org/apache/jserv/JServ.html
+share/httpd/htdocs/jserv-docs/api/org/apache/jserv/JServConnection.html
+share/httpd/htdocs/jserv-docs/api/org/apache/jserv/JServConnection.JServInputStream.html
+share/httpd/htdocs/jserv-docs/api/org/apache/jserv/JServConnection.JServOutputStream.html
+share/httpd/htdocs/jserv-docs/api/org/apache/jserv/JServContext.html
+share/httpd/htdocs/jserv-docs/api/org/apache/jserv/JServLog.html
+share/httpd/htdocs/jserv-docs/api/org/apache/jserv/JServServletManager.html
+share/httpd/htdocs/jserv-docs/api/org/apache/jserv/JServSession.html
+share/httpd/htdocs/jserv-docs/api/org/apache/jserv/JServSTMStore.html
+share/httpd/htdocs/jserv-docs/api/org/apache/jserv/JServServletManager.ACLObjectInputStream.html
+share/httpd/htdocs/jserv-docs/api/org/apache/jserv/package-summary.html
+share/httpd/htdocs/jserv-docs/api/stylesheet.css
+share/httpd/htdocs/jserv-docs/api/serialized-form.html
+share/httpd/htdocs/jserv-docs/api/packages.html
+share/httpd/htdocs/jserv-docs/api/overview-tree.html
+share/httpd/htdocs/jserv-docs/api/overview-summary.html
+share/httpd/htdocs/jserv-docs/api/package-list
+share/httpd/htdocs/jserv-docs/api/index.html
+share/httpd/htdocs/jserv-docs/api/index-all.html
+share/httpd/htdocs/jserv-docs/api/help-doc.html
+share/httpd/htdocs/jserv-docs/api/deprecated-list.html
+share/httpd/htdocs/jserv-docs/api/allclasses-frame.html
+share/httpd/htdocs/jserv-docs/api/overview-frame.html
+share/httpd/htdocs/jserv-docs/images/apache_pb.gif
+share/httpd/htdocs/jserv-docs/images/java-apache-project.gif
+share/httpd/htdocs/jserv-docs/images/lbfail001.gif
+share/httpd/htdocs/jserv-docs/images/lbfail002.gif
+share/httpd/htdocs/jserv-docs/images/lbfail003.gif
+share/httpd/htdocs/jserv-docs/images/lbprod001.gif
+share/httpd/htdocs/jserv-docs/images/lbprod002.gif
+share/httpd/htdocs/jserv-docs/images/lbshm001.gif
+share/httpd/htdocs/jserv-docs/install/howto.security.html
+share/httpd/htdocs/jserv-docs/install/howto.servlets.html
+share/httpd/htdocs/jserv-docs/install/howto.status.html
+share/httpd/htdocs/jserv-docs/install/howto.unix_install.html
+share/httpd/htdocs/jserv-docs/install/howto.win32_install.html
+share/httpd/htdocs/jserv-docs/install/index.html
+share/httpd/htdocs/jserv-docs/protocol/AJPv1.html
+share/httpd/htdocs/jserv-docs/protocol/AJPv11.html
+share/httpd/htdocs/jserv-docs/protocol/AJPv2.html
+share/httpd/htdocs/jserv-docs/protocol/AJPv21.html
+share/httpd/htdocs/jserv-docs/future/index.html
+share/httpd/htdocs/jserv-docs/future/sandboxing.html
+share/httpd/htdocs/jserv-docs/FAQ.html
+share/httpd/htdocs/jserv-docs/STATUS.txt
+share/httpd/htdocs/jserv-docs/bugs.html
+share/httpd/htdocs/jserv-docs/changes.html
+share/httpd/htdocs/jserv-docs/contributing.html
+share/httpd/htdocs/jserv-docs/contributors.html
+share/httpd/htdocs/jserv-docs/features.html
+share/httpd/htdocs/jserv-docs/glossary.html
+share/httpd/htdocs/jserv-docs/howto.load-balancing.html
+share/httpd/htdocs/jserv-docs/index.html
+share/httpd/htdocs/jserv-docs/license.html
+share/httpd/htdocs/jserv-docs/modules.html
+share/httpd/htdocs/jserv-docs/operation.html
+share/httpd/htdocs/jserv-docs/security.html
+share/httpd/htdocs/jserv-docs/sendbug.html
+share/httpd/htdocs/jserv-docs/support.html
+share/httpd/htdocs/jserv-docs/y2k.html
+share/httpd/htdocs/jserv-docs/upgrade.html
+share/httpd/htdocs/jserv-docs/zones.html
+share/httpd/servlets/IsItWorking.class
+share/httpd/servlets/Hello.class
+share/httpd/servlets/IsItWorking.java
+share/httpd/servlets/Hello.java
+@dirrm share/httpd/servlets
+@dirrm share/httpd/htdocs/jserv-docs/protocol
+@dirrm share/httpd/htdocs/jserv-docs/install
+@dirrm share/httpd/htdocs/jserv-docs/images
+@dirrm share/httpd/htdocs/jserv-docs/future
+@dirrm share/httpd/htdocs/jserv-docs/api/org/apache/jserv
+@dirrm share/httpd/htdocs/jserv-docs/api/org/apache/java/util
+@dirrm share/httpd/htdocs/jserv-docs/api/org/apache/java/security
+@dirrm share/httpd/htdocs/jserv-docs/api/org/apache/java/recycle/pool
+@dirrm share/httpd/htdocs/jserv-docs/api/org/apache/java/recycle
+@dirrm share/httpd/htdocs/jserv-docs/api/org/apache/java/net
+@dirrm share/httpd/htdocs/jserv-docs/api/org/apache/java/lang
+@dirrm share/httpd/htdocs/jserv-docs/api/org/apache/java/io
+@dirrm share/httpd/htdocs/jserv-docs/api/org/apache/java
+@dirrm share/httpd/htdocs/jserv-docs/api/org/apache
+@dirrm share/httpd/htdocs/jserv-docs/api/org
+@dirrm share/httpd/htdocs/jserv-docs/api
+@dirrm share/httpd/htdocs/jserv-docs
+@dirrm etc/httpd/jserv
