@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2001/04/13 17:58:52 jtb Exp $
+@comment $NetBSD: PLIST,v 1.4 2001/04/28 04:35:07 jtb Exp $
 bin/htmltoc
 bin/nodefs
 bin/noindex
@@ -13,6 +13,7 @@ bin/cpif
 bin/sl2h
 man/man1/cpif.1
 man/man1/nodefs.1
+man/man1/noroff.1
 man/man1/noroots.1
 man/man1/noweb.1
 man/man1/noindex.1
