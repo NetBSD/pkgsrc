@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.50 2005/04/02 09:46:41 abs Exp $
+# $NetBSD: Makefile.common,v 1.51 2005/04/02 14:38:14 abs Exp $
 
 MOZ_DIST_VER?=	${MOZ_VER}
 DISTNAME?=	mozilla-source-${MOZ_DIST_VER}
@@ -52,7 +52,7 @@ UNLIMIT_RESOURCES=	datasize memorysize stacksize
 .include	"../../devel/pkgconfig/buildlink3.mk"
 .include	"../../net/libIDL/buildlink3.mk"
 .include	"../../x11/gtk2/buildlink3.mk"
-CONFIGURE_ARGS+= --enable-default-toolkit=gtk2
+CONFIGURE_ARGS+= --enable-default-toolkit=gtk2 --disable-gnomevfs
 .else
 .include	"../../graphics/gdk-pixbuf/buildlink3.mk"
 .include	"../../net/ORBit/buildlink3.mk"
