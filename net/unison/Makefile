@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2003/06/18 09:22:24 agc Exp $
+# $NetBSD: Makefile,v 1.14 2003/06/23 20:36:14 jtb Exp $
 #
 
 DISTNAME=	src
 PKGNAME=	unison-2.9.1
+PKGREVISION=	1
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 CATEGORIES=	net
 MASTER_SITES=	http://www.cis.upenn.edu/~bcpierce/unison/download/stable/latest/
@@ -23,8 +24,7 @@ MAKE_ENV+=	HOME=${WRKDIR}
 
 .include "../../mk/bsd.prefs.mk"
 
-.if (${MACHINE_ARCH} != "i386")
-# we don't have ocamlopt on non-i386 so don't try and use it
+.if (${MACHINE_ARCH} != "i386") || (${MACHINE_ARCH} != "powerpc") || (${MACHINE_ARCH} != "sparc")
 MAKE_FLAGS+=	NATIVE=false
 .endif
 

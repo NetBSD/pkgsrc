@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/03/22 20:21:16 kristerw Exp $
+# $NetBSD: Makefile,v 1.2 2003/06/23 20:36:13 jtb Exp $
 #
 
 DISTNAME=	coq-7.4
+PKGREVISION=	1
 CATEGORIES=	lang math
 MASTER_SITES=	ftp://ftp.inria.fr/INRIA/coq/V7.4/
 
@@ -19,7 +20,7 @@ ALL_TARGET=	world
 
 .include "../../mk/bsd.prefs.mk"
 
-.if (${MACHINE_ARCH} == "i386")
+.if (${MACHINE_ARCH} == "i386") || (${MACHINE_ARCH} == "powerpc") || (${MACHINE_ARCH} == "sparc")
 PLIST_SRC=	${PKGDIR}/PLIST.opt ${PKGDIR}/PLIST
 .endif
 
