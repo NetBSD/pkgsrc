@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.33 2005/02/27 13:19:20 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2005/03/02 21:49:45 wiz Exp $
 
-DISTNAME=	g-wrap-1.9.4
+DISTNAME=	g-wrap-1.9.5
 CATEGORIES=	devel
 MASTER_SITES=	http://savannah.nongnu.org/download/g-wrap/
 
@@ -19,6 +19,9 @@ TEST_TARGET=		check
 
 USE_MAKEINFO=		YES
 INFO_FILES=		g-wrap.info
+
+pre-install:
+	${INSTALL_DATA_DIR} ${PREFIX}/share/guile/site/g-wrap/guile/ws
 
 .include "../../devel/glib/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
