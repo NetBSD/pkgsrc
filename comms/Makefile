@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 1998/02/05 21:50:31 tron Exp $
+# $NetBSD: Makefile,v 1.4 1998/02/10 00:32:43 tron Exp $
 # FreeBSD Id: Makefile,v 1.26 1997/10/13 04:41:06 max Exp
 #
 
 #    SUBDIR += bpl+
 #    SUBDIR += ecu
 #    SUBDIR += hylafax
-#    SUBDIR += kermit
+    SUBDIR += kermit
     SUBDIR += lrzsz
 #    SUBDIR += mgetty+sendfax
 #    SUBDIR += minicom
