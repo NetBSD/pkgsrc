@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2004/01/20 12:13:29 agc Exp $
+# $NetBSD: Makefile.common,v 1.7 2004/01/22 08:51:15 grant Exp $
 #
 
 P4_VERS=	2002.1
@@ -24,40 +24,40 @@ _STRIPFLAG_INSTALL=	# none
 
 .include "../../mk/bsd.prefs.mk"
 
-.if	${OPSYS} == "Darwin"
-. if	${MACHINE_ARCH} == "powerpc"
+.if ${OPSYS} == "Darwin"
+.  if ${MACHINE_ARCH} == "powerpc"
 P4ARCH?=	darwinppc
-. endif
-.elif	${OPSYS} == "Linux"
-. if	${MACHINE_ARCH} == "arm"
-P4ARCH?=	linuxarm
-. elif	${MACHINE_ARCH} == "i386"
-P4ARCH?=	linux24x86
-. elif	${MACHINE_ARCH} == "powerpc"
-P4ARCH?=	linuxppc
-. elif	${MACHINE_ARCH} == "sparc"
-P4ARCH?=	linux52sparc
-. endif
-.elif	${OPSYS} == "NetBSD"
-. if	${MACHINE_ARCH} == "alpha"
-P4ARCH?=	netbsdaxp
-. elif	${MACHINE_ARCH} == "i386"
-.  if	${DISTNAME} == "p4web"
-P4ARCH?=	freebsd22		# XXX COMPAT_FREEBSD
-.  else
-P4ARCH?=	netbsdx86
 .  endif
-. elif	${MACHINE_ARCH} == "powerpc"
+.elif ${OPSYS} == "Linux"
+.  if ${MACHINE_ARCH} == "arm"
+P4ARCH?=	linuxarm
+.  elif ${MACHINE_ARCH} == "i386"
+P4ARCH?=	linux24x86
+.  elif ${MACHINE_ARCH} == "powerpc"
+P4ARCH?=	linuxppc
+.  elif ${MACHINE_ARCH} == "sparc"
+P4ARCH?=	linux52sparc
+.  endif
+.elif ${OPSYS} == "NetBSD"
+.  if ${MACHINE_ARCH} == "alpha"
+P4ARCH?=	netbsdaxp
+.  elif ${MACHINE_ARCH} == "i386"
+.    if ${DISTNAME} == "p4web"
+P4ARCH?=	freebsd22		# XXX COMPAT_FREEBSD
+.    else
+P4ARCH?=	netbsdx86
+.    endif
+.  elif ${MACHINE_ARCH} == "powerpc"
 P4ARCH?=	linuxppc		# XXX COMPAT_LINUX
-. elif	${MACHINE_ARCH} == "sparc"
+.  elif ${MACHINE_ARCH} == "sparc"
 P4ARCH?=	sunos			# XXX COMPAT_SUNOS
-. endif
-.elif	${OPSYS} == "SunOS"
-. if	${MACHINE_ARCH} == "i386"
+.  endif
+.elif ${OPSYS} == "SunOS"
+.  if ${MACHINE_ARCH} == "i386"
 P4ARCH?=	solaris26x86
-. elif	${MACHINE_ARCH} == "sparc"
+.  elif ${MACHINE_ARCH} == "sparc"
 P4ARCH?=	solaris26
-. endif
+.  endif
 .endif
 
 .if !defined(P4ARCH)
