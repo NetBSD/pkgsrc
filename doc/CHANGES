@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.480 2002/11/07 23:33:52 atatat Exp $
+$NetBSD: CHANGES,v 1.481 2002/11/08 02:48:17 dillo Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3553,3 +3553,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated popa3d to 0.5.9nb1 [dillo 2002-11-07]
 	Updated gkrellm to 1.2.11nb2 [fredb 2002-11-07]
 	Added pkgdepgraph-1.0 [atatat 2002-11-07]
+	Updated xpdf to 2.00 [dillo 2002-11-08]
