@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/07/26 21:41:18 jmmv Exp $
+# $NetBSD: Makefile,v 1.10 2003/07/30 17:23:59 grant Exp $
 #
 
 DISTNAME=	lbreakout2-2.4.1
@@ -15,6 +15,12 @@ USE_X11=		YES
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--with-highscore-path=${LOCALBASE}/share/games/ \
 			--with-doc-path=${LOCALBASE}/share/doc/html/
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "SunOS"
+LDFLAGS+=	-lsocket -lnsl
+.endif
 
 .include "../../graphics/png/buildlink2.mk"
 .include "../../audio/SDL_mixer/buildlink2.mk"
