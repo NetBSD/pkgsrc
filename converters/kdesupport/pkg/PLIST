@@ -1,8 +1,16 @@
-@comment $NetBSD: PLIST,v 1.5 1998/03/21 01:53:17 tron Exp $
+@comment $NetBSD: PLIST,v 1.6 1998/04/28 22:52:32 tron Exp $
+lib/libQwSpriteField.so.5.2
+lib/libQwSpriteField.la
+lib/libQwSpriteField.a
+lib/libmimelib.a
 lib/libmimelib.so.1.0
 lib/libmimelib.la
 @exec /sbin/ldconfig || /usr/bin/true
 @unexec /sbin/ldconfig || /usr/bin/true
+include/Pix.h
+include/QwCluster.h
+include/QwPublicList.h
+include/QwSpriteField.h
 include/mimelib/address.h
 include/mimelib/addrlist.h
 include/mimelib/body.h
