@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/06/06 10:49:59 jmmv Exp $
+# $NetBSD: Makefile,v 1.5 2003/09/04 15:35:51 adam Exp $
 
 PKGNAME=	apr-${APR_VERSION}.${APACHE_VERSION}
 CATEGORIES=	devel
@@ -16,6 +16,8 @@ LIBTOOL_OVERRIDE=	${WRKSRC}/apr/libtool
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/srclib
 BUILD_DIRS=		${WRKSRC}/apr ${WRKSRC}/apr-util
+
+CONFIGURE_ENV+=		CFLAGS="${CFLAGS}"
 
 pre-configure:
 .for f in apr/config.layout apr-util/config.layout
