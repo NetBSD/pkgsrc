@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.678 2002/12/04 11:58:29 agc Exp $
+$NetBSD: CHANGES,v 1.679 2002/12/04 13:05:22 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3805,3 +3805,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated openh323 to 1.10.4 [jdolecek 2002-12-03]
 	Updated tits to 1.0.3 [scw 2002-12-04]
 	Added pv-0.4.0 [agc 2002-12-04]
+	Added py-xmltools-1.3.7 [drochner 2002-12-04]
