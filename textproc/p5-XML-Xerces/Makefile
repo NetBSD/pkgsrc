@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/06/23 07:54:39 jlam Exp $
+# $NetBSD: Makefile,v 1.1.1.1 2003/06/23 08:46:06 jlam Exp $
 #
 
 DISTNAME=	XML-Xerces-1.7.0-3
