@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2002/12/27 19:41:45 jmmv Exp $
+# $NetBSD: Makefile,v 1.18 2003/01/27 07:54:22 martti Exp $
 
-DISTNAME=	etcupdate-20021227
+DISTNAME=	etcupdate-20030124
 CATEGORIES=	sysutils
 MASTER_SITES=	# empty
 DISTFILES=	# empty
