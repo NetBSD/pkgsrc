@@ -1,11 +1,13 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/05/20 20:48:57 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2004/08/25 23:24:12 wiz Exp $
 
-DISTNAME=	libstatgrab-0.10
+DISTNAME=	libstatgrab-0.10.3
 CATEGORIES=	devel
-MASTER_SITES=	ftp://ftp.mirror.ac.uk/sites/ftp.i-scream.org/pub/i-scream/libstatgrab/ \
-		http://www.mirror.ac.uk/sites/ftp.i-scream.org/pub/i-scream/libstatgrab/ \
+MASTER_SITES=	ftp://ftp.uk.i-scream.org/pub/i-scream/libstatgrab/ \
+		http://ftp.uk.i-scream.org/pub/i-scream/libstatgrab/ \
+		ftp://ftp2.uk.i-scream.org/sites/ftp.i-scream.org/pub/i-scream/libstatgrab/ \
+		http://ftp2.uk.i-scream.org/sites/ftp.i-scream.org/pub/i-scream/libstatgrab/ \
 		ftp://ftp.i-scream.org/pub/i-scream/libstatgrab/ \
-		http://www.i-scream.org/pub/i-scream/libstatgrab/
+		http://ftp.i-scream.org/pub/i-scream/libstatgrab/
 
 MAINTAINER=	tim@bishnet.net
 HOMEPAGE=	http://www.i-scream.org/libstatgrab/
