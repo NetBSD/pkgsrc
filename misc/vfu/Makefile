@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2001/06/20 05:27:32 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2001/06/20 05:29:22 jlam Exp $
 #
 
 DISTNAME=	vfu-3.01
@@ -41,7 +41,7 @@ do-install:
 			rx/$$i > rx/$$i.new;				\
 		${INSTALL_SCRIPT} rx/$$i.new ${PREFIX}/bin/$$i;		\
 	done
-	${INSTALL_DATA_DIR} ${DOCDIR}
+	${INSTALL_DATA_DIR} ${DOCDIR} ${EGDIR}
 	cd ${WRKSRC};							\
 	${INSTALL_DATA} COPYING INSTALL vfu/README VFU.txt ${DOCDIR}
 	cd ${WRKSRC};							\
