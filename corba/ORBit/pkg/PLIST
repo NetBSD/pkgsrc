@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 1998/12/19 12:31:48 tron Exp $
+@comment $NetBSD: PLIST,v 1.5 1999/02/11 19:17:29 tv Exp $
 bin/name-client
 bin/old-name-server
 bin/orbit-idl
@@ -80,9 +80,9 @@ include/orb/orbit_object.h
 include/orb/orbit_object_type.h
 include/orb/orbit_poa.h
 include/orb/orbit_poa_type.h
-@unexec %D/bin/install-info --delete %D/info/libIDL.info %D/info/dir
+@unexec install-info --delete %D/info/libIDL.info %D/info/dir
 info/libIDL.info
-@exec %D/bin/install-info %D/info/libIDL.info %D/info/libIDL.info
+@exec install-info %D/info/libIDL.info %D/info/libIDL.info
 @dirrm include/libIDL
 @dirrm include/ORBitutil
 @dirrm include/ORBitservices

@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 1998/08/15 00:12:10 tv Exp $
+@comment $NetBSD: PLIST,v 1.3 1999/02/11 19:17:28 tv Exp $
 bin/gtar
-@unexec %D/bin/install-info --delete --info-dir=%D/info %D/info/tar.info
+@unexec install-info --delete --info-dir=%D/info %D/info/tar.info
 info/tar.info
 info/tar.info-1
 info/tar.info-2
@@ -10,7 +10,7 @@ info/tar.info-5
 info/tar.info-6
 info/tar.info-7
 info/tar.info-8
-@exec %D/bin/install-info --info-dir=%D/info %D/info/tar.info
+@exec install-info --info-dir=%D/info %D/info/tar.info
 man/man1/gtar.1
 share/locale/de/LC_MESSAGES/tar.cat
 share/locale/fr/LC_MESSAGES/tar.cat

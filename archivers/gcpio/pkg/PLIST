@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1998/03/04 14:51:38 tv Exp $
+@comment $NetBSD: PLIST,v 1.2 1999/02/11 19:17:28 tv Exp $
 bin/gcpio
-@unexec %D/bin/install-info --delete --info-dir=%D/info %D/info/cpio.info
+@unexec install-info --delete --info-dir=%D/info %D/info/cpio.info
 info/cpio.info
-@exec %D/bin/install-info --info-dir=%D/info %D/info/cpio.info
+@exec install-info --info-dir=%D/info %D/info/cpio.info
 man/man1/gcpio.1.gz
