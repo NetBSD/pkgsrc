@@ -1,6 +1,6 @@
 #!@PERL@
 
-# $NetBSD: lintpkgsrc.pl,v 1.92 2004/07/01 20:14:58 abs Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.93 2004/09/05 23:12:37 seb Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -372,6 +372,12 @@ sub convert_to_standard_dewey
 	elsif ($elem =~ /^rc$/) {
 	    push(@temp, -1);
 	}
+	elsif ($elem =~ /^beta$/) {
+	    push(@temp, -2);
+	}
+	elsif ($elem =~ /^alpha$/) {
+	    push(@temp, -3);
+	}
 	else {
 	    push(@temp, 0);
 	    push(@temp, ord($elem)-ord("a")+1);
@@ -383,19 +389,23 @@ sub convert_to_standard_dewey
 sub deweycmp_extract
     {
     my($match, $val) = @_;
-    my($cmp, @matchlist, @vallist);
+    my($cmp, @matchlist, @vallist,$i, $len);
 
     @matchlist = convert_to_standard_dewey(split(/(\D+)/, lc($match)));
     @vallist = convert_to_standard_dewey(split(/(\D+)/, lc($val)));
     $cmp = 0;
-    while( ! $cmp && (@matchlist || @vallist))
+    $i =0;
+    if ($#matchlist > $#vallist)
+        { $len = $#matchlist; }
+    else
+        { $len = $#vallist; }   
+    while( ! $cmp && ($i++ <= $len))
 	{
 	if (!@matchlist)
-	    { $cmp = -1; }
-	elsif (!@vallist)
-	    { $cmp = 1; }
-	else
-	    { $cmp = (shift @matchlist <=> shift @vallist) }
+            { push(@matchlist, 0); }
+	if (!@vallist)
+            { push(@vallist, 0); }
+	$cmp = (shift @matchlist <=> shift @vallist);
 	}
     $cmp;
     }
