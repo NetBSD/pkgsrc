@@ -1,13 +1,30 @@
-$NetBSD: patch-aa,v 1.1.1.1 2002/12/07 15:12:41 cjep Exp $
+$NetBSD: patch-aa,v 1.2 2003/12/27 16:54:06 seb Exp $
 
---- configure.orig	Sat Dec  7 13:58:13 2002
-+++ configure
-@@ -1386,7 +1386,7 @@ else
- #line 1387 "configure"
- #include "confdefs.h"
- #define DB_DBM_HSEARCH 1
--#include <db.h>
-+#include <ndbm.h>
- int main() {
- dbm_open(0,0,0);
- ; return 0; }
+--- src/dotlock.c.orig	2003-05-07 00:06:37.000000000 +0000
++++ src/dotlock.c
+@@ -34,13 +34,16 @@
+ #include <stdio.h>
+ #endif
+ 
+-static struct flock lck = { 0, SEEK_SET, 0, 0, 0 };
++static struct flock lck;
++
++#define FLOCK_INIT(l) { (l).l_start = 0; (l).l_len = 0; (l).l_whence = SEEK_SET; }
+ 
+ int dotlock_lock (const char *path, int *fd)
+ {
+   *fd = open (path, O_RDWR | O_CREAT, S_IRUSR | S_IWUSR);
+   if (*fd == -1)
+     return -1;
++  FLOCK_INIT(lck);
+   lck.l_type = F_WRLCK;
+   if (fcntl (*fd, F_SETLK, &lck))
+   {
+@@ -57,6 +60,7 @@ int dotlock_unlock (int *fd)
+ 
+   if (*fd != -1)
+   {
++    FLOCK_INIT(lck);
+     lck.l_type = F_UNLCK;
+     if (fcntl (*fd, F_SETLK, &lck))
+       r = -1;

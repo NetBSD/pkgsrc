@@ -1,13 +1,22 @@
-$NetBSD: patch-ab,v 1.1.1.1 2002/12/07 15:12:41 cjep Exp $
+$NetBSD: patch-ab,v 1.2 2003/12/27 16:54:06 seb Exp $
 
---- configure.in.orig	Mon Jan 28 19:32:58 2002
-+++ configure.in
-@@ -30,7 +30,7 @@ if test $ac_cv_dbmopen = no; then
- 		LIBS="$LIBS -ldb"
- 		ac_cv_libdb=no
- 		AC_TRY_LINK([#define DB_DBM_HSEARCH 1
--#include <db.h>],
-+#include <ndbm.h>],
- 			[dbm_open(0,0,0);],
- 			[ac_cv_libdb=yes])
- 		LIBS="$save_LIBS"])
+--- src/maildir.c.orig	2003-05-07 00:06:37.000000000 +0000
++++ src/maildir.c
+@@ -239,7 +239,7 @@ maildir_open (const char *path, int flag
+ 	     */
+ 	    key.dptr = p->file;
+ 	    s = strchr (key.dptr, ':');
+-	    key.dsize = s ? (size_t) (s - key.dptr) : strlen (key.dptr);
++	    key.dsize = s ? (size_t) (s - (char *)key.dptr) : strlen (key.dptr);
+ 	    key = dbm_fetch (m->db, key);
+ 	    if (key.dptr)
+ 	    {
+@@ -294,7 +294,7 @@ maildir_expunge (mailbox_t * mbox, int d
+ 	    /* remove the message from the UID map */
+ 	    key.dptr = tmp->file;
+ 	    s = strchr (key.dptr, ':');
+-	    key.dsize = s ? (size_t) (s - key.dptr) : strlen (key.dptr);
++	    key.dsize = s ? (size_t) (s - (char *)key.dptr) : strlen (key.dptr);
+ 	    dbm_delete (mbox->db, key);
+ 	    *cur = (*cur)->next;
+ 	    free (tmp->file);
