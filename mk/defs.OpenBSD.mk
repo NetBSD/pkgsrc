@@ -1,4 +1,4 @@
-# $NetBSD: defs.OpenBSD.mk,v 1.16 2003/03/04 14:50:11 seb Exp $
+# $NetBSD: defs.OpenBSD.mk,v 1.17 2003/04/15 05:29:47 grant Exp $
 #
 # Variable definitions for the OpenBSD operating system.
 
@@ -126,6 +126,11 @@ _PATCH_BACKUP_ARG=	-V simple -b 	# switch to patch(1) for backup suffix
 _PREFORMATTED_MAN_DIR=	cat	# directory where catman pages are
 _USE_GNU_GETTEXT=	no	# Don't use GNU gettext
 _USE_RPATH=		yes	# add rpath to LDFLAGS
+
+# flags passed to the linker to extract all symbols from static archives.
+# this is GNU ld.
+_OPSYS_WHOLE_ARCHIVE_FLAG=	-Wl,--whole-archive
+_OPSYS_NO_WHOLE_ARCHIVE_FLAG=	-Wl,--no-whole-archive
 
 .if !defined(DEBUG_FLAGS)
 _STRIPFLAG_CC?=		-s	# cc(1) option to strip

@@ -1,4 +1,4 @@
-# $NetBSD: defs.SunOS.mk,v 1.59 2003/04/10 01:39:52 grant Exp $
+# $NetBSD: defs.SunOS.mk,v 1.60 2003/04/15 05:29:47 grant Exp $
 #
 # Variable definitions for the SunOS/Solaris operating system.
 
@@ -134,6 +134,12 @@ _PATCH_BACKUP_ARG= 	-V simple -z	# switch to patch(1) for backup suffix
 _PREFORMATTED_MAN_DIR=	man		# directory where catman pages are
 _USE_GNU_GETTEXT=	yes		# Use GNU gettext
 _USE_RPATH=		yes		# add rpath to LDFLAGS
+
+# flags passed to the linker to extract all symbols from static archives.
+# this is the standard Solaris linker, /usr/ccs/bin/ld. The use of GNU
+# ld is not currently supported.
+_OPSYS_WHOLE_ARCHIVE_FLAG=	-z allextract
+_OPSYS_NO_WHOLE_ARCHIVE_FLAG=	-z defaultextract
 
 # Solaris has /usr/include/iconv.h, but it's not GNU iconv, so mark it
 # incompatible.
