@@ -1,34 +1,16 @@
-# $NetBSD: Makefile,v 1.8 2000/09/12 16:52:57 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2000/10/15 02:28:38 jlam Exp $
 #
 
-DISTNAME=		texi2html
-PKGNAME=		texi2html-1.52
+DISTNAME=		texi2html-1.64
 CATEGORIES=		textproc
-MASTER_SITES=		http://wwwcn1.cern.ch/dci/texi2html/
-EXTRACT_SUFX=		.shar.Z
+MASTER_SITES=		http://www.mathematik.uni-kl.de/~obachman/Texi2html/Distrib/
 
 MAINTAINER=		tv@netbsd.org
-HOMEPAGE=		http://wwwcn1.cern.ch/dci/texi2html/
+HOMEPAGE=		http://www.mathematik.uni-kl.de/~obachman/Texi2html/
 
 CONFLICTS=		teTeX-bin-1.0 teTeX-bin-1.0.[1234567]
 
 USE_PERL5=		# defined
-
-EXTRACT_CMD=		${GZCAT} ${DOWNLOADED_DISTFILE} | ${SH}
-
-NO_WRKSUBDIR=		# defined
-NO_CONFIGURE=		# defined
-
-do-build:
-	cd ${WRKSRC}; \
-		${SED} -e s@/usr/local/bin/perl@${PERL5}@ \
-			<texi2html >texi2html.new; \
-		${SED} -e 1,/__END__/d <texi2html >texi2html.1
-
-do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/texi2html.new ${PREFIX}/bin/texi2html
-	${INSTALL_DATA} ${WRKSRC}/texi2html.1 ${PREFIX}/man/man1/
-	${INSTALL_DATA_DIR} ${PREFIX}/share/texi2html
-	${INSTALL_DATA} ${WRKSRC}/invisible.xbm ${PREFIX}/share/texi2html
+GNU_CONFIGURE=		# defined
 
 .include "../../mk/bsd.pkg.mk"
