@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.925 2003/10/05 17:56:09 martti Exp $
+$NetBSD: TODO,v 1.926 2003/10/07 13:41:45 wiz Exp $
 
 Suggested new packages
 ======================
@@ -86,7 +86,7 @@ Suggested package updates
 	o Lesstif-0.93.91
 	o Ngraph-6.3.20 [pkg/22800]
 	o R-1.7.1
-	o TeXmacs-1.0.2.1
+	o TeXmacs-1.0.2.2
 	o Xaw3d-1.5E
 	o Xbae-4.50.0
 	o abiword-2.0
@@ -108,6 +108,7 @@ Suggested package updates
 	o courier-imap-2.0 [pkg/22374]
 	o courier-imap-2.1
 	o crafty-19.1
+	o crimsonfields-0.3.7
 	o crossfire-1.5.0
 	o csound-4.24.1
 	o cvsup-16.1.h [pkg/22870]
@@ -221,10 +222,12 @@ Suggested package updates
 	o postfix-2.0.16
 	o prboom-2.3.0
 	o proftpd-1.2.9rc2p
+	o pyca-20030710 [pkg/23072]
 	o pygtk-0.6.11
 	o pysol-4.82
 	o python-2.3.1
 	o rep-gtk-0.17
+	o rocksndiamonds-3.0.6
 	o rosegarden-2.1.4 [pkg/21904]
 	o rox-1.2.2
 	o rox-session-0.1.20
@@ -287,7 +290,7 @@ Suggested package updates
 	o xisp-2.7 [pkg/19566]
 	o xmcd-3.2.1
 	o xmms-1.2.8
-	o xmms-crossfade-0.3.2
+	o xmms-crossfade-0.3.3
 	o xosview-1.8.0 [pkg/20265]
 	o xps-4.2
 	o xpuyopuyo-0.9.5
