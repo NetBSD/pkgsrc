@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/08/28 23:06:00 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2000/08/29 19:14:28 jlam Exp $
 #
 
 DISTNAME=       	CGI.pm-2.72
@@ -8,12 +8,11 @@ MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=CGI/}
 
 MAINTAINER=		christos@netbsd.org
 
+# Older perl packages install their own versions of CGI.pm.
+DEPENDS+=		perl>=5.6.0nb2:../../lang/perl5-current
+
 USE_PERL5=		# defined
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/CGI/.packlist
-
-# These perl packages install their own versions of CGI.pm.
-#
-CONFLICTS=		perl-5.[0-5]* perl-5.6.0{,nb1}
 
 pre-configure:
 	${CP} ${FILESDIR}/Makefile.PL ${WRKSRC}/Makefile.PL
