@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/06/26 09:48:15 seb Exp $
+# $NetBSD: Makefile,v 1.7 2003/08/08 15:50:54 seb Exp $
 #
 
 DISTNAME=	latex2rtf-1.8aa
@@ -27,7 +27,7 @@ do-configure:
 		-e 's:@PREFIX@:${PREFIX}:'
 
 post-install:
-	for f in ${INFO_FILES}; do ${INSTALL_DATA} ${WRKSRC}/doc/$$f ${PREFIX}/info/$$f; done
+	${INSTALL_DATA} ${WRKSRC}/doc/latex2rtf.info ${PREFIX}/info/latex2rtf.info
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/latex2rtf
 	${INSTALL_DATA} ${WRKSRC}/doc/l2r.html ${PREFIX}/share/doc/latex2rtf/latex2rtf.html
 	${INSTALL_DATA} ${WRKSRC}/doc/l2r.pdf ${PREFIX}/share/doc/latex2rtf/latex2rtf.pdf
