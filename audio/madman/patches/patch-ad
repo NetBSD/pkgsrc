@@ -1,0 +1,11 @@
+--- SConstruct.orig	2004-11-09 13:09:48.000000000 +0100
++++ SConstruct	2004-11-09 13:10:06.000000000 +0100
+@@ -1,6 +1,8 @@
+ import os
+ import glob
+ 
++SConsignFile()
++
+ opts = Options(	"my_options.py")
+ 
+ opts.Add("qt_directory", "Path to Qt directory", "not specified")
