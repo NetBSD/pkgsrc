@@ -1,0 +1,16 @@
+$NetBSD: patch-ad,v 1.1.1.1 2003/03/21 22:20:56 wiz Exp $
+
+--- src/runtime/include/asm-base.h.orig	Fri Apr 12 13:54:31 2002
++++ src/runtime/include/asm-base.h
+@@ -36,6 +36,11 @@
+ #    define _ASM
+ #    include <sys/stack.h>
+ #    include <sys/trap.h>
++#  elif defined(OPSYS_NETBSD)
++#    include <machine/trap.h>
++#    define WINDOWSIZE (16*4)
++#    define SA(x) (((x)+7)&~7)
++#    define ST_INT_OVERFLOW 0x87
+ #  endif
+ #  define CGLOBAL(ID)	.global	CSYM(ID)
+ #  define LABEL(ID)	ID:

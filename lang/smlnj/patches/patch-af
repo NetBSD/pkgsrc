@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1.1.1 2003/03/21 22:20:56 wiz Exp $
+
+--- src/runtime/mach-dep/signal-sysdep.h.orig	Fri Apr 20 09:26:45 2001
++++ src/runtime/mach-dep/signal-sysdep.h
+@@ -151,7 +151,7 @@ extern void SetFSR(int);
+   /* disable all FP exceptions */
+ #  define SIG_InitFPE()    SetFSR(0)
+ 
+-#  if defined(OPSYS_SUNOS)
++#  if defined(OPSYS_SUNOS) || defined(OPSYS_NETBSD)
+     /** SPARC, SUNOS **/
+ #    define USE_ZERO_LIMIT_PTR_FN
+ #    define SIG_FAULT1		SIGFPE
