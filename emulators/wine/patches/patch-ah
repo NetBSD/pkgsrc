@@ -1,20 +1,36 @@
-$NetBSD: patch-ah,v 1.2 1998/08/07 10:40:36 agc Exp $
+$NetBSD: patch-ah,v 1.3 1998/12/14 02:17:11 tv Exp $
 
---- misc/lstr.c.orig	Thu Jun 18 00:22:09 1998
-+++ misc/lstr.c	Thu Jun 18 00:27:01 1998
-@@ -43,13 +43,13 @@
- /* FIXME: should probably get rid of wctype.h altogether */
- #include "casemap.h"
+--- console/xterm.c.orig	Sun Dec 13 08:49:50 1998
++++ console/xterm.c	Sun Dec 13 08:50:33 1998
+@@ -116,9 +116,9 @@
+                         *slave = fds;
  
--WCHAR _towupper(WCHAR code)
-+WCHAR towupper(WCHAR code)
- {
-     const WCHAR * ptr = uprtable[HIBYTE(code)];
-     return ptr ? ptr[LOBYTE(code)] : code;
+                         if (term != NULL)
+-                                tcsetattr((*slave)->_fileno, TCSANOW, term);
++                                tcsetattr(fileno(*slave), TCSANOW, term);
+                         if (winsize != NULL)
+-                                ioctl((*slave)->_fileno, TIOCSWINSZ, winsize);
++                                ioctl(fileno(*slave), TIOCSWINSZ, winsize);
+ 
+                         if (name != NULL)
+                                 strcpy(name, pts_name);
+@@ -143,8 +143,8 @@
+            return FALSE;
+ 
+         if ((*pid=fork()) == 0) {
+-                tcsetattr((*slave)->_fileno, TCSADRAIN, &term);
+-                sprintf(buf, "-Sxx%d", (*master)->_fileno);
++                tcsetattr(fileno(*slave), TCSADRAIN, &term);
++                sprintf(buf, "-Sxx%d", fileno(*master));
+                 execlp("xterm", "xterm", buf, NULL);
+                 ERR(console, "error creating AllocConsole xterm\n");
+                 exit(1);
+@@ -168,7 +168,7 @@
+                 }
+         }
+         term.c_lflag |= ECHO;
+-        tcsetattr((*master)->_fileno, TCSADRAIN, &term);
++        tcsetattr(fileno(*master), TCSADRAIN, &term);
+ 
+         return TRUE;
  }
- 
--WCHAR _towlower(WCHAR code)
-+WCHAR towlower(WCHAR code)
- {
-     const WCHAR * ptr = lwrtable[HIBYTE(code)];
-     return ptr ? ptr[LOBYTE(code)] : code;

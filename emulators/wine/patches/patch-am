@@ -1,31 +1,31 @@
-$NetBSD: patch-am,v 1.2 1998/08/07 10:40:36 agc Exp $
+$NetBSD: patch-am,v 1.3 1998/12/14 02:17:11 tv Exp $
 
---- multimedia/init.c.orig	Sat May 30 17:29:48 1998
-+++ multimedia/init.c	Fri Jun 19 00:52:52 1998
-@@ -29,6 +29,7 @@
+--- multimedia/init.c.orig	Sun Oct 11 10:15:36 1998
++++ multimedia/init.c	Sun Dec 13 01:14:24 1998
+@@ -36,6 +36,7 @@
  #ifdef HAVE_OSS
  int unixToWindowsDeviceType(int type)
  {
 +#ifndef __NetBSD__
-   /* MOD_MIDIPORT     output port 
-    * MOD_SYNTH        generic internal synth 
-    * MOD_SQSYNTH      square wave internal synth 
-@@ -46,6 +47,9 @@
-     ERR(midi, "Cannot determine the type of this midi device. Assuming FM Synth\n");
-     return MOD_FMSYNTH;
-   }
+     /* MOD_MIDIPORT     output port 
+      * MOD_SYNTH        generic internal synth 
+      * MOD_SQSYNTH      square wave internal synth 
+@@ -55,6 +56,9 @@
+ 	    "Assuming FM Synth\n");
+ 	return MOD_FMSYNTH;
+     }
 +#else
 +    return MOD_FMSYNTH;
 +#endif
  }
  #endif
  
-@@ -57,7 +61,7 @@
+@@ -66,7 +70,7 @@
   */
- BOOL32 MULTIMEDIA_Init (void)
+ BOOL32 MULTIMEDIA_MidiInit(void)
  {
 -#ifdef HAVE_OSS
 +#if defined(HAVE_OSS) && !defined(__NetBSD__)
-   int i, status, numsynthdevs, nummididevs;
-   struct synth_info sinfo;
-   struct midi_info minfo;
+     int 		i, status, numsynthdevs = 255, nummididevs = 255;
+     struct synth_info 	sinfo;
+     struct midi_info 	minfo;

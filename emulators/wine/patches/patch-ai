@@ -1,12 +1,49 @@
-$NetBSD: patch-ai,v 1.2 1998/08/07 10:40:36 agc Exp $
+$NetBSD: patch-ai,v 1.3 1998/12/14 02:17:11 tv Exp $
 
---- multimedia/mmsystem.c.orig	Sat Jun 13 14:31:17 1998
-+++ multimedia/mmsystem.c	Thu Jun 18 00:31:40 1998
-@@ -24,6 +24,7 @@
- #include "debug.h"
- #include "xmalloc.h"
- #include "callback.h"
-+#include "debugtools.h"
+--- multimedia/mcimidi.c.orig	Sun Dec 13 11:14:40 1998
++++ multimedia/mcimidi.c	Sun Dec 13 11:18:04 1998
+@@ -72,6 +72,7 @@
+  *                  	    MCI MIDI implemantation			*
+  *======================================================================*/
  
- static int	InstalledCount;
- static int	InstalledListLen;
++#ifndef __NetBSD__
+ /**************************************************************************
+  * 				MIDI_mciGetOpenDev		[internal]	
+  */
+@@ -1461,6 +1462,7 @@
+     }
+     return ret;	
+ }    
++#endif
+ 
+ /*======================================================================*
+  *                  	    MIDI entry points 				*
+@@ -1483,6 +1485,20 @@
+     case DRV_CONFIGURE:		MessageBox16(0, "Sample Midi Linux Driver !", "MMLinux Driver", MB_OK); return 1;
+     case DRV_INSTALL:		return DRVCNF_RESTART;
+     case DRV_REMOVE:		return DRVCNF_RESTART;
++#ifdef __NetBSD__
++    case MCI_OPEN_DRIVER:
++    case MCI_CLOSE_DRIVER:
++    case MCI_PLAY:
++    case MCI_RECORD:
++    case MCI_STOP:
++    case MCI_SET:
++    case MCI_PAUSE:
++    case MCI_RESUME:
++    case MCI_STATUS:
++    case MCI_GETDEVCAPS:
++    case MCI_INFO:
++    case MCI_SEEK:
++#else
+     case MCI_OPEN_DRIVER:	return MIDI_mciOpen      (dwDevID, dwParam1, (LPMCI_OPEN_PARMS32A)   dwParam2);
+     case MCI_CLOSE_DRIVER:	return MIDI_mciClose     (dwDevID, dwParam1, (LPMCI_GENERIC_PARMS)   dwParam2);
+     case MCI_PLAY:		return MIDI_mciPlay      (dwDevID, dwParam1, (LPMCI_PLAY_PARMS)      dwParam2);
+@@ -1495,6 +1511,7 @@
+     case MCI_GETDEVCAPS:	return MIDI_mciGetDevCaps(dwDevID, dwParam1, (LPMCI_GETDEVCAPS_PARMS)dwParam2);
+     case MCI_INFO:		return MIDI_mciInfo      (dwDevID, dwParam1, (LPMCI_INFO_PARMS32A)   dwParam2);
+     case MCI_SEEK:		return MIDI_mciSeek      (dwDevID, dwParam1, (LPMCI_SEEK_PARMS)      dwParam2);
++#endif
+     case MCI_LOAD:		
+     case MCI_SAVE:		
+     case MCI_FREEZE:		
