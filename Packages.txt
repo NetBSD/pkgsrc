@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.254 2002/06/30 03:43:43 rh Exp $
+# $NetBSD: Packages.txt,v 1.255 2002/06/30 03:52:32 rh Exp $
 ###########################################################################
 
 			==========================
@@ -1432,9 +1432,20 @@ perform the equivalent of:
    update") or you may lose some packages you intended to update.
    As a rule of thumb: only use this target _before_ the first time
    you call "make update" and only if you have a dirty package tree
-   (e.g., if you used NOCLEAN).  The following variables can be used
-   either on the command line or in /etc/mk.conf to alter the behaviour
-   of "make clean-update":
+   (e.g., if you used NOCLEAN).
+
+   If you unsure about whether your tree is clean you can either perform
+   a "make clean" at the top of the tree, or use the following sequence
+   of commands from the directory of the package you want to update
+   (*before* running "make update" for the first time, otherwise you lose
+   all the packages you wanted to update!):
+
+      make clean-update
+      make clean CLEANDEPENDS=YES
+      make update
+
+   The following variables can be used either on the command line or in
+   /etc/mk.conf to alter the behaviour of "make clean-update":
 
     - CLEAR_DIRLIST:
       After "make clean", do not reconstruct the list of directories to
