@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.495 2000/07/04 03:52:17 hubertf Exp $			\
+#	$NetBSD: bsd.pkg.mk,v 1.496 2000/07/04 11:58:49 hubertf Exp $			\
 #
 # This file is in the public domain.
 #
@@ -2801,34 +2801,35 @@ COMMON_DIRS!= 	${AWK} 'BEGIN  { 				\
 print-PLIST:
 	@${ECHO} '@comment $$'NetBSD'$$'
 	@${FIND} ${PREFIX}/. -newer ${EXTRACT_COOKIE} \! -type d 	\
-	 | ${SED}						\
-		-e  s@${PREFIX}/./@@ 				\
+	 | ${SED}							\
+		-e  s@${PREFIX}/./@@ 					\
 		-e  s@${LOWER_OPSYS}@\$${LOWER_OPSYS}@ 			\
-		-e  s@${MACHINE_ARCH}@\$${MACHINE_ARCH}@ 	\
-	 | sort							\
-	 | ${AWK} '						\
-		{ 						\
-		  if (/.info$$/) {				\
+		-e  s@${MACHINE_ARCH}@\$${MACHINE_ARCH}@ 		\
+	 | sort								\
+	 | ${AWK} '							\
+		{ 							\
+		  if (/.info$$/) {					\
 		    print "\@unexec install-info --delete --info-dir=%D/info %D/" $$1; \
-		    print $$1;					\
+		    print $$1;						\
 		    print "\@exec install-info --info-dir=%D/info %D/" $$1; \
-		  } else if (!/^info\/dir$$/) {			\
-		    print $$1;					\
-		  }						\
+		  } else if (!/^info\/dir$$/) {				\
+		    print $$1;						\
+		  }							\
 		}'
 	@for i in `${FIND} ${PREFIX}/. -newer ${EXTRACT_COOKIE} -type d	\
-			| ${SED}				\
-				-e s@${PREFIX}/./@@		\
-				-e  s@${LOWER_OPSYS}@$${LOWER_OPSYS}@ 	\
-				-e  s@${MACHINE_ARCH}@$${MACHINE_ARCH}@ \
+			| ${SED}					\
+				-e s@${PREFIX}/./@@			\
 				-e '/^${PREFIX:S/\//\\\//g}\/.$$/d'	\
-			| sort -r | ${SED} ${COMMON_DIRS}` ;\
-	do \
-		if [ `ls -la ${PREFIX}/$$i | wc -l` = 3 ]; then \
-			${ECHO} @exec /bin/mkdir -p ${PREFIX}/$$i ; \
-		fi ; \
-		${ECHO} @dirrm $$i ; \
-	done
+			| sort -r | ${SED} ${COMMON_DIRS}` ;		\
+	do								\
+		if [ `ls -la ${PREFIX}/$$i | wc -l` = 3 ]; then		\
+			${ECHO} @exec /bin/mkdir -p ${PREFIX}/$$i ;	\
+		fi ;							\
+		${ECHO} @dirrm $$i ;					\
+	done								\
+	| ${SED}							\
+		-e 's@${LOWER_OPSYS}@\$${LOWER_OPSYS}@' 		\
+		-e 's@${MACHINE_ARCH}@\$${MACHINE_ARCH}@'
 .endif # target(print-PLIST)
 
 
