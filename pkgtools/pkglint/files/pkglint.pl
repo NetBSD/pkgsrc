@@ -12,11 +12,12 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.40 2001/02/22 14:47:33 wiz Exp $
+# $NetBSD: pkglint.pl,v 1.41 2001/02/25 05:20:02 hubertf Exp $
 #
 # This version contains some changes necessary for NetBSD packages
-# done by Hubert Feyrer <hubertf@netbsd.org> and
-# Thorsten Frueauf <frueauf@netbsd.org>
+# done by Hubert Feyrer <hubertf@netbsd.org>,
+# Thorsten Frueauf <frueauf@netbsd.org>, Thomas Klausner <wiz@netbsd.org>
+# and others.
 #
 
 use Getopt::Std;
@@ -773,6 +774,24 @@ sub checkmakefile {
 	if ($whole =~ /\nNO_PACKAGE/) {
 		&perror("WARN: use of NO_PACKAGE to enforce license restrictions ".
 		        "is deprecated.");
+	}
+	print "OK: checking for MKDIR.\n" if ($verbose);
+	if ($whole =~ m|\${MKDIR}.*(\${PREFIX}[/0-9a-zA-Z\${}]*)|) {
+	    	&perror("WARN: \${MKDIR} $1: consider using INSTALL_*_DIR");
+	}
+	print "OK: checking for unneeded INSTALL -d.\n" if ($verbose);
+	if ($whole =~ m|\${INSTALL}(.*)\n|) {
+	    $args = $1;
+	    	if ($args =~ /-d/) {
+		        if ($args !~ /-[ogm]/) {
+		    		&perror("WARN: \${INSTALL}$args: " .
+					"consider using INSTALL_*_DIR");
+		        }
+		}
+	}
+	print "OK: checking for unneeded failure check on directory creation.\n" if ($verbose);
+	if ($whole =~ /\n\t-(.*(MKDIR|INSTALL.*-d|INSTALL_.*_DIR).*)/g) {
+	    	&perror("WARN: $1: no need to use '-' before command");
 	}
 
 	#
