@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.11 2004/04/20 13:02:56 markd Exp $
+$NetBSD: patch-aa,v 1.12 2004/06/10 12:09:22 markd Exp $
 
---- configure.orig	2004-04-06 02:51:22.000000000 +1200
+--- configure.orig	2004-06-01 02:06:53.000000000 +1200
 +++ configure
 @@ -26504,72 +26504,6 @@ _ACEOF
  
@@ -75,3 +75,27 @@ $NetBSD: patch-aa,v 1.11 2004/04/20 13:02:56 markd Exp $
  # darwin needs this to initialize the environment
  
  for ac_header in crt_externs.h
+@@ -36391,12 +36325,12 @@ LIBS="$ac_save_LIBS"
+ CXXFLAGS="$ac_save_CXXFLAGS"
+ 
+ if test "$use_libgadu_copy" = "yes"; then
+-	cp ${srcdir}/kopete/protocols/gadu/libgadu/libgadu-config.h{.in,}
++	cp ${srcdir}/kopete/protocols/gadu/libgadu/libgadu-config.h.in ${srcdir}/kopete/protocols/gadu/libgadu/libgadu-config.h
+ 	if test "$ac_cv_c_bigendian" = "yes"; then
+ 
+ sed -e "s/#undef __GG_LIBGADU_BIGENDIAN/#define __GG_LIBGADU_BIGENDIAN/" \
+ ${srcdir}/kopete/protocols/gadu/libgadu/libgadu-config.h > ${srcdir}/kopete/protocols/gadu/libgadu/libgadu-config.h.1
+-mv ${srcdir}/kopete/protocols/gadu/libgadu/libgadu-config.h{.1,}
++mv ${srcdir}/kopete/protocols/gadu/libgadu/libgadu-config.h.1 ${srcdir}/kopete/protocols/gadu/libgadu/libgadu-config.h
+ 
+ 	fi
+ 
+@@ -36489,7 +36423,7 @@ fi
+ 
+ sed -e "s/#undef __GG_LIBGADU_HAVE_LONG_LONG/#define __GG_LIBGADU_HAVE_LONG_LONG/" \
+ ${srcdir}/kopete/protocols/gadu/libgadu/libgadu-config.h > ${srcdir}/kopete/protocols/gadu/libgadu/libgadu-config.h.1
+-mv ${srcdir}/kopete/protocols/gadu/libgadu/libgadu-config.h{.1,}
++mv ${srcdir}/kopete/protocols/gadu/libgadu/libgadu-config.h.1 ${srcdir}/kopete/protocols/gadu/libgadu/libgadu-config.h
+ 
+ 	fi
+ 
