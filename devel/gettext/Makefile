@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2002/11/30 23:21:34 salo Exp $
+# $NetBSD: Makefile,v 1.40 2002/12/02 22:17:43 jlam Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1998/08/09 15:13:33 kuriyama Exp
 #
 
@@ -21,7 +21,6 @@ CONFIG_GUESS_OVERRIDE=	${WRKSRC}/config.guess
 CONFIG_SUB_OVERRIDE=	${WRKSRC}/config.sub
 USE_GNU_GETTEXT=	yes
 CONFIGURE_ARGS+=	--without-included-gettext
-CONFIGURE_ARGS+=	--with-libintl-prefix=${BUILDLINK_PREFIX.gettext}
 
 INFO_FILES=		gettext.info
 TEXINFO_OVERRIDE=	YES
