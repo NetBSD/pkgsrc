@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1999/11/04 10:53:23 agc Exp $
+# $NetBSD: Makefile,v 1.5 2000/01/05 01:12:50 wiz Exp $
 # FreeBSD Id: ports/japanese/xjman/Makefile,v 1.10 1999/10/30 15:34:24 sada Exp
 
 DISTNAME=	xjman-0.4
@@ -33,7 +33,7 @@ pre-build:
 	@(cd ${WRKSRC}/${dir};					\
 	  for file in *; do					\
 		f=`${ECHO} $$file|${SED} -e 's|x$$||'`;		\
-		mlink=`head -1 $$file|grep '^\.so man./'|	\
+		mlink=`head -1 $$file|${GREP} '^\.so man./'|	\
 			${SED} -e 's|.*man./\(.*\)x|\1|'`; 	\
 		if [ "$$mlink" = "" ]; then			\
 			${ECHO} "MAN+= $$f" >> Makefile;	\
@@ -53,11 +53,11 @@ MKCATPAGES?=	yes
 post-build:
 	@${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
 	@(cd ${WRKSRC};						\
-	  find man1/*.1 man3/*.3 man5/*.5 -type f |		\
+	  ${FIND} man1/*.1 man3/*.3 man5/*.5 -type f |		\
 		${SED} -e 's|^|${XJMANDIR}/|' | sort >> ${PLIST_SRC})
 .if ${MKCATPAGES} != no
 	@(cd ${WRKSRC};						\
-	  find man1/*.1 man3/*.3 man5/*.5 -type f |		\
+	  ${FIND} man1/*.1 man3/*.3 man5/*.5 -type f |		\
 		${SED} -e 's|^|${XJMANDIR}/|'			\
 		       -e 's|man[135]\(/.*\)\.\([135]\)$$|cat\2\1.0|' | \
 		sort >> ${PLIST_SRC})
