@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2000/12/12 01:30:43 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2000/12/18 23:19:19 tsarna Exp $
 #
 
     SUBDIR += binkd
@@ -14,6 +14,7 @@
     SUBDIR += mgetty+sendfax
     SUBDIR += minicom
     SUBDIR += modemd
+    SUBDIR += p5-Device-SerialPort
     SUBDIR += p5-pilot-link
     SUBDIR += pilot-link
     SUBDIR += pilotmgr
