@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:08:09 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 00:44:40 wiz Exp $
 
-MD5 (Time-HiRes-01.20.tar.gz) = 8942a6599a93837fd9aec6ce7832a822
+SHA1 (Time-HiRes-01.20.tar.gz) = baae7d6a3fea1e060174e4887df63aa363c6294c
+Size (Time-HiRes-01.20.tar.gz) = 11330 bytes

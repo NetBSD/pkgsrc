@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:05:40 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 00:44:10 wiz Exp $
 
-MD5 (apel-10.3.tar.gz) = a7357019aeeae69f95fb3cdc5a39bb1f
+SHA1 (apel-10.3.tar.gz) = c910bfdf2a62317c35514a847e63266e8e5d1ca6
+Size (apel-10.3.tar.gz) = 115847 bytes
 SHA1 (patch-aa) = fcbbad6b59177b2e8532da2cc665a9271fca0830

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:08:29 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 00:44:45 wiz Exp $
 
-MD5 (sdcc-2.1.9Ea.tar.gz) = 72dcc81984e116c6a800b0eac9599ad2
+SHA1 (sdcc-2.1.9Ea.tar.gz) = 5322e45b98d87ef299e6691ae10701666ca64bd2
+Size (sdcc-2.1.9Ea.tar.gz) = 1676933 bytes
 SHA1 (patch-aa) = 50ea54e727560422aec0f5a66b116e0f90f1ee26
 SHA1 (patch-ab) = 508076291cda739b8ffa909fbdd3b3a49ce934cd
 SHA1 (patch-ac) = 8a1e124eb72dd68cc77a90835f7d5beb1264bed0

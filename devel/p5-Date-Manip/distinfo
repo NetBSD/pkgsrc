@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:07:52 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 00:44:35 wiz Exp $
 
-MD5 (DateManip-5.39.tar.gz) = b1839b58c6913937f57a4d8571de0190
+SHA1 (DateManip-5.39.tar.gz) = c40c1f444ab50ea2345220c8410715b2ea360a20
+Size (DateManip-5.39.tar.gz) = 119942 bytes

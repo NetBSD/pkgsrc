@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:08:07 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 00:44:40 wiz Exp $
 
 SHA1 (Test-Cmd-1.01.tar.gz) = 4d035c604948629176eca1dc2dc26505acd3e66c
+Size (Test-Cmd-1.01.tar.gz) = 19823 bytes

@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:06:18 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 00:44:15 wiz Exp $
 
-MD5 (diffutils-2.7.tar.gz) = 300d86a0566afee1c3756828f6c9538a
+SHA1 (diffutils-2.7.tar.gz) = 1638f4ee4a7bd269411c57874f9e761ddee6d5ae
+Size (diffutils-2.7.tar.gz) = 312312 bytes

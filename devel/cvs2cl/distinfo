@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:06:09 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 00:44:14 wiz Exp $
 
-MD5 (cvs2cl-1.117) = 6554f285e71f299e949da769a3a84ad2
+SHA1 (cvs2cl-1.117) = a9cc74f5819aeb2e9ad36ffbf21760925298e636
+Size (cvs2cl-1.117) = 27662 bytes

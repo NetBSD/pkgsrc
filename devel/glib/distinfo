@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:06:43 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 00:44:20 wiz Exp $
 
-MD5 (glib-1.2.9.tar.gz) = 1c6ae6a0e68fbbc2d91a0c8a495238cd
+SHA1 (glib-1.2.9.tar.gz) = e6ba39ec60ae5a913c075df2735bff5265e8f3a1
+Size (glib-1.2.9.tar.gz) = 421271 bytes
 SHA1 (patch-aa) = e9c6046c3766d74919bb03f12cd8e9e32cd4f2f9
 SHA1 (patch-ab) = 56e5035d8c144733752e38e0c1e790dfe44f87b7
 SHA1 (patch-ac) = ab176e926d9fee6d463096ad3853e06718129acc

@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:08:01 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 00:44:38 wiz Exp $
 
 SHA1 (Log-Dispatch-1.77.tar.gz) = ca79ace8b5dc1456869c0cc89ac2aac021982617
+Size (Log-Dispatch-1.77.tar.gz) = 15802 bytes
 SHA1 (patch-aa) = baf49f317f0f9d61ce8c3440b439ac4e62f9833b

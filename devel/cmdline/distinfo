@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:06:03 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 00:44:14 wiz Exp $
 
-MD5 (cmdline-1.04/CmdLine.tar.gz) = ae2d805e9ced6a862307715253d0a84a
+SHA1 (cmdline-1.04/CmdLine.tar.gz) = 9d2bebc7faf8e47d69fd272367e1a4051bb81e13
+Size (cmdline-1.04/CmdLine.tar.gz) = 97602 bytes
 SHA1 (patch-aa) = bd63d292d016cecab220640a0b4b167dd0983f28
 SHA1 (patch-ab) = 65bd1db2f29e145c4eea755f17eae00795671b05
 SHA1 (patch-ac) = c8381a0a19cb3c58e4d0993639385b6e45ce6920

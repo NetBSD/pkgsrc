@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:08:04 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 00:44:39 wiz Exp $
 
-MD5 (PerlVision-1.4.tar.gz) = 47c36968111985c7c6abe996ea2283a5
+SHA1 (PerlVision-1.4.tar.gz) = 1483f5849daf960ead1ba3c61affc9bfd751149f
+Size (PerlVision-1.4.tar.gz) = 19492 bytes

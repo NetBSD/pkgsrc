@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 09:59:34 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 00:44:45 wiz Exp $
 
 SHA1 (readline-4.1.tar.gz) = 431a80427f9612435962e13202f3ffa9e123aca0
 Size (readline-4.1.tar.gz) = 744169 bytes

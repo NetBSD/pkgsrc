@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:07:52 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 00:44:35 wiz Exp $
 
-MD5 (DProf-19990108.tar.gz) = 9cd1e3bd9627b55d0a896944c11a05bd
+SHA1 (DProf-19990108.tar.gz) = ab77dc5f254508e68fada07329ab5dd63b09531c
+Size (DProf-19990108.tar.gz) = 20710 bytes

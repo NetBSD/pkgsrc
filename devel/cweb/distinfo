@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:06:12 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 00:44:15 wiz Exp $
 
-MD5 (cweb-3.63.tar.gz) = 3f49917d40f5c1152bd3498509563fdb
+SHA1 (cweb-3.63.tar.gz) = a8c90f143627e2be9de42579a22215e356e32e21
+Size (cweb-3.63.tar.gz) = 207495 bytes
 SHA1 (patch-aa) = a7bec36347d2fb7d341744007c95bff2d004d906
 SHA1 (patch-ab) = 7a3146d744ec469f2a40b912b8c766a7ec4eade2

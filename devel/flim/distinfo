@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:06:27 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 00:44:17 wiz Exp $
 
-MD5 (flim-1.14.2.tar.gz) = 349a92b57d70e3ba598dd6edb18deacf
+SHA1 (flim-1.14.2.tar.gz) = bb1aa7acdbc9de422f8d0c7cd23d1a5d8dee6cbf
+Size (flim-1.14.2.tar.gz) = 161020 bytes
 SHA1 (patch-aa) = b671f6517905f588f4b05d6ca62e51a5d88e55bc

@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:06:53 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 00:44:21 wiz Exp $
 
-MD5 (gperf-2.7.2.tar.gz) = e501acc2e18eed2c8f25ca0ac2330d68
+SHA1 (gperf-2.7.2.tar.gz) = a8a096093d9f94650bac1e90c8c8bccf49529444
+Size (gperf-2.7.2.tar.gz) = 450996 bytes
 SHA1 (patch-aa) = dffce45a5e65e9de150901ed88446d66564a8fc7

@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:07:59 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 00:44:38 wiz Exp $
 
-MD5 (IO-Tty-0.04.tar.gz) = 95e36a73acac9f747dd02426988daa9b
+SHA1 (IO-Tty-0.04.tar.gz) = 97a1e35ff6f3baadc76635efabbabb97e0646a58
+Size (IO-Tty-0.04.tar.gz) = 17443 bytes

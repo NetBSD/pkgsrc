@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:05:43 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 00:44:10 wiz Exp $
 
-MD5 (asm.8051.Z) = 7aab6e56db580269b7913631db02dbda
+SHA1 (asm.8051.Z) = f0f5f6c627a7c532aa6149a358d334775a085147
+Size (asm.8051.Z) = 36129 bytes
 SHA1 (patch-aa) = d215f0e5df78c2972c5a6e73bc1ca0675492e87e

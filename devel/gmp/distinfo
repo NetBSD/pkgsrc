@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:06:48 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 00:44:20 wiz Exp $
 
-MD5 (gmp-3.1.1.tar.gz) = 7c25f129df145fd6f72455926e911791
+SHA1 (gmp-3.1.1.tar.gz) = 485fba815e7d972b2a1f57a12ab56757ca10ec5f
+Size (gmp-3.1.1.tar.gz) = 1033780 bytes
 SHA1 (patch-aa) = f5081b5a91d82dc33d9c42f404caa35f1155249e
 SHA1 (patch-ab) = 6569a0e4f817dca207556eddc932ed8e4494c9a8
 SHA1 (patch-ac) = 76281686bd0695698592a1c674118e835b32d87e

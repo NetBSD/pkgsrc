@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:05:55 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 00:44:13 wiz Exp $
 
-MD5 (latestCDK.tgz) = 51b00c111424a4431b2295df5a69a620
+SHA1 (latestCDK.tgz) = 0751eb6099d43e8d1f4e8b86d5684cc039310194
+Size (latestCDK.tgz) = 267523 bytes
 SHA1 (patch-aa) = d8cf4f88269f9188ac3e366c74da36295a77df9f
 SHA1 (patch-ac) = 3abc1f7b646d69331f9cf5228e1095a2579d2891
 SHA1 (patch-ad) = c21828919b4a20c21f70fd28464e67ac8d8ad13b

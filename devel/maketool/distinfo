@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:07:35 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 00:44:30 wiz Exp $
 
-MD5 (maketool-0.6.1-src.tar.gz) = cdd197dbe9b2202d66ac0a02e266fe92
+SHA1 (maketool-0.6.1-src.tar.gz) = 697ff5ae3a7caeccdb2d45c3ae9d892ee938951a
+Size (maketool-0.6.1-src.tar.gz) = 168353 bytes
 SHA1 (patch-aa) = eaf17f56bf48df625a718a17bff6228c7c6aba2b

@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:08:36 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 00:44:47 wiz Exp $
 
-MD5 (stooop-4.1.1.tar.gz) = 7cf39e16fbce50f9f092c73d39924225
+SHA1 (stooop-4.1.1.tar.gz) = 955bfca122306eaf981b65f9d67b9366ff8ca437
+Size (stooop-4.1.1.tar.gz) = 73800 bytes

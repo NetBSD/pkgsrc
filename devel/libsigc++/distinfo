@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:07:26 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 00:44:28 wiz Exp $
 
-MD5 (libsigc++-1.0.1.tar.gz) = 69cc92bbece1c8085dce4e9a466404b3
+SHA1 (libsigc++-1.0.1.tar.gz) = 46ca3f440768ca631f7ca238e4fea6895a208dc6
+Size (libsigc++-1.0.1.tar.gz) = 207884 bytes
 SHA1 (patch-aa) = 3cc05e693928e60ef653c098f75f2f00485f3ae9
 SHA1 (patch-ab) = 7c807bae072f65b624c95efc13787d6d8b037889

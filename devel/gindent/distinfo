@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:06:41 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 00:44:19 wiz Exp $
 
-MD5 (indent-2.2.6.tar.gz) = 1f5f9b27226a3292f857fedcd12a07e4
+SHA1 (indent-2.2.6.tar.gz) = 02e18781f5879e71b170e7db34eea725ac3d5072
+Size (indent-2.2.6.tar.gz) = 222510 bytes

@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:07:14 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 00:44:26 wiz Exp $
 
-MD5 (ldapsdk_12311998.tar.gz) = 7ae562daa86587a1dd608e7ee873ce60
+SHA1 (ldapsdk_12311998.tar.gz) = fc132cf2d7bef6f3b93486fabd73c1f7f202d04e
+Size (ldapsdk_12311998.tar.gz) = 1375703 bytes
 SHA1 (patch-aa) = 19be7abc39dabd593766a0f0f8131f394afd0a67

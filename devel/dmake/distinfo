@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:06:19 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 00:44:16 wiz Exp $
 
-MD5 (dmake-v4.1-src-export.all-unknown-all.tar.gz) = 5841be5f11b8294e95edc1f28cc11c5b
+SHA1 (dmake-v4.1-src-export.all-unknown-all.tar.gz) = 6262a38d58fdb69242ddfe663be9caada1882d64
+Size (dmake-v4.1-src-export.all-unknown-all.tar.gz) = 473427 bytes
 SHA1 (patch-aa) = 245e215d9a946feaaa33a335c7153b2379caeb58

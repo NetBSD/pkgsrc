@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:05:53 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 00:44:12 wiz Exp $
 
-MD5 (c_cpp_reference-1.0.tar.gz) = 9f8f6c416132d768124f6fb158be461b
+SHA1 (c_cpp_reference-1.0.tar.gz) = c363feef7bb0a31516510a3823e1a0e8c740acb0
+Size (c_cpp_reference-1.0.tar.gz) = 1145526 bytes

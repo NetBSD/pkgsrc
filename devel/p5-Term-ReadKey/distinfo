@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:08:07 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 00:44:40 wiz Exp $
 
-MD5 (TermReadKey-2.14.tar.gz) = d8ed4c533350c2e8724c70c103a1a01f
+SHA1 (TermReadKey-2.14.tar.gz) = 5ff88732d1d303fa352eb44cb8b6a9c7e3167750
+Size (TermReadKey-2.14.tar.gz) = 31704 bytes

@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:07:33 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 00:44:30 wiz Exp $
 
-MD5 (lwp-1.1.tar.gz) = 6098bebaba905397f17bc5f3fd282c8f
+SHA1 (lwp-1.1.tar.gz) = fad87eb45100f163e2a8b26309c2a4e7820f50de
+Size (lwp-1.1.tar.gz) = 172977 bytes
 SHA1 (patch-aa) = 98d2fffe12c67c184786589caaaea12e95885f33

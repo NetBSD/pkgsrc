@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:08:39 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 00:44:48 wiz Exp $
 
-MD5 (unproven-pthreads-0.17.tar.gz) = caa913b1dc1991386b391c6964a60f5f
+SHA1 (unproven-pthreads-0.17.tar.gz) = 9f50e31da916b341e0c1ce21012bbd95b1a08a7d
+Size (unproven-pthreads-0.17.tar.gz) = 234180 bytes
 SHA1 (patch-aa) = 21955c9af0fd80b6bd939631d79db7225a392ea1
 SHA1 (patch-ab) = 870977a372b34eecc44f8e32449e8a2e008b35a1
 SHA1 (patch-ac) = 0bace453902f1081d3d5b03af87d88a9717f1982
