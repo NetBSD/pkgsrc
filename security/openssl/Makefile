@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2001/02/27 18:21:25 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2001/03/01 13:57:53 hubertf Exp $
 #
 
-DISTNAME=		openssl-0.9.6
+DISTNAME=		openssl-0.9.5a
 CATEGORIES=		security
 MASTER_SITES=		ftp://ftp.openssl.org/source/ \
 			ftp://ftp.uni-trier.de/pub/unix/security/openssl/
