@@ -1,4 +1,4 @@
-# $NetBSD: fonts,v 1.4 2003/12/20 10:04:32 jmmv Exp $
+# $NetBSD: fonts,v 1.5 2004/03/30 11:55:02 recht Exp $
 #
 # Handle font databases; used by fonts.mk.
 #
@@ -21,7 +21,7 @@ POST-INSTALL|POST-DEINSTALL)
 			if [ -z "`cd $d ; ${LS} | ${GREP} -v .pkgsrc | ${GREP} -v ^fonts | ${GREP} -v ^Fontmap`" ]; then
 				${RM} -f $d/fonts* $d/Fontmap*
 			else
-				( cd $d && ${TTMKFDIR} >fonts.dir 2>/dev/null )
+				( cd $d && ${TTMKFDIR} -o fonts.dir >/dev/null 2>&1 )
 			fi
 		done
 	fi
