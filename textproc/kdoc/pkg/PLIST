@@ -1,27 +1,27 @@
-@comment $NetBSD: PLIST,v 1.3 2000/12/19 21:40:48 wulf Exp $
+@comment $NetBSD: PLIST,v 1.4 2000/12/20 08:54:17 skrll Exp $
 bin/kdoc
-bin/qt2kdoc
 bin/makekdedoc
+bin/qt2kdoc
 man/man1/kdoc.1
-man/man1/qt2kdoc.1
 man/man1/makekdedoc.1
-share/doc/kdoc/index.docbook
+man/man1/qt2kdoc.1
 share/doc/kdoc/README
-share/kdoc/kdocUtil.pm
-share/kdoc/kdocAstUtil.pm
-share/kdoc/kdocParseDoc.pm
-share/kdoc/kdocCxxHTML.pm
-share/kdoc/kdocLib.pm
+share/doc/kdoc/index.docbook
 share/kdoc/Ast.pm
-share/kdoc/kdocDocIter.pm
-share/kdoc/kdocIDLhtml.pm
-share/kdoc/kdocHTMLutil.pm
-share/kdoc/kdocMan.pm
-share/kdoc/kdocParser.pm
-share/kdoc/kdoctexi.pm
+share/kdoc/Iter.pm
+share/kdoc/kdocAstUtil.pm
+share/kdoc/kdocCxxDocbook.pm
+share/kdoc/kdocCxxHTML.pm
 share/kdoc/kdocCxxLaTeX.pm
 share/kdoc/kdocDocHelper.pm
-share/kdoc/kdocCxxDocbook.pm
-share/kdoc/Iter.pm
+share/kdoc/kdocDocIter.pm
+share/kdoc/kdocHTMLutil.pm
+share/kdoc/kdocIDLhtml.pm
+share/kdoc/kdocLib.pm
+share/kdoc/kdocMan.pm
+share/kdoc/kdocParseDoc.pm
+share/kdoc/kdocParser.pm
+share/kdoc/kdocUtil.pm
+share/kdoc/kdoctexi.pm
 @dirrm share/kdoc
 @dirrm share/doc/kdoc
