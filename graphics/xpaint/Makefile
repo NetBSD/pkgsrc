@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2005/02/21 20:26:12 hubertf Exp $
+# $NetBSD: Makefile,v 1.46 2005/03/10 14:11:23 tv Exp $
 
 DISTNAME=       xpaint-2.7.3
 CATEGORIES=	graphics x11
@@ -17,7 +17,7 @@ BUILD_TARGET=	xaw95static
 MAKE_ENV+=	XMKMF="${XMKMF}"
 
 SUBST_CLASSES=	    foo
-SUBST_STAGE.foo=    post-patch
+SUBST_STAGE.foo=    pre-configure
 SUBST_FILES.foo=    Local.config
 SUBST_SED.foo=	    -e "s|\$${LOCALBASE}|${LOCALBASE}|g" \
 		    -e "s|\$${X11BASE}|${X11BASE}|g" \
@@ -27,5 +27,4 @@ SUBST_SED.foo=	    -e "s|\$${LOCALBASE}|${LOCALBASE}|g" \
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../graphics/xpm/buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"
