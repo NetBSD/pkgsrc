@@ -1,13 +1,13 @@
-$NetBSD: patch-ae,v 1.4 1999/09/03 07:19:25 rh Exp $
+$NetBSD: patch-ae,v 1.5 2000/10/17 23:57:45 jlam Exp $
 
---- devel-docs/Makefile.in.orig	Thu Sep  2 09:41:31 1999
-+++ devel-docs/Makefile.in	Thu Sep  2 09:42:37 1999
-@@ -157,7 +157,7 @@
+--- devel-docs/Makefile.in.orig	Thu Oct 12 23:04:00 2000
++++ devel-docs/Makefile.in
+@@ -156,7 +156,7 @@
  EXTRA_DIST =  	TODO.sgml				gnome-doc-framework.txt			$(TEXT_FILES)
  
  
 -docdir = $(prefix)/doc
-+docdir = $(prefix)/share/doc/gnome-libs
++docdir = $(datadir)/doc/gnome-libs
  doc_DATA = $(TEXT_FILES)
  mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
  CONFIG_HEADER = ../config.h
