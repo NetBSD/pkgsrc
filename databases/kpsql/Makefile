@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/02/16 14:17:28 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2001/03/10 12:14:07 wulf Exp $
 #
 
 DISTNAME=	kpsql-1.0
@@ -16,7 +16,7 @@ DEPENDS+=	postgresql>=6.4:../../databases/postgresql
 #
 # PostgreSQL is currently not supported by all platforms
 #
-NOT_FOR_PLATFORM=       *-*-alpha *-*-mips
+NOT_FOR_PLATFORM=       *-*-mips
 
 USE_X11BASE=	yes
 USE_GMAKE=	yes
