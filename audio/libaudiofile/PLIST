@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:17:04 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/03/24 21:38:25 wiz Exp $
 bin/audiofile-config
 bin/sfconvert
 bin/sfinfo
@@ -9,7 +9,8 @@ lib/libaudiofile.a
 lib/libaudiofile.la
 lib/libaudiofile.so
 lib/libaudiofile.so.0
-lib/libaudiofile.so.0.1
+lib/libaudiofile.so.0.2
+lib/pkgconfig/audiofile.pc
 share/aclocal/audiofile.m4
 share/doc/libaudiofile/afCloseFile
 share/doc/libaudiofile/afGetFrameSize
