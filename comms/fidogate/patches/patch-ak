@@ -1,8 +1,16 @@
-$NetBSD: patch-ak,v 1.4 2001/03/09 19:06:20 tv Exp $
-
---- src/areafix/areafix.c.orig	Thu Feb 22 13:47:33 2001
-+++ src/areafix/areafix.c	Thu Feb 22 13:47:46 2001
-@@ -770,7 +770,7 @@
+--- src/areafix/areafix.c.orig	2001-05-29 04:00:27.000000000 +1000
++++ src/areafix/areafix.c	2003-10-10 18:43:07.000000000 +1000
+@@ -273,8 +273,7 @@
+ 
+ void areafix_auth_cmd(void)
+ {
+-    authorized = authorized_cmdline = authorized_new    =
+-		 authorized_new     = authorized_delete = TRUE;
++    authorized = authorized_cmdline = authorized_new = authorized_delete = TRUE;
+ }
+ 
+ 
+@@ -770,7 +769,7 @@
  	mark = (lon_search(l, node) ? "*" : " ");
  
  	if(p->desc)
@@ -11,7 +19,7 @@ $NetBSD: patch-ak,v 1.4 2001/03/09 19:06:20 tv Exp $
  			   mark, p->zone, p->area, p->desc);
  	else
  	    areafix_printf("%s Z%-3d %s",
-@@ -836,7 +836,7 @@
+@@ -836,7 +835,7 @@
  	
  	mark = (lon_search(l, node) ? "*" : " ");
  	if(p->desc)
