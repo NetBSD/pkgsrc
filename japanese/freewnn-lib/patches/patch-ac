@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.2 1999/09/03 04:24:10 sakamoto Exp $
+$NetBSD: patch-ac,v 1.1 2002/02/28 17:45:45 wiz Exp $
 
 --- ./kWnn/Makefile.in.orig	Tue Mar 23 21:14:47 1999
 +++ ./kWnn/Makefile.in	Thu Sep  2 19:29:22 1999
