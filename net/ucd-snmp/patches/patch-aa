@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.7 1999/05/04 03:51:57 tv Exp $
+$NetBSD: patch-aa,v 1.8 1999/06/14 16:04:02 kim Exp $
 
 --- configure.orig	Mon Mar 15 19:27:31 1999
-+++ configure	Mon May  3 23:39:50 1999
++++ configure	Mon Jun 14 11:50:06 1999
 @@ -744,7 +744,7 @@
    if test "x$withval" != "x" -a -d "$withval"; then
          LIBS="-L$withval -lwrap $LIBS"
@@ -23,7 +23,145 @@ $NetBSD: patch-aa,v 1.7 1999/05/04 03:51:57 tv Exp $
  fi
  
  
-@@ -7699,6 +7700,7 @@
+@@ -4941,11 +4942,15 @@
+ 
+ 
+ #include <sys/types.h>
++#if 0
+ #define KERNEL
+ #define _KERNEL
++#endif
+ #include <sys/socket.h>
++#if 0
+ #undef KERNEL
+ #undef _KERNEL
++#endif
+ #include <net/route.h>
+ 
+ 
+@@ -4994,11 +4999,15 @@
+ #include "confdefs.h"
+ 
+ #include <sys/types.h>
++#if 0
+ #define KERNEL
+ #define _KERNEL
++#endif
+ #include <sys/socket.h>
++#if 0
+ #undef KERNEL
+ #undef _KERNEL
++#endif
+ #include <net/route.h>
+ 
+ int main() {
+@@ -5029,11 +5038,15 @@
+ #include "confdefs.h"
+ 
+ #include <sys/types.h>
++#if 0
+ #define KERNEL
+ #define _KERNEL
++#endif
+ #include <sys/socket.h>
++#if 0
+ #undef KERNEL
+ #undef _KERNEL
++#endif
+ #include <net/route.h>
+ 
+ int main() {
+@@ -5079,7 +5092,9 @@
+   cat > conftest.$ac_ext <<EOF
+ #line 5081 "configure"
+ #include "confdefs.h"
++#if 0
+ #define KERNEL
++#endif
+ #include<net/route.h>
+ 
+ EOF
+@@ -5131,11 +5146,15 @@
+ #include "confdefs.h"
+ 
+ #include <sys/types.h>
++#if 0
+ #define KERNEL
+ #define _KERNEL
++#endif
+ #include <sys/socket.h>
++#if 0
+ #undef KERNEL
+ #undef _KERNEL
++#endif
+ #include <net/route.h>
+ 
+ int main() {
+@@ -5195,11 +5214,15 @@
+ 
+ 
+ #include <sys/types.h>
++#if 0
+ #define KERNEL
+ #define _KERNEL
++#endif
+ #include <sys/socket.h>
++#if 0
+ #undef KERNEL
+ #undef _KERNEL
++#endif
+ #include <net/route.h>
+ 
+ 
+@@ -5262,11 +5285,15 @@
+ 
+ 
+ #include <sys/types.h>
++#if 0
+ #define KERNEL
+ #define _KERNEL
++#endif
+ #include <sys/socket.h>
++#if 0
+ #undef KERNEL
+ #undef _KERNEL
++#endif
+ #include <net/route.h>
+ 
+ 
+@@ -5329,11 +5356,15 @@
+ 
+ 
+ #include <sys/types.h>
++#if 0
+ #define KERNEL
+ #define _KERNEL
++#endif
+ #include <sys/socket.h>
++#if 0
+ #undef KERNEL
+ #undef _KERNEL
++#endif
+ #include <net/route.h>
+ 
+ 
+@@ -5396,11 +5427,15 @@
+ 
+ 
+ #include <sys/types.h>
++#if 0
+ #define KERNEL
+ #define _KERNEL
++#endif
+ #include <sys/socket.h>
++#if 0
+ #undef KERNEL
+ #undef _KERNEL
++#endif
+ #include <net/route.h>
+ 
+ 
+@@ -7699,6 +7734,7 @@
    fi
  fi
  
