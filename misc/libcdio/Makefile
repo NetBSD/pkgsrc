@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/02/14 18:26:28 jmmv Exp $
+# $NetBSD: Makefile,v 1.4 2004/04/08 17:40:06 drochner Exp $
 #
 
 DISTNAME=	libcdio-0.65
@@ -16,4 +16,10 @@ PKGCONFIG_OVERRIDE+=	libcdio.pc.in
 PKGCONFIG_OVERRIDE+=	libiso9660.pc.in
 GNU_CONFIGURE=		yes
 
+# XXX we just replace the freebsd module so save patches
+pre-patch:
+	${CP} ${FILESDIR}/_cdio_netbsd.c ${WRKSRC}/lib/_cdio_freebsd.c
+
+.include "../../devel/popt/buildlink2.mk"
+.include "../../audio/libcddb/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
