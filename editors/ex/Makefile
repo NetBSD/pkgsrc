@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2003/07/17 21:34:26 grant Exp $
+# $NetBSD: Makefile,v 1.4 2004/02/15 22:29:39 itojun Exp $
 #
 
-DISTNAME=	ex-020403
-PKGNAME=	ex-20020403
+DISTNAME=	ex-040103
+PKGNAME=	ex-20040103
 CATEGORIES=	editors
-MASTER_SITES=	http://download.berlios.de/ex-vi/
+MASTER_SITES=	http://ex-vi.berlios.de/archive/
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://ex-vi.berlios.de/
