@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2001/11/01 09:41:13 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2002/01/10 14:07:07 wiz Exp $
 
 DISTNAME=		gcc-2.95.2
 PKGNAME=		pgcc-2.95.2.1
@@ -14,6 +14,8 @@ HOMEPAGE=		http://goof.com/pcg/
 COMMENT=		Pentium GNU Compiler Collection
 
 BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
+
+BROKEN=			"Has not been updated to gcc-2.95.3 yet."
 
 # 'Pentium GCC' is optimized for the Intel Pentium processor, but should
 # work on all platforms on which GCC works.
