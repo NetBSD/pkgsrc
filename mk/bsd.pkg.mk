@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1168 2003/04/15 19:51:21 grant Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1169 2003/04/17 12:36:54 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -1399,8 +1399,24 @@ batch-check-distfiles:
 		${FALSE} ;;						\
 	esac
 
+# check for any vulnerabilities in the package
+# Please do not modify the leading "@" here
+check-vulnerable:
+	@if [ -f ${DISTDIR}/vulnerabilities ]; then			\
+		${SETENV} PKGNAME="${PKGNAME}"				\
+			${AWK} '/#.*/ { next }				\
+				{ s = sprintf("${PKG_ADMIN} pmatch \"%s\" %s && ${ECHO} \"*** WARNING - %s vulnerability in %s - see %s for more information ***\"", $$1, ENVIRON["PKGNAME"], $$2, ENVIRON["PKGNAME"], $$3); system(s); }' < ${DISTDIR}/vulnerabilities || ${FALSE}; \
+	fi
+
 .if !target(do-fetch)
 do-fetch:
+	@${ECHO_MSG} "${_PKGSRC_IN}> Checking for vulnerabilities in ${PKGNAME}"
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	vul=`${MAKE} ${MAKEFLAGS} check-vulnerable`;			\
+	case "$$vul" in							\
+	"")	;;							\
+	*)	${ECHO} "$$vul"; ${FALSE} ;;				\
+	esac
 .  if !empty(_ALLFILES)
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	${TEST} -d ${_DISTDIR} || ${MKDIR} ${_DISTDIR}
