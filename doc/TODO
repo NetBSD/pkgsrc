@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1402 2004/02/18 15:37:39 wiz Exp $
+$NetBSD: TODO,v 1.1403 2004/02/19 14:27:35 minskim Exp $
 
 Suggested new packages
 ======================
@@ -208,6 +208,7 @@ Suggested package updates
 	o grepmail-5.23
 	o gsasl-0.0.14
 	o gtetrinet-0.7.4
+	o gtk-doc-1.2
 	o gtkglext-1.0.5
 	o gtksee-0.5.5.1
 	o guile-pg-0.16 [pkg/24039]
@@ -225,6 +226,7 @@ Suggested package updates
 	o kdevelop-3.0.1
 	o lablgtk-1.2.6
 	o lavaps-2.4
+	o leafnode-1.9.50
 	o libcaca-0.9
 	o libesmtp-1.0.2
 	o libgphoto2-2.1.4
@@ -330,6 +332,7 @@ Suggested package updates
 	o tmda-1.0.2
 	o top-3.5b12.10
 	o transcode-0.6.12
+	o treecc-0.2.8
 	o ttf2pt1-3.4.3
 	o tuxpaint-0.9.13
 	o tuxpaint-stamps-2003.12.23
@@ -349,7 +352,7 @@ Suggested package updates
 	o xboard-4.2.7
 	o xdaliclock-2.20
 	o xephem-3.5.2
-	o xerces-c-2.4.0 [heinz?]
+	o xerces-c-2.5.0 [heinz?]
 	o xerces-j-2.4.0 [pkg/21725]
 	o xerces-j-2.6.1
 	o xine-lib-1rc3a
