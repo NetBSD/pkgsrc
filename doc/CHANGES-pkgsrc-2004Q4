@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2004Q4,v 1.1.2.106 2005/03/11 06:45:18 snj Exp $
+$NetBSD: CHANGES-pkgsrc-2004Q4,v 1.1.2.107 2005/03/11 06:55:56 snj Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2004Q4 branch:
@@ -223,3 +223,5 @@ Pullup ticket 350 - requested by Lubomir Sedlacik
 security fix for xpm
 Pullup ticket 351 - requested by Lubomir Sedlacik
 security fix for openmotif
+Pullup ticket 352 - requested by Lubomir Sedlacik
+security fix for lesstif
