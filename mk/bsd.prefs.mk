@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.88 2002/11/01 06:19:47 jlam Exp $
+# $NetBSD: bsd.prefs.mk,v 1.89 2002/11/01 06:29:23 jlam Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -302,8 +302,10 @@ _HOSTNAME!=		${UNAME} -n
 MAKEFLAGS+=		_HOSTNAME=${_HOSTNAME}
 .  endif
 WRKDIR_BASENAME?=	work.${_HOSTNAME:C|\..*||}
+MAKEFLAGS+=		OBJHOSTNAME="${OBJHOSTNAME}"
 .elif defined(OBJMACHINE)
 WRKDIR_BASENAME?=	work.${MACHINE_ARCH}
+MAKEFLAGS+=		OBJMACHINE="${OBJMACHINE}"
 .else
 WRKDIR_BASENAME?=	work
 .endif  
