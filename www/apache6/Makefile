@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2003/03/14 19:38:00 jlam Exp $
+# $NetBSD: Makefile,v 1.70 2003/04/15 01:39:15 grant Exp $
 #
 # This package does not compile in mod_ssl support hooks, as it conflicts
 # with IPv6-enable patch.
@@ -148,15 +148,15 @@ OWN_DIRS+=		/var/httpd
 OWN_DIRS+=		/var/log/httpd
 
 pre-patch:
-	${FIND} ${WRKSRC} -name '*.orig' -print | ${XARGS} ${RM} -f
+	@${FIND} ${WRKSRC} -name '*.orig' -print | ${XARGS} ${RM} -f
 
 post-patch:
-	cd ${WRKSRC}/src/support;					\
+	@cd ${WRKSRC}/src/support;					\
 	${SED}	-e "s|@INSTALL@|"`${TYPE} ${INSTALL} | ${AWK} '{ print $$NF }'`" -c -o ${LIBOWN} -g ${LIBGRP}|" \
 		apxs.pl > apxs.pl.sed;					\
 	${MV} apxs.pl.sed apxs.pl
-	cp ${WRKSRC}/conf/httpd.conf-dist ${WRKSRC}/conf/httpd.conf-dist-
-	${SED}	-e "s|#Listen ::|Listen ::|"				\
+	@cp ${WRKSRC}/conf/httpd.conf-dist ${WRKSRC}/conf/httpd.conf-dist-
+	@${SED}	-e "s|#Listen ::|Listen ::|"				\
 		-e "s|#Listen 0.0.0.0|Listen 0.0.0.0|"			\
 		${WRKSRC}/conf/httpd.conf-dist-				\
 		> ${WRKSRC}/conf/httpd.conf-dist
@@ -166,7 +166,7 @@ pre-configure:
 		${FILESDIR}/config.layout > ${WRKDIR}/config.layout
 
 pre-install:
-	${FIND} ${WRKSRC}/htdocs -name '*.orig' -print | ${XARGS} ${RM} -f
+	@${FIND} ${WRKSRC}/htdocs -name '*.orig' -print | ${XARGS} ${RM} -f
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/httpd

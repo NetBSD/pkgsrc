@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.124 2003/04/10 19:31:52 wiz Exp $
+# $NetBSD: Makefile,v 1.125 2003/04/15 01:39:15 grant Exp $
 #
 # This pkg does not compile in mod_ssl, only the `mod_ssl EAPI' (a set of
 # code hooks that allow mod_ssl to be compiled separately later, if desired).
@@ -153,27 +153,27 @@ MAKE_ENV+=		CHMOD="${CHMOD}" CHOWN="${CHOWN}" XARGS="${XARGS}"
 MAKE_ENV+=		FIND="${FIND}"
 
 post-extract:
-	${CP} ${FILESDIR}/ap_include_extern.h ${WRKSRC}/src/include
-	${CP} ${MODSSL_SRC}/pkg.addon/*.c ${WRKSRC}/src/modules/extra
-	${CP} ${MODSSL_SRC}/pkg.addon/*.html ${WRKSRC}/htdocs/manual/mod
-	${CP} ${MODSSL_SRC}/pkg.eapi/*.c ${WRKSRC}/src/ap
-	${CP} ${MODSSL_SRC}/pkg.eapi/*.h ${WRKSRC}/src/include
+	@${CP} ${FILESDIR}/ap_include_extern.h ${WRKSRC}/src/include
+	@${CP} ${MODSSL_SRC}/pkg.addon/*.c ${WRKSRC}/src/modules/extra
+	@${CP} ${MODSSL_SRC}/pkg.addon/*.html ${WRKSRC}/htdocs/manual/mod
+	@${CP} ${MODSSL_SRC}/pkg.eapi/*.c ${WRKSRC}/src/ap
+	@${CP} ${MODSSL_SRC}/pkg.eapi/*.h ${WRKSRC}/src/include
 
 pre-patch:
-	cd ${WRKSRC} && ${CAT}						\
+	@cd ${WRKSRC} && ${CAT}						\
 		${MODSSL_SRC}/pkg.addon/addon.patch			\
 		${MODSSL_SRC}/pkg.eapi/eapi.patch			\
 		${MODSSL_SRC}/pkg.sslcfg/sslcfg.patch			\
 		${MODSSL_SRC}/pkg.sslmod/sslmod.patch			\
 		${MODSSL_SRC}/pkg.sslsup/sslsup.patch			\
 		| ${PATCH} ${PATCH_ARGS}
-	cd ${WRKSRC} && ${TAIL} +160					\
+	@cd ${WRKSRC} && ${TAIL} +160					\
 		${MODSSL_SRC}/pkg.ssldoc/ssldoc.patch			\
 		| ${PATCH} ${PATCH_ARGS}
-	${FIND} ${WRKSRC} -name '*.orig' -print | ${XARGS} ${RM} -f
+	@${FIND} ${WRKSRC} -name '*.orig' -print | ${XARGS} ${RM} -f
 
 post-patch:
-	cd ${WRKSRC}/src/support;					\
+	@cd ${WRKSRC}/src/support;					\
 	${SED}	-e "s|@INSTALL@|"`${TYPE} ${INSTALL} | ${AWK} '{ print $$NF }'`" -c -o ${LIBOWN} -g ${LIBGRP}|" \
 		apxs.pl > apxs.pl.sed;					\
 	${MV} apxs.pl.sed apxs.pl
@@ -183,7 +183,7 @@ pre-configure:
 		${FILESDIR}/config.layout > ${WRKDIR}/config.layout
 
 pre-install:
-	${FIND} ${WRKSRC}/htdocs -name '*.orig' -print | ${XARGS} ${RM} -f
+	@${FIND} ${WRKSRC}/htdocs -name '*.orig' -print | ${XARGS} ${RM} -f
 
 post-install:
 .if !defined(NOPIC)
