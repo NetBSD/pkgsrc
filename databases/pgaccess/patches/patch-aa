@@ -1,12 +1,16 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/09/21 19:12:52 jlam Exp $
+$NetBSD: patch-aa,v 1.2 2003/01/11 23:04:12 jlam Exp $
 
---- ./main.tcl.orig	Mon Sep  6 09:29:18 1999
-+++ ./main.tcl	Tue Sep 21 15:00:02 1999
-@@ -166,7 +166,6 @@
+--- Makefile.orig	Wed Aug 28 09:11:22 2002
++++ Makefile
+@@ -7,9 +7,8 @@
+ #
+ #-------------------------------------------------------------------------
  
- proc {main} {argc argv} {
- global PgAcVar CurrentDB tcl_platform
--	load libpgtcl[info sharedlibextension]
- 	catch {Mainlib::draw_tabs}
- 	set PgAcVar(opendb,username) {}
- 	set PgAcVar(opendb,password) {}
+-bindir = /usr/bin/X11
+-libdir = /usr/lib/pgaccess
+-wish = /usr/bin/wish
++bindir = ${PREFIX}/bin
++libdir = ${PREFIX}/lib/pgaccess
+ 
+ pgaccess: 
+ 	chmod a+x pgaccess.tcl

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:12:23 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/01/11 23:04:11 jlam Exp $
 bin/pgaccess
 share/doc/html/pgaccess/a_right.gif
 share/doc/html/pgaccess/addindex.gif
@@ -54,19 +54,26 @@ share/doc/html/pgaccess/tutorial/tut_user.html
 share/doc/html/pgaccess/vdesigner.gif
 share/doc/html/pgaccess/whatsnew.html
 share/doc/html/pgaccess/win32.html
-share/examples/pgaccess/formdemo.sql
+share/examples/pgaccess/README.demo
+share/examples/pgaccess/formdemo72.sql
+share/examples/pgaccess/formdemo73.sql
 share/pgaccess/images/icon_button.gif
 share/pgaccess/images/icon_checkbutton.gif
+share/pgaccess/images/icon_combobox.gif
 share/pgaccess/images/icon_entry.gif
 share/pgaccess/images/icon_frame.gif
 share/pgaccess/images/icon_label.gif
 share/pgaccess/images/icon_listbox.gif
 share/pgaccess/images/icon_query.gif
 share/pgaccess/images/icon_radiobutton.gif
+share/pgaccess/images/icon_spinbox.gif
 share/pgaccess/images/icon_text.gif
+share/pgaccess/lib/connections.tcl
 share/pgaccess/lib/database.tcl
+share/pgaccess/lib/diagrams.tcl
 share/pgaccess/lib/forms.tcl
 share/pgaccess/lib/functions.tcl
+share/pgaccess/lib/graphs.tcl
 share/pgaccess/lib/help.tcl
 share/pgaccess/lib/help/abort.hlp
 share/pgaccess/lib/help/add_records.hlp
@@ -97,6 +104,7 @@ share/pgaccess/lib/help/data_types.hlp
 share/pgaccess/lib/help/datefunc.hlp
 share/pgaccess/lib/help/declare.hlp
 share/pgaccess/lib/help/delete.hlp
+share/pgaccess/lib/help/diagrams.hlp
 share/pgaccess/lib/help/drop_aggregate.hlp
 share/pgaccess/lib/help/drop_database.hlp
 share/pgaccess/lib/help/drop_function.hlp
@@ -117,6 +125,7 @@ share/pgaccess/lib/help/forms.hlp
 share/pgaccess/lib/help/functions.hlp
 share/pgaccess/lib/help/geomfunc.hlp
 share/pgaccess/lib/help/grant.hlp
+share/pgaccess/lib/help/graphs.hlp
 share/pgaccess/lib/help/history.hlp
 share/pgaccess/lib/help/index.hlp
 share/pgaccess/lib/help/inheritance.hlp
@@ -132,7 +141,9 @@ share/pgaccess/lib/help/move.hlp
 share/pgaccess/lib/help/mvcc.hlp
 share/pgaccess/lib/help/new_query.hlp
 share/pgaccess/lib/help/new_table.hlp
+share/pgaccess/lib/help/newteam.hlp
 share/pgaccess/lib/help/notify.hlp
+share/pgaccess/lib/help/open_database.hlp
 share/pgaccess/lib/help/open_query.hlp
 share/pgaccess/lib/help/open_table.hlp
 share/pgaccess/lib/help/pgfunctions.hlp
@@ -142,7 +153,6 @@ share/pgaccess/lib/help/reports.hlp
 share/pgaccess/lib/help/reset.hlp
 share/pgaccess/lib/help/revoke.hlp
 share/pgaccess/lib/help/rollback.hlp
-share/pgaccess/lib/help/schema.hlp
 share/pgaccess/lib/help/scripts.hlp
 share/pgaccess/lib/help/select.hlp
 share/pgaccess/lib/help/select_into.hlp
@@ -161,6 +171,9 @@ share/pgaccess/lib/help/view_table_structure.hlp
 share/pgaccess/lib/help/views.hlp
 share/pgaccess/lib/help/visual_designer.hlp
 share/pgaccess/lib/help/y2k.hlp
+share/pgaccess/lib/importexport.tcl
+share/pgaccess/lib/languages/chinese_big5
+share/pgaccess/lib/languages/chinese_gb
 share/pgaccess/lib/languages/czech
 share/pgaccess/lib/languages/deutsch
 share/pgaccess/lib/languages/euskara
@@ -175,23 +188,113 @@ share/pgaccess/lib/languages/russian.koi8r
 share/pgaccess/lib/languages/russian_win
 share/pgaccess/lib/languages/spanish
 share/pgaccess/lib/mainlib.tcl
+share/pgaccess/lib/plugins/pgmonitor.tcl
 share/pgaccess/lib/preferences.tcl
-share/pgaccess/lib/qed
+share/pgaccess/lib/printer.tcl
 share/pgaccess/lib/queries.tcl
 share/pgaccess/lib/reports.tcl
-share/pgaccess/lib/schema.tcl
 share/pgaccess/lib/scripts.tcl
 share/pgaccess/lib/sequences.tcl
+share/pgaccess/lib/stack.tcl
+share/pgaccess/lib/syntax.tcl
 share/pgaccess/lib/tables.tcl
 share/pgaccess/lib/users.tcl
 share/pgaccess/lib/views.tcl
 share/pgaccess/lib/visualqb.tcl
-share/pgaccess/main.tcl
+share/pgaccess/lib/widgets/BWidget-1.4.1/arrow.tcl
+share/pgaccess/lib/widgets/BWidget-1.4.1/bitmap.tcl
+share/pgaccess/lib/widgets/BWidget-1.4.1/button.tcl
+share/pgaccess/lib/widgets/BWidget-1.4.1/buttonbox.tcl
+share/pgaccess/lib/widgets/BWidget-1.4.1/color.tcl
+share/pgaccess/lib/widgets/BWidget-1.4.1/combobox.tcl
+share/pgaccess/lib/widgets/BWidget-1.4.1/dialog.tcl
+share/pgaccess/lib/widgets/BWidget-1.4.1/dragsite.tcl
+share/pgaccess/lib/widgets/BWidget-1.4.1/dropsite.tcl
+share/pgaccess/lib/widgets/BWidget-1.4.1/dynhelp.tcl
+share/pgaccess/lib/widgets/BWidget-1.4.1/entry.tcl
+share/pgaccess/lib/widgets/BWidget-1.4.1/font.tcl
+share/pgaccess/lib/widgets/BWidget-1.4.1/images/bold.gif
+share/pgaccess/lib/widgets/BWidget-1.4.1/images/copy.gif
+share/pgaccess/lib/widgets/BWidget-1.4.1/images/cut.gif
+share/pgaccess/lib/widgets/BWidget-1.4.1/images/dragfile.gif
+share/pgaccess/lib/widgets/BWidget-1.4.1/images/dragicon.gif
+share/pgaccess/lib/widgets/BWidget-1.4.1/images/error.gif
+share/pgaccess/lib/widgets/BWidget-1.4.1/images/file.gif
+share/pgaccess/lib/widgets/BWidget-1.4.1/images/folder.gif
+share/pgaccess/lib/widgets/BWidget-1.4.1/images/hourglass.gif
+share/pgaccess/lib/widgets/BWidget-1.4.1/images/info.gif
+share/pgaccess/lib/widgets/BWidget-1.4.1/images/italic.gif
+share/pgaccess/lib/widgets/BWidget-1.4.1/images/minus.xbm
+share/pgaccess/lib/widgets/BWidget-1.4.1/images/new.gif
+share/pgaccess/lib/widgets/BWidget-1.4.1/images/opcopy.xbm
+share/pgaccess/lib/widgets/BWidget-1.4.1/images/open.gif
+share/pgaccess/lib/widgets/BWidget-1.4.1/images/openfold.gif
+share/pgaccess/lib/widgets/BWidget-1.4.1/images/oplink.xbm
+share/pgaccess/lib/widgets/BWidget-1.4.1/images/opmove.xbm
+share/pgaccess/lib/widgets/BWidget-1.4.1/images/overstrike.gif
+share/pgaccess/lib/widgets/BWidget-1.4.1/images/palette.gif
+share/pgaccess/lib/widgets/BWidget-1.4.1/images/passwd.gif
+share/pgaccess/lib/widgets/BWidget-1.4.1/images/paste.gif
+share/pgaccess/lib/widgets/BWidget-1.4.1/images/plus.xbm
+share/pgaccess/lib/widgets/BWidget-1.4.1/images/print.gif
+share/pgaccess/lib/widgets/BWidget-1.4.1/images/question.gif
+share/pgaccess/lib/widgets/BWidget-1.4.1/images/redo.gif
+share/pgaccess/lib/widgets/BWidget-1.4.1/images/save.gif
+share/pgaccess/lib/widgets/BWidget-1.4.1/images/target.xbm
+share/pgaccess/lib/widgets/BWidget-1.4.1/images/underline.gif
+share/pgaccess/lib/widgets/BWidget-1.4.1/images/undo.gif
+share/pgaccess/lib/widgets/BWidget-1.4.1/images/warning.gif
+share/pgaccess/lib/widgets/BWidget-1.4.1/init.tcl
+share/pgaccess/lib/widgets/BWidget-1.4.1/label.tcl
+share/pgaccess/lib/widgets/BWidget-1.4.1/labelentry.tcl
+share/pgaccess/lib/widgets/BWidget-1.4.1/labelframe.tcl
+share/pgaccess/lib/widgets/BWidget-1.4.1/lang/de.rc
+share/pgaccess/lib/widgets/BWidget-1.4.1/lang/en.rc
+share/pgaccess/lib/widgets/BWidget-1.4.1/lang/es.rc
+share/pgaccess/lib/widgets/BWidget-1.4.1/lang/fr.rc
+share/pgaccess/lib/widgets/BWidget-1.4.1/listbox.tcl
+share/pgaccess/lib/widgets/BWidget-1.4.1/mainframe.tcl
+share/pgaccess/lib/widgets/BWidget-1.4.1/messagedlg.tcl
+share/pgaccess/lib/widgets/BWidget-1.4.1/notebook.tcl
+share/pgaccess/lib/widgets/BWidget-1.4.1/pagesmgr.tcl
+share/pgaccess/lib/widgets/BWidget-1.4.1/panedw.tcl
+share/pgaccess/lib/widgets/BWidget-1.4.1/passwddlg.tcl
+share/pgaccess/lib/widgets/BWidget-1.4.1/pkgIndex.tcl
+share/pgaccess/lib/widgets/BWidget-1.4.1/progressbar.tcl
+share/pgaccess/lib/widgets/BWidget-1.4.1/progressdlg.tcl
+share/pgaccess/lib/widgets/BWidget-1.4.1/scrollframe.tcl
+share/pgaccess/lib/widgets/BWidget-1.4.1/scrollview.tcl
+share/pgaccess/lib/widgets/BWidget-1.4.1/scrollw.tcl
+share/pgaccess/lib/widgets/BWidget-1.4.1/separator.tcl
+share/pgaccess/lib/widgets/BWidget-1.4.1/spinbox.tcl
+share/pgaccess/lib/widgets/BWidget-1.4.1/titleframe.tcl
+share/pgaccess/lib/widgets/BWidget-1.4.1/tree.tcl
+share/pgaccess/lib/widgets/BWidget-1.4.1/utils.tcl
+share/pgaccess/lib/widgets/BWidget-1.4.1/widget.tcl
+share/pgaccess/lib/widgets/BWidget-1.4.1/xpm2image.tcl
+share/pgaccess/lib/widgets/icons1.0/LICENSE
+share/pgaccess/lib/widgets/icons1.0/icons.tcl
+share/pgaccess/lib/widgets/icons1.0/pkgIndex.tcl
+share/pgaccess/lib/widgets/icons1.0/tkIcons
+share/pgaccess/lib/widgets/icons1.0/tkIcons-sample.slick
+share/pgaccess/lib/widgets/tablelist2.7/pkgIndex.tcl
+share/pgaccess/lib/widgets/tablelist2.7/scripts/mwutil.tcl
+share/pgaccess/lib/widgets/tablelist2.7/scripts/tablelistSortByColumn.tcl
+share/pgaccess/lib/widgets/tablelist2.7/scripts/tablelistWidget.tcl
+share/pgaccess/lib/widgets/tablelist2.7/scripts/tclIndex
+share/pgaccess/lib/widgets/tablelist2.7/tablelist.tcl
+share/pgaccess/pgaccess.tcl
+@dirrm share/pgaccess/lib/widgets/tablelist2.7/scripts
+@dirrm share/pgaccess/lib/widgets/tablelist2.7
+@dirrm share/pgaccess/lib/widgets/icons1.0
+@dirrm share/pgaccess/lib/widgets/BWidget-1.4.1/lang
+@dirrm share/pgaccess/lib/widgets/BWidget-1.4.1/images
+@dirrm share/pgaccess/lib/widgets/BWidget-1.4.1
+@dirrm share/pgaccess/lib/widgets
+@dirrm share/pgaccess/lib/plugins
 @dirrm share/pgaccess/lib/languages
 @dirrm share/pgaccess/lib/help
 @dirrm share/pgaccess/lib
-@dirrm share/pgaccess/images
-@dirrm share/pgaccess
 @dirrm share/examples/pgaccess
 @dirrm share/doc/html/pgaccess/tutorial
 @dirrm share/doc/html/pgaccess
