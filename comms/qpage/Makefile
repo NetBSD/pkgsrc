@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/08/30 21:33:54 recht Exp $
+# $NetBSD: Makefile,v 1.10 2005/03/03 15:13:39 wiz Exp $
 #
 
 DISTNAME=	qpage-3.3
@@ -14,8 +14,9 @@ GNU_CONFIGURE=	yes
 
 CONFIGURE_ENV+=	MKDIR_PATH=${MKDIR:Q}
 
-CPPFLAGS+=	`${AWK} -F: '/^uucp:/ { 				\
-		printf(\"-DDAEMONUSER=%s -DDAEMONGROUP=%s\", $$3, $$4); }' \
-		/etc/passwd`
+CPPFLAGS+=	${USERFLAGS}
 
 .include "../../mk/bsd.pkg.mk"
+
+USERFLAGS!=	${AWK} -F: '/^uucp:/ { printf("-DDAEMONUSER=%s -DDAEMONGROUP=%s", $$3, $$4); }' \
+		/etc/passwd
