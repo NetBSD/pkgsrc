@@ -1,3 +1,4 @@
+@comment $NetBSD: PLIST,v 1.2 1997/11/06 09:58:35 agc Exp $
 bin/workman
 lib/help/workman.info
 man/man1/workman.1.gz

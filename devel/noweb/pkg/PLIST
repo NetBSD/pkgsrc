@@ -1,3 +1,4 @@
+@comment $NetBSD: PLIST,v 1.2 1997/11/06 09:59:32 agc Exp $
 bin/htmltoc
 bin/nodefs
 bin/noindex

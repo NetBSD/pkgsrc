@@ -1,3 +1,4 @@
+@comment $NetBSD: PLIST,v 1.2 1997/11/06 09:57:26 agc Exp $
 bin/rar
 man/cat1/rar.1
 share/rar/dos.sfx

@@ -1,3 +1,4 @@
+@comment $NetBSD: PLIST,v 1.3 1997/11/06 10:02:00 agc Exp $
 bin/kp
 lib/kp/cursor.tcl
 lib/kp/bit_saddy.h
