@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.3 1998/08/07 10:40:31 agc Exp $
+$NetBSD: patch-ab,v 1.4 1998/08/31 20:29:28 tron Exp $
 
---- lib-src/Makefile.in.orig	Mon Jul 28 07:50:45 1997
-+++ lib-src/Makefile.in	Sat Feb 21 23:22:00 1998
-@@ -276,7 +276,7 @@
+--- lib-src/Makefile.in.orig	Sun Aug  2 02:22:55 1998
++++ lib-src/Makefile.in	Mon Aug 31 20:50:30 1998
+@@ -278,7 +278,7 @@
          if [ `(cd ${archlibdir} && /bin/pwd)` \
               != `(cd ${srcdir} && /bin/pwd)` ]; then \
  	  for file in ${SCRIPTS}; do \
@@ -11,17 +11,17 @@ $NetBSD: patch-ab,v 1.3 1998/08/07 10:40:31 agc Exp $
  	  done ; \
  	fi
  
-@@ -284,12 +284,14 @@
+@@ -286,12 +286,14 @@
  	@echo
  	@echo "Installing utilities for users to run."
  	for file in ${INSTALLABLES} ; do \
--	  $(INSTALL_PROGRAM) $${file} ${bindir}/$${file} ; \
+-	  $(INSTALL_PROGRAM) $(INSTALL_STRIP) $${file} ${bindir}/$${file} ; \
 -	  chmod a+rx ${bindir}/$${file}; \
-+	  if [ $${file} = emacsclient ]; then \
-+	    $(INSTALL_PROGRAM) $${file} ${bindir}/$${file} ; \
-+	  else \
-+	    $(INSTALL_PROGRAM) $${file} ${bindir}/emacs-$${file} ; \
-+	  fi ; \
++          if [ $${file} = emacsclient ]; then \
++            $(INSTALL_PROGRAM) $${file} ${bindir}/$${file} ; \
++          else \
++            $(INSTALL_PROGRAM) $${file} ${bindir}/emacs-$${file} ; \
++          fi ; \
  	done
  	for file in ${INSTALLABLE_SCRIPTS} ; do \
 -	  $(INSTALL_PROGRAM) ${srcdir}/$${file} ${bindir}/$${file} ; \
