@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/03/08 23:55:23 minskim Exp $
+# $NetBSD: Makefile,v 1.14 2004/03/09 23:06:59 minskim Exp $
 
 DISTNAME=	ns-src-2.27
 PKGNAME=	${DISTNAME:S/-src//}
@@ -35,7 +35,7 @@ INSTALLATION_DIRS=	bin man/man1
 .include "../../lang/tcl/buildlink3.mk"
 .include "../../lang/tcl-otcl/buildlink3.mk"
 .include "../../net/libpcap/buildlink3.mk"
-.include "../../x11/tk83/buildlink3.mk"
+.include "../../x11/tk/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 
 # Remove a left over executable in the source tarball.
