@@ -1,25 +1,13 @@
-$NetBSD: patch-af,v 1.1 1999/02/10 22:31:56 jwise Exp $
+$NetBSD: patch-af,v 1.2 1999/11/26 22:12:37 hubertf Exp $
 
-*** icb/c_log.c.orig	Fri Feb 24 16:20:18 1995
---- icb/c_log.c	Wed Feb 10 17:06:17 1999
-***************
-*** 6,11 ****
---- 6,12 ----
-  #include "icb.h"
-  #include "externs.h"
-  #include <time.h>
-+ #include <errno.h>
-  
-  FILE *logfp = NULL;
-  
-***************
-*** 45,52 ****
-  	time_t time();
-  	struct tm *t, *localtime();
-  	time_t clock;
-- 	extern int errno, sys_nerr;
-- 	extern char *sys_errlist[];
-  
-  	/* determine pathname to use */
-  	if (path == NULL || *path == '\0')
---- 46,51 ----
+diff -x *.orig -urN ./icb/oset.c /usr/pkgsrc/net/icb/work.i386.unpatched/icb-5.0.9/icb/oset.c
+--- ./icb/oset.c	Fri Feb 24 22:20:24 1995
++++ /usr/pkgsrc/net/icb/work.i386.unpatched/icb-5.0.9/icb/oset.c	Fri Nov 26 22:56:31 1999
+@@ -39,6 +39,7 @@
+ 	{ "pagesize",	V_INT,		(char *)&gv.pagesize },
+ 	{ "pauseonshell",	V_BOOLEAN,	(char *)&gv.pauseonshell },
+ 	{ "personalto", V_STRING,	(char *)&gv.personalto },
++	{ "printtime",	V_BOOLEAN,	(char *)&gv.printtime },
+ 	{ "restricted",	V_BOOLEAN,	(char *)&gv.restricted },
+ 	{ "tabreply",	V_BOOLEAN,	(char *)&gv.tabreply },
+ 	{ "timedisplay",	V_STRING,	(char *)&gv.timedisplay },

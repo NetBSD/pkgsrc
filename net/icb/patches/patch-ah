@@ -1,11 +1,14 @@
---- murgil/getrname.c.orig	Tue Jun  1 10:28:17 1999
-+++ murgil/getrname.c	Tue Jun  1 10:34:27 1999
-@@ -14,7 +14,7 @@ int s;			/* connected socket fd */
- {
- 	static char rname[24];
- 	struct hostent *host;
--#if defined(linux)
-+#if defined(linux) || defined(__NetBSD__)
- #define PEER_CAST (struct sockaddr *)
- #define HOST_CAST (char *)
+$NetBSD: patch-ah,v 1.2 1999/11/26 22:12:37 hubertf Exp $
+
+diff -x *.orig -urN ./icb/protos.h /usr/pkgsrc/net/icb/work.i386.unpatched/icb-5.0.9/icb/protos.h
+--- ./icb/protos.h	Fri Feb 24 22:20:25 1995
++++ /usr/pkgsrc/net/icb/work.i386.unpatched/icb-5.0.9/icb/protos.h	Fri Nov 26 22:56:28 1999
+@@ -64,7 +64,7 @@
+ int inserttab(void);
+ int ishushed(char *nick);
+ int lcaseit(char *s);
+-#ifdef linux
++#if defined(linux) || (defined(BSD) && BSD >= 199306)
+ int linebuffer(FILE *fp);
  #else
+ int linebuffer(struct _iobuf *fp);
