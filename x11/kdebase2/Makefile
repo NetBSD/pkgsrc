@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2004/03/26 02:28:01 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2004/05/01 23:57:00 snj Exp $
 
 DISTNAME=	kdebase-2.2.2
 PKGREVISION=	6
@@ -13,7 +13,7 @@ BUILD_DEPENDS+=	qt2-designer-kde>=2.3.1nb2:../../x11/qt2-designer-kde
 
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 
 CONFIGURE_ARGS+=	--with-ssl-dir="${SSLBASE}" \
 			--with-ldap=${BUILDLINK_PREFIX.openldap} \
@@ -41,7 +41,7 @@ BUILD_DEFS+=		KDE2_NSPLUGINS
 PLIST_SRC+=		${PKGDIR}/PLIST.nsplugins
 CONFIGURE_ARGS+=	--with-motif-includes="${MOTIFBASE}/include" \
 			--with-motif-libraries="${MOTIFBASE}/lib"
-.include "../../mk/motif.buildlink2.mk"
+.include "../../mk/motif.buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--without-motif
 .endif
@@ -120,8 +120,8 @@ post-install:
 	${CP} -f ${WRKDIR}/kdmrc.ad kdmrc
 .endif
 
-.include "../../databases/openldap/buildlink2.mk"
-.include "../../x11/kde2/buildlink2.mk"
-.include "../../x11/kdelibs2/buildlink2.mk"
+.include "../../databases/openldap/buildlink3.mk"
+.include "../../x11/kde2/kde2.mk"
+.include "../../x11/kdelibs2/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

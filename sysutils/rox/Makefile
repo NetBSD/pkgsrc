@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2004/01/23 21:50:48 jmmv Exp $
+# $NetBSD: Makefile,v 1.19 2004/05/02 00:00:17 snj Exp $
 #
 
 DISTNAME=	rox-1.2.0
@@ -16,7 +16,7 @@ DEPENDS+=	rox-base>=1.0.2nb1:../../sysutils/rox-base
 WRKSRC=		${WRKDIR}/${DISTNAME}/ROX-Filer/src
 DIST_SUBDIR=	rox
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_X11=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-gtk2
@@ -45,6 +45,6 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/${DISTNAME}/rox ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKDIR}/${DISTNAME}/rox.1 ${PREFIX}/man/man1
 
-.include "../../textproc/libxml2/buildlink2.mk"
-.include "../../x11/gtk2/buildlink2.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

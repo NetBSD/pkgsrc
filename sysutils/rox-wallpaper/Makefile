@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/01/20 12:26:16 agc Exp $
+# $NetBSD: Makefile,v 1.11 2004/05/02 00:00:18 snj Exp $
 #
 
 DISTNAME=	Wallpaper-0.1.1
@@ -20,7 +20,7 @@ DIST_SUBDIR=	rox
 
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=	yes
 
 PYTHON_PATCH_SCRIPTS=	AppRun
 
@@ -37,5 +37,5 @@ do-install:
 	${CP} -Rf ${WRKSRC} ${PREFIX}/share/rox
 
 .include "../../lang/python/application.mk"
-.include "../../x11/pygtk/buildlink2.mk"
+.include "../../x11/pygtk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
