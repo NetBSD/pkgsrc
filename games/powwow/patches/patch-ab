@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1 2002/02/13 18:43:39 jdolecek Exp $
+$NetBSD: patch-ab,v 1.2 2002/02/16 15:24:47 jdolecek Exp $
 
 --- make_it.orig	Thu Jan 13 22:50:01 2000
 +++ make_it	Wed Feb 13 16:21:44 2002
@@ -10,7 +10,7 @@ $NetBSD: patch-ab,v 1.1 2002/02/13 18:43:39 jdolecek Exp $
 +	NetBSD)
 +		echo 'Making Powwow for NetBSD'
 +		CC='gcc'
-+		CF='-O2 -pipe -DUSE_SGTTY -DBSD_LIKE -DUSE_RANDOM -DUSE_REGEX'
++		CF='-O2 -pipe -DUSE_SGTTY -DBSD_LIKE -DUSE_RANDOM -DUSE_REGEXP'
 +		if [ ! -z "$POWWOW_DIR" ]; then
 +		  CF="$CF -DPOWWOW_DIR=\\\"$POWWOW_DIR\\\""
 +		fi
