@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2003/07/03 13:09:47 seb Exp $
+# $NetBSD: Makefile.common,v 1.7 2003/07/17 21:40:03 grant Exp $
 
 DISTNAME=	aalib-${DIST_VERS}
 WRKSRC=		${WRKDIR}/aalib-1.4.0
@@ -8,7 +8,7 @@ MASTER_SITES+=	${MASTER_SITE_SOURCEFORGE:=aa-project/}
 DIST_VERS=	1.4rc4
 BASE_VERS=	1.4.0.4
 
-MAINTAINER?=	manu@netbsd.org
+MAINTAINER?=	manu@NetBSD.org
 HOMEPAGE=	http://aa-project.sourceforge.net/aalib/
 
 DISTINFO_FILE=		${.CURDIR}/../../graphics/aalib/distinfo

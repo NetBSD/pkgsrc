@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.96 2003/06/19 17:12:01 kristerw Exp $
+# $NetBSD: Makefile,v 1.97 2003/07/17 21:36:30 grant Exp $
 #
 
 DISTNAME=		xmame-0.70.1
@@ -6,7 +6,7 @@ CATEGORIES=		emulators games x11
 MASTER_SITES=		http://x.mame.net/download/
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		kristerw@netbsd.org
+MAINTAINER=		kristerw@NetBSD.org
 HOMEPAGE=		http://x.mame.net/
 COMMENT=		X11 emulator for old arcade machines
 

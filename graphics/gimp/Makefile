@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.86 2003/06/18 10:26:54 drochner Exp $
+# $NetBSD: Makefile,v 1.87 2003/07/17 21:40:52 grant Exp $
 #
 
 DISTNAME=	gimp-1.2.5
 CATEGORIES=	graphics
 DISTFILES=	# nothing
 
-MAINTAINER=	hubertf@netbsd.org
+MAINTAINER=	hubertf@NetBSD.org
 HOMEPAGE=	http://www.gimp.org/
 COMMENT=	GNU Image Manipulation Program
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2003/06/30 01:43:12 seb Exp $
+# $NetBSD: Makefile,v 1.20 2003/07/17 21:34:41 grant Exp $
 
 DISTNAME=	mule-2.3
 PKGREVISION=	1
@@ -6,7 +6,7 @@ WRKSRC=		${WRKDIR}/mule
 CATEGORIES=	editors
 MASTER_SITES=	ftp://ftp.m17n.org/pub/mule/
 
-MAINTAINER=	kei@netbsd.org
+MAINTAINER=	kei@NetBSD.org
 HOMEPAGE=	http://www.m17n.org/mule/MulePage.en.html
 COMMENT=	Multilingual GNU editing macros (editor)
 

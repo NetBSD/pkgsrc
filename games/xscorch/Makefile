@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/07/13 13:51:55 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2003/07/17 21:39:45 grant Exp $
 #
 
 DISTNAME=	xscorch-0.1.15
@@ -6,7 +6,7 @@ PKGREVISION=	2
 CATEGORIES=	games
 MASTER_SITES=	http://chaos2.org/xscorch/
 
-MAINTAINER=	zuntum@netbsd.org
+MAINTAINER=	zuntum@NetBSD.org
 HOMEPAGE=	http://chaos2.org/xscorch/
 COMMENT=	Multiplayer tank shoot-em-up
 

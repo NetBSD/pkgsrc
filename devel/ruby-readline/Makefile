@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/07/13 13:51:26 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/17 21:33:47 grant Exp $
 #
 
 DISTNAME=		${RUBY_DISTNAME}
@@ -8,7 +8,7 @@ WRKSRC=			${RUBY_WRKSRC}/ext/readline
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_RUBY}
 
-MAINTAINER=		taca@netbsd.org
+MAINTAINER=		taca@NetBSD.org
 HOMEPAGE=		http://www.ruby-lang.org/en/
 COMMENT=		Ruby extension to readline library
 

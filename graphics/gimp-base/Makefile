@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2003/07/13 13:52:02 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2003/07/17 21:40:53 grant Exp $
 #
 
 DISTNAME=		gimp-1.2.5
@@ -10,7 +10,7 @@ MASTER_SITES=		ftp://ftp.gimp.org/pub/gimp/v1.2/v1.2.5/ \
 			ftp://ftp.cs.umn.edu/pub/gimp/gimp/v1.2/v1.2.5/
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		hubertf@netbsd.org
+MAINTAINER=		hubertf@NetBSD.org
 HOMEPAGE=		http://www.gimp.org/
 COMMENT=		GNU Image Manipulation Program (base)
 

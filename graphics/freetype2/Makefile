@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2003/04/17 07:19:51 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2003/07/17 21:40:35 grant Exp $
 #
 
 DISTNAME=	freetype-2.1.4
@@ -13,7 +13,7 @@ MASTER_SITES=	ftp://ftp.freetype.org/freetype/freetype2/		\
 # ${MASTER_SITE_SOURCEFORGE:=freetype/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	rh@netbsd.org
+MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://www.freetype.org/
 COMMENT=	font rendering engine and library API
 

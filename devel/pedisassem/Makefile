@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/06/02 01:20:19 jschauma Exp $
+# $NetBSD: Makefile,v 1.8 2003/07/17 21:33:03 grant Exp $
 
 DISTNAME=	dsasmsrc
 PKGNAME=	pedisassem-0.23
@@ -7,7 +7,7 @@ CATEGORIES=	devel
 MASTER_SITES=	http://www.geocities.com/SiliconValley/Foothills/4078/
 EXTRACT_SUFX=	.zip
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.geocities.com/SiliconValley/Foothills/4078/
 COMMENT=	disassembler for Win32 code
 

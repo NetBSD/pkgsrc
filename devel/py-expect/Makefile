@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/09/21 23:46:48 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2003/07/17 21:33:26 grant Exp $
 #
 
 DISTNAME=	ExpectPy-1.9b1
@@ -6,7 +6,7 @@ PKGNAME=	${PYPKGPREFIX}-expect-1.9b1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pub/sourceforge/expectpy/}
 
-MAINTAINER=	jwise@netbsd.org
+MAINTAINER=	jwise@NetBSD.org
 HOMEPAGE=	http://www.sourceforge.net/projects/expectpy/
 COMMENT=	Expect module for Python
 
