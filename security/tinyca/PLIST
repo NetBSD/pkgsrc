@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/01/22 18:11:56 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/02/28 22:01:22 adrianp Exp $
 bin/tinyca
 share/tinyca/CA.pm
 share/tinyca/CERT.pm
@@ -9,8 +9,6 @@ share/tinyca/GUI/TCONFIG.pm
 share/tinyca/GUI/WORDS.pm
 share/tinyca/GUI/X509_browser.pm
 share/tinyca/GUI/X509_infobox.pm
-share/tinyca/GUI/pod2htmd.x~~
-share/tinyca/GUI/pod2htmi.x~~
 share/tinyca/HELPERS.pm
 share/tinyca/KEY.pm
 share/tinyca/OpenSSL.pm
