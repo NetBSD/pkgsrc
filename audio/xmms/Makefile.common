@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2004/02/17 16:23:53 minskim Exp $
+# $NetBSD: Makefile.common,v 1.6.2.1 2004/04/27 08:16:42 agc Exp $
 #
 
 DISTNAME=	xmms-1.2.7
@@ -27,7 +27,7 @@ SHLIBTOOL_OVERRIDE=	libtool
 # Broken configure script assumes that iconv_open lives in libc; work around. 
 CPPFLAGS+=		-DHAVE_ICONV_OPEN=1
 CONFIGURE_ENV+=		ac_cv_func_iconv_open=yes
-LIBS+=			${BUILDLINK_LIBICONV_LDADD}
+LDFLAGS+=		${BUILDLINK_LDADD.iconv}
 
 .include "../../mk/bsd.prefs.mk"
 
