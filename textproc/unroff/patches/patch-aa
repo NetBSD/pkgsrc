@@ -1,4 +1,4 @@
-$NetBSD: patch-a,v 1.4 1999/12/08 14:11:34 rh Exp $
+$NetBSD: patch-aa,v 1.1 2001/04/05 15:54:57 wiz Exp $
 
 --- src/Makefile.orig	Wed Aug 23 14:12:48 1995
 +++ src/Makefile	Wed Dec  8 15:10:43 1999
