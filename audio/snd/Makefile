@@ -1,14 +1,11 @@
-# $NetBSD: Makefile,v 1.6 1998/05/06 09:32:43 agc Exp $
+# $NetBSD: Makefile,v 1.7 1998/05/08 23:05:24 hubertf Exp $
 #
 
 DISTNAME=		snd
 PKGNAME=		snd-19980212
 NO_WRKSUBDIR=		YES
 CATEGORIES=		audio
-# agc - the distfile has changed on the MASTER_SITES.
-#	use the one on ftp.netbsd.org for just now.
-# MASTER_SITES=		ftp://ccrma-ftp.stanford.edu/pub/Lisp/
-MASTER_SITES=		ftp://ftp.netbsd.org/pub/NetBSD/packages/distfiles/
+MASTER_SITES=		ftp://ccrma-ftp.stanford.edu/pub/Lisp/
 
 MAINTAINER=		hubertf@netbsd.org
 
