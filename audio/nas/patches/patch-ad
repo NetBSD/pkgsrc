@@ -1,3 +1,5 @@
+$NetBSD: patch-ad,v 1.4 1998/11/12 15:46:41 agc Exp $
+
 --- server/dia/auevents.c.orig	Thu Apr 21 17:50:59 1994
 +++ server/dia/auevents.c	Sat Oct 17 23:26:34 1998
 @@ -27,7 +27,7 @@
