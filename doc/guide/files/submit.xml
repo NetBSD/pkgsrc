@@ -1,4 +1,4 @@
-<!-- $NetBSD: submit.xml,v 1.2 2004/10/22 00:24:48 hubertf Exp $ -->
+<!-- $NetBSD: submit.xml,v 1.3 2005/01/10 21:00:54 hubertf Exp $ -->
 
 <chapter id="submit"> <?dbhtml filename="submit.html"?>
 <title>Submitting and Committing</title>
@@ -16,9 +16,10 @@ packages here:
 <para>
   Our policy is that we accept binaries only from pkgsrc developers to
   guarantee that the packages don't contain any trojan horses etc. 
-  This is not to piss anyone off but rather to protect our users!
+  This is not to annoy anyone but rather to protect our users!
   You're still free to put up your home-made binary packages and tell
-  the world where to get them. 
+  the world where to get them. NetBSD developers doing bulk builds and
+  wanting to upload them please see <xref linkend="bulk-upload"/>.
 </para>
 </listitem>
 
