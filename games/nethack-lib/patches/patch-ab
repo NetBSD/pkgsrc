@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.7 2002/03/22 17:26:25 pooka Exp $
+$NetBSD: patch-ab,v 1.8 2002/03/25 20:32:26 pooka Exp $
 
 --- sys/unix/Makefile.top.orig	Fri Mar 22 17:15:28 2002
 +++ sys/unix/Makefile.top	Fri Mar 22 17:24:57 2002
@@ -31,7 +31,7 @@ $NetBSD: patch-ab,v 1.7 2002/03/22 17:26:25 pooka Exp $
  # (if there is, you'll have to do the installation by hand or modify the
  # instructions)
 -GAMEDIR  = $(PREFIX)/games/lib/$(GAME)dir
-+GAMEDIR  = $(PREFIX)/share/$(GAME)dir
++GAMEDIR  = $(PREFIX)/share/$(GAME)dir340
  VARDIR  = $(GAMEDIR)
 -SHELLDIR = $(PREFIX)/games
 +SHELLDIR = $(PREFIX)/bin

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile.common,v 1.6 2002/03/22 17:26:24 pooka Exp $
+# $NetBSD: Makefile.common,v 1.7 2002/03/25 20:32:25 pooka Exp $
 #
 
-NETHACK_VERSION=	3.4.0
+NETHACK_BASEVER=	3.4.0
+NETHACK_VERSION=	${NETHACK_BASEVER}nb1
 NETHACK_DISTVER=	340
 
 DISTNAME=		nethack-${NETHACK_DISTVER}
@@ -12,7 +13,7 @@ EXTRACT_SUFX=		.tgz
 MAINTAINER=		pooka@netbsd.org
 HOMEPAGE=		http://www.nethack.org/
 
-WRKSRC=			${WRKDIR}/nethack-${NETHACK_VERSION}
+WRKSRC=			${WRKDIR}/nethack-${NETHACK_BASEVER}
 
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	./sys/unix/setup.sh
