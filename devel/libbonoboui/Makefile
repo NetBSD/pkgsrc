@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2003/01/03 15:26:56 jmmv Exp $
+# $NetBSD: Makefile,v 1.8 2003/01/04 11:08:08 jmmv Exp $
 #
 
-DISTNAME=	libbonoboui-2.0.3.2
-PKGREVISION=	1
+DISTNAME=	libbonoboui-2.0.3.3
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libbonoboui/2.0/}
 EXTRACT_SUFX=	.tar.bz2
@@ -17,7 +16,6 @@ GNU_CONFIGURE=		yes
 USE_BUILDLINK2=		yes
 USE_PKGLOCALEDIR=	yes
 USE_GMAKE=		yes
-USE_GNU_GETTEXT=	yes
 USE_X11=		yes
 
 USE_LIBTOOL=		yes
