@@ -21,8 +21,8 @@ DEINSTALL)
 		${INSTALL_INFO} --delete --info-dir=${PKG_PREFIX}/${INFO_DIR} \
 		   ${PKG_PREFIX}/${INFO_DIR}/${f} 1>/dev/null 2>&1
 	done
-	_nentries="`${GREP} -c '^\*' ${PKG_PREFIX}/${INFO_DIR}/dir`"
-	if [ "${_nentries}" -le 1 ]; then
+	_nentries="`${GREP} -c '^\*' ${PKG_PREFIX}/${INFO_DIR}/dir 2>/dev/null`"
+	if [ x"${_nentries}" != x -a "${_nentries}" -le 1 ]; then
 		${RM} ${PKG_PREFIX}/${INFO_DIR}/dir
 	fi
 	;;
