@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2003/07/21 16:43:17 martti Exp $
+# $NetBSD: Makefile,v 1.16 2004/04/25 05:32:01 snj Exp $
 #
 
 DISTNAME=	cdecl-2.5
@@ -11,7 +11,7 @@ MASTER_SITES=	ftp://ftp.netsw.org/softeng/lang/c/tools/cdecl/ \
 MAINTAINER=     tech-pkg@NetBSD.org
 COMMENT=	Utility to explain and compose C and C++ declarations
 
-USE_BUILDLINK2=		# defined
+USE_BUILDLINK3=		yes
 ALL_TARGET=		cdecl
 
 EGDIR=			${PREFIX}/share/examples/cdecl
@@ -20,5 +20,5 @@ post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/testset* ${EGDIR}
 
-.include "../../devel/readline/buildlink2.mk"
+.include "../../devel/readline/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
