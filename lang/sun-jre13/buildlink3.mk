@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/05/05 17:22:51 xtraeme Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/06/05 16:33:52 xtraeme Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 SUN_JRE13_BUILDLINK3_MK:=	${SUN_JRE13_BUILDLINK3_MK}+
@@ -11,13 +11,11 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nsun-jre13}
 BUILDLINK_PACKAGES+=	sun-jre13
 
 .if !empty(SUN_JRE13_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.sun-jre13+=	sun-jre13-[0-9]*
-BUILDLINK_PKGSRCDIR.sun-jre13?=	../../lang/sun-jre13
-EVAL_PREFIX+=   BUILDLINK_JAVA_PREFIX.sun-jre13=sun-jre13
-BUILDLINK_JAVA_PREFIX.sun-jre13= \
-	${BUILDLINK_PREFIX.sun-jre13}/java/sun-1.3
-
-UNLIMIT_RESOURCES+=     datasize        # must be at least 131203
+BUILDLINK_DEPENDS.sun-jre13+=		sun-jre13-[0-9]*
+BUILDLINK_PKGSRCDIR.sun-jre13?=		../../lang/sun-jre13
+BUILDLINK_JAVA_PREFIX.sun-jre13=	${PREFIX}/java/sun-1.3
 .endif	# SUN_JRE13_BUILDLINK3_MK
+
+UNLIMIT_RESOURCES+=	datasize	# Must be at least 131203
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
