@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/01/21 05:03:18 grant Exp $
+sbin/fastfs
