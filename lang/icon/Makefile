@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2005/02/27 21:33:17 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.33 2005/03/02 10:31:23 grant Exp $
 
 DISTNAME=       	icon.v942src
 PKGNAME=		icon-9.4.2
@@ -30,11 +30,11 @@ PTHREAD_OPTS+=		require native
 .  include "../../mk/pthread.buildlink3.mk"
 .  endif
 
-.elseif ${OPSYS} == "SunOS"
+.elif ${OPSYS} == "SunOS"
 
 .  if !empty(CC_VERSION:M*gcc*)
 NAME=	sun_gcc
-.  elseif !empty(CC_VERSION:MSun)
+.  elif !empty(CC_VERSION:MSun)
 NAME=	sun_sunc
 .  else
 PKG_FAIL_REASON=	"${PKGNAME} does not know about ${CC_VERSION}"
