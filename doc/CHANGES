@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8894 2005/01/24 11:12:39 hira Exp $
+$NetBSD: CHANGES,v 1.8895 2005/01/24 12:48:57 seb Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -532,3 +532,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated gimp to 2.2.3 [adam 2005-01-23]
 	Added estd-0.3 [agc 2005-01-24]
 	Updated gnome2-games to 2.8.2nb1 [hira 2005-01-24]
+	Updated openldap to 2.2.20nb2 [seb 2005-01-24]
