@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/06/07 22:45:48 tron Exp $
+# $NetBSD: Makefile,v 1.2 1999/11/19 12:12:28 agc Exp $
 
 DISTNAME=	tkpiechart-5.3
 CATEGORIES=	graphics
@@ -12,6 +12,12 @@ DEPENDS+=	stooop-3.7:../../devel/stooop
 
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
+
+pre-patch:
+	for f in source.tcl instapkg.tcl; do				\
+		${MV} ${WRKSRC}/$$f ${WRKSRC}/$$f-prepatch;		\
+		${SED} -e '/Id/s|\$$||g' ${WRKSRC}/$$f-prepatch > ${WRKSRC}/$$f; \
+	done
 
 do-install:
 	${MKDIR} ${PREFIX}/lib/tkpiechart
