@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1997/12/17 23:40:56 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 1997/12/17 23:52:29 hubertf Exp $
 # New ports collection Makefile for: knews
 # Version required:	0.9.8
 # Date created:         30th November 1997
@@ -18,11 +18,13 @@ USE_IMAKE=	yes
 USE_X11=	yes
 WRKSRC=		$(WRKDIR)/knews
 
-pre-fetch:
+# Set DOMAIN_NAME to a string appended to the From: header or
+# assign it a file from which the domain name is read.
+post-extract:
 .if !defined(DOMAIN_NAME)
 	@${ECHO_MSG} "Type \"make DOMAIN_NAME=xyz\" to set the domain name."
 .else
-	@${ECHO_MSG} "Using \"${DOMAIN_NAME}\" as the domain name."
+	@${ECHO_MSG} "Using \"${DOMAIN_NAME}\" as the From: domain name."
 .endif
 
 post-patch:
