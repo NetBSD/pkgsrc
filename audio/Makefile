@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.92 2001/04/16 22:25:09 zuntum Exp $
+# $NetBSD: Makefile,v 1.93 2001/04/19 10:28:21 wiz Exp $
 #
 
 COMMENT=	Audio tools
@@ -72,7 +72,7 @@ SUBDIR+=	libogg
 SUBDIR+=	libsidplay
 SUBDIR+=	libvorbis
 SUBDIR+=	liveice
-SUBDIR+=	madplay
+SUBDIR+=	mad
 SUBDIR+=	maplay
 SUBDIR+=	mbrola
 SUBDIR+=	mbrolavox-en1
