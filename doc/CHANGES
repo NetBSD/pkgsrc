@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.918 2002/12/26 01:49:35 wiz Exp $
+$NetBSD: CHANGES,v 1.919 2002/12/26 05:00:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -4266,3 +4266,5 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated libgda to 0.8.199nb1 [jmmv 2002-12-25]
 	Updated bsdpak to 0.52 [jmmv 2002-12-25]
 	Updated openbox to 2.2.3 [wiz 2002-12-26]
+	Added libast-0.5 [wiz 2002-12-26]
+	Updated eterm to 0.9.2 [wiz 2002-12-26]
