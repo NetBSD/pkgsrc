@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 1998/09/04 13:13:16 agc Exp $
+# $NetBSD: Makefile,v 1.2 1998/09/14 06:37:01 garbled Exp $
 #
 
 DISTNAME=	imlib-1.7
@@ -14,10 +14,12 @@ DEPENDS+=	jpeg-6b:../../graphics/jpeg
 DEPENDS+=	png-1.0.2:../../graphics/png
 DEPENDS+=	giflib-3.0:../../graphics/giflib
 
+USE_X11=	yes
 USE_LIBTOOL=	yes
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 
+LDFLAGS+=		-L${LOCALBASE}/lib
 CONFIGURE_ARGS+=	--with-gtk-prefix=${X11BASE}
 CONFIGURE_ENV+=		CPPFLAGS='-I${LOCALBASE}/include -I${LOCALBASE}/include/giflib'
 
