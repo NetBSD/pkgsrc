@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/12/25 22:39:04 wiz Exp $
+# $NetBSD: Makefile,v 1.3 1999/12/28 04:20:03 wiz Exp $
 
 DISTNAME=	us3-990208
 PKGNAME=	mbrolavox-${DISTNAME}
@@ -23,7 +23,7 @@ MHOME=		${PREFIX}/share/mbrola/voices
 
 post-extract:
 	@ ${CHMOD} -R a+r ${WRKSRC}
-	@ find ${WRKSRC} -type d -print0 | xargs -0 ${CHMOD} 755
+	@ ${FIND} ${WRKSRC} -type d -print0 | xargs -0 ${CHMOD} 755
 
 do-install:
 	${INSTALL_DATA_DIR} ${MHOME}
