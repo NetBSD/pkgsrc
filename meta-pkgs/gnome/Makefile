@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2002/09/14 02:47:59 rh Exp $
+# $NetBSD: Makefile,v 1.9 2002/10/05 11:26:35 wiz Exp $
 
 DISTNAME=	gnome-1.4.2
 CATEGORIES=	meta-pkgs x11 gnome
@@ -36,6 +36,7 @@ DEPENDS+=	pan>0.10.0:../../news/pan
 DEPENDS+=	xchat-gnome>=1.8.9:../../chat/xchat-gnome
 
 USE_X11=	yes
+USE_BUILDLINK2=	yes
 EXTRACT_ONLY=	# empty
 NO_CHECKSUM=	yes
 NO_PATCH=	yes
@@ -44,5 +45,5 @@ NO_BUILD=	yes
 
 do-install:	# empty
 
-.include "../../x11/gnome-python/buildlink.mk"
+.include "../../x11/gnome-python/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
