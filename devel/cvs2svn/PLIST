@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/04/12 22:23:47 seb Exp $
+bin/cvs2svn
+${PYSITELIB}/rcsparse/__init__.py
+${PYSITELIB}/rcsparse/common.py
+${PYSITELIB}/rcsparse/compat.py
+${PYSITELIB}/rcsparse/debug.py
+${PYSITELIB}/rcsparse/default.py
+${PYSITELIB}/rcsparse/texttools.py
+share/doc/cvs2svn/README
+@dirrm share/doc/cvs2svn
+@dirrm ${PYSITELIB}/rcsparse
