@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.23 2004/03/26 02:22:38 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.24 2004/04/07 13:31:54 tron Exp $
 
 .if !defined(OPENSSL_BUILDLINK2_MK)
 OPENSSL_BUILDLINK2_MK=	# defined
@@ -73,19 +73,19 @@ _OPENSSL_VERSION=	${_OPENSSL_MAJOR}.${_OPENSSL_MINOR}.${_OPENSSL_TEENY}${_OPENSS
 _OPENSSL_PKG=	openssl-${_OPENSSL_VERSION}
 #
 # If the built-in OpenSSL software is 0.9.6g, then check whether it
-# contains the security fixes pulled up to netbsd-1-6 on 2003-11-07.
-# If it does, then treat it as the equivalent of openssl-0.9.6l.  This
+# contains the security fixes pulled up to netbsd-1-6 on 2004-04-01.
+# If it does, then treat it as the equivalent of openssl-0.9.6m.  This
 # is not strictly true, but is good enough since the main differences
-# between 0.9.6g and 0.9.6l are security fixes that NetBSD has already
+# between 0.9.6g and 0.9.6m are security fixes that NetBSD has already
 # patched into its built-in OpenSSL software.
 #
 _OPENSSL_HAS_FIX!=							\
 	${AWK} 'BEGIN { ans = "NO" }					\
-		/OPENSSL_HAS_20031107_FIX/ { ans = "YES" }		\
+		/OPENSSL_HAS_20040401_FIX/ { ans = "YES" }		\
 		END { print ans; exit 0 }				\
 	' ${_OPENSSL_OPENSSLV_H}
 .    if !empty(_OPENSSL_VERSION:M0\.9\.6g) && (${_OPENSSL_HAS_FIX} == "YES")
-_OPENSSL_PKG=		openssl-0.9.6l
+_OPENSSL_PKG=		openssl-0.9.6m
 .    endif
 
 _OPENSSL_DEPENDS=	${BUILDLINK_DEPENDS.openssl}
