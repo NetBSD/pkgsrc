@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2000/04/01 10:50:35 tron Exp $
+@comment $NetBSD: PLIST,v 1.13 2000/05/31 22:12:09 tron Exp $
 bin/analog
 etc/analog.cfg.default
 @exec cp -p %F %D/etc/analog.cfg
@@ -53,6 +53,7 @@ lib/analog/images/barh32.gif
 lib/analog/images/barh4.gif
 lib/analog/images/barh8.gif
 lib/analog/images/html2.gif
+lib/analog/lang/README.txt
 lib/analog/lang/am.lng
 lib/analog/lang/amdom.tab
 lib/analog/lang/ba.lng
@@ -81,6 +82,7 @@ lib/analog/lang/es.lng
 lib/analog/lang/esa.lng
 lib/analog/lang/esadom.tab
 lib/analog/lang/esdom.tab
+lib/analog/lang/esform.html
 lib/analog/lang/esh.lng
 lib/analog/lang/eshdom.tab
 lib/analog/lang/fi.lng
@@ -95,8 +97,11 @@ lib/analog/lang/frh.lng
 lib/analog/lang/frhdom.tab
 lib/analog/lang/gr.lng
 lib/analog/lang/gra.lng
+lib/analog/lang/hu.cfg
+lib/analog/lang/hu.lng
 lib/analog/lang/hua.lng
-lib/analog/lang/huh.lng
+lib/analog/lang/huadom.tab
+lib/analog/lang/hudom.tab
 lib/analog/lang/is.lng
 lib/analog/lang/isa.lng
 lib/analog/lang/ish.lng
@@ -104,6 +109,7 @@ lib/analog/lang/it.lng
 lib/analog/lang/ita.lng
 lib/analog/lang/itadom.tab
 lib/analog/lang/itdom.tab
+lib/analog/lang/itform.html
 lib/analog/lang/ith.lng
 lib/analog/lang/ithdom.tab
 lib/analog/lang/jp.lng
@@ -128,6 +134,7 @@ lib/analog/lang/pt.lng
 lib/analog/lang/pta.lng
 lib/analog/lang/pth.lng
 lib/analog/lang/ro.lng
+lib/analog/lang/rodom.tab
 lib/analog/lang/ru.lng
 lib/analog/lang/rua.lng
 lib/analog/lang/rudom.tab
