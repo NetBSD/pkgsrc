@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2003/03/04 14:41:17 salo Exp $
+$NetBSD: distinfo,v 1.3 2003/07/23 11:21:52 jmmv Exp $
 
-SHA1 (streamtuner-0.9.1.tar.gz) = bd59a337c052a0acfbfb558d3474a7b49b4203f8
-Size (streamtuner-0.9.1.tar.gz) = 314831 bytes
+SHA1 (streamtuner-0.10.0.tar.gz) = bb409a5f8bbe527085fc35605950bfaeb8d643d4
+Size (streamtuner-0.10.0.tar.gz) = 370517 bytes
