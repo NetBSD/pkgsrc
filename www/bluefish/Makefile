@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2000/08/25 01:31:55 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2000/08/25 05:51:13 jlam Exp $
 #
 
 DISTNAME=	bluefish-0.5
@@ -22,7 +22,7 @@ USE_GMAKE=	# defined
 
 GNU_CONFIGURE=	# defined
 CONFIGURE_ENV+=	CPPFLAGS="${CPPFLAGS}"
-CFLAGS+=	-I${LOCALBASE}/include
+CPPFLAGS+=	-I${LOCALBASE}/include
 
 HTMLDIR=	${PREFIX}/share/doc/html/bluefish
 
