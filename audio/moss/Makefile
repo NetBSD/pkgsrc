@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2004/08/17 15:50:30 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2004/10/06 15:16:03 minskim Exp $
 
-DISTNAME=	moss-0.1.8
+DISTNAME=	moss-0.1.9
 CATEGORIES=	audio
-MASTER_SITES=	http://kldp.net/download.php/1434/
+MASTER_SITES=	http://kldp.net/download.php/1528/
 
-MAINTAINER=	yongbin@yongbin.com
+MAINTAINER=	myunggoni@users.kldp.net
 HOMEPAGE=	http://moss.kldp.net/
 COMMENT=	MP3/OGG Streaming Server
 
@@ -25,8 +25,8 @@ SUBST_CLASSES+=		path
 SUBST_MESSAGE.path=	"Fixing hardcoded paths."
 SUBST_STAGE.path=	post-patch
 SUBST_FILES.path=	moss.conf.sample
-SUBST_SED.path=		-e 's,$${prefix}/var,${VARBASE},g'	\
-			-e 's,$${prefix}/share,${PREFIX}/share,g'
+SUBST_SED.path=		-e 's,$${PREFIX}/var,${VARBASE},g'	\
+			-e 's,$${PREFIX}/share,${PREFIX}/share,g'
 
 FILES_SUBST+=	INTERPRETER=${PYTHONBIN}
 

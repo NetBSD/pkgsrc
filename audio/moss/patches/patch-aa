@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.2 2004/08/17 15:50:30 minskim Exp $
+$NetBSD: patch-aa,v 1.3 2004/10/06 15:16:03 minskim Exp $
 
---- setup.py.orig	2004-08-10 17:56:30.000000000 +0900
+--- setup.py.orig	Wed Oct  6 03:08:58 2004
 +++ setup.py
-@@ -42,50 +42,50 @@ class my_install_data(install_data):
+@@ -41,50 +41,50 @@ class my_install_data(install_data):
  		global installed_lib_dir
  		install_data.finalize_options(self)
  		
@@ -17,8 +17,8 @@ $NetBSD: patch-aa,v 1.2 2004/08/17 15:50:30 minskim Exp $
 -			dest = open(os.path.join(self.install_dir, "etc/moss.conf"), "w")
 -
 -			for line in src.readlines():
--				if line.find("${prefix}") != -1:
--					line = line.replace("${prefix}", self.install_dir)
+-				if line.find("${PREFIX}") != -1:
+-					line = line.replace("${PREFIX}", self.install_dir)
 -	
 -				dest.write(line)
 -
@@ -32,8 +32,8 @@ $NetBSD: patch-aa,v 1.2 2004/08/17 15:50:30 minskim Exp $
 -				dest = open(os.path.join(self.install_dir, "etc/moss.conf"), "w")
 -
 -				for line in src.readlines():
--					if line.find("${prefix}") != -1:
--						line = line.replace("${prefix}", self.install_dir)
+-					if line.find("${PREFIX}") != -1:
+-						line = line.replace("${PREFIX}", self.install_dir)
 -		
 -					dest.write(line)
 -
@@ -61,8 +61,8 @@ $NetBSD: patch-aa,v 1.2 2004/08/17 15:50:30 minskim Exp $
 +#			dest = open(os.path.join(self.install_dir, "etc/moss.conf"), "w")
 +#
 +#			for line in src.readlines():
-+#				if line.find("${prefix}") != -1:
-+#					line = line.replace("${prefix}", self.install_dir)
++#				if line.find("${PREFIX}") != -1:
++#					line = line.replace("${PREFIX}", self.install_dir)
 +#	
 +#				dest.write(line)
 +#
@@ -76,8 +76,8 @@ $NetBSD: patch-aa,v 1.2 2004/08/17 15:50:30 minskim Exp $
 +#				dest = open(os.path.join(self.install_dir, "etc/moss.conf"), "w")
 +#
 +#				for line in src.readlines():
-+#					if line.find("${prefix}") != -1:
-+#						line = line.replace("${prefix}", self.install_dir)
++#					if line.find("${PREFIX}") != -1:
++#						line = line.replace("${PREFIX}", self.install_dir)
 +#		
 +#					dest.write(line)
 +#
