@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1996 2004/08/03 12:18:10 wiz Exp $
+$NetBSD: TODO,v 1.1997 2004/08/03 15:37:22 cube Exp $
 
 Suggested new packages
 ======================
@@ -363,7 +363,6 @@ Suggested package updates
 	o rox-1.2.2
 	o rox-session-0.1.23
 	o rrdtool-1.0.48
-	o rt-3.0.10 [pkgsrc-wip]
 	o ruby-1.8.1 [taca]
 	o sablecc-2.18.1
 	o samba-2.2.9

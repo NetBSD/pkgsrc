@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6778 2004/08/03 14:13:34 minskim Exp $
+$NetBSD: CHANGES,v 1.6779 2004/08/03 15:37:22 cube Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3708,3 +3708,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated tei to 4nb2 [minskim 2004-08-03]
 	Updated teixsl-html to 3.1nb2 [minskim 2004-08-03]
 	Updated teixsl-fo to 3.1nb2 [minskim 2004-08-03]
+	Added rt-3.2.1 [cube 2004-08-03]
