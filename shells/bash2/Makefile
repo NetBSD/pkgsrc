@@ -3,7 +3,7 @@
 # Date created:		21 August 1994
 # Whom:			jkh
 #
-# $NetBSD: Makefile,v 1.3 1998/01/20 23:28:25 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 1998/01/24 23:11:19 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.26 1997/06/27 23:03:27 ache Exp 
 #
 
@@ -19,11 +19,9 @@ MAINTAINER=	ache@FreeBSD.ORG
 
 BUILD_DEPENDS=  ${PREFIX}/bin/install-info:${PORTSDIR}/devel/gtexinfo
 RUN_DEPENDS=    ${PREFIX}/bin/install-info:${PORTSDIR}/devel/gtexinfo
+
 GNU_CONFIGURE=	Yes
 MAN1=		bash.1 bashbug.1
-
-post-patch:
-	cp /usr/include/fnmatch.h ${WRKSRC}/lib/glob/fnmatch.h
 
 pre-install:
 	strip ${WRKSRC}/bash
@@ -33,7 +31,7 @@ pre-install:
 
 post-install:
 	${CP} /etc/shells /etc/shells.bak
-	(${GREP} -v ${PREFIX}/bin/bash /etc/shells.bak; echo ${PREFIX}/bin/bash) >/etc/shells
+	(${GREP} -v ${PREFIX}/bin/bash /etc/shells.bak; ${ECHO} ${PREFIX}/bin/bash) >/etc/shells
 	${RM} /etc/shells.bak
 .if !defined(NOPORTDOCS)
 	${MKDIR} ${PREFIX}/share/doc/bash
