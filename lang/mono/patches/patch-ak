@@ -1,4 +1,4 @@
-$NetBSD: patch-ak,v 1.1 2003/12/03 00:12:12 recht Exp $
+$NetBSD: patch-ak,v 1.2 2003/12/03 17:08:24 recht Exp $
 
 --- mono/metadata/mono-config.c.orig	2003-11-27 21:10:10.000000000 +0100
 +++ mono/metadata/mono-config.c	2003-11-27 21:12:30.000000000 +0100

@@ -1,8 +1,10 @@
-@comment $NetBSD: PLIST,v 1.4 2003/10/02 08:41:42 recht Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/12/03 17:08:24 recht Exp $
 bin/chktrust
 bin/chktrust.exe
 bin/cilc
 bin/cilc.exe
+bin/disco
+bin/disco.exe
 bin/genxs
 bin/genxs.exe
 bin/ilasm
@@ -66,6 +68,7 @@ include/mono/metadata/environment.h
 include/mono/metadata/exception.h
 include/mono/metadata/image.h
 include/mono/metadata/loader.h
+include/mono/metadata/locales.h
 include/mono/metadata/mempool.h
 include/mono/metadata/metadata.h
 include/mono/metadata/monitor.h
@@ -89,6 +92,7 @@ include/mono/private/libgc-mono-debugger.h
 include/mono/utils/mono-digest.h
 include/mono/utils/mono-hash.h
 include/mono/utils/mono-logger.h
+include/mono/utils/mono-math.h
 include/mono/utils/monobitset.h
 lib/Accessibility.dll
 lib/ByteFX.Data.dll
@@ -113,7 +117,6 @@ lib/Mono.Data.SqliteClient.dll
 lib/Mono.Data.SybaseClient.dll
 lib/Mono.Data.Tds.dll
 lib/Mono.Data.TdsClient.dll
-lib/Mono.Directory.LDAP.dll
 lib/Mono.GetOptions.dll
 lib/Mono.Http.dll
 lib/Mono.PEToolkit.dll
@@ -122,6 +125,7 @@ lib/Mono.Security.Win32.dll
 lib/Mono.Security.dll
 lib/NUnit.Framework.dll
 lib/NUnit.Util.dll
+lib/Novell.Directory.Ldap.dll
 lib/Npgsql.dll
 lib/PEAPI.dll
 lib/System.Configuration.Install.dll
@@ -143,7 +147,7 @@ lib/System.Web.dll
 lib/System.Windows.Forms.dll
 lib/System.Xml.dll
 lib/System.dll
-lib/corlib.dll
+lib/libgdiplus.dll.so
 lib/libmono-profiler-cov.a
 lib/libmono-profiler-cov.la
 lib/libmono-profiler-cov.so
@@ -154,9 +158,11 @@ lib/libmono.la
 lib/libmono.so
 lib/libmono.so.0
 lib/libmono.so.0.0
+lib/mscorlib.dll
 lib/pkgconfig/mono.pc
 man/man1/cert2spc.1
 man/man1/cilc.1
+man/man1/genxs.1
 man/man1/ilasm.1
 man/man1/mcs.1
 man/man1/mint.1
@@ -167,6 +173,7 @@ man/man1/monostyle.1
 man/man1/oldmono.1
 man/man1/sqlsharp.1
 man/man5/mono-config.5
+share/examples/mono/DefaultWsdlHelpGenerator.aspx
 share/examples/mono/config
 share/examples/mono/machine.config
 share/mono/cil/cil-opcodes.xml
