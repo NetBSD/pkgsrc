@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2001/04/18 16:28:01 agc Exp $
+$NetBSD: distinfo,v 1.3 2003/09/22 09:06:35 wiz Exp $
 
 SHA1 (latex2rtf-1.8aa.tar.gz) = ab02cf1d069ba05400b2cb5df2182a1c139d4ae8
 Size (latex2rtf-1.8aa.tar.gz) = 338481 bytes
-SHA1 (patch-aa) = c58421e1edbe4606f550e96c620d6fa5b5b1d6eb
+SHA1 (patch-aa) = 3ee116cc90138a17bf734b2e38a82c1e194119be
