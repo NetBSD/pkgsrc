@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.3 1999/07/06 11:29:41 agc Exp $
+$NetBSD: patch-ab,v 1.4 2003/05/01 21:47:43 jmmv Exp $
 
 NetBSD and Solaris specific paths for tripwire.
 
@@ -20,8 +20,8 @@ NetBSD and Solaris specific paths for tripwire.
 -
 -#define CONFIG_PATH     "/tmp/genek"
 -#define DATABASE_PATH   "/tmp/genek"
-+# define CONFIG_PATH     "@localbase@/etc/tripwire"
-+# define DATABASE_PATH   "@localbase@/etc/tripwire/databases"
++# define CONFIG_PATH     "@PKG_SYSCONFDIR@"
++# define DATABASE_PATH   "@PKG_SYSCONFDIR@/databases"
  
  /******* name of Tripwire files **************************************
   *
