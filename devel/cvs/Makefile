@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2002/11/27 17:50:20 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2002/12/24 23:00:18 schmonz Exp $
 #
 
 DISTNAME=	cvs-1.11.2
@@ -28,6 +28,10 @@ CONFIGURE_ARGS+=	--enable-ipv6
 CONFIGURE_ARGS+=	--disable-ipv6
 .endif
 
+.endif
+
+.if ${OPSYS} == "Darwin"
+LDFLAGS+=		-framework Kerberos
 .endif
 
 .if defined(KERBEROS)
