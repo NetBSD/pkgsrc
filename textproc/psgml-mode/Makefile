@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/07/17 22:54:44 grant Exp $
+# $NetBSD: Makefile,v 1.5 2003/08/05 22:29:40 seb Exp $
 
 DISTNAME=		psgml-1.2.5
 PKGNAME=		${DISTNAME:S/-/-mode-/}
@@ -18,6 +18,7 @@ ALL_TARGET=	xemacs
 SRCS=	psgml-api.el psgml-charent.el psgml-debug.el psgml-dtd.el	\
 	psgml-edit.el psgml-fs.el psgml-info.el psgml-lucid.el		\
 	psgml-maint.el psgml-other.el psgml-parse.el psgml.el
+USE_NEW_TEXINFO=	YES
 INFO_FILES=	psgml-api.info psgml.info
 
 do-install:
@@ -29,5 +30,4 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/psgml-api.info ${PREFIX}/info
 	${INSTALL_DATA} ${WRKSRC}/psgml.info ${PREFIX}/info
 
-.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
