@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2465 2004/11/25 19:46:37 snj Exp $
+$NetBSD: TODO,v 1.2466 2004/11/25 19:55:48 minskim Exp $
 
 Suggested new packages
 ======================
@@ -1103,7 +1103,6 @@ Suggested package updates
 	o py-matplotlib-0.64
 	o py-mysqldb-1.1.7
 	o py-numarray-1.1.1
-	o py-pexpect-0.999
 	o py-psycopg-1.1.16
 	o py-pytables-0.9
 	o py-qt3-base-3.13
