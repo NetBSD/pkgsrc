@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/09/09 20:36:50 agc Exp $
+# $NetBSD: Makefile,v 1.9 2002/09/21 10:46:45 jlam Exp $
 # FreeBSD Id: Makefile,v 1.9 1999/02/11 16:01:16 jfieber Exp
 #
 
@@ -13,6 +13,7 @@ HOMEPAGE=	http://www.iso.ch/cate/d16387.html
 COMMENT=	Character entity sets from ISO 8879:1986 (SGML)
 
 NO_MTREE=       yes
+USE_BUILDLINK2=	yes
 EXTRACT_ONLY=	# empty
 NO_BUILD=       yes
 WRKSRC=		${WRKDIR}
@@ -20,7 +21,7 @@ WRKSRC=		${WRKDIR}
 INSTDIR=	${PREFIX}/share/sgml/iso8879
 
 pre-install:
-	${MKDIR} ${INSTDIR}
+	${INSTALL_DATA_DIR} ${INSTDIR}
 
 do-install:
 	@unzip -a -q -o ${DISTDIR}/${DISTFILES} -d ${INSTDIR}
