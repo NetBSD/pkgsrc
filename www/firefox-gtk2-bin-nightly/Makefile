@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2004/02/10 13:24:37 grant Exp $
+# $NetBSD: Makefile,v 1.2 2004/04/18 20:45:19 grant Exp $
 #
 
 MOZILLA=	firefox
@@ -9,5 +9,6 @@ COMMENT=	Lightweight gecko-based web browser (gtk2 nightly binary pkg)
 MOZ_GTK2=	YES
 
 ONLY_FOR_PLATFORM+=	Linux-*-i[3-6]86
+ONLY_FOR_PLATFORM+=	SunOS-5.[89]*-sparc
 
 .include "../../www/mozilla-bin-nightly/Makefile.common"
