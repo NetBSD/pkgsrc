@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2004/03/21 01:46:02 grant Exp $
+# $NetBSD: Makefile,v 1.33 2004/03/28 02:26:42 grant Exp $
 #
 
 DISTNAME=		libnbcompat-20040321
@@ -10,7 +10,6 @@ MAINTAINER=		grant@NetBSD.org
 HOMEPAGE=		http://www.NetBSD.org/
 COMMENT=		Portable NetBSD compatibility library
 
-NO_TOOLS=		# defined
 NO_BUILDLINK=		# defined
 NO_PKGTOOLS_REQD_CHECK=	# defined
 NO_CHECKSUM=		# defined
