@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/01/21 02:29:33 tv Exp $
+# $NetBSD: Makefile,v 1.11 2005/01/24 16:58:06 tv Exp $
 
 DISTNAME=	dar-2.1.5
 CATEGORIES=	archivers sysutils
@@ -20,12 +20,6 @@ CONFIGURE_ARGS+=	--disable-nodump-flag
 CONFIGURE_ARGS+=	--disable-dar-static
 CONFIGURE_ARGS+=	--enable-examples
 CONFIGURE_ARGS+=	--disable-upx
-
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "Interix"
-CONFIGURE_ARGS+=	--enable-os-bits=32
-.endif
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
