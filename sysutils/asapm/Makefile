@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2000/07/06 21:09:38 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.10 2000/07/11 09:31:33 agc Exp $
 # FreeBSD Id: Makefile,v 1.5 1998/11/29 12:43:12 asami Exp
 #
 
@@ -21,7 +21,7 @@ GNU_CONFIGURE=		yes
 USE_X11=		yes
 CONFIGURE_ARGS+=	--disable-jpeg	# there actually is no JPEG support
 CONFIGURE_ARGS+=	--with-xpm \
-			--with-xpm-includes="${X11BASE}/include" \
-			--with-xpm-library="${X11BASE}/lib"
+			--with-xpm-includes="`${PKG_INFO} -qp xpm | ${AWK} '{print $$2}'`/include" \
+			--with-xpm-library="`${PKG_INFO} -qp xpm | ${AWK} '{print $$2}'`/lib"
 
 .include "../../mk/bsd.pkg.mk"
