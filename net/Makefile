@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.413 2003/10/01 01:16:28 grant Exp $
+# $NetBSD: Makefile,v 1.414 2003/12/03 12:58:21 jmmv Exp $
 #
 
 COMMENT=	Networking tools
@@ -300,6 +300,7 @@ SUBDIR+=	traceroute-as
 SUBDIR+=	trafshow
 SUBDIR+=	trickle
 SUBDIR+=	tsclient
+SUBDIR+=	tsocks
 SUBDIR+=	tspc
 SUBDIR+=	ttt
 SUBDIR+=	ucd-snmp
