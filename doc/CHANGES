@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4505 2004/01/19 09:14:21 agc Exp $
+$NetBSD: CHANGES,v 1.4506 2004/01/19 10:01:33 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -338,3 +338,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated py-Scientific-doc to 2.4.5 [recht 2004-01-18]
 	Updated bmake to 20040118 [sjg 2004-01-18]
 	Added enriched2html-1.0  [agc 2004-01-19]
+	Updated iperf to 1.7.0 [adam 2004-01-19]
