@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2003/05/23 01:50:30 jschauma Exp $
+# $NetBSD: Makefile,v 1.15 2003/05/29 23:14:09 grant Exp $
 #
 
 DISTNAME=	jikes-1.18
@@ -14,10 +14,9 @@ ONLY_FOR_PLATFORM=	NetBSD-*-* SunOS-*-* Linux-*-*
 
 USE_BUILDLINK2=		yes
 GNU_CONFIGURE=		yes
-USE_CXX=		yes
+USE_GCC_SHLIB=		yes
 UNLIMIT_RESOURCES=      datasize
 
 USE_GMAKE=	# uses multi-line comments with \ (naughty hack!)
 
-.include "../../lang/gcc/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

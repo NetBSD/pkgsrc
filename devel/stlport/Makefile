@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2002/09/30 23:33:54 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2003/05/29 23:14:09 grant Exp $
 
 DISTNAME=	STLport-4.0
 PKGNAME=	stlport-4.0
@@ -13,7 +13,7 @@ COMMENT=	Complete C++ standard library
 USE_BUILDLINK2=	# defined
 USE_GMAKE=	# defined
 USE_LIBTOOL=	# defined
-USE_CXX=	# defined
+USE_GCC_SHLIB=	# defined
 
 NO_CONFIGURE=	# defined
 BUILD_DIRS=	${WRKSRC}/src
@@ -49,5 +49,4 @@ do-install:
 	cd ${WRKSRC}/doc; ${INSTALL_DATA} *.css *.html ${HTMLDIR}
 	cd ${WRKSRC}/doc; ${INSTALL_DATA} images/* ${HTMLDIR}/images
 
-.include "../../lang/gcc/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
