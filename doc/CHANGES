@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2345 2003/05/28 07:25:50 wiz Exp $
+$NetBSD: CHANGES,v 1.2346 2003/05/28 07:27:56 agc Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2184,3 +2184,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated ghostscript-esp-nox11 to 7.05.6 [jlam 2003-05-28]
 	Added mbmon-201 [agc 2003-05-28]
 	Updated mldonkey to 2.5.0nb1 [wiz 2003-05-28]
+	Added xmbmon-201 [agc 2003-05-28]
