@@ -1,8 +1,8 @@
-$NetBSD: patch-ai,v 1.1 2003/02/16 23:50:21 seb Exp $
+$NetBSD: patch-ai,v 1.2 2003/05/23 07:19:44 seb Exp $
 
---- src/flow-dscan.c.orig	Sat Jun 15 21:57:01 2002
+--- src/flow-dscan.c.orig	2003-04-02 18:03:01.000000000 +0000
 +++ src/flow-dscan.c
-@@ -228,8 +228,9 @@ int main(int argc, char **argv)
+@@ -233,8 +233,9 @@ int main(int argc, char **argv)
      } else if (pid)
        exit (0); /* parent */
  
@@ -10,7 +10,7 @@ $NetBSD: patch-ai,v 1.1 2003/02/16 23:50:21 seb Exp $
 -    setsid();
 +    /* umask(0022); */
 +    if (setsid() == -1)
-+	fterr_err(1, "setsid()");
++      fterr_err(1, "setsid()");
      for (i = 1; i < 16; ++i) /* XXX dynamically get NOFILE */
        close (i);
  
