@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.266 2002/09/23 15:41:16 hubertf Exp $
+# $NetBSD: Makefile,v 1.267 2002/09/24 13:59:55 wiz Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -34,8 +34,8 @@ SUBDIR+=	gnome-core
 SUBDIR+=	gnome-desktop
 SUBDIR+=	gnome-gkrellm
 SUBDIR+=	gnome-libs
-SUBDIR+=	gnome-session
 SUBDIR+=	gnome-python
+SUBDIR+=	gnome-session
 SUBDIR+=	gnome-users-guide
 SUBDIR+=	gnome2-control-center
 SUBDIR+=	gtk
@@ -143,8 +143,8 @@ SUBDIR+=	xgas
 SUBDIR+=	xglobe
 SUBDIR+=	xhangglider
 SUBDIR+=	xjman
-SUBDIR+=	xkeycaps
 SUBDIR+=	xkbset
+SUBDIR+=	xkeycaps
 SUBDIR+=	xless
 SUBDIR+=	xlockmore
 SUBDIR+=	xlogout
