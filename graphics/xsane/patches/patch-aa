@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.6 2000/10/26 21:33:05 veego Exp $
+$NetBSD: patch-aa,v 1.7 2000/11/29 22:09:16 wiz Exp $
 
---- configure.orig	Thu Jul 27 14:59:24 2000
+--- configure.orig	Sun Nov 12 10:47:37 2000
 +++ configure
 @@ -9,7 +9,7 @@
  
@@ -10,8 +10,8 @@ $NetBSD: patch-aa,v 1.6 2000/10/26 21:33:05 veego Exp $
 +ac_default_prefix=${PREFIX}
  # Any additions from configure.in:
  ac_help="$ac_help
-   --enable-intl-patch     add -lintl to check for sane"
-@@ -1364,7 +1364,6 @@
+   --disable-gimp          do not include GIMP plugin mode"
+@@ -1356,7 +1356,6 @@
  fi
  
  
@@ -19,20 +19,12 @@ $NetBSD: patch-aa,v 1.6 2000/10/26 21:33:05 veego Exp $
  CPPFLAGS="${CPPFLAGS} -D_GNU_SOURCE"
  if test "${ac_cv_prog_gcc}" = "yes"; then
    CFLAGS="${CFLAGS} -Wall"
-@@ -4739,7 +4738,7 @@
- #  so we have to use x_includes and x_libraries to test for png
+@@ -4587,7 +4586,7 @@
  #  and all following checks (=sane)
  # saved_CPPFLAGS is still up to date
--CPPFLAGS="${CPPFLAGS} -I${x_includes}"
-+CPPFLAGS="${CPPFLAGS} -I${x_includes} -I${LOCALBASE}/include"
+ if test -n "${x_includes}" ; then
+-  CPPFLAGS="${CPPFLAGS} -I${x_includes}"
++  CPPFLAGS="${CPPFLAGS} -I${x_includes} -I${LOCALBASE}/include"
+ fi
  if test "${USE_PNG}" = "yes"; then
    for ac_hdr in png.h
- do
-@@ -4840,6 +4839,7 @@
- # check must stand at end of list because of the missing libintl in libsane.so
- # check needs x_libraries and x_includes because they may be needed by png
- if test "${ADD_LIBINTL}" = "no"; then
-+  CPPFLAGS="${CPPFLAGS} -I${x_includes} -I${LOCALBASE}/include"
-   for ac_hdr in sane/sane.h
- do
- ac_safe=`echo "$ac_hdr" | sed 'y%./+-%__p_%'`
