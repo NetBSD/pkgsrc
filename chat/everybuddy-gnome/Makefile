@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2004/10/03 00:13:14 tv Exp $
+# $NetBSD: Makefile,v 1.16 2004/11/30 18:26:39 wiz Exp $
 
 .include "../everybuddy/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/-/-gnome-/}
-PKGREVISION=	11
+PKGREVISION=	12
 CONFLICTS+=	everybuddy-[0-9]*
 COMMENT+=	with GNOME support
 
