@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST.pre,v 1.1.1.1 1998/11/09 18:05:10 tsarna Exp $
+bin/lout
+bin/c2lout
+man/man1/lout.1
+man/man1/c2lout.1
+

@@ -1,0 +1,18 @@
+THE LOUT DOCUMENT FORMATTING SYSTEM
+
+Lout is a document formatting system similar in style to LaTeX.  It
+offers a very full range of features, including PostScript, PDF, and
+plain text output, optimal paragraph and page breaking, automatic
+hyphenation, PostScript EPS file inclusion and generation, equation
+formatting, tables, diagrams, rotation and scaling, sorted indexes,
+bibliographic databases, running headers and odd-even pages, automatic
+cross referencing, multilingual documents including hyphenation (most
+European languages are supported, including Russian), formatting of
+C/C++ programs, and more.  Lout may be extended by writing definitions
+which are much simpler than the equivalent troff of TeX macros.
+
+Lout is written in highly portable ANSI C and runs on most platforms.
+It is distributed under the GNU public license.
+
+Lout was designed and implemented by Jeffrey H. Kingston (jeff@cs.usyd.edu.au)
+of the Basser Department of Computer Science at the University of Sydney.
