@@ -1,4 +1,7 @@
-$NetBSD: distinfo,v 1.5 2004/12/24 10:07:23 jmmv Exp $
+$NetBSD: distinfo,v 1.6 2005/01/13 19:51:19 jmmv Exp $
 
 SHA1 (gtk-engines-2.6.0.tar.bz2) = afcfa78e32cbd0801dd04abf1c88524d825521da
 Size (gtk-engines-2.6.0.tar.bz2) = 453089 bytes
+SHA1 (patch-aa) = 5a87077d7311ad78626213f3947cdef43789bcbf
+SHA1 (patch-ab) = 8e401adfd63fffa9eca84b10128319989526eb2b
+SHA1 (patch-ac) = 2266402328c8bc86987d8786845f3375ed75ee14

@@ -1,0 +1,17 @@
+$NetBSD: patch-ac,v 1.1 2005/01/13 19:51:19 jmmv Exp $
+
+--- engines/redmond/src/redmond_gtk2_drawing.c.orig	2004-12-15 17:52:56.000000000 +0100
++++ engines/redmond/src/redmond_gtk2_drawing.c
+@@ -1581,10 +1581,10 @@ redmond_draw_handle (GtkStyle * style,
+              gint height, 
+              GtkOrientation orientation)
+ {
+-  g_return_if_fail(sanitize_parameters(style, window, &width, &height));
+-  
+   gboolean left_cutoff = FALSE, right_cutoff = FALSE, top_cutoff = FALSE, bottom_cutoff = FALSE;
+   
++  g_return_if_fail(sanitize_parameters(style, window, &width, &height));
++  
+   if (IS_BONOBO_DOCK_ITEM_GRIP(widget) && 
+      (gtk_widget_get_direction (widget) == GTK_TEXT_DIR_RTL) && 
+       orientation == (GTK_ORIENTATION_HORIZONTAL))
