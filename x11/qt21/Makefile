@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/04/28 17:18:21 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2000/05/10 12:04:54 tron Exp $
 #
 
 DISTNAME=	qt-x11-2.1.0
@@ -8,7 +8,7 @@ CATEGORIES=	x11
 MASTER_SITES=	ftp://ftp.troll.no/qt/source/ \
 		ftp://ftp.fu-berlin.de/unix/X11/gui/Qt/source/
 
-MAINTAINER=	tron@netbsd.org
+MAINTAINER=	drochner@netbsd.org
 HOMEPAGE=	http://www.troll.no/products/qt.html
 
 DEPENDS+=	Mesa-*:../../graphics/Mesa
