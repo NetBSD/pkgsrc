@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.10 2004/04/06 17:00:42 xtraeme Exp $
+$NetBSD: distinfo,v 1.11 2004/04/06 17:08:01 xtraeme Exp $
 
 SHA1 (kaffe-1.1.4.tar.gz) = fb7a6ac27d82e1854de07422c46ce5e17beda58b
 Size (kaffe-1.1.4.tar.gz) = 8891220 bytes
 SHA1 (patch-aa) = 7b5dde8d984e8ee2d474d4e54d064562a5535533
-SHA1 (patch-ac) = 175a6e608e5a89e44c651c3e73bd6f9b3055c98c
+SHA1 (patch-ac) = 5a4cd4ee913b7d4277cc10c38a7c4a810ba258f1
 SHA1 (patch-ae) = f7d6ff1e9356f6ba00c23c2ab0a1682aa9ccc003
