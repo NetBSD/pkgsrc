@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/08/24 18:38:06 dmcmahill Exp $
+bin/covered
+man/man1/covered.1
