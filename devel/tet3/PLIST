@@ -1,0 +1,32 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/06/17 17:39:03 agc Exp $
+tet3/bin/tcc
+tet3/bin/tccd
+tet3/bin/tccdstart
+tet3/bin/tet_start
+tet3/bin/tetsyncd
+tet3/bin/tetxresd
+tet3/lib/ksh/tcm.ksh
+tet3/lib/ksh/tetapi.ksh
+tet3/lib/perl/README
+tet3/lib/perl/api.pl
+tet3/lib/perl/tcm.pl
+tet3/lib/tet3/Ctcm.o
+tet3/lib/tet3/Ctcmchild.o
+tet3/lib/tet3/Cthrtcm.o
+tet3/lib/tet3/Cthrtcmchild.o
+tet3/lib/tet3/libapi.a
+tet3/lib/tet3/libthrapi.a
+tet3/lib/tet3/tcm.o
+tet3/lib/tet3/tcmchild.o
+tet3/lib/tet3/tcmrem.o
+tet3/lib/tet3/thrtcm.o
+tet3/lib/tet3/thrtcmchild.o
+tet3/lib/xpg3sh/tcm.sh
+tet3/lib/xpg3sh/tetapi.sh
+@dirrm tet3/lib/xpg3sh
+@dirrm tet3/lib/tet3
+@dirrm tet3/lib/perl
+@dirrm tet3/lib/ksh
+@dirrm tet3/lib
+@dirrm tet3/bin
+@dirrm tet3

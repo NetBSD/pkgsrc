@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.1.1.1 2003/06/17 17:39:03 agc Exp $
+
+--- ../configure	2003/06/16 14:59:00	1.1
++++ ../configure	2003/06/16 14:59:20
+@@ -230,6 +230,9 @@
+ *-freebsd)
+ 	fname=freebsd.mk
+ 	;;
++*-netbsd)
++	fname=netbsd.mk
++	;;
+ *-bsdi)
+ 	fname=bsdi.mk
+ 	;;
