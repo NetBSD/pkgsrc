@@ -1,6 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.1.2.10 2003/08/21 02:06:16 jlam Exp $
-#
-# Assume PKG_INSTALLATION_TYPE == "pkgviews".
+# $NetBSD: bsd.buildlink3.mk,v 1.1.2.11 2003/08/22 08:08:40 jlam Exp $
 
 ECHO_BUILDLINK_MSG=	${TRUE}
 BUILDLINK_DIR=		${WRKDIR}/.buildlink
@@ -21,20 +19,21 @@ PATH:=		${BUILDLINK_DIR}/bin:${PATH}
 #
 BUILDLINK_DEPENDS?=	${BUILDLINK_PACKAGES}
 
-.if defined(USE_X11)
+X11_LINKS_SUBDIR=		share/x11-links
+.if defined(USE_X11) && empty(PKGPATH:Mpkgtools/x11-links)
 BUILDLINK_DEPENDS+=		x11-links
 BUILDLINK_DEPENDS.x11-links=	x11-links>=0.13
 BUILDLINK_DEPMETHOD.x11-links=	build
 BUILDLINK_PKGSRCDIR.x11-links=	../../pkgtools/x11-links
 
-X11_LINKS_SUBDIR=		share/x11-links
-BUILDLINK_X11_DIR!=							\
+_BLNK_X11_LINKS_PREFIX!=						\
 	if ${PKG_INFO} -qe "${BUILDLINK_DEPENDS.x11-links}"; then	\
 		cd ${DEPOTBASE};					\
 		${PKG_ADMIN} -s "" lsbest "${BUILDLINK_DEPENDS.x11-links}"; \
 	else								\
-		${ECHO} "${LOCALBASE}/${X11_LINKS_SUBDIR}";		\
+		${ECHO} "${LOCALBASE}";					\
 	fi
+BUILDLINK_X11_DIR=	${_BLNK_X11_LINKS_PREFIX}/${X11_LINKS_SUBDIR}
 .endif
 
 .for _pkg_ in ${BUILDLINK_DEPENDS}
