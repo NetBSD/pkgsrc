@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2001/09/25 17:44:31 drochner Exp $
+# $NetBSD: Makefile,v 1.24 2001/10/04 15:24:08 wiz Exp $
 
 DISTNAME=	Numeric-20.2.1
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=numpy/}
 
@@ -14,5 +15,4 @@ PYBINMODULE=	yes
 PYSETUP=	setup_all.py
 
 .include "../../lang/python/extension.buildlink.mk"
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 .include "../../mk/bsd.pkg.mk"
