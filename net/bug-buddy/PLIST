@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2004/09/21 17:09:11 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.9 2005/03/22 16:27:52 jmmv Exp $
 bin/bug-buddy
 man/man1/bug-buddy.1
 share/application-registry/bug-buddy.applications
@@ -60,6 +60,7 @@ ${PKGLOCALEDIR}/locale/ml/LC_MESSAGES/bug-buddy.mo
 ${PKGLOCALEDIR}/locale/mn/LC_MESSAGES/bug-buddy.mo
 ${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/bug-buddy.mo
 ${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/bug-buddy.mo
+${PKGLOCALEDIR}/locale/ne/LC_MESSAGES/bug-buddy.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/bug-buddy.mo
 ${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/bug-buddy.mo
 ${PKGLOCALEDIR}/locale/no/LC_MESSAGES/bug-buddy.mo
