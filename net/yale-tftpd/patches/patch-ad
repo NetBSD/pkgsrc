@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.1.1.1 2001/07/30 19:43:49 nra Exp $
+$NetBSD: patch-ad,v 1.2 2003/09/21 09:15:31 jmc Exp $
 
 --- tftpd.c.orig	Mon Mar 20 21:14:39 1995
 +++ tftpd.c
@@ -11,6 +11,19 @@ $NetBSD: patch-ad,v 1.1.1.1 2001/07/30 19:43:49 nra Exp $
  #define	TIMEOUT		5
  
  extern	int errno;
+@@ -66,9 +68,9 @@
+ int	rexmtval = TIMEOUT;
+ int	maxtimeout = 5*TIMEOUT;
+ 
+-#define	PKTSIZE	SEGSIZE+4
+-char	buf[PKTSIZE];
+-char	ackbuf[PKTSIZE];
++#define	BUF_PKTSIZE	SEGSIZE+4
++char	buf[BUF_PKTSIZE];
++char	ackbuf[BUF_PKTSIZE];
+ struct	sockaddr_in from;
+ int	fromlen;
+ 
 @@ -105,6 +107,8 @@
  
  	if (argc > 1 && strcmp (argv[1], "-d") == 0) {
@@ -196,3 +209,12 @@ $NetBSD: patch-ad,v 1.1.1.1 2001/07/30 19:43:49 nra Exp $
  	struct formats *pf;
  {
  	struct tftphdr *dp, *w_init();
+@@ -739,7 +739,7 @@
+ 		write_behind(file, pf->f_convert);
+ 		for ( ; ; ) {
+ 			alarm(rexmtval);
+-			n = recv(peer, dp, PKTSIZE, 0);
++			n = recv(peer, dp, BUF_PKTSIZE, 0);
+ 			alarm(0);
+ 			if (n < 0) {            /* really? */
+ 				syslog(LOG_ERR, "tftpd: read: %m\n");
