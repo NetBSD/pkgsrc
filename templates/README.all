@@ -1,0 +1,30 @@
+<!-- $NetBSD: README.all,v 1.1 1999/08/22 01:32:07 hubertf Exp $ -->
+<html>
+<head>
+<title>All NetBSD Packages</title>
+</head>
+<body bgcolor=#ffffff>
+
+<a href="http://www.mckusick.com/beastie/mainpage/copyright.html">
+<img align=right src="templates/pkg-daemon.gif" alt="Daemon Power" border=0>
+</a>
+<h1>The NetBSD Packages Collection</h1>
+
+<p>
+The following list contains all packages currently available
+in the NetBSD Packages Collection, sorted alphabetically. 
+Please select an entry for more details.
+</p>
+
+<hr noshade>
+<table>
+<tr><th>Package <th>Category <th> Package description
+%%PKGS%%
+</table>
+
+<hr noshade>
+[
+<a href="README.html"> Go to top of packages tree</a>
+]
+</body>
+</html>
