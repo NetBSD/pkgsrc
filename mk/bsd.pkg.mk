@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.589 2000/10/19 02:30:05 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.590 2000/10/22 08:22:24 rh Exp $
 #
 # This file is in the public domain.
 #
@@ -1099,9 +1099,21 @@ all: build
 .if make(package)
 DEPENDS_TARGET=	package
 .elif make(update)
-DEPENDS_TARGET=	install
+DEPENDS_TARGET=	update
 .else
 DEPENDS_TARGET=	reinstall
+.endif
+.endif
+
+.if !defined(UPDATE_TARGET)
+.if ${DEPENDS_TARGET} == "update"
+.if make(package)
+UPDATE_TARGET=	package
+.else
+UPDATE_TARGET=	install
+.endif
+.else
+UPDATE_TARGET=	${DEPENDS_TARGET}
 .endif
 .endif
 
@@ -2061,7 +2073,8 @@ update:
 		${MAKE} ${MAKEFLAGS} deinstall DEINSTALLDEPENDS=ALL
 .endif
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-		${MAKE} ${MAKEFLAGS} ${DEPENDS_TARGET} KEEP_WRKDIR=YES
+		${MAKE} ${MAKEFLAGS} ${UPDATE_TARGET} KEEP_WRKDIR=YES	\
+			DEPENDS_TARGET=${DEPENDS_TARGET}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	[ ! -s ${DDIR} ] || for dep in `${CAT} ${DDIR}` ; do		\
 		(if cd ../.. && cd "$${dep}" ; then				\
@@ -2070,7 +2083,8 @@ update:
 			     "${REINSTALL}" != "NO" ] ; then		\
 				${MAKE} ${MAKEFLAGS} deinstall;		\
 			fi &&						\
-			${MAKE} ${MAKEFLAGS} ${DEPENDS_TARGET};		\
+			${MAKE} ${MAKEFLAGS} ${UPDATE_TARGET}		\
+				DEPENDS_TARGET=${DEPENDS_TARGET} ;	\
 		else							\
 			${ECHO_MSG} "${_PKGSRC_IN}> Skipping removed directory $${dep}";\
 		fi) ;							\
