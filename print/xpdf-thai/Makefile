@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/07/21 17:16:33 martti Exp $
+# $NetBSD: Makefile,v 1.10 2003/08/30 22:51:33 jlam Exp $
 #
 
 DISTNAME=	xpdf-thai
@@ -18,6 +18,8 @@ USE_PKGINSTALL=	yes
 DIST_SUBDIR=	${PKGNAME_NOREV}
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
+
+DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
 
 post-patch:
 	${MV} ${WRKSRC}/add-to-xpdfrc ${WRKSRC}/add-to-xpdfrc.orig
