@@ -1,15 +1,15 @@
-# $NetBSD: buildlink2.mk,v 1.1.1.1 2003/04/09 15:59:53 jmmv Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2003/06/28 11:47:01 jmmv Exp $
 #
 # This Makefile fragment is included by packages that use yasm.
 #
-# This file was created automatically using createbuildlink 2.4.
+# This file was created automatically using createbuildlink 2.6.
 #
 
 .if !defined(YASM_BUILDLINK2_MK)
 YASM_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			yasm
-BUILDLINK_DEPENDS.yasm?=		yasm>=0.2.0
+BUILDLINK_DEPENDS.yasm?=		yasm>=0.2.2
 BUILDLINK_PKGSRCDIR.yasm?=		../../devel/yasm
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.yasm=yasm
@@ -17,16 +17,16 @@ BUILDLINK_PREFIX.yasm_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.yasm+=	include/libyasm.h
 BUILDLINK_FILES.yasm+=	include/libyasm/*
 BUILDLINK_FILES.yasm+=	lib/libyasm.*
-BUILDLINK_FILES.yasm+=	lib/yasm-basic.*
-BUILDLINK_FILES.yasm+=	lib/yasm-bin.*
-BUILDLINK_FILES.yasm+=	lib/yasm-coff.*
-BUILDLINK_FILES.yasm+=	lib/yasm-dbg.*
-BUILDLINK_FILES.yasm+=	lib/yasm-nasm.*
-BUILDLINK_FILES.yasm+=	lib/yasm-null.*
-BUILDLINK_FILES.yasm+=	lib/yasm-raw.*
-BUILDLINK_FILES.yasm+=	lib/yasm-win32.*
-BUILDLINK_FILES.yasm+=	lib/yasm-x86.*
-BUILDLINK_FILES.yasm+=	lib/yasm-yapp.*
+BUILDLINK_FILES.yasm+=	lib/yasm_basic.*
+BUILDLINK_FILES.yasm+=	lib/yasm_bin.*
+BUILDLINK_FILES.yasm+=	lib/yasm_coff.*
+BUILDLINK_FILES.yasm+=	lib/yasm_dbg.*
+BUILDLINK_FILES.yasm+=	lib/yasm_nasm.*
+BUILDLINK_FILES.yasm+=	lib/yasm_null.*
+BUILDLINK_FILES.yasm+=	lib/yasm_raw.*
+BUILDLINK_FILES.yasm+=	lib/yasm_win32.*
+BUILDLINK_FILES.yasm+=	lib/yasm_x86.*
+BUILDLINK_FILES.yasm+=	lib/yasm_yapp.*
 
 .include "../../converters/libiconv/buildlink2.mk"
 .include "../../devel/gettext-lib/buildlink2.mk"
