@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2005/01/13 09:29:18 adam Exp $
+@comment $NetBSD: PLIST,v 1.16 2005/02/24 09:55:34 adam Exp $
 bin/AbiWord-2.2
 bin/abiword
 bin/ttfadmin.sh
@@ -8,8 +8,8 @@ share/AbiSuite-2.2/AbiWord/glade/ap_UnixDialog_Break.glade
 share/AbiSuite-2.2/AbiWord/glade/ap_UnixDialog_Field.glade
 share/AbiSuite-2.2/AbiWord/glade/ap_UnixDialog_FormatFootnotes.glade
 share/AbiSuite-2.2/AbiWord/glade/ap_UnixDialog_FormatFrame.glade
-share/AbiSuite-2.2/AbiWord/glade/ap_UnixDialog_FormatTable.glade
 share/AbiSuite-2.2/AbiWord/glade/ap_UnixDialog_FormatTOC.glade
+share/AbiSuite-2.2/AbiWord/glade/ap_UnixDialog_FormatTable.glade
 share/AbiSuite-2.2/AbiWord/glade/ap_UnixDialog_HdrFtr.glade
 share/AbiSuite-2.2/AbiWord/glade/ap_UnixDialog_InsertTable.glade
 share/AbiSuite-2.2/AbiWord/glade/ap_UnixDialog_Insert_DateTime.glade
@@ -21,6 +21,7 @@ share/AbiSuite-2.2/AbiWord/glade/ap_UnixDialog_Options_ColorSel.glade
 share/AbiSuite-2.2/AbiWord/glade/ap_UnixDialog_PageNumbers.glade
 share/AbiSuite-2.2/AbiWord/glade/ap_UnixDialog_PageSetup.glade
 share/AbiSuite-2.2/AbiWord/glade/ap_UnixDialog_Replace.glade
+share/AbiSuite-2.2/AbiWord/glade/ap_UnixDialog_Spell.glade
 share/AbiSuite-2.2/AbiWord/glade/ap_UnixDialog_Styles.glade
 share/AbiSuite-2.2/AbiWord/glade/ap_UnixDialog_Stylist.glade
 share/AbiSuite-2.2/AbiWord/glade/ap_UnixDialog_Stylist_modal.glade
@@ -870,10 +871,10 @@ share/AbiSuite-2.2/templates/Employee-Directory.awt
 share/AbiSuite-2.2/templates/Fax-Coversheet.awt
 share/AbiSuite-2.2/templates/Friendly-Letter.awt
 share/AbiSuite-2.2/templates/Memo.awt
-share/AbiSuite-2.2/templates/Two-Columns.awt
-share/AbiSuite-2.2/templates/US-Letter.awt
 share/AbiSuite-2.2/templates/Press-Release.awt
 share/AbiSuite-2.2/templates/Resume.awt
+share/AbiSuite-2.2/templates/Two-Columns.awt
+share/AbiSuite-2.2/templates/US-Letter.awt
 share/AbiSuite-2.2/templates/normal.awt
 share/AbiSuite-2.2/templates/normal.awt-am_ET
 share/AbiSuite-2.2/templates/normal.awt-ar

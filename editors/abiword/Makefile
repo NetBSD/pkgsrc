@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.86 2005/02/10 19:27:32 wiz Exp $
+# $NetBSD: Makefile,v 1.87 2005/02/24 09:55:34 adam Exp $
 
 .include "Makefile.common"
-PKGNAME=	abiword-${ABIWORD_DIST_VERSION}
-PKGREVISION=	1
+PKGNAME=	abiword-${ABIWORD_VERSION}
 COMMENT=	Open Source cross-platform word processor
 
 # GTK1 version and previous name of the GTK2 version
@@ -29,6 +28,8 @@ CONFIGURE_ARGS+=	--without-epath
 # Use X11 instead of Cocoa API
 CONFIGURE_ARGS+=	--disable-Cocoa
 .endif
+CONFIGURE_ARGS+=	--enable-threads --with-libxml2
+CONFIGURE_ARGS+=	--with-libjpeg-prefix=${BUILDLINK_PREFIX.jpeg}
 CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib}
 
 post-install:
