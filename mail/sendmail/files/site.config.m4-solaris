@@ -1,4 +1,4 @@
-# $NetBSD: site.config.m4-solaris,v 1.1 2001/10/19 08:51:32 veego Exp $
+# $NetBSD: site.config.m4-solaris,v 1.2 2002/09/23 12:56:59 markd Exp $
 
 # man pathnames specific for Solaris
 #

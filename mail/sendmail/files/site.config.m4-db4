@@ -1,0 +1,3 @@
+# enable db4
+APPENDDEF(`confENVDEF', `-DNEWDB -I${BUILDLINK_DIR}/include/db4')
+APPENDDEF(`confLIBS', `-ldb4')

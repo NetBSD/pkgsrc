@@ -1,98 +1,54 @@
-# $NetBSD: Makefile,v 1.52 2002/08/21 07:47:05 seb Exp $
+# $NetBSD: Makefile,v 1.53 2002/09/23 12:56:57 markd Exp $
 
-DISTNAME=	sendmail.8.11.6
-PKGNAME=	sendmail-8.11.6
-PKGREVISION=	1
-CATEGORIES=	mail
-MASTER_SITES=	ftp://ftp.sendmail.org/pub/sendmail/ \
-		ftp://ftp.fu-berlin.de/pub/unix/mail/sendmail/ \
-		ftp://ftp.kyoto.wide.ad.jp/pub/mail/sendmail/
+.include "../../mail/sendmail/Makefile.common"
 
-USE_WIDEPATCH?=	YES
-.if ${USE_WIDEPATCH} == "YES"
-PATCH_SITES=	ftp://ftp.kyoto.wide.ad.jp/pub/mail/smtpfeed/
-PATCHFILES=	sendmail8.11.6+3.4W.patch.gz
-PATCH_DIST_ARGS=-d ${WRKSRC}/sendmail -E ${PATCH_DIST_STRIP}
-.if !(defined(PATCH_DEBUG) || defined(PKG_VERBOSE))
-PATCH_DIST_ARGS+=--forward --quiet
-.endif
-PATCH_DIST_STRIP=	-p1
-.endif
-
-MAINTAINER=	packages@netbsd.org
-HOMEPAGE=	http://www.sendmail.org/
+PKGNAME=	sendmail-${DIST_VERS}
 COMMENT=	The well known Mail Transport Agent
 
-LICENSE=	no-profit
-
-MAKE_ENV+=	BSD_BINOWN="${BINOWN}" BSD_BINGRP="${BINGRP}" \
-		BSD_MANOWN="${MANOWN}" BSD_MANGRP="${MANGRP}" \
-		BUILDLINK_DIR="${BUILDLINK_DIR}"
-WRKSRC=		${WRKDIR}/${PKGNAME:C/nb[0-9]+$//}
-SITECONFIG=	${WRKSRC}/devtools/Site/site.config.m4
-
-BUILD_DEFS+=    USE_WIDEPATCH USE_INET6 USE_TCPWRAPPERS USE_LDAP USE_DB2 \
-		USE_SASL USE_STARTTLS
 MESSAGE_SRC=	${WRKDIR}/.MESSAGE_SRC
 PLIST_SRC=	${WRKDIR}/.PLIST_SRC
-DESCR_SRC=	${WRKDIR}/.DESCR_SRC
-
-.include "../../mk/bsd.prefs.mk"
-# Make sure that ${BUILDLINK_DIR} is defined even no "buildlink.mk" gets
-# included below.
-.include "../../mk/bsd.buildlink.mk"
 
 .if ${OPSYS} == "SunOS"
 USE_DB2?=	YES
 .else
 USE_DB2?=	NO
 .endif
-.if ${USE_DB2} == YES
-.include "../../databases/db/buildlink.mk"
+.if defined(USE_DB4) && ${USE_DB4} == YES
+.include "../../databases/db4/buildlink2.mk"
+.elif ${USE_DB2} == YES
+.include "../../databases/db/buildlink2.mk"
 .endif
 
 .if defined(USE_LDAP) && ${USE_LDAP} == YES
-.include "../../databases/openldap/buildlink.mk"
+.include "../../databases/openldap/buildlink2.mk"
 .endif
 
 .if defined(USE_SASL) && ${USE_SASL} == YES
-.include "../../security/cyrus-sasl/buildlink.mk"
+.include "../../security/cyrus-sasl/buildlink2.mk"
 .endif
 
 .if defined(USE_STARTTLS) && ${USE_STARTTLS} == YES
-.include "../../security/openssl/buildlink.mk"
+.include "../../security/openssl/buildlink2.mk"
 .endif
 
 USE_TCPWRAPPERS?=	YES
 .if ${USE_TCPWRAPPERS} == YES
-.include "../../security/tcp_wrappers/buildlink.mk"
+.include "../../security/tcp_wrappers/buildlink2.mk"
 .endif
 
-post-patch:
-	${CP} ${FILESDIR}/site.config.m4 ${SITECONFIG}
-	${CHMOD} +w ${SITECONFIG}
-	${CP} ${PKGDIR}/DESCR ${DESCR_SRC}
-	${ECHO} '---' >>${DESCR_SRC}
-	${ECHO} -n 'compiled features:' >>${DESCR_SRC}
-.if ${USE_WIDEPATCH} == YES
-	${ECHO} -n ' WIDE' >>${DESCR_SRC}
-.endif
-.if defined(USE_INET6) && ${USE_INET6} == YES
-	${CAT} ${FILESDIR}/site.config.m4-v6 >>${SITECONFIG}
-	${ECHO} -n ' INET6' >>${DESCR_SRC}
-.endif
+post-patch: make-sendmail-siteconfig
 .if ${USE_TCPWRAPPERS} == YES
 	${CAT} ${FILESDIR}/site.config.m4-tcpwrappers >>${SITECONFIG}
 	${ECHO} -n ' TCPWRAPPERS' >>${DESCR_SRC}
-.endif
-.if ${OPSYS} == "SunOS"
-	${CAT} ${FILESDIR}/site.config.m4-solaris >>${SITECONFIG}
 .endif
 .if defined(USE_LDAP) && ${USE_LDAP} == YES
 	${CAT} ${FILESDIR}/site.config.m4-ldap >>${SITECONFIG}
 	${ECHO} -n ' LDAP' >>${DESCR_SRC}
 .endif
-.if ${USE_DB2} == YES
+.if defined(USE_DB4) && ${USE_DB4} == YES
+	${CAT} ${FILESDIR}/site.config.m4-db4 >>${SITECONFIG}
+	${ECHO} -n ' DB4' >>${DESCR_SRC}
+.elif ${USE_DB2} == YES
 	${CAT} ${FILESDIR}/site.config.m4-db2 >>${SITECONFIG}
 	${ECHO} -n ' DB2' >>${DESCR_SRC}
 .endif
@@ -133,6 +89,10 @@ post-install:
 	${MV} -f /usr/sbin/makemap /usr/sbin/makemap.8.8 || ${TRUE}
 .endif
 
+PKG_GROUPS=	smmsp
+PKG_USERS=	smmsp:smmsp:Sendmail\\ Message\\ Submission\\ Program
+
+.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
 
 # has to be below include for bsd.pkg.mk, else substition fails
