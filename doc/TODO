@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2902 2005/01/14 15:26:23 jschauma Exp $
+$NetBSD: TODO,v 1.2903 2005/01/14 16:07:25 wiz Exp $
 
 Suggested new packages
 ======================
@@ -571,8 +571,7 @@ Suggested package updates
 	o icewm-gnome-1.2.20
 	o icewm-imlib-1.2.20
 	o icsi-finger-1.0.29
-	o idesk-0.6.0 [pkg/28850]
-	o idesk-0.6.1
+	o idesk-0.6.1 [pkg/28850]
 	o ifile-1.3.5
 	o ijs-0.35
 	o ike-scan-1.7
