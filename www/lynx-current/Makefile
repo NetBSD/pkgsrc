@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/04/17 13:32:47 fredb Exp $
+# $NetBSD: Makefile,v 1.3 2000/04/21 03:22:18 explorer Exp $
 #
 
 DISTNAME=		lynx2.8.3pre.6
@@ -58,7 +58,7 @@ CONFIGURE_ARGS+=	--enable-prettysrc
 CONFIGURE_ARGS+=	--enable-read-eta
 
 .if !exists(/usr/bin/openssl)
-DEPENDS+=		openssl-0.9.4:../../security/openssl
+DEPENDS+=		openssl-0.9.*:../../security/openssl
 SSLLIBS=		-L${LOCALBASE}/lib -Wl,-R${LOCALBASE} -lssl -lcrypto
 SSLINCS=		-I${LOCALBASE}/include -I${LOCALBASE}/include/openssl
 .else
