@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1486 2004/08/04 23:29:50 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1487 2004/08/05 02:10:20 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -88,6 +88,13 @@ ${_var_}+=	${${_var_}.${OPSYS}}
 ${_var_}+=	${${_var_}.*}
 .  endif
 .endfor
+
+# Store the result in the +BUILD_INFO file so we can query for the build
+# options using "pkg_info -Q PKG_OPTIONS <pkg>".
+#
+.if defined(PKG_SUPPORTED_OPTIONS) && defined(PKG_OPTIONS)
+BUILD_DEFS+=            PKG_OPTIONS
+.endif
 
 ##### Build crypto packages by default.
 MKCRYPTO?=		yes
