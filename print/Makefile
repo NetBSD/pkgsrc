@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2000/01/14 15:21:22 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.32 2000/02/25 01:04:15 wiz Exp $
 # FreeBSD Id: Makefile,v 1.52 1997/12/14 00:58:08 asami Exp
 #
 
@@ -6,42 +6,19 @@
     SUBDIR += a2ps
     SUBDIR += acroread
     SUBDIR += acroread3
-#    SUBDIR += afm
-#    SUBDIR += apsfilter
-#    SUBDIR += asprint
-#    SUBDIR += bibcard
-#    SUBDIR += bibview
-#    SUBDIR += c2ps
     SUBDIR += cups
-#    SUBDIR += detex
-#    SUBDIR += dvi2tty
-#    SUBDIR += dvi2xx
-#    SUBDIR += dvips
-#    SUBDIR += dvips2ascii
-#    SUBDIR += dviselect
     SUBDIR += enscript
     SUBDIR += ggv
-#    SUBDIR += ghostscript
-#    SUBDIR += ghostscript3
-#    SUBDIR += ghostscript4
     SUBDIR += ghostscript5
-#    SUBDIR += ghostview
     SUBDIR += gnome-print
     SUBDIR += gv
-#    SUBDIR += html2latex
-#    SUBDIR += latex
     SUBDIR += lgrind
-#    SUBDIR += lout
-#    SUBDIR += lprps
     SUBDIR += lyx
     SUBDIR += magicfilter
-#    SUBDIR += makeindex
     SUBDIR += mp
     SUBDIR += mpage
-#    SUBDIR += musixtex
     SUBDIR += papersize
     SUBDIR += pdflib
-#    SUBDIR += pkfonts
     SUBDIR += psify
     SUBDIR += psutils
     SUBDIR += rtf2latex
@@ -50,13 +27,6 @@
     SUBDIR += teTeX-bin
     SUBDIR += teTeX-share
     SUBDIR += teTeX-sharesrc
-#    SUBDIR += tex
-#    SUBDIR += texinfo
-#    SUBDIR += tr2latex
     SUBDIR += transfig
-#    SUBDIR += virtualpaper
-#    SUBDIR += xdvi
-#    SUBDIR += xmbibtex
-#    SUBDIR += xmgr
 
 .include "../mk/bsd.pkg.subdir.mk"

@@ -1,4 +1,4 @@
-#	$NetBSD: Makefile,v 1.57 2000/01/13 16:17:51 wiz Exp $
+#	$NetBSD: Makefile,v 1.58 2000/02/25 01:04:15 wiz Exp $
 # FreeBSD Id: Makefile,v 1.117 1997/10/13 04:41:07 max Exp
 
     SUBDIR += astrolog
@@ -7,18 +7,16 @@
     SUBDIR += chipmunk
     SUBDIR += chord
     SUBDIR += colorls
-#   SUBDIR += ctk		# broken w/ tcl/tk V8.0 - HF
-#   SUBDIR += dejagnu		# needs expect - HF
     SUBDIR += dgpsip
     SUBDIR += dialog
     SUBDIR += dotfile
     SUBDIR += dt
     SUBDIR += dync
-#   SUBDIR += ecc		# broken - HF
-#   SUBDIR += estic		# left for someone w/ an Istec - HF
+    SUBDIR += emma
     SUBDIR += fd
     SUBDIR += fep
     SUBDIR += figlet
+#    SUBDIR += freewnn-common		# base package only
     SUBDIR += git
     SUBDIR += gnofin
     SUBDIR += gnome-pim
@@ -36,10 +34,7 @@
     SUBDIR += linuxls
     SUBDIR += logsurfer
     SUBDIR += lv
-#   SUBDIR += mmv
     SUBDIR += most
-#   SUBDIR += mshell		# displays nothing, needs debugging - HF
-#   SUBDIR += nwrite
     SUBDIR += p5-Array-PrintCols
     SUBDIR += p5-Business-CreditCard
     SUBDIR += p5-Locale-Codes
@@ -48,9 +43,10 @@
     SUBDIR += pty-redir
     SUBDIR += py-mxDateTime
     SUBDIR += py-readline
-    SUBDIR += quicklist
     SUBDIR += qterm
+    SUBDIR += quicklist
     SUBDIR += remind
+    SUBDIR += root
     SUBDIR += rpm
     SUBDIR += sci
     SUBDIR += screen
@@ -61,15 +57,10 @@
     SUBDIR += tclticker
     SUBDIR += team
     SUBDIR += vfu
-#    SUBDIR += viz
     SUBDIR += watch
-#    SUBDIR += xcalendar
     SUBDIR += xfinans
-#    SUBDIR += xmaddressbook	# needs Motif/Lesstif - HF
     SUBDIR += xinvest
-#    SUBDIR += xopps		# needs Motif/Lesstif - HF
     SUBDIR += xrolodex
-#    SUBDIR += xtar		# needs Motif/Lesstif - HF
     SUBDIR += zorro
 
 .include "../mk/bsd.pkg.subdir.mk"
