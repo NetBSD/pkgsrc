@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/03/22 22:06:36 mycroft Exp $
+# $NetBSD: Makefile,v 1.4 2002/04/04 11:50:09 wiz Exp $
 #
 
 DISTNAME=		gdkxft-1.5
@@ -15,7 +15,6 @@ COMMENT=		transparently add anti-aliased font support to gtk+ applications
 IGNORE=			"${PKGNAME} requires XFree86-4.0 or higher"
 .endif
 
-DEPENDS+=		control-center>=1.2.0:../../x11/controlcenter
 GNU_CONFIGURE=		YES
 USE_PERL5=		YES
 USE_LIBTOOL=		YES
@@ -33,6 +32,8 @@ post-install:
 .endfor
 
 .include "../../converters/libiconv/buildlink.mk"
+.include "../../devel/libglade/buildlink.mk"
+.include "../../x11/controlcenter/buildlink.mk"
 .include "../../x11/gtk/buildlink.mk"
 .include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
