@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 1999/10/07 17:41:52 tron Exp $
+# $NetBSD: Makefile,v 1.7 2000/01/09 07:11:21 tls Exp $
 
-DISTNAME=		suse_linux-6.1p1
+DISTNAME=		suse_linux-6.3
 CATEGORIES=		emulators
 MASTER_SITES=		# empty
 DISTFILES=		# empty
@@ -8,8 +8,8 @@ DISTFILES=		# empty
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.suse.com/
 
-DEPENDS+=		suse_libc5-6.1p1:../suse_libc5 \
-			suse_xforms-6.1p1:../suse_xforms
+DEPENDS+=		suse_libc5-6.3:../suse_libc5 \
+			suse_xforms-6.3:../suse_xforms
 
 EXTRACT_ONLY=		# empty
 NO_BUILD=		yes
