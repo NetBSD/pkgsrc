@@ -1,0 +1,34 @@
+#
+# New ports collection makefile for:	mutt
+# Version required:			mutt-0.89.1i
+# Date Created:				02 February 1998
+# Whom:					tron
+#
+# $NetBSD: Makefile,v 1.1 1998/02/02 10:48:30 tron Exp $
+
+DISTNAME=	mutt-0.89.1i
+CATEGORIES=	mail
+MASTER_SITES=	ftp://riemann.iam.uni-bonn.de/pub/mutt/ \
+		ftp://ftp.gbnet.net/pub/mutt-international/ \
+		ftp://ftp.fu-berlin.de/pub/unix/mail/mutt/mutt-international/ \
+		ftp://ftp.gwdg.de/pub/unix/mail/mutt/international/ \
+		ftp://ftp.iks-jena.de/pub/mitarb/lutz/crypt/software/pgp/mutt/
+
+MAINTAINER=	tron@netbsd.org
+
+LIB_DEPENDS=	ncurses.3.4:${PORTSDIR}/devel/ncurses
+
+RESTRICTED=	"Uses PGP"
+MIRROR_DISTFILE= no
+GNU_CONFIGURE=	yes
+CONFIGURE_ARGS+= --with-curses=${PREFIX}
+
+MAN1=		man/man1/mutt.1
+
+post-install:
+	strip ${PREFIX}/bin/mutt
+	${MKDIR} ${PREFIX}/share/doc/mutt
+	${CP} ${WRKSRC}/doc/manual.txt ${PREFIX}/share/doc/mutt
+	${CP} ${WRKSRC}/doc/pgp-Notes.txt ${PREFIX}/share/doc/mutt
+
+.include <bsd.port.mk>
