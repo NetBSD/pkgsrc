@@ -1,7 +1,7 @@
-/* $Id: tnftp.h,v 1.3 2004/05/16 23:14:17 heinz Exp $ */
+/* $Id: tnftp.h,v 1.4 2005/01/04 23:44:24 lukem Exp $ */
 
 #define	FTP_PRODUCT	"tnftp"
-#define	FTP_VERSION	"20030825"
+#define	FTP_VERSION	"20050103"
 
 #include "config.h"
 

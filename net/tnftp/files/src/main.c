@@ -1,4 +1,4 @@
-/*	$NetBSD: main.c,v 1.2 2004/07/27 10:25:09 grant Exp $	*/
+/*	$NetBSD: main.c,v 1.3 2005/01/04 23:44:24 lukem Exp $	*/
 
 /*-
  * Copyright (c) 1996-2004 The NetBSD Foundation, Inc.
@@ -48,11 +48,7 @@
  * 2. Redistributions in binary form must reproduce the above copyright
  *    notice, this list of conditions and the following disclaimer in the
  *    documentation and/or other materials provided with the distribution.
- * 3. All advertising materials mentioning features or use of this software
- *    must display the following acknowledgement:
- *	This product includes software developed by the University of
- *	California, Berkeley and its contributors.
- * 4. Neither the name of the University nor the names of its contributors
+ * 3. Neither the name of the University nor the names of its contributors
  *    may be used to endorse or promote products derived from this software
  *    without specific prior written permission.
  *
@@ -109,7 +105,7 @@ __COPYRIGHT("@(#) Copyright (c) 1985, 1989, 1993, 1994\n\
 #if 0
 static char sccsid[] = "@(#)main.c	8.6 (Berkeley) 10/9/94";
 #else
-__RCSID("$NetBSD: main.c,v 1.2 2004/07/27 10:25:09 grant Exp $");
+__RCSID("$NetBSD: main.c,v 1.3 2005/01/04 23:44:24 lukem Exp $");
 #endif
 #endif /* not lint */
 #endif
@@ -213,9 +209,14 @@ main(int argc, char *argv[])
 	(void)close(s);
 					/* sanity check returned buffer sizes */
 	if (rcvbuf_size <= 0)
-		rcvbuf_size = 8192;
+		rcvbuf_size = 8 * 1024;
 	if (sndbuf_size <= 0)
-		sndbuf_size = 8192;
+		sndbuf_size = 8 * 1024;
+
+	if (sndbuf_size > 8 * 1024 * 1024)
+		sndbuf_size = 8 * 1024 * 1024;
+	if (rcvbuf_size > 8 * 1024 * 1024)
+		rcvbuf_size = 8 * 1024 * 1024;
 
 	marg_sl = xsl_init();
 	if ((tmpdir = getenv("TMPDIR")) == NULL)
@@ -1028,8 +1029,8 @@ usage(void)
 	const char *progname = getprogname();
 
 	(void)fprintf(stderr,
-"usage: %s [-46AadefginpRtvV] [-N netrc] [-o outfile] [-P port] [-r retry]\n"
-"           [-T dir,max[,inc][[user@]host [port]]] [host:path[/]]\n"
+"usage: %s [-46AadefginpRtvV] [-N netrc] [-o outfile] [-P port] [-q quittime]\n"
+"           [-r retry] [-T dir,max[,inc][[user@]host [port]]] [host:path[/]]\n"
 "           [file:///file] [ftp://[user[:pass]@]host[:port]/path[/]]\n"
 "           [http://[user[:pass]@]host[:port]/path] [...]\n"
 "       %s -u URL file [...]\n", progname, progname);
