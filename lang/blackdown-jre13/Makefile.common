@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.15 2004/05/05 18:12:11 xtraeme Exp $
+# $NetBSD: Makefile.common,v 1.16 2004/07/01 10:56:11 wiz Exp $
 #
 
 RELVERSION=	1.3.1
@@ -43,10 +43,9 @@ CHECK_SHLIBS=	NO	# This would use NetBSD ldd on Linux shlibs.
 
 .include "../../mk/bsd.prefs.mk"
 
-JVM_HOME=	${LOCALBASE}/java/blackdown-${RELVERSION}
+JVM_HOME=	${PREFIX}/java/blackdown-${RELVERSION}
 
-USE_BUILDLINK3=	yes
-NO_MTREE=	yes	# since we change PREFIX
+NO_BUILDLINK=	yes
 
 PLIST_SUBST+=	BLACKDOWN_ARCH=${BLACKDOWN_ARCH}
 
@@ -68,5 +67,5 @@ post-build:
 	${FIND} ${WRKSRC} -name '*.1.gz' -print | ${XARGS} ${GUNZIP_CMD}
 
 do-install:
-	${INSTALL_PROGRAM_DIR} ${PREFIX}
-	cd ${WRKSRC} && ${PAX} -rw . ${PREFIX}
+	${INSTALL_PROGRAM_DIR} ${JVM_HOME}
+	cd ${WRKSRC} && ${PAX} -rw . ${JVM_HOME}
