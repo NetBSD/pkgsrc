@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2003/06/17 07:57:03 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2003/12/23 08:25:30 xtraeme Exp $
 bin/gqview
 man/man1/gqview.1
 share/gqview/README
@@ -22,6 +22,7 @@ ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/gqview.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/gqview.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/gqview.mo
 ${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/gqview.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gqview.mo
 ${PKGLOCALEDIR}/locale/th/LC_MESSAGES/gqview.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/gqview.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/gqview.mo
