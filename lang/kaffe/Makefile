@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2003/09/22 03:04:16 jschauma Exp $
+# $NetBSD: Makefile,v 1.50 2003/09/23 20:56:00 dmcmahill Exp $
 
 DISTNAME=		kaffe-1.1.0
 CATEGORIES=		lang java
@@ -16,7 +16,7 @@ USE_GMAKE=		yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 TEST_TARGET=		check
 
-ONLY_FOR_PLATFORM=	*-*-arm *-*-arm32 *-*-i386 *-*-m68k *-*-mips*	\
+ONLY_FOR_PLATFORM=	*-*-alpha *-*-arm *-*-arm32 *-*-i386 *-*-m68k *-*-mips*	\
 			*-*-sparc *-*-powerpc
 
 GNU_CONFIGURE=		yes
@@ -41,6 +41,11 @@ SUPPORT_FILES=	${PREFIX}/jre/lib/security/java.security.default	\
 # are resolved correctly when libkaffe*.so are dynamically loaded.
 #
 CONFIGURE_ENV+=		VM_LIBS="-lc"
+.endif
+
+.if (${OPSYS} == "NetBSD") && (${MACHINE_ARCH} == "alpha")
+# On these systems, jit3 is not working.
+CONFIGURE_ARGS+=	--with-engine=intrp
 .endif
 
 post-install:
