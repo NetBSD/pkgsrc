@@ -1,9 +1,11 @@
-@comment $NetBSD: PLIST,v 1.4 1998/11/07 10:52:29 tron Exp $
+@comment $NetBSD: PLIST,v 1.5 1999/02/18 23:38:46 tron Exp $
 bin/kdvi
 bin/kfax
 bin/kfract
 bin/kghostview
+bin/kiconedit
 bin/kpaint
+bin/ksnapshot
 bin/kview
 share/doc/kde/HTML/en/kdvi/index.html
 share/doc/kde/HTML/en/kfax/index-1.html
@@ -27,10 +29,6 @@ share/doc/kde/HTML/en/kghostview/logotp3.gif
 share/doc/kde/HTML/en/kpaint/kpaint.html
 share/doc/kde/HTML/en/kpaint/index.html
 share/doc/kde/HTML/en/kpaint/Technic.gif
-share/doc/kde/HTML/en/kview/index.html
-share/doc/kde/HTML/en/kview/kview.gif
-share/doc/kde/HTML/en/kview/toolbar1.xpm
-share/doc/kde/HTML/en/kview/toolbar2.xpm
 share/doc/kde/HTML/fi/kdvi/index.html
 share/kde/apps/kdvi/toolbar/forwpage.xpm
 share/kde/apps/kdvi/toolbar/largetext.xpm
@@ -53,9 +51,59 @@ share/kde/apps/kpaint/toolbar/editcut.xpm
 share/kde/apps/kpaint/toolbar/filefloppy.xpm
 share/kde/apps/kpaint/toolbar/viewmag+.xpm
 share/kde/apps/kpaint/toolbar/viewmag-.xpm
-share/kde/apps/kview/toolbar/diashow.xpm
-share/kde/apps/kview/toolbar/random.xpm
-share/kde/apps/kview/toolbar/resize.xpm
+share/kde/apps/kiconedit/pics/package.xpm
+share/kde/apps/kiconedit/pics/mini-package.xpm
+share/kde/apps/kiconedit/pics/mini-folder.xpm
+share/kde/apps/kiconedit/pics/folder.xpm
+share/kde/apps/kiconedit/pics/source.xpm
+share/kde/apps/kiconedit/pics/standard.xpm
+share/kde/apps/kiconedit/pics/compressed.xpm
+share/kde/apps/kiconedit/toolbar/fileclose.xpm
+share/kde/apps/kiconedit/toolbar/circle.xpm
+share/kde/apps/kiconedit/toolbar/filledcircle.xpm
+share/kde/apps/kiconedit/toolbar/line.xpm
+share/kde/apps/kiconedit/toolbar/paintbrush.xpm
+share/kde/apps/kiconedit/toolbar/spraycan.xpm
+share/kde/apps/kiconedit/toolbar/ellipse.xpm
+share/kde/apps/kiconedit/toolbar/filledellipse.xpm
+share/kde/apps/kiconedit/toolbar/rectangle.xpm
+share/kde/apps/kiconedit/toolbar/filledrectangle.xpm
+share/kde/apps/kiconedit/toolbar/areaselect.xpm
+share/kde/apps/kiconedit/toolbar/selectrect.xpm
+share/kde/apps/kiconedit/toolbar/selectcircle.xpm
+share/kde/apps/kiconedit/toolbar/flood.xpm
+share/kde/apps/kiconedit/toolbar/grid.xpm
+share/kde/apps/kiconedit/toolbar/pointer.xpm
+share/kde/apps/kiconedit/toolbar/aim.xpm
+share/kde/apps/kiconedit/toolbar/eraser.xpm
+share/kde/apps/kiconedit/toolbar/newwin.xpm
+share/kde/apps/kiconedit/toolbar/grayscale.xpm
+share/kde/apps/kiconedit/toolbar/kdepalette.xpm
+share/kde/apps/kiconedit/toolbar/transform.xpm
+share/doc/kde/HTML/en/kiconedit/logotp3.gif
+share/doc/kde/HTML/en/kiconedit/index.html
+share/doc/kde/HTML/en/kiconedit/index-1.html
+share/doc/kde/HTML/en/kiconedit/index-2.html
+share/doc/kde/HTML/en/kiconedit/index-3.html
+share/doc/kde/HTML/en/kiconedit/index-4.html
+share/doc/kde/HTML/en/ksnapshot/index.html
+share/doc/kde/HTML/en/ksnapshot/ksnapshot.gif
+share/doc/kde/HTML/en/kview/kview.index
+share/doc/kde/HTML/en/kview/kview.html
+share/doc/kde/HTML/en/kview/kview-1.html
+share/doc/kde/HTML/en/kview/kview-2.html
+share/doc/kde/HTML/en/kview/kview-3.html
+share/doc/kde/HTML/en/kview/kview-4.html
+share/doc/kde/HTML/en/kview/kview-5.html
+share/doc/kde/HTML/en/kview/logotp3.gif
+share/doc/kde/HTML/da/kiconedit/logotp3.gif
+share/doc/kde/HTML/da/kiconedit/index.html
+share/doc/kde/HTML/da/kiconedit/index-1.html
+share/doc/kde/HTML/da/kiconedit/index-2.html
+share/doc/kde/HTML/da/kiconedit/index-3.html
+share/doc/kde/HTML/da/kiconedit/index-4.html
+share/doc/kde/HTML/cs/ksnapshot/index.html
+share/doc/kde/HTML/cs/ksnapshot/ksnapshot.gif
 share/kde/locale/de/LC_MESSAGES/kpaint.mo
 share/kde/locale/de/LC_MESSAGES/kghostview.mo
 share/kde/locale/de/LC_MESSAGES/kdvi.mo
@@ -123,6 +171,80 @@ share/kde/locale/pt_BR/LC_MESSAGES/kpaint.mo
 share/kde/locale/pt_BR/LC_MESSAGES/kghostview.mo
 share/kde/locale/pt_BR/LC_MESSAGES/kdvi.mo
 share/kde/locale/pt_BR/LC_MESSAGES/kfax.mo
+share/kde/locale/eo/LC_MESSAGES/kpaint.mo
+share/kde/locale/eo/LC_MESSAGES/kghostview.mo
+share/kde/locale/eo/LC_MESSAGES/kdvi.mo
+share/kde/locale/eo/LC_MESSAGES/kfax.mo
+share/kde/locale/is/LC_MESSAGES/kdvi.mo
+share/kde/locale/is/LC_MESSAGES/kfax.mo
+share/kde/locale/is/LC_MESSAGES/kghostview.mo
+share/kde/locale/is/LC_MESSAGES/kiconedit.mo
+share/kde/locale/is/LC_MESSAGES/kpaint.mo
+share/kde/locale/is/LC_MESSAGES/ksnapshot.mo
+share/kde/locale/is/LC_MESSAGES/kview.mo
+share/kde/locale/is/LC_MESSAGES/kfract.mo
+share/kde/locale/ko/LC_MESSAGES/kpaint.mo
+share/kde/locale/ko/LC_MESSAGES/kghostview.mo
+share/kde/locale/ko/LC_MESSAGES/kdvi.mo
+share/kde/locale/ko/LC_MESSAGES/kfax.mo
+share/kde/locale/tr/LC_MESSAGES/kpaint.mo
+share/kde/locale/tr/LC_MESSAGES/kghostview.mo
+share/kde/locale/tr/LC_MESSAGES/kdvi.mo
+share/kde/locale/tr/LC_MESSAGES/kfax.mo
+share/kde/locale/mk/LC_MESSAGES/kfax.mo
+share/kde/locale/pt_BR/LC_MESSAGES/kview.mo
+share/kde/locale/pt_BR/LC_MESSAGES/kiconedit.mo
+share/kde/locale/pt_BR/LC_MESSAGES/kfract.mo
+share/kde/locale/de/LC_MESSAGES/kiconedit.mo
+share/kde/locale/de/LC_MESSAGES/kview.mo
+share/kde/locale/de/LC_MESSAGES/kfract.mo
+share/kde/locale/de/LC_MESSAGES/ksnapshot.mo
+share/kde/locale/fr/LC_MESSAGES/kview.mo
+share/kde/locale/fr/LC_MESSAGES/ksnapshot.mo
+share/kde/locale/fr/LC_MESSAGES/kiconedit.mo
+share/kde/locale/fr/LC_MESSAGES/kfax.mo
+share/kde/locale/fr/LC_MESSAGES/kfract.mo
+share/kde/locale/sv/LC_MESSAGES/kfax.mo
+share/kde/locale/sv/LC_MESSAGES/kdvi.mo
+share/kde/locale/cs/LC_MESSAGES/kiconedit.mo
+share/kde/locale/cs/LC_MESSAGES/kview.mo
+share/kde/locale/cs/LC_MESSAGES/ksnapshot.mo
+share/kde/locale/cs/LC_MESSAGES/kfract.mo
+share/kde/locale/es/LC_MESSAGES/kview.mo
+share/kde/locale/es/LC_MESSAGES/ksnapshot.mo
+share/kde/locale/ru/LC_MESSAGES/kdvi.mo
+share/kde/locale/ru/LC_MESSAGES/kfax.mo
+share/kde/locale/ru/LC_MESSAGES/kfract.mo
+share/kde/locale/ru/LC_MESSAGES/kiconedit.mo
+share/kde/locale/ru/LC_MESSAGES/ksnapshot.mo
+share/kde/locale/ru/LC_MESSAGES/kview.mo
+share/kde/locale/da/LC_MESSAGES/kiconedit.mo
+share/kde/locale/da/LC_MESSAGES/kdvi.mo
+share/kde/locale/da/LC_MESSAGES/kfax.mo
+share/kde/locale/da/LC_MESSAGES/kfract.mo
+share/kde/locale/da/LC_MESSAGES/kghostview.mo
+share/kde/locale/da/LC_MESSAGES/kpaint.mo
+share/kde/locale/da/LC_MESSAGES/ksnapshot.mo
+share/kde/locale/da/LC_MESSAGES/kview.mo
+share/kde/locale/nl/LC_MESSAGES/kfax.mo
+share/kde/locale/no/LC_MESSAGES/kiconedit.mo
+share/kde/locale/no/LC_MESSAGES/kview.mo
+share/kde/locale/no/LC_MESSAGES/kfract.mo
+share/kde/locale/no/LC_MESSAGES/ksnapshot.mo
+share/kde/locale/pl/LC_MESSAGES/kiconedit.mo
+share/kde/locale/pl/LC_MESSAGES/ksnapshot.mo
+share/kde/locale/pl/LC_MESSAGES/kfract.mo
+share/kde/locale/pl/LC_MESSAGES/kview.mo
+share/kde/locale/fi/LC_MESSAGES/kview.mo
+share/kde/locale/fi/LC_MESSAGES/kiconedit.mo
+share/kde/locale/fi/LC_MESSAGES/kfract.mo
+share/kde/locale/fi/LC_MESSAGES/ksnapshot.mo
+share/kde/locale/sk/LC_MESSAGES/kview.mo
+share/kde/locale/sk/LC_MESSAGES/kiconedit.mo
+share/kde/locale/sk/LC_MESSAGES/ksnapshot.mo
+share/kde/locale/sk/LC_MESSAGES/kfract.mo
+share/kde/icons/mini/kiconedit.xpm
+share/kde/icons/mini/ksnapshot.xpm
 share/kde/icons/mini/kdvi.xpm
 share/kde/icons/mini/kfax.xpm
 share/kde/icons/mini/kfract.xpm
@@ -135,24 +257,35 @@ share/kde/icons/kfract.xpm
 share/kde/icons/kghostview.xpm
 share/kde/icons/kpaint.xpm
 share/kde/icons/kview.xpm
+share/kde/icons/kiconedit.xpm
+share/kde/icons/ksnapshot.xpm
 share/kde/applnk/Graphics/kdvi.kdelnk
 share/kde/applnk/Graphics/KFax.kdelnk
 share/kde/applnk/Graphics/kfract.kdelnk
 share/kde/applnk/Graphics/kghostview.kdelnk
 share/kde/applnk/Graphics/kpaint.kdelnk
 share/kde/applnk/Graphics/kview.kdelnk
+share/kde/applnk/Graphics/kiconedit.kdelnk
+share/kde/applnk/Graphics/ksnapshot.kdelnk
+@dirrm share/doc/kde/HTML/da/kiconedit
+@dirrm share/doc/kde/HTML/da
+@dirrm share/doc/kde/HTML/cs/ksnapshot
+@dirrm share/doc/kde/HTML/cs
 @dirrm share/doc/kde/HTML/fi/kdvi
 @dirrm share/doc/kde/HTML/fi
+@dirrm share/doc/kde/HTML/en/ksnapshot
+@dirrm share/doc/kde/HTML/en/kiconedit
 @dirrm share/doc/kde/HTML/en/kview
 @dirrm share/doc/kde/HTML/en/kpaint
 @dirrm share/doc/kde/HTML/en/kghostview
 @dirrm share/doc/kde/HTML/en/kfract
 @dirrm share/doc/kde/HTML/en/kfax
 @dirrm share/doc/kde/HTML/en/kdvi
-@dirrm share/kde/apps/kview/toolbar
-@dirrm share/kde/apps/kview
 @dirrm share/kde/apps/kpaint/toolbar
 @dirrm share/kde/apps/kpaint
+@dirrm share/kde/apps/kiconedit/pics
+@dirrm share/kde/apps/kiconedit/toolbar
+@dirrm share/kde/apps/kiconedit
 @dirrm share/kde/apps/kfax/pics
 @dirrm share/kde/apps/kfax
 @dirrm share/kde/apps/kdvi/toolbar
