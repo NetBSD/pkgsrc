@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.234 2004/05/12 18:49:47 bouyer Exp $
+# $NetBSD: Makefile,v 1.235 2004/05/13 04:12:36 xtraeme Exp $
 
 COMMENT=	System utilities
 
@@ -179,6 +179,7 @@ SUBDIR+=	xbatt
 SUBDIR+=	xbattbar
 SUBDIR+=	xcdroast
 SUBDIR+=	xdu
+SUBDIR+=	xentools12
 SUBDIR+=	xfce4-diskperf-plugin
 SUBDIR+=	xfce4-fm
 SUBDIR+=	xfce4-fm-icons
