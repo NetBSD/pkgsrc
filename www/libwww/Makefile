@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2004/03/14 09:21:25 heinz Exp $
+# $NetBSD: Makefile,v 1.55 2004/03/21 07:41:57 snj Exp $
 
 DISTNAME=		w3c-libwww-5.4.0
 PKGNAME=		libwww-5.4.0
@@ -24,6 +24,9 @@ USE_PERL5=		build
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS=		--with-zlib --with-regex --without-x
 CONFIGURE_ARGS+=	--with-ssl="${SSLBASE}"
+
+# Avoid an ICE in gcc2 on sparc64
+CONFIGURE_ENV+=		F77=${FALSE}
 
 DOCDIR=			${PREFIX}/share/doc/libwww
 
