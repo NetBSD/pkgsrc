@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/05/31 19:15:48 kei Exp $
+# $NetBSD: Makefile,v 1.2 2002/07/17 12:54:55 agc Exp $
 
 DISTNAME=	molden3.7
 PKGNAME=	molden-3.7
@@ -14,6 +14,8 @@ MAKEFILE=	makefile
 ALL_TARGET=	molden
 
 USE_FORTRAN=	# defined
+
+INTERACTIVE_STAGE=	fetch
 
 LICENSE=	molden-license
 RESTRICTED=	"Redistributing Molden by unregistered user is prohibited."
