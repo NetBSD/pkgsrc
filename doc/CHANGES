@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9540 2005/03/22 01:09:27 wiz Exp $
+$NetBSD: CHANGES,v 1.9541 2005/03/22 01:11:42 seb Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1447,3 +1447,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated xlockmore to 5.16 [hubertf 2005-03-22]
 	Added dsniff-nox11-2.3 [wiz 2005-03-22]
 	Updated dsniff to 2.3nb4 [wiz 2005-03-22]
+	Updated amarok to 1.2.2 [seb 2005-03-22]
