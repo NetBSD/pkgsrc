@@ -1,7 +1,7 @@
-$NetBSD: patch-an,v 1.1.1.1 2001/04/27 15:27:32 agc Exp $
+$NetBSD: patch-an,v 1.2 2005/02/28 02:26:59 ben Exp $
 
---- main.c.orig	Fri Jun 19 13:55:33 1992
-+++ main.c	Sat Jan 13 21:53:56 2001
+--- main.c.orig	1992-06-19 13:55:33.000000000 -0700
++++ main.c
 @@ -1,5 +1,8 @@
  /*	main.c		*/
  /* This game is bad for you. It is evil. It will rot your brain. */
@@ -11,7 +11,7 @@ $NetBSD: patch-an,v 1.1.1.1 2001/04/27 15:27:32 agc Exp $
  #include "header.h"
  #include "player.h"
  #include "itm.h"
-@@ -40,7 +43,7 @@
+@@ -40,14 +43,14 @@ static char *optstring = "sicnhro:d:";
  	************
   */
  
@@ -20,7 +20,16 @@ $NetBSD: patch-an,v 1.1.1.1 2001/04/27 15:27:32 agc Exp $
  int argc;
  char *argv[];
  {
-@@ -55,14 +58,21 @@
+ 	int i, hard;
+ 	char buf[BUFSIZ];
+-	char *malloc(), *getenv(), *getlogin(), *ptr=0;
+-	struct passwd *pwe,*getpwuid();
++	char *ptr=0;
++	struct passwd *pwe;
+ 	extern char *optarg;
+ 	extern int optind, opterr;
+ 
+@@ -55,14 +58,21 @@ char *argv[];
  /*
   *	first task is to identify the player
   */
@@ -49,7 +58,7 @@ $NetBSD: patch-an,v 1.1.1.1 2001/04/27 15:27:32 agc Exp $
  	}
  	if (ptr==(char *)NULL)
  		goto noone;
-@@ -109,6 +119,9 @@
+@@ -109,6 +119,9 @@ noone:		    	fprintf(stderr,"Who *are* y
  
  	init_cells();	/* initialize dungeon storage */
  
@@ -59,7 +68,7 @@ $NetBSD: patch-an,v 1.1.1.1 2001/04/27 15:27:32 agc Exp $
  	lcreat((char*)0);	
  	newgame();		/*	set the initial clock  */
  	hard= -1;
-@@ -277,6 +290,7 @@
+@@ -277,6 +290,7 @@ noone:		    	fprintf(stderr,"Who *are* y
  		  	}
  	}	/* end main loop */
  	/* NOTREACHED */
@@ -67,7 +76,7 @@ $NetBSD: patch-an,v 1.1.1.1 2001/04/27 15:27:32 agc Exp $
  }	/* end main */
  
  
-@@ -285,7 +299,7 @@
+@@ -285,7 +299,7 @@ noone:		    	fprintf(stderr,"Who *are* y
   *
   *	get and execute a command
   */
@@ -76,7 +85,7 @@ $NetBSD: patch-an,v 1.1.1.1 2001/04/27 15:27:32 agc Exp $
  {
  	int i,j;
  	int k,flag;
-@@ -393,7 +407,7 @@
+@@ -393,7 +407,7 @@ parse ()
  					nomove=1;
  					return;	/*give the help screen*/
  
@@ -85,7 +94,7 @@ $NetBSD: patch-an,v 1.1.1.1 2001/04/27 15:27:32 agc Exp $
  					lprcat("Saving . . .");
  					lflush();
  					if (savegame(savefilename) == -1 && compress) {
-@@ -533,18 +547,18 @@
+@@ -533,18 +547,18 @@ parse ()
  					for (i=0; i<SPNUM; i++)	
  						spelknow[i]=1;
  					for (i=0; i<MAXSCROLL; i++)
@@ -108,7 +117,7 @@ $NetBSD: patch-an,v 1.1.1.1 2001/04/27 15:27:32 agc Exp $
  					item[i][0]=OPOTION;
  					iarg[i][0]=i-MAXX+MAXPOTION;
  				  }
-@@ -619,7 +633,7 @@
+@@ -619,7 +633,7 @@ lprintf( "\nThe Addiction of Ularn - Ver
  	}
  }
  
