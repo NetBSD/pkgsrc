@@ -1,19 +1,24 @@
-$NetBSD: patch-aa,v 1.10 2001/11/15 10:57:32 wiz Exp $
+$NetBSD: patch-aa,v 1.11 2001/12/29 11:40:28 zuntum Exp $
 
---- configure.orig	Thu Nov 15 08:34:22 2001
+--- configure.orig	Sun Dec 16 02:42:15 2001
 +++ configure
-@@ -2224,7 +2224,6 @@
+@@ -2229,7 +2229,6 @@
    FALSE_FALSE=
  fi
  
 -localedir='${prefix}/share/locale'
  
  
- ALL_LINGUAS="de es et fi fr hu it ja nl pl pt_BR ru sk sl tr uk zh_CN.GB2312 zh_TW.Big5"
-@@ -4055,6 +4054,9 @@
+ ALL_LINGUAS="da de es et fi fr hu it ja nl no pl pt_BR ru sk sl tr uk zh_CN.GB2312 zh_TW"
+@@ -4060,7 +4059,13 @@
  	< $srcdir/po/POTFILES.in > po/POTFILES
    
  
+-
++# Use ${PKGLOCALEDIR} for the location of installed locale files.
++DATADIRNAME="${PKGLOCALEDIR}"
++localedir='${prefix}/${DATADIRNAME}/locale'
++
 +# Use ${PKGLOCALEDIR} for the location of installed locale files.
 +DATADIRNAME="${PKGLOCALEDIR}"
 +localedir='${prefix}/${DATADIRNAME}/locale'
