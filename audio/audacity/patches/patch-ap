@@ -1,0 +1,13 @@
+$NetBSD: patch-ap,v 1.1 2001/11/17 06:36:15 itohy Exp $
+
+--- snd/sndhead.h.orig	Sun Jul 29 10:17:54 2001
++++ snd/sndhead.h	Fri Nov 16 22:37:01 2001
+@@ -1,7 +1,7 @@
+ /* sndhead.h -- header info */
+ 
+ /* NeXT sound headers */
+-#define NEXT_SND_MAGIC (*((long *) ".snd"))  // was: ((int)0x2e736e64)
++#define NEXT_SND_MAGIC (sndmagic.i[0])  // was: ((int)0x2e736e64)
+ #define NEXT_SND_FORMAT_UNSPECIFIED		(0)
+ #define	NEXT_SND_FORMAT_ULAW_8			(1)
+ #define NEXT_SND_FORMAT_LINEAR_8		(2)
