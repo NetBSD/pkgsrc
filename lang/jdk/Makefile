@@ -1,28 +1,41 @@
-# $NetBSD: Makefile,v 1.9 1999/11/23 16:26:13 hubertf Exp $
+# $NetBSD: Makefile,v 1.10 1999/12/10 03:55:22 hubertf Exp $
+#
 
-DISTNAME=		jdk1.1.6
-PKGNAME=		jdk-1.1.6
-WRKSRC=			${WRKDIR}/jdk1.1.6
-CATEGORIES=		lang
-MASTER_SITES=		ftp://ftp.netbsd.org/pub/NetBSD/misc/java/i386/1.1.6/
-EXTRACT_SUFX=		.tgz
+VERSION=1.1.6
+DISTNAME=       jdk${VERSION}
+PKGNAME=	jdk-${VERSION}
+CATEGORIES=     lang
+MASTER_SITES=   ftp://ftp.netbsd.org/pub/NetBSD/misc/java/i386/${VERSION}/ \
+		ftp://ftp.de.netbsd.org/pub/NetBSD/misc/java/i386/${VERSION}/
+EXTRACT_SUFX=	.tgz
 
-MAINTAINER=		packages@netbsd.org
-HOMEPAGE=		http://www.quick.com.au/java/
+MAINTAINER=     packages@netbsd.org
+HOMEPAGE=       http://www.quick.com.au/java/
 
-RESTRICTED=		'No redistribution of the Java(tm) Development Kit'
-NO_PACKAGE=		${RESTRICTED}
-NO_CDROM=		${RESTRICTED}
-MIRROR_DISTFILE=	no
+.include "../../mk/bsd.prefs.mk"
+.if !defined(JDK_HOME)
+JDK_HOME:=	${LOCALBASE}/java
+.endif
 
-ONLY_FOR_PLATFORM=	NetBSD-*-i386
+WRKSRC=		${WRKDIR}/jdk${VERSION}
+NO_BUILD=	yes
+MESSAGE_FILE=	${WRKDIR}/.MESSAGE
 
-NO_CONFIGURE=		yes
-NO_BUILD=		yes
+ONLY_FOR_PLATFORM= NetBSD-*-i386
+RESTRICTED=	"No redistribution of the Java(tm) Development Kit"
+NO_CDROM=	${RESTRICTED}
 
 do-install:
 	${RM} ${WRKSRC}/README.NetBSD.orig
-	-${MKDIR} ${PREFIX}/java
-	(cd ${WRKSRC}; tar cf - . | (cd ${PREFIX}/java ; tar xvf - ))
+	${MKDIR} ${JDK_HOME}
+	cd ${WRKSRC} ; ${GTAR} pcf - . | ( cd ${JDK_HOME} ; ${GTAR} pvxf - )
+	${SED} \
+		-e 's|@JDK_HOME@|${JDK_HOME}|g' \
+		<${PKGDIR}/MESSAGE >${MESSAGE_FILE}
+
 
 .include "../../mk/bsd.pkg.mk"
+
+
+# This needs to be after bsd.pkg.mk 
+PREFIX:=	${JDK_HOME}
