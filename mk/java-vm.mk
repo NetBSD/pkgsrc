@@ -1,4 +1,4 @@
-# $NetBSD: java-vm.mk,v 1.12 2003/03/23 17:30:39 jschauma Exp $
+# $NetBSD: java-vm.mk,v 1.13 2003/05/09 11:31:46 abs Exp $
 #
 # This Makefile fragment handles Java dependencies and make variables,
 # and is meant to be included by packages that require Java either at
@@ -124,8 +124,8 @@ _PKG_JVM_INSTALLED.${_jvm_}!= \
 # or 1.4 version of the Sun JDK, so default to the newer installed one.
 #
 .if ${_PKG_JVM_DEFAULT} == "sun-jdk"
-.  if !empty(MACHINE_PLATFORM:MNetBSD-1.5Z[A-Z]-i386) || \
-      !empty(MACHINE_PLATFORM:MNetBSD-1.[6-9]*-i386) || \
+.  if !empty(MACHINE_PLATFORM:MNetBSD-1.6[M-Z]*-i386) || \
+      !empty(MACHINE_PLATFORM:MNetBSD-1.[7-9]*-i386) || \
       !empty(MACHINE_PLATFORM:MLinux-*-i[3456]86)
 .    if defined(_PKG_JVM_INSTALLED.sun-jdk14) && \
 	(${_PKG_JVM_INSTALLED.sun-jdk14} == "yes")
