@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.5 2004/09/06 13:08:54 markd Exp $
+
+--- configure.orig	2004-08-24 00:13:40.000000000 +1200
++++ configure
+@@ -47040,7 +47040,7 @@ echo "${ECHO_T}$kde_cv_path" >&6
+       gssapi_flavor=HEIMDAL
+     fi
+   else
+-    search_incs="$kde_includes /usr/include /usr/local/include"
++    search_incs="$kde_includes /usr/include/gssapi /usr/include /usr/local/include"
+ 
+ gssapi_incdir=NO
+ for i in $search_incs;
