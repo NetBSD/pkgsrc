@@ -1,6 +1,6 @@
-$NetBSD: patch-af,v 1.12 2003/05/28 02:34:00 jlam Exp $
+$NetBSD: patch-af,v 1.13 2004/01/10 03:32:09 jlam Exp $
 
---- cups/Makefile.orig	Wed Mar 19 21:45:21 2003
+--- cups/Makefile.orig	Fri Aug 29 17:26:40 2003
 +++ cups/Makefile
 @@ -93,8 +93,8 @@ install:	all	installhdrs
  	fi
@@ -44,7 +44,7 @@ $NetBSD: patch-af,v 1.12 2003/05/28 02:34:00 jlam Exp $
  	echo Linking $@...
  	$(DSO) $(DSOFLAGS) -o $@ $(LIBOBJS:.o=.lo) -rpath $(LIBDIR) \
 -		-version-info 2:5 $(SSLLIBS) $(COMMONLIBS)
-+		-version-info 2:5 $(LIBCRYPT) $(SSLLIBS) $(COMMONLIBS)
++		-version-info 2:6 $(LIBCRYPT) $(SSLLIBS) $(COMMONLIBS)
  
  
  #

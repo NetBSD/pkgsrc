@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2003/05/28 02:33:59 jlam Exp $
+@comment $NetBSD: PLIST,v 1.11 2004/01/10 03:32:09 jlam Exp $
 bin/cancel
 bin/cups-config
 bin/cupstestppd
@@ -24,7 +24,7 @@ lib/libcups.a
 lib/libcups.la
 lib/libcups.so
 lib/libcups.so.2
-lib/libcups.so.2.5
+lib/libcups.so.2.6
 lib/libcupsimage.a
 lib/libcupsimage.la
 lib/libcupsimage.so
@@ -275,6 +275,7 @@ share/cups/templates/de/jobs.tmpl
 share/cups/templates/de/modify-class.tmpl
 share/cups/templates/de/modify-printer.tmpl
 share/cups/templates/de/option-boolean.tmpl
+share/cups/templates/de/option-conflict.tmpl
 share/cups/templates/de/option-header.tmpl
 share/cups/templates/de/option-pickmany.tmpl
 share/cups/templates/de/option-pickone.tmpl
@@ -321,6 +322,7 @@ share/cups/templates/fr/jobs.tmpl
 share/cups/templates/fr/modify-class.tmpl
 share/cups/templates/fr/modify-printer.tmpl
 share/cups/templates/fr/option-boolean.tmpl
+share/cups/templates/fr/option-conflict.tmpl
 share/cups/templates/fr/option-header.tmpl
 share/cups/templates/fr/option-pickmany.tmpl
 share/cups/templates/fr/option-pickone.tmpl
