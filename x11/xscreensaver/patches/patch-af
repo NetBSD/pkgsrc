@@ -1,3 +1,5 @@
+$NetBSD: patch-af,v 1.2 2000/06/02 19:45:01 fredb Exp $
+
 --- driver/Makefile.in.orig	Mon Apr 24 08:24:39 2000
 +++ driver/Makefile.in	Mon Apr 24 08:48:07 2000
 @@ -317,11 +317,11 @@
