@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/03/23 22:08:50 tron Exp $
+# $NetBSD: Makefile,v 1.3 2000/07/07 18:13:36 dmcmahill Exp $
 # FreeBSD: ports/editors/uemacs/Makefile,v 1.14 1999/10/07 06:49:01 tg Exp
 
 DISTNAME=	ue400dev
@@ -9,10 +9,6 @@ EXTRACT_SUFX=	.zip
 
 MAINTAINER=	tron@netbsd.org
 
-BUILD_DEPENDS+=${UNZIP}:../../archivers/unzip
-
-EXTRACT_CMD=	${UNZIP} -Laq ${DISTDIR}/${EXTRACT_ONLY}
-UNZIP=		${LOCALBASE}/bin/unzip
 WRKSRC=		${WRKDIR}
 
 post-extract:
