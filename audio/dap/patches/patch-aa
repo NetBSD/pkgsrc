@@ -1,8 +1,13 @@
-$NetBSD: patch-aa,v 1.2 1999/12/22 09:19:57 scw Exp $
+$NetBSD: patch-aa,v 1.3 2000/02/23 11:49:57 wiz Exp $
 
---- main/Makefile.netbsd.orig	Thu Nov 11 01:17:08 1999
-+++ main/Makefile.netbsd	Fri Dec  3 21:31:57 1999
-@@ -12,7 +12,7 @@
+--- ./main/Makefile.netbsd.orig	Thu Nov 11 02:17:08 1999
++++ ./main/Makefile.netbsd	Wed Feb 23 12:12:58 2000
+@@ -8,11 +8,11 @@
+ AUDIOF  = ../libaudiofile
+ BACKDIR = ../bak/main
+ HOMEDIR = $(HOME)
+-X11DIR  = /usr/X11R6
++X11DIR  = ${X11BASE}
  INCDIR  = -I. -I.. -I$(SOUND) -I$(SPKIT) -I$(FORMS) -I$(TOOLTIP) -I$(X11DIR)/include -I$(X11DIR)/include/X11
 -LIBDIR  = -L$(SPKIT)/spkit -L$(FORMS) -L$(AUDIO) -L$(AUDIOF) -L$(TOOLTIP) -L$(X11DIR)/lib
 +LIBDIR  = -Wl,-R$(X11DIR)/lib -L$(SPKIT)/spkit -L$(FORMS) -L$(AUDIO) -L$(AUDIOF) -L$(TOOLTIP) -L$(X11DIR)/lib
