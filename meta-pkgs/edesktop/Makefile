@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1999/11/28 02:41:01 hubertf Exp $
+# $NetBSD: Makefile,v 1.8 1999/12/17 11:08:06 agc Exp $
 #
 
 DISTNAME=	edesktop-1.0
@@ -8,7 +8,7 @@ DISTFILES=	# empty
 
 MAINTAINER=	root@garbled.net
 
-DEPENDS+=	enlightenment-0.15.4:../../x11/enlightenment
+DEPENDS+=	enlightenment-0.16.2:../../x11/enlightenment
 DEPENDS+=	eterm-0.8.8:../../x11/eterm
 DEPENDS+=	rxvt-2.6.1:../../x11/rxvt
 DEPENDS+=	mutt-*:../../mail/mutt
