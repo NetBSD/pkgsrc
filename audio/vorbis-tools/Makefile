@@ -1,17 +1,13 @@
-# $NetBSD: Makefile,v 1.2 2001/04/05 13:18:52 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/08/08 10:05:30 lukem Exp $
 
-DISTNAME=	vorbis-tools-1.0beta4
-PKGNAME=	vorbis-tools-1.0.0.4
+DISTNAME=	vorbis-tools-1.0rc1
+PKGNAME=	vorbis-tools-1.0.0.5
 CATEGORIES=	audio
-MASTER_SITES=	http://www.vorbis.com/files/beta4/unix/
+MASTER_SITES=	http://www.vorbis.com/files/rc1/unix/
 
 MAINTAINER=	reed@reedmedia.net
 HOMEPAGE=	http://www.vorbis.com/
 COMMENT=	Ogg Vorbis encoder and player
-
-DEPENDS+=	libao>=0.6.0:../../audio/libao
-DEPENDS+=	libogg>=1.0.0.4:../../audio/libogg
-DEPENDS+=	libvorbis>=1.0.0.4:../../audio/libvorbis
 
 CONFLICTS=	vorbis-*
 
@@ -21,5 +17,9 @@ LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 CONFIGURE_ARGS+=	--with-ogg-prefix=${PREFIX} \
 			--with-vorbis-prefix=${PREFIX} \
 			--with-ao-prefix=${PREFIX}
+
+.include "../../audio/libao/buildlink.mk"
+.include "../../audio/libogg/buildlink.mk"
+.include "../../audio/libvorbis/buildlink.mk"
 
 .include "../../mk/bsd.pkg.mk"
