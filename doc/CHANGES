@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6247 2004/06/20 20:44:36 agc Exp $
+$NetBSD: CHANGES,v 1.6248 2004/06/20 20:57:17 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2980,3 +2980,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added gst-plugins-artsd-0.8.1 [agc 2004-06-20]
 	Updated libbonobo to 2.6.2 [jmmv 2004-06-20]
 	Added tunesbrowser-0.1.5 [agc 2004-06-20]
+	Updated grub to 0.95 [xtraeme 2004-06-20]
