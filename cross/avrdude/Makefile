@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2003/08/07 14:00:35 seb Exp $
+# $NetBSD: Makefile,v 1.4 2003/08/09 10:36:59 seb Exp $
 # FreeBSD Id: ports/devel/avrdude/Makefile,v 1.4 2003/04/19 14:13:25 bsd Exp
 
 DISTNAME=	avrdude-4.1.0
@@ -12,7 +12,6 @@ COMMENT=	Downloader/uploader for Atmel AVR 8-bit RISC microcontrollers
 BUILD_DEPENDS=	teTeX>=1.0:../../print/teTeX
 
 GNU_CONFIGURE=	yes
-USE_NEW_TEXINFO=	YES
 INFO_FILES=	avrdude.info
 
 CONFIGURE_ARGS=	--disable-versioned-doc
