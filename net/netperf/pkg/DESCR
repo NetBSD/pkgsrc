@@ -20,5 +20,3 @@ This port of netperf has been configured to support:
 
 	TCP and UDP via BSD sockets
 	Unix domain sockets
-
-WWW: http://www.netperf.org/
