@@ -1,4 +1,4 @@
-# $NetBSD: mk.conf.example,v 1.123 2000/03/05 22:30:57 soren Exp $
+# $NetBSD: mk.conf.example,v 1.124 2000/03/13 04:44:18 wiz Exp $
 #
 
 # Sample /etc/mk.conf file, which can be used to set specific values
@@ -478,6 +478,12 @@ PAPERSIZE=	A4
 # Used in qpopper package to enable server mode.
 # Possible: defined, not defined
 # Default: not defined
+
+#RASMOL_DEPTH=
+# Used in rasmol package to choose display depth to compile the package
+# for, since it only supports one at a time.
+# Possible: 8, 16, 32
+# Default: 8
 
 #RCS_LOCALID=
 # Used in cvs-current package for an RCS Id which is expanded.
