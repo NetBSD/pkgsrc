@@ -1,12 +1,19 @@
-$NetBSD: patch-ad,v 1.2 2000/10/21 23:05:15 wiz Exp $
---- library/pkgIndex.tcl.in.orig	Thu Sep  7 22:06:25 2000
-+++ library/pkgIndex.tcl.in	Thu Sep  7 22:06:59 2000
+$NetBSD: patch-ad,v 1.3 2002/03/31 14:37:31 abs Exp $
+
+--- man/Makefile.in.orig	Tue Feb  8 21:40:26 2000
++++ man/Makefile.in
 @@ -10,7 +10,7 @@
-     set library BLT${version_no_dots}${suffix}
-     global tcl_platform
-     if { $tcl_platform(platform) == "unix" } {
--	set library [file join [file dirname $dir] lib${library}]
-+	set library [file join [file dirname $dir] .. lib${library}]
-     } 
-     package ifneeded BLT ${version} [list load $library BLT]
- }
+ 
+ instdirs	= $(mandir) $(sectiondir)
+ 
+-MANPAGES	 = BLT.n barchart.n beep.n bgexec.n bitmap.n \
++MANPAGES	 = BLT.n barchart.n beep.n bgexec.n bltbitmap.n \
+ 		   bltdebug.n busy.n cutbuffer.n dragdrop.n eps.n \
+ 		   graph.n hierbox.n hiertable.n htext.n spline.n \
+ 		   stripchart.n table.n tabset.n tile.n vector.n \
+@@ -55,3 +55,5 @@
+ distclean: clean
+ 	$(RM) $(srcdir)/*.bak $(srcdir)/*\~ $(srcdir)/"#"* Makefile
+ 
++bltbitmap.man: bitmap.man
++	cp bitmap.man bltbitmap.man
