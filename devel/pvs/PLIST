@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2003/03/31 20:49:36 jschauma Exp $
+@comment $NetBSD: PLIST,v 1.4 2003/06/25 21:01:35 seb Exp $
 bin/pvs
 pvs/Examples/README
 pvs/Examples/ackerman.pvs
@@ -24,9 +24,7 @@ pvs/bin/relocate
 pvs/bin/tarmail
 pvs/bin/untarmail
 pvs/doc/release-notes/pvs-release-notes.html
-@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/pvs/doc/release-notes/pvs-release-notes.info
 pvs/doc/release-notes/pvs-release-notes.info
-@exec ${INSTALL_INFO} --info-dir=%D/info %D/pvs/doc/release-notes/pvs-release-notes.info
 pvs/doc/release-notes/pvs-release-notes.pdf
 pvs/doc/release-notes/pvs-release-notes.ps
 pvs/emacs/README
