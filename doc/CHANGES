@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3572 2003/09/28 23:57:56 chris Exp $
+$NetBSD: CHANGES,v 1.3573 2003/09/29 02:10:10 lukem Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4002,3 +4002,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated bmake to 20030928 [sjg 2003-09-28]
 	Added darwin_lib-6.6.2 [manu 2003-09-29]
 	Updated clamav to 0.60nb1 [chris 2003-09-29]
+	Updated rdiff-backup to 0.12.5 [lukem 2003-09-29]
