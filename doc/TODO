@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1404 2004/02/19 16:51:24 jmmv Exp $
+$NetBSD: TODO,v 1.1405 2004/02/21 02:32:57 snj Exp $
 
 Suggested new packages
 ======================
@@ -202,7 +202,6 @@ Suggested package updates
 	o gnuchess-5.06
 	o gnumeric-1.2.5
 	o gnutls-1.0.6
-	o gphoto2-2.1.4
 	o gpsim-0.21.0 [bouyer]
 	o grace-5.1.14
 	o grepmail-5.23
@@ -228,7 +227,6 @@ Suggested package updates
 	o leafnode-1.9.50
 	o libcaca-0.9
 	o libesmtp-1.0.2
-	o libgphoto2-2.1.4
 	o libidn-0.3.7
 	o libmpeg3-1.5.4
 	o libnet-1.1.1
