@@ -1,0 +1,21 @@
+$NetBSD: patch-ad,v 1.1 2000/04/02 16:07:05 pooka Exp $
+
+*** drivers/drv_sun.c.orig	Tue Feb 15 00:10:21 2000
+--- drivers/drv_sun.c	Sun Apr  2 15:18:28 2000
+***************
+*** 61,67 ****
+  #include <sys/audioio.h>
+  #endif
+  
+! #define DEFAULT_FRAGSIZE 12
+  
+  #if !defined __NetBSD__  && !defined __OpenBSD__
+  #ifdef HAVE_SUN_AUDIOIO_H
+--- 61,67 ----
+  #include <sys/audioio.h>
+  #endif
+  
+! #define DEFAULT_FRAGSIZE 13
+  
+  #if !defined __NetBSD__  && !defined __OpenBSD__
+  #ifdef HAVE_SUN_AUDIOIO_H

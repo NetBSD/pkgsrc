@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.1.1.1 1999/12/10 01:33:28 hubertf Exp $
+$NetBSD: md5,v 1.2 2000/04/02 16:07:05 pooka Exp $
 
-MD5 (libmikmod-3.1.7.tar.gz) = fc799491d514dd78154d34b3364a6f21
+MD5 (libmikmod-3.1.9.tar.gz) = 0d50670d34653490a0c87a9fa5cc804a
