@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.26 2004/05/28 00:54:50 lukem Exp $
-# FreeBSD Id: Makefile,v 1.4 1997/11/27 08:10:30 tg Exp
+# $NetBSD: Makefile,v 1.27 2005/03/17 12:24:13 salo Exp $
 #
 
-DISTNAME=		enscript-1.6.1
-PKGREVISION=		2
+DISTNAME=		enscript-1.6.3
+PKGREVISION=		1
 CATEGORIES=		print
-MASTER_SITES=		${MASTER_SITE_GNU:=enscript/}
+MASTER_SITES=		http://www.iki.fi/mtr/genscript/
 
 MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://people.ssh.fi/mtr/genscript/
@@ -17,6 +16,7 @@ GNU_CONFIGURE=		yes
 USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 USE_PKGINSTALL=		yes
+USE_GNU_TOOLS+=		make
 
 CONFIGURE_ARGS+=	--sysconfdir="${PKG_SYSCONFDIR}"
 
@@ -27,5 +27,7 @@ CONF_FILES=		${EGDIR}/enscript.cfg ${PKG_SYSCONFDIR}/enscript.cfg
 .if defined(PAPERSIZE)
 CONFIGURE_ARGS+=--with-media="${PAPERSIZE}"
 .endif
+
+.include "../../devel/gettext-lib/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
