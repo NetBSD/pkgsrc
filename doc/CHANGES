@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1165 2003/01/19 11:06:59 grant Exp $
+$NetBSD: CHANGES,v 1.1166 2003/01/19 13:49:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -330,3 +330,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated pnm2ppa to 1.04nb1 [salo 2003-01-19]
 	Updated asm2html to 1.2 [jmmv 2003-01-19]
 	Updated scrollz to 1.9 [grant 2003-01-19]
+	Updated ORBit to 0.5.15nb3 [wiz 2003-01-19]
