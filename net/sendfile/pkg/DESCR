@@ -1,0 +1,3 @@
+Reference implementation of the SAFT (simple asynchronous file
+transfer) protocol. Sendfile allows to send arbitrary files to a
+remote user.
