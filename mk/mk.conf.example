@@ -1,4 +1,4 @@
-# $NetBSD: mk.conf.example,v 1.104 1999/11/20 21:15:50 hubertf Exp $
+# $NetBSD: mk.conf.example,v 1.105 1999/11/22 23:43:31 dmcmahill Exp $
 #
 
 # Sample /etc/mk.conf file, which can be used to set specific values
@@ -177,6 +177,12 @@
 # Used to debug patches as they are applied
 # Possible: defined, not defined
 # Default: not defined
+
+#PKG_FC=
+# The fortran compiler used to compile fortran code contained in
+# packages.
+# Possible: any fortran compiler
+# Default: none
 
 #PRE_ROOT_CMD=${CHMOD} -R o+w ${WRKDIR}
 # Command to be run by normal user, just before becoming root (see
