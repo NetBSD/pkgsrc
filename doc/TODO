@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3092 2005/02/22 00:27:16 wiz Exp $
+$NetBSD: TODO,v 1.3093 2005/02/22 00:41:02 wiz Exp $
 
 Suggested new packages
 ======================
@@ -745,7 +745,6 @@ Suggested package updates
 	o p5-I18N-LangTags-0.35
 	o p5-IO-Util-1.42
 	o p5-IO-Zlib-1.04
-	o p5-IPC-Run-0.79
 	o p5-Lchown-1.00
 	o p5-Locale-Codes-2.07
 	o p5-Locale-Maketext-1.09
