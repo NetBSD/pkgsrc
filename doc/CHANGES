@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1979 2003/04/19 08:10:43 salo Exp $
+$NetBSD: CHANGES,v 1.1980 2003/04/19 08:40:15 salo Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1660,3 +1660,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added suse_libtiff-7.3 [rh 2003-04-19]
 	Added PanoTools-2.6b1 [rh 2003-04-19]
 	Added moz-mplayer-0.71 [salo 2003-04-19]
+	Added beaver-0.2.6 [salo 2003-04-19]
