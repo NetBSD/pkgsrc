@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1106 2003/01/12 15:18:00 seb Exp $
+$NetBSD: CHANGES,v 1.1107 2003/01/12 17:59:23 veego Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -242,3 +242,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated gnome-utils to 1.4.1.2 [rh 2003-01-12]
 	Updated phpmyadmin to 2.3.3.1nb1 [tron 2003-01-12]
 	Updated ssh2 to 3.2.2 [seb 2003-01-12]
+	Updated irssi to 0.8.6nb1 [veego 2003-01-12]
