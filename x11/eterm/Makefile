@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.21 2003/05/05 14:41:55 jmmv Exp $
+# $NetBSD: Makefile,v 1.22 2003/05/08 17:25:07 jmmv Exp $
 #
 
 DISTNAME=		Eterm-0.9.2
 PKGNAME=		${DISTNAME:S/^E/e/}
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		x11
 MASTER_SITES=		ftp://ftp.eterm.org/pub/Eterm/ \
 			ftp://alien.eterm.org/pub/Eterm/ \
@@ -25,6 +25,10 @@ USE_X11BASE=		YES
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 GNU_CONFIGURE=		YES
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+
+PKG_SYSCONFSUBDIR=	Eterm
+OWN_DIRS=		${PKG_SYSCONFDIR}/themes
 
 .include "../../mk/bsd.prefs.mk"
 
