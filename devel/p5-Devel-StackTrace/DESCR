@@ -1,0 +1,4 @@
+The Devel::StackTrace module contains two classes, Devel::StackTrace and
+Devel::StackTraceFrame. The goal of this object is to encapsulate the
+information that can found through using the caller() function, as well
+as providing a simple interface to this data.
