@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.593 2003/05/26 08:59:14 wiz Exp $
+$NetBSD: TODO,v 1.594 2003/05/26 09:02:38 wiz Exp $
 
 Suggested new packages
 ======================
@@ -131,7 +131,7 @@ Suggested package updates
 	o gettext-0.12
 	o gftp-2.0.14 [pkg/20250]
 	o ghostscript-8.00 (apfl)
-	o gkrellm-2.1.8 [pkgsrc-wip]
+	o gkrellm-2.1.10 [pkgsrc-wip]
 	o gkrellm-volume-2.1.7 [pkgsrc-wip]
 	o gnome-python-1.99.13
 	o gnome2-terminal-2.0.2 [pkg/19415]
@@ -156,8 +156,7 @@ Suggested package updates
 	o jakarta-ant-1.5.2
 	o jakarta-tomcat-3.3.1a
 	o jikes-1.18 [pkg/19979]
-	o joe-2.9 [pkg/18022]
-	o joe-2.9.8
+	o joe-2.9.8 [pkg/18022, incomplete]
 	o jove-4.16.0.58 [pkg/19924]
 	o jove-4.16.0.61
 	o lcms-1.0.9
@@ -202,7 +201,6 @@ Suggested package updates
 	o ns-flash-6.0.79
 	o ntop2-2.2
 	o nut-8.5
-	o openbox-2.3.1 [devel]
 	o openh323-1.11.2
 	o openldap-2.1.20 [pkg/21682]
 	o openoffice-1.0.3.1 [skrll]
