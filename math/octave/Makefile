@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 1999/02/09 16:08:58 bad Exp $
+# $NetBSD: Makefile,v 1.9 1999/04/23 04:19:25 mycroft Exp $
 # FreeBSD Id: Makefile,v 1.18 1998/09/27 20:10:45 steve Exp
 
 DISTNAME=	octave-2.0.13
@@ -14,7 +14,6 @@ HOMEPAGE=	http://www.che.wisc.edu/octave/
 
 BUILD_DEPENDS+=	tex:../../print/teTeX
 BUILD_DEPENDS+=	dvips:../../print/teTeX
-DEPENDS+=	ncurses-1.9.9g:../../devel/ncurses
 DEPENDS+=	gnuplot-3.7:../../graphics/gnuplot
 
 GNU_CONFIGURE=		yes
@@ -25,10 +24,6 @@ LDFLAGS+=		-L${PREFIX}/lib
 
 INFO_FILES=	liboctave.info octave.info
 LIBOCTAVE_INFO=	liboctave.info liboctave.info-1 liboctave.info-2 liboctave.info-3
-
-post-extract:
-	${MKDIR} ${WRKDIR}/include
-	${LN} -s ${PREFIX}/include/ncurses.h ${WRKDIR}/include
 
 post-install:
 	${MKDIR} ${PREFIX}/share/octave/2.0.13/doc
