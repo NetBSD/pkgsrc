@@ -16,10 +16,11 @@ OBJ =   copy.o err.o matrixio.o memory.o vecop.o matop.o pxop.o		   \
 	zqrfctr.o zgivens.o zhessen.o zschur.o conjgrad.o lanczos.o	   \
 	arnoldi.o
 
-all: libmeschach
+all: libmeschach.la
 
-libmeschach: $(OBJ)
-	@$(LIBTOOL) $(CC) -O -o libmeschach.la $(OBJ:.o=.lo) -rpath $(LIBDIR)
+libmeschach.la: $(OBJ)
+	@$(LIBTOOL) $(CC) -O -o $@ $(OBJ:.o=.lo) \
+	-rpath $(LIBDIR) --version-info 0:0
 
 install:
 	@$(LIBTOOL) --mode=install install -c libmeschach.la $(LIBDIR)
