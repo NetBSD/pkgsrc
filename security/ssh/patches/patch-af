@@ -1,0 +1,151 @@
+--- sshd.c.orig	Wed Aug  5 21:35:31 1998
++++ sshd.c	Wed Aug  5 23:52:17 1998
+@@ -1736,55 +1736,59 @@
+     endspent();
+   }
+ #endif /* HAVE_ETC_SHADOW */
+-#ifdef __FreeBSD__
+-  {
++/* Net2,BSD4.4,BSD/OS,NetBSD,FreeBSD and OpenBSD all define BSD4_4
++   man passwd(5) says that format has changed since BSD4.3
++ */
++#ifdef BSD4_4 
++  if(pwd->pw_change || pwd->pw_expire) {
+     time_t currtime;
+-    
+-    if (pwd->pw_change || pwd->pw_expire)
+-      currtime = time(NULL);
+-    
++    currtime = time(NULL);
+     /*
+      * Check for an expired password
+      */
+-    if (pwd->pw_change && pwd->pw_change <= currtime)
+-      {
+-	debug("Account %.100s's password is too old - forced to change.",
+-	      user);
+-	if (options.forced_passwd_change)
+-	  {
+-	    forced_command = xmalloc(sizeof(PASSWD_PATH) + strlen(user) + 1);
+-	    sprintf(forced_command, "%s %s", PASSWD_PATH, user);
+-	  }
+-	else
+-	  {
+-	    return 0;
+-	  }
+-      }
+-    else
++
++    if (pwd->pw_change)
+       {
+-	if (pwd->pw_change)
++	/* PASSWD_CHGNOW seems to be -1 for now but... */
++	if (
++#if defined(PASSWD_CHGNOW) && PASSWD_CHGNOW > 0
++	    pwd->pw_change == PASSWD_CHGNOW ||
++#endif
++	    pwd->pw_change <= currtime)
+ 	  {
+-	    days_before_password_expires = (pwd->pw_change - currtime) / 86400;
++	    packet_send_debug("Password has expired");
++	    if(options.forced_passwd_change)
++	      {
++		debug("Account %.99s's password is too old - change forced.",
++		      user);
++		forced_command = xmalloc(sizeof(PASSWD_PATH) +
++					 strlen(user) + 1);
++		sprintf(forced_command, "%s %s", PASSWD_PATH, user);
++	      }
++	    else
++	      {
++		return 0;
++	      }
+ 	  }
++#ifdef PASSWD_CHGNOW
++	if(pwd->pw_change != PASSWD_CHGNOW)
++	  days_before_password_expires = (pwd->pw_change - currtime) / 86400;
++#endif
+       }
+-    
+     /*
+      * Check for expired account
+      */
+-    if (pwd->pw_expire && pwd->pw_expire <= currtime)
++    if (pwd->pw_expire)
+       {
+-	debug("Account %.100s has expired - access denied.", user);
+-	return 0;
+-      }
+-    else
+-      {
+-	if (pwd->pw_expire)
++	if (pwd->pw_expire <= currtime)
+ 	  {
+-	    days_before_account_expires = (pwd->pw_expire - currtime) / 86400;
++	    packet_send_debug("Account has expired");
++	    return 0;
+ 	  }
++	days_before_account_expires = (pwd->pw_expire - currtime) / 86400;
+       }
+   }
+-#endif  /* !FreeBSD */
++#endif  /* !BSD4_4 */
+ 
+ #ifdef HAVE_HPUX_TCB_AUTH
+   {
+@@ -2166,11 +2170,11 @@
+   pwcopy.pw_passwd = xstrdup(pw->pw_passwd);
+   pwcopy.pw_uid = pw->pw_uid;
+   pwcopy.pw_gid = pw->pw_gid;
+-#if (defined (__bsdi__) && _BSDI_VERSION >= 199510) || (defined (__FreeBSD__) && defined(HAVE_LOGIN_CAP_H))
++#ifdef BSD4_4
+   pwcopy.pw_class = xstrdup(pw->pw_class);
+   pwcopy.pw_change = pw->pw_change;
+   pwcopy.pw_expire = pw->pw_expire;
+-#endif /*  __bsdi__  && _BSDI_VERSION >= 199510 */
++#endif /*  BSD4_4 */
+   pwcopy.pw_dir = xstrdup(pw->pw_dir);
+   pwcopy.pw_shell = xstrdup(pw->pw_shell);
+   pw = &pwcopy;
+@@ -3200,9 +3204,6 @@
+ #if defined (__FreeBSD__) && defined(HAVE_LOGIN_CAP_H)
+   login_cap_t *lc;
+ #endif
+-#if defined (__bsdi__) && _BSDI_VERSION >= 199510 
+-  struct timeval tp;
+-#endif /*  __bsdi__ && _BSDI_VERSION >= 199510 */
+ 
+ #ifdef HAVE_OSF1_C2_SECURITY
+   {
+@@ -3360,30 +3361,6 @@
+ 		fputs(line, stdout);
+ 	      fclose(f);
+ 	    }
+-#if defined (__bsdi__) && _BSDI_VERSION >= 199510
+-	  if (pw->pw_change || pw->pw_expire)
+-	    (void)gettimeofday(&tp, (struct timezone *)NULL);
+-	  if (pw->pw_change)
+-	    {
+-	      if (tp.tv_sec >= pw->pw_change)
+-		{
+-		  fprintf(stderr,"Sorry -- your password has expired.\n");
+-		  exit(254);
+-		}
+-	      days_before_password_expires = (pw->pw_change - tp.tv_sec) /
+-		86400;
+-	    }
+-	  if (pw->pw_expire)
+-	    {
+-	      if (tp.tv_sec >= pw->pw_expire)
+-		{
+-		  fprintf(stderr,"Sorry -- your account has expired.\n");
+-		  exit(254);
+-		}
+-	      days_before_account_expires = (pw->pw_expire - tp.tv_sec) /
+-		86400;
+-	    }
+-#endif /* __bsdi__ & _BSDI_VERSION >= 199510   */
+ 	}
+ 
+ #if defined (__FreeBSD__) && defined HAVE_LOGIN_CAP_H
+
