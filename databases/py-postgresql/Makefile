@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.21 2002/10/09 18:24:50 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2002/10/19 03:04:37 jlam Exp $
 
 PKGNAME=		${PYPKGPREFIX}-postgresql-3.2
 COMMENT=		Python interface to PostgreSQL
 MAINTAINER=		darcy@netbsd.org
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK2=		# defined
 
 .include "../../databases/postgresql/Makefile.common"
 
@@ -13,26 +13,15 @@ MAKEFLAGS+=		PYTHON_VERSION="${PYVERSSUFFIX}"
 PLIST_SUBST+=		PYTHON_LIBDIR=${PYLIB}
 PLIST_SUBST+=		PYPKGPREFIX=${PYPKGPREFIX}
 
-CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_DIR}
+CONFIGURE_ARGS+=	--with-openssl=${SSLBASE}
 CONFIGURE_ARGS+=	--with-python
 CONFIGURE_ARGS+=	--with-python-compile
 CONFIGURE_ENV+=		PYTHON="${PYTHONBIN}"
 MAKE_ENV+=		INSTALLED_LIBPQ=1
+MAKEFILE=		GNUmakefile
 
-DIRS_TO_BUILD=		src/interfaces/python
+BUILD_DIRS=		${WRKSRC}/src/interfaces/python
 DOCDIR=			${PREFIX}/share/doc/${PYPKGPREFIX}-postgresql
-
-do-build:
-.for DIR in ${DIRS_TO_BUILD}
-	cd ${WRKSRC}/${DIR} && ${SETENV} ${MAKE_ENV}			\
-		${MAKE_PROGRAM} ${MAKE_FLAGS} ${ALL_TARGET}
-.endfor
-
-do-install:
-.for DIR in ${DIRS_TO_BUILD}
-	cd ${WRKSRC}/${DIR} && ${SETENV} ${MAKE_ENV}			\
-		${MAKE_PROGRAM} ${MAKE_FLAGS} ${INSTALL_TARGET}
-.endfor
 
 post-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}/tutorial
@@ -42,6 +31,7 @@ post-install:
 	done
 
 .include "../../databases/postgresql-lib/buildlink2.mk"
-.include "../../lang/python/extension.mk"
 .include "../../time/py-mxDateTime/buildlink2.mk"
+.include "../../lang/python/extension.mk"
+
 .include "../../mk/bsd.pkg.mk"
