@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.3 1999/03/05 01:52:32 hubertf Exp $
+
+--- tsiag/Makefile.in.BAK	Fri Mar  5 02:08:21 1999
++++ tsiag/Makefile.in	Fri Mar  5 02:08:54 1999
+@@ -58,7 +58,7 @@
+ PRE_UNINSTALL = :
+ POST_UNINSTALL = :
+ AWK = @AWK@
+-CC = @CC@
++CC = @CC@ -I${LOCALBASE}/include
+ GUILE = @GUILE@
+ LIBCURSES = @LIBCURSES@
+ LIBDL = @LIBDL@
