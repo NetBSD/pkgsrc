@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.3 2003/08/23 16:41:59 recht Exp $
+$NetBSD: patch-aa,v 1.4 2004/03/07 01:34:04 snj Exp $
 
---- Makefile.in.orig	2003-07-04 05:13:45.000000000 +0200
-+++ Makefile.in	2003-08-23 18:35:34.000000000 +0200
-@@ -15,15 +15,15 @@
+--- Makefile.in.orig	2003-07-03 20:13:45.000000000 -0700
++++ Makefile.in	2004-03-06 17:27:16.000000000 -0800
+@@ -15,20 +15,19 @@
  
  DEFS=-DHAVE_CONFIG_H -Wall @HOSTDEF@
  
@@ -20,8 +20,15 @@ $NetBSD: patch-aa,v 1.3 2003/08/23 16:41:59 recht Exp $
 +LIBS=-Wl,-R${LIBDIR} -L$(LIBDIR) -lXaw $(XLIB) -lXt $(EXTENSIONLIB) -lX11 -lm
  
  #CC=/compat/linux/usr/bin/gcc
- CC=@CC@
-@@ -38,8 +38,8 @@
+-CC=@CC@
+-CFLAGS=-O3 $(INCLUDES) $(DEFS)
+-CFLAGSX=-O3 $(XINCLUDES) $(DEFS)
++CFLAGS+= $(INCLUDES) $(DEFS)
++CFLAGSX= $(CFLAGS) $(XINCLUDES)
+ LDFLAGS=-s
+ 
+ LINT=lint
+@@ -38,8 +37,8 @@ RM=rm -f
  INSTALL=install
  
  INST_DIR=/usr/local/bin

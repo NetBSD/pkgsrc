@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2004/03/07 01:06:45 fvdl Exp $
+# $NetBSD: Makefile.common,v 1.9 2004/03/07 01:34:04 snj Exp $
 #
 
 DISTNAME=		xmbmon203
@@ -13,6 +13,7 @@ MAINTAINER=		tech-pkg@NetBSD.org
 
 #MAKEFILE=		Makefile.NetBSD
 GNU_CONFIGURE=		yes
+USE_BUILDLINK3=		yes
 
 DISTINFO_FILE?=		${.CURDIR}/../../sysutils/mbmon/distinfo
 PATCHDIR=		${.CURDIR}/../../sysutils/mbmon/patches
