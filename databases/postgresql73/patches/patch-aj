@@ -1,0 +1,14 @@
+$NetBSD: patch-aj,v 1.1 2004/10/10 18:26:00 jdolecek Exp $
+
+--- src/pl/plpython/Makefile.orig	2004-10-10 20:14:13.000000000 +0200
++++ src/pl/plpython/Makefile	2004-10-10 20:14:20.000000000 +0200
+@@ -8,9 +8,7 @@
+ # On some platforms we can only build PL/Python if libpython is a
+ # shared library.  Since there is no official way to determine this,
+ # we see if there is a file that is named like a shared library.
+-ifneq (,$(wildcard $(python_configdir)/libpython*$(DLSUFFIX)*))
+ shared_libpython = yes
+-endif
+ 
+ # If we don't have a shared library and the platform doesn't allow it
+ # to work without, we have to skip it.
