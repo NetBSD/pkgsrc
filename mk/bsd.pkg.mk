@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.201 1999/01/09 20:52:30 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.202 1999/01/19 01:30:29 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -1108,8 +1108,8 @@ _PORT_USE: .USE
 .endif
 	@if [ `${SH} -c umask` != ${DEF_UMASK} ]; then \
 		${ECHO_MSG} "===>  Warning: your umask is \"`${SH} -c umask`"\".; \
-		${ECHO_MSG} "      If this is not desired, set it to an appropriate value"; \
-		${ECHO_MSG} "      and install this port again by \`\`${MAKE} reinstall''."; \
+		${ECHO_MSG} "      If this is not desired, set it to an appropriate value (${DEF_UMASK})"; \
+		${ECHO_MSG} "      and install this port again by \`\`${MAKE} deinstall reinstall''."; \
 	fi
 	@cd ${.CURDIR} && ${MAKE} ${.MAKEFLAGS} run-depends
 .endif
