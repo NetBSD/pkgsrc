@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 10:10:39 agc Exp $
+
+MD5 (xbinunix.c) = 7c66d7418e6011661c8b28ee91c394be
+MD5 (xbin.man) = b02b2a1b2fe9f09bd88ce6579ce601da

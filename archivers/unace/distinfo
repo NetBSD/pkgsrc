@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 10:10:34 agc Exp $
+
+MD5 (unace-1.2/unacepub.zip) = cbe24fca48c783b207cec859e512e446
+SHA1 (patch-aa) = 2c11a259a854556de507ec873999c94d10fc2272
+SHA1 (patch-ab) = f450aa34f650525ae36d90609393990ed650766a

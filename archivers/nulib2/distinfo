@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 10:10:32 agc Exp $
+
+MD5 (nulibdist.tar.gz) = ec6035d364ff1b652ec0e291e8d683a2
+SHA1 (patch-aa) = c6f629810a94376cf5150b3bff233e37bcb2bc44
+SHA1 (patch-ab) = f2f689417c06f28bb6b781ac609785a9e7e7eb4f
