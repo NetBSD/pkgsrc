@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.124 2000/11/02 03:03:39 wiz Exp $
+# $NetBSD: Packages.txt,v 1.125 2000/12/06 17:12:32 hubertf Exp $
 ###########################################################################
 
 			==========================
@@ -909,9 +909,15 @@ Here's how to use libtool in a pkg in six simple steps:
    Note that the library is changed to have a .la extension, and the
    objects are changed to have a .lo extension.  Change OBJS as necessary.
    This automatically creates all of the .a, .so.major.minor, and ELF
-   symlinks (if necessary) in the build directory.
+   symlinks (if necessary) in the build directory. Be sure to include
+   the -version-info esp. when major and minor are zero, as libtool will
+   strip off the shared library version else.
 
-4. When linking programs that depend on these libraries _before_ they are
+4. When linking shared object (.so) files, i.e. files that are loaded via
+   dlopen(3), NOT shared libraries, use "-module -avoid-version" to prevent
+   them getting version tacked on.
+
+5. When linking programs that depend on these libraries _before_ they are
    installed, preface the cc or ld line with "${LIBTOOL} --mode=link", and
    it will find the correct libraries (static or shared), but please be
    aware that libtool will not allow you to specify a relative path in -L
@@ -931,7 +937,7 @@ Here's how to use libtool in a pkg in six simple steps:
 
 	${CC} -o someprog -L../somelib/.libs -lsomelib
 
-5. When installing libraries, preface the install or cp command with
+6. When installing libraries, preface the install or cp command with
    "${LIBTOOL} --mode=install", and change the library name to .la.  For
    example:
 
@@ -940,7 +946,7 @@ Here's how to use libtool in a pkg in six simple steps:
    This will install the static .a, shared library, any needed symlinks,
    and run "ldconfig."
 
-6. In your PLIST, include the .a, .la, and .so.major.minor files.  Don't
+7. In your PLIST, include the .a, .la, and .so.major.minor files.  Don't
    include the ELF symlink files (.so.major, .so); those are added
    automatic.  
 
