@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/06/02 01:19:03 jschauma Exp $
+# $NetBSD: Makefile,v 1.7 2003/06/02 14:05:06 abs Exp $
 
 DISTNAME=		gpc-2.1
 PKGREVISION=		1
@@ -73,7 +73,7 @@ pre-configure:
 	${TOUCH} ${TOUCH_FLAGS}	${WRKSRC}/gcc/c-gperf.h
 	${ECHO} "bogus" > ${WRKSRC}/gcc/cstamp-h.in
 
-.include "../../lang/gcc/buildlink2.mk"
+.include "../../mk/gcc.buildlink2.mk"
 .include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
