@@ -163,21 +163,14 @@ AC_CHECK_FUNC(sl_init, [
 		[:] , [AC_LIBOBJ(sl_init)])
 ])
 
-dnl Solaris 2.7 and 2.8 have statfs(2), but it is deprecated, and has a
-dnl different interface from NetBSD's statfs.
-
+dnl SVR4 defines a statvfs(2) system call that can be wrapped into the
+dnl BSD statfs(2).
+dnl
 pkg_use_nbcompat_statfs=yes
-AC_CHECK_FUNC(statfs, [
-	case $host_os in
-	sunos*|solaris*)
-		AC_CHECK_FUNC(statvfs, [:], [
-			AC_MSG_ERROR(statfs can't be implemented correctly)
-		])
-		;;
-	*)
-		pkg_use_nbcompat_statfs=no
-		;;
-	esac
+AC_CHECK_FUNCS([statvfs], [pkg_use_nbcompat_statfs=yes], [
+	AC_CHECK_FUNCS([statfs], [pkg_use_nbcompat_statfs=no], [
+		AC_MSG_ERROR(statfs can't be implemented)
+	])
 ])
 
 if test $pkg_use_nbcompat_statfs = yes; then
