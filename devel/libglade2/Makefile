@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.25 2004/04/01 18:16:46 jmmv Exp $
+# $NetBSD: Makefile,v 1.26 2004/04/17 10:39:23 jmmv Exp $
 #
 
 DISTNAME=		libglade-2.3.6
 PKGNAME=		${DISTNAME:S/libglade/libglade2/}
+PKGREVISION=		1
 CATEGORIES=		devel gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libglade/2.3/}
 
@@ -24,6 +25,8 @@ CONFIGURE_ARGS+=	--with-html-dir="${PREFIX}/share/doc/html"
 
 XML_ENTRIES=	system http://glade.gnome.org/glade-2.0.dtd \
 		${PREFIX}/share/xml/libglade/glade-2.0.dtd
+
+BUILDLINK_DEPENDS.glib2+=	glib2>=2.4.0nb2
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/libglade/2.0
