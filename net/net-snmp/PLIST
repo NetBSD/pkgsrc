@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/05/06 21:10:39 grant Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/09/12 12:07:18 uebayasi Exp $
 bin/encode_keychange
 bin/fixproc
 bin/ipf-mod.pl
@@ -42,6 +42,7 @@ include/net-snmp/agent/instance.h
 include/net-snmp/agent/mib_module_config.h
 include/net-snmp/agent/mib_module_includes.h
 include/net-snmp/agent/multiplexer.h
+include/net-snmp/agent/mode_end_call.h
 include/net-snmp/agent/net-snmp-agent-includes.h
 include/net-snmp/agent/null.h
 include/net-snmp/agent/old_api.h
@@ -141,6 +142,7 @@ include/net-snmp/system/solaris.h
 include/net-snmp/system/solaris2.6.h
 include/net-snmp/system/solaris2.7.h
 include/net-snmp/system/solaris2.8.h
+include/net-snmp/system/solaris2.9.h
 include/net-snmp/system/sunos.h
 include/net-snmp/system/svr5.h
 include/net-snmp/system/sysv.h
@@ -194,33 +196,32 @@ lib/libnetsnmp.a
 lib/libnetsnmp.la
 lib/libnetsnmp.so
 lib/libnetsnmp.so.5
-lib/libnetsnmp.so.5.6
+lib/libnetsnmp.so.5.9
 lib/libnetsnmpagent.a
 lib/libnetsnmpagent.la
 lib/libnetsnmpagent.so
 lib/libnetsnmpagent.so.5
-lib/libnetsnmpagent.so.5.6
+lib/libnetsnmpagent.so.5.9
 lib/libnetsnmphelpers.a
 lib/libnetsnmphelpers.la
 lib/libnetsnmphelpers.so
 lib/libnetsnmphelpers.so.5
-lib/libnetsnmphelpers.so.5.6
+lib/libnetsnmphelpers.so.5.9
 lib/libnetsnmpmibs.a
 lib/libnetsnmpmibs.la
 lib/libnetsnmpmibs.so
 lib/libnetsnmpmibs.so.5
-lib/libnetsnmpmibs.so.5.6
+lib/libnetsnmpmibs.so.5.9
 lib/libsnmp.a
 lib/libsnmp.la
 lib/libsnmp.so
 lib/libsnmp.so.5
-lib/libsnmp.so.5.6
+lib/libsnmp.so.5.9
 man/man1/mib2c.1
 man/man1/snmpbulkget.1
 man/man1/snmpbulkwalk.1
 man/man1/snmpcmd.1
 man/man1/snmpconf.1
-man/man1/snmpd.1
 man/man1/snmpdelta.1
 man/man1/snmpdf.1
 man/man1/snmpget.1
@@ -248,7 +249,10 @@ man/man3/netsnmp_debug.3
 man/man3/netsnmp_example_scalar_int.3
 man/man3/netsnmp_handler.3
 man/man3/netsnmp_instance.3
+man/man3/netsnmp_library.3
 man/man3/netsnmp_mib_handler_methods.3
+man/man3/netsnmp_mib_utilities.3
+man/man3/netsnmp_mode_end_call.3
 man/man3/netsnmp_multiplexer.3
 man/man3/netsnmp_old_api.3
 man/man3/netsnmp_read_only.3
@@ -306,6 +310,7 @@ man/man5/snmp_config.5
 man/man5/snmpd.conf.5
 man/man5/snmptrapd.conf.5
 man/man5/variables.5
+man/man8/snmpd.8
 man/man8/snmptrapd.8
 sbin/snmpd
 sbin/snmptrapd
@@ -315,8 +320,10 @@ share/snmp/mib2c.column_defines.conf
 share/snmp/mib2c.column_enums.conf
 share/snmp/mib2c.conf
 share/snmp/mib2c.create-dataset.conf
+share/snmp/mib2c.int_watch.conf
 share/snmp/mib2c.iterate.conf
 share/snmp/mib2c.old-api.conf
+share/snmp/mib2c.scalar.conf
 share/snmp/mibs/AGENTX-MIB.txt
 share/snmp/mibs/DISMAN-SCHEDULE-MIB.txt
 share/snmp/mibs/DISMAN-SCRIPT-MIB.txt
@@ -340,6 +347,7 @@ share/snmp/mibs/IPV6-UDP-MIB.txt
 share/snmp/mibs/NET-SNMP-AGENT-MIB.txt
 share/snmp/mibs/NET-SNMP-EXAMPLES-MIB.txt
 share/snmp/mibs/NET-SNMP-MIB.txt
+share/snmp/mibs/NET-SNMP-TC.txt
 share/snmp/mibs/NOTIFICATION-LOG-MIB.txt
 share/snmp/mibs/RFC-1215.txt
 share/snmp/mibs/RFC1155-SMI.txt
