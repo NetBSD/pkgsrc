@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.14 2001/03/04 07:53:34 tron Exp $
+$NetBSD: patch-aa,v 1.15 2001/05/21 21:39:14 wiz Exp $
 
 --- scripts/makefile.std.orig	Wed Dec  8 18:44:40 1999
 +++ scripts/makefile.std
@@ -35,7 +35,7 @@ $NetBSD: patch-aa,v 1.14 2001/03/04 07:53:34 tron Exp $
 -	ar rc $@  $(OBJS)
 -	$(RANLIB) $@
 +libpng.la: $(OBJS)
-+	${LIBTOOL} --mode=link $(REALCC) -o $@ ${OBJS:.o=.lo} -rpath ${PREFIX}/lib -lz -lm -version-info 1:4
++	${LIBTOOL} --mode=link $(REALCC) -o $@ ${OBJS:.o=.lo} -rpath ${PREFIX}/lib -lz -lm -version-info 2:0
  
 -pngtest: pngtest.o libpng.a
 -	$(CC) -o pngtest $(CFLAGS) pngtest.o $(LDFLAGS)
