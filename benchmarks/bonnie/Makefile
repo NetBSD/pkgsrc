@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 1998/09/23 16:16:20 agc Exp $
+# $NetBSD: Makefile,v 1.11 1998/09/24 09:20:08 agc Exp $
 # FreeBSD Id: Makefile,v 1.5 1997/11/26 23:09:14 jseger Exp
 #
 
@@ -23,6 +23,6 @@ post-extract:
 	${MV} ${WRKSRC}/Bonnie.c ${WRKSRC}/bonnie.c
 
 benchmark:
-	@${WRKSRC}/bonnie
+	@(cd ${WRKSRC}; ./bonnie)
 
 .include "../../mk/bsd.pkg.mk"
