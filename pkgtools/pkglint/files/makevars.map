@@ -1,0 +1,57 @@
+# $NetBSD: makevars.map,v 1.1 2005/02/12 10:59:21 rillig Exp $
+#
+
+# This file tries to guess the type of some variables, according to their
+# current use in pkgsrc. The type Boolean is nicer than Yes_Or_Undefined,
+# but most variables are only checked with defined(...) and not with an
+# additional !empty(...:M[Yy][Ee][Ss]). So we have to check both.
+#
+# Beware: For the type Yes_Or_Undefined, even the value NO means YES.
+#
+# The type One_Of(...) is just used for explanation. It cannot yet be
+# checked by pkglint.
+
+# some variables from mk/defaults/mk.conf, 1.27
+
+MANZ			Yes_Or_Undefined
+MKCRYPTO		Boolean
+USETBL			Yes_Or_Undefined
+#ABI			One_Of(32 64)
+IGNORE_RECOMMENDED	Boolean
+PKG_REGISTER_SHELLS	Boolean
+USE_XPKGWEDGE		Boolean
+LIBTOOLIZE_PLIST	Boolean
+EXTRACT_USING_PAX	Yes_Or_Undefined
+SETGIDGAME		Boolean
+
+#USE_CRYPTO		One_Of(YES NO)
+USE_CUPS		Yes_Or_Undefined
+#USE_DB2		One_Of(YES NO) ; weird (see mail/sendmail812)
+USE_ESOUND		Boolean
+USE_GIF			Yes_Or_Undefined
+USE_I586		Boolean
+#USE_IDEA		One_Of(YES NO)
+USE_INET6		Boolean
+USE_INN			Yes_Or_Undefined
+USE_MMX			Boolean
+#USE_OPENLDAP		One_Of(YES NO)
+USE_OSS			Yes_Or_Undefined
+USE_PAM			Boolean
+#USE_SASL		One_Of(YES NO)
+#USE_SASL2		One_Of(YES NO)
+#USE_SJ3		One_Of(YES NO)
+#USE_SOCKS		One_Of(4 5)
+#USE_WNN4		One_Of(YES NO)
+USE_XFACE		Boolean
+
+# some variables found in package Makefiles
+
+GNU_CONFIGURE		Yes_Or_Undefined
+HOMEPAGE		URL
+MAINTAINER		Mail_Address
+NO_BUILDLINK		Yes_Or_Undefined
+NO_CHECKSUM		Yes_Or_Undefined
+NO_CONFIGURE		Yes_Or_Undefined
+#USE_PERL5		One_Of(build run)
+USE_X11			Yes_Or_Undefined
+MANZ			Yes_Or_Undefined

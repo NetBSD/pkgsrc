@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.215 2005/02/11 17:01:29 rillig Exp $
+# $NetBSD: Makefile,v 1.216 2005/02/12 10:59:20 rillig Exp $
 #
 
-DISTNAME=	pkglint-4.01
+DISTNAME=	pkglint-4.02
 CATEGORIES=	pkgtools devel
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -24,7 +24,7 @@ USE_LANGUAGES=	# empty
 
 DISTVER=	${DISTNAME:S/pkglint-//}
 
-INSTALLATION_DIRS=	bin man/cat1 man/man1
+INSTALLATION_DIRS=	bin man/cat1 man/man1 share/pkglint
 
 SUBST_CLASSES+=		pkglint
 SUBST_STAGE.pkglint=	pre-build
@@ -36,6 +36,7 @@ SUBST_SED.pkglint+=	-e 's|@PKGSRCDIR@|${PKGSRCDIR}|g'
 SUBST_SED.pkglint+=	-e 's|@DISTVER@|${DISTVER}|g'
 SUBST_SED.pkglint+=	-e 's|@MAKE@|${MAKE}|g'
 SUBST_SED.pkglint+=	-e 's|@PERL@|${PERL5}|g'
+SUBST_SED.pkglint+=	-e 's|@DATADIR@|${PREFIX}/share/pkglint|g'
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -61,5 +62,6 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/lintpkgsrc.1 ${PREFIX}/man/man1
 	${INSTALL_MAN} ${WRKSRC}/pkglint.0 ${PREFIX}/man/cat1
 	${INSTALL_MAN} ${WRKSRC}/pkglint.1 ${PREFIX}/man/man1
+	${INSTALL_DATA} ${FILESDIR}/makevars.map ${PREFIX}/share/pkglint/
 
 .include "../../mk/bsd.pkg.mk"
