@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2300 2004/11/03 15:33:18 adam Exp $
+$NetBSD: TODO,v 1.2301 2004/11/03 15:41:49 taca Exp $
 
 Suggested new packages
 ======================
@@ -629,6 +629,7 @@ Suggested package updates
 	o yaz-2.0.12
 	o ysm-2.9.6
 	o zenicb-1.31 (needs merge with lots of local changes)
+	o zlib-1.2.2
 	o zziplib-0.13.37
 
 Infrastructure problems which need addressing
