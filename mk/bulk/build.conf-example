@@ -1,11 +1,11 @@
 # build.conf
-# $NetBSD: build.conf-example,v 1.15 2004/01/30 10:54:36 grant Exp $
+# $NetBSD: build.conf-example,v 1.16 2004/01/31 03:37:24 grant Exp $
 #
 # config file in /bin/sh syntax for {,pre,post}-build
 #
 
 # List of package directories to build.
-# Defaults to all packages if PKLIST is empty or undefined.
+# Defaults to all packages if PKGLIST is empty or undefined.
 #PKGLIST="www/mozilla meta-pkgs/kde3"
 
 # Some paths for output files and paths to log files
