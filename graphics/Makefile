@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.146 2001/07/12 21:34:45 dillo Exp $
+# $NetBSD: Makefile,v 1.147 2001/07/13 14:39:09 manu Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -66,6 +66,7 @@ SUBDIR+=	hermes
 SUBDIR+=	hp2xx
 SUBDIR+=	iGMT
 SUBDIR+=	imlib
+SUBDIR+=	impress
 SUBDIR+=	jpeg
 SUBDIR+=	kdegraphics
 SUBDIR+=	kdegraphics2
