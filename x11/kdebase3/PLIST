@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2004/10/13 11:54:11 markd Exp $
+@comment $NetBSD: PLIST,v 1.25 2004/11/08 12:50:18 markd Exp $
 bin/appletproxy
 bin/drkonqi
 bin/extensionproxy
@@ -49,8 +49,8 @@ bin/kpersonalizer
 bin/kpm
 bin/kprinter
 bin/krandom.kss
-${HAVE_RANDR}bin/krandrinithack
-${HAVE_RANDR}bin/krandrtray
+bin/krandrinithack
+bin/krandrtray
 bin/krdb
 bin/kreadconfig
 bin/krootimage
@@ -141,7 +141,7 @@ lib/kconf_update_bin/kwin_update_window_settings
 lib/kde3/appletproxy.la
 lib/kde3/childpanel_panelextension.la
 lib/kde3/clock_panelapplet.la
-${HAVE_XCURSOR}lib/kde3/cursorthumbnail.la
+lib/kde3/cursorthumbnail.la
 lib/kde3/djvuthumbnail.la
 lib/kde3/dockbar_panelextension.la
 lib/kde3/extensionproxy.la
@@ -196,7 +196,7 @@ lib/kde3/kcm_nsplugins.la
 lib/kde3/kcm_performance.la
 lib/kde3/kcm_printmgr.la
 lib/kde3/kcm_privacy.la
-${HAVE_RANDR}lib/kde3/kcm_randr.la
+lib/kde3/kcm_randr.la
 lib/kde3/kcm_samba.la
 lib/kde3/kcm_screensaver.la
 lib/kde3/kcm_smserver.la
@@ -267,7 +267,7 @@ lib/kde3/konqsidebar_web.la
 lib/kde3/konqueror.la
 lib/kde3/konsole.la
 lib/kde3/kprinter.la
-${HAVE_RANDR}lib/kde3/krandrinithack.la
+lib/kde3/krandrinithack.la
 lib/kde3/ksmserver.la
 lib/kde3/ksplashdefault.la
 lib/kde3/ksplashredmond.la
@@ -336,7 +336,7 @@ lib/libkdeinit_kmenuedit.la
 lib/libkdeinit_konqueror.la
 lib/libkdeinit_konsole.la
 lib/libkdeinit_kprinter.la
-${HAVE_RANDR}lib/libkdeinit_krandrinithack.la
+lib/libkdeinit_krandrinithack.la
 lib/libkdeinit_ksmserver.la
 lib/libkdeinit_kwin.la
 lib/libkdeinit_kwin_rules_dialog.la
@@ -418,7 +418,7 @@ share/applications/kde/konsole.desktop
 share/applications/kde/konsolesu.desktop
 share/applications/kde/kpager.desktop
 share/applications/kde/kpersonalizer.desktop
-${HAVE_RANDR}share/applications/kde/krandrtray.desktop
+share/applications/kde/krandrtray.desktop
 share/applications/kde/ksplashthememgr.desktop
 share/applications/kde/ksysguard.desktop
 share/applications/kde/kthememanager.desktop
@@ -993,7 +993,7 @@ share/kde/applnk/.hidden/kwinfocus.desktop
 share/kde/applnk/.hidden/kwinmoving.desktop
 share/kde/applnk/.hidden/passwords.desktop
 share/kde/applnk/.hidden/power.desktop
-${HAVE_RANDR}share/kde/applnk/.hidden/randr.desktop
+share/kde/applnk/.hidden/randr.desktop
 share/kde/applnk/.hidden/smb.desktop
 share/kde/applnk/.hidden/socks.desktop
 share/kde/applnk/.hidden/userinfo.desktop
@@ -3211,7 +3211,7 @@ share/kde/services/ar.protocol
 share/kde/services/bzip.protocol
 share/kde/services/bzip2.protocol
 share/kde/services/cgi.protocol
-${HAVE_XCURSOR}share/kde/services/cursorthumbnail.desktop
+share/kde/services/cursorthumbnail.desktop
 share/kde/services/djvuthumbnail.desktop
 share/kde/services/finger.protocol
 share/kde/services/fish.protocol
