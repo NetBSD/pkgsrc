@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11.2.4 2002/08/22 11:10:35 jlam Exp $
+# $NetBSD: Makefile,v 1.11.2.5 2002/08/23 01:14:18 jlam Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1998/08/09 15:13:33 kuriyama Exp
 #
 
@@ -40,3 +40,5 @@ do-install:
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${WRKSRC}/intl && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} ${INSTALL_TARGET}
 
 .include "../../mk/bsd.pkg.mk"
+
+LDFLAGS:=	${LDFLAGS:N-L${LOCALBASE}/lib*}
