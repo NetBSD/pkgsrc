@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5812 2004/05/04 17:18:41 jmmv Exp $
+$NetBSD: CHANGES,v 1.5813 2004/05/04 17:20:48 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2343,3 +2343,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated koffice to 1.3.1 [markd 2004-05-04]
 	Added gtkmagnetic-2.2 [dillo 2004-05-04]
 	Updated epiphany to 1.2.5 [jmmv 2004-05-04]
+	Updated mathomatic to 11.0f [minskim 2004-05-04]
