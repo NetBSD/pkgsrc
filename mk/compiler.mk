@@ -1,4 +1,4 @@
-# $NetBSD: compiler.mk,v 1.1 2003/09/12 13:03:38 grant Exp $
+# $NetBSD: compiler.mk,v 1.2 2003/09/12 13:35:29 salo Exp $
 
 # This Makefile fragment implements handling for supported
 # C/C++/fortran compilers.
@@ -10,7 +10,7 @@
 #	which must NOT be set in package Makefiles.
 #
 # USE_GCC3
-#	use pkgsrc gcc3 from lang/gcc3. This is a user-only variable
+#	Use pkgsrc gcc3 from lang/gcc3. This is a user-only variable
 #	which must NOT be set in package Makefiles.
 #
 # USE_GCC_SHLIB
