@@ -1,0 +1,25 @@
+$NetBSD: patch-ab,v 1.1 2003/05/27 04:53:10 jlam Exp $
+
+--- hints/netbsd.sh.orig	Sat Jun  1 13:03:12 2002
++++ hints/netbsd.sh
+@@ -127,20 +127,3 @@
+         ;; 
+ esac 
+ EOCBU
+-
+-# Set sensible defaults for NetBSD: look for local software in
+-# /usr/pkg (NetBSD Packages Collection) and in /usr/local.
+-#
+-loclibpth="/usr/pkg/lib /usr/local/lib"
+-locincpth="/usr/pkg/include /usr/local/include"
+-case "$rpathflag" in
+-'')
+-	ldflags=
+-	;;
+-*)
+-	ldflags=
+-	for yyy in $loclibpth; do
+-		ldflags="$ldflags $rpathflag$yyy"
+-	done
+-	;;
+-esac
