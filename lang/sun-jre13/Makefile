@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.36 2004/10/05 22:09:23 tv Exp $
+# $NetBSD: Makefile,v 1.37 2004/11/23 16:56:33 jschauma Exp $
 
-DISTNAME=	j2re-1_3_1_12-linux-i586
-PKGNAME=	sun-jre13-1.0.12
-PKGREVISION=	1
+DISTNAME=	j2re-1_3_1_13-linux-i586
+PKGNAME=	sun-jre13-1.0.13
 MASTER_SITES=	# empty
 
 COMMENT=	Sun's Java(tm) Runtime Environment 1.3.1
@@ -10,7 +9,7 @@ COMMENT=	Sun's Java(tm) Runtime Environment 1.3.1
 SHORT=		JRE
 
 JAVA_WRAPPERS=	java keytool policytool rmid rmiregistry tnameserv
-WRKSRC=		${WRKDIR}/jre1.3.1_12
+WRKSRC=		${WRKDIR}/jre1.3.1_13
 USE_PKGINSTALL=	yes
 OWN_DIRS=	${JAVA_HOME}
 OWN_DIRS+=	${JAVA_HOME}/lib
