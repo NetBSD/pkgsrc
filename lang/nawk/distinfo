@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2002/12/09 00:05:27 cjep Exp $
+$NetBSD: distinfo,v 1.5 2003/01/03 20:49:33 cjep Exp $
 
-SHA1 (nawk-20021129/awk.tar.gz) = 362d971298b4904cf38950f410964d1199d296a4
-Size (nawk-20021129/awk.tar.gz) = 83808 bytes
+SHA1 (nawk-20021213/awk.tar.gz) = 2bf7c2de651f6e0a40d00f3f53769358687a3c0f
+Size (nawk-20021213/awk.tar.gz) = 83673 bytes
