@@ -1,0 +1,23 @@
+# $NetBSD: Makefile.Linux.i386,v 1.1.1.1 2002/09/19 22:33:49 jschauma Exp $
+#
+
+DIST_DIR_NAME=		linux22
+ONLY_FOR_PLATFORM+= 	Linux-*-i[3-6]86
+
+DEPENDS+=		gtk+>=1.2.10:../../x11/gtk
+PLIST_SRC=		PLIST PLIST.linux
+
+post-extract:
+	${MKDIR} ${WRKSRC}/dest
+	${SED} -e "s|@PREFIX@|${PREFIX}|g" -e "s|@X11BASE@|${X11BASE}|g" \
+		-e "s|@WRKSRC@|${WRKSRC}|g" ${FILESDIR}/linux_notes
+	@${SH} -c "read"
+	${LN} -s ${PREFIX}/lib/libglib.so ${WRKSRC}/libglib-1.2.so.0
+	${LN} -s ${PREFIX}/lib/libgmodule.so ${WRKSRC}/libgmodule-1.2.so.0
+	${SED} -e 's|LD_LIBRARY_PATH=.:|LD_LIBRARY_PATH=.:${X11BASE}/lib:${PREFIX}/lib:|' \
+		${WRKSRC}/netscape-installer > ${WRKSRC}/netscape-installer.tmp
+	${MV} ${WRKSRC}/netscape-installer.tmp ${WRKSRC}/netscape-installer
+	${LN} -s ${PREFIX}/lib/libglib.so ${WRKSRC}/dest/libglib-1.2.so.0
+	${LN} -s ${PREFIX}/lib/libgmodule.so ${WRKSRC}/dest/libgmodule-1.2.so.0
+
+.include "../../mk/bsd.pkg.mk"

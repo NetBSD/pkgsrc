@@ -1,0 +1,442 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2002/09/19 22:33:49 jschauma Exp $
+bin/netscape7
+lib/netscape/netscape7/Cool/CoolBos.so
+lib/netscape/netscape7/Cool/CoolBos.so.1
+lib/netscape/netscape7/Cool/CoolBucky.so
+lib/netscape/netscape7/Cool/CoolBucky.so.1
+lib/netscape/netscape7/Cool/CoolHttp.so
+lib/netscape/netscape7/Cool/CoolHttp.so.1
+lib/netscape/netscape7/Cool/CoolIcq.so
+lib/netscape/netscape7/Cool/CoolIcq.so.1
+lib/netscape/netscape7/Cool/CoolPeer.so
+lib/netscape/netscape7/Cool/CoolPeer.so.1
+lib/netscape/netscape7/Cool/CoolSocket.so
+lib/netscape/netscape7/Cool/CoolSocket.so.1
+lib/netscape/netscape7/Cool/CoolSos.so
+lib/netscape/netscape7/Cool/CoolSos.so.1
+lib/netscape/netscape7/Cool/CoolTih.so
+lib/netscape/netscape7/Cool/CoolTih.so.1
+lib/netscape/netscape7/chrome/US.jar
+lib/netscape/netscape7/chrome/aim.jar
+lib/netscape/netscape7/chrome/chrome.rdf
+lib/netscape/netscape7/chrome/classic.jar
+lib/netscape/netscape7/chrome/comm.jar
+lib/netscape/netscape7/chrome/content-packs.jar
+lib/netscape/netscape7/chrome/en-US.jar
+lib/netscape/netscape7/chrome/en-mac.jar
+lib/netscape/netscape7/chrome/en-unix.jar
+lib/netscape/netscape7/chrome/en-win.jar
+lib/netscape/netscape7/chrome/forms.jar
+lib/netscape/netscape7/chrome/help.jar
+lib/netscape/netscape7/chrome/installed-chrome.txt
+lib/netscape/netscape7/chrome/messenger.jar
+lib/netscape/netscape7/chrome/modern.jar
+lib/netscape/netscape7/chrome/overlayinfo/communicator/content/overlays.rdf
+lib/netscape/netscape7/chrome/overlayinfo/content-packs/content/overlays.rdf
+lib/netscape/netscape7/chrome/overlayinfo/cookie/content/overlays.rdf
+lib/netscape/netscape7/chrome/overlayinfo/editor/content/overlays.rdf
+lib/netscape/netscape7/chrome/overlayinfo/messenger/content/overlays.rdf
+lib/netscape/netscape7/chrome/overlayinfo/navigator/content/overlays.rdf
+lib/netscape/netscape7/chrome/overlayinfo/navigator/skin/stylesheets.rdf
+lib/netscape/netscape7/chrome/pipnss.jar
+lib/netscape/netscape7/chrome/pippki.jar
+lib/netscape/netscape7/chrome/toolkit.jar
+lib/netscape/netscape7/components/AIMGlue.xpt
+lib/netscape/netscape7/components/browser.xpt
+lib/netscape/netscape7/components/jsconsole-clhandler.js
+lib/netscape/netscape7/components/libIMGlue.so
+lib/netscape/netscape7/components/libabsyncmj.so
+lib/netscape/netscape7/components/libabsyncsvc.so
+lib/netscape/netscape7/components/libabupgrade.so
+lib/netscape/netscape7/components/libactivation.so
+lib/netscape/netscape7/components/libaddrbook.so
+lib/netscape/netscape7/components/libaimstat.so
+lib/netscape/netscape7/components/libappcomps.so
+lib/netscape/netscape7/components/libautoconfig.so
+lib/netscape/netscape7/components/libcaps.so
+lib/netscape/netscape7/components/libchardet.so
+lib/netscape/netscape7/components/libchrome.so
+lib/netscape/netscape7/components/libcomposer.so
+lib/netscape/netscape7/components/libcookie.so
+lib/netscape/netscape7/components/libdocshell.so
+lib/netscape/netscape7/components/libeditor.so
+lib/netscape/netscape7/components/libembedcomponents.so
+lib/netscape/netscape7/components/libfileview.so
+lib/netscape/netscape7/components/libgfx2.so
+lib/netscape/netscape7/components/libgfx_gtk.so
+lib/netscape/netscape7/components/libgfxps.so
+lib/netscape/netscape7/components/libgfxxprint.so
+lib/netscape/netscape7/components/libgkcontent.so
+lib/netscape/netscape7/components/libgklayout.so
+lib/netscape/netscape7/components/libgkplugin.so
+lib/netscape/netscape7/components/libgkview.so
+lib/netscape/netscape7/components/libhtmlpars.so
+lib/netscape/netscape7/components/libimgbmp.so
+lib/netscape/netscape7/components/libimggif.so
+lib/netscape/netscape7/components/libimgjpeg.so
+lib/netscape/netscape7/components/libimglib2.so
+lib/netscape/netscape7/components/libimgmng.so
+lib/netscape/netscape7/components/libimgpng.so
+lib/netscape/netscape7/components/libimgppm.so
+lib/netscape/netscape7/components/libimgxbm.so
+lib/netscape/netscape7/components/libimpComm4x.so
+lib/netscape/netscape7/components/libimpComm4xMail.so
+lib/netscape/netscape7/components/libimpText.so
+lib/netscape/netscape7/components/libimport.so
+lib/netscape/netscape7/components/libjar50.so
+lib/netscape/netscape7/components/libjsd.so
+lib/netscape/netscape7/components/libjsdom.so
+lib/netscape/netscape7/components/libjsloader.so
+lib/netscape/netscape7/components/libjsurl.so
+lib/netscape/netscape7/components/liblocalmail.so
+lib/netscape/netscape7/components/liblwbrk.so
+lib/netscape/netscape7/components/libmailnews.so
+lib/netscape/netscape7/components/libmime.so
+lib/netscape/netscape7/components/libmimeemitter.so
+lib/netscape/netscape7/components/libmork.so
+lib/netscape/netscape7/components/libmozbrwsr.so
+lib/netscape/netscape7/components/libmozfind.so
+lib/netscape/netscape7/components/libmozldap.so
+lib/netscape/netscape7/components/libmozxfer.so
+lib/netscape/netscape7/components/libmsgcompose.so
+lib/netscape/netscape7/components/libmsgdb.so
+lib/netscape/netscape7/components/libmsgimap.so
+lib/netscape/netscape7/components/libmsgmdn.so
+lib/netscape/netscape7/components/libmsgnews.so
+lib/netscape/netscape7/components/libmsgsmime.so
+lib/netscape/netscape7/components/libnecko.so
+lib/netscape/netscape7/components/libnecko2.so
+lib/netscape/netscape7/components/libnkcache.so
+lib/netscape/netscape7/components/libnsappshell.so
+lib/netscape/netscape7/components/libnslocale.so
+lib/netscape/netscape7/components/libnsprefm.so
+lib/netscape/netscape7/components/liboji.so
+lib/netscape/netscape7/components/libp3p.so
+lib/netscape/netscape7/components/libpipboot.so
+lib/netscape/netscape7/components/libpipnss.so
+lib/netscape/netscape7/components/libpippki.so
+lib/netscape/netscape7/components/libpref.so
+lib/netscape/netscape7/components/libprofile.so
+lib/netscape/netscape7/components/libqfaservices.so
+lib/netscape/netscape7/components/librdf.so
+lib/netscape/netscape7/components/libregviewer.so
+lib/netscape/netscape7/components/libshistory.so
+lib/netscape/netscape7/components/libstrres.so
+lib/netscape/netscape7/components/libtransformiix.so
+lib/netscape/netscape7/components/libtxmgr.so
+lib/netscape/netscape7/components/libtxtsvc.so
+lib/netscape/netscape7/components/libuconv.so
+lib/netscape/netscape7/components/libucvcn.so
+lib/netscape/netscape7/components/libucvibm.so
+lib/netscape/netscape7/components/libucvja.so
+lib/netscape/netscape7/components/libucvko.so
+lib/netscape/netscape7/components/libucvlatin.so
+lib/netscape/netscape7/components/libucvmath.so
+lib/netscape/netscape7/components/libucvtw.so
+lib/netscape/netscape7/components/libucvtw2.so
+lib/netscape/netscape7/components/libunicharutil.so
+lib/netscape/netscape7/components/libuniversalchardet.so
+lib/netscape/netscape7/components/liburiloader.so
+lib/netscape/netscape7/components/libvcard.so
+lib/netscape/netscape7/components/libwallet.so
+lib/netscape/netscape7/components/libwalletviewers.so
+lib/netscape/netscape7/components/libwebbrwsr.so
+lib/netscape/netscape7/components/libwidget_gtk.so
+lib/netscape/netscape7/components/libxmlextras.so
+lib/netscape/netscape7/components/libxpconnect.so
+lib/netscape/netscape7/components/libxpinstall.so
+lib/netscape/netscape7/components/libxremote_client.so
+lib/netscape/netscape7/components/libxremoteservice.so
+lib/netscape/netscape7/components/mail.xpt
+lib/netscape/netscape7/components/mdn-service.js
+lib/netscape/netscape7/components/nsDictionary.js
+lib/netscape/netscape7/components/nsDownloadProgressListener.js
+lib/netscape/netscape7/components/nsFilePicker.js
+lib/netscape/netscape7/components/nsHelperAppDlg.js
+lib/netscape/netscape7/components/nsJSAimChatRendezvous.js
+lib/netscape/netscape7/components/nsJSAimFileXferRendezvous.js
+lib/netscape/netscape7/components/nsJSAimKeywords.js
+lib/netscape/netscape7/components/nsJSAimOdirEntry.js
+lib/netscape/netscape7/components/nsLDAPPrefsService.js
+lib/netscape/netscape7/components/nsProgressDialog.js
+lib/netscape/netscape7/components/nsProxyAutoConfig.js
+lib/netscape/netscape7/components/nsSetPref.js
+lib/netscape/netscape7/components/nsSidebar.js
+lib/netscape/netscape7/components/nsUpdateNotifier.js
+lib/netscape/netscape7/components/nsXmlRpcClient.js
+lib/netscape/netscape7/components/psm.xpt
+lib/netscape/netscape7/components/qfaservices.xpt
+lib/netscape/netscape7/components/smime-service.js
+lib/netscape/netscape7/components/spellchecker/libspellchk.so
+lib/netscape/netscape7/components/spellchecker/netscape.dic
+lib/netscape/netscape7/components/spellchecker/pen4s324.dat
+lib/netscape/netscape7/components/talkback/XTalkback.ad
+lib/netscape/netscape7/components/talkback/master.ini
+lib/netscape/netscape7/components/talkback/talkback
+lib/netscape/netscape7/components/talkback/talkback.so
+lib/netscape/netscape7/components/xpti.dat
+lib/netscape/netscape7/component.reg
+lib/netscape/netscape7/defaults/autoconfig/prefcalls.js
+lib/netscape/netscape7/defaults/isp/US/aol.rdf
+lib/netscape/netscape7/defaults/isp/US/nswebmail.rdf
+lib/netscape/netscape7/defaults/isp/aol.rdf
+lib/netscape/netscape7/defaults/isp/nswebmail.rdf
+lib/netscape/netscape7/defaults/messenger/Templates
+lib/netscape/netscape7/defaults/messenger/US/Templates
+lib/netscape/netscape7/defaults/messenger/US/webMailSignature.html
+lib/netscape/netscape7/defaults/messenger/webMailSignature.html
+lib/netscape/netscape7/defaults/pref/aim.js
+lib/netscape/netscape7/defaults/pref/all-ns.js
+lib/netscape/netscape7/defaults/pref/all.js
+lib/netscape/netscape7/defaults/pref/config.js
+lib/netscape/netscape7/defaults/pref/editor.js
+lib/netscape/netscape7/defaults/pref/initpref.js
+lib/netscape/netscape7/defaults/pref/inspector.js
+lib/netscape/netscape7/defaults/pref/mailnews-ns.js
+lib/netscape/netscape7/defaults/pref/mailnews.js
+lib/netscape/netscape7/defaults/pref/mdn.js
+lib/netscape/netscape7/defaults/pref/security-prefs.js
+lib/netscape/netscape7/defaults/pref/smime.js
+lib/netscape/netscape7/defaults/pref/unix.js
+lib/netscape/netscape7/defaults/pref/xpinstall.js
+lib/netscape/netscape7/defaults/profile/US/bookmarks.html
+lib/netscape/netscape7/defaults/profile/US/chrome/userChrome-example.css
+lib/netscape/netscape7/defaults/profile/US/chrome/userContent-example.css
+lib/netscape/netscape7/defaults/profile/US/default-connections.rdf
+lib/netscape/netscape7/defaults/profile/US/default-invite.rdf
+lib/netscape/netscape7/defaults/profile/US/default-messages-icq.rdf
+lib/netscape/netscape7/defaults/profile/US/default-messages.rdf
+lib/netscape/netscape7/defaults/profile/US/localstore.rdf
+lib/netscape/netscape7/defaults/profile/US/mimeTypes.rdf
+lib/netscape/netscape7/defaults/profile/US/panels.rdf
+lib/netscape/netscape7/defaults/profile/US/search.rdf
+lib/netscape/netscape7/defaults/profile/bookmarks.html
+lib/netscape/netscape7/defaults/profile/default-connections.rdf
+lib/netscape/netscape7/defaults/profile/default-invite.rdf
+lib/netscape/netscape7/defaults/profile/default-messages-icq.rdf
+lib/netscape/netscape7/defaults/profile/default-messages.rdf
+lib/netscape/netscape7/defaults/profile/localstore.rdf
+lib/netscape/netscape7/defaults/profile/mimeTypes.rdf
+lib/netscape/netscape7/defaults/profile/panels.rdf
+lib/netscape/netscape7/defaults/profile/search.rdf
+lib/netscape/netscape7/defaults/wallet/DistinguishedSchema.tbl
+lib/netscape/netscape7/defaults/wallet/FieldSchema.tbl
+lib/netscape/netscape7/defaults/wallet/PositionalSchema.tbl
+lib/netscape/netscape7/defaults/wallet/SchemaConcat.tbl
+lib/netscape/netscape7/defaults/wallet/SchemaStrings.tbl
+lib/netscape/netscape7/defaults/wallet/StateSchema.tbl
+lib/netscape/netscape7/defaults/wallet/VcardSchema.tbl
+lib/netscape/netscape7/icons/mozicon16.xpm
+lib/netscape/netscape7/icons/mozicon50.xpm
+lib/netscape/netscape7/install.log
+lib/netscape/netscape7/libXpcs.so
+lib/netscape/netscape7/libXpcs.so.1
+lib/netscape/netscape7/libXprt.so
+lib/netscape/netscape7/libXprt.so.1
+lib/netscape/netscape7/libXptl.so
+lib/netscape/netscape7/libXptl.so.1
+lib/netscape/netscape7/libgkgfx.so
+lib/netscape/netscape7/libgtkembedmoz.so
+lib/netscape/netscape7/libgtksuperwin.so
+lib/netscape/netscape7/libgtkxtbin.so
+lib/netscape/netscape7/libjsj.so
+lib/netscape/netscape7/libldap50.so
+lib/netscape/netscape7/libmozjs.so
+lib/netscape/netscape7/libmozz.so
+lib/netscape/netscape7/libmsgbaseutil.so
+lib/netscape/netscape7/libnspr4.so
+lib/netscape/netscape7/libnss3.so
+lib/netscape/netscape7/libnssckbi.so
+lib/netscape/netscape7/libplc4.so
+lib/netscape/netscape7/libplds4.so
+lib/netscape/netscape7/libprldap50.so
+lib/netscape/netscape7/libsmime3.so
+lib/netscape/netscape7/libsoftokn3.so
+lib/netscape/netscape7/libssl3.so
+lib/netscape/netscape7/libxlibrgb.so
+lib/netscape/netscape7/libxpcom.so
+lib/netscape/netscape7/libxpistub.so
+lib/netscape/netscape7/mozilla-xremote-client
+lib/netscape/netscape7/netscape
+lib/netscape/netscape7/netscape-bin
+lib/netscape/netscape7/plugins/ShockwaveFlash.class
+lib/netscape/netscape7/plugins/libflashplayer.so
+lib/netscape/netscape7/plugins/libnullplugin.so
+lib/netscape/netscape7/regExport
+lib/netscape/netscape7/regchrome
+lib/netscape/netscape7/registry
+lib/netscape/netscape7/regxpcom
+lib/netscape/netscape7/res/arrow.gif
+lib/netscape/netscape7/res/broken-image.gif
+lib/netscape/netscape7/res/builtin/htmlBindings.xml
+lib/netscape/netscape7/res/builtin/platformHTMLBindings.xml
+lib/netscape/netscape7/res/charsetData.properties
+lib/netscape/netscape7/res/charsetalias.properties
+lib/netscape/netscape7/res/cmessage.txt
+lib/netscape/netscape7/res/dtd/mathml.dtd
+lib/netscape/netscape7/res/dtd/xhtml11.dtd
+lib/netscape/netscape7/res/entityTables/html40Latin1.properties
+lib/netscape/netscape7/res/entityTables/html40Special.properties
+lib/netscape/netscape7/res/entityTables/html40Symbols.properties
+lib/netscape/netscape7/res/entityTables/htmlEntityVersions.properties
+lib/netscape/netscape7/res/entityTables/transliterate.properties
+lib/netscape/netscape7/res/fonts/mathfont.properties
+lib/netscape/netscape7/res/fonts/mathfontCMEX10.properties
+lib/netscape/netscape7/res/fonts/mathfontCMSY10.properties
+lib/netscape/netscape7/res/fonts/mathfontMTExtra.properties
+lib/netscape/netscape7/res/fonts/mathfontMath1.properties
+lib/netscape/netscape7/res/fonts/mathfontMath2.properties
+lib/netscape/netscape7/res/fonts/mathfontMath4.properties
+lib/netscape/netscape7/res/fonts/mathfontPUA.properties
+lib/netscape/netscape7/res/fonts/mathfontSymbol.properties
+lib/netscape/netscape7/res/forms.css
+lib/netscape/netscape7/res/html.css
+lib/netscape/netscape7/res/html/gopher-audio.gif
+lib/netscape/netscape7/res/html/gopher-binary.gif
+lib/netscape/netscape7/res/html/gopher-find.gif
+lib/netscape/netscape7/res/html/gopher-image.gif
+lib/netscape/netscape7/res/html/gopher-menu.gif
+lib/netscape/netscape7/res/html/gopher-movie.gif
+lib/netscape/netscape7/res/html/gopher-sound.gif
+lib/netscape/netscape7/res/html/gopher-telnet.gif
+lib/netscape/netscape7/res/html/gopher-text.gif
+lib/netscape/netscape7/res/html/gopher-unknown.gif
+lib/netscape/netscape7/res/langGroups.properties
+lib/netscape/netscape7/res/language.properties
+lib/netscape/netscape7/res/loading-image.gif
+lib/netscape/netscape7/res/mathml.css
+lib/netscape/netscape7/res/quirk.css
+lib/netscape/netscape7/res/rdf/article.gif
+lib/netscape/netscape7/res/rdf/document.gif
+lib/netscape/netscape7/res/rdf/folder-closed.gif
+lib/netscape/netscape7/res/rdf/folder-open.gif
+lib/netscape/netscape7/res/rdf/loading.gif
+lib/netscape/netscape7/res/samples/Anieyes.gif
+lib/netscape/netscape7/res/samples/aform.css
+lib/netscape/netscape7/res/samples/beeptest.html
+lib/netscape/netscape7/res/samples/bform.css
+lib/netscape/netscape7/res/samples/bg.jpg
+lib/netscape/netscape7/res/samples/cform.css
+lib/netscape/netscape7/res/samples/checkboxTest.xul
+lib/netscape/netscape7/res/samples/colorpicker.xul
+lib/netscape/netscape7/res/samples/demoform.css
+lib/netscape/netscape7/res/samples/dexopenchrome.xul
+lib/netscape/netscape7/res/samples/dexparamdialog.html
+lib/netscape/netscape7/res/samples/dexparamdialog.xul
+lib/netscape/netscape7/res/samples/find.html
+lib/netscape/netscape7/res/samples/gear1.gif
+lib/netscape/netscape7/res/samples/hidetoolicon.css
+lib/netscape/netscape7/res/samples/hidetoolicon.xul
+lib/netscape/netscape7/res/samples/image_props.html
+lib/netscape/netscape7/res/samples/mozform.css
+lib/netscape/netscape7/res/samples/printsetup.html
+lib/netscape/netscape7/res/samples/raptor.jpg
+lib/netscape/netscape7/res/samples/rock_gra.gif
+lib/netscape/netscape7/res/samples/sampleimages/bongo.gif
+lib/netscape/netscape7/res/samples/sampleimages/down.gif
+lib/netscape/netscape7/res/samples/sampleimages/left.gif
+lib/netscape/netscape7/res/samples/sampleimages/right.gif
+lib/netscape/netscape7/res/samples/sampleimages/up.gif
+lib/netscape/netscape7/res/samples/scrollbarTest1.xul
+lib/netscape/netscape7/res/samples/scrollbarTest2.xul
+lib/netscape/netscape7/res/samples/sliderTest1.xul
+lib/netscape/netscape7/res/samples/soundtest.html
+lib/netscape/netscape7/res/samples/tab.xul
+lib/netscape/netscape7/res/samples/test.wav
+lib/netscape/netscape7/res/samples/test0.html
+lib/netscape/netscape7/res/samples/test1.html
+lib/netscape/netscape7/res/samples/test10.html
+lib/netscape/netscape7/res/samples/test11.html
+lib/netscape/netscape7/res/samples/test12.html
+lib/netscape/netscape7/res/samples/test13.html
+lib/netscape/netscape7/res/samples/test14.html
+lib/netscape/netscape7/res/samples/test15.html
+lib/netscape/netscape7/res/samples/test16.html
+lib/netscape/netscape7/res/samples/test2.html
+lib/netscape/netscape7/res/samples/test3.html
+lib/netscape/netscape7/res/samples/test4.html
+lib/netscape/netscape7/res/samples/test5.html
+lib/netscape/netscape7/res/samples/test6.html
+lib/netscape/netscape7/res/samples/test7.html
+lib/netscape/netscape7/res/samples/test8-1.html
+lib/netscape/netscape7/res/samples/test8.html
+lib/netscape/netscape7/res/samples/test8dom.html
+lib/netscape/netscape7/res/samples/test8sca.html
+lib/netscape/netscape7/res/samples/test8siz.html
+lib/netscape/netscape7/res/samples/test8tab.html
+lib/netscape/netscape7/res/samples/test9.html
+lib/netscape/netscape7/res/samples/test9a.html
+lib/netscape/netscape7/res/samples/test9b.html
+lib/netscape/netscape7/res/samples/test_ed.html
+lib/netscape/netscape7/res/samples/test_form.html
+lib/netscape/netscape7/res/samples/test_gfx.html
+lib/netscape/netscape7/res/samples/test_lbox.html
+lib/netscape/netscape7/res/samples/test_pr.html
+lib/netscape/netscape7/res/samples/test_weight.html
+lib/netscape/netscape7/res/samples/toolbarTest1.xul
+lib/netscape/netscape7/res/samples/treeTest1.css
+lib/netscape/netscape7/res/samples/treeTest1.xul
+lib/netscape/netscape7/res/samples/widgets.xul
+lib/netscape/netscape7/res/samples/xpmenu.xul
+lib/netscape/netscape7/res/samples/xulTest.css
+lib/netscape/netscape7/res/ua.css
+lib/netscape/netscape7/res/unixcharset.properties
+lib/netscape/netscape7/res/viewsource.css
+lib/netscape/netscape7/run-mozilla.sh
+lib/netscape/netscape7/searchplugins/SBMus_01.gif
+lib/netscape/netscape7/searchplugins/SBMus_01.src
+lib/netscape/netscape7/searchplugins/SBWeb_01.gif
+lib/netscape/netscape7/searchplugins/SBWeb_01.src
+lib/netscape/netscape7/searchplugins/SBWeb_02.gif
+lib/netscape/netscape7/searchplugins/SBWeb_02.src
+lib/netscape/netscape7/searchplugins/SBWeb_04.gif
+lib/netscape/netscape7/searchplugins/SBWeb_04.src
+lib/netscape/netscape7/searchplugins/SBWeb_06.gif
+lib/netscape/netscape7/searchplugins/SBWeb_06.src
+lib/netscape/netscape7/systemSignature.jar
+lib/netscape/netscape7/xpicleanup
+@dirrm lib/netscape/netscape7/searchplugins
+@dirrm lib/netscape/netscape7/res/samples/sampleimages
+@dirrm lib/netscape/netscape7/res/samples
+@dirrm lib/netscape/netscape7/res/rdf
+@dirrm lib/netscape/netscape7/res/html
+@dirrm lib/netscape/netscape7/res/fonts
+@dirrm lib/netscape/netscape7/res/entityTables
+@dirrm lib/netscape/netscape7/res/dtd
+@dirrm lib/netscape/netscape7/res/builtin
+@dirrm lib/netscape/netscape7/res
+@dirrm lib/netscape/netscape7/plugins
+@dirrm lib/netscape/netscape7/icons
+@dirrm lib/netscape/netscape7/defaults/wallet
+@dirrm lib/netscape/netscape7/defaults/profile/US/chrome
+@dirrm lib/netscape/netscape7/defaults/profile/US
+@dirrm lib/netscape/netscape7/defaults/profile
+@dirrm lib/netscape/netscape7/defaults/pref
+@dirrm lib/netscape/netscape7/defaults/messenger/US
+@dirrm lib/netscape/netscape7/defaults/messenger
+@dirrm lib/netscape/netscape7/defaults/isp/US
+@dirrm lib/netscape/netscape7/defaults/isp
+@dirrm lib/netscape/netscape7/defaults/autoconfig
+@dirrm lib/netscape/netscape7/defaults
+@dirrm lib/netscape/netscape7/components/talkback
+@dirrm lib/netscape/netscape7/components/spellchecker
+@dirrm lib/netscape/netscape7/components
+@dirrm lib/netscape/netscape7/chrome/overlayinfo/navigator/skin
+@dirrm lib/netscape/netscape7/chrome/overlayinfo/navigator/content
+@dirrm lib/netscape/netscape7/chrome/overlayinfo/navigator
+@dirrm lib/netscape/netscape7/chrome/overlayinfo/messenger/content
+@dirrm lib/netscape/netscape7/chrome/overlayinfo/messenger
+@dirrm lib/netscape/netscape7/chrome/overlayinfo/editor/content
+@dirrm lib/netscape/netscape7/chrome/overlayinfo/editor
+@dirrm lib/netscape/netscape7/chrome/overlayinfo/cookie/content
+@dirrm lib/netscape/netscape7/chrome/overlayinfo/cookie
+@dirrm lib/netscape/netscape7/chrome/overlayinfo/content-packs/content
+@dirrm lib/netscape/netscape7/chrome/overlayinfo/content-packs
+@dirrm lib/netscape/netscape7/chrome/overlayinfo/communicator/content
+@dirrm lib/netscape/netscape7/chrome/overlayinfo/communicator
+@dirrm lib/netscape/netscape7/chrome/overlayinfo
+@dirrm lib/netscape/netscape7/chrome
+@unexec ${RM} %D/lib/netscape/netscape7/Cool/Xpcs\ Registry.dat 2>/dev/null || ${TRUE}
+@dirrm lib/netscape/netscape7/Cool
+@unexec ${RMDIR} %D/lib/netscape/netscape7 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/lib/netscape 2>/dev/null || ${TRUE}

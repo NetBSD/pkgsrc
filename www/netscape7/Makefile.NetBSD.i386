@@ -1,0 +1,23 @@
+# $NetBSD: Makefile.NetBSD.i386,v 1.1.1.1 2002/09/19 22:33:49 jschauma Exp $
+#
+
+DIST_DIR_NAME=		linux22
+ONLY_FOR_PLATFORM+= 	NetBSD-*-i386
+
+DEPENDS+=		suse_compat>=7.3:../../emulators/${SUSE_DIR_PREFIX}_compat
+DEPENDS+=		suse_x11>=7.3:../../emulators/${SUSE_DIR_PREFIX}_x11
+DEPENDS+=		suse_gtk>=7.3:../../emulators/${SUSE_DIR_PREFIX}_gtk
+
+INSTDIR=		${PREFIX}/emul/linux/${WRKSRC}/dest
+HAS_MSG=		yes
+MESSAGE_SRC=		${PKGDIR}/MESSAGE.${OPSYS}
+
+# the installer starts netscape, under linux emulation, nontheless!
+# Since we need the files that are generated during the first run, we need to
+# fetch them and install them now.
+post-install:
+	cd ${INSTDIR} && ${PAX} -rw . ${PREFIX}/lib/netscape/netscape7
+	${RM} -fr ${PREFIX}/emul/linux/root/.mozilla
+	${RM} -fr ${PREFIX}/emul/linux/root/.fullcircle
+
+.include "../../emulators/suse_linux/Makefile.application"
