@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2000/07/01 19:42:25 david Exp $
+# $NetBSD: Makefile,v 1.21 2000/08/05 15:40:31 mycroft Exp $
 
-DISTNAME=		mtv-1.1.1.1
+DISTNAME=		mtv-1.1.4
 CATEGORIES=		graphics
 MASTER_SITES=		ftp://ftp.mpegtv.com/pub/mpeg/mpegtv/player/x86-unknown-linux-glibc2.1/packages/RPMS/
 DISTFILES=		${DISTNAME}-1.i386.rpm SDL-1.1.2-1.i386.rpm
