@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/04/08 13:39:32 recht Exp $
+
+--- docs/reference/Makefile.in.orig	2004-04-08 15:32:41.000000000 +0200
++++ docs/reference/Makefile.in
+@@ -83,7 +83,7 @@ HAVE_GTK_DOC = @HAVE_GTK_DOC@
+ HAVE_GTK_DOC_FALSE = @HAVE_GTK_DOC_FALSE@
+ HAVE_GTK_DOC_TRUE = @HAVE_GTK_DOC_TRUE@
+ 
+-HTML_DIR = $(datadir)/gtk-doc/html
++HTML_DIR = @HTML_DIR@
+ INSTALL_DATA = @INSTALL_DATA@
+ INSTALL_PROGRAM = @INSTALL_PROGRAM@
+ INSTALL_SCRIPT = @INSTALL_SCRIPT@
