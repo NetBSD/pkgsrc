@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2003/07/17 21:24:35 grant Exp $
+# $NetBSD: Makefile,v 1.4 2003/09/01 23:34:57 seb Exp $
 #
 
 DISTNAME=	skampi4
@@ -19,7 +19,7 @@ DEPENDS+=	teTeX>=1.0.7:../../print/teTeX
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 USE_PERL5=	run
-REPLACE_PERL=	${WRKSRC}/report_generator/dorep4.pl
+REPLACE_PERL=	report_generator/dorep4.pl
 
 do-build:
 	${GUNZIP_CMD} ${DISTDIR}/${DISTNAME}_userman.ps.gz -c > \
