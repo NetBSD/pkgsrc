@@ -1,7 +1,7 @@
-$NetBSD: patch-aj,v 1.1.1.1 1999/11/17 17:34:39 wennmach Exp $
+$NetBSD: patch-aj,v 1.2 2001/09/24 13:10:48 wulf Exp $
 
---- src/rrd_cgi.c.ORIG	Fri Nov  5 00:20:16 1999
-+++ src/rrd_cgi.c	Fri Nov  5 00:21:26 1999
+--- src/rrd_cgi.c.orig	Thu Feb 22 12:02:47 2001
++++ src/rrd_cgi.c
 @@ -12,7 +12,7 @@
  #define MEMBLK 1024
  

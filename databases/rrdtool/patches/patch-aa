@@ -1,17 +1,17 @@
-$NetBSD: patch-aa,v 1.4 2000/12/15 19:20:18 wiz Exp $
+$NetBSD: patch-aa,v 1.5 2001/09/24 13:10:48 wulf Exp $
 
---- Makefile.in.orig	Thu Sep 14 15:27:45 2000
-+++ Makefile.in	Tue Dec  5 20:54:28 2000
-@@ -86,7 +86,7 @@
+--- Makefile.in.orig	Thu Feb 22 12:02:14 2001
++++ Makefile.in
+@@ -87,7 +87,7 @@
  RSYNC = rsync --rsh=ssh
  
  # build the following subdirectories
--SUBDIRS = cgilib-0.4 config gd1.3 zlib-1.1.3 libpng-1.0.6           src doc examples contrib tcl
+-SUBDIRS = cgilib-0.4 config gd1.3 zlib-1.1.3 libpng-1.0.9           src doc examples contrib tcl
 +SUBDIRS = config src doc examples contrib tcl
  
  
  # the following files are not mentioned in any other Makefile
-@@ -384,11 +384,12 @@
+@@ -385,11 +385,12 @@
  # lets schedule the perl stuff for installation
  # the special call to install-sh is because the -d switch is not portable
  install-data-local:

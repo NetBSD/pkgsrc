@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.9 2001/01/04 15:10:25 agc Exp $
+@comment $NetBSD: PLIST,v 1.10 2001/09/24 13:10:49 wulf Exp $
 bin/rrdcgi
 bin/rrdtool
+bin/rrdupdate
 bin/trytime
 include/rrd.h
 lib/librrd.a
@@ -25,6 +26,7 @@ man/man1/rrdrestore.1
 man/man1/rrdtool.1
 man/man1/rrdtune.1
 man/man1/rrdtutorial.1
+man/man1/rrdtutorial.es.1
 man/man1/rrdupdate.1
 share/doc/rrdtool/RRDp.html
 share/doc/rrdtool/RRDp.txt
@@ -72,6 +74,9 @@ share/doc/rrdtool/rrdtool.txt
 share/doc/rrdtool/rrdtune.html
 share/doc/rrdtool/rrdtune.pod
 share/doc/rrdtool/rrdtune.txt
+share/doc/rrdtool/rrdtutorial.es.html
+share/doc/rrdtool/rrdtutorial.es.pod
+share/doc/rrdtool/rrdtutorial.es.txt
 share/doc/rrdtool/rrdtutorial.html
 share/doc/rrdtool/rrdtutorial.pod
 share/doc/rrdtool/rrdtutorial.txt
@@ -85,21 +90,6 @@ share/examples/rrdtool/piped-demo.pl
 share/examples/rrdtool/shared-demo.pl
 share/examples/rrdtool/stripes.pl
 share/rrdtool/contrib/README
-share/rrdtool/contrib/add_ds/README
-share/rrdtool/contrib/add_ds/add_ds.pl
-share/rrdtool/contrib/add_ds/batch.pl
-share/rrdtool/contrib/killspike/README
-share/rrdtool/contrib/killspike/killspike.pl
-share/rrdtool/contrib/log2rrd/README
-share/rrdtool/contrib/log2rrd/log2rrd.pl
-share/rrdtool/contrib/rrd-file-icon/README
-share/rrdtool/contrib/rrd-file-icon/rrd.png
-share/rrdtool/contrib/rrdfetchnames/README
-share/rrdtool/contrib/rrdfetchnames/rrdfetchnames.pl
-share/rrdtool/contrib/rrdlastds/README
-share/rrdtool/contrib/rrdlastds/rrdlastds.pl
-share/rrdtool/contrib/rrdproc/README
-share/rrdtool/contrib/rrdproc/rrdproc.c
 share/rrdtool/contrib/trytime/README
 share/rrdtool/contrib/trytime/trytime.c
 share/rrdtool/lib/perl/RRDp.pm
@@ -111,13 +101,6 @@ share/rrdtool/lib/perl/auto/RRDs/RRDs.so
 @dirrm share/rrdtool/lib/perl
 @dirrm share/rrdtool/lib
 @dirrm share/rrdtool/contrib/trytime
-@dirrm share/rrdtool/contrib/rrdproc
-@dirrm share/rrdtool/contrib/rrdlastds
-@dirrm share/rrdtool/contrib/rrdfetchnames
-@dirrm share/rrdtool/contrib/rrd-file-icon
-@dirrm share/rrdtool/contrib/log2rrd
-@dirrm share/rrdtool/contrib/killspike
-@dirrm share/rrdtool/contrib/add_ds
 @dirrm share/rrdtool/contrib
 @dirrm share/rrdtool
 @dirrm share/examples/rrdtool

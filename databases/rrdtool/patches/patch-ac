@@ -1,13 +1,13 @@
-$NetBSD: patch-ac,v 1.3 2000/12/05 11:15:42 wulf Exp $
+$NetBSD: patch-ac,v 1.4 2001/09/24 13:10:48 wulf Exp $
 
---- contrib/Makefile.in.orig	Thu Sep 14 15:34:30 2000
-+++ contrib/Makefile.in	Tue Dec  5 20:57:18 2000
-@@ -86,7 +86,7 @@
+--- contrib/Makefile.in.orig	Thu Feb 22 12:07:39 2001
++++ contrib/Makefile.in
+@@ -87,7 +87,7 @@
  ZLIB_LIB_DIR = @ZLIB_LIB_DIR@
  
- SUBDIRS = log2rrd rrd-file-icon trytime rrdproc rrdlastds add_ds killspike rrdfetchnames
+ SUBDIRS = trytime
 -contribdir = $(prefix)/contrib
 +contribdir = $(prefix)/share/rrdtool/contrib
  contrib_DATA = README
- EXTRA_DIST = clickgraphs php3 php4
+ EXTRA_DIST = rrdview log2rrd rrd-file-icon rrdproc rrdlastds add_ds killspike rrdfetchnames snmpstats rrdexplorer php3 php4
  mkinstalldirs = $(SHELL) $(top_srcdir)/config/mkinstalldirs
