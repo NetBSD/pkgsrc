@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2002/12/27 15:28:14 cjep Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/01/04 12:23:00 cjep Exp $
 bin/xgap
-lib/gap4.3/pkg/xgap/bin/i386--netbsdelf-cc/xgap
+lib/gap4.3/pkg/xgap/bin/${MACHINE_GNU_PLATFORM}-cc/xgap
 lib/gap4.3/pkg/xgap/doc/answers.tex
 lib/gap4.3/pkg/xgap/doc/diffgap3.tex
 lib/gap4.3/pkg/xgap/doc/gobject.tex
