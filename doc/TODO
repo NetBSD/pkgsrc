@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.772 2003/08/08 12:52:12 wiz Exp $
+$NetBSD: TODO,v 1.773 2003/08/08 13:32:53 agc Exp $
 
 Suggested new packages
 ======================
@@ -255,7 +255,6 @@ Suggested package updates
 	o ttf2pt1-3.4.3
 	o transcode-0.6.8
 	o vfu-4.03
-	o vile-9.4
 	o vnc-3.3.7 [http://www.realvnc.com/download.html]
 	o vttest-20030301
 	o wdm-1.25
