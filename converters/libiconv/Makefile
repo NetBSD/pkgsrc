@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2003/02/28 22:15:29 grant Exp $
+# $NetBSD: Makefile,v 1.17 2003/07/12 13:13:46 dillo Exp $
 #
 
 DISTNAME=		libiconv-1.8
@@ -16,6 +16,8 @@ USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE+=	${WRKSRC}/libtool
 LIBTOOL_OVERRIDE+=	${WRKSRC}/libcharset/libtool
 
+TEST_TARGET=		check
+
 # remove any existing charset.alias; if it already exists, libiconv does
 # not overwrite it, and older versions of libiconv wrote incorrect
 # charset.alias files, which were not removed during deinstall since
@@ -26,8 +28,5 @@ pre-install:
 # be sure to install a new charset.alias
 post-install:
 	cd ${WRKSRC}/libcharset/lib && ${MAKE} install-lib
-
-test: build
-	cd ${WRKSRC} && ${MAKE_ENV} ${MAKE_PROGRAM} check 2>&1 | tee ${WRKDIR}/check.log
 
 .include "../../mk/bsd.pkg.mk"
