@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 1999/04/06 05:57:31 rh Exp $
+
+--- lib/Makefile.in.orig	Wed Mar  3 00:14:45 1999
++++ lib/Makefile.in	Mon Apr  5 19:11:21 1999
+@@ -36,7 +36,7 @@
+ DEFS = @DEFS@
+ 
+ COMPILE = $(CC) -c $(DEFS) $(INCLUDES) $(CPPFLAGS) $(CFLAGS)
+-LIBTOOL = ../libtool
++LIBTOOL = @LIBTOOL@
+ MCOMP	= --mode=compile
+ MLINK	= --mode=link
+ 
