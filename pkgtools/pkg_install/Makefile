@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 1998/08/28 12:25:35 agc Exp $
+# $NetBSD: Makefile,v 1.2 1998/08/28 14:23:18 agc Exp $
 #
 
 DISTNAME=		pkg_install-19980828
@@ -12,6 +12,7 @@ PREFIX=			/usr
 WRKSRC=			${WRKDIR}/pkg_install
 MAKE_ENV+=		BINDIR=/usr/sbin MANDIR=/usr/share/man
 NO_PKG_REGISTER=	yes
+NO_PACKAGE=		No package registration is done
 
 .include "../../mk/bsd.prefs.mk"
 
