@@ -1,5 +1,7 @@
---- dnscache-conf.orig	Sat Sep 23 17:39:21 2000
-+++ dnscache-conf.c	Sat Sep 23 17:42:43 2000
+$NetBSD: patch-ab,v 1.1 2000/12/29 16:42:55 hubertf Exp $
+
+--- dnscache-conf.c.orig	Thu Dec 28 16:36:17 2000
++++ dnscache-conf.c	Thu Dec 28 16:38:03 2000
 @@ -89,13 +89,13 @@
    if (chdir(auto_home) == -1)
      strerr_die4sys(111,FATAL,"unable to switch to ",auto_home,": ");
