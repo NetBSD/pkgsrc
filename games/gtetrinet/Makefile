@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/04/14 16:15:23 jmmv Exp $
+# $NetBSD: Makefile,v 1.17 2004/06/08 12:23:59 cjep Exp $
 #
 
 DISTNAME=	gtetrinet-0.7.1
@@ -17,6 +17,8 @@ USE_BUILDLINK3=		YES
 USE_DIRS+=		gnome2-1.5
 USE_GNU_TOOLS+=		make
 USE_PKGLOCALEDIR=	YES
+
+BUILD_DEFS+=		USE_INET6
 
 .include "../../mk/bsd.prefs.mk"
 

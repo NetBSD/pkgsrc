@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/12/20 13:38:37 grant Exp $
+# $NetBSD: Makefile,v 1.8 2004/06/08 12:24:00 cjep Exp $
 #
 
 DISTNAME=		tnftpd-20031217
@@ -21,6 +21,8 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 CONF_FILES+=		${EXAMPLEDIR}/ftpd.conf ${PKG_SYSCONFDIR}/ftpd.conf
 CONF_FILES+=		${EXAMPLEDIR}/ftpusers ${PKG_SYSCONFDIR}/ftpusers
+
+BUILD_DEFS+=		USE_INET6
 
 .include "../../mk/bsd.prefs.mk"
 
