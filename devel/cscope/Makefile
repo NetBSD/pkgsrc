@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/05/30 20:42:23 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.6 2000/06/08 12:57:57 wiz Exp $
 
 DISTNAME=	cscope-15.0bl2
 PKGNAME=	cscope-15.0.2
@@ -11,7 +11,7 @@ HOMEPAGE=	http://cscope.sourceforge.net/
 GNU_CONFIGURE=	YES
 
 OSVER!=		uname -r
-GOOD_CURSES=	1.4[A-Z] 1.[5-9]*
+GOOD_CURSES=	1.4[S-Z] 1.4Z[A-Z] 1.[5-9]*
 
 .for PATTERN in ${GOOD_CURSES}
 .if ${OSVER:M${PATTERN}} != ""
