@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 1998/03/19 12:44:26 frueauf Exp $
+# $NetBSD: Makefile,v 1.14 1998/03/19 14:11:42 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.78 1997/10/01 08:32:59 cracauer Exp
 #
 
@@ -49,7 +49,7 @@
 #    SUBDIR += p5-C-Scan
 #    SUBDIR += p5-ConfigReader
 #    SUBDIR += p5-Curses
-#    SUBDIR += p5-Data-Dumper
+    SUBDIR += p5-Data-Dumper
 #    SUBDIR += p5-Data-Flow
 #    SUBDIR += p5-Data-ShowTable
 #    SUBDIR += p5-Date-Manip
