@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/02/09 18:47:38 jmmv Exp $
+# $NetBSD: Makefile,v 1.7 2004/02/11 06:18:33 xtraeme Exp $
 #
 
 DISTNAME=	libcroco-0.4.0
@@ -11,7 +11,7 @@ MAINTAINER=	xtraeme@NetBSD.org
 HOMEPAGE=	http://www.freespiders.org/projects/libcroco/
 COMMENT=	Toolkit to parse and manipulate CSS (Cascading Style Sheets)
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		yes
 USE_X11=		yes
@@ -23,9 +23,9 @@ PKGCONFIG_OVERRIDE+=    ${WRKSRC}/libcroco.pc.in
 CONFIGURE_ARGS+=	--enable-seleng=yes
 CONFIGURE_ARGS+=	--enable-layeng=yes
 
-.include "../../devel/glib2/buildlink2.mk"
-.include "../../devel/libgnomeui/buildlink2.mk"
-.include "../../devel/pango/buildlink2.mk"
-.include "../../devel/pkgconfig/buildlink2.mk"
-.include "../../textproc/libxml2/buildlink2.mk"
+.include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/libgnomeui/buildlink3.mk"
+.include "../../devel/pango/buildlink3.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.29 2004/01/11 19:41:39 cjep Exp $
+# $NetBSD: Makefile,v 1.30 2004/02/11 06:12:20 xtraeme Exp $
 #
 
 DISTNAME=		Eterm-0.9.2
 PKGNAME=		${DISTNAME:S/^E/e/}
-PKGREVISION=		6
+PKGREVISION=		7
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=eterm/} \
 			ftp://ftp.dti.ad.jp/pub/X/Eterm/
@@ -22,9 +22,9 @@ ETERM_SRCS=		${DISTNAME}${EXTRACT_SUFX}
 PIXMAP_FILES=		Eterm-bg-scale-1.tar.gz Eterm-bg-scale-2.tar.gz \
 			Eterm-bg-tile.tar.gz
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
-USE_X11BASE=		YES
+USE_X11=		YES
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 GNU_CONFIGURE=		YES
@@ -58,7 +58,7 @@ post-extract:
 		${PAX} -O -zrf ${DISTDIR}/$$f; \
 	done
 
-.include "../../devel/libast/buildlink2.mk"
-.include "../../graphics/imlib2/buildlink2.mk"
+.include "../../devel/libast/buildlink3.mk"
+.include "../../graphics/imlib2/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
