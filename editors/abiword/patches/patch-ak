@@ -1,7 +1,7 @@
-$NetBSD: patch-ak,v 1.4 2001/11/26 13:08:25 martti Exp $
+$NetBSD: patch-ak,v 1.5 2002/07/03 21:59:11 hubertf Exp $
 
---- src/pkg/common/unix/scripts/install.sh.orig	Mon Nov 26 13:59:07 2001
-+++ src/pkg/common/unix/scripts/install.sh	Mon Nov 26 13:59:31 2001
+--- src/pkg/common/unix/scripts/install.sh.orig	Tue Apr 16 15:07:49 2002
++++ src/pkg/common/unix/scripts/install.sh
 @@ -131,15 +131,6 @@
  
  
@@ -11,7 +11,7 @@ $NetBSD: patch-ak,v 1.4 2001/11/26 13:08:25 martti Exp $
 -
 -echo "Installing ttfadmin script [$TARGET/bin]"
 -cp -f $SCRIPTDIR/../../../../tools/scripts/unix/ttfadmin.sh $TARGET/bin/ttfadmin.sh
--chmod 500 $TARGET/bin/ttfadmin.sh
+-chmod 755 $TARGET/bin/ttfadmin.sh
 -
 -
 -########################################################################
