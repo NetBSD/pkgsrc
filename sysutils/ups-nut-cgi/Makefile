@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2002/12/13 04:23:20 lukem Exp $
+# $NetBSD: Makefile,v 1.21 2002/12/17 05:53:41 lukem Exp $
 
 DISTNAME=		nut-1.2.1
 PKGNAME=		ups-nut-cgi-1.2.1
@@ -26,7 +26,7 @@ PKG_SYSCONFSUBDIR?=	nut
 NUT_CONFDIR=		${PKG_SYSCONFDIR}
 NUT_EGDIR=		${PREFIX}/share/examples/nut
 NUT_STATEDIR=		/var/db/nut
-NUT_CGIDIR=		${PREFIX}/share/nut/cgi
+NUT_CGIDIR=		${PREFIX}/libexec/cgi-bin
 
 CONF_FILES=		${NUT_EGDIR}/hosts.conf.sample ${NUT_CONFDIR}/hosts.conf
 CONF_FILES+=		${NUT_EGDIR}/upsset.conf.sample \
@@ -35,8 +35,6 @@ CONF_FILES+=		${NUT_EGDIR}/upsstats-single.html.sample \
 			${NUT_CONFDIR}/upsstats-single.html
 CONF_FILES+=		${NUT_EGDIR}/upsstats.html.sample \
 			${NUT_CONFDIR}/upsstats.html
-
-OWN_DIRS=		${NUT_CONFDIR}
 
 .include "../../graphics/gd/buildlink2.mk"
 .include "../../mk/bsd.pkg.install.mk"
