@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.10 2001/04/18 21:43:18 dmcmahill Exp $
+$NetBSD: patch-aa,v 1.11 2002/06/17 04:21:09 dmcmahill Exp $
 
 Add a top level Makefile
 
 --- /dev/null	Thu Apr  5 17:09:09 2001
 +++ Makefile	Thu Apr  5 18:31:35 2001
-@@ -0,0 +1,62 @@
+@@ -0,0 +1,64 @@
 +# Top level Makefile for f2c, libF77, and libI77
 +
 +all: f2c libf2c/libf2c.a f2c-f77 man
@@ -36,6 +36,8 @@ Add a top level Makefile
 +	if [ -f libF77/libF77_pic.a ]; then cd libf2c && ar cruv libf2c_pic.a *.so ; fi
 +	if [ -f libF77/libF77_pic.a ]; then cd libf2c && \
 +		ld -Bshareable -soname libf2c.so.${F2CMAJOR} -o libf2c.so.${F2CMAJOR}.${F2CMINOR} *.so ; fi
++	if [ "${MACHINE_ARCH}" = "mipsel" ]; then cd libf2c && \
++		ld -Bshareable -soname libf2c.so.${F2CMAJOR} -o libf2c.so.${F2CMAJOR}.${F2CMINOR} *.o ; fi
 +
 +man: f2c.0
 +
