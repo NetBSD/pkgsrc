@@ -1,8 +1,7 @@
-$NetBSD: patch-av,v 1.3 1999/12/12 19:06:40 jdolecek Exp $
+$NetBSD: patch-av,v 1.4 2000/02/01 14:55:09 tron Exp $
 
-Obsolete, kvt is not part of KDE2	jdolecek 1999/12/12
---- ./kvt/xsetup.c	Tue Mar 30 10:23:20 1999
-+++ /usr/pkgsrc/x11/kdebase/work.i386.unpatched/kdebase-1.1.2/kvt/xsetup.c	Fri Nov 12 05:10:31 1999
+--- kvt/xsetup.c.orig	Tue Mar 30 10:23:20 1999
++++ kvt/xsetup.c	Tue Feb  1 15:28:00 2000
 @@ -135,8 +135,6 @@
  
  
@@ -12,3 +11,15 @@ Obsolete, kvt is not part of KDE2	jdolecek 1999/12/12
  extern KeySym PageUpKeysym;
  extern KeySym PageDownKeysym;
  #ifdef GREEK_KBD
+@@ -145,9 +143,11 @@
+ #endif
+ 
+ static char *termlist[] = {
++#ifndef __NetBSD__
+     "kvt-color",
+     "xterm-color",
+     "kvt",
++#endif
+     "xterm",
+     "vt100",
+     "ansi",
