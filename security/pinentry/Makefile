@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2004/10/23 13:30:10 shannonjr Exp $
+# $NetBSD: Makefile,v 1.2 2004/10/24 08:58:01 shannonjr Exp $
 #
 
 DISTNAME=		pinentry-0.7.1
@@ -28,7 +28,7 @@ post-install:
 	${ECHO} "bin/pinentry-gtk" >>${PLIST_SRC}
 .endif
 
-BUILDLINK_DEPENDS.libgpg-erro>= 1.0.0
+BUILDLINK_DEPENDS.libgpg-error+=	libgpg-error>=1.0.0
 .include "../../security/libgpg-error/buildlink3.mk"
 .include "../../security/libksba/buildlink3.mk"
 .if !empty(PKG_OPTIONS:Mqt)

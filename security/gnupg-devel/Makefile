@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2004/10/23 14:46:16 shannonjr Exp $
+# $NetBSD: Makefile,v 1.2 2004/10/24 09:03:17 shannonjr Exp $
 #
 
 DISTNAME=		gnupg-1.9.11
@@ -67,7 +67,7 @@ post-install:
 	${CAT} -f ${PKGDIR}/PLIST.gpgsm >> ${PLIST_SRC}
 .endif
 
-BUILDLINK_DEPENDS.libgpg-erro>=	1.0.0
+BUILDLINK_DEPENDS.libgpg-error+=	libgpg-error>=1.0.0
 .include "../../security/libgpg-error/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
 .include "../../security/libassuan/buildlink3.mk"
