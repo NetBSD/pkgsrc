@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2001/03/29 21:21:36 wennmach Exp $
+# $NetBSD: Makefile,v 1.24 2001/04/19 03:03:24 dmcmahill Exp $
 # FreeBSD Id: Makefile,v 1.18 1998/09/27 20:10:45 steve Exp
 
 DISTNAME=	octave-2.0.16
@@ -23,6 +23,7 @@ GNU_CONFIGURE=		yes
 USE_FORTRAN=		yes
 USE_LIBTOOL=		yes
 USE_GMAKE=		yes
+CONFIGURE_ENV+=		FFLAGS="${CFLAGS}" OBJECT_FMT="${OBJECT_FMT}"
 CONFIGURE_ENV+=		CPPFLAGS=-I${WRKDIR}/include
 LDFLAGS+=		-Wl,-R${PREFIX}/lib -L${PREFIX}/lib
 
