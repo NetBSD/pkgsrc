@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.4 2002/11/29 02:37:22 kim Exp $
+$NetBSD: patch-aa,v 1.5 2002/11/29 02:58:47 kim Exp $
 
 --- abcde.1.orig	Mon Aug 20 21:22:33 2001
-+++ abcde.1	Thu Nov 28 20:57:01 2002
++++ abcde.1	Thu Nov 28 21:55:24 2002
 @@ -42,7 +42,7 @@
  .TP
  .B \-c [filename]
  Specifies an additional configuration file to parse. Configuration options
 -in this file override those in /etc/abcde.conf or $HOME/.abcde.conf.
-+in this file override those in @PKG_SYSCONFBASE@/abcde.conf or $HOME/.abcde.conf.
++in this file override those in @PKG_SYSCONFDIR@/abcde.conf or $HOME/.abcde.conf.
  .TP
  .B \-C [discid]
  Allows you to resume a session for
@@ -16,7 +16,7 @@ $NetBSD: patch-aa,v 1.4 2002/11/29 02:37:22 kim Exp $
  variables in your abcde.conf.
  .SH CONFIGURATION
 -abcde sources two configuration files on startup - /etc/abcde.conf and
-+abcde sources two configuration files on startup - @PKG_SYSCONFBASE@/abcde.conf and
++abcde sources two configuration files on startup - @PKG_SYSCONFDIR@/abcde.conf and
  $HOME/.abcde.conf, in that order. Here is a list of options abcde recognizes:
  .TP
  .B CDDBURL
