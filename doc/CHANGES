@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6482 2004/07/07 11:48:46 martti Exp $
+$NetBSD: CHANGES,v 1.6483 2004/07/07 15:20:25 recht Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3294,3 +3294,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated xfce4-xkb-plugin to 0.3.2 [martti 2004-07-07]
 	Updated gsed to 4.1.1 [seb 2004-07-07]
 	Updated distcc to 2.15 [martti 2004-07-07]
+	Updated dspam to 3.0.0nb1 [recht 2004-07-07]
