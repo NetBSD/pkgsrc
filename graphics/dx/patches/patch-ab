@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 1999/10/01 11:23:15 drochner Exp $
+--- configure.orig	Sun Sep 26 22:13:17 1999
++++ configure	Sun Sep 26 22:13:41 1999
+@@ -901,6 +901,9 @@
+ 	if test $unameS = "FreeBSD" ; then
+ 	    ARCH=freebsd
+ 	fi
++	if test $unameS = "NetBSD" ; then
++	    ARCH=netbsd
++	fi
+ 	if test `echo $unameS | tr A-Z a-z | sed "s/^.*cygwin.*$/yes/"` = "yes" ; then
+ 	    ARCH=cygwin
+ 	fi
