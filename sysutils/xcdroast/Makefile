@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2003/05/02 11:56:30 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2003/06/05 16:15:47 drochner Exp $
 
-DISTNAME=	xcdroast-0.98alpha13
-PKGREVISION=	1
-PKGNAME=	xcdroast-0.98a13
+DISTNAME=	xcdroast-0.98alpha14
+PKGNAME=	xcdroast-0.98a14
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xcdroast/}
 
@@ -20,12 +19,17 @@ USE_PKGLOCALEDIR=	YES
 USE_X11=		YES
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+USE_GMAKE=	yes
 
 .if ${_OPSYS_HAS_OSSAUDIO} == "yes"
 CFLAGS+=	-DHAVE_OSS
+AUDIO_LIBS=	-lossaudio
+CONFIGURE_ENV+=	AUDIO_LIBS=${AUDIO_LIBS}
 .endif
 
 DOCDIR=		${PREFIX}/share/doc/xcdroast
+DOCFILES=	DOCUMENTATION FAQ README.nonroot
+HTMLDIR=	${PREFIX}/share/doc/html/xcdroast
 SUPPORT_FILES=	/dev/null ${PKG_SYSCONFDIR}/xcdroast.conf
 
 pre-build:
@@ -37,10 +41,12 @@ pre-build:
 
 post-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}
-	cd ${WRKSRC};							\
-	for file in ${WRKSRC}/doc/*; do	\
+	(cd ${WRKSRC}/doc;						\
+	for file in ${DOCFILES}; do	\
 		${INSTALL_DATA} $${file} ${DOCDIR};			\
-	done
+	done)
+	${INSTALL_DATA_DIR} ${HTMLDIR}
+	${CP} -r ${WRKSRC}/doc/manual/* ${HTMLDIR}
 
 # gdk-pixbuf implies gtk, glib, gettext-lib
 .include "../../graphics/gdk-pixbuf/buildlink2.mk"
