@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/03/10 00:17:31 minskim Exp $
+# $NetBSD: Makefile,v 1.14 2005/03/05 14:53:08 minskim Exp $
 #
 
 DISTNAME=	tkdiff
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tkdiff/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	recht@NetBSD.org
-HOMEPAGE=	http://www.accurev.com/free/tkdiff/index.html
+HOMEPAGE=	http://sourceforge.net/projects/tkdiff/
 COMMENT=	Graphical 2-way diff/merge tool
 
 DEPENDS+=	tk>=8.3.2:../../x11/tk
