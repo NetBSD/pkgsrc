@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.285 2002/04/04 17:02:59 atatat Exp $
+# $NetBSD: Makefile,v 1.286 2002/04/08 20:25:37 hubertf Exp $
 #
 
 COMMENT=	Networking tools
@@ -48,6 +48,7 @@ SUBDIR+=	dynipclient
 SUBDIR+=	echoping
 SUBDIR+=	etherape
 SUBDIR+=	ethereal
+SUBDIR+=	ettercap
 SUBDIR+=	fair-identd
 SUBDIR+=	firewalk
 SUBDIR+=	firewalk-gtk
