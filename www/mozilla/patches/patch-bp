@@ -1,4 +1,4 @@
-$NetBSD: patch-bp,v 1.2 2003/11/27 00:03:53 taya Exp $
+$NetBSD: patch-bp,v 1.3 2003/12/26 06:13:52 grant Exp $
 
 diff -ru ../Orig/mozilla/other-licenses/libical/src/libical/Makefile.in ./other-licenses/libical/src/libical/Makefile.in
 --- ../Orig/mozilla/other-licenses/libical/src/libical/Makefile.in	2003-01-08 13:59:28.000000000 +0900
@@ -8,7 +8,7 @@ diff -ru ../Orig/mozilla/other-licenses/libical/src/libical/Makefile.in ./other-
                  $(DESIGNDATA)/restrictions.csv > icalrestriction.c
  
 -ifneq (,$(filter BeOS Darwin OpenVMS,$(OS_ARCH)))
-+ifneq (,$(filter BeOS Darwin OpenVMS NetBSD,$(OS_ARCH)))
++ifneq (,$(filter BeOS Darwin OpenVMS NetBSD FreeBSD,$(OS_ARCH)))
  DEFINES	+= -D__USE_BSD=1
  endif
  
