@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2002/04/02 20:46:34 jdolecek Exp $
+# $NetBSD: Makefile,v 1.23 2002/04/04 11:56:46 tron Exp $
 
 DISTNAME=	opera-5.0.1
 CATEGORIES=	www
@@ -23,10 +23,10 @@ PLIST_SRC=	${WRKDIR}/PLIST_DYNAMIC
 .include "../../mk/bsd.prefs.mk"
 
 .if (${MACHINE_ARCH} == i386)
-DEPENDS+=	suse_compat>=6.3:../../emulators/suse_compat
-DEPENDS+=	suse_libjpeg>=6.4:../../emulators/suse_libjpeg
-DEPENDS+=	suse_libpng>=6.4:../../emulators/suse_libpng
-DEPENDS+=	suse_x11>=6.3:../../emulators/suse_x11
+DEPENDS+=	suse_compat>=6.3:../../emulators/${SUSE_DIR_PREFIX}_compat
+DEPENDS+=	suse_libjpeg>=6.4:../../emulators/${SUSE_DIR_PREFIX}_libjpeg
+DEPENDS+=	suse_libpng>=6.4:../../emulators/${SUSE_DIR_PREFIX}_libpng
+DEPENDS+=	suse_x11>=6.3:../../emulators/${SUSE_DIR_PREFIX}_x11
 
 OPERA_ARCH=	${MACHINE_ARCH}
 .elif (${MACHINE_ARCH} == powerpc)
@@ -40,4 +40,4 @@ RPMFILES=	opera-static-5.0-1.${OPERA_ARCH}.rpm
 post-install:
 	${LN} -fs ../${EMULSUBDIR}/usr/bin/opera ${PREFIX}/bin
 
-.include "../../emulators/suse_linux/Makefile.common"
+.include "../../emulators/suse_linux/Makefile.application"
