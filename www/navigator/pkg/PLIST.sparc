@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST.sparc,v 1.1.1.1 1999/02/22 07:45:22 abs Exp $
-lib/netscape/navigator-4.5/netscape_nis
-lib/netscape/navigator-4.5/dynfonts/libTrueDoc.so
-lib/netscape/navigator-4.5/plugins/libnullplugin.so
-@dirrm lib/netscape/navigator-4.5/dynfonts
+@comment $NetBSD: PLIST.sparc,v 1.2 1999/04/17 02:43:33 jlam Exp $
+lib/netscape/navigator-4.51/netscape_nis
+lib/netscape/navigator-4.51/dynfonts/libTrueDoc.so
+lib/netscape/navigator-4.51/plugins/libnullplugin.so
+@dirrm lib/netscape/navigator-4.51/dynfonts
