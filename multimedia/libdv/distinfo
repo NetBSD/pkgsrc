@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/06/26 17:48:29 grant Exp $
+$NetBSD: distinfo,v 1.2 2004/11/25 14:52:20 adam Exp $
 
-SHA1 (libdv-0.102.tar.gz) = 66d2609bd639c8223f388dc1d1de653f9e61fd2d
-Size (libdv-0.102.tar.gz) = 476931 bytes
+SHA1 (libdv-0.103.tar.gz) = 12a91fb92bd6f876b69566ea2c7e2fc2611b4cf1
+Size (libdv-0.103.tar.gz) = 529106 bytes
