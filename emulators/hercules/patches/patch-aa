@@ -1,9 +1,18 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/02/19 12:35:21 agc Exp $
+$NetBSD: patch-aa,v 1.2 2001/02/20 16:42:33 agc Exp $
 
 Set up compilation flags for NetBSD
 
 --- makefile	2001/02/19 09:39:42	1.1
 +++ makefile	2001/02/19 09:40:37
+@@ -8,7 +8,7 @@
+ #   besides /usr/bin. The $PREFIX (which defaults to nothing) can be
+ #   overridden in the make command line, as in "PREFIX=/foo make install"
+ #   (the directory is only used when installing).
+-DESTDIR  = $(PREFIX)/usr/bin
++DESTDIR  = $(PREFIX)/bin
+ 
+ # Standard flags for all architectures
+ CFLAGS	 = -Wall -fomit-frame-pointer -DVERSION=$(VERSION) -DNO_BYTESWAP_H
 @@ -38,9 +38,9 @@
  
  # Uncomment these lines for NetBSD, with either the unproven-pthreads
