@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2004/10/08 06:18:46 martti Exp $
+$NetBSD: distinfo,v 1.3 2005/01/17 13:15:55 martti Exp $
 
-SHA1 (xfce4-wavelan-plugin-0.4.0.tar.gz) = f25d23aa8d0fae5f0c068b74731ee3ad3ec70d01
-Size (xfce4-wavelan-plugin-0.4.0.tar.gz) = 525383 bytes
+SHA1 (xfce4-wavelan-plugin-0.4.1.tar.gz) = 01dc3b0fda236c5a55cd69ddb9ddddea57b04ea9
+Size (xfce4-wavelan-plugin-0.4.1.tar.gz) = 528911 bytes

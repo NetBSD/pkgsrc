@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2004/10/08 06:18:46 martti Exp $
+# $NetBSD: Makefile,v 1.4 2005/01/17 13:15:55 martti Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-XFCE4_VERSION=	0.4.0
+XFCE4_VERSION=	0.4.1
 
 DISTNAME=	xfce4-wavelan-plugin-${XFCE4_VERSION}
 CATEGORIES=	sysutils
