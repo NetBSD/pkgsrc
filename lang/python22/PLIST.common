@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.4 2004/01/24 08:13:14 grant Exp $
+@comment $NetBSD: PLIST.common,v 1.5 2005/01/25 13:09:03 tv Exp $
 bin/pydoc${PY_VER_SUFFIX}
 bin/python${PY_VER_SUFFIX}
 include/python${PY_VER_SUFFIX}/Python.h
@@ -831,13 +831,11 @@ lib/python${PY_VER_SUFFIX}/lib-dynload/cPickle.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/cStringIO.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/cmath.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/crypt.so
-lib/python${PY_VER_SUFFIX}/lib-dynload/dbm.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/fcntl.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/grp.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/math.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/md5.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/mmap.so
-lib/python${PY_VER_SUFFIX}/lib-dynload/nis.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/operator.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/parser.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/pcre.so
