@@ -1,8 +1,10 @@
-$NetBSD: distinfo,v 1.7 2004/11/03 00:46:24 kristerw Exp $
+$NetBSD: distinfo,v 1.8 2005/02/22 21:33:50 agc Exp $
 
 SHA1 (vicsrc-2.8.tar.gz) = ec58bf10aed99301f1e0e0828d0f2f32acdafe1d
+RMD160 (vicsrc-2.8.tar.gz) = 1c102bfb4effd54bb3ac90e8d86213c392f3e10f
 Size (vicsrc-2.8.tar.gz) = 605136 bytes
 SHA1 (vic-2.8_ov511p0.diff.gz) = 780116733fb52058429ca7d006667e13623d008e
+RMD160 (vic-2.8_ov511p0.diff.gz) = 26a9c80697f3fe2650b2ed76875b9a51dd1a01d9
 Size (vic-2.8_ov511p0.diff.gz) = 8836 bytes
 SHA1 (patch-aa) = 6029ae5ee56452e2a4303a34a5ffa258e266dffb
 SHA1 (patch-ab) = 8a9f5fbacc8e90b62cbb4dc7335fab2c23512ef4

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.5 2003/10/08 10:48:01 rtr Exp $
+$NetBSD: distinfo,v 1.6 2005/02/22 21:33:50 agc Exp $
 
 SHA1 (imm36a1.tar.Z) = a3c0bd042ebed930739f22ebfec2bf28080a88f6
+RMD160 (imm36a1.tar.Z) = d1a1de1cd7317278b5932b6cd1512ba5d66f6fca
 Size (imm36a1.tar.Z) = 87695 bytes
 SHA1 (patch-ad) = dc9bc795bc177f5e0087b1bb2bcb2f5d654bdb66
 SHA1 (patch-ae) = b8133dd4ab0b25c9c6e5ae87ceca6ab7870a438b

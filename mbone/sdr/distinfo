@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2003/07/03 14:40:49 agc Exp $
+$NetBSD: distinfo,v 1.5 2005/02/22 21:33:50 agc Exp $
 
 SHA1 (sdr-3.0.tar.gz) = b411aa168ce35348af898f54a2588b62810a1d83
+RMD160 (sdr-3.0.tar.gz) = ee5663a303c850063a807ad60647d7cbc06ababa
 Size (sdr-3.0.tar.gz) = 304691 bytes
 SHA1 (patch-aa) = 13be7ff0bffb042654e82ea6a02ab826c82f3c64
 SHA1 (patch-ab) = b96c341745f8b6f060c39326d3f3853079be6bda

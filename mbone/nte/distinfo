@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2005/01/08 18:50:35 minskim Exp $
+$NetBSD: distinfo,v 1.4 2005/02/22 21:33:50 agc Exp $
 
 SHA1 (nt.1.5a23.tar.gz) = d3ffa9d1fcb08cc0daeaba145108125ad0521483
+RMD160 (nt.1.5a23.tar.gz) = 05c3317837921e07a4f89fb86799c565c5d1314e
 Size (nt.1.5a23.tar.gz) = 261956 bytes
 SHA1 (patch-aa) = 30aa1e932d3000e0c9e52233519167b5e91989e0
 SHA1 (patch-ab) = 5a1fb9da5fed272fa2e5fcb1b5abee14e92d4f87
