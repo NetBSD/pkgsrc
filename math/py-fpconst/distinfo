@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/12/24 10:56:27 recht Exp $
+$NetBSD: distinfo,v 1.2 2004/06/27 22:59:48 recht Exp $
 
-SHA1 (fpconst-0.6.0.tar.gz) = 65f21e3dc95005e1d903b8d091df73a957d35c71
-Size (fpconst-0.6.0.tar.gz) = 4837 bytes
+SHA1 (fpconst-0.7.0.tar.gz) = 7797ea0b3f9bb0e09896d756cbe16922c2682de1
+Size (fpconst-0.7.0.tar.gz) = 3280 bytes
