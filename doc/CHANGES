@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7627 2004/10/31 10:15:14 grant Exp $
+$NetBSD: CHANGES,v 1.7628 2004/10/31 10:44:11 recht Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4991,3 +4991,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added adtool-1.2 [minskim 2004-10-30]
 	Updated pkg_install to 20041031 [grant 2004-10-31]
 	Updated mysql4-client to 4.1.7nb1 [grant 2004-10-31]
+	Updated libxml2 to 2.6.15 [recht 2004-10-31]
