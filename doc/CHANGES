@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5542 2004/04/11 19:06:09 snj Exp $
+$NetBSD: CHANGES,v 1.5543 2004/04/11 19:13:11 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1915,3 +1915,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added bmp-esound-0.9.6 [jmmv 2004-04-11]
 	Added liferea-0.3.3 [snj 2004-04-11]
 	Updated crossfire-client to 1.0.0nb4 [snj 2004-04-11]
+	Updated yamt to 0.5nb6 [xtraeme 2004-04-11]
