@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.7 2004/01/08 08:11:42 martti Exp $
+# $NetBSD: buildlink2.mk,v 1.8 2004/03/10 07:41:17 martti Exp $
 #
 # This Makefile fragment is included by packages that use xfce4-panel.
 #
@@ -9,7 +9,7 @@
 XFCE4_PANEL_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			xfce4-panel
-BUILDLINK_DEPENDS.xfce4-panel?=		xfce4-panel>=4.0.3
+BUILDLINK_DEPENDS.xfce4-panel?=		xfce4-panel>=4.0.4
 BUILDLINK_PKGSRCDIR.xfce4-panel?=		../../x11/xfce4-panel
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.xfce4-panel=xfce4-panel

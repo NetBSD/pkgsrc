@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2004/01/08 08:11:41 martti Exp $
+$NetBSD: distinfo,v 1.5 2004/03/10 07:41:16 martti Exp $
 
-SHA1 (xffm-4.0.3.tar.gz) = 46be2f9fd138446dbb5ec02430d0b9ba0a7691af
-Size (xffm-4.0.3.tar.gz) = 1501305 bytes
+SHA1 (xffm-4.0.4.tar.gz) = 70fb2a8d5f1732edb241a343d2fba0a9d310eacd
+Size (xffm-4.0.4.tar.gz) = 1560455 bytes

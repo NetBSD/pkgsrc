@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/01/08 08:11:42 martti Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/03/10 07:41:16 martti Exp $
 bin/xfdesktop
 etc/xfce4/menu.xml
 etc/xfce4/menu.xml.az
@@ -24,6 +24,7 @@ ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/xfdesktop.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/xfdesktop.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/xfdesktop.mo
 ${PKGLOCALEDIR}/locale/es_MX/LC_MESSAGES/xfdesktop.mo
+${PKGLOCALEDIR}/locale/fa_IR/LC_MESSAGES/xfdesktop.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/xfdesktop.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/xfdesktop.mo
 ${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/xfdesktop.mo
@@ -36,6 +37,7 @@ ${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/xfdesktop.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/xfdesktop.mo
 ${PKGLOCALEDIR}/locale/no/LC_MESSAGES/xfdesktop.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/xfdesktop.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/xfdesktop.mo
 ${PKGLOCALEDIR}/locale/pt_PT/LC_MESSAGES/xfdesktop.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/xfdesktop.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/xfdesktop.mo
