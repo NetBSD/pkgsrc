@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2000/10/27 08:07:48 jlam Exp $
+@comment $NetBSD: PLIST,v 1.4 2000/10/29 23:45:35 jlam Exp $
 bin/sawfish
 bin/sawfish-capplet
 bin/sawfish-client
@@ -12,12 +12,15 @@ info/sawfish.info-3
 info/sawfish.info-4
 info/sawfish.info-5
 @exec install-info --info-dir=%D/info %D/info/sawfish.info
-libexec/rep/${MACHINE_GNU_PLATFORM}/sawfish/client.la
-libexec/rep/${MACHINE_GNU_PLATFORM}/sawfish/libclient.a
-libexec/rep/${MACHINE_GNU_PLATFORM}/sawfish/libclient.so.0.0
 libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/DOC
 libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/gradient.la
 libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/gtk-style
+libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/libgradient.a
+libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/libgradient.so.0.0
+libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/libselection.a
+libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/libselection.so.0.0
+libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/libx.a
+libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/libx.so.0.0
 libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/sawfish-about
 libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/sawfish-menu
 libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/sawfish/wm/util/flippers.la
@@ -603,4 +606,3 @@ share/sawfish/themes/.directory
 @dirrm libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}
 @dirrm libexec/sawfish/${SF_VERS}
 @dirrm libexec/sawfish
-@dirrm libexec/rep/${MACHINE_GNU_PLATFORM}/sawfish
