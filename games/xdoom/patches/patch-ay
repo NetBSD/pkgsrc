@@ -1,4 +1,4 @@
-$NetBSD: patch-ay,v 1.1 2000/02/03 16:01:16 abs Exp $
+$NetBSD: patch-ay,v 1.2 2005/02/24 23:04:31 minskim Exp $
 
 --- sndserv/linux.c.orig	Sun Jan 26 07:45:01 1997
 +++ sndserv/linux.c	Thu Feb  3 01:34:05 2000
@@ -9,7 +9,7 @@ $NetBSD: patch-ay,v 1.1 2000/02/03 16:01:16 abs Exp $
 +#include <sys/ioctl.h>
  
 -#include <linux/soundcard.h>
-+#include <soundcard.h>
++#include <sys/soundcard.h>
  
  #include "soundsrv.h"
  
