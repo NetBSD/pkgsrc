@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2365 2003/05/30 15:28:43 jmmv Exp $
+$NetBSD: CHANGES,v 1.2366 2003/05/30 15:43:20 taca Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2208,3 +2208,6 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated arts to 1.1.2nb1 [markd 2003-05-30]
 	Updated cvsync to 0.22.0 [gehenna 2003-05-30]
 	Updated seahorse to 0.7.3 [jmmv 2003-05-30]
+	Updated suse_base to 7.3nb4 [taca 2003-05-30]
+	Updated suse_devel to 7.3nb2 [taca 2003-05-30]
+	Updated suse_freetype2 to 7.3nb1 [taca 2003-05-30]
