@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/06/11 02:05:10 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2001/06/19 03:32:40 jlam Exp $
 #
 
 DISTNAME=	rvm-1.3
@@ -12,14 +12,13 @@ COMMENT=	Recoverable Virtual Memory
 
 #LICENSE=	GPL
 
-GNU_CONFIGURE=	YES
-USE_LIBTOOL=	YES
-USE_GMAKE=	YES
-
-LTCONFIG_OVERRIDE= ${WRKSRC}/ltconfig
-
-.include "../../devel/lwp/buildlink.mk"
+GNU_CONFIGURE=		YES
+USE_LIBTOOL=		YES
+USE_GMAKE=		YES
+USE_BUILDLINK_ONLY=	YES
 
 CONFIGURE_ARGS+=	--with-lwp-includes=${BUILDLINK_DIR}/include
+LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
+.include "../../devel/lwp/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
