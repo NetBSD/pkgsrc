@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1516 2004/10/12 18:29:25 tv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1517 2004/10/13 15:31:31 tv Exp $
 #
 # This file is in the public domain.
 #
@@ -631,17 +631,10 @@ PKG_FAIL_REASON+='assignment of WRKSRC= $${WRKDIR}'
 .endif # NO_WRKSUBDIR
 
 # A few aliases for *-install targets
-.if !defined(INSTALL_UNSTRIPPED) || empty(INSTALL_UNSTRIPPED:M[yY][eE][sS])
 INSTALL_PROGRAM?= 	\
 	${INSTALL} ${COPY} ${_STRIPFLAG_INSTALL} -o ${BINOWN} -g ${BINGRP} -m ${BINMODE}
 INSTALL_GAME?=		\
 	${INSTALL} ${COPY} ${_STRIPFLAG_INSTALL} -o ${GAMEOWN} -g ${GAMEGRP} -m ${GAMEMODE}
-.else
-INSTALL_PROGRAM?= 	\
-	${INSTALL} ${COPY} -o ${BINOWN} -g ${BINGRP} -m ${BINMODE}
-INSTALL_GAME?=		\
-	${INSTALL} ${COPY} -o ${GAMEOWN} -g ${GAMEGRP} -m ${GAMEMODE}
-.endif
 INSTALL_SCRIPT?= 	\
 	${INSTALL} ${COPY} -o ${BINOWN} -g ${BINGRP} -m ${BINMODE}
 INSTALL_LIB?= 		\
