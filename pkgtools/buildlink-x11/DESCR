@@ -1,3 +1,0 @@
-Buildlink-x11 is a hack that allows NetBSD users to compile X11 pkgs from
-pkgsrc using the buildlink.mk infrastructure described in Packages.txt,
-even if they use Imake.

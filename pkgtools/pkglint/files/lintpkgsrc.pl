@@ -1,6 +1,6 @@
 #!@PREFIX@/bin/perl
 
-# $NetBSD: lintpkgsrc.pl,v 1.66.2.1 2002/06/23 18:57:47 jlam Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.66.2.2 2002/08/23 05:09:27 jlam Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -117,7 +117,7 @@ if ($opt{D} && @ARGV)
 		}
 	    close(VULN);
 	    }
-	if ($opt{p} || $opt{O} || $opt{R})
+	if ($opt{p} || $opt{O} || $opt{R} || $opt{V})
 	    { scan_pkgsrc_makefiles($pkgsrcdir); }
 	@prebuilt_pkgdirs = ($default_vars->{PACKAGES});
 	%prebuilt_pkgdir_cache = ();
@@ -1139,19 +1139,26 @@ sub scan_pkgsrc_distfiles_vs_distinfo
 		    {
 		    if (m/^(\w+) ?\(([^\)]+)\) = (\S+)/)
 			{
+			my($dn,$ds,$dt);
 			if ($2 =~ /^patch-[a-z0-9]+$/)
 			    { next; }
-			if (!defined $distfiles{$2})
+			$dt = $1;
+			$dn = $2;
+			$ds = $3;
+			# Strip leading ./ which sometimes gets added
+			# because of DISTSUBDIR=.
+			$dn =~ s/^(\.\/)*//;
+			if (!defined $distfiles{$dn})
 			    {
-			    $distfiles{$2}{sumtype} = $1;
-			    $distfiles{$2}{sum} = $3;
-			    $distfiles{$2}{path} = "$cat/$pkgdir";
+			    $distfiles{$dn}{sumtype} = $dt;
+			    $distfiles{$dn}{sum} = $ds;
+			    $distfiles{$dn}{path} = "$cat/$pkgdir";
 			    }
-			elsif ($distfiles{$2}{sumtype} eq $1 &&
-				$distfiles{$2}{sum} ne $3)
+			elsif ($distfiles{$dn}{sumtype} eq $dt &&
+				$distfiles{$dn}{sum} ne $ds)
 			    {
-			    push(@distwarn, "checksum mismatch between '$1' ".
-			    "in $cat/$pkgdir and $distfiles{$2}{path}\n");
+			    push(@distwarn, "checksum mismatch between '$dt' ".
+			    "in $cat/$pkgdir and $distfiles{$dn}{path}\n");
 			    }
 			}
 		    }

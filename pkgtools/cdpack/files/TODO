@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2 2001/05/03 00:30:52 dmcmahill Exp $
+$NetBSD: TODO,v 1.2.2.1 2002/08/23 05:09:09 jlam Exp $
 
 To-Do List for cdpack
 ---------------------
@@ -17,6 +17,14 @@ To-Do List for cdpack
   the selection of packages, select some subset of them and then do
   a batch install.
 
-- have a flag which perhaps interacts with lintpkgsrc to exclude
-  NO_BIN_ON_CDROM packages for those who are making commercial CD's.
+- add a -pipe option to pipe the output of mkisofs directly to 
+  cdrecord (or other program) to allow direct writing to CD avoiding
+  the need for a potentially large amount of disk space for the
+  generated images.
+
+- add an option to go through pkgsrc and find all the packages
+  which can't be packaged (NO_PACKAGE or INTERACTIVE) and copy
+  the distfiles into a single directory.  This way you can create
+  a CD set where you include distfiles for the packages which
+  couldn't be made into binary pkgs.
 

@@ -1,0 +1,41 @@
+$NetBSD: patch-ad,v 1.4.2.2 2002/08/23 05:09:14 jlam Exp $
+
+--- lib/Makefile.orig	Thu Aug  1 10:46:31 2002
++++ lib/Makefile
+@@ -5,13 +5,36 @@
+ SRCS+=		exec.c file.c ftpio.c global.c lpkg.c pen.c pkgdb.c \
+ 		plist.c str.c version.c path.c
+ 
++OPSYS!=		uname -s
++RELEASE!=	uname -r
++
++.if ${OPSYS} == "Darwin"
++SRCS+=		md5c.c md5hl.c strlcpy.c
++.endif
++
++.if ${OPSYS} == "Linux"
++SRCS+=		fgetln.c md5c.c md5hl.c
++.endif
++
++.if ${OPSYS} == "NetBSD" && (${RELEASE:M1.4.[12]} != "" || ${RELEASE:M1.4} != "")
++SRCS+=		strlcpy.c
++.endif
++
+ NOLINT=		# defined
+ NOMAN=		# defined
+ NOPIC=		# defined
+ NOPROFILE=	# defined
++MKLINT=		no
++MKMAN=		no
++MKPIC=		no
++MKPROFILE=	no
+ 
+ # only needed during build - prevent installation of library
++.if ${OPSYS} == "Darwin"
++install::
++.else
+ libinstall::
++.endif
+ 
+ version.o: version.h version.c
+ 
