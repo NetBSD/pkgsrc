@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2001/10/22 03:41:18 mycroft Exp $
+# $NetBSD: Makefile,v 1.6 2002/07/12 13:48:08 wiz Exp $
 #
 
-DISTNAME=	xpilot-4.4.2
+DISTNAME=	xpilot-4.5.3
 CATEGORIES=	games x11
 MASTER_SITES=	ftp://ftp.xpilot.org/pub/xpilot/
 
