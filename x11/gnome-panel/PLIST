@@ -1,10 +1,9 @@
-@comment $NetBSD: PLIST,v 1.3 2003/02/14 21:05:27 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.4 2003/02/15 12:02:34 jmmv Exp $
 bin/gnome-desktop-item-edit
 bin/gnome-panel
 bin/gnome-panel-preferences
 bin/gnome2-panel-screenshot
 bin/panel-test-applets
-etc/sound/events/mailcheck2.soundlist
 include/panel-2.0/GNOME_Panel.h
 include/panel-2.0/panel-applet-gconf.h
 include/panel-2.0/panel-applet.h
@@ -37,6 +36,7 @@ share/doc/html/panel-applet/panel-signals.html
 share/doc/html/panel-applet/panelapplet.html
 share/doc/html/panel-applet/server-files.html
 share/doc/html/panel-applet/session-saving.html
+share/examples/gnome-panel/sound/events/mailcheck2.soundlist
 share/fish/fish.glade
 share/gconf/schemas/clock.schemas
 share/gconf/schemas/fish.schemas
@@ -178,9 +178,10 @@ share/pixmaps/mailcheck2/tux-anim.png
 @dirrm share/gen_util
 @comment in GConf2: @dirrm share/gconf/schemas
 @dirrm share/fish
+@dirrm share/examples/gnome-panel/sound/events
+@dirrm share/examples/gnome-panel/sound
+@dirrm share/examples/gnome-panel
 @dirrm share/doc/html/panel-applet
 @comment in gnome2-dirs: @dirrm share/control-center-2.0/capplets
 @comment in bonobo-activation: @dirrm lib/bonobo/servers
 @dirrm include/panel-2.0
-@dirrm etc/sound/events
-@dirrm etc/sound
