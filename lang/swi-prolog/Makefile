@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2001/06/17 14:32:28 jtb Exp $
+# $NetBSD: Makefile,v 1.12 2001/06/20 20:33:55 jlam Exp $
 
 DISTNAME=		pl-lite-4.0.7
 PKGNAME=		swi-prolog-4.0.7
@@ -9,25 +9,20 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.swi.psy.uva.nl/projects/SWI-Prolog/
 COMMENT=		ISO/Edinburgh-style Prolog compiler
 
-DEPENDS+=		readline>=4.0:../../devel/readline
-
 WRKSRC=			${WRKDIR}/${DISTNAME:S,-lite,,}
 DIST_SUBDIR=		swi-prolog
 
-GNU_CONFIGURE=		yes
-
-USE_CURSES=		yes
-REPLACE_NCURSES=	${WRKSRC}/src/configure
+GNU_CONFIGURE=		# defined
+USE_BUILDLINK_ONLY=	# defined
+USE_GNU_READLINE=	# uses rl_event_hook() interface
 
 SWIPL=			swi-prolog
 CONFIGURE_ENV+=		PL="${SWIPL}"
 CPPFLAGS+=		-D__unix__=1
 
-READLINE_PREFIX_DEFAULT=${LOCALBASE}
-EVAL_PREFIX+=		READLINE_PREFIX=readline
-CPPFLAGS+=		-I${READLINE_PREFIX}/include
-
 PLIST_SUBST+=		SWIPL=${SWIPL}
 PLIST_SUBST+=		SWILIBDIR=${DISTNAME:S,pl-lite,'${SWIPL}',}
 
+.include "../../devel/ncurses/buildlink.mk"
+.include "../../devel/readline/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
