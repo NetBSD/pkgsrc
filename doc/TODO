@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.876 2003/09/17 19:39:39 cube Exp $
+$NetBSD: TODO,v 1.877 2003/09/17 20:24:05 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -211,7 +211,6 @@ Suggested package updates
 	o p5-XML-LibXML-1.54
 	o pdmenu-1.2.81
 	o plib-1.6.0 [pkg/19015,pkg/22612]
-	o pnm2ppa-1.12 [pkg/21667]
 	o postfix-2.0.16
 	o proftpd-1.2.9rc1
 	o pure-ftpd-1.0.16a [pkg/22680|salo]
