@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3089 2005/02/21 23:31:41 bad Exp $
+$NetBSD: TODO,v 1.3090 2005/02/22 00:20:29 wiz Exp $
 
 Suggested new packages
 ======================
@@ -426,7 +426,7 @@ Suggested package updates
 	o emech-2.8.5.1
 	o enscript-1.6.4
 	o epic4-2.2
-	o eric3-3.6.1
+	o eric3-3.6.2
 	o erlang-10b-3
 	o esh-0.8.5
 	o etach-1.4.0
@@ -646,6 +646,7 @@ Suggested package updates
 	o mlterm-2.9.1 [pkg/29061]
 	o mlview-0.7.1
 	o mmix-20041014
+	o mono-1.0.6
 	o moscow_ml-2.01
 	o most-4.9.5
 	o mowitz-0.3.0
@@ -1090,6 +1091,7 @@ Suggested package updates
 	o xblast-2.10.0
 	o xboard-4.2.7
 	o xcb-2.4
+	o xchm-0.9.8
 	o xcircuit-3.3.5
 	o xdaliclock-2.20
 	o xdesktopwaves-1.3
