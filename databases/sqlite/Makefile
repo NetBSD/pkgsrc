@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2002/10/12 01:17:11 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2002/10/25 18:32:43 wiz Exp $
 
 DISTNAME=		sqlite-2.2.5
 CATEGORIES=		databases
@@ -17,7 +17,7 @@ LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 GNU_CONFIGURE=		YES
 CONFIGURE_SCRIPT=	../sqlite/configure
 CONFIGURE_ARGS+=	--without-tcl
-CONFIGURE_ENV+=		config_TARGET_READLINE_INC="-I${BUILDLINK_DIR}/include"
+CONFIGURE_ENV+=		config_TARGET_READLINE_INC="-I${BUILDLINK_PREFIX.readline}/include"
 
 CFLAGS+=		-DUINT32_TYPE=u_int32_t -DUINT16_TYPE=u_int16_t \
 			-DUINT8_TYPE=u_int8_t -DINTPTR_TYPE=long
