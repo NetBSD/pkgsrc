@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2000/10/13 17:55:35 kim Exp $
+# $NetBSD: Makefile,v 1.22 2000/10/13 18:16:00 kim Exp $
 # FreeBSD Id: Makefile,v 1.18 1998/04/06 20:50:31 andreas Exp
 #
 
@@ -44,10 +44,15 @@ post-extract:
 pre-configure:
 	@(cd ${WRKSRC} && autoreconf)
 
+post-build:
+	@${SED} -e 's,@PREFIX@,${PREFIX},' \
+	    < ${FILESDIR}/snmpd.sh > ${WRKDIR}/snmpd.sh
+
 post-install:
 	@${MKDIR} ${PREFIX}/share/examples/ucd-snmp
 	${INSTALL_DATA} ${WRKSRC}/EXAMPLE.conf ${PREFIX}/share/examples/ucd-snmp
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/snmp/dlmod
+	${INSTALL_SCRIPT} ${WRKDIR}/snmpd.sh ${PREFIX}/etc/rc.d
 
 .if (${OPSYS} == "NetBSD")
 CFLAGS+=	-Dnetbsd1
