@@ -1,31 +1,43 @@
-@comment $NetBSD: PLIST,v 1.3 1998/07/03 14:26:32 frueauf Exp $
+@comment $NetBSD: PLIST,v 1.4 2000/06/22 08:18:09 itohy Exp $
 bin/xfig
-man/cat1/xfig.0
-lib/X11/xfig/CompKeyDB
 lib/X11/app-defaults/Fig
 lib/X11/app-defaults/Fig-color
+lib/X11/xfig/CompKeyDB
 lib/X11/xfig/Libraries/Buildings/barrack.fig
 lib/X11/xfig/Libraries/Buildings/highrise1.fig
 lib/X11/xfig/Libraries/Buildings/highrise2.fig
 lib/X11/xfig/Libraries/Buildings/office.fig
 lib/X11/xfig/Libraries/Buildings/twostory.fig
 lib/X11/xfig/Libraries/Buildings/twostory_front.fig
+lib/X11/xfig/Libraries/Computers/dat-drive.fig
+lib/X11/xfig/Libraries/Computers/dat-drive2.fig
 lib/X11/xfig/Libraries/Computers/desktop1.fig
 lib/X11/xfig/Libraries/Computers/desktop2.fig
 lib/X11/xfig/Libraries/Computers/desktop3.fig
 lib/X11/xfig/Libraries/Computers/desktop4.fig
+lib/X11/xfig/Libraries/Computers/desktop5.fig
 lib/X11/xfig/Libraries/Computers/film_digitizer.fig
+lib/X11/xfig/Libraries/Computers/floppy.fig
+lib/X11/xfig/Libraries/Computers/generic_hardware.fig
 lib/X11/xfig/Libraries/Computers/high_speed_disk.fig
 lib/X11/xfig/Libraries/Computers/laptop.fig
+lib/X11/xfig/Libraries/Computers/minitower.fig
 lib/X11/xfig/Libraries/Computers/printer.fig
+lib/X11/xfig/Libraries/Computers/printer2.fig
+lib/X11/xfig/Libraries/Computers/printer3.fig
+lib/X11/xfig/Libraries/Computers/qic-drive.fig
 lib/X11/xfig/Libraries/Computers/scanner.fig
-lib/X11/xfig/Libraries/Computers/scanner2.fig
+lib/X11/xfig/Libraries/Computers/server.fig
+lib/X11/xfig/Libraries/Computers/sparc5.fig
 lib/X11/xfig/Libraries/Computers/tapedrive.fig
 lib/X11/xfig/Libraries/Computers/telephone.fig
 lib/X11/xfig/Libraries/Computers/terminal.fig
 lib/X11/xfig/Libraries/Computers/tower1.fig
 lib/X11/xfig/Libraries/Computers/tower2.fig
 lib/X11/xfig/Libraries/Computers/tower3.fig
+lib/X11/xfig/Libraries/Computers/ultra2.fig
+lib/X11/xfig/Libraries/Computers/ultra30.fig
+lib/X11/xfig/Libraries/Computers/xterminal.fig
 lib/X11/xfig/Libraries/Electrical/Physical/conn_db15.fig
 lib/X11/xfig/Libraries/Electrical/Physical/conn_db25.fig
 lib/X11/xfig/Libraries/Electrical/Physical/conn_db9.fig
@@ -41,7 +53,6 @@ lib/X11/xfig/Libraries/Electrical/Physical/dip_24pin.fig
 lib/X11/xfig/Libraries/Electrical/Physical/dip_28pin.fig
 lib/X11/xfig/Libraries/Electrical/Physical/dip_40pin.fig
 lib/X11/xfig/Libraries/Electrical/Physical/fuse_holder.fig
-lib/X11/xfig/Libraries/Electrical/Physical/fuse_holder2.fig
 lib/X11/xfig/Libraries/Electrical/Physical/led_digit.fig
 lib/X11/xfig/Libraries/Electrical/Physical/receptacle_female.fig
 lib/X11/xfig/Libraries/Electrical/Physical/receptacle_male.fig
@@ -71,11 +82,13 @@ lib/X11/xfig/Libraries/Electrical/Schematic/fet2.fig
 lib/X11/xfig/Libraries/Electrical/Schematic/frame_ground.fig
 lib/X11/xfig/Libraries/Electrical/Schematic/fuse.fig
 lib/X11/xfig/Libraries/Electrical/Schematic/fuse2.fig
+lib/X11/xfig/Libraries/Electrical/Schematic/fuseholder.fig
 lib/X11/xfig/Libraries/Electrical/Schematic/ground.fig
 lib/X11/xfig/Libraries/Electrical/Schematic/heater.fig
 lib/X11/xfig/Libraries/Electrical/Schematic/inductor.fig
 lib/X11/xfig/Libraries/Electrical/Schematic/led.fig
 lib/X11/xfig/Libraries/Electrical/Schematic/logic_ground.fig
+lib/X11/xfig/Libraries/Electrical/Schematic/mosfet.fig
 lib/X11/xfig/Libraries/Electrical/Schematic/mov.fig
 lib/X11/xfig/Libraries/Electrical/Schematic/npn.fig
 lib/X11/xfig/Libraries/Electrical/Schematic/opamp.fig
@@ -86,6 +99,7 @@ lib/X11/xfig/Libraries/Electrical/Schematic/pushbutton_no.fig
 lib/X11/xfig/Libraries/Electrical/Schematic/relay.fig
 lib/X11/xfig/Libraries/Electrical/Schematic/resistor.fig
 lib/X11/xfig/Libraries/Electrical/Schematic/sine.fig
+lib/X11/xfig/Libraries/Electrical/Schematic/switch_dpdt.fig
 lib/X11/xfig/Libraries/Electrical/Schematic/switch_spdt.fig
 lib/X11/xfig/Libraries/Electrical/Schematic/switch_spst.fig
 lib/X11/xfig/Libraries/Electrical/Schematic/thermostat.fig
@@ -96,6 +110,26 @@ lib/X11/xfig/Libraries/Electrical/Schematic/var_resistor.fig
 lib/X11/xfig/Libraries/Electrical/Schematic/var_resistor2.fig
 lib/X11/xfig/Libraries/Electrical/Schematic/zener.fig
 lib/X11/xfig/Libraries/Electrical/Schematic/zener2.fig
+lib/X11/xfig/Libraries/Flags/austria.fig
+lib/X11/xfig/Libraries/Flags/belgium.fig
+lib/X11/xfig/Libraries/Flags/finland.fig
+lib/X11/xfig/Libraries/Flags/france.fig
+lib/X11/xfig/Libraries/Flags/germany.fig
+lib/X11/xfig/Libraries/Flags/greatbritain.fig
+lib/X11/xfig/Libraries/Flags/greece.fig
+lib/X11/xfig/Libraries/Flags/iceland.fig
+lib/X11/xfig/Libraries/Flags/ireland.fig
+lib/X11/xfig/Libraries/Flags/italy.fig
+lib/X11/xfig/Libraries/Flags/japan.fig
+lib/X11/xfig/Libraries/Flags/luxemburg.fig
+lib/X11/xfig/Libraries/Flags/nederlands.fig
+lib/X11/xfig/Libraries/Flags/norway.fig
+lib/X11/xfig/Libraries/Flags/poland.fig
+lib/X11/xfig/Libraries/Flags/portugal.fig
+lib/X11/xfig/Libraries/Flags/spain.fig
+lib/X11/xfig/Libraries/Flags/sweden.fig
+lib/X11/xfig/Libraries/Flags/switzerland.fig
+lib/X11/xfig/Libraries/Flags/usa.fig
 lib/X11/xfig/Libraries/Flowchart/arrow_down.fig
 lib/X11/xfig/Libraries/Flowchart/arrow_left.fig
 lib/X11/xfig/Libraries/Flowchart/arrow_open_left.fig
@@ -147,6 +181,8 @@ lib/X11/xfig/Libraries/Logic/diamond_small_fill.fig
 lib/X11/xfig/Libraries/Logic/dot_large.fig
 lib/X11/xfig/Libraries/Logic/dot_med.fig
 lib/X11/xfig/Libraries/Logic/dot_small.fig
+lib/X11/xfig/Libraries/Logic/flipflop_d.fig
+lib/X11/xfig/Libraries/Logic/flipflop_jk.fig
 lib/X11/xfig/Libraries/Logic/gate_and.fig
 lib/X11/xfig/Libraries/Logic/gate_and3.fig
 lib/X11/xfig/Libraries/Logic/gate_inverter.fig
@@ -162,19 +198,79 @@ lib/X11/xfig/Libraries/Logic/gate_or.fig
 lib/X11/xfig/Libraries/Logic/gate_or3.fig
 lib/X11/xfig/Libraries/Logic/gate_xor.fig
 lib/X11/xfig/Libraries/Logic/ground.fig
-lib/X11/xfig/Libraries/Logic/ic_1-8_demux.fig
 lib/X11/xfig/Libraries/Logic/ic_74165.fig
 lib/X11/xfig/Libraries/Logic/ic_74HC139.fig
 lib/X11/xfig/Libraries/Logic/ic_74HC244.fig
 lib/X11/xfig/Libraries/Logic/ic_74HC4040.fig
 lib/X11/xfig/Libraries/Logic/ic_74LS138.fig
+lib/X11/xfig/Libraries/Logic/ic_AC151.fig
 lib/X11/xfig/Libraries/Logic/ic_AC161.fig
 lib/X11/xfig/Libraries/Logic/ic_DAC0800LCN.fig
 lib/X11/xfig/Libraries/Logic/ic_HC595.fig
-lib/X11/xfig/Libraries/Logic/ic_d_flipflop.fig
-lib/X11/xfig/Libraries/Logic/ic_jk_flipflop.fig
-lib/X11/xfig/Libraries/Logic/ic_oneshot.fig
 lib/X11/xfig/Libraries/Logic/logic_ground.fig
+lib/X11/xfig/Libraries/Logic/oneshot.fig
+lib/X11/xfig/Libraries/Mechanical_DIN/Loch/Durch/10.fig
+lib/X11/xfig/Libraries/Mechanical_DIN/Loch/Durch/3.fig
+lib/X11/xfig/Libraries/Mechanical_DIN/Loch/Durch/4.fig
+lib/X11/xfig/Libraries/Mechanical_DIN/Loch/Durch/5.fig
+lib/X11/xfig/Libraries/Mechanical_DIN/Loch/Durch/6.fig
+lib/X11/xfig/Libraries/Mechanical_DIN/Loch/Durch/8.fig
+lib/X11/xfig/Libraries/Mechanical_DIN/Loch/Durch/DIN66-10.fig
+lib/X11/xfig/Libraries/Mechanical_DIN/Loch/Durch/DIN66-3.fig
+lib/X11/xfig/Libraries/Mechanical_DIN/Loch/Durch/DIN66-4.fig
+lib/X11/xfig/Libraries/Mechanical_DIN/Loch/Durch/DIN66-5.fig
+lib/X11/xfig/Libraries/Mechanical_DIN/Loch/Durch/DIN66-6.fig
+lib/X11/xfig/Libraries/Mechanical_DIN/Loch/Durch/DIN66-8.fig
+lib/X11/xfig/Libraries/Mechanical_DIN/Loch/Senk/DIN1207-10.fig
+lib/X11/xfig/Libraries/Mechanical_DIN/Loch/Senk/DIN1207-12.fig
+lib/X11/xfig/Libraries/Mechanical_DIN/Loch/Senk/DIN1207-3.fig
+lib/X11/xfig/Libraries/Mechanical_DIN/Loch/Senk/DIN1207-4.fig
+lib/X11/xfig/Libraries/Mechanical_DIN/Loch/Senk/DIN1207-5.fig
+lib/X11/xfig/Libraries/Mechanical_DIN/Loch/Senk/DIN1207-6.fig
+lib/X11/xfig/Libraries/Mechanical_DIN/Loch/Senk/DIN1207-8.fig
+lib/X11/xfig/Libraries/Mechanical_DIN/Loch/Senk/DIN66-10.fig
+lib/X11/xfig/Libraries/Mechanical_DIN/Loch/Senk/DIN66-12.fig
+lib/X11/xfig/Libraries/Mechanical_DIN/Loch/Senk/DIN66-3.fig
+lib/X11/xfig/Libraries/Mechanical_DIN/Loch/Senk/DIN66-4.fig
+lib/X11/xfig/Libraries/Mechanical_DIN/Loch/Senk/DIN66-5.fig
+lib/X11/xfig/Libraries/Mechanical_DIN/Loch/Senk/DIN66-6.fig
+lib/X11/xfig/Libraries/Mechanical_DIN/Loch/Senk/DIN66-8.fig
+lib/X11/xfig/Libraries/Mechanical_DIN/Oberflaeche/oberfl_1.fig
+lib/X11/xfig/Libraries/Mechanical_DIN/Oberflaeche/oberfl_2.fig
+lib/X11/xfig/Libraries/Mechanical_DIN/Oberflaeche/oberfl_3.fig
+lib/X11/xfig/Libraries/Mechanical_DIN/Oberflaeche/oberfl_4.fig
+lib/X11/xfig/Libraries/Mechanical_DIN/Rahmen/DIN_a3.fig
+lib/X11/xfig/Libraries/Mechanical_DIN/Rahmen/DIN_a3_quer.fig
+lib/X11/xfig/Libraries/Mechanical_DIN/Rahmen/DIN_a4.fig
+lib/X11/xfig/Libraries/Mechanical_DIN/Rahmen/DIN_a4_quer.fig
+lib/X11/xfig/Libraries/Mechanical_DIN/Rahmen/schriftfeld.fig
+lib/X11/xfig/Libraries/Mechanical_DIN/Schraube/Aufsicht/M1.fig
+lib/X11/xfig/Libraries/Mechanical_DIN/Schraube/Aufsicht/M10.fig
+lib/X11/xfig/Libraries/Mechanical_DIN/Schraube/Aufsicht/M2.fig
+lib/X11/xfig/Libraries/Mechanical_DIN/Schraube/Aufsicht/M3.fig
+lib/X11/xfig/Libraries/Mechanical_DIN/Schraube/Aufsicht/M4.fig
+lib/X11/xfig/Libraries/Mechanical_DIN/Schraube/Aufsicht/M5.fig
+lib/X11/xfig/Libraries/Mechanical_DIN/Schraube/Aufsicht/M6.fig
+lib/X11/xfig/Libraries/Mechanical_DIN/Schraube/Aufsicht/M8.fig
+lib/X11/xfig/Libraries/Mechanical_DIN/Schraube/Seit/Durch/M10.fig
+lib/X11/xfig/Libraries/Mechanical_DIN/Schraube/Seit/Durch/M12.fig
+lib/X11/xfig/Libraries/Mechanical_DIN/Schraube/Seit/Durch/M3.fig
+lib/X11/xfig/Libraries/Mechanical_DIN/Schraube/Seit/Durch/M4.fig
+lib/X11/xfig/Libraries/Mechanical_DIN/Schraube/Seit/Durch/M5.fig
+lib/X11/xfig/Libraries/Mechanical_DIN/Schraube/Seit/Durch/M6.fig
+lib/X11/xfig/Libraries/Mechanical_DIN/Schraube/Seit/Durch/M8.fig
+lib/X11/xfig/Libraries/Mechanical_DIN/Schraube/Seit/Sack/M10_sack.fig
+lib/X11/xfig/Libraries/Mechanical_DIN/Schraube/Seit/Sack/M12_sack.fig
+lib/X11/xfig/Libraries/Mechanical_DIN/Schraube/Seit/Sack/M3_sack.fig
+lib/X11/xfig/Libraries/Mechanical_DIN/Schraube/Seit/Sack/M4_sack.fig
+lib/X11/xfig/Libraries/Mechanical_DIN/Schraube/Seit/Sack/M5_sack.fig
+lib/X11/xfig/Libraries/Mechanical_DIN/Schraube/Seit/Sack/M6_sack.fig
+lib/X11/xfig/Libraries/Mechanical_DIN/Schraube/Seit/Sack/M8_sack.fig
+lib/X11/xfig/Libraries/Mechanical_DIN/mitte.fig
+lib/X11/xfig/Libraries/Mechanical_DIN/smile.fig
+lib/X11/xfig/Libraries/Mechanical_DIN/zigzag.fig
+lib/X11/xfig/Libraries/Music/base_clef.fig
+lib/X11/xfig/Libraries/Music/base_staff.fig
 lib/X11/xfig/Libraries/Music/eighth-tie.fig
 lib/X11/xfig/Libraries/Music/eighth.fig
 lib/X11/xfig/Libraries/Music/fermata.fig
@@ -197,13 +293,17 @@ lib/X11/xfig/Libraries/Music/treble_staff.fig
 lib/X11/xfig/Libraries/Music/whole-dotted.fig
 lib/X11/xfig/Libraries/Music/whole.fig
 lib/X11/xfig/Libraries/Networks/at+t_emmi.fig
+lib/X11/xfig/Libraries/Networks/bridge.fig
 lib/X11/xfig/Libraries/Networks/concentrator1.fig
 lib/X11/xfig/Libraries/Networks/concentrator2.fig
 lib/X11/xfig/Libraries/Networks/concentrator3.fig
 lib/X11/xfig/Libraries/Networks/ether_switch.fig
+lib/X11/xfig/Libraries/Networks/firewall.fig
 lib/X11/xfig/Libraries/Networks/forerunner_asx100.fig
 lib/X11/xfig/Libraries/Networks/gdc_apex.fig
+lib/X11/xfig/Libraries/Networks/generic_hw.fig
 lib/X11/xfig/Libraries/Networks/hub1.fig
+lib/X11/xfig/Libraries/Networks/hub2.fig
 lib/X11/xfig/Libraries/Networks/imux.fig
 lib/X11/xfig/Libraries/Networks/microwave1.fig
 lib/X11/xfig/Libraries/Networks/microwave2.fig
@@ -214,17 +314,135 @@ lib/X11/xfig/Libraries/Networks/router.fig
 lib/X11/xfig/Libraries/Networks/smux6000.fig
 lib/X11/xfig/Libraries/Networks/switching_hub.fig
 lib/X11/xfig/Libraries/Networks/synoptics_latticell.fig
+lib/X11/xfig/Libraries/Networks/transceiver-10base2.fig
+lib/X11/xfig/Libraries/Networks/transceiver-10baseT.fig
 lib/X11/xfig/Libraries/Networks/transceiver1.fig
 lib/X11/xfig/Libraries/Networks/transceiver2.fig
 lib/X11/xfig/Libraries/Networks/transceiver3.fig
+lib/X11/xfig/Libraries/Optics/Fiber/collimator.fig
+lib/X11/xfig/Libraries/Optics/Fiber/coupler_large.fig
+lib/X11/xfig/Libraries/Optics/Fiber/coupler_small.fig
+lib/X11/xfig/Libraries/Optics/Fiber/detector.fig
+lib/X11/xfig/Libraries/Optics/Fiber/fiber_straight.fig
+lib/X11/xfig/Libraries/Optics/Lens/asheric_1.fig
+lib/X11/xfig/Libraries/Optics/Lens/asperic_2.fig
+lib/X11/xfig/Libraries/Optics/Lens/biconvex_medium.fig
+lib/X11/xfig/Libraries/Optics/Lens/biconvex_strong.fig
+lib/X11/xfig/Libraries/Optics/Lens/biconvex_weak.fig
+lib/X11/xfig/Libraries/Optics/Lens/convexconcave.fig
+lib/X11/xfig/Libraries/Optics/Lens/planconcave_medium.fig
+lib/X11/xfig/Libraries/Optics/Lens/planconcave_weak.fig
+lib/X11/xfig/Libraries/Optics/Lens/planconvcave_strong.fig
+lib/X11/xfig/Libraries/Optics/Lens/planconvex_medium.fig
+lib/X11/xfig/Libraries/Optics/Lens/planconvex_strong.fig
+lib/X11/xfig/Libraries/Optics/Lens/planconvex_weak.fig
+lib/X11/xfig/Libraries/Optics/Mirror/concave_medium.fig
+lib/X11/xfig/Libraries/Optics/Mirror/concave_strong.fig
+lib/X11/xfig/Libraries/Optics/Mirror/flat.fig
+lib/X11/xfig/Libraries/Optics/Mirror/flat_piezo.fig
+lib/X11/xfig/Libraries/Optics/beam.fig
+lib/X11/xfig/Libraries/Optics/beamsplitter_cube.fig
+lib/X11/xfig/Libraries/Optics/detector.fig
+lib/X11/xfig/Libraries/Optics/faraday_isolator.fig
+lib/X11/xfig/Libraries/Optics/grating.fig
+lib/X11/xfig/Libraries/Structural_Analysis/Beams/beam_cantilever.fig
+lib/X11/xfig/Libraries/Structural_Analysis/Beams/beam_fixed.fig
+lib/X11/xfig/Libraries/Structural_Analysis/Beams/beam_simply_supported.fig
+lib/X11/xfig/Libraries/Structural_Analysis/CoordSystems/coordsys2D-1.fig
+lib/X11/xfig/Libraries/Structural_Analysis/CoordSystems/coordsys2D-2.fig
+lib/X11/xfig/Libraries/Structural_Analysis/CoordSystems/coordsys2D_xy-1.fig
+lib/X11/xfig/Libraries/Structural_Analysis/CoordSystems/coordsys2D_xy-2.fig
+lib/X11/xfig/Libraries/Structural_Analysis/CoordSystems/coordsys3D-1.fig
+lib/X11/xfig/Libraries/Structural_Analysis/CoordSystems/coordsys3D-2.fig
+lib/X11/xfig/Libraries/Structural_Analysis/CoordSystems/coordsys3D-3.fig
+lib/X11/xfig/Libraries/Structural_Analysis/CoordSystems/coordsys3D_xyz-1.fig
+lib/X11/xfig/Libraries/Structural_Analysis/CoordSystems/coordsys3D_xyz-2.fig
+lib/X11/xfig/Libraries/Structural_Analysis/CoordSystems/coordsys3D_xyz-3.fig
+lib/X11/xfig/Libraries/Structural_Analysis/Loads/convection_long.fig
+lib/X11/xfig/Libraries/Structural_Analysis/Loads/convection_short.fig
+lib/X11/xfig/Libraries/Structural_Analysis/Loads/dead_load.fig
+lib/X11/xfig/Libraries/Structural_Analysis/Loads/uniform_axial_long.fig
+lib/X11/xfig/Libraries/Structural_Analysis/Loads/uniform_axial_short.fig
+lib/X11/xfig/Libraries/Structural_Analysis/Loads/uniform_long.fig
+lib/X11/xfig/Libraries/Structural_Analysis/Loads/uniform_short.fig
+lib/X11/xfig/Libraries/Structural_Analysis/Plates/plate_fixed.fig
+lib/X11/xfig/Libraries/Structural_Analysis/Plates/plate_fixed_hinge.fig
+lib/X11/xfig/Libraries/Structural_Analysis/Plates/plate_hinge.fig
+lib/X11/xfig/Libraries/Structural_Analysis/Supports/elastic_H_free_down.fig
+lib/X11/xfig/Libraries/Structural_Analysis/Supports/elastic_H_free_up.fig
+lib/X11/xfig/Libraries/Structural_Analysis/Supports/elastic_V_free_left.fig
+lib/X11/xfig/Libraries/Structural_Analysis/Supports/elastic_V_free_right.fig
+lib/X11/xfig/Libraries/Structural_Analysis/Supports/elastic_down.fig
+lib/X11/xfig/Libraries/Structural_Analysis/Supports/elastic_letf.fig
+lib/X11/xfig/Libraries/Structural_Analysis/Supports/elastic_right.fig
+lib/X11/xfig/Libraries/Structural_Analysis/Supports/elastic_up.fig
+lib/X11/xfig/Libraries/Structural_Analysis/Supports/fixed_H_free_down.fig
+lib/X11/xfig/Libraries/Structural_Analysis/Supports/fixed_H_free_up.fig
+lib/X11/xfig/Libraries/Structural_Analysis/Supports/fixed_V_free_left.fig
+lib/X11/xfig/Libraries/Structural_Analysis/Supports/fixed_V_free_right.fig
+lib/X11/xfig/Libraries/Structural_Analysis/Supports/fixed_down.fig
+lib/X11/xfig/Libraries/Structural_Analysis/Supports/fixed_left.fig
+lib/X11/xfig/Libraries/Structural_Analysis/Supports/fixed_right.fig
+lib/X11/xfig/Libraries/Structural_Analysis/Supports/fixed_up.fig
+lib/X11/xfig/Libraries/Structural_Analysis/Supports/hinge_H_free_down.fig
+lib/X11/xfig/Libraries/Structural_Analysis/Supports/hinge_H_free_up.fig
+lib/X11/xfig/Libraries/Structural_Analysis/Supports/hinge_V_free_left.fig
+lib/X11/xfig/Libraries/Structural_Analysis/Supports/hinge_V_free_right.fig
+lib/X11/xfig/Libraries/Structural_Analysis/Supports/hinge_down.fig
+lib/X11/xfig/Libraries/Structural_Analysis/Supports/hinge_left.fig
+lib/X11/xfig/Libraries/Structural_Analysis/Supports/hinge_right.fig
+lib/X11/xfig/Libraries/Structural_Analysis/Supports/hinge_up.fig
+lib/X11/xfig/Libraries/Structural_Analysis/Supports/roller_down.fig
+lib/X11/xfig/Libraries/Structural_Analysis/Supports/roller_left.fig
+lib/X11/xfig/Libraries/Structural_Analysis/Supports/roller_right.fig
+lib/X11/xfig/Libraries/Structural_Analysis/Supports/roller_up.fig
+lib/X11/xfig/Libraries/Structural_Analysis/Trusses/fan.fig
+lib/X11/xfig/Libraries/Structural_Analysis/Trusses/fink.fig
+lib/X11/xfig/Libraries/Structural_Analysis/Trusses/howe_trap.fig
+lib/X11/xfig/Libraries/Structural_Analysis/Trusses/howe_triangle.fig
+lib/X11/xfig/Libraries/Structural_Analysis/Trusses/pratt_trap.fig
+lib/X11/xfig/Libraries/Structural_Analysis/Trusses/pratt_triangle.fig
+lib/X11/xfig/Libraries/Structural_Analysis/Trusses/warren.fig
+lib/X11/xfig/Libraries/Structural_Analysis/readme.fig
+lib/X11/xfig/Libraries/UML/Actor.fig
+lib/X11/xfig/Libraries/UML/Aggregations.fig
+lib/X11/xfig/Libraries/UML/Arrows.fig
+lib/X11/xfig/Libraries/UML/Association.fig
+lib/X11/xfig/Libraries/UML/Association_Multi.fig
+lib/X11/xfig/Libraries/UML/Class_Large.fig
+lib/X11/xfig/Libraries/UML/Class_Medium.fig
+lib/X11/xfig/Libraries/UML/Class_Small.fig
+lib/X11/xfig/Libraries/UML/Component.fig
+lib/X11/xfig/Libraries/UML/DesignPattern.fig
+lib/X11/xfig/Libraries/UML/Labels.fig
+lib/X11/xfig/Libraries/UML/Note_Large.fig
+lib/X11/xfig/Libraries/UML/Note_Small.fig
+lib/X11/xfig/Libraries/UML/Object_Medium.fig
+lib/X11/xfig/Libraries/UML/Object_Multi.fig
+lib/X11/xfig/Libraries/UML/Object_Small.fig
+lib/X11/xfig/Libraries/UML/Package_Large.fig
+lib/X11/xfig/Libraries/UML/Package_Small.fig
+lib/X11/xfig/Libraries/UML/Sequences.fig
+lib/X11/xfig/Libraries/UML/State_Large.fig
+lib/X11/xfig/Libraries/UML/State_Medium.fig
+lib/X11/xfig/Libraries/UML/State_Small.fig
+lib/X11/xfig/Libraries/UML/State_Special.fig
+lib/X11/xfig/Libraries/UML/Synchronization.fig
+lib/X11/xfig/Libraries/UML/Template.fig
+lib/X11/xfig/Libraries/UML/Transitions.fig
+lib/X11/xfig/Libraries/UML/UseCase.fig
+man/cat1/xfig.0
 share/doc/xfig/html/accelerators.html
+share/doc/xfig/html/attributes.html
 share/doc/xfig/html/authors.html
-share/doc/xfig/html/command-panel.html
-share/doc/xfig/html/drawing-mode.html
-share/doc/xfig/html/editing-mode.html
+share/doc/xfig/html/bugs_fixed.html
+share/doc/xfig/html/button_frame.html
+share/doc/xfig/html/contents.html
+share/doc/xfig/html/drawing.html
+share/doc/xfig/html/editing.html
 share/doc/xfig/html/faq.html
-share/doc/xfig/html/features_bugs.html
 share/doc/xfig/html/fig-format.html
+share/doc/xfig/html/global_settings.html
 share/doc/xfig/html/i18n.html
 share/doc/xfig/html/images/3dhouse-small.gif
 share/doc/xfig/html/images/3dhouse.gif
@@ -246,28 +464,23 @@ share/doc/xfig/html/images/arc-examples.gif
 share/doc/xfig/html/images/arc-type-button.gif
 share/doc/xfig/html/images/arc-type-open.gif
 share/doc/xfig/html/images/arc-type-pie-wedge.gif
-share/doc/xfig/html/images/arrow-closed.gif
-share/doc/xfig/html/images/arrow-indented.gif
 share/doc/xfig/html/images/arrow-mode-backward.gif
 share/doc/xfig/html/images/arrow-mode-both.gif
 share/doc/xfig/html/images/arrow-mode-button.gif
 share/doc/xfig/html/images/arrow-mode-forward.gif
 share/doc/xfig/html/images/arrow-mode-none.gif
-share/doc/xfig/html/images/arrow-open.gif
-share/doc/xfig/html/images/arrow-pointed.gif
 share/doc/xfig/html/images/arrow-size-button.gif
 share/doc/xfig/html/images/arrow-size-image.gif
 share/doc/xfig/html/images/arrow-size-panel.gif
 share/doc/xfig/html/images/arrow-type-button.gif
 share/doc/xfig/html/images/arrow-types.gif
-share/doc/xfig/html/images/balloons-button.gif
 share/doc/xfig/html/images/balloons-example.gif
-share/doc/xfig/html/images/blueball.gif
 share/doc/xfig/html/images/blueballdot.gif
 share/doc/xfig/html/images/blueramp.gif
 share/doc/xfig/html/images/box-button.gif
 share/doc/xfig/html/images/box-curve-button.gif
 share/doc/xfig/html/images/break-compound-button.gif
+share/doc/xfig/html/images/button_frame.gif
 share/doc/xfig/html/images/c-cedilla.gif
 share/doc/xfig/html/images/cap-style-butt.gif
 share/doc/xfig/html/images/cap-style-button.gif
@@ -279,15 +492,19 @@ share/doc/xfig/html/images/circle-example.gif
 share/doc/xfig/html/images/circle-rad-button.gif
 share/doc/xfig/html/images/closed-approx-spline-button.gif
 share/doc/xfig/html/images/closed-interp-spline-button.gif
-share/doc/xfig/html/images/cmd-accel.gif
 share/doc/xfig/html/images/color-panel.gif
 share/doc/xfig/html/images/copy-button.gif
 share/doc/xfig/html/images/delete-button.gif
 share/doc/xfig/html/images/delete-point-button.gif
 share/doc/xfig/html/images/depth-button.gif
+share/doc/xfig/html/images/depth-panel.gif
 share/doc/xfig/html/images/drawedit-accel.gif
+share/doc/xfig/html/images/edit-accel.gif
 share/doc/xfig/html/images/edit-button.gif
+share/doc/xfig/html/images/edit-figure-comments.gif
+share/doc/xfig/html/images/edit-menu-button.gif
 share/doc/xfig/html/images/edit-panel-picture.gif
+share/doc/xfig/html/images/edit-panel-picture.large.gif
 share/doc/xfig/html/images/edit-panel-polyline.gif
 share/doc/xfig/html/images/edit-panel-text.gif
 share/doc/xfig/html/images/edit-point-panel.gif
@@ -295,19 +512,29 @@ share/doc/xfig/html/images/ellipse-diam-button.gif
 share/doc/xfig/html/images/ellipse-example.gif
 share/doc/xfig/html/images/ellipse-rad-button.gif
 share/doc/xfig/html/images/exclaim.gif
+share/doc/xfig/html/images/export-gif.gif
+share/doc/xfig/html/images/export-jpeg.gif
 share/doc/xfig/html/images/export-panel.gif
+share/doc/xfig/html/images/file-accel.gif
+share/doc/xfig/html/images/file-menu-button.gif
 share/doc/xfig/html/images/file-panel.gif
 share/doc/xfig/html/images/fill-color-button.gif
 share/doc/xfig/html/images/fill-style-button.gif
 share/doc/xfig/html/images/fill-style-panel.gif
 share/doc/xfig/html/images/flip-horiz-button.gif
 share/doc/xfig/html/images/flip-vert-button.gif
+share/doc/xfig/html/images/font-menu-japanese.gif
+share/doc/xfig/html/images/font-menu-korean.gif
+share/doc/xfig/html/images/frame_background.gif
+share/doc/xfig/html/images/global-settings.gif
 share/doc/xfig/html/images/glue-compound-button.gif
 share/doc/xfig/html/images/goldline.gif
 share/doc/xfig/html/images/greenball.gif
 share/doc/xfig/html/images/greenpig.gif
 share/doc/xfig/html/images/greenpig_sm.gif
 share/doc/xfig/html/images/grid-button.gif
+share/doc/xfig/html/images/help-accel.gif
+share/doc/xfig/html/images/help-menu-button.gif
 share/doc/xfig/html/images/horiz-align-abut-edge.gif
 share/doc/xfig/html/images/horiz-align-button.gif
 share/doc/xfig/html/images/horiz-align-center-even.gif
@@ -316,8 +543,9 @@ share/doc/xfig/html/images/horiz-align-edge-even.gif
 share/doc/xfig/html/images/horiz-align-left.gif
 share/doc/xfig/html/images/horiz-align-none.gif
 share/doc/xfig/html/images/horiz-align-right.gif
-share/doc/xfig/html/images/house_col576x369.gif
 share/doc/xfig/html/images/image_browse.gif
+share/doc/xfig/html/images/japaneseflag.gif
+share/doc/xfig/html/images/join-button.gif
 share/doc/xfig/html/images/join-style-bevel.gif
 share/doc/xfig/html/images/join-style-button.gif
 share/doc/xfig/html/images/join-style-example.gif
@@ -326,10 +554,11 @@ share/doc/xfig/html/images/join-style-round.gif
 share/doc/xfig/html/images/korean-text.gif
 share/doc/xfig/html/images/latin1-chars.gif
 share/doc/xfig/html/images/library-button.gif
-share/doc/xfig/html/images/library_panel.gif
+share/doc/xfig/html/images/library-panel.gif
 share/doc/xfig/html/images/line-style-button.gif
 share/doc/xfig/html/images/line-style-panel.gif
 share/doc/xfig/html/images/line-width-button.gif
+share/doc/xfig/html/images/menu-accel.gif
 share/doc/xfig/html/images/mouse-function-indicator.gif
 share/doc/xfig/html/images/move-button.gif
 share/doc/xfig/html/images/move-point-button.gif
@@ -342,6 +571,7 @@ share/doc/xfig/html/images/open-compound-button.gif
 share/doc/xfig/html/images/open-interp-spline-button.gif
 share/doc/xfig/html/images/pen-color-button.gif
 share/doc/xfig/html/images/pict-button.gif
+share/doc/xfig/html/images/pict-i18n.gif
 share/doc/xfig/html/images/pict-info.gif
 share/doc/xfig/html/images/pict-japanese.gif
 share/doc/xfig/html/images/pict-new.gif
@@ -350,25 +580,27 @@ share/doc/xfig/html/images/polygon-button.gif
 share/doc/xfig/html/images/polyline-button.gif
 share/doc/xfig/html/images/polyline-example.gif
 share/doc/xfig/html/images/print-panel.gif
-share/doc/xfig/html/images/pull-down.gif
 share/doc/xfig/html/images/redball.gif
 share/doc/xfig/html/images/redballdot.gif
 share/doc/xfig/html/images/regular-polygon-button.gif
 share/doc/xfig/html/images/rotate-angle-button.gif
 share/doc/xfig/html/images/rotate-ccw-button.gif
 share/doc/xfig/html/images/rotate-cw-button.gif
+share/doc/xfig/html/images/rotation-angle-button.gif
 share/doc/xfig/html/images/ruler.gif
 share/doc/xfig/html/images/scale-button.gif
 share/doc/xfig/html/images/screen-image-small.gif
-share/doc/xfig/html/images/screen-image.fig
 share/doc/xfig/html/images/screen-image.gif
 share/doc/xfig/html/images/search-text-panel.gif
+share/doc/xfig/html/images/show-comments.gif
 share/doc/xfig/html/images/show-lengths.gif
+share/doc/xfig/html/images/show-vertex.gif
 share/doc/xfig/html/images/smart-link-button.gif
 share/doc/xfig/html/images/smart-link-move.gif
 share/doc/xfig/html/images/smart-link-off.gif
 share/doc/xfig/html/images/smart-link-slide.gif
-share/doc/xfig/html/images/splash.gif
+share/doc/xfig/html/images/spell-check-panel.gif
+share/doc/xfig/html/images/spinner.gif
 share/doc/xfig/html/images/spline-curves.gif
 share/doc/xfig/html/images/spline-examples.gif
 share/doc/xfig/html/images/spline-line-button.gif
@@ -390,11 +622,10 @@ share/doc/xfig/html/images/text-step-button.gif
 share/doc/xfig/html/images/transit.gif
 share/doc/xfig/html/images/transit_sm.gif
 share/doc/xfig/html/images/unit-box.gif
-share/doc/xfig/html/images/unit-box.gif.orig
 share/doc/xfig/html/images/unit-panel.gif
 share/doc/xfig/html/images/update-button.gif
 share/doc/xfig/html/images/update-control.gif
-share/doc/xfig/html/images/valid_html.gif
+share/doc/xfig/html/images/usflag.gif
 share/doc/xfig/html/images/vertical-align-abut-edge.gif
 share/doc/xfig/html/images/vertical-align-bottom.gif
 share/doc/xfig/html/images/vertical-align-button.gif
@@ -403,6 +634,8 @@ share/doc/xfig/html/images/vertical-align-center.gif
 share/doc/xfig/html/images/vertical-align-edge-even.gif
 share/doc/xfig/html/images/vertical-align-none.gif
 share/doc/xfig/html/images/vertical-align-top.gif
+share/doc/xfig/html/images/view-accel.gif
+share/doc/xfig/html/images/view-menu-button.gif
 share/doc/xfig/html/images/window2-small.gif
 share/doc/xfig/html/images/window2.gif
 share/doc/xfig/html/images/xfig-title.gif
@@ -413,29 +646,46 @@ share/doc/xfig/html/images/xim-root.gif
 share/doc/xfig/html/images/zoom-button.gif
 share/doc/xfig/html/images/zoom-panel.gif
 share/doc/xfig/html/index.html
-share/doc/xfig/html/indicator-panel.html
 share/doc/xfig/html/installation.html
 share/doc/xfig/html/introduction.html
 share/doc/xfig/html/japanese/accelerators.html
+share/doc/xfig/html/japanese/attributes.html
 share/doc/xfig/html/japanese/authors.html
-share/doc/xfig/html/japanese/command-panel.html
-share/doc/xfig/html/japanese/drawing-mode.html
-share/doc/xfig/html/japanese/editing-mode.html
+share/doc/xfig/html/japanese/bugs_fixed.html
+share/doc/xfig/html/japanese/button_frame.fig
+share/doc/xfig/html/japanese/button_frame.gif
+share/doc/xfig/html/japanese/button_frame.html
+share/doc/xfig/html/japanese/button_frame.map
+share/doc/xfig/html/japanese/contents.html
+share/doc/xfig/html/japanese/drawing.html
+share/doc/xfig/html/japanese/editing.html
 share/doc/xfig/html/japanese/faq.html
-share/doc/xfig/html/japanese/features_bugs.html
 share/doc/xfig/html/japanese/fig-format.html
+share/doc/xfig/html/japanese/frame_background.gif
+share/doc/xfig/html/japanese/global_settings.html
 share/doc/xfig/html/japanese/i18n.html
 share/doc/xfig/html/japanese/index.html
-share/doc/xfig/html/japanese/indicator-panel.html
 share/doc/xfig/html/japanese/installation.html
 share/doc/xfig/html/japanese/introduction.html
 share/doc/xfig/html/japanese/japanese.ps
-share/doc/xfig/html/japanese/misc-panel.html
+share/doc/xfig/html/japanese/layers.html
+share/doc/xfig/html/japanese/main_menus.html
+share/doc/xfig/html/japanese/miscellaneous.html
+share/doc/xfig/html/japanese/new_features.html
 share/doc/xfig/html/japanese/options.html
-share/doc/xfig/html/misc-panel.html
+share/doc/xfig/html/japanese/panning.html
+share/doc/xfig/html/japanese/printing.html
+share/doc/xfig/html/japanese/screen_image_map.html
+share/doc/xfig/html/layers.html
+share/doc/xfig/html/main_menus.html
+share/doc/xfig/html/miscellaneous.html
+share/doc/xfig/html/new_features.html
 share/doc/xfig/html/options.html
+share/doc/xfig/html/panning.html
+share/doc/xfig/html/printing.html
+share/doc/xfig/html/screen_image_map.html
 share/doc/xfig/xfig-howto.pdf
-share/doc/xfig/xfig.pdf
+share/doc/xfig/xfig.html
 share/examples/xfig/3dhouse.fig
 share/examples/xfig/8-bit.fig
 share/examples/xfig/aircraft.fig
@@ -450,16 +700,13 @@ share/examples/xfig/bedroom2.fig
 share/examples/xfig/breadboard.fig
 share/examples/xfig/bugs.gif
 share/examples/xfig/cassette.fig
-share/examples/xfig/circuit.fig
 share/examples/xfig/clipart.fig
 share/examples/xfig/ctrlbox_lay.fig
 share/examples/xfig/ctrlbox_sch.fig
 share/examples/xfig/damper.fig
-share/examples/xfig/deltat.fig
 share/examples/xfig/dresser.fig
 share/examples/xfig/experiment.fig
 share/examples/xfig/filenames.fig
-share/examples/xfig/flow.fig
 share/examples/xfig/flowchart.fig
 share/examples/xfig/gold.fig
 share/examples/xfig/greek.fig
@@ -473,14 +720,11 @@ share/examples/xfig/house_elev.fig
 share/examples/xfig/housecheck.fig
 share/examples/xfig/icebergs.jpg
 share/examples/xfig/illusion.fig
+share/examples/xfig/illusion.gif
 share/examples/xfig/lidar.fig
-share/examples/xfig/linuxlogo.fig
 share/examples/xfig/lists.fig
 share/examples/xfig/logic.fig
-share/examples/xfig/logo.eps
-share/examples/xfig/logo.fig
 share/examples/xfig/musicnotes.fig
-share/examples/xfig/network.fig
 share/examples/xfig/orifices.fig
 share/examples/xfig/patterns.fig
 share/examples/xfig/pictures.fig
@@ -489,31 +733,50 @@ share/examples/xfig/ps-schematic.fig
 share/examples/xfig/pumpkin.xbm
 share/examples/xfig/recycle.fig
 share/examples/xfig/rfxc.fig
-share/examples/xfig/roundboxes.fig
-share/examples/xfig/roundboxes2.fig
-share/examples/xfig/schemat.fig
 share/examples/xfig/shades.fig
-share/examples/xfig/snake4.fig
 share/examples/xfig/sowpig.fig
+share/examples/xfig/symbols.fig
 share/examples/xfig/teapot.xpm
-share/examples/xfig/thermal.fig
 share/examples/xfig/transit.fig
 share/examples/xfig/watch.fig
-share/examples/xfig/window1.fig
-share/examples/xfig/window2.fig
-@dirrm share/examples/xfig
-@dirrm share/doc/xfig/html/images
-@dirrm share/doc/xfig/html/japanese
-@dirrm share/doc/xfig/html
-@dirrm share/doc/xfig
+share/examples/xfig/window.fig
 @dirrm lib/X11/xfig/Libraries/Buildings
 @dirrm lib/X11/xfig/Libraries/Computers
 @dirrm lib/X11/xfig/Libraries/Electrical/Physical
 @dirrm lib/X11/xfig/Libraries/Electrical/Schematic
 @dirrm lib/X11/xfig/Libraries/Electrical
+@dirrm lib/X11/xfig/Libraries/Flags
 @dirrm lib/X11/xfig/Libraries/Flowchart
 @dirrm lib/X11/xfig/Libraries/Hospital
 @dirrm lib/X11/xfig/Libraries/Logic
+@dirrm lib/X11/xfig/Libraries/Mechanical_DIN/Loch/Durch
+@dirrm lib/X11/xfig/Libraries/Mechanical_DIN/Loch/Senk
+@dirrm lib/X11/xfig/Libraries/Mechanical_DIN/Loch
+@dirrm lib/X11/xfig/Libraries/Mechanical_DIN/Oberflaeche
+@dirrm lib/X11/xfig/Libraries/Mechanical_DIN/Rahmen
+@dirrm lib/X11/xfig/Libraries/Mechanical_DIN/Schraube/Aufsicht
+@dirrm lib/X11/xfig/Libraries/Mechanical_DIN/Schraube/Seit/Durch
+@dirrm lib/X11/xfig/Libraries/Mechanical_DIN/Schraube/Seit/Sack
+@dirrm lib/X11/xfig/Libraries/Mechanical_DIN/Schraube/Seit
+@dirrm lib/X11/xfig/Libraries/Mechanical_DIN/Schraube
+@dirrm lib/X11/xfig/Libraries/Mechanical_DIN
 @dirrm lib/X11/xfig/Libraries/Music
 @dirrm lib/X11/xfig/Libraries/Networks
+@dirrm lib/X11/xfig/Libraries/Optics/Fiber
+@dirrm lib/X11/xfig/Libraries/Optics/Lens
+@dirrm lib/X11/xfig/Libraries/Optics/Mirror
+@dirrm lib/X11/xfig/Libraries/Optics
+@dirrm lib/X11/xfig/Libraries/Structural_Analysis/Beams
+@dirrm lib/X11/xfig/Libraries/Structural_Analysis/CoordSystems
+@dirrm lib/X11/xfig/Libraries/Structural_Analysis/Loads
+@dirrm lib/X11/xfig/Libraries/Structural_Analysis/Plates
+@dirrm lib/X11/xfig/Libraries/Structural_Analysis/Supports
+@dirrm lib/X11/xfig/Libraries/Structural_Analysis/Trusses
+@dirrm lib/X11/xfig/Libraries/Structural_Analysis
+@dirrm lib/X11/xfig/Libraries/UML
 @dirrm lib/X11/xfig/Libraries
+@dirrm share/doc/xfig/html/images
+@dirrm share/doc/xfig/html/japanese
+@dirrm share/doc/xfig/html
+@dirrm share/doc/xfig
+@dirrm share/examples/xfig

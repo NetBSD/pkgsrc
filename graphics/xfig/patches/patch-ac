@@ -1,13 +1,13 @@
-$NetBSD: patch-ac,v 1.1 1999/01/05 21:37:55 frueauf Exp $
+$NetBSD: patch-ac,v 1.2 2000/06/22 08:18:08 itohy Exp $
 
---- Fig.ad-orig	Thu Jul  2 02:10:28 1998
-+++ Fig.ad	Tue Jan  5 22:11:21 1999
-@@ -14,7 +14,7 @@
+--- Fig.ad.orig	Thu Jan 20 04:48:58 2000
++++ Fig.ad	Thu Jun 22 00:52:08 2000
+@@ -16,7 +16,7 @@
  
  ! pdfviewer - put your favorite pdf viewer here.  
  !		This is for viewing the xfig how-to guide and man pages
--Fig.pdfviewer:			acroread
-+Fig.pdfviewer:			gv
+-Fig.pdfviewer:			acroread %f
++Fig.pdfviewer:			gv %f
  
- ! Spacing between buttons
- Fig.internalborderwidth:	2
+ ! Spell check program - put your favorite spelling check program here.
+ !		It must write the misspelled words to standard output.
