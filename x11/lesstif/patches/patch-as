@@ -1,7 +1,11 @@
-$NetBSD: patch-as,v 1.1 1999/11/03 04:18:48 jlam Exp $
+$NetBSD: patch-as,v 1.2 1999/11/24 17:34:10 hubertf Exp $
 
---- lib/config/mxmkmf.in.orig	Thu Sep  2 19:51:36 1999
-+++ lib/config/mxmkmf.in	Tue Nov  2 22:16:17 1999
+Place(s) where this was (most probably...) in before:
+     NetBSD: patch-as,v 1.1 1999/11/03 04:18:48 jlam Exp 
+
+diff -x *.orig -urN ./lib/config/mxmkmf.in /usr/pkgsrc/x11/lesstif/work.i386.unpatched/lesstif-0.89.4/lib/config/mxmkmf.in
+--- ./lib/config/mxmkmf.in	Fri Sep  3 01:51:36 1999
++++ /usr/pkgsrc/x11/lesstif/work.i386.unpatched/lesstif-0.89.4/lib/config/mxmkmf.in	Wed Nov 24 17:30:54 1999
 @@ -7,4 +7,4 @@
  #
  prefix=@prefix@
