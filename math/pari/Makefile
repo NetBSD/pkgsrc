@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/05/19 17:31:05 jtb Exp $
+# $NetBSD: Makefile,v 1.8 2001/06/11 22:46:14 jtb Exp $
 
 DISTNAME=		pari-2.1.1
 CATEGORIES=		math
@@ -11,6 +11,7 @@ COMMENT=		software package for computer-aided number theory
 
 DEPENDS+=		readline>=4.0:../../devel/readline
 BUILD_DEPENDS+= 	teTeX-[0-9]*:../../print/teTeX
+BUILD_DEPENDS+= 	emacs-[0-9]*:../../editors/emacs
 
 USE_PERL5=		yes
 
