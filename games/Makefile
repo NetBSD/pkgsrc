@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.100 2000/10/25 08:42:52 jlam Exp $
+# $NetBSD: Makefile,v 1.101 2000/10/28 23:34:49 wiz Exp $
 # FreeBSD Id: Makefile,v 1.87 1997/10/15 04:58:31 max Exp
 #
 
@@ -68,6 +68,7 @@
     SUBDIR += nethack-tty
     SUBDIR += nethack-x11
     SUBDIR += netmaze
+    SUBDIR += netris
     SUBDIR += nighthawk
     SUBDIR += omega
     SUBDIR += pacman
