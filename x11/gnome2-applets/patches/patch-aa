@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.7 2004/12/28 21:49:02 jmmv Exp $
+$NetBSD: patch-aa,v 1.8 2005/03/22 16:19:42 jmmv Exp $
 
---- battstat/sounds/Makefile.in.orig	2004-12-28 19:53:10.000000000 +0100
+--- battstat/sounds/Makefile.in.orig	2005-03-07 15:02:46.000000000 +0100
 +++ battstat/sounds/Makefile.in
-@@ -173,7 +173,7 @@ gnomelocaledir = @gnomelocaledir@
- install_sh = @install_sh@
- mkdir_p = @mkdir_p@
- 
+@@ -281,7 +281,7 @@ sbindir = @sbindir@
+ sharedstatedir = @sharedstatedir@
+ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
 -soundlistdir = $(sysconfdir)/sound/events
 +soundlistdir = $(datadir)/examples/gnome-applets/sound/events
  soundlist_in_files = battstat_applet.soundlist.in
  soundlist_DATA = $(soundlist_in_files:.soundlist.in=.soundlist)
- 
+ EXTRA_DIST = $(soundlist_DATA) $(soundlist_in_files)
