@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.18 2004/05/27 10:28:54 tron Exp $
+# $NetBSD: Makefile.common,v 1.19 2004/10/07 02:01:37 jlam Exp $
 
 SUSE_VERSION=		7.3
 
@@ -43,7 +43,7 @@ do-install:
 	  ${CP} ${PKGDIR}/PLIST ${PLIST_SRC}; \
 	else \
 	  ${RM} -f ${PLIST_SRC}; \
-	  ${CP} ${_PKGSRCDIR}/emulators/suse_linux/PLIST_dynamic ${PLIST_SRC} ; \
+	  ${CP} ${PKGSRCDIR}/emulators/suse_linux/PLIST_dynamic ${PLIST_SRC} ; \
 	fi
 	${RPM2PKG} ${RPM2PKGARGS}
 	@if ${GREP} -q 'lib.*\.so' ${PLIST_SRC}; then \
