@@ -1,5 +1,4 @@
-$NetBSD: distinfo,v 1.2 2001/04/20 15:05:01 skrll Exp $
+$NetBSD: distinfo,v 1.3 2001/10/01 15:18:36 mcr Exp $
 
-SHA1 (Convert-ASN1-0.07.tar.gz) = c69e969024253e504e715281f9043140f16d36ec
-Size (Convert-ASN1-0.07.tar.gz) = 34560 bytes
-SHA1 (patch-aa) = e7a6af1691da2c17cdac873ae389f6e658ebaa14
+SHA1 (Convert-ASN1-0.14.tar.gz) = e3ba63f9d64f9b355bd6fd96ed09a1b82669c3d9
+Size (Convert-ASN1-0.14.tar.gz) = 35332 bytes
