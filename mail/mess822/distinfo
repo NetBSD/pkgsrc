@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/07/26 23:26:27 schmonz Exp $
+
+SHA1 (mess822-0.58.tar.gz) = ef3380c793c852d40688c108d164234ecf8a5362
+Size (mess822-0.58.tar.gz) = 64287 bytes
+SHA1 (patch-aa) = 62464e4d3afb31ad2ef38575cddbee969c8a82b3
