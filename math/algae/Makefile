@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/08/09 11:11:24 seb Exp $
+# $NetBSD: Makefile,v 1.10 2004/04/14 00:59:25 snj Exp $
 
 DISTNAME=		algae-4.1.3
 PKGREVISION=		1
@@ -13,10 +13,10 @@ DEPENDS+=		gnuplot>=3.5:../../graphics/gnuplot
 
 GNU_CONFIGURE=		# defined
 USE_FORTRAN=		# defined
-USE_BUILDLINK2=		# defined
+USE_BUILDLINK3=		yes
 USE_GNU_READLINE=	# uses history_truncate_file
 
 INFO_FILES=		algae.info
 
-.include "../../devel/readline/buildlink2.mk"
+.include "../../devel/readline/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
