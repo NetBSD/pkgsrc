@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1999/08/26 05:15:03 sakamoto Exp $
+# $NetBSD: Makefile,v 1.5 1999/10/19 09:17:35 agc Exp $
 
 DISTNAME=	kterm-6.2.0
 CATEGORIES=	x11
@@ -15,13 +15,13 @@ MAINTAINER=	sakamoto@netbsd.org
 USE_IMAKE=	yes
 USE_XAW=	yes
 
-BUILD_DEFS+=	USE_WALLPAPER
+BUILD_DEFS+=	KTERM_USE_WALLPAPER
 
 .include "../../mk/bsd.prefs.mk"
 
 XAW_TYPE?=	standard
 
-.if defined(USE_WALLPAPER) && ${USE_WALLPAPER} == YES
+.if defined(KTERM_USE_WALLPAPER) && ${KTERM_USE_WALLPAPER} == YES
 DEPENDS+=	xpm-3.4k:../../graphics/xpm
 PATCH_SITES+=	http://delegate.uec.ac.jp:8081/club/mma/%7Etakkun/fun/handling/
 PATCHFILES+=	KTerm-BGP-1.0.patch.gz
