@@ -1,0 +1,40 @@
+$NetBSD: patch-ab,v 1.1.1.1 2001/01/29 04:32:12 jtb Exp $
+
+--- igmt_configure.tcl.orig	Tue Sep  5 14:39:21 2000
++++ igmt_configure.tcl
+@@ -112,7 +112,7 @@
+ # default awk-type program, if gawk not available, use nawk
+ # for better math performance
+ 
+-set our_awk gawk
++set our_awk awk
+ 
+ # change this for the default location to put the script file iGMT creates
+ 
+@@ -163,7 +163,7 @@
+ 
+ # postscript viewer
+ 
+-set psviewer "ghostview"
++set psviewer "gv"
+ 
+ 
+ # command line for viewing a postscript file in portrait orientation
+@@ -224,7 +224,7 @@
+ # where to find the colormaps (.cpt) files for GMT
+ set colorpath "$igmt_root/colormaps"
+ # principal base directory for raster data 
+-set rasterpath "/wrk/arthur/becker/global_data"
++set rasterpath "@GMT_PREFIX@/share/gmt"
+ 
+ 
+ ################################################################################
+@@ -294,7 +294,7 @@
+ 
+ # should we check for the availability of raster datasets?
+ 
+-set check_for_raster_availability 1
++set check_for_raster_availability 0
+ 
+ set nr_of_raster_data 20
+ # initialize variables with default values
