@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2004/09/22 08:09:58 jlam Exp $
+@comment $NetBSD: PLIST,v 1.9 2004/12/28 21:54:51 jmmv Exp $
 bin/magnifier
 include/gnome-mag-1.0/magnifier/GNOME_Magnifier.h
 lib/bonobo/servers/GNOME_Magnifier.server
@@ -25,6 +25,7 @@ share/gnome-mag/1_32/up.xpm
 share/gnome-mag/1_32/xterm.xpm
 share/gnome-mag/default-cursor.xpm
 share/idl/gnome-mag-1.0/GNOME_Magnifier.idl
+${PKGLOCALEDIR}/locale/ang/LC_MESSAGES/gnome-mag.mo
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/gnome-mag.mo
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/gnome-mag.mo
 ${PKGLOCALEDIR}/locale/be/LC_MESSAGES/gnome-mag.mo
@@ -56,6 +57,7 @@ ${PKGLOCALEDIR}/locale/id/LC_MESSAGES/gnome-mag.mo
 ${PKGLOCALEDIR}/locale/is/LC_MESSAGES/gnome-mag.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/gnome-mag.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/gnome-mag.mo
+${PKGLOCALEDIR}/locale/ka/LC_MESSAGES/gnome-mag.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/gnome-mag.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/gnome-mag.mo
 ${PKGLOCALEDIR}/locale/lv/LC_MESSAGES/gnome-mag.mo
