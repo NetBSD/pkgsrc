@@ -1,30 +1,18 @@
-$NetBSD: patch-ab,v 1.8 2004/12/30 21:51:30 minskim Exp $
+$NetBSD: patch-ab,v 1.9 2005/01/05 08:06:42 martti Exp $
 
---- dist/configure.orig	2004-11-08 19:28:06.000000000 -0600
-+++ dist/configure
-@@ -5417,6 +5417,7 @@ db_cv_gxx_except=no;
- if test "$GXX" = "yes"; then
- 	GXX_VERSION=`${MAKEFILE_CXX} --version`
+--- dist/configure.orig	2004-12-23 04:59:13.000000000 +0200
++++ dist/configure	2005-01-05 09:40:13.000000000 +0200
+@@ -5419,2 +5419,3 @@
  	case ${GXX_VERSION} in
 +	egcs*)	CXXFLAGS="-fexceptions $CXXFLAGS";;
  	1.*|2.[01234567].*|*-1.*|*-2.[01234567].*)
- 		db_cv_gxx_except=yes;;
- 	esac
-@@ -20866,7 +20867,7 @@ echo "${ECHO_T}$JMODSUFFIX" >&6
- INSTALLER="\$(LIBTOOL) --mode=install cp -p"
- 
+@@ -20868,3 +20869,3 @@
  MAKEFILE_CC="\$(LIBTOOL) --mode=compile ${MAKEFILE_CC}"
 -MAKEFILE_SOLINK="\$(LIBTOOL) --mode=link ${MAKEFILE_CCLINK} -avoid-version"
 +MAKEFILE_SOLINK="\$(LIBTOOL) --mode=link ${MAKEFILE_CCLINK}"
  MAKEFILE_CCLINK="\$(LIBTOOL) --mode=link ${MAKEFILE_CCLINK}"
- MAKEFILE_CXX="\$(LIBTOOL) --mode=compile ${MAKEFILE_CXX}"
- MAKEFILE_XSOLINK="\$(LIBTOOL) --mode=link ${MAKEFILE_CXXLINK} -avoid-version"
-@@ -30024,7 +30025,7 @@ fi
- #
- # If the user specified we use POSIX pthreads mutexes, and we fail to find the
+@@ -30027,3 +30028,3 @@
  # full interface, try and configure for just intra-process support.
 -if test "$db_cv_mutex" = no -o "$db_cv_mutex" = "posix_only"; then
 +if test "$ac_cv_lib_pthread_main" = yes -a "$db_cv_mutex" = no -o "$db_cv_mutex" = "posix_only"; then
  	LIBS="$LIBS -lpthread"
- 
- if test "$cross_compiling" = yes; then
