@@ -1,13 +1,38 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/12/15 00:36:28 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2001/07/31 09:48:54 tron Exp $
 
---- po/Makefile.in.in.orig	Sun Oct 31 12:17:50 1999
-+++ po/Makefile.in.in	Mon Sep  4 19:30:55 2000
-@@ -19,7 +19,7 @@
- prefix = @prefix@
- exec_prefix = @exec_prefix@
- datadir = $(prefix)/@DATADIRNAME@
--localedir = $(datadir)/locale
-+localedir = $(prefix)/share/locale
- gnulocaledir = $(prefix)/share/locale
- gettextsrcdir = $(prefix)/share/gettext/po
- subdir = po
+--- configure.in.orig	Mon Jul 23 08:40:37 2001
++++ configure.in	Mon Jul 30 23:02:43 2001
+@@ -7,7 +7,7 @@
+ AC_PROG_RANLIB
+ AC_PROG_CPP
+ 
+-ALL_LINGUAS="ca cs da de el es fi fr he hu it ja ko lt nl no pt pt_BR ro ru sk sl sr sv tr uk zh_CN zh_TW.Big5"
++ALL_LINGUAS="ca cs da de el es fi fr he hu it ja ko lt nl no pt pt_BR ro ru sk sl sr sv tr uk zh_CN"
+ AM_GNU_GETTEXT
+ 
+ AC_PATH_PROG(sedpath, sed)
+@@ -303,6 +303,7 @@
+ 			PY_VERSION=`$pythonpath -c 'import sys ; print sys.version[0:3]'`
+ 			PY_MAJOR=`$pythonpath -c 'import sys ; print sys.version[0:2]'`
+ 			changequote([, ])dnl
++				AC_CHECK_LIB(util, openpty, LIBS="$LIBS -lutil")
+ 			if test -f $PY_PREFIX/include/python$PY_VERSION/Python.h; then
+ 				PY_LIBS="-lpython$PY_VERSION"
+ 				PY_LIB_LOC="-L$PY_EXEC_PREFIX/lib/python$PY_VERSION/config"
+@@ -544,6 +545,8 @@
+ AC_PATH_PROG(sortpath, sort)
+ AC_PATH_PROG(uniqpath, uniq)
+ 
++dnl order matters on the link line....
++if false; then
+ if test "_$trpath" != _; then
+ if test "_$sortpath" != _; then
+ if test "_$uniqpath" != _; then
+@@ -556,6 +559,7 @@
+ GUI_CFLAGS=`cat cflags`
+ rm -f cflags cflags2
+ 
++fi
+ fi
+ fi
+ fi

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2001/06/11 06:34:22 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2001/07/31 09:48:53 tron Exp $
 
-DISTNAME=	xchat-1.6.2
+DISTNAME=	xchat-1.8.2
 CATEGORIES=	chat x11 gnome
-MASTER_SITES=	${HOMEPAGE}/files/source/1.6/
+MASTER_SITES=	${HOMEPAGE}files/source/1.8/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	tron@netbsd.org
@@ -12,17 +12,24 @@ COMMENT=	X11 (X Window System) IRC client, using the GTK+ toolkit
 DEPENDS+=	gnome-core>=1.2.0:../../x11/gnome-core
 DEPENDS+=	python>=2.0:../../lang/python
 
-USE_GMAKE=	yes
-USE_PERL5=	yes
-USE_X11BASE=	yes
-GNU_CONFIGURE=	yes
+USE_GMAKE=	YES
+USE_PERL5=	YES
+USE_X11BASE=	YES
+GNU_CONFIGURE=	YES
 CPPFLAGS+=	-I${LOCALBASE}/include
+MAKE_ENV+=	PKGLOCALEDIR="${PKGLOCALEDIR}"
 
+# Prevent invokation of "auto*" which caused build failures due to insufficient
+# arguments and environment.
 pre-configure:
-	@${TOUCH} ${WRKSRC}/stamp-h.in
+	@cd ${WRKSRC} && \
+	${RM} -f po/zh_TW.Big5.po && \
+	${TOUCH} aclocal.m4 stamp-h.in && \
+	${FIND} . -name Makefile.in | ${XARGS} ${TOUCH}
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/xchat
 	${INSTALL_DATA} ${WRKSRC}/doc/*.html ${PREFIX}/share/doc/xchat
 
+.include "../../devel/gettext-lib/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
