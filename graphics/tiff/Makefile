@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2001/05/03 13:22:50 skrll Exp $
+# $NetBSD: Makefile,v 1.31 2001/05/28 02:50:24 jlam Exp $
 
 DISTNAME=	tiff-v3.5.5
 PKGNAME=	tiff-3.5.5
@@ -13,21 +13,17 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.libtiff.org/
 COMMENT=	library and tools for reading and writing TIFF data files
 
-DEPENDS+=	jpeg-6b:../../graphics/jpeg
-
 USE_LIBTOOL=	yes
 HAS_CONFIGURE=	yes
 CONFIGURE_ARGS=	--noninteractive --site=${FILESDIR}
 CONFIGURE_ENV+=	CC="${CC}"
 
 .include "../../mk/bsd.prefs.mk"
+.include "../../devel/zlib/buildlink.mk"
+.include "../../graphics/jpeg/buildlink.mk"
 
-.if (${OPSYS} == "SunOS")
-ZLIBDIR=	${LOCALBASE}/lib
-DEPENDS+=	zlib-*:../../devel/zlib
-.else
-ZLIBDIR=	/usr/lib
-.endif
+ZLIBDIR_DEFAULT=	/usr/lib
+EVAL_PREFIX+=		ZLIBDIR=zlib
 
 .if defined(USE_GIF)
 DISTFILES+=	libtiff-lzw-compression-kit-1.1.tar.gz
@@ -41,8 +37,12 @@ post-patch:
 .endif
 
 CPPFLAGS+=	-Dunix
-CONFIGURE_ENV+=	PREFIX="${PREFIX}" LOCALBASE="${LOCALBASE}" \
-		ENVOPTS="${CFLAGS} ${CPPFLAGS}" ZLIBDIR="${ZLIBDIR}"
+CONFIGURE_ENV+=	PREFIX="${PREFIX}"
+CONFIGURE_ENV+=	LOCALBASE="${LOCALBASE}"
+CONFIGURE_ENV+=	ENVOPTS="${CFLAGS} ${CPPFLAGS}"
+CONFIGURE_ENV+=	ZLIBDIR="${ZLIBDIR}"
+CONFIGURE_ENV+=	BUILDLINK_INCDIR=${BUILDLINK_INCDIR}
+CONFIGURE_ENV+=	BUILDLINK_LIBDIR=${BUILDLINK_LIBDIR}
 
 pre-patch:
 	# reference correct relative man page when using .so
@@ -57,5 +57,7 @@ pre-patch:
 	${MV} ${WRKSRC}/tools/Makefile.in ${WRKSRC}/tools/Makefile.in.in
 	${SED}	-e "s,\(\$${CC} -o\),\$${LIBTOOL} \1,g" \
 		${WRKSRC}/tools/Makefile.in.in  > ${WRKSRC}/tools/Makefile.in
+
+pre-configure: ${BUILDLINK_TARGETS}
 
 .include "../../mk/bsd.pkg.mk"
