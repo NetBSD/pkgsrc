@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/01/28 11:22:24 recht Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/02/28 19:51:16 recht Exp $
 bin/tla
 share/doc/html/arch/advanced-revision-libraries.html
 share/doc/html/arch/arch.html
@@ -7,7 +7,6 @@ share/doc/html/arch/changeset-format.html
 share/doc/html/arch/checking-in-changes.html
 share/doc/html/arch/cherrypicking-changes.html
 share/doc/html/arch/development-branches.html
-share/doc/html/arch/document-license.html
 share/doc/html/arch/elementary-branches.html
 share/doc/html/arch/exploring-changesets.html
 share/doc/html/arch/importing-first.html
