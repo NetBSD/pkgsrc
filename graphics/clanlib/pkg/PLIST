@@ -1,0 +1,138 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/07/21 22:56:35 garbled Exp $
+bin/datafile_compiler
+include/ClanLib/Layer1/Display/API/cliprect.h
+include/ClanLib/Layer1/Display/API/display.h
+include/ClanLib/Layer1/Display/API/displaycard.h
+include/ClanLib/Layer1/Display/API/palette.h
+include/ClanLib/Layer1/Display/API/pixelformat.h
+include/ClanLib/Layer1/Display/API/surface.h
+include/ClanLib/Layer1/Display/API/surfacepriority.h
+include/ClanLib/Layer1/Display/API/surfaceprovider.h
+include/ClanLib/Layer1/Display/API/vidmode.h
+include/ClanLib/Layer1/IOData/API/endian.h
+include/ClanLib/Layer1/IOData/API/inputsource.h
+include/ClanLib/Layer1/IOData/API/inputsource_provider.h
+include/ClanLib/Layer1/IOData/API/outputsource.h
+include/ClanLib/Layer1/IOData/API/outputsource_provider.h
+include/ClanLib/Layer1/Input/API/inputaxis.h
+include/ClanLib/Layer1/Input/API/input.h
+include/ClanLib/Layer1/Input/API/inputbuffer.h
+include/ClanLib/Layer1/Input/API/inputbutton.h
+include/ClanLib/Layer1/Input/API/inputcursor.h
+include/ClanLib/Layer1/Input/API/inputdevice.h
+include/ClanLib/Layer1/Input/API/inputhat.h
+include/ClanLib/Layer1/Input/API/keyboard.h
+include/ClanLib/Layer1/Input/API/mouse.h
+include/ClanLib/Layer1/Network/API/netchannel.h
+include/ClanLib/Layer1/Network/API/netcomputer.h
+include/ClanLib/Layer1/Network/API/netgame.h
+include/ClanLib/Layer1/Network/API/netgroup.h
+include/ClanLib/Layer1/Network/API/netmessage.h
+include/ClanLib/Layer1/Network/API/network.h
+include/ClanLib/Layer1/Sound/API/sound.h
+include/ClanLib/Layer1/Sound/API/soundbuffer.h
+include/ClanLib/Layer1/Sound/API/soundbuffer_session.h
+include/ClanLib/Layer1/Sound/API/soundformat.h
+include/ClanLib/Layer1/Sound/API/static_soundprovider.h
+include/ClanLib/Layer1/Sound/API/stream_soundprovider.h
+include/ClanLib/Layer1/System/API/cl_assert.h
+include/ClanLib/Layer1/System/API/clanapp.h
+include/ClanLib/Layer1/System/API/error.h
+include/ClanLib/Layer1/System/API/system.h
+include/ClanLib/Layer1/System/API/timer_manager.h
+include/ClanLib/Layer2/InputConverters/inputaxis_basic.h
+include/ClanLib/Layer2/InputConverters/inputaxis_group.h
+include/ClanLib/Layer2/InputConverters/inputbutton_basic.h
+include/ClanLib/Layer2/InputConverters/inputbutton_group.h
+include/ClanLib/Layer2/InputConverters/inputbutton_to_axis_analog.h
+include/ClanLib/Layer2/InputConverters/inputbutton_to_axis_digital.h
+include/ClanLib/Layer2/Misc/font.h
+include/ClanLib/Layer2/Misc/layermanager.h
+include/ClanLib/Layer2/NetChannels/netchannel_filetransfer.h
+include/ClanLib/Layer2/NetChannels/netchannel_portnumbers.h
+include/ClanLib/Layer2/NetChannels/netchannel_resource.h
+include/ClanLib/Layer2/NetChannels/netchannels.h
+include/ClanLib/Layer2/NetPorts/netport_filetransfer.h
+include/ClanLib/Layer2/NetPorts/netport_portnumbers.h
+include/ClanLib/Layer2/NetPorts/netport_sms.h
+include/ClanLib/Layer2/Resources/resource.h
+include/ClanLib/Layer2/Resources/resource_manager.h
+include/ClanLib/Layer2/Resources/resourceoption.h
+include/ClanLib/Layer2/Resources/resourceoptions.h
+include/ClanLib/Layer2/Resources/resourcetype.h
+include/ClanLib/Layer2/Resources/resourcetype_font.h
+include/ClanLib/Layer2/Resources/resourcetype_palette.h
+include/ClanLib/Layer2/Resources/resourcetype_raw.h
+include/ClanLib/Layer2/Resources/resourcetype_sample.h
+include/ClanLib/Layer2/Resources/resourcetype_surface.h
+include/ClanLib/Layer2/StaticSoundProviders/raw_sample.h
+include/ClanLib/Layer2/StaticSoundProviders/wave_sample.h
+include/ClanLib/Layer2/StreamSoundProviders/mikmod/include/mikmod.h
+include/ClanLib/Layer2/StreamSoundProviders/mikmod/include/mikmod_build.h
+include/ClanLib/Layer2/StreamSoundProviders/mikmod/include/mikmod_internals.h
+include/ClanLib/Layer2/StreamSoundProviders/mikmod/streamed_mikmod_sample.h
+include/ClanLib/Layer2/StreamSoundProviders/streamed_raw_sample.h
+include/ClanLib/Layer2/StreamSoundProviders/streamed_wave_sample.h
+include/ClanLib/Layer2/SurfaceProviders/generic_surfaceprovider.h
+include/ClanLib/Layer2/SurfaceProviders/provider_convpoly.h
+include/ClanLib/Layer2/SurfaceProviders/provider_convpoly_basics.h
+include/ClanLib/Layer2/SurfaceProviders/provider_empty.h
+include/ClanLib/Layer2/SurfaceProviders/provider_fli.h
+include/ClanLib/Layer2/SurfaceProviders/provider_pcx.h
+include/ClanLib/Layer2/SurfaceProviders/provider_png.h
+include/ClanLib/Layer2/SurfaceProviders/provider_targa.h
+include/ClanLib/Layer2/SurfaceProviders/sprite.h
+include/ClanLib/Layer2/SurfaceProviders/sprite_subarray_provider.h
+include/ClanLib/Layer2/SurfaceProviders/sprite_subsection_provider.h
+include/ClanLib/Layer2/SurfaceProviders/surface_manager.h
+include/ClanLib/Common/clanstring.h
+include/ClanLib/Common/array.h
+include/ClanLib/Common/hashtable.h
+include/ClanLib/Common/error.h
+include/ClanLib/Common/formatted_data.h
+include/ClanLib/Common/link.h
+include/ClanLib/Common/matrix.h
+include/ClanLib/Common/memory.h
+include/ClanLib/Common/queue.h
+include/ClanLib/Common/stack.h
+include/ClanLib/Common/vector.h
+include/ClanLib/clanlib.h
+include/ClanLib/clanlayer2.h
+lib/libclan.so.0.0
+lib/libclanlayer1.so.0.0
+lib/libclanlayer2.so.0.0
+lib/libclancommon.so.0.0
+lib/libclan-network.so.0.0
+lib/libclan-sound.so.0.0
+lib/libclan-display-x11.so.0.0
+lib/libclan-display-mesa.so.0.0
+@dirrm include/ClanLib/Layer1/Display/API
+@dirrm include/ClanLib/Layer1/Display
+@dirrm include/ClanLib/Layer1/IOData/API
+@dirrm include/ClanLib/Layer1/IOData
+@dirrm include/ClanLib/Layer1/Input/API
+@dirrm include/ClanLib/Layer1/Input
+@dirrm include/ClanLib/Layer1/Network/API
+@dirrm include/ClanLib/Layer1/Network
+@dirrm include/ClanLib/Layer1/Sound/API
+@dirrm include/ClanLib/Layer1/Sound
+@dirrm include/ClanLib/Layer1/System/API
+@dirrm include/ClanLib/Layer1/System
+@dirrm include/ClanLib/Layer1
+@dirrm include/ClanLib/Layer2/InputConverters
+@dirrm include/ClanLib/Layer2/Misc
+@dirrm include/ClanLib/Layer2/NetChannels
+@dirrm include/ClanLib/Layer2/NetPorts
+@dirrm include/ClanLib/Layer2/Resources
+@dirrm include/ClanLib/Layer2/StreamSoundProviders/mikmod/drivers
+@dirrm include/ClanLib/Layer2/StreamSoundProviders/mikmod/include
+@dirrm include/ClanLib/Layer2/StreamSoundProviders/mikmod/loaders
+@dirrm include/ClanLib/Layer2/StreamSoundProviders/mikmod/mmio
+@dirrm include/ClanLib/Layer2/StreamSoundProviders/mikmod/playercode
+@dirrm include/ClanLib/Layer2/StreamSoundProviders/mikmod
+@dirrm include/ClanLib/Layer2/StreamSoundProviders
+@dirrm include/ClanLib/Layer2/StaticSoundProviders
+@dirrm include/ClanLib/Layer2/SurfaceProviders
+@dirrm include/ClanLib/Layer2
+@dirrm include/ClanLib/Common
+@dirrm include/ClanLib
