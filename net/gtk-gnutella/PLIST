@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.6 2003/07/28 11:14:07 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2004/01/26 12:10:13 adam Exp $
 bin/gtk-gnutella
-share/doc/gtk-gnutella/README
 share/gtk-gnutella/gwcache.boot
 share/gtk-gnutella/hostiles.txt
 share/gtk-gnutella/pixmaps/arrow_down.xpm
@@ -21,11 +20,13 @@ share/gtk-gnutella/pixmaps/offline.xpm
 share/gtk-gnutella/pixmaps/online.xpm
 share/gtk-gnutella/pixmaps/save.xpm
 share/gtk-gnutella/pixmaps/smallserver.xpm
+share/gtk-gnutella/pixmaps/stock_form-time-field-16.xpm
 share/gtk-gnutella/pixmaps/thaw.xpm
 share/gtk-gnutella/pixmaps/ultra.xpm
 share/gtk-gnutella/pixmaps/upload.xpm
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/gtk-gnutella.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gtk-gnutella.mo
+${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/gtk-gnutella.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/gtk-gnutella.mo
 @dirrm share/gtk-gnutella/pixmaps
 @dirrm share/gtk-gnutella
-@dirrm share/doc/gtk-gnutella
