@@ -1,4 +1,4 @@
-# $NetBSD: db1.builtin.mk,v 1.5.2.2 2004/12/03 19:15:00 tv Exp $
+# $NetBSD: db1.builtin.mk,v 1.5.2.3 2004/12/20 20:46:00 tv Exp $
 
 .for _lib_ in db db1
 .  if !defined(_BLNK_LIB_FOUND.${_lib_})
@@ -81,6 +81,7 @@ BUILDLINK_TARGETS+=	buildlink-db1-db185-h
 buildlink-db1-db185-h:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if ${TEST} ! -f ${BUILDLINK_DIR}/include/db_185.h; then		\
+		${MKDIR} -p ${BUILDLINK_DIR}/include;			\
 		${LN} -fs ${_inc_} ${BUILDLINK_DIR}/include/db_185.h;	\
 	fi
 .      endif

@@ -1,4 +1,4 @@
-# $NetBSD: bsd.sites.mk,v 1.20.2.4 2004/12/09 17:15:01 tv Exp $
+# $NetBSD: bsd.sites.mk,v 1.20.2.5 2004/12/20 20:46:00 tv Exp $
 #
 # Default MASTER_SITES
 
@@ -49,7 +49,7 @@ MASTER_SITE_GNUSTEP+=   \
 	http://ftp.easynet.nl/mirror/GNUstep/
 
 MASTER_SITE_PERL_CPAN+= \
-	ftp://cpan.pair.com/pub/CPAN/modules/by-module/ \
+	ftp://cpan.pair.com/modules/by-module/ \
 	ftp://mirrors.cloud9.net/mirrors/CPAN/modules/by-module/ \
 	ftp://ftp.uvsq.fr/pub/perl/CPAN/modules/by-module/ \
 	ftp://ftp.gmd.de/mirrors/CPAN/modules/by-module/ \
@@ -114,7 +114,6 @@ MASTER_SITE_GNOME+=     \
 	ftp://ftp.mirror.ac.uk/sites/ftp.gnome.org/pub/
 
 MASTER_SITE_SOURCEFORGE+=	\
-	http://aleron.dl.sourceforge.net/sourceforge/ \
 	http://belnet.dl.sourceforge.net/sourceforge/ \
 	http://cesnet.dl.sourceforge.net/sourceforge/ \
 	http://heanet.dl.sourceforge.net/sourceforge/ \
