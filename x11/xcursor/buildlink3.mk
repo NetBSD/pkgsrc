@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2004/02/16 23:16:02 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2004/02/17 09:13:33 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 XCURSOR_BUILDLINK3_MK:=	${XCURSOR_BUILDLINK3_MK}+
@@ -90,9 +90,11 @@ BUILDLINK_DEPENDS.xcursor+=	xcursor>=1.1.1
 .  if !empty(BUILDLINK_USE_BUILTIN.xcursor:M[yY][eE][sS])
 BUILDLINK_PREFIX.xcursor=	${X11BASE}
 .  else
+.    if !empty(BUILDLINK_CHECK_BUILTIN.xcursor:M[nN][oO])
 BUILDLINK_DEPENDS.Xrender+=	Xrender>=0.8
-.    include "../../x11/Xfixes/buildlink3.mk"
-.    include "../../x11/Xrender/buildlink3.mk"
+.      include "../../x11/Xfixes/buildlink3.mk"
+.      include "../../x11/Xrender/buildlink3.mk"
+.    endif
 .  endif
 USE_X11=	yes
 .endif	# XCURSOR_BUILDLINK3_MK
