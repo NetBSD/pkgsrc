@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1451 2004/04/26 03:07:46 tv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1452 2004/04/26 05:13:06 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -289,7 +289,7 @@ _PERL5_DEPMETHOD=	BUILD_DEPENDS
 USE_PERL5:=		run
 _PERL5_DEPMETHOD=	DEPENDS
 .  endif
-_PERL5_DEPENDS=		perl>=${_PERL5_REQD}
+_PERL5_DEPENDS=		{perl>=${_PERL5_REQD},perl-thread>=${_PERL5_REQD}}
 PERL5_PKGSRCDIR?=	../../lang/perl58
 .  if !defined(BUILDLINK_DEPENDS.perl)
 ${_PERL5_DEPMETHOD}+=	${_PERL5_DEPENDS}:${PERL5_PKGSRCDIR}
