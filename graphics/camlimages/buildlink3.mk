@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2004/05/05 03:32:05 snj Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2005/02/04 22:07:24 adrianp Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 CAMLIMAGES_BUILDLINK3_MK:=	${CAMLIMAGES_BUILDLINK3_MK}+
@@ -11,7 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ncamlimages}
 BUILDLINK_PACKAGES+=	camlimages
 
 .if !empty(CAMLIMAGES_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.camlimages+=	camlimages>=2.11
+BUILDLINK_DEPENDS.camlimages+=	camlimages>=2.2.0
 BUILDLINK_PKGSRCDIR.camlimages?=	../../graphics/camlimages
 .endif	# CAMLIMAGES_BUILDLINK3_MK
 
