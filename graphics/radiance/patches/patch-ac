@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.1.1.1 2005/02/16 22:17:33 jschauma Exp $
+$NetBSD: patch-ac,v 1.2 2005/02/16 23:20:24 jschauma Exp $
 
 Make this script run non-interactively.
 
@@ -10,7 +10,7 @@ Make this script run non-interactively.
  again2:
 -echo -n "Where do you want the library files [/usr/local/lib/ray]? "
 -set ldir=$<
-+set ldir=@WRKSRC@/builddir/lib
++set ldir=@WRKSRC@/radiance/lib
  (echo $ldir) >/dev/null
  if ( $status ) goto again2
  set ldir=$ldir
