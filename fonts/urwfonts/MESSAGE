@@ -1,3 +1,6 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.2 2002/11/07 10:40:57 wiz Exp $
+
 You'll have to add ${PREFIX}/lib/X11/fonts/URW
 to your X font path by either:
 
@@ -6,3 +9,5 @@ $ xset fp rehash
 
 or by adding it to your X-server configuration file (usually
 /etc/X11/XF86Config) and restarting the X-server.
+
+===========================================================================
