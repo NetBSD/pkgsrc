@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2004/01/28 14:16:41 xtraeme Exp $
+# $NetBSD: Makefile,v 1.25 2004/02/16 21:34:18 seb Exp $
 
 DISTNAME=	mule-2.3
 PKGREVISION=	2
@@ -43,8 +43,8 @@ CONFIGURE_ARGS+=	--canna --canna-includes=${BUILDLINK_PREFIX.canna}/include --ca
 
 USE_MAKEINFO=	YES
 INFO_FILES=	CCL ISO2022 R2L XFONT antenews-jp canna-jp cl dired-x
-INFO_FILES+=	egg emacs forms gnus kbd-trans languages m2ps mule quail
-INFO_FILES+=	sc terminology vip
+INFO_FILES+=	egg egg-jp emacs forms gnus kbd-trans languages m2ps mule
+INFO_FILES+=	mule-jp quail sc terminology vip
 
 MAN1=		coco.1 ctags.1 etags.1 m2ps.1 mule.1
 
