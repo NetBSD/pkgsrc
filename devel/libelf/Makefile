@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2004/08/13 07:09:01 cube Exp $
+# $NetBSD: Makefile,v 1.4 2004/10/21 17:48:04 reed Exp $
 #
 
 DISTNAME=		libelf-0.8.5
 PKGREVISION=		1
 CATEGORIES=		devel
-MASTER_SITES=		http://www.stud.uni-hannover.de/~michael/software/
-
+MASTER_SITES=		http://www.stud.uni-hannover.de/~michael/software/ \
+			${MASTER_SITE_SUNSITE:=libs/}
 MAINTAINER=		petrov@NetBSD.org
 HOMEPAGE=		http://www.stud.uni-hannover.de/~michael/software/
 COMMENT=		ELF object file access library
