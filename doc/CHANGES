@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.719 2002/12/07 21:20:44 cjep Exp $
+$NetBSD: CHANGES,v 1.720 2002/12/07 23:39:50 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3859,3 +3859,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated xmame to 0.62.1nb1 [kristerw 2002-12-07]
 	Updated xmess to 0.56.2nb1 [kristerw 2002-12-07]
 	Added wdm-1.20 [cjep 2002-12-07]
+	Updated curl to 7.10.2 [jmmv 2002-12-07]
