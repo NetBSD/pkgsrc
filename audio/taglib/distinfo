@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/02/09 00:30:24 chris Exp $
+
+SHA1 (taglib-1.0.tar.gz) = 419c0db9cda2f97497fd843417cb09b63cee59db
+Size (taglib-1.0.tar.gz) = 688419 bytes
+SHA1 (patch-aa) = 541795a7c2a551bde2ee2492b56e4b4a9335967c
