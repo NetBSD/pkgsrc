@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2002/10/23 18:16:58 bouyer Exp $
+# $NetBSD: Makefile,v 1.27 2003/01/31 12:16:47 abs Exp $
 # FreeBSD Id: Makefile,v 1.2 1998/03/19 01:54:59 msmith Exp
 #
 
@@ -30,7 +30,7 @@ WRKSRC=			${WRKDIR}/vnc_unixsrc
 
 ALL_TARGET=		World
 
-MAKE_ENV+= CC=${CC}	#for make imake in Xvnc/config/imake
+MAKE_ENV+= CC=${CC:Q}	#for make imake in Xvnc/config/imake
 
 # We have to frob a few things, and we want our own permissions, so it's easier
 # to do the install ourselves.
