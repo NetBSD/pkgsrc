@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2001/05/04 10:15:46 skrll Exp $
+# $NetBSD: Makefile,v 1.12 2001/06/11 16:13:33 jlam Exp $
 
 DISTNAME=		gcc-2.95.2
 PKGNAME=		pgcc-2.95.2.1
@@ -40,6 +40,7 @@ CONFIGURE_ARGS=		--host=${MACHINE_GCC_PLATFORM} \
 			--prefix=${GCC_PREFIX} \
 			--enable-shared
 CONFIGURE_SCRIPT=	${SRCDIR}/configure
+INFO_FILES=		chill cpp g77 gcc
 
 # For pgcc, GCC_VERSION is actually the name of a subdirectory in the gcc
 # library tree.  We keep the odd name to keep this Makefile in-sync with
@@ -91,6 +92,7 @@ post-build:
 
 .if (${OPSYS} != SunOS)
 post-install:
+	${RM} -f ${GCC_PREFIX}/lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/include/curses.h ${PREFIX}/${PKGNAME}/bin/cc
 	${LN} -s gcc ${PREFIX}/${PKGNAME}/bin/cc
 	${RM} -f ${GCC_PREFIX}/lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/include/curses.h
 	${INSTALL_DATA} ${WRKDIR}/gcc.mk ${PREFIX}/etc/${PKGNAME}.mk
