@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2001/07/13 14:41:19 fredb Exp $
+# $NetBSD: Makefile,v 1.17 2001/08/29 22:41:09 jlam Exp $
 #
 
 DISTNAME=	maketool-0.6.1
@@ -14,10 +14,9 @@ USE_BUILDLINK_ONLY=	YES
 BUILD_USES_MSGFMT=	YES
 
 USE_GMAKE=	yes
-USE_X11=	yes
-
 GNU_CONFIGURE=	yes
 
 .include "../../devel/gettext-lib/buildlink.mk"
 .include "../../x11/gtk/buildlink.mk"
+.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

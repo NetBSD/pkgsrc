@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/07/14 03:07:34 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2001/08/29 22:41:18 jlam Exp $
 #
 
 .include "../Mesa/Makefile.common"
@@ -37,4 +37,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/include/GL/${inc} ${PREFIX}/include/GL
 .endfor
 
+.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

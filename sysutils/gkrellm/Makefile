@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/08/23 19:11:36 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2001/08/29 22:41:21 jlam Exp $
 #
 
 DISTNAME=	gkrellm-1.2.1
@@ -34,4 +34,5 @@ do-install:
 .include "../../devel/pth/buildlink.mk"
 .include "../../graphics/imlib/buildlink.mk"
 .include "../../x11/gtk/buildlink.mk"
+.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

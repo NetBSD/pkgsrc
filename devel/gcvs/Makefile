@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/06/29 04:54:51 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2001/08/29 22:41:08 jlam Exp $
 
 DISTNAME=		gcvs-1.0a7
 CATEGORIES=		devel
@@ -11,7 +11,6 @@ COMMENT=		GTK interface for CVS
 CONFLICTS=		cvs-[0-9]*
 
 USE_BUILDLINK_ONLY=	yes
-USE_X11=		yes
 USE_GMAKE=		yes
 GNU_CONFIGURE=		yes
 
@@ -25,4 +24,5 @@ post-patch:
 
 .include "../../lang/tcl/buildlink.mk"
 .include "../../x11/gtk/buildlink.mk"
+.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

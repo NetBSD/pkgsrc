@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2001/06/26 20:26:16 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2001/08/29 22:41:06 jlam Exp $
 #
 
 DISTNAME=	vipec-2.0.4
@@ -12,7 +12,6 @@ COMMENT=	Network analyser for electrical networks
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
-USE_X11=		yes
 USE_BUILDLINK_ONLY=	yes
 
 CONFIGURE_ARGS+=	--with-qt-dir=${BUILDLINK_QTDIR}
@@ -36,4 +35,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/vipec/help/models/*.png ${PREFIX}/share/doc/vipec/models
 
 .include "../../x11/qt2-libs/buildlink.mk"
+.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
