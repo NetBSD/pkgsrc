@@ -1,5 +1,293 @@
-        The Network Audio System is designed for playing,
-        recording, and manipulating audio data over a network.
-        Like the X Window System, it uses the client/server model to
-        separate applications from the specific drivers that control
-        audio input and output devices.                                       
+The Network Audio System is designed for playing, recording, and
+manipulating audio data over a network.  Like the X Window System, it
+uses the client/server model to separate applications from the
+specific drivers that control audio input and output devices. 
+
+The README file from the distribution follows:
+
+    ***********************************************************************
+    *                                                                     *
+    *		         The Network Audio System (NAS)                   *
+    *                                                                     *
+    *			 An Audio Protocol For Networks                   *
+    *                                                                     *
+    *                      Release 1.2 - June 3, 1994			  *
+    *                                                                     *
+    ***********************************************************************
+
+				       or
+
+    			open ("/dev/audio")?  Just Say No!
+
+
+This directory tree contains sources for the Network Audio System, a
+network-transparent, client/server audio system, including:
+
+    o   sample server implementations
+
+	- Sun Sparc 1 AM79C30A Digital Subscriber Controller and
+	      Sparc 10 Dual Basic Rate ISDN Interface
+	  (SunOS 4.1.[23], Solaris 2.x)
+
+	- SGI Indigo (IRIX 5.x)
+
+	- VOXware (FreeBSD, Linux, SVR4.[02])
+
+	- HPUX
+
+    o	an application programming interface library
+    o	a variety of sample applications
+
+The client software can also be used with several models of NCD X
+terminals as well as NCD's PCXware (an X server for PCs running
+Microsoft Windows).
+
+Key features of the Network Audio System include:
+
+    o	Device-independent audio over the network
+    o	Lots of audio file and data formats
+    o	Can store sounds in server for rapid replay
+    o	Extensive mixing, separating, and manipulation of audio data
+    o	Simultaneous use of audio devices by multiple applications
+    o	Use by a growing number of ISVs
+    o	Small size
+    o	Free!  No obnoxious licensing terms
+
+Please note that the Network Audio System has no relationship to the NetAudio 
+products from Townshend Computer Tools.
+
+Look at the file doc/xcon94paper.ps for a paper on the Network Audio
+System.
+
+				 *  *  *  *  *
+
+I.  Roadmap
+
+Here is a quick guide to where things are in this distribution (relative to
+the directory nas/):
+
+	README			this file
+	HISTORY			log of changes
+	BUGS			known landmines
+	BUILDNOTES		notes on building under various OSs, X releases
+	TODO			things we'd like to get around to doing
+	RELEASE			release identification
+	doc/			not enough documentation; overview, slides, lib
+	config/			a little bit of imake stuff
+	lib/audio/		API used by sample programs
+	clients/audio/		sample programs
+	server/			server code
+	    dia/		device-independent bits
+	    dda/sun/		device-dependent audio driver for Sun
+	    dda/sgi/		device-dependent audio driver for SGI Indigo
+	    dda/voxware/	device-dependent audio driver for VOXware
+	    dda/hpux/		device-dependent audio driver for Hpux
+
+When built, the server will be in server/[ausun,ausgi,auvoxware,auhpux], the 
+library in lib/audio/libaudio.a, and the sample applications in
+clients/audio/aufoo/aufoo.
+
+In addition, the separate distribution sounds.tar.Z contains a directory of
+example sounds:
+
+	examples/sounds/	various sounds that can be played
+
+If you don't have your own sound bites to nibble, grab these.
+
+				 *  *  *  *  *
+
+II.  Building the Release
+
+To build the software:
+
+    1.	Make sure you have imake.
+	(See the BUILDNOTES file if you want to try building with X11R4).
+
+    2.	Look at config/NetAudio.tmpl and add a BINDIR definition if you want.
+	By default, the programs are put into /usr/bin/X11.
+
+    3.	Do "xmkmf" to create the initial Makefile.
+
+    4.	Do "make World" (note the uppercase World) to build the distribution.
+	(Attention Linux Users: instead of "make World" you should do
+	 make WORLDOPTS="-k CDEBUGFLAGS='-O2 -D__USE_BSD_SIGNAL'" World)
+
+	If you'd like to enable the option of having the audio library
+	automatically start up an NAS server on the local host when
+	necessary, use the following command to build the
+	distribution:
+
+	make WORLDOPTS='-k CDEBUGFLAGS="$(CDEBUGFLAGS) -DSTARTSERVER"' World
+
+    5.	If everything built successfully, you can install it using
+	"make install"; to temporarily stage it under some directory, use
+	"make install DESTDIR=/usr/tmp/nas" or some such.
+
+    6.	To install the manual pages, use "make install.man" or 
+	"make install.man DESTDIR=/usr/tmp/nas" as above.
+
+A complete installation should include the following files:
+
+	/usr/include/audio/Afuncproto.h		Header files
+	/usr/include/audio/Afuncs.h
+	/usr/include/audio/Amd.h
+	/usr/include/audio/Aos.h
+	/usr/include/audio/Aosdefs.h
+	/usr/include/audio/Aproto.h
+	/usr/include/audio/audio.h
+	/usr/include/audio/Alibint.h
+	/usr/include/audio/Alibnet.h
+	/usr/include/audio/Xtutil.h
+	/usr/include/audio/audiolib.h
+	/usr/include/audio/audioutil.h
+	/usr/include/audio/snd.h
+	/usr/include/audio/wave.h
+	/usr/include/audio/voc.h
+	/usr/include/audio/aiff.h
+	/usr/include/audio/sound.h
+	/usr/include/audio/soundlib.h
+	/usr/include/audio/fileutil.h
+	/usr/include/audio/8svx.h
+	/usr/include/audio/Astreams.h
+
+	/usr/bin/X11/auconvert			Sample programs
+	/usr/bin/X11/auctl
+	/usr/bin/X11/audemo
+	/usr/bin/X11/audial
+	/usr/bin/X11/auedit
+	/usr/bin/X11/auinfo
+	/usr/bin/X11/aupanel
+	/usr/bin/X11/auplay
+	/usr/bin/X11/aurecord
+	/usr/bin/X11/autool
+	/usr/bin/X11/auwave
+	/usr/bin/X11/auphone
+	/usr/bin/X11/auscope
+	/usr/bin/X11/soundtoh
+	/usr/bin/X11/issndfile
+	/usr/bin/X11/playbucket
+	/usr/bin/X11/checkmail
+
+	/usr/man/mann/*.n			Client, server, and misc
+						man pages
+
+	/usr/man/man3/*.3			API man pages
+
+	/usr/lib/libaudio.a			API library
+	/usr/lib/X11/AuErrorDB			Error database
+
+	/usr/bin/X11/ausun			Sun server or 
+	/usr/bin/X11/ausgi			SGI server or 
+	/usr/bin/X11/auvoxware			VOXware server
+	/usr/bin/X11/auhpux			Hpux server
+	/usr/bin/X11/au				symlink to one of the above
+
+				 *  *  *  *  *
+
+III.  Using the Network Audio System
+
+Now that you have things built, you can use the Network Audio System
+as follows:
+
+	%  ausun -aa &		# -aa allows any host access
+	%  setenv AUDIOSERVER `hostname`:0
+	%  auinfo
+	%  audemo examples/sounds
+	%  ...
+
+If you are using it over the network, the shorthand syntax for specifying an
+audio server is hostname:0.  Access control is still a bit primitive....
+
+				 *  *  *  *  *
+
+IV.  Using the Network Audio System with Sun Deskset
+
+The "autool" program can be used as a replacement for audiotool.  This
+allows Sun Deskset applications (e.g. mailtool, etc.) to be used with
+the Network Audio System.  See the autool man page
+(clients/audio/autool/autool.man) for details on how to configure
+Deskset.
+
+				 *  *  *  *  *
+
+V.  Games
+
+Well, now that you have networked audio, it's time to actually use it
+for something.  XBoing and xpilot are both distributed with Network
+Audio System support.  Check ftp.x.org:/contrib/audio/nas/contrib for
+other applications that support the Network Audio System.
+
+				 *  *  *  *  *
+
+VI.  Finding Sounds to Play With
+
+Users with some versions of SunOS can find a number of audio files to
+listen to in /usr/demo/SOUND/sounds/.  Once the Network Audio System
+is running, they can be examined using:
+
+	%  audemo /usr/demo/SOUND/sounds
+
+A separate tar archive called sounds.tar.Z is available from ftp.x.org.
+
+For the true audio packrat, there are a number of anonymous ftp sites that
+contain archives of thousands of sound bites.  The "Sound Site Newsletter"
+published periodically on comp.sys.ibm.pc.soundcard, comp.sys.ibm.pc.misc, and
+rec.games.misc contains a detailed list of machines, bulletin boards, etc.
+
+				 *  *  *  *  *
+
+VII.  For More Information
+
+We've set up a mailing list for folks who are working with the Network
+Audio System:
+
+    nas@ncd.com			General discussion of the Network
+				Audio System; anyone who who will
+				actively participate is welcome to
+				join.
+
+    nas-request@ncd.com		Where to send requests to get on or off the
+				mailing list.
+
+
+The Network Audio System has benefited greatly from the testing and
+contributions of many people on the mailing list.  We'd like to thank
+them for their help and encourage everyone to participate in the
+on-going development process.
+
+We hope you enjoy the Network Audio System.  There're still a few
+pieces to be added, but already a significant number of hardware and
+software vendors are finding that it solves their problems.  Besides,
+you can't beat the price!  :-)
+
+
+				Jim Fulton, Greg Renda, Dave Lemke
+				Network Computing Devices, Inc.
+
+
+--------------------------------------------------------------------------------
+
+		 Copyright 1995 Network Computing Devices, Inc.
+
+    Permission to use, copy, modify, distribute, and sell this software and
+    its documentation for any purpose is hereby granted without fee, provided
+    that the above copyright notice appear in all copies and that both that
+    copyright notice and this permission notice appear in supporting
+    documentation, and that the name Network Computing Devices, Inc. not be
+    used in advertising or publicity pertaining to distribution of this 
+    software without specific, written prior permission.
+    
+    THIS SOFTWARE IS PROVIDED `AS-IS'.  NETWORK COMPUTING DEVICES, INC.,
+    DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE, INCLUDING WITHOUT
+    LIMITATION ALL IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+    PARTICULAR PURPOSE, OR NONINFRINGEMENT.  IN NO EVENT SHALL NETWORK
+    COMPUTING DEVICES, INC., BE LIABLE FOR ANY DAMAGES WHATSOEVER, INCLUDING
+    SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES, INCLUDING LOSS OF USE, DATA,
+    OR PROFITS, EVEN IF ADVISED OF THE POSSIBILITY THEREOF, AND REGARDLESS OF
+    WHETHER IN AN ACTION IN CONTRACT, TORT OR NEGLIGENCE, ARISING OUT OF OR IN
+    CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+Translation:  You can do whatever you want with this software!
+
+
+	     $NCDId: @(#)README,v 1.30 1995/11/28 23:24:54 greg Exp $
