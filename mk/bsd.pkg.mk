@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1167 2003/04/15 05:29:45 grant Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1168 2003/04/15 19:51:21 grant Exp $
 #
 # This file is in the public domain.
 #
@@ -1749,8 +1749,10 @@ do-extract: ${WRKDIR}
 #	hierarchy as the pkgsrc tree, i.e. local patches for www/apache
 #	would be found as ${LOCALPATCHES}/www/apache/*.
 #
+.if defined(LOCALPATCHES)
 _DFLT_LOCALPATCHFILES=	${LOCALPATCHES}/${PKGPATH}/*
 _LOCALPATCHFILES=	${_DFLT_LOCALPATCHFILES}
+.endif
 
 .if !target(do-patch)
 do-patch: uptodate-digest
