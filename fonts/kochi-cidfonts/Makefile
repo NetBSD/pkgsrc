@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2003/05/14 14:07:54 kei Exp $
+# $NetBSD: Makefile,v 1.4 2003/07/17 21:37:23 grant Exp $
 
 DISTNAME=	Kochi-CID-0.018
 PKGNAME=	kochi-cidfonts-0.018
@@ -7,7 +7,7 @@ MASTER_SITES=	http://openlab.jp/efont/dist/Kochi-CID/current/
 MASTER_SITES+=	http://khdd.net/Kochi-CID/current/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	tech-pkg-ja@jp.netbsd.org
+MAINTAINER=	tech-pkg-ja@jp.NetBSD.org
 HOMEPAGE=	http://khdd.net/Kochi-CID/
 COMMENT=	Kochi-Mincho/Gothic scalable font in CID-Keyed format
 

@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.12 2003/03/29 12:40:34 jmmv Exp $
+# $NetBSD: Makefile,v 1.13 2003/07/17 21:31:26 grant Exp $
 #
 
 DISTNAME=	libgetopt-${VERS}
 WRKSRC=		${WRKDIR}/libgetopt
 CATEGORIES=	pkgtools sysutils
 MASTER_SITES=	${MASTER_SITE_LOCAL}
-# MASTER_SITES=	ftp://ftp.netbsd.org/pub/NetBSD/NetBSD-current/src/lib/libc/stdlib/ \
-#	 	ftp://ftp.de.netbsd.org/pub/NetBSD/NetBSD-current/src/lib/libc/stdlib/
+# MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/NetBSD-current/src/lib/libc/stdlib/ \
+#	 	ftp://ftp.de.NetBSD.org/pub/NetBSD/NetBSD-current/src/lib/libc/stdlib/
 DISTFILES=	getopt_long.c-${VERS} getopt_long.3-${VERS}
 
-MAINTAINER=	hubertf@netbsd.org,mcr@netbsd.org
+MAINTAINER=	hubertf@NetBSD.org,mcr@NetBSD.org
 COMMENT=	Library for handling --long options
 
 NO_SRC_ON_FTP=	Already in MASTER_SITE_LOCAL

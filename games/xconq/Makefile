@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.15 2003/07/02 21:38:14 seb Exp $
+# $NetBSD: Makefile,v 1.16 2003/07/17 21:39:30 grant Exp $
 
 DISTNAME=		xconq-7.4.1
 CATEGORIES=		games x11
 MASTER_SITES=		ftp://sources.redhat.com/pub/xconq/
 
-MAINTAINER=		kleink@netbsd.org
+MAINTAINER=		kleink@NetBSD.org
 HOMEPAGE=		http://sources.redhat.com/xconq/
 COMMENT=		Xconq is a general strategy game system
 

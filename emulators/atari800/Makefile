@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2003/07/13 17:51:49 dillo Exp $
+# $NetBSD: Makefile,v 1.20 2003/07/17 21:35:19 grant Exp $
 #
 
 DISTNAME=	atari800-1.3.0
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=atari800/}
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} xf25.zip
 EXTRACT_CMD.zip=       ${LOCALBASE}/bin/unzip -Lqo $${extract_file}
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://atari800.atari.org
 COMMENT=	Atari 8-bit computer, 5200 console emulator
 

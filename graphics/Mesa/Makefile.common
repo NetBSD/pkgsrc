@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.16 2003/07/15 23:31:21 jschauma Exp $
+# $NetBSD: Makefile.common,v 1.17 2003/07/17 21:39:59 grant Exp $
 
 # Latest is:		5.0.1
 # Default is:		3.4.2
@@ -10,7 +10,7 @@ CATEGORIES?=		graphics
 MASTER_SITES?= 		${MASTER_SITE_SOURCEFORGE:=mesa3d/}
 EXTRACT_SUFX?=		.tar.bz2
 
-MAINTAINER?=		tech-pkg@netbsd.org
+MAINTAINER?=		tech-pkg@NetBSD.org
 HOMEPAGE?=		http://www.mesa3d.org/
 
 USE_GMAKE=		yes

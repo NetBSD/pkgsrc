@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/06/02 01:20:16 jschauma Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/17 21:33:31 grant Exp $
 #
 
 DISTNAME=	python-mode-4.6
@@ -7,7 +7,7 @@ CATEGORIES=	devel
 MASTER_SITES=	http://www.python.org/emacs/python-mode/
 DISTFILES=	python-mode.el
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.python.org/emacs/python-mode/
 COMMENT=	Emacs mode for editing python files
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/06/02 01:19:48 jschauma Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/17 21:37:03 grant Exp $
 #
 
 DISTNAME=	geoslab703-ttf-20010522
@@ -7,7 +7,7 @@ CATEGORIES=	fonts
 MASTER_SITES=	http://www.will-harris.com/fonts/
 DISTFILES=	geo703l.ttf geo703li.ttf
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.will-harris.com/fonts/freefonts.htm
 COMMENT=	Free TrueType fonts from Bitstream, useful for web viewing
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2003/07/13 13:51:24 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2003/07/17 21:32:58 grant Exp $
 #
 
 DISTNAME=		pango-1.2.3
@@ -8,7 +8,7 @@ MASTER_SITES=		ftp://ftp.gtk.org/pub/gtk/v2.2/ \
 			ftp://ftp.cs.umn.edu/pub/gimp/gtk/v2.2/ \
 			${MASTER_SITE_GNOME:=sources/pango/1.2/}
 
-MAINTAINER=		tech-pkg@netbsd.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.pango.org
 COMMENT=		Library for layout and rendering of text
 

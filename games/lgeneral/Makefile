@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/07/13 13:51:51 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/17 21:38:59 grant Exp $
 #
 
 DISTNAME=	lgeneral-1.1.1
@@ -6,7 +6,7 @@ PKGREVISION=	3
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lgeneral/}
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://lgames.sourceforge.net/index.php?project=LGeneral
 COMMENT=	Panzer General play-a-like, uses Panzer General data files
 

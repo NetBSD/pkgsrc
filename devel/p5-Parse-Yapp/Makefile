@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/06/02 01:20:23 jschauma Exp $
+# $NetBSD: Makefile,v 1.7 2003/07/17 21:32:45 grant Exp $
 #
 
 DISTNAME=      	Parse-Yapp-1.05
@@ -7,7 +7,7 @@ SVR4_PKGNAME=	p6pya
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Parse/}
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 COMMENT=	perl5 LALR parser
 
 USE_BUILDLINK2=		YES

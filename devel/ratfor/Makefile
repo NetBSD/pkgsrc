@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2003/06/02 01:20:16 jschauma Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/17 21:33:31 grant Exp $
 
 DISTNAME=		ratfor77
 PKGNAME=		ratfor-1.0
 CATEGORIES=		devel
 MASTER_SITES=		ftp://sepftp.stanford.edu/pub/sep-distr/
 
-MAINTAINER=		tech-pkg@netbsd.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://sepwww.stanford.edu/software/ratfor.html
 COMMENT=		Preprocessor for the Ratfor dialect of Fortran
 

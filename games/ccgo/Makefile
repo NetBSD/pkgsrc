@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/07/13 13:51:42 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/17 21:37:58 grant Exp $
 #
 
 DISTNAME=		ccgo-0.3.1
@@ -6,7 +6,7 @@ PKGREVISION=		2
 CATEGORIES=		games
 MASTER_SITES=		http://ccdw.org/~cjj/prog/ccgo/
 
-MAINTAINER=		tech-pkg@netbsd.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://ccdw.org/~cjj/prog/ccgo/
 COMMENT=		Go board with IGS and gnugo interface
 

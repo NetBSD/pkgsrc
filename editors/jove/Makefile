@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/06/02 01:20:09 jschauma Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/17 21:34:33 grant Exp $
 #
 
 DISTNAME=	jove-4.16
@@ -6,7 +6,7 @@ WRKSRC=		${WRKDIR}/jove
 CATEGORIES=	editors
 MASTER_SITES=	ftp://ftp.cs.toronto.edu/pub/moraes/jove/
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 COMMENT=	small emacs-style editor, but lacks the LISP engine
 
 NO_CONFIGURE=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2003/07/13 13:51:22 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2003/07/17 21:31:51 grant Exp $
 #
 
 DISTNAME=		mrproject-0.5.1
@@ -6,7 +6,7 @@ PKGREVISION=		6
 CATEGORIES=		devel
 MASTER_SITES=		ftp://ftp.codefactory.se/pub/software/mrproject/source/
 
-MAINTAINER=		tech-pkg@netbsd.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://mrproject.codefactory.se/
 COMMENT=		Project management program
 

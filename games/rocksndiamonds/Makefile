@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2003/04/10 01:28:18 grant Exp $
+# $NetBSD: Makefile,v 1.12 2003/07/17 21:39:20 grant Exp $
 #
 
 DISTNAME=		rocksndiamonds-2.1.1
@@ -6,7 +6,7 @@ PKGREVISION=		1
 CATEGORIES=		games x11
 MASTER_SITES=		http://www.artsoft.org/RELEASES/unix/rocksndiamonds/
 
-MAINTAINER=		heinz-rnd@netbsd.org
+MAINTAINER=		heinz-rnd@NetBSD.org
 HOMEPAGE=		http://www.artsoft.org/rocksndiamonds/
 COMMENT=		Game like Boulderdash, Emerald Mine, or Sokoban with lots of levels
 

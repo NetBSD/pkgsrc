@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.17 2003/05/10 16:37:13 drochner Exp $
+# $NetBSD: Makefile,v 1.18 2003/07/17 21:40:59 grant Exp $
 
 PKGNAME=		${DISTNAME:S/MesaLib/glut/}
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX}
 DISTFILES+=		${DISTNAME:S/MesaLib/MesaDemos/}${EXTRACT_SUFX}
 WRKSRC=			${WRKDIR}/${DISTNAME:S/Lib//}
-MAINTAINER=		rh@netbsd.org
+MAINTAINER=		rh@NetBSD.org
 COMMENT=		GLUT Graphics library similar to SGI's OpenGL
 
 CONFLICTS+=		Mesa-glx-[0-9]*

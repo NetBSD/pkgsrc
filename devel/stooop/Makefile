@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2003/06/02 01:20:14 jschauma Exp $
+# $NetBSD: Makefile,v 1.8 2003/07/17 21:34:07 grant Exp $
 
 DISTNAME=	stooop-4.1.1
 CATEGORIES=	x11 tcl
 MASTER_SITES=	http://jfontain.free.fr/
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://jfontain.free.fr/
 COMMENT=	Simple Tcl Only Object Oriented Programming scheme
 

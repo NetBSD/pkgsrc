@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.17 2003/07/13 13:51:26 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2003/07/17 21:33:22 grant Exp $
 #
 
 PKGNAME=	${PYPKGPREFIX}-curses-0
 PKGREVISION=	1
 CATEGORIES=	devel
 
-MAINTAINER=	tsarna@netbsd.org
+MAINTAINER=	tsarna@NetBSD.org
 HOMEPAGE=	http://www.python.org/doc/current/lib/module-curses.html
 COMMENT=	Curses module for Python
 

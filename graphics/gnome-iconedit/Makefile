@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2003/07/13 13:52:05 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2003/07/17 21:41:02 grant Exp $
 #
 
 DISTNAME=		gnome-iconedit-1.2.0
@@ -6,7 +6,7 @@ PKGREVISION=		3
 CATEGORIES=		graphics gnome
 MASTER_SITES=		http://www.webtribe.net/i/iain/
 
-MAINTAINER=		wiz@netbsd.org
+MAINTAINER=		wiz@NetBSD.org
 COMMENT=		icon editor based on GNOME libraries
 
 BUILD_USES_MSGFMT=	YES

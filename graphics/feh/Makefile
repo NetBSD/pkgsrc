@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/07/13 13:52:00 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2003/07/17 21:40:28 grant Exp $
 #
 
 DISTNAME=	feh-1.2.6
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.linuxbrit.co.uk/downloads/
 
-MAINTAINER=	rh@netbsd.org
+MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://www.linuxbrit.co.uk/feh/
 COMMENT=	advanced image viewer
 

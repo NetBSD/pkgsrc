@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/02/16 15:11:04 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2003/07/17 21:39:42 grant Exp $
 #
 
 DISTNAME=	xroach
@@ -7,7 +7,7 @@ CATEGORIES=	x11 games
 MASTER_SITES=	ftp://ftp.cdrom.com/pub/bsd-sources/4.4BSD-Lite/usr/src/games/
 EXTRACT_SUFX=	.tar
 
-MAINTAINER=	hubertf@netbsd.org
+MAINTAINER=	hubertf@NetBSD.org
 COMMENT=	Cockroaches hide under your windows
 
 DIST_SUBDIR=	xroach-4.4

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/06/02 01:20:12 jschauma Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/17 21:34:15 grant Exp $
 #
 
 DISTNAME=	part01
@@ -8,7 +8,7 @@ CATEGORIES=	devel
 MASTER_SITES=	http://www.landfield.com/software/comp.sources.misc/archive-name/volume25/unidiff/
 EXTRACT_SUFX=	.gz
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	#
 COMMENT=	converts between uni-diffs and context diffs
 

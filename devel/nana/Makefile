@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2003/06/23 11:32:00 seb Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/17 21:31:52 grant Exp $
 
 DISTNAME=	nana-2.4
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.cs.ntu.edu.au/pub/nana/
 
-MAINTAINER=	jlam@netbsd.org
+MAINTAINER=	jlam@NetBSD.org
 HOMEPAGE=	http://www.cs.ntu.edu.au/homepages/pjm/nana-home/
 COMMENT=	improved support for assertions and logging in C and C++
 

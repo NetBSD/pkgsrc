@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/06/18 09:22:17 agc Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/17 21:34:23 grant Exp $
 #
 
 DISTNAME=	ee-1.4.5a.src
@@ -8,7 +8,7 @@ CATEGORIES=	editors
 MASTER_SITES=	http://mahon.cwx.net/sources/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://mahon.cwx.net/
 COMMENT=	Easy to use text editor
 

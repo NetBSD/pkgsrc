@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2003/06/02 01:19:40 jschauma Exp $
+# $NetBSD: Makefile,v 1.18 2003/07/17 21:38:34 grant Exp $
 # FreeBSD Id: Makefile,v 1.6 1999/01/27 07:41:12 fenner Exp
 #
 
@@ -13,7 +13,7 @@ PATCHFILES=	gnu500+.patch
 PATCH_SITES=	http://www.tim-mann.org/xboard/
 PATCH_DIST_ARGS=	-d ${WRKDIR}/${DISTNAME} --quiet -E ${PATCH_STRIP}
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/chess/chess.html
 COMMENT=	GNU chess engine
 

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2002/09/12 13:30:28 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/17 21:39:29 grant Exp $
 #
 
 DISTNAME=	xbreaky-0.0.5
 CATEGORIES=	games
 MASTER_SITES=	http://xbreaky.sourceforge.net/
 
-MAINTAINER=	rh@netbsd.org
+MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://xbreaky.sourceforge.net/
 COMMENT=	breakout game for X11
 

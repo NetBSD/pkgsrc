@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2003/06/02 01:19:34 jschauma Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/17 21:39:35 grant Exp $
 #
 
 DISTNAME=	xgospel-1.12d
 CATEGORIES=	games x11
 MASTER_SITES=	http://img.teaser.fr/~jlgailly//
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://gailly.net/xgospel/
 COMMENT=	X11 based IGS client
 

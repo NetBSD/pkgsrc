@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2003/07/14 11:15:28 adam Exp $
+# $NetBSD: Makefile,v 1.47 2003/07/17 21:36:25 grant Exp $
 
 DISTNAME=		Wine-20030709
 PKGNAME=		${DISTNAME:S/W/w/}
@@ -6,7 +6,7 @@ WRKSRC= 		${WRKDIR}/${DISTNAME:tl}
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_SUNSITE:=ALPHA/wine/development/}
 
-MAINTAINER=		adam@netbsd.org
+MAINTAINER=		adam@NetBSD.org
 HOMEPAGE=		http://www.winehq.com/
 COMMENT=		Free implementation of Windows on Unix (still alpha)
 

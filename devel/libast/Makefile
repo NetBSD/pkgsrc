@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2003/07/13 13:51:17 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/17 21:31:17 grant Exp $
 
 DISTNAME=		libast-0.5
 PKGREVISION=		3
 CATEGORIES=		devel
 MASTER_SITES=   	http://www.eterm.org/download/
 
-MAINTAINER=		gendalia@netbsd.org
+MAINTAINER=		gendalia@NetBSD.org
 HOMEPAGE=		http://freshmeat.net/projects/libast/?topic_id=809%2C861
 COMMENT=		The Library of Assorted Spiffy Things
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2003/06/11 20:50:52 abs Exp $
+# $NetBSD: Makefile,v 1.38 2003/07/17 21:31:50 grant Exp $
 #
 
 DISTNAME=		pthreads-1_60_beta6
@@ -6,7 +6,7 @@ PKGNAME=		mit-pthreads-1.60b6
 CATEGORIES=		devel
 MASTER_SITES=		ftp://sipb.mit.edu/pub/pthreads/
 
-MAINTAINER=		agc@netbsd.org
+MAINTAINER=		agc@NetBSD.org
 HOMEPAGE=		http://www.mit.edu:8001/people/proven/pthreads.html
 COMMENT=		Chris Provenzano's (MIT) POSIX threads library
 

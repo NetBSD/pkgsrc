@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/07/13 13:51:46 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2003/07/17 21:38:30 grant Exp $
 #
 
 DISTNAME=	gnome-breakout-0.5.2
@@ -6,7 +6,7 @@ PKGREVISION=	4
 CATEGORIES=	games gnome
 MASTER_SITES=	http://www.senet.com.au/~alcaron/
 
-MAINTAINER=	rh@netbsd.org
+MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://www.senet.com.au/~alcaron/software.html
 COMMENT=	Gnome version of the classic breakout game
 

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.8 2003/07/13 13:51:50 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2003/07/17 21:38:53 grant Exp $
 
 DISTNAME=	knights-0.4.6
 PKGREVISION=	3
 CATEGORIES=	games kde
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=knights/}
 
-MAINTAINER=	jlam@netbsd.org
+MAINTAINER=	jlam@NetBSD.org
 HOMEPAGE=	http://knights.sourceforge.net/
 COMMENT=	chess interface for KDE
 
