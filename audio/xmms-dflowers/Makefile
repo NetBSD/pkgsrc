@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/08/16 04:30:11 zuntum Exp $
+# $NetBSD: Makefile,v 1.7 2001/08/17 21:16:47 jlam Exp $
 #
 
 DISTNAME=	dflowers-1.2
@@ -14,9 +14,6 @@ USE_BULIDLINK_ONLY=	YES
 USE_X11=		YES
 USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
-
-MAKE_ENV+=	GTK_CONFIG=${BUILDLINK_CONFIG_WRAPPER.gtk}
-MAKE_ENV+=	XMMS_CONFIG=${BUILDLINK_CONFIG_WRAPPER.xmms}
 
 .include "../../audio/xmms/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
