@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7101 2004/09/05 20:44:37 kristerw Exp $
+$NetBSD: CHANGES,v 1.7102 2004/09/05 23:14:00 seb Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4199,3 +4199,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated chicken to 1.66 [seb 2004-09-05]
 	Updated xmame to 0.86 [kristerw 2004-09-05]
 	Updated xmess to 0.86 [kristerw 2004-09-05]
+	Updated pkglint to 3.90 [seb 2004-09-05]
