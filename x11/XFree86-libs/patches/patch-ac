@@ -1,50 +1,22 @@
-$NetBSD: patch-ac,v 1.1.1.1 2004/01/24 08:47:28 xtraeme Exp $
+$NetBSD: patch-ac,v 1.2 2004/03/28 22:06:15 xtraeme Exp $
 
---- config/cf/Imake.rules.orig	Thu Jan  2 14:43:27 2003
-+++ config/cf/Imake.rules	Thu Jan  2 14:49:12 2003
-@@ -1406,7 +1406,7 @@
-  * this Imakefile is within the source tree.
-  */
- #ifndef RmanDependency
--#ifdef UseInstalled
-+#if defined(UseInstalled) || defined(UseInstalledPrograms)
- #define RmanDependency() /**/
- #else
- #define RmanDependency() 						@@\
-@@ -1421,7 +1421,7 @@
- #endif /* RmanDependency */
+--- programs/Xserver/hw/xfree86/xf86config/xf86config.c.orig	2003-07-09 13:48:58.000000000 +0000
++++ programs/Xserver/hw/xfree86/xf86config/xf86config.c	2003-07-09 13:49:42.000000000 +0000
+@@ -176,6 +176,9 @@
+ #endif
+ #define CONFIGNAME		XCONFIGFILE
  
- #ifndef RmanCmdDependency
--#ifdef UseInstalled
-+#if defined(UseInstalled) || defined(UseInstalledPrograms)
- #define RmanCmdDependency	/**/
- #else
- #define RmanCmdDependency	ProgramTargetName($(RMAN))
-@@ -1874,7 +1874,7 @@
-  * this Imakefile is within the source tree.
-  */
- #ifndef DependDependency
--#ifdef UseInstalled
-+#if defined(UseInstalled) || defined(UseInstalledPrograms)
- #define DependDependency() /**/
- #else
- #define DependDependency() 						@@\
-@@ -1969,7 +1969,7 @@
-  * within the source tree.
-  */
- #ifndef ImakeDependency
--#ifdef UseInstalled
-+#if defined(UseInstalled) || defined(UseInstalledPrograms)
- #define ImakeDependency(target) /**/
- #else
- #define ImakeDependency(target)						@@\
-@@ -3126,6 +3126,9 @@
++/* Comment this out for now ... */
++
++#if 0
+ #ifndef XF86_VERSION_MAJOR
+ #ifdef XVERSION
+ #if XVERSION > 40000000
+@@ -187,6 +190,7 @@
+ #define XF86_VERSION_MAJOR	4
+ #endif
+ #endif
++#endif
  
- #ifdef UseInstalled
- #define ImakeSubCmdHelper $(IMAKE_CMD)
-+#elif defined(UseInstalledPrograms)
-+#define ImakeSubCmdHelper $(IMAKE) -I$(IMAKEPREFIX)$(IRULESRC) \
-+			  $(IMAKE_DEFINES) $(IMAKE_WARNINGS)
- #else
- #define ImakeSubCmdHelper $(IMAKEPREFIX)$(IMAKE) -I$(IMAKEPREFIX)$(IRULESRC) \
- 			  $(IMAKE_DEFINES) $(IMAKE_WARNINGS)
+ 
+ int config_mousetype;		/* Mouse. */

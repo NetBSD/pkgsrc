@@ -1,8 +1,4 @@
-/*
- * $NetBSD: host.def,v 1.1.1.1 2004/01/24 08:47:34 xtraeme Exp $
- *
- * XFree86 packages for pkgsrc system
- */
+/* $NetBSD: host.def,v 1.2 2004/03/28 22:06:15 xtraeme Exp $ */
 
 #define ProjectRoot @PREFIX@
 
@@ -33,50 +29,33 @@
 #define	BuildLatin2Fonts NO
 #define	BuildPlugin NO
 #define DebuggableLibraries NO
-#define StandardIncludes \
-	-I@BLNK@/include \
-	-I@PREFIX@/include \
-	-I@LOCALBASE@/include
-
-/* Common build of libs */
-
-#define NormalLibFSa	YES
-#define NormalLibICE	YES
-#define NormalLibPex	YES
-#define NormalLibPhigs	YES
-#define NormalLibSM	YES
-#define NormalLibX11i	YES
-#define NormalLibXau	YES
-#define NormalLibXaw	YES
-#define NormalLibXdmcp	YES
-#define NormalLibXext	YES
-#define NormalLibXi	YES
-#define NormalLibXie	YES       
-#define NormalLibXmu	YES
-#define NormalLibXt	YES
-#define NormalLibXtst	YES
-#define NormalLibXag	YES
-#define NormalOldX	YES
-
-/* We need to build Xinerama shared library at least for metacity */
+#define StandardIncludes -I@BLNK@/include
 
 #undef  SharedLibXinerama
 #define SharedLibXinerama      YES
 
+#define LibInstallBuild  YES
+
 #ifndef DriDrivers
-#define DriDrivers	/* Don't build the drivers here */
+#	define DriDrivers	/* Don't build the drivers here */
 #endif
 
 #define HasXdmAuth		YES
 #define UseInstalledPrograms	YES
 
 #ifndef FreeBSDArchitecture
-#ifndef BuildThreadStubLibrary
+#  ifndef BuildThreadStubLibrary
 #	define BuildThreadStubLibrary YES
-#endif
+#  endif
 #endif
 
-#define HasZlib YES
+#define BuildRenderLibrary NO
+#define BuildExpatLibrary NO
+#define BuildFreetype2Library NO
+#define BuildFontconfigLibrary NO
+#define BuildXftLibrary NO
+#define BuildXft1Library NO
+#define BuildRandRLibrary NO
 
 #define HasFreetype2 YES
 #define Freetype2Dir @BLNK@

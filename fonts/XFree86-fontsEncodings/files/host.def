@@ -1,8 +1,4 @@
-/*
- * $NetBSD: host.def,v 1.1.1.1 2004/01/24 08:57:34 xtraeme Exp $
- *
- * XFree86 packages for pkgsrc system
- */
+/* $NetBSD: host.def,v 1.2 2004/03/28 22:06:15 xtraeme Exp $ */
 
 #define ProjectRoot @PREFIX@
 
