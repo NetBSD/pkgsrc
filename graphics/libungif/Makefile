@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.20 2002/03/14 18:18:19 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2002/08/25 18:39:15 jlam Exp $
 #
 
-DISTNAME=		libungif-4.1.0b1
-PKGNAME=		libungif-4.1.0.1
-CATEGORIES=		graphics
-MASTER_SITES=		ftp://prtr-13.ucsc.edu/pub/libungif/
+DISTNAME=	libungif-4.1.0b1
+PKGNAME=	libungif-4.1.0.1
+CATEGORIES=	graphics
+MASTER_SITES=	ftp://prtr-13.ucsc.edu/pub/libungif/
 
-MAINTAINER=		packages@netbsd.org
-HOMEPAGE=		http://prtr-13.ucsc.edu/~badger/software/libungif/index.shtml
-COMMENT=		Tools and library routines for working with GIF images
+MAINTAINER=	packages@netbsd.org
+HOMEPAGE=	http://prtr-13.ucsc.edu/~badger/software/libungif/index.shtml
+COMMENT=	Tools and library routines for working with GIF images
 
-CONFLICTS=		giflib-[0-9]*
+CONFLICTS=	giflib-[0-9]*
 
 USE_LIBTOOL=		# defined
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
@@ -18,16 +18,10 @@ LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS=		--without-x
 
-USE_BUILDLINK_ONLY=	# defined
+USE_BUILDLINK2=		# defined
 
 DOCDIR=			${PREFIX}/share/doc/libungif
 HTMLDIR=		${PREFIX}/share/doc/html/libungif
-
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "SunOS"
-MAKE_ENV+=		CC="${CC} -I${LOCALBASE}/include"
-.endif
 
 post-patch:
 	${RM} ${WRKSRC}/doc/gif2x11.html

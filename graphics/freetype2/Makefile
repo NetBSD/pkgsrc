@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2002/06/01 20:00:23 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2002/08/25 18:39:00 jlam Exp $
 #
 
 DISTNAME=	freetype-2.0.5
@@ -15,37 +15,29 @@ MAINTAINER=	rh@netbsd.org
 HOMEPAGE=	http://www.freetype.org/
 COMMENT=	font rendering engine and library API
 
-USE_BUILDLINK_ONLY=	YES
-CHECK_FREETYPE2=	YES
+USE_BUILDLINK2=		YES
 USE_GMAKE=		YES
 GNU_CONFIGURE=		YES
-USE_LIBTOOL=		YES
+CONFIGURE_DIRS=		${WRKSRC}/builds/unix
+CONFIGURE_ARGS+=	--includedir=${PREFIX}/include
 
-LTCONFIG_OVERRIDE=	${WRKSRC}/builds/unix/ltconfig
+USE_LIBTOOL=		YES
+LIBTOOL_OVERRIDE=	${WRKSRC}/builds/unix/libtool
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${HAVE_BUILTIN_FREETYPE2} != "NO"
+# Check if we got FreeType2 distributed with XFree86 4.x.
+.if exists(${X11BASE}/include/freetype2/freetype/freetype.h)
+_IS_BUILTIN_FREETYPE2!=	${EGREP} -c BuildFreetype2Library ${X11BASE}/lib/X11/config/X11.tmpl || ${TRUE}
+.else
+_IS_BUILTIN_FREETYPE2=	0
+.endif
+
+.if ${_IS_BUILTIN_FREETYPE2} != "0"
 IGNORE=		"FreeType2 has already been installed as part of XFree86-4.x"
 .endif
 
-post-patch:
-	${RM} -f ${LTCONFIG_OVERRIDE} ;				\
-	${ECHO} "${RM} -f libtool; ${LN} -s ${LIBTOOL} libtool"	\
-		> ${LTCONFIG_OVERRIDE} ;			\
-	${CHMOD} +x ${LTCONFIG_OVERRIDE} ;			\
-
-do-configure:
-		cd ${WRKSRC}/builds/unix && ${SETENV}			\
-			CC="${CC}" CFLAGS="${CFLAGS}"			\
-			CXX="${CXX}" CXXFLAGS="${CXXFLAGS}"		\
-			INSTALL="${INSTALL_PROGRAM}"			\
-			INSTALL_DATA="${INSTALL_DATA}"			\
-			INSTALL_PROGRAM="${INSTALL_PROGRAM}"		\
-			INSTALL_SCRIPT="${INSTALL_SCRIPT}"		\
-			${CONFIGURE_ENV} ${CONFIGURE_SCRIPT}		\
-				${CONFIGURE_ARGS}			\
-				--includedir=${PREFIX}/include
-		cd ${WRKSRC} && ${LN} -s builds/unix/unix.mk config.mk
+post-configure:
+	cd ${WRKSRC} && ${LN} -s builds/unix/unix.mk config.mk
 
 .include "../../mk/bsd.pkg.mk"

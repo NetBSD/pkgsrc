@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.61 2001/10/03 10:03:54 jlam Exp $
+# $NetBSD: Makefile,v 1.62 2002/08/25 18:40:37 jlam Exp $
 
 COMMENT=	API compatible clone of the OSF/Motif toolkit
 
 CONFLICTS+=	openmotif-[0-9]*
 
-USE_BUILDLINK_ONLY=	# defined
+USE_BUILDLINK2=	# defined
 
 .include "Makefile.common"
 
@@ -36,5 +36,4 @@ pre-install:
 post-install:
 	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
-.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

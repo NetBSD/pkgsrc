@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.19 2002/08/07 19:29:30 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.20 2002/08/25 18:38:46 jlam Exp $
 #
 # This Makefile fragment is included by packages that use readline().
 #
