@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2002/08/22 01:26:06 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2002/08/28 04:38:07 jlam Exp $
 
 DISTNAME=		autoconf-2.53
 PKGREVISION=		1
@@ -15,7 +15,7 @@ DEPENDS=		m4-1.4:../../devel/m4
 # which had autoconf-devel as PKGNAME.
 CONFLICTS=		autoconf-devel-[0-9]*
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--without-lispdir
@@ -27,6 +27,6 @@ INFO_FILES=		autoconf.info standards.info
 PERL5_REQD=		5.6
 TEXINFO_REQD=		4.0
 
-.include "../../lang/perl5/buildlink.mk"
+.include "../../lang/perl5/buildlink2.mk"
 .include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
