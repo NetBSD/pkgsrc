@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3854 2003/11/25 10:25:00 abs Exp $
+$NetBSD: CHANGES,v 1.3855 2003/11/25 12:10:12 salo Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4639,4 +4639,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated bidwatcher to 1.3.11rc1 [tron 2003-11-25]
 	Updated exim to 4.22nb3 [abs 2003-11-25]
 	Updated exim-exiscan to 4.22-12nb1 [abs 2003-11-25]
-
+	Updated p5-gtk to 0.7009 [salo 2003-11-25]
