@@ -1,53 +1,126 @@
-$NetBSD: patch-aa,v 1.1 2000/05/02 15:17:47 pooka Exp $
-
---- makefile.orig	Wed Sep 15 00:38:17 1999
-+++ makefile	Tue May  2 17:11:25 2000
-@@ -6,7 +6,7 @@
- #
- # Supports:	hpux, hpux_no_ansi, hpux-10.1, hpux_no_ansi-10.1,
- #		sppux, sppux-10.1, ghpux, sppux, 
--#		convex, FreeBSD, OpenBSD
-+#		convex, FreeBSD, OpenBSD, NetBSD
+$NetBSD: patch-aa,v 1.2 2001/07/16 22:04:55 garbled Exp $
+--- iozone.c.orig	Wed Jul  4 03:21:12 2001
++++ iozone.c	Mon Jul 16 11:58:10 2001
+@@ -307,9 +307,17 @@
+ #endif
  
+ #ifdef HAVE_PREAD
++#ifndef __NetBSD__
+ #include <sys/puio.h>
+ #define PVECMAX 16
+ struct piovec piov[PVECMAX];
++#else
++#include <sys/uio.h>
++#define piov_base iov_base
++#define piov_len iov_len
++#define PVECMAX 16
++struct iovec piov[PVECMAX];
++#endif
+ #endif
  
- all:  
-@@ -29,6 +29,7 @@
- 	@echo "\t->   IRIX                 (32bit)   <-"
- 	@echo "\t->   IRIX64               (64bit)   <-"
- 	@echo "\t->   linux                (32bit)   <-"
-+	@echo "\t->   NetBSD               (32bit)   <-"
- 	@echo "\t->   openbsd              (32bit)   <-"
- 	@echo "\t->   OSFV3                (64bit)   <-"
- 	@echo "\t->   OSFV4                (64bit)   <-"
-@@ -208,6 +209,15 @@
- freebsd: iozone_freebsd.o libbif.o
- 	cc -O -Dunix -DHAVE_ANSIC_C -DNO_THREADS -DSHARED_MEM \
- 		iozone_freebsd.o libbif.o -o iozone
-+
-+#
-+# GNU C compiler NetBSD build with no threads, no largefiles, no async I/O
-+#
-+
-+NetBSD: iozone_netbsd.o libbif.o
-+	cc -O -Dunix -DHAVE_ANSIC_C -DNO_THREADS -DSHARED_MEM \
-+		iozone_netbsd.o libbif.o -o iozone
-+
- #
- # GNU C compiler OpenBSD build with no threads, no largefiles, no async I/O
- #
-@@ -459,6 +469,15 @@
- 	cc -c -O -Dunix -Dbsd4_2 -DHAVE_ANSIC_C -DNO_THREADS \
- 		-DSHARED_MEM iozone.c -o iozone_freebsd.o
- 	cc -c -O -Dunix -Dbsd4_2 -DHAVE_ANSIC_C -DNO_THREADS \
-+		-DSHARED_MEM libbif.c -o libbif.o
-+
-+iozone_netbsd.o: iozone.c libbif.c
-+	@echo ""
-+	@echo "Build Iozone for NetBSD"
-+	@echo ""
-+	cc -c -O -Dunix -Dbsd4_4 -DHAVE_ANSIC_C -DNO_THREADS \
-+		-DSHARED_MEM iozone.c -o iozone_netbsd.o
-+	cc -c -O -Dunix -Dbsd4_4 -DHAVE_ANSIC_C -DNO_THREADS \
- 		-DSHARED_MEM libbif.c -o libbif.o
+ struct child_stats {
+@@ -393,7 +401,11 @@
+ #ifdef HAVE_PREAD
+ #include <sys/times.h>
+ #define CONTROL_STRING1 "%16lld%8ld%8ld%8ld%8ld%8ld%8ld%8ld%8ld%8ld%8ld%8ld%8ld%9ld%9ld%8ld%10ld%9ld%10ld%9ld%10ld%10ld%9ld\n"
++#ifdef HAVE_PREADV
+ #define CONTROL_STRING2 "%16s%8s%8s%8s%8s%10s%8s%8s%8s%8s%8s%9s%9s%8s%9s%8s%9s%7s%10s%10s%10s%9s%9s\n"
++#else
++#define CONTROL_STRING2 "%16s%8s%8s%8s%8s%10s%8s%8s%8s%8s%8s%9s%9s%8s%9s%8s%9s%7s%10s\n"
++#endif
+ #define CONTROL_STRING3 "%16s%8s%8s%8s%8s%10s%8s%8s%8s%8s%8s%9s%9s%8s%9s\n"
+ #define CONTROL_STRING4 "%16s%8s%8s%8s%8s%10s\n"
+ #else
+@@ -452,9 +464,11 @@
+ void read_stride_perf_test();	/* read with stride test	  */
+ #ifdef HAVE_PREAD
+ void pread_perf_test();		/* pread/re-pread test		  */
+-void preadv_perf_test();	/* preadv/re-preadv test	  */
+ void pwrite_perf_test();	/* pwrite/re-pwrite test	  */
++#ifdef HAVE_PREADV
++void preadv_perf_test();	/* preadv/re-preadv test	  */
+ void pwritev_perf_test();	/* pwritev/re-pwritev test	  */
++#endif
+ #endif /* HAVE_PREAD */
+ void store_dvalue();		/* Store doubles array 		  */
+ void dump_excel();
+@@ -538,9 +552,12 @@
+ #ifdef HAVE_PREAD
+ 			,
+ 			pwrite_perf_test,
+-			pread_perf_test,
++			pread_perf_test
++#ifdef HAVE_PREADV
++			,
+ 			pwritev_perf_test,
+ 			preadv_perf_test
++#endif
+ #endif /* HAVE_PREAD */
+ 	};
  
- iozone_openbsd.o: iozone.c libbif.c
+@@ -5949,6 +5966,7 @@
+ #endif
+ }
+ 
++#ifdef HAVE_PREADV
+ /************************************************************************/
+ /* pwritev_perf_test				        		*/
+ /* pwritev and re-pwritev test						*/
+@@ -5965,7 +5983,11 @@
+ 	double starttime1;
+ 	double pwritevtime[2];
+ 	double compute_val = (double)0;
++#ifndef __NetBSD__
+ 	long long list_off[PVECMAX];
++#else
++	off_t list_off[PVECMAX];
++#endif
+ 	long long numvecs,j,xx;
+ 	unsigned long long pwritevrate[2];
+ 	off64_t filebytes64,i;
+@@ -6091,8 +6113,8 @@
+ 					(caddr_t)(buffer+(xx * reclen));
+ 				if(verify)
+ 					fill_buffer(piov[xx].piov_base,reclen,(long long)pattern,sverify);
+-				piov[xx].piov_len = reclen;
+ 				piov[xx].piov_offset = list_off[xx];
++				piov[xx].piov_len = reclen;
+ 				if(purge)
+ 					purgeit(piov[xx].piov_base,reclen);
+ 			}
+@@ -6361,6 +6383,7 @@
+ 	fflush(stdout);
+ #endif
+ }
++#endif /* PREADV */
+ 
+ /************************************************************************/
+ /* print_header()							*/
+@@ -6419,11 +6442,14 @@
+ 		"pwrite",
+ 		"repwrite",
+ 		"pread",
+-		"repread",
++		"repread"
++#ifdef HAVE_PREADV
++		,
+ 		"pwritev",
+ 		"repwritev",
+ 		"preadv",
+ 		"repreadv"
++#endif
+ 		);
+ 	}else 
+ 	if(RWONLYflag){				/*kcollins 8-21-96*/
+@@ -6779,7 +6805,11 @@
+ #endif
+                 exit(119);
+         }
++#ifndef __NetBSD__
+         addr = (char *)shmat(shmid, 0, SHM_W);
++#else
++	addr = (char *)shmat(shmid, 0, 0);
++#endif
+ #ifdef __LP64__
+         if((long long)addr == (long long)-1)
+ #else
