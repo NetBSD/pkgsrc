@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.1.1.1 2001/05/31 16:40:56 agc Exp $
+$NetBSD: patch-ac,v 1.2 2002/03/19 12:21:07 wiz Exp $
 
 --- editor/src/Resources.h.orig	Fri Oct 10 06:22:00 1997
-+++ editor/src/Resources.h	Thu May 17 16:08:03 2001
++++ editor/src/Resources.h
 @@ -118,7 +118,7 @@
      sizeof(char *),
      XtOffset(AppDataPtr, filtersDirectory),
