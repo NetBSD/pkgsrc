@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2003/09/16 15:12:53 agc Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/07/17 00:33:15 schmonz Exp $
 bin/flea
 bin/mutt
 bin/muttbug
@@ -7,7 +7,7 @@ bin/pgpring
 man/man1/flea.1
 man/man1/mutt.1
 man/man1/muttbug.1
-man/man5/mbox.5
+man/man5/mutt-mbox.5
 man/man5/muttrc.5
 share/doc/mutt/COPYRIGHT
 share/doc/mutt/ChangeLog
