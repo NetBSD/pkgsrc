@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/12/05 14:11:27 recht Exp $
+
+SHA1 (netcat-0.7.0.tar.gz) = b4a9d0a1a186e6a9040d8a48b64ba7b7f702b0fe
+Size (netcat-0.7.0.tar.gz) = 396324 bytes
+SHA1 (patch-aa) = 08cd5e2fd5d2db28f56fc81f21990b70b2886444
