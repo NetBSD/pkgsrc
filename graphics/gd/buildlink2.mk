@@ -1,19 +1,19 @@
-# $NetBSD: buildlink2.mk,v 1.2 2002/08/25 18:39:02 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2003/06/23 09:53:10 adam Exp $
 
 .if !defined(GD_BUILDLINK2_MK)
 GD_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		gd
-BUILDLINK_DEPENDS.gd?=		gd>=1.8.4nb1
+BUILDLINK_DEPENDS.gd?=		gd>=2.0.15
 BUILDLINK_PKGSRCDIR.gd?=	../../graphics/gd
 
 EVAL_PREFIX+=		BUILDLINK_PREFIX.gd=gd
 BUILDLINK_PREFIX.gd_DEFAULT=	${LOCALBASE}
-BUILDLINK_FILES.gd=	include/gd*.h
+BUILDLINK_FILES.gd+=	include/gd*.h
 BUILDLINK_FILES.gd+=	lib/libgd.*
 
 .include "../../devel/zlib/buildlink2.mk"
-.include "../../graphics/freetype-lib/buildlink2.mk"
+.include "../../graphics/freetype2/buildlink2.mk"
 .include "../../graphics/jpeg/buildlink2.mk"
 .include "../../graphics/png/buildlink2.mk"
 .include "../../graphics/xpm/buildlink2.mk"
