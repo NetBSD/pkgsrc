@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.13 2004/07/12 23:10:50 wiz Exp $
+$NetBSD: patch-aa,v 1.14 2005/02/28 13:06:46 wiz Exp $
 
---- util/Makefile.in.orig	2004-07-12 22:13:07.000000000 +0200
+--- util/Makefile.in.orig	2005-02-28 13:54:04.000000000 +0100
 +++ util/Makefile.in
-@@ -559,7 +559,7 @@ uninstall-am: uninstall-binPROGRAMS unin
- # we don't actually use version.texi in the rule, but it's one way of
- # noticing when the version changes.
- texinfo.cat: texinfo-cat.in $(top_srcdir)/doc/version.texi
--	sed 's/__VERSION__/@VERSION@/g' $< >$@
-+	sed 's/__VERSION__/@VERSION@/g' $(srcdir)/texinfo-cat.in >$@
- # Tell versions [3.59,3.63) of GNU make to not export all variables.
- # Otherwise a system limit (for SysV at least) may be exceeded.
- .NOEXPORT:
+@@ -235,7 +235,7 @@ sbindir = @sbindir@
+ sharedstatedir = @sharedstatedir@
+ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
+-bin_SCRIPTS = texi2dvi texi2pdf
++bin_SCRIPTS = texi2dvi
+ 
+ # Use `ginstall-info' in the definition of PROGRAMS and in dependencies
+ # because automake generates an install-info target in every Makefile (a
