@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/01/23 20:41:49 recht Exp $
+# $NetBSD: Makefile,v 1.6 2005/01/27 03:46:30 schmonz Exp $
 #
 
 DISTNAME=		feedparser-3.3
@@ -15,7 +15,7 @@ WRKSRC=			${WRKDIR}/feedparser
 USE_BUILDLINK3=		yes
 
 PYDISTUTILSPKG=		yes
-PYTHON_VERSIONS_ACCEPTED?=	23 22 21
+PYTHON_VERSIONS_ACCEPTED?=	24 23 22 21
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
