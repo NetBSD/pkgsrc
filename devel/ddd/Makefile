@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2003/06/03 22:35:39 jmmv Exp $
+# $NetBSD: Makefile,v 1.46 2003/06/23 10:20:19 seb Exp $
 #
 
 DISTNAME=	ddd-3.3.1
@@ -14,6 +14,8 @@ USE_X11BASE=		YES
 GNU_CONFIGURE=		YES
 USE_GMAKE=		YES
 TEST_TARGET=		check
+USE_NEW_TEXINFO=	YES
+INFO_FILES=		ddd-themes.info ddd.info
 
 CONFIGURE_ARGS+=	--with-ncurses=no
 
@@ -48,5 +50,4 @@ post-install:
 .include "../../graphics/xpm/buildlink2.mk"
 .include "../../mk/motif.buildlink2.mk"
 
-.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
