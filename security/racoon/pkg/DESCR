@@ -1,2 +1,11 @@
 racoon speaks IKE (ISAKMP/Oakley) key management protocol, to
 establish security association with other hosts.
+
+Known issues:
+- cannot negotiate SA bundle, like "AH + ESP".
+- too many usage of dynamic memory allocation, which leads to memory leak.
+- non-threaded implementation.  simultaneous key negotiation performance
+  should be improved.
+- cryptic configuration syntax - blame IPsec specification too...
+
+Bug reports should be sent to http://orange.kame.net/dev/send-pr.html.

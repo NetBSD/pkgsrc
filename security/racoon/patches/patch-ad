@@ -1,0 +1,14 @@
+$NetBSD: patch-ad,v 1.1 2000/06/12 10:45:53 itojun Exp $
+--- racoon.8-	Mon Jun 12 00:46:13 2000
++++ racoon.8	Mon Jun 12 00:46:28 2000
+@@ -92,8 +92,8 @@
+ .El
+ .\" 
+ .Sh FILES
+-.Bl -tag -width /usr/local/v6/etc/racoon.conf -compact
+-.It Pa /usr/local/v6/etc/racoon.conf
++.Bl -tag -width /etc/racoon/racoon.conf -compact
++.It Pa /etc/racoon/racoon.conf
+ default configuration file.
+ .It Pa /var/log/racoon.log
+ default log file.
