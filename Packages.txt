@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.258 2002/07/04 13:42:11 hubertf Exp $
+# $NetBSD: Packages.txt,v 1.259 2002/07/29 21:10:18 wiz Exp $
 ###########################################################################
 
 			==========================
@@ -2516,6 +2516,29 @@ included in pkgsrc - development or beta packages are not really the
 best thing for most places in which pkgsrc is used. Please use your
 judgement about what should go into pkgsrc, and bear in mind that
 stability is to be preferred above new and possibly untested features.
+
+
+ 11.4 Moving a Package in pkgsrc
+ ===============================
+
+ 1. Make a copy of the directory somewhere else.
+ 2. Remove all CVS dirs.
+    Alternatively to the first two steps you can also do:
+	  cvs -d user@cvs.netbsd.org:/cvsroot export -D today pkgsrc/category/package
+    and use that for further work.
+ 3. Fix CATEGORIES and any DEPENDS paths that just did ../package
+    instead of ../../category/package.
+ 4. "cvs import" the modified package in the new place.
+ 5. Check if any package depends on it:
+	cd /usr/pkgsrc
+	grep /package */*/Makefile* */*/buildlink*
+ 6. Fix paths in packages from step 5 to point to new location.
+ 7. "cvs rm (-f)" the package at the old location.
+ 8. Remove from oldcategory/Makefile.
+ 9. Add to newcategory/Makefile.
+10. Commit the changed and removed files:
+	cvs commit oldcategory/package oldcategory/Makefile newcategory/Makefile
+    and any packages from step 5, of course.
 
 
  12 A simple example of a package: bison
