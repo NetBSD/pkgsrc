@@ -1,0 +1,13 @@
+$NetBSD: patch-bc,v 1.1 2003/07/22 17:17:20 drochner Exp $
+
+--- tools/assistant/lib/lib.pro.orig	2003-07-16 12:27:26.000000000 +0200
++++ tools/assistant/lib/lib.pro	2003-07-16 12:27:47.000000000 +0200
+@@ -5,7 +5,7 @@
+ SOURCES		= qassistantclient.cpp
+ HEADERS         += $$QT_SOURCE_TREE/include/qassistantclient.h
+ 
+-CONFIG += staticlib
++#CONFIG += staticlib
+ CONFIG	-= dll
+ 
+ DEFINES		+= QT_INTERNAL_NETWORK
