@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.6 2000/03/21 22:07:59 tron Exp $
+$NetBSD: md5,v 1.7 2000/03/21 23:24:46 tron Exp $
 
-MD5 (libpng-1.0.6.tar.gz) = 687c8a59160c713a0e6fdd7e0a131182
+MD5 (libpng-1.0.6.tar.gz) = e7801dbd2d9d593c9663efa84f4e9ad7
