@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.18 2005/02/23 22:24:08 agc Exp $
+$NetBSD: distinfo,v 1.19 2005/03/22 15:55:26 jmmv Exp $
 
-SHA1 (GConf-2.8.1.tar.bz2) = c1d4ad69e138900fa92afd00fecd3fcc81544e3b
-RMD160 (GConf-2.8.1.tar.bz2) = ab9c58f7254fbc50bf72c3fbd22b112fe3963fb7
-Size (GConf-2.8.1.tar.bz2) = 1730812 bytes
+SHA1 (GConf-2.10.0.tar.bz2) = 9590cfc310e05c540feeab352199062922b8f4be
+RMD160 (GConf-2.10.0.tar.bz2) = 5464159cba1bd55bec976bcb1cbda7d663298e4b
+Size (GConf-2.10.0.tar.bz2) = 1734260 bytes
 SHA1 (patch-ab) = 67044ae449164931949f8a67d9f14db15d59365d
 SHA1 (patch-ac) = 03045811c13261088f291e2fbad24e2965c592dc
