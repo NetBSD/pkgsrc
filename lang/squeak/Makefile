@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2001/11/29 19:46:12 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2002/10/02 22:00:09 dillo Exp $
 #
 
 DISTNAME=	Squeak-3.0
@@ -14,7 +14,6 @@ MAINTAINER=	fredb@netbsd.org
 HOMEPAGE=	http://www.squeak.org/
 COMMENT=	Full Smalltalk 80 with portability to UN*X, Mac, and Windows
 
-BUILD_DEPENDS+=	automake>=1.4:../../devel/automake
 BUILD_DEPENDS+=	unzip-[0-9]*:../../archivers/unzip
 
 GNU_CONFIGURE=	yes
@@ -36,10 +35,6 @@ post-extract:
 	cd ${WRKDIR} && \
 	    ${LOCALBASE}/bin/unzip ${DISTDIR}/${DIST_SUBDIR}/Squeak3.0-3552.zip
 	${MKDIR} ${WRKSRC}
-
-pre-configure:
-	cd ${WRKSRC}/../src/unix; \
-	    ${LOCALBASE}/bin/aclocal && ${LOCALBASE}/bin/autoconf
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/squeak/3.0
