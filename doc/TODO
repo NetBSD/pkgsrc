@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1931 2004/07/14 01:09:44 grant Exp $
+$NetBSD: TODO,v 1.1932 2004/07/14 01:34:16 jlam Exp $
 
 Suggested new packages
 ======================
@@ -188,8 +188,8 @@ Suggested package updates
 	o clisp-2.33.2
 	o cocoon-2.1.5
 	o conserver-8.1.8
-	o courier-0.45
-	o courier-imap-3.0.0
+	o courier-0.45.6 [jlam, pkg/19365]
+	o courier-imap-3.0.5 [jlam, pkg/25774]
 	o crafty-19.5
 	o crossfire-1.5.0
 	o cscope-15.5
@@ -370,7 +370,7 @@ Suggested package updates
 	o snownews-1.5.3
 	o socat-1.4.0.0
 	o sqlite-3.0.2
-	o sqwebmail-4.0.4
+	o sqwebmail-4.0.5 [jlam]
 	o srp_client-1.7.5 [jlam]
 	o staroffice-7p1
 	o streamtuner-0.12.2
