@@ -1,4 +1,4 @@
-# $NetBSD: texinfo.mk,v 1.2 2002/03/06 13:06:53 seb Exp $
+# $NetBSD: texinfo.mk,v 1.3 2002/03/10 18:34:14 seb Exp $
 #
 # This Makefile fragment is included by packages that provide info files.
 #
@@ -32,6 +32,7 @@ _NEED_TEXINFO=         # defined
 
 .if defined(_NEED_TEXINFO)
 DEPENDS+=               gtexinfo>=${TEXINFO_REQD}:../../devel/gtexinfo
+_GTEXINFO_PREFIX_DEFAULT=${LOCALBASE}
 EVAL_PREFIX+=            _GTEXINFO_PREFIX=gtexinfo
 .else
 _GTEXINFO_PREFIX=       ${_INSTALL_INFO:C|/bin/install-info$||}
