@@ -230,3 +230,28 @@ share/dotfile-2.0/fvwm1/tools.tcl
 share/dotfile-2.0/fvwm1/README
 share/dotfile-2.0/fvwm1/ressources.template
 share/dotfile-2.0/fvwm1/bytecompile
+@dirrm share/dotfile-2.0/tcsh/save-files
+@dirrm share/dotfile-2.0/tcsh/exports
+@dirrm share/dotfile-2.0/tcsh
+@dirrm share/dotfile-2.0/rtin/save-files
+@dirrm share/dotfile-2.0/rtin/exports
+@dirrm share/dotfile-2.0/rtin
+@dirrm share/dotfile-2.0/fvwm2/save-files
+@dirrm share/dotfile-2.0/fvwm2/exports
+@dirrm share/dotfile-2.0/fvwm2
+@dirrm share/dotfile-2.0/fvwm1/save-files
+@dirrm share/dotfile-2.0/fvwm1/exports
+@dirrm share/dotfile-2.0/fvwm1
+@dirrm share/dotfile-2.0/emacs/save-files
+@dirrm share/dotfile-2.0/emacs/local
+@dirrm share/dotfile-2.0/emacs/exports
+@dirrm share/dotfile-2.0/emacs
+@dirrm share/dotfile-2.0/elm
+@dirrm share/dotfile-2.0/bash/save-files
+@dirrm share/dotfile-2.0/bash/exports
+@dirrm share/dotfile-2.0/bash
+@dirrm share/dotfile-2.0/Generator/oldVersions/1.1
+@dirrm share/dotfile-2.0/Generator/oldVersions
+@dirrm share/dotfile-2.0/Generator/bitmaps
+@dirrm share/dotfile-2.0/Generator
+@dirrm share/dotfile-2.0
