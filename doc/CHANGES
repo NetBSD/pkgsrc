@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6641 2004/07/23 00:35:02 minskim Exp $
+$NetBSD: CHANGES,v 1.6642 2004/07/23 02:05:45 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3511,3 +3511,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated jakarta-tomcat to 5.0.27 [erh 2004-07-22]
 	Updated ucblogo to 5.3 [reed 2004-07-23]
 	Added alee-ttf-0.3 [minskim 2004-07-23]
+	Added cdl3-1.2.4 [minskim 2004-07-23]
