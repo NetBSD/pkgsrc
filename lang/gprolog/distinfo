@@ -1,16 +1,17 @@
-$NetBSD: distinfo,v 1.4 2003/06/23 19:48:19 jtb Exp $
+$NetBSD: distinfo,v 1.5 2003/07/07 21:31:53 jtb Exp $
 
 SHA1 (gprolog-1.2.16.tar.gz) = 128071ff640be38782b943218762e09ef0287dc6
 Size (gprolog-1.2.16.tar.gz) = 2478633 bytes
 SHA1 (patch-aa) = 11cef0fd91bcfa21c264f5d2f44d1a06c6075177
-SHA1 (patch-ab) = 34d13265085198d4ccbc0bcd9c1d33e02fc5090f
-SHA1 (patch-ac) = 46c8eda2f3128deea650a1967208d3d79589c051
+SHA1 (patch-ab) = 550411d2c52b31b7a747ad2bf30c4439a8e71d0a
+SHA1 (patch-ac) = ae2d6ee1e0fe94e7602b8db9e4127ea82b56dcfe
 SHA1 (patch-ad) = 3a83cf6a9ab48830237ee8ac5d162ac5260775bc
-SHA1 (patch-ae) = fbee8e3314e1a1f34019ce5f4721b54ad7e1acf4
-SHA1 (patch-af) = 73b0fa41a4502e7094daac1afa920e009227585f
-SHA1 (patch-ag) = 6899456ea20d3830c1ef8722143cfb8e53596992
-SHA1 (patch-ah) = 36647d4498942748489c7547e2d1582ad9d3b9a2
-SHA1 (patch-ai) = 00a69fc3254a2bc4635c500d70ca787ac93fac33
+SHA1 (patch-ae) = a832ac080488e1e9a155d135af4e87eafb03d0de
+SHA1 (patch-af) = 72d0bfe0128c153886c4b356cce5b9bac902cd87
+SHA1 (patch-ag) = fffdc682ca58d5530108b9e2f3ba22a46c114b09
+SHA1 (patch-ah) = 1893c4c9b7f8a31487029455a47872aa1ffc4ccd
+SHA1 (patch-ai) = 789b465de0c768dbfcdcb063998256d7931726fd
+SHA1 (patch-aj) = 0fea4c886bbc9f94d53edb04d3f6a93a7fab5431
 SHA1 (patch-al) = 5745b485e5cfc82142148f49ab69f307fe7b71cf
 SHA1 (patch-am) = 6c12d78cbf6d2763ad7bf0f40cee2025f2362961
-SHA1 (patch-an) = de2f07898aeffab6780a7ae8a227a82c2c45483c
+SHA1 (patch-an) = 1eb7c3c03ab323ddcc7884cb5234448eaa3f1cb7
