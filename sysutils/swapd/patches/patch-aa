@@ -1,0 +1,18 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/10/30 05:06:15 xtraeme Exp $
+
+--- configure.orig	2004-10-29 23:52:36.000000000 +0200
++++ configure	2004-10-30 05:39:59.000000000 +0200
+@@ -12163,6 +12163,13 @@
+ _ACEOF
+ 
+ 			;;
++		netbsd*)
++
++cat >>confdefs.h <<\_ACEOF
++#define SWAPD_SWAPOFF_CMDLINE "/sbin/swapctl -d \"%s\""
++_ACEOF
++			;;
++
+ 	esac
+ 
+ 
