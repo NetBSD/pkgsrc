@@ -1,0 +1,6 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2001/12/13 06:42:48 jlam Exp $
+
+The VirusScan data files may be updated to the latest versions from the
+Network Associates Website (www.nai.com) by running the update_dat script.
+===========================================================================

@@ -1,13 +1,26 @@
 #!/bin/sh
 #
-# $NetBSD: update_dat,v 1.3 2001/09/27 07:55:18 rh Exp $
+# $NetBSD: update_dat,v 1.4 2001/12/13 06:42:48 jlam Exp $
 #
 # Script to update the VirusScan data files.
 
 UVSCANDIR=@PREFIX@/libexec/uvscan
-DAT_SITE=http://download.nai.com/products/datfiles/4.x/nai
+DAT_SITE=ftp://ftp.nai.com/pub/datfiles/english/
 DAT_FILES="@DATFILES@"
 TMPDIR=${TMPDIR:-/tmp}/$$
+
+BASENAME="@BASENAME@"
+CP="@CP@"
+ECHO="@ECHO@"
+GREP="@GREP@"
+GTAR="@GTAR@"
+HEAD="@HEAD@"
+MKDIR="@MKDIR@"
+MV="@MV@"
+RM="@RM@"
+SED="@SED@"
+
+progname=`${BASENAME} $0`
 
 if [ "$1" = "-v" ]; then
 	verbose=1
@@ -16,37 +29,43 @@ fi
 
 [ -z "$1" ] || DAT_SITE="$1"
 
-mkdir -p ${TMPDIR}
-mkdir -p ${UVSCANDIR}
+# Ensure that ${DAT_SITE} has a trailing slash (it may be a directory).
+case ${DAT_SITE} in
+*/)	;;
+*)	DAT_SITE="${DAT_SITE}/" ;;
+esac
+
+${MKDIR} ${TMPDIR}
+${MKDIR} ${UVSCANDIR}
 cd ${TMPDIR}
 
 # Fetch the ReadMe file to read the latest version of the DAT files.
-if ! ( ftp ${DAT_SITE}/readme.txt >/dev/null )
+if ! ( ftp ${DAT_SITE}readme.txt >/dev/null )
 then
-	echo "$0: unable to fetch ${DAT_SITE}/readme.txt"
-	rm -rf ${TMPDIR}
+	${ECHO} "${progname}: unable to fetch ${DAT_SITE}readme.txt"
+	${RM} -rf ${TMPDIR}
 	exit 1
 fi
 
-CURVER=`head -n 2 readme.txt | grep DAT | sed -e 's/^.*\([0-9][0-9][0-9][0-9]\).*$/\1/'`
-OLDVER=`head -n 2 ${UVSCANDIR}/readme.txt | grep DAT | sed -e 's/^.*\([0-9][0-9][0-9][0-9]\).*$/\1/'`
+CURVER=`${HEAD} -n 2 readme.txt | ${GREP} DAT | ${SED} -e 's/^.*\([0-9][0-9][0-9][0-9]\).*$/\1/'`
+OLDVER=`${HEAD} -n 2 ${UVSCANDIR}/readme.txt | ${GREP} DAT | ${SED} -e 's/^.*\([0-9][0-9][0-9][0-9]\).*$/\1/'`
 exitcode=0
 if [ "${CURVER}" = "${OLDVER}" ]
 then
-	[ -z "$verbose" ] || echo "$0: VirusScan DAT files are current (${CURVER})"
+	[ -z "$verbose" ] || ${ECHO} "${progname}: VirusScan DAT files are current (${CURVER})"
 else
 	DAT_TAR=dat-${CURVER}.tar
-	if ftp ${DAT_SITE}/${DAT_TAR} >/dev/null
+	if ftp ${DAT_SITE}${DAT_TAR} >/dev/null
 	then
-		if tar xf ${DAT_TAR} ${DAT_FILES}
+		if ${GTAR} xf ${DAT_TAR} ${DAT_FILES}
 		then
 			# Backup old dat-* tar files.
-			if [ "`echo ${UVSCANDIR}/*.tar`" != "${UVSCANDIR}/*.tar" ]
+			if [ "`${ECHO} ${UVSCANDIR}/*.tar`" != "${UVSCANDIR}/*.tar" ]
 			then
 				for file in ${UVSCANDIR}/*.tar
 				do
-					rm -f ${file}.old
-					mv ${file} ${file}.old
+					${RM} -f ${file}.old
+					${MV} ${file} ${file}.old
 				done
 			fi
 
@@ -56,29 +75,29 @@ else
 				file=${UVSCANDIR}/${file}
 				if [ -f ${file} ]
 				then
-					rm -f ${file}.bak
-					mv ${file} ${file}.bak
+					${RM} -f ${file}.bak
+					${MV} ${file} ${file}.bak
 				fi
 			done
 
 			# Copy new DAT files into place.
 			for file in ${DAT_FILES}
 			do
-				cp -p ${file} ${UVSCANDIR}/${file}
+				${CP} -p ${file} ${UVSCANDIR}/${file}
 			done
-			cp -p ${DAT_TAR} ${UVSCANDIR}/${DAT_TAR}
-			rm -f ${UVSCANDIR}/*.old
-			echo `date` Successfully updated VirusScan DAT files to ${CURVER}.
+			${CP} -p ${DAT_TAR} ${UVSCANDIR}/${DAT_TAR}
+			${RM} -f ${UVSCANDIR}/*.old
+			${ECHO} `date` Successfully updated VirusScan DAT files to ${CURVER}.
 		else
-			echo "$0: unable to update VirusScan DAT files"
+			${ECHO} "${progname}: unable to update VirusScan DAT files"
 			exitcode=1
 		fi
 	else
-		echo "$0: unable to fetch ${DAT_SITE}/${DAT_TAR}"
+		${ECHO} "${progname}: unable to fetch ${DAT_SITE}${DAT_TAR}"
 		exitcode=1
 	fi
 fi
 
 cd /
-rm -rf ${TMPDIR}
+${RM} -rf ${TMPDIR}
 exit ${exitcode}
