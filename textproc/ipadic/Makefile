@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/07/17 22:54:21 grant Exp $
+# $NetBSD: Makefile,v 1.5 2003/08/05 21:34:10 seb Exp $
 #
 
 DISTNAME=		ipadic-2.4.4
@@ -17,10 +17,12 @@ USE_PKGINSTALL=		yes
 CONF_FILES=		${CHASEN_DICDIR}/ipadic/chasenrc.example \
 			${CHASEN_CONFDIR}/chasenrc
 
+USE_NEW_TEXINFO=	YES
+INFO_FILES=		ipadic-ja.info
+
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/chasenrc \
 		${CHASEN_DICDIR}/ipadic/chasenrc.example
 
 .include "../../textproc/chasen/Makefile.common"
-.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
