@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/11/13 10:39:12 chris Exp $
+# $NetBSD: Makefile,v 1.4 2002/11/13 10:44:26 chris Exp $
 
 DISTNAME=		cyrus-sasl-2.1.9
 SVR4_PKGNAME=		csasl
@@ -53,7 +53,7 @@ CONFIGURE_ARGS+=	--disable-srp		# --- no SRP
 CONFIGURE_ARGS+=	--disable-krb4		# --- no KERBEROS_V4
 CONFIGURE_ARGS+=	--enable-otp		# OTP
 
-.if !empty(SASL_USE_GSSAPI:M[yY][eE][sS])
+.if defined(SASL_USE_GSSAPI) && !empty(SASL_USE_GSSAPI:M[yY][eE][sS])
 CONFIGURE_ARGS+=	--enable-gssapi=/usr	# GSSAPI
 PLIST_SRC+=		${.CURDIR}/PLIST.krb5
 .else
