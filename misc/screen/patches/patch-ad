@@ -1,52 +1,24 @@
-$NetBSD: patch-ad,v 1.4 1998/08/16 21:53:15 tv Exp $
+$NetBSD: patch-ad,v 1.5 1998/11/30 17:45:18 tv Exp $
 
---- configure.orig	Fri May  2 10:37:26 1997
-+++ configure	Sun Aug 16 17:47:27 1998
-@@ -2096,36 +2096,9 @@
+--- configure.orig	Sun Oct 18 16:37:39 1998
++++ configure	Mon Nov 30 11:03:01 1998
+@@ -2163,7 +2163,7 @@
  
  _CUT_HERE_
  
--#if ((defined(hp300) && !defined(__hpux)) || defined(sun) || (defined(ultrix) && defined(mips)) || defined(_SEQUENT_) || defined(sgi) || defined(SVR4) || defined(sony_news) || defined(__alpha) || defined(_IBMR2) || defined(_AUX_SOURCE) || defined(AUX) || defined(m88k))
--loadtype=long
--# if defined(apollo) || defined(_IBMR2) || defined(_AUX_SOURCE) || defined(AUX)
--loadscale=65536
--# else
--#  if defined(FSCALE) && !defined(__osf__)
--#   undef FSCALE
--loadscale=FSCALE
--#  else
--#   ifdef sgi
--loadscale=1024
--loadtype=int
--#   else
--#    if defined(MIPS) || defined(SVR4) || defined(m88k)
--loadscale=256
--#    else /* not MIPS */
--loadscale=1000 	/* our default value */
--#    endif /* MIPS */
--#   endif /* sgi */
--#  endif /* not FSCALE */
--# endif /* not apollo */
--#else
- loadtype=double
- loadscale=1
--#endif
--#ifdef alliant
--loadnum=4
--#else
- loadnum=3
--#endif
- 
- EOF
- $CPP $DEFS conftest.c 2>/dev/null | sed -e '1,/_CUT_HERE_/d' > conftest.out
-@@ -2620,17 +2593,6 @@
+-#if ((defined(hp300) && !defined(__hpux)) || defined(sun) || (defined(ultrix) && defined(mips)) || defined(_SEQUENT_) || defined(sgi) || defined(SVR4) || defined(sony_news) || (!defined(__osf__) && defined(__alpha)) || defined(_IBMR2) || defined(_AUX_SOURCE) || defined(AUX) || defined(m88k))
++#if (((defined(hp300) && !defined(__hpux)) || defined(sun) || (defined(ultrix) && defined(mips)) || defined(_SEQUENT_) || defined(sgi) || defined(SVR4) || defined(sony_news) || (!defined(__osf__) && defined(__alpha)) || defined(_IBMR2) || defined(_AUX_SOURCE) || defined(AUX) || defined(m88k))) && !defined(__NetBSD__)
+ loadtype=long
+ # if defined(apollo) || defined(_IBMR2) || defined(_AUX_SOURCE) || defined(AUX)
+ loadscale=65536
+@@ -2702,17 +2702,6 @@
+ fi
  rm -f /tmp/conftest*
  
- test -n "$silent" || echo "checking for vsprintf"
+-test -n "$silent" || echo "checking for vsprintf"
 -cat > conftest.${ac_ext} <<EOF
 -#include "confdefs.h"
 -
--#include <stdio.h>
 -int main() { return 0; }
 -int t() { vsprintf(0,0,0);; return 0; }
 -EOF
@@ -57,7 +29,7 @@ $NetBSD: patch-ad,v 1.4 1998/08/16 21:53:15 tv Exp $
  test -n "$verbose" && \
  echo "	defining USEVARARGS"
  echo "#define" USEVARARGS "1" >> confdefs.h
-@@ -2639,12 +2601,6 @@
+@@ -2721,12 +2710,6 @@
  \${ac_uA}USEVARARGS\${ac_uB}USEVARARGS\${ac_uC}1\${ac_uD}
  \${ac_eA}USEVARARGS\${ac_eB}USEVARARGS\${ac_eC}1\${ac_eD}
  "
