@@ -1,4 +1,4 @@
-$NetBSD: patch-ah,v 1.1 2003/06/29 23:04:19 jtb Exp $
+$NetBSD: patch-ah,v 1.2 2003/07/10 07:44:02 jtb Exp $
 
 --- asmcomp/power/emit.mlp.orig
 +++ asmcomp/power/emit.mlp
@@ -63,7 +63,39 @@ $NetBSD: patch-ah,v 1.1 2003/06/29 23:04:19 jtb Exp $
        emit_fun arg; emit_string "@l"
    | "rhapsody" ->
        emit_string "lo16("; emit_fun arg; emit_string ")"
-@@ -951,7 +951,7 @@
+@@ -935,6 +935,31 @@
+       emit_instr i None;
+       emit_all i.next
+ 
++(* Emission of the profiling prelude *)
++
++let emit_profile () =
++  match Config.system with
++    "bsd" ->
++      `	stwu 1, -32(1)\n`;
++      `	stw 1, 0(3)\n`;
++      `	mflr 0\n`;
++      `	stw 0, 4(1)\n`;
++      `	stw 2, 8(1)\n`;
++      `	stw 3, 12(1)\n`;
++      `	stw 4, 16(1)\n`;
++      `	stw 5, 20(1)\n`;
++      `	stw 6, 24(1)\n`;
++      `	stw 7, 28(1)\n`;
++      `	bl {emit_symbol "_mcount"}\n`;
++      `	lwz 2, 8(1)\n`;
++      `	lwz 3, 12(1)\n`;
++      `	lwz 4, 16(1)\n`;
++      `	lwz 5, 20(1)\n`;
++      `	lwz 6, 24(1)\n`;
++      `	lwz 7, 28(1)\n`;
++      `	addic 1, 1, 32\n`;
++  | _ -> () (*unsupported yet*)
++
+ (* Emission of a function declaration *)
+ 
+ let fundecl fundecl =
+@@ -951,10 +976,11 @@
        `	.csect	{emit_symbol fundecl.fun_name}[DS]\n`;
        `{emit_symbol fundecl.fun_name}:\n`;
        `	.long	.{emit_symbol fundecl.fun_name}, TOC[tc0], 0\n`
@@ -72,7 +104,11 @@ $NetBSD: patch-ah,v 1.1 2003/06/29 23:04:19 jtb Exp $
        `	.type	{emit_symbol fundecl.fun_name}, @function\n`
    | _ -> ()
    end;
-@@ -996,7 +996,7 @@
++  if !Clflags.gprofile then emit_profile();
+   emit_string code_space;
+   `	.align	2\n`;
+   `{emit_codesymbol fundecl.fun_name}:\n`;
+@@ -996,7 +1022,7 @@
  
  let declare_global_data s =
    `	.globl	{emit_symbol s}\n`;
