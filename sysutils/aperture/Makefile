@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2002/02/08 22:58:54 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2002/09/13 07:18:42 tron Exp $
 
 DISTNAME=	apNetBSD
 PKGNAME=	aperture-2.0
@@ -22,7 +22,8 @@ MASTER_SITES=	${MASTER_SITE_LOCAL:=${subdir}nb1/}
 MAINTAINER=	jlam@netbsd.org
 COMMENT=	XFree86 Framebuffer "aperture" driver for NetBSD/i386
 
-ONLY_FOR_PLATFORM=	NetBSD-*-i386
+ONLY_FOR_PLATFORM=	NetBSD-1.[0-5]*-i386 NetBSD-1.6-i386 \
+			NetBSD-1.6.*-i386 NetBSD-1.6[A-G]-i36
 
 NO_SRC_ON_FTP=		Already in MASTER_SITE_LOCAL
 
