@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2004/06/28 17:45:56 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.7 2004/07/04 15:54:51 jmmv Exp $
 #
 
 DISTNAME=		gst-plugins-0.8.2
@@ -41,6 +41,7 @@ CONFIGURE_ARGS+=	--disable-tests
 		audiofile \
 		cdparanoia \
 		cdrom \
+		dirac \
 		divx \
 		dts \
 		dvdnav \
@@ -59,6 +60,7 @@ CONFIGURE_ARGS+=	--disable-tests
 		ivorbis \
 		jack \
 		jpeg \
+		kio \
 		ladspa \
 		lame \
 		lcs \
