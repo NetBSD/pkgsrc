@@ -1,0 +1,12 @@
+$NetBSD: patch-ag,v 1.1 1999/07/20 01:24:58 hubertf Exp $
+
+--- work.i386/hcc/hcc.cc.orig	Tue Jul 20 03:19:57 1999
++++ work.i386/hcc/hcc.cc	Fri Feb 21 12:50:16 1997
+@@ -1,6 +1,6 @@
+ #include "bool.h"
+ #include "stdio.h"
+-#include <stdlib.h>
++#include "std.h"
+ #include "string.h"
+ #include "ctype.h"
+ 
