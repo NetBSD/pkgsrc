@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1077 2003/01/10 13:48:59 jmmv Exp $
+$NetBSD: CHANGES,v 1.1078 2003/01/10 16:17:42 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -194,3 +194,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated multi-gnome-terminal to 1.6.1 [jmmv 2003-01-10]
 	Updated gaim to 0.59.8nb1 [jmmv 2003-01-10]
 	Updated gaim-gnome to 0.59.8nb1 [jmmv 2003-01-10]
+	Added sarien-0.7.0 [jmmv 2003-01-10]
