@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.1.1.1 1999/12/03 08:27:29 rh Exp $
+$NetBSD: md5,v 1.2 2000/07/16 01:13:34 mjl Exp $
 
-MD5 (IO-stringy-1.207.tar.gz) = 09b4cda906c31a7169320b62b31c9a00
+MD5 (IO-stringy-1.212.tar.gz) = 740304765f5f03b6af5af74f8e3de8e1
