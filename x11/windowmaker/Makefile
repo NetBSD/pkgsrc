@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 1999/02/02 10:24:09 tron Exp $
+# $NetBSD: Makefile,v 1.21 1999/02/15 15:00:50 tron Exp $
 
 DISTNAME=		WindowMaker-0.51.0
 PKGNAME=		windowmaker-0.51.0
@@ -27,7 +27,7 @@ CONFIGURE_ARGS+=	--with-nlsdir=${PREFIX}/share/locale \
 			--with-gfx-incs="-I${LOCALBASE}/include \
 				-I${LOCALBASE}/include/giflib" \
 			--with-gfx-libs=-L${LOCALBASE}/lib \
-			--with-modelock
+			--enable-modelock --enable-gnome --enable-kde
 
 CPPFLAGS+=		-I${LOCALBASE}/include
 LDFLAGS+=		-L${LOCALBASE}/lib
