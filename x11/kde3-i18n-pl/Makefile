@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2004/01/03 18:49:58 reed Exp $
+# $NetBSD: Makefile,v 1.11 2004/01/15 11:38:09 markd Exp $
 
 DISTNAME=	kde-i18n-pl-${_KDE_VERSION}
-PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITES_KDE:=kde-i18n/}
-PKGREVISION=	1
 
 COMMENT=	Language bindings for the KDE desktop
 

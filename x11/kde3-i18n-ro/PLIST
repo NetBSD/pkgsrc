@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/01/12 10:19:09 cjep Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/01/15 11:38:09 markd Exp $
 share/doc/kde/HTML/ro/common/1.png
 share/doc/kde/HTML/ro/common/10.png
 share/doc/kde/HTML/ro/common/2.png
@@ -217,7 +217,6 @@ share/kde/locale/ro/LC_MESSAGES/kfile_font.mo
 share/kde/locale/ro/LC_MESSAGES/kfindpart.mo
 share/kde/locale/ro/LC_MESSAGES/kfloppy.mo
 share/kde/locale/ro/LC_MESSAGES/kfmclient.mo
-share/kde/locale/ro/LC_MESSAGES/kfmexec.mo
 share/kde/locale/ro/LC_MESSAGES/kfontviewpart.mo
 share/kde/locale/ro/LC_MESSAGES/kghostview.mo
 share/kde/locale/ro/LC_MESSAGES/khelpcenter.mo
@@ -243,6 +242,7 @@ share/kde/locale/ro/LC_MESSAGES/kio_sftp.mo
 share/kde/locale/ro/LC_MESSAGES/kio_smb.mo
 share/kde/locale/ro/LC_MESSAGES/kio_smbro.mo
 share/kde/locale/ro/LC_MESSAGES/kio_smtp.mo
+share/kde/locale/ro/LC_MESSAGES/kioexec.mo
 share/kde/locale/ro/LC_MESSAGES/kit.mo
 share/kde/locale/ro/LC_MESSAGES/kjobviewer.mo
 share/kde/locale/ro/LC_MESSAGES/kjots.mo
@@ -369,10 +369,10 @@ share/kde/locale/ro/LC_MESSAGES/webarchiver.mo
 share/kde/locale/ro/charset
 share/kde/locale/ro/entry.desktop
 share/kde/locale/ro/flag.png
-@comment dirrm share/kde/locale/ro/LC_MESSAGES
+@commnet dirrm share/kde/locale/ro/LC_MESSAGES
 @comment dirrm share/kde/locale/ro
 @dirrm share/kde/apps/ktuberling/sounds/ro
-@comment dirrm share/kde/apps/ktuberling/sounds
+@commnet dirrm share/kde/apps/ktuberling/sounds
 @comment dirrm share/kde/apps/amor
 @dirrm share/doc/kde/HTML/ro/khelpcenter
 @comment dirrm share/doc/kde/HTML/ro/common
