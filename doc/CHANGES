@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1011 2003/01/04 20:14:18 jmmv Exp $
+$NetBSD: CHANGES,v 1.1012 2003/01/04 20:19:07 cjep Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -80,3 +80,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated pango to 1.2.0nb1 [jmmv 2003-01-04]
 	Updated gtk2+ to 2.2.0nb3 [jmmv 2003-01-04]
 	Updated linc to 0.7.0nb2 [jmmv 2003-01-04]
+	Updated bison to 1.875nb1 [cjep 2003-01-04]
