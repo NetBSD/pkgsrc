@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.12 2000/06/28 23:18:30 wiz Exp $
+$NetBSD: patch-aa,v 1.13 2001/02/05 17:30:09 fredb Exp $
 
---- src/Makefile.in.orig	Sun Apr 23 05:57:42 2000
-+++ src/Makefile.in	Thu Jun 29 01:06:01 2000
+--- src/Makefile.in.orig	Sat Feb  3 15:08:25 2001
++++ src/Makefile.in	Sat Feb  3 22:18:17 2001
 @@ -2,9 +2,9 @@
  #---------------------------------------------------------------------------
  # ANSI C compiler
@@ -27,12 +27,12 @@ $NetBSD: patch-aa,v 1.12 2000/06/28 23:18:30 wiz Exp $
  exec_prefix = @exec_prefix@
  install_lib_dir = @libdir@
  install_include_dir = @includedir@
--install_doc_dir = $(prefix)/doc/slang/@slang_version@
+-install_doc_dir = $(prefix)/doc/slang
 +install_doc_dir = $(prefix)/share/doc/slang
  DOC_FILES = ../changes.txt ../COPY* ../doc/slangdoc.html ../doc/text/*.txt
+ MODULE_INSTALL_DIR = @libdir@/slang/modules
  #---------------------------------------------------------------------------
- # Misc commands (safe to leave these untouched)
-@@ -69,7 +69,7 @@
+@@ -78,7 +78,7 @@
  ELFCOMPILE_CMD		= $(ELF_CC) -c $(ALL_ELF_CFLAGS)
  ELF_LINK_CMD		= @ELF_LINK_CMD@
  
@@ -41,7 +41,7 @@ $NetBSD: patch-aa,v 1.12 2000/06/28 23:18:30 wiz Exp $
  OBJDIR_NORMAL_LIB = $(OBJDIR)/$(NORMAL_LIB)
  
  ELFLIB = lib$(THIS_LIB).so#
-@@ -78,7 +78,7 @@
+@@ -87,7 +87,7 @@
  
  ELFDIR_ELF_LIB = $(ELFDIR)/$(ELFLIB_MAJOR_MINOR)#
  
@@ -50,7 +50,7 @@ $NetBSD: patch-aa,v 1.12 2000/06/28 23:18:30 wiz Exp $
  EXECDEPS = $(OBJDIR_NORMAL_LIB)
  
  OFILES = @PROGRAM_OFILES@
-@@ -94,13 +94,12 @@
+@@ -106,13 +106,12 @@
  #---------------------------------------------------------------------------
  # Rules
  #---------------------------------------------------------------------------
@@ -67,13 +67,13 @@ $NetBSD: patch-aa,v 1.12 2000/06/28 23:18:30 wiz Exp $
  	@echo ""
  	@echo $(NORMAL_LIB) created in $(OBJDIR)
  
-@@ -125,8 +124,7 @@
+@@ -137,8 +136,7 @@
  install: install_basic_lib install_docs
- install_basic_lib: $(install_lib_dir) $(install_include_dir) $(OBJDIR_NORMAL_LIB)
- 	@echo installing $(OBJDIR_NORMAL_LIB) in $(install_lib_dir)
--	$(INSTALL_DATA) $(OBJDIR_NORMAL_LIB) $(install_lib_dir)
--	$(RANLIB) $(install_lib_dir)/$(NORMAL_LIB)
-+	$(LIBTOOL) --mode=install $(INSTALL_DATA) $(OBJDIR_NORMAL_LIB) $(install_lib_dir)
- 	@echo installing slang.h and slcurses.h in $(install_include_dir)
- 	$(INSTALL_DATA) $(SRCDIR)/slang.h $(install_include_dir)
- 	$(INSTALL_DATA) $(SRCDIR)/slcurses.h $(install_include_dir)
+ install_basic_lib: $(DEST_LIBDIR) $(DEST_INCDIR) $(OBJDIR_NORMAL_LIB)
+ 	@echo installing $(OBJDIR_NORMAL_LIB) in $(DEST_LIBDIR)
+-	$(INSTALL_DATA) $(OBJDIR_NORMAL_LIB) $(DEST_LIBDIR)
+-	$(RANLIB) $(DEST_LIBDIR)/$(NORMAL_LIB)
++	$(LIBTOOL) --mode=install $(INSTALL_DATA) $(OBJDIR_NORMAL_LIB) $(DEST_LIBDIR)
+ 	@echo installing slang.h and slcurses.h in $(DEST_INCDIR)
+ 	$(INSTALL_DATA) $(SRCDIR)/slang.h $(DEST_INCDIR)
+ 	$(INSTALL_DATA) $(SRCDIR)/slcurses.h $(DEST_INCDIR)
