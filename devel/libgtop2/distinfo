@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2002/11/30 23:21:38 salo Exp $
+$NetBSD: distinfo,v 1.3 2003/01/11 11:22:30 jmmv Exp $
 
 SHA1 (libgtop-2.0.0.tar.bz2) = 9178e5cede22ae5a8928677b195fe585b84b3b86
 Size (libgtop-2.0.0.tar.bz2) = 690581 bytes
@@ -16,3 +16,4 @@ SHA1 (patch-ak) = cf39190646a4fd618b8ef94647a4cf3c48a9e98b
 SHA1 (patch-al) = e771b022a5c2176138c5f49561ac64a15ce11809
 SHA1 (patch-am) = f5971bf6a72a830b95923ce163c75ab5ef548221
 SHA1 (patch-an) = ab91ae30daa7b7bd5f4f31d610ea0f5991d92ad6
+SHA1 (patch-ao) = 8a3d4b50c00363527a00e3dba9ff4292ae777907
