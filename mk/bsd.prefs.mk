@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.175 2004/10/20 05:42:55 martti Exp $
+# $NetBSD: bsd.prefs.mk,v 1.176 2004/10/31 22:05:02 wiz Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -96,6 +96,14 @@ LOWER_VENDOR?=		pc
 .  else
 LOWER_VENDOR?=		unknown
 .  endif
+
+.elif ${OPSYS} == "DragonFly"
+LOWER_OPSYS?=		dragonfly
+LOWER_ARCH!=		${UNAME} -p
+MACHINE_ARCH=		${LOWER_ARCH}
+MAKEFLAGS+=		LOWER_ARCH=${LOWER_ARCH}
+LOWER_OPSYS_VERSUFFIX!=	echo ${LOWER_OS_VERSION} | ${CUT} -c -1
+LOWER_VENDOR?=		pc
 
 .elif ${OPSYS} == "SunOS"
 .  if ${MACHINE_ARCH} == "sparc"
@@ -211,6 +219,10 @@ OBJECT_FMT?=	ELF
 .  else
 OBJECT_FMT?=	a.out
 .  endif
+.endif
+
+.if ${OPSYS} == "DragonFly"
+OBJECT_FMT=		ELF
 .endif
 
 # Calculate depth
