@@ -1,15 +1,18 @@
-@comment $NetBSD: PLIST,v 1.5 1998/08/10 15:45:08 tv Exp $
+@comment $NetBSD: PLIST,v 1.6 1998/11/05 01:34:02 mycroft Exp $
 bin/gendiff
 bin/rpm
-bin/find-requires
-bin/find-provides
 bin/rpm2cpio
-include/rpm/rpmlib.h
 include/rpm/dbindex.h
 include/rpm/header.h
+include/rpm/rpmlib.h
 lib/librpm.a
+lib/rpm/find-provides
+lib/rpm/find-requires
+lib/rpm/freshen.sh
+lib/rpm/mkinstalldirs
+lib/rpm/rpmpopt
+lib/rpm/rpmrc
 man/man8/rpm.8
 man/man8/rpm2cpio.8
-share/misc/rpmrc
-share/misc/rpmpopt
+@dirrm lib/rpm
 @dirrm include/rpm
