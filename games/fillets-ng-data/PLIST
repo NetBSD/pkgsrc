@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/09/30 11:35:51 salo Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/11/27 16:12:27 salo Exp $
 share/doc/html/fillets-ng/halloffame.html
 share/doc/html/fillets-ng/img/icon.png
 share/doc/html/fillets-ng/img/manual/falling_objects.png
@@ -29,6 +29,275 @@ share/games/fillets-ng/images/airplane/sedadlo.png
 share/games/fillets-ng/images/airplane/sedadlo1.png
 share/games/fillets-ng/images/airplane/sedadlo2.png
 share/games/fillets-ng/images/airplane/sedadlo3.png
+share/games/fillets-ng/images/alibaba/3-ocel.png
+share/games/fillets-ng/images/alibaba/7-ocel.png
+share/games/fillets-ng/images/alibaba/amfora-a.png
+share/games/fillets-ng/images/alibaba/amfora.png
+share/games/fillets-ng/images/alibaba/amfora_cervena-a.png
+share/games/fillets-ng/images/alibaba/amfora_zelena-a.png
+share/games/fillets-ng/images/alibaba/amfora_zelena.png
+share/games/fillets-ng/images/alibaba/drahokam_00.png
+share/games/fillets-ng/images/alibaba/drahokam_01.png
+share/games/fillets-ng/images/alibaba/drahokam_02.png
+share/games/fillets-ng/images/alibaba/drahokam_03.png
+share/games/fillets-ng/images/alibaba/drahokam_04.png
+share/games/fillets-ng/images/alibaba/drahokam_05.png
+share/games/fillets-ng/images/alibaba/drahokam_b_00.png
+share/games/fillets-ng/images/alibaba/drahokam_b_01.png
+share/games/fillets-ng/images/alibaba/knihovna-zed1.png
+share/games/fillets-ng/images/alibaba/koruna_00.png
+share/games/fillets-ng/images/alibaba/koruna_01.png
+share/games/fillets-ng/images/alibaba/koruna_02.png
+share/games/fillets-ng/images/alibaba/koruna_03.png
+share/games/fillets-ng/images/alibaba/koruna_04.png
+share/games/fillets-ng/images/alibaba/koruna_05.png
+share/games/fillets-ng/images/alibaba/krystal_00.png
+share/games/fillets-ng/images/alibaba/krystal_01.png
+share/games/fillets-ng/images/alibaba/krystal_02.png
+share/games/fillets-ng/images/alibaba/krystal_03.png
+share/games/fillets-ng/images/alibaba/krystal_04.png
+share/games/fillets-ng/images/alibaba/krystal_05.png
+share/games/fillets-ng/images/alibaba/krystal_06.png
+share/games/fillets-ng/images/alibaba/krystal_07.png
+share/games/fillets-ng/images/alibaba/krystal_08.png
+share/games/fillets-ng/images/alibaba/krystal_09.png
+share/games/fillets-ng/images/alibaba/krystal_10.png
+share/games/fillets-ng/images/alibaba/krystal_11.png
+share/games/fillets-ng/images/alibaba/krystal_12.png
+share/games/fillets-ng/images/alibaba/krystal_13.png
+share/games/fillets-ng/images/alibaba/krystal_14.png
+share/games/fillets-ng/images/alibaba/krystal_15.png
+share/games/fillets-ng/images/alibaba/krystal_16.png
+share/games/fillets-ng/images/alibaba/krystal_17.png
+share/games/fillets-ng/images/alibaba/krystal_18.png
+share/games/fillets-ng/images/alibaba/krystal_19.png
+share/games/fillets-ng/images/alibaba/krystal_20.png
+share/games/fillets-ng/images/alibaba/krystal_21.png
+share/games/fillets-ng/images/alibaba/krystal_22.png
+share/games/fillets-ng/images/alibaba/krystal_23.png
+share/games/fillets-ng/images/alibaba/krystal_24.png
+share/games/fillets-ng/images/alibaba/krystal_25.png
+share/games/fillets-ng/images/alibaba/krystal_26.png
+share/games/fillets-ng/images/alibaba/krystal_27.png
+share/games/fillets-ng/images/alibaba/pohar-a.png
+share/games/fillets-ng/images/alibaba/pohar.png
+share/games/fillets-ng/images/alibaba/pozadi.png
+share/games/fillets-ng/images/alibaba/prsten-2_00.png
+share/games/fillets-ng/images/alibaba/prsten-2_01.png
+share/games/fillets-ng/images/alibaba/prsten-2_02.png
+share/games/fillets-ng/images/alibaba/prsten-2_03.png
+share/games/fillets-ng/images/alibaba/prsten-2_04.png
+share/games/fillets-ng/images/alibaba/prsten-2_05.png
+share/games/fillets-ng/images/alibaba/prsten-3_00.png
+share/games/fillets-ng/images/alibaba/prsten-3_01.png
+share/games/fillets-ng/images/alibaba/prsten-3_02.png
+share/games/fillets-ng/images/alibaba/prsten-3_03.png
+share/games/fillets-ng/images/alibaba/prsten-3_04.png
+share/games/fillets-ng/images/alibaba/prsten-3_05.png
+share/games/fillets-ng/images/alibaba/prsten-4.png
+share/games/fillets-ng/images/alibaba/prsten-_00.png
+share/games/fillets-ng/images/alibaba/prsten-_01.png
+share/games/fillets-ng/images/alibaba/svicen.png
+share/games/fillets-ng/images/alibaba/vaza_cervena-a.png
+share/games/fillets-ng/images/alibaba/vaza_cervena.png
+share/games/fillets-ng/images/alibaba/vazav.png
+share/games/fillets-ng/images/alibaba/vazav1.png
+share/games/fillets-ng/images/atlantis/12-ocel.png
+share/games/fillets-ng/images/atlantis/15-ocel.png
+share/games/fillets-ng/images/atlantis/19-ocel.png
+share/games/fillets-ng/images/atlantis/2-ocel.png
+share/games/fillets-ng/images/atlantis/5-ocel.png
+share/games/fillets-ng/images/atlantis/6-ocel.png
+share/games/fillets-ng/images/atlantis/atikac.png
+share/games/fillets-ng/images/atlantis/hlava_m-_00.png
+share/games/fillets-ng/images/atlantis/hlava_m-_01.png
+share/games/fillets-ng/images/atlantis/hlava_m-_02.png
+share/games/fillets-ng/images/atlantis/krab_00.png
+share/games/fillets-ng/images/atlantis/krab_01.png
+share/games/fillets-ng/images/atlantis/krab_02.png
+share/games/fillets-ng/images/atlantis/krab_03.png
+share/games/fillets-ng/images/atlantis/krab_04.png
+share/games/fillets-ng/images/atlantis/krab_05.png
+share/games/fillets-ng/images/atlantis/krab_06.png
+share/games/fillets-ng/images/atlantis/krab_07.png
+share/games/fillets-ng/images/atlantis/krab_08.png
+share/games/fillets-ng/images/atlantis/krab_09.png
+share/games/fillets-ng/images/atlantis/maly_snek_00.png
+share/games/fillets-ng/images/atlantis/maly_snek_01.png
+share/games/fillets-ng/images/atlantis/maly_snek_02.png
+share/games/fillets-ng/images/atlantis/maly_snek_03.png
+share/games/fillets-ng/images/atlantis/poster.png
+share/games/fillets-ng/images/atlantis/sloupek_b.png
+share/games/fillets-ng/images/atlantis/spunt-p.png
+share/games/fillets-ng/images/atlantis/spunt-zed.png
+share/games/fillets-ng/images/atlantis/spunt.png
+share/games/fillets-ng/images/aztec/amfora.png
+share/games/fillets-ng/images/aztec/amfora_cervena.png
+share/games/fillets-ng/images/aztec/amfora_zelena.png
+share/games/fillets-ng/images/aztec/bottles-3-tmp.png
+share/games/fillets-ng/images/aztec/bottles-35-tmp.png
+share/games/fillets-ng/images/aztec/bottles-p.png
+share/games/fillets-ng/images/aztec/bottles-wall.png
+share/games/fillets-ng/images/aztec/drak.png
+share/games/fillets-ng/images/aztec/drak_m_00.png
+share/games/fillets-ng/images/aztec/drak_m_01.png
+share/games/fillets-ng/images/aztec/hlavicka.png
+share/games/fillets-ng/images/aztec/konik_00.png
+share/games/fillets-ng/images/aztec/konik_01.png
+share/games/fillets-ng/images/aztec/konik_02.png
+share/games/fillets-ng/images/aztec/konik_03.png
+share/games/fillets-ng/images/aztec/skull_00.png
+share/games/fillets-ng/images/aztec/skull_01.png
+share/games/fillets-ng/images/aztec/skull_02.png
+share/games/fillets-ng/images/aztec/skull_03.png
+share/games/fillets-ng/images/aztec/sloupek.png
+share/games/fillets-ng/images/aztec/totem_00.png
+share/games/fillets-ng/images/aztec/totem_01.png
+share/games/fillets-ng/images/aztec/totem_02.png
+share/games/fillets-ng/images/aztec/totem_03.png
+share/games/fillets-ng/images/aztec/totem_04.png
+share/games/fillets-ng/images/aztec/totem_05.png
+share/games/fillets-ng/images/aztec/vaza.png
+share/games/fillets-ng/images/aztec/vaza_cervena.png
+share/games/fillets-ng/images/aztec/vazav.png
+share/games/fillets-ng/images/aztec/vazavh.png
+share/games/fillets-ng/images/barrel/12-ocel.png
+share/games/fillets-ng/images/barrel/18-ocel.png
+share/games/fillets-ng/images/barrel/baget_00.png
+share/games/fillets-ng/images/barrel/baget_01.png
+share/games/fillets-ng/images/barrel/barel_00.png
+share/games/fillets-ng/images/barrel/barel_01.png
+share/games/fillets-ng/images/barrel/barel_02.png
+share/games/fillets-ng/images/barrel/barel_03.png
+share/games/fillets-ng/images/barrel/barel_04.png
+share/games/fillets-ng/images/barrel/barely-okoli.png
+share/games/fillets-ng/images/barrel/barely-poz.png
+share/games/fillets-ng/images/barrel/double1_00.png
+share/games/fillets-ng/images/barrel/double1_01.png
+share/games/fillets-ng/images/barrel/double1_02.png
+share/games/fillets-ng/images/barrel/double1_03.png
+share/games/fillets-ng/images/barrel/double1_04.png
+share/games/fillets-ng/images/barrel/double1_05.png
+share/games/fillets-ng/images/barrel/double1_06.png
+share/games/fillets-ng/images/barrel/double2_00.png
+share/games/fillets-ng/images/barrel/double2_01.png
+share/games/fillets-ng/images/barrel/double2_02.png
+share/games/fillets-ng/images/barrel/double2_03.png
+share/games/fillets-ng/images/barrel/double2_04.png
+share/games/fillets-ng/images/barrel/double2_05.png
+share/games/fillets-ng/images/barrel/double2_06.png
+share/games/fillets-ng/images/barrel/had_00.png
+share/games/fillets-ng/images/barrel/had_01.png
+share/games/fillets-ng/images/barrel/had_02.png
+share/games/fillets-ng/images/barrel/had_03.png
+share/games/fillets-ng/images/barrel/had_04.png
+share/games/fillets-ng/images/barrel/had_05.png
+share/games/fillets-ng/images/barrel/had_06.png
+share/games/fillets-ng/images/barrel/had_07.png
+share/games/fillets-ng/images/barrel/had_08.png
+share/games/fillets-ng/images/barrel/had_09.png
+share/games/fillets-ng/images/barrel/had_10.png
+share/games/fillets-ng/images/barrel/had_11.png
+share/games/fillets-ng/images/barrel/hlubinna_00.png
+share/games/fillets-ng/images/barrel/hlubinna_01.png
+share/games/fillets-ng/images/barrel/hlubinna_02.png
+share/games/fillets-ng/images/barrel/hlubinna_03.png
+share/games/fillets-ng/images/barrel/hlubinna_04.png
+share/games/fillets-ng/images/barrel/hlubinna_05.png
+share/games/fillets-ng/images/barrel/hlubinna_06.png
+share/games/fillets-ng/images/barrel/hlubinna_07.png
+share/games/fillets-ng/images/barrel/hlubinna_08.png
+share/games/fillets-ng/images/barrel/kachna_00.png
+share/games/fillets-ng/images/barrel/kachna_01.png
+share/games/fillets-ng/images/barrel/kachna_02.png
+share/games/fillets-ng/images/barrel/kachna_03.png
+share/games/fillets-ng/images/barrel/kachna_04.png
+share/games/fillets-ng/images/barrel/kachna_05.png
+share/games/fillets-ng/images/barrel/kachna_06.png
+share/games/fillets-ng/images/barrel/kachna_07.png
+share/games/fillets-ng/images/barrel/kachna_08.png
+share/games/fillets-ng/images/barrel/killer_00.png
+share/games/fillets-ng/images/barrel/killer_01.png
+share/games/fillets-ng/images/barrel/killer_02.png
+share/games/fillets-ng/images/barrel/killer_03.png
+share/games/fillets-ng/images/barrel/killer_04.png
+share/games/fillets-ng/images/barrel/killer_05.png
+share/games/fillets-ng/images/barrel/krab_00.png
+share/games/fillets-ng/images/barrel/krab_01.png
+share/games/fillets-ng/images/barrel/krab_02.png
+share/games/fillets-ng/images/barrel/krab_03.png
+share/games/fillets-ng/images/barrel/krab_04.png
+share/games/fillets-ng/images/barrel/krab_05.png
+share/games/fillets-ng/images/barrel/kukajda_00.png
+share/games/fillets-ng/images/barrel/kukajda_01.png
+share/games/fillets-ng/images/barrel/kukajda_02.png
+share/games/fillets-ng/images/barrel/kukajda_03.png
+share/games/fillets-ng/images/barrel/kukajda_04.png
+share/games/fillets-ng/images/barrel/kukajda_05.png
+share/games/fillets-ng/images/barrel/kukajda_06.png
+share/games/fillets-ng/images/barrel/kukajda_07.png
+share/games/fillets-ng/images/barrel/kukajda_08.png
+share/games/fillets-ng/images/barrel/kukajda_09.png
+share/games/fillets-ng/images/barrel/kukajda_10.png
+share/games/fillets-ng/images/barrel/kukajda_11.png
+share/games/fillets-ng/images/barrel/kukajda_12.png
+share/games/fillets-ng/images/barrel/kukajda_13.png
+share/games/fillets-ng/images/barrel/kukajda_14.png
+share/games/fillets-ng/images/barrel/kukajda_15.png
+share/games/fillets-ng/images/barrel/kukajda_16.png
+share/games/fillets-ng/images/barrel/kukajda_17.png
+share/games/fillets-ng/images/barrel/noha_00.png
+share/games/fillets-ng/images/barrel/noha_01.png
+share/games/fillets-ng/images/barrel/noha_02.png
+share/games/fillets-ng/images/barrel/noha_03.png
+share/games/fillets-ng/images/barrel/noha_04.png
+share/games/fillets-ng/images/barrel/noha_05.png
+share/games/fillets-ng/images/barrel/noha_06.png
+share/games/fillets-ng/images/barrel/noha_07.png
+share/games/fillets-ng/images/barrel/noha_08.png
+share/games/fillets-ng/images/barrel/noha_09.png
+share/games/fillets-ng/images/barrel/noha_10.png
+share/games/fillets-ng/images/barrel/noha_11.png
+share/games/fillets-ng/images/barrel/oko_00.png
+share/games/fillets-ng/images/barrel/oko_01.png
+share/games/fillets-ng/images/barrel/oko_02.png
+share/games/fillets-ng/images/barrel/oko_03.png
+share/games/fillets-ng/images/barrel/oko_04.png
+share/games/fillets-ng/images/barrel/pld_00.png
+share/games/fillets-ng/images/barrel/pld_01.png
+share/games/fillets-ng/images/barrel/pld_02.png
+share/games/fillets-ng/images/barrel/pld_03.png
+share/games/fillets-ng/images/barrel/pld_04.png
+share/games/fillets-ng/images/barrel/pld_05.png
+share/games/fillets-ng/images/barrel/pld_06.png
+share/games/fillets-ng/images/barrel/pld_07.png
+share/games/fillets-ng/images/barrel/pld_08.png
+share/games/fillets-ng/images/barrel/pld_09.png
+share/games/fillets-ng/images/barrel/pld_10.png
+share/games/fillets-ng/images/barrel/pld_11.png
+share/games/fillets-ng/images/barrel/pld_12.png
+share/games/fillets-ng/images/barrel/pld_13.png
+share/games/fillets-ng/images/barrel/pld_14.png
+share/games/fillets-ng/images/barrel/pld_15.png
+share/games/fillets-ng/images/barrel/pldik_00.png
+share/games/fillets-ng/images/barrel/pldik_01.png
+share/games/fillets-ng/images/barrel/pldik_02.png
+share/games/fillets-ng/images/barrel/pldik_03.png
+share/games/fillets-ng/images/barrel/pldik_04.png
+share/games/fillets-ng/images/barrel/pldik_05.png
+share/games/fillets-ng/images/barrel/pldik_06.png
+share/games/fillets-ng/images/barrel/pldik_07.png
+share/games/fillets-ng/images/barrel/pldik_08.png
+share/games/fillets-ng/images/barrel/pldik_09.png
+share/games/fillets-ng/images/barrel/pldik_10.png
+share/games/fillets-ng/images/barrel/pldik_11.png
+share/games/fillets-ng/images/barrel/pldik_12.png
+share/games/fillets-ng/images/barrel/pldik_13.png
+share/games/fillets-ng/images/barrel/poster.png
+share/games/fillets-ng/images/barrel/shark_00.png
+share/games/fillets-ng/images/barrel/shark_01.png
+share/games/fillets-ng/images/barrel/shark_02.png
+share/games/fillets-ng/images/barrel/shark_03.png
 share/games/fillets-ng/images/bathroom/20-ocel.png
 share/games/fillets-ng/images/bathroom/balonek1.png
 share/games/fillets-ng/images/bathroom/balonek2.png
@@ -292,6 +561,42 @@ share/games/fillets-ng/images/captain/vladova-2-tmp.png
 share/games/fillets-ng/images/captain/vladova-21-tmp.png
 share/games/fillets-ng/images/captain/vladova-p.png
 share/games/fillets-ng/images/captain/vladova-w.png
+share/games/fillets-ng/images/cave/amfora.png
+share/games/fillets-ng/images/cave/das-_00.png
+share/games/fillets-ng/images/cave/das-_01.png
+share/games/fillets-ng/images/cave/das-_02.png
+share/games/fillets-ng/images/cave/das-_03.png
+share/games/fillets-ng/images/cave/das-_04.png
+share/games/fillets-ng/images/cave/das-_05.png
+share/games/fillets-ng/images/cave/das-_06.png
+share/games/fillets-ng/images/cave/das-_07.png
+share/games/fillets-ng/images/cave/das-_08.png
+share/games/fillets-ng/images/cave/jeskyne-p.png
+share/games/fillets-ng/images/cave/jeskyne-w.png
+share/games/fillets-ng/images/cave/krapnik3.png
+share/games/fillets-ng/images/cave/muslicka.png
+share/games/fillets-ng/images/cave/netopejr_00.png
+share/games/fillets-ng/images/cave/netopejr_01.png
+share/games/fillets-ng/images/cave/netopejr_02.png
+share/games/fillets-ng/images/cave/netopejr_03.png
+share/games/fillets-ng/images/cave/rybicka_h_00.png
+share/games/fillets-ng/images/cave/rybicka_h_01.png
+share/games/fillets-ng/images/cave/rybicka_h_02.png
+share/games/fillets-ng/images/cave/rybicka_h_03.png
+share/games/fillets-ng/images/cave/tyc_00.png
+share/games/fillets-ng/images/cave/tyc_01.png
+share/games/fillets-ng/images/cave/vaza_cervena.png
+share/games/fillets-ng/images/cave/vazav_00.png
+share/games/fillets-ng/images/cave/vazav_01.png
+share/games/fillets-ng/images/cave/zahavec_00.png
+share/games/fillets-ng/images/cave/zahavec_01.png
+share/games/fillets-ng/images/cave/zahavec_02.png
+share/games/fillets-ng/images/cave/zahavec_03.png
+share/games/fillets-ng/images/cave/zahavec_04.png
+share/games/fillets-ng/images/cave/zahavec_05.png
+share/games/fillets-ng/images/cave/zahavec_06.png
+share/games/fillets-ng/images/cave/zahavec_07.png
+share/games/fillets-ng/images/cave/zahavec_08.png
 share/games/fillets-ng/images/cellar/11-ocel.png
 share/games/fillets-ng/images/cellar/13-ocel.png
 share/games/fillets-ng/images/cellar/15-ocel.png
@@ -313,6 +618,57 @@ share/games/fillets-ng/images/cellar/sekera_01.png
 share/games/fillets-ng/images/cellar/sekera_02.png
 share/games/fillets-ng/images/cellar/shell1.png
 share/games/fillets-ng/images/cellar/svicka.png
+share/games/fillets-ng/images/chest/12-ocel.png
+share/games/fillets-ng/images/chest/2-ocel.png
+share/games/fillets-ng/images/chest/gral.png
+share/games/fillets-ng/images/chest/koruna_00.png
+share/games/fillets-ng/images/chest/koruna_01.png
+share/games/fillets-ng/images/chest/koruna_02.png
+share/games/fillets-ng/images/chest/koruna_03.png
+share/games/fillets-ng/images/chest/koruna_04.png
+share/games/fillets-ng/images/chest/koruna_05.png
+share/games/fillets-ng/images/chest/korunka.png
+share/games/fillets-ng/images/chest/korunka1.png
+share/games/fillets-ng/images/chest/krystal-c_00.png
+share/games/fillets-ng/images/chest/krystal-c_01.png
+share/games/fillets-ng/images/chest/krystal-c_02.png
+share/games/fillets-ng/images/chest/krystal-c_03.png
+share/games/fillets-ng/images/chest/krystal-d_00.png
+share/games/fillets-ng/images/chest/krystal-d_01.png
+share/games/fillets-ng/images/chest/krystal-d_02.png
+share/games/fillets-ng/images/chest/krystal-d_03.png
+share/games/fillets-ng/images/chest/krystal-m_00.png
+share/games/fillets-ng/images/chest/krystal-m_01.png
+share/games/fillets-ng/images/chest/krystal-m_02.png
+share/games/fillets-ng/images/chest/krystal-m_03.png
+share/games/fillets-ng/images/chest/krystal-o_00.png
+share/games/fillets-ng/images/chest/krystal-o_01.png
+share/games/fillets-ng/images/chest/krystal-o_02.png
+share/games/fillets-ng/images/chest/krystal-o_03.png
+share/games/fillets-ng/images/chest/krystal-t_00.png
+share/games/fillets-ng/images/chest/krystal-t_01.png
+share/games/fillets-ng/images/chest/krystal-t_02.png
+share/games/fillets-ng/images/chest/krystal-t_03.png
+share/games/fillets-ng/images/chest/krystal-y_00.png
+share/games/fillets-ng/images/chest/krystal-y_01.png
+share/games/fillets-ng/images/chest/krystal-y_02.png
+share/games/fillets-ng/images/chest/krystal-y_03.png
+share/games/fillets-ng/images/chest/krystal-z_00.png
+share/games/fillets-ng/images/chest/krystal-z_01.png
+share/games/fillets-ng/images/chest/krystal-z_02.png
+share/games/fillets-ng/images/chest/krystal-z_03.png
+share/games/fillets-ng/images/chest/mince-1.png
+share/games/fillets-ng/images/chest/prsten-2_00.png
+share/games/fillets-ng/images/chest/prsten-2_01.png
+share/games/fillets-ng/images/chest/prsten-2_02.png
+share/games/fillets-ng/images/chest/prsten-2_03.png
+share/games/fillets-ng/images/chest/prsten-2_04.png
+share/games/fillets-ng/images/chest/prsten-2_05.png
+share/games/fillets-ng/images/chest/stolek2.png
+share/games/fillets-ng/images/chest/truhla-p.png
+share/games/fillets-ng/images/chest/truhla-w.png
+share/games/fillets-ng/images/chest/truhla2.png
+share/games/fillets-ng/images/chest/vazavh.png
 share/games/fillets-ng/images/city/2-ocel.png
 share/games/fillets-ng/images/city/3-ocel.png
 share/games/fillets-ng/images/city/hlava_00.png
@@ -411,6 +767,48 @@ share/games/fillets-ng/images/corals/krab_08.png
 share/games/fillets-ng/images/corals/krab_09.png
 share/games/fillets-ng/images/corals/recycled-p.png
 share/games/fillets-ng/images/corals/recycled-w.png
+share/games/fillets-ng/images/corridor/chodba-14-tmp.png
+share/games/fillets-ng/images/corridor/chodba-20-tmp.png
+share/games/fillets-ng/images/corridor/chodba-21-tmp.png
+share/games/fillets-ng/images/corridor/chodba-25-tmp.png
+share/games/fillets-ng/images/corridor/chodba-4-tmp.png
+share/games/fillets-ng/images/corridor/chodba-okoli.png
+share/games/fillets-ng/images/corridor/chodba-p2.png
+share/games/fillets-ng/images/corridor/dark.png
+share/games/fillets-ng/images/corridor/dvere-a_00.png
+share/games/fillets-ng/images/corridor/dvere-a_01.png
+share/games/fillets-ng/images/corridor/dvere-a_02.png
+share/games/fillets-ng/images/corridor/dvere-a_03.png
+share/games/fillets-ng/images/corridor/dvere-b_00.png
+share/games/fillets-ng/images/corridor/dvere-b_01.png
+share/games/fillets-ng/images/corridor/dvere-b_02.png
+share/games/fillets-ng/images/corridor/dvere-b_03.png
+share/games/fillets-ng/images/corridor/matka_a.png
+share/games/fillets-ng/images/corridor/poklop_00.png
+share/games/fillets-ng/images/corridor/poklop_01.png
+share/games/fillets-ng/images/corridor/poklop_02.png
+share/games/fillets-ng/images/corridor/poklop_03.png
+share/games/fillets-ng/images/corridor/robleft_00.png
+share/games/fillets-ng/images/corridor/robleft_01.png
+share/games/fillets-ng/images/corridor/robleft_02.png
+share/games/fillets-ng/images/corridor/robleft_03.png
+share/games/fillets-ng/images/corridor/robleft_04.png
+share/games/fillets-ng/images/corridor/robleft_05.png
+share/games/fillets-ng/images/corridor/robleft_06.png
+share/games/fillets-ng/images/corridor/robleft_07.png
+share/games/fillets-ng/images/corridor/robleft_08.png
+share/games/fillets-ng/images/corridor/robright_00.png
+share/games/fillets-ng/images/corridor/robright_01.png
+share/games/fillets-ng/images/corridor/robright_02.png
+share/games/fillets-ng/images/corridor/robright_03.png
+share/games/fillets-ng/images/corridor/robright_04.png
+share/games/fillets-ng/images/corridor/robright_05.png
+share/games/fillets-ng/images/corridor/robright_06.png
+share/games/fillets-ng/images/corridor/robright_07.png
+share/games/fillets-ng/images/corridor/robright_08.png
+share/games/fillets-ng/images/corridor/vypinac_00.png
+share/games/fillets-ng/images/corridor/vypinac_01.png
+share/games/fillets-ng/images/corridor/vypinac_02.png
 share/games/fillets-ng/images/crabshow/6-ocel.png
 share/games/fillets-ng/images/crabshow/anticka_hlava_00.png
 share/games/fillets-ng/images/crabshow/anticka_hlava_01.png
@@ -932,7 +1330,258 @@ share/games/fillets-ng/images/elk/maly_snek_03.png
 share/games/fillets-ng/images/elk/naboj.png
 share/games/fillets-ng/images/elk/papoucha_00.png
 share/games/fillets-ng/images/elk/papoucha_01.png
+share/games/fillets-ng/images/emulator/hwhero.png
+share/games/fillets-ng/images/emulator/hwlife.png
+share/games/fillets-ng/images/emulator/hwscore.png
+share/games/fillets-ng/images/emulator/hwtron.png
+share/games/fillets-ng/images/emulator/hwzone.png
+share/games/fillets-ng/images/emulator/jed.png
+share/games/fillets-ng/images/emulator/jpazur.png
+share/games/fillets-ng/images/emulator/jpfial.png
+share/games/fillets-ng/images/emulator/jphero.png
+share/games/fillets-ng/images/emulator/jppodkl.png
+share/games/fillets-ng/images/emulator/jprak1.png
+share/games/fillets-ng/images/emulator/jprak2.png
+share/games/fillets-ng/images/emulator/jprak3.png
+share/games/fillets-ng/images/emulator/knight_00.png
+share/games/fillets-ng/images/emulator/knight_01.png
+share/games/fillets-ng/images/emulator/knight_02.png
+share/games/fillets-ng/images/emulator/knight_03.png
+share/games/fillets-ng/images/emulator/knight_04.png
+share/games/fillets-ng/images/emulator/knight_05.png
+share/games/fillets-ng/images/emulator/knight_06.png
+share/games/fillets-ng/images/emulator/mmhero.png
+share/games/fillets-ng/images/emulator/mmtrub_00.png
+share/games/fillets-ng/images/emulator/mmtrub_01.png
+share/games/fillets-ng/images/emulator/mmtrub_02.png
+share/games/fillets-ng/images/emulator/mmtrub_03.png
+share/games/fillets-ng/images/emulator/spectrum.png
+share/games/fillets-ng/images/emulator/zx-pozadi.png
+share/games/fillets-ng/images/emulator/zx-tmp.png
+share/games/fillets-ng/images/ending/pldik_00.png
+share/games/fillets-ng/images/ending/pldik_01.png
+share/games/fillets-ng/images/ending/pldik_02.png
+share/games/fillets-ng/images/ending/pldik_03.png
+share/games/fillets-ng/images/ending/pldik_04.png
+share/games/fillets-ng/images/ending/pldik_05.png
+share/games/fillets-ng/images/ending/pldik_06.png
+share/games/fillets-ng/images/ending/pldik_07.png
+share/games/fillets-ng/images/ending/pldik_08.png
+share/games/fillets-ng/images/ending/pldik_09.png
+share/games/fillets-ng/images/ending/pldik_10.png
+share/games/fillets-ng/images/ending/pldik_11.png
+share/games/fillets-ng/images/ending/pldik_12.png
+share/games/fillets-ng/images/ending/pldik_13.png
+share/games/fillets-ng/images/ending/polstar.png
+share/games/fillets-ng/images/ending/poster.png
+share/games/fillets-ng/images/ending/prvni-p.png
+share/games/fillets-ng/images/ending/prvni-w.png
+share/games/fillets-ng/images/ending/stul.png
+share/games/fillets-ng/images/ending/zidle_m.png
+share/games/fillets-ng/images/ending/zidle_v.png
+share/games/fillets-ng/images/engine/6-ocel.png
+share/games/fillets-ng/images/engine/8-ocel.png
+share/games/fillets-ng/images/engine/9-ocel.png
+share/games/fillets-ng/images/engine/hasak.png
+share/games/fillets-ng/images/engine/key_00.png
+share/games/fillets-ng/images/engine/key_01.png
+share/games/fillets-ng/images/engine/key_02.png
+share/games/fillets-ng/images/engine/matka_a.png
+share/games/fillets-ng/images/engine/motor-okoli.png
+share/games/fillets-ng/images/engine/motor-pozadi.png
+share/games/fillets-ng/images/engine/motor.png
+share/games/fillets-ng/images/engine/sroub.png
+share/games/fillets-ng/images/experiments/banka-3-tmp.png
+share/games/fillets-ng/images/experiments/banka-4-tmp.png
+share/games/fillets-ng/images/experiments/banka-5-tmp.png
+share/games/fillets-ng/images/experiments/banka-6-tmp.png
+share/games/fillets-ng/images/experiments/banka-7-tmp.png
+share/games/fillets-ng/images/experiments/banka-p.png
+share/games/fillets-ng/images/experiments/banka-w.png
+share/games/fillets-ng/images/experiments/dvere.png
+share/games/fillets-ng/images/experiments/horni_tvor_00.png
+share/games/fillets-ng/images/experiments/horni_tvor_01.png
+share/games/fillets-ng/images/experiments/horni_tvor_02.png
+share/games/fillets-ng/images/experiments/horni_tvor_03.png
+share/games/fillets-ng/images/experiments/horni_tvor_04.png
+share/games/fillets-ng/images/experiments/horni_tvor_05.png
+share/games/fillets-ng/images/experiments/injekc.png
+share/games/fillets-ng/images/experiments/klec_00.png
+share/games/fillets-ng/images/experiments/klec_01.png
+share/games/fillets-ng/images/experiments/kreveta.png
+share/games/fillets-ng/images/experiments/lahvac_00.png
+share/games/fillets-ng/images/experiments/lahvac_01.png
+share/games/fillets-ng/images/experiments/lahvac_02.png
+share/games/fillets-ng/images/experiments/lahvac_03.png
+share/games/fillets-ng/images/experiments/lahvac_04.png
+share/games/fillets-ng/images/experiments/lahvac_05.png
+share/games/fillets-ng/images/experiments/lahvac_06.png
+share/games/fillets-ng/images/experiments/lahvac_07.png
+share/games/fillets-ng/images/experiments/lahvac_08.png
+share/games/fillets-ng/images/experiments/lahvac_09.png
+share/games/fillets-ng/images/experiments/lahvac_10.png
+share/games/fillets-ng/images/experiments/lahvac_11.png
+share/games/fillets-ng/images/experiments/lahvac_12.png
+share/games/fillets-ng/images/experiments/lahvac_13.png
+share/games/fillets-ng/images/experiments/lahvac_14.png
+share/games/fillets-ng/images/experiments/lahvac_15.png
+share/games/fillets-ng/images/experiments/lahvac_16.png
+share/games/fillets-ng/images/experiments/lahvac_17.png
+share/games/fillets-ng/images/experiments/lahvac_18.png
+share/games/fillets-ng/images/experiments/lahvac_19.png
+share/games/fillets-ng/images/experiments/lahvac_20.png
+share/games/fillets-ng/images/experiments/lahvac_21.png
+share/games/fillets-ng/images/experiments/lahvac_22.png
+share/games/fillets-ng/images/experiments/lahvac_23.png
+share/games/fillets-ng/images/experiments/lahvac_24.png
+share/games/fillets-ng/images/experiments/lahvac_25.png
+share/games/fillets-ng/images/experiments/lahvac_26.png
+share/games/fillets-ng/images/experiments/lahvac_27.png
+share/games/fillets-ng/images/experiments/lahvac_28.png
+share/games/fillets-ng/images/experiments/lahvac_29.png
+share/games/fillets-ng/images/experiments/lahvac_30.png
+share/games/fillets-ng/images/experiments/lahvac_31.png
+share/games/fillets-ng/images/experiments/lahvac_32.png
+share/games/fillets-ng/images/experiments/lahvac_33.png
+share/games/fillets-ng/images/experiments/mala_00.png
+share/games/fillets-ng/images/experiments/mala_01.png
+share/games/fillets-ng/images/experiments/mala_02.png
+share/games/fillets-ng/images/experiments/mala_03.png
+share/games/fillets-ng/images/experiments/mala_04.png
+share/games/fillets-ng/images/experiments/mala_05.png
+share/games/fillets-ng/images/experiments/mala_06.png
+share/games/fillets-ng/images/experiments/med.png
+share/games/fillets-ng/images/experiments/mrtvolka_00.png
+share/games/fillets-ng/images/experiments/mrtvolka_01.png
+share/games/fillets-ng/images/experiments/mrtvolka_02.png
+share/games/fillets-ng/images/experiments/mrtvolka_03.png
+share/games/fillets-ng/images/experiments/mrtvolka_04.png
+share/games/fillets-ng/images/experiments/mrtvolka_05.png
+share/games/fillets-ng/images/experiments/mrtvolka_06.png
+share/games/fillets-ng/images/experiments/mrtvolka_07.png
+share/games/fillets-ng/images/experiments/mrtvolka_08.png
+share/games/fillets-ng/images/experiments/mutant_00.png
+share/games/fillets-ng/images/experiments/mutant_01.png
+share/games/fillets-ng/images/experiments/mutant_02.png
+share/games/fillets-ng/images/experiments/mutant_03.png
+share/games/fillets-ng/images/experiments/mutant_04.png
+share/games/fillets-ng/images/experiments/mutant_05.png
+share/games/fillets-ng/images/experiments/mutant_06.png
+share/games/fillets-ng/images/experiments/mutant_07.png
+share/games/fillets-ng/images/experiments/mutant_08.png
+share/games/fillets-ng/images/experiments/mutant_09.png
+share/games/fillets-ng/images/experiments/nuz.png
+share/games/fillets-ng/images/experiments/oka_00.png
+share/games/fillets-ng/images/experiments/oka_01.png
+share/games/fillets-ng/images/experiments/oka_02.png
+share/games/fillets-ng/images/experiments/oka_03.png
+share/games/fillets-ng/images/experiments/oka_04.png
+share/games/fillets-ng/images/experiments/oka_05.png
+share/games/fillets-ng/images/experiments/oka_06.png
+share/games/fillets-ng/images/experiments/oka_07.png
+share/games/fillets-ng/images/experiments/oka_08.png
+share/games/fillets-ng/images/experiments/oka_09.png
+share/games/fillets-ng/images/experiments/oka_10.png
+share/games/fillets-ng/images/experiments/oka_11.png
+share/games/fillets-ng/images/experiments/oka_12.png
+share/games/fillets-ng/images/experiments/oka_13.png
+share/games/fillets-ng/images/experiments/oka_14.png
+share/games/fillets-ng/images/experiments/oko_00.png
+share/games/fillets-ng/images/experiments/oko_01.png
+share/games/fillets-ng/images/experiments/oko_02.png
+share/games/fillets-ng/images/experiments/oko_03.png
+share/games/fillets-ng/images/experiments/oko_04.png
+share/games/fillets-ng/images/experiments/p_00.png
+share/games/fillets-ng/images/experiments/p_01.png
+share/games/fillets-ng/images/experiments/p_02.png
+share/games/fillets-ng/images/experiments/p_03.png
+share/games/fillets-ng/images/experiments/p_04.png
+share/games/fillets-ng/images/experiments/p_05.png
+share/games/fillets-ng/images/experiments/p_06.png
+share/games/fillets-ng/images/experiments/p_07.png
+share/games/fillets-ng/images/experiments/p_08.png
+share/games/fillets-ng/images/experiments/p_09.png
+share/games/fillets-ng/images/experiments/p_10.png
+share/games/fillets-ng/images/experiments/p_11.png
+share/games/fillets-ng/images/experiments/p_12.png
+share/games/fillets-ng/images/experiments/p_13.png
+share/games/fillets-ng/images/experiments/p_14.png
+share/games/fillets-ng/images/experiments/p_15.png
+share/games/fillets-ng/images/experiments/p_16.png
+share/games/fillets-ng/images/experiments/p_17.png
+share/games/fillets-ng/images/experiments/p_18.png
+share/games/fillets-ng/images/experiments/p_19.png
+share/games/fillets-ng/images/experiments/p_20.png
+share/games/fillets-ng/images/experiments/p_21.png
+share/games/fillets-ng/images/experiments/p_22.png
+share/games/fillets-ng/images/experiments/p_23.png
+share/games/fillets-ng/images/experiments/p_24.png
+share/games/fillets-ng/images/experiments/p_25.png
+share/games/fillets-ng/images/experiments/p_26.png
+share/games/fillets-ng/images/experiments/p_27.png
+share/games/fillets-ng/images/experiments/p_28.png
+share/games/fillets-ng/images/experiments/p_29.png
+share/games/fillets-ng/images/experiments/p_30.png
+share/games/fillets-ng/images/experiments/p_31.png
+share/games/fillets-ng/images/experiments/p_32.png
+share/games/fillets-ng/images/experiments/p_33.png
+share/games/fillets-ng/images/experiments/p_34.png
+share/games/fillets-ng/images/experiments/p_35.png
+share/games/fillets-ng/images/experiments/p_36.png
+share/games/fillets-ng/images/experiments/pilka.png
+share/games/fillets-ng/images/experiments/q_00.png
+share/games/fillets-ng/images/experiments/q_01.png
+share/games/fillets-ng/images/experiments/q_02.png
+share/games/fillets-ng/images/experiments/q_03.png
+share/games/fillets-ng/images/experiments/q_04.png
+share/games/fillets-ng/images/experiments/q_05.png
+share/games/fillets-ng/images/experiments/q_06.png
+share/games/fillets-ng/images/experiments/q_07.png
+share/games/fillets-ng/images/experiments/sklena_00.png
+share/games/fillets-ng/images/experiments/sklena_01.png
+share/games/fillets-ng/images/experiments/sklena_02.png
+share/games/fillets-ng/images/experiments/sklena_03.png
+share/games/fillets-ng/images/experiments/sklena_04.png
+share/games/fillets-ng/images/experiments/sklena_05.png
+share/games/fillets-ng/images/experiments/sklena_06.png
+share/games/fillets-ng/images/experiments/sklena_07.png
+share/games/fillets-ng/images/experiments/sklena_08.png
+share/games/fillets-ng/images/experiments/sklena_09.png
+share/games/fillets-ng/images/experiments/sklena_10.png
+share/games/fillets-ng/images/experiments/sklena_11.png
+share/games/fillets-ng/images/experiments/spodni_tvor_00.png
+share/games/fillets-ng/images/experiments/spodni_tvor_01.png
+share/games/fillets-ng/images/experiments/spodni_tvor_02.png
+share/games/fillets-ng/images/experiments/spodni_tvor_03.png
+share/games/fillets-ng/images/experiments/spodni_tvor_04.png
+share/games/fillets-ng/images/experiments/spodni_tvor_05.png
+share/games/fillets-ng/images/experiments/zk_b_00.png
+share/games/fillets-ng/images/experiments/zk_b_01.png
+share/games/fillets-ng/images/experiments/zk_b_02.png
+share/games/fillets-ng/images/experiments/zk_c_00.png
+share/games/fillets-ng/images/experiments/zk_c_01.png
+share/games/fillets-ng/images/experiments/zk_c_02.png
+share/games/fillets-ng/images/experiments/zk_f_00.png
+share/games/fillets-ng/images/experiments/zk_f_01.png
+share/games/fillets-ng/images/experiments/zk_f_02.png
+share/games/fillets-ng/images/experiments/zk_lezici.png
+share/games/fillets-ng/images/experiments/zk_m_00.png
+share/games/fillets-ng/images/experiments/zk_m_01.png
+share/games/fillets-ng/images/experiments/zk_m_02.png
+share/games/fillets-ng/images/experiments/zk_o_00.png
+share/games/fillets-ng/images/experiments/zk_o_01.png
+share/games/fillets-ng/images/experiments/zk_o_02.png
+share/games/fillets-ng/images/experiments/zk_r_00.png
+share/games/fillets-ng/images/experiments/zk_r_01.png
+share/games/fillets-ng/images/experiments/zk_r_02.png
+share/games/fillets-ng/images/experiments/zk_y.png
+share/games/fillets-ng/images/experiments/zk_z.png
+share/games/fillets-ng/images/experiments/zk_zd_00.png
+share/games/fillets-ng/images/experiments/zk_zd_01.png
+share/games/fillets-ng/images/experiments/zk_zd_02.png
 share/games/fillets-ng/images/fishes/big/heads/left/head_blink.png
+share/games/fillets-ng/images/fishes/big/heads/left/head_dark_00.png
+share/games/fillets-ng/images/fishes/big/heads/left/head_dark_01.png
 share/games/fillets-ng/images/fishes/big/heads/left/head_pushing.png
 share/games/fillets-ng/images/fishes/big/heads/left/head_scowl_00.png
 share/games/fillets-ng/images/fishes/big/heads/left/head_scowl_01.png
@@ -942,6 +1591,8 @@ share/games/fillets-ng/images/fishes/big/heads/left/head_talking_00.png
 share/games/fillets-ng/images/fishes/big/heads/left/head_talking_01.png
 share/games/fillets-ng/images/fishes/big/heads/left/head_talking_02.png
 share/games/fillets-ng/images/fishes/big/heads/right/head_blink.png
+share/games/fillets-ng/images/fishes/big/heads/right/head_dark_00.png
+share/games/fillets-ng/images/fishes/big/heads/right/head_dark_01.png
 share/games/fillets-ng/images/fishes/big/heads/right/head_pushing.png
 share/games/fillets-ng/images/fishes/big/heads/right/head_scowl_00.png
 share/games/fillets-ng/images/fishes/big/heads/right/head_scowl_01.png
@@ -950,7 +1601,6 @@ share/games/fillets-ng/images/fishes/big/heads/right/head_smile.png
 share/games/fillets-ng/images/fishes/big/heads/right/head_talking_00.png
 share/games/fillets-ng/images/fishes/big/heads/right/head_talking_01.png
 share/games/fillets-ng/images/fishes/big/heads/right/head_talking_02.png
-share/games/fillets-ng/images/fishes/big/left/body_dark_00.png
 share/games/fillets-ng/images/fishes/big/left/body_rest_00.png
 share/games/fillets-ng/images/fishes/big/left/body_rest_01.png
 share/games/fillets-ng/images/fishes/big/left/body_rest_02.png
@@ -973,7 +1623,6 @@ share/games/fillets-ng/images/fishes/big/left/body_vertical_02.png
 share/games/fillets-ng/images/fishes/big/left/body_vertical_03.png
 share/games/fillets-ng/images/fishes/big/left/body_vertical_04.png
 share/games/fillets-ng/images/fishes/big/left/body_vertical_05.png
-share/games/fillets-ng/images/fishes/big/right/body_dark_00.png
 share/games/fillets-ng/images/fishes/big/right/body_rest_00.png
 share/games/fillets-ng/images/fishes/big/right/body_rest_01.png
 share/games/fillets-ng/images/fishes/big/right/body_rest_02.png
@@ -996,7 +1645,77 @@ share/games/fillets-ng/images/fishes/big/right/body_vertical_02.png
 share/games/fillets-ng/images/fishes/big/right/body_vertical_03.png
 share/games/fillets-ng/images/fishes/big/right/body_vertical_04.png
 share/games/fillets-ng/images/fishes/big/right/body_vertical_05.png
+share/games/fillets-ng/images/fishes/ex_big/heads/left/head_blink.png
+share/games/fillets-ng/images/fishes/ex_big/heads/left/head_dark_00.png
+share/games/fillets-ng/images/fishes/ex_big/heads/left/head_dark_01.png
+share/games/fillets-ng/images/fishes/ex_big/heads/left/head_pushing.png
+share/games/fillets-ng/images/fishes/ex_big/heads/left/head_scowl_00.png
+share/games/fillets-ng/images/fishes/ex_big/heads/left/head_scowl_01.png
+share/games/fillets-ng/images/fishes/ex_big/heads/left/head_shock.png
+share/games/fillets-ng/images/fishes/ex_big/heads/left/head_smile.png
+share/games/fillets-ng/images/fishes/ex_big/heads/left/head_talking_00.png
+share/games/fillets-ng/images/fishes/ex_big/heads/left/head_talking_01.png
+share/games/fillets-ng/images/fishes/ex_big/heads/left/head_talking_02.png
+share/games/fillets-ng/images/fishes/ex_big/heads/right/head_blink.png
+share/games/fillets-ng/images/fishes/ex_big/heads/right/head_dark_00.png
+share/games/fillets-ng/images/fishes/ex_big/heads/right/head_dark_01.png
+share/games/fillets-ng/images/fishes/ex_big/heads/right/head_pushing.png
+share/games/fillets-ng/images/fishes/ex_big/heads/right/head_scowl_00.png
+share/games/fillets-ng/images/fishes/ex_big/heads/right/head_scowl_01.png
+share/games/fillets-ng/images/fishes/ex_big/heads/right/head_shock.png
+share/games/fillets-ng/images/fishes/ex_big/heads/right/head_smile.png
+share/games/fillets-ng/images/fishes/ex_big/heads/right/head_talking_00.png
+share/games/fillets-ng/images/fishes/ex_big/heads/right/head_talking_01.png
+share/games/fillets-ng/images/fishes/ex_big/heads/right/head_talking_02.png
+share/games/fillets-ng/images/fishes/ex_big/left/body_rest_00.png
+share/games/fillets-ng/images/fishes/ex_big/left/body_skeleton_00.png
+share/games/fillets-ng/images/fishes/ex_big/left/body_swam_00.png
+share/games/fillets-ng/images/fishes/ex_big/left/body_talk_00.png
+share/games/fillets-ng/images/fishes/ex_big/left/body_turn_00.png
+share/games/fillets-ng/images/fishes/ex_big/left/body_vertical_00.png
+share/games/fillets-ng/images/fishes/ex_big/right/body_rest_00.png
+share/games/fillets-ng/images/fishes/ex_big/right/body_skeleton_00.png
+share/games/fillets-ng/images/fishes/ex_big/right/body_swam_00.png
+share/games/fillets-ng/images/fishes/ex_big/right/body_talk_00.png
+share/games/fillets-ng/images/fishes/ex_big/right/body_turn_00.png
+share/games/fillets-ng/images/fishes/ex_big/right/body_vertical_00.png
+share/games/fillets-ng/images/fishes/ex_small/heads/left/head_blink.png
+share/games/fillets-ng/images/fishes/ex_small/heads/left/head_dark_00.png
+share/games/fillets-ng/images/fishes/ex_small/heads/left/head_dark_01.png
+share/games/fillets-ng/images/fishes/ex_small/heads/left/head_pushing.png
+share/games/fillets-ng/images/fishes/ex_small/heads/left/head_scowl_00.png
+share/games/fillets-ng/images/fishes/ex_small/heads/left/head_scowl_01.png
+share/games/fillets-ng/images/fishes/ex_small/heads/left/head_shock.png
+share/games/fillets-ng/images/fishes/ex_small/heads/left/head_smile.png
+share/games/fillets-ng/images/fishes/ex_small/heads/left/head_talking_00.png
+share/games/fillets-ng/images/fishes/ex_small/heads/left/head_talking_01.png
+share/games/fillets-ng/images/fishes/ex_small/heads/left/head_talking_02.png
+share/games/fillets-ng/images/fishes/ex_small/heads/right/head_blink.png
+share/games/fillets-ng/images/fishes/ex_small/heads/right/head_dark_00.png
+share/games/fillets-ng/images/fishes/ex_small/heads/right/head_dark_01.png
+share/games/fillets-ng/images/fishes/ex_small/heads/right/head_pushing.png
+share/games/fillets-ng/images/fishes/ex_small/heads/right/head_scowl_00.png
+share/games/fillets-ng/images/fishes/ex_small/heads/right/head_scowl_01.png
+share/games/fillets-ng/images/fishes/ex_small/heads/right/head_shock.png
+share/games/fillets-ng/images/fishes/ex_small/heads/right/head_smile.png
+share/games/fillets-ng/images/fishes/ex_small/heads/right/head_talking_00.png
+share/games/fillets-ng/images/fishes/ex_small/heads/right/head_talking_01.png
+share/games/fillets-ng/images/fishes/ex_small/heads/right/head_talking_02.png
+share/games/fillets-ng/images/fishes/ex_small/left/body_rest_00.png
+share/games/fillets-ng/images/fishes/ex_small/left/body_skeleton_00.png
+share/games/fillets-ng/images/fishes/ex_small/left/body_swam_00.png
+share/games/fillets-ng/images/fishes/ex_small/left/body_talk_00.png
+share/games/fillets-ng/images/fishes/ex_small/left/body_turn_00.png
+share/games/fillets-ng/images/fishes/ex_small/left/body_vertical_00.png
+share/games/fillets-ng/images/fishes/ex_small/right/body_rest_00.png
+share/games/fillets-ng/images/fishes/ex_small/right/body_skeleton_00.png
+share/games/fillets-ng/images/fishes/ex_small/right/body_swam_00.png
+share/games/fillets-ng/images/fishes/ex_small/right/body_talk_00.png
+share/games/fillets-ng/images/fishes/ex_small/right/body_turn_00.png
+share/games/fillets-ng/images/fishes/ex_small/right/body_vertical_00.png
 share/games/fillets-ng/images/fishes/small/heads/left/head_blink.png
+share/games/fillets-ng/images/fishes/small/heads/left/head_dark_00.png
+share/games/fillets-ng/images/fishes/small/heads/left/head_dark_01.png
 share/games/fillets-ng/images/fishes/small/heads/left/head_pushing.png
 share/games/fillets-ng/images/fishes/small/heads/left/head_scowl_00.png
 share/games/fillets-ng/images/fishes/small/heads/left/head_scowl_01.png
@@ -1006,6 +1725,8 @@ share/games/fillets-ng/images/fishes/small/heads/left/head_talking_00.png
 share/games/fillets-ng/images/fishes/small/heads/left/head_talking_01.png
 share/games/fillets-ng/images/fishes/small/heads/left/head_talking_02.png
 share/games/fillets-ng/images/fishes/small/heads/right/head_blink.png
+share/games/fillets-ng/images/fishes/small/heads/right/head_dark_00.png
+share/games/fillets-ng/images/fishes/small/heads/right/head_dark_01.png
 share/games/fillets-ng/images/fishes/small/heads/right/head_pushing.png
 share/games/fillets-ng/images/fishes/small/heads/right/head_scowl_00.png
 share/games/fillets-ng/images/fishes/small/heads/right/head_scowl_01.png
@@ -1014,7 +1735,6 @@ share/games/fillets-ng/images/fishes/small/heads/right/head_smile.png
 share/games/fillets-ng/images/fishes/small/heads/right/head_talking_00.png
 share/games/fillets-ng/images/fishes/small/heads/right/head_talking_01.png
 share/games/fillets-ng/images/fishes/small/heads/right/head_talking_02.png
-share/games/fillets-ng/images/fishes/small/left/body_dark_00.png
 share/games/fillets-ng/images/fishes/small/left/body_rest_00.png
 share/games/fillets-ng/images/fishes/small/left/body_rest_01.png
 share/games/fillets-ng/images/fishes/small/left/body_rest_02.png
@@ -1037,7 +1757,6 @@ share/games/fillets-ng/images/fishes/small/left/body_vertical_02.png
 share/games/fillets-ng/images/fishes/small/left/body_vertical_03.png
 share/games/fillets-ng/images/fishes/small/left/body_vertical_04.png
 share/games/fillets-ng/images/fishes/small/left/body_vertical_05.png
-share/games/fillets-ng/images/fishes/small/right/body_dark_00.png
 share/games/fillets-ng/images/fishes/small/right/body_rest_00.png
 share/games/fillets-ng/images/fishes/small/right/body_rest_01.png
 share/games/fillets-ng/images/fishes/small/right/body_rest_02.png
@@ -1060,6 +1779,226 @@ share/games/fillets-ng/images/fishes/small/right/body_vertical_02.png
 share/games/fillets-ng/images/fishes/small/right/body_vertical_03.png
 share/games/fillets-ng/images/fishes/small/right/body_vertical_04.png
 share/games/fillets-ng/images/fishes/small/right/body_vertical_05.png
+share/games/fillets-ng/images/floppy/1-tmp.png
+share/games/fillets-ng/images/floppy/11-ocel.png
+share/games/fillets-ng/images/floppy/13-ocel.png
+share/games/fillets-ng/images/floppy/14-ocel.png
+share/games/fillets-ng/images/floppy/2-ocel.png
+share/games/fillets-ng/images/floppy/3-ocel.png
+share/games/fillets-ng/images/floppy/chip-1.png
+share/games/fillets-ng/images/floppy/disketa-okoli.png
+share/games/fillets-ng/images/floppy/disketa-p-opr.png
+share/games/fillets-ng/images/floppy/klika.png
+share/games/fillets-ng/images/floppy/poster.png
+share/games/fillets-ng/images/floppy/souc.png
+share/games/fillets-ng/images/floppy/svab_00.png
+share/games/fillets-ng/images/floppy/svab_01.png
+share/games/fillets-ng/images/floppy/svab_02.png
+share/games/fillets-ng/images/floppy/svab_03.png
+share/games/fillets-ng/images/floppy/vir-_00.png
+share/games/fillets-ng/images/floppy/vir-_01.png
+share/games/fillets-ng/images/floppy/vir-_02.png
+share/games/fillets-ng/images/floppy/vir-_03.png
+share/games/fillets-ng/images/floppy/vir-_04.png
+share/games/fillets-ng/images/floppy/vir-_05.png
+share/games/fillets-ng/images/floppy/vir-_06.png
+share/games/fillets-ng/images/floppy/vir-_07.png
+share/games/fillets-ng/images/floppy/vir-_08.png
+share/games/fillets-ng/images/floppy/virus-_00.png
+share/games/fillets-ng/images/floppy/virus-_01.png
+share/games/fillets-ng/images/floppy/virus-_02.png
+share/games/fillets-ng/images/floppy/virus-_03.png
+share/games/fillets-ng/images/floppy/virus-_04.png
+share/games/fillets-ng/images/floppy/virus-_05.png
+share/games/fillets-ng/images/floppy/virus-_06.png
+share/games/fillets-ng/images/floppy/virus-_07.png
+share/games/fillets-ng/images/floppy/virus-_08.png
+share/games/fillets-ng/images/gems/krystal_00.png
+share/games/fillets-ng/images/gems/krystal_01.png
+share/games/fillets-ng/images/gems/krystal_02.png
+share/games/fillets-ng/images/gems/krystal_03.png
+share/games/fillets-ng/images/gems/krystal_04.png
+share/games/fillets-ng/images/gems/krystal_05.png
+share/games/fillets-ng/images/gems/krystal_06.png
+share/games/fillets-ng/images/gems/krystal_07.png
+share/games/fillets-ng/images/gems/krystal_08.png
+share/games/fillets-ng/images/gems/krystal_09.png
+share/games/fillets-ng/images/gems/krystal_10.png
+share/games/fillets-ng/images/gems/krystal_11.png
+share/games/fillets-ng/images/gems/krystal_12.png
+share/games/fillets-ng/images/gems/krystal_13.png
+share/games/fillets-ng/images/gems/krystal_14.png
+share/games/fillets-ng/images/gems/krystal_15.png
+share/games/fillets-ng/images/gems/krystal_16.png
+share/games/fillets-ng/images/gems/krystal_17.png
+share/games/fillets-ng/images/gems/krystal_18.png
+share/games/fillets-ng/images/gems/krystal_19.png
+share/games/fillets-ng/images/gems/krystal_20.png
+share/games/fillets-ng/images/gems/krystal_21.png
+share/games/fillets-ng/images/gems/krystal_22.png
+share/games/fillets-ng/images/gems/krystal_23.png
+share/games/fillets-ng/images/gems/zaval-p.png
+share/games/fillets-ng/images/gems/zaval-w.png
+share/games/fillets-ng/images/gods/3-ocel.png
+share/games/fillets-ng/images/gods/4-ocel.png
+share/games/fillets-ng/images/gods/5-ocel.png
+share/games/fillets-ng/images/gods/bota.png
+share/games/fillets-ng/images/gods/domino.png
+share/games/fillets-ng/images/gods/hul.png
+share/games/fillets-ng/images/gods/kuzelka.png
+share/games/fillets-ng/images/gods/lode-w.png
+share/games/fillets-ng/images/gods/neptun_00.png
+share/games/fillets-ng/images/gods/neptun_01.png
+share/games/fillets-ng/images/gods/neptun_02.png
+share/games/fillets-ng/images/gods/neptun_03.png
+share/games/fillets-ng/images/gods/neptun_04.png
+share/games/fillets-ng/images/gods/neptun_05.png
+share/games/fillets-ng/images/gods/neptun_06.png
+share/games/fillets-ng/images/gods/neptun_07.png
+share/games/fillets-ng/images/gods/neptun_08.png
+share/games/fillets-ng/images/gods/neptun_09.png
+share/games/fillets-ng/images/gods/neptun_10.png
+share/games/fillets-ng/images/gods/neptun_11.png
+share/games/fillets-ng/images/gods/neptun_12.png
+share/games/fillets-ng/images/gods/neptun_13.png
+share/games/fillets-ng/images/gods/neptun_14.png
+share/games/fillets-ng/images/gods/neptun_15.png
+share/games/fillets-ng/images/gods/neptun_16.png
+share/games/fillets-ng/images/gods/neptun_17.png
+share/games/fillets-ng/images/gods/neptun_18.png
+share/games/fillets-ng/images/gods/neptun_19.png
+share/games/fillets-ng/images/gods/neptun_20.png
+share/games/fillets-ng/images/gods/neptun_21.png
+share/games/fillets-ng/images/gods/neptun_22.png
+share/games/fillets-ng/images/gods/neptun_23.png
+share/games/fillets-ng/images/gods/neptun_24.png
+share/games/fillets-ng/images/gods/neptun_25.png
+share/games/fillets-ng/images/gods/neptun_26.png
+share/games/fillets-ng/images/gods/neptun_27.png
+share/games/fillets-ng/images/gods/neptun_28.png
+share/games/fillets-ng/images/gods/neptun_29.png
+share/games/fillets-ng/images/gods/neptun_30.png
+share/games/fillets-ng/images/gods/neptun_31.png
+share/games/fillets-ng/images/gods/neptun_32.png
+share/games/fillets-ng/images/gods/neptun_33.png
+share/games/fillets-ng/images/gods/neptun_34.png
+share/games/fillets-ng/images/gods/neptun_35.png
+share/games/fillets-ng/images/gods/neptun_36.png
+share/games/fillets-ng/images/gods/neptun_37.png
+share/games/fillets-ng/images/gods/neptun_38.png
+share/games/fillets-ng/images/gods/neptun_39.png
+share/games/fillets-ng/images/gods/neptun_40.png
+share/games/fillets-ng/images/gods/neptun_41.png
+share/games/fillets-ng/images/gods/neptun_42.png
+share/games/fillets-ng/images/gods/neptun_43.png
+share/games/fillets-ng/images/gods/neptun_44.png
+share/games/fillets-ng/images/gods/neptun_45.png
+share/games/fillets-ng/images/gods/palka.png
+share/games/fillets-ng/images/gods/ping.png
+share/games/fillets-ng/images/gods/poseidon_00.png
+share/games/fillets-ng/images/gods/poseidon_01.png
+share/games/fillets-ng/images/gods/poseidon_02.png
+share/games/fillets-ng/images/gods/poseidon_03.png
+share/games/fillets-ng/images/gods/poseidon_04.png
+share/games/fillets-ng/images/gods/poseidon_05.png
+share/games/fillets-ng/images/gods/poseidon_06.png
+share/games/fillets-ng/images/gods/poseidon_07.png
+share/games/fillets-ng/images/gods/poseidon_08.png
+share/games/fillets-ng/images/gods/poseidon_09.png
+share/games/fillets-ng/images/gods/poseidon_10.png
+share/games/fillets-ng/images/gods/poseidon_11.png
+share/games/fillets-ng/images/gods/poseidon_12.png
+share/games/fillets-ng/images/gods/poseidon_13.png
+share/games/fillets-ng/images/gods/poseidon_14.png
+share/games/fillets-ng/images/gods/poseidon_15.png
+share/games/fillets-ng/images/gods/poseidon_16.png
+share/games/fillets-ng/images/gods/poseidon_17.png
+share/games/fillets-ng/images/gods/poseidon_18.png
+share/games/fillets-ng/images/gods/poseidon_19.png
+share/games/fillets-ng/images/gods/poseidon_20.png
+share/games/fillets-ng/images/gods/poseidon_21.png
+share/games/fillets-ng/images/gods/poseidon_22.png
+share/games/fillets-ng/images/gods/poseidon_23.png
+share/games/fillets-ng/images/gods/poseidon_24.png
+share/games/fillets-ng/images/gods/poseidon_25.png
+share/games/fillets-ng/images/gods/poseidon_26.png
+share/games/fillets-ng/images/gods/poseidon_27.png
+share/games/fillets-ng/images/gods/poseidon_28.png
+share/games/fillets-ng/images/gods/poseidon_29.png
+share/games/fillets-ng/images/gods/poseidon_30.png
+share/games/fillets-ng/images/gods/poseidon_31.png
+share/games/fillets-ng/images/gods/poseidon_32.png
+share/games/fillets-ng/images/gods/poseidon_33.png
+share/games/fillets-ng/images/gods/poseidon_34.png
+share/games/fillets-ng/images/gods/poseidon_35.png
+share/games/fillets-ng/images/gods/poseidon_36.png
+share/games/fillets-ng/images/gods/poseidon_37.png
+share/games/fillets-ng/images/gods/poseidon_38.png
+share/games/fillets-ng/images/gods/poseidon_39.png
+share/games/fillets-ng/images/gods/poseidon_40.png
+share/games/fillets-ng/images/gods/poseidon_41.png
+share/games/fillets-ng/images/gods/poseidon_42.png
+share/games/fillets-ng/images/gods/poseidon_43.png
+share/games/fillets-ng/images/gods/poseidon_44.png
+share/games/fillets-ng/images/gods/poseidon_45.png
+share/games/fillets-ng/images/gods/poseidon_46.png
+share/games/fillets-ng/images/gods/poseidon_47.png
+share/games/fillets-ng/images/gods/poseidon_48.png
+share/games/fillets-ng/images/gods/poster.png
+share/games/fillets-ng/images/gods/potop_00.png
+share/games/fillets-ng/images/gods/potop_01.png
+share/games/fillets-ng/images/gods/potop_02.png
+share/games/fillets-ng/images/gods/potop_03.png
+share/games/fillets-ng/images/gods/potop_04.png
+share/games/fillets-ng/images/gods/pozadi.png
+share/games/fillets-ng/images/gods/tenisak.png
+share/games/fillets-ng/images/grail/12-ocel.png
+share/games/fillets-ng/images/grail/16-ocel.png
+share/games/fillets-ng/images/grail/22-ocel.png
+share/games/fillets-ng/images/grail/27-ocel.png
+share/games/fillets-ng/images/grail/29-ocel.png
+share/games/fillets-ng/images/grail/30-ocel.png
+share/games/fillets-ng/images/grail/33-ocel.png
+share/games/fillets-ng/images/grail/35-ocel.png
+share/games/fillets-ng/images/grail/40-ocel.png
+share/games/fillets-ng/images/grail/43-ocel.png
+share/games/fillets-ng/images/grail/8-ocel.png
+share/games/fillets-ng/images/grail/aura_00.png
+share/games/fillets-ng/images/grail/aura_01.png
+share/games/fillets-ng/images/grail/aura_02.png
+share/games/fillets-ng/images/grail/aura_03.png
+share/games/fillets-ng/images/grail/aura_04.png
+share/games/fillets-ng/images/grail/aura_05.png
+share/games/fillets-ng/images/grail/aura_06.png
+share/games/fillets-ng/images/grail/aura_07.png
+share/games/fillets-ng/images/grail/aura_08.png
+share/games/fillets-ng/images/grail/aura_09.png
+share/games/fillets-ng/images/grail/aura_10.png
+share/games/fillets-ng/images/grail/aura_11.png
+share/games/fillets-ng/images/grail/gral-pozadi.png
+share/games/fillets-ng/images/grail/gral-zed.png
+share/games/fillets-ng/images/grail/gral_00.png
+share/games/fillets-ng/images/grail/gral_01.png
+share/games/fillets-ng/images/grail/poster.png
+share/games/fillets-ng/images/hardware/pozadi2.png
+share/games/fillets-ng/images/hardware/procesor1.png
+share/games/fillets-ng/images/hardware/procesor2.png
+share/games/fillets-ng/images/hardware/procesor3.png
+share/games/fillets-ng/images/hardware/procesor4.png
+share/games/fillets-ng/images/hardware/procesor5.png
+share/games/fillets-ng/images/hardware/procesor6.png
+share/games/fillets-ng/images/hardware/procesor7.png
+share/games/fillets-ng/images/hardware/procesor8.png
+share/games/fillets-ng/images/hardware/puzzle-w.png
+share/games/fillets-ng/images/hardware/val-spec.png
+share/games/fillets-ng/images/hardware/val0.png
+share/games/fillets-ng/images/hardware/val1.png
+share/games/fillets-ng/images/hardware/val2.png
+share/games/fillets-ng/images/hardware/val3.png
+share/games/fillets-ng/images/hardware/val4.png
+share/games/fillets-ng/images/hardware/val5.png
+share/games/fillets-ng/images/hardware/val6.png
+share/games/fillets-ng/images/hardware/val7.png
 share/games/fillets-ng/images/icon.png
 share/games/fillets-ng/images/imprisoned/coral_cerv.png
 share/games/fillets-ng/images/imprisoned/konik_00.png
@@ -1139,11 +2078,66 @@ share/games/fillets-ng/images/library/ostnatec_01.png
 share/games/fillets-ng/images/library/ostnatec_02.png
 share/games/fillets-ng/images/library/vrak-okoli.png
 share/games/fillets-ng/images/library/vrak-pozadi.png
+share/games/fillets-ng/images/magnet/6-ocel.png
+share/games/fillets-ng/images/magnet/7-ocel.png
+share/games/fillets-ng/images/magnet/8-ocel.png
+share/games/fillets-ng/images/magnet/9-ocel.png
+share/games/fillets-ng/images/magnet/magnety-oba-_00.png
+share/games/fillets-ng/images/magnet/magnety-oba-_01.png
+share/games/fillets-ng/images/magnet/magnety-oba-_02.png
+share/games/fillets-ng/images/magnet/magnety-oba-_03.png
+share/games/fillets-ng/images/magnet/magnety-oba-_04.png
+share/games/fillets-ng/images/magnet/paprsky-pozadi.png
+share/games/fillets-ng/images/magnet/paprsky-w.png
+share/games/fillets-ng/images/magnet/radio-_00.png
+share/games/fillets-ng/images/magnet/radio-_01.png
+share/games/fillets-ng/images/magnet/radio-_02.png
+share/games/fillets-ng/images/magnet/radio-_03.png
+share/games/fillets-ng/images/magnet/radio-_04.png
+share/games/fillets-ng/images/magnet/radio-_05.png
+share/games/fillets-ng/images/magnet/radio-_06.png
+share/games/fillets-ng/images/magnet/radio-_07.png
+share/games/fillets-ng/images/magnet/radio-_08.png
+share/games/fillets-ng/images/magnet/zbran.png
+share/games/fillets-ng/images/map/19-ocel.png
+share/games/fillets-ng/images/map/3-ocel.png
+share/games/fillets-ng/images/map/klobouk.png
+share/games/fillets-ng/images/map/kouleb.png
+share/games/fillets-ng/images/map/koulec.png
+share/games/fillets-ng/images/map/kouled.png
+share/games/fillets-ng/images/map/krystal_c_00.png
+share/games/fillets-ng/images/map/krystal_c_01.png
+share/games/fillets-ng/images/map/krystal_c_02.png
+share/games/fillets-ng/images/map/krystal_c_03.png
+share/games/fillets-ng/images/map/krystal_m_00.png
+share/games/fillets-ng/images/map/krystal_m_01.png
+share/games/fillets-ng/images/map/krystal_m_02.png
+share/games/fillets-ng/images/map/krystal_m_03.png
+share/games/fillets-ng/images/map/maly_snek_00.png
+share/games/fillets-ng/images/map/maly_snek_01.png
+share/games/fillets-ng/images/map/maly_snek_02.png
+share/games/fillets-ng/images/map/maly_snek_03.png
+share/games/fillets-ng/images/map/malysnek_00.png
+share/games/fillets-ng/images/map/malysnek_01.png
+share/games/fillets-ng/images/map/malysnek_02.png
+share/games/fillets-ng/images/map/malysnek_03.png
+share/games/fillets-ng/images/map/mapa-b.png
+share/games/fillets-ng/images/map/mapa-okoli.png
+share/games/fillets-ng/images/map/mapa-p.png
+share/games/fillets-ng/images/map/oko_00.png
+share/games/fillets-ng/images/map/oko_01.png
+share/games/fillets-ng/images/map/oko_02.png
+share/games/fillets-ng/images/map/oko_03.png
+share/games/fillets-ng/images/map/oko_04.png
+share/games/fillets-ng/images/map/pistole.png
+share/games/fillets-ng/images/map/poster.png
+share/games/fillets-ng/images/map/stolekm.png
 share/games/fillets-ng/images/menu/back.png
 share/games/fillets-ng/images/menu/credits.png
 share/games/fillets-ng/images/menu/flags/copyright
 share/games/fillets-ng/images/menu/flags/cs.png
 share/games/fillets-ng/images/menu/flags/de.png
+share/games/fillets-ng/images/menu/flags/de_ch.png
 share/games/fillets-ng/images/menu/flags/en.png
 share/games/fillets-ng/images/menu/flags/fr.png
 share/games/fillets-ng/images/menu/intro.png
@@ -1465,6 +2459,64 @@ share/games/fillets-ng/images/pearls/zeva_04.png
 share/games/fillets-ng/images/pearls/zeva_05.png
 share/games/fillets-ng/images/pearls/zeva_06.png
 share/games/fillets-ng/images/pearls/zeva_07.png
+share/games/fillets-ng/images/propulsion/11-ocel.png
+share/games/fillets-ng/images/propulsion/12-ocel.png
+share/games/fillets-ng/images/propulsion/15-ocel.png
+share/games/fillets-ng/images/propulsion/16-ocel.png
+share/games/fillets-ng/images/propulsion/7-ocel.png
+share/games/fillets-ng/images/propulsion/8-ocel.png
+share/games/fillets-ng/images/propulsion/cola.png
+share/games/fillets-ng/images/propulsion/draty_.png
+share/games/fillets-ng/images/propulsion/hadice_00.png
+share/games/fillets-ng/images/propulsion/hadice_01.png
+share/games/fillets-ng/images/propulsion/kamna.png
+share/games/fillets-ng/images/propulsion/matka_a.png
+share/games/fillets-ng/images/propulsion/plutonium-1a.png
+share/games/fillets-ng/images/propulsion/plutonium-4-_00.png
+share/games/fillets-ng/images/propulsion/plutonium-4-_01.png
+share/games/fillets-ng/images/propulsion/plutonium-4-_02.png
+share/games/fillets-ng/images/propulsion/podstavec_00.png
+share/games/fillets-ng/images/propulsion/podstavec_01.png
+share/games/fillets-ng/images/propulsion/podstavec_02.png
+share/games/fillets-ng/images/propulsion/podstavec_03.png
+share/games/fillets-ng/images/propulsion/pohon-p.png
+share/games/fillets-ng/images/propulsion/pohon-w.png
+share/games/fillets-ng/images/propulsion/pohon_00.png
+share/games/fillets-ng/images/propulsion/pohon_01.png
+share/games/fillets-ng/images/propulsion/pohon_02.png
+share/games/fillets-ng/images/propulsion/pohon_03.png
+share/games/fillets-ng/images/propulsion/pohon_04.png
+share/games/fillets-ng/images/propulsion/pohon_05.png
+share/games/fillets-ng/images/propulsion/pohon_06.png
+share/games/fillets-ng/images/propulsion/pohon_07.png
+share/games/fillets-ng/images/propulsion/pohon_08.png
+share/games/fillets-ng/images/propulsion/pohon_09.png
+share/games/fillets-ng/images/propulsion/pohon_10.png
+share/games/fillets-ng/images/propulsion/pohon_11.png
+share/games/fillets-ng/images/propulsion/poster.png
+share/games/fillets-ng/images/propulsion/rura.png
+share/games/fillets-ng/images/propulsion/ufo_00.png
+share/games/fillets-ng/images/propulsion/ufo_01.png
+share/games/fillets-ng/images/propulsion/ufo_02.png
+share/games/fillets-ng/images/propulsion/ufo_03.png
+share/games/fillets-ng/images/propulsion/ufo_04.png
+share/games/fillets-ng/images/propulsion/ufo_05.png
+share/games/fillets-ng/images/propulsion/ufo_06.png
+share/games/fillets-ng/images/propulsion/ufo_07.png
+share/games/fillets-ng/images/propulsion/ufo_08.png
+share/games/fillets-ng/images/propulsion/ufo_09.png
+share/games/fillets-ng/images/propulsion/ufo_10.png
+share/games/fillets-ng/images/propulsion/ufon-_00.png
+share/games/fillets-ng/images/propulsion/ufon-_01.png
+share/games/fillets-ng/images/propulsion/ufon-_02.png
+share/games/fillets-ng/images/propulsion/ufon-_03.png
+share/games/fillets-ng/images/propulsion/ufon-_04.png
+share/games/fillets-ng/images/propulsion/ufon-_05.png
+share/games/fillets-ng/images/propulsion/ufon-_06.png
+share/games/fillets-ng/images/propulsion/ufon-_07.png
+share/games/fillets-ng/images/propulsion/ufon-_08.png
+share/games/fillets-ng/images/propulsion/ufon-_09.png
+share/games/fillets-ng/images/propulsion/volant.png
 share/games/fillets-ng/images/puzzle/01-mona_00.png
 share/games/fillets-ng/images/puzzle/01-mona_01.png
 share/games/fillets-ng/images/puzzle/01-mona_02.png
@@ -1619,6 +2671,47 @@ share/games/fillets-ng/images/pyramid/stela_03.png
 share/games/fillets-ng/images/pyramid/stela_04.png
 share/games/fillets-ng/images/pyramid/stela_05.png
 share/games/fillets-ng/images/pyramid/stul.png
+share/games/fillets-ng/images/reactor/ocel.png
+share/games/fillets-ng/images/reactor/pld_00.png
+share/games/fillets-ng/images/reactor/pld_01.png
+share/games/fillets-ng/images/reactor/pld_02.png
+share/games/fillets-ng/images/reactor/pld_03.png
+share/games/fillets-ng/images/reactor/pld_04.png
+share/games/fillets-ng/images/reactor/pld_05.png
+share/games/fillets-ng/images/reactor/pld_06.png
+share/games/fillets-ng/images/reactor/pld_07.png
+share/games/fillets-ng/images/reactor/pld_08.png
+share/games/fillets-ng/images/reactor/pld_09.png
+share/games/fillets-ng/images/reactor/pld_10.png
+share/games/fillets-ng/images/reactor/pld_11.png
+share/games/fillets-ng/images/reactor/pld_12.png
+share/games/fillets-ng/images/reactor/pld_13.png
+share/games/fillets-ng/images/reactor/pld_14.png
+share/games/fillets-ng/images/reactor/pld_15.png
+share/games/fillets-ng/images/reactor/plutonium-1-_00.png
+share/games/fillets-ng/images/reactor/plutonium-1-_01.png
+share/games/fillets-ng/images/reactor/plutonium-1-_02.png
+share/games/fillets-ng/images/reactor/plutonium-1a.png
+share/games/fillets-ng/images/reactor/plutonium-2-_00.png
+share/games/fillets-ng/images/reactor/plutonium-2-_01.png
+share/games/fillets-ng/images/reactor/plutonium-2-_02.png
+share/games/fillets-ng/images/reactor/plutonium-3-_00.png
+share/games/fillets-ng/images/reactor/plutonium-3-_01.png
+share/games/fillets-ng/images/reactor/plutonium-3-_02.png
+share/games/fillets-ng/images/reactor/plutonium-4-_00.png
+share/games/fillets-ng/images/reactor/plutonium-4-_01.png
+share/games/fillets-ng/images/reactor/plutonium-4-_02.png
+share/games/fillets-ng/images/reactor/plutonium-5-_00.png
+share/games/fillets-ng/images/reactor/plutonium-5-_01.png
+share/games/fillets-ng/images/reactor/plutonium-5-_02.png
+share/games/fillets-ng/images/reactor/plutonium-7-_00.png
+share/games/fillets-ng/images/reactor/plutonium-7-_01.png
+share/games/fillets-ng/images/reactor/plutonium-7-_02.png
+share/games/fillets-ng/images/reactor/plutonium-8-_00.png
+share/games/fillets-ng/images/reactor/plutonium-8-_01.png
+share/games/fillets-ng/images/reactor/plutonium-8-_02.png
+share/games/fillets-ng/images/reactor/reaktor-p.png
+share/games/fillets-ng/images/reactor/reaktor-w.png
 share/games/fillets-ng/images/reef/1-ocel.png
 share/games/fillets-ng/images/reef/malysnek_00.png
 share/games/fillets-ng/images/reef/malysnek_01.png
@@ -1753,6 +2846,36 @@ share/games/fillets-ng/images/start/val_07.png
 share/games/fillets-ng/images/start/val_08.png
 share/games/fillets-ng/images/start/zidle_m.png
 share/games/fillets-ng/images/start/zidle_v.png
+share/games/fillets-ng/images/steel/steel-pozadi0.png
+share/games/fillets-ng/images/steel/steel-pozadi1.png
+share/games/fillets-ng/images/steel/steel-pozadi2.png
+share/games/fillets-ng/images/steel/steel-prostredi_00.png
+share/games/fillets-ng/images/steel/steel-prostredi_01.png
+share/games/fillets-ng/images/steel/steel-prostredi_02.png
+share/games/fillets-ng/images/steel/t1p_00.png
+share/games/fillets-ng/images/steel/t1p_01.png
+share/games/fillets-ng/images/steel/t1p_02.png
+share/games/fillets-ng/images/steel/t2p_00.png
+share/games/fillets-ng/images/steel/t2p_01.png
+share/games/fillets-ng/images/steel/t2p_02.png
+share/games/fillets-ng/images/steel/t3p_00.png
+share/games/fillets-ng/images/steel/t3p_01.png
+share/games/fillets-ng/images/steel/t3p_02.png
+share/games/fillets-ng/images/steel/t4p_00.png
+share/games/fillets-ng/images/steel/t4p_01.png
+share/games/fillets-ng/images/steel/t4p_02.png
+share/games/fillets-ng/images/steel/t5p_00.png
+share/games/fillets-ng/images/steel/t5p_01.png
+share/games/fillets-ng/images/steel/t5p_02.png
+share/games/fillets-ng/images/steel/t6p_00.png
+share/games/fillets-ng/images/steel/t6p_01.png
+share/games/fillets-ng/images/steel/t6p_02.png
+share/games/fillets-ng/images/steel/t7p_00.png
+share/games/fillets-ng/images/steel/t7p_01.png
+share/games/fillets-ng/images/steel/t7p_02.png
+share/games/fillets-ng/images/steel/t8p_00.png
+share/games/fillets-ng/images/steel/t8p_01.png
+share/games/fillets-ng/images/steel/t8p_02.png
 share/games/fillets-ng/images/submarine/kriz.png
 share/games/fillets-ng/images/submarine/lahev.png
 share/games/fillets-ng/images/submarine/matka_a.png
@@ -1784,6 +2907,98 @@ share/games/fillets-ng/images/tank/roboruka.png
 share/games/fillets-ng/images/tank/svatba-okoli.png
 share/games/fillets-ng/images/tank/svatba-pozadi.png
 share/games/fillets-ng/images/tank/zebrik.png
+share/games/fillets-ng/images/tetris/12-ocel.png
+share/games/fillets-ng/images/tetris/13-ocel.png
+share/games/fillets-ng/images/tetris/ctverec.png
+share/games/fillets-ng/images/tetris/dlouha.png
+share/games/fillets-ng/images/tetris/elko1l.png
+share/games/fillets-ng/images/tetris/elko1o.png
+share/games/fillets-ng/images/tetris/elko2o.png
+share/games/fillets-ng/images/tetris/lodo.png
+share/games/fillets-ng/images/tetris/lods.png
+share/games/fillets-ng/images/tetris/tetris-p.png
+share/games/fillets-ng/images/tetris/tetris-w2.png
+share/games/fillets-ng/images/tetris/vozik.png
+share/games/fillets-ng/images/tetris/zidle1l.png
+share/games/fillets-ng/images/tetris/zidle1s.png
+share/games/fillets-ng/images/tetris/zidle2l.png
+share/games/fillets-ng/images/turtle/14-ocel.png
+share/games/fillets-ng/images/turtle/15-ocel.png
+share/games/fillets-ng/images/turtle/16-ocel.png
+share/games/fillets-ng/images/turtle/17-ocel.png
+share/games/fillets-ng/images/turtle/20-ocel.png
+share/games/fillets-ng/images/turtle/24-ocel.png
+share/games/fillets-ng/images/turtle/25-ocel.png
+share/games/fillets-ng/images/turtle/3-ocel.png
+share/games/fillets-ng/images/turtle/5-ocel.png
+share/games/fillets-ng/images/turtle/koral1.png
+share/games/fillets-ng/images/turtle/koral10.png
+share/games/fillets-ng/images/turtle/koral2.png
+share/games/fillets-ng/images/turtle/koral3.png
+share/games/fillets-ng/images/turtle/koral4.png
+share/games/fillets-ng/images/turtle/koral5.png
+share/games/fillets-ng/images/turtle/koral6.png
+share/games/fillets-ng/images/turtle/koral7.png
+share/games/fillets-ng/images/turtle/koral8.png
+share/games/fillets-ng/images/turtle/koral9.png
+share/games/fillets-ng/images/turtle/musle_troj.png
+share/games/fillets-ng/images/turtle/perla_00.png
+share/games/fillets-ng/images/turtle/perla_01.png
+share/games/fillets-ng/images/turtle/perla_02.png
+share/games/fillets-ng/images/turtle/perla_03.png
+share/games/fillets-ng/images/turtle/poster.png
+share/games/fillets-ng/images/turtle/rybicka_h_00.png
+share/games/fillets-ng/images/turtle/rybicka_h_01.png
+share/games/fillets-ng/images/turtle/rybicka_h_02.png
+share/games/fillets-ng/images/turtle/rybicka_h_03.png
+share/games/fillets-ng/images/turtle/z-_00.png
+share/games/fillets-ng/images/turtle/z-_01.png
+share/games/fillets-ng/images/turtle/z-_02.png
+share/games/fillets-ng/images/turtle/z-_03.png
+share/games/fillets-ng/images/turtle/z-_04.png
+share/games/fillets-ng/images/turtle/z-_05.png
+share/games/fillets-ng/images/turtle/z-_06.png
+share/games/fillets-ng/images/turtle/z-_07.png
+share/games/fillets-ng/images/turtle/z-_08.png
+share/games/fillets-ng/images/turtle/z-_09.png
+share/games/fillets-ng/images/turtle/z-_10.png
+share/games/fillets-ng/images/turtle/z-_11.png
+share/games/fillets-ng/images/turtle/z-_12.png
+share/games/fillets-ng/images/turtle/z-_13.png
+share/games/fillets-ng/images/turtle/z-_14.png
+share/games/fillets-ng/images/turtle/z-_15.png
+share/games/fillets-ng/images/turtle/z-_16.png
+share/games/fillets-ng/images/turtle/z-_17.png
+share/games/fillets-ng/images/turtle/z-_18.png
+share/games/fillets-ng/images/turtle/z-_19.png
+share/games/fillets-ng/images/turtle/z-_20.png
+share/games/fillets-ng/images/turtle/z-_21.png
+share/games/fillets-ng/images/turtle/z-_22.png
+share/games/fillets-ng/images/turtle/z-_23.png
+share/games/fillets-ng/images/turtle/z-_24.png
+share/games/fillets-ng/images/turtle/z-_25.png
+share/games/fillets-ng/images/turtle/z-_26.png
+share/games/fillets-ng/images/turtle/z-_27.png
+share/games/fillets-ng/images/turtle/z-_28.png
+share/games/fillets-ng/images/turtle/z-_29.png
+share/games/fillets-ng/images/turtle/z-_30.png
+share/games/fillets-ng/images/turtle/z-_31.png
+share/games/fillets-ng/images/turtle/z-_32.png
+share/games/fillets-ng/images/turtle/z-_33.png
+share/games/fillets-ng/images/turtle/z-_34.png
+share/games/fillets-ng/images/turtle/z-_35.png
+share/games/fillets-ng/images/turtle/z-_36.png
+share/games/fillets-ng/images/turtle/z-_37.png
+share/games/fillets-ng/images/turtle/z-_38.png
+share/games/fillets-ng/images/turtle/z-_39.png
+share/games/fillets-ng/images/turtle/z-_40.png
+share/games/fillets-ng/images/turtle/z-_41.png
+share/games/fillets-ng/images/turtle/z-_42.png
+share/games/fillets-ng/images/turtle/z-_43.png
+share/games/fillets-ng/images/turtle/z-_44.png
+share/games/fillets-ng/images/turtle/z-_45.png
+share/games/fillets-ng/images/turtle/zelva-p.png
+share/games/fillets-ng/images/turtle/zelva-w.png
 share/games/fillets-ng/images/ufo/10-ocel.png
 share/games/fillets-ng/images/ufo/11-ocel.png
 share/games/fillets-ng/images/ufo/12-ocel.png
@@ -1891,12 +3106,69 @@ share/games/fillets-ng/images/viking2/vik7_04.png
 share/games/fillets-ng/images/viking2/vik7_05.png
 share/games/fillets-ng/images/viking2/vik7_06.png
 share/games/fillets-ng/images/viking2/vik7_07.png
+share/games/fillets-ng/images/warcraft/balista.png
+share/games/fillets-ng/images/warcraft/dul.png
+share/games/fillets-ng/images/warcraft/exit.png
+share/games/fillets-ng/images/warcraft/hradt.png
+share/games/fillets-ng/images/warcraft/jezdec.png
+share/games/fillets-ng/images/warcraft/kopi.png
+share/games/fillets-ng/images/warcraft/lucistnik.png
+share/games/fillets-ng/images/warcraft/peasant.png
+share/games/fillets-ng/images/warcraft/peasantl.png
+share/games/fillets-ng/images/warcraft/surrend.png
+share/games/fillets-ng/images/warcraft/vez.png
+share/games/fillets-ng/images/warcraft/warcr2-p1.png
+share/games/fillets-ng/images/warcraft/warcr2-w.png
 share/games/fillets-ng/images/wc/3-ocel.png
 share/games/fillets-ng/images/wc/4-ocel.png
 share/games/fillets-ng/images/wc/hajzl.png
 share/games/fillets-ng/images/wc/hajzlak.png
 share/games/fillets-ng/images/wc/wc-p.png
 share/games/fillets-ng/images/wc/wc-w.png
+share/games/fillets-ng/images/windoze/altar.png
+share/games/fillets-ng/images/windoze/bonus_00.png
+share/games/fillets-ng/images/windoze/bonus_01.png
+share/games/fillets-ng/images/windoze/color.png
+share/games/fillets-ng/images/windoze/disketa.png
+share/games/fillets-ng/images/windoze/dotaz.png
+share/games/fillets-ng/images/windoze/icon1.png
+share/games/fillets-ng/images/windoze/icon11.png
+share/games/fillets-ng/images/windoze/icon14.png
+share/games/fillets-ng/images/windoze/icon16.png
+share/games/fillets-ng/images/windoze/icon17.png
+share/games/fillets-ng/images/windoze/icon2.png
+share/games/fillets-ng/images/windoze/icon21.png
+share/games/fillets-ng/images/windoze/icon22.png
+share/games/fillets-ng/images/windoze/icon24.png
+share/games/fillets-ng/images/windoze/icon25.png
+share/games/fillets-ng/images/windoze/icon27.png
+share/games/fillets-ng/images/windoze/icon28.png
+share/games/fillets-ng/images/windoze/icon29.png
+share/games/fillets-ng/images/windoze/icon3.png
+share/games/fillets-ng/images/windoze/icon31.png
+share/games/fillets-ng/images/windoze/icon32.png
+share/games/fillets-ng/images/windoze/icon33.png
+share/games/fillets-ng/images/windoze/icon5.png
+share/games/fillets-ng/images/windoze/icon7.png
+share/games/fillets-ng/images/windoze/kos.png
+share/games/fillets-ng/images/windoze/notepad_00.png
+share/games/fillets-ng/images/windoze/notepad_01.png
+share/games/fillets-ng/images/windoze/notepad_02.png
+share/games/fillets-ng/images/windoze/notepad_03.png
+share/games/fillets-ng/images/windoze/notepad_04.png
+share/games/fillets-ng/images/windoze/notepad_05.png
+share/games/fillets-ng/images/windoze/notepad_06.png
+share/games/fillets-ng/images/windoze/notepad_07.png
+share/games/fillets-ng/images/windoze/notepad_08.png
+share/games/fillets-ng/images/windoze/notepad_09.png
+share/games/fillets-ng/images/windoze/old-budik.png
+share/games/fillets-ng/images/windoze/old-kniha.png
+share/games/fillets-ng/images/windoze/old-prkna.png
+share/games/fillets-ng/images/windoze/old-svicka.png
+share/games/fillets-ng/images/windoze/old-valec.png
+share/games/fillets-ng/images/windoze/tento.png
+share/games/fillets-ng/images/windoze/win-p.png
+share/games/fillets-ng/images/windoze/win-w.png
 share/games/fillets-ng/images/wreck/cepicka.png
 share/games/fillets-ng/images/wreck/klobrc.png
 share/games/fillets-ng/images/wreck/medusa_00.png
@@ -1930,6 +3202,24 @@ share/games/fillets-ng/script/airplane/code.lua
 share/games/fillets-ng/script/airplane/dialogs.lua
 share/games/fillets-ng/script/airplane/init.lua
 share/games/fillets-ng/script/airplane/models.lua
+share/games/fillets-ng/script/alibaba/code.lua
+share/games/fillets-ng/script/alibaba/dialogs.lua
+share/games/fillets-ng/script/alibaba/init.lua
+share/games/fillets-ng/script/alibaba/models.lua
+share/games/fillets-ng/script/atlantis/code.lua
+share/games/fillets-ng/script/atlantis/demo_poster.lua
+share/games/fillets-ng/script/atlantis/dialogs.lua
+share/games/fillets-ng/script/atlantis/init.lua
+share/games/fillets-ng/script/atlantis/models.lua
+share/games/fillets-ng/script/aztec/code.lua
+share/games/fillets-ng/script/aztec/dialogs.lua
+share/games/fillets-ng/script/aztec/init.lua
+share/games/fillets-ng/script/aztec/models.lua
+share/games/fillets-ng/script/barrel/code.lua
+share/games/fillets-ng/script/barrel/demo_poster.lua
+share/games/fillets-ng/script/barrel/dialogs.lua
+share/games/fillets-ng/script/barrel/init.lua
+share/games/fillets-ng/script/barrel/models.lua
 share/games/fillets-ng/script/bathroom/code.lua
 share/games/fillets-ng/script/bathroom/dialogs.lua
 share/games/fillets-ng/script/bathroom/init.lua
@@ -1942,6 +3232,7 @@ share/games/fillets-ng/script/briefcase/code.lua
 share/games/fillets-ng/script/briefcase/demo_briefcase.lua
 share/games/fillets-ng/script/briefcase/demo_help.lua
 share/games/fillets-ng/script/briefcase/dialogs.lua
+share/games/fillets-ng/script/briefcase/dialogs_brief.lua
 share/games/fillets-ng/script/briefcase/init.lua
 share/games/fillets-ng/script/briefcase/models.lua
 share/games/fillets-ng/script/broom/code.lua
@@ -1968,10 +3259,18 @@ share/games/fillets-ng/script/captain/code.lua
 share/games/fillets-ng/script/captain/dialogs.lua
 share/games/fillets-ng/script/captain/init.lua
 share/games/fillets-ng/script/captain/models.lua
+share/games/fillets-ng/script/cave/code.lua
+share/games/fillets-ng/script/cave/dialogs.lua
+share/games/fillets-ng/script/cave/init.lua
+share/games/fillets-ng/script/cave/models.lua
 share/games/fillets-ng/script/cellar/code.lua
 share/games/fillets-ng/script/cellar/dialogs.lua
 share/games/fillets-ng/script/cellar/init.lua
 share/games/fillets-ng/script/cellar/models.lua
+share/games/fillets-ng/script/chest/code.lua
+share/games/fillets-ng/script/chest/dialogs.lua
+share/games/fillets-ng/script/chest/init.lua
+share/games/fillets-ng/script/chest/models.lua
 share/games/fillets-ng/script/city/code.lua
 share/games/fillets-ng/script/city/dialogs.lua
 share/games/fillets-ng/script/city/init.lua
@@ -1988,6 +3287,10 @@ share/games/fillets-ng/script/corals/code.lua
 share/games/fillets-ng/script/corals/dialogs.lua
 share/games/fillets-ng/script/corals/init.lua
 share/games/fillets-ng/script/corals/models.lua
+share/games/fillets-ng/script/corridor/code.lua
+share/games/fillets-ng/script/corridor/dialogs.lua
+share/games/fillets-ng/script/corridor/init.lua
+share/games/fillets-ng/script/corridor/models.lua
 share/games/fillets-ng/script/crabshow/code.lua
 share/games/fillets-ng/script/crabshow/dialogs.lua
 share/games/fillets-ng/script/crabshow/init.lua
@@ -2016,6 +3319,48 @@ share/games/fillets-ng/script/elk/code.lua
 share/games/fillets-ng/script/elk/dialogs.lua
 share/games/fillets-ng/script/elk/init.lua
 share/games/fillets-ng/script/elk/models.lua
+share/games/fillets-ng/script/emulator/code.lua
+share/games/fillets-ng/script/emulator/dialogs.lua
+share/games/fillets-ng/script/emulator/init.lua
+share/games/fillets-ng/script/emulator/models.lua
+share/games/fillets-ng/script/ending/code.lua
+share/games/fillets-ng/script/ending/demo_poster.lua
+share/games/fillets-ng/script/ending/dialogs.lua
+share/games/fillets-ng/script/ending/init.lua
+share/games/fillets-ng/script/ending/models.lua
+share/games/fillets-ng/script/engine/code.lua
+share/games/fillets-ng/script/engine/dialogs.lua
+share/games/fillets-ng/script/engine/init.lua
+share/games/fillets-ng/script/engine/models.lua
+share/games/fillets-ng/script/experiments/code.lua
+share/games/fillets-ng/script/experiments/dialogs.lua
+share/games/fillets-ng/script/experiments/init.lua
+share/games/fillets-ng/script/experiments/models.lua
+share/games/fillets-ng/script/experiments/prog_pld.lua
+share/games/fillets-ng/script/floppy/code.lua
+share/games/fillets-ng/script/floppy/demo_poster.lua
+share/games/fillets-ng/script/floppy/dialogs.lua
+share/games/fillets-ng/script/floppy/init.lua
+share/games/fillets-ng/script/floppy/models.lua
+share/games/fillets-ng/script/gems/code.lua
+share/games/fillets-ng/script/gems/dialogs.lua
+share/games/fillets-ng/script/gems/init.lua
+share/games/fillets-ng/script/gems/models.lua
+share/games/fillets-ng/script/gods/code.lua
+share/games/fillets-ng/script/gods/demo_poster.lua
+share/games/fillets-ng/script/gods/dialogs.lua
+share/games/fillets-ng/script/gods/init.lua
+share/games/fillets-ng/script/gods/models.lua
+share/games/fillets-ng/script/gods/prog_ships.lua
+share/games/fillets-ng/script/grail/code.lua
+share/games/fillets-ng/script/grail/demo_poster.lua
+share/games/fillets-ng/script/grail/dialogs.lua
+share/games/fillets-ng/script/grail/init.lua
+share/games/fillets-ng/script/grail/models.lua
+share/games/fillets-ng/script/hardware/code.lua
+share/games/fillets-ng/script/hardware/dialogs.lua
+share/games/fillets-ng/script/hardware/init.lua
+share/games/fillets-ng/script/hardware/models.lua
 share/games/fillets-ng/script/imprisoned/code.lua
 share/games/fillets-ng/script/imprisoned/dialogs.lua
 share/games/fillets-ng/script/imprisoned/init.lua
@@ -2025,6 +3370,7 @@ share/games/fillets-ng/script/kitchen/code.lua
 share/games/fillets-ng/script/kitchen/dialogs.lua
 share/games/fillets-ng/script/kitchen/init.lua
 share/games/fillets-ng/script/kitchen/models.lua
+share/games/fillets-ng/script/labels.lua
 share/games/fillets-ng/script/labyrinth/code.lua
 share/games/fillets-ng/script/labyrinth/dialogs.lua
 share/games/fillets-ng/script/labyrinth/init.lua
@@ -2034,6 +3380,15 @@ share/games/fillets-ng/script/library/code.lua
 share/games/fillets-ng/script/library/dialogs.lua
 share/games/fillets-ng/script/library/init.lua
 share/games/fillets-ng/script/library/models.lua
+share/games/fillets-ng/script/magnet/code.lua
+share/games/fillets-ng/script/magnet/dialogs.lua
+share/games/fillets-ng/script/magnet/init.lua
+share/games/fillets-ng/script/magnet/models.lua
+share/games/fillets-ng/script/map/code.lua
+share/games/fillets-ng/script/map/demo_poster.lua
+share/games/fillets-ng/script/map/dialogs.lua
+share/games/fillets-ng/script/map/init.lua
+share/games/fillets-ng/script/map/models.lua
 share/games/fillets-ng/script/music/code.lua
 share/games/fillets-ng/script/music/dialogs.lua
 share/games/fillets-ng/script/music/init.lua
@@ -2058,6 +3413,11 @@ share/games/fillets-ng/script/pearls/code.lua
 share/games/fillets-ng/script/pearls/dialogs.lua
 share/games/fillets-ng/script/pearls/init.lua
 share/games/fillets-ng/script/pearls/models.lua
+share/games/fillets-ng/script/propulsion/code.lua
+share/games/fillets-ng/script/propulsion/demo_poster.lua
+share/games/fillets-ng/script/propulsion/dialogs.lua
+share/games/fillets-ng/script/propulsion/init.lua
+share/games/fillets-ng/script/propulsion/models.lua
 share/games/fillets-ng/script/puzzle/code.lua
 share/games/fillets-ng/script/puzzle/dialogs.lua
 share/games/fillets-ng/script/puzzle/init.lua
@@ -2066,6 +3426,10 @@ share/games/fillets-ng/script/pyramid/code.lua
 share/games/fillets-ng/script/pyramid/dialogs.lua
 share/games/fillets-ng/script/pyramid/init.lua
 share/games/fillets-ng/script/pyramid/models.lua
+share/games/fillets-ng/script/reactor/code.lua
+share/games/fillets-ng/script/reactor/dialogs.lua
+share/games/fillets-ng/script/reactor/init.lua
+share/games/fillets-ng/script/reactor/models.lua
 share/games/fillets-ng/script/reef/code.lua
 share/games/fillets-ng/script/reef/dialogs.lua
 share/games/fillets-ng/script/reef/init.lua
@@ -2079,6 +3443,7 @@ share/games/fillets-ng/script/share/bordershout.lua
 share/games/fillets-ng/script/share/boredialogs.lua
 share/games/fillets-ng/script/share/borejokes.lua
 share/games/fillets-ng/script/share/bubles.lua
+share/games/fillets-ng/script/share/demo_intro.lua
 share/games/fillets-ng/script/share/level_creation.lua
 share/games/fillets-ng/script/share/level_fonts.lua
 share/games/fillets-ng/script/share/level_plan.lua
@@ -2086,6 +3451,8 @@ share/games/fillets-ng/script/share/level_start.lua
 share/games/fillets-ng/script/share/level_update.lua
 share/games/fillets-ng/script/share/prog_border.lua
 share/games/fillets-ng/script/share/prog_compatible.lua
+share/games/fillets-ng/script/share/prog_demo.lua
+share/games/fillets-ng/script/share/prog_finder.lua
 share/games/fillets-ng/script/share/prog_goanim.lua
 share/games/fillets-ng/script/share/prog_save.lua
 share/games/fillets-ng/script/snowman/code.lua
@@ -2104,6 +3471,10 @@ share/games/fillets-ng/script/start/code.lua
 share/games/fillets-ng/script/start/dialogs.lua
 share/games/fillets-ng/script/start/init.lua
 share/games/fillets-ng/script/start/models.lua
+share/games/fillets-ng/script/steel/code.lua
+share/games/fillets-ng/script/steel/dialogs.lua
+share/games/fillets-ng/script/steel/init.lua
+share/games/fillets-ng/script/steel/models.lua
 share/games/fillets-ng/script/submarine/code.lua
 share/games/fillets-ng/script/submarine/dialogs.lua
 share/games/fillets-ng/script/submarine/init.lua
@@ -2112,6 +3483,15 @@ share/games/fillets-ng/script/tank/code.lua
 share/games/fillets-ng/script/tank/dialogs.lua
 share/games/fillets-ng/script/tank/init.lua
 share/games/fillets-ng/script/tank/models.lua
+share/games/fillets-ng/script/tetris/code.lua
+share/games/fillets-ng/script/tetris/dialogs.lua
+share/games/fillets-ng/script/tetris/init.lua
+share/games/fillets-ng/script/tetris/models.lua
+share/games/fillets-ng/script/turtle/code.lua
+share/games/fillets-ng/script/turtle/demo_poster.lua
+share/games/fillets-ng/script/turtle/dialogs.lua
+share/games/fillets-ng/script/turtle/init.lua
+share/games/fillets-ng/script/turtle/models.lua
 share/games/fillets-ng/script/ufo/code.lua
 share/games/fillets-ng/script/ufo/dialogs.lua
 share/games/fillets-ng/script/ufo/init.lua
@@ -2124,16 +3504,40 @@ share/games/fillets-ng/script/viking2/code.lua
 share/games/fillets-ng/script/viking2/dialogs.lua
 share/games/fillets-ng/script/viking2/init.lua
 share/games/fillets-ng/script/viking2/models.lua
+share/games/fillets-ng/script/warcraft/code.lua
+share/games/fillets-ng/script/warcraft/dialogs.lua
+share/games/fillets-ng/script/warcraft/init.lua
+share/games/fillets-ng/script/warcraft/models.lua
 share/games/fillets-ng/script/wc/code.lua
 share/games/fillets-ng/script/wc/dialogs.lua
 share/games/fillets-ng/script/wc/init.lua
 share/games/fillets-ng/script/wc/models.lua
+share/games/fillets-ng/script/windoze/code.lua
+share/games/fillets-ng/script/windoze/dialogs.lua
+share/games/fillets-ng/script/windoze/init.lua
+share/games/fillets-ng/script/windoze/models.lua
 share/games/fillets-ng/script/worlddesc.lua
+share/games/fillets-ng/script/worldfame.lua
 share/games/fillets-ng/script/worldmap.lua
 share/games/fillets-ng/script/wreck/code.lua
 share/games/fillets-ng/script/wreck/dialogs.lua
 share/games/fillets-ng/script/wreck/init.lua
 share/games/fillets-ng/script/wreck/models.lua
+share/games/fillets-ng/sound/aztec/en/bot-x-gr0.ogg
+share/games/fillets-ng/sound/aztec/en/bot-x-gr1.ogg
+share/games/fillets-ng/sound/aztec/en/bot-x-smich.ogg
+share/games/fillets-ng/sound/barrel/en/bar-x-gr0.ogg
+share/games/fillets-ng/sound/barrel/en/bar-x-gr1.ogg
+share/games/fillets-ng/sound/barrel/en/bar-x-gr2.ogg
+share/games/fillets-ng/sound/barrel/en/bar-x-kchkch.ogg
+share/games/fillets-ng/sound/barrel/en/bar-x-suck0.ogg
+share/games/fillets-ng/sound/barrel/en/bar-x-suck1.ogg
+share/games/fillets-ng/sound/barrel/en/bar-x-suck2.ogg
+share/games/fillets-ng/sound/barrel/en/bar-x-suck3.ogg
+share/games/fillets-ng/sound/barrel/en/bar-x-suckano.ogg
+share/games/fillets-ng/sound/barrel/en/bar-x-suckne.ogg
+share/games/fillets-ng/sound/barrel/en/bar-x-tup.ogg
+share/games/fillets-ng/sound/barrel/en/bar-x-zzz.ogg
 share/games/fillets-ng/sound/bathroom/en/br-x-pracka.ogg
 share/games/fillets-ng/sound/bathyscaph/en/bat-t-budik.ogg
 share/games/fillets-ng/sound/bathyscaph/en/bat-t-phone0.ogg
@@ -2152,11 +3556,44 @@ share/games/fillets-ng/sound/cancan/en/kan-klavir-music.ogg
 share/games/fillets-ng/sound/city/en/vit-x-beg.ogg
 share/games/fillets-ng/sound/city/en/vit-x-end.ogg
 share/games/fillets-ng/sound/columns/en/sl-m-jekot.ogg
+share/games/fillets-ng/sound/corridor/en/ch-x-click1.ogg
+share/games/fillets-ng/sound/corridor/en/ch-x-click2.ogg
 share/games/fillets-ng/sound/creatures/en/kor-chob-chro.ogg
 share/games/fillets-ng/sound/creatures/en/kor-chob-psi.ogg
 share/games/fillets-ng/sound/creatures/en/kor-chob-tca.ogg
 share/games/fillets-ng/sound/creatures/en/kor-room-music.ogg
 share/games/fillets-ng/sound/dump/en/sm-x-tiktak.ogg
+share/games/fillets-ng/sound/elk/en/deu-l-ja.ogg
+share/games/fillets-ng/sound/elk/en/deu-l-los.ogg
+share/games/fillets-ng/sound/elk/en/deu-l-los0.ogg
+share/games/fillets-ng/sound/elk/en/deu-l-los1.ogg
+share/games/fillets-ng/sound/elk/en/deu-l-necital.ogg
+share/games/fillets-ng/sound/elk/en/deu-l-nesmotrel.ogg
+share/games/fillets-ng/sound/elk/en/deu-l-neznaju.ogg
+share/games/fillets-ng/sound/elk/en/deu-l-pozalsta.ogg
+share/games/fillets-ng/sound/elk/en/deu-l-tovarisci.ogg
+share/games/fillets-ng/sound/elk/en/deu-l-zivjot.ogg
+share/games/fillets-ng/sound/elk/en/deu-p-jawohl.ogg
+share/games/fillets-ng/sound/elk/en/deu-p-los.ogg
+share/games/fillets-ng/sound/elk/en/deu-p-ordnung.ogg
+share/games/fillets-ng/sound/elk/en/deu-p-schnell.ogg
+share/games/fillets-ng/sound/elk/en/deu-p-skoll.ogg
+share/games/fillets-ng/sound/elk/en/deu-p-stimmt.ogg
+share/games/fillets-ng/sound/elk/en/deu-p-streng.ogg
+share/games/fillets-ng/sound/elk/en/deu-p-trinken0.ogg
+share/games/fillets-ng/sound/elk/en/deu-p-trinken1.ogg
+share/games/fillets-ng/sound/ending/en/bar-x-suck0.ogg
+share/games/fillets-ng/sound/ending/en/bar-x-suck1.ogg
+share/games/fillets-ng/sound/ending/en/bar-x-suck2.ogg
+share/games/fillets-ng/sound/ending/en/bar-x-suck3.ogg
+share/games/fillets-ng/sound/ending/en/bar-x-suckano.ogg
+share/games/fillets-ng/sound/engine/en/mot-x-motor.ogg
+share/games/fillets-ng/sound/floppy/en/disk-x-au0.ogg
+share/games/fillets-ng/sound/floppy/en/disk-x-au1.ogg
+share/games/fillets-ng/sound/floppy/en/disk-x-au2.ogg
+share/games/fillets-ng/sound/floppy/en/disk-x-vir0.ogg
+share/games/fillets-ng/sound/floppy/en/disk-x-vir1.ogg
+share/games/fillets-ng/sound/floppy/en/disk-x-vir2.ogg
 share/games/fillets-ng/sound/imprisoned/en/ncp-x-ihaha.ogg
 share/games/fillets-ng/sound/imprisoned/en/ncp-x-tik.ogg
 share/games/fillets-ng/sound/imprisoned/en/ncp-x-tup.ogg
@@ -2169,6 +3606,8 @@ share/games/fillets-ng/sound/pavement/en/k1-chob-3.ogg
 share/games/fillets-ng/sound/pavement/en/k1-chob-p.ogg
 share/games/fillets-ng/sound/pavement/en/k1-x-vrz.ogg
 share/games/fillets-ng/sound/puzzle/en/puc-x-pldik.ogg
+share/games/fillets-ng/sound/reactor/en/rea-x-pldik.ogg
+share/games/fillets-ng/sound/reactor/en/rea-x-reakttyc.ogg
 share/games/fillets-ng/sound/share/sp-bubles_00.ogg
 share/games/fillets-ng/sound/share/sp-bubles_01.ogg
 share/games/fillets-ng/sound/share/sp-bubles_02.ogg
@@ -2186,6 +3625,7 @@ share/games/fillets-ng/sound/society/en/mik-x-stebet0.ogg
 share/games/fillets-ng/sound/society/en/mik-x-stebet1.ogg
 share/games/fillets-ng/sound/society/en/mik-x-stebet2.ogg
 share/games/fillets-ng/sound/society/en/mik-x-stebet3.ogg
+share/games/fillets-ng/sound/steel/en/steel-x-redalert.ogg
 share/games/fillets-ng/sound/viking1/en/d1-z-b1.ogg
 share/games/fillets-ng/sound/viking1/en/d1-z-b2.ogg
 share/games/fillets-ng/sound/viking1/en/d1-z-b3.ogg
@@ -2209,20 +3649,40 @@ share/games/fillets-ng/sound/viking2/en/dr-7-sm7.ogg
 share/games/fillets-ng/sound/viking2/en/dr-7-sm8.ogg
 share/games/fillets-ng/sound/viking2/en/dr-x-buch.ogg
 share/games/fillets-ng/sound/viking2/en/dr-x-pes.ogg
+share/games/fillets-ng/sound/warcraft/en/war-a-move0.ogg
+share/games/fillets-ng/sound/warcraft/en/war-a-move1.ogg
+share/games/fillets-ng/sound/warcraft/en/war-a-ready0.ogg
+share/games/fillets-ng/sound/warcraft/en/war-a-ready1.ogg
+share/games/fillets-ng/sound/warcraft/en/war-k-move0.ogg
+share/games/fillets-ng/sound/warcraft/en/war-k-move1.ogg
+share/games/fillets-ng/sound/warcraft/en/war-k-move2.ogg
+share/games/fillets-ng/sound/warcraft/en/war-k-ready0.ogg
+share/games/fillets-ng/sound/warcraft/en/war-k-ready1.ogg
+share/games/fillets-ng/sound/warcraft/en/war-k-ready2.ogg
 @exec ${MKDIR} %D/share/games/fillets-ng/sound/wreck
 @dirrm share/games/fillets-ng/sound/wreck
+@exec ${MKDIR} %D/share/games/fillets-ng/sound/windoze
+@dirrm share/games/fillets-ng/sound/windoze
 @exec ${MKDIR} %D/share/games/fillets-ng/sound/wc
 @dirrm share/games/fillets-ng/sound/wc
+@dirrm share/games/fillets-ng/sound/warcraft/en
+@dirrm share/games/fillets-ng/sound/warcraft
 @dirrm share/games/fillets-ng/sound/viking2/en
 @dirrm share/games/fillets-ng/sound/viking2
 @dirrm share/games/fillets-ng/sound/viking1/en
 @dirrm share/games/fillets-ng/sound/viking1
 @exec ${MKDIR} %D/share/games/fillets-ng/sound/ufo
 @dirrm share/games/fillets-ng/sound/ufo
+@exec ${MKDIR} %D/share/games/fillets-ng/sound/turtle
+@dirrm share/games/fillets-ng/sound/turtle
+@exec ${MKDIR} %D/share/games/fillets-ng/sound/tetris
+@dirrm share/games/fillets-ng/sound/tetris
 @exec ${MKDIR} %D/share/games/fillets-ng/sound/tank
 @dirrm share/games/fillets-ng/sound/tank
 @exec ${MKDIR} %D/share/games/fillets-ng/sound/submarine
 @dirrm share/games/fillets-ng/sound/submarine
+@dirrm share/games/fillets-ng/sound/steel/en
+@dirrm share/games/fillets-ng/sound/steel
 @exec ${MKDIR} %D/share/games/fillets-ng/sound/start
 @dirrm share/games/fillets-ng/sound/start
 @exec ${MKDIR} %D/share/games/fillets-ng/sound/stairs
@@ -2240,10 +3700,14 @@ share/games/fillets-ng/sound/viking2/en/dr-x-pes.ogg
 @dirrm share/games/fillets-ng/sound/share
 @exec ${MKDIR} %D/share/games/fillets-ng/sound/reef
 @dirrm share/games/fillets-ng/sound/reef
+@dirrm share/games/fillets-ng/sound/reactor/en
+@dirrm share/games/fillets-ng/sound/reactor
 @exec ${MKDIR} %D/share/games/fillets-ng/sound/pyramid
 @dirrm share/games/fillets-ng/sound/pyramid
 @dirrm share/games/fillets-ng/sound/puzzle/en
 @dirrm share/games/fillets-ng/sound/puzzle
+@exec ${MKDIR} %D/share/games/fillets-ng/sound/propulsion
+@dirrm share/games/fillets-ng/sound/propulsion
 @exec ${MKDIR} %D/share/games/fillets-ng/sound/pearls
 @dirrm share/games/fillets-ng/sound/pearls
 @dirrm share/games/fillets-ng/sound/pavement/en
@@ -2256,6 +3720,10 @@ share/games/fillets-ng/sound/viking2/en/dr-x-pes.ogg
 @dirrm share/games/fillets-ng/sound/noground
 @dirrm share/games/fillets-ng/sound/music/en
 @dirrm share/games/fillets-ng/sound/music
+@exec ${MKDIR} %D/share/games/fillets-ng/sound/map
+@dirrm share/games/fillets-ng/sound/map
+@exec ${MKDIR} %D/share/games/fillets-ng/sound/magnet
+@dirrm share/games/fillets-ng/sound/magnet
 @exec ${MKDIR} %D/share/games/fillets-ng/sound/library
 @dirrm share/games/fillets-ng/sound/library
 @exec ${MKDIR} %D/share/games/fillets-ng/sound/labyrinth
@@ -2264,7 +3732,25 @@ share/games/fillets-ng/sound/viking2/en/dr-x-pes.ogg
 @dirrm share/games/fillets-ng/sound/kitchen
 @dirrm share/games/fillets-ng/sound/imprisoned/en
 @dirrm share/games/fillets-ng/sound/imprisoned
-@exec ${MKDIR} %D/share/games/fillets-ng/sound/elk
+@exec ${MKDIR} %D/share/games/fillets-ng/sound/hardware
+@dirrm share/games/fillets-ng/sound/hardware
+@exec ${MKDIR} %D/share/games/fillets-ng/sound/grail
+@dirrm share/games/fillets-ng/sound/grail
+@exec ${MKDIR} %D/share/games/fillets-ng/sound/gods
+@dirrm share/games/fillets-ng/sound/gods
+@exec ${MKDIR} %D/share/games/fillets-ng/sound/gems
+@dirrm share/games/fillets-ng/sound/gems
+@dirrm share/games/fillets-ng/sound/floppy/en
+@dirrm share/games/fillets-ng/sound/floppy
+@exec ${MKDIR} %D/share/games/fillets-ng/sound/experiments
+@dirrm share/games/fillets-ng/sound/experiments
+@dirrm share/games/fillets-ng/sound/engine/en
+@dirrm share/games/fillets-ng/sound/engine
+@dirrm share/games/fillets-ng/sound/ending/en
+@dirrm share/games/fillets-ng/sound/ending
+@exec ${MKDIR} %D/share/games/fillets-ng/sound/emulator
+@dirrm share/games/fillets-ng/sound/emulator
+@dirrm share/games/fillets-ng/sound/elk/en
 @dirrm share/games/fillets-ng/sound/elk
 @exec ${MKDIR} %D/share/games/fillets-ng/sound/elevator2
 @dirrm share/games/fillets-ng/sound/elevator2
@@ -2278,6 +3764,8 @@ share/games/fillets-ng/sound/viking2/en/dr-x-pes.ogg
 @dirrm share/games/fillets-ng/sound/creatures
 @exec ${MKDIR} %D/share/games/fillets-ng/sound/crabshow
 @dirrm share/games/fillets-ng/sound/crabshow
+@dirrm share/games/fillets-ng/sound/corridor/en
+@dirrm share/games/fillets-ng/sound/corridor
 @exec ${MKDIR} %D/share/games/fillets-ng/sound/corals
 @dirrm share/games/fillets-ng/sound/corals
 @exec ${MKDIR} %D/share/games/fillets-ng/sound/computer
@@ -2286,8 +3774,12 @@ share/games/fillets-ng/sound/viking2/en/dr-x-pes.ogg
 @dirrm share/games/fillets-ng/sound/columns
 @dirrm share/games/fillets-ng/sound/city/en
 @dirrm share/games/fillets-ng/sound/city
+@exec ${MKDIR} %D/share/games/fillets-ng/sound/chest
+@dirrm share/games/fillets-ng/sound/chest
 @exec ${MKDIR} %D/share/games/fillets-ng/sound/cellar
 @dirrm share/games/fillets-ng/sound/cellar
+@exec ${MKDIR} %D/share/games/fillets-ng/sound/cave
+@dirrm share/games/fillets-ng/sound/cave
 @exec ${MKDIR} %D/share/games/fillets-ng/sound/captain
 @dirrm share/games/fillets-ng/sound/captain
 @exec ${MKDIR} %D/share/games/fillets-ng/sound/cannons
@@ -2306,34 +3798,60 @@ share/games/fillets-ng/sound/viking2/en/dr-x-pes.ogg
 @dirrm share/games/fillets-ng/sound/bathyscaph
 @dirrm share/games/fillets-ng/sound/bathroom/en
 @dirrm share/games/fillets-ng/sound/bathroom
+@dirrm share/games/fillets-ng/sound/barrel/en
+@dirrm share/games/fillets-ng/sound/barrel
+@dirrm share/games/fillets-ng/sound/aztec/en
+@dirrm share/games/fillets-ng/sound/aztec
+@exec ${MKDIR} %D/share/games/fillets-ng/sound/atlantis
+@dirrm share/games/fillets-ng/sound/atlantis
+@exec ${MKDIR} %D/share/games/fillets-ng/sound/alibaba
+@dirrm share/games/fillets-ng/sound/alibaba
 @exec ${MKDIR} %D/share/games/fillets-ng/sound/airplane
 @dirrm share/games/fillets-ng/sound/airplane
 @dirrm share/games/fillets-ng/sound
 @dirrm share/games/fillets-ng/script/wreck
+@dirrm share/games/fillets-ng/script/windoze
 @dirrm share/games/fillets-ng/script/wc
+@dirrm share/games/fillets-ng/script/warcraft
 @dirrm share/games/fillets-ng/script/viking2
 @dirrm share/games/fillets-ng/script/viking1
 @dirrm share/games/fillets-ng/script/ufo
+@dirrm share/games/fillets-ng/script/turtle
+@dirrm share/games/fillets-ng/script/tetris
 @dirrm share/games/fillets-ng/script/tank
 @dirrm share/games/fillets-ng/script/submarine
+@dirrm share/games/fillets-ng/script/steel
 @dirrm share/games/fillets-ng/script/start
 @dirrm share/games/fillets-ng/script/stairs
 @dirrm share/games/fillets-ng/script/society
 @dirrm share/games/fillets-ng/script/snowman
 @dirrm share/games/fillets-ng/script/share
 @dirrm share/games/fillets-ng/script/reef
+@dirrm share/games/fillets-ng/script/reactor
 @dirrm share/games/fillets-ng/script/pyramid
 @dirrm share/games/fillets-ng/script/puzzle
+@dirrm share/games/fillets-ng/script/propulsion
 @dirrm share/games/fillets-ng/script/pearls
 @dirrm share/games/fillets-ng/script/pavement
 @dirrm share/games/fillets-ng/script/party2
 @dirrm share/games/fillets-ng/script/party1
 @dirrm share/games/fillets-ng/script/noground
 @dirrm share/games/fillets-ng/script/music
+@dirrm share/games/fillets-ng/script/map
+@dirrm share/games/fillets-ng/script/magnet
 @dirrm share/games/fillets-ng/script/library
 @dirrm share/games/fillets-ng/script/labyrinth
 @dirrm share/games/fillets-ng/script/kitchen
 @dirrm share/games/fillets-ng/script/imprisoned
+@dirrm share/games/fillets-ng/script/hardware
+@dirrm share/games/fillets-ng/script/grail
+@dirrm share/games/fillets-ng/script/gods
+@dirrm share/games/fillets-ng/script/gems
+@dirrm share/games/fillets-ng/script/floppy
+@dirrm share/games/fillets-ng/script/experiments
+@dirrm share/games/fillets-ng/script/engine
+@dirrm share/games/fillets-ng/script/ending
+@dirrm share/games/fillets-ng/script/emulator
 @dirrm share/games/fillets-ng/script/elk
 @dirrm share/games/fillets-ng/script/elevator2
 @dirrm share/games/fillets-ng/script/elevator1
@@ -2341,11 +3859,14 @@ share/games/fillets-ng/sound/viking2/en/dr-x-pes.ogg
 @dirrm share/games/fillets-ng/script/duckie
 @dirrm share/games/fillets-ng/script/creatures
 @dirrm share/games/fillets-ng/script/crabshow
+@dirrm share/games/fillets-ng/script/corridor
 @dirrm share/games/fillets-ng/script/corals
 @dirrm share/games/fillets-ng/script/computer
 @dirrm share/games/fillets-ng/script/columns
 @dirrm share/games/fillets-ng/script/city
+@dirrm share/games/fillets-ng/script/chest
 @dirrm share/games/fillets-ng/script/cellar
+@dirrm share/games/fillets-ng/script/cave
 @dirrm share/games/fillets-ng/script/captain
 @dirrm share/games/fillets-ng/script/cannons
 @dirrm share/games/fillets-ng/script/cancan
@@ -2355,23 +3876,34 @@ share/games/fillets-ng/sound/viking2/en/dr-x-pes.ogg
 @dirrm share/games/fillets-ng/script/briefcase
 @dirrm share/games/fillets-ng/script/bathyscaph
 @dirrm share/games/fillets-ng/script/bathroom
+@dirrm share/games/fillets-ng/script/barrel
+@dirrm share/games/fillets-ng/script/aztec
+@dirrm share/games/fillets-ng/script/atlantis
+@dirrm share/games/fillets-ng/script/alibaba
 @dirrm share/games/fillets-ng/script/airplane
 @dirrm share/games/fillets-ng/script
 @dirrm share/games/fillets-ng/music
 @dirrm share/games/fillets-ng/images/wreck
+@dirrm share/games/fillets-ng/images/windoze
 @dirrm share/games/fillets-ng/images/wc
+@dirrm share/games/fillets-ng/images/warcraft
 @dirrm share/games/fillets-ng/images/viking2
 @dirrm share/games/fillets-ng/images/viking1
 @dirrm share/games/fillets-ng/images/ufo
+@dirrm share/games/fillets-ng/images/turtle
+@dirrm share/games/fillets-ng/images/tetris
 @dirrm share/games/fillets-ng/images/tank
 @dirrm share/games/fillets-ng/images/submarine
+@dirrm share/games/fillets-ng/images/steel
 @dirrm share/games/fillets-ng/images/start
 @dirrm share/games/fillets-ng/images/stairs
 @dirrm share/games/fillets-ng/images/society
 @dirrm share/games/fillets-ng/images/snowman
 @dirrm share/games/fillets-ng/images/reef
+@dirrm share/games/fillets-ng/images/reactor
 @dirrm share/games/fillets-ng/images/pyramid
 @dirrm share/games/fillets-ng/images/puzzle
+@dirrm share/games/fillets-ng/images/propulsion
 @dirrm share/games/fillets-ng/images/pearls
 @dirrm share/games/fillets-ng/images/pavement
 @dirrm share/games/fillets-ng/images/party2
@@ -2382,16 +3914,35 @@ share/games/fillets-ng/sound/viking2/en/dr-x-pes.ogg
 @dirrm share/games/fillets-ng/images/menu/status
 @dirrm share/games/fillets-ng/images/menu/flags
 @dirrm share/games/fillets-ng/images/menu
+@dirrm share/games/fillets-ng/images/map
+@dirrm share/games/fillets-ng/images/magnet
 @dirrm share/games/fillets-ng/images/library
 @dirrm share/games/fillets-ng/images/labyrinth
 @dirrm share/games/fillets-ng/images/kitchen
 @dirrm share/games/fillets-ng/images/imprisoned
+@dirrm share/games/fillets-ng/images/hardware
+@dirrm share/games/fillets-ng/images/grail
+@dirrm share/games/fillets-ng/images/gods
+@dirrm share/games/fillets-ng/images/gems
+@dirrm share/games/fillets-ng/images/floppy
 @dirrm share/games/fillets-ng/images/fishes/small/right
 @dirrm share/games/fillets-ng/images/fishes/small/left
 @dirrm share/games/fillets-ng/images/fishes/small/heads/right
 @dirrm share/games/fillets-ng/images/fishes/small/heads/left
 @dirrm share/games/fillets-ng/images/fishes/small/heads
 @dirrm share/games/fillets-ng/images/fishes/small
+@dirrm share/games/fillets-ng/images/fishes/ex_small/right
+@dirrm share/games/fillets-ng/images/fishes/ex_small/left
+@dirrm share/games/fillets-ng/images/fishes/ex_small/heads/right
+@dirrm share/games/fillets-ng/images/fishes/ex_small/heads/left
+@dirrm share/games/fillets-ng/images/fishes/ex_small/heads
+@dirrm share/games/fillets-ng/images/fishes/ex_small
+@dirrm share/games/fillets-ng/images/fishes/ex_big/right
+@dirrm share/games/fillets-ng/images/fishes/ex_big/left
+@dirrm share/games/fillets-ng/images/fishes/ex_big/heads/right
+@dirrm share/games/fillets-ng/images/fishes/ex_big/heads/left
+@dirrm share/games/fillets-ng/images/fishes/ex_big/heads
+@dirrm share/games/fillets-ng/images/fishes/ex_big
 @dirrm share/games/fillets-ng/images/fishes/big/right
 @dirrm share/games/fillets-ng/images/fishes/big/left
 @dirrm share/games/fillets-ng/images/fishes/big/heads/right
@@ -2399,6 +3950,10 @@ share/games/fillets-ng/sound/viking2/en/dr-x-pes.ogg
 @dirrm share/games/fillets-ng/images/fishes/big/heads
 @dirrm share/games/fillets-ng/images/fishes/big
 @dirrm share/games/fillets-ng/images/fishes
+@dirrm share/games/fillets-ng/images/experiments
+@dirrm share/games/fillets-ng/images/engine
+@dirrm share/games/fillets-ng/images/ending
+@dirrm share/games/fillets-ng/images/emulator
 @dirrm share/games/fillets-ng/images/elk
 @dirrm share/games/fillets-ng/images/elevator2
 @dirrm share/games/fillets-ng/images/elevator1
@@ -2407,11 +3962,14 @@ share/games/fillets-ng/sound/viking2/en/dr-x-pes.ogg
 @dirrm share/games/fillets-ng/images/demo_briefcase
 @dirrm share/games/fillets-ng/images/creatures
 @dirrm share/games/fillets-ng/images/crabshow
+@dirrm share/games/fillets-ng/images/corridor
 @dirrm share/games/fillets-ng/images/corals
 @dirrm share/games/fillets-ng/images/computer
 @dirrm share/games/fillets-ng/images/columns
 @dirrm share/games/fillets-ng/images/city
+@dirrm share/games/fillets-ng/images/chest
 @dirrm share/games/fillets-ng/images/cellar
+@dirrm share/games/fillets-ng/images/cave
 @dirrm share/games/fillets-ng/images/captain
 @dirrm share/games/fillets-ng/images/cannons
 @dirrm share/games/fillets-ng/images/cancan
@@ -2421,6 +3979,10 @@ share/games/fillets-ng/sound/viking2/en/dr-x-pes.ogg
 @dirrm share/games/fillets-ng/images/briefcase
 @dirrm share/games/fillets-ng/images/bathyscaph
 @dirrm share/games/fillets-ng/images/bathroom
+@dirrm share/games/fillets-ng/images/barrel
+@dirrm share/games/fillets-ng/images/aztec
+@dirrm share/games/fillets-ng/images/atlantis
+@dirrm share/games/fillets-ng/images/alibaba
 @dirrm share/games/fillets-ng/images/airplane
 @dirrm share/games/fillets-ng/images
 @dirrm share/games/fillets-ng/font
