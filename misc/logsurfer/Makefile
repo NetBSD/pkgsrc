@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.10 2001/02/17 18:09:13 wiz Exp $
-# FreeBSD Id: Makefile,v 1.2 1997/10/26 23:56:58 fenner Exp
-#
+# $NetBSD: Makefile,v 1.11 2002/10/05 06:11:30 tron Exp $
 
-DISTNAME=	logsurfer-1.5
+DISTNAME=	logsurfer-1.5b
+PKGNAME=	logsurfer-1.5.2
 CATEGORIES=	misc
 MASTER_SITES=	ftp://ftp.cert.dfn.de/pub/tools/audit/logsurfer/
 
-MAINTAINER=	chris@cjones.org
+MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.cert.dfn.de/eng/team/wl/logsurf/
 COMMENT=	Processes logfiles and performs certain actions
 
