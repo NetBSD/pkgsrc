@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink.mk,v 1.28 2001/07/27 16:41:16 jlam Exp $
+# $NetBSD: bsd.buildlink.mk,v 1.29 2001/07/27 16:51:30 jlam Exp $
 #
 # This Makefile fragment is included by package buildlink.mk files.  This
 # file does the following things:
@@ -167,10 +167,10 @@ _BUILDLINK_CONFIG_WRAPPER_USE: .USE
 
 .include "../../mk/bsd.prefs.mk"
 
-#.if (${OBJECT_FMT} == "a.out")
+.if (${OBJECT_FMT} == "a.out")
 REPLACE_LIBNAMES+=	\
 	`${FIND} . -name "Makefile" -or -name "Makeconf" -or -name "*.mk" | ${SED} -e 's|\^\./||' | ${SORT}`
-#.endif
+.endif
 
 .if defined(REPLACE_LIBNAMES)
 .if defined(HAS_CONFIGURE) || defined(GNU_CONFIGURE)
