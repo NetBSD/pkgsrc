@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.34 2004/07/02 19:00:12 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.35 2004/07/02 19:25:16 jmmv Exp $
 
 DISTNAME=		icewm-1.2.14
 CATEGORIES=		x11 wm
@@ -48,17 +48,18 @@ CONFIGURE_ARGS+=	--with-unicode-set=utf-32
 .endif
 
 DOCDIR=			${PREFIX}/share/doc/icewm
+HTMLDIR=		${PREFIX}/share/doc/icewm/html
 INSTALL_TARGET=		install-base install-nls
 
 post-extract:
 	@${CP} ${FILESDIR}/bsd-daemon.xpm ${WRKSRC}/lib/taskbar
 
 post-install:
-	${INSTALL_DATA_DIR} ${DOCDIR}
+	${INSTALL_DATA_DIR} ${DOCDIR} ${HTMLDIR}
 	for file in BUGS CHANGES COPYING README README.wm-session TODO; do\
 		${INSTALL_DATA} ${WRKSRC}/$${file} ${DOCDIR}; \
 	done
-	${INSTALL_DATA} ${WRKSRC}/doc/*.html ${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/doc/*.html ${HTMLDIR}
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../fonts/Xft2/buildlink3.mk"
