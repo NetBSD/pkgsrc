@@ -1,0 +1,5 @@
+#	$NetBSD: shlib_version,v 1.1.1.1 1999/08/06 16:37:22 hubertf Exp $
+#	Don't forget to edit pkg/PLIST when changing
+#
+major=1
+minor=0
