@@ -1,0 +1,48 @@
+$NetBSD: patch-an,v 1.1 2000/10/12 14:56:48 jlam Exp $
+
+--- tack/Makefile.in.orig	Thu Oct 12 04:52:59 2000
++++ tack/Makefile.in
+@@ -28,6 +28,8 @@
+ includedir	= @includedir@
+ datadir		= @datadir@
+ 
++LIBTOOL		= @LIBTOOL@
++
+ INSTALL		= @INSTALL@
+ INSTALL_PROGRAM	= @INSTALL_PROGRAM@
+ INSTALL_DATA	= @INSTALL_DATA@
+@@ -44,6 +46,7 @@
+ 
+ CCFLAGS		= $(CPPFLAGS) $(CFLAGS)
+ 
++CFLAGS_LIBTOOL	= $(CCFLAGS)
+ CFLAGS_NORMAL	= $(CCFLAGS)
+ CFLAGS_DEBUG	= $(CCFLAGS) @CC_G_OPT@ -DTRACE
+ CFLAGS_PROFILE	= $(CCFLAGS) -pg
+@@ -52,10 +55,11 @@
+ CFLAGS_DEFAULT	= $(CFLAGS_@DFT_UPR_MODEL@)
+ 
+ LD		= @LD@
+-LINK		= @LINK_PROGS@ $(CC)
++LINK		= @LINK_PROGS@ $(LIBTOOL) $(CC)
+ LDFLAGS		= @EXTRA_LDFLAGS@ \
+ 		@PROG_ARGS@ @LDFLAGS@ @LD_MODEL@ @LIBS@ @EXTRA_LIBS@
+ 
++LDFLAGS_LIBTOOL	= $(LDFLAGS)
+ LDFLAGS_NORMAL	= $(LDFLAGS)
+ LDFLAGS_DEBUG	= $(LDFLAGS) @CC_G_OPT@
+ LDFLAGS_PROFILE	= $(LDFLAGS) -pg
+@@ -88,11 +92,11 @@
+ install.tack: $(PROGS) \
+ 	$(DESTDIR)$(bindir) \
+ 	$(DESTDIR)$(mandir)
+-	$(INSTALL_PROGRAM) tack$x $(DESTDIR)$(bindir)/tack$x
++	$(LIBTOOL) $(INSTALL_PROGRAM) tack$x $(DESTDIR)$(bindir)/tack$x
+ 	$(INSTALL_DATA) $(srcdir)/tack.1 $(DESTDIR)$(mandir)/tack.1
+ 
+ uninstall.tack:
+-	-@rm -f $(DESTDIR)$(bindir)/tack$x
++	-@$(LIBTOOL) rm -f $(DESTDIR)$(bindir)/tack$x
+ 	-@rm -f $(DESTDIR)$(mandir)/tack.1
+ 
+ $(DESTDIR)$(bindir) \
