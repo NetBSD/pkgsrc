@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2001/06/11 06:34:32 jlam Exp $
+# $NetBSD: Makefile,v 1.31 2001/08/23 04:26:53 jlam Exp $
 # FreeBSD Id: Makefile,v 1.13 1997/09/06 19:58:03 gj Exp
 #
 
@@ -15,8 +15,6 @@ COMMENT=		VI Like Emacs, X11 version -- a fully "X aware" vi work-alike
 
 USE_PERL5=		# defined
 USE_X11BASE=		# defined
-USE_XAW=		# defined
-USE_XPM=		# defined
 
 GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--with-perl
@@ -36,7 +34,7 @@ EGDIR=			${PREFIX}/share/examples/xvile
 
 .include "../../mk/bsd.prefs.mk"
 
-.if defined(XAW_TYPE) && ${XAW_TYPE} == "3d"
+.if defined(XAW_TYPE) && (${XAW_TYPE} == "3d" || ${XAW_TYPE} == "xpm")
 CONFIGURE_ARGS+=	--with-screen=Xaw3d
 CONFIGURE_ARGS+=	--with-Xaw3d
 .else
@@ -54,4 +52,6 @@ post-install:
 		${INSTALL_DATA} ${WRKSRC}/$$f ${EGDIR};		\
 	done
 
+.include "../../graphics/xpm/buildlink.mk"
+.include "../../mk/xaw.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2001/08/06 17:44:45 pooka Exp $
+# $NetBSD: Makefile,v 1.15 2001/08/23 04:26:52 jlam Exp $
 
 .include		"../vim-share/Makefile.common"
 
@@ -10,7 +10,6 @@ DEPENDS+=		vim-share-${VIM_VERSION}:../vim-share
 CONFLICTS+=		vim-[0-9]* vim-gtk-*
 
 USE_X11=		yes
-USE_XAW=		yes
 USE_BUILDLINK_ONLY=	yes
 
 CONFIGURE_ARGS+=	--enable-gui=athena
@@ -21,11 +20,11 @@ INSTALL_TARGET=		installvimbin
 
 .include "../../mk/bsd.prefs.mk"
 
-.if (${XAW_TYPE} == "standard")
-MAKE_ENV+=		XAW_LIB=Xaw
+.if defined(XAW_TYPE) && (${XAW_TYPE} == "3d" || ${XAW_TYPE} == "xpm")
+MAKE_ENV+=		XAW_LIB="Xaw3d" 
 .else
-.include "../../x11/Xaw3d/buildlink.mk"
-MAKE_ENV+=		XAW_LIB=Xaw3d
+XAW_TYPE=		standard
+MAKE_ENV+=		XAW_LIB="Xaw" 
 .endif
 
 post-install:
@@ -39,4 +38,5 @@ post-install:
 	done
 
 .include "../../devel/ncurses/buildlink.mk"
+.include "../../mk/xaw.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
