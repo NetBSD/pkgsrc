@@ -1,13 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2004/11/22 20:25:26 jlam Exp $
-#
-# XXX Support for the following variables will be removed after the
-# XXX pkgsrc-2004Q4 branch is released:
-# XXX
-# XXX APACHE_SUEXEC
-
-.if defined(APACHE_SUEXEC) && !empty(APACHE_SUEXEC:M[Yy][Ee][Ss])
-PKG_DEFAULT_OPTIONS+=	suexec
-.endif
+# $NetBSD: options.mk,v 1.2 2004/12/22 21:46:25 jlam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.apache
 PKG_SUPPORTED_OPTIONS=	suexec

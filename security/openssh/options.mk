@@ -1,22 +1,6 @@
-# $NetBSD: options.mk,v 1.1 2004/11/25 19:25:28 xtraeme Exp $
-#
-# XXX Support for the following variables will be removed after the
-# XXX pkgsrc-2004Q4 branch is released:
-# XXX
-# XXX USE_KERBEROS
-# XXX USE_PÂM
+# $NetBSD: options.mk,v 1.2 2004/12/22 21:46:25 jlam Exp $
 
 .include "../../mk/bsd.prefs.mk"
-
-.if !empty(OPSYS:MLinux)
-.  if defined(USE_PAM) && !empty(USE_PAM:M[Yy][Ee][Ss])
-PKG_DEFAULT_OPTIONS+=	PAM
-.  endif
-.endif
-
-.if defined(USE_KERBEROS) && !empty(USE_KERBEROS:M[Yy][Ee][Ss])
-PKG_DEFAULT_OPTIONS+=	kerberos
-.endif
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.openssh
 PKG_SUPPORTED_OPTIONS=	kerberos hpn-patch

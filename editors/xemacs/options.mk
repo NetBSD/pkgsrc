@@ -1,23 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2004/11/25 21:34:59 xtraeme Exp $
-#
-# XXX Support for the following variables will be removed after the
-# XXX pkgsrc-2004Q4 branch is released:
-# XXX
-# XXX USE_OPENLDAP
-# XXX USE_XFACE
-# XXX XEMACS_USE_CANNA
-
-.if defined(USE_OPENLDAP) && !empty(USE_OPENLDAP:M[Yy][Ee][Ss])
-PKG_DEFAULT_OPTIONS+=	ldap
-.endif
-
-.if defined(USE_XFACE) && !empty(USE_XFACE:M[Yy][Ee][Ss])
-PKG_DEFAULT_OPTIONS+=	xfaces
-.endif
-
-.if defined(XEMACS_USE_CANNA) && !empty(XEMACS_USE_CANNA:M[Yy][Ee][Ss])
-PKG_DEFAULT_OPTIONS+=	canna
-.endif
+# $NetBSD: options.mk,v 1.2 2004/12/22 21:46:25 jlam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.xemacs
 PKG_SUPPORTED_OPTIONS=	ldap xface canna
