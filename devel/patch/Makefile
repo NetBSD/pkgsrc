@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2003/01/06 22:23:06 grant Exp $
+# $NetBSD: Makefile,v 1.13 2003/01/07 10:33:26 grant Exp $
 #
 
 DISTNAME=	patch-2.5.4
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=   ${MASTER_SITE_GNU:=patch/}
 
@@ -19,6 +19,12 @@ CONFIGURE_ARGS+=	--program-prefix=${GNU_PROGRAM_PREFIX}
 .endif
 PLIST_SUBST+=		GNU_PROGRAM_PREFIX=${GNU_PROGRAM_PREFIX}
 BUILD_DEFS+=		GNU_PROGRAM_PREFIX
+
+.if !defined(GNU_PROGRAM_PREFIX) || ${GNU_PROGRAM_PREFIX} != "g"
+PLIST_SUBST+=		PATCH_LINK=""
+.else
+PLIST_SUBST+=		PATCH_LINK="@comment "
+.endif
 
 do-patch:
 	${MV} ${WRKSRC}/pch.c ${WRKSRC}/pch.c.orig
