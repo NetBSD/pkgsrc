@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 1999/06/21 13:17:53 mrg Exp $
+
+--- Imakefile.orig	Fri Feb  3 11:25:44 1995
++++ Imakefile	Mon Jun 21 23:01:49 1999
+@@ -58,7 +58,7 @@
+ 
+          XPMLIB = -lXpm
+         XPM_DEF = -DXPM
+-    XLOADIM_DEF = -DXLOADIMAGE=\"$(BINDIR)/xloadimage\"
++XCOMM    XLOADIM_DEF = -DXLOADIMAGE=\"$(BINDIR)/xloadimage\"
+ 
+ XCOMM   Ultrix doesn't have a mkstemp in libc...
+ XCOMM   Sys V doesn't seem to either...
