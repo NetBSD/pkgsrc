@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.1 1999/07/23 16:01:28 frueauf Exp $
+$NetBSD: patch-ad,v 1.2 2000/02/01 00:50:48 wiz Exp $
 
---- hacks/webcollage-orig	Fri Jul 16 07:20:44 1999
-+++ hacks/webcollage	Wed Jul 21 22:33:52 1999
-@@ -76,7 +76,7 @@
+--- ./hacks/webcollage.orig	Thu Dec  9 12:47:14 1999
++++ ./hacks/webcollage	Mon Jan 31 02:10:28 2000
+@@ -91,7 +91,7 @@
  my $urls_only_p = 0;
  my $delay = 0;
  
