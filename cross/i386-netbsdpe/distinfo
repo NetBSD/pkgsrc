@@ -1,13 +1,11 @@
-$NetBSD: distinfo,v 1.6 2002/10/16 05:11:00 kent Exp $
+$NetBSD: distinfo,v 1.7 2003/04/27 13:50:09 kent Exp $
 
 SHA1 (gcc-2.95.2-x86-win32-patches.tar.gz) = 8018d7a1c32211fc7a2f413cd49c422f7ccfd2ec
 Size (gcc-2.95.2-x86-win32-patches.tar.gz) = 217965 bytes
 SHA1 (protector-2.95.2-2.tar.gz) = 7b906b45e4e08e414ec8bca611d5371d82994401
 Size (protector-2.95.2-2.tar.gz) = 17034 bytes
-SHA1 (unproven-pthreads-0.17.tar.gz) = 9f50e31da916b341e0c1ce21012bbd95b1a08a7d
-Size (unproven-pthreads-0.17.tar.gz) = 234180 bytes
-SHA1 (binutils-2.13.tar.bz2) = 5d6aa1f4f97da617d1c7f99c8f2ceee146eb5369
-Size (binutils-2.13.tar.bz2) = 9882367 bytes
+SHA1 (binutils-030425.tar.bz2) = a6355ca1482c8feb334c62726c2663213c15649c
+Size (binutils-030425.tar.bz2) = 10847130 bytes
 SHA1 (gcc-2.95.2.tar.gz) = c3da103de3fa97c78ccc1b4fdc29fa25bf26a6c8
 Size (gcc-2.95.2.tar.gz) = 12885815 bytes
 SHA1 (patch-aa) = cd270eb18e0b65641a416c1215388dc9fb91f33d
