@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/07/01 02:35:12 hubertf Exp $
+$NetBSD: patch-aa,v 1.2 2000/09/26 00:46:05 hubertf Exp $
 
---- Makefile.orig	Thu Jul  1 04:13:17 1999
-+++ Makefile	Thu Jul  1 04:22:45 1999
+--- Makefile.orig	Wed Jun 30 20:25:02 1999
++++ Makefile
 @@ -5,8 +5,8 @@
  # it's data, and BINPATH is where it puts the executable
  ###########################################################################
@@ -27,7 +27,7 @@ $NetBSD: patch-aa,v 1.1.1.1 1999/07/01 02:35:12 hubertf Exp $
  
  ### Linux machines use this line:
 -LINK = -L/usr/X11R6/lib -I/usr/X11R6/include -lX11 -lm
-+LINK = -L${X11BASE}/lib -I${X11BASE}/include -lX11 -lm
++LINK = -Wl,-R${X11BASE}/lib -L${X11BASE}/lib -I${X11BASE}/include -lX11 -lm
  
  ### I'm told this line works fine on Solaris 2.5.1 with X11R5:
  #LINK = -L/usr/openwin/lib -I/usr/openwin/include -lX11 -lm
