@@ -1,3 +1,4 @@
+$NetBSD: patch-ab,v 1.3 2004/05/07 12:06:47 cjep Exp $
 --- ./lavtools/Makefile.in.orig	2004-04-17 11:15:14.000000000 +0900
 +++ ./lavtools/Makefile.in	2004-04-17 11:11:41.000000000 +0900
 @@ -319,122 +319,122 @@

@@ -1,3 +1,4 @@
+$NetBSD: patch-aj,v 1.2 2004/05/07 12:06:47 cjep Exp $
 --- lib/Makefile.in.orig	Tue Apr  6 18:29:00 2004
 +++ lib/Makefile.in	Tue Apr  6 18:29:01 2004
 @@ -22,8 +22,8 @@

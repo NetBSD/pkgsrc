@@ -1,3 +1,4 @@
+$NetBSD: patch-aa,v 1.2 2004/05/07 12:06:47 cjep Exp $
 --- disasm.h.orig	Sat Mar 13 00:52:10 2004
 +++ disasm.h	Sat Mar 13 00:52:18 2004
 @@ -32,7 +32,7 @@
