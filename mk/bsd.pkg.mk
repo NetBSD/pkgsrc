@@ -1,7 +1,7 @@
 #-*- mode: Fundamental; tab-width: 4; -*-
 # ex:ts=4
 #
-#	$NetBSD: bsd.pkg.mk,v 1.93 1998/06/05 11:23:09 frueauf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.94 1998/06/05 12:14:44 agc Exp $
 #
 #	This file is derived from bsd.port.mk - 940820 Jordan K. Hubbard.
 #	This file is in the public domain.
@@ -151,6 +151,8 @@ NetBSD_MAINTAINER=	agc@netbsd.org
 # USE_IMAKE		- Says that the port uses imake.
 # USE_X11		- Says that the port uses X11 (i.e., installs in ${X11BASE}).
 # USE_GTEXINFO		- Says that the package uses gtexinfo
+# USE_MOTIF		- Says that the package uses Motif
+#				(it will use lesstif if Motif is unavailable)
 # NO_INSTALL_MANPAGES - For imake ports that don't like the install.man
 #						target.
 # HAS_CONFIGURE	- Says that the port has its own configure script.
@@ -443,6 +445,10 @@ USE_GTEXINFO=		yes
 .endif
 .if defined(USE_GTEXINFO)
 DEPENDS+=		gtexinfo-3.12:${PKGSRCDIR}/devel/gtexinfo
+.endif
+.if defined(USE_MOTIF)
+BUILD_DEPENDS+=		${X11BASE}/include/Xm/Xm.h:../../x11/lesstif
+RUN_DEPENDS+=		${X11BASE}/include/Xm/Xm.h:../../x11/lesstif
 .endif
 
 
