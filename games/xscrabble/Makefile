@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/01/20 12:15:42 agc Exp $
+# $NetBSD: Makefile,v 1.10 2004/03/07 23:33:04 snj Exp $
 #
 
 DISTNAME=	xscrabble
@@ -13,8 +13,7 @@ COMMENT=	X version of the popular board game, for 1 to 4 players
 
 WRKSRC=		${WRKDIR}/xscrabble
 DIST_SUBDIR=	${PKGNAME}
-USE_BUILDLINK2=	YES
-USE_X11BASE=	YES
+USE_BUILDLINK3=	YES
 USE_IMAKE=	YES
 
 post-patch:
@@ -37,5 +36,5 @@ do-install:
 			/var/games/xscrabble.scores ; \
 	fi
 
-.include "../../graphics/xpm/buildlink2.mk"
+.include "../../graphics/xpm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
