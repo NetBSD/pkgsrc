@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1329 2004/01/23 20:15:27 wiz Exp $
+$NetBSD: TODO,v 1.1330 2004/01/23 22:42:42 recht Exp $
 
 Suggested new packages
 ======================
@@ -160,7 +160,6 @@ Suggested package updates
 	o dylan-interpreter-2.3.11
 	o eclipse-2.1.2
 	o efax-gtk-2.2.4
-	o elinks-0.9.1
 	o elk-3.99.6
 	o elm-me-2.4pl110a
 	o enchant-1.1.2
