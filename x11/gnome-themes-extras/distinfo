@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2004/12/28 22:50:09 jmmv Exp $
+$NetBSD: distinfo,v 1.4 2005/02/23 17:36:11 wiz Exp $
 
 SHA1 (gnome-themes-extras-0.8.0.tar.bz2) = 99872d89d7e799ddeb69d352d9737df907c242ec
+RMD160 (gnome-themes-extras-0.8.0.tar.bz2) = b683af90b10adf2fd72f84e54f6576217c8d04ce
 Size (gnome-themes-extras-0.8.0.tar.bz2) = 3900402 bytes
 SHA1 (patch-aa) = ebfb0f267c7f726c084cf3cebcfd567a130becd1

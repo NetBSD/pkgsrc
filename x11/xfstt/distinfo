@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.9 2004/02/14 22:27:30 kristerw Exp $
+$NetBSD: distinfo,v 1.10 2005/02/23 17:36:23 wiz Exp $
 
 SHA1 (xfstt-1.6.tar.gz) = 7fe623b27d85c5611346376d2b84e549db038c17
+RMD160 (xfstt-1.6.tar.gz) = aade2698cda4df67e57a8ac63a57712082e1e6b4
 Size (xfstt-1.6.tar.gz) = 346346 bytes
 SHA1 (patch-aa) = 771f503ee245ac4dcbbd8adf5f7b1746cb39c6e0
 SHA1 (patch-ab) = 18d41c9121c4b95b22a831fb987a97c90a8c0a86
