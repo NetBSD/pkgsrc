@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 2003/12/20 16:00:56 ben Exp $
+
+--- wxwin/wb_utils.cpp.orig	1997-07-20 17:01:04.000000000 -0700
++++ wxwin/wb_utils.cpp
+@@ -27,6 +27,8 @@
+  */
+ 
+ 
++using namespace std;
++
+ #include "common.h"
+ #include "wx_utils.h"
+ #include "wx_list.h"
