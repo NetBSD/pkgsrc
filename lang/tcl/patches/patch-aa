@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2000/12/08 20:41:19 jlam Exp $
+$NetBSD: patch-aa,v 1.5 2001/06/30 18:24:17 jlam Exp $
 
 --- Makefile.in.orig	Tue Aug  8 15:17:11 2000
 +++ Makefile.in
@@ -52,7 +52,15 @@ $NetBSD: patch-aa,v 1.4 2000/12/08 20:41:19 jlam Exp $
  
  #----------------------------------------------------------------
  # The information below should be usable as is.  The configure
-@@ -428,11 +429,11 @@
+@@ -409,6 +410,7 @@
+ 	rm -f ${TCL_LIB_FILE}
+ 	@MAKE_LIB@
+ 	$(RANLIB) ${TCL_LIB_FILE}
++	${TOUCH} ${TCL_LIB_FILE}
+ 
+ ${STUB_LIB_FILE}: ${STUB_LIB_OBJS}
+ 	rm -f ${STUB_LIB_FILE}
+@@ -428,11 +430,11 @@
  
  
  tclsh: ${TCLSH_OBJS} ${TCL_LIB_FILE}
@@ -66,7 +74,7 @@ $NetBSD: patch-aa,v 1.4 2000/12/08 20:41:19 jlam Exp $
  		@TCL_LD_SEARCH_FLAGS@ -o tcltest
  
  
-@@ -522,7 +523,7 @@
+@@ -522,7 +524,7 @@
  	    chmod +x $(SRC_DIR)/install-sh; \
  	    fi
  	@echo "Installing $(TCL_LIB_FILE) to $(LIB_INSTALL_DIR)/"
@@ -75,7 +83,7 @@ $NetBSD: patch-aa,v 1.4 2000/12/08 20:41:19 jlam Exp $
  	@(cd $(LIB_INSTALL_DIR); $(RANLIB) $(TCL_LIB_FILE))
  	@chmod 555 $(LIB_INSTALL_DIR)/$(TCL_LIB_FILE)
  	@if test "$(TCL_BUILD_EXP_FILE)" != ""; then \
-@@ -646,7 +647,7 @@
+@@ -646,7 +648,7 @@
  	makedepend -- $(DEPEND_SWITCHES) -- $(SRCS)
  
  bp: $(UNIX_DIR)/bp.c
@@ -84,7 +92,7 @@ $NetBSD: patch-aa,v 1.4 2000/12/08 20:41:19 jlam Exp $
  
  # Test binaries.  The rules for tclTestInit.o and xtTestInit.o are
  # complicated because they are compiled from tclAppInit.c.  Can't use
-@@ -956,7 +957,7 @@
+@@ -956,7 +958,7 @@
  
  xttest:  ${XTTEST_OBJS} ${GENERIC_OBJS} ${UNIX_OBJS} ${COMPAT_OBJS} \
  	@DL_OBJS@ ${BUILD_DLTEST}
