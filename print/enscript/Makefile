@@ -1,13 +1,16 @@
-# $NetBSD: Makefile,v 1.6 1998/06/22 13:04:38 agc Exp $
+# $NetBSD: Makefile,v 1.7 1998/07/08 10:37:48 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.4 1997/11/27 08:10:30 tg Exp
 #
 
-DISTNAME=		enscript-1.6.0
-PKGNAME=		enscript-${PAPERSIZE}-1.6.0
+DISTNAME=		enscript-1.6.1
+PKGNAME=		enscript-${PAPERSIZE}-1.6.1
 CATEGORIES=		print
 MASTER_SITES=		${MASTER_SITE_GNU}
 
 MAINTAINER=		packages@netbsd.org
+
+CONFLICTS=		enscript-Letter-1.6.0 enscript-A4-1.6.0 \
+			enscript-Letterdj-1.6.0
 
 MANUAL_PACKAGE_BUILD=	PAPERSIZE has to be set to Letter or A4
 GNU_CONFIGURE=		yes
