@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/01/04 18:40:31 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/01/22 09:08:51 xtraeme Exp $
+lib/lokigames/quake3server/arena/arena.cfg
 lib/lokigames/quake3server/arena/browser.pk3
 lib/lokigames/quake3server/arena/gfx.pk3
 lib/lokigames/quake3server/arena/icons.pk3
@@ -22,14 +23,13 @@ lib/lokigames/quake3server/arena/ra3map7.pk3
 lib/lokigames/quake3server/arena/ra3map8.pk3
 lib/lokigames/quake3server/arena/ra3map9.pk3
 lib/lokigames/quake3server/arena/scripts.pk3
+lib/lokigames/quake3server/arena/server.cfg
 lib/lokigames/quake3server/arena/sounds.pk3
 lib/lokigames/quake3server/arena/textures.pk3
 lib/lokigames/quake3server/arena/vm.pk3
-lib/lokigames/quake3server/baseq3/arena.cfg
-lib/lokigames/quake3server/baseq3/server.cfg
 share/doc/lokigames/quake3server/arena/readme.txt
 share/doc/lokigames/quake3server/arena/readsrv.txt
 @dirrm share/doc/lokigames/quake3server/arena
 @dirrm share/doc/lokigames/quake3server
-@dirrm lib/lokigames/quake3server/baseq3
 @dirrm lib/lokigames/quake3server/arena
+@dirrm lib/lokigames/quake3server
