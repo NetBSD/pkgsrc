@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/09/22 05:38:22 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2001/09/22 05:42:04 jlam Exp $
 #
 # FreeBSD Id: ports/misc/bidwatcher/Makefile,v 1.13 2001/04/03 08:14:17 will Exp
 
@@ -13,6 +13,8 @@ COMMENT=        Ebay snipe tool
 USE_GMAKE=	YES
 MAKE_ENV+=	OPTIONS="-DHAVE_GMTIME"
 MAKE_ENV+=	CXXFLAGS="${CFLAGS} ${CXXFLAGS}"
+
+USE_BUILDLINK_ONLY=	YES
 
 FILES_SUBST=		BUILDLINK_DIR=${BUILDLINK_DIR}
 FILES_SUBST+=		BUILDLINK_X11_DIR=${BUILDLINK_X11_DIR}
