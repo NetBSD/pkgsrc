@@ -1,6 +1,6 @@
-$NetBSD: patch-ag,v 1.4 2004/03/28 22:00:05 minskim Exp $
+$NetBSD: patch-ag,v 1.5 2004/10/17 19:20:53 jmmv Exp $
 
---- src/IMon.c++.orig	2003-01-18 08:18:12.000000000 -0600
+--- src/IMon.c++.orig	2003-01-18 15:18:12.000000000 +0100
 +++ src/IMon.c++
 @@ -25,6 +25,7 @@
  #include <assert.h>
@@ -10,8 +10,12 @@ $NetBSD: patch-ag,v 1.4 2004/03/28 22:00:05 minskim Exp $
  
  #if HAVE_IMON
  #ifdef __sgi
-@@ -34,7 +35,9 @@
+@@ -32,9 +33,13 @@
+ #else
+ #include <linux/imon.h>
  #endif
++#else // HAVE_IMON
++#include "imon-compat.h"
  #endif
  
 +#if HAVE_SYS_SYSMACROS_H
