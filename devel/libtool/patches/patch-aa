@@ -1,7 +1,16 @@
-$NetBSD: patch-aa,v 1.23 2001/02/28 21:20:31 skrll Exp $
+$NetBSD: patch-aa,v 1.24 2001/05/22 10:31:08 abs Exp $
 
---- ltconfig.in.orig	Fri Feb 16 05:05:03 2001
-+++ ltconfig.in
+--- ltconfig.in.orig	Tue May 22 11:10:20 2001
++++ ltconfig.in	Tue May 22 11:07:29 2001
+@@ -1118,7 +1118,7 @@
+ 
+ # This must be Linux ELF.
+ linux-gnu*)
+-  version_type=linux
++  version_type=sunos
+   need_lib_prefix=no
+   need_version=no
+   library_names_spec='${libname}${release}.so$versuffix ${libname}${release}.so$major $libname.so'
 @@ -1142,6 +1142,8 @@
  
  netbsd*)
