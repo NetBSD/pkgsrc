@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 1998/09/22 06:11:38 garbled Exp $
+# $NetBSD: Makefile,v 1.18 1998/11/13 01:28:46 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.4 1997/09/11 03:54:43 fenner Exp 
 #
 
@@ -6,8 +6,6 @@ DISTNAME=	vat-4.0b2
 CATEGORIES=	mbone
 MASTER_SITES=	ftp://ftp.ee.lbl.gov/conferencing/vat/alpha-test/
 DISTFILES=	vatsrc-4.0b2.tar.gz
-
-NOT_FOR_ARCHS=	alpha	#filter.cc compiler error
 
 MAINTAINER=	mycroft@netbsd.org
 HOMEPAGE=	http://www-nrg.ee.lbl.gov/vat/
@@ -18,6 +16,8 @@ HOMEPAGE=	http://www-nrg.ee.lbl.gov/vat/
 BUILD_DEPENDS=	${GSM_WORK}/lib/libgsm.a:${GSM_DIR}:build
 DEPENDS+=	tk-8.0p2:../../x11/tk80
 #DEPENDS+=	gsm-1.0.10:${GSM_DIR}
+
+NOT_FOR_ARCHS=	alpha	#filter.cc compiler error
 
 .include "../../mk/bsd.prefs.mk"
 
