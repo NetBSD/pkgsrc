@@ -1,4 +1,4 @@
-.\"	$NetBSD: etcupdate.8,v 1.1.1.1 2001/11/20 09:53:55 martti Exp $
+.\"	$NetBSD: etcupdate.8,v 1.2 2001/11/20 17:29:54 wiz Exp $
 .\"
 .\" Copyright (c) 2001 The NetBSD Foundation, Inc.
 .\" All rights reserved.
@@ -50,7 +50,7 @@
 .Op Fl v
 .Op Fl w Ar width
 .Sh DESCRIPTION
-.Pa etcupdate
+.Nm
 is a tool to update the configuration files in
 .Pa /etc
 without the need of manually checking and modifying every file.
@@ -58,109 +58,105 @@ The user should run this script after performing an operating system
 update (i.e. after running
 .Pa make build
 in
-.Pa /usr/src
-) to use the latest configuration files during reboot.
-
-.Pa etcupdate
+.Pa /usr/src )
+to use the latest configuration files during reboot.
+.Pp
+.Nm
 will first create a copy of the new configuration files and compare these
-against the installed files. The user is given an option of installing,
-merging or deleting of each modified or missing files.
-
-.Pa etcupdate
+against the installed files.  The user is given the option of installing,
+merging or deleting each modified or missing file.
+.Pp
+.Nm
 also notes if the user installs certain special files and performs
 corresponding tasks like remaking the device nodes or rebuilding a database
 from the
 .Pa /etc/mail/aliases
 file.
 .Sh ENVIRONMENT
-.Pa TEMPROOT
-
+.Bl -tag -width TEMPROOT
+.It Ev TEMPROOT
 The temporary files created from
 .Pa /usr/src/etc
-will be stored here. These files will then be compared
+will be stored here.  These files will then be compared
 against the currently installed files in the
 .Pa /etc
-directory. By default this is
+directory.  By default this is
 .Pa /tmp/temproot
-but can be changed either with the
+but it can be changed either with the
 .Fl t Ar temproot
 argument or by defining the
-.Pa TEMPROOT
+.Ev TEMPROOT
 variable.
-
-.Pa SRCDIR
-
-The location of the NetBSD sources files. By default this is
+.It Ev SRCDIR
+The location of the
+.Nx
+sources files.  By default this is
 .Pa /usr/src
-but can be changed either with the
+but it can be changed either with the
 .Fl s Ar srcdir
 argument or by defining the
-.Pa SRCDIR
+.Ev SRCDIR
 variable.
-
-.Pa PAGER
-
-The pager to use when displaying files. By default this is
+.It Ev PAGER
+The pager to use when displaying files.  By default this is
 .Pa /usr/bin/more
-but can be changed either with the
+but it can be changed either with the
 .Fl p Ar pager
 argument or by defining the
-.Pa PAGER
+.Ev PAGER
 variable.
-
-.Pa WIDTH
-
-The screen width used during interactive merge. By default this is 
-.Pa 80
-but can be changed either with the
+.It Ev WIDTH
+The screen width used during interactive merge. By default this is
+80 but it can be changed either with the
 .Fl w Ar width
 argument or by defining the
-.Pa WIDTH
+.Ev WIDTH
 variable.
 This is useful for
-.Pa xterm(1)
+.Xr xterm 1
 users with wider shell windows.
+.El
 .Sh FILES
 The environment variables can also be defined in the following configuration
-files. The user's personal configuration file settings override the global
+files.  The user's personal configuration file settings override the global
 settings.
-
-.Pa /etc/etcupdate.conf
-
-.Pa ~/.etcupdaterc
+.Bl -tag -offset indent
+.It Pa /etc/etcupdate.conf
+.It Pa ~/.etcupdaterc
+.El
 .Sh EXAMPLES
-You have just upgraded your NetBSD host from 1.5.2 to 1.5.3 and now it's time
+You have just upgraded your
+.Nx
+host from 1.5.2 to 1.5.3 and now it's time
 to update the configuration files as well. This can be done with the
 following command:
-
 .Dl etcupdate
-
+.Pp
 To get a better idea what's going on, use the
 .Fl v
 flag:
-
 .Dl etcupdate -v
-
+.Pp
 The default location of the source files is
 .Pa /usr/src
 but this may be overridden with the
 .Fl s Ar srcdir
 command line argument:
-
 .Dl etcupdate -s /some/where/src
-.Sh HISTORY
-The
-.Pa etcupdate
-command appeared in NetBSD 1.5.3.
 .Sh AUTHORS
 The
 script was written by Martti Kuparinen <martti@netbsd.org> and
-improved by several other NetBSD users.
-
+improved by several other
+.Nx
+users.
+.Pp
 The idea for this script (including code fragments, variable names etc.)
-came from the FreeBSD mergemaster (by Douglas Barton). Unlike the
-FreeBSD mergemaster, this does not use CVS version tags to compare if
+came from the
+.Fx
+mergemaster (by Douglas Barton).  Unlike the
+.Fx
+mergemaster, this does not use CVS version tags to compare if
 the files need to be updated. Files are compared with
-.Pa /usr/bin/cmp
-as this is more reliable and the only way if the version numbers are
+.Xr cmp 1
+as this is more reliable and the only way if the version numbers are the
 same even though the files are different.
