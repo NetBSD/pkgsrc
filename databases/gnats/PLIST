@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2003/06/29 12:54:57 seb Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/01/20 18:05:35 seb Exp $
 bin/edit-pr
 bin/getclose
 bin/install-sid
@@ -7,12 +7,6 @@ bin/nquery-pr
 bin/query-pr
 bin/send-pr
 bin/sub-type
-info/gnats.info
-info/gnats.info-1
-info/gnats.info-2
-info/gnats.info-3
-info/gnats.info-4
-info/send-pr.info
 libexec/gnats/at-pr
 libexec/gnats/check-db
 libexec/gnats/delete-pr
@@ -54,7 +48,6 @@ share/gnats/dist/install-sid.sh
 share/gnats/dist/s-usage.texi
 share/gnats/dist/send-pr-el.in
 share/gnats/dist/send-pr.1
-share/gnats/dist/send-pr.info
 share/gnats/dist/send-pr.sh
 share/gnats/dist/send-pr.texi
 share/gnats/dist/states.texi

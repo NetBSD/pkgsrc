@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/08/09 10:38:23 seb Exp $
+# $NetBSD: Makefile,v 1.10 2004/01/20 18:05:35 seb Exp $
 
 DISTNAME=	gnats-3.113.1
 CATEGORIES=	devel
@@ -41,6 +41,8 @@ CONFIGURE_ENV=	SEND_PR=/dev/null
 # just install gnats
 INSTALL_TARGET=	install-gnats install-send-pr
 
+PLIST_SRC=	${WRKSRC}/.PLIST
+
 post-build:
 	(cd ${WRKSRC}/gnats;   ${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_FLAGS} info)
 	(cd ${WRKSRC}/send-pr; ${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_FLAGS} info)
@@ -48,5 +50,8 @@ post-build:
 post-install:
 	(cd ${WRKSRC}/gnats;   ${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_FLAGS} install-info)
 	(cd ${WRKSRC}/send-pr; ${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_FLAGS} install-info)
+	${LS} ${PREFIX}/share/gnats/dist/send-pr.info* | \
+		${SED} -e 's,^${PREFIX}/,,' > ${PLIST_SRC}
+	${CAT} ${.CURDIR}/PLIST >> ${PLIST_SRC}
 
 .include "../../mk/bsd.pkg.mk"
