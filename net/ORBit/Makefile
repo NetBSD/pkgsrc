@@ -1,23 +1,25 @@
-# $NetBSD: Makefile,v 1.31 2000/06/01 11:23:36 rh Exp $
+# $NetBSD: Makefile,v 1.32 2000/06/20 22:42:38 jlam Exp $
 #
 
-DISTNAME=	ORBit-0.5.1
-CATEGORIES=	net
-MASTER_SITES=	${MASTER_SITE_GNOME:=stable/sources/ORBit/}
+DISTNAME=		ORBit-0.5.1
+CATEGORIES=		net
+MASTER_SITES=		${MASTER_SITE_GNOME:=stable/sources/ORBit/}
 
-MAINTAINER=	tron@netbsd.org
-HOMEPAGE=	http://www.gnome.org/
+MAINTAINER=		tron@netbsd.org
+HOMEPAGE=		http://www.gnome.org/
 
-DEPENDS+=	glib-1.2.*:../../devel/glib
-DEPENDS+=	gindent-*:../../devel/gindent
-DEPENDS+=	gettext-0.10.*:../../devel/gettext
+DEPENDS+=		glib-1.2.*:../../devel/glib
+DEPENDS+=		gindent-*:../../devel/gindent
+DEPENDS+=		gettext-0.10.*:../../devel/gettext
 
-GNU_CONFIGURE=	yes
-USE_PKGLIBTOOL=	yes
-USE_GMAKE=	yes
+USE_GMAKE=		# defined
+GNU_CONFIGURE=		# defined
+USE_LIBTOOL=		# defined
+LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig \
+			${WRKSRC}/popt/ltconfig \
+			${WRKSRC}/libIDL/ltconfig
 
-LIBTOOL_FLAGS=	--install-la
-INFO_FILES=	libIDL.info
+INFO_FILES=		libIDL.info
 
 # This package fails to build, with an unterminated macro definition error
 # Calling the build twice seems to workaround this.
