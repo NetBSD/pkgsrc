@@ -1,14 +1,15 @@
-@comment $NetBSD: PLIST,v 1.7 1998/07/15 11:24:51 agc Exp $
-bin/fax2tiff
+@comment $NetBSD: PLIST,v 1.8 1999/10/08 21:14:35 jlam Exp $
 bin/fax2ps
+bin/fax2tiff
 bin/gif2tiff
 bin/pal2rgb
 bin/ppm2tiff
+bin/ras2tiff
 bin/rgb2ycbcr
 bin/thumbnail
-bin/ras2tiff
 bin/tiff2bw
 bin/tiff2ps
+bin/tiff2rgba
 bin/tiffcmp
 bin/tiffcp
 bin/tiffdither
@@ -16,10 +17,10 @@ bin/tiffdump
 bin/tiffinfo
 bin/tiffmedian
 bin/tiffsplit
-lib/libtiff.a
-lib/libtiff.so.3.4
 include/tiff.h
 include/tiffio.h
+lib/libtiff.a
+lib/libtiff.so.3.5
 man/man1/fax2ps.1
 man/man1/fax2tiff.1
 man/man1/gif2tiff.1
@@ -78,6 +79,8 @@ man/man3/TIFFReadDirectory.3
 man/man3/TIFFReadEncodedStrip.3
 man/man3/TIFFReadEncodedTile.3
 man/man3/TIFFReadRGBAImage.3
+man/man3/TIFFReadRGBAStrip.3
+man/man3/TIFFReadRGBATile.3
 man/man3/TIFFReadRawStrip.3
 man/man3/TIFFReadRawTile.3
 man/man3/TIFFReadScanline.3
