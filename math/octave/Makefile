@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2003/07/17 21:47:51 grant Exp $
+# $NetBSD: Makefile,v 1.35 2003/08/02 19:39:08 seb Exp $
 # FreeBSD Id: Makefile,v 1.18 1998/09/27 20:10:45 steve Exp
 
 DISTNAME=	octave-2.0.17
@@ -29,6 +29,8 @@ CONFIGURE_ENV+=		FFLAGS="${CFLAGS}" OBJECT_FMT="${OBJECT_FMT}"
 CPPFLAGS+=		-I${WRKDIR}/include
 LDFLAGS+=		-Wl,${RPATH_FLAG}${PREFIX}/lib -L${PREFIX}/lib
 
+USE_NEW_TEXINFO=	YES
+USE_MAKEINFO=	YES
 INFO_FILES=	liboctave.info octave.info
 LIBOCTAVE_INFO=	liboctave.info liboctave.info-1 liboctave.info-2 liboctave.info-3
 
@@ -62,5 +64,4 @@ post-patch:
 	fi
 .endif
 
-.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
