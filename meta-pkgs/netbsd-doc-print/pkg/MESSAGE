@@ -1,0 +1,5 @@
+You will want to install PDF and PostScript previewers, such as
+ * acroread
+ * xpdf
+ * gv
+To view the generated PDF and PostScript output.
