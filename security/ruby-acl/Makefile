@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/07/04 16:02:36 taca Exp $
+# $NetBSD: Makefile,v 1.3 2002/01/03 15:21:38 taca Exp $
 # FreeBSD: ports/security/ruby-acl/Makefile,v 1.4 2000/12/26 04:13:28 knu Exp
 
 DISTNAME=	acl-1.0.1
@@ -12,9 +12,12 @@ COMMENT=	Ruby module to provide Access Control List checks
 
 DIST_SUBDIR=	ruby
 USE_RUBY_RD=	yes
+RD_DOCS=	acl.rd acl.rd.ja
+DOCS=		README doc/acl.rd doc/acl.html \
+		README.ja doc/acl.rd.ja doc/acl.html.ja
 
 do-build:
-.for f in acl.rd acl.rd.ja
+.for f in ${RD_DOCS}
 	@cd ${WRKSRC}/doc; \
 	${RUBY_RD} ${f} > ${f:S/.rd/.html/}
 .endfor
@@ -24,12 +27,9 @@ do-install:
 	${RUBY} install.rb
 	${INSTALL_DATA_DIR} ${RUBY_EXAMPLESDIR}/acl
 	${INSTALL_DATA} ${WRKSRC}/acltest.rb ${RUBY_EXAMPLESDIR}/acl
-	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}/acl/ja
-.for f in README doc/acl.rd doc/acl.html
+	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}/acl
+.for f in ${DOCS}
 	${INSTALL_DATA} ${WRKSRC}/${f} ${RUBY_DOCDIR}/acl
-.endfor
-.for f in README.ja doc/acl.rd.ja doc/acl.html.ja
-	${INSTALL_DATA} ${WRKSRC}/${f} ${RUBY_DOCDIR}/acl/ja
 .endfor
 
 .include "../../textproc/ruby-rdtool/Makefile.common"
