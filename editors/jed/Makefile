@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1999/06/22 07:34:15 tron Exp $
+# $NetBSD: Makefile,v 1.6 1999/06/22 07:35:32 tron Exp $
 #
 
 DISTNAME=		jed0.98-7
@@ -12,8 +12,8 @@ HOMEPAGE=		http://space.mit.edu/%7Edavis/jed.html
 
 DEPENDS+=		libslang-1.3.7:../../devel/libslang
 
-CONFIGURE_ARGS+=	--without-X --prefix=${PREFIX}
 GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--without-X
 
 WRKSRC=			${WRKDIR}/jed
 
