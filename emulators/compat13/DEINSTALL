@@ -1,33 +1,21 @@
-#!/bin/sh
-#
-# $NetBSD: DEINSTALL,v 1.1 2001/10/31 23:52:24 zuntum Exp $
-
-PKGNAME=$1
-STAGE=$2
+# $NetBSD: DEINSTALL,v 1.2 2003/08/30 18:57:03 jlam Exp $
 
 case ${STAGE} in
-DEINSTALL)
-	;;
 POST-DEINSTALL)
 	MACHINE_ARCH=@MACHINE_ARCH@
 	COMPAT_LIBDIR=@COMPAT_LIBDIR@
 
 	if [ "${MACHINE_ARCH}" = "mipsel" ]
 	then
-		rm -f ${PKG_PREFIX}/libexec/ld.so
-		rmdir -p ${PKG_PREFIX}/libexec 2>/dev/null || true
+		${RM} -f ${PKG_PREFIX}/libexec/ld.so
+		${RMDIR} -p ${PKG_PREFIX}/libexec 2>/dev/null || ${TRUE}
 	fi
 
-	rmdir -p ${PKG_PREFIX}/${COMPAT_LIBDIR} 2>/dev/null || true
+	${RMDIR} -p ${PKG_PREFIX}/${COMPAT_LIBDIR} 2>/dev/null || ${TRUE}
 
 	# Regenerate the shared library cache.  This should work on either
 	# a.out or on ELF with the 1.5 release.
 	#
-	( @LDCONFIG@ || true ) >/dev/null 2>&1
-	;;
-*)
-	echo "Unexpected argument: ${STAGE}"
-	exit 1
+	( @LDCONFIG@ || ${TRUE} ) >/dev/null 2>&1
 	;;
 esac
-exit 0
