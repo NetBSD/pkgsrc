@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2003/06/10 23:13:43 jmc Exp $
+# $NetBSD: Makefile,v 1.5 2003/08/28 20:05:24 xtraeme Exp $
 #
 
 DISTNAME=	fbdesk-1.1.4
 CATEGORIES=	x11 wm
 MASTER_SITES=	http://fluxbox.sourceforge.net/download/
 
-MAINTAINER=	jrp@hispabsd.org
+MAINTAINER=	xtraeme@NetBSD.org
 HOMEPAGE=	http://fluxbox.sourceforge.net/fbdesk/
 COMMENT=	Application that creates and manage icons on your Fluxbox desktop
 
