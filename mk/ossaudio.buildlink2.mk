@@ -1,4 +1,4 @@
-# $NetBSD: ossaudio.buildlink2.mk,v 1.5 2002/10/03 02:56:32 jlam Exp $
+# $NetBSD: ossaudio.buildlink2.mk,v 1.6 2002/10/03 08:04:28 jlam Exp $
 
 .if !defined(OSSAUDIO_BUILDLINK2_MK)
 OSSAUDIO_BUILDLINK2_MK=	# defined
@@ -18,17 +18,25 @@ BUILDLINK_FILES.ossaudio+=	lib/libossaudio.*
 .  if ${OPSYS} == "NetBSD"
 LIBOSSAUDIO?=			-lossaudio
 DEVOSSAUDIO?=			/dev/audio
+DEVOSSSOUND?=			/dev/sound
 .  elif ${OPSYS} == "Linux"
 LIBOSSAUDIO?=			# empty
 DEVOSSAUDIO?=			/dev/dsp
+DEVOSSSOUND?=			/dev/dsp
 .  else
 LIBOSSAUDIO?=			# empty
 DEVOSSAUDIO?=			/dev/audio
+DEVOSSSOUND?=			/dev/sound
 .  endif
 .endif
 
+CONFIGURE_ENV+=			LIBOSSAUDIO="${LIBOSSAUDIO}"
+CONFIGURE_ENV+=			DEVOSSAUDIO="${DEVOSSAUDIO}"
+CONFIGURE_ENV+=			DEVOSSSOUND="${DEVOSSSOUND}"
+
 MAKE_ENV+=			LIBOSSAUDIO="${LIBOSSAUDIO}"
 MAKE_ENV+=			DEVOSSAUDIO="${DEVOSSAUDIO}"
+MAKE_ENV+=			DEVOSSSOUND="${DEVOSSSOUND}"
 
 BUILDLINK_TARGETS+=		ossaudio-buildlink
 BUILDLINK_TARGETS+=		ossaudio-buildlink-soundcard-h
