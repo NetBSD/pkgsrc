@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/04/14 15:40:14 manu Exp $
+# $NetBSD: Makefile,v 1.3 2004/04/14 17:19:28 grant Exp $
 #
 
 DISTNAME=	libspf_alt-0.4.0
@@ -11,10 +11,9 @@ COMMENT=	Sender Permitted Framework (SPF) library
 
 DEPENDS+=	bind>=9.2.3nb3:../../net/bind9
 
+USE_BUILDLINK2=	YES
 HAS_CONFIGURE=	YES
 CONFIGURE_ARGS+=--with-bind=${PREFIX} --prefix=${PREFIX}
-
-USE_BUILDLINK2=	YES
 
 .include "../../net/bind9/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
