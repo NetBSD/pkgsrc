@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2000/07/03 07:32:21 sakamoto Exp $
+# $NetBSD: Makefile,v 1.6 2000/08/22 02:22:26 sakamoto Exp $
 # FreeBSD Id: ports/x11-toolkits/rubytk/Makefile,v 1.3 1999/08/31 02:59:34 peter Exp
 
-DISTNAME=	ruby-1.4.5
+DISTNAME=	ruby-1.4.6
 PKGNAME=	${DISTNAME:S/-/-Tk-/}
 CATEGORIES=	x11
 MASTER_SITES=	ftp://ftp.TokyoNet.AD.JP/pub/misc/ruby/ \
@@ -15,7 +15,7 @@ MASTER_SITES=	ftp://ftp.TokyoNet.AD.JP/pub/misc/ruby/ \
 MAINTAINER=	sakamoto@netbsd.org
 HOMEPAGE=	http://www.ruby-lang.org/
 
-DEPENDS+=	ruby-1.4.5:../../lang/ruby
+DEPENDS+=	ruby-1.4.*:../../lang/ruby
 DEPENDS+=	tcl-8.0.5:../../lang/tcl80
 DEPENDS+=	tk-8.0.5:../../x11/tk80
 
