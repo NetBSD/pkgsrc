@@ -1,92 +1,79 @@
-@comment $NetBSD: PLIST,v 1.12 2003/07/20 20:15:02 dillo Exp $
+@comment $NetBSD: PLIST,v 1.13 2003/09/02 17:46:32 jmmv Exp $
 man/man1/mplayer.1
-share/mplayer/DOCS/Chinese/bugreports.html
-share/mplayer/DOCS/Chinese/cd-dvd.html
-share/mplayer/DOCS/Chinese/codecs.html
-share/mplayer/DOCS/Chinese/default.css
-share/mplayer/DOCS/Chinese/documentation.html
-share/mplayer/DOCS/Chinese/encoding.html
-share/mplayer/DOCS/Chinese/faq.html
-share/mplayer/DOCS/Chinese/formats.html
-share/mplayer/DOCS/Chinese/mplayer.1
-share/mplayer/DOCS/Chinese/skin.html
-share/mplayer/DOCS/Chinese/sound.html
-share/mplayer/DOCS/Chinese/users_against_developers.html
-share/mplayer/DOCS/Chinese/video.html
-share/mplayer/DOCS/French/bugreports.html
-share/mplayer/DOCS/French/cd-dvd.html
-share/mplayer/DOCS/French/codecs.html
-share/mplayer/DOCS/French/default.css
-share/mplayer/DOCS/French/documentation.html
-share/mplayer/DOCS/French/encoding.html
-share/mplayer/DOCS/French/exemple.conf
-share/mplayer/DOCS/French/faq.html
-share/mplayer/DOCS/French/formats.html
-share/mplayer/DOCS/French/mplayer.1
-share/mplayer/DOCS/French/skin.html
-share/mplayer/DOCS/French/sound.html
-share/mplayer/DOCS/French/users_against_developers.html
-share/mplayer/DOCS/French/video.html
-share/mplayer/DOCS/German/bugreports.html
-share/mplayer/DOCS/German/cd-dvd.html
-share/mplayer/DOCS/German/codecs.html
-share/mplayer/DOCS/German/default.css
-share/mplayer/DOCS/German/documentation.html
-share/mplayer/DOCS/German/encoding.html
-share/mplayer/DOCS/German/faq.html
-share/mplayer/DOCS/German/formats.html
-share/mplayer/DOCS/German/mplayer.1
-share/mplayer/DOCS/German/sound.html
-share/mplayer/DOCS/German/users_against_developers.html
-share/mplayer/DOCS/German/video.html
-share/mplayer/DOCS/Hungarian/bugreports.html
-share/mplayer/DOCS/Hungarian/cd-dvd.html
-share/mplayer/DOCS/Hungarian/codecs.html
-share/mplayer/DOCS/Hungarian/documentation.html
-share/mplayer/DOCS/Hungarian/encoding.html
-share/mplayer/DOCS/Hungarian/example.conf
-share/mplayer/DOCS/Hungarian/faq.html
-share/mplayer/DOCS/Hungarian/formats.html
-share/mplayer/DOCS/Hungarian/mplayer.1
-share/mplayer/DOCS/Hungarian/skin.html
-share/mplayer/DOCS/Hungarian/sound.html
-share/mplayer/DOCS/Hungarian/video.html
-share/mplayer/DOCS/Italian/bugreports.html
-share/mplayer/DOCS/Italian/cd-dvd.html
-share/mplayer/DOCS/Italian/codecs.html
-share/mplayer/DOCS/Italian/default.css
-share/mplayer/DOCS/Italian/documentation.html
-share/mplayer/DOCS/Italian/encoding.html
-share/mplayer/DOCS/Italian/faq.html
-share/mplayer/DOCS/Italian/formats.html
-share/mplayer/DOCS/Italian/skin.html
-share/mplayer/DOCS/Italian/sound.html
-share/mplayer/DOCS/Italian/users_against_developers.html
-share/mplayer/DOCS/Italian/video.html
-share/mplayer/DOCS/Polish/bugreports.html
-share/mplayer/DOCS/Polish/cd-dvd.html
-share/mplayer/DOCS/Polish/codecs.html
-share/mplayer/DOCS/Polish/documentation.html
-share/mplayer/DOCS/Polish/encoding.html
-share/mplayer/DOCS/Polish/faq.html
-share/mplayer/DOCS/Polish/formats.html
-share/mplayer/DOCS/Polish/mplayer.1
-share/mplayer/DOCS/Polish/skin.html
-share/mplayer/DOCS/Polish/sound.html
-share/mplayer/DOCS/Polish/users_against_developers.html
-share/mplayer/DOCS/Polish/video.html
-share/mplayer/DOCS/bugreports.html
-share/mplayer/DOCS/cd-dvd.html
-share/mplayer/DOCS/codecs-in.html
-share/mplayer/DOCS/codecs.html
+share/mplayer/DOCS/de/bugreports.html
+share/mplayer/DOCS/de/cd-dvd.html
+share/mplayer/DOCS/de/codecs.html
+share/mplayer/DOCS/de/documentation.html
+share/mplayer/DOCS/de/encoding.html
+share/mplayer/DOCS/de/faq.html
+share/mplayer/DOCS/de/formats.html
+share/mplayer/DOCS/de/mplayer.1
+share/mplayer/DOCS/de/sound.html
+share/mplayer/DOCS/de/users_against_developers.html
+share/mplayer/DOCS/de/video.html
 share/mplayer/DOCS/default.css
-share/mplayer/DOCS/documentation.html
-share/mplayer/DOCS/encoding.html
-share/mplayer/DOCS/faq.html
-share/mplayer/DOCS/formats.html
-share/mplayer/DOCS/mplayer.1
-share/mplayer/DOCS/skin.html
-share/mplayer/DOCS/sound.html
+share/mplayer/DOCS/en/bugreports.html
+share/mplayer/DOCS/en/cd-dvd.html
+share/mplayer/DOCS/en/codecs-in.html
+share/mplayer/DOCS/en/codecs.html
+share/mplayer/DOCS/en/documentation.html
+share/mplayer/DOCS/en/encoding.html
+share/mplayer/DOCS/en/faq.html
+share/mplayer/DOCS/en/formats.html
+share/mplayer/DOCS/en/mplayer.1
+share/mplayer/DOCS/en/skin.html
+share/mplayer/DOCS/en/sound.html
+share/mplayer/DOCS/en/users_against_developers.html
+share/mplayer/DOCS/en/video.html
+share/mplayer/DOCS/es/mplayer.1
+share/mplayer/DOCS/fr/bugreports.html
+share/mplayer/DOCS/fr/cd-dvd.html
+share/mplayer/DOCS/fr/codecs.html
+share/mplayer/DOCS/fr/documentation.html
+share/mplayer/DOCS/fr/encoding.html
+share/mplayer/DOCS/fr/exemple.conf
+share/mplayer/DOCS/fr/faq.html
+share/mplayer/DOCS/fr/formats.html
+share/mplayer/DOCS/fr/mplayer.1
+share/mplayer/DOCS/fr/skin.html
+share/mplayer/DOCS/fr/sound.html
+share/mplayer/DOCS/fr/users_against_developers.html
+share/mplayer/DOCS/fr/video.html
+share/mplayer/DOCS/hu/bugreports.html
+share/mplayer/DOCS/hu/cd-dvd.html
+share/mplayer/DOCS/hu/codecs.html
+share/mplayer/DOCS/hu/documentation.html
+share/mplayer/DOCS/hu/encoding.html
+share/mplayer/DOCS/hu/example.conf
+share/mplayer/DOCS/hu/faq.html
+share/mplayer/DOCS/hu/formats.html
+share/mplayer/DOCS/hu/mplayer.1
+share/mplayer/DOCS/hu/skin.html
+share/mplayer/DOCS/hu/sound.html
+share/mplayer/DOCS/hu/video.html
+share/mplayer/DOCS/it/bugreports.html
+share/mplayer/DOCS/it/cd-dvd.html
+share/mplayer/DOCS/it/codecs.html
+share/mplayer/DOCS/it/documentation.html
+share/mplayer/DOCS/it/encoding.html
+share/mplayer/DOCS/it/faq.html
+share/mplayer/DOCS/it/formats.html
+share/mplayer/DOCS/it/skin.html
+share/mplayer/DOCS/it/sound.html
+share/mplayer/DOCS/it/users_against_developers.html
+share/mplayer/DOCS/it/video.html
+share/mplayer/DOCS/pl/bugreports.html
+share/mplayer/DOCS/pl/cd-dvd.html
+share/mplayer/DOCS/pl/codecs.html
+share/mplayer/DOCS/pl/documentation.html
+share/mplayer/DOCS/pl/encoding.html
+share/mplayer/DOCS/pl/faq.html
+share/mplayer/DOCS/pl/formats.html
+share/mplayer/DOCS/pl/mplayer.1
+share/mplayer/DOCS/pl/skin.html
+share/mplayer/DOCS/pl/sound.html
+share/mplayer/DOCS/pl/users_against_developers.html
+share/mplayer/DOCS/pl/video.html
 share/mplayer/DOCS/tech/MAINTAINERS
 share/mplayer/DOCS/tech/TODO
 share/mplayer/DOCS/tech/codec-devel.txt
@@ -104,6 +91,7 @@ share/mplayer/DOCS/tech/libmpcodecs.txt
 share/mplayer/DOCS/tech/libvo.txt
 share/mplayer/DOCS/tech/libvo2.txt
 share/mplayer/DOCS/tech/manpage.txt
+share/mplayer/DOCS/tech/mpcf.txt
 share/mplayer/DOCS/tech/mpsub.sub
 share/mplayer/DOCS/tech/osd.txt
 share/mplayer/DOCS/tech/patches.txt
@@ -114,13 +102,25 @@ share/mplayer/DOCS/tech/realcodecs/TODO
 share/mplayer/DOCS/tech/realcodecs/audio-codecs.txt
 share/mplayer/DOCS/tech/realcodecs/streaming.txt
 share/mplayer/DOCS/tech/realcodecs/video-codecs.txt
+share/mplayer/DOCS/tech/release-howto.txt
+share/mplayer/DOCS/tech/slave.txt
 share/mplayer/DOCS/tech/subcp.txt
 share/mplayer/DOCS/tech/swscaler_filters.txt
 share/mplayer/DOCS/tech/swscaler_methods.txt
 share/mplayer/DOCS/tech/vidix.txt
 share/mplayer/DOCS/tech/wishlist
-share/mplayer/DOCS/users_against_developers.html
-share/mplayer/DOCS/video.html
+share/mplayer/DOCS/zh/bugreports.html
+share/mplayer/DOCS/zh/cd-dvd.html
+share/mplayer/DOCS/zh/codecs.html
+share/mplayer/DOCS/zh/documentation.html
+share/mplayer/DOCS/zh/encoding.html
+share/mplayer/DOCS/zh/faq.html
+share/mplayer/DOCS/zh/formats.html
+share/mplayer/DOCS/zh/mplayer.1
+share/mplayer/DOCS/zh/skin.html
+share/mplayer/DOCS/zh/sound.html
+share/mplayer/DOCS/zh/users_against_developers.html
+share/mplayer/DOCS/zh/video.html
 share/mplayer/codecs.conf
 share/mplayer/font
 share/mplayer/fonts/README-arial-cp1250
@@ -200,13 +200,17 @@ share/mplayer/input.conf
 @dirrm share/mplayer/fonts/font-arial-14-iso-8859-1
 @dirrm share/mplayer/fonts/font-arial-14-cp1250
 @dirrm share/mplayer/fonts
+@dirrm share/mplayer/DOCS/zh
 @dirrm share/mplayer/DOCS/tech/realcodecs
 @dirrm share/mplayer/DOCS/tech
-@dirrm share/mplayer/DOCS/Polish
-@dirrm share/mplayer/DOCS/Italian
-@dirrm share/mplayer/DOCS/Hungarian
-@dirrm share/mplayer/DOCS/German
-@dirrm share/mplayer/DOCS/French
-@dirrm share/mplayer/DOCS/Chinese
+@exec ${MKDIR} %D/share/mplayer/DOCS/ru
+@dirrm share/mplayer/DOCS/ru
+@dirrm share/mplayer/DOCS/pl
+@dirrm share/mplayer/DOCS/it
+@dirrm share/mplayer/DOCS/hu
+@dirrm share/mplayer/DOCS/fr
+@dirrm share/mplayer/DOCS/es
+@dirrm share/mplayer/DOCS/en
+@dirrm share/mplayer/DOCS/de
 @dirrm share/mplayer/DOCS
 @dirrm share/mplayer
