@@ -10,9 +10,12 @@ AC_CONFIG_HEADER([config.h])
 AC_PROG_CC
 AC_PROG_INSTALL
 
+# Checks for libraries.
+AC_CHECK_LIB(util, fparseln)
+
 # Checks for header files.
 AC_HEADER_STDC
-AC_CHECK_HEADERS([fnmatch.h])
+AC_CHECK_HEADERS([fnmatch.h grp.h pwd.h util.h])
 
 # Checks for typedefs, structures, and compiler characteristics.
 AC_C_CONST
