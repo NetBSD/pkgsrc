@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/11/25 17:23:27 jtb Exp $
+# $NetBSD: Makefile,v 1.2 2000/12/13 22:27:11 jtb Exp $
 
 DISTNAME=	cweb-3.62
 CATEGORIES=	devel lang
@@ -12,6 +12,8 @@ DEPENDS+= 	teTeX-[0-9]*:../../print/teTeX
 NO_WRKSUBDIR=	YES
 WRKSRC=		${WRKDIR}
 
+EVAL_PREFIX+=	PREFIX=teTeX
+
 post-patch:
 	@for f in ${WRKSRC}/cweb.1 ; do \
 	${SED} -e 's:%%PREFIX%%:'${PREFIX}':g' < $$f > $$f.tmp \
@@ -22,16 +24,14 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/ctangle ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/cweb.1 ${PREFIX}/man/man1
 	${INSTALL_DATA} ${WRKSRC}/cwebmac.tex \
-		${PREFIX}/share/texmf/tex/plain/base
+	${PREFIX}/share/texmf/tex/plain/base
 	${INSTALL_DATA_DIR} ${PREFIX}/share/cweb
 	${INSTALL_DATA} ${WRKSRC}/c++lib.w ${PREFIX}/share/cweb
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/cweb
 	${INSTALL_DATA} ${WRKSRC}/examples/* ${PREFIX}/share/examples/cweb
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/cweb
 	${INSTALL_DATA} ${WRKSRC}/cwebman.tex ${PREFIX}/share/doc/cweb
-.if !exists(${PREFIX}/share/emacs/site-lisp)
 	${INSTALL_DATA_DIR} ${PREFIX}/share/emacs/site-lisp
-.endif
 	${INSTALL_DATA} ${WRKSRC}/cweb.el ${PREFIX}/share/emacs/site-lisp
 
 post-install:
