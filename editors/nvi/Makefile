@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/07/17 21:34:45 grant Exp $
+# $NetBSD: Makefile,v 1.8 2004/01/11 19:43:27 seb Exp $
 #
 
 DISTNAME=	nvi-1.81.5
@@ -10,6 +10,14 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	seb@NetBSD.org
 HOMEPAGE=	http://www.kotnet.org/~skimo/nvi/devel/
 COMMENT=	Berkeley nvi with additional features
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD"
+.  if !empty(OS_VERSION:M[2-9].*) || !empty(OS_VERSION:M1.6[A-Z]*)
+CONFIGURE_ENV+=		vi_cv_include_sys_select=no
+.  endif
+.endif
 
 GNU_CONFIGURE=		YES
 CONFIGURE_SCRIPT=	../dist/configure
