@@ -1,0 +1,4 @@
+NEWSFETCH downloads network news into mail-format files.
+It can also pass the fetched news articles to programs like
+procmail to process them further into different folders, 
+forward or deliver them.
