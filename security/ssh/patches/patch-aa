@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 1999/11/12 14:10:53 sommerfeld Exp $
+$NetBSD: patch-aa,v 1.6 1999/11/13 17:32:21 sommerfeld Exp $
 
 --- rsaglue.c.orig	Wed May 12 07:19:28 1999
 +++ rsaglue.c	Fri Nov 12 08:40:02 1999
@@ -16,7 +16,7 @@ $NetBSD: patch-aa,v 1.5 1999/11/12 14:10:53 sommerfeld Exp $
  
    input_bits = mpz_sizeinbase(input, 2);
    input_len = (input_bits + 7) / 8;
-+  if (input_len >= MAX_RSA_MODULUS_LEN)
++  if (input_len > MAX_RSA_MODULUS_LEN)
 +    fatal("Input data has too many bits for RSAREF to handle (max %d).",
 +	MAX_RSA_MODULUS_BITS);
 +  
@@ -27,7 +27,7 @@ $NetBSD: patch-aa,v 1.5 1999/11/12 14:10:53 sommerfeld Exp $
    
    input_bits = mpz_sizeinbase(input, 2);
    input_len = (input_bits + 7) / 8;
-+  if (input_len >= MAX_RSA_MODULUS_LEN)
++  if (input_len > MAX_RSA_MODULUS_LEN)
 +    fatal("Input data has too many bits for RSAREF to handle (max %d).",
 +	MAX_RSA_MODULUS_BITS);
 +
