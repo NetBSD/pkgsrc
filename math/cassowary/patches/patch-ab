@@ -1,8 +1,18 @@
-$NetBSD: patch-ab,v 1.1.1.1 1999/08/24 14:24:27 agc Exp $
+$NetBSD: patch-ab,v 1.2 1999/09/08 17:17:42 hubertf Exp $
 
---- c++/Cassowary.h	1999/08/23 15:31:16	1.1
-+++ c++/Cassowary.h	1999/08/23 15:31:24
-@@ -47,6 +47,11 @@
+--- c++/Cassowary.h.orig	Mon Jul 12 05:13:14 1999
++++ c++/Cassowary.h	Wed Sep  8 17:58:26 1999
+@@ -22,7 +22,9 @@
+ #endif
+ 
+ #include "ClConstraintHash.h"
++#ifndef __NetBSD__
+ #include <values.h>
++#endif
+ 
+ #ifdef USE_GC
+ #include "../../gc/gc_cpp.h"
+@@ -47,6 +49,11 @@
  typedef double Number;
  
  typedef long FDNumber;
