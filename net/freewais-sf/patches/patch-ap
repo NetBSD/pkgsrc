@@ -1,0 +1,16 @@
+$NetBSD: patch-ap,v 1.1.1.1 1999/05/11 13:56:53 bad Exp $
+
+--- lib/ir/irretrvl.c.orig	Fri Apr 16 11:59:32 1999
++++ lib/ir/irretrvl.c	Sun May  9 23:40:41 1999
+@@ -297,7 +297,11 @@
+ 
+     if (doc->ChunkCode == CT_byte) {
+       startByte = doc->ChunkStart.Pos + start;
++#ifdef __origcode
+       endByte = doc->ChunkEnd.Pos + start;
++#else
++      endByte = doc->ChunkEnd.Pos + end;
++#endif
+     }
+     else {
+       startByte = start;
