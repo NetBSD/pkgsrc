@@ -1,0 +1,20 @@
+--- nntpinit.c.orig	Mon Feb 22 10:22:45 1999
++++ nntpinit.c	Mon Feb 22 10:33:48 1999
+@@ -25,6 +25,7 @@
+ 
+ #include <sys/socket.h>
+ #include <netinet/in.h>
++#include <arpa/inet.h>
+ #ifdef NONETDB
+ # define IPPORT_NNTP	((unsigned short) 119)
+ #else
+@@ -44,7 +45,9 @@
+ #include <netdnet/dnetdb.h>
+ #endif /* DECNET */
+ 
++#ifndef __NetBSD__
+ unsigned long inet_addr _((char *x));
++#endif
+ int get_tcp_socket _((char *machine));
+ 
+ int
