@@ -1,0 +1,11 @@
+$NetBSD: patch-aa,v 1.1.1.1 2002/03/24 20:27:13 dmcmahill Exp $
+
+--- glib-2.0.pc.in.orig	Tue Mar  5 00:17:38 2002
++++ glib-2.0.pc.in
+@@ -10,5 +10,5 @@
+ Name: GLib
+ Description: C Utility Library
+ Version: @VERSION@
+-Libs: -L${libdir} -lglib-2.0 @INTLLIBS@ @ICONV_LIBS@
++Libs: -L${libdir} -R${libdir} -lglib-2.0 @INTLLIBS@ @ICONV_LIBS@
+ Cflags: -I${includedir}/glib-2.0 -I${libdir}/glib-2.0/include 
