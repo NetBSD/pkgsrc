@@ -3,6 +3,7 @@
 # Date created:		18 Feb 1996
 # Whom:			Thomas Gellekum <tg@freebsd.org>
 #
+# $NetBSD: Makefile,v 1.2 1998/03/31 13:00:52 agc Exp $
 # FreeBSD Id: Makefile,v 1.6 1997/04/27 00:11:48 asami Exp
 #
 
@@ -13,18 +14,18 @@ MASTER_SITES=	${UNROFF_SITE}/dist/ \
 		${UNROFF_SITE}/contrib/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${PATCH1} ${PATCH2}
 
-MAINTAINER=	wosch@freebsd.org
+MAINTAINER=	packages@netbsd.org
 
 RUN_DEPENDS=	elk:${PORTSDIR}/lang/elk
 BUILD_DEPENDS=	elk:${PORTSDIR}/lang/elk
 
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 DIST_SUBDIR=	unroff
-PATCH_STRIP=	-p1
 
 UNROFF_SITE=	http://www-rn.informatik.uni-bremen.de/software/unroff
 PATCH1=		me-misc-patch
 PATCH2=		misc-patch-2
+MAN1=		unroff.1 unroff-html.1 unroff-html-man.1 unroff-html-ms.1
 
 pre-patch:
 	@${ECHO_MSG} "===>  Applying distribution patches for ${PKGNAME}"
@@ -37,5 +38,8 @@ pre-patch:
 			${ECHO_MSG} "===>   Applying distribution patch ${PATCH2}" ; \
 		fi; \
 		${PATCH} ${PATCH_DIST_ARGS} -p1 < ${PATCH2})
+
+post-patch:
+	@(cd ${WRKSRC} && find . -name '*.orig' -print | xargs rm -f)
 
 .include <bsd.port.mk>
