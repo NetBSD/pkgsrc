@@ -1,0 +1,15 @@
+Based on the Heap Sort code in 'Numerical Recipes in C' by William H.
+Press, Brian P. Flannery, Saul A. Teukolsky, and William T. Vetterling,
+Cambridge University Press, 1990, ISBN 0-521-35465-X. 
+
+The MIPS rating is based upon the program run time (runtime) for one
+iteration and a gcc 2.1 unoptimized (gcc -DUNIX) assembly dump count of
+instructions per iteration for a i486 machine (assuming 80386 code).  This
+is the reference used. 
+
+The maximum amount of memory allocated is based on the 'imax' variable in
+main(). Memory size = (2000*sizeof(long))*2^imax. imax is currently set to
+8, but this value may be increased or decreased depending upon your system
+memory limits. For standard Intel PC CPU machines a value of imax = 3 must
+be used else your system may crash or hang up despite code in the program
+to prevent this.
