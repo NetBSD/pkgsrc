@@ -1,0 +1,17 @@
+--- Makefile.in.orig	Sat Mar 15 04:02:45 1997
++++ Makefile.in	Tue Mar 18 11:50:24 1997
+@@ -28,12 +28,12 @@
+ 
+ #### End of system configuration section. ####
+ 
+-CFLAGS=-g -O -c -I.
++CFLAGS=$(XCFLAGS)
+ LDFLAGS=
+ OBJS=mkisofs.o tree.o write.o hash.o rock.o exclude.o multi.o \
+ 		files.o match.o name.o fnmatch.o eltorito.o
+ 
+-World: mkisofs
++all: mkisofs
+ 
+ Makefile: Makefile.in configure
+ 	./configure
