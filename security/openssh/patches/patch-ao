@@ -1,0 +1,11 @@
+$NetBSD: patch-ao,v 1.3 2000/11/11 01:51:19 itojun Exp $
+
+ftp://ftp.openbsd.org/pub/OpenBSD/patches/2.8/common/002_sshskey.patch
+
+--- auth1.c-	Sat Nov 11 10:48:34 2000
++++ auth1.c	Sat Nov 11 10:48:47 2000
+@@ -275,3 +275,3 @@
+ 				if (pw != NULL)
+-					skey_keyinfo(pw->pw_name);
++					skeyinfo = skey_keyinfo(pw->pw_name);
+ 				if (skeyinfo == NULL) {
