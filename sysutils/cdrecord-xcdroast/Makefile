@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2003/07/17 22:53:29 grant Exp $
+# $NetBSD: Makefile,v 1.6 2003/12/28 19:22:12 jmmv Exp $
 
-DISTNAME=	cdrtools-2.00.3
-PKGNAME=	cdrecord-xcdroast-0.98a13.2.00.3
+DISTNAME=	cdrtools-2.01a21
+PKGNAME=	cdrecord-xcdroast-0.98a15.2.01a21
 WRKSRC=		${WRKDIR}/${DISTNAME:C/a.*//}
 CATEGORIES=	sysutils
-MASTER_SITES=	ftp://ftp.berlios.de/pub/cdrecord/
+MASTER_SITES=	ftp://ftp.berlios.de/pub/cdrecord/alpha/
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	lukem@NetBSD.org
 HOMEPAGE=	http://www.fokus.gmd.de/research/cc/glone/employees/joerg.schilling/private/cdrecord.html
