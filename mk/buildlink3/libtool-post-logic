@@ -1,4 +1,4 @@
-# $NetBSD: libtool-post-logic,v 1.7 2004/04/24 22:04:46 jlam Exp $
+# $NetBSD: libtool-post-logic,v 1.8 2004/05/17 10:37:57 jlam Exp $
 
 case $arg in
 #
@@ -70,7 +70,7 @@ case $arg in
 # referenced directory.  This makes linking against a symlinked local
 # libtool archive possible.
 #
-./*.la|../*.la|[!/]*.la|${WRKSRC}/*.la)
+./*.la|../*.la|[!-/]*.la|${WRKSRC}/*.la)
 	labase=`$basename $arg`
 	ladir=`$dirname $arg`
 	ldir=`cd $ladir; $pwd`

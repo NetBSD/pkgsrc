@@ -1,4 +1,4 @@
-# $NetBSD: libtool-post-cache,v 1.4 2004/04/24 22:04:46 jlam Exp $
+# $NetBSD: libtool-post-cache,v 1.5 2004/05/17 10:37:57 jlam Exp $
 #
 # This file implements the default action of the "libtool" private
 # cache.
@@ -16,7 +16,7 @@
 # Skip the common cache lookup for all libtool archives that reference a
 # locally-linked libtool archive.
 #
-./*.la|../*.la|[!/]*.la|${WRKSRC}/*.la)
+./*.la|../*.la|[!-/]*.la|${WRKSRC}/*.la)
 	skipcache=yes
 	;;
 esac
