@@ -3,6 +3,7 @@
 # Date created:         Mon Aug 28 13:35:31 CDT 1995
 # Whom:                 erich@rrnet.com
 #
+# $NetBSD: Makefile,v 1.2 1998/02/17 19:33:47 tron Exp $
 # $FreeBSD Id: Makefile,v 1.15 1998/02/07 22:59:16 hoek Exp
 #
 
@@ -12,7 +13,7 @@ MASTER_SITES=	http://www.research.digital.com/SRC/personal/Sanjay_Ghemawat/ical/
 
 MAINTAINER=	erich@FreeBSD.ORG
 
-LIB_DEPENDS=    tk80\\.1:${PORTSDIR}/x11/tk80
+LIB_DEPENDS=    tk80.1:${PORTSDIR}/x11/tk80
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--prefix=${PREFIX} \
