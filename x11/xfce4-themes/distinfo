@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2004/04/16 16:12:01 martti Exp $
+$NetBSD: distinfo,v 1.5.2.1 2004/07/14 11:17:20 agc Exp $
 
-SHA1 (xfce4-themes-4.0.5.tar.gz) = 779e6cf7eb095c16c0710194136658e63e6f09e3
-Size (xfce4-themes-4.0.5.tar.gz) = 450653 bytes
+SHA1 (xfce4-themes-4.0.6.tar.gz) = 199e5df4d55d0f873042b942f01285f513e46bea
+Size (xfce4-themes-4.0.6.tar.gz) = 451603 bytes
