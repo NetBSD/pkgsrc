@@ -1,8 +1,7 @@
-# $NetBSD: Makefile.common,v 1.44 2003/10/26 14:26:25 tron Exp $
+# $NetBSD: Makefile.common,v 1.45 2003/10/26 22:51:34 kristerw Exp $
 #
 
 MPLAYER_DIST_VERSION=	1.0pre1
-PKGREVISION=		1
 
 # This variable is used in all packages which depend on this package
 MPLAYER_PKG_VERSION=	1.0rc1
