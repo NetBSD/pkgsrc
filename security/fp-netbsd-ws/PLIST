@@ -1,0 +1,40 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/01/02 18:43:00 ben Exp $
+bin/f-prot
+lib/fp-netbsd-ws/f-prot
+lib/fp-netbsd-ws/ENGLISH.TX0
+man/man8/check-updates.pl.8
+man/man1/f-prot.1
+sbin/check-updates.pl
+share/doc/fp-netbsd-ws/LICENSE
+share/doc/fp-netbsd-ws/README
+share/doc/fp-netbsd-ws/CHANGES
+share/doc/html/fp-netbsd-ws/add_info.html
+share/doc/html/fp-netbsd-ws/auto_updt.html
+share/doc/html/fp-netbsd-ws/comm_scan.html
+share/doc/html/fp-netbsd-ws/index.html
+share/doc/html/fp-netbsd-ws/inf_eicar.gif
+share/doc/html/fp-netbsd-ws/inst_pro.html
+share/doc/html/fp-netbsd-ws/license.html
+share/doc/html/fp-netbsd-ws/loc_files.html
+share/doc/html/fp-netbsd-ws/macro_scanning_options.html
+share/doc/html/fp-netbsd-ws/main_feat.html
+share/doc/html/fp-netbsd-ws/man_updt.html
+share/doc/html/fp-netbsd-ws/norm_scan.gif
+share/doc/html/fp-netbsd-ws/per_scan.html
+share/doc/html/fp-netbsd-ws/reporting_options.html
+share/doc/html/fp-netbsd-ws/scanning_options.html
+share/doc/html/fp-netbsd-ws/screenshot.jpg
+share/doc/html/fp-netbsd-ws/sys_req.html
+share/doc/html/fp-netbsd-ws/test_eicar.html
+share/doc/html/fp-netbsd-ws/test_inst.html
+share/doc/html/fp-netbsd-ws/updater.html
+share/doc/html/fp-netbsd-ws/updater_req.html
+share/doc/html/fp-netbsd-ws/updt_macro.gif
+share/doc/html/fp-netbsd-ws/updt_sign.gif
+share/doc/html/fp-netbsd-ws/updt_signature.gif
+@unexec ${RM} %D/lib/fp-netbsd-ws/MACRO.DEF
+@unexec ${RM} %D/lib/fp-netbsd-ws/SIGN.DEF
+@unexec ${RM} %D/lib/fp-netbsd-ws/SIGN2.DEF
+@dirrm lib/fp-netbsd-ws
+@dirrm share/doc/fp-netbsd-ws
+@dirrm share/doc/html/fp-netbsd-ws
