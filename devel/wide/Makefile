@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/02/01 19:15:28 jschauma Exp $
+# $NetBSD: Makefile,v 1.3 2005/02/20 12:52:39 grant Exp $
 #
 
 DISTNAME=		wide
@@ -12,7 +12,7 @@ HOMEPAGE=		http://www2.mta.ac.il/~tal/WIDE/
 COMMENT=		IDE for the While programming language
 
 NO_BUILD=		yes
-WRKSRC=			${WRKDIR}/${DISTNAME:tu}
+WRKSRC=			${WRKDIR}/WIDE
 EXTRACT_CMD_OPTS.zip=	-aqo
 
 LICENSE=		eclipse-license
