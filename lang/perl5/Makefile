@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2003/06/23 07:45:01 jlam Exp $
+# $NetBSD: Makefile,v 1.66 2003/06/27 02:08:52 jschauma Exp $
 
 .include "../../lang/perl5/Makefile.common"
 
@@ -43,6 +43,14 @@ CONFIGURE_ARGS+=	-Dinstallsiteman3dir="${PERL5_SITEPERL}/man/man3"
 .include "../../mk/bsd.prefs.mk"
 
 MKPIC?=			yes
+
+.if ${OPSYS} == "IRIX"
+.  if ${ABI} == "32"
+CONFIGURE_ARGS+=        -Dcc='cc -n32'
+.  elif ${ABI} == "64"
+CONFIGURE_ARGS+=        -Dcc='cc -64' -Duse64bitint
+.  endif
+.endif
 
 # Nail down the needed libraries for each platform here to avoid hidden
 # dependencies.  If this isn't defined, then use the perl defaults for the
