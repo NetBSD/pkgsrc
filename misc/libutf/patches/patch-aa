@@ -1,0 +1,43 @@
+$NetBSD: patch-aa,v 1.1 1998/09/09 15:01:09 agc Exp $
+
+Patches to use NetBSD's libtool
+
+--- Makefile.in.orig	Mon Oct 20 13:51:34 1997
++++ Makefile.in	Wed Sep  9 15:44:06 1998
+@@ -26,14 +26,14 @@
+ RANLIB= @RANLIB@
+ 
+ $(LIBS) : $(OBJS)
+-	$(AR) $(ARFLAGS) $(LIBS) $(OBJS)
++	${LIBTOOL} --mode=link cc -o ${.TARGET:.a=.la} ${OBJS:.o=.lo} -rpath ${PREFIX}/lib -version-info 2:10
+ 
+ ci:
+ 	ci -l ure.c ure.h urelang.c utf.c utf.h
+ 	
+ install: $(LIBS)
+ 	$(srcdir)/mkinstalldirs $(LIBDIR) $(INCDIR) $(ETCDIR) $(MANDIR)/man3
+-	$(INSTALL_DATA) $(LIBS) $(LIBDIR) ; $(RANLIB) $(LIBDIR)/$(LIBS)
++	${LIBTOOL} --mode=install ${BSD_INSTALL_DATA} ${LIBS:.a=.la} ${PREFIX}/lib
+ 	$(INSTALL_DATA) $(srcdir)/ure.h $(INCDIR)
+ 	$(INSTALL_DATA) $(srcdir)/utf.h $(INCDIR)
+ 	$(INSTALL_DATA) $(srcdir)/langcoll.utf $(ETCDIR)
+@@ -47,10 +47,17 @@
+ 	rm -f $(INCDIR)/ure.h $(INCDIR)/urelang.h $(INCDIR)/utf.h
+ 
+ gurep: gurep.o $(LIBS)
+-	$(CC) gurep.o $(LIBS) -o gurep
++	${LIBTOOL} --mode=link ${CC} gurep.o ${LIBS:.a=.la} -o gurep
+ 
+ findword: findword.o $(LIBS)
+-	$(CC) findword.o $(LIBS) -o findword
++	${LIBTOOL} --mode=link ${CC} findword.o ${LIBS:.a=.la} -o findword
++
++ure.o: ure.c ure.h utf.h
++	${LIBTOOL} --mode=compile ${CC} ${CFLAGS} -c ure.c
++urelang.o: urelang.c ure.h utf.h
++	${LIBTOOL} --mode=compile ${CC} ${CFLAGS} -c urelang.c
++utf.o: utf.c utf.h
++	${LIBTOOL} --mode=compile ${CC} ${CFLAGS} -c utf.c
+ 
+ tst: gurep findword
+ 	test -d tests || ln -s $(srcdir)/tests .
