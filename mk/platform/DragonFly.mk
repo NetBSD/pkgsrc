@@ -1,4 +1,4 @@
-# $NetBSD: DragonFly.mk,v 1.4.2.1 2004/12/31 20:25:30 tv Exp $
+# $NetBSD: DragonFly.mk,v 1.4.2.2 2005/01/13 20:11:55 tv Exp $
 #
 # Variable definitions for the DragonFly operating system.
 
@@ -132,7 +132,7 @@ _OPSYS_PERL_REQD=		# no base version of perl required
 _OPSYS_LIBTOOL_REQD=	1.5.10nb9
 _OPSYS_PTHREAD_AUTO=	no	# -lpthread needed for pthreads
 _OPSYS_SHLIB_TYPE=	ELF/a.out	# shared lib type
-_PATCH_CAN_BACKUP=	yes	# native patch(1) can make backups
+_PATCH_CAN_BACKUP=	no	# native patch(1) can make backups
 _PATCH_BACKUP_ARG?=	-V simple -b 	# switch to patch(1) for backup suffix
 _PREFORMATTED_MAN_DIR=	cat	# directory where catman pages are
 _USE_GNU_GETTEXT=	no	# Don't use GNU gettext

@@ -1,4 +1,4 @@
-# $NetBSD: java-vm.mk,v 1.34.2.2 2004/12/20 20:46:00 tv Exp $
+# $NetBSD: java-vm.mk,v 1.34.2.3 2005/01/13 20:11:55 tv Exp $
 #
 # This Makefile fragment handles Java dependencies and make variables,
 # and is meant to be included by packages that require Java either at
@@ -44,10 +44,10 @@ PKG_JVMS_ACCEPTED?=	${_PKG_JVMS}
 #
 .if defined(USE_JAVA2) && !empty(USE_JAVA2:M[yY][eE][sS])
 _PKG_JVMS?=		sun-jdk13 sun-jdk14 blackdown-jdk13 kaffe wonka \
-			sun-jdk15 jdk14 win32-jdk
+			sun-jdk15 jdk14 # win32-jdk
 .else
 _PKG_JVMS?=		jdk sun-jdk13 sun-jdk14 blackdown-jdk13 kaffe \
-			wonka sun-jdk15 jdk14 win32-jdk
+			wonka sun-jdk15 jdk14 # win32-jdk
 .endif
 
 # To be deprecated: if PKG_JVM is explicitly set, then use it as the
@@ -72,8 +72,8 @@ _PKG_JVM_DEFAULT?=	jdk
 _PKG_JVM_DEFAULT?=	blackdown-jdk13
 .  elif !empty(MACHINE_PLATFORM:MDarwin-*-*)
 _PKG_JVM_DEFAULT?=	sun-jdk
-.  elif !empty(MACHINE_PLATFORM:MInterix-*-*)
-_PKG_JVM_DEFAULT?=	win32-jdk
+#.  elif !empty(MACHINE_PLATFORM:MInterix-*-*)
+#_PKG_JVM_DEFAULT?=	win32-jdk
 .  else
 _PKG_JVM_DEFAULT?=	kaffe
 .  endif
@@ -101,8 +101,8 @@ _ONLY_FOR_PLATFORMS.sun-jdk14= \
 _ONLY_FOR_PLATFORMS.sun-jdk15= \
 	NetBSD-1.5Z[A-Z]-i386 NetBSD-1.[6-9]*-i386 NetBSD-[2-9].*-i386 \
 	Linux-*-i[3-6]86
-_ONLY_FOR_PLATFORMS.win32-jdk= \
-	Interix-*-*
+#_ONLY_FOR_PLATFORMS.win32-jdk= \
+#	Interix-*-*
 _ONLY_FOR_PLATFORMS.wonka= \
 	*-*-arm *-*-arm32 *-*-i386
 
@@ -122,7 +122,7 @@ _JAVA_PKGBASE.kaffe=		kaffe
 _JAVA_PKGBASE.sun-jdk13=	sun-jdk13
 _JAVA_PKGBASE.sun-jdk14=	sun-jdk14
 _JAVA_PKGBASE.sun-jdk15=	sun-jdk15
-_JAVA_PKGBASE.win32-jdk=	win32-jdk
+#_JAVA_PKGBASE.win32-jdk=	win32-jdk
 _JAVA_PKGBASE.wonka=		wonka
 
 # Mark the acceptable JVMs and check which JVM packages are installed.
@@ -208,7 +208,7 @@ BUILDLINK_DEPENDS.sun-jdk14?=		sun-jdk14-[0-9]*
 BUILDLINK_DEPENDS.sun-jre14?=		sun-jre14-[0-9]*
 BUILDLINK_DEPENDS.sun-jdk15?=		sun-jdk15-[0-9]*
 BUILDLINK_DEPENDS.sun-jre15?=		sun-jre15-[0-9]*
-BUILDLINK_DEPENDS.win32-jdk?=		win32-jdk>=0.1
+#BUILDLINK_DEPENDS.win32-jdk?=		win32-jdk>=0.1
 BUILDLINK_DEPENDS.wonka?=		wonka-[0-9]*
 
 _JRE.blackdown-jdk13=	blackdown-jre13
@@ -218,7 +218,7 @@ _JRE.kaffe=		kaffe
 _JRE.sun-jdk13=		sun-jre13
 _JRE.sun-jdk14=		sun-jre14
 _JRE.sun-jdk15=		sun-jre15
-_JRE.win32-jdk=		win32-jdk
+#_JRE.win32-jdk=		win32-jdk
 _JRE.wonka=		wonka
 
 _JAVA_BASE_CLASSES=	classes.zip
@@ -257,10 +257,10 @@ _JDK_PKGSRCDIR=		../../lang/sun-jdk15
 _JRE_PKGSRCDIR=		../../lang/sun-jre15
 _JAVA_HOME_DEFAULT=	${LOCALBASE}/java/sun-1.5
 UNLIMIT_RESOURCES+=	datasize
-.elif ${_PKG_JVM} == "win32-jdk"
-_JDK_PKGSRCDIR=		../../lang/win32-jdk
-_JRE_PKGSRCDIR=		${_JDK_PKGSRCDIR}
-_JAVA_HOME_DEFAULT=	${LOCALBASE}/java/win32
+#.elif ${_PKG_JVM} == "win32-jdk"
+#_JDK_PKGSRCDIR=		../../lang/win32-jdk
+#_JRE_PKGSRCDIR=		${_JDK_PKGSRCDIR}
+#_JAVA_HOME_DEFAULT=	${LOCALBASE}/java/win32
 .elif ${_PKG_JVM} == "wonka"
 _JDK_PKGSRCDIR=		../../lang/wonka
 _JRE_PKGSRCDIR=		${_JDK_PKGSRCDIR}
