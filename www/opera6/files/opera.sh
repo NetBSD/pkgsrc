@@ -2,7 +2,7 @@
 OPERADIR=$HOME/.opera
 
 mkdir -p $OPERADIR || exit 1
-for FILE in $OPERADIR/opera.ini $OPERADIR/opera5.ini
+for FILE in $OPERADIR/opera6.ini $OPERADIR/opera5.ini $OPERADIR/opera.ini
 do
  if [ -e ${FILE} ]
  then
