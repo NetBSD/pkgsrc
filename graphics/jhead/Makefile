@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2003/07/17 21:41:22 grant Exp $
+# $NetBSD: Makefile,v 1.14 2004/07/28 16:00:00 schmonz Exp $
 #
 
 DISTNAME=	jhead-2.0
@@ -8,6 +8,12 @@ MASTER_SITES=	http://www.sentex.net/~mwandel/jhead/
 MAINTAINER=	veego@NetBSD.org
 HOMEPAGE=	http://www.sentex.net/~mwandel/jhead/
 COMMENT=	Extract EXIF header from JPEG image
+
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+USE_BUILDLINK3=		yes
+
+INSTALLATION_DIRS=	bin man/man1 share/doc/html/jhead
 
 do-build:
 	cd ${WRKSRC} && ${CC} ${CFLAGS} -o jhead jhead.c exif.c jpgfile.c -lm
