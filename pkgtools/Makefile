@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2000/07/31 01:56:44 hubertf Exp $
+# $NetBSD: Makefile,v 1.19 2000/08/17 14:16:18 wiz Exp $
 #
 
     SUBDIR += gensolpkg
@@ -7,7 +7,6 @@
     SUBDIR += pkg_tarup
     SUBDIR += pkgdep
     SUBDIR += pkgdiff
-    SUBDIR += pkglibtool
     SUBDIR += pkglint
     SUBDIR += pkgmanpages
     SUBDIR += port2pkg
