@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 1999/07/15 06:28:13 jlam Exp $
+# $NetBSD: Makefile,v 1.19 1999/08/05 17:25:05 bad Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/07/30 11:47:51 tg Exp 
 #
 
@@ -25,6 +25,8 @@
     SUBDIR += sdbm
     SUBDIR += tcl-gdbm
 #    SUBDIR += typhoon
+    SUBDIR += xmysql
+    SUBDIR += xmysqladmin
     SUBDIR += zope-mysql
 
 .include "../mk/bsd.pkg.subdir.mk"
