@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2001/05/04 10:15:44 skrll Exp $
+# $NetBSD: Makefile,v 1.24 2001/06/07 11:57:52 tron Exp $
 
 DISTNAME=		gcc-2.95.2
 CATEGORIES=		lang
@@ -29,6 +29,7 @@ CONFIGURE_ARGS=		--host=${MACHINE_GCC_PLATFORM} \
 			--prefix=${GCC_PREFIX} \
 			--enable-shared
 CONFIGURE_SCRIPT=	${SRCDIR}/configure
+INFO_FILES=		chill cpp g77 gcc
 
 GCC_VERSION=		${PKGNAME:C/.*-//}
 MESSAGE_SUBST+=		MAKE=${MAKE}
