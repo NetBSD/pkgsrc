@@ -1,4 +1,5 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/12/11 13:53:25 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2001/11/14 11:55:17 agc Exp $
+
 --- tclticker.orig	Mon Dec 20 15:27:02 1999
 +++ tclticker	Wed Aug 30 21:00:36 2000
 @@ -1,6 +1,6 @@
@@ -16,7 +17,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/12/11 13:53:25 wiz Exp $
 - 
 +
 +# set this explicitly
-+set env(TCLTICKER_LIB) "/usr/pkg/share/tclticker"
++set env(TCLTICKER_LIB) "@PREFIX@/share/tclticker"
  
  if {! [info exists env(TCLTICKER_LIB)]} {
      lappend auto_path [file join [file dirname $argv0] lib]
