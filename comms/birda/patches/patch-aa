@@ -1,0 +1,30 @@
+$NetBSD: patch-aa,v 1.1 2002/03/31 14:36:29 dmcmahill Exp $
+
+--- work.bondage/birda-0.9/src/unix.c.orig	Mon Dec 17 11:09:33 2001
++++ work.bondage/birda-0.9/src/unix.c
+@@ -30,6 +30,7 @@
+ 
+ #include <stdio.h>
+ #include <stdlib.h>
++#include <string.h>
+ #include <errno.h>
+ #include <stdarg.h>
+ #include <syslog.h>
+@@ -462,7 +463,7 @@
+ 
+   log("Memory:\n");
+   for(n=0,b=0,m=allocs;m;m=m->next) {
+-    log("  addr=%8x size=%5d id=%s\n",(unsigned)m->ptr,m->size,m->id);
++    log("  addr=%p size=%5d id=%s\n",m->ptr,m->size,m->id);
+     n++;
+     b+=m->size;
+   }
+@@ -586,7 +587,7 @@
+ 	Timer* ti=timers;
+ 	timers=ti->next;
+ 	if(evtDebug&EVT_DEBUG_TIMERS)
+-	  log("timer called %x %x\n",(unsigned)ti->func,(unsigned)ti->handle);
++	  log("timer called %p %p\n",ti->func,ti->handle);
+ 	ti->func(ti->handle);
+ 	if(evtDebug&EVT_DEBUG_TIMERS) log("timer completed\n");
+ 	free(ti);
