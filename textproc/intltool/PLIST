@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2002/05/06 13:15:21 rh Exp $
+bin/intltool-extract
+bin/intltool-merge
+bin/intltool-prepare
+bin/intltool-unicodify
+bin/intltool-update
+bin/intltoolize
+bin/xml-i18n-toolize
+man/man8/intltool-extract.8
+man/man8/intltool-merge.8
+man/man8/intltool-prepare.8
+man/man8/intltool-update.8
+man/man8/intltoolize.8
+share/aclocal/intltool.m4
+share/aclocal/xml-i18n-tools.m4
+share/intltool/intltool-extract.in
+share/intltool/intltool-merge.in
+share/intltool/intltool-po-Makefile.in.in-patch-1
+share/intltool/intltool-po-Makefile.in.in-patch-2
+share/intltool/intltool-po-Makefile.in.in-patch-3
+share/intltool/intltool-po-Makefile.in.in-patch-4
+share/intltool/intltool-update.in
+share/intltool/xml-i18n-po-Makefile.in.in-patch-1
+share/intltool/xml-i18n-po-Makefile.in.in-patch-2
+@dirrm share/intltool
