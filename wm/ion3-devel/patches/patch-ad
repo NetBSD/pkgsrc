@@ -1,0 +1,45 @@
+$NetBSD: patch-ad,v 1.1.1.1 2004/10/04 20:50:57 cube Exp $
+
+--- ext_statusbar/ext_statusbar.lua.orig	2004-08-15 03:40:35.000000000 +0200
++++ ext_statusbar/ext_statusbar.lua
+@@ -102,7 +102,7 @@ end
+ local function get_load_uptime()
+     local f=io.popen('uptime', 'r')
+     if not f then
+-        return "??"
++        return ""
+     end
+     local s=f:read('*l')
+     f:close()
+@@ -110,11 +110,30 @@ local function get_load_uptime()
+     return (load or "")
+ end
+ 
++local function get_load_sysctl()
++    local f=io.popen('sysctl -n vm.loadavg', 'r')
++    if not f then
++        return ""
++    end
++    local s=f:read('*l')
++    f:close()
++    local st, en, load=string.find(s, '^(%d+%.%d+) %d+%.%d+ %d+%.%d+$')
++    return (load or "")
++end
++
++local function get_load_na()
++    return "(n/a)"
++end
++
+ local function detect_load_fn()
+     if get_load_proc()~="" then
+         return get_load_proc
+-    else
++    elseif get_load_uptime()~="" then
+         return get_load_uptime
++    elseif get_load_sysctl()~="" then
++        return get_load_sysctl
++    else
++        return get_load_na
+     end
+ end
+ 

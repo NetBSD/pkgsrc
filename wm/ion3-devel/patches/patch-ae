@@ -1,0 +1,12 @@
+$NetBSD: patch-ae,v 1.1.1.1 2004/10/04 20:50:57 cube Exp $
+
+--- ion/Makefile.orig	2004-09-06 20:28:36.000000000 +0200
++++ ion/Makefile
+@@ -18,6 +18,7 @@ LIBS += -lm
+ LIBS += $(X11_LIBS) $(XINERAMA_LIBS)
+ LIBS += $(LUA_LIBS)
+ LIBS += $(DL_LIBS)
++LIBS += $(INTL_LIBS)
+ EXT_OBJS += ../ioncore/ioncore.a ../luaextl/luaextl.a
+ EXT_OBJS += ../libtu/libtu.a
+ 
