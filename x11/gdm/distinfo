@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2002/10/26 19:51:07 bouyer Exp $
+$NetBSD: distinfo,v 1.5 2002/11/21 10:41:43 grant Exp $
 
 SHA1 (gdm-2.2.0.tar.gz) = 135b424cc1493f92b500c4fe7d85e9ada57313e1
 Size (gdm-2.2.0.tar.gz) = 810976 bytes
@@ -16,5 +16,5 @@ SHA1 (patch-ah) = c5f5d5456945a8a2e27c12a811e257195b67b93a
 SHA1 (patch-ai) = ae0181bc4b6f4c554b564744f410b7899dc8b7e6
 SHA1 (patch-ba) = 35e1ac11945b2e72270fcf2fb5be60e3168a48d9
 SHA1 (patch-bb) = 0a3b2d0013e6abee732e4f66677f2c916691f49f
-SHA1 (patch-bc) = fa9155621b7e76ebf124e03eef6ca22bd18651a2
+SHA1 (patch-bc) = 986bdc86e2854f53d178f4466fa525486050636f
 SHA1 (patch-bd) = 9bee6d79104058ab4bb67892c72f846bd270d2ce
