@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2002/05/20 12:30:30 wiz Exp $
+
+--- mkfontscale.c.orig	Mon May 13 12:19:32 2002
++++ mkfontscale.c
+@@ -58,7 +58,7 @@
+       "adobe-standard", "adobe-symbol", "ibm-cp437", "microsoft-cp1252",
+       /* But not "adobe-dingbats", as it uses generic glyph names. */
+       "jisx0201.1976-0", "jisx0208.1983-0", "jisx0208.1990-0",
+-      "jisx0212.1190-0", "big5.eten-0", "gb2312.1980-0",
++      "jisx0212.1990-0", "big5-0", "gb2312.1980-0",
+       "ksc5601.1987-0", "ksc5601.1992-3"};
+ 
+ char *extra_encodings_array[] =
