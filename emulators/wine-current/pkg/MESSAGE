@@ -1,0 +1,7 @@
+===========================================================================
+
+Wine is capable of running most Win16 (Windows 3.11-compatible)
+applications under NetBSD 1.3 and 1.4.  It currently does not support
+Win32 applications, though it will do so under a later release of NetBSD.
+
+===========================================================================
