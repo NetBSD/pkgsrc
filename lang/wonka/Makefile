@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2004/07/01 00:51:23 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2004/07/01 10:57:37 wiz Exp $
 #
 
 DISTNAME=	wonka-src-0.9.6-release
 PKGNAME=	wonka-0.9.6
+PKGREVISION=	1
 CATEGORIES=	lang java
 MASTER_SITES=	http://wonka.acunia.com/
 
