@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2272 2003/05/21 17:37:48 jmmv Exp $
+$NetBSD: CHANGES,v 1.2273 2003/05/21 19:45:15 seb Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2004,3 +2004,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated links-gui to 2.1.0.10 [wiz 2003-05-21]
 	Updated audit-packages to 1.15 [seb 2003-05-21]
 	Updated gaim to 0.63 [jmmv 2003-05-21]
+	Updated chicken to 1.0 [seb 2003-05-21]
