@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1998/08/23 20:46:50 frueauf Exp $
+# $NetBSD: Makefile,v 1.4 1998/09/22 16:13:34 tsarna Exp $
 #
 
 DISTNAME=	cursesmodule-1.5b1
@@ -17,7 +17,7 @@ ALL_TARGET=	default
 
 PYTHON_CONFIGDIR=	${LOCALBASE}/lib/python1.5/config/
 
-.if ${MACHINE_ARCH} == "powerpc" || ${MACHINE_ARCH} == "mips" || ${MACHINE_ARCH} == "alpha"
+.if ${MACHINE_ARCH} == "powerpc" || ${MACHINE_ARCH} == "mips" || ${MACHINE_ARCH} == "vax"
 IGNORE="Needs dynamic loading"
 .endif
 
