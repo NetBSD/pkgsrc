@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2002/07/30 18:22:03 jlam Exp $
+# $NetBSD: Makefile,v 1.29 2002/07/31 15:48:31 jlam Exp $
 
 DISTNAME=		cyrus-imapd-2.0.16
 PKGREVISION=		1
@@ -28,6 +28,8 @@ CYRUS_USER?=		cyrus
 CYRUS_GROUP?=		mail
 
 BUILD_DEFS+=		CYRUS_USER CYRUS_GROUP
+FILES_SUBST+=		CYRUS_USER=${CYRUS_USER}
+FILES_SUBST+=		CYRUS_GROUP=${CYRUS_GROUP}
 
 CONFIGURE_ARGS+=	--with-cyrus-user=${CYRUS_USER}
 CONFIGURE_ARGS+=	--with-cyrus-group=${CYRUS_GROUP}
@@ -65,6 +67,7 @@ HTMLDIR=		${PREFIX}/share/doc/html/cyrus-imapd
 EGDIR=			${PREFIX}/share/examples/cyrus-imapd
 CONF_FILES=		${EGDIR}/imapd.conf ${PKG_SYSCONFDIR}/imapd.conf
 CONF_FILES+=		${EGDIR}/normal.conf ${PKG_SYSCONFDIR}/cyrus.conf
+RCD_SCRIPTS=		cyrus
 FILES_SUBST+=		IMAPDCONF=${PKG_SYSCONFDIR}/imapd.conf
 
 DEINSTALL_EXTRA_TMPL=	${PKGDIR}/DEINSTALL
@@ -98,7 +101,17 @@ post-patch:
 		${MV} -f $${file}.fixed $${file};			\
 	done
 
+pre-install:
+	@for script in ${RCD_SCRIPTS}; do				\
+		${SED} ${FILES_SUBST_SED} ${FILESDIR}/$${script}.sh	\
+			> ${WRKDIR}/$${script};				\
+	done
+
 post-install:
+	for script in ${RCD_SCRIPTS}; do				\
+		${INSTALL_SCRIPT} ${WRKDIR}/$${script}			\
+			${PREFIX}/etc/rc.d/$${script};			\
+	done
 	${INSTALL_SCRIPT} ${WRKSRC}/tools/mkimap ${PREFIX}/cyrus/bin
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA} ${FILESDIR}/imapd.conf ${EGDIR}
