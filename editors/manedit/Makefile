@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2004/01/20 12:14:05 agc Exp $
+# $NetBSD: Makefile,v 1.18 2004/04/11 08:18:22 snj Exp $
 #
 
 DISTNAME=	manedit-0.5.6
@@ -12,7 +12,7 @@ HOMEPAGE=	http://wolfpack.twu.net/ManEdit/
 COMMENT=	UNIX Manual (man, manpage) page editor, viewer, and browser for X11
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/manedit
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 
 MAKE_ENV+=	CPP="${CXX}"
 
@@ -36,5 +36,5 @@ do-install:
 	cd ${WRKSRC} && ${INSTALL_DATA} manedit.xpm			\
 		${PREFIX}/share/manedit/icons
 
-.include "../../x11/gtk/buildlink2.mk"
+.include "../../x11/gtk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
