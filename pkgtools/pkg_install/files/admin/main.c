@@ -1,4 +1,4 @@
-/*	$NetBSD: main.c,v 1.15 2004/08/06 16:57:03 jlam Exp $	*/
+/*	$NetBSD: main.c,v 1.16 2004/08/20 20:09:53 jlam Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -8,7 +8,7 @@
 #include <sys/cdefs.h>
 #endif
 #ifndef lint
-__RCSID("$NetBSD: main.c,v 1.15 2004/08/06 16:57:03 jlam Exp $");
+__RCSID("$NetBSD: main.c,v 1.16 2004/08/20 20:09:53 jlam Exp $");
 #endif
 
 /*
@@ -73,10 +73,12 @@ __RCSID("$NetBSD: main.c,v 1.15 2004/08/06 16:57:03 jlam Exp $");
 
 #define DEFAULT_SFX	".t[bg]z"	/* default suffix for ls{all,best} */
 
-static const char Options[] = "K:SVbd:s:";
+static const char Options[] = "K:SVbd:qs:";
 
 int     filecnt;
 int     pkgcnt;
+
+static int	quiet;
 
 static int checkpattern_fn(const char *, void *);
 
@@ -84,7 +86,7 @@ static int checkpattern_fn(const char *, void *);
 static void 
 usage(const char *prog)
 {
-	(void) fprintf(stderr, "usage: %s [-b] [-d lsdir] [-V] [-s sfx] command args ...\n"
+	(void) fprintf(stderr, "usage: %s [-bqSV] [-d lsdir] [-K pkg_dbdir] [-s sfx] command args ...\n"
 	    "Where 'commands' and 'args' are:\n"
 	    " rebuild                     - rebuild pkgdb from +CONTENTS files\n"
 	    " check [pkg ...]             - check md5 checksum of installed files\n"
@@ -345,7 +347,9 @@ rebuild(void)
 #ifdef PKGDB_DEBUG
 		printf("%s\n", de->d_name);
 #else
-		printf(".");
+		if (!quiet) {
+			printf(".");
+		}
 #endif
 
 		filecnt += add1pkg(de->d_name);
@@ -387,7 +391,9 @@ checkall(void)
 		chdir(de->d_name);
 
 		check1pkg(de->d_name);
-		printf(".");
+		if (!quiet) {
+			printf(".");
+		}
 
 		chdir("..");
 	}
@@ -411,7 +417,9 @@ checkpattern_fn(const char *pkg, void *vp)
 		err(EXIT_FAILURE, "Cannot chdir to %s/%s", _pkgdb_getPKGDB_DIR(), pkg);
 
 	check1pkg(pkg);
-	printf(".");
+	if (!quiet) {
+		printf(".");
+	}
 
 	chdir("..");
 
@@ -471,6 +479,10 @@ main(int argc, char *argv[])
 		case 'd':
 			(void) strlcpy(lsdir, optarg, sizeof(lsdir));
 			lsdirp = lsdir;
+			break;
+
+		case 'q':
+			quiet = 1;
 			break;
 
 		case 's':
@@ -554,7 +566,9 @@ main(int argc, char *argv[])
 						}
 					} else {
 						check1pkg(*argv);
-						printf(".");
+						if (!quiet) {
+							printf(".");
+						}
 
 						chdir("..");
 					}
@@ -570,7 +584,9 @@ main(int argc, char *argv[])
 		} else {
 			checkall();
 		}
-		printf("Done.\n");
+		if (!quiet) {
+			printf("Done.\n");
+		}
 
 	} else if (strcasecmp(argv[0], "lsall") == 0) {
 		int saved_wd;
