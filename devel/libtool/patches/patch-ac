@@ -1,21 +1,22 @@
-$NetBSD: patch-ac,v 1.2 2000/09/14 10:20:46 skrll Exp $
-
---- config.guess.orig	Fri May 26 18:30:02 2000
-+++ config.guess
-@@ -78,12 +78,16 @@
- 	# Determine the machine/vendor (is the vendor relevant).
- 	case "${UNAME_MACHINE}" in
- 	    amiga) machine=m68k-cbm ;;
-+	    arc) machine=mipsel-unknown ;;
- 	    arm32) machine=arm-unknown ;;
- 	    atari*) machine=m68k-atari ;;
-+	    cobalt) machine=mipsel-unknown ;;
- 	    sun3*) machine=m68k-sun ;;
- 	    mac68k) machine=m68k-apple ;;
- 	    macppc) machine=powerpc-apple ;;
- 	    hp3[0-9][05]) machine=m68k-hp ;;
-+	    hpcmips) machine=mipsel-unknown ;;
-+	    pmax) machine=mipsel-unknown ;;
- 	    ibmrt|romp-ibm) machine=romp-ibm ;;
- 	    *) machine=${UNAME_MACHINE}-unknown ;;
- 	esac
+*** config.guess.orig	Fri May 26 18:30:02 2000
+--- config.guess	Sun Jan 14 20:14:15 2001
+***************
+*** 78,89 ****
+--- 78,94 ----
+  	# Determine the machine/vendor (is the vendor relevant).
+  	case "${UNAME_MACHINE}" in
+  	    amiga) machine=m68k-cbm ;;
++ 	    arc) machine=mipsel-unknown ;;
+  	    arm32) machine=arm-unknown ;;
+  	    atari*) machine=m68k-atari ;;
++ 	    cobalt) machine=mipsel-unknown ;;
+  	    sun3*) machine=m68k-sun ;;
+  	    mac68k) machine=m68k-apple ;;
+  	    macppc) machine=powerpc-apple ;;
++ 	    mvme68k) machine=m68k-motorola ;;
+  	    hp3[0-9][05]) machine=m68k-hp ;;
++ 	    hpcmips) machine=mipsel-unknown ;;
++ 	    pmax) machine=mipsel-unknown ;;
+  	    ibmrt|romp-ibm) machine=romp-ibm ;;
+  	    *) machine=${UNAME_MACHINE}-unknown ;;
+  	esac
