@@ -1,4 +1,4 @@
-# $NetBSD: module.mk,v 1.7 2003/07/18 10:57:15 grant Exp $
+# $NetBSD: module.mk,v 1.8 2004/05/08 15:12:52 grant Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install apache modules.
@@ -24,7 +24,11 @@
 _APACHE_MODULE_MK=	# defined
 APACHE_MODULE=		# defined
 
-.include "../../www/apache/buildlink2.mk"
+.if defined(USE_BUILDLINK2)
+.  include "../../www/apache/buildlink2.mk"
+.elif defined(USE_BUILDLINK3)
+.  include "../../www/apache/buildlink3.mk"
+.endif
 
 APACHE_MODULE_SRCDIR?=	${WRKSRC}
 APACHE_MODULE_SRC?=	*.c
