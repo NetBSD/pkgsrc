@@ -1,20 +1,14 @@
-$NetBSD: distinfo,v 1.14 2002/08/25 19:22:17 jlam Exp $
+$NetBSD: distinfo,v 1.15 2002/10/13 19:28:56 kristerw Exp $
 
-SHA1 (SDL-1.2.3.tar.gz) = f74f5bf47a472083da8700d2354cb90062e2a845
-Size (SDL-1.2.3.tar.gz) = 1568671 bytes
-SHA1 (patch-aa) = 43b3532f1939fb6d1ead45297aa34dd5b1f2383d
-SHA1 (patch-ab) = f04507e6faaa43ff7ae276bd1f6dc10bf42539d9
-SHA1 (patch-ac) = 86c50bbf2672440b4fcb88c241bf3d11ec237d70
-SHA1 (patch-ad) = bff300dd22af3cbfa59f760858a3b25ab97e685a
+SHA1 (SDL-1.2.5.tar.gz) = c1bdc68d390d421158778f68f3498f5b9d63a9e4
+Size (SDL-1.2.5.tar.gz) = 1854550 bytes
+SHA1 (patch-aa) = 1423cbdff5fd996f7d09e034a535760403870d1d
 SHA1 (patch-af) = f5e824addf308f9c467de02e3b262afbc0ef77c0
 SHA1 (patch-ag) = 989c3464686a3158c538034ad7ea012a4e4b4b9e
-SHA1 (patch-ah) = f509c0c146002cf2525bd9b7c7532fbca7aa4fb6
-SHA1 (patch-ai) = 0edabed555e3fc4b0a92aff9240359fc6637f022
-SHA1 (patch-aj) = e986d0f4935c2402d46672e8fec666d2a21d7087
-SHA1 (patch-ak) = 657947be674831c98850f044315e4681fe58ea29
+SHA1 (patch-aj) = ca6c5cd0f99c50e784f910b5b2f5eadb2324761b
+SHA1 (patch-ak) = 425fbb5abecd35aab01f57e7deec06d8f40a392d
 SHA1 (patch-al) = 0fe579ae0358d59f87a78fe4b5b006ef991d44f0
-SHA1 (patch-am) = ad3cf66da2b924ccf524bb6f4822c0facc708b69
-SHA1 (patch-an) = b875bc9e173d69cb5fcc1b4ea3e7039b7633d187
+SHA1 (patch-am) = 27813c0331a6b6870286219c6bfa9b7a0d275ee1
 SHA1 (patch-ap) = ca979b24a57a8f115f5e1bdf6b1e5672a60d20a9
 SHA1 (patch-aq) = 45f63636a9caa338274db68596c8cf8c1d3cd0f0
 SHA1 (patch-ar) = 1a78f0bcb6a8f65f71af23accb2a9780331f275b
