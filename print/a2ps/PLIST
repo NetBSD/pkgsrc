@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/02/18 15:14:37 seb Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/11/26 11:02:05 jmmv Exp $
 bin/a2ps
 bin/card
 bin/composeglyphs
@@ -9,8 +9,6 @@ bin/pdiff
 bin/psmandup
 bin/psset
 bin/texi2dvi4a2ps
-etc/a2ps-site.cfg
-etc/a2ps.cfg
 include/liba2ps.h
 @unexec ${INSTALL_INFO} --delete %D/info/a2ps.info %D/info/dir
 @unexec ${INSTALL_INFO} --delete %D/info/ogonkify.info %D/info/dir
@@ -216,6 +214,8 @@ share/a2ps/sheets/yacc.ssh
 share/a2ps/sheets/zsh.ssh
 share/emacs/site-lisp/a2ps-print.el
 share/emacs/site-lisp/a2ps.el
+share/examples/a2ps/a2ps-site.cfg
+share/examples/a2ps/a2ps.cfg
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/a2ps.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/a2ps.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/a2ps.mo
@@ -292,6 +292,7 @@ share/ogonkify/ptmri-o.ps
 @dirrm share/ogonkify/fonts
 @dirrm share/ogonkify/afm
 @dirrm share/ogonkify
+@dirrm share/examples/a2ps
 @dirrm share/a2ps/sheets
 @dirrm share/a2ps/ps
 @dirrm share/a2ps/ppd
