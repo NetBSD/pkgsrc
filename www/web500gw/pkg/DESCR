@@ -1,0 +1,8 @@
+A gateway that connects WWW browsers to LDAP based directories.
+
+Web500gw expects HTTP requests from a WWW browser on a TCP port (usually 8888). 
+Depending on the requested URL web500gw performs read/search/modify/add/delete 
+requests to the Directory and sends HTML pages back to the browser. 
+Web500gw uses the LDAPv2 protocol to talk to a Directory server. It is able to 
+work with a Standalone LDAP server (like UMich/OpenLDAP slapd or Netscape LDAP 
+product) and with an LDAP Frontend to an X.500 Directory System Agent. 

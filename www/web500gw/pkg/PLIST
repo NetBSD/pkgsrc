@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/01/08 14:15:57 hwr Exp $
+man/man8/web500gw.8
+etc/web500/web500gw.conf
+etc/web500/ldapfilter.conf
+etc/web500/ldapfilter.conf.internal
+etc/web500/ldaptemplates.conf
+etc/web500/ldaptemplates.conf.internal
+etc/web500/web500gw.help
+etc/web500/web500gw.messages
+etc/web500/web500gw.attr
+etc/web500/ldapfriendly
+etc/web500/web500gw.help.de
+etc/web500/web500gw.messages.de
+etc/web500/web500gw.attr.de
+etc/web500/ldapfriendly.de
+@dirrm etc/web500
+sbin/web500gw
