@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/07/21 16:34:33 martti Exp $
+# $NetBSD: Makefile,v 1.7 2004/04/27 22:03:13 snj Exp $
 #
 
 DISTNAME=	Net-AIM-1.22
@@ -10,7 +10,7 @@ MAINTAINER=	schmonz@NetBSD.org
 HOMEPAGE=	http://www.aryeh.net/Net-AIM/
 COMMENT=	Implementation of the AOL Instant Messenger TOC protocol
 
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/Net/AIM/.packlist
 
 .include "../../lang/perl5/module.mk"
