@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.273 2004/01/26 12:28:11 jmmv Exp $
+# $NetBSD: Makefile,v 1.274 2004/01/26 12:35:14 jmmv Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -154,7 +154,6 @@ SUBDIR+=	mjpegtools
 SUBDIR+=	mng
 SUBDIR+=	moz-bin-flash
 SUBDIR+=	moz-flash
-SUBDIR+=	moz-mplayer
 SUBDIR+=	mpeg-lib
 SUBDIR+=	mpeg2codec
 SUBDIR+=	mpeg_encode
