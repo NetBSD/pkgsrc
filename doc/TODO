@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2437 2004/11/24 13:38:45 wiz Exp $
+$NetBSD: TODO,v 1.2438 2004/11/24 14:53:45 minskim Exp $
 
 Suggested new packages
 ======================
@@ -680,7 +680,6 @@ Suggested package updates
 	o malsync-2.2.0
 	o maradns-1.0.23
 	o marbles-1.0.6
-	o mathomatic-11.5b
 	o mew-4.1
 	o mgetty-1.1.31
 	o micq-0.4.11
