@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.6 1999/06/09 17:05:36 agc Exp $
+# $NetBSD: Makefile,v 1.7 1999/06/22 11:17:07 hubertf Exp $
 
-DISTNAME=		mbrola-linux-301g1
+DISTNAME=		mbr301g1
+PKGNAME=		mbrola-linux-301g1
 CATEGORIES=		audio
 MASTER_SITES=		ftp://tcts.fpms.ac.be/pub/mbrola/pclinux/
 EXTRACT_SUFX=		.zip
