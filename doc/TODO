@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.508 2003/04/28 14:09:06 jmmv Exp $
+$NetBSD: TODO,v 1.509 2003/04/29 21:40:15 jtb Exp $
 
 Suggested new packages
 ======================
@@ -245,7 +245,6 @@ Suggested package updates
 	o tkman-2.2
 	o ttf2pt1-3.4.3
 	o vfu-4.00
-	o vm-7.14
 	o vnc-3.3.4 [http://www.realvnc.com/download.html]
 	o vttest-20030301
 	o wdm-1.23
