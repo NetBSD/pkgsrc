@@ -1,11 +1,9 @@
-$NetBSD: distinfo,v 1.9 2002/07/12 03:39:15 itojun Exp $
+$NetBSD: distinfo,v 1.10 2002/12/25 01:12:37 uebayasi Exp $
 
-SHA1 (bochs-1.4.1.tar.gz) = 990924632c000ea15ea02ac9198de4c37938fb31
-Size (bochs-1.4.1.tar.gz) = 1395173 bytes
-SHA1 (patch-aa) = 8c65fa102f606dc7d34611cfc5e5b7ab8542cfb6
-SHA1 (patch-ab) = 13ef85883d8f66862194f3ee3ffc577a3676fb3a
-SHA1 (patch-ac) = 1536b5a110c05452aa423f1581cd09c8f4a486f4
-SHA1 (patch-ad) = b5d295145a1ba98adce99fd8b0aafdb0717cc400
-SHA1 (patch-ae) = 05b4d7663735594f427a236428d6cea9510c080e
-SHA1 (patch-af) = b76fa463ade0d95e3aa9f1c4f8759e8361d51d57
+SHA1 (bochs-2.0.tar.gz) = 1a652f4e461cb2e7a3f9db3969802ba41eac1c50
+Size (bochs-2.0.tar.gz) = 3266323 bytes
+SHA1 (patch-aa) = bbe026a0487dee7ac00cf75500d38b600f473c8f
+SHA1 (patch-ad) = 3ce76c962920677c383ce2f61fb20565ddbd8777
+SHA1 (patch-ae) = 510238ed28e8aa79f4dd8780d54ac66f317a9380
+SHA1 (patch-af) = 931805d3523baab6cc16bd1052f059309aab75a7
 SHA1 (patch-ag) = a22ca6f8abf0db67de714f53e3db94cb06e33db6
