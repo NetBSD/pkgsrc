@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/04/19 00:07:13 recht Exp $
+$NetBSD: patch-aa,v 1.2 2004/12/18 15:59:55 jlam Exp $
 
---- src/Makefile.shlib.orig	Sat Mar  6 05:59:18 2004
+--- src/Makefile.shlib.orig	2003-10-19 21:34:33.000000000 -0400
 +++ src/Makefile.shlib
 @@ -108,7 +108,7 @@ endif
  
@@ -29,3 +29,12 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/04/19 00:07:13 recht Exp $
    LINK.shared		= $(COMPILER) -shared -Wl,-set_version,sgi$(SO_MAJOR_VERSION).$(SO_MINOR_VERSION)
  endif
  
+@@ -207,7 +207,7 @@ ifeq ($(PORTNAME), beos)
+   SHLIB_LINK		+= -ltermcap -lstdc++.r4 -lbind -lsocket -L/boot/develop/lib/x86
+ endif
+ 
+-SHLIB_LINK := $(filter -L%, $(LDFLAGS)) $(SHLIB_LINK)
++SHLIB_LINK := $(LDFLAGS) $(SHLIB_LINK)
+ ifeq ($(enable_rpath), yes)
+ SHLIB_LINK += $(rpath)
+ endif
