@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.305 2003/08/09 10:25:43 seb Exp $
+# $NetBSD: Packages.txt,v 1.306 2003/08/11 14:17:11 wiz Exp $
 ###########################################################################
 
 			==========================
@@ -2517,6 +2517,51 @@ _REPLACE.tcl.old=	.*/bin/tclsh
 _REPLACE.tcl.new=	${PREFIX}/bin/tclsh
 _REPLACE_FILES.tcl=	...list of tcl scripts which need to be fixed,
 			relative to ${WRKSRC}, just as in REPLACE_PERL
+
+ 10.35 Utilities for package management (pkgtools)
+ =================================================
+
+The directory pkgtools contains a number of useful utilities.  This section
+attempts only to make the reader aware of the utilities and when they might
+be useful, and not to duplicate the documentation that comes with each
+package.
+
+Utilities used by pkgsrc (automatically installed when needed):
+  x11-links - symlinks for use by buildlink
+
+OS tool augmentation (automatically installed when needed):
+  digest - calculates SHA1 checksums (and other kinds)
+	        use on operating systems where pkg_install is not present
+  libnbcompat - compat library for pkg tools
+  mtree - installed on non-BSD systems due to lack of native mtree
+  pkg_install - up-to-date replacement for /usr/sbin/pkg_install, or for
+
+Utilities used by pkgsrc (not automatically installed):
+  pkg_tarup - create a binary package from an already-installed package.
+	      used by 'make replace' to save the old package
+  xpkgwedge - put X11 packages someplace else (see above)
+
+Utilities for keeping track of installed packages, being up to date, etc:
+  pkgchk - installs pkg_chk, which reports on packages whose installed
+	   versions do not match the latest pkgsrc entries
+  pkgdep - makes dependency graphs of packages, to aid in choosing a
+	   strategy for updating
+  pkgdepgraph - make graph from above (uses graphviz)
+  pkglint - This provides two distinct abilities:
+	      check a pkgsrc entry for correctness (pkglint)
+	      check for and remove out-of-date distfiles and binary
+	      packages (lintpkgsrc)
+  pkgsurvey - report what packages you have installed
+
+Utilities for people maintaining or creating individual packages:
+  pkgdiff - automate making and maintaining patches for a package
+  rpm2pkg, url2pkg - aids in converting to pkgsrc
+  gensolpkg - convert pkgsrc to a Solaris package
+
+Utilities for people maintaining pkgsrc (or more obscure pkg utilities)
+  pkgconflict - find packages that conflict but aren't marked as such
+  pkgcomp - build packages in a chrooted area
+  libkver - spoof kernel version for chrooted cross builds
 
 
  11 Submitting & Committing
