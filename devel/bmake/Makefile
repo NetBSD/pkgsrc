@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2003/07/17 21:29:41 grant Exp $
+# $NetBSD: Makefile,v 1.11 2003/07/20 23:25:20 sjg Exp $
 #
 
-DISTNAME=       bmake-3.1.18
+DISTNAME=       bmake-20030714
 WRKSRC=		${WRKDIR}/bmake
 CATEGORIES=	devel
 MASTER_SITES=   ftp://ftp.NetBSD.org/pub/incoming/sjg/
@@ -10,7 +10,7 @@ MAINTAINER=	sjg@NetBSD.org
 HOMEPAGE=	http://www.crufty.net/help/sjg/bmake.html
 COMMENT=	Portable (autoconf) version of NetBSD 'make' utility
 
-DEPENDS+=	mk-files>=1.3.2:../../devel/mk-files
+DEPENDS+=	mk-files>=20030714:../../devel/mk-files
 
 makesyspath=${PREFIX}/share/mk:/usr/share/mk:/usr/local/share/mk:/opt/share/mk
 GNU_CONFIGURE=	yes
