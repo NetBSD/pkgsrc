@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1 2003/12/19 11:32:52 sketch Exp $
+
+--- renderproto.h.orig	2003-04-21 18:19:22.000000000 +0100
++++ renderproto.h	2003-12-16 15:32:39.752161000 +0000
+@@ -29,6 +29,17 @@
+ #include <X11/Xmd.h>
+ #include <X11/extensions/render.h>
+ 
++/* Work around bug in -r1.47 of XConsortium: Xmd.h, which breaks packages
++ * dependant on x11/render for certain versions of OpenWindows */
++#undef _SIZEOF
++#undef SIZEOF
++#if ((defined(__STDC__) || defined(__cplusplus) || defined(c_plusplus)) && !defined(UNIXCPP)) || defined(ANSICPP) || defined(_LP64)
++#define _SIZEOF(x) sz_##x
++#define SIZEOF(x) _SIZEOF(x)
++#else
++#define SIZEOF(x) sz_/**/x
++#endif
++
+ #define Window CARD32
+ #define Drawable CARD32
+ #define Font CARD32
