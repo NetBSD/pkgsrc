@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/08/29 19:46:45 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2004/12/18 14:42:47 wiz Exp $
 #
 
 DISTNAME=		torrentutils-0.3.0
@@ -10,7 +10,7 @@ MAINTAINER=		wiz@NetBSD.org
 HOMEPAGE=		http://www.student.lu.se/~nbi98oli/src/
 COMMENT=		Manage BitTorrent files and interact with trackers
 
-DEPENDS+=		bash-[0-9]*:../../shells/bash2
+DEPENDS+=		bash-[0-9]*:../../shells/bash
 DEPENDS+=		p5-Digest-SHA1-[0-9]*:../../security/p5-Digest-SHA1
 DEPENDS+=		p5-Digest-MD5-[0-9]*:../../security/p5-Digest-MD5
 
