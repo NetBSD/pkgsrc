@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6066 2004/05/29 13:42:26 dmcmahill Exp $
+$NetBSD: CHANGES,v 1.6067 2004/05/29 14:30:14 kristerw Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2695,3 +2695,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated kdbg to 1.2.10 [markd 2004-05-29]
 	Updated ivtools to 1.1.3 [markd 2004-05-29]
 	Updated latex-mk to 1.3 [dmcmahill 2004-05-29]
+	Updated ghc to 6.2.1 [kristerw 2004-05-29]
