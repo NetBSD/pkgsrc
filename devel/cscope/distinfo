@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2002/06/12 13:16:50 seb Exp $
+$NetBSD: distinfo,v 1.6 2003/03/22 06:05:26 wiz Exp $
 
 SHA1 (cscope-15.3.tar.gz) = ece72d2ede173dec0536003c4f8ab0fe7b0b3f11
 Size (cscope-15.3.tar.gz) = 196580 bytes
@@ -6,3 +6,4 @@ SHA1 (patch-aa) = 0212dd5ee9777bb2987cc57dca3747299b065f4f
 SHA1 (patch-ab) = 6390a64ebb7b03b9b29af1f71fac3137b5d7957c
 SHA1 (patch-ac) = 46fb2edc1ddec03c0ac50f87acde2b59f907e12b
 SHA1 (patch-ad) = 4864f8afa7b6090d60d5509d1544b913cb4fcd51
+SHA1 (patch-ae) = ec8cc3c59f6a765a903e62ad4b1e391c74052fee
