@@ -125,7 +125,7 @@ EOF
 	esac
 }
 
-for arg; do
+for arg do
 	gen transform "$arg"
 	gen untransform "$arg"
 done
