@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/08/28 20:05:23 xtraeme Exp $
+# $NetBSD: Makefile,v 1.8 2003/09/03 22:40:29 xtraeme Exp $
 #
 
 DISTNAME=	waimea-0.4.0
@@ -30,15 +30,21 @@ CONFIGURE_ARGS+=	--disable-render
 CONFIGURE_ARGS+=	--disable-shape
 .endif
 
-CONFIGURE_ARGS+=	--disable-randr
+CONFIGURE_ARGS+=       --disable-randr
 
 REPLACE_PERL = \
-	${WRKSRC}/data/scripts/filelist.pl \
-	${WRKSRC}/data/scripts/procinfo.pl \
-	${WRKSRC}/data/scripts/stylesdir.pl.in
+	data/scripts/filelist.pl \
+	data/scripts/procinfo.pl \
+	data/scripts/stylesdir.pl.in
+
+# XXX We have to remove freetype include directory to make
+# this compile.
+
+post-buildlink:
+	@${RM} -r ${BUILDLINK_DIR}/include/freetype
 
 .include "../../devel/pkgconfig/buildlink2.mk"
-.include "../../fonts/fontconfig/buildlink2.mk"
+.include "../../fonts/Xft2/buildlink2.mk"
 .include "../../graphics/freetype2/buildlink2.mk"
 .include "../../graphics/imlib2/buildlink2.mk"
 .include "../../lang/perl5/buildlink2.mk"
