@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/05/14 16:22:35 drochner Exp $
+# $NetBSD: Makefile,v 1.10 2002/01/16 19:45:26 drochner Exp $
 
 DISTNAME=	ScientificPython-2.2
 PKGNAME=	py-Scientific-2.2
@@ -12,9 +12,7 @@ COMMENT=	Python modules for scientific computing
 
 DEPENDS+=	netcdf>=3.0:../../devel/netcdf
 DEPENDS+=	mpich>=1.2.1:../../parallel/mpi-ch
-DEPENDS+=	py-Numeric-[0-9]*:../../math/py-Numeric
 
-USE_PYTHON=	yes
 PYDISTUTILSPKG=	yes
 PYBINMODULE=	yes
 
@@ -31,7 +29,7 @@ do-configure:
 	${FILESDIR}/Setup.in > ${WRKSRC}/Src/MPI/Setup.in
 
 post-build:
-	cd ${WRKSRC}/Src/MPI && ${PYTHON} compile.py
+	cd ${WRKSRC}/Src/MPI && ${PYTHONBIN} compile.py
 
 post-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/Src/MPI/mpipython ${PREFIX}/bin
@@ -45,4 +43,6 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/Examples/* 				\
 	${PREFIX}/share/examples/py-Scientific/
 
+.include "../../lang/python/extension.buildlink.mk"
+.include "../../math/py-Numeric/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
