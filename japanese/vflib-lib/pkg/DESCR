@@ -1,6 +1,6 @@
 VFlib is the Japanese vector font library, supporting TrueType, Zeit,
-JG, and BDF fonts.  The Watanabe-vector font is used by default for
-mincho(min) and gothic(goth).
+JG, and BDF fonts.  The Watanabe-vector font(pkgsrc/fonts/watanabe_vfont)
+is used by default for mincho(min) and gothic(goth).
 
 You can use your own fonts by installing them (/usr/share/font is
 recommended) and adding them to ${PREFIX}/lib/VFlib/vfontcap.
