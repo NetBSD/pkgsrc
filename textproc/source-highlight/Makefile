@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/10/03 14:42:38 seb Exp $
+# $NetBSD: Makefile,v 1.10 2004/04/25 06:46:09 snj Exp $
 #
 
 DISTNAME=	source-highlight-1.8
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.gnu.org/software/src-highlite/source-highlight.html
 COMMENT=	Highlight syntax of various languages source into HTML document
 
 GNU_CONFIGURE=	YES
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 
 .include "../../mk/bsd.prefs.mk"
 
