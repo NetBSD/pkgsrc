@@ -1,4 +1,4 @@
-dnl $NetBSD: configure.ac,v 1.40 2004/04/18 06:02:19 heinz Exp $
+dnl $NetBSD: configure.ac,v 1.41 2004/04/20 10:45:48 grant Exp $
 
 dnl Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.52)
@@ -197,7 +197,7 @@ if test $pkg_use_nbcompat_vis = yes; then
 	AC_LIBOBJ(unvis)
 fi
 
-AC_CHECK_FUNCS([getpassphrase getpgrp memmove poll select])
+AC_CHECK_FUNCS([getpassphrase getpgrp memmove select])
 
 AC_CHECK_FUNC(getpgrp, [AC_FUNC_GETPGRP])
 
