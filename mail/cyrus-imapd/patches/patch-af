@@ -1,0 +1,12 @@
+$NetBSD: patch-af,v 1.7 2005/03/02 21:42:48 wiz Exp $
+
+--- configure.orig	Tue Nov 23 19:55:47 2004
++++ configure	Sun Nov 28 14:34:29 2004
+@@ -13532,6 +13532,7 @@
+     EXTRA_SUBDIRS="${EXTRA_SUBDIRS} perl"
+     PERL_SUBDIRS="imap"
+     PERL="${with_perl}"
++    eval `${PERL} -V:cccdlflags`
+     PERL_CCCDLFLAGS="$cccdlflags"
+ 
+ fi
