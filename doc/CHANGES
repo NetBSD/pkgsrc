@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1448 2003/02/21 11:50:03 martti Exp $
+$NetBSD: CHANGES,v 1.1449 2003/02/21 12:03:30 salo Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -763,7 +763,7 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated gnome2-terminal to 2.0.1nb3 [jmmv 2003-02-18]
 	Updated multi-gnome-terminal to 1.6.1nb1 [jmmv 2003-02-18]
 	Added wap-utils-1.3.1 [jschauma 2003-02-18]
-	Removed ap-utils-1.3.1 [jschauma 2003-02-18]
+	Removed ap-utils [jschauma 2003-02-18]
 	Added spread-3.17.0 [mjl 2003-02-18]
 	Updated intltool to 0.25nb1 [jmmv 2003-02-19]
 	Updated xml-i18n-tools to 0.9nb1 [jmmv 2003-02-19]
@@ -780,3 +780,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Added gnome-common-1.2.4 [jmmv 2003-02-21]
 	Updated libdvdcss to 1.2.5 [mycroft 2003-02-21]
 	Updated postfix to 2.0.4 [martti 2003-02-21]
+	Removed gnome-db [salo 2003-02-21]
+	Added mergeant-0.10.0 [salo 2003-02-21]
