@@ -1,0 +1,12 @@
+$NetBSD: patch-ah,v 1.1 2000/02/28 02:34:44 dmcmahill Exp $
+
+--- ./src/guile/Makefile.in.orig	Sat Dec 19 03:16:25 1998
++++ ./src/guile/Makefile.in	Sun Feb 27 21:24:16 2000
+@@ -36,5 +36,6 @@
+            -I@top_srcdir@/lib/ComboBox-1.33 \
+            -I@top_srcdir@/lib/Xbae-4.6.2-linas \
+-           -I$(prefix)/include
++           -I$(prefix)/include \
++            @GUILE_INC@
+ 
+ CFLAGS   = @CFLAGS@ @X_CFLAGS@ -DCELL_WIDGETS=1 ${INCLPATH}
