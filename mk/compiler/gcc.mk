@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.34 2004/02/05 01:50:55 jlam Exp $
+# $NetBSD: gcc.mk,v 1.35 2004/02/05 01:57:38 jlam Exp $
 
 .if !defined(COMPILER_GCC_MK)
 COMPILER_GCC_MK=	defined
@@ -295,11 +295,15 @@ IMAKEOPTS+=	-DHasGcc2=YES -DHasGcc2ForCplusplus=YES
 .endif
 
 .if !empty(_USE_PKGSRC_GCC:M[yY][eE][sS])
+.  if exists(${CC})
 CC_VERSION!=	if ${CC} -dumpversion > /dev/null 2>&1; then		\
 			${ECHO} "gcc-`${CC} -dumpversion`";		\
 		else							\
 			${ECHO} "gcc-${_GCC_REQD}";			\
 		fi
+.  else
+CC_VERSION=	gcc-${_GCC_REQD}
+.  endif
 .else
 CC_VERSION=	${_GCC_PKG}
 .endif
