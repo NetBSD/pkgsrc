@@ -1,0 +1,8 @@
+You need to copy the share/bochs/bochsrc file to your home
+directory and name it .bochsrc.  Then edit it to your 
+tastes defining the hard drives, and floppies as needed.
+
+Documentation is available on the website, and a copy of that
+website is in share/doc/bochs/.  The file install.html will
+assist you in creating a HD "file". (A raw disk partition can
+be used as well)
