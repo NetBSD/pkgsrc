@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.72 2002/06/15 21:20:04 cjep Exp $
+# $NetBSD: Makefile,v 1.73 2002/06/25 02:13:11 itojun Exp $
 
-DISTNAME=		openssh-3.2.3p1
-PKGNAME=		openssh-3.2.3.1
+DISTNAME=		openssh-3.3p1
+PKGNAME=		openssh-3.3.0.1
 SVR4_PKGNAME=		ossh
 CATEGORIES=		security
 MASTER_SITES=		ftp://gd.tuwien.ac.at/opsys/OpenBSD/OpenSSH/portable/ \
@@ -27,7 +27,6 @@ CRYPTO=			yes
 BUILD_DEFS+=		USE_INET6
 #BUILD_DEFS+=		KERBEROS
 BUILD_DEFS+=		PKG_SYSCONFDIR
-BUILD_DEFS+=		SSH_SUID
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -48,8 +47,7 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-pid-dir=${SSH_PID_DIR}
 CONFIGURE_ARGS+=	--with-ssl-dir=${BUILDLINK_DIR}
 CONFIGURE_ARGS+=	--with-tcp-wrappers=${BUILDLINK_DIR}
-# necessary until openssh distribution fixes ordering of "-lcrypt -lcrypto"
-CONFIGURE_ARGS+=	--with-md5-passwords
+CONFIGURE_ARGS+=	--with-privsep-path=/var/chroot/sshd
 
 # XXX: PAM authentication causes memory faults, and I haven't tracked down
 # XXX: why yet.  For the moment, disable PAM authentication.
@@ -71,11 +69,6 @@ CONFIGURE_ARGS+=	--with-md5-passwords
 #PKG_USE_KERBEROS=		yes
 #CONFIGURE_ARGS+=	--with-kerberos4=/usr
 #.endif
-
-# Don't install "ssh" setuid
-.if !defined(SSH_SUID) || ${SSH_SUID} != YES
-CONFIGURE_ARGS+=	--disable-suid-ssh
-.endif
 
 # The ssh-askpass program is in ${X11BASE}/bin or ${X11PREFIX}/bin depending
 # on if it's part of the X11 distribution, or if it's installed from pkgsrc
@@ -127,6 +120,7 @@ post-install:
 #	${INSTALL_DATA} ${WRKSRC}/contrib/sshd.pam.freebsd ${EGDIR}/sshd.pam
 #.endif
 	${INSTALL_SCRIPT} ${WRKDIR}/sshd ${PREFIX}/etc/rc.d/sshd
+	${MKDIR} /var/chroot/sshd
 
 .include "../../devel/zlib/buildlink.mk"
 .include "../../security/openssl/buildlink.mk"
