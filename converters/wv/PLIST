@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2004/02/05 20:14:05 skrll Exp $
+@comment $NetBSD: PLIST,v 1.6.6.1 2004/11/02 10:39:07 agc Exp $
 bin/wvAbw
 bin/wvCleanLatex
 bin/wvConvert
@@ -18,8 +18,8 @@ bin/wvWml
 include/wv/libole2/ms-ole-summary.h
 include/wv/libole2/ms-ole.h
 include/wv/wv.h
-lib/libwv-1.0.so.0
-lib/libwv-1.0.so.0.0
+lib/libwv-1.0.so.2
+lib/libwv-1.0.so.2.0
 lib/libwv.a
 lib/libwv.la
 lib/libwv.so

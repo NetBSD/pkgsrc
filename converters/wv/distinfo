@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2003/12/13 23:45:12 xtraeme Exp $
+$NetBSD: distinfo,v 1.9.6.1 2004/11/02 10:39:08 agc Exp $
 
-SHA1 (wv-1.0.0.tar.gz) = a260c667f1d42dbeeade5c0e25d3ffce92a090db
-Size (wv-1.0.0.tar.gz) = 726428 bytes
+SHA1 (wv-1.0.2.tar.gz) = 67709fbc8ee8bd537f259aa98b811b0f3356a016
+Size (wv-1.0.2.tar.gz) = 844016 bytes
