@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2004/10/28 11:54:28 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2005/01/03 01:59:05 minskim Exp $
 #
 
 DISTNAME=	hfsutils-3.2.6
 PKGNAME=	xhfs-3.2.6
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	ftp://ftp.mars.org/pub/hfs/
 
@@ -10,14 +11,15 @@ MAINTAINER=	wrstuden@NetBSD.org
 HOMEPAGE=	http://www.mars.org/home/rob/proj/hfs/
 COMMENT=	Tk GUI + Tcl Shell for accessing HFS volumes
 
-DEPENDS=	libhfs>=3.2.6:../../devel/libhfs
-DEPENDS+=	tk>=8.3.2:../../x11/tk83
-
+USE_BUILDLINK3=	yes
 USE_X11=	yes
 
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	--with-tcl=${LOCALBASE}/lib \
-		--with-tk=${LOCALBASE}/lib --disable-cli
-CPPFLAGS+=	-I${LOCALBASE}/include/libhfs
+CONFIGURE_ARGS=	--with-tcl=${BUILDLINK_PREFIX.tcl}/lib \
+		--with-tk=${BUILDLINK_PREFIX.tk}/lib --disable-cli
+CPPFLAGS+=	-I${BUILDLINK_PREFIX.libhfs}/include/libhfs
 
+.include "../../devel/libhfs/buildlink3.mk"
+.include "../../lang/tcl/buildlink3.mk"
+.include "../../x11/tk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
