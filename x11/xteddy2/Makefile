@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2001/06/11 06:34:59 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2001/06/11 21:36:02 zuntum Exp $
 
 DISTNAME=	xteddy-2.0.1
 CATEGORIES=	x11 games
 MASTER_SITES=	http://www.ITN.LiU.SE/~stegu/xteddy/
 
 MAINTAINER=	johnam@mail.kemper.org
-HOMEPAGE=	http://www.ITN.LiU.SE/~stegu/xteddy
+HOMEPAGE=	http://www.ITN.LiU.SE/~stegu/xteddy/
 COMMENT=	Teddy bear for your desktop
 
 DEPENDS+=	imlib-1.9.*:../../graphics/imlib
@@ -21,16 +21,16 @@ LDFLAGS+=	-L${X11BASE}/lib -R${X11BASE}/lib 	# for libImlib
 pre-configure:
 	${SED} \
 		-e 's|@PREFIX@|${PREFIX}|' \
-		<${WRKSRC}/configure >${WRKSRC}/configure.new
+		${WRKSRC}/configure >${WRKSRC}/configure.new
 	${MV} ${WRKSRC}/configure.new ${WRKSRC}/configure
 	${CHMOD} 755 ${WRKSRC}/configure
 	${SED} \
 		-e 's|@PREFIX@|${PREFIX}|' \
-		<${WRKSRC}/xteddy_test >${WRKSRC}/xteddy_test.new
+		${WRKSRC}/xteddy_test >${WRKSRC}/xteddy_test.new
 	${MV} ${WRKSRC}/xteddy_test.new ${WRKSRC}/xteddy_test
 	${SED} \
 		-e 's|@PREFIX@|${PREFIX}|' \
-		<${WRKSRC}/xtoys >${WRKSRC}/xtoys.new
+		${WRKSRC}/xtoys >${WRKSRC}/xtoys.new
 	${MV} ${WRKSRC}/xtoys.new ${WRKSRC}/xtoys
 
 .include "../../mk/bsd.pkg.mk"
