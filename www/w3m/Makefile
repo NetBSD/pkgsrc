@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2001/02/23 06:46:30 jun Exp $
+# $NetBSD: Makefile,v 1.23 2001/03/31 09:21:16 itojun Exp $
 
-DISTNAME=	w3m-0.1.11-pre
-PKGNAME=	w3m-0.1.10.pre11
+DISTNAME=	w3m-0.2.1
 CATEGORIES=	www
-MASTER_SITES=	ftp://ei5nazha.yz.yamagata-u.ac.jp/w3m/dev/
+MASTER_SITES=	ftp://ei5nazha.yz.yamagata-u.ac.jp/w3m/
 
 MAINTAINER=	tech-pkg-ja@jp.netbsd.org
 HOMEPAGE=	http://ei5nazha.yz.yamagata-u.ac.jp/~aito/w3m/
@@ -85,7 +84,7 @@ HELP_W3M=	-w3m
 CONFIGURE_ENV+=	def_bindir=${LOCALBASE}/bin
 CONFIGURE_ENV+=	def_libdir=${LOCALBASE}/${HELPERDIR}
 CONFIGURE_ENV+=	def_helpdir=${LOCALBASE}/${HELPDIR}
-CONFIGURE_ENV+=	use_menu=n use_matrix=n
+CONFIGURE_ENV+=	use_menu=y use_matrix=n
 CONFIGURE_ENV+=	ded=vi dmail=Mail dbrowser=
 CONFIGURE_ENV+=	dcc="${CC}" dtermlib="-ltermcap"
 CONFIGURE_ENV+=	dldflags="-Wl,-rpath,${LOCALBASE}/lib -L${LOCALBASE}/lib"
@@ -97,9 +96,6 @@ post-extract:
 	@(cd ${WRKSRC}/doc-jp; ${RM} -fr CVS)
 
 # do not look at previous configuration
-pre-configure:
-	${RM} ${WRKSRC}/config.param
-
 do-configure:
 	@yes '' | (cd ${WRKSRC} && CC="${CC}" ac_cv_path_CC="${CC}" \
 	    INSTALL="${INSTALL_SCRIPT}"                             \
