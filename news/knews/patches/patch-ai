@@ -1,7 +1,7 @@
-$NetBSD: patch-ai,v 1.4 2001/03/10 22:05:54 tron Exp $
+$NetBSD: patch-ai,v 1.5 2001/03/12 13:23:00 tron Exp $
 
 --- src/server.c.orig	Fri Jan  9 18:16:22 1998
-+++ src/server.c	Sat Mar 10 23:00:44 2001
++++ src/server.c	Mon Mar 12 14:11:00 2001
 @@ -2,19 +2,21 @@
   *  Copyright (C) 1995, 1996  Karl-Johan Johnsson.
   */
@@ -26,7 +26,7 @@ $NetBSD: patch-ai,v 1.4 2001/03/10 22:05:54 tron Exp $
  struct SERVER {
      int		fd;
      char	*buffer;
-@@ -128,37 +130,68 @@
+@@ -128,37 +130,70 @@
   *  tell != 0   means tell about errors
   *  tell >  1   means say what you're doing
   */
@@ -71,7 +71,9 @@ $NetBSD: patch-ai,v 1.4 2001/03/10 22:05:54 tron Exp $
 +		return 0; /* don't block */
 +
 +	    do_wait(&server->fd, True, server->quit_func, server);
-+	    if (server->fd >= 0) {
++	    if (server->fd < 0)
++		return -1;
++	    else {
 +#ifdef __NetBSD__
 +		socklen_t	length;
 +		int		error;
