@@ -1,4 +1,4 @@
-#	$NetBSD: IRIX.sys.mk,v 1.1.1.1 2004/03/11 13:04:00 grant Exp $
+#	$NetBSD: IRIX.sys.mk,v 1.2 2004/04/07 23:35:05 jschauma Exp $
 #	@(#)sys.mk	8.2 (Berkeley) 3/21/94
 
 unix?=		We run Unix
@@ -77,7 +77,7 @@ SHELL?=		sh
 
 SIZE?=		size
 
-TSORT?= 	tsort -q
+TSORT?= 	tsort
 
 YACC?=		yacc
 YFLAGS?=
