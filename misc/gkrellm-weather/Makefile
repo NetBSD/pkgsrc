@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/02/24 23:15:55 cube Exp $
+# $NetBSD: Makefile,v 1.12 2004/03/07 03:46:31 minskim Exp $
 
 DISTNAME=       gkrellweather-2.0.6
 PKGNAME=        gkrellm-weather-2.0.6
@@ -30,6 +30,7 @@ pre-build:
 	${WRKSRC}/GrabWeather.orig > ${WRKSRC}/GrabWeather
 
 .include "../../sysutils/gkrellm/buildlink3.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../lang/perl5/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 
