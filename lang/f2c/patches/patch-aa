@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 1998/08/25 14:19:52 tv Exp $
+$NetBSD: patch-aa,v 1.5 1998/08/25 15:22:47 tv Exp $
 
 Add a top level Makefile
 
@@ -7,7 +7,7 @@ Add a top level Makefile
 @@ -0,0 +1,51 @@
 +# Top level Makefile for f2c, libF77, and libI77
 +
-+all: f2c libf2c.a f77 man
++all: f2c libf2c.a f2c-f77 man
 +
 +
 +f2c:
@@ -41,7 +41,7 @@ Add a top level Makefile
 +install:
 +	-@mkdir -p ${PREFIX}/bin
 +	${BSD_INSTALL_PROGRAM} ./src/f2c ${PREFIX}/bin
-+	${BSD_INSTALL_SCRIPT} ./f77 ${PREFIX}/bin
++	${BSD_INSTALL_SCRIPT} ./f2c-f77 ${PREFIX}/bin
 +	-@mkdir -p ${PREFIX}/lib
 +	${BSD_INSTALL_DATA} ./libf2c.a ${PREFIX}/lib
 +	${BSD_INSTALL_DATA} ./libF77.a ${PREFIX}/lib
@@ -54,5 +54,5 @@ Add a top level Makefile
 +	${BSD_INSTALL_MAN} ./f2c.1 ${PREFIX}/man/man1
 +	${BSD_INSTALL_MAN} ./f2c.0 ${PREFIX}/man/cat1
 +
-+f77: fc
-+	sed 's!PREFIX!${PREFIX}!g' fc > f77
++f2c-f77: fc
++	sed 's!PREFIX!${PREFIX}!g' fc > f2c-f77
