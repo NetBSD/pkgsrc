@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.1 1998/09/07 21:22:07 agc Exp $
+
+Don't delete any previous directory, just in case.
+And *definitely* make it non-interactive.
+
+--- Makefile.in	1998/09/07 20:49:10	1.1
++++ Makefile.in	1998/09/07 20:49:40
+@@ -178,7 +178,7 @@
+ 	  echo "*** This STk version ($(VERSION)) has already been installed "; \
+ 	  echo "*** on this machine. Should I clean this directory before "; \
+ 	  echo "*** starting installation of STk-$(VERSION)? [no] " ; \
+-	  read a; \
++	  a=n; \
+ 	  case $$a in \
+ 	    y*|Y*) echo "Deleting previous installation"; \
+                    /bin/rm -rf $(stkdir)/$(VERSION);; \
