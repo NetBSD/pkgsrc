@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.99 1999/07/23 08:03:18 drochner Exp $
+# $NetBSD: Makefile,v 1.100 1999/07/28 17:30:49 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.156 1997/09/30 07:54:42 asami Exp
 #
 
@@ -154,6 +154,7 @@
     SUBDIR += xview-clients
     SUBDIR += xview-config
     SUBDIR += xview-lib
+    SUBDIR += xworld
     SUBDIR += xwrits
 #    SUBDIR += xzoom
 
