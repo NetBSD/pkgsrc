@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/06/19 11:32:02 zuntum Exp $
+$NetBSD: patch-aa,v 1.2 2002/08/22 11:24:07 martti Exp $
 
---- Makefile.orig	Wed May 16 23:48:51 2001
-+++ Makefile
+--- Makefile.orig	Mon Oct  8 23:35:27 2001
++++ Makefile	Mon Jul 29 10:12:19 2002
 @@ -1,8 +1,7 @@
  # Makefile for systems with GNU tools
 -CC 	=	gcc
@@ -11,12 +11,24 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/06/19 11:32:02 zuntum Exp $
 +CFLAGS	+=	-Wall -W -Wshadow #-pedantic -Werror -Wconversion
  
  LIBS	=	`./vsf_findlibs.sh`
- LINK	=	-s
-@@ -21,9 +20,7 @@
+ LINK	=	-Wl,-s
+@@ -21,21 +20,7 @@
  	$(CC) -o vsftpd $(OBJS) $(LINK) $(LIBS)
  
  install:
--	$(INSTALL) -m 755 vsftpd /usr/sbin/vsftpd
+-	if [ -x /usr/local/sbin ]; then \
+-		$(INSTALL) -m 755 vsftpd /usr/local/sbin/vsftpd; \
+-	else \
+-		$(INSTALL) -m 755 vsftpd /usr/sbin/vsftpd; fi
+-	if [ -x /usr/local/man ]; then \
+-		$(INSTALL) -m 644 vsftpd.8 /usr/local/man/man8/vsftpd.8; \
+-		$(INSTALL) -m 644 vsftpd.conf.5 /usr/local/man/man5/vsftpd.conf.5; \
+-	elif [ -x /usr/share/man ]; then \
+-		$(INSTALL) -m 644 vsftpd.8 /usr/share/man/man8/vsftpd.8; \
+-		$(INSTALL) -m 644 vsftpd.conf.5 /usr/share/man/man5/vsftpd.conf.5; \
+-	else \
+-		$(INSTALL) -m 644 vsftpd.8 /usr/man/man8/vsftpd.8; \
+-		$(INSTALL) -m 644 vsftpd.conf.5 /usr/man/man5/vsftpd.conf.5; fi
 -	if [ -x /etc/xinetd.d ]; then \
 -		$(INSTALL) -m 644 xinetd.d/vsftpd /etc/xinetd.d/vsftpd; fi
 +	$(BSD_INSTALL_PROGRAM) vsftpd $(PREFIX)/libexec/vsftpd
