@@ -1,0 +1,23 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2004/10/31 21:51:07 jdolecek Exp $
+
+In order to use this module in your Apache 1.x installation, you need to
+add the following to your httpd.conf file:
+
+  LoadModule php5_module lib/httpd/mod_php5.so
+  AddType application/x-httpd-php .php
+
+You may also add following if you still use .php3 files:
+
+  AddType application/x-httpd-php .php3
+
+For Apache 2.x installation, you need following:
+
+  LoadModule php5_module lib/httpd/mod_php5.so
+  AddHandler application/x-httpd-php .php
+
+You may also add following if you still use .php3 files:
+
+  AddHandler application/x-httpd-php .php3
+
+===========================================================================
