@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.5 2003/07/21 16:43:30 martti Exp $
+# $NetBSD: Makefile,v 1.6 2003/12/11 19:24:33 ben Exp $
 #
 
 DISTNAME=		MemMgr-1.04
 PKGNAME=		libmemmgr-1.04
 WRKSRC=			${WRKDIR}/memmgr-1.04
 CATEGORIES=		devel
-MASTER_SITES=		http://www.primate.wisc.edu/software/MemMgr/
+MASTER_SITES=		http://www.snake.net/software/MemMgr/
 
 MAINTAINER=		collver1@comcast.net
-HOMEPAGE=		http://www.primate.wisc.edu/software/MemMgr/
+HOMEPAGE=		${MASTER_SITES}
 COMMENT=		Simple memory manager library
 
 BUILD_DEPENDS+=		libetm-1.09:../../devel/libetm
