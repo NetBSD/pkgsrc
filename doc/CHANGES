@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7772 2004/11/08 16:48:58 shannonjr Exp $
+$NetBSD: CHANGES,v 1.7773 2004/11/08 18:27:26 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5168,3 +5168,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated cups to 1.1.22 [adam 2004-11-08]
 	Updated gcc34 to 3.4.3 [shannonjr 2004-11-08]
 	Updated gcc34-ada to 3.4.3 [shannonjr 2004-11-08]
+	Updated mysql-client to 4.1.7nb2 [xtraeme 2004-11-08]
+	Updated mysql-server to 4.1.7nb1 [xtraeme 2004-11-08]
