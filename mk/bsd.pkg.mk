@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1217 2003/07/18 04:21:16 grant Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1218 2003/07/19 02:50:22 dmcmahill Exp $
 #
 # This file is in the public domain.
 #
@@ -3825,7 +3825,8 @@ binpkg-list:
 # a large index.  Format is:
 #
 # distribution-name|package-path|installation-prefix|comment| \
-#  description-file|maintainer|categories|build deps|run deps|for arch
+#  description-file|maintainer|categories|build deps|run deps|for arch| \
+#  not for opsys
 #
 .if !target(describe)
 describe:
@@ -3995,6 +3996,8 @@ print-summary-data:
 	@${ECHO} wildcard ${PKGPATH} ${PKGWILDCARD:Q}
 	@${ECHO} comment ${PKGPATH} ${COMMENT:Q}
 	@${ECHO} license ${PKGPATH} ${LICENSE:Q}
+	@${ECHO} onlyfor ${PKGPATH} ${ONLY_FOR_ARCHS}
+	@${ECHO} notfor ${PKGPATH} ${NOT_FOR_OPSYS}
 .endif
 
 .if !target(show-license)
