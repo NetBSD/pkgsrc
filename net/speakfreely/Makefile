@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/01/17 16:02:33 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2000/04/27 03:29:42 jlam Exp $
 #
 
 DISTNAME=		speak_freely-7.1
@@ -37,21 +37,10 @@ CCFLAGS+=		-DHALF_DUPLEX
 .endif
 
 .if defined(USE_CRYPTO) && ${USE_CRYPTO} == "YES"
-.if exists (/usr/include/openssl/blowfish.h)
 HAVE_LIBCRYPTO=		YES
-OPENSSLDIR=		/usr
-.else
-#
-# We have a choice of either using the included sources for crypto or to simply
-# DEPEND on security/openssl.  Not sure which is the right way to go, so for
-# now, just DEPEND on security/openssl.
-#
-#HAVE_LIBCRYPTO=	NO
-HAVE_LIBCRYPTO=		YES
-OPENSSLDIR=		${LOCALBASE}
-DEPENDS+=		openssl-*:../../security/openssl
-.endif
+USE_SSL=		# defined
 RESTRICTED=		"Crypto; export-controlled"
+
 .if defined(USE_IDEA) && ${USE_IDEA} == "YES"
 LICENSE=		no-commercial-use
 .endif
@@ -61,7 +50,7 @@ SOUNDDIR=	${PREFIX}/share/speakfreely
 MAKE_ENV+=	PERL="${PERL_PATH}" CCFLAGS="${CCFLAGS}" \
 		SOUNDDIR="${SOUNDDIR}"
 MAKE_ENV+=	USE_CRYPTO="${USE_CRYPTO}" HAVE_LIBCRYPTO="${HAVE_LIBCRYPTO}" \
-		OPENSSLDIR="${OPENSSLDIR}" USE_IDEA="${USE_IDEA}"
+		SSLBASE="${SSLBASE}" USE_IDEA="${USE_IDEA}"
 MAKE_ENV+=	HAVE_GSM=YES HAVE_MD5=YES
 MAKE_ENV+=	DOMAIN=
 
