@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/02/23 01:29:53 wiz Exp $
+bin/its4
+man/man1/its4.1
+share/its4/LICENCE
+share/its4/TODO
+share/its4/vulns.i4d
+@dirrm share/its4
