@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/02/09 18:47:38 jmmv Exp $
+# $NetBSD: Makefile,v 1.3 2004/02/11 08:16:09 xtraeme Exp $
 #
 
 DISTNAME=		gstreamer-0.6.4
@@ -14,7 +14,7 @@ COMMENT=		GNOME multimedia streamer library
 BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
 
 GNU_CONFIGURE=		yes
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 USE_GNU_TOOLS+=		make
@@ -29,11 +29,11 @@ PKGCONFIG_OVERRIDE+=	${WRKSRC}/pkgconfig/gstreamer.pc.in
 
 PYTHON_VERSIONS_ACCEPTED=	23 23pth 22 22pth
 
-.include "../../devel/glib2/buildlink2.mk"
-.include "../../devel/libgnomeui/buildlink2.mk"
-.include "../../devel/pkgconfig/buildlink2.mk"
-.include "../../devel/popt/buildlink2.mk"
+.include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/libgnomeui/buildlink3.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/popt/buildlink3.mk"
 .include "../../lang/python/application.mk"
-.include "../../textproc/libxml2/buildlink2.mk"
-.include "../../textproc/libxslt/buildlink2.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
+.include "../../textproc/libxslt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
