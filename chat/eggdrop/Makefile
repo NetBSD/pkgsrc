@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2002/08/01 02:37:45 jschauma Exp $
+# $NetBSD: Makefile,v 1.3 2002/09/25 18:32:10 wiz Exp $
 #
 
 DISTNAME=	eggdrop1.6.10
 PKGNAME=	eggdrop-1.6.10
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.eggheads.org/pub/eggdrop/source/1.6/
 
@@ -57,4 +58,6 @@ do-install-modules:
 		compress.so console.so ctcp.so dns.so filesys.so irc.so notes.so seen.so \
 		server.so share.so transfer.so uptime.so wire.so \
 		${PREFIX}/lib/eggdrop/
+	cd ${WRKSRC}/src/mod && ${FIND} . -name "*.lang" -exec ${INSTALL_DATA} "{}" \
+		${PREFIX}/share/eggdrop/language/ ";"
 .endif
