@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/11/08 01:06:49 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.2 1999/12/20 04:14:23 simonb Exp $
 lib/perl5/site_perl/Net/DNS.pm
 lib/perl5/site_perl/Net/DNS/Header.pm
 lib/perl5/site_perl/Net/DNS/Packet.pm
@@ -65,7 +65,6 @@ lib/perl5/man/man3/Net::DNS::RR::AAAA.3
 lib/perl5/man/man3/Net::DNS::Question.3
 lib/perl5/man/man3/Net::DNS::RR::ISDN.3
 lib/perl5/man/man3/Net::DNS::RR::MB.3
-lib/perl5/${MACHINE_ARCH}-${LOWER_OPSYS}/5.00404/perllocal.pod
 lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Net/DNS/.packlist
 @dirrm lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Net/DNS
 @dirrm lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Net
