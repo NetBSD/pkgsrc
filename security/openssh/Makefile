@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.88 2002/08/28 04:55:18 jlam Exp $
+# $NetBSD: Makefile,v 1.89 2002/08/31 10:09:00 grant Exp $
 
 DISTNAME=		openssh-3.4p1
 PKGNAME=		openssh-3.4.0.1
@@ -34,6 +34,9 @@ INSTALL_TARGET=		install-nokeys
 PLIST_SRC=		# empty
 MESSAGE_SRC=		${.CURDIR}/MESSAGE
 
+PKG_USERS=		${OPENSSH_USER}:${OPENSSH_GROUP}:${OPENSSH_UID}:sshd\\ privsep:${OPENSSH_CHROOT}:${NOLOGIN}
+PKG_GROUPS=             ${OPENSSH_GROUP}:${OPENSSH_GID}
+
 SSH_PID_DIR=		/var/run	# default directory for PID files
 
 PKG_SYSCONFSUBDIR=	ssh
@@ -50,7 +53,8 @@ CONFIGURE_ARGS+=	--mandir=${PREFIX}/${MANDIR}
 CONFIGURE_ARGS+=	--with-pid-dir=${SSH_PID_DIR}
 CONFIGURE_ARGS+=	--with-ssl-dir=${SSLBASE}
 CONFIGURE_ARGS+=	--with-tcp-wrappers=${BUILDLINK_PREFIX.tcp_wrappers}
-CONFIGURE_ARGS+=	--with-privsep-path=/var/chroot/sshd
+CONFIGURE_ARGS+=	--with-privsep-path=${OPENSSH_CHROOT}
+CONFIGURE_ARGS+=	--with-privsep-user=${OPENSSH_USER}
 
 # XXX: PAM authentication causes memory faults, and I haven't tracked down
 # XXX: why yet.  For the moment, disable PAM authentication.
@@ -113,12 +117,14 @@ SUPPORT_FILES=		# empty
 .for FILE in ${SUPPS}
 SUPPORT_FILES+=		${EGDIR}/${FILE} ${PKG_SYSCONFDIR}/${FILE}
 .endfor
-OWN_DIRS=		/var/chroot/sshd
+OWN_DIRS=		${OPENSSH_CHROOT}
 RCD_SCRIPTS=		sshd
 
 PLIST_SRC+=		${.CURDIR}/PLIST
 FILES_SUBST+=		SSH_PID_DIR=${SSH_PID_DIR}
 MESSAGE_SUBST+=		EGDIR=${EGDIR}
+MESSAGE_SUBST+=		OPENSSH_USER=${OPENSSH_USER}
+MESSAGE_SUBST+=		OPENSSH_GROUP=${OPENSSH_GROUP}
 INSTALL_EXTRA_TMPL=	${.CURDIR}/INSTALL
 
 .if defined(UPDATE_INTREE_OPENSSH)

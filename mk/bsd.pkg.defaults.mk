@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.83 2002/08/26 06:42:10 grant Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.84 2002/08/31 10:08:59 grant Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -1056,6 +1056,32 @@ NMH_PAGER?= more
 # to the Solaris-2.5.1 version.
 # Possible: not defined, YES
 # Default: not defined
+
+OPENSSH_CHROOT?=	/var/chroot/sshd
+# The chroot directory for OpenSSH with privilege separation. This directory
+# will be created and MUST be only readable by root.
+# Possible: any directory
+# Default: /var/chroot/sshd
+
+OPENSSH_USER?=		sshd
+# The unprivileged user for OpenSSH with privilege separation.
+# Possible: any user name
+# Default: sshd
+
+OPENSSH_UID?=		16
+# The unprivileged UID for OpenSSH with privilege separation.
+# Possible: any uid
+# Default: 16
+
+OPENSSH_GROUP?=		sshd
+# The group of the OPENSSH_USER for OpenSSH with privilege separation.
+# Possible: any group name
+# Default: sshd
+
+OPENSSH_GID?=		16
+# The GID of the OPENSSH_USER for OpenSSH with privilege separation.
+# Possible: any gid
+# Default: sshd
 
 PALMOS_DEFAULT_SDK?=	3.5
 # Version of PalmOS SDK to use as default.
