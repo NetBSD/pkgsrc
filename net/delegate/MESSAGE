@@ -1,9 +1,8 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.3 2003/05/06 17:42:08 jmmv Exp $
+$NetBSD: MESSAGE,v 1.4 2003/07/30 11:37:01 jmmv Exp $
 
-Now copy the sample script in ${PREFIX}/etc/rc.d/delegated.sh.sample
-to ${PREFIX}/etc/rc.d/delegated.sh and edit it according to your
-needs.
+Now copy the sample script in ${PREFIX}/etc/rc.d/delegated to
+/etc/rc.d/delegated and edit it according to your needs.
 
 Don't forget to specify a correct e-mail address for ADMIN.
 
