@@ -1,0 +1,32 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/10/15 05:36:43 xtraeme Exp $
+bin/starfighter
+share/doc/starfighter/LICENSE
+share/doc/starfighter/ammo.gif
+share/doc/starfighter/cash.gif
+share/doc/starfighter/index.html
+share/doc/starfighter/plasmaAmmo.png
+share/doc/starfighter/plasmaDamage.png
+share/doc/starfighter/plasmaRate.png
+share/doc/starfighter/rocketAmmo.png
+share/doc/starfighter/sflogo.gif
+share/doc/starfighter/shield.gif
+share/doc/starfighter/superCharge.png
+share/doc/starfighter/targetArrow.png
+share/starfighter/music/3DParadise.mod
+share/starfighter/music/Artificial.mod
+share/starfighter/music/DigitalInferno.mod
+share/starfighter/music/Frantic.mod
+share/starfighter/music/HardTranceDub.mod
+share/starfighter/music/IntoTheMachine.mod
+share/starfighter/music/LoopsAndTings.mod
+share/starfighter/music/Lunatic.mod
+share/starfighter/music/Platinum.mod
+share/starfighter/music/Solace.s3m
+share/starfighter/music/TempoTrance.mod
+share/starfighter/music/ToxicFriend.mod
+share/starfighter/music/TranceGeneration.mod
+share/starfighter/music/Wybierak.mod
+share/starfighter/starfighter.pak
+@dirrm share/starfighter/music
+@dirrm share/starfighter
+@dirrm share/doc/starfighter
