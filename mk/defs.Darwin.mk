@@ -1,4 +1,4 @@
-# $NetBSD: defs.Darwin.mk,v 1.72 2004/04/27 13:43:05 tv Exp $
+# $NetBSD: defs.Darwin.mk,v 1.73 2004/05/04 00:11:23 danw Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -10,6 +10,9 @@ CHOWN?=		/usr/sbin/chown
 CHGRP?=		/usr/bin/chgrp
 CMP?=		/usr/bin/cmp
 CP?=		/bin/cp
+.if !defined(CPP) || ${CPP} == "cpp"
+CPP=		${CC} -E ${CPP_PRECOMP_FLAGS}
+.endif
 CUT?=		/usr/bin/cut
 DATE?=		/bin/date
 DC?=		/usr/bin/dc
