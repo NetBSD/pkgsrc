@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2003/08/05 08:54:21 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2003/10/05 12:34:04 wiz Exp $
 bin/tuxpaint
 bin/tuxpaint-import
 man/man1/tuxpaint-import.1
@@ -168,15 +168,18 @@ ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/tuxpaint.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/tuxpaint.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/tuxpaint.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/tuxpaint.mo
+${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/tuxpaint.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/tuxpaint.mo
 ${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/tuxpaint.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/tuxpaint.mo
 ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/tuxpaint.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/tuxpaint.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/tuxpaint.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/tuxpaint.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/tuxpaint.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/tuxpaint.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/tuxpaint.mo
+${PKGLOCALEDIR}/locale/wa/LC_MESSAGES/tuxpaint.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/tuxpaint.mo
 share/tuxpaint/brushes/round_06.png
 share/tuxpaint/brushes/round_12.png
@@ -198,11 +201,19 @@ share/tuxpaint/brushes/square_36.png
 share/tuxpaint/brushes/square_12.png
 share/tuxpaint/brushes/square_fuzz.png
 share/tuxpaint/brushes/x.png
+share/tuxpaint/fonts/FreeMono.ttf
+share/tuxpaint/fonts/FreeMonoBold.ttf
+share/tuxpaint/fonts/FreeMonoBoldOblique.ttf
+share/tuxpaint/fonts/FreeMonoOblique.ttf
+share/tuxpaint/fonts/FreeSans.ttf
+share/tuxpaint/fonts/FreeSansBold.ttf
+share/tuxpaint/fonts/FreeSansBoldOblique.ttf
+share/tuxpaint/fonts/FreeSansOblique.ttf
+share/tuxpaint/fonts/FreeSerif.ttf
+share/tuxpaint/fonts/FreeSerifBold.ttf
+share/tuxpaint/fonts/FreeSerifBoldItalic.ttf
+share/tuxpaint/fonts/FreeSerifItalic.ttf
 share/tuxpaint/fonts/default_font.ttf
-share/tuxpaint/fonts/efont_serif.ttf
-share/tuxpaint/fonts/efont_serif_b.ttf
-share/tuxpaint/fonts/efont_serif_bi.ttf
-share/tuxpaint/fonts/efont_serif_i.ttf
 share/tuxpaint/images/icon-win32.png
 share/tuxpaint/images/icon.png
 share/tuxpaint/images/icon16x16.png

@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.5 2003/08/05 08:54:23 wiz Exp $
+$NetBSD: patch-aa,v 1.6 2003/10/05 12:34:04 wiz Exp $
 
---- Makefile.orig	Wed Feb 19 08:27:22 2003
+--- Makefile.orig	Tue Aug 19 11:17:38 2003
 +++ Makefile
 @@ -11,7 +11,7 @@
  
@@ -33,12 +33,12 @@ $NetBSD: patch-aa,v 1.5 2003/08/05 08:54:23 wiz Exp $
  
  # The entire set of CFLAGS:
  
--CFLAGS=-O2 -Wall $(SDL_CFLAGS) -DDATA_PREFIX=\"$(DATA_PREFIX)\" \
-+CFLAGS+=-Wall $(SDL_CFLAGS) -DDATA_PREFIX=\"$(DATA_PREFIX)\" \
+-CFLAGS=-O2 -Wall
++CFLAGS+=-Wall
+ DEFS=-DDATA_PREFIX=\"$(DATA_PREFIX)\" \
  	-D$(NOSOUNDFLAG) -DDOC_PREFIX=\"$(DOC_PREFIX)\" \
  	-DLOCALEDIR=\"$(LOCALE_PREFIX)\" -DCONFDIR=\"$(CONFDIR)\"
- 
-@@ -132,8 +125,7 @@ beos:
+@@ -129,8 +122,7 @@ beos:
  # to do this as superuser ("root"))
  
  install:	install-bin install-data install-man install-doc \
@@ -48,7 +48,7 @@ $NetBSD: patch-aa,v 1.5 2003/08/05 08:54:23 wiz Exp $
  		install-default-config
  	@echo
  	@echo "--------------------------------------------------------------"
-@@ -244,9 +236,9 @@ uninstall:
+@@ -245,9 +237,9 @@ uninstall:
  install-default-config:
  	@echo
  	@echo "...Installing default config file..."
@@ -61,12 +61,12 @@ $NetBSD: patch-aa,v 1.5 2003/08/05 08:54:23 wiz Exp $
  
  
  # Install a launcher icon in the Gnome menu, under "Graphics"
-@@ -510,7 +502,7 @@ install-man:
+@@ -527,7 +519,7 @@ install-man:
  tuxpaint:	obj/tuxpaint.o $(ARCH_LIBS)
  	@echo
  	@echo "...Linking Tux Paint..."
--	@$(CC) $(CFLAGS) -o tuxpaint obj/tuxpaint.o $(ARCH_LIBS) $(SDL_LIBS) \
-+	@$(CC) $(CFLAGS) ${LDFLAGS} -o tuxpaint obj/tuxpaint.o $(ARCH_LIBS) $(SDL_LIBS) \
+-	@$(CC) $(CFLAGS) $(SDL_CFLAGS) $(DEFS) \
++	@$(CC) $(CFLAGS) $(LDFLAGS) $(SDL_CFLAGS) $(DEFS) \
+ 		-o tuxpaint obj/tuxpaint.o $(ARCH_LIBS) $(SDL_LIBS) \
  		-lm $(ARCH_LINKS)
  	@$(RSRC_CMD)
- 	@$(MIMESET_CMD)
