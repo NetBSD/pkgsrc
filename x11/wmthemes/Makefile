@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2000/07/09 21:12:55 tron Exp $
+# $NetBSD: Makefile,v 1.20 2000/12/12 02:10:19 wiz Exp $
 
 DISTNAME=	wmthemes-0.62.x
 CATEGORIES=	x11
@@ -8,7 +8,7 @@ DISTFILES=	${THEME_FILES}
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://wm.themes.org/
 
-DEPENDS+=	windowmaker-*:../../x11/windowmaker
+DEPENDS+=	windowmaker-*:../../wm/windowmaker
 
 DIST_SUBDIR=	wmthemes
 
