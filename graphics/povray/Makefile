@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2004/01/03 18:49:44 reed Exp $
+# $NetBSD: Makefile,v 1.22 2004/04/24 00:57:50 wiz Exp $
 
 DISTNAME=	povuni_s
 PKGNAME=	povray-3.50c
@@ -18,8 +18,8 @@ WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
 USE_X11=	YES
 GNU_CONFIGURE=	YES
-USE_BUILDLINK2=	YES
-USE_GCC_SHLIB=	YES
+USE_BUILDLINK3=	YES
+USE_LANGUAGES=	c c++
 USE_PKGINSTALL=	YES
 
 CONFIGURE_ARGS=	--sysconfdir=${PKG_SYSCONFDIR}
@@ -34,8 +34,8 @@ SUBST_FILES.povini=	povray.ini
 SUBST_SED.povini=	-e 's|/usr/local|${PREFIX}|'
 SUBST_STAGE.povini=	post-patch
 
-.include "../../graphics/jpeg/buildlink2.mk"
-.include "../../graphics/png/buildlink2.mk"
-.include "../../graphics/tiff/buildlink2.mk"
+.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
+.include "../../graphics/tiff/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
