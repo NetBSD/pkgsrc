@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2004/06/22 08:50:22 salo Exp $
+# $NetBSD: Makefile,v 1.4 2004/07/01 16:28:33 seb Exp $
 #
 
 DISTNAME=	wmi-8
+PKGREVISION=	1
 CATEGORIES=	wm
 MASTER_SITES=	http://download.berlios.de/wmi/
 
@@ -14,4 +15,5 @@ USE_LANGUAGES=	c c++
 USE_X11=	yes
 GNU_CONFIGURE=	yes
 
+.include "../../fonts/Xft2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
