@@ -1,2 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/05/12 15:36:04 mjl Exp $
+@comment $NetBSD: PLIST,v 1.2 2000/09/03 13:30:06 wiz Exp $
 bin/pstree
+share/doc/pstree/README
+@dirrm share/doc/pstree
