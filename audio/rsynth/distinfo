@@ -1,0 +1,13 @@
+$NetBSD: distinfo,v 1.1 2001/12/22 04:11:40 fredb Exp $
+
+SHA1 (rsynth/rsynth-2.0.tar.gz) = 50693c68eb74cf82405c7d402d31d3c811ad4515
+Size (rsynth/rsynth-2.0.tar.gz) = 110319 bytes
+SHA1 (rsynth/README) = 80539b75a807d4b042e63def6507fef30ba99af2
+Size (rsynth/README) = 3247 bytes
+SHA1 (rsynth/cmudict.0.4.Z) = af82175ee86ddd6fe160a2cdd60f10b7115259ed
+Size (rsynth/cmudict.0.4.Z) = 1069362 bytes
+SHA1 (rsynth/cmulex.0.4.Z) = 33ac72b29cc82e7d896a90bd34fb6db3917f3724
+Size (rsynth/cmulex.0.4.Z) = 430761 bytes
+SHA1 (rsynth/phoneset.0.4) = 8c7e386dbaf33a4e16debd4c538a154a247c1e97
+Size (rsynth/phoneset.0.4) = 629 bytes
+SHA1 (patch-aa) = 59b0b765461adec5140a8867c7a668cd87d71281

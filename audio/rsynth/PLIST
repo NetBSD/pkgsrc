@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2001/12/22 04:11:39 fredb Exp $
+bin/dlookup
+bin/mkdictdb
+bin/say
+libdata/rsynth/aDict.db
+share/rsynth/README
+share/rsynth/cmudict.0.4.Z
+share/rsynth/cmulex.0.4.Z
+share/rsynth/phoneset.0.4
+@dirrm libdata/rsynth
+@dirrm share/rsynth
