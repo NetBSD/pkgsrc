@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink.mk,v 1.12 2001/06/20 23:49:43 jlam Exp $
+# $NetBSD: bsd.buildlink.mk,v 1.13 2001/06/21 03:45:03 jlam Exp $
 #
 # This Makefile fragment is included by package buildlink.mk files.  This
 # file does the following things:
@@ -141,5 +141,27 @@ _BUILDLINK_CONFIG_WRAPPER_USE: .USE
 		${CHMOD} +x ${BUILDLINK_CONFIG_WRAPPER.${.TARGET:S/-buildlink-config-wrapper//}}; \
 		${TOUCH} ${TOUCH_FLAGS} $${cookie};			\
 	fi
+
+.if defined(USE_LIBTOOL)
+post-build: buildlink-fix-libtool-archives
+
+# Note: This target _MUST_ know something about libtool internals to correctly
+#       fix the references to ${BUILDLINK_DIR} into ${LOCALBASE}.
+#
+buildlink-fix-libtool-archives:
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	cookie=${BUILDLINK_DIR}/.buildlink_fix_libtool_archives_done;	\
+	if [ ! -f $${cookie} ]; then					\
+		${ECHO_MSG} "Fixing directory references in libtool archives."; \
+		lai_files=`${FIND} ${WRKSRC} -name "*.lai"`;		\
+		for file in $${lai_files}; do				\
+			${MV} -f $${file} $${file}.fixme;		\
+			${SED} -e "s|-L${BUILDLINK_DIR}|-L${LOCALBASE}|g" \
+				$${file}.fixme > $${file};		\
+			${RM} -f $${file}.fixme;			\
+		done;							\
+		${TOUCH} ${TOUCH_FLAGS} $${cookie};			\
+	fi
+.endif
 
 .endif	# _BSD_BUILDLINK_MK
