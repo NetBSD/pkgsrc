@@ -1,0 +1,12 @@
+$NetBSD: patch-aj,v 1.1 2001/04/02 11:08:15 minoura Exp $
+--- gsm/manager.c.orig	Fri Nov  3 02:20:50 2000
++++ gsm/manager.c	Mon Apr  2 19:53:40 2001
+@@ -307,7 +307,7 @@
+       if (restart_info)
+ 	free (restart_info);
+ 
+-      if (errno)
++      if (pid < 0)
+ 	{
+ 	  if (strcmp (command, SmRestartCommand) || client->connection)
+ 	    {
