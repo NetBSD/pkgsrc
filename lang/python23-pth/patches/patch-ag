@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.1.1.1 2003/08/04 08:29:32 drochner Exp $
+
+--- configure.orig	2003-08-03 13:46:44.000000000 +0200
++++ configure	2003-08-03 13:47:19.000000000 +0200
+@@ -1243,7 +1243,7 @@
+ mv confdefs.h.new confdefs.h
+ 
+ 
+-VERSION=2.3
++VERSION=2p3
+ 
+ 
+ SOVERSION=1.0
