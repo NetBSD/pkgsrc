@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.18 2002/08/07 06:10:34 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.19 2002/08/07 19:29:30 jlam Exp $
 #
 # This Makefile fragment is included by packages that use readline().
 #
@@ -31,7 +31,12 @@ _NEED_GNU_READLINE=	NO
 .  else
 _NEED_GNU_READLINE=	YES
 .  endif
-_INCOMPAT_READLINE?=	# should be set from defs.${OPSYS}.mk
+#
+# This catch-all for SunOS is probably too broad, but better to err on
+# the safe side.  We can narrow down the match when we have better
+# information.
+#
+_INCOMPAT_READLINE=	SunOS-*-*
 INCOMPAT_READLINE?=	# empty
 .  for _pattern_ in ${_INCOMPAT_READLINE} ${INCOMPAT_READLINE}
 .    if !empty(MACHINE_PLATFORM:M${_pattern_})
