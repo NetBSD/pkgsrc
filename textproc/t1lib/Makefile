@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1999/09/24 01:00:03 fredb Exp $
+# $NetBSD: Makefile,v 1.4 1999/10/28 14:29:20 agc Exp $
 #
 
 DISTNAME=	t1lib-0.9.2
@@ -18,7 +18,7 @@ MESSAGE_FILE=	${WRKDIR}/MESSAGE
 ALL_TARGET=	without_doc
 
 post-build:
-	${SED} s^@@PREFIX@@^${PREFIX}^g < ${PKGDIR}/MESSAGE > ${WRKDIR}/MESSAGE
+	${SED} -e 's|@@PREFIX@@|${PREFIX}|g' < ${PKGDIR}/MESSAGE > ${WRKDIR}/MESSAGE
 
 post-install:
 	${MKDIR} ${PREFIX}/share/t1lib
@@ -29,8 +29,8 @@ post-install:
 	cd ${WRKSRC}/examples; \
 	  ${PAX} -r -w FontDataBase README.t1example1 t1example1.c t1lib.config \
 	      ${PREFIX}/share/examples/t1lib
-	${SED} -e s^@@X11BASE@@^${X11BASE}^g -e s^@@LOCALBASE@@^${LOCALBASE}^g \
-	    -e s^@@PREFIX@@^${PREFIX}^g < ${FILESDIR}/t1lib.config.netbsd \
+	${SED} -e 's|@@X11BASE@@|${X11BASE}|g' -e 's|@@LOCALBASE@@|${LOCALBASE}|g' \
+	    -e 's|@@PREFIX@@|${PREFIX}|g' < ${FILESDIR}/t1lib.config.netbsd \
 	    > ${PREFIX}/share/examples/t1lib/t1lib.config.netbsd
 	if [ ! -f ${PREFIX}/share/t1lib/t1lib.config ]; then \
 	  ${CP} ${PREFIX}/share/examples/t1lib/t1lib.config.netbsd \
