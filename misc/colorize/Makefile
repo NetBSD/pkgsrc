@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/07/17 21:48:48 grant Exp $
+# $NetBSD: Makefile,v 1.8 2003/07/21 17:01:13 martti Exp $
 #
 
 DISTNAME=	colorize_0.3.0
@@ -10,7 +10,7 @@ EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	zuntum@NetBSD.org
 HOMEPAGE=	http://nrg.martos.bme.hu/release/colorize/
-COMMENT=	log colorize perl script
+COMMENT=	Log colorize perl script
 
 NO_BUILD=	yes
 USE_PERL5=	yes
