@@ -1,0 +1,22 @@
+$NetBSD: patch-al,v 1.1 2001/05/25 06:16:18 rh Exp $
+
+--- calendar/gui/alarm-notify/Makefile.in.orig	Fri May 25 07:40:13 2001
++++ calendar/gui/alarm-notify/Makefile.in
+@@ -185,7 +185,7 @@
+ evolution_alarm_notify_SOURCES =  	$(CORBA_GENERATED)			alarm-notify.c				alarm-notify.h				alarm-queue.c				alarm-queue.h				notify-main.c
+ 
+ 
+-evolution_alarm_notify_LDADD =  	libalarm.a							$(top_builddir)/calendar/cal-client/libcal-client.la		$(top_builddir)/calendar/cal-util/libcal-util.la		$(top_builddir)/libical/src/libical/libical.la			$(BONOBO_VFS_GNOME_LIBS)					$(EXTRA_GNOME_LIBS)						$(INTLLIBS)
++evolution_alarm_notify_LDADD =  	libalarm.a							$(top_builddir)/calendar/cal-client/libcal-client.la		$(top_builddir)/calendar/cal-util/libcal-util.la		-L`pwd` -lical			$(BONOBO_VFS_GNOME_LIBS)					$(EXTRA_GNOME_LIBS)						$(INTLLIBS)
+ 
+ 
+ # evolution_alarm_client_SOURCES =	\
+@@ -337,6 +337,8 @@
+ 	done
+ 
+ evolution-alarm-notify: $(evolution_alarm_notify_OBJECTS) $(evolution_alarm_notify_DEPENDENCIES)
++	cp $(top_builddir)/libical/src/libical/.libs/libical.a .
++	-cp $(top_builddir)/libical/src/libical/.libs/libical.so* .
+ 	@rm -f evolution-alarm-notify
+ 	$(LINK) $(evolution_alarm_notify_LDFLAGS) $(evolution_alarm_notify_OBJECTS) $(evolution_alarm_notify_LDADD) $(LIBS)
+ 
