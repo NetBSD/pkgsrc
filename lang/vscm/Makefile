@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2001/04/02 20:07:03 zuntum Exp $
+# $NetBSD: Makefile,v 1.6 2001/04/12 20:21:59 jtb Exp $
 
 DISTNAME=	vscmV0r4
-PKGNAME=	vscm-0.4
+PKGNAME=	vscm-0.4nb1
 CATEGORIES=	lang
 MASTER_SITES=	ftp://ftp.cs.indiana.edu/pub/scheme-repository/imp/vscm/
 
@@ -18,9 +18,9 @@ post-patch:
 	${SED} -e "s,@PREFIX@,${PREFIX}," ${FILESDIR}/path.h >${WRKSRC}/path.h
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/scheme ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/vscm ${PREFIX}/bin
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/vscm
-	${INSTALL_DATA} ${WRKSRC}/.scheme-boot ${PREFIX}/lib/vscm/scheme-boot
+	${INSTALL_DATA} ${WRKSRC}/.scheme-boot ${PREFIX}/lib/vscm/vscm-boot
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/vscm
 	for i in README INSTALL DESCRIPTION; do \
 		${INSTALL_DATA} ${WRKSRC}/$$i ${PREFIX}/share/examples/vscm; \
