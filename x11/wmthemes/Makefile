@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 1999/03/20 00:21:50 tron Exp $
+# $NetBSD: Makefile,v 1.11 1999/04/08 00:32:20 tron Exp $
 
 DISTNAME=	wmthemes-0.51.x
 CATEGORIES=	x11
@@ -28,12 +28,12 @@ do-install:
 	@${RM} -f ${PLIST_SRC}
 	@${TOUCH} ${PLIST_SRC}
 .for DIR in ${THEME_SUBDIRS}
-	@if [ -d ${WRKSRC}/${DIR} ]; then \
+	@if [ -d ${WRKSRC}/${DIR} ] && [ -n "`ls ${WRKSRC}/${DIR}`" ]; then \
 	  ${ECHO} "Installing files in directory ${DIR}."; \
 	  cd ${WRKSRC}/${DIR}; \
 	  for FILE in *; do \
 	    ${INSTALL_DATA} "$$FILE" ${PREFIX}/${WM_DATADIR}/${DIR}; \
-	    ${ECHO} ${WM_DATADIR}/${DIR}/$$FILE >>${PLIST_SRC}; \
+	    ${ECHO} "${WM_DATADIR}/${DIR}/$$FILE" >>${PLIST_SRC}; \
 	  done; \
 	fi
 .endfor
