@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2001/02/19 17:08:13 jtb Exp $
+@comment $NetBSD: PLIST,v 1.3 2001/02/24 22:51:05 jtb Exp $
 bin/greencard-nhc98
 bin/harch
 bin/hi
@@ -7,40 +7,62 @@ bin/hood
 bin/hp2graph
 bin/nhc98
 bin/rtb
+include/nhc98/Array.T.hi
 include/nhc98/Array.hi
 include/nhc98/BinArray.hi
+include/nhc98/Binary.T.hi
 include/nhc98/Binary.hi
 include/nhc98/Bit.hi
 include/nhc98/CPUTime.hi
+include/nhc98/Char.T.hi
 include/nhc98/Char.hi
+include/nhc98/Complex.T.hi
 include/nhc98/Complex.hi
 include/nhc98/DPrelude.hi
 include/nhc98/DbgIface.hi
 include/nhc98/DbgStub.hi
 include/nhc98/Directory.hi
+include/nhc98/FFI.T.hi
 include/nhc98/FFI.hi
+include/nhc98/FFIBuiltin.T.hi
 include/nhc98/FFIBuiltin.hi
 include/nhc98/GreenCard.gc
 include/nhc98/GreenCard.hi
 include/nhc98/Haskell.hi
+include/nhc98/HsFFI.h
+include/nhc98/IO.T.hi
 include/nhc98/IO.hi
+include/nhc98/IOExtras.T.hi
 include/nhc98/IOExtras.hi
+include/nhc98/Ix.T.hi
 include/nhc98/Ix.hi
+include/nhc98/List.T.hi
 include/nhc98/List.hi
 include/nhc98/Locale.hi
+include/nhc98/Maybe.T.hi
 include/nhc98/Maybe.hi
+include/nhc98/Monad.T.hi
 include/nhc98/Monad.hi
 include/nhc98/NonStdEval.hi
+include/nhc98/NonStdGetPID.hi
 include/nhc98/NonStdProfile.hi
+include/nhc98/NonStdTrace.T.hi
 include/nhc98/NonStdTrace.hi
+include/nhc98/NonStdUnsafeCoerce.T.hi
 include/nhc98/NonStdUnsafeCoerce.hi
+include/nhc98/Numeric.T.hi
 include/nhc98/Numeric.hi
 include/nhc98/Observe.hi
+include/nhc98/PackedString.T.hi
 include/nhc98/PackedString.hi
+include/nhc98/Prelude.T.hi
 include/nhc98/Prelude.hi
+include/nhc98/PreludeBuiltin.T.hi
 include/nhc98/PreludeBuiltin.hi
 include/nhc98/Random.hi
+include/nhc98/Ratio.T.hi
 include/nhc98/Ratio.hi
+include/nhc98/System.T.hi
 include/nhc98/System.hi
 include/nhc98/Time.hi
 include/nhc98/Warning.hi
@@ -61,25 +83,6 @@ include/nhc98/newmacros.h
 include/nhc98/node.h
 include/nhc98/runtime.h
 include/nhc98/stableptr.h
-include/nhc98/tracer/Binary.hi
-include/nhc98/tracer/Char.hi
-include/nhc98/tracer/Complex.hi
-include/nhc98/tracer/FFIBuiltin.hi
-include/nhc98/tracer/IO.hi
-include/nhc98/tracer/Ix.hi
-include/nhc98/tracer/List.hi
-include/nhc98/tracer/Maybe.hi
-include/nhc98/tracer/Monad.hi
-include/nhc98/tracer/NonStdTrace.hi
-include/nhc98/tracer/NonStdUnsafeCoerce.hi
-include/nhc98/tracer/Numeric.hi
-include/nhc98/tracer/PackedString.hi
-include/nhc98/tracer/PrelRatio.hi
-include/nhc98/tracer/Prelude.hi
-include/nhc98/tracer/PreludeBuiltin.hi
-include/nhc98/tracer/Ratio.hi
-include/nhc98/tracer/System.hi
-include/nhc98/tracer/Text.hi
 include/nhc98/twopass.h
 lib/hmake/${HARCH}/HInteractive
 lib/hmake/${HARCH}/MkProg
@@ -90,6 +93,7 @@ lib/nhc98/${HARCH}/Prelude.a
 lib/nhc98/${HARCH}/Runtime.a
 lib/nhc98/${HARCH}/config
 lib/nhc98/${HARCH}/greencard-nhc98
+lib/nhc98/${HARCH}/hmake-PRAGMA
 lib/nhc98/${HARCH}/hmake.config
 lib/nhc98/${HARCH}/libdebug.a
 lib/nhc98/${HARCH}/main.o
@@ -147,6 +151,20 @@ share/doc/nhc98/fig3.html
 share/doc/nhc98/fig4.html
 share/doc/nhc98/greencard-york.html
 share/doc/nhc98/greencard.html
+share/doc/nhc98/hat/browser-detail.html
+share/doc/nhc98/hat/compiler.gif
+share/doc/nhc98/hat/compiler2.gif
+share/doc/nhc98/hat/faq.html
+share/doc/nhc98/hat/feature-table.html
+share/doc/nhc98/hat/index.html
+share/doc/nhc98/hat/limitations-detail.html
+share/doc/nhc98/hat/limitations.html
+share/doc/nhc98/hat/maillist.html
+share/doc/nhc98/hat/old-tracing.html
+share/doc/nhc98/hat/paper.dvi
+share/doc/nhc98/hat/people.html
+share/doc/nhc98/hat/proposal.html
+share/doc/nhc98/hat/tracing.html
 share/doc/nhc98/hatuser.ps
 share/doc/nhc98/hatuser.tex
 share/doc/nhc98/history.html
@@ -168,6 +186,7 @@ share/doc/nhc98/libs/Binary.html
 share/doc/nhc98/libs/Bit.html
 share/doc/nhc98/libs/OldBinary.html
 share/doc/nhc98/libs/Time.html
+share/doc/nhc98/libs/index.html
 share/doc/nhc98/limits.html
 share/doc/nhc98/limits.html.inst
 share/doc/nhc98/maillist.html
@@ -180,15 +199,15 @@ share/doc/nhc98/todo.html
 share/doc/nhc98/tracer.html
 share/doc/nhc98/windows.html
 share/doc/nhc98/york-release.html
-@dirrm share/doc/nhc98/libs
-@dirrm share/doc/nhc98/implementation-notes
-@dirrm share/doc/nhc98/hmake
-@dirrm share/doc/nhc98/examples
-@dirrm share/doc/nhc98/bugs
-@dirrm share/doc/nhc98
+@dirrm include/nhc98
 @dirrm lib/nhc98/${HARCH}
 @dirrm lib/nhc98
 @dirrm lib/hmake/${HARCH}
 @dirrm lib/hmake
-@dirrm include/nhc98/tracer
-@dirrm include/nhc98
+@dirrm share/doc/nhc98/bugs
+@dirrm share/doc/nhc98/examples
+@dirrm share/doc/nhc98/hat
+@dirrm share/doc/nhc98/hmake
+@dirrm share/doc/nhc98/implementation-notes
+@dirrm share/doc/nhc98/libs
+@dirrm share/doc/nhc98
