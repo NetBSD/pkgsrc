@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/01/03 17:23:27 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2000/10/31 15:52:20 agc Exp $
 
 --- Makefile.orig	Wed Oct 27 02:07:38 1999
 +++ Makefile	Mon Jan  3 03:31:03 2000
@@ -21,12 +21,11 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/01/03 17:23:27 wiz Exp $
  
  # uncomment this if your system has no joystick include file
  # JOYSTICK = -DNO_JOYSTICK
-@@ -47,7 +49,7 @@
+@@ -47,7 +49,6 @@
  
  .EXPORT_ALL_VARIABLES:
  
 -MAKE = make
-+MAKE = gmake
  
  SRC_DIR = src
  MAKE_CMD = @$(MAKE) -C $(SRC_DIR)
