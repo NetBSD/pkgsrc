@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.7 2000/09/13 16:53:57 wennmach Exp $
+
+We need to add a #define since mpz_add is really only a macro expanding
+to __gmpz_add.
+
+--- configure.orig	Mon Oct 18 07:23:53 1999
++++ configure	Wed Sep 13 18:17:53 2000
+@@ -3434,6 +3434,7 @@
+ cat > conftest.$ac_ext <<EOF
+ #line 3436 "configure"
+ #include "confdefs.h"
++#define mpz_add __gmpz_add
+ /* Override any gcc2 internal prototype to avoid an error.  */
+ /* We use char because int might match the return type of a gcc2
+     builtin and then its argument prototype would still apply.  */

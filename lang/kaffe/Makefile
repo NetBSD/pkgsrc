@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2000/03/21 22:40:56 tron Exp $
+# $NetBSD: Makefile,v 1.28 2000/09/13 16:53:56 wennmach Exp $
 #
 
 DISTNAME=		kaffe-1.0.5
+PKGNAME=		kaffe-1.0.5nb1
 CATEGORIES=		lang
 MASTER_SITES=		ftp://ftp.kaffe.org/pub/kaffe/
 
@@ -11,6 +12,7 @@ HOMEPAGE=		http://www.kaffe.org/
 DEPENDS+=		jpeg-6b:../../graphics/jpeg
 DEPENDS+=		png>=1.0.6:../../graphics/png
 DEPENDS+=		libungif-*:../../graphics/libungif
+DEPENDS+=		gmp>=3.0.0:../../devel/gmp
 
 USE_X11=		yes
 
