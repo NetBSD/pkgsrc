@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.30 2002/04/09 22:50:02 jlam Exp $
+# $NetBSD: Makefile.common,v 1.31 2002/05/16 21:55:31 cjep Exp $
 #
 
 DISTNAME=		xscreensaver-4.02
@@ -48,6 +48,10 @@ CFLAGS+=		-I/usr/include/kerberosIV
 .else
 CONFIGURE_ARGS+=	--without-kerberos
 .endif
+.endif
+
+.if (${MACHINE_ARCH} == "arm32")
+. include "../../lang/gcc/Makefile.gcc"
 .endif
 
 post-patch:
