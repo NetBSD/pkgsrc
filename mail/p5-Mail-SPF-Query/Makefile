@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2004/02/18 00:23:31 heinz Exp $
+# $NetBSD: Makefile,v 1.3 2004/03/07 01:50:25 heinz Exp $
 
-DISTNAME=		Mail-SPF-Query-1.991
+DISTNAME=		Mail-SPF-Query-1.996
 PKGNAME=                p5-${DISTNAME}
 SVR4_PKGNAME=		p5msq
 CATEGORIES=		mail perl5
@@ -8,10 +8,11 @@ MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Mail/}
 
 MAINTAINER=		heinz@NetBSD.org
 HOMEPAGE=		http://spf.pobox.com/
-COMMENT=		Perl module for Sender-Permitted-From queries
+COMMENT=		Perl module for Sender-Policy-Framework queries
 
-DEPENDS+=		p5-Net-DNS>=0.33:../../net/p5-Net-DNS
+DEPENDS+=		p5-Net-DNS>=0.46:../../net/p5-Net-DNS
 DEPENDS+=		p5-Net-CIDR-Lite>=0.15:../../net/p5-Net-CIDR-Lite
+DEPENDS+=		p5-Sys-Hostname-Long-[0-9]*:../../sysutils/p5-Sys-Hostname-Long
 # needs URI::Escape >= 3.20
 DEPENDS+=		p5-URI>=1.18:../../www/p5-URI
 
