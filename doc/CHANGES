@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.934 2002/12/28 19:50:29 jschauma Exp $
+$NetBSD: CHANGES,v 1.935 2002/12/28 21:51:58 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -4291,3 +4291,14 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated sysbuild to 1.7 [jmmv 2002-12-28]
 	Added fooseti-0.6.6 [jmmv 2002-12-28]
 	Updated xforms to 1.0 [jschauma 2002-12-28]
+	Updated dap to 2.1.2nb2 [jschauma 2002-12-28]
+	Updated xchiplogo to 19991222nb2 [jschauma 2002-12-28]
+	Updated xisp to 2.6p1nb2 [jschauma 2002-12-28]
+	Updated xmysql to 1.10nb2 [jschauma 2002-12-28]
+	Updated xmysqladmin to 1.0nb2 [jschauma 2002-12-28]
+	Updated xsqlmenu to 2.10nb2 [jschauma 2002-12-28]
+	Updated xfmail to 1.4.7nb3 [jschauma 2002-12-28]
+	Updated xrmftp to 1.2.4nb1 [jschauma 2002-12-28]
+	Updated cjk-lyx to 1.2.0nb1 [jschauma 2002-12-28]
+	Updated lyx to 1.2.1nb1 [jschauma 2002-12-28]
+	Updated xldlas to 0.85nb2 [jschauma 2002-12-28]
