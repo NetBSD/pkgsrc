@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2004/08/18 12:41:32 adam Exp $
+$NetBSD: distinfo,v 1.10 2004/11/22 13:58:28 adam Exp $
 
-SHA1 (gmp-4.1.3.tar.bz2) = 7852a552b8a173d1d99328a826301df528565969
-Size (gmp-4.1.3.tar.bz2) = 1679079 bytes
+SHA1 (gmp-4.1.4.tar.bz2) = 21bf0e934fb31784487827f358e00077602145e7
+Size (gmp-4.1.4.tar.bz2) = 1681267 bytes
 SHA1 (patch-aa) = 6e143257bd0ce6a99fa81fc2e2b4476c7be77077
