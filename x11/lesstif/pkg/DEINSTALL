@@ -1,11 +1,14 @@
 #!/bin/sh
 #
-# $NetBSD: DEINSTALL,v 1.3 2001/07/02 19:58:30 jlam Exp $
+# $NetBSD: DEINSTALL,v 1.4 2001/08/08 07:37:51 jlam Exp $
 
 PKGNAME=$1
 STAGE=$2
 
 LOCALBASE="@LOCALBASE@"
+
+CP="@CP@"
+GREP="@GREP@"
 RM="@RM@"
 RMDIR="@RMDIR@"
 TRUE="@TRUE@"
@@ -15,6 +18,14 @@ DEINSTALL)
 	;;
 
 POST-DEINSTALL)
+	X11_HOSTDEF=${PKG_PREFIX}/lib/X11/config/host.def
+
+	echo -n "Updating ${X11_HOSTDEF}..."
+	${CP} -f ${X11_HOSTDEF} ${X11_HOSTDEF}.bak
+	( ${GREP} -v LessTif ${X11_HOSTDEF}.bak || ${TRUE} ) \
+		> ${X11_HOSTDEF}
+	echo "done."
+
 	if [ ${PKG_PREFIX} != ${LOCALBASE} ]
 	then
 		${RM} -f ${LOCALBASE}/share/aclocal/ac_find_motif.m4
