@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.3 2002/11/21 13:00:02 grant Exp $
+
+--- Makefile.in.orig	Wed Jun 19 19:09:53 2002
++++ Makefile.in
+@@ -113,7 +113,7 @@ sedpath = @sedpath@
+ 
+ SUBDIRS = src $(SERVERTEST) docs scripts
+ 
+-confdir = $(sysconfdir)
++confdir = $(datadir)/examples/@PACKAGE@
+ conf_DATA = irssi.conf
+ 
+ themedir = $(datadir)/irssi/themes
