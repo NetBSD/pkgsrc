@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.154 1998/09/01 13:15:29 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.155 1998/09/01 21:21:09 mellon Exp $
 #
 # This file is in the public domain.
 #
@@ -299,21 +299,21 @@ PORTSUBDIR=		${__canonical_CURDIR:S,${__canonical_PKGSRCDIR}/,,}
 .endif
 
 # A few aliases for *-install targets
-INSTALL_PROGRAM= \
+INSTALL_PROGRAM?= \
 	${INSTALL} ${COPY} ${STRIPFLAG} -o ${BINOWN} -g ${BINGRP} -m ${BINMODE}
-INSTALL_SCRIPT= \
+INSTALL_SCRIPT?= \
 	${INSTALL} ${COPY} -o ${BINOWN} -g ${BINGRP} -m ${BINMODE}
-INSTALL_DATA= \
+INSTALL_DATA?= \
 	${INSTALL} ${COPY} -o ${SHAREOWN} -g ${SHAREGRP} -m ${SHAREMODE}
-INSTALL_MAN= \
+INSTALL_MAN?= \
 	${INSTALL} ${COPY} -o ${MANOWN} -g ${MANGRP} -m ${MANMODE}
-INSTALL_PROGRAM_DIR= \
+INSTALL_PROGRAM_DIR?= \
 	${INSTALL} -d -o ${BINOWN} -g ${BINGRP} -m ${BINMODE}
-INSTALL_SCRIPT_DIR= \
+INSTALL_SCRIPT_DIR?= \
 	${INSTALL_PROGRAM_DIR}
-INSTALL_DATA_DIR= \
+INSTALL_DATA_DIR?= \
 	${INSTALL} -d -o ${SHAREOWN} -g ${SHAREGRP} -m ${BINMODE}
-INSTALL_MAN_DIR= \
+INSTALL_MAN_DIR?= \
 	${INSTALL} -d -o ${MANOWN} -g ${MANGRP} -m ${BINMODE}
 
 INSTALL_MACROS=	BSD_INSTALL_PROGRAM="${INSTALL_PROGRAM}" \
