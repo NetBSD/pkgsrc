@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1998/10/21 19:16:46 garbled Exp $
+@unexec %D/bin/install-info --delete %D/info/fftw.info %D/info/dir
+info/fftw.info
+info/fftw.info-1
+info/fftw.info-2
+info/fftw.info-3
+@exec %D/bin/install-info %D/info/fftw.info %D/info/dir
+include/fftw.h
+include/rfftw.h
+lib/libfftw.a
+lib/librfftw.a
