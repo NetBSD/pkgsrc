@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 1998/09/04 02:30:25 tron Exp $
+# $NetBSD: Makefile,v 1.22 1999/01/04 09:30:46 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.30 1997/12/14 02:03:53 asami Exp
 #
 
@@ -10,6 +10,8 @@ MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.gnu.org/software/emacs/emacs.html
 
 CONFLICTS=	emacs-20.2
+
+NOT_FOR_ARCHS=	mips	# ${WRKSRC}/src/m/{pmax.h,mips.h} need porting
 
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
