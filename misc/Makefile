@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.159 2003/06/29 23:03:57 gson Exp $
+# $NetBSD: Makefile,v 1.160 2003/07/08 08:55:01 wiz Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -12,6 +12,7 @@ SUBDIR+=	bbweather
 SUBDIR+=	bidwatcher
 SUBDIR+=	blackbook
 SUBDIR+=	bottlerocket
+SUBDIR+=	brs
 SUBDIR+=	buffer
 SUBDIR+=	celestia
 SUBDIR+=	celestia-gnome
