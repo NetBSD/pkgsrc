@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/07/25 12:44:33 wulf Exp $
+# $NetBSD: Makefile,v 1.2 2000/09/24 23:23:33 wulf Exp $
 #
 
 DISTNAME=	bacisrc
@@ -12,6 +12,8 @@ MAINTAINER=	wulf@netbsd.org
 HOMEPAGE=	http://www.mines.edu/fs_home/tcamp/baci/
 
 PLIST_SRC=      ${WRKDIR}/PLIST
+
+DEPENDS+=	bison-*:../../devel/bison
 
 do-build:
 		cd ${WRKSRC}/ccomp && ${MAKE}
