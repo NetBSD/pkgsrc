@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2004/10/03 00:18:27 tv Exp $
+# $NetBSD: Makefile,v 1.33 2004/12/28 08:02:33 minskim Exp $
 #
 
 DISTNAME=	webalizer-2.01-10-src
@@ -29,6 +29,10 @@ CONF_FILES=	${EGDIR}/webalizer.conf.sample ${PKG_SYSCONFDIR}/webalizer.conf
 
 INSTALLATION_DIRS=	bin man/man1 share/examples
 
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../graphics/freetype2/buildlink3.mk"
+.include "../../graphics/gd/buildlink3.mk"
+
 post-build:
 	cd ${WRKSRC}; for file in sample.conf webalizer.1; do		\
 		${SED}	-e "s|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g"	\
@@ -36,6 +40,4 @@ post-build:
 		${MV} -f ${WRKSRC}/$${file}.fixed ${WRKSRC}/$${file};	\
 	done
 
-.include "../../graphics/freetype2/buildlink3.mk"
-.include "../../graphics/gd/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
