@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.209 1999/02/03 15:11:46 tv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.210 1999/02/11 14:42:08 tv Exp $
 #
 # This file is in the public domain.
 #
@@ -1144,9 +1144,16 @@ _PORT_USE: .USE
 			${SCRIPTDIR}/${.TARGET:S/^real-/post-/}; \
 	fi
 .if make(real-install)
+.if exists(/usr/bin/install-info)
+	@if [ -f ${LOCALBASE}/info/dir ]; then \
+		rm -f ${LOCALBASE}/info/dir; \
+		ln -s /usr/share/info/dir ${LOCALBASE}/info/dir; \
+	fi
+.endif
 	@for f in ${INFO_FILES}; do		\
-		${ECHO} "${LOCALBASE}/bin/install-info --info-dir=${PREFIX}/info ${PREFIX}/info/$$f";	\
-		${LOCALBASE}/bin/install-info --info-dir=${PREFIX}/info ${PREFIX}/info/$$f;		\
+		${ECHO} "install-info --info-dir=${LOCALBASE}/info ${PREFIX}/info/$$f";	\
+		install-info --remove --info-dir=${LOCALBASE}/info ${PREFIX}/info/$$f;		\
+		install-info --info-dir=${LOCALBASE}/info ${PREFIX}/info/$$f;		\
 	done
 	@(newmanpages=`/usr/bin/egrep -h				\
 		'^([^/]*/)*man/([^/]*/)?(man[1-9ln]/.*\.[1-9ln]|cat[1-9ln]/.*\.0)(\.gz)?$$'	\
