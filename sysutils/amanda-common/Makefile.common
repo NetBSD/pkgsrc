@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.14 2004/11/20 23:10:32 kim Exp $
+# $NetBSD: Makefile.common,v 1.15 2004/12/28 09:06:42 minskim Exp $
 #
 # common make file fragment shared by all amanda-* pkgs.
 #
@@ -31,7 +31,7 @@ LTCONFIG_OVERRIDE=	${WRKSRC}/config/ltconfig
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-user=${AMANDA_USER}
 CONFIGURE_ARGS+=	--with-group=${AMANDA_GROUP}
-CONFIGURE_ARGS+=	--with-owner=root
+CONFIGURE_ARGS+=	--with-owner=${ROOT_USER}
 CONFIGURE_ARGS+=	--with-mmap
 CONFIGURE_ARGS+=	--with-amandahosts
 CONFIGURE_ARGS+=	--with-tmpdir=${AMANDA_TMP}
