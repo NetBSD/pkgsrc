@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 1998/10/12 01:30:13 kim Exp $
+# $NetBSD: Makefile,v 1.7 1998/11/04 00:06:32 bad Exp $
 
 DISTNAME=	ntop-1.0
 CATEGORIES=	net
-MASTER_SITES=	${HOMEPAGE}/download/source/
+MASTER_SITES=	ftp://ftp.unipi.it/pub/local/ntop/source/
 EXTRACT_SUFX=	.src.tar.gz
 
 MAINTAINER=	kim@tac.nyc.ny.us
