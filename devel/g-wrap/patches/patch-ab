@@ -1,0 +1,22 @@
+$NetBSD: patch-ab,v 1.6 2005/03/07 00:36:45 wiz Exp $
+
+--- libffi/configure.orig	2005-03-01 18:52:45.000000000 +0100
++++ libffi/configure
+@@ -19916,7 +19916,7 @@ m68k-*-linux*) TARGET=M68K; TARGETDIR=m6
+ mips64*-*);;
+ mips-sgi-irix5.* | mips-sgi-irix6.*) TARGET=MIPS_IRIX; TARGETDIR=mips;;
+ mips*-*-linux*) TARGET=MIPS_LINUX; TARGETDIR=mips;;
+-powerpc*-*-linux* | powerpc-*-sysv*) TARGET=POWERPC; TARGETDIR=powerpc;;
++powerpc*-*-linux* | powerpc-*-netbsd* | powerpc-*-sysv*) TARGET=POWERPC; TARGETDIR=powerpc;;
+ powerpc-*-beos*) TARGET=POWERPC; TARGETDIR=powerpc;;
+ powerpc-*-darwin*) TARGET=POWERPC_DARWIN; TARGETDIR=powerpc;;
+ powerpc-*-aix*) TARGET=POWERPC_AIX; TARGETDIR=powerpc;;
+@@ -19925,7 +19925,7 @@ arm*-*-linux-*) TARGET=ARM; TARGETDIR=ar
+ arm*-*-netbsdelf* | arm*-*-knetbsd*-gnu) TARGET=ARM; TARGETDIR=arm;;
+ s390-*-linux-*) TARGET=S390; TARGETDIR=s390;;
+ s390x-*-linux-*) TARGET=S390; TARGETDIR=s390;;
+-x86_64-*-linux* | x86_64-*-freebsd* | x86_64-*-kfreebsd*-gnu) TARGET=X86_64; TARGETDIR=x86;;
++x86_64-*-linux* | x86_64-*-freebsd* | x86_64-*-kfreebsd*-gnu | x86_64-*-netbsd*) TARGET=X86_64; TARGETDIR=x86;;
+ sh-*-linux* | sh[34]*-*-linux*) TARGET=SH; TARGETDIR=sh;;
+ sh64-*-linux* | sh5*-*-linux*) TARGET=SH64; TARGETDIR=sh64;;
+ hppa-*-linux* | parisc-*-linux*) TARGET=PA; TARGETDIR=pa;;
