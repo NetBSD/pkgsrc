@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/02/22 01:40:04 schmonz Exp $
+
+--- examples/Makefile.orig	Mon May 19 15:35:20 2003
++++ examples/Makefile
+@@ -1,6 +1,4 @@
+-AR = ar
+-RM = rm
+-CC = gcc -I../libtcpa -DTPMLOG=NULL
++CC := ${CC} -I../libtcpa -DTPMLOG=NULL
+ LIBS = ../libtcpa/libtcpa.a -lcrypto
+ 
+ all: tcpa_demo takeown createkey loadkey evictkey signfile \
