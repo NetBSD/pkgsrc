@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2004/05/09 13:24:59 grant Exp $
+# $NetBSD: Makefile,v 1.10 2004/08/05 22:18:38 recht Exp $
 #
 
-DISTNAME=		libXfixes-2.0.0
+DISTNAME=		libXfixes-2.0.1
 PKGNAME=		${DISTNAME:S/libX/X/}
 CATEGORIES=		x11 devel
 MASTER_SITES=		http://freedesktop.org/~xlibs/release/
