@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.4 2003/12/10 17:13:22 jdolecek Exp $
+
+--- sanei/sanei_usb.c.orig	2003-12-10 17:59:14.000000000 +0100
++++ sanei/sanei_usb.c	2003-12-10 17:59:27.000000000 +0100
+@@ -206,7 +206,7 @@
+ #if defined(__linux__)
+     "/dev/", "usbscanner",
+     "/dev/usb/", "scanner",
+-#elif defined(__FreeBSD__)
++#elif defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__)
+     "/dev/", "uscanner",
+ #endif
+     0, 0
