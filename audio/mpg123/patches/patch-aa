@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.17 2002/04/25 16:34:16 abs Exp $
+$NetBSD: patch-aa,v 1.18 2002/06/22 17:56:37 kent Exp $
 
---- Makefile.orig	Thu Feb 28 10:17:44 2002
-+++ Makefile	Thu Feb 28 10:19:04 2002
-@@ -54,6 +54,10 @@
+--- Makefile.orig	Sun Jun 23 02:08:27 2002
++++ Makefile
+@@ -54,6 +54,15 @@
  	@echo "make aix-tk3play    IBM AIX"
  	@echo "make os2            IBM OS/2"
  	@echo "make netbsd         NetBSD"
@@ -10,45 +10,15 @@ $NetBSD: patch-aa,v 1.17 2002/04/25 16:34:16 abs Exp $
 +	@echo "make netbsd-i386    NetBSD optimized for i386"
 +	@echo "make netbsd-i386-elf NetBSD optimized for i386, ELF format"
 +	@echo "make netbsd-m68k    NetBSD optimized for m68k"
++	@echo "make netbsd-esd     NetBSD"
++	@echo "make netbsd-arm-esd NetBSD for strongarm"
++	@echo "make netbsd-i386-esd NetBSD optimized for i386"
++	@echo "make netbsd-i386-elf-esd NetBSD optimized for i386, ELF format"
++	@echo "make netbsd-m68k-esd    NetBSD optimized for m68k"
  	@echo "make bsdos          BSDI BSD/OS"
  	@echo "make bsdos4         BSDI BSD/OS 4.0"
  	@echo "make bsdos-nas      BSDI BSD/OS with NAS support"
-@@ -377,6 +381,34 @@
- 			-funroll-all-loops  -finline-functions' \
- 		mpg123-make
- 
-+netbsd-i386-elf:
-+	$(MAKE) CC=cc LDFLAGS= \
-+		OBJECTS='decode_i386.o dct64_i386.o decode_i586.o \
-+			audio_sun.o term.o' \
-+		CFLAGS='$(CFLAGS) -Wall -ansi -pedantic -O4 -fomit-frame-pointer \
-+			-funroll-all-loops -ffast-math -DROT_I386 \
-+			-DI386_ASSEM -DPENTIUM_OPT -DREAL_IS_FLOAT -DUSE_MMAP \
-+			-DREAD_MMAP -DNETBSD -DTERM_CONTROL' \
-+		mpg123-make
-+
-+netbsd-m68k:
-+	$(MAKE) CC=cc LDFLAGS= \
-+		OBJECTS='decode.o dct64.o audio_sun.o term.o' \
-+		CFLAGS='$(CFLAGS) -Wall -ansi -pedantic -O3 -fomit-frame-pointer \
-+			-ffast-math -DREAL_IS_FLOAT -DREAD_MMAP \
-+			-DUSE_MMAP -DNETBSD -DM68K_ASSEM -DTERM_CONTROL' \
-+		mpg123-make
-+
-+netbsd-arm:
-+	$(MAKE) CC=cc LDFLAGS= \
-+		OBJECTS='decode.o dct64.o audio_sun.o term.o' \
-+		CFLAGS='$(CFLAGS) -Wall -O6 -fomit-frame-pointer \
-+			-funroll-all-loops -finline-functions -ffast-math \
-+			-march=armv4 -mtune=strongarm -mcpu=strongarm \
-+			-DREAL_IS_FIXED -DUSE_MMAP -DREAD_MMAP -DTERM_CONTROL \
-+			-DNETBSD' \
-+		mpg123-make
-+
- solaris-gcc-esd:
- 	$(MAKE) CC=gcc LDFLAGS='-lsocket -lnsl' \
- 		AUDIO_LIB='-lesd -lresolv' \
-@@ -496,18 +528,18 @@
+@@ -496,18 +505,64 @@
  
  netbsd:
  	$(MAKE) CC=cc LDFLAGS= \
@@ -61,16 +31,62 @@ $NetBSD: patch-aa,v 1.17 2002/04/25 16:34:16 abs Exp $
 +			-DREAL_IS_FLOAT -DUSE_MMAP -DTERM_CONTROL -DNETBSD' \
  		mpg123-make
  
- netbsd-i386:
+-netbsd-i386:
++netbsd-esd:
  	$(MAKE) CC=cc LDFLAGS= \
 -		OBJECTS='decode_i386.o dct64_i386.o audio_sun.o' \
 -		CFLAGS='$(CFLAGS) -Wall -ansi -pedantic -O4 -m486 -fomit-frame-pointer \
--			-funroll-all-loops -ffast-math -DROT_I386 \
--			-DI386_ASSEM -DREAL_IS_FLOAT -DUSE_MMAP -DNETBSD' \
-+		OBJECTS='decode_i386.o dct64_i386.o audio_sun.o term.o' \
++		AUDIO_LIB="`$(ESD_CONFIG) --libs`" \
++		OBJECTS='decode.o dct64.o $(GETBITS) audio_esd.o term.o' \
++		CFLAGS='$(CFLAGS) -Wall -ansi -pedantic -O3 -fomit-frame-pointer \
++			-funroll-all-loops -ffast-math -DREAD_MMAP \
++			-DREAL_IS_FLOAT -DUSE_MMAP -DTERM_CONTROL -DNETBSD \
++			`$(ESD_CONFIG) --cflags`' \
++		mpg123-make
++
++netbsd-i386-esd:
++	$(MAKE) CC=cc LDFLAGS= \
++		AUDIO_LIB="`$(ESD_CONFIG) --libs`" \
++		OBJECTS='decode_i386.o dct64_i386.o $(GETBITS) audio_esd.o term.o' \
 +		CFLAGS='$(CFLAGS) -Wall -ansi -pedantic -O4 -fomit-frame-pointer \
 +			-funroll-all-loops -ffast-math -DROT_I386 -DREAD_MMAP \
-+			-DI386_ASSEM -DREAL_IS_FLOAT -DUSE_MMAP -DTERM_CONTROL -DNETBSD' \
++			-DI386_ASSEM -DREAL_IS_FLOAT -DUSE_MMAP -DTERM_CONTROL -DNETBSD \
++			`$(ESD_CONFIG) --cflags`' \
++		mpg123-make
++
++netbsd-i386-elf-esd:
++	echo GETBITS: $(GETBITS)
++	$(MAKE) CC=cc LDFLAGS= \
++		AUDIO_LIB="`$(ESD_CONFIG) --libs`" \
++		OBJECTS='decode_i386.o dct64_i386.o decode_i586.o \
++			$(GETBITS) audio_esd.o term.o' \
++		CFLAGS='$(CFLAGS) -Wall -ansi -pedantic -O4 -fomit-frame-pointer \
+ 			-funroll-all-loops -ffast-math -DROT_I386 \
+-			-DI386_ASSEM -DREAL_IS_FLOAT -DUSE_MMAP -DNETBSD' \
++			-DI386_ASSEM -DPENTIUM_OPT -DREAL_IS_FLOAT -DUSE_MMAP \
++			-DREAD_MMAP -DNETBSD -DTERM_CONTROL \
++			`$(ESD_CONFIG) --cflags`' \
++		mpg123-make
++
++netbsd-m68k-esd:
++	$(MAKE) CC=cc LDFLAGS= \
++		AUDIO_LIB="`$(ESD_CONFIG) --libs`" \
++		OBJECTS='decode.o dct64.o $(GETBITS) audio_esd.o term.o' \
++		CFLAGS='$(CFLAGS) -Wall -ansi -pedantic -O3 -fomit-frame-pointer \
++			-ffast-math -DREAL_IS_FLOAT -DREAD_MMAP \
++			-DUSE_MMAP -DNETBSD -DM68K_ASSEM -DTERM_CONTROL \
++			`$(ESD_CONFIG) --cflags`' \
++		mpg123-make
++
++netbsd-arm-esd:
++	$(MAKE) CC=cc LDFLAGS= \
++		AUDIO_LIB="`$(ESD_CONFIG) --libs`" \
++		OBJECTS='decode.o dct64.o $(GETBITS) audio_esd.o term.o' \
++		CFLAGS='$(CFLAGS) -Wall -O6 -fomit-frame-pointer \
++			-funroll-all-loops -finline-functions -ffast-math \
++			-march=armv4 -mtune=strongarm -mcpu=strongarm \
++			-DREAL_IS_FIXED -DUSE_MMAP -DREAD_MMAP -DTERM_CONTROL \
++			-DNETBSD `$(ESD_CONFIG) --cflags`' \
  		mpg123-make
  
  bsdos:
