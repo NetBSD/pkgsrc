@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2000/08/31 22:32:27 jwise Exp $
+# $NetBSD: Makefile,v 1.18 2001/02/17 17:06:37 wiz Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/09/14 04:00:00 jfitz Exp
 #
 
@@ -9,6 +9,7 @@ MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Tk/}
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://theory.uwinnipeg.ca/CPAN/data/Tk/pod/overview.html
+COMMENT=		perl5 interface to Tk-8.0.5
 
 BUILD_DEPENDS= 		${PERL5_SITEARCH}/auto/HTML/Parser/.packlist:../../www/p5-HTML-Parser
 DEPENDS+=		tk-8.3.2:../../x11/tk

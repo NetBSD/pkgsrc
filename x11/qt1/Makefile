@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2000/07/07 13:28:55 wulf Exp $
+# $NetBSD: Makefile,v 1.8 2001/02/17 17:06:40 wiz Exp $
 #
 
 DISTNAME=	qt-1.44
@@ -9,6 +9,7 @@ MASTER_SITES=	ftp://ftp.troll.no/qt/source/ \
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.troll.no/products/qt.html
+COMMENT=	C++ X GUI toolkit
 
 USE_X11BASE=	yes
 USE_GMAKE=	yes

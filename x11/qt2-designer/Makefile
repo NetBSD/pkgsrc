@@ -1,9 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2001/02/06 09:26:11 skrll Exp $
+# $NetBSD: Makefile,v 1.7 2001/02/17 17:06:41 wiz Exp $
 #
 
 .include "../qt2-libs/Makefile.common"
 
 PKGNAME=	qt2-designer-${QTVERSION}
+
+COMMENT=	Visual (WYSIWYG) QT GUI builder
 
 DEPENDS+=	qt2-libs-${QTVERSION}:../../x11/qt2-libs
 

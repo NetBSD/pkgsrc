@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/12/26 10:47:20 hubertf Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/17 17:07:03 wiz Exp $
 
 DISTNAME=	xdaemon-2.0
 CATEGORIES=	games x11
@@ -7,6 +7,7 @@ DISTFILES=	${PIX} Daemon.README
 
 MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://www.netbsd.org/
+COMMENT=	The BSD Daemon sticking on your desktop (like xteddy)
 
 DEPENDS+=	xteddy-2.*:../xteddy2
 

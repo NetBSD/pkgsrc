@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2001/01/29 11:34:49 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2001/02/17 17:06:50 wiz Exp $
 # FreeBSD Id: Makefile,v 1.28 1997/12/08 15:51:20 tg Exp
 #
 
@@ -10,6 +10,7 @@ MASTER_SITES=		ftp://tkman.sourceforge.net/pub/tkman/ \
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://tkman.sourceforge.net/
+COMMENT=		Tcl/Tk based manual browser
 
 DEPENDS+=		glimpse-4.1:../../textproc/glimpse
 DEPENDS+=		rman-3.0.*:../../textproc/rman
