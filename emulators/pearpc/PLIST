@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/06/20 19:33:19 xtraeme Exp $
+bin/pearpc
+share/pearpc/ppc
+share/pearpc/video.x
+share/examples/pearpc/ppccfg.example
+@dirrm share/examples/pearpc
+@dirrm share/pearpc
