@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2002/10/12 15:32:15 tron Exp $
+# $NetBSD: Makefile,v 1.16 2002/10/13 12:00:30 wiz Exp $
 
 DISTNAME=	bidwatcher-1.3.5
 CATEGORIES=	misc
@@ -13,6 +13,7 @@ HOMEPAGE=       http://sourceforge.net/projects/bidwatcher/
 COMMENT=        eBay snipe tool
 
 GNU_CONFIGURE=		YES
+USE_BUILDLINK2=		YES
 USE_GMAKE=		YES
 AUTOMAKE_OVERRIDE=	NO
 
@@ -27,5 +28,5 @@ post-install:
 	${INSTALL_DATA_DIR} ${HTMLDIR}
 	${INSTALL_DATA} ${WRKSRC}/quick_start.html ${HTMLDIR}
 
-.include "../../x11/gtk/buildlink.mk"
+.include "../../x11/gtk/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/08/17 21:16:50 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2002/10/13 12:03:30 wiz Exp $
 #
 
 DISTNAME=	${PKGNAME:S,manedit-,manedit,}
@@ -13,7 +13,7 @@ COMMENT=	UNIX Manual (man, manpage) page editor, viewer, and browser for X11
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/manedit
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=	YES
 
 MAKE_ENV+=	CPP="${CXX}"
 
@@ -32,5 +32,5 @@ do-install:
 	cd ${WRKSRC} && ${INSTALL_DATA} manedit.xpm			\
 		${PREFIX}/share/manedit/icons
 
-.include "../../x11/gtk/buildlink.mk"
+.include "../../x11/gtk/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

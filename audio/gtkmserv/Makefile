@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/02/26 01:37:20 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2002/10/13 12:04:19 wiz Exp $
 #
 
 DISTNAME=	gtkmserv-0.5.2
@@ -11,10 +11,10 @@ COMMENT=	gtk-based GUI client for the audio/mserv package
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/src
 GNU_CONFIGURE=		YES
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 
 do-install:
 		${INSTALL_PROGRAM} ${WRKSRC}/gtkMserv ${PREFIX}/bin
 
-.include "../../x11/gtk/buildlink.mk"
+.include "../../x11/gtk/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

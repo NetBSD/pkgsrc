@@ -1,15 +1,13 @@
-$NetBSD: patch-aa,v 1.2 2002/03/04 17:32:51 jmc Exp $
+$NetBSD: patch-aa,v 1.3 2002/10/13 12:04:20 wiz Exp $
 
 --- Makefile.in.orig	Tue Jan 30 02:20:31 2001
 +++ Makefile.in	Mon Mar  4 17:25:06 2002
 @@ -1,7 +1,7 @@
 -CC = gcc -Wall -ggdb
--LIBS = `gtk-config --libs`
 +CC = gcc -Wall
-+LIBS = `${GTK_CONFIG} --libs`
+ LIBS = `gtk-config --libs`
  LIBS_DEBUG = -lefence
--CFLAGS = `gtk-config --cflags`
-+CFLAGS = `${GTK_CONFIG} --cflags`
+ CFLAGS = `gtk-config --cflags`
  
  SRCS = main.c  menu.c  mserv.c  on.c  setup.c  utils.c  window.c  album.c \
         queue.c
