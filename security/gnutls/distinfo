@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/05/14 03:46:44 salo Exp $
+$NetBSD: distinfo,v 1.2 2003/12/06 00:52:21 xtraeme Exp $
 
-SHA1 (gnutls-0.8.7.tar.gz) = db3ec6a15a453778c8638de46109283fba7d53af
-Size (gnutls-0.8.7.tar.gz) = 998594 bytes
+SHA1 (gnutls-1.0.0.tar.gz) = 8ce5b31b264878489608347ab89426b6f98edb4f
+Size (gnutls-1.0.0.tar.gz) = 1360099 bytes
