@@ -1,73 +1,65 @@
-@comment $NetBSD: PLIST,v 1.4 2002/06/26 10:29:45 seb Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/10/05 21:15:48 agc Exp $
 bin/d2c
 bin/dybug
 bin/mindy
 bin/mindycomp
 bin/mindyexec
+etc/aide.db
 include/runtime.h
-lib/dylan/${DYLAN_VERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/base-file-system-lib.dbc
-lib/dylan/${DYLAN_VERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/base-file-system.lib.du
-lib/dylan/${DYLAN_VERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/collection-extensions-lib.dbc
-lib/dylan/${DYLAN_VERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/collection-extensions.lib.du
-lib/dylan/${DYLAN_VERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/dylan-lib.dbc
-lib/dylan/${DYLAN_VERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/dylan.lib.du
-lib/dylan/${DYLAN_VERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/format-lib.dbc
-lib/dylan/${DYLAN_VERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/format-out-lib.dbc
-lib/dylan/${DYLAN_VERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/format-out.lib.du
-lib/dylan/${DYLAN_VERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/format.lib.du
-lib/dylan/${DYLAN_VERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/garbage-collection.lib.du
-lib/dylan/${DYLAN_VERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/inspector-base-lib.dbc
-lib/dylan/${DYLAN_VERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/libbase-file-system-dylan.a
-lib/dylan/${DYLAN_VERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/libcollection-extensions-dylan.a
-lib/dylan/${DYLAN_VERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/libdylan-dylan.a
-lib/dylan/${DYLAN_VERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/libformat-dylan.a
-lib/dylan/${DYLAN_VERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/libformat-out-dylan.a
-lib/dylan/${DYLAN_VERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/libgarbage-collection-dylan.a
-lib/dylan/${DYLAN_VERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/libgc.a
-lib/dylan/${DYLAN_VERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/libmatrix-dylan.a
-lib/dylan/${DYLAN_VERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/libmelange-support-dylan.a
-lib/dylan/${DYLAN_VERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/libparse-arguments-dylan.a
-lib/dylan/${DYLAN_VERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/libprint-dylan.a
-lib/dylan/${DYLAN_VERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/librandom-dylan.a
-lib/dylan/${DYLAN_VERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/libregular-expressions-dylan.a
-lib/dylan/${DYLAN_VERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/libruntime.a
-lib/dylan/${DYLAN_VERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/libstandard-io-dylan.a
-lib/dylan/${DYLAN_VERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/libstream-extensions-dylan.a
-lib/dylan/${DYLAN_VERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/libstreams-dylan.a
-lib/dylan/${DYLAN_VERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/libstring-extensions-dylan.a
-lib/dylan/${DYLAN_VERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/libtable-extensions-dylan.a
-lib/dylan/${DYLAN_VERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/libtime-dylan.a
-lib/dylan/${DYLAN_VERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/libtranscendental-dylan.a
-lib/dylan/${DYLAN_VERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/matrix-lib.dbc
-lib/dylan/${DYLAN_VERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/matrix.lib.du
-lib/dylan/${DYLAN_VERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/melange-support.lib.du
-lib/dylan/${DYLAN_VERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/parse-arguments-lib.dbc
-lib/dylan/${DYLAN_VERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/parse-arguments.lib.du
-lib/dylan/${DYLAN_VERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/print-lib.dbc
-lib/dylan/${DYLAN_VERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/print.lib.du
-lib/dylan/${DYLAN_VERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/random-lib.dbc
-lib/dylan/${DYLAN_VERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/random.lib.du
-lib/dylan/${DYLAN_VERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/regular-expressions-lib.dbc
-lib/dylan/${DYLAN_VERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/regular-expressions.lib.du
-lib/dylan/${DYLAN_VERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/standard-io-lib.dbc
-lib/dylan/${DYLAN_VERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/standard-io.lib.du
-lib/dylan/${DYLAN_VERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/stream-extensions-lib.dbc
-lib/dylan/${DYLAN_VERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/stream-extensions.lib.du
-lib/dylan/${DYLAN_VERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/streams-lib.dbc
-lib/dylan/${DYLAN_VERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/streams.lib.du
-lib/dylan/${DYLAN_VERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/string-extensions-lib.dbc
-lib/dylan/${DYLAN_VERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/string-extensions.lib.du
-lib/dylan/${DYLAN_VERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/table-extensions-lib.dbc
-lib/dylan/${DYLAN_VERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/table-extensions.lib.du
-lib/dylan/${DYLAN_VERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/text-inspector-lib.dbc
-lib/dylan/${DYLAN_VERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/time-lib.dbc
-lib/dylan/${DYLAN_VERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/time.lib.du
-lib/dylan/${DYLAN_VERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/tk-lib.dbc
-lib/dylan/${DYLAN_VERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/transcendental-lib.dbc
-lib/dylan/${DYLAN_VERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/transcendental.lib.du
-lib/dylan/${DYLAN_VERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/x-inspector-lib.dbc
+lib/dylan/${PKGVERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/base-file-system-lib.dbc
+lib/dylan/${PKGVERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/base-file-system.lib.du
+lib/dylan/${PKGVERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/collection-extensions-lib.dbc
+lib/dylan/${PKGVERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/collection-extensions.lib.du
+lib/dylan/${PKGVERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/dylan-lib.dbc
+lib/dylan/${PKGVERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/dylan.lib.du
+lib/dylan/${PKGVERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/format-lib.dbc
+lib/dylan/${PKGVERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/format.lib.du
+lib/dylan/${PKGVERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/garbage-collection.lib.du
+lib/dylan/${PKGVERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/inspector-base-lib.dbc
+lib/dylan/${PKGVERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/libbase-file-system-dylan.la
+lib/dylan/${PKGVERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/libcollection-extensions-dylan.la
+lib/dylan/${PKGVERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/libdylan-dylan.la
+lib/dylan/${PKGVERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/libformat-dylan.la
+lib/dylan/${PKGVERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/libgarbage-collection-dylan.la
+lib/dylan/${PKGVERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/libmelange-support-dylan.la
+lib/dylan/${PKGVERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/libparse-arguments-dylan.la
+lib/dylan/${PKGVERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/libprint-dylan.la
+lib/dylan/${PKGVERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/librandom-dylan.la
+lib/dylan/${PKGVERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/libregular-expressions-dylan.la
+lib/dylan/${PKGVERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/libruntime.la
+lib/dylan/${PKGVERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/libstandard-io-dylan.la
+lib/dylan/${PKGVERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/libstream-extensions-dylan.la
+lib/dylan/${PKGVERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/libstreams-dylan.la
+lib/dylan/${PKGVERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/libstring-extensions-dylan.la
+lib/dylan/${PKGVERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/libtable-extensions-dylan.la
+lib/dylan/${PKGVERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/libtranscendental-dylan.la
+lib/dylan/${PKGVERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/melange-support.lib.du
+lib/dylan/${PKGVERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/parse-arguments-lib.dbc
+lib/dylan/${PKGVERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/parse-arguments.lib.du
+lib/dylan/${PKGVERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/print-lib.dbc
+lib/dylan/${PKGVERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/print.lib.du
+lib/dylan/${PKGVERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/random-lib.dbc
+lib/dylan/${PKGVERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/random.lib.du
+lib/dylan/${PKGVERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/regular-expressions-lib.dbc
+lib/dylan/${PKGVERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/regular-expressions.lib.du
+lib/dylan/${PKGVERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/standard-io-lib.dbc
+lib/dylan/${PKGVERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/standard-io.lib.du
+lib/dylan/${PKGVERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/stream-extensions-lib.dbc
+lib/dylan/${PKGVERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/stream-extensions.lib.du
+lib/dylan/${PKGVERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/streams-lib.dbc
+lib/dylan/${PKGVERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/streams.lib.du
+lib/dylan/${PKGVERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/string-extensions-lib.dbc
+lib/dylan/${PKGVERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/string-extensions.lib.du
+lib/dylan/${PKGVERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/table-extensions-lib.dbc
+lib/dylan/${PKGVERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/table-extensions.lib.du
+lib/dylan/${PKGVERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/text-inspector-lib.dbc
+lib/dylan/${PKGVERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/tk-lib.dbc
+lib/dylan/${PKGVERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/transcendental-lib.dbc
+lib/dylan/${PKGVERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/transcendental.lib.du
+lib/dylan/${PKGVERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/x-inspector-lib.dbc
 man/man1/d2c.1
 man/man1/dybug.1
+man/man1/gobject-tool.1
 man/man1/make-dylan-app.1
 man/man1/melange.1
 man/man1/mindy.1
@@ -79,10 +71,10 @@ man/man7/dylan.7
 man/man7/gwydion.7
 share/dylan/platforms.descr
 @dirrm share/dylan
-@exec ${MKDIR} %D/lib/dylan/${DYLAN_VERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/elisp
-@dirrm lib/dylan/${DYLAN_VERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/elisp
-@exec ${MKDIR} %D/lib/dylan/${DYLAN_VERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/dylan-user
-@dirrm lib/dylan/${DYLAN_VERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/dylan-user
-@dirrm lib/dylan/${DYLAN_VERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc
-@dirrm lib/dylan/${DYLAN_VERSION}
+@exec ${MKDIR} %D/lib/dylan/${PKGVERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/elisp
+@dirrm lib/dylan/${PKGVERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/elisp
+@exec ${MKDIR} %D/lib/dylan/${PKGVERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/dylan-user
+@dirrm lib/dylan/${PKGVERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/dylan-user
+@dirrm lib/dylan/${PKGVERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc
+@dirrm lib/dylan/${PKGVERSION}
 @dirrm lib/dylan
