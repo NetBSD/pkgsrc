@@ -1,7 +1,7 @@
-$NetBSD: patch-ag,v 1.1.1.1 2003/07/22 17:24:50 drochner Exp $
+$NetBSD: patch-ag,v 1.2 2003/08/23 15:02:29 drochner Exp $
 
---- sip/qtuimod.sip.orig	2003-07-05 12:53:06.000000000 +0200
-+++ sip/qtuimod.sip	2003-07-22 15:20:50.000000000 +0200
+--- sip/qtuimod.sip.orig	2003-08-17 14:27:48.000000000 +0200
++++ sip/qtuimod.sip	2003-08-22 20:03:35.000000000 +0200
 @@ -58,12 +58,12 @@
  
  TEMPLATE = lib
@@ -10,7 +10,7 @@ $NetBSD: patch-ag,v 1.1.1.1 2003/07/22 17:24:50 drochner Exp $
 +#DESTDIR = @BL_DESTDIR@
  CONFIG += qt warn_off @BL_DEBUG@ @BL_SIP@ @BL_DLL@ @BL_THREAD@
  INCLUDEPATH = @BL_INCLUDEPATH@
- DEFINES = SIP_MAKE_MODULE_DLL @BL_DEFINES@
+ DEFINES = @BL_DEFINES@
  
 -sip3:unix:LIBS += -L@BL_DESTDIR@ -lqtcmodule -L@BL_SIPMODDIR@ -lsip -lqui
 +sip3:unix:LIBS += -L@BL_DESTDIR@ -lqtcmodule -L@BL_SIPMODDIR@ -Wl,-R@BL_SIPMODDIR@ -lsip -lqui
