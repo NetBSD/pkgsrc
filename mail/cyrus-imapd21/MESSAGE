@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2004/02/14 18:03:03 snj Exp $
+$NetBSD: MESSAGE,v 1.2 2004/02/14 18:28:25 snj Exp $
 
 Please also refer to:
 
@@ -15,4 +15,5 @@ Note anyone upgrading from an earlier version of cyrus should read:
 
 Also note that cyrus-imapd now uses saslauthd rather then pwcheck by
 default.
+
 ===========================================================================
