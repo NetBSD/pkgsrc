@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2004/04/12 13:55:59 tron Exp $
+# $NetBSD: Makefile,v 1.8 2004/04/14 15:45:45 manu Exp $
 
-DISTNAME=	milter-greylist-1.0.2
-PKGREVISION=	1
+DISTNAME=	milter-greylist-1.2
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.espci.fr/pub/milter-greylist/
 EXTRACT_SUFX=	.tgz
@@ -14,7 +13,9 @@ USE_PKGINSTALL=	YES
 USE_BUILDLINK2= YES
 
 HAS_CONFIGURE=	YES
-CONFIGURE_ARGS+=--with-user=smmsp --prefix=${PREFIX}
+CONFIGURE_ARGS+=--with-user=smmsp
+CONFIGURE_ARGS+=--with-libspf_alt=${PREFIX}
+CONFIGURE_ARGS+=--prefix=${PREFIX}
 ALL_TARGET=	milter-greylist
 
 PKG_GROUPS=	smmsp
@@ -29,5 +30,6 @@ post-install:
 	  ${PREFIX}/share/examples/milter-greylist
 
 .include "../../mail/libmilter/buildlink2.mk"
+.include "../../mail/libspf-alt/buildlink2.mk"
 .include "../../mk/pthread.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
