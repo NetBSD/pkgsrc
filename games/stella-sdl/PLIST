@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/06/05 11:58:43 dillo Exp $
+bin/stella
+share/doc/html/stella/graphics/chucky_cheese.png
+share/doc/html/stella/graphics/circuit.png
+share/doc/html/stella/graphics/console.png
+share/doc/html/stella/graphics/jr_pacman.png
+share/doc/html/stella/graphics/pacman.png
+share/doc/html/stella/graphics/secret_quest.png
+share/doc/html/stella/graphics/space_invaders.png
+share/doc/html/stella/stella.html
+share/examples/stella/stellarc.default
+share/stella/stella.pro
+@dirrm share/doc/html/stella/graphics
+@dirrm share/doc/html/stella
+@dirrm share/stella
