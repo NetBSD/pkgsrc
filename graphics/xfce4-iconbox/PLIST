@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.2 2003/12/03 05:34:08 martti Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/12/22 08:50:38 martti Exp $
 bin/xfce4-iconbox
 lib/xfce4/mcs-plugins/xfce4-iconbox_settings.a
 lib/xfce4/mcs-plugins/xfce4-iconbox_settings.la
 lib/xfce4/mcs-plugins/xfce4-iconbox_settings.so
+${PKGLOCALEDIR}/locale/az/LC_MESSAGES/xfce4-iconbox.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/xfce4-iconbox.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/xfce4-iconbox.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/xfce4-iconbox.mo
