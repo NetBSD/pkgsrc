@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2000/02/25 01:04:11 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2000/06/05 12:37:11 rh Exp $
 # FreeBSD Id: Makefile,v 1.18 1997/05/16 01:42:31 asami Exp 
 #
 
@@ -29,6 +29,7 @@
     SUBDIR += unlzx
     SUBDIR += unrar
     SUBDIR += unzip
+    SUBDIR += xbin
     SUBDIR += zip
     SUBDIR += zip1
     SUBDIR += zoo
