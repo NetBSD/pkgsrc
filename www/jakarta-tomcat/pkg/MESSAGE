@@ -1,5 +1,5 @@
 ======================================================================
-$NetBSD: MESSAGE,v 1.6 2001/03/28 02:46:09 jwise Exp $
+$NetBSD: MESSAGE,v 1.7 2001/03/28 03:18:36 jwise Exp $
 
 For detailed instructions on how to run Tomcat, either as a
 standalone server or in conjunction with Apache (using the
@@ -11,7 +11,8 @@ For more information on application development with Tomcat, see
 
 	${PREFIX}/tomcat/doc/appdev/index.html
 
-Note also that in order for Tomcat to start up, ${JAVA_HOME}
-must point to your JVM installation.
+Note that tomcat may be started with the following command:
+
+	${PREFIX}/etc/rc.d/tomcat start
 
 ======================================================================
