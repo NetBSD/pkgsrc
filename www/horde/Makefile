@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2002/02/01 22:41:15 bouyer Exp $
+# $NetBSD: Makefile,v 1.19 2002/03/01 20:44:11 bouyer Exp $
 
 DISTNAME=	horde-2.0
 CATEGORIES=	www
@@ -10,6 +10,9 @@ COMMENT=	PHP application framework
 
 DEPENDS+=	php>4.0.0:../../www/php4
 DEPENDS+=	php-pcre>4.0.0:../../devel/php4-pcre
+DEPENDS+=	php-session>4.0.0:../../devel/php4-session
+DEPENDS+=	php-gettext>4.0.0:../../devel/php4-gettext
+DEPENDS+=	php-xml>4.0.0:../../devel/php4-xml
 
 DOCDIR=		${PREFIX}/share/doc/horde
 EGDIR=		${PREFIX}/share/examples/horde
