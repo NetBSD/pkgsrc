@@ -1,0 +1,12 @@
+$NetBSD: patch-at,v 1.1.1.1 2000/10/21 18:41:54 rh Exp $
+
+--- modules/pam_userdb/Makefile.orig	Sat Oct 21 14:36:41 2000
++++ modules/pam_userdb/Makefile
+@@ -20,7 +20,6 @@
+ LIBOBJD = $(addprefix dynamic/,$(LIBOBJ))
+ #LIBOBJS = $(addprefix static/,$(LIBOBJ))
+ 
+-EXTRALS += -ldb
+ CFLAGS += $(WHICH_DB)
+ 
+ dynamic/%.o : %.c

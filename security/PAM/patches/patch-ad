@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1.1.1 2000/10/21 18:41:54 rh Exp $
+
+--- modules/pam_deny/Makefile.orig	Sun Jul 12 07:17:16 1998
++++ modules/pam_deny/Makefile
+@@ -40,7 +40,7 @@
+ export DYNAMIC=-DPAM_DYNAMIC
+ export CC=gcc
+ export CFLAGS=-O2 -Dlinux -DLINUX_PAM \
+-       -ansi -D_POSIX_SOURCE -Wall -Wwrite-strings \
++       -ansi -Wall -Wwrite-strings \
+        -Wpointer-arith -Wcast-qual -Wcast-align -Wtraditional \
+        -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline \
+        -Wshadow -pedantic -fPIC

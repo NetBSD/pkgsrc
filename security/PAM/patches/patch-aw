@@ -1,0 +1,13 @@
+$NetBSD: patch-aw,v 1.1.1.1 2000/10/21 18:41:54 rh Exp $
+
+--- modules/pam_group/Makefile.orig	Sat Oct 21 15:45:39 2000
++++ modules/pam_group/Makefile
+@@ -9,7 +9,7 @@
+ #
+ 
+ TITLE=pam_group
+-CONFD=$(CONFIGED)/security
++CONFD=$(CONFIGED)/pam
+ export CONFD
+ CONFILE=$(CONFD)/group.conf
+ export CONFILE

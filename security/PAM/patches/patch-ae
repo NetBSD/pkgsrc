@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1.1.1 2000/10/21 18:41:54 rh Exp $
+
+--- modules/pam_lastlog/Makefile.orig	Sun Jul 12 07:17:17 1998
++++ modules/pam_lastlog/Makefile
+@@ -26,7 +26,7 @@
+ export DYNAMIC=-DPAM_DYNAMIC
+ export CC=gcc
+ export CFLAGS=-O2 -Dlinux -DLINUX_PAM \
+-       -ansi -D_POSIX_SOURCE -Wall -Wwrite-strings \
++       -ansi -Wall -Wwrite-strings \
+        -Wpointer-arith -Wcast-qual -Wcast-align -Wtraditional \
+        -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline \
+        -Wshadow -pedantic -fPIC

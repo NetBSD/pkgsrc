@@ -1,0 +1,17 @@
+$NetBSD: patch-aq,v 1.1.1.1 2000/10/21 18:41:54 rh Exp $
+
+--- modules/pam_unix/Makefile.orig	Sat Oct 21 14:28:23 2000
++++ modules/pam_unix/Makefile
+@@ -30,10 +30,10 @@
+ ########################################################################
+ 
+ CFLAGS += $(USE_CRACKLIB) $(USE_LCKPWDF) $(NEED_LCKPWDF) $(EXTRAS)
+-LDLIBS = $(EXTRALS)
++LDLIBS = $(EXTRALS) -lcrypt
+ 
+ ifdef USE_CRACKLIB
+-CRACKLIB = -lcrack
++CRACKLIB = -R${PREFIX}/lib -L${PREFIX}/lib -lcrack
+ endif
+ 
+ 
