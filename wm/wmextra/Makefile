@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/02/17 17:21:52 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/09/27 23:18:49 jlam Exp $
 #
 
 DISTNAME=		WindowMaker-extra-0.1
@@ -11,7 +11,7 @@ MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://www.windowmaker.org/
 COMMENT=		Extras for window manager Window Maker
 
-DEPENDS+=		windowmaker-*:../../wm/windowmaker
+DEPENDS+=		windowmaker-[0-9]*:../../wm/windowmaker
 
 USE_X11BASE=		yes
 GNU_CONFIGURE=		yes

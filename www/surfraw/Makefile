@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2001/07/13 07:09:27 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2001/09/27 23:18:58 jlam Exp $
 #
 
 DISTNAME=	surfraw-1.0.3
@@ -9,7 +9,7 @@ MAINTAINER=	jlam@netbsd.org
 HOMEPAGE=	http://surfraw.sourceforge.net/
 COMMENT=	Shell Users' Revolutionary Front Rage Against the Web
 
-CONFLICTS+=	surfaw-*
+CONFLICTS+=	surfaw-[0-9]*
 
 GNU_CONFIGURE=	# defined
 

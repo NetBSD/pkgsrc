@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/09/25 13:31:17 tron Exp $
+# $NetBSD: Makefile,v 1.7 2001/09/27 23:18:21 jlam Exp $
 
 DISTNAME=		evolution-0.13
 CATEGORIES=		mail time gnome
@@ -11,7 +11,7 @@ COMMENT=		GNOME mailer, calendar, contact manager, and communications tool
 
 BUILD_DEPENDS+=		automake>=1.4:../../devel/automake
 
-DEPENDS+=		bison-*:../../devel/bison
+DEPENDS+=		bison-[0-9]*:../../devel/bison
 DEPENDS+=		db3-2.9:../../databases/db3
 DEPENDS+=		gal>=0.12:../../devel/gal
 DEPENDS+=		bonobo>=1.0.7:../../devel/bonobo

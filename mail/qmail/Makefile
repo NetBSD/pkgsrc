@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/08/13 14:17:11 zuntum Exp $
+# $NetBSD: Makefile,v 1.3 2001/09/27 23:18:22 jlam Exp $
 #
 
 DISTNAME=	qmail-1.03
@@ -25,7 +25,7 @@ COMMENT=	SECURE, reliable, efficient, simple, and FAST MTA for UNIX systems
 USER_CMD=		/usr/sbin/user
 GROUP_CMD=		/usr/sbin/group
 .else
-DEPENDS+=		user-*:../../sysutils/user
+DEPENDS+=		user-[0-9]*:../../sysutils/user
 USER_CMD=		${LOCALBASE}/sbin/user
 GROUP_CMD=		${LOCALBASE}/sbin/group
 .endif

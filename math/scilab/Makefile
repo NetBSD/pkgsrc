@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2001/07/18 01:14:23 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.25 2001/09/27 23:18:24 jlam Exp $
 #
 
 DISTNAME=	${SCIBASE}.src
@@ -12,7 +12,7 @@ MAINTAINER=	dmcmahill@netbsd.org
 HOMEPAGE=	http://www-rocq.inria.fr/scilab/
 COMMENT=	High-level scientific math programming environment with graphics
 
-DEPENDS+=	xless-*:../../x11/xless
+DEPENDS+=	xless-[0-9]*:../../x11/xless
 DEPENDS+=	pvm-3.4.3:../../parallel/pvm3
 
 # needs full floating point math.  Once the FPC code for alpha is integrated

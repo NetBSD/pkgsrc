@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/02/16 13:46:27 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2001/09/27 23:17:46 jlam Exp $
 #
 
 DISTNAME=		oregano-0.20
@@ -9,9 +9,9 @@ MAINTAINER=		rh@netbsd.org
 HOMEPAGE=		http://www.dtek.chalmers.se/~d4hult/oregano/
 COMMENT=		application for schematic capture/simulation of electrical circuits
 
-DEPENDS+=		gnome-core-*:../../x11/gnome-core
-DEPENDS+=		gnome-print-*:../../print/gnome-print
-DEPENDS+=		libglade-*:../../devel/libglade
+DEPENDS+=		gnome-core-[0-9]*:../../x11/gnome-core
+DEPENDS+=		gnome-print-[0-9]*:../../print/gnome-print
+DEPENDS+=		libglade-[0-9]*:../../devel/libglade
 
 GNU_CONFIGURE=		YES
 USE_X11BASE=		YES

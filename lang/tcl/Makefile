@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2001/07/25 19:42:58 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2001/09/27 23:18:20 jlam Exp $
 #
 
 DISTNAME=		tcl8.3.2
@@ -13,7 +13,7 @@ MAINTAINER=		jwise@netbsd.org
 HOMEPAGE=		http://www.tcltk.com/
 COMMENT=		Ousterhout's Tool Command Language, a scripting language
 
-CONFLICTS+=		tclman80-*
+CONFLICTS+=		tclman80-[0-9]*
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/unix
 GNU_CONFIGURE=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2001/03/23 00:18:19 kim Exp $
+# $NetBSD: Makefile,v 1.14 2001/09/27 23:18:43 jlam Exp $
 #
 
 DISTNAME=		roller-1.8
@@ -8,8 +8,8 @@ MASTER_SITES=		ftp://ftp.gw.com/pub/people/kim/
 MAINTAINER=		kim@tac.nyc.ny.us
 COMMENT=		roll log files
 
-DEPENDS+=		cpogm-*:../../sysutils/cpogm
-DEPENDS+=		logtime-*:../../time/logtime
+DEPENDS+=		cpogm-[0-9]*:../../sysutils/cpogm
+DEPENDS+=		logtime-[0-9]*:../../time/logtime
 
 .include "../../mk/bsd.prefs.mk"
 

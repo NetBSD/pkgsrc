@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/02/17 17:49:54 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2001/09/27 23:18:39 jlam Exp $
 #
 
 DISTNAME=	nessus-libraries-${VERS}
@@ -14,7 +14,7 @@ LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig \
 # The detection of the gmp library from pkgsrc does unfortunatly not
 # work. Feel free to tweak the configure script of nessus-library to
 # make it find our gmp libs, I was just not able to make it work. -TF
-#DEPENDS+=	gmp-*:../../devel/gmp
+#DEPENDS+=	gmp-[0-9]*:../../devel/gmp
 
 WRKSRC=		${WRKDIR}/nessus-libraries
 

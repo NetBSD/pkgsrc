@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2001/07/31 14:23:01 drochner Exp $
+# $NetBSD: Makefile,v 1.16 2001/09/27 23:17:44 jlam Exp $
 #
 
 VERS=		3.89
@@ -29,7 +29,7 @@ CONFIGURE_ARGS+=	--enable-analyzer=no
 .endif
 
 .if (${MACHINE_ARCH} == "alpha")
-DEPENDS+=	libffm-*:../../math/libffm
+DEPENDS+=	libffm-[0-9]*:../../math/libffm
 # double is faster than float on Alpha
 CFLAGS+=	-O2 -Wall -fomit-frame-pointer -ffast-math -funroll-loops \
 		-mfp-regs -fschedule-insns -fschedule-insns2 		  \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/02/17 17:54:50 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2001/09/27 23:18:34 jlam Exp $
 # FreeBSD Id: Makefile,v 1.11 1998/02/01 03:04:11 itojun Exp
 #
 
@@ -25,7 +25,7 @@ NNTP_USE_LDAP?=		no
 NNTP_USE_PGP?=		no
 
 .if ${NNTP_USE_LDAP} == yes
-DEPENDS+=		openldap-*:../../databases/openldap
+DEPENDS+=		openldap-[0-9]*:../../databases/openldap
 .endif
 
 .if ${NNTP_USE_PGP} ==	yes

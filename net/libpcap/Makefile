@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/08/24 11:13:36 abs Exp $
+# $NetBSD: Makefile,v 1.9 2001/09/27 23:18:28 jlam Exp $
 
 DISTNAME=		libpcap-0.6.1
 CATEGORIES=		net
@@ -15,8 +15,8 @@ GNU_CONFIGURE=		yes
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "SunOS"
-BUILD_DEPENDS+=		bison-*:../../devel/bison
-BUILD_DEPENDS+=		flex-*:../../devel/flex
+BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
+BUILD_DEPENDS+=		flex-[0-9]*:../../devel/flex
 .endif
 
 .include "../../mk/bsd.pkg.mk"

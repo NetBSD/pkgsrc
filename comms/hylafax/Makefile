@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2001/07/16 13:57:25 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2001/09/27 23:17:49 jlam Exp $
 #
 
 DISTNAME=	hylafax-4.1
@@ -11,14 +11,14 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.hylafax.org/
 COMMENT=	Telecommunication and fax server system
 
-DEPENDS+=	tiff-*:../../graphics/tiff
+DEPENDS+=	tiff-[0-9]*:../../graphics/tiff
 DEPENDS+=	jpeg-6b:../../graphics/jpeg
 DEPENDS+=	mawk>=1.2.2:../../lang/mawk
 DEPENDS+=	ghostscript{,-nox11}-[6-9]*:../../print/ghostscript
 
 DIST_SUBDIR=	hylafax
 
-CONFLICTS=	mgetty-*
+CONFLICTS=	mgetty-[0-9]*
 
 FAXUSER?=	uucp
 FAXGROUP?=	dialer

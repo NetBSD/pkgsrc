@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/03/31 12:13:37 zuntum Exp $
+# $NetBSD: Makefile,v 1.8 2001/09/27 23:18:45 jlam Exp $
 #
 
 DISTNAME=	OpenSP-1.4
@@ -12,7 +12,7 @@ COMMENT=	SGML parser, successor to "sp"
 
 DEPENDS+=	unproven-pthreads-[0-9]*:../../devel/unproven-pthreads
 
-CONFLICTS+=     sp-*
+CONFLICTS+=     sp-[0-9]*
 
 GNU_CONFIGURE=	YES
 CONFIGURE_ARGS+=--enable-http \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2001/08/27 14:35:12 tron Exp $
+# $NetBSD: Makefile,v 1.17 2001/09/27 23:18:27 jlam Exp $
 
 DISTNAME=	irrd2.0a-Aug22-2000
 PKGNAME=	irrd-2.0.0.20000822
@@ -11,10 +11,10 @@ HOMEPAGE=	http://www.irrd.net/
 COMMENT=	Internet Routing Registry Daemon
 
 BUILD_DEPENDS+=	autoconf>=2.13:../../devel/autoconf
-BUILD_DEPENDS+=	bison-*:../../devel/bison
-DEPENDS+=	gdbm-*:../../databases/gdbm
-DEPENDS+=	pgp5-*:../../security/pgp5
-DEPENDS+=	wget-*:../../net/wget
+BUILD_DEPENDS+=	bison-[0-9]*:../../devel/bison
+DEPENDS+=	gdbm-[0-9]*:../../databases/gdbm
+DEPENDS+=	pgp5-[0-9]*:../../security/pgp5
+DEPENDS+=	wget-[0-9]*:../../net/wget
 
 USE_PERL5=	# defined
 

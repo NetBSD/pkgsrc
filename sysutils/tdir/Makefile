@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/07/07 09:29:30 zuntum Exp $
+# $NetBSD: Makefile,v 1.3 2001/09/27 23:18:44 jlam Exp $
 #
 
 DISTNAME=	tdir-1.58
@@ -8,7 +8,7 @@ MASTER_SITES=	http://www.tundraware.com/Software/tdir/
 MAINTAINER=	zuntum@netbsd.org
 COMMENT=	Display directories with files ordered by ending "extension"
 
-DEPENDS+=	python-*:../../lang/python
+DEPENDS+=	python-[0-9]*:../../lang/python
 
 LICENSE=	tdir-license
 

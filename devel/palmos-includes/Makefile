@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/04/25 17:39:16 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2001/09/27 23:17:57 jlam Exp $
 #
 
 DISTNAME=       sdk35
@@ -11,7 +11,7 @@ MAINTAINER=	dillo@giga.or.at
 HOMEPAGE=	http://www.palmos.com/dev/tech/tools/gcc/
 COMMENT=	Palm OS include files
 
-BUILD_DEPENDS+=	wget-*:../../net/wget
+BUILD_DEPENDS+=	wget-[0-9]*:../../net/wget
 
 DISTSPECIAL=	${DISTNAME}${EXTRACT_SUFX} sdk35-update1${EXTRACT_SUFX}
 

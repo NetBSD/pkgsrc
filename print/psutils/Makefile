@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2001/07/10 17:27:18 tron Exp $
+# $NetBSD: Makefile,v 1.20 2001/09/27 23:18:36 jlam Exp $
 # FreeBSD Id: Makefile,v 1.15 1998/01/08 18:52:13 fenner Exp
 #
 
@@ -10,7 +10,7 @@ MASTER_SITES=	ftp://ftp.dcs.ed.ac.uk/pub/ajcd/
 MAINTAINER=	packages@netbsd.org
 COMMENT=	Utilities for manipulating PostScript documents
 
-DEPENDS+=	papersize-*:../../print/papersize
+DEPENDS+=	papersize-[0-9]*:../../print/papersize
 
 WRKSRC=		${WRKDIR}/psutils
 USE_PERL5=	yes

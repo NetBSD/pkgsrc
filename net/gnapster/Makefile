@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2001/07/22 16:42:45 rh Exp $
+# $NetBSD: Makefile,v 1.16 2001/09/27 23:18:27 jlam Exp $
 
 DISTNAME=	gnapster-1.5.0
 CATEGORIES=	net
@@ -8,7 +8,7 @@ MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.faradic.net/~jasta/programs.html
 COMMENT=	simple client for the online mp3 community
 
-DEPENDS+=	gnome-core-*:../../x11/gnome-core
+DEPENDS+=	gnome-core-[0-9]*:../../x11/gnome-core
 BUILD_USES_MSGFMT=	yes
 
 USE_X11BASE=	YES

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/03/06 10:17:43 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2001/09/27 23:18:53 jlam Exp $
 #
 
 DISTNAME=		plugger-3.2-linux-x86-glibc
@@ -14,14 +14,14 @@ COMMENT=		streaming multimedia plugin for Netscape
 BINNAME?=		common
 
 .if ${BINNAME} != common
-DEPENDS+=		${BINNAME}-*:../../www/${BINNAME}
+DEPENDS+=		${BINNAME}-[0-9]*:../../www/${BINNAME}
 MOZILLA_HOME=		${PREFIX}/lib/netscape/${NSNAME:C/nb[0-9]+$//}
 PLIST_SUBST+=		MOZILLA_HOME=${MOZILLA_HOME:S/${PREFIX}\///}
 .else
 DEPENDS+=		suse_base>=6.3:../../emulators/suse_base
 .endif
 
-CONFLICTS+=		plugger-*	# obsolete all-in-one plugger package
+CONFLICTS+=		plugger-[0-9]*	# obsolete all-in-one plugger package
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386
 

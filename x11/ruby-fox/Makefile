@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/08/05 17:24:31 sakamoto Exp $
+# $NetBSD: Makefile,v 1.2 2001/09/27 23:19:02 jlam Exp $
 
 DISTNAME=	FXRuby-0.99.174
 PKGNAME=	${RUBY_PKGNAMEPREFIX}fox-0.99.174
@@ -9,7 +9,7 @@ MAINTAINER=	sakamoto@netbsd.org
 HOMEPAGE=	http://fxruby.sourceforge.net/
 COMMENT=	Ruby interface to FOX GUI library
 
-DEPENDS+=	ruby-opengl-*:../../graphics/ruby-opengl
+DEPENDS+=	ruby-opengl-[0-9]*:../../graphics/ruby-opengl
 BUILDLINK_DEPENDS.fox=${DISTNAME:C/FXRuby/fox/}
 
 WRKDIST=	${WRKDIR}/${DISTNAME}

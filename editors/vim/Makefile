@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2001/08/06 17:44:44 pooka Exp $
+# $NetBSD: Makefile,v 1.41 2001/09/27 23:18:02 jlam Exp $
 
 .include		"../vim-share/Makefile.common"
 
@@ -8,7 +8,7 @@ COMMENT=		Vim editor (vi clone) without gui
 
 DEPENDS+=		vim-share-${VIM_VERSION}:../vim-share
 
-CONFLICTS+=		vim-xaw-* vim-gtk-*
+CONFLICTS+=		vim-xaw-[0-9]* vim-gtk-[0-9]*
 
 USE_BUILDLINK_ONLY=	# defined
 

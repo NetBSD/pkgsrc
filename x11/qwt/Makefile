@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/08/29 22:41:30 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2001/09/27 23:19:02 jlam Exp $
 
 DISTNAME=	qwt-0.3.0
 CATEGORIES=	x11
@@ -18,7 +18,7 @@ USE_LIBTOOL=	yes
 MAKE_ENV+=	CXX="${CXX}"
 MAKE_ENV+=	CXXFLAGS="${CXXFLAGS}"
 
-CONFLICTS=	qwtlib-*
+CONFLICTS=	qwtlib-[0-9]*
 
 post-patch:
 	${LN} -s ${WRKSRC}/makefiles/netbsd-g++ ${WRKSRC}/Makefile

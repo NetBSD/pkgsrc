@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/02/17 17:50:02 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2001/09/27 23:18:40 jlam Exp $
 
 DISTNAME=		pks-0.9.4
 CATEGORIES=		security www
@@ -15,7 +15,7 @@ MAINTAINER=		burgess@neonramp.com
 HOMEPAGE=		http://www.mit.edu/people/marc/pks/
 COMMENT=		PGP Public Key Server
 
-DEPENDS+=		db-*:../../databases/db
+DEPENDS+=		db-[0-9]*:../../databases/db
 
 GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/pks

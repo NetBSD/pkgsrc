@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/07/09 10:54:21 sakamoto Exp $
+# $NetBSD: Makefile,v 1.10 2001/09/27 23:18:07 jlam Exp $
 # FreeBSD Id: ports/games/pysol/Makefile,v 1.20 1999/12/08 11:01:01 tg Exp
 
 DISTNAME=       pysol-4.72
@@ -11,7 +11,7 @@ MAINTAINER=	sakamoto@netbsd.org
 HOMEPAGE=	http://wildsau.idv.uni-linz.ac.at/mfx/pysol.html
 COMMENT=	Solitaire game, written in Python
 
-DEPENDS+=	py-Tk-*:../../x11/py-Tk
+DEPENDS+=	py-Tk-[0-9]*:../../x11/py-Tk
 
 NO_BUILD=	yes
 PLIST_SRC=	${WRKDIR}/PLIST.src

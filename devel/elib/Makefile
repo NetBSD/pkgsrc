@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/06/08 21:29:13 cjones Exp $
+# $NetBSD: Makefile,v 1.2 2001/09/27 23:17:55 jlam Exp $
 #
 
 DISTNAME=	elib-1.0
@@ -11,11 +11,11 @@ COMMENT=	Library of utility functions for Emacs
 .include "../../mk/bsd.prefs.mk"
 
 .if defined(USE_XEMACS)
-DEPENDS+=	 	xemacs-*:../../editors/xemacs
+DEPENDS+=	 	xemacs-[0-9]*:../../editors/xemacs
 EMACS=			xemacs
 LISPDIR=		lib/xemacs/xemacs-packages/lisp/elib
 .else
-DEPENDS+=	 	emacs-*:../../editors/emacs
+DEPENDS+=	 	emacs-[0-9]*:../../editors/emacs
 EMACS=			emacs
 LISPDIR=		share/emacs/site-lisp/elib
 .endif

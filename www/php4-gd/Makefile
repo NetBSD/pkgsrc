@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/05/14 14:12:31 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2001/09/27 23:18:57 jlam Exp $
 
 .include "../../www/php4/Makefile.module"
 
@@ -8,7 +8,7 @@ PHP_PKG_VERS=		# empty
 
 COMMENT=		PHP4 extension for GD graphics library
 
-DEPENDS+=		gd-*:../../graphics/gd
+DEPENDS+=		gd-[0-9]*:../../graphics/gd
 
 EVAL_PREFIX+=		GDDIR=gd
 CONFIGURE_ARGS+=	--with-${MODNAME}=shared,${GDDIR}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/07/15 12:22:16 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2001/09/27 23:17:48 jlam Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/05/14 10:35:13 torstenb Exp
 #
 
@@ -12,7 +12,7 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		packages@netbsd.org
 COMMENT=		The 'Internet Relay Chat' and 'Internet Citizens Band' Client
 
-CONFLICTS=		blackened-*
+CONFLICTS=		blackened-[0-9]*
 
 .include "../../mk/bsd.prefs.mk"
 

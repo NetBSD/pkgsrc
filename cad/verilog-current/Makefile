@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2001/07/03 18:23:46 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.21 2001/09/27 23:17:47 jlam Exp $
 #
 
 DISTNAME=	verilog-20010630
@@ -10,7 +10,7 @@ MAINTAINER=	dmcmahill@netbsd.org
 HOMEPAGE=	http://icarus.com/eda/verilog/index.html
 COMMENT=	Verilog simulation and synthesis tool (development snapshot version)
 
-BUILD_DEPENDS+=	bison-*:../../devel/bison
+BUILD_DEPENDS+=	bison-[0-9]*:../../devel/bison
 BUILD_DEPENDS+=	gperf-2.7.2:../../devel/gperf
 DEPENDS+=	ipal-current>=20001210:../../cad/ipal-current
 

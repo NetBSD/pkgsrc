@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/04/22 17:16:42 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2001/09/27 23:17:59 jlam Exp $
 
 DISTNAME=	gnotepad+-1.3.3
 PKGNAME=	${DISTNAME:S/+//}
@@ -10,7 +10,7 @@ HOMEPAGE=	http://gnotepad.sourceforge.net/
 COMMENT=	easy-to-use, yet fairly feature-rich, simple HTML and text editor for X11
 
 BUILD_USES_MSGFMT=	yes
-DEPENDS+=	gnome-core-*:../../x11/gnome-core
+DEPENDS+=	gnome-core-[0-9]*:../../x11/gnome-core
 
 USE_X11BASE=	YES
 USE_GMAKE=	YES

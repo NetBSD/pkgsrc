@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/02/16 15:22:16 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2001/09/27 23:18:09 jlam Exp $
 #
 
 DISTNAME=	denemo-0.5.4
@@ -9,7 +9,7 @@ MAINTAINER=	rh@netbsd.org
 HOMEPAGE=	http://denemo.sourceforge.net/
 COMMENT=	GUI musical score editor written in C/gtk+
 
-DEPENDS+=	lilypond-*:../../print/lilypond
+DEPENDS+=	lilypond-[0-9]*:../../print/lilypond
 DEPENDS+=	gtk+>=1.2.0:../../x11/gtk
 
 GNU_CONFIGURE=	YES

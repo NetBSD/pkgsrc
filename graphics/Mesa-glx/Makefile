@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2001/08/27 14:35:09 tron Exp $
+# $NetBSD: Makefile,v 1.23 2001/09/27 23:18:09 jlam Exp $
 
 DISTNAME=	glx-20000813
 PKGNAME=	Mesa-${DISTNAME}
@@ -19,10 +19,10 @@ BUILD_DEPENDS+=	tcl>=8.3.2nb1:../../lang/tcl
 
 BROKEN=		Package is outdated and has security problems.
 
-CONFLICTS+=		Mesa-*
-CONFLICTS+=		MesaLib-*
-CONFLICTS+=		glu-*
-CONFLICTS+=		glut-*
+CONFLICTS+=		Mesa-[0-9]*
+CONFLICTS+=		MesaLib-[0-9]*
+CONFLICTS+=		glu-[0-9]*
+CONFLICTS+=		glut-[0-9]*
 ONLY_FOR_PLATFORM=	NetBSD-*-i386
 
 GNU_CONFIGURE=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/06/19 09:20:11 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2001/09/27 23:18:37 jlam Exp $
 #
 
 DISTNAME=	Linux-${PKGNAME}
@@ -10,7 +10,7 @@ MAINTAINER=	rh@netbsd.org
 HOMEPAGE=	http://www.kernel.org/pub/linux/libs/pam/
 COMMENT=	Pluggable Authentication Modules
 
-BUILD_DEPENDS+=	bison-*:../../devel/bison
+BUILD_DEPENDS+=	bison-[0-9]*:../../devel/bison
 
 USE_GMAKE=		YES
 USE_BUILDLINK_ONLY=	YES

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2001/08/06 21:31:34 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2001/09/27 23:18:14 jlam Exp $
 # FreeBSD Id: Makefile,v 1.13 1999/02/10 18:13:21 motoyuki Exp $
 
 DISTNAME=	mh-6.8.4-JP-3.03
@@ -13,7 +13,7 @@ COMMENT=	Rand MH mail handling system + Japanese patches
 
 DEPENDS=	ja-less>=332:../../japanese/less
 
-CONFLICTS=	nmh-* ja-mh-*_JP_*
+CONFLICTS=	nmh-[0-9]* ja-mh-*_JP_*
 
 .include "../../mk/bsd.prefs.mk"
 

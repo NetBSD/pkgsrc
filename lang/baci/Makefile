@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/05/09 13:09:24 agc Exp $
+# $NetBSD: Makefile,v 1.7 2001/09/27 23:18:15 jlam Exp $
 #
 
 DISTNAME=	bacisrc
@@ -12,7 +12,7 @@ MAINTAINER=	wulf@netbsd.org
 HOMEPAGE=	http://www.mines.edu/fs_home/tcamp/baci/
 COMMENT=	Ben-Ari Concurrent Interpreter
 
-DEPENDS+=	bison-*:../../devel/bison
+DEPENDS+=	bison-[0-9]*:../../devel/bison
 
 PLIST_SRC=      ${WRKDIR}/PLIST
 

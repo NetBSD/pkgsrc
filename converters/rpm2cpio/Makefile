@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/09/09 20:36:17 agc Exp $
+# $NetBSD: Makefile,v 1.5 2001/09/27 23:17:51 jlam Exp $
 # FreeBSD Id: ports/misc/rpm2cpio/Makefile,v 1.2 1999/08/25 07:22:29 obrien Exp
 
 DISTNAME=	rpm2cpio
@@ -11,7 +11,7 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.iagora.com/~espel/index.html
 COMMENT=	Convert .rpm files for extraction with cpio, needs just perl
 
-CONFLICTS+=	rpm-*
+CONFLICTS+=	rpm-[0-9]*
 
 USE_PERL5=	# defined
 REPLACE_PERL=	rpm2cpio

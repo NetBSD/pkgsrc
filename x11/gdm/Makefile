@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2001/07/23 00:59:19 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2001/09/27 23:18:59 jlam Exp $
 
 DISTNAME=	gdm-2.2.0
 CATEGORIES=	x11 gnome
@@ -10,7 +10,7 @@ MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Gnome Display Manager - a re-implementation of the xdm program
 
-DEPENDS+=	gnome-libs-*:../../x11/gnome-libs
+DEPENDS+=	gnome-libs-[0-9]*:../../x11/gnome-libs
 DEPENDS+=	libglade>=0.16:../../devel/libglade
 
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
@@ -50,7 +50,7 @@ GDMCFGFILES=	Default:Init.default/Default \
 .include "../../mk/bsd.prefs.mk"
 
 .if defined(USE_PAM)
-DEPENDS+=	PAM-*:../../security/PAM
+DEPENDS+=	PAM-[0-9]*:../../security/PAM
 .else
 
 post-patch:

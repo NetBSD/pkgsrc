@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2001/04/02 20:06:15 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2001/09/27 23:19:01 jlam Exp $
 #
 
 DISTNAME=	khostchooser-0.3
@@ -11,7 +11,7 @@ COMMENT=	KDE Chooser replacement for X
 
 BUILD_USES_MSGFMT=	yes
 DEPENDS+=	kdelibs-1.1.2:../../x11/kdelibs
-DEPENDS+=	libungif-*:../../graphics/libungif
+DEPENDS+=	libungif-[0-9]*:../../graphics/libungif
 
 WRKSRC=		${WRKDIR}/khostchooser
 

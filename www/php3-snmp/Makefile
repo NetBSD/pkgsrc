@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2001/02/17 17:22:31 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2001/09/27 23:18:57 jlam Exp $
 #
 
 PKGNAME=	php-snmp-${PHP_VERSION}
 
 COMMENT=	PHP3 extension for SNMP databases
 
-DEPENDS+=	ucd-snmp-*:../../net/ucd-snmp
+DEPENDS+=	ucd-snmp-[0-9]*:../../net/ucd-snmp
 
 CONFIGURE_ARGS+=--with-snmp=${LOCALBASE}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2001/07/16 15:41:51 itojun Exp $
+# $NetBSD: Makefile,v 1.34 2001/09/27 23:18:51 jlam Exp $
 #
 # This package does not compile in mod_ssl support hooks, as it conflicts
 # with IPv6-enable patch.
@@ -25,7 +25,7 @@ MAINTAINER=		itojun@netbsd.org
 HOMEPAGE=		http://httpd.apache.org/
 COMMENT=		HTTP (Web) server with IPv6 support
 
-CONFLICTS=		apache-* apache-*modssl-* apache6-*
+CONFLICTS=		apache-[0-9]* apache-*modssl-[0-9]* apache6-[0-9]*
 
 EXTRACT_ONLY=		${DISTFILES:N*.gif:N*.diff.gz}
 HAS_CONFIGURE=		# defined

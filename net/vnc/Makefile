@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2001/02/25 04:18:10 hubertf Exp $
+# $NetBSD: Makefile,v 1.22 2001/09/27 23:18:33 jlam Exp $
 # FreeBSD Id: Makefile,v 1.2 1998/03/19 01:54:59 msmith Exp
 #
 
@@ -13,7 +13,7 @@ MAINTAINER=		abs@netbsd.org
 HOMEPAGE=		http://www.uk.research.att.com/vnc/
 COMMENT=		Display X and Win32 desktops on remote X/Win32/Java displays
 
-DEPENDS+=		vncviewer-*:../../net/vncviewer
+DEPENDS+=		vncviewer-[0-9]*:../../net/vncviewer
 
 CRYPTO=			yes
 NO_INSTALL_MANPAGES=	yes

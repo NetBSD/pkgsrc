@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2001/08/16 04:45:52 jlam Exp $
+# $NetBSD: Makefile,v 1.31 2001/09/27 23:18:26 jlam Exp $
 #
 
 DISTNAME=	rpm-2.5.4
@@ -12,7 +12,7 @@ COMMENT=	The Red Hat Package Manager
 
 BUILD_USES_MSGFMT=	yes
 
-CONFLICTS+=		rpm2cpio-*
+CONFLICTS+=		rpm2cpio-[0-9]*
 
 GNU_CONFIGURE=		yes
 USE_GMAKE=		yes

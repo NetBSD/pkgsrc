@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/09/24 03:56:01 taca Exp $
+# $NetBSD: Makefile,v 1.8 2001/09/27 23:18:15 jlam Exp $
 # FreeBSD Id: ports/japanese/namazu2/Makefile,v 1.16 2000/10/26 20:56:25 knu Exp
 
 DISTNAME=	namazu-2.0.7
@@ -34,7 +34,7 @@ GNU_CONFIGURE=		# defined
 USE_LIBTOOL=		# defined
 LTCONFIG_OVERRIDE=${WRKSRC}/ltconfig
 
-CONFLICTS+=	namazu-*
+CONFLICTS+=	namazu-[0-9]*
 
 post-build:
 	@for FILE in \

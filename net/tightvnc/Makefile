@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2001/09/23 01:34:29 mycroft Exp $
+# $NetBSD: Makefile,v 1.2 2001/09/27 23:18:32 jlam Exp $
 #
 
 DISTNAME=		tightvnc-1.2.0
@@ -13,7 +13,7 @@ MAINTAINER=		mycroft@netbsd.org
 HOMEPAGE=		http://www.tightvnc.com/
 COMMENT=		Display X and Win32 desktops on remote X/Win32/Java displays
 
-CONFLICTS=		vnc-*
+CONFLICTS=		vnc-[0-9]*
 
 CRYPTO=			yes
 NO_INSTALL_MANPAGES=	yes

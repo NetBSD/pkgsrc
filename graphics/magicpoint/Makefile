@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2001/08/22 17:38:58 jlam Exp $
+# $NetBSD: Makefile,v 1.27 2001/09/27 23:18:12 jlam Exp $
 
 DISTNAME=		magicpoint-1.08a
 CATEGORIES=		x11 graphics
@@ -8,7 +8,7 @@ MAINTAINER=		itojun@itojun.org
 HOMEPAGE=		http://www.Mew.org/mgp/
 COMMENT=		X11 based presentation tool
 
-CONFLICTS=		mgp-*
+CONFLICTS=		mgp-[0-9]*
 
 GNU_CONFIGURE=		yes
 USE_IMAKE=		yes

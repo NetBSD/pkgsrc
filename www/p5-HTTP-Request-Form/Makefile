@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/05/03 16:07:19 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2001/09/27 23:18:56 jlam Exp $
 #
 
 DISTNAME=	HTTP-Request-Form-0.7
@@ -9,10 +9,10 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=HTTP/}
 MAINTAINER=	packages@netbsd.org
 COMMENT=	Construct HTTP::Request objects for form processing
 
-DEPENDS+=       p5-libwww-*:../../www/p5-libwww
-DEPENDS+=       p5-URI-*:../../www/p5-URI
-DEPENDS+=       p5-HTML-Tagset-*:../../www/p5-HTML-Tagset
-DEPENDS+=       p5-HTML-Tree-*:../../www/p5-HTML-Tree
+DEPENDS+=       p5-libwww-[0-9]*:../../www/p5-libwww
+DEPENDS+=       p5-URI-[0-9]*:../../www/p5-URI
+DEPENDS+=       p5-HTML-Tagset-[0-9]*:../../www/p5-HTML-Tagset
+DEPENDS+=       p5-HTML-Tree-[0-9]*:../../www/p5-HTML-Tree
 
 USE_PERL5=	YES
 PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/HTTP/Request/Form/.packlist

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/08/03 21:13:51 cjones Exp $
+# $NetBSD: Makefile,v 1.2 2001/09/27 23:18:00 jlam Exp $
 #
 
 DISTNAME=       jde-2.2.7.1
@@ -19,11 +19,11 @@ DEPENDS+=       elib-1.0:../../devel/elib
 .include "../../mk/bsd.prefs.mk"
 
 .if defined(USE_XEMACS)
-DEPENDS+=               xemacs-*:../../editors/xemacs
+DEPENDS+=               xemacs-[0-9]*:../../editors/xemacs
 EMACS=                  xemacs
 LISPDIR=                lib/xemacs/xemacs-packages/lisp/jde
 .else
-DEPENDS+=               emacs-*:../../editors/emacs
+DEPENDS+=               emacs-[0-9]*:../../editors/emacs
 EMACS=                  emacs
 LISPDIR=                share/emacs/site-lisp/jde
 .endif

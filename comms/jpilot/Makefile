@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2001/08/29 22:41:07 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2001/09/27 23:17:49 jlam Exp $
 #
 
 DISTNAME=		jpilot-0.99
@@ -12,7 +12,7 @@ COMMENT=		desktop organizer application for the palm pilot
 BUILD_DEPENDS+=		autoconf>=2.13:../../devel/autoconf
 BUILD_USES_MSGFMT=	# defined
 
-CONFLICTS+=		jpilot-libplugin-*
+CONFLICTS+=		jpilot-libplugin-[0-9]*
 
 USE_BUILDLINK_ONLY=	# defined
 GNU_CONFIGURE=		# defined

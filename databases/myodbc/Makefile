@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/04/15 01:06:43 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 2001/09/27 23:17:53 jlam Exp $
 #
 
 DISTNAME=		MyODBC-2.50.36
@@ -11,7 +11,7 @@ HOMEPAGE=		http://www.mysql.com/
 COMMENT=		ODBC driver (server side) for MySQL
 
 DEPENDS+=		mysql-client>=3.23.35:../../databases/mysql-client
-DEPENDS+=		iodbc-*:../../databases/iodbc
+DEPENDS+=		iodbc-[0-9]*:../../databases/iodbc
 
 GNU_CONFIGURE=		yes
 

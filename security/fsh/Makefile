@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/07/13 14:41:20 fredb Exp $
+# $NetBSD: Makefile,v 1.5 2001/09/27 23:18:38 jlam Exp $
 #
 
 DISTNAME=	fsh-1.1
@@ -10,7 +10,7 @@ MAINTAINER=	fredb@netbsd.org
 HOMEPAGE=	http://www.lysator.liu.se/fsh/
 COMMENT=	fast remote command execution
 
-DEPENDS+=	python-*:../../lang/python
+DEPENDS+=	python-[0-9]*:../../lang/python
 
 GNU_CONFIGURE=	YES
 USE_GTEXINFO=	YES

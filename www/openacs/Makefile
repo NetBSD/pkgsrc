@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/07/27 10:52:00 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/09/27 23:18:54 jlam Exp $
 #
 
 DISTNAME=		openacs-3.2.5
@@ -14,7 +14,7 @@ COMMENT=		TCL-based web programming environment
 DEPENDS+=		ap-aolserver-1.1:../../www/ap-aolserver
 DEPENDS+=		postgresql-lib>=7.0:../../databases/postgresql-lib
 DEPENDS+=		ImageMagick>=5.2.0:../../graphics/ImageMagick
-DEPENDS+=		unzip-*:../../archivers/unzip
+DEPENDS+=		unzip-[0-9]*:../../archivers/unzip
 BUILD_DEPENDS+=		postgresql-client>=7.0:../../databases/postgresql-client
 
 NO_CONFIGURE=	# set

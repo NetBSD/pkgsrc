@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/06/13 15:51:46 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2001/09/27 23:17:54 jlam Exp $
 
 DISTNAME=	pgsql_perl5-1.9.0
 PKGNAME=	p5-postgresql-1.9.0
@@ -9,7 +9,7 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.pobox.com/~gbarr/perl-ldap/
 COMMENT=	Perl interface class for PostgreSQL
 
-DEPENDS+=	postgresql-{6.5.3*,7.0*,lib-*}:../../databases/postgresql-lib
+DEPENDS+=	postgresql-{6.5.3*,7.0*,lib-[0-9]*}:../../databases/postgresql-lib
 
 USE_PERL5=	# defined
 PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/Pg/.packlist

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/05/05 19:51:14 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2001/09/27 23:18:01 jlam Exp $
 #
 
 DISTNAME=	vigor-0.010
@@ -11,7 +11,7 @@ COMMENT=	nvi with excessive online "help"
 
 DEPENDS+=	tk>=8.3.2:../../x11/tk
 
-CONFLICTS+=	nvi-*
+CONFLICTS+=	nvi-[0-9]*
 
 USE_X11=	yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2001/09/22 04:12:37 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2001/09/27 23:18:18 jlam Exp $
 #
 
 # MASTER_SITES is very special, and must end in "=":
@@ -12,7 +12,7 @@ MAINTAINER=	tv@netbsd.org
 HOMEPAGE=	http://java.sun.com/
 COMMENT=	Sun's Java(tm) Runtime Environment 1.3.1
 
-CONFLICTS=	jdk-* blackdown-j*
+CONFLICTS=	jdk-[0-9]* blackdown-j*
 
 FETCH_BEFORE_ARGS=-o ${DISTNAME}${EXTRACT_SUFX}
 EXTRACT_CMD=	${ECHO} yes | ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX} >/dev/null
@@ -29,8 +29,8 @@ NO_BIN_ON_FTP=	${RESTRICTED}
 
 # Needs to be after bsd.prefs.mk
 .if ${OPSYS} != "Linux"
-DEPENDS+=	suse_compat-*:../../emulators/suse_compat
-DEPENDS+=	suse_x11-*:../../emulators/suse_x11
+DEPENDS+=	suse_compat-[0-9]*:../../emulators/suse_compat
+DEPENDS+=	suse_x11-[0-9]*:../../emulators/suse_x11
 .endif
 
 .if !defined(JDK_HOME)

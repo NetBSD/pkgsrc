@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/07/04 02:31:44 kent Exp $
+# $NetBSD: Makefile,v 1.4 2001/09/27 23:18:17 jlam Exp $
 
 DISTNAME=		gcc-2.95.2
 GCC_VERSION=		2.95.2
@@ -17,7 +17,7 @@ DISTFILES+=		${DISTNAME}.tar.gz ${SSP_PATCH}
 PATCHDIR=		../gcc/patches
 GCC_FILESDIR=		../gcc/files
 
-BUILD_DEPENDS+=		bison-*:../../devel/bison
+BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
 
 # Please let me know what platforms this package works or doesn't work on.
 #ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-*-sparc

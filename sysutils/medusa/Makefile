@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/06/11 06:34:50 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2001/09/27 23:18:43 jlam Exp $
 #
 
 DISTNAME=		medusa-0.5.1
@@ -10,7 +10,7 @@ MAINTAINER=		rh@netbsd.org
 HOMEPAGE=		http://www.eazel.com/
 COMMENT=		file system indexing engine
 
-DEPENDS+=		psmisc-*:../../sysutils/psmisc
+DEPENDS+=		psmisc-[0-9]*:../../sysutils/psmisc
 DEPENDS+=		gnome-vfs>=1.0.1:../../sysutils/gnome-vfs
 
 GNU_CONFIGURE=		YES

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/02/19 16:10:24 tron Exp $
+# $NetBSD: Makefile,v 1.2 2001/09/27 23:17:45 jlam Exp $
 
 DISTNAME=	mp3to
 PKGNAME=	${DISTNAME}-1.0.1
@@ -10,7 +10,7 @@ MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.cs.berkeley.edu/~amc/utils/
 COMMENT=	Convert MP3 files to various other audio formats
 
-DEPENDS+=	mpg123-*:../mpg123
+DEPENDS+=	mpg123-[0-9]*:../mpg123
 DEPENDS+=	gmp3info>=0.8.2:../gmp3info
 DEPENDS+=	sox>=12.17.1:../sox
 

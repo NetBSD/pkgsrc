@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/06/10 17:17:44 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2001/09/27 23:18:45 jlam Exp $
 #
 
 DISTNAME=	XML-Parser.2.30
@@ -11,7 +11,7 @@ MAINTAINER=	bad@netbsd.org
 HOMEPAGE=	http://wwwx.netheaven.com/~coopercc/xmlparser/intro.html
 COMMENT=	Perl extension interface to James Clark's XML parser, expat
 
-DEPENDS+=	expat-*:../../textproc/expat
+DEPENDS+=	expat-[0-9]*:../../textproc/expat
 
 USE_PERL5=	# defined
 PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/XML/Parser/.packlist

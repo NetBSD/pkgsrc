@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/08/02 17:45:32 drochner Exp $
+# $NetBSD: Makefile,v 1.3 2001/09/27 23:17:42 jlam Exp $
 #
 
 DISTNAME=	audacity-src-0.96
@@ -11,12 +11,12 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://audacity.sourceforge.net/
 COMMENT=	audio editor
 
-DEPENDS+=	wxGTK-*:../../x11/wxGTK
-DEPENDS+=	pth-*:../../devel/pth
-DEPENDS+=	id3lib-*:../../audio/id3lib
-DEPENDS+=	libmpeg3-*:../../devel/libmpeg3
+DEPENDS+=	wxGTK-[0-9]*:../../x11/wxGTK
+DEPENDS+=	pth-[0-9]*:../../devel/pth
+DEPENDS+=	id3lib-[0-9]*:../../audio/id3lib
+DEPENDS+=	libmpeg3-[0-9]*:../../devel/libmpeg3
 DEPENDS+=	lame>=3.89:../../audio/lame
-BUILD_DEPENDS+=	zip-*:../../archivers/zip
+BUILD_DEPENDS+=	zip-[0-9]*:../../archivers/zip
 
 GNU_CONFIGURE=	YES
 CONFIGURE_ARGS+=	--without-xaudio --with-libmpeg3

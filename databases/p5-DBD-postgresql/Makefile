@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2001/08/10 11:53:15 mjl Exp $
+# $NetBSD: Makefile,v 1.12 2001/09/27 23:17:53 jlam Exp $
 #
 
 VER=		1.01
@@ -11,7 +11,7 @@ MAINTAINER=	jwise@netbsd.org
 HOMEPAGE=	http://www.postgresql.org/
 COMMENT=	perl DBI/DBD driver for PostgreSQL databases
 
-DEPENDS+=	postgresql-{6.5.3*,7.0*,lib-*}:../../databases/postgresql-lib
+DEPENDS+=	postgresql-{6.5.3*,7.0*,lib-[0-9]*}:../../databases/postgresql-lib
 DEPENDS+=	p5-DBI>=1.08:../../databases/p5-DBI
 
 USE_PERL5=	# defined

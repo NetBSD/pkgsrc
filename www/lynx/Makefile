@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2001/07/13 14:41:19 fredb Exp $
+# $NetBSD: Makefile,v 1.42 2001/09/27 23:18:53 jlam Exp $
 #
 
 DISTNAME=		lynx2.8.3rel.1
@@ -117,10 +117,10 @@ post-install:
 # "color styles", and more. No library supports all features.
 LYNX_SCREEN_LIB?=	slang
 .if (${LYNX_SCREEN_LIB} == slang)
-DEPENDS+=		libslang-*:../../devel/libslang
+DEPENDS+=		libslang-[0-9]*:../../devel/libslang
 LIBS=			-lm -ltermcap
 .elif (${LYNX_SCREEN_LIB} == ncurses)
-DEPENDS+=		ncurses-*:../../devel/ncurses
+DEPENDS+=		ncurses-[0-9]*:../../devel/ncurses
 CONFIGURE_ARGS+=	--enable-color-style
 .elif (${LYNX_SCREEN_LIB} != curses)
 pre-configure:

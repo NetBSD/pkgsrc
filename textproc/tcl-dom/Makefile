@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/02/25 04:18:18 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 2001/09/27 23:18:47 jlam Exp $
 #
 
 DISTNAME=	TclDOM-1.6
@@ -10,10 +10,10 @@ MAINTAINER=	jwise@netbsd.org
 HOMEPAGE=	http://www.zveno.com/zm.cgi/in-tclxml/in-tcldom/
 COMMENT=	DOM implementation for use with TclXML or TclExpat
 
-DEPENDS+=	tcl-xml-*:../../textproc/tcl-xml
+DEPENDS+=	tcl-xml-[0-9]*:../../textproc/tcl-xml
 
 # old name for this package...
-CONFLICTS+=	TclDom-*
+CONFLICTS+=	TclDom-[0-9]*
 
 NO_CONFIGURE=
 NO_BUILD=

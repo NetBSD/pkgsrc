@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/09/09 20:36:24 agc Exp $
+# $NetBSD: Makefile,v 1.5 2001/09/27 23:18:05 jlam Exp $
 
 DISTNAME=		medium
 PKGNAME=		${CHESS_ENGINE}-book-${DISTNAME}-20000511
@@ -11,7 +11,7 @@ COMMENT=		chess opening book for Crafty (medium)
 
 DEPENDS+=		crafty>=17.0:../../games/crafty
 
-CONFLICTS=		${CHESS_ENGINE}-book-*
+CONFLICTS=		${CHESS_ENGINE}-book-[0-9]*
 
 CHESS_ENGINE=		crafty
 DIST_SUBDIR=		chessbooks

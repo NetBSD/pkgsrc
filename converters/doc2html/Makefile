@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/05/14 14:03:20 agc Exp $
+# $NetBSD: Makefile,v 1.2 2001/09/27 23:17:50 jlam Exp $
 #
 
 DISTNAME=	doc2html
@@ -10,11 +10,11 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.htdig.org
 COMMENT=	PERL external filter for htdig to convert numerous doc formats to HTML
 
-DEPENDS+=	xlHtml-*:../../converters/xlHtml
-DEPENDS+=	rtf2html-*:../../converters/rtf2html
+DEPENDS+=	xlHtml-[0-9]*:../../converters/xlHtml
+DEPENDS+=	rtf2html-[0-9]*:../../converters/rtf2html
 DEPENDS+=	ghostscript{,-nox11}-[6-9]*:../../print/ghostscript
-DEPENDS+=	xpdf-*:../../graphics/xpdf
-DEPENDS+=	catdoc-*:../../textproc/catdoc
+DEPENDS+=	xpdf-[0-9]*:../../graphics/xpdf
+DEPENDS+=	catdoc-[0-9]*:../../textproc/catdoc
 
 USE_PERL5=	YES
 

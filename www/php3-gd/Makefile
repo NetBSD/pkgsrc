@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2001/02/17 17:22:28 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2001/09/27 23:18:56 jlam Exp $
 #
 
 PKGNAME=	php-gd-${PHP_VERSION}
 
 COMMENT=	PHP3 extension for GD graphics library
 
-DEPENDS+=	gd-*:../../graphics/gd
+DEPENDS+=	gd-[0-9]*:../../graphics/gd
 
 USE_PERL5=	yes
 

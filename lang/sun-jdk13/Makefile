@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/09/22 04:12:37 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2001/09/27 23:18:18 jlam Exp $
 #
 
 # MASTER_SITES is very special, and must end in "=":
@@ -14,7 +14,7 @@ COMMENT=	Sun's Java(tm) Development Kit 1.3.1
 
 DEPENDS=	sun-jre-1.3.1.0.1:../../lang/sun-jre13
 
-CONFLICTS=	jdk-* blackdown-j*
+CONFLICTS=	jdk-[0-9]* blackdown-j*
 
 FETCH_BEFORE_ARGS=-o ${DISTNAME}${EXTRACT_SUFX}
 EXTRACT_CMD=	${ECHO} yes | ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX} >/dev/null

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2001/05/14 16:01:22 zuntum Exp $
+# $NetBSD: Makefile,v 1.20 2001/09/27 23:18:56 jlam Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/09/14 04:00:11 jfitz Exp
 #
 
@@ -10,11 +10,11 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=WWW/}
 MAINTAINER=	packages@netbsd.org
 COMMENT=	perl5 library for WWW access
 
-DEPENDS+= 	p5-Digest-MD5-*:../../security/p5-Digest-MD5
+DEPENDS+= 	p5-Digest-MD5-[0-9]*:../../security/p5-Digest-MD5
 DEPENDS+=	p5-Net-[0-9]*:../../net/p5-Net
-DEPENDS+=	p5-MIME-Base64-*:../../converters/p5-MIME-Base64
-DEPENDS+=	p5-HTML-Parser-*:../../www/p5-HTML-Parser
-DEPENDS+=	p5-URI-*:../../www/p5-URI
+DEPENDS+=	p5-MIME-Base64-[0-9]*:../../converters/p5-MIME-Base64
+DEPENDS+=	p5-HTML-Parser-[0-9]*:../../www/p5-HTML-Parser
+DEPENDS+=	p5-URI-[0-9]*:../../www/p5-URI
 
 USE_PERL5=	# defined
 PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/libwww-perl/.packlist

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2001/03/10 11:46:52 drochner Exp $
+# $NetBSD: Makefile,v 1.25 2001/09/27 23:18:42 jlam Exp $
 #
 
 DISTNAME=	gcombust-0.1.42
@@ -10,8 +10,8 @@ HOMEPAGE=	http://www.abo.fi/~jmunsin/gcombust/
 COMMENT=	Graphical frontend for CD mastering (mkhybrid, cdrecord, ...)
 
 DEPENDS+=	cdrecord>=1.9:../cdrecord
-DEPENDS+=	cdlabelgen-*:../../graphics/cdlabelgen
-DEPENDS+=	gv-*:../../print/gv
+DEPENDS+=	cdlabelgen-[0-9]*:../../graphics/cdlabelgen
+DEPENDS+=	gv-[0-9]*:../../print/gv
 DEPENDS+=	gtk+>=1.2.4:../../x11/gtk
 
 CONFLICTS=	cdrecord-1.9a*	# won't work with old alpha versions

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/02/16 15:11:00 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2001/09/27 23:18:08 jlam Exp $
 #
 
 DISTNAME=		xbill-2.0
@@ -10,7 +10,7 @@ MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.xbill.org/
 COMMENT=		stop the dreaded Windows virus from infecting computers
 
-CONFLICT=		gnome-games-*
+CONFLICT=		gnome-games-[0-9]*
 
 USE_IMAKE=		YES
 USE_XPM=		YES

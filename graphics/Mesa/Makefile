@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2001/07/06 00:49:05 fredb Exp $
+# $NetBSD: Makefile,v 1.42 2001/09/27 23:18:09 jlam Exp $
 #
 
 .include "Makefile.common"
@@ -14,7 +14,7 @@ HOMEPAGE=	http://www.mesa3d.org/
 COMMENT=	Graphics library meta package, similar to SGI's OpenGL
 
 
-CONFLICTS=	Mesa-glx-*
+CONFLICTS=	Mesa-glx-[0-9]*
 
 CHECK_MESA=	yes
 .include	"../../mk/bsd.prefs.mk"

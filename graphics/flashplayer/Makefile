@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2001/02/16 15:22:17 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/09/27 23:18:10 jlam Exp $
 #
 
 PKGNAME=	${DISTNAME:C/-/player-/}
 COMMONDIR=	../libflash
 
-DEPENDS+=	libflash-*:${COMMONDIR}
+DEPENDS+=	libflash-[0-9]*:${COMMONDIR}
 
 COMMENT=	standalone open source flash(tm) player
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/02/16 15:10:42 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2001/09/27 23:18:04 jlam Exp $
 #
 
 DISTNAME=		angband-283
@@ -12,7 +12,7 @@ MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.phial.com/angband/
 COMMENT=		Tolkien based variant of Moria for tty/console displays
 
-CONFLICTS=		angband-x11-*
+CONFLICTS=		angband-x11-[0-9]*
 
 EXTRACT_ONLY=		${DISTNAME}${EXTRACT_SUFX}
 WRKSRC=			${WRKDIR}/${DISTNAME}/src

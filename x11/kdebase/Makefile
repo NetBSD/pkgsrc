@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.82 2001/08/29 18:27:59 hubertf Exp $
+# $NetBSD: Makefile,v 1.83 2001/09/27 23:19:00 jlam Exp $
 # FreeBSD Id: Makefile,v 1.6 1997/11/27 00:35:27 se Exp
 
 DISTNAME=	kdebase-1.1.2
@@ -18,7 +18,7 @@ DEPENDS+=	kdelibs-1.1.2:../../x11/kdelibs
 # kdebase doesn't manipulate GIFs, but KDE packages depending on kdebase
 # often do, so put the dependency here.
 #
-DEPENDS+=	libungif-*:../../graphics/libungif
+DEPENDS+=	libungif-[0-9]*:../../graphics/libungif
 
 USE_X11BASE=		YES
 USE_MESA=		YES

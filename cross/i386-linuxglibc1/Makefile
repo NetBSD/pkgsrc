@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/03/27 03:19:49 hubertf Exp $
+# $NetBSD: Makefile,v 1.8 2001/09/27 23:17:51 jlam Exp $
 #
 
 DISTVERSION=		5.3.12.1
@@ -9,7 +9,7 @@ MASTER_SITES=		ftp://ftp.cdrom.com/pub/linux/redhat/redhat-4.2/i386/RedHat/RPMS/
 MAINTAINER=		packages@netbsd.org
 COMMENT=		Cross-compile environment for iX86 Linux, libc v5
 
-BUILD_DEPENDS=		rpm-*:../../misc/rpm
+BUILD_DEPENDS=		rpm-[0-9]*:../../misc/rpm
 
 USE_CROSS_BINUTILS=	yes
 BINUTILS_GNUTARGET=	elf32-i386

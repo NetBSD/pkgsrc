@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/05/05 19:51:15 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2001/09/27 23:18:20 jlam Exp $
 #
 
 DISTNAME=	tclX8.2.0
@@ -13,7 +13,7 @@ COMMENT=	Extended Tcl (TclX), a set of Tcl extensions for system programming
 DEPENDS+=	tk>=8.3.2:../../x11/tk
 DEPENDS+=	tcl-tclX-8.2.0:../../lang/tcl-tclX
 
-CONFLICTS+=	tclX-*
+CONFLICTS+=	tclX-[0-9]*
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
