@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2000/08/18 22:46:44 hubertf Exp $
+# $NetBSD: Makefile,v 1.9 2001/02/17 18:18:47 wiz Exp $
 # FreeBSD Id: Makefile,v 1.5 1997/04/30 03:18:07 asami Exp
 #
 
@@ -11,6 +11,7 @@ MASTER_SITES+=	${MASTER_SITE_LOCAL}
 EXTRACT_SUFX=   .tar.Z
 
 MAINTAINER=	packages@netbsd.org
+COMMENT=	Dialup IP program
 
 NO_SRC_ON_FTP=		Already in MASTER_SITE_LOCAL
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/02/02 02:21:25 jtb Exp $
+# $NetBSD: Makefile,v 1.4 2001/02/17 18:22:15 wiz Exp $
 #
 
 DISTNAME=		blas
@@ -10,6 +10,7 @@ MASTER_SITES=		ftp://ftp.netlib.org/blas/ \
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		jtb@netbsd.org
+COMMENT=		Basic Linear Algebra Subprograms (Fortran)
 
 WRKSRC=			${WRKDIR}
 NO_WRKSUBDIR=		YES

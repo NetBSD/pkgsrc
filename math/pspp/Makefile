@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2001/02/07 05:16:40 fredb Exp $
+# $NetBSD: Makefile,v 1.15 2001/02/17 18:22:36 wiz Exp $
 #
 
 DISTNAME=	pspp-0.3.0
@@ -14,6 +14,7 @@ MASTER_SITES=	ftp://franz.stat.wisc.edu/pub/PSPP/ \
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.gnu.org/software/pspp/
+COMMENT=	Program for statistical analysis of sampled data
 
 BUILD_DEPENDS+=	${LOCALBASE}/bin/autoconf:../../devel/autoconf
 BUILD_DEPENDS+=	msgfmt:../../devel/gettext

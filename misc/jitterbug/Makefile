@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2001/02/08 14:01:59 wennmach Exp $
+# $NetBSD: Makefile,v 1.16 2001/02/17 18:09:08 wiz Exp $
 
 DISTNAME=	jitterbug-1.6.2
 WRKSRC=		${WRKDIR}/${PKGNAME}/source
@@ -7,6 +7,7 @@ MASTER_SITES=	ftp://jitterbug.samba.org/pub/jitterbug/
 
 MAINTAINER=	wennmach@netbsd.org
 HOMEPAGE=	http://jitterbug.samba.org/
+COMMENT=	Web-oriented bug-tracking tool
 
 .if exists(/usr/sbin/user)
 ADDUSER=		/usr/sbin/useradd

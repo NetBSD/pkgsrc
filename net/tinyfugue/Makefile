@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1998/08/20 15:17:20 tsarna Exp $
+# $NetBSD: Makefile,v 1.6 2001/02/17 18:19:45 wiz Exp $
 # FreeBSD Id: Makefile,v 1.8 1998/04/11 04:21:19 jseger Exp
 #
 
@@ -10,6 +10,7 @@ MASTER_SITES=	ftp://tf.tcp.com/pub/tinyfugue/ \
 
 MAINTAINER=	packages@NetBSD.ORG
 HOMEPAGE=	http://tf.tcp.com/~hawkeye/tf/
+COMMENT=	Popular programmable MUD client, with macro support and more
 
 MAKEFILE=	${WRKSRC}/unix/Makefile
 ALL_TARGET=	${MAKE_ARGS} all

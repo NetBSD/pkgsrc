@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2001/02/13 03:54:55 itojun Exp $
+# $NetBSD: Makefile,v 1.24 2001/02/17 17:54:47 wiz Exp $
 
 DISTNAME=		inn-2.3.1
 CATEGORIES=		news
@@ -8,6 +8,7 @@ MASTER_SITES=		ftp://ftp.isc.org/isc/inn/ \
 
 MAINTAINER=		tron@netbsd.org
 HOMEPAGE=		http://www.isc.org/inn.html
+COMMENT=		the public release of InterNet News (INN)
 
 CONFLICTS+=		nntpclnt-*
 

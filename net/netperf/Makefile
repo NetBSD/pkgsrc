@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/07/21 13:36:00 itojun Exp $
+# $NetBSD: Makefile,v 1.4 2001/02/17 18:19:14 wiz Exp $
 # KAME Id: Makefile,v 1.3 2000/01/21 12:34:29 itojun Exp
 #
 
@@ -13,6 +13,7 @@ PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	itojun@kame.net
 HOMEPAGE=	http://www.netperf.org/
+COMMENT=	Rick Jones' network performance benchmarking package
 
 MAKEFILE=	makefile
 MAN1=		netperf.1 netserver.1

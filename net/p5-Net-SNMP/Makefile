@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/09/03 14:53:05 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/17 18:19:22 wiz Exp $
 # FreeBSD Id: Makefile,v 1.13 1997/06/27 18:38:15 jfitz Exp
 #
 
@@ -10,6 +10,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Net/}
 
 MAINTAINER=	packages@netbsd.org
 #HOMEPAGE=	http://theory.uwinnipeg.ca/CPAN/data/libnet/FAQ.html
+COMMENT=	perl5 module for SNMP queries
 
 USE_PERL5=	# defined
 PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/Net/SNMP/.packlist

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2001/02/06 03:16:59 fredb Exp $
+# $NetBSD: Makefile,v 1.13 2001/02/17 18:18:59 wiz Exp $
 #
 
 DISTNAME=	irrd2.0a-Aug22-2000
@@ -9,6 +9,7 @@ MASTER_SITES=	ftp://ftp.merit.edu/radb/irrd/source/ \
 
 MAINTAINER=	kim@tac.nyc.ny.us
 HOMEPAGE=	http://www.irrd.net/
+COMMENT=	Internet Routing Registry Daemon
 
 BUILD_DEPENDS+=	${LOCALBASE}/bin/autoreconf:../../devel/autoconf
 BUILD_DEPENDS+=	bison:../../devel/bison

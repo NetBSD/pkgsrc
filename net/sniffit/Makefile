@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2001/01/08 14:59:18 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2001/02/17 18:19:37 wiz Exp $
 #
 
 DISTNAME=		sniffit.0.3.5
@@ -8,6 +8,7 @@ MASTER_SITES=		http://reptile.rug.ac.be/~coder/sniffit/files/
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://reptile.rug.ac.be/~coder/sniffit/sniffit.html
+COMMENT=		Packet sniffer program
 
 NOT_FOR_PLATFORM=	*-*-alpha	# severe LP64 loss
 

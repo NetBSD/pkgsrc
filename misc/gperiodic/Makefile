@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/01/04 17:09:55 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2001/02/17 18:09:05 wiz Exp $
 #
 
 DISTNAME=	gperiodic-1.2.6
@@ -8,6 +8,7 @@ MASTER_SITES=	ftp://ftp.seul.org/pub/gperiodic/
 
 MAINTAINER=	jlam@netbsd.org
 HOMEPAGE=	http://gperiodic.seul.org/
+COMMENT=	Displays a periodic table of the elements
 
 BUILD_DEPENDS+=	msgfmt:../../devel/gettext
 DEPENDS+=	gtk+-1.2.*:../../x11/gtk

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2000/09/04 19:01:36 skrll Exp $
+# $NetBSD: Makefile,v 1.12 2001/02/17 18:19:18 wiz Exp $
 #
 
 DISTNAME=		nocol-4.3.1
@@ -8,6 +8,7 @@ MASTER_SITES= 		http://www.netplex-tech.com/software/nocol/downloads/
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.netplex-tech.com/software/nocol/
+COMMENT=		Extensible network and system monitoring utility
 
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	./Configure

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2001/01/29 11:34:31 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2001/02/17 18:25:02 wiz Exp $
 # FreeBSD Id: Makefile,v 1.24 1997/05/14 14:40:34 ache Exp
 #
 
@@ -8,6 +8,7 @@ MASTER_SITES=	ftp://ftp.procmail.org/pub/procmail/
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.procmail.org/
+COMMENT=	Local mail delivery agent
 
 INSTALL_TARGET=	install-suid install.man
 MAKE_ENV=	SHELL=/bin/sh

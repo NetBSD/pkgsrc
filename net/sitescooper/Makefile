@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/08/27 02:46:05 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/17 18:19:37 wiz Exp $
 #
 
 DISTNAME=	sitescooper-2.2.8
@@ -7,6 +7,7 @@ MASTER_SITES=	http://sitescooper.cx/released/
 
 MAINTAINER=	rh@netbsd.org
 HOMEPAGE=	http://sitescooper.cx/
+COMMENT=	retrieve stories from websites and convert to Palm readable format
 
 DEPENDS+=	p5-libwww>=5.46:../../www/p5-libwww
 DEPENDS+=	pilotmgr-*:../../comms/pilotmgr

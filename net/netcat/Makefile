@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/01/12 00:44:23 hubertf Exp $
+# $NetBSD: Makefile,v 1.7 2001/02/17 18:19:13 wiz Exp $
 
 DISTNAME=	nc110
 PKGNAME=	netcat-1.10
@@ -14,6 +14,7 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	kim@tac.nyc.ny.us
 HOMEPAGE=	http://www.avian.org/web1/hak/netcat.html
+COMMENT=	Read and write data across network connections
 
 MAKE_ENV+=	DFLAGS="-DGAPING_SECURITY_HOLE -DTELNET"
 ALL_TARGET=	netbsd

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/10/15 17:26:42 rh Exp $
+# $NetBSD: Makefile,v 1.2 2001/02/17 18:19:42 wiz Exp $
 #
 
 DISTNAME=	tac_plus.F4.0.4.alpha
@@ -9,6 +9,7 @@ EXTRACT_SUFX=	.tar.Z
 
 MAINTAINER=	rh@netbsd.org
 HOMEPAGE=	http://www.gazi.edu.tr/~devrim/tacacs/
+COMMENT=	Cisco authentication, authorization, and accounting protocol daemon
 
 ALL_TARGET=	tac_plus
 
