@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2004/07/19 11:43:07 markd Exp $
+# $NetBSD: Makefile,v 1.3 2004/07/31 10:41:30 jdolecek Exp $
 
-DISTNAME=		compat-2004.4.2-3.${SUSE_ARCH}
 PKGNAME=		suse_compat-${SUSE_VERSION}
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_SUSE91}
-EXTRACT_SUFX=		.rpm
+DISTNAME=		${RPMFILES}
 
 MAINTAINER=		tron@NetBSD.org
 HOMEPAGE=		http://www.suse.com/
@@ -19,7 +18,7 @@ NO_BUILD=		YES
 NO_BUILDLINK=		YES
 PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
 
-RPMFILES=		${DISTNAME}${EXTRACT_SUFX}
+RPMFILES=		compat-2004.4.2-3.${SUSE_ARCH}.rpm
 
 .include "../../emulators/suse91_linux/Makefile.common"
 .include "../../mk/bsd.pkg.mk"
