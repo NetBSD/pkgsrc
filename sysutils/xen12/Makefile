@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/05/22 16:50:39 grant Exp $
+# $NetBSD: Makefile,v 1.3 2004/05/22 17:21:52 cl Exp $
 #
 
 DISTNAME=		xeno-1.2-src-040418
@@ -6,7 +6,6 @@ PKGNAME=		xen12-040418
 CATEGORIES=		sysutils
 MASTER_SITES=		ftp://ftp.NetBSD.org/pub/NetBSD/arch/xen/misc/
 EXTRACT_SUFX=		.tgz
-DISTFILES=		${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=		cl@NetBSD.org
 HOMEPAGE=		http://www.NetBSD.org/Ports/xen/
