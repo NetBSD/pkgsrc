@@ -1,28 +1,13 @@
-$NetBSD: patch-aa,v 1.8 2004/02/16 20:36:04 snj Exp $
+$NetBSD: patch-aa,v 1.9 2004/04/01 18:21:20 jmmv Exp $
 
---- modules/cdda-method.c.orig	2004-02-16 11:08:48.000000000 -0800
-+++ modules/cdda-method.c	2004-02-16 11:11:24.000000000 -0800
-@@ -623,7 +623,11 @@ do_get_file_info (GnomeVFSMethod *method
- 	/* Check and see if we already have opened and stashed this drive */
- 	if (!use_base) {
- 		if (global_context != NULL) {
-+#ifndef __FreeBSD__
- 			if (strcmp (drive->cdda_device_name, global_context->drive->cdda_device_name) == 0) {
-+#else
-+			if (strcmp (drive->dev->device_path, global_context->drive->dev->device_path) == 0) {
-+#endif
- 				use_cache = TRUE;
- 				cdda_close (drive);
- 				gnome_vfs_file_info_copy (file_info, global_context->file_info);
-@@ -709,7 +713,11 @@ do_open_directory (GnomeVFSMethod *metho
- 	if (!use_base) {
- 		/* Check for cache */
- 		if (global_context != NULL) {
-+#ifndef __FreeBSD__
- 				if (strcmp (drive->cdda_device_name, global_context->drive->cdda_device_name) != 0) {
-+#else
-+				if (strcmp (drive->dev->device_path, global_context->drive->dev->device_path) != 0) {
-+#endif
- 					/*	Clear old cache */
- 					cdda_context_free (global_context);
- 					global_context = cdda_context_new (drive, uri);
+--- libgnomevfs/xdgmime.c.orig	2004-01-20 22:44:22.000000000 +0100
++++ libgnomevfs/xdgmime.c
+@@ -97,7 +97,7 @@ xdg_mime_init (void)
+ 
+       xdg_data_dirs = getenv ("XDG_DATA_DIRS");
+       if (xdg_data_dirs == NULL)
+-	xdg_data_dirs = "/usr/local/share/:/usr/share/";
++	xdg_data_dirs = PREFIX "/share/:/usr/local/share/:/usr/share/";
+ 
+       ptr = xdg_data_dirs;
+ 

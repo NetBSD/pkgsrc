@@ -1,13 +1,13 @@
-$NetBSD: patch-ai,v 1.5 2003/12/14 19:47:26 jmmv Exp $
+$NetBSD: patch-ai,v 1.6 2004/04/01 18:21:20 jmmv Exp $
 
---- modules/vfolder/Makefile.in.orig	2003-10-26 01:29:34.000000000 +0000
-+++ modules/vfolder/Makefile.in	2003-10-26 01:30:11.000000000 +0000
-@@ -211,7 +211,7 @@
+--- modules/vfolder/Makefile.in.orig	2004-01-30 11:09:38.000000000 +0000
++++ modules/vfolder/Makefile.in
+@@ -259,7 +259,7 @@ libvfolder_desktop_la_LIBADD = \
+ 
  
  ###  Default .vfolder-info files
- 
 -vfolderdir = $(sysconfdir)/gnome-vfs-2.0/vfolders
 +vfolderdir = $(datadir)/examples/gnome-vfs-2.0/vfolders
- vfolder_DATA =  	applications-all-users.vfolder-info 		network.vfolder-info				preferences-all-users.vfolder-info		favorites.vfolder-info				start-here.vfolder-info				server-settings.vfolder-info			system-settings.vfolder-info
- 
- 
+ vfolder_DATA = \
+ 	applications-all-users.vfolder-info 	\
+ 	network.vfolder-info			\
