@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.327 2004/02/01 01:56:28 jlam Exp $
+# $NetBSD: Packages.txt,v 1.328 2004/02/12 07:08:21 minskim Exp $
 ###########################################################################
 
 			==========================
@@ -767,7 +767,7 @@ Please pay attention to the following gotchas:
    info files' in this document.
  - Adjust MAINTAINER to be either yourself, if you plan to maintain the
    package for future updates, or set it to the default MAINTAINER
-   tech-pkg@netbsd.org.
+   tech-pkg@NetBSD.org.
  - If there exists a home page for the software in question, please
    add the variable HOMEPAGE right after MAINTAINER. The value of this
    variable should be the URL for the home page.
@@ -2010,7 +2010,7 @@ current CPU.
  10.10 Is there a mailing list for pkg-related discussion?
  =========================================================
 
-Yes. We are using tech-pkg@netbsd.org for discussing package related
+Yes. We are using tech-pkg@NetBSD.org for discussing package related
 issues. To subscribe do:
 
 	% echo subscribe tech-pkg | mail majordomo@netbsd.org
@@ -2816,7 +2816,7 @@ The file contents in this section must be used without the "> " prefix.
 	DISTNAME=       bison-1.25
 	CATEGORIES=     devel
 	MASTER_SITES=   ${MASTER_SITE_GNU}
-	MAINTAINER=     thorpej@netbsd.org
+	MAINTAINER=     thorpej@NetBSD.org
 	HOMEPAGE=       http://www.gnu.org/software/bison/bison.html
 	COMMENT=        GNU yacc clone
 	
