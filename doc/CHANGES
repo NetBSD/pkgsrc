@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9216 2005/02/19 19:32:53 wiz Exp $
+$NetBSD: CHANGES,v 1.9217 2005/02/19 19:41:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -962,3 +962,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated p5-XML-Simple to 2.14 [wiz 2005-02-19]
 	Added p5-XML-SAX-Writer-0.44 [wiz 2005-02-19]
 	Updated p5-XML-Twig to 3.16 [wiz 2005-02-19]
+	Updated p5-XML-Writer to 0.530 [wiz 2005-02-19]
