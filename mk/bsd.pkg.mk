@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.667 2001/02/19 18:30:36 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.668 2001/02/20 16:42:10 wiz Exp $
 #
 # This file is in the public domain.
 #
@@ -157,7 +157,10 @@ PERL5?=			${LOCALBASE}/bin/perl
 .if defined(USE_PERL5)
 DEPENDS+=		perl-5.*:../../lang/perl5
 .if exists(${PERL5})
-.if !defined(PERL5_SITELIB) || !defined(PERL5_SITEARCH) || !defined(PERL5_ARCHLIB)
+BUILD_DEPENDS+=		perl-mk-1.0:../../pkgtools/perl-mk
+.if exists(${LOCALBASE}/share/mk/bsd.perl.mk)
+.include "${LOCALBASE}/share/mk/bsd.perl.mk"
+.elif !defined(PERL5_SITELIB) || !defined(PERL5_SITEARCH) || !defined(PERL5_ARCHLIB)
 PERL5_SITELIB!=		eval `${PERL5} -V:installsitelib 2>/dev/null`; \
 			echo $${installsitelib}
 PERL5_SITEARCH!=	eval `${PERL5} -V:installsitearch 2>/dev/null`; \
@@ -167,7 +170,7 @@ PERL5_ARCHLIB!=		eval `${PERL5} -V:installarchlib 2>/dev/null`; \
 MAKEFLAGS+=		PERL5_SITELIB=${PERL5_SITELIB}
 MAKEFLAGS+=		PERL5_SITEARCH=${PERL5_SITEARCH}
 MAKEFLAGS+=		PERL5_ARCHLIB=${PERL5_ARCHLIB}
-.endif # !defined(PERL5_*)
+.endif # !exists(bsd.perl.mk) && !defined(PERL5_*)
 .endif # exists($PERL5)
 .endif # USE_PERL5
 
