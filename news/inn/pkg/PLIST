@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 1999/07/29 21:15:47 tron Exp $
+@comment $NetBSD: PLIST,v 1.7 2000/02/27 22:51:42 tron Exp $
 bin/inews
 etc/rc.d/innd.sh
 @exec mkdir -p %D/etc/nntp
@@ -119,6 +119,7 @@ man/man1/nntpget.1
 man/man1/rnews.1
 man/man1/shlock.1
 man/man1/shrinkfile.1
+man/man1/simpleftp.1
 man/man1/startinnfeed.1
 man/man1/subst.1
 man/man3/clientlib.3
@@ -179,6 +180,7 @@ man/man8/innxmit.8
 man/man8/mailpost.8
 man/man8/makeactive.8
 man/man8/makehistory.8
+man/man8/mod-active.8
 man/man8/news-recovery.8
 man/man8/news.daily.8
 man/man8/news2mail.8
