@@ -1,7 +1,7 @@
-$NetBSD: patch-af,v 1.1 1999/09/06 18:03:43 bad Exp $
+$NetBSD: patch-af,v 1.2 2000/11/16 08:17:50 kleink Exp $
 
 --- client-src/sendsize.c.orig	Wed Nov 18 02:07:20 1998
-+++ client-src/sendsize.c	Fri Sep  3 19:53:30 1999
++++ client-src/sendsize.c	Thu Nov 16 09:12:57 2000
 @@ -574,7 +574,7 @@
      {"Total bytes listed: [0-9][0-9]*", 1},		     /* Samba client */
  #endif
@@ -11,7 +11,25 @@ $NetBSD: patch-af,v 1.1 1999/09/06 18:03:43 bad Exp $
  # ifdef SAMBA_CLIENT
      /* On DU 4.0, dump -E prints a line that matches an output line of
         smbclient.  So, even if both are enabled by configure, dump
-@@ -689,7 +689,7 @@
+@@ -593,7 +593,7 @@
+ char *disk;
+ int level;
+ {
+-    int pipefd[2], nullfd, killctl[2];
++    int pipefd[2], nullfd, stdoutfd, killctl[2];
+     pid_t dumppid;
+     long size;
+     FILE *dumpout;
+@@ -614,7 +614,7 @@
+     cmd = vstralloc(libexecdir, "/rundump", versionsuffix(), NULL);
+     rundump_cmd = stralloc(cmd);
+ 
+-    nullfd = open("/dev/null", O_RDWR);
++    stdoutfd = nullfd = open("/dev/null", O_RDWR);
+     pipefd[0] = pipefd[1] = killctl[0] = killctl[1] = -1;
+     pipe(pipefd);
+ 
+@@ -689,13 +689,17 @@
  # else							/* } { */
  	dumpkeys = vstralloc(level_str,
  #  ifdef HAVE_DUMP_ESTIMATE				/* { */
@@ -20,3 +38,22 @@ $NetBSD: patch-af,v 1.1 1999/09/06 18:03:43 bad Exp $
  #  endif						/* } */
  #  ifdef HAVE_HONOR_NODUMP				/* { */
  			     "h",
+ #  endif						/* } */
+ 			     "s", "f", NULL);
+ 
++#  ifdef HAVE_DUMP_ESTIMATE
++	stdoutfd = pipefd[1];
++#  endif
++
+ #  ifdef HAVE_HONOR_NODUMP				/* { */
+ 	dbprintf(("%s: running \"%s%s %s 0 1048576 - %s\"\n",
+ 		  get_pname(), cmd, name, dumpkeys, device));
+@@ -758,7 +762,7 @@
+ 	}
+ 
+ 	dup2(nullfd, 0);
+-	dup2(nullfd, 1);
++	dup2(stdoutfd, 1);
+ 	dup2(pipefd[1], 2);
+ 	aclose(pipefd[0]);
+ 	if (killctl[0] != -1)
