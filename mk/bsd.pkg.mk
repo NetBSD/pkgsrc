@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1184 2003/05/19 06:02:10 wiz Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1185 2003/05/29 11:39:22 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -3787,14 +3787,6 @@ SED_HOMEPAGE_EXPR=       -e 's|%%HOMEPAGE%%|<p>This package has a home page at <
 SED_HOMEPAGE_EXPR=       -e 's|%%HOMEPAGE%%||'
 .endif
 
-show-vulnerabilities:
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	if [ -f ${PKGVULNDIR}/vulnerabilities ]; then			\
-		${AWK} '/^${PKGBASE}[-<>=]+[0-9]/ { print $$0 }' ${PKGVULNDIR}/vulnerabilities; \
-	else								\
-		${ECHO} "No vulnerabilities list found.";		\
-	fi
-
 show-vulnerabilities-html:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if [ -f ${PKGVULNDIR}/vulnerabilities ]; then			\
@@ -4188,18 +4180,6 @@ fake-pkg: ${PLIST} ${DESCR} ${MESSAGE}
 					< ${PKG_DBDIR}/$$realdep/+REQUIRED_BY > ${PKG_DBDIR}/$$realdep/reqby.$$$$; \
 				${MV} ${PKG_DBDIR}/$$realdep/reqby.$$$$ ${PKG_DBDIR}/$$realdep/+REQUIRED_BY; \
 				${ECHO} "${PKGNAME} requires installed package $$realdep"; \
-			fi;						\
-		done;							\
-	fi
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	if [ -f ${PKGVULNDIR}/vulnerabilities ]; then			\
-		allvul="`${AWK} '/#.*/ { next } NF > 0 { cmd = sprintf(\"${PKG_INFO} -e \\\"%s\\\"\", $$1); system(cmd) }' ${PKGVULNDIR}/vulnerabilities`"; \
-		for vul in "" $$allvul; do				\
-			if [ "X$$vul" = "X" ]; then continue; fi;	\
-			if [ "$$vul" = "${PKGNAME}" ]; then		\
-				${ECHO_MSG} '*** WARNING: This package (${PKGNAME}) has a security vulnerability ***'; \
-				${ECHO_MSG} "`${MAKE} show-vulnerabilities`"; \
-				${ECHO_MSG} '*** WARNING: You are strongly advised to deinstall ${PKGNAME} now ***'; \
 			fi;						\
 		done;							\
 	fi
