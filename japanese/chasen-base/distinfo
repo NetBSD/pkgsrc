@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2001/07/23 15:04:11 taca Exp $
+$NetBSD: distinfo,v 1.9 2001/07/25 00:02:47 taca Exp $
 
-SHA1 (chasen-2.2.7.tar.gz) = 5f64dd2d772c8b2ba07d9e325e0ea846d3d2a9c0
-Size (chasen-2.2.7.tar.gz) = 466513 bytes
-SHA1 (chasen-2.2.7-nmz.diff) = b0d11d22cf21e4248c3f7cc899a96e8662d0f70a
-Size (chasen-2.2.7-nmz.diff) = 1817 bytes
+SHA1 (chasen-2.2.8.tar.gz) = 4e6572e6bfbad3d716e2a4c88cb6cd4a9a2f606f
+Size (chasen-2.2.8.tar.gz) = 468710 bytes
+SHA1 (chasen-2.2.8-nmz.diff) = 4a37d4397060936f468e9b800b2901aace11fbae
+Size (chasen-2.2.8-nmz.diff) = 1745 bytes
