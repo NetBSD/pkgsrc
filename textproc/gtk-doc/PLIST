@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2002/01/31 08:13:06 martti Exp $
+bin/gtkdoc-fixxref
+bin/gtkdoc-mkdb
+bin/gtkdoc-mkhtml
+bin/gtkdoc-mkman
+bin/gtkdoc-mktmpl
+bin/gtkdoc-scan
+bin/gtkdoc-scangobj
+bin/gtkdoc-scanobj
+share/gtk-doc/gtk-doc.dcl
+share/gtk-doc/gtk-doc.dsl
+share/gtk-doc/gtkdoc-common.pl
+@dirrm share/gtk-doc

@@ -1,0 +1,8 @@
+The GTK+ Reference Documentation Project (RDP) aims to provide a
+complete set of reference material for the GLib, GDK, and GTK+
+libraries.
+
+It is created using the gtk-doc system, which parses C header files
+and creates 'template' files which are then filled in by the authors.
+These template files are then converted into DocBook SGML, and from
+there to HTML or printed output.
