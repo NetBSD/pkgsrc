@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/08/14 12:08:00 abs Exp $
+# $NetBSD: Makefile,v 1.6 2003/08/18 10:24:11 drochner Exp $
 #
 
 DISTNAME=	rdiff-backup-0.12.3
@@ -9,23 +9,19 @@ MAINTAINER=	davids@idiom.com
 HOMEPAGE=	http://rdiff-backup.stanford.edu/
 COMMENT=	Remote incremental backup utility
 
-PYTHON_VERSION_REQD=	22
+PYDISTUTILSPKG=		yes
+PYTHON_VERSIONS_ACCEPTED= 22 22pth 23 23pth
 USE_BUILDLINK2=		yes
 
 post-patch:
-	@${SED} -e 's|%%LOCALBASE%%|${LOCALBASE}|g' \
-		< ${WRKSRC}/setup.py > ${WRKSRC}/local_setup.py
-
-do-build:
-	cd ${WRKSRC}; ${PYTHONBIN} local_setup.py build
-
-do-install:
-	cd ${WRKSRC}; ${PYTHONBIN} local_setup.py install \
-		--prefix=${PREFIX} --skip-build
+	${SED} -e 's|%%LOCALBASE%%|${LOCALBASE}|g' \
+		< ${WRKSRC}/setup.py > ${WRKSRC}/setup.py.tmp && \
+		${MV} ${WRKSRC}/setup.py.tmp ${WRKSRC}/setup.py
 
 BUILDLINK_DEPENDS.librsync=	librsync>=0.9.6
 
 .include "../../devel/librsync/buildlink2.mk"
 .include "../../lang/python/application.mk"
+.include "../../lang/python/extension.mk"
 
 .include "../../mk/bsd.pkg.mk"
