@@ -1,0 +1,145 @@
+--- mplayer.c.orig	Sun Jul  8 17:11:01 2001
++++ mplayer.c	Mon Jul 30 22:10:10 2001
+@@ -36,6 +36,9 @@
+ #error "============================================="
+ #endif
+ 
++int mixer_usemaster;
++char * mixer_device;
++
+ #include "cfgparser.h"
+ #include "cfg-mplayer-def.h"
+ 
+@@ -400,7 +403,6 @@
+ extern int decode_audio(sh_audio_t *sh_audio,unsigned char *buf,int minlen,int maxlen);
+ 
+ 
+-#include "mixer.h"
+ #include "cfg-mplayer.h"
+ 
+ void parse_cfgfiles( void )
+@@ -578,7 +580,8 @@
+     fprintf(stderr,"Invalid audio output driver name: %s\nUse '-ao help' to get a list of available audio drivers.\n",audio_driver);
+     return 0;
+   }
+-/*DSP!!  if(dsp) audio_out->control(AOCONTROL_SET_DEVICE,(int)dsp);*/
++	if(ao_subdevice) audio_out->control(AOCONTROL_SET_DEVICE,ao_subdevice);
++	audio_out->control(AOCONTROL_SET_MIXER_DEVICE,mixer_device);
+ 
+ // check codec.conf
+ if(!parse_codec_cfg(get_path("codecs.conf"))){
+@@ -1070,11 +1073,6 @@
+ 
+ fflush(stdout);
+ 
+-if(!sh_video){
+-    fprintf(stderr,"Sorry, no video stream... it's unplayable yet\n");
+-    exit(1);
+-}
+-
+ //================== Init AUDIO (codec) ==========================
+ if(has_audio){
+   // Go through the codec.conf and find the best codec...
+@@ -1108,6 +1106,7 @@
+ 
+ //================== Init VIDEO (codec & libvo) ==========================
+ 
++if(!sh_video) goto NOVIDEO;
+ // Go through the codec.conf and find the best codec...
+ sh_video->codec=NULL;
+ while(1){
+@@ -1169,6 +1168,7 @@
+ 
+ if(verbose) printf("vo_debug2: out_fmt=%s\n",vo_format_name(out_fmt));
+ 
++NOVIDEO:
+ // ================== Init output files for encoding ===============
+    if(encode_name){
+      // encode file!!!
+@@ -1209,6 +1209,7 @@
+    }
+ #endif
+ 
++   if(sh_video) {
+    if(screen_size_xy>0){
+      if(screen_size_xy<=8){
+        screen_size_x=screen_size_xy*sh_video->disp_w;
+@@ -1249,6 +1250,7 @@
+                       screen_size_x,screen_size_y,
+                       fullscreen|(vidmode<<1)|(softzoom<<2)|(flip<<3),
+                       title,out_fmt);
++   }
+ 
+ if(verbose) printf("vo_debug3: out_fmt=%s\n",vo_format_name(out_fmt));
+ 
+@@ -1261,7 +1263,7 @@
+      }
+    #endif
+ 
+-   if(video_out->init(sh_video->disp_w,sh_video->disp_h,
++   if(sh_video && video_out->init(sh_video->disp_w,sh_video->disp_h,
+                       screen_size_x,screen_size_y,
+                       fullscreen|(vidmode<<1)|(softzoom<<2)|(flip<<3),
+                       title,out_fmt)){
+@@ -1567,6 +1569,7 @@
+ 
+ //------------------------ frame decoded. --------------------
+ 
++    if(!sh_video) goto NOVIDEO2;
+     // Increase video timers:
+     num_frames+=frame_time;
+     frame_time*=sh_video->frametime;
+@@ -1590,6 +1593,7 @@
+     
+     if(verbose>1) printf("*** ftime=%5.3f ***\n",frame_time);
+ 
++    NOVIDEO2:
+     if(drop_frame){
+ 
+       if(has_audio){
+@@ -1600,11 +1604,11 @@
+ 	  if(time_frame>-2*frame_time) {
+ 	    drop_frame=0; // stop dropping frames
+ 	    if (verbose>0) printf("\nstop frame drop %.2f\n", time_frame);
+-	  }else{
++	  } /* else{
+ 	    ++drop_frame_cnt;
+ 	    if (verbose > 0 && drop_frame_cnt%10 == 0)
+ 	      printf("\nstill dropping, %.2f\n", time_frame);
+-	  }
++	  } */
+       }
+ 
+     } else {
+@@ -1833,21 +1837,23 @@
+       break;
+     case '*':
+     case '/': {
+-        float mixer_l, mixer_r;
+-        mixer_getvolume( &mixer_l,&mixer_r );
++				ao_control_vol_t v;
++
++				audio_out->control(AOCONTROL_GET_VOLUME, (void *)&v);
+         if(c=='*'){
+-            mixer_l++; if ( mixer_l > 100 ) mixer_l = 100;
+-            mixer_r++; if ( mixer_r > 100 ) mixer_r = 100;
++            v.left += 1.0; if ( v.left > 100.0 ) v.left = 100.0;
++            v.right+= 1.0; if ( v.right > 100.0 ) v.right = 100.0;
+         } else {
+-            mixer_l--; if ( mixer_l < 0 ) mixer_l = 0;
+-            mixer_r--; if ( mixer_r < 0 ) mixer_r = 0;
++            v.left -= 1.0; if ( v.left < 0.0 ) v.left = 0.0;
++            v.right-= 1.0; if ( v.right < 0.0 ) v.right = 0.0;
+         }
+-        mixer_setvolume( mixer_l,mixer_r );
++				v.usemaster = mixer_usemaster;
++				audio_out->control(AOCONTROL_SET_VOLUME, (void *)&v);
+ 
+         if(osd_level){
+           osd_visible=sh_video->fps; // 1 sec
+           vo_osd_progbar_type=OSD_VOLUME;
+-          vo_osd_progbar_value=(mixer_l+mixer_r)*5/4;
++          vo_osd_progbar_value=(v.left+v.right)*5/4;
+           //printf("volume: %d\n",vo_osd_progbar_value);
+         }
+       }

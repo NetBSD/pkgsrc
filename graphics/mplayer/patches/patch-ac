@@ -1,0 +1,31 @@
+--- dvdauth.c.orig	Thu Jun 21 04:06:40 2001
++++ dvdauth.c	Mon Jul 30 22:10:09 2001
+@@ -74,6 +74,14 @@
+  * With the old libcss-0.1 api, we have to find out the LBA for
+  * a title for title authentication.
+  */
++
++int CSSDVDAuthTitlePath(DVDHandle hdl,unsigned char *key_title,char *path)
++{
++	int lba=path_to_lba(path);
++	if (lba==-1) return -1;
++	return CSSAuthTitle(hdl,key_title,lba);
++}		
++
+ #ifdef __linux__
+ #include <linux/fs.h>
+ #include <errno.h>
+@@ -121,13 +129,6 @@
+     return lba;
+ }
+ 
+-
+-int CSSDVDAuthTitlePath(DVDHandle hdl,unsigned char *key_title,char *path)
+-{
+-	int lba=path_to_lba(path);
+-	if (lba==-1) return -1;
+-	return CSSAuthTitle(hdl,key_title,lba);
+-}		
+ 		
+ 
+ #else /*linux*/

@@ -1,0 +1,110 @@
+--- libao2/ao_oss.c.orig	Fri Jun 22 03:07:15 2001
++++ libao2/ao_oss.c	Mon Jul 30 22:10:10 2001
+@@ -7,9 +7,14 @@
+ #include <sys/types.h>
+ #include <sys/stat.h>
+ #include <fcntl.h>
+-#include <sys/soundcard.h>
+ 
+ #include "../config.h"
++#ifdef	HAVE_SYS_SOUNDCARD_H
++#include <sys/soundcard.h>
++#endif
++#ifdef	HAVE_SOUNDCARD_H
++#include <soundcard.h>
++#endif
+ 
+ #include "audio_out.h"
+ #include "audio_out_internal.h"
+@@ -40,56 +45,58 @@
+ static int audio_fd=-1;
+ 
+ char *oss_mixer_device = "/dev/mixer";
+-int oss_mixer_usemaster = 0;
+ 
+ // to set/get/query special features/parameters
+-static int control(int cmd,int arg){
++static int control(int cmd,void *arg){
+     switch(cmd){
+ 	case AOCONTROL_SET_DEVICE:
+-	    dsp=(char*)arg;
++			if (arg) {
++				dsp = strdup((char *) arg);
+ 	    return CONTROL_OK;
++			} else
++				return CONTROL_ERROR;
+ 	case AOCONTROL_QUERY_FORMAT:
+ 	    return CONTROL_TRUE;
++		case AOCONTROL_SET_MIXER_DEVICE:
++			if (arg) {
++				oss_mixer_device = strdup((char *) arg);
++				return CONTROL_OK;
++			} else
++				return CONTROL_ERROR;
+ 	case AOCONTROL_GET_VOLUME:
+ 	case AOCONTROL_SET_VOLUME:
+ 	{
+ 	    ao_control_vol_t *vol = (ao_control_vol_t *)arg;
+ 	    int fd, v, mcmd, devs;
+     
+-	    if ((fd = open("/dev/mixer", O_RDONLY)) > 0)
+-	    {
++	    if ((fd = open(oss_mixer_device, O_RDONLY)) > 0) {
+ 		ioctl(fd, SOUND_MIXER_READ_DEVMASK, &devs);
+-		if ((devs & SOUND_MASK_PCM) && (oss_mixer_usemaster == 0))
++				if ((devs & SOUND_MASK_PCM) && (vol->usemaster == 0)) {
+ 		    if (cmd == AOCONTROL_GET_VOLUME)
+ 			mcmd = SOUND_MIXER_READ_PCM;
+ 		    else
+ 			mcmd = SOUND_MIXER_WRITE_PCM;
+-		else if ((devs & SOUND_MASK_VOLUME) && (oss_mixer_usemaster == 1))
++				} else if ((devs & SOUND_MASK_VOLUME) && (vol->usemaster == 1)) {
+ 		    if (cmd == AOCONTROL_GET_VOLUME)
+ 			mcmd = SOUND_MIXER_READ_VOLUME;
+ 		    else
+ 			mcmd = SOUND_MIXER_WRITE_VOLUME;
+-		else
+-		{
++				} else {
+ 		    close(fd);
+ 		    return CONTROL_ERROR;
+ 		}
+ 
+-		if (cmd == AOCONTROL_GET_VOLUME)
+-		{
+-		    ioctl(fd, cmd, &v);
+-		    vol->right = (v & 0xFF00) >> 8;
+-		    vol->left = v & 0x00FF;
+-		}
+-		else
+-		{
++				if (cmd == AOCONTROL_GET_VOLUME) {
++					ioctl(fd, mcmd, &v);
++					vol->right = (float) ((v & 0xFF00) >> 8);
++					vol->left = (float) (v & 0x00FF);
++				} else {
+ 		    v = ((int)vol->right << 8) | (int)vol->left;
+-		    ioctl(fd, cmd, &v);
++					ioctl(fd, mcmd, &v);
+ 		}
+ 		close(fd);
+ 		return CONTROL_OK;
+-	    }
+-	    else
++			} else
+ 		return CONTROL_ERROR;
+ 	}
+ 	return CONTROL_ERROR;
+@@ -249,10 +256,12 @@
+ // return: how many unplayed bytes are in the buffer
+ static int get_delay(){
+   if(audio_delay_method==2){
++#ifdef SNDCTL_DSP_GETODELAY
+       // 
+       int r=0;
+       if(ioctl(audio_fd, SNDCTL_DSP_GETODELAY, &r)!=-1)
+          return r;
++#endif
+       audio_delay_method=1; // fallback if not supported
+   }
+   if(audio_delay_method==1){
