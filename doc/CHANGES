@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5736 2004/04/25 21:39:56 recht Exp $
+$NetBSD: CHANGES,v 1.5737 2004/04/26 01:22:36 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2239,5 +2239,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Added mstream-0.2 [kim 2004-04-24]
 	Updated gdk-pixbuf to 0.22.0nb2 [xtraeme 2004-04-25]
 	Updated p5-HTML-SimpleParse to 0.12 [minskim 2004-04-25]
-	Updated osh to 040216 [minskim 2004-04-25]
+	Updated osh to 040421 [minskim 2004-04-25]
 	Updated clamav to 0.70 [recht 2004-04-25]
