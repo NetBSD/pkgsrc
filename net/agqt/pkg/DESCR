@@ -1,0 +1,13 @@
+This package consists of two programs, collectively termed "6's Spiffy
+AudioGalaxy Query Tool."
+
+AudioGalaxy is a Napster-like music sharing server accessible at 
+http://www.audiogalaxy.com.
+
+The core program is the query tool itself, "ag."  ag accepts an AudioGalaxy
+search query (that is, anything that you might type into AudioGalaxy's
+search engine), runs the query for you, selects the first couple of results
+returned by the search (the exact number of results selected per search is
+configurable) and queues them for download, using the "Choose Versions" 
+feature of AudioGalaxy to try to get a minimum (also configurable) bitrate
+for your downloads.
