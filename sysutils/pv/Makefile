@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/01/24 15:06:58 grant Exp $
+# $NetBSD: Makefile,v 1.8 2004/04/18 23:08:09 snj Exp $
 #
 
 DISTNAME=		pv-0.4.5
@@ -12,9 +12,10 @@ HOMEPAGE=		http://www.ivarch.com/programs/pv.shtml
 COMMENT=		Monitor the progress of data through a pipeline
 
 BUILD_USES_MSGFMT=	yes
+
 GNU_CONFIGURE=		yes
 USE_GNU_TOOLS+=		make
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 
 INFO_FILES=		pv.info
@@ -25,5 +26,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/${i} ${PREFIX}/share/doc/pv
 .endfor
 
-.include "../../devel/gettext-lib/buildlink2.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
