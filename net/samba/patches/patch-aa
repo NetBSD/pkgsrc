@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 1998/08/09 16:14:08 kim Exp $
+$NetBSD: patch-aa,v 1.6 1998/09/04 19:17:18 bad Exp $
 
 --- Makefile.orig	Mon Jun  1 02:29:04 1998
 +++ Makefile	Sun Aug  2 14:52:27 1998
@@ -25,7 +25,7 @@ $NetBSD: patch-aa,v 1.5 1998/08/09 16:14:08 kim Exp $
  LIBDIR = $(BASEDIR)/lib
 -VARDIR = $(BASEDIR)/var
 +ETCDIR?= $(BASEDIR)/etc
-+LOGDIR = /var/log
++LOGDIR?= $(BASEDIR)/log
 +PRIVDIR?= $(BASEDIR)/private
  
  # The permissions to give the executables
@@ -47,11 +47,12 @@ $NetBSD: patch-aa,v 1.5 1998/08/09 16:14:08 kim Exp $
  SMB_PASSWD = $(BINDIR)/smbpasswd
 -SMB_PASSWD_FILE = $(BASEDIR)/private/smbpasswd
 +SMB_PASSWD_FILE = $(PRIVDIR)/smbpasswd
- WEB_ROOT = $(BASEDIR)
+-WEB_ROOT = $(BASEDIR)
++WEB_ROOT = $(BASEDIR)/http/htdocs
  
  # the directory where lock files go
 -LOCKDIR = $(VARDIR)/locks
-+LOCKDIR = /var/spool/locks
++LOCKDIR?= $(VARDIR)/locks
  
  # The directory where code page definition files go
  CODEPAGEDIR = $(LIBDIR)/codepages
@@ -64,7 +65,7 @@ $NetBSD: patch-aa,v 1.5 1998/08/09 16:14:08 kim Exp $
  # contributed by noses@oink.rhein.de
 -# FLAGSM = -DNETBSD -DSHADOW_PWD
 -# LIBSM = -lcrypt 
-+FLAGSM = -DFAST_SHARE_MODES
++FLAGSM = -DFAST_SHARE_MODES -DSHADOW_PWD -DNETGROUP -DALLOW_CHANGE_PASSWORD -DQUOTAS
 +LIBSM = -lcrypt 
  
  # This is for NetBSD 1.3  
