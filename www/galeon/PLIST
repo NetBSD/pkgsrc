@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2003/02/18 14:56:02 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.17 2003/06/19 17:11:52 taya Exp $
 bin/galeon
 bin/galeon-bin
 bin/galeon-config-tool
@@ -317,6 +317,8 @@ ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/galeon.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/galeon.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/galeon.mo
 ${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/galeon.mo
+${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/galeon.mo
+${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/galeon.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/galeon.mo
 ${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/galeon.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/galeon.mo
