@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2002/08/25 18:40:24 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2002/11/25 20:01:43 wiz Exp $
 bin/neon-config
 include/neon/ne_207.h
 include/neon/ne_acl.h
@@ -24,10 +24,17 @@ include/neon/ne_xml.h
 lib/libneon.a
 lib/libneon.la
 lib/libneon.so
-lib/libneon.so.21
-lib/libneon.so.21.3
+lib/libneon.so.23
+lib/libneon.so.23.5
 man/man1/neon-config.1
 man/man3/ne_add_request_header.3
+man/man3/ne_addr_destroy.3
+man/man3/ne_addr_error.3
+man/man3/ne_addr_first.3
+man/man3/ne_addr_next.3
+man/man3/ne_addr_print.3
+man/man3/ne_addr_resolve.3
+man/man3/ne_addr_result.3
 man/man3/ne_buffer.3
 man/man3/ne_buffer_altered.3
 man/man3/ne_buffer_append.3
@@ -65,6 +72,7 @@ man/man3/ne_set_request_body_fd.3
 man/man3/ne_set_server_auth.3
 man/man3/ne_set_useragent.3
 man/man3/ne_shave.3
+man/man3/ne_sock_init.3
 man/man3/ne_ssl_certificate.3
 man/man3/ne_ssl_dname.3
 man/man3/ne_ssl_load_ca.3
@@ -75,6 +83,9 @@ man/man3/ne_status.3
 man/man3/ne_strdup.3
 man/man3/ne_strndup.3
 man/man3/ne_token.3
+man/man3/ne_version_match.3
+man/man3/ne_version_string.3
+man/man3/neon.3
 share/doc/${PKGNAME}/html/apas02.html
 share/doc/${PKGNAME}/html/apas03.html
 share/doc/${PKGNAME}/html/apas04.html
@@ -109,18 +120,22 @@ share/doc/${PKGNAME}/html/refbufutil.html
 share/doc/${PKGNAME}/html/refconfig.html
 share/doc/${PKGNAME}/html/referr.html
 share/doc/${PKGNAME}/html/refgetst.html
+share/doc/${PKGNAME}/html/refneon.html
 share/doc/${PKGNAME}/html/refopts.html
 share/doc/${PKGNAME}/html/refreq.html
 share/doc/${PKGNAME}/html/refreqbody.html
 share/doc/${PKGNAME}/html/refreqhdr.html
+share/doc/${PKGNAME}/html/refresolve.html
 share/doc/${PKGNAME}/html/refsess.html
 share/doc/${PKGNAME}/html/refshave.html
+share/doc/${PKGNAME}/html/refsockinit.html
 share/doc/${PKGNAME}/html/refsslca.html
 share/doc/${PKGNAME}/html/refsslcert.html
 share/doc/${PKGNAME}/html/refssldname.html
 share/doc/${PKGNAME}/html/refsslvfy.html
 share/doc/${PKGNAME}/html/refstatus.html
 share/doc/${PKGNAME}/html/reftok.html
+share/doc/${PKGNAME}/html/refvers.html
 share/doc/${PKGNAME}/html/ssl.html
 share/doc/${PKGNAME}/html/utils.html
 share/doc/${PKGNAME}/html/xml.html
