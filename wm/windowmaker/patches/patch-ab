@@ -1,15 +1,15 @@
-$NetBSD: patch-ab,v 1.9 2001/10/07 13:08:32 rh Exp $
+$NetBSD: patch-ab,v 1.10 2001/12/25 15:10:50 wiz Exp $
 
---- configure.orig	Fri Oct  5 02:52:29 2001
+--- configure.orig	Tue Dec 18 06:44:13 2001
 +++ configure
-@@ -8685,43 +8685,18 @@
+@@ -8477,43 +8477,18 @@
  	PO=""
  fi
  
--supported_locales="cs de es et fr gl it ja ko nl no pt ru sv tr fi hr el pl ro da zh_TW.Big5 zh_CN sk bg hu"
-+supported_locales="cs de es et fr gl it ja ko nl no pt ru sv tr fi hr el pl ro da zh_CN sk bg hu"
- supported_wprefs_locales="pt hr fr ko ja cs zh_TW.Big5 es zh_CN fi it ru de bg hu sk"
- supported_wings_locales="sk"
+-supported_locales="bg cs da de el es et fi fr gl hr hu it ja ko nl no pl pt ro ru sk sv tr zh_CN zh_TW.Big5"
++supported_locales="bg cs da de el es et fi fr gl hr hu it ja ko nl no pl pt ro ru sk sv tr zh_CN"
+ supported_wprefs_locales="bg cs de es et fi fr hr hu it ja ko pt ru sk zh_CN zh_TW.Big5"
+ supported_wings_locales="cs sk"
  
 -for lang in $LINGUAS; do
 -	ok=0
@@ -55,7 +55,7 @@ $NetBSD: patch-ab,v 1.9 2001/10/07 13:08:32 rh Exp $
  done
  
  case $host_os in
-@@ -11752,8 +11727,8 @@
+@@ -11544,8 +11519,8 @@
      fi
  fi
  

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 20:59:30 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/12/25 15:10:49 wiz Exp $
 GNUstep/Apps/WPrefs.app/WPrefs
 GNUstep/Apps/WPrefs.app/WPrefs.tiff
 GNUstep/Apps/WPrefs.app/WPrefs.xpm
@@ -304,6 +304,7 @@ share/doc/WindowMaker/README.KDE
 share/doc/WindowMaker/README.definable-cursor
 ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/WPrefs.mo
 ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/WindowMaker.mo
+${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/WINGs.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/WPrefs.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/WindowMaker.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/WindowMaker.mo
@@ -313,6 +314,7 @@ ${PKGLOCALEDIR}/locale/el/LC_MESSAGES/WindowMaker.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/WPrefs.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/WindowMaker.mo
 ${PKGLOCALEDIR}/locale/et/LC_MESSAGES/WindowMaker.mo
+${PKGLOCALEDIR}/locale/et/LC_MESSAGES/WPrefs.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/WPrefs.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/WindowMaker.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/WPrefs.mo
