@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/02/25 18:46:55 minskim Exp $
+# $NetBSD: Makefile,v 1.10 2004/06/26 17:09:09 grant Exp $
 #
 
 DISTNAME=	libspectrum-0.2.1
@@ -22,6 +22,7 @@ post-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/doc/libspectrum.txt ${DOCDIR}
 
+.include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/perl5/buildlink3.mk"
