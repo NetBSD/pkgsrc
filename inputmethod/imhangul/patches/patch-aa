@@ -1,12 +1,23 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/02/10 08:58:17 minskim Exp $
+$NetBSD: patch-aa,v 1.2 2004/07/19 22:42:53 minskim Exp $
 
---- Makefile.in.orig	2003-12-20 07:35:45.000000000 -0600
+--- Makefile.in.orig	2004-07-12 00:44:54.000000000 -0500
 +++ Makefile.in
-@@ -696,6 +696,7 @@ uninstall-am: uninstall-info-am uninstal
+@@ -828,12 +828,12 @@ uninstall-info: uninstall-info-recursive
  
  
  install-data-hook:
-+no-install-data-hook:
+-	if test -z "$(DESTDIR)" ; then \
+-		if test ! -d `dirname $(IM_HANGUL_GTK_IMMODULE_FILE)`; then \
+-			$(mkinstalldirs) `dirname $(IM_HANGUL_GTK_IMMODULE_FILE)`; \
+-		fi;\
+-		gtk-query-immodules-2.0 > $(DESTDIR)$(IM_HANGUL_GTK_IMMODULE_FILE); \
+-	fi
++#	if test -z "$(DESTDIR)" ; then \
++#		if test ! -d `dirname $(IM_HANGUL_GTK_IMMODULE_FILE)`; then \
++#			$(mkinstalldirs) `dirname $(IM_HANGUL_GTK_IMMODULE_FILE)`; \
++#		fi;\
++#		gtk-query-immodules-2.0 > $(DESTDIR)$(IM_HANGUL_GTK_IMMODULE_FILE); \
++#	fi
+ 
+ uninstall:
  	if test -z "$(DESTDIR)" ; then \
- 		$(mkinstalldirs) $(sysconfdir)/gtk-2.0; \
- 		gtk-query-immodules-2.0 > $(DESTDIR)/$(GTK_IMMODULES); \

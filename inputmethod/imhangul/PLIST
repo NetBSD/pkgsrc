@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.2 2004/04/29 23:00:14 minskim Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/07/19 22:42:53 minskim Exp $
 lib/gtk-2.0/immodules/im-hangul.la
 lib/gtk-2.0/immodules/im-hangul.so
+${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/im-hangul.mo
 @dirrm lib/gtk-2.0/immodules
