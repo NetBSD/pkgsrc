@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2002/03/26 16:37:26 abs Exp $
+# $NetBSD: Makefile,v 1.27 2002/04/09 18:24:51 jwise Exp $
 
-DISTNAME=	${PKGNAME}-src
+DISTNAME=	jakarta-tomcat-3.2.3-src
 PKGNAME=	jakarta-tomcat-3.2.3
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://jakarta.apache.org/builds/jakarta-tomcat/release/v3.2.3/src/
 
@@ -43,6 +44,7 @@ pre-install:
 		${PKGDIR}/INSTALL > ${INSTALL_FILE}
 
 post-install:
+	${RM} ${PREFIX}/tomcat/webapps/examples.war
 	${INSTALL_SCRIPT} ${WRKDIR}/tomcat.sh ${PREFIX}/etc/rc.d/tomcat
 	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
