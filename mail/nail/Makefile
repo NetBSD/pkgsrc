@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2004/11/11 10:37:15 cjep Exp $
+# $NetBSD: Makefile,v 1.23 2004/11/19 09:13:49 cjep Exp $
 
-DISTNAME=	nail-11.15
+DISTNAME=	nail-11.16
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=nail/}
 EXTRACT_SUFX=	.tar.bz2
