@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/10/10 00:00:44 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2004/04/25 08:57:48 snj Exp $
 #
 
 DISTNAME=	ttftot42-0.3.1
@@ -10,8 +10,8 @@ HOMEPAGE=	http://ftp.giga.or.at/pub/nih/ttftot42/
 COMMENT=	TrueType font to Type 42 converter
 
 GNU_CONFIGURE=	yes
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=	yes
 CPPFLAGS+=	-I${BUILDLINK_DIR}/include/freetype
 
-.include "../../graphics/freetype-lib/buildlink2.mk"
+.include "../../graphics/freetype-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
