@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2003/07/17 21:41:31 grant Exp $
+# $NetBSD: Makefile,v 1.14 2003/09/10 23:27:32 dmcmahill Exp $
 #
 
-DISTNAME=		libgdgeda-2.0.9
+DISTNAME=		libgdgeda-2.0.15
 CATEGORIES=		graphics
 MASTER_SITES=		ftp://ftp.geda.seul.org/pub/geda/devel/support/
 
