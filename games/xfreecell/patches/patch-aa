@@ -1,0 +1,37 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/12/22 21:17:25 hubertf Exp $
+
+--- makefile.orig	Sat Apr  3 15:42:49 1999
++++ makefile
+@@ -1,10 +1,10 @@
+ OBJECTS=card.o freecell.o option.o stack.o subwindows.o undo.o util.o gnmanager.o random.o
+ CC=g++
+-CFLAGS=-g -Wall -DSHAPE -DBOGUSRANDOM
+-LIBS=-lm -L. -lns -L/usr/X11R6/lib -lXext -lX11
++CFLAGS=-Wall -DSHAPE -DBOGUSRANDOM -I${X11BASE}/include
++LIBS=-lm -L. -lns -Wl,-R${X11BASE}/lib -L${X11BASE}/lib -lXext -lX11
+ STATICDIR=xfreecell-static
+ DOCS=README CHANGES mshuffle.txt xfreecell.6
+-LIBDIR=/usr/local/lib/xfreecell
++LIBDIR=${PREFIX}/lib/xfreecell
+ 
+ all: $(OBJECTS) lib
+ 	$(CC) -o xfreecell $(CFLAGS) $(OBJECTS) $(LIBS)
+@@ -25,13 +25,13 @@
+ 
+ clean:
+ 	rm -f *~ *.o a.out xfreecell libns.a
+-	make -C widget clean
++	gmake -C widget clean
+ 
+ lib:
+-	make -C widget lib
++	gmake -C widget lib
+ 
+ install: all
+-	install xfreecell $(DESTDIR)/usr/local/bin
+-	install xfreecell.6 $(DESTDIR)/usr/local/man/man6
++	install xfreecell $(DESTDIR)${PREFIX}/bin
++	install xfreecell.6 $(DESTDIR)${PREFIX}/man/man6
+ #	install -d $(LIBDIR)
+-#	install ms-compatible/MSNumbers $(DESTDIR)/usr/local/lib/xfreecell
++#	install ms-compatible/MSNumbers $(DESTDIR)${PREFIX}/lib/xfreecell
