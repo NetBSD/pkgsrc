@@ -3,7 +3,7 @@
 # Date created:		5 December 1996
 # Whom:			Bernd Rosauer <br@schiele-ct.de>
 #
-# $NetBSD: Makefile,v 1.4 1998/01/20 17:09:21 agc Exp $
+# $NetBSD: Makefile,v 1.5 1998/01/24 22:42:49 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/08/05 06:56:41 tg Exp
 #
 
@@ -14,13 +14,14 @@ MASTER_SITES=	${MASTER_SITE_TEX_CTAN}
 MASTER_SITE_SUBDIR=	systems/unix/teTeX/distrib/sources
 DISTFILES=	${TETEX_SRC} ${TETEX_LIB}
 
+PATCH_DIST_STRIP=	-p1
+
 MAINTAINER=	br@schiele-ct.de
 
 BUILD_DEPENDS=	${PREFIX}/bin/install-info:${PORTSDIR}/devel/gtexinfo
 RUN_DEPENDS=	${PREFIX}/bin/install-info:${PORTSDIR}/devel/gtexinfo
 
 DIST_SUBDIR=	teTeX
-PATCH_DIST_STRIP=	-p1
 NO_CONFIGURE=	yes
 USE_GMAKE=	yes
 ALL_TARGET=	config clean texhash all
