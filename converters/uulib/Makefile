@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2001/06/10 16:42:50 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2001/08/19 19:38:37 jlam Exp $
 #
 
 DISTNAME=       uudeview-0.5.15
@@ -13,6 +13,7 @@ COMMENT=	Library for uu/xx/Base64/BinHex de-/encoding
 # "kdesupport-2.1b" included "uu" library.
 CONFLICTS=	kdesupport-2.1b
 
+USE_BUILDLINK_ONLY=	# defined
 GNU_CONFIGURE=	# defined
 USE_LIBTOOL=	# defined
 
