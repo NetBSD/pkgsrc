@@ -1,0 +1,71 @@
+$NetBSD: patch-ad,v 1.1.1.1 2001/07/07 14:40:07 veego Exp $
+
+--- source/vmnet/if_hubvar.h	Tue Apr  3 00:57:57 2001
++++ source/vmnet/if_hubvar.h	Sun Jun 10 11:35:34 2001
+@@ -76,4 +76,8 @@
+ #define MAKEHUBDEV(d,u)  MAKEPORTDEV(d,0,-1)
+ 
+ #define HUBMINPKT	ETHER_HDR_LEN
+-#define HUBMAXPKT	(ETHER_MAX_FRAME(ETHERTYPE_VLAN, 1))
++#if __NetBSD_Version__ >= 105230000
++# define HUBMAXPKT(ifp)	(ETHER_MAX_FRAME(ifp, ETHERTYPE_VLAN, 1))
++#else
++# define HUBMAXPKT	(ETHER_MAX_FRAME(ETHERTYPE_VLAN, 1))
++#endif
+--- source/vmnet/if_hubmod.c	Tue Apr  3 22:51:19 2001
++++ source/vmnet/if_hubmod.c	Sat Jun 23 23:56:58 2001
+@@ -141,10 +141,19 @@
+ {
+ 	int error = 0, i, j;
+ 	struct hubdev_softc *sc;
++#if __NetBSD_Version__ >= 105230000
++	struct ifnet *ifp;
++#endif
+ 	
+ 	switch (cmd) {
+ 	case LKM_E_LOAD:
++#if __NetBSD_Version__ >= 105230000
++ 		ifp = (struct ifnet *)malloc(sizeof(*ifp), M_MRTABLE, M_WAITOK);
++		ifp->if_mtu = ETHERMTU;
++		if (HUBMAXPKT(ifp) > MCLBYTES) {
++#else
+ 		if (HUBMAXPKT > MCLBYTES) {
++#endif
+ 			printf("if_hub: HUBMAXPKT > MCLBYTES\n");
+ 			return EIO;
+ 		}
+@@ -496,6 +505,11 @@
+ 	fp->f_type = DTYPE_VNODE;
+ 	fp->f_ops = &vnops;
+ 	fp->f_data = (caddr_t)vp;
++#if __NetBSD_Version__ >= 105230000
++#ifdef FILE_SET_MATURE
++	FILE_SET_MATURE(fp);
++#endif
++#endif
+ 	FILE_UNUSE(fp, p);
+ 
+ 	p->p_dupfd = fd;
+@@ -903,6 +917,9 @@
+ 	struct hubport_softc *portsc;
+ 	struct mbuf *m;
+ 	int error;
++#if __NetBSD_Version__ >= 105230000
++	struct ifnet *ifp;
++#endif
+ 
+ 	hubsc = hub_scs[HUBUNIT(dev)];
+ 	if (hubsc == NULL)
+@@ -917,7 +934,12 @@
+ 	if (uio->uio_resid == 0)
+ 		return (0);
+ 
++#if __NetBSD_Version__ >= 105230000
++	ifp = &portsc->port_if;
++	if ((uio->uio_resid < HUBMINPKT) || (uio->uio_resid > HUBMAXPKT(ifp))) {
++#else
+ 	if ((uio->uio_resid < HUBMINPKT) || (uio->uio_resid > HUBMAXPKT)) {
++#endif
+ 		HUBDEBUG("if_hub: write: illegal length %d\n", uio->uio_resid);
+ 		return EIO;
+ 	}
