@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/01/28 02:27:29 snj Exp $
+
+SHA1 (scponly-4.0.tgz) = 418486395896dc2a528295a4b508c8b408bfb33c
+Size (scponly-4.0.tgz) = 85053 bytes
+SHA1 (patch-aa) = 1bb06b4a1892450cafb55d1dea0ffdb8b706306f

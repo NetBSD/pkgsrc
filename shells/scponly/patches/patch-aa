@@ -1,0 +1,25 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/01/28 02:27:29 snj Exp $
+
+--- Makefile.in.orig	2003-11-19 22:04:53.000000000 -0800
++++ Makefile.in	2005-01-27 18:02:16.000000000 -0800
+@@ -9,7 +9,7 @@ CFLAGS		 = @CFLAGS@ -I$(srcdir) -I.
+ INSTALL		 = @INSTALL@
+ CC		 = @CC@
+ CHROOTED_NAME    = @CHROOTED_NAME@
+-CONFDIR         := @sysconfdir@/scponly
++CONFDIR         := @sysconfdir@
+ DEBUGFILE       := ${CONFDIR}/debuglevel
+ DEFS		:= @DEFS@ -DDEBUGFILE='"${DEBUGFILE}"'
+ LN_S		 = @LN_S@
+@@ -38,9 +38,10 @@ install: scponly debuglevel scponly.8
+ 	${INSTALL} -d ${bindir}
+ 	${INSTALL} -d ${mandir}/man8
+ 	${INSTALL} -d ${CONFDIR}
++	${INSTALL} -d ${prefix}/share/examples/scponly
+ 	${INSTALL} -o 0 -g 0 scponly ${bindir}/scponly
+ 	${INSTALL} -o 0 -g 0 -m 0644 scponly.8 ${mandir}/man8/scponly.8
+-	${INSTALL} -o 0 -g 0 -m 0644 debuglevel ${DEBUGFILE}
++	${INSTALL} -o 0 -g 0 -m 0644 debuglevel ${prefix}/share/examples/scponly
+ 	if test "x${CHROOTED_NAME}" != "x"; then			\
+ 		${INSTALL} -d ${sbindir};				\
+ 		rm -f ${sbindir}/${CHROOTED_NAME};			\
