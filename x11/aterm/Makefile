@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2002/08/25 21:52:30 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2003/01/02 05:55:12 hubertf Exp $
 #
 
 DISTNAME=	aterm-0.4.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=aterm/}
 
@@ -13,14 +13,15 @@ COMMENT=	aterm (Afterstep XVT) - a VT102 emulator for the X window system
 USE_BUILDLINK2=	YES
 USE_X11=	YES
 GNU_CONFIGURE=	YES
+BUILD_DEFS+=	ATERM_USE_KANJI ATERM_USE_XTERM_SCROLL
+BUILD_DEFS+=	ATERM_USE_BIG5 ATERM_USE_GREEK
+
+.include "../../mk/bsd.prefs.mk"
+
 CONFIGURE_ARGS+=--enable-background-image \
 		--enable-transparency \
 		--enable-fading \
 		--enable-graphics \
-		--enable-xterm-scroll \
-		--enable-kanji \
-		--enable-big5 \
-		--enable-greek \
 		--with-xpm \
 		--with-xpm-includes=${BUILDLINK_PREFIX.xpm}/include \
 		--with-xpm-library=${BUILDLINK_PREFIX.xpm}/lib \
@@ -32,6 +33,22 @@ CONFIGURE_ARGS+=--enable-background-image \
 		--with-png-includes=${BUILDLINK_PREFIX.png}/include \
 		--enable-utmp \
 		--enable-wtmp
+
+.if defined(ATERM_USE_XTERM_SCROLL) && ${ATERM_USE_XTERM_SCROLL} != NO
+CONFIGUE_ARGS+=--enable-xterm-scroll
+.endif
+
+.if defined(ATERM_USE_KANJI) && ${ATERM_USE_KANJI} != NO
+CONFIGURE_ARGS+=--enable-kanji
+.endif
+
+.if defined(ATERM_USE_BIG5) && ${ATERM_USE_BIG5} != NO
+CONFIGURE_ARGS+=--enable-big5
+.endif
+
+.if defined(ATERM_USE_GREEK) && ${ATERM_USE_GREEK} != NO
+CONFIGURE_ARGS+=--enable-greek
+.endif
 
 .include "../../graphics/jpeg/buildlink2.mk"
 .include "../../graphics/png/buildlink2.mk"
