@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2004/10/03 00:18:29 tv Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2004/10/07 16:36:47 tv Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 FOX_BUILDLINK3_MK:=	${FOX_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	fox
 
 .if !empty(FOX_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.fox+=		fox>=1.0.43nb2
-BUILDLINK_RECOMMENDED.fox+=	fox>=1.0.43nb4
+BUILDLINK_RECOMMENDED.fox+=	fox>=1.0.43nb5
 BUILDLINK_PKGSRCDIR.fox?=	../../x11/fox
 BUILDLINK_INCDIRS.fox?=		include/fox
 .endif	# FOX_BUILDLINK3_MK
