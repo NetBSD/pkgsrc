@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.32 2003/01/28 22:04:24 jlam Exp $
+# $NetBSD: Makefile,v 1.33 2003/04/26 09:49:37 jmmv Exp $
 
 VERS=			0.80.2
 DISTNAME=		WindowMaker-${VERS}
 PKGNAME=		windowmaker-${VERS}
 PKGREVISION=		1
-CATEGORIES=		x11 wm
+CATEGORIES=		x11 wm windowmaker
 MASTER_SITES=		ftp://ftp.windowmaker.org/pub/source/release/ \
 			ftp://ftp.ics.es.osaka-u.ac.jp/mirrors/WindowMaker/source/release/
 EXTRACT_SUFX=		.tar.bz2
