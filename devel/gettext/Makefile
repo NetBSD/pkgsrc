@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2002/08/19 19:20:30 seb Exp $
+# $NetBSD: Makefile,v 1.37 2002/08/28 06:50:35 jlam Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1998/08/09 15:13:33 kuriyama Exp
 #
 
@@ -13,7 +13,7 @@ COMMENT=		tools for providing messages in different languages
 
 DEPENDS+=		gettext-m4-0.10.35:../../devel/gettext-m4
 
-USE_BUILDLINK_ONLY=	yes
+USE_BUILDLINK2=		yes
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
@@ -36,6 +36,6 @@ post-configure:
 post-install:
 	cd ${WRKSRC}/intl; ${MAKE_PROGRAM} install-data
 
-.include "../../devel/gettext-lib/buildlink.mk"
+.include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2002/08/25 19:21:48 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2002/08/28 06:49:34 jlam Exp $
 #
 
 VERS=		3.92
@@ -12,20 +12,21 @@ MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://www.mp3dev.org/mp3/
 COMMENT=	Fast, high quality MP3 encoder
 
-GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
-USE_LIBTOOL=	yes
-LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
-USE_BUILDLINK_ONLY=	yes
-
 LICENSE=	fee-based-commercial-use
 
+USE_BUILDLINK2=		yes
+USE_GMAKE=		yes
+
+USE_LIBTOOL=		yes
+LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
+
+GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--without-vorbis
 
 .include "../../mk/bsd.prefs.mk"
 
 .if defined(LAME_USE_GTK)
-.include "../../x11/gtk/buildlink.mk"
+.  include "../../x11/gtk/buildlink2.mk"
 .else
 CONFIGURE_ARGS+=	--enable-analyzer=no
 .endif
@@ -38,5 +39,5 @@ CFLAGS+=	-O2 -Wall -fomit-frame-pointer -ffast-math -funroll-loops \
 		-finline-functions -DFLOAT=double
 .endif
 
-.include "../../devel/ncurses/buildlink.mk"
+.include "../../devel/ncurses/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
