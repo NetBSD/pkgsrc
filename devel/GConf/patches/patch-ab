@@ -1,0 +1,11 @@
+$NetBSD: patch-ab,v 1.4 2002/07/18 02:19:37 rh Exp $
+
+--- gconf.pc.in.orig	Sat Mar 24 08:52:30 2001
++++ gconf.pc.in
+@@ -8,5 +8,5 @@ Name: gconf
+ Description: GNOME Config System.
+ Version: @VERSION@
+ Requires: oaf
+-Libs: -L${libdir} -lgconf-@MAJOR_VERSION@
++Libs: -L${libdir} -Wl,-R${libdir} -lgconf-@MAJOR_VERSION@
+ Cflags: -I${includedir}/gconf/@MAJOR_VERSION@

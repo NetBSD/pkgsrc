@@ -1,0 +1,11 @@
+$NetBSD: patch-ab,v 1.1 2002/07/18 02:19:40 rh Exp $
+
+--- ORBit-CosNaming-2.0.pc.in.orig	Thu Nov  1 11:50:44 2001
++++ ORBit-CosNaming-2.0.pc.in
+@@ -8,5 +8,5 @@ Name: ORBit-CosNaming-2.0
+ Description: High-performance CORBA Object Request Broker - Naming Service.
+ Version: @ORBIT_VERSION@
+ Requires: ORBit-2.0
+-Libs: -L${libdir} -lORBitCosNaming-2
++Libs: -L${libdir} -Wl,-R${libdir} -lORBitCosNaming-2
+ Cflags: -I${includedir}/orbit-2.0

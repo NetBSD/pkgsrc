@@ -1,0 +1,11 @@
+$NetBSD: patch-ah,v 1.6 2002/07/18 02:19:25 rh Exp $
+
+--- ORBit.pc.in.orig	Sat Sep 30 12:09:43 2000
++++ ORBit.pc.in
+@@ -7,5 +7,5 @@ Name: ORBit
+ Description: High-performance CORBA Object Request Broker.
+ Version: @VERSION@
+ Requires: glib
+-Libs: -L${libdir} -lORBit -lIIOP -lORBitutil @LIBS@ -lm
++Libs: -L${libdir} -Wl,-R${libdir} -lORBit -lIIOP -lORBitutil @LIBS@ -lm
+ Cflags: -I${includedir}

@@ -1,0 +1,11 @@
+$NetBSD: patch-ad,v 1.1 2002/07/18 02:19:28 rh Exp $
+
+--- esound.pc.in.orig	Tue Apr 23 18:28:28 2002
++++ esound.pc.in
+@@ -7,5 +7,5 @@ Name: esound
+ Description: esound
+ Requires: audiofile
+ Version: @VERSION@
+-Libs: -L${libdir} -lesd
++Libs: -L${libdir} -Wl,-R${libdir} -lesd
+ Cflags: -I${includedir}
