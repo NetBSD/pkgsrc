@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.4 2004/10/06 00:09:02 chris Exp $
+@comment $NetBSD: PLIST,v 1.5 2005/02/14 22:47:48 chris Exp $
 bin/taglib-config
 include/taglib/apefooter.h
+include/taglib/apeitem.h
 include/taglib/apetag.h
 include/taglib/attachedpictureframe.h
 include/taglib/audioproperties.h
