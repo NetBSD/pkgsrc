@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 1998/10/04 17:59:42 tv Exp $
+# $NetBSD: Makefile,v 1.14 1998/10/04 22:05:42 tv Exp $
 #
 
 DISTNAME=       lynx2-8
@@ -15,7 +15,7 @@ CONFLICTS=	lynx-2.8rel.2
 DEPENDS+=	libslang-1.2.2:../../devel/libslang
 
 CONFIGURE_ARGS+= --with-screen=slang --with-zlib --libdir="${PREFIX}/etc"
-CONFIGURE_ENV+=	LIBS=-lm CPPFLAGS=-Dunix
+CONFIGURE_ENV+=	LIBS="-lm -ltermcap" CPPFLAGS=-Dunix
 GNU_CONFIGURE=  YES
 
 INSTALL_TARGET= install install-help
