@@ -1,17 +1,21 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/12/17 23:32:21 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2001/11/15 07:58:51 jlam Exp $
 
---- Makefile.orig	Sat Mar 27 07:46:38 1999
-+++ Makefile	Sun Dec 12 19:13:34 1999
-@@ -1,8 +1,8 @@
+--- Makefile.orig	Sat Mar 27 01:46:38 1999
++++ Makefile
+@@ -1,11 +1,11 @@
 -CC     = gcc
 -CFLAGS = -O2 -Wall
 -INCDIR = -I/usr/X11R6/include/X11 -I/usr/X11R6/include
-+# CC     = gcc
-+CFLAGS += -O2 -Wall
-+INCDIR = -I${X11BASE}/include/X11 -I${X11BASE}/include
++#CC     = gcc
++#CFLAGS = -O2 -Wall
++INCDIR = ${CFLAGS}
  DESTDIR= /usr/X11R6
 -LIBDIR = -L/usr/X11R6/lib
-+LIBDIR = -L${X11BASE}/lib -Wl,-R${X11BASE}/lib
++LIBDIR = ${LDFLAGS}
  
  # for Linux
- LIBS   = -lXpm -lX11 -lXext
+-LIBS   = -lXpm -lX11 -lXext
++LIBS   = -lXpm -lX11 -lXext ${EXTRALIBS}
+ 
+ # for Solaris
+ # LIBS   = -lXpm -lX11 -lXext -lsocket -lnsl
