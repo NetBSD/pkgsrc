@@ -1,0 +1,22 @@
+$NetBSD: patch-ag,v 1.1.1.1 2000/12/20 18:28:05 skrll Exp $
+
+--- test/intltest/Makefile.in.orig	Wed Aug 16 23:30:12 2000
++++ test/intltest/Makefile.in
+@@ -55,6 +55,8 @@
+ $(LD_RPATH)$(LD_RPATH_PRE)$(top_builddir)/common@ld_rpath_suf@$(LD_RPATH_PRE)$(top_builddir)/i18n
+ LIBS = $(LIBICU-UC) $(LIBICU-I18N) @LIBS@ @LIB_M@
+ 
++BUILD_LPATH=$(top_builddir)/common
++
+ OBJECTS = allcoll.o apicoll.o callimts.o calregts.o caltest.o		\
+ caltztst.o citrtest.o cppcnvt.o cputilst.o currcoll.o dacoll.o		\
+ dcfmapts.o decoll.o dtfmapts.o dtfmrgts.o dtfmtrtts.o dtfmttst.o	\
+@@ -99,7 +101,7 @@
+ 	$(RMV) Makefile $(DEPS)
+ 
+ check-local: all-local
+-	 ICU_DATA=@DATABUILDDIR@/ TZ=PST8PDT ./$(TARGET) 
++	 $(TOOL) ICU_DATA=@DATABUILDDIR@/ TZ=PST8PDT ./$(TARGET) 
+ 
+ Makefile: $(srcdir)/Makefile.in  $(top_builddir)/config.status
+ 	cd $(top_builddir) \

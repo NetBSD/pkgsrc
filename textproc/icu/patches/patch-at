@@ -1,0 +1,12 @@
+$NetBSD: patch-at,v 1.1.1.1 2000/12/20 18:28:06 skrll Exp $
+
+--- tools/pkgdata/icupkg.inc.in.orig	Tue Aug 15 03:41:58 2000
++++ tools/pkgdata/icupkg.inc.in
+@@ -110,3 +110,7 @@
+ ifeq ($(strip $(PLATFORM)),U_LINUX)
+   TOOL=env LD_LIBRARY_PATH=$(LPATHS)
+ endif
++
++ifeq ($(strip $(PLATFORM)),U_NETBSD)
++  TOOL=env LD_LIBRARY_PATH=$(LPATHS)
++endif
