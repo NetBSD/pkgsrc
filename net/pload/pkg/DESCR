@@ -1,0 +1,6 @@
+Pload is a program to monitor ppp network device statistics. It
+graphs information using Athena stripchart widgets.
+
+Pload shows totals and current rates for a given ppp interface. It
+is customizable to show only receive data or only send data also.
+Additional customization can be accomplished using X resources.
