@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2004/02/14 18:26:29 jmmv Exp $
+# $NetBSD: Makefile,v 1.7 2004/02/27 01:53:45 snj Exp $
 #
 
 DISTNAME=	gtk-thinice-engine-2.0.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtk-thinice-engine/2.0/}
 EXTRACT_SUFX=	.tar.bz2
