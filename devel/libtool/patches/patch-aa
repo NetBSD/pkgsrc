@@ -1,86 +1,13 @@
-$NetBSD: patch-aa,v 1.32 2003/12/11 22:15:30 reed Exp $
+$NetBSD: patch-aa,v 1.33 2004/02/05 20:14:06 skrll Exp $
 
---- ltconfig.in.orig	Mon May 21 00:05:06 2001
-+++ ltconfig.in	Mon Dec  8 21:47:31 2003
-@@ -1051,9 +1051,10 @@
-   lt_cv_dlopen_self=yes
-   ;;
- 
--bsdi4*)
--  version_type=linux
-+bsdi*)
-+  version_type=sunos
-   need_version=no
-+  need_lib_prefix=no
-   library_names_spec='${libname}${release}.so$versuffix ${libname}${release}.so$major $libname.so'
-   soname_spec='${libname}${release}.so$major'
-   finish_cmds='PATH="\$PATH:/sbin" ldconfig $libdir'
-@@ -1104,7 +1105,7 @@
-   version_type=darwin
-   need_lib_prefix=no
-   need_version=no
--  library_names_spec='${libname}${release}${versuffix}.`test .$module = .yes && echo so || echo dylib` ${libname}${release}${major}.$`test .$module = .yes && echo so || echo dylib` ${libname}.`test .$module = .yes && echo so || echo dylib`'
-+  library_names_spec='${libname}${release}${versuffix}.`test .$module = .yes && echo so || echo dylib` ${libname}${release}${major}.`test .$module = .yes && echo so || echo dylib` ${libname}.`test .$module = .yes && echo so || echo dylib`'
-   soname_spec='${libname}${release}${major}.`test .$module = .yes && echo so || echo dylib`'
-   shlibpath_overrides_runpath=yes
-   shlibpath_var=DYLD_LIBRARY_PATH
-@@ -1116,16 +1117,17 @@
- 
- freebsd*)
-   objformat=`test -x /usr/bin/objformat && /usr/bin/objformat || echo aout`
--  version_type=freebsd-$objformat
--  case $version_type in
--    freebsd-elf*)
--      library_names_spec='${libname}${release}.so$versuffix ${libname}${release}.so $libname.so'
-+  version_type=sunos
-+  case $objformat in
-+    elf*)
-+      library_names_spec='${libname}${release}.so$versuffix ${libname}${release}.so$major $libname.so'
-+      soname_spec='${libname}${release}.so$major'
-       need_version=no
-       need_lc=no
-       need_lib_prefix=no
-       ;;
--    freebsd-*)
--      library_names_spec='${libname}${release}.so$versuffix $libname.so$versuffix'
-+    *)
-+      library_names_spec='${libname}${release}.so$versuffix ${libname}${release}.so$major $libname.so'
-       need_version=yes
-       ;;
-   esac
-@@ -1167,7 +1169,7 @@
-   ;;
- 
- irix5* | irix6*)
--  version_type=irix
-+  version_type=sunos
-   need_lib_prefix=no
-   need_version=no
-   soname_spec='${libname}${release}.so$major'
-@@ -1198,7 +1200,7 @@
- 
- # This must be Linux ELF.
- linux-gnu*)
--  version_type=linux
-+  version_type=sunos
-   need_lib_prefix=no
-   need_version=no
-   library_names_spec='${libname}${release}.so$versuffix ${libname}${release}.so$major $libname.so'
-@@ -1236,6 +1238,8 @@
-   shlibpath_var=LD_LIBRARY_PATH
-   shlibpath_overrides_runpath=yes
-   hardcode_into_libs=yes
-+  sys_lib_dlsearch_path_spec="/usr/lib"
-+  sys_lib_search_path_spec="/usr/lib"
-   ;;
- 
- newsos6)
-@@ -1282,7 +1286,7 @@
-   ;;
- 
- solaris*)
--  version_type=linux
-+  version_type=sunos
-   need_lib_prefix=no
-   need_version=no
-   library_names_spec='${libname}${release}.so$versuffix ${libname}${release}.so$major $libname.so'
+--- Makefile.in.orig	2004-01-25 12:36:36.000000000 +0000
++++ Makefile.in
+@@ -202,7 +202,7 @@ subdirs = @subdirs@
+ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
+ AUTOMAKE_OPTIONS = 1.3e gnu
+-BUILD_SUBDIRS = . libltdl doc tests
++BUILD_SUBDIRS = . libltdl tests
+ SUBDIRS = $(BUILD_SUBDIRS)
+ DIST_SUBDIRS = $(BUILD_SUBDIRS) $(CONF_SUBDIRS)
+ CPPLAGS = @CPPFLAGS@
