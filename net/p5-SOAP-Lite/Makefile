@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/01/06 01:06:43 grant Exp $
+# $NetBSD: Makefile,v 1.3 2004/01/06 04:26:53 grant Exp $
 #
 
 DISTNAME=	SOAP-Lite-0.55
@@ -10,8 +10,8 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://soaplite.com/
 COMMENT=	Perl5 module providing a lightweight interface to SOAP
 
-DEPENDS+=	p5-URI-[0-9]*:../../www/p5-URI
 DEPENDS+=	p5-MIME-Base64-[0-9]*:../../converters/p5-MIME-Base64
+DEPENDS+=	p5-URI-[0-9]*:../../www/p5-URI
 DEPENDS+=	p5-XML-Parser>=2.23:../../textproc/p5-XML-Parser
 
 USE_BUILDLINK2=	YES
