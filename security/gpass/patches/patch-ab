@@ -1,20 +1,13 @@
-$NetBSD: patch-ab,v 1.1.1.1 2004/04/29 08:01:24 jmmv Exp $
+$NetBSD: patch-ab,v 1.2 2004/05/02 11:57:40 jmmv Exp $
 
---- gpass.desktop.in.orig	2004-04-27 01:58:41.000000000 +0200
-+++ gpass.desktop.in
-@@ -1,10 +1,10 @@
--
- [Desktop Entry]
- Name=Password Manager
--Comment=Password Manager Version 0.1
--Exec=passwordmanager
--Icon=@PACKAGE_PIXMAPS_DIR@/ 
-+Comment=Manages your password collection
-+Exec=gpass
-+#Icon= Not available yet
- Terminal=false
- MultipleArgs=false
- Type=Application
--
-+StartupNotify=true
-+Categories=GNOME;Application;Utility;
+--- po/Makefile.in.in.orig	2004-04-27 01:58:47.000000000 +0200
++++ po/Makefile.in.in
+@@ -29,7 +29,7 @@ gettextsrcdir = $(datadir)/gettext/po
+ INSTALL = @INSTALL@
+ INSTALL_DATA = @INSTALL_DATA@
+ MKINSTALLDIRS = @MKINSTALLDIRS@
+-mkinstalldirs = $(SHELL) `case "$(MKINSTALLDIRS)" in /*) echo "$(MKINSTALLDIRS)" ;; *) echo "$(top_builddir)/$(MKINSTALLDIRS)" ;; esac`
++mkinstalldirs = @MKINSTALLDIRS@
+ 
+ CC = @CC@
+ GMSGFMT = @GMSGFMT@
