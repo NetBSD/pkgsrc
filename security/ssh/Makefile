@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.95 2001/12/05 16:03:57 agc Exp $
+# $NetBSD: Makefile,v 1.96 2002/01/08 09:36:52 agc Exp $
 # FreeBSD Id: Makefile,v 1.47 1997/11/10 22:04:42 dima Exp
 #
 
@@ -116,11 +116,6 @@ CONFIGURE_ARGS+=	--with-krb4=/usr
 #.else
 #CONFIGURE_ARGS+=--without-krb5
 #.endif
-
-# Find X11 libraries with xpkgwedge
-.if defined(USE_LOCALBASE_FOR_X11)
-CONFIGURE_ARGS+=	--x-libraries=${X11BASE}/lib --x-includes=${X11BASE}/include
-.endif
 
 # Enable support for TIS authentication server
 .if defined(USE_TIS) && ${USE_TIS} == YES
