@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8116 2004/11/28 18:37:37 kleink Exp $
+$NetBSD: CHANGES,v 1.8117 2004/11/28 20:27:25 snj Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5600,3 +5600,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added csound4-4.23.12.6 [ben 2004-11-28]
 	Updated xmms-meta-csound to 0.3 [ben 2004-11-28]
 	Updated kdepim3 to 3.3.1nb2 [kleink 2004-11-28]
+	Updated criticalmass to 0.99 [snj 2004-11-28]
