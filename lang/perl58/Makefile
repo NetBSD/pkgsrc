@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2003/08/26 02:30:28 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2003/09/12 20:07:21 grant Exp $
 
 PERL5_SNAPSHOT=	# empty
 PERL5_VERS=	5.8.0
@@ -220,6 +220,6 @@ post-install:
 	${INSTALL_DATA} ${WRKDIR}/bsd.perl.mk ${PREFIX}/share/mk/bsd.perl.mk
 
 .if ${MACHINE_ARCH} == "alpha"
-.  include "../../mk/gcc.buildlink2.mk"
+USE_GCC2=		# defined
 .endif
 .include "../../mk/bsd.pkg.mk"
