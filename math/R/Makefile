@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.29 2001/12/11 22:35:07 jlam Exp $
+# $NetBSD: Makefile,v 1.30 2002/03/01 10:46:53 markd Exp $
 
-DISTNAME=		R-1.3.0
+DISTNAME=		R-1.4.1
 CATEGORIES=		math
 MASTER_SITES=		http://lib.stat.cmu.edu/R/CRAN/src/base/ \
 			http://cran.r-project.org/src/base/ \
