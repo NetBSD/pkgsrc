@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.96 2000/10/24 10:15:56 wiz Exp $
+# $NetBSD: Makefile,v 1.97 2000/11/01 15:05:54 tron Exp $
 # FreeBSD Id: Makefile,v 1.53 1997/09/28 13:25:40 markm Exp
 #
 
@@ -8,6 +8,7 @@
     SUBDIR += Mesa-glx
     SUBDIR += MesaLib
     SUBDIR += Ngraph
+    SUBDIR += alevt
     SUBDIR += camediaplay
     SUBDIR += cdlabelgen
     SUBDIR += clanlib
