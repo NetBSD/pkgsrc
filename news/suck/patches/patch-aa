@@ -1,0 +1,12 @@
+--- Makefile.in.orig	Thu Feb 12 19:24:28 1998
++++ Makefile.in	Tue Apr 21 04:56:17 1998
+@@ -9,3 +9,3 @@
+ #HISTORYF=/var/news/etc/history
+-HISTORYF=/usr/lib/news/history
++HISTORYF=%%%HISTORY%%%
+ 
+@@ -132,3 +132,3 @@
+ 	- mkdir -p $(bindir)
+-	- strip -s suck rpost testhost lmove
++	- strip suck rpost testhost lmove
+ 	$(INSTALL_PROGRAM) suck $(bindir)/suck
