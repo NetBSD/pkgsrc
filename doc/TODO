@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2055 2004/08/17 03:35:05 ben Exp $
+$NetBSD: TODO,v 1.2056 2004/08/17 09:15:21 wiz Exp $
 
 Suggested new packages
 ======================
@@ -379,7 +379,6 @@ Suggested package updates
 	o scanssh-2.0
 	o sawfish-1.3
 	o scm-5d9
-	o scmxx-0.7.3
 	o sendfile-20010424
 	o sendmail-8.13.1 [pkgsrc-wip sendmail813]
 	o siag-3.6.0
