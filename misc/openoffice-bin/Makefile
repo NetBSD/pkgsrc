@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2005/01/03 20:04:07 wiz Exp $
+# $NetBSD: Makefile,v 1.1.1.1 2005/02/24 13:50:18 mrauch Exp $
 
 DISTNAME=		OOo_${OO_VER}_LinuxIntel_install
-PKGNAME=		openoffice-linux-${OO_VER}
+PKGNAME=		openoffice-bin-${OO_VER}
 CATEGORIES=		misc
 MASTER_SITES=		${MASTER_SITE_OPENOFFICE:=stable/${OO_VER}/}
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX}
