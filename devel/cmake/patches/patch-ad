@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 2004/08/02 13:08:09 drochner Exp $
+
+--- bootstrap.orig	2004-07-05 16:27:15.000000000 +0200
++++ bootstrap
+@@ -74,7 +74,7 @@ cmake_source_dir=`(cd "${cmake_source_di
+ cmake_binary_dir=`pwd`
+ cmake_bootstrap_dir="${cmake_binary_dir}/Bootstrap.cmk"
+ cmake_data_dir="/share/CMake"
+-cmake_doc_dir="/doc/CMake"
++cmake_doc_dir="/share/doc/CMake"
+ cmake_man_dir="/man"
+ cmake_init_file=""
+ 
