@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.57 2004/11/24 07:39:50 jlam Exp $
+# $NetBSD: Makefile,v 1.58 2004/11/26 23:07:58 jlam Exp $
 
 .include "Makefile.common"
 
 PKGNAME=		apache-${APACHE_VERSION}
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		www
 
 HOMEPAGE=		http://httpd.apache.org/
@@ -32,6 +32,7 @@ CONFIGURE_ARGS+=	--with-apr-util=${BUILDLINK_PREFIX.apr}
 .include "../../devel/apr/buildlink3.mk"
 .include "../../lang/perl5/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
+.include "../../mk/dlopen.buildlink3.mk"
 
 # Set the "Multi-Processing Model" used by Apache to handle requests.
 # Valid values are:
