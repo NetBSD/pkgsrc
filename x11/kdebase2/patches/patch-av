@@ -1,13 +1,13 @@
-$NetBSD: patch-av,v 1.1.1.1 2001/03/14 16:03:15 skrll Exp $
+$NetBSD: patch-av,v 1.2 2001/10/15 22:46:01 skrll Exp $
 
---- kwin/clients/win2k/Makefile.am.orig	Thu Jan 11 12:24:04 2001
-+++ kwin/clients/win2k/Makefile.am
-@@ -4,7 +4,7 @@
- kde_module_LTLIBRARIES = libkwin2k.la
+--- kcontrol/kcontrol/main.cpp.orig	Thu Apr 19 14:57:22 2001
++++ kcontrol/kcontrol/main.cpp
+@@ -75,7 +75,7 @@
+   delete toplevel;
+ }
  
- libkwin2k_la_SOURCES = win2k.cpp
--libkwin2k_la_LIBADD = ../../kwin.la
-+libkwin2k_la_LIBADD = ../../libkwin.la
- libkwin2k_la_LDFLAGS = $(all_libraries) $(KDE_PLUGIN)
- 
- METASOURCES = AUTO
+-int main(int argc, char *argv[])
++int kcontrol_main(int argc, char *argv[])
+ {
+   KAboutData aboutData( "kcontrol", I18N_NOOP("KDE Control Center"),
+     "v2.0", I18N_NOOP("The KDE Control Center"), KAboutData::License_GPL,

@@ -1,14 +1,13 @@
-$NetBSD: patch-az,v 1.1 2001/03/24 13:42:05 skrll Exp $
+$NetBSD: patch-az,v 1.2 2001/10/15 22:46:01 skrll Exp $
 
---- config.h.in.orig	Thu Feb 22 13:15:14 2001
-+++ config.h.in
-@@ -110,6 +110,9 @@
- /* Define if you have the setpriority function.  */
- #undef HAVE_SETPRIORITY
+--- kcontrol/konq/Makefile.am.orig	Tue May 15 14:09:00 2001
++++ kcontrol/konq/Makefile.am
+@@ -10,7 +10,7 @@
+ 		desktop.cpp uiserver.stub main.cpp
  
-+/* Define if you have the setusercontext function.  */
-+#undef HAVE_SETUSERCONTEXT
-+
- /* Define if you have the snprintf function.  */
- #undef HAVE_SNPRINTF
+ libkcm_konq_la_LDFLAGS  = $(all_libraries) -module -avoid-version -no-undefined
+-libkcm_konq_la_LIBADD = $(LIB_KIO) $(LIB_KDEUI) $(LIB_KSYCOCA)
++libkcm_konq_la_LIBADD = $(LIB_KIO) $(LIB_KDEUI) $(LIB_KSYCOCA) ${KDE_RPATH}
  
+ libkcm_konq_la_DATA = overlapping.png onlyone.png
+ libkcm_konq_ladir = $(kde_datadir)/kcontrol/pics

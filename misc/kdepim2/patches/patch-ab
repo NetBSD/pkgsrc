@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2001/10/15 22:46:20 skrll Exp $
+
+--- libical/src/libical/icallexer.l.orig	Wed Apr 11 16:37:32 2001
++++ libical/src/libical/icallexer.l
+@@ -67,7 +67,7 @@
+ renaming hack applied in icalyacc.y */
+ YY_BUFFER_STATE ical_yy_scan_buffer ( char *base, yy_size_t size );
+ YY_BUFFER_STATE ical_yy_scan_string ( yyconst char *yy_str );
+-YY_BUFFER_STATE ical_yy_scan_bytes ( yyconst char *bytes, int len );
++YY_BUFFER_STATE ical_yy_scan_bytes ( yyconst char *bytes, yy_size_t len );
+ 
+ %}
+ 

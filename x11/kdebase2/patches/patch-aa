@@ -1,59 +1,8 @@
-$NetBSD: patch-aa,v 1.5 2001/09/28 21:19:16 jlam Exp $
+$NetBSD: patch-aa,v 1.6 2001/10/15 22:45:59 skrll Exp $
 
---- configure.orig	Tue Mar 20 12:02:28 2001
+--- configure.orig	Sat Sep  8 01:36:55 2001
 +++ configure
-@@ -4460,7 +4460,7 @@
-    for dir in $kde_use_extra_libs; do
-      kde_extra_libs="$kde_extra_libs $dir"
-      KDE_EXTRA_RPATH="$KDE_EXTRA_RPATH -R $dir"
--     USER_LDFLAGS="$USER_LDFLAGS -L$dir"
-+     #USER_LDFLAGS="$USER_LDFLAGS -L$dir"	# buildlink.mk
-    done
-    IFS=$ac_save_ifs
-    kde_use_extra_libs="added"
-@@ -5654,7 +5654,7 @@
- if test "$qt_libraries" = "$x_libraries" || test -z "$qt_libraries"; then
-  QT_LDFLAGS=""
- else
-- QT_LDFLAGS="-L$qt_libraries"
-+ QT_LDFLAGS="-L${QTDIR}/lib"			# buildlink.mk
-  all_libraries="$all_libraries $QT_LDFLAGS"
- fi
- 
-@@ -5981,11 +5981,11 @@
- if test "$kde_includes" = "$x_includes" || test "$kde_includes" = "$qt_includes" ; then
-  KDE_INCLUDES=""
- else
-- KDE_INCLUDES="-I$kde_includes"
-+ KDE_INCLUDES="-I${BUILDLINK_DIR}/include"	# buildlink.mk
-  all_includes="$KDE_INCLUDES $all_includes"
- fi
-  
--KDE_LDFLAGS="-L$kde_libraries"
-+KDE_LDFLAGS="-L${BUILDLINK_DIR}/lib"		# buildlink.mk
- if test ! "$kde_libraries" = "$x_libraries" && test ! "$kde_libraries" = "$qt_libraries" ; then 
-  all_libraries="$all_libraries $KDE_LDFLAGS"
- fi
-@@ -9944,7 +9944,9 @@
- 
- 
- 
--for ac_func in getsecretkey getloadavg getusershell login_getclass auth_timeok
-+ac_save_LIBS="$LIBS"
-+LIBS="$LIBS -lutil"
-+for ac_func in getsecretkey getloadavg getusershell login_getclass auth_timeok setusercontext
- do
- echo $ac_n "checking for $ac_func""... $ac_c" 1>&6
- echo "configure:9951: checking for $ac_func" >&5
-@@ -10001,6 +10003,7 @@
-   echo "$ac_t""no" 1>&6
- fi
- done
-+LIBS="$ac_save_LIBS"
- 
- 
- # Extract the first word of "X", so it can be a program name with args.
-@@ -11113,7 +11116,7 @@
+@@ -12536,7 +12536,7 @@
  
      ac_save_ldflags="$LDFLAGS"
      ac_save_cflags="$CFLAGS"
@@ -62,7 +11,7 @@ $NetBSD: patch-aa,v 1.5 2001/09/28 21:19:16 jlam Exp $
      CFLAGS="$CFLAGS $X_INCLUDES"
      test -n "$GL_INCLUDE" && CFLAGS="-I$GL_INCLUDE $CFLAGS"
      cat > conftest.$ac_ext <<EOF
-@@ -11178,13 +11181,13 @@
+@@ -12601,13 +12601,13 @@
  
      if test "$GL_LDFLAGS" = ""; then
         if test "$ac_cv_have_gl" = "mesa"; then
@@ -78,7 +27,7 @@ $NetBSD: patch-aa,v 1.5 2001/09/28 21:19:16 jlam Exp $
         else
            GLLIB="$GL_LDFLAGS -lGL -lGLU "'$(LIB_X11)'
         fi
-@@ -11198,7 +11201,7 @@
+@@ -12621,7 +12621,7 @@
      
  GL_SAVERS="kmorph3d.kss kspace.kss kpipes.kss"
  ac_save_CPPFLAGS="$CPPFLAGS"
@@ -87,11 +36,11 @@ $NetBSD: patch-aa,v 1.5 2001/09/28 21:19:16 jlam Exp $
  for ac_hdr in GL/xmesa.h GL/glut.h memory.h
  do
  ac_safe=`echo "$ac_hdr" | sed 'y%./+-%__p_%'`
-@@ -11581,6 +11584,7 @@
+@@ -12919,6 +12919,7 @@
  case "$host" in 
    *-*-linux*) ksysguardd_compile=yes; UNAME='Linux' ;;
    *-*-freebsd*) ksysguardd_compile=yes; UNAME='FreeBSD' ;;
 +  *-*-netbsd*) ksysguardd_compile=yes; UNAME='FreeBSD' ;;
- #  *-*-solaris*) ksysguardd_compile=yes; UNAME='Solaris' ;;
+   *-*-solaris*) ksysguardd_compile=yes; UNAME='Solaris' ;;
    *) ksysguard_compile=no; UNAME='' ;;
  esac

@@ -1,15 +1,15 @@
-$NetBSD: patch-ac,v 1.1 2001/03/24 18:33:56 skrll Exp $
+$NetBSD: patch-ac,v 1.2 2001/10/15 22:46:16 skrll Exp $
 
---- knode/Makefile.in.orig	Wed Feb 21 11:01:34 2001
+--- knode/Makefile.in.orig	Mon Sep 10 07:18:04 2001
 +++ knode/Makefile.in
-@@ -203,8 +203,8 @@
+@@ -213,8 +213,8 @@
  x_includes = @x_includes@
  x_libraries = @x_libraries@
  
 -KDE_CXXFLAGS = $(USE_THREADS)
--INCLUDES = $(all_includes)
-+KDE_CXXFLAGS = 
-+INCLUDES = $(USE_THREADS) $(all_includes)
+-INCLUDES = -I$(top_srcdir)/libkdenetwork $(all_includes)
++KDE_CXXFLAGS =
++INCLUDES = $(USE_THREADS) -I$(top_srcdir)/libkdenetwork $(all_includes)
  SUBDIRS = pics filters
  
  bin_PROGRAMS = knode

@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.3 2001/04/17 16:03:21 skrll Exp $
+@comment $NetBSD: PLIST,v 1.4 2001/10/15 22:45:56 skrll Exp $
 bin/aktion
 bin/artsbuilder
 bin/artscontrol
-bin/artstestgui
 bin/kmidi
 bin/kmix
 bin/kmixctrl
@@ -10,7 +9,9 @@ bin/kscd
 bin/midisend
 bin/mpeglibartsplay
 bin/noatun
+bin/noatun_kjofol_fixskin.sh
 bin/sf2cfg
+bin/so_play
 bin/timidity
 bin/workman2cddb.pl
 bin/yaf-cdda
@@ -27,17 +28,32 @@ include/arts/artsmidi.h
 include/arts/artsmidi.idl
 include/arts/artsmodules.h
 include/arts/artsmodules.idl
+include/arts/kartswidget.h
 include/cmodule.h
+include/effectview.h
+include/equalizerview.h
+include/mimetypetree.h
 include/mpeglib/decoder/cddaPlugin.h
 include/mpeglib/decoder/command.h
 include/mpeglib/decoder/commandPipe.h
 include/mpeglib/decoder/decoderPlugin.h
+include/mpeglib/decoder/mpegPlugin.h
 include/mpeglib/decoder/mpgPlugin.h
 include/mpeglib/decoder/nukePlugin.h
 include/mpeglib/decoder/splayPlugin.h
 include/mpeglib/decoder/tplayPlugin.h
 include/mpeglib/decoder/vorbisPlugin.h
 include/mpeglib/decoder/yuvPlugin.h
+include/mpeglib/frame/IOFrameQueue.h
+include/mpeglib/frame/audioFrame.h
+include/mpeglib/frame/audioFrameQueue.h
+include/mpeglib/frame/floatFrame.h
+include/mpeglib/frame/frame.h
+include/mpeglib/frame/frameQueue.h
+include/mpeglib/frame/framer.h
+include/mpeglib/frame/pcmFrame.h
+include/mpeglib/frame/rawDataBuffer.h
+include/mpeglib/frame/rawFrame.h
 include/mpeglib/input/bufferInputStream.h
 include/mpeglib/input/cddaInputStream.h
 include/mpeglib/input/cdromInputStream.h
@@ -51,6 +67,10 @@ include/mpeglib/mpegutil/mpegStreamPlayer.h
 include/mpeglib/mpegutil/mpegSystemHeader.h
 include/mpeglib/mpegutil/mpegSystemStream.h
 include/mpeglib/mpegutil/mpegVideoLength.h
+include/mpeglib/oggvorbis/oggFrame.h
+include/mpeglib/oggvorbis/ovFramer.h
+include/mpeglib/oggvorbis/vorbisDecoder.h
+include/mpeglib/oggvorbis/vorbisInfo.h
 include/mpeglib/output/artsOutputStream.h
 include/mpeglib/output/audioTime.h
 include/mpeglib/output/avSyncer.h
@@ -59,9 +79,13 @@ include/mpeglib/output/outPlugin.h
 include/mpeglib/output/outputStream.h
 include/mpeglib/output/pluginInfo.h
 include/mpeglib/output/threadSafeOutputStream.h
+include/mpeglib/splay/mpegAudioFrame.h
+include/mpeglib/splay/mpegAudioInfo.h
+include/mpeglib/splay/splayDecoder.h
 include/mpeglib/util/abstract/abs_thread.h
 include/mpeglib/util/abstract/threadQueue.h
 include/mpeglib/util/dynBuffer.h
+include/mpeglib/util/file/fileAccess.h
 include/mpeglib/util/render/pictureArray.h
 include/mpeglib/util/render/yuvPicture.h
 include/mpeglib/util/syncClock.h
@@ -79,13 +103,17 @@ include/mpeglib/util/yaf/yafxplayer/yafOutputStream.h
 include/mpeglib_artsplug/decoderBaseObject.h
 include/mpeglib_artsplug/decoderBaseObject.idl
 include/mpeglib_artsplug/decoderBaseObject_impl.h
+include/mpeglib_artsplug/splayPlayObject.h
+include/mpeglib_artsplug/splayPlayObject.idl
+include/mpeglib_artsplug/splayPlayObject_impl.h
 include/noatun/controls.h
+include/noatun/conversion.h
 include/noatun/downloader.h
 include/noatun/effects.h
-include/noatun/effectview.h
 include/noatun/engine.h
-include/noatun/equalizerview.h
+include/noatun/equalizer.h
 include/noatun/noatunapp.h
+include/noatun/noatunarts.h
 include/noatun/noatunplaylist.h
 include/noatun/noatunpref.h
 include/noatun/noatunstdaction.h
@@ -94,9 +122,6 @@ include/noatun/plugin.h
 include/noatun/pluginloader.h
 include/playlistsaver.h
 include/plugin_deps.h
-lib/Arts/ExtraStereo.mcopclass
-lib/Arts/RawWriter.mcopclass
-lib/Arts/VoiceRemoval.mcopclass
 lib/artseffects.mcopclass
 lib/artseffects.mcoptype
 lib/kmixctrl.a
@@ -113,6 +138,11 @@ lib/libarts_mpeglib-0.3.0.so.0.3
 lib/libarts_mpeglib.a
 lib/libarts_mpeglib.la
 lib/libarts_mpeglib.so
+lib/libarts_splay.a
+lib/libarts_splay.la
+lib/libarts_splay.so
+lib/libarts_splay.so.0
+lib/libarts_splay.so.0.0
 lib/libartsbuilder.a
 lib/libartsbuilder.la
 lib/libartsbuilder.so
@@ -121,6 +151,11 @@ lib/libartsbuilder.so.0.0
 lib/libartseffects.a
 lib/libartseffects.la
 lib/libartseffects.so
+lib/libartsgui.a
+lib/libartsgui.la
+lib/libartsgui.so
+lib/libartsgui.so.0
+lib/libartsgui.so.0.0
 lib/libartsgui_idl.a
 lib/libartsgui_idl.la
 lib/libartsgui_idl.so
@@ -157,6 +192,9 @@ lib/libkmixapplet.la
 lib/libkmixapplet.so
 lib/libkmixapplet.so.1
 lib/libkmixapplet.so.1.0
+lib/libliszt.a
+lib/libliszt.la
+lib/libliszt.so
 lib/libmpeg-0.3.0.so
 lib/libmpeg-0.3.0.so.0
 lib/libmpeg-0.3.0.so.0.3
@@ -197,9 +235,15 @@ lib/libnoatunkaiman.so
 lib/libnoatunkeyz.a
 lib/libnoatunkeyz.la
 lib/libnoatunkeyz.so
+lib/libnoatunmain.a
+lib/libnoatunmain.la
+lib/libnoatunmain.so
 lib/libnoatunmarquis.a
 lib/libnoatunmarquis.la
 lib/libnoatunmarquis.so
+lib/libnoatunmonoscope.a
+lib/libnoatunmonoscope.la
+lib/libnoatunmonoscope.so
 lib/libnoatunnet.a
 lib/libnoatunnet.la
 lib/libnoatunnet.so
@@ -236,18 +280,16 @@ lib/libyafxplayer.la
 lib/libyafxplayer.so
 lib/libyafxplayer.so.0
 lib/libyafxplayer.so.0.0
+lib/mcop/Arts/ArtsBuilderLoader.mcopclass
 lib/mcop/Arts/Button.mcopclass
-lib/mcop/Arts/Equalizer.mcopclass
-lib/mcop/Arts/Equalizer.mcoptype
-lib/mcop/Arts/ExtraStereo.mcopclass
-lib/mcop/Arts/FFTScope.mcopclass
+lib/mcop/Arts/FreeverbGuiFactory.mcopclass
+lib/mcop/Arts/GenericGuiFactory.mcopclass
+lib/mcop/Arts/HBox.mcopclass
+lib/mcop/Arts/LineEdit.mcopclass
 lib/mcop/Arts/LocalFactory.mcopclass
 lib/mcop/Arts/MidiManager.mcopclass
 lib/mcop/Arts/Poti.mcopclass
-lib/mcop/Arts/RawScope.mcopclass
-lib/mcop/Arts/RawWriter.mcopclass
-lib/mcop/Arts/StereoEffectStack_Noatun.mcopclass
-lib/mcop/Arts/StereoVolumeControl_Noatun.mcopclass
+lib/mcop/Arts/SpinBox.mcopclass
 lib/mcop/Arts/StructureBuilder.mcopclass
 lib/mcop/Arts/StructureDesc.mcopclass
 lib/mcop/Arts/Synth_ATAN_SATURATE.mcopclass
@@ -279,24 +321,30 @@ lib/mcop/Arts/Synth_WAVE_SOFTSAW.mcopclass
 lib/mcop/Arts/Synth_WAVE_SQUARE.mcopclass
 lib/mcop/Arts/Synth_WAVE_TRI.mcopclass
 lib/mcop/Arts/Synth_XFADE.mcopclass
-lib/mcop/Arts/VoiceRemoval.mcopclass
+lib/mcop/Arts/VBox.mcopclass
 lib/mcop/Arts/Widget.mcopclass
 lib/mcop/CDDAPlayObject.mcopclass
-lib/mcop/Equalizer.mcopclass
-lib/mcop/Equalizer.mcoptype
-lib/mcop/FFTScope.mcopclass
-lib/mcop/FFTScope.mcoptype
+lib/mcop/ExtraStereo.mcopclass
+lib/mcop/ExtraStereoGuiFactory.mcopclass
 lib/mcop/MP3PlayObject.mcopclass
 lib/mcop/MPGPlayObject.mcopclass
 lib/mcop/NULLPlayObject.mcopclass
+lib/mcop/Noatun/Equalizer.mcopclass
+lib/mcop/Noatun/EqualizerSSE.mcopclass
+lib/mcop/Noatun/FFTScope.mcopclass
+lib/mcop/Noatun/FFTScopeStereo.mcopclass
+lib/mcop/Noatun/Listener.mcopclass
+lib/mcop/Noatun/RawScope.mcopclass
+lib/mcop/Noatun/RawScopeStereo.mcopclass
+lib/mcop/Noatun/Session.mcopclass
+lib/mcop/Noatun/StereoEffectStack.mcopclass
+lib/mcop/Noatun/StereoVolumeControl.mcopclass
+lib/mcop/Noatun/StereoVolumeControlSSE.mcopclass
 lib/mcop/OGGPlayObject.mcopclass
-lib/mcop/RawScope.mcopclass
-lib/mcop/RawScope.mcoptype
-lib/mcop/StereoEffectStack_Noatun.mcopclass
-lib/mcop/StereoEffectStack_Noatun.mcoptype
-lib/mcop/StereoVolumeControl_Noatun.mcopclass
-lib/mcop/StereoVolumeControl_Noatun.mcoptype
+lib/mcop/RawWriter.mcopclass
+lib/mcop/SplayPlayObject.mcopclass
 lib/mcop/VCDPlayObject.mcopclass
+lib/mcop/VoiceRemoval.mcopclass
 lib/mcop/WAVPlayObject.mcopclass
 lib/mcop/artsbuilder.mcopclass
 lib/mcop/artsbuilder.mcoptype
@@ -308,62 +356,24 @@ lib/mcop/artsmidi.mcopclass
 lib/mcop/artsmidi.mcoptype
 lib/mcop/artsmodules.mcopclass
 lib/mcop/artsmodules.mcoptype
-share/doc/kde/HTML/en/aktion/.anchors
-share/doc/kde/HTML/en/aktion/aktion-fullscreen.html
-share/doc/kde/HTML/en/aktion/aktion-setup.html
+lib/mcop/noatunarts.mcopclass
+lib/mcop/noatunarts.mcoptype
 share/doc/kde/HTML/en/aktion/aktion.png
 share/doc/kde/HTML/en/aktion/aktiontoolbar.png
-share/doc/kde/HTML/en/aktion/commands.html
 share/doc/kde/HTML/en/aktion/common
-share/doc/kde/HTML/en/aktion/compilation.html
-share/doc/kde/HTML/en/aktion/configuration.html
-share/doc/kde/HTML/en/aktion/credits.html
-share/doc/kde/HTML/en/aktion/developers.html
-share/doc/kde/HTML/en/aktion/faq.html
+share/doc/kde/HTML/en/aktion/index.cache.bz2
 share/doc/kde/HTML/en/aktion/index.docbook
-share/doc/kde/HTML/en/aktion/index.html
-share/doc/kde/HTML/en/aktion/installation.html
-share/doc/kde/HTML/en/aktion/introduction.html
-share/doc/kde/HTML/en/aktion/re-1007-kanim.html
-share/doc/kde/HTML/en/aktion/requirements.html
-share/doc/kde/HTML/en/aktion/toolbar.html
-share/doc/kde/HTML/en/aktion/using-kapp.html
-share/doc/kde/HTML/en/artsbuilder/.anchors
-share/doc/kde/HTML/en/artsbuilder/adding-native-arts-support.html
-share/doc/kde/HTML/en/artsbuilder/arts-apis.html
-share/doc/kde/HTML/en/artsbuilder/arts-in-detail.html
-share/doc/kde/HTML/en/artsbuilder/arts-modules.html
+share/doc/kde/HTML/en/artsbuilder/apis.docbook
 share/doc/kde/HTML/en/artsbuilder/arts-structure.png
-share/doc/kde/HTML/en/artsbuilder/arts-tools.html
-share/doc/kde/HTML/en/artsbuilder/artsbuilder-examples.html
-share/doc/kde/HTML/en/artsbuilder/artsbuilder-tutorial.html
-share/doc/kde/HTML/en/artsbuilder/artsbuilder.html
-share/doc/kde/HTML/en/artsbuilder/artsc-config.html
-share/doc/kde/HTML/en/artsbuilder/artscat.html
-share/doc/kde/HTML/en/artsbuilder/artscontrol.html
-share/doc/kde/HTML/en/artsbuilder/artsd.html
-share/doc/kde/HTML/en/artsbuilder/artsdsp.html
-share/doc/kde/HTML/en/artsbuilder/artsflow.html
-share/doc/kde/HTML/en/artsbuilder/artsplay.html
-share/doc/kde/HTML/en/artsbuilder/artsshell.html
-share/doc/kde/HTML/en/artsbuilder/artswrapper.html
-share/doc/kde/HTML/en/artsbuilder/attribute-change-notify.html
-share/doc/kde/HTML/en/artsbuilder/brahms.html
-share/doc/kde/HTML/en/artsbuilder/busses.html
-share/doc/kde/HTML/en/artsbuilder/capi.html
-share/doc/kde/HTML/en/artsbuilder/coding-standards.html
+share/doc/kde/HTML/en/artsbuilder/artsbuilder.docbook
 share/doc/kde/HTML/en/artsbuilder/common
-share/doc/kde/HTML/en/artsbuilder/contributing.html
-share/doc/kde/HTML/en/artsbuilder/copyright-and-licenses.html
-share/doc/kde/HTML/en/artsbuilder/detail-gui-elements.html
-share/doc/kde/HTML/en/artsbuilder/faq-latency.html
-share/doc/kde/HTML/en/artsbuilder/faq-network.html
-share/doc/kde/HTML/en/artsbuilder/faq-non-arts.html
-share/doc/kde/HTML/en/artsbuilder/faq-other.html
-share/doc/kde/HTML/en/artsbuilder/faq.html
-share/doc/kde/HTML/en/artsbuilder/future-work.html
-share/doc/kde/HTML/en/artsbuilder/glossary.html
-share/doc/kde/HTML/en/artsbuilder/history.html
+share/doc/kde/HTML/en/artsbuilder/detail.docbook
+share/doc/kde/HTML/en/artsbuilder/digitalaudio.docbook
+share/doc/kde/HTML/en/artsbuilder/faq.docbook
+share/doc/kde/HTML/en/artsbuilder/future.docbook
+share/doc/kde/HTML/en/artsbuilder/glossary.docbook
+share/doc/kde/HTML/en/artsbuilder/gui.docbook
+share/doc/kde/HTML/en/artsbuilder/helping.docbook
 share/doc/kde/HTML/en/artsbuilder/images/Doc_MODUL.png
 share/doc/kde/HTML/en/artsbuilder/images/Gui_AUDIO_MANAGER.png
 share/doc/kde/HTML/en/artsbuilder/images/Gui_INSTRUMENT_MAPPER.png
@@ -408,120 +418,29 @@ share/doc/kde/HTML/en/artsbuilder/images/schema1.png
 share/doc/kde/HTML/en/artsbuilder/images/schema2.png
 share/doc/kde/HTML/en/artsbuilder/images/schema3.png
 share/doc/kde/HTML/en/artsbuilder/images/schema4.png
+share/doc/kde/HTML/en/artsbuilder/index.cache.bz2
 share/doc/kde/HTML/en/artsbuilder/index.docbook
-share/doc/kde/HTML/en/artsbuilder/index.html
-share/doc/kde/HTML/en/artsbuilder/installation.html
-share/doc/kde/HTML/en/artsbuilder/interfaces.html
-share/doc/kde/HTML/en/artsbuilder/intro-digital-audio.html
-share/doc/kde/HTML/en/artsbuilder/introduction.html
-share/doc/kde/HTML/en/artsbuilder/kaudioplayer.html
-share/doc/kde/HTML/en/artsbuilder/kmedia2.html
-share/doc/kde/HTML/en/artsbuilder/knotify.html
-share/doc/kde/HTML/en/artsbuilder/libkmid.html
-share/doc/kde/HTML/en/artsbuilder/mailing-lists.html
-share/doc/kde/HTML/en/artsbuilder/mapped-instruments.html
-share/doc/kde/HTML/en/artsbuilder/mcop.html
-share/doc/kde/HTML/en/artsbuilder/mcopidl.html
-share/doc/kde/HTML/en/artsbuilder/midi-creating-instruments.html
-share/doc/kde/HTML/en/artsbuilder/midi-introduction.html
-share/doc/kde/HTML/en/artsbuilder/midi-manager.html
-share/doc/kde/HTML/en/artsbuilder/midi.html
-share/doc/kde/HTML/en/artsbuilder/midisend.html
-share/doc/kde/HTML/en/artsbuilder/modules-ports.html
-share/doc/kde/HTML/en/artsbuilder/porting.html
-share/doc/kde/HTML/en/artsbuilder/references.html
-share/doc/kde/HTML/en/artsbuilder/soundserver.html
-share/doc/kde/HTML/en/artsbuilder/source-install.html
-share/doc/kde/HTML/en/artsbuilder/structures.html
-share/doc/kde/HTML/en/artsbuilder/synth-modules-reference.html
-share/doc/kde/HTML/en/artsbuilder/using-this-manual.html
-share/doc/kde/HTML/en/artsbuilder/visual-modules-reference.html
-share/doc/kde/HTML/en/kmid/.anchors
-share/doc/kde/HTML/en/kmid/abouttheauthor.html
-share/doc/kde/HTML/en/kmid/addingsongstoacollectionhowtouseautoadd.html
-share/doc/kde/HTML/en/kmid/advancedfeatures.html
-share/doc/kde/HTML/en/kmid/collections.html
+share/doc/kde/HTML/en/artsbuilder/mcop.docbook
+share/doc/kde/HTML/en/artsbuilder/midi.docbook
+share/doc/kde/HTML/en/artsbuilder/midiintro.docbook
+share/doc/kde/HTML/en/artsbuilder/modules.docbook
+share/doc/kde/HTML/en/artsbuilder/porting.docbook
+share/doc/kde/HTML/en/artsbuilder/references.docbook
+share/doc/kde/HTML/en/artsbuilder/tools.docbook
 share/doc/kde/HTML/en/kmid/common
-share/doc/kde/HTML/en/kmid/compilationandinstallation.html
-share/doc/kde/HTML/en/kmid/creatingamidimap.html
-share/doc/kde/HTML/en/kmid/deletingacollection.html
-share/doc/kde/HTML/en/kmid/displayinglyrics.html
-share/doc/kde/HTML/en/kmid/doineedamidimap.html
-share/doc/kde/HTML/en/kmid/finalnotes.html
-share/doc/kde/HTML/en/kmid/frequentlyaskedquestionsfaq.html
-share/doc/kde/HTML/en/kmid/generalusage.html
-share/doc/kde/HTML/en/kmid/hallofkmidsfriends.html
-share/doc/kde/HTML/en/kmid/index.cvlog
+share/doc/kde/HTML/en/kmid/index.cache.bz2
 share/doc/kde/HTML/en/kmid/index.docbook
-share/doc/kde/HTML/en/kmid/index.html
-share/doc/kde/HTML/en/kmid/installation.html
-share/doc/kde/HTML/en/kmid/introduction.html
-share/doc/kde/HTML/en/kmid/keybindings.html
-share/doc/kde/HTML/en/kmid/midimaps.html
-share/doc/kde/HTML/en/kmid/playinginorderoratrandom.html
-share/doc/kde/HTML/en/kmid/playingsongs.html
-share/doc/kde/HTML/en/kmid/removingsongsfromcollections.html
-share/doc/kde/HTML/en/kmid/requirements.html
-share/doc/kde/HTML/en/kmid/selectingasongfromacollection.html
-share/doc/kde/HTML/en/kmid/thetempolcd.html
-share/doc/kde/HTML/en/kmid/thetemporarycollection.html
-share/doc/kde/HTML/en/kmid/usingmidimaps.html
-share/doc/kde/HTML/en/kmidi/.anchors
 share/doc/kde/HTML/en/kmidi/FAQ
-share/doc/kde/HTML/en/kmidi/command-line-options.html
 share/doc/kde/HTML/en/kmidi/common
-share/doc/kde/HTML/en/kmidi/compilation-and-installation.html
-share/doc/kde/HTML/en/kmidi/computation-issues.html
-share/doc/kde/HTML/en/kmidi/configuring.html
-share/doc/kde/HTML/en/kmidi/copyright.html
-share/doc/kde/HTML/en/kmidi/credits.html
-share/doc/kde/HTML/en/kmidi/design.html
-share/doc/kde/HTML/en/kmidi/effects.html
-share/doc/kde/HTML/en/kmidi/index.cvlog
+share/doc/kde/HTML/en/kmidi/index.cache.bz2
 share/doc/kde/HTML/en/kmidi/index.docbook
-share/doc/kde/HTML/en/kmidi/index.html
-share/doc/kde/HTML/en/kmidi/installation.html
-share/doc/kde/HTML/en/kmidi/introduction.html
-share/doc/kde/HTML/en/kmidi/memory-issues.html
-share/doc/kde/HTML/en/kmidi/midi-filenames.html
-share/doc/kde/HTML/en/kmidi/midi-implementation.html
-share/doc/kde/HTML/en/kmidi/patches.html
-share/doc/kde/HTML/en/kmidi/patchsets.html
-share/doc/kde/HTML/en/kmidi/playlists.html
-share/doc/kde/HTML/en/kmidi/polyphony.html
-share/doc/kde/HTML/en/kmidi/questions-and-answers.html
-share/doc/kde/HTML/en/kmidi/requirements.html
-share/doc/kde/HTML/en/kmidi/synthesis-model.html
-share/doc/kde/HTML/en/kmidi/usage.html
-share/doc/kde/HTML/en/kmidi/volume.html
-share/doc/kde/HTML/en/kmix/.anchors
 share/doc/kde/HTML/en/kmix/common
-share/doc/kde/HTML/en/kmix/compilation.html
-share/doc/kde/HTML/en/kmix/configuration-options.html
-share/doc/kde/HTML/en/kmix/control-panel.html
-share/doc/kde/HTML/en/kmix/credits.html
+share/doc/kde/HTML/en/kmix/index.cache.bz2
 share/doc/kde/HTML/en/kmix/index.docbook
-share/doc/kde/HTML/en/kmix/index.html
-share/doc/kde/HTML/en/kmix/installation.html
-share/doc/kde/HTML/en/kmix/introduction.html
-share/doc/kde/HTML/en/kmix/panning-slider.html
-share/doc/kde/HTML/en/kmix/requirements.html
-share/doc/kde/HTML/en/kmix/working-with-kmix.html
-share/doc/kde/HTML/en/kscd/.anchors
-share/doc/kde/HTML/en/kscd/about.html
-share/doc/kde/HTML/en/kscd/cddb-editor.html
-share/doc/kde/HTML/en/kscd/cddb-support.html
-share/doc/kde/HTML/en/kscd/cddb-tab.html
 share/doc/kde/HTML/en/kscd/cddb.howto
 share/doc/kde/HTML/en/kscd/common
-share/doc/kde/HTML/en/kscd/compilation-and-installation.html
-share/doc/kde/HTML/en/kscd/configuring-kscd.html
-share/doc/kde/HTML/en/kscd/credits-and-license.html
+share/doc/kde/HTML/en/kscd/index.cache.bz2
 share/doc/kde/HTML/en/kscd/index.docbook
-share/doc/kde/HTML/en/kscd/index.html
-share/doc/kde/HTML/en/kscd/installation.html
-share/doc/kde/HTML/en/kscd/introduction.html
-share/doc/kde/HTML/en/kscd/kscd-options-tab.html
 share/doc/kde/HTML/en/kscd/kscd.png
 share/doc/kde/HTML/en/kscd/kscd1.png
 share/doc/kde/HTML/en/kscd/kscd10.png
@@ -543,27 +462,9 @@ share/doc/kde/HTML/en/kscd/kscd6.png
 share/doc/kde/HTML/en/kscd/kscd7.png
 share/doc/kde/HTML/en/kscd/kscd8.png
 share/doc/kde/HTML/en/kscd/kscd9.png
-share/doc/kde/HTML/en/kscd/onscreen-fundamentals.html
-share/doc/kde/HTML/en/kscd/questions-and-answers.html
-share/doc/kde/HTML/en/kscd/requirements.html
-share/doc/kde/HTML/en/kscd/smtp-options.html
-share/doc/kde/HTML/en/kscd/using-kscd-in-the-panel.html
-share/doc/kde/HTML/en/noatun/.anchors
 share/doc/kde/HTML/en/noatun/common
-share/doc/kde/HTML/en/noatun/compilation-and-installation.html
-share/doc/kde/HTML/en/noatun/credits-and-licenses.html
-share/doc/kde/HTML/en/noatun/html-exporter.html
-share/doc/kde/HTML/en/noatun/id3-reader.html
+share/doc/kde/HTML/en/noatun/index.cache.bz2
 share/doc/kde/HTML/en/noatun/index.docbook
-share/doc/kde/HTML/en/noatun/index.html
-share/doc/kde/HTML/en/noatun/installation.html
-share/doc/kde/HTML/en/noatun/introduction.html
-share/doc/kde/HTML/en/noatun/kjofol-skin.html
-share/doc/kde/HTML/en/noatun/questions-answers-and-tips.html
-share/doc/kde/HTML/en/noatun/requirements.html
-share/doc/kde/HTML/en/noatun/using-noatun-plugins.html
-share/doc/kde/HTML/en/noatun/using-noatun.html
-share/doc/kde/HTML/en/noatun/young-hickory.html
 share/kde/applnk/Multimedia/aktion.desktop
 share/kde/applnk/Multimedia/artsbuilder.desktop
 share/kde/applnk/Multimedia/artscontrol.desktop
@@ -624,6 +525,7 @@ share/kde/apps/artsbuilder/examples/instrument_arts_all.arts-map
 share/kde/apps/artsbuilder/examples/instrument_chirpdrum.arts
 share/kde/apps/artsbuilder/examples/instrument_deepdrum.arts
 share/kde/apps/artsbuilder/examples/instrument_full_square.arts
+share/kde/apps/artsbuilder/examples/instrument_hihat.arts
 share/kde/apps/artsbuilder/examples/instrument_neworgan.arts
 share/kde/apps/artsbuilder/examples/instrument_nokind.arts
 share/kde/apps/artsbuilder/examples/instrument_organ2.arts
@@ -677,10 +579,12 @@ share/kde/apps/artscontrol/artsmidimanagerview.rc
 share/kde/apps/kicker/applets/kmixapplet.desktop
 share/kde/apps/kmidi/Axel_Elf.mid
 share/kde/apps/kmidi/Cavatina.mid
-share/kde/apps/kmidi/Jarre-Chung_Kuo.mid
+share/kde/apps/kmidi/Georgia.mid
 share/kde/apps/kmidi/Malaguena.mid
 share/kde/apps/kmidi/Mission_Impossible.mid
+share/kde/apps/kmidi/Mr_Postman.mid
 share/kde/apps/kmidi/Take_The_A_Train-Seq_by_Dianne_Lewandowski.mid
+share/kde/apps/kmidi/Vangelis-Chung_Kuo.mid
 share/kde/apps/kmidi/config/BITMAPS/arrow.xbm
 share/kde/apps/kmidi/config/BITMAPS/back.xbm
 share/kde/apps/kmidi/config/BITMAPS/check.xbm
@@ -724,12 +628,9 @@ share/kde/apps/kmidi/config/pila-voices
 share/kde/apps/kmidi/config/sound-canvas-drums
 share/kde/apps/kmidi/config/timidity.cfg
 share/kde/apps/kmidi/config/wowpats.cfg
-share/kde/apps/kmidi/georgia.mid
-share/kde/apps/kmidi/mpostman.mid
 share/kde/apps/kmidi/pics/kmidilogo.png
 share/kde/apps/kmix/kmixui.rc
 share/kde/apps/kmix/pics/kmixdocked.png
-share/kde/apps/kmix/pics/logo.png
 share/kde/apps/kmix/pics/mix_audio.png
 share/kde/apps/kmix/pics/mix_bass.png
 share/kde/apps/kmix/pics/mix_cd.png
@@ -745,42 +646,110 @@ share/kde/apps/kmix/pics/mix_volume.png
 share/kde/apps/kscd/pics/cdsmall.xpm
 share/kde/apps/kscd/pics/kscdlogo.xpm
 share/kde/apps/noatun/dcopiface.plugin
+share/kde/apps/noatun/eq.preset/preset.dance
+share/kde/apps/noatun/eq.preset/preset.jazz
+share/kde/apps/noatun/eq.preset/preset.metal
+share/kde/apps/noatun/eq.preset/preset.trance
+share/kde/apps/noatun/eq.preset/preset.zero
 share/kde/apps/noatun/excellent.plugin
 share/kde/apps/noatun/excellentui.rc
 share/kde/apps/noatun/htmlexport.plugin
 share/kde/apps/noatun/icons/hicolor/16x16/actions/effect.png
+share/kde/apps/noatun/icons/hicolor/16x16/actions/noatunback.png
+share/kde/apps/noatun/icons/hicolor/16x16/actions/noatunforward.png
+share/kde/apps/noatun/icons/hicolor/16x16/actions/noatunpause.png
+share/kde/apps/noatun/icons/hicolor/16x16/actions/noatunplay.png
+share/kde/apps/noatun/icons/hicolor/16x16/actions/noatunplaylist.png
+share/kde/apps/noatun/icons/hicolor/16x16/actions/noatunstop.png
+share/kde/apps/noatun/icons/hicolor/16x16/actions/noatuntray.png
+share/kde/apps/noatun/icons/hicolor/16x16/actions/noatuntraypause.png
+share/kde/apps/noatun/icons/hicolor/16x16/actions/noatuntrayplay.png
+share/kde/apps/noatun/icons/hicolor/16x16/actions/noatuntraystop.png
+share/kde/apps/noatun/icons/hicolor/22x22/actions/edit_add.png
+share/kde/apps/noatun/icons/hicolor/22x22/actions/edit_remove.png
+share/kde/apps/noatun/icons/hicolor/22x22/actions/noatunback.png
+share/kde/apps/noatun/icons/hicolor/22x22/actions/noatunfback.png
+share/kde/apps/noatun/icons/hicolor/22x22/actions/noatunfforward.png
+share/kde/apps/noatun/icons/hicolor/22x22/actions/noatunforward.png
+share/kde/apps/noatun/icons/hicolor/22x22/actions/noatunloopnone.png
+share/kde/apps/noatun/icons/hicolor/22x22/actions/noatunloopplaylist.png
+share/kde/apps/noatun/icons/hicolor/22x22/actions/noatunloopsong.png
+share/kde/apps/noatun/icons/hicolor/22x22/actions/noatunpause.png
+share/kde/apps/noatun/icons/hicolor/22x22/actions/noatunplay.png
+share/kde/apps/noatun/icons/hicolor/22x22/actions/noatunplaylist.png
+share/kde/apps/noatun/icons/hicolor/22x22/actions/noatunstop.png
+share/kde/apps/noatun/icons/hicolor/22x22/actions/noatuntiny.png
 share/kde/apps/noatun/icons/hicolor/32x32/actions/effect.png
 share/kde/apps/noatun/icons/hicolor/48x48/actions/effect.png
-share/kde/apps/noatun/icons/locolor/16x16/actions/effect.png
-share/kde/apps/noatun/icons/locolor/16x16/actions/noatunback.png
-share/kde/apps/noatun/icons/locolor/16x16/actions/noatunforward.png
-share/kde/apps/noatun/icons/locolor/16x16/actions/noatunpause.png
-share/kde/apps/noatun/icons/locolor/16x16/actions/noatunplay.png
-share/kde/apps/noatun/icons/locolor/16x16/actions/noatunplaylist.png
-share/kde/apps/noatun/icons/locolor/16x16/actions/noatunstop.png
-share/kde/apps/noatun/icons/locolor/16x16/actions/noatuntray.png
-share/kde/apps/noatun/icons/locolor/16x16/actions/noatuntraypause.png
-share/kde/apps/noatun/icons/locolor/16x16/actions/noatuntrayplay.png
-share/kde/apps/noatun/icons/locolor/16x16/actions/noatuntraystop.png
-share/kde/apps/noatun/icons/locolor/22x22/actions/noatunback.png
-share/kde/apps/noatun/icons/locolor/22x22/actions/noatunfback.png
-share/kde/apps/noatun/icons/locolor/22x22/actions/noatunfforward.png
-share/kde/apps/noatun/icons/locolor/22x22/actions/noatunforward.png
-share/kde/apps/noatun/icons/locolor/22x22/actions/noatunloopnone.png
-share/kde/apps/noatun/icons/locolor/22x22/actions/noatunloopplaylist.png
-share/kde/apps/noatun/icons/locolor/22x22/actions/noatunloopsong.png
-share/kde/apps/noatun/icons/locolor/22x22/actions/noatunpause.png
-share/kde/apps/noatun/icons/locolor/22x22/actions/noatunplay.png
-share/kde/apps/noatun/icons/locolor/22x22/actions/noatunplaylist.png
-share/kde/apps/noatun/icons/locolor/22x22/actions/noatunstop.png
-share/kde/apps/noatun/icons/locolor/22x22/actions/noatuntiny.png
+share/kde/apps/noatun/icons/locolor/16x16/actions/edit_add.png
+share/kde/apps/noatun/icons/locolor/16x16/actions/edit_remove.png
 share/kde/apps/noatun/id3tag.plugin
 share/kde/apps/noatun/infrared.plugin
 share/kde/apps/noatun/kaiman.plugin
 share/kde/apps/noatun/kaimanui.rc
 share/kde/apps/noatun/keyz.plugin
 share/kde/apps/noatun/kjofolui.plugin
+share/kde/apps/noatun/kjskins/kjofol/Makefile.am
+share/kde/apps/noatun/kjskins/kjofol/kjofol.dck
+share/kde/apps/noatun/kjskins/kjofol/kjofol.pl
+share/kde/apps/noatun/kjskins/kjofol/kjofol.rc
+share/kde/apps/noatun/kjskins/kjofol/kjofol.wsh
+share/kde/apps/noatun/kjskins/kjofol/sg.png
+share/kde/apps/noatun/kjskins/kjofol/sg_num.png
+share/kde/apps/noatun/kjskins/kjofol/sg_seek.bmp
+share/kde/apps/noatun/kjskins/kjofol/sg_seek.png
+share/kde/apps/noatun/kjskins/kjofol/sg_text.png
+share/kde/apps/noatun/kjskins/kjofol/sgdock.png
+share/kde/apps/noatun/kjskins/kjofol/sgdock2.png
+share/kde/apps/noatun/kjskins/kjofol/sgdocksk.png
+share/kde/apps/noatun/kjskins/kjofol/sgdockvp.png
+share/kde/apps/noatun/kjskins/kjofol/sgeq.png
+share/kde/apps/noatun/kjskins/kjofol/sgpitch.png
+share/kde/apps/noatun/kjskins/kjofol/sgpitchp.png
+share/kde/apps/noatun/kjskins/kjofol/sgplist.png
+share/kde/apps/noatun/kjskins/kjofol/sgplist2.png
+share/kde/apps/noatun/kjskins/kjofol/sgpres1.png
+share/kde/apps/noatun/kjskins/kjofol/sgpres2.png
+share/kde/apps/noatun/kjskins/kjofol/sgpres3.png
+share/kde/apps/noatun/kjskins/kjofol/sgvol.png
+share/kde/apps/noatun/kjskins/kjofol/sgvolnum.png
+share/kde/apps/noatun/kjskins/kjofol/sgvolpos.png
+share/kde/apps/noatun/kjskins/kjofol/sgwshad.png
+share/kde/apps/noatun/kjskins/kjofol/sgwshad2.png
+share/kde/apps/noatun/kjskins/kjofol/sgwshdsk.png
+share/kde/apps/noatun/kjskins/kjofol/sgwshvol.png
+share/kde/apps/noatun/kjskins/kjofol/sgwshvp.png
+share/kde/apps/noatun/kjskins/phong/p_eq.png
+share/kde/apps/noatun/kjskins/phong/p_main.png
+share/kde/apps/noatun/kjskins/phong/p_mainback.png
+share/kde/apps/noatun/kjskins/phong/p_numbers.png
+share/kde/apps/noatun/kjskins/phong/p_playback.png
+share/kde/apps/noatun/kjskins/phong/p_playlist.png
+share/kde/apps/noatun/kjskins/phong/p_propos.png
+share/kde/apps/noatun/kjskins/phong/p_text.png
+share/kde/apps/noatun/kjskins/phong/p_volbar.png
+share/kde/apps/noatun/kjskins/phong/p_volpos.png
+share/kde/apps/noatun/kjskins/phong/phong.dck
+share/kde/apps/noatun/kjskins/phong/phong.rc
+share/kde/apps/noatun/kjskins/phong/phong.wsh
+share/kde/apps/noatun/kjskins/phong/phong_readme.txt
+share/kde/apps/noatun/kjskins/vibrocentric/i_base.png
+share/kde/apps/noatun/kjskins/vibrocentric/i_base2.png
+share/kde/apps/noatun/kjskins/vibrocentric/i_eq.png
+share/kde/apps/noatun/kjskins/vibrocentric/i_font.png
+share/kde/apps/noatun/kjskins/vibrocentric/i_pl.png
+share/kde/apps/noatun/kjskins/vibrocentric/i_pl2.png
+share/kde/apps/noatun/kjskins/vibrocentric/i_pro.png
+share/kde/apps/noatun/kjskins/vibrocentric/i_text.png
+share/kde/apps/noatun/kjskins/vibrocentric/i_vol.png
+share/kde/apps/noatun/kjskins/vibrocentric/i_volpos.png
+share/kde/apps/noatun/kjskins/vibrocentric/vibrocentric.dck
+share/kde/apps/noatun/kjskins/vibrocentric/vibrocentric.rc
+share/kde/apps/noatun/kjskins/vibrocentric/vibrocentric.wsh
+share/kde/apps/noatun/kjskins/vibrocentric/vibrocentric_readme.txt
+share/kde/apps/noatun/liszt.plugin
 share/kde/apps/noatun/marquis.plugin
+share/kde/apps/noatun/monoscope.plugin
 share/kde/apps/noatun/net.plugin
 share/kde/apps/noatun/noatunui.plugin
 share/kde/apps/noatun/oggtag.plugin
@@ -879,64 +848,6 @@ share/kde/apps/noatun/skins/kaiman/k9/status.png
 share/kde/apps/noatun/skins/kaiman/k9/stop.jpg
 share/kde/apps/noatun/skins/kaiman/k9/trans-pos.png
 share/kde/apps/noatun/skins/kaiman/k9/trans-slide.png
-share/kde/apps/noatun/skins/kjofol/Makefile.am
-share/kde/apps/noatun/skins/kjofol/kjofol.dck
-share/kde/apps/noatun/skins/kjofol/kjofol.pl
-share/kde/apps/noatun/skins/kjofol/kjofol.rc
-share/kde/apps/noatun/skins/kjofol/kjofol.wsh
-share/kde/apps/noatun/skins/kjofol/sg.png
-share/kde/apps/noatun/skins/kjofol/sg_num.png
-share/kde/apps/noatun/skins/kjofol/sg_seek.bmp
-share/kde/apps/noatun/skins/kjofol/sg_seek.png
-share/kde/apps/noatun/skins/kjofol/sg_text.png
-share/kde/apps/noatun/skins/kjofol/sgdock.png
-share/kde/apps/noatun/skins/kjofol/sgdock2.png
-share/kde/apps/noatun/skins/kjofol/sgdocksk.png
-share/kde/apps/noatun/skins/kjofol/sgdockvp.png
-share/kde/apps/noatun/skins/kjofol/sgeq.png
-share/kde/apps/noatun/skins/kjofol/sgpitch.png
-share/kde/apps/noatun/skins/kjofol/sgpitchp.png
-share/kde/apps/noatun/skins/kjofol/sgplist.png
-share/kde/apps/noatun/skins/kjofol/sgplist2.png
-share/kde/apps/noatun/skins/kjofol/sgpres1.png
-share/kde/apps/noatun/skins/kjofol/sgpres2.png
-share/kde/apps/noatun/skins/kjofol/sgpres3.png
-share/kde/apps/noatun/skins/kjofol/sgvol.png
-share/kde/apps/noatun/skins/kjofol/sgvolnum.png
-share/kde/apps/noatun/skins/kjofol/sgvolpos.png
-share/kde/apps/noatun/skins/kjofol/sgwshad.png
-share/kde/apps/noatun/skins/kjofol/sgwshad2.png
-share/kde/apps/noatun/skins/kjofol/sgwshdsk.png
-share/kde/apps/noatun/skins/kjofol/sgwshvol.png
-share/kde/apps/noatun/skins/kjofol/sgwshvp.png
-share/kde/apps/noatun/skins/phong/p_eq.png
-share/kde/apps/noatun/skins/phong/p_main.png
-share/kde/apps/noatun/skins/phong/p_mainback.png
-share/kde/apps/noatun/skins/phong/p_numbers.png
-share/kde/apps/noatun/skins/phong/p_playback.png
-share/kde/apps/noatun/skins/phong/p_playlist.png
-share/kde/apps/noatun/skins/phong/p_propos.png
-share/kde/apps/noatun/skins/phong/p_text.png
-share/kde/apps/noatun/skins/phong/p_volbar.png
-share/kde/apps/noatun/skins/phong/p_volpos.png
-share/kde/apps/noatun/skins/phong/phong.dck
-share/kde/apps/noatun/skins/phong/phong.rc
-share/kde/apps/noatun/skins/phong/phong.wsh
-share/kde/apps/noatun/skins/phong/phong_readme.txt
-share/kde/apps/noatun/skins/vibrocentric/i_base.png
-share/kde/apps/noatun/skins/vibrocentric/i_base2.png
-share/kde/apps/noatun/skins/vibrocentric/i_eq.png
-share/kde/apps/noatun/skins/vibrocentric/i_font.png
-share/kde/apps/noatun/skins/vibrocentric/i_pl.png
-share/kde/apps/noatun/skins/vibrocentric/i_pl2.png
-share/kde/apps/noatun/skins/vibrocentric/i_pro.png
-share/kde/apps/noatun/skins/vibrocentric/i_text.png
-share/kde/apps/noatun/skins/vibrocentric/i_vol.png
-share/kde/apps/noatun/skins/vibrocentric/i_volpos.png
-share/kde/apps/noatun/skins/vibrocentric/vibrocentric.dck
-share/kde/apps/noatun/skins/vibrocentric/vibrocentric.rc
-share/kde/apps/noatun/skins/vibrocentric/vibrocentric.wsh
-share/kde/apps/noatun/skins/vibrocentric/vibrocentric_readme.txt
 share/kde/apps/noatun/splitplaylist.plugin
 share/kde/apps/noatun/systray.plugin
 share/kde/apps/noatun/systrayui.rc
@@ -944,7 +855,15 @@ share/kde/apps/noatun/tron.plugin
 share/kde/apps/noatun/tronui.rc
 share/kde/apps/noatun/voiceprint.plugin
 share/kde/config/aktionrc
+share/kde/icons/hicolor/16x16/apps/aktion.png
+share/kde/icons/hicolor/16x16/apps/artsbuilder.png
+share/kde/icons/hicolor/16x16/apps/artscontrol.png
+share/kde/icons/hicolor/16x16/apps/kmidi.png
+share/kde/icons/hicolor/16x16/apps/kmix.png
+share/kde/icons/hicolor/16x16/apps/kscd.png
+share/kde/icons/hicolor/16x16/apps/noatun.png
 share/kde/icons/hicolor/22x22/apps/noatun.png
+share/kde/icons/hicolor/32x32/apps/aktion.png
 share/kde/icons/hicolor/32x32/apps/kmidi.png
 share/kde/icons/hicolor/32x32/apps/kmix.png
 share/kde/icons/hicolor/32x32/apps/kscd.png
@@ -953,38 +872,27 @@ share/kde/icons/hicolor/48x48/apps/kmidi.png
 share/kde/icons/hicolor/48x48/apps/kmix.png
 share/kde/icons/hicolor/48x48/apps/kscd.png
 share/kde/icons/hicolor/48x48/apps/noatun.png
-share/kde/icons/locolor/16x16/apps/aktion.png
-share/kde/icons/locolor/16x16/apps/kmidi.png
-share/kde/icons/locolor/16x16/apps/kmix.png
-share/kde/icons/locolor/16x16/apps/kscd.png
-share/kde/icons/locolor/16x16/apps/noatun.png
-share/kde/icons/locolor/32x32/apps/aktion.png
-share/kde/icons/locolor/32x32/apps/kmidi.png
-share/kde/icons/locolor/32x32/apps/kmix.png
-share/kde/icons/locolor/32x32/apps/kscd.png
-share/kde/icons/locolor/32x32/apps/noatun.png
 share/kde/mimelnk/application/x-artsbuilder.desktop
 share/kde/mimelnk/text/xmcd.desktop
 share/kde/services/kmixctrl_restore.desktop
-@comment kdelibs:dirrm share/kde/services
-@comment kdelibs:dirrm share/kde/mimelnk/application
-@comment kdebase:dirrm share/kde/icons/locolor/32x32/apps
-@comment kdebase:dirrm share/kde/icons/locolor/16x16/apps
-@comment kdebase:dirrm share/kde/icons/hicolor/48x48/apps
-@comment kdebase:dirrm share/kde/icons/hicolor/32x32/apps
-@dirrm share/kde/icons/hicolor/22x22/apps
-@comment kdebase:dirrm share/kde/icons/hicolor/22x22
-@comment kdelibs:dirrm share/kde/config
-@dirrm share/kde/apps/noatun/skins/vibrocentric
-@dirrm share/kde/apps/noatun/skins/phong
-@dirrm share/kde/apps/noatun/skins/kjofol
+@comment dirrm share/kde/services
+@comment dirrm share/kde/mimelnk/text
+@comment dirrm share/kde/mimelnk/application
+@comment dirrm share/kde/icons/hicolor/48x48/apps
+@comment dirrm share/kde/icons/hicolor/32x32/apps
+@comment dirrm share/kde/icons/hicolor/22x22/apps
+@comment dirrm share/kde/icons/hicolor/22x22
+@comment dirrm share/kde/icons/hicolor/16x16/apps
+@comment dirrm share/kde/config
 @dirrm share/kde/apps/noatun/skins/kaiman/k9
 @dirrm share/kde/apps/noatun/skins/kaiman/circle
 @dirrm share/kde/apps/noatun/skins/kaiman/car-preset
 @dirrm share/kde/apps/noatun/skins/kaiman
 @dirrm share/kde/apps/noatun/skins
-@dirrm share/kde/apps/noatun/icons/locolor/22x22/actions
-@dirrm share/kde/apps/noatun/icons/locolor/22x22
+@dirrm share/kde/apps/noatun/kjskins/vibrocentric
+@dirrm share/kde/apps/noatun/kjskins/phong
+@dirrm share/kde/apps/noatun/kjskins/kjofol
+@dirrm share/kde/apps/noatun/kjskins
 @dirrm share/kde/apps/noatun/icons/locolor/16x16/actions
 @dirrm share/kde/apps/noatun/icons/locolor/16x16
 @dirrm share/kde/apps/noatun/icons/locolor
@@ -992,10 +900,13 @@ share/kde/services/kmixctrl_restore.desktop
 @dirrm share/kde/apps/noatun/icons/hicolor/48x48
 @dirrm share/kde/apps/noatun/icons/hicolor/32x32/actions
 @dirrm share/kde/apps/noatun/icons/hicolor/32x32
+@dirrm share/kde/apps/noatun/icons/hicolor/22x22/actions
+@dirrm share/kde/apps/noatun/icons/hicolor/22x22
 @dirrm share/kde/apps/noatun/icons/hicolor/16x16/actions
 @dirrm share/kde/apps/noatun/icons/hicolor/16x16
 @dirrm share/kde/apps/noatun/icons/hicolor
 @dirrm share/kde/apps/noatun/icons
+@dirrm share/kde/apps/noatun/eq.preset
 @dirrm share/kde/apps/noatun
 @dirrm share/kde/apps/kscd/pics
 @exec /bin/mkdir -p /usr/X11R6/share/kde/apps/kscd/cddb/soundtrack
@@ -1029,7 +940,7 @@ share/kde/services/kmixctrl_restore.desktop
 @dirrm share/kde/apps/kmidi/config/BITMAPS
 @dirrm share/kde/apps/kmidi/config
 @dirrm share/kde/apps/kmidi
-@comment kdexxxx:dirrm share/kde/apps/kicker/applets
+@comment dirrm share/kde/apps/kicker/applets
 @dirrm share/kde/apps/artscontrol
 @dirrm share/kde/apps/artsbuilder/pics
 @dirrm share/kde/apps/artsbuilder/examples/todo
@@ -1037,9 +948,9 @@ share/kde/services/kmixctrl_restore.desktop
 @dirrm share/kde/apps/artsbuilder
 @dirrm share/kde/apps/aktion/toolbar
 @dirrm share/kde/apps/aktion
-@comment kdexxxx:dirrm share/kde/apps
-@comment kdexxxx:dirrm share/kde/applnk/Settings/Sound
-@comment kdexxxx:dirrm share/kde/applnk/Multimedia
+@comment dirrm share/kde/apps
+@comment dirrm share/kde/applnk/Settings/Sound
+@comment dirrm share/kde/applnk/Multimedia
 @dirrm share/doc/kde/HTML/en/noatun
 @dirrm share/doc/kde/HTML/en/kscd
 @dirrm share/doc/kde/HTML/en/kmix
@@ -1048,21 +959,25 @@ share/kde/services/kmixctrl_restore.desktop
 @dirrm share/doc/kde/HTML/en/artsbuilder/images
 @dirrm share/doc/kde/HTML/en/artsbuilder
 @dirrm share/doc/kde/HTML/en/aktion
-@comment kdelibs:dirrm share/doc/kde/HTML/en
-@comment kdebase:dirrm lib/mcop/Arts
-@comment kdebase:dirrm lib/mcop
-@comment kdebase:dirrm lib/Arts
+@comment dirrm share/doc/kde/HTML/en
+@dirrm lib/mcop/Noatun
+@comment dirrm lib/mcop/Arts
+@comment dirrm lib/mcop
 @dirrm include/noatun
 @dirrm include/mpeglib_artsplug
 @dirrm include/mpeglib/util/yaf/yafxplayer
 @dirrm include/mpeglib/util/yaf/yafcore
 @dirrm include/mpeglib/util/yaf
 @dirrm include/mpeglib/util/render
+@dirrm include/mpeglib/util/file
 @dirrm include/mpeglib/util/abstract
 @dirrm include/mpeglib/util
+@dirrm include/mpeglib/splay
 @dirrm include/mpeglib/output
+@dirrm include/mpeglib/oggvorbis
 @dirrm include/mpeglib/mpegutil
 @dirrm include/mpeglib/input
+@dirrm include/mpeglib/frame
 @dirrm include/mpeglib/decoder
-@comment kdebase:dirrm include/mpeglib
-@comment kdebase:dirrm include/arts
+@dirrm include/mpeglib
+@comment dirrm include/arts

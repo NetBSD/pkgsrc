@@ -1,0 +1,22 @@
+$NetBSD: patch-bs,v 1.1 2001/10/15 22:46:03 skrll Exp $
+
+--- kicker/applets/launcher/Makefile.in.orig	Sat Sep  8 01:36:33 2001
++++ kicker/applets/launcher/Makefile.in
+@@ -289 +289 @@
+-libquicklauncher_la_LIBADD = ../../kicker.la $(LIB_KSYCOCA) $(LIB_KDEUI) 
++libquicklauncher_la_LIBADD = ../../libkicker.la $(LIB_KSYCOCA) $(LIB_KDEUI) 
+@@ -302 +302 @@
+-libquicklauncher_la_DEPENDENCIES =  ../../kicker.la
++libquicklauncher_la_DEPENDENCIES =  ../../libkicker.la
+@@ -489,11 +488,0 @@
+-#>- 	@for file in $(DISTFILES); do \
+-#>- 	  d=$(srcdir); \
+-#>- 	  if test -d $$d/$$file; then \
+-#>- 	    cp -pr $$/$$file $(distdir)/$$file; \
+-#>- 	  else \
+-#>- 	    test -f $(distdir)/$$file \
+-#>- 	    || ln $$d/$$file $(distdir)/$$file 2> /dev/null \
+-#>- 	    || cp -p $$d/$$file $(distdir)/$$file || :; \
+-#>- 	  fi; \
+-#>- 	done
+-#>+ 10

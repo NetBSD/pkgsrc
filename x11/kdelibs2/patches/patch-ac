@@ -1,27 +1,154 @@
-$NetBSD: patch-ac,v 1.1.1.1 2001/03/14 15:59:49 skrll Exp $
+Cannot strip away RCS IDs, please handle manually!
+$NetBSD: patch-ac,v 1.2 2001/10/15 22:46:21 skrll Exp $
 
---- arts/mcop/Makefile.in.orig	Thu Feb 22 18:17:10 2001
-+++ arts/mcop/Makefile.in
-@@ -244,11 +244,11 @@
- #
- # Programs to compile, Manpages to install and Versions
- #
--INCLUDES = -I$(top_srcdir)/libltdl $(all_includes)
-+INCLUDES = $(all_includes)
- libmcop_la_SOURCES = buffer.cc connection.cc core.cc dispatcher.cc      iomanager.cc object.cc socketconnection.cc tcpconnection.cc 	 unixconnection.cc tcpserver.cc unixserver.cc objectmanager.cc 	 factory.cc idlfilereg.cc ifacerepo_impl.cc mcoputils.cc 	 startupmanager.cc md5.c md5auth.cc referenceclean.cc datapacket.cc 	 asyncstream.cc notification.cc flowsystem.cc extensionloader.cc 	 tmpglobalcomm.cc mcopconfig.cc connect.cc reference.cc type.cc 	 trader_impl.cc dynamicrequest.cc anyref.cc loopback.cc debug.cc
- 
- 
--libmcop_la_LIBADD = $(LIBSOCKET) $(LIBPTHREAD) $(USE_THREADS)      $(top_builddir)/libltdl/libltdlc.la
-+libmcop_la_LIBADD = $(LIBSOCKET) $(LIBPTHREAD) $(USE_THREADS) -lltdl
- 
- libmcop_la_LDFLAGS = -no-undefined 
- 
-@@ -265,7 +265,7 @@
- CPPFLAGS = @CPPFLAGS@
- LDFLAGS = @LDFLAGS@
- LIBS = @LIBS@
--libmcop_la_DEPENDENCIES =  $(top_builddir)/libltdl/libltdlc.la
-+libmcop_la_DEPENDENCIES =  -lltdl
- #>- libmcop_la_OBJECTS =  buffer.lo connection.lo core.lo dispatcher.lo \
- #>- iomanager.lo object.lo socketconnection.lo tcpconnection.lo \
- #>- unixconnection.lo tcpserver.lo unixserver.lo objectmanager.lo \
+--- arts/knotify/Makefile.in.orig	Wed Sep 12 06:09:35 2001
++++ arts/knotify/Makefile.in
+@@ -2 +2 @@
+-# Makefile.in generated automatically by automake 1.4 from Makefile.am
++# Makefile.in generated automatically by automake 1.4-p5 from Makefile.am
+@@ -4 +4 @@
+-# Copyright (C) 1994, 1995-8, 1999 Free Software Foundation, Inc.
++# Copyright (C) 1994, 1995-8, 1999, 2001 Free Software Foundation, Inc.
+@@ -270 +270 @@
+-lib_LTLIBRARIES = knotify.la
++lib_LTLIBRARIES = libknotify_main.la knotify.la
+@@ -272 +272 @@
+-#>- knotify_la_SOURCES = knotify.cpp knotify.skel
++#>- libknotify_main_la_SOURCES = knotify.cpp knotify.skel
+@@ -274,2 +274,2 @@
+-knotify_la_SOURCES=knotify.cpp  knotify_skel.cpp
+-knotify_la_LIBADD = ../soundserver/libsoundserver_idl.la                       ../qtmcop/libqtmcop.la $(LIB_KDEUI) $(LIB_KDECORE)
++libknotify_main_la_SOURCES=knotify.cpp  knotify_skel.cpp
++libknotify_main_la_LIBADD = ../soundserver/libsoundserver_idl.la                       ../qtmcop/libqtmcop.la $(LIB_KDEUI) $(LIB_KDECORE)
+@@ -276,0 +277,5 @@
++libknotify_main_la_LDFLAGS = $(all_libraries)
++#>- libknotify_main_la_METASOURCES = AUTO
++
++knotify_la_SOURCES = knotify_main.cpp
++knotify_la_LIBADD = libknotify_main.la
+@@ -280,2 +285,2 @@
+-knotify_SOURCES = dummy.cpp
+-knotify_LDADD = knotify.la
++knotify_SOURCES = knotify_main.cpp
++knotify_LDADD = libknotify_main.la
+@@ -303 +308 @@
+-knotify_la_DEPENDENCIES =  ../soundserver/libsoundserver_idl.la \
++libknotify_main_la_DEPENDENCIES =  ../soundserver/libsoundserver_idl.la \
+@@ -305 +310 @@
+-#>- knotify_la_OBJECTS =  knotify.lo
++#>- libknotify_main_la_OBJECTS =  knotify.lo
+@@ -307,5 +312,9 @@
+-knotify_la_final_OBJECTS = knotify_la.all_cpp.lo 
+-knotify_la_nofinal_OBJECTS = knotify.lo knotify_skel.lo \
+-knotify_la_meta_unload.lo 
+-@KDE_USE_FINAL_FALSE@knotify_la_OBJECTS = $(knotify_la_nofinal_OBJECTS)
+-@KDE_USE_FINAL_TRUE@knotify_la_OBJECTS = $(knotify_la_final_OBJECTS)
++libknotify_main_la_final_OBJECTS = libknotify_main_la.all_cpp.lo 
++libknotify_main_la_nofinal_OBJECTS = knotify.lo knotify_skel.lo \
++libknotify_main_la_meta_unload.lo 
++@KDE_USE_FINAL_FALSE@libknotify_main_la_OBJECTS = $(libknotify_main_la_nofinal_OBJECTS)
++@KDE_USE_FINAL_TRUE@libknotify_main_la_OBJECTS = $(libknotify_main_la_final_OBJECTS)
++knotify_la_DEPENDENCIES =  libknotify_main.la
++#>- knotify_la_OBJECTS =  knotify_main.lo
++#>+ 1
++knotify_la_OBJECTS = knotify_main.lo
+@@ -316 +325 @@
+-#>- knotify_OBJECTS =  dummy.$(OBJEXT)
++#>- knotify_OBJECTS =  knotify_main.$(OBJEXT)
+@@ -318,2 +327,2 @@
+-knotify_OBJECTS = dummy.$(OBJEXT)
+-knotify_DEPENDENCIES =  knotify.la
++knotify_OBJECTS = knotify_main.$(OBJEXT)
++knotify_DEPENDENCIES =  libknotify_main.la
+@@ -344 +353 @@
+-KDE_DIST=README.knotify_and_arts knotify.desktop 
++KDE_DIST=knotify.desktop README.knotify_and_arts 
+@@ -351,2 +360,2 @@
+-SOURCES = $(knotify_la_SOURCES) $(knotify_SOURCES) $(knotifytest_SOURCES)
+-OBJECTS = $(knotify_la_OBJECTS) $(knotify_OBJECTS) $(knotifytest_OBJECTS)
++SOURCES = $(libknotify_main_la_SOURCES) $(knotify_la_SOURCES) $(knotify_SOURCES) $(knotifytest_SOURCES)
++OBJECTS = $(libknotify_main_la_OBJECTS) $(knotify_la_OBJECTS) $(knotify_OBJECTS) $(knotifytest_OBJECTS)
+@@ -438,0 +448,3 @@
++libknotify_main.la: $(libknotify_main_la_OBJECTS) $(libknotify_main_la_DEPENDENCIES)
++	$(CXXLINK) -rpath $(libdir) $(libknotify_main_la_LDFLAGS) $(libknotify_main_la_OBJECTS) $(libknotify_main_la_LIBADD) $(LIBS)
++
+@@ -543,11 +554,0 @@
+-#>- 	@for file in $(DISTFILES); do \
+-#>- 	  d=$(srcdir); \
+-#>- 	  if test -d $$d/$$file; then \
+-#>- 	    cp -pr $$/$$file $(distdir)/$$file; \
+-#>- 	  else \
+-#>- 	    test -f $(distdir)/$$file \
+-#>- 	    || ln $$d/$$file $(distdir)/$$file 2> /dev/null \
+-#>- 	    || cp -p $$d/$$file $(distdir)/$$file || :; \
+-#>- 	  fi; \
+-#>- 	done
+-#>+ 10
+@@ -661,3 +661,0 @@
+-dummy.cpp:
+-	echo > dummy.cpp
+-
+@@ -678,0 +677,4 @@
++knotify.moc: $(srcdir)/knotify.h
++	$(MOC) $(srcdir)/knotify.h -o knotify.moc
++
++#>+ 3
+@@ -680 +682 @@
+-	-rm -f  knotify.moc
++	-rm -f  knotify.moc knotify.moc
+@@ -697,8 +699,8 @@
+-knotify_la_meta_unload.cpp:  knotify.moc
+-	@echo 'creating knotify_la_meta_unload.cpp'
+-	@-rm -f knotify_la_meta_unload.cpp
+-	@echo 'static const char * _metalist_knotify_la[] = {' > knotify_la_meta_unload.cpp
+-	@cat  knotify.moc | grep 'char.*className' | sed -e 's/.*[^A-Za-z0-9_:]\([A-Za-z0-9_:]*\)::className.*$$/\"\1\",/' | sort | uniq >> knotify_la_meta_unload.cpp
+-	@echo '0};' >> knotify_la_meta_unload.cpp
+-	@echo '#include <kunload.h>' >> knotify_la_meta_unload.cpp
+-	@echo '_UNLOAD(knotify_la)' >> knotify_la_meta_unload.cpp
++libknotify_main_la_meta_unload.cpp:  knotify.moc
++	@echo 'creating libknotify_main_la_meta_unload.cpp'
++	@-rm -f libknotify_main_la_meta_unload.cpp
++	@echo 'static const char * _metalist_libknotify_main_la[] = {' > libknotify_main_la_meta_unload.cpp
++	@cat  knotify.moc | grep 'char.*className' | sed -e 's/.*[^A-Za-z0-9_:]\([A-Za-z0-9_:]*\)::className.*$$/\"\1\",/' | sort | uniq >> libknotify_main_la_meta_unload.cpp
++	@echo '0};' >> libknotify_main_la_meta_unload.cpp
++	@echo '#include <kunload.h>' >> libknotify_main_la_meta_unload.cpp
++	@echo '_UNLOAD(libknotify_main_la)' >> libknotify_main_la_meta_unload.cpp
+@@ -709 +711,13 @@
+-	-rm -f  knotify_la_meta_unload.cpp
++	-rm -f  libknotify_main_la_meta_unload.cpp
++
++#>+ 11
++libknotify_main_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/knotify.cpp knotify_skel.cpp libknotify_main_la_meta_unload.cpp   knotify.moc 
++	@echo 'creating libknotify_main_la.all_cpp.cpp ...'; \
++	rm -f libknotify_main_la.all_cpp.files libknotify_main_la.all_cpp.final; \
++	echo "#define KDE_USE_FINAL 1" >> libknotify_main_la.all_cpp.final; \
++	for file in knotify.cpp knotify_skel.cpp libknotify_main_la_meta_unload.cpp ; do \
++	  echo "#include \"$$file\"" >> libknotify_main_la.all_cpp.files; \
++	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> libknotify_main_la.all_cpp.final; \
++	done; \
++	cat libknotify_main_la.all_cpp.final libknotify_main_la.all_cpp.files  > libknotify_main_la.all_cpp.cpp; \
++	rm -f libknotify_main_la.all_cpp.final libknotify_main_la.all_cpp.files
+@@ -712 +726 @@
+-knotify_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/knotify.cpp knotify_skel.cpp knotify_la_meta_unload.cpp   knotify.moc 
++knotify_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/knotify_main.cpp   knotify.moc 
+@@ -716 +730 @@
+-	for file in knotify.cpp knotify_skel.cpp knotify_la_meta_unload.cpp ; do \
++	for file in knotify_main.cpp ; do \
+@@ -724 +738 @@
+-knotify.all_cpp.cpp: $(srcdir)/Makefile.in dummy.cpp  
++knotify.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/knotify_main.cpp  
+@@ -728 +742 @@
+-	for file in dummy.cpp ; do \
++	for file in knotify_main.cpp ; do \
+@@ -749 +763 @@
+-	-rm -f knotify_la.all_cpp.cpp knotify.all_cpp.cpp knotifytest.all_cpp.cpp
++	-rm -f libknotify_main_la.all_cpp.cpp knotify_la.all_cpp.cpp knotify.all_cpp.cpp knotifytest.all_cpp.cpp
+@@ -753 +767 @@
+-	$(MAKE) knotify_la_OBJECTS="$(knotify_la_final_OBJECTS)" all-am
++	$(MAKE) libknotify_main_la_OBJECTS="$(libknotify_main_la_final_OBJECTS)" all-am
+@@ -756 +770 @@
+-	$(MAKE) knotify_la_OBJECTS="$(knotify_la_nofinal_OBJECTS)" all-am
++	$(MAKE) libknotify_main_la_OBJECTS="$(libknotify_main_la_nofinal_OBJECTS)" all-am
+@@ -766 +780 @@
+-$(srcdir)/knotify.cpp: knotify.moc 
++$(srcdir)/knotify.cpp: knotify.moc knotify.moc 

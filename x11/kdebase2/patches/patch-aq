@@ -1,13 +1,13 @@
-$NetBSD: patch-aq,v 1.1.1.1 2001/03/14 16:03:13 skrll Exp $
+$NetBSD: patch-aq,v 1.2 2001/10/15 22:46:00 skrll Exp $
 
---- kwin/clients/laptop/Makefile.am.orig	Wed Dec 13 18:25:18 2000
-+++ kwin/clients/laptop/Makefile.am
-@@ -4,7 +4,7 @@
- kde_module_LTLIBRARIES = libkwinlaptop.la
+--- kcontrol/kcontrol/kcminit.cpp.orig	Sun May 20 15:55:23 2001
++++ kcontrol/kcontrol/kcminit.cpp
+@@ -36,7 +36,7 @@
+     KCmdLineLastOption
+ };
  
- libkwinlaptop_la_SOURCES = laptopclient.cpp
--libkwinlaptop_la_LIBADD = ../../kwin.la
-+libkwinlaptop_la_LIBADD = ../../libkwin.la
- libkwinlaptop_la_LDFLAGS = $(all_libraries) $(KDE_PLUGIN)
- 
- METASOURCES = AUTO
+-int main(int argc, char *argv[])
++int kcminit_main(int argc, char *argv[])
+ {
+   KLocale::setMainCatalogue("kcontrol");
+   KAboutData aboutData( "kcminit", I18N_NOOP("KCMInit"),

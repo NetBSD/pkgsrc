@@ -1,0 +1,75 @@
+$NetBSD: patch-df,v 1.1 2001/10/15 22:46:08 skrll Exp $
+
+--- ksysguard/ksysguardd/FreeBSD/Memory.c.orig	Fri Jul 28 00:59:28 2000
++++ ksysguard/ksysguardd/FreeBSD/Memory.c
+@@ -29,7 +29,12 @@
+ 
+ #include <sys/param.h>
+ #include <sys/sysctl.h>
++/* Everything post 1.5.x uses uvm/uvm_* includes */
++#if __NetBSD_Version__ >= 105010000
++#include <uvm/uvm_param.h>
++#else
+ #include <vm/vm_param.h>
++#endif
+ #include <sys/vmmeter.h>
+ #include <string.h>
+ #include <unistd.h>
+@@ -65,9 +70,16 @@
+         struct vmtotal p;
+         FILE *file;
+         char buf[256];
++	int rc;
+ 
+         len = sizeof (Total);
++#ifdef __NetBSD__
++        mib[0] = CTL_HW;
++        mib[1] = HW_PHYSMEM;
++        sysctl(mib, sizeof(mib), &Total, &len, NULL, 0);
++#else
+         sysctlbyname("hw.physmem", &Total, &len, NULL, 0);
++#endif
+         Total /= 1024;
+ 
+         /* Q&D hack for swap display. Borrowed from xsysinfo-1.4 */
+@@ -92,23 +104,40 @@
+ 	}
+ 
+ 
++#ifdef __NetBSD__
++        /* NetBSD doesn't know about vfs.bufspace */
++        Buffers = -1;
++#else
+         len = sizeof (Buffers);
+         if ((sysctlbyname("vfs.bufspace", &Buffers, &len, NULL, 0) == -1) || !len)
+                 Buffers = 0; /* Doesn't work under FreeBSD v2.2.x */
++#endif
+         Buffers /= 1024;
+ 
+ 
++#ifdef __NetBSD__
++	/* NetBSD doesn't know about vm.stats */
++	Cached = -1;
++#else
+         len = sizeof (Cached);
+         if ((sysctlbyname("vm.stats.vm.v_cache_count", &Cached, &len, NULL, 0) == -1) || !len)
+                 Cached = 0; /* Doesn't work under FreeBSD v2.2.x */
++#endif
+         Cached *= getpagesize() / 1024;
+ 
+ 
++#ifdef __NetBSD__
++	/* No idea where to get them right now.
++	 * I don't want to start kmem-digging... */
++	MFree = -1;
++	Used = -1;
++#else
+ 	/* initializes the pointer to the vmmeter struct */
+ 	len = sizeof (p);
+ 	sysctlbyname("vm.vmmeter", &p, &len, NULL, 0);
+         MFree = p.t_free * getpagesize() / 1024;
+         Used = p.t_arm * getpagesize() / 1024 + Buffers + Cached;
++#endif
+ 
+ 	return 0;
+ }

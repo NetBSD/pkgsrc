@@ -1,13 +1,101 @@
-$NetBSD: patch-al,v 1.1.1.1 2001/03/14 15:59:45 skrll Exp $
+Cannot strip away RCS IDs, please handle manually!
+$NetBSD: patch-al,v 1.2 2001/10/15 22:46:22 skrll Exp $
 
---- khtml/rendering/Makefile.in.orig	Thu Feb 22 18:17:31 2001
-+++ khtml/rendering/Makefile.in
-@@ -274,7 +274,7 @@
- noinst_HEADERS =  	bidi.h break_lines.h 	render_style.h render_object.h render_box.h 	render_flow.h render_text.h render_box.h render_replaced.h 	render_form.h render_list.h render_root.h render_frames.h 	render_br.h render_applet.h
- 
- 
--INCLUDES = -I$(top_srcdir)/kimgio -I$(top_srcdir)/kio -I$(top_srcdir)/dcop  -I$(top_srcdir)/kfile  -I$(top_srcdir)/khtml/java  -I$(top_srcdir)/khtml -I$(top_srcdir)/khtml/misc  -I$(top_srcdir)/khtml/css  -I$(top_srcdir)/khtml/dom -I$(top_srcdir)/khtml/xml -I$(top_srcdir)/khtml/html  -I$(top_srcdir)/libltdl -I$(top_srcdir) $(all_includes)
-+INCLUDES = -I$(top_srcdir)/kimgio -I$(top_srcdir)/kio -I$(top_srcdir)/dcop  -I$(top_srcdir)/kfile  -I$(top_srcdir)/khtml/java  -I$(top_srcdir)/khtml -I$(top_srcdir)/khtml/misc  -I$(top_srcdir)/khtml/css  -I$(top_srcdir)/khtml/dom -I$(top_srcdir)/khtml/xml -I$(top_srcdir)/khtml/html  -I$(top_srcdir) $(all_includes)
- 
- 
- SRCDOC_DEST = $(kde_htmldir)/en/kdelibs/khtml
+--- kconf_update/Makefile.in.orig	Wed Sep 12 06:09:39 2001
++++ kconf_update/Makefile.in
+@@ -2 +2 @@
+-# Makefile.in generated automatically by automake 1.4 from Makefile.am
++# Makefile.in generated automatically by automake 1.4-p5 from Makefile.am
+@@ -4 +4 @@
+-# Copyright (C) 1994, 1995-8, 1999 Free Software Foundation, Inc.
++# Copyright (C) 1994, 1995-8, 1999, 2001 Free Software Foundation, Inc.
+@@ -284 +284 @@
+-lib_LTLIBRARIES = kconf_update.la
++lib_LTLIBRARIES = libkconf_update_main.la kconf_update.la
+@@ -287,2 +287,2 @@
+-kconf_update_SOURCES = dummy.cpp
+-kconf_update_LDADD = kconf_update.la
++kconf_update_SOURCES = kconf_update_main.cpp
++kconf_update_LDADD = libkconf_update_main.la
+@@ -291,2 +291,5 @@
+-kconf_update_la_SOURCES = kconf_update.cpp
+-kconf_update_la_LIBADD = ../kdecore/libkdecore.la
++libkconf_update_main_la_SOURCES = kconf_update.cpp
++libkconf_update_main_la_LIBADD = ../kdecore/libkdecore.la
++libkconf_update_main_la_LDFLAGS = $(all_libraries)
++
++kconf_update_la_SOURCES = kconf_update_main.cpp
+@@ -293,0 +297 @@
++kconf_update_la_LIBADD = libkconf_update_main.la
+@@ -306,2 +310,6 @@
+-kconf_update_la_DEPENDENCIES =  ../kdecore/libkdecore.la
+-#>- kconf_update_la_OBJECTS =  kconf_update.lo
++libkconf_update_main_la_DEPENDENCIES =  ../kdecore/libkdecore.la
++#>- libkconf_update_main_la_OBJECTS =  kconf_update.lo
++#>+ 1
++libkconf_update_main_la_OBJECTS = kconf_update.lo
++kconf_update_la_DEPENDENCIES =  libkconf_update_main.la
++#>- kconf_update_la_OBJECTS =  kconf_update_main.lo
+@@ -309 +317 @@
+-kconf_update_la_OBJECTS = kconf_update.lo
++kconf_update_la_OBJECTS = kconf_update_main.lo
+@@ -313 +321 @@
+-#>- kconf_update_OBJECTS =  dummy.$(OBJEXT)
++#>- kconf_update_OBJECTS =  kconf_update_main.$(OBJEXT)
+@@ -315,2 +323,2 @@
+-kconf_update_OBJECTS = dummy.$(OBJEXT)
+-kconf_update_DEPENDENCIES =  kconf_update.la
++kconf_update_OBJECTS = kconf_update_main.$(OBJEXT)
++kconf_update_DEPENDENCIES =  libkconf_update_main.la
+@@ -340,2 +348,2 @@
+-SOURCES = $(kconf_update_la_SOURCES) $(kconf_update_SOURCES)
+-OBJECTS = $(kconf_update_la_OBJECTS) $(kconf_update_OBJECTS)
++SOURCES = $(libkconf_update_main_la_SOURCES) $(kconf_update_la_SOURCES) $(kconf_update_SOURCES)
++OBJECTS = $(libkconf_update_main_la_OBJECTS) $(kconf_update_la_OBJECTS) $(kconf_update_OBJECTS)
+@@ -427,0 +436,3 @@
++libkconf_update_main.la: $(libkconf_update_main_la_OBJECTS) $(libkconf_update_main_la_DEPENDENCIES)
++	$(CXXLINK) -rpath $(libdir) $(libkconf_update_main_la_LDFLAGS) $(libkconf_update_main_la_OBJECTS) $(libkconf_update_main_la_LIBADD) $(LIBS)
++
+@@ -500,11 +510,0 @@
+-#>- 	@for file in $(DISTFILES); do \
+-#>- 	  d=$(srcdir); \
+-#>- 	  if test -d $$d/$$file; then \
+-#>- 	    cp -pr $$/$$file $(distdir)/$$file; \
+-#>- 	  else \
+-#>- 	    test -f $(distdir)/$$file \
+-#>- 	    || ln $$d/$$file $(distdir)/$$file 2> /dev/null \
+-#>- 	    || cp -p $$d/$$file $(distdir)/$$file || :; \
+-#>- 	  fi; \
+-#>- 	done
+-#>+ 10
+@@ -610,3 +609,0 @@
+-dummy.cpp: 
+-	echo > dummy.cpp
+-
+@@ -627 +624,13 @@
+-kconf_update_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kconf_update.cpp  
++libkconf_update_main_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kconf_update.cpp  
++	@echo 'creating libkconf_update_main_la.all_cpp.cpp ...'; \
++	rm -f libkconf_update_main_la.all_cpp.files libkconf_update_main_la.all_cpp.final; \
++	echo "#define KDE_USE_FINAL 1" >> libkconf_update_main_la.all_cpp.final; \
++	for file in kconf_update.cpp ; do \
++	  echo "#include \"$$file\"" >> libkconf_update_main_la.all_cpp.files; \
++	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> libkconf_update_main_la.all_cpp.final; \
++	done; \
++	cat libkconf_update_main_la.all_cpp.final libkconf_update_main_la.all_cpp.files  > libkconf_update_main_la.all_cpp.cpp; \
++	rm -f libkconf_update_main_la.all_cpp.final libkconf_update_main_la.all_cpp.files
++
++#>+ 11
++kconf_update_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kconf_update_main.cpp  
+@@ -631 +640 @@
+-	for file in kconf_update.cpp ; do \
++	for file in kconf_update_main.cpp ; do \
+@@ -639 +648 @@
+-kconf_update.all_cpp.cpp: $(srcdir)/Makefile.in dummy.cpp  
++kconf_update.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kconf_update_main.cpp  
+@@ -643 +652 @@
+-	for file in dummy.cpp ; do \
++	for file in kconf_update_main.cpp ; do \
+@@ -652 +661 @@
+-	-rm -f kconf_update_la.all_cpp.cpp kconf_update.all_cpp.cpp
++	-rm -f libkconf_update_main_la.all_cpp.cpp kconf_update_la.all_cpp.cpp kconf_update.all_cpp.cpp

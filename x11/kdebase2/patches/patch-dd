@@ -1,0 +1,13 @@
+$NetBSD: patch-dd,v 1.1 2001/10/15 22:46:08 skrll Exp $
+
+--- konsole/src/main.C.orig	Wed Sep  5 00:16:57 2001
++++ konsole/src/main.C
+@@ -109,7 +109,7 @@
+ 
+ 
+ /* --| main |------------------------------------------------------ */
+-int main(int argc, char* argv[])
++int konsole_main(int argc, char* argv[])
+ {
+   setgid(getgid()); setuid(getuid()); // drop privileges
+ 

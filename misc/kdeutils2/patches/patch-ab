@@ -1,48 +1,19 @@
-$NetBSD: patch-ab,v 1.1.1.1 2001/03/14 16:05:49 skrll Exp $
+$NetBSD: patch-ab,v 1.2 2001/10/15 22:45:58 skrll Exp $
 
---- khexedit/dialog.cc.orig	Tue Aug  1 17:06:40 2000
-+++ khexedit/dialog.cc
-@@ -1,6 +1,6 @@
- /*
-  *   khexedit - Versatile hex editor
-- *   Copyright (C) 1999  Espen Sand, espensa@online.no
-+ *   Copyright (C) 1999  Eepen Sand, espensa@online.no
-  *
-  *   This program is free software; you can redistribute it and/or modify
-  *   it under the terms of the GNU General Public License as published by
-@@ -20,7 +20,7 @@
+--- kfind/pics/Makefile.in.orig	Sat Sep  8 01:46:33 2001
++++ kfind/pics/Makefile.in
+@@ -349,14 +349,6 @@
  
- #include <ctype.h>
- #include <iostream.h>
--#include <values.h>
-+#include <limits.h>
+ #>+ 19
+ install-kde-icons:
+-	$(mkinstalldirs) $(DESTDIR)$(datadir)/locolor/22x22/actions
+-	$(INSTALL_DATA) $(srcdir)/lo22-action-archive.png $(DESTDIR)$(datadir)/locolor/22x22/actions/archive.png
+-	$(INSTALL_DATA) $(srcdir)/lo22-action-delete.png $(DESTDIR)$(datadir)/locolor/22x22/actions/delete.png
+-	$(INSTALL_DATA) $(srcdir)/lo22-action-idea.png $(DESTDIR)$(datadir)/locolor/22x22/actions/idea.png
+-	$(INSTALL_DATA) $(srcdir)/lo22-action-info.png $(DESTDIR)$(datadir)/locolor/22x22/actions/info.png
+-	$(INSTALL_DATA) $(srcdir)/lo22-action-openfile.png $(DESTDIR)$(datadir)/locolor/22x22/actions/openfile.png
+-	$(INSTALL_DATA) $(srcdir)/lo22-action-save.png $(DESTDIR)$(datadir)/locolor/22x22/actions/save.png
+-	$(INSTALL_DATA) $(srcdir)/lo22-action-search.png $(DESTDIR)$(datadir)/locolor/22x22/actions/search.png
  
- #include <qbuttongroup.h> 
- #include <qfileinfo.h> 
-@@ -940,7 +940,7 @@
-   mGroupSpin = new QSpinBox( page );
-   if( mGroupSpin == 0 ) { return; }
-   mGroupSpin->setMinimumWidth( fontMetrics().width("M")*20 );
--  mGroupSpin->setRange(1, MAXINT );  
-+  mGroupSpin->setRange(1, INT_MAX );  
- 
-   text = i18n("&Group size [bytes]");
-   QLabel *label = new QLabel( mGroupSpin, text, page );
-@@ -952,7 +952,7 @@
-   mBitSpin = new QSpinBox( page );
-   if( mBitSpin == 0 ) { return; }
-   mBitSpin->setMinimumWidth( fontMetrics().width("M")*20 );
--  mBitSpin->setRange(-MAXINT, MAXINT);
-+  mBitSpin->setRange(INT_MIN, INT_MAX);
- 
-   text = i18n("S&hift size [bits]");
-   label = new QLabel( mBitSpin, text, page );
-@@ -1098,7 +1098,7 @@
-   mSizeBox = new QSpinBox( plainPage() );
-   if( mSizeBox == 0 ) { return; }
-   mSizeBox->setMinimumWidth( fontMetrics().maxWidth()*17 );
--  mSizeBox->setRange( 1, MAXINT );
-+  mSizeBox->setRange( 1, INT_MAX );
-   mSizeBox->setValue( 1 );
-   
-   QLabel *label = new QLabel( mSizeBox, i18n("&Size"), plainPage() );
+ uninstall-kde-icons:
+ 	-rm -f $(DESTDIR)$(datadir)/locolor/22x22/actions/archive.png

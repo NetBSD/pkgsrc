@@ -1,0 +1,22 @@
+$NetBSD: patch-ee,v 1.1 2001/10/15 22:46:10 skrll Exp $
+
+--- kwin/clients/redmond/Makefile.in.orig	Sat Sep  8 01:36:50 2001
++++ kwin/clients/redmond/Makefile.in
+@@ -279 +279 @@
+-libkwinredmond_la_LIBADD = ../../kwin.la
++libkwinredmond_la_LIBADD = ../../libkwin.la
+@@ -301 +301 @@
+-libkwinredmond_la_DEPENDENCIES =  ../../kwin.la
++libkwinredmond_la_DEPENDENCIES =  ../../libkwin.la
+@@ -489,11 +488,0 @@
+-#>- 	@for file in $(DISTFILES); do \
+-#>- 	  d=$(srcdir); \
+-#>- 	  if test -d $$d/$$file; then \
+-#>- 	    cp -pr $$/$$file $(distdir)/$$file; \
+-#>- 	  else \
+-#>- 	    test -f $(distdir)/$$file \
+-#>- 	    || ln $$d/$$file $(distdir)/$$file 2> /dev/null \
+-#>- 	    || cp -p $$d/$$file $(distdir)/$$file || :; \
+-#>- 	  fi; \
+-#>- 	done
+-#>+ 10

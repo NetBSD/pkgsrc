@@ -1,13 +1,13 @@
-$NetBSD: patch-as,v 1.1.1.1 2001/03/14 15:59:49 skrll Exp $
+$NetBSD: patch-as,v 1.2 2001/10/15 22:46:23 skrll Exp $
 
---- ksgmltools/kdb2html.in.orig	Wed Jun  7 13:28:18 2000
-+++ ksgmltools/kdb2html.in
-@@ -1,7 +1,7 @@
- #! /bin/sh
- 
- if test -z "$KDB2HTML_UNINSTALLED"; then
--ksgmldir=@prefix@/share/apps/ksgmltools
-+ksgmldir=@kde_datadir@/ksgmltools
- else
- ksgmldir=$KDB2HTML_UNINSTALLED
- fi
+--- kdecore/netsupp.h.orig	Sun Jul 29 05:54:51 2001
++++ kdecore/netsupp.h
+@@ -61,7 +61,7 @@
+ #ifdef HAVE_SOCKADDR_SA_LEN
+   Q_UINT8		sin6_len;
+ #endif
+-  sa_family_t		sin6_family;
++  u_char		sin6_family;
+   unsigned short       	sin6_port;	/* RFC says in_port_t */
+   Q_UINT32		sin6_flowinfo;
+   struct kde_in6_addr	sin6_addr;

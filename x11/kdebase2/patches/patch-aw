@@ -1,13 +1,13 @@
-$NetBSD: patch-aw,v 1.1.1.1 2001/03/14 16:03:15 skrll Exp $
+$NetBSD: patch-aw,v 1.2 2001/10/15 22:46:01 skrll Exp $
 
---- kwin/plugins.cpp.orig	Thu Feb 22 13:04:03 2001
-+++ kwin/plugins.cpp
-@@ -164,7 +164,7 @@
+--- kcontrol/kcontrol/modules.h.orig	Sat Jul 15 14:21:39 2000
++++ kcontrol/kcontrol/modules.h
+@@ -20,8 +20,6 @@
+ #ifndef __modules_h__
+ #define __modules_h__
  
- 	if( !path.isEmpty() ) {
- 	    if ( (handle = lt_dlopen(path.latin1() ) ) ) {
--		lt_ptr_t alloc_func = lt_dlsym(handle, "allocate");
-+		lt_ptr alloc_func = lt_dlsym(handle, "allocate");
- 		if(alloc_func) {
- 		    alloc_ptr = (Client* (*)(Workspace *ws, WId w, int tool))alloc_func;
- 		} else{
+-#include <ltdl.h>
+-
+ #include <qobject.h>
+ #include <qstringlist.h>
+ #include <qlist.h>

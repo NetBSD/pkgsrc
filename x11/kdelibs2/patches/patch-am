@@ -1,13 +1,14 @@
-$NetBSD: patch-am,v 1.1.1.1 2001/03/14 15:59:45 skrll Exp $
+$NetBSD: patch-am,v 1.2 2001/10/15 22:46:22 skrll Exp $
 
---- kimgio/Makefile.in.orig	Thu Feb 22 18:17:32 2001
-+++ kimgio/Makefile.in
-@@ -273,7 +273,7 @@
+--- kconf_update/kconf_update.cpp.orig	Fri Aug  3 21:13:52 2001
++++ kconf_update/kconf_update.cpp
+@@ -632,8 +632,7 @@
+    m_bOverwrite = false;
+ }
  
- noinst_HEADERS = xview.h eps.h tiffr.h krl.h g3r.h ico.h
- 
--INCLUDES = -I$(top_srcdir)/kio -I$(top_srcdir)/dcop -I$(top_srcdir)/libltdl $(all_includes)
-+INCLUDES = -I$(top_srcdir)/kio -I$(top_srcdir)/dcop $(all_includes)
- 
- EXTRA_DIST = netpbm.cpp netpbm.h
- 
+-
+-int main(int argc, char **argv)
++int kconf_update_main(int argc, char **argv)
+ {
+    KAboutData aboutData("kconf_update", I18N_NOOP("KConf Update"),
+                         "1.0.2",

@@ -1,13 +1,13 @@
-$NetBSD: patch-aq,v 1.1.1.1 2001/03/14 15:59:44 skrll Exp $
+$NetBSD: patch-aq,v 1.2 2001/10/15 22:46:22 skrll Exp $
 
---- kparts/Makefile.in.orig	Thu Feb 22 18:17:39 2001
-+++ kparts/Makefile.in
-@@ -241,7 +241,7 @@
- x_includes = @x_includes@
- x_libraries = @x_libraries@
- 
--INCLUDES = -I$(srcdir)/../ -I$(top_srcdir)/kio/ -I$(top_srcdir)/libltdl 	-I$(top_srcdir)/kfile $(all_includes)
-+INCLUDES = -I$(srcdir)/../ -I$(top_srcdir)/kio/ -I$(top_srcdir)/kfile $(all_includes)
- 
- libkparts_la_LDFLAGS = -version-info 1:0:0 -no-undefined
- libkparts_la_LIBADD = $(LIB_KFILE) $(LIB_KIO)
+--- kdecore/klibloader.cpp.orig	Fri Aug  3 21:13:52 2001
++++ kdecore/klibloader.cpp
+@@ -16,6 +16,8 @@
+    the Free Software Foundation, Inc., 59 Temple Place - Suite 330,
+    Boston, MA 02111-1307, USA.
+ */
++#include <stdlib.h>
++
+ #include <config.h>
+ #include <qclipboard.h>
+ #include <qwidgetlist.h>

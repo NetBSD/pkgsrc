@@ -1,87 +1,77 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/03/14 16:13:09 skrll Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/10/15 22:46:18 skrll Exp $
 bin/amor
 bin/kmoon
 bin/kodo
 bin/kscore_excite.pl
 bin/kteatime
 bin/ktux
-bin/kworldwatch
+bin/kworldclock
 include/AmorIface.h
 lib/libkeyesapplet.a
 lib/libkeyesapplet.la
 lib/libkeyesapplet.so
 lib/libkeyesapplet.so.1
 lib/libkeyesapplet.so.1.0
+lib/libkfifteenapplet.a
+lib/libkfifteenapplet.la
+lib/libkfifteenapplet.so
+lib/libkfifteenapplet.so.1
+lib/libkfifteenapplet.so.1.0
 lib/libkscoreapplet.a
 lib/libkscoreapplet.la
 lib/libkscoreapplet.so
 lib/libkscoreapplet.so.1
 lib/libkscoreapplet.so.1.0
-share/doc/kde/HTML/en/amor/.anchors
+lib/libkwwapplet.a
+lib/libkwwapplet.la
+lib/libkwwapplet.so
+lib/libkwwapplet.so.1
+lib/libkwwapplet.so.1.0
+share/doc/kde/HTML/en/amor/billy.png
+share/doc/kde/HTML/en/amor/bonhomme.png
+share/doc/kde/HTML/en/amor/bsd.png
 share/doc/kde/HTML/en/amor/common
+share/doc/kde/HTML/en/amor/eyes.png
+share/doc/kde/HTML/en/amor/ghost.png
+share/doc/kde/HTML/en/amor/index.cache.bz2
 share/doc/kde/HTML/en/amor/index.docbook
-share/doc/kde/HTML/en/amor/index.html
-share/doc/kde/HTML/en/amor/introduction.html
-share/doc/kde/HTML/en/kmoon/.anchors
+share/doc/kde/HTML/en/amor/neko.png
+share/doc/kde/HTML/en/amor/pingus.png
+share/doc/kde/HTML/en/amor/spot.png
+share/doc/kde/HTML/en/amor/tao.png
+share/doc/kde/HTML/en/amor/tux.png
+share/doc/kde/HTML/en/amor/worm.png
 share/doc/kde/HTML/en/kmoon/carlosmail
 share/doc/kde/HTML/en/kmoon/common
+share/doc/kde/HTML/en/kmoon/index.cache.bz2
 share/doc/kde/HTML/en/kmoon/index.docbook
-share/doc/kde/HTML/en/kmoon/index.html
-share/doc/kde/HTML/en/kmoon/introduction.html
-share/doc/kde/HTML/en/kodo/.anchors
 share/doc/kde/HTML/en/kodo/common
-share/doc/kde/HTML/en/kodo/compilationandinstallation.html
 share/doc/kde/HTML/en/kodo/guide.png
-share/doc/kde/HTML/en/kodo/howitworks.html
-share/doc/kde/HTML/en/kodo/index.cvlog
+share/doc/kde/HTML/en/kodo/index.cache.bz2
 share/doc/kde/HTML/en/kodo/index.docbook
-share/doc/kde/HTML/en/kodo/index.html
-share/doc/kde/HTML/en/kodo/installation.html
-share/doc/kde/HTML/en/kodo/introduction.html
-share/doc/kde/HTML/en/kodo/onscreenoperation.html
-share/doc/kde/HTML/en/kscore/.anchors
-share/doc/kde/HTML/en/kscore/command-ref.html
+share/doc/kde/HTML/en/kscore/close.png
 share/doc/kde/HTML/en/kscore/common
-share/doc/kde/HTML/en/kscore/compilation.html
-share/doc/kde/HTML/en/kscore/credits-and-licenses.html
 share/doc/kde/HTML/en/kscore/dl_fail.png
-share/doc/kde/HTML/en/kscore/faq.html
+share/doc/kde/HTML/en/kscore/index.cache.bz2
 share/doc/kde/HTML/en/kscore/index.docbook
-share/doc/kde/HTML/en/kscore/index.html
-share/doc/kde/HTML/en/kscore/installation.html
-share/doc/kde/HTML/en/kscore/introduction.html
 share/doc/kde/HTML/en/kscore/ncaaf.png
 share/doc/kde/HTML/en/kscore/nhl.png
 share/doc/kde/HTML/en/kscore/no_score.png
 share/doc/kde/HTML/en/kscore/premr.png
-share/doc/kde/HTML/en/kscore/q-and-a.html
-share/doc/kde/HTML/en/kscore/requirements.html
 share/doc/kde/HTML/en/kscore/settings.png
-share/doc/kde/HTML/en/kscore/using-kscore.html
-share/doc/kde/HTML/en/kteatime/.anchors
 share/doc/kde/HTML/en/kteatime/common
-share/doc/kde/HTML/en/kteatime/compilation-and-installation.html
 share/doc/kde/HTML/en/kteatime/config.png
-share/doc/kde/HTML/en/kteatime/configure.html
-share/doc/kde/HTML/en/kteatime/credits.html
-share/doc/kde/HTML/en/kteatime/how-to-use.html
+share/doc/kde/HTML/en/kteatime/index.cache.bz2
 share/doc/kde/HTML/en/kteatime/index.docbook
-share/doc/kde/HTML/en/kteatime/index.html
-share/doc/kde/HTML/en/kteatime/installation.html
-share/doc/kde/HTML/en/kteatime/introduction.html
-share/doc/kde/HTML/en/kteatime/menu-options.html
-share/doc/kde/HTML/en/kteatime/start.html
-share/doc/kde/HTML/en/kworldwatch/.anchors
-share/doc/kde/HTML/en/kworldwatch/common
-share/doc/kde/HTML/en/kworldwatch/index.docbook
-share/doc/kde/HTML/en/kworldwatch/index.html
-share/doc/kde/HTML/en/kworldwatch/introduction.html
+share/doc/kde/HTML/en/kworldclock/common
+share/doc/kde/HTML/en/kworldclock/index.cache.bz2
+share/doc/kde/HTML/en/kworldclock/index.docbook
 share/kde/applnk/System/ScreenSavers/ktux.desktop
 share/kde/applnk/Toys/amor.desktop
 share/kde/applnk/Toys/kmoon.desktop
 share/kde/applnk/Toys/kodo.desktop
 share/kde/applnk/Toys/kteatime.desktop
-share/kde/applnk/Toys/kworldwatch.desktop
+share/kde/applnk/Toys/kworldclock.desktop
 share/kde/apps/amor/b/b-f.xpm
 share/kde/apps/amor/b/b-f2.xpm
 share/kde/apps/amor/b/b1-r.xpm
@@ -123,6 +113,8 @@ share/kde/apps/amor/b/sa2b.xpm
 share/kde/apps/amor/b/sa2c.xpm
 share/kde/apps/amor/b/salut.xpm
 share/kde/apps/amor/b/salut1.xpm
+share/kde/apps/amor/billyrc
+share/kde/apps/amor/blob/blob.xpm
 share/kde/apps/amor/blob/blob_BeamDown1.xpm
 share/kde/apps/amor/blob/blob_BeamDown2.xpm
 share/kde/apps/amor/blob/blob_BeamDown3.xpm
@@ -142,11 +134,12 @@ share/kde/apps/amor/blob/blob_BeamUp6.xpm
 share/kde/apps/amor/blob/blob_BeamUp7.xpm
 share/kde/apps/amor/blob/blob_BeamUp8.xpm
 share/kde/apps/amor/blob/blob_BeamUp9.xpm
-share/kde/apps/amor/blob/blob.xpm
 share/kde/apps/amor/blob/blob_b1.xpm
 share/kde/apps/amor/blob/blob_b2.xpm
 share/kde/apps/amor/blob/blob_e1.xpm
 share/kde/apps/amor/blob/blob_ex1.xpm
+share/kde/apps/amor/blob/blob_f1.xpm
+share/kde/apps/amor/blob/blob_f2.xpm
 share/kde/apps/amor/blob/blob_f3.xpm
 share/kde/apps/amor/blob/blob_fire10.xpm
 share/kde/apps/amor/blob/blob_fire11.xpm
@@ -166,8 +159,6 @@ share/kde/apps/amor/blob/blob_gl3.xpm
 share/kde/apps/amor/blob/blob_h1.xpm
 share/kde/apps/amor/blob/blob_h2.xpm
 share/kde/apps/amor/blob/blob_h3.xpm
-share/kde/apps/amor/blob/blob_f1.xpm
-share/kde/apps/amor/blob/blob_f2.xpm
 share/kde/apps/amor/blob/blob_jet1.xpm
 share/kde/apps/amor/blob/blob_jet2.xpm
 share/kde/apps/amor/blob/blob_jet3.xpm
@@ -203,6 +194,7 @@ share/kde/apps/amor/blob/blob_z2.xpm
 share/kde/apps/amor/blob/blob_z3.xpm
 share/kde/apps/amor/blobrc
 share/kde/apps/amor/brc
+share/kde/apps/amor/bsdrc
 share/kde/apps/amor/eyes/eye_1.xpm
 share/kde/apps/amor/eyes/eye_2.xpm
 share/kde/apps/amor/eyes/eye_b.xpm
@@ -377,8 +369,59 @@ share/kde/apps/amor/pingu/walk_r6.xpm
 share/kde/apps/amor/pingu/walk_r7.xpm
 share/kde/apps/amor/pingu/walk_r8.xpm
 share/kde/apps/amor/pingurc
+share/kde/apps/amor/static/billy.png
+share/kde/apps/amor/static/bsd.png
+share/kde/apps/amor/static/tux.png
+share/kde/apps/amor/tao/yy-1.xpm
+share/kde/apps/amor/tao/yy-2.xpm
+share/kde/apps/amor/tao/yy-3.xpm
+share/kde/apps/amor/tao/yy-4.xpm
+share/kde/apps/amor/tao/yy-5.xpm
+share/kde/apps/amor/tao/yy-6.xpm
+share/kde/apps/amor/tao/yy-7.xpm
+share/kde/apps/amor/tao/yy-8.xpm
+share/kde/apps/amor/tao/yy-9.xpm
+share/kde/apps/amor/tao/yy.xpm
+share/kde/apps/amor/tao/yy105.xpm
+share/kde/apps/amor/tao/yy120.xpm
+share/kde/apps/amor/tao/yy135.xpm
+share/kde/apps/amor/tao/yy15.xpm
+share/kde/apps/amor/tao/yy150.xpm
+share/kde/apps/amor/tao/yy165.xpm
+share/kde/apps/amor/tao/yy180.xpm
+share/kde/apps/amor/tao/yy195.xpm
+share/kde/apps/amor/tao/yy210.xpm
+share/kde/apps/amor/tao/yy225.xpm
+share/kde/apps/amor/tao/yy240.xpm
+share/kde/apps/amor/tao/yy255.xpm
+share/kde/apps/amor/tao/yy270.xpm
+share/kde/apps/amor/tao/yy285.xpm
+share/kde/apps/amor/tao/yy30.xpm
+share/kde/apps/amor/tao/yy300.xpm
+share/kde/apps/amor/tao/yy315.xpm
+share/kde/apps/amor/tao/yy330.xpm
+share/kde/apps/amor/tao/yy345.xpm
+share/kde/apps/amor/tao/yy45.xpm
+share/kde/apps/amor/tao/yy60.xpm
+share/kde/apps/amor/tao/yy75.xpm
+share/kde/apps/amor/tao/yy90.xpm
+share/kde/apps/amor/tao/yyx10.xpm
+share/kde/apps/amor/tao/yyx12.xpm
+share/kde/apps/amor/tao/yyx14.xpm
+share/kde/apps/amor/tao/yyx16.xpm
+share/kde/apps/amor/tao/yyx18.xpm
+share/kde/apps/amor/tao/yyx20.xpm
+share/kde/apps/amor/tao/yyx22.xpm
+share/kde/apps/amor/tao/yyx24.xpm
+share/kde/apps/amor/tao/yyx26.xpm
+share/kde/apps/amor/tao/yyx28.xpm
+share/kde/apps/amor/tao/yyx30.xpm
+share/kde/apps/amor/tao/yyx6.xpm
+share/kde/apps/amor/tao/yyx8.xpm
+share/kde/apps/amor/taorc
 share/kde/apps/amor/tips
 share/kde/apps/amor/tips-en
+share/kde/apps/amor/tuxrc
 share/kde/apps/amor/worm/w-a1.xpm
 share/kde/apps/amor/worm/w-a2.xpm
 share/kde/apps/amor/worm/w-b1.xpm
@@ -418,7 +461,9 @@ share/kde/apps/amor/worm/w-wr2.xpm
 share/kde/apps/amor/wormrc
 share/kde/apps/kdesktop/programs/kdeworld.desktop
 share/kde/apps/kicker/applets/eyesapplet.desktop
+share/kde/apps/kicker/applets/kfifteenapplet.desktop
 share/kde/apps/kicker/applets/kscoreapplet.desktop
+share/kde/apps/kicker/applets/kwwapplet.desktop
 share/kde/apps/kmoon/pics/moon1.png
 share/kde/apps/kmoon/pics/moon10.png
 share/kde/apps/kmoon/pics/moon11.png
@@ -448,7 +493,7 @@ share/kde/apps/kmoon/pics/moon6.png
 share/kde/apps/kmoon/pics/moon7.png
 share/kde/apps/kmoon/pics/moon8.png
 share/kde/apps/kmoon/pics/moon9.png
-share/kde/apps/kodo/57-2.png
+share/kde/apps/kodo/numbers.png
 share/kde/apps/ktux/sprites/anim0001.png
 share/kde/apps/ktux/sprites/anim0002.png
 share/kde/apps/ktux/sprites/anim0003.png
@@ -465,45 +510,48 @@ share/kde/apps/ktux/sprites/flare0002.png
 share/kde/apps/ktux/sprites/spriterc
 share/kde/apps/ktux/sprites/star0001.png
 share/kde/apps/ktux/sprites/star0002.png
-share/kde/apps/kworldwatch/pics/bio_800.png
-share/kde/apps/kworldwatch/pics/depths_400.png
-share/kde/apps/kworldwatch/pics/flag-blue.xpm
-share/kde/apps/kworldwatch/pics/flag-green.xpm
-share/kde/apps/kworldwatch/pics/flag-red.xpm
-share/kde/apps/kworldwatch/pics/flag-yellow.xpm
-share/kde/apps/kworldwatch/pics/photo_400.png
-share/kde/apps/kworldwatch/pics/world2.png
+share/kde/apps/kworldclock/maps/depths/400.jpg
+share/kde/apps/kworldclock/maps/depths/800.jpg
+share/kde/apps/kworldclock/maps/depths/depths.desktop
+share/kde/apps/kworldclock/pics/flag-blue.png
+share/kde/apps/kworldclock/pics/flag-green.png
+share/kde/apps/kworldclock/pics/flag-mask.xpm
+share/kde/apps/kworldclock/pics/flag-red.png
+share/kde/apps/kworldclock/pics/flag.png
+share/kde/apps/kworldclock/zone.tab
+share/kde/icons/hicolor/16x16/apps/amor.png
+share/kde/icons/hicolor/16x16/apps/kmoon.png
+share/kde/icons/hicolor/16x16/apps/kodo.png
+share/kde/icons/hicolor/16x16/apps/kworldclock.png
 share/kde/icons/hicolor/32x32/apps/amor.png
 share/kde/icons/hicolor/32x32/apps/kmoon.png
 share/kde/icons/hicolor/32x32/apps/kodo.png
-share/kde/icons/hicolor/32x32/apps/kworldwatch.png
+share/kde/icons/hicolor/32x32/apps/kworldclock.png
 share/kde/icons/hicolor/48x48/apps/kmoon.png
 share/kde/icons/hicolor/48x48/apps/kodo.png
-share/kde/icons/hicolor/48x48/apps/kworldwatch.png
-share/kde/icons/locolor/16x16/apps/amor.png
-share/kde/icons/locolor/16x16/apps/kmoon.png
-share/kde/icons/locolor/16x16/apps/kodo.png
+share/kde/icons/hicolor/48x48/apps/kworldclock.png
 share/kde/icons/locolor/16x16/apps/kteatime.png
 share/kde/icons/locolor/16x16/apps/ktux.png
-share/kde/icons/locolor/16x16/apps/kworldwatch.png
-share/kde/icons/locolor/32x32/apps/kmoon.png
-share/kde/icons/locolor/32x32/apps/kodo.png
 share/kde/icons/locolor/32x32/apps/ktux.png
-share/kde/icons/locolor/32x32/apps/kworldwatch.png
-@comment kdelibs:dirrm share/kde/icons/locolor/32x32/apps
-@comment kdelibs:dirrm share/kde/icons/locolor/16x16/apps
-@comment kdelibs:dirrm share/kde/icons/hicolor/48x48/apps
-@comment kdelibs:dirrm share/kde/icons/hicolor/32x32/apps
-@dirrm share/kde/apps/kworldwatch/pics
-@dirrm share/kde/apps/kworldwatch
+@comment dirrm share/kde/icons/locolor/32x32/apps
+@comment dirrm share/kde/icons/locolor/16x16/apps
+@comment dirrm share/kde/icons/hicolor/48x48/apps
+@comment dirrm share/kde/icons/hicolor/32x32/apps
+@comment dirrm share/kde/icons/hicolor/16x16/apps
+@dirrm share/kde/apps/kworldclock/pics
+@dirrm share/kde/apps/kworldclock/maps/depths
+@dirrm share/kde/apps/kworldclock/maps
+@dirrm share/kde/apps/kworldclock
 @dirrm share/kde/apps/ktux/sprites
 @dirrm share/kde/apps/ktux
 @dirrm share/kde/apps/kodo
 @dirrm share/kde/apps/kmoon/pics
 @dirrm share/kde/apps/kmoon
-@comment kdelibs:dirrm share/kde/apps/kicker/applets
-@comment kdebase:dirrm share/kde/apps/kdesktop/programs
+@comment dirrm share/kde/apps/kicker/applets
+@comment dirrm share/kde/apps/kdesktop/programs
 @dirrm share/kde/apps/amor/worm
+@dirrm share/kde/apps/amor/tao
+@dirrm share/kde/apps/amor/static
 @dirrm share/kde/apps/amor/pingu
 @dirrm share/kde/apps/amor/neko
 @dirrm share/kde/apps/amor/ghost
@@ -511,13 +559,14 @@ share/kde/icons/locolor/32x32/apps/kworldwatch.png
 @dirrm share/kde/apps/amor/blob
 @dirrm share/kde/apps/amor/b
 @dirrm share/kde/apps/amor
-@comment kdelibs:dirrm share/kde/apps
-@comment kdelibs:dirrm share/kde/applnk/Toys
-@comment kdelibs:dirrm share/kde/applnk/System/ScreenSavers
-@dirrm share/doc/kde/HTML/en/kworldwatch
+@comment dirrm share/kde/apps
+@comment dirrm share/kde/applnk/Toys
+@comment dirrm share/kde/applnk/System/ScreenSavers
+@comment dirrm share/kde/applnk/Graphics
+@dirrm share/doc/kde/HTML/en/kworldclock
 @dirrm share/doc/kde/HTML/en/kteatime
 @dirrm share/doc/kde/HTML/en/kscore
 @dirrm share/doc/kde/HTML/en/kodo
 @dirrm share/doc/kde/HTML/en/kmoon
 @dirrm share/doc/kde/HTML/en/amor
-@comment kdelibs:dirrm share/doc/kde/HTML/en
+@comment dirrm share/doc/kde/HTML/en
