@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.1 1998/09/05 22:02:20 garbled Exp $
+$NetBSD: patch-ag,v 1.2 1998/09/23 16:56:01 agc Exp $
 --- scripts/gen-summary.orig	Sat Sep  5 09:23:30 1998
 +++ scripts/gen-summary	Sat Sep  5 09:24:09 1998
 @@ -45,9 +45,6 @@
@@ -16,7 +16,7 @@ $NetBSD: patch-ag,v 1.1 1998/09/05 22:02:20 garbled Exp $
      echo "${benchmark}:"
      FILES="${benchmark}_* ${benchmark}"
 -    FILES=`echo ${FILES} | ${HBENCHROOT}/scripts/argsort`
-+    FILES=`echo ${FILES} | XXXPREFIXXXX/bin/hbench/argsort`
++    FILES=`echo ${FILES} | @PREFIX@/bin/hbench/argsort`
      for file in $FILES
      do
  	if [ -f $file ]; then
@@ -25,7 +25,7 @@ $NetBSD: patch-ag,v 1.1 1998/09/05 22:02:20 garbled Exp $
  	    PARAMS="${PARAMS}: "
  	
 -	    echo "   ${PARAMS}`${HBENCHROOT}/scripts/stats-full $file 2>&1`"
-+	    echo "   ${PARAMS}`XXXPREFIXXXX/bin/hbench/stats-full $file 2>&1`"
++	    echo "   ${PARAMS}`@PREFIX@/bin/hbench/stats-full $file 2>&1`"
  	fi
      done
      echo

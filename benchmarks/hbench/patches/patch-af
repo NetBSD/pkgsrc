@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.1 1998/09/05 22:02:20 garbled Exp $
+$NetBSD: patch-af,v 1.2 1998/09/23 16:56:01 agc Exp $
 --- scripts/gen-latgraph.orig	Sat Sep  5 09:20:49 1998
 +++ scripts/gen-latgraph	Sat Sep  5 09:22:07 1998
 @@ -63,9 +63,6 @@
@@ -16,7 +16,7 @@ $NetBSD: patch-af,v 1.1 1998/09/05 22:02:20 garbled Exp $
          size=`echo $file |sed "s/^rd_//" | sed "s/_.*$//"`
  	size=`echo $size | awk '{print $1/1024;}'`
 -	VAL=`${HBENCHROOT}/scripts/stats-single $file`
-+	VAL=`XXXPREFIXXXX/bin/hbench/stats-single $file`
++	VAL=`@PREFIX@/bin/hbench/stats-single $file`
  	if [ `echo "$VAL $YMAX" | awk '{print ($1 > $2);}'` -gt 0 ]; then
  	    YMAX=$VAL
          fi
