@@ -1,0 +1,16 @@
+psmisc, version 17
+==================
+
+This package contains three little utilities that use the proc FS:
+
+  killall   kills processes by name, e.g. killall -HUP named
+  pidof	    like killall, buts lists PIDs instead of killing processes
+  pstree    shows the currently running processes as a tree
+
+The Linux version includes "fuser" for listing processes' open files,
+but NetBSD's procfs doesn't have the facilities for this (use the lsof
+package instead).
+
+- Werner Almesberger <werner.almesberger@lrc.di.epfl.ch>
+
+ported to NetBSD by Ben Harris <bjh@mail.dotcom.fr>

@@ -1,0 +1,61 @@
+--- killall.c.orig	Tue Feb 17 20:05:21 1998
++++ killall.c	Sun Jul 19 16:18:26 1998
+@@ -2,6 +2,13 @@
+ 
+ /* Copyright 1993-1998 Werner Almesberger. See file COPYING for details. */
+ 
++#if (defined(__unix__) || defined(unix)) && !defined(USG)
++#include <sys/param.h>
++#endif
++
++#if (defined(BSD) && BSD >= 199306)
++#define BSD_44_PROC
++#endif
+ 
+ #include <stdlib.h>
+ #include <stdio.h>
+@@ -103,20 +110,32 @@
+ 	exit(1);
+     }
+     for (i = 0; i < pids; i++) {
++#ifdef BSD_44_PROC
++	sprintf(path,"%s/%d/status",PROC_BASE,pid_table[i]);
++#else
+ 	sprintf(path,"%s/%d/stat",PROC_BASE,pid_table[i]);
++#endif
+ 	if (!(file = fopen(path,"r"))) continue;
+ 	empty = 0;
++#ifdef BSD_44_PROC
++	okay = fscanf(file,"%s",comm) == 1;
++#else
+ 	okay = fscanf(file,"%*d (%[^)]",comm) == 1;
++#endif
+ 	(void) fclose(file);
+ 	if (!okay) continue;
+ 	got_long = 0;
+ 	command = NULL; /* make gcc happy */
+ 	length = strlen(comm);
+ 	if (length == COMM_LEN-1) {
++#ifdef BSD_44_PROC
++	    okay = 0;
++#else
+ 	    sprintf(path,"%s/%d/cmdline",PROC_BASE,pid_table[i]);
+ 	    if (!(file = fopen(path,"r"))) continue;
+ 	    okay = fscanf(file,"%s",command_buf) == 1;
+ 	    (void) fclose(file);
++#endif
+ 	    if (exact && !okay) {
+ 		if (verbose)
+ 		    fprintf(stderr,"skipping partial match %s(%d)\n",comm,
+@@ -139,7 +158,11 @@
+ 		      strncmp(namelist[j],comm,COMM_LEN-1)) continue;
+ 	    }
+ 	    else {
++#ifdef BSD_44_PROC
++		sprintf(path,"%s/%d/file",PROC_BASE,pid_table[i]);
++#else		
+ 		sprintf(path,"%s/%d/exe",PROC_BASE,pid_table[i]);
++#endif
+ 		if (stat(path,&st) < 0) continue;
+ 		if (sts[j].st_dev != st.st_dev || sts[j].st_ino != st.st_ino)
+ 		    continue;
