@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2002/05/03 14:52:04 wiz Exp $
+# $NetBSD: Makefile.common,v 1.8 2002/05/03 18:00:50 fredb Exp $
 
 MPLAYER_DIST_VERSION=	0.90pre2
 MPLAYER_PKG_VERSION=	${MPLAYER_DIST_VERSION:S/pre/rc/}
@@ -37,3 +37,16 @@ CONFIGURE_ARGS+=	--disable-mpdvdkit
 # but that directory may be mounted as noexec; work this around by setting
 # TMPDIR to ${WRKDIR}
 CONFIGURE_ENV+=		TMPDIR=${WRKDIR}
+
+.include "../../mk/bsd.prefs.mk"
+
+# The package needs GNU "as" 2.11 or newer to build.
+#
+AS_VERSION!=	${AS} --version | ${AWK} 'NR==1 {print $$3}'
+.if ${AS_VERSION:M2.1[1-9]*} == ""
+CONFIGURE_ARGS+=	--as="${LOCALBASE}/${MACHINE_GNU_PLATFORM}/bin/as"
+CONFIGURE_ENV+=	GCC_EXEC_PREFIX="${LOCALBASE}/${MACHINE_GNU_PLATFORM}/bin/"
+MAKE_ENV+=	GCC_EXEC_PREFIX="${LOCALBASE}/${MACHINE_GNU_PLATFORM}/bin/"
+.include "../../devel/binutils/buildlink.mk"
+.include "../../lang/gcc/Makefile.gcc"
+.endif

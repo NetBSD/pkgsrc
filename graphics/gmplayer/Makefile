@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2002/04/30 15:09:57 veego Exp $
+# $NetBSD: Makefile,v 1.5 2002/05/03 18:00:50 fredb Exp $
 
 .include "../../graphics/mplayer/Makefile.common"
 
@@ -55,10 +55,8 @@ do-install:
 
 .include "../../audio/lame/buildlink.mk"
 .include "../../devel/SDL/buildlink.mk"
-.include "../../devel/binutils/buildlink.mk"
 .include "../../graphics/jpeg/buildlink.mk"
 .include "../../graphics/png/buildlink.mk"
-.include "../../lang/gcc/Makefile.gcc"
 .include "../../misc/libdvdread/buildlink.mk"
 .include "../../x11/gtk/buildlink.mk"
 .include "../../mk/ossaudio.buildlink.mk"
