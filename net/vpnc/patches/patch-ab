@@ -1,9 +1,9 @@
-$NetBSD: patch-ab,v 1.1.1.1 2004/09/20 22:58:52 wiz Exp $
+$NetBSD: patch-ab,v 1.2 2004/11/26 23:03:54 hubertf Exp $
 
---- Makefile.orig	2004-05-03 00:10:09.000000000 +0200
+--- Makefile.orig	2004-11-13 00:23:36.000000000 +0100
 +++ Makefile
-@@ -16,7 +16,7 @@
- # Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+@@ -22,7 +22,7 @@ SBINDIR=$(PREFIX)/sbin
+ MANDIR=$(PREFIX)/share/man
  
  CC=gcc
 -CFLAGS=-W -Wall -O -g '-DVERSION="$(shell cat VERSION)"' $(shell libgcrypt-config --cflags)
