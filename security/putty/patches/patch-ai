@@ -1,0 +1,13 @@
+$NetBSD: patch-ai,v 1.1 2005/04/06 21:51:13 xtraeme Exp $
+
+--- ../charset/xenc.c.orig	2005-04-06 23:29:15.000000000 +0200
++++ ../charset/xenc.c	2005-04-06 23:29:31.000000000 +0200
+@@ -80,7 +80,7 @@
+ 	p = name;
+ 	q = xencs[i].name;
+ 	while (*p || *q) {
+-	    if (tolower(*p) != tolower(*q))
++	    if (tolower((int)*p) != tolower((int)*q))
+ 		break;
+ 	    p++; q++;
+ 	}
