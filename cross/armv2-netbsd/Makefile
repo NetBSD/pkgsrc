@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/03/27 03:19:48 hubertf Exp $
+# $NetBSD: Makefile,v 1.6 2001/08/27 14:35:06 tron Exp $
 #
 
 DISTVERSION=		1.3.0.0
@@ -18,7 +18,7 @@ EGCS_FAKE_RUNTIME=	yes
 
 TARGET_ARCH=		armv2-netbsd
 
-BUILD_DEPENDS+=		autoconf-2.13:../../devel/autoconf
+BUILD_DEPENDS+=		autoconf>=2.13:../../devel/autoconf
 
 post-patch: egcs-autoconf
 

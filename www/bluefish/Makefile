@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2001/04/02 20:06:14 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.17 2001/08/27 14:35:16 tron Exp $
 
 DISTNAME=	bluefish-0.6
 CATEGORIES=	www
@@ -15,8 +14,8 @@ MAINTAINER=	wulf@ping.net.au
 HOMEPAGE=	http://bluefish.openoffice.nl/
 COMMENT=	GTK HTML editor for the experienced web designer
 
-BUILD_DEPENDS+=	autoconf-2.13:../../devel/autoconf
-BUILD_USES_MSGFMT=	yes
+BUILD_DEPENDS+=	autoconf>=2.13:../../devel/autoconf
+BUILD_USES_MSGFMT=	YES
 DEPENDS+=	gtk+-1.2.*:../../x11/gtk
 DEPENDS+=	imlib-*:../../graphics/imlib
 DEPENDS+=	weblint-*:../../www/weblint
