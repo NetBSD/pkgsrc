@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.install.mk,v 1.39 2002/11/17 08:58:50 salo Exp $
+# $NetBSD: bsd.pkg.install.mk,v 1.40 2002/12/02 17:07:27 jschauma Exp $
 #
 # This Makefile fragment is included by package Makefiles to use the common
 # INSTALL/DEINSTALL scripts.  To use this Makefile fragment, simply:
@@ -330,8 +330,8 @@ install-rcd-scripts: install-rcd-${_script_}
 install-rcd-${_script_}: ${WRKDIR}/${_script_}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if [ ! -d ${RCD_SCRIPTS_EXAMPLEDIR} ]; then			\
-		${INSTALL} -d -o ${SHAREOWN} -g ${SHAREGRP} -m 0755	\
-			${RCD_SCRIPTS_EXAMPLEDIR};			\
+		${INSTALL} -d -o ${SHAREOWN} -g ${SHAREGRP} \
+			-m 0755	${RCD_SCRIPTS_EXAMPLEDIR};		\
 	fi
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if [ -f ${WRKDIR}/${_script_} ]; then				\
