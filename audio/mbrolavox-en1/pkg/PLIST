@@ -1,4 +1,15 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/04/04 19:37:09 proff Exp $
-share/festival/lib/voices/english/rab_mbrola/festvox/rab_mbrola.scm
-@dirrm share/festival/lib/voices/english/rab_mbrola/festvox
-@dirrm share/festival/lib/voices/english/rab_mbrola
+@comment $NetBSD: PLIST,v 1.2 1999/10/11 14:36:03 proff Exp $
+share/mbrola/voices/en1/en1
+share/mbrola/voices/en1/en1mrpa
+share/mbrola/voices/en1/en1.txt
+share/mbrola/voices/en1/TEST
+share/mbrola/voices/en1/TEST/euler.pho
+share/mbrola/voices/en1/TEST/eulerfr.pho
+share/mbrola/voices/en1/TEST/mbrola.pho
+share/mbrola/voices/en1/TEST/mbrolamr.pho
+share/mbrola/voices/en1/TEST/tobe.pho
+share/mbrola/voices/en1/TEST/mbroli.ini
+@dirrm share/mbrola/voices/en1/TEST
+@dirrm share/mbrola/voices/en1
+@dirrm share/mbrola/voices
+@dirrm share/mbrola
