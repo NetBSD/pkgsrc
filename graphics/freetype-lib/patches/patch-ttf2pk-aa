@@ -1,4 +1,4 @@
-$NetBSD: patch-ttf2pk-aa,v 1.1.1.1 2004/10/09 14:15:22 hubertf Exp $
+$NetBSD: patch-ttf2pk-aa,v 1.1 2004/11/06 14:22:22 hubertf Exp $
 
 --- contrib/ttf2pk/Makefile.in.orig	Thu Sep  3 07:12:57 1998
 +++ contrib/ttf2pk/Makefile.in
