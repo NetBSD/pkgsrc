@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.19 2004/01/27 00:53:11 heinz Exp $
+# $NetBSD: Makefile,v 1.20 2004/07/30 09:03:11 wiz Exp $
 
 DISTNAME=	locales-2.1-1mdk
 PKGNAME=	linux-locale-2.1.1
 CATEGORIES=	emulators
-MASTER_SITES=	http://www.linuxi18n.org/locales/
+MASTER_SITES=	# http://www.linuxi18n.org/locales/
 EXTRACT_SUFX=	.noarch.rpm
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 
