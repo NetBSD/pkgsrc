@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2001/07/10 18:40:37 tron Exp $
+# $NetBSD: Makefile,v 1.5 2001/10/03 08:20:37 tron Exp $
 
-DISTNAME=	phpMyAdmin-2.2.0rc1
-PKGNAME=	phpmyadmin-2.1.99.1nb1
+DISTNAME=	phpMyAdmin-2.2.0-php
+PKGNAME=	phpmyadmin-2.2.0
 CATEGORIES=	databases www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=phpmyadmin/}
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://phpwizard.net/projects/phpMyAdmin/
@@ -13,8 +14,10 @@ DEPENDS+=	php-mysql>=4.0.5:../../www/php4-mysql
 DEPENDS+=	php-pcre>=4.0.5:../../www/php4-pcre
 
 NO_BUILD=	YES
+WRKSRC=		${WRKDIR}/${DISTNAME:S/-php//}
 
-DOC_FILES=	CREDITS DEVELOPERS Documentation.html INSTALL LICENSE README \
+DOC_FILES=	ANNOUNCE.txt CREDITS ChangeLog Documentation.html \
+		Documentation.txt INSTALL LICENSE README RELEASE-DATE-2.2.0 \
 		TODO
 
 do-install:
@@ -22,9 +25,9 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/phpmyadmin/images
 	${INSTALL_DATA_DIR} ${PREFIX}/share/phpmyadmin/lang
 	${INSTALL_SCRIPT} ${WRKSRC}/*.js ${PREFIX}/share/phpmyadmin
-	${INSTALL_SCRIPT} ${WRKSRC}/*.php3 ${PREFIX}/share/phpmyadmin
+	${INSTALL_SCRIPT} ${WRKSRC}/*.php ${PREFIX}/share/phpmyadmin
 	${INSTALL_DATA} ${WRKSRC}/images/*.* ${PREFIX}/share/phpmyadmin/images
-	${INSTALL_SCRIPT} ${WRKSRC}/lang/*.php3 ${PREFIX}/share/phpmyadmin/lang
+	${INSTALL_SCRIPT} ${WRKSRC}/lang/*.php ${PREFIX}/share/phpmyadmin/lang
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/phpmyadmin
 	for FILE in ${DOC_FILES}; do \
 	  ${INSTALL_DATA} ${WRKSRC}/$$FILE ${PREFIX}/share/doc/phpmyadmin; \
