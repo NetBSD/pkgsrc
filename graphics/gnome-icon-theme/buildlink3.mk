@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2004/05/06 14:00:27 jmmv Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2004/09/21 16:48:38 jmmv Exp $
 
 BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH}+
 GNOME_ICON_THEME_BUILDLINK3_MK:=	${GNOME_ICON_THEME_BUILDLINK3_MK}+
@@ -11,7 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ngnome-icon-theme}
 BUILDLINK_PACKAGES+=	gnome-icon-theme
 
 .if !empty(GNOME_ICON_THEME_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.gnome-icon-theme+=	gnome-icon-theme>=1.2.0
+BUILDLINK_DEPENDS.gnome-icon-theme+=	gnome-icon-theme>=2.8.0
 BUILDLINK_PKGSRCDIR.gnome-icon-theme?=	../../graphics/gnome-icon-theme
 
 .  include "../../mk/bsd.prefs.mk"
