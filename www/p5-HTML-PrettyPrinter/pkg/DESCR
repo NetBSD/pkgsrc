@@ -1,0 +1,8 @@
+A module for generating nice looking HTML files from HTML trees. 
+It is especially usefull if the produced HTML file shall be read 
+or edited manually afterwards. Various parameters let you adapt 
+the output to different styles and requirements.
+ 
+If you don't care how the HTML source looks like as long as it is 
+valid and readable by browsers, you should use the as_HTML() method 
+of HTML::Element instead of the pretty printer.
