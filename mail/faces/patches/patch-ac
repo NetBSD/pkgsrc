@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.7 2000/07/08 12:47:05 tron Exp $
+$NetBSD: patch-ac,v 1.8 2000/09/04 11:29:36 tron Exp $
 
 --- compface/Makefile.orig	Thu Oct 24 03:28:06 1991
-+++ compface/Makefile	Sat Jul  8 14:28:58 2000
-@@ -19,62 +19,64 @@
++++ compface/Makefile	Mon Sep  4 10:57:52 2000
+@@ -19,62 +19,66 @@
  #
  #SYSV           = -DSYSV32
  #--------------------------------------------------------------------------
@@ -50,7 +50,8 @@ $NetBSD: patch-ac,v 1.7 2000/07/08 12:47:05 tron Exp $
 -$(NAME) :	cmain.o compface.o $(LIBNAME)
 -		$(CC) $(CFLAGS) -o $(NAME) cmain.o compface.o $(LIBNAME)
 +$(NAME) :	cmain.o compface.o
-+		$(CC) $(CFLAGS) -o $(NAME) cmain.o compface.o -L./ -lcompface
++		$(CC) $(CFLAGS) -o $(NAME) cmain.o compface.o -L./ -Wl,-R./ \
++			-L@x11prefix@/lib -Wl,-R@x11prefix@/lib -lcompface
  
  $(UNNAME) :	uncmain.o $(LIBNAME)
 -		$(CC) $(CFLAGS) -o $(UNNAME) uncmain.o $(LIBNAME)
@@ -58,7 +59,8 @@ $NetBSD: patch-ac,v 1.7 2000/07/08 12:47:05 tron Exp $
 -$(LIBNAME) :	$(OBJECTS)
 -		ar rc $(LIBNAME) $(OBJECTS)
 -		-ranlib $(LIBNAME)
-+		$(CC) $(CFLAGS) -o $(UNNAME) uncmain.o -L./ -lcompface
++		$(CC) $(CFLAGS) -o $(UNNAME) uncmain.o -L./ -Wl,-R./ \
++			-L@x11prefix@/lib -Wl,-R@x11prefix@/lib -lcompface
  
  lint :
  		lint -abchx $(SOURCES)
@@ -93,7 +95,7 @@ $NetBSD: patch-ac,v 1.7 2000/07/08 12:47:05 tron Exp $
  
  shar :
  		shar.script $(OTHERS) $(HDRS) $(SOURCES) > $(NAME).sh
-@@ -88,3 +90,5 @@
+@@ -88,3 +92,5 @@
  gen.o:		gen.c compface.h data.h
  uncmain.o:	uncmain.c compface.h data.h
  uncompface.o:	uncompface.c compface.h data.h
