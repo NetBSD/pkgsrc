@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.5 2001/01/07 04:05:03 thorpej Exp $
+$NetBSD: patch-aa,v 1.6 2001/06/29 14:53:35 zuntum Exp $
 
---- Makefile.orig	Mon Oct 27 15:07:06 1997
-+++ Makefile	Sat Jan  6 19:59:45 2001
+--- Makefile.orig	Tue Oct 28 00:07:06 1997
++++ Makefile
 @@ -13,9 +13,9 @@
  # OS-specific stuff: uncomment all of the lines for your OS of choice
  
@@ -26,8 +26,8 @@ $NetBSD: patch-aa,v 1.5 2001/01/07 04:05:03 thorpej Exp $
  #DEFS += -DFREEBSD
  
 +# NetBSD
-+CFLAGS = -O2 -I${X11BASE}/include -I${PREFIX}/include
-+LDFLAGS = -L${PREFIX}/lib -L${X11BASE}/lib -Wl,-R${PREFIX}/lib -Wl,-R${X11BASE}/lib
++CFLAGS+= -I${X11BASE}/include
++LDFLAGS+= -L${X11BASE}/lib -Wl,-R${LOCALBASE}/lib -Wl,-R${X11BASE}/lib
 +DEFS += -DNETBSD
 +# XXX
 +.if (${MACHINE_ARCH} == "alpha")
@@ -39,15 +39,14 @@ $NetBSD: patch-aa,v 1.5 2001/01/07 04:05:03 thorpej Exp $
  # BSDI 3.0
  #CFLAGS = -O2 -I/usr/X11R6/include -I/usr/local/include
  #LDFLAGS = -L/usr/local/lib -L/usr/X11R6/lib
-@@ -44,15 +55,15 @@
+@@ -44,15 +55,14 @@
  # JPEG stuff: do you want JPEG support?  Where is your JPEG library?
  
  LDLIBS += -ljpeg
 -#LDFLAGS +=  # -L/usr/local/lib
-+LDFLAGS +=  -L${LOCALBASE}/lib -Wl,-R${LOCALBASE}/lib
++LDFLAGS +=  -Wl,-R${LOCALBASE}/lib
  DEFS += -DJPEG 
 -#CFLAGS += -I/usr/local/include
-+CFLAGS += -I${LOCALBASE}/include
  ######################################################################
  
  ######################################################################
@@ -58,7 +57,7 @@ $NetBSD: patch-aa,v 1.5 2001/01/07 04:05:03 thorpej Exp $
  LIBS_X = -lX11 -lXext $(REMOTE_LIBS)
  ######################################################################
  
-@@ -67,27 +78,27 @@
+@@ -67,27 +77,27 @@
  #   If you're not compiling xcqcam, this section is irrelevant
  
  # xview remote
@@ -98,7 +97,7 @@ $NetBSD: patch-aa,v 1.5 2001/01/07 04:05:03 thorpej Exp $
  ######################################################################
  
  ######################################################################
-@@ -132,13 +143,14 @@
+@@ -132,13 +142,14 @@
  
  bininstall: all
  	@echo -n Installing binaries...
