@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/01/24 18:20:06 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2002/09/21 07:57:29 jlam Exp $
 #
 
 DISTNAME=		xtel-3.3.0
@@ -9,10 +9,10 @@ MAINTAINER=		bouyer@netbsd.org
 HOMEPAGE=		http://pficheux.free.fr/xtel/
 COMMENT=		Minitel(r) emulator
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 USE_IMAKE=		YES
 
-.include "../../graphics/jpeg/buildlink.mk"
-.include "../../graphics/xpm/buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
+.include "../../graphics/jpeg/buildlink2.mk"
+.include "../../graphics/xpm/buildlink2.mk"
+
 .include "../../mk/bsd.pkg.mk"
