@@ -1,17 +1,17 @@
-@comment $NetBSD: PLIST,v 1.2 2002/02/18 15:14:01 seb Exp $
-bin/gmail-files
-bin/gmailshar
-bin/gremsync
-bin/gshar
-bin/gunshar
+@comment $NetBSD: PLIST,v 1.3 2002/12/22 01:42:16 wiz Exp $
+bin/${GNU_PROGRAM_PREFIX}mail-files
+bin/${GNU_PROGRAM_PREFIX}mailshar
+bin/${GNU_PROGRAM_PREFIX}remsync
+bin/${GNU_PROGRAM_PREFIX}shar
+bin/${GNU_PROGRAM_PREFIX}unshar
 @unexec ${INSTALL_INFO} --delete %D/info/sharutils.info %D/info/dir
 @unexec ${INSTALL_INFO} --delete %D/info/remsync.info %D/info/dir
 info/sharutils.info
 info/remsync.info
 @exec ${INSTALL_INFO} %D/info/sharutils.info %D/info/dir
 @exec ${INSTALL_INFO} %D/info/remsync.info %D/info/dir
-man/man1/gshar.1
-man/man1/gunshar.1
+man/man1/${GNU_PROGRAM_PREFIX}shar.1
+man/man1/${GNU_PROGRAM_PREFIX}unshar.1
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/sharutils.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/sharutils.mo
 ${PKGLOCALEDIR}/locale/ja_JP.EUC/LC_MESSAGES/sharutils.mo
