@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2004/02/09 18:47:38 jmmv Exp $
+# $NetBSD: Makefile,v 1.30 2004/02/11 07:11:28 xtraeme Exp $
 #
 
 DISTNAME=		gnome-session-2.4.2
@@ -16,7 +16,7 @@ DEPENDS=		gnome2-dirs>=1.0:../../misc/gnome2-dirs
 CONFLICTS+=		gnome-core<1.4.2nb4
 
 GNU_CONFIGURE=		yes
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 USE_GNU_TOOLS+=		make
 USE_X11=		yes
@@ -27,13 +27,13 @@ LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 GCONF2_SCHEMAS= 	gnome-session.schemas
 
-.include "../../audio/esound/buildlink2.mk"
-.include "../../devel/gettext-lib/buildlink2.mk"
+.include "../../audio/esound/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/GConf2/schemas.mk"
-.include "../../devel/GConf2-ui/buildlink2.mk"
-.include "../../devel/libgnome/buildlink2.mk"
-.include "../../devel/libgnomeui/buildlink2.mk"
-.include "../../textproc/intltool/buildlink2.mk"
-.include "../../textproc/scrollkeeper/buildlink2.mk"
-.include "../../x11/gnome2-control-center/buildlink2.mk"
+.include "../../devel/GConf2-ui/buildlink3.mk"
+.include "../../devel/libgnome/buildlink3.mk"
+.include "../../devel/libgnomeui/buildlink3.mk"
+.include "../../textproc/intltool/buildlink3.mk"
+.include "../../textproc/scrollkeeper/buildlink3.mk"
+.include "../../x11/gnome2-control-center/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

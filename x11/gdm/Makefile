@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2004/02/09 18:47:38 jmmv Exp $
+# $NetBSD: Makefile,v 1.50 2004/02/11 07:11:28 xtraeme Exp $
 #
 
 DISTNAME=	gdm-2.4.4.7
@@ -12,10 +12,10 @@ MAINTAINER=	mjl@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Gnome Display Manager - a re-implementation of the xdm program
 
-BUILDLINK_DEPENDS.libart2=libart2>=2.3.11
+BUILDLINK_DEPENDS.libart2+=	libart2>=2.3.11
 BUILD_USES_MSGFMT=	YES
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
@@ -91,17 +91,17 @@ post-install:
 	${INSTALL_DATA} ${DISTDIR}/Daemon.README ${PREFIX}/share/doc/gdm
 	${INSTALL_DATA} ${DISTDIR}/Daemon.png ${PREFIX}/share/pixmaps
 
-.include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../devel/pkgconfig/buildlink2.mk"
-.include "../../devel/libglade2/buildlink2.mk"
-.include "../../devel/libgnome/buildlink2.mk"
-.include "../../devel/libgnomeui/buildlink2.mk"
-.include "../../graphics/libart2/buildlink2.mk"
-.include "../../graphics/libgnomecanvas/buildlink2.mk"
-.include "../../graphics/librsvg2/buildlink2.mk"
-.include "../../textproc/intltool/buildlink2.mk"
-.include "../../textproc/libxml2/buildlink2.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/libgnome/buildlink3.mk"
+.include "../../devel/libgnomeui/buildlink3.mk"
+.include "../../graphics/libart2/buildlink3.mk"
+.include "../../graphics/libgnomecanvas/buildlink3.mk"
+.include "../../graphics/librsvg2/buildlink3.mk"
+.include "../../textproc/intltool/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
-.include "../../x11/gtk2/buildlink2.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

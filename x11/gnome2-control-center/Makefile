@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2004/02/09 18:47:39 jmmv Exp $
+# $NetBSD: Makefile,v 1.26 2004/02/11 07:11:28 xtraeme Exp $
 #
 
 DISTNAME=	control-center-2.4.0
@@ -16,7 +16,7 @@ BUILD_USES_MSGFMT=	yes
 DEPENDS=		gnome2-dirs>=1.0:../../misc/gnome2-dirs
 
 GNU_CONFIGURE=		yes
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_PKGINSTALL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_GNU_TOOLS+=		make
@@ -48,17 +48,17 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/vfs-methods/fontilus/font-method.conf \
 		${EGDIR}
 
-.include "../../audio/esound/buildlink2.mk"
-.include "../../devel/gettext-lib/buildlink2.mk"
+.include "../../audio/esound/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/GConf2/schemas.mk"
-.include "../../devel/libbonobo/buildlink2.mk"
-.include "../../devel/libglade2/buildlink2.mk"
-.include "../../devel/libbonoboui/buildlink2.mk"
-.include "../../devel/libgnomeui/buildlink2.mk"
-.include "../../sysutils/gnome-vfs2/buildlink2.mk"
-.include "../../sysutils/nautilus/buildlink2.mk"
-.include "../../wm/metacity/buildlink2.mk"
-.include "../../x11/gtk2/buildlink2.mk"
-.include "../../x11/gnome-desktop/buildlink2.mk"
-.include "../../x11/startup-notification/buildlink2.mk"
+.include "../../devel/libbonobo/buildlink3.mk"
+.include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/libbonoboui/buildlink3.mk"
+.include "../../devel/libgnomeui/buildlink3.mk"
+.include "../../sysutils/gnome-vfs2/buildlink3.mk"
+.include "../../sysutils/nautilus/buildlink3.mk"
+.include "../../wm/metacity/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
+.include "../../x11/gnome-desktop/buildlink3.mk"
+.include "../../x11/startup-notification/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
