@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.7 2002/03/04 19:56:53 magick Exp $
+$NetBSD: patch-aa,v 1.8 2002/08/31 09:25:05 magick Exp $
 
---- Makefile.orig	Mon Mar  4 20:44:19 2002
+--- Makefile.orig	Sat Aug 31 11:13:30 2002
 +++ Makefile
-@@ -33,36 +33,36 @@
+@@ -33,40 +33,42 @@
  else
  
  ROOT    =
@@ -16,10 +16,14 @@ $NetBSD: patch-aa,v 1.7 2002/03/04 19:56:53 magick Exp $
 -PERL    = /usr/bin/perl
 +PERL    = ${LOCALBASE}/perl
  
--LDLIBS  = -ltk8.3 -ltcl8.3 -L/usr/X11R6/lib -lX11 -lXmu -lm -ldl
+ # select Tcl/Tk version
+ TCL_VER = 8.3
+ 
+-LDLIBS  = -ltk$(TCL_VER) -ltcl$(TCL_VER) -L/usr/X11R6/lib -lX11 -lXmu -lm -ldl
 +LDLIBS  = -ltk83 -ltcl83 -lX11 -lXmu -lm
+ 
  # use static libraries for debugging only
- #LDLIBS  = dbglib/libtk8.3.a dbglib/libtcl8.3.a -lX11 -lm -ldl -L/usr/X11R6/lib
+ #LDLIBS += -Ldbglib -static
  
 -INCS   += -I. -I/usr/X11R6/include
 +INCS   += -I. -I${X11BASE}/include
@@ -27,10 +31,11 @@ $NetBSD: patch-aa,v 1.7 2002/03/04 19:56:53 magick Exp $
  #INCS   += -I/usr/local/tcl/tcl8.0/generic -I/usr/local/tcl/tk8.0/generic
  
  # path to Tcl/Tk script library (Tk is usually in X11/lib/tk#.#)
--DEFS   += -DTK_LIBRARY_PATH=\"/usr/lib/tk8.3\"
--DEFS   += -DTCL_LIBRARY_PATH=\"/usr/lib/tcl8.3\"
-+DEFS   += -DTK_LIBRARY_PATH=\"$(LOCALBASE)/lib/tk8.3\" 
-+DEFS   += -DTCL_LIBRARY_PATH=\"$(LOCALBASE)/lib/tcl8.3\" 
+-DEFS   += -DTK_LIBRARY_PATH=\"/usr/lib/tk$(TCL_VER)\"
+-DEFS   += -DTCL_LIBRARY_PATH=\"/usr/lib/tcl$(TCL_VER)\"
++DEFS   += -DTK_LIBRARY_PATH=\"$(LOCALBASE)/lib/tk8.3\"  
++DEFS   += -DTCL_LIBRARY_PATH=\"$(LOCALBASE)/lib/tcl8.3\"  
++
  
  # enable use of multi-threading
 -DEFS   += -DUSE_THREADS
@@ -44,12 +49,13 @@ $NetBSD: patch-aa,v 1.7 2002/03/04 19:56:53 magick Exp $
  # path to the directory where the provider database files are kept
 -DB_DIR  = /usr/tmp/nxtvdb
 -DEFS   += -DEPG_DB_DIR=\"$(DB_DIR)\"
-+DB_DIR  = _PATH_TMP\"nxtvdb\"
-+DEFS   += -DEPG_DB_DIR=$(DB_DIR)
++DB_DIR  = _PATH_TMP\"nxtvdb\" 
++DEFS   += -DEPG_DB_DIR=$(DB_DIR) 
++
  INST_DB_DIR = $(ROOT)$(DB_DIR)
  
  WARN    = -Wall -Wnested-externs -Wstrict-prototypes -Wmissing-prototypes
-@@ -95,11 +95,8 @@
+@@ -101,11 +103,9 @@
  install: nxtvepg nxtvepg.1
  	test -d $(bindir) || mkdirhier $(bindir)
  	test -d $(mandir) || mkdirhier $(mandir)
@@ -58,6 +64,16 @@ $NetBSD: patch-aa,v 1.7 2002/03/04 19:56:53 magick Exp $
  	install -c -m 0755 nxtvepg     $(bindir)
  	install -c -m 0644 nxtvepg.1   $(mandir)
 -	rm -f $(mandir)/nxtvepg.1x
++
  
  ##%.o: %.c
  ##	$(CC) $(CFLAGS) -c *.c -o *.o
+@@ -157,7 +157,7 @@
+ 	tar cf ../pc2.tar www ATTIC dsdrv?* tk8* tcl8* && bzip2 -f -9 ../pc2.tar
+ 	cd .. && tar cf /e/pc.tar pc -X pc/tar-ex-win
+ 
+-include Makefile.dep
++#include Makefile.dep
+ 
+ # end UNIX specific part
+ endif
