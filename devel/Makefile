@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.586 2004/12/25 03:30:58 jlam Exp $
+# $NetBSD: Makefile,v 1.587 2004/12/25 03:56:47 jlam Exp $
 #
 
 COMMENT=	Development utilities
@@ -355,6 +355,7 @@ SUBDIR+=	p5-FreezeThaw
 SUBDIR+=	p5-Getopt-Simple
 SUBDIR+=	p5-Graph
 SUBDIR+=	p5-Heap
+SUBDIR+=	p5-IO-All
 SUBDIR+=	p5-IO-Digest
 SUBDIR+=	p5-IO-LockedFile
 SUBDIR+=	p5-IO-Multiplex
