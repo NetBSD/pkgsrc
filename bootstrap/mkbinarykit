@@ -1,6 +1,6 @@
-#! /bin/sh
+#!/bin/sh
 
-# $NetBSD: mkbinarykit,v 1.4 2004/04/04 01:59:52 grant Exp $
+# $NetBSD: mkbinarykit,v 1.5 2004/04/04 02:01:28 grant Exp $
 #
 # Make a binary bootstrap kit and place it in targetdir (or current
 # working directory if not specified). The mk.conf.example file is
