@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.89 2004/03/30 20:24:35 minskim Exp $
+# $NetBSD: Makefile,v 1.90 2004/04/05 22:07:27 jmmv Exp $
 #
 
 DISTNAME=	gimp-${GIMP_VER}
@@ -25,7 +25,7 @@ USE_PKGLOCALEDIR=	yes
 USE_X11=		yes
 USE_GNU_TOOLS+=		make
 
-PKG_SYSCONFSUBDIR=	gimp-2.0
+PKG_SYSCONFSUBDIR=	gimp/2.0
 
 PKGCONFIG_OVERRIDE=	gimp-2.0.pc.in
 PKGCONFIG_OVERRIDE+=	gimpthumb-2.0.pc.in
@@ -39,6 +39,7 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-perl
 CONFIGURE_ARGS+=	--disable-print
 CONFIGURE_ARGS+=	--disable-python
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html/${PKGNAME}
 
 EGDIR=			${PREFIX}/share/examples/gimp-2.0

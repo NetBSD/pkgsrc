@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2004/04/05 08:02:56 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2004/04/05 22:07:27 jmmv Exp $
 bin/gimp
 bin/gimp-2.0
 bin/gimp-remote
@@ -416,12 +416,6 @@ share/doc/html/${PKGNAME}/libgimp/libgimp.html
 share/doc/html/${PKGNAME}/libgimp/libgimpui.html
 share/doc/html/${PKGNAME}/libgimp/right.png
 share/doc/html/${PKGNAME}/libgimp/up.png
-share/examples/gimp-2.0/gimprc
-share/examples/gimp-2.0/gtkrc
-share/examples/gimp-2.0/ps-menurc
-share/examples/gimp-2.0/sessionrc
-share/examples/gimp-2.0/templaterc
-share/examples/gimp-2.0/unitrc
 share/doc/html/${PKGNAME}/libgimpbase/home.png
 share/doc/html/${PKGNAME}/libgimpbase/index.html
 share/doc/html/${PKGNAME}/libgimpbase/index.sgml
@@ -792,6 +786,12 @@ share/doc/html/${PKGNAME}/libgimpwidgets/stock-wilber-48.png
 share/doc/html/${PKGNAME}/libgimpwidgets/stock-wilber-64.png
 share/doc/html/${PKGNAME}/libgimpwidgets/stock-wilber-eek-64.png
 share/doc/html/${PKGNAME}/libgimpwidgets/up.png
+share/examples/gimp-2.0/gimprc
+share/examples/gimp-2.0/gtkrc
+share/examples/gimp-2.0/ps-menurc
+share/examples/gimp-2.0/sessionrc
+share/examples/gimp-2.0/templaterc
+share/examples/gimp-2.0/unitrc
 share/gimp/2.0/brushes/10x10square.gbr
 share/gimp/2.0/brushes/10x10squareBlur.gbr
 share/gimp/2.0/brushes/11circle.gbr
@@ -1710,6 +1710,7 @@ ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/gimp20-script-fu.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/gimp20-std-plug-ins.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/gimp20.mo
 share/mime-info/gimp-2.0.keys
+@comment in xdg-dirs: @dirrm share/mime-info
 @dirrm share/gimp/2.0/tips
 @dirrm share/gimp/2.0/themes/Small
 @dirrm share/gimp/2.0/themes/Default/images/preferences
@@ -1744,6 +1745,8 @@ share/mime-info/gimp-2.0.keys
 @dirrm share/doc/html/${PKGNAME}/libgimpbase
 @dirrm share/doc/html/${PKGNAME}/libgimp
 @dirrm share/doc/html/${PKGNAME}
+@comment in xdg-dirs: @dirrm share/applications
+@comment in xdg-dirs: @dirrm share/application-registry
 @dirrm lib/gimp/2.0/plug-ins
 @dirrm lib/gimp/2.0/modules
 @dirrm lib/gimp/2.0/environ
