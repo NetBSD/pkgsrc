@@ -1,3 +1,4 @@
+@comment $NetBSD: PLIST,v 1.5 1998/05/18 10:12:17 agc Exp $
 include/audio/Afuncproto.h
 include/audio/Afuncs.h
 include/audio/Amd.h
