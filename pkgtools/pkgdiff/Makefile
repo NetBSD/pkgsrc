@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2004/01/20 12:23:57 agc Exp $
+# $NetBSD: Makefile,v 1.46 2004/02/10 02:22:50 jlam Exp $
 #
 
 DISTNAME=	pkgdiff-0.113
@@ -12,7 +12,7 @@ COMMENT=	Tools to ease creating and maintaining patches for pkgsrc
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-PERL5_REQD=	5.6.0
+PERL5_REQD+=	5.6.0
 
 EXTRACT_ONLY=	# empty
 NO_CHECKSUM=	yes
