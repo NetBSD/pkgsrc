@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/05/05 19:51:19 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2001/09/09 20:36:48 agc Exp $
 #
 
 DISTNAME=	tkcron-2.12
@@ -13,7 +13,7 @@ DEPENDS+=	tk>=8.3.2:../../x11/tk
 
 USE_X11=	yes
 EXTRACT_CMD=	${GZCAT} ${DOWNLOADED_DISTFILE} > tkcron.tcl
-NO_WRKSUBDIR=	yes
+WRKSRC=		${WRKDIR}
 
 do-build:
 	${SED} -e "\:/usr/local/bin/wish: s;;${LOCALBASE}/bin/wish;g" ${WRKSRC}/tkcron.tcl > ${WRKSRC}/tkcron

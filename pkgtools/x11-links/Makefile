@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/08/29 22:24:49 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2001/09/09 20:36:43 agc Exp $
 
 DISTNAME=	x11-links-0.2
 CATEGORIES=	pkgtools x11
@@ -11,7 +11,7 @@ COMMENT=	shadow tree of links to X11R6 headers and libraries
 
 EXTRACT_ONLY=	# empty
 NO_CHECKSUM=	# defined
-NO_WRKSUBDIR=	# defined
+WRKSRC=		${WRKDIR}
 NO_BUILD=	# defined
 NO_MTREE=	# defined
 USE_X11=	# defined

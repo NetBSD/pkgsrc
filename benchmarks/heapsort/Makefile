@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/04/09 11:45:37 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2001/09/09 20:36:14 agc Exp $
 
 DISTNAME=		heapsort.c
 PKGNAME=		heapsort-1.0
@@ -9,7 +9,7 @@ EXTRACT_SUFX=		#empty
 MAINTAINER=		root@garbled.net
 COMMENT=		benchmark program for variable sized arrays
 
-NO_WRKSUBDIR=		yes
+WRKSRC=			${WRKDIR}
 
 do-extract:
 	${MKDIR} ${WRKSRC}

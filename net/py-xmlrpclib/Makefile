@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/05/19 12:50:56 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2001/09/09 20:36:39 agc Exp $
 #
 
 DISTNAME=	xmlrpc-0.9.8-990621
@@ -11,7 +11,7 @@ MAINTAINER=	drochner@netbsd.org
 HOMEPAGE=	http://www.pythonware.com/products/xmlrpc/
 COMMENT=	implementation of the XML-RPC protocol for Python
 
-NO_WRKSUBDIR=	yes
+WRKSRC=		${WRKDIR}
 NO_BUILD=	yes
 
 USE_PYTHON=	yes

@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2001/08/16 00:01:24 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2001/09/09 20:36:46 agc Exp $
 #
 
 DISTNAME=		dat-4154
 PKGNAME=		uvscan-${DISTNAME}
-NO_WRKSUBDIR=		YES
 CATEGORIES=		security
 MASTER_SITES=		http://download.nai.com/products/datfiles/4.x/nai/ \
 			http://gd.tuwien.ac.at/pc/nai/antivirus/datfiles/4.x/ \
@@ -22,6 +21,7 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_SRC_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 
+WRKSRC=			${WRKDIR}
 DOCDIR=			${PREFIX}/share/doc/uvscan
 DATDIR=			${PREFIX}/share/uvscan
 DATFILES=		clean.dat internet.dat names.dat scan.dat readme.txt

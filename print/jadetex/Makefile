@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/09/02 17:07:02 hubertf Exp $
+# $NetBSD: Makefile,v 1.5 2001/09/09 20:36:45 agc Exp $
 #
 
 DISTNAME=	jadetex-2.20
@@ -12,7 +12,7 @@ COMMENT=	Process tex files produced by the TeX backend of Jade
 
 DEPENDS+=	hugelatex-1.0:../hugelatex
 
-NO_WRKSUBDIR=	yes
+WRKSRC=		${WRKDIR}
 NO_BUILD=	yes
 TEXMF_CNF=	${LOCALBASE}/share/texmf/web2c/texmf.cnf
 

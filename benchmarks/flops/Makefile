@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/04/09 11:45:36 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2001/09/09 20:36:14 agc Exp $
 
 DISTNAME=		flops
 PKGNAME=		flops-2.0
@@ -10,7 +10,7 @@ MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://performance.netlib.org/performance/html/flops.html
 COMMENT=		Floating point benchmark to give your MFLOPS rating
 
-NO_WRKSUBDIR=		yes
+WRKSRC=			${WRKDIR}
 
 do-extract:
 	${MKDIR} ${WRKSRC}
