@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2000/01/02 02:58:20 tsarna Exp $
+# $NetBSD: Makefile,v 1.40 2000/01/10 22:11:06 pooka Exp $
 # FreeBSD Id: Makefile,v 1.82 1997/09/30 07:49:24 asami Exp
 #
 
@@ -48,6 +48,7 @@
 #    SUBDIR += modula-3-lib
 #    SUBDIR += modula-3-socks
     SUBDIR += moscow_ml
+    SUBDIR += mzscheme
     SUBDIR += nawk
 #    SUBDIR += ocaml
     SUBDIR += p2c
