@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2004/12/11 06:53:21 minskim Exp $
+@comment $NetBSD: PLIST,v 1.8 2004/12/12 15:33:27 minskim Exp $
 bin/gconf-editor
 man/man1/gconf-editor.1
 share/applications/gconf-editor.desktop
@@ -94,6 +94,6 @@ share/pixmaps/gconf-editor/folder-open.png
 @dirrm share/gnome/help/gconf-editor/C/figures
 @dirrm share/gnome/help/gconf-editor/C
 @dirrm share/gnome/help/gconf-editor
-@comment in gnome-dirs: @dirrm share/gnome/help
+@comment in gnome2-dirs: @dirrm share/gnome/help
 @comment in GConf2: @dirrm share/gconf/schemas
 @comment in xdg-dirs: @dirrm share/applications
