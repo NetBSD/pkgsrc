@@ -1,0 +1,21 @@
+$NetBSD: patch-aq,v 1.1 2003/10/05 09:27:13 mycroft Exp $
+
+--- src/dxr3/Makefile.in.orig	2003-08-02 13:50:11.000000000 +0000
++++ src/dxr3/Makefile.in	2003-10-05 09:05:25.000000000 +0000
+@@ -235,6 +235,7 @@
+ @HAVE_X11_TRUE@link_x_libs = $(X_LIBS) -lXext
+ @HAVE_LIBFAME_TRUE@link_fame = $(LIBFAME_LIBS)
+ @HAVE_LIBRTE_TRUE@link_rte = -lrte
++@HAVE_XINERAMA_TRUE@link_xinerama = -lXinerama
+ 
+ lib_LTLIBRARIES = $(dxr3_modules) 
+ 
+@@ -257,7 +258,7 @@
+ 	video_out_dxr3.c 
+ 
+ 
+-xineplug_vo_out_dxr3_la_LIBADD = $(link_fame) $(link_rte) $(link_x_libs) $(XINE_LIB)
++xineplug_vo_out_dxr3_la_LIBADD = $(link_fame) $(link_rte) $(link_xinerama) $(link_x_libs) $(XINE_LIB)
+ xineplug_vo_out_dxr3_la_LDFLAGS = -avoid-version -module
+ 
+ noinst_HEADERS = \
