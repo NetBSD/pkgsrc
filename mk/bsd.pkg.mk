@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1253 2003/09/02 12:01:14 seb Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1254 2003/09/02 23:38:56 seb Exp $
 #
 # This file is in the public domain.
 #
@@ -620,7 +620,6 @@ PLIST_SUBST+=	OPSYS=${OPSYS}						\
 		CHGRP=${CHGRP:Q}					\
 		CHMOD=${CHMOD:Q}					\
 		CHOWN=${CHOWN:Q}					\
-		INSTALL_INFO=${INSTALL_INFO:Q}				\
 		MKDIR=${MKDIR:Q}					\
 		RMDIR=${RMDIR:Q}					\
 		RM=${RM:Q}						\
