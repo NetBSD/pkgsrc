@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkgchk.8,v 1.9 2001/12/03 19:03:22 wiz Exp $
+.\"	$NetBSD: pkgchk.8,v 1.10 2001/12/24 14:15:56 abs Exp $
 .\"
 .\" Copyright (c) 2001 by David Brownlee (abs@netbsd.org)
 .\" Absolutely no warranty.
@@ -11,6 +11,7 @@
 .Sh SYNOPSIS
 .Nm
 .Op Fl abchiknrsuvB
+.Op Fl C Ar conf
 .Op Fl D Ar tags
 .Op Fl U Ar tags
 .Sh DESCRIPTION
@@ -29,6 +30,8 @@ will skip dependent packages to reduce unnecessary rebuilding.
 .Bl -tag -width xxxxxxxx
 .It Fl B
 Check the "Build version" (see option -b of pkg_info(1)) of packages.
+.It Fl C Ar conf
+USe the pkgchk.conf file 'conf'.
 .It Fl D Ar tags
 Add the comma separated list of tags to those checked when parsing
 pkgchk.conf. Also includes
