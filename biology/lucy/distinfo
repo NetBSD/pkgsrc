@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/03/26 17:05:03 minskim Exp $
+
+SHA1 (lucy-1.18p.tar.gz) = 93ff9002f7eb69815497633007952ede9ca63e66
+Size (lucy-1.18p.tar.gz) = 1456857 bytes
+SHA1 (patch-aa) = 89acea1ef9398cb8fefed57e4d28a925644fb9f9
+SHA1 (patch-ab) = 638e512be7fc526cbd37950f9156ccab46b9f228
