@@ -1,8 +1,10 @@
 ================================================================
-$NetBSD: MESSAGE,v 1.3 2001/03/14 02:05:21 jwise Exp $
+$NetBSD: MESSAGE,v 1.4 2001/03/28 03:59:39 jwise Exp $
 
-  Cocoon is now installed.  To see cocoon in action, make sure
-  that 
+  Cocoon is now installed.
+
+  To see cocoon in action, install the jakarta-tomcat package,
+  make sure that 
 
   	${PREFIX}/lib/java/cocoon.jar,
   	${PREFIX}/lib/java/fop.jar,
@@ -12,13 +14,14 @@ $NetBSD: MESSAGE,v 1.3 2001/03/14 02:05:21 jwise Exp $
   	${PREFIX}/lib/java/sax-bugfix.jar,
 	${PREFIX}/jakarta/tomcat/lib/servlet.jar
 
-  are in your CLASSPATH and add
+  are in your CLASSPATH, and add
   
   	${PREFIX}/share/examples/java/cocoon
 
-  as a servlet context under Jakarta Tomcat.  For more
-  information, or for instructions on using cocoon with
-  other servlet environments, see
+  as a servlet context in ${PREFIX}/tomcat/conf/server.xml.
+
+  For more information, or for instructions on using cocoon
+  with other servlet environments, see
 
 	${PREFIX}/share/doc/java/cocoon/install.html
 
