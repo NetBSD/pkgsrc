@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1.1.1 2000/11/21 06:02:28 hubertf Exp $
+$NetBSD: patch-ab,v 1.2 2002/05/15 07:28:52 martti Exp $
 
---- configure.orig	Tue Nov 21 06:35:44 2000
-+++ configure
-@@ -880,15 +880,15 @@
+--- configure.orig	Thu Apr 11 00:50:20 2002
++++ configure	Wed May 15 09:22:11 2002
+@@ -877,15 +877,15 @@
  	ICECAST_BINDIR=${prefix}/bin
  	ICECAST_SBINDIR=${prefix}/bin
  	ICECAST_ETCDIR=conf
