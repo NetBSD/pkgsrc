@@ -1,4 +1,4 @@
-$NetBSD: patch-bh,v 1.1 2001/10/15 22:46:02 skrll Exp $
+$NetBSD: patch-bh,v 1.2 2001/10/18 15:43:10 skrll Exp $
 
 --- kdesktop/Makefile.am.orig	Sun Jul 29 05:56:25 2001
 +++ kdesktop/Makefile.am
@@ -10,7 +10,7 @@ $NetBSD: patch-bh,v 1.1 2001/10/15 22:46:02 skrll Exp $
 +libkdesktop_main_la_LIBADD   = $(top_builddir)/libkonq/libkonq.la $(top_builddir)/kcontrol/background/libbgnd.la 
  kdesktop_la_LDFLAGS  = $(all_libraries) -lkdesu -module -avoid-version
 -kdesktop_la_LIBADD   = $(top_builddir)/libkonq/libkonq.la $(top_builddir)/kcontrol/background/libbgnd.la 
-+kdesktop_la_LIBADD   = $(top_builddir)/libkonq/libkonq.la $(top_builddir)/kcontrol/background/libbgnd.la
++kdesktop_la_LIBADD   = libkdesktop_main.la
  kdesktop_LDFLAGS  = $(KDE_RPATH) $(all_libraries)
 -kdesktop_LDADD    = kdesktop.la
 +kdesktop_LDADD    = libkdesktop_main.la

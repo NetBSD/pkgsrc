@@ -1,41 +1,57 @@
-$NetBSD: patch-bi,v 1.1 2001/10/15 22:46:02 skrll Exp $
+$NetBSD: patch-bi,v 1.2 2001/10/18 15:43:11 skrll Exp $
 
 --- kdesktop/Makefile.in.orig	Sat Sep  8 01:36:30 2001
 +++ kdesktop/Makefile.in
-@@ -274,0 +275,2 @@
+@@ -272,10 +272,12 @@
+ x_libraries = @x_libraries@
+ 
+ INCLUDES = -I$(top_srcdir)/kcontrol/background -I$(top_srcdir)/libkonq $(all_includes)
 +libkdesktop_main_la_LDFLAGS = $(all_libraries) -lkdesu
 +libkdesktop_main_la_LIBADD = $(top_builddir)/libkonq/libkonq.la $(top_builddir)/kcontrol/background/libbgnd.la 
-@@ -276 +278 @@
+ kdesktop_la_LDFLAGS = $(all_libraries) -lkdesu -module -avoid-version
 -kdesktop_la_LIBADD = $(top_builddir)/libkonq/libkonq.la $(top_builddir)/kcontrol/background/libbgnd.la 
-+kdesktop_la_LIBADD = $(top_builddir)/libkonq/libkonq.la $(top_builddir)/kcontrol/background/libbgnd.la
-@@ -278 +280 @@
++kdesktop_la_LIBADD = libkdesktop_main.la
+ kdesktop_LDFLAGS = $(KDE_RPATH) $(all_libraries)
 -kdesktop_LDADD = kdesktop.la
 +kdesktop_LDADD = libkdesktop_main.la
-@@ -286 +288 @@
+ 
+ SUBDIRS = . pics patterns programs init kwebdesktop
+ 
+@@ -283,14 +285,16 @@
+ 
+ bin_PROGRAMS = kdesktop kdmdesktop
+ bin_SCRIPTS = kdeeject
 -lib_LTLIBRARIES = kdesktop.la
 +lib_LTLIBRARIES = libkdesktop_main.la kdesktop.la
-@@ -288 +290 @@
+ 
 -#>- kdesktop_la_SOURCES = krootwm.cc xautolock.cc kdiconview.cc desktop.cc main.cc 	lockeng.cc lockdlg.cc KDesktopIface.skel 	bgmanager.cc init.cc KScreensaverIface.skel 	minicli.cpp KBackgroundIface.skel pixmapserver.cc kcustommenu.cc 	startupid.cpp
 +#>- libkdesktop_main_la_SOURCES = krootwm.cc xautolock.cc kdiconview.cc desktop.cc main.cc 	lockeng.cc lockdlg.cc KDesktopIface.skel 	bgmanager.cc init.cc KScreensaverIface.skel 	minicli.cpp KBackgroundIface.skel pixmapserver.cc kcustommenu.cc 	startupid.cpp
-@@ -290 +292 @@
+ #>+ 1
 -kdesktop_la_SOURCES=krootwm.cc xautolock.cc kdiconview.cc desktop.cc main.cc 	lockeng.cc lockdlg.cc  	bgmanager.cc init.cc  	minicli.cpp  pixmapserver.cc kcustommenu.cc 	startupid.cpp KDesktopIface_skel.cc KScreensaverIface_skel.cc KBackgroundIface_skel.cc
 +libkdesktop_main_la_SOURCES=krootwm.cc xautolock.cc kdiconview.cc desktop.cc main.cc 	lockeng.cc lockdlg.cc  	bgmanager.cc init.cc  	minicli.cpp  pixmapserver.cc kcustommenu.cc 	startupid.cpp KDesktopIface_skel.cc KScreensaverIface_skel.cc KBackgroundIface_skel.cc
-@@ -293 +295,3 @@
+ 
+ 
 -kdesktop_SOURCES = dummy.cc
 +kdesktop_la_SOURCES = kdesktop_main.cc
 +
 +kdesktop_SOURCES = kdesktop_main.cc
-@@ -325 +329 @@
+ 
+ include_HEADERS = KDesktopIface.h KScreensaverIface.h KBackgroundIface.h
+ 
+@@ -322,26 +326,30 @@
+ LIBS = @LIBS@
+ X_CFLAGS = @X_CFLAGS@
+ X_LIBS = @X_LIBS@
 -kdesktop_la_DEPENDENCIES =  $(top_builddir)/libkonq/libkonq.la \
 +libkdesktop_main_la_DEPENDENCIES =  $(top_builddir)/libkonq/libkonq.la \
-@@ -327,3 +331,3 @@
+ $(top_builddir)/kcontrol/background/libbgnd.la
 -#>- kdesktop_la_OBJECTS =  krootwm.lo xautolock.lo kdiconview.lo desktop.lo \
 -#>- main.lo lockeng.lo lockdlg.lo bgmanager.lo init.lo minicli.lo \
 -#>- pixmapserver.lo kcustommenu.lo startupid.lo
 +#>- libkdesktop_main_la_OBJECTS =  krootwm.lo xautolock.lo kdiconview.lo \
 +#>- desktop.lo main.lo lockeng.lo lockdlg.lo bgmanager.lo init.lo \
 +#>- minicli.lo pixmapserver.lo kcustommenu.lo startupid.lo
-@@ -331,7 +335,12 @@
+ #>+ 7
 -kdesktop_la_final_OBJECTS = kdesktop_la.all_cpp.lo kdesktop_la.all_cc.lo 
 -kdesktop_la_nofinal_OBJECTS = krootwm.lo xautolock.lo kdiconview.lo desktop.lo \
 -main.lo lockeng.lo lockdlg.lo bgmanager.lo init.lo minicli.lo \
@@ -50,35 +66,65 @@ $NetBSD: patch-bi,v 1.1 2001/10/15 22:46:02 skrll Exp $
 +libkdesktop_main_la_meta_unload.lo 
 +@KDE_USE_FINAL_FALSE@libkdesktop_main_la_OBJECTS = $(libkdesktop_main_la_nofinal_OBJECTS)
 +@KDE_USE_FINAL_TRUE@libkdesktop_main_la_OBJECTS = $(libkdesktop_main_la_final_OBJECTS)
-+kdesktop_la_DEPENDENCIES =  $(top_builddir)/libkonq/libkonq.la \
-+$(top_builddir)/kcontrol/background/libbgnd.la
++kdesktop_la_DEPENDENCIES =  libkdesktop_main.la
 +#>- kdesktop_la_OBJECTS =  kdesktop_main.lo
 +#>+ 1
 +kdesktop_la_OBJECTS = kdesktop_main.lo
-@@ -341 +350 @@
+ bin_PROGRAMS =  kdesktop$(EXEEXT) kdmdesktop$(EXEEXT)
+ PROGRAMS =  $(bin_PROGRAMS)
+ 
 -#>- kdesktop_OBJECTS =  dummy.$(OBJEXT)
 +#>- kdesktop_OBJECTS =  kdesktop_main.$(OBJEXT)
-@@ -343,2 +352,2 @@
+ #>+ 1
 -kdesktop_OBJECTS = dummy.$(OBJEXT)
 -kdesktop_DEPENDENCIES =  kdesktop.la
 +kdesktop_OBJECTS = kdesktop_main.$(OBJEXT)
 +kdesktop_DEPENDENCIES =  libkdesktop_main.la
-@@ -376 +385 @@
+ #>- kdmdesktop_OBJECTS =  kdmdesktop.$(OBJEXT)
+ #>+ 5
+ kdmdesktop_final_OBJECTS = kdmdesktop.o kdmdesktop.all_cc.o 
+@@ -373,15 +381,15 @@
+ 
+ #>- DISTFILES = $(DIST_COMMON) $(SOURCES) $(HEADERS) $(TEXINFOS) $(EXTRA_DIST)
+ #>+ 4
 -KDE_DIST=kdesktop.desktop kdesktop_custom_menu1 kdesktop_custom_menu2 DESIGN kcustommenu.h kdiconview.h kdesktopbindings.cpp kdmdesktop.h kdeeject 
-+KDE_DIST=DESIGN kdesktop.desktop kdesktop_custom_menu1 kdesktop_custom_menu2 kcustommenu.h kdiconview.h kdesktopbindings.cpp kdeeject kdmdesktop.h 
-@@ -383,2 +392,2 @@
++KDE_DIST=DESIGN kdesktop.desktop kdesktop_custom_menu1 kdesktop_custom_menu2 kdmdesktop kcustommenu.h KBackgroundIface.kidl kdiconview.h KScreensaverIface.kidl kdesktop libkdesktop_main_la_meta_unload.cc kdesktop.core kdesktopbindings.cpp kdeeject KDesktopIface.kidl kdmdesktop_meta_unload.cc kdmdesktop.h 
+ 
+ DISTFILES= $(DIST_COMMON) $(SOURCES) $(HEADERS) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
+ 
+ 
+ TAR = tar
+ GZIP_ENV = --best
 -SOURCES = $(kdesktop_la_SOURCES) $(kdesktop_SOURCES) $(kdmdesktop_SOURCES)
 -OBJECTS = $(kdesktop_la_OBJECTS) $(kdesktop_OBJECTS) $(kdmdesktop_OBJECTS)
 +SOURCES = $(libkdesktop_main_la_SOURCES) $(kdesktop_la_SOURCES) $(kdesktop_SOURCES) $(kdmdesktop_SOURCES)
 +OBJECTS = $(libkdesktop_main_la_OBJECTS) $(kdesktop_la_OBJECTS) $(kdesktop_OBJECTS) $(kdmdesktop_OBJECTS)
-@@ -470,0 +480,3 @@
+ 
+ #>- all: all-redirect
+ #>+ 1
+@@ -468,6 +476,9 @@
+ 
+ maintainer-clean-libtool:
+ 
 +libkdesktop_main.la: $(libkdesktop_main_la_OBJECTS) $(libkdesktop_main_la_DEPENDENCIES)
 +	$(CXXLINK) -rpath $(libdir) $(libkdesktop_main_la_LDFLAGS) $(libkdesktop_main_la_OBJECTS) $(libkdesktop_main_la_LIBADD) $(LIBS)
 +
-@@ -627 +639 @@
+ kdesktop.la: $(kdesktop_la_OBJECTS) $(kdesktop_la_DEPENDENCIES)
+ 	$(CXXLINK) -rpath $(libdir) $(kdesktop_la_LDFLAGS) $(kdesktop_la_OBJECTS) $(kdesktop_la_LIBADD) $(LIBS)
+ 
+@@ -624,7 +635,7 @@
+ 	dot_seen=no; \
+ 	rev=''; list='$(SUBDIRS)'; for subdir in $$list; do \
+ 	  rev="$$subdir $$rev"; \
 -	  test "$$subdir" = "." && dot_seen=yes; \
 +	  test "$$subdir" != "." || dot_seen=yes; \
-@@ -685,11 +696,0 @@
+ 	done; \
+ 	test "$$dot_seen" = "no" && rev=". $$rev"; \
+ 	target=`echo $@ | sed s/-recursive//`; \
+@@ -682,17 +693,6 @@
+ subdir = kdesktop
+ 
+ distdir: $(DISTFILES)
 -#>- 	@for file in $(DISTFILES); do \
 -#>- 	  d=$(srcdir); \
 -#>- 	  if test -d $$d/$$file; then \
@@ -90,11 +136,23 @@ $NetBSD: patch-bi,v 1.1 2001/10/15 22:46:02 skrll Exp $
 -#>- 	  fi; \
 -#>- 	done
 -#>+ 10
-@@ -822,3 +822,0 @@
+ 	@for file in $(DISTFILES); do \
+ 	  d=$(srcdir); \
+ 	  if test -d $$d/$$file; then \
+@@ -819,9 +819,6 @@
+ messages:
+ 	$(XGETTEXT) *.cc *.cpp *.h -o $(podir)/kdesktop.pot
+ 
 -dummy.cc:
 -	echo > dummy.cc
 -
-@@ -915,8 +913,8 @@
+ install-data-local:
+ 	@test -n "$(DESTDIR)" || test -z "$(PAM)" || $(top_srcdir)/mkpamserv $(PAM)
+ 
+@@ -912,14 +909,14 @@
+ 
+ 
+ #>+ 10
 -kdesktop_la_meta_unload.cc:  lockeng.moc xautolock.moc bgmanager.moc kdiconview.moc desktop.moc pixmapserver.moc startupid.moc lockdlg.moc kcustommenu.moc minicli.moc krootwm.moc
 -	@echo 'creating kdesktop_la_meta_unload.cc'
 -	@-rm -f kdesktop_la_meta_unload.cc
@@ -111,10 +169,17 @@ $NetBSD: patch-bi,v 1.1 2001/10/15 22:46:02 skrll Exp $
 +	@echo '0};' >> libkdesktop_main_la_meta_unload.cc
 +	@echo '#include <kunload.h>' >> libkdesktop_main_la_meta_unload.cc
 +	@echo '_UNLOAD(libkdesktop_main_la)' >> libkdesktop_main_la_meta_unload.cc
-@@ -938 +936 @@
+ 
+ 
+ #>+ 10
+@@ -935,26 +932,38 @@
+ 
+ #>+ 3
+ clean-moc-classes:
 -	-rm -f  kdesktop_la_meta_unload.cc kdmdesktop_meta_unload.cc
 +	-rm -f  libkdesktop_main_la_meta_unload.cc kdmdesktop_meta_unload.cc
-@@ -941,4 +939,4 @@
+ 
+ #>+ 11
 -kdesktop_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/minicli.cpp $(srcdir)/startupid.cpp  
 -	@echo 'creating kdesktop_la.all_cpp.cpp ...'; \
 -	rm -f kdesktop_la.all_cpp.files kdesktop_la.all_cpp.final; \
@@ -123,7 +188,7 @@ $NetBSD: patch-bi,v 1.1 2001/10/15 22:46:02 skrll Exp $
 +	@echo 'creating libkdesktop_main_la.all_cpp.cpp ...'; \
 +	rm -f libkdesktop_main_la.all_cpp.files libkdesktop_main_la.all_cpp.final; \
 +	echo "#define KDE_USE_FINAL 1" >> libkdesktop_main_la.all_cpp.final; \
-@@ -946,2 +944,14 @@
+ 	for file in minicli.cpp startupid.cpp ; do \
 -	  echo "#include \"$$file\"" >> kdesktop_la.all_cpp.files; \
 -	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> kdesktop_la.all_cpp.final; \
 +	  echo "#include \"$$file\"" >> libkdesktop_main_la.all_cpp.files; \
@@ -133,36 +198,68 @@ $NetBSD: patch-bi,v 1.1 2001/10/15 22:46:02 skrll Exp $
 +	rm -f libkdesktop_main_la.all_cpp.final libkdesktop_main_la.all_cpp.files
 +
 +#>+ 11
-+libkdesktop_main_la.all_cc.cc: $(srcdir)/Makefile.in $(srcdir)/krootwm.cc $(srcdir)/xautolock.cc $(srcdir)/kdiconview.cc $(srcdir)/desktop.cc $(srcdir)/main.cc $(srcdir)/lockeng.cc $(srcdir)/lockdlg.cc $(srcdir)/bgmanager.cc $(srcdir)/init.cc $(srcdir)/pixmapserver.cc $(srcdir)/kcustommenu.cc KDesktopIface_skel.cc KScreensaverIface_skel.cc KBackgroundIface_skel.cc libkdesktop_main_la_meta_unload.cc   xautolock.moc pixmapserver.moc lockeng.moc kdmdesktop.moc startupid.moc lockdlg.moc bgmanager.moc kdiconview.moc minicli.moc kcustommenu.moc desktop.moc krootwm.moc 
++libkdesktop_main_la.all_cc.cc: $(srcdir)/Makefile.in $(srcdir)/krootwm.cc $(srcdir)/xautolock.cc $(srcdir)/kdiconview.cc $(srcdir)/desktop.cc $(srcdir)/main.cc $(srcdir)/lockeng.cc $(srcdir)/lockdlg.cc $(srcdir)/bgmanager.cc $(srcdir)/init.cc $(srcdir)/pixmapserver.cc $(srcdir)/kcustommenu.cc $(srcdir)/KDesktopIface_skel.cc $(srcdir)/KScreensaverIface_skel.cc $(srcdir)/KBackgroundIface_skel.cc $(srcdir)/libkdesktop_main_la_meta_unload.cc   xautolock.moc pixmapserver.moc lockeng.moc kdmdesktop.moc startupid.moc lockdlg.moc bgmanager.moc kdiconview.moc minicli.moc kcustommenu.moc desktop.moc krootwm.moc 
 +	@echo 'creating libkdesktop_main_la.all_cc.cc ...'; \
 +	rm -f libkdesktop_main_la.all_cc.files libkdesktop_main_la.all_cc.final; \
 +	echo "#define KDE_USE_FINAL 1" >> libkdesktop_main_la.all_cc.final; \
 +	for file in krootwm.cc xautolock.cc kdiconview.cc desktop.cc main.cc lockeng.cc lockdlg.cc bgmanager.cc init.cc pixmapserver.cc kcustommenu.cc KDesktopIface_skel.cc KScreensaverIface_skel.cc KBackgroundIface_skel.cc libkdesktop_main_la_meta_unload.cc ; do \
 +	  echo "#include \"$$file\"" >> libkdesktop_main_la.all_cc.files; \
 +	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> libkdesktop_main_la.all_cc.final; \
-@@ -949,2 +959,2 @@
+ 	done; \
 -	cat kdesktop_la.all_cpp.final kdesktop_la.all_cpp.files  > kdesktop_la.all_cpp.cpp; \
 -	rm -f kdesktop_la.all_cpp.final kdesktop_la.all_cpp.files
 +	cat libkdesktop_main_la.all_cc.final libkdesktop_main_la.all_cc.files  > libkdesktop_main_la.all_cc.cc; \
 +	rm -f libkdesktop_main_la.all_cc.final libkdesktop_main_la.all_cc.files
-@@ -953 +963 @@
+ 
+ #>+ 11
 -kdesktop_la.all_cc.cc: $(srcdir)/Makefile.in $(srcdir)/krootwm.cc $(srcdir)/xautolock.cc $(srcdir)/kdiconview.cc $(srcdir)/desktop.cc $(srcdir)/main.cc $(srcdir)/lockeng.cc $(srcdir)/lockdlg.cc $(srcdir)/bgmanager.cc $(srcdir)/init.cc $(srcdir)/pixmapserver.cc $(srcdir)/kcustommenu.cc KDesktopIface_skel.cc KScreensaverIface_skel.cc KBackgroundIface_skel.cc kdesktop_la_meta_unload.cc   xautolock.moc pixmapserver.moc lockeng.moc kdmdesktop.moc startupid.moc lockdlg.moc bgmanager.moc kdiconview.moc minicli.moc kcustommenu.moc desktop.moc krootwm.moc 
-+kdesktop_la.all_cc.cc: $(srcdir)/Makefile.in kdesktop_main.cc  
-@@ -957 +967 @@
++kdesktop_la.all_cc.cc: $(srcdir)/Makefile.in $(srcdir)/kdesktop_main.cc  
+ 	@echo 'creating kdesktop_la.all_cc.cc ...'; \
+ 	rm -f kdesktop_la.all_cc.files kdesktop_la.all_cc.final; \
+ 	echo "#define KDE_USE_FINAL 1" >> kdesktop_la.all_cc.final; \
 -	for file in krootwm.cc xautolock.cc kdiconview.cc desktop.cc main.cc lockeng.cc lockdlg.cc bgmanager.cc init.cc pixmapserver.cc kcustommenu.cc KDesktopIface_skel.cc KScreensaverIface_skel.cc KBackgroundIface_skel.cc kdesktop_la_meta_unload.cc ; do \
 +	for file in kdesktop_main.cc ; do \
-@@ -965 +975 @@
+ 	  echo "#include \"$$file\"" >> kdesktop_la.all_cc.files; \
+ 	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> kdesktop_la.all_cc.final; \
+ 	done; \
+@@ -962,11 +971,11 @@
+ 	rm -f kdesktop_la.all_cc.final kdesktop_la.all_cc.files
+ 
+ #>+ 11
 -kdesktop.all_cc.cc: $(srcdir)/Makefile.in dummy.cc  
-+kdesktop.all_cc.cc: $(srcdir)/Makefile.in kdesktop_main.cc  
-@@ -969 +979 @@
++kdesktop.all_cc.cc: $(srcdir)/Makefile.in $(srcdir)/kdesktop_main.cc  
+ 	@echo 'creating kdesktop.all_cc.cc ...'; \
+ 	rm -f kdesktop.all_cc.files kdesktop.all_cc.final; \
+ 	echo "#define KDE_USE_FINAL 1" >> kdesktop.all_cc.final; \
 -	for file in dummy.cc ; do \
 +	for file in kdesktop_main.cc ; do \
-@@ -990 +1000 @@
+ 	  echo "#include \"$$file\"" >> kdesktop.all_cc.files; \
+ 	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> kdesktop.all_cc.final; \
+ 	done; \
+@@ -974,7 +983,7 @@
+ 	rm -f kdesktop.all_cc.final kdesktop.all_cc.files
+ 
+ #>+ 11
+-kdmdesktop.all_cc.cc: $(srcdir)/Makefile.in kdmdesktop_meta_unload.cc  
++kdmdesktop.all_cc.cc: $(srcdir)/Makefile.in $(srcdir)/kdmdesktop_meta_unload.cc  
+ 	@echo 'creating kdmdesktop.all_cc.cc ...'; \
+ 	rm -f kdmdesktop.all_cc.files kdmdesktop.all_cc.final; \
+ 	echo "#define KDE_USE_FINAL 1" >> kdmdesktop.all_cc.final; \
+@@ -987,14 +996,14 @@
+ 
+ #>+ 3
+ clean-final:
 -	-rm -f kdesktop_la.all_cpp.cpp kdesktop_la.all_cc.cc kdesktop.all_cc.cc kdmdesktop.all_cc.cc
 +	-rm -f libkdesktop_main_la.all_cpp.cpp libkdesktop_main_la.all_cc.cc kdesktop_la.all_cc.cc kdesktop.all_cc.cc kdmdesktop.all_cc.cc
-@@ -994 +1004 @@
+ 
+ #>+ 2
+ final:
 -	$(MAKE) kdesktop_la_OBJECTS="$(kdesktop_la_final_OBJECTS)" kdmdesktop_OBJECTS="$(kdmdesktop_final_OBJECTS)" all-am
 +	$(MAKE) libkdesktop_main_la_OBJECTS="$(libkdesktop_main_la_final_OBJECTS)" kdmdesktop_OBJECTS="$(kdmdesktop_final_OBJECTS)" all-am
-@@ -997 +1007 @@
+ #>+ 2
+ no-final:
 -	$(MAKE) kdesktop_la_OBJECTS="$(kdesktop_la_nofinal_OBJECTS)" kdmdesktop_OBJECTS="$(kdmdesktop_nofinal_OBJECTS)" all-am
 +	$(MAKE) libkdesktop_main_la_OBJECTS="$(libkdesktop_main_la_nofinal_OBJECTS)" kdmdesktop_OBJECTS="$(kdmdesktop_nofinal_OBJECTS)" all-am
+ #>+ 3
+ cvs-clean:
+ 	$(MAKE) -f $(top_srcdir)/admin/Makefile.common cvs-clean
