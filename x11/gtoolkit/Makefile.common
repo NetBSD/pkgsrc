@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2002/11/09 05:19:28 rh Exp $
+# $NetBSD: Makefile.common,v 1.2 2002/11/09 13:43:48 wiz Exp $
 #
 
 DISTNAME=		gtoolkit-0.9.5
@@ -7,7 +7,6 @@ MASTER_SITES?=		ftp://ftp.inf.uos.de/pub/elmar/gtk/objc-gtoolkit/
 
 MAINTAINER?=		packages@netbsd.org
 HOMEPAGE?=		http://www.informatik.uni-osnabrueck.de/elmar/projects/gtoolkit/
-COMMENT?=		Objective-C interface to the GTK+ widget set
 
 GNU_CONFIGURE=		YES
 USE_BUILDLINK2=		YES
