@@ -1,12 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/12/03 16:13:28 epg Exp $
+$NetBSD: distinfo,v 1.2 2003/12/07 01:50:11 epg Exp $
 
-SHA1 (SVN-Web-0.30.tar.gz) = cc75b148e1fa85e376196c5473902ecda763ffab
-Size (SVN-Web-0.30.tar.gz) = 7618 bytes
-SHA1 (patch-aa) = 77e92b20bed275b1dca8e2b633b444fb3ed863af
-SHA1 (patch-ab) = 8c46db661e3f35afd8315f2935a477d25e9fe1be
-SHA1 (patch-ac) = 4284f1ce3b51633f9515e496bba589bacdc24b45
-SHA1 (patch-ad) = 4a13e80551392246e6959fa7bd4168f2dacf6e47
-SHA1 (patch-ae) = 95343451488441b216d984dec317ee1f4a6ce977
-SHA1 (patch-af) = 7c826222781ac137cad7a10df8cff47bb52f0223
-SHA1 (patch-ag) = df794f7576c3c0c16a369f6163be6c22b49e31e1
-SHA1 (patch-ah) = 7ffa3d538e33d44d166c37fb334d6b1210932058
+SHA1 (SVN-Web-0.35.tar.gz) = 48caf64ad48706e657aa3a092e27be13be8cbc83
+Size (SVN-Web-0.35.tar.gz) = 7851 bytes
