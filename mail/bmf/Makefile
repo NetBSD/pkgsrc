@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2002/10/12 18:18:22 mjl Exp $
+# $NetBSD: Makefile,v 1.3 2002/10/25 14:18:13 mjl Exp $
 #
 
-DISTNAME=	bmf-0.84
+DISTNAME=	bmf-0.9.4
 CATEGORIES=	mail
 MASTER_SITES=	$(MASTER_SITE_SOURCEFORGE:=bmf/)
 
@@ -13,14 +13,5 @@ HAS_CONFIGURE=	YES
 
 CONFIGURE_ARGS+=	--without-mysql
 MAKE_ENV+=	DESTDIR=${PREFIX} BINDIR=/bin MANDIR=/man
-
-ALL_TARGET=	apps
-
-# Note: Until we figure out how to build the docs (it needs some
-# xml files I cannot figure out where they can be found), we just
-# ship pre-build man pages (snarfed from the Debian package).
-
-post-build:
-		${CP} files/*.1 ${WRKSRC}
 
 .include "../../mk/bsd.pkg.mk"
