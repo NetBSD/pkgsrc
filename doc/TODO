@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2562 2004/11/28 23:32:49 wiz Exp $
+$NetBSD: TODO,v 1.2563 2004/11/29 00:22:55 epg Exp $
 
 Suggested new packages
 ======================
@@ -385,7 +385,6 @@ Suggested package updates
 	o cjk-lyx-1.3.3
 	o clanlib-0.7.8
 	o classpath-0.12
-	o clearsilver-0.9.9
 	o clisp-2.33.2
 	o cln-1.1.9
 	o cmake-2.0.5
