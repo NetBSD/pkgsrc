@@ -1,17 +1,16 @@
-$NetBSD: patch-ac,v 1.2 2002/12/03 21:48:18 jdolecek Exp $
-
---- openh323u.mak.orig	Tue Nov  5 03:18:03 2002
-+++ openh323u.mak	Tue Dec  3 22:01:59 2002
-@@ -107,19 +107,19 @@
- ifneq (,$(wildcard $(HOME)/pwlib))
- PWLIBDIR=$(HOME)/pwlib
- else
--PWLIBDIR=/usr/local/pwlib
-+PWLIBDIR= @PREFIX@
- endif
- endif
- endif
+--- openh323u.mak.in.orig	2003-08-04 02:03:09.000000000 +0200
++++ openh323u.mak.in	2004-10-08 23:59:36.000000000 +0200
+@@ -126,7 +126,7 @@
+ # Added auto inclusion of ptlib make rules
+ #
  
+-PWLIBDIR	= @PWLIBDIR@
++PWLIBDIR	= /usr/pkg
+ STDCCFLAGS	+= @STDCCFLAGS@
+ LDFLAGS		+= @LDFLAGS@
+ ENDLDLIBS	:= @ENDLDLIBS@ $(ENDLDLIBS)
+@@ -134,12 +134,12 @@
+ H323_VICH263	= @H323_VICH263@      
  
  ifdef LIBRARY_MAKEFILE
 -include $(PWLIBDIR)/make/unix.mak
@@ -25,16 +24,23 @@ $NetBSD: patch-ac,v 1.2 2002/12/03 21:48:18 jdolecek Exp $
  endif
  
  
-@@ -129,7 +129,7 @@
+@@ -149,11 +149,11 @@
  
  
  OH323_SRCDIR = $(OPENH323DIR)/src
--OH323_INCDIR = $(OPENH323DIR)/include
-+OH323_INCDIR = $(OPENH323DIR)/include/openh323
+-ifdef PREFIX
+-OH323_INCDIR = $(PREFIX)/include/openh323
+-else
++#ifdef PREFIX
++#OH323_INCDIR = $(PREFIX)/include/openh323
++#else
+ OH323_INCDIR = $(OPENH323DIR)/include
+-endif
++#endif
  OH323_LIBDIR = $(OPENH323DIR)/lib
  
  
-@@ -152,7 +152,7 @@
+@@ -176,7 +176,7 @@
  
  
  
@@ -43,15 +49,3 @@ $NetBSD: patch-ac,v 1.2 2002/12/03 21:48:18 jdolecek Exp $
  OH323_FILE  = lib$(OH323_BASE).$(LIB_SUFFIX)
  
  LDFLAGS	    += -L$(OH323_LIBDIR)
-@@ -187,6 +187,11 @@
- STDCCFLAGS += -DHAS_OSS
- endif
- 
-+ifneq (,$(wildcard $(SYSINCDIR)/soundcard.h))
-+HAS_OSS	    = 1
-+STDCCFLAGS += -DHAS_OSS
-+endif
-+
- #Allow disabling of speex codec
- ifdef NO_SPEEX
- STDCCFLAGS += -DNO_SPEEX
