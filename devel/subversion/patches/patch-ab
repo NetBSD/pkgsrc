@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.3 2003/05/25 09:31:29 epg Exp $
+$NetBSD: patch-ab,v 1.4 2003/06/06 11:05:01 jmmv Exp $
 
 --- tools/backup/hot-backup.py.in.orig	Wed Mar 12 21:09:33 2003
 +++ tools/backup/hot-backup.py.in
@@ -7,11 +7,11 @@ $NetBSD: patch-ab,v 1.3 2003/05/25 09:31:29 epg Exp $
  
  # Path to db_archive program
 -db_archive = "/usr/local/BerkeleyDB.4.0/bin/db_archive"
-+db_archive = "/usr/pkg/bin/db4_archive"
++db_archive = "@BUILDLINK_PREFIX.db4@/bin/db4_archive"
  
  # Path to db_recover progrem
 -db_recover = "/usr/local/BerkeleyDB.4.0/bin/db_recover"
-+db_recover = "/usr/pkg/bin/db4_recover"
++db_recover = "@BUILDLINK_PREFIX.db4@/bin/db4_recover"
  
  # Number of backups to keep around (0 for "keep them all")
  num_backups = 64
