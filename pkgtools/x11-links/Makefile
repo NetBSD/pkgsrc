@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2002/09/20 23:53:32 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2002/09/27 09:22:59 jlam Exp $
 #
 # NOTE:	If you update this package, then you'll likely need to also update
 #	the x11-links dependency in mk/x11.buildlink.mk and in
@@ -21,11 +21,10 @@ WRKSRC=		${WRKDIR}
 NO_BUILD=	# defined
 NO_MTREE=	# defined
 USE_X11=	# defined
+USE_X11_LINKS=	no
 
 PLIST_SRC=		${WRKDIR}/.PLIST_SRC
 BUILDLINK_X11_SUBDIR=	share/x11-links
-
-_FOR_X11_LINKS_ONLY=-	# needed to use x11-links/buildlink.mk
 
 .include "../../mk/bsd.prefs.mk"
    
@@ -43,9 +42,4 @@ do-install:
 		| ${SED} "s|^\./||g" | ${SORT} -u >> ${PLIST_SRC}
 	${ECHO} "@unexec ${RM} -rf %D/${BUILDLINK_X11_SUBDIR}" >> ${PLIST_SRC}
 
-.if !empty(X11BASE:M*openwin)
-.  include "openwin.buildlink2.mk"
-.else
-.  include "xfree.buildlink2.mk"
-.endif
 .include "../../mk/bsd.pkg.mk"
