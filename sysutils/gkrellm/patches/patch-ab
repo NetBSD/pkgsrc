@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.5 2001/10/30 13:31:48 damon Exp $
+$NetBSD: patch-ab,v 1.6 2001/11/01 14:08:02 hubertf Exp $
 
---- src/Makefile.src.orig	Fri Oct 12 09:01:04 2001
+--- src/Makefile.src.orig	Fri Oct 12 15:01:04 2001
 +++ src/Makefile.src
 @@ -1,10 +1,10 @@
  GTK_CONFIG ?= gtk-config
@@ -16,7 +16,7 @@ $NetBSD: patch-ab,v 1.5 2001/10/30 13:31:48 damon Exp $
  MANMODE ?= 644
  MANDIRMODE ?= 755
  INSTALL ?= install
-@@ -13,15 +13,17 @@
+@@ -13,15 +13,18 @@
  GKRELLM_INCLUDES = gkrellm.h gkrellm_public_proto.h
  
  GTK_INCLUDE = `$(GTK_CONFIG) --cflags gthread`
@@ -33,12 +33,13 @@ $NetBSD: patch-ab,v 1.5 2001/10/30 13:31:48 damon Exp $
  
 -LIBS = $(GTK_LIB) $(IMLIB_LIB) $(GTOP_LIBS) $(SYS_LIBS)
 +FLAGS+= -DSYSTEM_PLUGINS_DIR=\"${PREFIX}/lib/gkrellm/plugins\"
++FLAGS+= -DSYSTEM_THEMES_DIR=\"${PREFIX}/share/gkrellm/themes\"
 +
 +LIBS = $(GTK_LIB) $(IMLIB_LIB) $(GTOP_LIBS) $(SYS_LIBS) -Wl,-E
  
  ifeq ($(debug),1)
      FLAGS += -g
-@@ -36,7 +38,7 @@
+@@ -36,7 +39,7 @@
  endif
  
  
@@ -47,7 +48,7 @@ $NetBSD: patch-ab,v 1.5 2001/10/30 13:31:48 damon Exp $
  
  OBJS =	main.o alerts.o apm.o clock.o cpu.o disk.o fs.o hostname.o \
  	inet.o mail.o meminfo.o net.o proc.o sensors.o uptime.o \
-@@ -59,8 +61,8 @@
+@@ -59,8 +62,8 @@
  		 SYS_LIBS="-lkvm -ldevstat" gkrellm
  
  netbsd:
