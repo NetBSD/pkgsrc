@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/03/18 04:33:55 mjl Exp $
+# $NetBSD: Makefile,v 1.6 2001/06/15 08:29:37 jlam Exp $
 
 .include "../gdk-pixbuf/Makefile.common"
 
@@ -10,6 +10,9 @@ DEPENDS+=	gnome-libs>=1.0.53:../../x11/gnome-libs
 DEPENDS+=	gdk-pixbuf>=0.10.1:../../graphics/gdk-pixbuf
 
 CONFLICTS+=	gdk-pixbuf<0.10.1
+
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-Wl,-R${LOCALBASE}/lib -L${LOCALBASE}/lib
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/gdk-pixbuf/gnome-canvas-pixbuf.h \
