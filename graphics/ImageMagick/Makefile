@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 1997/12/23 17:08:31 agc Exp $
 # New ports collection Makefile for: ImageMagick
 # Version required:	3.9.3
 # Date created:         11th December 1997
 # Whom:                 tron
+#
+# $NetBSD: Makefile,v 1.3 1998/01/24 05:16:42 hubertf Exp $
 #
 
 DISTNAME=	ImageMagick-3.9.3
@@ -17,7 +18,6 @@ LIB_DEPENDS=    jpeg\\.7\\.:${PORTSDIR}/graphics/jpeg \
 		tiff\\.3\\.4:${PORTSDIR}/graphics/tiff
 
 USE_IMAKE=	yes
-USE_X11=	yes
 WRKSRC=		${WRKDIR}/ImageMagick
 MAKE_ENV=	LOCALBASE=${LOCALBASE} PREFIX=${PREFIX}
 
@@ -27,6 +27,6 @@ CAT1=		display.0 montage.0 import.0 animate.0 convert.0 identify.0 \
 		mogrify.0 combine.0 ImageMagick.0 quantize.0 miff.0 xtp.0
 
 post-install:
-	${LDCONFIG} -m ${PREFIX}/lib || true
+	${LDCONFIG} -m ${PREFIX}/lib || /usr/bin/true
 
 .include <bsd.port.mk>
