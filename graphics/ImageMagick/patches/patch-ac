@@ -5,5 +5,5 @@
  NormalProgramTarget(xtp,$(XTPObjects),NullParameter,NullParameter,NullParameter)
  InstallProgram(xtp,$(LOCALDIR))
 -InstallMultipleMan(xtp.1,$(LOCALMAN))
-+InstallMultipleMan(xtp.1,$(LOCALMAN1))
++InstallMultipleManSuffix(xtp,$(LOCALMAN1),1)
  DependTarget()
