@@ -1,6 +1,6 @@
 #!@BUILDLINK_SHELL@
 #
-# $NetBSD: fake-la,v 1.5 2003/06/19 17:20:42 jschauma Exp $
+# $NetBSD: fake-la,v 1.6 2003/09/15 21:52:51 skrll Exp $
 
 AWK="@AWK@"
 BASENAME="@BASENAME@"
@@ -54,7 +54,7 @@ if ${TEST} ! -f $tmpdir/inst/$libbase.la; then
 	cd $tmpdir
 	${ECHO} "static int i;" > nonempty.c	# create a nonempty input file
 	${LIBTOOL} --mode=compile ${CC} -c nonempty.c
-	${LIBTOOL} ${CC} -o $libbase.la nonempty.lo -rpath $tmpdir/inst -version-info $version
+	${LIBTOOL} --mode=link ${CC} -o $libbase.la nonempty.lo -rpath $tmpdir/inst -version-info $version
 	${LIBTOOL} --mode=install ${CP} $libbase.la $tmpdir/inst >/dev/null
 
 	# Reset the ld.so cache as "libtool --mode=install" may have executed
