@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.2 2000/05/20 13:32:14 sommerfeld Exp $
+$NetBSD: patch-aa,v 1.3 2001/01/14 14:06:01 simonb Exp $
 
---- wrapzap.orig	Tue May  9 01:12:22 2000
-+++ wrapzap	Sat May 20 08:46:05 2000
-@@ -16,24 +16,9 @@
+--- wrapzap.orig	Thu Jan 11 12:23:23 2001
++++ wrapzap	Mon Jan 15 00:49:46 2001
+@@ -16,26 +16,9 @@
  #
  
  # modify this to match your install
@@ -21,10 +21,12 @@ $NetBSD: patch-aa,v 1.2 2000/05/20 13:32:14 sommerfeld Exp $
 -					# stock zapper; this is the one to
 -					# which you should add new ads
 -STUBURL_AD=$ZAP_BASE/ad.gif
+-STUBURL_ADBG=$ZAP_BASE/adbg.gif
 -STUBURL_ADJS=$ZAP_BASE/no-op.js
 -STUBURL_ADHTML=$ZAP_BASE/no-op.html
 -STUBURL_ADPOPUP=$ZAP_BASE/closepopup.html
 -STUBURL_COUNTER=$ZAP_BASE/counter.gif
+-STUBURL_WEBBUG=$ZAP_BASE/webbug.gif
 +. /etc/adzap.conf
  
  export ZAP_MODE ZAP_BASE ZAP_CHAINING ZAP_PREMATCH ZAP_POSTMATCH
