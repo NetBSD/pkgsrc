@@ -1,10 +1,10 @@
-$NetBSD: patch-ad,v 1.1 2000/10/16 15:14:23 rh Exp $
+$NetBSD: patch-ad,v 1.2 2001/07/13 04:49:11 kei Exp $
 
---- wv.h.orig	Mon Oct 16 15:35:58 2000
-+++ wv.h
-@@ -109,7 +109,11 @@
-     S32 y;
-     }POINT;
+--- wv.h.orig	Thu May 10 05:28:16 2001
++++ wv.h	Thu Jul  5 14:37:42 2001
+@@ -106,7 +106,11 @@
+ 	S32 y;
+     } POINT;
  #else
 +#define read_32ubit wmf_read_32ubit
 +#define read_16ubit wmf_read_16ubit
