@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2003/09/21 16:42:45 lukem Exp $
+# $NetBSD: Makefile,v 1.8 2003/09/29 02:00:45 lukem Exp $
 #
 
-DISTNAME=	rdiff-backup-0.12.4
+DISTNAME=	rdiff-backup-0.12.5
 CATEGORIES=	sysutils net
 MASTER_SITES=	http://rdiff-backup.stanford.edu/
 
