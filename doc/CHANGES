@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8905 2005/01/24 20:13:21 recht Exp $
+$NetBSD: CHANGES,v 1.8906 2005/01/25 00:21:06 simonb Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -543,3 +543,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added nspr-4.3 [jschauma 2005-01-24]
 	Added nspr-reference-0.1 [jschauma 2005-01-24]
 	Updated python23 to 2.3.4nb5 [recht 2005-01-24]
+	Added mairix-0.15.1 [simonb 2005-01-25]
