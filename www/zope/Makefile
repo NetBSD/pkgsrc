@@ -1,17 +1,17 @@
-# $NetBSD: Makefile,v 1.1.1.1 1998/12/12 17:28:23 tsarna Exp $
+# $NetBSD: Makefile,v 1.2 1998/12/18 00:39:02 tsarna Exp $
 #
 
-DISTNAME=	Zope-1.9.0b2-src
-PKGNAME=	zope-1.9.0b2
+DISTNAME=	Zope-1.9.0b3-src
+PKGNAME=	zope-1.9.0b3
 CATEGORIES=	www
-MASTER_SITES=   http://www.zope.org/Download/Releases/Zope-1.9.0b2/
+MASTER_SITES=   http://www.zope.org/Download/Releases/Zope-1.9.0b3/
 
 MAINTAINER=	tsarna@netbsd.org
 HOMEPAGE=	http://www.zope.org/
 
 DEPENDS+=	python-1.5.1:../../lang/python
 
-CONFLICTS=	zope-1.9b1
+CONFLICTS=	zope-1.9b1 zope-1.9.0b2
 
 PLIST_SRC=	${WRKDIR}/.PLIST_SRC
 
