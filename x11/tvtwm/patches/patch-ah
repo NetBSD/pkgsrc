@@ -1,3 +1,5 @@
+$NetBSD: patch-ah,v 1.2 2000/02/05 15:58:29 wiz Exp $
+
 Index: gram.y
 ===================================================================
 RCS file: /home/siren/src/tvtwm/gram.y,v
