@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2003/01/22 12:52:35 simonb Exp $
+@comment $NetBSD: PLIST,v 1.4 2003/10/18 23:23:41 kleink Exp $
 libexec/adzap
 libexec/squid_redirect
 share/examples/adzap/ad-clear.gif
@@ -24,7 +24,6 @@ share/examples/adzap/no-op-counter.html
 share/examples/adzap/no-op-counter.js
 share/examples/adzap/no-op.html
 share/examples/adzap/no-op.js
-share/examples/adzap/proxy-cisra.pac
 share/examples/adzap/proxy-home.pac
 share/examples/adzap/proxy-zip.pac
 share/examples/adzap/webbug-clear.gif
