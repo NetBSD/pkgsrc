@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/04/01 19:03:00 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/04/03 05:25:17 minskim Exp $
 lib/gtk-2.0/2.4.0/engines/libcrux-engine.a
 lib/gtk-2.0/2.4.0/engines/libcrux-engine.la
 lib/gtk-2.0/2.4.0/engines/libcrux-engine.so
@@ -1657,7 +1657,7 @@ share/themes/Traditional/index.theme
 @dirrm share/themes/Smokey-Blue
 @dirrm share/themes/Smokey
 @dirrm share/themes/Simple/gtk-2.0
-@dirrm share/themes/Simple
+@comment in metacity: @dirrm share/themes/Simple
 @dirrm share/themes/Sandwish/metacity-1
 @dirrm share/themes/Sandwish
 @dirrm share/themes/Ocean-Dream
@@ -1687,7 +1687,7 @@ share/themes/Traditional/index.theme
 @dirrm share/themes/Grand-Canyon/gtk-2.0
 @dirrm share/themes/Grand-Canyon
 @dirrm share/themes/Crux/gtk-2.0
-@dirrm share/themes/Crux
+@comment in metacity: @dirrm share/themes/Crux
 @comment in xdg-dirs: @dirrm share/themes
 @dirrm share/icons/Smokey-Red/48x48/filesystems
 @dirrm share/icons/Smokey-Red/48x48/emblems
