@@ -1,0 +1,17 @@
+$NetBSD: patch-cb,v 1.1 1999/03/04 09:12:42 kim Exp $
+
+--- config.h.in.orig	Sat Jan 23 21:27:49 1999
++++ config.h.in	Thu Mar  4 02:02:07 1999
+@@ -37,9 +37,9 @@
+  *  OpenBSD 2.x
+  *  BSD/OS 2.x
+  */
+-/* #define BIND     1 */
+-/* #define BSD42    1 */
+-/* #define BSD44    1 */
++#define BIND     1
++#define BSD42    1
++#define BSD44    1
+ 
+ /*
+  *  SCO 4.x
