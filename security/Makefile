@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.124 2002/12/18 03:56:12 wiz Exp $
+# $NetBSD: Makefile,v 1.125 2003/02/02 17:28:51 tron Exp $
 #
 
 COMMENT=	Security tools
@@ -36,6 +36,7 @@ SUBDIR+=	kth-krb4
 SUBDIR+=	libbf
 SUBDIR+=	libcrack
 SUBDIR+=	libdes
+SUBDIR+=	libgcrypt
 SUBDIR+=	libidea
 SUBDIR+=	libident
 SUBDIR+=	libmcrypt
