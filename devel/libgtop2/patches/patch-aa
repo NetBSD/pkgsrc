@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.3 2003/12/13 20:27:42 xtraeme Exp $
+$NetBSD: patch-aa,v 1.4 2004/04/01 18:34:27 jmmv Exp $
 
 --- configure.orig	2003-12-13 08:32:17.000000000 +0100
 +++ configure	2003-12-13 08:33:16.000000000 +0100
@@ -18,12 +18,3 @@ $NetBSD: patch-aa,v 1.3 2003/12/13 20:27:42 xtraeme Exp $
  	  ;;
          aix*)
  	  libgtop_sysdeps_dir=aix
-@@ -30160,7 +30160,7 @@
- 
- 
- if test x$libgtop_need_server = xyes ; then
--   sysdeps_suid_lib="\$(top_builddir)/sysdeps/\$(sysdeps_dir)/libgtop_sysdeps_suid-2.0.la"
-+   sysdeps_suid_lib="\$(top_builddir)/sysdeps/\$(sysdeps_dir)/libgtop_sysdeps_suid-2.0.la \$(top_builddir)/sysdeps/common/libgtop_suid_common-2.0.la"
-    server_programs='libgtop_server2'
- else
-    sysdeps_suid_lib=
