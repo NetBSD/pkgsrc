@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2003/01/05 12:17:43 jmmv Exp $
+# $NetBSD: Makefile,v 1.9 2003/01/10 19:36:02 jmmv Exp $
 #
 
 DISTNAME=		libglade-2.0.1
 PKGNAME=		${DISTNAME:S/libglade/libglade2/}
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		devel gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libglade/2.0/}
 
@@ -24,8 +24,12 @@ CONFIGURE_ARGS+=	--enable-gtk-doc=no
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/libglade/2.0
+	${PREFIX}/bin/xmlcatmgr add "system" \
+	    "http://glade.gnome.org/glade-2.0.dtd" \
+	    $(PREFIX)/share/xml/libglade/glade-2.0.dtd
 
 .include "../../lang/python/application.mk"
 .include "../../textproc/libxml2/buildlink2.mk"
+.include "../../textproc/xmlcatmgr/buildlink2.mk"
 .include "../../x11/gtk2/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
