@@ -1,7 +1,7 @@
-$NetBSD: patch-al,v 1.3 1999/03/01 23:46:05 tron Exp $
+$NetBSD: patch-al,v 1.4 1999/12/16 08:18:05 jonb Exp $
 
---- gmp-2.0.2-ssh-2/longlong.h.orig	Thu Apr 30 04:32:35 1998
-+++ gmp-2.0.2-ssh-2/longlong.h	Tue Mar  2 00:14:37 1999
+--- gmp-2.0.2-ssh-2/longlong.h.orig	Wed Apr 29 19:32:35 1998
++++ gmp-2.0.2-ssh-2/longlong.h	Tue Dec 14 23:03:54 1999
 @@ -190,26 +190,40 @@
  	     "rI" ((USItype)(bh)),					\
  	     "r" ((USItype)(al)),					\
@@ -59,3 +59,12 @@ $NetBSD: patch-al,v 1.3 1999/03/01 23:46:05 tron Exp $
  #define UDIV_TIME 100
  #endif /* __arm__ */
  
+@@ -719,7 +733,7 @@
+ 	     "g" ((USItype)(d)));					\
+   (r) = __xx.__i.__l; (q) = __xx.__i.__h; })
+ #define count_trailing_zeros(count,x) \
+-  do {
++  do {									\
+     __asm__ ("ffsd	%2,%0"						\
+ 	     : "=r" ((USItype) (count))					\
+ 	     : "0" ((USItype) 0),					\
