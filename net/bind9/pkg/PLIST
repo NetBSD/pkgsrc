@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.7 2000/08/10 12:51:49 itojun Exp $
+@comment $NetBSD: PLIST,v 1.8 2000/08/23 06:50:46 rh Exp $
 bin/dig
 bin/host
 bin/isc-config.sh
+bin/nslookup
 bin/nsupdate
 include/dns/a6.h
 include/dns/acl.h
@@ -92,6 +93,7 @@ include/isc/bufferlist.h
 include/isc/commandline.h
 include/isc/condition.h
 include/isc/dir.h
+include/isc/entropy.h
 include/isc/error.h
 include/isc/event.h
 include/isc/eventclass.h
@@ -268,6 +270,7 @@ share/doc/bind9/rfc/rfc2672.txt
 share/doc/bind9/rfc/rfc2673.txt
 share/doc/bind9/rfc/rfc2782.txt
 share/doc/bind9/rfc/rfc2845.txt
+share/doc/bind9/rfc/rfc2874.txt
 share/doc/bind9/rfc/rfc952.txt
 @dirrm share/doc/bind9/rfc
 @dirrm share/doc/bind9/misc
@@ -281,6 +284,7 @@ share/doc/bind9/rfc/rfc952.txt
 @dirrm include/dns
 man/man8/lwresd.8
 man/man8/named.8
+man/man8/nsupdate.8
 man/man8/rndc.8
 man/man5/rndc.conf.5
 man/man8/dnssec-keygen.8
