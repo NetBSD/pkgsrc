@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2468 2003/06/09 12:33:06 tron Exp $
+$NetBSD: CHANGES,v 1.2469 2003/06/09 17:04:04 frueauf Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2390,3 +2390,8 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated elisp-manual to 21.8 [uebayasi 2003-06-09]
 	Updated ja-vfxdvik to 22.40vnb1 [uebayasi 2003-06-09]
 	Updated qt2-libs to 2.3.1nb4 [tron 2003-06-09]
+	Updated libnasl to 2.0.6a [frueauf 2003-06-09]
+	Updated nessus-core to 2.0.6a [frueauf 2003-06-09]
+	Updated nessus-plugins to 2.0.6a [frueauf 2003-06-09]
+	Updated nessus-libraries to 2.0.6a [frueauf 2003-06-09]
+	Updated nessus to 2.0.6a [frueauf 2003-06-09]
