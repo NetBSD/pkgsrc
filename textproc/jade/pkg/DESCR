@@ -1,6 +1,6 @@
 An object-oriented SGML/XML parser toolkit and DSSSL engine.
 
-Features summary: 
+  Features summary: 
 
     * Includes nsgmls 
     * Provides access to all information about SGML document 
@@ -14,9 +14,5 @@ Features summary:
     * Production quality 
     * Free 
 
-Note: This port is a superset of the sp port.  If you have sp
-installed, it is recommended that you remove it before installing
-jade.
-
-John Fieber
-jfieber@FreeBSD.org
+  Note: This port is a superset of the sp port.  If you have sp
+installed, you have to remove it before installing jade.
