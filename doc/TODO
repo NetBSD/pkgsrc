@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2211 2004/10/12 23:41:07 minskim Exp $
+$NetBSD: TODO,v 1.2212 2004/10/13 09:58:15 cjep Exp $
 
 Suggested new packages
 ======================
@@ -355,7 +355,6 @@ Suggested package updates
 	o multitail-3.2.2
 	o mummer-3.15
 	o mysql-4.0.21
-	o nail-11.9 [cjep]
 	o namazu-2.0.13
 	o nano-1.2.4
 	o nap-1.5.2
