@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.2 2001/09/27 23:18:32 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2002/02/12 07:11:29 martti Exp $
 #
 
-DISTNAME=		tightvnc-1.2.0
-PKGNAME=		tightvnc-1.2.0
+DISTNAME=		tightvnc-1.2.2
+PKGNAME=		tightvnc-1.2.2
 CATEGORIES=		net x11
 MASTER_SITES=		http://prdownloads.sourceforge.net/vnc-tight/ \
 			ftp://ftp.uk.research.att.com/pub/vnc/dist/
-DISTFILES=		tightvnc-1.2.0_unixsrc.tar.bz2 \
+DISTFILES=		tightvnc-1.2.2_unixsrc.tar.bz2 \
 			vnc-3.3.2r2_doc.tgz
 
 MAINTAINER=		mycroft@netbsd.org
