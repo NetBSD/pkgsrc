@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2002/02/08 00:40:34 jmc Exp $
+$NetBSD: patch-aa,v 1.5 2002/03/28 10:40:33 jmc Exp $
 
---- config.mk.orig	Fri Dec 28 22:27:52 2001
-+++ config.mk	Fri Feb  8 00:37:10 2002
-@@ -1,80 +1,33 @@
+--- config.mk.orig	Wed Mar 27 14:12:02 2002
++++ config.mk	Thu Mar 28 10:35:00 2002
+@@ -1,78 +1,32 @@
 -PREFIX=/usr/local
 +#PREFIX=/usr/local
  PLUGINDIR=$(HOME)/.skipstone/plugins
@@ -76,8 +76,7 @@ $NetBSD: patch-aa,v 1.4 2002/02/08 00:40:34 jmc Exp $
 -	-I$(PREFIX)/include/mozilla/string \
 -	-I$(PREFIX)/include/mozilla/xpcom \
 -	-I$(PREFIX)/include/mozilla/pref \
--	-I$(PREFIX)/include/mozilla/uconv \
-+	-I$(X11PREFIX)/include/mozilla \
+-	-I$(PREFIX)/include/mozilla/uconv 
 +	-I$(X11PREFIX)/include/mozilla/nspr \
 +	-I$(X11PREFIX)/include/mozilla/gtkembedmoz \
 +	-I$(X11PREFIX)/include/mozilla/dom \
@@ -99,16 +98,14 @@ $NetBSD: patch-aa,v 1.4 2002/02/08 00:40:34 jmc Exp $
 +	-I$(X11PREFIX)/include/mozilla/string \
 +	-I$(X11PREFIX)/include/mozilla/xpcom \
 +	-I$(X11PREFIX)/include/mozilla/pref \
-+	-I$(X11PREFIX)/include/mozilla/uconv \
++	-I$(X11PREFIX)/include/mozilla/uconv 
  
  MOZILLA_LIBS = \
--	-L/usr/lib/mozilla \
--	-L$(PREFIX)/lib/mozilla \
 +	-L$(X11PREFIX)/lib/mozilla -Wl,-R${X11PREFIX}/lib/mozilla \
+ 	-L/usr/lib/mozilla \
+ 	-L$(PREFIX)/lib/mozilla \
  	-lgtkembedmoz -lplds4 -lplc4 -lnspr4 -lgtksuperwin -lxpcom
- 
- GTK_LIBS = $(shell gtk-config --libs)
-@@ -84,6 +37,7 @@
+@@ -84,6 +38,7 @@
  CXX = g++
  
  CPPFLAGS = $(GTK_INCLUDES) $(MOZILLA_INCLUDES)
