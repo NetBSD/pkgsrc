@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: INSTALL,v 1.1 2000/05/02 15:25:18 jlam Exp $
+# $NetBSD: INSTALL,v 1.2 2000/05/02 23:41:11 jlam Exp $
 
 PKGNAME=$1
 STAGE=$2
@@ -14,11 +14,13 @@ POST-INSTALL)
 	mkdir -p ${SAMBA_PRIVATE}
 	if [ ! -f ${SAMBA_PRIVATE}/smbpasswd ]
 	then
+		echo -n "Creating ${SAMBA_PRIVATE}/smbpasswd..."
 		chown -R root:wheel ${SAMBA_PRIVATE}
 		cat /etc/passwd | ${PKG_PREFIX}/bin/mksmbpasswd.sh \
 			>${SAMBA_PRIVATE}/smbpasswd
 		chmod 500 ${SAMBA_PRIVATE}
 		chmod 600 ${SAMBA_PRIVATE}/smbpasswd
+		echo "done."
 	fi
 	;;
 *)
