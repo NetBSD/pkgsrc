@@ -1,4 +1,4 @@
-/* $NetBSD: lib.h,v 1.6 2003/10/29 23:00:28 jlam Exp $ */
+/* $NetBSD: lib.h,v 1.7 2003/12/20 04:23:05 grant Exp $ */
 
 /* from FreeBSD Id: lib.h,v 1.25 1997/10/08 07:48:03 charnier Exp */
 
@@ -141,6 +141,12 @@
 #define VIEWS_FNAME		"+VIEWS"
 #define DEPOT_FNAME		"+DEPOT"
 
+/*
+ * files which we expect to be in every package, passed to
+ * tar --fast-read.
+ */
+#define ALL_FNAMES              CONTENTS_FNAME" "COMMENT_FNAME" "DESC_FNAME" "MTREE_FNAME" "BUILD_VERSION_FNAME" "BUILD_INFO_FNAME" "SIZE_PKG_FNAME" "SIZE_ALL_FNAME
+
 #define CMD_CHAR		'@'	/* prefix for extended PLIST cmd */
 
 /* The name of the "prefix" environment variable given to scripts */
@@ -178,6 +184,14 @@ typedef enum pl_ent_t {
 	PLIST_PKGCFL,		/* 17 */
 	PLIST_BLDDEP		/* 18 */
 }       pl_ent_t;
+
+/* Enumerated constants for build info */
+typedef enum bi_ent_t {
+	BI_OPSYS,		/*  0 */
+	BI_OS_VERSION,		/*  1 */
+	BI_MACHINE_ARCH,	/*  2 */
+	BI_ENUM_COUNT,		/*  3 */
+}	bi_ent_t;
 
 /* Types */
 typedef unsigned int Boolean;
@@ -276,7 +290,7 @@ void    copy_file(char *, char *, char *);
 void    move_file(char *, char *, char *);
 void    remove_files(const char *, const char *);
 int     delete_hierarchy(char *, Boolean, Boolean);
-int     unpack(const char *, const char *, const char *);
+int     unpack(const char *, const char *);
 void    format_cmd(char *, size_t, char *, char *, char *);
 
 /* ftpio.c: FTP handling */
