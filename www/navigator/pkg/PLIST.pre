@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST.pre,v 1.4 1999/06/04 18:07:41 thorpej Exp $
+@comment $NetBSD: PLIST.pre,v 1.5 1999/06/27 00:23:21 abs Exp $
 bin/navigator-${NS_VERS}
+bin/navigator
 lib/netscape/navigator-${NS_VERS}/LICENSE
 lib/netscape/navigator-${NS_VERS}/Netscape.ad
 lib/netscape/navigator-${NS_VERS}/README
