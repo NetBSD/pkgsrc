@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 1998/07/19 21:09:22 tv Exp $
+# $NetBSD: Makefile,v 1.18 1998/07/20 15:08:29 tv Exp $
 # FreeBSD Id: Makefile,v 1.4 1997/11/28 00:04:18 se Exp
 #
 
@@ -18,8 +18,8 @@ DEPENDS+=	kdebase-1.0:../../x11/kdebase
 CONFLICTS=	kdeutils-2.1b kdeutils-3.1b kdeutils-4.1b
 
 USE_X11=	yes
-HAS_CONFIGURE=	yes
-CONFIGURE_ARGS=	"--x-inc=${PREFX}/include -I${LOCALBASE}/include -I${LOCALBASE}/include/giflib" \
+GNU_CONFIGURE=	yes
+CONFIGURE_ARGS=	"--x-inc=${PREFIX}/include -I${LOCALBASE}/include -I${LOCALBASE}/include/giflib" \
 		"--x-lib=${PREFIX}/lib -L${LOCALBASE}/lib" \
 		"--with-qt-dir=${PREFIX}" \
 		"--with-qt-includes=${PREFIX}/include/qt"
