@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2004/09/22 08:09:23 jlam Exp $
+@comment $NetBSD: PLIST,v 1.16 2004/11/30 18:25:56 wiz Exp $
 bin/gconf-config
 bin/gconf-config-1
 bin/gconf-sanity-check-1
@@ -18,7 +18,6 @@ include/gconf/1/gconf/gconf-listeners.h
 include/gconf/1/gconf/gconf-schema.h
 include/gconf/1/gconf/gconf-value.h
 include/gconf/1/gconf/gconf.h
-lib/GConf/1/libgconfbackend-bdb.la
 lib/GConf/1/libgconfbackend-xml.la
 lib/libgconf-1.la
 lib/libgconf-gtk-1.la
