@@ -1,0 +1,4 @@
+    skkinput is an X11 frontend of SKK (Simple Kana to Kanji conversion).
+It behaves as a kana-kanji conversion server of kinput, kinput2, and Ximp
+protocols and X11R6 X Input Method.  It makes use of skkserv to access
+the common dictionary.
