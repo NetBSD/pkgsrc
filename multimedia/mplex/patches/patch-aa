@@ -1,12 +1,12 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/01/26 12:52:07 jmmv Exp $
+$NetBSD: patch-aa,v 1.2 2004/03/30 19:53:44 ben Exp $
 
---- mplex/multplex.cc	2003/12/19 18:16:29	1.1
-+++ mplex/multplex.cc	2003/12/19 18:17:25
-@@ -3,6 +3,7 @@
- #include <math.h>
- #include <stdlib.h>
- #include <unistd.h>
-+#include <assert.h>
+--- mplex/Makefile.in.orig	Tue Feb  3 14:58:31 2004
++++ mplex/Makefile.in
+@@ -276,6 +276,7 @@ mplex_SOURCES = main.cpp 
  
- #include <mjpeg_types.h>
- #include <mjpeg_logging.h>
+ mplex_LDADD = \
+ 	$(top_builddir)/mplex/libmplex2.la \
++	$(top_builddir)/utils/libmjpegutils.a \
+ 	@LIBGETOPT_LIB@ $(LIBM_LIBS) 
+ 
+ subdir = mplex
