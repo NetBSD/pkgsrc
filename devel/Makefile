@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.171 2001/02/20 09:14:14 jun Exp $
+# $NetBSD: Makefile,v 1.172 2001/02/20 09:53:43 jun Exp $
 #
 
 COMMENT=	Development utilities
@@ -146,6 +146,7 @@ SUBDIR+=	rpc2
 SUBDIR+=	rvm
 SUBDIR+=	rx
 SUBDIR+=	sdcc
+SUBDIR+=	semi
 SUBDIR+=	sfio
 SUBDIR+=	sgi-stl
 SUBDIR+=	sgi-stl-docs
