@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2004/06/05 12:22:47 mrauch Exp $
+# $NetBSD: Makefile,v 1.51 2004/06/07 20:45:48 mrauch Exp $
 
 DISTNAME=		openoffice-1.1.1
 CATEGORIES=		misc
@@ -60,7 +60,7 @@ post-extract:
 		${WRKSRC}/../offmgr/res/openintro.bmp
 # bring the localized helpcontent into place
 	${MKDIR} ${WRKSRC}/../helpcontent/${OPENOFFICE_OUTPATH}.pro/bin
-	${CP} ${WRKDIR}/*.zip ${WRKSRC}/../helpcontent/${OPENOFFICE_OUTPATH}.pro/bin/
+	-${CP} ${WRKDIR}/*.zip ${WRKSRC}/../helpcontent/${OPENOFFICE_OUTPATH}.pro/bin/
 
 do-build:
 	${_ULIMIT_CMD} tcsh -c "setenv PTHREAD_DIAGASSERT Ael && cd ${WRKSRC}/.. && ./bootstrap && source ${OPENOFFICE_SETFILE}Env.Set && dmake"
