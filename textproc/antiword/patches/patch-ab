@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.6 2004/11/23 18:20:03 wiz Exp $
+
+--- main_u.c.orig	2004-10-14 18:49:18.000000000 +0200
++++ main_u.c
+@@ -29,7 +29,7 @@
+ #include <fcntl.h>
+ #include <io.h>
+ #endif /* __dos */
+-#if defined(__STDC_ISO_10646__)
++#if defined(__STDC_ISO_10646__) || defined(__NetBSD__)
+ #include <locale.h>
+ #endif /* __STDC_ISO_10646__ */
+ #if defined(N_PLAT_NLM)
