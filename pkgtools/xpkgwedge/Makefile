@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2001/06/16 08:53:48 veego Exp $
+# $NetBSD: Makefile,v 1.23 2001/06/18 05:17:14 jlam Exp $
 #
 
 DISTNAME=	xpkgwedge-1.2
@@ -27,6 +27,16 @@ DIFF=		${LOCALBASE}/bin/gdiff
 DIFF=		/usr/bin/diff
 .endif
 
+FILES_SUBST=		X11BASE=${X11BASE}
+FILES_SUBST+=		PREFIX=${PREFIX}
+FILES_SUBST+=		CP=${CP:Q}
+FILES_SUBST+=		DIFF=${DIFF:Q}
+FILES_SUBST+=		GREP=${GREP:Q}
+FILES_SUBST+=		RM=${RM:Q}
+FILES_SUBST+=		RMDIR=${RMDIR:Q}
+FILES_SUBST+=		TRUE=${TRUE:Q}
+FILES_SUBST_SED=	${FILES_SUBST:S/=/@!/:S/$/!g/:S/^/ -e s!@/}
+
 pre-extract:
 	@if [ ! -f ${X11BASE}/include/X11/X.h ]; then \
 		${ECHO} 'xpkgwedge requires $$X11BASE to point to the real X distribution.'; \
@@ -36,14 +46,11 @@ pre-extract:
 	fi
 
 do-build:
-	${SED}  -e "s,@X11BASE@,${X11BASE},g" \
-		-e "s,@PREFIX@,${PREFIX},g" \
-		< ${FILESDIR}/pkgxmkmf.in > ${WRKDIR}/pkgxmkmf
-	${SED}	-e "s,@X11BASE@,${X11BASE},g" \
-		-e "s,@DIFF@,${DIFF},g" \
-		< ${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
-	${SED}	-e "s,@X11BASE@,${X11BASE},g" \
-		< ${PKGDIR}/INSTALL > ${INSTALL_FILE}
+	${SED} ${FILES_SUBST_SED} ${FILESDIR}/pkgxmkmf.in > ${WRKDIR}/pkgxmkmf
+
+pre-install:
+	${SED} ${FILES_SUBST_SED} ${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
+	${SED} ${FILES_SUBST_SED} ${PKGDIR}/INSTALL > ${INSTALL_FILE}
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/X11/config
