@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.482 2003/04/20 20:59:15 cjep Exp $
+$NetBSD: TODO,v 1.483 2003/04/20 23:21:11 rh Exp $
 
 Suggested new packages
 ======================
@@ -132,7 +132,6 @@ Suggested package updates
 	o gkrellm-2.1.8 [pkgsrc-wip]
 	o gkrellm-volume-2.1.7 [pkgsrc-wip]
 	o glade2-1.1.3 [pkg/19154|broken, wait for next release]
-	o gnome-applets-2.0.0
 	o gnome-python-1.99.13
 	o gnome2-terminal-2.0.2 [pkg/19415]
 	o gnomeicu-0.99
