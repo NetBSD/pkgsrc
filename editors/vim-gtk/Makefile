@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2002/03/24 19:38:54 martti Exp $
+# $NetBSD: Makefile,v 1.32 2002/09/14 00:10:46 jlam Exp $
 
 .include		"../vim-share/Makefile.common"
 
@@ -9,8 +9,7 @@ COMMENT=		Vim editor (vi clone) with X11 GTK+ GUI
 DEPENDS+=		vim-share-${VIM_VERSION}.${VIM_PATCHLEVEL}:../vim-share
 CONFLICTS+=		vim-[0-9]* vim-xaw-[0-9]*
 
-USE_BUILDLINK_ONLY=	yes
-
+USE_X11=		yes
 CONFIGURE_ARGS+=	--enable-gui=gtk
 CONFIGURE_ARGS+=	--with-tlib=ncurses
 
@@ -27,8 +26,8 @@ post-install:
 		${LN} -s vim ${PREFIX}/bin/$$f;				\
 	done
 
-.include "../../devel/ncurses/buildlink.mk"
-.include "../../graphics/xpm/buildlink.mk"
-.include "../../x11/gtk/buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
+.include "../../devel/ncurses/buildlink2.mk"
+.include "../../graphics/xpm/buildlink2.mk"
+.include "../../x11/gtk/buildlink2.mk"
+
 .include "../../mk/bsd.pkg.mk"
