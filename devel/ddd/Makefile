@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2003/09/12 20:07:12 grant Exp $
+# $NetBSD: Makefile,v 1.53 2003/09/12 21:02:10 tron Exp $
 #
 
 DISTNAME=	ddd-3.3.7
@@ -19,6 +19,7 @@ INFO_FILES=		ddd-themes.info ddd.info
 USE_GCC3=		# defined
 
 CONFIGURE_ARGS+=	--with-ncurses=no
+CONFIGURE_ENV+=		COMPFACE="${FALSE}"
 
 .include "../../mk/bsd.prefs.mk"
 
