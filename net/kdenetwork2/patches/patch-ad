@@ -1,13 +1,22 @@
-$NetBSD: patch-ad,v 1.1 2001/10/15 22:46:16 skrll Exp $
+$NetBSD: patch-ad,v 1.2 2001/10/22 11:03:50 skrll Exp $
 
 --- kdict/Makefile.in.orig	Mon Sep 10 07:17:55 2001
 +++ kdict/Makefile.in
-@@ -213,7 +213,7 @@
+@@ -213,8 +213,6 @@
  x_includes = @x_includes@
  x_libraries = @x_libraries@
  
 -KDE_CXXFLAGS = $(USE_THREADS)
-+KDE_CXXFLAGS =
- 
+-
  # this has all of the subdirectories that make will recurse into.  if
  # there are none, comment this out
+ SUBDIRS = applet pics
+@@ -224,7 +222,7 @@
+ bin_PROGRAMS = kdict
+ 
+ # set the include path for X, qt and KDE
+-INCLUDES = $(all_includes)
++INCLUDES = $(USE_THREADS) $(all_includes)
+ 
+ # the library search path.
+ kdict_LDFLAGS = $(KDE_RPATH) $(all_libraries)
