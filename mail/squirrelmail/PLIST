@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/01/07 11:49:45 jlam Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/01/28 15:34:57 bouyer Exp $
 share/examples/squirrelmail/squirrelmail.conf
 share/squirrelmail/AUTHORS
 share/squirrelmail/COPYING
@@ -18,6 +18,8 @@ share/squirrelmail/data/index.php
 share/squirrelmail/doc/README.russian_apache
 share/squirrelmail/doc/ReleaseNotes/1.2/Notes-1.2.0.txt
 share/squirrelmail/doc/ReleaseNotes/1.2/Notes-1.2.1.txt
+share/squirrelmail/doc/ReleaseNotes/1.2/Notes-1.2.2.txt
+share/squirrelmail/doc/ReleaseNotes/1.2/Notes-1.2.3.txt
 share/squirrelmail/doc/addressbook.txt
 share/squirrelmail/doc/db-backend.txt
 share/squirrelmail/doc/ie_ssl.txt
@@ -224,6 +226,7 @@ share/squirrelmail/help/th_TH/read_mail.hlp
 share/squirrelmail/help/th_TH/search.hlp
 share/squirrelmail/images/down_pointer.png
 share/squirrelmail/images/index.php
+share/squirrelmail/images/sec_remove_eng.png
 share/squirrelmail/images/sm_logo.jpg
 share/squirrelmail/images/sm_logo.png
 share/squirrelmail/images/sort_none.png
@@ -324,6 +327,10 @@ share/squirrelmail/plugins/newmail/sounds/MontyPython.wav
 share/squirrelmail/plugins/newmail/sounds/Notify.wav
 share/squirrelmail/plugins/newmail/testsound.php
 share/squirrelmail/plugins/sent_subfolders/setup.php
+share/squirrelmail/plugins/spamcop/options.php
+share/squirrelmail/plugins/spamcop/README
+share/squirrelmail/plugins/spamcop/setup.php
+share/squirrelmail/plugins/spamcop/spamcop.php
 share/squirrelmail/plugins/squirrelspell/INSTALL
 share/squirrelmail/plugins/squirrelspell/doc/CRYPTO
 share/squirrelmail/plugins/squirrelspell/doc/ChangeLog
@@ -339,18 +346,18 @@ share/squirrelmail/plugins/squirrelspell/js/decrypt_error.js
 share/squirrelmail/plugins/squirrelspell/js/index.php
 share/squirrelmail/plugins/squirrelspell/js/init.js
 share/squirrelmail/plugins/squirrelspell/modules/WHATISTHIS
-share/squirrelmail/plugins/squirrelspell/modules/check_me.mod.php
-share/squirrelmail/plugins/squirrelspell/modules/crypto.mod.php
-share/squirrelmail/plugins/squirrelspell/modules/crypto_badkey.mod.php
-share/squirrelmail/plugins/squirrelspell/modules/edit_dic.mod.php
-share/squirrelmail/plugins/squirrelspell/modules/enc_setup.mod.php
-share/squirrelmail/plugins/squirrelspell/modules/forget_me.mod.php
-share/squirrelmail/plugins/squirrelspell/modules/forget_me_not.mod.php
+share/squirrelmail/plugins/squirrelspell/modules/check_me.mod
+share/squirrelmail/plugins/squirrelspell/modules/crypto.mod
+share/squirrelmail/plugins/squirrelspell/modules/crypto_badkey.mod
+share/squirrelmail/plugins/squirrelspell/modules/edit_dic.mod
+share/squirrelmail/plugins/squirrelspell/modules/enc_setup.mod
+share/squirrelmail/plugins/squirrelspell/modules/forget_me.mod
+share/squirrelmail/plugins/squirrelspell/modules/forget_me_not.mod
 share/squirrelmail/plugins/squirrelspell/modules/index.php
-share/squirrelmail/plugins/squirrelspell/modules/init.mod.php
-share/squirrelmail/plugins/squirrelspell/modules/lang_change.mod.php
-share/squirrelmail/plugins/squirrelspell/modules/lang_setup.mod.php
-share/squirrelmail/plugins/squirrelspell/modules/options_main.mod.php
+share/squirrelmail/plugins/squirrelspell/modules/init.mod
+share/squirrelmail/plugins/squirrelspell/modules/lang_change.mod
+share/squirrelmail/plugins/squirrelspell/modules/lang_setup.mod
+share/squirrelmail/plugins/squirrelspell/modules/options_main.mod
 share/squirrelmail/plugins/squirrelspell/setup.php
 share/squirrelmail/plugins/squirrelspell/sqspell_config.php
 share/squirrelmail/plugins/squirrelspell/sqspell_functions.php
@@ -414,6 +421,11 @@ share/squirrelmail/themes/blue_grey_theme.php
 share/squirrelmail/themes/bluesnews_theme.php
 share/squirrelmail/themes/bluesteel_theme.php
 share/squirrelmail/themes/christmas.php
+share/squirrelmail/themes/css/sans-08.css
+share/squirrelmail/themes/css/sans-10.css
+share/squirrelmail/themes/css/sans-12.css
+share/squirrelmail/themes/css/serif-10.css
+share/squirrelmail/themes/css/serif-12.css
 share/squirrelmail/themes/dark_grey_theme.php
 share/squirrelmail/themes/darkness.php
 share/squirrelmail/themes/deepocean2_theme.php
@@ -442,6 +454,7 @@ share/squirrelmail/themes/slashdot_theme.php
 share/squirrelmail/themes/spice_of_life.php
 share/squirrelmail/themes/spice_of_life_dark.php
 share/squirrelmail/themes/spice_of_life_lite.php
+@dirrm share/squirrelmail/themes/css
 @dirrm share/squirrelmail/themes
 @dirrm share/squirrelmail/src
 @dirrm share/squirrelmail/po
@@ -450,6 +463,7 @@ share/squirrelmail/themes/spice_of_life_lite.php
 @dirrm share/squirrelmail/plugins/squirrelspell/js
 @dirrm share/squirrelmail/plugins/squirrelspell/doc
 @dirrm share/squirrelmail/plugins/squirrelspell
+@dirrm share/squirrelmail/plugins/spamcop
 @dirrm share/squirrelmail/plugins/sent_subfolders
 @dirrm share/squirrelmail/plugins/newmail/sounds
 @dirrm share/squirrelmail/plugins/newmail
