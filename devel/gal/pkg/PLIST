@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.7 2001/03/18 02:12:02 mjl Exp $
+@comment $NetBSD: PLIST,v 1.8 2001/03/19 12:57:44 tron Exp $
 include/gal/util/e-util.h
 include/gal/util/e-xml-utils.h
 include/gal/util/e-cache.h
 include/gal/util/e-i18n.h
-@dirrm include/gal/util
 include/gal/widgets/color-group.h
 include/gal/widgets/color-palette.h
 include/gal/widgets/e-canvas-utils.h
@@ -27,7 +26,6 @@ include/gal/widgets/gtk-combo-stack.h
 include/gal/widgets/gtk-combo-text.h
 include/gal/widgets/widget-color-combo.h
 include/gal/widgets/widget-pixmap-combo.h
-@dirrm include/gal/widgets
 include/gal/e-text/e-entry.h
 include/gal/e-text/e-text-event-processor-emacs-like.h
 include/gal/e-text/e-text-event-processor-types.h
@@ -35,11 +33,9 @@ include/gal/e-text/e-text-event-processor.h
 include/gal/e-text/e-text-model.h
 include/gal/e-text/e-text-model-uri.h
 include/gal/e-text/e-text.h
-@dirrm include/gal/e-text
 include/gal/e-paned/e-hpaned.h
 include/gal/e-paned/e-paned.h
 include/gal/e-paned/e-vpaned.h
-@dirrm include/gal/e-paned
 include/gal/e-table/e-cell.h
 include/gal/e-table/e-cell-checkbox.h
 include/gal/e-table/e-cell-date.h
@@ -83,7 +79,6 @@ include/gal/e-table/e-table-text-model.h
 include/gal/e-table/e-tree-model.h
 include/gal/e-table/e-tree-simple.h
 include/gal/e-table/e-table-tooltip.h
-@dirrm include/gal/e-table
 include/gal/menus/gal-define-views-dialog.h
 include/gal/menus/gal-define-views-model.h
 include/gal/menus/gal-view-collection.h
@@ -92,59 +87,64 @@ include/gal/menus/gal-view-factory-etable.h
 include/gal/menus/gal-view-factory.h
 include/gal/menus/gal-view-new-dialog.h
 include/gal/menus/gal-view.h
-@dirrm include/gal/menus
 include/gal/shortcut-bar/e-group-bar.h
 include/gal/shortcut-bar/e-icon-bar-bg-item.h
 include/gal/shortcut-bar/e-icon-bar.h
 include/gal/shortcut-bar/e-shortcut-bar.h
 include/gal/shortcut-bar/e-shortcut-model.h
 include/gal/shortcut-bar/e-vscrolled-bar.h
-@dirrm include/gal/shortcut-bar
-@dirrm include/gal
 lib/libgal.so.4.0
 lib/libgal.so.4
 lib/libgal.so
 lib/libgal.la
 lib/libgal.a
-lib/locale/da/LC_MESSAGES/gal.mo
-lib/locale/en_GB/LC_MESSAGES/gal.mo
-lib/locale/es/LC_MESSAGES/gal.mo
-lib/locale/fi/LC_MESSAGES/gal.mo
-lib/locale/fr/LC_MESSAGES/gal.mo
-lib/locale/gl/LC_MESSAGES/gal.mo
-lib/locale/hu/LC_MESSAGES/gal.mo
-lib/locale/it/LC_MESSAGES/gal.mo
-lib/locale/ja/LC_MESSAGES/gal.mo
-lib/locale/ko/LC_MESSAGES/gal.mo
-lib/locale/no/LC_MESSAGES/gal.mo
-lib/locale/sv/LC_MESSAGES/gal.mo
-lib/locale/pl/LC_MESSAGES/gal.mo
-lib/locale/ca/LC_MESSAGES/gal.mo
-lib/locale/de/LC_MESSAGES/gal.mo
-lib/locale/lt/LC_MESSAGES/gal.mo
-lib/locale/pt_BR/LC_MESSAGES/gal.mo
-lib/locale/ru/LC_MESSAGES/gal.mo
-lib/locale/sk/LC_MESSAGES/gal.mo
-lib/locale/tr/LC_MESSAGES/gal.mo
-lib/locale/uk/LC_MESSAGES/gal.mo
 lib/galConf.sh
 share/gal/0.5/glade/gal-categories.glade
 share/gal/0.5/glade/gal-define-views.glade
 share/gal/0.5/glade/gal-view-new-dialog.glade
-@dirrm share/gal/0.5/glade
-@dirrm share/gal/0.5
 share/gal/html/gal-api.sgml
 share/gal/html/gal.hierarchy
 share/gal/html/gal.signals
 share/gal/html/gal.types
 share/gal/html/gal-decl.txt
 share/gal/html/gal-sections.txt
-@dirrm share/gal/html/gal
-@dirrm share/gal/html
-@dirrm share/gal
 share/etable/0.5/glade/e-table-config.glade
 share/etable/0.5/glade/e-table-group.glade
 share/etable/0.5/glade/e-table-field-chooser.glade
+${PKGLOCALEDIR}/locale/da/LC_MESSAGES/gal.mo
+${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/gal.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/gal.mo
+${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/gal.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gal.mo
+${PKGLOCALEDIR}/locale/gl/LC_MESSAGES/gal.mo
+${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/gal.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/gal.mo
+${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/gal.mo
+${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/gal.mo
+${PKGLOCALEDIR}/locale/no/LC_MESSAGES/gal.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gal.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/gal.mo
+${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/gal.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gal.mo
+${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/gal.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/gal.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/gal.mo
+${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/gal.mo
+${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/gal.mo
+${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/gal.mo
+@dirrm share/gal/html/gal
+@dirrm share/gal/html
+@dirrm share/gal/0.5/glade
+@dirrm share/gal/0.5
+@dirrm share/gal
 @dirrm share/etable/0.5/glade
 @dirrm share/etable/0.5
 @dirrm share/etable
+@dirrm include/gal/widgets
+@dirrm include/gal/util
+@dirrm include/gal/shortcut-bar
+@dirrm include/gal/menus
+@dirrm include/gal/e-text
+@dirrm include/gal/e-table
+@dirrm include/gal/e-paned
+@dirrm include/gal
