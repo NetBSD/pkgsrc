@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2005/01/19 11:08:27 adam Exp $
+# $NetBSD: Makefile,v 1.34 2005/01/26 16:41:02 tv Exp $
 
 DISTNAME=	ntop-3.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ntop/}
 EXTRACT_SUFX=	.tgz
@@ -38,9 +38,9 @@ BUILDLINK_DEPENDS.libpcap+=	libpcap>=0.8.3
 
 .include "../../databases/gdbm/buildlink3.mk"
 .include "../../graphics/gdchart/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
 .include "../../net/libpcap/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/gdome2/buildlink3.mk"
-
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
