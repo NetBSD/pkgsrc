@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1998/06/22 12:39:47 agc Exp $
+# $NetBSD: Makefile,v 1.5 1998/07/04 05:11:14 mycroft Exp $
 #
 
 DISTNAME=       xart19980415
@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	packages@netbsd.org
 
-DEPENDS+=	jpeg-6a:../../graphics/jpeg
+DEPENDS+=	jpeg-6b:../../graphics/jpeg
 DEPENDS+=	tiff-3.4:../../graphics/tiff
 DEPENDS+=	xpm-3.4j:../../graphics/xpm
 DEPENDS+=	png-0.96:../../graphics/png
