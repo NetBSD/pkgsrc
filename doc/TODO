@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.13 2002/11/28 12:58:24 wiz Exp $
+$NetBSD: TODO,v 1.14 2002/11/28 13:30:52 wiz Exp $
 
 Suggested new packages
 ======================
@@ -107,7 +107,8 @@ Suggested package updates
 	o gd-2.0.4
 	o gedit-2.0.0
 	o gentoo-0.11.34
-	o gkrellm-2.0.4
+	o ghostscript-8.00 (apfl)
+	o gkrellm-2.1.1
 	o glade2-1.1.3 [pkg/19154]
 	o gnome-applets-2.0.0
 	o gnome-file-manager-2.0.1
@@ -124,7 +125,7 @@ Suggested package updates
 	o icu-2.2 [heinz]
 	o imlib2-1.0.6 [pkg/19144]
 	o irssi-0.8.6
-	o ivtools-1.0.5
+	o ivtools-1.0.7
 	o jakarta-ant-1.5 [pkg/18322]
 	o jed-0.99.16 [pkg/18937]
 	o jgloss-1.0.6
@@ -144,7 +145,7 @@ Suggested package updates
 	o librep-0.16.1
 	o libslang-1.4.6
 	o libsndfile-1.0.2
-	o libxml-2.4.27 [problems with kde2]
+	o libxml-2.4.28 [problems with kde2(?)]
 	o libxslt-1.0.23 [problems with kde2]
 	o lilypond-1.6.0
 	o lmbench-2.0.3
@@ -208,8 +209,9 @@ Suggested package updates
 	o sylpheed-claws-0.8.6
 	o tcl/tk-8.4.1 [bjoern]
 	o texmacs-1.0.0.17 [pkg/18495]
-	o texmacs-1.0.0.22
+	o texmacs-1.0.0.23
 	o ttf2pt1-3.4.2
+	o vfu-4.00
 	o vnc-3.3.4 [http://www.realvnc.com/download.html]
 	o wine-20021125
 	o xalan-c-1.4
