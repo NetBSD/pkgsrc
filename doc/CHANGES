@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5130 2004/03/07 11:20:22 recht Exp $
+$NetBSD: CHANGES,v 1.5131 2004/03/07 11:23:27 markd Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1216,3 +1216,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated sather to 1.2.1nb3 [seb 2004-03-07]
         Updated abiword to 2.0.4nb1 [jmmv 2004-03-07]
         Updated balsa2 to 2.0.16nb3 [recht 2004-03-07]
+        Updated mimedefang to 2.40 [markd 2004-03-07]
