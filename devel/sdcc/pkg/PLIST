@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2000/08/25 21:49:30 tron Exp $
+@comment $NetBSD: PLIST,v 1.3 2000/09/25 16:01:03 wulf Exp $
 bin/aslink
 bin/asx8051
 bin/s51
@@ -8,6 +8,43 @@ bin/sdcdb
 bin/sdcdb.el
 bin/sdcdbsrc.el
 bin/sdcpp
+share/doc/sdcc/SDCCBugsFixed.html
+share/doc/sdcc/SDCCUdoc-1.html
+share/doc/sdcc/SDCCUdoc-10.html
+share/doc/sdcc/SDCCUdoc-11.html
+share/doc/sdcc/SDCCUdoc-12.html
+share/doc/sdcc/SDCCUdoc-13.html
+share/doc/sdcc/SDCCUdoc-14.html
+share/doc/sdcc/SDCCUdoc-15.html
+share/doc/sdcc/SDCCUdoc-16.html
+share/doc/sdcc/SDCCUdoc-17.html
+share/doc/sdcc/SDCCUdoc-18.html
+share/doc/sdcc/SDCCUdoc-19.html
+share/doc/sdcc/SDCCUdoc-2.html
+share/doc/sdcc/SDCCUdoc-20.html
+share/doc/sdcc/SDCCUdoc-21.html
+share/doc/sdcc/SDCCUdoc-22.html
+share/doc/sdcc/SDCCUdoc-23.html
+share/doc/sdcc/SDCCUdoc-24.html
+share/doc/sdcc/SDCCUdoc-25.html
+share/doc/sdcc/SDCCUdoc-26.html
+share/doc/sdcc/SDCCUdoc-27.html
+share/doc/sdcc/SDCCUdoc-28.html
+share/doc/sdcc/SDCCUdoc-29.html
+share/doc/sdcc/SDCCUdoc-3.html
+share/doc/sdcc/SDCCUdoc-4.html
+share/doc/sdcc/SDCCUdoc-5.html
+share/doc/sdcc/SDCCUdoc-6.html
+share/doc/sdcc/SDCCUdoc-7.html
+share/doc/sdcc/SDCCUdoc-8.html
+share/doc/sdcc/SDCCUdoc-9.html
+share/doc/sdcc/SDCCUdoc.html
+share/doc/sdcc/SDCCUdoc.lyx
+share/doc/sdcc/SDCCUdoc.sgml
+share/doc/sdcc/SDCCUdoc.txt
+share/doc/sdcc/SDCCWebPage.html
+share/doc/sdcc/cdbfile.html
+share/doc/sdcc/cygwininst.txt
 share/sdcc51inc/assert.h
 share/sdcc51inc/at89S8252.h
 share/sdcc51inc/at89c55.h
@@ -575,6 +612,7 @@ share/sdcc51lib/small/serial.cdb
 share/sdcc51lib/small/serial.rel
 share/sdcc51lib/small/vprintf.cdb
 share/sdcc51lib/vprintf.c
+@dirrm share/doc/sdcc
 @dirrm share/sdcc51inc
 @dirrm share/sdcc51lib/large
 @dirrm share/sdcc51lib/small
