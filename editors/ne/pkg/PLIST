@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 1998/08/14 22:14:41 tron Exp $
+bin/ne
+man/man1/ne.1
+share/doc/ne/NE.spec.ascii
+share/doc/ne/NE.changes.spec
+share/doc/ne/LICENCE
+@dirrm share/doc/ne
