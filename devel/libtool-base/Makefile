@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2001/04/20 00:07:29 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2001/10/18 15:20:11 veego Exp $
 #
 
 .include "../libtool/Makefile.common"
 
 PKGNAME=        ${PKGPFX:C/-/-base-/}${PKGREV}
+SVR4_PKGNAME=	ltoob
 
 COMMENT=	Generic shared library support script (the script itself)
 
