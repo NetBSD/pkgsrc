@@ -3,4 +3,3 @@ for NetBSD.
 
 The kernel option `COMPAT_FREEBSD' needs to be in your kernel config
 file for this to work as well.
-
