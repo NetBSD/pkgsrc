@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:26:05 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/08 06:26:49 jlam Exp $
 bin/asnparser
-include/ptclib/cypher.h
 include/ptclib/asner.h
-include/ptclib/httpform.h
+include/ptclib/cypher.h
 include/ptclib/ftp.h
 include/ptclib/html.h
 include/ptclib/http.h
+include/ptclib/httpform.h
 include/ptclib/httpsvc.h
 include/ptclib/inetmail.h
 include/ptclib/inetprot.h
@@ -19,46 +19,10 @@ include/ptclib/random.h
 include/ptclib/socks.h
 include/ptclib/telnet.h
 include/ptclib/url.h
-@dirrm include/ptclib
 include/ptlib.h
-include/ptlib/channel.h
 include/ptlib/args.h
 include/ptlib/array.h
-include/ptlib/unix/ptlib/channel.h
-include/ptlib/unix/ptlib/conchan.h
-include/ptlib/unix/ptlib/config.h
-include/ptlib/unix/ptlib/contain.h
-include/ptlib/unix/ptlib/dynalink.h
-include/ptlib/unix/ptlib/ethsock.h
-include/ptlib/unix/ptlib/file.h
-include/ptlib/unix/ptlib/filepath.h
-include/ptlib/unix/ptlib/icmpsock.h
-include/ptlib/unix/ptlib/ipdsock.h
-include/ptlib/unix/ptlib/ipsock.h
-include/ptlib/unix/ptlib/mutex.h
-include/ptlib/unix/ptlib/pdirect.h
-include/ptlib/unix/ptlib/pipechan.h
-include/ptlib/unix/ptlib/pmachdep.h
-include/ptlib/unix/ptlib/pprocess.h
-include/ptlib/unix/ptlib/ptime.h
-include/ptlib/unix/ptlib/ptlib.inl
-include/ptlib/unix/ptlib/remconn.h
-include/ptlib/unix/ptlib/semaphor.h
-include/ptlib/unix/ptlib/serchan.h
-include/ptlib/unix/ptlib/sfile.h
-include/ptlib/unix/ptlib/socket.h
-include/ptlib/unix/ptlib/sound.h
-include/ptlib/unix/ptlib/timer.h
-include/ptlib/unix/ptlib/svcproc.h
-include/ptlib/unix/ptlib/syncpoint.h
-include/ptlib/unix/ptlib/tcpsock.h
-include/ptlib/unix/ptlib/textfile.h
-include/ptlib/unix/ptlib/thread.h
-include/ptlib/unix/ptlib/timeint.h
-include/ptlib/unix/ptlib/udpsock.h
-include/ptlib/unix/ptlib/videoio.h
-@dirrm include/ptlib/unix/ptlib
-@dirrm include/ptlib/unix
+include/ptlib/channel.h
 include/ptlib/conchan.h
 include/ptlib/config.h
 include/ptlib/contain.h
@@ -100,16 +64,52 @@ include/ptlib/thread.h
 include/ptlib/timeint.h
 include/ptlib/timer.h
 include/ptlib/udpsock.h
+include/ptlib/unix/ptlib/channel.h
+include/ptlib/unix/ptlib/conchan.h
+include/ptlib/unix/ptlib/config.h
+include/ptlib/unix/ptlib/contain.h
+include/ptlib/unix/ptlib/dynalink.h
+include/ptlib/unix/ptlib/ethsock.h
+include/ptlib/unix/ptlib/file.h
+include/ptlib/unix/ptlib/filepath.h
+include/ptlib/unix/ptlib/icmpsock.h
+include/ptlib/unix/ptlib/ipdsock.h
+include/ptlib/unix/ptlib/ipsock.h
+include/ptlib/unix/ptlib/mutex.h
+include/ptlib/unix/ptlib/pdirect.h
+include/ptlib/unix/ptlib/pipechan.h
+include/ptlib/unix/ptlib/pmachdep.h
+include/ptlib/unix/ptlib/pprocess.h
+include/ptlib/unix/ptlib/ptime.h
+include/ptlib/unix/ptlib/ptlib.inl
+include/ptlib/unix/ptlib/remconn.h
+include/ptlib/unix/ptlib/semaphor.h
+include/ptlib/unix/ptlib/serchan.h
+include/ptlib/unix/ptlib/sfile.h
+include/ptlib/unix/ptlib/socket.h
+include/ptlib/unix/ptlib/sound.h
+include/ptlib/unix/ptlib/svcproc.h
+include/ptlib/unix/ptlib/syncpoint.h
+include/ptlib/unix/ptlib/tcpsock.h
+include/ptlib/unix/ptlib/textfile.h
+include/ptlib/unix/ptlib/thread.h
+include/ptlib/unix/ptlib/timeint.h
+include/ptlib/unix/ptlib/timer.h
+include/ptlib/unix/ptlib/udpsock.h
+include/ptlib/unix/ptlib/videoio.h
 include/ptlib/videoio.h
-@dirrm include/ptlib
-lib/libpt.la
 lib/libpt.a
+lib/libpt.la
 lib/libpt.so
 lib/libpt.so.1
 lib/libpt.so.1.1
-share/pwlib/make/unix.mak
 share/pwlib/make/common.mak
 share/pwlib/make/lib.mak
 share/pwlib/make/ptlib.mak
+share/pwlib/make/unix.mak
 @dirrm share/pwlib/make
 @dirrm share/pwlib
+@dirrm include/ptlib/unix/ptlib
+@dirrm include/ptlib/unix
+@dirrm include/ptlib
+@dirrm include/ptclib
