@@ -1,8 +1,8 @@
-$NetBSD: patch-aj,v 1.4 2003/03/11 13:13:28 markd Exp $
+$NetBSD: patch-aj,v 1.5 2003/05/22 02:53:24 markd Exp $
 
---- kxmlrpc/Makefile.in.orig	Fri Jan 17 08:54:54 2003
+--- kxmlrpc/Makefile.in.orig	Thu May  8 00:37:59 2003
 +++ kxmlrpc/Makefile.in
-@@ -254,18 +254,23 @@ x_libraries = @x_libraries@
+@@ -290,18 +290,23 @@ x_libraries = @x_libraries@
  INCLUDES = $(all_includes)
  
  bin_PROGRAMS = kxmlrpcd
@@ -32,7 +32,7 @@ $NetBSD: patch-aj,v 1.4 2003/03/11 13:13:28 markd Exp $
  #>- kxmlrpcd_la_METASOURCES = AUTO
  
  kcm_xmlrpcd_la_LIBADD = $(LIB_KDECORE)
-@@ -287,24 +292,29 @@ am_kcm_xmlrpcd_la_OBJECTS = kxmlrpcinit.
+@@ -323,42 +328,50 @@ am_kcm_xmlrpcd_la_OBJECTS = kxmlrpcinit.
  #>- kcm_xmlrpcd_la_OBJECTS = $(am_kcm_xmlrpcd_la_OBJECTS)
  #>+ 1
  kcm_xmlrpcd_la_OBJECTS = kxmlrpcinit.lo
@@ -70,10 +70,7 @@ $NetBSD: patch-aj,v 1.4 2003/03/11 13:13:28 markd Exp $
 +kxmlrpcd_OBJECTS = kxmlrpcd_main.$(OBJEXT)
 +kxmlrpcd_DEPENDENCIES = libkxmlrpcd_main.la
  
- DEFS = @DEFS@
  DEFAULT_INCLUDES =  -I. -I$(srcdir) -I$(top_builddir)
-@@ -313,20 +323,23 @@ LDFLAGS = @LDFLAGS@
- LIBS = @LIBS@
  depcomp = $(SHELL) $(top_srcdir)/admin/depcomp
  am__depfiles_maybe = depfiles
 -#>- @AMDEP_TRUE@DEP_FILES = ./$(DEPDIR)/dummy.Po \
@@ -100,9 +97,9 @@ $NetBSD: patch-aj,v 1.4 2003/03/11 13:13:28 markd Exp $
  @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/kxmlrpcdaemon.Plo \
  @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/kxmlrpcinit.Plo \
  @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/kxmlrpcparser.Plo \
-@@ -353,13 +366,13 @@ CXXLINK = $(LIBTOOL) --mode=link --tag=C
+@@ -384,13 +397,13 @@ CXXLD = $(CXX)
+ CXXLINK = $(LIBTOOL) --mode=link --tag=CXX $(CXXLD) $(AM_CXXFLAGS) $(CXXFLAGS) $(KDE_CXXFLAGS) \
  	$(AM_LDFLAGS) $(LDFLAGS) -o $@
- CXXFLAGS = @CXXFLAGS@
  DIST_SOURCES = $(kcm_xmlrpcd_la_SOURCES) $(kxmlrpcd_la_SOURCES) \
 -	$(kxmlrpcd_SOURCES)
 +	$(libkxmlrpcd_main_la_SOURCES) $(kxmlrpcd_SOURCES)
@@ -116,7 +113,7 @@ $NetBSD: patch-aj,v 1.4 2003/03/11 13:13:28 markd Exp $
  
  #>- all: all-am
  #>+ 1
-@@ -439,6 +452,8 @@ clean-libLTLIBRARIES:
+@@ -470,6 +483,8 @@ clean-libLTLIBRARIES:
  	$(CXXLINK) -rpath $(kde_moduledir) $(kcm_xmlrpcd_la_LDFLAGS) $(kcm_xmlrpcd_la_OBJECTS) $(kcm_xmlrpcd_la_LIBADD) $(LIBS)
  kxmlrpcd.la: $(kxmlrpcd_la_OBJECTS) $(kxmlrpcd_la_DEPENDENCIES) 
  	$(CXXLINK) -rpath $(libdir) $(kxmlrpcd_la_LDFLAGS) $(kxmlrpcd_la_OBJECTS) $(kxmlrpcd_la_LIBADD) $(LIBS)
@@ -125,7 +122,7 @@ $NetBSD: patch-aj,v 1.4 2003/03/11 13:13:28 markd Exp $
  binPROGRAMS_INSTALL = $(INSTALL_PROGRAM)
  install-binPROGRAMS: $(bin_PROGRAMS)
  	@$(NORMAL_INSTALL)
-@@ -478,7 +493,8 @@ mostlyclean-compile:
+@@ -509,7 +524,8 @@ mostlyclean-compile:
  distclean-compile:
  	-rm -f *.tab.c
  
@@ -135,8 +132,8 @@ $NetBSD: patch-aj,v 1.4 2003/03/11 13:13:28 markd Exp $
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/kxmlrpcdaemon.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/kxmlrpcinit.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/kxmlrpcparser.Plo@am__quote@
-@@ -572,7 +588,7 @@ distclean-tags:
- 	-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH
+@@ -635,7 +651,7 @@ distclean-tags:
+ 	-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
  #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
  #>+ 4
 -KDE_DIST=kxmlrpcd.desktop LICENSE 
@@ -144,7 +141,7 @@ $NetBSD: patch-aj,v 1.4 2003/03/11 13:13:28 markd Exp $
  
  DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
  
-@@ -723,8 +739,12 @@ kxmlrpcserver.moc: $(srcdir)/kxmlrpcserv
+@@ -801,8 +817,12 @@ kxmlrpcserver.moc: $(srcdir)/kxmlrpcserv
  	$(MOC) $(srcdir)/kxmlrpcserver.h -o kxmlrpcserver.moc
  
  #>+ 3
@@ -158,7 +155,7 @@ $NetBSD: patch-aj,v 1.4 2003/03/11 13:13:28 markd Exp $
  
  #>+ 3
  clean-closures:
-@@ -741,33 +761,33 @@ force-reedit:
+@@ -819,33 +839,33 @@ force-reedit:
  
  
  #>+ 11
@@ -205,7 +202,7 @@ $NetBSD: patch-aj,v 1.4 2003/03/11 13:13:28 markd Exp $
  #>+ 3
  cvs-clean:
  	$(MAKE) admindir=$(top_srcdir)/admin -f $(top_srcdir)/admin/Makefile.common cvs-clean
-@@ -777,5 +797,5 @@ kde-rpo-clean:
+@@ -855,5 +875,5 @@ kde-rpo-clean:
  	-rm -f *.rpo
  
  #>+ 3

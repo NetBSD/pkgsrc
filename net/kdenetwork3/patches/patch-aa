@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.5 2003/03/11 13:13:28 markd Exp $
+$NetBSD: patch-aa,v 1.6 2003/05/22 02:53:24 markd Exp $
 
---- configure.orig	Fri Jan 17 08:54:59 2003
+--- configure.orig	Thu May  8 00:38:01 2003
 +++ configure
-@@ -27870,65 +27870,6 @@ _ACEOF
+@@ -28610,65 +28610,6 @@ _ACEOF
  
  
  
@@ -10,14 +10,12 @@ $NetBSD: patch-aa,v 1.5 2003/03/11 13:13:28 markd Exp $
 -echo $ECHO_N "checking sizeof(size_t) == sizeof(unsigned long)... $ECHO_C" >&6
 -  cat >conftest.$ac_ext <<_ACEOF
 -#line $LINENO "configure"
--#include "confdefs.h"
+-/* confdefs.h.  */
+-_ACEOF
+-cat confdefs.h >>conftest.$ac_ext
+-cat >>conftest.$ac_ext <<_ACEOF
+-/* end confdefs.h.  */
 -
--#ifdef F77_DUMMY_MAIN
--#  ifdef __cplusplus
--     extern "C"
--#  endif
--   int F77_DUMMY_MAIN() { return 1; }
--#endif
 -int
 -main ()
 -{
@@ -46,7 +44,8 @@ $NetBSD: patch-aa,v 1.5 2003/03/11 13:13:28 markd Exp $
 -echo "${ECHO_T}yes" >&6
 -else
 -  echo "$as_me: failed program was:" >&5
--cat conftest.$ac_ext >&5
+-sed 's/^/| /' conftest.$ac_ext >&5
+-
 -
 -      echo "$as_me:$LINENO: result: no" >&5
 -echo "${ECHO_T}no" >&6
@@ -65,6 +64,7 @@ $NetBSD: patch-aa,v 1.5 2003/03/11 13:13:28 markd Exp $
 -
 -
 -
- 
+-
      if test -z "$LIBPTHREAD"; then
      if test -z "$USE_THREADS"; then
+       kde_check_threading_default=no
