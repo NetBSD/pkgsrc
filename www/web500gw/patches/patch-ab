@@ -1,8 +1,37 @@
-$NetBSD: patch-ab,v 1.1.1.1 1999/01/08 14:15:57 hwr Exp $
+$NetBSD: patch-ab,v 1.2 2002/06/24 18:38:36 kent Exp $
 
---- web500gw.h.orig	Wed Oct 28 13:27:47 1998
-+++ web500gw.h	Fri Jan  8 14:26:55 1999
-@@ -69,9 +69,9 @@
+--- web500gw.h.orig	Wed Oct 28 21:27:47 1998
++++ web500gw.h
+@@ -22,6 +22,28 @@
+ 
+ #include "lber.h"
+ #include "ldap.h"
++#if defined(LDAP_VENDOR_VERSION) && (LDAP_VENDOR_VERSION >= 20000)
++# ifdef LDAP_DEBUG
++#  undef LDAP_DEBUG
++# endif
++# define NULLTMPLITEM		((struct ldap_tmplitem *)0)
++# define LD_MATCHED(R)		"(No info)"
++# define SET_SIZELIMIT(LD,V)	do { \
++    int value = V; \
++    ldap_set_option(LD, LDAP_OPT_SIZELIMIT, &value); \
++} while (0)
++# define SET_DEREF(LD,V)	do { \
++    int value = V; \
++    ldap_set_option(LD, LDAP_OPT_DEREF, &value); \
++} while (0)
++#else
++# ifndef LDAP_VENDOR_VERSION
++#  define LDAP_VENDOR_VERSION	10000
++# endif
++# define LD_MATCHED(R)		(R)->r_ld->ld_matched
++# define SET_SIZELIMIT(LD,V)	(LD)->ld_sizelimit = V
++# define SET_DEREF(LD,V)	(LD)->ld_deref = V
++#endif
+ #include "disptmpl.h"
+ #include <stdio.h>
+ #include <stdarg.h>
+@@ -69,9 +91,9 @@
  #include <unistd.h>
  #endif /* USE_SYSCONF */
  
@@ -14,3 +43,15 @@ $NetBSD: patch-ab,v 1.1.1.1 1999/01/08 14:15:57 hwr Exp $
  
  #include "messages.h"
  extern char *msg[];
+@@ -456,7 +478,11 @@
+     char    *c_helpfile;            /* name of helpfile */
+     char    *c_attrfile;            /* name of helpfile for attributes */
+     char    *c_friendlyfile;        /* name of friendlyfile */
++#if LDAP_VENDOR_VERSION < 20000
+     FriendlyMap *c_fm;
++#else
++    LDAPFriendlyMap *c_fm;
++#endif
+     char    *c_messagefile;         /* name of messagefile */
+     char    *c_msg[MSG_count + 1];
+     char    **c_errmsg;
