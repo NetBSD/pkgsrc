@@ -1,0 +1,7 @@
+===========================================================================
+$NetBSD: MESSAGE.sasl,v 1.1.1.1 2004/03/06 15:04:11 grant Exp $
+
+To enable SASL authentication, you might need to change permission
+of ${PKG_SYSCONFDIR}/sasldb.db so that smtpd can read it, and configure
+${PKG_SYSCONFDIR}/main.cf (See ${SHAREDIR}/sample-auth.cf.)
+===========================================================================
