@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.8 2005/01/09 22:52:13 recht Exp $
+@comment $NetBSD: PLIST,v 1.9 2005/01/16 04:44:50 tv Exp $
 bin/${GTAR_PROGRAM_PREFIX}tar
 ${GTAR_LINK}bin/gtar
-libexec/${GTAR_PROGRAM_PREFIX}rmt
 man/man1/${GTAR_PROGRAM_PREFIX}tar.1
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/tar.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/tar.mo
