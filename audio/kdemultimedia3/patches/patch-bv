@@ -1,8 +1,8 @@
-$NetBSD: patch-bv,v 1.2 2003/01/02 09:12:22 skrll Exp $
+$NetBSD: patch-bv,v 1.3 2003/07/30 14:56:04 markd Exp $
 
---- noatun/modules/metatag/Makefile.in.orig	Sat Dec 28 14:04:00 2002
+--- noatun/modules/metatag/Makefile.in.orig	2003-07-15 22:14:00.000000000 +1200
 +++ noatun/modules/metatag/Makefile.in
-@@ -294,7 +294,7 @@ kde_module_LTLIBRARIES = noatun_metatag.
+@@ -382,7 +382,7 @@ kde_module_LTLIBRARIES = noatun_metatag.
  noatun_metatag_la_SOURCES = metatag.cpp edit.cpp
  
  noatun_metatag_la_LDFLAGS = $(all_libraries) -module -avoid-version -no-undefined
@@ -11,7 +11,7 @@ $NetBSD: patch-bv,v 1.2 2003/01/02 09:12:22 skrll Exp $
  	$(top_builddir)/noatun/library/noatuntags/libnoatuntags.la
  
  
-@@ -310,7 +310,7 @@ CONFIG_CLEAN_FILES =
+@@ -398,7 +398,7 @@ CONFIG_CLEAN_FILES =
  LTLIBRARIES = $(kde_module_LTLIBRARIES)
  
  noatun_metatag_la_DEPENDENCIES = \
@@ -20,21 +20,36 @@ $NetBSD: patch-bv,v 1.2 2003/01/02 09:12:22 skrll Exp $
  	$(top_builddir)/noatun/library/noatuntags/libnoatuntags.la
  am_noatun_metatag_la_OBJECTS = metatag.lo edit.lo
  #>- noatun_metatag_la_OBJECTS = $(am_noatun_metatag_la_OBJECTS)
-@@ -622,16 +622,16 @@ noatun_metatag.la.closure: $(noatun_meta
+@@ -619,7 +619,7 @@ distclean-tags:
+ 	-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
+ #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
+ #>+ 4
+-KDE_DIST=HANDLED_ITEMS metatag.plugin 
++KDE_DIST=HANDLED_ITEMS Makefile.in.rej metatag.plugin 
+ 
+ DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
+ 
+@@ -769,20 +769,20 @@ noatun_metatag.la.closure: $(noatun_meta
  
  
  #>+ 3
 -metatag.moc: $(srcdir)/metatag.h
 -	$(MOC) $(srcdir)/metatag.h -o metatag.moc
 -
+-#>+ 1
+-mocs: metatag.moc
 -#>+ 3
  edit.moc: $(srcdir)/edit.h
  	$(MOC) $(srcdir)/edit.h -o edit.moc
  
+ #>+ 1
+ mocs: edit.moc
  #>+ 3
 +metatag.moc: $(srcdir)/metatag.h
 +	$(MOC) $(srcdir)/metatag.h -o metatag.moc
 +
++#>+ 1
++mocs: metatag.moc
 +#>+ 3
  clean-metasources:
 -	-rm -f  metatag.moc edit.moc
@@ -42,7 +57,7 @@ $NetBSD: patch-bv,v 1.2 2003/01/02 09:12:22 skrll Exp $
  
  #>+ 3
  clean-closures:
-@@ -648,7 +648,7 @@ force-reedit:
+@@ -799,7 +799,7 @@ force-reedit:
  
  
  #>+ 11
@@ -51,7 +66,7 @@ $NetBSD: patch-bv,v 1.2 2003/01/02 09:12:22 skrll Exp $
  	@echo 'creating noatun_metatag_la.all_cpp.cpp ...'; \
  	rm -f noatun_metatag_la.all_cpp.files noatun_metatag_la.all_cpp.final; \
  	echo "#define KDE_USE_FINAL 1" >> noatun_metatag_la.all_cpp.final; \
-@@ -685,6 +685,6 @@ kde-rpo-clean:
+@@ -836,6 +836,6 @@ kde-rpo-clean:
  
  #>+ 5
  metatag.o: metatag.moc 
