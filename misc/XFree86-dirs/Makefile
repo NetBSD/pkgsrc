@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/04/14 21:15:01 jmmv Exp $
+# $NetBSD: Makefile,v 1.3 2004/04/17 11:10:53 jmmv Exp $
 #
 
 DISTNAME=	XFree86-dirs-1.0
@@ -29,5 +29,4 @@ MAKE_DIRS+=	${_SORTED:S/^/${X11ROOT}\//}
 
 do-install:	# nothing
 
-.include "Makefile.common"
 .include "../../mk/bsd.pkg.mk"
