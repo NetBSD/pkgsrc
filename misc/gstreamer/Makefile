@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/11/12 01:31:50 salo Exp $
+# $NetBSD: Makefile,v 1.9 2003/12/03 22:10:08 recht Exp $
 #
 
 DISTNAME=		gstreamer-0.6.1
@@ -25,7 +25,7 @@ PKGCONFIG_OVERRIDE+=	${WRKSRC}/libs/ext/cothreads/cothreads.pc.in
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/pkgconfig/gstreamer-control.pc.in
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/pkgconfig/gstreamer.pc.in
 
-PYTHON_VERSIONS_ACCEPTED=      22 22pth
+PYTHON_VERSIONS_ACCEPTED=	23 23pth 22 22pth
 
 .include "../../devel/glib2/buildlink2.mk"
 .include "../../devel/libgnomeui/buildlink2.mk"
