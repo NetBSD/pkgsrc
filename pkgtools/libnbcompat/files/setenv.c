@@ -1,8 +1,8 @@
-/*	$NetBSD: setenv.c,v 1.9 2004/08/16 17:24:56 jlam Exp $	*/
+/*	$NetBSD: setenv.c,v 1.10 2004/08/23 03:32:12 jlam Exp $	*/
 
 /*
- * Copyright (c) 1987 Regents of the University of California.
- * All rights reserved.
+ * Copyright (c) 1987, 1993
+ *	The Regents of the University of California.  All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -29,50 +29,54 @@
  * SUCH DAMAGE.
  */
 
+#include <nbcompat.h>
+#include <nbcompat/cdefs.h>
 #if defined(LIBC_SCCS) && !defined(lint)
-/*static char *sccsid = "from: @(#)setenv.c	5.6 (Berkeley) 6/4/91";*/
-static char *rcsid = "$Id: setenv.c,v 1.9 2004/08/16 17:24:56 jlam Exp $";
+#if 0
+static char sccsid[] = "@(#)setenv.c	8.1 (Berkeley) 6/4/93";
+#else
+__RCSID("$NetBSD: setenv.c,v 1.10 2004/08/23 03:32:12 jlam Exp $");
+#endif
 #endif /* LIBC_SCCS and not lint */
 
-#include "nbcompat/nbconfig.h"
-
-#if HAVE_STRINGS_H
-#include <strings.h>
+#if 0
+#include "namespace.h"
 #endif
 
-#include <stddef.h>
-#include <stdlib.h>
-#include <string.h>
+#include <nbcompat/assert.h>
+#if HAVE_ERRNO_H
+#include <errno.h>
+#endif
+#include <nbcompat/stdlib.h>
+#include <nbcompat/string.h>
+#if 0
+#include "local.h"
+#include "reentrant.h"
+#endif
 
-/*
- * __findenv --
- *	Returns pointer to value associated with name, if any, else NULL.
- *	Sets offset to be the offset of the name/value combination in the
- *	environmental array, for use by setenv(3) and unsetenv(3).
- *	Explicitly removes '=' in argument name.
- *
- *	This routine *should* be a static; don't use it.
- */
-static char *
-__findenv(name, offset)
-	register char *name;
-	int *offset;
-{
-	extern char **environ;
-	register int len;
-	register char **P, *C;
+char *__findenv __P((const char *, int *));
 
-	for (C = name, len = 0; *C && *C != '='; ++C, ++len);
-	for (P = environ; *P; ++P)
-		if (!strncmp(*P, name, len))
-			if (*(C = *P + len) == '=') {
-				*offset = P - environ;
-				return(++C);
-			}
-	return(NULL);
-}
+#if 0
+#ifdef __weak_alias
+__weak_alias(setenv,_setenv)
+#endif
+#endif
 
-#if !HAVE_SETENV
+#if 0
+#ifdef _REENTRANT
+extern rwlock_t __environ_lock;
+#endif
+#endif
+
+extern char **environ;
+
+#ifndef rwlock_wrlock
+#define rwlock_wrlock(lock)	((void)0)
+#endif
+#ifndef rwlock_unlock
+#define rwlock_unlock(lock)	((void)0)
+#endif
+
 /*
  * setenv --
  *	Set the value of the environmental variable "name" to be
@@ -80,78 +84,69 @@ __findenv(name, offset)
  */
 int
 setenv(name, value, rewrite)
-	register const char *name;
-	register const char *value;
+	const char *name;
+	const char *value;
 	int rewrite;
 {
-	extern char **environ;
 	static int alloced;			/* if allocated space before */
-	register char *C;
-	int l_value, offset;
-	char *__findenv();
+	char *c;
+	const char *cc;
+	size_t l_value;
+	int offset;
+
+	_DIAGASSERT(name != NULL);
+	_DIAGASSERT(value != NULL);
 
 	if (*value == '=')			/* no `=' in value */
 		++value;
 	l_value = strlen(value);
-	if ((C = __findenv(name, &offset))) {	/* find if already exists */
-		if (!rewrite)
+	rwlock_wrlock(&__environ_lock);
+	/* find if already exists */
+	if ((c = __findenv(name, &offset)) != NULL) {
+		if (!rewrite) {
+			rwlock_unlock(&__environ_lock);
 			return (0);
-		if (strlen(C) >= l_value) {	/* old larger; copy over */
-			while (*C++ = *value++);
+		}
+		if (strlen(c) >= l_value) {	/* old larger; copy over */
+			while ((*c++ = *value++) != '\0');
+			rwlock_unlock(&__environ_lock);
 			return (0);
 		}
 	} else {					/* create new slot */
-		register int	cnt;
-		register char	**P;
+		int cnt;
+		char **p;
 
-		for (P = environ, cnt = 0; *P; ++P, ++cnt);
+		for (p = environ, cnt = 0; *p; ++p, ++cnt);
 		if (alloced) {			/* just increase size */
-			environ = (char **)realloc((char *)environ,
+			environ = realloc(environ,
 			    (size_t)(sizeof(char *) * (cnt + 2)));
-			if (!environ)
+			if (!environ) {
+				rwlock_unlock(&__environ_lock);
 				return (-1);
+			}
 		}
 		else {				/* get new space */
 			alloced = 1;		/* copy old entries into it */
-			P = (char **)malloc((size_t)(sizeof(char *) *
-			    (cnt + 2)));
-			if (!P)
+			p = malloc((size_t)(sizeof(char *) * (cnt + 2)));
+			if (!p) {
+				rwlock_unlock(&__environ_lock);
 				return (-1);
-			bcopy(environ, P, cnt * sizeof(char *));
-			environ = P;
+			}
+			memcpy(p, environ, cnt * sizeof(char *));
+			environ = p;
 		}
 		environ[cnt + 1] = NULL;
 		offset = cnt;
 	}
-	for (C = (char *)name; *C && *C != '='; ++C);	/* no `=' in name */
+	for (cc = name; *cc && *cc != '='; ++cc)/* no `=' in name */
+		continue;
 	if (!(environ[offset] =			/* name + `=' + value */
-	    malloc((size_t)((int)(C - name) + l_value + 2))))
+	    malloc((size_t)((int)(cc - name) + l_value + 2)))) {
+		rwlock_unlock(&__environ_lock);
 		return (-1);
-	for (C = environ[offset]; (*C = *name++) && *C != '='; ++C)
-		;
-	for (*C++ = '='; *C++ = *value++; )
-		;
+	}
+	for (c = environ[offset]; (*c = *name++) && *c != '='; ++c);
+	for (*c++ = '='; (*c++ = *value++) != '\0'; );
+	rwlock_unlock(&__environ_lock);
 	return (0);
 }
-#endif /* !HAVE_SETENV */
-
-#if !HAVE_UNSETENV
-/*
- * unsetenv(name) --
- *	Delete environmental variable "name".
- */
-void
-unsetenv(name)
-	const char	*name;
-{
-	extern char **environ;
-	register char **P;
-	int offset;
-	char *__findenv();
-
-	while (__findenv(name, &offset))		/* if set multiple times */
-		for (P = &environ[offset];; ++P)
-			if (!(*P = *(P + 1)))
-				break;
-}
-#endif /* !HAVE_UNSETENV */

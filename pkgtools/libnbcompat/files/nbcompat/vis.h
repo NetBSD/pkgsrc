@@ -1,4 +1,4 @@
-/*	$NetBSD: vis.h,v 1.2 2004/08/16 17:24:57 jlam Exp $	*/
+/*	$NetBSD: vis.h,v 1.3 2004/08/23 03:32:13 jlam Exp $	*/
 
 /*-
  * Copyright (c) 1990, 1993
@@ -38,6 +38,8 @@
 #ifndef _NBCOMPAT_VIS_H_
 #define	_NBCOMPAT_VIS_H_
 
+#include <nbcompat/types.h>
+
 /*
  * to select alternate encoding format
  */
@@ -74,18 +76,7 @@
  */
 #define	UNVIS_END	1	/* no more characters */
 
-#ifndef _DIAGASSERT
-#define _DIAGASSERT(e)
-#endif
-
-#if HAVE_SYS_CDEFS_H
-#include <sys/cdefs.h>
-#endif
-
-#ifndef __BEGIN_DECLS
-#define __BEGIN_DECLS
-#define __END_DECLS
-#endif
+#include <nbcompat/cdefs.h>
 
 __BEGIN_DECLS
 char	*vis (char *, int, int, int);
