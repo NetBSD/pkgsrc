@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2001/12/02 21:29:21 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2002/01/06 22:41:23 fredb Exp $
 
 DISTNAME=	kterm-6.2.0
 CATEGORIES=	x11
@@ -20,13 +20,13 @@ BUILD_DEFS+=	KTERM_USE_WALLPAPER
 
 .if defined(KTERM_USE_WALLPAPER)
 .if ${KTERM_USE_WALLPAPER} == "imlib"
-PATCH_SITES_KTerm-BGP-Imlib-1.0.patch.gz=	http://delegate.uec.ac.jp:8081/club/mma/%7Etakkun/fun/handling/
+SITES_KTerm-BGP-Imlib-1.0.patch.gz=	http://delegate.uec.ac.jp:8081/club/mma/%7Etakkun/fun/handling/
 PATCHFILES+=	KTerm-BGP-Imlib-1.0.patch.gz
 BUILDLINK_DEPENDS.imlib?=	imlib>=1.9.4
 USE_CONFIG_WRAPPER=		YES
 .include "../../graphics/imlib/buildlink.mk"
 .elif ${KTERM_USE_WALLPAPER} == "YES"
-PATCH_SITES_KTerm-BGP-1.0.patch.gz=	http://delegate.uec.ac.jp:8081/club/mma/%7Etakkun/fun/handling/
+SITES_KTerm-BGP-1.0.patch.gz=	http://delegate.uec.ac.jp:8081/club/mma/%7Etakkun/fun/handling/
 PATCHFILES+=	KTerm-BGP-1.0.patch.gz
 .include "../../graphics/xpm/buildlink.mk"
 .endif
