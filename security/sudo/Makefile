@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2001/08/02 17:27:41 jlam Exp $
+# $NetBSD: Makefile,v 1.39 2001/11/19 17:27:23 jlam Exp $
 #
 
 DISTNAME=		sudo-1.6.3p7
@@ -18,6 +18,8 @@ GNU_CONFIGURE=		# defined
 
 .include "../../mk/bsd.prefs.mk"
 
+CONFIGURE_ARGS+=	--sysconfdir=${CONFDIR}
+
 .if ${OPSYS} == "NetBSD"
 CONFIGURE_ARGS+=	--with-skey
 .elif ${OPSYS} == "SunOS"
@@ -36,23 +38,9 @@ CONFIGURE_ARGS+=	--with-nbsdops --disable-path-info
 PLIST_SRC=		${PKGDIR}/PLIST.common
 PLIST_SRC+=		${PKGDIR}/PLIST.${LOWER_OPSYS}
 
-DOCDIR=			${PREFIX}/share/doc/sudo
-EGDIR=			${PREFIX}/share/examples/sudo
-
-DEINSTALL_FILE=		${WRKDIR}/DEINSTALL
-INSTALL_FILE=		${WRKDIR}/INSTALL
-
-FILES_SUBST=		CAT=${CAT:Q}
-FILES_SUBST+=		CHMOD=${CHMOD:Q}
-FILES_SUBST+=		CHOWN=${CHOWN:Q}
-FILES_SUBST+=		CMP=${CMP:Q}
-FILES_SUBST+=		CP=${CP:Q}
-FILES_SUBST+=		RM=${RM:Q}
-FILES_SUBST_SED=	${FILES_SUBST:S/=/@!/:S/$/!g/:S/^/ -e s!@/}
-
-pre-install:
-	${SED} ${FILES_SUBST_SED} ${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
-	${SED} ${FILES_SUBST_SED} ${PKGDIR}/INSTALL > ${INSTALL_FILE}
+DOCDIR=			${PREFIX}/share/doc/${PKGBASE}
+EGDIR=			${PREFIX}/share/examples/${PKGBASE}
+CONF_FILES_PERMS=	${EGDIR}/sudoers ${CONFDIR}/sudoers 0 0 0440
 
 post-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}
@@ -62,4 +50,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/sample.sudoers ${EGDIR}/sudoers.sample
 	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
+.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
