@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1 1998/08/27 12:54:56 garbled Exp $
+--- imlib/port/unix/timing.c.orig	Fri Jul 24 07:30:09 1998
++++ imlib/port/unix/timing.c	Fri Jul 24 07:39:44 1998
+@@ -17,3 +17,7 @@
+ {
+-  struct timezone tz={0,DST_USA};     
++#ifdef __NetBSD__
++  struct timezone tz={0,0}; /* gettimeofday is deprecated */
++#else
++  struct timezone tz={0,DST_USA};
++#endif
+   gettimeofday((struct timeval *)&seconds,&tz);
