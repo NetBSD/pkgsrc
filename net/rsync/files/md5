@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.6 1998/11/05 00:24:37 mycroft Exp $
+$NetBSD: md5,v 1.7 1998/11/26 23:34:13 hubertf Exp $
 
-MD5 (rsync-2.2.0.tar.gz) = 586c9da04e41c62192a250257f2f7a88
+MD5 (rsync-2.2.1.tar.gz) = 54ff63283fbc65ef386ca3365be6753c
