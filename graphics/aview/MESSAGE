@@ -1,0 +1,7 @@
+======================================================================
+$NetBSD: MESSAGE,v 1.1 2002/01/30 12:05:27 agc Exp $
+
+This package is built without X11 support.  If you want X11 support
+included, use the graphics/aview-x11 package instead.
+
+======================================================================
