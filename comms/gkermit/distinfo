@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.3 2003/06/17 14:16:33 agc Exp $
+$NetBSD: distinfo,v 1.4 2005/02/16 22:09:01 wiz Exp $
 
 SHA1 (gkermit-1.00/gkermit.tar.gz) = 7c8091d1cc8184eb2e0445d2b1deeb781ba632b6
 Size (gkermit-1.00/gkermit.tar.gz) = 62195 bytes
+SHA1 (patch-aa) = 7fd1df0ac08751ae01f3ca16032a672bdba99675
