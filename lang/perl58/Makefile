@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2004/01/05 10:46:52 grant Exp $
+# $NetBSD: Makefile,v 1.23 2004/01/05 20:45:13 jlam Exp $
 
 # The following two variables should have empty values unless we're
 # building a perl snapshot or release candidate.
@@ -39,7 +39,9 @@ CONFLICTS=	perl-5.00* perl-base-[0-9]* \
 		p5-Devel-DProf-[0-9]* p5-Devel-Peek-[0-9]* \
 		perl-mk-[0-9]*
 
-USE_BUILDLINK2=		YES
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+USE_BUILDLINK3=		YES
 HAS_CONFIGURE=		YES
 CONFIGURE_SCRIPT=	./Configure
 CONFIGURE_ARGS+=	-sde
@@ -63,9 +65,14 @@ CONFIGURE_ARGS+=	-Dman3ext="3"
 CONFIGURE_ARGS+=	-Dman3dir="${PERL5_PRIVLIB}/man/man3"
 CONFIGURE_ARGS+=	-Dsiteman3dir="${PERL5_SITEPERL}/man/man3"
 
+# Ensure that the Perl man1 pages go into ${PREFIX}/man/man1 and not
+# into some other platform-specific location kindly "guessed" by the
+# Configure script.
+#
+CONFIGURE_ARGS+=	-Dman1dir="${PREFIX}/man/man1"
+
 # The site directories are all relative to the perl view.
 CONFIGURE_ARGS+=	-Dsiteprefix="${VIEWBASE}"
-CONFIGURE_ARGS+=	-Dman1dir="${PREFIX}/man/man1"
 CONFIGURE_ARGS+=	-Dsiteman1dir="${VIEWBASE}/man/man1"
 
 .include "../../mk/bsd.prefs.mk"
