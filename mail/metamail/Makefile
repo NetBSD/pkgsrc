@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2005/02/14 14:07:44 uebayasi Exp $
+# $NetBSD: Makefile,v 1.32 2005/02/15 20:08:55 xtraeme Exp $
 
 DISTNAME=	mm2.7
 PKGNAME=	metamail-2.7
@@ -18,7 +18,6 @@ WRKSRC=			${WRKDIR}/${DISTNAME}/src
 USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
 
-CFLAGS+=	-DPKG_SYSCONFDIR="\"${PKG_SYSCONFDIR}\""
 CFLAGS.Linux+=	-DLINUX
 CFLAGS.SunOS+=	-DSYSV
 MAKE_ENV+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR} CHMOD=${CHMOD} SED=${SED}
@@ -28,11 +27,15 @@ CONF_FILES=	${EGDIR}/mailcap ${PKG_SYSCONFDIR}/mailcap
 
 INSTALLATION_DIRS=	bin man/man1 man/man4
 
-SUBST_CLASSES+=		awk
+SUBST_CLASSES+=		awk sys
 SUBST_STAGE.awk=	post-patch
 SUBST_MESSAGE.awk=	Adjusting the path to awk
 SUBST_FILES.awk=	bin/sun2mime
 SUBST_SED.awk=		-e "s|/bin/nawk|${AWK}|"
+SUBST_STAGE.sys=	post-patch
+SUBST_MESSAGE.sys=	"Adjusting the path for PKG_SYSCONFDIR"
+SUBST_FILES.sys=	config.h
+SUBST_SED.sys=		-e "s|PKG_SYSCONFDIR|\"${PKG_SYSCONFDIR}\"|g"
 
 post-patch:
 	${RM} -f ${WRKDIR}/mm2.7/src/bin/*.orig
