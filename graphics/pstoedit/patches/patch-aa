@@ -1,24 +1,18 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/07/18 07:46:40 itohy Exp $
+$NetBSD: patch-aa,v 1.2 2002/05/07 13:18:27 itohy Exp $
 
---- configure.in.orig	Tue May  2 05:02:00 2000
-+++ configure.in	Sat Jun 24 19:30:17 2000
-@@ -18,6 +18,21 @@
+--- configure.in.orig	Sat Dec 29 01:34:30 2001
++++ configure.in	Fri Mar 22 13:15:31 2002
+@@ -19,6 +19,15 @@
  AC_PROG_INSTALL
  AC_PATH_PROG(GS,gs,gs)
  
-+dnl X11 support.  Stolen from plotutils.
++dnl Look for extra libraries used by libplotter
 +AC_PATH_XTRA
 +AC_SUBST(X_CFLAGS)
-+AC_SUBST(X_LIBS)
-+AC_SUBST(X_TOOLKIT_LIBS)
-+AC_SUBST(X_PRE_LIBS)
-+AC_SUBST(X_BASIC_LIBS)
-+AC_SUBST(X_EXTRA_LIBS)
++DEPLIBS="`$LIBTOOL -n cc -o xx xx.o $LIBPLOTTERLA | tr ' ' '\012' | sed -e '/^-[[LWl]]/!d' -e '/^-lplotter$/d' | tr '\012' ' '`"
 +
-+X_TOOLKIT_LIBS="-lXaw -lXmu -lXt"
-+X_BASIC_LIBS="-lXext -lX11"
-+
-+LDFLAGS="$X_LIBS $LDFLAGS"
++LDLIBS="$DEPLIBS $LDLIBS"
++LIBS="$DEPLIBS"
 +CPPFLAGS="$X_CFLAGS $CPPFLAGS"
 +
  dnl Look for various optional libraries.

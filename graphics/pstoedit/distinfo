@@ -1,11 +1,8 @@
-$NetBSD: distinfo,v 1.2 2001/04/21 09:54:25 wiz Exp $
 
-SHA1 (pstoedit_3_20.zip) = c8d5ffcdb1e970d05124c73da7ad6243f6db90b8
-Size (pstoedit_3_20.zip) = 444849 bytes
-SHA1 (patch-aa) = 1986e25c2b7fdbac91b4b9a91505e3f459ec3971
-SHA1 (patch-ab) = 3ec29a5fc62d476df1b3156728fbb597a353b0fb
-SHA1 (patch-ac) = 1c69b7942d6bbc5e87a06326c96e8cd9b89db15b
-SHA1 (patch-ad) = 771de9e3b67590ea077218d3c104fe074f833927
-SHA1 (patch-ae) = 47b9b17b1f1af2bcec5975b56238fce3a664f075
-SHA1 (patch-af) = 73534b7983ee0076f517b76bf512fcce2f3ba094
-SHA1 (patch-ag) = f313d6219b0b91eea504084f866e492a260d75f3
+
+SHA1 (pstoedit_3_31.zip) = 95e7a09385c3d9ce3dbe8ba5afcc9154021c83ce
+Size (pstoedit_3_31.zip) = 558546 bytes
+SHA1 (patch-aa) = 25513e3452eed6eb464df1c0dbeeafa4d0f446bf
+SHA1 (patch-ab) = 12ecc8f993e3702018267238c7ea5234a38f1482
+SHA1 (patch-ac) = 614ba9036e1484755955b765e829227e64f10879
+SHA1 (patch-ad) = 3b01b11422db35a95b1a55a20c7a28dc3a251fa9
