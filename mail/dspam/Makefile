@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2004/11/15 08:13:13 xtraeme Exp $
+# $NetBSD: Makefile,v 1.18 2004/11/17 13:26:17 xtraeme Exp $
 
 DISTNAME=	dspam-3.2.2
 CATEGORIES=	mail
@@ -9,6 +9,7 @@ HOMEPAGE=	http://www.nuclearelephant.com/projects/dspam/
 COMMENT=	Extremely scalable, statistical-hybrid anti-spam filter
 
 USE_BUILDLINK3=		yes
+GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 
 USE_PERL5=		yes
@@ -47,7 +48,6 @@ DSPAM_GROUP?=		dspam
 DSPAM_LOGDIR?=		${DSPAM_HOME}/log
 DSPAM_DOMAIN?=		yourdomain.com
 
-GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-signature-life=${DSPAM_SIGNATURE_LIFE}
 CONFIGURE_ARGS+=	--with-dspam-home=${DSPAM_HOME}			\
 			--with-dspam-home-owner=${DSPAM_USER}		\
