@@ -1,0 +1,62 @@
+$NetBSD: patch-ar,v 1.1 2004/07/28 08:05:32 agc Exp $
+
+--- snd-xsnd.c	2004/07/28 07:57:26	1.1
++++ snd-xsnd.c	2004/07/28 07:58:15
+@@ -429,10 +429,10 @@
+     val = 0;
+   else
+     {
+-      val = round(amp / (float)(SCROLLBAR_LINEAR_MULT));
++      val = snd_round(amp / (float)(SCROLLBAR_LINEAR_MULT));
+       if (val > SCROLLBAR_LINEAR_MAX)
+ 	{
+-	  val = round((log(amp)*((float)SCROLLBAR_MAX*.2)) + SCROLLBAR_MID);
++	  val = snd_round((log(amp)*((float)SCROLLBAR_MAX*.2)) + SCROLLBAR_MID);
+ 	}
+     }
+   return(val);
+@@ -501,7 +501,7 @@
+ int snd_srate_to_int(float val)
+ {
+   if (val > 0.0)
+-    return(round(450.0 + 150.0 * log(val)));
++    return(snd_round(450.0 + 150.0 * log(val)));
+   else return(0);
+ }
+ 
+@@ -556,7 +556,7 @@
+ {
+   int val;
+   val = ep/.0009697;
+-  if (val>100) val = round(450+150*log(ep));
++  if (val>100) val = snd_round(450+150*log(ep));
+   return(val);
+ }
+ 
+@@ -623,7 +623,7 @@
+ 
+ int snd_contrast_to_int(float val)
+ {
+-  return(round(val*10));
++  return(snd_round(val*10));
+ }
+ 
+ void snd_contrast_changed(snd_info *sp, int val)
+@@ -688,7 +688,7 @@
+ 
+ int snd_revscl_to_int(float val)
+ {
+-  return(round(pow(val,0.333)*60.0));
++  return(snd_round(pow(val,0.333)*60.0));
+ }
+ 
+ void snd_revscl_changed(snd_info *sp, int val)
+@@ -751,7 +751,7 @@
+ 
+ int snd_revlen_to_int(float val)
+ {
+-  return(round(val*20.0));
++  return(snd_round(val*20.0));
+ }
+ 
+ void snd_revlen_changed(snd_info *sp, int val)
