@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1 2004/04/19 18:08:27 drochner Exp $
+
+--- lib/logging.c.orig	2004-04-18 17:24:27.000000000 +0000
++++ lib/logging.c	2004-04-18 17:25:33.000000000 +0000
+@@ -44,7 +44,9 @@
+         fprintf (stderr, "**ERROR: %s\n", message);
+         fflush (stderr);
+       }
++#if 0
+       exit (EXIT_FAILURE);
++#endif
+       break;
+     case CDIO_LOG_DEBUG:
+       if (level >= cdio_loglevel_default) {
