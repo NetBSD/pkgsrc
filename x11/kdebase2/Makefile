@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/03/14 20:15:59 skrll Exp $
+# $NetBSD: Makefile,v 1.4 2001/03/14 22:49:26 zuntum Exp $
 
 DISTNAME=	kdebase-2.1
 CATEGORIES=	x11 kde
@@ -29,7 +29,7 @@ IMAKEDIR=	${WRKDIR}/imake
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OBJECT_FMT} == "a.out"
-BORKEN=		"This package doesn't build on a.out. This is being worked on."
+BROKEN=		"This package doesn't build on a.out. This is being worked on."
 .endif
 
 post-configure:
