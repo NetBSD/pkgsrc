@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.989 2003/11/03 16:20:42 jmmv Exp $
+$NetBSD: TODO,v 1.990 2003/11/04 10:33:18 wiz Exp $
 
 Suggested new packages
 ======================
@@ -122,7 +122,7 @@ Suggested package updates
 	o Ngraph-6.3.20 [pkg/22800]
 	o R-1.8.0
 	o SDL_gfx-2.0.9
-	o TeXmacs-1.0.2.5
+	o TeXmacs-1.0.2.6
 	o Xaw3d-1.5E
 	o Xbae-4.50.0
 	o abiword-2.0.1
@@ -170,7 +170,8 @@ Suggested package updates
 	o echoping-5.0.1
 	o elk-3.99.5
 	o elm-me-2.4pl108
-	o englightenment-0.16.5
+	o enlightenment-0.16.5
+	o ethereal-0.9.16
 	o ettercap-0.6.b
 	o evilwm-0.99.17
 	o evolution-1.4.4
