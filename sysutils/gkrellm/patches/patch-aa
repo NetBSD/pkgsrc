@@ -1,0 +1,34 @@
+$NetBSD: patch-aa,v 1.11 2004/04/23 15:13:07 xtraeme Exp $
+
+--- src/sysdeps/bsd-common.c.orig	2004-04-23 16:59:41.000000000 +0200
++++ src/sysdeps/bsd-common.c	2004-04-23 17:04:14.000000000 +0200
+@@ -255,7 +255,11 @@
+ gkrellm_sys_fs_get_mounts_list(void)
+ 	{
+ 	gchar		*s, *dev, *dir, *type;
++#if (defined(__NetBSD__) && __NetBSD_Version__ >= 200040000) /* NetBSD 2.0D */
++	struct statvfs	*mntbuf;
++#else
+ 	struct statfs	*mntbuf;
++#endif
+ 	gint		mntsize, i;
+ 
+ 	if ((mntsize = getmntinfo(&mntbuf, MNT_NOWAIT)) == 0)
+@@ -281,9 +285,17 @@
+ void
+ gkrellm_sys_fs_get_fsusage(gpointer fs, gchar *dir)
+ 	{
++#if (defined(__NetBSD__) && __NetBSD_Version__ >= 200040000) /* NetBSD 2.0D */
++	struct statvfs	st;
++#else
+ 	struct statfs	st;
++#endif
+ 
++#if (defined(__NetBSD__) && __NetBSD_Version__ >= 200040000) /* NetBSD 2.0D */
++	if (!statvfs(dir, &st))
++#else
+ 	if (!statfs(dir, &st))
++#endif
+ 		gkrellm_fs_assign_fsusage_data(fs,
+ 					(glong) st.f_blocks, (glong) st.f_bavail,
+ 					(glong) st.f_bfree, (glong) st.f_bsize);
