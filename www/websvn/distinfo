@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2004/06/21 01:34:16 xtraeme Exp $
+$NetBSD: distinfo,v 1.3 2004/11/06 21:16:15 jdolecek Exp $
 
-SHA1 (WebSVN_140.tar.gz) = 251b2714b4c025b19e0ed9662e49f626e00f8380
-Size (WebSVN_140.tar.gz) = 65979 bytes
+SHA1 (WebSVN_161.tar.gz) = 7fecbaa9619e3061ea57dda0a4bfcb4a3cca888d
+Size (WebSVN_161.tar.gz) = 89305 bytes
