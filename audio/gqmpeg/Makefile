@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.11 1999/08/28 09:43:07 rh Exp $
+# $NetBSD: Makefile,v 1.12 1999/08/29 12:43:34 tron Exp $
 # FreeBSD Id: Makefile,v 1.6 1998/12/28 01:02:05 vanilla Exp
 #
 
 DISTNAME=	gqmpeg-0.6.3
 CATEGORIES=	audio
-MASTER_SITES=	${HOMEPAGE}
+MASTER_SITES=	http://gqview.netpedia.net/
 EXTRACT_SUFX=	.src.tgz
 
 MAINTAINER=	rxg@ms25.url.com.tw
