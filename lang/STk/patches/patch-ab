@@ -1,0 +1,25 @@
+$NetBSD: patch-ab,v 1.1 1998/09/08 08:51:50 agc Exp $
+
+Allow STk to install itself if it's already installed
+
+--- Demos/Makefile	1998/09/08 08:20:39	1.1
++++ Demos/Makefile	1998/09/08 08:21:24
+@@ -21,13 +21,15 @@
+ 	do \
+ 	  chmod 0755 $(DEMODIR)/`basename $$i`; \
+ 	done
+-	mkdir $(DEMODIR)/Html-Demos; chmod 0755 $(DEMODIR)/Html-Demos 
++	-mkdir $(DEMODIR)/Html-Demos
++	-chmod 0755 $(DEMODIR)/Html-Demos 
+ 	cp Html-Demos/*.html $(DEMODIR)/Html-Demos
+ 	chmod 0644  $(DEMODIR)/Html-Demos/*.html
+-	mkdir $(DEMODIR)/Html-Demos/Images; chmod 0755 $(DEMODIR)/Html-Demos/Images
++	-mkdir $(DEMODIR)/Html-Demos/Images
++	-chmod 0755 $(DEMODIR)/Html-Demos/Images
+ 	cp Html-Demos/Images/*  $(DEMODIR)/Html-Demos/Images
+ 	chmod 0644  $(DEMODIR)/Html-Demos/Images/*
+-	(cd $(DEMODIR)/Html-Demos; ln -s ../amib.stklos ../stklos-widgets .)
++	(cd $(DEMODIR)/Html-Demos; ln -fs ../amib.stklos ../stklos-widgets .)
+ 
+ install.libs:
+ 
