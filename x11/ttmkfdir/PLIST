@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2002/06/10 13:25:30 drochner Exp $
+bin/ttmkfdir
