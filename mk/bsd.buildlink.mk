@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink.mk,v 1.50 2001/11/30 17:14:14 jlam Exp $
+# $NetBSD: bsd.buildlink.mk,v 1.51 2001/11/30 17:21:56 jlam Exp $
 #
 # This Makefile fragment is included by package buildlink.mk files.  This
 # file does the following things:
@@ -137,6 +137,8 @@ MAKE_ENV+=		BUILDLINK_CPPFLAGS="${_BUILDLINK_CPPFLAGS}"
 MAKE_ENV+=		BUILDLINK_LDFLAGS="${_BUILDLINK_LDFLAGS}"
 .endif
 
+ECHO_BUILDLINK_MSG?=	${ECHO_MSG} "=>"
+
 # Filter out libtool archives from the list of file to link into
 # ${BUILDLINK_DIR}.  Linking against a libtool archive causes the final
 # installed locations of the libraries to be used, which defeats what
@@ -150,7 +152,7 @@ _BUILDLINK_USE: .USE
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	cookie=${BUILDLINK_DIR}/.${.TARGET:S/-buildlink//}_buildlink_done; \
 	if [ ! -f $${cookie} ]; then					\
-		${ECHO_MSG} "=> Linking ${.TARGET:S/-buildlink//} files into ${BUILDLINK_DIR}."; \
+		${ECHO_BUILDLINK_MSG} "Linking ${.TARGET:S/-buildlink//} files into ${BUILDLINK_DIR}."; \
 		${MKDIR} ${BUILDLINK_DIR};				\
 		files="${BUILDLINK_FILES.${.TARGET:S/-buildlink//}:S/^/${BUILDLINK_PREFIX.${.TARGET:S/-buildlink//}}\//g}"; \
 		files="`${ECHO} $${files} | ${_LIBTOOL_ARCHIVE_FILTER}`"; \
@@ -197,7 +199,7 @@ _BUILDLINK_CONFIG_WRAPPER_USE: .USE
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	cookie=${BUILDLINK_DIR}/.${.TARGET:S/-buildlink-config-wrapper//}_buildlink_config_wrapper_done; \
 	if [ ! -f $${cookie} ]; then					\
-		${ECHO_MSG} "=> Creating wrapper script ${BUILDLINK_CONFIG_WRAPPER.${.TARGET:S/-buildlink-config-wrapper//}}."; \
+		${ECHO_BUILDLINK_MSG} "Creating wrapper script ${BUILDLINK_CONFIG_WRAPPER.${.TARGET:S/-buildlink-config-wrapper//}}."; \
 		${MKDIR} ${BUILDLINK_CONFIG_WRAPPER.${.TARGET:S/-buildlink-config-wrapper//}:H}; \
 		(${ECHO} '#!/bin/sh';					\
 		${ECHO} '';						\
@@ -232,7 +234,7 @@ _BUILDLINK_SUBST_USE: .USE
 		${MKDIR} ${BUILDLINK_DIR};				\
 		files="${BUILDLINK_SUBST_FILES.${.TARGET:S/-buildlink-subst//}}"; \
 		if [ -n "$${files}" -a -n "${BUILDLINK_SUBST_SED.${.TARGET:S/-buildlink-subst//}:Q}" ]; then \
-			${ECHO_MSG} "=> "${BUILDLINK_SUBST_MESSAGE.${.TARGET:S/-buildlink-subst//}}; \
+			${ECHO_BUILDLINK_MSG} ${BUILDLINK_SUBST_MESSAGE.${.TARGET:S/-buildlink-subst//}}; \
 			cd ${WRKSRC};					\
 			for file in $${files}; do			\
 				if ${_CHECK_IS_TEXT_FILE}; then		\
