@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.7 2001/08/17 21:14:13 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.8 2001/10/03 20:56:52 jlam Exp $
 #
 # This Makefile fragment is included by packages that use ORBit.
 #
@@ -48,9 +48,13 @@ BUILDLINK_TARGETS+=		${BUILDLINK_TARGETS.ORBit}
 
 BUILDLINK_CONFIG.libIDL=	${BUILDLINK_PREFIX.ORBit}/bin/libIDL-config
 BUILDLINK_CONFIG_WRAPPER.libIDL=${BUILDLINK_DIR}/bin/libIDL-config
+REPLACE_BUILDLINK_SED+=	\
+	-e "s|${BUILDLINK_CONFIG_WRAPPER.libIDL}|${BUILDLINK_CONFIG.libIDL}|g"
 
 BUILDLINK_CONFIG.orbit=		${BUILDLINK_PREFIX.ORBit}/bin/orbit-config
 BUILDLINK_CONFIG_WRAPPER.orbit=	${BUILDLINK_DIR}/bin/orbit-config
+REPLACE_BUILDLINK_SED+=	\
+	-e "s|${BUILDLINK_CONFIG_WRAPPER.orbit}|${BUILDLINK_CONFIG.orbit}|g"
 
 .if defined(USE_CONFIG_WRAPPER)
 LIBIDL_CONFIG?=		${BUILDLINK_CONFIG_WRAPPER.libIDL}

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.2 2001/10/01 12:03:42 rh Exp $
+# $NetBSD: buildlink.mk,v 1.3 2001/10/03 20:56:45 jlam Exp $
 #
 # This Makefile fragment is included by packages that use oaf.
 #
@@ -35,6 +35,8 @@ BUILDLINK_TARGETS+=		${BUILDLINK_TARGETS.oaf}
 
 BUILDLINK_CONFIG.oaf=	${BUILDLINK_PREFIX.oaf}/bin/oaf-config
 BUILDLINK_CONFIG_WRAPPER.oaf=${BUILDLINK_DIR}/bin/oaf-config
+REPLACE_BUILDLINK_SED+=	\
+	-e "s|${BUILDLINK_CONFIG_WRAPPER.oaf}|${BUILDLINK_CONFIG.oaf}|g"
 
 .if defined(USE_CONFIG_WRAPPER)
 OAF_CONFIG?=		${BUILDLINK_CONFIG_WRAPPER.oaf}

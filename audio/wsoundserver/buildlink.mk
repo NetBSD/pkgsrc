@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.1 2001/07/24 10:51:18 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.2 2001/10/03 20:56:42 jlam Exp $
 #
 # This Makefile fragment is included by packages that use wsound.
 #
@@ -35,6 +35,8 @@ BUILDLINK_CONFIG.wsound=	\
 	${BUILDLINK_PREFIX.wsound}/bin/get-wsound-flags
 BUILDLINK_CONFIG_WRAPPER.wsound=	\
 	${BUILDLINK_DIR}/bin/get-wsound-flags
+REPLACE_BUILDLINK_SED+=	\
+	-e "s|${BUILDLINK_CONFIG_WRAPPER.wsound}|${BUILDLINK_CONFIG.wsound}|g"
 
 .if defined(USE_CONFIG_WRAPPER)
 GET_WSOUND_FLAGS?=	${BUILDLINK_CONFIG_WRAPPER.wsound}

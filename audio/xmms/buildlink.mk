@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.5 2001/08/23 14:16:10 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.6 2001/10/03 20:56:43 jlam Exp $
 #
 # This Makefile fragment is included by packages that use xmms.
 #
@@ -33,6 +33,8 @@ BUILDLINK_TARGETS+=	${BUILDLINK_TARGETS.xmms}
 
 BUILDLINK_CONFIG.xmms=		${BUILDLINK_PREFIX.xmms}/bin/xmms-config
 BUILDLINK_CONFIG_WRAPPER.xmms=	${BUILDLINK_DIR}/bin/xmms-config
+REPLACE_BUILDLINK_SED+=	\
+	-e "s|${BUILDLINK_CONFIG_WRAPPER.xmms}|${BUILDLINK_CONFIG.xmms}|g"
 
 .if defined(USE_CONFIG_WRAPPER)
 XMMS_CONFIG?=		${BUILDLINK_CONFIG_WRAPPER.xmms}

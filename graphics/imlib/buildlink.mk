@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.7 2001/08/17 21:14:12 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.8 2001/10/03 20:56:50 jlam Exp $
 #
 # This Makefile fragment is included by packages that use imlib.
 #
@@ -44,6 +44,8 @@ BUILDLINK_TARGETS+=		${BUILDLINK_TARGETS.imlib}
 
 BUILDLINK_CONFIG.imlib=		${BUILDLINK_PREFIX.imlib}/bin/imlib-config
 BUILDLINK_CONFIG_WRAPPER.imlib=	${BUILDLINK_DIR}/bin/imlib-config
+REPLACE_BUILDLINK_SED+=	\
+	-e "s|${BUILDLINK_CONFIG_WRAPPER.imlib}|${BUILDLINK_CONFIG.imlib}|g"
 
 .if defined(USE_CONFIG_WRAPPER)
 IMLIB_CONFIG?=		${BUILDLINK_CONFIG_WRAPPER.imlib}

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.8 2001/08/17 21:14:07 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.9 2001/10/03 20:56:46 jlam Exp $
 #
 # This Makefile fragment is included by packages that use pth.
 #
@@ -34,9 +34,13 @@ BUILDLINK_TARGETS+=	${BUILDLINK_TARGETS.pth}
 
 BUILDLINK_CONFIG.pth=			${BUILDLINK_PREFIX.pth}/bin/pth-config
 BUILDLINK_CONFIG_WRAPPER.pth=		${BUILDLINK_DIR}/bin/pth-config
+REPLACE_BUILDLINK_SED+=	\
+	-e "s|${BUILDLINK_CONFIG_WRAPPER.pth}|${BUILDLINK_CONFIG.pth}|g"
 
 BUILDLINK_CONFIG.pth-pthread=		${BUILDLINK_PREFIX.pth}/bin/pthread-config
 BUILDLINK_CONFIG_WRAPPER.pth-pthread=	${BUILDLINK_DIR}/bin/pthread-config
+REPLACE_BUILDLINK_SED+=	\
+	-e "s|${BUILDLINK_CONFIG_WRAPPER.pthread}|${BUILDLINK_CONFIG.pthread}|g"
 
 .if defined(USE_CONFIG_WRAPPER)
 PTH_CONFIG?=		${BUILDLINK_CONFIG_WRAPPER.pth}

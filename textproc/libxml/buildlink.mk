@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.7 2001/08/17 21:14:14 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.8 2001/10/03 20:56:53 jlam Exp $
 #
 # This Makefile fragment is included by packages that use libxml.
 #
@@ -34,6 +34,8 @@ BUILDLINK_TARGETS+=		${BUILDLINK_TARGETS.libxml}
 
 BUILDLINK_CONFIG.libxml=	${BUILDLINK_PREFIX.libxml}/bin/xml-config
 BUILDLINK_CONFIG_WRAPPER.libxml=${BUILDLINK_DIR}/bin/xml-config
+REPLACE_BUILDLINK_SED+=	\
+	-e "s|${BUILDLINK_CONFIG_WRAPPER.libxml}|${BUILDLINK_CONFIG.libxml}|g"
 
 .if defined(USE_CONFIG_WRAPPER)
 XML_CONFIG?=		${BUILDLINK_CONFIG_WRAPPER.libxml}

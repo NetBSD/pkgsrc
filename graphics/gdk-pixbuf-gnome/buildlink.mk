@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.1 2001/10/01 06:57:25 rh Exp $
+# $NetBSD: buildlink.mk,v 1.2 2001/10/03 20:56:49 jlam Exp $
 #
 # This Makefile fragment is included by packages that use gdk-pixbuf-gnome.
 #
@@ -36,6 +36,8 @@ BUILDLINK_CONFIG.gdk-pixbuf-gnome=	\
 			${BUILDLINK_PREFIX.gdk-pixbuf-gnome}/lib/gnomecanvaspixbufConf.sh
 BUILDLINK_CONFIG_WRAPPER.gdk-pixbuf-gnome=	\
 			${BUILDLINK_DIR}/lib/gnomecanvaspixbufConf.sh
+REPLACE_BUILDLINK_SED+=	\
+	-e "s|${BUILDLINK_CONFIG_WRAPPER.gdk-pixbuf-gnome}|${BUILDLINK_CONFIG.gdk-pixbuf-gnome}|g"
 
 .if defined(USE_CONFIG_WRAPPER)
 GDK_PIXBUF_GNOME_CONFIG?=		${BUILDLINK_CONFIG_WRAPPER.gdk-pixbuf-gnome}

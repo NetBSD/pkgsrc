@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.10 2001/08/17 21:14:16 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.11 2001/10/03 20:56:55 jlam Exp $
 #
 # This Makefile fragment is included by packages that use gtk.
 #
@@ -42,6 +42,8 @@ BUILDLINK_TARGETS+=	${BUILDLINK_TARGETS.gtk}
 
 BUILDLINK_CONFIG.gtk=		${BUILDLINK_PREFIX.gtk}/bin/gtk-config
 BUILDLINK_CONFIG_WRAPPER.gtk=	${BUILDLINK_DIR}/bin/gtk-config
+REPLACE_BUILDLINK_SED+=	\
+	-e "s|${BUILDLINK_CONFIG_WRAPPER.gtk}|${BUILDLINK_CONFIG.gtk}|g"
 
 .if defined(USE_CONFIG_WRAPPER)
 GTK_CONFIG?=		${BUILDLINK_CONFIG_WRAPPER.gtk}
