@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3076 2003/08/22 10:12:51 agc Exp $
+$NetBSD: CHANGES,v 1.3077 2003/08/22 11:40:48 salo Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3306,3 +3306,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added kimagemapeditor-1.0 [markd 2003-08-20]
 	Updated unzip to 5.50nb1 [tron 2003-08-20]
 	Updated audit-packages to 1.17 [agc 2003-08-21]
+	Added gscmxx-0.4.1 [salo 2003-08-22]
