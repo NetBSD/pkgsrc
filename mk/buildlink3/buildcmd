@@ -1,8 +1,8 @@
-# $NetBSD: buildcmd,v 1.1 2003/10/03 19:39:19 jlam Exp $
+# $NetBSD: buildcmd,v 1.2 2003/10/04 10:20:09 jlam Exp $
 #
 # Append $arg to $cmd to build up the command line to be executed, but
 # directly add the next few arguments to $cmd if $skipargs > 0.
-
+#
 if $test $skipargs -gt 0; then
 	cmd="$cmd $arg"
 	while $test $skipargs -gt 0; do
