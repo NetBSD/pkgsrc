@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3570 2003/09/28 21:08:59 sjg Exp $
+$NetBSD: CHANGES,v 1.3571 2003/09/28 23:35:28 manu Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4000,3 +4000,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated gtkam to 0.1.10nb3 [is 2003-09-28]
 	Updated mk-files to 20030928 [sjg 2003-09-28]
 	Updated bmake to 20030928 [sjg 2003-09-28]
+	Added darwin_lib-6.6.2 [manu 2003-09-29]
