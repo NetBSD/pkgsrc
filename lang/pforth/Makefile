@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/01/24 13:51:14 grant Exp $
+# $NetBSD: Makefile,v 1.12 2004/05/20 18:54:23 wiz Exp $
 
 DISTNAME=		pfthpc21
 PKGNAME=		pforth-21
@@ -12,6 +12,7 @@ COMMENT=		Portable ANS-like Forth
 
 WRKSRC=			${WRKDIR}
 USE_GNU_TOOLS+=		make
+USE_BUILDLINK3=		yes
 MAKEFILE=		${WRKSRC}/makefile
 
 NOT_FOR_PLATFORM=	*-*-alpha  #segfaults when running ./pforth during build
