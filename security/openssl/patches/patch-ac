@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.11 2003/08/25 16:34:01 jschauma Exp $
+$NetBSD: patch-ac,v 1.12 2003/09/10 01:57:06 jlam Exp $
 
 --- Configure.orig	Sun Aug 24 15:03:44 2003
 +++ Configure	Sun Aug 24 15:05:19 2003
@@ -179,12 +179,3 @@ $NetBSD: patch-ac,v 1.11 2003/08/25 16:34:01 jschauma Exp $
  );
  
  my @WinTargets=qw(VC-NT VC-WIN32 VC-WIN16 VC-W31-16 VC-W31-32 VC-MSDOS BC-32
-@@ -1188,7 +1205,7 @@
- EOF
- 	close(OUT);
- } else {
--	(system "make -f Makefile.ssl PERL=\'$perl\' links") == 0 or exit $?
-+	(system "@MAKE@ -f Makefile.ssl PERL=\'$perl\' links") == 0 or exit $?
- 		if $symlink;
- 	### (system 'make depend') == 0 or exit $? if $depflags ne "";
- 	# Run "make depend" manually if you want to be able to delete
