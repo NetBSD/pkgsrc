@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/06/27 10:18:05 rh Exp $
+# $NetBSD: Makefile,v 1.4 2000/07/20 13:31:01 rh Exp $
 #
 
 DISTNAME=	dat-4083
@@ -15,8 +15,10 @@ NO_BUILD=	YES
 
 MIRROR_DISTFILE=no
 RESTRICTED=	"restricted to the license terms set for VirusScan"
-NO_PACKAGE=	${RESTRICTED}
-NO_CDROM=	${RESTRICTED}
+NO_BIN_ON_FTP=	${RESTRICTED}
+NO_BIN_ON_CDROM=${RESTRICTED}
+NO_SRC_ON_FTP=	${RESTRICTED}
+NO_SRC_ON_CDROM=${RESTRICTED}
 
 do-configure:
 	${SED} -e 's:@PREFIX@:${PREFIX}:g' \
