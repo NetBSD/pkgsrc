@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: cpuflags.NetBSD,v 1.46 2004/04/01 19:37:59 abs Exp $
+# $NetBSD: cpuflags.NetBSD,v 1.47 2004/04/01 19:44:59 abs Exp $
 
 if [ -x /sbin/sysctl ] ;then
     SYSCTL=/sbin/sysctl
@@ -172,7 +172,7 @@ fi
 #   gcc_version_in_which_option_was_introduced  new_option  old_option
 
 if [ -n "$FLAGS" ]; then
-    gcc_ver=`${CC} -v 2>&1 | awk '/gcc version/ {sub("egcs-","");print $3}'`
+    gcc_ver=`${CC} -dumpversion | sed 's/^egcs-//'`
     FLAGS=`awk -v "flags=$FLAGS" -v "gcc_ver=$gcc_ver" '
 	{ if (gcc_ver < $1){map[$2] = ""$3} }
 	END { while (flags in map) {flags = map[flags]} print flags }
