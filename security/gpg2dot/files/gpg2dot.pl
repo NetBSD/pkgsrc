@@ -1,6 +1,6 @@
 #!@PREFIX@/bin/perl
 #
-# $NetBSD: gpg2dot.pl,v 1.2 2004/01/21 04:14:45 lukem Exp $
+# $NetBSD: gpg2dot.pl,v 1.3 2004/04/04 22:16:59 hubertf Exp $
 
 # ----------------------------------------------------------------------------
 # "THE BEER-WARE LICENSE" (Revision 42):
@@ -67,8 +67,8 @@ foreach (@isigs) {
     } elsif ($skeyid eq $mykeyid) {	# i trust you (one way)
 	$color = "red";
     }
-    push(@sigs, sprintf("\"%s\" -> \"%s\" [color=\"%s\"%s];\t// %s -> %s\n",
-			$skeyid, $keyid, $color, $attrs,
+    push(@sigs, sprintf("\"%s\" -> \"%s\"[tailURL=\"http://webware.lysator.liu.se/jc/wotsap/?top=0x%s&bottom=0x%s\",headURL=\"http://webware.lysator.liu.se/jc/wotsap/?top=0x%s&bottom=0x%s\",color=\"%s\"%s];\t// %s -> %s\n",
+			$skeyid, $keyid, $keyid, $skeyid, $skeyid, $keyid, $color, $attrs,
 			$kuid{$skeyid}, $kuid{$keyid}));
     $signer{$skeyid} = "yes";
     $signed{$keyid} = "yes";
@@ -76,8 +76,8 @@ foreach (@isigs) {
 
 foreach (keys %label) {
     next if (!$signer{$_} && !$signed{$_});
-    push(@keys, sprintf("\"%s\" [label=\"%s\"];\n",
-			$_, $label{$_}));
+    push(@keys, sprintf("\"%s\" [URL=\"http://webware.lysator.liu.se/jc/wotsap/?top=0x%s\",label=\"%s\",shape=\"box\"];\n",
+			$_, $_, $label{$_}));
 }
 
 @sigs = uniq(sort(@sigs));

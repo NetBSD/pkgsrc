@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5438 2004/04/04 19:27:37 recht Exp $
+$NetBSD: CHANGES,v 1.5439 2004/04/04 22:16:58 hubertf Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1773,3 +1773,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated icu to 2.8 [recht 2004-04-04]
 	Added winelib-0.1 [recht 2004-04-04]
 	Updated mono to 0.31nb1 [recht 2004-04-04]
+	Updated gpg2dot to 1.3 [hubertf 2004-04-04]
