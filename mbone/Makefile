@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 1997/11/19 16:29:12 is Exp $
+# $NetBSD: Makefile,v 1.4 1997/11/24 13:14:33 is Exp $
 # Id: Makefile,v 1.5 1996/12/03 10:41:49 asami Exp
 #
 
-#    SUBDIR += imm
+    SUBDIR += imm
 #    SUBDIR += mbone_vcr
 #    SUBDIR += nte
 #    SUBDIR += rtpmon
