@@ -1,0 +1,12 @@
+$NetBSD: patch-cc,v 1.1 2004/11/05 12:40:23 shannonjr Exp $
+
+--- gcc/Makefile.in.orig	2004-06-17 15:56:58.000000000 -0600
++++ gcc/Makefile.in
+@@ -1390,6 +1390,7 @@ c-pch.o : c-pch.c $(CONFIG_H) $(SYSTEM_H
+ # Language-independent files.
+ 
+ DRIVER_DEFINES = \
++  -DLINK_LIBGCC_SPEC="\"%D $(LINKER_RPATH_FLAG) $(exec_prefix)/lib\"" \
+   -DSTANDARD_STARTFILE_PREFIX=\"$(unlibsubdir)/\" \
+   -DSTANDARD_EXEC_PREFIX=\"$(libdir)/gcc/\" \
+   -DSTANDARD_LIBEXEC_PREFIX=\"$(libexecdir)/gcc/\" \
