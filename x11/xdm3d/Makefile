@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1998/09/08 15:51:23 agc Exp $
+# $NetBSD: Makefile,v 1.5 2000/02/05 16:12:18 wiz Exp $
 
 DISTNAME=		xdm3d-1.0
 CATEGORIES=		x11
@@ -31,7 +31,7 @@ do-install:
 	${SED} "$$sedexpr" ${PKGDIR}/PLIST > ${PLIST_SRC}
 	${INSTALL_PROGRAM} ${X11BASE}/lib/X11/xdm/chooser ${PREFIX}/share/xdm3d
 	${MKDIR} ${PREFIX}/share/xdm3d/authdir
-	chmod 700 ${PREFIX}/share/xdm3d/authdir
+	${CHMOD} 700 ${PREFIX}/share/xdm3d/authdir
 	${SED} -e 's@/usr/X11R6/lib/X11/xdm@${PREFIX}/share/xdm3d@' < \
 		${X11BASE}/lib/X11/xdm/xdm-config > \
 		${PREFIX}/share/xdm3d/xdm-config
