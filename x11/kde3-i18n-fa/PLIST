@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/03/12 11:00:54 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/05/22 03:07:23 markd Exp $
 share/kde/locale/fa/COPYING
 share/kde/locale/fa/LC_MESSAGES/appletproxy.mo
 share/kde/locale/fa/LC_MESSAGES/childpanelextension.mo
@@ -6,6 +6,7 @@ share/kde/locale/fa/LC_MESSAGES/clockapplet.mo
 share/kde/locale/fa/LC_MESSAGES/desktop_kde-i18n.mo
 share/kde/locale/fa/LC_MESSAGES/desktop_kdebase.mo
 share/kde/locale/fa/LC_MESSAGES/desktop_kdelibs.mo
+share/kde/locale/fa/LC_MESSAGES/dockbarextension.mo
 share/kde/locale/fa/LC_MESSAGES/drkonqi.mo
 share/kde/locale/fa/LC_MESSAGES/extensionproxy.mo
 share/kde/locale/fa/LC_MESSAGES/filetypes.mo
