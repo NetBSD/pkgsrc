@@ -1,3 +1,15 @@
-@comment $NetBSD: PLIST,v 1.2 1999/11/09 16:52:04 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.3 2000/11/15 13:52:59 wiz Exp $
 bin/lame
 man/man1/lame.1
+share/doc/html/lame/contributors.html
+share/doc/html/lame/examples.html
+share/doc/html/lame/history.html
+share/doc/html/lame/id3.html
+share/doc/html/lame/index.html
+share/doc/html/lame/lame.css
+share/doc/html/lame/modes.html
+share/doc/html/lame/node5.html
+share/doc/html/lame/node6.html
+share/doc/html/lame/node7.html
+share/doc/html/lame/switchs.html
+@dirrm share/doc/html/lame
