@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/09/25 22:17:30 rh Exp $
+bin/pila
+bin/pilotdis
+bin/splitprc
+man/man1/pilotdis.1
