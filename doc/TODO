@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2678 2004/12/05 17:36:39 he Exp $
+$NetBSD: TODO,v 1.2679 2004/12/05 17:41:22 he Exp $
 
 Suggested new packages
 ======================
@@ -763,7 +763,6 @@ Suggested package updates
 	o p5-DBD-postgresql-1.32
 	o p5-DBD-Sybase-1.04
 	o p5-DB_File-1.810
-	o p5-DNS-ZoneParse-0.95
 	o p5-Data-FormValidator-3.63
 	o p5-Data-TemporaryBag-0.08
 	o p5-Devel-Profile-1.04
