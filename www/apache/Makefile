@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.129 2003/05/31 15:03:17 grant Exp $
+# $NetBSD: Makefile,v 1.130 2003/06/06 19:33:12 drochner Exp $
 #
 # This pkg does not compile in mod_ssl, only the `mod_ssl EAPI' (a set of
 # code hooks that allow mod_ssl to be compiled separately later, if desired).
@@ -107,7 +107,7 @@ APACHE_CUSTOM_CFLAGS+=	-D_FILE_OFFSET_BITS=64
 #
 .if ${OPSYS} == "NetBSD"
 .  if ${OBJECT_FMT} == "ELF"
-LINK_LIBGCC_LDFLAGS=	${WHOLE_ARCHIVE_FLAG} -lgcc ${NO_WHOLE_ARCHIVE_FLAG}
+LINK_LIBGCC_LDFLAGS=	${LINK_ALL_LIBGCC_HACK}
 MAKE_ENV+=		LINK_LIBGCC_LDFLAGS="${LINK_LIBGCC_LDFLAGS}"
 # if we are using gcc3, we need to link against libgcc_s, too. This
 # ensures modules can resolve symbols they require from gcc.
