@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/10/15 18:36:55 adrianp Exp $
+# $NetBSD: Makefile,v 1.2 2005/01/19 21:27:39 adrianp Exp $
 
-DISTNAME=	cgiirc-0.5.4
+DISTNAME=	cgiirc-0.5.5
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cgiirc/}
 
@@ -8,24 +8,17 @@ MAINTAINER=	adrianp@NetBSD.org
 HOMEPAGE=	http://cgiirc.sourceforge.net/
 COMMENT=	Access IRC from a web browser
 
-DEPENDS+=	p5-INET6-*:../../net/p5-INET6
-
 NO_BUILDLINK=	YES
-USE_PERL5=	YES
+USE_PERL5=	run
 NO_BUILD=	YES
 USE_PKGINSTALL=	YES
 
 SUBST_CLASSES=		config
 SUBST_STAGE.config=	post-patch
-SUBST_FILES.config= 	cgiirc.config cgiirc.config.full ${WRKDIR}/cgiirc.conf
-SUBST_SED.config=	-e "s|irc.blitzed.org|${IRC_SERVER}|g" \
-			-e "s|CGI:IRC User|${IRC_NAME}|g" \
-			-e "s|CGI???|${IRC_NICK}|g" \
-			-e "s|\#cgiirc|${IRC_CHANNEL}|g" \
-			-e "s|@CGIIRC@|${CGIIRC}|g"
+SUBST_FILES.config= 	${WRKDIR}/cgiirc.conf
+SUBST_SED.config=	-e "s|@CGIIRC@|${CGIIRC}|g"
 SUBST_MESSAGE.config=	"Setting defaults in configuration files."
 
-BUILD_DEFS+=	IRC_SERVER IRC_CHANNEL IRC_NAME IRC_NICK
 BUILD_DEFS+=	USE_INET6
 
 CONF_FILES=	${PREFIX}/share/examples/cgiirc/cgiirc.conf \
@@ -33,10 +26,11 @@ CONF_FILES=	${PREFIX}/share/examples/cgiirc/cgiirc.conf \
 CONF_FILES+=	${PREFIX}/share/examples/cgiirc/cgiirc.config \
 			${CGIIRC}/cgiirc.config
 
-IRC_SERVER?=	irc.blitzed.org
-IRC_CHANNEL?=	\#cgiirc
-IRC_NAME?=	CGI:IRC User
-IRC_NICK?=	CGI???
+.include "../../mk/bsd.prefs.mk"
+
+.if defined(USE_INET6) && !empty(USE_INET6:M[Yy][Ee][Ss])
+DEPENDS+=	p5-INET6-*:../../net/p5-INET6
+.endif
 
 REPLACE_PERL=	client-perl.cgi irc.cgi nph-irc.cgi docs/decode.pl \
 		docs/identd.pl viewconnects.pl modules/parse.pl \
@@ -67,12 +61,14 @@ do-install:
 		${INSTALL_DATA} ${WRKSRC}/docs/${f} \
 			${PREFIX}/share/examples/cgiirc/${f}
 .	endfor
+.	undef f
 	${INSTALL_DATA} ${WRKSRC}/cgiirc.config ${PREFIX}/share/examples/cgiirc
 	${INSTALL_DATA} ${WRKDIR}/cgiirc.conf ${PREFIX}/share/examples/cgiirc
 .	for f in ${EGFILES}
 		${INSTALL_DATA} ${WRKSRC}/${f} \
 			${PREFIX}/share/examples/cgiirc/${f}
 .	endfor
+.	undef f
 	${INSTALL_SCRIPT} ${WRKSRC}/*.cgi ${CGIIRC}
 	${INSTALL_DATA} ${WRKSRC}/formats/* ${CGIIRC}/formats/
 	${INSTALL_DATA} ${WRKSRC}/images/*.gif ${CGIIRC}/images/
