@@ -1,6 +1,6 @@
 #!/bin/sh -e
 #
-# $Id: pkgchk.sh,v 1.13 2001/09/13 17:44:27 abs Exp $
+# $Id: pkgchk.sh,v 1.14 2001/09/16 22:27:59 abs Exp $
 #
 # TODO: Handle and as well as or tags (eg: i386+x11)
 # TODO: Handle updates with dependencies via binary packages
@@ -52,6 +52,7 @@ pkg_install()
     PKGDIR=$2
     INSTALL=$3
 
+    FAIL=
     if [ -d /var/db/pkg/$PKGNAME ];then
 	echo "$PKGNAME installed in previous stage"
     elif [ -n "$opt_b" -a -f $PACKAGES/All/$PKGNAME.tgz ] ; then
@@ -70,7 +71,7 @@ pkg_install()
 	echo "pkg_add $PKGNAME.tgz"
 	if [ -z "$opt_n" ];then
 	    if [ -n "$opt_k" ]; then
-		pkg_add $PACKAGES/All/$PKGNAME.tgz || true
+		pkg_add $PACKAGES/All/$PKGNAME.tgz || FAIL=1
 	    else
 		pkg_add $PACKAGES/All/$PKGNAME.tgz
 	    fi
@@ -80,11 +81,18 @@ pkg_install()
 	cd $PKGSRCDIR/$PKGDIR
 	if [ -z "$opt_n" ];then
 	    if [ -n "$opt_k" ]; then
-		${MAKE} update || true
+		${MAKE} update || FAIL=1
 	    else
 		${MAKE} update
 	    fi
 	fi
+    fi
+    if [ -n "$FAIL" -o ! -d /var/db/pkg/$PKGNAME ];then
+	FAIL_DONE=$FAIL_DONE" "$PKGNAME
+    elif [ $INSTALL = U ];then
+	UPDATE_DONE=$UPDATE_DONE" "$PKGNAME
+    else
+	INSTALL_DONE=$INSTALL_DONE" "$PKGNAME
     fi
     }
 
@@ -364,7 +372,6 @@ if [ -n "$UPDATE_TODO" ];then
     set -- $UPDATE_TODO
     while [ $# != 0 ]; do
 	pkg_install $1 $2 U
-	UPDATE_DONE=$UPDATE_DONE" "$1
 	shift ; shift;
     done
 fi
@@ -374,7 +381,6 @@ if [ -n "$INSTALL_TODO" ];then
     set -- $INSTALL_TODO
     while [ $# != 0 ]; do
 	pkg_install $1 $2 I
-	INSTALL_DONE=$INSTALL_DONE" "$1
 	shift ; shift;
     done
 fi
@@ -384,4 +390,7 @@ if [ -n "$UPDATE_DONE" ];then
 fi
 if [ -n "$INSTALL_DONE" ];then
     echo "Installed:$INSTALL_DONE"
+fi
+if [ -n "$FAIL_DONE" ];then
+    echo "Failed:$FAIL_DONE"
 fi
