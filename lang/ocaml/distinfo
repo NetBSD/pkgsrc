@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.12 2003/07/11 07:47:44 jtb Exp $
+$NetBSD: distinfo,v 1.13 2003/07/11 08:24:41 jtb Exp $
 
 SHA1 (ocaml-3.06.tar.gz) = cf1b053bf751ad566e445ca13c620ffef3a1b863
 Size (ocaml-3.06.tar.gz) = 2436887 bytes
@@ -13,4 +13,4 @@ SHA1 (patch-ah) = e3e4b3fd9f8b370b44f8ff22134710d194d60805
 SHA1 (patch-ai) = 5b3a27cbe5c7dcebc6899859b24ebe2bd0248862
 SHA1 (patch-aj) = 5a9365b0ee1153cfddb7780422f5ba451a85ae9a
 SHA1 (patch-ak) = cd5a93e7530f6864ee6f591f9f7ba5722428408c
-SHA1 (patch-al) = 97cad6e699ef1e973973c1ebc27b441a52fd1b78
+SHA1 (patch-al) = 9c3d37b4d849fb8de033bf927c8d3f7a3aaee4de
