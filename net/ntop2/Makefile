@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/08/02 14:42:28 veego Exp $
+# $NetBSD: Makefile,v 1.6 2002/08/05 06:54:13 veego Exp $
 
 DISTNAME=		ntop-2.1
 PKGNAME=		ntop2-2.1
@@ -10,6 +10,8 @@ HOMEPAGE=		http://www.ntop.org/
 COMMENT=		shows network usage (similar to "top" for processes)
 
 CONFLICTS=		ntop-[0-9]*
+
+BROKEN=			"PR 13058 needs to be closed first"
 
 WRKSRC=                 ${WRKDIR}/ntop
 
