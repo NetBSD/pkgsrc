@@ -7,3 +7,4 @@ to your X window configuration file, or run the
 following command:
 
     xset +fp @PREFIX@/lib/X11/fonts/jmk
+    xset fp rehash
