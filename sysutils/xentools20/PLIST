@@ -1,17 +1,17 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/03/07 15:59:08 bouyer Exp $
-bin/xenperf
-bin/xencons
+@comment $NetBSD: PLIST,v 1.2 2005/03/17 23:47:12 bouyer Exp $
 bin/miniterm
+bin/xencons
+bin/xenperf
 include/xc.h
-lib/libxutil.so.2.0.0
-lib/libxutil.a
 lib/libxc.so.2.0.0
-sbin/xend
-sbin/xensv
+lib/libxutil.a
+lib/libxutil.so.2.0.0
 sbin/netfix
-sbin/xm
+sbin/xend
 sbin/xenperf
+sbin/xensv
 sbin/xfrd
+sbin/xm
 ${PYSITELIB}/xen/__init__.py
 ${PYSITELIB}/xen/lowlevel/__init__.py
 ${PYSITELIB}/xen/lowlevel/xc.so
