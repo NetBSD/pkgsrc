@@ -1,0 +1,83 @@
+diff -r -u ../../work/splay-0.5/mpegsound/fileplayer.cc ./mpegsound/fileplayer.cc
+--- ../../work/splay-0.5/mpegsound/fileplayer.cc	Fri May 23 19:16:36 1997
++++ ./mpegsound/fileplayer.cc	Sat Nov  1 01:38:51 1997
+@@ -8,7 +8,11 @@
+ #include <fcntl.h>
+ #include "mpegsound.h"
+ 
++#ifdef __NetBSD__
++static char *defaultdevice="/dev/audio";
++#else
+ static char *defaultdevice="/dev/dsp";
++#endif
+ 
+ // Wave file player
+ bool Wavefileplayer::openfile(char *filename,char *device)
+diff -r -u ../../work/splay-0.5/mpegsound/rawplayer.cc ./mpegsound/rawplayer.cc
+--- ../../work/splay-0.5/mpegsound/rawplayer.cc	Sat Nov  1 01:39:50 1997
++++ ./mpegsound/rawplayer.cc	Sat Nov  1 01:27:58 1997
+@@ -8,7 +8,11 @@
+ 
+ #include <fcntl.h>
+ #include <sys/ioctl.h>
++#ifdef __NetBSD__
++#include <soundcard.h>
++#else
+ #include <machine/soundcard.h>
++#endif
+ 
+ #include "mpegsound.h"
+ 
+diff -r -u ../../work/splay-0.5/src/Makefile.in ./src/Makefile.in
+--- ../../work/splay-0.5/src/Makefile.in	Wed May 28 13:18:08 1997
++++ ./src/Makefile.in	Sat Nov  1 01:31:25 1997
+@@ -69,6 +69,8 @@
+ 
+ LIBS		= @LIBS@ 
+ 
++LIBS += -lossaudio
++
+ SUBDIRS		= cmd @XQTDIR@
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+ CONFIG_CLEAN_FILES = 
+diff -r -u ../../work/splay-0.5/src/cmd/cmd.cc ./src/cmd/cmd.cc
+--- ../../work/splay-0.5/src/cmd/cmd.cc	Sat Nov  1 01:39:50 1997
++++ ./src/cmd/cmd.cc	Sat Nov  1 01:34:20 1997
+@@ -15,7 +15,11 @@
+ #include <sys/types.h>
+ #include <sys/stat.h>
+ #include <sys/ioctl.h>
++#ifdef __NetBSD__
++#include <soundcard.h>
++#else
+ #include <machine/soundcard.h>
++#endif
+ 
+ #include <mpegsound.h>
+ 
+@@ -357,7 +361,7 @@
+ 	   " -W : playing wave as standard input\n"
+ 	   " -V : show version\n"
+ 	   " -d device : play raw data(Not wave format) to device\n"
+-	   "             default : /dev/dsp\n"
++	   "             default : /dev/audio\n"
+ 	   "\t\tIf first character of devicename \'/\',\n"
+ 	   "\t\t\tregard device,\n"
+ 	   "\t\tIf first character of devicename \'-\',\n"
+diff -r -u ../../work/splay-0.5/src/xqt/xsplay.cc ./src/xqt/xsplay.cc
+--- ../../work/splay-0.5/src/xqt/xsplay.cc	Wed May 28 09:38:59 1997
++++ ./src/xqt/xsplay.cc	Sat Nov  1 01:36:57 1997
+@@ -232,7 +232,12 @@
+ 
+ 
+ // Player
+-  if(device==NULL)device="/dev/dsp";
++  if(device==NULL)
++#ifdef __NetBSD__
++    device="/dev/audio";
++#else
++    device="/dev/dsp";
++#endif
+ 
+   if(device[0]=='/')player=new Rawplayer;
+   else 
