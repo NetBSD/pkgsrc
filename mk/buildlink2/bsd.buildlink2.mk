@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.2 2002/08/22 08:21:28 jlam Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.3 2002/08/22 20:20:33 jlam Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -383,8 +383,9 @@ BUILDLINK_SHELL?=	${SH}
 #	directory from the PATH so that sub-invocations of compiler tools
 #	will use the wrappees instead of the wrappers.
 #
-_BLNK_WRAP_SANITIZE_PATH= \
-	PATH="${PATH:C/:${BUILDLINK_DIR}[^:]*//:C/${BUILDLINK_DIR}[^:]*://}"
+_BLNK_SANITIZED_PATH!=	${ECHO} ${PATH} | ${SED}			\
+	-e "s|:${BUILDLINK_DIR}[^:]*||" -e "s|${BUILDLINK_DIR}[^:]*:||"
+_BLNK_WRAP_SANITIZE_PATH=		PATH="${_BLNK_SANITIZED_PATH}"
 _BLNK_WRAP_PRE_CACHE=			${BUILDLINK_DIR}/bin/.pre-cache
 _BLNK_WRAP_POST_CACHE=			${BUILDLINK_DIR}/bin/.post-cache
 _BLNK_WRAP_CACHE=			${BUILDLINK_DIR}/bin/.cache
