@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2000/07/13 11:09:16 abs Exp $
+# $NetBSD: Makefile,v 1.8 2000/07/13 15:34:10 abs Exp $
 #
 
 DISTNAME=	nocol-4.3.1
+PKGNAME=	nocol-4.3.1nb1
 CATEGORIES=	net
 MASTER_SITES= 	http://www.netplex-tech.com/software/nocol/downloads/
 
@@ -28,6 +29,22 @@ post-patch:
 	fqdn=`$$dir/host $$hostname | ${AWK} '{ print $$1; exit }'`;	\
 	${SED} -e 's|@prefix@|${PREFIX}|g' -e "s|@FQDN@|$$fqdn|g" 	\
 			${FILESDIR}/answers > ${WRKSRC}/answers)
+
+post-install:
+	# Ensure webnocol audio and images files are available if needed
+	#
+	${MKDIR} ${PREFIX}/share/nocol/gifs
+
+	for f in critical.wav error.wav warning.wav ; do		\
+	    ${INSTALL_DATA} ${WRKSRC}/webnocol/$$f ${PREFIX}/share/nocol; \
+	done
+
+	for f in bluesq.gif critical.jpg empty.gif error.jpg		\
+		greensq.gif help.jpg info.jpg redsq.gif warning.jpg	\
+		yellowsq.gif ; do					\
+	    ${INSTALL_DATA} ${WRKSRC}/webnocol/gifs/$$f			\
+			    ${PREFIX}/share/nocol/gifs;			\
+	done
 
 do-configure:
 	(cd ${WRKSRC}; ./Configure < answers)

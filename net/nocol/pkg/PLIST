@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2000/07/13 11:09:19 abs Exp $
+@comment $NetBSD: PLIST,v 1.4 2000/07/13 15:34:14 abs Exp $
 bin/apcmon
 bin/armon
 bin/bgpmon
@@ -107,7 +107,22 @@ share/examples/nocol/snmpmon-confg
 share/examples/nocol/sqlmon-confg
 share/examples/nocol/syslogmon-confg
 share/examples/nocol/tpmon-confg
+share/nocol/critical.wav
+share/nocol/error.wav
+share/nocol/gifs/bluesq.gif
+share/nocol/gifs/critical.jpg
+share/nocol/gifs/empty.gif
+share/nocol/gifs/error.jpg
+share/nocol/gifs/greensq.gif
+share/nocol/gifs/help.jpg
+share/nocol/gifs/info.jpg
+share/nocol/gifs/redsq.gif
+share/nocol/gifs/warning.jpg
+share/nocol/gifs/yellowsq.gif
+share/nocol/warning.wav
 @dirrm bin/hostmon-osclients
 @dirrm share/examples/nocol
 @dirrm run
 @dirrm msgs
+@dirrm share/nocol/gifs
+@dirrm share/nocol
