@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2004/10/15 18:21:56 minskim Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2004/10/19 17:40:37 minskim Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBGPG_ERROR_BUILDLINK3_MK:=	${LIBGPG_ERROR_BUILDLINK3_MK}+
@@ -15,5 +15,7 @@ BUILDLINK_DEPENDS.libgpg-error+=	libgpg-error>=0.6
 BUILDLINK_RECOMMENDED.libgpg-error+=	libgpg-error>=0.6nb2
 BUILDLINK_PKGSRCDIR.libgpg-error?=	../../security/libgpg-error
 .endif	# LIBGPG_ERROR_BUILDLINK3_MK
+
+.include "../../devel/gettext-lib/buildlink3.mk"
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
