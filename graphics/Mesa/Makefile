@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 1999/12/02 20:26:39 bouyer Exp $
+# $NetBSD: Makefile,v 1.29 2000/01/02 03:36:52 wiz Exp $
 #
 
 DISTNAME=       MesaLib-3.0
@@ -30,23 +30,23 @@ ALL_TARGET=	sunos5-gcc
 .endif
 
 post-extract:
-	@chmod +r ${WRKSRC}/demos/*
-	@find ${WRKSRC} -type f -name "*~" | xargs ${RM} -f
+	@${CHMOD} +r ${WRKSRC}/demos/*
+	@${FIND} ${WRKSRC} -type f -name "*~" | xargs ${RM} -f
 
 do-install:
 .for file in ${MESA_LIBS}
 	${INSTALL_DATA} ${WRKSRC}/lib/${file}.a ${PREFIX}/lib
-	ranlib ${PREFIX}/lib/${file}.a
+	${RANLIB} ${PREFIX}/lib/${file}.a
 	${INSTALL_DATA} ${WRKSRC}/lib/${file}.so.${MESA_VERSION} ${PREFIX}/lib
 .endfor
 .for file in ${GLUT_LIBS}
 	${INSTALL_DATA} ${WRKSRC}/lib/${file}.a ${PREFIX}/lib
-	ranlib ${PREFIX}/lib/${file}.a
+	${RANLIB} ${PREFIX}/lib/${file}.a
 	${INSTALL_DATA} ${WRKSRC}/lib/${file}.so.${GLUT_VERSION} ${PREFIX}/lib
 .endfor
 .for file in GL GLU
-	@ln -f -s ${PREFIX}/lib/libMesa${file}.a ${PREFIX}/lib/lib${file}.a
-	@ln -f -s ${PREFIX}/lib/libMesa${file}.so.${MESA_VERSION} ${PREFIX}/lib/lib${file}.so.${MESA_VERSION}
+	@${LN} -f -s ${PREFIX}/lib/libMesa${file}.a ${PREFIX}/lib/lib${file}.a
+	@${LN} -f -s ${PREFIX}/lib/libMesa${file}.so.${MESA_VERSION} ${PREFIX}/lib/lib${file}.so.${MESA_VERSION}
 .endfor
 	@${MKDIR} ${PREFIX}/include/GL
 	${INSTALL_DATA} ${WRKSRC}/include/GL/* ${PREFIX}/include/GL
