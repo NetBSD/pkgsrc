@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.4 1997/10/13 12:54:18 agc Exp $
+# $NetBSD: Makefile,v 1.5 1997/10/13 15:07:24 agc Exp $
 # New ports collection makefile for:	team
 # Version required:	3.1 (From the RCS Id line of team.c)
 # Date created:		1 July 1995
 # Whom:			joerg
 #
-# FreeBSD Id: Makefile,v 1.1.1.1 1997/10/11 21:55:00 hubertf Exp
+# FreeBSD Id: Makefile,v 1.6 1997/04/30 03:18:06 asami Exp
 #
 
 DISTNAME=	team-3.1
