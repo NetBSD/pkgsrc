@@ -1,0 +1,23 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/02/07 14:33:19 jschauma Exp $
+
+--- configure.orig	2005-02-03 16:34:11.000000000 -0500
++++ configure	2005-02-03 16:34:49.000000000 -0500
+@@ -11470,6 +11470,18 @@
+ #define FREEBSD 1
+ _ACEOF
+ ;;
++*netbsd*)      metric_source="netbsd.c"
++                CFLAGS="-pthread $CFLAGS -D_REENTRANT"
++
++cat >>confdefs.h <<\_ACEOF
++#define SUPPORT_GEXEC 0
++_ACEOF
++
++
++cat >>confdefs.h <<\_ACEOF
++#define NETBSD 1
++_ACEOF
++;;
+ *cygwin*)      	metric_source="cygwin.c"
+ 
+ cat >>confdefs.h <<\_ACEOF
