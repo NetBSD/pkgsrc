@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2004/01/20 12:24:29 agc Exp $
+# $NetBSD: Makefile,v 1.7 2004/03/26 02:27:52 wiz Exp $
 #
 
 DISTNAME=	musixtex-109
 PKGNAME=	tex-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	print
 #MASTER_SITES=	ftp://ftp.tex.ac.uk/tex-archive/macros/musixtex/taupin/
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=macros/musixtex/taupin/}

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.5 2003/11/08 07:40:17 xtraeme Exp $
+# $NetBSD: buildlink2.mk,v 1.6 2004/03/26 02:27:52 wiz Exp $
 #
 
 .if !defined(LIBNASL_BUILDLINK2_MK)
@@ -6,6 +6,7 @@ LIBNASL_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			libnasl
 BUILDLINK_DEPENDS.libnasl?=		libnasl>=2.0.9
+BUILDLINK_RECOMMENDED.libnasl?=		libnasl>=2.0.9nb1
 BUILDLINK_PKGSRCDIR.libnasl?=		../../security/libnasl
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.libnasl=libnasl

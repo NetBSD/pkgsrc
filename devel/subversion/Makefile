@@ -1,12 +1,13 @@
-# $NetBSD: Makefile,v 1.19 2004/03/08 00:06:03 minskim Exp $
+# $NetBSD: Makefile,v 1.20 2004/03/26 02:27:39 wiz Exp $
 
 PKGNAME=	subversion-${SVNVER}
+PKGREVISION=	1
 COMMENT=	Version control system, meta-package
 
-DEPENDS+=	subversion-base-${SVNVER}:../../devel/subversion-base
-DEPENDS+=	p5-subversion-${SVNVER}:../../devel/p5-subversion
-DEPENDS+=	ap2-subversion-${SVNVER}:../../www/ap2-subversion
-DEPENDS+=	${PYPKGPREFIX}-subversion-${SVNVER}:../../devel/py-subversion
+DEPENDS+=	subversion-base-${SVNVER}nb1:../../devel/subversion-base
+DEPENDS+=	p5-subversion-${SVNVER}nb1:../../devel/p5-subversion
+DEPENDS+=	ap2-subversion-${SVNVER}nb1:../../www/ap2-subversion
+DEPENDS+=	${PYPKGPREFIX}-subversion-${SVNVER}nb1:../../devel/py-subversion
 
 .include "Makefile.common"
 

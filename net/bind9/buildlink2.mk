@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1 2003/05/12 17:17:35 jmmv Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2004/03/26 02:27:47 wiz Exp $
 #
 # This Makefile fragment is included by packages that use bind.
 #
@@ -10,6 +10,7 @@ BIND_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			bind
 BUILDLINK_DEPENDS.bind?=		bind>=9.2.2
+BUILDLINK_RECOMMENDED.bind?=		bind>=9.2.3nb2
 BUILDLINK_PKGSRCDIR.bind?=		../../net/bind9
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.bind=bind

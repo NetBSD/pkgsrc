@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.103 2004/03/04 17:05:50 taca Exp $
+# $NetBSD: Makefile,v 1.104 2004/03/26 02:27:58 wiz Exp $
 
 DISTNAME=	squid-2.5.STABLE5
 PKGNAME=	squid-2.5.5
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://www.squid-cache.org/Versions/v2/2.5/ \
 		ftp://ftp.leo.org/pub/comp/general/infosys/www/daemons/squid/squid-2/STABLE/ \
