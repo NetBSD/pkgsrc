@@ -1,11 +1,12 @@
-$NetBSD: patch-ab,v 1.1.1.1 2001/04/26 05:57:22 rh Exp $
+$NetBSD: patch-ab,v 1.2 2001/05/25 06:16:17 rh Exp $
 
---- mail/main.c.orig	Tue Apr 24 17:29:10 2001
+--- mail/main.c.orig	Wed Mar 14 00:31:06 2001
 +++ mail/main.c
-@@ -31,6 +31,23 @@
+@@ -31,6 +31,24 @@
  #include "mail.h"
  #include "mail-mt.h"
  
++
 +#ifdef __NetBSD__
 +#include <gtk/gtk.h>
 +#include <pthread.h>
@@ -23,10 +24,10 @@ $NetBSD: patch-ab,v 1.1.1.1 2001/04/26 05:57:22 rh Exp $
 +}
 +#endif
 +
- #if 0
- static int blowup(int status)
- {
-@@ -117,6 +134,10 @@
+ /*#define DO_MCHECK*/
+ 
+ #ifdef DO_MCHECK
+@@ -129,6 +147,10 @@
  		g_mutex_free (gdk_threads_mutex);
  		gdk_threads_mutex = NULL;
  	}
