@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5847 2004/05/06 16:24:20 minskim Exp $
+$NetBSD: CHANGES,v 1.5848 2004/05/06 19:21:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2386,3 +2386,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gnome-netstatus to 2.6.1 [jmmv 2004-05-06]
 	Updated wine to 20040505 [adam 2004-05-06]
 	Updated scrollkeeper to 0.3.14nb3 [minskim 2004-05-06]
+	Updated lynx to 2.5.8.2 [wiz 2004-05-06]
