@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/02/19 04:49:40 ben Exp $
+# $NetBSD: Makefile,v 1.5 2004/03/08 23:40:18 wiz Exp $
 #
 
 DISTNAME=		Csound-4.24.1
@@ -18,6 +18,7 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 NOT_FOR_PLATFORM=	*-*-alpha *-*-sparc64	# many LP64 problems
 
 DIST_SUBDIR=		csound
+GCC_REQD=		3.0
 USE_GNU_TOOLS+=		make
 USE_BUILDLINK2=		yes
 CONFLICTS=		csound-bath*
