@@ -1,18 +1,31 @@
-$NetBSD: patch-aa,v 1.2 2001/07/28 00:15:13 thorpej Exp $
+$NetBSD: patch-aa,v 1.3 2003/09/19 18:14:03 wiz Exp $
 
---- Makefile.orig	Tue Apr 27 14:03:25 1999
-+++ Makefile	Fri Jul 27 16:20:10 2001
+--- Makefile.orig	Tue Apr 27 22:03:25 1999
++++ Makefile	Fri Sep 19 16:47:27 2003
+@@ -4,7 +4,7 @@
+ #
+ 
+ # Default C compiler: must be an ANSI C compiler
+-CC         = cc
++#CC         = cc
+ # File names for the main source files
+ DRIV_SRC   = netpipe.c
+ DRIV_OBJ   = netpipe.o
 @@ -13,7 +13,7 @@
  TARGETS    = NPtcp
  # If you have TCP, MPI and PVM
  #TARGETS    = NPtcp NPmpi NPpvm
 -CFLAGS	   = -O
-+CFLAGS	   = -O -DHAVE_GETRUSAGE
++#CFLAGS    = -O
  # Adjust these for MPI (only used if you have MPI)
  MPI_HOME   = /home/mpich
  MPI_ARCH   = IRIX
-@@ -25,7 +25,7 @@
- EXTRA_LIBS = 
+@@ -22,10 +22,10 @@
+ PVM_HOME   = /home/pvm3
+ PVM_ARCH   = SUN4SOL2
+ # Any extra libraries needed
+-EXTRA_LIBS = 
++#EXTRA_LIBS = 
  #EXTRA_LIBS = -lgcc
  
 -targets:    $(TARGETS)
