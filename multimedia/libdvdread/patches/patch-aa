@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/01/28 14:29:01 recht Exp $
+$NetBSD: patch-aa,v 1.2 2005/03/10 14:21:45 tv Exp $
 
---- dvdread/bswap.h.orig       Wed Mar  5 23:13:17 2003
-+++ dvdread/bswap.h    Wed Mar  5 23:14:24 2003
+--- dvdread/bswap.h.orig	2002-12-14 19:09:12.000000000 -0500
++++ dvdread/bswap.h
 @@ -57,7 +57,15 @@
  #include <sys/endian.h>
  #define B2N_16(x) x = be16toh(x)
@@ -19,3 +19,12 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/01/28 14:29:01 recht Exp $
  
  /* This is a slow but portable implementation, it has multiple evaluation 
   * problems so beware.
+@@ -65,7 +73,7 @@
+  * functionality! 
+  */
+ 
+-#elif defined(__FreeBSD__) || defined(__sun) || defined(__bsdi__)
++#elif defined(__FreeBSD__) || defined(__sun) || defined(__bsdi__) || defined(__INTERIX)
+ #define B2N_16(x) \
+  x = ((((x) & 0xff00) >> 8) | \
+       (((x) & 0x00ff) << 8))
