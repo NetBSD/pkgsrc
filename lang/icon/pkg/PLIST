@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.5 2001/06/25 18:00:21 jtb Exp $
+@comment $NetBSD: PLIST,v 1.6 2001/07/06 13:11:05 jtb Exp $
 bin/iconc
 bin/icont
 bin/iconx
+bin/ipatch
 bin/patchstr
 bin/rtt
 lib/icon/abkform.u1
