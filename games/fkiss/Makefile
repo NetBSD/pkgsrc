@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/01/24 13:30:56 grant Exp $
+# $NetBSD: Makefile,v 1.14 2004/04/11 18:11:03 snj Exp $
 #
 
 DISTNAME=		fkiss-0.33
@@ -16,7 +16,7 @@ PATCH_DIST_STRIP=       -p1
 
 DEPENDS+=		lha-[0-9]*:../../archivers/lha
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_X11=		yes
 USE_GNU_TOOLS+=		make
 GNU_CONFIGURE=		yes
@@ -45,5 +45,5 @@ do-install:
 			>${PREFIX}/share/doc/fkiss/`${BASENAME} $$i`; \
 	done
 
-.include "../../mk/ossaudio.buildlink2.mk"
+.include "../../mk/ossaudio.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
