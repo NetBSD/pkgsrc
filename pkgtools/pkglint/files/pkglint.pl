@@ -12,7 +12,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.66 2002/04/08 13:57:14 wiz Exp $
+# $NetBSD: pkglint.pl,v 1.67 2002/07/02 13:16:32 wiz Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
@@ -285,6 +285,10 @@ sub checkdistinfo {
 	local(%indistinfofile);
 
 	open(SUM,"<$portdir/$file") || return 0;
+	$_ = <SUM>;
+	if (! /^\$NetBSD(:.*|)\$$/) {
+	    &perror("FATAL: missing RCS Id in distinfo file: $_");
+	}
 	while(<SUM>) {
 		next if !/^(MD5|SHA1|RMD160) \(([^)]+)\) = (.*)$/;
 		$alg=$1;
@@ -661,17 +665,22 @@ sub checkmakefile {
 	      "DISTINFO: $distinfo\n") if ($verbose);
 
 	#
-	# whole file: IS_INTERACTIVE
+	# whole file: INTERACTIVE_STAGE
 	#
 	$whole =~ s/\n#[^\n]*/\n/g;
 	$whole =~ s/\n\n+/\n/g;
-	print "OK: checking IS_INTERACTIVE.\n" if ($verbose);
-	if ($whole =~ /\nIS_INTERACTIVE/) {
+	print "OK: checking INTERACTIVE_STAGE.\n" if ($verbose);
+	if ($whole =~ /\nINTERACTIVE_STAGE/) {
 		if ($whole !~ /defined\((BATCH|FOR_CDROM)\)/) {
-			&perror("WARN: use of IS_INTERACTIVE discouraged. ".
+			&perror("WARN: use of INTERACTIVE_STAGE discouraged. ".
 				"provide batch mode by using BATCH and/or ".
 				"FOR_CDROM.");
 		}
+	}
+	print "OK: checking IS_INTERACTIVE.\n" if ($verbose);
+	if ($whole =~ /\nIS_INTERACTIVE/) {
+		&perror("FATAL: IS_INTERACTIVE is deprecated, ".
+			"use INTERACTIVE_STAGE instead.");
 	}
 	print "OK: checking for PLIST_SRC.\n" if ($verbose);
 	if ($whole =~ /\nPLIST_SRC/) {
