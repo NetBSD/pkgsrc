@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2003/11/18 21:09:18 markd Exp $
+# $NetBSD: Makefile,v 1.6 2003/12/14 12:02:17 markd Exp $
 
-DISTNAME=	ivtools-1.1
-PKGNAME=	ivtools-1.1.0
+DISTNAME=	ivtools-1.1.2
 WRKSRC=		${WRKDIR}/${PKGNAME:C/\.[0-9]$//}
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ivtools/}
@@ -15,6 +14,9 @@ CONFLICTS+=	dclock-*
 
 GNU_CONFIGURE=	YES
 USE_X11=	YES
+
+post-patch:
+	${RM} -f ${WRKSRC}/src/include/ivstd/strstream.h
 
 pre-install:
 	${RM} -f ${WRKSRC}/config/local.def.orig
