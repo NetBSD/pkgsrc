@@ -1,0 +1,86 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/11/12 18:23:53 rh Exp $
+bin/addr
+bin/dig
+bin/dnsquery
+bin/mkservdb
+bin/nslookup
+bin/nsupdate
+bind/include/arpa/inet.h
+bind/include/arpa/nameser.h
+bind/include/arpa/nameser_compat.h
+bind/include/hesiod.h
+bind/include/irp.h
+bind/include/irs.h
+bind/include/isc/assertions.h
+bind/include/isc/dst.h
+bind/include/isc/eventlib.h
+bind/include/isc/heap.h
+bind/include/isc/irpmarshall.h
+bind/include/isc/list.h
+bind/include/isc/logging.h
+bind/include/isc/memcluster.h
+bind/include/isc/misc.h
+bind/include/isc/tree.h
+bind/include/netdb.h
+bind/include/res_update.h
+bind/include/resolv.h
+bind/include/sys/bitypes.h
+bind/lib/libbind.a
+bind/lib/libbind_r.a
+bind/share/man/cat3/getaddrinfo.0
+bind/share/man/cat3/gethostbyname.0
+bind/share/man/cat3/getipnodebyname.0
+bind/share/man/cat3/getnetent.0
+bind/share/man/cat3/hesiod.0
+bind/share/man/cat3/inet_cidr.0
+bind/share/man/cat3/resolver.0
+bind/share/man/cat3/tsig.0
+bind/share/man/cat5/irs.conf.0
+bind/share/man/cat5/resolver.0
+bind/share/man/cat7/hostname.0
+bind/share/man/cat7/mailaddr.0
+libexec/dnskeygen
+libexec/named-xfer
+sbin/irpd
+sbin/named
+sbin/named-bootconf
+sbin/ndc
+share/doc/bind8/acl.html
+share/doc/bind8/address_list.html
+share/doc/bind8/comments.html
+share/doc/bind8/config.html
+share/doc/bind8/controls.html
+share/doc/bind8/docdef.html
+share/doc/bind8/example.html
+share/doc/bind8/include.html
+share/doc/bind8/index.html
+share/doc/bind8/key.html
+share/doc/bind8/logging.html
+share/doc/bind8/master.html
+share/doc/bind8/options.html
+share/doc/bind8/server.html
+share/doc/bind8/trusted-keys.html
+share/doc/bind8/zone.html
+share/man/cat1/dig.0
+share/man/cat1/dnsquery.0
+share/man/cat1/dnskeygen.0
+share/man/cat5/named.conf.0
+share/man/cat8/named.0
+share/man/cat8/named-bootconf.0
+share/man/cat8/named-xfer.0
+share/man/cat8/ndc.0
+share/man/cat8/nslookup.0
+share/man/cat8/nsupdate.0
+share/misc/nslookup.help
+@dirrm bind/include/arpa
+@dirrm bind/include/isc
+@dirrm bind/include/sys
+@dirrm bind/include
+@dirrm bind/lib
+@dirrm bind/share/man/cat3
+@dirrm bind/share/man/cat5
+@dirrm bind/share/man/cat7
+@dirrm bind/share/man
+@dirrm bind/share
+@dirrm bind
+@dirrm share/doc/bind8

@@ -1,0 +1,175 @@
+$NetBSD: patch-ab,v 1.1.1.1 1999/11/12 18:23:53 rh Exp $
+
+*** doc/man/Makefile.orig	Sat Sep 18 02:23:44 1999
+--- doc/man/Makefile	Fri Nov 12 01:43:05 1999
+***************
+*** 52,63 ****
+  # Target directory for the manual directory tree. Eg., may be used to 
+  # specify the path of an NFS-mounted directory for common files.
+  #
+! DESTDIR=
+  
+  #
+  # Default location for manual section directories.
+  #
+! DESTMAN= /usr/share/man
+  
+  #
+  # Install manuals in ${MANDIR}N. For systems that generate catable manual 
+--- 52,63 ----
+  # Target directory for the manual directory tree. Eg., may be used to 
+  # specify the path of an NFS-mounted directory for common files.
+  #
+! DESTDIR= ${PREFIX}
+  
+  #
+  # Default location for manual section directories.
+  #
+! DESTMAN= /share/man
+  
+  #
+  # Install manuals in ${MANDIR}N. For systems that generate catable manual 
+***************
+*** 228,241 ****
+  #
+  # User command manual entries
+  #
+! CMD_BASE = 	dig host dnsquery dnskeygen
+  CMD_SRC_EXT = 	1
+  CMD_SRC = 	dig.${CMD_SRC_EXT} \
+- 		host.${CMD_SRC_EXT} \
+  		dnsquery.${CMD_SRC_EXT} \
+  		dnskeygen.${CMD_SRC_EXT}
+  CMD_OUT =	dig.${CMD_OUT_EXT} \
+- 		host.${CMD_OUT_EXT} \
+  		dnsquery.${CMD_OUT_EXT} \
+  		dnskeygen.${CMD_OUT_EXT}
+  
+--- 228,239 ----
+  #
+  # User command manual entries
+  #
+! CMD_BASE = 	dig dnsquery dnskeygen
+  CMD_SRC_EXT = 	1
+  CMD_SRC = 	dig.${CMD_SRC_EXT} \
+  		dnsquery.${CMD_SRC_EXT} \
+  		dnskeygen.${CMD_SRC_EXT}
+  CMD_OUT =	dig.${CMD_OUT_EXT} \
+  		dnsquery.${CMD_OUT_EXT} \
+  		dnskeygen.${CMD_OUT_EXT}
+  
+***************
+*** 279,285 ****
+  # Network library routines manual entries
+  #
+  LIB_NETWORK_BASE =	gethostbyname inet_cidr resolver hesiod getnetent \
+! 			tsig getaddrinfo inet_cidr getipnodebyname
+  LIB_NETWORK_SRC_EXT =	3
+  LIB_NETWORK_SRC = 	gethostbyname.${LIB_NETWORK_SRC_EXT} \
+  			inet_cidr.${LIB_NETWORK_SRC_EXT} \
+--- 277,283 ----
+  # Network library routines manual entries
+  #
+  LIB_NETWORK_BASE =	gethostbyname inet_cidr resolver hesiod getnetent \
+! 			tsig getaddrinfo getipnodebyname
+  LIB_NETWORK_SRC_EXT =	3
+  LIB_NETWORK_SRC = 	gethostbyname.${LIB_NETWORK_SRC_EXT} \
+  			inet_cidr.${LIB_NETWORK_SRC_EXT} \
+***************
+*** 303,309 ****
+  #
+  # File format manual entries
+  #
+! FORMAT_BASE =	resolver irs.conf named.conf
+  FORMAT_SRC_EXT = 5
+  FORMAT_SRC = 	resolver.${FORMAT_SRC_EXT} \
+  		irs.conf.${FORMAT_SRC_EXT} \
+--- 301,308 ----
+  #
+  # File format manual entries
+  #
+! FORMAT_MAIN_BASE =	named.conf
+! FORMAT_BASE =	resolver irs.conf
+  FORMAT_SRC_EXT = 5
+  FORMAT_SRC = 	resolver.${FORMAT_SRC_EXT} \
+  		irs.conf.${FORMAT_SRC_EXT} \
+***************
+*** 355,363 ****
+  install:	${OUTFILES} \
+  		${DESTDIR}${DESTMAN}/${MANDIR}${CMD_EXT_DIR} \
+  		${DESTDIR}${DESTMAN}/${MANDIR}${SYS_OPS_EXT_DIR} \
+! 		${DESTDIR}${DESTMAN}/${MANDIR}${LIB_NETWORK_EXT_DIR} \
+  		${DESTDIR}${DESTMAN}/${MANDIR}${FORMAT_EXT_DIR} \
+! 		${DESTDIR}${DESTMAN}/${MANDIR}${DESC_EXT_DIR}
+  	@set -x; N=${CMD_EXT}; for f in ${CMD_BASE}; do \
+  		${INSTALL} -c -m 444 ${MAN_OWNER} ${MAN_GROUP} \
+  		$${f}.${CMD_OUT_EXT} \
+--- 354,363 ----
+  install:	${OUTFILES} \
+  		${DESTDIR}${DESTMAN}/${MANDIR}${CMD_EXT_DIR} \
+  		${DESTDIR}${DESTMAN}/${MANDIR}${SYS_OPS_EXT_DIR} \
+! 		${DESTDIR}/bind${DESTMAN}/${MANDIR}${LIB_NETWORK_EXT_DIR} \
+  		${DESTDIR}${DESTMAN}/${MANDIR}${FORMAT_EXT_DIR} \
+! 		${DESTDIR}/bind${DESTMAN}/${MANDIR}${FORMAT_EXT_DIR} \
+! 		${DESTDIR}/bind${DESTMAN}/${MANDIR}${DESC_EXT_DIR}
+  	@set -x; N=${CMD_EXT}; for f in ${CMD_BASE}; do \
+  		${INSTALL} -c -m 444 ${MAN_OWNER} ${MAN_GROUP} \
+  		$${f}.${CMD_OUT_EXT} \
+***************
+*** 391,415 ****
+  	@set -x; N=${LIB_NETWORK_EXT}; for f in ${LIB_NETWORK_BASE}; do \
+  		${INSTALL} -c -m 444 ${MAN_OWNER} ${MAN_GROUP} \
+  		$${f}.${LIB_NETWORK_OUT_EXT} \
+! 		${DESTDIR}${DESTMAN}/${MANDIR}${LIB_NETWORK_EXT_DIR}/$${f}.${CATEXT}; \
+  	done
+  	@set -x; N=${FORMAT_EXT}; for f in ${FORMAT_BASE}; do \
+  		${INSTALL} -c -m 444 ${MAN_OWNER} ${MAN_GROUP} \
+  		$${f}.${FORMAT_OUT_EXT} \
+! 		${DESTDIR}${DESTMAN}/${MANDIR}${FORMAT_EXT_DIR}/$${f}.${CATEXT}; \
+  	done
+  	@set -x; N=${DESC_EXT}; for f in ${DESC_BASE}; do \
+  		${INSTALL} -c -m 444 ${MAN_OWNER} ${MAN_GROUP} \
+  		$${f}.${DESC_OUT_EXT} \
+! 		${DESTDIR}${DESTMAN}/${MANDIR}${DESC_EXT_DIR}/$${f}.${CATEXT}; \
+  	done
+  
+  ${DESTDIR}${DESTMAN}/${MANDIR}${CMD_EXT_DIR} \
+  ${DESTDIR}${DESTMAN}/${MANDIR}${SYS_OPS_EXT_DIR} \
+! ${DESTDIR}${DESTMAN}/${MANDIR}${LIB_NETWORK_EXT_DIR} \
+  ${DESTDIR}${DESTMAN}/${MANDIR}${FORMAT_EXT_DIR} \
+! ${DESTDIR}${DESTMAN}/${MANDIR}${DESC_EXT_DIR}:
+! 	mkdir $@
+  
+  links: FRC
+  	@set -ex; ln -s SRC/*.[0-9] .
+--- 391,420 ----
+  	@set -x; N=${LIB_NETWORK_EXT}; for f in ${LIB_NETWORK_BASE}; do \
+  		${INSTALL} -c -m 444 ${MAN_OWNER} ${MAN_GROUP} \
+  		$${f}.${LIB_NETWORK_OUT_EXT} \
+! 		${DESTDIR}/bind${DESTMAN}/${MANDIR}${LIB_NETWORK_EXT_DIR}/$${f}.${CATEXT}; \
+! 	done
+! 	@set -x; N=${FORMAT_EXT}; for f in ${FORMAT_MAIN_BASE}; do \
+! 		${INSTALL} -c -m 444 ${MAN_OWNER} ${MAN_GROUP} $${f}.${FORMAT_OUT_EXT} \
+! 			${DESTDIR}${DESTMAN}/${MANDIR}${FORMAT_EXT_DIR}/$${f}.${CATEXT}; \
+  	done
+  	@set -x; N=${FORMAT_EXT}; for f in ${FORMAT_BASE}; do \
+  		${INSTALL} -c -m 444 ${MAN_OWNER} ${MAN_GROUP} \
+  		$${f}.${FORMAT_OUT_EXT} \
+! 		${DESTDIR}/bind${DESTMAN}/${MANDIR}${FORMAT_EXT_DIR}/$${f}.${CATEXT}; \
+  	done
+  	@set -x; N=${DESC_EXT}; for f in ${DESC_BASE}; do \
+  		${INSTALL} -c -m 444 ${MAN_OWNER} ${MAN_GROUP} \
+  		$${f}.${DESC_OUT_EXT} \
+! 		${DESTDIR}/bind${DESTMAN}/${MANDIR}${DESC_EXT_DIR}/$${f}.${CATEXT}; \
+  	done
+  
+  ${DESTDIR}${DESTMAN}/${MANDIR}${CMD_EXT_DIR} \
+  ${DESTDIR}${DESTMAN}/${MANDIR}${SYS_OPS_EXT_DIR} \
+! ${DESTDIR}/bind${DESTMAN}/${MANDIR}${LIB_NETWORK_EXT_DIR} \
+  ${DESTDIR}${DESTMAN}/${MANDIR}${FORMAT_EXT_DIR} \
+! ${DESTDIR}/bind${DESTMAN}/${MANDIR}${FORMAT_EXT_DIR} \
+! ${DESTDIR}/bind${DESTMAN}/${MANDIR}${DESC_EXT_DIR}:
+! 	mkdir -p $@
+  
+  links: FRC
+  	@set -ex; ln -s SRC/*.[0-9] .

@@ -1,0 +1,21 @@
+$NetBSD: patch-ac,v 1.1.1.1 1999/11/12 18:23:53 rh Exp $
+
+*** src/bin/Makefile.orig	Sun Aug  8 13:13:24 1999
+--- src/bin/Makefile	Fri Nov 12 01:49:34 1999
+***************
+*** 60,66 ****
+  
+  CFLAGS=	${CDEBUG} -I${PORTINCL} -I${INCL}
+  
+! SUBDIRS = addr nslookup dig dnsquery host named named-xfer ndc nsupdate \
+  	mkservdb irpd dnskeygen named-bootconf
+  
+  all: ${SUBDIRS}
+--- 60,66 ----
+  
+  CFLAGS=	${CDEBUG} -I${PORTINCL} -I${INCL}
+  
+! SUBDIRS = addr nslookup dig dnsquery named named-xfer ndc nsupdate \
+  	mkservdb irpd dnskeygen named-bootconf
+  
+  all: ${SUBDIRS}
