@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2004/07/12 08:25:11 martti Exp $
+$NetBSD: distinfo,v 1.8 2005/01/17 12:56:14 martti Exp $
 
-SHA1 (xfce4-toys-4.0.6.tar.gz) = f67016b1401ceab3ccde5812bc4bc65b1418d9c4
-Size (xfce4-toys-4.0.6.tar.gz) = 391511 bytes
+SHA1 (xfce4-toys-4.2.0.tar.gz) = cfbd42ae8f7b0f6e38ccec6a771961eafd0df8f2
+Size (xfce4-toys-4.2.0.tar.gz) = 403655 bytes

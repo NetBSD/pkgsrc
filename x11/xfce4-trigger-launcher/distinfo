@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2004/07/12 08:25:11 martti Exp $
+$NetBSD: distinfo,v 1.8 2005/01/17 12:56:14 martti Exp $
 
-SHA1 (xfce4-trigger-launcher-4.0.6.tar.gz) = 33841d0a4b146ac5d36d2469760871325f374478
-Size (xfce4-trigger-launcher-4.0.6.tar.gz) = 335379 bytes
+SHA1 (xfce4-trigger-launcher-4.2.0.tar.gz) = a732c7ea0b52cc8400cb1fa38de5a6c12accbe6d
+Size (xfce4-trigger-launcher-4.2.0.tar.gz) = 345902 bytes
