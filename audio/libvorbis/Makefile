@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2003/09/25 01:27:35 grant Exp $
+# $NetBSD: Makefile,v 1.26 2003/09/25 13:00:18 grant Exp $
 
 DISTNAME=	libvorbis-1.0
 PKGNAME=	libvorbis-1.0.0.8
@@ -13,6 +13,8 @@ USE_BUILDLINK2=		YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+
+GCC_REQD=		2.95.3
 
 PLIST_SUBST+=		DISTNAME=${DISTNAME}
 
