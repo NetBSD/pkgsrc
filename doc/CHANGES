@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3488 2003/09/23 04:10:41 dent Exp $
+$NetBSD: CHANGES,v 1.3489 2003/09/23 04:19:50 dent Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3615,7 +3615,7 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated ruby-DBD-postgresql to 0.0.21 [taca 2003-09-10]
 	Added ruby-DBD-mysql-0.0.21 [taca 2003-09-10]
 	Updated xpkgwedge to 1.8 [gavan 2003-09-10]
-	Updated pkg_chk to 1.40 [jmmv 2003-09-10]
+	Updated pkgchk to 1.40 [jmmv 2003-09-10]
 	Added fondu-030428 [manu 2003-09-10]	
 	Added resize_image-0.6 [itojun 2003-09-10]	
 	Updated povray to 3.50cnb1 [jmmv 2003-09-10]
