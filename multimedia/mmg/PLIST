@@ -1,19 +1,21 @@
-@comment $NetBSD: PLIST,v 1.2 2004/07/21 00:04:30 salo Exp $
+@comment $NetBSD: PLIST,v 1.3 2005/03/23 16:58:39 salo Exp $
 bin/mmg
 man/man1/mmg.1
-share/doc/html/mmg/guide.html
-share/doc/html/mmg/images/addingremovingattachments.png
-share/doc/html/mmg/images/addremovefiles.png
-share/doc/html/mmg/images/attachmentoptions.png
-share/doc/html/mmg/images/audiotrackoptions.png
-share/doc/html/mmg/images/chaptereditor.png
-share/doc/html/mmg/images/jobmanager.png
-share/doc/html/mmg/images/movietitle.png
-share/doc/html/mmg/images/muxingwindow.png
-share/doc/html/mmg/images/selectmkvmergeexecutable.png
-share/doc/html/mmg/images/splitting.png
-share/doc/html/mmg/images/textsubtitlestrackoptions.png
-share/doc/html/mmg/images/trackselection.png
-share/doc/html/mmg/images/videotrackoptions.png
+share/doc/html/mmg/images/addingremovingattachments.gif
+share/doc/html/mmg/images/addremovefiles.gif
+share/doc/html/mmg/images/attachmentoptions.gif
+share/doc/html/mmg/images/audiotrackoptions.gif
+share/doc/html/mmg/images/chaptereditor.gif
+share/doc/html/mmg/images/jobmanager.gif
+share/doc/html/mmg/images/movietitle.gif
+share/doc/html/mmg/images/muxingwindow.gif
+share/doc/html/mmg/images/selectmkvmergeexecutable.gif
+share/doc/html/mmg/images/splitting.gif
+share/doc/html/mmg/images/textsubtitlestrackoptions.gif
+share/doc/html/mmg/images/trackselection.gif
+share/doc/html/mmg/images/videotrackoptions.gif
+share/doc/html/mmg/mkvmerge-gui.hhc
+share/doc/html/mmg/mkvmerge-gui.hhp
+share/doc/html/mmg/mkvmerge-gui.html
 @dirrm share/doc/html/mmg/images
 @dirrm share/doc/html/mmg
