@@ -1,7 +1,7 @@
-$NetBSD: patch-ad,v 1.1.1.1 2004/07/24 22:14:40 recht Exp $
+$NetBSD: patch-ad,v 1.2 2004/10/10 18:26:00 jdolecek Exp $
 
---- src/Makefile.global.in.orig	Thu Sep  5 07:54:18 2002
-+++ src/Makefile.global.in
+--- src/Makefile.global.in.orig	2002-09-05 00:54:18.000000000 +0200
++++ src/Makefile.global.in	2004-10-10 20:20:34.000000000 +0200
 @@ -111,6 +111,13 @@
  endif
  endif
@@ -24,6 +24,15 @@ $NetBSD: patch-ad,v 1.1.1.1 2004/07/24 22:14:40 recht Exp $
  with_tcl	= @with_tcl@
  with_tk		= @with_tk@
  enable_shared	= @enable_shared@
+@@ -135,7 +143,7 @@
+ python_includespec	= @python_includespec@
+ python_moduledir	= @python_moduledir@
+ python_moduleexecdir	= @python_moduleexecdir@
+-python_libspec		= @python_libspec@
++python_libspec		= -Wl,-R${PREFIX}/lib -L${PREFIX}/lib @python_libspec@
+ python_configdir	= @python_configdir@
+ 
+ krb_srvtab = @krb_srvtab@
 @@ -285,13 +293,20 @@
  libpq_builddir = $(top_builddir)/src/interfaces/libpq
  libpq = -L$(libpq_builddir) -lpq
