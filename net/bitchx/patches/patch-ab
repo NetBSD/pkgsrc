@@ -1,0 +1,22 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/11/09 14:50:38 wiz Exp $
+
+--- include/config.h.orig	Tue Oct 24 20:24:43 2000
++++ include/config.h	Tue Oct 24 20:25:52 2000
+@@ -34,7 +34,7 @@
+  * too peruse this function all you like. It's not a BACKDOOR in any way, 
+  * shape or form.
+  */
+-#define WANT_NOTIFY_BITCHX_COM ON
++#undef WANT_NOTIFY_BITCHX_COM
+ 
+ 
+ /*
+@@ -307,7 +307,7 @@
+  * This is recommended when you want to start BitchX in an xterm without
+  * the usage of the special "vga"-font. 
+  */
+-#undef ONLY_STD_CHARS
++#define ONLY_STD_CHARS
+ 
+ /*
+  * Normally BitchX uses only the IBMPC (cp437) charset.
