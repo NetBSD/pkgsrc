@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/04/20 09:50:55 xtraeme Exp $
+
+SHA1 (acid-0.9.6b23.tar.gz) = 2ca04ea4482507ac924318bb1d086021388ef9a6
+Size (acid-0.9.6b23.tar.gz) = 116728 bytes
+SHA1 (patch-aa) = 24d38240bbb0549e8d930831987c7f1c1a113c0b
