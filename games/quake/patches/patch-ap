@@ -1,7 +1,7 @@
-$NetBSD: patch-ap,v 1.1 2000/12/27 03:36:14 wiz Exp $
+$NetBSD: patch-ap,v 1.2 2002/01/02 10:01:36 hubertf Exp $
 
---- WinQuake/net.h.orig	Tue Dec 21 15:54:20 1999
-+++ WinQuake/net.h
+--- winquake/net.h.orig	Tue Dec 21 15:54:20 1999
++++ winquake/net.h
 @@ -238,7 +238,7 @@
  extern int hostCacheCount;
  extern hostcache_t hostcache[HOSTCACHESIZE];
