@@ -1,15 +1,14 @@
-$NetBSD: patch-ai,v 1.8 2004/02/04 22:50:18 markd Exp $
+$NetBSD: patch-ai,v 1.9 2004/04/20 13:29:12 markd Exp $
 
---- configure.orig	2004-01-26 08:17:44.000000000 +1300
+--- configure.orig	2004-04-06 03:02:35.000000000 +1200
 +++ configure
-@@ -24859,63 +24859,6 @@ _ACEOF
+@@ -26507,72 +26507,6 @@ _ACEOF
  
  
  
 -  echo "$as_me:$LINENO: checking sizeof size_t == sizeof unsigned long" >&5
 -echo $ECHO_N "checking sizeof size_t == sizeof unsigned long... $ECHO_C" >&6
 -  cat >conftest.$ac_ext <<_ACEOF
--/* #line $LINENO "configure" */
 -/* confdefs.h.  */
 -_ACEOF
 -cat confdefs.h >>conftest.$ac_ext
@@ -30,11 +29,21 @@ $NetBSD: patch-ai,v 1.8 2004/02/04 22:50:18 markd Exp $
 -_ACEOF
 -rm -f conftest.$ac_objext
 -if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
--  (eval $ac_compile) 2>&5
+-  (eval $ac_compile) 2>conftest.er1
 -  ac_status=$?
+-  grep -v '^ *+' conftest.er1 >conftest.err
+-  rm -f conftest.er1
+-  cat conftest.err >&5
 -  echo "$as_me:$LINENO: \$? = $ac_status" >&5
 -  (exit $ac_status); } &&
--         { ac_try='test -s conftest.$ac_objext'
+-	 { ac_try='test -z "$ac_c_werror_flag"
+-			 || test ! -s conftest.err'
+-  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
+-  (eval $ac_try) 2>&5
+-  ac_status=$?
+-  echo "$as_me:$LINENO: \$? = $ac_status" >&5
+-  (exit $ac_status); }; } &&
+-	 { ac_try='test -s conftest.$ac_objext'
 -  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
 -  (eval $ac_try) 2>&5
 -  ac_status=$?
@@ -60,9 +69,18 @@ $NetBSD: patch-ai,v 1.8 2004/02/04 22:50:18 markd Exp $
 -   { (exit 1); exit 1; }; }
 -
 -fi
--rm -f conftest.$ac_objext conftest.$ac_ext
+-rm -f conftest.err conftest.$ac_objext conftest.$ac_ext
 -
 -
  # darwin needs this to initialize the environment
  
  for ac_header in crt_externs.h
+@@ -39902,7 +39836,7 @@ echo "${ECHO_T}searched but not found" >
+   kde_save_CFLAGS="$CFLAGS"
+   kde_save_CPPFLAGS="$CPPFLAGS"
+   kde_save_LDFLAGS="$LDFLAGS"
+-  LIBS="$LIBS $PISOCK_LIB $MAL_LIB -ldl"
++  LIBS="$LIBS $PISOCK_LIB $MAL_LIB"
+   CFLAGS="$CFLAGS $MAL_INCLUDE"
+   CPPFLAGS="$CPPFLAGS $all_includes $PISOCK_INCLUDE $MAL_INCLUDE"
+   LDFLAGS="$LDFLAGS $all_libraries"
