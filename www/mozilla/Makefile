@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2000/08/17 13:11:08 wiz Exp $: Makefile,v 1.30 2000/06/17 22:14:00 tsarna Exp $
+# $NetBSD: Makefile,v 1.36 2000/08/28 09:14:52 jlam Exp $: Makefile,v 1.30 2000/06/17 22:14:00 tsarna Exp $
 
 DISTNAME=	mozilla-source-M17
 PKGNAME=	mozilla-5.0m17
@@ -10,7 +10,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.mozilla.org/
 
-BUILD_DEPENDS+=	${LOCALBASE}/bin/perl:../../lang/perl5
+BUILD_DEPENDS+=	${PERL5}:../../lang/perl5
 BUILD_DEPENDS+=	autoconf:../../devel/autoconf
 DEPENDS+=	gtk+>=1.2.8:../../x11/gtk
 DEPENDS+=	ORBit>=0.5.1:../../net/ORBit
