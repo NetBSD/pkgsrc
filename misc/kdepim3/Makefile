@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2004/01/03 18:49:47 reed Exp $
+# $NetBSD: Makefile,v 1.20 2004/01/15 11:08:18 markd Exp $
 
-DISTNAME=	kdepim-3.1.4
-PKGREVISION=	1
+DISTNAME=	kdepim-3.1.5
 CATEGORIES=	misc
 COMMENT=	Personal Information Management tools for the KDE desktop
-PKGREVISION=	1
 
 .include "../../meta-pkgs/kde3/Makefile.kde3"
 
