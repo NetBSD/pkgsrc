@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2402 2003/06/03 00:42:07 hubertf Exp $
+$NetBSD: CHANGES,v 1.2403 2003/06/03 01:07:02 uebayasi Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2278,3 +2278,7 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated dircproxy to 1.0.5 [jmmv 2003-06-02]
 	Updated setiathome to 3.03nb2 [abs 2003-06-02]
 	Added tuxmath-20010907 [hubertf 2003-06-03]
+	Updated Canna-server to 3.6pl3 [uebayasi 2003-06-03]
+	Updated Canna-dict to 3.6pl3 [uebayasi 2003-06-03]
+	Updated Canna-lib to 3.6pl3 [uebayasi 2003-06-03]
+	Updated Canna-server-bin to 3.6pl3 [uebayasi 2003-06-03]
