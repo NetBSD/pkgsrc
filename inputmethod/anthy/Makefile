@@ -1,13 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/12/04 03:57:44 taya Exp $
+# $NetBSD: Makefile,v 1.2 2004/12/28 05:35:29 taya Exp $
 
-DISTNAME=	anthy-5900
-CATEGORIES=	inputmethod
-MASTER_SITES=	http://downloads.sourceforge.jp/anthy/12071/
-DISTFILES=	${DISTNAME}.tar.gz
+.include	"../../inputmethod/anthy/Makefile.common"
+
+PKGREVISION=	1
 EXTRACT_ONLY=	${DISTNAME}.tar.gz
 
 MAINTAINER=	taya@NetBSD.org
-HOMEPAGE=	http://anthy.sourceforge.jp/
 COMMENT=	Kana Kanji conversion system
 
 USE_LIBTOOL=		yes
@@ -15,28 +13,52 @@ USE_LANGUAGES=		c
 USE_GNU_TOOLS+=		make
 GNU_CONFIGURE=		yes
 
-EMACS_USE_LEIM= # defined
+CONFIGURE_ENV+=		EMACS=no
 
 # Global and legacy options
-.if defined(USE_2CH_DICT) && ${USE_2CH_DICT} == "yes"
+.if defined(USE_2CH_DICT) && !empty(USE_2CH_DICT:M[Yy][Ee][Ss])
 PKG_DEFAULT_OPTIONS+=	2ch_dict
 .endif
 
+.if defined(USE_OKINAWA_DICT) && !empty(USE_OKINAWA_DICT:M[Yy][Ee][Ss])
+PKG_DEFAULT_OPTIONS+=	okinawa_dict
+.endif
+
 PKG_OPTIONS_VAR=	PKG_OPTIONS.anthy
-PKG_SUPPORTED_OPTIONS=	2ch_dict
+PKG_SUPPORTED_OPTIONS=	2ch_dict okinawa_dict
 
 .include	"../../mk/bsd.options.mk"
 
 ###
-### 2ch dictionary support
+### Optional dictionary support
 ###
 .if !empty(PKG_OPTIONS:M2ch_dict)
 DISTFILES+=	2ch.t
 SITES_2ch.t+=	http://omaemona.sourceforge.net/packages/Zisyo/
-
-post-extract:
-	${CP} ${DISTDIR}/2ch.t ${WRKSRC}/mkanthydic
 .endif
 
-.include "../../mk/emacs.mk"
+.if !empty(PKG_OPTIONS:Mokinawa_dict)
+DISTFILES+=			okinawa-20041220.t
+SITES_okinawa-20041220.t+=	http://www.ofug.net/~yamajun/files/
+.endif
+
+post-patch:
+.if !empty(PKG_OPTIONS:M2ch_dict)
+	${CP} ${DISTDIR}/2ch.t ${WRKSRC}/mkanthydic
+	@printf '/^EXTRA_DICS\ns/$$/ 2ch.t/\nwq\n' | \
+		ed -s ${WRKSRC}/mkanthydic/Makefile.in
+.endif
+.if !empty(PKG_OPTIONS:Mokinawa_dict)
+	${CP} ${DISTDIR}/okinawa-20041220.t ${WRKSRC}/mkanthydic
+	@printf '/^EXTRA_DICS\ns/$$/ okinawa-20041220.t/\nwq\n' | \
+		ed -s ${WRKSRC}/mkanthydic/Makefile.in
+.endif
+
+post-install:
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/anthy
+	${INSTALL_DATA} ${WRKSRC}/doc/DICUTIL ${PREFIX}/share/doc/anthy
+	${INSTALL_DATA} ${WRKSRC}/doc/ELISP ${PREFIX}/share/doc/anthy
+	${INSTALL_DATA} ${WRKSRC}/doc/GUIDE.english ${PREFIX}/share/doc/anthy
+	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/anthy
+
 .include "../../mk/bsd.pkg.mk"
