@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2002/03/13 17:37:23 fredb Exp $
+# $NetBSD: Makefile,v 1.5 2002/07/14 01:34:40 rh Exp $
 #
 
 DISTNAME=		gnumeric-0.75
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		math gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=stable/sources/gnumeric/}
 
@@ -15,6 +15,7 @@ USE_LIBTOOL=		YES
 USE_X11BASE=		YES
 USE_GMAKE=		YES
 USE_PERL5=		YES
+USE_BUILDLINK_ONLY=	YES
 
 LDFLAGS+=      		-L${LOCALBASE}/lib
 LDFLAGS+=      		-Wl,-R${LOCALBASE}/lib
@@ -22,6 +23,7 @@ LDFLAGS+=      		-lunicode
 CPPFLAGS+=		-I${LOCALBASE}/include
 CONFIGURE_ARGS+=	--without-guile		# needs CVS-only guile-1.5
 CONFIGURE_ARGS+=	--without-python
+CONFIGURE_ARGS+=	--without-psiconv
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 pre-configure:
