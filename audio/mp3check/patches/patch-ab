@@ -1,17 +1,12 @@
-$NetBSD: patch-ab,v 1.1.1.1 2000/10/15 21:57:46 tron Exp $
+$NetBSD: patch-ab,v 1.2 2003/02/16 23:08:25 abs Exp $
 
---- tappconfig.cc.orig	Thu Jul 20 22:16:21 2000
-+++ tappconfig.cc	Mon Sep 11 21:23:27 2000
-@@ -21,7 +21,12 @@
+--- tappconfig.cc.orig	Thu Jan 16 08:20:34 2003
++++ tappconfig.cc
+@@ -28,6 +28,7 @@
+ #include <sys/stat.h>
+ #include <termios.h>
+ #include <unistd.h>
++#include "config.h"
+ #include "tappconfig.h"
  
- #include <ctype.h>
- #include <limits.h>
-+#ifdef __NetBSD__
-+#include <float.h>
-+#define MAXDOUBLE	DBL_MAX
-+#else
- #include <values.h>
-+#endif
- #include <stdlib.h>
- #include <stdarg.h>
- #include <sys/ioctl.h>
+ // config:
