@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2004Q3,v 1.1.2.13 2004/10/26 11:25:05 agc Exp $
+$NetBSD: CHANGES-pkgsrc-2004Q3,v 1.1.2.14 2004/11/02 10:33:50 agc Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2004Q3 branch:
@@ -29,4 +29,6 @@ Security Pullup - requested by Grant Beattie
 security fix for firefox
 Security Pullup - requested by Adrian Portelli
 security fix for socat
+Security Pullup - requested by Grant Beattie and Havard Eidnes
+security fix for cabextract
 
