@@ -1,13 +1,13 @@
-@comment $NetBSD: PLIST,v 1.7 2002/11/21 15:42:45 salo Exp $
+@comment $NetBSD: PLIST,v 1.8 2002/12/04 17:31:56 salo Exp $
 etc/rc.d/silcd
+lib/silcd/libsilc-1.0.so
+lib/silcd/libsilc-1.0.so.0
+lib/silcd/libsilc-1.0.so.0.0
 lib/silcd/libsilc.la
 lib/silcd/libsilc.so
-lib/silcd/libsilc.so.0
-lib/silcd/libsilc.so.0.0
 lib/silcd/modules/aes.sim.so
 lib/silcd/modules/blowfish.sim.so
 lib/silcd/modules/cast.sim.so
-lib/silcd/modules/mars.sim.so
 lib/silcd/modules/md5.sim.so
 lib/silcd/modules/none.sim.so
 lib/silcd/modules/rc5.sim.so
@@ -15,6 +15,8 @@ lib/silcd/modules/rc6.sim.so
 lib/silcd/modules/rsa.sim.so
 lib/silcd/modules/sha1.sim.so
 lib/silcd/modules/twofish.sim.so
+man/man5/silcd.conf.5
+man/man8/silcd.8
 sbin/silcd
 share/doc/silcd/CHANGES
 share/doc/silcd/COPYING
