@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2001/07/01 00:05:50 tron Exp $
+$NetBSD: distinfo,v 1.2 2001/07/01 11:01:45 tron Exp $
 
 SHA1 (Guppi-0.35.5.tar.bz2) = 063bb719e7fabcaa08d9479713d593f083847dbb
 Size (Guppi-0.35.5.tar.bz2) = 1319291 bytes
+SHA1 (patch-aa) = 349a71d7ebea96e35b6992d7866749a17b93291a
