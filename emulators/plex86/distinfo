@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/20 10:49:56 agc Exp $
-
-SHA1 (plex86-20010106.tar.bz2) = 8a06a506c7546e032c4a247c32df25b54deb7776
-Size (plex86-20010106.tar.bz2) = 608108 bytes
-SHA1 (patch-aa) = 0f485291d0ba95970cf97bb86c81f050b19bcfc0
-SHA1 (patch-ab) = 2e1c5f6df9bdb18d6c0491839ef2e38207d75e49
-SHA1 (patch-ac) = 254f2037ec60ed96f15dde31410c8828b97c7a23
