@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2004/01/24 15:13:20 grant Exp $
+# $NetBSD: Makefile,v 1.23 2004/01/25 15:29:51 kristerw Exp $
 
 DISTNAME=		Sablot-1.0.1
 PKGNAME=		${DISTNAME:S/Sablot/sablotron/}
@@ -8,6 +8,8 @@ MASTER_SITES=		http://download-2.gingerall.cz/download/sablot/
 MAINTAINER=		uithuis@dds.nl
 HOMEPAGE=		http://www.gingerall.com/charlie/ga/xml/p_sab.xml
 COMMENT=		XML toolkit implementing XSLT, DOM, and XPath
+
+BUILD_DEPENDS+=		p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Parser
 
 USE_BUILDLINK2=		YES
 USE_GCC_SHLIB=		YES
