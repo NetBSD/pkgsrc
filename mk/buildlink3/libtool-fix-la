@@ -1,4 +1,4 @@
-# $NetBSD: libtool-fix-la,v 1.1.2.7 2003/08/30 07:45:03 jlam Exp $
+# $NetBSD: libtool-fix-la,v 1.1.2.8 2003/08/31 07:05:50 jlam Exp $
 #
 # For *.la files, in the "relink_command" line, we make the following
 # replacements:
@@ -186,7 +186,7 @@ if $test -f $lafile; then
 				case "$i" in
 				-L${BUILDLINK_DIR}/*)
 					;;
-				-L@WRKSRC@/*)
+				-L@WRKSRC@|-L@WRKSRC@/*)
 					;;
 				-L@DEPOTBASE@/*)
 					i=`$echo "X$i" | $Xsed -e "s,-L@DEPOTBASE@/[^/]*/,-L@LOCALBASE@/,"`
