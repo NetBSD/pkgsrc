@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 10:10:37 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/18 11:21:09 agc Exp $
 
-MD5 (unlzx.c.Z) = 897f018f175b0e9f5d2b9d75eadd4fa8
+SHA1 (unlzx.c.Z) = c6d43253f73fb7aea98b9e5dadbd524d3eaf04d6
+Size (unlzx.c.Z) = 15135 bytes
