@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/06/26 14:26:55 zuntum Exp $
+# $NetBSD: Makefile,v 1.3 2002/10/09 13:52:28 wiz Exp $
 
 DISTNAME=	gmodplay-0.08
 CATEGORIES=	audio
@@ -14,7 +14,7 @@ ONLY_FOR_PLATFORM=	*-*-alpha *-*-arc *-*-cobalt *-*-dreamcast \
 			*-*-hpcmips *-*-hpcsh *-*-i386 *-*-pc532 *-*-pmax \
 			*-*-vax
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 USE_GMAKE=		YES
 
 # for libslang
@@ -26,6 +26,6 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/gmodplay
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/gmodplay
 
-.include "../../devel/libslang/buildlink.mk"
-.include "../../devel/glib/buildlink.mk"
+.include "../../devel/libslang/buildlink2.mk"
+.include "../../devel/glib/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
