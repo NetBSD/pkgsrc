@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.21 1999/04/16 21:31:16 tron Exp $
+# $NetBSD: Makefile,v 1.22 1999/05/02 15:51:27 tron Exp $
 #
 
-DISTNAME=	gnome-libs-1.0.8
+DISTNAME=	gnome-libs-1.0.9
 CATEGORIES=	x11 gnome
 MASTER_SITES=	ftp://ftp.gnome.org/pub/GNOME/gnome-1.0/sources/ \
 		ftp://ftp.jimpick.com/pub/mirrors/gnome/gnome-1.0/sources/ \
@@ -20,6 +20,7 @@ GNU_CONFIGURE=	yes
 USE_X11BASE=	yes
 USE_GMAKE=	yes
 USE_LIBTOOL=	yes
+LIBTOOL_FLAGS=	--cplusplus
 LDFLAGS+=       	"-L${LOCALBASE}/lib"
 CONFIGURE_ARGS+=	--localstatedir=${LOCALSTATEDIR} \
 			--with-glib-prefix=${LOCALBASE}
