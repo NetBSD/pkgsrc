@@ -1,19 +1,19 @@
-# $NetBSD: Makefile,v 1.11 2004/10/03 00:13:17 tv Exp $
+# $NetBSD: Makefile,v 1.12 2004/11/08 22:07:54 seb Exp $
 #
 
-DISTNAME=	Text-Iconv-1.2
+DISTNAME=	Text-Iconv-1.4
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
 SVR4_PKGNAME=	p5tic
 CATEGORIES=	converters perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Text/}
 
 MAINTAINER=	abs@NetBSD.org
-HOMEPAGE=	http://www.linguistik.uni-erlangen.de/~mxp/
+HOMEPAGE=	http://search.cpan.org/dist/Text-Iconv/
 COMMENT=	Perl interface to iconv() codeset conversion function
 
 USE_BUILDLINK3=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Text/Iconv/.packlist
+MAKE_PARAMS=		LIBS=${BUILDLINK_LDADD.iconv}
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../lang/perl5/module.mk"
