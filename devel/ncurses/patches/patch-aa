@@ -1,27 +1,55 @@
---- progs/Makefile.in.orig	Sun Feb 11 00:08:16 1996
-+++ progs/Makefile.in	Sat Oct 25 01:56:53 1997
-@@ -54,7 +54,7 @@
+--- progs/Makefile.in.orig	Sat Jun 15 21:40:53 1996
++++ progs/Makefile.in	Wed Nov 26 12:18:25 1997
+@@ -79,12 +79,12 @@
  AUTO_SRC = \
  	termsort.c
  
 -PROGS = tic toe infocmp clear tput tset
 +PROGS = tic toe infocmp
  
- TESTPROGS = mvcur tctest hardscroll
+ TESTPROGS = mvcur tctest hardscroll hashmap
  
-@@ -73,15 +73,9 @@
- 	$(INSTALL_PROGRAM) tic $(bindir)/tic
- 	$(INSTALL_PROGRAM) toe $(bindir)/toe
- 	$(INSTALL_PROGRAM) infocmp $(bindir)/infocmp
--	$(INSTALL_PROGRAM) clear $(bindir)/clear
--	$(INSTALL_PROGRAM) tput $(bindir)/tput
--	$(INSTALL_PROGRAM) tset $(bindir)/tset
+ # Default library, for linking applications
+-LIB_CURSES = ../lib/libncurses@DFT_DEP_SUFFIX@
++LIB_CURSES = ../lib/libncurses@DFT_DEP_SUFFIX@@nc_cv_abi_version@
+ 
+ ################################################################################
+ all:	$(AUTO_SRC) $(PROGS) 
+@@ -98,15 +98,9 @@
+ 	$(INSTALL_PROGRAM) tic     $(INSTALL_PREFIX)$(bindir)/tic
+ 	$(INSTALL_PROGRAM) toe     $(INSTALL_PREFIX)$(bindir)/toe
+ 	$(INSTALL_PROGRAM) infocmp $(INSTALL_PREFIX)$(bindir)/infocmp
+-	$(INSTALL_PROGRAM) clear   $(INSTALL_PREFIX)$(bindir)/clear
+-	$(INSTALL_PROGRAM) tput    $(INSTALL_PREFIX)$(bindir)/tput
+-	$(INSTALL_PROGRAM) tset    $(INSTALL_PREFIX)$(bindir)/tset
  	@echo "linking captoinfo to tic"
- 	-@rm -f $(bindir)/captoinfo
- 	-@ln $(bindir)/tic $(bindir)/captoinfo
+ 	-@rm -f $(INSTALL_PREFIX)$(bindir)/captoinfo
+ 	-@ln $(INSTALL_PREFIX)$(bindir)/tic $(INSTALL_PREFIX)$(bindir)/captoinfo
 -	@echo "linking reset to tset"
--	-@rm -f $(bindir)/reset
--	-@ln $(bindir)/tset $(bindir)/reset
+-	-@rm -f $(INSTALL_PREFIX)$(bindir)/reset
+-	-@ln $(INSTALL_PREFIX)$(bindir)/tset $(INSTALL_PREFIX)$(bindir)/reset
  
- $(bindir) :
+ $(INSTALL_PREFIX)$(bindir) :
  	$(srcdir)/../mkinstalldirs $@
+--- test/Makefile.in.orig	Wed Nov 26 13:02:17 1997
++++ test/Makefile.in	Wed Nov 26 13:04:53 1997
+@@ -41,6 +41,8 @@
+ 
+ CCFLAGS		= $(CFLAGS) $(CPPFLAGS) $(CFLAGS_@DFT_UPR_MODEL@)
+ 
++ABI_VERSION	= @nc_cv_abi_version@
++
+ LOCAL_LIBS	= @TEST_DEPS@
+ 
+ LINK		= $(CC)
+--- c++/Makefile.in.orig	Wed Nov 26 13:39:11 1997
++++ c++/Makefile.in	Wed Nov 26 13:39:59 1997
+@@ -50,6 +50,8 @@
+ LINK		= $(CXX)
+ LDFLAGS		= @LDFLAGS@ @LD_MODEL@ @LIBS@ @LOCAL_LDFLAGS@
+ 
++ABI_VERSION	= @nc_cv_abi_version@
++
+ all: demo
+ 
+ OBJS_DEMO = \
