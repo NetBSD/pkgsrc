@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2003/04/01 12:27:07 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2003/05/22 03:03:38 markd Exp $
 bin/adddebug
 bin/catalogmanager
 bin/cervisia
@@ -62,8 +62,6 @@ lib/kde3/kfile_diff.la
 lib/kde3/kfile_diff.so
 lib/kde3/kfile_po.la
 lib/kde3/kfile_po.so
-lib/kde3/libdbsearchengine.la
-lib/kde3/libdbsearchengine.so
 lib/kde3/libkomparenavtreepart.la
 lib/kde3/libkomparenavtreepart.so
 lib/kde3/libkomparepart.la
@@ -441,7 +439,6 @@ share/kde/apps/kbabel/pics/noflag.png
 share/kde/apps/kbabel/pics/ok.png
 share/kde/apps/kbabel/pics/pref_identity.png
 share/kde/apps/kbabel/pics/splash.png
-share/kde/apps/kbabeldict/modules/dbsearchengine.rc
 share/kde/apps/kbabeldict/modules/poauxiliary.rc
 share/kde/apps/kbabeldict/modules/pocompendium.rc
 share/kde/apps/kbugbuster/kbugbusterui.rc
