@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/08/15 12:40:07 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2004/09/16 23:11:30 he Exp $
 #
 
 DISTNAME=		libcaca-0.9
@@ -14,6 +14,7 @@ USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
+INCOMPAT_CURSES=	NetBSD-1.5* NetBSD-1.6[-_.]* NetBSD-1.6[A-Q]-*
 
 CONFIGURE_ARGS+=	--disable-slang --enable-ncurses --disable-imlib2 --disable-doc
 
