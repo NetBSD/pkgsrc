@@ -1,20 +1,21 @@
-# $NetBSD: Makefile,v 1.3 2005/03/10 19:43:25 bouyer Exp $
+# $NetBSD: Makefile,v 1.4 2005/03/17 23:53:56 bouyer Exp $
 #
 
 DISTNAME=		xen-2.0.3-src
 PKGNAME=		xentools20-2.0.3
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		sysutils
 MASTER_SITES=		http://www.cl.cam.ac.uk/Research/SRG/netos/xen/downloads/
 EXTRACT_SUFX=		.tgz
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX}
-#DISTFILES+=		netbsd-xen-kernel-headers-040508.tar.gz
 
 MAINTAINER=		bouyer@NetBSD.org
 HOMEPAGE=		http://www.netbsd.org/Ports/xen/
 COMMENT=		Userland Tools for Xen
 
 DEPENDS+=		${PYPKGPREFIX}-twisted*:../../net/py-twisted
+
+USE_PKGINSTALL=		yes
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386
 
@@ -49,9 +50,11 @@ SUBST_FILES.paths+=	python/xen/sv/Daemon.py
 SUBST_SED.paths=        -e "s|/usr/sbin|${PREFIX}/sbin|g"
 SUBST_MESSAGE.paths=    "Fixing hardcoded paths."
 
+RCD_SCRIPTS=		xend
+
 pre-build:
 	${MKDIR} ${WRKSRC}/libxc/xen/NetBSD
-	${CP} files/xenio.h ${WRKSRC}/libxc/xen/NetBSD
+	${CP} ${FILESDIR}/xenio.h ${WRKSRC}/libxc/xen/NetBSD
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
