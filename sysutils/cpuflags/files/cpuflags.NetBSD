@@ -1,0 +1,58 @@
+#!/bin/sh
+# $NetBSD: cpuflags.NetBSD,v 1.1.1.1 2001/05/31 11:29:17 abs Exp $
+
+gcc_ver=`gcc -v 2>&1 | awk '/gcc version/ {print $3}'`
+hw_model=`sysctl -n hw.model`
+
+case $gcc_ver in
+    egcs* )
+	gcc_ver=2.8 ;;
+esac
+
+if [ "$gcc_ver" \< 2.8 ];then		# Old gcc, such as in NetBSD 1.3
+
+    case $hw_model in
+	# i386
+	*386-class*)		FLAGS='-mno-486'		;;
+	*486-class*)		FLAGS='-m486'			;;
+	*586-class*)		FLAGS='-m486'			;;
+	*686-class*)		FLAGS='-m486'			;;
+	#
+	# sparc
+	MB86904* | MB86907*)	FLAGS="-msupersparc"		;; # ss5
+	TMS390Z50*)		FLAGS="-msupersparc"		;; # ss10/ss20
+	MB86930* | MB86934*)	FLAGS="-msparclite"		;; # from gcc
+	MB86900/1A*)		FLAGS="-mcypress"		;; # ss1+
+	#
+	# arm
+	SA-110*)		FLAGS=""			;; # shark
+	#
+	*)			echo "Unknown hw.model '$hw_model'" >&2
+    esac
+
+else					# Modern gcc
+
+    case $hw_model in
+	# i386
+	*386-class*)		FLAGS='-march=i386'		;;
+	*486-class*)		FLAGS='-march=i486'		;;
+	*586-class*)		FLAGS='-march=pentium'		;;
+	*686-class*)		FLAGS='-march=pentiumpro'	;;
+	#
+	# sparc
+	MB86904* | MB86907*)	FLAGS="-mcpu=supersparc"	;; # ss5
+	TMS390Z50*)		FLAGS="-mcpu=supersparc"	;; # ss10/ss20
+	MB86930* | MB86934*)	FLAGS="-mcpu=sparclite"		;; # from gcc
+	MB86900/1A*)		FLAGS="-mcpu=cypress"		;; # ss1+
+	#
+	# arm - commented until issue with identifying SA based RiscPCs solved
+	# SA-110*)		FLAGS="-mcpu=strongarm110"	;; # shark
+	SA-110*)		FLAGS=""			;;
+	#
+	*)			echo "Unknown hw.model '$hw_model'" >&2
+    esac
+
+fi
+echo $FLAGS
+
+exit 0
