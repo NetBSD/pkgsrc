@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.885 2003/09/20 14:17:33 salo Exp $
+$NetBSD: TODO,v 1.886 2003/09/20 16:58:23 salo Exp $
 
 Suggested new packages
 ======================
@@ -214,7 +214,6 @@ Suggested package updates
 	o plib-1.6.0 [pkg/19015,pkg/22612]
 	o postfix-2.0.16
 	o proftpd-1.2.9rc1
-	o pure-ftpd-1.0.16a [pkg/22680|salo]
 	o pxe-1.4 [pkg/22323]
 	o pygtk-0.6.11
 	o pysol-4.82

@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3466 2003/09/20 16:14:43 chris Exp $
+$NetBSD: CHANGES,v 1.3467 2003/09/20 16:58:24 salo Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3860,3 +3860,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated nmapfe to 0.9.5nb9 [salo 2003-09-20]
 	Updated p5-Convert-UUlib to 0.31 [chris 2003-09-20]
 	Updated p5-MailTools to 1.59 [chris 2003-09-20]
+	Updated pure-ftpd to 1.0.16a [salo 2003-09-20]
