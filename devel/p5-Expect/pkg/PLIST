@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/07/16 01:04:07 thorpej Exp $
+lib/perl5/site_perl/Expect.pod
+lib/perl5/site_perl/Expect.pm
+lib/perl5/site_perl/Expect_intro.pod
+lib/perl5/site_perl/term-filter.pl
+lib/perl5/man/man3/Expect.3
+lib/perl5/man/man3/Expect_intro.3
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Expect/.packlist
