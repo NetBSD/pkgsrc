@@ -1,10 +1,12 @@
---- /dev/null	Sat Feb 28 19:53:22 1998
-+++ Makefile	Sat Feb 28 19:54:28 1998
-@@ -0,0 +1,7 @@
+--- Makefile.orig	Sat Mar  7 13:39:48 1998
++++ Makefile	Sat Mar  7 13:40:07 1998
+@@ -0,0 +1,9 @@
 +
 +PROG=	ttcp
 +
 +BINDIR=${PREFIX}/bin
 +MANDIR=${PREFIX}/man
++
++MANZ=	1
 +
 +.include <bsd.prog.mk>

@@ -1,3 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 1997/12/14 23:59:30 thorpej Exp $
+@comment $NetBSD: PLIST,v 1.2 1998/03/07 13:57:00 tron Exp $
 bin/ttcp
+man/cat1/ttcp.0
 man/man1/ttcp.1
