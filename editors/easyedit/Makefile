@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/10/03 07:02:22 cjep Exp $
+# $NetBSD: Makefile,v 1.2 2002/10/03 08:42:41 cjep Exp $
 #
 
 DISTNAME=	ee-1.4.5a.src
@@ -14,7 +14,7 @@ COMMENT=	Easy to use text editor
 WRKSRC=		${WRKDIR}/${PKGNAME}
 
 do-install:
-	${CP} ${WRKSRC}/ee ${PREFIX}/bin/easyedit
-	${CP} ${WRKSRC}/ee.1 ${PREFIX}/man/man1/easyedit.1
+	${INSTALL_PROGRAM} ${WRKSRC}/ee ${PREFIX}/bin/easyedit
+	${INSTALL_MAN} ${WRKSRC}/ee.1 ${PREFIX}/man/man1/easyedit.1
 
 .include "../../mk/bsd.pkg.mk"
