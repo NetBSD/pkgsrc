@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6652 2004/07/23 15:15:29 recht Exp $
+$NetBSD: CHANGES,v 1.6653 2004/07/23 15:18:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3522,3 +3522,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated samba to 3.0.5 [tron 2004-07-23]
 	Updated gmime to 2.1.7 [recht 2004-07-23]
 	Updated balsa2 to 2.2.0 [recht 2004-07-23]
+	Updated suse91_base to 9.1nb1 [erh 2004-07-23]
