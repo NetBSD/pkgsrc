@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.7 2004/12/28 02:47:41 reed Exp $
+# $NetBSD: Makefile,v 1.8 2005/01/03 00:00:21 tron Exp $
 
 DISTNAME=	dircproxy-1.0.5
 PKGREVISION=	2
 CATEGORIES=	chat
-MASTER_SITES=	http://www.dircproxy.net/download/stable/
+MASTER_SITES=	http://www.securiweb.net/pub/oss/dircproxy/1.0/
 
 MAINTAINER=	sb125499@ohiou.edu
-HOMEPAGE=	http://www.dircproxy.net/
+HOMEPAGE=	http://dircproxy.securiweb.net/
 COMMENT=	Detachable internet relay chat proxy server
 
 GNU_CONFIGURE=		YES
