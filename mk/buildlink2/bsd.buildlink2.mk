@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.58 2002/11/28 14:21:34 salo Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.59 2002/11/30 14:10:06 salo Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -418,8 +418,13 @@ USE_PKGLOCALEDIR?=		no
 _PKGLOCALEDIR=			${PREFIX}/${PKGLOCALEDIR}/locale
 BUILDLINK_SUBST_MESSAGE.pkglocaledir= \
 	"Fixing locale directory references."
+.if defined(HAS_CONFIGURE) || defined(GNU_CONFIGURE)
+_PKGLOCALEDIR_FILES=		"Makefile.in\*"
+.else
+_PKGLOCALEDIR_FILES=		"Makefile\*"
+.endif
 BUILDLINK_SUBST_FILES.pkglocaledir= \
-	`${FIND} . -name "Makefile.in*" -print | ${GREP} -v "\.orig"`
+	`${FIND} . -name "${_PKGLOCALEDIR_FILES}" -print | ${GREP} -v "\.orig"`
 BUILDLINK_SUBST_SED.pkglocaledir= \
 	-e 's|^\(localedir[     ]*=\).*|\1 ${_PKGLOCALEDIR}|' \
 	-e 's|^\(gnulocaledir[  ]*=\).*|\1 ${_PKGLOCALEDIR}|' \
@@ -427,10 +432,10 @@ BUILDLINK_SUBST_SED.pkglocaledir= \
 
 pkglocaledir-buildlink-subst: _BUILDLINK_SUBST_USE
 
-.if (${PKGLOCALEDIR} != "share") && empty(USE_PKGLOCALEDIR:M[nN][oO]) 
-
+.if (${PKGLOCALEDIR} != "share") && empty(USE_PKGLOCALEDIR:M[nN][oO])
 pre-configure: pkglocaledir-buildlink-subst
 .endif
+
 # When "unbuildlinkifying" a file, we must remove references to the
 # buildlink directories and change any -llib to the proper replacement
 # libraries (-lreadline -> -ledit, etc.).  Redundant -Idir and -Ldir
