@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2002/08/27 09:13:50 skrll Exp $
+# $NetBSD: Makefile,v 1.11 2002/10/02 07:46:44 jlam Exp $
 #
 
 .include "../qt3-libs/Makefile.common"
@@ -6,24 +6,14 @@
 PKGNAME=		qt3-tools-${QTVERSION}
 COMMENT=		QT GUI (WYSIWYG) builder and other tools
 
-CONFIGURE_ARGS+=	-I${BUILDLINK_QTDIR}/include \
-			-L${BUILDLINK_QTDIR}/lib
+CONFIGURE_ARGS+=	-I${QTDIR}/include \
+			-L${QTDIR}/lib
 
 MAKE_ENV+=              LIBQT="-lqt-mt"
 
-USE_BUILDLINK_ONLY=		yes
-REPLACE_BUILDLINK_PATTERNS=	qmake.conf
-# following QMAKE variables seem to be working empty; might need some
-# adjusting eventually
-REPLACE_BUILDLINK_SED=	-e 's/\(QMAKE_INCDIR[ 	]*=\) .*$$/\1/' \
-			-e 's/\(QMAKE_LIBDIR[ 	]*=\) .*$$/\1/' \
-			-e 's^\(QMAKE_INCDIR_OPENGL[ 	]*=\) .*$$^\1^' \
-			-e 's^\(QMAKE_LIBDIR_OPENGL[ 	]*=\) .*$$^\1^'
-
-PTHREAD_OPTS+=		require
-
+USE_BUILDLINK2=		yes
+BUILD_QT3=		yes
 UNLIMIT_RESOURCES=	datasize
-
 ALL_TARGET=		sub-tools
 
 do-install:
@@ -44,7 +34,5 @@ do-install:
 	${INSTALL_DATA_DIR} ${QTPREFIX}/mkspecs
 	${CP} -R ${WRKSRC}/mkspecs ${QTPREFIX}
 
-.include "../../x11/qt3-libs/buildlink.mk"
-.include "../../mk/pthread.buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
+.include "../../x11/qt3-libs/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
