@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2005/01/25 16:27:37 jmmv Exp $
+# $NetBSD: Makefile,v 1.3 2005/01/30 12:35:22 jmmv Exp $
 #
 
-DISTNAME=	pkg_alternatives-1.1
+DISTNAME=	pkg_alternatives-1.2
 CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -20,6 +20,7 @@ WRKSRC=			${WRKDIR}
 
 DATADIR=		${PREFIX}/share/pkg_alternatives
 DBDIR=			${PREFIX}/libdata/pkg_alternatives
+EGDIR=			${PREFIX}/share/examples/pkg_alternatives
 
 DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
 INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
@@ -29,6 +30,7 @@ MAKE_DIRS=		${DBDIR}
 MAKE_DIRS+=		${PKG_SYSCONFDIR}
 
 PKG_SYSCONFSUBDIR=	pkg_alternatives
+CONF_FILES=		${EGDIR}/filter.conf ${PKG_SYSCONFDIR}/filter.conf
 
 SUBST_CLASSES+=		vars
 SUBST_STAGE.vars=	do-configure
@@ -49,6 +51,7 @@ do-extract:
 	${CP} ${FILESDIR}/pkg_alternatives.8 ${WRKSRC}
 	${CP} ${FILESDIR}/wrapper.sh ${WRKSRC}
 	${CP} ${FILESDIR}/wrapper.man ${WRKSRC}
+	${CP} ${FILESDIR}/filter.conf ${WRKSRC}
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/pkg_alternatives.sh \
@@ -57,5 +60,7 @@ do-install:
 	${INSTALL_DATA_DIR} ${DATADIR}
 	${INSTALL_DATA} ${WRKSRC}/wrapper.sh ${DATADIR}/
 	${INSTALL_DATA} ${WRKSRC}/wrapper.man ${DATADIR}/
+	${INSTALL_DATA_DIR} ${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/filter.conf ${EGDIR}/
 
 .include "../../mk/bsd.pkg.mk"

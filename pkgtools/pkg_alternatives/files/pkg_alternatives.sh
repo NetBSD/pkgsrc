@@ -1,6 +1,6 @@
 #!@SH@
 #
-# $NetBSD: pkg_alternatives.sh,v 1.3 2005/01/25 16:47:20 jmmv Exp $
+# $NetBSD: pkg_alternatives.sh,v 1.4 2005/01/30 12:35:22 jmmv Exp $
 #
 # pkg_alternatives - Generic wrappers for programs with similar interfaces
 # Copyright (c) 2005 Julio M. Merino Vidal <jmmv@NetBSD.org>
@@ -34,6 +34,8 @@
 Conf_Dir=@CONFDIR@@PREFIX@
 Data_Dir=@DATADIR@
 Db_Dir=@DBDIR@@PREFIX@
+Filter=
+Filter_Read=no
 Prefix=@PREFIX@
 Prog_Name=${0##*/}
 Verbose=yes
@@ -92,6 +94,8 @@ action_auto_wrapper() {
 #
 action_destroy_package() {
     validate_args list ${#} -eq 0
+
+    [ -d ${Db_Dir} ] || return 0
 
     wrappers=$(cd ${Db_Dir} ; find . -type f)
 
@@ -190,13 +194,13 @@ action_manual_wrapper() {
 
 # action_rebuild_package
 #
-# Rebuilds the alternatives database from the package database.
+# Rebuilds the alternatives database from the package database and also
+# reinstalls the wrappers (so that filter.conf takes effect).
 #
 action_rebuild_package() {
     validate_args list ${#} -eq 0
 
-    info "removing contents of \`@DBDIR@'"
-    rm -rf @DBDIR@/* 2>/dev/null
+    action_destroy_package
     info "looking for alternatives in \`${PKG_DBDIR}'"
     for d in ${PKG_DBDIR}/*; do
         if [ -f ${d}/+ALTERNATIVES ]; then
@@ -248,6 +252,8 @@ action_register_wrapper() {
     wbase=${1}; shift
     alt=${1}; shift
     args=${*}
+
+    filter ${wbase} || return
 
     wabs=${Prefix}/${wbase}
     manpage=$(get_manpage ${wbase})
@@ -411,6 +417,49 @@ action_unregister_wrapper() {
 err() {
     echo "${Prog_Name}: ${*}" 1>&2
     exit 1
+}
+
+# -------------------------------------------------------------------------
+
+# filter wrapper
+#
+# Reads the configuration filter from CONFDIR/filter.conf and, for the
+# given wrapper, returns whether it is accepted or ignored.
+#
+filter() {
+    [ ! -f @CONFDIR@/filter.conf ] && return 0
+
+    if [ ${Filter_Read} = no ]; then
+        Filter=$(cat @CONFDIR@/filter.conf | grep -v '^#' | tr ' ' '¬')
+        Filter_Read=yes
+    fi
+
+    [ -z "${Filter}" ] && return 0
+
+    for f in ${Filter}; do
+        what=$(echo ${f} | cut -d '¬' -f 1)
+        case ${what} in
+            accept)
+                name=$(echo ${f} | cut -d '¬' -f 2- | tr '¬' ' ')
+                if echo ${1} | grep "${name}" >/dev/null; then
+                    info "filter accepts \`${1}'"
+                    return 0
+                fi
+                ;;
+            ignore)
+                name=$(echo ${f} | cut -d '¬' -f 2- | tr '¬' ' ')
+                if echo ${1} | grep "${name}" >/dev/null; then
+                    info "filter ignores \`${1}'"
+                    return 1
+                fi
+                ;;
+            *)
+                warn "unknown filter type \`${what}'; ignoring"
+                ;;
+        esac
+    done
+
+    true
 }
 
 # -------------------------------------------------------------------------
