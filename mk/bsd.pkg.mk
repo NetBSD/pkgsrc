@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.133 1998/08/04 15:05:38 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.134 1998/08/05 19:25:08 tv Exp $
 #
 # This file is in the public domain.
 #
@@ -499,16 +499,15 @@ _IGNOREFILES?=	${IGNOREFILES}
 #  by user.
 EXTRACT_ONLY?=	${DISTFILES}
 
-# Documentation
-.if (${OPSYS} == "NetBSD")
-MAINTAINER?=	packages@NetBSD.ORG
-.else
-MAINTAINER?=	ports@FreeBSD.ORG
+.if !defined(CATEGORIES) || !defined(DISTNAME) || !defined(MAINTAINER)
+.BEGIN:
+	@${ECHO_MSG} "CATEGORIES, DISTNAME, and MAINTAINER are mandatory."
+	@${FALSE}
 .endif
 
-.if !defined(CATEGORIES)
+.if defined(LIB_DEPENDS)
 .BEGIN:
-	@${ECHO_MSG} "CATEGORIES is mandatory."
+	@${ECHO_MSG} "LIB_DEPENDS is deprecated, and must be replaced with DEPENDS."
 	@${FALSE}
 .endif
 
@@ -992,7 +991,7 @@ _PORT_USE: .USE
 	@cd ${.CURDIR} && ${MAKE} ${.MAKEFLAGS} fetch-depends
 .endif
 .if make(real-extract)
-	@cd ${.CURDIR} && ${MAKE} ${.MAKEFLAGS} build-depends lib-depends misc-depends
+	@cd ${.CURDIR} && ${MAKE} ${.MAKEFLAGS} build-depends misc-depends
 .endif
 .if make(real-install)
 .if !defined(NO_PKG_REGISTER) && !defined(FORCE_PKG_REGISTER)
@@ -1022,7 +1021,7 @@ _PORT_USE: .USE
 		${ECHO_MSG} "      If this is not desired, set it to an appropriate value"; \
 		${ECHO_MSG} "      and install this port again by \`\`${MAKE} reinstall''."; \
 	fi
-	@cd ${.CURDIR} && ${MAKE} ${.MAKEFLAGS} run-depends lib-depends
+	@cd ${.CURDIR} && ${MAKE} ${.MAKEFLAGS} run-depends
 .endif
 .if make(real-install)
 .if !defined(NO_MTREE)
@@ -1345,7 +1344,7 @@ fetch-list:
 fetch-list-recursive:
 	@${MAKE} fetch-list-one-pkg
 .if ${RECURSIVE_FETCH_LIST} != "NO"
-	@for dir in `${ECHO} ${FETCH_DEPENDS} ${BUILD_DEPENDS} ${LIB_DEPENDS} ${DEPENDS} ${RUN_DEPENDS} | ${TR} '\040' '\012' | ${SED} -e 's/^[^:]*://' -e 's/:.*//' | sort -u` ; do \
+	@for dir in `${ECHO} ${FETCH_DEPENDS} ${BUILD_DEPENDS} ${DEPENDS} ${RUN_DEPENDS} | ${TR} '\040' '\012' | ${SED} -e 's/^[^:]*://' -e 's/:.*//' | sort -u` ; do \
 		(cd $$dir; ${MAKE} fetch-list-recursive; ); \
 	done
 .endif # ${RECURSIVE_FETCH_LIST} != "NO"
@@ -1471,7 +1470,7 @@ package-path:
 
 .if !target(package-depends)
 package-depends:
-	@for dir in `${ECHO} ${LIB_DEPENDS} ${DEPENDS} ${RUN_DEPENDS} | ${TR} '\040' '\012' | ${SED} -e 's/^[^:]*://' -e 's/:.*//' | sort -u`; do \
+	@for dir in `${ECHO} ${DEPENDS} ${RUN_DEPENDS} | ${TR} '\040' '\012' | ${SED} -e 's/^[^:]*://' -e 's/:.*//' | sort -u`; do \
 		if [ -d $$dir ]; then \
 			(cd $$dir ; ${MAKE} package-name package-depends PACKAGE_NAME_AS_LINK=${PACKAGE_NAME_AS_LINK}); \
 		else \
@@ -1502,7 +1501,7 @@ package-noinstall:
 ################################################################
 
 .if !target(depends)
-depends: lib-depends misc-depends
+depends: misc-depends
 	@cd ${.CURDIR} && ${MAKE} ${.MAKEFLAGS} fetch-depends
 	@cd ${.CURDIR} && ${MAKE} ${.MAKEFLAGS} build-depends
 	@cd ${.CURDIR} && ${MAKE} ${.MAKEFLAGS} run-depends
@@ -1567,40 +1566,6 @@ fetch-depends:	_DEPENDS_USE
 build-depends:	_DEPENDS_USE
 run-depends:	_DEPENDS_USE
 
-lib-depends:
-.if defined(LIB_DEPENDS)
-.if !defined(NO_DEPENDS)
-	@for i in ${LIB_DEPENDS}; do \
-		lib=`${ECHO} $$i | ${SED} -e 's/:.*//' -e 's|\([^\\]\)\.|\1\\\\.|g'`; \
-		dir=`${ECHO} $$i | ${SED} -e 's/[^:]*://'`; \
-		if expr "$$dir" : '.*:' > /dev/null; then \
-			target=`${ECHO} $$dir | ${SED} -e 's/.*://'`; \
-			dir=`${ECHO} $$dir | ${SED} -e 's/:.*//'`; \
-		else \
-			target=${DEPENDS_TARGET}; \
-		fi; \
-		libname=`${ECHO} $$lib | ${SED} -e 's|\\\\||g'`; \
-		reallib=`${LDCONFIG} -r | ${GREP} -e "-l$$lib" | awk '{ print $$3 }'`; \
-		if [ "X$$reallib" = X"" ]; then \
-			${ECHO_MSG} "===>  ${PKGNAME} depends on shared library: $$libname - not found"; \
-			${ECHO_MSG} "===>  Verifying $$target for $$libname in $$dir"; \
-			if [ ! -d "$$dir" ]; then \
-				${ECHO_MSG} ">> No directory for $$libname.  Skipping.."; \
-			else \
-				(cd $$dir; ${MAKE} ${.MAKEFLAGS} $$target) ; \
-				${ECHO_MSG} "===>  Returning to build of ${PKGNAME}"; \
-			fi; \
-		else \
-			${ECHO_MSG} "===>  ${PKGNAME} depends on shared library: $$libname - $$reallib found"; \
-		fi; \
-	done
-.endif
-.else
-	@${DO_NADA}
-.endif
-
-
-
 misc-depends:
 .if defined(DEPENDS)
 .if !defined(NO_DEPENDS)
@@ -1630,9 +1595,9 @@ misc-depends:
 
 .if !target(clean-depends)
 clean-depends:
-.if defined(FETCH_DEPENDS) || defined(BUILD_DEPENDS) || defined(LIB_DEPENDS) \
+.if defined(FETCH_DEPENDS) || defined(BUILD_DEPENDS) \
 	|| defined(DEPENDS) || defined(RUN_DEPENDS)
-	@for dir in `${ECHO} ${FETCH_DEPENDS} ${BUILD_DEPENDS} ${LIB_DEPENDS} ${DEPENDS} ${RUN_DEPENDS} | ${TR} '\040' '\012' | ${SED} -e 's/^[^:]*://' -e 's/:.*//' | sort -u`; do \
+	@for dir in `${ECHO} ${FETCH_DEPENDS} ${BUILD_DEPENDS} ${DEPENDS} ${RUN_DEPENDS} | ${TR} '\040' '\012' | ${SED} -e 's/^[^:]*://' -e 's/:.*//' | sort -u`; do \
 		if [ -d $$dir ] ; then \
 			(cd $$dir; ${MAKE} NOCLEANDEPENDS=yes clean clean-depends); \
 		fi \
@@ -1642,7 +1607,7 @@ clean-depends:
 
 .if !target(depends-list)
 depends-list:
-	@for dir in `${ECHO} ${FETCH_DEPENDS} ${BUILD_DEPENDS} ${LIB_DEPENDS} ${DEPENDS} | ${TR} '\040' '\012' | ${SED} -e 's/^[^:]*://' -e 's/:.*//' | sort -u`; do \
+	@for dir in `${ECHO} ${FETCH_DEPENDS} ${BUILD_DEPENDS} ${DEPENDS} | ${TR} '\040' '\012' | ${SED} -e 's/^[^:]*://' -e 's/:.*//' | sort -u`; do \
 		(cd $$dir; ${MAKE} package-name depends-list PACKAGE_NAME_AS_LINK=${PACKAGE_NAME_AS_LINK}; ); \
 	done
 .endif
@@ -1709,13 +1674,13 @@ describe:
 		${ECHO} -n "|/dev/null"; \
 	fi; \
 	${ECHO} -n "|${MAINTAINER}|${CATEGORIES}|"; \
-	case "A${FETCH_DEPENDS}B${BUILD_DEPENDS}C${LIB_DEPENDS}D${DEPENDS}E" in \
-		ABCDE) ;; \
+	case "A${FETCH_DEPENDS}B${BUILD_DEPENDS}C${DEPENDS}D" in \
+		ABCD) ;; \
 		*) cd ${.CURDIR} && ${ECHO} -n `${MAKE} depends-list|sort -u`;; \
 	esac; \
 	${ECHO} -n "|"; \
-	case "A${RUN_DEPENDS}B${LIB_DEPENDS}C${DEPENDS}D" in \
-		ABCD) ;; \
+	case "A${RUN_DEPENDS}B${DEPENDS}C" in \
+		ABC) ;; \
 		*) cd ${.CURDIR} && ${ECHO} -n `${MAKE} package-depends|sort -u`;; \
 	esac; \
 	${ECHO} -n "|"; \
@@ -1790,8 +1755,7 @@ README.html:
 
 .if !target(print-depends-list)
 print-depends-list:
-.if defined(FETCH_DEPENDS) || defined(BUILD_DEPENDS) || \
-	defined(LIB_DEPENDS) || defined(DEPENDS)
+.if defined(FETCH_DEPENDS) || defined(BUILD_DEPENDS) || defined(DEPENDS)
 	@${ECHO} -n 'This port requires package(s) "'
 	@${ECHO} -n `${MAKE} depends-list | sort -u`
 	@${ECHO} '" to build.'
@@ -1800,7 +1764,7 @@ print-depends-list:
 
 .if !target(print-package-depends)
 print-package-depends:
-.if defined(RUN_DEPENDS) || defined(LIB_DEPENDS) || defined(DEPENDS)
+.if defined(RUN_DEPENDS) || defined(DEPENDS)
 	@${ECHO} -n 'This port requires package(s) "'
 	@${ECHO} -n `${MAKE} package-depends | sort -u`
 	@${ECHO} '" to run.'
