@@ -1,17 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2002/03/13 17:37:34 fredb Exp $
+# $NetBSD: Makefile,v 1.5 2002/03/17 16:02:34 fredb Exp $
 
 DISTNAME=	foomatic-gswrapper
-PKGNAME=	${DISTNAME}-1.2
+PKGNAME=	foomatic-gswrapper-1.2
 PKGREVISION=	1
 CATEGORIES=	print
 EXTRACT_SUFX=	# empty
-
-# Not sure why ${MASTER_SITE_LOCAL:=${PKGNAME}} doesn't work, but the
-# following does the correct substitution.
-#
-.for subdir in ${PKGNAME}
-MASTER_SITES=	${MASTER_SITE_LOCAL:=${subdir}/}
-.endfor
+MASTER_SITES=	${MASTER_SITE_LOCAL:=${PKGNAME_NOREV}/}
 
 # The definitive location of the distfile is at www.linuxprinting.org,
 # but this file has no revision number.
@@ -22,7 +16,7 @@ MAINTAINER=	jlam@netbsd.org
 HOMEPAGE=	http://www.linuxprinting.org/gswrapper.html
 COMMENT=	Foomatic Ghostscript Wrapper
 
-DIST_SUBDIR=	${PKGNAME}
+DIST_SUBDIR=	${PKGNAME_NOREV}
 
 DEPENDS+=	ghostscript{,-nox11}-[6-9]*:../../print/ghostscript
 
