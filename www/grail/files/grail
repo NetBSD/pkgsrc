@@ -1,0 +1,4 @@
+#! /bin/sh
+# $NetBSD: grail,v 1.1 1998/07/22 01:58:19 tsarna Exp $
+exec @PREFIX@/bin/python \
+	@PREFIX@/@GRAILDIR@/grail.pyc ${1+"$@"}
