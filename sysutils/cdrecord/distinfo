@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2003/01/03 16:27:09 lukem Exp $
+$NetBSD: distinfo,v 1.8.2.1 2003/03/23 00:51:10 jmc Exp $
 
 SHA1 (cdrtools-2.0.tar.gz) = a6645d541a40a0374d6ebffae699555273e41cb0
 Size (cdrtools-2.0.tar.gz) = 1583252 bytes
@@ -8,3 +8,6 @@ SHA1 (patch-ai) = 38f6bc8a9deee6861d5589dcf65dcd4968614457
 SHA1 (patch-aj) = 7e8328ad3478a43cc9311158c30b0acfe48fbb7b
 SHA1 (patch-ba) = 8d7038282ba5a6b133544cc8e440f6e12a475990
 SHA1 (patch-bb) = c5ee1e00e1f8723fe28d4d360bcede7680a7e4b9
+SHA1 (patch-ca) = 5dbc3d3f248781627b6d6100808c70db60e83bd4
+SHA1 (patch-cb) = 8119e171e7308c0bb095b6a1d760473d8cc89120
+SHA1 (patch-cc) = a14098dd14e0b58d3fed1167341a22167eea7c19
