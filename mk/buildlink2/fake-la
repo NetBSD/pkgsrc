@@ -1,6 +1,6 @@
 #!@BUILDLINK_SHELL@
 #
-# $NetBSD: fake-la,v 1.3 2002/12/22 19:02:44 jlam Exp $
+# $NetBSD: fake-la,v 1.4 2003/01/06 04:30:12 jlam Exp $
 
 BASENAME="@BASENAME@"
 CC="@CC@"
@@ -21,7 +21,7 @@ realdir=`${DIRNAME} $reallib`
 libname=`${BASENAME} $reallib`
 tmpdir=${BUILDLINK_DIR}/.tmp
 
-if ! ${TEST} -f $tmpdir/inst/$libbase.la; then
+if ${TEST} ! -f $tmpdir/inst/$libbase.la; then
 	case $libname in
 	*.so.[0-9]*)
 		libbase=`${ECHO} $libname | ${SED} -e "s/\.so\.[0-9.]*$//"`
