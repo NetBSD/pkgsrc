@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST.FreeBSD,v 1.1.1.1 2004/01/24 08:47:28 xtraeme Exp $
+man/man3/Xaw.3.gz
+man/man3/Xcursor.3.gz
+man/man3/Xrandr.3.gz
