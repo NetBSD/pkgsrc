@@ -1,26 +1,37 @@
-$NetBSD: distinfo,v 1.2 2002/09/16 08:47:27 uebayasi Exp $
+$NetBSD: distinfo,v 1.3 2005/02/24 12:51:45 agc Exp $
 
 SHA1 (TeXfamily/texfam-1.2.tar.gz) = 510ef7048c1353a75d84d548738e8e2a94d83be9
+RMD160 (TeXfamily/texfam-1.2.tar.gz) = 951aebdcf9e5d77e82b2bfb3ba5c8067e0bf8555
 Size (TeXfamily/texfam-1.2.tar.gz) = 154286 bytes
 SHA1 (TeXfamily/web2c-j1.9.tar.gz) = 1fd7c3fbcc81fe82935a86259bb382ae20ad6742
+RMD160 (TeXfamily/web2c-j1.9.tar.gz) = 35eabd192b7443a74266d118dd9461cb0a1b7fec
 Size (TeXfamily/web2c-j1.9.tar.gz) = 195277 bytes
 SHA1 (TeXfamily/web2c-j1.9.1.tar.gz) = 088b24d04c487e1815e2de07d9dd4d637fbc33a2
+RMD160 (TeXfamily/web2c-j1.9.1.tar.gz) = 28fd4fe481e1f265cb7dc37e53a4c3c993311355
 Size (TeXfamily/web2c-j1.9.1.tar.gz) = 86610 bytes
 SHA1 (TeXfamily/web2c-m0.8.tar.gz) = c9c48ea58f856831178ea362918696b71bea9f95
+RMD160 (TeXfamily/web2c-m0.8.tar.gz) = 6c43699c9c9d1c782b6d65d728aa70116f03ed9a
 Size (TeXfamily/web2c-m0.8.tar.gz) = 153807 bytes
 SHA1 (TeXfamily/web2c-m0.8.1.tar.gz) = 6131a4642299334c91e75f53f16393c50296be93
+RMD160 (TeXfamily/web2c-m0.8.1.tar.gz) = 5a432d62588acd8bd5a240e66a6f1a52655e0dd8
 Size (TeXfamily/web2c-m0.8.1.tar.gz) = 85513 bytes
 SHA1 (TeXfamily/dvi2ps-3.2j.tar.gz) = 3f055f7388ebe9f9bf873374eda7c612462207fe
+RMD160 (TeXfamily/dvi2ps-3.2j.tar.gz) = 906ec7817795d743fe15b66ea8f24fae3d514c03
 Size (TeXfamily/dvi2ps-3.2j.tar.gz) = 171083 bytes
 SHA1 (TeXfamily/jmakeindex.tar.gz) = 14e68b3cbd0f80ae383b540a5391d8ccecc4ba57
+RMD160 (TeXfamily/jmakeindex.tar.gz) = 4c25031d38ae51b836f074852faf7c10a4589dea
 Size (TeXfamily/jmakeindex.tar.gz) = 283656 bytes
 SHA1 (TeXfamily/ptex-src-3.0.1.tar.gz) = 132ac11c5fad0ffb34a10739d9eeb5fa8a5b0db3
+RMD160 (TeXfamily/ptex-src-3.0.1.tar.gz) = ad9696535b7c6576fff69f266c003391f2e4ef69
 Size (TeXfamily/ptex-src-3.0.1.tar.gz) = 136635 bytes
 SHA1 (TeXfamily/dvipsk-jpatch-p1.5g.tar.gz) = 0280863c8c4908d84b4f79475ec5407ad0ab8f81
+RMD160 (TeXfamily/dvipsk-jpatch-p1.5g.tar.gz) = a62d9e99883b6a01f7afa63a05d365739975a2b2
 Size (TeXfamily/dvipsk-jpatch-p1.5g.tar.gz) = 24053 bytes
 SHA1 (TeXfamily/mendexk2.5.tar.gz) = 223695d92aec02b4814b247bc1dbf5a6332f140d
+RMD160 (TeXfamily/mendexk2.5.tar.gz) = f64df0613f0c7ca83610c7c46e83db758aa60af7
 Size (TeXfamily/mendexk2.5.tar.gz) = 25850 bytes
 SHA1 (TeXfamily/ptex-src-3.0.1.patch) = f2d3f1d3a9e69241ea4da08fbb4c8cc11693c80a
+RMD160 (TeXfamily/ptex-src-3.0.1.patch) = 9b305dd4bfc2d1f3b93c315be6b2c9f43ac5107c
 Size (TeXfamily/ptex-src-3.0.1.patch) = 1169 bytes
 SHA1 (patch-aa) = 03e327921d44ffb12f6ce8547553935fb0273f1c
 SHA1 (patch-ab) = c6c2ed23121e14e9e123bfb6298743cfbd34f959

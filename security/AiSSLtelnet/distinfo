@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.8 2004/03/25 15:23:40 taca Exp $
+$NetBSD: distinfo,v 1.9 2005/02/24 13:10:04 agc Exp $
 
 SHA1 (AiSSLtelnet-0.15.tar.gz) = 533662049ac44dbf45bb5b53f37eabf269017a79
+RMD160 (AiSSLtelnet-0.15.tar.gz) = 6010734e7a38cf1b26e43b84e12678f99409f170
 Size (AiSSLtelnet-0.15.tar.gz) = 669686 bytes
 SHA1 (patch-aa) = 41235e8073500f8da2e8cf47d05f27af3c88b4e7
 SHA1 (patch-ab) = ab2261a810c63a5b5b2d0d1021de94253bb3bc54

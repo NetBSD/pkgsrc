@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2004/12/03 21:58:54 shannonjr Exp $
+$NetBSD: distinfo,v 1.6 2005/02/24 13:10:07 agc Exp $
 
 SHA1 (libksba-0.9.10.tar.gz) = 0ad018610332096ba26de9296b6286194b286f48
+RMD160 (libksba-0.9.10.tar.gz) = 4fb6694cea97eabe7f655edd87f17f43f19ec9f1
 Size (libksba-0.9.10.tar.gz) = 584419 bytes
 SHA1 (patch-aa) = d8af1927606aa254874776f589d80b439179b77b

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.14 2004/04/05 22:38:09 martin Exp $
+$NetBSD: distinfo,v 1.15 2005/02/24 13:40:58 agc Exp $
 
 SHA1 (nut-2.0.0.tar.gz) = 5a89efac3047b6e8183224171be53251733d9927
+RMD160 (nut-2.0.0.tar.gz) = 7f36296b61b79fe13d78c65a66aa034b60e1c0d2
 Size (nut-2.0.0.tar.gz) = 530492 bytes
 SHA1 (patch-aa) = c127e81de7377dce56fccc842eb7207c972805d2
 SHA1 (patch-ac) = b8f2f582168834b3957b1a877f3cd55cdeb2a92e

@@ -1,8 +1,10 @@
-$NetBSD: distinfo,v 1.5 2005/01/16 19:49:29 markd Exp $
+$NetBSD: distinfo,v 1.6 2005/02/24 12:51:41 agc Exp $
 
 SHA1 (lyx-1.2.0.tar.gz) = 56db850f316c18e00c4b10946216b6eb25107dab
+RMD160 (lyx-1.2.0.tar.gz) = e21eeb53517bf994938f2d89e7be585da9ff8cd3
 Size (lyx-1.2.0.tar.gz) = 6418424 bytes
 SHA1 (CJK-LyX-1.2.0-patch) = d84540cd832f68d79fadf7f4527f84b55660adee
+RMD160 (CJK-LyX-1.2.0-patch) = 05e2ec70ab5d4d7dbac0c117e606e51fb0cba601
 Size (CJK-LyX-1.2.0-patch) = 126189 bytes
 SHA1 (patch-aa) = 3c020c72d8ac850ebb76c5ff65d546e8cfd9b587
 SHA1 (patch-ab) = 48faac82be2a99d7801e751e13a602622817fbc6
