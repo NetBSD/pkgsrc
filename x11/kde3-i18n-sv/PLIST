@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2004/08/21 16:02:46 markd Exp $
+@comment $NetBSD: PLIST,v 1.9 2004/10/13 13:20:25 markd Exp $
 share/doc/kde/HTML/sv/KRegExpEditor/altntool.png
 share/doc/kde/HTML/sv/KRegExpEditor/anychartool.png
 share/doc/kde/HTML/sv/KRegExpEditor/boundarytools.png
@@ -1024,10 +1024,16 @@ share/doc/kde/HTML/sv/kolf/common
 share/doc/kde/HTML/sv/kolf/index.cache.bz2
 share/doc/kde/HTML/sv/kolf/index.docbook
 share/doc/kde/HTML/sv/kolourpaint/common
+share/doc/kde/HTML/sv/kolourpaint/image_balance.png
+share/doc/kde/HTML/sv/kolourpaint/image_emboss.png
+share/doc/kde/HTML/sv/kolourpaint/image_flatten.png
 share/doc/kde/HTML/sv/kolourpaint/image_flip.png
+share/doc/kde/HTML/sv/kolourpaint/image_invert.png
+share/doc/kde/HTML/sv/kolourpaint/image_reduce_colors.png
 share/doc/kde/HTML/sv/kolourpaint/image_resize_scale.png
 share/doc/kde/HTML/sv/kolourpaint/image_rotate.png
 share/doc/kde/HTML/sv/kolourpaint/image_skew.png
+share/doc/kde/HTML/sv/kolourpaint/image_soften_sharpen.png
 share/doc/kde/HTML/sv/kolourpaint/index.cache.bz2
 share/doc/kde/HTML/sv/kolourpaint/index.docbook
 share/doc/kde/HTML/sv/kommander/basics.docbook

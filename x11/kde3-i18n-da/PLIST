@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2004/08/21 16:02:40 markd Exp $
+@comment $NetBSD: PLIST,v 1.9 2004/10/13 13:20:20 markd Exp $
 share/doc/kde/HTML/da/KRegExpEditor/altntool.png
 share/doc/kde/HTML/da/KRegExpEditor/anychartool.png
 share/doc/kde/HTML/da/KRegExpEditor/boundarytools.png
@@ -413,6 +413,7 @@ share/doc/kde/HTML/da/kdevelop/index.cache.bz2
 share/doc/kde/HTML/da/kdevelop/index.docbook
 share/doc/kde/HTML/da/kdevelop/kdevelop-install.docbook
 share/doc/kde/HTML/da/kdevelop/kdevelop-survey.docbook
+share/doc/kde/HTML/da/kdevelop/project-advanced.docbook
 share/doc/kde/HTML/da/kdevelop/project-management.docbook
 share/doc/kde/HTML/da/kdevelop/setup.docbook
 share/doc/kde/HTML/da/kdevelop/unixdev.docbook
@@ -690,6 +691,9 @@ share/doc/kde/HTML/da/klatin/nouns.docbook
 share/doc/kde/HTML/da/klatin/numbers.docbook
 share/doc/kde/HTML/da/klatin/pronouns.docbook
 share/doc/kde/HTML/da/klatin/verbs.docbook
+share/doc/kde/HTML/da/kleopatra/common
+share/doc/kde/HTML/da/kleopatra/index.cache.bz2
+share/doc/kde/HTML/da/kleopatra/index.docbook
 share/doc/kde/HTML/da/klettres/common
 share/doc/kde/HTML/da/klettres/index.cache.bz2
 share/doc/kde/HTML/da/klettres/index.docbook
@@ -830,6 +834,22 @@ share/doc/kde/HTML/da/kolf/index.docbook
 share/doc/kde/HTML/da/kolourpaint/common
 share/doc/kde/HTML/da/kolourpaint/index.cache.bz2
 share/doc/kde/HTML/da/kolourpaint/index.docbook
+share/doc/kde/HTML/da/kommander/basics.docbook
+share/doc/kde/HTML/da/kommander/commands.docbook
+share/doc/kde/HTML/da/kommander/common
+share/doc/kde/HTML/da/kommander/credits.docbook
+share/doc/kde/HTML/da/kommander/dcop.docbook
+share/doc/kde/HTML/da/kommander/editor.docbook
+share/doc/kde/HTML/da/kommander/extending.docbook
+share/doc/kde/HTML/da/kommander/glossary.docbook
+share/doc/kde/HTML/da/kommander/index.cache.bz2
+share/doc/kde/HTML/da/kommander/index.docbook
+share/doc/kde/HTML/da/kommander/installation.docbook
+share/doc/kde/HTML/da/kommander/introduction.docbook
+share/doc/kde/HTML/da/kommander/q-and-a.docbook
+share/doc/kde/HTML/da/kommander/specials.docbook
+share/doc/kde/HTML/da/kommander/tutorials.docbook
+share/doc/kde/HTML/da/kommander/widgets.docbook
 share/doc/kde/HTML/da/kompare/common
 share/doc/kde/HTML/da/kompare/index.cache.bz2
 share/doc/kde/HTML/da/kompare/index.docbook
@@ -1030,18 +1050,22 @@ share/doc/kde/HTML/da/kstars/altvstime.docbook
 share/doc/kde/HTML/da/kstars/altvstime.png
 share/doc/kde/HTML/da/kstars/astroinfo.docbook
 share/doc/kde/HTML/da/kstars/blackbody.docbook
+share/doc/kde/HTML/da/kstars/calc-angdist.docbook
 share/doc/kde/HTML/da/kstars/calc-apcoords.docbook
 share/doc/kde/HTML/da/kstars/calc-apcoords.png
 share/doc/kde/HTML/da/kstars/calc-dayduration.docbook
 share/doc/kde/HTML/da/kstars/calc-daylength.png
+share/doc/kde/HTML/da/kstars/calc-ecliptic.docbook
 share/doc/kde/HTML/da/kstars/calc-eqgal.docbook
 share/doc/kde/HTML/da/kstars/calc-eqgal.png
+share/doc/kde/HTML/da/kstars/calc-equinox.docbook
 share/doc/kde/HTML/da/kstars/calc-geodetic.docbook
 share/doc/kde/HTML/da/kstars/calc-geodetic.png
 share/doc/kde/HTML/da/kstars/calc-horizontal.docbook
 share/doc/kde/HTML/da/kstars/calc-horizontal.png
 share/doc/kde/HTML/da/kstars/calc-julian.png
 share/doc/kde/HTML/da/kstars/calc-julianday.docbook
+share/doc/kde/HTML/da/kstars/calc-planetcoords.docbook
 share/doc/kde/HTML/da/kstars/calc-precess.docbook
 share/doc/kde/HTML/da/kstars/calc-precess.png
 share/doc/kde/HTML/da/kstars/calc-sidereal.docbook
@@ -1982,6 +2006,7 @@ share/kde/locale/da/flag.png
 @dirrm share/doc/kde/HTML/da/konqueror
 @dirrm share/doc/kde/HTML/da/konq-plugins
 @dirrm share/doc/kde/HTML/da/kompare
+@dirrm share/doc/kde/HTML/da/kommander
 @dirrm share/doc/kde/HTML/da/kolourpaint
 @dirrm share/doc/kde/HTML/da/kolf
 @dirrm share/doc/kde/HTML/da/kodo
@@ -2005,6 +2030,7 @@ share/kde/locale/da/flag.png
 @dirrm share/doc/kde/HTML/da/klines
 @dirrm share/doc/kde/HTML/da/klickety
 @dirrm share/doc/kde/HTML/da/klettres
+@dirrm share/doc/kde/HTML/da/kleopatra
 @dirrm share/doc/kde/HTML/da/klatin
 @dirrm share/doc/kde/HTML/da/kjumpingcube
 @dirrm share/doc/kde/HTML/da/kjots
@@ -2141,7 +2167,7 @@ share/kde/locale/da/flag.png
 @dirrm share/doc/kde/HTML/da/kaboodle
 @dirrm share/doc/kde/HTML/da/juk
 @dirrm share/doc/kde/HTML/da/flashkard
-@dirrm share/doc/kde/HTML/da/common
+@comment dirrm share/doc/kde/HTML/da/common
 @dirrm share/doc/kde/HTML/da/cervisia
 @dirrm share/doc/kde/HTML/da/atlantik
 @dirrm share/doc/kde/HTML/da/artsbuilder

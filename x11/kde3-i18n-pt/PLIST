@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2004/08/21 16:02:42 markd Exp $
+@comment $NetBSD: PLIST,v 1.10 2004/10/13 13:20:22 markd Exp $
 share/doc/kde/HTML/pt/KRegExpEditor/common
 share/doc/kde/HTML/pt/KRegExpEditor/index.cache.bz2
 share/doc/kde/HTML/pt/KRegExpEditor/index.docbook
@@ -93,6 +93,9 @@ share/doc/kde/HTML/pt/kaboodle/index.docbook
 share/doc/kde/HTML/pt/kaddressbook/common
 share/doc/kde/HTML/pt/kaddressbook/index.cache.bz2
 share/doc/kde/HTML/pt/kaddressbook/index.docbook
+share/doc/kde/HTML/pt/kalarm/common
+share/doc/kde/HTML/pt/kalarm/index.cache.bz2
+share/doc/kde/HTML/pt/kalarm/index.docbook
 share/doc/kde/HTML/pt/kalzium/common
 share/doc/kde/HTML/pt/kalzium/index.cache.bz2
 share/doc/kde/HTML/pt/kalzium/index.docbook
@@ -747,7 +750,11 @@ share/doc/kde/HTML/pt/kopete/common
 share/doc/kde/HTML/pt/kopete/index.cache.bz2
 share/doc/kde/HTML/pt/kopete/index.docbook
 share/doc/kde/HTML/pt/kopete/menus.docbook
+share/doc/kde/HTML/pt/korganizer/common
 share/doc/kde/HTML/pt/korganizer/exchange-plugin.docbook
+share/doc/kde/HTML/pt/korganizer/group-scheduling.docbook
+share/doc/kde/HTML/pt/korganizer/index.cache.bz2
+share/doc/kde/HTML/pt/korganizer/index.docbook
 share/doc/kde/HTML/pt/korganizer/outlook-to-vcalendar.docbook
 share/doc/kde/HTML/pt/korn/common
 share/doc/kde/HTML/pt/korn/index.cache.bz2
@@ -1856,6 +1863,7 @@ share/kde/locale/pt/flag.png
 @dirrm share/doc/kde/HTML/pt/kandy
 @dirrm share/doc/kde/HTML/pt/kamera
 @dirrm share/doc/kde/HTML/pt/kalzium
+@dirrm share/doc/kde/HTML/pt/kalarm
 @dirrm share/doc/kde/HTML/pt/kaddressbook
 @dirrm share/doc/kde/HTML/pt/kaboodle
 @dirrm share/doc/kde/HTML/pt/juk

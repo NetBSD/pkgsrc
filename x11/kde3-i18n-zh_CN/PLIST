@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2004/08/21 16:02:46 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2004/10/13 13:20:25 markd Exp $
 share/doc/kde/HTML/zh_CN/common/1.png
 share/doc/kde/HTML/zh_CN/common/10.png
 share/doc/kde/HTML/zh_CN/common/2.png
@@ -275,6 +275,7 @@ share/kde/locale/zh_CN/LC_MESSAGES/kfile_jpeg.mo
 share/kde/locale/zh_CN/LC_MESSAGES/kfile_lnk.mo
 share/kde/locale/zh_CN/LC_MESSAGES/kfile_m3u.mo
 share/kde/locale/zh_CN/LC_MESSAGES/kfile_mp3.mo
+share/kde/locale/zh_CN/LC_MESSAGES/kfile_mpc.mo
 share/kde/locale/zh_CN/LC_MESSAGES/kfile_ogg.mo
 share/kde/locale/zh_CN/LC_MESSAGES/kfile_pcx.mo
 share/kde/locale/zh_CN/LC_MESSAGES/kfile_pdf.mo
@@ -356,6 +357,8 @@ share/kde/locale/zh_CN/LC_MESSAGES/klock.mo
 share/kde/locale/zh_CN/LC_MESSAGES/kmag.mo
 share/kde/locale/zh_CN/LC_MESSAGES/kmahjongg.mo
 share/kde/locale/zh_CN/LC_MESSAGES/kmail.mo
+share/kde/locale/zh_CN/LC_MESSAGES/kmail_text_calendar_plugin.mo
+share/kde/locale/zh_CN/LC_MESSAGES/kmail_text_vcard_plugin.mo
 share/kde/locale/zh_CN/LC_MESSAGES/kmailcvt.mo
 share/kde/locale/zh_CN/LC_MESSAGES/kmathapplet.mo
 share/kde/locale/zh_CN/LC_MESSAGES/kmathtool.mo

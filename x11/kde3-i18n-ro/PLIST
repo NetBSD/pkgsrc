@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2004/08/21 16:02:46 markd Exp $
+@comment $NetBSD: PLIST,v 1.10 2004/10/13 13:20:22 markd Exp $
 share/doc/kde/HTML/ro/common/1.png
 share/doc/kde/HTML/ro/common/10.png
 share/doc/kde/HTML/ro/common/2.png
@@ -272,6 +272,7 @@ share/kde/locale/ro/LC_MESSAGES/kcmkurifilt.mo
 share/kde/locale/ro/LC_MESSAGES/kcmkvaio.mo
 share/kde/locale/ro/LC_MESSAGES/kcmkwallet.mo
 share/kde/locale/ro/LC_MESSAGES/kcmkwindecoration.mo
+share/kde/locale/ro/LC_MESSAGES/kcmkwinrules.mo
 share/kde/locale/ro/LC_MESSAGES/kcmkwintheme.mo
 share/kde/locale/ro/LC_MESSAGES/kcmkwm.mo
 share/kde/locale/ro/LC_MESSAGES/kcmkxmlrpcd.mo
@@ -581,6 +582,7 @@ share/kde/locale/ro/LC_MESSAGES/kwin.mo
 share/kde/locale/ro/LC_MESSAGES/kwin4.mo
 share/kde/locale/ro/LC_MESSAGES/kwin_b2_config.mo
 share/kde/locale/ro/LC_MESSAGES/kwin_cde_config.mo
+share/kde/locale/ro/LC_MESSAGES/kwin_clients.mo
 share/kde/locale/ro/LC_MESSAGES/kwin_default_config.mo
 share/kde/locale/ro/LC_MESSAGES/kwin_glow_config.mo
 share/kde/locale/ro/LC_MESSAGES/kwin_icewm_config.mo

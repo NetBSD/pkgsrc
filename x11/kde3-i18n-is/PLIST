@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2004/08/21 16:02:41 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2004/10/13 13:20:21 markd Exp $
 share/kde/locale/is/LC_MESSAGES/alarmdaemonctrl.mo
 share/kde/locale/is/LC_MESSAGES/alsaplayerui.mo
 share/kde/locale/is/LC_MESSAGES/amor.mo
@@ -46,6 +46,7 @@ share/kde/locale/is/LC_MESSAGES/kabc_file.mo
 share/kde/locale/is/LC_MESSAGES/kabc_ldap.mo
 share/kde/locale/is/LC_MESSAGES/kabc_ldapkio.mo
 share/kde/locale/is/LC_MESSAGES/kabc_net.mo
+share/kde/locale/is/LC_MESSAGES/kabc_slox.mo
 share/kde/locale/is/LC_MESSAGES/kabc_sql.mo
 share/kde/locale/is/LC_MESSAGES/kabcformat_binary.mo
 share/kde/locale/is/LC_MESSAGES/kaboodle.mo
@@ -62,6 +63,7 @@ share/kde/locale/is/LC_MESSAGES/kasteroids.mo
 share/kde/locale/is/LC_MESSAGES/kate.mo
 share/kde/locale/is/LC_MESSAGES/katecppsymbolviewer.mo
 share/kde/locale/is/LC_MESSAGES/katedefaultproject.mo
+share/kde/locale/is/LC_MESSAGES/katefiletemplates.mo
 share/kde/locale/is/LC_MESSAGES/katefll_initplugin.mo
 share/kde/locale/is/LC_MESSAGES/katefll_plugin.mo
 share/kde/locale/is/LC_MESSAGES/katehelloworld.mo
@@ -99,7 +101,6 @@ share/kde/locale/is/LC_MESSAGES/kcm_kviewcanvasconfig.mo
 share/kde/locale/is/LC_MESSAGES/kcm_kviewgeneralconfig.mo
 share/kde/locale/is/LC_MESSAGES/kcm_kviewpluginsconfig.mo
 share/kde/locale/is/LC_MESSAGES/kcm_kviewviewerpluginsconfig.mo
-share/kde/locale/is/LC_MESSAGES/kcm_sambaconf.mo
 share/kde/locale/is/LC_MESSAGES/kcmaccess.mo
 share/kde/locale/is/LC_MESSAGES/kcmaccessibility.mo
 share/kde/locale/is/LC_MESSAGES/kcmarts.mo
@@ -114,7 +115,6 @@ share/kde/locale/is/LC_MESSAGES/kcmcrypto.mo
 share/kde/locale/is/LC_MESSAGES/kcmcss.mo
 share/kde/locale/is/LC_MESSAGES/kcmemail.mo
 share/kde/locale/is/LC_MESSAGES/kcmenergy.mo
-share/kde/locale/is/LC_MESSAGES/kcmfileshare.mo
 share/kde/locale/is/LC_MESSAGES/kcmfonts.mo
 share/kde/locale/is/LC_MESSAGES/kcmhtmlsearch.mo
 share/kde/locale/is/LC_MESSAGES/kcmicons.mo
@@ -139,6 +139,7 @@ share/kde/locale/is/LC_MESSAGES/kcmkurifilt.mo
 share/kde/locale/is/LC_MESSAGES/kcmkvaio.mo
 share/kde/locale/is/LC_MESSAGES/kcmkwallet.mo
 share/kde/locale/is/LC_MESSAGES/kcmkwindecoration.mo
+share/kde/locale/is/LC_MESSAGES/kcmkwinrules.mo
 share/kde/locale/is/LC_MESSAGES/kcmkwintheme.mo
 share/kde/locale/is/LC_MESSAGES/kcmkwm.mo
 share/kde/locale/is/LC_MESSAGES/kcmkxmlrpcd.mo
@@ -180,6 +181,7 @@ share/kde/locale/is/LC_MESSAGES/kdelibs.mo
 share/kde/locale/is/LC_MESSAGES/kdelibs_colors.mo
 share/kde/locale/is/LC_MESSAGES/kdelirc.mo
 share/kde/locale/is/LC_MESSAGES/kdepasswd.mo
+share/kde/locale/is/LC_MESSAGES/kdepimwizards.mo
 share/kde/locale/is/LC_MESSAGES/kdeprint.mo
 share/kde/locale/is/LC_MESSAGES/kdeprint_part.mo
 share/kde/locale/is/LC_MESSAGES/kdeprintfax.mo
@@ -211,6 +213,7 @@ share/kde/locale/is/LC_MESSAGES/kfile_cpp.mo
 share/kde/locale/is/LC_MESSAGES/kfile_deb.mo
 share/kde/locale/is/LC_MESSAGES/kfile_desktop.mo
 share/kde/locale/is/LC_MESSAGES/kfile_diff.mo
+share/kde/locale/is/LC_MESSAGES/kfile_drgeo.mo
 share/kde/locale/is/LC_MESSAGES/kfile_dvi.mo
 share/kde/locale/is/LC_MESSAGES/kfile_exr.mo
 share/kde/locale/is/LC_MESSAGES/kfile_flac.mo
@@ -220,9 +223,11 @@ share/kde/locale/is/LC_MESSAGES/kfile_gif.mo
 share/kde/locale/is/LC_MESSAGES/kfile_html.mo
 share/kde/locale/is/LC_MESSAGES/kfile_ico.mo
 share/kde/locale/is/LC_MESSAGES/kfile_jpeg.mo
+share/kde/locale/is/LC_MESSAGES/kfile_kig.mo
 share/kde/locale/is/LC_MESSAGES/kfile_lnk.mo
 share/kde/locale/is/LC_MESSAGES/kfile_m3u.mo
 share/kde/locale/is/LC_MESSAGES/kfile_mp3.mo
+share/kde/locale/is/LC_MESSAGES/kfile_mpc.mo
 share/kde/locale/is/LC_MESSAGES/kfile_ogg.mo
 share/kde/locale/is/LC_MESSAGES/kfile_palm.mo
 share/kde/locale/is/LC_MESSAGES/kfile_pcx.mo
@@ -244,6 +249,7 @@ share/kde/locale/is/LC_MESSAGES/kfile_wav.mo
 share/kde/locale/is/LC_MESSAGES/kfile_xbm.mo
 share/kde/locale/is/LC_MESSAGES/kfileaudiopreview.mo
 share/kde/locale/is/LC_MESSAGES/kfilereplace.mo
+share/kde/locale/is/LC_MESSAGES/kfileshare.mo
 share/kde/locale/is/LC_MESSAGES/kfindpart.mo
 share/kde/locale/is/LC_MESSAGES/kfloppy.mo
 share/kde/locale/is/LC_MESSAGES/kfmclient.mo
@@ -309,6 +315,8 @@ share/kde/locale/is/LC_MESSAGES/klock.mo
 share/kde/locale/is/LC_MESSAGES/kmag.mo
 share/kde/locale/is/LC_MESSAGES/kmahjongg.mo
 share/kde/locale/is/LC_MESSAGES/kmail.mo
+share/kde/locale/is/LC_MESSAGES/kmail_text_calendar_plugin.mo
+share/kde/locale/is/LC_MESSAGES/kmail_text_vcard_plugin.mo
 share/kde/locale/is/LC_MESSAGES/kmailcvt.mo
 share/kde/locale/is/LC_MESSAGES/kmathapplet.mo
 share/kde/locale/is/LC_MESSAGES/kmathtool.mo
@@ -355,7 +363,6 @@ share/kde/locale/is/LC_MESSAGES/korganizer.mo
 share/kde/locale/is/LC_MESSAGES/korn.mo
 share/kde/locale/is/LC_MESSAGES/kpackage.mo
 share/kde/locale/is/LC_MESSAGES/kpager.mo
-share/kde/locale/is/LC_MESSAGES/kpaint.mo
 share/kde/locale/is/LC_MESSAGES/kpartapp.mo
 share/kde/locale/is/LC_MESSAGES/kpartsaver.mo
 share/kde/locale/is/LC_MESSAGES/kpat.mo
@@ -375,6 +382,10 @@ share/kde/locale/is/LC_MESSAGES/krdc.mo
 share/kde/locale/is/LC_MESSAGES/kreadconfig.mo
 share/kde/locale/is/LC_MESSAGES/krec.mo
 share/kde/locale/is/LC_MESSAGES/kregexpeditor.mo
+share/kde/locale/is/LC_MESSAGES/kres_exchange.mo
+share/kde/locale/is/LC_MESSAGES/kres_imap.mo
+share/kde/locale/is/LC_MESSAGES/kres_remote.mo
+share/kde/locale/is/LC_MESSAGES/kres_xmlrpc.mo
 share/kde/locale/is/LC_MESSAGES/kreversi.mo
 share/kde/locale/is/LC_MESSAGES/krfb.mo
 share/kde/locale/is/LC_MESSAGES/kruler.mo
@@ -447,14 +458,24 @@ share/kde/locale/is/LC_MESSAGES/kwifimanager.mo
 share/kde/locale/is/LC_MESSAGES/kwin.mo
 share/kde/locale/is/LC_MESSAGES/kwin4.mo
 share/kde/locale/is/LC_MESSAGES/kwin_b2_config.mo
+share/kde/locale/is/LC_MESSAGES/kwin_cde.mo
 share/kde/locale/is/LC_MESSAGES/kwin_cde_config.mo
+share/kde/locale/is/LC_MESSAGES/kwin_clients.mo
 share/kde/locale/is/LC_MESSAGES/kwin_default_config.mo
+share/kde/locale/is/LC_MESSAGES/kwin_glow.mo
 share/kde/locale/is/LC_MESSAGES/kwin_glow_config.mo
+share/kde/locale/is/LC_MESSAGES/kwin_icewm.mo
 share/kde/locale/is/LC_MESSAGES/kwin_icewm_config.mo
+share/kde/locale/is/LC_MESSAGES/kwin_kde1.mo
 share/kde/locale/is/LC_MESSAGES/kwin_keramik_config.mo
+share/kde/locale/is/LC_MESSAGES/kwin_kstep.mo
 share/kde/locale/is/LC_MESSAGES/kwin_modernsys_config.mo
+share/kde/locale/is/LC_MESSAGES/kwin_openlook.mo
+share/kde/locale/is/LC_MESSAGES/kwin_plastik.mo
 share/kde/locale/is/LC_MESSAGES/kwin_plastik_config.mo
 share/kde/locale/is/LC_MESSAGES/kwin_quartz_config.mo
+share/kde/locale/is/LC_MESSAGES/kwin_riscos.mo
+share/kde/locale/is/LC_MESSAGES/kwin_system.mo
 share/kde/locale/is/LC_MESSAGES/kwireless.mo
 share/kde/locale/is/LC_MESSAGES/kwordquiz.mo
 share/kde/locale/is/LC_MESSAGES/kworldclock.mo
@@ -516,7 +537,6 @@ share/kde/locale/is/LC_MESSAGES/tyler.mo
 share/kde/locale/is/LC_MESSAGES/uachangerplugin.mo
 share/kde/locale/is/LC_MESSAGES/umbrello.mo
 share/kde/locale/is/LC_MESSAGES/useraccount.mo
-share/kde/locale/is/LC_MESSAGES/userinfo.mo
 share/kde/locale/is/LC_MESSAGES/validatorsplugin.mo
 share/kde/locale/is/LC_MESSAGES/vimpart.mo
 share/kde/locale/is/LC_MESSAGES/wakeup.mo
