@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.2 1999/05/03 16:29:23 rh Exp $
+$NetBSD: patch-aa,v 1.3 1999/11/11 14:02:09 rh Exp $
 
---- configure.orig	Wed Apr 14 00:42:49 1999
-+++ configure	Sun May  2 14:11:59 1999
+--- configure.orig	Wed Nov  3 19:39:12 1999
++++ configure	Thu Nov 11 12:36:07 1999
 @@ -9,7 +9,7 @@
  
  # Defaults:
@@ -10,8 +10,25 @@ $NetBSD: patch-aa,v 1.2 1999/05/03 16:29:23 rh Exp $
 +ac_default_prefix=${PREFIX}
  # Any additions from configure.in:
  ac_help="$ac_help
-   --with-x                use the X Window System"
-@@ -3674,10 +3674,12 @@
+   --enable-intl-patch     add -lintl to check for sane"
+@@ -4743,7 +4743,7 @@
+ #  so we have to use x_includes and x_libraries to test for png
+ #  and all following checks (=sane)
+ # saved_CPPFLAGS is still up to date
+-CPPFLAGS="${CPPFLAGS} -I${x_includes}"
++CPPFLAGS="${CPPFLAGS} -I${x_includes} -I${LOCALBASE}/include"
+ if test "${USE_PNG}" = "yes"; then
+   for ac_hdr in png.h
+ do
+@@ -4844,6 +4844,7 @@
+ # check must stand at end of list because of the missing libintl in libsane.so
+ # check needs x_libraries and x_includes because they may be needed by png
+ if test "${ADD_LIBINTL}" = "no"; then
++  CPPFLAGS="${CPPFLAGS} -I${x_includes}"
+   for ac_hdr in sane/sane.h
+ do
+ ac_safe=`echo "$ac_hdr" | sed 'y%./+-%__p_%'`
+@@ -5328,10 +5329,12 @@
      top_srcdir="$ac_dots$ac_given_srcdir" ;;
    esac
  
