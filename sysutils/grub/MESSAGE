@@ -1,11 +1,9 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.4 2004/12/29 14:38:18 hubertf Exp $
+$NetBSD: MESSAGE,v 1.5 2005/02/19 10:23:13 wiz Exp $
 
-Because NetBSD already uses /boot for a different purpose, this
-version of GRUB has been compiled to look in /grub for its files
-(specifically, menu.lst and the loaders).  If your root filesystem
-is of a type not supported directly by grub (e.g., lfs), you may
-have difficulties.  See the info docs for more details.
+If your root filesystem is of a type not supported directly by grub
+(e.g., lfs), you may have difficulties.  See the info docs for more
+details.
 
 GRUB is not actually installed on your disk until you run a command
 such as
