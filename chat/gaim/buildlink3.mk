@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2005/02/21 09:46:43 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2005/03/16 17:46:55 jmmv Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GAIM_BUILDLINK3_MK:=	${GAIM_BUILDLINK3_MK}+
@@ -14,6 +14,9 @@ BUILDLINK_PACKAGES+=	gaim
 BUILDLINK_DEPENDS.gaim+=	gaim>=1.1.2
 BUILDLINK_RECOMMENDED.gaim+=	gaim>=1.1.2
 BUILDLINK_PKGSRCDIR.gaim?=	../../chat/gaim
+
+PRINT_PLIST_AWK+=	/^@dirrm lib\/gaim$$/ \
+				{ print "@comment in gaim: " $$0; next }
 .endif  # GAIM_BUILDLINK3_MK
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
