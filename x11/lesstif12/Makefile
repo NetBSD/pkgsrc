@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2002/12/05 18:49:55 drochner Exp $
+# $NetBSD: Makefile,v 1.13 2004/03/20 01:39:30 snj Exp $
 
 PKGNAME=	lesstif12-${LESSTIF_VERSION}
+
 COMMENT=	API compatible clone of the OSF/Motif toolkit, version 1.2
 
 CONFLICTS+=	lesstif-0.[0-8]*
