@@ -1,4 +1,4 @@
-$NetBSD: patch-b,v 1.2 1998/08/07 11:08:55 agc Exp $
+$NetBSD: patch-ab,v 1.1 1999/08/17 11:18:40 agc Exp $
 
 --- /dev/null	Fri Mar 27 13:45:57 1998
 +++ config/untested/aout-netbsd-cc	Tue Mar 31 10:03:57 1998

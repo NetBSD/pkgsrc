@@ -1,4 +1,4 @@
-$NetBSD: patch-e,v 1.3 1998/08/07 11:08:56 agc Exp $
+$NetBSD: patch-ae,v 1.1 1999/08/17 11:18:41 agc Exp $
 
 *** src/load-dl.c	Sun Dec 17 15:45:40 1995
 --- src/load-dl.c	Sun Dec 17 15:46:22 1995

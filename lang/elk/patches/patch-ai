@@ -1,0 +1,15 @@
+$NetBSD: patch-ai,v 1.1 1999/08/17 11:18:41 agc Exp $
+
+Avoid conflicts with the definition in <sys/param.h>
+
+--- src/list.c	1999/08/17 08:01:56	1.1
++++ src/list.c	1999/08/17 08:02:37
+@@ -23,7 +23,7 @@
+     register char *p;
+ 
+     p = Hp;
+-    ALIGN(p);
++    ELK_ALIGN(p);
+     if (p + sizeof (struct S_Pair) <= Heap_End && !GC_Debug) {
+ 	Hp = p + sizeof (struct S_Pair);
+ 	SET(cell, T_Pair, (struct S_Pair *)p);

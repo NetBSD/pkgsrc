@@ -1,4 +1,4 @@
-$NetBSD: patch-f,v 1.2 1998/08/07 11:08:56 agc Exp $
+$NetBSD: patch-af,v 1.1 1999/08/17 11:18:41 agc Exp $
 
 --- include/build	1998/03/31 09:49:53	1.1
 +++ include/build	1998/03/31 09:53:47
