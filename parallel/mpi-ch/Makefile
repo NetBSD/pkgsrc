@@ -1,8 +1,10 @@
-# $NetBSD: Makefile,v 1.19 2001/09/27 23:18:35 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2003/03/27 21:07:05 jschauma Exp $
 
-DISTNAME=		mpich-1.2.1
+DISTNAME=		mpich-1.2.5-1a
+PKGNAME=		mpich-1.2.5.1.1
 CATEGORIES=		parallel
 MASTER_SITES=		ftp://ftp.mcs.anl.gov/pub/mpi/
+DISTFILES=		${DISTNAME}${EXTRACT_SUFX} mpich-docs.tgz
 
 MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.mcs.anl.gov/mpi/mpich/index.html
@@ -13,27 +15,47 @@ DEPENDS+=		{openssh-[0-9]*,ssh{,6}-1.2.27*}:../../security/ssh
 .endif
 DEPENDS+=		tk>=8.3.0:../../x11/tk
 
-ALL_TARGET=		ALL
+ALL_TARGET=		ALL examples
+INSTALL_TARGET=		install-all
 USE_PERL5=		yes
 HAS_CONFIGURE=		yes
-USE_GMAKE=		yes
 USE_X11=		yes
-CONFIGURE_ARGS=		-prefix=${PREFIX} -arch=netbsd -comm=ch_p4
+
+MPI_RSH?=		ssh
+
+CONFIGURE_ARGS=		-prefix=${PREFIX} --with-arch=netbsd --with-comm=ch_p4
 CONFIGURE_ARGS+=	-docdir=${PREFIX}/share/doc/mpi-ch
 CONFIGURE_ARGS+=	-htmldir=${PREFIX}/share/doc/html/mpi-ch
-CONFIGURE_ARGS+=	-make=${GMAKE} --with-mpe -rsh=ssh -opt=-O -nodevdebug
+CONFIGURE_ARGS+=	--with-mpe -opt=-O --disable-devdebug
 CONFIGURE_ARGS+=	--disable-f90 --disable-f90modules
+
+MAKE_ENV+=		RSHCOMMAND="${MPI_RSH}"
+
+WRKSRC=			${WRKDIR}/${DISTNAME:C/-1a//}
 
 .include "../../mk/bsd.prefs.mk"
 
 PLIST_SRC+=		${PKGDIR}/PLIST
 
+.if ${MPI_RSH} == "rsh"
+pre-configure:
+	@${ECHO} "======================================================================";
+	@${ECHO} "Remember to enable 'shell' and 'login' in your /etc/inetd.conf and";
+	@${ECHO} "restart inetd -- otherwise, the configure script will disable 'rsh'!";
+	@${ECHO} "======================================================================";
+	@sleep 3
+.endif
+
 post-build:
 	@(if [ -e ${WRKSRC}/mpe/viewers/jumpshot-2/bin/jumpshot ]; then \
 		${TOUCH} ${WRKDIR}/with-java; \
 	fi)
+	${SED} -e "s,@PREFIX@,${PREFIX}," ${WRKSRC}/man/man1/MPI.1 >	\
+			${WRKSRC}/man/man1/MPI.1.tmp
+	${MV} ${WRKSRC}/man/man1/MPI.1.tmp ${WRKSRC}/man/man1/MPI.1
 
 post-install:
+	cd ${WRKDIR}/docs && ${PAX} -rw . ${PREFIX}/share/doc/html/mpi-ch/
 	@${RM} ${PREFIX}/man/mandesc
 	@${MV} ${PREFIX}/sbin/mpiuninstall ${PREFIX}/sbin/mpiuninstall.not
 	@${CHMOD} 444 ${PREFIX}/sbin/mpiuninstall.not
