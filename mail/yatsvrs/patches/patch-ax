@@ -1,8 +1,17 @@
-$NetBSD: patch-ax,v 1.1.1.1 2001/11/15 23:21:31 taca Exp $
+$NetBSD: patch-ax,v 1.2 2003/10/05 04:25:15 taca Exp $
 
---- yatd/init.c.orig	Thu Jun 28 16:43:55 2001
+--- yatd/init.c.orig	2001-12-19 22:43:44.000000000 +0900
 +++ yatd/init.c
-@@ -385,7 +385,7 @@
+@@ -5,7 +5,7 @@
+ 
+ #ifdef HAVE_MNTENT_H
+ #include <mntent.h>
+-#endif HAVE_MNTENT_H
++#endif
+ 
+ /* #define DEBUG_LOCAL 1 */
+ 
+@@ -385,7 +385,7 @@ int InitByYatsvrRc(fSys)
  #else
  		"Invalid %s value : %d",
  #endif
@@ -11,7 +20,7 @@ $NetBSD: patch-ax,v 1.1.1.1 2001/11/15 23:21:31 taca Exp $
        }
        else
  	SysData.sizLimitFree = sizLimit;
-@@ -400,7 +400,7 @@
+@@ -400,7 +400,7 @@ int InitByYatsvrRc(fSys)
  #endif
        if ((nodLimit < MINLIMITNODFREE) || (MAXLIMITNODFREE < nodLimit)) {
  	WARNING(ERRYS_DUMMY, 0,
