@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/04/20 09:14:43 xtraeme Exp $
+$NetBSD: distinfo,v 1.2 2005/01/14 21:44:33 adrianp Exp $
 
-SHA1 (honeyd-0.8b.tar.gz) = fe8054847b98003d52ec50a8376e51a9f76d41e5
-Size (honeyd-0.8b.tar.gz) = 523808 bytes
-SHA1 (patch-aa) = 8f6330238715a19951731372f70fefcea85e5df9
+SHA1 (honeyd-1.0.tar.gz) = abff00cf7815b6448e5432be8b4710f39bf2119f
+Size (honeyd-1.0.tar.gz) = 600339 bytes
+SHA1 (patch-aa) = 83d823e891e2837fab85a0cda5a67dded772c97d
