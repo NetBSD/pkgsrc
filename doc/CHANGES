@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9309 2005/02/25 18:48:37 reed Exp $
+$NetBSD: CHANGES,v 1.9310 2005/02/25 19:41:01 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1081,7 +1081,7 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated mergeant to 0.52 [drochner 2005-02-24]
 	Updated py-sqlite to 1.0.1 [drochner 2005-02-24]
 	Updated gramps to 1.0.10 [drochner 2005-02-24]
-	Updated qt3-scintilla to 1.5 [drochner 2005-02-24]
+	Updated qt3-qscintilla to 1.5 [drochner 2005-02-24]
 	Updated py-qt3-sip to 4.2 [drochner 2005-02-24]
 	Updated py-qt3-qscintilla to 3.14 [drochner 2005-02-24]
 	Updated py-qt3-modules to 3.14 [drochner 2005-02-24]
@@ -1101,3 +1101,8 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated libusb to 0.1.10a [adam 2005-02-25]
 	Updated p5-Log-Dispatch-Config to 1.01 [wiz 2005-02-25]
 	Added bsflite-0.72 [reed 2005-02-25]
+	Updated py-Numeric to 23.7 [drochner 2005-02-25]
+	Updated xephem to 3.6.3 [drochner 2005-02-25]
+	Added gimp2-wideangle-1.0 [drochner 2005-02-25]
+	Added exiv2-0.6.1 [drochner 2005-02-25]
+	Updated gliv to 1.9.1 [drochner 2005-02-25]
