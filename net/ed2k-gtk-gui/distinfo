@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2004/12/18 21:45:22 minskim Exp $
+$NetBSD: distinfo,v 1.5 2005/02/24 12:13:45 agc Exp $
 
 SHA1 (ed2k-gtk-gui-0.6.3.tar.gz) = b5474717b1b9cdeddae8cc707fe9809608138dc1
+RMD160 (ed2k-gtk-gui-0.6.3.tar.gz) = 98f69190e76b58b79aa3dd9a6d20b7abcb080208
 Size (ed2k-gtk-gui-0.6.3.tar.gz) = 1993079 bytes
 SHA1 (patch-aa) = d47d9302cd13a8ca3d9488f7e2563e0c33265e1d

@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.3 2004/02/14 17:57:25 uebayasi Exp $
+$NetBSD: distinfo,v 1.4 2005/02/24 12:14:07 agc Exp $
 
 SHA1 (wol-0.7.0.tar.gz) = b261b284ed777934f04d58f587c9395320ff3f01
+RMD160 (wol-0.7.0.tar.gz) = bd53331c29f6264252f09ad5e36ffb49e30c80b1
 Size (wol-0.7.0.tar.gz) = 388139 bytes

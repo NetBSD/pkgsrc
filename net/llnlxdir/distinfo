@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2004/02/23 14:45:57 ben Exp $
+$NetBSD: distinfo,v 1.3 2005/02/24 12:13:52 agc Exp $
 
 SHA1 (llnlxdir2_1_2.tar.Z) = b9e8f79929e693d4f0fd3b41f7ce3ceb76abd252
+RMD160 (llnlxdir2_1_2.tar.Z) = 124acfad9f18730dd560e2bf44887b7381a3e484
 Size (llnlxdir2_1_2.tar.Z) = 574027 bytes
 SHA1 (patch-aa) = 54ebaf3b006d6f1253b6baaad984addd698e9728
 SHA1 (patch-ab) = 734e8b92bc3c1efeb71138acf60eab04bd8639a6

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2004/01/23 13:55:31 agc Exp $
+$NetBSD: distinfo,v 1.4 2005/02/24 12:13:57 agc Exp $
 
 SHA1 (OpenAG-1.1.1.tar.gz) = d56473ebd46ffe03e22df511d90d7bcd33dc573a
+RMD160 (OpenAG-1.1.1.tar.gz) = 1ebc6c59f269b88dd485574620c9ba7fb24aeb1c
 Size (OpenAG-1.1.1.tar.gz) = 248032 bytes
 SHA1 (patch-aa) = d42ac201455cc9dc2e684c000a279750992a1f78
 SHA1 (patch-ab) = fc363a3fabff367b0f68dd560788bd78b35e1e6e

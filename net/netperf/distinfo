@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2004/12/02 06:41:48 itojun Exp $
+$NetBSD: distinfo,v 1.5 2005/02/24 12:13:54 agc Exp $
 
 SHA1 (netperf-2.3pl1.tar.gz) = 288c34b6c4d937b06422a8cdab3dcae5ed58cc17
+RMD160 (netperf-2.3pl1.tar.gz) = 83f2afd612b7d4d4b486b82554f4e792c5e8509d
 Size (netperf-2.3pl1.tar.gz) = 836110 bytes
 SHA1 (netperf-21pl3-20000721.diff.gz) = b660eda13e7c1a8f4f7ad601be0940999f5451d9
 Size (netperf-21pl3-20000721.diff.gz) = 8570 bytes

@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.4 2004/12/03 13:30:20 adam Exp $
+$NetBSD: distinfo,v 1.5 2005/02/24 12:13:50 agc Exp $
 
 SHA1 (iperf-2.0.1.tar.gz) = 880cd6bcdfe43832288a1ce63d0d7453e1860d0c
+RMD160 (iperf-2.0.1.tar.gz) = c7a4fa09c2a00b76c7660db3321ab59c92d37273
 Size (iperf-2.0.1.tar.gz) = 220446 bytes

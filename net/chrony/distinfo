@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2004/11/30 11:26:59 hannken Exp $
+$NetBSD: distinfo,v 1.3 2005/02/24 12:13:43 agc Exp $
 
 SHA1 (chrony-1.20.tar.gz) = 8a739038b208bf63e4d0afbee44e8fea3c9aa480
+RMD160 (chrony-1.20.tar.gz) = ec6f570c29b68983752ff8b025d908372bdf2fb1
 Size (chrony-1.20.tar.gz) = 308253 bytes
 SHA1 (patch-aa) = 10f5a5301c2f0ae2da840386a563551ad0fbfb1c
 SHA1 (patch-ab) = adeb6a5bceb15aee05efcf4a7ecd25a0d0197e39

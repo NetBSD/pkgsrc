@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/07/08 10:30:31 xtraeme Exp $
+$NetBSD: distinfo,v 1.2 2005/02/24 12:14:06 agc Exp $
 
 SHA1 (ucarp-1.0.tar.bz2) = a28adbd1fc992e4af3f20758dc1aee290e511558
+RMD160 (ucarp-1.0.tar.bz2) = d7045940042c4aa3d04410e9084fc774bf33b8ab
 Size (ucarp-1.0.tar.bz2) = 149265 bytes

@@ -1,8 +1,10 @@
-$NetBSD: distinfo,v 1.8 2004/09/06 07:00:29 cjs Exp $
+$NetBSD: distinfo,v 1.9 2005/02/24 12:14:06 agc Exp $
 
 SHA1 (vtun-2.6.tar.gz) = ba6474a551856a7bb55b4cc21d858b8275a2e610
+RMD160 (vtun-2.6.tar.gz) = 9f666189740b78a88f6b0e2807add3267551198b
 Size (vtun-2.6.tar.gz) = 95637 bytes
 SHA1 (vtun-26to30.patch) = 0f37b0d19e0df2cbe9153d74fa93d2a139e19583
+RMD160 (vtun-26to30.patch) = cee32898284ee26ecc341a3337b1f9c2b67670ed
 Size (vtun-26to30.patch) = 338255 bytes
 SHA1 (patch-aa) = 88e8f9bec1cfd3fe9baf95fd870d3b94ff120aba
 SHA1 (patch-ab) = e1891ef0c50ef79ee05967e06e110ce64891ab0a

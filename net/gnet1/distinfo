@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/04/15 11:49:02 wiz Exp $
+$NetBSD: distinfo,v 1.2 2005/02/24 12:13:48 agc Exp $
 
 SHA1 (gnet-1.1.8.tar.gz) = f0c01075f911859f807a5a49a2165eded26c2ad5
+RMD160 (gnet-1.1.8.tar.gz) = a967693f6cbfa6dab7f0c98bb56a7c2e8049cee9
 Size (gnet-1.1.8.tar.gz) = 350091 bytes
 SHA1 (patch-aa) = b46a6ca9a9f1582d262763d59c1ff6e4111667f2
 SHA1 (patch-ab) = e874ed0fd4ee827f2c96746bb33f34182f3f6968

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.7 2004/07/10 20:19:11 wiz Exp $
+$NetBSD: distinfo,v 1.8 2005/02/24 12:13:56 agc Exp $
 
 SHA1 (nocol-4.3.1.tar.gz) = a8cb88727bc3a3ddd544792407d431b3ef13a325
+RMD160 (nocol-4.3.1.tar.gz) = 77a57ae447f0a8f1ce2417d9b828710f21865cc8
 Size (nocol-4.3.1.tar.gz) = 1117438 bytes
 SHA1 (patch-aa) = 217d15d5329d30032ee18a666e62cdefe5018445
 SHA1 (patch-ab) = 5c49ef3bd58b84e0f1ea7ba319c574b86fa2aa3e

@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.3 2004/10/14 16:27:17 ben Exp $
+$NetBSD: distinfo,v 1.4 2005/02/24 12:14:04 agc Exp $
 
 SHA1 (slurm-0.3.3.tar.gz) = 232a7f28ec3457b2e9d554ed844a45642dea1cc5
+RMD160 (slurm-0.3.3.tar.gz) = 6f154e5e6be0ac746dc67e152cf9caf1580c14fe
 Size (slurm-0.3.3.tar.gz) = 122839 bytes

@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.2 2001/04/21 11:23:32 wiz Exp $
+$NetBSD: distinfo,v 1.3 2005/02/24 12:14:03 agc Exp $
 
 SHA1 (sdist-1.6.tar.gz) = 5de04da4a637f10328ca1772bc01211173710c2a
+RMD160 (sdist-1.6.tar.gz) = 4ab4fd11a6af2835fc0df8c8c83014ff8783966d
 Size (sdist-1.6.tar.gz) = 2848 bytes

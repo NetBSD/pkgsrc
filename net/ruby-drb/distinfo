@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.4 2004/11/28 06:10:35 taca Exp $
+$NetBSD: distinfo,v 1.5 2005/02/24 12:14:03 agc Exp $
 
 SHA1 (ruby/drb-2.0.4.tar.gz) = 56cb0b9d1f1e4870f604c95b74c6235cfe60e249
+RMD160 (ruby/drb-2.0.4.tar.gz) = 657e318ba63833cda159ad18b3a8f7c86699d4aa
 Size (ruby/drb-2.0.4.tar.gz) = 55458 bytes

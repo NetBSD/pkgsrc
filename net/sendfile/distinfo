@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.6 2003/05/01 15:44:43 jmmv Exp $
+$NetBSD: distinfo,v 1.7 2005/02/24 12:14:03 agc Exp $
 
 SHA1 (sendfile-20010216.tar.gz) = cdf6ff67bdc11709209c5f93ac94d380fa1abac3
+RMD160 (sendfile-20010216.tar.gz) = 3e1f9648875b1844d391b86b733c8d04318c4d90
 Size (sendfile-20010216.tar.gz) = 292130 bytes
 SHA1 (patch-aa) = d116a9a0a4a2fb17051b5a67e48a503368b57b71
 SHA1 (patch-ab) = c74cf201573068d8e1afa8e285831181d1be789e

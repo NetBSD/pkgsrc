@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/07/06 07:50:01 xtraeme Exp $
+$NetBSD: distinfo,v 1.2 2005/02/24 12:13:48 agc Exp $
 
 SHA1 (hlfl-0.60.1.tar.bz2) = 5438a393c0231852e7823591fe7ae24a7270c7c8
+RMD160 (hlfl-0.60.1.tar.bz2) = cfe4ad6903fe21a8dea57a9c991f7aec7bd76304
 Size (hlfl-0.60.1.tar.bz2) = 86954 bytes

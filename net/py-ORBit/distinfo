@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.5 2004/12/29 11:04:45 recht Exp $
+$NetBSD: distinfo,v 1.6 2005/02/24 12:14:02 agc Exp $
 
 SHA1 (pyorbit-2.0.1.tar.bz2) = c2b9c6e35901b5512e695f28a83e57a34783ba84
+RMD160 (pyorbit-2.0.1.tar.bz2) = c0ef7a1b58d28af0f151bc3a247f9e23d77cbc28
 Size (pyorbit-2.0.1.tar.bz2) = 242959 bytes

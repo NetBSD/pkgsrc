@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.2 2004/07/19 13:36:11 wiz Exp $
+$NetBSD: distinfo,v 1.3 2005/02/24 12:13:44 agc Exp $
 
 SHA1 (connect-1.83/connect.c) = 80c274b0f5dde7143858cbf63014700f87463023
+RMD160 (connect-1.83/connect.c) = 85b4d636157ec71a0076bec4b59b7423ec5ee1a3
 Size (connect-1.83/connect.c) = 72750 bytes

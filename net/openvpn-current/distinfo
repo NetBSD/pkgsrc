@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.4 2004/12/31 15:15:31 jlam Exp $
+$NetBSD: distinfo,v 1.5 2005/02/24 12:13:58 agc Exp $
 
 SHA1 (openvpn-2.0_rc1.tar.gz) = 7f0a6de121ee269376c09479a7d75bfd923e3668
+RMD160 (openvpn-2.0_rc1.tar.gz) = e9e5c299abb25b1c7dea333605686b77b98ce470
 Size (openvpn-2.0_rc1.tar.gz) = 637549 bytes

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2002/06/27 20:52:06 agc Exp $
+$NetBSD: distinfo,v 1.4 2005/02/24 12:14:07 agc Exp $
 
 SHA1 (xipdump-1.5.4.tgz) = 8fa152cc9114fb3862a223be47e104394f00b250
+RMD160 (xipdump-1.5.4.tgz) = 4202c4c3ac7a749d1b7a25caa9577a6529ee87df
 Size (xipdump-1.5.4.tgz) = 311526 bytes
 SHA1 (patch-aa) = 4dc89157456a3d223456babcbdca4ac501b6a664
 SHA1 (patch-ab) = 5018ade12779648836a866be510fc42af54162f2
