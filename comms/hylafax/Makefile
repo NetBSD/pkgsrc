@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2002/03/20 12:28:55 abs Exp $
+# $NetBSD: Makefile,v 1.26 2002/08/28 20:59:38 abs Exp $
 #
 
 DISTNAME=	hylafax-4.1
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	comms
 MASTER_SITES=	ftp://ftp.hylafax.org/source/ \
 		ftp://ftp.leo.org/pub/comp/os/unix/networking/fax/hylafax/source/
@@ -22,6 +22,7 @@ CONFLICTS=	mgetty-[0-9]*
 
 FAXUSER?=	uucp
 FAXGROUP?=	dialer
+RCD_SCRIPTS=	hylafax
 
 HAS_CONFIGURE=	YES
 CONFIGURE_ENV=	PREFIX="${PREFIX}" FAXUID="${FAXUSER}" FAXGID="${FAXGROUP}"
@@ -41,4 +42,5 @@ post-install:
 	${CHMOD} 4555 ${SUID_EXES}
 	${INSTALL_SCRIPT} ${WRKDIR}/hylafax.sh ${PREFIX}/etc/rc.d/hylafax
 
+.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
