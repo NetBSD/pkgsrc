@@ -1,4 +1,4 @@
-$NetBSD: md5,v 1.5 2000/04/07 10:11:55 itojun Exp $
+$NetBSD: md5,v 1.6 2000/07/27 12:42:08 jlam Exp $
 
-MD5 (thttpd-2.16.tar.gz) = c095d3b8919cb386dfb5ee35dad2ad42
+MD5 (thttpd-2.19.tar.gz) = 69a8cf991cf67b03d82971151d4ba50f
 MD5 (sitedrivenby.gif) = ad0647dceb931d02bfd046e55915f7b1

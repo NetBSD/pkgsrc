@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2000/04/07 10:11:54 itojun Exp $
+# $NetBSD: Makefile,v 1.6 2000/07/27 12:42:08 jlam Exp $
 
-DISTNAME=	thttpd-2.16
+DISTNAME=	thttpd-2.19
 CATEGORIES=	www
 MASTER_SITES=	http://www.acme.com/software/thttpd/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
@@ -9,34 +9,35 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
 MAINTAINER=	mike@ethmoid.org
 HOMEPAGE=	http://www.acme.com/software/thttpd/
 
-EXTRACT_ONLY=	${DISTFILES:N*.gif}
-GNU_CONFIGURE=	yes
+EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
+GNU_CONFIGURE=	# defined
 
 # Note: this pkg auto-detects IPv6 without regarding USE_INET6.
-.include "../../mk/bsd.prefs.mk"
 BUILD_DEFS+=	USE_INET6
 
-pre-build:
+pre-configure:
 	${MV} ${WRKSRC}/extras/htpasswd.1 ${WRKSRC}/extras/thtpasswd.1
-	${MV} ${WRKSRC}/extras/Makefile ${WRKSRC}/extras/Makefile.orig
-	${SED} -e "s/htpasswd/thtpasswd/g" \
-	  <${WRKSRC}/extras/Makefile.orig >${WRKSRC}/extras/Makefile
-	${SED} -e "s/htpasswd/thtpasswd/g" \
-	  <${WRKSRC}/extras/htpasswd.c >${WRKSRC}/extras/thtpasswd.c
+	${MV} ${WRKSRC}/extras/htpasswd.c ${WRKSRC}/extras/thtpasswd.c
+	for file in thttpd.8 extras/Makefile.in extras/thtpasswd.c; do \
+		${MV} -f ${WRKSRC}/$${file} ${WRKSRC}/$${file}.bak; \
+		${SED} -e "s,htpasswd,thtpasswd,g" \
+			< ${WRKSRC}/$${file}.bak > ${WRKSRC}/$${file}; \
+	done
 
-re-install:
-	${MKDIR} ${PREFIX}/libexec/cgi-bin ${PREFIX}/share/www
-	${SED} -e "s/htpasswd/thtpasswd/g" \
-	  <${WRKSRC}/extras/htpasswd.1 >${WRKSRC}/extras/thtpasswd.1
-	${INSTALL_DATA} ${WRKSRC}/index.html ${PREFIX}/share/www/index.html
+post-build:
+	for file in thttpd.conf thttpd.sh; do \
+		${SED} -e "s,@PREFIX@,${PREFIX},g" \
+			< ${FILESDIR}/$${file} > ${WRKDIR}/$${file}; \
+	done
 
 pre-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/www
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/index.html \
-	  ${PREFIX}/share/www
-	${INSTALL_DATA} ${DISTDIR}/sitedrivenby.gif \
-	  ${PREFIX}/share/www
+	${INSTALL_DATA} ${WRKDIR}/thttpd.conf ${PREFIX}/share/examples
+	${INSTALL_SCRIPT} ${WRKDIR}/thttpd.sh ${PREFIX}/etc/rc.d
+	${INSTALL_DATA} ${WRKSRC}/index.html ${PREFIX}/share/www
+	${INSTALL_DATA} ${DISTDIR}/sitedrivenby.gif ${PREFIX}/share/www
+	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
 .include "../../mk/bsd.pkg.mk"
