@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.10 2003/03/29 12:42:14 jmmv Exp $
+# $NetBSD: Makefile,v 1.11 2003/04/15 09:25:04 martti Exp $
 #
 
-DISTNAME=	apsfilter-7.2.2
-PKGREVISION=	2
+DISTNAME=	apsfilter-7.2.5
 WRKSRC=		${WRKDIR}/apsfilter
 CATEGORIES=	print
 MASTER_SITES=	http://www.apsfilter.org/download/
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.apsfilter.org/
-COMMENT=	number one magic filter for printing under Unix environment
+COMMENT=	Number one magic filter for printing under Unix environment
 
 DEPENDS=	recode-[0-9]*:../../converters/recode
 #DEPENDS+=	html2ps-[0-9]*:../../print/html2ps

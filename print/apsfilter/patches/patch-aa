@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.3 2002/11/26 11:26:34 jmmv Exp $
+$NetBSD: patch-aa,v 1.4 2003/04/15 09:25:05 martti Exp $
 
---- Makefile.in.orig	Sun Feb 24 21:47:45 2002
-+++ Makefile.in
-@@ -12,15 +12,15 @@ docdir=${DESTDIR}@docdir@
+--- Makefile.in.orig	2002-10-28 00:05:19.000000000 +0200
++++ Makefile.in	2003-04-15 08:56:15.000000000 +0300
+@@ -12,7 +12,7 @@
  
  APSSHARE=${datadir}/apsfilter
  APSDOC=${docdir}/apsfilter
@@ -11,18 +11,7 @@ $NetBSD: patch-aa,v 1.3 2002/11/26 11:26:34 jmmv Exp $
  
  MKDIR=mkdir -p
  RM=rm -f
- LN=ln -sfn
- 
--INSTALL_PRG=install -s -m 555
--INSTALL_SCRIPT=install -m 555
--INSTALL_DATA=install -m 444
-+INSTALL_PRG=install -c -s -m 555
-+INSTALL_SCRIPT=install -c -m 555
-+INSTALL_DATA=install -c -m 444
- 
- .PHONY: all install update clean distclean
- 
-@@ -33,7 +33,6 @@ update:
+@@ -33,7 +33,6 @@
  	${MKDIR} ${mandir}/man1
  	${MKDIR} ${mandir}/man5
  	${MKDIR} ${APSDOC}
@@ -30,7 +19,7 @@ $NetBSD: patch-aa,v 1.3 2002/11/26 11:26:34 jmmv Exp $
  	${MKDIR} ${APSSHARE}
  	${MKDIR} ${APSSHARE}/bin
  	${MKDIR} ${APSSHARE}/setup
-@@ -79,7 +78,6 @@ update:
+@@ -80,7 +79,6 @@
  	${INSTALL_DATA}   man/apsfilter-bug.1	${mandir}/man1/apsfilter-bug.1
  	${INSTALL_DATA}   man/apsfilterrc.5	${mandir}/man5/apsfilterrc.5
  	tar cf - driver | ( cd ${APSSHARE} && tar xf -)
