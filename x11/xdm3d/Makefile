@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1998/08/27 14:25:26 garbled Exp $
+# $NetBSD: Makefile,v 1.4 1998/09/08 15:51:23 agc Exp $
 
 DISTNAME=		xdm3d-1.0
 CATEGORIES=		x11
@@ -11,6 +11,8 @@ WRKSRC=			${WRKDIR}/xdm
 NO_INSTALL_MANPAGES=	yes
 USE_IMAKE=		yes
 
+PLIST_SRC=		${WRKDIR}/PLIST-src
+
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/xdm ${PREFIX}/bin/xdm3d
 	${MKDIR} ${PREFIX}/share/xdm3d
@@ -19,8 +21,14 @@ do-install:
 	${INSTALL_DATA} ${X11BASE}/lib/X11/xdm/Xaccess ${PREFIX}/share/xdm3d
 	${INSTALL_DATA} ${X11BASE}/lib/X11/xdm/Xservers ${PREFIX}/share/xdm3d
 	${INSTALL_DATA} ${X11BASE}/lib/X11/xdm/Xsession ${PREFIX}/share/xdm3d
-	-${INSTALL_DATA} ${X11BASE}/lib/X11/xdm/Xsetup ${PREFIX}/share/xdm3d
-	-${INSTALL_DATA} ${X11BASE}/lib/X11/xdm/Xsetup_0 ${PREFIX}/share/xdm3d
+	@if [ -e ${X11BASE}/lib/X11/xdm/Xsetup ]; then			\
+		${INSTALL_DATA} ${X11BASE}/lib/X11/xdm/Xsetup ${PREFIX}/share/xdm3d; \
+		sedexpr='-e s|^share/xdm3d/Xsetup_0$$|@comment\ &|';	\
+	elif [ -e ${X11BASE}/lib/X11/xdm/Xsetup_0 ]; then		\
+		${INSTALL_DATA} ${X11BASE}/lib/X11/xdm/Xsetup_0 ${PREFIX}/share/xdm3d; \
+		sedexpr='-e s|^share/xdm3d/Xsetup$$|@comment\ &|';	\
+	fi;								\
+	${SED} "$$sedexpr" ${PKGDIR}/PLIST > ${PLIST_SRC}
 	${INSTALL_PROGRAM} ${X11BASE}/lib/X11/xdm/chooser ${PREFIX}/share/xdm3d
 	${MKDIR} ${PREFIX}/share/xdm3d/authdir
 	chmod 700 ${PREFIX}/share/xdm3d/authdir
