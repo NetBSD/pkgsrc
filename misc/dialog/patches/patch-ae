@@ -1,0 +1,24 @@
+--- inputbox.c.orig	Fri Jan 23 17:37:12 1998
++++ inputbox.c	Fri Jan 23 18:15:24 1998
+@@ -29,10 +29,20 @@
+ dialog_inputbox (const char *title, const char *prompt, int height, int width,
+ 		 const char *init)
+ {
+-    int i, x, y, box_y, box_x, box_width;
++    int i, j, x, y, box_y, box_x, box_width;
+     int input_x = 0, scroll = 0, key = 0, button = -1;
+     unsigned char *instr = dialog_input_result;
+     WINDOW *dialog;
++
++    /* Choose useful default height and width if they are negative */
++    if (height < 0)
++        height = strheight(prompt) + 4 + 2;
++    if (width < 0) {
++        i = strwidth(prompt);
++        j = ((title != NULL) ? strwidth(title) : 0);
++        width = MAX (i, j) + 4;
++    }
++    width = MAX (width, MIN_DIALOG_WIDTH);
+ 
+     /* center dialog box on screen */
+     x = (COLS - width) / 2;
