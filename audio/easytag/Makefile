@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/06/16 14:52:43 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2001/06/16 19:51:51 jlam Exp $
 #
 
 DISTNAME=	easytag-0.11
@@ -16,7 +16,9 @@ USE_GMAKE=	yes
 USE_X11BASE=	yes
 
 .include "../../devel/gettext-lib/buildlink.mk"
+.include "../../x11/gtk/buildlink.mk"
 
+MAKE_ENV+=	GTK_CONFIG="${BUILDLINK_CONFIG_WRAPPER.gtk}"
 MAKE_ENV+=	PKGLOCALEDIR=${PKGLOCALEDIR}
 
 .include "../../mk/bsd.pkg.mk"
