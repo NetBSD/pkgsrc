@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9231 2005/02/20 11:05:12 wiz Exp $
+$NetBSD: CHANGES,v 1.9232 2005/02/20 13:57:55 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -975,3 +975,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated dspam to 3.2.7 [xtraeme 2005-02-19]
 	Removed gnubile [tron 2005-02-20]
 	Updated metacity to 2.8.13 [jmmv 2005-02-20]
+	Updated swapd to 1.0.3 [xtraeme 2005-02-20]
