@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2002/12/24 04:07:31 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2002/12/24 21:00:10 wiz Exp $
 #
 
 DISTNAME=		gtk+-2.2.0
 PKGNAME=		${DISTNAME:S/gtk/gtk2/}
+PKGREVISION=		1
 CATEGORIES=		x11
 MASTER_SITES=		ftp://ftp.gtk.org/pub/gtk/v2.2/ \
 			ftp://ftp.cs.umn.edu/pub/gimp/gtk/v2.2/ \
@@ -21,6 +22,8 @@ USE_GMAKE=		yes
 
 GNU_CONFIGURE=		 yes
 CONFIGURE_ARGS+=	--with-xinput=xfree
+CONFIGURE_ENV+=		ac_cv_header_X11_extensions_Xinerama_h=no
+CONFIGURE_ENV+=		ac_cv_lib_Xinerama_XineramaQueryExtension=no
 MAKE_ENV+=		PKGLOCALEDIR="${PKGLOCALEDIR}"
 TEST_TARGET=		check
 
