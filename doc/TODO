@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1585 2004/04/06 17:04:52 xtraeme Exp $
+$NetBSD: TODO,v 1.1586 2004/04/06 19:02:33 cjep Exp $
 
 Suggested new packages
 ======================
@@ -257,7 +257,6 @@ Suggested package updates
 	o mrproject-0.9.1
 	o multi-gnome-terminal-1.6.2
 	o multitail-3.1.2
-	o nail-10.7 [cjep, when freeze is over]
 	o nano-1.2.3
 	o nap-1.5.2
 	o napshare-1.2
