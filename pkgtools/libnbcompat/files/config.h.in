@@ -1,5 +1,5 @@
 /* config.h.in.  Generated from configure.ac by autoheader.  */
-/* $Id: config.h.in,v 1.2 2003/03/31 05:34:35 grant Exp $ */
+/* $Id: config.h.in,v 1.3 2003/05/22 18:10:43 jschauma Exp $ */
 
 /* Define if *printf() uses %qd to print `long long' (otherwise uses %lld) */
 #undef HAVE_PRINTF_QD
@@ -189,6 +189,9 @@
 
 /* Define to 1 if you have the `setlocale' function. */
 #undef HAVE_SETLOCALE
+
+/* Define to 1 if you have the `setmode' function. */
+#undef HAVE_SETMODE
 
 /* Define to 1 if you have the `setpassent' function. */
 #undef HAVE_SETPASSENT
