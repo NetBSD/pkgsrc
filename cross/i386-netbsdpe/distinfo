@@ -1,10 +1,13 @@
-$NetBSD: distinfo,v 1.9 2004/03/11 10:20:52 kent Exp $
+$NetBSD: distinfo,v 1.10 2005/02/24 10:16:53 agc Exp $
 
 SHA1 (gcc-3.3.3-20040217-1-src.diff.gz) = 721674ff4b07397a3bd5570832bb89662aacee2a
+RMD160 (gcc-3.3.3-20040217-1-src.diff.gz) = 75713a2b9e00f132d9be89ff57e532c1a4bff223
 Size (gcc-3.3.3-20040217-1-src.diff.gz) = 122692 bytes
 SHA1 (gcc-3.3.3.tar.gz) = decb70e78f040850dbd41f18bb5ec992192ad28c
+RMD160 (gcc-3.3.3.tar.gz) = 79b72210bdf01e8c24952b30fbc3270c28532f19
 Size (gcc-3.3.3.tar.gz) = 30747783 bytes
 SHA1 (binutils-2.15.90-20040222-1-src.tar.gz) = 49c81b65f288a8c849675da9ddf3536a24d8515f
+RMD160 (binutils-2.15.90-20040222-1-src.tar.gz) = 9fa69fe5add08e9abfe8e17cd2d3fb6ecaa3708b
 Size (binutils-2.15.90-20040222-1-src.tar.gz) = 14182109 bytes
 SHA1 (patch-ab) = fd94571856c4706b324307efa8e2cacec3021463
 SHA1 (patch-ad) = 609f33a5cc0804115ca969aab9b05cbc6162d9e9

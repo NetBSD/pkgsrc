@@ -1,8 +1,11 @@
-$NetBSD: distinfo,v 1.1.1.1 2002/06/27 22:29:09 dmcmahill Exp $
+$NetBSD: distinfo,v 1.2 2005/02/24 10:16:53 agc Exp $
 
 SHA1 (gcc-core-3.1.tar.gz) = e93048803611b5c1e0dd745d81b43d6e34bca026
+RMD160 (gcc-core-3.1.tar.gz) = d6fe75142280778c952af0717acfa4a2cc500623
 Size (gcc-core-3.1.tar.gz) = 13381094 bytes
 SHA1 (newlib-1.10.0.tar.gz) = ca0747e49623cce37967243928d883247a389207
+RMD160 (newlib-1.10.0.tar.gz) = c5cd6ae5d8912848a6c3985fd74a78f4826c92a6
 Size (newlib-1.10.0.tar.gz) = 3647395 bytes
 SHA1 (h8300-hms-gcc-3.1-1.patch) = 6a5ad1f579ca71cfee114a02df26a58103cf4f04
+RMD160 (h8300-hms-gcc-3.1-1.patch) = ab3114544c8a6bcd531e4b5b7a4fed8aaf8e9150
 Size (h8300-hms-gcc-3.1-1.patch) = 61226 bytes
