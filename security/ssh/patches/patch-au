@@ -1,8 +1,8 @@
-$NetBSD: patch-au,v 1.1 1998/09/10 16:36:12 kim Exp $
+$NetBSD: patch-au,v 1.2 1999/09/18 21:08:21 kim Exp $
 
---- login.c.orig	Tue Jan 20 07:24:05 1998
-+++ login.c	Tue Feb 24 09:43:51 1998
-@@ -227,6 +227,19 @@
+--- login.c.orig	Wed May 12 07:19:26 1999
++++ login.c	Sat Sep 18 17:03:20 1999
+@@ -271,6 +271,19 @@
    struct utmp u, u2;
    off_t offset;
    const char *utmp, *wtmp;
@@ -22,7 +22,7 @@ $NetBSD: patch-au,v 1.1 1998/09/10 16:36:12 kim Exp $
  
    /* Construct an utmp/wtmp entry. */
    memset(&u, 0, sizeof(u));
-@@ -257,12 +270,14 @@
+@@ -301,12 +314,14 @@
    strncpy(u.ut_user, user, sizeof(u.ut_user));
  #endif /* HAVE_NAME_IN_UTMP */
  #ifdef HAVE_HOST_IN_UTMP
@@ -42,7 +42,7 @@ $NetBSD: patch-au,v 1.1 1998/09/10 16:36:12 kim Exp $
  #endif /* HAVE_HOST_IN_UTMP */
  #ifdef HAVE_ADDR_IN_UTMP
    if (addr)
-@@ -431,7 +446,12 @@
+@@ -490,7 +505,12 @@
        /* Update lastlog. */
        ll.ll_time = time(NULL);
        strncpy(ll.ll_line, ttyname + 5, sizeof(ll.ll_line));
@@ -54,5 +54,5 @@ $NetBSD: patch-au,v 1.1 1998/09/10 16:36:12 kim Exp $
 +      else
 +        strncpy(ll.ll_host, host, sizeof(ll.ll_host));
  #ifdef LASTLOG_IS_DIR
-       sprintf(lastlogfile, "%.100s/%.100s", lastlog, user);
-       fd = open(lastlogfile, O_WRONLY | O_CREAT, 0644);
+       snprintf(lastlogfile, sizeof(lastlogfile),
+                "%.100s/%.100s", lastlog, user);
