@@ -1,6 +1,6 @@
 dnl Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.57)
-AC_INIT([pax], [20030905], [grant@NetBSD.org])
+AC_INIT([pax], [20030915], [grant@NetBSD.org])
 AC_CONFIG_SRCDIR([pax.c])
 AC_CONFIG_HEADER(config.h)
 
