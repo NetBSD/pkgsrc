@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/05/26 17:22:48 cjep Exp $
+# $NetBSD: Makefile,v 1.2 2002/06/01 19:56:29 cjep Exp $
 #
 
 DISTNAME=	Wrappers-1.0.2
 PKGNAME=	rox-wrappers-1.0.2
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=rox/}
 EXTRACT_SUFX=	.tgz
@@ -11,7 +12,7 @@ MAINTAINER=	rxg@netbsd.org
 HOMEPAGE=	http://rox.sourceforge.net/
 COMMENT=	some example Wrapper applications
 
-DEPENDS+=	rox>=1.2.0:../../sysutils/rox
+DEPENDS+=	rox>=1.2.0nb2:../../sysutils/rox
 
 DIST_SUBDIR=	rox
 
@@ -22,6 +23,6 @@ WRKSRC=		${WRKDIR}/Wrappers
 
 do-install:
 	${RM} -f ${WRKSRC}/Emacs/AppRun.orig
-	${CP} -Rf ${WRKSRC} ${PREFIX}/share/examples
+	${CP} -Rf ${WRKSRC} ${PREFIX}/share/rox
 
 .include "../../mk/bsd.pkg.mk"
