@@ -1,0 +1,33 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/05/22 22:13:11 skrll Exp $
+bin/xbeeb
+lib/X11/fonts/xbeeb/ttext-grc-ldh.pcf
+lib/X11/fonts/xbeeb/ttext-std-udh.pcf
+lib/X11/fonts/xbeeb/ttext-std-ldh.pcf
+lib/X11/fonts/xbeeb/ttext-grs.pcf
+lib/X11/fonts/xbeeb/ttext-grs-udh.pcf
+lib/X11/fonts/xbeeb/ttext-grs-ldh.pcf
+lib/X11/fonts/xbeeb/ttext-grc.pcf
+lib/X11/fonts/xbeeb/ttext-grc-udh.pcf
+lib/X11/fonts/xbeeb/ttext-std.pcf
+lib/X11/fonts/xbeeb/fonts.alias
+lib/X11/fonts/xbeeb/fonts.dir
+#XBEEBROOT#/roms/xdfs0.70.rom
+#XBEEBROOT#/docs/64doc
+#XBEEBROOT#/docs/Configuration
+#XBEEBROOT#/docs/DataXfer
+#XBEEBROOT#/docs/DiskEmulation
+#XBEEBROOT#/docs/Help
+#XBEEBROOT#/docs/Installation
+#XBEEBROOT#/docs/Keyboard
+#XBEEBROOT#/docs/KnownBugs
+#XBEEBROOT#/docs/MailingLists
+#XBEEBROOT#/docs/Options
+#XBEEBROOT#/docs/RomPatches
+#XBEEBROOT#/docs/SnapshotFormat
+#XBEEBROOT#/docs/Thanks
+#XBEEBROOT#/docs/WWWSites
+#XBEEBROOT#/docs/WorkingSoftware
+@dirrm lib/X11/fonts/xbeeb
+@dirrm #XBEEBROOT#/docs
+@dirrm #XBEEBROOT#/roms
+@dirrm #XBEEBROOT#
