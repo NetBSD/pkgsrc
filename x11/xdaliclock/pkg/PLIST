@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 1999/11/29 21:39:40 hubertf Exp $
-bin/xdaliclock
-man/man1/xdaliclock.1
