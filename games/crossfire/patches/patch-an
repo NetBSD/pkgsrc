@@ -1,0 +1,13 @@
+$NetBSD: patch-an,v 1.1 2000/05/25 09:07:32 wiz Exp $
+
+--- server/Imakefile.orig	Sat May 16 05:27:01 1998
++++ server/Imakefile	Thu May 25 10:32:57 2000
+@@ -26,7 +26,7 @@
+ INCLUDES = -I../include $(RPLAY_INCDIR) $(EUTL_INCLUDES)
+ 
+ LOCAL_LIBRARIES = $(DLSYM) $(SOUND_LIBS) $(MALLOC_LIBS) -L../common \
+-	-lcross $(XPM_LIBS) $(XLIB) $(EUTL_LIBS)
++	-lcross $(XPM_LIBS) $(XLIB) $(EUTL_LIBS) -Wl,-R${LOCALBASE}/lib
+ 
+ /* I guess the make on OSF systems can handle constructs where the
+  * variable is being set to itself?  Gnu make and sun make can't seem
