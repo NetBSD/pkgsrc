@@ -1,3 +1,5 @@
+$NetBSD: patch-ab,v 1.2 1999/12/16 14:59:13 bouyer Exp $
+
 --- doc/Makefile.in.orig	Fri Aug  6 21:56:34 1999
 +++ doc/Makefile.in	Sat Aug 21 22:22:12 1999
 @@ -218,14 +218,6 @@
