@@ -1,14 +1,15 @@
-# $NetBSD: Makefile,v 1.20 2004/10/03 00:13:09 tv Exp $
+# $NetBSD: Makefile,v 1.21 2004/10/25 09:05:27 xtraeme Exp $
 #
 
-DISTNAME=	streamtuner-0.12.1
-PKGREVISION=	1
+DISTNAME=	streamtuner-0.99
 CATEGORIES=	audio www
 MASTER_SITES=	http://savannah.nongnu.org/download/streamtuner/
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.nongnu.org/streamtuner/
 COMMENT=	Stream directory browser
+
+BUILD_DEPENDS+=	hicolor-icon-theme-[0-9]*:../../graphics/hicolor-icon-theme
 
 BUILD_USES_MSGFMT=	yes
 
@@ -22,7 +23,10 @@ GNU_CONFIGURE=		yes
 
 PKGCONFIG_OVERRIDE=	extras/streamtuner.pc.in
 
+.include "../../audio/taglib/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../lang/python/pyversion.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
