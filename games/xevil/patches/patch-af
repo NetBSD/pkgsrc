@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.1.1.1 2005/01/25 15:59:27 xtraeme Exp $
+$NetBSD: patch-af,v 1.2 2005/01/25 16:02:26 xtraeme Exp $
 
 --- cmn/game_style.h.orig	2003-11-22 10:56:44.000000000 -0800
 +++ cmn/game_style.h	2003-11-22 10:56:59.000000000 -0800

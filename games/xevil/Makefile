@@ -1,21 +1,33 @@
-# $NetBSD: Makefile,v 1.10 2004/05/23 20:58:42 danw Exp $
+# $NetBSD: Makefile,v 1.11 2005/01/25 16:02:26 xtraeme Exp $
 
-DISTNAME=		xevil1.5.1e
-PKGNAME=		xevil-1.5.1e
-CATEGORIES=		games x11
-MASTER_SITES=		ftp://ftp.xevil.com/xevil1.5.1e/
-EXTRACT_SUFX=		.tar.Z
+DISTNAME=	xevilsrc2.02r2
+PKGNAME=	xevil-2.02
+CATEGORIES=	games x11
+MASTER_SITES=	http://www.xevil.com/download/stable/
+EXTRACT_SUFX=	.zip
 
-MAINTAINER=		root@garbled.net
-HOMEPAGE=		http://www.xevil.com/
-COMMENT=		Violent game of killing, contains profanity
+MAINTAINER=	snj@pobox.com
+HOMEPAGE=	http://www.xevil.com/
+COMMENT=	Side scrolling, bloody action game
 
-MAKE_ENV=		HOSTTYPE="netbsd" \
-			INSTALL_PROGRAM="${INSTALL_PROGRAM}" \
-			INSTALL_MAN="${INSTALL_MAN}"
+MAKEFILE=	makefile
 
-WRKSRC=			${WRKDIR}
-USE_X11BASE=		yes
-USE_BUILDLINK3=		yes
+USE_BUILDLINK3=	yes
+USE_X11=	yes
+BUILD_TARGET=	pkgsrc
+WRKSRC=		${WRKDIR}
 
+MAKE_ENV+=	HOSTTYPE="pkgsrc"
+
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/x11/PKGSRC/xevil ${PREFIX}/bin/xevil
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/xevil
+	${INSTALL_DATA} ${WRKSRC}/instructions/* ${PREFIX}/share/doc/xevil
+
+SUBST_CLASSES+=		uname
+SUBST_STAGE.uname=	pre-configure
+SUBST_FILES.uname=	cmn/utils.cpp
+SUBST_SED.uname=	-e 's,@UNAME@,${UNAME},g'
+
+.include "../../graphics/xpm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
