@@ -1,11 +1,11 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2002/08/04 15:47:43 fredb Exp $
+$NetBSD: MESSAGE,v 1.3 2002/08/09 14:35:55 jlam Exp $
 
 If upgrading from SSLeay, you will need to copy your ssleay.cnf (used for
-creating certificate requests with "ca") into "/etc/openssl/openssl.cnf".
+creating certificate requests with "ca") into "${PKG_SYSCONFDIR}/openssl.cnf".
 
 If installing from scratch, you may want to take a look
 at "${PREFIX}/share/examples/openssl/openssl.cnf" copy it
-to "/etc/openssl/openssl.cnf", and customize it.
+to "${PKG_SYSCONFDIR}/openssl.cnf", and customize it.
 
 ===========================================================================
