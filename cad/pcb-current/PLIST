@@ -1,4 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2004/01/12 11:22:12 seb Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/02/15 23:14:25 dmcmahill Exp $
+bin/MergePCBPS
+bin/Merge_dimPCBPS
 bin/pcb
 bin/pcb-bin
 share/pcb/CreateLibrary.sh
@@ -10,9 +12,21 @@ share/pcb/default_font
 share/pcb/examples/LED
 share/pcb/examples/LED.NET
 share/pcb/examples/LED2
+share/pcb/examples/libraries/example.inc
+share/pcb/examples/libraries/example.list
+share/pcb/examples/libraries/example.m4
 share/pcb/m4/TTL_74xx_DIL.list
 share/pcb/m4/TTL_74xx_DIL.m4
+share/pcb/m4/amp.inc
+share/pcb/m4/amp.list
+share/pcb/m4/amp.m4
+share/pcb/m4/amphenol.inc
+share/pcb/m4/amphenol.list
+share/pcb/m4/amphenol.m4
 share/pcb/m4/bga.inc
+share/pcb/m4/bourns.inc
+share/pcb/m4/bourns.list
+share/pcb/m4/bourns.m4
 share/pcb/m4/common.m4
 share/pcb/m4/connector.inc
 share/pcb/m4/connector.list
@@ -32,6 +46,9 @@ share/pcb/m4/gtag.list
 share/pcb/m4/gtag.m4
 share/pcb/m4/jerry.list
 share/pcb/m4/jerry.m4
+share/pcb/m4/johnstech.inc
+share/pcb/m4/johnstech.list
+share/pcb/m4/johnstech.m4
 share/pcb/m4/linear.list
 share/pcb/m4/linear.m4
 share/pcb/m4/logic.list
@@ -40,13 +57,20 @@ share/pcb/m4/lsi.list
 share/pcb/m4/lsi.m4
 share/pcb/m4/memory.list
 share/pcb/m4/memory.m4
+share/pcb/m4/minicircuits.inc
+share/pcb/m4/minicircuits.list
+share/pcb/m4/minicircuits.m4
 share/pcb/m4/misc.inc
 share/pcb/m4/optical.list
 share/pcb/m4/optical.m4
+share/pcb/m4/panasonic.inc
+share/pcb/m4/panasonic.list
+share/pcb/m4/panasonic.m4
 share/pcb/m4/pci.inc
 share/pcb/m4/pci.list
 share/pcb/m4/pci.m4
 share/pcb/m4/plcc.inc
+share/pcb/m4/qfn.inc
 share/pcb/m4/qfp.inc
 share/pcb/m4/qfp2.inc
 share/pcb/m4/qfpdj.inc
@@ -72,7 +96,6 @@ share/pcb/newlib/2_pin_thru-hole_packages/1W_Carbon_Resistor
 share/pcb/newlib/2_pin_thru-hole_packages/CK05_type_Capacitor
 share/pcb/newlib/2_pin_thru-hole_packages/CK06_type_capacitor
 share/pcb/newlib/2_pin_thru-hole_packages/IRU1015-33CT_3.3V_reg_TO220
-share/pcb/newlib/2_pin_thru-hole_packages/Makefile.am
 share/pcb/newlib/2_pin_thru-hole_packages/RN55_type_0.1W_Resistor
 share/pcb/newlib/2_pin_thru-hole_packages/T1.75_LED
 share/pcb/newlib/analog-devices/ADC12138CIMSA
@@ -132,6 +155,7 @@ share/pcb/qfp.dat
 share/pcb/refcard.pdf
 share/pcb/refcard.ps
 share/pcb/tools/MergePCBPS
+share/pcb/tools/Merge_dimPCBPS
 share/pcb/tools/PCB2HPGL
 share/pcb/tools/apctools.zip
 share/pcb/tools/gerbertotk.c
@@ -140,17 +164,14 @@ share/pcb/tools/tgo2pcb.tcl
 share/pcb/tutorial/tut1.pcb
 @dirrm share/pcb/tutorial
 @dirrm share/pcb/tools
-@exec ${MKDIR} %D/share/pcb/newlib/toko
 @dirrm share/pcb/newlib/toko
 @dirrm share/pcb/newlib/tests
-@exec ${MKDIR} %D/share/pcb/newlib/sockets
 @dirrm share/pcb/newlib/sockets
 @dirrm share/pcb/newlib/not_vetted_ingo
 @dirrm share/pcb/newlib/msp430
 @dirrm share/pcb/newlib/headers
 @dirrm share/pcb/newlib/generic_SMD_packages
 @dirrm share/pcb/newlib/electro-optics
-@exec ${MKDIR} %D/share/pcb/newlib/cypress
 @dirrm share/pcb/newlib/cypress
 @dirrm share/pcb/newlib/crystal
 @dirrm share/pcb/newlib/connectors
@@ -159,5 +180,6 @@ share/pcb/tutorial/tut1.pcb
 @dirrm share/pcb/newlib/2_pin_thru-hole_packages
 @dirrm share/pcb/newlib
 @dirrm share/pcb/m4
+@dirrm share/pcb/examples/libraries
 @dirrm share/pcb/examples
 @dirrm share/pcb
