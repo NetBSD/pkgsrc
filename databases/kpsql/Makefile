@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2003/07/17 21:28:19 grant Exp $
+# $NetBSD: Makefile,v 1.12 2003/11/14 10:02:15 wiz Exp $
 #
 
 DISTNAME=	kpsql-1.0
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	databases
 MASTER_SITES=	http://www.mutinybaysoftware.com/downloads/
 EXTRACT_SUFX=	.tgz
@@ -11,18 +11,18 @@ MAINTAINER=	wulf@NetBSD.org
 HOMEPAGE=	http://www.mutinybaysoftware.com/kpsql.html
 COMMENT=	Interactive Query Tool for PostgreSQL
 
-DEPENDS+=	kdebase-1.1.2nb3:../../x11/kdebase
-DEPENDS+=	postgresql-lib>=7.3.1:../../databases/postgresql-lib
-
-USE_X11BASE=	yes
+USE_BUILDLINK2=	yes
+USE_X11=	yes
 USE_GMAKE=	yes
 USE_LIBTOOL=	yes
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 GNU_CONFIGURE=	yes
 
-CONFIGURE_ARGS+=--with-qt-dir=${X11BASE}/qt1 \
-		--with-pgsqldir=${LOCALBASE}
+CONFIGURE_ARGS+=--with-qt-dir=${QTDIR} \
+		--with-pgsqldir=${BUILDLINK_PREFIX.postgresql-lib}
 
-CONFIGURE_ENV+=	KDEDIR=${X11BASE} \
-		MOC="${X11BASE}/qt1/bin/moc"
+CONFIGURE_ENV+=	KDEDIR=${BUILDLINK_PREFIX.kdebase}
 
+.include "../../databases/postgresql-lib/buildlink2.mk"
+.include "../../x11/kdebase/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
