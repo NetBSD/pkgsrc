@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6047 2004/05/28 16:40:34 minskim Exp $
+$NetBSD: CHANGES,v 1.6048 2004/05/28 22:16:56 recht Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2670,3 +2670,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated cvsweb to 3.0.1 [lukem 2004-05-28]
 	Removed raw [dillo 2004-05-28]
 	Updated docbook-simple to 1.1.b3 [minskim 2004-05-28]
+	Updated py-pyrex to 0.9.2.1 [recht 2004-05-28]
