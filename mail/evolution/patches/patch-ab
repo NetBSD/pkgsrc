@@ -1,0 +1,39 @@
+$NetBSD: patch-ab,v 1.1.1.1 2001/04/26 05:57:22 rh Exp $
+
+--- mail/main.c.orig	Tue Apr 24 17:29:10 2001
++++ mail/main.c
+@@ -31,6 +31,23 @@
+ #include "mail.h"
+ #include "mail-mt.h"
+ 
++#ifdef __NetBSD__
++#include <gtk/gtk.h>
++#include <pthread.h>
++
++/*
++ * NetBSD uses non-preemptive pth, so we yield the processor periodically
++ */
++
++gint
++pth_nbschedule (gpointer data)
++{
++	pthread_yield_np();
++
++	return TRUE;
++}
++#endif
++
+ #if 0
+ static int blowup(int status)
+ {
+@@ -117,6 +134,10 @@
+ 		g_mutex_free (gdk_threads_mutex);
+ 		gdk_threads_mutex = NULL;
+ 	}
++
++#ifdef __NetBSD__
++	gtk_timeout_add (200, pth_nbschedule, NULL);
++#endif
+ 
+ 	GDK_THREADS_ENTER ();
+ 	bonobo_main ();

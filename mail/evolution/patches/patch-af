@@ -1,0 +1,25 @@
+$NetBSD: patch-af,v 1.1.1.1 2001/04/26 05:57:22 rh Exp $
+
+--- shell/e-setup.c.orig	Wed Apr 25 18:42:46 2001
++++ shell/e-setup.c
+@@ -224,9 +224,18 @@
+ 			  _("Cannot copy files into\n`%s'."), evolution_directory);
+ 		retval = FALSE;
+ 	} else {
+-		e_notice (NULL, GNOME_MESSAGE_BOX_INFO,
++		char *cmd2 = g_strconcat ("chmod -R u+w ", evolution_directory,
++			       NULL);
++
++		if (system (cmd2) != 0) {
++			e_notice (NULL, GNOME_MESSAGE_BOX_ERROR,
++			  _("Cannot chmod files in\n`%s'."), evolution_directory);
++			retval = FALSE;
++		} else {
++			e_notice (NULL, GNOME_MESSAGE_BOX_INFO,
+ 			  _("Evolution files successfully installed."));
+-		retval = TRUE;
++			retval = TRUE;
++		}
+ 	}
+ 
+ 	g_free (command);

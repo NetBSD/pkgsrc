@@ -1,0 +1,22 @@
+$NetBSD: patch-aj,v 1.1.1.1 2001/04/26 05:57:22 rh Exp $
+
+--- calendar/gui/Makefile.in.orig	Tue Mar 13 21:13:07 2001
++++ calendar/gui/Makefile.in
+@@ -192,7 +192,7 @@
+ evolution_calendar_SOURCES =  	$(IDL_GENERATED)				alarm.c						alarm.h						calendar-config.c				calendar-config.h				calendar-commands.c				calendar-commands.h				calendar-model.c				calendar-model.h				calendar-summary.c				calendar-summary.h				comp-util.c					comp-util.h					control-factory.c				control-factory.h				component-factory.c				component-factory.h				e-calendar-table.h				e-calendar-table.c				e-day-view-main-item.c				e-day-view-main-item.h				e-day-view-time-item.c				e-day-view-time-item.h				e-day-view-top-item.c				e-day-view-top-item.h				e-day-view.c					e-day-view.h					e-itip-control.h				e-itip-control.c				e-meeting-edit.h				e-meeting-edit.c				e-week-view-event-item.c			e-week-view-event-item.h			e-week-view-main-item.c				e-week-view-main-item.h				e-week-view-titles-item.c			e-week-view-titles-item.h			e-week-view.c					e-week-view.h					e-tasks.c					e-tasks.h					event-editor.c					event-editor.h					gnome-cal.c					gnome-cal.h					goto.c						goto.h						itip-utils.c					itip-utils.h					main.c						popup-menu.c					popup-menu.h					print.c						print.h						tag-calendar.c					tag-calendar.h					tasks-control-factory.c				tasks-control-factory.h				tasks-control.c					tasks-control.h					tasks-migrate.c					tasks-migrate.h					weekday-picker.c				weekday-picker.h				widget-util.c					widget-util.h
+ 
+ 
+-evolution_calendar_LDADD =  	$(top_builddir)/shell/libeshell.a							$(top_builddir)/calendar/cal-client/libcal-client.la					$(top_builddir)/calendar/cal-util/libcal-util.la					$(top_builddir)/e-util/libeutil.la							$(top_builddir)/executive-summary/evolution-services/libevolution-services.la		$(top_builddir)/libversit/libversit.la							$(top_builddir)/libical/src/libical/libical.la						$(top_builddir)/widgets/meeting-time-sel/libevolutionmtsel.a				$(top_builddir)/widgets/misc/libemiscwidgets.a						dialogs/libcal-dialogs.a								$(BONOBO_HTML_GNOME_LIBS)								$(BONOBO_VFS_GNOME_LIBS)								$(EXTRA_GNOME_LIBS)									$(INTLLIBS)
++evolution_calendar_LDADD =  	$(top_builddir)/shell/libeshell.a							$(top_builddir)/calendar/cal-client/libcal-client.la					$(top_builddir)/calendar/cal-util/libcal-util.la					$(top_builddir)/e-util/libeutil.la							$(top_builddir)/executive-summary/evolution-services/libevolution-services.la		$(top_builddir)/libversit/libversit.la							-L`pwd` -lical						$(top_builddir)/widgets/meeting-time-sel/libevolutionmtsel.a				$(top_builddir)/widgets/misc/libemiscwidgets.a						dialogs/libcal-dialogs.a								$(BONOBO_HTML_GNOME_LIBS)								$(BONOBO_VFS_GNOME_LIBS)								$(EXTRA_GNOME_LIBS)									$(INTLLIBS)
+ 
+ 
+ #evolution_calendar_LDFLAGS = `gnome-config --libs gdk_pixbuf`
+@@ -330,6 +330,8 @@
+ maintainer-clean-libtool:
+ 
+ evolution-calendar: $(evolution_calendar_OBJECTS) $(evolution_calendar_DEPENDENCIES)
++	cp $(top_builddir)/libical/src/libical/.libs/libical.a .
++	-cp $(top_builddir)/libical/src/libical/.libs/libical.so* .
+ 	@rm -f evolution-calendar
+ 	$(LINK) $(evolution_calendar_LDFLAGS) $(evolution_calendar_OBJECTS) $(evolution_calendar_LDADD) $(LIBS)
+ 
