@@ -1,4 +1,4 @@
-# $NetBSD: pyversion.mk,v 1.27 2004/05/23 17:15:09 recht Exp $
+# $NetBSD: pyversion.mk,v 1.28 2004/06/06 16:24:55 tv Exp $
 
 .if !defined(PYTHON_PYVERSION_MK)
 PYTHON_PYVERSION_MK=	defined
@@ -7,12 +7,12 @@ PYTHON_PYVERSION_MK=	defined
 
 PYTHON_VERSION_DEFAULT?=		23
 .if ${OPSYS} == "Darwin"
-PYTHON_VERSIONS_ACCEPTED?=		23pth 22pth
+PYTHON_VERSIONS_INCOMPATIBLE+=		23 22 21 21pth 20 15
 BUILDLINK_DEPENDS.python22-pth?=	python22-pth>=2.2.3nb2
 BUILDLINK_DEPENDS.python23-pth?=	python23-pth>=2.3.3nb3
-.else
-PYTHON_VERSIONS_ACCEPTED?=		23 23pth 22 22pth 21 21pth 20
 .endif
+PYTHON_VERSIONS_ACCEPTED?=		23 23pth 22 22pth 21 21pth 20
+PYTHON_VERSIONS_INCOMPATIBLE?=		# empty by default
 
 BUILDLINK_DEPENDS.python15?=		python15>=1.5
 BUILDLINK_DEPENDS.python20?=		python20>=2.0
@@ -25,7 +25,9 @@ BUILDLINK_DEPENDS.python23-pth?=	python23-pth>=2.3
 
 # transform the list into individual variables
 .for pv in ${PYTHON_VERSIONS_ACCEPTED}
+.if empty(PYTHON_VERSIONS_INCOMPATIBLE:M${pv})
 _PYTHON_VERSION_${pv}_OK=	yes
+.endif
 .endfor
 
 # check what is installed
@@ -73,11 +75,13 @@ _PYTHON_VERSION=	${PYTHON_VERSION_DEFAULT}
 # prefer an already installed version, in order of "accepted"
 .if !defined(_PYTHON_VERSION)
 .for pv in ${PYTHON_VERSIONS_ACCEPTED}
+.if defined(_PYTHON_VERSION_${pv}_OK)
 .if defined(_PYTHON_VERSION_${pv}_INSTALLED)
 _PYTHON_VERSION?=	${pv}
 .else
 # keep information as last resort - see below
 _PYTHON_VERSION_FIRSTACCEPTED?=	${pv}
+.endif
 .endif
 .endfor
 .endif
