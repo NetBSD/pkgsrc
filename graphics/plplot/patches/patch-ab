@@ -1,0 +1,28 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/12/02 05:40:33 jtb Exp $
+
+--- include/plplot.h.orig	Sat May  6 19:27:21 1995
++++ include/plplot.h
+@@ -125,12 +125,7 @@
+  * (others...)
+  *
+ \*--------------------------------------------------------------------------*/
+-
+-#ifdef unix			/* the old way */
+-#ifndef __unix
+-#define __unix
+-#endif
+-#endif
++#include <sys/param.h>
+ 
+ /* Make sure Unix systems define "__unix" */
+ 
+@@ -140,7 +135,8 @@
+     defined(sun) ||				/* SUN */               \
+     defined(CRAY) ||				/* Cray */              \
+     defined(__convexc__) ||			/* CONVEX */            \
+-    (defined(__alpha) && defined(__osf__))	/* DEC Alpha AXP/OSF */
++    (defined(__alpha) && defined(__osf__)) ||	/* DEC Alpha AXP/OSF */ \
++    (defined(BSD) && BSD >= 199306)             /* BSD */  
+ 
+ #ifndef __unix
+ #define __unix

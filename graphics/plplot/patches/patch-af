@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1.1.1 2000/12/02 05:40:33 jtb Exp $
+
+--- utils/pltek.c.orig
++++ utils/pltek.c
+@@ -110,7 +110,7 @@
+ 	oldpage = ipage;
+ 	printf("Page %d/%d> ", ipage, npage);
+ 
+-	gets(ibuf);
++	fgets(ibuf, sizeof(ibuf), stdin);
+ 	c = ibuf[0];
+ 
+ /* User input a page number or a return */
