@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.27 2004/02/15 13:15:43 lukem Exp $
+# $NetBSD: Makefile,v 1.28 2004/04/05 22:38:09 martin Exp $
 
-DISTNAME=		nut-1.4.1
-PKGNAME=		ups-nut-cgi-1.4.1
+DISTNAME=		nut-2.0.0
+PKGNAME=		ups-nut-cgi-2.0.0
 CATEGORIES=		sysutils
-MASTER_SITES=		http://random.networkupstools.org/source/1.4/
+MASTER_SITES=		http://random.networkupstools.org/source/2.0/
 
 MAINTAINER=		lukem@NetBSD.org
 HOMEPAGE=		http://www.networkupstools.org/
 COMMENT=		Network UPS Tools CGI scripts
 
-DEPENDS+=		ups-nut-1.*:../../sysutils/ups-nut
+DEPENDS+=		ups-nut-2.*:../../sysutils/ups-nut
 
 ALL_TARGET=		cgi
 INSTALL_TARGET=		install-cgi
