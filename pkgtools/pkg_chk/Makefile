@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2004/11/30 19:32:10 abs Exp $
+# $NetBSD: Makefile,v 1.10 2005/01/29 15:36:30 abs Exp $
 
-DISTNAME=	pkg_chk-1.52
+DISTNAME=	pkg_chk-1.53
 CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -25,8 +25,12 @@ INSTALLATION_DIRS=	sbin man/man8
 MAKECONF?=	/etc/mk.conf
 
 do-build:
-	${SED} -e 's#@MAKE@#${MAKE}#g' \
+	${SED} -e 's#@AWK@#${AWK}#g' \
+	  -e 's#@GREP@#${GREP}#g' \
+	  -e 's#@MAKE@#${MAKE}#g' \
 	  -e 's#@MAKECONF@#${MAKECONF}#g' \
+	  -e 's#@PKG_INFO@#${PKG_INFO}#g' \
+	  -e 's#@SED@#${SED}#g' \
 	  -e 's#@SH@#${SH}#g' \
 	  ${FILESDIR}/pkg_chk.sh >${WRKSRC}/pkg_chk.sh
 

@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkg_chk.8,v 1.5 2004/11/30 23:37:11 wiz Exp $
+.\"	$NetBSD: pkg_chk.8,v 1.6 2005/01/29 15:36:30 abs Exp $
 .\"
 .\" Copyright (c) 2001 by David Brownlee (abs@NetBSD.org)
 .\" Absolutely no warranty.
@@ -14,6 +14,7 @@
 .Op Fl C Ar conf
 .Op Fl D Ar tags
 .Op Fl L Ar file
+.Op Fl P Ar file
 .Op Fl U Ar tags
 .Sh DESCRIPTION
 .Nm
@@ -41,12 +42,11 @@ options are given.
 .It Fl B
 Check the "Build version" (see option -b of pkg_info(1)) of packages.
 .It Fl b
-Limit additions or updates to using binary packages.
-If DEPENDS_TARGET=package is set in
-.Pa /etc/mk.conf ,
-then
+Use binary packages. If
+.Fl s
+is not set this allows
 .Nm
-will automatically generate binary packages for later reuse.
+to run without PKGSRCDIR.
 .It Fl C Ar conf
 Use the
 .Pa pkgchk.conf
@@ -102,7 +102,15 @@ Recursively delete any mismatched packages found.
 Use with care, this does not record which packages were installed
 for later update.
 .It Fl s
-Limit additions or updates to building from source.
+Building missing packages from source.
+If DEPENDS_TARGET=package is set in
+.Pa /etc/mk.conf ,
+then
+.Nm
+will automatically generate binary packages for later reuse.
+.It Fl P Ar path
+Set the path to the binary packages. Defaults to PACKAGES if PKGSRCDIR
+is available, or '.' otherwise.
 .It Fl U Ar tags
 Remove the comma separated list of tags from those checked when
 parsing
@@ -269,6 +277,7 @@ print/acroread                  x11+i386
 www/communicator                x11+sparc x11+sparc64
 www/navigator                	x11+i386
 x11/xlockmore                   x11 -wopr
+
 .Ed
 .Sh AUTHORS
 .An David Brownlee
@@ -308,8 +317,8 @@ in two separate passes, resulting in unnecessary rebuilding of
 There exists a workaround, if you have a complete
 .Pa pkgchk.conf :
 .Bd -literal
-# pkg_chk -r
-# pkg_chk -a
+# pkg_chk -ra
+
 .Ed
 will remove all outdated packages and then install all
 files that are in your
