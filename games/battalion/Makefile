@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.20 2002/10/20 11:15:17 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2003/03/09 19:46:51 jschauma Exp $
 #
 
 DISTNAME=		battalion
 PKGNAME=		battalion-1.4
+PKGREVISION=		1
 WRKSRC=			${WRKDIR}/battalionSource
 CATEGORIES=		games x11
 MASTER_SITES=		http://www.evl.uic.edu/aej/
@@ -39,5 +40,6 @@ do-install:
 pre-clean:
 	@${RM} -rf ${WRKDIR}/battalionSUN4
 
-.include "../../graphics/Mesa/buildlink2.mk"
+.include "../../graphics/MesaLib/buildlink2.mk"
+.include "../../graphics/glu/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2002/10/20 13:14:03 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2003/03/09 19:46:53 jschauma Exp $
 
 DISTNAME=	q1source
 PKGNAME=	quake-2.30
+PKGREVISION=	1
 CATEGORIES=	games x11
 MASTER_SITES=	ftp://ftp.fu-berlin.de/pc/msdos/games/idgames/idstuff/source/ \
 		ftp://ftp.idsoftware.com/idstuff/source/
@@ -55,5 +56,5 @@ post-install:
 	@ ${ECHO} by running \'quake.x11\'.
 	@ ${ECHO} =====================================================================
 
-.include "../../graphics/Mesa/buildlink2.mk"
+.include "../../graphics/MesaLib/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-$NetBSD: patch-ai,v 1.5 2002/01/02 10:01:36 hubertf Exp $
+$NetBSD: patch-ai,v 1.6 2003/03/09 19:46:53 jschauma Exp $
 
 --- winquake/makefile.linuxi386.orig	Tue Apr 27 17:51:18 1999
 +++ winquake/makefile.linuxi386
@@ -25,23 +25,23 @@ $NetBSD: patch-ai,v 1.5 2002/01/02 10:01:36 hubertf Exp $
 +#CC=$(EGCS)
  
 -BASE_CFLAGS=-Dstricmp=strcasecmp
-+BASE_CFLAGS=-Dstricmp=strcasecmp -I${X11BASE}/include
++BASE_CFLAGS=-Dstricmp=strcasecmp -I${X11BASE}/include ${CFLAGS}
  RELEASE_CFLAGS=$(BASE_CFLAGS) -g -mpentiumpro -O6 -ffast-math -funroll-loops \
  	-fomit-frame-pointer -fexpensive-optimizations
  DEBUG_CFLAGS=$(BASE_CFLAGS) -g
 -LDFLAGS=-lm
-+LDFLAGS=-lm -lossaudio
++LDFLAGS+=-lm -lossaudio
  SVGALDFLAGS=-lvga
 -XLDFLAGS=-L/usr/X11R6/lib -lX11 -lXext -lXxf86dga
 -XCFLAGS=-DX11
-+XLDFLAGS=-L/usr/X11R6/lib -Wl,-rpath -Wl,${X11BASE}/lib -lX11 -lXext -lXxf86dga
-+XCFLAGS=-DX11 -I${X11BASE}/include
++XLDFLAGS=-L/usr/X11R6/lib ${LDFLAGS} -lX11 -lXext -lXxf86dga
++XCFLAGS=-DX11 -I${X11BASE}/include ${CFLAGS}
  
 -MESAGLLDFLAGS=-L/usr/X11/lib -L/usr/local/lib -L$(MESA_DIR)/lib -lMesaGL -lglide2x -lX11 -lXext -ldl
 +MESAGLLDFLAGS=-L${X11BASE}/lib -L${LOCALBASE}/lib -L$(MESA_DIR)/lib -lMesaGL -lX11 -lXext
  TDFXGLLDFLAGS=-L$(TDFXGL_DIR)/release$(ARCH)$(GLIBC) -l3dfxgl -lglide2x -ldl
 -GLLDFLAGS=-L/usr/X11/lib -L/usr/local/lib -lGL -lX11 -lXext -ldl -lXxf86dga -lXxf86vm -lm
-+GLLDFLAGS=-L${X11BASE}/lib -Wl,-rpath -Wl,${X11BASE}/lib -L${MESA_DIR}/lib -Wl,-rpath -Wl,${MESA_DIR}/lib -lGL -lX11 -lXext -lXxf86dga -lXxf86vm -lm
++GLLDFLAGS=-L${X11BASE}/lib ${LDFLAGS} -L${MESA_DIR}/lib -lGL -lX11 -lXext -lXxf86dga -lXxf86vm -lm
  GLCFLAGS=-DGLQUAKE -I$(MESA_DIR)/include -I/usr/include/glide
  
  DO_CC=$(CC) $(CFLAGS) -o $@ -c $<
