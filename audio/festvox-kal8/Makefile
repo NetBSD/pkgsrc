@@ -1,18 +1,19 @@
-# $NetBSD: Makefile,v 1.13 2001/07/14 12:37:49 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2001/07/18 15:19:42 wiz Exp $
 
 DISTNAME=	festvox_kallpc8k
 PKGNAME=	festvox-kal8-1.4.0
 WRKSRC=		${WRKDIR}/festival
 CATEGORIES=	audio
-MASTER_SITES=	ftp://ftp.cstr.ed.ac.uk/pub/festival/1.4.0/
+MASTER_SITES=	ftp://ftp.cstr.ed.ac.uk/pub/festival/1.4.1/ \
+		http://www.speech.cs.cmu.edu/festival/cstr/festival/1.4.1/
 
 MAINTAINER=	proff@iq.org
 HOMEPAGE=	http://www.cstr.ed.ac.uk/projects/festival.html
 COMMENT=	8khz American English male voice for the festival speech synthesis system
 
-DEPENDS+=	festival-1.4.0:../festival
-DEPENDS+=	festlex-poslex-1.4.0:../festlex-poslex
-DEPENDS+=	festlex-cmu-1.4.0:../festlex-cmu
+DEPENDS+=	festival>=1.4.0:../festival
+DEPENDS+=	festlex-poslex>=1.4.0:../festlex-poslex
+DEPENDS+=	festlex-cmu>=1.4.0:../festlex-cmu
 
 CONFLICTS=	festvox-kal16-*
 

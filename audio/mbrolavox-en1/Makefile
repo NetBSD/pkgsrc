@@ -1,14 +1,15 @@
-# $NetBSD: Makefile,v 1.12 2001/07/14 12:37:52 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2001/07/18 15:19:47 wiz Exp $
 
 DISTNAME=	en1-980910
 PKGNAME=	mbrolavox-en1-980910
 WRKSRC=		${WRKDIR}
 CATEGORIES=	audio
-MASTER_SITES=	ftp://tcts.fpms.ac.be/pub/mbrola/VOICES/en1/
+MASTER_SITES=	ftp://tcts.fpms.ac.be/pub/mbrola/VOICES/en1/ \
+		http://www.festvox.org/mbrola/dba/en1/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	proff@iq.org
-HOMEPAGE=	http://www.cstr.ed.ac.uk/projects/festival.html
+HOMEPAGE=	http://www.festvox.org/mbrola/
 COMMENT=	British English male voice for MBROLA
 
 DEPENDS+=	mbrola-301h:../mbrola
@@ -18,8 +19,6 @@ LICENSE=	no-commercial-use
 NO_BUILD=	yes
 
 MHOME=		${PREFIX}/share/mbrola/voices
-
-ONLY_FOR_PLATFORM=      NetBSD-*-i386
 
 post-extract:
 	@ ${CHMOD} -R a+r ${WRKSRC}

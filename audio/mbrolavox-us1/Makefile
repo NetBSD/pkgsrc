@@ -1,14 +1,15 @@
-# $NetBSD: Makefile,v 1.9 2001/07/14 12:37:52 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2001/07/18 15:19:47 wiz Exp $
 
 DISTNAME=	us1-980512
 PKGNAME=	mbrolavox-us1-980512
 WRKSRC=		${WRKDIR}
 CATEGORIES=	audio
-MASTER_SITES=	ftp://tcts.fpms.ac.be/pub/mbrola/VOICES/us1/
+MASTER_SITES=	ftp://tcts.fpms.ac.be/pub/mbrola/VOICES/us1/ \
+		http://www.festvox.org/mbrola/dba/us1/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	proff@iq.org
-HOMEPAGE=	http://tcts.fpms.ac.be/synthesis/
+HOMEPAGE=	http://www.festvox.org/mbrola/
 COMMENT=	American English female voice for MBROLA
 
 DEPENDS+=	mbrola-301h:../mbrola
@@ -18,8 +19,6 @@ LICENSE=	no-commercial-use
 NO_BUILD=	yes
 
 MHOME=		${PREFIX}/share/mbrola/voices
-
-ONLY_FOR_PLATFORM=      NetBSD-*-i386
 
 post-extract:
 	@ ${CHMOD} -R a+r ${WRKSRC}

@@ -1,18 +1,19 @@
-# $NetBSD: Makefile,v 1.15 2001/07/14 12:37:51 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2001/07/18 15:19:44 wiz Exp $
 
 DISTNAME=	festvox_rablpc8k
 PKGNAME=	festvox-rab8-1.4.0
 WRKSRC=		${WRKDIR}/festival
 CATEGORIES=	audio
-MASTER_SITES=	ftp://ftp.cstr.ed.ac.uk/pub/festival/1.4.0/
+MASTER_SITES=	ftp://ftp.cstr.ed.ac.uk/pub/festival/1.4.1/ \
+		http://www.speech.cs.cmu.edu/festival/cstr/festival/1.4.1/
 
 MAINTAINER=	proff@iq.org
 HOMEPAGE=	http://www.cstr.ed.ac.uk/projects/festival.html
 COMMENT=	6khz British English male voice for the festival
 
-DEPENDS+=	festival-1.4.0:../festival
-DEPENDS+=	festlex-poslex-1.4.0:../festlex-poslex
-DEPENDS+=	festlex-oald-1.4.0:../festlex-oald
+DEPENDS+=	festival>=1.4.0:../festival
+DEPENDS+=	festlex-poslex>=1.4.0:../festlex-poslex
+DEPENDS+=	festlex-oald>=1.4.0:../festlex-oald
 
 CONFLICTS=	festvox-rab16-*
 

@@ -1,17 +1,17 @@
-$NetBSD: distinfo,v 1.2 2001/04/18 13:04:21 agc Exp $
+$NetBSD: distinfo,v 1.3 2001/07/18 15:19:36 wiz Exp $
 
-SHA1 (festival-1.4.0.tar.gz) = cb39e0521b26a19bab137fc83cc51a9576e3ecc0
-Size (festival-1.4.0.tar.gz) = 526781 bytes
-SHA1 (speech_tools-1.2.0.tar.gz) = 9cecc961d966bff9f62bc67c75b96c9dcd42f93b
-Size (speech_tools-1.2.0.tar.gz) = 1190451 bytes
-SHA1 (OGIresLPC-2.0.3.tar.gz) = d6007c0476861dffbb90ee2434f34d354af1d7e5
-Size (OGIresLPC-2.0.3.tar.gz) = 113262 bytes
-SHA1 (OGIfestpatch-1.4.0.tar.gz) = fdea319950cbf7f0d0426a40d1ddc2df2bee2512
-Size (OGIfestpatch-1.4.0.tar.gz) = 13010 bytes
+SHA1 (festival-1.4.1.tar.gz) = d3be7d58b986c37c39444a2dcc044cdc3ee1e774
+Size (festival-1.4.1.tar.gz) = 543335 bytes
+SHA1 (speech_tools-1.2.1.tar.gz) = 6facbaeaacb5022a20e59d669eaaeee8d9899e42
+Size (speech_tools-1.2.1.tar.gz) = 1206616 bytes
+SHA1 (OGIresLPC-2.0.9.tar.gz) = e54b7d3f7ed1696a6eeca0fe1695a099d2ed3712
+Size (OGIresLPC-2.0.9.tar.gz) = 140306 bytes
+SHA1 (OGIfestpatch-1.4.1.2.tar.gz) = 12b1b0198facf10fc781ac5d0a1521d45da30c9d
+Size (OGIfestpatch-1.4.1.2.tar.gz) = 32904 bytes
 SHA1 (patch-aa) = be60f30a65bd7d7d49a438c274a8c1b1f0fb64fc
 SHA1 (patch-ab) = 5d49c932446fb625c9e6bd114af67c9d959bb2ba
 SHA1 (patch-ac) = 64597fabe79d93f402bcf5bf100ac2e9d0613e0c
-SHA1 (patch-ad) = 24110cc98f6d36becd5f38cba6a48c7785839f4b
+SHA1 (patch-ad) = 42d20ef5aca5752093224e50c177e55465a1155f
 SHA1 (patch-ae) = d045128bacdedf05cd18b0dd750ea6a6a34a0ce4
 SHA1 (patch-af) = 3bcd5f48bcc6f2ecc68e179d8a0c70cdd6cfa5fd
 SHA1 (patch-ag) = 17f19d5b738f44f98bb2572f0a8231429adb6065

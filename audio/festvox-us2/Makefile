@@ -1,18 +1,19 @@
-# $NetBSD: Makefile,v 1.8 2001/07/14 12:37:52 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2001/07/18 15:19:45 wiz Exp $
 
 DISTNAME=	festvox_us2
 PKGNAME=	festvox-us2-1.4.0
 WRKSRC=		${WRKDIR}/festival
 CATEGORIES=	audio
-MASTER_SITES=	ftp://ftp.cstr.ed.ac.uk/pub/festival/1.4.0/
+MASTER_SITES=	ftp://ftp.cstr.ed.ac.uk/pub/festival/1.4.1/ \
+		http://www.speech.cs.cmu.edu/festival/cstr/festival/1.4.1/
 
 MAINTAINER=	proff@iq.org
 HOMEPAGE=	http://www.cstr.ed.ac.uk/projects/festival.html
 COMMENT=	MBROLA based Americal English male voice for festival
 
-DEPENDS+=	festival-1.4.0:../festival
-DEPENDS+=	festlex-poslex-1.4.0:../festlex-poslex
-DEPENDS+=	festlex-cmu-1.4.0:../festlex-cmu
+DEPENDS+=	festival>=1.4.0:../festival
+DEPENDS+=	festlex-poslex>=1.4.0:../festlex-poslex
+DEPENDS+=	festlex-cmu>=1.4.0:../festlex-cmu
 DEPENDS+=	mbrola-301h:../mbrola
 DEPENDS+=	mbrolavox-us2-980812:../mbrolavox-us2
 
@@ -22,8 +23,6 @@ NO_BUILD=	yes
 
 FHOME=		${PREFIX}/share/festival
 MBROLA=		${FHOME}/lib/voices/english/us2_mbrola
-
-ONLY_FOR_PLATFORM=      NetBSD-*-i386
 
 post-extract:
 	@ ${CHMOD} -R a+r ${WRKSRC}

@@ -1,21 +1,28 @@
-# $NetBSD: Makefile,v 1.3 2001/02/20 11:40:08 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2001/07/18 15:19:46 wiz Exp $
 
 DISTNAME=		mbr301h
 PKGNAME=		mbrola-301h
 CATEGORIES=		audio
-MASTER_SITES=		ftp://tcts.fpms.ac.be/pub/mbrola/bsd/
+MASTER_SITES=		http://www.festvox.org/mbrola/bin/netbsd/
 EXTRACT_SUFX=		.zip
 
 MAINTAINER=		proff@iq.org
-HOMEPAGE=		http://tcts.fpms.ac.be/synthesis/
-COMMENT=		MBROLA diphone synthesizer executable (only for i386)
+HOMEPAGE=		http://www.festvox.org/mbrola/
+COMMENT=		MBROLA diphone synthesizer executable
 
 LICENSE=		no-commercial-use
 
+DIST_SUBDIR=		mbrola-20010717
 NO_WRKSUBDIR=
 NO_BUILD=
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ( ${OBJECT_FMT} != "a.out" )
+DEPENDS+=		compat14>=1.4.3:../../emulators/compat14
+.endif
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/mbrola-netbsd-i386 ${PREFIX}/bin/mbrola

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2001/07/14 12:37:48 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2001/07/18 15:19:40 wiz Exp $
 
 DISTNAME=	voice_aec_di-2.0
 PKGNAME=	festvox-aec-2.0
@@ -7,11 +7,11 @@ CATEGORIES=	audio
 MASTER_SITES=	ftp://cslu.cse.ogi.edu/pub/tts/
 
 MAINTAINER=	proff@iq.org
-HOMEPAGE=	http://cslu.cse.ogi.edu/tts
+HOMEPAGE=	http://cslu.cse.ogi.edu/tts/
 COMMENT=	American English male voice for the festival speech synthesis system
 
-DEPENDS+=	festival-1.4.0:../festival
-DEPENDS+=	festlex-ogi-2.0:../festlex-ogi
+DEPENDS+=	festival>=1.4.0:../festival
+DEPENDS+=	festlex-ogi>=2.0:../festlex-ogi
 
 LICENSE=	no-commercial-use
 
