@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.15 2002/08/06 01:58:34 itojun Exp $
+$NetBSD: distinfo,v 1.16 2002/08/10 13:43:09 fredb Exp $
 
 SHA1 (wwwoffle-2.7c.tgz) = 6260ba0f039ad5430f2e9c31d702e3da35b92a44
 Size (wwwoffle-2.7c.tgz) = 867164 bytes
 SHA1 (patch-aa) = 897de385a47826e16a8a09b1bc1c207a2d350f94
 SHA1 (patch-ab) = 0dfd322da2bb9750668319132fc9d0a0a4c035dd
-SHA1 (patch-ac) = 9cc27a7a751bdcab007ebc82eb9f23140fa8b84b
+SHA1 (patch-ac) = 5cfe930c2b6df543ed214f599eda4bab7a1c0a90
