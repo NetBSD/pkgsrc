@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.6 1998/02/12 13:33:18 hubertf Exp $
-bin/etags
-bin/ctags
+@comment $NetBSD: PLIST,v 1.7 1998/02/22 10:06:45 tron Exp $
+bin/emacs-etags
+bin/emacs-ctags
 bin/emacsclient
-bin/b2m
-bin/rcs-checkin
+bin/emacs-b2m
+bin/emacs-rcs-checkin
 bin/emacs-20.2
 bin/emacs
 @unexec %D/bin/install-info --delete %D/info/ccmode %D/info/dir
@@ -124,8 +124,8 @@ libexec/emacs/20.2/${MACHINE_ARCH}--netbsd/hexl
 libexec/emacs/20.2/${MACHINE_ARCH}--netbsd/rcs2log
 libexec/emacs/20.2/${MACHINE_ARCH}--netbsd/vcdiff
 man/man1/emacs.1
-man/man1/etags.1
-man/man1/ctags.1
+man/man1/emacs-etags.1
+man/man1/emacs-ctags.1
 share/emacs/20.2/etc/e/eterm
 share/emacs/20.2/etc/e/eterm.ti
 share/emacs/20.2/etc/COPYING
