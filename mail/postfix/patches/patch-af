@@ -1,14 +1,14 @@
-$NetBSD: patch-af,v 1.4 2000/04/09 08:10:20 simonb Exp $
+$NetBSD: patch-af,v 1.5 2001/03/20 12:50:51 hubertf Exp $
 
---- conf/main.cf.orig	Fri Jan  7 01:52:45 2000
-+++ conf/main.cf	Thu Mar  2 10:56:58 2000
+--- conf/main.cf.orig	Fri Dec 15 07:44:19 2000
++++ conf/main.cf	Sat Jan 13 16:39:28 2001
 @@ -1,3 +1,5 @@
-+#	$NetBSD: patch-af,v 1.4 2000/04/09 08:10:20 simonb Exp $
++#	$NetBSD: patch-af,v 1.5 2001/03/20 12:50:51 hubertf Exp $
 +#
  # Global Postfix configuration file. This file lists only a subset
  # of all 100+ parameters. See the sample-xxx.cf files for a full list.
  # 
-@@ -17,14 +19,19 @@
+@@ -28,14 +30,19 @@
  # The command_directory parameter specifies the location of all
  # postXXX commands.  The default value is $program_directory.
  #
@@ -30,7 +30,7 @@ $NetBSD: patch-af,v 1.4 2000/04/09 08:10:20 simonb Exp $
  
  # QUEUE AND PROCESS OWNERSHIP
  #
-@@ -41,7 +48,7 @@
+@@ -52,7 +59,7 @@
  # These rights are used in the absence of a recipient user context.
  # DO NOT SPECIFY A PRIVILEGED USER OR THE POSTFIX OWNER.
  #
@@ -39,7 +39,7 @@ $NetBSD: patch-af,v 1.4 2000/04/09 08:10:20 simonb Exp $
  
  # INTERNET HOST AND DOMAIN NAMES
  # 
-@@ -376,8 +383,7 @@
+@@ -440,8 +447,7 @@
  # the process marches on. If you use an X-based debugger, be sure to
  # set up your XAUTHORITY environment variable before starting Postfix.
  #
