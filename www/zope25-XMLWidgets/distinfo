@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2002/10/29 12:16:34 drochner Exp $
+$NetBSD: distinfo,v 1.3 2002/11/28 12:45:02 drochner Exp $
 
-SHA1 (zope/XMLWidgets-0.8.2.tgz) = cb265ffe08ed30b6b5b666c57bf5257a9ac2aa49
-Size (zope/XMLWidgets-0.8.2.tgz) = 11381 bytes
+SHA1 (zope/XMLWidgets-0.8.3.tgz) = 8a97913cdf69e28915582149a0a19aec682e63c4
+Size (zope/XMLWidgets-0.8.3.tgz) = 11588 bytes
