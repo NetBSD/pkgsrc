@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/04/10 12:16:12 salo Exp $
+# $NetBSD: Makefile,v 1.9 2004/04/19 22:23:02 xtraeme Exp $
 
 PKGNAME=	gmplayer-${MPLAYER_PKG_VERSION}
 PKGREVISION=	5
@@ -6,6 +6,7 @@ PKGREVISION=	5
 SKIN_SITES=	http://www.mplayerhq.hu/MPlayer/Skin/		\
 		ftp://ftp.mplayerhq.hu/MPlayer/Skin/		\
 		ftp://ftp.lug.udel.edu/MPlayer/Skin/		\
+		ftp://ftp.freebsd.org/pub/FreeBSD/ports/distfiles/mplayer/ \
 		http://distro.ibiblio.org/pub/linux/distributions/sorcerer/sources/MPlayer,Skin-AlienMind/1.1/ \
 		${MASTER_SITE_LOCAL:=mplayer}
 
