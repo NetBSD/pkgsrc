@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/09/30 16:35:18 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2002/10/03 11:44:39 wiz Exp $
 #
 
 DISTNAME=	dc_gui-0.62
@@ -9,10 +9,14 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.ac2i.tzo.com/dctc/
 COMMENT=	graphical user interface for DCTC
 
+DEPENDS+=	dctc>=0.83.5:../../net/dctc
+
 GNU_CONFIGURE=	YES
 USE_BUILDLINK2=	YES
 CONFIGURE_ARGS+=	--enable-manual-db-detect
 USE_GMAKE=	YES
+
+CPPFLAGS+=	-I${BUILDLINK_PREFIX.db4}/include/db4
 
 post-configure:
 	@${ECHO} '#ifndef MSG_NOSIGNAL' >> ${WRKSRC}/config.h
