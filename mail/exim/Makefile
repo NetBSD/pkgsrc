@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2001/01/24 21:07:35 ad Exp $
+# $NetBSD: Makefile,v 1.18 2001/01/26 05:21:45 hubertf Exp $
 
 DISTNAME=	exim-3.20
 CATEGORIES=	mail net
@@ -38,7 +38,7 @@ post-install:
 	${MKDIR} ${PREFIX}/etc/rc.d
 	${SED} -e 's:@PREFIX@:${PREFIX}:' \
 	    < ${FILESDIR}/exim.sh \
-	    > ${PREFIX}/etc/rc.d/exim.sh
+	    > ${PREFIX}/etc/rc.d/exim
 	${SED} -e 's:@PREFIX@:${PREFIX}:' \
 	    < ${FILESDIR}/exim_newaliases \
 	    > ${PREFIX}/sbin/exim_newaliases

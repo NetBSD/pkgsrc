@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2000/08/14 17:31:01 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2001/01/26 05:21:44 hubertf Exp $
 #
 
 DISTNAME=	isect-1.0
@@ -33,7 +33,7 @@ post-install:
 	${SED}	-e "s#@PREFIX@#${PREFIX}#g" \
 		-e "s#@ECHO@#${ECHO}#g" \
 		${FILESDIR}/isect.sh > ${WRKDIR}/isect.sh
-	${INSTALL_SCRIPT} ${WRKDIR}/isect.sh ${PREFIX}/etc/rc.d/
+	${INSTALL_SCRIPT} ${WRKDIR}/isect.sh ${PREFIX}/etc/rc.d/isect
 
 	@PKG_PREFIX=${PREFIX} ${SH} ${PKGDIR}/INSTALL ${PKGNAME} POST-INSTALL
 
