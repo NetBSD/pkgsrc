@@ -1,0 +1,10 @@
+# $NetBSD: Makefile.Linux.i386,v 1.1.1.1 2003/12/30 22:48:32 grant Exp $
+#
+
+DISTNAME=	MozillaFirebird-0.7-i686-linux-gtk2+xft
+MASTER_SITES=	http://ftp.mozilla.org/pub/firebird/releases/0.7/
+
+PLATFORM=	linux
+MOZILLA_LIB=	${PREFIX}/lib/MozillaFirebird-gtk2-${PLATFORM}
+
+DEPENDS+=	gtk2+>=2.2:../../x11/gtk2
