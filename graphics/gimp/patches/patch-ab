@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.7 2004/04/05 22:07:27 jmmv Exp $
+
+--- configure.orig	2004-03-23 16:51:10.000000000 +0100
++++ configure
+@@ -32872,7 +32872,7 @@ fi;
+ 
+ gimpdatadir="$datadir/$PACKAGE/2.0"
+ gimpplugindir="$libdir/$PACKAGE/2.0"
+-gimpsysconfdir="$sysconfdir/$PACKAGE/2.0"
++gimpsysconfdir="$sysconfdir"
+ 
+ localedir='${prefix}/${DATADIRNAME}/locale'
+ 
