@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/02/09 17:36:19 itojun Exp $
+# $NetBSD: Makefile,v 1.2 2000/02/09 17:47:01 itojun Exp $
 
 DISTNAME=	prag-1.0pl2
 PKGNAME=	prag-1.0.2
@@ -9,12 +9,13 @@ EXTRACT_SUFX=	.shar
 MAINTAINER=	itojun@kame.net
 
 WRKSRC=		${WRKDIR}/prag-1.0
+NO_BUILD=	yes
 
 do-extract:
 	${MKDIR} ${WRKDIR}
 	(cd ${WRKDIR}; ${SH} ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX})
 
-do-patch:
+post-patch:
 	(cd ${WRKSRC}; ${MV} prag prag.orig)
 	(cd ${WRKSRC}; ${SED} -e "1s,/bin/nawk,${AWK}," < prag.orig >prag)
 
