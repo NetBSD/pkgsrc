@@ -1,0 +1,44 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/11/01 16:19:40 hubertf Exp $
+
+--- Makefile.orig	Mon Jul 17 21:26:27 2000
++++ Makefile	Wed Nov  1 14:35:32 2000
+@@ -1,4 +1,10 @@
+-all: mgl_fontinfo bdftomgl k12x12.fnt k16x16.fnt k24x24.fnt k12x10.fnt
++INSTALL=		/usr/bin/install
++INSTALL_PROGRAM=	${INSTALL} -c -s -o root -g wheel -m 555
++INSTALL_DATA=		${INSTALL} -c -o root -g wheel -m 444
++INSTALL_DATA_DIR=	${INSTALL} -d -o root -g wheel -m 755
++
++#all: mgl_fontinfo bdftomgl k12x12.fnt k16x16.fnt k24x24.fnt k12x10.fnt
++all: mgl_fontinfo bdftomgl
+ 
+ mgl_fontinfo: mgl_fontinfo.c
+ 	$(CC) -O -o mgl_fontinfo mgl_fontinfo.c
+@@ -37,6 +43,27 @@
+ 	./mgl_fontinfo -p k16x16.fnt < patch/k16x16-yen-patch
+ 	./mgl_fontinfo -p k24x24.fnt < patch/k24x24-yen-patch
+ 
++install:
++	${INSTALL_PROGRAM} mgl_fontinfo ${PREFIX}/bin/
++	${INSTALL_PROGRAM} bdftomgl ${PREFIX}/bin/
++	${INSTALL_DATA_DIR} ${PREFIX}/lib/mgl2
++	${INSTALL_DATA} k12x10.fnt ${PREFIX}/lib/mgl2
++	${INSTALL_DATA} k12x12.fnt ${PREFIX}/lib/mgl2
++	${INSTALL_DATA} k16x16.fnt ${PREFIX}/lib/mgl2
++	${INSTALL_DATA} k24x24.fnt ${PREFIX}/lib/mgl2
++	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mglfonts
++	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mglfonts/kaname
++	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mglfonts/zoro
++	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mglfonts/comment
++	${INSTALL_DATA} README ${PREFIX}/share/doc/mglfonts/
++	${INSTALL_DATA} doc/mglfont.doc ${PREFIX}/share/doc/mglfonts/
++	${INSTALL_DATA} bdf/FILES ${PREFIX}/share/doc/mglfonts/
++	${INSTALL_DATA} doc/kaname/* ${PREFIX}/share/doc/mglfonts/kaname/
++	${INSTALL_DATA} doc/zoro/* ${PREFIX}/share/doc/mglfonts/zoro/
++	${INSTALL_DATA} comment/* ${PREFIX}/share/doc/mglfonts/comment/
++	${INSTALL_DATA_DIR}  ${PREFIX}/share/misc/mglfonts
++	${INSTALL_DATA} patch/* ${PREFIX}/share/misc/mglfonts/
++	
+ 
+ clean:
+ 	rm -f mgl_fontinfo bdftomgl 
