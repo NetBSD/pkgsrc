@@ -1,0 +1,15 @@
+$NetBSD: patch-af,v 1.1.1.1 1999/08/02 05:45:01 sakamoto Exp $
+
+--- ./Makefile.in.orig	Tue Mar 23 21:10:39 1999
++++ ./Makefile.in	Wed Jul 28 11:29:10 1999
+@@ -611,10 +611,4 @@
+ # Free Software Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+ 
+-WNNDIR = Wnn
+-
+-CWNNDIR = cWnn
+-
+-KWNNDIR = kWnn
+-
+ SUBDIRS= $(WNNDIR) $(CWNNDIR) $(KWNNDIR)
+ 
