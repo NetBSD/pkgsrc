@@ -1,13 +1,13 @@
-$NetBSD: patch-al,v 1.1 2000/03/16 23:00:57 tron Exp $
+$NetBSD: patch-al,v 1.2 2001/05/20 20:52:24 rh Exp $
 
---- xmms/Makefile.in.orig	Mon Jan 31 19:44:31 2000
-+++ xmms/Makefile.in	Thu Mar 16 23:45:14 2000
-@@ -152,7 +152,7 @@
+--- xmms/Makefile.in.orig	Tue Nov 28 01:55:58 2000
++++ xmms/Makefile.in
+@@ -179,7 +179,7 @@
  DEFS = @DEFS@ -I. -I$(srcdir) -I..
  CPPFLAGS = @CPPFLAGS@
  LDFLAGS = @LDFLAGS@
 -LIBS = @LIBS@
 +LIBS = @LIBS@ @LIBMIKMOD_LIBS@ @XML_LIBS@
  xmms_OBJECTS =  bmp.o skin.o util.o output.o fft.o input.o effect.o \
- general.o visualization.o pluginenum.o playlist.o controlsocket.o \
- dock.o widget.o sbutton.o pbutton.o tbutton.o textbox.o menurow.o \
+ general.o visualization.o dga.o fullscreen.o pluginenum.o playlist.o \
+ controlsocket.o dock.o widget.o sbutton.o pbutton.o tbutton.o textbox.o \

@@ -1,10 +1,10 @@
-$NetBSD: patch-ai,v 1.2 2001/05/06 18:23:52 rh Exp $
+$NetBSD: patch-ai,v 1.3 2001/05/20 20:52:24 rh Exp $
 
---- xmms/main.c.orig	Mon Jan 31 19:35:16 2000
+--- xmms/main.c.orig	Mon Nov 20 16:45:10 2000
 +++ xmms/main.c
-@@ -34,6 +34,23 @@
- #include "libxmms/util.h"
- #include "libxmms/dga.h"
+@@ -35,6 +35,23 @@
+ #include "libxmms/dirbrowser.h"
+ #include "xmms_mini.xpm"
  
 +#ifdef __NetBSD__
 +#include <gtk/gtk.h>
@@ -23,10 +23,10 @@ $NetBSD: patch-ai,v 1.2 2001/05/06 18:23:52 rh Exp $
 +}
 +#endif
 +
- GtkWidget *mainwin, *mainwin_filesel = NULL, *mainwin_url_window = NULL;
+ GtkWidget *mainwin, *mainwin_url_window = NULL, *mainwin_dir_browser = NULL;
  GtkWidget *mainwin_jtt = NULL, *mainwin_jtf = NULL;
  GtkItemFactory *mainwin_options_menu, *mainwin_songname_menu, *mainwin_vis_menu;
-@@ -2945,7 +2962,7 @@
+@@ -3232,7 +3249,7 @@
  	gchar *filename;
  	gint i;
  	gboolean have_display = FALSE;
@@ -35,7 +35,7 @@ $NetBSD: patch-ai,v 1.2 2001/05/06 18:23:52 rh Exp $
  	struct sched_param sparam;
  
  #endif
-@@ -2988,7 +3005,7 @@
+@@ -3283,7 +3300,7 @@
  
  	if (geteuid() == 0)
  	{
@@ -44,13 +44,13 @@ $NetBSD: patch-ai,v 1.2 2001/05/06 18:23:52 rh Exp $
  		if (cfg.use_realtime)
  		{
  			sparam.sched_priority = sched_get_priority_max(SCHED_RR);
-@@ -3106,6 +3123,11 @@
- 	playlist_start_get_info_thread();
+@@ -3401,6 +3418,11 @@
  
+ 	/* enable_x11r5_session_management(argc, argv); */
  	sm_init(argc, argv);
 +
 +#ifdef __NetBSD__
-+	gtk_timeout_add (200, pth_nbschedule, NULL);
++	gtk_timeout_add (150, pth_nbschedule, NULL);
 +#endif
 +
  	gtk_main();

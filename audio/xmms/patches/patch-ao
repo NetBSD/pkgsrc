@@ -1,0 +1,16 @@
+$NetBSD: patch-ao,v 1.1 2001/05/20 20:52:25 rh Exp $
+
+--- configure.orig	Sun May 20 17:28:50 2001
++++ configure
+@@ -7339,7 +7339,11 @@
+   cat > conftest.$ac_ext <<EOF
+ #line 7341 "configure"
+ #include "confdefs.h"
++#ifdef __NetBSD__
++#error Sorry, no native wide character support functions, yet!
++#else
+ #include <$ac_hdr>
++#endif
+ EOF
+ ac_try="$ac_cpp conftest.$ac_ext >/dev/null 2>conftest.out"
+ { (eval echo configure:7346: \"$ac_try\") 1>&5; (eval $ac_try) 2>&5; }

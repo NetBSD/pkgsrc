@@ -1,13 +1,13 @@
-$NetBSD: patch-am,v 1.1 2000/08/14 14:20:59 wiz Exp $
+$NetBSD: patch-am,v 1.2 2001/05/20 20:52:24 rh Exp $
 
---- Output/OSS/Makefile.in.orig	Mon Jan 31 19:44:33 2000
-+++ Output/OSS/Makefile.in	Mon Aug 14 16:01:15 2000
-@@ -136,7 +136,7 @@
+--- Output/OSS/Makefile.in.orig	Tue Nov 28 01:56:02 2000
++++ Output/OSS/Makefile.in
+@@ -163,7 +163,7 @@
  libdir = $(plugindir)/$(OUTPUT_PLUGIN_DIR)
  
  libOSS_la_LDFLAGS = $(ossldflags)
 -libOSS_la_LIBADD = @GTK_LIBS@ @PTHREAD_LIBS@
 +libOSS_la_LIBADD = @GTK_LIBS@ @PTHREAD_LIBS@ -lossaudio
  libOSS_la_SOURCES = $(osssources)
- INCLUDES = @GTK_CFLAGS@ @OSS_CFLAGS@
+ INCLUDES = @GTK_CFLAGS@ @OSS_CFLAGS@ -I$(top_builddir)/intl
  mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs

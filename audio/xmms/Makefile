@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.17 2001/05/11 15:10:24 drochner Exp $
+# $NetBSD: Makefile,v 1.18 2001/05/20 20:52:24 rh Exp $
 # FreeBSD: ports/audio/xmms/Makefile,v 1.9 2000/02/11 01:46:12 cpiazza Exp
 
-DISTNAME=	xmms-1.0.1
-PKGNAME=	${DISTNAME}nb1
+DISTNAME=	xmms-1.2.4
 CATEGORIES=	audio
-MASTER_SITES=	ftp://ftp.xmms.org/xmms/1.0.x/ \
-		ftp://ftp.sunet.se/pub/multimedia/xmms/1.0.x/
+MASTER_SITES=	ftp://ftp.xmms.org/xmms/1.2.x/ \
+		ftp://ftp.sunet.se/pub/multimedia/xmms/1.2.x/
 
 MAINTAINER=	rh@netbsd.org
 HOMEPAGE=	http://www.xmms.org/
@@ -13,6 +12,8 @@ COMMENT=	X Multimedia System --- An audio player with a Winamp GUI
 
 DEPENDS+=	gtk+>=1.2.7:../../x11/gtk
 DEPENDS+=	libmikmod>=3.1.7:../libmikmod
+DEPENDS+=	esound>=0.2.8:../esound
+DEPENDS+=	libvorbis-*:../libvorbis
 DEPENDS+=	libxml>=1.8.5:../../textproc/libxml
 
 USE_LIBTOOL=	yes
@@ -30,6 +31,7 @@ LTCONFIG_OVERRIDE=${WRKSRC}/ltconfig
 .include "../../mk/bsd.prefs.mk"
 
 .if (${OPSYS} == NetBSD)
+CONFIGURE_ARGS+=--with-dev-dsp=/dev/sound
 CPPFLAGS+=	-I${WRKDIR}
 
 .if (${MACHINE_ARCH} == i386)
