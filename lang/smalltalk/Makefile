@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2002/04/06 16:55:15 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.11 2002/04/11 12:39:44 wiz Exp $
 #
 
 DISTNAME=	smalltalk-1.95.10
@@ -23,7 +23,7 @@ CONFIGURE_ARGS+=	--without-glib --without-gtk
 USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
-ONLY_FOR_PLATFORM=	*-*-i386 *-*-sparc *-*-ppc
+ONLY_FOR_PLATFORM=	*-*-i386 *-*-sparc *-*-powerpc
 
 .include "../../devel/readline/buildlink.mk"
 .include "../../lang/tcl/buildlink.mk"
