@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.xemacs,v 1.1 2001/11/01 01:03:04 zuntum Exp $
+@comment $NetBSD: PLIST.xemacs,v 1.2 2001/12/11 15:49:26 wiz Exp $
 bin/base64-decode
 bin/base64-encode
 bin/qp-decode
@@ -106,6 +106,8 @@ lib/xemacs/xemacs-packages/lisp/vm/tapestry.elc
 lib/xemacs/xemacs-packages/lisp/vm/vm-autoload.el
 lib/xemacs/xemacs-packages/lisp/vm/vm-autoload.elc
 lib/xemacs/xemacs-packages/lisp/vm/vm-byteopts.el
+lib/xemacs/xemacs-packages/lisp/vm/vm-crypto.el
+lib/xemacs/xemacs-packages/lisp/vm/vm-crypto.elc
 lib/xemacs/xemacs-packages/lisp/vm/vm-delete.el
 lib/xemacs/xemacs-packages/lisp/vm/vm-delete.elc
 lib/xemacs/xemacs-packages/lisp/vm/vm-digest.el
