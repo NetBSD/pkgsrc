@@ -1,33 +1,31 @@
-$NetBSD: patch-ac,v 1.9 2001/05/14 14:52:38 jlam Exp $
+$NetBSD: patch-ac,v 1.10 2002/04/04 07:48:25 jlam Exp $
 
---- doc/Makefile.orig	Sat Jan  6 21:03:22 2001
+--- doc/Makefile.orig	Wed Aug 29 15:14:39 2001
 +++ doc/Makefile
-@@ -37,7 +37,7 @@
+@@ -68,7 +68,7 @@
  
  install: all installdirs
  ifdef found_html
 -	gzip -d -c postgres.tar.gz | ( cd $(DESTDIR)$(docdir)/html && $(TAR) xf - )
-+	gzip -d -c postgres.tar.gz | ( cd $(DESTDIR)$(docdir) && $(TAR) xf - )
++	gzip -d -c postgres.tar.gz | ( cd $(DESTDIR)$(htmldir) && $(TAR) xf - )
  endif
  ifdef found_man
- 	gzip -d -c man.tar.gz | ( cd $(DESTDIR)$(mandir) && $(TAR) xf - )
-@@ -45,12 +45,17 @@
- 
+ 	for file in man1/*.1 man$(sqlmansectnum)/*.$(sqlmansect) ; do \
+@@ -79,7 +79,7 @@
  
  installdirs:
--	$(mkinstalldirs) $(DESTDIR)$(mandir) $(DESTDIR)$(docdir)/html
-+ifdef found_html
-+	$(mkinstalldirs) $(DESTDIR)$(docdir)
-+endif
-+ifdef found_man
-+	$(mkinstalldirs) $(DESTDIR)$(mandir)
-+endif
- 
+ ifdef found_html
+-	$(mkinstalldirs) $(DESTDIR)$(docdir)/html
++	$(mkinstalldirs) $(DESTDIR)$(htmldir)
+ endif
+ ifdef found_man
+ 	$(mkinstalldirs) $(addprefix $(DESTDIR)$(mandir)/man, 1 $(sqlmansectnum))
+@@ -88,7 +88,7 @@
  
  uninstall:
  ifdef found_html
 -	-rm -f $(addprefix $(DESTDIR)$(docdir)/html/, $(shell gunzip -c $(srcdir)/postgres.tar.gz | tar tf -))
-+	-rm -f $(addprefix $(DESTDIR)$(docdir)/, $(shell gunzip -c $(srcdir)/postgres.tar.gz | tar tf -))
++	-rm -f $(addprefix $(DESTDIR)$(htmldir)/, $(shell gunzip -c $(srcdir)/postgres.tar.gz | tar tf -))
  endif
  ifdef found_man
- 	-rm -f $(addprefix $(DESTDIR)$(mandir)/, $(shell gunzip -c $(srcdir)/man.tar.gz | tar tf -))
+ 	-rm -f $(addprefix $(DESTDIR)$(mandir)/, $(shell gunzip -c $(srcdir)/man.tar.gz | tar tf - | sed -e 's,man$(sqlmansect_dummy)/,man$(sqlmansectnum)/,' -e 's/.$(sqlmansect_dummy)$$/.$(sqlmansect)/'))

@@ -1,14 +1,12 @@
-@comment $NetBSD: PLIST,v 1.2 2002/02/15 10:12:34 skrll Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/04/04 07:41:05 jlam Exp $
 bin/postgres
 bin/postmaster
 etc/rc.d/pgsql
 man/man1/postgres.1
 man/man1/postmaster.1
-share/postgresql/global.bki
-share/postgresql/global.description
+share/postgresql/postgres.bki
+share/postgresql/postgres.description
 share/postgresql/pg_hba.conf.sample
 share/postgresql/pg_ident.conf.sample
 share/postgresql/postgresql.conf.sample
-share/postgresql/template1.bki
-share/postgresql/template1.description
-@unexec ${RMDIR} -p %D/share/postgresql 2>/dev/null || true
+@unexec ${RMDIR} -p %D/share/postgresql 2>/dev/null || ${TRUE}

@@ -1,22 +1,24 @@
-# $NetBSD: Makefile,v 1.18 2001/12/31 20:53:53 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2002/04/04 07:41:05 jlam Exp $
 
-.include "../../databases/postgresql/Makefile.common"
-.include "../../databases/postgresql/Makefile.ssl"
-
-PKGNAME=		postgresql-server-${PG_BASE_VERS}
+PKGNAME=		postgresql-server-${BASE_VERS}
 COMMENT=		PostgreSQL database server programs
 
-USE_BUILDLINK_ONLY=			# defined
-BUILDLINK_DEPENDS.postgresql-lib=	postgresql-lib>=${PG_BASE_VERS}
-
-DEPENDS+=		postgresql-client>=${PG_BASE_VERS}:../../databases/postgresql-client
-
-LIBS+=			${LIBGETOPT}
+DEPENDS+=		postgresql-client>=${BASE_VERS}:../../databases/postgresql-client
 
 # mips has no TAS implementation
 NOT_FOR_PLATFORM=	*-*-mips
 
+USE_BUILDLINK_ONLY=	YES
+
+.include "../../databases/postgresql/Makefile.common"
+
+CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_DIR}
 DIRS_TO_BUILD=		src/backend
+
+.if defined(USE_PAM)
+.include "../../security/PAM/buildlink.mk"
+CONFIGURE_ARGS+=	--with-pam
+.endif
 
 # PGUSER	username of the database administrator
 # PGGROUP	group of the database administrator
