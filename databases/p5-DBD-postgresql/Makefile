@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.20 2002/10/27 19:39:01 seb Exp $
+# $NetBSD: Makefile,v 1.21 2003/01/05 20:14:24 jlam Exp $
 #
 
 VER=		1.13
 DISTNAME=	DBD-Pg-${VER}
 PKGNAME=	p5-DBD-postgresql-${VER}
-PKGREVISION=	2
+PKGREVISION=	3
 SVR4_PKGNAME=	p5dpo
 CATEGORIES=	databases perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/JBAKER/}
@@ -19,7 +19,7 @@ PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/DBD/Pg/.packlist
 PGUSER?=	pgsql
 PGPREFIX=	${PREFIX}/${PGUSER}
 
-MAKE_ENV+=	POSTGRES_INCLUDE=${BUILDLINK_PREFIX.postgresql-lib}/include/pgsql
+MAKE_ENV+=	POSTGRES_INCLUDE=${BUILDLINK_PREFIX.postgresql-lib}/include/postgresql
 MAKE_ENV+=	POSTGRES_LIB=${BUILDLINK_PREFIX.postgresql-lib}/lib
 
 .include "../../databases/p5-DBI/buildlink2.mk"
