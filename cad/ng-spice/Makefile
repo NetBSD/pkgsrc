@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/06/11 06:34:20 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2001/06/20 01:49:10 jlam Exp $
 #
 
 DISTNAME=	ng-spice-rework-13
@@ -10,20 +10,18 @@ MAINTAINER=	dmcmahill@netbsd.org
 HOMEPAGE=	http://ieee.ing.uniroma1.it/ngspice/
 COMMENT=	Next generation circuit simulation program
 
-.if !exists(/usr/include/getopt.h)
-DEPENDS+=       libgetopt-*:../../devel/libgetopt
-LDFLAGS+=       -Wl,-R${LOCALBASE}/lib -L${LOCALBASE}/lib -lgetopt
-CPPFLAGS+=	-I${LOCALBASE}/include
-.endif
+CONFLICTS+=		spice-*
 
 USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
-USE_CURSES=             YES
-REPLACE_NCURSES=        configure configure.in
-GNU_CONFIGURE=		yes
+
+GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--disable-debug
-LDFLAGS+=       -Wl,-R${X11BASE}/lib -L${X11BASE}/lib
 
-CONFLICTS+=		spice-*
+USE_X11=		YES
+#USE_CURSES=		YES
+USE_BUILDLINK_ONLY=	YES
 
+.include "../../devel/libgetopt/buildlink.mk"
+.include "../../devel/ncurses/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
