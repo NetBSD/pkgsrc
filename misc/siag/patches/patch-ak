@@ -1,0 +1,15 @@
+$NetBSD: patch-ak,v 1.1 1999/10/21 15:15:03 agc Exp $
+
+Use the correct documentation directory.
+
+--- xfiler/Makefile.in	1999/10/21 15:10:40	1.1
++++ xfiler/Makefile.in	1999/10/21 15:10:53
+@@ -85,7 +85,7 @@
+ 
+ xfilerdir = $(datadir)/siag/xfiler
+ 
+-docdir = $(prefix)/doc/siag/xfiler
++docdir = $(prefix)/share/doc/siag/xfiler
+ 
+ doc_DATA = xfiler.html README CHANGES TODO
+ 

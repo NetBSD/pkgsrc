@@ -1,0 +1,15 @@
+$NetBSD: patch-ah,v 1.1 1999/10/21 15:15:02 agc Exp $
+
+Use the correct directory for docs.
+
+--- plugins/Makefile.in	1999/10/21 15:05:37	1.1
++++ plugins/Makefile.in	1999/10/21 15:05:57
+@@ -83,7 +83,7 @@
+ 
+ bindir = $(libexecdir)/siag/plugins
+ 
+-docdir = $(prefix)/doc/siag/plugins
++docdir = $(prefix)/share/doc/siag/plugins
+ 
+ doc_DATA = README CHANGES
+ 
