@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 10:23:41 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/18 12:14:40 agc Exp $
 
-MD5 (xmcd-2.6.tar.gz) = ce3208e21d8e37059e44ce9310d08f5f
+SHA1 (xmcd-2.6.tar.gz) = 486e48381d1f24a173815a9283d89e40fe73c90e
+Size (xmcd-2.6.tar.gz) = 553934 bytes
 SHA1 (patch-aa) = 868ecceae5e48a320161c21bbf4db4301fd9467e
 SHA1 (patch-ab) = cfd1ff49451ad6d0ddbf80ea9eb4c3e5ed9a379a
 SHA1 (patch-ac) = b0748c7be1a1f9d8f40c970b3a00414ffcc9f0b4
