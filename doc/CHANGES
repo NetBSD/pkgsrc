@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4527 2004/01/20 23:55:55 rh Exp $
+$NetBSD: CHANGES,v 1.4528 2004/01/21 00:54:43 abs Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -369,3 +369,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Update cpuflags to 0.60 [abs 2004-01-20]
 	Updated spamprobe to 0.9g2 [hubertf 2004-01-21]
 	Updated evolution to 1.4.5nb2 [rh 2004-01-21]
+	Update cpuflags to 0.61 [abs 2004-01-21]
+
