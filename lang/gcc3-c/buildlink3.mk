@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2004/02/05 03:45:13 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2004/02/05 20:58:41 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GCC3C_BUILDLINK3_MK:=	${GCC3C_BUILDLINK3_MK}+
@@ -11,7 +11,13 @@ BUILDLINK_DEPENDS+=	gcc3c
 
 .if !empty(GCC3C_BUILDLINK3_MK:M+)
 .  if defined(GCC3_INSTALLTO_SUBPREFIX)
+#
+# "gcc3" is the directory named in pkgsrc/lang/gcc3-c/Makefile.common"
+# as GCC3_DEFAULT_SUBPREFIX.
+#
+.    if ${GCC3_INSTALLTO_SUBPREFIX} != "gcc3"
 GCC3_PKGMODIF=			_${GCC3_INSTALLTO_SUBPREFIX}
+.    endif
 .  endif
 BUILDLINK_PACKAGES+=		gcc3c
 BUILDLINK_DEPENDS.gcc3c+=	gcc3${GCC3_PKGMODIF}-c>=${_GCC_REQD}
