@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/10/24 06:21:18 martti Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/05/09 08:02:44 martti Exp $
 bin/doxygen
 bin/doxysearch
 bin/doxytag
@@ -285,12 +285,15 @@ share/doc/doxygen/html/index.hhc
 share/doc/doxygen/html/index.hhk
 share/doc/doxygen/html/index.hhp
 share/doc/doxygen/html/index.html
+share/doc/doxygen/html/infoflow.gif
 share/doc/doxygen/html/install.html
 share/doc/doxygen/html/installdox_usage.html
 share/doc/doxygen/html/langhowto.html
 share/doc/doxygen/html/lists.html
 share/doc/doxygen/html/output.html
 share/doc/doxygen/html/pages.html
+share/doc/doxygen/html/perlmod.html
+share/doc/doxygen/html/perlmod_tree.html
 share/doc/doxygen/html/preprocessing.html
 share/doc/doxygen/html/starting.html
 share/doc/doxygen/html/trouble.html
