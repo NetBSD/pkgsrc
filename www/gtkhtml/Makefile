@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/04/06 22:21:09 rh Exp $
+# $NetBSD: Makefile,v 1.6 2001/04/12 19:45:00 hubertf Exp $
 #
 
 DISTNAME=	gtkhtml-0.8.3
@@ -14,6 +14,7 @@ DEPENDS+=	glibwww-*:../../www/glibwww
 DEPENDS+=	bonobo>=0.37:../../devel/bonobo
 DEPENDS+=	control-center>=1.4.0:../../x11/controlcenter
 DEPENDS+=	gnome-print>=0.28:../../print/gnome-print
+DEPENDS+=	libghttp>=1.0:../../www/libghttp
 
 GNU_CONFIGURE=	YES
 USE_X11BASE=	YES
