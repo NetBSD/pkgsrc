@@ -1,7 +1,7 @@
-$NetBSD: patch-am,v 1.1.1.1 2004/01/26 15:11:49 jmmv Exp $
+$NetBSD: patch-am,v 1.2 2004/07/30 09:57:54 salo Exp $
 
---- lib/loader/win32.c.orig	Wed Jan 31 21:23:25 2001
-+++ lib/loader/win32.c
+--- lib/loader/win32.c.orig	2001-01-31 21:23:25.000000000 +0100
++++ lib/loader/win32.c	2004-07-30 11:54:45.000000000 +0200
 @@ -696,7 +696,7 @@
  	cachedsi.wProcessorLevel		= 5; /* pentium */
  	cachedsi.wProcessorRevision		= 0x0101;
@@ -11,3 +11,31 @@ $NetBSD: patch-am,v 1.1.1.1 2004/01/26 15:11:49 jmmv Exp $
          cachedsi.dwProcessorType = PROCESSOR_INTEL_PENTIUM;
          cachedsi.wProcessorLevel= 5;
  	PF[PF_COMPARE_EXCHANGE_DOUBLE] = TRUE;
+@@ -1094,11 +1094,11 @@
+ {
+ #warning FIXME
+     if(s1)
+-    dbgprintf("MultiByteToWideChar(codepage %d, flags 0x%x, string 0x%x='%s',
++    dbgprintf("MultiByteToWideChar(codepage %d, flags 0x%x, string 0x%x='%s', \
+ 	size %d, dest buffer 0x%x, dest size %d) => 1 ( L\"\\0\" )\n",
+ 	    v1, v2, s1, s1, siz1, s2, siz2);
+     else
+-    dbgprintf("MultiByteToWideChar(codepage %d, flags 0x%x, string NULL,
++    dbgprintf("MultiByteToWideChar(codepage %d, flags 0x%x, string NULL, \
+ 	size %d, dest buffer 0x%x, dest size %d) => 1 ( L\"\\0\" )\n",
+ 	    v1, v2, siz1, s2, siz2);
+     
+@@ -1605,11 +1605,11 @@
+ {
+     long result=CreateFileMappingA(hFile, lpAttr, flProtect, dwMaxHigh, dwMaxLow, name);
+     if(!name)
+-    dbgprintf("CreateFileMappingA(file 0x%x, lpAttr 0x%x, 
++    dbgprintf("CreateFileMappingA(file 0x%x, lpAttr 0x%x, \
+ 	flProtect 0x%x, dwMaxHigh 0x%x, dwMaxLow 0x%x, name 0) => %d\n",
+ 	    hFile, lpAttr, flProtect, dwMaxHigh, dwMaxLow, result);
+     else
+-    dbgprintf("CreateFileMappingA(file 0x%x, lpAttr 0x%x, 
++    dbgprintf("CreateFileMappingA(file 0x%x, lpAttr 0x%x, \
+ 	flProtect 0x%x, dwMaxHigh 0x%x, dwMaxLow 0x%x, name 0x%x='%s') => %d\n",
+ 	    hFile, lpAttr, flProtect, dwMaxHigh, dwMaxLow, name, name, result);    
+     return result;
