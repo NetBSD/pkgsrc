@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2004/04/19 17:58:25 drochner Exp $
+# $NetBSD: Makefile,v 1.19 2004/05/01 13:50:25 kristerw Exp $
 #
 
 DISTNAME=	vcdimager-0.7.20
@@ -18,6 +18,7 @@ INFO_FILES=	vcd-info.info vcdimager.info vcdxrip.info
 PKGCONFIG_OVERRIDE+= libvcdinfo.pc.in
 
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
 .include "../../misc/libcdio/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
