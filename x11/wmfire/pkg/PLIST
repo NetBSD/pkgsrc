@@ -1,7 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/09/24 00:33:10 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/05/10 13:16:17 agc Exp $
+bin/fireload_cpu
+bin/fireload_file
 bin/wmfire
 share/doc/wmfire/README
 share/doc/wmfire/AUTHORS
 share/doc/wmfire/COPYING
 share/doc/wmfire/CREDITS
 share/doc/wmfire/INSTALL
+@dirrm share/doc/wmfire
