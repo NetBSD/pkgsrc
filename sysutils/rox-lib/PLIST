@@ -1,31 +1,85 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/06/01 19:03:55 cjep Exp $
-share/rox/ROX-Lib/AppIcon.xpm
-share/rox/ROX-Lib/AppInfo.xml
-share/rox/ROX-Lib/AppRun
-share/rox/ROX-Lib/Help/Changes
-share/rox/ROX-Lib/Help/Options
-share/rox/ROX-Lib/Help/README
-share/rox/ROX-Lib/Help/findrox.py
-share/rox/ROX-Lib/Help/python
-share/rox/ROX-Lib/bin/savebox
-share/rox/ROX-Lib/python/rox/.cvsignore
-share/rox/ROX-Lib/python/rox/Menu.py
-share/rox/ROX-Lib/python/rox/MultipleChoice.py
-share/rox/ROX-Lib/python/rox/Options.py
-share/rox/ROX-Lib/python/rox/OptionsBox.py
-share/rox/ROX-Lib/python/rox/SaveArea.py
-share/rox/ROX-Lib/python/rox/SaveBox.py
-share/rox/ROX-Lib/python/rox/Toolbar.py
-share/rox/ROX-Lib/python/rox/XDSLoader.py
-share/rox/ROX-Lib/python/rox/__init__.py
-share/rox/ROX-Lib/python/rox/choices.py
-share/rox/ROX-Lib/python/rox/filer.py
-share/rox/ROX-Lib/python/rox/loader.py
-share/rox/ROX-Lib/python/rox/options.py
-share/rox/ROX-Lib/python/rox/support.py
-share/rox/ROX-Lib/python/rox/xml_loader.py
-@dirrm share/rox/ROX-Lib/python/rox
-@dirrm share/rox/ROX-Lib/python
-@dirrm share/rox/ROX-Lib/bin
-@dirrm share/rox/ROX-Lib/Help
-@dirrm share/rox/ROX-Lib
+@comment $NetBSD: PLIST,v 1.2 2005/03/23 10:20:10 rxg Exp $
+share/rox/ROX-Lib2/.DirIcon
+share/rox/ROX-Lib2/AppInfo.xml
+share/rox/ROX-Lib2/AppRun
+share/rox/ROX-Lib2/Help/COPYING
+share/rox/ROX-Lib2/Help/Changes
+share/rox/ROX-Lib2/Help/Errors
+share/rox/ROX-Lib2/Help/README
+share/rox/ROX-Lib2/Help/findrox.py
+share/rox/ROX-Lib2/Help/python/rox.AppInfo.html
+share/rox/ROX-Lib2/Help/python/rox.InfoWin.html
+share/rox/ROX-Lib2/Help/python/rox.Menu.html
+share/rox/ROX-Lib2/Help/python/rox.OptionsBox.html
+share/rox/ROX-Lib2/Help/python/rox.applet.html
+share/rox/ROX-Lib2/Help/python/rox.basedir.html
+share/rox/ROX-Lib2/Help/python/rox.choices.html
+share/rox/ROX-Lib2/Help/python/rox.debug.html
+share/rox/ROX-Lib2/Help/python/rox.filer.html
+share/rox/ROX-Lib2/Help/python/rox.fileutils.html
+share/rox/ROX-Lib2/Help/python/rox.html
+share/rox/ROX-Lib2/Help/python/rox.i18n.html
+share/rox/ROX-Lib2/Help/python/rox.icon_theme.html
+share/rox/ROX-Lib2/Help/python/rox.loading.html
+share/rox/ROX-Lib2/Help/python/rox.master_proxy.html
+share/rox/ROX-Lib2/Help/python/rox.mime.html
+share/rox/ROX-Lib2/Help/python/rox.mime_handler.html
+share/rox/ROX-Lib2/Help/python/rox.options.html
+share/rox/ROX-Lib2/Help/python/rox.processes.html
+share/rox/ROX-Lib2/Help/python/rox.proxy.html
+share/rox/ROX-Lib2/Help/python/rox.saving.html
+share/rox/ROX-Lib2/Help/python/rox.su.html
+share/rox/ROX-Lib2/Help/python/rox.suchild.html
+share/rox/ROX-Lib2/Help/python/rox.tasks.html
+share/rox/ROX-Lib2/MakeDist
+share/rox/ROX-Lib2/Messages/dist
+share/rox/ROX-Lib2/Messages/fr.gmo
+share/rox/ROX-Lib2/Messages/fr.po
+share/rox/ROX-Lib2/Messages/it.gmo
+share/rox/ROX-Lib2/Messages/it.po
+share/rox/ROX-Lib2/Messages/update-po
+share/rox/ROX-Lib2/Messages/zh_CN.gmo
+share/rox/ROX-Lib2/Messages/zh_CN.po
+share/rox/ROX-Lib2/Messages/zh_TW.gmo
+share/rox/ROX-Lib2/Messages/zh_TW.po
+share/rox/ROX-Lib2/python/make_docs.py
+share/rox/ROX-Lib2/python/rox/AppInfo.py
+share/rox/ROX-Lib2/python/rox/InfoWin.py
+share/rox/ROX-Lib2/python/rox/Menu.py
+share/rox/ROX-Lib2/python/rox/OptionsBox.py
+share/rox/ROX-Lib2/python/rox/__init__.py
+share/rox/ROX-Lib2/python/rox/applet.py
+share/rox/ROX-Lib2/python/rox/basedir.py
+share/rox/ROX-Lib2/python/rox/choices.py
+share/rox/ROX-Lib2/python/rox/debug.py
+share/rox/ROX-Lib2/python/rox/filer.py
+share/rox/ROX-Lib2/python/rox/fileutils.py
+share/rox/ROX-Lib2/python/rox/i18n.py
+share/rox/ROX-Lib2/python/rox/icon_theme.py
+share/rox/ROX-Lib2/python/rox/loading.py
+share/rox/ROX-Lib2/python/rox/master_proxy.py
+share/rox/ROX-Lib2/python/rox/mime.py
+share/rox/ROX-Lib2/python/rox/mime_handler.py
+share/rox/ROX-Lib2/python/rox/options.py
+share/rox/ROX-Lib2/python/rox/processes.py
+share/rox/ROX-Lib2/python/rox/proxy.py
+share/rox/ROX-Lib2/python/rox/saving.py
+share/rox/ROX-Lib2/python/rox/su.py
+share/rox/ROX-Lib2/python/rox/suchild.py
+share/rox/ROX-Lib2/python/rox/suchild.sh
+share/rox/ROX-Lib2/python/rox/tasks.py
+share/rox/ROX-Lib2/tests/python/testbasedir.py
+share/rox/ROX-Lib2/tests/python/testchoices.py
+share/rox/ROX-Lib2/tests/python/testmenu.py
+share/rox/ROX-Lib2/tests/python/testoptions.py
+share/rox/ROX-Lib2/tests/python/testproxy.py
+share/rox/ROX-Lib2/tests/python/testsu.py
+share/rox/ROX-Lib2/tests/python/testtasks.py
+@dirrm share/rox/ROX-Lib2/tests/python
+@dirrm share/rox/ROX-Lib2/tests
+@dirrm share/rox/ROX-Lib2/python/rox
+@dirrm share/rox/ROX-Lib2/python
+@dirrm share/rox/ROX-Lib2/Messages
+@dirrm share/rox/ROX-Lib2/Help/python
+@dirrm share/rox/ROX-Lib2/Help
+@dirrm share/rox/ROX-Lib2
