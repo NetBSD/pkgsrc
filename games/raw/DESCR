@@ -1,5 +1,0 @@
-raw is a rewrite of the engine used in the action/adventure game
-Another World/Out of this World released for DOS and Amiga. This
-program is designed as a cross-platform replacement for the original
-executable and uses the SDL library.  You will need the data files
-from the DOS version of the game to play.
