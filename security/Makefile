@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.48 2000/10/31 01:19:36 hubertf Exp $
+# $NetBSD: Makefile,v 1.49 2000/11/10 11:35:49 itojun Exp $
 # FreeBSD Id: Makefile,v 1.23 1997/11/09 10:17:02 asami Exp
 #
 
+    SUBDIR += PAM
     SUBDIR += aide
     SUBDIR += amavis
     SUBDIR += audit-packages
@@ -17,7 +18,10 @@
     SUBDIR += kth-krb4
     SUBDIR += libcrack
     SUBDIR += libident
+    SUBDIR += libmcrypt
     SUBDIR += libnasl
+    SUBDIR += mcrypt
+    SUBDIR += mhash
     SUBDIR += nessus
     SUBDIR += nessus-core
     SUBDIR += nessus-libraries
@@ -28,7 +32,6 @@
     SUBDIR += p5-Digest-MD5
     SUBDIR += p5-MD5
     SUBDIR += p5-SHA
-    SUBDIR += PAM
     SUBDIR += pam-ldap
     SUBDIR += pgp2
     SUBDIR += pgp5
@@ -42,9 +45,9 @@
     SUBDIR += smtpd
     SUBDIR += srp_client
     SUBDIR += ssh
-    SUBDIR += ssh6
     SUBDIR += ssh-askpass
     SUBDIR += ssh-ip-tunnel
+    SUBDIR += ssh6
     SUBDIR += ssldump
     SUBDIR += stunnel
     SUBDIR += sudo
