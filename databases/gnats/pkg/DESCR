@@ -1,0 +1,24 @@
+	GNATS - GNU Problem Report Management System
+
+This directory contains GNATS, a problem tracking system written to
+help report on, and track, problem reports or bugs. GNATS is currently
+in use at Cygnus to help track all incoming bug reports.  There are
+many concepts or approaches to GNATS which are only useful to
+organizations which track bugs related by customers as well as by bug
+type.
+
+You will want to add a user entry to your /etc/passwd file for the user-id
+that owns gnats-related databases on your server. Something of the form:
+
+    gnats:*:61:61:GNATS database owner:/usr/pkg/share/gnats/gnats-db:/bin/sh
+
+should do just fine (put it in your ftpusers file!). Then add the following
+line to /etc/inetd.conf and restart inetd:
+
+    support stream tcp nowait gnats /usr/pkg/libexec/gnats/gnatsd gnatsd
+
+Add something like this into the crontab to process incoming bug reports:
+
+    */5 * * * * /usr/pkg/libexec/gnats/queue-pr -r
+
+Don't forget to run /usr/pkg/libexec/gnats/mkcat as gnats.
