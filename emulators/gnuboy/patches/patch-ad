@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.1.1.1 2001/05/30 11:13:18 agc Exp $
+$NetBSD: patch-ad,v 1.2 2003/02/14 20:06:02 salo Exp $
 
---- sys/oss/oss.c.orig	Sun Mar 25 08:17:38 2001
+--- sys/oss/oss.c.orig	Sun Sep 23 14:01:10 2001
 +++ sys/oss/oss.c
-@@ -6,6 +6,12 @@
+@@ -7,6 +7,12 @@ char *strdup();
  #include <sys/stat.h>
  #include <fcntl.h>
  
