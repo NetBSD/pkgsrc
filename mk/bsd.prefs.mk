@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.59 2001/09/18 21:30:06 agc Exp $
+# $NetBSD: bsd.prefs.mk,v 1.60 2001/09/21 15:28:35 tron Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -93,6 +93,12 @@ LOWER_ARCH?=		${MACHINE_GNU_ARCH}
 MACHINE_PLATFORM?=	${OPSYS}-${OS_VERSION}-${MACHINE_ARCH}
 MACHINE_GNU_PLATFORM?=	${LOWER_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}
 
+# Needed on NetBSD and SunOS (zoularis) to prevent an "install:" target
+# from being created in bsd.own.mk.
+NEED_OWN_INSTALL_TARGET=no
+
+.include <bsd.own.mk>
+
 # include the defaults file
 .if exists(${.CURDIR}/../../mk/bsd.pkg.defaults.mk)
 .include "${.CURDIR}/../../mk/bsd.pkg.defaults.mk"
@@ -101,12 +107,6 @@ MACHINE_GNU_PLATFORM?=	${LOWER_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}
 .elif exists(${.CURDIR}/mk/bsd.pkg.defaults.mk)
 .include "${.CURDIR}/mk/bsd.pkg.defaults.mk"
 .endif
-
-# Needed on NetBSD and SunOS (zoularis) to prevent an "install:" target
-# from being created in bsd.own.mk.
-NEED_OWN_INSTALL_TARGET=no
-
-.include <bsd.own.mk>
 
 # /usr/share/mk/bsd.own.mk on NetBSD 1.3 does not define OBJECT_FMT
 .if ${MACHINE_PLATFORM:MNetBSD-1.3*} != ""
