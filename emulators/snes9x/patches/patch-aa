@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.8 2002/08/15 00:16:36 kristerw Exp $
+$NetBSD: patch-aa,v 1.9 2002/12/30 21:40:11 kristerw Exp $
 --- Makefile.orig	Tue Sep 18 08:03:58 2001
-+++ Makefile	Thu Aug 15 02:00:53 2002
++++ Makefile	Mon Dec 30 21:14:12 2002
 @@ -1,14 +1,14 @@
 -ZSNESFX=1
 -ZSNESC4=1
@@ -42,7 +42,7 @@ $NetBSD: patch-aa,v 1.8 2002/08/15 00:16:36 kristerw Exp $
  SOUNDDEFINES=-DSPC700_C
  endif
  
-@@ -58,6 +65,16 @@
+@@ -58,6 +65,20 @@
  KREEDOBJ=2xsai.o
  endif
  
@@ -56,10 +56,14 @@ $NetBSD: patch-aa,v 1.8 2002/08/15 00:16:36 kristerw Exp $
 +endif
 +endif
 +
++ifdef _ASM_UNDERBARS
++EXTRADEFINES+=-D_ASM_UNDERBARS
++endif
++
  OBJECTS=$(CPUOBJ) $(SOUNDOBJ) apudebug.o $(FXOBJ) $(C4OBJ) \
  	cpu.o sa1.o debug.o sdd1.o tile.o srtc.o \
  	gfx.o memmap.o snaporig.o clip.o dsp1.o \
-@@ -81,9 +98,10 @@
+@@ -81,9 +102,10 @@
  UNZIPDEFINES=-DUNZIP_SUPPORT
  endif
  
@@ -72,7 +76,7 @@ $NetBSD: patch-aa,v 1.8 2002/08/15 00:16:36 kristerw Exp $
  endif
  
  ifdef GLIDE
-@@ -113,9 +131,13 @@
+@@ -113,9 +135,13 @@
  CC = gcc
  NASM = nasm
  
@@ -87,7 +91,7 @@ $NetBSD: patch-aa,v 1.8 2002/08/15 00:16:36 kristerw Exp $
  
  #OPTIMISE=-g -fno-exceptions
  #-DMITSHM 
-@@ -124,10 +146,8 @@
+@@ -124,10 +150,8 @@
  -Ii386 \
  -I. \
  -Iunzip \
@@ -98,16 +102,17 @@ $NetBSD: patch-aa,v 1.8 2002/08/15 00:16:36 kristerw Exp $
  -DCPU_SHUTDOWN \
  -DSPC700_SHUTDOWN \
  -DOLD_COLOUR_BLENDING \
-@@ -142,7 +162,7 @@
+@@ -142,7 +166,8 @@
  $(OPENGLDEFINES) \
  $(GUIDEFINES) \
  $(KREEDDEFINES) \
 --DNO_INLINE_SET_GET
-+$(USBJOYDEFINES)
++$(USBJOYDEFINES) \
++$(EXTRADEFINES)
  
  #-DSOUND
  #-DDEBUGGER
-@@ -154,9 +174,9 @@
+@@ -154,9 +179,9 @@
  CFLAGS=$(CCFLAGS)
  
  .SUFFIXES: .o .cpp .c .cc .h .m .i .S .asm .obj
@@ -119,7 +124,7 @@ $NetBSD: patch-aa,v 1.8 2002/08/15 00:16:36 kristerw Exp $
  
  #ggisnes9x
  #xf86snes9x
-@@ -182,7 +202,7 @@
+@@ -182,7 +207,7 @@
  	./offsets >i386/offsets.h
  
  snes9x: $(OBJECTS) unix/x11.o $(GLIDEOBJS) $(OPENGLOBJS) $(GUIOBJS) $(KREEDOBJ)
@@ -128,12 +133,12 @@ $NetBSD: patch-aa,v 1.8 2002/08/15 00:16:36 kristerw Exp $
  
  ssnes9x: $(OBJECTS) unix/svga.o $(GLIDEOBJS) 
  	$(CCC) $(INCLUDES) -o $@ $(OBJECTS) $(GLIDEOBJS) unix/svga.o $(LDLIBS) $(GLIDELIBS) -lvga -lvgagl -lz $(EXTRALIBS) -lm
-@@ -212,7 +232,7 @@
+@@ -212,7 +237,7 @@
  	$(CCC) $(INCLUDES) -c -E $(CCFLAGS) $*.S -o $@
  
  .asm.o:
 -	$(NASM) -f elf $(FXDEFINES) -i. -ii386 -o $@ $*.asm
-+	$(NASM) -f ${FILEFORMAT} $(FXDEFINES) -i. -ii386 -o $@ $*.asm
++	$(NASM) -f ${FILEFORMAT} $(FXDEFINES) $(EXTRADEFINES) -i. -ii386 -o $@ $*.asm
  
  .obj.o:
  	cp $*.obj $*.o
