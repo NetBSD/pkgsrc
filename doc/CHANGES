@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.251 2002/10/14 10:37:42 skrll Exp $
+$NetBSD: CHANGES,v 1.252 2002/10/14 12:15:05 skrll Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3255,3 +3255,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated kdesdk to 3.0.4 [skrll 2002-10-14]
 	Updated kdelibdocs to 3.0.4 [skrll 2002-10-14]
 	Updated kde to 3.0.4 [skrll 2002-10-14]
+	Updated pth to 1.4.1nb3 [skrll 2002-10-14]
