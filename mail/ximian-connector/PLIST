@@ -1,9 +1,67 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/03/22 16:41:48 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/03/26 16:22:19 jmmv Exp $
 bin/ximian-connector-setup-2.2
 lib/bonobo/servers/GNOME_Evolution_Exchange_Storage_2.2.server
 lib/evolution-data-server-1.2/camel-providers/libcamelexchange.la
 lib/evolution-data-server-1.2/camel-providers/libcamelexchange.urls
+lib/evolution/2.2/libexchange.la
 libexec/evolution/2.2/evolution-exchange-storage
+share/doc/ximian-connector/ximian-connector/E2kContext.html
+share/doc/ximian-connector/ximian-connector/E2kGlobalCatalog.html
+share/doc/ximian-connector/ximian-connector/E2kSecurityDescriptor.html
+share/doc/ximian-connector/ximian-connector/E2kSid.html
+share/doc/ximian-connector/ximian-connector/E2kUserDialog.html
+share/doc/ximian-connector/ximian-connector/ch01.html
+share/doc/ximian-connector/ximian-connector/ch02.html
+share/doc/ximian-connector/ximian-connector/ch03.html
+share/doc/ximian-connector/ximian-connector/ch04.html
+share/doc/ximian-connector/ximian-connector/ch05.html
+share/doc/ximian-connector/ximian-connector/ch06.html
+share/doc/ximian-connector/ximian-connector/home.png
+share/doc/ximian-connector/ximian-connector/index.html
+share/doc/ximian-connector/ximian-connector/index.sgml
+share/doc/ximian-connector/ximian-connector/left.png
+share/doc/ximian-connector/ximian-connector/right.png
+share/doc/ximian-connector/ximian-connector/style.css
+share/doc/ximian-connector/ximian-connector/up.png
+share/doc/ximian-connector/ximian-connector/ximian-connector-E2kAutoconfig.html
+share/doc/ximian-connector/ximian-connector/ximian-connector-E2kContext-(private).html
+share/doc/ximian-connector/ximian-connector/ximian-connector-E2kOperation-(private).html
+share/doc/ximian-connector/ximian-connector/ximian-connector-E2kOperation.html
+share/doc/ximian-connector/ximian-connector/ximian-connector-E2kProperties.html
+share/doc/ximian-connector/ximian-connector/ximian-connector-E2kRestriction-(vaporware).html
+share/doc/ximian-connector/ximian-connector/ximian-connector-E2kResult-(private).html
+share/doc/ximian-connector/ximian-connector/ximian-connector-MAPI.html
+share/doc/ximian-connector/ximian-connector/ximian-connector-autoconfig.html
+share/doc/ximian-connector/ximian-connector/ximian-connector-bug-private.html
+share/doc/ximian-connector/ximian-connector/ximian-connector-bug-xml.html
+share/doc/ximian-connector/ximian-connector/ximian-connector-calendar.html
+share/doc/ximian-connector/ximian-connector/ximian-connector-delegation.html
+share/doc/ximian-connector/ximian-connector/ximian-connector-e2k-action.html
+share/doc/ximian-connector/ximian-connector/ximian-connector-e2k-encoding-utils.html
+share/doc/ximian-connector/ximian-connector/ximian-connector-e2k-freebusy.html
+share/doc/ximian-connector/ximian-connector/ximian-connector-e2k-http-utils.html
+share/doc/ximian-connector/ximian-connector/ximian-connector-e2k-kerberos.html
+share/doc/ximian-connector/ximian-connector/ximian-connector-e2k-restriction.html
+share/doc/ximian-connector/ximian-connector/ximian-connector-e2k-result.html
+share/doc/ximian-connector/ximian-connector/ximian-connector-e2k-rule.html
+share/doc/ximian-connector/ximian-connector/ximian-connector-e2k-uri.html
+share/doc/ximian-connector/ximian-connector/ximian-connector-e2k-utils.html
+share/doc/ximian-connector/ximian-connector/ximian-connector-e2k-xml-utils.html
+share/doc/ximian-connector/ximian-connector/ximian-connector-favorites.html
+share/doc/ximian-connector/ximian-connector/ximian-connector-fba.html
+share/doc/ximian-connector/ximian-connector/ximian-connector-freebusy.html
+share/doc/ximian-connector/ximian-connector/ximian-connector-mail-threading.html
+share/doc/ximian-connector/ximian-connector/ximian-connector-mail.html
+share/doc/ximian-connector/ximian-connector/ximian-connector-ntlm.html
+share/doc/ximian-connector/ximian-connector/ximian-connector-oof.html
+share/doc/ximian-connector/ximian-connector/ximian-connector-other-users.html
+share/doc/ximian-connector/ximian-connector/ximian-connector-permissions.html
+share/doc/ximian-connector/ximian-connector/ximian-connector-test-utils.html
+share/doc/ximian-connector/ximian-connector/ximian-connector-xntlm-des.html
+share/doc/ximian-connector/ximian-connector/ximian-connector-xntlm-md4.html
+share/doc/ximian-connector/ximian-connector/ximian-connector-xntlm.html
+share/doc/ximian-connector/ximian-connector/ximian-connector.devhelp
+share/doc/ximian-connector/ximian-connector/ximian-connnector-booking.html
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/ximian-connector-2.2.mo
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/ximian-connector-2.2.mo
 ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/ximian-connector-2.2.mo
@@ -62,9 +120,9 @@ share/ximian-connector/2.2/ui/ximian-connector.xml
 @dirrm share/ximian-connector/2.2/etspec
 @dirrm share/ximian-connector/2.2
 @dirrm share/ximian-connector
-@exec ${MKDIR} %D/share/doc/ximian-connector/ximian-connector
 @dirrm share/doc/ximian-connector/ximian-connector
 @dirrm share/doc/ximian-connector
 @comment in evolution: @dirrm libexec/evolution/2.2
+@comment in evolution: @dirrm lib/evolution/2.2
 @comment in evolution-data-server: @dirrm lib/evolution-data-server-1.2/camel-providers
 @comment in libbonobo: @dirrm lib/bonobo/servers
