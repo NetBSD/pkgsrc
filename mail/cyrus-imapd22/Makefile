@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2004/11/17 21:16:45 jlam Exp $
+# $NetBSD: Makefile,v 1.27 2004/11/25 19:34:03 jlam Exp $
 
 DISTNAME=	cyrus-imapd-2.2.8
 PKGREVISION=	4
@@ -129,7 +129,6 @@ PERL5_PACKLIST= \
 # Only imap/mupdate needs to be build with pthreads support, so selectively
 # enable it via patches for just that one program.
 #
-PTHREAD_AUTO_VARS=	no
 .include "../../mk/pthread.buildlink3.mk"
 
 # Change references of some manpages from foo.8 to cyrus-foo.8 to avoid
