@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5016 2004/02/27 02:28:21 minskim Exp $
+$NetBSD: CHANGES,v 1.5017 2004/02/27 03:01:03 snj Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1069,3 +1069,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gtk-thinice-engine to 2.0.2nb3 [snj 2004-02-27]
 	Updated xfce4-gtk2-engines to 2.1.8nb1 [snj 2004-02-27]
 	Added py-Reverend-0.2.4 [minskim 2004-02-27]
+	Added nosefart-1.92i [snj 2004-02-27]
