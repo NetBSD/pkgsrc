@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.subdir.mk,v 1.26 1999/03/28 03:56:32 hubertf Exp $
+#	$NetBSD: bsd.pkg.subdir.mk,v 1.27 1999/05/17 22:24:15 tron Exp $
 #	Derived from: FreeBSD Id: bsd.port.subdir.mk,v 1.19 1997/03/09 23:10:56 wosch Exp 
 #	from: @(#)bsd.subdir.mk	5.9 (Berkeley) 2/1/91
 #
@@ -65,7 +65,7 @@ _SUBDIRUSE: .USE
 		for dud in ${DUDS}; do \
 			if [ $${dud} = $${entry} ]; then \
 				OK="false"; \
-				${ECHO} "===> ${_THISDIR_}$${entry} skipped"; \
+				${ECHO_MSG} "===> ${_THISDIR_}$${entry} skipped"; \
 			fi; \
 		done; \
 		if [ -d ${.CURDIR}/$${entry}.${MACHINE} ]; then \
@@ -74,16 +74,16 @@ _SUBDIRUSE: .USE
 			edir=$${entry}; \
 		else \
 			OK="false"; \
-			${ECHO} "===> ${_THISDIR_}$${entry} non-existent"; \
+			${ECHO_MSG} "===> ${_THISDIR_}$${entry} non-existent"; \
 		fi; \
 		if [ "$$OK" = "" ]; then \
 			cd ${.CURDIR}/$${edir}; \
 			if [ -z "${_THISDIR_}" -a ! -d "files" ]; then \
-				${ECHO} "===> category ${_THISDIR_}$${edir}"; \
+				${ECHO_MSG} "===> category ${_THISDIR_}$${edir}"; \
 				${MAKE} ${.TARGET:realinstall=install} \
 					"_THISDIR_=${_THISDIR_}$${edir}/"; \
 			else \
-				${ECHO} "===> package ${_THISDIR_}$${edir}"; \
+				${ECHO_MSG} "===> package ${_THISDIR_}$${edir}"; \
 				${MAKE} ${.TARGET:realinstall=install} \
 					"_THISDIR_=${_THISDIR_}$${edir}/" || /usr/bin/true ; \
 			fi ; \
@@ -173,7 +173,7 @@ README.html: .PRECIOUS
 		${MV} $@.BAK $@ ; \
 		${RM} $@.tmp4 ; \
 	else \
-		${ECHO} "===>  Creating README.html for ${_THISDIR_}${.CURDIR:T}" ; \
+		${ECHO_MSG} "===>  Creating README.html for ${_THISDIR_}${.CURDIR:T}" ; \
 		${MV} $@.tmp4 $@ ; \
 		${RM} -f $@.BAK ; \
 	fi
