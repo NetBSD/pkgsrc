@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3222 2003/09/03 13:41:09 adam Exp $
+$NetBSD: CHANGES,v 1.3223 2003/09/03 14:06:02 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3507,3 +3507,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated fvwm2-themes to 0.6.2nb1 [adam 2003-09-03]
 	Updated make_album to 1.6nb4 [adam 2003-09-03]
 	Updated zope25-Photo to 1.2.3nb2 [adam 2003-09-03]
+	Updated pkg_install to 20030824 [jlam 2003-09-03]

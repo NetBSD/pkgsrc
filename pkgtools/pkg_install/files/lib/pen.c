@@ -1,4 +1,4 @@
-/*	$NetBSD: pen.c,v 1.9 2003/09/03 12:32:50 jlam Exp $	*/
+/*	$NetBSD: pen.c,v 1.10 2003/09/03 14:06:00 jlam Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: pen.c,v 1.25 1997/10/08 07:48:12 charnier Exp";
 #else
-__RCSID("$NetBSD: pen.c,v 1.9 2003/09/03 12:32:50 jlam Exp $");
+__RCSID("$NetBSD: pen.c,v 1.10 2003/09/03 14:06:00 jlam Exp $");
 #endif
 #endif
 
@@ -47,9 +47,6 @@ __RCSID("$NetBSD: pen.c,v 1.9 2003/09/03 12:32:50 jlam Exp $");
 #endif
 #if HAVE_SYS_MOUNT_H
 #include <sys/mount.h>
-#endif
-#if HAVE_SYS_VFS_H
-#include <sys/vfs.h>
 #endif
 
 /* For keeping track of where we are */
@@ -139,23 +136,10 @@ make_playpen(char *pen, size_t pensize, size_t sz)
 	if (!find_play_pen(pen, pensize, sz))
 		return NULL;
 
-#if (defined(NetBSD1_3) || (NetBSD <= 199713)) && (NetBSD1_3 <9)
-	/* values from 1.3.2/1.3I */
-	/* mkdtemp(3) is not present on 1.3.3 and below */
-	if (!mktemp(pen)) {
-		cleanup(0);
-		errx(2, "can't mktemp '%s'", pen);
-	}
-	if (mkdir(pen, 0755) == FAIL) {
-		cleanup(0);
-		errx(2, "can't mkdir '%s'", pen);
-	}
-#else
 	if (!mkdtemp(pen)) {
 		cleanup(0);
 		errx(2, "can't mkdtemp '%s'", pen);
 	}
-#endif
 	if (Verbose) {
 		if (sz)
 			fprintf(stderr,
