@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-#	$NetBSD: createbuildlink,v 1.4 2002/05/11 08:11:47 rh Exp $
+#	$NetBSD: createbuildlink,v 1.5 2002/05/11 11:27:28 rh Exp $
 #
 # Copyright (c) 2002 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -39,7 +39,7 @@
 # Create an initial buildlink.mk from a package's Makefile and PLIST
 #
 
-REV=`echo '$Revision: 1.4 $' | sed 's/\\$//g'`
+REV=`echo '$Revision: 1.5 $' | sed 's/\\$//g'`
 tmpdir=/tmp
 makefile=Makefile
 sedrules=$tmpdir/sedrules.buildlink.$$
@@ -61,6 +61,12 @@ if [ ! -f "$PLIST" ]; then
 fi
 
 ##
+## try to find any included Makefile.common's
+## 
+commons=`grep '^.include.*Makefile.common\"' $makefile |		\
+	sed 's/^.*"\(.*\)".*/\1/'`
+
+##
 ## package specific variables
 ##
 CURDIR=`pwd | sed 's|^.*/\([^/]*/[^/]*\)$|\1|'`
@@ -68,11 +74,12 @@ PKGNAME=`make show-var VARNAME=PKGNAME`
 PKGVER=`echo $PKGNAME | sed -e 's/^.*-//'`
 PKGNOVER=`echo $PKGNAME | sed -e 's/-[^-]*$//'`
 PKGUPPER=`echo $PKGNOVER | tr '[:lower:]' '[:upper:]' | tr - _`
+PREFIX=X11PREFIX
 USE_X11BASE=`make show-var VARNAME=USE_X11BASE`
 if [ -z "$USE_X11BASE" ]; then
-	PREFIX=LOCALBASE
-else
-	PREFIX=X11PREFIX
+	if ! grep -q "^USE_X11BASE" $makefile $commons ; then
+		PREFIX=LOCALBASE
+	fi
 fi
 
 ##
@@ -138,12 +145,6 @@ done
 echo ""
 
 ##
-## try to find any included Makefile.common's
-## 
-commons=`grep '^.include.*Makefile.common\"' $makefile |		\
-	sed 's/^.*"\(.*\)".*/\1/'`
-
-##
 ## buildlinked dependencies
 ##
 for i in $makefile $commons ; do
@@ -187,7 +188,7 @@ for i in $configs ; do
 	echo "BUILDLINK_CONFIG_WRAPPER.$PKGNOVER-$ctg=				\\"
 	echo "	\${BUILDLINK_DIR}/$i"
 	echo "REPLACE_BUILDLINK_SED+=							\\"
-	echo "-e \"s|\${BUILDLINK_CONFIG_WRAPPER.$PKGNOVER-$ctg}|\${BUILDLINK_CONFIG.$PKGNOVER-$ctg}|g\""
+	echo "	-e \"s|\${BUILDLINK_CONFIG_WRAPPER.$PKGNOVER-$ctg}|\${BUILDLINK_CONFIG.$PKGNOVER-$ctg}|g\""
 	echo ""
 done
 
@@ -200,7 +201,9 @@ if [ -n "$configs" ]; then
 	dir=$i
 	while [ "$dir" != "include" ] ; do
 		echo "BUILDLINK_CONFIG_WRAPPER_SED+=						\\"
-		echo "-e \"s|-I[ 	]*\${BUILDLINK_PREFIX.$PKGNOVER}/$dir|-I\${BUILDLINK_DIR}/$dir|g\""
+		echo "	-e \"s|-I[ 	]*\${BUILDLINK_PREFIX.$PKGNOVER}/$dir|-I\${BUILDLINK_DIR}/$dir|g\""
+		echo "REPLACE_BUILDLINK_SED+=							\\"
+		echo "	-e \"s|-I\${BUILDLINK_DIR}/$dir|-I[ 	]*\${BUILDLINK_PREFIX.$PKGNOVER}/$dir|g\""
 		dir=`echo $dir | sed 's|/[^/]*$||'`
 	done
     done
@@ -210,7 +213,9 @@ if [ -n "$configs" ]; then
 	dir=$i
 	while [ "$dir" != "lib" ] ; do
 		echo "BUILDLINK_CONFIG_WRAPPER_SED+=						\\"
-		echo "-e \"s|-L[ 	]*\${BUILDLINK_PREFIX.$PKGNOVER}/$dir|-L\${BUILDLINK_DIR}/$dir|g\""
+		echo "	-e \"s|-L[ 	]*\${BUILDLINK_PREFIX.$PKGNOVER}/$dir|-L\${BUILDLINK_DIR}/$dir|g\""
+		echo "REPLACE_BUILDLINK_SED+=							\\"
+		echo "	-e \"s|-L\${BUILDLINK_DIR}/$dir|-L[ 	]*\${BUILDLINK_PREFIX.$PKGNOVER}/$dir|g\""
 		dir=`echo $dir | sed 's|/[^/]*$||'`
 	done
     done
