@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9332 2005/02/27 01:06:30 wiz Exp $
+$NetBSD: CHANGES,v 1.9333 2005/02/27 08:52:42 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1166,3 +1166,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated boost to 1.32.0 [jmmv 2005-02-26]
 	Updated monotone to 0.16nb1 [jmmv 2005-02-26]
 	Updated emacs-nox11 to 21.4a [wiz 2005-02-27]
+	Updated gaim to 1.1.4 [jmmv 2005-02-27]
