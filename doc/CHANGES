@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8353 2004/12/17 18:56:12 tron Exp $
+$NetBSD: CHANGES,v 1.8354 2004/12/17 20:12:07 jdolecek Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5934,3 +5934,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated ethereal to 0.10.8 [salo 2004-12-17]
 	Updated groff to 1.19.1nb2 [wiz 2004-12-17]
 	Updated samba to 3.0.10 [tron 2004-12-17]
+	Updated phppgadmin to 3.5.1 [jdolecek 2004-12-17]
