@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1999/11/24 10:35:28 agc Exp $
+# $NetBSD: Makefile,v 1.4 2000/04/10 00:06:41 jlam Exp $
 #
 
 DISTNAME=	stylewriter
@@ -19,7 +19,7 @@ FILTER_DIR=	libexec/stylewriter
 FILTERS=	direct_stylpbm direct_stylps \
 		stylascii stylascii.a4 \
 		stylps stylps-color stylps-color.a4 stylps.a4
-FILTER_SED=	-e "s,/usr/local/gnu,${LOCALBASE},g" \
+FILTER_SED=	-e "s,/usr/local/gnu/bin/gs,${LOCALBASE}/bin/gstty,g" \
 		-e "s,/usr/local,${PREFIX},g"
 PRINTCAP_SED=	-e "s,/var/spool/stylps,/var/spool/lpd/stylps,g" \
 		-e "s,/usr/local/sbin,${PREFIX}/libexec/stylewriter,g"
