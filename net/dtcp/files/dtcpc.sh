@@ -1,7 +1,7 @@
 #!/bin/sh
 #
 # $FreeBSD: /repoman/r/pcvs/ports/net/dtcp/files/dtcpc.sh,v 1.1 2004/04/19 18:40:52 ume Exp $
-# $NetBSD: dtcpc.sh,v 1.1.1.1 2004/06/05 07:43:25 hamajima Exp $
+# $NetBSD: dtcpc.sh,v 1.2 2004/06/22 16:08:27 hamajima Exp $
 #
 
 # PROVIDE: dtcpc
@@ -22,7 +22,7 @@ prefix=@PREFIX@
 #
 # DO NOT CHANGE THESE DEFAULT VALUES HERE
 #
-dtcpc_enable=${dtcpc_enable:-"NO"}		# Enable dtcpc
+#dtcpc=${dtcpc_enable:-"NO"}			# Enable dtcpc
 #dtcpc_program="${prefix}/sbin/dtcpc"		# Location of dtcpc
 dtcpc_server=${dtcpc_server:-""}		# DTCP server name
 dtcpc_username=${dtcpc_username:-""}		# DTCP user name
@@ -38,5 +38,5 @@ pidfile="/var/run/${name}.pid"
 extra_commands="reload"
 
 load_rc_config $name
-command_args="${dtcpc_flags} -u ${dtcpc_username} ${dtcpc_server}"
+command_args="-u ${dtcpc_username} ${dtcpc_server}"
 run_rc_command "$1"
