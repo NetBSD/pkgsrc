@@ -3,7 +3,7 @@
 # Date created:				19971214
 # Whom:					hubertf@netbsd.org
 #
-# $NetBSD: Makefile,v 1.10 1998/02/10 15:54:37 tv Exp $
+# $NetBSD: Makefile,v 1.11 1998/02/12 14:27:00 mrg Exp $
 # FreeBSD Id: Makefile,v 1.47 1997/11/10 22:04:42 dima Exp
 #
 # Maximal ssh package requires a YES value for USE_PERL
@@ -17,10 +17,28 @@ MASTER_SITES=   ftp://ftp.cs.hut.fi/pub/ssh/ \
 
 MAINTAINER=	mrg@eterna.com.au
 
-# You can set USA_RESIDENT appropriately in /etc/mk.conf if this bugs you..
-.if !defined(USA_RESIDENT)
-USA_RESIDENT=	NO
+RESTRICTED=	"Crypto; export-controlled"
+MIRROR_DISTFILE=	no
+IS_INTERACTIVE=	YES
+
+CFLAGS=		-O2
+GNU_CONFIGURE=	YES
+
+# Include local make config file here.  It is essential to have this
+# precede any override targets (those that override defaults in
+# <bsd.port.mk> that test variables that may be set here.  Note that
+# this inclusion is otherwise redundant, since <bsd.port.mk> includes
+# <bsd.own.mk>, which includes it.
+
+OPSYS!= uname -s
+.if (${OPSYS} == "FreeBSD")
+.include "/etc/make.conf"
+.else
+.include "/etc/mk.conf"
 .endif
+
+# You can set USA_RESIDENT appropriately in /etc/mk.conf if this bugs you..
+USA_RESIDENT?=	NO
 
 .if defined(USA_RESIDENT) && ${USA_RESIDENT} == YES
 DISTFILES=	${DISTNAME}.tar.gz rsaref2.tar.gz
@@ -33,13 +51,11 @@ MASTER_SITES=	\
 	ftp://isdec.vc.cvut.cz/pub/security/unimi/crypt/applied-crypto/
 .endif
 
-RESTRICTED=	"Crypto; export-controlled"
-MIRROR_DISTFILE=	no
-IS_INTERACTIVE=	YES
+# Use SSH_CONF_DIR from /etc/mk.conf, if defined; otherwise default to /etc
+SSH_CONF_DIR?=/etc
 
-GNU_CONFIGURE=	YES
-
-CONFIGURE_ARGS+= --prefix=${PREFIX} --with-etcdir=/etc --disable-suid-ssh
+CONFIGURE_ARGS+= --prefix=${PREFIX} --with-etcdir=${SSH_CONF_DIR} \
+			--disable-suid-ssh
 
 #Uncomment if all your users are in their own group and their homedir
 #is writeable by that group.  Beware the security implications!
@@ -67,6 +83,16 @@ CONFIGURE_ARGS+= --with-secureid
 CONFIGURE_ARGS+= --without-idea
 .endif
 
+# Support for libwrap.
+.if defined(USE_LIBWRAP) && ${USE_LIBWRAP} == YES
+CONFIGURE_ARGS+= --with-libwrap
+.endif
+
+# Include SOCKS firewall support
+.if defined(USE_SOCKS) && ${USE_SOCKS} == YES
+CONFIGURE_ARGS+= --with-socks="-L${PREFIX}/lib -lsocks5"
+.endif
+
 MAN1=		scp.1 ssh-add.1 ssh-agent.1 ssh-keygen.1 ssh.1 \
 		make-ssh-known-hosts.1
 MAN8=		sshd.8
@@ -90,34 +116,59 @@ fetch-depends:
 
 post-extract:
 .if defined(USA_RESIDENT) && ${USA_RESIDENT} == YES
-	@mv ${WRKDIR}/rsaref2 ${WRKSRC}/rsaref2
+	@${MV} ${WRKDIR}/rsaref2 ${WRKSRC}/rsaref2
 .endif
 
+pre-install:
+	@${CAT} pkg/PLIST.pre | ${SED} \
+		-e 's;\<\$$SSH_CONF_DIR\>;'${SSH_CONF_DIR}';g' \
+		>pkg/PLIST
+	@${CAT} pkg/MESSAGE.pre | ${SED} \
+		-e 's;\<\$$SSH_CONF_DIR\>;'${SSH_CONF_DIR}';g' \
+		-e 's;\<\$$PREFIX\>;'${PREFIX}';g' \
+		>pkg/MESSAGE
+	@${CAT} pkg/DEINSTALL.pre | ${SED} \
+		-e 's;\<\$$SSH_CONF_DIR\>;'${SSH_CONF_DIR}';g' \
+		>pkg/DEINSTALL
+
 post-install:
-	@ln -sf /etc/ssh_host_key ${PREFIX}/etc
-	@ln -sf /etc/ssh_host_key.pub ${PREFIX}/etc
-	@if [ ! -f ${PREFIX}/etc/ssh_host_key ]; then \
+	@${MKDIR} ${PREFIX}/share/examples/ssh
+	@${MKDIR} ${WRKDIR}${SSH_CONF_DIR}
+	(cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} \
+		${MAKEFILE} install_prefix=${WRKDIR} install-configs)
+	${INSTALL_DATA} ${WRKDIR}${SSH_CONF_DIR}/ssh_config \
+		${WRKDIR}${SSH_CONF_DIR}/sshd_config ${PREFIX}/share/examples/ssh
+	@if [ ! -f ${SSH_CONF_DIR}/ssh_host_key ]; then \
 		${ECHO} "Generating a secret host key..."; \
-		${PREFIX}/bin/ssh-keygen -f ${PREFIX}/etc/ssh_host_key -N ""; \
+		${PREFIX}/bin/ssh-keygen \
+			-f ${SSH_CONF_DIR}/ssh_host_key -N ""; \
 	fi
 .if defined(MANZ)
 	${RM} -f ${PREFIX}/man/man1/slogin.1.gz
-	ln -sf ssh.1.gz ${PREFIX}/man/man1/slogin.1.gz
+	${LN} -sf ssh.1.gz ${PREFIX}/man/man1/slogin.1.gz
 .else
 	${RM} -f ${PREFIX}/man/man1/slogin.1
-	ln -sf ssh.1 ${PREFIX}/man/man1/slogin.1
+	${LN} -sf ssh.1 ${PREFIX}/man/man1/slogin.1
 .endif
 #	@if [ ! -f ${PREFIX}/etc/rc.d/sshd.sh ]; then \
 #		${ECHO} "Installing ${PREFIX}/etc/rc.d/sshd.sh startup file."; \
 #		${ECHO} "#!/bin/sh" > ${PREFIX}/etc/rc.d/sshd.sh; \
-#		${ECHO} "[ -f ${PREFIX}/etc/ssh_host_key ] || ${PREFIX}/bin/ssh-keygen -f ${PREFIX}/etc/ssh_host_key -N ''" >> ${PREFIX}/etc/rc.d/sshd.sh; \
+#		${ECHO} "[ -f ${SSH_CONF_DIR}/ssh_host_key ] || ${PREFIX}/bin/ssh-keygen -f ${SSH_CONF_DIR}/ssh_host_key -N ''" >> ${PREFIX}/etc/rc.d/sshd.sh; \
 #		${ECHO} "[ -x ${PREFIX}/sbin/sshd ] && ${PREFIX}/sbin/sshd && ${ECHO} -n ' sshd'" >> ${PREFIX}/etc/rc.d/sshd.sh; \
 #		chmod 755 ${PREFIX}/etc/rc.d/sshd.sh; \
 #	fi
+	@${CAT} pkg/MESSAGE
+
+pre-clean:
+	@${RM} -f pkg/PLIST pkg/MESSAGE pkg/DEINSTALL
+
+# Include <bsd.port.mk> here.  It is essential to have all the override
+# targets precede inclusion of this.
 
 .include <bsd.port.mk>
 
-# Following stuff must be after <bsd.port.mk> to expand exists() properly
+# Following stuff must be after <bsd.port.mk> to expand
+# exists(${PREFIX}) properly
 
 .if defined(USE_PERL) && ${USE_PERL} == YES || \
     exists(${PREFIX}/bin/perl5.00404) && \
@@ -126,14 +177,4 @@ BUILD_DEPENDS+= perl5.00404:${PORTSDIR}/lang/perl5
 CONFIGURE_ENV+= PERL=${PREFIX}/bin/perl5.00404
 .else
 CONFIGURE_ENV+= PERL=/replace_it_with_PERL_path
-.endif
-
-# Support for libwrap.
-.if defined(USE_LIBWRAP) && ${USE_LIBWRAP} == YES
-CONFIGURE_ARGS+= --with-libwrap
-.endif
-
-# Include SOCKS firewall support
-.if defined(USE_SOCKS) && ${USE_SOCKS} == YES
-CONFIGURE_ARGS+= --with-socks="-L${PREFIX}/lib -lsocks5"
 .endif

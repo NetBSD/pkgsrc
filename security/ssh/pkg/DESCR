@@ -1,12 +1,10 @@
-Secure Shell is a program to log into another computer over a network,
-to execute commands in a remote machine, and to move files from one
-machine to another.  It provides strong authentication and secure
-communications over insecure channels.  It is inteded as a replacement
-for rlogin, rsh, and rcp.
+SSH (Secure Shell) is a program to log into another computer over a
+network, to execute commands in a remote machine, and to move files
+from one machine to another.  It provides strong authentication and
+secure communications over insecure channels.  It is intended as a
+replacement for rlogin, rsh, rcp, and rdist.
 
 FEATURES
-
- o  Complete replacement for rlogin, rsh, and rcp.
 
  o  Strong authentication.  Closes several security holes (e.g., IP,
     routing, and DNS spoofing).  New authentication methods: .rhosts
@@ -15,7 +13,7 @@ FEATURES
 
  o  Improved privacy.  All communications are automatically and
     transparently encrypted.  RSA is used for key exchange, and a
-    conventional cipher (normally IDEA, DES, or triple-DES) for
+    conventional cipher (normally IDEA, Blowfish, or triple-DES) for
     encrypting the session.  Encryption is started before
     authentication, and no passwords or other information is
     transmitted in the clear.  Encryption is also used to protect
@@ -96,3 +94,5 @@ FEATURES
  o  Optional compression of all data with gzip (including forwarded X11
     and TCP/IP port data), which may result in significant speedups on
     slow connections.
+
+ o  Complete replacement for rlogin, rsh, and rcp.
