@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/06/02 13:13:15 jmmv Exp $
+$NetBSD: patch-aa,v 1.2 2004/12/11 08:25:48 minskim Exp $
 
---- Makefile.in.orig	2003-06-02 14:23:34.000000000 +0200
+--- Makefile.in.orig	2003-05-09 16:47:48.000000000 -0500
 +++ Makefile.in
 @@ -4,6 +4,7 @@ INSTALL=@INSTALL@
  CFLAGS=@CFLAGS@ @DEFS@ -Wall -I. -DVERSION=\"$(VERSION)\" @DEBUG@
@@ -10,13 +10,26 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/06/02 13:13:15 jmmv Exp $
  mandir=@mandir@
  sbindir=@sbindir@
  DESTDIR=
-@@ -28,8 +29,7 @@ $(OBJS): $(HEADERS) Makefile
+@@ -26,14 +27,14 @@ bftpd: $(OBJS)
+ $(OBJS): $(HEADERS) Makefile
+ 
  install: all
- 	$(INSTALL) -g 0 -m 700 -o 0 bftpd $(DESTDIR)/$(prefix)/sbin
- 	$(INSTALL) -g 0 -m 644 -o 0 bftpd.8 $(DESTDIR)/$(mandir)/man8
+-	$(INSTALL) -g 0 -m 700 -o 0 bftpd $(DESTDIR)/$(prefix)/sbin
+-	$(INSTALL) -g 0 -m 644 -o 0 bftpd.8 $(DESTDIR)/$(mandir)/man8
 -	[ -f $(DESTDIR)/etc/bftpd.conf ] || \
 -		$(INSTALL) -g 0 -m 600 -o 0 bftpd.conf $(DESTDIR)/etc
-+	$(INSTALL) -g 0 -m 600 -o 0 bftpd.conf $(DESTDIR)/$(datadir)/examples/bftpd
- 	touch /var/log/bftpd.log
- 	chmod 644 /var/log/bftpd.log
- 	mkdir -p /var/run/bftpd
+-	touch /var/log/bftpd.log
+-	chmod 644 /var/log/bftpd.log
+-	mkdir -p /var/run/bftpd
+-	chmod 755 /var/run/bftpd
++	$(INSTALL) -m 700 bftpd $(DESTDIR)/$(prefix)/sbin
++	$(INSTALL) -m 644 bftpd.8 $(DESTDIR)/$(mandir)/man8
++	$(INSTALL) -m 600 bftpd.conf $(DESTDIR)/$(datadir)/examples/bftpd
++	mkdir -p ${VARBASE}/log
++	touch ${VARBASE}/log/bftpd.log
++	chmod 644 ${VARBASE}/log/bftpd.log
++	mkdir -p ${VARBASE}/run/bftpd
++	chmod 755 ${VARBASE}/run/bftpd
+ 
+ clean distclean:
+ 	rm -f *~ $(OBJS) bftpd mksources.finished
