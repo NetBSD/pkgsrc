@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.pwcheck,v 1.1 2000/10/25 08:00:25 rh Exp $
+sbin/pwcheck
