@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.83 2003/08/02 03:57:14 grant Exp $
+# $NetBSD: Makefile,v 1.84 2003/09/16 21:01:06 xtraeme Exp $
 #
 
-DISTNAME=		ethereal-0.9.14
+DISTNAME=		ethereal-0.9.15
 CATEGORIES=		net
 MASTER_SITES=		ftp://ftp.ethereal.com/pub/ethereal/ \
 			ftp://ftp.sunet.se/pub/network/monitoring/ethereal/ \
@@ -25,17 +25,22 @@ USE_LIBTOOL=		YES
 SHLIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 GNU_CONFIGURE=		YES
-CONFIGURE_ARGS+=	--enable-static=no
-CONFIGURE_ARGS+=	--with-gtk-prefix=${BUILDLINK_PREFIX.gtk}
+CONFIGURE_ARGS+=	--enable-gtk2
+CONFIGURE_ARGS+=        --enable-static=no
+CONFIGURE_ARGS+=	--enable-threads
+CONFIGURE_ARGS+=	--with-gtk-prefix=${BUILDLINK_PREFIX.gtk2}
 CONFIGURE_ARGS+=	--with-ssl=${SSLBASE}
 CONFIGURE_ARGS+=	--with-net-snmp=${BUILDLINK_PREFIX.net-snmp}
 CONFIGURE_ARGS+=	--with-pcap=${BUILDLINK_PREFIX.libpcap}
 CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib}
 
+PTHREAD_OPTS=		require
+
 .include "../../devel/zlib/buildlink2.mk"
 .include "../../net/libpcap/buildlink2.mk"
 .include "../../net/net-snmp/buildlink2.mk"
 .include "../../security/openssl/buildlink2.mk"
-.include "../../x11/gtk/buildlink2.mk"
+.include "../../x11/gtk2/buildlink2.mk"
 
+.include "../../mk/pthread.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
