@@ -1,8 +1,7 @@
 #!/bin/sh -e
 #
-# $Id: pkgchk.sh,v 1.20 2001/10/01 12:24:00 abs Exp $
+# $Id: pkgchk.sh,v 1.21 2001/10/10 09:55:32 abs Exp $
 #
-# TODO: Handle and as well as or tags (eg: i386+x11)
 # TODO: Handle updates with dependencies via binary packages
 
 PATH=/usr/sbin:${PATH}
@@ -40,10 +39,11 @@ extract_variables()
     fi
 
     # Now we have PKGSRCDIR, use it to determine PACKAGES, and PKGCHK_CONF
+    # as well as AWK, GREP, SED, PKGCHK_TAGS and PKGCHK_NOTAGS
     #
 
     cd $PKGSRCDIR/pkgtools/pkgchk
-    extract_make_vars AWK GREP SED PACKAGES PKGCHK_CONF
+    extract_make_vars AWK GREP SED PACKAGES PKGCHK_CONF PKGCHK_TAGS PKGCHK_NOTAGS
 
     if [ -z "$PACKAGES" ];then
 	PACKAGES=$PKGSRCDIR/packages
@@ -235,6 +235,16 @@ if [ -n "$opt_c" ];then
     if [ -f /usr/X11R6/lib/libX11.so -o -f /usr/X11R6/lib/libX11.a ];then
 	TAGS="$TAGS,x11"
     fi
+    if [ -n "$PKGCHK_TAGS" ];then
+	TAGS="$TAGS,$PKGCHK_TAGS"
+    fi
+    if [ -n "$PKGCHK_NOTAGS" ];then
+	if [ -n "$opt_U" ];then
+		opt_U="$opt_U,$PKGCHK_NOTAGS"
+	else
+		opt_U="$PKGCHK_NOTAGS"
+	fi
+    fi
     if [ -n "$opt_D" ];then
 	TAGS="$TAGS,$opt_D"
     fi
@@ -257,25 +267,39 @@ if [ -n "$opt_c" ];then
 	for (tag in tmp) { delete taglist[tmp[tag]] }
 
 	taglist["*"] = "*"
-   	}
+    }
+    function and_expr_with_dict(expr, dict, ary, i, r) {
+	split(expr,ary,/\\+/);
+	r = 1;
+	for (i in ary)
+		if (! (ary[i] in dict))
+			{ r = 0; break ;}
+	return r;
+    }
     {
     sub("#.*", "");
     if (alreadyset[$1])
 	{ next; }
     need = 0;
-    for (f = 1 ; f<=NF ; ++f)		# For each word on the line
-	{
-	if (sub("^-", "", $f))	# If it begins with a '-'
-	    {
-	    if ($f in taglist)	# If match, discard
-		{ next; }
-	    }
-	else
-	    {
-	    if ($f in taglist)	# If match, note needed
-		{ need = 1; }
-	    }
+    for (f = 1 ; f<=NF ; ++f) {			# For each word on the line
+	if (sub("^-", "", $f)) { 	# If it begins with a '-'
+		if ($f ~ /\\+/) {	# If it is a ANDed tag expression
+			if (and_expr_with_dict($f, taglist))
+				next;		# If it is true, discard
+		} else {			# If it is a simple tag
+			if ($f in taglist)	# If match, discard
+				next;
+		}
+	} else {
+		if ($f ~ /\\+/) {	# If it is a ANDed tag expression
+			if (and_expr_with_dict($f, taglist))
+				need = 1;	# If it is true, note needed
+		} else {			# If it is a simple tag
+			if ($f in taglist)	# If match, note needed
+				need = 1;
+		}
 	}
+    }
     if (NF == 1 || need)
 	{ print $1 }
     }
