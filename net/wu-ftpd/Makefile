@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.22 2003/07/17 22:52:03 grant Exp $
+# $NetBSD: Makefile,v 1.23 2003/09/05 09:09:25 wiz Exp $
 # FreeBSD Id: Makefile,v 1.16 1997/12/24 17:45:28 ache Exp
 #
 
 DISTNAME=	wu-ftpd-2.6.2
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=   ftp://ftp.wu-ftpd.org/pub/wu-ftpd/ \
 		ftp://ftp.landfield.com/wu-ftpd/wu-ftpd.org/wu-ftpd/ \
@@ -24,6 +25,9 @@ MASTER_SITES=   ftp://ftp.wu-ftpd.org/pub/wu-ftpd/ \
 		ftp://ftp.sunet.se/pub/nir/ftp/servers/wuarchive-ftpd/wu-ftpd/ \
 		ftp://sunsite.cnlab-switch.ch/mirror/wu-ftpd/wu-ftpd/ \
 		ftp://ftp.ox.ac.uk/pub/comp/security/COAST/mirrors/ftp.vr.net/wu-ftpd/
+
+PATCHFILES=	realpath.patch connect-dos.patch
+PATCH_SITES=	ftp://ftp.wu-ftpd.org/pub/wu-ftpd/patches/apply_to_2.6.2/
 
 MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://www.wu-ftpd.org/
