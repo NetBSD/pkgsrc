@@ -1,5 +1,7 @@
-@comment $NetBSD: PLIST,v 1.4 1998/04/24 09:20:34 agc Exp $
+@comment $NetBSD: PLIST,v 1.5 1998/05/08 23:17:59 tron Exp $
 bin/bash
+@exec mkdir %D/dev && ln -sf /dev/sound %D/dev/dsp
+@unexec rm %D/dev/dsp
 etc/host.conf
 etc/ld.so.conf
 etc/ld.so.cache
@@ -30,6 +32,10 @@ usr/X11R6/lib/libXtst.so.6.0
 usr/X11R6/lib/libXpm.so.4.8
 usr/X11R6/lib/libXaw3d.so.6.0
 usr/X11R6/lib/libforms.so.0.81
+@exec cd %D/usr && ln -fs X11R6 X11
+@unexec rm %D/usr/X11
+@exec cd %D/usr && ln -fs X11R6 X386
+@unexec rm %D/usr/X386
 usr/bin/ldd
 usr/lib/libf2c.so.0.20
 usr/lib/libg++.so.27.1.4
@@ -209,8 +215,6 @@ usr/lib/libtk.so
 usr/lib/libgdbm.so.2
 usr/lib/libstdc++.so.26
 usr/lib/libg++.so.26
-usr/X11
-usr/X386
 usr/i486-linuxaout/lib/libX11.so.3
 usr/i486-linuxaout/lib/libX11.so.6
 usr/i486-linuxaout/lib/libXIE.so.6
@@ -268,5 +272,4 @@ usr/openwin/lib/libolgx.so.3
 @dirrm var/X11R6/lib
 @dirrm var/X11R6
 @dirrm var
-dev/dsp
 @dirrm dev
