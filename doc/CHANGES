@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9424 2005/03/05 09:14:11 uebayasi Exp $
+$NetBSD: CHANGES,v 1.9425 2005/03/05 09:43:35 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1277,3 +1277,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated horde to 3.0.3 [adrianp 2005-03-04]
 	Updated mathomatic to 12.1d [minskim 2005-03-05]
 	Updated riece to 1.0.7a [uebayasi 2005-03-05]
+	Added gtk2-engines-clearlooks-0.4 [jmmv 2005-03-05]
