@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.14 2005/03/24 13:55:42 wiz Exp $
+$NetBSD: patch-ad,v 1.15 2005/04/04 09:14:45 wiz Exp $
 
---- driver/Makefile.in.orig	2005-03-21 08:18:18.000000000 +0100
-+++ driver/Makefile.in
-@@ -288,7 +288,7 @@ install-program: $(EXES)
+--- driver/Makefile.in.orig	2005-03-21 16:18:18.000000000 +0900
++++ driver/Makefile.in	2005-04-03 20:09:35.000000000 +0900
+@@ -288,7 +288,7 @@
  	fi ;								      \
  	echo $$inst xscreensaver $(install_prefix)$(bindir)/xscreensaver ;    \
  	$$inst xscreensaver $(install_prefix)$(bindir)/xscreensaver
@@ -11,7 +11,7 @@ $NetBSD: patch-ad,v 1.14 2005/03/24 13:55:42 wiz Exp $
  		    xscreensaver-getimage @EXES_OSX@ ; do	           \
  	  echo $(INSTALL_PROGRAM) $$exe $(install_prefix)$(bindir)/$$exe ; \
  	       $(INSTALL_PROGRAM) $$exe $(install_prefix)$(bindir)/$$exe ; \
-@@ -464,7 +464,7 @@ install-pam:
+@@ -464,7 +464,7 @@
  
  # screensaver-properties.desktop
  # into /usr/share/applications/
@@ -20,3 +20,21 @@ $NetBSD: patch-ad,v 1.14 2005/03/24 13:55:42 wiz Exp $
  	@if [ "$(GTK_DATADIR)" != "" ]; then				      \
  	   if [ ! -d "$(install_prefix)$(GTK_APPDIR)" ]; then		      \
  	     echo $(INSTALL_DIRS) "$(install_prefix)$(GTK_APPDIR)"	     ;\
+@@ -496,7 +496,7 @@
+ # ../utils/images/screensaver-*.png
+ # into /usr/share/xscreensaver/glade/
+ install-gnome::
+-	@if [ "$(GTK_GLADEDIR)" != "" ]; then                                 \
++	@if [ "$(GTK_DATADIR)" != "" -a "$(GTK_GLADEDIR)" != "" ]; then       \
+            if [ ! -d "$(install_prefix)$(GTK_GLADEDIR)" ]; then               \
+              echo $(INSTALL_DIRS) "$(install_prefix)$(GTK_GLADEDIR)"         ;\
+                   $(INSTALL_DIRS) "$(install_prefix)$(GTK_GLADEDIR)"         ;\
+@@ -513,7 +513,7 @@
+ # xscreensaver-demo.glade2
+ # into /usr/share/xscreensaver/glade/
+ install-gnome:: xscreensaver-demo.glade2
+-	@if [ "$(GTK_GLADEDIR)" != "" ]; then				      \
++	@if [ "$(GTK_DATADIR)" != "" -a "$(GTK_GLADEDIR)" != "" ]; then       \
+ 	  if [ ! -d "$(install_prefix)$(GTK_GLADEDIR)" ]; then		      \
+ 	    echo $(INSTALL_DIRS) "$(install_prefix)$(GTK_GLADEDIR)"	     ;\
+ 	         $(INSTALL_DIRS) "$(install_prefix)$(GTK_GLADEDIR)"	     ;\
