@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 1999/08/11 06:21:29 rh Exp $
+$NetBSD: patch-aa,v 1.3 2000/08/31 23:21:44 jwise Exp $
 --- Makefile.orig	Sun Jan  4 23:47:29 1998
 +++ Makefile	Tue Dec 29 18:38:29 1998
 @@ -5,19 +5,19 @@
@@ -6,7 +6,7 @@ $NetBSD: patch-aa,v 1.2 1999/08/11 06:21:29 rh Exp $
  ### EDIT THE NEXT FIVE LINES ONLY ###
  # The directory where the tkhylafax library will be installed
 -TCLLIB_DEST = /usr/local/lib/tkhylafax-3.1
-+TCLLIB_DEST = ${PREFIX}/lib/tkhylafax-3.1
++TCLLIB_DEST = ${PREFIX}/share/tkhylafax-3.1
  
  # The directory where the tkhylafax command will be installed
 -TCLPRG_DEST = /usr/local/bin
@@ -18,11 +18,11 @@ $NetBSD: patch-aa,v 1.2 1999/08/11 06:21:29 rh Exp $
  
  # The full path to tclsh
 -TCLSH = /usr/local/bin/tclsh
-+TCLSH = tclsh8.0
++TCLSH = ${LOCALBASE}/bin/tclsh
  
  # The full path to wish.
 -WISH = /usr/local/bin/wish
-+WISH = wish8.0
++WISH = ${LOCALBASE}/bin/wish
  ### DON'T EDIT ANYTHING BELOW THIS LINE ###
  
  TCLLIB_FILES =  \
