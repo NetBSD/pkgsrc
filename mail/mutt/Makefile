@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.115 2004/03/10 18:42:18 wiz Exp $
+# $NetBSD: Makefile,v 1.116 2004/03/20 23:10:23 bouyer Exp $
 
 DISTNAME=		mutt-1.4.2.1i
 PKGNAME=                ${DISTNAME:C/i$//}
@@ -28,6 +28,10 @@ LDFLAGS+=		${_STRIPFLAG_CC}
 PLIST_SRC=		${WRKDIR}/PLIST
 
 .include "../../mk/bsd.prefs.mk"
+
+.if (${OPSYS} == "SunOS")
+CONFIGURE_ARGS+=	--without-wc-funcs
+.endif
 
 .if ${MUTT_USE_SLANG} == YES
 . include "../../devel/libslang/buildlink3.mk"
