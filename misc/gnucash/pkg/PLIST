@@ -1,0 +1,91 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/01/23 03:56:11 mellon Exp $
+bin/gnucash
+bin/gnucash.motif
+lib/gnucash/gnc-prices
+@dirrm lib/gnucash
+share/gnucash/config
+share/gnucash/scm/startup/command-line.scm
+share/gnucash/scm/startup/config-var.scm
+share/gnucash/scm/startup/main.scm
+share/gnucash/scm/startup/path.scm
+share/gnucash/scm/startup/prefs.scm
+share/gnucash/scm/startup/utilities.scm
+share/gnucash/scm/startup/init.scm
+share/gnucash/scm/doc.scm
+share/gnucash/scm/graph.scm
+share/gnucash/scm/hooks.scm
+share/gnucash/data/splitdemo.xac
+share/gnucash/data/test.xac
+share/gnucash/data/test2.xac
+share/gnucash/data/test3.xac
+share/gnucash/data/test4.xac
+share/gnucash/data/trading.xac
+share/gnucash/data/trading2.xac
+share/gnucash/data/xfer.xac
+share/gnucash/Docs/bofa-mym.html
+share/gnucash/Docs/projects.html
+share/gnucash/Docs/xacc-about.html
+share/gnucash/Docs/xacc-acctypes.html
+share/gnucash/Docs/xacc-accwin.html
+share/gnucash/Docs/xacc-adjbwin.html
+share/gnucash/Docs/xacc-apar.html
+share/gnucash/Docs/xacc-currency.html
+share/gnucash/Docs/xacc-date.html
+share/gnucash/Docs/xacc-double.html
+share/gnucash/Docs/xacc-expense.html
+share/gnucash/Docs/xacc-gpl.html
+share/gnucash/Docs/xacc-groups.html
+share/gnucash/Docs/xacc-main.html
+share/gnucash/Docs/xacc-mainwin.html
+share/gnucash/Docs/xacc-print.html
+share/gnucash/Docs/xacc-quicken.html
+share/gnucash/Docs/xacc-recnwin.html
+share/gnucash/Docs/pix.xpm
+share/gnucash/Docs/xacc-regwin.html
+share/gnucash/Docs/xacc-reports.html
+share/gnucash/Docs/xacc-y2k.html
+share/gnucash/Docs/contract.gif
+share/gnucash/Docs/expand.gif
+share/gnucash/Docs/foliowin-single.gif
+share/gnucash/Docs/foliowin.gif
+share/gnucash/Docs/newaccwin-code.gif
+share/gnucash/Docs/newaccwin-trade.gif
+share/gnucash/Docs/newaccwin.gif
+share/gnucash/Docs/recnwin.gif
+share/gnucash/Docs/regwin-double.gif
+share/gnucash/Docs/regwin-multi.gif
+share/gnucash/Docs/regwin-single.gif
+share/gnucash/Docs/regwin.gif
+share/gnucash/Docs/logos/NetBSD-banner.gif
+share/gnucash/Docs/logos/bullogogross.gif
+share/gnucash/Docs/logos/debian.jpg
+share/gnucash/Docs/logos/ibm.gif
+share/gnucash/Docs/logos/linux.gif
+share/gnucash/Docs/logos/sgi.gif
+share/gnucash/Docs/logos/skunkware.gif
+share/gnucash/Reports/report-main.html
+share/gnucash/Reports/report-menu.html
+share/gnucash/Reports/report-null.html
+share/gnucash/Reports/report-baln.phtml
+share/gnucash/Reports/report-folio.phtml
+share/gnucash/Reports/report-pnl.phtml
+@dirrm share/gnucash/scm/startup
+@dirrm share/gnucash/scm
+@dirrm share/gnucash/data
+@dirrm share/gnucash/Docs/logos
+@dirrm share/gnucash/Docs/images
+@dirrm share/gnucash/Docs
+@dirrm share/gnucash/Reports/images
+@dirrm share/gnucash/Reports
+@dirrm share/gnucash
+doc/gnucash/README
+doc/gnucash/README.aix
+doc/gnucash/README.binaries
+doc/gnucash/README.german
+doc/gnucash/README.install
+doc/gnucash/README.irix
+doc/gnucash/README.sco
+doc/gnucash/README.solaris
+doc/gnucash/TODO
+doc/gnucash/CHANGES
+@dirrm doc/gnucash
