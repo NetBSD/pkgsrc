@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1706 2003/03/21 22:27:20 dillo Exp $
+$NetBSD: CHANGES,v 1.1707 2003/03/21 23:08:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1217,3 +1217,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated openssl to 0.9.6gnb2 [seb 2003-03-21]
 	Updated troffcvt to 1.04nb1 [jmmv 2003-03-21]
 	Updated freetype2-2.1.3nb1 [dillo 2003-03-21]
+	Renamed sml-nj to smlnj [wiz 2003-03-21]
+	Updated smlnj to 110.42 [wiz 2003-03-21]
