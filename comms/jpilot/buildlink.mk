@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.4 2001/07/01 22:59:12 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.5 2001/07/20 01:54:34 jlam Exp $
 #
 # This Makefile fragment is included by packages that use jpilot.
 #
@@ -20,7 +20,7 @@ JPILOT_BUILDLINK_MK=	# defined
 BUILDLINK_DEPENDS.jpilot?=	jpilot>=0.99
 BUILD_DEPENDS+=			${BUILDLINK_DEPENDS.jpilot}:../../comms/jpilot
 
-BUILDLINK_PREFIX.jpilot=	${LOCALBASE}
+EVAL_PREFIX+=			BUILDLINK_PREFIX.jpilot=jpilot
 BUILDLINK_FILES.jpilot=		include/jpilot/*
 
 .include "../../x11/gtk/buildlink.mk"

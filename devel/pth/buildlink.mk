@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.5 2001/07/02 05:32:41 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.6 2001/07/20 01:54:40 jlam Exp $
 #
 # This Makefile fragment is included by packages that use pth.
 #
@@ -20,7 +20,7 @@ PTH_BUILDLINK_MK=	# defined
 BUILDLINK_DEPENDS.pth?=	pth>=1.3.2
 DEPENDS+=		${BUILDLINK_DEPENDS.pth}:../../devel/pth
 
-BUILDLINK_PREFIX.pth=	${LOCALBASE}
+EVAL_PREFIX+=		BUILDLINK_PREFIX.pth=pth
 BUILDLINK_FILES.pth=	include/pth.h
 BUILDLINK_FILES.pth+=	include/pthread.h
 BUILDLINK_FILES.pth+=	lib/libpth.*
@@ -31,10 +31,10 @@ BUILDLINK_TARGETS.pth+=	pth-buildlink-config-wrapper
 BUILDLINK_TARGETS.pth+=	pth-pthread-buildlink-config-wrapper
 BUILDLINK_TARGETS+=	${BUILDLINK_TARGETS.pth}
 
-BUILDLINK_CONFIG.pth=			${LOCALBASE}/bin/pth-config
+BUILDLINK_CONFIG.pth=			${BUILDLINK_PREFIX.pth}/bin/pth-config
 BUILDLINK_CONFIG_WRAPPER.pth=		${BUILDLINK_DIR}/bin/pth-config
 
-BUILDLINK_CONFIG.pth-pthread=		${LOCALBASE}/bin/pthread-config
+BUILDLINK_CONFIG.pth-pthread=		${BUILDLINK_PREFIX.pth}/bin/pthread-config
 BUILDLINK_CONFIG_WRAPPER.pth-pthread=	${BUILDLINK_DIR}/bin/pthread-config
 
 .if defined(USE_CONFIG_WRAPPER) && defined(GNU_CONFIGURE)
