@@ -1,0 +1,21 @@
+$NetBSD: patch-ad,v 1.1 2002/04/03 20:38:35 rh Exp $
+
+--- cl/src/uninstall.c.orig	Thu Mar 15 21:10:33 2001
++++ cl/src/uninstall.c
+@@ -23,6 +23,7 @@
+ #include <string.h>
+ #include <unistd.h>
+ #include <sys/stat.h>
++#include <sys/param.h>
+ #include <libintl.h>
+ #include <locale.h>
+ #include <scrollkeeper.h>
+@@ -31,7 +32,7 @@
+ 
+ #define _(String) gettext (String)
+ 
+-#define PATHLEN		256
++#define PATHLEN		MAXPATHLEN
+ 
+ struct IdTab {
+     int id;
