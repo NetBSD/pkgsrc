@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2001/07/01 21:40:27 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2001/08/22 17:38:57 jlam Exp $
 # FreeBSD ID: Makefile,v 1.5 1997/09/08 13:37:47 tg Exp
 #
 
@@ -10,8 +10,7 @@ MAINTAINER=	augustss@cs.chalmers.se
 HOMEPAGE=	http://sunsite.unc.edu/~cddb/xmmix/index.html
 COMMENT=	X interface to the audio mixer device
 
-USE_BUILDLINK_ONLY=	yes
-USE_IMAKE=		yes
+USE_IMAKE=	yes
 
 post-patch:
 	for file in ${WRKSRC}/XMmix.ad ${WRKSRC}/resource.h; do		\
