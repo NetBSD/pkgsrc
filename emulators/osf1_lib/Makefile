@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2001/03/27 03:19:55 hubertf Exp $
+# $NetBSD: Makefile,v 1.3 2003/03/22 15:33:53 wiz Exp $
 
 DISTNAME=	netscape-4.7-3.alpha
-PKGNAME=	osf1_lib-1.0
+PKGNAME=	osf1_lib-1.1
 CATEGORIES=	emulators
 MASTER_SITES=	ftp://ftp.support.compaq.com/private/alpha-tools-software/netscape/
 EXTRACT_SUFX=	.rpm
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.support.compaq.com/alpha-tools/software/index.html
 COMMENT=	DEC/Compaq OSF-1/Tru64 compatibility package for netscape
 
 RPM2PKG=	${LOCALBASE}/sbin/rpm2pkg
-BUILD_DEPENDS+=	rpm2pkg-1.2:../../pkgtools/rpm2pkg
+BUILD_DEPENDS+=	rpm2pkg>=1.2:../../pkgtools/rpm2pkg
 
 ONLY_FOR_PLATFORM=	NetBSD-*-alpha
 
@@ -42,6 +42,7 @@ do-install:
 	${RM} -f ${WRKDIR}/PLIST_DYNAMIC
 	${INSTALL_DATA_DIR} ${EMULDIR}
 	${RPM2PKG} -d ${PREFIX} -p ${EMULSUBDIR} ${RPMARGS}
+	${TOUCH} ${EMULDIR}/etc/hosts
 	(cd ${EMULDIR}; ${MKDIR} usr/lib/X11)
 	(cd ${EMULDIR}/usr/lib/X11; ${LN} -fs ${X11BASE}/lib/X11/locale .)
 
