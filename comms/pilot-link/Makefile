@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1998/04/15 10:38:17 agc Exp $
+# $NetBSD: Makefile,v 1.7 1998/05/13 14:04:58 frueauf Exp $
 #
 
 DISTNAME=	pilot-link.0.8.11
@@ -9,6 +9,7 @@ MAINTAINER=	sommerfeld@alum.mit.edu
 
 STRIPFLAG=
 GNU_CONFIGURE=	yes
+USE_PERL5=	yes
 
 MAN1=		dlpsh.1 ietf2datebook.1 install-datebook.1 install-memo.1 \
 		install-user.1 pilot-xfer.1 read-ical.1
