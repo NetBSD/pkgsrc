@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1305 2003/11/23 07:31:18 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1306 2003/11/25 12:01:31 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -797,7 +797,7 @@ PKG_ARGS_COMMON=	-v -c -${COMMENT:Q}" " -d ${DESCR} -f ${PLIST}
 PKG_ARGS_COMMON+=	-l -b ${BUILD_VERSION_FILE} -B ${BUILD_INFO_FILE}
 PKG_ARGS_COMMON+=	-s ${SIZE_PKG_FILE} -S ${SIZE_ALL_FILE}
 PKG_ARGS_COMMON+=	-P "`${MAKE} ${MAKEFLAGS} run-depends-list PACKAGE_DEPENDS_QUICK=true | ${SORT} -u`"
-.  ifdef CONFLICTS
+.  if defined(CONFLICTS) && (${PKG_INSTALLATION_TYPE} == "overwrite")
 PKG_ARGS_COMMON+=	-C "${CONFLICTS}"
 .  endif
 .  ifdef INSTALL_FILE
