@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.74 2000/03/03 00:19:03 kim Exp $
+# $NetBSD: Makefile,v 1.75 2000/03/28 17:24:11 tron Exp $
 # FreeBSD Id: Makefile,v 1.65 1997/11/17 06:31:39 fenner Exp
 #
 
@@ -62,6 +62,7 @@
     SUBDIR += swish-e
     SUBDIR += tcl-cgi
     SUBDIR += thttpd
+    SUBDIR += tidy
     SUBDIR += urlget
     SUBDIR += w3c-httpd
     SUBDIR += w3m
