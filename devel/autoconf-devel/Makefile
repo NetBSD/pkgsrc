@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2002/04/14 15:45:36 christos Exp $
+# $NetBSD: Makefile,v 1.4 2002/04/18 21:36:21 rh Exp $
 
 DISTNAME=		autoconf-2.53
-PKGNAME=		autoconf-devel-2.53
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GNU:=autoconf/}
 
@@ -11,7 +10,7 @@ COMMENT=		Generates automatic source code configuration scripts
 
 DEPENDS=		m4-1.4:../../devel/m4
 
-CONFLICTS=		autoconf-[0-9]*
+CONFLICTS=		autoconf-devel-[0-9]*
 
 USE_BUILDLINK_ONLY=	YES
 
