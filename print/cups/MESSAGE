@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.5 2003/03/20 12:31:40 jmmv Exp $
+$NetBSD: MESSAGE,v 1.6 2003/03/20 18:49:33 jmmv Exp $
 
 You will need to also install print/ghostscript-esp{,-nox11} if you wish
 to print to non-Postscript printers.
@@ -12,6 +12,4 @@ Beware:
 -------
 * Whats missing in the docs is that you can install additional PPD files in
   ${PREFIX}/share/cups/model and select the model from there.
-* If you have configured your system to use blowfish as the encryption type
-  in /etc/passwd.conf, authentication in cups won't work. Change it to MD5.
 ===========================================================================
