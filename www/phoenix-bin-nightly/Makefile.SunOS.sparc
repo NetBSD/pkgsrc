@@ -1,9 +1,10 @@
-# $NetBSD: Makefile.SunOS.sparc,v 1.1 2003/04/14 21:28:10 grant Exp $
+# $NetBSD: Makefile.SunOS.sparc,v 1.2 2003/06/11 13:19:42 grant Exp $
 #
 
-DISTNAME=	phoenix-sparc-sun-solaris2.7-static
+DISTNAME=	MozillaFirebird-sparc-sun-solaris2.7-static
+MASTER_SITES=	http://komodo.mozilla.org/pub/firebird/nightly/contrib/latest-trunk/
 
 DEPENDS+=	gtk+>=1.2:../../x11/gtk
 
 PLATFORM=	${LOWER_OPSYS}
-PHOENIX_LIB=	${PREFIX}/lib/phoenix-${PLATFORM}
+PHOENIX_LIB=	${PREFIX}/lib/MozillaFirebird-${PLATFORM}
