@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5105 2004/03/06 07:12:54 xtraeme Exp $
+$NetBSD: CHANGES,v 1.5106 2004/03/06 12:08:22 grant Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1183,3 +1183,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Removed crafty-book-large [wiz 2004-03-05]
 	Updated blt to 2.4z [minskim 2004-03-06]
 	Updated abiword to 2.0.4 [xtraeme 2004-03-06]
+	Added ytalk-x11-3.1.1 [grant 2004-03-06]
