@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST.irix,v 1.1 2003/06/10 18:02:26 jschauma Exp $
+@comment $NetBSD: PLIST.irix,v 1.2 2003/10/02 02:34:39 jschauma Exp $
 lib/libcrypto.so
 lib/libcrypto.so.300
-lib/libcrypto.so.300.0
+lib/libcrypto.so.300.1
 lib/libssl.so
 lib/libssl.so.300
-lib/libssl.so.300.0
+lib/libssl.so.300.1
