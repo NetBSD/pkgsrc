@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/06/18 21:20:36 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2001/06/18 21:32:24 jlam Exp $
 #
 
 DISTNAME=		gle-3.0.3
@@ -15,6 +15,7 @@ COMMENT=		GL subroutines for drawing tubing and extrusions
 USE_X11BASE=		YES
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
+USE_BUILDLINK_ONLY=	YES
 
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
