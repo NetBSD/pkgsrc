@@ -1,27 +1,21 @@
-$NetBSD: patch-ak,v 1.2 1999/09/03 19:45:12 drochner Exp $
---- doc/lessdox/functions/Makefile.in.orig	Sun Aug 15 11:49:11 1999
-+++ doc/lessdox/functions/Makefile.in	Sun Aug 15 11:50:31 1999
-@@ -114,10 +114,10 @@
- EXTRA_DIST =  $(man1_DATA) $(man3_DATA) $(man5_DATA)
- SUFFIXES = .1 .3 .5 .html
- 
--mandir = $(exec_prefix)/LessTif/doc/man
--man1dir = $(exec_prefix)/LessTif/doc/man/man1
--man3dir = $(exec_prefix)/LessTif/doc/man/man3
--man5dir = $(exec_prefix)/LessTif/doc/man/man5
-+mandir = $(exec_prefix)/man
-+man1dir = $(mandir)/man1
-+man3dir = $(mandir)/man3
-+man5dir = $(mandir)/man5
- 
- man1_DATA = 
- man3_DATA =  	XtConfigureObject.3 XtDestroyWidget.3         XtManageChild.3 XtUnmanageChild.3
-@@ -133,7 +133,7 @@
- # build them.
+$NetBSD: patch-ak,v 1.3 1999/11/03 04:18:47 jlam Exp $
+
+--- include/Motif-2.0/Mrm/Makefile.in.orig	Mon Sep  6 17:13:39 1999
++++ include/Motif-2.0/Mrm/Makefile.in	Tue Nov  2 22:16:17 1999
+@@ -121,7 +121,7 @@
+ # Lets put the headers in a sub directory to avoid
+ # poluting /usr/local with more directories for default installs.
  #
+-@Version_2_0_TRUE@mrmdir = $(prefix)/LessTif/Motif2.0/include/Mrm
++@Version_2_0_TRUE@mrmdir = $(prefix)/include/Mrm
  
--htmldir = $(exec_prefix)/LessTif/doc/html
-+htmldir = $(exec_prefix)/share/lesstif/doc/html
+ @Version_2_0_TRUE@HEADERS1_2 = MrmAppl.h MrmDecls.h MrmPrivate.h MrmPublic.h
  
- @HaveMan2html_TRUE@html_DATA = ${man1_DATA:.1=.html} ${man3_DATA:.3=.html}                 ${man5_DATA:.5=.html}
+@@ -220,7 +220,6 @@
  
+ install-data-am: install-mrmHEADERS
+ 	@$(NORMAL_INSTALL)
+-	$(MAKE) $(AM_MAKEFLAGS) install-data-hook
+ install-data: install-data-am
+ 
+ install-am: all-am

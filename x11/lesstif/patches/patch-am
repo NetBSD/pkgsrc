@@ -1,28 +1,21 @@
-$NetBSD: patch-am,v 1.1 1999/09/03 19:45:12 drochner Exp $
---- test/configure.orig	Mon Aug 16 01:19:46 1999
-+++ test/configure	Mon Aug 16 02:14:10 1999
-@@ -1390,6 +1390,7 @@
+$NetBSD: patch-am,v 1.2 1999/11/03 04:18:47 jlam Exp $
+
+--- lib/Mrm-2.0/Makefile.in.orig	Mon Sep  6 17:13:33 1999
++++ lib/Mrm-2.0/Makefile.in	Tue Nov  2 22:16:17 1999
+@@ -123,7 +123,7 @@
  
+ EXTRA_DIST = ${SRCS_2_0}
  
- # Check for any special flags to pass to ltconfig.
-+if false; then
- libtool_flags="--cache-file=$cache_file"
- test "$enable_shared" = no && libtool_flags="$libtool_flags --disable-shared"
- test "$enable_static" = no && libtool_flags="$libtool_flags --disable-static"
-@@ -1546,6 +1547,7 @@
- # Redirect the config.log output again, so that the ltconfig log is not
- # clobbered by the next message.
- exec 5>>./config.log
-+fi
+-@Version_2_0_TRUE@libdir = $(prefix)/LessTif/Motif2.0/lib
++@Version_2_0_TRUE@libdir = $(prefix)/lib
  
+ #
+ # Sources in another directory
+@@ -314,7 +314,6 @@
  
- version=1.2
-@@ -4363,7 +4365,7 @@
+ install-data-am:
+ 	@$(NORMAL_INSTALL)
+-	$(MAKE) $(AM_MAKEFLAGS) install-data-hook
+ install-data: install-data-am
  
- lexicographic_readdir=1
- 
--CFLAGS="$debug_flag $conversions_flag $verbose_flag $production_flag"
-+CFLAGS="${CCFLAGS} $conversions_flag $verbose_flag $production_flag"
- GPROF_FLAGS="-pg"
- GPROF_CFLAGS=""
- EXTRACFLAGS=""
+ install-am: all-am

@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.4 1999/11/03 04:18:47 jlam Exp $
+$NetBSD: patch-at,v 1.1 1999/11/03 04:18:48 jlam Exp $
 
---- configure.orig	Mon Sep  6 17:14:00 1999
-+++ configure	Tue Nov  2 22:16:16 1999
-@@ -1406,6 +1406,7 @@
+--- test/configure.orig	Mon Sep  6 17:21:32 1999
++++ test/configure	Tue Nov  2 22:16:17 1999
+@@ -1391,6 +1391,7 @@
  fi
  
  
@@ -10,11 +10,11 @@ $NetBSD: patch-ac,v 1.4 1999/11/03 04:18:47 jlam Exp $
  # Check for any special flags to pass to ltconfig.
  libtool_flags="--cache-file=$cache_file"
  test "$enable_shared" = no && libtool_flags="$libtool_flags --disable-shared"
-@@ -1563,6 +1564,7 @@
+@@ -1548,6 +1549,7 @@
  # Redirect the config.log output again, so that the ltconfig log is not
  # clobbered by the next message.
  exec 5>>./config.log
 +fi
  
  
- subdirs="lib/Xlt lib/Xbae test"
+ version=1.2
