@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.153 2001/04/27 15:40:47 hubertf Exp $
+# $NetBSD: Packages.txt,v 1.154 2001/04/28 14:28:26 dmcmahill Exp $
 ###########################################################################
 
 			==========================
@@ -459,12 +459,25 @@ Currently, roughly the following requirements are valid for
  * Full set of all binaries:          1000MB (NFS ok)
  * Temp space for compiling:          1500MB (local disk recommended)
 
+For 1.5/alpha:
+
+ * Full set of all binaries:          1300MB (NFS ok)
+
 Note that all pkgs will be deinstalled as soon as they are turned into a
 binary package, and that work-sources are removed, so there is no huge
 demand to disk space. Afterwards, if the package is needed again, it will
 be installed via pkg_add instead of building again, so there are no cycles
 wasted by recompiling. 
 
+ 3.3 Creating a multiple CD-ROM packages collection
+ ==================================================
+
+After your bulk pkgsrc build has completed, you may wish to create a CD-ROM
+set of the resulting binary packages to assist in installing packages on
+other machines.  The package pkgtools/cdpack provides a simple tool for 
+creating the ISO 9660 images.  `cdpack' arranges the packages on the CD-ROM's
+in a way that keeps all the dependencies for given package on the same
+CD as that package.
 
 ====================================
 Part II: Package Constructor's Guide
