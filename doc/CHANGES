@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7960 2004/11/23 16:59:02 jschauma Exp $
+$NetBSD: CHANGES,v 1.7961 2004/11/23 17:15:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5394,3 +5394,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated guile to 1.6.5nb1 [wiz 2004-11-23]
 	Updated sun-jre13 to 1.0.13 [jschauma 2004-11-23]
 	Updated sun-jdk13 to 1.0.13 [jschauma 2004-11-23]
+	Updated Xbae to 4.50.99 [wiz 2004-11-23]
+	Updated xquote to 2.6.9 [wiz 2004-11-23]
