@@ -1,4 +1,5 @@
 #! @PREFIX@/bin/perl
+#	$NetBSD: netstat2mrtg,v 1.2 2001/06/19 12:32:18 hubertf Exp $
 
 $if = $ARGV[0];
 open(NET, "netstat -I $if -b|");
