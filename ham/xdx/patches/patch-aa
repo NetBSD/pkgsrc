@@ -1,15 +1,14 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/02/23 23:01:55 wulf Exp $
+$NetBSD: patch-aa,v 1.2 2005/01/23 09:24:18 wulf Exp $
 
---- src/net.c.orig	2004-02-01 20:40:11.000000000 +1030
-+++ src/net.c	2004-02-01 20:40:36.000000000 +1030
-@@ -38,13 +38,13 @@
- #include <sys/types.h>
+--- src/net.c.orig	2004-05-22 02:14:21.000000000 +0930
++++ src/net.c	2005-01-23 20:46:43.000000000 +1030
+@@ -39,12 +39,12 @@
  #include <string.h>
  #include <errno.h>
+ #include <netinet/in.h>
 -#include <resolv.h>
  #include <netdb.h>
  #include <sys/socket.h>
- #include <netinet/in.h>
  #include <arpa/inet.h>
  #include <signal.h>
  #include <fcntl.h>
