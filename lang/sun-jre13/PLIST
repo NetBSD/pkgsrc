@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2004/10/05 22:09:23 tv Exp $
+@comment $NetBSD: PLIST,v 1.9 2004/11/26 11:51:21 wiz Exp $
 bin/sun13-java
 bin/sun13-keytool
 bin/sun13-policytool
@@ -141,7 +141,7 @@ java/sun-1.3.1/man/ja_JP.eucJP/man1/keytool.1
 java/sun-1.3.1/man/ja_JP.eucJP/man1/rmid.1
 java/sun-1.3.1/man/ja_JP.eucJP/man1/rmiregistry.1
 java/sun-1.3.1/man/ja_JP.eucJP/man1/tnameserv.1
-@exec	${LN} -sf java/sun-1.3.1/ja_JP.eucJP %D/java/sun-jdk13/man/ja
+@exec	${LN} -sf java/sun-1.3.1/man/ja_JP.eucJP %D/java/sun-jdk13/man/ja
 @unexec ${RM} -f %D/java/sun-1.3.1/man/ja
 java/sun-1.3.1/man/man1/java.1
 java/sun-1.3.1/man/man1/keytool.1
