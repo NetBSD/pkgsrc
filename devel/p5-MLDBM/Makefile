@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2000/08/27 07:11:07 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2000/08/29 00:05:03 jlam Exp $
 #
 
 DISTNAME=		MLDBM-2.00
@@ -13,6 +13,9 @@ DEPENDS+= 		p5-Data-Dumper-*:../../devel/p5-Data-Dumper
 
 USE_PERL5=		# defined
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/MLDBM/.packlist
+
+post-patch:
+	${FIND} ${WRKSRC} -name "*.orig" -exec ${RM} -f {} \;
 
 do-configure:
 	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
