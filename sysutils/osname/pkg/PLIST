@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/07/05 05:01:23 kim Exp $
+bin/osname
+man/man1/osname.1
