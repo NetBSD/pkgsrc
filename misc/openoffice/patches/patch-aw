@@ -1,4 +1,4 @@
-$NetBSD: patch-aw,v 1.5 2005/01/03 08:07:26 agc Exp $
+$NetBSD: patch-aw,v 1.6 2005/01/03 22:51:47 agc Exp $
 
 Patch from Rui-Xiang Guo for building on NetBSD-current
 
@@ -9,9 +9,9 @@ Patch from Rui-Xiang Guo for building on NetBSD-current
  
  #ifdef NETBSD
 +#	include <sys/param.h>
-+#if (__NetBSD_Version__ < 200000000)
++#  ifndef ETIME
  #	define  ETIME ETIMEDOUT
-+#endif
++#  endif
  #	define _POSIX_THREAD_SYSCALL_SOFT 1
  #	include <pthread.h>
  #	include <netdb.h>
