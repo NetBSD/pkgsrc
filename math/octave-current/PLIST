@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2005/03/22 09:24:29 adam Exp $
+@comment $NetBSD: PLIST,v 1.16 2005/04/01 10:15:19 adam Exp $
 bin/mkoctfile
 bin/mkoctfile-${PKGVERSION}
 bin/octave
@@ -22,6 +22,7 @@ include/octave-${PKGVERSION}/octave/CDiagMatrix.h
 include/octave-${PKGVERSION}/octave/CMatrix.h
 include/octave-${PKGVERSION}/octave/CNDArray.h
 include/octave-${PKGVERSION}/octave/CRowVector.h
+include/octave-${PKGVERSION}/octave/CSparse.h
 include/octave-${PKGVERSION}/octave/Cell.h
 include/octave-${PKGVERSION}/octave/CmplxAEPBAL.h
 include/octave-${PKGVERSION}/octave/CmplxCHOL.h
@@ -61,6 +62,8 @@ include/octave-${PKGVERSION}/octave/MArrayN.cc
 include/octave-${PKGVERSION}/octave/MArrayN.h
 include/octave-${PKGVERSION}/octave/MDiagArray2.cc
 include/octave-${PKGVERSION}/octave/MDiagArray2.h
+include/octave-${PKGVERSION}/octave/MSparse-defs.h
+include/octave-${PKGVERSION}/octave/MSparse.h
 include/octave-${PKGVERSION}/octave/Matrix.h
 include/octave-${PKGVERSION}/octave/NLConst.h
 include/octave-${PKGVERSION}/octave/NLEqn-opts.h
@@ -76,6 +79,11 @@ include/octave-${PKGVERSION}/octave/QP.h
 include/octave-${PKGVERSION}/octave/Quad-opts.h
 include/octave-${PKGVERSION}/octave/Quad.h
 include/octave-${PKGVERSION}/octave/Range.h
+include/octave-${PKGVERSION}/octave/Sparse-op-defs.h
+include/octave-${PKGVERSION}/octave/Sparse.h
+include/octave-${PKGVERSION}/octave/SparseCmplxLU.h
+include/octave-${PKGVERSION}/octave/SparseType.h
+include/octave-${PKGVERSION}/octave/SparsedbleLU.h
 include/octave-${PKGVERSION}/octave/base-dae.h
 include/octave-${PKGVERSION}/octave/base-de.h
 include/octave-${PKGVERSION}/octave/base-list.h
@@ -84,6 +92,7 @@ include/octave-${PKGVERSION}/octave/base-lu.h
 include/octave-${PKGVERSION}/octave/base-min.h
 include/octave-${PKGVERSION}/octave/boolMatrix.h
 include/octave-${PKGVERSION}/octave/boolNDArray.h
+include/octave-${PKGVERSION}/octave/boolSparse.h
 include/octave-${PKGVERSION}/octave/byte-swap.h
 include/octave-${PKGVERSION}/octave/c-file-ptr-stream.h
 include/octave-${PKGVERSION}/octave/chMatrix.h
@@ -97,6 +106,7 @@ include/octave-${PKGVERSION}/octave/dDiagMatrix.h
 include/octave-${PKGVERSION}/octave/dMatrix.h
 include/octave-${PKGVERSION}/octave/dNDArray.h
 include/octave-${PKGVERSION}/octave/dRowVector.h
+include/octave-${PKGVERSION}/octave/dSparse.h
 include/octave-${PKGVERSION}/octave/data-conv.h
 include/octave-${PKGVERSION}/octave/dbleAEPBAL.h
 include/octave-${PKGVERSION}/octave/dbleCHOL.h
@@ -428,6 +438,7 @@ include/octave-${PKGVERSION}/octave/oct-rl-hist.h
 include/octave-${PKGVERSION}/octave/oct-shlib.h
 include/octave-${PKGVERSION}/octave/oct-sort.cc
 include/octave-${PKGVERSION}/octave/oct-sort.h
+include/octave-${PKGVERSION}/octave/oct-spparms.h
 include/octave-${PKGVERSION}/octave/oct-stdstrm.h
 include/octave-${PKGVERSION}/octave/oct-stream.h
 include/octave-${PKGVERSION}/octave/oct-strstrm.h
@@ -442,8 +453,10 @@ include/octave-${PKGVERSION}/octave/ov-base-mat.cc
 include/octave-${PKGVERSION}/octave/ov-base-mat.h
 include/octave-${PKGVERSION}/octave/ov-base-scalar.cc
 include/octave-${PKGVERSION}/octave/ov-base-scalar.h
+include/octave-${PKGVERSION}/octave/ov-base-sparse.h
 include/octave-${PKGVERSION}/octave/ov-base.h
 include/octave-${PKGVERSION}/octave/ov-bool-mat.h
+include/octave-${PKGVERSION}/octave/ov-bool-sparse.h
 include/octave-${PKGVERSION}/octave/ov-bool.h
 include/octave-${PKGVERSION}/octave/ov-builtin.h
 include/octave-${PKGVERSION}/octave/ov-cell.h
@@ -452,6 +465,7 @@ include/octave-${PKGVERSION}/octave/ov-colon.h
 include/octave-${PKGVERSION}/octave/ov-complex.h
 include/octave-${PKGVERSION}/octave/ov-cs-list.h
 include/octave-${PKGVERSION}/octave/ov-cx-mat.h
+include/octave-${PKGVERSION}/octave/ov-cx-sparse.h
 include/octave-${PKGVERSION}/octave/ov-dld-fcn.h
 include/octave-${PKGVERSION}/octave/ov-fcn-handle.h
 include/octave-${PKGVERSION}/octave/ov-fcn-inline.h
@@ -467,6 +481,7 @@ include/octave-${PKGVERSION}/octave/ov-list.h
 include/octave-${PKGVERSION}/octave/ov-mapper.h
 include/octave-${PKGVERSION}/octave/ov-range.h
 include/octave-${PKGVERSION}/octave/ov-re-mat.h
+include/octave-${PKGVERSION}/octave/ov-re-sparse.h
 include/octave-${PKGVERSION}/octave/ov-scalar.h
 include/octave-${PKGVERSION}/octave/ov-str-mat.h
 include/octave-${PKGVERSION}/octave/ov-streamoff.h
@@ -507,7 +522,6 @@ include/octave-${PKGVERSION}/octave/pt-jump.h
 include/octave-${PKGVERSION}/octave/pt-loop.h
 include/octave-${PKGVERSION}/octave/pt-mat.h
 include/octave-${PKGVERSION}/octave/pt-misc.h
-include/octave-${PKGVERSION}/octave/pt-plot.h
 include/octave-${PKGVERSION}/octave/pt-pr-code.h
 include/octave-${PKGVERSION}/octave/pt-select.h
 include/octave-${PKGVERSION}/octave/pt-stmt.h
@@ -517,7 +531,28 @@ include/octave-${PKGVERSION}/octave/pt.h
 include/octave-${PKGVERSION}/octave/quit.h
 include/octave-${PKGVERSION}/octave/sighandlers.h
 include/octave-${PKGVERSION}/octave/siglist.h
+include/octave-${PKGVERSION}/octave/smx-bm-sbm.h
+include/octave-${PKGVERSION}/octave/smx-cm-scm.h
+include/octave-${PKGVERSION}/octave/smx-cm-sm.h
+include/octave-${PKGVERSION}/octave/smx-cs-sm.h
+include/octave-${PKGVERSION}/octave/smx-m-scm.h
+include/octave-${PKGVERSION}/octave/smx-m-sm.h
+include/octave-${PKGVERSION}/octave/smx-s-scm.h
+include/octave-${PKGVERSION}/octave/smx-sbm-bm.h
+include/octave-${PKGVERSION}/octave/smx-scm-cm.h
+include/octave-${PKGVERSION}/octave/smx-scm-m.h
+include/octave-${PKGVERSION}/octave/smx-scm-s.h
+include/octave-${PKGVERSION}/octave/smx-scm-sm.h
+include/octave-${PKGVERSION}/octave/smx-sm-cm.h
+include/octave-${PKGVERSION}/octave/smx-sm-cs.h
+include/octave-${PKGVERSION}/octave/smx-sm-m.h
+include/octave-${PKGVERSION}/octave/smx-sm-scm.h
 include/octave-${PKGVERSION}/octave/so-array.h
+include/octave-${PKGVERSION}/octave/sparse-base-lu.cc
+include/octave-${PKGVERSION}/octave/sparse-base-lu.h
+include/octave-${PKGVERSION}/octave/sparse-sort.h
+include/octave-${PKGVERSION}/octave/sparse-xdiv.h
+include/octave-${PKGVERSION}/octave/sparse-xpow.h
 include/octave-${PKGVERSION}/octave/statdefs.h
 include/octave-${PKGVERSION}/octave/str-vec.h
 include/octave-${PKGVERSION}/octave/sun-utils.h
@@ -555,6 +590,15 @@ lib/liboctave.la
 lib/liboctinterp.la
 libexec/octave/${PKGVERSION}/exec/${MACHINE_GNU_PLATFORM}/info-emacs-info
 libexec/octave/${PKGVERSION}/exec/${MACHINE_GNU_PLATFORM}/info-emacs-octave-help
+libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/PKG_ADD
+libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/__glpk__.oct
+libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/__gnuplot_init__.oct
+libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/__gnuplot_plot__.oct
+libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/__gnuplot_raw__.oct
+libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/__gnuplot_replot__.oct
+libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/__gnuplot_set__.oct
+libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/__gnuplot_show__.oct
+libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/__gnuplot_splot__.oct
 libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/airy.oct
 libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/balance.oct
 libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/besselh.oct
@@ -563,7 +607,12 @@ libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/besselj.oct
 libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/besselk.oct
 libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/bessely.oct
 libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/betainc.oct
+libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/builtin.oct
+libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/cellfun.oct
 libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/chol.oct
+libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/clearplot.oct
+libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/closeplot.oct
+libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/colamd.oct
 libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/colloc.oct
 libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/daspk.oct
 libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/daspk_options.oct
@@ -572,9 +621,12 @@ libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/dasrt_options.oct
 libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/dassl.oct
 libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/dassl_options.oct
 libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/det.oct
+libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/dispatch.oct
+libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/dispatch_help.oct
 libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/eig.oct
 libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/endgrent.oct
 libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/endpwent.oct
+libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/etree.oct
 libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/expm.oct
 libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/fft.oct
 libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/fft2.oct
@@ -584,6 +636,7 @@ libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/filter.oct
 libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/find.oct
 libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/fsolve.oct
 libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/fsolve_options.oct
+libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/full.oct
 libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/gammainc.oct
 libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/gcd.oct
 libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/getgrent.oct
@@ -595,12 +648,20 @@ libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/getpwuid.oct
 libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/getrusage.oct
 libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/givens.oct
 libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/gmtime.oct
+libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/gplot.oct
+libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/graw.oct
+libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/gset.oct
+libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/gshow.oct
+libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/gsplot.oct
 libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/hess.oct
+libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/hold.oct
 libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/ifft.oct
 libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/ifft2.oct
 libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/ifftn.oct
 libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/inv.oct
 libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/inverse.oct
+libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/ishold.oct
+libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/issparse.oct
 libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/kron.oct
 libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/localtime.oct
 libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/lpsolve.oct
@@ -612,7 +673,10 @@ libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/max.oct
 libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/min.oct
 libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/minmax.oct
 libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/mktime.oct
+libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/nnz.oct
+libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/nzmax.oct
 libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/pinv.oct
+libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/purge_tmp_files.oct
 libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/qr.oct
 libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/quad.oct
 libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/quad_options.oct
@@ -623,11 +687,28 @@ libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/schur.oct
 libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/setgrent.oct
 libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/setpwent.oct
 libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/sort.oct
+libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/sparse.oct
+libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/spatan2.oct
+libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/spcumprod.oct
+libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/spcumsum.oct
+libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/spdet.oct
+libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/spdiag.oct
+libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/spfind.oct
+libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/spinv.oct
+libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/splu.oct
+libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/spmax.oct
+libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/spmin.oct
+libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/spparms.oct
+libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/spprod.oct
+libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/spsum.oct
+libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/spsumsq.oct
 libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/sqrtm.oct
 libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/strftime.oct
 libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/strptime.oct
 libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/svd.oct
 libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/syl.oct
+libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/symamd.oct
+libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/symbfact.oct
 libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/time.oct
 libexec/octave/ls-R
 man/man1/mkoctfile.1
@@ -638,6 +719,7 @@ share/doc/html/octave/Octave-FAQ_1.html
 share/doc/html/octave/Octave-FAQ_10.html
 share/doc/html/octave/Octave-FAQ_11.html
 share/doc/html/octave/Octave-FAQ_12.html
+share/doc/html/octave/Octave-FAQ_13.html
 share/doc/html/octave/Octave-FAQ_2.html
 share/doc/html/octave/Octave-FAQ_3.html
 share/doc/html/octave/Octave-FAQ_4.html
@@ -726,6 +808,8 @@ share/doc/html/octave/octave_51.html
 share/doc/html/octave/octave_52.html
 share/doc/html/octave/octave_53.html
 share/doc/html/octave/octave_54.html
+share/doc/html/octave/octave_55.html
+share/doc/html/octave/octave_56.html
 share/doc/html/octave/octave_6.html
 share/doc/html/octave/octave_7.html
 share/doc/html/octave/octave_8.html
@@ -960,6 +1044,7 @@ share/octave/${PKGVERSION}/m/general/int2str.m
 share/octave/${PKGVERSION}/m/general/is_duplicate_entry.m
 share/octave/${PKGVERSION}/m/general/isa.m
 share/octave/${PKGVERSION}/m/general/isdefinite.m
+share/octave/${PKGVERSION}/m/general/isequal.m
 share/octave/${PKGVERSION}/m/general/isscalar.m
 share/octave/${PKGVERSION}/m/general/issquare.m
 share/octave/${PKGVERSION}/m/general/issymmetric.m
@@ -982,6 +1067,7 @@ share/octave/${PKGVERSION}/m/general/rotdim.m
 share/octave/${PKGVERSION}/m/general/rows.m
 share/octave/${PKGVERSION}/m/general/shift.m
 share/octave/${PKGVERSION}/m/general/shiftdim.m
+share/octave/${PKGVERSION}/m/general/sortrows.m
 share/octave/${PKGVERSION}/m/general/sph2cart.m
 share/octave/${PKGVERSION}/m/general/strerror.m
 share/octave/${PKGVERSION}/m/general/sub2ind.m
@@ -1054,6 +1140,8 @@ share/octave/${PKGVERSION}/m/miscellaneous/toc.m
 share/octave/${PKGVERSION}/m/miscellaneous/unix.m
 share/octave/${PKGVERSION}/m/miscellaneous/version.m
 share/octave/${PKGVERSION}/m/miscellaneous/xor.m
+share/octave/${PKGVERSION}/m/optimization/glpk.m
+share/octave/${PKGVERSION}/m/optimization/glpkmex.m
 share/octave/${PKGVERSION}/m/plot/PKG_ADD
 share/octave/${PKGVERSION}/m/plot/__axis_label__.m
 share/octave/${PKGVERSION}/m/plot/__errcomm__.m
@@ -1074,6 +1162,7 @@ share/octave/${PKGVERSION}/m/plot/__pltopt__.m
 share/octave/${PKGVERSION}/m/plot/axis.m
 share/octave/${PKGVERSION}/m/plot/bar.m
 share/octave/${PKGVERSION}/m/plot/bottom_title.m
+share/octave/${PKGVERSION}/m/plot/clg.m
 share/octave/${PKGVERSION}/m/plot/close.m
 share/octave/${PKGVERSION}/m/plot/contour.m
 share/octave/${PKGVERSION}/m/plot/errorbar.m
@@ -1091,6 +1180,7 @@ share/octave/${PKGVERSION}/m/plot/oneplot.m
 share/octave/${PKGVERSION}/m/plot/plot.m
 share/octave/${PKGVERSION}/m/plot/plot_border.m
 share/octave/${PKGVERSION}/m/plot/polar.m
+share/octave/${PKGVERSION}/m/plot/replot.m
 share/octave/${PKGVERSION}/m/plot/semilogx.m
 share/octave/${PKGVERSION}/m/plot/semilogxerr.m
 share/octave/${PKGVERSION}/m/plot/semilogy.m
@@ -1112,6 +1202,7 @@ share/octave/${PKGVERSION}/m/polynomial/poly.m
 share/octave/${PKGVERSION}/m/polynomial/polyder.m
 share/octave/${PKGVERSION}/m/polynomial/polyderiv.m
 share/octave/${PKGVERSION}/m/polynomial/polyfit.m
+share/octave/${PKGVERSION}/m/polynomial/polygcd.m
 share/octave/${PKGVERSION}/m/polynomial/polyinteg.m
 share/octave/${PKGVERSION}/m/polynomial/polyout.m
 share/octave/${PKGVERSION}/m/polynomial/polyreduce.m
@@ -1133,7 +1224,10 @@ share/octave/${PKGVERSION}/m/quaternion/quaternion.m
 share/octave/${PKGVERSION}/m/set/complement.m
 share/octave/${PKGVERSION}/m/set/create_set.m
 share/octave/${PKGVERSION}/m/set/intersection.m
+share/octave/${PKGVERSION}/m/set/ismember.m
+share/octave/${PKGVERSION}/m/set/setdiff.m
 share/octave/${PKGVERSION}/m/set/union.m
+share/octave/${PKGVERSION}/m/set/unique.m
 share/octave/${PKGVERSION}/m/signal/arch_fit.m
 share/octave/${PKGVERSION}/m/signal/arch_rnd.m
 share/octave/${PKGVERSION}/m/signal/arch_test.m
@@ -1170,6 +1264,20 @@ share/octave/${PKGVERSION}/m/signal/triangle_lw.m
 share/octave/${PKGVERSION}/m/signal/triangle_sw.m
 share/octave/${PKGVERSION}/m/signal/unwrap.m
 share/octave/${PKGVERSION}/m/signal/yulewalker.m
+share/octave/${PKGVERSION}/m/sparse/colperm.m
+share/octave/${PKGVERSION}/m/sparse/nonzeros.m
+share/octave/${PKGVERSION}/m/sparse/spalloc.m
+share/octave/${PKGVERSION}/m/sparse/spconvert.m
+share/octave/${PKGVERSION}/m/sparse/spdiags.m
+share/octave/${PKGVERSION}/m/sparse/speye.m
+share/octave/${PKGVERSION}/m/sparse/spfun.m
+share/octave/${PKGVERSION}/m/sparse/sphcat.m
+share/octave/${PKGVERSION}/m/sparse/spones.m
+share/octave/${PKGVERSION}/m/sparse/sprand.m
+share/octave/${PKGVERSION}/m/sparse/sprandn.m
+share/octave/${PKGVERSION}/m/sparse/spstats.m
+share/octave/${PKGVERSION}/m/sparse/spvcat.m
+share/octave/${PKGVERSION}/m/sparse/spy.m
 share/octave/${PKGVERSION}/m/specfun/bessel.m
 share/octave/${PKGVERSION}/m/specfun/beta.m
 share/octave/${PKGVERSION}/m/specfun/betai.m
@@ -1343,11 +1451,14 @@ share/octave/${PKGVERSION}/m/strings/isletter.m
 share/octave/${PKGVERSION}/m/strings/lower.m
 share/octave/${PKGVERSION}/m/strings/rindex.m
 share/octave/${PKGVERSION}/m/strings/split.m
+share/octave/${PKGVERSION}/m/strings/str2double.m
 share/octave/${PKGVERSION}/m/strings/str2mat.m
 share/octave/${PKGVERSION}/m/strings/str2num.m
 share/octave/${PKGVERSION}/m/strings/strcat.m
 share/octave/${PKGVERSION}/m/strings/strcmp.m
+share/octave/${PKGVERSION}/m/strings/strcmpi.m
 share/octave/${PKGVERSION}/m/strings/strjust.m
+share/octave/${PKGVERSION}/m/strings/strmatch.m
 share/octave/${PKGVERSION}/m/strings/strrep.m
 share/octave/${PKGVERSION}/m/strings/substr.m
 share/octave/${PKGVERSION}/m/strings/upper.m
@@ -1358,8 +1469,8 @@ share/octave/${PKGVERSION}/m/time/date.m
 share/octave/ls-R
 share/octave/site/m/startup/octaverc
 @dirrm share/octave/site/m/startup
-@dirrm share/octave/site/api-v13/m
-@dirrm share/octave/site/api-v13
+@dirrm share/octave/site/api-v14/m
+@dirrm share/octave/site/api-v14
 @dirrm share/octave/${PKGVERSION}/site/m
 @dirrm share/octave/${PKGVERSION}/site
 @dirrm share/octave/${PKGVERSION}/m/time
@@ -1372,11 +1483,13 @@ share/octave/site/m/startup/octaverc
 @dirrm share/octave/${PKGVERSION}/m/startup
 @dirrm share/octave/${PKGVERSION}/m/special-matrix
 @dirrm share/octave/${PKGVERSION}/m/specfun
+@dirrm share/octave/${PKGVERSION}/m/sparse
 @dirrm share/octave/${PKGVERSION}/m/signal
 @dirrm share/octave/${PKGVERSION}/m/set
 @dirrm share/octave/${PKGVERSION}/m/quaternion
 @dirrm share/octave/${PKGVERSION}/m/polynomial
 @dirrm share/octave/${PKGVERSION}/m/plot
+@dirrm share/octave/${PKGVERSION}/m/optimization
 @dirrm share/octave/${PKGVERSION}/m/miscellaneous
 @dirrm share/octave/${PKGVERSION}/m/linear-algebra
 @dirrm share/octave/${PKGVERSION}/m/io
@@ -1397,8 +1510,8 @@ share/octave/site/m/startup/octaverc
 @dirrm share/octave/${PKGVERSION}/doc
 @dirrm share/octave/${PKGVERSION}
 @dirrm share/doc/html/octave
-@dirrm libexec/octave/site/oct/api-v13/${MACHINE_GNU_PLATFORM}
-@dirrm libexec/octave/site/oct/api-v13
+@dirrm libexec/octave/site/oct/api-v14/${MACHINE_GNU_PLATFORM}
+@dirrm libexec/octave/site/oct/api-v14
 @dirrm libexec/octave/site/oct/${MACHINE_GNU_PLATFORM}
 @dirrm libexec/octave/site/oct
 @dirrm libexec/octave/site/exec/${MACHINE_GNU_PLATFORM}
