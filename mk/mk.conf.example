@@ -1,4 +1,4 @@
-# $NetBSD: mk.conf.example,v 1.229 2001/06/11 05:26:00 jtb Exp $
+# $NetBSD: mk.conf.example,v 1.230 2001/06/12 23:08:16 jtb Exp $
 #
 
 # Sample /etc/mk.conf file, which can be used to set specific values
@@ -221,6 +221,9 @@
 #ACCEPTABLE_LICENSES+=	IDEA-licence
 # Enable it if you accept the license terms for libidea
 # and would like to build libidea.  see pkgsrc/security/libidea.
+#ACCEPTABLE_LICENSES+=	amiwm-licence
+# Enable it if you accept the license terms for amiwm
+# and would like to build amiwm.  see pkgsrc/wm/amiwm.
 
 #SPECIFIC_PKGS=
 # Don't use the default of all packages (from the top-level of the
