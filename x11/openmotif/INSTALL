@@ -1,4 +1,4 @@
-# $NetBSD: INSTALL,v 1.5 2003/08/30 20:23:08 jlam Exp $
+# $NetBSD: INSTALL,v 1.6 2004/03/12 02:03:25 reed Exp $
 
 X11BASE=@X11BASE@
 MOTIF_RULES=${PKG_PREFIX}/lib/X11/config/Motif.rules
@@ -18,10 +18,10 @@ POST-INSTALL)
 
 	if [ ${PKG_PREFIX} = ${X11BASE} -o -f ${HOSTDEF} ]
 	then
-		${ECHO} -n "Updating ${HOSTDEF}..."
+		${ECHO} -n "Updating ${HOSTDEF} for OpenMotif ..."
 		${CP} -f ${HOSTDEF} ${HOSTDEF}.bak
 	else
-		${ECHO} -n "Creating ${HOSTDEF}..."
+		${ECHO} -n "Creating ${HOSTDEF} for OpenMotif ..."
 		if [ -f ${X11_HOSTDEF} ]
 		then
 			${CP} -f ${X11_HOSTDEF} ${HOSTDEF}.bak
