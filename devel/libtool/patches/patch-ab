@@ -1,8 +1,17 @@
-$NetBSD: patch-ab,v 1.23 2001/06/20 08:10:49 skrll Exp $
+$NetBSD: patch-ab,v 1.24 2002/03/01 15:40:44 skrll Exp $
 
---- ltmain.sh.orig	Thu Jun 14 05:06:50 2001
+--- ltmain.sh.orig	Mon Feb 18 17:38:48 2002
 +++ ltmain.sh
-@@ -494,11 +494,18 @@
+@@ -211,6 +211,8 @@
+   --mode) prevopt="--mode" prev=mode ;;
+   --mode=*) mode="$optarg" ;;
+ 
++  --preserve-dup-deps) duplicate_deps="yes" ;;
++
+   --quiet | --silent)
+     show=:
+     ;;
+@@ -494,11 +496,18 @@
      # command doesn't match the default compiler.
      if test -n "$available_tags" && test -z "$tagname"; then
        case $base_compile in
@@ -24,7 +33,7 @@ $NetBSD: patch-ab,v 1.23 2001/06/20 08:10:49 skrll Exp $
          for z in $available_tags; do
            if grep "^### BEGIN LIBTOOL TAG CONFIG: $z$" < "$0" > /dev/null; then
  	    # Evaluate the configuration.
-@@ -528,8 +535,6 @@
+@@ -528,8 +537,6 @@
  #        else
  #          echo "$modename: using $tagname tagged configuration"
          fi
@@ -33,7 +42,7 @@ $NetBSD: patch-ab,v 1.23 2001/06/20 08:10:49 skrll Exp $
      fi
  
      objname=`$echo "X$obj" | $Xsed -e 's%^.*/%%'`
-@@ -1528,11 +1533,18 @@
+@@ -1528,11 +1535,18 @@
      # command doesn't match the default compiler.
      if test -n "$available_tags" && test -z "$tagname"; then
        case $base_compile in
@@ -55,7 +64,7 @@ $NetBSD: patch-ab,v 1.23 2001/06/20 08:10:49 skrll Exp $
          for z in $available_tags; do
            if grep "^### BEGIN LIBTOOL TAG CONFIG: $z$" < "$0" > /dev/null; then
  	    # Evaluate the configuration.
-@@ -1562,8 +1574,6 @@
+@@ -1562,8 +1576,6 @@
  #       else
  #         echo "$modename: using $tagname tagged configuration"
          fi
@@ -64,7 +73,88 @@ $NetBSD: patch-ab,v 1.23 2001/06/20 08:10:49 skrll Exp $
      fi
  
      if test "$export_dynamic" = yes && test -n "$export_dynamic_flag_spec"; then
-@@ -5053,7 +5063,7 @@
+@@ -1619,9 +1631,11 @@
+     # Find all interdependent deplibs by searching for libraries
+     # that are linked more than once (e.g. -la -lb -la)
+     for deplib in $deplibs; do
+-      case "$libs " in
+-      *" $deplib "*) specialdeplibs="$specialdeplibs $deplib" ;;
+-      esac
++      if test "X$duplicate_deps" = "Xyes" ; then
++	case "$libs " in
++	*" $deplib "*) specialdeplibs="$specialdeplibs $deplib" ;;
++	esac
++      fi
+       libs="$libs $deplib"
+     done
+ 
+@@ -1632,12 +1646,14 @@
+       # $postdeps and mark them as special (i.e., whose duplicates are
+       # not to be eliminated).
+       pre_post_deps=
+-      for pre_post_dep in $predeps $postdeps; do
+-        case "$pre_post_deps " in
+-	*" $pre_post_dep "*) specialdeplibs="$specialdeplibs $pre_post_deps" ;;
+-	esac
+-	pre_post_deps="$pre_post_deps $pre_post_dep"
+-      done
++      if test "X$duplicate_deps" = "Xyes" ; then
++	for pre_post_dep in $predeps $postdeps; do
++	  case "$pre_post_deps " in
++	  *" $pre_post_dep "*) specialdeplibs="$specialdeplibs $pre_post_deps" ;;
++	  esac
++	  pre_post_deps="$pre_post_deps $pre_post_dep"
++	done
++      fi
+       pre_post_deps=
+     fi
+ 
+@@ -1861,9 +1877,11 @@
+ 	    tmp_libs=
+ 	    for deplib in $dependency_libs; do
+ 	      deplibs="$deplib $deplibs"
+-	      case "$tmp_libs " in
+-	      *" $deplib "*) specialdeplibs="$specialdeplibs $deplib" ;;
+-	      esac
++              if test "X$duplicate_deps" = "Xyes" ; then
++	        case "$tmp_libs " in
++	        *" $deplib "*) specialdeplibs="$specialdeplibs $deplib" ;;
++	        esac
++              fi
+ 	      tmp_libs="$tmp_libs $deplib"
+ 	    done
+ 	  elif test $linkmode != prog && test $linkmode != lib; then
+@@ -1986,9 +2004,11 @@
+ 	      # or/and link against static libraries
+ 	      newdependency_libs="$deplib $newdependency_libs"
+ 	    fi
+-	    case "$tmp_libs " in
+-	    *" $deplib "*) specialdeplibs="$specialdeplibs $deplib" ;;
+-	    esac
++	    if test "X$duplicate_deps" = "Xyes" ; then
++	      case "$tmp_libs " in
++	      *" $deplib "*) specialdeplibs="$specialdeplibs $deplib" ;;
++	      esac
++	    fi
+ 	    tmp_libs="$tmp_libs $deplib"
+ 	  done # for deplib
+ 	  continue
+@@ -2287,9 +2307,11 @@
+ 	  tmp_libs=
+ 	  for deplib in $dependency_libs; do
+ 	    newdependency_libs="$deplib $newdependency_libs"
+-	    case "$tmp_libs " in
+-	    *" $deplib "*) specialdeplibs="$specialdeplibs $deplib" ;;
+-	    esac
++	    if test "X$duplicate_deps" = "Xyes" ; then
++	      case "$tmp_libs " in
++	      *" $deplib "*) specialdeplibs="$specialdeplibs $deplib" ;;
++	      esac
++	    fi
+ 	    tmp_libs="$tmp_libs $deplib"
+ 	  done
+ 
+@@ -5053,7 +5075,7 @@
        fi
  
        # Now prepare to actually exec the command.
