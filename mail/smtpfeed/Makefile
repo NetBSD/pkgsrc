@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2001/01/31 10:24:03 itojun Exp $
+# $NetBSD: Makefile,v 1.13 2001/02/14 00:32:39 itojun Exp $
 # Based on FreeBSD Id: Makefile,v 1.27 1999/04/03 08:25:18 itojun Exp
 #
 
-DISTNAME=	smtpfeed-1.10
+DISTNAME=	smtpfeed-1.11
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.kyoto.wide.ad.jp/pub/mail/smtpfeed/ \
 		ftp://ftp.kyoto.wide.ad.jp/pub/mail/sendmail/ \
@@ -14,7 +14,7 @@ HOMEPAGE=	http://www.kyoto.wide.ad.jp/mta/sendmail.html#smtpfeed
 
 # sendmail 8.x with WIDE patch works better with it, than stock 8.x.
 # require sendmail from pkgsrc.
-DEPENDS+=	sendmail>=8.9.3:../../mail/sendmail
+#DEPENDS+=	sendmail>=8.9.3:../../mail/sendmail
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--libexecdir=${PREFIX}/libexec
