@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2003/08/30 22:51:38 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2003/09/09 12:23:28 martti Exp $
 # FreeBSD: /c/ncvs/ports/x11-toolkits/open-motif/Makefile,v 1.18 2000/10/09 01:40:02 asami Exp
 # OpenBSD: Makefile,v 1.5 2000/10/23 16:08:12 espie Exp
 
@@ -33,6 +33,13 @@ DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
 INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
 
 FILES_SUBST+=		X11BASE=${X11BASE}
+
+.include "../../mk/bsd.prefs.mk"
+
+# We must use GNU make on Linux
+.if ${OPSYS} == "Linux"
+USE_GNU_TOOLS+=		make
+.endif
 
 post-extract:
 	${CP} ${FILESDIR}/NoInstall.rules ${WRKSRC}/config/cf/NoInstall.rules
