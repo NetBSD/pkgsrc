@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2002/01/28 00:25:27 jlam Exp $
+# $NetBSD: Makefile,v 1.55 2002/01/30 22:34:15 jlam Exp $
 
 .include "../../lang/perl5/Makefile.common"
 
@@ -98,7 +98,7 @@ PERL5_PACKLIST=		${PERL5_ARCHLIB}/.packlist
 # - Explicitly set the local compiler search paths to contain only the
 #   pkgsrc-controlled directories.
 #
-post-patch:
+pre-configure:
 	hintdir="${WRKSRC}/hints";					\
 	for hints in $${hintdir}/*.sh; do				\
 		${CHMOD} +w $${hints};					\
