@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7859 2004/11/14 23:40:06 taya Exp $
+$NetBSD: CHANGES,v 1.7860 2004/11/15 03:34:36 rh Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5279,3 +5279,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated abcde to 2.2.0 [snj 2004-11-14]
 	Updated thunderbird to 0.9 [taya 2004-11-14]
 	Updated thunderbird-gtk2 to 0.9 [taya 2004-11-14]
+	Updated glitz to 0.2.3 [rh 2004-11-15]
