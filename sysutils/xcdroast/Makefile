@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2004/01/03 18:49:53 reed Exp $
+# $NetBSD: Makefile,v 1.24 2004/01/24 15:06:58 grant Exp $
 
 DISTNAME=	xcdroast-0.98alpha15
 PKGNAME=	xcdroast-0.98a15
@@ -15,7 +15,7 @@ BUILD_USES_MSGFMT=	YES
 DEPENDS+=		cdrecord-xcdroast-0.98a15.*:../cdrecord-xcdroast
 
 USE_BUILDLINK2=		YES
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 USE_PKGINSTALL=		YES
 USE_PKGLOCALEDIR=	YES
 USE_X11=		YES

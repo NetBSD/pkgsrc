@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/01/23 21:50:48 jmmv Exp $
+# $NetBSD: Makefile,v 1.5 2004/01/24 15:06:57 grant Exp $
 
 DISTNAME=	acme-2.4.2
 PKGNAME=	gnome-${DISTNAME}
@@ -14,7 +14,7 @@ COMMENT=	Small GNOME tool to make use of the multimedia buttons
 DEPENDS=	gnome2-control-center>=2.0:../../x11/gnome2-control-center
 
 GNU_CONFIGURE=		yes
-USE_GMAKE=		yes
+USE_GNU_TOOLS+=		make
 USE_BUILDLINK2=		yes
 USE_X11=		yes
 USE_PKGLOCALEDIR=	yes
