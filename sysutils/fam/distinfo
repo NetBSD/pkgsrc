@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.17 2004/12/09 18:45:32 minskim Exp $
+$NetBSD: distinfo,v 1.18 2005/01/25 03:30:40 tv Exp $
 
 SHA1 (fam-2.7.0.tar.gz) = 6c2316f02acf89a41c42ffc3d7fd9cf5eada83a8
 Size (fam-2.7.0.tar.gz) = 301974 bytes
@@ -28,3 +28,5 @@ SHA1 (patch-aw) = 9e5de9617e6cd59644294695d0ea79427b521ba0
 SHA1 (patch-ax) = b93f160e8b0e4fb6e1c8c30823443136fcb55204
 SHA1 (patch-ay) = 081b4bc7cf25a8e30b3680b6df7599570ea0db86
 SHA1 (patch-az) = 13901fdef8c13318d585e36820c5e0aa4c28f889
+SHA1 (patch-ba) = 2f41331994a56eb70364beab70d40ac0bbd1b050
+SHA1 (patch-bb) = aef31edd9715c8aa0be2f02ebe663bad30e0791a
