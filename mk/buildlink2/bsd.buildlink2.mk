@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.90.4.6 2003/08/14 07:37:06 jlam Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.90.4.7 2003/08/16 09:08:50 jlam Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -638,7 +638,7 @@ _BLNK_WRAP_CACHE_TRANSFORM=	${BUILDLINK_DIR}/bin/.cache-trans
 _BLNK_WRAP_POST_CACHE=		${BUILDLINK_DIR}/bin/.post-cache
 _BLNK_WRAP_LOGIC=		${BUILDLINK_DIR}/bin/.logic
 _BLNK_WRAP_LOGIC_TRANSFORM=	${BUILDLINK_DIR}/bin/.logic-trans
-_BLNK_WRAP_LOG=			${BUILDLINK_DIR}/.wrapper.log
+_BLNK_WRAP_LOG=			${WRKLOG}
 _BLNK_LIBTOOL_DO_INSTALL=	${BUILDLINK_DIR}/bin/.libtool-do-install
 _BLNK_LIBTOOL_FIX_LA=		${BUILDLINK_DIR}/bin/.libtool-fix-la
 _BLNK_FAKE_LA=			${BUILDLINK_DIR}/bin/.fake-la
@@ -1036,94 +1036,3 @@ buildlink-check:
 	@if [ -f ${_BLNK_WRAP_LOG} ]; then				\
 		${GREP} ${_BLNK_CHECK_PATTERNS} ${_BLNK_WRAP_LOG} || ${TRUE}; \
 	fi
-
-# Create shell scripts in ${BUILDLINK_DIR} that simply return an error
-# status for each of the GNU auto* tools, which should cause GNU configure
-# scripts to think that they can't be found.
-#
-AUTOMAKE_OVERRIDE?=	yes
-_GNU_MISSING=		${.CURDIR}/../../mk/gnu-config/missing
-_HIDE_PROGS.autoconf=	bin/autoconf	bin/autoconf-2.13		\
-			bin/autoheader	bin/autoheader-2.13		\
-			bin/autom4te					\
-			bin/autoreconf	bin/autoreconf-2.13		\
-			bin/autoscan	bin/autoscan-2.13		\
-			bin/autoupdate	bin/autoupdate-2.13		\
-			bin/ifnames	bin/ifnames-2.13
-_HIDE_PROGS.automake=	bin/aclocal	bin/aclocal-1.4			\
-					bin/aclocal-1.5			\
-					bin/aclocal-1.6			\
-					bin/aclocal-1.7			\
-			bin/automake	bin/automake-1.4		\
-					bin/automake-1.5		\
-					bin/automake-1.6		\
-					bin/automake-1.7
-
-.if empty(AUTOMAKE_OVERRIDE:M[nN][oO])
-do-buildlink: hide-autotools
-.endif
-
-hide-autotools:	# empty
-
-.for _autotool_ in autoconf automake
-hide-autotools: hide-${_autotool_}
-.  for _prog_ in ${_HIDE_PROGS.${_autotool_}}
-hide-${_autotool_}: ${BUILDLINK_DIR}/${_prog_}
-${BUILDLINK_DIR}/${_prog_}: ${_GNU_MISSING}
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${ECHO} "#!${BUILDLINK_SHELL}" > ${.TARGET}
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${ECHO} "exec ${_GNU_MISSING} ${_prog_:T:C/-[0-9].*$//}" >> ${.TARGET}
-	${_PKG_SILENT}${_PKG_DEBUG}${CHMOD} +x ${.TARGET}
-.  endfor
-.endfor
-
-# install-info and makeinfo handling.
-#
-# Create an install-info script that is a "no operation" command
-# as registration of info files is handled by the INSTALL script.
-CONFIGURE_ENV+=	INSTALL_INFO="${BUILDLINK_DIR}/bin/install-info"
-MAKE_ENV+=	INSTALL_INFO="${BUILDLINK_DIR}/bin/install-info"
-
-do-buildlink: hide-install-info
-
-hide-install-info: ${BUILDLINK_DIR}/bin/install-info
-${BUILDLINK_DIR}/bin/install-info:
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${ECHO} "#!${BUILDLINK_SHELL}" > ${.TARGET}
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${ECHO} '${ECHO} "==> Noop install-info $$*" >> ${_BLNK_WRAP_LOG}' >> ${.TARGET}
-	${_PKG_SILENT}${_PKG_DEBUG}${CHMOD} +x ${.TARGET}
-
-# Create a makeinfo script that will invoke the right makeinfo
-# command if USE_MAKEINFO is 'yes' or will exit on error if not.
-CONFIGURE_ENV+=	MAKEINFO="${BUILDLINK_DIR}/bin/makeinfo"
-MAKE_ENV+=	MAKEINFO="${BUILDLINK_DIR}/bin/makeinfo"
-
-.if empty(USE_MAKEINFO:M[nN][oO])
-do-buildlink: makeinfo-wrapper
-makeinfo-wrapper: ${BUILDLINK_DIR}/bin/makeinfo
-${BUILDLINK_DIR}/bin/makeinfo:
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${ECHO} "#!${BUILDLINK_SHELL}" > ${.TARGET}
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${ECHO} 'echo "${MAKEINFO} $$*" >> ${_BLNK_WRAP_LOG}' >> ${.TARGET}
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${ECHO} 'exec ${MAKEINFO} "$$@"' >> ${.TARGET}
-	${_PKG_SILENT}${_PKG_DEBUG}${CHMOD} +x ${.TARGET}
-.else # !USE_MAKEINFO
-do-buildlink: hide-makeinfo
-hide-makeinfo: ${BUILDLINK_DIR}/bin/makeinfo
-${BUILDLINK_DIR}/bin/makeinfo: ${_GNU_MISSING}
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${ECHO} "#!${BUILDLINK_SHELL}" > ${.TARGET}
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${ECHO} '${ECHO} "==> [buildlink2] Error: makeinfo $$*" >> ${_BLNK_WRAP_LOG}' >> ${.TARGET}
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${ECHO} 'exit 1' >>  ${.TARGET}
-	${_PKG_SILENT}${_PKG_DEBUG}${CHMOD} +x ${.TARGET}
-.endif # USE_MAKEINFO

@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.118.2.5 2003/08/14 07:08:17 jlam Exp $
+# $NetBSD: bsd.prefs.mk,v 1.118.2.6 2003/08/16 09:08:50 jlam Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -348,6 +348,11 @@ WRKDIR_BASENAME?=	work
 .endif
 
 WRKDIR?=		${BUILD_DIR}/${WRKDIR_BASENAME}
+
+# There are many uses for a common log file, so define one that may be
+# picked up and used by tools.mk, bsd.buildlink2.mk, etc.
+#
+WRKLOG?=		${WRKDIR}/.work.log
 
 # Sun C++ compilers don't support passing ld flags with -Wl to CC.
 #

@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.bulk-pkg.mk,v 1.45.2.2 2003/08/14 07:37:07 jlam Exp $
+#	$NetBSD: bsd.bulk-pkg.mk,v 1.45.2.3 2003/08/16 09:08:51 jlam Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@netbsd.org>
