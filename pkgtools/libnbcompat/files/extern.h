@@ -1,4 +1,4 @@
-/*	$NetBSD: extern.h,v 1.4 2003/09/01 15:31:17 jlam Exp $	*/
+/*	$NetBSD: extern.h,v 1.5 2003/09/03 13:11:14 jlam Exp $	*/
 
 /*-
  * Copyright (c) 1991, 1993
@@ -35,8 +35,7 @@
  *	@(#)extern.h	8.1 (Berkeley) 6/6/93
  */
 
-#include <nbconfig.h>
-#include <nbtypes.h>
+#include <nbcompat.h>
 
 #include <mtree.h>
 
@@ -48,9 +47,13 @@
 #include <err.h> 
 #endif
 
+#if HAVE_FTS_H
 #include <fts.h>
+#endif
 
+#if HAVE_VIS_H
 #include <vis.h>
+#endif
 
 #if HAVE_NETDB_H
 /* For MAXHOSTNAMELEN on some platforms. */

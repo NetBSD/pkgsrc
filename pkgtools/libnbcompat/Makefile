@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2003/09/03 07:07:04 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2003/09/03 13:11:11 jlam Exp $
 #
 
-DISTNAME=		libnbcompat-20030825
+DISTNAME=		libnbcompat-20030826
 CATEGORIES=		pkgtools
 MASTER_SITES=		# empty
 DISTFILES=		# empty
@@ -20,6 +20,7 @@ GNU_CONFIGURE=		# defined
 
 PKG_INFO=		PKG_DBDIR=${PKG_DBDIR} ${PKG_INFO_CMD}
 PKG_CREATE=		PKG_DBDIR=${PKG_DBDIR} ${PKG_CREATE_CMD}
+PKG_DELETE=		PKG_DBDIR=${PKG_DBDIR} ${PKG_DELETE_CMD}
 
 do-extract:
 	@${CP} -Rp ${FILESDIR} ${WRKSRC}
