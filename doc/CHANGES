@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2321 2003/05/25 14:59:59 taca Exp $
+$NetBSD: CHANGES,v 1.2322 2003/05/25 15:21:22 taca Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2157,3 +2157,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Removed apr-devel [epg 2003-05-25]
 	Updated namazu2 to 2.0.12nb2 [taca 2003-05-25]
 	Updated squid to 2.5.3 [taca 2003-05-25]
+	Updated suse_libpng package to 7.3nb1 [taca 2003-05-25]
