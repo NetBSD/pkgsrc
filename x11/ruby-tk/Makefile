@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/06/30 08:20:26 taca Exp $
+# $NetBSD: Makefile,v 1.2 2001/12/30 16:25:34 taca Exp $
 # FreeBSD: ports/x11-toolkits/ruby-tk/Makefile,v 1.21 2000/10/20 19:56:04 knu Exp
 
 DISTNAME=	${RUBY_DISTNAME}
@@ -18,7 +18,12 @@ WRKSRC=		${RUBY_WRKSRC}/ext/tk
 EXTRACT_ELEMENTS= ${RUBY_DISTNAME}/ext/tk
 USE_RUBY_EXTCONF= yes
 
-#.include "../../mk/bsd.prefs.mk"
+CONFIGURE_ARGS=	--with-tcllib="${TCL_LIB}" --with-tklib="${TK_LIB}" \
+		--with-tcl-lib="${LOCALBASE}/lib/${TCL_DIR}" \
+		--with-tk-lib="${LOCALBASE}/lib/${TK_DIR}" \
+		--with-tcl-include="${LOCALBASE}/include/${TCL_DIR}" \
+		--with-tk-include="${LOCALBASE}/include/${TK_DIR}" \
+		--with-X11-dir="${X11BASE}"
 
 post-patch:
 	@${FIND} ${WRKSRC} -name '*.orig' -exec rm -f {} \;
