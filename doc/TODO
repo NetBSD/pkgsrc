@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1509 2004/03/13 01:10:57 wiz Exp $
+$NetBSD: TODO,v 1.1510 2004/03/13 16:07:05 jlam Exp $
 
 Suggested new packages
 ======================
@@ -430,8 +430,9 @@ Suggested cleanups in pkgsrc
 	o Make packages utilize USE_X11 instead of USE_X11BASE if there is no
 	  good reason to install them into X11BASE.
 
-	o Set USE_GCC_SHLIB in packages that link against any GCC library but
-	  are missing to define this variable.
+	o Set USE_LANGUAGES appropriately in packages that use C++, Fortran,
+	  or Objective-C so that the correct type of compiler dependency is
+	  set.
 
 	o G/C pkgconfig buildlink2.mk includes and .pc files from all
           buildlink2.mk files
