@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/12/10 20:58:55 veego Exp $
+$NetBSD: patch-aa,v 1.2 2002/06/16 18:34:19 wiz Exp $
 
---- configure-orig	Wed Dec  5 22:43:32 2001
-+++ configure	Sun Dec  9 12:15:07 2001
-@@ -16643,7 +16643,7 @@
- LIBGLADE_PREFIX=`$LIBGLADE_CONFIG --prefix`
+--- configure.orig	Mon Jun 10 23:58:10 2002
++++ configure	Thu Jun 13 14:14:34 2002
+@@ -10877,7 +10877,7 @@
+ _ACEOF
  
  cat >>confdefs.h <<_ACEOF
--#define LIBGLADE_LIB "${LIBGLADE_PREFIX}/lib/libglade.so.0"
-+#define LIBGLADE_LIB "${LIBGLADE_PREFIX}/lib/libglade.so"
+-#define LIBGLADE_LIB "libglade.so.0"
++#define LIBGLADE_LIB "libglade.so"
  _ACEOF
  
  if test "x${prefix}" = "xNONE"; then

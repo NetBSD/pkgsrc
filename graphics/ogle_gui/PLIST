@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/12/10 20:58:55 veego Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/06/16 18:34:19 wiz Exp $
 lib/ogle/ogle_gui
 share/locale/de/LC_MESSAGES/ogle_gui.mo
+share/locale/fr/LC_MESSAGES/ogle_gui.mo
+share/locale/nl/LC_MESSAGES/ogle_gui.mo
 share/locale/sv/LC_MESSAGES/ogle_gui.mo
 share/ogle_gui/angle.xpm
 share/ogle_gui/enter.xpm
