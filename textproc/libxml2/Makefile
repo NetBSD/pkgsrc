@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2002/07/12 15:45:02 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2002/08/25 18:40:10 jlam Exp $
 
 DISTNAME=	libxml2-${LIBXML_VERSION}
 CATEGORIES=	textproc
@@ -8,7 +8,7 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://xmlsoft.org/
 COMMENT=	XML parser library for GNOME
 
-USE_BUILDLINK_ONLY=	yes
+USE_BUILDLINK2=		yes
 USE_GMAKE=		yes
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
@@ -17,10 +17,11 @@ LIBXML_VERSION=		2.4.23
 PLIST_SUBST+=		LIBXML_VERSION=${LIBXML_VERSION}
 
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--with-iconv=${BUILDLINK_DIR}
+CONFIGURE_ARGS+=	--with-iconv=${BUILDLINK_PREFIX.iconv}
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
 CONFIGURE_ARGS+=	--without-python
 
-.include "../../devel/zlib/buildlink.mk"
-.include "../../converters/libiconv/buildlink.mk"
+.include "../../devel/zlib/buildlink2.mk"
+.include "../../converters/libiconv/buildlink2.mk"
+
 .include "../../mk/bsd.pkg.mk"

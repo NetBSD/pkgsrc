@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.11 2002/07/24 19:43:10 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.12 2002/08/25 18:39:27 jlam Exp $
 #
 # This Makefile fragment is included by packages that use perl.
 #

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2001/11/29 01:12:32 hubertf Exp $
+# $NetBSD: Makefile,v 1.21 2002/08/25 18:38:52 jlam Exp $
 # FreeBSD Id: Makefile,v 1.3 1996/11/12 02:19:40 obrien Exp
 #
 
@@ -18,6 +18,7 @@ WRKSRC=			${WRKDIR}
 EXTRACT_CMD=		${GZCAT} ${DOWNLOADED_DISTFILE} | ${SH}
 
 MANCOMPRESSED=		yes
+USE_BUILDLINK2=		yes
 USE_X11BASE=		yes
 MAKE_ENV+=		X11PREFIX=${X11PREFIX}
 
@@ -31,7 +32,7 @@ OTHER_X_LIBS=	-lSM -lICE
 
 do-build:
 	for d in libXg libframe sam samterm; do				\
-		(cd ${WRKSRC}/$$d; make -f Make.solaris 		\
+		(cd ${WRKSRC}/$$d; ${MAKE_PROGRAM} -f Make.solaris 	\
 				OTHER_X_LIBS="${OTHER_X_LIBS}");	\
 	done
 .endif # SunOS

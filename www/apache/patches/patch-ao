@@ -1,4 +1,4 @@
-$NetBSD: patch-ao,v 1.1 2002/06/20 17:12:37 taca Exp $
+$NetBSD: patch-ao,v 1.2 2002/08/25 18:40:19 jlam Exp $
 
 --- configure.orig	Thu Jun 20 20:56:07 2002
 +++ configure

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/11/30 10:20:01 martti Exp $
+# $NetBSD: Makefile,v 1.9 2002/08/25 18:38:42 jlam Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1998/07/12 22:59:19 steve Exp $
 
 DISTNAME=	pcre-3.7
@@ -12,10 +12,10 @@ MAINTAINER=	proff@netbsd.org
 HOMEPAGE=	http://www.pcre.org/
 COMMENT=	Perl Compatible Regular Expressions library
 
-USE_BUILDLINK_ONLY=	yes
+USE_BUILDLINK2=		yes
 GNU_CONFIGURE=		yes
 
 USE_LIBTOOL=		yes
-LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 .include "../../mk/bsd.pkg.mk"

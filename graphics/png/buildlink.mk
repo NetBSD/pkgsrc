@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.11 2002/07/19 14:33:08 fredb Exp $
+# $NetBSD: buildlink.mk,v 1.12 2002/08/25 18:39:21 jlam Exp $
 #
 # This Makefile fragment is included by packages that use libpng.
 #

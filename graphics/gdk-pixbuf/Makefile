@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.21 2002/05/11 11:56:58 rh Exp $
+# $NetBSD: Makefile,v 1.22 2002/08/25 18:39:03 jlam Exp $
 #
 
 PKGNAME=	${DISTNAME}
 COMMENT=	the GNOME image loading library
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=	# defined
 
 .include "Makefile.common"
 
@@ -23,5 +23,4 @@ post-install:
 		${LOCALBASE}/share/aclocal/gdk-pixbuf.m4
 	${RM} ${PREFIX}/lib/gnomecanvaspixbufConf.sh
 
-.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

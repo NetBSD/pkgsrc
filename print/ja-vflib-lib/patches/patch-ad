@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.1.1.1 2002/05/31 12:59:53 seb Exp $
+$NetBSD: patch-ad,v 1.2 2002/08/25 18:39:45 jlam Exp $
 
 --- tools/Imakefile.in.orig	Tue Oct 27 03:02:45 1998
 +++ tools/Imakefile.in	Mon May  1 04:41:40 2000

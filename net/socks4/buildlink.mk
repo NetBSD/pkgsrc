@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.10 2002/05/25 20:01:19 fredb Exp $
+# $NetBSD: buildlink.mk,v 1.11 2002/08/25 18:39:35 jlam Exp $
 #
 # This Makefile fragment is included by packages that use socks4.
 #

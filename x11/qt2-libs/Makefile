@@ -1,16 +1,15 @@
-# $NetBSD: Makefile,v 1.17 2002/03/13 17:38:02 fredb Exp $
-#
-#USE_MESA=		yes
+# $NetBSD: Makefile,v 1.18 2002/08/25 18:40:42 jlam Exp $
+
+PKGNAME=	qt2-libs-${QTVERSION}
+PKGREVISION=	2
+COMMENT=	C++ X GUI toolkit
+
+USE_BUILDLINK2=	yes
 
 .include "../qt2-libs/Makefile.common"
 
-PKGNAME=		qt2-libs-${QTVERSION}
-PKGREVISION=		2
-COMMENT=		C++ X GUI toolkit
-
-USE_BUILDLINK_ONLY=	yes
-CONFIGURE_ARGS+=	-I${BUILDLINK_DIR}/include
-CONFIGURE_ARGS+=	-L${BUILDLINK_DIR}/lib
+CONFIGURE_ARGS+=	-I${LOCALBASE}/include -I${X11BASE}/include
+CONFIGURE_ARGS+=	-L${LOCALBASE}/lib -L${X11BASE}/lib
 
 CONFIGURE_ENV+=		QTDIR="${WRKSRC}"
 MAKE_ENV+=		QTDIR="${WRKSRC}"
@@ -22,14 +21,14 @@ do-install:
 	${INSTALL_PROGRAM_DIR} ${QTPREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/moc ${QTPREFIX}/bin
 	${INSTALL_DATA_DIR} ${QTPREFIX}/lib
-	${LIBTOOL} ${INSTALL_DATA} ${WRKSRC}/src/libqt.la ${QTPREFIX}/lib
+	${PKGLIBTOOL} ${INSTALL_DATA} ${WRKSRC}/src/libqt.la ${QTPREFIX}/lib
 	${INSTALL_DATA_DIR} ${QTPREFIX}/include
 	${INSTALL_DATA} ${WRKSRC}/include/* ${QTPREFIX}/include
 
-.include "../../devel/zlib/buildlink.mk"
-.include "../../graphics/jpeg/buildlink.mk"
-.include "../../graphics/Mesa/buildlink.mk"
-.include "../../graphics/mng/buildlink.mk"
-.include "../../graphics/png/buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
+.include "../../devel/zlib/buildlink2.mk"
+.include "../../graphics/Mesa/buildlink2.mk"
+.include "../../graphics/jpeg/buildlink2.mk"
+.include "../../graphics/mng/buildlink2.mk"
+.include "../../graphics/png/buildlink2.mk"
+
 .include "../../mk/bsd.pkg.mk"

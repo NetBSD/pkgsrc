@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.5 2002/05/17 13:02:30 martti Exp $
+$NetBSD: patch-ad,v 1.6 2002/08/25 18:40:12 jlam Exp $
 
 --- doc/Makefile.in.orig	Mon Apr 29 18:39:10 2002
 +++ doc/Makefile.in	Fri May 17 14:51:51 2002

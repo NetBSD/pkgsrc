@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.103 2002/08/01 00:58:33 mycroft Exp $
+# $NetBSD: Makefile,v 1.104 2002/08/25 18:40:16 jlam Exp $
 #
 # This pkg does not compile in mod_ssl, only the `mod_ssl EAPI' (a set of
 # code hooks that allow mod_ssl to be compiled separately later, if desired).
@@ -36,7 +36,7 @@ COMMENT=		Apache HTTP (Web) server
 CONFLICTS=		apache-*ssl-[0-9]* apache6-[0-9]*
 
 EXTRACT_ONLY=		${DISTFILES:N*.gif}
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 HAS_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--with-layout="${WRKDIR}/config.layout:pkgsrc"
 CONFIGURE_ARGS+=	--enable-module=most				\
@@ -48,7 +48,7 @@ CONFIGURE_ARGS+=	--without-confadjust
 CONFIGURE_ARGS+=	--with-perl=${PERL5}
 CONFIGURE_ARGS+=	--with-port=80
 CONFIGURE_ENV+=		OPTIM="${APACHE_CUSTOM_CFLAGS}"
-CONFIGURE_ENV+=		EAPI_MM="${BUILDLINK_DIR}"
+CONFIGURE_ENV+=		EAPI_MM="${BUILDLINK_PREFIX.libmm}"
 CONFIGURE_ENV+=		BINOWN=${BINOWN} BINGRP=${BINGRP}
 
 .include "../../mk/bsd.prefs.mk"
@@ -113,7 +113,7 @@ MAKE_ENV+=		LINK_LIBGCC_LDFLAGS="${LINK_LIBGCC_LDFLAGS}"
 
 .if (${OPSYS} == "SunOS")
 LDFLAGS+=		-Wl,-R/usr/ucblib -L/usr/ucblib
-CONFIGURE_ENV+=		INCLUDES="-I${BUILDLINK_DIR}/include/db2"
+CONFIGURE_ENV+=		INCLUDES="-I${BUILDLINK_PREFIX.db2}/include/db2"
 CONFIGURE_ENV+=		LIBS="-ldbm -ldb2"
 BUILDLINK_DEPENDS.db=	db>=2.7.7
 .include "../../databases/db/buildlink.mk"
@@ -187,7 +187,8 @@ post-install:
 	${INSTALL_DATA} ${DISTDIR}/sitedrivenby.gif ${PREFIX}/share/httpd/htdocs
 	${INSTALL_SCRIPT} ${WRKDIR}/apache.sh ${PREFIX}/etc/rc.d/apache
 
-.include "../../devel/libmm/buildlink.mk"
-.include "../../textproc/expat/buildlink.mk"
+.include "../../devel/libmm/buildlink2.mk"
+.include "../../textproc/expat/buildlink2.mk"
+
 .include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

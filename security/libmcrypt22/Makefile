@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/04/12 18:59:36 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2002/08/25 18:39:55 jlam Exp $
 
 DISTNAME=	libmcrypt-2.2.7
 PKGNAME=	libmcrypt22-2.2.7
@@ -10,7 +10,7 @@ MAINTAINER=	jlam@netbsd.org
 HOMEPAGE=	http://mcrypt.hellug.gr/
 COMMENT=	crypto algorithms library (version 2.2.x)
 
-USE_BUILDLINK_ONLY=	yes
+USE_BUILDLINK2=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/libmcrypt22
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2002/08/19 19:29:18 mycroft Exp $
+# $NetBSD: Makefile,v 1.46 2002/08/25 18:38:23 jlam Exp $
 
 DISTNAME=	openldap-2.0.25
 SVR4_PKGNAME=	oldap
@@ -12,9 +12,7 @@ COMMENT=	Lightweight directory access protocol server and client package
 
 CONFLICTS+=	ldapsdk-[0-9]*
 
-USE_BUILDLINK_ONLY=	YES
-REPLACE_BUILDLINK_SED+=	-e "s|-L${WRKSRC}/libraries||g"
-
+USE_BUILDLINK2=		YES
 USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/build/ltconfig
 
@@ -35,13 +33,13 @@ CONFIGURE_ARGS+=	--localstatedir=/var/openldap
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "SunOS"
-.include "../../databases/db/buildlink.mk"
-CPPFLAGS+=	-I${BUILDLINK_DIR}/include/db2
+.include "../../databases/db/buildlink2.mk"
+CPPFLAGS+=	-I${BUILDLINK_PREFIX.db}/include/db2
 LIBS=		-ldb2 -lpthread -lrt
 .endif
 
 .if defined(USE_SASL) && (${USE_SASL} == "YES")
-.include "../../security/cyrus-sasl/buildlink.mk"
+.include "../../security/cyrus-sasl/buildlink2.mk"
 CONFIGURE_ARGS+=	--with-cyrus-sasl
 CONFIGURE_ARGS+=	--enable-spasswd
 .endif
@@ -109,9 +107,9 @@ test:
 	-@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} \
 		${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} test
 
-.include "../../security/openssl/buildlink.mk"
-.include "../../security/tcp_wrappers/buildlink.mk"
-.include "../../mk/pthread.buildlink.mk"
+.include "../../security/openssl/buildlink2.mk"
+.include "../../security/tcp_wrappers/buildlink2.mk"
+.include "../../mk/pthread.buildlink2.mk"
 
 .if defined(PTHREAD_TYPE) && (${PTHREAD_TYPE} != "none")
 CONFIGURE_ARGS+=	--with-threads

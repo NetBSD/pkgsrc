@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2002/02/28 06:14:46 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2002/08/25 18:40:25 jlam Exp $
 
 PKGNAME=		php-${PHP_BASE_VERS}
 PKGREVISION=		# empty
@@ -7,7 +7,7 @@ COMMENT=		HTML-embedded scripting language
 
 CONFLICTS+=		ap-php-4.0.3pl1
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 
 .include "Makefile.php"
 

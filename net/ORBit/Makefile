@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2002/07/18 02:19:24 rh Exp $
+# $NetBSD: Makefile,v 1.78 2002/08/25 18:39:30 jlam Exp $
 #
 
 DISTNAME=		ORBit-0.${ORBIT_MAJOR}.${ORBIT_MINOR}
@@ -11,7 +11,6 @@ HOMEPAGE=		http://www.gnome.org/
 COMMENT=		high-performance CORBA ORB with support for the C language
 
 DEPENDS+=		gindent-[0-9]*:../../devel/gindent
-
 BUILD_DEPENDS+=		automake>=1.4:../../devel/automake
 
 USE_GMAKE=		YES
@@ -21,7 +20,7 @@ LIBTOOL_OVERRIDE+=	${WRKSRC}/popt/libtool
 LIBTOOL_OVERRIDE+=	${WRKSRC}/libIDL/libtool
 
 GNU_CONFIGURE=		YES
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 
 CPPFLAGS+=		-D_POSIX_THREAD_SYSCALL_SOFT=1
 
@@ -34,8 +33,9 @@ INFO_FILES=		libIDL.info
 
 AUTOMAKE_OVERRIDE=	NO	# Otherwise breaks 1.5 arm32
 
-.include "../../devel/gettext-lib/buildlink.mk"
-.include "../../devel/glib/buildlink.mk"
-.include "../../security/tcp_wrappers/buildlink.mk"
+.include "../../devel/gettext-lib/buildlink2.mk"
+.include "../../devel/glib/buildlink2.mk"
+.include "../../security/tcp_wrappers/buildlink2.mk"
+
 .include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"

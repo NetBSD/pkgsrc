@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.19 2002/05/14 18:03:18 tron Exp $
+$NetBSD: patch-aa,v 1.20 2002/08/25 18:39:19 jlam Exp $
 
 --- Makefile.config.in.orig	Thu Mar 14 16:25:54 2002
 +++ Makefile.config.in	Tue May 14 19:52:32 2002
@@ -117,8 +117,8 @@ $NetBSD: patch-aa,v 1.19 2002/05/14 18:03:18 tron Exp $
  # Netbsd:
 -#JPEGLIB_DIR = ${LOCALBASE}/lib
 -#JPEGHDR_DIR = ${LOCALBASE}/include
-+JPEGLIB_DIR = ${BUILDLINK_DIR}/lib
-+JPEGHDR_DIR = ${BUILDLINK_DIR}/include
++JPEGLIB_DIR = ${LOCALBASE}/lib
++JPEGHDR_DIR = ${LOCALBASE}/include
  # OSF, Tru64:
  #JPEGLIB_DIR = /usr/local1/DEC/lib
  #JPEGHDR_DIR = /usr/local1/DEC/include
@@ -133,8 +133,8 @@ $NetBSD: patch-aa,v 1.19 2002/05/14 18:03:18 tron Exp $
  # NetBSD:
 -#PNGLIB_DIR = $(LOCALBASE)/lib
 -#PNGHDR_DIR = $(LOCALBASE)/include
-+PNGLIB_DIR = $(BUILDLINK_DIR)/lib
-+PNGHDR_DIR = $(BUILDLINK_DIR)/include
++PNGLIB_DIR = $(LOCALBASE)/lib
++PNGHDR_DIR = $(LOCALBASE)/include
  # OSF/Tru64:
  #PNGLIB_DIR = /usr/local1/DEC/lib
  #PNGHDR_DIR = /usr/local1/DEC/include

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2001/08/30 11:11:24 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2002/08/25 18:39:24 jlam Exp $
 
 DISTNAME=       xpm-3.4k
 CATEGORIES=	graphics x11
@@ -9,12 +9,20 @@ MAINTAINER=	mycroft@netbsd.org
 HOMEPAGE=	http://www.inria.fr/koala/lehors/xpm.html
 COMMENT=	The X Pixmap library
 
-USE_IMAKE=		# defined
-CHECK_XPM=		# defined
+USE_BUILDLINK2=	# defined
+USE_IMAKE=	# defined
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${HAVE_BUILTIN_XPM} != "NO"
+# Check if we got Xpm distributed with XFree86 4.x.
+.if exists(${X11BASE}/include/X11/xpm.h) && \
+    exists(${X11BASE}/lib/X11/config/X11.tmpl)
+_IS_BUILTIN_XPM!=	${EGREP} -c NormalLibXpm ${X11BASE}/lib/X11/config/X11.tmpl || ${TRUE}
+.else
+_IS_BUILTIN_XPM=	0
+.endif
+
+.if ${_IS_BUILTIN_XPM} != "0"
 IGNORE=		"The Xpm library is included in your X11 distribution."
 .endif
 

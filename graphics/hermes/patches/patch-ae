@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.1 2002/07/16 14:48:04 agc Exp $
+$NetBSD: patch-ae,v 1.2 2002/08/25 18:39:10 jlam Exp $
 
 --- src/Palette.c	2002/07/16 14:40:39	1.1
 +++ src/Palette.c	2002/07/16 14:41:06

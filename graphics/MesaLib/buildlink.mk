@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.1 2002/06/26 05:36:30 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.2 2002/08/25 18:38:56 jlam Exp $
 
 .if !defined(MESALIB_BUILDLINK_MK)
 MESALIB_BUILDLINK_MK=	# defined

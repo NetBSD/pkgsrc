@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.9 2002/08/05 13:10:14 lukem Exp $
+# $NetBSD: buildlink.mk,v 1.10 2002/08/25 18:38:14 jlam Exp $
 #
 # This Makefile fragment is included by packages that use libogg.
 #

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.1.1.1 2002/05/31 12:59:53 seb Exp $
+# $NetBSD: buildlink.mk,v 1.2 2002/08/25 18:39:44 jlam Exp $
 #
 # This Makefile fragment is included by packages that use VFlib.
 #

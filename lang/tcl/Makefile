@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2002/03/20 18:04:04 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2002/08/25 18:39:28 jlam Exp $
 #
 
 DISTNAME=		tcl8.3.4
@@ -19,7 +19,7 @@ WRKSRC=			${WRKDIR}/${DISTNAME}/unix
 GNU_CONFIGURE=		yes
 MAKE_ENV+=		TOUCH="${TOUCH}"
 
-USE_BUILDLINK_ONLY=	yes
+USE_BUILDLINK2=		yes
 USE_LIBTOOL=		yes
 
 INSTALL_TARGET=		install

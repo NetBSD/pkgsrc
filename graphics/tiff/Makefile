@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2002/07/13 00:53:35 grant Exp $
+# $NetBSD: Makefile,v 1.41 2002/08/25 18:39:23 jlam Exp $
 
 DISTNAME=	tiff-v3.5.7
 PKGNAME=	tiff-3.5.7
@@ -17,9 +17,9 @@ HAS_CONFIGURE=	yes
 CONFIGURE_ARGS=	--noninteractive --site=${FILESDIR} --prefix=${PREFIX}
 CONFIGURE_ENV+=	CC="${CC}"
 
-.include "../../mk/bsd.prefs.mk"
+USE_BUILDLINK2=	# defined
 
-USE_BUILDLINK_ONLY=	# defined
+.include "../../mk/bsd.prefs.mk"
 
 .if defined(USE_GIF)
 LZW_VERSION=	1.3
@@ -33,9 +33,6 @@ post-patch:
 CPPFLAGS+=	-Dunix
 CONFIGURE_ENV+=	PREFIX="${PREFIX}"
 CONFIGURE_ENV+=	ENVOPTS="${CFLAGS} ${CPPFLAGS}"
-CONFIGURE_ENV+=	BUILDLINK_DIR="${BUILDLINK_DIR}"
-
-.include "../../mk/bsd.prefs.mk"
 
 pre-patch:
 	# reference correct relative man page when using .so
@@ -66,6 +63,6 @@ pre-install:
 	${SH} ${INSTALL_FILE} ${PKGNAME} PRE-INSTALL
 .endif
 
-.include "../../devel/zlib/buildlink.mk"
-.include "../../graphics/jpeg/buildlink.mk"
+.include "../../devel/zlib/buildlink2.mk"
+.include "../../graphics/jpeg/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2002/03/13 17:37:48 fredb Exp $
+# $NetBSD: Makefile,v 1.26 2002/08/25 18:40:15 jlam Exp $
 
 DISTNAME=		WindowMaker-0.80.0
 PKGNAME=		windowmaker-0.80.0
@@ -12,16 +12,12 @@ MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://www.windowmaker.org/
 COMMENT=		GNUStep-compliant NEXTSTEP(tm) window manager clone
 
-BUILD_USES_MSGFMT=	yes
+BUILD_USES_MSGFMT=	YES
 
-USE_BUILDLINK_ONLY=	YES
-REPLACE_BUILDLINK=	WINGs/get-wings-flags
-REPLACE_BUILDLINK+=	WINGs/get-wutil-flags
-REPLACE_BUILDLINK+=	wrlib/get-wraster-flags
-
+USE_BUILDLINK2=		YES
+USE_X11BASE=		YES
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
-USE_X11BASE=		YES
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--enable-usermenu \
 			--with-nlsdir=${PREFIX}/${PKGLOCALEDIR}/locale
@@ -30,11 +26,6 @@ CONFIGURE_ENV+=		LINGUAS=yes
 INSTALL_TARGET=		install-strip
 
 .include "../../mk/bsd.prefs.mk"
-
-# "egcs" has an optimizer problem on "arm32".
-.if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "arm32"
-CFLAGS=
-.endif
 
 # WINDOWMAKER_OPTIONS is a space-separated list of compile-time options
 # to support.  Currently supported options:
@@ -80,12 +71,17 @@ post-install:
 		FAQ FAQ.I18N \
 		${PREFIX}/share/doc/WindowMaker
 
-.include "../../devel/gettext-lib/buildlink.mk"
-.include "../../graphics/hermes/buildlink.mk"
-.include "../../graphics/libungif/buildlink.mk"
-.include "../../graphics/jpeg/buildlink.mk"
-.include "../../graphics/png/buildlink.mk"
-.include "../../graphics/tiff/buildlink.mk"
-.include "../../graphics/xpm/buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
+.include "../../devel/gettext-lib/buildlink2.mk"
+.include "../../graphics/hermes/buildlink2.mk"
+.include "../../graphics/libungif/buildlink2.mk"
+.include "../../graphics/jpeg/buildlink2.mk"
+.include "../../graphics/png/buildlink2.mk"
+.include "../../graphics/tiff/buildlink2.mk"
+.include "../../graphics/xpm/buildlink2.mk"
+
 .include "../../mk/bsd.pkg.mk"
+
+# "egcs" has an optimizer problem on "arm32".
+.if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "arm32"
+CFLAGS:=	-O0
+.endif

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2002/05/09 22:31:07 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2002/08/25 18:39:53 jlam Exp $
 
 DISTNAME=	libmcrypt-2.4.22
 CATEGORIES=	security devel
@@ -10,7 +10,7 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://mcrypt.hellug.gr/
 COMMENT=	crypto algorithms library
 
-USE_BUILDLINK_ONLY=	yes
+USE_BUILDLINK2=		yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
@@ -18,5 +18,5 @@ LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 post-extract:
 	${RM} -rf ${WRKSRC}/libltdl
 
-.include "../../devel/libtool/buildlink.mk"
+.include "../../devel/libtool/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
