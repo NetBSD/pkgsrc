@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1999/05/04 20:16:35 tv Exp $
+# $NetBSD: Makefile,v 1.7 1999/12/02 21:03:35 rh Exp $
 #
 
 DISTNAME=       	mod_perl-1.19
@@ -9,8 +9,9 @@ MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Apache/}
 MAINTAINER=		tv@netbsd.org
 HOMEPAGE=		http://perl.apache.org/
 
-DEPENDS=		libperl-5.00404:../../lang/libperl \
-			apache-1.3.6p0:../../www/apache
+DEPENDS+=		libperl-5.*:../../lang/libperl
+DEPENDS+=		apache-1.3.*:../../www/apache
+
 USE_PERL5=		yes
 
 MAKE_ENV=		DYNALOADER_OBJ_PIC="${PREFIX}/lib/perl5/${MACHINE_ARCH}-${LOWER_OPSYS}/5.00404/DynaLoader_pic.o"
