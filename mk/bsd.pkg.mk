@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1044 2002/09/08 06:59:26 tron Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1045 2002/09/12 10:34:29 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -2071,16 +2071,24 @@ post-configure: ${_CONFIGURE_POSTREQ}
 
 # Build
 
+BUILD_DIRS?=	${WRKSRC}
+
 .if !target(do-build)
 do-build:
-	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} ${ALL_TARGET}
+.  for DIR in ${BUILD_DIRS}
+	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}cd ${DIR} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} ${ALL_TARGET}
+.  endfor
 .endif
 
 # Install
 
+INSTALL_DIRS?=	${BUILD_DIRS}
+
 .if !target(do-install)
 do-install:
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} ${INSTALL_TARGET}
+.  for DIR in ${INSTALL_DIRS}
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${DIR} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} ${INSTALL_TARGET}
+.  endfor
 .endif
 
 # Package
