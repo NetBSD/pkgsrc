@@ -1,33 +1,181 @@
---- Makefile.in	1998/03/06 21:40:55	1.1
-+++ Makefile.in	1998/03/06 21:41:04
-@@ -34,6 +34,7 @@
- RM = rm -f
- CP = cp
- MV = mv
-+SHELL = /bin/sh
+--- display.c.old	Sat Jan 10 16:57:37 1998
++++ display.c	Sat Jan 10 17:06:06 1998
+@@ -622,7 +622,7 @@
+ 	      _rl_last_c_pos <= last_invisible && local_prompt)
+ 	    {
+ 	      if (term_cr)
+-		tputs (term_cr, 1, _rl_output_character_function);
++		tputs (term_cr, 1, (void *)_rl_output_character_function);
+ 	      _rl_output_some_chars (local_prompt, nleft);
+ 	      _rl_last_c_pos = nleft;
+ 	    }
+@@ -869,7 +869,7 @@
+       term_cr && lendiff > visible_length && _rl_last_c_pos > 0 &&
+       od > lendiff && _rl_last_c_pos < last_invisible)
+     {
+-      tputs (term_cr, 1, _rl_output_character_function);
++      tputs (term_cr, 1, (void *)_rl_output_character_function);
+       _rl_output_some_chars (local_prompt, lendiff);
+       _rl_last_c_pos = lendiff;
+     }
+@@ -1039,7 +1039,7 @@
+ #if defined (__MSDOS__)
+       putc ('\r', rl_outstream);
+ #else
+-      tputs (term_cr, 1, _rl_output_character_function);
++      tputs (term_cr, 1, (void *)_rl_output_character_function);
+ #endif /* !__MSDOS__ */
+       _rl_last_c_pos = 0;
+     }
+@@ -1097,14 +1097,14 @@
+     {
+       for (i = 0; i < delta; i++)
+ 	putc ('\n', rl_outstream);
+-      tputs (term_cr, 1, _rl_output_character_function);
++      tputs (term_cr, 1, (void *)_rl_output_character_function);
+       _rl_last_c_pos = 0;
+     }
+   else
+     {			/* delta < 0 */
+       if (term_up && *term_up)
+ 	for (i = 0; i < -delta; i++)
+-	  tputs (term_up, 1, _rl_output_character_function);
++	  tputs (term_up, 1, (void *)_rl_output_character_function);
+     }
+ #endif /* !__GO32__ */
+   _rl_last_v_pos = to;		/* Now TO is here */
+@@ -1316,7 +1316,7 @@
+ {
+ #if !defined (__GO32__)
+   if (term_clreol)
+-    tputs (term_clreol, 1, _rl_output_character_function);
++    tputs (term_clreol, 1, (void *)_rl_output_character_function);
+   else if (count)
+ #endif /* !__GO32__ */
+     space_to_eol (count);
+@@ -1341,7 +1341,7 @@
+ {
+ #if !defined (__GO32__)
+   if (term_clrpag)
+-    tputs (term_clrpag, 1, _rl_output_character_function);
++    tputs (term_clrpag, 1, (void *)_rl_output_character_function);
+   else
+ #endif /* !__GO32__ */
+     crlf ();
+@@ -1372,7 +1372,7 @@
+     {
+       char *buffer;
+       buffer = tgoto (term_IC, 0, count);
+-      tputs (buffer, 1, _rl_output_character_function);
++      tputs (buffer, 1, (void *)_rl_output_character_function);
+       _rl_output_some_chars (string, count);
+     }
+   else
+@@ -1381,14 +1381,14 @@
  
- prefix = @prefix@
- exec_prefix = @exec_prefix@
-@@ -191,10 +192,10 @@
- 	done
- 	-$(MV) $(libdir)/libreadline.a $(libdir)/libreadline.old
- 	$(INSTALL_DATA) libreadline.a $(libdir)/libreadline.a
--	-test -n "$(RANLIB)" && -$(RANLIB) -t $(libdir)/libreadline.a
-+	-test -n "$(RANLIB)" && $(RANLIB) -t $(libdir)/libreadline.a
- 	-( if test -d doc ; then \
- 		cd doc && \
--		${MAKE} ${MFLAGS} infodir=$(infodir) INSTALL_DATA=$(INSTALL_DATA) $@; \
-+		${MAKE} ${MFLAGS} infodir=$(infodir) INSTALL_DATA="$(INSTALL_DATA)" $@; \
- 	  fi )
+       /* If we have to turn on insert-mode, then do so. */
+       if (term_im && *term_im)
+-	tputs (term_im, 1, _rl_output_character_function);
++	tputs (term_im, 1, (void *)_rl_output_character_function);
  
- installdirs: $(srcdir)/support/mkdirs
---- doc/Makefile.in	1998/03/06 22:28:22	1.1
-+++ doc/Makefile.in	1998/03/06 22:28:55
-@@ -10,6 +10,7 @@
- man3dir = $(mandir)/man3
+       /* If there is a special command for inserting characters, then
+ 	 use that first to open up the space. */
+       if (term_ic && *term_ic)
+ 	{
+ 	  for (i = count; i--; )
+-	    tputs (term_ic, 1, _rl_output_character_function);
++	    tputs (term_ic, 1, (void *)_rl_output_character_function);
+ 	}
  
- RM = rm -f
-+SHELL = /bin/sh
+       /* Print the text. */
+@@ -1397,7 +1397,7 @@
+       /* If there is a string to turn off insert mode, we had best use
+ 	 it now. */
+       if (term_ei && *term_ei)
+-	tputs (term_ei, 1, _rl_output_character_function);
++	tputs (term_ei, 1, (void *)_rl_output_character_function);
+     }
+ #endif /* !__GO32__ */
+ }
+@@ -1426,13 +1426,13 @@
+     {
+       char *buffer;
+       buffer = tgoto (term_DC, count, count);
+-      tputs (buffer, count, _rl_output_character_function);
++      tputs (buffer, count, (void *)_rl_output_character_function);
+     }
+   else
+     {
+       if (term_dc && *term_dc)
+ 	while (count--)
+-	  tputs (term_dc, 1, _rl_output_character_function);
++	  tputs (term_dc, 1, (void *)_rl_output_character_function);
+     }
+ #endif /* !__GO32__ */
+ }
+@@ -1473,7 +1473,7 @@
+ {
+   if (term_cr)
+     {
+-      tputs (term_cr, 1, _rl_output_character_function);
++      tputs (term_cr, 1, (void *)_rl_output_character_function);
+       _rl_last_c_pos = 0;
+     }
+ }
+@@ -1488,14 +1488,14 @@
+      the right thing happens if we have wrapped to a new screen line. */
+   if (term_cr)
+     {
+-      tputs (term_cr, 1, _rl_output_character_function);
++      tputs (term_cr, 1, (void *)_rl_output_character_function);
+       _rl_last_c_pos = 0;
+       if (term_clreol)
+-	tputs (term_clreol, 1, _rl_output_character_function);
++	tputs (term_clreol, 1, (void *)_rl_output_character_function);
+       else
+ 	{
+ 	  space_to_eol (screenwidth);
+-	  tputs (term_cr, 1, _rl_output_character_function);
++	  tputs (term_cr, 1, (void *)_rl_output_character_function);
+ 	}
+       if (_rl_last_v_pos > 0)
+ 	_rl_move_vert (0);
+--- terminal.c.old	Sat Jan 10 17:13:57 1998
++++ terminal.c	Sat Jan 10 17:14:48 1998
+@@ -460,7 +460,7 @@
+ #if !defined (__GO32__)
+   if (term_backspace)
+     for (i = 0; i < count; i++)
+-      tputs (term_backspace, 1, _rl_output_character_function);
++      tputs (term_backspace, 1, (void *)_rl_output_character_function);
+   else
+ #endif /* !__GO32__ */
+     for (i = 0; i < count; i++)
+@@ -495,7 +495,7 @@
+ 	case VISIBLE_BELL:
+ 	  if (visible_bell)
+ 	    {
+-	      tputs (visible_bell, 1, _rl_output_character_function);
++	      tputs (visible_bell, 1, (void *)_rl_output_character_function);
+ 	      break;
+ 	    }
+ 	  /* FALLTHROUGH */
+@@ -530,7 +530,7 @@
+ _rl_enable_meta_key ()
+ {
+   if (term_has_meta && term_mm)
+-    tputs (term_mm, 1, outchar);
++    tputs (term_mm, 1, (void *)outchar);
+ }
  
- TEXINPUTDIR = $(srcdir)
- 
+ void
+@@ -538,7 +538,7 @@
+      int on;
+ {
+   if (on && term_ks)
+-    tputs (term_ks, 1, outchar);
++    tputs (term_ks, 1, (void *)outchar);
+   else if (!on && term_ke)
+-    tputs (term_ke, 1, outchar);
++    tputs (term_ke, 1, (void *)outchar);
+ }
