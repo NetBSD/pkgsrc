@@ -1,4 +1,9 @@
-$NetBSD: patch-ag,v 1.2 1998/10/04 19:56:34 tv Exp $
+$NetBSD: patch-ag,v 1.3 1999/03/04 14:56:44 agc Exp $
+
+Don't check ncurses lib - just use standard curses.
+Install files into share hierarchy
+Don't assume that we're using the install.sh script - comment out
+	the attempt to prefix it with ../
 
 --- configure.orig	Tue Mar  3 13:30:18 1998
 +++ configure	Sun Oct  4 15:53:12 1998
@@ -20,3 +25,17 @@ $NetBSD: patch-ag,v 1.2 1998/10/04 19:56:34 tv Exp $
  		 INTLDEPS='$(top_builddir)/intl/libintl.a'
  		 INTLLIBS=$INTLDEPS
  		 LIBS=`echo $LIBS | sed -e 's/-lintl//'`
+@@ -3990,10 +3990,13 @@
+     top_srcdir="$ac_dots$ac_given_srcdir" ;;
+   esac
+ 
++# do not assume that we're using the install.sh script...
++if false; then
+   case "$ac_given_INSTALL" in
+   [/$]*) INSTALL="$ac_given_INSTALL" ;;
+   *) INSTALL="$ac_dots$ac_given_INSTALL" ;;
+   esac
++fi
+ 
+   echo creating "$ac_file"
+   rm -f "$ac_file"
