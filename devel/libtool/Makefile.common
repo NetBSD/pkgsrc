@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.55 2004/10/14 19:04:56 tv Exp $
+# $NetBSD: Makefile.common,v 1.56 2004/10/17 16:37:02 tv Exp $
 #
 
 DISTNAME=	libtool-1.5.10
@@ -44,3 +44,5 @@ CONFIGURE_ENV+=		lt_cv_path_NM="nm -p"
 .elif ${OPSYS} == "IRIX"
 CONFIGURE_ENV+=		lt_cv_path_NM="nm -B"
 .endif
+
+CONFIGURE_ENV+=		RANLIB=${RANLIB:Q}
