@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.2 2002/09/05 20:48:17 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2004/02/19 01:24:01 wiz Exp $
 
 .if !defined(CURL_BUILDLINK2_MK)
 CURL_BUILDLINK2_MK=	# defined
@@ -12,6 +12,7 @@ BUILDLINK_PREFIX.curl_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.curl=	include/curl/*
 BUILDLINK_FILES.curl+=	lib/libcurl.*
 
+.include "../../devel/zlib/buildlink2.mk"
 .include "../../security/openssl/buildlink2.mk"
 
 BUILDLINK_TARGETS+=	curl-buildlink
