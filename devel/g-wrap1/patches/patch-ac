@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.1.1.1 2004/12/03 16:02:25 wiz Exp $
+$NetBSD: patch-ac,v 1.2 2004/12/04 16:23:42 wiz Exp $
 
 --- bin/Makefile.in.orig	2002-11-08 05:40:46.000000000 +0100
 +++ bin/Makefile.in
@@ -6,8 +6,7 @@ $NetBSD: patch-ac,v 1.1.1.1 2004/12/03 16:02:25 wiz Exp $
  g-wrap-config: g-wrap-config.in
  	rm -f $@.tmp
  	sed < $@.in > $@.tmp \
--	    -e 's:@-GUILE-@:${GUILE}:' \
-+	    -e 's:@-GUILE-@:${PREFIX}/${GUILE14_SUBDIR}/bin/guile:' \
+ 	    -e 's:@-GUILE-@:${GUILE}:' \
  	    -e 's:@-VERSION-@:${VERSION}:' \
 -	    -e 's:@-libdir-@:${libdir}:' \
 +	    -e 's:@-libdir-@:${libdir}:g' \
