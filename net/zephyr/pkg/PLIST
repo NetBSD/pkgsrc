@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 1998/05/09 10:18:09 frueauf Exp $
+@comment $NetBSD: PLIST,v 1.5 1998/05/09 10:22:20 frueauf Exp $
 bin/xzwrite
 bin/zaway
 bin/zctl
@@ -8,6 +8,7 @@ bin/znol
 bin/zstat
 bin/zwgc
 bin/zwrite
+etc/rc.d/zhm.sh
 etc/zephyr/acl/class-registry.acl
 etc/zephyr/acl/iui-filsrv.acl
 etc/zephyr/acl/iui-hm_ctl.acl
