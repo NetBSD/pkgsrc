@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2000/11/08 10:13:40 abs Exp $
+# $NetBSD: Makefile,v 1.10 2000/11/16 02:32:17 wiz Exp $
 
 DISTNAME=		lmbench-2alpha11
 PKGNAME=		lmbench-2.11a
@@ -12,7 +12,7 @@ HOMEPAGE=		http://www.bitmover.com/lm/lmbench/
 ALL_TARGET=		build
 USE_GMAKE=		yes
 USE_PERL5=		yes
-MAKE_ENV+=		MACHINE_ARCH=$(MACHINE_ARCH)
+MAKE_ENV+=		MACHINE_ARCH=${MACHINE_ARCH}
 
 post-configure:
 	@cd ${WRKSRC};						\
