@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 1999/11/15 11:36:04 rh Exp $
+# $NetBSD: Makefile,v 1.41 1999/12/02 13:30:28 tron Exp $
 #
 
 DISTNAME=	ghostscript-5.50
@@ -31,11 +31,11 @@ EXTRACT_ONLY=	${GS_SOURCES} ${HPDJ_DRV}
 WRKSRC=		${WRKDIR}/gs5.50
 MAKEFILE=	unix-gcc.mak
 ALL_TARGET=	std
-MAKE_ENV+=	MAKEOBJDIR=.
+MAKE_ENV+=	MAKEOBJDIR=. prefix=${PREFIX}
 .if ${OPSYS} == "SunOS"
-MAKE_FLAGS=	prefix=${PREFIX} CFLAGS="${CFLAGS}" XLDFLAGS="-Wl,-R${LOCALBASE}/lib -Wl,-R${X11BASE}/lib -Wl,-R${LOCALBASE}/bsd/lib -L${LOCALBASE}/bsd/lib"
+MAKE_ENV+=	XLDFLAGS="-Wl,-R${LOCALBASE}/lib -Wl,-R${X11BASE}/lib -Wl,-R${LOCALBASE}/bsd/lib -L${LOCALBASE}/bsd/lib"
 .else
-MAKE_FLAGS=	prefix=${PREFIX} CFLAGS="${CFLAGS}" XLDFLAGS="-Wl,-R${LOCALBASE}/lib -Wl,-R${X11BASE}/lib"
+MAKE_ENV+=	XLDFLAGS="-Wl,-R${LOCALBASE}/lib -Wl,-R${X11BASE}/lib"
 .endif
 
 GS_SOURCES=	ghostscript-5.50.tar.gz
