@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/02/10 00:20:29 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2004/02/13 13:09:43 sekiya Exp $
 
 DISTNAME=	libtasn1-0.2.6
 CATEGORIES=	security devel
@@ -11,6 +11,9 @@ COMMENT=	ASN.1 structure parser library
 USE_BUILDLINK3=	YES
 USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES
+
+CONFIG_GUESS_OVERRIDE+=	${WRKSRC}/config.guess
+CONFIG_SUB_OVERRIDE+=	${WRKSRC}/config.sub
 
 LIBTOOL_OVERRIDE=       ${WRKSRC}/libtool
 
