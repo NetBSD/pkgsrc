@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.clients,v 1.4 2003/03/03 02:39:14 jschauma Exp $
+@comment $NetBSD: PLIST.clients,v 1.5 2004/11/23 08:50:23 adam Exp $
 bin/auconvert
 bin/auctl
 bin/audemo
@@ -33,6 +33,7 @@ include/audio/audiolib.h
 include/audio/audioutil.h
 include/audio/fileutil.h
 include/audio/mutex.h
+include/audio/release.h
 include/audio/snd.h
 include/audio/sound.h
 include/audio/soundlib.h
