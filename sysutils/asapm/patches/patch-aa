@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.2 1999/04/12 17:39:47 jlam Exp $
+$NetBSD: patch-aa,v 1.3 2000/01/16 18:37:05 jlam Exp $
 
---- autoconf/Makefile.common.in.orig	Tue Feb 23 04:56:05 1999
-+++ autoconf/Makefile.common.in	Sat Mar 20 17:02:15 1999
+--- autoconf/Makefile.common.in.orig	Tue Mar  9 05:35:24 1999
++++ autoconf/Makefile.common.in	Sun Jan 16 13:23:25 2000
 @@ -13,11 +13,11 @@
  		$(INSTALL_PROGRAM) $(PROG) $(AFTER_BIN_DIR)
  
@@ -16,3 +16,12 @@ $NetBSD: patch-aa,v 1.2 1999/04/12 17:39:47 jlam Exp $
  
  clean:
  		$(RMF) $(PROG) *.o *~ *% *.bak \#* core
+@@ -34,7 +34,7 @@
+ 		done
+ 
+ $(PROG):        $(OBJS)
+-		$(CC) $(OBJS) $(LIBRARIES) $(EXTRA_LIBRARIES) -o $(@)
++		$(CC) $(LDFLAGS) $(OBJS) $(LIBRARIES) $(EXTRA_LIBRARIES) -o $(@)
+ 
+ .c.o:
+ 		$(CC) $(CCFLAGS) $(EXTRA_DEFINES) $(INCLUDES) $(EXTRA_INCLUDES) -c $*.c
