@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.778 2003/08/11 07:01:36 wiz Exp $
+$NetBSD: TODO,v 1.779 2003/08/11 07:26:51 wiz Exp $
 
 Suggested new packages
 ======================
@@ -200,7 +200,6 @@ Suggested package updates
 	o newscache-0.99.22p1
 	o ngrep-1.41
 	o ns-flash-6.0.79
-	o nut-9.0
 	o openh323-1.11.2
 	o openldap-2.1.20 [pkg/21682]
 	o openoffice-1.0.3.1 [skrll]
