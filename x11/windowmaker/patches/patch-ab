@@ -1,22 +1,20 @@
-$NetBSD: patch-ab,v 1.10 1999/09/21 18:05:39 tron Exp $
+$NetBSD: patch-ab,v 1.11 1999/10/06 23:26:56 jlam Exp $
 
---- configure.orig	Thu Sep 16 05:21:30 1999
-+++ configure	Tue Sep 21 19:40:37 1999
-@@ -1303,6 +1303,8 @@
-   echo "$ac_t""no" 1>&6
+--- configure.orig	Sat Oct  2 18:17:29 1999
++++ configure	Wed Oct  6 02:43:35 1999
+@@ -1350,6 +1350,7 @@
  fi
  
-+# Use NetBSD's pkglibtool.
+ 
 +if false; then
- # Always use our own libtool.
- LIBTOOL='$(SHELL) $(top_builddir)/libtool'
- 
-@@ -1364,7 +1366,7 @@
- esac
- 
- W_SYSTEM=`uname -s`
--
+ # Check for any special flags to pass to ltconfig.
+ libtool_flags="--cache-file=$cache_file"
+ test "$enable_shared" = no && libtool_flags="$libtool_flags --disable-shared"
+@@ -1507,6 +1508,7 @@
+ # Redirect the config.log output again, so that the ltconfig log is not
+ # clobbered by the next message.
+ exec 5>>./config.log
 +fi
  
  
- 
+ # by Marcelo Magallon <mmagallo@efis.ucr.ac.cr>

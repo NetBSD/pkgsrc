@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 1999/10/05 20:46:53 tron Exp $
+# $NetBSD: Makefile,v 1.36 1999/10/06 23:26:56 jlam Exp $
 
 DISTNAME=		WindowMaker-0.61.1
 PKGNAME=		windowmaker-0.61.1
@@ -13,7 +13,7 @@ MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://www.windowmaker.org/
 
 DEPENDS+=		libproplist-0.9.*:../../devel/libproplist
-DEPENDS+=		giflib-3.0:../../graphics/giflib
+DEPENDS+=		giflib-*:../../graphics/giflib
 DEPENDS+=		jpeg-6b:../../graphics/jpeg
 DEPENDS+=		png-1.0.3:../../graphics/png
 DEPENDS+=		tiff-3.4:../../graphics/tiff
@@ -22,10 +22,18 @@ DEPENDS+=		xpm-3.4k:../../graphics/xpm
 USE_LIBTOOL=		yes
 USE_X11BASE=		yes
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--with-nlsdir=${PREFIX}/share/locale \
-			--with-incs-from="-I${LOCALBASE}/include \
+CONFIGURE_ARGS+=	--enable-usermenu \
+			--with-nlsdir=${PREFIX}/share/locale \
+			--with-incs-from=" \
+				-I${LOCALBASE}/include \
 				-I${LOCALBASE}/include/giflib"
-LDFLAGS+=		-L${LOCALBASE}/lib	# for libintl.a
+
+# The following ensures that `get-wraster-flags --ldflags' returns the
+# correct linker flags.
+#
+CONFIGURE_ARGS+=	--with-libs-from=" \
+				-Wl,-R${LOCALBASE}/lib -L${LOCALBASE}/lib \
+				-Wl,-R${X11BASE}/lib -L${X11BASE}/lib"
 
 # WINDOWMAKER_OPTIONS is a space-separated list of compile-time options
 # to support.  Currently supported options:
@@ -55,6 +63,7 @@ CONFIGURE_ARGS+=	--enable-${OPTION}
 BUILD_DEPENDS+=		gettext-0.10.35:../../devel/gettext
 CONFIGURE_ARGS+=	--enable-modelock
 CONFIGURE_ENV+=		LINGUAS="${LINGUAS}"
+LDFLAGS+=		-Wl,-R${LOCALBASE}/lib -L${LOCALBASE}/lib	# -lintl
 .endif # LINGUAS
 
 post-extract:
