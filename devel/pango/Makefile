@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2002/06/30 01:51:29 jschauma Exp $
+# $NetBSD: Makefile,v 1.5 2002/07/03 01:29:39 dmcmahill Exp $
 #
 
 DISTNAME=		pango-1.0.3
@@ -17,6 +17,15 @@ GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 USE_GMAKE=		yes
+
+# directory appeared in XFree86 4.*
+# if it is there, we are using XFree86 4.* and will
+# install some additional files
+.if exists(${X11BASE}/lib/X11/locale/common)
+PLIST_SRC=		${PKGDIR}/PLIST.xf4 ${PKGDIR}/PLIST
+.else
+PLIST_SRC=		${PKGDIR}/PLIST
+.endif
 
 test: build
 	cd ${WRKSRC} &&  ${MAKE_ENV} ${MAKE_PROGRAM} check 2>&1 | \
