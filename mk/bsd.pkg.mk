@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.470 2000/06/03 22:59:04 mycroft Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.471 2000/06/04 00:12:57 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -2257,9 +2257,9 @@ package-depends:
 .for dep in ${RUN_DEPENDS}
 	${_PKG_SILENT}${_PKG_DEBUG}\
 	file="${dep:C/:.*//}";						\
-	dir="${.CURDIR}/${dep:C/[^:]*://}";				\
+	dir="${dep:C/[^:]*://}";					\
 	cd ${.CURDIR};							\
-	if cd $$dir 2>/dev/null; then						\
+	if cd $$dir 2>/dev/null; then					\
 		${MAKE} ${MAKEFLAGS} package-name PACKAGE_NAME_TYPE=${PACKAGE_NAME_TYPE}; \
 		if ${PACKAGE_DEPENDS_QUICK} ; then 			\
 			${PKG_INFO} -qf "$$file" | ${AWK} '/^@pkgdep/ {print $$2}'; \
