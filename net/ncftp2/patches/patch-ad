@@ -1,0 +1,20 @@
+$NetBSD: patch-ad,v 1.1 1999/07/13 01:34:42 jlam Exp $
+
+--- LGets.c.orig	Fri Apr  7 23:28:00 1995
++++ LGets.c	Thu Jul  8 15:38:00 1999
+@@ -5,11 +5,15 @@
+ #include "LGets.h"
+ 
+ #ifdef HAVE_LIBREADLINE
++#if HAVE_HISTORY_H
++#	include <history.h>
++#else
+ #	include <readline/readline.h>
+ #	ifdef HAVE_READLINE_HISTORY_H
+ 		/* Required for version 2.0 of readline. */
+ #		include <readline/history.h>
+ #	endif
++#endif
+ #endif	/* HAVE_LIBREADLINE */
+ 
+ #ifdef HAVE_LIBGETLINE
