@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST.pre,v 1.1 2001/11/01 00:15:56 zuntum Exp $
-lib/python2.0/site-packages/ldap.pth
+@comment $NetBSD: PLIST.pre,v 1.2 2002/01/19 17:14:55 drochner Exp $
+${PYSITELIB}/ldap.pth
