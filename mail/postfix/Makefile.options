@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.options,v 1.1 2004/07/19 19:59:17 jlam Exp $
+# $NetBSD: Makefile.options,v 1.2 2004/07/19 20:34:50 jlam Exp $
 #
 # POSTFIX_ALL_OPTIONS lists all of the currently-supported optional modules
 # that may be built into Postfix.
@@ -100,10 +100,19 @@ AUXLIBS+=	-L${BUILDLINK_PREFIX.mysql-client}/lib/mysql		\
 ## .endif
 
 ###
-### SASL support for SMTP authentication.
+### SASL support for SMTP authentication.  If neither SASLv1 or SASLv2 is
+### explicitly specified, then build with SASLv2.
 ###
 .if !empty(_POSTFIX_OPTIONS:Msasl)
-.  if defined(USE_SASL2) && !empty(USE_SASL2:M[yY][eE][sS])
+.  if !defined(USE_SASL2) && !defined(USE_SASL)
+.    include "../../security/cyrus-sasl2/buildlink3.mk"
+SASLLIBDIR=	${PREFIX}/lib/sasl2
+PWCHECK_METHOD=	auxprop
+CCARGS+=	-DUSE_SASL2_AUTH
+AUXLIBS+=	-L${BUILDLINK_PREFIX.cyrus-sasl}/lib			\
+		-Wl,${RPATH_FLAG}${BUILDLINK_PREFIX.cyrus-sasl}/lib	\
+		-lsasl2
+.  elif defined(USE_SASL2) && !empty(USE_SASL2:M[yY][eE][sS])
 .    include "../../security/cyrus-sasl2/buildlink3.mk"
 SASLLIBDIR=	${PREFIX}/lib/sasl2
 PWCHECK_METHOD=	auxprop
