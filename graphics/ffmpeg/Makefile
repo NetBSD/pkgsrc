@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2003/07/17 21:40:29 grant Exp $
+# $NetBSD: Makefile,v 1.8 2004/01/20 12:18:15 agc Exp $
 
 DISTNAME=	ffmpeg-0.4.5
 PKGREVISION=	2
-WRKSRC=		${WRKDIR}/ffmpeg
 CATEGORIES=	graphics net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ffmpeg/}
 
@@ -12,6 +11,7 @@ COMMENT=	MPEG decoding, encoding and streaming software
 
 BUILD_DEPENDS+=	nasm>=0.98:../../devel/nasm
 
+WRKSRC=		${WRKDIR}/ffmpeg
 HAS_CONFIGURE=	YES
 USE_BUILDLINK2=	YES
 USE_GMAKE=	YES

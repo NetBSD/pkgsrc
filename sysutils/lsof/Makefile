@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.72 2004/01/17 19:37:35 atatat Exp $
+# $NetBSD: Makefile,v 1.73 2004/01/20 12:26:15 agc Exp $
 #
 
 DISTNAME=		lsof_4.70
 PKGNAME=		${DISTNAME:S/_/-/}
-WRKSRC=			${WRKDIR}/${DISTNAME}/${SRCBALL_NAME}
 CATEGORIES=		sysutils
 MASTER_SITES=		ftp://lsof.itap.purdue.edu/pub/tools/unix/lsof/  \
 			ftp://lsof.itap.purdue.edu/pub/tools/unix/lsof/NEW/ \
@@ -16,6 +15,7 @@ MAINTAINER=		atatat@NetBSD.org
 HOMEPAGE=		http://www-rcd.cc.purdue.edu/~abe/
 COMMENT=		Lists information about open files
 
+WRKSRC=			${WRKDIR}/${DISTNAME}/${SRCBALL_NAME}
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	./Configure
 CONFIGURE_ARGS=		-n ${LOWER_OPSYS}

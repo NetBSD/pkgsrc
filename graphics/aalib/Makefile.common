@@ -1,7 +1,6 @@
-# $NetBSD: Makefile.common,v 1.11 2003/12/03 02:14:00 reed Exp $
+# $NetBSD: Makefile.common,v 1.12 2004/01/20 12:18:15 agc Exp $
 
 DISTNAME=	aalib-${DIST_VERS}
-WRKSRC=		${WRKDIR}/aalib-1.4.0
 CATEGORIES+=	graphics
 MASTER_SITES+=	${MASTER_SITE_SOURCEFORGE:=aa-project/}
 
@@ -14,6 +13,7 @@ HOMEPAGE=	http://aa-project.sourceforge.net/aalib/
 DISTINFO_FILE=		${.CURDIR}/../../graphics/aalib/distinfo
 PATCHDIR=		${.CURDIR}/../../graphics/aalib/patches
 
+WRKSRC=			${WRKDIR}/aalib-1.4.0
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig

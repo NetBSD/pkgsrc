@@ -1,15 +1,16 @@
-# $NetBSD: Makefile,v 1.5 2003/08/24 05:00:54 taca Exp $
+# $NetBSD: Makefile,v 1.6 2004/01/20 12:25:34 agc Exp $
 # FreeBSD: ports/security/ruby-tcpwrap/Makefile,v 1.6 2000/09/26 08:02:10 knu Exp
 
 DISTNAME=	ruby-tcpwrap-0.6
 PKGNAME=	${RUBY_PKGNAMEPREFIX}tcpwrap-0.6
-WRKSRC=		${WRKDIR}/ruby-tcpwrap
 CATEGORIES=	security
 MASTER_SITES=	http://www.shugo.net/archive/ruby-tcpwrap/
 
 MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	# not available
 COMMENT=	TCP wrappers library for Ruby
+
+WRKSRC=		${WRKDIR}/ruby-tcpwrap
 
 .include "../../mk/bsd.prefs.mk"
 

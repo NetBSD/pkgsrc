@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2003/08/09 10:59:13 seb Exp $
+# $NetBSD: Makefile,v 1.7 2004/01/20 12:19:18 agc Exp $
 #
 
 DISTNAME=	twelf-1-4
 PKGNAME=	twelf-1.4
 PKGREVISION=	1
-WRKSRC=		${WRKDIR}/twelf
 CATEGORIES=	lang
 MASTER_SITES=	http://www.cs.cmu.edu/~twelf/dist/
 
@@ -20,6 +19,7 @@ NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
+WRKSRC=		${WRKDIR}/twelf
 MAKEFILE=	smlnj/Makefile
 MAKEFLAGS+=	sml=${PREFIX:Q}/bin/sml
 ALL_TARGET=	twelf-server twelf-sml

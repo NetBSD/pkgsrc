@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2003/07/17 22:53:53 grant Exp $
+# $NetBSD: Makefile,v 1.16 2004/01/20 12:26:16 agc Exp $
 #
 
 DISTNAME=	sysbuild-1.9
-WRKSRC=		${WRKDIR}
 CATEGORIES=	sysutils
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -10,6 +9,7 @@ DISTFILES=	# empty
 MAINTAINER=	jmmv@NetBSD.org
 COMMENT=	Automate NetBSD system and kernel unprivileged builds
 
+WRKSRC=		${WRKDIR}
 EXTRACT_ONLY=	# empty
 NO_CHECKSUM=	yes
 NO_CONFIGURE=	yes

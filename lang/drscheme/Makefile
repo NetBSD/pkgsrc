@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2003/12/30 17:27:31 cjep Exp $
+# $NetBSD: Makefile,v 1.15 2004/01/20 12:19:16 agc Exp $
 #
 
 DISTNAME=		plt.src.x
 PKGNAME=		drscheme-202
-WRKSRC=                 ${WRKDIR}/plt/src
 DIST_SUBDIR=		${PKGNAME:C/-[0-9]*//}/${PKGNAME:C/.*-([0-9]*)/\1/}
 CATEGORIES=		lang
 MASTER_SITES=		http://download.plt-scheme.org/bundles/202/plt/ \
@@ -18,6 +17,7 @@ COMMENT=		R4RS-compilant and nearly R5RS-compliant scheme tailored for teaching
 
 CONFLICTS+=		mzscheme-[0-9]*:../../lang/mzscheme
 
+WRKSRC=                 ${WRKDIR}/plt/src
 USE_BUILDLINK2=		yes
 USE_X11=		yes
 USE_GMAKE=		yes
