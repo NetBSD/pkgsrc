@@ -1,0 +1,24 @@
+$NetBSD: patch-ah,v 1.1.1.1 2001/02/28 22:18:41 jtb Exp $
+
+--- /dev/null	Wed Feb 28 13:48:26 2001
++++ mfhdf/dumper/Makefile
+@@ -0,0 +1,19 @@
++PROG= hdp
++
++SRCS= hdp.c hdp_list.c hdp_sds.c hdp_util.c hdp_vd.c hdp_vg.c	\
++	hdp_rig.c show.c hdp_dump.c hdp_gr.c
++
++BINDIR= ${PREFIX}/bin
++LIBDIR= ${PREFIX}/lib
++
++JPEGLIB= -R{JPEGBASE}/lib -L${JPEGBASE}/lib -ljpeg
++HDFLIB= -L${.CURDIR}/../../hdf/src -ldf
++MFHDFLIB= -L${.CURDIR}/../libsrc -lmfhdf
++
++LDFLAGS+= -Wl,-R{LIBDIR} ${HDFLIB} ${MFHDFLIB} ${JPEGLIB}
++
++CPPFLAGS+= -Dunix @SWAP@ -I${.CURDIR}/../libsrc -I${.CURDIR}/../../hdf/src
++
++NOMAN= 1
++
++.include <bsd.prog.mk>
