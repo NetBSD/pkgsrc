@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.10 2001/04/10 13:08:05 jlam Exp $
+# $NetBSD: Makefile.common,v 1.11 2001/05/04 01:05:19 jlam Exp $
 #
 # This file is included by the following packages:
 #
@@ -30,6 +30,7 @@ GNU_CONFIGURE=		# defined
 # We don't USE_LIBTOOL for the shared libs since libtool doesn't seem to
 # support inter-library dependencies across all platforms yet.
 
+DISTINFO_FILE=		${.CURDIR}/../../databases/postgresql/distinfo
 FILESDIR=		${.CURDIR}/../../databases/postgresql/files
 PATCHDIR=		${.CURDIR}/../../databases/postgresql/patches
 
