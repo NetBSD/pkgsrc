@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2004/03/16 02:01:10 taca Exp $
+# $NetBSD: Makefile,v 1.5 2004/11/27 16:01:37 taca Exp $
 # FreeBSD: ports/devel/ruby-filelock/Makefile,v 1.4 2000/09/26 08:01:52 knu Exp
 
 DISTNAME=	filelock-0.2
-PKGNAME=	${RUBY_PKGNAMEPREFIX}${DISTNAME}
+PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel ruby
 MASTER_SITES=	ftp://ftp.ruby-lang.org/pub/ruby/contrib/
 
@@ -10,13 +10,10 @@ MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	# not available
 COMMENT=	Ruby module which provides file locking mechanism
 
-DIST_SUBDIR=	ruby
-USE_RUBY_EXTCONF= yes
-
-INSTALL_TARGET=	site-install
-
-DOCS=		README
-EXAMPLES=	test.rb	tst1.rb	tst2.rb	tst3.rb	tst4.rb
+USE_RUBY_EXTCONF= 	yes
+INSTALL_TARGET=		site-install
+DOCS=			README
+EXAMPLES=		test.rb	tst1.rb	tst2.rb	tst3.rb	tst4.rb
 
 post-install:
 	${INSTALL_DATA_DIR} ${RUBY_EXAMPLESDIR}/filelock
@@ -28,5 +25,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/${f} ${RUBY_DOCDIR}/filelock
 .endfor
 
-.include "../../lang/ruby-base/Makefile.common"
+.include "../../lang/ruby/modules.mk"
 .include "../../mk/bsd.pkg.mk"
