@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.install.mk,v 1.40 2002/12/02 17:07:27 jschauma Exp $
+# $NetBSD: bsd.pkg.install.mk,v 1.40.4.1 2003/07/24 23:45:06 jlam Exp $
 #
 # This Makefile fragment is included by package Makefiles to use the common
 # INSTALL/DEINSTALL scripts.  To use this Makefile fragment, simply:
@@ -66,6 +66,7 @@ FILES_SUBST+=		X11BASE=${X11BASE}
 FILES_SUBST+=		PKG_SYSCONFBASE=${PKG_SYSCONFBASE}
 FILES_SUBST+=		PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
 FILES_SUBST+=		PKGBASE=${PKGBASE}
+FILES_SUBST+=		PKG_INSTALLATION_TYPE=${PKG_INSTALLATION_TYPE}
 
 # PKG_USERS represents the users to create for the package.  It is a
 #	space-separated list of elements of the form
