@@ -1,7 +1,10 @@
-$NetBSD: distinfo,v 1.4 2003/03/16 00:17:23 wiz Exp $
+$NetBSD: distinfo,v 1.5 2004/06/06 21:29:33 minskim Exp $
 
-SHA1 (cpio-2.4.2.tar.gz) = 88e557b2e14ad7b575554473e4ef4624a993b71f
-Size (cpio-2.4.2.tar.gz) = 185281 bytes
-SHA1 (patch-aa) = 36f3287ea0a64ac0eb085335ef0ab6661e1458c7
-SHA1 (patch-ab) = aa50963702198b42345aa906f387b89adad2b9b0
-SHA1 (patch-ac) = 372b5fe8bb22a609c22089c78f67387e66436372
+SHA1 (cpio-2.5.tar.gz) = d5908ee20484f092e591a430620feec33060528c
+Size (cpio-2.5.tar.gz) = 185480 bytes
+SHA1 (patch-aa) = 2d6b714be46f26782b1a6e6af47710c6e20f50b8
+SHA1 (patch-ab) = e3529142851ebe87b6df37ab33571209512b0f17
+SHA1 (patch-ac) = 404dcc134a0c8b9007a3efdc8caf6b36efcf125b
+SHA1 (patch-ad) = 854df599fa330ae2b07ab6cae4c2a1f2e0988ff5
+SHA1 (patch-ae) = 5de604f8278756e1ef8d4b72f9cd7638cb0496ab
+SHA1 (patch-af) = d42ed286fa508dc2be2415614412cac8929f19f8

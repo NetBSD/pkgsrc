@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2004/03/11 18:03:49 xtraeme Exp $
+# $NetBSD: Makefile,v 1.21 2004/06/06 21:29:33 minskim Exp $
 #
 
-DISTNAME=       cpio-2.4.2
-PKGNAME=	gcpio-2.4.2
-PKGREVISION=	1
+DISTNAME=       cpio-2.5
+PKGNAME=	g${DISTNAME}
 CATEGORIES=	archivers
 MASTER_SITES=   ${MASTER_SITE_GNU:=cpio/}
 
@@ -13,11 +12,15 @@ COMMENT=	GNU copy-in/out (cpio) with remote magnetic tape (rmt) support
 
 USE_BUILDLINK3=	yes
 GNU_CONFIGURE=	yes
-LIBS+=		-lgnumalloc
+USE_MAKEINFO=	yes
 
 INFO_FILES=	cpio.info
 
 .include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD"
+LIBS+=		-lgnumalloc
+.endif
 
 .if defined(GNU_PROGRAM_PREFIX)
 CONFIGURE_ARGS+=	--program-prefix=${GNU_PROGRAM_PREFIX}
