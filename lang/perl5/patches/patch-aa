@@ -1,17 +1,27 @@
-$NetBSD: patch-aa,v 1.18 2001/09/05 17:13:40 jlam Exp $
+$NetBSD: patch-aa,v 1.19 2001/09/14 05:00:36 jlam Exp $
 
---- Configure.orig	Sun Mar 18 19:03:33 2001
-+++ Configure	Sat Sep  1 14:31:15 2001
-@@ -6807,8 +6807,11 @@
+--- Configure.orig	Sun Mar 18 22:03:33 2001
++++ Configure	Fri Sep 14 00:55:04 2001
+@@ -6807,9 +6807,12 @@
  	aix)
  		# We'll set it in Makefile.SH...
  		;;
 -	solaris|netbsd)
 +	solaris)
  		xxx="-R $shrpdir"
-+		;;
+ 		;;
 +	netbsd)
 +		xxx="-Wl,-R$shrpdir"
- 		;;
++		;;
  	freebsd)
  		xxx="-Wl,-R$shrpdir"
+ 		;;
+@@ -14719,7 +14722,7 @@
+ eval $inhdr
+ 
+ : see if this is a ieeefp.h system
+-set ieeefp.h i_ieeefp
++set machine/ieeefp.h i_ieeefp
+ eval $inhdr
+ 
+ : see if this is a libutil.h system
