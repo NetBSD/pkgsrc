@@ -1,0 +1,15 @@
+$NetBSD: patch-bb,v 1.1 1998/12/16 22:44:07 tsarna Exp $
+
+NetBSD ELF platform support
+
+--- Python/importdl.c.orig	Wed Dec 16 15:09:49 1998
++++ Python/importdl.c	Wed Dec 16 15:11:20 1998
+@@ -211,7 +211,7 @@
+ extern char *Py_GetProgramName();
+ 
+ #ifndef FUNCNAME_PATTERN
+-#if defined(__hp9000s300) || defined(__NetBSD__) || defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__BORLANDC__)
++#if defined(__hp9000s300) || (defined(__NetBSD__) && !defined(__ELF__)) || defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__BORLANDC__)
+ #define FUNCNAME_PATTERN "_init%.200s"
+ #else
+ #define FUNCNAME_PATTERN "init%.200s"
