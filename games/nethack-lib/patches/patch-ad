@@ -1,0 +1,17 @@
+$NetBSD: patch-ad,v 1.1 1998/08/27 12:58:52 garbled Exp $
+--- sys/unix/nethack.sh.orig	Tue Sep 12 13:01:39 1995
++++ sys/unix/nethack.sh	Sat Aug  8 03:43:07 1998
+@@ -3,4 +3,11 @@
+ 
+-HACKDIR=/usr/games/lib/nethackdir
+-HACK=$HACKDIR/nethack
++if [ "$1" = "" ]; then
++  TTY=tty
++else
++  TTY=$1
++fi
++
++HACKDIR=XXXPREFIXXXX/share/nethackdir
++export HACKDIR
++HACK=XXXPREFIXXXX/bin/nethack-$TTY
+ MAXNROFPLAYERS=4
