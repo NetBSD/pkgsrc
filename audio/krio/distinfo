@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/18 12:14:31 agc Exp $
-
-SHA1 (Krio-19990721.tar.gz) = 1b559f4050ef020a17932c276a368ee7bbd166da
-Size (Krio-19990721.tar.gz) = 40597 bytes
-SHA1 (patch-aa) = 9f7783bc3079ecc9804f99420e7bf8f6c7db410b
