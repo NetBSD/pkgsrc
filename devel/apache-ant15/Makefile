@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/04/01 14:27:12 abs Exp $
+# $NetBSD: Makefile,v 1.2 2004/04/16 15:42:00 tv Exp $
 #
 # NOTE: if you are depending on ant from another package, please be aware that
 # the ant team has CHANGED the version numbering scheme.  A previous version
@@ -23,6 +23,7 @@ CONFLICTS=	jakarta-ant*
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 USE_BUILDLINK2=	# defined
+USE_JAVA=	run
 
 EXTRACT_CMD_OPTS.zip=	-Caq
 
