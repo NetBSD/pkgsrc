@@ -1,3 +1,4 @@
+@comment $NetBSD: PLIST,v 1.2 1998/02/28 20:37:30 frueauf Exp $
 bin/lyx
 man/man1/lyx.1.gz
 share/locale/da/LC_MESSAGES/lyx.mo
