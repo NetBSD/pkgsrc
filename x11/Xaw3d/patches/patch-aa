@@ -1,15 +1,6 @@
---- Imakefile.orig	Wed May 29 17:38:40 1996
-+++ Imakefile	Mon Dec  1 01:02:08 1997
-@@ -7,7 +7,7 @@
- #define HasSharedData YES
- #define LibName Xaw3d
- #define SoRev SOXAWREV
--#define IncSubdir Xaw3d
-+#define IncSubdir X11/Xaw3d
- 
- #ifdef LinuxArchitecture
- JUMP_ROOT_Xaw3d = $(AWIDGETSRC)3d
-@@ -38,9 +38,9 @@
+--- Imakefile.orig	Tue Oct 15 10:41:19 1996
++++ Imakefile	Sat Jul  4 01:43:07 1998
+@@ -39,9 +39,9 @@
  
         LINTLIBS = $(LINTXLIB) $(LINTXTOOL)
  
