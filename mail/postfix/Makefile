@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.103 2003/10/02 10:39:12 martti Exp $
+# $NetBSD: Makefile,v 1.104 2003/10/03 15:04:52 christos Exp $
 
 DISTNAME=	postfix-2.0.16
 CATEGORIES=	mail
@@ -77,13 +77,26 @@ BUILD_DEFS+=	POSTFIX_USE_MYSQL
 .endif
 
 .if defined(USE_SASL) && ${USE_SASL} == "YES"
+USING_SASL=YES
 .include "../../security/cyrus-sasl/buildlink2.mk"
 CCARGS+=	-DUSE_SASL_AUTH
 AUXLIBS+=	-L${BUILDLINK_PREFIX.cyrus-sasl}/lib		\
 		-Wl,${RPATH_FLAG}${BUILDLINK_PREFIX.cyrus-sasl}/lib	\
 		-lsasl
 BUILD_DEFS+=	USE_SASL
+.endif
 
+.if defined(USE_SASL2) && ${USE_SASL2} == "YES"
+USING_SASL=YES
+.include "../../security/cyrus-sasl2/buildlink2.mk"
+CCARGS+=	-DUSE_SASL2_AUTH
+AUXLIBS+=	-L${BUILDLINK_PREFIX.cyrus-sasl2}/lib		\
+		-Wl,${RPATH_FLAG}${BUILDLINK_PREFIX.cyrus-sasl2}/lib	\
+		-lsasl2
+BUILD_DEFS+=	USE_SASL2
+.endif
+
+.if defined(USING_SASL)
 PLIST_SRC+=	${WRKDIR}/PLIST.sasl
 MESSAGE_SRC+=	${PKGDIR}/MESSAGE.sasl
 MESSAGE_SUBST+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
@@ -146,10 +159,15 @@ pre-install:
 	${CHOWN} ${ROOT_USER}:${ROOT_GROUP} ${SHAREDIR} ${LIBEXECDIR}
 	${CHMOD} 755 ${SHAREDIR} ${LIBEXECDIR}
 	-${RM} -f ${WRKSRC}/conf/*.orig
-.if defined(USE_SASL) && ${USE_SASL} == "YES"
+.if defined(USING_SASL)
 	${ECHO} "pwcheck_method: sasldb" > ${WRKDIR}/smtpd.conf
+.if defined(USE_SASL2)
+	${INSTALL_DATA} ${WRKDIR}/smtpd.conf ${PREFIX}/lib/sasl2
+	${ECHO} lib/sasl2/smtpd.conf > ${WRKDIR}/PLIST.sasl
+.else
 	${INSTALL_DATA} ${WRKDIR}/smtpd.conf ${PREFIX}/lib/sasl
 	${ECHO} lib/sasl/smtpd.conf > ${WRKDIR}/PLIST.sasl
+.endif
 .endif
 	${INSTALL_SCRIPT} ${WRKSRC}/conf/post-install ${SHAREDIR}
 	${INSTALL_SCRIPT} ${WRKSRC}/conf/postfix-files ${SHAREDIR}

@@ -1,0 +1,23 @@
+$NetBSD: patch-ah,v 1.5 2003/10/03 15:04:52 christos Exp $
+
+--- src/smtpd/smtpd.h.orig	2003-10-02 06:48:30.000000000 -0400
++++ src/smtpd/smtpd.h	2003-10-02 06:48:31.000000000 -0400
+@@ -16,10 +16,18 @@
+  /*
+   * SASL library.
+   */
++#ifdef USE_SASL2_AUTH
++#ifndef USE_SASL_AUTH
++#define USE_SASL_AUTH
++#endif
++#include <sasl/sasl.h>
++#include <sasl/saslutil.h>
++#else
+ #ifdef USE_SASL_AUTH
+ #include <sasl.h>
+ #include <saslutil.h>
+ #endif
++#endif
+ 
+  /*
+   * Utility library.
