@@ -1,6 +1,6 @@
 #!/usr/bin/env perl
 
-# $NetBSD: lintpkgsrc.pl,v 1.19 2000/01/19 13:59:22 abs Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.20 2000/01/26 15:25:26 abs Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -375,8 +375,8 @@ sub parse_makefile
 
 	# Continuation lines
 	#
-	while ( substr($_,-1) eq "\\" )
-	    { substr($_,-2) = shift @data; }
+	while ( substr($_, -1) eq "\\" )
+	    { substr($_, -2) = shift @data; }
 
 	# Conditionals
 	#
@@ -591,7 +591,7 @@ sub pkglint_all_pkgsrc
 	    {
 	    if (-f "$pkg/Makefile")
 		{
-		if (!open(PKGLINT, "pkglint $pkglint_flags $pkg|"))
+		if (!open(PKGLINT, "cd $pkg ; pkglint $pkglint_flags|"))
 		    { &fail("Unable to run pkglint: $!"); }
 		@output = grep(!/^OK:/ &&
 			     !/^WARN: be sure to cleanup .* work before/ &&
@@ -600,11 +600,7 @@ sub pkglint_all_pkgsrc
 			     , <PKGLINT> );
 		close(PKGLINT);
 		if (@output)
-		    {
-		    print "===> $cat/$pkg\n",
-			  "pkglint $pkglint_flags $pkg\n",
-			  @output, "\n";
-		    }
+		    { print "===> $cat/$pkg\n", @output, "\n"; }
 		}
 	    }
 	close(CAT);
