@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2001/04/20 15:05:03 skrll Exp $
+$NetBSD: distinfo,v 1.3 2003/11/18 13:42:46 xtraeme Exp $
 
-SHA1 (DelimMatch-1.03.tar.gz) = e2587e646ff54a2d2e00473a1ded876fe8ffbf29
-Size (DelimMatch-1.03.tar.gz) = 8109 bytes
+SHA1 (DelimMatch-1.06a.tar.gz) = 545d96d0fa34ed139e8633aab7f9df53448a182e
+Size (DelimMatch-1.06a.tar.gz) = 8529 bytes
