@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.3 2003/06/04 16:12:11 reinoud Exp $
+@comment $NetBSD: PLIST,v 1.4 2004/06/26 15:48:19 mrg Exp $
 bin/growisofs
 bin/dvd+rw-booktype
 bin/dvd+rw-format
 bin/dvd+rw-mediainfo
+man/man1/growisofs.1
 share/doc/html/dvd+rw-tools/index.html
 @dirrm share/doc/html/dvd+rw-tools
