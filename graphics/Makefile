@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.212 2002/10/30 11:20:49 markd Exp $
+# $NetBSD: Makefile,v 1.213 2002/11/02 04:10:17 rh Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -46,6 +46,7 @@ SUBDIR+=	dx
 SUBDIR+=	dxsamples
 SUBDIR+=	ee
 SUBDIR+=	eog
+SUBDIR+=	eog2
 SUBDIR+=	fbm
 SUBDIR+=	feh
 SUBDIR+=	ffmpeg
