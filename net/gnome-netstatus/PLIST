@@ -1,0 +1,186 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/04/01 19:09:51 jmmv Exp $
+lib/bonobo/servers/GNOME_NetstatusApplet_Factory.server
+libexec/gnome-netstatus-applet
+share/gconf/schemas/netstatus.schemas
+share/gnome-2.0/ui/GNOME_NetstatusApplet.xml
+share/gnome-netstatus/gnome-netstatus.glade
+share/gnome/help/gnome-netstatus/C/figures/gnome-netstatus-disconn.png
+share/gnome/help/gnome-netstatus/C/figures/gnome-netstatus-error.png
+share/gnome/help/gnome-netstatus/C/figures/gnome-netstatus-idle.png
+share/gnome/help/gnome-netstatus/C/figures/gnome-netstatus-rx.png
+share/gnome/help/gnome-netstatus/C/figures/gnome-netstatus-tx.png
+share/gnome/help/gnome-netstatus/C/figures/gnome-netstatus-txrx.png
+share/gnome/help/gnome-netstatus/C/gnome-netstatus.xml
+share/gnome/help/gnome-netstatus/C/legal.xml
+share/gnome/help/gnome-netstatus/de/figures/gnome-netstatus-disconn.png
+share/gnome/help/gnome-netstatus/de/figures/gnome-netstatus-error.png
+share/gnome/help/gnome-netstatus/de/figures/gnome-netstatus-idle.png
+share/gnome/help/gnome-netstatus/de/figures/gnome-netstatus-rx.png
+share/gnome/help/gnome-netstatus/de/figures/gnome-netstatus-tx.png
+share/gnome/help/gnome-netstatus/de/figures/gnome-netstatus-txrx.png
+share/gnome/help/gnome-netstatus/de/gnome-netstatus.xml
+share/gnome/help/gnome-netstatus/de/legal.xml
+share/gnome/help/gnome-netstatus/es/figures/gnome-netstatus-disconn.png
+share/gnome/help/gnome-netstatus/es/figures/gnome-netstatus-error.png
+share/gnome/help/gnome-netstatus/es/figures/gnome-netstatus-idle.png
+share/gnome/help/gnome-netstatus/es/figures/gnome-netstatus-rx.png
+share/gnome/help/gnome-netstatus/es/figures/gnome-netstatus-tx.png
+share/gnome/help/gnome-netstatus/es/figures/gnome-netstatus-txrx.png
+share/gnome/help/gnome-netstatus/es/gnome-netstatus.xml
+share/gnome/help/gnome-netstatus/es/legal.xml
+share/gnome/help/gnome-netstatus/fr/figures/gnome-netstatus-disconn.png
+share/gnome/help/gnome-netstatus/fr/figures/gnome-netstatus-error.png
+share/gnome/help/gnome-netstatus/fr/figures/gnome-netstatus-idle.png
+share/gnome/help/gnome-netstatus/fr/figures/gnome-netstatus-rx.png
+share/gnome/help/gnome-netstatus/fr/figures/gnome-netstatus-tx.png
+share/gnome/help/gnome-netstatus/fr/figures/gnome-netstatus-txrx.png
+share/gnome/help/gnome-netstatus/fr/gnome-netstatus.xml
+share/gnome/help/gnome-netstatus/fr/legal.xml
+share/gnome/help/gnome-netstatus/it/figures/gnome-netstatus-disconn.png
+share/gnome/help/gnome-netstatus/it/figures/gnome-netstatus-error.png
+share/gnome/help/gnome-netstatus/it/figures/gnome-netstatus-idle.png
+share/gnome/help/gnome-netstatus/it/figures/gnome-netstatus-rx.png
+share/gnome/help/gnome-netstatus/it/figures/gnome-netstatus-tx.png
+share/gnome/help/gnome-netstatus/it/figures/gnome-netstatus-txrx.png
+share/gnome/help/gnome-netstatus/it/gnome-netstatus.xml
+share/gnome/help/gnome-netstatus/it/legal.xml
+share/gnome/help/gnome-netstatus/ja/figures/gnome-netstatus-disconn.png
+share/gnome/help/gnome-netstatus/ja/figures/gnome-netstatus-error.png
+share/gnome/help/gnome-netstatus/ja/figures/gnome-netstatus-idle.png
+share/gnome/help/gnome-netstatus/ja/figures/gnome-netstatus-rx.png
+share/gnome/help/gnome-netstatus/ja/figures/gnome-netstatus-tx.png
+share/gnome/help/gnome-netstatus/ja/figures/gnome-netstatus-txrx.png
+share/gnome/help/gnome-netstatus/ja/gnome-netstatus.xml
+share/gnome/help/gnome-netstatus/ja/legal.xml
+share/gnome/help/gnome-netstatus/ko/figures/gnome-netstatus-disconn.png
+share/gnome/help/gnome-netstatus/ko/figures/gnome-netstatus-error.png
+share/gnome/help/gnome-netstatus/ko/figures/gnome-netstatus-idle.png
+share/gnome/help/gnome-netstatus/ko/figures/gnome-netstatus-rx.png
+share/gnome/help/gnome-netstatus/ko/figures/gnome-netstatus-tx.png
+share/gnome/help/gnome-netstatus/ko/figures/gnome-netstatus-txrx.png
+share/gnome/help/gnome-netstatus/ko/gnome-netstatus.xml
+share/gnome/help/gnome-netstatus/ko/legal.xml
+share/gnome/help/gnome-netstatus/sv/figures/gnome-netstatus-disconn.png
+share/gnome/help/gnome-netstatus/sv/figures/gnome-netstatus-error.png
+share/gnome/help/gnome-netstatus/sv/figures/gnome-netstatus-idle.png
+share/gnome/help/gnome-netstatus/sv/figures/gnome-netstatus-rx.png
+share/gnome/help/gnome-netstatus/sv/figures/gnome-netstatus-tx.png
+share/gnome/help/gnome-netstatus/sv/figures/gnome-netstatus-txrx.png
+share/gnome/help/gnome-netstatus/sv/gnome-netstatus.xml
+share/gnome/help/gnome-netstatus/sv/legal.xml
+share/gnome/help/gnome-netstatus/zh_CN/figures/gnome-netstatus-disconn.png
+share/gnome/help/gnome-netstatus/zh_CN/figures/gnome-netstatus-error.png
+share/gnome/help/gnome-netstatus/zh_CN/figures/gnome-netstatus-idle.png
+share/gnome/help/gnome-netstatus/zh_CN/figures/gnome-netstatus-rx.png
+share/gnome/help/gnome-netstatus/zh_CN/figures/gnome-netstatus-tx.png
+share/gnome/help/gnome-netstatus/zh_CN/figures/gnome-netstatus-txrx.png
+share/gnome/help/gnome-netstatus/zh_CN/gnome-netstatus.xml
+share/gnome/help/gnome-netstatus/zh_CN/legal.xml
+share/gnome/help/gnome-netstatus/zh_HK/figures/gnome-netstatus-disconn.png
+share/gnome/help/gnome-netstatus/zh_HK/figures/gnome-netstatus-error.png
+share/gnome/help/gnome-netstatus/zh_HK/figures/gnome-netstatus-idle.png
+share/gnome/help/gnome-netstatus/zh_HK/figures/gnome-netstatus-rx.png
+share/gnome/help/gnome-netstatus/zh_HK/figures/gnome-netstatus-tx.png
+share/gnome/help/gnome-netstatus/zh_HK/figures/gnome-netstatus-txrx.png
+share/gnome/help/gnome-netstatus/zh_HK/gnome-netstatus.xml
+share/gnome/help/gnome-netstatus/zh_HK/legal.xml
+share/gnome/help/gnome-netstatus/zh_TW/figures/gnome-netstatus-disconn.png
+share/gnome/help/gnome-netstatus/zh_TW/figures/gnome-netstatus-error.png
+share/gnome/help/gnome-netstatus/zh_TW/figures/gnome-netstatus-idle.png
+share/gnome/help/gnome-netstatus/zh_TW/figures/gnome-netstatus-rx.png
+share/gnome/help/gnome-netstatus/zh_TW/figures/gnome-netstatus-tx.png
+share/gnome/help/gnome-netstatus/zh_TW/figures/gnome-netstatus-txrx.png
+share/gnome/help/gnome-netstatus/zh_TW/gnome-netstatus.xml
+share/gnome/help/gnome-netstatus/zh_TW/legal.xml
+share/icons/hicolor/48x48/apps/gnome-netstatus-disconn.png
+share/icons/hicolor/48x48/apps/gnome-netstatus-error.png
+share/icons/hicolor/48x48/apps/gnome-netstatus-idle.png
+share/icons/hicolor/48x48/apps/gnome-netstatus-rx.png
+share/icons/hicolor/48x48/apps/gnome-netstatus-tx.png
+share/icons/hicolor/48x48/apps/gnome-netstatus-txrx.png
+${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/gnome-netstatus.mo
+${PKGLOCALEDIR}/locale/az/LC_MESSAGES/gnome-netstatus.mo
+${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/gnome-netstatus.mo
+${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/gnome-netstatus.mo
+${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/gnome-netstatus.mo
+${PKGLOCALEDIR}/locale/cy/LC_MESSAGES/gnome-netstatus.mo
+${PKGLOCALEDIR}/locale/da/LC_MESSAGES/gnome-netstatus.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gnome-netstatus.mo
+${PKGLOCALEDIR}/locale/el/LC_MESSAGES/gnome-netstatus.mo
+${PKGLOCALEDIR}/locale/en_CA/LC_MESSAGES/gnome-netstatus.mo
+${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/gnome-netstatus.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/gnome-netstatus.mo
+${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/gnome-netstatus.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gnome-netstatus.mo
+${PKGLOCALEDIR}/locale/ga/LC_MESSAGES/gnome-netstatus.mo
+${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/gnome-netstatus.mo
+${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/gnome-netstatus.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/gnome-netstatus.mo
+${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/gnome-netstatus.mo
+${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/gnome-netstatus.mo
+${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/gnome-netstatus.mo
+${PKGLOCALEDIR}/locale/mn/LC_MESSAGES/gnome-netstatus.mo
+${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/gnome-netstatus.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/gnome-netstatus.mo
+${PKGLOCALEDIR}/locale/no/LC_MESSAGES/gnome-netstatus.mo
+${PKGLOCALEDIR}/locale/pa/LC_MESSAGES/gnome-netstatus.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/gnome-netstatus.mo
+${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/gnome-netstatus.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/gnome-netstatus.mo
+${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/gnome-netstatus.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/gnome-netstatus.mo
+${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/gnome-netstatus.mo
+${PKGLOCALEDIR}/locale/sq/LC_MESSAGES/gnome-netstatus.mo
+${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/gnome-netstatus.mo
+${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/gnome-netstatus.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gnome-netstatus.mo
+${PKGLOCALEDIR}/locale/th/LC_MESSAGES/gnome-netstatus.mo
+${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/gnome-netstatus.mo
+${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/gnome-netstatus.mo
+${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/gnome-netstatus.mo
+${PKGLOCALEDIR}/locale/wa/LC_MESSAGES/gnome-netstatus.mo
+${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/gnome-netstatus.mo
+share/omf/gnome-netstatus/gnome-netstatus-C.omf
+share/omf/gnome-netstatus/gnome-netstatus-de.omf
+share/omf/gnome-netstatus/gnome-netstatus-es.omf
+share/omf/gnome-netstatus/gnome-netstatus-fr.omf
+share/omf/gnome-netstatus/gnome-netstatus-it.omf
+share/omf/gnome-netstatus/gnome-netstatus-ja.omf
+share/omf/gnome-netstatus/gnome-netstatus-ko.omf
+share/omf/gnome-netstatus/gnome-netstatus-sv.omf
+share/omf/gnome-netstatus/gnome-netstatus-zh_CN.omf
+share/omf/gnome-netstatus/gnome-netstatus-zh_HK.omf
+share/omf/gnome-netstatus/gnome-netstatus-zh_TW.omf
+share/pixmaps/gnome-netstatus-tx.png
+@comment in gnome2-dirs: @dirrm share/pixmaps
+@dirrm share/omf/gnome-netstatus
+@comment in scrollkeeper: @dirrm share/omf
+@dirrm share/icons/hicolor/48x48/apps
+@dirrm share/gnome/help/gnome-netstatus/zh_TW/figures
+@dirrm share/gnome/help/gnome-netstatus/zh_TW
+@dirrm share/gnome/help/gnome-netstatus/zh_HK/figures
+@dirrm share/gnome/help/gnome-netstatus/zh_HK
+@dirrm share/gnome/help/gnome-netstatus/zh_CN/figures
+@dirrm share/gnome/help/gnome-netstatus/zh_CN
+@dirrm share/gnome/help/gnome-netstatus/sv/figures
+@dirrm share/gnome/help/gnome-netstatus/sv
+@dirrm share/gnome/help/gnome-netstatus/ko/figures
+@dirrm share/gnome/help/gnome-netstatus/ko
+@dirrm share/gnome/help/gnome-netstatus/ja/figures
+@dirrm share/gnome/help/gnome-netstatus/ja
+@dirrm share/gnome/help/gnome-netstatus/it/figures
+@dirrm share/gnome/help/gnome-netstatus/it
+@dirrm share/gnome/help/gnome-netstatus/fr/figures
+@dirrm share/gnome/help/gnome-netstatus/fr
+@dirrm share/gnome/help/gnome-netstatus/es/figures
+@dirrm share/gnome/help/gnome-netstatus/es
+@dirrm share/gnome/help/gnome-netstatus/de/figures
+@dirrm share/gnome/help/gnome-netstatus/de
+@dirrm share/gnome/help/gnome-netstatus/C/figures
+@dirrm share/gnome/help/gnome-netstatus/C
+@dirrm share/gnome/help/gnome-netstatus
+@comment in gnome2-dirs: @dirrm share/gnome/help
+@dirrm share/gnome-netstatus
+@comment in gnome2-dirs: @dirrm share/gnome-2.0/ui
+@comment in GConf2: @dirrm share/gconf/schemas
+@comment in libbonobo: @dirrm lib/bonobo/servers
