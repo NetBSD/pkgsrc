@@ -1,10 +1,10 @@
 #
-# $NetBSD: Makefile,v 1.11 2002/06/27 03:22:22 lukem Exp $
+# $NetBSD: Makefile,v 1.12 2002/07/24 11:38:47 martti Exp $
 #
 
-DISTNAME=		cvsweb-2.0.3
+DISTNAME=		cvsweb-2.0.5
 CATEGORIES=		www
-MASTER_SITES=		ftp://ftp.freebsd.org/pub/FreeBSD/ports/local-distfiles/knu/
+MASTER_SITES=		ftp://ftp.freebsd.org/pub/FreeBSD/ports/local-distfiles/scop/
 
 MAINTAINER=		lukem@netbsd.org
 HOMEPAGE=		http://www.freebsd.org/cgi/cvsweb.cgi/projects/cvsweb/
