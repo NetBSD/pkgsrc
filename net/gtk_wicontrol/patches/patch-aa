@@ -1,12 +1,13 @@
-$NetBSD: patch-aa,v 1.1 2001/03/06 04:19:59 itojun Exp $
+$NetBSD: patch-aa,v 1.2 2003/03/04 15:00:27 wiz Exp $
 
---- src/Makefile.am-	Tue Mar  6 13:12:56 2001
-+++ src/Makefile.am	Tue Mar  6 13:13:00 2001
-@@ -1,7 +1,6 @@
- ## Process this file with automake to produce Makefile.in
- 
- INCLUDES = \
--	-I$(top_srcdir)/intl \
- 	@GTK_CFLAGS@
- 
- bin_PROGRAMS = gtk_wicontrol
+--- configure.orig	Tue Mar  4 15:38:24 2003
++++ configure
+@@ -1924,7 +1924,7 @@ else
+     fi
+   done
+   IFS="$ac_save_ifs"
+-  test -z "$ac_cv_path_GTK_CONFIG" && ac_cv_path_GTK_CONFIG="gtk12-config"
++  test -z "$ac_cv_path_GTK_CONFIG" && ac_cv_path_GTK_CONFIG="gtk-config"
+   ;;
+ esac
+ fi
