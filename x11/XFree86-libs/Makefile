@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/01/24 08:47:28 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/31 15:06:24 xtraeme Exp $
 
 DISTNAME=		${DISTFILES}
 PKGNAME=		XFree86-libs-${XF_VER}
@@ -15,6 +15,7 @@ CONFLICTS+=		xextensions-[0-9]*
 CONFLICTS+=		libX11-[0-9]*
 CONFLICTS+=		libXau-[0-9]*
 
+USE_IMAKE=		yes
 DEPENDS=		imake>=4.3.0:../../x11/imake
 
 .include "../../mk/bsd.prefs.mk"
@@ -36,7 +37,7 @@ XINSTALL_DIRS=		include lib nls programs/Xserver/include \
 XINSTALL_MAN_DIRS=	${XINSTALL_DIRS}
 
 post-patch:
-	${SED} -e 's,@MAKESTRS@,${X11PREFIX}/bin/makestrs,g' \
+	@${SED} -e 's,@MAKESTRS@,${X11PREFIX}/bin/makestrs,g' \
 		${WRKSRC}/config/cf/Library.tmpl \
 		> ${WRKSRC}/config/cf/Library.tmpl.tmp && \
 		${MV} ${WRKSRC}/config/cf/Library.tmpl.tmp \
