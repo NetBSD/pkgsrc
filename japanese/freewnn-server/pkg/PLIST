@@ -1,0 +1,136 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/08/02 05:50:55 sakamoto Exp $
+@cwd ${DICT_DIR}
+@cwd ${DICT_DIR}
+wnn/ja_JP/pubdic/bio.dic
+wnn/ja_JP/pubdic/chimei.dic
+wnn/ja_JP/pubdic/computer.dic
+wnn/ja_JP/pubdic/full.fzk
+wnn/ja_JP/pubdic/jinmei.dic
+wnn/ja_JP/pubdic/kihon.dic
+wnn/ja_JP/pubdic/kougo.fzk
+wnn/ja_JP/pubdic/koyuu.dic
+wnn/ja_JP/pubdic/setsuji.dic
+wnn/ja_JP/pubdic/special.dic
+wnn/ja_JP/pubdic/std.fzk
+wnn/ja_JP/pubdic/symbol.dic
+wnn/ja_JP/pubdic/tankan.dic
+wnn/ja_JP/src/fzk.attr
+wnn/ja_JP/src/fzk.con
+wnn/ja_JP/src/fzk.fzkattr
+wnn/ja_JP/src/fzk.jirattr
+wnn/ja_JP/src/fzk.jircon
+wnn/ja_JP/src/fzk.master
+wnn/ja_JP/src/fzk.shuutan
+wnn/ja_JP/wnncons/tankan2.dic
+wnn/ja_JP/wnncons/tankan3.dic
+@cwd ${PREFIX}
+share/wnn/cvt_key_empty
+share/wnn/cvt_key_tbl
+share/wnn/cvt_key_tbl.ST
+share/wnn/cvt_key_tbl.gm
+share/wnn/cvt_key_tbl.kt
+share/wnn/cvt_key_tbl.mv
+share/wnn/cvt_key_tbl.vt
+share/wnn/ja_JP/hinsi.data
+share/wnn/ja_JP/jserverrc
+share/wnn/ja_JP/libwnn.msg
+share/wnn/ja_JP/rk.vi/1B_newTOUPPER
+share/wnn/ja_JP/rk.vi/2A_CTRL
+share/wnn/ja_JP/rk.vi/2B_KEISEN
+share/wnn/ja_JP/rk.vi/2B_ROMKANA
+share/wnn/ja_JP/rk.vi/2C_KEISEN1
+share/wnn/ja_JP/rk.vi/2C_VI
+share/wnn/ja_JP/rk.vi/2C_VIEX
+share/wnn/ja_JP/rk.vi/2C_VISH
+share/wnn/ja_JP/rk.vi/2_VITHROW
+share/wnn/ja_JP/rk.vi/3B_ZENASC
+share/wnn/ja_JP/rk.vi/mode
+share/wnn/ja_JP/rk.vi/uumkey
+share/wnn/ja_JP/rk/1B_TOUPPER
+share/wnn/ja_JP/rk/1B_ZENHIRA
+share/wnn/ja_JP/rk/1B_ZENKATA
+share/wnn/ja_JP/rk/1B_newTOUPPER
+share/wnn/ja_JP/rk/2A_CTRL
+share/wnn/ja_JP/rk/2B_DAKUTEN
+share/wnn/ja_JP/rk/2B_JIS
+share/wnn/ja_JP/rk/2B_ROMKANA
+share/wnn/ja_JP/rk/2_TCODE
+share/wnn/ja_JP/rk/3B_HANKATA
+share/wnn/ja_JP/rk/3B_KATAKANA
+share/wnn/ja_JP/rk/3B_ZENKAKU
+share/wnn/ja_JP/rk/autork
+share/wnn/ja_JP/rk/mode
+share/wnn/ja_JP/rk/mode.hankata
+share/wnn/ja_JP/rk/mode.nohankata
+share/wnn/ja_JP/uum.msg
+share/wnn/ja_JP/uumkey
+share/wnn/ja_JP/uumkey.omr
+share/wnn/ja_JP/uumkey_e
+share/wnn/ja_JP/uumrc
+share/wnn/ja_JP/uumrc.omr
+share/wnn/ja_JP/uumrc.rev
+share/wnn/ja_JP/uumrc_e
+share/wnn/ja_JP/uumrc_vi
+share/wnn/ja_JP/wnnenvrc
+share/wnn/ja_JP/wnnenvrc.omr
+share/wnn/ja_JP/wnnenvrc.rem
+share/wnn/ja_JP/wnnenvrc.rev
+share/wnn/ja_JP/wnnenvrc_R
+share/wnn/ja_JP/wnnenvrc_R.omr
+share/wnn/ja_JP/wnnenvrc_R.rem
+share/wnn/ja_JP/wnnstat.msg
+share/wnn/lt_LN/rk/2A_CTRL
+share/wnn/lt_LN/rk/2B_LATIN
+share/wnn/lt_LN/rk/mode
+share/wnn/lt_LN/uum.msg
+share/wnn/lt_LN/uumkey
+share/wnn/lt_LN/uumkey_e
+share/wnn/lt_LN/uumrc
+share/wnn/serverdefs
+man/ja_JP.EUC/man1/atod.1
+man/ja_JP.EUC/man1/atof.1
+man/ja_JP.EUC/man1/dtoa.1
+man/ja_JP.EUC/man1/jserver.1
+man/ja_JP.EUC/man1/oldatonewa.1
+man/ja_JP.EUC/man1/uum.1
+man/ja_JP.EUC/man1/wddel.1
+man/ja_JP.EUC/man1/wdreg.1
+man/ja_JP.EUC/man1/wnnkill.1
+man/ja_JP.EUC/man1/wnnstat.1
+man/ja_JP.EUC/man1/wnntouch.1
+man/ja_JP.EUC/man4/2a_ctrl.4
+man/ja_JP.EUC/man4/2b_romkana.4
+man/ja_JP.EUC/man4/cvt_key_tbl.4
+man/ja_JP.EUC/man4/fzk.data.4
+man/ja_JP.EUC/man4/fzk.u.4
+man/ja_JP.EUC/man4/hinsi_data.4
+man/ja_JP.EUC/man4/jserverrc.4
+man/ja_JP.EUC/man4/mode.4
+man/ja_JP.EUC/man4/serverdefs.4
+man/ja_JP.EUC/man4/ujis_dic.4
+man/ja_JP.EUC/man4/uumkey.4
+man/ja_JP.EUC/man4/uumrc.4
+man/ja_JP.EUC/man4/wnnenvrc.4
+man/ja_JP.EUC/man5/pubdic.5
+man/ja_JP.EUC/man5/usr_dic.5
+sbin/atod
+sbin/atof
+sbin/dtoa
+sbin/jserver
+sbin/oldatonewa
+sbin/wddel
+sbin/wdreg
+sbin/wnnkill
+sbin/wnnstat
+sbin/wnntouch
+@dirrm share/wnn/lt_LN/rk
+@dirrm share/wnn/lt_LN
+@dirrm share/wnn/ja_JP/rk.vi
+@dirrm share/wnn/ja_JP/rk
+@dirrm share/wnn/ja_JP
+@dirrm share/wnn
+@unexec rmdir ${DICT_DIR}/wnn/ja_JP/wnncons
+@unexec rmdir ${DICT_DIR}/wnn/ja_JP/src
+@unexec rmdir ${DICT_DIR}/wnn/ja_JP/pubdic
+@unexec rmdir ${DICT_DIR}/wnn/ja_JP
+@unexec rmdir ${DICT_DIR}/wnn
