@@ -1,32 +1,64 @@
-# $NetBSD: Makefile,v 1.13 1998/09/09 12:10:12 agc Exp $
-# FreeBSD Id: Makefile,v 1.17 1996/12/17 05:18:09 asami Exp
+# $NetBSD: Makefile,v 1.14 1998/10/03 07:06:23 kim Exp $
 #
 
-DISTNAME=       tcsh-6.07
-PKGNAME=        tcsh-6.07.02
+DISTNAME=	tcsh-6.08.00
+DISTFILES=	tcsh-6.08.tar.gz
 CATEGORIES=	shells
-MASTER_SITES=   ftp://ftp.astron.com/pub/tcsh/
+MASTER_SITES=	ftp://ftp.astron.com/pub/tcsh/ \
+		ftp://ftp.gw.com/pub/unix/tcsh/ \
+		ftp://ftp.funet.fi/pub/unix/shells/tcsh/
 
-MAINTAINER=     packages@netbsd.org
+MAINTAINER=	kim@tac.nyc.ny.us
 
-GNU_CONFIGURE=  yes
-WRKSRC=         ${WRKDIR}/${PKGNAME}
-ALL_TARGET=     all catalogs
-INSTALL_TARGET= install install.man
+GNU_CONFIGURE=	yes
+ALL_TARGET=	all catalogs
+INSTALL_TARGET=	install install.man
 
-post-patch:
-	( cd ${WRKSRC}/nls/greek ; for i in * ; do ${ECHO} $$i ; ${MV} $$i $$i.BAK ; ${SED} -e 's/\\"/"/g' -e "s/\\\'/'/g" <$$i.BAK >$$i ; done )
+NLSDIR=		share/nls
+PLIST_SRC=	${PKGDIR}/PLIST ${WRKSRC}/PLIST.nls
 
 post-install:
-	cd ${WRKSRC}; ${INSTALL_DATA} tcsh.C.cat ${PREFIX}/share/nls/C/tcsh.cat
-	cd ${WRKSRC}; ${INSTALL_DATA} tcsh.french.cat ${PREFIX}/share/nls/fr_FR.ISO_8859-1/tcsh.cat
-	ln -f ${PREFIX}/share/nls/fr_FR.ISO_8859-1/tcsh.cat ${PREFIX}/share/nls/fr_BE.ISO_8859-1/tcsh.cat
-	ln -f ${PREFIX}/share/nls/fr_FR.ISO_8859-1/tcsh.cat ${PREFIX}/share/nls/fr_CA.ISO_8859-1/tcsh.cat
-	ln -f ${PREFIX}/share/nls/fr_FR.ISO_8859-1/tcsh.cat ${PREFIX}/share/nls/fr_CH.ISO_8859-1/tcsh.cat
-	cd ${WRKSRC}; ${INSTALL_DATA} tcsh.german.cat ${PREFIX}/share/nls/de_DE.ISO_8859-1/tcsh.cat
-	ln -f ${PREFIX}/share/nls/de_DE.ISO_8859-1/tcsh.cat ${PREFIX}/share/nls/de_AT.ISO_8859-1/tcsh.cat
-	ln -f ${PREFIX}/share/nls/de_DE.ISO_8859-1/tcsh.cat ${PREFIX}/share/nls/de_CH.ISO_8859-1/tcsh.cat
-	cd ${WRKSRC}; ${INSTALL_DATA} tcsh.greek.cat ${PREFIX}/share/nls/el_GR.ISO_8859-7/tcsh.cat
-	${ECHO} "updating /etc/shells"; ${CP} /etc/shells /etc/shells.bak; (grep -v ${PREFIX}/bin/tcsh /etc/shells.bak; ${ECHO} ${PREFIX}/bin/tcsh) >/etc/shells
+	@${ECHO} "Installing message catalogues"
+	@${INSTALL_DATA} ${WRKSRC}/tcsh.C.cat ${PREFIX}/${NLSDIR}/C/tcsh.cat
+	@-${RM} -f ${WRKSRC}/PLIST.nls
+	@${ECHO} ${NLSDIR}/C/tcsh.cat > ${WRKSRC}/PLIST.nls
+	@for i in 						\
+	    french:ISO_8859-1:fr:BE:CA:CH:FR			\
+	    german:ISO_8859-1:de:AT:CH:DE			\
+	    greek:ISO_8859-7:el:GR				\
+	    italian:ISO_8859-1:it:CH:IT				\
+	    ja:EUC:ja:JP					\
+	    spanish:ISO_8859-1:es:ES				\
+	    ;							\
+	do							\
+	    OIFS="${IFS}";					\
+	    IFS=":${IFS}";					\
+	    set -- $$i;						\
+	    IFS="${OIFS}";					\
+	    l=$$1; shift;					\
+	    s=$$1; shift;					\
+	    c=$$1; shift;					\
+	    o=;							\
+	    for j;						\
+	    do							\
+		d=${NLSDIR}/$${c}_$${j}.$${s};			\
+		if [ -z "$$o" ];				\
+		then						\
+		    o="$$d";					\
+		    ${INSTALL_DATA} ${WRKSRC}/tcsh.$${l}.cat	\
+			${PREFIX}/$${d}/tcsh.cat;		\
+		else						\
+		    ${LN} -f ${PREFIX}/$${o}/tcsh.cat		\
+			${PREFIX}/$${d};			\
+		fi;						\
+		${ECHO} $${d}/tcsh.cat >> ${WRKSRC}/PLIST.nls;	\
+	    done;						\
+	done
+	@${ECHO} "updating /etc/shells";			\
+	${CP} /etc/shells /etc/shells.bak;			\
+	(							\
+		${GREP} -v ${PREFIX}/bin/tcsh /etc/shells.bak;	\
+		${ECHO} ${PREFIX}/bin/tcsh			\
+	) >/etc/shells
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,14 +1,5 @@
-@comment $NetBSD: PLIST,v 1.4 1998/03/05 14:28:32 tv Exp $
+@comment $NetBSD: PLIST,v 1.5 1998/10/03 07:06:25 kim Exp $
 bin/tcsh
 @exec echo "updating /etc/shells"; cp /etc/shells /etc/shells.bak; (grep -v %D/%F /etc/shells.bak; echo %D/%F) >/etc/shells
 @unexec echo "updating /etc/shells"; cp /etc/shells /etc/shells.bak; (grep -v %D/%F /etc/shells.bak) >/etc/shells
-man/man1/tcsh.1.gz
-share/nls/C/tcsh.cat
-share/nls/fr_BE.ISO_8859-1/tcsh.cat
-share/nls/fr_CA.ISO_8859-1/tcsh.cat
-share/nls/fr_CH.ISO_8859-1/tcsh.cat
-share/nls/fr_FR.ISO_8859-1/tcsh.cat
-share/nls/de_AT.ISO_8859-1/tcsh.cat
-share/nls/de_CH.ISO_8859-1/tcsh.cat
-share/nls/de_DE.ISO_8859-1/tcsh.cat
-share/nls/el_GR.ISO_8859-7/tcsh.cat
+man/man1/tcsh.1
