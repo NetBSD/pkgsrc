@@ -1,11 +1,11 @@
-$NetBSD: patch-ae,v 1.3 2003/12/31 14:11:42 salo Exp $
+$NetBSD: patch-ae,v 1.4 2004/09/21 15:50:26 adrianp Exp $
 
---- etc/snort.conf.orig	2003-12-18 18:14:35.000000000 +0100
-+++ etc/snort.conf	2003-12-30 02:25:47.000000000 +0100
-@@ -104,7 +104,7 @@
- var AIM_SERVERS [64.12.24.0/24,64.12.25.0/24,64.12.26.14/24,64.12.28.0/24,64.12.29.0/24,64.12.161.0/24,64.12.163.0/24,205.188.5.0/24,205.188.9.0/24]
- 
+--- etc/snort.conf.orig	Mon Sep  6 13:21:50 2004
++++ etc/snort.conf	Mon Sep  6 13:24:34 2004
+@@ -106,7 +106,7 @@
  # Path to your rules files (this can be a relative path)
+ # Note for Windows users:  You are advised to make this an absolute path,
+ # such as:  c:\snort\rules
 -var RULE_PATH ../rules
 +var RULE_PATH @PREFIX@/share/snort/rules
  
