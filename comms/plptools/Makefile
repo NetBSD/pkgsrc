@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2000/06/01 11:23:17 rh Exp $
+# $NetBSD: Makefile,v 1.7 2000/06/12 13:36:08 skrll Exp $
 #
 
-DISTNAME=	plptools-0.4
+DISTNAME=	plptools-0.6
+PKGNAME=	${DISTNAME}nb1
 CATEGORIES=	comms
 MASTER_SITES=	ftp://ftp.to.com/pub/psion/
 
@@ -9,10 +10,11 @@ MAINTAINER=	sakamoto@netbsd.org
 
 DEPENDS=	readline-4.0:../../devel/readline
 
-BROKEN=		plptools does not work correctly
+WRKSRC=		${WRKDIR}/${DISTNAME}
 
-USE_PKGLIBTOOL=	YES
-GNU_CONFIGURE=	YES
-CONFIGURE_ENV+=	CPPFLAGS="-I${PREFIX}/include/" LIBS="-ltermlib"
+USE_LIBTOOL=		YES
+LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
+GNU_CONFIGURE=		YES
+CONFIGURE_ENV+=		CPPFLAGS="-I${PREFIX}/include/" LIBS="-ltermlib"
 
 .include "../../mk/bsd.pkg.mk"
