@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5893 2004/05/10 09:18:48 adam Exp $
+$NetBSD: CHANGES,v 1.5894 2004/05/10 09:32:14 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2447,3 +2447,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added p5-NetPacket-0.04 [minskim 2004-05-10]
 	Updated pkglint to 3.75 [salo 2004-05-10]
 	Updated gentoo to 0.11.51 [adam 2004-05-10]
+	Added scdp-1.0.2 [xtraeme 2004-05-10]
