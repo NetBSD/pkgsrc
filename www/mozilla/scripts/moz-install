@@ -1,0 +1,35 @@
+#!/bin/sh
+
+${SED} -e "s,@PREFIX@,${PREFIX},g" ${FILESDIR}/mozilla-${OBJECT_FMT}.in > ${PREFIX}/bin/mozilla
+${CHOWN} ${BINOWN} ${PREFIX}/bin/mozilla
+${CHGRP} ${BINGRP} ${PREFIX}/bin/mozilla
+${CHMOD} ${BINMODE} ${PREFIX}/bin/mozilla
+
+# make directories 
+for i in `${EGREP} ^@dirrm ${PLIST_SRC} | ${SED} -e 's/^@dirrm//'` ; do
+	${BSD_INSTALL_DATA_DIR} ${PREFIX}/$i
+done
+
+# install programs
+for i in `${SED} -n -e '/^@comment begin PROGRAMS$/,/^@comment end PROGRAMS$/p' ${PLIST_SRC} | ${EGREP} -v ^@comment` ; do
+	src=`echo $i | sed -e 's@lib/mozilla@dist/bin@'`;
+	${BSD_INSTALL_PROGRAM} ${WRKSRC}/${src} ${PREFIX}/$i
+done
+
+# install scripts
+for i in `${SED} -n -e '/^@comment begin SCRIPTS$/,/^@comment end SCRIPTS$/p' ${PLIST_SRC} | ${EGREP} -v ^@comment` ; do
+	src=`echo $i | sed -e 's@lib/mozilla@dist/bin@'`;
+	${BSD_INSTALL_SCRIPT} ${WRKSRC}/${src} ${PREFIX}/$i
+done
+
+# install DSO
+for i in `${SED} -n -e '/^@comment begin DSO$/,/^@comment end DSO$/p' ${PLIST_SRC} | ${EGREP} -v ^@comment` ; do
+	src=`echo $i | sed -e 's@lib/mozilla@dist/bin@'`;
+	${BSD_INSTALL_PROGRAM} ${WRKSRC}/${src} ${PREFIX}/$i
+done
+
+# install DATA  
+for i in `${SED} -n -e '/^@comment begin DATA$/,/^@comment end DATA$/p' ${PLIST_SRC} | ${EGREP} -v ^@comment` ; do
+	src=`echo $i | sed -e 's@lib/mozilla@dist/bin@'`;
+	${BSD_INSTALL_DATA} ${WRKSRC}/${src} ${PREFIX}/$i
+done
