@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2004/05/06 10:25:42 drochner Exp $
+$NetBSD: distinfo,v 1.3 2004/06/21 15:17:20 drochner Exp $
 
-SHA1 (gramps-1.0.3.tar.gz) = 2c63e2ca736986d6812098ce279c6f853a395c9b
-Size (gramps-1.0.3.tar.gz) = 6369153 bytes
+SHA1 (gramps-1.0.4.tar.gz) = d12c22b20059d04b9b20d736386854f0b7e3353d
+Size (gramps-1.0.4.tar.gz) = 6502811 bytes
