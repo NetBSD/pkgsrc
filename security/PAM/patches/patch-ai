@@ -1,0 +1,15 @@
+$NetBSD: patch-ai,v 1.1.1.1 2000/10/21 18:41:54 rh Exp $
+
+--- modules/pam_env/pam_env.c.orig	Sat Oct 21 11:37:33 2000
++++ modules/pam_env/pam_env.c
+@@ -18,7 +18,10 @@
+ #define _GNU_SOURCE
+ #define _BSD_SOURCE
+ 
++#include <sys/param.h>
++#if (!defined(BSD) || BSD < 199306)
+ #include <features.h>
++#endif
+ #include <ctype.h>
+ #include <errno.h>
+ #include <pwd.h>

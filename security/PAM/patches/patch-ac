@@ -1,0 +1,22 @@
+$NetBSD: patch-ac,v 1.1.1.1 2000/10/21 18:41:54 rh Exp $
+
+--- modules/pam_access/Makefile.orig	Sat Oct 21 15:23:02 2000
++++ modules/pam_access/Makefile
+@@ -6,7 +6,7 @@
+ #
+ 
+ TITLE=pam_access
+-CONFD=$(CONFIGED)/security
++CONFD=$(CONFIGED)/pam
+ export CONFD
+ CONFILE=$(CONFD)/access.conf
+ export CONFILE
+@@ -17,7 +17,7 @@
+ export DYNAMIC=-DPAM_DYNAMIC
+ export CC=gcc
+ export CFLAGS=-O2 -Dlinux -DLINUX_PAM \
+-       -ansi -D_POSIX_SOURCE -Wall -Wwrite-strings \
++       -ansi -Wall -Wwrite-strings \
+        -Wpointer-arith -Wcast-qual -Wcast-align -Wtraditional \
+        -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline \
+        -Wshadow -pedantic -fPIC
