@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.22 2004/07/06 11:32:49 abs Exp $
+# $NetBSD: Makefile.common,v 1.23 2004/10/14 14:32:32 jschauma Exp $
 
 CATEGORIES=	lang java
 EXTRACT_SUFX=	.bin
@@ -50,9 +50,15 @@ _FETCH_MESSAGE= 							\
 	${ECHO} ; \
 	${ECHO} " Click 'Download J2SE ${SHORT}', read and accept the"; \
 	${ECHO} " license, then choose 'Linux self-extracting file'."; 	\
-	${ECHO} ; 							\
+	${ECHO} -e ${END_MESSAGE};					\
 	${ECHO} "======================================================================"
 
+.if !empty(SUN_JRE14_USE_JCE:M[Yy][Ee][Ss])
+END_MESSAGE="\n The file jce_policy-1_4_2.zip must be fetched into:\n"	\
+		"    ${DISTDIR}/jce_policy-1_4_2.zip\n\n"		\
+		"Under 'Other Downloads' / 'Java Cryptography Extension'\n" \
+		"click 'Download' and choose the .zip file.\n"
+.endif
 
 post-fetch:
 	@if [ ! -x ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX} ]; then	\
