@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2004/05/12 15:19:49 recht Exp $
+# $NetBSD: Makefile.common,v 1.10 2004/05/12 16:25:34 recht Exp $
 #
 
 DISTNAME=	Python-2.3.3
@@ -9,8 +9,6 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	recht@NetBSD.org
 HOMEPAGE=	http://www.python.org/
 COMMENT=	Interpreted, interactive, object-oriented programming language
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=		c c++
 USE_GCC_SHLIB=		yes
