@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.4 2001/07/07 23:05:21 tron Exp $
+$NetBSD: patch-ab,v 1.5 2001/07/14 18:22:35 jlam Exp $
 
---- configure.in.orig	Sun Apr 29 23:21:39 2001
-+++ configure.in	Sun Jul  8 00:06:42 2001
+--- configure.in.orig	Sun Apr 29 17:21:39 2001
++++ configure.in
 @@ -223,29 +223,11 @@
  supported_locales="cs de es et fr gl it ja ko nl no pt ru sv tr fi hr el pl ro da zh_TW.Big5 zh_CN sk bg hu"
  supported_wprefs_locales="pt hr fr ko ja cs zh_TW.Big5 es zh_CN fi it ru de bg hu sk"
@@ -37,12 +37,14 @@ $NetBSD: patch-ab,v 1.4 2001/07/07 23:05:21 tron Exp $
  done
  
  
-@@ -864,7 +846,7 @@
- exec_prefix=\$prefix
+@@ -720,8 +702,8 @@
+     fi
+ fi
  
- WCFLAGS="-I\$prefix/include $inc_search_path"
--WLFLAGS="-L\$exec_prefix/lib $lib_search_path"
-+WLFLAGS="-L\$exec_prefix/lib -L$LOCALBASE/lib $lib_search_path"
- WLIBS="-lwraster $GFXLIBS $XLIBS -lm"
+-LIBRARY_SEARCH_PATH="$lib_search_path"
+-HEADER_SEARCH_PATH="$inc_search_path"
++LIBRARY_SEARCH_PATH="-L${BUILDLINK_DIR}/lib -L${X11BASE}/lib"
++HEADER_SEARCH_PATH="-I${BUILDLINK_DIR}/include -I${X11BASE}/include"
  
- usage="Usage: get-wraster-flags #lp#--cflags#rp# #lp#--ldflags#rp# #lp#--libs#rp#"
+ AC_SUBST(LIBRARY_SEARCH_PATH)
+ AC_SUBST(HEADER_SEARCH_PATH)
