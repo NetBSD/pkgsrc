@@ -1,0 +1,17 @@
+****************************************************************
+ TDS - Tomsoft Diary System
+****************************************************************
+
+* What's TDS(Tomsoft Diary System) ?
+
+TDS supports creating web diary which payed attention as EDI.
+By using this system, user can concentrate only to write diary content,
+without confused for dull process such as adding HTML tag, creating HTML files.
+For this system includes some convinience command for writing diary,
+user can write diary without knowledge of HTML in detail, adding,
+output HTML is assuranced as HTML 4.0 transitional.
+
+Many function is offered, such as PIM(scheduler, todo list),
+categorize, searching, log analyses.
+
+*** for more info, read the README file comes with the distribution.

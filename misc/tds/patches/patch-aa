@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/01/25 02:43:42 kei Exp $
+
+--- samples/tdf/01.tdf.orig	Tue Jan 23 20:21:49 2001
++++ samples/tdf/01.tdf	Tue Jan 23 20:23:02 2001
+@@ -121,7 +121,7 @@
+ /DL
+ 
+ SUB ²èÁü
+-IMG images/bar/bar100.jpg left 200 10 bar
++IMG image/bar100.jpg left 200 10 bar
+ 
+ SUB Áõ¾þ
+ DL

@@ -1,0 +1,547 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/01/25 02:43:42 kei Exp $
+bin/tds-setup
+share/doc/tds/FAQ.html
+share/doc/tds/FAQ.tdf
+share/doc/tds/Makefile
+share/doc/tds/abstract.html
+share/doc/tds/abstract.tdf
+share/doc/tds/advanced_setting.html
+share/doc/tds/advanced_setting.tdf
+share/doc/tds/advanced_setting.tex
+share/doc/tds/announce.html
+share/doc/tds/announce.tdf
+share/doc/tds/anti-DoS.html
+share/doc/tds/anti-DoS.tdf
+share/doc/tds/appendix.html
+share/doc/tds/appendix.tdf
+share/doc/tds/attention.html
+share/doc/tds/attention.tdf
+share/doc/tds/author_management.html
+share/doc/tds/author_management.tdf
+share/doc/tds/background.jpg
+share/doc/tds/case_study.html
+share/doc/tds/case_study.tdf
+share/doc/tds/config_file.html
+share/doc/tds/config_file.tdf
+share/doc/tds/contrib.html
+share/doc/tds/contrib.tdf
+share/doc/tds/customize.html
+share/doc/tds/customize.ph
+share/doc/tds/customize.tdf
+share/doc/tds/daily.html
+share/doc/tds/daily.tdf
+share/doc/tds/dat/dictionary.dat
+share/doc/tds/dat/dictionary_skelton.html
+share/doc/tds/dat/url.dat
+share/doc/tds/developers.html
+share/doc/tds/developers.tdf
+share/doc/tds/dictionary.html
+share/doc/tds/files.html
+share/doc/tds/files.tdf
+share/doc/tds/files.tex
+share/doc/tds/function.html
+share/doc/tds/function.tdf
+share/doc/tds/index.html
+share/doc/tds/index.tdf
+share/doc/tds/index.tex
+share/doc/tds/install.html
+share/doc/tds/install.tdf
+share/doc/tds/site_info.html
+share/doc/tds/skelton.html
+share/doc/tds/skelton.tex
+share/doc/tds/static.pl
+share/doc/tds/tdf.html
+share/doc/tds/tdf.tdf
+share/doc/tds/tdf2html.pl
+share/doc/tds/tds_doc_style.css
+share/doc/tds/technical.html
+share/doc/tds/technical.tdf
+share/doc/tds/template-latex.ph
+share/doc/tds/tips.html
+share/doc/tds/tips.tdf
+share/doc/tds/tips.tex
+share/doc/tds/user_agent.html
+share/doc/tds/user_agent.tdf
+share/doc/tds/user_agent.tex
+share/tds/ChangeLog.ja
+share/tds/ChangeLog.ja-old
+share/tds/GPL-j.txt
+share/tds/GPL.txt
+share/tds/LICENSE
+share/tds/MANIFEST
+share/tds/Makefile
+share/tds/Makefile.in
+share/tds/README
+share/tds/README.ja
+share/tds/TODO
+share/tds/autosplit.pl
+share/tds/config.cache
+share/tds/config.log
+share/tds/config.status
+share/tds/configure
+share/tds/contrib/anal_tdf.pl
+share/tds/contrib/dictionary_converter.pl
+share/tds/contrib/hnf2tdf.pl
+share/tds/contrib/mail2tdf/Makefile.in
+share/tds/contrib/mail2tdf/configure
+share/tds/contrib/mail2tdf/configure.in
+share/tds/contrib/mail2tdf/dot.forward.in
+share/tds/contrib/mail2tdf/dot.qmail.in
+share/tds/contrib/mail2tdf/mail2tdf.pl.in
+share/tds/contrib/tdf-mode.el
+share/tds/contrib/tdf2html/Makefile.in
+share/tds/contrib/tdf2html/Makefile.sample
+share/tds/contrib/tdf2html/configure
+share/tds/contrib/tdf2html/configure.in
+share/tds/contrib/tdf2html/index.tdf
+share/tds/contrib/tdf2html/skelton.html
+share/tds/contrib/tdf2html/tdf2html.pl.in
+share/tds/contrib/tdf2html/template-latex.ph
+share/tds/contrib/tdf2html/template.ph
+share/tds/contrib/tdf_join.pl
+share/tds/contrib/todaytdf/Makefile.in
+share/tds/contrib/todaytdf/configure
+share/tds/contrib/todaytdf/todaytdf.bat
+share/tds/contrib/todaytdf/todaytdf.pl.in
+share/tds/diary_dir/2000/01/01.tdf
+share/tds/diary_dir/conf/author_id.txt
+share/tds/diary_dir/conf/user_agent.conf
+share/tds/diary_dir/custom/customize.ph
+share/tds/diary_dir/custom/dictionary_skelton.html
+share/tds/diary_dir/custom/skelton.html
+share/tds/diary_dir/custom/summary_skelton.html
+share/tds/diary_dir/custom/template.ph
+share/tds/diary_dir/custom/url_skelton.html
+share/tds/diary_dir/dat/captured_antenna.dat
+share/tds/diary_dir/dat/category.dat
+share/tds/diary_dir/dat/dictionary.dat
+share/tds/diary_dir/dat/information.dat
+share/tds/diary_dir/dat/schedule.dat
+share/tds/diary_dir/dat/term.dat
+share/tds/diary_dir/dat/todo.dat
+share/tds/diary_dir/dat/url.dat
+share/tds/doc/FAQ.html
+share/tds/doc/FAQ.tdf
+share/tds/doc/Makefile
+share/tds/doc/abstract.html
+share/tds/doc/abstract.tdf
+share/tds/doc/advanced_setting.html
+share/tds/doc/advanced_setting.tdf
+share/tds/doc/advanced_setting.tex
+share/tds/doc/announce.html
+share/tds/doc/announce.tdf
+share/tds/doc/anti-DoS.html
+share/tds/doc/anti-DoS.tdf
+share/tds/doc/appendix.html
+share/tds/doc/appendix.tdf
+share/tds/doc/attention.html
+share/tds/doc/attention.tdf
+share/tds/doc/author_management.html
+share/tds/doc/author_management.tdf
+share/tds/doc/background.jpg
+share/tds/doc/case_study.html
+share/tds/doc/case_study.tdf
+share/tds/doc/config_file.html
+share/tds/doc/config_file.tdf
+share/tds/doc/contrib.html
+share/tds/doc/contrib.tdf
+share/tds/doc/customize.html
+share/tds/doc/customize.ph
+share/tds/doc/customize.tdf
+share/tds/doc/daily.html
+share/tds/doc/daily.tdf
+share/tds/doc/dat/dictionary.dat
+share/tds/doc/dat/dictionary_skelton.html
+share/tds/doc/dat/url.dat
+share/tds/doc/developers.html
+share/tds/doc/developers.tdf
+share/tds/doc/dictionary.html
+share/tds/doc/files.html
+share/tds/doc/files.tdf
+share/tds/doc/files.tex
+share/tds/doc/function.html
+share/tds/doc/function.tdf
+share/tds/doc/index.html
+share/tds/doc/index.tdf
+share/tds/doc/index.tex
+share/tds/doc/install.html
+share/tds/doc/install.tdf
+share/tds/doc/site_info.html
+share/tds/doc/skelton.html
+share/tds/doc/skelton.tex
+share/tds/doc/static.pl
+share/tds/doc/tdf.html
+share/tds/doc/tdf.tdf
+share/tds/doc/tdf2html.pl
+share/tds/doc/tds_doc_style.css
+share/tds/doc/technical.html
+share/tds/doc/technical.tdf
+share/tds/doc/template-latex.ph
+share/tds/doc/tips.html
+share/tds/doc/tips.tdf
+share/tds/doc/tips.tex
+share/tds/doc/user_agent.html
+share/tds/doc/user_agent.tdf
+share/tds/doc/user_agent.tex
+share/tds/enquate.txt
+share/tds/install.pl
+share/tds/samples/dot.emacs
+share/tds/samples/dot.ftp_login
+share/tds/samples/dot.htaccess_modperl
+share/tds/samples/dot.netrc
+share/tds/samples/mail
+share/tds/samples/mail_data
+share/tds/samples/tdf/01.tdf
+share/tds/samples/tdssetup/dot.tdssetup_prohosting
+share/tds/site_conf.ph
+share/tds/site_conf.ph.in
+share/tds/web_diary_dir/Makefile
+share/tds/web_diary_dir/TsDiary.cgi
+share/tds/web_diary_dir/admin/add_author_id.cgi
+share/tds/web_diary_dir/admin/clear_log.cgi
+share/tds/web_diary_dir/admin/comment.cgi
+share/tds/web_diary_dir/admin/customizer.cgi
+share/tds/web_diary_dir/admin/editor.cgi
+share/tds/web_diary_dir/admin/editor_skelton.html
+share/tds/web_diary_dir/admin/expire_cache.cgi
+share/tds/web_diary_dir/admin/index.html
+share/tds/web_diary_dir/admin/log.cgi
+share/tds/web_diary_dir/admin/log_skelton.html
+share/tds/web_diary_dir/admin/refresh_counter.cgi
+share/tds/web_diary_dir/admin/skelton_editor.cgi
+share/tds/web_diary_dir/admin/tdf_editor.cgi
+share/tds/web_diary_dir/admin/update_log.cgi
+share/tds/web_diary_dir/admin/update_log_skelton.html
+share/tds/web_diary_dir/comment.cgi
+share/tds/web_diary_dir/comment_name.cgi
+share/tds/web_diary_dir/comment_show.cgi
+share/tds/web_diary_dir/conf.ph
+share/tds/web_diary_dir/counter.cgi
+share/tds/web_diary_dir/customize.pl
+share/tds/web_diary_dir/dictionary.cgi
+share/tds/web_diary_dir/image/bar1.jpg
+share/tds/web_diary_dir/image/bar10.jpg
+share/tds/web_diary_dir/image/bar100.jpg
+share/tds/web_diary_dir/image/tds-banner.jpg
+share/tds/web_diary_dir/lib/CGI/CookieTool.pm
+share/tds/web_diary_dir/lib/CGI/QueryString.pm
+share/tds/web_diary_dir/lib/CGI/Tools.pm
+share/tds/web_diary_dir/lib/ClassObject.pm
+share/tds/web_diary_dir/lib/Container.pm
+share/tds/web_diary_dir/lib/Container/Item.pm
+share/tds/web_diary_dir/lib/Crypt.pm
+share/tds/web_diary_dir/lib/Customizer.pm
+share/tds/web_diary_dir/lib/Customizer/Base.pm
+share/tds/web_diary_dir/lib/Customizer/CGI.pm
+share/tds/web_diary_dir/lib/Customizer/CommandLine.pm
+share/tds/web_diary_dir/lib/Customizer/Item.pm
+share/tds/web_diary_dir/lib/Customizer/ItemCGI.pm
+share/tds/web_diary_dir/lib/Customizer/Selector.pm
+share/tds/web_diary_dir/lib/DateTime/Date.pm
+share/tds/web_diary_dir/lib/DateTime/Format.pm
+share/tds/web_diary_dir/lib/DateTime/Format/Generic.pm
+share/tds/web_diary_dir/lib/DateTime/Time.pm
+share/tds/web_diary_dir/lib/DateTime/Zone.pm
+share/tds/web_diary_dir/lib/Di.pm
+share/tds/web_diary_dir/lib/FileSpec.pm
+share/tds/web_diary_dir/lib/FileSpec/Mac.pm
+share/tds/web_diary_dir/lib/FileSpec/Unix.pm
+share/tds/web_diary_dir/lib/FileSpec/Win32.pm
+share/tds/web_diary_dir/lib/GlobalInitializer.pm
+share/tds/web_diary_dir/lib/Image/Size.pm
+share/tds/web_diary_dir/lib/Input.pm
+share/tds/web_diary_dir/lib/Installer.pm
+share/tds/web_diary_dir/lib/Installer/Item.pm
+share/tds/web_diary_dir/lib/JConv.pm
+share/tds/web_diary_dir/lib/LastModified.pm
+share/tds/web_diary_dir/lib/Lirs.pm
+share/tds/web_diary_dir/lib/ObjectTemplate.pm
+share/tds/web_diary_dir/lib/Password.pm
+share/tds/web_diary_dir/lib/SearchEngine.pm
+share/tds/web_diary_dir/lib/SigSearch.pm
+share/tds/web_diary_dir/lib/SimpleDB/Append.pm
+share/tds/web_diary_dir/lib/SimpleDB/Base.pm
+share/tds/web_diary_dir/lib/SimpleDB/Hash.pm
+share/tds/web_diary_dir/lib/SimpleDB/Scalar.pm
+share/tds/web_diary_dir/lib/Skelton.pm
+share/tds/web_diary_dir/lib/StaticVariable.pm
+share/tds/web_diary_dir/lib/TCPIP.pm
+share/tds/web_diary_dir/lib/TDS.pm
+share/tds/web_diary_dir/lib/TDS/AccessLog.pm
+share/tds/web_diary_dir/lib/TDS/AccessLog/Analysis.pm
+share/tds/web_diary_dir/lib/TDS/AccessLog/AnalysisUpdate.pm
+share/tds/web_diary_dir/lib/TDS/AccessLog/Counter.pm
+share/tds/web_diary_dir/lib/TDS/AccessLog/DirInfo.pm
+share/tds/web_diary_dir/lib/TDS/AccessLog/Item.pm
+share/tds/web_diary_dir/lib/TDS/AccessLog/Logging.pm
+share/tds/web_diary_dir/lib/TDS/Admin/AuthorID.pm
+share/tds/web_diary_dir/lib/TDS/Admin/Authorize.pm
+share/tds/web_diary_dir/lib/TDS/Admin/Comment.pm
+share/tds/web_diary_dir/lib/TDS/Admin/DirInfo.pm
+share/tds/web_diary_dir/lib/TDS/Admin/Editor.pm
+share/tds/web_diary_dir/lib/TDS/Admin/FTP.pm
+share/tds/web_diary_dir/lib/TDS/Admin/Skelton.pm
+share/tds/web_diary_dir/lib/TDS/Admin/SkeltonEditor.pm
+share/tds/web_diary_dir/lib/TDS/Admin/TdfEditor.pm
+share/tds/web_diary_dir/lib/TDS/Admin/WriteServer.pm
+share/tds/web_diary_dir/lib/TDS/Admin/WriteServer/Direct.pm
+share/tds/web_diary_dir/lib/TDS/Admin/WriteServer/FTP.pm
+share/tds/web_diary_dir/lib/TDS/Admin/WriteServer/Selector.pm
+share/tds/web_diary_dir/lib/TDS/Cache.pm
+share/tds/web_diary_dir/lib/TDS/Cache/Base.pm
+share/tds/web_diary_dir/lib/TDS/Cache/Daily.pm
+share/tds/web_diary_dir/lib/TDS/Cache/Diary.pm
+share/tds/web_diary_dir/lib/TDS/Cache/DirInfo.pm
+share/tds/web_diary_dir/lib/TDS/Cache/Display.pm
+share/tds/web_diary_dir/lib/TDS/Cache/Expire.pm
+share/tds/web_diary_dir/lib/TDS/Cache/Month.pm
+share/tds/web_diary_dir/lib/TDS/Cache/Part.pm
+share/tds/web_diary_dir/lib/TDS/Cache/Recent.pm
+share/tds/web_diary_dir/lib/TDS/Calendar.pm
+share/tds/web_diary_dir/lib/TDS/CapturedAntenna.pm
+share/tds/web_diary_dir/lib/TDS/Category.pm
+share/tds/web_diary_dir/lib/TDS/Collection.pm
+share/tds/web_diary_dir/lib/TDS/Comment.pm
+share/tds/web_diary_dir/lib/TDS/Cookie.pm
+share/tds/web_diary_dir/lib/TDS/Customizer.pm
+share/tds/web_diary_dir/lib/TDS/Customizer/CGI.pm
+share/tds/web_diary_dir/lib/TDS/Customizer/Selector.pm
+share/tds/web_diary_dir/lib/TDS/Di.pm
+share/tds/web_diary_dir/lib/TDS/DirInfo.pm
+share/tds/web_diary_dir/lib/TDS/Dynamic.pm
+share/tds/web_diary_dir/lib/TDS/Explain.pm
+share/tds/web_diary_dir/lib/TDS/ID.pm
+share/tds/web_diary_dir/lib/TDS/ID_Map.pm
+share/tds/web_diary_dir/lib/TDS/IdentInfo.pm
+share/tds/web_diary_dir/lib/TDS/Information.pm
+share/tds/web_diary_dir/lib/TDS/Installer.pm
+share/tds/web_diary_dir/lib/TDS/JConv.pm
+share/tds/web_diary_dir/lib/TDS/Keyword.pm
+share/tds/web_diary_dir/lib/TDS/LastModified.pm
+share/tds/web_diary_dir/lib/TDS/List/Base.pm
+share/tds/web_diary_dir/lib/TDS/List/Dictionary.pm
+share/tds/web_diary_dir/lib/TDS/List/Url.pm
+share/tds/web_diary_dir/lib/TDS/Mail2Tdf.pm
+share/tds/web_diary_dir/lib/TDS/Mode.pm
+share/tds/web_diary_dir/lib/TDS/Navigator/Base.pm
+share/tds/web_diary_dir/lib/TDS/Navigator/Daily.pm
+share/tds/web_diary_dir/lib/TDS/Navigator/FewDays.pm
+share/tds/web_diary_dir/lib/TDS/Navigator/Monthly.pm
+share/tds/web_diary_dir/lib/TDS/Navigator/Partly.pm
+share/tds/web_diary_dir/lib/TDS/Navigator/Topic.pm
+share/tds/web_diary_dir/lib/TDS/PIM/Base.pm
+share/tds/web_diary_dir/lib/TDS/PIM/Schedule.pm
+share/tds/web_diary_dir/lib/TDS/PIM/Todo.pm
+share/tds/web_diary_dir/lib/TDS/Power.pm
+share/tds/web_diary_dir/lib/TDS/Push2Antenna.pm
+share/tds/web_diary_dir/lib/TDS/Renderer.pm
+share/tds/web_diary_dir/lib/TDS/Replacer.pm
+share/tds/web_diary_dir/lib/TDS/Replacer/Base.pm
+share/tds/web_diary_dir/lib/TDS/Replacer/Dictionary.pm
+share/tds/web_diary_dir/lib/TDS/Replacer/Term.pm
+share/tds/web_diary_dir/lib/TDS/Replacer/Url.pm
+share/tds/web_diary_dir/lib/TDS/RequestMode.pm
+share/tds/web_diary_dir/lib/TDS/Search.pm
+share/tds/web_diary_dir/lib/TDS/Skelton.pm
+share/tds/web_diary_dir/lib/TDS/Static.pm
+share/tds/web_diary_dir/lib/TDS/Status.pm
+share/tds/web_diary_dir/lib/TDS/Style.pm
+share/tds/web_diary_dir/lib/TDS/Summary.pm
+share/tds/web_diary_dir/lib/TDS/System.pm
+share/tds/web_diary_dir/lib/TDS/Tdf/Command.pm
+share/tds/web_diary_dir/lib/TDS/Tdf/Command/Classes.pm
+share/tds/web_diary_dir/lib/TDS/Tdf/Command/DIARY.pm
+share/tds/web_diary_dir/lib/TDS/Tdf/Command/WARNING.pm
+share/tds/web_diary_dir/lib/TDS/Tdf/Parser.pm
+share/tds/web_diary_dir/lib/TableOfContents.pm
+share/tds/web_diary_dir/lib/Template.pm
+share/tds/web_diary_dir/lib/Url.pm
+share/tds/web_diary_dir/lib/UserAgent.pm
+share/tds/web_diary_dir/lib/auto/DateTime/Date/Compare.al
+share/tds/web_diary_dir/lib/auto/DateTime/Date/DaysMonth.al
+share/tds/web_diary_dir/lib/auto/DateTime/Date/Decrement.al
+share/tds/web_diary_dir/lib/auto/DateTime/Date/Dump.al
+share/tds/web_diary_dir/lib/auto/DateTime/Date/Dup.al
+share/tds/web_diary_dir/lib/auto/DateTime/Date/GetMonthNumber.al
+share/tds/web_diary_dir/lib/auto/DateTime/Date/GetParams.al
+share/tds/web_diary_dir/lib/auto/DateTime/Date/GetTime.al
+share/tds/web_diary_dir/lib/auto/DateTime/Date/GetWeekString.al
+share/tds/web_diary_dir/lib/auto/DateTime/Date/Increment.al
+share/tds/web_diary_dir/lib/auto/DateTime/Date/IsHolyday.al
+share/tds/web_diary_dir/lib/auto/DateTime/Date/IsValid.al
+share/tds/web_diary_dir/lib/auto/DateTime/Date/Set.al
+share/tds/web_diary_dir/lib/auto/DateTime/Date/SetTime.al
+share/tds/web_diary_dir/lib/auto/DateTime/Date/Subtract.al
+share/tds/web_diary_dir/lib/auto/DateTime/Date/WeekNumber.al
+share/tds/web_diary_dir/lib/auto/DateTime/Date/autosplit.ix
+share/tds/web_diary_dir/lib/auto/DateTime/Date/initialize.al
+share/tds/web_diary_dir/lib/auto/DateTime/Date/month_string.al
+share/tds/web_diary_dir/lib/auto/DateTime/Date/part.al
+share/tds/web_diary_dir/lib/auto/DateTime/Date/part_span.al
+share/tds/web_diary_dir/lib/auto/DateTime/Date/week.al
+share/tds/web_diary_dir/lib/auto/DateTime/Date/week_string.al
+share/tds/web_diary_dir/lib/auto/DateTime/Time/Compare.al
+share/tds/web_diary_dir/lib/auto/DateTime/Time/Decrement.al
+share/tds/web_diary_dir/lib/auto/DateTime/Time/Dump.al
+share/tds/web_diary_dir/lib/auto/DateTime/Time/Dup.al
+share/tds/web_diary_dir/lib/auto/DateTime/Time/GetParams.al
+share/tds/web_diary_dir/lib/auto/DateTime/Time/GetTime.al
+share/tds/web_diary_dir/lib/auto/DateTime/Time/Increment.al
+share/tds/web_diary_dir/lib/auto/DateTime/Time/IsValid.al
+share/tds/web_diary_dir/lib/auto/DateTime/Time/Set.al
+share/tds/web_diary_dir/lib/auto/DateTime/Time/SetTime.al
+share/tds/web_diary_dir/lib/auto/DateTime/Time/autosplit.ix
+share/tds/web_diary_dir/lib/auto/DateTime/Time/initialize.al
+share/tds/web_diary_dir/lib/auto/DateTime/Time/part.al
+share/tds/web_diary_dir/lib/auto/DateTime/Zone/autosplit.ix
+share/tds/web_diary_dir/lib/auto/DateTime/Zone/calc_off.al
+share/tds/web_diary_dir/lib/auto/DateTime/Zone/init.al
+share/tds/web_diary_dir/lib/auto/DateTime/Zone/tz2zone.al
+share/tds/web_diary_dir/lib/auto/DateTime/Zone/tz_local_offset.al
+share/tds/web_diary_dir/lib/auto/DateTime/Zone/tz_name.al
+share/tds/web_diary_dir/lib/auto/DateTime/Zone/tz_offset.al
+share/tds/web_diary_dir/lib/auto/TDS/Cache/Display/GetDataFilename.al
+share/tds/web_diary_dir/lib/auto/TDS/Cache/Display/IsFresh.al
+share/tds/web_diary_dir/lib/auto/TDS/Cache/Display/NewerThanDatafile.al
+share/tds/web_diary_dir/lib/auto/TDS/Cache/Display/WriteCache.al
+share/tds/web_diary_dir/lib/auto/TDS/Cache/Display/autosplit.ix
+share/tds/web_diary_dir/lib/auto/TDS/Cache/Display/initialize.al
+share/tds/web_diary_dir/lib/auto/TDS/Cache/Recent/GetCacheFilename.al
+share/tds/web_diary_dir/lib/auto/TDS/Cache/Recent/IsFresh.al
+share/tds/web_diary_dir/lib/auto/TDS/Cache/Recent/NewerThanDatafile.al
+share/tds/web_diary_dir/lib/auto/TDS/Cache/Recent/autosplit.ix
+share/tds/web_diary_dir/lib/auto/TDS/Collection/AsHTML.al
+share/tds/web_diary_dir/lib/auto/TDS/Collection/AsTdf.al
+share/tds/web_diary_dir/lib/auto/TDS/Collection/ClearDiarys.al
+share/tds/web_diary_dir/lib/auto/TDS/Collection/GetMonthDirs.al
+share/tds/web_diary_dir/lib/auto/TDS/Collection/NoContentHook.al
+share/tds/web_diary_dir/lib/auto/TDS/Collection/Read.al
+share/tds/web_diary_dir/lib/auto/TDS/Collection/autosplit.ix
+share/tds/web_diary_dir/lib/auto/TDS/Collection/collect_files.al
+share/tds/web_diary_dir/lib/auto/TDS/Collection/initialize.al
+share/tds/web_diary_dir/lib/auto/TDS/Collection/parse_file.al
+share/tds/web_diary_dir/lib/auto/TDS/Collection/pickup_files.al
+share/tds/web_diary_dir/lib/auto/TDS/Collection/pickup_neighbour.al
+share/tds/web_diary_dir/lib/auto/TDS/Collection/pickup_recent.al
+share/tds/web_diary_dir/lib/auto/TDS/Collection/read_files.al
+share/tds/web_diary_dir/lib/jcode.pl
+share/tds/web_diary_dir/mkpasswd.pl
+share/tds/web_diary_dir/power.cgi
+share/tds/web_diary_dir/search.cgi
+share/tds/web_diary_dir/search.html
+share/tds/web_diary_dir/secure.pl
+share/tds/web_diary_dir/set-cookie.cgi
+share/tds/web_diary_dir/split.pl
+share/tds/web_diary_dir/static.pl
+share/tds/web_diary_dir/styles/cake/line1024x3.jpg
+share/tds/web_diary_dir/styles/cake/skelton.html
+share/tds/web_diary_dir/styles/cake/template.ph
+share/tds/web_diary_dir/styles/english/dictionary_skelton.html
+share/tds/web_diary_dir/styles/english/manage.html
+share/tds/web_diary_dir/styles/english/skelton.html
+share/tds/web_diary_dir/styles/english/summary_skelton.html
+share/tds/web_diary_dir/styles/english/template.ph
+share/tds/web_diary_dir/styles/hdml/index.html
+share/tds/web_diary_dir/styles/hdml/skelton.html
+share/tds/web_diary_dir/styles/hdml/summary_skelton.html
+share/tds/web_diary_dir/styles/hdml/template.ph
+share/tds/web_diary_dir/styles/hns/skelton.html
+share/tds/web_diary_dir/styles/hns/template.ph
+share/tds/web_diary_dir/styles/i-mode/skelton.html
+share/tds/web_diary_dir/styles/i-mode/summary_skelton.html
+share/tds/web_diary_dir/styles/i-mode/template.ph
+share/tds/web_diary_dir/styles/japanese/skelton.html
+share/tds/web_diary_dir/styles/japanese/template.ph
+share/tds/web_diary_dir/styles/no_anchor/skelton.html
+share/tds/web_diary_dir/styles/no_anchor/template.ph
+share/tds/web_diary_dir/styles/palmscape/skelton.html
+share/tds/web_diary_dir/styles/palmscape/template.ph
+share/tds/web_diary_dir/styles/simple/skelton.html
+share/tds/web_diary_dir/styles/simple/template.ph
+share/tds/web_diary_dir/styles/standard/dictionary_skelton.html
+share/tds/web_diary_dir/styles/standard/skelton.html
+share/tds/web_diary_dir/styles/standard/summary_skelton.html
+share/tds/web_diary_dir/styles/standard/template.ph
+share/tds/web_diary_dir/styles/standard/url_skelton.html
+share/tds/web_diary_dir/styles/t-hermes/back.png
+share/tds/web_diary_dir/styles/t-hermes/skelton.html
+share/tds/web_diary_dir/styles/t-hermes/template.ph
+share/tds/web_diary_dir/styles/tak3/skelton.html
+share/tds/web_diary_dir/styles/tom/skelton.html
+share/tds/web_diary_dir/styles/tom/tawagoto-banner.jpg
+share/tds/web_diary_dir/styles/tom/template.ph
+share/tds/web_diary_dir/styles/xml/diary.dtd
+share/tds/web_diary_dir/styles/xml/diary.xsl
+share/tds/web_diary_dir/styles/xml/skelton.html
+share/tds/web_diary_dir/styles/xml/template.ph
+share/tds/web_diary_dir/summary.cgi
+share/tds/web_diary_dir/title.cgi
+share/tds/web_diary_dir/update_sig.pl
+share/tds/web_diary_dir/upload.pl
+share/tds/web_diary_dir/url.cgi
+@dirrm share/tds/web_diary_dir/styles/xml
+@dirrm share/tds/web_diary_dir/styles/tom
+@dirrm share/tds/web_diary_dir/styles/tak3
+@dirrm share/tds/web_diary_dir/styles/t-hermes
+@dirrm share/tds/web_diary_dir/styles/standard
+@dirrm share/tds/web_diary_dir/styles/simple
+@dirrm share/tds/web_diary_dir/styles/palmscape
+@dirrm share/tds/web_diary_dir/styles/no_anchor
+@dirrm share/tds/web_diary_dir/styles/japanese
+@dirrm share/tds/web_diary_dir/styles/i-mode
+@dirrm share/tds/web_diary_dir/styles/hns
+@dirrm share/tds/web_diary_dir/styles/hdml
+@dirrm share/tds/web_diary_dir/styles/english
+@dirrm share/tds/web_diary_dir/styles/cake
+@dirrm share/tds/web_diary_dir/styles
+@dirrm share/tds/web_diary_dir/lib/auto/TDS/Collection
+@dirrm share/tds/web_diary_dir/lib/auto/TDS/Cache/Recent
+@dirrm share/tds/web_diary_dir/lib/auto/TDS/Cache/Display
+@dirrm share/tds/web_diary_dir/lib/auto/TDS/Cache
+@dirrm share/tds/web_diary_dir/lib/auto/TDS
+@dirrm share/tds/web_diary_dir/lib/auto/DateTime/Zone
+@dirrm share/tds/web_diary_dir/lib/auto/DateTime/Time
+@dirrm share/tds/web_diary_dir/lib/auto/DateTime/Date
+@dirrm share/tds/web_diary_dir/lib/auto/DateTime
+@dirrm share/tds/web_diary_dir/lib/auto
+@dirrm share/tds/web_diary_dir/lib/TDS/Tdf/Command
+@dirrm share/tds/web_diary_dir/lib/TDS/Tdf
+@dirrm share/tds/web_diary_dir/lib/TDS/Replacer
+@dirrm share/tds/web_diary_dir/lib/TDS/PIM
+@dirrm share/tds/web_diary_dir/lib/TDS/Navigator
+@dirrm share/tds/web_diary_dir/lib/TDS/List
+@dirrm share/tds/web_diary_dir/lib/TDS/Customizer
+@dirrm share/tds/web_diary_dir/lib/TDS/Cache
+@dirrm share/tds/web_diary_dir/lib/TDS/Admin/WriteServer
+@dirrm share/tds/web_diary_dir/lib/TDS/Admin
+@dirrm share/tds/web_diary_dir/lib/TDS/AccessLog
+@dirrm share/tds/web_diary_dir/lib/TDS
+@dirrm share/tds/web_diary_dir/lib/SimpleDB
+@dirrm share/tds/web_diary_dir/lib/Installer
+@dirrm share/tds/web_diary_dir/lib/Image
+@dirrm share/tds/web_diary_dir/lib/FileSpec
+@dirrm share/tds/web_diary_dir/lib/DateTime/Format
+@dirrm share/tds/web_diary_dir/lib/DateTime
+@dirrm share/tds/web_diary_dir/lib/Customizer
+@dirrm share/tds/web_diary_dir/lib/Container
+@dirrm share/tds/web_diary_dir/lib/CGI
+@dirrm share/tds/web_diary_dir/lib
+@dirrm share/tds/web_diary_dir/image
+@dirrm share/tds/web_diary_dir/admin
+@dirrm share/tds/web_diary_dir
+@dirrm share/tds/samples/tdssetup
+@dirrm share/tds/samples/tdf
+@dirrm share/tds/samples
+@dirrm share/tds/doc/dat
+@dirrm share/tds/doc
+@dirrm share/tds/diary_dir/dat
+@dirrm share/tds/diary_dir/custom
+@dirrm share/tds/diary_dir/conf
+@dirrm share/tds/diary_dir/2000/01
+@dirrm share/tds/diary_dir/2000
+@dirrm share/tds/diary_dir
+@dirrm share/tds/contrib/todaytdf
+@dirrm share/tds/contrib/tdf2html
+@dirrm share/tds/contrib/mail2tdf
+@dirrm share/tds/contrib
+@dirrm share/tds
