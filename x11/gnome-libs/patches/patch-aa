@@ -1,20 +1,20 @@
-$NetBSD: patch-aa,v 1.12 2000/10/17 23:57:45 jlam Exp $
+$NetBSD: patch-aa,v 1.13 2001/06/16 20:03:19 jlam Exp $
 
---- configure.orig	Wed Sep 27 17:34:13 2000
-+++ configure
-@@ -5301,6 +5301,11 @@
+--- configure.orig	Fri Mar 16 14:46:20 2001
++++ configure	Sat Jun 16 01:11:24 2001
+@@ -5312,6 +5312,11 @@
     rm -f po/POTFILES
     sed -e "/^#/d" -e "/^\$/d" -e "s,.*,	$posrcprefix& \\\\," -e "\$s/\(.*\) \\\\/\1/" \
  	< $srcdir/po/POTFILES.in > po/POTFILES
 +
 +# NetBSD: set DATADIRNAME to "share"
-+DATADIRNAME="share"
++DATADIRNAME="${PKGLOCALEDIR}"
 +INTLDEPS=
 +INTLLIBS="-lintl"
    
  # AM_GNOME_GETTEXT above substs $DATADIRNAME
  # this is the directory where the *.{mo,gmo} files are installed
-@@ -10265,7 +10270,7 @@
+@@ -10358,7 +10363,7 @@
  GTKXMHTML_LIBS="-lgtkxmhtml $LIBGTKXMHTML_LIBS"
  ZVT_LIBS="-lzvt $UTIL_LIBS $GTK_LIBS"
  
@@ -23,3 +23,14 @@ $NetBSD: patch-aa,v 1.12 2000/10/17 23:57:45 jlam Exp $
  GNOME_INCLUDEDIR='-I${includedir} -DNEED_GNOMESUPPORT_H -I${pkglibdir}/include'
  GNOME_IDLDIR='-I${datadir}/idl'
  
+@@ -10462,8 +10467,8 @@
+ fi
+ 	if test x$gnome_cv_orbit_found = xyes; then
+ 		
+-		ORBIT_CFLAGS=`orbit-config --cflags client server`
+-		ORBIT_LIBS=`orbit-config --use-service=name --libs client server`
++		ORBIT_CFLAGS=`$ORBIT_CONFIG --cflags client server`
++		ORBIT_LIBS=`$ORBIT_CONFIG --use-service=name --libs client server`
+ 		
+ 		
+ 	else
