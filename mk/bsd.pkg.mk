@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1315 2003/12/06 18:47:45 cube Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1316 2003/12/07 22:47:16 grant Exp $
 #
 # This file is in the public domain.
 #
@@ -410,12 +410,8 @@ SHCOMMENT?=		${ECHO_MSG} >/dev/null '***'
 
 DISTINFO_FILE?=		${.CURDIR}/distinfo
 
-FIX_RPATH+=		LIBS
 .if defined(USE_X11)
-X11_LDFLAGS=		# empty
-.  if empty(_USE_RPATH:M[nN][oO])
 X11_LDFLAGS+=		-Wl,${RPATH_FLAG}${X11BASE}/lib
-.  endif
 X11_LDFLAGS+=		-L${X11BASE}/lib
 .endif
 .if !empty(USE_BUILDLINK2:M[nN][oO]) && !empty(USE_BUILDLINK3:M[nN][oO])
@@ -425,7 +421,6 @@ LDFLAGS+=		-L${LOCALBASE}/lib
 LDFLAGS+=		${X11_LDFLAGS}
 .  endif
 .endif
-FIX_RPATH+=		LDFLAGS
 MAKE_ENV+=		LDFLAGS="${LDFLAGS}"
 MAKE_ENV+=		RPATH_FLAG="${RPATH_FLAG}"
 MAKE_ENV+=		WHOLE_ARCHIVE_FLAG="${WHOLE_ARCHIVE_FLAG}"
@@ -866,19 +861,6 @@ DEPENDS+=		rman-3.0.9:../../textproc/rman
 RMAN?=			${LOCALBASE}/bin/rman
 .  else
 RMAN?=			${X11BASE}/bin/rman
-.  endif
-.endif
-
-# FIX_RPATH will remove compiler or linker settings related to run-time
-# library search path settings if _USE_RPATH is "no".
-#
-.if !empty(_USE_RPATH:M[nN][oO])
-.  if defined(FIX_RPATH) && !empty(FIX_RPATH)
-.    for var in ${FIX_RPATH}
-.      for _rpath_flag in ${RPATH_FLAG} -R -rpath -rpath-link --rpath --rpath-link
-${var}:=	${${var}:N-Wl,${_rpath_flag}*:N${_rpath_flag}*}
-.      endfor
-.    endfor
 .  endif
 .endif
 
