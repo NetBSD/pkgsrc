@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3866 2003/11/27 15:07:26 abs Exp $
+$NetBSD: CHANGES,v 1.3867 2003/11/27 16:08:52 grant Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4652,4 +4652,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated silc-client-icb to 0.14nb6 [salo 2003-11-27]
 	Updated celestia-kde to 1.3.0nb3 [markd 2003-11-27]
 	Updated galeon to 1.2.13 [abs 2003-11-27]
-
+	Updated mozilla-bin to 1.5 [grant 2003-11-27]
