@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.807 2002/12/16 18:06:59 tron Exp $
+$NetBSD: CHANGES,v 1.808 2002/12/16 21:28:14 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3975,3 +3975,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Added zope25-RDFSummary-2.3 [drochner 2002-12-16]
 	Updated sane-backends to 1.0.9 [tron 2002-12-16]
 	Updated sane-frontends to 1.0.9 [tron 2002-12-16]
+	Updated gnome-desktop to 2.0.10 [jmmv 2002-12-16]
