@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2002/04/04 12:29:50 tron Exp $
+# $NetBSD: Makefile,v 1.10 2002/09/21 15:14:55 tron Exp $
 
 DISTNAME=		plugger-3.2-linux-x86-glibc
 PKGNAME=		ns-${PLUGGERNAME}-${BINNAME}-${PLUGGERVERS}
+PKGREVISION=		1
 WRKSRC=			${WRKDIR}/${PLUGGERFULL}
 CATEGORIES=		www
 MASTER_SITES=		http://fredrik.hubbe.net/plugger/
@@ -14,7 +15,7 @@ BINNAME?=		common
 
 .if ${BINNAME} != common
 DEPENDS+=		${BINNAME}-[0-9]*:../../www/${BINNAME}
-MOZILLA_HOME=		${PREFIX}/lib/netscape/${NSNAME:C/nb[0-9]+$//}
+MOZILLA_HOME=		${PREFIX}/lib/netscape/${NSNAME:C/nb[0-9]+$//:S/4.80/4.8/}
 PLIST_SUBST+=		MOZILLA_HOME=${MOZILLA_HOME:S/${PREFIX}\///}
 .else
 DEPENDS+=		suse_base>=6.3:../../emulators/${SUSE_DIR_PREFIX}_base
