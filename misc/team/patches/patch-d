@@ -3,14 +3,14 @@
 ***************
 *** 3,8 ****
   BINDIR=	${PREFIX}/bin
-  MANDIR=	${PREFIX}/man/man
+  MANDIR=	${PREFIX}/man
   
 ! CFLAGS+= -DHAVE_PARAM_H
   
   .include <bsd.prog.mk>
 --- 3,8 ----
   BINDIR=	${PREFIX}/bin
-  MANDIR=	${PREFIX}/man/man
+  MANDIR=	${PREFIX}/man
   
 ! CFLAGS+= -DHAVE_PARAM_H -DHAVE_WAIT_H
   
