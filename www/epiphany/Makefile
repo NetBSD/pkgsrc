@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2005/01/03 22:49:01 jmmv Exp $
+# $NetBSD: Makefile,v 1.27 2005/01/04 14:00:11 jmmv Exp $
 #
 
 DISTNAME=	epiphany-1.4.7
@@ -21,7 +21,9 @@ USE_PKGLOCALEDIR=	YES
 
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
 
+CPPFLAGS+=		-I${BUILDLINK_PREFIX.mozilla-gtk2}/include/mozilla-gtk2/docshell
 CPPFLAGS+=		-I${BUILDLINK_PREFIX.mozilla-gtk2}/include/mozilla-gtk2/find
+CPPFLAGS+=		-I${BUILDLINK_PREFIX.mozilla-gtk2}/include/mozilla-gtk2/necko
 CPPFLAGS+=		-I${BUILDLINK_PREFIX.mozilla-gtk2}/include/mozilla-gtk2/pref
 
 GCONF2_SCHEMAS=		epiphany.schemas
