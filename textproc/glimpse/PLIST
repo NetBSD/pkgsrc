@@ -1,17 +1,17 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:56:41 zuntum Exp $
-bin/tbuild
-bin/cast
-bin/uncast
+@comment $NetBSD: PLIST,v 1.2 2002/07/12 19:53:02 mycroft Exp $
 bin/agrep
 bin/buildcast
-bin/glimpseindex
-bin/wgconvert
+bin/cast
 bin/glimpse
+bin/glimpseindex
 bin/glimpseserver
+bin/tbuild
+bin/uncast
+bin/wgconvert
+man/man1/agrep.1
 man/man1/glimpse.1
 man/man1/glimpseindex.1
 man/man1/glimpseserver.1
-man/man1/agrep.1
 share/doc/glimpse/COPYRIGHT
 share/doc/glimpse/README
 @dirrm share/doc/glimpse
