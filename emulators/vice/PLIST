@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2003/09/28 10:41:21 kristerw Exp $
+@comment $NetBSD: PLIST,v 1.8.2.1 2003/12/07 12:24:55 agc Exp $
 bin/c1541
 bin/petcat
 bin/vsid
@@ -91,10 +91,7 @@ share/vice/C128/win_pos.vkm
 share/vice/C128/win_sym.vkm
 share/vice/C128/x11_pos.vkm
 share/vice/C128/x11_sym.vkm
-share/vice/C64/4064.vrs
-share/vice/C64/64gs.vrs
 share/vice/C64/basic
-share/vice/C64/basic.64gs
 share/vice/C64/beos_pos.vkm
 share/vice/C64/beos_sym.vkm
 share/vice/C64/c64hq.vpl
@@ -109,13 +106,9 @@ share/vice/C64/dos_sym.vkm
 share/vice/C64/frodo.vpl
 share/vice/C64/godot.vpl
 share/vice/C64/kernal
-share/vice/C64/kernal.4064
-share/vice/C64/kernal.64gs
-share/vice/C64/kernal.sx64
 share/vice/C64/os2.vkm
 share/vice/C64/os2_sym.vkm
 share/vice/C64/pc64.vpl
-share/vice/C64/sx64.vrs
 share/vice/C64/vice.vpl
 share/vice/C64/win_pos.vkm
 share/vice/C64/win_sym.vkm

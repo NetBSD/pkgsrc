@@ -1,15 +1,11 @@
-# $NetBSD: Makefile,v 1.37 2003/11/06 18:54:34 gavan Exp $
+# $NetBSD: Makefile,v 1.37.2.1 2003/12/07 12:24:55 agc Exp $
 #
 
 DISTNAME=		vice-1.13
+PKGREVISION=		1
 CATEGORIES=		emulators
-MASTER_SITES=		ftp://ftp.funet.fi/pub/cbm/firmware/computers/c64/ \
-			ftp://ftp.funet.fi/pub/cbm/crossplatform/emulators/VICE/ \
+MASTER_SITES=		ftp://ftp.funet.fi/pub/cbm/crossplatform/emulators/VICE/ \
 			http://www.nic.funet.fi/pub/cbm/crossplatform/emulators/VICE/
-DISTFILES=		${DISTNAME}${EXTRACT_SUFX} \
-			64gs.390852-01.bin \
-			kernal.4064.901246-01.bin \
-			kernal.sx.251104-04.bin
 
 MAINTAINER=		kristerw@NetBSD.org
 HOMEPAGE=		http://viceteam.bei.t-online.de/
@@ -45,27 +41,7 @@ post-patch:
 			$$file.orig >$$file;				\
 	done
 
-post-build:
-	dd if=${_DISTDIR}/64gs.390852-01.bin of=${WRKDIR}/basic.64gs	\
-		bs=8k count=1 2>/dev/null
-	dd if=${_DISTDIR}/64gs.390852-01.bin of=${WRKDIR}/kernal.64gs	\
-		bs=8k skip=1 2>/dev/null
-	${SED}	-e "s|kernal|kernal.64gs|g" -e "s|basic|basic.64gs|g"	\
-		${WRKSRC}/data/C64/default.vrs > ${WRKDIR}/64gs.vrs
-	${SED}	-e "s|kernal|kernal.4064|g"				\
-		${WRKSRC}/data/C64/default.vrs > ${WRKDIR}/4064.vrs
-	${SED}	-e "s|kernal|kernal.sx64|g"				\
-		${WRKSRC}/data/C64/default.vrs > ${WRKDIR}/sx64.vrs
-
 post-install:
-	${INSTALL_DATA} ${WRKDIR}/basic.64gs ${PREFIX}/share/vice/C64/
-	${INSTALL_DATA} ${WRKDIR}/kernal.64gs ${PREFIX}/share/vice/C64/
-	${INSTALL_DATA} ${_DISTDIR}/kernal.4064.901246-01.bin		\
-		${PREFIX}/share/vice/C64/kernal.4064
-	${INSTALL_DATA} ${_DISTDIR}/kernal.sx.251104-04.bin		\
-		${PREFIX}/share/vice/C64/kernal.sx64
-	cd ${WRKDIR} && ${INSTALL_DATA} 64gs.vrs 4064.vrs sx64.vrs	\
-		${PREFIX}/share/vice/C64/
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/vice
 	${MV} ${PREFIX}/share/doc/vice/*.html ${PREFIX}/share/doc/html/vice
 
