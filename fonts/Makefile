@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2004/11/26 13:05:20 adam Exp $
+# $NetBSD: Makefile,v 1.76 2004/11/29 10:05:04 adam Exp $
 #
 
 COMMENT=	Fonts
@@ -49,6 +49,7 @@ SUBDIR+=	cyr-rfx-winlatin_1
 SUBDIR+=	dbz-ttf
 SUBDIR+=	efont-unicode
 SUBDIR+=	fontconfig
+SUBDIR+=	fontforge
 SUBDIR+=	freefonts
 SUBDIR+=	geoslab703-ttf
 SUBDIR+=	ghostscript-cidfonts
@@ -85,7 +86,6 @@ SUBDIR+=	oto
 SUBDIR+=	p5-Font-AFM
 SUBDIR+=	p5-Font-TTF
 SUBDIR+=	pcf2bdf
-SUBDIR+=	pfaedit
 SUBDIR+=	profont
 SUBDIR+=	py-TTFQuery
 SUBDIR+=	py-fonttools
