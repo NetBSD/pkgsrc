@@ -3,7 +3,7 @@
 # Date created:		18 Oct 1994
 # Whom:			torstenb
 #
-# $NetBSD: Makefile,v 1.9 1998/02/23 15:18:05 agc Exp $
+# $NetBSD: Makefile,v 1.10 1998/03/05 16:55:33 tv Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/05/14 10:35:13 torstenb Exp
 #
 
@@ -30,7 +30,8 @@ pre-install:
 
 post-install:
 	@if [ "X${MANZ}" != X"" ]; then \
-		find ${PREFIX}/lib/irc/help -type f -exec gzip -9 {} \;; \
+		echo Compressing help files; \
+		find ${PREFIX}/lib/irc/help -type f -print | xargs gzip -9; \
 	fi
 
 .include <bsd.port.mk>
