@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.1.1.1 2000/12/13 17:12:19 kei Exp $
+$NetBSD: patch-ab,v 1.2 2001/12/30 21:44:26 agc Exp $
 
---- convert.sh.orig	Sat Aug 12 12:17:15 2000
-+++ convert.sh	Sat Aug 12 12:18:36 2000
+--- convert.sh.orig	Wed Mar 22 16:01:00 2000
++++ convert.sh	Sun Dec 30 21:34:03 2001
 @@ -7,3 +7,7 @@
  rm t t.lzh
  done
