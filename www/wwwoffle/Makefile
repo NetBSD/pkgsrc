@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 1999/12/07 08:50:49 agc Exp $
+# $NetBSD: Makefile,v 1.13 2000/01/25 02:48:11 fredb Exp $
 
 DISTNAME=	wwwoffle-2.5b
 CATEGORIES=	www
@@ -8,6 +8,8 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.gedanken.demon.co.uk/wwwoffle/
+
+DEPENDS+=	htdig>=3.1.3:../../www/htdig
 
 USE_GMAKE=	yes
 NO_CONFIGURE=	yes
@@ -37,6 +39,13 @@ pre-patch:
 .endif
 
 post-build:
+	cd ${WRKSRC}/html/htdig/scripts; \
+	for f in wwwoffle-ht*; do \
+		${MV} $$f $$f.old; \
+		${SED} -e '/htsearch/s#^#${PREFIX}/libexec/cgi-bin/#' \
+		  -e 's#/usr/local#${PREFIX}#' <$$f.old >$$f; \
+		${RM} $$f.old; \
+	done
 	@${SED} -e 's#@PREFIX@#${PREFIX}#g' <${FILESDIR}/wwwoffle.sh \
 	  >${WRKDIR}/wwwoffle.sh
 	@${SED} -e 's#@PREFIX@#${PREFIX}#g' <${PKGDIR}/MESSAGE \
