@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2021 2004/08/11 12:52:33 wiz Exp $
+$NetBSD: TODO,v 1.2022 2004/08/13 07:21:13 salo Exp $
 
 Suggested new packages
 ======================
@@ -281,7 +281,6 @@ Suggested package updates
 	o lavaps-2.5
 	o lbreakout-2.5
 	o leafnode-1.10.3
-	o lftp-3.0.7
 	o libcaca-0.9
 	o libcddb-0.9.5
 	o libevent-0.9

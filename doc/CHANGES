@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6860 2004/08/13 07:10:24 cube Exp $
+$NetBSD: CHANGES,v 1.6861 2004/08/13 07:21:14 salo Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3808,3 +3808,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated baekmuk-ttf to 2.2 [minskim 2004-08-13]
 	Updated libnbcompat to 20040813 [jlam 2004-08-13]
 	Updated libelf to 0.8.5nb1 [cube 2004-08-13]
+	Updated lftp to 3.0.7 [salo 2004-08-13]
