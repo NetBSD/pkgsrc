@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1.1.1 1999/10/17 04:28:19 fredb Exp $
+
+--- librsrc/librsrc.h.orig	Sat Apr 11 03:27:19 1998
++++ librsrc/librsrc.h	Fri Oct 15 12:55:15 1999
+@@ -19,7 +19,7 @@
+  * $Id: patch-ad,v 1.1.1.1 1999/10/17 04:28:19 fredb Exp $
+  */
+ 
+-# include "rsrc.h"
++# include <rsrc.h>
+ 
+ extern int errno;
+ 
