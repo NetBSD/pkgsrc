@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.73 2004/03/08 19:40:37 jmmv Exp $
+# $NetBSD: Makefile,v 1.74 2004/03/20 16:25:16 xtraeme Exp $
 #
 
 DISTNAME=		abiword-2.0.4
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		editors
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=abiword/}
 EXTRACT_SUFX=		.tar.bz2
@@ -20,11 +20,12 @@ CONFLICTS=		abiword-personal-[0-9]* abiword2-[0-9]*
 MAKEFILE=		GNUmakefile
 GNU_CONFIGURE=		yes
 USE_BUILDLINK3=		yes
-USE_GNU_ICONV=		yes # XXX
 USE_GNU_TOOLS+=		make
 USE_PERL5=		run
 USE_X11=		yes
 WRKSRC=			${WRKDIR}/${DISTNAME}/abi
+
+USE_BUILTIN.iconv=	no # Make sure we get libiconv dependency.
 
 REPLACE_PERL=		user/wp/scripts/abw2html.pl
 
