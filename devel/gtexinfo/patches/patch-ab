@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.4 2001/12/25 14:48:38 wiz Exp $
+$NetBSD: patch-ab,v 1.5 2002/10/03 02:06:32 seb Exp $
 
---- info/Makefile.in.orig	Tue Sep 28 21:40:50 1999
+--- info/Makefile.in.orig	Mon Apr  1 16:13:22 2002
 +++ info/Makefile.in
-@@ -97,7 +97,7 @@
- # Automake puts -I.. and -I$(srcdir) into DEFS by default, but
- # we need to override it, so include them ourselves.
- INCLUDES = -I. -I$(top_srcdir)/lib -I../intl -I.. -I$(srcdir)
--DEFS = -DINFODIR=\"$(infodir)\" -DLOCALEDIR=\"$(localedir)\" @DEFS@
-+DEFS = -DPORTSINFODIR=\"$(prefix)/info\" -DINFODIR=\"$(infodir)\" -DLOCALEDIR=\"$(localedir)\" @DEFS@
- LDADD = ../lib/libtxi.a @TERMLIBS@ @INTLLIBS@
+@@ -119,7 +119,7 @@
+ # user-specified name transformations.
+ bin_PROGRAMS = ginfo infokey
  
- EXTRA_DIST = README pcterm.c
+-localedir = $(datadir)/locale
++localedir = $(PKGLOCALEDIR)
+ 
+ # -I. for funs.h.
+ # Automake puts -I.. and -I$(srcdir) into DEFS by default, but

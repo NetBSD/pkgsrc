@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2002/08/10 23:22:02 rh Exp $
+# $NetBSD: Makefile,v 1.29 2002/10/03 02:06:31 seb Exp $
 #
 
-DISTNAME=		texinfo-4.0
+DISTNAME=		texinfo-4.2
 PKGNAME=		g${DISTNAME}
-PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GNU:=texinfo/}
 
@@ -11,13 +10,14 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.gnu.org/software/texinfo/texinfo.html
 COMMENT=		GNU info file manipulation utilities
 
-USE_BUILDLINK_ONLY=	yes
+USE_BUILDLINK2=		yes
+USE_GNU_GETTEXT=	yes
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--with-catgets
-CONFIGURE_ENV+=		PKGLOCALEDIR="${PKGLOCALEDIR}"
+CONFIGURE_ARGS+=	--with-libiconv-prefix=${BUILDLINK_PREFIX.iconv}
+CONFIGURE_ARGS+=	--with-libintl-prefix=${BUILDLINK_PREFIX.gettext}
 MAKE_ENV+=		PKGLOCALEDIR="${PKGLOCALEDIR}"
-
-.include "../../devel/zlib/buildlink.mk"
+AUTOMAKE_PATTERNS+=	configure.ac
+AUTOMAKE_PATTERNS+=	config.in
 
 INSTALL_INFO=	${PREFIX}/bin/install-info
 
@@ -29,9 +29,6 @@ post-patch:
 		< ${WRKSRC}/info/filesys.h.orig		\
 		> ${WRKSRC}/info/filesys.h
 
-post-install:
-	${INSTALL_INFO} --info-dir=${PREFIX}/info ${PREFIX}/info/texinfo
-	${INSTALL_INFO} --info-dir=${PREFIX}/info ${PREFIX}/info/info.info
-	${INSTALL_INFO} --info-dir=${PREFIX}/info ${PREFIX}/info/info-stnd.info
-
+.include "../../devel/gettext-lib/buildlink2.mk"
+.include "../../converters/libiconv/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
