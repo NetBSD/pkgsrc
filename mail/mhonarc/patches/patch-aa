@@ -1,0 +1,17 @@
+--- install.cfg.old	Fri Jun  5 15:38:22 1998
++++ install.cfg	Fri Jun  5 15:42:30 1998
+@@ -9,10 +9,10 @@
+ $doman = 0;	# No manpages to install
+ 
+ ## Set default values
+-$bindir  = (!$MSDOS ? '/usr/local/bin' : 'C:\\BIN');
+-$libdir  = (!$MSDOS ? '/usr/local/lib/MHonArc' : 'C:\\LIB\\MHONARC');
+-$docdir  = (!$MSDOS ? '/usr/local/lib/MHonArc/doc' : 'C:\\DOC\\MHONARC');
+-$perlprg = (!$MSDOS ? '/usr/local/bin/perl' : 'C:\\BIN\\PERL.EXE');
++$bindir  = (!$MSDOS ? $ENV{'PREFIX'}.'/bin' : 'C:\\BIN');
++$libdir  = (!$MSDOS ? $ENV{'PREFIX'}.'/lib/mhonarc' : 'C:\\LIB\\MHONARC');
++$docdir  = (!$MSDOS ? $ENV{'PREFIX'}.'/share/doc/mhonarc' : 'C:\\DOC\\MHONARC');
++$perlprg = (!$MSDOS ? $ENV{'PREFIX'}.'/bin/perl' : 'C:\\BIN\\PERL.EXE');
+ 
+ 
+ ##************************************************************************##
