@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2003/08/12 16:37:05 jschauma Exp $
+# $NetBSD: Makefile,v 1.30 2004/01/02 16:56:01 jschauma Exp $
 
 DISTNAME=	j2re-1_3_1_09-linux-i586
 PKGNAME=	sun-jre13-1.0.9
@@ -6,6 +6,8 @@ WRKSRC=		${WRKDIR}/jre1.3.1_09
 MASTER_SITES=	# empty
 
 COMMENT=	Sun's Java(tm) Runtime Environment 1.3.1
+
+SHORT=		JRE
 
 USE_PKGINSTALL=	yes
 OWN_DIRS=	${PREFIX}
@@ -27,20 +29,6 @@ do-configure:
 	cd ${WRKSRC}/lib; for file in ${SFILES}; do			\
 		${MV} -f $$file $$file.default;				\
 	done
-
-_FETCH_MESSAGE= \
-	${ECHO} "======================================================================"; \
-	${ECHO} ; \
-	${ECHO} " The file ${DISTNAME}${EXTRACT_SUFX} containing the"; \
-	${ECHO} " Java(tm) 2 Runtime Environment, Standard Edition must be fetched"; \
-	${ECHO} " into:"; \
-	${ECHO} "	${DISTDIR}/${DISTNAME}${EXTRACT_SUFX}"; \
-	${ECHO} " from:"; \
-	${ECHO} "	${DOWNLOAD}"; \
-	${ECHO} ; \
-	${ECHO} " Choose 'Linux self-extracting file' from the 'JRE' column."; \
-	${ECHO} ; \
-	${ECHO} "======================================================================"
 
 .include "../../lang/sun-jre13/Makefile.common"
 
