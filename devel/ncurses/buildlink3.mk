@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.16 2004/02/11 11:30:50 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.17 2004/02/12 01:59:37 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 NCURSES_BUILDLINK3_MK:=	${NCURSES_BUILDLINK3_MK}+
@@ -30,56 +30,15 @@ BUILDLINK_IS_BUILTIN.ncurses=	NO
 .  if ${_BLNK_LIBNCURSES_FOUND} == "YES"
 BUILDLINK_IS_BUILTIN.ncurses=	YES
 .  elif exists(${_NCURSES_H})
-BUILDLINK_IS_BUILTIN.ncurses!=						\
+_IS_BUILTIN.ncurses!=		\
 	if ${GREP} -q "\#define[ 	]*NCURSES_VERSION" ${_NCURSES_H}; then \
 		${ECHO} "YES";						\
 	else								\
 		${ECHO} "NO";						\
 	fi
-.  endif
-#
-# XXX By default, assume that the builtin curses on NetBSD systems
-# XXX supports ncurses.
-#
-.  if ${OPSYS} == "NetBSD"
-BUILDLINK_USE_BUILTIN.ncurses=	YES
-#
-# These versions of NetBSD didn't have a curses library that was
-# capable of replacing ncurses.
-#
-# XXX In reality, no version of NetBSD has a curses library that can
-# XXX completely replace ncurses; however, some version implement
-# XXX enough of ncurses that some packages are happy.
-#
-_INCOMPAT_CURSES=	NetBSD-0.*-* NetBSD-1.[0123]*-*
-_INCOMPAT_CURSES+=	NetBSD-1.4.*-* NetBSD-1.4[A-X]-*
-.    for _pattern_ in ${_INCOMPAT_CURSES} ${INCOMPAT_CURSES}
-.      if !empty(MACHINE_PLATFORM:M${_pattern_})
-BUILDLINK_IS_BUILTIN.ncurses=	NO
-.      endif
-.    endfor
-.  endif
-MAKEFLAGS+=	BUILDLINK_IS_BUILTIN.ncurses=${BUILDLINK_IS_BUILTIN.ncurses}
-.endif
-
-.if !empty(PREFER_PKGSRC:M[yY][eE][sS]) || \
-    !empty(PREFER_PKGSRC:Mncurses)
-BUILDLINK_USE_BUILTIN.ncurses=	NO
-.endif
-
-.if defined(USE_NCURSES)
-BUILDLINK_USE_BUILTIN.ncurses=	NO
-.endif
-
-.if !empty(BUILDLINK_CHECK_BUILTIN.ncurses:M[yY][eE][sS])
-BUILDLINK_USE_BUILTIN.ncurses=	YES
-.endif
-
-.if !defined(BUILDLINK_USE_BUILTIN.ncurses)
-.  if !empty(BUILDLINK_IS_BUILTIN.ncurses:M[nN][oO])
-BUILDLINK_USE_BUILTIN.ncurses=	NO
-.  else
-BUILDLINK_USE_BUILTIN.ncurses=	YES
+BUILDLINK_IS_BUILTIN.ncurses=	${_IS_BUILTIN.ncurses}
+.    if !empty(BUILDLINK_CHECK_BUILTIN.ncurses:M[nN][oO]) && \
+        !empty(_IS_BUILTIN.ncurses:M[yY][eE][sS])
 #
 # Create an appropriate name for the built-in package distributed
 # with the system.  This package name can be used to check against
@@ -94,20 +53,61 @@ _NCURSES_VERSION!=							\
 		}							\
 	' ${_NCURSES_H}
 _NCURSES_PKG=		ncurses-${_NCURSES_VERSION}
-BUILDLINK_USE_BUILTIN.ncurses?=	YES
-.    for _depend_ in ${BUILDLINK_DEPENDS.ncurses}
-.      if !empty(BUILDLINK_USE_BUILTIN.ncurses:M[yY][eE][sS])
-BUILDLINK_USE_BUILTIN.ncurses!=						\
+BUILDLINK_IS_BUILTIN.ncurses=	YES
+.      for _depend_ in ${BUILDLINK_DEPENDS.ncurses}
+.        if !empty(BUILDLINK_IS_BUILTIN.ncurses:M[yY][eE][sS])
+BUILDLINK_IS_BUILTIN.ncurses!=						\
 	if ${PKG_ADMIN} pmatch '${_depend_}' ${_NCURSES_PKG}; then	\
 		${ECHO} "YES";						\
 	else								\
 		${ECHO} "NO";						\
 	fi
+.        endif
+.      endfor
+.    endif
+.  endif
+#
+# XXX By default, assume that the native curses on NetBSD systems
+# XXX supports ncurses.
+#
+.  if ${OPSYS} == "NetBSD"
+BUILDLINK_IS_BUILTIN.ncurses=	YES
+#
+# These versions of NetBSD didn't have a curses library that was
+# capable of replacing ncurses.
+#
+# XXX In reality, no version of NetBSD has a curses library that can
+# XXX completely replace ncurses; however, some versions implement
+# XXX enough of ncurses that some packages are happy.
+#
+_INCOMPAT_CURSES=	NetBSD-0.*-* NetBSD-1.[0123]*-*
+_INCOMPAT_CURSES+=	NetBSD-1.4.*-* NetBSD-1.4[A-X]-*
+.    for _pattern_ in ${_INCOMPAT_CURSES} ${INCOMPAT_CURSES}
+.      if !empty(MACHINE_PLATFORM:M${_pattern_})
+BUILDLINK_IS_BUILTIN.ncurses=	NO
 .      endif
 .    endfor
 .  endif
-MAKEFLAGS+=	\
-	BUILDLINK_USE_BUILTIN.ncurses=${BUILDLINK_USE_BUILTIN.ncurses}
+MAKEFLAGS+=	BUILDLINK_IS_BUILTIN.ncurses=${BUILDLINK_IS_BUILTIN.ncurses}
+.endif
+
+.if !empty(BUILDLINK_IS_BUILTIN.ncurses:M[yY][eE][sS])
+BUILDLINK_USE_BUILTIN.ncurses=	YES
+.else
+BUILDLINK_USE_BUILTIN.ncurses=	NO
+.endif
+
+.if !empty(PREFER_PKGSRC:M[yY][eE][sS]) || \
+    !empty(PREFER_PKGSRC:Mncurses)
+BUILDLINK_USE_BUILTIN.ncurses=	NO
+.endif
+
+.if defined(USE_NCURSES)
+BUILDLINK_USE_BUILTIN.ncurses=	NO
+.endif
+
+.if !empty(BUILDLINK_CHECK_BUILTIN.ncurses:M[yY][eE][sS])
+BUILDLINK_USE_BUILTIN.ncurses=	YES
 .endif
 
 .if !empty(BUILDLINK_USE_BUILTIN.ncurses:M[nN][oO])

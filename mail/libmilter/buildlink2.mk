@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.6 2004/02/05 07:17:15 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.7 2004/02/12 01:59:38 jlam Exp $
 #
 # This Makefile fragment is included by packages that use libmilter.
 #
@@ -14,10 +14,16 @@ BUILDLINK_PKGSRCDIR.libmilter?=		../../mail/libmilter
 .if exists(/usr/lib/libmilter.a)
 _MILTER_FILELIST!= ar t /usr/lib/libmilter.a
 .  if empty(_MILTER_FILELIST:Merrstring.o)
-_NEED_LIBMILTER=	YES
+_BUILTIN_LIBMILTER=	NO
 .  else
-_NEED_LIBMILTER=	NO
+_BUILTIN_LIBMILTER=	YES
 .  endif
+.else
+_BUILTIN_LIBMILTER=	NO
+.endif
+
+.if ${_BUILTIN_LIBMILTER} == "YES"
+_NEED_LIBMILTER=	NO
 .else
 _NEED_LIBMILTER=	YES
 .endif

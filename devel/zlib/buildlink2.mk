@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.12 2004/02/06 19:04:24 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.13 2004/02/12 01:59:38 jlam Exp $
 
 .if !defined(ZLIB_BUILDLINK2_MK)
 ZLIB_BUILDLINK2_MK=	# defined
@@ -13,24 +13,6 @@ _ZLIB_H=	/usr/include/zlib.h
 .if !defined(BUILDLINK_IS_BUILTIN.zlib)
 BUILDLINK_IS_BUILTIN.zlib=	NO
 .  if exists(${_ZLIB_H})
-BUILDLINK_IS_BUILTIN.zlib=	YES
-.  endif
-.endif
-
-.if !empty(PREFER_PKGSRC:M[yY][eE][sS]) || \
-    !empty(PREFER_PKGSRC:Mzlib)
-BUILDLINK_USE_BUILTIN.zlib=	NO
-.endif
-
-.if defined(USE_ZLIB)
-BUILDLINK_USE_BUILTIN.zlib=	NO
-.endif
-
-.if !defined(BUILDLINK_USE_BUILTIN.zlib)
-.  if !empty(BUILDLINK_IS_BUILTIN.zlib:M[nN][oO])
-BUILDLINK_USE_BUILTIN.zlib=	NO
-.  else
-BUILDLINK_USE_BUILTIN.zlib=	YES
 #
 # Create an appropriate name for the built-in package distributed
 # with the system.  This package name can be used to check against
@@ -67,14 +49,29 @@ _ZLIB_PKG=	zlib-1.1.4nb1
 .    endif
 
 _ZLIB_DEPENDS=	${BUILDLINK_DEPENDS.zlib}
-BUILDLINK_USE_BUILTIN.zlib!=	\
+BUILDLINK_IS_BUILTIN.zlib!=	\
 	if ${PKG_ADMIN} pmatch '${_ZLIB_DEPENDS}' ${_ZLIB_PKG}; then	\
 		${ECHO} "YES";						\
 	else								\
 		${ECHO} "NO";						\
 	fi
 .  endif
-MAKEFLAGS+=	BUILDLINK_USE_BUILTIN.zlib=${BUILDLINK_USE_BUILTIN.zlib}
+MAKEFLAGS+=	BUILDLINK_IS_BUILTIN.zlib=${BUILDLINK_IS_BUILTIN.zlib}
+.endif
+
+.if !empty(BUILDLINK_IS_BUILTIN.zlib:M[yY][eE][sS])
+BUILDLINK_USE_BUILTIN.zlib=	YES
+.else
+BUILDLINK_USE_BUILTIN.zlib=	NO
+.endif
+
+.if !empty(PREFER_PKGSRC:M[yY][eE][sS]) || \
+    !empty(PREFER_PKGSRC:Mzlib)
+BUILDLINK_USE_BUILTIN.zlib=	NO
+.endif
+
+.if defined(USE_ZLIB)
+BUILDLINK_USE_BUILTIN.zlib=	NO
 .endif
 
 .if !empty(BUILDLINK_USE_BUILTIN.zlib:M[nN][oO])

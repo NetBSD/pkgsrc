@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.12 2004/02/06 19:04:25 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2004/02/12 01:59:38 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 OPENSSL_BUILDLINK3_MK:=	${OPENSSL_BUILDLINK3_MK}+
@@ -25,22 +25,7 @@ _OPENSSL_OPENSSLV_H=	/usr/include/openssl/opensslv.h
 BUILDLINK_IS_BUILTIN.openssl=	NO
 .  if exists(${_OPENSSL_OPENSSLV_H})
 BUILDLINK_IS_BUILTIN.openssl=	YES
-.  endif
-.endif
-
-.if !empty(PREFER_PKGSRC:M[yY][eE][sS]) || \
-    !empty(PREFER_PKGSRC:Mopenssl)
-BUILDLINK_USE_BUILTIN.openssl=	NO
-.endif
-
-.if !empty(BUILDLINK_CHECK_BUILTIN.openssl:M[yY][eE][sS])
-BUILDLINK_USE_BUILTIN.openssl=	YES
-.endif
-
-.if !defined(BUILDLINK_USE_BUILTIN.openssl)
-.  if !empty(BUILDLINK_IS_BUILTIN.openssl:M[nN][oO])
-BUILDLINK_USE_BUILTIN.openssl=	NO
-.  else
+.    if !empty(BUILDLINK_CHECK_BUILTIN.openssl:M[nN][oO])
 #
 # Create an appropriate name for the built-in package distributed
 # with the system.  This package name can be used to check against
@@ -105,24 +90,39 @@ _OPENSSL_HAS_FIX!=							\
 		/OPENSSL_HAS_20031107_FIX/ { ans = "YES" }		\
 		END { print ans; exit 0 }				\
 	' ${_OPENSSL_OPENSSLV_H}
-.    if !empty(_OPENSSL_VERSION:M0\.9\.6g) && (${_OPENSSL_HAS_FIX} == "YES")
+.      if !empty(_OPENSSL_VERSION:M0\.9\.6g) && (${_OPENSSL_HAS_FIX} == "YES")
 _OPENSSL_PKG=		openssl-0.9.6l
-.    endif
+.      endif
 
-BUILDLINK_USE_BUILTIN.openssl?=	YES
-.    for _depend_ in ${BUILDLINK_DEPENDS.openssl}
-.      if !empty(BUILDLINK_USE_BUILTIN.openssl:M[yY][eE][sS])
-BUILDLINK_USE_BUILTIN.openssl!=		\
+BUILDLINK_IS_BUILTIN.openssl?=	YES
+.      for _depend_ in ${BUILDLINK_DEPENDS.openssl}
+.        if !empty(BUILDLINK_IS_BUILTIN.openssl:M[yY][eE][sS])
+BUILDLINK_IS_BUILTIN.openssl!=		\
 	if ${PKG_ADMIN} pmatch '${_depend_}' ${_OPENSSL_PKG}; then	\
 		${ECHO} "YES";						\
 	else								\
 		${ECHO} "NO";						\
 	fi
-.      endif
-.    endfor
+.        endif
+.      endfor
+.    endif
 .  endif
-MAKEFLAGS+=	\
-	BUILDLINK_USE_BUILTIN.openssl=${BUILDLINK_USE_BUILTIN.openssl}
+MAKEFLAGS+=	BUILDLINK_IS_BUILTIN.openssl=${BUILDLINK_IS_BUILTIN.openssl}
+.endif
+
+.if !empty(BUILDLINK_IS_BUILTIN.openssl:M[yY][eE][sS])
+BUILDLINK_USE_BUILTIN.openssl=	YES
+.else
+BUILDLINK_USE_BUILTIN.openssl=	NO
+.endif
+
+.if !empty(PREFER_PKGSRC:M[yY][eE][sS]) || \
+    !empty(PREFER_PKGSRC:Mopenssl)
+BUILDLINK_USE_BUILTIN.openssl=	NO
+.endif
+
+.if !empty(BUILDLINK_CHECK_BUILTIN.openssl:M[yY][eE][sS])
+BUILDLINK_USE_BUILTIN.openssl=	YES
 .endif
 
 .if !defined(_NEED_NEWER_OPENSSL)

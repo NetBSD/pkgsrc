@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.18 2004/02/05 07:17:14 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.19 2004/02/12 01:59:37 jlam Exp $
 #
 # Optionally define:
 #
@@ -14,45 +14,62 @@ NCURSES_BUILDLINK2_MK=	# defined
 BUILDLINK_DEPENDS.ncurses?=	ncurses>=5.3nb1
 BUILDLINK_PKGSRCDIR.ncurses?=	../../devel/ncurses
 
-.if defined(USE_NCURSES)
-_NEED_NCURSES=		YES
-.else
-_NEED_NCURSES=		NO
+.if !defined(_BLNK_LIBNCURSES_FOUND)
+_BLNK_LIBNCURSES_FOUND!=        \
+	if [ "`${ECHO} /usr/lib/libncurses.*`" = "/usr/lib/libncurses.*" ]; then \
+		${ECHO} "NO";						\
+	else								\
+		${ECHO} "YES";						\
+	fi
+MAKEFLAGS+=	_BLNK_LIBNCURSES_FOUND=${_BLNK_LIBNCURSES_FOUND}
+.endif
 
-#
-# Handle the base system not having (n)curses.
-#
-.  if !(exists(/usr/include/curses.h) || exists(/usr/include/ncurses.h))
-_NEED_NCURSES=		YES
+.if !defined(BUILDLINK_IS_BUILTIN.ncurses)
+BUILDLINK_IS_BUILTIN.ncurses=	NO
+.  if ${_BLNK_LIBNCURSES_FOUND} == "YES"
+BUILDLINK_IS_BUILTIN.ncurses=	YES
+.  elif exists(${_NCURSES_H})
+BUILDLINK_IS_BUILTIN.ncurses!=						\
+	if ${GREP} -q "\#define[ 	]*NCURSES_VERSION" ${_NCURSES_H}; then \
+		${ECHO} "YES";						\
+	else								\
+		${ECHO} "NO";						\
+	fi
 .  endif
 #
-# These versions of NetBSD didn't have a curses library that was capable of
-# replacing ncurses.
+# XXX By default, assume that the builtin curses on NetBSD systems
+# XXX supports ncurses.
+#
+.  if ${OPSYS} == "NetBSD"
+BUILDLINK_IS_BUILTIN.ncurses=	YES
+#
+# These versions of NetBSD didn't have a curses library that was
+# capable of replacing ncurses.
+#
+# XXX In reality, no version of NetBSD has a curses library that can
+# XXX completely replace ncurses; however, some version implement
+# XXX enough of ncurses that some packages are happy.
 #
 _INCOMPAT_CURSES=	NetBSD-0.*-* NetBSD-1.[0123]*-*
 _INCOMPAT_CURSES+=	NetBSD-1.4.*-* NetBSD-1.4[A-X]-*
-#
-# This catch-all for SunOS is probably too broad, but better to err on
-# the safe side.  We can narrow down the match when we have better
-# information.
-#
-_INCOMPAT_CURSES+=	SunOS-*-*
-#
-# Similarly for IRIX and Darwin
-#
-_INCOMPAT_CURSES+=	IRIX-*-*
-_INCOMPAT_CURSES+=	Darwin-*-*
-INCOMPAT_CURSES?=	# empty
-.  for _pattern_ in ${_INCOMPAT_CURSES} ${INCOMPAT_CURSES}
-.    if !empty(MACHINE_PLATFORM:M${_pattern_})
+.    for _pattern_ in ${_INCOMPAT_CURSES} ${INCOMPAT_CURSES}
+.      if !empty(MACHINE_PLATFORM:M${_pattern_})
+BUILDLINK_IS_BUILTIN.ncurses=   NO
+.      endif
+.    endfor
+.  endif
+MAKEFLAGS+=	BUILDLINK_IS_BUILTIN.ncurses=${BUILDLINK_IS_BUILTIN.ncurses}
+.endif
+
+.if !empty(BUILDLINK_IS_BUILTIN.ncurses:M[yY][eE][sS])
+_NEED_NCURSES=		NO
+.else
 _NEED_NCURSES=		YES
-.    endif
-.  endfor
 .endif
 
 .if !empty(PREFER_PKGSRC:M[yY][eE][sS]) || \
     !empty(PREFER_PKGSRC:Mncurses)
-_NEED_NCURSES=	YES
+_NEED_NCURSES=		YES
 .endif
 
 .if ${_NEED_NCURSES} == "YES"
@@ -87,8 +104,7 @@ BUILDLINK_FILES.ncurses+=	lib/libncurses.*
 BUILDLINK_FILES.ncurses+=	lib/libpanel.*
 
 .if ${_NEED_NCURSES} == "NO"
-_BLNK_LIBNCURSES_LIST!=		${ECHO} /usr/lib/libncurses.*
-.  if ${_BLNK_LIBNCURSES_LIST} == "/usr/lib/libncurses.*"
+.  if !empty(_BLNK_LIBNCURSES_FOUND:M[yY][eE][sS])
 BUILDLINK_FILES.ncurses+=	lib/libcurses.*
 BUILDLINK_TRANSFORM.ncurses+=	-e "s|/curses.h|/ncurses.h|g"
 BUILDLINK_TRANSFORM+=		l:ncurses:curses

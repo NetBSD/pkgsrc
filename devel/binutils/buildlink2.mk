@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.13 2004/02/05 07:17:14 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.14 2004/02/12 01:59:37 jlam Exp $
 
 .if !defined(BINUTILS_BUILDLINK2_MK)
 BINUTILS_BUILDLINK2_MK=	# defined
@@ -9,11 +9,6 @@ BUILDLINK_DEPENDS.binutils?=		binutils>=2.14.0
 BUILDLINK_PKGSRCDIR.binutils?=		../../devel/binutils
 BUILDLINK_DEPMETHOD.binutils?=		build
 
-.if defined(USE_BINUTILS)
-_NEED_BINUTILS=		YES
-.else
-_NEED_BINUTILS=		NO
-#
 # These versions of NetBSD didn't have a toolchain that could be used in
 # place of modern binutils and will need this package
 #
@@ -23,16 +18,25 @@ _INCOMPAT_BINUTILS+=	NetBSD-1.5.*-* NetBSD-1.5[A-X]-*
 # XXX: _INCOMPAT_BINUTILS settings for other operating systems possibly
 # XXX: needed here
 #
-INCOMPAT_BINUTILS?=       # empty
-.  for _pattern_ in ${_INCOMPAT_BINUTILS} ${INCOMPAT_BINUTILS}
-.    if !empty(MACHINE_PLATFORM:M${_pattern_})
-_NEED_BINUTILS=          YES
-.    endif
-.  endfor
+_BUILTIN_BINUTILS=	YES
+.for _pattern_ in ${_INCOMPAT_BINUTILS} ${INCOMPAT_BINUTILS}
+.  if !empty(MACHINE_PLATFORM:M${_pattern_})
+_BUILTIN_BINUTILS=	NO
+.  endif
+.endfor
+
+.if ${_BUILTIN_BINUTILS} == "YES"
+_NEED_BINUTILS=		NO
+.else
+_NEED_BINUTILS=		YES
 .endif
 
 .if !empty(PREFER_PKGSRC:M[yY][eE][sS]) || \
     !empty(PREFER_PKGSRC:Mbinutils)
+_NEED_BINUTILS=		YES
+.endif
+
+.if defined(USE_BINUTILS)
 _NEED_BINUTILS=		YES
 .endif
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.19 2004/02/06 19:04:25 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.20 2004/02/12 01:59:38 jlam Exp $
 
 .if !defined(OPENSSL_BUILDLINK2_MK)
 OPENSSL_BUILDLINK2_MK=	# defined
@@ -20,21 +20,6 @@ _OPENSSL_OPENSSLV_H=	/usr/include/openssl/opensslv.h
 .if !defined(BUILDLINK_IS_BUILTIN.openssl)
 BUILDLINK_IS_BUILTIN.openssl=	NO
 .  if exists(${_OPENSSL_OPENSSLV_H})
-BUILDLINK_IS_BUILTIN.openssl=	YES
-.  endif
-.endif
-
-.if !empty(PREFER_PKGSRC:M[yY][eE][sS]) || \
-    !empty(PREFER_PKGSRC:Mopenssl)
-_NEED_OPENSSL=	YES
-.endif
-
-.if !empty(BUILDLINK_CHECK_BUILTIN.openssl:M[yY][eE][sS])
-_NEED_OPENSSL=	NO
-.else
-.  if !empty(BUILDLINK_IS_BUILTIN.openssl:M[nN][oO])
-_NEED_OPENSSL=	YES
-.  elif !defined(_NEED_OPENSSL)
 #
 # Create an appropriate name for the built-in package distributed
 # with the system.  This package name can be used to check against
@@ -104,14 +89,29 @@ _OPENSSL_PKG=		openssl-0.9.6l
 .    endif
 
 _OPENSSL_DEPENDS=	${BUILDLINK_DEPENDS.openssl}
-_NEED_OPENSSL!=		\
+BUILDLINK_IS_BUILTIN.openssl!=	\
 	if ${PKG_ADMIN} pmatch '${_OPENSSL_DEPENDS}' ${_OPENSSL_PKG}; then \
-		${ECHO} "NO";						\
-	else								\
 		${ECHO} "YES";						\
+	else								\
+		${ECHO} "NO";						\
 	fi
-MAKEFLAGS+=	_NEED_OPENSSL=${_NEED_OPENSSL}
-.  endif   # !defined(_NEED_OPENSSL)
+.  endif
+MAKEFLAGS+=	BUILDLINK_IS_BUILTIN.openssl=${BUILDLINK_IS_BUILTIN.openssl}
+.endif
+
+.if !empty(BUILDLINK_IS_BUILTIN.openssl:M[yY][eE][sS])
+_NEED_OPENSSL=	NO
+.else
+_NEED_OPENSSL=	YES
+.endif
+
+.if !empty(PREFER_PKGSRC:M[yY][eE][sS]) || \
+    !empty(PREFER_PKGSRC:Mopenssl)
+_NEED_OPENSSL=	YES
+.endif
+
+.if !empty(BUILDLINK_CHECK_BUILTIN.openssl:M[yY][eE][sS])
+_NEED_OPENSSL=	NO
 .endif
 
 .if !defined(_NEED_NEWER_OPENSSL)
