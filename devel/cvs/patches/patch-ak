@@ -1,8 +1,8 @@
-$NetBSD: patch-ak,v 1.5 2003/07/12 09:19:19 wiz Exp $
+$NetBSD: patch-ak,v 1.6 2005/03/01 15:36:48 wiz Exp $
 
---- src/checkout.c.orig	Thu Feb 27 18:47:01 2003
+--- src/checkout.c.orig	2005-01-31 23:11:04.000000000 +0100
 +++ src/checkout.c
-@@ -191,7 +191,7 @@ checkout (argc, argv)
+@@ -196,7 +196,7 @@ checkout (argc, argv)
  	    case 'p':
  		pipeout = 1;
  		run_module_prog = 0;	/* don't run module prog when piping */
