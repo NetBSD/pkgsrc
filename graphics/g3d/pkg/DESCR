@@ -1,0 +1,4 @@
+This is G3D. It is a 3D modeller with a narrow view of 3D modelling. 
+That is: I wrote this up to make models for 3D games. This means that 
+advanced modelling features (NURBS, animation, other stuff like that) 
+is not included. It probably never will be either. 
