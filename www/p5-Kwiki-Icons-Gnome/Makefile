@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/12/26 22:34:33 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2004/12/26 23:21:42 jlam Exp $
 
 DISTNAME=      	Kwiki-Icons-Gnome-0.14
 PKGNAME=       	p5-${DISTNAME}
 CATEGORIES=	www perl5
-MASTER_SITES=	${MASTER_SITE_PERL_CPAN:S/${MODULE_DIR}/${AUTHOR_DIR}/}
-MODULE_DIR=	module/by-module
-AUTHOR_DIR=	authors/id/I/IA/IAN
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Kwiki/}
 
 MAINTAINER=	jlam@NetBSD.org
 HOMEPAGE=	http://www.kwiki.org/
