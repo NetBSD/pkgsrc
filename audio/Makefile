@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.206 2004/01/26 15:45:21 jmmv Exp $
+# $NetBSD: Makefile,v 1.207 2004/02/09 00:35:59 chris Exp $
 #
 
 COMMENT=	Audio tools
@@ -160,6 +160,7 @@ SUBDIR+=	streamtuner
 SUBDIR+=	streamtuner-live365
 SUBDIR+=	streamtuner-local
 SUBDIR+=	sweep
+SUBDIR+=	taglib
 SUBDIR+=	tcl-snack
 SUBDIR+=	tfmxplay
 SUBDIR+=	timidity
@@ -168,6 +169,7 @@ SUBDIR+=	tosha
 SUBDIR+=	tracker
 SUBDIR+=	tremor
 SUBDIR+=	tremor-tools
+SUBDIR+=	trm
 SUBDIR+=	vorbis-tools
 SUBDIR+=	wavesurfer
 SUBDIR+=	wmmixer
