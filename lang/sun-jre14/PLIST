@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2003/08/10 22:28:22 jschauma Exp $
+@comment $NetBSD: PLIST,v 1.9 2003/08/13 03:29:55 jschauma Exp $
 .systemPrefs/.system.lock
 .systemPrefs/.systemRootModFile
 CHANGES
@@ -6,6 +6,7 @@ COPYRIGHT
 ControlPanel.html
 LICENSE
 README
+THIRDPARTYLICENSEREADME.txt
 Welcome.html
 bin/ControlPanel
 bin/java
@@ -20,7 +21,37 @@ bin/rmid
 bin/rmiregistry
 bin/servertool
 bin/tnameserv
-javaws-1_2_0_04-linux-i586-i.zip
+javaws/cacerts
+javaws/javalogo52x88.gif
+javaws/javaws
+javaws/javaws-l10n.jar
+javaws/javaws.jar
+javaws/javaws.policy
+javaws/javawsbin
+javaws/readme.html
+javaws/readme_de.html
+javaws/readme_es.html
+javaws/readme_fr.html
+javaws/readme_it.html
+javaws/readme_ja.html
+javaws/readme_ko.html
+javaws/readme_sv.html
+javaws/readme_zh_CN.html
+javaws/readme_zh_TW.html
+javaws/resources/copyright.jpg
+javaws/resources/messages.properties
+javaws/resources/messages_de.properties
+javaws/resources/messages_es.properties
+javaws/resources/messages_fr.properties
+javaws/resources/messages_it.properties
+javaws/resources/messages_ja.properties
+javaws/resources/messages_ko.properties
+javaws/resources/messages_sv.properties
+javaws/resources/messages_zh_CN.properties
+javaws/resources/messages_zh_TW.properties
+javaws/resources/miniSplash.jpg
+javaws/resources/splash.jpg
+javaws/sunlogo64x30.gif
 lib/audio/soundbank.gm
 lib/charsets.jar
 lib/cmm/CIEXYZ.pf
@@ -39,6 +70,14 @@ lib/font.properties.Redhat6.1.default
 lib/font.properties.ja.default
 lib/font.properties.ja.Redhat6.1.default
 lib/font.properties.ja.Redhat6.2.default
+lib/font.properties.Redhat8.0
+lib/font.properties.SuSE8.0
+lib/font.properties.ja.Redhat7.2
+lib/font.properties.ja.Redhat7.3
+lib/font.properties.ja.Redhat8.0
+lib/font.properties.ko.Redhat8.0
+lib/font.properties.zh_CN.Redhat8.0
+lib/font.properties.zh_TW.Redhat8.0
 lib/font.properties.ja.Turbo.default
 lib/font.properties.ja.Turbo6.0.default
 lib/font.properties.zh.Turbo.default
@@ -77,7 +116,9 @@ lib/i386/libjdwp.so
 lib/i386/libjpeg.so
 lib/i386/libjsig.so
 lib/i386/libjsound.so
+lib/i386/libjsoundalsa.so
 lib/i386/libmlib_image.so
+lib/i386/libnative_chmod.so
 lib/i386/libnet.so
 lib/i386/libnio.so
 lib/i386/librmi.so
@@ -88,6 +129,7 @@ lib/i386/server/Xusage.txt
 lib/i386/server/libjsig.so
 lib/i386/server/libjvm.so
 lib/im/indicim.jar
+lib/im/thaiim.jar
 lib/images/cursors/cursors.properties.default
 lib/images/cursors/invalid32x32.gif
 lib/images/cursors/motif_CopyDrop32x32.gif
@@ -96,7 +138,6 @@ lib/images/cursors/motif_LinkDrop32x32.gif
 lib/images/cursors/motif_LinkNoDrop32x32.gif
 lib/images/cursors/motif_MoveDrop32x32.gif
 lib/images/cursors/motif_MoveNoDrop32x32.gif
-lib/javaplugin.jar
 lib/jce.jar
 lib/jsse.jar
 lib/jvm.hprof.txt
@@ -114,6 +155,7 @@ lib/locale/zh/LC_MESSAGES/sunw_java_plugin.mo
 lib/locale/zh_TW.BIG5/LC_MESSAGES/sunw_java_plugin.mo
 lib/locale/zh_TW/LC_MESSAGES/sunw_java_plugin.mo
 lib/logging.properties.default
+lib/plugin.jar
 lib/psfont.properties.ja.default
 lib/psfontj2d.properties.default
 lib/rt.jar
@@ -296,6 +338,7 @@ lib/zi/Antarctica/DumontDUrville
 lib/zi/Antarctica/Mawson
 lib/zi/Antarctica/McMurdo
 lib/zi/Antarctica/Palmer
+lib/zi/Antarctica/Rothera
 lib/zi/Antarctica/Syowa
 lib/zi/Antarctica/Vostok
 lib/zi/Asia/Aden
@@ -526,7 +569,11 @@ lib/zi/WET
 lib/zi/ZoneInfoMappings
 man/ja
 man/ja_JP.eucJP/man1/java.1
+man/ja_JP.eucJP/man1/javaws.1
 man/ja_JP.eucJP/man1/keytool.1
+man/ja_JP.eucJP/man1/kinit.1
+man/ja_JP.eucJP/man1/klist.1
+man/ja_JP.eucJP/man1/ktab.1
 man/ja_JP.eucJP/man1/orbd.1
 man/ja_JP.eucJP/man1/policytool.1
 man/ja_JP.eucJP/man1/rmid.1
@@ -534,20 +581,27 @@ man/ja_JP.eucJP/man1/rmiregistry.1
 man/ja_JP.eucJP/man1/servertool.1
 man/ja_JP.eucJP/man1/tnameserv.1
 man/man1/java.1
+man/man1/javaws.1
 man/man1/keytool.1
+man/man1/kinit.1
+man/man1/klist.1
+man/man1/ktab.1
 man/man1/orbd.1
 man/man1/policytool.1
 man/man1/rmid.1
 man/man1/rmiregistry.1
 man/man1/servertool.1
 man/man1/tnameserv.1
-plugin/i386/ns4/javaplugin.so
-plugin/i386/ns600/libjavaplugin_oji.so
+plugin/desktop/sun_java.desktop
+plugin/desktop/sun_java.png
+plugin/i386/ns4/libjavaplugin.so
 plugin/i386/ns610/libjavaplugin_oji.so
+plugin/i386/ns610-gcc32/libjavaplugin_oji.so
+@dirrm plugin/i386/ns610-gcc32
 @dirrm plugin/i386/ns610
-@dirrm plugin/i386/ns600
 @dirrm plugin/i386/ns4
 @dirrm plugin/i386
+@dirrm plugin/desktop
 @dirrm plugin
 @dirrm man/man1
 @dirrm man/ja_JP.eucJP/man1
@@ -601,5 +655,7 @@ plugin/i386/ns610/libjavaplugin_oji.so
 @dirrm lib/ext
 @dirrm lib/cmm
 @dirrm lib/audio
+@dirrm javaws/resources
+@dirrm javaws
 @dirrm bin
 @dirrm .systemPrefs
