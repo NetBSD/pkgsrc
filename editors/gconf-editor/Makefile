@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2004/12/11 06:53:21 minskim Exp $
+# $NetBSD: Makefile,v 1.27 2004/12/12 15:33:27 minskim Exp $
 #
 
 DISTNAME=		gconf-editor-2.8.2
@@ -15,7 +15,7 @@ BUILD_USES_MSGFMT=	YES
 
 GNU_CONFIGURE=		YES
 USE_BUILDLINK3=		YES
-USE_DIRS+=		xdg-1.1
+USE_DIRS+=		xdg-1.1 gnome2-1.5
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
 USE_GNU_TOOLS+=		make
