@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.18 2003/01/10 07:52:18 cjep Exp $
+# $NetBSD: Makefile.common,v 1.18.2.1 2003/06/19 01:04:41 grant Exp $
 
 DISTNAME=		mc-4.5.51
 CATEGORIES+=		sysutils
@@ -20,7 +20,7 @@ USE_GMAKE=		yes
 
 GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--without-included-gettext
-CONFIGURE_ARGS+=	--with-netrc --with-slang
+CONFIGURE_ARGS+=	--with-netrc --with-included-slang
 CONFIGURE_ARGS+=	--with-samba
 CONFIGURE_ARGS+=	--without-tk
 
@@ -45,5 +45,4 @@ CFLAGS+= -DSunOS
 
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../devel/glib/buildlink2.mk"
-.include "../../devel/libslang/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
