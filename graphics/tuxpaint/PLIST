@@ -1,0 +1,224 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2002/09/27 11:07:23 wiz Exp $
+bin/tuxpaint
+bin/tuxpaint-import
+share/doc/tuxpaint/AUTHORS.txt
+share/doc/tuxpaint/CHANGES.txt
+share/doc/tuxpaint/COPYING.txt
+share/doc/tuxpaint/PNG.txt
+share/doc/tuxpaint/README.txt
+share/doc/tuxpaint/TODO.txt
+share/doc/tuxpaint/da/README.txt
+share/doc/tuxpaint/de/ANBRINGEN.txt
+share/doc/tuxpaint/de/AUTOREN.txt
+share/doc/tuxpaint/de/FAQ.txt
+share/doc/tuxpaint/de/GELESEN_MIR.txt
+share/doc/tuxpaint/de/KOPIE.txt
+share/doc/tuxpaint/de/PNG.txt
+share/doc/tuxpaint/es/AUTORES.txt
+share/doc/tuxpaint/es/COPIADO.txt
+share/doc/tuxpaint/es/FAQ.txt
+share/doc/tuxpaint/es/INSTALACION.txt
+share/doc/tuxpaint/es/LEEME.txt
+share/doc/tuxpaint/es/PNG.txt
+share/doc/tuxpaint/fi/AUTHORS.txt
+share/doc/tuxpaint/fi/COPYING.txt
+share/doc/tuxpaint/fi/FAQ.txt
+share/doc/tuxpaint/fi/INSTALL.txt
+share/doc/tuxpaint/fi/PNG.txt
+share/doc/tuxpaint/fi/README.txt
+share/doc/tuxpaint/fr/AUTHORS.txt
+share/doc/tuxpaint/fr/COPIER.txt
+share/doc/tuxpaint/fr/FAQ.txt
+share/doc/tuxpaint/fr/INSTALL.txt
+share/doc/tuxpaint/fr/PNG.txt
+share/doc/tuxpaint/fr/README.txt
+share/doc/tuxpaint/it/AUTHORS.txt
+share/doc/tuxpaint/it/COPIATURA.txt
+share/doc/tuxpaint/it/FAQ.txt
+share/doc/tuxpaint/it/INSTALL.txt
+share/doc/tuxpaint/it/PNG.txt
+share/doc/tuxpaint/it/README.txt
+share/doc/tuxpaint/nl/AUTHORS.txt
+share/doc/tuxpaint/nl/COPYING_nl.txt
+share/doc/tuxpaint/nl/FAQ.txt
+share/doc/tuxpaint/nl/INSTALL.txt
+share/doc/tuxpaint/nl/PNG.txt
+share/doc/tuxpaint/nl/README.txt
+share/doc/tuxpaint/nn/AUTHORS.txt
+share/doc/tuxpaint/nn/COPYING.txt
+share/doc/tuxpaint/nn/FAQ.txt
+share/doc/tuxpaint/nn/INSTALLERING.txt
+share/doc/tuxpaint/nn/PNG.txt
+share/doc/tuxpaint/nn/README.txt
+share/doc/tuxpaint/tr/AUTHORS.txt
+share/doc/tuxpaint/tr/COPYING_tr.txt
+share/doc/tuxpaint/tr/FAQ.txt
+share/doc/tuxpaint/tr/INSTALL.txt
+share/doc/tuxpaint/tr/PNG.txt
+share/doc/tuxpaint/tr/README.txt
+${PKGLOCALEDIR}/locale/da/LC_MESSAGES/tuxpaint.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/tuxpaint.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/tuxpaint.mo
+${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/tuxpaint.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/tuxpaint.mo
+${PKGLOCALEDIR}/locale/is/LC_MESSAGES/tuxpaint.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/tuxpaint.mo
+${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/tuxpaint.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/tuxpaint.mo
+${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/tuxpaint.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/tuxpaint.mo
+${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/tuxpaint.mo
+share/tuxpaint/brushes/round_06.png
+share/tuxpaint/brushes/round_12.png
+share/tuxpaint/brushes/round_24.png
+share/tuxpaint/brushes/round_36.png
+share/tuxpaint/brushes/round_fuzz.png
+share/tuxpaint/brushes/round_seethru.png
+share/tuxpaint/brushes/slash_10_lt.png
+share/tuxpaint/brushes/slash_10_rt.png
+share/tuxpaint/brushes/slash_16_lt.png
+share/tuxpaint/brushes/slash_16_rt.png
+share/tuxpaint/brushes/slash_20_lt.png
+share/tuxpaint/brushes/slash_20_rt.png
+share/tuxpaint/brushes/spray.png
+share/tuxpaint/brushes/x.png
+share/tuxpaint/fonts/default_font.ttf
+share/tuxpaint/fonts/efont_serif.ttf
+share/tuxpaint/fonts/efont_serif_b.ttf
+share/tuxpaint/fonts/efont_serif_bi.ttf
+share/tuxpaint/fonts/efont_serif_i.ttf
+share/tuxpaint/images/icon-win32.png
+share/tuxpaint/images/icon.png
+share/tuxpaint/images/icon16x16.png
+share/tuxpaint/images/icon32x32.png
+share/tuxpaint/images/icon32x32.xpm
+share/tuxpaint/images/icon48x48.png
+share/tuxpaint/images/magic/blocks.png
+share/tuxpaint/images/magic/blur.png
+share/tuxpaint/images/magic/chalk.png
+share/tuxpaint/images/magic/drip.png
+share/tuxpaint/images/magic/fade.png
+share/tuxpaint/images/magic/fill.png
+share/tuxpaint/images/magic/flip.png
+share/tuxpaint/images/magic/mirror.png
+share/tuxpaint/images/magic/negative.png
+share/tuxpaint/images/magic/rainbow.png
+share/tuxpaint/images/magic/sparkles.png
+share/tuxpaint/images/magic/thick.png
+share/tuxpaint/images/magic/thin.png
+share/tuxpaint/images/shapes/circle.png
+share/tuxpaint/images/shapes/circle_f.png
+share/tuxpaint/images/shapes/diamond.png
+share/tuxpaint/images/shapes/diamond_f.png
+share/tuxpaint/images/shapes/oval.png
+share/tuxpaint/images/shapes/oval_f.png
+share/tuxpaint/images/shapes/pentagon.png
+share/tuxpaint/images/shapes/pentagon_f.png
+share/tuxpaint/images/shapes/rectangle.png
+share/tuxpaint/images/shapes/rectangle_f.png
+share/tuxpaint/images/shapes/square.png
+share/tuxpaint/images/shapes/square_f.png
+share/tuxpaint/images/shapes/triangle.png
+share/tuxpaint/images/shapes/triangle_f.png
+share/tuxpaint/images/title.jpg
+share/tuxpaint/images/titles/brushes.png
+share/tuxpaint/images/titles/colors.png
+share/tuxpaint/images/titles/letters.png
+share/tuxpaint/images/titles/magic.png
+share/tuxpaint/images/titles/nocolors.png
+share/tuxpaint/images/titles/none.png
+share/tuxpaint/images/titles/shapes.png
+share/tuxpaint/images/titles/stamps.png
+share/tuxpaint/images/titles/tools.png
+share/tuxpaint/images/tools/brush.png
+share/tuxpaint/images/tools/eraser.png
+share/tuxpaint/images/tools/lines.png
+share/tuxpaint/images/tools/magic.png
+share/tuxpaint/images/tools/new.png
+share/tuxpaint/images/tools/open.png
+share/tuxpaint/images/tools/print.png
+share/tuxpaint/images/tools/quit.png
+share/tuxpaint/images/tools/redo.png
+share/tuxpaint/images/tools/save.png
+share/tuxpaint/images/tools/shapes.png
+share/tuxpaint/images/tools/stamp.png
+share/tuxpaint/images/tools/text.png
+share/tuxpaint/images/tools/undo.png
+share/tuxpaint/images/tux/bored.png
+share/tuxpaint/images/tux/default.png
+share/tuxpaint/images/tux/great.png
+share/tuxpaint/images/tux/kiss.png
+share/tuxpaint/images/tux/oops.png
+share/tuxpaint/images/tux/wait.png
+share/tuxpaint/images/ui/back.png
+share/tuxpaint/images/ui/btn_down.png
+share/tuxpaint/images/ui/btn_off.png
+share/tuxpaint/images/ui/btn_up.png
+share/tuxpaint/images/ui/color_btn_down.png
+share/tuxpaint/images/ui/color_btn_up.png
+share/tuxpaint/images/ui/cursor_down.png
+share/tuxpaint/images/ui/cursor_up.png
+share/tuxpaint/images/ui/erase.png
+share/tuxpaint/images/ui/no.png
+share/tuxpaint/images/ui/open.png
+share/tuxpaint/images/ui/paintcan.png
+share/tuxpaint/images/ui/progress.png
+share/tuxpaint/images/ui/scroll_down.png
+share/tuxpaint/images/ui/scroll_down_off.png
+share/tuxpaint/images/ui/scroll_up.png
+share/tuxpaint/images/ui/scroll_up_off.png
+share/tuxpaint/images/ui/sparkles.png
+share/tuxpaint/images/ui/yes.png
+share/tuxpaint/sounds/bleep.wav
+share/tuxpaint/sounds/blocks.wav
+share/tuxpaint/sounds/blur.wav
+share/tuxpaint/sounds/bubble.wav
+share/tuxpaint/sounds/chalk.wav
+share/tuxpaint/sounds/click.wav
+share/tuxpaint/sounds/drip.wav
+share/tuxpaint/sounds/eraser1.wav
+share/tuxpaint/sounds/eraser2.wav
+share/tuxpaint/sounds/fade.wav
+share/tuxpaint/sounds/flip.wav
+share/tuxpaint/sounds/giggle.wav
+share/tuxpaint/sounds/harp.wav
+share/tuxpaint/sounds/keyclick.wav
+share/tuxpaint/sounds/line_end.wav
+share/tuxpaint/sounds/line_start.wav
+share/tuxpaint/sounds/mirror.wav
+share/tuxpaint/sounds/negative.wav
+share/tuxpaint/sounds/paint1.wav
+share/tuxpaint/sounds/paint2.wav
+share/tuxpaint/sounds/paint3.wav
+share/tuxpaint/sounds/paint4.wav
+share/tuxpaint/sounds/prompt.wav
+share/tuxpaint/sounds/rainbow.wav
+share/tuxpaint/sounds/return.wav
+share/tuxpaint/sounds/save.wav
+share/tuxpaint/sounds/scroll.wav
+share/tuxpaint/sounds/sparkles1.wav
+share/tuxpaint/sounds/sparkles2.wav
+share/tuxpaint/sounds/stamp.wav
+share/tuxpaint/sounds/thick.wav
+share/tuxpaint/sounds/thin.wav
+@dirrm share/tuxpaint/sounds
+@dirrm share/tuxpaint/images/ui
+@dirrm share/tuxpaint/images/tux
+@dirrm share/tuxpaint/images/tools
+@dirrm share/tuxpaint/images/titles
+@dirrm share/tuxpaint/images/shapes
+@dirrm share/tuxpaint/images/magic
+@dirrm share/tuxpaint/images
+@dirrm share/tuxpaint/fonts
+@dirrm share/tuxpaint/brushes
+@dirrm share/tuxpaint
+@dirrm share/doc/tuxpaint/tr
+@dirrm share/doc/tuxpaint/nn
+@dirrm share/doc/tuxpaint/nl
+@dirrm share/doc/tuxpaint/it
+@dirrm share/doc/tuxpaint/fr
+@dirrm share/doc/tuxpaint/fi
+@dirrm share/doc/tuxpaint/es
+@dirrm share/doc/tuxpaint/de
+@dirrm share/doc/tuxpaint/da
+@dirrm share/doc/tuxpaint
