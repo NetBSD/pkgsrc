@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2004/05/10 16:21:54 jmmv Exp $
+# $NetBSD: Makefile,v 1.4 2004/06/21 07:29:13 jmmv Exp $
 #
 
-DISTNAME=	gpass-0.4.2
+DISTNAME=	gpass-0.4.4
 CATEGORIES=	security gnome
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gpass/}
 
@@ -13,6 +13,7 @@ GNU_CONFIGURE=		YES
 USE_BUILDLINK3=		YES
 USE_DIRS+=		xdg-1.1
 USE_LIBTOOL=		YES
+USE_PKGLOCALEDIR=	YES
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libglade2/buildlink3.mk"
