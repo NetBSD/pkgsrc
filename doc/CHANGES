@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1619 2003/03/11 11:25:29 mjl Exp $
+$NetBSD: CHANGES,v 1.1620 2003/03/11 12:42:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1029,3 +1029,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated etherape to 0.9.0 [salo 2003-03-11]
 	Updated popa3d to 0.6.2 [wiz 2003-03-11]
 	Added p5-DBD-SQLite-0.25 [mjl 2003-03-11]
+	Updated iozone to 3.163 [wiz 2003-03-11]
