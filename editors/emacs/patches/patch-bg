@@ -1,7 +1,7 @@
-$NetBSD: patch-bg,v 1.3 2000/09/26 21:42:35 eeh Exp $
+$NetBSD: patch-bg,v 1.4 2001/10/06 22:04:22 hubertf Exp $
 
---- configure.in.orig	Tue Jun  6 00:42:49 2000
-+++ configure.in	Sun Jun 18 09:22:42 2000
+--- configure.in.orig	Mon Jun  5 17:42:49 2000
++++ configure.in
 @@ -66,6 +66,8 @@
  	  esac
  	  with_x_toolkit=$val
@@ -11,21 +11,22 @@ $NetBSD: patch-bg,v 1.3 2000/09/26 21:42:35 eeh Exp $
  
  #### Make srcdir absolute, if it isn't already.  It's important to
  #### avoid running the path through pwd unnecessary, since pwd can
-@@ -158,9 +160,12 @@
+@@ -158,9 +160,13 @@
  			machine=hp9000s300 ;;
        powerpc-apple-netbsd*) machine=macppc ;;
        mips-*-netbsd*)	machine=pmax ;;
 +      mipsel-*-netbsd*)	machine=pmax ;;
++      mipsev-*-netbsd*)	machine=mips ;;		# HF: what else?
        ns32k-*-netbsd*)	machine=ns32000 ;;
-+      powerpc-*-netbsd*) machine=macppc ;;
 -      sparc-*-netbsd*)	machine=sparc ;;
++      powerpc-*-netbsd*) machine=macppc ;;
 +      sparc*-*-netbsd*)	machine=sparc ;;
        vax-*-netbsd*)	machine=vax ;;
 +      arm*-*-netbsd*)	machine=arm ;;
      esac
    ;;
  
-@@ -1745,6 +1750,10 @@
+@@ -1745,6 +1751,10 @@
  
  if test -f /usr/lpp/X11/bin/smt.exp; then
    AC_DEFINE(HAVE_AIX_SMT_EXP)
