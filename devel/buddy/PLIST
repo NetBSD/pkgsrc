@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/12/31 00:04:19 kristerw Exp $
+include/bdd.h
+include/bvec.h
+include/fdd.h
+lib/libbdd.a
+share/doc/buddy/bddnotes.ps
+share/doc/buddy/buddy.ps
+share/doc/buddy/tech.txt
+@dirrm share/doc/buddy
