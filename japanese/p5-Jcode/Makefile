@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2001/05/31 23:13:56 taca Exp $
+# $NetBSD: Makefile,v 1.8 2001/06/12 22:19:20 taca Exp $
 #
 
-DISTNAME=	Jcode-0.72
+DISTNAME=	Jcode-0.73
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	converters japanese
 MASTER_SITES=	http://openlab.ring.gr.jp/Jcode/
@@ -14,7 +14,7 @@ DEPENDS+=	p5-MIME-Base64>=2.1:../../converters/p5-MIME-Base64
 
 USE_PERL5=	# defined
 PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/Jcode/.packlist
-ALL_TARGET=	all test
+ALL_TARGET+=	test
 
 pre-configure:
 	@cd ${WRKSRC}; ${RM} -f mac_install.pl win_install.pl
