@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7336 2004/10/04 09:22:21 minskim Exp $
+$NetBSD: CHANGES,v 1.7337 2004/10/04 09:48:17 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4538,3 +4538,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated firefox to 0.10.1 [grant 2004-10-04]
 	Updated firefox-gtk2 to 0.10.1 [grant 2004-10-04]
 	Updated xchm to 0.9.5 [minskim 2004-10-04]
+	Updated evolution-data-server to 1.0.1 [jmmv 2004-10-04]
