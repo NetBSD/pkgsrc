@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2002/09/29 10:41:36 jlam Exp $
+# $NetBSD: Makefile,v 1.39 2002/10/13 07:57:43 tron Exp $
 
 DISTNAME=		inn-2.3.3
 CATEGORIES=		news
@@ -17,6 +17,7 @@ PATCHFILES=		inn-2.3.3-v6-20020618.diff.gz
 PATCH_DIST_STRIP=	-p1
 
 INN_DATA_DIR?=		/var/news
+INN_SPOOL?=		${INN_DATA_DIR}/spool
 BUILD_DEFS+=		INN_DATA_DIR
 FILES_SUBST+=		INN_DATA_DIR=${INN_DATA_DIR}
 
@@ -31,7 +32,7 @@ CONFIGURE_ARGS+=	--enable-setgid-inews \
 			--with-etc-dir=${INN_DATA_DIR}/etc \
 			--with-log-dir=${INN_DATA_DIR}/log \
 			--with-run-dir=${INN_DATA_DIR}/run \
-			--with-spool-dir=${INN_DATA_DIR}/spool
+			--with-spool-dir=${INN_SPOOL}
 CONFIGURE_ENV+=		_PATH_PERL=${PERL5}
 
 PKG_USERS=		news:news::Internet\\ News:${INN_DATA_DIR}:${SH}
