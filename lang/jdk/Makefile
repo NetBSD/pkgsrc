@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2001/02/09 17:02:46 agc Exp $
+# $NetBSD: Makefile,v 1.23 2001/02/09 17:48:39 agc Exp $
 #
 
 VERSION=	1.1.8
@@ -49,15 +49,18 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 # This gross hack normalizes the shlib names so that automatic
 # shared library handling will work.
 pre-install:
-	@for X in ${WRKSRC}/lib/i386/green_threads/lib*.so ;do		\
+	@(cd ${WRKSRC}/lib/i386/green_threads;				\
+	${LN} -s libXm.so libXm.so.2;					\
+	for X in lib*.so ;do						\
+		if [ "$X" = "libXm.so" ]; then continue; fi;		\
 		if [ -f $$X.* ] ;then					\
 			${MV} $$X $$X.* ;				\
 			${LN} -s $$X.* $$X; 				\
 		elif [ -f "$$X" ] ;then					\
 			${MV} $$X $$X.${VERSION} ;			\
-			${LN} -s $$X.${VERSION} $$X; 			\
+			${LN} -s $$X.${VERSION} $$X;  			\
 		fi ;							\
-	done
+	done)
 .endif
 
 do-install:
