@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: printindex,v 1.2 2001/02/17 16:45:10 wiz Exp $
+# $NetBSD: printindex,v 1.3 2001/03/27 02:50:05 dmcmahill Exp $
 #
 #
 # Copyright (c) 2001 The NetBSD Foundation, Inc.
@@ -57,8 +57,31 @@ list=`grep '^[[:space:]]*'SUBDIR */Makefile | sed 's,/Makefile.*=[[:space:]]*,/,
 for pkgdir in $list
 do
 	cd $pkgdir
-	pkgname=`make show-var VARNAME=PKGNAME`
+	#pkgname=`make show-var VARNAME=PKGNAME`
 	echo "$pkgdir          $pkgname "
 	cd $cwd 
+done
+
+# get the list of packages which should always be installed during the build
+# Make sure these ended up in the index file.  For example, xpkgwedge, might
+# not be enabled for builds in pkgtools/xpkgwedge, but we may want to have
+# it listed in the index file.
+
+cd $cwd/pkgtools/pkglint && BULK_PREREQ=`make show-var VARNAME=BULK_PREREQ`
+cd $cwd
+
+for pkgdir in $BULK_PREREQ
+do
+	case $list in
+		*$pkgdir*)
+			# its already listed, do nothing
+			;;
+		*)
+			cd $cwd/$pkgdir
+			pkgname=`make show-var VARNAME=PKGNAME`
+			echo "$pkgdir          $pkgname "
+			cd $cwd 
+			;;
+	esac
 done
 
