@@ -1,4 +1,8 @@
-@comment $NetBSD: PLIST,v 1.3 1997/11/06 10:01:32 agc Exp $
+@comment $NetBSD: PLIST,v 1.4 1999/12/03 16:23:19 rh Exp $
 bin/fd
-man/ja_JP.EUC/man1/fd.1.gz
-etc/fdrc
+bin/fd-unicd.tbl
+share/doc/fd/FAQ
+share/doc/fd/HISTORY
+share/doc/fd/README
+share/doc/fd/ToAdmin
+@dirrm share/doc/fd
