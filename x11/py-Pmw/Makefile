@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2001/05/19 03:56:41 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2002/01/28 17:35:39 drochner Exp $
 #
 
 DISTNAME=	Pmw.0.8.5
-PKGNAME=	py-Pmw-0.8.5
+PKGNAME=	${PYPKGPREFIX}-Pmw-0.8.5
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pmw/}
 
@@ -10,23 +10,21 @@ MAINTAINER=	lukem@netbsd.org
 HOMEPAGE=	http://pmw.sourceforge.net/
 COMMENT=	python meta widgets
 
-DEPENDS+=       py-Tk>=2.0:../py-Tk
-
 PLIST_SRC=      ${WRKDIR}/.PLIST_SRC
-SITE_PKG=	lib/python2.0/site-packages
-PYTHON_LIBDIR=	${LOCALBASE}/${SITE_PKG}
 
 do-build:
 
 do-install:
 	(cd ${WRKDIR}; ${FIND} Pmw -type d | \
-	    sed -e 's,^,${PREFIX}/${SITE_PKG}/,' | ${XARGS} ${INSTALL_DATA_DIR})
+	    sed -e 's,^,${PREFIX}/${PYSITELIB}/,' | ${XARGS} ${INSTALL_DATA_DIR})
 	(cd ${WRKDIR}; for f in `${FIND} Pmw -type f`; do \
-	    ${INSTALL_DATA} $$f ${PREFIX}/${SITE_PKG}/$$f; done)
+	    ${INSTALL_DATA} $$f ${PREFIX}/${PYSITELIB}/$$f; done)
 	${CAT} ${PKGDIR}/PLIST.pre >${PLIST_SRC}
-	(cd ${PREFIX}; ${FIND} ${SITE_PKG}/Pmw \
+	(cd ${PREFIX}; ${FIND} ${PYSITELIB}/Pmw \
 		-type f -print >>${PLIST_SRC})
-	(cd ${PREFIX}; ${FIND} -d ${SITE_PKG}/Pmw \
+	(cd ${PREFIX}; ${FIND} -d ${PYSITELIB}/Pmw \
 		-type d -print | ${SED} -e "s/^/@dirrm /" >>${PLIST_SRC})
 
+.include "../../lang/python/extension.buildlink.mk"
+.include "../../x11/py-Tk/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
