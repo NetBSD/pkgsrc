@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/12/18 16:39:18 agc Exp $
+$NetBSD: distinfo,v 1.2 2005/02/24 12:14:03 agc Exp $
 
 SHA1 (rp-l2tp-0.3.tar.gz) = 3f4f08a5271f0adf1dd90567851f1a8e223ecb72
+RMD160 (rp-l2tp-0.3.tar.gz) = 25ed4a68a01c08f3acee1ce01a90673a568db55f
 Size (rp-l2tp-0.3.tar.gz) = 191418 bytes
 SHA1 (patch-aa) = a351d8bcea431bc47a0a375c770d07e059103841
 SHA1 (patch-ab) = 9013297a1e6fede036894be04413feb0cc1bb803

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2004/02/19 19:03:17 kristerw Exp $
+$NetBSD: distinfo,v 1.4 2005/02/24 12:14:06 agc Exp $
 
 SHA1 (waste-source.tar.gz) = 93583fb2577ee08f331d438bc1aa84aaa83d6386
+RMD160 (waste-source.tar.gz) = 3f3b53df78d1f0c457fc088ecdd8828050d07906
 Size (waste-source.tar.gz) = 214730 bytes
 SHA1 (patch-aa) = 14cd257dad060c713d070e03be341653d0116310
 SHA1 (patch-ab) = 078632b83f41e20fd129d592d638300e5cf364d6

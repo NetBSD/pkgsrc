@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/02/23 17:53:34 minskim Exp $
+$NetBSD: distinfo,v 1.2 2005/02/24 12:14:05 agc Exp $
 
 SHA1 (tcpick-0.1.19.tar.gz) = 06dc8879edf90c31afe114420919d11595866d93
+RMD160 (tcpick-0.1.19.tar.gz) = b04d3b62a7dcc3644c737dc43071ff90314ee23b
 Size (tcpick-0.1.19.tar.gz) = 98889 bytes

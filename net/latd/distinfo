@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2003/10/21 20:55:42 xtraeme Exp $
+$NetBSD: distinfo,v 1.3 2005/02/24 12:13:51 agc Exp $
 
 SHA1 (latd-1.18.tar.gz) = a7cecdb97507f485e726ea4c2fef0a59ad3adbae
+RMD160 (latd-1.18.tar.gz) = a0be3bd71b76c6a07c47fc2ad863526303d365bf
 Size (latd-1.18.tar.gz) = 233882 bytes
 SHA1 (patch-aa) = 70e2a543f471c9a818bfbe138137920d605d5aa9
 SHA1 (patch-ab) = 6d62fc224d383ca20758bc9a76a789e5f4b965e5

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.8 2004/01/11 16:08:13 jschauma Exp $
+$NetBSD: distinfo,v 1.9 2005/02/24 12:13:54 agc Exp $
 
 SHA1 (netsaint-plugins-1.2.9-4.tar.gz) = d4d6a52c0f5ca8470cd9b9ee52d427b2ecf940e6
+RMD160 (netsaint-plugins-1.2.9-4.tar.gz) = c89e6a7e3ff81587d22ce124551a0385be916438
 Size (netsaint-plugins-1.2.9-4.tar.gz) = 352023 bytes
 SHA1 (patch-aa) = 209680a6ffc320d1da82135027b9a5bd5d905690
 SHA1 (patch-ab) = a2dba2793eb369cbcb77635165f72c719503b5ce

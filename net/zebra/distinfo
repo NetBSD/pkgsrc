@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.12 2003/12/29 21:59:01 heas Exp $
+$NetBSD: distinfo,v 1.13 2005/02/24 12:14:08 agc Exp $
 
 SHA1 (zebra-0.94.tar.gz) = 793a6036bddd18a362a94ccd3e15062b5b7e7a17
+RMD160 (zebra-0.94.tar.gz) = 7e8964e8899ac999943522e7a62a90125b28a593
 Size (zebra-0.94.tar.gz) = 1319836 bytes
 SHA1 (patch-aa) = 689404752d3d793d9d2620303d6f3355f43e38cd
 SHA1 (patch-ab) = 6725c6034adaf5580186f46b7cd9e15c4de66db2

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2005/02/01 18:24:34 adrianp Exp $
+$NetBSD: distinfo,v 1.3 2005/02/24 12:13:42 agc Exp $
 
 SHA1 (arping-2.05.tar.gz) = 35434c22679284607a49319cf1ff566c0af935e6
+RMD160 (arping-2.05.tar.gz) = de682f2dc4e2dc7a60dd584bbed0a7834b7e85fd
 Size (arping-2.05.tar.gz) = 32287 bytes
 SHA1 (patch-aa) = bf47354f1c8d9157bea0a572d52ef5c9eea62dd4
 SHA1 (patch-ab) = 17ef8cc62a202589bb9efb276d1bd99772648a22

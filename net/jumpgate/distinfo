@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/03/05 03:43:50 grant Exp $
+$NetBSD: distinfo,v 1.2 2005/02/24 12:13:51 agc Exp $
 
 SHA1 (jumpgate-0.7.tar.gz) = 2edfe95746b94d30e325dc06fa489f3352107808
+RMD160 (jumpgate-0.7.tar.gz) = 1414be6f18e8dc4b335bd96dfa35ed56e7bf805d
 Size (jumpgate-0.7.tar.gz) = 40789 bytes

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.5 2002/09/18 10:40:12 tron Exp $
+$NetBSD: distinfo,v 1.6 2005/02/24 12:14:07 agc Exp $
 
 SHA1 (wmnet-1.06.tar.gz) = 978364e0ab45c71730c196334e8fced4ac0a7853
+RMD160 (wmnet-1.06.tar.gz) = a6ac89507370acecc9673f52fd26ae896cc5da5c
 Size (wmnet-1.06.tar.gz) = 27506 bytes
 SHA1 (patch-aa) = d999f66818c05f2f9a58571abc0e548bb2938a4b
 SHA1 (patch-ab) = 2c2fbc065a49bc27dd42660dda23393e02269714

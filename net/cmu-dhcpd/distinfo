@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2004/03/15 08:35:43 agc Exp $
+$NetBSD: distinfo,v 1.3 2005/02/24 12:13:44 agc Exp $
 
 SHA1 (CMU-dhcp-3.3.7+PU-9.tar.Z) = 9c7eb8f498eddd35d0eb9ceaa90451f06bb5cf27
+RMD160 (CMU-dhcp-3.3.7+PU-9.tar.Z) = b426f5580771ef635a34c336d0422cc31dd934d2
 Size (CMU-dhcp-3.3.7+PU-9.tar.Z) = 752011 bytes
 SHA1 (patch-aa) = bbedb6f3c01d6459f5e0623e8e165ecef6d09374
 SHA1 (patch-ab) = 94a2fa4094d8a494db3188dc1a415ed5eb2642bb

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/10/01 01:15:44 grant Exp $
+$NetBSD: distinfo,v 1.2 2005/02/24 12:14:03 agc Exp $
 
 SHA1 (rinetd.tar.gz) = 2498fa03c2ef50bf924ffd0a034d5de5e3258f21
+RMD160 (rinetd.tar.gz) = cccb194bae7bb2dde2eca45690a2618fbba10257
 Size (rinetd.tar.gz) = 115541 bytes
 SHA1 (patch-aa) = 885a732b1b3ea52dc0bbdad9b18ca0031fdcb889
 SHA1 (patch-ab) = 9fa5cf00111a56051a40d73293ca071c125802a0

@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2001/07/01 16:43:59 itojun Exp $
+$NetBSD: distinfo,v 1.2 2005/02/24 12:13:43 agc Exp $
 
 SHA1 (bridged-20010701.tar.gz) = 039087ee4c0e78c4897d28887f93835398fa818c
+RMD160 (bridged-20010701.tar.gz) = 89c56f7e26d5d056de78745db46260707c3a3647
 Size (bridged-20010701.tar.gz) = 29269 bytes

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.15 2003/11/13 06:43:45 xtraeme Exp $
+$NetBSD: distinfo,v 1.16 2005/02/24 12:13:50 agc Exp $
 
 SHA1 (ipa-1.3.6.tar.gz) = dcf5ebbf14600da0afba6a735f16a8b8ac84185e
+RMD160 (ipa-1.3.6.tar.gz) = d122d2f8c1b8bbdabb89f1fd1ccf9aa7f2867133
 Size (ipa-1.3.6.tar.gz) = 137156 bytes
 SHA1 (patch-aa) = 5599f55b657edc3ecb7f66378601d92e956a0983
 SHA1 (patch-ab) = edce3d9d03ee7456c440ce4179e1e8c39bb516f2

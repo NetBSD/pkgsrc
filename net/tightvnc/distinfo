@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.10 2004/05/11 04:22:49 snj Exp $
+$NetBSD: distinfo,v 1.11 2005/02/24 12:14:05 agc Exp $
 
 SHA1 (tightvnc-1.2.9_unixsrc.tar.bz2) = 62b55237676bbdc7f08771e6ff72c0f70264f4ee
+RMD160 (tightvnc-1.2.9_unixsrc.tar.bz2) = 57c4d24bbc008b7188ae4bb177fbb409bc1d26d3
 Size (tightvnc-1.2.9_unixsrc.tar.bz2) = 1738256 bytes
 SHA1 (patch-aa) = 3445af5bc4b85f7a45049378f5806a5c993503f4
 SHA1 (patch-ab) = b610979131497edae24119961bb56122e9d5a5c4
