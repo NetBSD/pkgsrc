@@ -1,0 +1,19 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/01/07 05:43:22 sakamoto Exp $
+
+--- Makefile.orig	Tue Nov 23 04:38:29 1999
++++ Makefile	Wed Jan  5 10:27:09 2000
+@@ -1,3 +1,2 @@
+-LIBDIR = -L/usr/X11R6/lib
+ LIBS   = -lXpm -lXext -lX11
+ FLAGS = -O2
+@@ -9,8 +8,8 @@
+ 
+ .c.o:
+-	cc -I/usr/X11R6/share/include $(FLAGS) -c -Wall $< -o $*.o
++	${CC} ${CPPFLAGS} $(FLAGS) -c -Wall $< -o $*.o
+ 
+ wmfstatus: $(OBJS)
+-	cc $(FLAGS) -o wmfstatus $^ -lXext $(LIBDIR) $(LIBS)
++	${CC} $(FLAGS) -o wmfstatus $(OBJS) ${LDFLAGS} $(LIBS)
+ 
+ all:: wmfstatus
