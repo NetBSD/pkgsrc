@@ -1,8 +1,8 @@
-$NetBSD: patch-cd,v 1.1.1.1 2000/01/19 08:03:00 itohy Exp $
+$NetBSD: patch-cd,v 1.2 2003/10/20 12:07:23 grant Exp $
 
---- interface/common_interface.c.orig	Tue Dec 14 13:28:00 1999
-+++ interface/common_interface.c	Sat Jan 15 16:55:18 2000
-@@ -13,19 +13,29 @@
+--- interface/common_interface.c.orig	2000-04-20 08:41:04.000000000 +1000
++++ interface/common_interface.c
+@@ -13,19 +13,28 @@
  #include "utils.h"
  #include "smallft.h"
  
@@ -16,8 +16,7 @@ $NetBSD: patch-cd,v 1.1.1.1 2000/01/19 08:03:00 itohy Exp $
    struct cdrom_volctrl volctl;
    if (ioctl(fd, CDROMVOLREAD, &volctl)) 
      return(1); /* failure */
-+#endif
-+#ifdef __NetBSD__
++#elif defined(__FreeBSD__) || defined(__NetBSD__)
 +  struct ioc_vol volctl;
 +  if (ioctl(fd, CDIOCGETVOL, &volctl)) 
 +    return(1); /* failure */
@@ -32,7 +31,7 @@ $NetBSD: patch-cd,v 1.1.1.1 2000/01/19 08:03:00 itohy Exp $
  /* Use the ioctl thingy above ping the cdrom; this will get model info */
  char *atapi_drive_info(int fd){
    /* Work around the fact that the struct grew without warning in
-@@ -46,6 +56,7 @@
+@@ -46,6 +55,7 @@ char *atapi_drive_info(int fd){
    free(id);
    return(ret);
  }
@@ -40,7 +39,7 @@ $NetBSD: patch-cd,v 1.1.1.1 2000/01/19 08:03:00 itohy Exp $
  
  int data_bigendianp(cdrom_drive *d){
    float lsb_votes=0;
-@@ -171,7 +182,9 @@
+@@ -171,7 +181,9 @@ int data_bigendianp(cdrom_drive *d){
     knows the leasoud/leadin size. */
  
  int FixupTOC(cdrom_drive *d,int tracks){
@@ -50,9 +49,11 @@ $NetBSD: patch-cd,v 1.1.1.1 2000/01/19 08:03:00 itohy Exp $
    int j;
    
    /* First off, make sure the 'starting sector' is >=0 */
-@@ -209,13 +222,24 @@
+@@ -208,14 +220,26 @@ int FixupTOC(cdrom_drive *d,int tracks){
+   /* For a scsi device, the ioctl must go to the specialized SCSI
       CDROM device, not the generic device. */
  
++#ifndef __FreeBSD__
    if (d->ioctl_fd != -1) {
 +#ifdef __linux__
      int result;
@@ -76,7 +77,7 @@ $NetBSD: patch-cd,v 1.1.1.1 2000/01/19 08:03:00 itohy Exp $
  
        /* This is an odd little piece of code --Monty */
  
-@@ -223,8 +247,8 @@
+@@ -223,14 +247,15 @@ int FixupTOC(cdrom_drive *d,int tracks){
        /* adjust end of last audio track to be in the first session */
        for (j = tracks-1; j >= 0; j--) {
  	if (j > 0 && !IS_AUDIO(d,j) && IS_AUDIO(d,j-1)) {
@@ -87,3 +88,10 @@ $NetBSD: patch-cd,v 1.1.1.1 2000/01/19 08:03:00 itohy Exp $
  	  break;
  	}
        }
+       return 1;
+     }
+   }
++#endif
+   return 0;
+ }
+ 
