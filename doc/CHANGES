@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1975 2003/04/19 03:56:02 rh Exp $
+$NetBSD: CHANGES,v 1.1976 2003/04/19 04:46:25 rh Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1655,3 +1655,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated canuum to 1.0nb2 [uebayasi 2003-04-19]
 	Deleted moz-linux-plugger [rh 2003-04-19]
 	Added moz-bin-plugger-4.0 [rh 2003-04-19]
+	Deleted mozilla-flash-bin [rh 2003-04-19]
+	Added moz-bin-flash-6.0.69 [rh 2003-04-19]
