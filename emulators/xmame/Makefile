@@ -1,19 +1,19 @@
-# $NetBSD: Makefile,v 1.25 1998/11/19 15:40:46 agc Exp $
+# $NetBSD: Makefile,v 1.26 1998/12/15 10:34:34 mycroft Exp $
 #
 
-DISTNAME=		xmame-0.34b5.2
+DISTNAME=		xmame-0.34b8.1
 CATEGORIES=		emulators games x11
-MASTER_SITES=		ftp://drake.dit.upm.es/xmame/ftpsite/
+MASTER_SITES=		http://xmame.retrogames.com/download/
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		mycroft@NetBSD.ORG
-HOMEPAGE=		http://drake.dit.upm.es/~mame/
+HOMEPAGE=		http://xmame.retrogames.com/
 
 DEPENDS=		unzip-5.32:../../archivers/unzip
 DEPENDS+=		xpm-3.4k:../../graphics/xpm
 
 CONFLICTS=		xmame-0.30.1 xmame-0.33b6.1 xmame-0.34b1.1 \
-			xmame-0.34b2.1 xmame-0.34b2.2
+			xmame-0.34b2.1 xmame-0.34b2.2 xmame-0.34b5.2
 
 NOT_FOR_ARCHS=		alpha	#gcc lossage
 
@@ -23,9 +23,10 @@ MAKE_ENV+=		OPSYS=${OPSYS} ARCH=${ARCH} DESTDIR=${DESTDIR} \
 			INSTALL_MAN="${INSTALL_MAN}" \
 			INSTALL_PROGRAM="${INSTALL_PROGRAM}" \
 			NETBSD_JOYSTICK="${NETBSD_JOYSTICK}" \
+			NETBSD_DGA="${NETBSD_DGA}" \
 			DISPLAY_METHOD="${DISPLAY_METHOD}"
 MAKEFILE=		makefile.unix
-DISPLAY_METHOD=		x11
+DISPLAY_METHOD= 	x11
 
 ROMPATH=		${PREFIX}/share/xmame
 SPOOLDIR=		/var/games/xmame
@@ -33,6 +34,11 @@ SPOOLDIR=		/var/games/xmame
 NETBSD_JOYSTICK=	yes
 .else
 NETBSD_JOYSTICK=	no
+.endif
+.if exists(/usr/X11R6/include/X11/extensions/xf86dga.h)
+NETBSD_DGA=		yes
+.else
+NETBSD_DGA=		no
 .endif
 
 post-patch:
