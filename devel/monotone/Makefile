@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2005/02/26 22:50:24 jmmv Exp $
+# $NetBSD: Makefile,v 1.6 2005/03/21 22:50:20 jmmv Exp $
 #
 
-DISTNAME=	monotone-0.16
-PKGREVISION=	1
+DISTNAME=	monotone-0.17
 CATEGORIES=	devel
 MASTER_SITES=	http://www.venge.net/monotone/
 
@@ -13,6 +12,7 @@ COMMENT=	Free distributed version control system
 GCC_REQD+=		3.0
 GNU_CONFIGURE=		yes
 INFO_FILES=		monotone.info
+UNLIMIT_RESOURCES+=	datasize
 USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
 USE_LANGUAGES=		c c++
@@ -33,7 +33,7 @@ CONFIGURE_ARGS+=	--disable-ipv6
 .endif
 
 .include "../../converters/libiconv/buildlink3.mk"
-.include "../../databases/sqlite/buildlink3.mk"
+.include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
