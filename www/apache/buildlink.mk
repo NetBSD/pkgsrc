@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.3 2001/10/29 05:43:47 jmc Exp $
+# $NetBSD: buildlink.mk,v 1.4 2001/12/02 19:41:04 jlam Exp $
 #
 # This Makefile fragment is included by packages that use apxs from Apache.
 #
@@ -48,7 +48,7 @@ apache-apxs-buildlink:
 	cookie=${BUILDLINK_DIR}/.apache_apxs_buildlink_done;		\
 	if [ ! -f $${cookie} ]; then					\
 		file=sbin/apxs;						\
-		${ECHO_MSG} "Creating script ${BUILDLINK_DIR}/$${file}."; \
+		${ECHO_BUILDLINK_MSG} "Creating script ${BUILDLINK_DIR}/$${file}."; \
 		${MKDIR} `${DIRNAME} ${BUILDLINK_DIR}/$${file}`;	\
 		${SED}	${_APACHE_APXS_SED}				\
 			${BUILDLINK_PREFIX.apache}/$${file}		\
