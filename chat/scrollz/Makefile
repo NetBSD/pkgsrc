@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/12/06 18:25:22 grant Exp $
+# $NetBSD: Makefile,v 1.2 2002/12/13 12:54:43 grant Exp $
 #
 
-DISTNAME=	ScrollZ-1.8l
-PKGNAME=	scrollz-1.8l
+DISTNAME=	ScrollZ-1.8m
+PKGNAME=	scrollz-1.8m
 CATEGORIES=	chat
 MASTER_SITES=   http://scrollz.broken.com/source/
 EXTRACT_SUFX=   .tar.bz2
