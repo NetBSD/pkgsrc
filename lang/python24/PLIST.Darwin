@@ -1,3 +1,4 @@
+@comment $NetBSD: PLIST.Darwin,v 1.2 2005/01/23 20:41:47 recht Exp $
 lib/python${PY_VER_SUFFIX}/lib-dynload/_CF.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/ColorPicker.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/autoGIL.so

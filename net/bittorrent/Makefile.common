@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2004/08/05 22:22:33 recht Exp $
+# $NetBSD: Makefile.common,v 1.9 2005/01/23 20:41:48 recht Exp $
 #
 
 DISTNAME=	BitTorrent-3.4.2
@@ -16,4 +16,4 @@ PATCHDIR=	${.CURDIR}/../../net/bittorrent/patches
 
 USE_BUILDLINK3=	YES
 
-PYTHON_VERSIONS_ACCEPTED=	23pth 22pth
+PYTHON_VERSIONS_ACCEPTED=	24 23 22

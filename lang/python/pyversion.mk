@@ -1,4 +1,4 @@
-# $NetBSD: pyversion.mk,v 1.30 2004/12/05 23:39:03 recht Exp $
+# $NetBSD: pyversion.mk,v 1.31 2005/01/23 20:41:46 recht Exp $
 
 .if !defined(PYTHON_PYVERSION_MK)
 PYTHON_PYVERSION_MK=	defined
@@ -7,23 +7,17 @@ PYTHON_PYVERSION_MK=	defined
 
 PYTHON_VERSION_DEFAULT?=		23
 .if ${OPSYS} == "Darwin"
-PYTHON_VERSIONS_INCOMPATIBLE+=		23 22 21 21pth 20 15
-BUILDLINK_DEPENDS.python22-pth?=	python22-pth>=2.2.3nb2
-BUILDLINK_DEPENDS.python23-pth?=	python23-pth>=2.3.3nb3
+PYTHON_VERSIONS_INCOMPATIBLE+=		23 22 21 20 15
 .endif
-PYTHON_VERSIONS_ACCEPTED?=		24 24pth 23 23pth 22 22pth 21 21pth 20
+PYTHON_VERSIONS_ACCEPTED?=		24 23 22 21 20
 PYTHON_VERSIONS_INCOMPATIBLE?=		# empty by default
 
 BUILDLINK_DEPENDS.python15?=		python15>=1.5
 BUILDLINK_DEPENDS.python20?=		python20>=2.0
 BUILDLINK_DEPENDS.python21?=		python21>=2.1
-BUILDLINK_DEPENDS.python21-pth?=	python21-pth>=2.1
 BUILDLINK_DEPENDS.python22?=		python22>=2.2
-BUILDLINK_DEPENDS.python22-pth?=	python22-pth>=2.2
 BUILDLINK_DEPENDS.python23?=		python23>=2.3
-BUILDLINK_DEPENDS.python23-pth?=	python23-pth>=2.3
 BUILDLINK_DEPENDS.python24?=		python24>=2.4
-BUILDLINK_DEPENDS.python24-pth?=	python24-pth>=2.4
 
 # transform the list into individual variables
 .for pv in ${PYTHON_VERSIONS_ACCEPTED}
@@ -36,26 +30,14 @@ _PYTHON_VERSION_${pv}_OK=	yes
 .if exists(${LOCALBASE}/bin/python2.4)
 _PYTHON_VERSION_24_INSTALLED=	yes
 .endif
-.if exists(${LOCALBASE}/bin/python2p4)
-_PYTHON_VERSION_24pth_INSTALLED=yes
-.endif
 .if exists(${LOCALBASE}/bin/python2.3)
 _PYTHON_VERSION_23_INSTALLED=	yes
-.endif
-.if exists(${LOCALBASE}/bin/python2p3)
-_PYTHON_VERSION_23pth_INSTALLED=yes
 .endif
 .if exists(${LOCALBASE}/bin/python2.2)
 _PYTHON_VERSION_22_INSTALLED=	yes
 .endif
-.if exists(${LOCALBASE}/bin/python2p2)
-_PYTHON_VERSION_22pth_INSTALLED=yes
-.endif
 .if exists(${LOCALBASE}/bin/python2.1)
 _PYTHON_VERSION_21_INSTALLED=	yes
-.endif
-.if exists(${LOCALBASE}/bin/python2p1)
-_PYTHON_VERSION_21pth_INSTALLED=yes
 .endif
 .if exists(${LOCALBASE}/bin/python2.0)
 _PYTHON_VERSION_20_INSTALLED=	yes
@@ -117,76 +99,24 @@ PYDEPENDENCY=	${BUILDLINK_DEPENDS.python24}:${PYPKGSRCDIR}
 PYPACKAGE=	python24
 PYVERSSUFFIX=	2.4
 PYPKGPREFIX=	py24
-.elif ${_PYTHON_VERSION} == "24pth"
-PYPKGSRCDIR=	../../lang/python24-pth
-PYDEPENDENCY=	${BUILDLINK_DEPENDS.python24-pth}:${PYPKGSRCDIR}
-PYPACKAGE=	python24-pth
-PYVERSSUFFIX=	2p4
-PYPKGPREFIX=	py24pth
-.  if defined(USE_BUILDLINK3) && empty(USE_BUILDLINK3:M[nN][oO])
-PTHREAD_OPTS=	require
-.    include "../../mk/pthread.buildlink3.mk"
-.    if ${PTHREAD_TYPE} == "pth"
-.        include "../../devel/pth/buildlink3.mk"
-.    endif
-.  endif
 .elif ${_PYTHON_VERSION} == "23"
 PYPKGSRCDIR=	../../lang/python23
 PYDEPENDENCY=	${BUILDLINK_DEPENDS.python23}:${PYPKGSRCDIR}
 PYPACKAGE=	python23
 PYVERSSUFFIX=	2.3
 PYPKGPREFIX=	py23
-.elif ${_PYTHON_VERSION} == "23pth"
-PYPKGSRCDIR=	../../lang/python23-pth
-PYDEPENDENCY=	${BUILDLINK_DEPENDS.python23-pth}:${PYPKGSRCDIR}
-PYPACKAGE=	python23-pth
-PYVERSSUFFIX=	2p3
-PYPKGPREFIX=	py23pth
-.  if defined(USE_BUILDLINK3) && empty(USE_BUILDLINK3:M[nN][oO])
-PTHREAD_OPTS=	require
-.    include "../../mk/pthread.buildlink3.mk"
-.    if ${PTHREAD_TYPE} == "pth"
-.        include "../../devel/pth/buildlink3.mk"
-.    endif
-.  endif
 .elif ${_PYTHON_VERSION} == "22"
 PYPKGSRCDIR=	../../lang/python22
 PYDEPENDENCY=	${BUILDLINK_DEPENDS.python22}:${PYPKGSRCDIR}
 PYPACKAGE=	python22
 PYVERSSUFFIX=	2.2
 PYPKGPREFIX=	py22
-.elif ${_PYTHON_VERSION} == "22pth"
-PYPKGSRCDIR=	../../lang/python22-pth
-PYDEPENDENCY=	${BUILDLINK_DEPENDS.python22-pth}:${PYPKGSRCDIR}
-PYPACKAGE=	python22-pth
-PYVERSSUFFIX=	2p2
-PYPKGPREFIX=	py22pth
-.  if defined(USE_BUILDLINK3) && empty(USE_BUILDLINK3:M[nN][oO])
-PTHREAD_OPTS=	require
-.    include "../../mk/pthread.buildlink3.mk"
-.    if ${PTHREAD_TYPE} == "pth"
-.        include "../../devel/pth/buildlink3.mk"
-.    endif
-.  endif
 .elif ${_PYTHON_VERSION} == "21"
 PYPKGSRCDIR=	../../lang/python21
 PYPACKAGE=	python21
 PYDEPENDENCY=	${BUILDLINK_DEPENDS.python21}:${PYPKGSRCDIR}
 PYVERSSUFFIX=	2.1
 PYPKGPREFIX=	py21
-.elif ${_PYTHON_VERSION} == "21pth"
-PYPKGSRCDIR=	../../lang/python21-pth
-PYPACKAGE=	python21-pth
-PYDEPENDENCY=	${BUILDLINK_DEPENDS.python21-pth}:${PYPKGSRCDIR}
-PYVERSSUFFIX=	2p1
-PYPKGPREFIX=	py21pth
-.  if defined(USE_BUILDLINK3) && empty(USE_BUILDLINK3:M[nN][oO])
-PTHREAD_OPTS=	require
-.    include "../../mk/pthread.buildlink3.mk"
-.    if ${PTHREAD_TYPE} == "pth"
-.        include "../../devel/pth/buildlink3.mk"
-.    endif
-.  endif
 .elif ${_PYTHON_VERSION} == "20"
 PYPKGSRCDIR=	../../lang/python20
 PYPACKAGE=	python20
@@ -208,6 +138,11 @@ BUILD_DEPENDS+=	py15-distutils-*:../../devel/py-distutils
 .endif
 
 .if (defined(USE_BUILDLINK3) && empty(USE_BUILDLINK3:M[nN][oO]))
+PTHREAD_OPTS=	require
+.    include "../../mk/pthread.buildlink3.mk"
+.    if ${PTHREAD_TYPE} == "pth"
+.        include "../../devel/pth/buildlink3.mk"
+.    endif
 .  if defined(PYTHON_FOR_BUILD_ONLY)
 BUILD_DEPMETHOD.python?=	build
 .  endif

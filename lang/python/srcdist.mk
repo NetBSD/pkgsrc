@@ -1,8 +1,8 @@
-# $NetBSD: srcdist.mk,v 1.12 2004/12/05 23:39:03 recht Exp $
+# $NetBSD: srcdist.mk,v 1.13 2005/01/23 20:41:46 recht Exp $
 
 .include "../../lang/python/pyversion.mk"
 
-.if ${_PYTHON_VERSION} == "24" || ${_PYTHON_VERSION} == "24pth"
+.if ${_PYTHON_VERSION} == "24"
 
 DISTNAME=	Python-2.4
 EXTRACT_SUFX=	.tar.bz2
@@ -12,7 +12,7 @@ PYSUBDIR=	Python-2.4
 WRKSRC=		${WRKDIR}/${PYSUBDIR}
 MASTER_SITES=	ftp://ftp.python.org/pub/python/2.4/
 
-.elif ${_PYTHON_VERSION} == "23" || ${_PYTHON_VERSION} == "23pth"
+.elif ${_PYTHON_VERSION} == "23"
 
 DISTNAME=	Python-2.3.4
 EXTRACT_SUFX=	.tgz
@@ -22,7 +22,7 @@ PYSUBDIR=	Python-2.3.4
 WRKSRC=		${WRKDIR}/${PYSUBDIR}
 MASTER_SITES=	ftp://ftp.python.org/pub/python/2.3.4/
 
-.elif ${_PYTHON_VERSION} == "22" || ${_PYTHON_VERSION} == "22pth"
+.elif ${_PYTHON_VERSION} == "22"
 
 DISTNAME=	Python-2.2.3
 EXTRACT_SUFX=	.tgz
@@ -32,7 +32,7 @@ PYSUBDIR=	Python-2.2.3
 WRKSRC=		${WRKDIR}/${PYSUBDIR}
 MASTER_SITES=	ftp://ftp.python.org/pub/python/2.2.3/
 
-.elif ${_PYTHON_VERSION} == "21" || ${_PYTHON_VERSION} == "21pth"
+.elif ${_PYTHON_VERSION} == "21"
 
 DISTNAME=	Python-2.1.3
 EXTRACT_SUFX=	.tgz

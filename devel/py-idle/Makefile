@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/01/13 21:51:42 darcy Exp $
+# $NetBSD: Makefile,v 1.18 2005/01/23 20:41:46 recht Exp $
 #
 
 PKGNAME=	${PYPKGPREFIX}-idle-0
@@ -28,9 +28,9 @@ do-patch:
 # We just install a wrapper script. Also, threads are required now.
 # NOTE: if you add a new version of Python here, add to the following test
 #
-PYTHON_VERSIONS_ACCEPTED=	24pth 23pth 22pth 22 21pth 21 20pth 20
+PYTHON_VERSIONS_ACCEPTED=	24 23 22 21 20
 .include "../../lang/python/extension.mk"
-.if (${PYPKGPREFIX} != "py23pth") && (${PYPKGPREFIX} != "py24pth")
+.if (${PYPKGPREFIX} != "py23") && (${PYPKGPREFIX} != "py24")
 
 EXTRACT_ELEMENTS=	${PYSUBDIR}/Tools/idle/*
 PYTHON_PATCH_SCRIPTS=	Tools/idle/idle.py
@@ -49,7 +49,7 @@ do-install:
 	(cd ${PREFIX}; ${FIND} -d ${PYSITELIB}/idle -type d -print | \
 		${SED} -e "s/^/@dirrm /" >>${PLIST_SRC})
 
-.else # py23pth and up
+.else # py23 and up
 
 EXTRACT_ELEMENTS=	${PYSUBDIR}/Tools/scripts/idle
 PYTHON_PATCH_SCRIPTS= Tools/scripts/idle
@@ -60,7 +60,7 @@ do-install:
 		${PREFIX}/bin/idle${PYVERSSUFFIX}
 	${CAT} ${PKGDIR}/PLIST.pre >${PLIST_SRC}
 
-.endif # py23pth and up
+.endif # py23 and up
 
 .include "../../lang/python/srcdist.mk"
 .include "../../lang/python/application.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/12/25 20:03:52 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2005/01/23 20:41:45 recht Exp $
 
 DISTNAME=	ExmanIDE-0.9.4
 PKGREVISION=	1
@@ -16,7 +16,7 @@ USE_BUILDLINK3=	yes
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
-PYTHON_VERSIONS_ACCEPTED?=	23 23pth 22 22pth
+PYTHON_VERSIONS_ACCEPTED?=	23 22
 
 SUBST_CLASSES+=		mod
 SUBST_MESSAGE.mod=	"Fixing deprecated module names."

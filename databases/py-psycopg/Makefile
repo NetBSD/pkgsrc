@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/12/03 15:14:53 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2005/01/23 20:41:45 recht Exp $
 #
 
 DISTNAME=	psycopg-1.1.14
@@ -18,11 +18,11 @@ CONFIGURE_ARGS+= \
 BUILD_TARGET=	default
 USE_BUILDLINK3=	yes
 
-PYTHON_VERSIONS_ACCEPTED= 23pth 22pth 21pth
+PYTHON_VERSIONS_ACCEPTED= 23 22 21
 PY_PATCHPLIST=	yes
 
 .include "../../lang/python/extension.mk"
 .include "../../time/py-mxDateTime/buildlink3.mk"
 .include "../../mk/pgsql.buildlink3.mk"
-.include "../../mk/pthread.buildlink3.mk"
+.include "../../mk/read.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

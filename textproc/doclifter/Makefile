@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/01/09 13:19:25 recht Exp $
+# $NetBSD: Makefile,v 1.11 2005/01/23 20:41:49 recht Exp $
 #
 
 DISTNAME=	doclifter-2.0
@@ -14,7 +14,7 @@ NO_BUILD=	yes
 USE_BUILDLINK3=	yes
 
 PYTHON_PATCH_SCRIPTS=		doclifter manlifter
-PYTHON_VERSIONS_ACCEPTED=	24pth 24 23pth 23 22pth 22
+PYTHON_VERSIONS_ACCEPTED=	24 23 22
 
 SUBST_CLASSES+=		bin-path
 SUBST_STAGE.bin-path=	pre-configure

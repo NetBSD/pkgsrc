@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/07/22 09:16:01 recht Exp $
+# $NetBSD: Makefile,v 1.5 2005/01/23 20:41:45 recht Exp $
 #
 
 DISTNAME=		TPG-2.1.6
@@ -9,7 +9,7 @@ MAINTAINER=		dotz@irc.pl
 HOMEPAGE=		http://christophe.delord.free.fr/soft/tpg/
 COMMENT=		ToyParserGenerator for Python
 
-PYTHON_VERSIONS_ACCEPTED=	23 23pth 22 22pth
+PYTHON_VERSIONS_ACCEPTED=	23 22
 PYDISTUTILSPKG=	yes
 USE_BUILDLINK3=	yes
 

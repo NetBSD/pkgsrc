@@ -1,15 +1,26 @@
-# $NetBSD: Makefile,v 1.14 2004/08/29 10:44:19 recht Exp $
+# $NetBSD: Makefile,v 1.15 2005/01/23 20:41:47 recht Exp $
 #
 
+DISTNAME=	Python-2.2.3
 PKGNAME=	python22-pth-2.2.3
 PKGREVISION=	3
+CATEGORIES=	lang python
+MASTER_SITES=	# empty
+DISTFILES=	# empty
 
-PTHREAD_OPTS=	require
-.include "../../mk/pthread.buildlink3.mk"
-.if ${PTHREAD_TYPE} == "pth"
-CONFIGURE_ARGS+=	--with-pth
-.endif
+MAINTAINER=	tech-pkg@NetBSD.org
+HOMEPAGE=	http://www.python.org/
+COMMENT=	Interpreted, interactive, object-oriented programming language
 
-PY_VER_SUFFIX=	2p2
+DEPENDS+=	python22>=2.2.3:../../lang/python22
 
-.include "../../lang/python22/Makefile.common"
+EXTRACT_ONLY=	# empty
+NO_CHECKSUM=	yes
+NO_CONFIGURE=	yes
+NO_BUILD=	yes
+NO_BUILDLINK=	yes
+NO_MTREE=	yes
+
+do-install:	# empty
+
+.include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/12/23 21:54:25 darcy Exp $
+# $NetBSD: Makefile,v 1.4 2005/01/23 20:41:48 recht Exp $
 #
 
 DISTNAME=		${TWISTED_DISTNAME}
@@ -16,7 +16,7 @@ PYDISTUTILSPKG=		yes
 PLIST_SUBST+=		PYVERSSUFFIX="-${PYVERSSUFFIX}"
 MAKE_ENV+=		PKGSRC="1" PYVERSSUFFIX="-${PYVERSSUFFIX}"
 
-PYTHON_VERSIONS_ACCEPTED=	24pth 24 23pth 23 22pth 22
+PYTHON_VERSIONS_ACCEPTED=	24 23 22
 
 .include "../../net/py-twisted/Makefile.common"
 .include "../../lang/python/extension.mk"

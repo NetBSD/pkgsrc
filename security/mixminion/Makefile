@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/12/27 22:58:57 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2005/01/23 20:41:49 recht Exp $
 #
 
 DISTNAME=		Mixminion-0.0.7.1
@@ -14,7 +14,7 @@ BUILDLINK_DEPENDS.openssl+=	openssl>=0.9.7d
 
 CRYPTO=				YES
 USE_BUILDLINK3= 		YES
-PYTHON_VERSIONS_ACCEPTED=       24pth 23pth 22pth 21pth
+PYTHON_VERSIONS_ACCEPTED=       24 23 22 21
 PYDISTUTILSPKG=			YES
 
 TEST_TARGET=			test
