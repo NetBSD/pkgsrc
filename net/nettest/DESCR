@@ -1,7 +1,0 @@
-The nettest and nettestd commands perform client and server
-performance tests for various types of interprocess communication.
-These tests time the data throughput of pipes and UNIX domain, TCP,
-and UDP socket connections.
-
-The nettest command performs the client side of the test; the
-nettestd command performs the server side of the test.
