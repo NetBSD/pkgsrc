@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.1 2001/05/26 07:16:16 jlam Exp $
+$NetBSD: patch-ab,v 1.2 2002/09/18 23:55:52 jlam Exp $
 
---- configure.orig	Fri Jan 26 19:17:37 2001
+--- configure.orig	Wed Jan  9 06:31:49 2002
 +++ configure
-@@ -2126,8 +2126,51 @@
+@@ -2084,8 +2084,51 @@ else
    echo "$ac_t""no" 1>&6
  fi
  
 +echo $ac_n "checking for main in -lm""... $ac_c" 1>&6
-+echo "configure:2131: checking for main in -lm" >&5
++echo "configure:2089: checking for main in -lm" >&5
 +ac_lib_var=`echo m'_'main | sed 'y%./+-%__p_%'`
 +if eval "test \"`echo '$''{'ac_cv_lib_$ac_lib_var'+set}'`\" = set"; then
 +  echo $ac_n "(cached) $ac_c" 1>&6
@@ -15,14 +15,14 @@ $NetBSD: patch-ab,v 1.1 2001/05/26 07:16:16 jlam Exp $
 +  ac_save_LIBS="$LIBS"
 +LIBS="-lm  $LIBS"
 +cat > conftest.$ac_ext <<EOF
-+#line 2139 "configure"
++#line 2097 "configure"
 +#include "confdefs.h"
 +
 +int main() {
 +main()
 +; return 0; }
 +EOF
-+if { (eval echo configure:2146: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
++if { (eval echo configure:2104: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
 +  rm -rf conftest*
 +  eval "ac_cv_lib_$ac_lib_var=yes"
 +else
@@ -50,12 +50,12 @@ $NetBSD: patch-ab,v 1.1 2001/05/26 07:16:16 jlam Exp $
 +fi
 +
  echo $ac_n "checking for main in -lGL""... $ac_c" 1>&6
--echo "configure:2131: checking for main in -lGL" >&5
-+echo "configure:2174: checking for main in -lGL" >&5
+-echo "configure:2089: checking for main in -lGL" >&5
++echo "configure:2132: checking for main in -lGL" >&5
  ac_lib_var=`echo GL'_'main | sed 'y%./+-%__p_%'`
  if eval "test \"`echo '$''{'ac_cv_lib_$ac_lib_var'+set}'`\" = set"; then
    echo $ac_n "(cached) $ac_c" 1>&6
-@@ -2280,49 +2323,6 @@
+@@ -2238,49 +2281,6 @@ fi
  if eval "test \"`echo '$ac_cv_lib_'$ac_lib_var`\" = yes"; then
    echo "$ac_t""yes" 1>&6
    LIBS="$LIBFLTKA $LIBS"
@@ -64,7 +64,7 @@ $NetBSD: patch-ab,v 1.1 2001/05/26 07:16:16 jlam Exp $
 -fi
 -
 -echo $ac_n "checking for main in -lm""... $ac_c" 1>&6
--echo "configure:2289: checking for main in -lm" >&5
+-echo "configure:2247: checking for main in -lm" >&5
 -ac_lib_var=`echo m'_'main | sed 'y%./+-%__p_%'`
 -if eval "test \"`echo '$''{'ac_cv_lib_$ac_lib_var'+set}'`\" = set"; then
 -  echo $ac_n "(cached) $ac_c" 1>&6
@@ -72,14 +72,14 @@ $NetBSD: patch-ab,v 1.1 2001/05/26 07:16:16 jlam Exp $
 -  ac_save_LIBS="$LIBS"
 -LIBS="-lm  $LIBS"
 -cat > conftest.$ac_ext <<EOF
--#line 2297 "configure"
+-#line 2255 "configure"
 -#include "confdefs.h"
 -
 -int main() {
 -main()
 -; return 0; }
 -EOF
--if { (eval echo configure:2304: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
+-if { (eval echo configure:2262: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
 -  rm -rf conftest*
 -  eval "ac_cv_lib_$ac_lib_var=yes"
 -else
