@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.28 2004/03/08 19:40:43 jmmv Exp $
+# $NetBSD: Makefile,v 1.29 2004/04/01 18:35:20 jmmv Exp $
 #
 
-DISTNAME=	metacity-2.6.5
-PKGREVISION=	1
+DISTNAME=	metacity-2.8.0
 CATEGORIES=	wm x11 gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/metacity/2.6/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/metacity/2.8/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	tech-pkg@NetBSD.org
@@ -27,10 +26,8 @@ GCONF2_SCHEMAS=		metacity.schemas
 
 .include "../../mk/bsd.prefs.mk"
 
-.if exists(${X11BASE}/lib/libXinerama.so)
-CONFIGURE_ENV+=		USE_XINERAMA=yes
-.else
-CONFIGURE_ENV+=		USE_XINERAMA=no
+.if !exists(${X11BASE}/lib/libXinerama.so)
+CONFIGURE_ARGS+=	--disable-xinerama
 .endif
 
 .include "../../devel/GConf2/schemas.mk"
