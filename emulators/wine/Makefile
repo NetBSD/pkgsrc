@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.41 2003/03/09 19:12:37 jschauma Exp $
+# $NetBSD: Makefile,v 1.42 2003/06/23 08:12:57 adam Exp $
 
-DISTNAME=		Wine-20030219
+DISTNAME=		Wine-20030618
 PKGNAME=		${DISTNAME:S/W/w/}
-PKGREVISION=		1
-WRKSRC= 		${WRKDIR}/wine-20030219
+WRKSRC= 		${WRKDIR}/${DISTNAME:tl}
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_SUNSITE:=ALPHA/wine/development/}
 
-MAINTAINER=		junyoung@netbsd.org
+MAINTAINER=		adam@netbsd.org
 HOMEPAGE=		http://www.winehq.com/
 COMMENT=		Free implementation of Windows on Unix (still alpha)
 
@@ -18,6 +17,7 @@ ONLY_FOR_PLATFORM=	NetBSD-1.5Z*-i386 NetBSD-1.[6-9]*-i386
 USE_BUILDLINK2=		YES
 USE_X11=		YES
 USE_GMAKE=		YES
+USE_LIBTOOL		=YES
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--without-curses
