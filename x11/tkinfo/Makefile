@@ -1,19 +1,17 @@
-# $NetBSD: Makefile,v 1.18 2004/03/08 20:27:17 minskim Exp $
+# $NetBSD: Makefile,v 1.19 2004/05/12 15:08:20 minskim Exp $
 # FreeBSD Id: Makefile,v 1.15 1997/12/16 09:26:12 tg Exp
 #
 
-DISTNAME=	tkinfo-2.5
+DISTNAME=	tkinfo-2.8
 CATEGORIES=	x11
-MASTER_SITES=	${MASTER_SITE_SUNSITE:=apps/doctools/info/} \
-		http://math-www.uni-paderborn.de/~axel/tkinfo/
+MASTER_SITES=	http://math-www.uni-paderborn.de/~axel/tkinfo/
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://math-www.uni-paderborn.de/~axel/tkinfo/
 COMMENT=	Tk script to read and display GNU "info" files
 
-DEPENDS=	tk>=8.3.2:../../x11/tk83
+DEPENDS=	tk>=8.3.2:../../x11/tk
 
-USE_X11=	yes
 NO_BUILD=	yes
 
 post-patch:
