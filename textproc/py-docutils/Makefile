@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/09/18 02:28:08 jmc Exp $
+# $NetBSD: Makefile,v 1.7 2004/02/07 19:02:44 minskim Exp $
 
 DISTNAME=	docutils-0.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,4 +15,11 @@ PYTHON_VERSIONS_ACCEPTED=	23 23pth 22 22pth 21 21pth
 PYDISTUTILSPKG=	# defined
 
 .include "../../lang/python/extension.mk"
+
+.if !empty(PYVERSSUFFIX:M2*[12])
+PLIST_SUBST+=	PYSTDMODULE=""
+.else
+PLIST_SUBST+=	PYSTDMODULE="@comment "
+.endif
+
 .include "../../mk/bsd.pkg.mk"
