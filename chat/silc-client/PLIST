@@ -1,18 +1,18 @@
-@comment $NetBSD: PLIST,v 1.8 2002/11/21 15:40:14 salo Exp $
+@comment $NetBSD: PLIST,v 1.9 2002/12/04 17:26:48 salo Exp $
 bin/silc
-etc/silc/silc.conf
+lib/silc/libsilc-1.0.so
+lib/silc/libsilc-1.0.so.0
+lib/silc/libsilc-1.0.so.0.0
 lib/silc/libsilc.la
 lib/silc/libsilc.so
-lib/silc/libsilc.so.0
-lib/silc/libsilc.so.0.0
+lib/silc/libsilcclient-1.0.so
+lib/silc/libsilcclient-1.0.so.0
+lib/silc/libsilcclient-1.0.so.0.0
 lib/silc/libsilcclient.la
 lib/silc/libsilcclient.so
-lib/silc/libsilcclient.so.0
-lib/silc/libsilcclient.so.0.0
 lib/silc/modules/aes.sim.so
 lib/silc/modules/blowfish.sim.so
 lib/silc/modules/cast.sim.so
-lib/silc/modules/mars.sim.so
 lib/silc/modules/md5.sim.so
 lib/silc/modules/none.sim.so
 lib/silc/modules/rc5.sim.so
@@ -21,6 +21,7 @@ lib/silc/modules/rsa.sim.so
 lib/silc/modules/sha1.sim.so
 lib/silc/modules/twofish.sim.so
 man/man1/silc.1
+share/examples/silc/silc.conf.default
 share/doc/silc/CHANGES
 share/doc/silc/COPYING
 share/doc/silc/CREDITS
@@ -32,7 +33,7 @@ share/doc/silc/TODO
 share/doc/silc/formats.txt
 share/doc/silc/manual.txt
 share/doc/silc/signals.txt
-share/doc/silc/silc.conf.default
+share/doc/silc/special_vars.txt
 share/doc/silc/startup-HOWTO.html
 share/silc/help/action
 share/silc/help/admin
@@ -84,7 +85,6 @@ share/silc/help/motd
 share/silc/help/msg
 share/silc/help/names
 share/silc/help/nick
-share/silc/help/note
 share/silc/help/notice
 share/silc/help/oper
 share/silc/help/part
