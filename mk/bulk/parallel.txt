@@ -1,8 +1,8 @@
-# $Id: parallel.txt,v 1.3 2003/05/06 17:42:03 jmmv Exp $
+# $Id: parallel.txt,v 1.4 2004/03/26 08:22:55 jlam Exp $
 #
 
-These are my thoughts on how one would want a parallel bulk build to
-work.
+These are my (<dmcmahill>) thoughts on how one would want a parallel
+bulk build to work.
 
 
 ====================================================================
