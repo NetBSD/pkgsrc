@@ -3,7 +3,8 @@
 # Date created:				06 January 1996
 # Whom:					bmc@WillsCreek.COM
 #
-# $Id: Makefile,v 1.1.1.1 1997/10/11 21:54:21 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 1997/10/24 01:20:31 hubertf Exp $
+# FreeBSD Id: Makefile,v 1.6 1997/04/30 04:43:34 asami Exp
 #
 
 DISTNAME=	fileutils-3.12
