@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2000/07/27 08:15:30 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2000/08/04 23:59:02 jlam Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/02/14 07:55:45 asami Exp
 #
 
@@ -40,5 +40,6 @@ MAKE_ENV+=	CPPFLAGS="${CPPFLAGS}"
 CPPFLAGS+=	-I${LOCALBASE}/include/freetype			# freetype.h
 CPPFLAGS+=	-I${LOCALBASE}/include				# png.h
 CPPFLAGS+=	-I${XPMDIR}/include -I${XPMDIR}/include/X11	# xpm.h
+CPPFLAGS+=	-I${X11BASE}/include
 
 .include "../../mk/bsd.pkg.mk"
