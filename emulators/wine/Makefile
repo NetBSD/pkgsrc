@@ -1,27 +1,32 @@
-# $NetBSD: Makefile,v 1.55 2003/12/01 15:59:50 adam Exp $
+# $NetBSD: Makefile,v 1.56 2003/12/16 11:10:47 adam Exp $
+#
 
-DISTNAME=		Wine-20031118
-PKGNAME=		${DISTNAME:S/W/w/}
-WRKSRC= 		${WRKDIR}/${DISTNAME:S/W/w/}
-CATEGORIES=		emulators
-MASTER_SITES=		http://www.ibiblio.org/Linux/ALPHA/wine/development/ \
-			${MASTER_SITE_SOURCEFORGE:=wine/} \
-			${MASTER_SITE_SUNSITE:=ALPHA/wine/development/}
+DISTNAME=	Wine-20031212
+PKGNAME=	${DISTNAME:S/W/w/}
+WRKSRC= 	${WRKDIR}/${DISTNAME:S/W/w/}
+CATEGORIES=	emulators
+MASTER_SITES=	http://www.ibiblio.org/Linux/ALPHA/wine/development/ \
+		${MASTER_SITE_SOURCEFORGE:=wine/} \
+		${MASTER_SITE_SUNSITE:=ALPHA/wine/development/}
 
-MAINTAINER=		adam@NetBSD.org
-HOMEPAGE=		http://www.winehq.com/
-COMMENT=		Free implementation of Windows on Unix (still alpha)
+MAINTAINER=	adam@NetBSD.org
+HOMEPAGE=	http://www.winehq.com/
+COMMENT=	Free implementation of Windows on Unix (still alpha)
 
-CONFLICTS=		rewind-[0-9]*
+BUILD_DEPENDS+=	bison-[0-9]*:../../devel/bison
+
+YACC=		${PREFIX}/bin/bison -y
+
+CONFLICTS=	rewind-[0-9]*
 
 ONLY_FOR_PLATFORM=	NetBSD-1.5Z*-i386 NetBSD-1.[6-9]*-i386
+
+BUILDLINK_DEPENDS.freetype2=	freetype>=2.1.4
 
 USE_BUILDLINK2=		YES
 USE_X11=		YES
 USE_GMAKE=		YES
 USE_LIBTOOL=		YES
-BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
-YACC=			${PREFIX}/bin/bison -y
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--without-curses #--disable-debug --disable-trace
@@ -58,7 +63,10 @@ post-install:
 .include "../../graphics/MesaLib/buildlink2.mk"
 .include "../../graphics/freetype2/buildlink2.mk"
 .include "../../graphics/glu/buildlink2.mk"
+.include "../../graphics/glut/buildlink2.mk"
 .include "../../graphics/jpeg/buildlink2.mk"
 .include "../../graphics/libungif/buildlink2.mk"
+.include "../../textproc/icu/buildlink2.mk"
+
 .include "../../mk/pthread.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
