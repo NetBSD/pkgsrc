@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1349 2004/02/07 05:02:25 minskim Exp $
+$NetBSD: TODO,v 1.1350 2004/02/07 15:38:57 wiz Exp $
 
 Suggested new packages
 ======================
@@ -128,13 +128,14 @@ Suggested package updates
 	o avidemux-2.0.20
 	o avifile-devel-0.7.34-20030319
 	o balsa-1.4.4
+	o blender-2.32
 	o blib-1.1.5
 	o blinkensim-2.5
 	o blinkentools-2.5
 	o bochs-2.1
 	o boehm-gc-6.3alpha2
 	o bogofilter-0.15.13.2
-	o bomberclone-0.11.0
+	o bomberclone-0.11.1
 	o bzflag-1.10.4
 	o centericq-4.9.10
 	o cervisia-2.0
@@ -150,6 +151,7 @@ Suggested package updates
 	o crafty-19.5
 	o crimsonfields-0.3.8
 	o crossfire-1.5.0
+	o cscope-15.5
 	o cvs-1.12.3
 	o cxref-1.5e
 	o cyrus-imapd21-2.1.16
@@ -160,7 +162,7 @@ Suggested package updates
 	o dylan-compiler-2.3.11
 	o dylan-interpreter-2.3.11
 	o eclipse-2.1.2
-	o efax-gtk-2.2.4
+	o efax-gtk-2.2.5
 	o elk-3.99.6
 	o elm-me-2.4pl111
 	o enchant-1.1.2
@@ -178,7 +180,7 @@ Suggested package updates
 	o freetype-2.1.7 [breaks compatibility with other packages]
 	o fsviewer-0.2.5
 	o galeon-1.3.12
-	o gauche-0.7.3 [kei]
+	o gauche-0.7.4.1 [kei]
 	o gcc-3.3.2 [gcc3 package]
 	o gcpio-2.5 [pkg/20799]
 	o gcvs-1.0-1
@@ -210,16 +212,17 @@ Suggested package updates
 	o html2text-1.3.2 [pkg/24166]
 	o icepref-2.3
 	o inn-2.4.1
+	o intltool-0.30
 	o jakarta-tomcat-3.3.1a
 	o joe-2.9.8 [pkg/18022, incomplete]
 	o jpilot-0.99.6
 	o kaffe-1.1.3 [pkg/24148]
 	o kbiff-3.7
+	o kdevelop-3.0
 	o kile-1.6.1
-	o koffice-1.2.95 [pkg/24143]
 	o lavaps-2.4
 	o lcms-1.0.9
-	o libcaca-0.8
+	o libcaca-0.9
 	o libesmtp-1.0.2
 	o libgphoto2-2.1.4
 	o libidn-0.3.7
@@ -231,7 +234,7 @@ Suggested package updates
 	o lmbench-2.0.4
 	o lout-3.29
 	o lwm-1.2.0
-	o lynx-current-2.8.5dev17
+	o lynx-2.8.5
 	o maildrop-1.5.3 [pkg/22369]
 	o maildrop-1.6.3
 	o mailsync-5.1.0
@@ -240,8 +243,9 @@ Suggested package updates
 	o memtest86-3.0
 	o micq-0.4.10.5
 	o midnight-commander-4.6.0
-	o mimedefang-2.39 [markd]
+	o mimedefang-2.39 [markd|pkg/24295]
 	o minicom-2.1
+	o mldonkey-2.5.5
 	o mowitz-0.3.0
 	o moz-bin-plugger-1.5
 	o mrproject-0.9.1
@@ -254,6 +258,7 @@ Suggested package updates
 	o netatalk-1.6.3 [pkg/21930]
 	o nethack-3.4.3
 	o newscache-0.99.22p1
+	o nicotine-1.0.7 [pkg/24343]
 	o ns-flash-6.0.79
 	o nsd-1.2.3 [pkg/24034]
 	o nut-9.8
@@ -262,7 +267,7 @@ Suggested package updates
 	o openldap-2.1.25
 	o openoffice-1.1 [skrll]
 	o openssl-0.9.7c [jschauma]
-	o oss-3.9.8c
+	o oss-3.9.8d
 	o p5-CGI-3.00
 	o p5-CGI-Application-3.1
 	o p5-HTML-FillInForm-1.03 [pkg/23976]
@@ -279,6 +284,7 @@ Suggested package updates
 	o py-psycopg-1.1.10
 	o pygtk-0.6.11
 	o pysol-4.82
+	o qt-3.3
 	o rep-gtk-0.17
 	o rox-1.2.2
 	o rox-session-0.1.20
@@ -306,10 +312,11 @@ Suggested package updates
 	o staroffice-7p1
 	o stella-1.3
 	o streamtuner-0.11.0
+	o sylpheed-claws-0.9.9
 	o t1lib-5.0.0
 	o tcl/tk-8.4.5
 	o tcl-expect-5.39.0
-	o tcpreplay-1.4.6
+	o tcpreplay-2.0.0
 	o tct-1.14
 	o teapop-0.3.8
 	o tkcvs-7.2
@@ -337,7 +344,7 @@ Suggested package updates
 	o xerces-c-2.3.0 [pkg/23861|heinz?]
 	o xerces-c-2.4.0 [heinz?]
 	o xerces-j-2.4.0 [pkg/21725]
-	o xerces-j-2.5.0
+	o xerces-j-2.6.1
 	o xine-lib-1rc3a
 	o xine-ui-0.9.23
 	o xisp-2.7 [pkg/19566]
