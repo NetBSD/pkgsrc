@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/09/20 21:16:06 jschauma Exp $
+$NetBSD: distinfo,v 1.2 2005/02/19 03:49:09 jschauma Exp $
 
-SHA1 (news-0.1.tar.gz) = add1736cb5b139dd2f0e11792d256cd9fdddb2fc
-Size (news-0.1.tar.gz) = 3738 bytes
+SHA1 (news-0.2.tar.gz) = 06e86f6fa6fc784b96b56baee11945ed85b193e4
+Size (news-0.2.tar.gz) = 3814 bytes
