@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9490 2005/03/16 05:33:57 xtraeme Exp $
+$NetBSD: CHANGES,v 1.9491 2005/03/16 13:17:26 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1370,3 +1370,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated gxmame to 0.35beta1 [xtraeme 2005-03-15]
 	Updated arla to 0.38 [wennmach 2005-03-15]
 	Updated mklivecd to 0.10 [xtraeme 2005-03-16]
+	Updated mysqlcc to 0.9.4nb4 [rillig 2005-03-16]
