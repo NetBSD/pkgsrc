@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1116 2003/01/13 20:21:37 fredb Exp $
+$NetBSD: CHANGES,v 1.1117 2003/01/13 21:26:59 magick Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -256,3 +256,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated xmame to 0.62.2 [kristerw 2003-01-13]
 	Updated xmess to 0.62.2 [kristerw 2003-01-13]
 	Updated bochs to 2.0.1 [fredb 2003-01-13]
+	Added xemacs-nox11-21.1.14 [magick 2003-01-13]
