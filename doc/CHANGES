@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6364 2004/06/28 12:38:50 jmmv Exp $
+$NetBSD: CHANGES,v 1.6365 2004/06/28 12:53:32 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3125,3 +3125,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated pkglint to 3.81 [abs 2004-06-28]
 	Updated eel2 to 2.6.2 [jmmv 2004-06-28]
 	Updated gail to 1.6.6 [jmmv 2004-06-28]
+	Updated GConf2 to 2.6.2 [jmmv 2004-06-28]
+	Updated GConf2-ui to 2.6.2 [jmmv 2004-06-28]
