@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2003/07/17 22:51:52 grant Exp $
+# $NetBSD: Makefile,v 1.17 2004/01/05 11:20:17 jlam Exp $
 #
 
 DISTNAME=	export.socks.cstc.4.2.2
@@ -18,12 +18,16 @@ RESTRICTED=		"no commercial use"
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
-USE_BUILDLINK2=		# defined
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+USE_BUILDLINK3=		yes
 USE_PKGINSTALL=		yes
 MAKE_ENV+=		OPTIMIZE="${CFLAGS}"
 
 EGDIR=		${PREFIX}/share/examples/socks4
 CONF_FILES=	${EGDIR}/socks.conf ${PKG_SYSCONFDIR}/socks.conf
+
+INSTALLATION_DIRS=	bin lib libexec man/man1 man/man5 man/man8
 
 post-patch:
 	@cd ${WRKSRC};							\

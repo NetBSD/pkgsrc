@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2003/12/19 12:25:02 agc Exp $
+# $NetBSD: Makefile,v 1.31 2004/01/05 11:20:18 jlam Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/08/28 06:49:06 obrien Exp
 #
 
@@ -28,7 +28,9 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 #			--with-syslog-facility=LOG_AUTH \
 #			--with-passwd
 
-USE_BUILDLINK2=		yes
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+USE_BUILDLINK3=		yes
 USE_PKGINSTALL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS=		--with-libconffile=${PREFIX}/etc/libsocks5.conf \

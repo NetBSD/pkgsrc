@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2003/09/25 03:00:57 danw Exp $
+# $NetBSD: Makefile,v 1.27 2004/01/05 11:17:10 jlam Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1998/08/09 15:13:33 kuriyama Exp
 #
 
@@ -15,7 +15,9 @@ COMMENT=		Tools for providing messages in different languages, libintl only
 
 CONFLICTS=		gettext<=0.10.35
 
-USE_BUILDLINK2=		# defined
+PKG_INSTALLATION_TYPES=	overview pkgviews
+
+USE_BUILDLINK3=		# defined
 USE_LIBTOOL=		# defined
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
@@ -37,5 +39,5 @@ BUILD_DIRS=		${WRKSRC}/intl
 CPPFLAGS+=		-D_INTL_REDIRECT_MACROS=1 -DSTATIC=static
 .endif
 
-.include "../../converters/libiconv/buildlink2.mk"
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
