@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2003/08/07 15:36:23 seb Exp $
+# $NetBSD: Makefile,v 1.36 2003/08/09 11:16:17 seb Exp $
 
 DISTNAME=		arla-0.35.12
 #PKGREVISION=
@@ -13,7 +13,6 @@ CONFLICTS+=		lwp-[0-9]*
 CONFLICTS+=		rx-[0-9]*
 
 OSVERSION_SPECIFIC=	yes
-USE_NEW_TEXINFO=	YES
 INFO_FILES=		arla.info
 
 USE_BUILDLINK2=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/08/05 21:34:10 seb Exp $
+# $NetBSD: Makefile,v 1.6 2003/08/09 11:27:48 seb Exp $
 #
 
 DISTNAME=		ipadic-2.4.4
@@ -17,7 +17,6 @@ USE_PKGINSTALL=		yes
 CONF_FILES=		${CHASEN_DICDIR}/ipadic/chasenrc.example \
 			${CHASEN_CONFDIR}/chasenrc
 
-USE_NEW_TEXINFO=	YES
 INFO_FILES=		ipadic-ja.info
 
 post-install:

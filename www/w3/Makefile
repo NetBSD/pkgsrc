@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2003/08/07 11:36:33 seb Exp $
+# $NetBSD: Makefile,v 1.15 2003/08/09 11:32:32 seb Exp $
 
 DISTNAME=	w3-4.0pre.47
 PKGNAME=	w3-4.0b47
@@ -14,8 +14,6 @@ HOMEPAGE=	http://www.cs.indiana.edu/elisp/w3/docs.html
 COMMENT=	World Wide Web browser for Emacs
 
 CONFIGURE_ARGS+=--enable-site-install
-
-USE_NEW_TEXINFO=	YES
 
 .include "../../mk/emacs.mk"
 

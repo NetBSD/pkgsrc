@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2003/08/05 20:21:42 seb Exp $
+# $NetBSD: Makefile,v 1.30 2003/08/09 11:25:13 seb Exp $
 #
 
 DISTNAME=	mtools-3.9.7
@@ -14,7 +14,6 @@ NOT_FOR_PLATFORM = *-*-alpha *-*-sparc64	# LP64 problem
 
 GNU_CONFIGURE=	YES
 USE_GMAKE=	YES
-USE_NEW_TEXINFO=	YES
 USE_MAKEINFO=	YES
 INFO_FILES=	mtools.info
 
