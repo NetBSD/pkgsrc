@@ -1,4 +1,4 @@
-/* $NetBSD: host.def,v 1.4 2004/10/20 14:33:30 reed Exp $ */
+/* $NetBSD: host.def,v 1.5 2005/03/01 19:00:11 xtraeme Exp $ */
 
 #define ProjectRoot @PREFIX@
 #define BuildHtmlManPages NO
@@ -42,7 +42,6 @@
 
 #ifdef NetBSDArchitecture
 #define HasSecureRPC NO
-#define HasPam NO
 #endif
 
 #define InstallXdmConfig YES

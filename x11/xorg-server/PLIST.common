@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.7 2005/01/24 11:32:28 hira Exp $
+@comment $NetBSD: PLIST.common,v 1.8 2005/03/01 19:00:11 xtraeme Exp $
 ${X11ROOT_PREFIX}/bin/X
 ${X11ROOT_PREFIX}/bin/XFree86
 ${X11ROOT_PREFIX}/bin/Xnest
@@ -764,6 +764,11 @@ ${X11ROOT_PREFIX}/lib/X11/xserver/pl_PL.iso88592
 ${X11ROOT_PREFIX}/lib/X11/xserver/pl_PL.utf8
 ${X11ROOT_PREFIX}/lib/X11/xserver/polish
 ${X11ROOT_PREFIX}/lib/X11/xserver/portuguese
+${X11ROOT_PREFIX}/lib/X11/xserver/pt_BR.88591
+${X11ROOT_PREFIX}/lib/X11/xserver/pt_BR.88591.en
+${X11ROOT_PREFIX}/lib/X11/xserver/pt_BR.ISO-8859-1
+${X11ROOT_PREFIX}/lib/X11/xserver/pt_BR.ISO_8859-1
+${X11ROOT_PREFIX}/lib/X11/xserver/pt_BR.iso885915
 ${X11ROOT_PREFIX}/lib/X11/xserver/pt
 ${X11ROOT_PREFIX}/lib/X11/xserver/pt.ISO8859-1
 ${X11ROOT_PREFIX}/lib/X11/xserver/pt.ISO8859-15
@@ -1123,4 +1128,3 @@ ${X11ROOT_PREFIX}/${KERNMAN_DIR}/void.${KERNMAN_SUFFIX}
 ${X11ROOT_PREFIX}/${KERNMAN_DIR}/wacom.${KERNMAN_SUFFIX}
 ${X11ROOT_PREFIX}/${FILEMAN_DIR}/getconfig.${FILEMAN_SUFFIX}
 ${X11ROOT_PREFIX}/${FILEMAN_DIR}/xorg.conf.${FILEMAN_SUFFIX}
-${X11ROOT_PREFIX}/${MISCMAN_DIR}/Xprint.${MISCMAN_SUFFIX}

@@ -1,10 +1,10 @@
-/* $NetBSD: host.def,v 1.8 2005/02/09 20:08:26 xtraeme Exp $ */
+/* $NetBSD: host.def,v 1.9 2005/03/01 19:00:11 xtraeme Exp $ */
 
 #define ProjectRoot @PREFIX@
 #define BuildHtmlManPages NO
 
 /* Workaround */
-#define XorgVersion 681
+#define XorgVersion 682
 
 #define MakeCmd @MAKE@
 

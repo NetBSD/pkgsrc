@@ -1,17 +1,14 @@
-$NetBSD: distinfo,v 1.12 2005/02/23 17:36:24 wiz Exp $
+$NetBSD: distinfo,v 1.13 2005/03/01 19:00:11 xtraeme Exp $
 
-SHA1 (X11R6.8.1-src1.tar.gz) = 027d16317e07d9df166c0176a1f28b2614f38cc9
-RMD160 (X11R6.8.1-src1.tar.gz) = 3873afcaff4d5eece7b8243d26211c86c138c849
-Size (X11R6.8.1-src1.tar.gz) = 30562401 bytes
-SHA1 (X11R6.8.1-src2.tar.gz) = 17f543f49599290b6e4cd4d963c643cd8c19158a
-RMD160 (X11R6.8.1-src2.tar.gz) = adcc1bf6dcb61cb9e5f1ecb1c15b4bc29404ac67
-Size (X11R6.8.1-src2.tar.gz) = 5808949 bytes
-SHA1 (X11R6.8.1-src3.tar.gz) = e17afc90b0c43f4f40b2ff7410f4ff5d4297de28
-RMD160 (X11R6.8.1-src3.tar.gz) = 46144cd9dd47569509fe7255c7148231d8098731
-Size (X11R6.8.1-src3.tar.gz) = 10014808 bytes
-SHA1 (xorg-681-CAN-2004-0914.patch) = 56b8db629045942c84c13d48192a1e8722b330ca
-RMD160 (xorg-681-CAN-2004-0914.patch) = e42f3f19c9f8aa793d06f76e9779efe01f6d0e76
-Size (xorg-681-CAN-2004-0914.patch) = 55411 bytes
+SHA1 (X11R6.8.2-src1.tar.gz) = 23c60680274062a1db17f646a8388149309dc45c
+RMD160 (X11R6.8.2-src1.tar.gz) = bb170d7a11416c3d9bd1d23d461ba4cea9b1b2c8
+Size (X11R6.8.2-src1.tar.gz) = 32373802 bytes
+SHA1 (X11R6.8.2-src2.tar.gz) = af6190fd2619cc60e70c0a8c00dee6826e1fb726
+RMD160 (X11R6.8.2-src2.tar.gz) = 0c8bb311c279c9b26688f8a6ec5dfbe56c28801e
+Size (X11R6.8.2-src2.tar.gz) = 5974936 bytes
+SHA1 (X11R6.8.2-src3.tar.gz) = de1569856b8023c58fc92bd0b3c8406214451fce
+RMD160 (X11R6.8.2-src3.tar.gz) = d3c90401ba81dfeea843373d0d0d386962b636a6
+Size (X11R6.8.2-src3.tar.gz) = 10379299 bytes
 SHA1 (patch-aa) = 009b7a2679ae98ebd7071e4fa6169c3401273ca1
 SHA1 (patch-ac) = 9ada5ad89af7f744a7951b0919a09f0b26d949e3
 SHA1 (patch-ad) = 7843332769ee47bc8a52a9adb1047b1a637af71b
@@ -32,5 +29,4 @@ SHA1 (patch-at) = bc375171b6f0a8141621009767b5457962967112
 SHA1 (patch-au) = fd2bcdb1c37ce0cc748b0f5c2a12d226e4486d0d
 SHA1 (patch-av) = 99e9764ca1afdfb5882d62e453ccaea7dfa7f182
 SHA1 (patch-aw) = d305ea935ba10d443f9bfdcfc2c74bab5a03ba60
-SHA1 (patch-ax) = 5a340661ded23816334b6af67068680a8de73cda
-SHA1 (patch-ay) = e83713c5e0c35c4935101df9432c6f125cdd1478
+SHA1 (patch-ay) = b154d0d4e95ea15c79921b605266701ee773d144
