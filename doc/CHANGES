@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4349 2004/01/04 18:43:34 xtraeme Exp $
+$NetBSD: CHANGES,v 1.4350 2004/01/04 19:14:42 cjep Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -50,3 +50,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated libcdaudio to 0.99.9 [xtraeme 2003-01-04]
 	Added quake3server-1.32b [xtraeme 2003-01-04]
 	Added quake3server-ra3-1.65 [xtraeme 2003-01-04]
+	Updated overnet to 0.51.2 [cjep 2003-01-04]
