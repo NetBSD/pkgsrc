@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/08/17 16:56:18 itojun Exp $
+bin/vorbize
+bin/mp3tovorbis
+bin/ogg123
+bin/vorbiscomment
+bin/oggenc
+man/man1/ogg123.1
+man/man1/vorbize.1
+man/man1/oggenc.1
