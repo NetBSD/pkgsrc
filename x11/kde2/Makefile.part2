@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.part2,v 1.4 2001/07/05 05:47:23 jlam Exp $
+# $NetBSD: Makefile.part2,v 1.5 2001/07/05 15:23:20 jlam Exp $
 #
 USE_X11BASE=		YES
 USE_GMAKE=		YES
@@ -9,18 +9,15 @@ GNU_CONFIGURE=		YES
 .if defined(USE_BUILDLINK_ONLY)
 CONFIGURE_ARGS=								\
 	--datadir="${PREFIX}/share/kde"					\
-	--with-ssl-dir="${BUILDLINK_DIR}"				\
 	--with-qt-dir="${BUILDLINK_QTDIR}"				\
 	--with-qt-includes="${BUILDLINK_QTDIR}/include"			\
 	--with-qt-libraries="${QTDIR}/lib"				\
 	--with-extra-libs="${LOCALBASE}/lib:${X11BASE}/lib"		\
 	--with-extra-includes="${BUILDLINK_DIR}/include"
 .else
-USE_SSL=		YES
 EVAL_PREFIX+=		QT2DIR=qt2-libs
 CONFIGURE_ARGS=								\
 	--datadir="${PREFIX}/share/kde"					\
-	--with-ssl-dir="${SSLBASE}"					\
 	--with-qt-dir="${QT2DIR}/qt2"					\
 	--with-qt-includes="${QT2DIR}/qt2/include"			\
 	--with-qt-libraries="${QT2DIR}/qt2/lib"				\
