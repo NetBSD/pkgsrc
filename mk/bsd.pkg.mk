@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.776 2001/07/02 21:06:51 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.777 2001/07/02 21:28:45 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -139,6 +139,8 @@ BUILD_DEPENDS+=		xpkgwedge>=1.5:../../pkgtools/xpkgwedge
 .endif
 .if defined(USE_BUILDLINK_ONLY)
 BUILD_DEPENDS+=		buildlink-x11>=0.4:../../pkgtools/buildlink-x11
+BUILDLINK_DIR?=		${WRKDIR}/.buildlink
+MAKE_ENV+=		BUILDLINK_DIR="${BUILDLINK_DIR}"
 MAKE_ENV+=		PKGSRC_CPPFLAGS="${CPPFLAGS}"
 MAKE_ENV+=		PKGSRC_CFLAGS="${CFLAGS}"
 MAKE_ENV+=		PKGSRC_CXXFLAGS="${CXXFLAGS}"
