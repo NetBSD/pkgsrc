@@ -1,3 +1,4 @@
+$NetBSD: patch-ai,v 1.2 2001/12/25 18:02:09 wiz Exp $
 --- libao2/ao_pcm.c.orig	Tue Jun 12 18:37:32 2001
 +++ libao2/ao_pcm.c	Mon Jul 30 22:10:10 2001
 @@ -68,7 +68,7 @@
