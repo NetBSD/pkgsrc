@@ -1,4 +1,4 @@
-# $NetBSD: apache.mk,v 1.3 2003/11/21 07:04:43 grant Exp $
+# $NetBSD: apache.mk,v 1.4 2003/11/25 11:42:09 jlam Exp $
 #
 # This Makefile fragment handles Apache dependencies and make variables,
 # and is meant to be included by packages that require Apache either at
@@ -128,9 +128,12 @@ _APACHE_DEPENDENCY?=	${BUILDLINK_DEPENDS.${_PKG_APACHE}:${_APACHE_PKGSRCDIR}
 
 # Add a runtime dependency on the apache server.
 # This may or may not create an actual dependency depending on
-# what the apache buildlink2.mk file does.
+# what the apache buildlink[23].mk file does.
+#
 .if defined(_APACHE_PKGSRCDIR)
-.  if defined(USE_BUILDLINK2) && empty(USE_BUILDLINK2:M[nN][oO])
+.  if defined(USE_BUILDLINK3) && empty(USE_BUILDLINK3:M[nN][oO])
+.    include "${_APACHE_BL_SRCDIR}/buildlink3.mk"
+.  elif defined(USE_BUILDLINK2) && empty(USE_BUILDLINK2:M[nN][oO])
 .    include "${_APACHE_BL_SRCDIR}/buildlink2.mk"
 .  else
 DEPENDS+=		${_APACHE_DEPENDENCY}
@@ -139,17 +142,22 @@ DEPENDS+=		${_APACHE_DEPENDENCY}
 
 # If we are building apache modules, then we might need a build-time
 # dependency on apr, and the apache sources?
-.if defined(USE_BUILDLINK2) && empty(USE_BUILDLINK2:M[nN][oO])
-.  if defined(_APACHE_PKGSRCDIR)
+#
+.if defined(_APACHE_PKGSRCDIR)
+.  if defined(USE_BUILDLINK3) && empty(USE_BUILDLINK3:M[nN][oO])
+.    include "${_APACHE_BL_SRCDIR}/buildlink3.mk"
+.  elif defined(USE_BUILDLINK2) && empty(USE_BUILDLINK2:M[nN][oO])
 .    include "${_APACHE_BL_SRCDIR}/buildlink2.mk"
-.  endif
-.else
+.  else
 BUILD_DEPENDS+=		${_APACHE_DEPENDENCY}
+.  endif
 .endif
 
-.if defined(USE_BUILDLINK2) && empty(USE_BUILDLINK2:M[nN][oO])
-.  if ${_PKG_APACHE} == "apache2"
-.    if defined(USE_APR) && !empty(USE_APR:M[yY][eE][sS])
+.if ${_PKG_APACHE} == "apache2"
+.  if defined(USE_APR) && !empty(USE_APR:M[yY][eE][sS])
+.    if defined(USE_BUILDLINK3) && empty(USE_BUILDLINK3:M[nN][oO])
+.      include "../../devel/apr/buildlink3.mk"
+.    elif defined(USE_BUILDLINK2) && empty(USE_BUILDLINK2:M[nN][oO])
 .      include "../../devel/apr/buildlink2.mk"
 .    endif
 .  endif
