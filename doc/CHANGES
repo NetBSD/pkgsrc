@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5321 2004/03/28 21:15:40 xtraeme Exp $
+$NetBSD: CHANGES,v 1.5322 2004/03/28 21:29:52 martin Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1549,3 +1549,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added pulsar-0.1.1 [martin 2004-03-28]
 	Updated xine-ui to 0.9.23 [mycroft 2004-03-28]
 	Added imposter-0.1 [xtraeme 2004-03-28]
+	Updated bozohttpd to 20040218nb4 [martin 2004-03-28]
