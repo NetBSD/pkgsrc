@@ -1,0 +1,13 @@
+$NetBSD: patch-at,v 1.1 2000/06/27 01:32:13 hubertf Exp $
+
+--- contrib/rrdfetchnames/Makefile.in.orig	Tue Jun 27 01:57:15 2000
++++ contrib/rrdfetchnames/Makefile.in	Tue Jun 27 01:57:24 2000
+@@ -85,7 +85,7 @@
+ 
+ EXTRA_DIST = rrdfetchnames.pl.in
+ 
+-contribdir = $(prefix)/contrib/rrdfetchnames
++contribdir = $(prefix)/share/rrdtool/contrib/rrdfetchnames
+ contrib_DATA = README
+ contrib_SCRIPTS = rrdfetchnames.pl
+ mkinstalldirs = $(SHELL) $(top_srcdir)/config/mkinstalldirs

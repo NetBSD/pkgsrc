@@ -1,0 +1,13 @@
+$NetBSD: patch-as,v 1.1 2000/06/27 01:32:13 hubertf Exp $
+
+--- contrib/killspike/Makefile.in.orig	Tue Jun 27 01:55:42 2000
++++ contrib/killspike/Makefile.in	Tue Jun 27 01:56:05 2000
+@@ -85,7 +85,7 @@
+ 
+ EXTRA_DIST = killspike.pl.in
+ 
+-contribdir = $(prefix)/contrib/killspike
++contribdir = $(prefix)/share/rrdtool/contrib/killspike
+ contrib_DATA = README
+ contrib_SCRIPTS = killspike.pl
+ mkinstalldirs = $(SHELL) $(top_srcdir)/config/mkinstalldirs
