@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2012 2003/04/22 19:06:58 jmmv Exp $
+$NetBSD: CHANGES,v 1.2013 2003/04/23 06:06:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1700,3 +1700,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added netbsd-www-1.0 [grant 2003-04-22]
 	Updated xosd to 2.2.1 [jmmv 2003-04-22]
 	Updated xmms-osd to 2.2.1 [jmmv 2003-04-22]
+	Updated jhead to 2.0 [wiz 2003-04-23]
