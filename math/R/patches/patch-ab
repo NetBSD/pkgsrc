@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.11 2002/03/01 10:46:53 markd Exp $
+$NetBSD: patch-ab,v 1.12 2002/06/16 02:56:51 dmcmahill Exp $
 
---- acinclude.m4.orig   Thu Aug 23 21:15:12 2001
+--- acinclude.m4.orig	Sun Dec  9 16:09:06 2001
 +++ acinclude.m4
-@@ -467,6 +467,9 @@
+@@ -574,6 +574,9 @@
  
  extern void F77_SYMBOL(cftest)(int *a, int *b, double *x, double *y);
  
@@ -12,3 +12,13 @@ $NetBSD: patch-ab,v 1.11 2002/03/01 10:46:53 markd Exp $
  int main () {
    int a[3] = {17, 237, 2000000000}, b[2], res = 0;
    double x[3] = {3.14159265, 123.456789, 2.3e34}, z[3];
+@@ -652,6 +655,9 @@
+ } Rcomplex;
+ 
+ extern void F77_SYMBOL(cftest)(Rcomplex *x);
++
++int MAIN_ () { return 0; }
++int MAIN__ () { return 0; }
+ 
+ int main () {
+     Rcomplex z[3];
