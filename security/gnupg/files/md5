@@ -1,3 +1,4 @@
-$NetBSD: md5,v 1.8 2000/11/10 02:35:02 wiz Exp $
+$NetBSD: md5,v 1.9 2001/01/29 11:53:02 wiz Exp $
 
 MD5 (gnupg-1.0.4.tar.gz) = bef2267bfe9b74a00906a78db34437f9
+MD5 (idea.c) = 7d0557459e0a41da099ddbd837d4bd40
