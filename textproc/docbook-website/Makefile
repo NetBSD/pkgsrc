@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2005/02/19 00:22:58 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2005/02/19 00:44:52 wiz Exp $
 #
 
-DISTNAME=	website-2.5.0
+DISTNAME=	website-2.3
 PKGNAME=	docbook-${DISTNAME}
+PKGREVISION=	5
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=docbook/}
 
@@ -15,13 +16,13 @@ DEPENDS=	docbook-xsl>=1.58:../../textproc/docbook-xsl
 USE_BUILDLINK3=	yes
 USE_LANGUAGES=	# empty
 NO_BUILD=	# defined
-NO_CONFIGURE=	YES
+NO_CONFIGURE=	# defined
 
 DOCDIR=		${PREFIX}/share/doc/docbook-website
 DTDDIR=		${PREFIX}/share/xml/website
 EGDIR=		${PREFIX}/share/examples/docbook-website
 
-XML_CATALOGS=	${DTDDIR}/catalog.xml
+XML_CATALOGS=	${DTDDIR}/catalog
 
 do-install:
 	cd ${WRKSRC} && ${FIND} . -name "*.orig" -exec ${RM} {} \;
@@ -31,11 +32,9 @@ do-install:
 	cd ${WRKSRC} && ${PAX} -rwpm ChangeLog README VERSION WhatsNew	\
 		${DOCDIR}
 	cd ${WRKSRC}/example && ${PAX} -rwpm . ${EGDIR}
-	${RM} ${PREFIX}/share/examples/docbook-website/graphics/.xvpics/spacer.png
-	${RMDIR} ${PREFIX}/share/examples/docbook-website/graphics/.xvpics
-	cd ${WRKSRC} && ${PAX} -rwpm VERSION extensions schema tests xsl \
+	cd ${WRKSRC} && ${PAX} -rwpm VERSION extensions xsl *.dtd *.mod	\
 		${DTDDIR}
-	${INSTALL_DATA} ${WRKSRC}/catalog.xml ${DTDDIR}
+	${INSTALL_DATA} ${FILESDIR}/catalog ${DTDDIR}/catalog
 
 .include "../../textproc/xmlcatmgr/catalogs.mk"
 .include "../../mk/bsd.pkg.mk"
