@@ -1,4 +1,4 @@
-#     $NetBSD: NetBSD.x11.dist,v 1.6 2001/03/16 17:20:55 tron Exp $
+#     $NetBSD: NetBSD.x11.dist,v 1.7 2001/03/28 12:09:36 tron Exp $
 #     FreeBSD Id: BSD.x11.dist,v 1.2 1997/06/10 07:55:10 asami Exp
 #
 
@@ -288,6 +288,8 @@
         examples
         ..
 	fonts
+	..
+	pixmaps
 	..
     ..
 ..
