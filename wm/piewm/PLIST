@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2002/10/28 22:28:31 agc Exp $
+bin/piewm
+lib/X11/twm/system.twmrc
+man/cat1/piewm.0
