@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2002/11/30 23:32:22 salo Exp $
+@comment $NetBSD: PLIST,v 1.5 2002/12/09 16:01:20 tron Exp $
 bin/gnp
 man/man1/gnp.1
 share/gnome/apps/Applications/gnotepad+.desktop
@@ -114,5 +114,5 @@ ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/gnotepad+.mo
 @dirrm share/gnotepad+
 @dirrm share/gnome/help/gnotepad+/C
 @dirrm share/gnome/help/gnotepad+
-@unexec ${RMDIR} %D/share/gnome/help 2> /dev/null || true
-@unexec ${RMDIR} %D/share/gnome/apps/Applications 2> /dev/null || true
+@unexec ${RMDIR} %D/share/gnome/help 2> /dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/gnome/apps/Applications 2> /dev/null || ${TRUE}

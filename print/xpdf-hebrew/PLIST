@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/11/08 10:08:59 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/12/09 16:01:40 tron Exp $
 share/xpdf/hebrew/ISO-8859-8.unicodeMap
 @dirrm share/xpdf/hebrew
-@unexec ${RMDIR} %D/share/xpdf 2> /dev/null || true
+@unexec ${RMDIR} %D/share/xpdf 2> /dev/null || ${TRUE}

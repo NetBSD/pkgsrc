@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 2002/02/15 10:13:04 skrll Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/12/09 16:01:50 tron Exp $
 ${NS_PLUGINS_DIR}/plugger.so
 man/man7/plugger.7
 share/doc/plugger/README
 share/doc/plugger/COPYING
 @dirrm share/doc/plugger
-@unexec ${RMDIR} -p %D/${NS_PLUGINS_DIR} 2>/dev/null || true
+@unexec ${RMDIR} -p %D/${NS_PLUGINS_DIR} 2>/dev/null || ${TRUE}

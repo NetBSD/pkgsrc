@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/08/06 14:04:34 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/12/09 16:01:40 tron Exp $
 share/xpdf/japanese/Adobe-Japan1.cidToUnicode
 share/xpdf/japanese/CMap/78-EUC-H
 share/xpdf/japanese/CMap/78-EUC-V
@@ -59,4 +59,4 @@ share/xpdf/japanese/ISO-2022-JP.unicodeMap
 share/xpdf/japanese/Shift-JIS.unicodeMap
 @dirrm share/xpdf/japanese/CMap
 @dirrm share/xpdf/japanese
-@unexec ${RMDIR} %D/share/xpdf 2> /dev/null || true
+@unexec ${RMDIR} %D/share/xpdf 2> /dev/null || ${TRUE}
