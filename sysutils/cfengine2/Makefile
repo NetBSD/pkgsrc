@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2004/05/04 02:07:06 snj Exp $
+# $NetBSD: Makefile,v 1.8 2004/08/18 23:03:44 ben Exp $
 #
 
 .include "../../sysutils/cfengine2/Makefile.common"
-PKGREVISION=	1
 
 COMMENT=	Automate configuration and administration of large systems
 
@@ -15,10 +14,18 @@ BUILD_DEFS+=		USE_INET6
 CONFIGURE_ARGS+=	--with-berkeleydb=${BUILDLINK_PREFIX.db4}
 CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl}
 
+USE_PKGINSTALL=		YES
+RCD_SCRIPTS=		cfexecd cfservd cfenvd
+
 pre-configure:
 	${MV} -f ${WRKSRC}/contrib/vicf.in ${WRKSRC}/contrib/vicf.in.orig
 	${SED} -e "s|@ECHO@|${ECHO}|" \
 		${WRKSRC}/contrib/vicf.in.orig > ${WRKSRC}/contrib/vicf.in
+
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/inputs/*.example \
+		${PREFIX}/share/examples/cfengine
+	${INSTALL_DATA_DIR} /var/cfengine/inputs
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../databases/db4/buildlink3.mk"

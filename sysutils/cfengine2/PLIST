@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/04/26 08:33:00 seb Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/08/18 23:03:44 ben Exp $
 sbin/cfagent
 sbin/cfdoc
 sbin/cfenvd
@@ -7,26 +7,26 @@ sbin/cfexecd
 sbin/cfkey
 sbin/cfrun
 sbin/cfservd
-share/cfengine/cf.chflags.example
-share/cfengine/cf.freebsd.example
-share/cfengine/cf.ftp.example
-share/cfengine/cf.groups.example
-share/cfengine/cf.linux.example
-share/cfengine/cf.main.example
-share/cfengine/cf.motd.example
-share/cfengine/cf.preconf.example
-share/cfengine/cf.services.example
-share/cfengine/cf.site.example
-share/cfengine/cf.solaris.example
-share/cfengine/cf.sun4.example
-share/cfengine/cf.users.example
-share/cfengine/cfagent.conf-advanced.example
-share/cfengine/cfagent.conf.example
 share/cfengine/cfengine.el
-share/cfengine/cfrc.example
-share/cfengine/cfrun.hosts.example
-share/cfengine/cfservd.conf.example
-share/cfengine/update.conf.example
+share/examples/cfengine/cf.chflags.example
+share/examples/cfengine/cf.freebsd.example
+share/examples/cfengine/cf.ftp.example
+share/examples/cfengine/cf.groups.example
+share/examples/cfengine/cf.linux.example
+share/examples/cfengine/cf.main.example
+share/examples/cfengine/cf.motd.example
+share/examples/cfengine/cf.preconf.example
+share/examples/cfengine/cf.services.example
+share/examples/cfengine/cf.site.example
+share/examples/cfengine/cf.solaris.example
+share/examples/cfengine/cf.sun4.example
+share/examples/cfengine/cf.users.example
+share/examples/cfengine/cfagent.conf-advanced.example
+share/examples/cfengine/cfagent.conf.example
+share/examples/cfengine/cfrc.example
+share/examples/cfengine/cfrun.hosts.example
+share/examples/cfengine/cfservd.conf.example
+share/examples/cfengine/update.conf.example
 share/examples/cfengine/vicf
 @dirrm share/examples/cfengine
 @dirrm share/cfengine
