@@ -1,0 +1,5 @@
+# $NetBSD: Setup.in,v 1.1.1.1 2000/02/26 18:45:48 tsarna Exp $
+*shared*
+_mysql _mysqlmodule.c -L@PREFIX@/lib/mysql -R@PREFIX@/lib/mysql \
+	-I@PREFIX@/include/mysql -lmysqlclient
+
