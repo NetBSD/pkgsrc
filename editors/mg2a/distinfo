@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 10:58:07 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 11:01:02 agc Exp $
 
-MD5 (mg2a.tar.Z) = e2ec80b75e004596390642645d3d2906
+SHA1 (mg2a.tar.Z) = c96f890f217eaacb78117f9c73f1ea3709ca8d3f
+Size (mg2a.tar.Z) = 383255 bytes
 SHA1 (patch-aa) = d10d168a9f224cd2dfd15fe28876f55e7073e4d2
 SHA1 (patch-ab) = c62b733dc0247ddff65a544c4a5f9593ee324472
 SHA1 (patch-ac) = 6ef1d0bc88241756cdd3a66050ebfaaf353edcdb

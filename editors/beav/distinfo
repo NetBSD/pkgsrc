@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 10:57:58 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 11:01:00 agc Exp $
 
-MD5 (beav_1.40-11.tar.gz) = 841a1d66124abd6d6357774b3bfb01fd
+SHA1 (beav_1.40-11.tar.gz) = 2d15f44fcb1988c90b2803ad52c2488862505c1a
+Size (beav_1.40-11.tar.gz) = 131116 bytes
 SHA1 (patch-aa) = f41e723c0ec5e1dcdd2160e0c71fb960af5d0ca7
 SHA1 (patch-ab) = dabe0bab94b556d8abe327e65da287a52892d2aa
 SHA1 (patch-ac) = 44c1414034a8515701d37e7f35e1563eca41f1ab
