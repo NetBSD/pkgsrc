@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/04/13 16:22:08 reed Exp $
+# $NetBSD: Makefile,v 1.14 2004/05/31 07:54:29 minskim Exp $
 
 DISTNAME=	libexif-gtk-0.3.3
 PKGREVISION=	7
@@ -17,6 +17,7 @@ USE_LIBTOOL=		YES
 PKGCONFIG_OVERRIDE=	libexif-gtk/libexif-gtk.pc.in
 
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../graphics/libexif/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
