@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.142 2002/06/04 09:57:30 cjep Exp $
+# $NetBSD: Makefile,v 1.143 2002/06/04 16:45:49 cjep Exp $
 #
 
 COMMENT=	System utilities
@@ -122,6 +122,7 @@ SUBDIR+=	xbatt
 SUBDIR+=	xbattbar
 SUBDIR+=	xcdroast
 SUBDIR+=	xdu
+SUBDIR+=	xfm
 SUBDIR+=	xhfs
 SUBDIR+=	xmeter
 SUBDIR+=	xnc
