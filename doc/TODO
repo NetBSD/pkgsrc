@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.796 2003/08/29 15:33:50 xtraeme Exp $
+$NetBSD: TODO,v 1.797 2003/08/30 13:40:45 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -233,7 +233,6 @@ Suggested package updates
 	o p5-GdGraph-1.43 [pkg/22463]
 	o p5-Net-SNMP-4.1.0 [pkg/21782]
 	o p5-Net-Server-0.85 [pkg/22542]
-	o p5-Net-Telnet-3.0.2 [pkg/22322]
 	o p5-XML-LibXML-1.54
 	o p5-libapreq-1.2 [pkg/22584]
 	o pcre-4.4
