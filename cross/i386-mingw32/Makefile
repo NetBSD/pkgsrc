@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/01/20 12:10:55 agc Exp $
+# $NetBSD: Makefile,v 1.17 2004/01/22 07:54:07 grant Exp $
 
 DISTNAME=		cross-${TARGET_ARCH}-1.2
 PKGREVISION=		3
@@ -24,7 +24,7 @@ CROSS_DISTFILES+=	mingw-runtime-1.2-src.tar.gz
 MINGW_WRKSRC=		${WRKDIR}/mingw-runtime-1.2
 CROSS_DISTFILES+=	w32api-1.2-src.tar.gz
 W32_WRKSRC=		${WRKDIR}/w32api-1.2
-USE_GMAKE=		yes
+USE_GNU_TOOLS+=		make
 USE_PERL5=		build
 
 WRKSRC=			${WRKDIR} # for the patch target

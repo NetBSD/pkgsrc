@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/12/23 10:16:20 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/22 07:49:20 grant Exp $
 #
 
 DISTNAME=		jabberd-1.4.3
@@ -13,7 +13,7 @@ CONFLICTS=		jabberd2-[0-9]*:../../wip/jabberd2
 
 USE_BUILDLINK2=		yes
 HAS_CONFIGURE=		yes
-USE_GMAKE=		yes
+USE_GNU_TOOLS+=		make
 USE_PKGINSTALL=		yes
 
 CONFIGURE_ARGS+=	--enable-ssl

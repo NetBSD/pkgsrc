@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2003/07/21 16:34:32 martti Exp $
+# $NetBSD: Makefile,v 1.15 2004/01/22 07:49:20 grant Exp $
 
 DISTNAME=	micq-0.4.10.3
 PKGREVISION=	1
@@ -12,7 +12,7 @@ HOMEPAGE=	http://www.micq.org/
 COMMENT=	Text-mode ICQ client
 
 USE_BUILDLINK2=	YES
-USE_GMAKE=	YES
+USE_GNU_TOOLS+=	make
 GNU_CONFIGURE=	YES
 
 .include "../../devel/gettext-lib/buildlink2.mk"
