@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2002/06/01 12:30:47 grant Exp $
+# $NetBSD: Makefile,v 1.3 2002/07/26 09:02:35 grant Exp $
 
-DISTNAME=	sylpheed-0.7.6claws
-PKGNAME=	sylpheed-claws-0.7.6
+DISTNAME=	sylpheed-0.8.0claws
+PKGNAME=	sylpheed-claws-0.8.0
 CATEGORIES=	mail news x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sylpheed-claws/}
 EXTRACT_SUFX=	.tar.bz2
@@ -21,6 +21,7 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-gpgme
 CONFIGURE_ARGS+=	--enable-nls
 CONFIGURE_ARGS+=	--enable-ssl
+CONFIGURE_ARGS+=	--enable-compface
 
 .include "../../mk/bsd.prefs.mk"
 BUILD_DEFS+=		USE_INET6
@@ -29,6 +30,7 @@ BUILD_DEFS+=		USE_INET6
 CONFIGURE_ARGS+=	--enable-ipv6
 .endif
 
+.include "../../graphics/compface/buildlink.mk"
 .include "../../graphics/imlib/buildlink.mk"
 .include "../../security/gpgme/buildlink.mk"
 .include "../../security/openssl/buildlink.mk"
