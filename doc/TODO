@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2559 2004/11/28 23:09:06 wiz Exp $
+$NetBSD: TODO,v 1.2560 2004/11/28 23:12:31 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1122,7 +1122,6 @@ Suggested package updates
 	o sendfile-20010424
 	o ser-0.8.14
 	o sharity-light-1.3
-	o shmux-1.0b5
 	o siag-3.6.0
 	o sign-1.0.7
 	o simh-33.0
