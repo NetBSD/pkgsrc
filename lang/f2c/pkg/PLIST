@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.3 1998/08/25 14:19:52 tv Exp $
+@comment $NetBSD: PLIST,v 1.4 1998/08/25 15:22:47 tv Exp $
 bin/f2c
-bin/f77
+bin/f2c-f77
 include/f2c.h
 lib/libf2c.a
 lib/libF77.a
