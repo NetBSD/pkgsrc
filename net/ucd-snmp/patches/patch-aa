@@ -1,67 +1,33 @@
-# XXX The LIBWRAP horrible hack is necessary because of the stupid linker's
-# insistence on requiring that all externals referenced from a shared library
-# be defined, even if nothing elese from the library is ever used.  In this
-# case the libwrap.so library is at fault as it references 'deny_severity' and
-# 'allow_severity', but none of the configure tests will include this, nor
-# indeed will any product binary except for snmpd (which is the only one that
-# actualy uses tcp_wrappers).
-#
-# /usr/libexec/ld.so: Undefined symbol "_deny_severity" in conftest:/usr/lib/libwrap.so.0.0
-#
---- configure.in.orig	Mon Mar 15 15:31:43 1999
-+++ configure.in	Tue Apr 20 18:35:51 1999
-@@ -97,14 +97,15 @@
- AC_ARG_WITH(libwrap,
- [  --with-libwrap[=LIBPATH]        Compile in libwrap (tcp_wrappers) support.],
-     if test "x$withval" != "x" -a -d "$withval"; then
--        LIBS="-L$withval -lwrap $LIBS"
-+        LIBWRAP="-L$withval -lwrap"
+$NetBSD: patch-aa,v 1.7 1999/05/04 03:51:57 tv Exp $
+
+--- configure.orig	Mon Mar 15 19:27:31 1999
++++ configure	Mon May  3 23:39:50 1999
+@@ -744,7 +744,7 @@
+   if test "x$withval" != "x" -a -d "$withval"; then
+         LIBS="-L$withval -lwrap $LIBS"
      elif test "x$withval" = "xyes"; then
 -        LIBS="-lwrap $LIBS"
 +        LIBWRAP="-lwrap"
      else
--        LIBS="$withval $LIBS"
-+        LIBWRAP="$withval"
+         LIBS="$withval $LIBS"
      fi
-     AC_DEFINE(USE_LIBWRAP)
- )
-+AC_SUBST(LIBWRAP)
+@@ -1821,9 +1821,10 @@
  
- AC_ARG_WITH(mib_modules,
- [  --with-mib-modules=\"item1 ...\"  Compile with additional mib modules
-@@ -821,11 +822,7 @@
+     esac
+ else
+-    SHLIB_EXTENSION="a"
++    SHLIB_EXTENSION="la"
+     SHLIB_LD_CMD="ar cr"
+     SHLIB_LDCONFIG_CMD=":"
++    RANLIB=":"
+ fi
  
- AC_CHECK_STRUCT_FOR([
- #include <sys/types.h>
--#define KERNEL
--#define _KERNEL
- #include <sys/socket.h>
--#undef KERNEL
--#undef _KERNEL
- #include <net/route.h>
- ], rtentry, rt_dst, no)
  
-@@ -836,11 +833,7 @@
- dnl 4.4 compat
- AC_TRY_COMPILE([
- #include <sys/types.h>
--#define KERNEL
--#define _KERNEL
- #include <sys/socket.h>
--#undef KERNEL
--#undef _KERNEL
- #include <net/route.h>
- ],[
+@@ -7699,6 +7700,7 @@
+   fi
+ fi
  
-@@ -857,11 +850,7 @@
- if test "x$ac_cv_RTENTRY_TYPE" = "x"; then
- AC_TRY_COMPILE([
- #include <sys/types.h>
--#define KERNEL
--#define _KERNEL
- #include <sys/socket.h>
--#undef KERNEL
--#undef _KERNEL
- #include <net/route.h>
- ],[
- struct rtentry rt; 
++LIBS="$LIBS $LIBWRAP"
+ 
+ trap '' 1 2 15
+ cat > confcache <<\EOF

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 1999/04/05 00:59:08 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.5 1999/05/04 03:51:57 tv Exp $
 bin/snmpnetstat
 bin/snmpwalk
 bin/snmpbulkwalk
@@ -13,7 +13,6 @@ bin/snmpdelta
 bin/snmptable
 bin/snmpcheck
 bin/tkmib
-etc/rc.d/snmpd.sh
 include/ucd-snmp/acl.h
 include/ucd-snmp/asn1.h
 include/ucd-snmp/context.h
@@ -32,6 +31,7 @@ include/ucd-snmp/ucd-snmp-includes.h
 include/ucd-snmp/version.h
 include/ucd-snmp/view.h
 lib/libsnmp.a
+lib/libsnmp.so.0.0
 man/man1/snmpcmd.1
 man/man1/snmpget.1
 man/man1/snmpset.1
@@ -91,7 +91,7 @@ share/snmp/mibs/TCP-MIB.txt
 share/snmp/mibs/UCD-SNMP-MIB.txt
 share/snmp/mibs/UDP-MIB.txt
 @unexec /bin/rm -f %D/share/snmp/mibs/.index
-lib/snmp/dlmod/.keepme
+@exec mkdir -p %D/lib/snmp/dlmod
 @dirrm lib/snmp/dlmod
 @dirrm share/snmp/mibs
 @dirrm share/snmp
