@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/09/11 14:59:18 taca Exp $
+# $NetBSD: Makefile,v 1.11 2003/11/02 17:42:26 taca Exp $
 
 DISTNAME=		ruby-postgres-${VERSION}
 PKGNAME=		${RUBY_PKGNAMEPREFIX}postgresql-${VERSION}
@@ -8,6 +8,8 @@ MASTER_SITES=		http://www.postgresql.jp/interfaces/ruby/archive/
 MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.postgresql.jp/interfaces/ruby/
 COMMENT=		Ruby extension for postgresql
+
+USE_BUILDLINK2=		# defined
 
 VERSION=		0.7.1
 DIST_SUBDIR=		ruby
@@ -41,4 +43,5 @@ post-install:
 
 .include "../../databases/postgresql-lib/buildlink2.mk"
 .include "../../lang/ruby-base/Makefile.common"
+.include "../../lang/ruby-base/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
