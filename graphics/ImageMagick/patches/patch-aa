@@ -1,110 +1,39 @@
-$NetBSD: patch-aa,v 1.9 1999/04/23 21:41:25 tron Exp $
+$NetBSD: patch-aa,v 1.10 1999/04/25 18:46:30 tv Exp $
 
---- Magick.tmpl.orig	Wed Mar 31 16:36:48 1999
-+++ Magick.tmpl	Fri Apr 23 23:32:58 1999
-@@ -37,17 +37,17 @@
- #ifdef RsArchitecture
- XCOMM EXTENSIONS_DEFINES= -DHasLZW -DHasShape
- #else
--XCOMM EXTENSIONS_DEFINES= -DHasLZW -DHasShape -DHasSharedMemory
-+EXTENSIONS_DEFINES= -DHasLZW -DHasShape -DHasSharedMemory
- #endif
+--- configure.orig	Sun Apr 25 07:17:03 1999
++++ configure	Sun Apr 25 07:23:45 1999
+@@ -2133,7 +2133,7 @@
+ fi
+ rm -f confcache
  
- XCOMM Set DoSharedLib to HasSharedLibraries to build ImageMagick with shared
- XCOMM libraries.
- XCOMM
--XCOMM #define DoSharedLib  HasSharedLibraries
-+#define DoSharedLib  HasSharedLibraries
+-
++if false; then
+ # Actually configure libtool.  ac_aux_dir is where install-sh is found.
+ CC="$CC" CFLAGS="$CFLAGS" CPPFLAGS="$CPPFLAGS" \
+ LD="$LD" NM="$NM" RANLIB="$RANLIB" LN_S="$LN_S" \
+@@ -2141,6 +2141,7 @@
+ ${CONFIG_SHELL-/bin/sh} $ac_aux_dir/ltconfig --no-reexec \
+ $libtool_flags --no-verify $ac_aux_dir/ltmain.sh $host \
+ || { echo "configure: error: libtool configure failed" 1>&2; exit 1; }
++fi
  
- XCOMM Define the location of the X11 RGB color database.
- XCOMM
--XCOMM DATABASE_DEFINES= -DRGBColorDatabase=\"/usr/openwin/lib/X11/rgb.txt\"
-+DATABASE_DEFINES= -DRGBColorDatabase=\"/usr/X11R6/lib/X11/rgb.txt\"
+ # Reload cache, that may have been modified by ltconfig
+ if test -r "$cache_file"; then
+@@ -2151,7 +2152,7 @@
+   > $cache_file
+ fi
  
- XCOMM By default, the maximum color value is 255.  To increase the maximum to
- XCOMM 65535 define:
-@@ -59,16 +59,16 @@
- XCOMM of these optional delegates, uncomment the respective define.  Make sure
- XCOMM the path names are correct.  See README for more details.
- XCOMM
--XCOMM #define HasBZLIB
-+#include "bzlib.tmpl"
- XCOMM #define HasDPS
- XCOMM #define HasFPX
- XCOMM #define HasHDF
- XCOMM #define HasJBIG
--XCOMM #define HasJPEG
--XCOMM #define HasPNG
--XCOMM #define HasTIFF
-+#define HasJPEG
-+#define HasPNG
-+#define HasTIFF
- XCOMM #define HasTTF
--XCOMM #define HasZLIB
-+#define HasZLIB
+-
++if false; then
+ # This can be used to rebuild libtool when needed
+ LIBTOOL_DEPS="$ac_aux_dir/ltconfig $ac_aux_dir/ltmain.sh"
  
- #ifdef HasBZLIB
- BZLIB_DEFINES= -DHasBZLIB
-@@ -107,24 +107,24 @@
+@@ -2176,7 +2177,7 @@
+ then
+   libtool_build_static_libs='yes'
+ fi
+-
++fi
  
- #ifdef HasJPEG
- JPEG_DEFINES= -DHasJPEG
--JPEG_INCLUDES= -I$(TOP)/jpeg
--JPEG_FLAGS= -L$(TOP)/jpeg
-+JPEG_INCLUDES= -I${LOCALBASE}/include
-+JPEG_FLAGS= -L${LOCALBASE}/lib -R${LOCALBASE}/lib
- JPEG_LIBRARIES= -ljpeg
- #endif
- 
- #ifdef HasPNG
- XCOMM Use libpng-1.00 or above.  You must also link with Zlib.
- PNG_DEFINES= -DHasPNG
--PNG_INCLUDES= -I$(TOP)/png
--PNG_FLAGS= -L$(TOP)/png
-+PNG_INCLUDES= -I${LOCALBASE}/include
-+PNG_FLAGS= -L${LOCALBASE}/lib -R${LOCALBASE}/lib
- PNG_LIBRARIES= -lpng
- #endif
- 
- #ifdef HasTIFF
- XCOMM Tiff library requires Jpeg and Zlib libraries.
- TIFF_DEFINES= -DHasTIFF
--TIFF_INCLUDES= -I$(TOP)/tiff/libtiff
--TIFF_FLAGS= -L$(TOP)/tiff/libtiff
-+TIFF_INCLUDES= -I${LOCALBASE}/include
-+TIFF_FLAGS= -L${LOCALBASE}/lib -R${LOCALBASE}/lib
- TIFF_LIBRARIES= -ltiff
- #endif
- 
-@@ -137,8 +137,8 @@
- 
- #ifdef HasZLIB
- ZLIB_DEFINES= -DHasZLIB
--ZLIB_INCLUDES= -I$(TOP)/zlib
--ZLIB_FLAGS= -L$(TOP)/zlib
-+ZLIB_INCLUDES= 
-+ZLIB_FLAGS= 
- ZLIB_LIBRARIES= -lz
- #endif
- 
-@@ -155,16 +155,16 @@
- XCOMM the top level X11 include directory or X11/X.h will be overwritten.
- 
- #ifndef PREFIX
--PREFIX= /usr/local
-+PREFIX= ${X11BASE}
- #endif
- 
- DelegatePath= -DDelegatePath=\"$(PREFIX)/share/ImageMagick/\"
- LOCALDIR= $(PREFIX)/bin
- LOCALINC= $(PREFIX)/include
- LOCALLIB= $(PREFIX)/lib
--LOCALMAN1= $(PREFIX)/man/man1
--LOCALMAN4= $(PREFIX)/man/man4
--LOCALMAN5= $(PREFIX)/man/man5
-+LOCALMAN1= $(PREFIX)/man/cat1
-+LOCALMAN4= $(PREFIX)/man/cat4
-+LOCALMAN5= $(PREFIX)/man/cat5
- 
- MAGICKDIR= $(TOP)/magick
- MAGICK_INCLUDES= -I$(TOP)
+ # Add configure option --enable-maintainer-mode which enables dependency
+ # checking and generation useful to package maintainers.  This is made an
