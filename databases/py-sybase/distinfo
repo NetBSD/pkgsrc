@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2004/10/05 19:49:28 tsarna Exp $
+$NetBSD: distinfo,v 1.3 2004/10/05 20:02:26 tsarna Exp $
 
 SHA1 (sybase-0.36.tar.gz) = 9b46e9e0dfb222cd36101208d3dcb9190f15b6aa
 Size (sybase-0.36.tar.gz) = 93919 bytes
-SHA1 (patch-aa) = 9cc66a802e7b21fa7f2d1cc410902089f80a0831
+SHA1 (patch-aa) = 01d4c48d6045d2f716e6e8dbc3883e693a1c2e21
