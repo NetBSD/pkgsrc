@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2004/07/22 09:16:00 recht Exp $
+# $NetBSD: Makefile,v 1.6 2004/11/30 15:42:40 taca Exp $
 
-DISTNAME=	JapaneseCodecs-1.4.10
-PKGNAME=	${PYPKGPREFIX}-jpCodecs-1.4.10
+DISTNAME=	JapaneseCodecs-1.4.11
+PKGNAME=	${PYPKGPREFIX}-jpCodecs-1.4.11
 CATEGORIES=	converters python
-MASTER_SITES=	http://www.asahi-net.or.jp/~rd6t-kjym/python/JapaneseCodecs/dist/
+MASTER_SITES=	http://www.python.jp/Zope/download/JapaneseCodecs/ \
+		http://www.asahi-net.or.jp/~rd6t-kjym/python/JapaneseCodecs/dist/
 
 MAINTAINER=	tsarna@NetBSD.org
 HOMEPAGE=	http://www.asahi-net.or.jp/~rd6t-kjym/python/
