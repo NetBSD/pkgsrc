@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.114 2002/08/06 01:49:07 cjs Exp $
+# $NetBSD: Makefile,v 1.115 2002/08/07 05:42:12 jlam Exp $
 #
 
 COMMENT=	Security tools
@@ -119,7 +119,6 @@ SUBDIR+=	tcp_wrappers
 SUBDIR+=	tct
 SUBDIR+=	tripwire
 SUBDIR+=	uvscan
-SUBDIR+=	uvscan-dat
 SUBDIR+=	winbind
 SUBDIR+=	xdm-krb4
 SUBDIR+=	zebedee
