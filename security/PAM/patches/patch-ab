@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.3 2002/12/23 21:23:58 jlam Exp $
+$NetBSD: patch-ab,v 1.4 2004/11/16 07:46:57 jlam Exp $
 
 --- configure.in.orig	Tue Jul  9 02:17:13 2002
 +++ configure.in
@@ -34,22 +34,3 @@ $NetBSD: patch-ab,v 1.3 2002/12/23 21:23:58 jlam Exp $
    /usr/local/lib /usr/local/share/lib"
  DICT_FILE_CANDIDATES="pw_dict cracklib_dict"
  CRACKLIB_DICTPATH=""
-@@ -305,6 +312,18 @@ if test "$GCC" = yes; then
- 	case $OS in
- 	linux)
- 		OS_CFLAGS="-ansi -D_POSIX_SOURCE -pedantic"
-+		LD_D="gcc -shared -Xlinker -x"
-+		WARNINGS="$GCC_WARNINGS"
-+		PIC="-fPIC"
-+		DYNTYPE=so
-+		LD=ld				
-+		LD_L="$LD -x -shared"
-+		RANLIB=ranlib
-+		STRIP=strip
-+		CC_STATIC="-Xlinker -export-dynamic"
-+		;;
-+	netbsd)
-+		OS_CFLAGS=""
- 		LD_D="gcc -shared -Xlinker -x"
- 		WARNINGS="$GCC_WARNINGS"
- 		PIC="-fPIC"
