@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2002/12/26 19:55:01 tsarna Exp $
+
+SHA1 (gpsdrive-1.31.tar.gz) = 296a06d264c5fbb077c91f3529b4e6f122423f05
+Size (gpsdrive-1.31.tar.gz) = 784379 bytes
+SHA1 (patch-aa) = 0d00f82a560744a57a44a3af7ad25d5c943fb6cf
