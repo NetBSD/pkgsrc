@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/03/30 19:58:52 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/06/30 14:04:26 jschauma Exp $
 include/atk-1.0/atk/atk-enum-types.h
 include/atk-1.0/atk/atk.h
 include/atk-1.0/atk/atkaction.h
@@ -28,7 +28,7 @@ lib/libatk-1.0.a
 lib/libatk-1.0.la
 lib/libatk-1.0.so
 lib/libatk-1.0.so.0
-lib/libatk-1.0.so.0.1
+lib/libatk-1.0.so.0.2
 lib/pkgconfig/atk.pc
 share/gtk-doc/html/atk/atk-atkaction.html
 share/gtk-doc/html/atk/atk-atkcomponent.html
