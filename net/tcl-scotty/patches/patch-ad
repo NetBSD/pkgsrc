@@ -1,0 +1,19 @@
+$NetBSD: patch-ad,v 1.1.1.1 2000/09/07 17:38:46 jwise Exp $
+--- ../tnm/generic/tnmInit.c.orig	Thu Sep  7 09:52:58 2000
++++ ../tnm/generic/tnmInit.c	Thu Sep  7 09:53:14 2000
+@@ -83,15 +83,12 @@
+ 
+     machine = Tcl_GetVar2(interp, "tcl_platform", "machine", TCL_GLOBAL_ONLY);
+     os = Tcl_GetVar2(interp, "tcl_platform", "os", TCL_GLOBAL_ONLY);
+-    vers = Tcl_GetVar2(interp, "tcl_platform", "osVersion", TCL_GLOBAL_ONLY);
+ 
+     Tcl_DStringInit(&arch);
+     if (machine && os && vers) {
+ 	Tcl_DStringAppend(&arch, machine, -1);
+ 	Tcl_DStringAppend(&arch, "-", 1);
+ 	Tcl_DStringAppend(&arch, os, -1);
+-	Tcl_DStringAppend(&arch, "-", 1);
+-	Tcl_DStringAppend(&arch, vers, -1);
+     } else {
+ 	Tcl_DStringAppend(&arch, "unknown-os", -1);
+     }
