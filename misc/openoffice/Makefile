@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2002/08/01 05:48:17 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2002/08/02 15:13:47 jdolecek Exp $
 
 DISTNAME=		openoffice-0.0.0.641
 PKGREVISION=		1
@@ -54,6 +54,8 @@ post-extract:
 	${PERL5} -p -i.save -e 's/\r\n/\n/' 				\
 	    ${WRKSRC}/../sablot/Sablot-0.52.patch
 
+.include "../../mk/bsd.prefs.mk"
+
 DISPLAY?=	#empty, if unset
 checkforx:
 .if ${DISPLAY}=="" || ${DISPLAY_OK:!${X11BASE}/bin/xdpyinfo >/dev/null 2>&1 && echo YES || echo NO!} == "NO"
@@ -70,7 +72,7 @@ DISPLAY= ':2'
 pre-build: checkforx
 
 do-build:
-	tcsh -c "setenv DISPLAY ${DISPLAY}; cd ${WRKSRC}/..&& 		\
+	tcsh -c "setenv DISPLAY '${DISPLAY}'; cd ${WRKSRC}/..&& 	\
 		   ./bootstrap&& source *.Set&& dmake"
 			
 pre-install: checkforx
