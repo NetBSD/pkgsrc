@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9433 2005/03/05 20:14:17 fredb Exp $
+$NetBSD: CHANGES,v 1.9434 2005/03/05 22:06:59 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1287,3 +1287,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated flim to 1.14.6nb2 [minskim 2005-03-05]
 	Updated semi to 1.14.6nb3 [minskim 2005-03-05]
 	Updated xli to 1.17.0nb2 [fredb 2005-03-05]
+	Updated imap-uw to 2004c1nb1 [adrianp 2005-03-05]
