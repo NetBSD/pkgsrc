@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/01/06 05:32:29 tv Exp $
+# $NetBSD: Makefile,v 1.12.2.1 2005/04/01 05:30:34 snj Exp $
 
 DISTNAME=		libkver-${VERSION}
 CATEGORIES=		pkgtools
@@ -18,7 +18,7 @@ NO_PKGTOOLS_REQD_CHECK=	# defined
 NO_CHECKSUM=		# defined
 NO_MTREE=		# defined
 
-VERSION=		0.5
+VERSION=		0.6
 
 ONLY_FOR_PLATFORM=	NetBSD-*-*
 
