@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/09/18 15:27:09 kim Exp $
+# $NetBSD: Makefile,v 1.2 1999/09/19 19:56:48 kim Exp $
 #
 
 DISTNAME=	patch-2.5.4
@@ -11,7 +11,9 @@ HOMEPAGE=	http://www.gnu.org/software/patch/patch.html
 NO_PATCH=	yes
 GNU_CONFIGURE=	yes
 
-.if exists(/usr/bin/patch)
+.include "../../mk/bsd.prefs.mk"
+
+.if exists(/usr/bin/patch) && ${OPSYS} != "SunOS"
 IGNORE=		"is part of your NetBSD distribution"
 .endif
 
