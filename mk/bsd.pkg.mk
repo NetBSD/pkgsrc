@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.130 1998/07/27 11:17:51 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.131 1998/07/31 14:55:38 tv Exp $
 #
 # This file is in the public domain.
 #
@@ -17,11 +17,11 @@
 # NEVER override the "regular" targets unless you want to open
 # a major can of worms.
 
-# Get the architecture
-ARCH!=	uname -m
-
 # Get the operating system type
 OPSYS!=	uname -s
+
+# Include any preferences, if not already included
+.include "../../mk/bsd.prefs.mk"
 
 .if defined(ONLY_FOR_ARCHS)
 .for __ARCH in ${ONLY_FOR_ARCHS}
@@ -47,12 +47,12 @@ NOCLEANDEPENDS=	yes
 DEF_UMASK?=		0022
 .endif
 
-.if exists(${.CURDIR}/Makefile.${ARCH}-${OPSYS})
-.include "${.CURDIR}/Makefile.${ARCH}-${OPSYS}"
+.if exists(${.CURDIR}/Makefile.${MACHINE_ARCH}-${OPSYS})
+.include "${.CURDIR}/Makefile.${MACHINE_ARCH}-${OPSYS}"
 .elif exists(${.CURDIR}/Makefile.${OPSYS})
 .include "${.CURDIR}/Makefile.${OPSYS}"
-.elif exists(${.CURDIR}/Makefile.${ARCH})
-.include "${.CURDIR}/Makefile.${ARCH}"
+.elif exists(${.CURDIR}/Makefile.${MACHINE_ARCH})
+.include "${.CURDIR}/Makefile.${MACHINE_ARCH}"
 .endif
 
 .if (${OPSYS} == "NetBSD")
@@ -68,56 +68,57 @@ _DISTDIR?=		${DISTDIR}/${DIST_SUBDIR}
 PACKAGES?=		${PKGSRCDIR}/packages
 TEMPLATES?=		${PKGSRCDIR}/templates
 
-.if exists(${.CURDIR}/patches.${ARCH}-${OPSYS})
-PATCHDIR?=		${.CURDIR}/patches.${ARCH}-${OPSYS}
+.if exists(${.CURDIR}/patches.${MACHINE_ARCH}-${OPSYS})
+PATCHDIR?=		${.CURDIR}/patches.${MACHINE_ARCH}-${OPSYS}
 .elif exists(${.CURDIR}/patches.${OPSYS})
 PATCHDIR?=		${.CURDIR}/patches.${OPSYS}
-.elif exists(${.CURDIR}/patches.${ARCH})
-PATCHDIR?=		${.CURDIR}/patches.${ARCH}
+.elif exists(${.CURDIR}/patches.${MACHINE_ARCH})
+PATCHDIR?=		${.CURDIR}/patches.${MACHINE_ARCH}
 .else
 PATCHDIR?=		${.CURDIR}/patches
 .endif
 
-.if exists(${.CURDIR}/scripts.${ARCH}-${OPSYS})
-SCRIPTDIR?=		${.CURDIR}/scripts.${ARCH}-${OPSYS}
+.if exists(${.CURDIR}/scripts.${MACHINE_ARCH}-${OPSYS})
+SCRIPTDIR?=		${.CURDIR}/scripts.${MACHINE_ARCH}-${OPSYS}
 .elif exists(${.CURDIR}/scripts.${OPSYS})
 SCRIPTDIR?=		${.CURDIR}/scripts.${OPSYS}
-.elif exists(${.CURDIR}/scripts.${ARCH})
-SCRIPTDIR?=		${.CURDIR}/scripts.${ARCH}
+.elif exists(${.CURDIR}/scripts.${MACHINE_ARCH})
+SCRIPTDIR?=		${.CURDIR}/scripts.${MACHINE_ARCH}
 .else
 SCRIPTDIR?=		${.CURDIR}/scripts
 .endif
 
-.if exists(${.CURDIR}/files.${ARCH}-${OPSYS})
-FILESDIR?=		${.CURDIR}/files.${ARCH}-${OPSYS}
+.if exists(${.CURDIR}/files.${MACHINE_ARCH}-${OPSYS})
+FILESDIR?=		${.CURDIR}/files.${MACHINE_ARCH}-${OPSYS}
 .elif exists(${.CURDIR}/files.${OPSYS})
 FILESDIR?=		${.CURDIR}/files.${OPSYS}
-.elif exists(${.CURDIR}/files.${ARCH})
-FILESDIR?=		${.CURDIR}/files.${ARCH}
+.elif exists(${.CURDIR}/files.${MACHINE_ARCH})
+FILESDIR?=		${.CURDIR}/files.${MACHINE_ARCH}
 .else
 FILESDIR?=		${.CURDIR}/files
 .endif
 
-.if exists(${.CURDIR}/pkg.${ARCH}-${OPSYS})
-PKGDIR?=		${.CURDIR}/pkg.${ARCH}-${OPSYS}
+.if exists(${.CURDIR}/pkg.${MACHINE_ARCH}-${OPSYS})
+PKGDIR?=		${.CURDIR}/pkg.${MACHINE_ARCH}-${OPSYS}
 .elif exists(${.CURDIR}/pkg.${OPSYS})
 PKGDIR?=		${.CURDIR}/pkg.${OPSYS}
-.elif exists(${.CURDIR}/pkg.${ARCH})
-PKGDIR?=		${.CURDIR}/pkg.${ARCH}
+.elif exists(${.CURDIR}/pkg.${MACHINE_ARCH})
+PKGDIR?=		${.CURDIR}/pkg.${MACHINE_ARCH}
 .else
 PKGDIR?=		${.CURDIR}/pkg
 .endif
 
 .if defined(USE_IMAKE) || defined(USE_MOTIF) || defined(USE_X11)
+.if defined(USE_LOCALBASE_FOR_X11)
+PREFIX?=		${LOCALBASE}
+BUILD_DEPENDS+=		${X11BASE}/lib/X11/config/xpkgwedge.def:../../x11/xpkgwedge
+.else
 PREFIX?=		${X11BASE}
+.endif
 .else
 PREFIX?=		${LOCALBASE}
 .endif
-# The following 4 lines should go away as soon as the ports are all updated
-.if defined(EXEC_DEPENDS)
-BUILD_DEPENDS+=	${EXEC_DEPENDS}
-RUN_DEPENDS+=	${EXEC_DEPENDS}
-.endif
+
 .if defined(USE_GMAKE)
 BUILD_DEPENDS+=		${GMAKE}:${PKGSRCDIR}/devel/gmake
 MAKE_PROGRAM=		${GMAKE}
@@ -134,8 +135,12 @@ USE_GTEXINFO=		yes
 DEPENDS+=		gtexinfo-3.12:${PKGSRCDIR}/devel/gtexinfo
 .endif
 .if defined(USE_MOTIF)
-BUILD_DEPENDS+=		${X11BASE}/include/Xm/Xm.h:../../x11/lesstif
+.if exists(${X11BASE}/include/Xm/Xm.h)
 RUN_DEPENDS+=		${X11BASE}/include/Xm/Xm.h:../../x11/lesstif
+.else
+RUN_DEPENDS+=		${PREFIX}/include/Xm/Xm.h:../../x11/lesstif
+BUILD_DEPENDS+=		${PREFIX}/include/Xm/Xm.h:../../x11/lesstif
+.endif
 .endif
 .if defined(USE_LIBTOOL)
 LIBTOOL=		${LOCALBASE}/bin/libtool
@@ -351,7 +356,7 @@ PKG_SUFX?=		.tgz
 PKG_DBDIR?=		/var/db/pkg
 
 # shared/dynamic motif libs
-MOTIFLIB?=	-L${X11BASE}/lib -lXm
+MOTIFLIB?=	-L${X11BASE}/lib -L${LOCALBASE}/lib -Wl,-R${X11BASE}/lib -Wl,-R${LOCALBASE}/lib -lXm
 
 AWK?=		/usr/bin/awk
 BASENAME?=	/usr/bin/basename
