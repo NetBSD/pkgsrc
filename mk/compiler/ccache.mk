@@ -1,4 +1,4 @@
-# $NetBSD: ccache.mk,v 1.2 2004/02/01 01:33:06 jlam Exp $
+# $NetBSD: ccache.mk,v 1.3 2004/02/02 10:03:46 jlam Exp $
 
 .if !defined(COMPILER_CCACHE_MK)
 COMPILER_CCACHE_MK=	defined
@@ -9,6 +9,19 @@ MAKEFLAGS+=	IGNORE_CCACHE=yes
 .endif
 
 .if defined(IGNORE_CCACHE)
+_USE_CCACHE=	NO
+.endif
+
+# LANGUAGES.<compiler> is the list of supported languages by the compiler.
+# _LANGUAGES.<compiler> is ${LANGUAGES.<compiler>} restricted to the ones
+# requested by the package in USE_LANGUAGES.
+# 
+LANGUAGES.ccache=	c c++
+_LANGUAGES.ccache=	# empty
+.for _lang_ in ${USE_LANGUAGES}
+_LANGUAGES.ccache=	${LANGUAGES.ccache:M${_lang_}}
+.endfor
+.if empty(_LANGUAGES.ccache)
 _USE_CCACHE=	NO
 .endif
 
@@ -30,10 +43,17 @@ _CCACHEBASE?=		${LOCALBASE}
 _CCACHE_DIR=	${WRKDIR}/.ccache
 PATH:=		${_CCACHE_DIR}/bin:${PATH}
 
-CC:=		${_CCACHE_DIR}/bin/${CC:T}
-CXX:=		${_CCACHE_DIR}/bin/${CXX:T}
+_CCACHE_LINKS=	# empty
+.if !empty(_LANGUAGES.ccache:Mc)
+CC:=	${_CCACHE_DIR}/bin/${CC:T}
+_CCACHE_LINKS+=	CC
+.endif
+.if !empty(_LANGUAGES.ccache:Mc++)
+CXX:=	${_CCACHE_DIR}/bin/${CXX:T}
+_CCACHE_LINKS+=	CXX
+.endif
 
-.  for _target_ in CC CXX
+.  for _target_ in ${_CCACHE_LINKS}
 override-tools: ${${_target_}}
 ${${_target_}}:
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
