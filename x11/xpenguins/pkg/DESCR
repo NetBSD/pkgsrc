@@ -1,0 +1,7 @@
+XPenguins is a simple program that animates a number of penguins that
+fall from the top of the screen, walk along the top of windows, up
+the side of windows, up the side of the screen, and sometimes even
+levitate with their genetically-modified go-go-gadget 'copter
+ability. Use the `-h' option to see a list of current options -
+currently you can specify the display to send the penguins to, the
+delay between frames and the number of penguins that are created.
