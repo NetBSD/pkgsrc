@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/01/28 11:53:50 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.13 2005/03/24 02:27:05 dmcmahill Exp $
 #
 
 DISTNAME=	pcb-${SNAPDATE}
@@ -18,7 +18,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 CONFLICTS+=	pcb-[0-9]*
 
-SNAPDATE=	20050127
+SNAPDATE=	20050315
 GNU_CONFIGURE=	yes
 USE_GNU_TOOLS+=	lex make
 USE_X11=	yes
