@@ -1,4 +1,4 @@
-# $NetBSD#
+# $NetBSD: patch-bf,v 1.2 2002/12/23 18:25:28 cjep Exp $
 
 On NetBSD, comment out call to setgetprogname().
 
