@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1569 2004/04/02 13:24:20 wiz Exp $
+$NetBSD: TODO,v 1.1570 2004/04/03 15:39:30 wiz Exp $
 
 Suggested new packages
 ======================
@@ -202,6 +202,7 @@ Suggested package updates
 	o gnumeric-1.2.8
 	o gnunet-0.6.1d
 	o gnustep-1.9.1
+	o gnutls-1.0.10
 	o gpsim-0.21.0 [bouyer]
 	o gqmpeg-0.90.0
 	o gqview-devel-1.5.0
@@ -308,6 +309,7 @@ Suggested package updates
 	o sawfish-1.3
 	o scm-5d9
 	o scmxx-0.6.4.1
+	o scsh-0.6.6
 	o scribus-1.1.6
 	o sendfile-20010424
 	o shorten-3.5.2
@@ -318,7 +320,7 @@ Suggested package updates
 	o smlnj-110.45 [pkg/24586]
 	o snd-7.2
 	o snes9x-1.42
-	o snort-2.1.1
+	o snort-2.1.2 [pkg/25029]
 	o snownews-1.5.1
 	o squeak-3.2 [fredb|pkg/17950]
 	o squeak-3.5
