@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/12/03 08:31:02 jlam Exp $
-
-.include "../../www/php4/Makefile.module"
+# $NetBSD: Makefile,v 1.9 2002/02/28 06:17:58 jlam Exp $
 
 MODNAME=		gd
 CATEGORIES+=		graphics
@@ -8,6 +6,8 @@ PKGREVISION=		1
 COMMENT=		PHP4 extension for GD graphics library
 
 USE_BUILDLINK_ONLY=	YES
+
+.include "../../www/php4/Makefile.module"
 
 CONFIGURE_ARGS+=	--with-${MODNAME}=shared,${BUILDLINK_DIR}
 CONFIGURE_ARGS+=	--with-jpeg-dir=shared,${BUILDLINK_DIR}
