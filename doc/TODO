@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.590 2003/05/25 23:45:35 chris Exp $
+$NetBSD: TODO,v 1.591 2003/05/26 06:55:17 martti Exp $
 
 Suggested new packages
 ======================
@@ -99,8 +99,6 @@ Suggested package updates
 	o cronolog-1.6.2 [pkg/21465]
 	o crossfire-1.5.0
 	o ctwm-3.6 [pkg/20648]
-	o cyrus-imapd21-2.1.13
-	o cyrus-sasl-2.1.13
 	o db4-4.1.25 [pkg/20289]
 	o dctc-0.85.2
 	o ddd-3.3.5
