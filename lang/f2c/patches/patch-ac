@@ -1,23 +1,33 @@
-$NetBSD: patch-ac,v 1.7 1999/12/22 20:22:15 dmcmahill Exp $
+$NetBSD: patch-ac,v 1.8 2001/02/24 18:37:46 dmcmahill Exp $
 
 Much cleanup of the script.  Added various options such as
--O for optimization
+-O    for optimization
 -fPIC for PIC support
--Wall for gcc warnings
+-Wxxx for gcc warnings
 -Wl,  for additional linker arguments
--v, for verbose output
+-r8,  promote REAL and COMPLEX to DOUBLE REAL and DOUBLE COMPLEX
+-s,   to strip executible 
+-v,   for verbose output
 
---- fc.orig	Fri Apr 16 09:24:46 1999
-+++ fc	Wed Dec 22 15:15:08 1999
-@@ -1,101 +1,125 @@
- #!/bin/sh
+--- fc.orig	Fri Jul  7 17:47:06 2000
++++ fc	Thu Feb 22 08:44:43 2001
+@@ -1,178 +1,256 @@
+-#! /bin/sh
 -
 -# NOTE: you may need to adjust the references to /usr/local/... below
 -#	(or remove them if they're not needed on your system).
+-#	You may need to remove "-Olimit 2000" in the -O processing
+-#	below or change it to something more suitable for your system.
 -#	See also the comments starting with ### below.
+-
+-#	Note that with some shells, invocations of the form
+-#		CFLAGS='system-specific stuff' fc ...
+-#	may be useful as way to pass system-specific stuff to the C compiler.
+-#	The script below simply appends to the initial CFLAGS value.
 -
 -PATH=/usr/local/bin:/bin:/usr/bin
 -
++#!/bin/sh
 +PATH=/bin:/usr/bin:@PREFIX@/bin
 +#USAGESTART
  # f77-style shell script to compile and load fortran, C, and assembly codes
@@ -52,6 +62,8 @@ Much cleanup of the script.  Added various options such as
 +#
 +#		-L includepath	passed to ld.  Library include path
 +#
++#		-m xxx		passed to the C compiler as -mxxx
++#
 +#		-Ntnnn		allow nnn entries in table t
 +#
 +#		-o objfile	Override default executable name a.out.
@@ -66,6 +78,11 @@ Much cleanup of the script.  Added various options such as
 +#
 +#		-P		emit .P files
 +#
++#		-r8		promote REAL to DOUBLE PRECISION,
++#				COMPLEX to DOUBLE COMPLEX
++#
++#		-s		Strip the symbol table from the executable file
++#
  #		-S		leave assembler output on file.s
 -
 -#		-L libdir	(passed to ld)
@@ -76,7 +93,7 @@ Much cleanup of the script.  Added various options such as
  #		-u		complain about undeclared variables
 -
 +#
-+#		-U def		passed to C compiler (for .c files) or to
++#		-U def				passed to C compiler (for .c files) or to
 +#				cpp (for .F files) to remove def
 +#
 +#		-v		be verbose.  Output is produced on the standard
@@ -89,7 +106,7 @@ Much cleanup of the script.  Added various options such as
 -
 -#		files		FORTRAN source files ending in .f .
 +#
-+#		-Wall		turn on the -Wall flag to the c compiler
++#		-Wxxx		turn on the -Wxxx flag to the c compiler
 +#
 +#		-Wl,		Pass options to the linker.  For example, 
 +#				-Wl,-R/usr/X11R6/lib
@@ -118,19 +135,21 @@ Much cleanup of the script.  Added various options such as
  
 -#		-D def		passed to C compiler (for .c files)
 -#				or to cpp (for .F files)
+-
+-#		-I includepath	passed to C compiler (for .c files)
+-#				or to cpp (for .F files), and to f2c
+-
+-#		-m xxx		passed to C compiler as -mxxx
+-
+-#		-N tnnn		allow nnn entries in table t
+-
+-#		-P		emit .P files
 +# if no input arguments, then spit out the help stuff from the beginning
 +# of this file.
 +if [ $# = 0 ]; then
 + cat $0 | awk '$1 == "#USAGESTART", $1 == ""' | tail +2 | sed 's/#//g'
 +fi
  
--#		-I includepath	passed to C compiler (for .c files)
--#				or to cpp (for .F files), and to f2c
--
--#		-Ntnnn		allow nnn entries in table t
--
--#		-P		emit .P files
--
 -#		-U def		passed to C compiler (for .c files)
 -#				or to cpp (for .F files) to remove def
  
@@ -149,14 +168,15 @@ Much cleanup of the script.  Added various options such as
 -F2CFLAGS=${F2CFLAGS:='-ARw8 -Nn802 -Nq300 -Nx400'}
 -CPP=${CPP:-/lib/cpp}
 +F2C=${F2C:-@PREFIX@/bin/f2c}
-+F2CFLAGS=${F2CFLAGS:='-ARw8 -Nn802 -Nx400'}
++F2CFLAGS=${F2CFLAGS:='-Aw8 -Nn802 -Nx400'}
++S2DBLFLAG="-R"
 +CPP=${CPP:-/usr/bin/cpp}
  rc=0
  trap "rm -f $s $t; exit \$rc" 0
  OUTF=a.out
 -OUTO=
  cOPT=1
--set -- `getopt cCD:gI:L:N:OU:o:Suw6 "$@"`
+-set -- `getopt cCD:gI:L:m:N:OU:o:Suw6 "$@"`
 -case $? in 0);; *) rc=$?; exit;; esac
 -CPPFLAGS=${CPPFLAGS:-'-I/usr/local/include'}
 -CFLAGSF2C=${CFLAGSF2C:-'-I/usr/local/include'}
@@ -198,10 +218,14 @@ Much cleanup of the script.  Added various options such as
 +		G="-g"
  		shift;;
  
-@@ -105,61 +129,97 @@
+-	-I)	CPPFLAGS="$CPPFLAGS -I$2"
++	-I)	CFLAGS="$CFLAGS -I$2"
++		CPPFLAGS="$CPPFLAGS -I$2"
+ 		F2CFLAGS="$F2CFLAGS -I$2"
+ 		shift 2
  		;;
  
--	-U)	CPPFLAGS="$CPPFLAGS -U$2"
+-	-m)	CFLAGS="$CFLAGS -m$2"
 -		shift 2
 -		;;
 +        -I*)    CFLAGS="$CFLAGS $1"
@@ -218,6 +242,17 @@ Much cleanup of the script.  Added various options such as
 +                shift 1
 +                ;;
  
+-	-U)	CPPFLAGS="$CPPFLAGS -U$2"
++	-m)	CPPFLAGS="$CPPFLAGS -m$2"
++		F2CFLAGS="$F2CFLAGS -m$2"
+ 		shift 2
+ 		;;
+ 
++        -m*)    CFLAGS="$CFLAGS $1"
++		CPPFLAGS="$CPPFLAGS $1"
++		F2CFLAGS="$F2CFLAGS $1"
++                shift 1
++                ;;
  	-o)	OUTF=$2
 -		OUTO=$2
  		shift 2
@@ -244,46 +279,53 @@ Much cleanup of the script.  Added various options such as
 -	-w)	F2CFLAGS="$F2CFLAGS -w"
 -		case $2 in -6) F2CFLAGS="$F2CFLAGS"66; shift
 -			case $2 in -6) shift;; esac;; esac
-+
-+	-S)	CFLAGS="$CFLAGS -S"
-+		cOPT=0
++	-r8)    S2DBLFLAG="-r8"
  		shift
  		;;
  
 -	-L)	OFILES="$OFILES $1$2"
 -		shift 2
 -		case $cOPT in 1) cOPT=2;; esac
-+	-u)	F2CFLAGS="$F2CFLAGS -u"
++	-s)	CFLAGS="$CFLAGS -s"
 +		shift
  		;;
  
 -	-L*)	OFILES="$OFILES $1"
-+	-U*)	CPPFLAGS="$CPPFLAGS $1"
-+		shift;;
-+
-+	-v)	VERBOSE=yes
++	-S)	CFLAGS="$CFLAGS -S"
++		cOPT=0
  		shift
 -		case $cOPT in 1) cOPT=2;; esac
  		;;
  
 -	-N)	F2CFLAGS="$F2CFLAGS $1""$2"
 -		shift 2
-+	-w)	F2CFLAGS="$F2CFLAGS -w"
++	-u)	F2CFLAGS="$F2CFLAGS -u"
 +		shift
  		;;
  
 -	-P)	F2CFLAGS="$F2CFLAGS $1"
-+	-w66)	F2CFLAGS="$F2CFLAGS -w66"
++	-U*)	CPPFLAGS="$CPPFLAGS $1"
++		shift;;
++
++	-v)	VERBOSE=yes
  		shift
  		;;
  
-+	-Wall)	CFLAGS="$CFLAGS -Wall"
++	-w)	F2CFLAGS="$F2CFLAGS -w"
 +		shift
 +		;;
  
 -	-S)	CFLAGS="$CFLAGS -S"
 -		cOPT=0
++	-w66)	F2CFLAGS="$F2CFLAGS -w66"
++		shift
++		;;
++
 +	-Wl*)	CFLAGS="$CFLAGS $1"
++		shift
++		;;
++
++	-W*)	CFLAGS="$CFLAGS $1"
  		shift
  		;;
  
@@ -306,6 +348,11 @@ Much cleanup of the script.  Added various options such as
 +    CFLAGS="$CFLAGS -o $OUTF"
 +  fi
 +fi
++
++# set the flag that controls if REAL's are promoted to 
++# DOUBLE PRECISION or not
++F2CFLAGS="$F2CFLAGS $S2DBLFLAGS"
++
 +set -- $ARGS
 +
 +if test $VERBOSE = "yes"; then
@@ -320,7 +367,7 @@ Much cleanup of the script.  Added various options such as
 +
  while
  	test -n "$1"
-@@ -171,4 +231,7 @@
+@@ -184,4 +262,7 @@
  		case "$1" in
  			*.f)	b=`basename $1 .f`
 +				if test $VERBOSE = "yes"; then
@@ -328,7 +375,7 @@ Much cleanup of the script.  Added various options such as
 +				fi
  				$F2C $F2CFLAGS $1
  				rc=$?
-@@ -178,4 +241,7 @@
+@@ -191,4 +272,7 @@
  				rc=$?
  				case $rc in 0)
 +					if test $VERBOSE="yes"; then
@@ -336,35 +383,35 @@ Much cleanup of the script.  Added various options such as
 +					fi
  					$F2C $F2CFLAGS <$b.i >$b.c
  					rc=$?
-@@ -185,5 +251,5 @@
+@@ -198,5 +282,5 @@
  			esac
  		case $rc in 0);; *) exit;; esac
 -                $CC -c $CFLAGSF2C $CFLAGS $b.c 2>$s
 +                $CC -c $CFLAGS $b.c 2>$s
  		rc=$?
  		sed '/parameter .* is not referenced/d;/warning: too many parameters/d' $s 1>&2
-@@ -200,5 +266,5 @@
+@@ -213,5 +297,5 @@
  		$F2C $F2CFLAGS $b.f
  		case $? in 0);; *) rc=$?; exit;; esac
 -                $CC -c $CFLAGSF2C $CFLAGS $b.c
 +                $CC -c $CFLAGS $b.c
  		case $? in 0);; *) rc=$?; exit;; esac
  		OFILES="$OFILES $b.o"
-@@ -213,5 +279,5 @@
+@@ -226,5 +310,5 @@
  		$F2C $F2CFLAGS $b.f
  		case $? in 0);; *) rc=$?; exit;; esac
 -		$CC -c $CFLAGSF2C $CFLAGS $b.c
 +		$CC -c $CFLAGS $b.c
  		case $? in 0);; *) rc=$?; exit;; esac
  		OFILES="$OFILES $b.o"
-@@ -232,5 +298,5 @@
+@@ -245,5 +329,5 @@
  		echo $1: 1>&2
  		OFILE=`basename $1 .c`.o
 -                $CC -c $CFLAGSF2C $CPPFLAGS $CFLAGS $1
 +                $CC -c $CPPFLAGS $CFLAGS $1
  		rc=$?; case $rc in 0);; *) rc=$?; exit;; esac
  		OFILES="$OFILES $OFILE"
-@@ -248,10 +314,10 @@
+@@ -261,10 +345,10 @@
  		shift
  		;;
 -	-[lL])
@@ -378,7 +425,7 @@ Much cleanup of the script.  Added various options such as
 +	-l*)
  		OFILES="$OFILES $1"
  		shift
-@@ -259,6 +325,5 @@
+@@ -272,6 +356,5 @@
  		;;
  	-o)
 -		case $cOPT in 0) CFLAGS="$CFLAGS -o $2";; *) OUTF=$2;; esac
@@ -386,7 +433,7 @@ Much cleanup of the script.  Added various options such as
 +		OUTF=$2; shift 2;;
  	*.P)
  		F2CFLAGS="$F2CFLAGS $1"
-@@ -273,9 +338,11 @@
+@@ -286,9 +369,11 @@
  done
  
 -### On some (IRIX) systems, -Wl,-dont_warn_unused prevents complaints
