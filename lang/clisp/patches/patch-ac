@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.4 2002/03/14 07:44:23 jmc Exp $
+$NetBSD: patch-ac,v 1.5 2003/07/13 14:34:49 dillo Exp $
 
---- .././ffcall/vacall/Makefile.in.orig	Tue Mar  5 09:50:39 2002
-+++ .././ffcall/vacall/Makefile.in	Wed Mar  6 05:38:50 2002
-@@ -108,11 +108,11 @@
+--- .././ffcall/vacall/Makefile.in.orig	Sun Mar 24 19:51:37 2002
++++ .././ffcall/vacall/Makefile.in
+@@ -111,11 +111,11 @@ vacall-rs6000.o : $(srcdir)/vacall-rs600
  	case "$(OS)" in \
  	  aix3*) syntax=aix.old;; \
  	  aix*) syntax=aix.new;; \
