@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2004/12/24 12:29:41 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.16 2005/03/22 15:53:32 jmmv Exp $
 include/atk-1.0/atk/atk-enum-types.h
 include/atk-1.0/atk/atk.h
 include/atk-1.0/atk/atkaction.h
@@ -27,37 +27,6 @@ include/atk-1.0/atk/atkutil.h
 include/atk-1.0/atk/atkvalue.h
 lib/libatk-1.0.la
 lib/pkgconfig/atk.pc
-share/doc/atk/AtkAction.html
-share/doc/atk/AtkComponent.html
-share/doc/atk/AtkDocument.html
-share/doc/atk/AtkEditableText.html
-share/doc/atk/AtkGObjectAccessible.html
-share/doc/atk/AtkHyperlink.html
-share/doc/atk/AtkHypertext.html
-share/doc/atk/AtkImage.html
-share/doc/atk/AtkNoOpObject.html
-share/doc/atk/AtkNoOpObjectFactory.html
-share/doc/atk/AtkObject.html
-share/doc/atk/AtkObjectFactory.html
-share/doc/atk/AtkRegistry.html
-share/doc/atk/AtkRelation.html
-share/doc/atk/AtkRelationSet.html
-share/doc/atk/AtkSelection.html
-share/doc/atk/AtkStateSet.html
-share/doc/atk/AtkStreamableContent.html
-share/doc/atk/AtkTable.html
-share/doc/atk/AtkText.html
-share/doc/atk/AtkUtil.html
-share/doc/atk/AtkValue.html
-share/doc/atk/atk-AtkState.html
-share/doc/atk/atk.devhelp
-share/doc/atk/atk.html
-share/doc/atk/home.png
-share/doc/atk/index.html
-share/doc/atk/index.sgml
-share/doc/atk/left.png
-share/doc/atk/right.png
-share/doc/atk/up.png
 ${PKGLOCALEDIR}/locale/af/LC_MESSAGES/atk10.mo
 ${PKGLOCALEDIR}/locale/am/LC_MESSAGES/atk10.mo
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/atk10.mo
@@ -127,9 +96,11 @@ ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/atk10.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/atk10.mo
 ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/atk10.mo
 ${PKGLOCALEDIR}/locale/wa/LC_MESSAGES/atk10.mo
+${PKGLOCALEDIR}/locale/xh/LC_MESSAGES/atk10.mo
 ${PKGLOCALEDIR}/locale/yi/LC_MESSAGES/atk10.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/atk10.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/atk10.mo
+@exec ${MKDIR} %D/share/doc/atk
 @dirrm share/doc/atk
 @dirrm include/atk-1.0/atk
 @dirrm include/atk-1.0
