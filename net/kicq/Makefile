@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2000/08/02 07:29:03 tron Exp $
+# $NetBSD: Makefile,v 1.3 2000/11/11 17:49:27 tron Exp $
 
 DISTNAME=		kicq-1.0.0
 CATEGORIES=		net kde
-MASTER_SITES=		http://download.sourceforge.net/kicq/
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=kicq/}
 
 MAINTAINER=		magick@bundy.lip.owl.de
 HOMEPAGE=		http://kicq.sourceforge.net/

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2000/08/22 13:11:38 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.3 2000/11/11 17:49:23 tron Exp $
 #
 
 DISTNAME=	rio500-0.7
 CATEGORIES=	audio
-MASTER_SITES=	http://download.sourceforge.net/rio500/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=rio500/}
 
 MAINTAINER=	ad@netbsd.org
 HOMEPAGE=	http://rio500.sourceforge.net/

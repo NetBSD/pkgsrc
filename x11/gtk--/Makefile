@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.13 2000/07/15 09:48:12 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2000/11/11 17:49:28 tron Exp $
 # FreeBSD Id: Makefile,v 1.6 1999/01/12 16:50:43 vanilla Exp
 #
 
 DISTNAME=		gtkmm-1.2.1
 PKGNAME=		gtk---1.2.1
 CATEGORIES=		x11 devel
-MASTER_SITES=		http://download.sourceforge.net/gtkmm/ \
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gtkmm/} \
 			${MASTER_SITE_GNOME:=stable/sources/gtkmm/}
 
 MAINTAINER=		bsieker@freenet.de
