@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.855 2003/09/12 13:30:34 grant Exp $
+$NetBSD: TODO,v 1.856 2003/09/12 22:17:54 wiz Exp $
 
 Suggested new packages
 ======================
@@ -72,6 +72,7 @@ Suggested package updates
 	o Xbae-4.50.0
 	o Xft2-2.1.2
 	o Xrender-0.8.3
+	o amanda-2.4.4p1 [pkg/22756]
 	o angband-3.0.3
 	o anjuta-1.0.2
 	o anomy-sanitizer-1.63 [pkg/22368]
