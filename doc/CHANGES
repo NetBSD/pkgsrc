@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7286 2004/09/29 12:53:48 wulf Exp $
+$NetBSD: CHANGES,v 1.7287 2004/09/29 13:10:22 hubertf Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4482,3 +4482,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated pcre to 5.0 [wiz 2004-09-28]
 	Added firefox-gtk2-bin-flash-6.0.79 [rh 2004-09-29]
 	Added gattrib-20040313 [wulf 2004-09-29]
+	Updated tex-jadetex to 3.13 [hubertf 2004-09-29]
