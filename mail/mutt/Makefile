@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2001/02/26 20:19:45 tron Exp $
+# $NetBSD: Makefile,v 1.69 2001/03/27 03:20:04 hubertf Exp $
 
 DISTNAME=	mutt-1.2.5i
 CATEGORIES=	mail
@@ -11,9 +11,9 @@ MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.mutt.org/
 COMMENT=	text-based MIME mail client with PGP support
 
-BUILD_DEPENDS+=	${LOCALBASE}/bin/autoconf:../../devel/autoconf
-BUILD_DEPENDS+=	${LOCALBASE}/bin/automake:../../devel/automake
-BUILD_DEPENDS+=	msgfmt:../../devel/gettext
+BUILD_DEPENDS+=	autoconf-2.13:../../devel/autoconf
+BUILD_DEPENDS+=	automake-1.4:../../devel/automake
+BUILD_USES_MSGFMT=	yes
 
 USE_LIBINTL=		YES
 MAKE_ENV+=		CPPFLAGS=-I${LOCALBASE}/include LIBS=-lintl

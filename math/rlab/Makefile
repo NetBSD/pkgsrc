@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/02/17 18:22:40 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2001/03/27 03:20:06 hubertf Exp $
 
 DISTNAME=		rlab-2.1.05
 CATEGORIES=		math
@@ -11,7 +11,7 @@ COMMENT=		Matrix oriented, interactive programming environment
 DEPENDS+=		boehm-gc>=5.3:../../devel/boehm-gc
 DEPENDS+=		readline>=4.0:../../devel/readline
 
-BUILD_DEPENDS+=		${LOCALBASE}/bin/autoconf:../../devel/autoconf
+BUILD_DEPENDS+=		autoconf-2.13:../../devel/autoconf
 
 GNU_CONFIGURE=		YES
 USE_FORTRAN=		YES

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/03/10 21:15:27 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2001/03/27 03:19:49 hubertf Exp $
 #
 
 DISTVERSION=		2.0.7.1
@@ -9,8 +9,8 @@ MASTER_SITES=		ftp://ftp.cdrom.com/pub/linux/redhat/redhat-5.1/i386/RedHat/RPMS/
 MAINTAINER=		packages@netbsd.org
 COMMENT=		Cross-compile environment for iX86 Linux, libc v6
 
-BUILD_DEPENDS+=		rpm2cpio:../../misc/rpm
-BUILD_DEPENDS+=		${LOCALBASE}/bin/autoheader:../../devel/autoconf
+BUILD_DEPENDS+=		rpm-*:../../misc/rpm
+BUILD_DEPENDS+=		autoconf-2.13:../../devel/autoconf
 
 CHECK_SHLIBS=		no
 WRKSRC=			${WRKDIR}

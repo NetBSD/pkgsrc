@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2001/03/22 13:30:58 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2001/03/27 03:20:06 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.18 1998/09/27 20:10:45 steve Exp
 
 DISTNAME=	octave-2.0.16
@@ -13,8 +13,7 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.che.wisc.edu/octave/
 COMMENT=	High-level language, primarily intended for numerical computations
 
-BUILD_DEPENDS+=	tex:../../print/teTeX
-BUILD_DEPENDS+=	dvips:../../print/teTeX
+BUILD_DEPENDS+=	teTeX-1.0.7:../../print/teTeX
 DEPENDS+=	gnuplot>=3.7:../../graphics/gnuplot
 
 USE_X11=		yes

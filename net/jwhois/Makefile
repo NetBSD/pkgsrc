@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/02/17 18:19:01 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2001/03/27 03:20:11 hubertf Exp $
 #
 
 DISTNAME=		jwhois-2.4.1
@@ -9,8 +9,7 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.gnu.org/software/jwhois/
 COMMENT=		Configurable WHOIS client
 
-BUILD_DEPENDS+=		${LOCALBASE}/bin/autoreconf:../../devel/autoconf
-BUILD_DEPENDS+=		${LOCALBASE}/share/autoconf/gettext.m4:../../devel/gettext
+BUILD_DEPENDS+=		autoconf-2.13:../../devel/autoconf
 
 GNU_CONFIGURE=		# defined
 USE_LIBINTL=		# defined
@@ -19,6 +18,12 @@ CONFIGURE_ARGS+=	--localstatedir=/var/db
 CONFIGURE_ARGS+=	--with-cache
 
 INFO_FILES=		jwhois.info
+
+.include "../../mk/bsd.prefs.mk"
+
+.if !exists(${LOCALBASE}/share/aclocal/gettext.m4)
+BUILD_DEPENDS+=		gettext-0.10.35nb1:../../devel/gettext
+.endif
 
 pre-configure:
 	cd ${WRKSRC} && ${LOCALBASE}/bin/autoreconf

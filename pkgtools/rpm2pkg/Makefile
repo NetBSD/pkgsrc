@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/03/20 20:18:07 manu Exp $
+# $NetBSD: Makefile,v 1.6 2001/03/27 03:20:13 hubertf Exp $
 
 DISTNAME=	rpm2pkg-1.2
 CATEGORIES=	pkgtools
@@ -9,7 +9,7 @@ MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	ftp://ftp.netbsd.org/pub/NetBSD/packages/pkgsrc/Packages.txt
 COMMENT=	Convert RPM archives to NetBSD packages
 
-BUILD_DEPENDS+=	${RPMLIB}:../../misc/rpm
+BUILD_DEPENDS+=	rpm-*:../../misc/rpm
 
 CONFLICTS+=	suse-base<=6.4
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/02/25 04:18:22 hubertf Exp $
+# $NetBSD: Makefile,v 1.11 2001/03/27 03:20:21 hubertf Exp $
 
 DISTNAME=	mod_dtcl-0.8.12
 PKGNAME=	ap-dtcl-0.8.12
@@ -13,7 +13,7 @@ COMMENT=	Simple, fast Tcl server side scripting for apache
 DEPENDS+=	apache-1.3.*:../../www/apache
 DEPENDS+=	tcl>=8.3.2:../../lang/tcl
 # For "apxs":
-BUILD_DEPENDS=	${PERL5}:../../lang/perl5-base
+BUILD_DEPENDS=	perl-5.*:../../lang/perl5
 
 INCLUDES=	-I${PREFIX}/include/
 LIBS=		-L${PREFIX}/lib -Wl,-R${PREFIX}/lib -ltcl83 -lm

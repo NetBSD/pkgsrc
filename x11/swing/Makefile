@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2001/02/25 04:18:27 hubertf Exp $
+# $NetBSD: Makefile,v 1.13 2001/03/27 03:20:28 hubertf Exp $
 
 DISTNAME=	swing1_1_1
 PKGNAME=	swing-1.1.1
@@ -10,7 +10,7 @@ MAINTAINER=	jwise@netbsd.org
 HOMEPAGE=	http://www.javasoft.com/products/jfc/
 COMMENT=	Sun's Java Foundation Classes (the Swing UI toolkit), version 1.1.1
 
-BUILD_DEPENDS+=        ${LOCALBASE}/bin/urlget:../../www/urlget
+BUILD_DEPENDS+=        urlget-1.3:../../www/urlget
 
 RESTRICTED=	"Read license before redistributing the Java(tm) Foundation Classes"
 NO_SRC_ON_FTP=	${RESTRICTED}

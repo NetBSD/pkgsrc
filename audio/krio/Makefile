@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/03/04 09:06:09 tron Exp $
+# $NetBSD: Makefile,v 1.5 2001/03/27 03:19:46 hubertf Exp $
 
 DISTNAME=	Krio-19990721
 PKGNAME=	krio-19990721
@@ -15,8 +15,6 @@ USE_X11BASE=	yes
 
 RIODIR=		${PKGSRCDIR}/audio/rio/${WRKDIR:T}/rio107
 
-BUILD_DEPENDS+=	${RIODIR}/rio.cpp:../../audio/rio:configure
-
 DEPENDS+=	jpeg-6b:../../graphics/jpeg
 DEPENDS+=	kdelibs-1.1.2:../../x11/kdelibs
 DEPENDS+=	png>1.0.9:../../graphics/png
@@ -28,5 +26,13 @@ WRKSRC=		${WRKDIR}/Krio
 EVAL_PREFIX=	QT1DIR=qt1 KDEDIR=kdelibs
 MAKE_ENV+=	QT1DIR=${QT1DIR} KDEDIR=${KDEDIR}
 MAKE_ENV+=	RIODIR=${RIODIR} X11PREFIX=${X11PREFIX}
+
+pre-configure:
+	if [ ! -e ${RIODIR} ]; then					\
+		cd ../../audio/rio && ${MAKE} configure;		\
+	fi
+
+pre-clean:
+	cd ../../audio/rio && ${MAKE} clean
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2001/02/17 18:19:55 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2001/03/27 03:20:12 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.4 1997/05/22 07:53:29 tg Exp
 #
 
@@ -14,7 +14,7 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.gnu.org/software/wget/wget.html
 COMMENT=	Retrieve files from the 'net via HTTP and FTP
 
-BUILD_DEPENDS+=	msgfmt:../../devel/gettext
+BUILD_USES_MSGFMT=	yes
 
 GNU_CONFIGURE=	yes
 USE_LIBINTL=	yes
