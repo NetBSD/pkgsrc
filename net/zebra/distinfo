@@ -1,9 +1,7 @@
-$NetBSD: distinfo,v 1.4 2001/06/26 11:34:16 wiz Exp $
+$NetBSD: distinfo,v 1.5 2001/08/19 11:45:52 itojun Exp $
 
-SHA1 (zebra-0.91a.tar.gz) = e21ffff312a60fe8679b7c721dd62563c6dbf0f5
-Size (zebra-0.91a.tar.gz) = 1108955 bytes
-SHA1 (zebra-0.91a.info.tar.gz) = 7aeff7b9d740da73c17065ea9c9aaa3876c43ed9
-Size (zebra-0.91a.info.tar.gz) = 36541 bytes
+SHA1 (zebra-0.92.tar.gz) = f08c9dadaabe748d97e94046da0f7dfd4c1430fe
+Size (zebra-0.92.tar.gz) = 1152555 bytes
 SHA1 (patch-aa) = ee8100984152dc69237b53977d63c506095cdfd2
 SHA1 (patch-ab) = 415ee0d3c18240165bfabc77d9fa6ff4c2e7ac34
 SHA1 (patch-ac) = 4bdc7ded7d39702529f774b8a809d33898c5559e
