@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2001/12/25 00:21:58 mycroft Exp $
+
+--- src/xmms-sid.cc.orig	Sun Nov 18 12:48:34 2001
++++ src/xmms-sid.cc	Tue Dec 25 00:17:46 2001
+@@ -190,7 +190,7 @@
+ 	int fxlen, tn;
+ 	struct sidTuneInfo sidInf;
+ 	char *name;
+-	enum AFormat fmt = (xs_emuConf.bitsPerSample == 16) ? FMT_S16_LE : FMT_U8;
++	enum AFormat fmt = (xs_emuConf.bitsPerSample == 16) ? FMT_S16_NE : FMT_U8;
+ 	gint chn = xs_emuConf.channels;
+ 
+ 	tune->getInfo(sidInf);
