@@ -192,3 +192,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated gtk-engines to 0.12nb2 [jlam 2003-01-10]
 	Updated libctl to 2.2 [wiz 2003-01-10]
 	Updated multi-gnome-terminal to 1.6.1 [jmmv 2003-01-10]
+	Updated gaim to 0.59.8nb1 [jmmv 2003-01-10]
+	Updated gaim-gnome to 0.59.8nb1 [jmmv 2003-01-10]
