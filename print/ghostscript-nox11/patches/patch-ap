@@ -1,4 +1,4 @@
-$NetBSD: patch-ap,v 1.1.1.1 2000/05/07 02:04:35 jlam Exp $
+$NetBSD: patch-ap,v 1.2 2000/05/08 05:20:54 itohy Exp $
 
 --- src/genarch.c.orig	Thu Mar  9 03:40:41 2000
 +++ src/genarch.c	Mon May  1 20:26:24 2000
@@ -8,7 +8,7 @@ $NetBSD: patch-ap,v 1.1.1.1 2000/05/07 02:04:35 jlam Exp $
  
 +#if 0
 +	/* This doesn't work on multi-user environments nor on
-+	 * small-cache (< 1MB) machines.
++	 * small-cache (< 1KB) machines.
 +	 */
  	/*
  	 * Increase the number of repetitions until the time is
