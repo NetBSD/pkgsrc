@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.857 2001/11/21 13:17:14 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.858 2001/11/21 13:44:44 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -3379,19 +3379,38 @@ MAKE_ENV+=	MANZ="${MANZ}"
 #   PERL5_PACKLIST is defined
 # - adding symlinks for shared libs (ELF) or ldconfig calls (a.out).
 
-.if ${OPSYS} == "NetBSD" || ${OPSYS} == "Darwin"
-IMAKE_MAN_CMD=
+.if ${_OPSYS_HAS_MANZ} == "yes"
 .  ifdef MANZ
-MANZ_EXPRESSION= -e 's|\(^\([^@/]*/\)*man/\([^/]*/\)\{0,1\}man[1-9ln]/.*[1-9ln]$$\)|\1.gz|' \
+_MANZ_EXPRESSION= -e 's|\(^\([^@/]*/\)*man/\([^/]*/\)\{0,1\}man[1-9ln]/.*[1-9ln]$$\)|\1.gz|' \
 		-e 's|\(^\([^@/]*/\)*man/\([^/]*/\)\{0,1\}cat[1-9ln]/.*0$$\)|\1.gz|'
 .  else
-MANZ_EXPRESSION= -e 's|\(^\([^@/]*/\)*man/\([^/]*/\)\{0,1\}man[1-9ln]/.*[1-9ln]\)\.gz$$|\1|' \
+_MANZ_EXPRESSION= -e 's|\(^\([^@/]*/\)*man/\([^/]*/\)\{0,1\}man[1-9ln]/.*[1-9ln]\)\.gz$$|\1|' \
 		-e 's|\(^\([^@/]*/\)*man/\([^/]*/\)\{0,1\}cat[1-9ln]/.*0\)\.gz$$|\1|'
 .  endif # MANZ
-MANZ_NAWK_CMD=
-.elif ${OPSYS} == "SunOS"
-.  ifdef USE_IMAKE
-IMAKE_MAN_CMD=	${AWK} '/^([^\/]*\/)*man\/([^\/]*\/)?cat[1-9ln]\/.*0(\.gz)?$$/ { \
+_MANZ_NAWK_CMD=
+.else
+_MANZ_EXPRESSION= 
+.  ifdef MANZ
+_MANZ_NAWK_CMD=	${AWK} '/^([^\/]*\/)*man\/([^\/]*\/)?man[1-9ln]\/.*[1-9ln]\.gz$$/ { \
+		$$0 = sprintf("%s.gz", $$0);				\
+	}								\
+	/^([^\/]*\/)*man\/([^\/]*\/)?cat[1-9ln]\/.*0\.gz$$/ {	\
+		$$0 = sprintf("%s.gz", $$0);				\
+	}								\
+	{ print $$0; }' |
+.  else
+_MANZ_NAWK_CMD=	${AWK} '/^([^\/]*\/)*man\/([^\/]*\/)?man[1-9ln]\/.*[1-9ln]\.gz$$/ { \
+		$$0 = substr($$0, 1, length($$0) - 3);			\
+	}								\
+	/^([^\/]*\/)*man\/([^\/]*\/)?cat[1-9ln]\/.*0\.gz$$/ {	\
+		$$0 = substr($$0, 1, length($$0) - 3);			\
+	}								\
+	{ print $$0; }' |
+.  endif # MANZ
+.endif
+
+.if defined(USE_IMAKE) && ${_PREFORMATTED_MAN_DIR} == "man"
+_IMAKE_MAN_CMD=	${AWK} '/^([^\/]*\/)*man\/([^\/]*\/)?cat[1-9ln]\/.*0(\.gz)?$$/ { \
 	sect = $$0; n = match(sect, "/cat[1-9ln]");			\
 	sect = sprintf(".%s", substr(sect, n + 4, 1));			\
 	s = $$0; sub("/cat", "/man", s); sub("\.0(\.gz)?$$", sect, s);	\
@@ -3399,27 +3418,8 @@ IMAKE_MAN_CMD=	${AWK} '/^([^\/]*\/)*man\/([^\/]*\/)?cat[1-9ln]\/.*0(\.gz)?$$/ { 
 	$$0 = sprintf("%s%s", s, ext);					\
 	} { print $$0; }' |
 .  else
-IMAKE_MAN_CMD=
-.  endif # USE_IMAKE
-.  ifdef MANZ
-MANZ_NAWK_CMD=	${AWK} '/^([^\/]*\/)*man\/([^\/]*\/)?man[1-9ln]\/.*[1-9ln]\.gz$$/ { \
-		$$0 = sprintf("%s.gz", $$0);				\
-	}								\
-	/^([^\/]*\/)*man\/([^\/]*\/)?cat[1-9ln]\/.*0\.gz$$/ {	\
-		$$0 = sprintf("%s.gz", $$0);				\
-	}								\
-	{ print $$0; }' |
-.  else
-MANZ_NAWK_CMD=	${AWK} '/^([^\/]*\/)*man\/([^\/]*\/)?man[1-9ln]\/.*[1-9ln]\.gz$$/ { \
-		$$0 = substr($$0, 1, length($$0) - 3);			\
-	}								\
-	/^([^\/]*\/)*man\/([^\/]*\/)?cat[1-9ln]\/.*0\.gz$$/ {	\
-		$$0 = substr($$0, 1, length($$0) - 3);			\
-	}								\
-	{ print $$0; }' |
-.  endif # MANZ
-MANZ_EXPRESSION= 
-.endif # SunOS
+_IMAKE_MAN_CMD=
+.endif # USE_IMAKE
 
 .if defined(PERL5_PACKLIST)
 PERL5_COMMENT=		( ${ECHO} "@comment The following lines are automatically generated"; \
@@ -3458,9 +3458,9 @@ ${PLIST}: ${PLIST_SRC}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	{ ${CAT} ${PLIST_SRC};						\
 	  ${PERL5_GENERATE_PLIST}; } | 					\
-		${MANZ_NAWK_CMD} 					\
-		${IMAKE_MAN_CMD} 					\
-		${SED} 	${MANZ_EXPRESSION}				\
+		${_MANZ_NAWK_CMD} 					\
+		${_IMAKE_MAN_CMD} 					\
+		${SED} 	${_MANZ_EXPRESSION}				\
 			${PLIST_SUBST:S/=/}!/:S/$/!g/:S/^/ -e s!\\\${/}	\
 		> ${PLIST}; 						\
 	  ${MAKE} ${MAKEFLAGS} do-shlib-handling			\

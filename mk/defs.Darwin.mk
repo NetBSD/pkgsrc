@@ -1,4 +1,4 @@
-# $NetBSD: defs.Darwin.mk,v 1.10 2001/11/21 13:17:14 agc Exp $
+# $NetBSD: defs.Darwin.mk,v 1.11 2001/11/21 13:44:44 agc Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -61,6 +61,8 @@ ROOT_GROUP?=	wheel
 
 _DO_LIBINTL_CHECKS=	yes	# perform checks for valid libintl
 _DO_SHLIB_CHECKS=	no	# on installation, fixup PLIST for shared libs
-_IMAKE_MAKE=	${MAKE}		# program which gets invoked by imake
-_PATCH_BACKUP_ARG= -z		# switch to patch(1) for backup file
-_USE_RPATH=	no		# don't add rpath to LDFLAGS
+_IMAKE_MAKE=		${MAKE}	# program which gets invoked by imake
+_OPSYS_HAS_MANZ=	yes	# MANZ controls gzipping of man pages
+_PATCH_BACKUP_ARG=	-z	# switch to patch(1) for backup file
+_PREFORMATTED_MAN_DIR=	cat	# directory where catman pages are
+_USE_RPATH=		no	# don't add rpath to LDFLAGS

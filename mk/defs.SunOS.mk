@@ -1,4 +1,4 @@
-# $NetBSD: defs.SunOS.mk,v 1.13 2001/11/21 13:17:14 agc Exp $
+# $NetBSD: defs.SunOS.mk,v 1.14 2001/11/21 13:44:44 agc Exp $
 #
 # Variable definitions for the SunOS/Solaris operating system.
 
@@ -73,5 +73,7 @@ ROOT_GROUP?=	root
 _DO_LIBINTL_CHECKS=	yes		# perform checks for valid libintl
 _DO_SHLIB_CHECKS=	yes		# fixup PLIST for shared libs
 _IMAKE_MAKE=	/usr/ccs/bin/make	# program which gets invoked by imake
-_PATCH_BACKUP_ARG= -z			# switch to patch(1) for backup file
-_USE_RPATH=	yes			# add rpath to LDFLAGS
+_OPSYS_HAS_MANZ=	no		# no MANZ for gzipping of man pages
+_PATCH_BACKUP_ARG= 	-z		# switch to patch(1) for backup file
+_PREFORMATTED_MAN_DIR=	man		# directory where catman pages are
+_USE_RPATH=		yes		# add rpath to LDFLAGS
