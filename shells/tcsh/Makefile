@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2002/09/15 19:16:44 kim Exp $
+# $NetBSD: Makefile,v 1.39 2002/09/30 23:54:07 jlam Exp $
 #
 
 DISTNAME=	tcsh-6.12.00
@@ -12,6 +12,7 @@ MAINTAINER=	kim@tac.nyc.ny.us
 HOMEPAGE=	http://www.tcsh.org/
 COMMENT=	Extended C-shell with many useful features
 
+USE_BUILDLINK2=	yes
 GNU_CONFIGURE=	yes
 ALL_TARGET=	all catalogs
 INSTALL_TARGET=	install install.man
