@@ -1,0 +1,35 @@
+$NetBSD: patch-au,v 1.1.1.1 2002/05/12 10:25:48 rh Exp $
+
+--- fam/Makefile.in.orig	Fri Dec 21 10:00:16 2001
++++ fam/Makefile.in
+@@ -99,7 +99,7 @@
+ bin_PROGRAMS = fam
+ sysconf_DATA = fam.conf
+ 
+-fam_SOURCES =    Activity.c++   Activity.h   Client.c++   Client.h   ClientConnection.c++   ClientConnection.h   ClientInterest.c++   ClientInterest.h   Cred.c++   Cred.h   DirEntry.c++   DirEntry.h   Directory.c++   Directory.h   DirectoryScanner.c++   DirectoryScanner.h   Event.c++   Event.h   File.c++   File.h   FileSystem.c++   FileSystem.h   FileSystemTable.c++   FileSystemTable.h   IMon.c++   IMon.h   Interest.c++   Interest.h   InternalClient.c++   InternalClient.h   Listener.c++   Listener.h   LocalClient.c++   LocalClient.h   LocalFileSystem.c++   LocalFileSystem.h   Log.c++   Log.h   MxClient.c++   MxClient.h   NFSFileSystem.c++   NFSFileSystem.h   NetConnection.c++   NetConnection.h   Pollster.c++   Pollster.h   Request.h   RequestMap.h   RPC_TCP_Connector.c++   RPC_TCP_Connector.h   Scanner.c++   Scanner.h   Scheduler.c++   Scheduler.h   ServerConnection.c++   ServerConnection.h   ServerHost.c++   ServerHost.h   ServerHostRef.c++   ServerHostRef.h   Set.h   SmallTable.h   StringTable.h   TCP_Client.c++   TCP_Client.h   main.c++   timeval.c++   timeval.h   @IMON_FUNCS@.c++
++fam_SOURCES =    Activity.c++   Activity.h   Client.c++   Client.h   ClientConnection.c++   ClientConnection.h   ClientInterest.c++   ClientInterest.h   Cred.c++   Cred.h   DirEntry.c++   DirEntry.h   Directory.c++   Directory.h   DirectoryScanner.c++   DirectoryScanner.h   Event.c++   Event.h   File.c++   File.h   FileSystem.c++   FileSystem.h   FileSystemTable.c++   FileSystemTable.h   IMon.c++   IMon.h   Interest.c++   Interest.h   InternalClient.c++   InternalClient.h   Listener.c++   Listener.h   LocalClient.c++   LocalClient.h   LocalFileSystem.c++   LocalFileSystem.h   Log.c++   Log.h   MxClient.c++   MxClient.h   NFSFileSystem.c++   NFSFileSystem.h   NetConnection.c++   NetConnection.h   Pollster.c++   Pollster.h   Request.h   RequestMap.h   RPC_TCP_Connector.c++   RPC_TCP_Connector.h   Scanner.c++   Scanner.h   Scheduler.c++   Scheduler.h   ServerConnection.c++   ServerConnection.h   ServerHost.c++   ServerHost.h   ServerHostRef.c++   ServerHostRef.h   Set.h   SmallTable.h   StringTable.h   TCP_Client.c++   TCP_Client.h   main.c++   timeval.c++   timeval.h   mntent_compat.c++ @IMON_FUNCS@.c++
+ 
+ 
+ EXTRA_fam_SOURCES = IMonIrix.c++ IMonLinux.c++ IMonNone.c++
+@@ -123,7 +123,7 @@
+ Listener.o LocalClient.o LocalFileSystem.o Log.o MxClient.o \
+ NFSFileSystem.o NetConnection.o Pollster.o RPC_TCP_Connector.o \
+ Scanner.o Scheduler.o ServerConnection.o ServerHost.o ServerHostRef.o \
+-TCP_Client.o main.o timeval.o @IMON_FUNCS@.o
++TCP_Client.o main.o timeval.o mntent_compat.o @IMON_FUNCS@.o
+ fam_DEPENDENCIES =  $(top_srcdir)/support/libsupport.a
+ fam_LDFLAGS = 
+ CXXFLAGS = @CXXFLAGS@
+@@ -237,10 +237,10 @@
+ 	@list='$(sysconf_DATA)'; for p in $$list; do \
+ 	  if test -f $(srcdir)/$$p; then \
+ 	    echo " $(INSTALL_DATA) $(srcdir)/$$p $(DESTDIR)$(sysconfdir)/$$p"; \
+-	    $(INSTALL_DATA) $(srcdir)/$$p $(DESTDIR)$(sysconfdir)/$$p; \
++	    $(INSTALL_DATA) $(srcdir)/$$p $(DESTDIR)$(sysconfdir)/$$p.sample; \
+ 	  else if test -f $$p; then \
+ 	    echo " $(INSTALL_DATA) $$p $(DESTDIR)$(sysconfdir)/$$p"; \
+-	    $(INSTALL_DATA) $$p $(DESTDIR)$(sysconfdir)/$$p; \
++	    $(INSTALL_DATA) $$p $(DESTDIR)$(sysconfdir)/$$p.sample; \
+ 	  fi; fi; \
+ 	done
+ 
