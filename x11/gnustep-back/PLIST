@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/10/18 09:30:26 rh Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/01/03 04:12:03 rh Exp $
 share/GNUstep/System/Headers/gnustep/gsc/GSContext.h
 share/GNUstep/System/Headers/gnustep/gsc/GSGState.h
 share/GNUstep/System/Headers/gnustep/gsc/GSGStateOps.h
@@ -9,10 +9,7 @@ share/GNUstep/System/Headers/gnustep/xlib/XGContext.h
 share/GNUstep/System/Headers/gnustep/xlib/XGGState.h
 share/GNUstep/System/Headers/gnustep/xlib/XGGeometry.h
 share/GNUstep/System/Headers/gnustep/xlib/XGPrivate.h
-share/GNUstep/System/Library/Bundles/libgnustep-back.bundle/Contents/Info.plist
-share/GNUstep/System/Library/Bundles/libgnustep-back.bundle/Contents/Resources
 share/GNUstep/System/Library/Bundles/libgnustep-back.bundle/Resources/Info-gnustep.plist
-share/GNUstep/System/Library/Bundles/libgnustep-back.bundle/Resources/Info.plist
 share/GNUstep/System/Library/Bundles/libgnustep-back.bundle/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}/gnu-gnu-gnu/libgnustep-back
 share/GNUstep/System/Tools/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}/gnu-gnu-gnu/font_cacher
 share/GNUstep/System/Tools/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}/gnu-gnu-gnu/gpbs
@@ -20,7 +17,6 @@ share/GNUstep/System/Tools/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}/gnu-g
 @dirrm share/GNUstep/System/Library/Bundles/libgnustep-back.bundle/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}
 @dirrm share/GNUstep/System/Library/Bundles/libgnustep-back.bundle/${GNUSTEP_HOST_CPU}
 @dirrm share/GNUstep/System/Library/Bundles/libgnustep-back.bundle/Resources
-@dirrm share/GNUstep/System/Library/Bundles/libgnustep-back.bundle/Contents
 @dirrm share/GNUstep/System/Library/Bundles/libgnustep-back.bundle
 @dirrm share/GNUstep/System/Headers/gnustep/xlib
 @dirrm share/GNUstep/System/Headers/gnustep/x11
