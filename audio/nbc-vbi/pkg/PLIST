@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/04/22 08:19:54 tron Exp $
-bin/nbc-vbi
-share/doc/nbc-vbi/README
-@dirrm share/doc/nbc-vbi

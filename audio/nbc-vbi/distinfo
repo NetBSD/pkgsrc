@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.4 2001/04/23 17:28:17 tron Exp $
-
-SHA1 (nbc-vbi-0.32-Source.tgz) = 97494878d782c150185e07dc294f4315c0914393
-Size (nbc-vbi-0.32-Source.tgz) = 25206 bytes
-SHA1 (patch-aa) = d213cf28cb215983c8399bf542eaea575bb73f13
-SHA1 (patch-ab) = cb7dd5e9c1006e8f0ce9971d8c2419d832289c11
-SHA1 (patch-ac) = 5b18c6d8d26df6daabc7409db61776bb96d2b227
-SHA1 (patch-ad) = 0fc8a360a59dc63245650ca3c41e7cd7a961e67a
