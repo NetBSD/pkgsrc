@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2000/07/15 00:36:28 itojun Exp $
+# $NetBSD: Makefile,v 1.15 2000/08/15 03:19:10 itojun Exp $
 
 DISTNAME=	w3m-0.1.10
 CATEGORIES=	www
@@ -30,7 +30,28 @@ W3M_USE_JAPANESE?=	YES
 W3M_USE_JAPANESE_SYMBOL?=NO
 # Set this to YES to use lynx like key binding.
 W3M_USE_LYNX_KEY?=	NO
+# set this to YES if you want HTTPS support.
+W3M_USE_SSL?=		YES
+# set this to YES if you want HTTP cookie support.
+W3M_USE_COOKIE?=	YES
 
+.if defined(W3M_USE_COOKIE) && ${W3M_USE_COOKIE} == YES
+CONFIGURE_ENV+=	use_cookie=y
+.else
+CONFIGURE_ENV+=	use_cookie=n
+.endif
+.if defined(W3M_USE_SSL) && ${W3M_USE_SSL} == YES
+.if !defined(PATENTEDOPENSSLSRC) && !exists(/usr/include/openssl/rsa.h)
+# openssl is necessary for HTTPS support.
+# if PATENTEDOPENSSLSRC is defined, then we assume that
+# RSA already exists in the OpenSSL built as part of the
+# base distribution.
+DEPENDS+=	openssl-0.9.*:../../security/openssl
+.endif
+CONFIGURE_ENV+=	use_ssl=y
+.else
+CONFIGURE_ENV+=	use_ssl=n
+.endif
 .if defined(W3M_USE_JAPANESE) && ${W3M_USE_JAPANESE} == YES
 CONFIGURE_ENV+=	def_lg=1
 CONFIGURE_ENV+=	def_dcode=n
@@ -56,7 +77,6 @@ CONFIGURE_ENV+=	def_libdir=${LOCALBASE}/${HELPERDIR}
 CONFIGURE_ENV+=	def_helpdir=${LOCALBASE}/${HELPDIR}
 CONFIGURE_ENV+=	use_color=n use_mouse=n
 CONFIGURE_ENV+=	use_menu=n use_matrix=n
-CONFIGURE_ENV+=	use_cookie=n use_ssl=n
 CONFIGURE_ENV+=	ded=vi dmail=Mail dbrowser=
 CONFIGURE_ENV+=	dcc="${CC}" dtermlib="-ltermcap"
 CONFIGURE_ENV+=	dldflags="-Wl,-rpath,${LOCALBASE}/lib -L${LOCALBASE}/lib"

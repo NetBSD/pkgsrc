@@ -1,10 +1,12 @@
-$NetBSD: patch-aa,v 1.5 2000/06/21 08:22:11 itohy Exp $
-
+$NetBSD: patch-aa,v 1.6 2000/08/15 03:19:10 itojun Exp $
 --- configure.orig	Mon Jun  5 18:41:35 2000
-+++ configure	Tue Jun 20 21:19:13 2000
-@@ -310,13 +310,13 @@
- echo "Which language do you prefer?"
- echo "  1 - Japanese (charset ISO-2022-JP, EUC-JP, Shift_JIS)"
++++ configure	Tue Aug 15 12:14:03 2000
+@@ -190,3 +190,3 @@
+   sslinclude=""
+-  for i1 in /usr /usr/local
++  for i1 in /usr /usr/local /usr/pkg
+   do
+@@ -312,9 +312,9 @@
  echo "  2 - English (charset US_ASCII, ISO-8859-1, etc.)"
 -if [ "$pref_lang" = 2 ]; then
 -  Echo '[2]? '
@@ -21,31 +23,71 @@ $NetBSD: patch-aa,v 1.5 2000/06/21 08:22:11 itohy Exp $
 +#  def_lg=1
 +#fi
  while :
- do
-   readanswer lg_ans "$def_lg"
-@@ -784,7 +784,7 @@
- gclib=''
- gcinclude=''
+@@ -462,4 +462,4 @@
+     use_mouse=n; def_mouse="#undef MOUSE"
+-    use_cookie=n; def_cookie="#undef USE_COOKIE"
+-    use_ssl=n; def_ssl="#undef USE_SSL"
++#   use_cookie=n; def_cookie="#undef USE_COOKIE"
++#   use_ssl=n; def_ssl="#undef USE_SSL"
+     save_params
+@@ -471,4 +471,4 @@
+     use_mouse=n; def_mouse="#undef MOUSE"
+-    use_cookie=n; def_cookie="#undef USE_COOKIE"
+-    use_ssl=n; def_ssl="#undef USE_SSL"
++#   use_cookie=n; def_cookie="#undef USE_COOKIE"
++#   use_ssl=n; def_ssl="#undef USE_SSL"
+     save_params
+@@ -480,4 +480,4 @@
+     use_mouse=y; def_mouse="#define MOUSE"
+-    use_cookie=n; def_cookie="#undef USE_COOKIE"
+-    use_ssl=n; def_ssl="#undef USE_SSL"
++#   use_cookie=n; def_cookie="#undef USE_COOKIE"
++#   use_ssl=n; def_ssl="#undef USE_SSL"
+     save_params
+@@ -489,4 +489,4 @@
+     use_mouse=y; def_mouse="#define MOUSE"
+-    use_cookie=y; def_cookie="#define USE_COOKIE"
+-    use_ssl=n; def_ssl="#undef USE_SSL"
++#   use_cookie=y; def_cookie="#define USE_COOKIE"
++#   use_ssl=n; def_ssl="#undef USE_SSL"
+     save_params
+@@ -498,5 +498,5 @@
+     use_mouse=y; def_mouse="#define MOUSE"
+-    use_cookie=y; def_cookie="#define USE_COOKIE"
+-    use_ssl=y; def_ssl="#define USE_SSL"
+-    find_ssl
++#   use_cookie=y; def_cookie="#define USE_COOKIE"
++#   use_ssl=y; def_ssl="#define USE_SSL"
++#   find_ssl
+     save_params
+@@ -515,2 +515,16 @@
+ 
++# these are made independent from "model"
++if [ "$use_cookie" = y ]; then
++    def_cookie="#define USE_COOKIE"
++else
++    def_cookie="#undef USE_COOKIE"
++fi
++
++if [ "$use_ssl" = y ]; then
++    def_ssl="#define USE_SSL"
++    find_ssl
++else
++    def_ssl="#undef USE_SSL"
++fi
++
+ if [ "$customized" != y ]; then
+@@ -786,3 +800,3 @@
  gctarget=''
 -for libdir in /lib /usr/lib /usr/local/lib /usr/ucblib /usr/ccslib /usr/ccs/lib ${HOME}/lib
 +for libdir in /lib /usr/lib ${LOCALBASE}/lib /usr/local/lib /usr/ucblib /usr/ccslib /usr/ccs/lib ${HOME}/lib
  do
-   if [ -f $libdir/libgc.a -o -f $libdir/libgc.so ] ; then 
-     echo "$libdir/libgc found"
-@@ -792,7 +792,7 @@
-     break
-   fi
+@@ -794,3 +808,3 @@
  done
 -for inc in /usr/include /usr/include/gc /usr/local/include /usr/local/include/gc ${HOME}/include
 +for inc in /usr/include /usr/include/gc ${LOCALBASE}/include /usr/local/include /usr/local/include/gc ${HOME}/include
  do
-   if [ -f $inc/gc.h ]; then
-     echo "$inc/gc.h found"
-@@ -1553,6 +1553,7 @@
- if [ `expr "$perl" : 'not found'` != 0 ]; then
-   perl=/usr/local/bin/perl
+@@ -1555,2 +1569,3 @@
  fi
 +perl=/usr/pkg/bin/perl
  if [ $sysname = CYGWIN ]; then
-   cygwin=1
- else
