@@ -1,20 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2004/02/15 21:58:52 seb Exp $
+@comment $NetBSD: PLIST,v 1.7 2004/03/25 23:31:22 jlam Exp $
 bin/${GNU_PROGRAM_PREFIX}make
 ${GMAKE_LINK}bin/gmake
 man/man1/${GNU_PROGRAM_PREFIX}make.1
-${PKGLOCALEDIR}/locale/da/LC_MESSAGES/make.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/make.mo
-${PKGLOCALEDIR}/locale/es/LC_MESSAGES/make.mo
-${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/make.mo
-${PKGLOCALEDIR}/locale/gl/LC_MESSAGES/make.mo
-${PKGLOCALEDIR}/locale/he/LC_MESSAGES/make.mo
-${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/make.mo
-${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/make.mo
-${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/make.mo
-${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/make.mo
-${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/make.mo
-${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/make.mo
-${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/make.mo
-${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/make.mo
-${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/make.mo
-${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/make.mo
