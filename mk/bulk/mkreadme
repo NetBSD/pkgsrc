@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: mkreadme,v 1.6 2002/11/13 11:12:04 dmcmahill Exp $
+# $NetBSD: mkreadme,v 1.7 2002/11/13 15:12:17 dmcmahill Exp $
 #
 # Script for README.html generation
 #
@@ -379,24 +379,6 @@ fi
 
 ######################################################################
 #
-#  Prune README.html files which are no longer needed
-#
-######################################################################
-if [ "x$prune" = "xyes" ]; then
-    echo " "
-    echo "Pruning unused README.html files"
-    echo " "
-    cd ${PKGSRCDIR}
-    for d in `ls -d */*` ; do
-	if [ -d $d -a ! -f ${d}/Makefile -a -f ${d}/README.html ]; then
-	    echo "Pruning ${d}/README.html which is no longer used"
-	    rm -f ${d}/README.html
-	fi
-    done
-fi
-
-######################################################################
-#
 #  Generate the package and category README.html files
 #
 ######################################################################
@@ -460,6 +442,29 @@ else
 	echo "README-IPv6.html is unchanged (no changes were needed)"
 fi
 
+######################################################################
+#
+#  Prune README.html files which are no longer needed
+#
+######################################################################
+if [ "x$prune" = "xyes" ]; then
+    echo " "
+    echo "Pruning unused README.html files"
+    echo " "
+    cd ${PKGSRCDIR}
+    for d in `ls -d */*` ; do
+	if [ -d $d -a ! -f ${d}/Makefile -a -f ${d}/README.html ]; then
+	    echo "Pruning ${d}/README.html which is no longer used"
+	    rm -f ${d}/README.html
+	fi
+    done
+fi
+
+######################################################################
+#
+# All done.  Clean (if needed) and exit
+#
+######################################################################
 echo " "
 echo "README.html generation finished:  `date`"
 echo " "
