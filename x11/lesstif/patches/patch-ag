@@ -1,8 +1,12 @@
-$NetBSD: patch-ag,v 1.4 1999/11/03 04:18:47 jlam Exp $
+$NetBSD: patch-ag,v 1.5 1999/11/24 17:34:10 hubertf Exp $
 
---- doc/lessdox/widgets/Makefile.in.orig	Mon Sep  6 17:13:55 1999
-+++ doc/lessdox/widgets/Makefile.in	Tue Nov  2 22:16:16 1999
-@@ -116,10 +116,10 @@
+Place(s) where this was (most probably...) in before:
+     NetBSD: patch-ag,v 1.4 1999/11/03 04:18:47 jlam Exp 
+
+diff -x *.orig -urN ./doc/lessdox/widgets/Makefile.in /usr/pkgsrc/x11/lesstif/work.i386.unpatched/lesstif-0.89.4/doc/lessdox/widgets/Makefile.in
+--- ./doc/lessdox/widgets/Makefile.in	Fri Nov  5 21:15:02 1999
++++ /usr/pkgsrc/x11/lesstif/work.i386.unpatched/lesstif-0.89.4/doc/lessdox/widgets/Makefile.in	Wed Nov 24 17:30:52 1999
+@@ -120,10 +120,10 @@
  EXTRA_DIST =  $(man1_DATA) $(man3_DATA) $(man5_DATA)
  SUFFIXES = .1 .3 .5 .html
  
@@ -16,17 +20,17 @@ $NetBSD: patch-ag,v 1.4 1999/11/03 04:18:47 jlam Exp $
 +man5dir = $(prefix)/man/man5
  
  man1_DATA = 
- man3_DATA =  	XmClipboard.3 LessTifInternals.3 	XmArrowButton.3 XmArrowButtonGadget.3 XmBulletinBoard.3 	XmCascadeButton.3 XmCascadeButtonGadget.3 	XmComboBox.3 XmCommand.3 XmDesktop.3 	XmDialogShell.3 XmDialogShellExt.3 XmDisplay.3 	XmDragContext.3 XmDragIcon.3 XmDragOverShell.3 	XmDrawingArea.3 XmDrawnButton.3 XmDropSiteManager.3 	XmDropTransfer.3 XmFileSelectionBox.3 XmForm.3 	XmFrame.3 XmGadget.3 XmGrabShell.3 	XmIconGadget.3 XmLabel.3 	XmLabelGadget.3 XmList.3 	XmMainWindow.3 XmManager.3 XmMenuShell.3 	XmMessageBox.3 XmNotebook.3 XmPanedWindow.3 	XmPrimitive.3 XmProtocol.3 XmPushButton.3 	XmPushButtonGadget.3 XmRowColumn.3 	XmSash.3 XmScale.3 XmScreen.3 	XmScrollBar.3 XmScrolledWindow.3 XmSelectionBox.3 	XmSeparator.3 XmSeparatorGadget.3 	XmSpinBox.3 XmTearOffButton.3 XmText.3 	XmTextField.3 XmToggleButton.3 	XmToggleButtonGadget.3 XmVendorShell.3 XmWorld.3 		ApplicationShell.3 Composite.3 Core.3 Object.3 OverrideShell.3 	Shell.3 TopLevelShell.3 TransientShell.3 WmShell.3 	Rect.3 UnNamedObj.3 Constraint.3 VendorShell.3
-@@ -135,7 +135,7 @@
+ man3_DATA = \
+@@ -164,7 +164,7 @@
  # build them.
  #
  
 -htmldir = $(prefix)/LessTif/doc/html
 +htmldir = $(prefix)/share/doc/lesstif/html
  
- @HaveMan2html_TRUE@html_DATA = ${man1_DATA:.1=.html} ${man3_DATA:.3=.html}                 ${man5_DATA:.5=.html}
- 
-@@ -272,10 +272,9 @@
+ @HaveMan2html_TRUE@html_DATA = \
+ @HaveMan2html_TRUE@${man1_DATA:.1=.html} ${man3_DATA:.3=.html} \
+@@ -304,10 +304,9 @@
  install-exec-am:
  install-exec: install-exec-am
  

@@ -1,6 +1,11 @@
-$NetBSD: patch-aa,v 1.9 1999/11/15 21:30:28 drochner Exp $
---- Makefile.in.orig	Mon Nov 15 16:43:00 1999
-+++ Makefile.in	Mon Nov 15 16:48:09 1999
+$NetBSD: patch-aa,v 1.10 1999/11/24 17:34:10 hubertf Exp $
+
+Place(s) where this was (most probably...) in before:
+     NetBSD: patch-aa,v 1.9 1999/11/15 21:30:28 drochner Exp 
+
+diff -x *.orig -urN ./Makefile.in /usr/pkgsrc/x11/lesstif/work.i386.unpatched/lesstif-0.89.4/Makefile.in
+--- ./Makefile.in	Fri Nov  5 21:14:31 1999
++++ /usr/pkgsrc/x11/lesstif/work.i386.unpatched/lesstif-0.89.4/Makefile.in	Wed Nov 24 17:30:51 1999
 @@ -128,7 +128,7 @@
  # Lets put the informational stuff in a sub directory to avoid 
  # poluting /usr/local for default installs.

@@ -1,8 +1,12 @@
-$NetBSD: patch-ac,v 1.4 1999/11/03 04:18:47 jlam Exp $
+$NetBSD: patch-ac,v 1.5 1999/11/24 17:34:10 hubertf Exp $
 
---- configure.orig	Mon Sep  6 17:14:00 1999
-+++ configure	Tue Nov  2 22:16:16 1999
-@@ -1406,6 +1406,7 @@
+Place(s) where this was (most probably...) in before:
+     NetBSD: patch-ac,v 1.4 1999/11/03 04:18:47 jlam Exp 
+
+diff -x *.orig -urN ./configure /usr/pkgsrc/x11/lesstif/work.i386.unpatched/lesstif-0.89.4/configure
+--- ./configure	Fri Nov  5 21:15:08 1999
++++ /usr/pkgsrc/x11/lesstif/work.i386.unpatched/lesstif-0.89.4/configure	Wed Nov 24 17:30:51 1999
+@@ -1552,6 +1552,7 @@
  fi
  
  
@@ -10,11 +14,11 @@ $NetBSD: patch-ac,v 1.4 1999/11/03 04:18:47 jlam Exp $
  # Check for any special flags to pass to ltconfig.
  libtool_flags="--cache-file=$cache_file"
  test "$enable_shared" = no && libtool_flags="$libtool_flags --disable-shared"
-@@ -1563,6 +1564,7 @@
+@@ -1709,6 +1710,7 @@
  # Redirect the config.log output again, so that the ltconfig log is not
  # clobbered by the next message.
  exec 5>>./config.log
 +fi
  
  
- subdirs="lib/Xlt lib/Xbae test"
+ if (aclocal --print-ac-dir) </dev/null >/dev/null 2>&1 && test -w `aclocal --print-ac-dir`; then

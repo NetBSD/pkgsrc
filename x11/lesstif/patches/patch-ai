@@ -1,6 +1,11 @@
-$NetBSD: patch-ai,v 1.7 1999/11/15 21:30:28 drochner Exp $
---- doc/www.lesstif.org/images/Makefile.in.orig	Mon Nov 15 18:05:53 1999
-+++ doc/www.lesstif.org/images/Makefile.in	Mon Nov 15 18:07:26 1999
+$NetBSD: patch-ai,v 1.8 1999/11/24 17:34:10 hubertf Exp $
+
+Place(s) where this was (most probably...) in before:
+     NetBSD: patch-ai,v 1.7 1999/11/15 21:30:28 drochner Exp 
+
+diff -x *.orig -urN ./doc/www.lesstif.org/images/Makefile.in /usr/pkgsrc/x11/lesstif/work.i386.unpatched/lesstif-0.89.4/doc/www.lesstif.org/images/Makefile.in
+--- ./doc/www.lesstif.org/images/Makefile.in	Fri Nov  5 21:14:59 1999
++++ /usr/pkgsrc/x11/lesstif/work.i386.unpatched/lesstif-0.89.4/doc/www.lesstif.org/images/Makefile.in	Wed Nov 24 17:30:52 1999
 @@ -126,7 +126,7 @@
  # Lets put the informational stuff in a sub directory to avoid 
  # poluting /usr/local for default installs.
