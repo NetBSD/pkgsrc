@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 2005/01/17 05:31:12 jschauma Exp $
+
+--- dbinc/db_185.in.orig	2005-01-16 19:39:27.000000000 -0500
++++ dbinc/db_185.in	2005-01-16 19:39:47.000000000 -0500
+@@ -72,7 +72,7 @@
+  * XXX
+  * SGI/IRIX already has a pgno_t.
+  */
+-#ifdef	sgi
++#ifdef	__sgi
+ #define	pgno_t	db_pgno_t
+ #endif
+ 
