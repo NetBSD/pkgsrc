@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/10/24 09:34:08 jlam Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/12/16 00:27:48 cjep Exp $
 bin/encode_keychange
 bin/fixproc
 bin/ipf-mod.pl
@@ -149,7 +149,7 @@ include/net-snmp/types.h
 include/net-snmp/utilities.h
 include/net-snmp/varbind_api.h
 include/net-snmp/version.h
-include/ucd-snmp/agent_index.h 
+include/ucd-snmp/agent_index.h
 include/ucd-snmp/agent_read_config.h
 include/ucd-snmp/agent_registry.h
 include/ucd-snmp/agent_trap.h
@@ -186,7 +186,7 @@ include/ucd-snmp/tools.h
 include/ucd-snmp/transform_oids.h
 include/ucd-snmp/ucd-snmp-agent-includes.h
 include/ucd-snmp/ucd-snmp-config.h
-include/ucd-snmp/ucd-snmp-includes.h  
+include/ucd-snmp/ucd-snmp-includes.h
 include/ucd-snmp/util_funcs.h
 include/ucd-snmp/var_struct.h
 include/ucd-snmp/version.h
