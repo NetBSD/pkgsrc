@@ -1,0 +1,29 @@
+$NetBSD: patch-ab,v 1.1 2001/11/21 22:42:03 tron Exp $
+
+--- bidwatcher.h.orig	Tue Apr  3 09:22:38 2001
++++ bidwatcher.h	Tue Nov 20 20:45:40 2001
+@@ -5,6 +5,7 @@
+ // Tom McNair  (tmcnair@cyberhighway.net)
+ // Wayne Schlitt (wayne@midwestcs.com)
+ // Ben Byer (bushing@users.sourceforge.net)
++// Kevin Dwyer (kevin@pheared.net)
+ // 
+ // use of this code is restricted to the terms
+ // of the GNU GPL, which should have been included in this
+@@ -80,7 +81,7 @@
+ // Stucture to store auction information
+ //
+ struct auctioninfo {
+-  unsigned int  ItemNumber;     /*  Item Number (User Entered)    */
++  unsigned long int  ItemNumber;     /*  Item Number (User Entered)    */
+   char Description[129];   /*  Description Of Item For sale  */
+   char currency[10];
+   float CurrentBid;     /*  1: Current Bid                */
+@@ -346,3 +347,7 @@
+ 
+ void getAdultCookie(char *, char *);
+ 
++// We can make a bunch of these and make cases for all of em.
++#define TYPE_EBAY 0
++#define TYPE_EBAYMOTORSCAR 1  //Ebay motors auctions that are cars
++#define TYPE_EBAYMOTORS 0     //Auctions on motors that aren't cars are normal

@@ -1,8 +1,208 @@
-$NetBSD: patch-aa,v 1.4 2001/10/07 22:44:21 tron Exp $
+$NetBSD: patch-aa,v 1.5 2001/11/21 22:40:06 tron Exp $
 
 --- bidwatcher.cpp.orig	Thu Jul  5 02:31:54 2001
-+++ bidwatcher.cpp	Mon Oct  8 00:42:19 2001
-@@ -639,7 +639,7 @@
++++ bidwatcher.cpp	Wed Nov 21 23:34:17 2001
+@@ -5,6 +5,7 @@
+ // Tom McNair  (tmcnair@cyberhighway.net)
+ // Wayne Schlitt (wayne@midwestcs.com)
+ // Ben Byer (bushing@users.sourceforge.net)
++// Kevin Dwyer (kevin@pheared.net)
+ // 
+ // use of this code is restricted to the terms
+ // of the GNU GPL, which should have been included in this
+@@ -61,6 +62,8 @@
+ char * banner2 = "help us: please report ALL bugs at "
+                  "http://sourceforge.net/projects/bidwatcher";
+ 
++const char * const bw_subdir = ".bidwatcher";
++
+ unsigned int * ParseList2(char *);
+ void WriteAucFile2(void);
+ void ReadAucFile2(void);
+@@ -137,15 +140,15 @@
+   int i;
+   for(i=0;i<aucIdx;i++) {
+     if(auction[i]==NULL) {
+-      printf("auction[%d] was null at %d\n",i,line);
++      printf("auction[%lu] was null at %d\n",i,line);
+       die();
+     }
+     /*    if(auction[i]->infourl==NULL) {
+-      printf("auction[%d]->infourl was invalid at %d\n",i,line);
++      printf("auction[%lu]->infourl was invalid at %d\n",i,line);
+       die();
+       } */
+     if(auction[i]->magic!=12345) {
+-      printf("auction[%d]->magic was %d at %d\n",i,auction[i]->magic,line);
++      printf("auction[%lu]->magic was %d at %d\n",i,auction[i]->magic,line);
+       die();
+     }
+   }
+@@ -256,9 +259,10 @@
+ {
+   if (updateInProgress ) return;
+   updateInProgress = TRUE;
++  int retval;
+ 
+-  if(strlen(authID)>1) switch(GetUserBids2()) {
+-  case 1:
++  if(strlen(authID)>1) switch(retval=GetUserBids2()) {
++  case GUA_SUCCESS:
+     GetUserListings();
+     UpdateList();
+     break;
+@@ -267,7 +271,7 @@
+     break;
+   default:
+     showError("Update failed: Network error");
+-			 
++    printf("getuserbids2 returned %d\n",retval);
+   }
+   
+   if ( aucIdx != 0 ) UpdateAll(FALSE);
+@@ -335,7 +339,7 @@
+   myBidQuantity=quantity;
+   printf("myBidAmount set to %f\n",bid);
+   bidurl=new URL(g_strdup_printf("http://cgi.ebay.com/aw-cgi/eBayISAPI.dll?"
+-				  "MakeBid&item=%d&maxbid=%.2f&quant=%d",
++				  "MakeBid&item=%lu&maxbid=%.2f&quant=%d",
+ 				  ItemNumber,bid,quantity),proxyurl);
+   int returnVal = fetchURL(bidurl, &Buff, TIMEOUT);
+   if ( returnVal != 1 )
+@@ -352,19 +356,19 @@
+ 
+   switch(returnVal) {
+   case PBS_BIDTOOLOW:
+-    sprintf(lineBuff,"Pre-bid on %d for %.2f FAILED: bid below asking price",
++    sprintf(lineBuff,"Pre-bid on %lu for %.2f FAILED: bid below asking price",
+ 	    ItemNumber,snipeAmount);
+     showBidStatus(lineBuff);
+     free(Buff);
+     break;
+   case PBS_BADQUANTITY:
+-    sprintf(lineBuff,"Pre-bid on %d FAILED: Bad quantity '%d'",
++    sprintf(lineBuff,"Pre-bid on %lu FAILED: Bad quantity '%d'",
+ 	    ItemNumber,snipeQty);
+     showBidStatus(lineBuff);
+     free(Buff);
+     break;
+   case PBS_AUCTIONOVER:
+-    sprintf(lineBuff,"Pre-bid on %d FAILED: Auction already ended",ItemNumber);
++    sprintf(lineBuff,"Pre-bid on %lu FAILED: Auction already ended",ItemNumber);
+     showBidStatus(lineBuff);
+     free(Buff);
+     break;
+@@ -375,13 +379,13 @@
+     scratch = strtok(0,"\"");
+     printf("Snipe key is %s\n",scratch);
+     strcpy(snipeKey, scratch);
+-    sprintf(lineBuff,"Pre-bid on %d SUCCEEDED: %d at %.2f",
++    sprintf(lineBuff,"Pre-bid on %lu SUCCEEDED: %d at %.2f",
+ 	    ItemNumber,snipeQty, snipeAmount);
+     showBidStatus(lineBuff);
+     free(Buff);
+     break;
+   default:
+-    sprintf(lineBuff,"Pre-bid on %d FAILED: Unknown error %d",
++    sprintf(lineBuff,"Pre-bid on %lu FAILED: Unknown error %d",
+ 	    ItemNumber,returnVal);
+     showBidStatus(lineBuff);
+   }
+@@ -396,7 +400,7 @@
+   char *end=strstr(url,"?");
+   end[1]='\0';
+   
+-  sprintf(bidurl->url,"%sAcceptBid&item=%d&key=%s"
++  sprintf(bidurl->url,"%sAcceptBid&item=%lu&key=%s"
+ 	  "&userid=%s&pass=%s&maxbid=%.2f&quant=%d",url,
+ 	  ItemNumber,snipeKey,authID,authPASS,snipeAmount,
+ 	  snipeQty);
+@@ -406,7 +410,7 @@
+   retval = fetchURL(bidurl, &Buff, TIMEOUT);
+   
+   if(retval!=NET_SUCCESS) {
+-    sprintf(lineBuff,"Bid on %d FAILED: Error %d connecting to eBay",
++    sprintf(lineBuff,"Bid on %lu FAILED: Error %d connecting to eBay",
+ 	    ItemNumber, retval);
+     showBidStatus(lineBuff);
+     return NET_NETERROR;
+@@ -415,42 +419,46 @@
+   if(windows && retval==PBS_SUCCESS) {
+     switch(returnVal) {
+     case PB_HIGHBID: 
+-      sprintf(lineBuff,"Bid on %d SUCCEEDED: You are the high bidder",
++      sprintf(lineBuff,"Bid on %lu SUCCEEDED: You are the high bidder",
+ 	      ItemNumber);
+       showBidStatus(lineBuff);
+       break;
+     case PB_OUTBID:
+-      sprintf(lineBuff,"Bid on %d LOST: Someone has outbid you",
++      sprintf(lineBuff,"Bid on %lu LOST: Someone has outbid you",
+ 	      ItemNumber);
+       showBidStatus(lineBuff);
+       break;
+     case PB_BIDTOOLOW:
+-      sprintf(lineBuff,"Bid on %d FAILED: Bid below current asking price",
++      sprintf(lineBuff,"Bid on %lu FAILED: Bid below current asking price",
+ 	      ItemNumber);
+       showBidStatus(lineBuff);
+       break;
+     case PB_BADQUANTITY: 
+-      sprintf(lineBuff,"Bid on %d FAILED: Bad quantity '%d'",
++      sprintf(lineBuff,"Bid on %lu FAILED: Bad quantity '%d'",
+ 	      ItemNumber,snipeQty);
+       showBidStatus(lineBuff);
+       break;
+     case PB_AUCTIONOVER:
+-      sprintf(lineBuff,"Bid on %d FAILED: Auction already ended",
++      sprintf(lineBuff,"Bid on %lu FAILED: Auction already ended",
+ 	      ItemNumber);
+       showBidStatus(lineBuff);
+       break;
+     case PB_BADUSER:
+-      sprintf(lineBuff,"Bid on %d FAILED: Invalid username or password!",
++      sprintf(lineBuff,"Bid on %lu FAILED: Invalid username or password!",
+ 	      ItemNumber);
+       showBidStatus(lineBuff);
+       break;
+     default:
+-      sprintf(lineBuff,"Pre-bid on %d FAILED: Unknown error %d",
++      sprintf(lineBuff,"Pre-bid on %lu FAILED: Unknown error %d",
+ 	      ItemNumber,returnVal);
+       showBidStatus(lineBuff);
+       if(returnVal>6 || returnVal<1) {
+-	FILE *erfile=fopen(g_strdup_printf("%s/.bidwatcher/error-%d",
+-					   getenv("HOME"),ItemNumber),"w");
++ 	FILE *erfile=fopen(g_strdup_printf("%s/%s/error-%d",
++ 					   getenv("HOME"),bw_subdir,ItemNumber),
++			   "w");
++        //FILE *erfile=fopen(g_strdup_printf("%s/.bidwatcher/error-%lu",
++	//	             getenv("HOME"),ItemNumber),"w");
++
+ 	fprintf(erfile,"Error: could not parse answer.\n%s\n",bidurl->url);
+ 	fprintf(erfile,"%s",Buff);
+ 	fclose(erfile);
+@@ -619,9 +627,18 @@
+   snipeDelay=gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON
+ 						  (confwindow->
+ 						   snipespin));
++
++  //if (strcmp(gtk_entry_get_text(GTK_ENTRY(confwindow->useridtext)), "") == 0)
++  //  gtk_entry_set_text(GTK_ENTRY(confwindow->useridtext), "!");
++
+   strcpy(authID,
+-	 gtk_entry_get_text(GTK_ENTRY(confwindow->useridtext)));
++  	 gtk_entry_get_text(GTK_ENTRY(confwindow->useridtext)));
++
+   char encpassword[76];
++
++  //if (strcmp(gtk_entry_get_text(GTK_ENTRY(confwindow->passwordtext)), "") == 0)
++  //gtk_entry_set_text(GTK_ENTRY(confwindow->passwordtext), "!");
++
+   encode_password(encpassword,gtk_entry_get_text(GTK_ENTRY(confwindow
+ 							   ->passwordtext)));
+   strcpy(authPASS,encpassword);
+@@ -639,7 +656,7 @@
  
    if(proxyurl!=NULL) delete(proxyurl);
    if(strlen(proxystring)>2)
@@ -11,26 +211,241 @@ $NetBSD: patch-aa,v 1.4 2001/10/07 22:44:21 tron Exp $
    else proxyurl=NULL;
    
    if(timesyncurl!=NULL) delete(timesyncurl);
-@@ -1712,11 +1712,15 @@
+@@ -661,6 +678,7 @@
+   proxylabel=gtk_label_new("Proxy server: (ex: foo.bar.com:8080)");
+   useridtext=gtk_entry_new();
+   passwordtext=gtk_entry_new();
++  gtk_entry_set_visibility(GTK_ENTRY(passwordtext), FALSE);
+   browsertext=gtk_entry_new();
+   mailclienttext=gtk_entry_new();
+   proxytext=gtk_entry_new();
+@@ -741,8 +759,19 @@
+ 
+   char plainpassword[76];
+   decode_password(plainpassword,authPASS);
++
++  //  if (strcmp(authID, "!") == 0)
++  //	  gtk_entry_set_text(GTK_ENTRY(useridtext),"");
++  //else
++
+   gtk_entry_set_text(GTK_ENTRY(useridtext),authID);
++
++  //if (strcmp(plainpassword,"!") == 0)
++  //  gtk_entry_set_text(GTK_ENTRY(passwordtext),"");
++  //else
++	 
+   gtk_entry_set_text(GTK_ENTRY(passwordtext),plainpassword);
++
+   gtk_entry_set_text(GTK_ENTRY(browsertext),browserPATH);
+   gtk_entry_set_text(GTK_ENTRY(mailclienttext),emailPATH);
+   gtk_entry_set_text(GTK_ENTRY(proxytext),proxystring);
+@@ -839,6 +868,7 @@
+ 		  "Wayne Schlitt <wayne@midwestcs.com>\n"
+ 		  "Larry Gilbert (dischead@users.sourceforge.net)\n"
+ 		  "Ben Byer <bushing@users.sourceforge.net>\n"
++		  "Kevin Dwyer <kevin@pheared.net>\n"
+ 		  "\n"
+ 		  "All copyrights under the GNU GPL 1998-2001.\n"
+ 		  "See the enclosed file COPYING for more details, or\n"
+@@ -949,7 +979,7 @@
+     if ( myauc ->TimeLeft[0] != 0 ) infoState = 3;
+     else infoState = 2;
+   }   
+-  sprintf(info, "Item Number : %d",myauc->ItemNumber);
++  sprintf(info, "Item Number : %lu",myauc->ItemNumber);
+   gtk_window_set_title(GTK_WINDOW(window),info);  
+   
+   strcpy(info, "Current Bid : ");
+@@ -992,7 +1022,8 @@
+   }
+   if ( infoState == 3 )
+     {
+-      strcpy(info,myauc->Seller);
++      strcpy(info," ");
++      strcat(info,myauc->Seller);
+       strcat(info,myauc->SellerRate);
+       strcat(info,"\n ");
+       strcat(info,myauc->Location);
+@@ -1065,7 +1096,7 @@
+   gtk_container_set_border_width(GTK_CONTAINER(window),10);
+   char currentbid[80],chTemp[80];
+   
+-  gtk_window_set_title(GTK_WINDOW(window),g_strdup_printf("Item Number : %d",
++  gtk_window_set_title(GTK_WINDOW(window),g_strdup_printf("Item Number : %lu",
+ 							  myauc->ItemNumber));  
+   
+   sprintf(currentbid, "Current Bid : %s%.2f",myauc->currency,
+@@ -1203,11 +1234,11 @@
+   }
+   char fileName[200];
+   if(issnipes) {
+-    MakeFileName("/.bidwatcher/snipe", fileName, iscurrent);
++    MakeFileName(g_strdup_printf("/%s/snipe", bw_subdir), fileName, iscurrent);
+     gtk_window_set_title(GTK_WINDOW(window),iscurrent?"This month's snipes":
+ 			 "Last month's snipes");
+   } else {
+-    MakeFileName("/.bidwatcher/log", fileName, iscurrent);
++    MakeFileName(g_strdup_printf("/%s/log", bw_subdir), fileName, iscurrent);
+     gtk_window_set_title(GTK_WINDOW(window),iscurrent?
+ 			 "This month's ended auctions":
+ 			 "Last month's ended auctions");
+@@ -1380,8 +1411,18 @@
+ #endif
+   tooltips=gtk_tooltips_new();
+ 
+-  authID[0] = 0; authPASS[0] = 0;
+-  proxystring[0]='\0';
++  //strcpy(authID, "!");
++  //strcpy(authPASS, "!");
++  //strcpy(proxystring, "!");
++
++  //authID[0] = '\0';
++  //authPASS[0] = '\0';
++  //proxystring[0] = '\0';
++
++  memset(authID, 0, sizeof(authID));
++  memset(authPASS, 0, sizeof(authPASS));
++  memset(proxystring, 0, sizeof(proxystring));
++
+   strcpy(browserPATH, "netscape");
+   strcpy(emailPATH, "xterm -e pine");
+   
+@@ -1592,8 +1633,8 @@
+ 
+   GtkWidget *scrolled_window=gtk_scrolled_window_new(NULL,NULL);
+   gtk_scrolled_window_set_policy(GTK_SCROLLED_WINDOW(scrolled_window),
+-				 GTK_POLICY_AUTOMATIC,
+-				 GTK_POLICY_AUTOMATIC);
++  			 GTK_POLICY_AUTOMATIC,
++  			 GTK_POLICY_AUTOMATIC);
+ 
+   aucList=gtk_clist_new_with_titles( 5,titles);
+   gtk_clist_column_titles_passive(GTK_CLIST(aucList));
+@@ -1605,6 +1646,7 @@
+ 			       GTK_SELECTION_SINGLE);
+   gtk_clist_set_shadow_type(GTK_CLIST(aucList),
+ 			    GTK_SHADOW_NONE);
++  gtk_clist_set_background(GTK_CLIST(aucList),0,&black);
+   // make right button select, too
+   gtk_clist_set_button_actions(GTK_CLIST(aucList),1,GTK_BUTTON_SELECTS);
+   gtk_clist_set_button_actions(GTK_CLIST(aucList),2,GTK_BUTTON_SELECTS);
+@@ -1622,14 +1664,15 @@
+   gtk_signal_connect(GTK_OBJECT(aucList), "drag_data_received",
+ 		     GTK_SIGNAL_FUNC(drophandler),NULL);
+   
++  scrolled_window = gtk_scrolled_window_new(NULL,NULL);
++  gtk_container_add(GTK_CONTAINER(scrolled_window),aucList);
+ 
+-  gtk_scrolled_window_add_with_viewport(GTK_SCROLLED_WINDOW(scrolled_window),
+-					aucList);
+   gtk_box_pack_start(GTK_BOX(vbox),scrolled_window,TRUE,TRUE,0);
+   gtk_box_pack_start(GTK_BOX(vbox),errorbox,FALSE,FALSE,0);
+ 
+   gtk_widget_set_style(aucList,clean14style);
+   gtk_widget_show(aucList);
++  
+   gtk_widget_show(scrolled_window);
+ 
+   gtk_container_add(GTK_CONTAINER (window),vbox);
+@@ -1637,7 +1680,8 @@
+   char fileName[200];
+   char * homeDir = getenv("HOME");
+   strcpy(fileName, homeDir);
+-  strcat(fileName, "/.bidwatcher");
++  strcat(fileName, "/");
++  strcat(fileName, bw_subdir);
+   mkdir(fileName, 0700);
+ 
+   ReadAucFile();
+@@ -1671,7 +1715,9 @@
+   char fileName[200];
+   char * homeDir = getenv("HOME");
+   strcpy(fileName, homeDir);
+-  strcat(fileName, "/.bidwatcher/bw.cfg");
++  strcat(fileName, "/");
++  strcat(fileName, bw_subdir);
++  strcat(fileName, "/bw.cfg");
+   outFile.open(fileName);
+   if ( outFile )
+     {
+@@ -1701,7 +1747,7 @@
+ {
+   FILE *file;
+   char fileName[200];
+-  sprintf(fileName,"%s/.bidwatcher/bw2.cfg",getenv("HOME"));
++  sprintf(fileName,"%s/%s/bw2.cfg",getenv("HOME"),bw_subdir);
+   file=fopen(fileName,"w");
+   if(file==NULL) {
+     printf("Error opening configuration file %s!\n",fileName);
+@@ -1712,14 +1758,30 @@
    fprintf(file,"option trackbids %s\n", trackBids?"yes":"no");
    fprintf(file,"option updateonstartup %s\n", doStartup?"yes":"no");
    fprintf(file,"option autodelete %s\n", autoDelete?"yes":"no");
 -  fprintf(file,"option snipedelay %.2f\n", snipeDelay);
-+  fprintf(file,"option snipedelay %.d\n", snipeDelay);
++  fprintf(file,"option snipedelay %i\n", snipeDelay);
    if(clockIsSet) fprintf(file,"option timediff %d\n",timeDiff);
-   fprintf(file, "user %s %s\n",authID,authPASS);
+-  fprintf(file, "user %s %s\n",authID,authPASS);
 -  fprintf(file, "option browser %s\n",browserPATH);
 -  fprintf(file, "option proxy %s\n",proxystring);
++  //  fprintf(file, "user %s %s\n",authID,authPASS);
++  //  fprintf(file, "option browser %s\n",browserPATH);
++  //  fprintf(file, "option emailclient %s\n",emailPATH);
++  //  fprintf(file, "option proxy %s\n",proxystring);
++
++  if (authID[0]!='\0')
++    fprintf(file, "user %s ", authID);
++  if (authPASS[0]!='\0')
++    fprintf(file, "%s\n", authPASS);
++  else
++    fprintf(file, "nopass\n");
++
 +  if (browserPATH[0]!='\0')
 +    fprintf(file, "option browser %s\n",browserPATH);
 +  if (emailPATH[0]!='\0')
-+    fprintf(file, "option email %s\n",emailPATH);
++    fprintf(file, "option emailclient %s\n",emailPATH);
 +  if (proxystring[0]!='\0')
 +     fprintf(file, "option proxy %s\n",proxystring);
++
    for ( int i=0; i < aucIdx; i++ )
      {
-       fprintf(file,"auction %u\n",auction[i]->ItemNumber);
-@@ -2508,7 +2512,7 @@
+-      fprintf(file,"auction %u\n",auction[i]->ItemNumber);
++      fprintf(file,"auction %lu\n",auction[i]->ItemNumber);
+       fprintf(file, " desc %s\n",auction[i]->Description);
+       fprintf(file, " ends %ld\n",auction[i]->EndsValue);
+       fprintf(file, " mybid %.2f %d\n",auction[i]->myBidAmount, auction[i]->myBidQuantity); 
+@@ -1764,12 +1826,12 @@
+   
+   else if ( (strstr(browserPATH, "scape") != NULL) && hit )
+     {
+-      sprintf(commandLine, "exec %s -remote \"openURL(http://cgi.ebay.com/aw-cgi/eBayISAPI.dll?ViewItem&item=%d,new-window)\"",browserPATH,auction[choice]->ItemNumber);
++      sprintf(commandLine, "exec %s -remote \"openURL(http://cgi.ebay.com/aw-cgi/eBayISAPI.dll?ViewItem&item=%lu,new-window)\"",browserPATH,auction[choice]->ItemNumber);
+       system(commandLine);
+     }
+   else
+     {
+-      sprintf(commandLine, "exec %s \"http://cgi.ebay.com/aw-cgi/eBayISAPI.dll?ViewItem&item=%d\" &",browserPATH,auction[choice]->ItemNumber);
++      sprintf(commandLine, "exec %s \"http://cgi.ebay.com/aw-cgi/eBayISAPI.dll?ViewItem&item=%lu\" &",browserPATH,auction[choice]->ItemNumber);
+       system(commandLine);
+     } 
+ }
+@@ -2411,14 +2473,14 @@
+   char * scratch;
+   ifstream inFile;
+ 
+-  sprintf(fileName,"%s/.bidwatcher/bw2.cfg",getenv("HOME"));
++  sprintf(fileName,"%s/%s/bw2.cfg",getenv("HOME"),bw_subdir);
+   FILE *file=fopen(fileName,"r");
+   if(file) {
+     fclose(file);
+     ReadAucFile2();
+     return;
+   }
+-  sprintf(fileName,"%s/.bidwatcher/bw.cfg",getenv("HOME"));
++  sprintf(fileName,"%s/%s/bw.cfg",getenv("HOME"),bw_subdir);
+   inFile.open(fileName, ios::in);
+   if ( inFile )
+     {
+@@ -2508,7 +2570,7 @@
  
    if(proxyurl!=NULL) delete(proxyurl);
    if(strlen(proxystring)>2)
@@ -39,16 +454,25 @@ $NetBSD: patch-aa,v 1.4 2001/10/07 22:44:21 tron Exp $
    else proxyurl=NULL;
    
    if(timesyncurl!=NULL) delete(timesyncurl);
-@@ -2564,7 +2568,7 @@
+@@ -2524,7 +2586,7 @@
+ {
+   FILE *file;
+   char fileName[200];
+-  sprintf(fileName,"%s/.bidwatcher/bw2.cfg",getenv("HOME"));
++  sprintf(fileName,"%s/%s/bw2.cfg",getenv("HOME"),bw_subdir);
+   file=fopen(fileName,"r");
+   if(file==NULL) {
+     printf("Error opening configuration file %s!\n",fileName);
+@@ -2564,7 +2626,7 @@
        }
  
        if(!strcasecmp(which,"snipedelay")) {
 -	fscanf(file,"%.2f",&snipeDelay);
-+	fscanf(file,"%d",&snipeDelay);
++	fscanf(file,"%i",&snipeDelay);
  	recognized=1;
        }
  
-@@ -2575,12 +2579,17 @@
+@@ -2575,12 +2637,17 @@
        }
        
        if(!strcasecmp(which,"browser")) {
@@ -57,8 +481,8 @@ $NetBSD: patch-aa,v 1.4 2001/10/07 22:44:21 tron Exp $
 +	recognized=1;
 +      }
 +
-+      if(!strcasecmp(which,"email")) {
-+	fscanf(file,"%199s[^\n]",emailPATH);
++      if(!strcasecmp(which,"emailclient")) {
++	fscanf(file," %199[^\n]",emailPATH);
  	recognized=1;
        }
  
@@ -68,7 +492,16 @@ $NetBSD: patch-aa,v 1.4 2001/10/07 22:44:21 tron Exp $
  	recognized=1;
  	if(strspn(proxystring," ")==strlen(proxystring)) proxystring[0]='\0';
        }
-@@ -2618,7 +2627,7 @@
+@@ -2590,7 +2657,7 @@
+       char which[20];
+       char done=0;
+       auction[aucIdx]=new auctioninfo();
+-      fscanf(file,"%d",&auction[aucIdx]->ItemNumber);
++      fscanf(file,"%lu",&auction[aucIdx]->ItemNumber);
+ 
+       while(!feof(file)) {
+ 	fscanf(file,"%19s",which);
+@@ -2618,7 +2685,7 @@
    fclose(file);
    if(proxyurl!=NULL) delete(proxyurl);
    if(strlen(proxystring)>2)
@@ -77,3 +510,93 @@ $NetBSD: patch-aa,v 1.4 2001/10/07 22:44:21 tron Exp $
    else proxyurl=NULL;
    
    if(timesyncurl!=NULL) delete(timesyncurl);
+@@ -2673,7 +2740,7 @@
+     sprintf(mybid,"%s%.2f",auction[i]->currency,auction[i]->myBidAmount);
+   } else strcpy(mybid,"");
+ 
+-  gchar *item[]={g_strdup_printf("%u",auction[i]->ItemNumber),price,chTemp,mybid,
++  gchar *item[]={g_strdup_printf("%lu",auction[i]->ItemNumber),price,chTemp,mybid,
+ 		   auction[i]->Description};
+   int j;for(j=0;j<5;j++) 
+     gtk_clist_set_text(GTK_CLIST(aucList),i,j,item[j]);
+@@ -2855,9 +2922,10 @@
+   unsigned int * ids;
+ 
+   if ( !trackBids ) return GUA_SUCCESS;
+-
+-  if ( strlen(authID) < 2 ) return -1;
+-  if ( strlen(authID) > 64 ) return -2;
++  /* XXX FIXME remove when we fix this subroutine */
++  return GUA_SUCCESS;
++  if ( strlen(authID) < 2 ) return GUA_BADUSER;
++  if ( strlen(authID) > 64 ) return GUA_BADUSER;
+   
+   showStatus(" getting bids");
+   greenLED();
+@@ -3020,7 +3088,7 @@
+     sprintf(mybid,"%s%.2f",auction[i]->currency,auction[i]->myBidAmount);
+   } else strcpy(mybid,"");
+   
+-  gchar *item[]={g_strdup_printf("%u",auction[i]->ItemNumber),price,chTemp,mybid,
++  gchar *item[]={g_strdup_printf("%lu",auction[i]->ItemNumber),price,chTemp,mybid,
+ 		       auction[i]->Description};
+       gtk_clist_insert(GTK_CLIST(aucList),i,item);
+       if(auction[i]->isSnipe) { 
+@@ -3047,6 +3115,9 @@
+       }
+ 
+       gtk_clist_set_foreground(GTK_CLIST(aucList),i,theColor);
++
++      //gtk_clist_set_background(GTK_CLIST(aucList),i,&black);
++
+   /* bid column color: 
+    * green - I have bid and am the high bidder
+      yellow - I will snipe and (afaik) will be the high bidder 
+@@ -3112,14 +3183,14 @@
+   char *HtmlBuff;
+   if(infourl==NULL) 
+     infourl=new URL(g_strdup_printf("http://cgi.ebay.com/aw-cgi/eBayISAPI.dll"
+-				    "?ViewItem&item=%u",ItemNumber),
++				    "?ViewItem&item=%lu",ItemNumber),
+ 		    proxyurl);
+   greenLED();
+   returnVal = fetchURL(infourl,&HtmlBuff,TIMEOUT);
+   //  puts(HtmlBuff);
+   if(returnVal==NET_NETERROR || returnVal==NET_TIMEOUT) { // maybe proxy settings changed
+     infourl=new URL(g_strdup_printf("http://cgi.ebay.com/aw-cgi/eBayISAPI.dll"
+-				    "?ViewItem&item=%u",ItemNumber),
++				    "?ViewItem&item=%lu",ItemNumber),
+ 		    proxyurl);
+     returnVal = fetchURL(infourl,&HtmlBuff, TIMEOUT);
+   }
+@@ -3356,7 +3427,7 @@
+       MakeFileName("/.bidwatcher/log", fileName, TRUE);
+       reportOut.open(fileName, ios::app);
+       char truncDesc[300];
+-      sprintf(truncDesc,"%u - %s\nHigh Bidder: %s\n High Bid: %.2f",
++      sprintf(truncDesc,"%lu - %s\nHigh Bidder: %s\n High Bid: %.2f",
+ 	      auction[index]->ItemNumber,auction[index]->Description,
+ 	      auction[index]->HighBidder,auction[index]->CurrentBid);
+       strcat( truncDesc, "\n-----------------------------------------------------\n");
+@@ -3385,7 +3456,7 @@
+   MakeFileName("/.bidwatcher/snipe", fileName, TRUE);
+   reportOut.open(fileName, ios::app);
+   char truncDesc[1024];
+-  sprintf( truncDesc, "%u %s%.2f %s",
++  sprintf( truncDesc, "%lu %s%.2f %s",
+ 	   auction[index]->ItemNumber,auction[index]->currency,
+ 	   auction[index]->snipeAmount,
+ 	   auction[index]->Description );
+@@ -3448,9 +3519,9 @@
+   }
+ #ifdef DEBUG_NETWORK
+     ofstream outFile;
+-    sprintf( fileName, "%s/.bidwatcher/snipe_fail_%u",
+-	     getenv("HOME"), auction[index]->ItemNumber );
+-    
++    sprintf( fileName, "%s/%s/snipe_fail_%u",
++	     getenv("HOME"), bw_subdir, auction[index]->ItemNumber );
++
+     outFile.open(fileName);
+     outFile.close();
+ #endif
