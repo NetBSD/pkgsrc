@@ -1,4 +1,4 @@
-# $NetBSD: defs.NetBSD.mk,v 1.44 2003/01/15 20:55:39 jlam Exp $
+# $NetBSD: defs.NetBSD.mk,v 1.45 2003/02/24 19:49:47 jschauma Exp $
 #
 # Variable definitions for the NetBSD operating system.
 
@@ -94,6 +94,17 @@ ROOT_GROUP?=	wheel
 ULIMIT_CMD_datasize?=	ulimit -d `ulimit -H -d`
 ULIMIT_CMD_stacksize?=	ulimit -s `ulimit -H -s`
 ULIMIT_CMD_memorysize?=	ulimit -m `ulimit -H -m`
+
+# imake installs manpages in weird places
+# these values from /usr/X11R6/lib/X11/config/NetBSD.cf
+IMAKE_MAN_SOURCE_PATH=	man/cat
+IMAKE_MAN_SUFFIX=	1
+IMAKE_LIBMAN_SUFFIX=	3
+IMAKE_FILEMAN_SUFFIX=	5
+IMAKE_MAN_DIR=		${IMAKE_MAN_SOURCE_PATH}1
+IMAKE_LIBMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}3
+IMAKE_FILEMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}5
+IMAKE_MANNEWSUFFIX=	0
 
 _DO_SHLIB_CHECKS=	yes	# fixup PLIST for shared libs/run ldconfig
 _IMAKE_MAKE=		${MAKE}	# program which gets invoked by imake

@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1145 2003/02/23 14:36:57 jmmv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1146 2003/02/24 19:49:47 jschauma Exp $
 #
 # This file is in the public domain.
 #
@@ -66,6 +66,14 @@ BUILDLINK_X11_DIR?=	${X11BASE}
 
 .if defined(USE_IMAKE)
 USE_X11BASE?=		implied
+PLIST_SUBST+=          IMAKE_MAN_SOURCE_PATH=${IMAKE_MAN_SOURCE_PATH}  \
+                       IMAKE_MAN_DIR=${IMAKE_MAN_DIR}                  \
+                       IMAKE_LIBMAN_DIR=${IMAKE_LIBMAN_DIR}            \
+                       IMAKE_FILEMAN_DIR=${IMAKE_FILEMAN_DIR}          \
+                       IMAKE_MAN_SUFFIX=${IMAKE_MAN_SUFFIX}            \
+                       IMAKE_LIBMAN_SUFFIX=${IMAKE_LIBMAN_SUFFIX}      \
+                       IMAKE_FILEMAN_SUFFIX=${IMAKE_FILEMAN_SUFFIX}    \
+                       IMAKE_MANNEWSUFFIX=${IMAKE_MANNEWSUFFIX}
 .endif
 .if defined(USE_X11BASE)
 USE_X11?=		implied
@@ -4286,7 +4294,6 @@ ${DESCR}: ${DESCR_SRC}
 	${ECHO} "Homepage:"	>>${DESCR} ; \
 	${ECHO} '${HOMEPAGE}'	>>${DESCR}	
 .endif
-
 
 #
 # For bulk build targets (bulk-install, bulk-package), the
