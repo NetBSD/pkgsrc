@@ -1,0 +1,46 @@
+@comment $NetBSD: PLIST.xemacs,v 1.1 2002/09/13 10:37:53 uebayasi Exp $
+lib/xemacs/xemacs-packages/etc/irchat-pj/CHANGELOG
+lib/xemacs/xemacs-packages/etc/irchat-pj/FAQ-about-jp24.txt
+lib/xemacs/xemacs-packages/etc/irchat-pj/FAQ-irchat-PJ.txt
+lib/xemacs/xemacs-packages/etc/irchat-pj/GPL
+lib/xemacs/xemacs-packages/etc/irchat-pj/INSTALL.irchat-pj
+lib/xemacs/xemacs-packages/etc/irchat-pj/README.browse-url-plus
+lib/xemacs/xemacs-packages/etc/irchat-pj/README.irchat-pj
+lib/xemacs/xemacs-packages/etc/irchat-pj/browse-url-plus-init.el
+lib/xemacs/xemacs-packages/etc/irchat-pj/dcc
+lib/xemacs/xemacs-packages/etc/irchat-pj/dot.irchat_vars.el
+lib/xemacs/xemacs-packages/lisp/irchat-pj/irchat-commands.el
+lib/xemacs/xemacs-packages/lisp/irchat-pj/irchat-commands.elc
+lib/xemacs/xemacs-packages/lisp/irchat-pj/irchat-copyright.el
+lib/xemacs/xemacs-packages/lisp/irchat-pj/irchat-copyright.elc
+lib/xemacs/xemacs-packages/lisp/irchat-pj/irchat-dcc.el
+lib/xemacs/xemacs-packages/lisp/irchat-pj/irchat-dcc.elc
+lib/xemacs/xemacs-packages/lisp/irchat-pj/irchat-filter.el
+lib/xemacs/xemacs-packages/lisp/irchat-pj/irchat-filter.elc
+lib/xemacs/xemacs-packages/lisp/irchat-pj/irchat-globals.el
+lib/xemacs/xemacs-packages/lisp/irchat-pj/irchat-globals.elc
+lib/xemacs/xemacs-packages/lisp/irchat-pj/irchat-handle.el
+lib/xemacs/xemacs-packages/lisp/irchat-pj/irchat-handle.elc
+lib/xemacs/xemacs-packages/lisp/irchat-pj/irchat-inlines.el
+lib/xemacs/xemacs-packages/lisp/irchat-pj/irchat-inlines.elc
+lib/xemacs/xemacs-packages/lisp/irchat-pj/irchat-pj-action.el
+lib/xemacs/xemacs-packages/lisp/irchat-pj/irchat-pj-action.elc
+lib/xemacs/xemacs-packages/lisp/irchat-pj/irchat-pj-coding-system.el
+lib/xemacs/xemacs-packages/lisp/irchat-pj/irchat-pj-coding-system.elc
+lib/xemacs/xemacs-packages/lisp/irchat-pj/irchat-pj-jisx0201.el
+lib/xemacs/xemacs-packages/lisp/irchat-pj/irchat-pj-jisx0201.elc
+lib/xemacs/xemacs-packages/lisp/irchat-pj/irchat-pj-mode-line-format.el
+lib/xemacs/xemacs-packages/lisp/irchat-pj/irchat-pj-mode-line-format.elc
+lib/xemacs/xemacs-packages/lisp/irchat-pj/irchat-pj-sound.el
+lib/xemacs/xemacs-packages/lisp/irchat-pj/irchat-pj-sound.elc
+lib/xemacs/xemacs-packages/lisp/irchat-pj/irchat-pj-specific-xmas.el
+lib/xemacs/xemacs-packages/lisp/irchat-pj/irchat-pj-specific-xmas.elc
+lib/xemacs/xemacs-packages/lisp/irchat-pj/irchat-pj-version-string.el
+lib/xemacs/xemacs-packages/lisp/irchat-pj/irchat-pj-version-string.elc
+lib/xemacs/xemacs-packages/lisp/irchat-pj/irchat-vars.el
+lib/xemacs/xemacs-packages/lisp/irchat-pj/irchat-vars.elc
+lib/xemacs/xemacs-packages/lisp/irchat-pj/irchat.el
+lib/xemacs/xemacs-packages/lisp/irchat-pj/irchat.elc
+lib/xemacs/xemacs-packages/pkginfo/MANIFEST.irchat-pj
+@dirrm lib/xemacs/xemacs-packages/lisp/irchat-pj
+@dirrm lib/xemacs/xemacs-packages/etc/irchat-pj
