@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 1998/07/14 19:55:50 tv Exp $
+@comment $NetBSD: PLIST,v 1.6 1998/07/16 13:36:47 tv Exp $
 bin/gif2epsn
 bin/gif2ps
 bin/gif2rgb
@@ -32,7 +32,6 @@ include/giflib/getarg.h
 include/giflib/gif_hash.h
 include/giflib/gif_lib.h
 lib/libgif.a
-lib/libgif.la
 lib/libgif.so.3.0
 share/doc/giflib/gif2bgi.html
 share/doc/giflib/gif2epsn.html

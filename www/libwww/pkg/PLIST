@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 1998/07/14 16:56:52 tv Exp $
+@comment $NetBSD: PLIST,v 1.3 1998/07/16 13:36:48 tv Exp $
 bin/w3c
 bin/webbot
 bin/www
@@ -148,7 +148,6 @@ include/w3c-libwww/wwwconf.h
 include/w3c-libwww/wwwsys.h
 lib/libpics.a
 lib/libwww.a
-lib/libwww.la
 lib/libwww.so.1.0
 share/doc/libwww/User/Applications.html
 share/doc/libwww/User/Architecture/A.gif
