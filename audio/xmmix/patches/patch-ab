@@ -1,0 +1,112 @@
+$NetBSD: patch-ab,v 1.1 2000/09/19 11:09:21 fredb Exp $
+
+--- mixer.c.orig	Thu Nov  7 10:00:26 1996
++++ mixer.c	Wed Sep 13 22:46:35 2000
+@@ -104,6 +104,14 @@
+  ***********************/
+ 
+ 
++#ifdef __NetBSD__
++void
++mxchg(int sig)
++{
++	deliverSIGIO();
++}
++#endif
++
+ /*
+  * do_ioctl
+  *	Perform ioctl command.  If file is not yet open or if we
+@@ -201,12 +209,17 @@
+ 			ctlinfo.slinfo[i].right = ((level >> 8) & 0xff);
+ 
+ 			/* Sanity check */
+-			if (ctlinfo.slinfo[i].left > 100)
+-				ctlinfo.slinfo[i].left = 100;
++#ifdef __NetBSD__
++#  define SLIDER_MAX 255
++#else
++#  define SLIDER_MAX 100
++#endif
++			if (ctlinfo.slinfo[i].left > SLIDER_MAX)
++				ctlinfo.slinfo[i].left = SLIDER_MAX;
+ 			else if (ctlinfo.slinfo[i].left < 0)
+ 				ctlinfo.slinfo[i].left = 0;
+-			if (ctlinfo.slinfo[i].right > 100)
+-				ctlinfo.slinfo[i].right = 100;
++			if (ctlinfo.slinfo[i].right > SLIDER_MAX)
++				ctlinfo.slinfo[i].right = SLIDER_MAX;
+ 			else if (ctlinfo.slinfo[i].right < 0)
+ 				ctlinfo.slinfo[i].right = 0;
+ 
+@@ -674,18 +687,24 @@
+ 	}
+ 
+ 	/* Set maximum number of devices supported */
++#ifdef __NetBSD__
++	maxdevs = SOUND_MIXER_NRDEVICES;
++#else
+ 	maxdevs = MAXDEVS_V3;
++#endif
+ 
+ 	strcpy(drv_ver, "unknown");
+ 
+ 	/* Query sound driver version */
+ 	if ((fp = fopen("/dev/sndstat", "r")) == NULL) {
+ 		if (!app_data.demo) {
++#ifndef __NetBSD__
+ 			fprintf(errfp, "%s: %s: %s\n",
+ 				PROGNAME,
+ 				"Cannot open /dev/sndstat",
+ 				"assuming pre-3.0 sound driver.");
+ 			maxdevs = MAXDEVS_V2;
++#endif
+ 		}
+ 		return;
+ 	}
+@@ -915,6 +934,7 @@
+ mx_start(widgets_t *m)
+ {
+ 	char	msg[256];
++	int one = 1;
+ 
+ 	if (app_data.autoload != NULL && app_data.autoload[0] != '\0' &&
+ 	    strcmp(app_data.autoload, "/dev/null") != 0) {
+@@ -930,6 +950,14 @@
+ 		}
+ 	}
+ 
++#if defined(__NetBSD__)
++	signal(SIGIO, mxchg);
++	ioctl(dev_fd, FIOASYNC, &one);
++#endif
++
++	/* Query hardware mixer settings */
++	mx_queryhw(&widgets);
++
+ 	/* Update screen controls to match current status */
+ 	mx_updctl(m);
+ }
+@@ -1531,6 +1559,22 @@
+ 	if (p->reason != XmCR_FOCUS || form == (Widget) NULL)
+ 		return;
+ 
++	/* Query hardware mixer settings */
++	mx_queryhw(&widgets);
++
++	/* Update screen controls */
++	mx_updctl(&widgets);
++}
++
++
++/*
++ * mx_change
++ *	Mixer device has changed
++ */
++/*ARGSUSED*/
++void
++mx_change(XtPointer client_data)
++{
+ 	/* Query hardware mixer settings */
+ 	mx_queryhw(&widgets);
+ 
