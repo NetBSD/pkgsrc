@@ -1,0 +1,22 @@
+$NetBSD: patch-ad,v 1.1.1.1 1999/12/15 06:05:15 proff Exp $
+
+--- /p/lang/ghc/old/fptools/configure	Wed Sep 15 09:13:41 1999
++++ configure	Wed Dec 15 16:37:27 1999
+@@ -786,7 +786,16 @@
+         HostPlatform_CPP='i386_unknown_netbsd'
+         HostArch_CPP='i386'
+         HostVendor_CPP='unknown'
+-        HostOS_CPP='netbsd'
++	if test "$HASKELL_OBJ_FMT" = "a.out"; then
++		HostOS_CPP='netbsd'
++	else
++		if test "$HASKELL_OBJ_FMT" = "ELF"; then
++			HostOS_CPP='netbsd_elf'
++		else
++			echo bad \$HASKELL_OBJ_FMT = "$HASKELL_OBJ_FMT"
++			exit 1
++		fi
++	fi
+         ;;
+ i[3456]86-*-solaris2*)
+ 	HostPlatform=i386-unknown-solaris2 # hack again

@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1.1.1 1999/12/15 06:05:15 proff Exp $
+
+--- ghc/rts/MBlock.c	Wed Sep 15 09:06:54 1999
++++ ghc/rts/MBlock.c	Tue Dec 14 10:27:15 1999
+@@ -47,6 +47,10 @@
+  */
+ #define ASK_FOR_MEM_AT 0x50000000
+ 
++#elif netbsd_TARGET_OS
++/* NetBSD i386 shared libs are at 0x40000000 
++ */
++#define ASK_FOR_MEM_AT 0x50000000
+ #elif linux_TARGET_OS
+ /* Any ideas?
+  */
