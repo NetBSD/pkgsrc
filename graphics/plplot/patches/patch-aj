@@ -1,0 +1,14 @@
+$NetBSD: patch-aj,v 1.1 2001/01/29 01:15:35 jtb Exp $
+
+--- cf/pkg_f77.in.orig	Mon Jan 29 00:15:31 2001
++++ cf/pkg_f77.in
+@@ -46,7 +46,7 @@
+ 
+ # Require dependency on FDEMOS_SOURCES because these are generated files
+ install_f77: $(FDEMOS_SOURCES)
+-	@-if test ! -d $(DEMOS_DIR)/f77; then mkdir -p $(DEMOS_DIR)/f77; fi; \
++	-$(BSD_INSTALL_DATA_DIR) $(DEMOS_DIR)/f77; \
+ 	  $(LN) $(DEMOS_DIR)/Makefile $(DEMOS_DIR)/f77; \
+-	  cd $(top_srcdir)/examples/f77; $(CP) *.f $(DEMOS_DIR)/f77
++	  $(BSD_INSTALL_DATA) $(top_srcdir)/examples/f77/*.f $(DEMOS_DIR)/f77
+ 
