@@ -3,7 +3,7 @@
 # Date created:		20 December 1997
 # Whom:			jmz (original), asami@FreeBSD.ORG, tron
 #
-# $NetBSD: Makefile,v 1.9 1998/01/24 05:25:12 hubertf Exp $
+# $NetBSD: Makefile,v 1.10 1998/01/29 16:57:33 tron Exp $
 #
 
 DISTNAME=	netpbm
@@ -17,7 +17,7 @@ DISTFILES=	netpbm-1mar1994.tar.gz \
 		rletopnm.tar.gz \
 		pnmtopng-2.36.tar.gz
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tron@netbsd.org
 
 LIB_DEPENDS=	jpeg\\.7\\.:${PORTSDIR}/graphics/jpeg \
 		png\\.0\\.96:${PORTSDIR}/graphics/png \

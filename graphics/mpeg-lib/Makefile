@@ -3,7 +3,7 @@
 # Date created:				07 December 1997
 # Whom:					tron@lyssa.owl.de
 #
-# $NetBSD: Makefile,v 1.2 1998/01/24 05:23:39 hubertf Exp $
+# $NetBSD: Makefile,v 1.3 1998/01/29 16:56:20 tron Exp $
 
 DISTNAME=	mpeg_lib-1.2.1
 PKGNAME=	mpeg-1.2.1
@@ -12,7 +12,7 @@ MASTER_SITES=	ftp://ftp.mni.mcgill.ca/pub/mpeg/ \
 		ftp://ftp.fu-berlin.de/unix/X11/graphics/gimp/libs/ \
 		ftp://ftp.gimp.org/pub/gimp/libs/
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tron@netbsd.org
 
 HAS_CONFIGURE=	yes
 
