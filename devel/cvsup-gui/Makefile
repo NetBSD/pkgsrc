@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/09/22 19:53:22 hubertf Exp $
+# $NetBSD: Makefile,v 1.3 2002/08/19 08:54:16 jdarrow Exp $
 
 # XXX there's some newer version at 
 # http://people.freebsd.org/~jdp/s1g/
@@ -16,7 +16,7 @@ COMMENT=	cvsup gui client
 WRKSRC=		${WRKDIR}
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
-ONLY_FOR_PLATFORM=	NetBSD-1.5*-i386
+ONLY_FOR_PLATFORM=	NetBSD-1.[5-9]*-i386
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/cvsup ${PREFIX}/bin/cvsup-gui
