@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.84 2002/05/07 23:45:49 taya Exp $
+# $NetBSD: Makefile,v 1.85 2002/05/08 13:25:23 taya Exp $
 
 MOZ_VER=	1.0rc1
 DISTNAME=	mozilla-source-1.0.rc1
@@ -41,7 +41,7 @@ ALL_TARGET=
 
 ONLY_FOR_PLATFORM=	NetBSD-1.4[Y-Z]-i386 NetBSD-1.4Z[A-Z]-i386 \
 			NetBSD-1.5_ALPHA-i386 NetBSD-1.5_BETA-* \
-			NetBSD-1.[5-9]*-* Linux-*-*
+			NetBSD-1.[5-9]*-* Linux-*-* SunOS-*-*
 
 MOZ_LIBDIR=	${PREFIX}/lib/mozilla
 MAKE_ENV+=	LIBRUNPATH=${MOZ_LIBDIR}
