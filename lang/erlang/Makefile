@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.5 2003/07/21 16:54:01 martti Exp $
+# $NetBSD: Makefile,v 1.6 2003/08/31 01:01:55 jtb Exp $
 
-DISTNAME=		otp_src_R9B-1
-PKGNAME=		erlang-9.1
-PKGREVISION=		1
+DISTNAME=		otp_src_R9C-0
+PKGNAME=		erlang-9.2
 CATEGORIES=		lang
 MASTER_SITES=		http://www.erlang.org/download/
 
 MAINTAINER=		tech-pkg@NetBSD.org
-HOMEPAGE=		http://www.erlang.org
+HOMEPAGE=		http://www.erlang.org/
 COMMENT=		Concurrent functional programming language
 
 DIST_SUBDIR=		erlang
@@ -18,6 +17,8 @@ USE_PERL5=		yes
 GNU_CONFIGURE=		yes
 USE_GMAKE=		yes
 
-.include "../../mk/pthread.buildlink2.mk"
 .include "../../security/openssl/buildlink2.mk"
+.include "../../devel/ncurses/buildlink2.mk"
+.include "../../mk/java-vm.mk"
+.include "../../mk/pthread.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
