@@ -1,15 +1,16 @@
-$NetBSD: patch-ag,v 1.6 2002/08/25 21:51:56 jlam Exp $
+$NetBSD: patch-ag,v 1.7 2003/01/28 14:21:58 martti Exp $
 
---- support/Makefile.in.orig	Sat Jun 15 13:41:52 2002
-+++ support/Makefile.in	Wed Jun 19 07:39:51 2002
-@@ -22,8 +22,10 @@
+--- support/Makefile.in.orig	2002-08-29 22:25:40.000000000 +0300
++++ support/Makefile.in	2003-01-28 16:09:07.000000000 +0200
+@@ -24,9 +24,11 @@
  	done
  	@if test -f "$(builddir)/envvars-std"; then \
  	    cp -p envvars-std $(DESTDIR)$(sbindir); \
 +	    if false; then \
  	    if test ! -f $(DESTDIR)$(sbindir)/envvars; then \
  	        cp -p envvars-std $(DESTDIR)$(sbindir)/envvars ; \
-+	    fi ; \
  	    fi ; \
++	    fi ; \
  	fi
  
+ htpasswd_OBJECTS = htpasswd.lo
