@@ -1,0 +1,96 @@
+$NetBSD: patch-aa,v 1.1 2002/01/02 20:30:18 reinoud Exp $
+
+--- Makefile.orig	Mon Oct 15 04:32:29 2001
++++ Makefile
+@@ -20,11 +20,11 @@
+ #
+ # Default
+ 
+-CFLAGS_SYS= -O
++#CFLAGS_SYS= -O
+ 
+ # For GNU C
+ #
+-#CFLAGS_SYS= -O2
++CFLAGS_SYS= -O2
+ #
+ # For GNU C with long options support library (Linux etc.)
+ #
+@@ -93,7 +93,7 @@
+ # Installation-related stuff
+ # 
+ # The base dir for installation and subdirs in it
+-INSTDIR = /usr/local
++INSTDIR = ${PREFIX}
+ # for binaries
+ BINDIR = $(INSTDIR)/bin
+ # for binaries of little general interest
+@@ -123,7 +123,7 @@
+ MANS1=ttf2pt1.1 ttf2pt1_convert.1 ttf2pt1_x2gs.1
+ MANS=$(MANS1) $(MANS5)
+ 
+-all:	t1asm ttf2pt1 docs mans rpm
++all:	t1asm ttf2pt1 docs mans
+ 
+ docs: $(DOCS)
+ 
+@@ -136,7 +136,7 @@
+ veryclean: clean
+ 	rm -f $(DOCS) $(MANS)
+ 
+-rpm: app/RPM/Makefile app/RPM/ttf2pt1.spec
++#rpm: app/RPM/Makefile app/RPM/ttf2pt1.spec
+ 
+ ttf2pt1.1: README.html
+ 	scripts/html2man . . <README.html
+@@ -144,11 +144,11 @@
+ ttf2pt1_convert.1 ttf2pt1_x2gs.1: FONTS.html
+ 	scripts/html2man . . <FONTS.html
+ 
+-app/RPM/Makefile: Makefile
+-	sed 's/^CFLAGS_SYS.*=.*$$/CFLAGS_SYS= -O2 -D_GNU_SOURCE/;/warning:/,/^$$/s/^/#/' <Makefile >app/RPM/Makefile
++#app/RPM/Makefile: Makefile
++#	sed 's/^CFLAGS_SYS.*=.*$$/CFLAGS_SYS= -O2 -D_GNU_SOURCE/;/warning:/,/^$$/s/^/#/' <Makefile >app/RPM/Makefile
+ 
+-app/RPM/ttf2pt1.spec: app/RPM/ttf2pt1.spec.src version.h
+-	sed 's/^Version:.*/Version: '`grep TTF2PT1_VERSION version.h| cut -d\" -f2`'/' <app/RPM/ttf2pt1.spec.src  >$@
++#app/RPM/ttf2pt1.spec: app/RPM/ttf2pt1.spec.src version.h
++#	sed 's/^Version:.*/Version: '`grep TTF2PT1_VERSION version.h| cut -d\" -f2`'/' <app/RPM/ttf2pt1.spec.src  >$@
+ 
+ t1asm: t1asm.c
+ 	$(CC) $(CFLAGS) -o t1asm -DSTANDALONE t1asm.c $(LIBS)
+@@ -202,24 +202,24 @@
+ 	scripts/unhtml <FONTS.hpux.html >FONTS.hpux
+ 
+ install: all
+-	scripts/inst_dir $(BINDIR)
+-	scripts/inst_dir $(LIBXDIR)
+-	scripts/inst_dir $(SHAREDIR)
+-	scripts/inst_dir $(MANDIR)/man1
+-	scripts/inst_dir $(MANDIR)/man5
++	install -d $(BINDIR)
++	install -d $(LIBXDIR)
++	install -d $(SHAREDIR)
++	install -d $(MANDIR)/man1
++	install -d $(MANDIR)/man5
+ 	cp -R $(TXTFILES) $(SUBDIRS) $(SHAREDIR)
+ 	chown -R $(OWNER) $(SHAREDIR)
+ 	chgrp -R $(GROUP) $(SHAREDIR)
+ 	chmod -R go-w $(SHAREDIR)
+-	scripts/inst_file ttf2pt1 $(BINDIR)/ttf2pt1 $(OWNER) $(GROUP) 0755
+-	[ -f $(BINDIR)/t1asm ] || scripts/inst_file t1asm $(LIBXDIR)/t1asm $(OWNER) $(GROUP) 0755
++	install -c -o $(OWNER) -g $(GROUP) -m 0755 ttf2pt1 $(BINDIR)
++	[ -f $(BINDIR)/t1asm ] || install -c -o $(OWNER) -g $(GROUP) -m 0755 t1asm $(LIBXDIR)/t1asm
+ 	sed 's|^TTF2PT1_BINDIR=$$|TTF2PT1_BINDIR=$(BINDIR)|;\
+ 		s|^TTF2PT1_LIBXDIR=$$|TTF2PT1_LIBXDIR=$(LIBXDIR)|;\
+ 		s|^TTF2PT1_SHAREDIR=$$|TTF2PT1_SHAREDIR=$(SHAREDIR)|;' <scripts/convert >cvt.tmp
+-	scripts/inst_file cvt.tmp $(BINDIR)/ttf2pt1_convert $(OWNER) $(GROUP) 0755
+-	scripts/inst_file cvt.tmp $(SHAREDIR)/scripts/convert $(OWNER) $(GROUP) 0755
++	install -c -o $(OWNER) -g $(GROUP) -m 0755 cvt.tmp $(BINDIR)/ttf2pt1_convert
++	install -c -o $(OWNER) -g $(GROUP) -m 0755 cvt.tmp $(SHAREDIR)/scripts/convert
+ 	rm cvt.tmp
+-	scripts/inst_file scripts/x2gs $(BINDIR)/ttf2pt1_x2gs $(OWNER) $(GROUP) 0755
++	install -c -o $(OWNER) -g $(GROUP) -m 0755 scripts/x2gs $(BINDIR)/ttf2pt1_x2gs 
+ 	for i in $(MANS1); do { \
+ 		sed 's|TTF2PT1_BINDIR|$(BINDIR)|;\
+ 			s|TTF2PT1_LIBXDIR|$(LIBXDIR)|;\
