@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2003/12/20 19:44:39 heinz Exp $
+# $NetBSD: Makefile,v 1.20 2004/02/14 17:21:54 jlam Exp $
 
 DISTNAME=		neon-0.24.4
 CATEGORIES=		www
@@ -9,9 +9,7 @@ HOMEPAGE=		http://www.webdav.org/neon/
 COMMENT=		HTTP and WebDAV client library
 
 USE_BUILDLINK2=		# defined
-
 USE_LIBTOOL=		yes
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 PKGCONFIG_OVERRIDE=	neon.pc.in
 
 GNU_CONFIGURE=		# defined

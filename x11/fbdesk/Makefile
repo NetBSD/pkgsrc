@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/08/28 20:05:24 xtraeme Exp $
+# $NetBSD: Makefile,v 1.6 2004/02/14 17:21:55 jlam Exp $
 #
 
 DISTNAME=	fbdesk-1.1.4
@@ -15,8 +15,6 @@ USE_BUILDLINK2=	YES
 USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES
 USE_X11=	YES
-
-LIBTOOL_OVERRIDE=       ${WRKSRC}/libtool
 
 .include "../../graphics/png/buildlink2.mk"
 .include "../../fonts/Xft2/buildlink2.mk"

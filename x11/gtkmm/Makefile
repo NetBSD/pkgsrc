@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/01/24 15:30:33 grant Exp $
+# $NetBSD: Makefile,v 1.16 2004/02/14 17:21:56 jlam Exp $
 #
 
 DISTNAME=	gtkmm-2.2.8
@@ -17,7 +17,6 @@ USE_GNU_TOOLS+=		make
 USE_PERL5=		YES
 USE_X11=		YES
 
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 PKGCONFIG_OVERRIDE=	${WRKSRC}/atk/atkmm-1.0.pc.in
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/gdk/gdkmm-2.0.pc.in
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/glib/glibmm-2.0.pc.in

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2004/02/11 22:56:23 xtraeme Exp $
+# $NetBSD: Makefile,v 1.32 2004/02/14 17:21:55 jlam Exp $
 #
 
 DISTNAME=		Eterm-0.9.2
@@ -26,7 +26,6 @@ USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
 USE_X11=		YES
 USE_LIBTOOL=		YES
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 

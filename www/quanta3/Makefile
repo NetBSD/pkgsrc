@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/02/05 02:25:36 markd Exp $
+# $NetBSD: Makefile,v 1.15 2004/02/14 17:21:54 jlam Exp $
 
 DISTNAME=	quanta-${_KDE_VERSION}
 CATEGORIES=	www
@@ -12,7 +12,6 @@ USE_PERL5=		build
 USE_GNU_TOOLS+=		make
 GNU_CONFIGURE=          YES
 USE_LIBTOOL=            YES
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 .include "../../meta-pkgs/kde3/buildlink2.mk"
 .include "../../x11/kdebase3/buildlink2.mk"
