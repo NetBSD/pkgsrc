@@ -1,20 +1,18 @@
-# $NetBSD: Makefile,v 1.31 2005/02/22 18:23:18 jmmv Exp $
+# $NetBSD: Makefile,v 1.32 2005/03/22 16:29:50 jmmv Exp $
 #
-# Check the API before updating this package!  gal-2.3 and above should
-# get their own gal24 package!
+# Check the API before updating this package!  gal-2.5 and above should
+# get their own gal26 package!
 #
 
-DISTNAME=	gal-2.2.5
+DISTNAME=	gal-2.4.0
 PKGNAME=	${DISTNAME:S/gal/gal2/}
 CATEGORIES=	devel gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gal/2.2/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gal/2.4/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	recht@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
-COMMENT=	Library functions that came from Gnumeric and Evolution (gal-2.2 API)
-
-BUILD_USES_MSGFMT=	yes
+COMMENT=	Library functions that came from Gnumeric and Evolution (gal-2.4 API)
 
 USE_X11=		yes
 USE_GNU_TOOLS+=		make
@@ -23,7 +21,7 @@ USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 
-PKGCONFIG_OVERRIDE+=	gal-2.2.pc.in
+PKGCONFIG_OVERRIDE+=	gal-2.4.pc.in
 
 CONFIGURE_ARGS=		--enable-gtk-doc=no
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
