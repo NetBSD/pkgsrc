@@ -1,13 +1,13 @@
-$NetBSD: patch-ac,v 1.2 1998/08/07 10:36:42 agc Exp $
+$NetBSD: patch-ac,v 1.3 1999/04/14 21:13:24 tron Exp $
 
---- updown.c.orig	Sun Oct 13 13:56:18 1996
-+++ updown.c	Sun Oct 13 13:58:54 1996
-@@ -150,7 +150,7 @@
-   sprintf(cmdline, "%s %s", P_PPROG(g), s);
+--- updown.c.orig	Thu Jul  9 14:49:47 1998
++++ updown.c	Sun Dec 13 18:34:51 1998
+@@ -230,7 +230,7 @@
+   do_log(cmdline);   /* jl 22.06.97 */
  
    if (P_PFULL(g) == 'N') {
--	win = wopen(10, 7, 70, 13, BSINGLE, stdattr, mfcolor, mbcolor, 1, 0, 1);
-+	win = wopen(5, 5, 74, 11, BSINGLE, stdattr, mfcolor, mbcolor, 1, 0, 1);
- 	sprintf(title, "%.30s %s - Press CTRL-C to quit", P_PNAME(g),
- 		what == 'U' ? "upload" : "download");
- 	wtitle(win, TMID, title);
+-    win = wopen(10, 7, 70, 13, BSINGLE, stdattr, mfcolor, mbcolor, 1, 0, 1);
++    win = wopen(5, 5, 74, 11, BSINGLE, stdattr, mfcolor, mbcolor, 1, 0, 1);
+     snprintf(title, sizeof(title), _("%.30s %s - Press CTRL-C to quit"), P_PNAME(g),
+ 	    what == 'U' ? _("upload") : _("download"));
+     wtitle(win, TMID, title);
