@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2005/03/06 12:21:21 markd Exp $
+@comment $NetBSD: PLIST,v 1.29 2005/03/06 12:57:38 markd Exp $
 bin/appletproxy
 bin/drkonqi
 bin/extensionproxy
@@ -71,11 +71,6 @@ bin/kxkb
 bin/nspluginscan
 bin/nspluginviewer
 bin/startkde
-etc/ksysguarddrc
-etc/xdg/menus/applications-merged/kde-essential.menu
-etc/xdg/menus/kde-information.menu
-etc/xdg/menus/kde-screensavers.menu
-etc/xdg/menus/kde-settings.menu
 include/KBackgroundIface.h
 include/KDesktopIface.h
 include/KScreensaverIface.h
@@ -971,6 +966,11 @@ share/doc/kde/HTML/en/kwrite/index.docbook
 share/doc/kde/HTML/en/kxkb/common
 share/doc/kde/HTML/en/kxkb/index.cache.bz2
 share/doc/kde/HTML/en/kxkb/index.docbook
+share/examples/kdebase3/applications-merged/kde-essential.menu
+share/examples/kdebase3/kde-information.menu
+share/examples/kdebase3/kde-screensavers.menu
+share/examples/kdebase3/kde-settings.menu
+share/examples/kdebase3/ksysguarddrc
 share/kde/applnk/.hidden/battery.desktop
 share/kde/applnk/.hidden/bwarning.desktop
 share/kde/applnk/.hidden/cwarning.desktop
@@ -4013,6 +4013,8 @@ ${PKGLOCALEDIR}/locale/l10n/zw/flag.png
 @comment in kde: @dirrm share/kde/applnk/.hidden
 @comment in kde: @dirrm share/kde/applnk
 @comment in kde: @dirrm share/kde
+@dirrm share/examples/kdebase3/applications-merged
+@dirrm share/examples/kdebase3
 @dirrm share/doc/kde/HTML/en/kxkb
 @dirrm share/doc/kde/HTML/en/kwrite
 @dirrm share/doc/kde/HTML/en/ksysguard
@@ -4125,5 +4127,3 @@ ${PKGLOCALEDIR}/locale/l10n/zw/flag.png
 @dirrm include/ksgrd
 @dirrm include/kate/utils
 @comment in kde: @dirrm include/kate
-@dirrm etc/xdg/menus/applications-merged
-@comment dirrm etc/xdg/menus
