@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2003/01/19 07:29:41 salo Exp $
+$NetBSD: distinfo,v 1.4 2003/09/22 16:25:17 wiz Exp $
 
 SHA1 (bing-1.0.4.tar.gz) = 21954516f4b72895ad7be96d320581510a186b33
 Size (bing-1.0.4.tar.gz) = 27069 bytes
-SHA1 (patch-aa) = ca7016c67815b3d4e2a524ba88fefd25a482c941
+SHA1 (patch-aa) = e5dc4b78498674beacaecaf63f9799a4260c8187
 SHA1 (patch-ab) = ef75a8cd00011b09cef6668228e7e34899984c4b
