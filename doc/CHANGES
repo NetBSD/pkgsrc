@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2024 2003/04/24 13:06:16 taya Exp $
+$NetBSD: CHANGES,v 1.2025 2003/04/24 13:23:18 abs Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1718,3 +1718,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated gimp-print to 4.2.5 [drochner 2003-04-23]
 	Updated p5-FCGI to 0.67 [mjl 2003-04-24]
 	Updated galeon to 1.2.10 [taya 2003-04-24]
+	Updated netscape7 to 7.02 [abs 2003-04-23]
