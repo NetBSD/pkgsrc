@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5692 2004/04/20 20:22:51 minskim Exp $
+$NetBSD: CHANGES,v 1.5693 2004/04/20 20:26:50 abs Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2194,3 +2194,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Update php4 to 4.3.6 [jdolecek 2003-04-20]
 	Updated catclock to 0.0nb2 [minskim 2004-04-20]
 	Updated p5-XML-XSLT to 0.48 [minskim 2004-04-20]
+	Updated cpuflags to 0.66 [abs 2004-04-20]
+
