@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1092 2003/12/02 17:14:01 wiz Exp $
+$NetBSD: TODO,v 1.1093 2003/12/02 22:37:43 recht Exp $
 
 Suggested new packages
 ======================
@@ -179,7 +179,6 @@ Suggested package updates
 	o dante-1.1.14
 	o dctc-0.85.6
 	o ddd-3.3.8
-	o dia-0.92.2 [recht]
 	o diffstat-1.34
 	o disc-cover-1.5.3
 	o distcc-2.11.2
