@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.2 2002/03/13 17:37:54 fredb Exp $
+# $NetBSD: buildlink.mk,v 1.3 2002/03/24 02:01:21 rh Exp $
 #
 # This Makefile fragment is included by packages that use controlcenter.
 #
@@ -17,12 +17,12 @@ CONTROLCENTER_BUILDLINK_MK=	# defined
 
 .include "../../mk/bsd.buildlink.mk"
 
-BUILDLINK_DEPENDS.controlcenter?=	control-center>=1.4.0.1nb1
+BUILDLINK_DEPENDS.controlcenter?=	control-center>=1.4.0.4
 DEPENDS+=	${BUILDLINK_DEPENDS.controlcenter}:../../x11/controlcenter
 
 EVAL_PREFIX+=			BUILDLINK_PREFIX.controlcenter=controlcenter
 BUILDLINK_PREFIX.controlcenter_DEFAULTS=	${X11PREFIX}
-BUILDLINK_FILES.controlcenter=	include/capplet-widget.h
+BUILDLINK_FILES.controlcenter=	include/libcapplet1/*
 BUILDLINK_FILES.controlcenter+=	lib/libcapplet.*
 
 .include "../../graphics/gdk-pixbuf/buildlink.mk"
