@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/06/29 21:20:27 zuntum Exp $
+# $NetBSD: Makefile,v 1.3 2001/07/07 17:15:05 tron Exp $
 #
 
 DISTNAME=	WSoundServer-0.4.0
@@ -17,6 +17,15 @@ GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 USE_X11BASE=		YES
+
+.include "../../mk/bsd.prefs.mk"
+
+.if (${OPSYS} == SunOS)
+CPPFLAGS+=	-I${X11BASE}/include
+MAKE_ENV+=	OSSAUDIO_LIBS=
+.else
+MAKE_ENV+=	OSSAUDIO_LIBSS=-lossaudio
+.endif
 
 post-patch:
 	@cd ${WRKSRC}/doc && for f in *; do				\
