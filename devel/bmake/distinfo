@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2001/05/25 12:41:14 agc Exp $
+
+SHA1 (bmake-3.1.6.tar.gz) = b52b7738c93d95c4f6704218aebac0c0b51b7426
+Size (bmake-3.1.6.tar.gz) = 292095 bytes
+SHA1 (patch-aa) = 7e439ec6836c5cd36daa46411ef1764cdbee3890

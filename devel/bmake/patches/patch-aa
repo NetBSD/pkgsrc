@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/05/25 12:41:14 agc Exp $
+
+Correct a spelling mistake
+
+--- Makefile.in	2001/05/25 12:05:40	1.1
++++ Makefile.in	2001/05/25 12:05:52
+@@ -71,7 +71,7 @@
+ ${MAN}:	make.1
+ 	@echo making ${MAN}
+ 	@sed -e '/^.Nm/s/make/${PROG}/' -e '/^.Sh HISTORY/,$$d' ${srcdir}/make.1 > $@
+-	@(echo ".Sh HISTORY"; echo ".Nm"; echo "is derrived from NetBSD's"; echo ".Xr make 1 .") >> $@
++	@(echo ".Sh HISTORY"; echo ".Nm"; echo "is derived from NetBSD's"; echo ".Xr make 1 .") >> $@
+ 
+ .endif
+ 
