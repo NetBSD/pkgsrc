@@ -1,0 +1,11 @@
+--- config/config.flags.in.orig	Fri Mar 22 04:30:01 1996
++++ config/config.flags.in	Fri Oct 10 20:01:53 1997
+@@ -3,7 +3,7 @@
+ srctop= @srctop@
+ srcfoo= $(srctop)
+ 
+-prefix= @prefix@
++prefix= @prefix@/pthreads
+ exec_prefix= @exec_prefix@
+ 
+ cpu = @target_cpu@
