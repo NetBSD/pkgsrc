@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.1 1998/12/03 23:17:57 frueauf Exp $
+
+--- README.NetBSD-orig	Fri Oct 23 06:16:09 1998
++++ README.NetBSD	Thu Dec  3 23:45:14 1998
+@@ -1,9 +1,9 @@
+                               NetBSD
+-                             JDK1.1.5
++                             JDK1.1.6
+ 
+ This port is based on the FreeBSD port which in turn is based on
+ Jeffrey Hsu's original JDK 1.0 port, and is also based on Randy
+-Chapman and Steve Byrne's Linux port.  See README.FreeBSD for details.
++Chapman and Steve Byrne's Linux port.
+ 
+ The main changes from the FreeBSD port are for shared lib and sigjmp
+ implementation differences and to make AWT work with Lesstif instead
