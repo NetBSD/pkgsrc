@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.292 2003/04/20 23:20:08 rh Exp $
+# $NetBSD: Makefile,v 1.293 2003/05/09 15:29:37 drochner Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -56,6 +56,7 @@ SUBDIR+=	gtk10
 SUBDIR+=	gtk2
 SUBDIR+=	gtk2-engines
 SUBDIR+=	gtkglarea
+SUBDIR+=	gtkglarea2
 SUBDIR+=	gtkmm
 SUBDIR+=	gtkstep
 SUBDIR+=	gtoolkit
@@ -137,6 +138,7 @@ SUBDIR+=	p5-Tk
 SUBDIR+=	p5-gtk
 SUBDIR+=	py-Pmw
 SUBDIR+=	py-Tk
+SUBDIR+=	py-gtk2
 SUBDIR+=	py-qt2
 SUBDIR+=	py-qt2-sip
 SUBDIR+=	py-wxWindows
