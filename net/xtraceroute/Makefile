@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2002/10/09 11:03:32 agc Exp $
+# $NetBSD: Makefile,v 1.26 2002/10/20 13:26:56 wiz Exp $
 #
 
 DISTNAME=	xtraceroute-0.8.14
@@ -14,7 +14,6 @@ COMMENT=	Graphical version of traceroute, which traces the route IP packets go
 BUILD_USES_MSGFMT=	yes
 
 USE_X11=	yes
-#USE_MESA=	yes
 GNU_CONFIGURE=	yes
 USE_LIBINTL=	yes
 USE_BUILDLINK2=	yes
@@ -32,6 +31,7 @@ post-install:
 	${INSTALL_DATA} ${WRKDIR}/networks.cache ${PREFIX}/share/xtraceroute/networks.cache
 
 .include "../../graphics/tiff/buildlink2.mk"
+.include "../../graphics/Mesa/buildlink2.mk"
 .include "../../x11/gtk/buildlink2.mk"
 .include "../../x11/gtkglarea/buildlink2.mk"
 
