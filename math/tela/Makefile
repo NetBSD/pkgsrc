@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/03/09 00:32:16 jtb Exp $
+# $NetBSD: Makefile,v 1.4 2001/03/30 00:12:01 jtb Exp $
 
 DISTNAME=	tela-1.31
 CATEGORIES=	math
@@ -14,6 +14,7 @@ DEPENDS+=	lapack-[0-9]*:../../math/lapack
 DEPENDS+=	hdf-[0-9]*:../../devel/hdf
 DEPENDS+=	plotmtv-[0-9]*:../../graphics/plotmtv
 DEPENDS+=	readline-[0-9]*:../../devel/readline
+DEPENDS+=	f2c-[0-9]*:../../lang/f2c
 
 EVAL_PREFIX+=	HDF_PREFIX=hdf F2C_PREFIX=f2c
 EVAL_PREFIX+=	READLINE_PREFIX=readline JPEG_PREFIX=jpeg
