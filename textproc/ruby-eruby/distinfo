@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2001/07/01 14:01:56 taca Exp $
+
+SHA1 (ruby/eruby-0.9.5.tar.gz) = 93a65e8fcc00f8d7779dfe84c156b24e7cecb585
+Size (ruby/eruby-0.9.5.tar.gz) = 59620 bytes
+SHA1 (patch-aa) = feed0f33b7d16f878054db13b349f0f0a7a7a31c
