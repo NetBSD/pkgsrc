@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/02/21 16:10:27 grant Exp $
+# $NetBSD: Makefile,v 1.10 2003/02/27 04:32:33 grant Exp $
 
 .include "Makefile.common"
 
@@ -91,11 +91,11 @@ LOCLIBRPATHFLAGS=	# empty
 CONFIGURE_ARGS+=	-Dlibswanted="${LIBSWANTED.${OPSYS}}"
 .endif
 
-.if (${OPSYS} == "NetBSD")
+.if ${OPSYS} == "NetBSD"
 .  if !exists(/usr/libexec/ld.so) && !exists(/usr/libexec/ld.elf_so)
 MKPIC=			no
 .  endif
-.  if (${MACHINE_ARCH} == "sparc64")
+.  if ${MACHINE_ARCH} == "sparc64"
 # The toolchain on sparc64 is not really production-quality right now, but
 # gcc-2.96 is supposed to fix most problems.  Passing -g to the configure
 # process triggers -DDEBUGGING, which plays the real trick and circumvents
@@ -104,11 +104,11 @@ MKPIC=			no
 #
 CFLAGS+=		-g -msoft-quad-float -O2
 .  endif
-.elif (${OPSYS} == "SunOS")
+.elif ${OPSYS} == "SunOS"
 CFLAGS=
 .endif
 
-.if (${MKPIC} == "yes")
+.if ${MKPIC} == "yes"
 CONFIGURE_ARGS+=	-Duseshrplib
 .endif
 
@@ -154,7 +154,7 @@ pre-configure:
 # any reasonable number of registers.  These platforms should be added to
 # the list below to bypass the build of the statically-linked perl.
 #
-.if (${MKPIC} == "yes")
+.if ${MKPIC} == "yes"
 .  for _arch_ in mipsel mipseb
 .    if !empty(MACHINE_ARCH:M${_arch_})
 STATIC_PERL?=		NO
@@ -163,7 +163,7 @@ STATIC_PERL?=		NO
 .endif
 STATIC_PERL?=		YES
 
-.if defined(STATIC_PERL) && (${STATIC_PERL} == "YES")
+.if defined(STATIC_PERL) && ${STATIC_PERL} == "YES"
 STATIC_WRKDIR=		${WRKDIR}/static
 STATIC_MAKEFLAGS=	MKPIC=no STATIC_PERL=NO
 STATIC_MAKEFLAGS+=	WRKDIR=${STATIC_WRKDIR}
@@ -174,7 +174,7 @@ post-build:
 .endif
 
 post-install:
-.if defined(STATIC_PERL) && (${STATIC_PERL} == "YES")
+.if defined(STATIC_PERL) && ${STATIC_PERL} == "YES"
 	${RM} -f ${PERL5}
 	${INSTALL_PROGRAM} ${STATIC_WRKDIR}/${WRKSRC:T}/perl ${PERL5}
 .endif
