@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.650 2002/12/01 14:24:42 taca Exp $
+$NetBSD: CHANGES,v 1.651 2002/12/01 15:41:37 seb Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3778,3 +3778,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated sysbuild to 1.1 [jmmv 2002-11-30]
 	Updated bmake to 3.1.15 [sjg 2002-11-30]
 	Updated namazu2 to 2.0.12nb1 [taca 2002-11-30]
+	Updated imapfilter to 0.8.4 [seb 2002-12-1]
