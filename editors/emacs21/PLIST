@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/04/24 17:27:41 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/11/24 19:16:17 tron Exp $
 bin/emacs
 bin/${PKGNAME}
 bin/emacs-b2m
@@ -1850,7 +1850,7 @@ share/emacs/${PKGVERSION}/lisp/site-init.el
 share/emacs/${PKGVERSION}/lisp/subdirs.el
 share/emacs/${PKGVERSION}/site-lisp/subdirs.el
 share/emacs/site-lisp/subdirs.el
-@dirrm share/emacs/site-lisp
+@unexec ${RMDIR} %D/share/emacs/site-lisp 2>/dev/null || ${TRUE}
 @dirrm share/emacs/21.2/site-lisp
 @dirrm share/emacs/21.2/lisp/calendar
 @dirrm share/emacs/21.2/lisp/emacs-lisp
@@ -1873,7 +1873,7 @@ share/emacs/site-lisp/subdirs.el
 @dirrm share/emacs/21.2/etc/e
 @dirrm share/emacs/21.2/etc
 @dirrm share/emacs/21.2
-@dirrm share/emacs
+@unexec ${RMDIR} %D/share/emacs 2>/dev/null || ${TRUE}
 @dirrm libexec/emacs/21.2/${MACHINE_GNU_PLATFORM}
 @dirrm libexec/emacs/21.2
 @dirrm libexec/emacs
