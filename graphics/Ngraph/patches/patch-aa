@@ -1,3 +1,4 @@
+$NetBSD: patch-aa,v 1.6 2004/11/29 20:31:44 wiz Exp $
 --- Makefile.orig	Sat Aug  7 19:57:39 2004
 +++ Makefile	Tue Aug 31 20:40:29 2004
 @@ -1,26 +1,42 @@
