@@ -1,11 +1,17 @@
-# $NetBSD: Makefile,v 1.5 2004/10/23 08:16:26 minskim Exp $
+# $NetBSD: Makefile,v 1.6 2005/02/27 23:06:50 wiz Exp $
 #
 
 DISTNAME=	bash-3.0
-PKGREVISION=	1
+PKGNAME=	bash-3.0pl16
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_GNU:=bash/} \
 		ftp://ftp.cwru.edu/pub/bash/
+
+PATCH_SITES=	${MASTER_SITES:=bash-3.0-patches/}
+PATCHFILES=	bash30-001 bash30-002 bash30-003 bash30-004 \
+		bash30-005 bash30-006 bash30-007 bash30-008 \
+		bash30-009 bash30-010 bash30-011 bash30-012 \
+		bash30-013 bash30-014 bash30-015 bash30-016
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/bash/bash.html
@@ -16,6 +22,7 @@ CONFLICTS=	static-bash-[0-9]*
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=		yes
+USE_MAKEINFO=		yes
 USE_PKGINSTALL=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
@@ -29,12 +36,12 @@ PKG_SHELL=		${PREFIX}/bin/bash
 # All features enabled by default.
 CONFIGURE_ARGS+=	--enable-readline
 CONFIGURE_ARGS+=	--enable-progcomp
-CONFIGURE_ARGS+=	--enable-process-substitution	
+CONFIGURE_ARGS+=	--enable-process-substitution
 CONFIGURE_ARGS+=	--enable-job-control
 CONFIGURE_ARGS+=	--enable-history
 CONFIGURE_ARGS+=	--enable-help-builtin
 CONFIGURE_ARGS+=	--enable-extended-glob
-CONFIGURE_ARGS+=	--enable-dparen-arithmetic	
+CONFIGURE_ARGS+=	--enable-dparen-arithmetic
 CONFIGURE_ARGS+=	--enable-directory-stack
 CONFIGURE_ARGS+=	--enable-debugger
 CONFIGURE_ARGS+=	--enable-cond-regexp
