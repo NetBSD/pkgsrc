@@ -1,15 +1,13 @@
-$NetBSD: patch-aa,v 1.11 1999/07/07 18:13:56 agc Exp $
+$NetBSD: patch-aa,v 1.12 2000/02/19 03:58:25 wiz Exp $
 
-On Solaris, don't try to use ranlib...
-
---- Configure.orig	Tue May 11 07:40:20 1999
-+++ Configure	Mon May  3 11:53:20 1999
-@@ -3037,7 +3046,7 @@
-   then
-     echo "AR=	$LSOF_AR" >> ${LSOF_LIB}/$LSOF_LIBMKF
-   fi	# }
--  if test "X$LSOF_RANLIB" != "X"	# {
-+  if test "X$LSOF_TGT" = "Xsolaris" -o "X$LSOF_RANLIB" != "X"	# {
-   then
-     echo "RANLIB=	$LSOF_RANLIB" >> ${LSOF_LIB}/$LSOF_LIBMKF
-   fi	# }
+--- ./dialects/n+obsd/dlsof.h.orig	Tue Feb  1 15:31:27 2000
++++ ./dialects/n+obsd/dlsof.h	Sat Feb 19 04:13:09 2000
+@@ -76,7 +76,7 @@
+ #include <netinet/ip.h>
+ 
+ # if	defined(HASIPv6) && defined(NETBSDV) && !defined(HASINRIAIPv6)
+-#include <netinet6/ip6.h>
++#include <netinet/ip6.h>
+ #include <netinet6/in6_pcb.h>
+ # endif	/* defined(HASIPv6) && defined(NETBSDV) && !defined(HASINRIAIPv6) */
+ 

@@ -1,12 +1,13 @@
-# $NetBSD: Makefile,v 1.24 1999/11/14 17:51:24 frueauf Exp $
+# $NetBSD: Makefile,v 1.25 2000/02/19 03:58:23 wiz Exp $
 # FreeBSD Id: Makefile,v 1.19 1998/03/08 06:44:48 obrien Exp
 #
 
-DISTNAME=		lsof_4.46_W
-PKGNAME=		lsof-4.46
+DISTNAME=		lsof_4.49B.n+obsd
+PKGNAME=		lsof-4.49.2
 WRKSRC=			${WRKDIR}/${SRCBALL_NAME}
 CATEGORIES=		sysutils
 MASTER_SITES=		ftp://vic.cc.purdue.edu/pub/tools/unix/lsof/  \
+			ftp://vic.cc.purdue.edu/pub/tools/unix/lsof/NEW/ \
 			ftp://ftp.cert.dfn.de/pub/tools/admin/lsof/  \
 			ftp://ftp.auscert.org.au/pub/mirrors/vic.cc.purdue.edu/lsof/  \
 			ftp://ftp.web.ad.jp/pub/UNIX/tools/lsof/  \
@@ -30,19 +31,20 @@ MAKE_ENV+=		CPPFLAGS=
 .endif
 
 post-extract:
-	@(cd ${WRKDIR} ; \
-	EXPMD5=`${GREP} MD5 README.${SRCBALL_NAME} | ${SED} 's/^[ ]*//'` ; \
-	CALCMD5=`${MD5} ${SRCBALL_NAME}.tar` ; \
-	if [ "$${EXPMD5}"X != "$${CALCMD5}"X ]; then \
-		${ECHO} "Expected and calculated MD5 signatures don't agree." ; \
-		${ECHO} "($$EXPMD5 != $$CALCMD5)" ; \
-		${FALSE} ; \
-	fi ; \
-	if [ "X${EXTRACT_USING_PAX}" = "X" ]; then \
-		${GTAR} -xf ${SRCBALL_NAME}.tar; \
-	else \
-		${PAX} -r < ${SRCBALL_NAME}.tar; \
-	fi)
+# commented out for the pre-release 4.49.2, which doesn't support it
+#	@(cd ${WRKDIR} ; \
+#	EXPMD5=`${GREP} MD5 README.${SRCBALL_NAME} | ${SED} 's/^[ ]*//'` ; \
+#	CALCMD5=`${MD5} ${SRCBALL_NAME}.tar` ; \
+#	if [ "$${EXPMD5}"X != "$${CALCMD5}"X ]; then \
+#		${ECHO} "Expected and calculated MD5 signatures don't agree." ; \
+#		${ECHO} "($$EXPMD5 != $$CALCMD5)" ; \
+#		${FALSE} ; \
+#	fi ; \
+#	if [ "X${EXTRACT_USING_PAX}" = "X" ]; then \
+#		${GTAR} -xf ${SRCBALL_NAME}.tar; \
+#	else \
+#		${PAX} -r < ${SRCBALL_NAME}.tar; \
+#	fi)
 	@( cd ${WRKSRC} ; ${ECHO} "y" | ./Inventory || exit 1 )
 
 do-install:
