@@ -1,0 +1,4 @@
+#!/bin/sh
+
+cp ${WRKSRC}/config/untested/386pc-freebsd2.1-cc ${WRKSRC}/config/system
+cp ${WRKSRC}/config/sites/386pc-freebsd2.1 ${WRKSRC}/config/site
