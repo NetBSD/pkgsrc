@@ -1,0 +1,14 @@
+$NetBSD: patch-an,v 1.7 2005/03/30 12:26:45 markd Exp $
+
+--- krdc/rdp/krdpview.cpp.orig	2005-03-30 15:24:53.000000000 +1200
++++ krdc/rdp/krdpview.cpp
+@@ -210,8 +210,8 @@ bool KRdpView::start()
+ 	if(!m_user.isEmpty())     { *m_process << "-u" << m_user; }
+ 	if(!m_password.isEmpty()) { *m_process << "-p" << m_password; }
+ 	*m_process << "-X" << ("0x" + QString::number(m_container->winId(), 16));
+-	*m_process << (m_host + ":" + QString::number(m_port));
+ 	*m_process << "-a" << QString::number(hp->colorDepth());
++	*m_process << (m_host + ":" + QString::number(m_port));
+ 	connect(m_process, SIGNAL(processExited(KProcess *)), SLOT(processDied(KProcess *)));
+ 	connect(m_process, SIGNAL(receivedStderr(KProcess *, char *, int)), SLOT(receivedStderr(KProcess *, char *, int)));
+ 	connect(m_container, SIGNAL(embeddedWindowDestroyed()), SLOT(connectionClosed()));
