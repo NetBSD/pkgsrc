@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2405 2004/11/20 22:46:55 jmmv Exp $
+$NetBSD: TODO,v 1.2406 2004/11/21 09:00:06 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -1039,7 +1039,6 @@ Suggested package updates
 	o swig-python-1.3.22
 	o swish-e-2.4.2
 	o sybperl-2.17
-	o sylpheed-0.9.99
 	o sylpheed-claws-ghostscript-viewer-0.8
 	o sysinfo-4.2.2
 	o tc-2.3.1
