@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2000/06/12 10:45:52 itojun Exp $
+# $NetBSD: Makefile,v 1.8 2000/06/12 11:21:31 itojun Exp $
 #
 
 DISTNAME=	racoon-20000612a
@@ -8,8 +8,7 @@ MASTER_SITES=	ftp://ftp.kame.net/pub/kame/misc/
 MAINTAINER=	itojun@kame.net
 HOMEPAGE=	http:/www.kame.net/
 
-NO_PACKAGE=	"crypto"
-NO_CDROM=	"crypto"
+RESTRICTED=	"Crypto; export-controlled"
 
 # this is not compatible with cross build - there's no other way
 .if !exists(/usr/include/netinet6/ipsec.h)
