@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/02/13 18:09:22 mrauch Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/12/26 01:46:01 wiz Exp $
 bin/soffice
 OpenOffice.org641/setup
 OpenOffice.org641/spadmin
@@ -1577,28 +1577,44 @@ OpenOffice.org641/help/en/smath.key
 OpenOffice.org641/help/main_transform.xsl
 OpenOffice.org641/help/custom.css
 @comment DIRS
+@exec ${MKDIR} %D/OpenOffice.org641/user/wordbook
 @dirrm OpenOffice.org641/user/wordbook
+@exec ${MKDIR} %D/OpenOffice.org641/user/template
 @dirrm OpenOffice.org641/user/template
+@exec ${MKDIR} %D/OpenOffice.org641/user/temp
 @dirrm OpenOffice.org641/user/temp
+@exec ${MKDIR} %D/OpenOffice.org641/user/store
 @dirrm OpenOffice.org641/user/store
+@exec ${MKDIR} %D/OpenOffice.org641/user/psprint/fontmetric
 @dirrm OpenOffice.org641/user/psprint/fontmetric
+@exec ${MKDIR} %D/OpenOffice.org641/user/psprint/driver
 @dirrm OpenOffice.org641/user/psprint/driver
+@exec ${MKDIR} %D/OpenOffice.org641/user/psprint
 @dirrm OpenOffice.org641/user/psprint
+@exec ${MKDIR} %D/OpenOffice.org641/user/plugin
 @dirrm OpenOffice.org641/user/plugin
 @dirrm OpenOffice.org641/user/gallery
 @dirrm OpenOffice.org641/user/database/biblio
 @dirrm OpenOffice.org641/user/database
+@exec ${MKDIR} %D/OpenOffice.org641/user/config/registry/instance/org/openoffice/ucb
 @dirrm OpenOffice.org641/user/config/registry/instance/org/openoffice/ucb
+@exec ${MKDIR} %D/OpenOffice.org641/user/config/registry/instance/org/openoffice/Office
 @dirrm OpenOffice.org641/user/config/registry/instance/org/openoffice/Office
+@exec ${MKDIR} %D/OpenOffice.org641/user/config/registry/instance/org/openoffice
 @dirrm OpenOffice.org641/user/config/registry/instance/org/openoffice
+@exec ${MKDIR} %D/OpenOffice.org641/user/config/registry/instance/org
 @dirrm OpenOffice.org641/user/config/registry/instance/org
+@exec ${MKDIR} %D/OpenOffice.org641/user/config/registry/instance
 @dirrm OpenOffice.org641/user/config/registry/instance
+@exec ${MKDIR} %D/OpenOffice.org641/user/config/registry
 @dirrm OpenOffice.org641/user/config/registry
 @dirrm OpenOffice.org641/user/config
 @dirrm OpenOffice.org641/user/basic
+@exec ${MKDIR} %D/OpenOffice.org641/user/backup
 @dirrm OpenOffice.org641/user/backup
 @dirrm OpenOffice.org641/user/autotext/english
 @dirrm OpenOffice.org641/user/autotext
+@exec ${MKDIR} %D/OpenOffice.org641/user/autocorr
 @dirrm OpenOffice.org641/user/autocorr
 @dirrm OpenOffice.org641/user
 @dirrm OpenOffice.org641/share/wordbook/english
