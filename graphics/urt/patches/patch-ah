@@ -1,8 +1,19 @@
-$NetBSD: patch-ah,v 1.2 1999/02/10 15:10:47 frueauf Exp $
+$NetBSD: patch-ah,v 1.3 1999/11/22 11:11:33 agc Exp $
 
---- tools/into.c~	Wed Nov 25 23:51:32 1998
+--- tools/into.c	Wed Nov 25 23:51:32 1998
 +++ tools/into.c	Wed Nov 25 23:58:09 1998
-@@ -75,7 +75,7 @@
+@@ -41,7 +41,10 @@
+ short forceflg;				/* overwrite an unwritable file? */
+ 
+ extern int errno;
++
++#ifndef BSD
+ extern char *sys_errlist[];
++#endif
+ 
+ void
+ main(argc, argv)
+@@ -72,7 +75,7 @@
  	exit(1);
      }
  
