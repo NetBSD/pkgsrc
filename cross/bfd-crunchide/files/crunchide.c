@@ -1,4 +1,4 @@
-/* $NetBSD: crunchide.c,v 1.1.1.1 1999/12/20 05:57:40 sakamoto Exp $ */
+/* $NetBSD: crunchide.c,v 1.2 2001/03/23 13:36:18 wiz Exp $ */
 /* NetBSD: crunchide.c,v 1.9 1999/01/11 22:40:00 kleink Exp 	 */
 
 /*
@@ -63,7 +63,7 @@
 
 #include <sys/cdefs.h>
 #ifndef lint
-__RCSID("$NetBSD: crunchide.c,v 1.1.1.1 1999/12/20 05:57:40 sakamoto Exp $");
+__RCSID("$NetBSD: crunchide.c,v 1.2 2001/03/23 13:36:18 wiz Exp $");
 #endif
 
 #include <unistd.h>
@@ -233,7 +233,7 @@ hide_syms(filename, bfdname)
 {
 	int i, n, rv = 0;
 	bfd *org_bfd = NULL, *new_bfd = NULL;
-	char *tempname;
+	char tempname[16];
 	char **name;
 	long storage_needed, number_of_symbols;
 	size_t fn_size;
@@ -252,7 +252,8 @@ hide_syms(filename, bfdname)
 	}
 
 	bfdname = bfd_get_target(org_bfd);
-	tempname = tempnam(".", NULL);
+	strcpy(tempname, "tmp.XXXXXXX");
+	mktemp(tempname);
 	if ((new_bfd = bfd_openw(tempname, bfdname)) == NULL) {
 		bfd_perror(tempname);
 		goto err;
