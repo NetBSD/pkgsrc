@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1 2003/01/11 08:53:05 uebayasi Exp $
+$NetBSD: patch-aa,v 1.2 2003/01/11 12:13:16 wiz Exp $
 
 --- makefile.orig	Mon Dec 30 14:28:06 2002
 +++ makefile
@@ -26,10 +26,3 @@ $NetBSD: patch-aa,v 1.1 2003/01/11 08:53:05 uebayasi Exp $
  	rm -f jde-compile-script-init
  
  # 
-@@ -50,4 +50,4 @@
- # 
- # 
- 
--# End of makefile
-\ No newline at end of file
-+# End of makefile
