@@ -1,4 +1,4 @@
-# $NetBSD: defs.BSDOS.mk,v 1.1 2003/12/03 21:48:33 reed Exp $
+# $NetBSD: defs.BSDOS.mk,v 1.2 2003/12/11 22:42:17 reed Exp $
 #
 # Variable definitions for the BSD/OS operating system.
 
@@ -134,7 +134,7 @@ _OPSYS_HAS_JAVA=	no	# Java is not standard
 _OPSYS_HAS_MANZ=	yes	# MANZ controls gzipping of man pages
 # XXX need to check this for libossaudio
 _OPSYS_HAS_OSSAUDIO=	yes	# libossaudio is available
-_OPSYS_LIBTOOL_REQD=	1.4.20010614nb17 # base version of libtool required
+_OPSYS_LIBTOOL_REQD=	1.4.20010614nb18 # base version of libtool required
 _OPSYS_PERL_REQD=		# no base version of perl required
 _OPSYS_PTHREAD_AUTO=	no	# -lpthread needed for pthreads
 _OPSYS_RPATH_NAME=	-R	# name of symbol in rpath directive to linker 
