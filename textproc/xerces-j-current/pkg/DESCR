@@ -1,0 +1,8 @@
+Xerces (named after the Xerces Blue butterfly) provides world-class XML
+parsing and generation. Fully-validating parsers are available for both
+Java and C++, implementing the W3C XML and DOM (Level 1 and 2) standards,
+as well as the defacto SAX (version 2) standard. The parsers are highly
+modular and configurable.  Initial support for XML Schema (draft W3C
+standard) is also provided. 
+
+This package provides the Java version of Xerces.
