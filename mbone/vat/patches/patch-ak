@@ -1,0 +1,23 @@
+$NetBSD: patch-ak,v 1.1 2000/01/26 22:14:27 jlam Exp $
+
+--- Makefile.in.orig	Thu Apr 25 09:20:32 1996
++++ Makefile.in	Wed Jan 26 16:37:34 2000
+@@ -209,16 +209,10 @@
+ 	     rm ../$$name; chmod 444 $$tar
+ 
+ install: force
+-	 cp vat @prefix@/bin/vat; \
+-	 chown bin @prefix@/bin/vat; \
+-	 chgrp bin @prefix@/bin/vat; \
+-	 chmod 555 @prefix@/bin/vat
++	${BSD_INSTALL_PROGRAM} vat @prefix@/bin
+ 
+ install-man: force
+-	cp vat.1 @prefix@/man/man1/vat.1
+-	chown bin @prefix@/man/man1/vat.1
+-	chgrp bin @prefix@/man/man1/vat.1
+-	chmod 444 @prefix@/man/man1/vat.1
++	${BSD_INSTALL_MAN} vat.1 @prefix@/man/man1
+ 
+ CLEAN = vat core core.vat tcl2c++ config.log config.cache
+ clean:
