@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2001/09/02 23:08:14 kristerw Exp $
+# $NetBSD: Makefile,v 1.61 2001/10/06 20:01:58 wiz Exp $
 #
 
 COMMENT=	Emulators for other operating systems
@@ -56,5 +56,6 @@ SUBDIR+=	xcopilot
 SUBDIR+=	xm7
 SUBDIR+=	xmame
 SUBDIR+=	xmess
+SUBDIR+=	zsnes
 
 .include "../mk/bsd.pkg.subdir.mk"
