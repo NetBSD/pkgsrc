@@ -1,14 +1,12 @@
-$NetBSD: patch-ae,v 1.1 1999/08/25 11:22:16 fredb Exp $
+$NetBSD: patch-ae,v 1.2 2001/08/28 03:30:43 mjl Exp $
 
---- NServer-0.9.1/Article.h.orig	Mon Jul  5 12:07:49 1999
-+++ NServer-0.9.1/Article.h	Wed Aug 25 05:58:07 1999
-@@ -2,8 +2,8 @@
- #define _Article_h_
- 
+--- NServer-0.9.1/Article.h.orig	Sun Jul  9 22:12:20 2000
++++ NServer-0.9.1/Article.h	Tue Aug 28 05:01:51 2001
+@@ -4,7 +4,7 @@
  #include <ctype.h>
--
+ #include <stdio.h>
+ 
 -#include <string>
-+#include <stdio.h>
 +#include <string.h>
  
  #include "NSError.h"
