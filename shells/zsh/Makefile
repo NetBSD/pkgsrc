@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.29 2001/10/05 16:36:00 tron Exp $
+# $NetBSD: Makefile,v 1.30 2001/11/29 09:16:28 martti Exp $
 
-DISTNAME=       zsh-4.0.2
+DISTNAME=       zsh-4.0.4
 CATEGORIES=	shells
 MASTER_SITES=   ftp://ftp.rge.com/pub/shells/zsh/ \
 		ftp://sunsite.auc.dk/pub/unix/shells/zsh/ \
@@ -25,6 +25,7 @@ LDFLAGS+=	-static
 .if ${OPSYS} == "SunOS"
 PLIST_SRC=	${PKGDIR}/PLIST.dynamic ${PKGDIR}/PLIST
 .else
+LDFLAGS+=	-Wl,-R/usr/pkg/lib/zsh
 PLIST_SRC=	${PKGDIR}/PLIST.shlibs ${PKGDIR}/PLIST.dynamic ${PKGDIR}/PLIST
 .endif
 .endif
