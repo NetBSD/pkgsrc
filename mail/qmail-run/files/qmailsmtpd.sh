@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: qmailsmtpd.sh,v 1.3 2004/08/23 03:47:48 schmonz Exp $
+# $NetBSD: qmailsmtpd.sh,v 1.4 2004/12/29 16:18:41 schmonz Exp $
 #
 # @PKGNAME@ script to control qmail-smtpd (SMTP service).
 #
@@ -8,11 +8,23 @@
 # PROVIDE: qmailsmtpd mail
 # REQUIRE: qmailsend
 
+name="qmailsmtpd"
+
+# User-settable rc.conf variables and their default values:
+: ${qmailsmtpd_postenv:="QMAILQUEUE=@LOCALBASE@/bin/qmail-queue"}
+: ${qmailsmtpd_tcpflags:="-v -R -l 0"}
+: ${qmailsmtpd_tcphost:="0"}
+: ${qmailsmtpd_tcpport:="25"}
+: ${qmailsmtpd_datalimit:="2000000"}
+: ${qmailsmtpd_pretcpserver:=""}
+: ${qmailsmtpd_presmtpd:=""}
+: ${qmailsmtpd_postsmtpd:=""}
+: ${qmailsmtpd_logcmd:="@LOCALBASE@/bin/setuidgid qmaill @LOCALBASE@/bin/splogger nb${name}"}
+
 if [ -f /etc/rc.subr ]; then
 	. /etc/rc.subr
 fi
 
-name="qmailsmtpd"
 rcvar=${name}
 required_files="@PKG_SYSCONFDIR@/control/concurrencyincoming"
 required_files="${required_files} @PKG_SYSCONFDIR@/tcp.smtp.cdb"
@@ -25,17 +37,6 @@ stat_cmd="qmailsmtpd_stat"
 pause_cmd="qmailsmtpd_pause"
 cont_cmd="qmailsmtpd_cont"
 cdb_cmd="qmailsmtpd_cdb"
-
-# User-settable rc.conf variables and their default values:
-qmailsmtpd_postenv=${qmailsmtpd_postenv-"QMAILQUEUE=@LOCALBASE@/bin/qmail-queue"}
-qmailsmtpd_tcpflags=${qmailsmtpd_tcpflags-"-v -R -l 0"}
-qmailsmtpd_tcphost=${qmailsmtpd_tcphost-"0"}
-qmailsmtpd_tcpport=${qmailsmtpd_tcpport-"25"}
-qmailsmtpd_datalimit=${qmailsmtpd_datalimit-"2000000"}
-qmailsmtpd_pretcpserver=${qmailsmtpd_pretcpserver-""}
-qmailsmtpd_presmtpd=${qmailsmtpd_presmtpd-""}
-qmailsmtpd_postsmtpd=${qmailsmtpd_postsmtpd-""}
-qmailsmtpd_logcmd=${qmailsmtpd_logcmd-"@LOCALBASE@/bin/setuidgid qmaill @LOCALBASE@/bin/splogger nb${name}"}
 
 qmailsmtpd_precmd()
 {
