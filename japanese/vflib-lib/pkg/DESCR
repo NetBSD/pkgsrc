@@ -1,0 +1,29 @@
+VFlib is the Japanese vector font library, supporting TrueType, Zeit,
+JG, and BDF fonts.  The Watanabe-vector font is used by default for
+mincho(min) and gothic(goth).
+
+You can use your own fonts by installing them (/usr/share/font is
+recommended) and adding them to ${PREFIX}/lib/VFlib/vfontcap.
+
+See ${PREFIX}/lib/VFlib/doc/man.ps or the website for more details
+(in Japanese).
+
+This port supports the FreeType library.  Freetype makes use of hinting
+information in TrueType font files so that clearer output is possible.
+To use Freetype with TrueType fonts, simply modify
+${PREFIX}/lib/VFlib/vfontcap as follows:
+
+	1.  Change `truetype' to `freetype', then
+	2.  Add .ttf or .ttc to the font file path.
+
+For example:
+
+# Before...
+r-ricoh-ttw-hg-mincho-l-pro|Ricoh TrueTypeWorld HG Mincho L PRO:\
+	:ft=truetype:\
+	:ff=/usr/local/lib/dp/font/truetype/hgrmlpsj:
+
+# After...
+r-ricoh-ttw-hg-mincho-l-pro|Ricoh TrueTypeWorld HG Mincho L PRO:\
+	:ft=freetype:\
+	:ff=/usr/local/lib/dp/font/truetype/hgrmlpsj.ttf:
