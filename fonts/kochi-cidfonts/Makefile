@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/02/15 23:02:07 kei Exp $
+# $NetBSD: Makefile,v 1.2 2003/03/08 03:33:42 jmc Exp $
 
 DISTNAME=	kochi-cidfonts-0.0.0.20030101
 CATEGORIES=	fonts X11 japanese
@@ -19,6 +19,7 @@ NO_BUILD=	YES
 FONTDIR=	${PREFIX}/share/ghostscript/Resource/CIDFont
 
 do-install:
+	${MKDIR} ${FONTDIR}; \
 	cd ${DISTDIR}; \
 	${INSTALL_DATA} ${DISTFILES} ${FONTDIR}; \
 	${GUNZIP_CMD} ${FONTDIR}/Kochi-*${EXTRACT_SUFX}
