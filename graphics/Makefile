@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.109 2000/12/12 01:30:48 wiz Exp $
+# $NetBSD: Makefile,v 1.110 2001/01/26 09:40:02 wiz Exp $
 #
 
-    SUBDIR += GMT
     SUBDIR += CompuPic
+    SUBDIR += GMT
     SUBDIR += ImageMagick
     SUBDIR += Mesa
     SUBDIR += Mesa-glx
@@ -24,9 +24,9 @@
     SUBDIR += fly
     SUBDIR += fnlib
     SUBDIR += freetype
-    SUBDIR += freetype2
     SUBDIR += freetype-lib
     SUBDIR += freetype-utils
+    SUBDIR += freetype2
     SUBDIR += fujiplay
     SUBDIR += fxtv
     SUBDIR += g3d
@@ -92,6 +92,7 @@
     SUBDIR += rayshade
     SUBDIR += ruby-gl
     SUBDIR += sane
+    SUBDIR += scigraphica
     SUBDIR += sketch
     SUBDIR += tgif
     SUBDIR += tiff
