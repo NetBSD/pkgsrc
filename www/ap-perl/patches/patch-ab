@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1.1.1 1998/12/04 00:10:57 tv Exp $
+$NetBSD: patch-ab,v 1.2 1998/12/04 17:25:13 tv Exp $
 
 --- src/modules/perl/mod_perl.c.orig	Wed Sep 30 23:13:14 1998
 +++ src/modules/perl/mod_perl.c	Thu Dec  3 17:30:09 1998
@@ -22,7 +22,7 @@ $NetBSD: patch-ab,v 1.1.1.1 1998/12/04 00:10:57 tv Exp $
 + * -Doug MacEachern
 + */
 +
-+static int handle_perl(FILE *in, request_rec *r, const char *error)
++static int handle_perl(FILE *in, request_rec *r, const char *error, const char *timefmt)
 +{
 +    char tag[MAX_STRING_LEN];
 +    char parsed_string[MAX_STRING_LEN];
