@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.160 2004/11/12 04:57:31 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.161 2004/11/12 20:25:41 sketch Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -348,7 +348,7 @@ BUILDLINK_CPPFLAGS.${_pkg_}?=	# empty
 BUILDLINK_LDFLAGS.${_pkg_}?=	# empty
 BUILDLINK_LIBS.${_pkg_}?=	# empty
 BUILDLINK_INCDIRS.${_pkg_}?=	include
-BUILDLINK_LIBDIRS.${_pkg_}?=	lib${ABI}
+BUILDLINK_LIBDIRS.${_pkg_}?=	lib${LIBABISUFFIX}
 .  if !empty(BUILDLINK_DEPMETHOD.${_pkg_}:Mfull)
 BUILDLINK_RPATHDIRS.${_pkg_}?=	${BUILDLINK_LIBDIRS.${_pkg_}}
 .  else
@@ -452,11 +452,11 @@ BUILDLINK_LDFLAGS+=	${COMPILER_RPATH_FLAG}${LOCALBASE}/lib
 # uses X11.
 #
 .if defined(USE_X11)
-.  if empty(BUILDLINK_LDFLAGS:M-L${X11BASE}/lib${ABI})
-BUILDLINK_LDFLAGS+=	-L${X11BASE}/lib${ABI}
+.  if empty(BUILDLINK_LDFLAGS:M-L${X11BASE}/lib${LIBABISUFFIX})
+BUILDLINK_LDFLAGS+=	-L${X11BASE}/lib${LIBABISUFFIX}
 .  endif
-.  if empty(BUILDLINK_LDFLAGS:M${COMPILER_RPATH_FLAG}${X11BASE}/lib${ABI})
-BUILDLINK_LDFLAGS+=	${COMPILER_RPATH_FLAG}${X11BASE}/lib${ABI}
+.  if empty(BUILDLINK_LDFLAGS:M${COMPILER_RPATH_FLAG}${X11BASE}/lib${LIBABISUFFIX})
+BUILDLINK_LDFLAGS+=	${COMPILER_RPATH_FLAG}${X11BASE}/lib${LIBABISUFFIX}
 .  endif
 .endif
 
@@ -516,7 +516,7 @@ buildlink-directories:
 	${_PKG_SILENT}${_PKG_DEBUG}${LN} -sf ${BUILDLINK_DIR} ${BUILDLINK_X11_DIR}
 .endif
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${BUILDLINK_DIR}/include
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${BUILDLINK_DIR}/lib${ABI}
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${BUILDLINK_DIR}/lib${LIBABISUFFIX}
 
 # The following variables are all optionally defined and control which
 # package files are symlinked into ${BUILDLINK_DIR} and how their names
