@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.3 2004/04/10 23:31:27 minskim Exp $
+$NetBSD: patch-ab,v 1.4 2005/01/16 16:39:08 tv Exp $
 
---- arcdos.c.orig	1992-04-14 17:58:21.000000000 -0500
+--- arcdos.c.orig	1992-04-14 18:58:21.000000000 -0400
 +++ arcdos.c
 @@ -31,7 +31,11 @@
  #include <sys/types.h>
@@ -14,25 +14,47 @@ $NetBSD: patch-ab,v 1.3 2004/04/10 23:31:27 minskim Exp $
  #else	
  #include <time.h>		/* Sys V. Bleah. */
  struct	timeval {
-@@ -173,14 +177,21 @@ setstamp(f, date, time)		/* set a file's
- 	struct tm	tm;
- 	struct timeval  tvp[2];
- 	int	utimes();
-+#if !defined(__FreeBSD__) && !defined(__OpenBSD__) && !defined(__NetBSD__) && !defined(__APPLE__) && !defined(__linux__) && !defined(__sgi__)
- 	long	tmclock();
+@@ -50,6 +54,11 @@ struct	timeval {
+ char	*malloc();
+ #endif
+ 
++#if defined(__INTERIX)
++#define NO_UTIMES
++#include <utime.h>
 +#endif
++
+ VOID
+ getstamp(f, date, time)		/* get a file's date/time stamp */
+ #if	!_MTS
+@@ -171,20 +180,29 @@ setstamp(f, date, time)		/* set a file's
+ #endif
+ #if	UNIX
+ 	struct tm	tm;
++#ifdef	NO_UTIMES
++	struct utimbuf utb;
++#else
+ 	struct timeval  tvp[2];
++#endif
+ 	int	utimes();
+-	long	tmclock();
  	tm.tm_sec = (time & 31) * 2;
  	tm.tm_min = (time >> 5) & 63;
  	tm.tm_hour = (time >> 11);
  	tm.tm_mday = date & 31;
  	tm.tm_mon = ((date >> 5) & 15) - 1;
  	tm.tm_year = (date >> 9) + 80;
+-	tvp[0].tv_sec = tmclock(&tm);
 +	tm.tm_isdst = -1;
-+#if !defined(__FreeBSD__) && !defined(__OpenBSD__) && !defined(__NetBSD__) && !defined(__APPLE__) && !defined(__linux__) && !defined(__sgi__)
- 	tvp[0].tv_sec = tmclock(&tm);
++#ifdef	NO_UTIMES
++	utb.actime = utb.modtime = mktime(&tm);
++	utime(f, &utb);
 +#else
 +	tvp[0].tv_sec = mktime(&tm);
-+#endif
  	tvp[1].tv_sec = tvp[0].tv_sec;
  	tvp[0].tv_usec = tvp[1].tv_usec = 0;
  	utimes(f, tvp);
+ #endif
++#endif
+ }
+ 
+ #if	MSDOS
