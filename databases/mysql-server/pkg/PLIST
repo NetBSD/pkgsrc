@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 1999/12/13 20:36:29 bad Exp $
+@comment $NetBSD: PLIST,v 1.3 2000/02/15 04:46:31 bad Exp $
 bin/comp_err
 bin/isamchk
 bin/isamlog
 bin/mysql_install_db
 bin/perror
+bin/print_defaults
 bin/replace
 bin/resolveip
 bin/safe_mysqld
