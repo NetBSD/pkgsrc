@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2004/10/03 00:14:45 tv Exp $
+# $NetBSD: Makefile,v 1.18 2004/11/22 23:49:41 wiz Exp $
 
 DISTNAME=	knights-0.4.6
 PKGREVISION=	7
@@ -13,7 +13,6 @@ USE_BUILDLINK3=		YES
 USE_GNU_TOOLS+=		make
 GNU_CONFIGURE=          YES
 USE_LIBTOOL=            YES
-LTCONFIG_OVERRIDE=      ${WRKSRC}/admin/ltconfig
 
 MEINPROC=		${BUILDLINK_PREFIX.kdelibs2}/bin/meinproc
 DOCDIR=			${PREFIX}/share/doc/kde/HTML/en/knights
