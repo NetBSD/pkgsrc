@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.1.1.1 2000/07/03 10:27:50 agc Exp $
+
+--- EngineFD/Makefile.in.orig	Sat Jun 10 03:32:56 2000
++++ EngineFD/Makefile.in	Fri Jun 30 12:48:42 2000
+@@ -16,7 +16,7 @@
+ 
+ $(LIBNAME): $(OBJLIB)
+ 	rm -f $(LIBNAME) 
+-	$(AR_RC)$(LIBNAME) $(OBJLIB)
++	$(AR_RC) $(LIBNAME) $(OBJLIB)
+ 	$(RANLIB) $(LIBNAME)
+ 
+ 

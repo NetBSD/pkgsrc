@@ -1,0 +1,20 @@
+$NetBSD: patch-ae,v 1.1.1.1 2000/07/03 10:27:50 agc Exp $
+
+--- EnginePl/gp_config.h.in.orig	Wed Jun 28 03:26:54 2000
++++ EnginePl/gp_config.h.in	Fri Jun 30 12:48:42 2000
+@@ -25,6 +25,15 @@
+ #ifndef _GP_CONFIG_H
+ #define _GP_CONFIG_H
+ 
++/* Define if you have sys/ioctl_compat.h */
++#undef HAVE_SYS_IOCTL_COMPAT_H
++
++/* Define if you have termios.h */
++#undef HAVE_TERMIOS_H
++
++/* Define if you have termio.h */
++#undef HAVE_TERMIO_H
++
+ /* Define if you have a working `mmap' system call.  */
+ #undef HAVE_MMAP
+ 
