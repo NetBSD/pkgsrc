@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.19 2004/08/26 18:04:10 reed Exp $
+# $NetBSD: Makefile.common,v 1.20 2004/11/13 22:04:52 jlam Exp $
 #
 
 DISTNAME=		lyx-1.3.4
@@ -21,9 +21,9 @@ FILESDIR=		${.CURDIR}/../../editors/lyx-qt/files
 PATCHDIR=		${.CURDIR}/../../editors/lyx-qt/patches
 PLIST_SRC=		${.CURDIR}/../../editors/lyx-qt/PLIST.common
 
+USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		YES
 USE_BUILDLINK3=		YES
-USE_GCC_SHLIB=		YES
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		YES
 USE_PERL5=		YES
