@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/02/21 14:07:29 jtb Exp $
+# $NetBSD: Makefile,v 1.3 2001/03/20 13:43:26 jtb Exp $
 
 DISTNAME=		pl-lite-4.0.0
 PKGNAME=		swi-prolog-4.0.0
@@ -23,6 +23,8 @@ CONFIGURE_ENV+=		"BUILDARCH=${MACHINE_PLATFORM}"
 SWIPL=			swi-prolog
 CONFIGURE_ENV+=		"PL=${SWIPL}"
 CPPFLAGS+=		-D__unix__=1
+EVAL_PREFIX+=		READLINE_PREFIX=readline
+CPPFLAGS+=		-I${READLINE_PREFIX}/include
 CONFIGURE_ENV+=		"CPPFLAGS=${CPPFLAGS}"
 
 PLIST_SUBST+=		SWIPL=${SWIPL}
