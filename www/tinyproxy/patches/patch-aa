@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/03/07 23:46:01 salo Exp $
+
+--- Makefile.in.orig	2003-01-22 20:50:28.000000000 +0100
++++ Makefile.in	2003-03-07 23:04:34.000000000 +0100
+@@ -298,7 +298,7 @@
+ install-exec-am:
+ install-exec: install-exec-recursive
+ 
+-install-data-am: install-data-local
++install-data-am:
+ install-data: install-data-recursive
+ 
+ install-am: all-am

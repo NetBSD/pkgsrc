@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2003/03/07 23:46:01 salo Exp $
+
+--- doc/tinyproxy.8.orig	2001-08-27 17:45:31.000000000 +0200
++++ doc/tinyproxy.8	2003-03-07 23:13:09.000000000 +0100
+@@ -41,7 +41,7 @@
+ connections have been handled.
+ .SH FILES
+ .nf
+-/etc/tinyproxy/tinyproxy.conf
++@PKG_SYSCONFDIR@/tinyproxy.conf
+ /var/run/tinyproxy.pid
+ /var/log/tinyproxy.log
+ .fi
