@@ -1,10 +1,10 @@
 #!/bin/sh
 #
-# $NetBSD: innd.sh,v 1.1 1999/07/21 20:38:56 tron Exp $
+# $NetBSD: innd.sh,v 1.2 1999/07/21 22:50:31 tron Exp $
 #
-if [ -x @@PREFIX@@/bin/inndstart -a -s @@INN_DATA_DIR@@/db/active ];
+if [ -x @@PREFIX@@/bin/rc.news -a -s @@INN_DATA_DIR@@/db/active ];
 then
- @@PREFIX@@/bin/inndstart >/dev/null 2>&1
+ @@PREFIX@@/bin/rc.news >/dev/null
  echo -n ' innd'
 fi
 exit 0
