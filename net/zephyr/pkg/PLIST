@@ -1,4 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 1998/02/27 11:21:16 agc Exp $
+@comment $NetBSD: PLIST,v 1.3 1998/03/06 02:48:28 mycroft Exp $
+include/com_err.h
+lib/libcom_err.a
+man/man3/com_err.3
 include/zephyr/mit-copyright.h
 include/zephyr/zephyr.h
 include/zephyr/zephyr_err.h
