@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3097 2005/02/22 16:13:12 adam Exp $
+$NetBSD: TODO,v 1.3098 2005/02/22 16:27:25 adam Exp $
 
 Suggested new packages
 ======================
@@ -1131,7 +1131,6 @@ Suggested package updates
 	o yorick-1.5.15
 	o ysm-2.9.6
 	o ytalk-3.2.0 [pkg/28840]
-	o zebedee-2.5.2
 	o zenicb-1.31 (needs merge with lots of local changes)
 	o zile-2.0.1
 	o zircon-1.18.256
