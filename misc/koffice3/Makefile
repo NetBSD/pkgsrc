@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/06/20 19:31:21 jschauma Exp $
+# $NetBSD: Makefile,v 1.2 2002/07/25 19:38:54 jschauma Exp $
 
 DISTNAME=       koffice
 PKGNAME=        koffice3-${VERSION}          
@@ -10,6 +10,7 @@ DISTFILES=      ${DISTNAME}-${VERSION}-kde3.tar.bz2
 .include "../../x11/kde3/Makefile.kde3"
 
 MAINTAINER=     jschauma@netbsd.org
+USE_PTHREAD=	native pth-syscall
 
 WRKSRC= ${WRKDIR}/${DISTNAME}-${VERSION}
 PATCHDIR=       ../../misc/koffice/patches
