@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1576 2005/01/27 11:21:46 tv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1577 2005/01/27 18:32:20 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -1882,6 +1882,7 @@ ${WRKDIR}:
 .  endif
 .endif
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${WRKDIR}
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${PKG_DB_TMPDIR}
 .ifdef WRKOBJDIR
 .  if ${PKGSRC_LOCKTYPE} == "sleep" || ${PKGSRC_LOCKTYPE} == "once"
 .    if !exists(${LOCKFILE})
@@ -1894,6 +1895,7 @@ ${WRKDIR}:
 		${ECHO} "${WRKDIR_BASENAME} -> ${WRKDIR}";		\
 	fi
 .endif # WRKOBJDIR
+
 
 _EXTRACT_SUFFIXES=	.tar.gz .tgz .tar.bz2 .tbz .tar.Z .tar _tar.gz
 _EXTRACT_SUFFIXES+=	.shar.gz .shar.bz2 .shar.Z .shar
@@ -3381,7 +3383,6 @@ do-su-install:
 		${MAKE} clean && ${MAKE} build ;;			\
 	esac
 	@${ECHO_MSG} "${_PKGSRC_IN}> Installing for ${PKGNAME}"
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${PKG_DB_TMPDIR}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	realtarget="real-su-install";					\
 	action="install";						\
