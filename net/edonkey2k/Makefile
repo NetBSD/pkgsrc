@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/06/16 21:32:36 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2002/06/26 14:33:14 agc Exp $
 #
 
 DISTNAME=	donkey
@@ -28,4 +28,4 @@ CHECK_SHLIBS=	NO
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${DISTNAME} ${PREFIX}/bin
 
-.include "../../mk/bsd.pkg.mk"
+.include "../../emulators/suse_linux/Makefile.application"
