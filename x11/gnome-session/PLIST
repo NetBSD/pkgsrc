@@ -1,14 +1,15 @@
-@comment $NetBSD: PLIST,v 1.4 2003/04/20 13:59:34 rh Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/12/15 00:26:50 xtraeme Exp $
 bin/gnome-session
 bin/gnome-session-properties
+bin/gnome-session-remove
 bin/gnome-session-save
 bin/gnome-smproxy
 bin/gnome-wm
-man/man1/session-properties.1
 man/man1/gnome-session-save.1
 man/man1/gnome-session.1
 man/man1/gnome-smproxy.1
 man/man1/gnome-wm.1
+man/man1/session-properties.1
 man/man5/default.session.5
 share/control-center-2.0/capplets/session-properties.desktop
 share/gconf/schemas/gnome-session.schemas
@@ -19,13 +20,16 @@ ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/gnome-session-2.0.mo
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/gnome-session-2.0.mo
 ${PKGLOCALEDIR}/locale/be/LC_MESSAGES/gnome-session-2.0.mo
 ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/gnome-session-2.0.mo
+${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/gnome-session-2.0.mo
 ${PKGLOCALEDIR}/locale/bs/LC_MESSAGES/gnome-session-2.0.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/gnome-session-2.0.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/gnome-session-2.0.mo
+${PKGLOCALEDIR}/locale/cy/LC_MESSAGES/gnome-session-2.0.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/gnome-session-2.0.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gnome-session-2.0.mo
 ${PKGLOCALEDIR}/locale/el/LC_MESSAGES/gnome-session-2.0.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/gnome-session-2.0.mo
+${PKGLOCALEDIR}/locale/eo/LC_MESSAGES/gnome-session-2.0.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/gnome-session-2.0.mo
 ${PKGLOCALEDIR}/locale/et/LC_MESSAGES/gnome-session-2.0.mo
 ${PKGLOCALEDIR}/locale/eu/LC_MESSAGES/gnome-session-2.0.mo
@@ -38,13 +42,15 @@ ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/gnome-session-2.0.mo
 ${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/gnome-session-2.0.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/gnome-session-2.0.mo
 ${PKGLOCALEDIR}/locale/id/LC_MESSAGES/gnome-session-2.0.mo
+${PKGLOCALEDIR}/locale/is/LC_MESSAGES/gnome-session-2.0.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/gnome-session-2.0.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/gnome-session-2.0.mo
-${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/gnome-session-2.0.mo
 ${PKGLOCALEDIR}/locale/kn/LC_MESSAGES/gnome-session-2.0.mo
+${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/gnome-session-2.0.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/gnome-session-2.0.mo
 ${PKGLOCALEDIR}/locale/lv/LC_MESSAGES/gnome-session-2.0.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/gnome-session-2.0.mo
+${PKGLOCALEDIR}/locale/ml/LC_MESSAGES/gnome-session-2.0.mo
 ${PKGLOCALEDIR}/locale/mn/LC_MESSAGES/gnome-session-2.0.mo
 ${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/gnome-session-2.0.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/gnome-session-2.0.mo
@@ -57,11 +63,12 @@ ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/gnome-session-2.0.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/gnome-session-2.0.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/gnome-session-2.0.mo
 ${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/gnome-session-2.0.mo
-${PKGLOCALEDIR}/locale/sp/LC_MESSAGES/gnome-session-2.0.mo
 ${PKGLOCALEDIR}/locale/sq/LC_MESSAGES/gnome-session-2.0.mo
 ${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/gnome-session-2.0.mo
+${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/gnome-session-2.0.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gnome-session-2.0.mo
 ${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/gnome-session-2.0.mo
+${PKGLOCALEDIR}/locale/th/LC_MESSAGES/gnome-session-2.0.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/gnome-session-2.0.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/gnome-session-2.0.mo
 ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/gnome-session-2.0.mo
