@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2002/10/13 15:07:27 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2002/11/11 06:17:54 mrg Exp $
 
-DISTNAME=	cook-2.17
+DISTNAME=	cook-2.21
 CATEGORIES=	devel
 MASTER_SITES=	http://www.canb.auug.org.au/~millerp/cook/
 
@@ -14,5 +14,4 @@ USE_BUILDLINK2=	# defined
 GNU_CONFIGURE=	# defined
 
 .include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../devel/rx/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
