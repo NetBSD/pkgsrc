@@ -1,8 +1,8 @@
-$NetBSD: patch-bh,v 1.6 2003/07/30 13:16:57 markd Exp $
+$NetBSD: patch-bh,v 1.7 2004/01/15 09:52:51 markd Exp $
 
---- kio/misc/Makefile.in.orig	2003-07-16 12:59:59.000000000 +1200
+--- kio/misc/Makefile.in.orig	2003-12-29 11:17:00.000000000 +1300
 +++ kio/misc/Makefile.in
-@@ -398,17 +398,21 @@ INCLUDES = -I$(srcdir)/.. -I$(top_srcdir
+@@ -399,17 +399,21 @@ INCLUDES = -I$(srcdir)/.. -I$(top_srcdir
  
  SUBDIRS = . ksendbugmail kpac kdesasl kssld kfile
  
@@ -30,7 +30,7 @@ $NetBSD: patch-bh,v 1.6 2003/07/30 13:16:57 markd Exp $
  kio_uiserver_la_LDFLAGS = $(all_libraries) -module -avoid-version
  
  observer_DIR = $(top_srcdir)/kio/kio
-@@ -436,23 +440,28 @@ CONFIG_HEADER = $(top_builddir)/config.h
+@@ -438,23 +442,28 @@ CONFIG_HEADER = $(top_builddir)/config.h
  CONFIG_CLEAN_FILES =
  LTLIBRARIES = $(lib_LTLIBRARIES)
  
@@ -68,7 +68,7 @@ $NetBSD: patch-bh,v 1.6 2003/07/30 13:16:57 markd Exp $
  am_kmailservice_OBJECTS = kmailservice.$(OBJEXT)
  #>- kmailservice_OBJECTS = $(am_kmailservice_OBJECTS)
  #>+ 1
-@@ -467,14 +476,20 @@ ktelnetservice_DEPENDENCIES =
+@@ -469,14 +478,20 @@ ktelnetservice_DEPENDENCIES =
  DEFAULT_INCLUDES =  -I. -I$(srcdir) -I$(top_builddir)
  depcomp = $(SHELL) $(top_srcdir)/admin/depcomp
  am__depfiles_maybe = depfiles
@@ -93,7 +93,7 @@ $NetBSD: patch-bh,v 1.6 2003/07/30 13:16:57 markd Exp $
  @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/ktelnetservice.Po \
  @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/uiserver.Plo
  
-@@ -496,7 +511,8 @@ CXXLD = $(CXX)
+@@ -498,7 +513,8 @@ CXXLD = $(CXX)
  #>+ 2
  CXXLINK = $(LIBTOOL) --mode=link --tag=CXX $(CXXLD) $(AM_CXXFLAGS) $(CXXFLAGS) $(KDE_CXXFLAGS) \
  	$(AM_LDFLAGS) $(LDFLAGS) -o $@
@@ -103,7 +103,7 @@ $NetBSD: patch-bh,v 1.6 2003/07/30 13:16:57 markd Exp $
  	$(kmailservice_SOURCES) $(ktelnetservice_SOURCES)
  DATA = $(kde_services_DATA) $(protocol_DATA)
  
-@@ -510,7 +526,7 @@ RECURSIVE_TARGETS = info-recursive dvi-r
+@@ -512,7 +528,7 @@ RECURSIVE_TARGETS = info-recursive dvi-r
  	check-recursive installcheck-recursive
  DIST_COMMON = $(kiomisc_HEADERS) Makefile.am Makefile.in
  DIST_SUBDIRS = $(SUBDIRS)
@@ -112,7 +112,7 @@ $NetBSD: patch-bh,v 1.6 2003/07/30 13:16:57 markd Exp $
  
  #>- all: all-recursive
  #>+ 1
-@@ -557,6 +573,8 @@ clean-libLTLIBRARIES:
+@@ -559,6 +575,8 @@ clean-libLTLIBRARIES:
  	done
  kio_uiserver.la: $(kio_uiserver_la_OBJECTS) $(kio_uiserver_la_DEPENDENCIES) 
  	$(CXXLINK) -rpath $(libdir) $(kio_uiserver_la_LDFLAGS) $(kio_uiserver_la_OBJECTS) $(kio_uiserver_la_LIBADD) $(LIBS)
@@ -121,7 +121,7 @@ $NetBSD: patch-bh,v 1.6 2003/07/30 13:16:57 markd Exp $
  binPROGRAMS_INSTALL = $(INSTALL_PROGRAM)
  install-binPROGRAMS: $(bin_PROGRAMS)
  	@$(NORMAL_INSTALL)
-@@ -602,7 +620,8 @@ mostlyclean-compile:
+@@ -604,7 +622,8 @@ mostlyclean-compile:
  distclean-compile:
  	-rm -f *.tab.c
  
@@ -131,16 +131,16 @@ $NetBSD: patch-bh,v 1.6 2003/07/30 13:16:57 markd Exp $
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/kmailservice.Po@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/ktelnetservice.Po@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/uiserver.Plo@am__quote@
-@@ -826,7 +845,7 @@ distclean-tags:
+@@ -834,7 +853,7 @@ distclean-tags:
  	-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
  #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
  #>+ 4
--KDE_DIST=rlogin.protocol telnet.protocol rtsp.protocol kmailservice.protocol kio_uiserver.desktop 
+-KDE_DIST=rlogin.protocol kio_uiserver.desktop kmailservice.protocol rtsp.protocol telnet.protocol 
 +KDE_DIST=kio_uiserver.desktop rlogin.protocol Makefile.in.rej kmailservice.protocol telnet.protocol rtsp.protocol 
  
  DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
  
-@@ -994,6 +1013,12 @@ dummy.cpp: uiserver.kidl
+@@ -1002,6 +1021,12 @@ dummy.cpp: uiserver.kidl
  # Otherwise a system limit (for SysV at least) may be exceeded.
  .NOEXPORT:
  
@@ -153,7 +153,7 @@ $NetBSD: patch-bh,v 1.6 2003/07/30 13:16:57 markd Exp $
  #>+ 9
  uiserver.kidl: $(srcdir)/uiserver.h $(DCOP_DEPENDENCIES)
  	$(DCOPIDL) $(srcdir)/uiserver.h > uiserver.kidl || ( rm -f uiserver.kidl ; false )
-@@ -1005,12 +1030,6 @@ observer_stub.h: observer.kidl
+@@ -1013,12 +1038,6 @@ observer_stub.h: observer.kidl
  	$(DCOPIDL2CPP) --c++-suffix cpp --no-signals --no-skel observer.kidl
  
  #>+ 3
@@ -166,7 +166,7 @@ $NetBSD: patch-bh,v 1.6 2003/07/30 13:16:57 markd Exp $
  clean-metasources:
  	-rm -f  uiserver.moc
  
-@@ -1031,33 +1050,33 @@ force-reedit:
+@@ -1039,33 +1058,33 @@ force-reedit:
  
  
  #>+ 11
@@ -213,14 +213,12 @@ $NetBSD: patch-bh,v 1.6 2003/07/30 13:16:57 markd Exp $
  #>+ 3
  cvs-clean:
  	$(MAKE) admindir=$(top_srcdir)/admin -f $(top_srcdir)/admin/Makefile.common cvs-clean
-@@ -1067,7 +1086,7 @@ kde-rpo-clean:
+@@ -1075,7 +1094,7 @@ kde-rpo-clean:
  	-rm -f *.rpo
  
  #>+ 5
--uiserver.o: uiserver.moc 
--uiserver.lo: uiserver.moc 
--observer_stub.cpp: observer_stub.h 
- $(srcdir)/uiserver.cpp: observer_stub.h 
-+observer_stub.cpp: observer_stub.h 
-+uiserver.lo: uiserver.moc 
-+uiserver.o: uiserver.moc 
++$(srcdir)/uiserver.cpp: observer_stub.h 
+ observer_stub.cpp: observer_stub.h 
+ uiserver.lo: uiserver.moc 
+ uiserver.o: uiserver.moc 
+-$(srcdir)/uiserver.cpp: observer_stub.h 
