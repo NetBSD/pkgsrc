@@ -1,8 +1,25 @@
-$NetBSD: patch-aa,v 1.5 2002/11/29 02:58:47 kim Exp $
+$NetBSD: patch-aa,v 1.6 2002/12/16 05:14:30 lukem Exp $
 
---- abcde.1.orig	Mon Aug 20 21:22:33 2001
-+++ abcde.1	Thu Nov 28 21:55:24 2002
-@@ -42,7 +42,7 @@
+--- abcde.1.orig	Tue Aug 21 11:22:33 2001
++++ abcde.1
+@@ -1,6 +1,6 @@
+ .TH ABCDE 1
+ .SH NAME
+-abcde \- Grab an entire CD and compress it to Ogg or MP3 format.
++abcde \- Grab an entire CD and compress it to Ogg, MP3 or FLAC format.
+ .SH SYNOPSIS
+ .B abcde
+ .I [options] [tracks]
+@@ -19,7 +19,7 @@ Do a CDDB query over the Internet to loo
+ Grab a track from your CD
+ .TP
+ .B *
+-Compress it to Ogg or MP3 format
++Compress it to Ogg, MP3 or FLAC format
+ .TP
+ .B *
+ Comment or ID3 tag it
+@@ -42,7 +42,7 @@ cddb. The default is to do all actions e
  .TP
  .B \-c [filename]
  Specifies an additional configuration file to parse. Configuration options
@@ -11,8 +28,24 @@ $NetBSD: patch-aa,v 1.5 2002/11/29 02:58:47 kim Exp $
  .TP
  .B \-C [discid]
  Allows you to resume a session for
-@@ -91,7 +91,7 @@
- or '.mp3'. This can be modified using the OUTPUTFORMAT and VAOUTPUTFORMAT
+@@ -66,7 +66,7 @@ the MAXPROCS configuration variable.
+ Use the low-diskspace algorithm. See the LOWDISK configuration variable.
+ .TP
+ .B \-o [filetype]
+-Select output type. Can be either "ogg" or "mp3". See the OUTPUTTYPE
++Select output type. Can be "ogg", "mp3" or "flac". See the OUTPUTTYPE
+ configuration variable.
+ .TP
+ .B \-r [hosts...]
+@@ -87,11 +87,12 @@ will process the entire CD. Accepts rang
+ .SH OUTPUT
+ Each track is, by default, placed in a separate file named after the track
+ in a subdirectory named after the artist under the current directory. Each
+-file is given an extension identifying its compression format, '.ogg'
+-or '.mp3'. This can be modified using the OUTPUTFORMAT and VAOUTPUTFORMAT
++file is given an extension identifying its compression format, '.ogg',
++'.mp3', or '.flac'.
++This can be modified using the OUTPUTFORMAT and VAOUTPUTFORMAT
  variables in your abcde.conf.
  .SH CONFIGURATION
 -abcde sources two configuration files on startup - /etc/abcde.conf and
@@ -20,3 +53,68 @@ $NetBSD: patch-aa,v 1.5 2002/11/29 02:58:47 kim Exp $
  $HOME/.abcde.conf, in that order. Here is a list of options abcde recognizes:
  .TP
  .B CDDBURL
+@@ -100,7 +101,8 @@ Specifies a server to use for CDDB looku
+ .B ENCODERSYNTAX
+ Specifies the style of encoder to use. Valid options are \'oggenc\' (default
+ for Ogg Vorbis), \'vorbize\', \'lame\' (default for MP3), \'gogo\', \'bladeenc\',
+-\'l3enc\', and \'mp3enc\'. This affects the default location of the binary,
++\'l3enc\', \'mp3enc\' and \'flac\' (default for FLAC).
++This affects the default location of the binary,
+ the variable to pick encoder command-line options from, and where the options
+ are given.
+ .TP
+@@ -118,7 +120,8 @@ to 700MB of temporary space for each ses
+ over 100MB for a machine that can encode music as fast as it can read it).
+ .TP
+ .B OUTPUTFORMAT
+-Specifies the format for completed Ogg or MP3 filenames. Variables are included
++Specifies the format for completed Ogg, MP3 or FLAC filenames.
++Variables are included
+ using standard shell syntax. Allowed variables are ALBUMFILE, ARTISTFILE,
+ TRACKFILE, and TRACKNUM. Default is
+ \'${ARTISTFILE}/${TRACKFILE}.${OUTPUTTYPE}\'.
+@@ -127,8 +130,8 @@ automatically zero-padded.
+ .TP
+ .B OUTPUTTYPE
+ Specifies the encoding format to output as well as the default extension and
+-encoder. Defaults to "ogg". Valid settings are "ogg" (Ogg Vorbis) and "mp3"
+-(MPEG-1 Audio Layer 3).
++encoder. Defaults to "ogg". Valid settings are "ogg" (Ogg Vorbis), "mp3"
++(MPEG-1 Audio Layer 3) and "flac" (FLAC).
+ .TP
+ .B VAOUTPUTFORMAT
+ Just like OUTPUTFORMAT but for Various Artists discs. Default is whatever
+@@ -137,14 +140,14 @@ OUTPUTFORMAT is set to.
+ .B PATHNAMES
+ The following configuration file options specify the pathnames of their
+ respective utilities: LAME, GOGO, BLADEENC, L3ENC, XINGMP3ENC, MP3ENC,
+-VORBIZE, OGGENC, ID3, ID3V2, CDPARANOIA, CDDA2WAV, WGET, CDDISCID,
++VORBIZE, OGGENC, FLAC, ID3, ID3V2, CDPARANOIA, CDDA2WAV, WGET, CDDISCID,
+ CDDBTOOL, EJECT, DISTMP3, and VORBISCOMMENT.
+ .TP
+ .B COMMAND-LINE OPTIONS
+ If you wish to specify command-line options to any of the programs abcde
+ uses, set the following configuration file options: LAMEOPTS, GOGOOPTS,
+ BLADEENCOPTS, L3ENCOPTS, XINGMP3ENCOPTS, MP3ENCOPTS, VORBIZEOPTS,
+-OGGENCOPTS, ID3OPTS, ID3V2OPTS, CDPARANOIAOPTS, CDDA2WAVOPTS, WGETOPTS,
++OGGENCOPTS, FLACOPTS, ID3OPTS, ID3V2OPTS, CDPARANOIAOPTS, CDDA2WAVOPTS, WGETOPTS,
+ CDDBTOOLOPTS, EJECTOPTS, and DISTMP3OPTS.
+ .TP
+ .B MAXPROCS
+@@ -197,7 +200,7 @@ after all tracks have been read.
+ abcde requires the following backend tools to work:
+ .TP
+ .B *
+-An Ogg or MP3 Encoder (oggenc, vorbize, lame, gogo, bladeenc, l3enc, mp3enc)
++An Ogg, MP3 or FLAC Encoder (oggenc, vorbize, lame, gogo, bladeenc, l3enc, mp3enc, flac)
+ .TP
+ .B *
+ An audio CD reading utility (cdparanoia, cdda2wav)
+@@ -218,6 +221,7 @@ wget, an HTTP retrieval program.
+ .BR cdda2wav (1),
+ .BR oggenc (1),
+ .BR vorbize (1),
++.BR flac (1),
+ .BR id3 (1),
+ .BR wget (1),
+ .BR cd-discid (1),
