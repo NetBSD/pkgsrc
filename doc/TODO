@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1564 2004/04/01 15:17:22 xtraeme Exp $
+$NetBSD: TODO,v 1.1565 2004/04/01 19:25:44 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -137,7 +137,6 @@ Suggested package updates
 	o amanda-2.4.4p2 [pkg/24550]
 	o ap-python-2.7.10
 	o apache-ant.1.6.1
-	o atk-1.6.0 [jmmv]
 	o audacity-1.2.0
 	o avidemux-2.0.20
 	o avifile-devel-0.7.34-20030319
@@ -197,7 +196,6 @@ Suggested package updates
 	o ghostscript-8.00 (apfl)
 	o ghostscript-8.01 (gnu)
 	o gimageview-0.2.25
-	o glib2-2.4.0 [jmmv]
 	o global-4.6
 	o glpk-4.3
 	o gnome-vfs2-2.4.3
@@ -212,7 +210,6 @@ Suggested package updates
 	o grhino-0.10.0
 	o gsasl-0.0.14
 	o gtetrinet-0.7.4
-	o gtk2-2.4.0 [jmmv]
 	o gtkglext-1.0.6
 	o gtkmm-2.2.9
 	o gtksee-0.5.5.1
@@ -234,7 +231,6 @@ Suggested package updates
 	o lavaps-2.4
 	o leafnode-1.9.50
 	o libcaca-0.9
-	o libcroco-0.5 [jmmv]
 	o libebml-0.6.4
 	o libesmtp-1.0.2
 	o libidn-0.4.2
@@ -291,7 +287,6 @@ Suggested package updates
 	o p5-XML-Path-1.13 [pkg/24998]
 	o p5-XML-Writer-0.500 [pkg/24903]
 	o p5-XML-XSLT-0.47
-	o pango-1.4.0 [jmmv]
 	o pdmenu-1.2.81
 	o pgplot-5.2 [grant]
 	o php-4.3.5
