@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2002/07/24 19:45:30 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2002/07/29 22:23:29 jlam Exp $
 
 DISTNAME=	jakarta-tomcat-3.2.4-src
 PKGNAME=	ap-jk-3.2.4
@@ -11,7 +11,7 @@ COMMENT=	improved connector for accessing Jakarta Tomcat or JServ from Apache
 
 DEPENDS+=	apache{,6}-1.3.*:../../www/apache
 
-USE_JAVA=	yes
+USE_JAVA=	run
 USE_PERL5=	build	# for "apxs"
 
 EXTRACT_ELEMENTS=	${DISTNAME}/src/native
