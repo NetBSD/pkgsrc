@@ -1,0 +1,30 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/12/24 00:44:38 hubertf Exp $
+
+--- tload.c.orig	Fri Dec 24 00:45:47 1999
++++ tload.c	Fri Dec 24 00:52:03 1999
+@@ -34,6 +34,25 @@
+ extern int optind;
+ extern char *optarg;
+ 
++#ifdef __NetBSD__
++void
++display_version(void)
++{
++	printf("procps 2.0.6, NetBSD port\n");
++}
++
++
++int
++loadavg(double *l0, double *l1, double *l2)
++{
++	double l[3];
++	getloadavg(l, 3);
++	*l0 = l[0];
++	*l1 = l[1];
++	*l2 = l[2];
++}
++#endif
++
+ void alrm(int n)
+ {
+     signal(SIGALRM, alrm);

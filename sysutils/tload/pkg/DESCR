@@ -1,0 +1,6 @@
+tload prints a graph of the current system load average to the
+specified tty (or the tty of the tload process if none is specified),
+similar to what xload(1) does.
+
+This package is the only program from the Linux procps suite that is
+not part of NetBSD or available else where.
