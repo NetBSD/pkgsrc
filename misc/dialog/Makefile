@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 1998/05/26 22:07:19 tron Exp $
+# $NetBSD: Makefile,v 1.2 1998/06/22 12:52:31 agc Exp $
 #
 
 DISTNAME=       dialog-0.6z
@@ -12,7 +12,6 @@ DEPENDS+=	ncurses-1.9.9g:../../devel/ncurses
 
 NO_CONFIGURE=	yes
 USE_GMAKE=	yes
-MAN1=		dialog.1
 
 post-install:
 	@${MKDIR} ${PREFIX}/share/examples/dialog
