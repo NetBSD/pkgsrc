@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.4 1998/08/07 11:13:48 agc Exp $
+$NetBSD: patch-aa,v 1.5 1999/11/12 14:10:53 sommerfeld Exp $
 
---- rsaglue.c.orig	Tue Jan 20 07:24:08 1998
-+++ rsaglue.c	Tue Feb 17 12:30:15 1998
+--- rsaglue.c.orig	Wed May 12 07:19:28 1999
++++ rsaglue.c	Fri Nov 12 08:40:02 1999
 @@ -71,8 +71,7 @@
     interface without modifying RSAREF. */
  
@@ -9,6 +9,28 @@ $NetBSD: patch-aa,v 1.4 1998/08/07 11:13:48 agc Exp $
 -#include "rsaref2/source/global.h"
 -#include "rsaref2/source/rsaref.h"
 +#include <rsaref/rsaref.h>
-
+ 
  /* Convert an integer from gmp to rsaref representation. */
  
+@@ -139,6 +138,10 @@
+ 
+   input_bits = mpz_sizeinbase(input, 2);
+   input_len = (input_bits + 7) / 8;
++  if (input_len >= MAX_RSA_MODULUS_LEN)
++    fatal("Input data has too many bits for RSAREF to handle (max %d).",
++	MAX_RSA_MODULUS_BITS);
++  
+   gmp_to_rsaref(input_data, input_len, input);
+ 
+   rsaref_public_key(&public_key, key);
+@@ -172,6 +175,10 @@
+   
+   input_bits = mpz_sizeinbase(input, 2);
+   input_len = (input_bits + 7) / 8;
++  if (input_len >= MAX_RSA_MODULUS_LEN)
++    fatal("Input data has too many bits for RSAREF to handle (max %d).",
++	MAX_RSA_MODULUS_BITS);
++
+   gmp_to_rsaref(input_data, input_len, input);
+ 
+   rsaref_private_key(&private_key, key);
