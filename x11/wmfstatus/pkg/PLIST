@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/01/07 05:43:22 sakamoto Exp $
+bin/wmfstatus
+share/doc/wmfstatus/HINTS
+share/doc/wmfstatus/README
+@dirrm share/doc/wmfstatus
