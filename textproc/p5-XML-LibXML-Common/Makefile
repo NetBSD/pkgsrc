@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/01/23 21:50:48 jmmv Exp $
+# $NetBSD: Makefile,v 1.4 2004/02/17 05:55:27 minskim Exp $
 #
 
 DISTNAME=	XML-LibXML-Common-0.13
@@ -12,9 +12,9 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/~phish/XML-LibXML-Common/
 COMMENT=	Routines and constants common for XML::LibXML and XML::GDOME
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/XML/LibXML/Common/.packlist
 
-.include "../../textproc/libxml2/buildlink2.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
