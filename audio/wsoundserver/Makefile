@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2003/04/26 09:49:36 jmmv Exp $
+# $NetBSD: Makefile,v 1.14 2003/04/30 19:10:32 jmmv Exp $
 #
 
 DISTNAME=	WSoundServer-0.4.0
 PKGNAME=	wsoundserver-0.4.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	audio wm windowmaker
 MASTER_SITES=	ftp://shadowmere.student.utwente.nl/pub/WindowMaker/
 
@@ -16,7 +16,13 @@ USE_BUILDLINK2=		YES
 USE_X11BASE=		YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
+USE_PKGINSTALL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
+
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}	# not really needed
+PKG_SYSCONFSUBDIR=	WindowMaker
+EGDIR=			${PREFIX}/share/examples/wsoundserver
+CONF_FILES=		${EGDIR}/WMSound ${PKG_SYSCONFDIR}/WMSound
 
 post-patch:
 	@cd ${WRKSRC}/doc && for f in *; do				\
@@ -31,7 +37,8 @@ post-patch:
 		${FILESDIR}/WMSound > ${WRKSRC}/WMSound
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/WMSound ${PREFIX}/etc/WindowMaker
+	${INSTALL_DATA_DIR} ${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/WMSound ${EGDIR}
 
 .include "../../audio/libaudiofile/buildlink2.mk"
 .include "../../devel/libdockapp/buildlink2.mk"
