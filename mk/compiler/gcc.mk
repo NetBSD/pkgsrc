@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.10 2004/02/02 10:49:26 jlam Exp $
+# $NetBSD: gcc.mk,v 1.11 2004/02/02 12:27:12 jlam Exp $
 
 .if !defined(COMPILER_GCC_MK)
 COMPILER_GCC_MK=	defined
@@ -177,15 +177,12 @@ _GCC_SUBPREFIX!=	\
 		${ECHO} "not_found/";					\
 	fi
 _GCC_PREFIX=		${LOCALBASE}/${_GCC_SUBPREFIX}
-_GCC_LIBGCCDIR!=	\
+_GCC_ARCHDIR!=		\
 	if [ -x ${_GCC_PREFIX}bin/gcc ]; then				\
 		${DIRNAME} `${_GCC_PREFIX}bin/gcc --print-libgcc-file-name`; \
 	else								\
 		${ECHO} "not_found";					\
 	fi
-_GCC_ARCHSUBDIR=	${_GCC_LIBGCCDIR:S|^${LOCALBASE}/${_GCC_SUBPREFIX}||}
-_GCC_ARCHDIR=		${_GCC_PREFIX}${_GCC_ARCHSUBDIR}
-
 _GCC_LDFLAGS=	# empty
 .for _dir_ in ${_GCC_ARCHDIR} ${_GCC_PREFIX}lib
 _GCC_LDFLAGS+=	-L${_dir_} ${_COMPILER_LD_FLAG}${RPATH_FLAG}${_dir_}
