@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2004/01/06 00:08:06 xtraeme Exp $
+# $NetBSD: Makefile.common,v 1.2 2004/01/06 00:22:05 xtraeme Exp $
 
 DISTNAME=	cvsup-snap-16.1h
 CATEGORIES=	devel net
@@ -12,7 +12,7 @@ ONLY_FOR_PLATFORM=	FreeBSD-*-i386 NetBSD-*-i386
 
 .include "../../mk/bsd.prefs.mk"
 
-BUILD_DEPENDS=	ezm3-*:../../lang/ezm3-${OPSYS}-${MACHINE_ARCH}
+BUILD_DEPENDS=	ezm3>=1.1:../../lang/ezm3
 
 CONFLICTS=	cvsup-*
 MAKE_FLAGS+=	PREFIX=${PREFIX} M3FLAGS="${M3FLAGS}"
@@ -23,7 +23,7 @@ DESCR_SRC=	${.CURDIR}/../../devel/cvsup/DESCR
 DISTINFO_FILE=	${.CURDIR}/../../devel/cvsup/distinfo
 PLIST_SRC=	${.CURDIR}/../../devel/cvsup/PLIST
 PATCHDIR=	${.CURDIR}/../../devel/cvsup/patches
-FILESDIR=	${.CURDIR}/../../devel/cvsup/files
+FILESDIR=	${.CURDIR}/../../devel/cvsup-bin/files
 
 post-extract:
 	@${MV} ${WRKSRC}/Makefile ${WRKSRC}/Makefile.in
