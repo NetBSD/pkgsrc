@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.371 1999/11/22 23:42:21 dmcmahill Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.372 1999/11/23 14:31:24 dmcmahill Exp $
 #
 # This file is in the public domain.
 #
@@ -130,8 +130,8 @@ BUILD_DEPENDS+=       f2c-f77:${PKGSRCDIR}/lang/f2c
 .endif
 FC=             ${PKG_FC}
 F77=            ${PKG_FC}
-MAKE_ENV+=	F77=${F77}
-MAKE_ENV+=	FC=${FC}
+MAKE_ENV+=	F77="${F77}"
+MAKE_ENV+=	FC="${FC}"
 .endif
 
 .if defined(INFO_FILES)
