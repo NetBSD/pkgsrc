@@ -1,4 +1,4 @@
-# $NetBSD: SunOS.mk,v 1.8 2005/01/25 18:15:58 tv Exp $
+# $NetBSD: SunOS.mk,v 1.9 2005/01/28 21:05:59 jlam Exp $
 #
 # Variable definitions for the SunOS/Solaris operating system.
 
@@ -12,7 +12,6 @@ CMP?=		cmp
 CP?=		/usr/bin/cp
 CUT?=		/usr/bin/cut
 DATE?=		/usr/xpg4/bin/date
-DC?=		/usr/bin/dc
 DIRNAME?=	/usr/bin/dirname
 ECHO?=		/usr/ucb/echo
 ECHO_N?=	${ECHO} -n
