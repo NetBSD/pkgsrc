@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/09/05 18:21:13 jwise Exp $
+# $NetBSD: Makefile,v 1.4 2000/10/01 14:12:15 rh Exp $
 #
 
 DISTNAME=	expect
@@ -27,6 +27,9 @@ CONFIGURE_ARGS= --enable-shared \
 		--with-tkinclude=${PREFIX}/include/tk \
 
 .include "../../mk/bsd.prefs.mk"
+
+pre-configure:
+	cd ${WRKSRC} && ${TOUCH} configure
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/expectk ${PREFIX}/bin
