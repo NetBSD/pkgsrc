@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST.kmtrace,v 1.1 2001/11/13 21:16:54 jlam Exp $
+bin/kmtrace
+include/ktrace.h
+lib/libktrace.a
+lib/libktrace.la
+lib/libktrace.so
+lib/libktrace.so.1
+lib/libktrace.so.1.0
+share/kde/apps/kmtrace/kde.excludes
+@dirrm share/kde/apps/kmtrace

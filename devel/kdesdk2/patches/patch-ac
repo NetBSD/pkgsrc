@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2001/11/13 21:16:55 jlam Exp $
+
+--- kstartperf/Makefile.in.orig	Fri Sep  7 20:49:17 2001
++++ kstartperf/Makefile.in
+@@ -238,7 +238,7 @@
+ CPPFLAGS = @CPPFLAGS@
+ LDFLAGS = @LDFLAGS@
+ LIBS = @LIBS@
+-libkstartperf_la_LIBADD = 
++libkstartperf_la_LIBADD = -lltdl
+ #>- libkstartperf_la_OBJECTS =  libkstartperf.lo
+ #>+ 1
+ libkstartperf_la_OBJECTS = libkstartperf.lo
