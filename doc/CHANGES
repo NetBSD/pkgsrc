@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6751 2004/08/01 18:25:31 schmonz Exp $
+$NetBSD: CHANGES,v 1.6752 2004/08/01 18:37:01 tv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3673,3 +3673,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated getmail to 4.0.2 [schmonz 2004-08-01]
 	Updated gcc34-ada to 3.4.1nb4 [shannonjr 2004-08-01]
 	Updated user_darwin to 20040801 [schmonz 2004-08-01]
+	Updated hashcash to 0.32 [tv 2004-08-01]
