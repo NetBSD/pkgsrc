@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.9.2.1 2003/12/11 19:50:32 agc Exp $
+
+--- configure.in	2003/12/10 18:13:14	1.1
++++ configure.in	2003/12/10 18:13:26
+@@ -486,6 +486,7 @@
+ AC_CHECK_LIB(gtksuperwin, gdk_superwin_get_type, [_mozilla_gtk_super_win_libs="-lgtksuperwin"],[],[$_PTHREAD_LDFLAGS])
+ 
+ dnl gtk moz embed library
++CC="$CXX"
+ LDFLAGS="$_save_ldflags -L$_mozilla_lib_place $_mozilla_all_nspr_flags -lgtkembedmoz $_mozilla_xpcom_libs $_mozilla_gtk_super_win_libs"
+ AC_CHECK_LIB(gtkembedmoz, gtk_moz_embed_get_type, [_mozilla_gtk_moz_embed_libs="-lgtkembedmoz"])
+ 
