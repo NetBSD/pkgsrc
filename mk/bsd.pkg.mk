@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.451 2000/06/02 23:30:52 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.452 2000/06/03 07:15:28 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -234,9 +234,7 @@ MAKE_ENV+=		PATH=${PATH}:${LOCALBASE}/bin:${X11BASE}/bin PREFIX=${PREFIX} LOCALB
 MAKE_ENV+=		MOTIFLIB="${MOTIFLIB}"
 .endif
 
-.if exists(/usr/bin/fetch)
-FETCH_CMD?=		/usr/bin/fetch
-.elif exists(${LOCALBASE}/bsd/bin/ftp)
+.if exists(${LOCALBASE}/bsd/bin/ftp)			# Zoularis
 FETCH_CMD?=		${LOCALBASE}/bsd/bin/ftp
 .else
 FETCH_CMD?=		/usr/bin/ftp
@@ -342,7 +340,11 @@ _PKG_DEBUG=		set -x;
 
 # If WRKOBJDIR is set, use that tree to build
 .ifdef WRKOBJDIR
+.  if !defined(__canonical_PKGSRCDIR)
 __canonical_PKGSRCDIR!=	cd ${PKGSRCDIR} && pwd -P
+MAKEFLAGS+=	__canonical_PKGSRCDIR=${__canonical_PKGSRCDIR}
+.  endif # !defined(__canonical_PKGSRCDIR)
+# Cannot put this into MAKEFLAGS, as it changes:
 __canonical_CURDIR!=	cd ${.CURDIR} && pwd -P
 PKGSRC_SUBDIR=		${__canonical_CURDIR:S,${__canonical_PKGSRCDIR}/,,}
 BUILD_ROOT=     	${WRKOBJDIR}
@@ -536,9 +538,9 @@ CHOWN?=		/usr/sbin/chown
 CHGRP?=		/usr/bin/chgrp
 CP?=		/bin/cp
 CUT?=		/usr/bin/cut
-ECHO?=		/bin/echo
+ECHO?=		echo				# Shell builtin
 EGREP?=		/usr/bin/egrep
-FALSE?=		/usr/bin/false
+FALSE?=		false				# Shell builtin
 FILE?=		/usr/bin/file
 FIND?=		/usr/bin/find
 GREP?=		/usr/bin/grep
@@ -564,11 +566,11 @@ SETENV?=	/usr/bin/env
 SH?=		/bin/sh
 SU?=		/usr/bin/su
 TAIL?=		/usr/bin/tail
-TEST?=		/bin/test
+TEST?=		test				# Shell builtin
 TOUCH?=		/usr/bin/touch
 TR?=		/usr/bin/tr
-TRUE?=		/usr/bin/true
-TYPE?=		type
+TRUE?=		true				# Shell builtin
+TYPE?=		type				# Shell builtin
 .endif # !SunOS
 
 .if (defined(DESTDIR) && defined(PKGTOOLS_VERSION))
@@ -592,7 +594,7 @@ PKGTOOLS_VERSION=${PKGTOOLS_REQD}
 PKGTOOLS_VERSION!= ${IDENT} ${PKG_CREATE} ${PKG_DELETE} ${PKG_INFO} ${PKG_ADD} | ${AWK} '$$1 ~ /\$$NetBSD/ && $$2 !~ /^crt0/ { gsub("/", "", $$4); print $$4 }' | sort | ${TAIL} -n 1
 .endif
 .endif
-MAKEFLAGS+=	" PKGTOOLS_VERSION=${PKGTOOLS_VERSION}"
+MAKEFLAGS+=	PKGTOOLS_VERSION="${PKGTOOLS_VERSION}"
 
 # Latest version of pkgtools required for this file.
 PKGTOOLS_REQD=		20000202
@@ -605,8 +607,8 @@ uptodate-pkgtools:
 		pkg_install-*)						\
 			;;						\
 		*)							\
-			${ECHO} "Your package tools need to be updated to `${ECHO} ${PKGTOOLS_REQD} | ${SED} -e 's|\(....\)\(..\)\(..\)|\1/\2/\3|'` versions."; \
-			${ECHO} "The installed package tools were last updated on `${ECHO} ${PKGTOOLS_VERSION} | ${SED} -e 's|\(....\)\(..\)\(..\)|\1/\2/\3|'`."; \
+			${ECHO} "Your package tools need to be updated to ${PKGTOOLS_REQD:C|(....)(..)(..)|\1/\2/\3|} versions."; \
+			${ECHO} "The installed package tools were last updated on ${PKGTOOLS_VERSION:C|(....)(..)(..)|\1/\2/\3|}."; \
 			${ECHO} "Please make and install the pkgsrc/pkgtools/pkg_install package."; \
 			${FALSE} ;;					\
 		esac							\
@@ -624,7 +626,7 @@ SIZE_ALL_FILE=		${WRKDIR}/SizeAll
 PKG_ARGS=		-v -c ${COMMENT} -d ${DESCR} -f ${PLIST} -l
 PKG_ARGS+=		-b ${BUILD_VERSION_FILE} -B ${BUILD_INFO_FILE}
 PKG_ARGS+=		-s ${SIZE_PKG_FILE} -S ${SIZE_ALL_FILE}
-PKG_ARGS+=		-p ${PREFIX} -P "`${MAKE} package-depends PACKAGE_DEPENDS_QUICK=true|sort -u`"
+PKG_ARGS+=		-p ${PREFIX} -P "`${MAKE} ${MAKEFLAGS} package-depends PACKAGE_DEPENDS_QUICK=true|sort -u`"
 .ifdef CONFLICTS
 PKG_ARGS+=		-C "${CONFLICTS}"
 .endif
@@ -1092,7 +1094,7 @@ _FETCH_FILE=								\
 
 _CHECK_DIST_PATH=							\
 	if [ "X${DIST_PATH}" != "X" ]; then				\
-		for d in "" `${ECHO} ${DIST_PATH} | ${TR} ':' ' '`; do	\
+		for d in "" ${DIST_PATH:S/:/ /g}; do	\
 			if [ "X$$d" = "X" -o "X$$d" = "X${DISTDIR}" ]; then continue; fi; \
 			if [ -f $$d/${DIST_SUBDIR}/$$bfile ]; then	\
 				${ECHO} "Using $$d/${DIST_SUBDIR}/$$bfile"; \
@@ -1106,7 +1108,6 @@ _CHECK_DIST_PATH=							\
 #
 # Sort the master site list according to the patterns in MASTER_SORT
 #
-
 MASTER_SORT?=
 MASTER_SORT_REGEX?=
 MASTER_SORT_REGEX+= ${MASTER_SORT:S/./\\./g:C/.*/:\/\/[^\/]*&\//}
@@ -1115,14 +1116,15 @@ MASTER_SORT_AWK= BEGIN { RS = " "; ORS = " "; IGNORECASE = 1 ; gl = "${MASTER_SO
 .for srt in ${MASTER_SORT_REGEX}
 MASTER_SORT_AWK+= /${srt:C/\//\\\//g}/ { good["${srt}"] = good["${srt}"] " " $$0 ; next; } 
 .endfor
-MASTER_SORT_AWK+= { rest = rest " " $$0; } END { n=split(gl, gla); for(i=1;i<=n;i++) { print good[gla[i]]; } print rest; } 
-SORTED_MASTER_SITES!= echo '${MASTER_SITES}' | ${AWK} '${MASTER_SORT_AWK}'
+MASTER_SORT_AWK+= { rest = rest " " $$0; } END { n=split(gl, gla); for(i=1;i<=n;i++) { print good[gla[i]]; } print rest; }
+SORTED_MASTER_SITES_CMD= echo '${MASTER_SITES}' | ${AWK} '${MASTER_SORT_AWK}'
+
 
 .if !target(do-fetch)
 do-fetch:
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${_DISTDIR}
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${_DISTDIR};			\
-	 sites="${SORTED_MASTER_SITES}";				\
+	 sites=`${SORTED_MASTER_SITES_CMD}`;				\
 	 for file in "" ${_DISTFILES}; do				\
 		if [ "X$$file" = X"" ]; then continue; fi;		\
 		bfile=`${BASENAME} $$file`;				\
@@ -1160,10 +1162,10 @@ show-downlevel:
 	${_PKG_SILENT}${_PKG_DEBUG}${DO_NADA}
 .else
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	base=`${ECHO} ${PKGNAME} | ${SED} -e 's/-\([^-]*\)$$/<\1/'`;	\
+	base="${PKGNAME:C/-([^-]*)$/<\1/}";				\
 	found=`${PKG_INFO} -e "$$base" || ${TRUE}`;			\
 	if [ "X$$found" != "X" -a "X$$found" != "X${PKGNAME}" ]; then	\
-		base=`${ECHO} $$base | ${SED} -e 's/<[^<]*$$//'`;	\
+		base=${PKGNAME:C/-([^-]*)$//g};	\
 		${ECHO} "$$base package: $$found installed, pkgsrc version ${PKGNAME}"; \
 	fi
 .endif
@@ -1175,11 +1177,9 @@ show-pkgsrc-dir:
 	${_PKG_SILENT}${_PKG_DEBUG}${DO_NADA}
 .else
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	base=`${ECHO} ${PKGNAME} | ${SED} -e 's|\(.*\)-.*|\1|'`;	\
-	found=`${PKG_INFO} -e "$$base" || ${TRUE}`;			\
+	found=`${PKG_INFO} -e "${PKGNAME:C/-[^-]*$/-[0-9]*/}" || ${TRUE}`;			\
 	if [ "X$$found" != "X" ]; then					\
-		pkgsrcdir=`(cd ../.. && /bin/pwd)`;			\
-		${ECHO} "`pwd | ${SED} -e 's|^'$$pkgsrcdir'/||'`";	\
+		${ECHO} ${.CURDIR:C,.*/([^/]*/[^/]*)$,\1,} ;		\
 	fi
 .endif
 .endif
@@ -1359,9 +1359,9 @@ do-package: ${PLIST} ${DESCR}
 			fi;						\
 		fi;							\
 		if ${PKG_CREATE} ${PKG_ARGS} ${PKGFILE}; then		\
-			${MAKE} ${.MAKEFLAGS} package-links;		\
+			${MAKE} ${MAKEFLAGS} package-links;		\
 		else							\
-			${MAKE} ${.MAKEFLAGS} delete-package;		\
+			${MAKE} ${MAKEFLAGS} delete-package;		\
 			exit 1;						\
 		fi;							\
 	fi
@@ -1371,7 +1371,7 @@ do-package: ${PLIST} ${DESCR}
 
 .if !target(package-links)
 package-links:
-	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} ${.MAKEFLAGS} delete-package-links
+	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} ${MAKEFLAGS} delete-package-links
 	${_PKG_SILENT}${_PKG_DEBUG}for cat in ${CATEGORIES}; do		\
 		if [ ! -d ${PACKAGES}/$$cat ]; then			\
 			${MKDIR} ${PACKAGES}/$$cat;			\
@@ -1392,7 +1392,7 @@ delete-package-links:
 
 .if !target(delete-package)
 delete-package:
-	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} ${.MAKEFLAGS} delete-package-links
+	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} ${MAKEFLAGS} delete-package-links
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${PKGFILE}
 .endif
 
@@ -1421,15 +1421,15 @@ PLIST_SRC=
 
 _PORT_USE: .USE
 .if make(real-extract)
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${.MAKEFLAGS} build-depends misc-depends DEPENDS_TARGET=${DEPENDS_TARGET}
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} build-depends misc-depends DEPENDS_TARGET=${DEPENDS_TARGET}
 .endif
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${SETENV} ${MAKE_ENV} ${MAKE} ${.MAKEFLAGS} ${.TARGET:S/^real-/pre-/}
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${SETENV} ${MAKE_ENV} ${MAKE} ${MAKEFLAGS} ${.TARGET:S/^real-/pre-/}
 	${_PKG_SILENT}${_PKG_DEBUG}if [ -f ${SCRIPTDIR}/${.TARGET:S/^real-/pre-/} ]; then		\
 		cd ${.CURDIR} && ${SETENV} ${SCRIPTS_ENV} ${SH}		\
 			${SCRIPTDIR}/${.TARGET:S/^real-/pre-/};		\
 	fi
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${SETENV} ${MAKE_ENV} ${MAKE} ${.MAKEFLAGS} ${.TARGET:S/^real-/do-/}
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${SETENV} ${MAKE_ENV} ${MAKE} ${.MAKEFLAGS} ${.TARGET:S/^real-/post-/}
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${SETENV} ${MAKE_ENV} ${MAKE} ${MAKEFLAGS} ${.TARGET:S/^real-/do-/}
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${SETENV} ${MAKE_ENV} ${MAKE} ${MAKEFLAGS} ${.TARGET:S/^real-/post-/}
 	${_PKG_SILENT}${_PKG_DEBUG}if [ -f ${SCRIPTDIR}/${.TARGET:S/^real-/post-/} ]; then	\
 		cd ${.CURDIR} && ${SETENV} ${SCRIPTS_ENV} ${SH}		\
 			${SCRIPTDIR}/${.TARGET:S/^real-/post-/};	\
@@ -1476,7 +1476,7 @@ root-install:
 		${ECHO_MSG} "If this is not desired, set it to an appropriate value (${DEF_UMASK})"; \
 		${ECHO_MSG} "and install this package again by \`\`${MAKE} deinstall reinstall''."; \
 	fi
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${.MAKEFLAGS} run-depends
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} run-depends
 .if !defined(NO_MTREE)
 	${_PKG_SILENT}${_PKG_DEBUG}if [ `${ID} -u` = 0 ]; then		\
 		if [ ! -f ${MTREE_FILE} ]; then				\
@@ -1493,13 +1493,13 @@ root-install:
 		${ECHO_MSG} "Become root and try again to ensure correct permissions."; \
 	fi
 .endif # !NO_MTREE
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${SETENV} ${MAKE_ENV} ${MAKE} ${.MAKEFLAGS} pre-install
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${SETENV} ${MAKE_ENV} ${MAKE} ${MAKEFLAGS} pre-install
 	${_PKG_SILENT}${_PKG_DEBUG}if [ -f ${SCRIPTDIR}/pre-install ]; then		\
 		cd ${.CURDIR} && ${SETENV} ${SCRIPTS_ENV} ${SH}		\
 			${SCRIPTDIR}/pre-install;		\
 	fi
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${SETENV} ${MAKE_ENV} ${MAKE} ${.MAKEFLAGS} do-install
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${SETENV} ${MAKE_ENV} ${MAKE} ${.MAKEFLAGS} post-install
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${SETENV} ${MAKE_ENV} ${MAKE} ${MAKEFLAGS} do-install
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${SETENV} ${MAKE_ENV} ${MAKE} ${MAKEFLAGS} post-install
 	${_PKG_SILENT}${_PKG_DEBUG}if [ -f ${SCRIPTDIR}/post-install ]; then	\
 		cd ${.CURDIR} && ${SETENV} ${SCRIPTS_ENV} ${SH}		\
 			${SCRIPTDIR}/post-install;	\
@@ -1509,7 +1509,7 @@ root-install:
 	install-info --remove --info-dir=${PREFIX}/info ${PREFIX}/info/${f}; \
 	install-info --info-dir=${PREFIX}/info ${PREFIX}/info/${f}
 .endfor
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${.MAKEFLAGS} ${PLIST}
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} ${PLIST}
 	${_PKG_SILENT}${_PKG_DEBUG}newmanpages=`${EGREP} -h		\
 		'^([^@/]*/)*man/([^/]*/)?(man[1-9ln]/.*\.[1-9ln]|cat[1-9ln]/.*\.0)(\.gz)?$$' \
 		${PLIST} 2>/dev/null || ${TRUE}`;			\
@@ -1555,7 +1555,7 @@ root-install:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	sos=`${EGREP} -h -x '.*/lib[^/]+\.so\.[0-9]+(\.[0-9]+)+' ${PLIST} || ${TRUE}`; \
 	if [ "X$$sos" != "X" ]; then					\
-		shlib_type=`${MAKE} ${.MAKEFLAGS} show-shlib-type`;	\
+		shlib_type=`${MAKE} ${MAKEFLAGS} show-shlib-type`;	\
 		case "$$shlib_type" in					\
 		"ELF")							\
 			${ECHO_MSG} "${_PKGSRC_IN}> [Automatic ELF shared object handling]";\
@@ -1624,7 +1624,7 @@ root-install:
 	@${ECHO_MSG} ""
 .endif
 .if !defined(NO_PKG_REGISTER)
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${.MAKEFLAGS} fake-pkg
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} fake-pkg
 .endif # !NO_PKG_REGISTER
 	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${WRKDIR}/.install_done
 
@@ -1660,7 +1660,7 @@ show-shlib-type:
 
 .if !target(fetch)
 fetch:
-	@cd ${.CURDIR} && ${MAKE} ${.MAKEFLAGS} real-fetch
+	@cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} real-fetch
 .endif
 
 .if !target(extract)
@@ -1688,17 +1688,17 @@ package: uptodate-pkgtools install ${PACKAGE_COOKIE}
 .endif
 
 ${EXTRACT_COOKIE}:
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${.MAKEFLAGS} real-extract DEPENDS_TARGET=${DEPENDS_TARGET}
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} real-extract DEPENDS_TARGET=${DEPENDS_TARGET}
 ${PATCH_COOKIE}:
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${.MAKEFLAGS} real-patch
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} real-patch
 ${CONFIGURE_COOKIE}:
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${.MAKEFLAGS} real-configure
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} real-configure
 ${BUILD_COOKIE}:
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${.MAKEFLAGS} real-build
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} real-build
 ${INSTALL_COOKIE}:
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${.MAKEFLAGS} real-install
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} real-install
 ${PACKAGE_COOKIE}:
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${.MAKEFLAGS} real-package
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} real-package
 
 # And call the macros
 
@@ -1722,7 +1722,7 @@ pkg-su-install:
 	@${ECHO_MSG} "${_PKGSRC_IN}> Installing for ${PKGNAME}"
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if [ `${ID} -u` = 0 ]; then					\
-		${MAKE} ${.MAKEFLAGS} root-install;			\
+		${MAKE} ${MAKEFLAGS} root-install;			\
 	elif [ "X${BATCH}" != X"" ]; then				\
 		${ECHO_MSG} "Warning: Batch mode, not superuser, can't run mtree."; \
 		${ECHO_MSG} "Become root and try again to ensure correct permissions."; \
@@ -1741,7 +1741,7 @@ pkg-su-install:
 		fi;                                             	\
 		${ECHO_MSG} "${_PKGSRC_IN}> Becoming root@`/bin/hostname` to install ${PKGNAME}."; \
 		${ECHO_MSG} -n "`${ECHO} ${SU_CMD} | ${AWK} '{ print $$1 }'` ";\
-		${SU_CMD} "cd ${.CURDIR}; $$make $$args ${.MAKEFLAGS} root-install"; \
+		${SU_CMD} "cd ${.CURDIR}; $$make $$args ${MAKEFLAGS} root-install"; \
 	fi
 
 # Empty pre-* and post-* targets, note we can't use .if !target()
@@ -1767,7 +1767,7 @@ post-${name}:
 
 .if !target(checkpatch)
 checkpatch:
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} PATCH_CHECK_ONLY=yes ${.MAKEFLAGS} patch
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} PATCH_CHECK_ONLY=yes ${MAKEFLAGS} patch
 .endif
 
 # Reinstall
@@ -1777,7 +1777,7 @@ checkpatch:
 .if !target(reinstall)
 reinstall:
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${INSTALL_COOKIE} ${PACKAGE_COOKIE} ${PLIST}
-	${_PKG_SILENT}${_PKG_DEBUG}DEPENDS_TARGET=${DEPENDS_TARGET} ${MAKE} install
+	${_PKG_SILENT}${_PKG_DEBUG}DEPENDS_TARGET=${DEPENDS_TARGET} ${MAKE} ${MAKEFLAGS} install
 .endif
 
 # Deinstall
@@ -1791,11 +1791,11 @@ pkg-su-deinstall: uptodate-pkgtools
 	@${ECHO_MSG} "${_PKGSRC_IN}> Deinstalling for ${PKGNAME}"
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if [ `${ID} -u` = 0 ]; then					\
-		${MAKE} ${.MAKEFLAGS} root-deinstall;			\
+		${MAKE} ${MAKEFLAGS} root-deinstall;			\
 	else								\
 		make=`${TYPE} ${MAKE} | ${AWK} '{ print $$NF }'`;	\
 		${ECHO_MSG} "${_PKGSRC_IN}> Becoming root@`/bin/hostname` to deinstall ${PKGNAME}."; \
-		${SU_CMD} "cd ${.CURDIR}; $$make ${.MAKEFLAGS} PKG_DEBUG_LEVEL=${PKG_DEBUG_LEVEL} root-deinstall DEINSTALLDEPENDS=${DEINSTALLDEPENDS}"; \
+		${SU_CMD} "cd ${.CURDIR}; $$make ${MAKEFLAGS} PKG_DEBUG_LEVEL=${PKG_DEBUG_LEVEL} root-deinstall DEINSTALLDEPENDS=${DEINSTALLDEPENDS}"; \
 	fi
 
 
@@ -1851,27 +1851,27 @@ update:
 RESUMEUPDATE?=	NO
 
 update:
-	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} ${.MAKEFLAGS} ${DDIR}
+	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} ${MAKEFLAGS} ${DDIR}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-		${MAKE} ${.MAKEFLAGS} deinstall DEINSTALLDEPENDS=ALL
+		${MAKE} ${MAKEFLAGS} deinstall DEINSTALLDEPENDS=ALL
 .endif
 .if ${REINSTALL} == "NO"
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-		${MAKE} ${DEPENDS_TARGET} KEEP_WRKDIR=YES
+		${MAKE} ${MAKEFLAGS} ${DEPENDS_TARGET} KEEP_WRKDIR=YES
 .else
-	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} ${.MAKEFLAGS} reinstall
+	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} ${MAKEFLAGS} reinstall
 .endif
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	[ -s ${DDIR} ] && for dep in `${CAT} ${DDIR}` ; do		\
 		(if cd "../../$${dep}" ; then				\
 			${ECHO_MSG} "${_PKGSRC_IN}> Installing in $${dep}" &&	\
 			if [ "${RESUMEUPDATE}" = "NO" ] ; then		\
-				${MAKE} ${.MAKEFLAGS} deinstall;	\
+				${MAKE} ${MAKEFLAGS} deinstall;	\
 			fi &&						\
 			if [ "${REINSTALL}" = "NO" ] ; then		\
-				${MAKE} ${.MAKEFLAGS} ${DEPENDS_TARGET};\
+				${MAKE} ${MAKEFLAGS} ${DEPENDS_TARGET};\
 			else						\
-				${MAKE} ${.MAKEFLAGS} reinstall;	\
+				${MAKE} ${MAKEFLAGS} reinstall;	\
 			fi ;						\
 		else							\
 			${ECHO_MSG} "${_PKGSRC_IN}> Skipping removed directory $${dep}";\
@@ -1879,27 +1879,27 @@ update:
 	done
 .if ${NOCLEAN} == "NO"
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-		${MAKE} ${.MAKEFLAGS} clean-update CLEAR_DIRLIST=YES
+		${MAKE} ${MAKEFLAGS} clean-update CLEAR_DIRLIST=YES
 .endif
 
 
 clean-update:
-	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} ${.MAKEFLAGS} ${DDIR}
+	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} ${MAKEFLAGS} ${DDIR}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if [ -s ${DDIR} ] ; then					\
 		for dep in `${CAT} ${DDIR}` ; do			\
 			(if cd "../../$${dep}" ; then			\
-				${MAKE} ${.MAKEFLAGS} clean ;		\
+				${MAKE} ${MAKEFLAGS} clean ;		\
 			else						\
 				${ECHO_MSG} "${_PKGSRC_IN}> Skipping removed directory $${dep}";\
 			fi) ;						\
 		done ;							\
 	fi
 .ifdef CLEAR_DIRLIST
-	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} ${.MAKEFLAGS} clean
+	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} ${MAKEFLAGS} clean
 .else
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-		${MAKE} ${.MAKEFLAGS} clean update-dirlist		\
+		${MAKE} ${MAKEFLAGS} clean update-dirlist		\
 		DIRLIST="`${CAT} ${DDIR}`" PKGLIST="`${CAT} ${DLIST}`"
 .endif
 
@@ -1940,7 +1940,7 @@ ${DLIST}:
 # re-distributed freely
 mirror-distfiles:
 .if (${MIRROR_DISTFILE} == "yes")
-	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} fetch NO_IGNORE=yes NO_CHECK_DEPENDS=yes
+	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} ${MAKEFLAGS} fetch NO_IGNORE=yes NO_CHECK_DEPENDS=yes
 .endif
 
 
@@ -1954,7 +1954,7 @@ pre-clean:
 .if !target(clean)
 clean: pre-clean
 .if (${CLEANDEPENDS} != "NO")
-	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} clean-depends
+	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} ${MAKEFLAGS} clean-depends
 .endif
 	@${ECHO_MSG} "${_PKGSRC_IN}> Cleaning for ${PKGNAME}"
 .if !defined(NO_WRKDIR)
@@ -1985,7 +1985,7 @@ clean-depends:
 			          ${DEPENDS:C/^[^:]*://:C/:.*//} \
 			      ${RUN_DEPENDS:C/^[^:]*://:C/:.*//} | sort -u`; do \
 		if [ -d $$dir ] ; then					\
-			(cd $$dir && ${MAKE} CLEANDEPENDS=${CLEANDEPENDS} clean ); \
+			(cd $$dir && ${MAKE} ${MAKEFLAGS} CLEANDEPENDS=${CLEANDEPENDS} clean ); \
 		fi							\
 	done
 .endif
@@ -2028,15 +2028,15 @@ RECURSIVE_FETCH_LIST?=	YES
 
 .if !target(fetch-list)
 fetch-list:
-	@${MAKE} fetch-list-recursive RECURSIVE_FETCH_LIST=${RECURSIVE_FETCH_LIST} | sort -u
+	@${MAKE} ${MAKEFLAGS} fetch-list-recursive RECURSIVE_FETCH_LIST=${RECURSIVE_FETCH_LIST} | sort -u
 .endif # !target(fetch-list)
 
 .if !target(fetch-list-recursive)
 fetch-list-recursive:
-	@${MAKE} fetch-list-one-pkg
+	@${MAKE} ${MAKEFLAGS} fetch-list-one-pkg
 .if ${RECURSIVE_FETCH_LIST} != "NO"
 	@for dir in `${ECHO} "${BUILD_DEPENDS} ${DEPENDS} ${RUN_DEPENDS}" | ${TR} '\040' '\012' | ${SED} -e 's/^[^:]*://' -e 's/:.*//' | sort -u` ; do \
-		(cd $$dir && ${MAKE} fetch-list-recursive; );		\
+		(cd $$dir && ${MAKE} ${MAKEFLAGS} fetch-list-recursive; );		\
 	done
 .endif # ${RECURSIVE_FETCH_LIST} != "NO"
 .endif # !target(fetch-list-recursive)
@@ -2051,7 +2051,7 @@ fetch-list-one-pkg:
 		if [ "X$$file" = X"" ]; then continue; fi;		\
 		if [ ! -f $$file -a ! -f `${BASENAME} $$file` ]; then	\
 			${ECHO} -n "cd ${_DISTDIR} && [ -f $$file -o -f `${BASENAME} $$file` ] || " ; \
-			for site in "" ${SORTED_MASTER_SITES}; do	\
+			for site in "" `${SORTED_MASTER_SITES_CMD}`; do	\
 				if [ "X$$site" = X"" ]; then continue; fi; \
 				${ECHO} -n ${FETCH_CMD} ${FETCH_BEFORE_ARGS} $${site}$${file} "${FETCH_AFTER_ARGS}" '|| ' ; \
 			done;						\
@@ -2206,7 +2206,7 @@ PACKAGE_NAME_TYPE?=	name
 .if !target(package-name)
 package-name:
 .if (${PACKAGE_NAME_TYPE} == "html")
-	@${ECHO} '<A HREF="../../'`${MAKE} package-path | ${HTMLIFY}`'/README.html">'`${ECHO} ${PKGNAME} | ${HTMLIFY}`'</A>'
+	@${ECHO} '<A HREF="../../'`${MAKE} ${MAKEFLAGS} package-path | ${HTMLIFY}`'/README.html">'`${ECHO} ${PKGNAME} | ${HTMLIFY}`'</A>'
 .else
 	@${ECHO} '${PKGNAME}'
 .endif # PACKAGE_NAME_TYPE
@@ -2214,7 +2214,7 @@ package-name:
 
 .if !target(package-path)
 package-path:
-	@pwd | sed s@`cd ${PKGSRCDIR} && pwd`/@@g
+	@${ECHO} ${.CURDIR:C,.*/([^/]*/[^/]*)$,\1,}
 .endif
 
 # Show (recursively) all the packages this package depends on.
@@ -2228,36 +2228,37 @@ PACKAGE_DEPENDS_QUICK?=false
 package-depends:
 .for dep in ${DEPENDS}
 	${_PKG_SILENT}${_PKG_DEBUG}\
-	pkg="`${ECHO} \"${dep}\" | ${SED} -e 's/:.*//'`";		\
-	dir="`${ECHO} \"${dep}\" | ${SED} -e 's/[^:]*://'`";		\
+	pkg="${dep:C/:.*//}";						\
+	dir="${dep:C/[^:]*://}";					\
 	if [ -d $$dir ]; then						\
 		if ${PACKAGE_DEPENDS_WITH_PATTERNS}; then		\
 			${ECHO} "$$pkg";				\
 		else							\
-			(cd $$dir && ${MAKE} package-name PACKAGE_NAME_TYPE=${PACKAGE_NAME_TYPE}); \
+			(cd $$dir && ${MAKE} ${MAKEFLAGS} package-name PACKAGE_NAME_TYPE=${PACKAGE_NAME_TYPE}); \
 		fi;							\
 		if ${PACKAGE_DEPENDS_QUICK} ; then 			\
 			${PKG_INFO} -qf "$$pkg" | ${GREP} '^@pkgdep' | ${AWK} '{print $$2}' ; \
 		else 							\
-		(cd $$dir && ${MAKE} package-depends PACKAGE_NAME_TYPE=${PACKAGE_NAME_TYPE}); \
+			(cd $$dir && ${MAKE} ${MAKEFLAGS} package-depends PACKAGE_NAME_TYPE=${PACKAGE_NAME_TYPE}); \
 		fi ; 							\
 	else								\
 		${ECHO_MSG} "Warning: \"$$dir\" non-existent -- @pkgdep registration incomplete" >&2; \
 	fi
 .endfor
 .for dep in ${RUN_DEPENDS}
-	@pkg="`${ECHO} \"${dep}\" | ${SED} -e 's/:.*//'`";		\
-	dir="`${ECHO} \"${dep}\" | ${SED} -e 's/[^:]*://'`";		\
+	@\
+	pkg="${dep:C/:.*//}";						\
+	dir="${dep:C/[^:]*://}";					\
 	if [ -d $$dir ]; then						\
 		if ${PACKAGE_DEPENDS_WITH_PATTERNS}; then		\
 			${ECHO} "$$pkg";				\
 		else							\
-			(cd $$dir && ${MAKE} package-name PACKAGE_NAME_TYPE=${PACKAGE_NAME_TYPE}); \
+			(cd $$dir && ${MAKE} ${MAKEFLAGS} package-name PACKAGE_NAME_TYPE=${PACKAGE_NAME_TYPE}); \
 		fi;							\
 		if ${PACKAGE_DEPENDS_QUICK} ; then 			\
-			${PKG_INFO} -qf "$$pkg" | grep ^@pkgdep | awk '{print $$2}' ; \
+			${PKG_INFO} -qf "$$pkg" | ${GREP} ^@pkgdep | ${AWK} '{print $$2}' ; \
 		else 							\
-			(cd $$dir && ${MAKE} package-depends PACKAGE_NAME_TYPE=${PACKAGE_NAME_TYPE}); \
+			(cd $$dir && ${MAKE} ${MAKEFLAGS} package-depends PACKAGE_NAME_TYPE=${PACKAGE_NAME_TYPE}); \
 		fi ; 							\
 	else								\
 		${ECHO_MSG} "Warning: \"$$dir\" non-existent -- @pkgdep registration incomplete" >&2; \
@@ -2279,7 +2280,7 @@ pre-repackage:
 
 .if !target(package-noinstall)
 package-noinstall:
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${.MAKEFLAGS} PACKAGE_NOINSTALL=yes real-package
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} PACKAGE_NOINSTALL=yes real-package
 .endif
 
 ################################################################
@@ -2288,8 +2289,8 @@ package-noinstall:
 
 .if !target(depends)
 depends: misc-depends
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${.MAKEFLAGS} build-depends
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${.MAKEFLAGS} run-depends
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} build-depends
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} run-depends
 
 .if make(build-depends)
 DEPENDS_TMP+=	${BUILD_DEPENDS}
@@ -2303,13 +2304,14 @@ _DEPENDS_USE:
 .if defined(DEPENDS_TMP)
 .if !defined(NO_DEPENDS)
 .for i in ${DEPENDS_TMP}
-	${_PKG_SILENT}${_PKG_DEBUG}prog="`${ECHO} \"${i}\" | ${SED} -e 's/:.*//'`"; \
-	dir="`${ECHO} \"${i}\" | ${SED} -e 's/[^:]*://'`";		\
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	prog="${i:C/:.*//}";						\
+	dir="${i:C/[^:]*://}";						\
 	if [ ${_DEPENDS_TARGET_OVERRIDE}X != X ]; then			\
 		target=${DEPENDS_TARGET};				\
 	elif expr "$$dir" : '.*:' > /dev/null; then			\
-		target=`${ECHO} $$dir | ${SED} -e 's/.*://'`;		\
-		dir=`${ECHO} $$dir | ${SED} -e 's/:.*//'`;		\
+		target="${i:C/.*://}";					\
+		dir="${i:C/^[^:]*://:C/:.*$//}";			\
 	else								\
 		target=${DEPENDS_TARGET};				\
 	fi;								\
@@ -2322,7 +2324,7 @@ _DEPENDS_USE:
 			${ECHO_MSG} "${_PKGSRC_IN}> ${PKGNAME} depends on file: $$prog - not found"; \
 		fi;							\
 	else								\
-		for d in `${ECHO} $$PATH | tr ':' ' '`; do		\
+		for d in ${PATH:S/:/ /g}; do				\
 			if [ -x $$d/$$prog ]; then			\
 				found="$$d/$$prog";			\
 				break;					\
@@ -2335,7 +2337,8 @@ _DEPENDS_USE:
 		if [ ! -d "$$dir" ]; then				\
 			${ECHO_MSG} "=> No directory for $$prog.  Skipping.."; \
 		else							\
-			(cd $$dir && ${MAKE} ${.MAKEFLAGS} $$target DEPENDS_TARGET=${DEPENDS_TARGET}) &&	\
+			cd $$dir ;					\
+			${MAKE} ${MAKEFLAGS} $$target DEPENDS_TARGET=${DEPENDS_TARGET} ;	\
 			${ECHO_MSG} "${_PKGSRC_IN}> Returning to build of ${PKGNAME}"; \
 		fi;							\
 	fi
@@ -2356,16 +2359,17 @@ misc-depends: uptodate-pkgtools
 .if defined(DEPENDS)
 .if !defined(NO_DEPENDS)
 .for dep in ${DEPENDS}
-	${_PKG_SILENT}${_PKG_DEBUG}package="`${ECHO} \"${dep}\" | ${SED} -e s/:.\*//`"; \
-	dir="`${ECHO} \"${dep}\" | ${SED} -e s/.\*://`";		\
+	${_PKG_SILENT}${_PKG_DEBUG}\
+	package="${dep:C/:.*//}";						\
+	dir="${dep:C/[^:]*://:C/:.*$//}";						\
 	found="`${PKG_INFO} -e \"$$package\" || ${TRUE}`";		\
-	if [ "X$$found" != "X" ]; then					\
+	if [ "$$found" != "" ]; then					\
 		instobjfmt=`${PKG_INFO} -B "$$package" | ${AWK} '/^OBJECT_FMT/ { print $$2 }'`; \
-		if [ "X$$instobjfmt" = "X" ]; then			\
+		if [ "$$instobjfmt" = "" ]; then			\
 			if [ "X${WARN_NO_OBJECT_FMT}" != "Xno" ]; then	\
 				${ECHO} "WARNING: Unknown object format for installed package $$package - continuing"; \
 			fi;						\
-		elif [ "X$$instobjfmt" != "X${OBJECT_FMT}" ]; then	\
+		elif [ "$$instobjfmt" != "${OBJECT_FMT}" ]; then	\
 			${ECHO} "Installed package $$package is an $$instobjfmt package."; \
 			${ECHO} "You are building an ${OBJECT_FMT} package, which will not inter-operate."; \
 			${ECHO} "Please update the $$package package to ${OBJECT_FMT}"; \
@@ -2378,7 +2382,7 @@ misc-depends: uptodate-pkgtools
 			${ECHO} "    (" `${ECHO} $$found` ")." ; 	\
 			${ECHO} "    Please check if this is really intended!" ; \
 		else 							\
-			${ECHO_MSG} "${_PKGSRC_IN}> ${PKGNAME} depends on installed package: $$package - `${ECHO} $$found | ${SED} -e 's|${PKG_DBDIR}/||g' | tr '\012' '\040'`found"; \
+			${ECHO_MSG} "${_PKGSRC_IN}> ${PKGNAME} depends on installed package: $$package - $${found} found"; \
 		fi ; 							\
 	else								\
 		${ECHO_MSG} "${_PKGSRC_IN}> ${PKGNAME} depends on package: $$package"; \
@@ -2387,7 +2391,8 @@ misc-depends: uptodate-pkgtools
 		if [ ! -d $$dir ]; then					\
 			${ECHO_MSG} "=> No directory for $$dir.  Skipping.."; \
 		else							\
-			(cd $$dir && ${MAKE} ${.MAKEFLAGS} $$target _PKGSRC_DEPS=", ${PKGNAME}${_PKGSRC_DEPS}") && \
+			cd $$dir ;					\
+			${MAKE} ${MAKEFLAGS} $$target _PKGSRC_DEPS=", ${PKGNAME}${_PKGSRC_DEPS}"; \
 			${ECHO_MSG} "${_PKGSRC_IN}> Returning to build of ${PKGNAME}"; \
 		fi;							\
 	fi
@@ -2405,7 +2410,8 @@ check-depends:
 .if (defined(DEPENDS) || defined(BUILD_DEPENDS) || defined(RUN_DEPENDS)) && \
     !defined(NO_DEPENDS) && !defined(NO_CHECK_DEPENDS) && !exists(${EXTRACT_COOKIE})
 	${_PKG_SILENT}${_PKG_DEBUG}${ECHO_MSG} "${_PKGSRC_IN}> Validating dependencies for ${PKGNAME}"
-	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} DEPENDS_TARGET=check-depends ECHO_MSG=${TRUE:Q} IGNORE_FAIL=1 _DEPENDS_TARGET_OVERRIDE=1 depends || \
+	${_PKG_SILENT}${_PKG_DEBUG}\
+	${MAKE} ${MAKEFLAGS} DEPENDS_TARGET=check-depends ECHO_MSG=${TRUE:Q} IGNORE_FAIL=1 _DEPENDS_TARGET_OVERRIDE=1 depends || \
 		(${ECHO_MSG} "${_PKGSRC_IN}> ${PKGNAME} cannot build necessary dependencies."; ${FALSE})
 .endif
 .endif
@@ -2413,7 +2419,9 @@ check-depends:
 .if !target(depends-list)
 depends-list:
 .for dir in ${BUILD_DEPENDS} ${DEPENDS}
-	@cd ${dir:C/^[^:]*://:C/:.*//} && ${MAKE} package-name depends-list PACKAGE_NAME_TYPE=${PACKAGE_NAME_TYPE}
+	@\
+	cd ${dir:C/^[^:]*://:C/:.*//} ; \
+	${MAKE} ${MAKEFLAGS} package-name depends-list PACKAGE_NAME_TYPE=${PACKAGE_NAME_TYPE}
 .endfor
 .endif
 
@@ -2424,8 +2432,9 @@ depends-list:
 # the target used to generate the README.html file.
 .if !target(binpkg-list)
 binpkg-list:
-	@cd ${PACKAGES};						\
-	case `/bin/pwd` in						\
+	@\
+	cd ${PACKAGES};							\
+	case ${.CURDIR} in						\
 	*/pkgsrc/packages)						\
 		for pkg in ${PKGREPOSITORYSUBDIR}/${PKGNAME:C/-[^-]*$/-[0-9]*/}${PKG_SUFX} ; \
 		do 							\
@@ -2437,7 +2446,8 @@ binpkg-list:
 		;;							\
 	*)								\
 		cd ${PACKAGES}/../..;					\
-		for i in [1-9].*/*; do (				\
+		for i in [1-9].*/*; do  				\
+			cd ${PACKAGES}/../..;				\
 			d=$$i/${PKGREPOSITORYSUBDIR} ; 			\
 			if [ -d "$$d" ]; then 				\
 				cd "$$d" ; 				\
@@ -2447,7 +2457,7 @@ binpkg-list:
 						${ECHO} $$i/$$j; 	\
 					fi ;				\
 				done ; 					\
-			fi ) ; 						\
+			fi  ; 						\
 		done | ${AWK} -F/ '					\
 			{						\
 				release = $$1;				\
@@ -2502,12 +2512,12 @@ describe:
 	${ECHO} -n "|${MAINTAINER}|${CATEGORIES}|";			\
 	case "A${BUILD_DEPENDS}B${DEPENDS}C" in	\
 		ABC) ;;							\
-		*) cd ${.CURDIR} && ${ECHO} -n `${MAKE} depends-list|sort -u`;; \
+		*) cd ${.CURDIR} && ${ECHO} -n `${MAKE} ${MAKEFLAGS} depends-list|sort -u`;; \
 	esac;								\
 	${ECHO} -n "|";							\
 	case "A${RUN_DEPENDS}B${DEPENDS}C" in				\
 		ABC) ;;							\
-		*) cd ${.CURDIR} && ${ECHO} -n `${MAKE} package-depends|sort -u`;; \
+		*) cd ${.CURDIR} && ${ECHO} -n `${MAKE} ${MAKEFLAGS} package-depends|sort -u`;; \
 	esac;								\
 	${ECHO} -n "|";							\
 	if [ "${ONLY_FOR_ARCHS}" = "" ]; then				\
@@ -2534,7 +2544,7 @@ FTP_PKG_URL_HOST?=	ftp://ftp.netbsd.org
 FTP_PKG_URL_DIR?=	/pub/NetBSD/packages
 
 readme:
-	@cd ${.CURDIR} && ${MAKE} README.html PKG_URL=${FTP_PKG_URL_HOST}${FTP_PKG_URL_DIR}
+	@cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} README.html PKG_URL=${FTP_PKG_URL_HOST}${FTP_PKG_URL_DIR}
 .endif
 
 # This target is used to generate README.html files, very like "readme"
@@ -2544,16 +2554,10 @@ CDROM_PKG_URL_HOST?=	file://localhost
 CDROM_PKG_URL_DIR?=	/usr/pkgsrc/packages
 
 cdrom-readme:
-	@cd ${.CURDIR} && ${MAKE} README.html PKG_URL=${CDROM_PKG_URL_HOST}${CDROM_PKG_URL_DIR}
+	@cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} README.html PKG_URL=${CDROM_PKG_URL_HOST}${CDROM_PKG_URL_DIR}
 .endif
 
-.if (${OPSYS} == "NetBSD")
 README_NAME=	${TEMPLATES}/README.pkg
-.elif (${OPSYS} == "SunOS")
-README_NAME=	${TEMPLATES}/README.pkg
-.else
-README_NAME=	${TEMPLATES}/README.port
-.endif
 
 # set up the correct license information as a sed expression
 .ifdef LICENSE
@@ -2571,14 +2575,14 @@ SED_HOMEPAGE_EXPR=       -e 's|%%HOMEPAGE%%||'
 
 .PHONY: README.html
 README.html: .PRECIOUS
-	@${MAKE} depends-list PACKAGE_NAME_TYPE=html | sort -u >> $@.tmp1
+	@${MAKE} ${MAKEFLAGS} depends-list PACKAGE_NAME_TYPE=html | sort -u >> $@.tmp1
 	@[ -s $@.tmp1 ] || ${ECHO} "<I>(none)</I>" >> $@.tmp1
-	@${MAKE} package-depends PACKAGE_NAME_TYPE=html | sort -u >> $@.tmp2
+	@${MAKE} ${MAKEFLAGS} package-depends PACKAGE_NAME_TYPE=html | sort -u >> $@.tmp2
 	@[ -s $@.tmp2 ] || ${ECHO} "<I>(none)</I>" >> $@.tmp2
 	@${ECHO} ${PKGNAME} | ${HTMLIFY} >> $@.tmp3
-	@${MAKE} binpkg-list  >> $@.tmp4
+	@${MAKE} ${MAKEFLAGS} binpkg-list  >> $@.tmp4
 	@[ -s $@.tmp4 ] || ${ECHO} "<TR><TD><I>(no precompiled binaries available)</I>" >> $@.tmp4
-	@${SED} -e 's|%%PORT%%|'"`${MAKE} package-path | ${HTMLIFY}`"'|g' \
+	@${SED} -e 's|%%PORT%%|'"`${MAKE} ${MAKEFLAGS} package-path | ${HTMLIFY}`"'|g' \
 		-e '/%%PKG%%/r $@.tmp3'					\
 		-e '/%%PKG%%/d'						\
 		${SED_LICENSE_EXPR}					\
@@ -2611,7 +2615,7 @@ show-var:
 print-depends-list:
 .if defined(BUILD_DEPENDS) || defined(DEPENDS)
 	@${ECHO} -n 'This package requires package(s) "'
-	@${ECHO} -n `${MAKE} depends-list | sort -u`
+	@${ECHO} -n `${MAKE} ${MAKEFLAGS} depends-list | sort -u`
 	@${ECHO} '" to build.'
 .endif
 .endif
@@ -2620,7 +2624,7 @@ print-depends-list:
 print-package-depends:
 .if defined(RUN_DEPENDS) || defined(DEPENDS)
 	@${ECHO} -n 'This package requires package(s) "'
-	@${ECHO} -n "`${MAKE} package-depends | sort -u`"
+	@${ECHO} -n "`${MAKE} ${MAKEFLAGS} package-depends | sort -u`"
 	@${ECHO} '" to run.'
 .endif
 .endif
@@ -2644,7 +2648,7 @@ print-pkg-size:
 		<${PLIST} ;						\
 	${SHCOMMENT} "Any depending pkgs' files" ;			\
 	if [ "${SIZEDEPENDS}" != "" ]; then 				\
-		${MAKE} print-pkg-depend-sizes ;			\
+		${MAKE} ${MAKEFLAGS} print-pkg-depend-sizes ;			\
 	fi ;								\
 	)								\
 	| sort -u							\
@@ -2661,7 +2665,7 @@ print-pkg-depend-sizes:
 	${SHCOMMENT} direct depends ;					\
 	${PKG_INFO} -qL "$$p" ;						\
 	${SHCOMMENT} "depends of depends (XXX complete!)"; 		\
-	dps=`${PKG_INFO} -qf "$$p" | grep '@pkgdep' | awk '{ print $$2; }'` ; \
+	dps=`${PKG_INFO} -qf "$$p" | ${GREP} '@pkgdep' | ${AWK} '{ print $$2; }'` ; \
 	for dp in $$dps ; do						\
 		${PKG_INFO} -qL "$$dp" ;				\
 	done
@@ -2674,11 +2678,13 @@ print-pkg-depend-sizes:
 
 .if !target(fake-pkg)
 fake-pkg: ${PLIST} ${DESCR}
-	${_PKG_SILENT}${_PKG_DEBUG}if [ ! -f ${PLIST} -o ! -f ${COMMENT} -o ! -f ${DESCR} ]; then \
+	${_PKG_SILENT}${_PKG_DEBUG}\
+	if [ ! -f ${PLIST} -o ! -f ${COMMENT} -o ! -f ${DESCR} ]; then \
 		${ECHO} "** Missing package files for ${PKGNAME} - installation not recorded."; \
 		exit 1;							\
 	fi
-	${_PKG_SILENT}${_PKG_DEBUG}if [ ! -d ${PKG_DBDIR} ]; then	\
+	${_PKG_SILENT}${_PKG_DEBUG}\
+	if [ ! -d ${PKG_DBDIR} ]; then	\
 		${RM} -f ${PKG_DBDIR};					\
 		${MKDIR} ${PKG_DBDIR};					\
 	fi
@@ -2688,7 +2694,8 @@ fake-pkg: ${PLIST} ${DESCR}
 .endif
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${BUILD_VERSION_FILE} ${BUILD_INFO_FILE}
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${SIZE_PKG_FILE} ${SIZE_ALL_FILE}
-	${_PKG_SILENT}${_PKG_DEBUG}files="";				\
+	${_PKG_SILENT}${_PKG_DEBUG}\
+	files="";				\
 	for f in ${.CURDIR}/Makefile ${FILESDIR}/* ${PKGDIR}/*; do	\
 		if [ -f $$f ]; then					\
 			files="$$files $$f";				\
@@ -2710,7 +2717,7 @@ fake-pkg: ${PLIST} ${DESCR}
 			esac;						\
 		done;							\
 	fi;								\
-	pkgsrcdir=`(cd ../.. && /bin/pwd)`;				\
+	pkgsrcdir=`cd ../.. && pwd`;				\
 	${GREP} '\$$NetBSD' $$files | ${SED} -e 's|^'$$pkgsrcdir'/||' > ${BUILD_VERSION_FILE};
 .for def in ${BUILD_DEFS}
 	@${ECHO} "${def}=	${${def}}" | ${SED} -e 's|PATH=[^ 	]*|PATH=...|' >> ${BUILD_INFO_FILE}
@@ -2723,9 +2730,10 @@ fake-pkg: ${PLIST} ${DESCR}
 	@${ECHO} "GMAKE=	`${GMAKE} --version | ${GREP} version`" >> ${BUILD_INFO_FILE}
 .endif
 	@${ECHO} "_PKGTOOLS_VER= ${PKGTOOLS_VERSION}" >> ${BUILD_INFO_FILE}
-	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} print-pkg-size                       >${SIZE_PKG_FILE}
-	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} print-pkg-size SIZEDEPENDS=yesplease >${SIZE_ALL_FILE}
-	${_PKG_SILENT}${_PKG_DEBUG}if [ ! -d ${PKG_DBDIR}/${PKGNAME} ]; then			\
+	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} ${MAKEFLAGS} print-pkg-size                       >${SIZE_PKG_FILE}
+	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} ${MAKEFLAGS} print-pkg-size SIZEDEPENDS=yesplease >${SIZE_ALL_FILE}
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+		if [ ! -d ${PKG_DBDIR}/${PKGNAME} ]; then		\
 		${ECHO_MSG} "${_PKGSRC_IN}> Registering installation for ${PKGNAME}"; \
 		${MKDIR} ${PKG_DBDIR}/${PKGNAME};			\
 		${PKG_CREATE} ${PKG_ARGS} -O ${PKGFILE} > ${PKG_DBDIR}/${PKGNAME}/+CONTENTS; \
@@ -2733,12 +2741,12 @@ fake-pkg: ${PLIST} ${DESCR}
 		${CP} ${COMMENT} ${PKG_DBDIR}/${PKGNAME}/+COMMENT;	\
 		${CP} ${BUILD_VERSION_FILE} ${PKG_DBDIR}/${PKGNAME}/+BUILD_VERSION; \
 		${CP} ${BUILD_INFO_FILE} ${PKG_DBDIR}/${PKGNAME}/+BUILD_INFO; \
-		if ${TEST} -e ${SIZE_PKG_FILE}; then \
+		if ${TEST} -e ${SIZE_PKG_FILE}; then 			\
 			${CP} ${SIZE_PKG_FILE} ${PKG_DBDIR}/${PKGNAME}/+SIZE_PKG; \
-		fi ; \
-		if ${TEST} -e ${SIZE_ALL_FILE}; then \
+		fi ; 							\
+		if ${TEST} -e ${SIZE_ALL_FILE}; then 			\
 			${CP} ${SIZE_ALL_FILE} ${PKG_DBDIR}/${PKGNAME}/+SIZE_ALL; \
-		fi ; \
+		fi ; 							\
 		if [ -n "${INSTALL_FILE}" ]; then			\
 			if ${TEST} -e ${INSTALL_FILE}; then		\
 				${CP} ${INSTALL_FILE} ${PKG_DBDIR}/${PKGNAME}/+INSTALL; \
@@ -2759,7 +2767,7 @@ fake-pkg: ${PLIST} ${DESCR}
 				${CP} ${MESSAGE_FILE} ${PKG_DBDIR}/${PKGNAME}/+DISPLAY; \
 			fi;						\
 		fi;							\
-		for dep in `${MAKE} package-depends PACKAGE_DEPENDS_QUICK=true ECHO_MSG=${TRUE} | sort -u`; do \
+		for dep in `${MAKE} ${MAKEFLAGS} package-depends PACKAGE_DEPENDS_QUICK=true ECHO_MSG=${TRUE} | sort -u`; do \
 			realdep="`${PKG_INFO} -e \"$$dep\" || ${TRUE}`" ; \
 			if [ `${ECHO} $$realdep | wc -w` -gt 1 ]; then 				\
 				${ECHO} '***' "WARNING: '$$dep' expands to several installed packages " ; \
@@ -2870,9 +2878,12 @@ ${PLIST}: ${PLIST_SRC}
 # generate ${DESCR} from ${DESCR_SRC} by:
 # - Appending the homepage URL, if any
 
+descr: ${DESCR}
 ${DESCR}: ${DESCR_SRC}
-	@${CAT} ${DESCR_SRC} > ${DESCR}
+	@${CAT} ${DESCR_SRC} 	 >${DESCR}
 .if defined(HOMEPAGE)
-	@(${ECHO} ; ${ECHO} "Homepage:" ; \
-	${ECHO} '${HOMEPAGE}') >> ${DESCR}	
+	@\
+	${ECHO}			>>${DESCR} ; \
+	${ECHO} "Homepage:"	>>${DESCR} ; \
+	${ECHO} '${HOMEPAGE}'	>>${DESCR}	
 .endif
