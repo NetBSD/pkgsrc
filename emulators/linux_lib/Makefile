@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 1998/08/17 20:09:51 tron Exp $
+# $NetBSD: Makefile,v 1.16 1999/05/17 00:18:15 tron Exp $
 # FreeBSD Id: Makefile,v 1.19 1997/12/04 17:34:28 asami Exp
 #
 
@@ -8,6 +8,8 @@ MASTER_SITES=		${MASTER_SITE_LOCAL}
 ONLY_FOR_ARCHS=		i386
 
 MAINTAINER=		packages@netbsd.org
+
+CONFLICTS=		linux_SuSE-* suse_*
 
 # The distfile is distributed under the GPL, so no re-distribution of
 # binaries without source.
