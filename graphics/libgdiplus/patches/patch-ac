@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.1 2004/06/26 20:19:42 recht Exp $
+$NetBSD: patch-ac,v 1.2 2004/07/03 23:03:22 recht Exp $
 
---- configure.in.orig	2004-06-26 19:11:38.000000000 +0200
-+++ configure.in	2004-06-26 19:13:36.000000000 +0200
-@@ -6,24 +6,25 @@
+--- configure.in.orig	2004-07-04 00:21:40.000000000 +0200
++++ configure.in	2004-07-04 00:21:46.000000000 +0200
+@@ -6,26 +6,99 @@
  AM_MAINTAINER_MODE
  AM_PROG_LIBTOOL
  
@@ -31,4 +31,78 @@ $NetBSD: patch-ac,v 1.1 2004/06/26 20:19:42 recht Exp $
 +GDIPLUS_CFLAGS="`$PKG_CONFIG --cflags cairo glib-2.0 ` `$FREETYPE_CONFIG --cflags`"
  AC_CHECK_HEADERS(byteswap.h)
  
++AC_MSG_CHECKING([host threading settings])
++case "$host" in
++	*-*-mingw*|*-*-cygwin*)
++		AC_DEFINE_UNQUOTED(CYGWIN,1,[Win32])
++		AC_CHECK_LIB(intl, gettext)
++		;;
++
++	*-*-*netbsd*)
++		AC_DEFINE_UNQUOTED(BSDOS,1,[NetBSD])
++		;;
++
++	*-*-*freebsd*)
++		AC_DEFINE_UNQUOTED(BSDOS,1,[FreeBSD])
++		CFLAGS="-D_THREAD_SAFE $CFLAGS"
++		;;
++
++	*-*-*openbsd*)
++		AC_DEFINE_UNQUOTED(BSDOS,1,[OpenBSD])
++		CFLAGS="$CFLAGS"
++		LIBS="$LIBS"
++		;;
++
++	*-*-linux*)
++		AC_DEFINE_UNQUOTED(LINUX,1,[Linux])
++		AC_CHECK_LIB(pthread, pthread_create)
++		;;
++
++	*-*-solaris*)
++		AC_DEFINE_UNQUOTED(SOLARIS,1,[Solaris])
++		AC_DEFINE_UNQUOTED(_REENTRANT,1,[For libc reentrancy])
++		CFLAGS="-pthreads $CFLAGS"
++		;;
++
++	*-*-darwin*)
++		AC_DEFINE_UNQUOTED(OSX,1,[OS X])
++		CFLAGS="-no-cpp-precomp $CFLAGS"
++		LDFLAGS="-flat_namespace -undefined suppress $LDFLAGS"
++		;;
++
++	*)
++		AC_MSG_RESULT(Unrecognized host $host)
++		AC_DEFINE_UNQUOTED(OTHEROS,1,[Unknown])
++		;;
++esac
++
++# Apparently for BSD special handling needs to happen
++# See http://archives/neohapsis.com/archives/openbsd/2001-11/2142.html
++# by Miod Vallat <miod@online.fr>
++AC_CACHE_CHECK(
++  [if compiler recognizes -pthread],
++   myapp_cv_gcc_pthread,
++   ac_save_CFLAGS=$CFLAGS
++   CFLAGS="$CFLAGS -pthread"
++   AC_LANG_SAVE
++   AC_LANG_C
++   AC_TRY_LINK([#include <pthread.h>],
++               [void *p = pthread_create;],
++                myapp_cv_gcc_pthread=yes,
++                myapp_cv_gcc_pthread=no)
++   AC_LANG_RESTORE
++   CFLAGS=$ac_save_CFLAGS
++)
++if test $myapp_cv_gcc_pthread = yes
++then
++   myapp_threads=""
++   CFLAGS="$CFLAGS -pthread"
++else
++   AC_CHECK_LIB(pthread,pthread_create,myapp_threads=-lpthread,
++                [AC_CHECK_LIB(c_r,pthread_create,myapp_threads=-lc_r)])
++fi
++
++
  # sigsetjmp is a macro on some platforms, so can't use AC_CHECK_FUNCS
+ AC_MSG_CHECKING(for sigsetjmp)
+ AC_TRY_LINK([#include <setjmp.h>], [
