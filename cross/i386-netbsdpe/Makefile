@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2001/03/10 21:15:27 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.8 2001/10/21 12:24:15 kent Exp $
+# $PEACE: Makefile,v 1.16 2001/10/19 07:43:09 kent Exp $
 
-DISTVERSION=		1.1.4
-DISTFILES=		# none
+DISTVERSION=		1.2.1
+CROSS_DISTFILES=		# none
 
 MAINTAINER=		peace-sacrifice@hauN.org
 HOMEPAGE=		http://chiharu.hauN.org/peace/
@@ -27,11 +27,18 @@ GCC_CONFIGURE_ARGS+=	--enable-threads
 
 BINUTILS_EXTRAS=	dlltool windres
 
+# Mingw pathes
 GCC_WIN32_PATCHBUNDLE=	${GCC_DISTNAME}-x86-win32-patches.tar.gz
 GCC_WIN32_PATCH=	${WRKDIR}/${GCC_DISTNAME}-patches/${GCC_DISTNAME}-x86-win32.diff
 MASTER_SITES+=		ftp://ftp.xraylith.wisc.edu/pub/khan/gnu-win32/mingw32/${GCC_DISTNAME}/patches/
 CROSS_DISTFILES+=	${GCC_WIN32_PATCHBUNDLE}
 
+# SSP patch
+MASTER_SITES+=		http://www.trl.ibm.com/projects/security/ssp/gcc2_95_2/
+SSP_PATCH=		protector-2.95.2-2.tar.gz
+CROSS_DISTFILES+=	${SSP_PATCH}
+
+# pthread
 PTHREAD_DISTNAME=	unproven-pthreads-0.17
 PTHREAD_DISTFILE=	${PTHREAD_DISTNAME}.tar.gz
 MASTER_SITES+=		ftp://ftp.flame.org/pub/netbsd/
@@ -54,6 +61,10 @@ post-patch:
 	cd ${WRKDIR}/${GCC_DISTNAME}/gcc && \
 		${LN} -s ../../${PTHREAD_DISTNAME}/include/pthread.h . && \
 		${LN} -s ../../${PTHREAD_DISTNAME}/include/pthread .
+	cd ${WRKDIR} && /usr/bin/tar zxf ${_DISTDIR}/${SSP_PATCH}
+	${CP} ${WRKDIR}/protector.c ${WRKDIR}/protector.h ${WRKDIR}/${GCC_DISTNAME}/gcc/
+	${PATCH} -d ${WRKDIR}/${GCC_DISTNAME} --forward --quiet -E < ${WRKDIR}/protector.dif
+#	${PATCH} -d ${WRKDIR}/${GCC_DISTNAME} --forward --quiet -E < ${WRKDIR}/protectonly.dif
 
 CFLAGS_FOR_TARGET+=	-I${WRKDIR}
 post-configure:

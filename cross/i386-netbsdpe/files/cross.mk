@@ -1,5 +1,4 @@
-#	$NetBSD: cross.mk,v 1.6 2001/03/10 21:15:27 wiz Exp $
-#	$PEACE: cross.mk,v 1.1 2001/01/16 15:20:26 kent Exp $
+#	$PEACE: cross.mk,v 1.6 2001/10/19 07:43:10 kent Exp $
 #	based on pkgsrc/cross/COMMON/cross.mk
 #	NetBSD: cross.mk,v 1.16 2000/11/09 13:04:55 wiz Exp 
 
@@ -10,6 +9,7 @@ DISTNAME=		cross-${TARGET_ARCH}-${DISTVERSION}
 CATEGORIES+=		cross lang
 USE_CROSSBASE=		yes
 PLIST_SRC=		${WRKDIR}/.PLIST_SRC
+MESSAGE_SUBST+=		CROSSBASE=${CROSSBASE}
 
 HOMEPAGE?=		http://gcc.gnu.org/
 
@@ -29,30 +29,24 @@ pre-install-dirs:
 	${INSTALL_DATA_DIR} ${TARGET_DIR}/lib
 
 .if defined(USE_CROSS_BINUTILS)
-BINUTILS_DISTNAME=	binutils-2.9.1
+BINUTILS_DISTNAME=	binutils-2.11.2
 BINUTILS_WRKSRC=	${WRKDIR}/${BINUTILS_DISTNAME}
 
 CROSS_DISTFILES+=	${BINUTILS_DISTNAME}.tar.gz
 MASTER_SITES+=		${MASTER_SITE_GNU:=binutils/}
 CONFIGURE_ARGS+=	--with-gnu-as --with-gnu-ld
-DEPENDS+=		cross-binutils>=2.9.1.1:../../cross/binutils
+#DEPENDS+=		cross-binutils>=2.9.1.1:../../cross/binutils
 PLIST_PRE+=		${COMMON_DIR}/PLIST-binutils
 
 AS_FOR_TARGET=		${BINUTILS_WRKSRC}/gas/as-new
-AR_FOR_TARGET=		${WRKDIR}/ar
-NM_FOR_TARGET=		${WRKDIR}/nm
-RANLIB_FOR_TARGET=	${WRKDIR}/ranlib
-LD_FOR_TARGET=		${WRKDIR}/ld
+AR_FOR_TARGET=		${BINUTILS_WRKSRC}/binutils/ar
+NM_FOR_TARGET=		${BINUTILS_WRKSRC}/binutils/nm-new
+RANLIB_FOR_TARGET=	${BINUTILS_WRKSRC}/binutils/ranlib
+LD_FOR_TARGET=		${BINUTILS_WRKSRC}/ld/ld-new
 
-pre-patch: binutils-patch
 pre-configure: binutils-configure
 do-build: binutils-build
 do-install: binutils-install
-
-binutils-patch:
-	@for i in ${COMMON_DIR}/patches-binutils/patch-*; do \
-		${PATCH} -d ${BINUTILS_WRKSRC} --forward --quiet -E < $$i; \
-	done
 
 BFD64ARG=	--enable-64-bit-bfd
 
@@ -63,32 +57,16 @@ binutils-configure:
 		--target=${TARGET_ARCH} ${BFD64ARG}
 
 binutils-build:
-	@cd ${BINUTILS_WRKSRC}/bfd && ${SETENV} ${MAKE_ENV} \
-		${MAKE_PROGRAM} ${MAKE_FLAGS} bfd.h
-	@cd ${BINUTILS_WRKSRC}/libiberty && ${SETENV} ${MAKE_ENV} \
-		${MAKE_PROGRAM} ${MAKE_FLAGS} all
-	@cd ${BINUTILS_WRKSRC}/gas && ${SETENV} ${MAKE_ENV} \
-		${MAKE_PROGRAM} ${MAKE_FLAGS} as-new
-	${TEST} -x ${WRKDIR}/ar || ${LINK.c} -o ${WRKDIR}/ar \
-		-DPREFIX=\"${PREFIX}\" \
-		-DGNUTARGET=\"${BINUTILS_GNUTARGET}\" \
-		${COMMON_DIR}/buwrapper.c
-	@cd ${WRKDIR} && \
-		${LN} -f ar nm && \
-		${LN} -f ar ranlib
-	${TEST} -x ${WRKDIR}/ld || ${LINK.c} -o ${WRKDIR}/ld \
-		-DPREFIX=\"${PREFIX}\" \
-		-DGNUTARGET=\"${BINUTILS_GNUTARGET}\" \
-		-DLDEMULATION=\"${BINUTILS_LDEMULATION}\" \
-		-DLD_RPATH_LINK=\"${TARGET_DIR}/lib\" \
-		${COMMON_DIR}/buwrapper.c
+	@cd ${BINUTILS_WRKSRC} && ${SETENV} ${MAKE_ENV} \
+		${MAKE_PROGRAM} ${MAKE_FLAGS}
 
 binutils-install:
 	${INSTALL_PROGRAM} ${BINUTILS_WRKSRC}/gas/as-new ${TARGET_DIR}/bin/as
-	${INSTALL_PROGRAM} ${WRKDIR}/ar ${TARGET_DIR}/bin/ar
-	${INSTALL_PROGRAM} ${WRKDIR}/ld ${TARGET_DIR}/bin/ld
-	for i in addr2line nm objcopy objdump ranlib size strings strip ${BINUTILS_EXTRAS}; do \
-		${LN} -f ${TARGET_DIR}/bin/ar ${TARGET_DIR}/bin/$$i; \
+	${INSTALL_PROGRAM} ${BINUTILS_WRKSRC}/ld/ld-new ${TARGET_DIR}/bin/ld
+	${INSTALL_PROGRAM} ${BINUTILS_WRKSRC}/binutils/nm-new ${TARGET_DIR}/bin/nm
+	${INSTALL_PROGRAM} ${BINUTILS_WRKSRC}/binutils/strip-new ${TARGET_DIR}/bin/strip
+	for i in addr2line ar objcopy objdump ranlib size strings ${BINUTILS_EXTRAS}; do \
+		${INSTALL_PROGRAM} ${BINUTILS_WRKSRC}/binutils/$$i ${TARGET_DIR}/bin/$$i; \
 	done
 	for i in addr2line ar as ld nm objcopy objdump ranlib size strings strip ${BINUTILS_EXTRAS}; do \
 		${LN} -f ${TARGET_DIR}/bin/$$i ${PREFIX}/bin/${TARGET_ARCH}-$$i; \
@@ -97,12 +75,10 @@ binutils-install:
 
 .if defined(USE_CROSS_GCC)
 GCC_DISTNAME=		gcc-2.95.2
-#EGCS_DISTDIR=		releases/${EGCS_DISTNAME}
 GCC_INTVERSION=		2.95.2
-#EGCS_PATCHBUNDLE=	${EGCS_DISTNAME}-NetBSD-19980104.diff.gz
 GCC_WRKSRC=		${WRKDIR}/${GCC_DISTNAME}
 GCC_LANGUAGES=		c # add to these below
-BUILD_DEPENDS+= ${LOCALBASE}/bin/autoheader:../../devel/autoconf
+BUILD_DEPENDS+= 	autoconf-*:../../devel/autoconf
 
 .if defined(GCC_CXX)
 CXX_CONFIGURE_ARGS+=	--with-gxx-include-dir=${TARGET_DIR}/include/c++
@@ -132,8 +108,6 @@ PLIST_PRE+=		${GCC_PLIST_DIR}/PLIST-gcc-objc-runtime
 # the main PLIST needs to go last to get the @dirrm's right
 PLIST_PRE+=		${GCC_PLIST_DIR}/PLIST-gcc
 CROSS_DISTFILES+=	${GCC_DISTNAME}.tar.gz #${EGCS_PATCHBUNDLE}
-#MASTER_SITES+=		ftp://egcs.cygnus.com/pub/egcs/${EGCS_DISTDIR}/ \
-#			${MASTER_SITE_LOCAL}
 USE_GMAKE=		yes
 
 CC_FOR_TARGET=		${GCC_WRKSRC}/gcc/xgcc -B${GCC_WRKSRC}/gcc/ ${CFLAGS_FOR_TARGET}
@@ -155,7 +129,7 @@ GCC_MAKE=		${SETENV} ${MAKE_ENV} \
 	                ${MAKE_PROGRAM} ${MAKE_FLAGS} ${GCC_MAKE_FLAGS}
 
 .if defined(GCC_FAKE_RUNTIME)
-CROSS_SYS_INCLUDE=		${WRKDIR}/include
+CROSS_SYS_INCLUDE=	${WRKDIR}/include
 .endif
 .if defined(CROSS_SYS_INCLUDE)
 CFLAGS_FOR_TARGET+=	-idirafter ${CROSS_SYS_INCLUDE}
@@ -186,8 +160,7 @@ gcc-configure:
 		--host=${MACHINE_GNU_ARCH}--netbsd  --target=${TARGET_ARCH} \
 		${GCC_CONFIGURE_ARGS} ${CXX_CONFIGURE_ARGS}
 .if defined(GCC_FAKE_RUNTIME)
-	@${MKDIR} ${CROSS_SYS_INCLUDE} ${CROSS_SYS_INCLUDE}/machine \
-		${CROSS_SYS_INCLUDE}/sys
+	@${MKDIR} ${CROSS_SYS_INCLUDE} ${CROSS_SYS_INCLUDE}/machine ${CROSS_SYS_INCLUDE}/sys
 	@cd ${CROSS_SYS_INCLUDE} && ${TOUCH} ${TOUCH_FLAGS} machine/ansi.h \
 		sys/time.h stdlib.h unistd.h
 .endif
@@ -228,7 +201,7 @@ gcc-install:
 .if defined(GCC_CXX)
 	@${MKDIR} ${TARGET_DIR}/include/c++
 	@for file in exception new new.h typeinfo; do \
-		${CP} -p ${GCC_WRKSRC}/gcc/cp/inc/$$file ${TARGET_DIR}/include/c++; \
+		${INSTALL_DATA} ${GCC_WRKSRC}/gcc/cp/inc/$$file ${TARGET_DIR}/include/c++; \
 	done
 .if defined(GCC_CXX_RUNTIME)
 	@${MKDIR} ${TARGET_DIR}/include/g++/std
