@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2004/04/24 22:46:09 jlam Exp $
+# $NetBSD: Makefile.common,v 1.6 2004/05/08 05:25:12 snj Exp $
 
 DISTNAME=		postgresql-${DIST_VERS}
 CATEGORIES=		databases
@@ -29,7 +29,7 @@ PATCHDIR?=		${.CURDIR}/../odbc-postgresql/patches
 DIST_VERS?=		7.2.3
 BASE_VERS?=		${DIST_VERS}
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_GNU_TOOLS+=		make
 MAKEFILE=		GNUmakefile
 GNU_CONFIGURE=		YES
