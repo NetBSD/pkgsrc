@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2000/09/03 09:17:00 kei Exp $
+# $NetBSD: Makefile,v 1.37 2000/09/03 12:53:51 wiz Exp $
 
 DISTNAME=		samba-2.0.7-ja-1.2a
 PKGNAME=		samba-2.0.7.1.2a
@@ -10,13 +10,13 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.samba.org/
 
-CONFLICTS+=		samba-2.0.7-ja-*
-
 BUILD_DEPENDS+=		${LOCALBASE}/bin/autoreconf:../../devel/autoconf
 
 .if !exists(/usr/include/readline.h)
 DEPENDS+=		readline>=4.0:../../devel/readline
 .endif
+
+CONFLICTS+=		samba-2.0.7-ja-*
 
 GNU_CONFIGURE=		# defined
 
@@ -54,7 +54,7 @@ pre-configure:
 
 post-install:
 	# Install Samba documentation.
-	#	
+	#
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/samba
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/samba/faq
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/samba/textdocs
@@ -74,7 +74,7 @@ post-install:
 	done
 
 	# Install Samba examples.
-	#	
+	#
 	${MKDIR} ${PREFIX}/share/examples/samba
 	${CP} -R ${WRKDIR}/${DISTNAME}/examples/* ${PREFIX}/share/examples/samba
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/examples/samba
