@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.15 2004/07/08 06:18:37 martti Exp $
+@comment $NetBSD: PLIST,v 1.16 2004/08/13 11:31:28 adam Exp $
+bin/capinfo
 bin/dftest
 bin/editcap
 bin/ethereal
@@ -32,6 +33,8 @@ lib/ethereal/plugins/${PKGVERSION}/megaco.la
 lib/ethereal/plugins/${PKGVERSION}/megaco.so
 lib/ethereal/plugins/${PKGVERSION}/mgcp.la
 lib/ethereal/plugins/${PKGVERSION}/mgcp.so
+lib/ethereal/plugins/${PKGVERSION}/opsi.la
+lib/ethereal/plugins/${PKGVERSION}/opsi.so
 lib/ethereal/plugins/${PKGVERSION}/pcli.la
 lib/ethereal/plugins/${PKGVERSION}/pcli.so
 lib/ethereal/plugins/${PKGVERSION}/rdm.la
@@ -53,6 +56,7 @@ lib/libwiretap.la
 lib/libwiretap.so
 lib/libwiretap.so.0
 lib/libwiretap.so.0.1
+man/man1/capinfo.1
 man/man1/editcap.1
 man/man1/ethereal.1
 man/man1/idl2eth.1
@@ -61,6 +65,7 @@ man/man1/tethereal.1
 man/man1/text2pcap.1
 man/man4/ethereal-filter.4
 share/ethereal/AUTHORS-SHORT
+share/ethereal/capinfo.html
 share/ethereal/diameter/dictionary.dtd
 share/ethereal/diameter/dictionary.xml
 share/ethereal/diameter/mobileipv4.xml
