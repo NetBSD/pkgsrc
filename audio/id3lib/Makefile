@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2002/10/03 08:43:00 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2002/10/03 22:45:05 jlam Exp $
 #
 
 DISTNAME=	id3lib-3.8.0
@@ -15,4 +15,5 @@ GNU_CONFIGURE=		# defined
 USE_LIBTOOL=		# defined
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
+.include "../../devel/zlib/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
