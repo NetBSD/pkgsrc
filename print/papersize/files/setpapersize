@@ -1,6 +1,6 @@
 #! /bin/sh
 #
-# $NetBSD: setpapersize,v 1.1.1.1 1998/11/09 17:55:22 agc Exp $
+# $NetBSD: setpapersize,v 1.2 1999/06/16 17:28:25 cgd Exp $
 #
 # Small shell script to set the default papersize for packages
 #
@@ -75,6 +75,7 @@ while [ $# -gt 0 ]; do
 			for f in $magicdir/*-filter; do
 				mv $f $f.old
 				sed -e 's|-sPAPERSIZE=[a-zA-Z0-9_]*|-sPAPERSIZE='$lowpaper'|' $f.old > $f && rm $f.old
+				chmod 555 $f
 			done
 			echo "Set $1 package default paper size to $papersize in $magicdir/*-filter"
 		fi
