@@ -1,5 +1,5 @@
 ==========================================================================
-$NetBSD: MESSAGE,v 1.1 2000/03/20 02:25:47 itojun Exp $
+$NetBSD: MESSAGE,v 1.2 2000/09/28 09:25:16 jlam Exp $
 
 If "starter" configuration files were installed (in @SSH_CONF_DIR@)
 when the package was installed, be sure to examine them (and the man pages
@@ -15,5 +15,5 @@ In general, you will want to set up /etc/rc.local to start sshd at boot
 time.  Something like the following should do the job:
 
 # Run sshd if installed and configured
-@PREFIX@/etc/rc.d/sshd.sh
+@PREFIX@/etc/rc.d/sshd
 ==========================================================================
