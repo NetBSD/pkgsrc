@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9073 2005/02/07 15:23:12 wiz Exp $
+$NetBSD: CHANGES,v 1.9074 2005/02/07 15:56:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -792,3 +792,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Added ganglia-webfrontend-2.5.7 [jschauma 2005-02-07]
 	Updated libtheora to 1.0alpha4 [wiz 2005-02-07]
 	Updated libidn to 0.5.13 [wiz 2005-02-07]
+	Updated p5-URI to 1.35 [wiz 2005-02-07]
+	Updated p5-HTML-Parser to 3.45 [wiz 2005-02-07]
