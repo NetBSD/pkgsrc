@@ -1,18 +1,18 @@
-# $NetBSD: Makefile,v 1.5 2000/08/18 22:46:53 hubertf Exp $
+# $NetBSD: Makefile,v 1.6 2000/09/13 15:19:39 jlam Exp $
 # $FreeBSD Id: Makefile,v 1.13 1997/07/17 15:13:03 max Exp
 #
 
-DISTNAME=	xview3.2p1-X11R6
-PKGNAME=	xview-lib-3.2.1
-CATEGORIES=	x11
-MASTER_SITES=	${MASTER_SITE_LOCAL}
+DISTNAME=		xview3.2p1-X11R6
+PKGNAME=		xview-lib-3.2.1
+CATEGORIES=		x11
+MASTER_SITES=		${MASTER_SITE_LOCAL}
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=		packages@netbsd.org
 
-DEPENDS=        xview-config-3.2.1:../../x11/xview-config
+DEPENDS=		xview-config-3.2.1:../../x11/xview-config
 
-NO_SRC_ON_FTP=	Already in MASTER_SITE_LOCAL
+NO_SRC_ON_FTP=		Already in MASTER_SITE_LOCAL
 
-USE_IMAKE=	yes
+USE_IMAKE=		# defined
 
 .include "../../mk/bsd.pkg.mk"
