@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.4 2003/09/25 06:06:12 tron Exp $
+$NetBSD: distinfo,v 1.5 2003/11/14 13:36:21 tron Exp $
 
 SHA1 (arpd.tar.gz) = c23ea6f7fa1c442331bcf120f32d41f789ee369a
 Size (arpd.tar.gz) = 23400 bytes
-SHA1 (patch-aa) = ba2501cf1e3aae38836df4f193ec2e642e146aae
+SHA1 (patch-aa) = 2db74da5bfc680b37ff086a9d615083bbfd8a0d4
 SHA1 (patch-ab) = 5e0c468cd51bdd388fadf4fd9c6e7e92a0475456
 SHA1 (patch-ac) = 565f484cc246984aeeb6f414882aa2ccc6e33872
 SHA1 (patch-ad) = f28a6c62965fa7a8bd610e962773c019c8340211

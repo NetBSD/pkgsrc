@@ -1,16 +1,18 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/08/27 20:43:24 hubertf Exp $
+$NetBSD: patch-aa,v 1.2 2003/11/14 13:36:21 tron Exp $
 
---- arpd.c.orig	Sun May 24 16:14:13 1998
-+++ arpd.c
-@@ -49,6 +49,7 @@
+--- arpd.c.orig	1998-05-24 16:14:13.000000000 +0200
++++ arpd.c	2003-11-14 14:35:02.000000000 +0100
+@@ -47,8 +47,8 @@
+ #include <stdio.h>
+ #include <string.h>
  #include <syslog.h>
- #include <varargs.h>
+-#include <varargs.h>
  #include <pcap.h>
 +#include <errno.h>
  #include "error.h"
  #include "arpd.h"
  #include "wraplib.h"
-@@ -205,12 +206,15 @@
+@@ -205,12 +205,15 @@
  	struct if_elm *pIf_elm;
  
  	progname = "arpd"; /* for err_xxx */
