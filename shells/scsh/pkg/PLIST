@@ -1,3 +1,4 @@
+@comment $NetBSD: PLIST,v 1.2 1997/11/06 10:04:26 agc Exp $
 bin/scsh
 man/man1/scsh.1.gz
 lib/scsh/big/array.scm
