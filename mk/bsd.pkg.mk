@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1602 2005/03/22 22:20:21 xtraeme Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1603 2005/03/22 22:49:15 xtraeme Exp $
 #
 # This file is in the public domain.
 #
@@ -3593,6 +3593,9 @@ distclean: pre-distclean clean
 	${_PKG_SILENT}${_PKG_DEBUG}if [ -d ${_DISTDIR} ]; then		\
 		cd ${_DISTDIR} &&					\
 		${TEST} -z "${DISTFILES}" || ${RM} -f ${DISTFILES};	\
+                if [ "${PKG_RESUME_TRANSFERS:M[Yy][Ee][Ss]}" ]; then    \
+                    ${TEST} -z "${DISTFILES}.temp" || ${RM} -f ${DISTFILES}.temp;    \
+                fi;                                                     \
 		${TEST} -z "${PATCHFILES}" || ${RM} -f ${PATCHFILES};	\
 	fi
 .  if defined(DIST_SUBDIR) && exists(DIST_SUBDIR)
