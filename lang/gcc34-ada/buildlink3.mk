@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2004/06/29 18:00:17 shannonjr Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/07/01 01:35:55 shannonjr Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GCCADA_BUILDLINK3_MK:=	${GCCADA_BUILDLINK3_MK}+
@@ -15,11 +15,13 @@ BUILDLINK_PACKAGES+=	gcc34-ada
 BUILDLINK_DEPENDS.gcc34-ada+=	gcc34-ada>=3.4.1
 BUILDLINK_PKGSRCDIR.gcc34-ada?=	../../lang/gcc34-ada
 BUILDLINK_ENV+= ADAC=${BUILDLINK_PREFIX.gcc34-ada}/bin/gcc
+.  if exists(${BUILDLINK_PREFIX.gcc34-ada}/bin/gcc)
 _GCC_ARCHDIR!=	${DIRNAME} `${BUILDLINK_PREFIX.gcc34-ada}/bin/gcc --print-libgcc-file-name`
-.  if empty(_GCC_ARCHDIR:M*not_found*)
+.     if empty(_GCC_ARCHDIR:M*not_found*)
 BUILDLINK_LIBDIRS.gcc34-ada+=	lib ${_GCC_ARCHDIR:S/^${BUILDLINK_PREFIX.gcc34-ada}\///}
 BUILDLINK_LIBDIRS.gcc34-ada+=	${_GCC_ARCHDIR:S/^${BUILDLINK_PREFIX.gcc34-ada}\///}/adalib
 BUILDLINK_INCDIRS.gcc34-ada+=	include ${_GCC_ARCHDIR:S/^${BUILDLINK_PREFIX.gcc34-ada}\///}/adainclude
+.     endif
 .  endif
 .endif  # GCCADA_BUILDLINK3_MK
 
