@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7870 2004/11/15 17:03:32 xtraeme Exp $
+$NetBSD: CHANGES,v 1.7871 2004/11/15 21:58:19 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5291,3 +5291,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated libstatgrab to 0.11 [reed 2004-11-15]
 	Updated tin to 1.6.2 [dillo 2004-11-15]
 	Updated distcc to 2.18.2 [xtraeme 2004-11-15]
+	Updated cyrus-sasl2 to 2.1.20 [jlam 2004-11-15]
