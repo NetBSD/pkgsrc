@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.1.1.1 2004/11/27 14:14:05 taca Exp $
+$NetBSD: patch-ab,v 1.2 2005/01/21 06:13:36 tv Exp $
 
---- configure.orig	2002-11-19 20:49:26.000000000 +0900
+--- configure.orig	2002-11-19 06:49:26.000000000 -0500
 +++ configure
 @@ -29,6 +29,8 @@ ac_help="$ac_help
  --with-sitedir=DIR        site libraries in DIR [PREFIX/lib/ruby/site_ruby]"
@@ -11,7 +11,16 @@ $NetBSD: patch-ab,v 1.1.1.1 2004/11/27 14:14:05 taca Exp $
  
  # Initialize some variables set by options.
  # The variables have the same names as the options, with
-@@ -2877,7 +2879,8 @@ fi
+@@ -2324,6 +2326,8 @@ os2_emx*)	LIBS="-lm $LIBS"
+ 		ac_cv_lib_dir_opendir=no;;
+ msdosdjgpp*)	LIBS="-lm $LIBS"
+ 		ac_cv_func_getpgrp_void=yes;;
++interix3*)	LIBS="-lm $LIBS"
++		ac_cv_func_getpgrp_void=yes;;
+ freebsd*)	LIBS="-lm $LIBS"
+ 		echo $ac_n "checking whether -lxpg4 has to be linked""... $ac_c" 1>&6
+ echo "configure:2330: checking whether -lxpg4 has to be linked" >&5
+@@ -2877,7 +2881,8 @@ fi
  
  for ac_hdr in stdlib.h string.h unistd.h limits.h sys/file.h sys/ioctl.h\
  		 fcntl.h sys/fcntl.h sys/select.h sys/time.h sys/times.h sys/param.h\
@@ -21,7 +30,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2004/11/27 14:14:05 taca Exp $
  do
  ac_safe=`echo "$ac_hdr" | sed 'y%./+-%__p_%'`
  echo $ac_n "checking for $ac_hdr""... $ac_c" 1>&6
-@@ -4387,6 +4390,330 @@ EOF
+@@ -4387,6 +4392,330 @@ EOF
  
  fi
  
@@ -352,7 +361,15 @@ $NetBSD: patch-ab,v 1.1.1.1 2004/11/27 14:14:05 taca Exp $
  DEFAULT_KCODE="KCODE_NONE"
  
  # Check whether --with-default-kcode or --without-default-kcode was given.
-@@ -4524,7 +4851,7 @@ echo "configure:4501: checking whether O
+@@ -4510,6 +4839,7 @@ echo "configure:4501: checking whether O
+     cygwin*)	;;
+     mingw*)	;;
+     netbsd*) CCDLFLAGS=-fPIC;;
++    interix3*)	;;
+     *) CCDLFLAGS=-fPIC;;
+     esac
+   else
+@@ -4524,7 +4854,7 @@ echo "configure:4501: checking whether O
  
    case "$target_os" in
  	hpux*)		DLDFLAGS="-E"
@@ -361,7 +378,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2004/11/27 14:14:05 taca Exp $
  			LDFLAGS="-Wl,-E"
  			rb_cv_dlopen=yes;;
  	solaris*) 	if test "$GCC" = yes; then
-@@ -4539,7 +4866,8 @@ echo "configure:4501: checking whether O
+@@ -4539,7 +4869,8 @@ echo "configure:4501: checking whether O
  			rb_cv_dlopen=yes;;
  	sunos*) 	LDSHARED='ld -assert nodefinitions'
  			rb_cv_dlopen=yes;;
@@ -371,7 +388,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2004/11/27 14:14:05 taca Exp $
  			rb_cv_dlopen=yes;;
  	sysv4*) 	LDSHARED='ld -G'
  			rb_cv_dlopen=yes;;
-@@ -4550,6 +4878,12 @@ echo "configure:4501: checking whether O
+@@ -4550,6 +4881,12 @@ echo "configure:4501: checking whether O
  	osf*) 		LDSHARED="$CC -shared"
  			rb_cv_dlopen=yes ;;
  	linux*) 	LDSHARED="$CC -shared"
@@ -384,7 +401,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2004/11/27 14:14:05 taca Exp $
  			rb_cv_dlopen=yes ;;
  	freebsd*)       LDSHARED="$CC -shared"
  			if test "$rb_cv_binary_elf" = yes; then
-@@ -4562,6 +4896,9 @@ echo "configure:4501: checking whether O
+@@ -4562,8 +4899,18 @@ echo "configure:4501: checking whether O
  	netbsd*)	LDSHARED='${CC} -shared'
  			if test "$rb_cv_binary_elf" = yes; then
  			    LDFLAGS="-Wl,-export-dynamic"
@@ -393,8 +410,17 @@ $NetBSD: patch-ab,v 1.1.1.1 2004/11/27 14:14:05 taca Exp $
 +			    RPATHFLAG=' -Wl,-R%1$-s'
  			fi
  			rb_cv_dlopen=yes ;;
++	interix3*)	LDSHARED='${CC} -shared'
++			LDFLAGS="-Wl,-E"
++			# use special random-slot linkage in 0x[56]XXXXXXX
++			DLDFLAGS="$DLDFLAGS "'-Wl,-h,$(.TARGET) -Wl,--image-base,$$(($$RANDOM %%4096/2*262144+1342177280))'
++			LIBPATHFLAG=' -L%1$-s'
++			RPATHFLAG=' -Wl,-R%1$-s'
++			rb_cv_dlopen=yes ;;
  	openbsd*) 	LDSHARED="ld -Bforcearchive -Bshareable"
-@@ -5070,6 +5407,7 @@ if test "$enable_shared" = 'yes'; then
+ 			rb_cv_dlopen=yes ;;
+ 	bsdi3*) 	case "$CC" in
+@@ -5070,6 +5417,7 @@ if test "$enable_shared" = 'yes'; then
  	;;
      linux*)
  	LIBRUBY_DLDFLAGS='-Wl,-soname,lib$(RUBY_INSTALL_NAME).so.$(MAJOR).$(MINOR)'
@@ -402,7 +428,22 @@ $NetBSD: patch-ab,v 1.1.1.1 2004/11/27 14:14:05 taca Exp $
  	LIBRUBY_ALIASES='lib$(RUBY_INSTALL_NAME).so.$(MAJOR).$(MINOR) lib$(RUBY_INSTALL_NAME).so'
  	;;
      freebsd*)
-@@ -5315,6 +5653,15 @@ EOF
+@@ -5091,6 +5439,14 @@ if test "$enable_shared" = 'yes'; then
+ 	   LIBRUBY_ALIASES=""
+ 	fi
+  	;;
++    interix3*)
++	SOLIBS='$(LIBS)'
++	LIBRUBY_SO='lib$(RUBY_INSTALL_NAME).so.$(MAJOR)$(MINOR).$(TEENY)'
++	# link explicitly to 0x48000000
++	LIBRUBY_DLDFLAGS='-Wl,-h,lib$(RUBY_INSTALL_NAME).so.$(MAJOR)$(MINOR) -Wl,--image-base,1207959552'
++	LIBRUBYARG='-Wl,-R -Wl,${prefix}/lib -L${prefix}/lib -L. -l$(RUBY_INSTALL_NAME)'
++	LIBRUBY_ALIASES='lib$(RUBY_INSTALL_NAME).so.$(MAJOR)$(MINOR) lib$(RUBY_INSTALL_NAME).so'
++ 	;;
+     openbsd*)
+ 	SOLIBS='$(LIBS)'
+  	;;
+@@ -5315,6 +5671,15 @@ EOF
  
  fi
  
