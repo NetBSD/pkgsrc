@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.291 2002/06/08 17:34:09 cjep Exp $
+# $NetBSD: Makefile,v 1.292 2002/06/09 11:20:56 taca Exp $
 #
 
 COMMENT=	Development utilities
@@ -276,7 +276,6 @@ SUBDIR+=	ruby-ri
 SUBDIR+=	ruby-strscan
 SUBDIR+=	ruby-textbuf
 SUBDIR+=	ruby-unit
-#SUBDIR+=	ruby14-readline		# only needed for ruby-1.4 package
 SUBDIR+=	rvm
 SUBDIR+=	rx
 SUBDIR+=	sdcc
