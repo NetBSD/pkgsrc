@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.256 2002/07/02 11:26:05 agc Exp $
+# $NetBSD: Packages.txt,v 1.257 2002/07/02 15:25:49 wiz Exp $
 ###########################################################################
 
 			==========================
@@ -1667,7 +1667,6 @@ buildlink.mk files:
     USE_LTDL	-->	.include "../../devel/libtool/buildlink.mk"
     USE_MESA	-->	.include "../../graphics/Mesa/buildlink.mk"
     USE_MOTIF	-->	.include "../../mk/motif.buildlink.mk"
-    USE_SSL	-->	.include "../../security/openssl/buildlink.mk"
     USE_X11	-->	.include "../../mk/x11.buildlink.mk"
     USE_XAW	-->	.include "../../mk/xaw.buildlink.mk"
     USE_XPM	-->	.include "../../graphics/xpm/buildlink.mk"
