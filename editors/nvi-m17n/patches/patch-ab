@@ -8,7 +8,7 @@
 -			vi_cannapath="/usr/local";;
 -		freebsd2*)
 -			vi_cannapath="/usr/local/canna";;
-+		freebsd*)
++		freebsd*|netbsd*|openbsd*)
 +			vi_cannapath="${prefix}";;
  		*)
  			vi_cannapath="/usr/local/canna";;
