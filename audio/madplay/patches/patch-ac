@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.1.1.1 2000/10/15 10:24:55 simonb Exp $
+$NetBSD: patch-ac,v 1.2 2000/11/23 00:34:24 wiz Exp $
 
---- audio_sun.c.orig	Sun Sep 24 13:31:19 2000
-+++ audio_sun.c	Sun Oct 15 21:14:20 2000
-@@ -25,6 +25,7 @@
+--- audio_sun.c.orig	Wed Oct 25 23:51:39 2000
++++ audio_sun.c
+@@ -27,6 +27,7 @@
  
  # include <unistd.h>
  # include <fcntl.h>
