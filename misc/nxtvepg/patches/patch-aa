@@ -1,0 +1,51 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/02/18 19:17:24 tron Exp $
+
+--- Makefile.orig	Wed Feb 14 22:34:35 2001
++++ Makefile	Sun Feb 18 20:10:13 2001
+@@ -32,29 +32,29 @@
+ include Makefile.win32
+ else
+ 
+-IROOT   = /usr/local
++IROOT   = $(X11BASE)
+ BINDIR  = $(IROOT)/bin
+ MANDIR  = $(IROOT)/man/man1
+ 
+ # if you have perl set the path here, else just leave it alone
+-PERL    = /usr/bin/perl
++PERL    = $(LOCALBASE)/bin/perl
+ 
+-LDLIBS  = -ltk8.3 -ltcl8.3 -L/usr/X11R6/lib -lX11 -lm -ldl
++LDLIBS  = -ltk83 -ltcl83 -L$(X11BASE)/lib -lX11 -lm
+ # use static libraries for debugging only
+ #LDLIBS  = dbglib/libtk8.3.a dbglib/libtcl8.3.a -lX11 -lm -ldl -L/usr/X11R6/lib
+ 
+-INCS   += -I. -I/usr/X11R6/include
++INCS   += -I. -I$(X11BASE)/include -I$(LOCALBASE)/include
+ # path to Tcl/Tk headers, if not properly installed
+ #INCS   += -I/usr/local/tcl/tcl8.0/generic -I/usr/local/tcl/tk8.0/generic
+ 
+ # path to Tcl/Tk script library (Tk is usually in X11/lib/tk#.#)
+-DEFS   += -DTK_LIBRARY_PATH=\"/usr/lib/tk8.3\"
+-DEFS   += -DTCL_LIBRARY_PATH=\"/usr/lib/tcl8.3\"
++DEFS   += -DTK_LIBRARY_PATH=\"$(LOCALBASE)/lib/tk8.3\"
++DEFS   += -DTCL_LIBRARY_PATH=\"$(LOCALBASE)/lib/tcl8.3\"
+ 
+ 
+ WARN    = -Wall
+-CC      = gcc
+-CFLAGS  = -pipe $(WARN) $(INCS) $(DEFS) -g -O
++#CC      = gcc
++CFLAGS  += $(WARN) $(INCS) $(DEFS)
+ 
+ # ----- don't change anything below ------------------------------------------
+ 
+@@ -79,7 +79,7 @@
+ 	test -d $(BINDIR) || mkdirhier $(BINDIR)
+ 	test -d $(MANDIR) || mkdirhier $(MANDIR)
+ 	install -c -m 0755 nxtvepg     $(BINDIR)
+-	install -c -m 0644 nxtvepg.1x  $(MANDIR)
++	install -c -m 0644 nxtvepg.1x  $(MANDIR)/nxtvepg.1
+ 
+ ##%.o: %.c
+ ##	$(CC) $(CFLAGS) -c *.c -o *.o

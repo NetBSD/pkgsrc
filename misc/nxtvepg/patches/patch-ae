@@ -1,0 +1,17 @@
+$NetBSD: patch-ae,v 1.1.1.1 2001/02/18 19:17:24 tron Exp $
+
+--- epgctl/epgmain.c.orig	Sun Feb 11 13:14:54 2001
++++ epgctl/epgmain.c	Sun Feb 18 20:12:55 2001
+@@ -104,7 +104,12 @@
+        const char *dbdir  = ".";
+ #else
+ static const char *rcfile = "~/.nxtvepgrc";
++#ifdef __NetBSD__
++#include <paths.h>
++       const char *dbdir  = _PATH_TMP "nxtvdb";
++#else
+        const char *dbdir  = "/usr/tmp/nxtvdb";
++#endif
+ #endif
+ static int  videoCardIndex = -1;
+ static bool disableAcq = FALSE;
