@@ -1,3 +1,3 @@
-@comment $NetBSD: PLIST,v 1.3 1999/06/29 01:48:57 sakamoto Exp $
-lib/python1.5/lib-dynload/_tkinter.so
-lib/python1.5/config/Setup.tk
+@comment $NetBSD: PLIST,v 1.4 2000/10/22 20:01:52 tsarna Exp $
+lib/python2.0/lib-dynload/_tkinter.so
+lib/python2.0/config/Setup.tk

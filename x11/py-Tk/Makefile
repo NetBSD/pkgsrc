@@ -1,43 +1,28 @@
-# $NetBSD: Makefile,v 1.14 2000/08/31 02:35:17 tsarna Exp $
+# $NetBSD: Makefile,v 1.15 2000/10/22 20:01:51 tsarna Exp $
 #
 
-DISTNAME=	py152
-PKGNAME=	py-Tk-1.5.2
+DISTNAME=	${PY_DISTNAME}
+PKGNAME=	py-Tk-${PY_VERSION}
 CATEGORIES=	x11
-MASTER_SITES=	ftp://ftp.python.org/pub/python/src/
-EXTRACT_SUFX=	.tgz
+MASTER_SITES=	${PY_MASTER_SITES}
 
 MAINTAINER=	tsarna@netbsd.org
 HOMEPAGE=	http://www.python.org/topics/tkinter/
 
-DEPENDS+=	python-1.5.2:../../lang/python
 DEPENDS+=	tk-*:../../x11/tk
 DEPENDS+=	tcl-*:../../lang/tcl
 
-DIST_SUBDIR=	python
-
 USE_X11=	yes
-WRKSRC=		${WRKDIR}/Python-1.5.2/Modules
-ALL_TARGET=	default
-EXTRACT_ELEMENTS=	Python-1.5.2/Modules/_tkinter.c \
-			Python-1.5.2/Modules/tkappinit.c
+WRKSRC=		${PY_WRKSRC}
 
-PYTHON_CONFIGDIR=	${LOCALBASE}/lib/python1.5/config
+EXTRACT_ELEMENTS=	${PY_MODULES}/_tkinter.c \
+			${PY_MODULES}/tkappinit.c
 
-.if ${MACHINE_ARCH} == "sparc64"
-IGNORE="${PKGNAME} needs dynamic loading"
-.endif
-
-do-configure:
-	${SED} -e 's%@LOCALBASE@%${LOCALBASE}%g' \
-	 -e 's%@X11BASE@%${X11BASE}%g' ${FILESDIR}/Setup.in \
-	 >${WRKSRC}/Setup.in
-	( cd ${WRKSRC} ;\
-	  ${LN} -s ${PYTHON_CONFIGDIR}/Makefile.pre.in ;\
-	  ${MAKE} -f Makefile.pre.in boot)
+do-configure:	python-std-do-configure
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/_tkinter.so ${LOCALBASE}/lib/python1.5/lib-dynload
-	${INSTALL_DATA} ${WRKSRC}/Setup.in ${PYTHON_CONFIGDIR}/Setup.tk
+	${INSTALL_DATA} ${WRKSRC}/_tkinter.so ${PY_LIBDIR}/lib-dynload
+	${INSTALL_DATA} ${WRKSRC}/Setup.in ${PY_CONFIGDIR}/Setup.tk
 
+.include "../../lang/python/Makefile.inc"
 .include "../../mk/bsd.pkg.mk"
