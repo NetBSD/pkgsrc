@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/08/29 19:33:18 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2000/08/30 19:05:24 jlam Exp $
 
 DISTNAME=		libperl-${PERL_VERSION}
 PERL_VERSION=		5.6.0
@@ -8,6 +8,8 @@ DISTFILES=		# empty
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://language.perl.com/index.html
+
+IGNORE=			"${PKGNAME} has been superseded by the libperl package"
 
 USE_PERL5=		# defined
 DEPENDS+=		perl>=${PERL_VERSION}:../../lang/perl5-current
