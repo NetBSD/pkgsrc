@@ -154,7 +154,7 @@ Suggested package updates
 	o courier-imap-2.0 [pkg/22374]
 	o courier-imap-2.1
 	o crafty-19.5
-	o crimsonfields-0.4.0
+	o crimsonfields-0.4.1
 	o crossfire-1.5.0
 	o cscope-15.5
 	o cvs-1.11.13
@@ -297,6 +297,7 @@ Suggested package updates
 	o postgresql-7.4.1 [pkgsrc-wip]
 	o psi-0.9.1
 	o py-psycopg-1.1.10
+	o py-sqlite-0.5.0 [pkg/24663]
 	o pygtk-0.6.11
 	o pysol-4.82
 	o qt-3.3 [recht]
@@ -323,7 +324,7 @@ Suggested package updates
 	o snort-2.1.1
 	o snownews-1.5.0
 	o sodipodi-0.34
-	o sqlite-2.8.12
+	o sqlite-2.8.12 [pkg/24660]
 	o squeak-3.2 [fredb|pkg/17950]
 	o squeak-3.5
 	o srp_client-1.7.5 [jlam]
