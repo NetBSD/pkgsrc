@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.579 2000/09/20 21:53:32 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.580 2000/09/27 12:50:49 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -1623,18 +1623,6 @@ root-install:
 		${ECHO_MSG} "If this is not desired, set it to an appropriate value (${DEF_UMASK})"; \
 		${ECHO_MSG} "and install this package again by \`\`${MAKE} deinstall reinstall''."; \
 	fi
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	if [ -f ${DISTDIR}/vulnerabilities ]; then			\
-		vul="`${MAKE} show-vulnerabilities`";			\
-		if [ "$$vul" != "" ]; then				\
-			${ECHO_MSG} '*** WARNING: Vulnerabilities in this package ***'; \
-			${ECHO_MSG} "$$vul";				\
-		fi							\
-	else								\
-		${ECHO} "No ${DISTDIR}/vulnerabilities file.";		\
-		${ECHO} "Consider installing the pkgsrc/security/audit-packages package"; \
-		${ECHO} "to provide automatic package security vulnerability detection."; \
-	fi
 .if !defined(NO_MTREE)
 	${_PKG_SILENT}${_PKG_DEBUG}if [ `${ID} -u` = 0 ]; then		\
 		if [ ! -f ${MTREE_FILE} ]; then				\
@@ -3135,6 +3123,18 @@ fake-pkg: ${PLIST} ${DESCR}
 					< ${PKG_DBDIR}/$$realdep/+REQUIRED_BY > ${PKG_DBDIR}/$$realdep/reqby.$$$$; \
 				${MV} ${PKG_DBDIR}/$$realdep/reqby.$$$$ ${PKG_DBDIR}/$$realdep/+REQUIRED_BY; \
 				${ECHO} "${PKGNAME} requires installed package $$realdep"; \
+			fi;						\
+		done;							\
+	fi
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	if [ -f ${DISTDIR}/vulnerabilities ]; then			\
+		allvul="`${AWK} '/#.*/ { next } NF > 0 { cmd = sprintf(\"${PKG_INFO} -e \\\"%s\\\"\", $$1); system(cmd) }' ${DISTDIR}/vulnerabilities`"; \
+		for vul in "" $$allvul; do				\
+			if [ "X$$vul" = "X" ]; then continue; fi;	\
+			if [ "$$vul" = "${PKGNAME}" ]; then		\
+				${ECHO_MSG} '*** WARNING: This package (${PKGNAME}) has a security vulnerability ***'; \
+				${ECHO_MSG} "`${MAKE} show-vulnerabilities`"; \
+				${ECHO_MSG} '*** WARNING: You are strongly advised to deinstall ${PKGNAME} now ***'; \
 			fi;						\
 		done;							\
 	fi
