@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2004/06/26 10:42:42 grant Exp $
+# $NetBSD: Makefile,v 1.26 2004/06/26 10:45:28 grant Exp $
 #
 
 DISTNAME=		netscape-i686-pc-linux-gnu-sea
@@ -48,9 +48,9 @@ pre-build:
 		${FILESDIR}/extract_instructions;			\
 	sleep $${delay};						\
 	${MKDIR} ${WRKSRC}/dest
-	${SED} -e "s|/usr/local/netscape|${WRKSRC}/dest|g" 		\
+	@${SED} -e "s|/usr/local/netscape|${WRKSRC}/dest|g" 		\
 		${WRKSRC}/config.ini > ${WRKSRC}/config.ini.new;	\
-	${MV} ${WRKSRC}/config.ini.new ${WRKSRC}/config.ini
+	@${MV} ${WRKSRC}/config.ini.new ${WRKSRC}/config.ini
 
 # we must wait for netscape to start up after build!
 do-build:
@@ -59,7 +59,7 @@ do-build:
 
 # dynamic PLIST generation
 pre-install:
-	if [ -f ${INSTDIR}/plugins/libjavaplugin_oji.so ]; then	\
+	@if [ -f ${INSTDIR}/plugins/libjavaplugin_oji.so ]; then	\
 		cd ${INSTDIR}/plugins && ${LN} -sf 			\
 			java2/plugin/i386/ns600/libjavaplugin_oji.so	\
 			libjavaplugin_oji.so;				\
