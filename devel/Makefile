@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.507 2004/06/24 03:47:34 xtraeme Exp $
+# $NetBSD: Makefile,v 1.508 2004/06/26 09:16:10 grant Exp $
 #
 
 COMMENT=	Development utilities
@@ -449,7 +449,6 @@ SUBDIR+=	sgi-stl-docs
 SUBDIR+=	silc-toolkit
 SUBDIR+=	slib
 SUBDIR+=	sml-mode
-SUBDIR+=	smpeg
 SUBDIR+=	spiff
 SUBDIR+=	splint
 SUBDIR+=	st

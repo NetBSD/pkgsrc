@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.1 2004/03/01 01:46:57 kristerw Exp $
+$NetBSD: patch-ac,v 1.1 2004/06/26 09:16:10 grant Exp $
 
 --- video/video.h.orig	2004-03-01 02:14:39.000000000 +0100
 +++ video/video.h	2004-03-01 02:16:02.000000000 +0100

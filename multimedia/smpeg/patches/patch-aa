@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.3 2003/07/28 09:52:31 jmmv Exp $
+$NetBSD: patch-aa,v 1.1 2004/06/26 09:16:10 grant Exp $
 
 --- plaympeg.c.orig	Tue Feb  4 15:59:22 2003
 +++ plaympeg.c	Tue Feb  4 15:59:48 2003

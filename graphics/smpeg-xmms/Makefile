@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/05/07 01:14:48 xtraeme Exp $
+# $NetBSD: Makefile,v 1.10 2004/06/26 09:16:10 grant Exp $
 #
 
 DISTNAME=	smpeg-xmms-0.3.5
@@ -15,7 +15,7 @@ USE_BUILDLINK3=		YES
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		YES
 
-.include "../../devel/smpeg/buildlink3.mk"
+.include "../../multimedia/smpeg/buildlink3.mk"
 .include "../../devel/glib/buildlink3.mk"
 .include "../../x11/gtk/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
