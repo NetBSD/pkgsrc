@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2469 2004/11/25 20:10:33 minskim Exp $
+$NetBSD: TODO,v 1.2470 2004/11/25 20:16:51 minskim Exp $
 
 Suggested new packages
 ======================
@@ -901,7 +901,6 @@ Suggested package updates
 	o p5-Filter-1.30
 	o p5-Font-AFM-1.19
 	o p5-GD-2.19
-	o p5-Geo-IP-1.23
 	o p5-Getopt-Simple-1.48
 	o p5-Graph-0.20105
 	o p5-GraphViz-2.01
