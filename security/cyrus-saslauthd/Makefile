@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2004/01/13 08:13:42 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2004/01/13 09:03:15 jlam Exp $
 
 DISTNAME=	cyrus-sasl-2.1.17
 PKGNAME=	${DISTNAME:S/sasl/saslauthd/}
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/ \
 		ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/OLD-VERSIONS/sasl/
@@ -24,6 +25,8 @@ USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 PLIST_SRC=		${PKGDIR}/PLIST
+
+ALL_TARGET=		all saslcache testsaslauthd
 
 BUILD_DEFS+=		USE_PAM USE_LDAP SASL_USE_GSSAPI
 
@@ -57,6 +60,8 @@ DEINSTALL_EXTRA_TMPL=	${PKGDIR}/DEINSTALL
 RCD_SCRIPTS=		saslauthd
 FILES_SUBST+=		ROOT_USER=${ROOT_USER}
 
+INSTALLATION_DIRS=	bin
+
 post-configure:
 	${LN} -sf saslauthd.h ${WRKSRC}/config.h
 
@@ -67,8 +72,11 @@ post-build:
 		${MV} -f $$f.new $$f;					\
 	done
 
-.if defined(USE_LDAP)
 post-install:
+	for f in saslcache testsaslauthd; do				\
+		${INSTALL_PROGRAM} ${WRKSRC}/$$f ${PREFIX}/bin/$$f;	\
+	done
+.if defined(USE_LDAP)
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/cyrus-saslauthd
 	${INSTALL_DATA} ${WRKSRC}/LDAP_SASLAUTHD \
 		${PREFIX}/share/doc/cyrus-saslauthd
