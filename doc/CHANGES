@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6724 2004/07/29 10:15:47 martti Exp $
+$NetBSD: CHANGES,v 1.6725 2004/07/29 14:43:16 tv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3621,8 +3621,6 @@ Changes to the packages collection and infrastructure in 2004:
 	Added kphotools-0.2.1 [markd 2004-07-28]
 	Updated gnupg to 1.2.5 [wiz 2004-07-28]
 	Updated cpuflags to 0.74 [abs 2004-07-28]
-	Added jdk12-2.0.11 [tv 2004-07-28]
-	Added jdk12-openjit-1.1.16 [tv 2004-07-28]
 	Updated gcc34 to 3.4.1nb3 [shannonjr 2004-07-28]
 	Updated gcc34-ada to 3.4.1nb3 [shannonjr 2004-07-28]
 	Added xorg-6.7.0 [xtraeme 2004-07-29]
@@ -3640,6 +3638,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Added xorg-fontsType1-6.7.0 [xtraeme 2004-07-29]
 	Added xorg-docs-6.7.0 [xtraeme 2004-07-29]
 	Added xorg-dirs-1.0 [xtraeme 2004-07-29]
-	Removed jdk12 [agc 2004-07-29]
 	Removed openldap1 [xtraeme 2004-07-29]
 	Updated postfix to 2.1.4 [martti 2004-07-29]
