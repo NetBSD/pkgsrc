@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/06/11 06:34:23 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2001/10/27 15:20:40 kleink Exp $
 #
 
 DISTNAME=	gq-0.3.0
@@ -10,11 +10,10 @@ MAINTAINER=	rh@netbsd.org
 HOMEPAGE=	http://biot.com/gq/
 COMMENT=	GTK-based LDAP client
 
-DEPENDS+=	openldap>=1.2.11:../../databases/openldap
-DEPENDS+=	gtk+>=1.2.8:../../x11/gtk
+USE_BUILDLINK_ONLY=	YES
 
-USE_X11BASE=	YES
 GNU_CONFIGURE=	YES
-CPPFLAGS+=	-I${LOCALBASE}/include
 
+.include "../../databases/openldap/buildlink.mk"
+.include "../../x11/gtk/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
