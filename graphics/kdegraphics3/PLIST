@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2004/12/10 06:26:33 markd Exp $
+@comment $NetBSD: PLIST,v 1.22 2005/02/27 11:48:57 markd Exp $
 bin/kcolorchooser
 bin/kcoloredit
 bin/kdvi
@@ -194,6 +194,7 @@ include/scanparams.h
 include/scansourcedialog.h
 include/sizeindicator.h
 lib/kde3/gsthumbnail.la
+lib/kde3/kcm_kamera.la
 lib/kde3/kcm_kgamma.la
 lib/kde3/kcm_kmrml.la
 lib/kde3/kcm_kviewcanvasconfig.la
@@ -217,6 +218,7 @@ lib/kde3/kfile_rgb.la
 lib/kde3/kfile_tga.la
 lib/kde3/kfile_tiff.la
 lib/kde3/kfile_xbm.la
+lib/kde3/kio_kamera.la
 lib/kde3/kio_mrml.la
 lib/kde3/kuickshow.la
 lib/kde3/kview.la
@@ -427,6 +429,7 @@ share/doc/kde/HTML/en/kview/snapshot7.png
 share/doc/kde/HTML/en/kview/snapshot8.png
 share/doc/kde/HTML/en/kview/snapshot9.png
 share/kde/applnk/Graphics/kruler.desktop
+share/kde/applnk/Settings/Peripherals/kamera.desktop
 share/kde/apps/kcoloredit/kcoloreditui.rc
 share/kde/apps/kdvi/kdvi_part.rc
 share/kde/apps/kdvi/tips
@@ -917,10 +920,12 @@ share/kde/apps/kviewviewer/kviewviewer.rc
 share/kde/apps/kviewviewer/kviewviewer_ro.rc
 share/kde/config/kookarc
 share/kde/icons/crystalsvg/128x128/apps/kghostview.png
+share/kde/icons/crystalsvg/16x16/actions/camera_test.png
 share/kde/icons/crystalsvg/16x16/actions/palette_color.png
 share/kde/icons/crystalsvg/16x16/actions/palette_gray.png
 share/kde/icons/crystalsvg/16x16/actions/palette_halftone.png
 share/kde/icons/crystalsvg/16x16/actions/palette_lineart.png
+share/kde/icons/crystalsvg/16x16/apps/camera.png
 share/kde/icons/crystalsvg/16x16/apps/kcolorchooser.png
 share/kde/icons/crystalsvg/16x16/apps/kcoloredit.png
 share/kde/icons/crystalsvg/16x16/apps/kdvi.png
@@ -933,6 +938,7 @@ share/kde/icons/crystalsvg/16x16/apps/ksnapshot.png
 share/kde/icons/crystalsvg/16x16/apps/kuickshow.png
 share/kde/icons/crystalsvg/16x16/apps/kview.png
 share/kde/icons/crystalsvg/16x16/apps/kviewshell.png
+share/kde/icons/crystalsvg/16x16/devices/camera.png
 share/kde/icons/crystalsvg/16x16/mimetypes/kpovmodeler_doc.png
 share/kde/icons/crystalsvg/22x22/apps/kcolorchooser.png
 share/kde/icons/crystalsvg/32x32/apps/kcoloredit.png
@@ -946,6 +952,8 @@ share/kde/icons/crystalsvg/32x32/apps/ksnapshot.png
 share/kde/icons/crystalsvg/32x32/apps/kuickshow.png
 share/kde/icons/crystalsvg/32x32/apps/kview.png
 share/kde/icons/crystalsvg/32x32/apps/kviewshell.png
+share/kde/icons/crystalsvg/32x32/devices/camera.png
+share/kde/icons/crystalsvg/32x32/filesystems/camera.png
 share/kde/icons/crystalsvg/32x32/mimetypes/kpovmodeler_doc.png
 share/kde/icons/crystalsvg/48x48/apps/kdvi.png
 share/kde/icons/crystalsvg/48x48/apps/kfax.png
@@ -973,6 +981,7 @@ share/kde/icons/locolor/32x32/apps/kpovmodeler.png
 share/kde/icons/locolor/32x32/apps/kuickshow.png
 share/kde/mimelnk/text/mrml.desktop
 share/kde/services/gsthumbnail.desktop
+share/kde/services/kamera.protocol
 share/kde/services/kconfiguredialog/kviewcanvasconfig.desktop
 share/kde/services/kconfiguredialog/kviewgeneralconfig.desktop
 share/kde/services/kconfiguredialog/kviewpluginsconfig.desktop
@@ -1017,9 +1026,12 @@ share/kde/servicetypes/ksvgrenderer.desktop
 @comment in kde: @dirrm share/kde/icons/crystalsvg/64x64/apps
 @comment in kde: @dirrm share/kde/icons/crystalsvg/48x48/apps
 @comment in kde: @dirrm share/kde/icons/crystalsvg/32x32/mimetypes
+@comment in kde: @dirrm share/kde/icons/crystalsvg/32x32/filesystems
+@comment in kde: @dirrm share/kde/icons/crystalsvg/32x32/devices
 @comment in kde: @dirrm share/kde/icons/crystalsvg/32x32/apps
 @comment in kde: @dirrm share/kde/icons/crystalsvg/22x22/apps
 @comment in kde: @dirrm share/kde/icons/crystalsvg/16x16/mimetypes
+@comment in kde: @dirrm share/kde/icons/crystalsvg/16x16/devices
 @comment in kde: @dirrm share/kde/icons/crystalsvg/16x16/apps
 @comment in kde: @dirrm share/kde/icons/crystalsvg/16x16/actions
 @comment in kde: @dirrm share/kde/icons/crystalsvg/128x128/apps
@@ -1082,6 +1094,8 @@ share/kde/servicetypes/ksvgrenderer.desktop
 @dirrm share/kde/apps/kdvi
 @dirrm share/kde/apps/kcoloredit
 @comment in kde: @dirrm share/kde/apps
+@dirrm share/kde/applnk/Settings/Peripherals
+@comment in kde: @dirrm share/kde/applnk/Settings
 @comment in kde: @dirrm share/kde/applnk/Graphics
 @dirrm share/doc/kde/HTML/en/kview
 @dirrm share/doc/kde/HTML/en/kuickshow
