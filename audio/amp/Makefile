@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1998/04/15 10:38:09 agc Exp $
+# $NetBSD: Makefile,v 1.6 1998/06/18 16:15:10 agc Exp $
 #
 
 DISTNAME=	amp-0.7.6
@@ -9,8 +9,6 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	mycroft@NetBSD.ORG
 
 GNU_CONFIGURE=	yes
-
-MAN1=		amp.1
 
 do-install:
 	@ ${INSTALL_PROGRAM} ${WRKSRC}/amp ${PREFIX}/bin
