@@ -1,0 +1,15 @@
+$NetBSD: patch-af,v 1.1 2002/10/02 05:28:37 uebayasi Exp $
+
+--- share/lkm/if_hub_post.sh	Thu Sep 19 23:47:10 2002
++++ share/lkm/if_hub_post.sh	Thu Sep 19 23:47:52 2002
+@@ -7,8 +7,8 @@
+ #
+ #	modload netbsd_post.sh if_hub.o
+ # 
+-if [ $# -ne 3 ]; then
+-    echo "$0 should only be called from modload(8) with 3 args"
++if [ $# -lt 3 ]; then
++    echo "$0: should be called by modload(8) with at least 3 arguments"
+     exit 1
+ fi
+ 
