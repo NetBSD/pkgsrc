@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.220 2001/12/12 16:30:04 wiz Exp $
+# $NetBSD: Packages.txt,v 1.221 2001/12/15 20:25:34 agc Exp $
 ###########################################################################
 
 			==========================
@@ -364,7 +364,7 @@ policy:
 
     BATCH=                  yes          # required for bulk builds 
     DEPENDS_TARGET?=        bulk-install
-    PACKAGES?=              ${PKGSRCDIR}/packages/${MACHINE_ARCH}
+    PACKAGES?=              ${_PKGSRCDIR}/packages/${MACHINE_ARCH}
     OBJMACHINE?=            1                 # use work.${MACHINE_ARCH}
     WRKOBJDIR?=             /usr/tmp/pkgsrc   # build here instead of in pkgsrc
     FAILOVER_FETCH=         yes               # insist on the correct checksum
@@ -1895,8 +1895,8 @@ first part of the "do-configure" target pkgsrc/print/ghostscript5 package
 (it relies on the jpeg sources being present in source form during the
 build):
 
-	if [ ! -e ${PKGSRCDIR}/graphics/jpeg/${WRKDIR:T}/jpeg-6b ]; then \
-		cd ${PKGSRCDIR}/../../graphics/jpeg && ${MAKE} extract;              \
+	if [ ! -e ${_PKGSRCDIR}/graphics/jpeg/${WRKDIR:T}/jpeg-6b ]; then \
+		cd ${_PKGSRCDIR}/../../graphics/jpeg && ${MAKE} extract;              \
 	fi
 
 If you build any other packages that way, please make sure the working
@@ -1904,7 +1904,7 @@ files are deleted too when this package's working files are cleaned up.
 The easiest way to do so is by adding a pre-clean target:
 
 	pre-clean:
-		cd ${PKGSRCDIR}/../../graphics/jpeg && ${MAKE} clean
+		cd ${_PKGSRCDIR}/../../graphics/jpeg && ${MAKE} clean
 
 Please also note the BUILD_USES_MSGFMT and BUILD_USES_GETTEXT_M4 definitions,
 which are provided as convenience definitions.  The former works out whether
