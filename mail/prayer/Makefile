@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2003/01/28 22:03:37 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2003/03/02 12:10:46 jmmv Exp $
 #
 
 DISTNAME=	prayer-1.0.5
+PKGREVISION=	1
 CATEGORIES=	mail www
 MASTER_SITES=	ftp://ftp.csx.cam.ac.uk/pub/software/email/prayer/
 
@@ -15,6 +16,20 @@ USE_BUILDLINK2=	YES
 USE_PKGINSTALL=	YES
 USE_GMAKE=	YES
 USE_PERL5=	build
+
+MAKE_ENV+=	EGDIR="${EGDIR}"
+MAKE_ENV+=	PKG_SYSCONFDIR="${PKG_SYSCONFDIR}"
+
+PKG_SYSCONFSUBDIR=	prayer
+EGDIR=		${PREFIX}/share/examples/prayer
+
+CONF_FILES=	${EGDIR}/prayer.cf ${PKG_SYSCONFDIR}/prayer.cf
+CONF_FILES+=	${EGDIR}/prayer-accountd.cf ${PKG_SYSCONFDIR}/prayer-accountd.cf
+CONF_FILES+=	${EGDIR}/motd.html ${PKG_SYSCONFDIR}/motd.html
+CONF_FILES+=	${EGDIR}/welcome.html ${PKG_SYSCONFDIR}/welcome.html
+
+pre-install:
+	${INSTALL_DATA_DIR} ${EGDIR}
 
 .include "../../databases/db4/buildlink2.mk"
 .include "../../devel/zlib/buildlink2.mk"

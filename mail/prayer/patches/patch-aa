@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2002/12/27 12:52:07 abs Exp $
+$NetBSD: patch-aa,v 1.2 2003/03/02 12:10:47 jmmv Exp $
 
---- Config.orig	Thu Nov  7 08:50:44 2002
+--- Config.orig	2002-11-07 09:50:44.000000000 +0100
 +++ Config
 @@ -17,9 +17,9 @@ ACCOUNTD_SSL_ENABLE  = false  # Enable S
  DIRECT_ENABLE        = false  # Experimental. Leave this switched off... 
@@ -56,3 +56,12 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/12/27 12:52:07 abs Exp $
  RO_USER   = root
  RO_GROUP  = prayer
  
+@@ -158,6 +158,6 @@ PRIVATE_DIR  = 0750
+ PRIVATE_FILE = 0640
+ 
+ # Location of configuration files and binaries
+-PRAYER_CONFIG_FILE   = ${PREFIX}/etc/prayer.cf
++PRAYER_CONFIG_FILE   = ${PKG_SYSCONFDIR}/prayer.cf
+ BIN_DIR              = ${PREFIX}/sbin
+-ACCOUNTD_CONFIG_FILE = ${PREFIX}/etc/prayer-accountd.cf
++ACCOUNTD_CONFIG_FILE = ${PKG_SYSCONFDIR}/prayer-accountd.cf

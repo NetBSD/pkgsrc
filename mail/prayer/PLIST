@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/12/27 12:52:07 abs Exp $
-etc/prayer.cf
-etc/prayer-accountd.cf
-etc/motd.html
-etc/welcome.html
+@comment $NetBSD: PLIST,v 1.2 2003/03/02 12:10:46 jmmv Exp $
 sbin/prayer
+sbin/prayer-cyclog
 sbin/prayer-session
 sbin/prayer-ssl-prune
-sbin/prayer-cyclog
-@dirrm certs
+share/examples/prayer/motd.html
+share/examples/prayer/prayer-accountd.cf
+share/examples/prayer/prayer.cf
+share/examples/prayer/welcome.html
+@dirrm share/examples/prayer
