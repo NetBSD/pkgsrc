@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.48 2002/10/31 22:14:08 jlam Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.49 2002/11/14 22:25:05 jlam Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -571,6 +571,13 @@ _BLNK_WRAP_LT_UNTRANSFORM_SED=		${_REPLACE_BUILDLINK_SED}
 
 # The ld wrapper script accepts "-Wl,*" arguments.
 _BLNK_WRAP_SPECIFIC_LOGIC.LD=	${BUILDLINK_DIR}/bin/.ld-logic
+
+# Allow BUILDLINK_SETENV.<wrappee> to override _BLNK_WRAP_SETENV.<wrappee>.
+.for _wrappee_ in ${_BLNK_WRAPPEES}
+.  if defined(BUILDLINK_SETENV.${_wrappee_})
+_BLNK_WRAP_SETENV.${_wrappee_}=	${BUILDLINK_SETENV.${_wrappee_}}
+.  endif
+.endfor
 
 # Don't transform the arguments for imake, which uses the C preprocessor
 # to generate Makefiles, so that imake will find its config files.
