@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/04/11 05:48:34 kim Exp $
+# $NetBSD: Makefile,v 1.5 2004/04/11 06:03:15 snj Exp $
 #
 
 DISTNAME=	icecast-1.3.12
@@ -10,7 +10,7 @@ MAINTAINER=	kim@tac.nyc.ny.us
 HOMEPAGE=	http://www.icecast.org/
 COMMENT=	Internet broadcasting system using Mpeg Layer III streaming
 
-USE_BUILDLINK2=		# defined
+USE_BUILDLINK3=		# defined
 GNU_CONFIGURE=		# defined
 USE_PKGINSTALL=		yes
 
@@ -52,18 +52,13 @@ pre-configure:
 		-e 's/@CHUNKLEN@/${ICECAST_CHUNKLEN}/' \
 		${WRKSRC}/src/icetypes.h.bak > ${WRKSRC}/src/icetypes.h
 
-.include "../../devel/readline/buildlink2.mk"
+.include "../../devel/readline/buildlink3.mk"
 .include "../../lang/python/application.mk"
-.include "../../security/tcp_wrappers/buildlink2.mk"
-.include "../../mk/pthread.buildlink2.mk"
-
-.include "../../devel/readline/buildlink2.mk"
-.include "../../lang/python/application.mk"
-.include "../../security/tcp_wrappers/buildlink2.mk"
-.include "../../mk/pthread.buildlink2.mk"
+.include "../../security/tcp_wrappers/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 
 .if defined(PTHREAD_TYPE) && (${PTHREAD_TYPE} == "none")
-.  include "../../devel/unproven-pthreads/buildlink2.mk"
+.  include "../../devel/unproven-pthreads/buildlink3.mk"
 .endif
 
 .include "../../mk/bsd.pkg.mk"
