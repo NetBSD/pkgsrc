@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.2 2002/08/25 18:39:25 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2002/09/01 15:13:43 tron Exp $
 
 .if !defined(XPM_BUILDLINK2_MK)
 XPM_BUILDLINK2_MK=	# defined
@@ -8,15 +8,19 @@ XPM_BUILDLINK2_MK=	# defined
 BUILDLINK_DEPENDS.xpm?=		xpm-3.4k
 BUILDLINK_PKGSRCDIR.xpm?=	../../graphics/xpm
 
-# Check if we got Xpm distributed with XFree86 4.x or if we need to
-# depend on the Xpm package.
+# Check if we got Xpm distributed with XFree86 4.x or Solaris 9 or if we need
+# to depend on the Xpm package.
 #
 _REQUIRE_BUILTIN_XPM?=	NO
+.if (${OPSYS} != SunOS)
 .if exists(${X11BASE}/include/X11/xpm.h) && \
     exists(${X11BASE}/lib/X11/config/X11.tmpl)
 _IS_BUILTIN_XPM!=	${EGREP} -c NormalLibXpm ${X11BASE}/lib/X11/config/X11.tmpl || ${TRUE}
 .else
 _IS_BUILTIN_XPM=	0
+.endif
+.else
+_IS_BUILTIN_XPM!=	(/usr/sbin/pkgchk -l SUNWxwinc | ${EGREP} -c xpm.h) || ${TRUE}
 .endif
 .if (${_IS_BUILTIN_XPM} == "0") && (${_REQUIRE_BUILTIN_XPM} == "NO")
 _NEED_XPM=		YES
