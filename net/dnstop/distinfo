@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2002/10/30 21:13:35 itojun Exp $
+
+SHA1 (dnstop.c) = daa0e96bacbb5c181055a53fc32645eb7fcd1586
+Size (dnstop.c) = 16000 bytes
+SHA1 (Makefile) = 544107ed235a0a9f74f4ea02e3a5d7ca35891823
+Size (Makefile) = 164 bytes
