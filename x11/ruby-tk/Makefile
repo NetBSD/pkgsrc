@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/11/27 14:50:45 taca Exp $
+# $NetBSD: Makefile,v 1.11 2004/11/28 06:32:53 taca Exp $
 # FreeBSD: ports/x11-toolkits/ruby-tk/Makefile,v 1.21 2000/10/20 19:56:04 knu Exp
 
 DISTNAME=	${RUBY_DISTNAME}
@@ -19,7 +19,7 @@ USE_X11=		yes
 EXTRACT_ELEMENTS=	${RUBY_DISTNAME}/ext/tk
 WRKSRC=			${RUBY_WRKSRC}/ext/tk
 
-REPLACE_RUBY_DIRS=	sample
+REPLACE_RUBY_DIRS=	${WRKSRC}/sample
 
 post-patch:
 	@${FIND} ${WRKSRC} \( -name '*.orig' -o -name '*.bak' \) \
