@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2004/11/10 22:27:32 adrianp Exp $
+# $NetBSD: options.mk,v 1.4 2005/03/02 21:44:55 adrianp Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.freeradius
 PKG_SUPPORTED_OPTIONS=	ldap postgresql73 postgresql74 mysql snmp
@@ -52,7 +52,7 @@ PLIST_SRC+=		${PKGDIR}/PLIST.mysql
 ###
 ### Compile in SNMP support
 ###
-### Please note that snmp support is limited.  Freeradius looks like it's 
+### Please note that snmp support is limited.  Freeradius looks like it's
 ### after the old ucd-snmp (v4.x) headers and ucd-snmp isn't in pkgsrc any
 ### more.  Compatability mode on the current net-snmp (v5.x) does not seem
 ### to work either.  So it will find a few snmp utilites but other than that
