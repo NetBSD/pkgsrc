@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2003/11/12 01:31:51 salo Exp $
+# $NetBSD: Makefile,v 1.19 2003/11/14 11:48:57 adam Exp $
 #
 
 DISTNAME=		libgnomeprint-2.2.1.2
@@ -12,6 +12,7 @@ HOMEPAGE=		http://www.levien.com/gnome/print-arch.html
 COMMENT=		Library for the GNOME2 Printing Architecture
 
 BUILD_USES_MSGFMT=	YES
+BUILDLINK_DEPENDS.freetype2=	freetype2>=2.1.4
 
 GNU_CONFIGURE=		YES
 USE_BUILDLINK2=		YES
@@ -42,10 +43,10 @@ CONFIGURE_ARGS+=	--without-cups
 CONFIGURE_ENV+=		libltdl_cv_shlibext=so
 .endif
 
+.include "../../graphics/freetype2/buildlink2.mk"
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../devel/libbonobo/buildlink2.mk"
 .include "../../devel/pango/buildlink2.mk"
 .include "../../devel/glib2/buildlink2.mk"
-.include "../../graphics/freetype2/buildlink2.mk"
 .include "../../graphics/libart2/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
