@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.60 2003/04/10 20:10:20 grant Exp $
+# $NetBSD: Makefile,v 1.61 2003/05/03 16:55:28 atatat Exp $
 #
 
 DISTNAME=		lsof_4.67
+PKGREVISION=		2
 PKGNAME=		${DISTNAME:S/_/-/}
 TMPWRK=			${WRKDIR}/${DISTNAME}
 WRKSRC=			${WRKDIR}/${DISTNAME}/${SRCBALL_NAME}

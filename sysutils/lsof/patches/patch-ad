@@ -1,0 +1,151 @@
+$NetBSD: patch-ad,v 1.3 2003/05/03 16:55:30 atatat Exp $
+
+--- Configure.orig	2003-03-23 14:28:10.000000000 -0500
++++ Configure
+@@ -169,9 +169,9 @@ then
+   LSOF_VSTR=""
+ fi	# }
+ 
+-# Make sure the help file is removed before an abnormal exit.
++# Make sure temporary files are removed before an abnormal exit.
+ 
+-trap 'rm -f $LSOF_HLP ${LSOF_TMPC_BASE}*; exit 1' 1 2 3 15
++trap 'rm -f ${LSOF_HLP_BASE}* ${LSOF_TMPC_BASE}*; exit 1' 1 2 3 15
+ 
+ rm -f $LSOF_HLP
+ cat > $LSOF_HLP << LSOF_HLP
+@@ -230,11 +230,11 @@ do
+ 	echo "(cd ${LSOF_TSTSUBD}; make spotless)"
+ 	(cd ${LSOF_TSTSUBD}; make spotless)
+       else
+-	echo '(cd ${LSOF_TSTSUBD); rm *.o config.*)'
++	echo '(cd ${LSOF_TSTSUBD}; rm *.o config.*)'
+ 	(cd ${LSOF_TSTSUBD}; rm *.o config.*)
+       fi	# }
+-      rm -f $LSOF_F $LSOF_HLP $LSOF_MKFC ${LSOF_TMPC_BASE}*
+-      echo rm -f $LSOF_F $LSOF_HLP $LSOF_MKFC ${LSOF_TMPC_BASE}*
++      rm -f $LSOF_F $LSOF_MKFC ${LSOF_TMPC_BASE}*
++      echo rm -f $LSOF_F $LSOF_MKFC ${LSOF_TMPC_BASE}*
+       rm -rf AFSHeaders AFSVersion version.h
+       echo "rm -rf AFSHeaders AFSVersion version.h"
+       rm -f ${LSOF_HLP_BASE}* cd9660_node.h
+@@ -2212,15 +2212,21 @@ kernel generation process.
+     if test $? -eq 0	# {
+     then
+       LSOF_CFGF="$LSOF_CFGF -DHASI_FFS"
++    else
++      grep -q i_ffs1_size ${LSOF_INCLUDE}/ufs/ufs/inode.h
++      if test $? -eq 0	# {
++      then
++        LSOF_CFGF="$LSOF_CFGF -DHASI_FFS1"
++      fi	#}
+     fi	# }
+     grep -q VT_EXT2FS ${LSOF_INCLUDE}/sys/vnode.h
+     if test $? -eq 0	# {
+     then
+       LSOF_CFGF="$LSOF_CFGF -DHASEXT2FS"
+-      grep -q i_e2fs_size ${LSOF_INCLUDE}/ufs/ufs/inode.h
++      grep -q "*e2fs_din" ${LSOF_INCLUDE}/ufs/ufs/inode.h
+       if test $? -eq 0	# {
+       then
+-	LSOF_CFGF="$LSOF_CFGF -DHASI_E2FS"
++	LSOF_CFGF="$LSOF_CFGF -DHASI_E2FS_PTR"
+       fi	# }
+     fi	# }
+     if test -r ${LSOF_INCLUDE}/nfs/nfsnode.h	# {
+@@ -2272,7 +2278,7 @@ kernel generation process.
+     if test -r ${LSOF_INCLUDE}/sys/mount.h	# {
+     then
+ 
+-      # Build the netexport.h header file for NetBSD from <sys/mount.h>.
++      # Build the netexport.h header file for NetBSD.
+ 
+       LSOF_TMP1=${LSOF_TMPC}.edscr
+       LSOF_TMP2=${LSOF_TMPC}.netcred
+@@ -2447,23 +2453,10 @@ kernel generation process.
+       # If the OpenBSD version isn't pre-defined, determine it.
+ 
+       case $LSOF_VSTR in	# {
+-      1.2*)
++      1*)
+ 	LSOF_VERS=1020
+-	;;
+-      2.0*)
+-	LSOF_VERS=2000
+-	;;
+-      2.1*)
+-	LSOF_VERS=2010
+-	;;
+-      2.2*)
+-	LSOF_VERS=2020
+-	;;
+-      2.3*)
+-	LSOF_VERS=2030
+-	;;
+-      2.4*)
+-	LSOF_VERS=2040
++	echo "!!!WARNING!!!  Unsupported OpenBSD 1.x version: $LSOF_VSTR"
++	echo "!!!WARNING!!!  Configuring for OpenBSD 1.2"
+ 	;;
+       2.5*)
+ 	LSOF_VERS=2050
+@@ -2483,6 +2476,12 @@ kernel generation process.
+         LSOF_TSTBIGF=" "
+ 	LSOF_VERS=2090
+ 	;;
++      2*)
++        LSOF_TSTBIGF=" "
++	LSOF_VERS=2090
++	echo "!!!WARNING!!!  Unsupported OpenBSD 2.x version: $LSOF_VSTR"
++	echo "!!!WARNING!!!  Configuring for OpenBSD 2.9"
++	;;
+       3.0*)
+         LSOF_TSTBIGF=" "
+ 	LSOF_VERS=3000
+@@ -2495,15 +2494,20 @@ kernel generation process.
+         LSOF_TSTBIGF=" "
+ 	LSOF_VERS=3020
+ 	;;
++      3.3*)
++        LSOF_TSTBIGF=" "
++	LSOF_VERS=3030
++	;;
+       3*)
+-	LSOF_VERS=3010
+-	echo "!!!WARNING!!!  Unsupported OpenBSD version: $LSOF_VSTR"
+-	echo "!!!WARNING!!!  Configuring for OpenBSD 3.1"
++        LSOF_TSTBIGF=" "
++	LSOF_VERS=3020
++	echo "!!!WARNING!!!  Unsupported OpenBSD 3.x version: $LSOF_VSTR"
++	echo "!!!WARNING!!!  Configuring for OpenBSD 3.2"
+ 	;;
+       *)
+ 	echo "Unknown OpenBSD release: $LSOF_VSTR"
+-	echo Assuming OpenBSD 1.2
+-	LSOF_VERS=1020
++	echo Assuming OpenBSD 3.2
++	LSOF_VERS=3020
+ 	;;
+       esac	# }
+     fi	# }
+@@ -2511,7 +2515,7 @@ kernel generation process.
+     # Test for legal OpenBSD version.
+ 
+     case $LSOF_VERS in	# {
+-    1020|2000|2010|2020|2030|2040|2050|2060|2070|2080|2090|3000|3010|3020)
++    1020|2050|2060|2070|2080|2090|3000|3010|3020|3030)
+       ;;
+     *)
+       echo "Unknown OpenBSD version: $LSOF_VERS"
+@@ -2597,6 +2601,11 @@ kernel generation process.
+     if test $? -eq 0	# {
+     then
+       LSOF_CFGF="$LSOF_CFGF -DHASEXT2FS"
++      grep -q "*e2fs_din" ${LSOF_INCLUDE}/ufs/ufs/inode.h
++      if test $? -eq 0	# {
++      then
++	LSOF_CFGF="$LSOF_CFGF -DHASI_E2FS_PTR"
++      fi	# }
+     fi	# }
+     grep -q nc_vpid ${LSOF_INCLUDE}/sys/namei.h
+     if test $? -eq 0	# {
