@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2001/05/25 13:05:41 wiz Exp $
-
---- builddtcl.sh.orig	Tue May  1 17:56:01 2001
-+++ builddtcl.sh
-@@ -3,53 +3,2 @@
+--- builddtcl.sh.orig	Fri Sep 28 19:44:44 2001
++++ builddtcl.sh	Fri Sep 28 19:45:23 2001
+@@ -1,57 +1,6 @@
+ #!/bin/sh
+ # $Id: patch-aa,v 1.5 2001/09/29 00:26:00 jwise Exp $
  
 -# Name of tclsh - on FreeBSD, this is probably tclsh8.2
 -TCLSH=tclsh  ######### CHANGEME ##########
@@ -26,9 +26,9 @@ $NetBSD: patch-aa,v 1.4 2001/05/25 13:05:41 wiz Exp $
 -
 -# Location of Apache source install (for static installs - you can
 -# comment this out for shared lib installs
--APACHE=$HOME/download/apache-1.3/  ######### CHANGEME ##########
+-# APACHE=$HOME/download/apache-1.3/  ######### CHANGEME ##########
 -# ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
--# APACHE=/usr/local/src/apache-1.3/
+-APACHE=/usr/local/src/apache-1.3/
 -# APACHE=/
 -
 -export APACHE
@@ -56,9 +56,5 @@ $NetBSD: patch-aa,v 1.4 2001/05/25 13:05:41 wiz Exp $
 -fi
 -
  # find location of tclConfig.sh, source it, and export variables to
-@@ -62,5 +11,3 @@
- export TCL_CC
--export TCL_CFLAGS_DEBUG 
- export TCL_CFLAGS_OPTIMIZE 
--export TCL_CFLAGS_WARNING 
- export TCL_EXTRA_CFLAGS
+ # make them available to 'make'
+ 

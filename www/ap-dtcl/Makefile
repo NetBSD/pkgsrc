@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2001/06/13 18:16:07 jwise Exp $
+# $NetBSD: Makefile,v 1.16 2001/09/29 00:26:00 jwise Exp $
 
-DISTNAME=	mod_dtcl-0.10.1
-PKGNAME=	ap-dtcl-0.10.1
+DISTNAME=	mod_dtcl-0.11.2
+PKGNAME=	ap-dtcl-0.11.2
 WRKSRC=		${WRKDIR}/mod_dtcl
 CATEGORIES=	www
 MASTER_SITES=	http://tcl.apache.org/mod_dtcl/download/
