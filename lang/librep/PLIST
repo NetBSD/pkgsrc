@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2002/07/19 04:39:09 mycroft Exp $
+@comment $NetBSD: PLIST,v 1.4 2003/02/21 12:53:23 mycroft Exp $
 bin/rep
 bin/rep-config
 bin/rep-remote
@@ -23,8 +23,8 @@ info/librep.info-9
 lib/librep.a
 lib/librep.la
 lib/librep.so
-lib/librep.so.11
-lib/librep.so.11.1
+lib/librep.so.12
+lib/librep.so.12.0
 libexec/rep/${MACHINE_GNU_PLATFORM}/install-aliases
 libexec/rep/${MACHINE_GNU_PLATFORM}/libtool
 libexec/rep/${MACHINE_GNU_PLATFORM}/rep_config.h
@@ -125,6 +125,8 @@ share/rep/${REP_VERS}/lisp/rep/data/string-util.jl
 share/rep/${REP_VERS}/lisp/rep/data/string-util.jlc
 share/rep/${REP_VERS}/lisp/rep/data/symbol-table.jl
 share/rep/${REP_VERS}/lisp/rep/data/symbol-table.jlc
+share/rep/${REP_VERS}/lisp/rep/data/trie.jl
+share/rep/${REP_VERS}/lisp/rep/data/trie.jlc
 share/rep/${REP_VERS}/lisp/rep/i18n/xgettext.jl
 share/rep/${REP_VERS}/lisp/rep/i18n/xgettext.jlc
 share/rep/${REP_VERS}/lisp/rep/io/file-handlers.jl
@@ -194,6 +196,8 @@ share/rep/${REP_VERS}/lisp/rep/threads/message-port.jl
 share/rep/${REP_VERS}/lisp/rep/threads/message-port.jlc
 share/rep/${REP_VERS}/lisp/rep/threads/mutex.jl
 share/rep/${REP_VERS}/lisp/rep/threads/mutex.jlc
+share/rep/${REP_VERS}/lisp/rep/threads/proxy.jl
+share/rep/${REP_VERS}/lisp/rep/threads/proxy.jlc
 share/rep/${REP_VERS}/lisp/rep/threads/utils.jl
 share/rep/${REP_VERS}/lisp/rep/threads/utils.jlc
 share/rep/${REP_VERS}/lisp/rep/user.jl
@@ -254,6 +258,10 @@ share/rep/${REP_VERS}/lisp/rep/www/fetch-url.jl
 share/rep/${REP_VERS}/lisp/rep/www/fetch-url.jlc
 share/rep/${REP_VERS}/lisp/rep/www/quote-url.jl
 share/rep/${REP_VERS}/lisp/rep/www/quote-url.jlc
+share/rep/${REP_VERS}/lisp/rep/xml/printer.jl
+share/rep/${REP_VERS}/lisp/rep/xml/printer.jlc
+share/rep/${REP_VERS}/lisp/rep/xml/reader.jl
+share/rep/${REP_VERS}/lisp/rep/xml/reader.jlc
 share/rep/${REP_VERS}/lisp/ring.jl
 share/rep/${REP_VERS}/lisp/ring.jlc
 share/rep/${REP_VERS}/lisp/scheme.jl
@@ -282,6 +290,7 @@ share/rep/${REP_VERS}/lisp/unscheme/syntax.jl
 share/rep/${REP_VERS}/lisp/unscheme/syntax.jlc
 @dirrm share/rep/${REP_VERS}/lisp/unscheme
 @dirrm share/rep/${REP_VERS}/lisp/scheme
+@dirrm share/rep/${REP_VERS}/lisp/rep/xml
 @dirrm share/rep/${REP_VERS}/lisp/rep/www
 @dirrm share/rep/${REP_VERS}/lisp/rep/vm/compiler
 @dirrm share/rep/${REP_VERS}/lisp/rep/vm
