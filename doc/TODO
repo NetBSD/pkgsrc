@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1716 2004/05/06 17:20:46 minskim Exp $
+$NetBSD: TODO,v 1.1717 2004/05/07 11:14:50 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -371,7 +371,6 @@ Suggested package updates
 	o vba-1.7.1
 	o vfu-4.03
 	o vnc-3.3.7 [http://www.realvnc.com/download.html]
-	o vte-0.11.11
 	o vttest-20030301
 	o w3m-0.5.1
 	o wavesurfer-1.5.3
