@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2003/10/31 02:13:17 dmcmahill Exp $
+
+--- configure.orig	2003-06-09 20:04:34.000000000 -0400
++++ configure
+@@ -6362,7 +6362,7 @@ sco3.2v5*)
+   ;;
+ 
+ solaris*)
+-  version_type=linux
++  version_type=sunos
+   need_lib_prefix=no
+   need_version=no
+   library_names_spec='${libname}${release}.so$versuffix ${libname}${release}.so$major $libname.so'
