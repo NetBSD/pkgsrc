@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2004Q4,v 1.1.2.8 2004/12/23 03:36:51 snj Exp $
+$NetBSD: CHANGES-pkgsrc-2004Q4,v 1.1.2.9 2004/12/23 03:46:53 snj Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2004Q4 branch:
@@ -19,3 +19,5 @@ Pullup ticket 179 - requested by Adrian Portelli
 security fix for xpdf
 Pullup ticket 180 - requested by grant beattie
 portability fix for libtool
+Pullup ticket 181 - requested by Thomas Klausner
+security fix for xzgv
