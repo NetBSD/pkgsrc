@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:23:12 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/09/25 18:49:08 wiz Exp $
 bin/dmake
+man/man1/dmake.1
 share/dmake/startup/Windows_NT/borland/macros.mk
 share/dmake/startup/Windows_NT/macros.mk
 share/dmake/startup/Windows_NT/microsft/macros.mk
