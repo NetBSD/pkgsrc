@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.246 2004/05/09 05:21:53 minskim Exp $
+# $NetBSD: Makefile,v 1.247 2004/05/13 04:13:27 xtraeme Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -165,9 +165,9 @@ SUBDIR+=	p5-XML-Node
 SUBDIR+=	p5-XML-Parser
 SUBDIR+=	p5-XML-RSS
 SUBDIR+=	p5-XML-RegExp
-SUBDIR+=	p5-XML-Sablotron
 SUBDIR+=	p5-XML-SAX
 SUBDIR+=	p5-XML-SAX-Expat
+SUBDIR+=	p5-XML-Sablotron
 SUBDIR+=	p5-XML-Simple
 SUBDIR+=	p5-XML-Stream
 SUBDIR+=	p5-XML-Twig
