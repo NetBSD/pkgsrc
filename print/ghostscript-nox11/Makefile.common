@@ -1,0 +1,221 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2000/05/07 02:04:34 jlam Exp $
+
+DISTNAME=		ghostscript-${GS_VERS}
+GS_VERS=		6.01
+CATEGORIES=		print
+MASTER_SITES+=		http://download.sourceforge.net/ghostscript/ \
+			ftp://ftp.cs.wisc.edu/ghost/aladdin/gs601/
+EXTRACT_SUFX=		.tar.bz2
+
+MAINTAINER=		jlam@netbsd.org
+HOMEPAGE=		http://www.cs.wisc.edu/~ghost/index.html
+
+DEPENDS+=		ghostscript-fonts-6.0:../../print/ghostscript-fonts
+DEPENDS+=		ja-vflib-lib-2.*:../../japanese/vflib-lib
+DEPENDS+=		png>=1.0.6:../../graphics/png
+
+# Adobe's JPEG implementation in their PDF/PS documents is non-standard,
+# so we can't use an already installed libjpeg.so.
+#
+BUILD_DEPENDS+=		${BUILD_ROOT}/graphics/jpeg/${WRKDIR:T}/jpeg-6b:../../graphics/jpeg:extract
+
+GS_SOURCES=		${DISTNAME}${EXTRACT_SUFX}
+DISTFILES+=		${GS_SOURCES}
+
+# VFlib & Japanese PDF patch
+PATCH_SITES=		http://www.sat.t.u-tokyo.ac.jp/~hideyuki/Ghostscript/
+PATCHFILES=		gs${GS_VERS}-jpdf-exp.patch.gz
+PATCH_DIST_STRIP=	-p1
+
+# PostScript source to decode encrypted PDF files
+MASTER_SITES+=		http://www.ozemail.com.au/~geoffk/pdfencrypt/
+PDF_SEC=		pdf_sec.ps
+DISTFILES+=		${PDF_SEC}
+
+# Additional driver for several HP deskjets
+MASTER_SITES+=		ftp://ftp.sbs.de/pub/graphics/ghostscript/pcl3/
+HPDJ_DRV=		hpdj-2.6
+DISTFILES+=		${HPDJ_DRV}.tar.gz
+EXTRACT_LIST+=		${HPDJ_DRV}.tar.gz
+
+# I don't know the primary destribution sites of these drivers....
+MASTER_SITES+=		ftp://ftp.freebsd.org/pub/FreeBSD/distfiles/
+DMPRT_DRV=		dmprt-2.01
+DISTFILES+=		${DMPRT_DRV}.tar.gz
+EXTRACT_LIST+=		${DMPRT_DRV}.tar.gz
+
+BJ10V_DRV=		gdev10v
+DISTFILES+=		${BJ10V_DRV}.tar.gz
+EXTRACT_LIST+=		${BJ10V_DRV}.tar.gz
+
+# This driver doesn't compile ... missing header "gsprops.h".
+MJC_DRV=		gdevmjc-0.8
+DISTFILES+=		${MJC_DRV}.tar.gz
+EXTRACT_LIST+=		${MJC_DRV}.tar.gz
+
+# Alps MD5000 printer 600dpi monochrome mode
+MD5000_DRV=		gdevalps-0.2
+DISTFILES+=		${MD5000_DRV}.tar.gz
+EXTRACT_LIST+=		${MD5000_DRV}.tar.gz
+
+# Alps MD-2000/2010/4000/1300/1500/5000
+MASTER_SITES+=		http://plaza26.mbn.or.jp/~higamasa/gdevmd2k/
+MD2000_DRV=		gdevmd2k-0.2a
+DISTFILES+=		${MD2000_DRV}.tar.gz
+EXTRACT_LIST+=		${MD2000_DRV}.tar.gz
+
+# Canon LIPS II+, III, IV; EPSON ESC/Page; NEC NPDL drivers
+MASTER_SITES+=		http://www.bukka.p.chiba-u.ac.jp/~ohmori/gs/
+LIPS_DRV=		gdevlips-2.3.6
+DISTFILES+=		${LIPS_DRV}.tar.gz
+EXTRACT_LIST+=		${LIPS_DRV}.tar.gz
+
+# Ricoh RPDL
+MASTER_SITES+=		http://home.jp.FreeBSD.org/~mita/LOCAL_PORTS/
+RPDL_DRV=		gdevrpdl
+DISTFILES+=		${RPDL_DRV}.tar.gz
+EXTRACT_LIST+=		${RPDL_DRV}.tar.gz
+
+# Kyocera Prescribe
+MASTER_SITES+=		${MASTER_SITE_LOCAL}
+PRESCR_DRV=		gdevprsc-0.2
+DISTFILES+=		${PRESCR_DRV}.tar.gz
+EXTRACT_LIST+=		${PRESCR_DRV}.tar.gz
+
+FILESDIR=		${.CURDIR}/../../print/ghostscript-nox11/files
+PATCHDIR=		${.CURDIR}/../../print/ghostscript-nox11/patches
+SCRIPTDIR=		${.CURDIR}/../../print/ghostscript-nox11/scripts
+PLIST_SRC=		${.CURDIR}/../../print/ghostscript-nox11/pkg/PLIST
+
+EXTRACT_ONLY=		${GS_SOURCES}
+DIST_SUBDIR=		ghostscript
+WRKSRC=			${WRKDIR}/gs${GS_VERS}
+MAKEFILE=		src/unix-gcc.mak
+ALL_TARGET=		std
+
+.include "../../mk/bsd.prefs.mk"
+
+# arm32 compiler has an optimizer problem
+.if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "arm32"
+CFLAGS=
+.endif
+
+.if defined(PAPERSIZE) && (${PAPERSIZE} == "A4" || ${PAPERSIZE} == "a4")
+CFLAGS+=		-DA4
+.endif
+
+CFLAGS+=		-I${LOCALBASE}/include		# png.h, VF.h
+CFLAGS+=		-DHAVE_MKSTEMP=1
+
+.if ${OPSYS} == "SunOS"
+LDFLAGS+=		-L${LOCALBASE}/bsd/lib -Wl,-R${LOCALBASE}/bsd/lib
+.endif
+
+MAKE_ENV+=		XLDFLAGS="${LDFLAGS}"
+
+# Ghostscript builds in ./obj, which confuses make, so explicitly set
+# MAKEOBJDIR so as not to descend into ./obj.
+#
+MAKE_ENV+=		MAKEOBJDIR="."
+
+# Define whether this platform has floating point hardware:
+#	FPU_TYPE=2 means floating point is faster than fixed point.
+# (This is the case on some RISCs with multiple instruction dispatch.)
+#	FPU_TYPE=1 means floating point is at worst only slightly slower
+# than fixed point.
+#	FPU_TYPE=0 means that floating point may be considerably slower.
+#	FPU_TYPE=-1 means that floating point is always much slower than
+# fixed point.
+#
+FPU_TYPE=		1
+MAKE_ENV+=		FPU_TYPE=${FPU_TYPE}
+
+.if defined(USE_X11)
+MAKEFRAGS=		${FILESDIR}/devs.x11
+.endif
+MAKEFRAGS+=		${FILESDIR}/devs.nox11
+
+PERL_PATH=		${LOCALBASE}/bin/perl
+GSINST_DIR=		${PREFIX}/share/ghostscript/${GS_VERS}vflib
+DOC_DIR=		${PREFIX}/share/doc/ghostscript
+LIB_DIR=		${GSINST_DIR}/lib
+
+post-extract:
+.for FILE in ${EXTRACT_LIST}
+	cd ${WRKDIR}; ${PAX} -zrf ${_DISTDIR}/${FILE}
+.endfor
+	cd ${WRKSRC}/src; ${PAX} -rf ${WRKDIR}/${HPDJ_DRV}/hpdj.tar
+	${MV} ${WRKSRC}/src/gs-hpdj.1 ${WRKSRC}/man
+	cd ${WRKDIR}; ${CP} gdevdmpr.c gdevdmpr.mak		${WRKSRC}/src
+	cd ${WRKDIR}; ${CP} dviprlib.*				${WRKSRC}/src
+	cd ${WRKDIR}/${BJ10V_DRV}; ${CP} gdev10v.c gdev10v.mak	${WRKSRC}/src
+	cd ${WRKDIR}/${MJC_DRV}; ${CP} *.[ch] gdevmjc.mak	${WRKSRC}/src
+	cd ${WRKDIR}/${LIPS_DRV}; ${CP} *			${WRKSRC}/src
+	cd ${WRKDIR}/${RPDL_DRV}; ${CP} gdevrpdl.c gdevrpdl.mak	${WRKSRC}/src
+	cd ${WRKDIR}/${MD5000_DRV}; \
+		${CP} gdevalps.c gdevalps.mak-5.50		${WRKSRC}/src
+	cd ${WRKDIR}/${MD2000_DRV}; \
+		${CP} gdevmd2k.c gdevmd2k.mak-5.8x		${WRKSRC}/src
+	cd ${WRKDIR}/${PRESCR_DRV}; \
+		${CP} gdevprsc.c gdevprsc.mak			${WRKSRC}/src
+
+	${RM} -f ${WRKSRC}/jpeg
+	${LN} -s ${BUILD_ROOT}/graphics/jpeg/${WRKDIR:T}/jpeg-6b \
+		${WRKSRC}/jpeg
+	${RM} -f ${WRKSRC}/lib/${PDF_SEC}
+	${LN} -s ${_DISTDIR}/${PDF_SEC} ${WRKSRC}/lib/${PDF_SEC}
+	${MV} ${WRKSRC}/lib/fixmswrd.pl ${WRKSRC}/lib/fixmswrd.pl.in
+
+post-patch:
+	if [ ! -f ${WRKDIR}/dmp_site.ps.bak ]; then \
+		${MV} ${WRKDIR}/dmp_site.ps ${WRKDIR}/dmp_site.ps.bak; \
+	fi
+	${SED} -e "s,epsimage\.src,${GSINST_DIR}/lib/escp_24.src,g" \
+		< ${WRKDIR}/dmp_site.ps.bak > ${WRKDIR}/dmp_site.ps
+
+do-configure:
+	#
+	# Append build rules for extra drivers to contrib.mak
+	#
+	${CAT}	${WRKSRC}/src/contrib.mak-5.94.add \
+		${WRKSRC}/src/gdevlips.mak \
+                ${WRKSRC}/src/gdev10v.mak \
+                ${WRKSRC}/src/gdevmjc.mak \
+                ${WRKSRC}/src/gdevrpdl.mak \
+                ${WRKSRC}/src/gdevdmpr.mak \
+                ${WRKSRC}/src/gdevalps.mak-5.50 \
+                ${WRKSRC}/src/gdevmd2k.mak-5.8x \
+                ${WRKSRC}/src/gdevprsc.mak \
+		>> ${WRKSRC}/src/contrib.mak
+	#
+	# Prepend device list to unix-gcc.mak
+	#
+	${CAT}	${MAKEFRAGS} \
+		${WRKSRC}/src/unix-gcc.mak \
+		> ${WRKDIR}/unix-gcc.mak
+	${MV} -f ${WRKDIR}/unix-gcc.mak ${WRKSRC}/src
+
+	${SED}	-e "s,@PERL@,${PERL_PATH},g" \
+		< ${WRKSRC}/lib/fixmswrd.pl.in > ${WRKSRC}/lib/fixmswrd.pl
+
+post-install:
+	strip ${PREFIX}/bin/gs
+	${INSTALL_DATA} ${WRKDIR}/${LIPS_DRV}/Gdevlips.htm ${DOC_DIR}
+	${INSTALL_DATA} ${WRKDIR}/${BJ10V_DRV}/gdev10v.jis ${DOC_DIR}
+	${INSTALL_DATA} ${WRKDIR}/gdevdmpr.sj ${DOC_DIR}
+	${INSTALL_DATA} ${WRKDIR}/dmp_init.ps ${LIB_DIR}
+	${INSTALL_DATA} ${WRKDIR}/dmp_site.ps ${LIB_DIR}
+	${INSTALL_DATA} ${WRKDIR}/escp_24.src ${LIB_DIR}
+	${INSTALL_DATA} ${WRKDIR}/testpage.ps ${LIB_DIR}
+	${INSTALL_DATA} ${WRKDIR}/${PRESCR_DRV}/gdevprsc.?? ${DOC_DIR}
+	${INSTALL_DATA_DIR} ${DOC_DIR}/${MJC_DRV}
+	${INSTALL_DATA} ${WRKDIR}/${MJC_DRV}/README.mjc ${DOC_DIR}/${MJC_DRV}
+	${INSTALL_DATA} ${WRKDIR}/${MJC_DRV}/README.noz ${DOC_DIR}/${MJC_DRV}
+	${INSTALL_DATA} ${WRKDIR}/${MJC_DRV}/README.mje ${DOC_DIR}/${MJC_DRV}
+	${INSTALL_DATA} ${WRKDIR}/${MJC_DRV}/cpem.doc ${DOC_DIR}/${MJC_DRV}
+	${INSTALL_DATA} ${WRKDIR}/${MJC_DRV}/MJ700V2C.FAQ ${DOC_DIR}/${MJC_DRV}
+
+pre-clean:
+	@cd ../../graphics/jpeg && ${MAKE} clean
+
+.include "../../mk/bsd.pkg.mk"

@@ -1,0 +1,23 @@
+$NetBSD: patch-bug-workaround,v 1.1.1.1 2000/05/07 02:04:35 jlam Exp $
+
+I haven't found out the cause of the trouble of
+
+	Unrecoverable error: invalidaccess in put
+
+... and this is only a workaround.
+Please fix the problem and remove this patch.
+
+--- lib/gs_dps.ps.bak	Thu Mar  9 17:40:39 2000
++++ lib/gs_dps.ps	Tue Mar 28 12:13:16 2000
+@@ -53,7 +53,10 @@
+     } {
+       dup type /dicttype eq {
+ 		% Save a copy of this dictionary in global VM.
+-	dup maxlength dict .copydict readonly
++	dup maxlength dict
++	% same as .copydict, but uses .forceput
++	dup 3 -1 roll { .forceput dup } forall pop
++	readonly
+       } {
+ 	pop pop
+       } ifelse
