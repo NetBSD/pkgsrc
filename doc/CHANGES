@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3157 2003/08/30 21:30:04 jtb Exp $
+$NetBSD: CHANGES,v 1.3158 2003/08/30 21:35:52 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3407,3 +3407,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated chemtool to 1.6 [jtb 2003-08-30]
 	Updated pkg_comp to 1.9 [jmmv 2003-08-30]
 	Added ksi-3.4.1 [jtb 2003-08-30]
+	Added tsclient 0.120 [xtraeme 2003-08-30]
