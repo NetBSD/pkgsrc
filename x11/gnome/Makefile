@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2000/06/05 19:32:27 tron Exp $
+# $NetBSD: Makefile,v 1.10 2000/06/05 20:57:41 tron Exp $
 
 DISTNAME=	gnome-1.2.0
 CATEGORIES=	x11 gnome
@@ -26,6 +26,7 @@ DEPENDS+=	gnome-utils>=1.0.51:../../misc/gnome-utils
 DEPENDS+=	gnumeric>=0.52:../../math/gnumeric
 DEPENDS+=	gtk-->=1.0.3:../gtk--
 DEPENDS+=	gtk-engines>=0.8:../gtk-engines
+DEPENDS+=	gtop>=1.0.9:../../sysutils/gtop
 DEPENDS+=	xchat>=1.4.1:../../net/xchat
 DEPENDS+=	xscreensaver-gnome>=3.24:../xscreensaver-gnome
 
