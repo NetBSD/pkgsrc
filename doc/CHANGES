@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1621 2003/03/11 13:41:35 grant Exp $
+$NetBSD: CHANGES,v 1.1622 2003/03/11 14:26:40 markd Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1031,3 +1031,33 @@ Changes to the packages collection and infrastructure in 2003:
 	Added p5-DBD-SQLite-0.25 [mjl 2003-03-11]
 	Updated iozone to 3.163 [wiz 2003-03-11]
 	Updated bnc to 2.8.6nb1 [grant 2003-03-11]
+	Updated qt3-libs to 3.1.1 [markd 2003-03-11]
+	Updated qt3-tools to 3.1.1 [markd 2003-03-11]
+	Updated qt3-docs to 3.1.1 [markd 2003-03-11]
+	Updated qt3-psql to 3.1.1 [markd 2003-03-11]
+	Updated qt3-mysql to 3.1.1 [markd 2003-03-11]
+	Updated qt3 to 3.1.1 [markd 2003-03-11]
+	Updated arts to 1.1 [markd 2003-03-11]
+	Updated kde3 to 3.1 [markd 2003-03-11]
+	Updated kdeaddons3 to 3.1 [markd 2003-03-11]
+	Updated kdeadmin3 to 3.1 [markd 2003-03-11]
+	Updated kdeartwork3 to 3.1 [markd 2003-03-11]
+	Updated kdebase3 to 3.1 [markd 2003-03-11]
+	Updated kdeedu3 to 3.1 [markd 2003-03-11]
+	Updated kdegames3 to 3.1 [markd 2003-03-11]
+	Updated kdegraphics3 to 3.1 [markd 2003-03-11]
+	Updated kdelibs3 to 3.1 [markd 2003-03-11]
+	Updated kdelibdocs3 to 3.1 [markd 2003-03-11]
+	Updated kdemultimedia3 to 3.1 [markd 2003-03-11]
+	Updated kdenetwork3 to 3.1 [markd 2003-03-11]
+	Updated kdepim3 to 3.1 [markd 2003-03-11]
+	Updated kdetoys3 to 3.1 [markd 2003-03-11]
+	Updated kdeutils3 to 3.1 [markd 2003-03-11]
+	Updated kdesdk3 to 3.1 [markd 2003-03-11]
+	Updated kdbg to 1.2.7 [markd 2003-03-11]
+	Updated kdevelop to 2.1.5 [markd 2003-03-11]
+	Updated kdevelop-base to 2.1.5 [markd 2003-03-11]
+	Added quanta-3.1 [markd 2003-03-11]
+	Added kbiff-3.6.3 [markd 2003-03-11]
+	Updated mimedefang to 2.30 [markd 2003-03-11]
+
