@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.13 1998/09/19 22:25:03 tron Exp $
+# $NetBSD: Makefile,v 1.14 1998/09/28 13:43:36 tron Exp $
 # FreeBSD Id: Makefile,v 1.14 1998/02/18 22:20:02 hoek Exp
 #
 
 DISTNAME=       uudeview-0.5.13
 PKGNAME=        uulib-0.5.13
 CATEGORIES=	converters
-MASTER_SITES=	http://www.uni-frankfurt.de/~fp/uudeview/Apps/frank/
+MASTER_SITES=	http://www.informatik.uni-frankfurt.de/~fp/uudeview/Apps/frank/
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.informatik.uni-frankfurt.de/~fp/uudeview/
