@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2003/07/26 15:21:58 cjep Exp $
+# $NetBSD: Makefile,v 1.52 2004/01/05 12:36:41 jlam Exp $
 #
 
 DISTNAME=	bash-2.05b
@@ -18,7 +18,9 @@ COMMENT=	The GNU Bourne Again Shell
 
 CONFLICTS=	static-bash-[0-9]*
 
-USE_BUILDLINK2=		yes
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+USE_BUILDLINK3=		yes
 USE_PKGINSTALL=		yes
 GNU_CONFIGURE=		yes
 MAKE_ENV+=		INSTALL_SCRIPT='${INSTALL_SCRIPT}'
@@ -38,5 +40,5 @@ post-install:
 	${INSTALL_MAN} ${WRKSRC}/doc/bash.1 ${PREFIX}/man/man1
 	${INSTALL_MAN} ${WRKSRC}/doc/bashbug.1 ${PREFIX}/man/man1
 
-.include "../../devel/gettext-lib/buildlink2.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
