@@ -1,8 +1,7 @@
-$NetBSD: patch-af,v 1.7 1999/12/12 19:06:37 jdolecek Exp $
+$NetBSD: patch-af,v 1.8 2001/09/10 08:23:19 skrll Exp $
 
-Obsoleted, the file is no longer pertinent in KDE2       jdolecek 1999-12-12
---- ./kdehelp/khelp.h	Mon Mar 30 21:28:15 1998
-+++ /usr/pkgsrc/x11/kdebase/work.i386.unpatched/kdebase-1.1.2/kdehelp/khelp.h	Fri Nov 12 05:10:33 1999
+--- kdehelp/khelp.h.orig	Mon Mar 30 20:28:15 1998
++++ kdehelp/khelp.h
 @@ -22,9 +22,15 @@
  #include <sys/msg.h>
  

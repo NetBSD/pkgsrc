@@ -1,6 +1,6 @@
-$NetBSD: patch-bb,v 1.1 2001/03/20 00:20:41 fredb Exp $
+$NetBSD: patch-bb,v 1.2 2001/09/10 08:23:19 skrll Exp $
 
---- kdehelp/Makefile.in.orig	Tue Sep  7 10:20:54 1999
+--- kdehelp/Makefile.in.orig	Tue Sep  7 16:20:54 1999
 +++ kdehelp/Makefile.in
 @@ -174,7 +174,7 @@
  INCLUDES = $(all_includes)

@@ -1,8 +1,7 @@
-$NetBSD: patch-al,v 1.4 1999/12/12 19:06:37 jdolecek Exp $
+$NetBSD: patch-al,v 1.5 2001/09/10 08:23:19 skrll Exp $
 
-Pulled into KDE2	jdolecek 1999/12/12
---- ./kdm/resource.c	Thu Jan 28 15:10:02 1999
-+++ /usr/pkgsrc/x11/kdebase/work.i386.unpatched/kdebase-1.1.2/kdm/resource.c	Fri Nov 12 05:10:30 1999
+--- kdm/resource.c.orig	Thu Jan 28 14:10:02 1999
++++ kdm/resource.c
 @@ -92,7 +92,7 @@
  #define DEF_SESSION XDMDIR"/Xsession" /* QUOTE(XBINDIR) "xterm -ls" */
  #endif

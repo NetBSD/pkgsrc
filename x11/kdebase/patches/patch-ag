@@ -1,7 +1,7 @@
-$NetBSD: patch-ag,v 1.4 1999/11/12 04:50:00 hubertf Exp $
+$NetBSD: patch-ag,v 1.5 2001/09/10 08:23:19 skrll Exp $
 
---- ./kdm/Makefile.in	Tue Sep  7 17:20:54 1999
-+++ /usr/pkgsrc/x11/kdebase/work.i386.unpatched/kdebase-1.1.2/kdm/Makefile.in	Fri Nov 12 05:10:30 1999
+--- kdm/Makefile.in.orig	Tue Sep  7 16:20:54 1999
++++ kdm/Makefile.in
 @@ -101,7 +101,7 @@
  LIBXDMCP = @LIBXDMCP@
  LIBZ = @LIBZ@

@@ -1,7 +1,7 @@
-$NetBSD: patch-as,v 1.7 1999/12/06 20:44:59 bouyer Exp $
+$NetBSD: patch-as,v 1.8 2001/09/10 08:23:19 skrll Exp $
 
---- ./kfm/kioslave/main.cpp.old	Thu Apr  8 00:56:48 1999
-+++ ./kfm/kioslave/main.cpp	Fri Dec  3 17:25:19 1999
+--- kfm/kioslave/main.cpp.orig	Wed Apr  7 23:56:48 1999
++++ kfm/kioslave/main.cpp
 @@ -319,7 +319,7 @@
      return;
  }

@@ -1,6 +1,6 @@
-$NetBSD: patch-az,v 1.1 2001/02/26 19:21:57 hubertf Exp $
+$NetBSD: patch-az,v 1.2 2001/09/10 08:23:19 skrll Exp $
 
---- kcontrol/kwm/titlebar.cpp.orig	Mon Feb 26 15:10:39 2001
+--- kcontrol/kwm/titlebar.cpp.orig	Fri Apr  9 03:55:32 1999
 +++ kcontrol/kwm/titlebar.cpp
 @@ -66,7 +66,7 @@
  static QPixmap* loadIcon(const char* name)
