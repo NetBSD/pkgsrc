@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/09/01 20:13:04 schmonz Exp $
+# $NetBSD: Makefile,v 1.2 2004/09/01 20:15:56 schmonz Exp $
 #
 
 DISTNAME=		djbdns-run-20040901
@@ -13,8 +13,6 @@ DEPENDS_DJBDNS=		djbdns>=1.05nb5:../../net/djbdns
 DEPENDS+=		${DEPENDS_DJBDNS}
 DEPENDS+=		daemontools-[0-9]*:../../sysutils/daemontools
 DEPENDS+=		ucspi-tcp-[0-9]*:../../net/ucspi-tcp
-
-CONFLICTS+=		djbdns<=1.05nb4
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
