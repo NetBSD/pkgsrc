@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2000/08/15 02:44:44 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2000/08/27 07:11:14 jlam Exp $
 #
 
 DISTNAME=		gnucash-1.4.3
@@ -29,17 +29,10 @@ LTCONFIG_OVERRIDE+=	${WRKSRC}/ltconfig
 GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--with-guile-config=${LOCALBASE}/bin/guile-config
 CONFIGURE_ARGS+=	--without-motif --without-included-gettext
+CONFIGURE_ARGS+=	--with-perl-includes=${PERL5_ARCHLIB}
 
 CONFIGURE_ENV+=		LOCALBASE="${LOCALBASE}"
 CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
 CPPFLAGS+=		-I${LOCALBASE}/include
 
 .include "../../mk/bsd.pkg.mk"
-
-# These definitions are after the inclusion of bsd.pkg.mk so that
-# LOCALBASE and SED are defined at this point.
-#
-PERL=			${LOCALBASE}/bin/perl
-P5_ARCHLIB!=		eval `${PERL} -V:installarchlib`; \
-			echo $${installarchlib}
-CONFIGURE_ARGS+=	--with-perl-includes=${P5_ARCHLIB}

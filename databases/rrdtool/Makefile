@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/06/27 01:32:11 hubertf Exp $
+# $NetBSD: Makefile,v 1.6 2000/08/27 07:11:01 jlam Exp $
 #
 
 DISTNAME=	rrdtool-1.0.21
@@ -12,17 +12,20 @@ DEPENDS+=	cgilib-0.5:../../www/cgilib
 DEPENDS+=	gd>=1.7.3:../../graphics/gd
 DEPENDS+=	jpeg-6*:../../graphics/jpeg
 
-USE_PERL5=	yes
-USE_LIBTOOL=	yes
-USE_GMAKE=	yes
-USE_X11=	yes
-GNU_CONFIGURE=	yes
+USE_LIBTOOL=	# defined
+USE_GMAKE=	# defined
+USE_X11=	# defined
+GNU_CONFIGURE=	# defined
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
 CONFIGURE_ENV+=	CPPFLAGS="${CPPFLAGS}"
 CONFIGURE_ARGS= --enable-shared
+
+USE_PERL5=		# defined
+PERL5_PACKLIST+= 	${PERL5_SITEARCH}/auto/RRDp/.packlist
+PERL5_PACKLIST+=	${PERL5_SITEARCH}/auto/RRDs/.packlist
 
 # tcl build not enabled at this time.  If this is turned on, the
 # following files & directory would have to be added to PLIST:

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1999/12/28 12:53:10 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2000/08/27 07:11:19 jlam Exp $
 #
 
 DISTNAME=	Digest-MD5-2.09
@@ -10,9 +10,10 @@ MAINTAINER=	packages@netbsd.org
 
 CONFLICTS+=	p5-MD5-*
 
-USE_PERL5=	YES
+USE_PERL5=	# defined
+PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/Digest/MD5/.packlist
 
 do-configure:
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/perl Makefile.PL
+	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
 
 .include "../../mk/bsd.pkg.mk"

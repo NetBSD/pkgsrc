@@ -1,16 +1,10 @@
-@comment $NetBSD: PLIST,v 1.6 2000/06/30 15:57:06 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.7 2000/08/27 07:11:01 jlam Exp $
 bin/rrdcgi
 bin/rrdtool
 bin/trytime
 lib/librrd.a
 lib/librrd.la
 lib/librrd.so.0.0
-lib/perl5/man/man3/RRDp.3
-lib/perl5/man/man3/RRDs.3
-lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/RRDp/.packlist
-lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/RRDs/.packlist
-lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/RRDs/RRDs.bs
-lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/RRDs/RRDs.so
 man/man1/RRDp.1
 man/man1/RRDs.1
 man/man1/bin_dec_hex.1
@@ -125,5 +119,3 @@ share/rrdtool/lib/perl/auto/RRDs/RRDs.so
 @dirrm share/rrdtool
 @dirrm share/examples/rrdtool
 @dirrm share/doc/rrdtool
-@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/RRDs
-@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/RRDp
