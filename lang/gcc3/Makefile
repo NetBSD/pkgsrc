@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2003/07/17 21:44:26 grant Exp $
+# $NetBSD: Makefile,v 1.41 2003/07/23 22:30:13 grant Exp $
 #
 
 DISTNAME=		gcc-3.3
@@ -82,9 +82,8 @@ ALL_TARGET=		bootstrap
 .  endif
 .endif
 
-# as this is named gcc3, use DISTNAME instead.
 GCC_PREFIX=	${PREFIX}/${DISTNAME}
-GCC_VERSION=	${PKGVERSION:C|nb*||}
+GCC_VERSION=	${PKGVERSION:C|nb.*||}
 GCC_ARCHDIR=	${GCC_PREFIX}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${GCC_VERSION}
 PLIST_SRC=	${WRKDIR}/PLIST_DYNAMIC
 
