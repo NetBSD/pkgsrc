@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 1998/07/14 15:55:38 agc Exp $
+# $NetBSD: Makefile,v 1.10 1999/03/08 10:53:56 agc Exp $
 #
 
 DISTNAME=	readline-2.2
@@ -13,7 +13,7 @@ USE_GTEXINFO=	yes
 SCRIPTS_ENV+=	PLIST_SRC="${PLIST_SRC}"
 
 do-build:
-	(cd ${WRKSRC}; make LIB=readline)
-	(cd ${WRKSRC}; make LIB=history)
+	(cd ${WRKSRC}; ${MAKE} LIB=readline)
+	(cd ${WRKSRC}; ${MAKE} LIB=history)
 
 .include "../../mk/bsd.pkg.mk"

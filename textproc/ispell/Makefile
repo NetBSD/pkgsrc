@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 1999/02/23 08:45:48 agc Exp $
+# $NetBSD: Makefile,v 1.18 1999/03/08 10:53:57 agc Exp $
 # FreeBSD Id: Makefile,v 1.21 1997/08/13 23:29:52 jmz Exp
 #
 
@@ -31,12 +31,12 @@ DISTFILES+=	${EXTRA_DICT}
 
 pre-extract:
 .ifndef ISPELL_LANG
-	@${ECHO} '******************************************************'
-	@${ECHO} '* Note that you can build a british version by       *'
-	@${ECHO} '* typing "make british" following a "make clean"     *'
-	@${ECHO} '* Note that you can build a french/english version   *'
-	@${ECHO} '* by typing "make french"                            *'
-	@${ECHO} '******************************************************'
+	@${ECHO} '*******************************************************'
+	@${ECHO} '* Note that you can build a british version by        *'
+	@${ECHO} '* typing "${MAKE} british" following a "${MAKE} clean"*'
+	@${ECHO} '* Note that you can build a french/english version    *'
+	@${ECHO} '* by typing "${MAKE} french"                          *'
+	@${ECHO} '*******************************************************'
 .endif
 
 pre-configure:

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1998/12/18 00:42:40 tsarna Exp $
+# $NetBSD: Makefile,v 1.7 1999/03/08 10:53:57 agc Exp $
 
 DISTNAME=	pycrypt100
 PKGNAME=	py-crypto-1.0.0
@@ -30,10 +30,10 @@ do-configure:
 	@(cd ${WRKSRC}; ${PREFIX}/bin/python buildkit)
 	${CP} ${PREFIX}/lib/python1.5/config/Makefile.pre.in ${WRKSRC}/src
 	${CP} ${WRKSRC}/Setup.in ${WRKSRC}/src
-	@(cd ${WRKSRC}/src; make -f Makefile.pre.in boot)
+	@(cd ${WRKSRC}/src; ${MAKE} -f Makefile.pre.in boot)
 
 do-build:
-	@(cd ${WRKSRC}/src; make)
+	@(cd ${WRKSRC}/src; ${MAKE})
 	${PREFIX}/bin/python ${PREFIX}/lib/python1.5/compileall.py \
 		${WRKSRC}/Lib
 	${PREFIX}/bin/python -O ${PREFIX}/lib/python1.5/compileall.py \

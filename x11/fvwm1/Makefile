@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 1999/03/01 23:09:12 tron Exp $
+# $NetBSD: Makefile,v 1.18 1999/03/08 10:53:58 agc Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/10/11 10:42:43 jkh Exp
 #
 
@@ -17,7 +17,7 @@ CONFLICTS=	fvwm-1.*
 
 USE_IMAKE=	yes
 # drop -a because we have no `depends' target
-XMKMF=		${SH} -c "xmkmf && make Makefiles"
+XMKMF=		${SH} -c "xmkmf && ${MAKE} Makefiles"
 
 post-extract:
 	cd ${WRKSRC}/modules; \

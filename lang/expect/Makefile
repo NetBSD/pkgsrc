@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 1998/08/20 15:17:04 tsarna Exp $
+# $NetBSD: Makefile,v 1.16 1999/03/08 10:53:56 agc Exp $
 # FreeBSD Id: Makefile,v 1.29 1998/01/27 01:11:47 fenner Exp
 #
 
@@ -25,6 +25,6 @@ post-extract:
 	${MV} ${WRKSRC}/example/rftp ${WRKSRC}/example/expect-rftp
 
 test:
-	@(cd ${WRKSRC}; make test)
+	@(cd ${WRKSRC}; ${MAKE} test)
 
 .include "../../mk/bsd.pkg.mk"
