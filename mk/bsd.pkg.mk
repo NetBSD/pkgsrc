@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1436 2004/04/03 06:22:39 reed Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1437 2004/04/05 08:06:07 xtraeme Exp $
 #
 # This file is in the public domain.
 #
@@ -3216,7 +3216,7 @@ ${EXTRACT_COOKIE}:
 	@${TOUCH} ${INTERACTIVE_COOKIE}
 	@${FALSE}
 .else
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} real-extract DEPENDS_TARGET=${DEPENDS_TARGET} PKG_PHASE=extract
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} real-extract DEPENDS_TARGET=${DEPENDS_TARGET:Q} PKG_PHASE=extract
 .endif
 
 ${PATCH_COOKIE}:
@@ -3415,7 +3415,7 @@ post-${name}:
 .if !target(reinstall)
 reinstall:
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${INSTALL_COOKIE} ${PACKAGE_COOKIE} ${PLIST}
-	${_PKG_SILENT}${_PKG_DEBUG}DEPENDS_TARGET=${DEPENDS_TARGET} ${MAKE} ${MAKEFLAGS} install
+	${_PKG_SILENT}${_PKG_DEBUG}DEPENDS_TARGET=${DEPENDS_TARGET:Q} ${MAKE} ${MAKEFLAGS} install
 .endif
 
 # Deinstall
@@ -3508,7 +3508,7 @@ update:
 .endif
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 		${MAKE} ${MAKEFLAGS} ${UPDATE_TARGET} KEEP_WRKDIR=YES	\
-			DEPENDS_TARGET=${DEPENDS_TARGET}
+			DEPENDS_TARGET=${DEPENDS_TARGET:Q}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	[ ! -s ${DDIR} ] || for dep in `${CAT} ${DDIR}` ; do		\
 		(if cd ../.. && cd "$${dep}" ; then			\
@@ -3519,7 +3519,7 @@ update:
 				${MAKE} ${MAKEFLAGS} deinstall;		\
 			fi &&						\
 			${MAKE} ${MAKEFLAGS} ${UPDATE_TARGET}		\
-				DEPENDS_TARGET=${DEPENDS_TARGET} ;	\
+				DEPENDS_TARGET=${DEPENDS_TARGET:Q} ;	\
 		else							\
 			${ECHO_MSG} "${_PKGSRC_IN}> Skipping removed directory $${dep}"; \
 		fi) ;							\
@@ -4038,7 +4038,7 @@ real-su-bin-install:
 			${SHCOMMENT} Cycle through some FTP server here ;\
 			${ECHO_MSG} "Installing from source" ;		\
 			${MAKE} ${MAKEFLAGS} package 			\
-				DEPENDS_TARGET=${DEPENDS_TARGET} &&	\
+				DEPENDS_TARGET=${DEPENDS_TARGET:Q} &&	\
 			${MAKE} ${MAKEFLAGS} clean ;			\
 		fi ; \
 	fi
@@ -4171,7 +4171,7 @@ install-depends: uptodate-pkgtools
 		${ECHO_MSG} "${_PKGSRC_IN}> Required installed package $$pkg: $${found} found"; \
 	else								\
 		${ECHO_MSG} "${_PKGSRC_IN}> Required package $$pkg: NOT found"; \
-		target=${DEPENDS_TARGET};				\
+		target=${DEPENDS_TARGET:Q};				\
 		${ECHO_MSG} "${_PKGSRC_IN}> Verifying $$target for $$dir"; 	\
 		if [ ! -d $$dir ]; then					\
 			${ECHO_MSG} "=> No directory for $$dir.  Skipping.."; \
