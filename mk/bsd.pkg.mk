@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1229 2003/08/02 13:17:05 wiz Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1230 2003/08/04 21:06:47 jmc Exp $
 #
 # This file is in the public domain.
 #
@@ -340,7 +340,7 @@ MAKE_ENV+=		CC="${CC}"
 .if defined(CXX)
 MAKE_ENV+=		CXX="${CXX}"
 .endif
-.if defined(CPP)
+.if defined(CPP) && !defined(NO_EXPORT_CPP)
 MAKE_ENV+=		CPP="${CPP}"
 .endif
 
@@ -549,7 +549,7 @@ PLIST_SUBST+=	PERL5_ARCHLIB=${PERL5_ARCHLIB:S/^${LOCALBASE}\///}
 .endif
 
 # base vs. GNU tools
-.include "../../mk/tools.mk"
+. include "../../mk/tools.mk"
 
 .if defined(USE_NEW_TEXINFO)
 INFO_FILES?=
