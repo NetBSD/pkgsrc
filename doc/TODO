@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3072 2005/02/19 21:21:13 wiz Exp $
+$NetBSD: TODO,v 1.3073 2005/02/19 21:54:32 cjep Exp $
 
 Suggested new packages
 ======================
@@ -668,7 +668,6 @@ Suggested package updates
 	o multitail-3.4.5
 	o muse-0.9.1
 	o magios-2.0b2 [replacing netsaint]
-	o nail-11.20
 	o naim-0.11.7.3.1
 	o nano-1.3.5 [devel version]
 	o nap-1.5.3
