@@ -1,23 +1,16 @@
-# $NetBSD: Makefile,v 1.17 2004/12/18 15:08:39 jdolecek Exp $
+# $NetBSD: Makefile,v 1.18 2004/12/18 15:53:29 jdolecek Exp $
 
-DISTNAME=	APC-${VERSION}
-PKGNAME=	php-apc-${VERSION}
 MODNAME=	apc
+PECL_VERSION=	2.0.4
 CATEGORIES+=	sysutils
-MASTER_SITES=	http://pecl.php.net/get/
-EXTRACT_SUFX=	.tgz
-
-MAINTAINER=	tech-pkg@NetBSD.org
-HOMEPAGE=	http://pecl.php.net/apc
 COMMENT=	Alternative PHP Cache for PHP4
 
-EXTRACT_ELEMENTS=	# empty
+MAINTAINER=	tech-pkg@NetBSD.org
 
-VERSION=		2.0.4
-WRKSRC=			${WRKDIR}/${DISTNAME}
 USE_BUILDLINK3=		YES
 
 CONFIGURE_ARGS+=	--enable-${MODNAME}
+WRKSRC=		${WRKDIR}/APC-${PECL_VERSION}
 
 PLIST_SRC+=		${.CURDIR}/PLIST.extras
 PLIST_SUBST+=		PKGBASE="${PKGBASE}"
@@ -25,13 +18,9 @@ DOCDIR=			${PREFIX}/share/doc/${PKGBASE}
 
 post-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}
-	cd ${WRKSRC}; ${INSTALL_DATA} \
-		INSTALL LICENSE NOTICE ${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/INSTALL ${DOCDIR}
 
 PHP_VERSION_REQD=	4		# PHP 4.x only
 
 .include "../../lang/php/ext.mk"
-# override with local distinfo file
-DISTINFO_FILE=	${.CURDIR}/distinfo
-
 .include "../../mk/bsd.pkg.mk"
