@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 1998/07/17 04:51:04 tsarna Exp $
+# $NetBSD: Makefile,v 1.29 1998/07/31 16:33:27 agc Exp $
 # FreeBSD Id: Makefile,v 1.78 1997/10/01 08:32:59 cracauer Exp
 #
 
@@ -86,6 +86,7 @@
 #    SUBDIR += pccts
     SUBDIR += portlint
     SUBDIR += prcs
+    SUBDIR += rdp
     SUBDIR += readline
 #    SUBDIR += sawt
 #    SUBDIR += scogdb
