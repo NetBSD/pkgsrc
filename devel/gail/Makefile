@@ -1,30 +1,29 @@
-# $NetBSD: Makefile,v 1.4 2003/01/03 15:26:56 jmmv Exp $
+# $NetBSD: Makefile,v 1.5 2003/01/05 18:12:19 jmmv Exp $
 #
 
-DISTNAME=	gail-0.17
-PKGREVISION=	1
+DISTNAME=	gail-1.1.6
 CATEGORIES=	devel gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gail/0.17/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gail/1.1/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jmmv@netbsd.org
 HOMEPAGE=	http://developer.gnome.org/projects/gap/
 COMMENT=	GNOME Accessibility Implementation Library
 
-BUILD_DEPENDS+=		gtk-doc>=0.6:../../textproc/gtk-doc
-
 GNU_CONFIGURE=		yes
 USE_BUILDLINK2=		yes
 USE_GMAKE=		yes
-USE_GNU_GETTEXT=	yes
 USE_X11=		yes
 
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
-post-extract:
-	${MV} ${WRKSRC}/docs/reference/libgail-util/html/book1.html \
-	    ${WRKSRC}/docs/reference/libgail-util/html/index.html
+CONFIGURE_ARGS+=	--enable-gtk-doc=no
+
+post-install:
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/gail
+	${INSTALL_DATA} ${WRKSRC}/docs/reference/libgail-util/*.txt \
+	    ${PREFIX}/share/doc/gail
 
 .include "../../devel/atk/buildlink2.mk"
 .include "../../devel/gettext-lib/buildlink2.mk"
