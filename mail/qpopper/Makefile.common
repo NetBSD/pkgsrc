@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.10 2004/07/13 13:24:37 markd Exp $
+# $NetBSD: Makefile.common,v 1.11 2004/12/17 07:35:56 taca Exp $
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--libexecdir=${LOCALBASE}/libexec \
@@ -9,6 +9,7 @@ CONFIGURE_ARGS+=	--libexecdir=${LOCALBASE}/libexec \
 			--disable-update-abort --without-gdbm
 
 QPOPPER_USER?=		pop
+QPOPPER_GROUP?=		mail
 QPOPPER_FAC?=		LOCAL1
 QPOPPER_APOP_AUTH?=	${PKG_SYSCONFDIR}/apop.auth
 DB_SUFFIX?=		db
