@@ -1,23 +1,2 @@
-@comment $NetBSD: PLIST,v 1.12 2000/04/03 11:15:05 drochner Exp $
-etc/mesa.conf
-include/GL/gl.h
-include/GL/gl_mangle.h
-include/GL/glu.h
-include/GL/glu_mangle.h
-include/GL/glut.h
-include/GL/glx.h
-include/GL/glx_mangle.h
-include/GL/osmesa.h
-include/GL/xmesa.h
-include/GL/xmesa_x.h
-include/GL/xmesa_xf86.h
-lib/libGL.so.3.0
-lib/libGL.a
-lib/libGL.la
-lib/libGLU.so.3.0
-lib/libGLU.a
-lib/libGLU.la
-lib/libglut.so.10.0
-lib/libglut.a
-lib/libglut.la
-@dirrm include/GL
+@comment $NetBSD: PLIST,v 1.13 2000/10/15 11:57:20 rh Exp $
+@comment this plist intentionally left empty
