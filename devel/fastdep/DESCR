@@ -1,0 +1,7 @@
+fastdep is a fast dependency generator for C/C++ files.  It generates a
+file ready to be parsed by the make(1) utility containing dependancy
+specifications for all source files given to it.
+
+The program is written in C++ with a handoptimized parser for just the
+preproccesor tokens; therefore it is faster than GCC because it does
+just one thing.
