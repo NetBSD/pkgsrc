@@ -1,3 +1,5 @@
+$NetBSD: patch-ag,v 1.3 1999/09/04 01:19:50 bad Exp $
+
 --- example/chg-scsi.conf.old	Tue Feb 23 16:44:39 1999
 +++ example/chg-scsi.conf	Tue Feb 23 16:46:38 1999
 @@ -2,6 +2,8 @@
