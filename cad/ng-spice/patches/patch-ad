@@ -1,13 +1,13 @@
-$NetBSD: patch-ad,v 1.4 2004/12/02 00:06:40 dmcmahill Exp $
+$NetBSD: patch-ad,v 1.5 2004/12/02 13:33:32 dmcmahill Exp $
 
---- configure.in.orig	Wed Jan 28 00:07:29 2004
+--- configure.in.orig	Sun Aug 15 08:51:13 2004
 +++ configure.in
-@@ -160,7 +160,7 @@ fi
+@@ -161,7 +161,7 @@ fi
  
  if test "$enable_debug" = "no"; then
  	AC_MSG_WARN(Removing debugging option!)
 -	CFLAGS=" "
-+	CFLAGS="`echo $CFLAGS | sed 's;-g;;g'`"
++	CFLAGS="`echo $CFLAGS | sed 's;-g;;g'` "
  fi
  
  

@@ -1,17 +1,19 @@
-$NetBSD: patch-af,v 1.1 2004/12/02 00:06:40 dmcmahill Exp $
+$NetBSD: patch-af,v 1.2 2004/12/02 13:33:32 dmcmahill Exp $
 
 --- doc/ngspice.texi.orig	Sun Nov  2 14:16:21 2003
 +++ doc/ngspice.texi
-@@ -6,6 +6,13 @@
+@@ -6,6 +6,15 @@
  @c %**end of header
  
  @ifinfo
++@format
 +INFO-DIR-SECTION Simulation
 +START-INFO-DIR-ENTRY
 +* Ngspice: (ngspice).            General-purpose circuit simulation program for
 +                                 nonlinear dc, nonlinear transient, and linear
 +                                 ac analyses
 +END-INFO-DIR-ENTRY
++@end format
 +
  This file documents NGSPICE.
  

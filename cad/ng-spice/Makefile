@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.23 2004/12/02 00:06:40 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.24 2004/12/02 13:33:32 dmcmahill Exp $
 #
 
-DISTNAME=	ngspice-rework15
-PKGNAME=	ng-spice-15
+DISTNAME=	ng-spice-rework-15c
+PKGNAME=	ng-spice-15c
 CATEGORIES=	cad
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ngspice/}
-EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	dmcmahill@NetBSD.org
 HOMEPAGE=	http://ngspice.sourceforge.net/
@@ -17,6 +16,7 @@ WRKSRC=			${WRKDIR}/ng-spice-rework-15
 USE_BUILDLINK3=		YES
 USE_X11=		YES
 USE_LIBTOOL=		YES
+USE_MAKEINFO=		YES
 USE_GNU_TOOLS+=		make
 USE_GNU_READLINE=	uses rl_* interface
 
