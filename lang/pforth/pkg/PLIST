@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/01/19 22:26:59 jtb Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/06/20 06:53:41 jtb Exp $
 bin/pforth
 lib/pforth/pforth.dic
 share/doc/pforth/pf_ref.htm
@@ -12,6 +12,7 @@ share/pforth/bloop.fth
 share/pforth/c_struct.fth
 share/pforth/case.fth
 share/pforth/catch.fth
+share/pforth/checkit.fth
 share/pforth/condcomp.fth
 share/pforth/coretest.fth
 share/pforth/filefind.fth
@@ -41,10 +42,11 @@ share/pforth/tester.fth
 share/pforth/trace.fth
 share/pforth/tut.fth
 share/pforth/utils/clone.fth
-share/pforth/utils/dump_s~1.fth
-share/pforth/utils/load_f~1.fth
-share/pforth/utils/make_a~1.fth
+share/pforth/utils/dump_struct.fth
+share/pforth/utils/load_file.fth
+share/pforth/utils/make_all256.fth
 share/pforth/utils/savedicd.fth
+share/pforth/utils/trace.fth
 share/pforth/wordslik.fth
 @dirrm share/pforth/utils
 @dirrm share/pforth
