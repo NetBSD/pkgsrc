@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 1998/08/27 13:23:38 garbled Exp $
+# $NetBSD: Makefile,v 1.35 1998/08/28 12:54:12 garbled Exp $
 # FreeBSD Id: Makefile,v 1.87 1997/10/15 04:58:31 max Exp
 #
 
@@ -69,6 +69,7 @@
 #    SUBDIR += xdeblock
     SUBDIR += xdemineur
 #    SUBDIR += xdino
+    SUBDIR += xdoom
 #    SUBDIR += xemeraldia
     SUBDIR += xevil
 #    SUBDIR += xeyesplus
