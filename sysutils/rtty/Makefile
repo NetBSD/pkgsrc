@@ -14,4 +14,13 @@ MASTER_SITES=   ftp://ftp.vix.com/pub/vixie/
 
 NO_WRKSUBDIR=   yes     
 
+OPSYS!=		uname -s
+ 
+.if (${OPSYS} == "NetBSD")
+pre-configure:
+	for f in `find ${WRKDIR} -type f -print|xargs grep -l '/usr/local'`; do \
+		${SED} -e 's:/usr/local:'${PREFIX}':g' < $$f > $$f.pdone && mv $$f.pdone $$f; \
+	done
+.endif
+
 .include <bsd.port.mk>
