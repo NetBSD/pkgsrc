@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2004/12/03 16:45:54 taya Exp $
+@comment $NetBSD: PLIST,v 1.11.2.1 2005/03/09 19:16:39 salo Exp $
 bin/${MOZILLA}
 @comment begin PROGRAMS
 lib/${MOZILLA}/${MOZILLA_BIN}
@@ -714,8 +714,11 @@ include/${MOZILLA}/docshell/nsIDocShell.h
 include/${MOZILLA}/docshell/nsIDocShellHistory.h
 include/${MOZILLA}/docshell/nsIDocShellLoadInfo.h
 include/${MOZILLA}/docshell/nsIDocShellTreeItem.h
+include/${MOZILLA}/docshell/nsIDocShellTreeItemTmp.h
 include/${MOZILLA}/docshell/nsIDocShellTreeNode.h
+include/${MOZILLA}/docshell/nsIDocShellTreeNodeTmp.h
 include/${MOZILLA}/docshell/nsIDocShellTreeOwner.h
+include/${MOZILLA}/docshell/nsIDocShellTreeOwnerTmp.h
 include/${MOZILLA}/docshell/nsIEditorDocShell.h
 include/${MOZILLA}/docshell/nsIGlobalHistory.h
 include/${MOZILLA}/docshell/nsIGlobalHistory2.h
@@ -2216,6 +2219,9 @@ include/${MOZILLA}/zlib/zlib.h
 @exec env LD_LIBRARY_PATH=%D/lib/${MOZILLA} MOZILLA_FIVE_HOME=%D/lib/${MOZILLA} %D/lib/${MOZILLA}/regxpcom
 @exec env LD_LIBRARY_PATH=%D/lib/${MOZILLA} MOZILLA_FIVE_HOME=%D/lib/${MOZILLA} %D/lib/${MOZILLA}/regchrome
 @exec env LD_LIBRARY_PATH=%D/lib/${MOZILLA} MOZILLA_FIVE_HOME=%D/lib/${MOZILLA} %D/lib/${MOZILLA}/firefox-bin -register
+@unexec ${RM} %D/lib/${MOZILLA}/extensions/Extensions.rdf
+@unexec ${RM} %D/lib/${MOZILLA}/extensions/installed-extensions-processed.txt
+@unexec ${RM} %D/lib/${MOZILLA}/extensions/{972ce4c6-7e08-4474-a285-3208198ce6fd}/install.rdf
 @unexec ${RM} %D/lib/${MOZILLA}/chrome/chrome.rdf
 @unexec ${RM} %D/lib/${MOZILLA}/chrome/overlayinfo/browser/content/overlays.rdf
 @unexec ${RM} %D/lib/${MOZILLA}/chrome/overlayinfo/communicator/content/overlays.rdf
@@ -2224,6 +2230,9 @@ include/${MOZILLA}/zlib/zlib.h
 @unexec ${RM} %D/lib/${MOZILLA}/chrome/overlayinfo/navigator/content/overlays.rdf
 @unexec ${RM} %D/lib/${MOZILLA}/components/compreg.dat
 @unexec ${RM} %D/lib/${MOZILLA}/components/xpti.dat
+@unexec ${RM} %D/lib/${MOZILLA}/components.ini
+@dirrm lib/${MOZILLA}/extensions/{972ce4c6-7e08-4474-a285-3208198ce6fd}
+@dirrm lib/${MOZILLA}/extensions
 @dirrm lib/${MOZILLA}/chrome/overlayinfo/navigator/content
 @dirrm lib/${MOZILLA}/chrome/overlayinfo/navigator
 @dirrm lib/${MOZILLA}/chrome/overlayinfo/messenger/content
@@ -2264,6 +2273,7 @@ include/${MOZILLA}/zlib/zlib.h
 @dirrm lib/${MOZILLA}/components/myspell
 @dirrm lib/${MOZILLA}/components
 @dirrm lib/${MOZILLA}/chrome
+@dirrm lib/${MOZILLA}
 @dirrm include/${MOZILLA}/zlib
 @dirrm include/${MOZILLA}/xultmpl
 @dirrm include/${MOZILLA}/xuldoc
