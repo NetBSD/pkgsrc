@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:18:07 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/01/03 19:56:38 tron Exp $
 bin/ogg123
 bin/oggenc
 bin/ogginfo
@@ -7,5 +7,5 @@ bin/vorbiscomment
 man/man1/ogg123.1
 man/man1/oggenc.1
 man/man1/ogginfo.1
-share/doc/vorbis-tools-1.0rc2/ogg123rc-example
-@dirrm share/doc/vorbis-tools-1.0rc2
+share/doc/${DISTNAME}/ogg123rc-example
+@dirrm share/doc/${DISTNAME}
