@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2002/07/28 11:58:48 schmonz Exp $
+# $NetBSD: Makefile.common,v 1.3 2002/09/30 23:56:55 jlam Exp $
 
 CATEGORIES=	lang
 EXTRACT_SUFX=	.bin
@@ -30,6 +30,7 @@ ONLY_FOR_PLATFORM= NetBSD-1.5Z[A-Z]-i386 NetBSD-1.[6-9]*-i386 Linux-*-i[3-6]86
 LDD=		${TRUE}
 
 NO_BUILD=	# defined
+USE_BUILDLINK2=	# defined
 
 post-fetch:
 	@${CHMOD} +x ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX}
