@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2001/01/01 23:52:01 tron Exp $
+@comment $NetBSD: PLIST,v 1.21 2001/01/02 08:21:51 tron Exp $
 bin/escputil
 bin/gimp
 bin/gimp-config
@@ -1414,3 +1414,5 @@ share/locale/uk/LC_MESSAGES/gimp.mo
 @dirrm include/libgimp
 @dirrm include/gck
 @dirrm etc/gimp/1.2
+@exec test %D = ${LOCALBASE} || ln -s %D/share/aclocal/gimp.m4 ${LOCALBASE}/share/aclocal/gimp.m4
+@unexec test %D = ${LOCALBASE} || rm ${LOCALBASE}/share/aclocal/gimp.m4
