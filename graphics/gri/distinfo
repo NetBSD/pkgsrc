@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1.1.1 2002/05/03 23:45:14 jtb Exp $
+
+SHA1 (gri-2.8.7.tgz) = 2d28f1c398e96d4ff7e34746027ce42bb5f2881a
+Size (gri-2.8.7.tgz) = 1173929 bytes
+SHA1 (patch-aa) = feb09a4ecd2b0d8db2fef8f9613b4e8dc27dbe61
+SHA1 (patch-ab) = f66fb1084bcd65544b63db43b4e2ecc34ddbd7c7
+SHA1 (patch-ac) = b5be8b3b2d9c2ff2ea04fe84cbb2b0d8eea1e164
+SHA1 (patch-ad) = ebcc1fdbc4fe52cdcb0f5788acaa637174be4550
+SHA1 (patch-ae) = b796adf6b5532e64aa105f8cef6afabfc5a15fa5
