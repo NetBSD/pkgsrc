@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 1999/08/17 19:24:39 tron Exp $
+# $NetBSD: Makefile,v 1.27 1999/08/22 22:02:34 tron Exp $
 # FreeBSD Id: Makefile,v 1.16 1997/11/30 19:37:48 vanilla Exp
 #
 
@@ -7,10 +7,7 @@ CATEGORIES=	sysutils
 
 MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.gnome.org/mc/
-MASTER_SITES=	ftp://ftp.gnome.org/pub/GNOME/sources/mc/ \
-		ftp://ftp.sunet.se/pub/X11/GNOME/sources/mc/ \
-		ftp://ftp.informatik.uni-bonn.de/pub/os/unix/gnome/sources/mc/ \
-		ftp://ftp.tuwien.ac.at/hci/gnome.org/GNOME/sources/mc/
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/mc/}
 
 DEPENDS+=	libslang-1.3.8:../../devel/libslang
 

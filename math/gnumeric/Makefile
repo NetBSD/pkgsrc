@@ -1,14 +1,9 @@
-# $NetBSD: Makefile,v 1.2 1999/08/01 19:07:14 tron Exp $
+# $NetBSD: Makefile,v 1.3 1999/08/22 22:02:33 tron Exp $
 #
 
 DISTNAME=	gnumeric-0.31
 CATEGORIES=	math
-MASTER_SITES=	ftp://ftp.gnome.org/pub/GNOME/sources/gnumeric/ \
-		ftp://ftp.tuwien.ac.at/hci/GNOME/sources/gnumeric/ \
-		http://gd.tuwien.ac.at/hci/GNOME/sources/gnumeric/ \
-		ftp://gnomeftp.wgn.net/pub/gnome/sources/gnumeric/ \
-		ftp://ftp.geo.net/pub/gnome/sources/gnumeric/ \
-		ftp://ftp.informatik.uni-bonn.de/pub/os/unix/gnome/sources/gnumeric/
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnumeric/}
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.gnome.org/gnumeric/
