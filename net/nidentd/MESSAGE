@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.4 2002/10/29 10:18:37 wiz Exp $
+$NetBSD: MESSAGE,v 1.5 2002/10/29 10:39:19 wiz Exp $
 
 To activate nidentd, you need to add the following lines to your
 /etc/inetd.conf file:
@@ -7,6 +7,7 @@ To activate nidentd, you need to add the following lines to your
  ident stream tcp nowait  root   ${PREFIX}/libexec/nidentd nidentd -m
  ident stream tcp6 nowait nobody ${PREFIX}/libexec/nidentd nidentd -6
 
-After that, restart/HUP inetd: kill -HUP `cat /var/run/inetd.pid`
+After that, tell inetd to reload its config file:
+	/etc/rc.d/inetd reload
 
 ===========================================================================
