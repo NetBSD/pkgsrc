@@ -1,4 +1,4 @@
-# $NetBSD: mk.conf.example,v 1.164 2000/11/15 13:52:58 wiz Exp $
+# $NetBSD: mk.conf.example,v 1.165 2000/12/07 20:31:41 jlam Exp $
 #
 
 # Sample /etc/mk.conf file, which can be used to set specific values
@@ -297,14 +297,25 @@
 # Possible: defined, not defined
 # Default: not defined
 
+#CUPS_GROUP=	sys
+# Used in the cups package to specify the group to run CUPS commands as.
+# Possible: any group name
+# Default: sys
+
+#CUPS_USER=	lp
+# Used in the cups package to specify the user to run CUPS commands as
+# and to create temporary files in the /var/spool/cups/tmp directory.
+# Possible: any user name
+# Default: lp
+
 #CYRUS_GROUP=	mail
-# Used in the cyrus-imapd package to specifies the group used for
+# Used in the cyrus-imapd package to specify the group used for
 # installing setuid programs.
 # Possible: any group name
 # Default: mail
 
 #CYRUS_USER=	cyrus
-# Used in the cyrus-imapd package to specifies the userid used for
+# Used in the cyrus-imapd package to specify the userid used for
 # installing setuid programs.
 # Possible: any user name
 # Default: backup
