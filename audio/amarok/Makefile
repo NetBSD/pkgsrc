@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/01/17 09:45:44 seb Exp $
+# $NetBSD: Makefile,v 1.2 2005/02/20 20:41:40 wiz Exp $
 
-DISTNAME=		amarok-1.1.1
+DISTNAME=		amarok-1.2
 CATEGORIES=		audio kde
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=amarok/}
 EXTRACT_SUFX=		.tar.bz2
@@ -20,9 +20,9 @@ CONFIGURE_ARGS+=	--without-mas
 
 LIBS+=			${LIBOSSAUDIO}
 
-BUILDLINK_DEPENDS.taglib+=	taglib>=1.3
-BUILDLINK_DEPENDS.gst-plugins+=	gst-plugins>=0.8.1
-BUILDLINK_DEPENDS.gstreamer+=	gstreamer>=0.8.1
+BUILDLINK_DEPENDS.taglib+=	taglib>=1.3.1
+BUILDLINK_DEPENDS.gst-plugins+=	gst-plugins>=0.8.4
+BUILDLINK_DEPENDS.gstreamer+=	gstreamer>=0.8.4
 BUILDLINK_DEPENDS.arts+=	arts>=1.2
 
 .include "../../audio/arts/buildlink3.mk"
