@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/02/03 12:31:35 recht Exp $
+lib/libgdiplus.a
+lib/libgdiplus.la
+lib/libgdiplus.so
+lib/libgdiplus.so.0
+lib/libgdiplus.so.0.0
+lib/pkgconfig/libgdiplus.pc
