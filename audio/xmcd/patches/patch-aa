@@ -1,77 +1,11 @@
-$NetBSD: patch-aa,v 1.3 1998/08/07 10:36:20 agc Exp $
-
-*** ./xmcd_d/Imakefile.orig	Thu Apr  4 21:42:31 1996
---- ./xmcd_d/Imakefile	Thu Apr  4 23:31:17 1996
-***************
-*** 43,49 ****
-   * #include "Motif.tmpl"
-   * #include "Motif.rules"
-   */
-! LOCAL_LIBRARIES= XmClientLibs
-  
-  
-  /**** Optional defines:  Change as you see fit. *****************************
---- 43,49 ----
-   * #include "Motif.tmpl"
-   * #include "Motif.rules"
-   */
-! LOCAL_LIBRARIES= ${MOTIFLIB} XawClientLibs
-  
-  
-  /**** Optional defines:  Change as you see fit. *****************************
-***************
-*** 67,78 ****
-  DEFINES=
-  #endif
-  
-  
-  /*
-   * Add local include path
-   */
-  INCLUDES=-I..
-- 
-  
-  /*
-   * C Source files
---- 67,78 ----
-  DEFINES=
-  #endif
-  
-+ MANSUFFIX = 1
-  
-  /*
-   * Add local include path
-   */
-  INCLUDES=-I..
-  
-  /*
-   * C Source files
-*** cda_d/Imakefile.orig	Tue Aug 12 19:13:31 1997
---- cda_d/Imakefile	Sun Sep  7 15:34:34 1997
-***************
-*** 95,101 ****
-  #if defined(__QNX__)
-  LOCAL_LIBRARIES=-lncurses
-  #else
-! LOCAL_LIBRARIES=-lcurses
-  #endif	/* __QNX__ */
-  #endif	/* SINIX */
-  #endif	/* ultrix */
---- 95,101 ----
-  #if defined(__QNX__)
-  LOCAL_LIBRARIES=-lncurses
-  #else
-! LOCAL_LIBRARIES=-lcurses -lmytinfo
-  #endif	/* __QNX__ */
-  #endif	/* SINIX */
-  #endif	/* ultrix */
-***************
-*** 104,109 ****
---- 104,110 ----
-  #endif	/* LinuxArchitecture */
-  #endif	/* SunArchitecture */
-  
-+ MANSUFFIX = 1
-  
-  /*
-   * C Source files
+--- xmcd_d/Imakefile.orig	Wed Oct 28 03:03:18 1998
++++ xmcd_d/Imakefile	Wed Nov  4 22:07:57 1998
+@@ -43,7 +43,7 @@
+  * #include "Motif.tmpl"
+  * #include "Motif.rules"
+  */
+-LOCAL_LIBRARIES= XmClientLibs
++LOCAL_LIBRARIES= ${MOTIFLIB} XawClientLibs
+ 
+ #if defined(FreeBSDArchitecture)
+ .if exists(/usr/include/camlib.h)

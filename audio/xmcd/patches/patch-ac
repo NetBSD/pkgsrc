@@ -1,29 +1,10 @@
-$NetBSD: patch-ac,v 1.2 1998/08/07 10:36:21 agc Exp $
-
---- util_d/Imakefile.orig	Sat May 23 08:31:58 1998
-+++ util_d/Imakefile	Tue Jun  2 23:19:11 1998
-@@ -34,8 +34,12 @@
- /*
-  * Source files
-  */
--SRCS=	cddbcmd.c wm2xmcd.c
+--- Imakefile.orig	Wed Oct 28 03:03:10 1998
++++ Imakefile	Wed Nov  4 22:09:38 1998
+@@ -66,6 +66,6 @@
  
-+SRCS1=	cddbcmd.c
-+OBJS1=	cddbcmd.o
-+
-+SRCS2=	wm2xmcd.c
-+OBJS2=	wm2xmcd.o
+ install::
+ 	@BINDIR=$(BINDIR) LIBDIR=$(LIBDIR) MANDIR=$(MANDIR) \
+-		MANSUFFIX=$(MANSUFFIX) $(SHELL) ./install.sh -n
++		MANSUFFIX=$(MANSUFFIX) $(SHELL) ./install.sh -n -b
  
- /*
-  * No X11 libraries needed for utilities in this directory
-@@ -47,8 +51,8 @@
-  * Build rule
-  */
- AllTarget(cddbcmd wm2xmcd)
--NormalProgramTarget(cddbcmd,cddbcmd.o,,,)
--NormalProgramTarget(wm2xmcd,wm2xmcd.o,,,)
-+ComplexProgramTarget_1(cddbcmd,,)
-+ComplexProgramTarget_2(wm2xmcd,,)
- DependTarget()
- LintTarget()
  

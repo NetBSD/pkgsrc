@@ -1,140 +1,61 @@
-$NetBSD: patch-ab,v 1.2 1998/08/07 10:36:21 agc Exp $
-
-*** install.sh.orig	Tue Aug 12 19:12:27 1997
---- install.sh	Sun Sep  7 16:23:43 1997
-***************
-*** 48,53 ****
---- 48,56 ----
-  ERRFILE=/tmp/xmcd.err
-  TMPFILE=/tmp/xmcdinst.$$
-  
-+ # Flag for indicating we do not want to prompt the user if possible.
-+ NO_PROMPT=1
-+ 
-  #
-  # Utility functions
-  #
-***************
-*** 586,592 ****
-  
-  while :
-  do
-! 	if getstr "\nEnter X binary directory\n[${BINDIR}]:"
-  	then
-  		if [ -d "$ANS" ]
-  		then
---- 589,599 ----
-  
-  while :
-  do
-! 	if [ -n "$NO_PROMPT" ]
-! 	then
-! 		$ECHO "X binary directory - using ${BINDIR}"
-! 		break
-! 	elif getstr "\nEnter X binary directory\n[${BINDIR}]:"
-  	then
-  		if [ -d "$ANS" ]
-  		then
-***************
-*** 634,640 ****
-  
-  while :
-  do
-! 	if getstr "\nEnter X library directory\n[${LIBDIR}]:"
-  	then
-  		if [ -d "$ANS" ]
-  		then
---- 641,651 ----
-  
-  while :
-  do
-! 	if [ -n "$NO_PROMPT" ]
-! 	then
-! 		$ECHO "X library directory - using ${LIBDIR}"
-! 		break
-! 	elif getstr "\nEnter X library directory\n[${LIBDIR}]:"
-  	then
-  		if [ -d "$ANS" ]
-  		then
-***************
-*** 657,663 ****
-  APPDEFAULTSDIR=$LIBDIR/app-defaults
-  while :
-  do
-! 	if getstr "\nEnter X app-defaults directory\n[${APPDEFAULTSDIR}]:"
-  	then
-  		if [ -d "$ANS" ]
-  		then
---- 668,678 ----
-  APPDEFAULTSDIR=$LIBDIR/app-defaults
-  while :
-  do
-! 	if [ -n "$NO_PROMPT" ]
-! 	then
-! 		$ECHO "X app-defaults directory - using ${LIBDIR}"
-! 		break
-! 	elif getstr "\nEnter X app-defaults directory\n[${APPDEFAULTSDIR}]:"
-  	then
-  		if [ -d "$ANS" ]
-  		then
-***************
-*** 680,686 ****
-  XMCDLIB=$LIBDIR/xmcd
-  while :
-  do
-! 	if getstr "\nEnter xmcd library directory\n[${XMCDLIB}]:"
-  	then
-  		if [ -d "$ANS" ]
-  		then
---- 695,705 ----
-  XMCDLIB=$LIBDIR/xmcd
-  while :
-  do
-! 	if [ -n "$NO_PROMPT" ]
-! 	then
-! 		$ECHO "xmcd library directory - using ${XMCDLIB}"
-! 		break
-! 	elif getstr "\nEnter xmcd library directory\n[${XMCDLIB}]:"
-  	then
-  		if [ -d "$ANS" ]
-  		then
-***************
-*** 733,739 ****
-  $ECHO "\n\nThe on-line manual directory is where the man pages in"
-  $ECHO "in the xmcd package will be installed."
-  
-! if getstr "\nEnter on-line manual directory\n[${MANDIR}]:"
-  then
-  	MANDIR=$ANS
-  fi
---- 752,761 ----
-  $ECHO "\n\nThe on-line manual directory is where the man pages in"
-  $ECHO "in the xmcd package will be installed."
-  
-! if [ -n "$NO_PROMPT" ]
-! then
-! 	$ECHO "xmcd on-line manual directory - using ${MANDIR}"
-! elif getstr "\nEnter on-line manual directory\n[${MANDIR}]:"
-  then
-  	MANDIR=$ANS
-  fi
-***************
-*** 758,764 ****
-  		MANSUFFIX=1
-  	fi
-  
-! 	if getstr "\nEnter on-line manual file name suffix\n[${MANSUFFIX}]:"
-  	then
-  		MANSUFFIX=$ANS
-  	fi
---- 780,789 ----
-  		MANSUFFIX=1
-  	fi
-  
-! 	if [ -n "$NO_PROMPT" ]
-! 	then
-! 		$ECHO "xmcd on-line manual file name suffix - using ${MANSUFFIX}"
-! 	elif getstr "\nEnter on-line manual file name suffix\n[${MANSUFFIX}]:"
-  	then
-  		MANSUFFIX=$ANS
-  	fi
+--- cda_d/Imakefile.orig	Wed Oct 28 03:03:25 1998
++++ cda_d/Imakefile	Wed Nov  4 22:37:14 1998
+@@ -42,11 +42,11 @@
+  *	One of these should be defined for tty mode control
+  */
+ #if defined(FreeBSDArchitecture) || defined(OpenBSDArchitecture) || \
+-    defined(OsfArchitecture) || \
++    defined(OsfArchitecture) || defined(NetBSDArchitecture) || \
+     (defined(SunArchitecture) && OSMajorVersion == 4)
+ DEFINES= -DBSDCOMPAT -DUSE_TERMIOS
+ #else
+-#if defined(NetBSDArchitecture) || defined(__bsdi__)
++#if defined(__bsdi__)
+ DEFINES= -DBSDCOMPAT -DNOVISUAL -DUSE_TERMIOS
+ #else
+ #if defined(sony_news)
+@@ -62,8 +62,8 @@
+ #endif	/* XmacIIServer */
+ #endif	/* BSD */
+ #endif	/* sony_news */
+-#endif	/* NetBSDArchitecture __bsdi__ */
+-#endif	/* FreeBSD OpenBSD OsfArchitecture SunArchitecture */
++#endif	/* __bsdi__ */
++#endif	/* FreeBSD OpenBSD OsfArchitecture NetBSD SunArchitecture */
+ 
+ 
+ /*
+@@ -79,7 +79,7 @@
+ #endif	/* LinuxArchitecture */
+ #endif	/* SunArchitecture */
+ 
+-INCLUDES=-I..
++INCLUDES=-I.. -I${LOCALBASE}/include
+ 
+ 
+ /*
+@@ -97,7 +97,10 @@
+ LOCAL_LIBRARIES+= -lcam
+ .endif
+ #else
+-#if defined(NetBSDArchitecture) || defined(__bsdi__)
++#if defined(NetBSDArchitecture)
++LOCAL_LIBRARIES=-L${LOCALBASE}/lib -Wl,-R${LOCALBASE}/lib -lncurses
++#else
++#if defined(__bsdi__)
+ LOCAL_LIBRARIES=
+ #else
+ #if defined(OpenBSDArchitecture)
+@@ -117,9 +120,10 @@
+ #endif	/* SINIX */
+ #endif	/* ultrix */
+ #endif	/* OpenBSDArchitecture */
+-#endif	/* NetBSDArchitecture __bsdi__ */
++#endif	/* __bsdi__ */
++#endif	/* NetBSDArchitecture */
+ #endif	/* FreeBSDArchitecture */
+-#endif	/* LinuxArchitecture OpenBSDArchitecture */
++#endif	/* LinuxArchitecture */
+ #endif	/* SunArchitecture */
+ 
+ 
