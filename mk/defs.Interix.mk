@@ -1,4 +1,4 @@
-# $NetBSD: defs.Interix.mk,v 1.20 2004/04/28 11:11:19 tv Exp $
+# $NetBSD: defs.Interix.mk,v 1.21 2004/04/30 19:45:29 tv Exp $
 #
 # Variable definitions for the Interix operating system.
 
@@ -136,6 +136,11 @@ _PATCH_BACKUP_ARG?=	-b -V simple -z	# switch to patch(1) for backup suffix
 _PREFORMATTED_MAN_DIR=	cat	# directory where catman pages are
 _USE_GNU_GETTEXT=	yes	# gettext not in base system
 _USE_RPATH=		yes	# add rpath to LDFLAGS
+
+# Ensure that USE_X11BASE programs get an xpkgwedge new enough to work.
+_OPSYS_NEEDS_XPKGWEDGE=	yes	# xpkgwedge is required for X11
+_XPKGWEDGE_DEPENDS=	xpkgwedge>=1.10:../../pkgtools/xpkgwedge
+BUILD_DEPENDS+=		${USE_X11BASE:D${_XPKGWEDGE_DEPENDS}}
 
 # flags passed to the linker to extract all symbols from static archives.
 # this is GNU ld.
