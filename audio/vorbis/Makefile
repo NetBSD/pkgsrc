@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.3 2000/08/18 16:31:24 itojun Exp $
+# $NetBSD: Makefile,v 1.4 2000/08/19 07:50:01 itojun Exp $
 #
 
 DISTNAME=       vorbis_nightly_cvs-20000818
 PKGNAME=	vorbis-20000818
 CATEGORIES=	audio
+# daily snapshot (vorbis-nightly-cvs.tgz) is copied into "LOCAL_PORTS"
+# so that we can get a version of certain date
 MASTER_SITES=   ${MASTER_SITE_LOCAL}
-# daily snapshot
 #MASTER_SITES=	http://www.xiph.org/ogg/vorbis/download/
 EXTRACT_SUFX=	.tgz
 

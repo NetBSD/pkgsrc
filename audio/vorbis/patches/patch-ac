@@ -1,8 +1,19 @@
-$NetBSD: patch-ac,v 1.1.1.1 2000/08/17 16:56:18 itojun Exp $
---- vorbis-tools/libao/ao_oss.c-	Fri Aug 18 01:34:24 2000
-+++ vorbis-tools/libao/ao_oss.c	Fri Aug 18 01:34:32 2000
+$NetBSD: patch-ac,v 1.2 2000/08/19 07:50:02 itojun Exp $
+--- vorbis-tools/libao/ao_oss.c.orig	Sat Jul 22 10:57:05 2000
++++ vorbis-tools/libao/ao_oss.c	Sat Aug 19 11:27:04 2000
 @@ -32,3 +32,3 @@
  #include <math.h>
 -#if defined(__OpenBSD__)
 +#if defined(__OpenBSD__) || defined(__NetBSD__)
  #include <soundcard.h>
+@@ -70,4 +70,9 @@
+ 
+-	if (state->dev == NULL)
++	if (state->dev == NULL) {
++#ifdef __NetBSD__
++		state->dev = strdup("/dev/audio");
++#else
+ 		state->dev = strdup("/dev/dsp");
++#endif
++	}
+ }
