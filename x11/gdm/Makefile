@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.55 2004/03/26 02:27:58 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2004/04/01 18:49:37 jmmv Exp $
 #
 
-DISTNAME=	gdm-2.4.4.7
-PKGREVISION=	7
+DISTNAME=	gdm-2.6.0.0
 CATEGORIES=	x11 gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gdm/2.4/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gdm/2.6/}
 EXTRACT_SUFX=	.tar.bz2
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} Daemon.README Daemon.png
 
@@ -12,9 +11,10 @@ MAINTAINER=	mjl@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Gnome Display Manager - a re-implementation of the xdm program
 
-BUILDLINK_DEPENDS.libart2+=	libart2>=2.3.11
 BUILD_USES_MSGFMT=	YES
 DEPENDS+=		xdg-dirs>=1.1:../../misc/xdg-dirs
+
+BUILDLINK_DEPENDS.libart2+=	libart2>=2.3.11
 
 SITES_Daemon.README=	${MASTER_SITE_LOCAL}
 SITES_Daemon.png=	${MASTER_SITE_LOCAL}

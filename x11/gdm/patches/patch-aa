@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.5 2004/01/22 10:11:16 jmmv Exp $
+$NetBSD: patch-aa,v 1.6 2004/04/01 18:49:37 jmmv Exp $
 
---- configure.orig	2003-12-31 19:10:05.000000000 +0100
+--- configure.orig	2004-03-15 19:38:10.000000000 +0100
 +++ configure
-@@ -22912,6 +22912,7 @@ VRFY="verify-crypt"
+@@ -24803,6 +24803,7 @@ VRFY="verify-crypt"
  if test x$enable_authentication_scheme != xcrypt -a \
  	x$enable_authentication_scheme != xshadow ; then
  
@@ -10,7 +10,7 @@ $NetBSD: patch-aa,v 1.5 2004/01/22 10:11:16 jmmv Exp $
  for ac_header in security/pam_appl.h
  do
  as_ac_Header=`echo "ac_cv_header_$ac_header" | $as_tr_sh`
-@@ -23061,6 +23062,7 @@ fi
+@@ -24960,6 +24961,7 @@ fi
  done
  
  fi
@@ -18,7 +18,7 @@ $NetBSD: patch-aa,v 1.5 2004/01/22 10:11:16 jmmv Exp $
  
  GDMASKPASS=
  EXTRA_GDMASKPASS_LIBS=
-@@ -25357,6 +25359,10 @@ else
+@@ -28015,6 +28017,10 @@ else
     X_SERVER="/usr/X11R6/bin/X"
     X_CONF_PATH="/usr/bin/X11:/usr/X11R6/bin:/usr/local/bin:/opt/X11R6/bin"
  fi
@@ -29,10 +29,10 @@ $NetBSD: patch-aa,v 1.5 2004/01/22 10:11:16 jmmv Exp $
  
  
  
-@@ -25406,6 +25412,8 @@ prefix=$old_prefix
+@@ -28064,6 +28070,8 @@ prefix=$old_prefix
  exec_prefix=$old_exec_prefix
  
-                                                                                                                                                                                                                                                                                                   ac_config_files="$ac_config_files Makefile daemon/Makefile gui/Makefile gui/greeter/Makefile gui/greeter/themes/Makefile gui/greeter/themes/circles/Makefile gui/greeter/themes/happygnome/Makefile gui/greeter/themes/happygnome-list/Makefile gui/modules/Makefile gui/modules/AccessKeyMouseEvents gui/modules/AccessDwellMouseEvents utils/Makefile pixmaps/Makefile config/Makefile po/Makefile.in vicious-extensions/Makefile docs/Makefile docs/C/Makefile config/gdm.conf config/Xsession config/Default config/PreSession config/PostSession daemon/gdm gdm-stop gdm-restart gdm-safe-restart gdmsetup-security gdm.spec"
+                                                                                                                                                                                                                                                                                                                                                                                                       ac_config_files="$ac_config_files Makefile daemon/Makefile gui/Makefile gui/greeter/Makefile gui/greeter/themes/Makefile gui/greeter/themes/circles/Makefile gui/greeter/themes/happygnome/Makefile gui/greeter/themes/happygnome-list/Makefile gui/modules/Makefile gui/modules/AccessKeyMouseEvents gui/modules/AccessDwellMouseEvents utils/Makefile pixmaps/Makefile config/Makefile po/Makefile.in vicious-extensions/Makefile docs/Makefile docs/C/Makefile docs/de/Makefile docs/es/Makefile docs/fr/Makefile docs/it/Makefile docs/sv/Makefile docs/ja/Makefile docs/ko/Makefile docs/zh_CN/Makefile docs/zh_HK/Makefile docs/zh_TW/Makefile config/gdm.conf config/Xsession config/Default config/PreSession config/PostSession daemon/gdm gdm-stop gdm-restart gdm-safe-restart gdmsetup-security gdm.spec"
 +# This is to avoid GNU make; may not be needed on a later version..
 +ac_config_files="$ac_config_files config/default.desktop config/gnome.desktop config/CDE.desktop"
  cat >confcache <<\_ACEOF
