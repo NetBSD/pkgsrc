@@ -1,36 +1,40 @@
-$NetBSD: patch-aa,v 1.8 2004/02/22 03:13:07 jlam Exp $
+$NetBSD: patch-aa,v 1.9 2004/07/14 20:07:16 jlam Exp $
 
---- Makefile.in.orig	Thu Nov 27 15:51:57 2003
-+++ Makefile.in
-@@ -137,9 +137,9 @@ SUBDIRS = numlib @DBSUBDIR@ soxwrap unic
- CLEANFILES = $(databin_SCRIPTS) $(man_MANS) $(sysconf_DATA)
+--- Makefile.in.orig	Fri Jun 11 21:38:19 2004
++++ Makefile.in	Tue Jul 13 20:33:19 2004
+@@ -140,12 +140,12 @@
+ 
+ 
+-sbin_SCRIPTS = sharedindexinstall sharedindexsplit
++sbin_SCRIPTS = 
+ CLEANFILES = $(databin_SCRIPTS) $(man_MANS) $(sysconf_DATA) $(sbin_SCRIPTS)
  databindir = $(datadir)
 -databin_SCRIPTS = mkimapdcert mkpop3dcert vchkpw2userdb makeuserdb pw2userdb
 +databin_SCRIPTS = mkimapdcert mkpop3dcert
  
--binPROGRAMS = imapd pop3d maildirmake deliverquota maildirkw
--sbinPROGRAMS = imaplogin pop3login userdbpw
--libexecPROGRAMS = makedatprog couriertcpd courierlogger
+-binPROGRAMS = imapd pop3d maildirmake maildiracl deliverquota maildirkw
+-sbinPROGRAMS = authenumerate imaplogin pop3login userdbpw courierlogger
+-libexecPROGRAMS = makedatprog couriertcpd
 +binPROGRAMS = imapd pop3d
 +sbinPROGRAMS = imaplogin pop3login
-+libexecPROGRAMS = couriertcpd courierlogger
++libexecPROGRAMS = couriertcpd
  
  bin_PROGRAMS = @binPROGRAMS_exec@
-@@ -149,5 +149,5 @@ libexec_PROGRAMS = @libexecPROGRAMS_exec
+@@ -155,5 +155,5 @@
  EXTRA_PROGRAMS = 
  
--man_MANS = makeuserdb.8 userdb.8 userdbpw.8 couriertcpd.1 deliverquota.8 maildirmake.1 imapd.8 mkimapdcert.8 mkpop3dcert.8 maildirkw.1
+-man_MANS = makeuserdb.8 userdb.8 userdbpw.8 couriertcpd.1 courierlogger.1 deliverquota.8 maildirmake.1 maildiracl.1 imapd.8 mkimapdcert.8 mkpop3dcert.8 maildirkw.1
 +man_MANS = couriertcpd.1 courier-imapd.8 mkimapdcert.8 mkpop3dcert.8
  
  
-@@ -161,5 +161,5 @@ EXTRA_DIST = 00README.NOW.OR.SUFFER READ
+@@ -169,5 +169,5 @@
  
  sysconf_DATA = imapd.dist imapd-ssl.dist pop3d.dist pop3d-ssl.dist \
 -	imapd.cnf pop3d.cnf quotawarnmsg.example
 +	imapd.cnf pop3d.cnf
  
  libexec_SCRIPTS = imapd.rc imapd-ssl.rc pop3d.rc pop3d-ssl.rc
-@@ -927,6 +927,6 @@ maildirkw.1: maildir/maildirkw.1
+@@ -980,6 +980,6 @@
  	cp $(srcdir)/maildir/maildirkw.1 .
  
 -imapd.8: imap/imapd.8
@@ -39,7 +43,7 @@ $NetBSD: patch-aa,v 1.8 2004/02/22 03:13:07 jlam Exp $
 +	cp imap/imapd.8 ./$@
  
  mkimapdcert: imap/mkimapdcert
-@@ -954,20 +954,9 @@ quotawarnmsg.example: maildir/quotawarnm
+@@ -1007,20 +1007,9 @@
  
  install-exec-local:
 -	$(mkinstalldirs) $(DESTDIR)$(libexecdir)/authlib
@@ -61,10 +65,14 @@ $NetBSD: patch-aa,v 1.8 2004/02/22 03:13:07 jlam Exp $
 +	for f in mkimapdcert mkpop3dcert ; \
  		do rm -f $(DESTDIR)$(sbindir)/$$f ; \
  		$(LN_S) $(databindir)/$$f $(DESTDIR)$(sbindir)/$$f ; done
-@@ -975,28 +964,8 @@ install-exec-local:
+@@ -1028,34 +1017,8 @@
  
  install-exec-hook:
 -	chmod 444 $(DESTDIR)$(sysconfdir)/quotawarnmsg.example
+-	mkdir -p $(DESTDIR)$(sysconfdir)/shared
+-	chmod 755 $(DESTDIR)$(sysconfdir)/shared
+-	mkdir -p $(DESTDIR)$(sysconfdir)/shared.tmp
+-	chmod 755 $(DESTDIR)$(sysconfdir)/shared.tmp
  
  # If authlib built authpam, install the PAM configuration file
  
@@ -73,9 +81,11 @@ $NetBSD: patch-aa,v 1.8 2004/02/22 03:13:07 jlam Exp $
 -		test "$$f" = "authpam" || continue ; \
 -		test -d $(DESTDIR)/etc/pam.d || continue ; \
 -		test -w $(DESTDIR)/etc/pam.d || continue ; \
--		$(INSTALL_DATA) $(srcdir)/imap/imapd.pam \
+-		test -f $(DESTDIR)/etc/pam.d/imap || \
+-			$(INSTALL_DATA) $(srcdir)/imap/imapd.pam \
 -			$(DESTDIR)/etc/pam.d/imap || exit 1 ;\
--		$(INSTALL_DATA) $(srcdir)/imap/pop3d.pam \
+-		test -f $(DESTDIR)/etc/pam.d/pop3 || \
+-			$(INSTALL_DATA) $(srcdir)/imap/pop3d.pam \
 -			$(DESTDIR)/etc/pam.d/pop3 || exit 1 ;\
 -	done
 -	rm -f $(DESTDIR)$(man8dir)/pw2userdb.8
