@@ -1,0 +1,35 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/04/20 09:50:55 xtraeme Exp $
+
+--- acid_conf.php.orig	Thu Jan  9 01:04:07 2003
++++ acid_conf.php	Tue Jul  8 12:33:30 2003
+@@ -9,7 +9,7 @@
+  *        $foo = "c:\tmp"    [OK]
+  *        $foo = "c:\tmp\"   [WRONG]
+  */
+-$DBlib_path = "";
++$DBlib_path = "@PREFIX@/share/adodb";
+ 
+ /* The type of underlying alert database
+  * 
+@@ -17,7 +17,7 @@
+  *  PostgresSQL : "postgres"
+  *  MS SQL Server : "mssql"
+  */
+-$DBtype = "mysql";
++$DBtype = "@DBTYPE@";
+ 
+ /* Alert DB connection parameters
+  *   - $alert_dbname   : MySQL database name of Snort alert DB
+@@ -66,10 +66,10 @@
+ /* Path to the graphing library 
+  *  (Note: DO NOT include a trailing backslash after the directory)
+  */
+-$ChartLib_path = "";
++$ChartLib_path = "@PREFIX@/share/php-jpgraph";
+ 
+ /* File format of charts ('png', 'jpeg', 'gif') */
+-$chart_file_format = "png";
++$chart_file_format = "jpeg";
+ 
+ /* Chart default colors - (red, green, blue)
+  *    - $chart_bg_color_default    : background color of chart
