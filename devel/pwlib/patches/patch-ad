@@ -1,0 +1,33 @@
+$NetBSD: patch-ad,v 1.3 2004/11/30 16:45:19 adam Exp $
+
+--- src/ptlib/unix/osutil.cxx.orig	2004-11-30 17:37:08.000000000 +0000
++++ src/ptlib/unix/osutil.cxx
+@@ -245,6 +245,7 @@
+ 
+ #include <sys/param.h>
+ #include <sys/mount.h>
++#include <sys/statvfs.h>
+ 
+ #elif defined(P_HPUX9) 
+ #define P_USE_LANGINFO
+@@ -687,7 +688,7 @@ PString PDirectory::GetVolume() const
+ 
+ #elif defined(P_FREEBSD) || defined(P_OPENBSD) || defined(P_NETBSD) || defined(P_MACOSX) || defined(P_MACOS)
+ 
+-    struct statfs * mnt;
++    struct statvfs * mnt;
+     int count = getmntinfo(&mnt, MNT_NOWAIT);
+     for (int i = 0; i < count; i++) {
+       if (stat(mnt[i].f_mntonname, &status) != -1 && status.st_dev == my_dev) {
+@@ -727,9 +728,9 @@ BOOL PDirectory::GetVolumeSpace(PInt64 &
+ {
+ #if defined(P_LINUX) || defined(P_FREEBSD) || defined(P_OPENBSD) || defined(P_NETBSD) || defined(P_MACOSX) || defined(P_MACOS)
+ 
+-  struct statfs fs;
++  struct statvfs fs;
+ 
+-  if (statfs(operator+("."), &fs) == -1)
++  if (statvfs(operator+("."), &fs) == -1)
+     return FALSE;
+ 
+   clusterSize = fs.f_bsize;
