@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2005/02/24 14:48:41 agc Exp $
+$NetBSD: distinfo,v 1.11 2005/03/23 21:47:52 wiz Exp $
 
-SHA1 (doclifter-2.0.tar.gz) = 976c1bad65dc0f8a893c9ff2d597b6e5f05305b6
-RMD160 (doclifter-2.0.tar.gz) = 2de336039e445b24d57f890d5336b32848e79cd5
-Size (doclifter-2.0.tar.gz) = 126448 bytes
+SHA1 (doclifter-2.1.tar.gz) = 48f17f364a40d1a2a7f4af74757ecedcc86d8b0d
+RMD160 (doclifter-2.1.tar.gz) = df3152740f1b1fb3ad6e369e2e216c573e554f96
+Size (doclifter-2.1.tar.gz) = 126847 bytes
 SHA1 (patch-aa) = 59761aa1058d4417c788d25133416a91473828c7
