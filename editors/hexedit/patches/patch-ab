@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 1998/08/24 11:58:05 frueauf Exp $
+
+--- hexedit.c-orig	Fri Aug  7 18:20:04 1998
++++ hexedit.c	Mon Aug 24 12:53:26 1998
+@@ -21,7 +21,7 @@
+ #include <sys/stat.h>
+ #include <fcntl.h>
+ #include <unistd.h>
+-#include <curses.h>
++#include <ncurses.h>
+ #include <ctype.h>
+ #include <signal.h>
+ #include <sys/wait.h>
