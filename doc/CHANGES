@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7437 2004/10/14 19:09:54 tv Exp $
+$NetBSD: CHANGES,v 1.7438 2004/10/14 20:01:43 kristerw Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4724,3 +4724,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated postgresql73-docs to 7.3.7nb1 [kristerw 2004-10-14]
 	Updated epiphany to 1.4.4 [jmmv 2004-10-14]
 	Added libltdl-1.5.10 [tv 2004-10-14]
+	Updated dcraw to 1.211 [kristerw 2004-10-14]
