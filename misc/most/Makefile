@@ -3,12 +3,13 @@
 # Date created:		31 May 1997
 # Whom:			rhwang@bigpanda.com
 #
-# $Id: Makefile,v 1.1.1.1 1997/10/11 21:54:34 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 1998/01/24 21:20:52 hubertf Exp $
+# FreeBSD Id: Makefile,v 1.2 1997/06/03 21:52:01 asami Exp
 #
 
 DISTNAME=	most4.7
 PKGNAME=	most-4.7
-CATEGORIES=	misc	
+CATEGORIES=	misc
 MASTER_SITES=	ftp://space.mit.edu/pub/davis/most/ \
 		ftp://ftp.uni-stuttgart.de/pub/unix/misc/slang/most/
 
