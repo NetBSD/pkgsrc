@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.8 2004/12/28 21:51:32 jmmv Exp $
+$NetBSD: distinfo,v 1.9 2005/02/24 11:02:59 agc Exp $
 
 SHA1 (yelp-2.6.5.tar.bz2) = 2cd2c4125a01016ab9d60afbd9b684225b3b401f
+RMD160 (yelp-2.6.5.tar.bz2) = d9ae640de40395485ee4e43ad03ed0e3b0c1a329
 Size (yelp-2.6.5.tar.bz2) = 654264 bytes
