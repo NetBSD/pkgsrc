@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9419 2005/03/04 15:43:54 uebayasi Exp $
+$NetBSD: CHANGES,v 1.9420 2005/03/04 16:04:59 reinoud Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1272,3 +1272,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated p5-Curses to 1.08b [wiz 2005-03-04]
 	Updated mew to 4.2 [uebayasi 2005-03-04]
 	Updated wol to 0.7.1 [uebayasi 2005-03-04]
+	Updated blender to 2.63nb1 [reinoud 2005-03-04]
