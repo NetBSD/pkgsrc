@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2338 2003/05/27 17:26:00 jmmv Exp $
+$NetBSD: CHANGES,v 1.2339 2003/05/27 21:57:53 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2175,3 +2175,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated ja-samba to 2.2.8.1.1.0 [taca 2003-05-27]
 	Updated pkglint to 3.54 [wiz 2003-05-27]
 	Updated seahorse to 0.7.1 [jmmv 2003-05-27]
+	Updated perl5 to 5.6.1nb8 [jlam 2003-05-27]
+	Updated perl58 to 5.8.0nb1 [jlam 2003-05-27]
