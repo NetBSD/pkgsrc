@@ -1,0 +1,7 @@
+#!/bin/sh
+
+STALIN_INCLUDES ="-I %%PREFIX%%/lib/stalin -I %%PREFIX%%/include -I %%GC_PREFIX%%/include -I %%GC_PREFIX%%/lib -I%%MESA_PREFIX%%"
+
+STALIN_OPTIONS="-Ob -Om -On -Or -Ot -d -du -dI -k -copt -O2 -copt -fomit-frame-pointer -copt -freg-struct-return"
+
+exec %%PREFIX%%/libexec/stalin/stalin $STALIN_INCLUDES $STALIN_OPTIONS $@
