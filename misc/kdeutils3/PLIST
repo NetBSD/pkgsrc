@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2004/11/18 10:02:07 markd Exp $
+@comment $NetBSD: PLIST,v 1.11 2004/11/18 10:14:44 markd Exp $
 bin/ark
 bin/irkick
 bin/kcalc
@@ -460,7 +460,7 @@ share/kde/servicetypes/kmilo/kmilopluginsvc.desktop
 @dirrm share/kde/apps/kregexpeditor/predefined
 @dirrm share/kde/apps/kregexpeditor/pics
 @dirrm share/kde/apps/kregexpeditor
-@dirrm share/kde/apps/konqueror/servicemenus
+@comment dirrm share/kde/apps/konqueror/servicemenus
 @dirrm share/kde/apps/klaptopdaemon/icons/crystalsvg/32x32/actions
 @dirrm share/kde/apps/klaptopdaemon/icons/crystalsvg/32x32
 @dirrm share/kde/apps/klaptopdaemon/icons/crystalsvg/22x22/actions
