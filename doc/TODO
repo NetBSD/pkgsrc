@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.443 2003/04/04 01:03:53 grant Exp $
+$NetBSD: TODO,v 1.444 2003/04/05 20:32:04 wiz Exp $
 
 Suggested new packages
 ======================
@@ -148,7 +148,6 @@ Suggested package updates
 	o jakarta-ant-1.5 [pkg/18322]
 	o jakarta-ant-1.5.2
 	o jakarta-tomcat-3.3.1a
-	o jed-0.99.16 [pkg/18937]
 	o jikes-1.18 [pkg/19979]
 	o joe-2.9 [pkg/18022]
 	o jove-4.16.0.58 [pkg/19924]
@@ -198,6 +197,7 @@ Suggested package updates
 	o openslp-1.0.11
 	o openssh-3.6.1
 	o openssl-0.9.7a
+	o opera-7.1
 	o oss-3.9.7h
 	o p0f-1.8.3
 	o php4-4.3.1
