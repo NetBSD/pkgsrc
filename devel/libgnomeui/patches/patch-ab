@@ -1,0 +1,11 @@
+$NetBSD: patch-ab,v 1.3 2005/01/08 20:10:10 jmmv Exp $
+
+--- libgnomeui/libgnomeui-2.0.pc.in.orig	2002-07-16 21:41:34.000000000 +0200
++++ libgnomeui/libgnomeui-2.0.pc.in
+@@ -8,5 +8,5 @@ Name: libgnomeui
+ Description: libgnomeui
+ Requires: libgnome-2.0 libgnomecanvas-2.0 gtk+-2.0 gdk-pixbuf-2.0 libart-2.0 gconf-2.0 libbonoboui-2.0
+ Version: @VERSION@
+-Libs: -L${libdir} -lgnomeui-2 @SM_LIBS@
++Libs: -L${libdir} -lgnomeui-2
+ Cflags: -I${includedir}/libgnomeui-2.0
