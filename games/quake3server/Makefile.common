@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2004/01/04 18:38:01 xtraeme Exp $
+# $NetBSD: Makefile.common,v 1.2 2004/01/22 09:02:30 xtraeme Exp $
 
 NO_BUILD=	yes
 Q3ROOTDIR=	${PREFIX}/lib/lokigames/quake3server
