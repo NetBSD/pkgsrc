@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2005/03/02 13:31:33 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2005/03/02 13:38:59 wiz Exp $
 #
 
 DISTNAME=		mod_aolserver-1.1
@@ -34,4 +34,4 @@ post-install:
 .include "../../mk/pgsql.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
 
-APXSFLAGS!=	${PREFIX}/sbin/apxs -q CFLAGS CFLAGS_SHLIB
+APXSFLAGS!=	${LOCALBASE}/sbin/apxs -q CFLAGS CFLAGS_SHLIB
