@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2002/11/03 01:44:49 jlam Exp $
+@comment $NetBSD: PLIST,v 1.4 2002/12/19 14:51:41 jlam Exp $
 bin/ossplay
 bin/ossmixer
 bin/ossmplay
@@ -20,10 +20,12 @@ lib/oss/docs/README.256AV
 lib/oss/docs/README.AudioPCI
 lib/oss/docs/README.CMI8738
 lib/oss/docs/README.CS4280
+lib/oss/docs/README.ConfigOptions
 lib/oss/docs/README.Digi32
 lib/oss/docs/README.Digi96
 lib/oss/docs/README.EWS64
 lib/oss/docs/README.Envy24
+lib/oss/docs/README.Geode
 lib/oss/docs/README.Intelpci
 lib/oss/docs/README.Irqsharing
 lib/oss/docs/README.KDE
