@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/02/25 00:51:23 cube Exp $
+lib/gkrellm2/plugins/gkrellmlaunch.so
