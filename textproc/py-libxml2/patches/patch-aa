@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/01/04 11:47:17 recht Exp $
+
+--- libxml.py.orig	2003-12-25 00:17:24.000000000 -0600
++++ libxml.py
+@@ -278,7 +278,7 @@ class xmlCore:
+     # defined as python2 properties
+     # 
+     import sys
+-    if float(sys.version[0:3]) < 2.2:
++    if float(sys.version[0:3].replace('p', '.')) < 2.2:
+         def __getattr__(self, attr):
+             if attr == "parent":
+                 ret = libxml2mod.parent(self._o)
