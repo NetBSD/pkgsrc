@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/01/24 13:51:15 grant Exp $
-#
+# $NetBSD: Makefile,v 1.7 2004/04/09 23:19:37 snj Exp $
 
 DISTNAME=	boot.${BOX}-unix
 PKGNAME=	smlnj-${SML_VERSION}
@@ -28,7 +27,7 @@ MAINTAINER=	richards+netbsd@CS.Princeton.EDU
 HOMEPAGE=	http://www.smlnj.org/index.html
 COMMENT=	Popular functional language from Bell Labs
 
-SML_VERSION=	110.42
+SML_VERSION=	110.45
 
 # Other mirror sites that generally carry only released versions of SML
 # 	ftp://rodin.stanford.edu/pub/smlnj/release/
@@ -37,6 +36,7 @@ SML_VERSION=	110.42
 
 WRKSRC=		${WRKDIR}
 DIST_SUBDIR=	smlnj-${SML_VERSION}
+USE_BUILDLINK3=	YES
 USE_GNU_TOOLS+=	make
 
 # previous versions of the package had an additional '-'
