@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/02/05 20:34:17 garbled Exp $
+
+SHA1 (openrm-devel-1.5.1.tar.gz) = 33a3a2942a57b15da3459efef6b9f2942f9c4ffd
+Size (openrm-devel-1.5.1.tar.gz) = 628213 bytes
+SHA1 (patch-aa) = 45caa6f9d0117e98f707ba7c7e071e1f9dae4d1f
+SHA1 (patch-ab) = c8ad68eb88b9ff557d15f1c3e358dbee828c5605
+SHA1 (patch-ac) = 1288d0d5fa8de3484859f75b9b94554a5ebd1643
