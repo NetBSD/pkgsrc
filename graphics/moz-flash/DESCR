@@ -1,0 +1,3 @@
+Swfplayer is a standalone open source flash(tm) player using libflash.
+You can use it to quickly play movies without to start Netscape.  It can
+also play movies on root window (suitable for xscreensaver).
