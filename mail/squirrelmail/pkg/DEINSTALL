@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: DEINSTALL,v 1.3 2001/04/30 05:03:26 jlam Exp $
+# $NetBSD: DEINSTALL,v 1.4 2001/04/30 05:35:45 jlam Exp $
 
 PKGNAME=$1
 STAGE=$2
@@ -29,7 +29,7 @@ DEINSTALL)
 		${RM} -f ${FILE}
 	fi
 	FILE=${CONFDIR}/squirrelmail.conf
-	SAMPLEFILE=${SAMPLECONFDIR}/squirrelmail.conf.dist
+	SAMPLEFILE=${SAMPLECONFDIR}/squirrelmail.conf
 	if diff -q ${FILE} ${SAMPLEFILE} >/dev/null
 	then
 		${RM} -f ${FILE}
