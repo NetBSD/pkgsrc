@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2003/11/12 01:31:51 salo Exp $
+# $NetBSD: Makefile,v 1.9 2003/12/03 03:04:34 xtraeme Exp $
 #
 
 DISTNAME=		nautilus-2.2.3.1
-PKGREVISION=		6
+PKGREVISION=		7
 CATEGORIES=		sysutils gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/nautilus/2.2/}
 EXTRACT_SUFX=		.tar.bz2
@@ -20,6 +20,13 @@ USE_PKGINSTALL=		yes
 GNU_CONFIGURE=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 PKGCONFIG_OVERRIDE=	${WRKSRC}/libnautilus/libnautilus.pc.in
+
+#
+# Nautilus has it's own idea of what versions of packages it wants, so make
+# it happy.
+#
+BUILDLINK_DEPENDS.esound=	esound>=0.2.27
+
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ENV+=		GCONF_SCHEMA_FILE_DIR="${PREFIX}/share/gconf/schemas/"
