@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.2 2004/11/28 15:38:35 taca Exp $
+# $NetBSD: rubyversion.mk,v 1.3 2004/11/29 07:05:00 taca Exp $
 #
 
 .ifndef _RUBYVERSION_MK
@@ -26,10 +26,8 @@ RUBY_VERSION_DEFAULT?=	1.8
 #
 .if !defined(RUBY_VERSION)
 .if ${RUBY_VERSION_DEFAULT} == "1.6"
-RUBY_REQD?=		1.6.8
 RUBY_VERSION?=		${RUBY16_VERSION}
 .elif ${RUBY_VERSION_DEFAULT} == "1.8"
-RUBY_REQD?=		1.8.1
 RUBY_VERSION?=		${RUBY18_VERSION}
 .endif
 .endif
@@ -61,6 +59,15 @@ _RUBY_VERS_TEENY=	${RUBY_VERSION:C/([0-9]+)\.([0-9]+)\.([0-9]+)/\3/}
 # RUBY_VER defines Ruby base release.
 #
 RUBY_VER=		${_RUBY_VER_MAJOR}${_RUBY_VER_MINOR}
+
+#
+# RUBY_REQD is minimum required Ruby's version
+#
+.if ${RUBY_VER} == "16"
+RUBY_REQD?=		1.6.8
+.elif ${RUBY_VER} == "18"
+RUBY_REQD?=		1.8.1
+.endif
 
 # RUBY_SUFFIX is appended to Ruby's commands; ruby, irb and so on.
 #
