@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.3 2000/07/20 15:25:45 agc Exp $
+
 --- ./configs/netbsd-g++-static.orig	Wed Apr 12 14:26:47 2000
 +++ ./configs/netbsd-g++-static	Wed Jun 14 22:39:32 2000
 @@ -1,6 +1,7 @@
