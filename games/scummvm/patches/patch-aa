@@ -1,7 +1,16 @@
-$NetBSD: patch-aa,v 1.13 2005/01/04 13:41:53 adam Exp $
+$NetBSD: patch-aa,v 1.14 2005/03/29 08:48:31 adam Exp $
 
---- Makefile.orig	2004-07-27 15:33:15.000000000 +0000
+--- Makefile.orig	2004-12-20 21:06:22.000000000 +0000
 +++ Makefile
+@@ -9,7 +9,7 @@ srcdir      ?= .
+ DEFINES     := -DHAVE_CONFIG_H
+ LDFLAGS     :=
+ INCLUDES    := -I. -I$(srcdir) -I$(srcdir)/common
+-LIBS	    :=
++LIBS	    := ${LIBOSSAUDIO}
+ OBJS	    :=
+ 
+ MODULES     :=
 @@ -21,8 +21,7 @@ include config.mak
  # Uncomment this for stricter compile time code verification
  # CXXFLAGS+= -Werror
