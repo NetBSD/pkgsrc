@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/03/12 10:26:21 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2001/04/12 14:05:40 wennmach Exp $
 
 DISTNAME=		cyrus-imapd-1.6.24
 PKGNAME=		${DISTNAME}nb1
@@ -9,6 +9,10 @@ MASTER_SITES=		ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/ \
 MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://asg.web.cmu.edu/cyrus/imapd/
 COMMENT=		IMAP server
+
+# The conflict with kth-krb4-* is only on one file, man/man5/krb.equiv.5 and
+# should be resolved.
+CONFLICTS=		kth-krb4-*
 
 DEPENDS+=		tcl>=8.3.2:../../lang/tcl
 DEPENDS+=		cyrus-sasl>=1.5.24nb2:../../security/cyrus-sasl
