@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.8 2003/03/09 19:46:52 jschauma Exp $
+$NetBSD: patch-aa,v 1.9 2003/07/22 22:38:36 jmmv Exp $
 --- Makefile.orig	Thu Jan 16 17:31:58 1997
 +++ Makefile	Wed Apr 12 21:03:39 2000
 @@ -23,7 +23,7 @@
@@ -6,7 +6,7 @@ $NetBSD: patch-aa,v 1.8 2003/03/09 19:46:52 jschauma Exp $
  #  see a warning message please let me know about it)
  # ------------------------------------------------------------
 -CC = CC
-+CC = cc
++#CC = cc
  
  
  # STEP 2: IF YOU WANT TO COMPILE WITH THE MESA LIBRARIES THEN
@@ -49,12 +49,3 @@ $NetBSD: patch-aa,v 1.8 2003/03/09 19:46:52 jschauma Exp $
  
  # you should now be able to type 'make' and everything should be fine ...
  
-@@ -115,6 +117,8 @@
- 
- $(TARGET): $(OBJ)
- 	$(CC) -o $(TARGET) $(OBJ) $(LIBFLAGS) $(GLIB) $(LIBS) $(AUDIOLIB)
-+
-+install:
- 
- clean:
- 	rm -f $(OBJ)
