@@ -1,4 +1,4 @@
-# $NetBSD: defs.SunOS.mk,v 1.72 2003/10/19 07:38:31 grant Exp $
+# $NetBSD: defs.SunOS.mk,v 1.73 2003/12/16 22:54:13 heinz Exp $
 #
 # Variable definitions for the SunOS/Solaris operating system.
 
@@ -129,7 +129,7 @@ _OPSYS_PERL_REQD=		# no base version of perl required
 _OPSYS_PTHREAD_AUTO=	no		# -lpthread needed for pthreads
 _OPSYS_RPATH_NAME=	-R		# name of symbol in rpath directive to linker 
 _PATCH_CAN_BACKUP=	yes		# native patch(1) can make backups
-_PATCH_BACKUP_ARG= 	-b -V simple -z	# switch to patch(1) for backup suffix
+_PATCH_BACKUP_ARG?= 	-b -V simple -z	# switch to patch(1) for backup suffix
 _PREFORMATTED_MAN_DIR=	man		# directory where catman pages are
 _USE_GNU_GETTEXT=	yes		# Use GNU gettext
 _USE_RPATH=		yes		# add rpath to LDFLAGS
