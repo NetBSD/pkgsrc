@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2002/08/03 15:11:40 jdolecek Exp $
+# $NetBSD: Makefile,v 1.20 2002/08/07 12:22:21 jdolecek Exp $
 
 DISTNAME=		openoffice-0.0.0.641
 PKGREVISION=		1
@@ -31,7 +31,7 @@ BUILD_DEPENDS+=		zip-[0-9]*:../../archivers/zip
 BUILD_DEPENDS+=		stlport>=4.0nb1:../../devel/stlport
 
 USE_JAVA=		build
-PKG_JVM=		sun-jdk
+PKG_JVM=		sun-jdk13
 
 CONFLICTS=		staroffice-[0-9]*
 
@@ -75,8 +75,8 @@ DISPLAY= ':2'
 pre-build: checkforx
 
 do-build:
-	${_ULIMIT_CMD}tcsh -c "setenv DISPLAY '${DISPLAY}'; cd ${WRKSRC}/..&& \
-		   ./bootstrap&& source *.Set&& dmake"
+	${_ULIMIT_CMD}tcsh -c "setenv DISPLAY '${DISPLAY}'; \
+		cd ${WRKSRC}/.. && ./bootstrap && source *.Set && dmake"
 			
 pre-install: checkforx
 	${SH} -c "cd ${WRKSRC}/../instsetoo/*.pro/01/normal;		\
