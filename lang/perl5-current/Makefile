@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9.2.5 2002/07/20 17:53:05 jlam Exp $
+# $NetBSD: Makefile,v 1.9.2.6 2002/07/21 02:15:45 jlam Exp $
 
 .include "Makefile.common"
 
@@ -41,6 +41,12 @@ USE_GMAKE=		# defined
 # build perl on Darwin.  Disable it for now until the problem is fixed.
 #
 .  undef USE_BUILDLINK2
+#
+# Perl is _always_ built using shared libraries on Darwin; there's no
+# way to build a statically-linked perl binary.
+#
+MKPIC=			yes
+STATIC_PERL=		NO
 .endif
 
 # Nail down the needed libraries for each platform here to avoid hidden
@@ -125,6 +131,7 @@ pre-configure:
 	for hints in $${hintdir}/*.sh; do				\
 		${CHMOD} +w $${hints};					\
 		( ${ECHO} '';						\
+		  ${ECHO} 'man1dir="$${prefix}/man/man1"';		\
 		  ${ECHO} 'man3dir=none';				\
 		  ${ECHO} 'locincpth="${LOCINCPATH}"';			\
 		  ${ECHO} 'loclibpth="${LOCLIBPATH}"';			\
