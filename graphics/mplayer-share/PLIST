@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2002/12/25 03:24:49 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2003/01/20 07:10:41 fredb Exp $
 man/man1/mplayer.1
 share/mplayer/DOCS/Chinese/bugreports.html
 share/mplayer/DOCS/Chinese/cd-dvd.html
@@ -36,6 +36,7 @@ share/mplayer/DOCS/German/faq.html
 share/mplayer/DOCS/German/formats.html
 share/mplayer/DOCS/German/mplayer.1
 share/mplayer/DOCS/German/sound.html
+share/mplayer/DOCS/German/users_against_developers.html
 share/mplayer/DOCS/German/video.html
 share/mplayer/DOCS/Hungarian/bugreports.html
 share/mplayer/DOCS/Hungarian/cd-dvd.html
