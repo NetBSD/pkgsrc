@@ -1,0 +1,12 @@
+$NetBSD: patch-ae,v 1.1 2005/03/21 17:35:53 dmcmahill Exp $
+
+--- Zs.cc.orig	1998-12-07 08:28:51.000000000 +0000
++++ Zs.cc
+@@ -1,6 +1,6 @@
+ /* EII for Plane wave model */
+ 
+-#include <stream.h>
++#include <sstream>
+ #include <stdlib.h>
+ #include <stdio.h>
+ #include <math.h>
