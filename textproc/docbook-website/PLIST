@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/01/18 09:16:58 grant Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/01/29 21:31:17 jmmv Exp $
 share/doc/docbook-website/ChangeLog
 share/doc/docbook-website/README
 share/doc/docbook-website/VERSION
@@ -149,8 +149,6 @@ share/xml/website/xsl/xbel.xsl
 @dirrm share/xml/website/extensions/saxon64/com
 @dirrm share/xml/website/extensions/saxon64
 @dirrm share/xml/website/extensions
-@exec %D/bin/xmlcatmgr -c %D/share/xml/catalog add CATALOG %D/share/xml/website/catalog
-@unexec %D/bin/xmlcatmgr -c %D/share/xml/catalog remove %D/share/xml/website/catalog
 @dirrm share/xml/website
 @dirrm share/examples/docbook-website/subdir
 @dirrm share/examples/docbook-website/graphics/navicons/triangle/other
