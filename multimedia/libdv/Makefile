@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/10/03 00:13:02 tv Exp $
+# $NetBSD: Makefile,v 1.4 2004/11/12 06:39:20 jlam Exp $
 #
 
 DISTNAME=		libdv-0.102
@@ -15,7 +15,6 @@ USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 
-LIBS+=			${PTHREAD_LDFLAGS}
 LIBS+=			${LIBOSSAUDIO}
 
 .include "../../mk/bsd.prefs.mk"

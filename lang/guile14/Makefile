@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2004/10/15 14:50:06 tv Exp $
+# $NetBSD: Makefile,v 1.21 2004/11/12 06:39:20 jlam Exp $
 
 DISTNAME=		guile-1.4.1
 PKGNAME=		guile14-1.4.1
@@ -21,10 +21,6 @@ INFO_DIR=		guile/1.4/info
 INFO_FILES=		guile.info
 
 BUILDLINK_PASSTHRU_DIRS=	${LOCALBASE}/guile/1.4
-
-# Link the native thread so that Guile processes won't die when libpthread.so
-# is dl_open(3)'ed.
-CFLAGS+=		${PTHREAD_CFLAGS}
 
 .include "../../devel/libltdl/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
