@@ -1,15 +1,14 @@
-$NetBSD: patch-aa,v 1.4 2001/12/25 22:46:32 wiz Exp $
+$NetBSD: patch-aa,v 1.5 2004/06/12 02:24:57 grant Exp $
 
---- ld/Makefile.orig	Sat Feb 19 23:32:12 1994
+--- ld/Makefile.orig	1994-02-20 09:32:12.000000000 +1100
 +++ ld/Makefile
-@@ -1,18 +1,18 @@
+@@ -1,18 +1,17 @@
 -CFLAGS		=-O -DBSD_A_OUT -DSTANDARD_GNU_A_OUT
 -LDFLAGS		=-N -s
 +.include "../Makefile.inc"
  
 -OBJS		=dumps.o io.o ld.o readobj.o table.o typeconv.o writebin.o
 +CFLAGS		+=-DBSD_A_OUT -DSTANDARD_GNU_A_OUT
-+CFLAGS		+=-Wall
 +LDFLAGS		=
  
 -ld: $(OBJS)
