@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/05/17 12:58:10 agc Exp $
+bin/swarm
+share/doc/swarm/swarm.pdf
+@dirrm share/doc/swarm
