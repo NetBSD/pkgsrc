@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 1998/11/09 17:56:31 agc Exp $
+# $NetBSD: Makefile,v 1.13 1998/12/30 18:00:33 tron Exp $
 # FreeBSD Id: Makefile,v 1.52 1997/12/14 00:58:08 asami Exp
 #
 
@@ -36,7 +36,7 @@
     SUBDIR += papersize
 #    SUBDIR += pkfonts
     SUBDIR += psutils
-#    SUBDIR += rtf2latex
+    SUBDIR += rtf2latex
     SUBDIR += teTeX
 #    SUBDIR += tex
 #    SUBDIR += texinfo
