@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.5 2003/05/31 08:28:33 uebayasi Exp $
+# $NetBSD: Makefile,v 1.6 2003/09/23 15:06:59 uebayasi Exp $
 #
 .include "../canna/Makefile.common"
 
 CANNA_MODULE=	dict
 
-BUILD_DEPENDS+=	Canna-server-bin>=${CANNA_VERSION}:../canna-server-bin
+BUILD_DEPENDS+=	Canna-server>=${CANNA_VERSION}:../canna-server
 
 NO_MTREE=	yes
 OWN_DIRS=	${PREFIX}/canna
 
-EVAL_PREFIX+=	CANNASERVERBINDIR=Canna-server-bin
+EVAL_PREFIX+=	CANNASERVERBINDIR=Canna-server
 .for cmd in MERGE FORCPP FORSORT SPLITWORD MERGEWORD CRXGRAM CRXDIC CRFREQ KPDIC
 CANNA_CMD_SED_SCRIPT+=-e 's|\(${cmd} = \).*/\(.*\)|\1${CANNASERVERBINDIR}/bin/\2|'
 .endfor

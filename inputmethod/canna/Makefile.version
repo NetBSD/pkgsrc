@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.version,v 1.1 2003/07/31 13:04:40 uebayasi Exp $
+# $NetBSD: Makefile.version,v 1.2 2003/09/23 15:06:57 uebayasi Exp $
 
 # "Pkgsrc" version.
-CANNA_VERSION=	3.6pl3
+CANNA_VERSION=	3.6pl4
 
 _CANNA_VERS=	\
 		CANNA_USER=${CANNA_USER} \
