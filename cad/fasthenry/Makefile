@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2004/01/25 17:20:34 kristerw Exp $
+# $NetBSD: Makefile,v 1.20 2004/02/01 01:43:28 jlam Exp $
 #
 
 DISTNAME=	fasthenry-3.0-12Nov96
@@ -40,7 +40,7 @@ MAKE_ENV+=	LIBS="${LIBS}"
 .endif
 
 .if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
-GCC_REQD=		2.95.3
+GCC_REQD+=		2.95.3
 .endif
 
 .include "../../mk/bsd.pkg.mk"
