@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2002/02/01 13:16:39 taca Exp $
+# $NetBSD: Makefile.common,v 1.7 2002/03/02 09:10:54 taca Exp $
 # FreeBSD: ports/Mk/bsd.ruby.mk,v 1.11 2000/11/16 17:59:40 knu Exp
 # Makefile.common: ruby common makefile, based on FreeBSD's bsd.ruby.mk.
 
@@ -69,7 +69,7 @@ RUBY_VERSION?=		1.4.6
 RUBY_SUFFIX?=		${_RUBY_SUFFIX}
 RUBY_IRB_VERSION=	0.6.1
 .elif ${RUBY_VER} < 1.7
-RUBY_VERSION?=		1.6.6
+RUBY_VERSION?=		1.6.7
 RUBY_SUFFIX?=		# empty
 .else
 RUBY_VERSION?=		1.7			# current, not tested.
