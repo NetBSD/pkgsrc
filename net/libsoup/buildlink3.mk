@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2004/04/01 18:32:03 jmmv Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2004/04/02 18:09:56 recht Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LIBSOUP_BUILDLINK3_MK:=	${LIBSOUP_BUILDLINK3_MK}+
@@ -11,7 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibsoup}
 BUILDLINK_PACKAGES+=	libsoup
 
 .if !empty(LIBSOUP_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.libsoup+=	libsoup>=2.1.8
+BUILDLINK_DEPENDS.libsoup+=	libsoup>=1.99.28
 BUILDLINK_PKGSRCDIR.libsoup?=	../../net/libsoup
 .endif	# LIBSOUP_BUILDLINK3_MK
 
