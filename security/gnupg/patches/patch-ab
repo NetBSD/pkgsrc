@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.6 2000/05/19 23:13:53 wiz Exp $
+$NetBSD: patch-ab,v 1.7 2000/06/23 14:32:11 dmcmahill Exp $
 
 Make this work on NetBSD.
 For Solaris, make the DATADIRNAME share.
@@ -19,7 +19,7 @@ For Solaris, make the DATADIRNAME share.
          DYNLINK_MOD_CFLAGS="-shared -rdynamic -fpic -Wl,-Bshareable -Wl,-x"
          ;;
 +    *-netbsd*)
-+        DYNLINK_MOD_CFLAGS="-shared -rdynamic -fpic -Wl,-Bshareable -Wl,-x"
++        DYNLINK_MOD_CFLAGS="-shared -rdynamic -fPIC -Wl,-Bshareable -Wl,-x"
 +         NAME_OF_DEV_RANDOM="/dev/random"
 +         NAME_OF_DEV_URANDOM="/dev/urandom"
 +	;;
