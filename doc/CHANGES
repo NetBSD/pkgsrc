@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4408 2004/01/09 23:11:56 cube Exp $
+$NetBSD: CHANGES,v 1.4409 2004/01/10 02:16:39 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -134,3 +134,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added cyrus-saslauthd-2.1.17 [jlam 2004-01-09]
 	Added ion-devel [cube 2004-01-09]
 	Added ion-dock [cube 2004-01-09]
+	Updated jwhois to 3.2.2nb2 [kleink 2004-01-10]
