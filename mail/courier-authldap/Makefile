@@ -1,32 +1,34 @@
-# $NetBSD: Makefile,v 1.7 2003/05/05 16:39:18 jmmv Exp $
+# $NetBSD: Makefile,v 1.8 2004/02/21 14:43:16 jlam Exp $
 
-PKGNAME=		courier-authldap-${BASE_VERS}
-PKGREVISION?=		1
-COMMENT=		Courier LDAP authentication module
+PKGNAME=	courier-authldap-${BASE_VERS}
+COMMENT=	Courier LDAP authentication module
 
-CONFLICTS=		courier-imap-ldap-[0-9]*
+CONFLICTS=	courier-imap-ldap-[0-9]*
 
-DEPENDS+=		courier-auth>=${BASE_VERS}:../../mail/courier-auth
+DEPENDS+=	courier-auth-${BASE_VERS}{,nb*}:../../mail/courier-auth
 
-.include "../../mail/courier-auth/Makefile.authdaemond"
+.include "../courier-auth/Makefile.authdaemond"
 
 USE_PKGINSTALL=		yes
+INSTALL_EXTRA_TMPL=	${.CURDIR}/../../mail/courier-auth/INSTALL
+
 CONFIGURE_ARGS+=	--with-authldap
 
 GEN_FILES=		authldaprc
+FILES_SUBST+=		GEN_FILES=${GEN_FILES:Q}
+
 CONF_FILES_PERMS=	# empty
 .for FILE in ${GEN_FILES}
 CONF_FILES_PERMS+=	${EGDIR}/${FILE}.dist ${PKG_SYSCONFDIR}/${FILE}	\
 			${ROOT_USER} ${ROOT_GROUP} 0600
 .endfor
 
-FILES_SUBST+=		GEN_FILES=${GEN_FILES:Q}
-INSTALL_EXTRA_TMPL=	${.CURDIR}/../../mail/courier-auth/INSTALL
+.include "../../databases/openldap/buildlink3.mk"
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/authlib/authdaemond.ldap ${AUTHLIBDIR}
+	${INSTALL_MAN} ${WRKSRC}/authlib/README.ldap ${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/authlib/authldap.schema ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/authlib/authldaprc ${EGDIR}/authldaprc.dist
 
-.include "../../databases/openldap/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
