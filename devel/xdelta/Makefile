@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 1999/03/04 08:53:57 tron Exp $
+# $NetBSD: Makefile,v 1.9 1999/04/16 19:24:34 tron Exp $
 #
 
 DISTNAME=	xdelta-0.22
@@ -8,7 +8,7 @@ MASTER_SITES=	ftp://www.xcf.berkeley.edu/pub/xdelta/
 MAINTAINER=	root@garbled.net
 HOMEPAGE=	http://scam.XCF.Berkeley.EDU/~jmacd/xdelta.html
 
-DEPENDS+=	glib-1.2.0:../../devel/glib
+DEPENDS+=	glib-1.2.1:../../devel/glib
 DEPENDS+=	gdbm-1.7.3:../../databases/gdbm
 
 USE_LIBTOOL=	yes
