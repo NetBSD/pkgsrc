@@ -1,4 +1,4 @@
-/*	$NetBSD: pack_dev.c,v 1.1 2003/09/05 18:38:59 jlam Exp $	*/
+/*	$NetBSD: pack_dev.c,v 1.2 2004/08/21 04:10:45 jlam Exp $	*/
 
 /*-
  * Copyright (c) 1998, 2001 The NetBSD Foundation, Inc.
@@ -39,12 +39,16 @@
 #if HAVE_CONFIG_H
 #include "config.h"
 #endif
+#if HAVE_NBTOOL_CONFIG_H
+#include "nbtool_config.h"
+#endif
+
 #include <nbcompat.h>
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-#if defined(__RCSID) && !defined(lint)
-__RCSID("$NetBSD: pack_dev.c,v 1.1 2003/09/05 18:38:59 jlam Exp $");
+#if !defined(lint)
+__RCSID("$NetBSD: pack_dev.c,v 1.2 2004/08/21 04:10:45 jlam Exp $");
 #endif /* not lint */
 
 #if HAVE_SYS_TYPES_H
@@ -54,9 +58,6 @@ __RCSID("$NetBSD: pack_dev.c,v 1.1 2003/09/05 18:38:59 jlam Exp $");
 #include <sys/stat.h>
 #endif
 
-#if HAVE_ERR_H
-#include <err.h>
-#endif
 #if HAVE_LIMITS_H
 #include <limits.h>
 #endif
@@ -73,10 +74,6 @@ __RCSID("$NetBSD: pack_dev.c,v 1.1 2003/09/05 18:38:59 jlam Exp $");
 #include <unistd.h>
 #endif
 
-#if HAVE_CONFIG_H
-#include "config.h"
-#endif
-
 #include "pack_dev.h"
 
 static	pack_t	pack_netbsd;
@@ -88,38 +85,41 @@ static	pack_t	pack_8_24;
 static	pack_t	pack_bsdos;
 static	int	compare_format(const void *, const void *);
 
+static const char iMajorError[] = "invalid major number";
+static const char iMinorError[] = "invalid minor number";
+static const char tooManyFields[] = "too many fields for format";
 
 	/* exported */
 portdev_t
-pack_native(int n, u_long numbers[])
+pack_native(int n, u_long numbers[], const char **error)
 {
-	portdev_t dev;
+	portdev_t dev = 0;
 
 	if (n == 2) {
 		dev = makedev(numbers[0], numbers[1]);
 		if (major(dev) != numbers[0])
-			errx(1, "invalid major number");
-		if (minor(dev) != numbers[1])
-			errx(1, "invalid minor number");
+			*error = iMajorError;
+		else if (minor(dev) != numbers[1])
+			*error = iMinorError;
 	} else
-		errx(1, "too many fields for format");
+		*error = tooManyFields;
 	return (dev);
 }
 
 
 static portdev_t
-pack_netbsd(int n, u_long numbers[])
+pack_netbsd(int n, u_long numbers[], const char **error)
 {
-	portdev_t dev;
+	portdev_t dev = 0;
 
 	if (n == 2) {
 		dev = makedev_netbsd(numbers[0], numbers[1]);
 		if (major_netbsd(dev) != numbers[0])
-			errx(1, "invalid major number");
-		if (minor_netbsd(dev) != numbers[1])
-			errx(1, "invalid minor number");
+			*error = iMajorError;
+		else if (minor_netbsd(dev) != numbers[1])
+			*error = iMinorError;
 	} else
-		errx(1, "too many fields for format");
+		*error = tooManyFields;
 	return (dev);
 }
 
@@ -130,18 +130,18 @@ pack_netbsd(int n, u_long numbers[])
 					 (((y) << 0) & 0xffff00ff)))
 
 static portdev_t
-pack_freebsd(int n, u_long numbers[])
+pack_freebsd(int n, u_long numbers[], const char **error)
 {
-	portdev_t dev;
+	portdev_t dev = 0;
 
 	if (n == 2) {
 		dev = makedev_freebsd(numbers[0], numbers[1]);
 		if (major_freebsd(dev) != numbers[0])
-			errx(1, "invalid major number");
+			*error = iMajorError;
 		if (minor_freebsd(dev) != numbers[1])
-			errx(1, "invalid minor number");
+			*error = iMinorError;
 	} else
-		errx(1, "too many fields for format");
+		*error = tooManyFields;
 	return (dev);
 }
 
@@ -152,18 +152,18 @@ pack_freebsd(int n, u_long numbers[])
 					 (((y) << 0) & 0x000000ff)))
 
 static portdev_t
-pack_8_8(int n, u_long numbers[])
+pack_8_8(int n, u_long numbers[], const char **error)
 {
-	portdev_t dev;
+	portdev_t dev = 0;
 
 	if (n == 2) {
 		dev = makedev_8_8(numbers[0], numbers[1]);
 		if (major_8_8(dev) != numbers[0])
-			errx(1, "invalid major number");
+			*error = iMajorError;
 		if (minor_8_8(dev) != numbers[1])
-			errx(1, "invalid minor number");
+			*error = iMinorError;
 	} else
-		errx(1, "too many fields for format");
+		*error = tooManyFields;
 	return (dev);
 }
 
@@ -174,18 +174,18 @@ pack_8_8(int n, u_long numbers[])
 					 (((y) <<  0) & 0x000fffff)))
 
 static portdev_t
-pack_12_20(int n, u_long numbers[])
+pack_12_20(int n, u_long numbers[], const char **error)
 {
-	portdev_t dev;
+	portdev_t dev = 0;
 
 	if (n == 2) {
 		dev = makedev_12_20(numbers[0], numbers[1]);
 		if (major_12_20(dev) != numbers[0])
-			errx(1, "invalid major number");
+			*error = iMajorError;
 		if (minor_12_20(dev) != numbers[1])
-			errx(1, "invalid minor number");
+			*error = iMinorError;
 	} else
-		errx(1, "too many fields for format");
+		*error = tooManyFields;
 	return (dev);
 }
 
@@ -196,18 +196,18 @@ pack_12_20(int n, u_long numbers[])
 					 (((y) <<  0) & 0x0003ffff)))
 
 static portdev_t
-pack_14_18(int n, u_long numbers[])
+pack_14_18(int n, u_long numbers[], const char **error)
 {
-	portdev_t dev;
+	portdev_t dev = 0;
 
 	if (n == 2) {
 		dev = makedev_14_18(numbers[0], numbers[1]);
 		if (major_14_18(dev) != numbers[0])
-			errx(1, "invalid major number");
+			*error = iMajorError;
 		if (minor_14_18(dev) != numbers[1])
-			errx(1, "invalid minor number");
+			*error = iMinorError;
 	} else
-		errx(1, "too many fields for format");
+		*error = tooManyFields;
 	return (dev);
 }
 
@@ -218,18 +218,18 @@ pack_14_18(int n, u_long numbers[])
 					 (((y) <<  0) & 0x00ffffff)))
 
 static portdev_t
-pack_8_24(int n, u_long numbers[])
+pack_8_24(int n, u_long numbers[], const char **error)
 {
-	portdev_t dev;
+	portdev_t dev = 0;
 
 	if (n == 2) {
 		dev = makedev_8_24(numbers[0], numbers[1]);
 		if (major_8_24(dev) != numbers[0])
-			errx(1, "invalid major number");
+			*error = iMajorError;
 		if (minor_8_24(dev) != numbers[1])
-			errx(1, "invalid minor number");
+			*error = iMinorError;
 	} else
-		errx(1, "too many fields for format");
+		*error = tooManyFields;
 	return (dev);
 }
 
@@ -242,26 +242,26 @@ pack_8_24(int n, u_long numbers[])
 					 (((z) <<  0) & 0x000000ff)))
 
 static portdev_t
-pack_bsdos(int n, u_long numbers[])
+pack_bsdos(int n, u_long numbers[], const char **error)
 {
-	portdev_t dev;
+	portdev_t dev = 0;
 
 	if (n == 2) {
 		dev = makedev_12_20(numbers[0], numbers[1]);
 		if (major_12_20(dev) != numbers[0])
-			errx(1, "invalid major number");
+			*error = iMajorError;
 		if (minor_12_20(dev) != numbers[1])
-			errx(1, "invalid minor number");
+			*error = iMinorError;
 	} else if (n == 3) {
 		dev = makedev_12_12_8(numbers[0], numbers[1], numbers[2]);
 		if (major_12_12_8(dev) != numbers[0])
-			errx(1, "invalid major number");
+			*error = iMajorError;
 		if (unit_12_12_8(dev) != numbers[1])
-			errx(1, "invalid unit number");
+			*error = "invalid unit number";
 		if (subunit_12_12_8(dev) != numbers[2])
-			errx(1, "invalid subunit number");
+			*error = "invalid subunit number";
 	} else
-		errx(1, "too many fields for format");
+		*error = tooManyFields;
 	return (dev);
 }
 
