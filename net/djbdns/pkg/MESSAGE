@@ -2,8 +2,8 @@ You will also need to install ucspi-tcp package (pkgsrc/net/ucspi-tcp) if
 you want to use axfrdns or axfr-get.
 
 Please install perl if you want to use contrib tools for djbdns:
-	tinydns logfile formatter, ${PREFIX}/bin/tinydns-log.pl
-and	dnscache logfile formatter, ${PREFIX}/bin/dnscache-log.pl
+	tinydns logfile formatter, @PREFIX@/bin/tinydns-log.pl
+and	dnscache logfile formatter, @PREFIX@/bin/dnscache-log.pl
 
 (these are taken from http://tinydns.org)
 
