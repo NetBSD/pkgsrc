@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/03/31 08:51:06 grant Exp $
+# $NetBSD: Makefile,v 1.2 2003/04/03 12:55:21 grant Exp $
 #
 
 DISTNAME=		mtree-20030331
@@ -15,7 +15,6 @@ GNU_CONFIGURE=		# defined
 
 NO_PKGTOOLS_REQD_CHECK=	# defined
 NO_CHECKSUM=		# defined
-NO_PATCH=		# defined
 NO_MTREE=               # defined
 NO_PKG_REGISTER=        # defined
 NO_PACKAGE=             Deinstallation is not permitted
