@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/08/20 04:06:48 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2002/02/18 15:14:04 seb Exp $
 #
 
 DISTNAME=	latex2rtf-1.8aa
@@ -32,4 +32,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/l2r.html ${PREFIX}/share/doc/latex2rtf/latex2rtf.html
 	${INSTALL_DATA} ${WRKSRC}/doc/l2r.pdf ${PREFIX}/share/doc/latex2rtf/latex2rtf.pdf
 
+.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"

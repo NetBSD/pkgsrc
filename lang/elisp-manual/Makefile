@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/02/17 09:07:04 agc Exp $
+# $NetBSD: Makefile,v 1.5 2002/02/18 15:14:24 seb Exp $
 
 DISTNAME=	elisp-manual-20-2.5
 CATEGORIES=	lang
@@ -9,9 +9,10 @@ HOMEPAGE=	http://www.gnu.org/software/emacs/emacs.html
 COMMENT=	The Emacs Lisp Reference Manual for GNU Emacs Version 20.3
 
 GNU_CONFIGURE=	yes
+TEXINFO_OVERRIDE=	YES
 
 ALL_TARGET=	elisp
 
-USE_GTEXINFO=	yes
 
+.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:27:33 zuntum Exp $
-@unexec install-info --delete --info-dir=%D/${INFODIR} %D/${INFODIR}/auctex
+@comment $NetBSD: PLIST,v 1.2 2002/02/18 15:14:38 seb Exp $
+@unexec ${INSTALL_INFO} --delete --info-dir=%D/${INFODIR} %D/${INFODIR}/auctex
 ${INFODIR}/auctex
 ${INFODIR}/auctex-1
 ${INFODIR}/auctex-2
 ${INFODIR}/auctex-3
-@exec install-info --info-dir=%D/${INFODIR} %D/${INFODIR}/auctex
+@exec ${INSTALL_INFO} --info-dir=%D/${INFODIR} %D/${INFODIR}/auctex
 ${LISPDIR}/auctex/auc-old.el
 ${LISPDIR}/auctex/auc-old.elc
 ${LISPDIR}/auctex/bib-cite.el

@@ -1,14 +1,14 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 21:39:51 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/18 15:14:22 seb Exp $
 bin/tnt
 bin/tntc
 include/tntrun.h
-@unexec install-info --delete --info-dir=%D/info %D/info/tntdoc.info
+@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/tntdoc.info
 info/tntdoc.info
 info/tntdoc.info-1
 info/tntdoc.info-2
 info/tntdoc.info-3
 info/tntdoc.info-4
-@exec install-info --info-dir=%D/info %D/info/tntdoc.info
+@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/tntdoc.info
 libexec/tnt/help
 libexec/tnt/info
 libexec/tnt/logcall

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:54:04 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/18 15:14:18 seb Exp $
 bin/c1541
 bin/petcat
 bin/vsid
@@ -16,9 +16,9 @@ include/resid/siddefs.h
 include/resid/spline.h
 include/resid/voice.h
 include/resid/wave.h
-@unexec install-info --delete --info-dir=%D/info %D/info/vice.info
+@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/vice.info
 info/vice.info
-@exec install-info --info-dir=%D/info %D/info/vice.info
+@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/vice.info
 info/vice.info-1
 info/vice.info-2
 info/vice.info-3

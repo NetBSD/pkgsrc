@@ -1,12 +1,12 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:23:08 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/18 15:14:08 seb Exp $
 bin/ddd
-@unexec install-info --delete --info-dir=%D/info %D/info/ddd-themes.info
+@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/ddd-themes.info
 info/ddd-themes.info
 info/ddd-themes.info-1
 info/ddd-themes.info-2
 info/ddd-themes.info-3
-@exec install-info --info-dir=%D/info %D/info/ddd-themes.info
-@unexec install-info --delete --info-dir=%D/info %D/info/ddd.info
+@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/ddd-themes.info
+@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/ddd.info
 info/ddd.info
 info/ddd.info-1
 info/ddd.info-10
@@ -19,7 +19,7 @@ info/ddd.info-6
 info/ddd.info-7
 info/ddd.info-8
 info/ddd.info-9
-@exec install-info --info-dir=%D/info %D/info/ddd.info
+@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/ddd.info
 lib/libiberty.a
 man/man1/ddd.1
 share/${PKGNAME}/COPYING

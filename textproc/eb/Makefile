@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/10/27 07:00:53 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2002/02/18 15:14:42 seb Exp $
 # FreeBSD Id: ports/japanese/eb/Makefile,v 1.21 2000/08/21 03:39:42 kevlo Exp
 
 DISTNAME=	eb-3.0
@@ -65,4 +65,5 @@ post-install:
 
 .include "../../devel/gettext-lib/buildlink.mk"
 .include "../../devel/zlib/buildlink.mk"
+.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"

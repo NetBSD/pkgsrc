@@ -1,16 +1,16 @@
-@comment $NetBSD: PLIST,v 1.2 2001/12/17 22:29:04 mjl Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/02/18 15:14:18 seb Exp $
 bin/gnc-prices
 bin/gnucash
 bin/gnucash-make-guids
 bin/update-finance-quote
 etc/gnucash/config
-@unexec install-info --delete --info-dir=%D/info %D/info/gnucash-design.info
+@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/gnucash-design.info
 info/gnucash-design.info
 info/gnucash-design.info-1
 info/gnucash-design.info-2
 info/gnucash-design.info-3
 info/gnucash-design.info-4
-@exec install-info --info-dir=%D/info %D/info/gnucash-design.info
+@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/gnucash-design.info
 lib/libgncengine.a
 lib/libgncengine.la
 lib/libgncengine.so.2.3

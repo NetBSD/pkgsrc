@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2001/10/24 22:11:13 jlam Exp $
+# $NetBSD: Makefile,v 1.69 2002/02/18 15:14:45 seb Exp $
 
 DISTNAME=		gtk+-1.2.10
 CATEGORIES=		x11
@@ -65,4 +65,5 @@ post-install:
 .include "../../devel/gettext-lib/buildlink.mk"
 .include "../../devel/glib/buildlink.mk"
 .include "../../mk/x11.buildlink.mk"
+.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"

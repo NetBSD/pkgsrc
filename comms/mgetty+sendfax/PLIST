@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 20:44:20 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/18 15:14:04 seb Exp $
 bin/autopvf
 bin/basictopvf
 bin/faxspool
@@ -33,13 +33,13 @@ bin/rmdtopvf
 bin/vm
 bin/voctopvf
 bin/wavtopvf
-@unexec install-info --delete %D/info/mgetty.info %D/info/dir
+@unexec ${INSTALL_INFO} --delete %D/info/mgetty.info %D/info/dir
 info/mgetty.info
 info/mgetty.info-1
 info/mgetty.info-2
 info/mgetty.info-3
 info/mgetty.info-4
-@exec install-info %D/info/mgetty.info %D/info/dir
+@exec ${INSTALL_INFO} %D/info/mgetty.info %D/info/dir
 lib/mgetty+sendfax/cour25.pbm
 lib/mgetty+sendfax/cour25n.pbm
 man/man1/g3cat.1

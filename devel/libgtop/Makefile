@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2002/01/22 21:01:26 jdolecek Exp $
+# $NetBSD: Makefile,v 1.58 2002/02/18 15:14:13 seb Exp $
 
 DISTNAME=		libgtop-1.0.12
 PKGREVISION=		1
@@ -51,4 +51,5 @@ CONFIGURE_ENV+=		AWK="${AWK}"
 CONFIGURE_ENV+=		LN_S="${LN} -s"
 CONFIGURE_ENV+=		PERL="${PERL5}"
 
+.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"

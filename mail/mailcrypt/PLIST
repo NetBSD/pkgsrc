@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:00:21 zuntum Exp $
-@unexec install-info --delete %D/info/mailcrypt.info %D/info/dir
+@comment $NetBSD: PLIST,v 1.2 2002/02/18 15:14:27 seb Exp $
+@unexec ${INSTALL_INFO} --delete %D/info/mailcrypt.info %D/info/dir
 info/mailcrypt.info
 info/mailcrypt.info-1
 info/mailcrypt.info-2
-@exec   install-info          %D/info/mailcrypt.info %D/info/dir
+@exec   ${INSTALL_INFO}          %D/info/mailcrypt.info %D/info/dir
 share/emacs/site-lisp/expect.el
 share/emacs/site-lisp/expect.elc
 share/emacs/site-lisp/mailcrypt.el

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2001/11/30 17:37:15 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2002/02/18 15:14:03 seb Exp $
 #
 
 DISTNAME=	fidogate-4.4.4
@@ -27,7 +27,7 @@ do-configure:
 
 pre-build:
 	${RM} -f ${WRKSRC}/doc/fidogate.info*
-	cd ${WRKSRC}/doc && makeinfo --no-split fidogate.texi && \
+	cd ${WRKSRC}/doc && ${MAKEINFO} --no-split fidogate.texi && \
 		${TOUCH} fidogate.txt html/fidogate_toc.html
 	${PERL5} ${WRKSRC}/subst.pl -t${WRKSRC} ${WRKSRC}/fidogate.conf \
 		>${WRKSRC}/fidogate.conf.dist
@@ -56,4 +56,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/fidogate.conf.dist ${PREFIX}/etc/fidogate/
 
 .include "../../lang/perl5/buildlink.mk"
+.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"

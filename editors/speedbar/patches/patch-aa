@@ -1,0 +1,21 @@
+$NetBSD: patch-aa,v 1.1 2002/02/18 15:14:18 seb Exp $
+
+--- Makefile.orig	Mon Oct  9 06:21:34 2000
++++ Makefile
+@@ -11,7 +11,6 @@
+ speedbar_LISP=dframe.el speedbar.el
+ EMACS=emacs
+ info_TEXINFOS=speedbar.texi
+-MAKEINFO=makeinfo
+ opt_LISP=rpm.el sb-gud.el sb-info.el sb-rmail.el sb-w3.el sb-texinfo.el bigclock.el
+ aux_AUX=INSTALL
+ images_MISC=sb-dir-plus.xpm sb-dir-minus.xpm sb-dir.xpm sb-pg-plus.xpm sb-pg-minus.xpm sb-pg.xpm sb-mail.xpm sb-tag-plus.xpm sb-tag-minus.xpm sb-tag.xpm sb-tag-gt.xpm sb-tag-v.xpm sb-tag-type.xpm sb-image.el
+@@ -35,7 +34,7 @@
+ 	$(EMACS) -batch -l $@-compile-script -f batch-byte-compile $^
+ 
+ speedbar.info: $(info_TEXINFOS)
+-	makeinfo -o $@ $<
++	$(MAKEINFO) -o $@ $<
+ 
+ opt: $(opt_LISP)
+ 	@echo "(add-to-list 'load-path nil)" > $@-compile-script

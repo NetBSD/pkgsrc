@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2002/02/01 02:48:05 mjl Exp $
+# $NetBSD: Makefile,v 1.21 2002/02/18 15:14:18 seb Exp $
 
 DISTNAME=		gnucash-1.6.5
 CATEGORIES=		finance
@@ -55,4 +55,5 @@ post-extract:
 .endif
 
 .include "../../lang/python/pyversion.mk"
+.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"

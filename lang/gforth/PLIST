@@ -1,13 +1,13 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:23:24 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/18 15:14:25 seb Exp $
 bin/${PKGNAME}
 bin/gforth
 bin/gforth-fast
 bin/gforth-fast-0.5.0
 bin/gforthmi
 bin/gforthmi-0.5.0
-@unexec install-info --delete --info-dir=%D/info %D/info/gforth.info
+@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/gforth.info
 info/gforth.info
-@exec install-info --info-dir=%D/info %D/info/gforth.info
+@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/gforth.info
 info/gforth.info-1
 info/gforth.info-10
 info/gforth.info-11
