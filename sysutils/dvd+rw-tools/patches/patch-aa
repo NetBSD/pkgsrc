@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1 2003/11/10 00:07:41 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2004/05/30 17:57:52 tron Exp $
 
---- transport.hxx.orig	Fri Sep 19 13:04:06 2003
-+++ transport.hxx
-@@ -6,7 +6,7 @@
+--- transport.hxx.orig	2004-01-20 16:55:16.000000000 +0100
++++ transport.hxx	2004-05-30 19:55:42.000000000 +0200
+@@ -6,17 +6,22 @@
  // For further details see http://fy.chalmers.se/~appro/linux/DVD+RW/
  //
  
@@ -11,3 +11,18 @@ $NetBSD: patch-aa,v 1.1 2003/11/10 00:07:41 wiz Exp $
  #include <stdio.h>
  #include <stdlib.h>
  #include <unistd.h>
+ #include <string.h>
+ #include <sys/types.h>
++#include <sys/param.h>
+ #include <sys/stat.h>
+ #include <fcntl.h>
+ 
+ #include <errno.h>
+ 
++#if defined(__NetBSD__) && (__NetBSD_Version__ > 200030000)
++#define	statfs	statvfs
++#endif
++
+ #ifndef EMEDIUMTYPE
+ #define EMEDIUMTYPE	EINVAL
+ #endif
