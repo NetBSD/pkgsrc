@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2005/02/13 20:27:54 jschauma Exp $
+
+--- contrib/Makefile.in.orig	2005-02-13 15:07:56.000000000 -0500
++++ contrib/Makefile.in	2005-02-13 15:08:23.000000000 -0500
+@@ -75,7 +75,7 @@
+ 
+ EXTRA_DIST = tor-tsocks.conf torify.1 tor-control.py tor.nsi tor.sh torctl
+ 
+-conf_DATA = tor-tsocks.conf
++#conf_DATA = tor-tsocks.conf
+ 
+ bin_SCRIPTS = torify
+ 

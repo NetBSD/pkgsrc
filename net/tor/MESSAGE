@@ -1,0 +1,11 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2005/02/13 20:27:53 jschauma Exp $
+
+You probably want to install www/privoxy to torify your browsers.  Please
+see http://tor.eff.org/cvs/tor/doc/tor-doc.html for details.
+
+If you wish to chroot tor, you may find the following URLs helpful:
+  http://pestilenz.org/~bauerm/tor-openbsd-howto.html
+  http://wiki.noreply.org/wiki/TheOnionRouter/TorInChroot
+
+===========================================================================
