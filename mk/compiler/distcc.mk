@@ -1,4 +1,4 @@
-# $NetBSD: distcc.mk,v 1.23 2005/01/10 08:59:07 jlam Exp $
+# $NetBSD: distcc.mk,v 1.24 2005/01/10 19:38:53 jlam Exp $
 
 .if !defined(COMPILER_DISTCC_MK)
 COMPILER_DISTCC_MK=	defined
@@ -42,14 +42,14 @@ _DISTCC_VARS=	# empty
 PKG_CC?=	${CC}
 _DISTCC_VARS+=	CC
 _DISTCC_CC:=	${_DISTCC_DIR}/bin/${PKG_CC:T}
-_ALIASES.CC?=	cc
+_ALIASES.CC+=	cc
 PKG_CC:=	${_DISTCC_CC}
 .  endif
 .  if !empty(_LANGUAGES.distcc:Mc++)
 PKG_CXX?=	${CXX}
 _DISTCC_VARS+=	CXX
 _DISTCC_CXX:=	${_DISTCC_DIR}/bin/${PKG_CXX:T}
-_ALIASES.CXX?=	c++
+_ALIASES.CXX+=	c++
 PKG_CXX:=	${_DISTCC_CXX}
 .  endif
 
