@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1.1.1 1999/10/11 05:48:25 jlam Exp $
+$NetBSD: patch-ab,v 1.2 1999/10/26 16:45:18 jlam Exp $
 
 --- des/des.c.orig	Fri Feb 23 06:10:37 1996
-+++ des/des.c	Mon Oct 11 01:38:34 1999
-@@ -4,6 +4,17 @@
++++ des/des.c	Tue Oct 26 12:22:56 1999
+@@ -4,6 +4,18 @@
   */
  #define NULL	0
  
@@ -11,6 +11,7 @@ $NetBSD: patch-ab,v 1.1.1.1 1999/10/11 05:48:25 jlam Exp $
 + * header files.
 + */
 +#if defined(__NetBSD__)
++#include <sys/types.h>		/* needed for NetBSD <= 1.4.x */
 +#include <machine/endian.h>
 +#if BYTE_ORDER == LITTLE_ENDIAN
 +#define M_LITTLE_ENDIAN
