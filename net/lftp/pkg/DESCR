@@ -1,0 +1,24 @@
+lftp is quite a powerful ftp client. It uses GNU readline to read
+commands. It uses shell-like command syntax allowing you to launch
+several commands in parallel in background (&).
+
+Some commands allow redirecting its output (cat, ls) to file or via
+pipe to external command. Commands can be started conditionally based
+on termination status of previous command (&&, ||). Also, it is
+possible to group commands within () and execute them in background.
+All background jobs are executed in the same single process. You can
+bring a foreground job to background with ^Z and back with command
+`wait' (or `fg' which is alias to `wait').
+
+When you think you are done but some jobs are not yet finished, you
+can just exit and lftp will move itself to nohup mode in background.
+The same happens when you have a real hangup.
+
+lftp has reliable put, reput, mirror, and many other commands. Use
+command `help' or read documentation to learn more.
+
+Every operation in lftp is reliable, that is any not fatal error is
+ignored and the operation is repeated. So if downloading breaks, it
+will be restarted from the point automatically. Even if ftp server
+does not support REST command, lftp will try to retrieve the file from
+the very beginning until the file is transferred completely.
