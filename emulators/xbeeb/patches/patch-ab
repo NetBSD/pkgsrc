@@ -1,0 +1,123 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/05/22 22:13:12 skrll Exp $
+
+--- src/VoxWare.c	Fri Oct 11 10:53:13 1996
++++ src/VoxWare.c	Sat Apr 29 18:29:53 2000
+@@ -51,6 +51,7 @@
+ 
+ #include <sys/types.h>
+ #include <sys/ioctl.h>
++#include <sys/midiio.h>
+ #include <unistd.h>
+ 
+ #include "Config.h"
+@@ -60,7 +61,73 @@
+ #include <math.h>
+ #include <stdio.h>
+ #include <fcntl.h>
+-#include <sys/soundcard.h>
++#include <soundcard.h>
++
++/* Pseudo controllers (not midi compatible) */
++#define    CTRL_PITCH_BENDER            255
++#define    CTRL_PITCH_BENDER_RANGE      254
++#define    CTL_PAN                      0x0a
++
++/* Linux -> NetBSD */
++#define EV_CHN_COMMON           SEQ_CHN_COMMON
++#define EV_CHN_VOICE            SEQ_CHN_VOICE
++#define SEQ_CONTROLLER          SEQOLD_CONTROLLER
++#define SEQ_EXTENDED            SEQOLD_EXTENDED
++
++/* Missing soundcard.h definitions */
++#define SEQ_PGM_CHANGE(dev, chn, patch) \
++                _CHN_COMMON(dev, MIDI_PGM_CHANGE, chn, patch, 0, 0)
++#define SEQ_SET_PATCH SEQ_PGM_CHANGE
++
++#define _CHN_COMMON(dev, event, chn, p1, p2, w14) \
++                                        {_SEQ_NEEDBUF(8);\
++                                        _seqbuf[_seqbufptr] = EV_CHN_COMMON;\
++                                        _seqbuf[_seqbufptr+1] = (dev);\
++                                        _seqbuf[_seqbufptr+2] = (event);\
++                                        _seqbuf[_seqbufptr+3] = (chn);\
++                                        _seqbuf[_seqbufptr+4] = (p1);\
++                                        _seqbuf[_seqbufptr+5] = (p2);\
++                                        *(short *)&_seqbuf[_seqbufptr+6] = (w14);\
++                                        _SEQ_ADVBUF(8);}
++#define SEQ_V2_X_CONTROL(dev, voice, controller, value) {_SEQ_NEEDBUF(8);\
++                                        _seqbuf[_seqbufptr] = SEQ_EXTENDED;\
++                                        _seqbuf[_seqbufptr+1] = SEQ_CONTROLLER;\
++                                        _seqbuf[_seqbufptr+2] = (dev);\
++                                        _seqbuf[_seqbufptr+3] = (voice);\
++                                        _seqbuf[_seqbufptr+4] = (controller);\
++                                        _seqbuf[_seqbufptr+5] = ((value)&0xff);\
++                                        _seqbuf[_seqbufptr+6] = ((value>>8)&0xff);\
++                                        _seqbuf[_seqbufptr+7] = 0;\
++                                        _SEQ_ADVBUF(8);}
++#define _CHN_VOICE(dev, event, chn, note, parm) \
++                                        {_SEQ_NEEDBUF(8);\
++                                        _seqbuf[_seqbufptr] = EV_CHN_VOICE;\
++                                        _seqbuf[_seqbufptr+1] = (dev);\
++                                        _seqbuf[_seqbufptr+2] = (event);\
++                                        _seqbuf[_seqbufptr+3] = (chn);\
++                                        _seqbuf[_seqbufptr+4] = (note);\
++                                        _seqbuf[_seqbufptr+5] = (parm);\
++                                        _seqbuf[_seqbufptr+6] = (0);\
++                                        _seqbuf[_seqbufptr+7] = 0;\
++                                        _SEQ_ADVBUF(8);}
++
++#define SEQ_START_NOTE(dev, chn, note, vol) \
++                _CHN_VOICE(dev, MIDI_NOTEON, chn, note, vol)
++
++#define SEQ_STOP_NOTE(dev, chn, note, vol) \
++                _CHN_VOICE(dev, MIDI_NOTEOFF, chn, note, vol)
++
++#define SEQ_PITCHBEND(dev, voice, value) SEQ_V2_X_CONTROL(dev, voice, CTRL_PITCH_BENDER, value)
++#define SEQ_BENDER_RANGE(dev, voice, value) SEQ_V2_X_CONTROL(dev, voice, CTRL_PITCH_BENDER_RANGE, value)
++#define SEQ_CONTROL(dev, chn, controller, value) \
++                _CHN_COMMON(dev, MIDI_CTL_CHANGE, chn, controller, 0, value)
++#define SEQ_PANNING(dev, voice, pos) SEQ_CONTROL(dev, voice, CTL_PAN, (pos+128) / 2)
++#define SEQ_DEFINEBUF(len)              unsigned char _seqbuf[len]; int _seqbuflen = len;int _seqbufptr = 0
++#define _SEQ_ADVBUF(len)                _seqbufptr += len
++#define _SEQ_NEEDBUF(len)               if ((_seqbufptr+(len)) > _seqbuflen) seqbuf_dump()
++#define SEQ_DUMPBUF                     seqbuf_dump
++
++void seqbuf_dump();
+ 
+ #include "VoxWare.h"
+ 
+@@ -152,7 +219,7 @@
+ 	 * check to see if any synth devices are available
+ 	 */
+ 
+-	ioctl ( SequencerFD, SNDCTL_SEQ_NRSYNTHS, &NoDevs );
++	ioctl ( SequencerFD, SEQUENCER_NRSYNTHS, &NoDevs );
+ 	if ( !NoDevs )
+ 	{
+ 		fprintf( stderr, "No synth devices available, disabling sound.\n");
+@@ -170,7 +237,7 @@
+ 	for ( i = 0; i < NoDevs; i++ )
+ 	{
+ 		info.device = i;	
+-		ioctl ( SequencerFD, SNDCTL_SYNTH_INFO, &info );
++		ioctl ( SequencerFD, SEQUENCER_INFO, &info );
+ 		if ( info.synth_type == SYNTH_TYPE_FM )
+ 			SynthDevNo = i;
+ 		break;
+@@ -185,7 +252,7 @@
+ 	SoundEnabled = 1;
+ 
+ 	info.device = SynthDevNo;
+-	ioctl ( SequencerFD, SNDCTL_SYNTH_INFO, &info );
++	ioctl ( SequencerFD, SEQUENCER_INFO, &info );
+ 
+ #ifdef	SOUND_DEBUG
+ 	printf ( "Synth device %d info:\n", SynthDevNo );
+@@ -199,7 +266,7 @@
+ 	for ( j = 0; j < 4; j++ )
+ 	{
+ 		Instr.channel = j;
+-		Instr.key = FM_PATCH;
++		Instr.key = SBI_FM_PATCH;
+ 		Instr.device = SynthDevNo;
+ 		for ( i = 0; i < 16; i++ )
+ 		{

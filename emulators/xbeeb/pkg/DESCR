@@ -1,0 +1,6 @@
+Xbeeb is an Acorn BBC Micro emulator with an X based interface.
+
+The emulation is good enough to run many games.  Xbeeb includes a filesystem
+interface for native filesystem access.
+
+To run the emulator you must have ROM images from the original machines.

@@ -1,0 +1,24 @@
+$NetBSD: patch-ac,v 1.1.1.1 2000/05/22 22:13:12 skrll Exp $
+
+--- src/Memory.c.orig	Sat Oct 12 16:03:26 1996
++++ src/Memory.c	Sun May 21 21:22:13 2000
+@@ -254,6 +254,19 @@
+ 	}
+ 
+ 	close ( fd );
++#ifdef EMUL_FS
++	/*
++	 * This code is taken from pch/pch.c to patch up the OS rom when
++	 * using EMUL_FS
++	 */
++
++        /* The OSFILE trap */
++        Mem [ 0xc000 + 0x327d ] = 0x22;
++
++        /* The OSFSC trap */
++        Mem [ 0xc000 + 0x31b1 ] = 0x02;
++#endif
++	
+ 	return;
+ }
+ 
