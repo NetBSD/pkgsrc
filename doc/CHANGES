@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5896 2004/05/10 14:53:32 wiz Exp $
+$NetBSD: CHANGES,v 1.5897 2004/05/10 16:22:51 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2450,3 +2450,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added scdp-1.0.2 [xtraeme 2004-05-10]
 	Updated roundup to 0.7.1 [recht 2004-05-10]
 	Updated crimsonfields to 0.4.2 [wiz 2004-05-10]
+	Updated gpass to 0.4.2 [jmmv 2004-05-10]
