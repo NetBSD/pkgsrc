@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4525 2004/01/20 23:39:37 abs Exp $
+$NetBSD: CHANGES,v 1.4526 2004/01/20 23:47:23 hubertf Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -367,4 +367,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated elvis to 2.2.0nb1 [recht 2004-01-20]
 	Updated elvis-x11 to 2.2.0nb1 [recht 2004-01-20]
 	Update cpuflags to 0.60 [abs 2004-01-20]
-
+	Updated spamprobe to 0.9g2 [hubertf 2004-01-21]
