@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2005/02/25 15:54:59 is Exp $
+
+--- csw/asm.c.orig	1999-07-29 00:16:10.000000000 +0200
++++ csw/asm.c
+@@ -8,7 +8,7 @@
+ 
+ #include "../arch.h"
+ 
+-#if (defined(__linux__) && defined(__ELF__)) || defined(__svr4__)
++#if defined(__ELF__) || defined(__svr4__)
+ #define SR_BUILD_CONTEXT	sr_build_context
+ #define SR_CHG_CONTEXT		sr_chg_context
+ #define SR_CHECK_STK		sr_check_stk

@@ -1,0 +1,13 @@
+$NetBSD: patch-as,v 1.1.1.1 2005/02/25 15:54:59 is Exp $
+
+--- Makefile.orig	2004-09-22 15:20:43.000000000 +0200
++++ Makefile
+@@ -4,7 +4,7 @@
+ 
+ 
+ CC = cc
+-CFLAGS = -g  
++CFLAGS = -O3
+ MAKE = make
+ SHELL = /bin/sh
+ 

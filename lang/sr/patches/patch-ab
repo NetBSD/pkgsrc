@@ -1,0 +1,17 @@
+$NetBSD: patch-ab,v 1.1.1.1 2005/02/25 15:54:59 is Exp $
+
+--- arch.h.orig	1999-08-09 18:34:12.000000000 +0200
++++ arch.h
+@@ -7,6 +7,12 @@
+  *  BIGCC	arguments passed to CC to enlarge tree space (if needed)
+  */
+ 
++
++#if !defined(ARCH) && defined(__NetBSD__)
++#define ARCH	"NetBSD 2.0 and later"
++#define SFILE	"i386.s"
++#endif
++
+ #ifndef ARCH
+ 
+ #ifdef apollo

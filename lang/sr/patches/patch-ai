@@ -1,0 +1,36 @@
+$NetBSD: patch-ai,v 1.1.1.1 2005/02/25 15:54:59 is Exp $
+
+--- rts/main.c.orig	1999-07-28 23:08:48.000000000 +0200
++++ rts/main.c
+@@ -16,7 +16,7 @@ extern local_message_type;	/* message ty
+ #endif
+ 
+ 
+-#include <varargs.h>
++#include <stdarg.h>
+ 
+ #define RUNERR(s,n,m) {n, m},
+ static struct err {
+@@ -311,20 +311,17 @@ char *buf, *locn;
+  */
+ /*VARARGS*/
+ int
+-sr_runerr (va_alist)
+-va_dcl
++sr_runerr (char *locn, ...)
+ {
+     va_list ap;
+     char c, *f, *o;
+-    char *locn;
+     int errnum;
+     struct err *ep;
+     char buf[200];
+     Dim *d;
+     String *s;
+ 
+-    va_start (ap);
+-    locn = va_arg (ap, char *);
++    va_start (ap, locn);
+     errnum = va_arg (ap, int);
+ 
+ 

@@ -1,0 +1,59 @@
+$NetBSD: patch-ak,v 1.1.1.1 2005/02/25 15:54:59 is Exp $
+
+--- rts/misc.c.orig	1999-07-28 23:08:48.000000000 +0200
++++ rts/misc.c
+@@ -1,6 +1,6 @@
+ /*  misc.c -- miscellaneous routines supporting the generated code  */
+ 
+-#include <varargs.h>
++#include <stdarg.h>
+ #include "rts.h"
+ 
+ 
+@@ -15,8 +15,7 @@
+  */
+ /*VARARGS*/
+ Ptr
+-sr_cat (va_alist)
+-va_dcl
++sr_cat (String *q, ...)
+ {
+     va_list ap;
+     String *s, *t;
+@@ -24,12 +23,15 @@ va_dcl
+     char *p;
+ 
+     n = 0;					/* total the string lengths */
+-    va_start (ap);
+-    while ((s = va_arg (ap, String *)) != NULL)
++    s = q;
++    va_start (ap, q);
++    while (s != NULL) {
+ 	if ((int) s & 1)
+ 	    n++;				/* char argument */
+ 	else
+ 	    n += s->length;			/* String argument */
++	s = va_arg (ap, String *);
++    }
+     va_end (ap);
+ 
+     t = (String *) sr_alc (n + STRING_OVH, 1);
+@@ -37,14 +39,16 @@ va_dcl
+     t->length = n;
+ 
+     p = DATA (t);
+-    va_start (ap);
+-    while ((s = va_arg (ap, String *)) != NULL) {   /* for each input string: */
++    va_start (ap, q);
++    s = q;
++    while (s != NULL) {   /* for each input string: */
+ 	if ((int) s & 1) {
+ 	    *p++ = (int) s >> 2;		    /* copy in char argument */
+ 	} else {
+ 	    memcpy (p, DATA (s), s->length);	    /* copy into new string */
+ 	    p += s->length;			    /* advance pointer*/
+ 	}
++	s = va_arg (ap, String *);
+     }
+     va_end (ap);
+     return (Ptr) t;				/* return result address */

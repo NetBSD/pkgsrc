@@ -1,0 +1,59 @@
+$NetBSD: patch-af,v 1.1.1.1 2005/02/25 15:54:59 is Exp $
+
+--- rts/array.c.orig	1999-07-28 23:08:48.000000000 +0200
++++ rts/array.c
+@@ -1,7 +1,7 @@
+ /*  array.c -- runtime support of arrays  */
+ 
+ #include "rts.h"
+-#include <varargs.h>
++#include <stdarg.h>
+ 
+ 
+ static void slices ();
+@@ -22,11 +22,9 @@ static void slices ();
+  */
+ /*VARARGS*/
+ Array *
+-sr_init_array (va_alist)
+-va_dcl
++sr_init_array (char *locn, ...)
+ {
+     va_list ap;
+-    char *locn;
+     int ndim, elemsize, alcsize, i, n;
+     Array *addr;
+     Dim *d;
+@@ -39,8 +37,7 @@ va_dcl
+     /*
+      *  Calculate the size of each dimension.
+      */
+-    va_start (ap);
+-    locn = va_arg (ap, char *);
++    va_start (ap, locn);
+     addr = va_arg (ap, Array *);
+     elemsize = va_arg (ap, int);
+     initvalue = va_arg (ap, Ptr);
+@@ -251,11 +248,9 @@ struct slcinfo {
+ 
+ /*VARARGS*/
+ Ptr
+-sr_slice (va_alist)
+-va_dcl
++sr_slice (char *locn, ...)
+ {
+     va_list ap;
+-    char *locn;
+     Array *a1, *a2;
+     int elemsize, nbounds;
+     int adim, lb[MAX_DIMENS], ub[MAX_DIMENS];	/* array dims*/
+@@ -266,8 +261,7 @@ va_dcl
+     sr_check_stk (CUR_STACK);
+ 
+     /* get fixed arguments */
+-    va_start (ap);
+-    locn = va_arg (ap, char *);		/* SR source code location */
++    va_start (ap, locn);
+     a1 = va_arg (ap, Array *);		/* contiguous array */
+     a2 = va_arg (ap, Array *);		/* sliced array */
+     elemsize = va_arg (ap, int);	/* array element size */

@@ -1,0 +1,13 @@
+$NetBSD: patch-ao,v 1.1.1.1 2005/02/25 15:54:59 is Exp $
+
+--- sr.h.orig	1999-07-30 23:11:10.000000000 +0200
++++ sr.h
+@@ -307,7 +307,7 @@ extern double sin(), cos(), tan(), asin(
+ extern void *memcpy();
+ #endif
+ 
+-#if defined(__sgi) && ! defined(RTS)
++#if (defined(__sgi) && ! defined(RTS)) || defined(__NetBSD__)
+     /* SGI needs new-style prototypes when compiling generated code */
+     extern Ptr	sr_cat(String*, ...);
+     extern int	sr_imax(int, ...);
