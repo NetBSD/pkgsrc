@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/12/13 01:14:51 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/06/05 22:36:07 wiz Exp $
 bin/gnp
 man/man1/gnp.1
 share/gnome/apps/Applications/gnotepad+.desktop
@@ -110,9 +110,6 @@ share/gnotepad+/xpm/tb_winnew.xpm
 share/locale/da/LC_MESSAGES/gnotepad+.mo
 share/locale/fr/LC_MESSAGES/gnotepad+.mo
 share/locale/ja/LC_MESSAGES/gnotepad+.mo
-@unexec rmdir share/locale/ja/LC_MESSAGES 2> /dev/null || true
-@unexec rmdir share/locale/fr/LC_MESSAGES 2> /dev/null || true
-@unexec rmdir share/locale/da/LC_MESSAGES 2> /dev/null || true
 @dirrm share/gnotepad+/xpm
 @dirrm share/gnotepad+
 @dirrm share/gnome/help/gnotepad+/C
