@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/04/05 09:07:56 tron Exp $
+# $NetBSD: Makefile,v 1.7 2004/04/26 05:44:05 snj Exp $
 
 DISTNAME=		libgtop-1.0.13
 PKGREVISION=		4
@@ -31,7 +31,7 @@ PKG_FAIL_REASON+=	"(More information can be found in libgtop.info.)"
 .endif
 
 USE_PERL5=		build
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 USE_X11BASE=		YES
 USE_GNU_TOOLS+=		make
@@ -50,6 +50,6 @@ CONFIGURE_ARGS+=	--with-glib-prefix=${BUILDLINK_PREFIX.glib} \
 			--with-catgets --with-libgtop-guile=no
 CONFIGURE_ENV+=		AWK="${AWK}" LN_S="${LN} -s" PERL="${PERL5}"
 
-.include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../x11/gnome-libs/buildlink2.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../x11/gnome-libs/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
