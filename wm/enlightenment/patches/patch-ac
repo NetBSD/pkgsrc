@@ -1,0 +1,55 @@
+$NetBSD: patch-ac,v 1.1.1.1 2000/12/12 02:03:47 wiz Exp $
+
+--- dox/file.c.orig	Sun Apr 30 00:35:05 2000
++++ dox/file.c	Sun Apr 30 00:40:35 2000
+@@ -21,7 +21,7 @@
+  *  CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+  *  */
+ 
+-#include <wctype.h>
++typedef unsigned int wctype_t;
+ #include "dox.h"
+ 
+ #ifdef __EMX__
+@@ -615,7 +615,7 @@
+    int                 cnt, i;
+    char               *start, *finish, *ss, *w;
+ 
+-   int                 wcflg, mbflg;
++   int                 mbflg;
+    struct              char_class {
+      char               *name;
+      wctype_t            wt;
+@@ -651,6 +651,7 @@
+      }
+ 
+    /*  Check multibyte character class is available or not */
++/*
+    wcflg = 0;
+    for ( cc = char_class_tbl; cc->name != NULL; cc++ )
+      {
+@@ -658,7 +659,7 @@
+ 	if ( cc->wt != (wctype_t)0 )
+ 	  wcflg = 1;
+      }
+-
++*/
+    cnt = 0;
+    i = 0;
+    start = NULL;
+@@ -676,6 +677,7 @@
+ 	if ( len < 0 )		{ i++; continue; }
+ 
+ 	/*  Check multibyte character class */
++/*
+ 	if ( wcflg )
+ 	  {
+ 	     wchar_t             wc;
+@@ -697,6 +699,7 @@
+ 	       }
+ 	  }
+ 	else
++*/
+ 	  mbflg = len;
+ 
+ 	if ((cnt == num) && (

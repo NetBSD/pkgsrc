@@ -1,0 +1,10 @@
+    uwm is a small, simple windows manager, which came with X11R3.
+The characteristic of uwm is its simplicity.  Superfluous and
+unnecessary features, such as title bars or keyboard short-cuts
+don't exist, much less pixmaps, banners, or themes.
+
+    Since no ``frame'' appears around application windows, there is
+no problem about non-rectangular windows, even though the SHAPE
+extension of X11R4 is not explicitly supported by uwm.
+
+    The behavior of uwm is highly customizable by configuration files.
