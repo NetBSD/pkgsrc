@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2002/06/23 03:44:49 jlam Exp $
+# $NetBSD: Makefile,v 1.36 2002/07/18 09:08:27 agc Exp $
 #
 
 DISTNAME=		pthreads-1_60_beta6
@@ -19,6 +19,9 @@ GNU_CONFIGURE_PREFIX=	${PREFIX}/pthreads
 MAKE_ENV+=		NOLINT=1 NOPROFILE=1 OBJECT_FMT=${OBJECT_FMT}
 
 PATCH_FUZZ_FACTOR=	# empty
+
+CONFIG_GUESS_OVERRIDE=	${WRKSRC}/config/config.guess
+CONFIG_SUB_OVERRIDE=	${WRKSRC}/config/config.sub
 
 post-patch:
 	@${RM} ${WRKSRC}/include/endian.h
