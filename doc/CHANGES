@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4566 2004/01/23 08:59:37 abs Exp $
+$NetBSD: CHANGES,v 1.4567 2004/01/23 09:47:22 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -418,4 +418,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated mserv-devel to 0.39anb1 [grant 2004-01-23]
 	Added tme-0.2 [skrll 2004-01-23]
 	Updated netscape to 20040123 [abs 2004-01-23]
-
+	Updated loudmouth to 0.15.1 [xtraeme 2004-01-23]
+	Updated gossip to 0.7 [xtraeme 2004-01-23]
