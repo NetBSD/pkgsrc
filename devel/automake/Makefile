@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2001/08/27 18:35:54 hubertf Exp $
+# $NetBSD: Makefile,v 1.24 2001/11/28 05:20:46 jlam Exp $
 # FreeBSD Id: Makefile,v 1.5 1997/09/19 09:29:04 max Exp
 #
 
@@ -13,11 +13,12 @@ COMMENT=	GNU Standards-compliant Makefile generator
 
 DEPENDS=	autoconf>=2.13:../../devel/autoconf
 
-USE_PERL5=	# defined
-GNU_CONFIGURE=	# defined
-CONFIGURE_ENV=	PERL=${PERL5}
-STRIPFLAG=	# none
+USE_BUILDLINK_ONLY=	YES
+GNU_CONFIGURE=		YES
+CONFIGURE_ENV=		PERL=${PERL5}
+STRIPFLAG=		# none
 
 INFO_FILES=	automake.info
 
+.include "../../lang/perl5/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
