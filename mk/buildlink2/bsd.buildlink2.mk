@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.90.4.3 2003/07/24 22:00:12 jlam Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.90.4.4 2003/07/30 22:10:49 jlam Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -494,9 +494,18 @@ _REPLACE_BUILDLINK= \
 # libraries (-lreadline -> -ledit, etc.).  Redundant -Idir and -Ldir
 # options are removed to optimize the resulting file.
 #
-REPLACE_BUILDLINK_SED?=		# empty
-_REPLACE_BUILDLINK_SED=		${REPLACE_BUILDLINK_SED}
-_REPLACE_BUILDLINK_SED+=	${LIBTOOL_ARCHIVE_UNTRANSFORM_SED}
+LIBTOOL_ARCHIVE_UNTRANSFORM_SED?=	# empty
+.if ${PKG_INSTALLATION_TYPE} == "overwrite"
+_LIBTOOL_ARCHIVE_UNTRANSFORM_SED=	\
+	-e "s|${LOCALBASE}/${DEPOT_SUBDIR}/[^/]*/|${LOCALBASE}/|g"	\
+	-e "s|${X11BASE}/${DEPOT_SUBDIR}/[^/]*/|${X11BASE}/|g"
+.else
+_LIBTOOL_ARCHIVE_UNTRANSFORM_SED=	# empty
+.endif
+_LIBTOOL_ARCHIVE_UNTRANSFORM_SED+=	${LIBTOOL_ARCHIVE_UNTRANSFORM_SED}
+REPLACE_BUILDLINK_SED?=			# empty
+_REPLACE_BUILDLINK_SED=			${REPLACE_BUILDLINK_SED}
+_REPLACE_BUILDLINK_SED+=		${_LIBTOOL_ARCHIVE_UNTRANSFORM_SED}
 
 BUILDLINK_SUBST_MESSAGE.unbuildlink= \
 	"Fixing buildlink references in files-to-be-installed."
