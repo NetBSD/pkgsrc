@@ -1,4 +1,4 @@
-# $NetBSD: defs.NetBSD.mk,v 1.20 2002/01/19 21:29:41 agc Exp $
+# $NetBSD: defs.NetBSD.mk,v 1.21 2002/01/24 14:58:07 dmcmahill Exp $
 #
 # Variable definitions for the NetBSD operating system.
 
@@ -107,3 +107,11 @@ SERIAL_DEVICES?=	/dev/ttya \
 DEFAULT_SERIAL_DEVICE?=	/dev/null
 SERIAL_DEVICES?=	/dev/null
 .endif
+
+# Add -mieee to CFLAGS and FFLAGS for NetBSD->=1.5V-alpha
+.for __tmp__ in 1.5[V-Z] 1.5[A-Z][A-Z]* 1.[6-9]* [2-9].*
+.  if ${MACHINE_PLATFORM:MNetBSD-${__tmp__}-alpha} != ""
+CFLAGS+=	-mieee
+FFLAGS+=	-mieee
+.  endif    # MACHINE_PLATFORM
+.endfor     # __tmp__
