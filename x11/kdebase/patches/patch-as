@@ -1,7 +1,7 @@
-$NetBSD: patch-as,v 1.6 1999/11/12 04:50:00 hubertf Exp $
+$NetBSD: patch-as,v 1.7 1999/12/06 20:44:59 bouyer Exp $
 
---- ./kfm/kioslave/main.cpp	Thu Apr  8 00:56:48 1999
-+++ /usr/pkgsrc/x11/kdebase/work.i386.unpatched/kdebase-1.1.2/kfm/kioslave/main.cpp	Fri Nov 12 05:10:33 1999
+--- ./kfm/kioslave/main.cpp.old	Thu Apr  8 00:56:48 1999
++++ ./kfm/kioslave/main.cpp	Fri Dec  3 17:25:19 1999
 @@ -319,7 +319,7 @@
      return;
  }
@@ -11,6 +11,15 @@ $NetBSD: patch-as,v 1.6 1999/11/12 04:50:00 hubertf Exp $
  {
      char buffer[ 1024 ];
      int t = (int)time( 0L );
+@@ -331,7 +331,7 @@
+     char *res;
+  
+     if( volmgt_running() ) {
+-        if( (res = volmgt_symname( (char *) _point )) == NULL ) {
++        if( (res = volmgt_symname( (char *) _dev )) == NULL ) {
+             retvalue = 1;
+             err = QString( strerror( errno ));
+         } else {
 @@ -352,8 +352,10 @@
   	err = QString( "Volume Management is not running." );
      }
