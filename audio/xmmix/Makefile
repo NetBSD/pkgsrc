@@ -3,13 +3,13 @@
 # Date created:		97-10-24
 # Whom:			augustss@cs.chalmers.se
 #
-# $NetBSD: Makefile,v 1.4 1998/01/19 01:23:24 hubertf Exp $
+# $NetBSD: Makefile,v 1.5 1998/02/22 13:03:55 veego Exp $
 # FreeBSD ID: Makefile,v 1.5 1997/09/08 13:37:47 tg Exp
 #
 
 DISTNAME=       xmmix-1.2
 CATEGORIES=	audio
-MASTER_SITES=   ftp://ftp.netcom.com/pub/tk/tkan/xmmix-1.2/src/
+MASTER_SITES=   http://mercury.hypersurf.com/~amb/download/xmmix-1.2/src/
 
 MAINTAINER=	augustss@cs.chalmers.se
 
