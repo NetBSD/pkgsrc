@@ -1,11 +1,14 @@
-$NetBSD: patch-an,v 1.1 2000/09/15 23:58:48 tron Exp $
+$NetBSD: patch-an,v 1.2 2002/01/03 20:40:43 tron Exp $
 
---- ../gcc-2.95.2/gcc/config/xm-target64.h.orig	Sat Sep 16 00:17:42 2000
-+++ ../gcc-2.95.2/gcc/config/xm-target64.h	Sat Sep 16 00:17:42 2000
-@@ -0,0 +1,6 @@
-+/* Hack to extend HOST_WIDE_INT on 64-bit target cross compilers. */
-+
-+#ifdef __GNUC__
-+#define HOST_WIDE_INT long long
-+#define HOST_BITS_PER_WIDE_INT 64
-+#endif
+--- ../gcc-2.95.3/gcc/config/m68k/m68k.c.orig	Mon Aug  2 06:51:08 1999
++++ ../gcc-2.95.3/gcc/config/m68k/m68k.c	Thu Jan  3 20:37:53 2002
+@@ -462,7 +462,8 @@
+ 				  -cfa_store_offset + n_regs++ * 4);
+ 	}
+     }
+-  if (flag_pic && current_function_uses_pic_offset_table)
++  if (flag_pic && current_function_uses_pic_offset_table &&
++      regs_ever_live[PIC_OFFSET_TABLE_REGNUM])
+     {
+ #ifdef MOTOROLA
+       asm_fprintf (stream, "\t%Olea (%Rpc, %U_GLOBAL_OFFSET_TABLE_@GOTPC), %s\n",

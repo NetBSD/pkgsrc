@@ -1,0 +1,456 @@
+$NetBSD: patch-bc,v 1.1 2002/01/03 20:40:44 tron Exp $
+
+--- ../gcc-2.95.3/gcc/config/vax/vax.h.orig	Wed Dec 16 22:14:25 1998
++++ ../gcc-2.95.3/gcc/config/vax/vax.h	Thu Jan  3 20:37:54 2002
+@@ -25,7 +25,7 @@
+ 
+ /* If using g-format floating point, alter math.h.  */
+ 
+-#define	CPP_SPEC "%{mg:-DGFLOAT}"
++#define	CPP_SPEC "%{mg:%{!ansi:-DGFLOAT} -D__GFLOAT}"
+ 
+ /* Choose proper libraries depending on float format.
+    Note that there are no profiling libraries for g-format.
+@@ -51,13 +51,20 @@
+ /* Macros used in the machine description to test the flags.  */
+ 
+ /* Nonzero if compiling code that Unix assembler can assemble.  */
+-#define TARGET_UNIX_ASM (target_flags & 1)
++#define MASK_UNIX_ASM 1
++#define TARGET_UNIX_ASM (target_flags & MASK_UNIX_ASM)
+ 
+ /* Nonzero if compiling with VAX-11 "C" style structure alignment */
+-#define	TARGET_VAXC_ALIGNMENT (target_flags & 2)
++#define	MASK_VAXC_ALIGNMENT 2
++#define	TARGET_VAXC_ALIGNMENT (target_flags & MASK_VAXC_ALIGNMENT)
+ 
+ /* Nonzero if compiling with `G'-format floating point */
+-#define TARGET_G_FLOAT (target_flags & 4)
++#define MASK_G_FLOAT 4
++#define TARGET_G_FLOAT (target_flags & MASK_G_FLOAT)
++
++/* Nonzero if compiling for PIC code */
++#define MASK_INDIRECT 8
++#define TARGET_INDIRECT (target_flags & MASK_INDIRECT)
+ 
+ /* Macro to define tables used to set the flags.
+    This is a list in braces of pairs in braces,
+@@ -66,19 +73,21 @@
+    An empty string NAME is used to identify the default VALUE.  */
+ 
+ #define TARGET_SWITCHES  \
+-  { {"unix", 1},  \
+-    {"gnu", -1},  \
+-    {"vaxc-alignment", 2}, \
+-    {"g", 4}, \
+-    {"g-float", 4}, \
+-    {"d", -4},	\
+-    {"d-float", -4}, \
+-    { "", TARGET_DEFAULT}}
++  { {"unix", MASK_UNIX_ASM, "Generate code for UNIX assembler"},  \
++    {"gnu", -MASK_UNIX_ASM, "Generate code for GNU assembler (gas)"},  \
++    {"vaxc-alignment", MASK_VAXC_ALIGNMENT, "Use VAXC structure conventions"}, \
++    {"g", MASK_G_FLOAT, "Generate GFLOAT double precision code"}, \
++    {"g-float", MASK_G_FLOAT, "Generate GFLOAT double precision code"}, \
++    {"d", -MASK_G_FLOAT, "Generate DFLOAT double precision code"}, \
++    {"d-float", -MASK_G_FLOAT, "Generate DFLOAT double precision code"}, \
++    {"indirect",  MASK_INDIRECT, "Allow indirect memory references in PIC code"}, \
++    {"no-indirect",  -MASK_INDIRECT, "Disallow indirect memory references in PIC code"}, \
++    { "", TARGET_DEFAULT, 0}}
+ 
+ /* Default target_flags if no switches specified.  */
+ 
+ #ifndef TARGET_DEFAULT
+-#define TARGET_DEFAULT 1
++#define TARGET_DEFAULT MASK_UNIX_ASM
+ #endif
+ 
+ /* Target machine storage layout */
+@@ -258,7 +267,7 @@
+    This is an initializer for a vector of HARD_REG_SET
+    of length N_REG_CLASSES.  */
+ 
+-#define REG_CLASS_CONTENTS {0, 0xffff}
++#define REG_CLASS_CONTENTS {{0}, {0xffff}}
+ 
+ /* The same information, inverted:
+    Return the class number of the smallest class containing
+@@ -276,16 +285,28 @@
+ 
+ #define REG_CLASS_FROM_LETTER(C) NO_REGS
+ 
+-/* The letters I, J, K, L and M in a register constraint string
++/* The letters I, J, K, L, M, N, and O in a register constraint string
+    can be used to stand for particular ranges of immediate operands.
+    This macro defines what the ranges are.
+    C is the letter, and VALUE is a constant value.
+    Return 1 if VALUE is in the range specified by C.
+ 
+-   `I' is the constant zero.  */
+-
+-#define CONST_OK_FOR_LETTER_P(VALUE, C) \
+-  ((C) == 'I' ? (VALUE) == 0		\
++   `I' is the constant zero.
++   `J' is a value between 0 .. 63 (inclusive)		S^#
++   `K' is a value between -128 and 127 (inclusive)	B^
++   'L' is a value between -32768 and 32767 (include)	W^ 
++   `M' is a value between 0 and 255 (inclusive)		B^
++   'N' is a value between 0 and 65535 (inclusive)	W^
++   `O' is a value between -63 and -1 (inclusive)	*/
++
++#define CONST_OK_FOR_LETTER_P(VALUE, C)				\
++  (  (C) == 'I' ?	(VALUE) == 0				\
++   : (C) == 'J' ?	0 <= (VALUE) && (VALUE) < 64		\
++   : (C) == 'O' ?	-63 <= (VALUE) && (VALUE) < 0		\
++   : (C) == 'K' ?	-128 <= (VALUE) && (VALUE) < 128	\
++   : (C) == 'M' ?	0 <= (VALUE) && (VALUE) < 256		\
++   : (C) == 'L' ?	-32768 <= (VALUE) && (VALUE) < 32768	\
++   : (C) == 'N' ?	0 <= (VALUE) && (VALUE) < 65536		\
+    : 0)
+ 
+ /* Similar, but for floating constants, and defining letters G and H.
+@@ -347,8 +368,7 @@
+ /* Given an rtx for the address of a frame,
+    return an rtx for the address of the word in the frame
+    that holds the dynamic chain--the previous frame's address.  */
+-#define DYNAMIC_CHAIN_ADDRESS(frame) \
+-gen_rtx (PLUS, Pmode, frame, GEN_INT (12))
++#define DYNAMIC_CHAIN_ADDRESS(FRAME) plus_constant ((FRAME), 12)
+ 
+ /* If we generate an insn to push BYTES bytes,
+    this says how many the stack pointer really advances by.
+@@ -377,14 +397,14 @@
+ /* On the Vax the return value is in R0 regardless.  */   
+ 
+ #define FUNCTION_VALUE(VALTYPE, FUNC)  \
+-  gen_rtx (REG, TYPE_MODE (VALTYPE), 0)
++  gen_rtx_REG (TYPE_MODE (VALTYPE), 0)
+ 
+ /* Define how to find the value returned by a library function
+    assuming the value has mode MODE.  */
+ 
+ /* On the Vax the return value is in R0 regardless.  */   
+ 
+-#define LIBCALL_VALUE(MODE)  gen_rtx (REG, MODE, 0)
++#define LIBCALL_VALUE(MODE)  gen_rtx_REG (MODE, 0)
+ 
+ /* Define this if PCC uses the nonreentrant convention for returning
+    structure and union values.  */
+@@ -533,10 +553,10 @@
+ #define TRAMPOLINE_TEMPLATE(FILE)					\
+ {									\
+   ASM_OUTPUT_SHORT (FILE, const0_rtx);					\
+-  ASM_OUTPUT_SHORT (FILE, GEN_INT (0x8fd0));	\
++  ASM_OUTPUT_SHORT (FILE, GEN_INT (0x8fd0));				\
+   ASM_OUTPUT_INT (FILE, const0_rtx);					\
+-  ASM_OUTPUT_BYTE  (FILE, 0x50+STATIC_CHAIN_REGNUM);			\
+-  ASM_OUTPUT_SHORT (FILE, GEN_INT (0x9f17));	\
++  ASM_OUTPUT_BYTE  (FILE, 0x50 + STATIC_CHAIN_REGNUM);			\
++  ASM_OUTPUT_SHORT (FILE, GEN_INT (0x9f17));				\
+   ASM_OUTPUT_INT (FILE, const0_rtx);					\
+ }
+ 
+@@ -552,12 +572,12 @@
+    to the start of the trampoline.  */
+ #define INITIALIZE_TRAMPOLINE(TRAMP, FNADDR, CXT)			\
+ {									\
+-  emit_insn (gen_rtx (ASM_INPUT, VOIDmode,				\
++  emit_insn (gen_rtx_ASM_INPUT (VOIDmode,				\
+ 		      "movpsl -(sp)\n\tpushal 1(pc)\n\trei"));		\
+-  emit_move_insn (gen_rtx (MEM, HImode, TRAMP),				\
+-		  gen_rtx (MEM, HImode, FNADDR));			\
+-  emit_move_insn (gen_rtx (MEM, SImode, plus_constant (TRAMP, 4)), CXT);\
+-  emit_move_insn (gen_rtx (MEM, SImode, plus_constant (TRAMP, 11)),	\
++  emit_move_insn (gen_rtx_MEM (HImode, TRAMP),				\
++		  gen_rtx_MEM (HImode, FNADDR));			\
++  emit_move_insn (gen_rtx_MEM (SImode, plus_constant (TRAMP, 4)), CXT);\
++  emit_move_insn (gen_rtx_MEM (SImode, plus_constant (TRAMP, 11)),	\
+ 		  plus_constant (FNADDR, 2));				\
+ }
+ 
+@@ -573,7 +593,7 @@
+ 
+ #define RETURN_ADDR_RTX(COUNT, FRAME)	\
+   ((COUNT == 0)				\
+-   ? gen_rtx (MEM, Pmode, plus_constant (FRAME, RETURN_ADDRESS_OFFSET)) \
++   ? gen_rtx_MEM (Pmode, plus_constant (FRAME, RETURN_ADDRESS_OFFSET)) \
+    : (rtx) 0)
+ 
+ 
+@@ -635,6 +655,9 @@
+ /* Nonzero if X is a hard reg that can be used as a base reg
+    or if it is a pseudo reg.  */
+ #define REG_OK_FOR_BASE_P(X) 1
++#define LEGITIMATE_PIC_OPERAND_P(X) legitimate_pic_operand_p (X, 0)
++#define GO_IF_LEGITIMATE_ADDRESS(ZMODE, XOP, LABEL)  \
++  do { if (legitimate_address_p(ZMODE, XOP, 0)) goto LABEL; } while (0)
+ 
+ #else
+ 
+@@ -642,144 +665,12 @@
+ #define REG_OK_FOR_INDEX_P(X) REGNO_OK_FOR_INDEX_P (REGNO (X))
+ /* Nonzero if X is a hard reg that can be used as a base reg.  */
+ #define REG_OK_FOR_BASE_P(X) REGNO_OK_FOR_BASE_P (REGNO (X))
++#define LEGITIMATE_PIC_OPERAND_P(X) legitimate_pic_operand_p (X, 1)
++#define GO_IF_LEGITIMATE_ADDRESS(ZMODE, XOP, LABEL)  \
++  do { if (legitimate_address_p(ZMODE, XOP, 1)) goto LABEL; } while (0)
+ 
+ #endif
+ 
+-/* GO_IF_LEGITIMATE_ADDRESS recognizes an RTL expression
+-   that is a valid memory address for an instruction.
+-   The MODE argument is the machine mode for the MEM expression
+-   that wants to use this address.
+-
+-   The other macros defined here are used only in GO_IF_LEGITIMATE_ADDRESS,
+-   except for CONSTANT_ADDRESS_P which is actually machine-independent.  */
+-
+-#ifdef NO_EXTERNAL_INDIRECT_ADDRESS
+-
+-/* Zero if this contains a (CONST (PLUS (SYMBOL_REF) (...))) and the
+-   symbol in the SYMBOL_REF is an external symbol.  */
+-
+-#define INDIRECTABLE_CONSTANT_P(X) \
+- (! (GET_CODE ((X)) == CONST					\
+-     && GET_CODE (XEXP ((X), 0)) == PLUS			\
+-     && GET_CODE (XEXP (XEXP ((X), 0), 0)) == SYMBOL_REF	\
+-     && SYMBOL_REF_FLAG (XEXP (XEXP ((X), 0), 0))))
+-
+-/* Re-definition of CONSTANT_ADDRESS_P, which is true only when there
+-   are no SYMBOL_REFs for external symbols present.  */
+-
+-#define INDIRECTABLE_CONSTANT_ADDRESS_P(X)   				\
+-  (GET_CODE (X) == LABEL_REF 						\
+-   || (GET_CODE (X) == SYMBOL_REF && !SYMBOL_REF_FLAG (X))		\
+-   || (GET_CODE (X) == CONST && INDIRECTABLE_CONSTANT_P(X))		\
+-   || GET_CODE (X) == CONST_INT)
+-
+-
+-/* Non-zero if X is an address which can be indirected.  External symbols
+-   could be in a sharable image library, so we disallow those.  */
+-
+-#define INDIRECTABLE_ADDRESS_P(X)  \
+-  (INDIRECTABLE_CONSTANT_ADDRESS_P (X) 					\
+-   || (GET_CODE (X) == REG && REG_OK_FOR_BASE_P (X))			\
+-   || (GET_CODE (X) == PLUS						\
+-       && GET_CODE (XEXP (X, 0)) == REG					\
+-       && REG_OK_FOR_BASE_P (XEXP (X, 0))				\
+-       && INDIRECTABLE_CONSTANT_ADDRESS_P (XEXP (X, 1))))
+-
+-#else /* not NO_EXTERNAL_INDIRECT_ADDRESS */
+-
+-#define INDIRECTABLE_CONSTANT_ADDRESS_P(X) CONSTANT_ADDRESS_P(X)
+-
+-/* Non-zero if X is an address which can be indirected.  */
+-#define INDIRECTABLE_ADDRESS_P(X)  \
+-  (CONSTANT_ADDRESS_P (X)						\
+-   || (GET_CODE (X) == REG && REG_OK_FOR_BASE_P (X))			\
+-   || (GET_CODE (X) == PLUS						\
+-       && GET_CODE (XEXP (X, 0)) == REG					\
+-       && REG_OK_FOR_BASE_P (XEXP (X, 0))				\
+-       && CONSTANT_ADDRESS_P (XEXP (X, 1))))
+-
+-#endif /* not NO_EXTERNAL_INDIRECT_ADDRESS */
+-
+-/* Go to ADDR if X is a valid address not using indexing.
+-   (This much is the easy part.)  */
+-#define GO_IF_NONINDEXED_ADDRESS(X, ADDR)  \
+-{ register rtx xfoob = (X);						\
+-  if (GET_CODE (xfoob) == REG)						\
+-    {									\
+-      extern rtx *reg_equiv_mem;					\
+-      if (! reload_in_progress						\
+-	  || reg_equiv_mem[REGNO (xfoob)] == 0				\
+-	  || INDIRECTABLE_ADDRESS_P (reg_equiv_mem[REGNO (xfoob)]))	\
+-	goto ADDR;							\
+-    }									\
+-  if (CONSTANT_ADDRESS_P (xfoob)) goto ADDR;				\
+-  if (INDIRECTABLE_ADDRESS_P (xfoob)) goto ADDR;			\
+-  xfoob = XEXP (X, 0);							\
+-  if (GET_CODE (X) == MEM && INDIRECTABLE_ADDRESS_P (xfoob))		\
+-    goto ADDR;								\
+-  if ((GET_CODE (X) == PRE_DEC || GET_CODE (X) == POST_INC)		\
+-      && GET_CODE (xfoob) == REG && REG_OK_FOR_BASE_P (xfoob))		\
+-    goto ADDR; }
+-
+-/* 1 if PROD is either a reg times size of mode MODE
+-   or just a reg, if MODE is just one byte.
+-   This macro's expansion uses the temporary variables xfoo0 and xfoo1
+-   that must be declared in the surrounding context.  */
+-#define INDEX_TERM_P(PROD, MODE)   \
+-(GET_MODE_SIZE (MODE) == 1						\
+- ? (GET_CODE (PROD) == REG && REG_OK_FOR_BASE_P (PROD))			\
+- : (GET_CODE (PROD) == MULT						\
+-    &&									\
+-    (xfoo0 = XEXP (PROD, 0), xfoo1 = XEXP (PROD, 1),			\
+-     ((GET_CODE (xfoo0) == CONST_INT					\
+-       && INTVAL (xfoo0) == GET_MODE_SIZE (MODE)			\
+-       && GET_CODE (xfoo1) == REG					\
+-       && REG_OK_FOR_INDEX_P (xfoo1))					\
+-      ||								\
+-      (GET_CODE (xfoo1) == CONST_INT					\
+-       && INTVAL (xfoo1) == GET_MODE_SIZE (MODE)			\
+-       && GET_CODE (xfoo0) == REG					\
+-       && REG_OK_FOR_INDEX_P (xfoo0))))))
+-
+-/* Go to ADDR if X is the sum of a register
+-   and a valid index term for mode MODE.  */
+-#define GO_IF_REG_PLUS_INDEX(X, MODE, ADDR)	\
+-{ register rtx xfooa;							\
+-  if (GET_CODE (X) == PLUS)						\
+-    { if (GET_CODE (XEXP (X, 0)) == REG					\
+-	  && REG_OK_FOR_BASE_P (XEXP (X, 0))				\
+-	  && (xfooa = XEXP (X, 1),					\
+-	      INDEX_TERM_P (xfooa, MODE)))				\
+-	goto ADDR;							\
+-      if (GET_CODE (XEXP (X, 1)) == REG					\
+-	  && REG_OK_FOR_BASE_P (XEXP (X, 1))				\
+-	  && (xfooa = XEXP (X, 0),					\
+-	      INDEX_TERM_P (xfooa, MODE)))				\
+-	goto ADDR; } }
+-
+-#define GO_IF_LEGITIMATE_ADDRESS(MODE, X, ADDR)  \
+-{ register rtx xfoo, xfoo0, xfoo1;					\
+-  GO_IF_NONINDEXED_ADDRESS (X, ADDR);					\
+-  if (GET_CODE (X) == PLUS)						\
+-    { /* Handle <address>[index] represented with index-sum outermost */\
+-      xfoo = XEXP (X, 0);						\
+-      if (INDEX_TERM_P (xfoo, MODE))					\
+-	{ GO_IF_NONINDEXED_ADDRESS (XEXP (X, 1), ADDR); }		\
+-      xfoo = XEXP (X, 1);						\
+-      if (INDEX_TERM_P (xfoo, MODE))					\
+-	{ GO_IF_NONINDEXED_ADDRESS (XEXP (X, 0), ADDR); }		\
+-      /* Handle offset(reg)[index] with offset added outermost */	\
+-      if (INDIRECTABLE_CONSTANT_ADDRESS_P (XEXP (X, 0)))		\
+-	{ if (GET_CODE (XEXP (X, 1)) == REG				\
+-	      && REG_OK_FOR_BASE_P (XEXP (X, 1)))			\
+-	    goto ADDR;							\
+-	  GO_IF_REG_PLUS_INDEX (XEXP (X, 1), MODE, ADDR); }		\
+-      if (INDIRECTABLE_CONSTANT_ADDRESS_P (XEXP (X, 1)))		\
+-	{ if (GET_CODE (XEXP (X, 0)) == REG				\
+-	      && REG_OK_FOR_BASE_P (XEXP (X, 0)))			\
+-	    goto ADDR;							\
+-	  GO_IF_REG_PLUS_INDEX (XEXP (X, 0), MODE, ADDR); } } }
+-
+ /* Try machine-dependent ways of modifying an illegitimate address
+    to be legitimate.  If we find one, return the new, valid address.
+    This macro is used in only one place: `memory_address' in explow.c.
+@@ -808,8 +699,10 @@
+      goto LABEL; 							\
+    if (GET_CODE (ADDR) == PLUS)						\
+      { if (CONSTANT_ADDRESS_P (XEXP (ADDR, 0))				\
++	   && (!flag_pic || GET_CODE (XEXP (ADDR, 0)) != SYMBOL_REF)	\
+ 	   && GET_CODE (XEXP (ADDR, 1)) == REG);			\
+        else if (CONSTANT_ADDRESS_P (XEXP (ADDR, 1))			\
++	        && (!flag_pic || GET_CODE (XEXP (ADDR, 1)) != SYMBOL_REF) \
+ 		&& GET_CODE (XEXP (ADDR, 0)) == REG);			\
+        else goto LABEL; }}
+ 
+@@ -828,6 +721,10 @@
+    jumps to the default label instead.  */
+ #define CASE_DROPS_THROUGH
+ 
++/* Indicate that jump tables go in the text section.  This is
++   necessary when compiling PIC code.  */
++#define JUMP_TABLES_IN_TEXT_SECTION 1
++
+ /* Specify the tree operation to be used to convert reals to integers.  */
+ #define IMPLICIT_FIX_EXPR FIX_ROUND_EXPR
+ 
+@@ -961,6 +858,36 @@
+ #define MIN_G_FLOAT .556268464626800e-308
+ */
+ 
++/* Optionally define this if you have added predicates to
++   `MACHINE.c'.  This macro is called within an initializer of an
++   array of structures.  The first field in the structure is the
++   name of a predicate and the second field is an array of rtl
++   codes.  For each predicate, list all rtl codes that can be in
++   expressions matched by the predicate.  The list should have a
++   trailing comma.  Here is an example of two entries in the list
++   for a typical RISC machine:
++
++   #define PREDICATE_CODES \
++     {"gen_reg_rtx_operand", {SUBREG, REG}},  \
++     {"reg_or_short_cint_operand", {SUBREG, REG, CONST_INT}},
++
++   Defining this macro does not affect the generated code (however,
++   incorrect definitions that omit an rtl code that may be matched
++   by the predicate can cause the compiler to malfunction). 
++   Instead, it allows the table built by `genrecog' to be more
++   compact and efficient, thus speeding up the compiler.  The most
++   important predicates to include in the list specified by this
++   macro are thoses used in the most insn patterns.  */
++
++#define PREDICATE_CODES							\
++  {"vax_symbolic_operand",	{ SYMBOL_REF, LABEL_REF, CONST, PLUS }},\
++  {"vax_lvalue_operand",	{ REG, SUBREG, MEM, CONCAT, PARALLEL,	\
++				  STRICT_LOW_PART }},			\
++  {"vax_nonsymbolic_operand",	{ CONST_INT, CONST_DOUBLE, SUBREG, REG,	\
++				  MEM }},				\
++  {"vax_general_operand",	{ CONST_INT, CONST_DOUBLE, SUBREG, REG,	\
++				  MEM, SYMBOL_REF, LABEL_REF, CONST, PLUS }},
++
+ /* Tell final.c how to eliminate redundant test instructions.  */
+ 
+ /* Here we define machine-dependent flags and fields in cc_status
+@@ -1028,11 +955,11 @@
+ 
+ /* Output before read-only data.  */
+ 
+-#define TEXT_SECTION_ASM_OP ".text"
++#define TEXT_SECTION_ASM_OP "\t.text"
+ 
+ /* Output before writable data.  */
+ 
+-#define DATA_SECTION_ASM_OP ".data"
++#define DATA_SECTION_ASM_OP "\t.data"
+ 
+ /* How to refer to registers in assembler output.
+    This sequence is indexed by compiler's hard-register-number (see above).  */
+@@ -1158,13 +1085,32 @@
+    (The Vax does not use such vectors,
+    but we must define this macro anyway.)  */
+ 
+-#define ASM_OUTPUT_ADDR_VEC_ELT(FILE, VALUE)  \
+-  fprintf (FILE, "\t.long L%d\n", VALUE)
++#define ASM_OUTPUT_ADDR_VEC_ELT(FILE, VALUE)			\
++  do								\
++    {								\
++      char label[256];						\
++      ASM_GENERATE_INTERNAL_LABEL (label, "L", (VALUE));	\
++      fprintf (FILE, "\t.long ");				\
++      assemble_name (FILE, label);				\
++      fprintf (FILE, "\n");					\
++    }								\
++  while (0)
+ 
+ /* This is how to output an element of a case-vector that is relative.  */
+ 
+-#define ASM_OUTPUT_ADDR_DIFF_ELT(FILE, BODY, VALUE, REL)  \
+-  fprintf (FILE, "\t.word L%d-L%d\n", VALUE, REL)
++#define ASM_OUTPUT_ADDR_DIFF_ELT(FILE, BODY, VALUE, REL)	\
++  do								\
++    {								\
++      char label[256];						\
++      ASM_GENERATE_INTERNAL_LABEL (label, "L", (VALUE));	\
++      fprintf (FILE, "\t.word ");				\
++      assemble_name (FILE, label);				\
++      ASM_GENERATE_INTERNAL_LABEL (label, "L", (REL));		\
++      fprintf (FILE, "-");					\
++      assemble_name (FILE, label);				\
++      fprintf (FILE, "\n");					\
++    }								\
++  while (0)
+ 
+ /* This is how to output an assembler line
+    that says to advance the location counter
+@@ -1271,7 +1217,7 @@
+   ((CODE) == '#')
+ 
+ #define PRINT_OPERAND(FILE, X, CODE)  \
+-{ extern char *rev_cond_name ();					\
++{ extern const char *rev_cond_name ();					\
+   if (CODE == '#') fputc (ASM_DOUBLE_CHAR, FILE);			\
+   else if (CODE == 'C')							\
+     fputs (rev_cond_name (X), FILE);					\

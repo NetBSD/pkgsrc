@@ -1,14 +1,29 @@
-$NetBSD: patch-av,v 1.1 2001/02/28 23:28:09 hubertf Exp $
+$NetBSD: patch-av,v 1.2 2002/01/03 20:40:43 tron Exp $
 
---- ../gcc-2.95.2/gcc/config/sparc/t-netbsd.orig	Tue Feb 27 14:37:27 2001
-+++ ../gcc-2.95.2/gcc/config/sparc/t-netbsd
-@@ -0,0 +1,9 @@
-+# We have to include libgcc.a also in shared libraries, so 
-+# let's compile the code position independent
-+
-+TARGET_LIBGCC2_CFLAGS = -fPIC
-+
-+# Same for crtbeginS.o and crtendS.o . All code that goes into a shared
-+# library has to be PIC
-+
-+CRTSTUFF_T_CFLAGS_S = -fPIC
+--- ../gcc-2.95.3/gcc/config/sparc/netbsd.h.orig	Wed Dec 16 22:13:18 1998
++++ ../gcc-2.95.3/gcc/config/sparc/netbsd.h	Thu Jan  3 20:37:53 2002
+@@ -7,15 +7,15 @@
+ /* Names to predefine in the preprocessor for this target machine.  */
+ 
+ #undef CPP_PREDEFINES
+-#define CPP_PREDEFINES "-Dunix -Dsparc -D__NetBSD__ -Asystem(unix) -Asystem(NetBSD) -Acpu(sparc) -Amachine(sparc)"
++#define CPP_PREDEFINES "-Dsparc -D__NetBSD__ -D__KPRINTF_ATTRIBUTE__ -Asystem(unix) -Asystem(NetBSD) -Acpu(sparc) -Amachine(sparc)"
+ 
+ /* Make gcc agree with <machine/ansi.h> */
+ 
+ #undef SIZE_TYPE
+-#define SIZE_TYPE "unsigned int"
++#define SIZE_TYPE "long unsigned int"
+ 
+ #undef PTRDIFF_TYPE
+-#define PTRDIFF_TYPE "int"
++#define PTRDIFF_TYPE "long int"
+ 
+ #undef WCHAR_TYPE
+ #define WCHAR_TYPE "int"
+@@ -44,3 +44,5 @@
+    and initialization stuff better.  */
+ #define DWARF2_UNWIND_INFO 0
+ 
++/* Name the default cpu target */
++#define TARGET_CPU_DEFAULT	TARGET_CPU_sparc

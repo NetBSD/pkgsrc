@@ -1,63 +1,32 @@
-$NetBSD: patch-au,v 1.1 2001/02/28 23:28:09 hubertf Exp $
+$NetBSD: patch-au,v 1.2 2002/01/03 20:40:43 tron Exp $
 
---- ../gcc-2.95.2/gcc/crtstuff.c.orig	Tue Feb 27 14:34:52 2001
-+++ ../gcc-2.95.2/gcc/crtstuff.c
-@@ -181,16 +181,16 @@
- 
- /* Stick a call to __do_global_dtors_aux into the .fini section.  */
- 
--static void __attribute__ ((__unused__))
--fini_dummy (void)
-+asm (FINI_SECTION_ASM_OP);
-+void __attribute__ ((__unused__))
-+_fini (void)
- {
--  asm (FINI_SECTION_ASM_OP);
-   __do_global_dtors_aux ();
- #ifdef FORCE_FINI_SECTION_ALIGN
-   FORCE_FINI_SECTION_ALIGN;
- #endif
--  asm (TEXT_SECTION_ASM_OP);
- }
-+asm (TEXT_SECTION_ASM_OP);
- 
- #ifdef EH_FRAME_SECTION_ASM_OP
- /* Stick a call to __register_frame_info into the .init section.  For some
-@@ -205,6 +205,21 @@
-     __register_frame_info (__EH_FRAME_BEGIN__, &object);
+--- ../gcc-2.95.3/gcc/config/sh/sh.h.orig	Mon Aug  2 07:02:55 1999
++++ ../gcc-2.95.3/gcc/config/sh/sh.h	Thu Jan  3 20:37:53 2002
+@@ -1681,7 +1681,7 @@
+    it uses this information.  Hence, the general register <-> floating point
+    register information here is not used for SFmode.  */
+ #define REGISTER_MOVE_COST(SRCCLASS, DSTCLASS) \
+-  ((((DSTCLASS) == T_REGS) || ((DSTCLASS) == PR_REG)) ? 10		\
++  ((((DSTCLASS) == T_REGS) || ((DSTCLASS) == PR_REGS)) ? 10		\
+    : ((((DSTCLASS) == FP0_REGS || (DSTCLASS) == FP_REGS || (DSTCLASS) == DF_REGS) \
+        && ((SRCCLASS) == GENERAL_REGS || (SRCCLASS) == R0_REGS))	\
+       || (((DSTCLASS) == GENERAL_REGS || (DSTCLASS) == R0_REGS)		\
+@@ -1796,10 +1796,10 @@
  }
  
-+static void 
-+__nop (void) 
-+{ 
-+  //asm("unimp 0x42");    // We must not call this function ever. If we happen to
-+			// do it accidently, use the emergency exit. 
-+}
+ #define ASM_OUTPUT_REG_PUSH(file, v) \
+-  fprintf ((file), "\tmov.l\tr%s,-@r15\n", (v));
++  fprintf ((file), "\tmov.l\tr%d,@-r15\n", (v));
+ 
+ #define ASM_OUTPUT_REG_POP(file, v) \
+-  fprintf ((file), "\tmov.l\t@r15+,r%s\n", (v));
++  fprintf ((file), "\tmov.l\t@r15+,r%d\n", (v));
+ 
+ /* The assembler's names for the registers.  RFP need not always be used as
+    the Real framepointer; it can also be used as a normal general register.
+@@ -2214,3 +2214,5 @@
+ 
+ #define SH_DYNAMIC_SHIFT_COST \
+   (TARGET_HARD_SH4 ? 1 : TARGET_SH3 ? (TARGET_SMALLCODE ? 1 : 2) : 20)
 +
-+asm (INIT_SECTION_ASM_OP);
-+void __attribute__ ((__unused__))
-+_init (void)
-+{
-+  asm (TEXT_SECTION_ASM_OP); 
-+  __nop(); 
-+}
-+
- static void __attribute__ ((__unused__))
- init_dummy (void)
- {
-@@ -378,7 +393,6 @@
- #ifdef FORCE_INIT_SECTION_ALIGN
-   FORCE_INIT_SECTION_ALIGN;
- #endif
--  asm (TEXT_SECTION_ASM_OP);
- 
- /* This is a kludge. The i386 GNU/Linux dynamic linker needs ___brk_addr,
-    __environ and atexit (). We have to make sure they are in the .dynsym
-@@ -395,6 +409,7 @@
-   }
- #endif
- }
-+asm (TEXT_SECTION_ASM_OP);
- 
- #else  /* OBJECT_FORMAT_ELF */
- 
++#define DWARF_LINE_MIN_INSTR_LENGTH 2

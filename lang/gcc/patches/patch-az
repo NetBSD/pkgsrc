@@ -1,13 +1,34 @@
-$NetBSD: patch-az,v 1.1 2001/05/04 10:15:46 skrll Exp $
+$NetBSD: patch-az,v 1.2 2002/01/03 20:40:44 tron Exp $
 
---- ../gcc-2.95.2/libstdc++/configure.in.orig	Tue Jun  8 00:28:10 1999
-+++ ../gcc-2.95.2/libstdc++/configure.in
-@@ -73,6 +73,8 @@
-     *-*-linux*aout*)	;;
-     *-*-freebsd2*)	;;
-     *-*-freebsd*)	frags="${frags} freebsd.ml" ;;
-+    *-*-netbsdelf*)	frags="${frags} netbsdelf.ml" ;;
-+    *-*-netbsd*)        frags="${frags} netbsd.ml" ;;
-     *-*-linux*)		frags="${frags} linux.ml" ;;
-     *-*-openbsd*)		frags="${frags} openbsd.ml" ;;
-     *-*-sysv[45]*|*-*-udk*)	frags="${frags} elf.ml" ;;
+--- ../gcc-2.95.3/gcc/config/sparc/sysv4.h.orig	Mon Jun 21 19:48:53 1999
++++ ../gcc-2.95.3/gcc/config/sparc/sysv4.h	Thu Jan  3 20:37:54 2002
+@@ -210,6 +210,29 @@
+ #define ASM_OUTPUT_ALIGNED_BSS(FILE, DECL, NAME, SIZE, ALIGN) \
+   asm_output_aligned_bss (FILE, DECL, NAME, SIZE, ALIGN)
+ 
++/* A C statement (sans semicolon) to output an element in the table of
++   global constructors.  */
++#undef ASM_OUTPUT_CONSTRUCTOR
++#define ASM_OUTPUT_CONSTRUCTOR(FILE,NAME)				\
++  do {									\
++    ctors_section ();							\
++    fprintf (FILE, "\t%s\t ", TARGET_ARCH64 ? ASM_LONGLONG : INT_ASM_OP); \
++    assemble_name (FILE, NAME);						\
++    fprintf (FILE, "\n");						\
++  } while (0)
++
++/* A C statement (sans semicolon) to output an element in the table of
++   global destructors.  */
++#undef ASM_OUTPUT_DESTRUCTOR
++#define ASM_OUTPUT_DESTRUCTOR(FILE,NAME)       				\
++  do {									\
++    dtors_section ();                   				\
++    fprintf (FILE, "\t%s\t ", TARGET_ARCH64 ? ASM_LONGLONG : INT_ASM_OP); \
++    assemble_name (FILE, NAME);              				\
++    fprintf (FILE, "\n");						\
++  } while (0)
++
++
+ /* Override the name of the mcount profiling function.  */
+ 
+ #undef MCOUNT_FUNCTION

@@ -1,0 +1,18 @@
+$NetBSD: patch-bi,v 1.1 2002/01/03 20:40:46 tron Exp $
+
+--- ../gcc-2.95.3/gcc/objc/objc-act.c.orig	Wed Apr 14 22:28:54 1999
++++ ../gcc-2.95.3/gcc/objc/objc-act.c	Thu Jan  3 20:37:54 2002
+@@ -8399,8 +8399,11 @@
+       pushdecl (decl);
+       rest_of_decl_compilation (decl, 0, 0, 0);
+ 
+-      /* Make following constant read-only (why not)?  */
+-      readonly_data_section ();
++      /* Make following constant read-only, if not compiling PIC. */
++      if (flag_pic)
++	data_section();
++      else
++	readonly_data_section ();
+ 
+       exp = build1 (ADDR_EXPR, string_type_node, decl);
+ 
