@@ -1,15 +1,16 @@
-$NetBSD: patch-ab,v 1.8 2002/09/07 14:23:26 simonb Exp $
+$NetBSD: patch-ab,v 1.9 2003/01/22 12:52:36 simonb Exp $
 
---- scripts/adzap.conf.orig	Tue Sep  3 09:57:53 2002
-+++ scripts/adzap.conf	Tue Sep  3 09:57:53 2002
-@@ -0,0 +1,27 @@
+--- scripts/adzap.conf.orig	Fri Nov 22 15:41:33 2002
++++ scripts/adzap.conf	Fri Nov 22 15:41:33 2002
+@@ -0,0 +1,32 @@
 +# example adzap configuration file
 +# copy this file over to /etc/adzap.conf,
 +# then modify this to match your install
 +
 +ZAP_MODE=				# or "CLEAR"
-+ZAP_BASE=http://adzap.cs.zip.com.au	# a local web server will be better
-+ZAP_BASE_SSL=https://adzap.cs.zip.com.au # this can probably be ignored
++ZAP_BASE=http://adzapper.sourceforge.net/zaps	# a local web server will be better
++ZAP_BASE_SSL=https://adzapper.sourceforge.net/zaps # this can probably be ignored
++
 +ZAP_PREMATCH=				# pathname of extra pattern file
 +					# for patterns to preempt the stock
 +					# zapper
@@ -17,6 +18,10 @@ $NetBSD: patch-ab,v 1.8 2002/09/07 14:23:26 simonb Exp $
 +					# for patterns in addition to the
 +					# stock zapper; this is the one to
 +					# which you should add new ads
++ZAP_MATCH=				# pathname of extra pattern file
++					# for patterns to use instead of the
++					# inbuilt pattern list
++
 +STUBURL_AD=$ZAP_BASE/ad.gif
 +STUBURL_ADSSL=$ZAP_BASE_SSL/ad.gif
 +STUBURL_ADBG=$ZAP_BASE/adbg.gif
