@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.325 2004/01/27 09:10:26 agc Exp $
+# $NetBSD: Packages.txt,v 1.326 2004/02/01 00:29:01 snj Exp $
 ###########################################################################
 
 			==========================
@@ -1631,10 +1631,10 @@ perform the equivalent of:
  * bulk-package:
    Used to do bulk builds. If an appropriate binary package already exists,
    no action is taken. If not, this target will compile, install and
-   package it (and it's depends, if PKG_DEPENDS is set properly, see
+   package it (and its dependencies, if PKG_DEPENDS is set properly; see
    section 3.2.1). After creating the binary package, the sources, the
-   just-installed package and it's required packages are removed,
-   preserving free disk space.
+   just-installed package and its dependencies are removed to preserve
+   disk space.
 
  * bulk-install:
    Used during bulk-installs to install required packages. If an
