@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.1.1.1 2001/08/15 21:09:04 agc Exp $
+$NetBSD: patch-ab,v 1.2 2001/08/16 10:16:18 abs Exp $
 
---- mmv.c	2001/08/15 21:55:50	1.1
-+++ mmv.c	2001/08/15 21:56:37
+--- mmv.c.orig	Mon Oct 25 10:29:39 1993
++++ mmv.c
 @@ -123,10 +123,13 @@
  #include <sys/types.h>
  #include <sys/stat.h>
