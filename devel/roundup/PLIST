@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/09/14 17:30:18 recht Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/12/02 23:40:05 recht Exp $
 bin/roundup-admin
 bin/roundup-mailgw
 bin/roundup-server
@@ -199,7 +199,6 @@ share/doc/roundup/developers.html
 share/doc/roundup/developers.txt
 share/doc/roundup/features.html
 share/doc/roundup/features.txt
-share/doc/roundup/gadfly.txt
 share/doc/roundup/glossary.html
 share/doc/roundup/glossary.txt
 share/doc/roundup/images/edit.png
