@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1998/09/13 14:58:41 garbled Exp $
+# $NetBSD: Makefile,v 1.4 1998/09/16 09:37:28 matthias Exp $
 
 DISTNAME=		vice-0.15.0
 CATEGORIES=		emulators
@@ -24,7 +24,7 @@ post-install:
 		done; \
 	done
 	for ii in chargen edit2.b edit4.b40 edit4.b80 pet2001 pet3032 pet4032; do \
-		${INSTALL_DATA} ${WRKSRC}/data/PET/$ii ${PREFIX}/share/vice/PET; \
+		${INSTALL_DATA} ${WRKSRC}/data/PET/$$ii ${PREFIX}/share/vice/PET; \
 	done
 
 .include "../../mk/bsd.pkg.mk"
