@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/01/24 15:46:42 grant Exp $
+# $NetBSD: Makefile,v 1.8 2004/01/26 15:16:53 jmmv Exp $
 #
 
 DISTNAME=	avi-xmms-1.2.2
@@ -21,6 +21,6 @@ LIBTOOL_OVERRIDE=       ${WRKSRC}/libtool
 
 .include "../../audio/xmms/buildlink2.mk"
 .include "../../devel/SDL/buildlink2.mk"
-.include "../../graphics/avifile/buildlink2.mk"
+.include "../../multimedia/avifile/buildlink2.mk"
 .include "../../x11/gtk/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
