@@ -33,9 +33,3 @@ for i in `${SED} -n -e '/^@comment begin DATA$/,/^@comment end DATA$/p' ${PLIST_
 	src=`echo $i | sed -e 's@lib/mozilla@dist/bin@'`;
 	${BSD_INSTALL_DATA} ${WRKSRC}/${src} ${PREFIX}/$i
 done
-
-# install missing data.
-# those files are generated automatically at first startup
-# without root privilege, those could not be generated and mozilla could not be started
-${BSD_INSTALL_DATA} ${FILESDIR}/user-locales.rdf ${PREFIX}/lib/mozilla/chrome
-${BSD_INSTALL_DATA} ${FILESDIR}/user-skins.rdf ${PREFIX}/lib/mozilla/chrome
