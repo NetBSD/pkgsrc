@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.237 2003/02/17 23:34:07 grant Exp $
+# $NetBSD: Makefile,v 1.238 2003/02/18 00:23:24 grant Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -13,6 +13,7 @@ SUBDIR+=	ap-auth-cookie
 SUBDIR+=	ap-auth-ldap
 SUBDIR+=	ap-auth-pam
 SUBDIR+=	ap-auth-postgresql
+SUBDIR+=	ap-auth-script
 SUBDIR+=	ap-bandwidth
 SUBDIR+=	ap-csacek
 SUBDIR+=	ap-dav
