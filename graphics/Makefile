@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.214 2002/12/04 18:39:22 drochner Exp $
+# $NetBSD: Makefile,v 1.215 2002/12/05 14:55:41 jschauma Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -203,6 +203,7 @@ SUBDIR+=	wmphoto
 SUBDIR+=	xanim
 SUBDIR+=	xart
 SUBDIR+=	xbmbrowser
+SUBDIR+=	xdvipresent
 SUBDIR+=	xfig
 SUBDIR+=	xgraph
 SUBDIR+=	xli
