@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1412 2004/02/25 09:24:52 grant Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1413 2004/02/27 16:50:48 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -2474,21 +2474,13 @@ do-config-status-override:
 	for file in ${_pattern_}; do					\
 		if [ -f "$$file" ]; then				\
 			${MV} -f $$file $$file.overridden;		\
-			(${ECHO} '#!${CONFIG_SHELL}';			\
-			 ${ECHO} '${ECHO} "$$0 $$@" >> ${WRKLOG}';	\
-			 ${ECHO} 'pkgsrc_override=no';			\
-			 ${ECHO} 'for arg';				\
-			 ${ECHO} 'do';					\
-			 ${ECHO} '	case $$arg in';			\
-			 ${ECHO} '	--recheck) pkgsrc_override=yes ;;'; \
-			 ${ECHO} '	*) ;;';				\
-			 ${ECHO} '	esac';				\
-			 ${ECHO} 'done';				\
-			 ${ECHO} 'case $$pkgsrc_override in';		\
-			 ${ECHO} 'yes) exit 0 ;;';			\
-			 ${ECHO} 'esac';				\
-			 ${ECHO} ". ${WRKSRC}/$$file.overridden";	\
-			) > $$file;					\
+			${AWK} '/ *-recheck *\| *--recheck.*)/ {	\
+					print;				\
+					print "    exit 0";		\
+					next;				\
+				}					\
+				{ print }				\
+			       ' $$file.overridden > $$file;		\
 			${CHMOD} +x $$file;				\
 		fi;							\
 	done
