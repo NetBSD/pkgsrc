@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/01/23 17:18:31 jmmv Exp $
+# $NetBSD: Makefile,v 1.5 2004/02/25 11:48:15 grant Exp $
 #
 
 DISTNAME=	docbook-simple-1.1b1
@@ -11,6 +11,7 @@ MAINTAINER=	minskim@bawi.org
 HOMEPAGE=	http://docbook.org/xml/simple/
 COMMENT=	Simplified DocBook XML DTD
 
+USE_LANGUAGES=	# empty
 NO_CONFIGURE=	YES
 NO_BUILD=	YES
 
