@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/01/25 01:39:53 rh Exp $
+# $NetBSD: Makefile,v 1.3 2002/01/29 12:36:46 drochner Exp $
 #
 
 DISTNAME=		gnumeric-0.75
@@ -8,8 +8,6 @@ MASTER_SITES=		${MASTER_SITE_GNOME:=stable/sources/gnumeric/}
 MAINTAINER=		rh@netbsd.org
 HOMEPAGE=		http://www.gnome.org/gnumeric/
 COMMENT=		Powerful and easy to use spreadsheet program from the GNOME project
-
-BUILD_DEPENDS+=		python>=2.0:../../lang/python
 
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
@@ -22,6 +20,7 @@ LDFLAGS+=      		-Wl,-R${LOCALBASE}/lib
 LDFLAGS+=      		-lunicode
 CPPFLAGS+=		-I${LOCALBASE}/include
 CONFIGURE_ARGS+=	--without-guile		# needs CVS-only guile-1.5
+CONFIGURE_ARGS+=	--without-python
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 pre-configure:
