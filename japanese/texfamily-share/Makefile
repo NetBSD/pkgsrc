@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/04/14 12:50:21 kei Exp $
+# $NetBSD: Makefile,v 1.2 2001/10/24 00:29:32 kei Exp $
 
-DISTNAME=	TeXfamily-share-1.2.1
+DISTNAME=	TeXfamily-share-1.2.1nb1
 CATEGORIES=	japanese
 MASTER_SITES=	ftp://ftp.math.s.chiba-u.ac.jp/tex/texfam-1.2/ \
 		ftp://ftp.math.s.chiba-u.ac.jp/tex/texfam-1.2.1/ \
 		ftp://ftp.ascii.co.jp/pub/TeX/ascii-ptex/tetex/ \
 		ftp://ftp.ascii.co.jp/pub/TeX/ascii-ptex/jvf/
-DISTFILES=	ptex-texmf-1.9${EXTRACT_SUFX} \
+DISTFILES=	ptex-texmf-1.10${EXTRACT_SUFX} \
 		texfam-texmf-latex209${EXTRACT_SUFX} \
 		texfam-texmf-j1.9${EXTRACT_SUFX} \
 		texfam-texmf-j1.9.1${EXTRACT_SUFX} \
@@ -18,7 +18,7 @@ DISTFILES=	ptex-texmf-1.9${EXTRACT_SUFX} \
 MAINTAINER=	kei@netbsd.org
 COMMENT=	Machine-independent part of TeXfamily (pTeX, JTeX, MuLTeX)
 
-DEPENDS+=	teTeX>=1.0.7:../../print/teTeX
+DEPENDS+=	teTeX>=1.0.7nb1:../../print/teTeX
 
 DIST_SUBDIR=	TeXfamily
 WRKSRC=		${WRKDIR}
@@ -32,7 +32,7 @@ PLIST_SRC=	${WRKDIR}/PLIST_SRC
 
 do-install:
 	@${INSTALL_DATA_DIR} ${LOCALBASE}/share/texmf.local
-.for f in ptex-texmf-1.9 texfam-texmf-latex209 texfam-texmf-j1.9 \
+.for f in ptex-texmf-1.10 texfam-texmf-latex209 texfam-texmf-j1.9 \
     texfam-texmf-j1.9.1 texfam-texmf-m0.8 \
     mulfonts-vf mulfonts-subtfm nmin-ngoth standard morisawa
 	@${GTAR} -plzx -C ${LOCALBASE}/share/texmf.local \
@@ -51,7 +51,8 @@ do-install:
 
 post-install:
 	@cd ${LOCALBASE}; \
-	 ${FIND} share/texmf.local -type f|sort > ${PLIST_SRC}; \
+	 ${CAT} ${PKGDIR}/PLIST > ${PLIST_SRC}; \
+	 ${FIND} share/texmf.local -type f|sort >> ${PLIST_SRC}; \
 	 for LINK in `${FIND} share/texmf.local -type l`; do \
 		set - X `${FILE} $$LINK`; \
 		${ECHO} "@exec ${LN} -s $$6 %D/$$LINK" >>${PLIST_SRC}; \

@@ -1,117 +1,13 @@
-$NetBSD: patch-aj,v 1.1 2001/09/02 21:26:01 hubertf Exp $
+$NetBSD: patch-aj,v 1.2 2001/10/24 00:29:31 kei Exp $
 
---- texk/web2c-m/Makefile.in.orig	Sat Mar  4 18:25:00 2000
-+++ texk/web2c-m/Makefile.in
-@@ -456,75 +456,75 @@
- 
- multex.fmt: multex
- 	$(dumpenv) $(MAKE) $(makeargs) files="--progname=multex mulplain.tex dm10.tfm" prereq-check
--	$(dumpenv) ./multex --fmt=multex --ini \\input mulplain \\dump </dev/null
-+	$(dumpenv) ./multex --fmt=multex --ini \\input mulplain \\dump </dev/null || true
+--- texk/web2c-m/Makefile.in.orig	Tue Sep 18 15:37:37 2001
++++ texk/web2c-m/Makefile.in	Tue Sep 18 15:38:07 2001
+@@ -460,7 +460,7 @@
  
  mullatex.fmt: multex
  	$(dumpenv) $(MAKE) $(makeargs) files="--progname=mullatex mullatex.ltx" prereq-check
 -	$(dumpenv) ./multex --progname=mullatex --ini \\input mullatex.ltx </dev/null
-+	$(dumpenv) ./multex --progname=mullatex --ini \\input mullatex.ltx </dev/null || true
++	$(dumpenv) ./multex --progname=mullatex --ini \\input mullatex.ltx </dev/null || ${TRUE}
  
  mullatex209.fmt: multex
  	$(dumpenv) $(MAKE) $(makeargs) files="--progname=mullatex209 mullplain.tex" prereq-check
--	$(dumpenv) ./multex --fmt=mullatex209 --ini \\input mullplain \\dump </dev/null
-+	$(dumpenv) ./multex --fmt=mullatex209 --ini \\input mullplain \\dump </dev/null || true
- 
- etex.efmt: etex
- 	$(dumpenv) $(MAKE) files="--progname=etex etex.src plain.tex cmr10.tfm" prereq-check
--	$(dumpenv) ./etex --efmt=etex --ini \*\\input etex.src \\dump </dev/null
-+	$(dumpenv) ./etex --efmt=etex --ini \*\\input etex.src \\dump </dev/null || true
- 
- elatex.efmt: etex
- 	$(dumpenv) $(MAKE) files="--progname=elatex latex.ltx" prereq-check
--	$(dumpenv) ./etex --efmt=elatex --ini \*\\input latex.ltx </dev/null
-+	$(dumpenv) ./etex --efmt=elatex --ini \*\\input latex.ltx </dev/null || true
- 
- tex.efmt: etex
- 	$(dumpenv) $(MAKE) files="--progname=tex plain.tex cmr10.tfm" prereq-check
--	$(dumpenv) ./etex --efmt=tex --ini \\input plain \\dump </dev/null
-+	$(dumpenv) ./etex --efmt=tex --ini \\input plain \\dump </dev/null || true
- 
- latex.efmt: etex
- 	$(dumpenv) $(MAKE) files="--progname=latex latex.ltx" prereq-check
--	$(dumpenv) ./etex --progname=latex --ini \\input latex.ltx </dev/null
-+	$(dumpenv) ./etex --progname=latex --ini \\input latex.ltx </dev/null || true
- 
- omega.fmt: omega
- 	$(dumpenv) $(MAKE) files="--progname=omega omega.tex" prereq-check
--	$(dumpenv) ./omega --ini \\input omega.tex \\dump </dev/null
-+	$(dumpenv) ./omega --ini \\input omega.tex \\dump </dev/null || true
- 
- lambda.fmt: omega
- 	$(dumpenv) $(MAKE) files="--progname=lambda lambda.tex" prereq-check
--	$(dumpenv) ./omega --ini --progname=lambda \\input lambda.tex </dev/null
-+	$(dumpenv) ./omega --ini --progname=lambda \\input lambda.tex </dev/null || true
- 
- pdftex.fmt: pdftex
- 	$(dumpenv) $(MAKE) files="--progname=pdftex plain.tex cmr10.tfm" prereq-check
--	$(dumpenv) ./pdftex --fmt=pdftex --ini \\pdfoutput=1 \\input plain \\dump </dev/null
-+	$(dumpenv) ./pdftex --fmt=pdftex --ini \\pdfoutput=1 \\input plain \\dump </dev/null || true
- 
- pdflatex.fmt: pdftex
- 	$(dumpenv) $(MAKE) files="--progname=pdflatex latex.ltx" prereq-check
--	$(dumpenv) ./pdftex --fmt=pdflatex --ini \\pdfoutput=1 \\input latex.ltx </dev/null
-+	$(dumpenv) ./pdftex --fmt=pdflatex --ini \\pdfoutput=1 \\input latex.ltx </dev/null || true
- 
- pdftexinfo.fmt: pdftex
- 	$(dumpenv) $(MAKE) files="--progname=pdftexinfo pdftexinfo.ini" prereq-check
--	$(dumpenv) ./pdftex --progname=pdftexinfo --ini pdftexinfo.ini </dev/null
-+	$(dumpenv) ./pdftex --progname=pdftexinfo --ini pdftexinfo.ini </dev/null || true
- 
- pdfetex.efmt: pdfetex
- 	$(dumpenv) $(MAKE) files="--progname=pdfetex etex.src plain.tex cmr10.tfm" prereq-check
--	$(dumpenv) ./pdfetex --efmt=pdfetex --ini \*\\pdfoutput=1\\input etex.src \\dump </dev/null
-+	$(dumpenv) ./pdfetex --efmt=pdfetex --ini \*\\pdfoutput=1\\input etex.src \\dump </dev/null || true
- 
- pdfelatex.efmt: pdfetex
- 	$(dumpenv) $(MAKE) files="--progname=pdfelatex latex.ltx" prereq-check
--	$(dumpenv) ./pdfetex --efmt=pdfelatex --ini \*\\pdfoutput=1\\input latex.ltx </dev/null
-+	$(dumpenv) ./pdfetex --efmt=pdfelatex --ini \*\\pdfoutput=1\\input latex.ltx </dev/null || true
- 
- mltex.fmt: tex
- 	$(dumpenv) $(MAKE) files="--progname=mltex plain.tex cmr10.tfm" prereq-check
--	$(dumpenv) ./tex --mltex --fmt=mltex --ini \\input plain \\dump </dev/null
-+	$(dumpenv) ./tex --mltex --fmt=mltex --ini \\input plain \\dump </dev/null || true
- 
- mllatex.fmt: tex
- 	$(dumpenv) $(MAKE) files="--progname=mllatex latex.ltx" prereq-check
--	$(dumpenv) ./tex --mltex --fmt=mllatex --ini \\input latex.ltx </dev/null
-+	$(dumpenv) ./tex --mltex --fmt=mllatex --ini \\input latex.ltx </dev/null || true
- 
- mf.base: mf
- 	$(dumpenv) $(MAKE) $(makeargs) files="plain.mf cmr10.mf $(localmodes).mf" prereq-check
--	$(dumpenv) ./mf --base=mf --ini \\input plain input $(localmodes) dump </dev/null
-+	$(dumpenv) ./mf --base=mf --ini \\input plain input $(localmodes) dump </dev/null || true
- 
- mpost.mem: mpost
- 	$(dumpenv) $(MAKE) $(makeargs) files=plain.mp prereq-check
--	$(dumpenv) ./mpost --mem=mpost --ini \\input plain dump </dev/null
-+	$(dumpenv) ./mpost --mem=mpost --ini \\input plain dump </dev/null || true
- 
- # This is meant to be called recursively, with $(files) set.
- prereq-check: $(kpathsea_dir)/kpsewhich
-@@ -546,15 +546,15 @@
- $(kpathsea_dir)/kpsewhich: $(kpathsea)
- 
- amsmultex.fmt: multex
--	$(dumpenv) ./multex --progname=amsmultex --ini amsmultex.ini </dev/null
-+	$(dumpenv) ./multex --progname=amsmultex --ini amsmultex.ini </dev/null || true
- 
- # Texinfo changes the escape character from `\' to `@'.
- texinfo.fmt: tex.fmt
--	$(dumpenv) ./tex --progname=texinfo --ini texinfo @dump </dev/null
-+	$(dumpenv) ./tex --progname=texinfo --ini texinfo @dump </dev/null || true
- 
- muleplain.fmt: multex.fmt
- 	touch muleplain.aux # Makes cross-reference warnings work right.
--	$(dumpenv) ./multex --fmt=muleplain --ini \&./multex eplain \\dump </dev/null
-+	$(dumpenv) ./multex --fmt=muleplain --ini \&./multex eplain \\dump </dev/null || true
- 
- # 
- install: install-exec install-data

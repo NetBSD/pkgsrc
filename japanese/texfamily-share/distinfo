@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.2 2001/04/21 10:13:37 wiz Exp $
+$NetBSD: distinfo,v 1.3 2001/10/24 00:29:34 kei Exp $
 
-SHA1 (TeXfamily/ptex-texmf-1.9.tar.gz) = 5a1bd59efbb51b75d64be72f823322ea49ac9adb
-Size (TeXfamily/ptex-texmf-1.9.tar.gz) = 1860801 bytes
+SHA1 (TeXfamily/ptex-texmf-1.10.tar.gz) = 8ad1e8c5c30146af00329ab5148f43b8f6481489
+Size (TeXfamily/ptex-texmf-1.10.tar.gz) = 1861430 bytes
 SHA1 (TeXfamily/texfam-texmf-latex209.tar.gz) = b28b3f10701531514503d72c3c2609a63042db29
 Size (TeXfamily/texfam-texmf-latex209.tar.gz) = 204702 bytes
 SHA1 (TeXfamily/texfam-texmf-j1.9.tar.gz) = f563c0791a649e38624965ee27c8c400639041a8

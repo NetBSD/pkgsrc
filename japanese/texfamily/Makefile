@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2001/10/17 23:23:15 hubertf Exp $
+# $NetBSD: Makefile,v 1.5 2001/10/24 00:29:30 kei Exp $
 
-DISTNAME=	TeXfamily-1.2.1
+DISTNAME=	TeXfamily-1.2.1nb1
 CATEGORIES=	japanese
 MASTER_SITES=	ftp://ftp.math.s.chiba-u.ac.jp/tex/texfam-1.2/ \
 		ftp://ftp.math.s.chiba-u.ac.jp/tex/texfam-1.2.1/ \
@@ -16,13 +16,17 @@ DISTFILES=	texfam-1.2${EXTRACT_SUFX} \
 		dvi2ps-3.2j${EXTRACT_SUFX} \
 		jmakeindex${EXTRACT_SUFX} \
 		ptex-src-2.1.10${EXTRACT_SUFX} \
-		dvipsk-jpatch-p1.5d${EXTRACT_SUFX} \
+		dvipsk-jpatch-p1.5e${EXTRACT_SUFX} \
 		mendexk2.4f${EXTRACT_SUFX}
+
+PATCH_SITES=	ftp://ftp.ascii.co.jp/pub/TeX/ascii-ptex/tetex/
+PATCHFILES=	ptex2.1.10-11.patch
+PATCH_DIST_ARGS= -d ${WRKSRC}/texk/web2c/ptex-src-2.1.10
 
 MAINTAINER=	kei@netbsd.org
 COMMENT=	TeXfamily (pTeX, JTeX, MuLTeX) - executables
 
-DEPENDS+=	TeXfamily-share-1.2.1:../../japanese/texfamily-share
+DEPENDS+=	TeXfamily-share>=1.2.1nb1:../../japanese/texfamily-share
 DEPENDS+=	ja-vflib-lib-[0-9]*:../../japanese/vflib-lib
 
 DIST_SUBDIR=	TeXfamily
@@ -72,6 +76,8 @@ CONFIGURE_ENV+=	INSTALL_PROGRAM="${INSTALL_PROGRAM}" \
 pre-extract:
 	if [ ! -e ${WRKSRC} ]; then \
 		cd ../../print/teTeX-bin && ${MAKE} patch; \
+	elif [ ! -e ${WRKSRC}/texk/texfam.ac ]; then \
+		cd ../../print/teTeX-bin && ${MAKE} clean; ${MAKE} patch; \
 	fi
 
 post-extract:
@@ -90,7 +96,7 @@ post-extract:
 	${GTAR} -xzf ${DISTDIR}/${DIST_SUBDIR}/dvi2ps-3.2j${EXTRACT_SUFX} \
 		-C ${WRKSRC}/texk
 	${GTAR} -xzf \
-		${DISTDIR}/${DIST_SUBDIR}/dvipsk-jpatch-p1.5d${EXTRACT_SUFX} \
+		${DISTDIR}/${DIST_SUBDIR}/dvipsk-jpatch-p1.5e${EXTRACT_SUFX} \
 		-C ${WRKDIR}
 	${GTAR} -xzf ${DISTDIR}/${DIST_SUBDIR}/mendexk2.4f${EXTRACT_SUFX} \
 		-C ${WRKSRC}/texk
@@ -107,16 +113,16 @@ pre-patch:
 	${PATCH} -d ${WRKSRC}/texk/dvipsk --quiet -E -p1 < \
 		${WRKDIR}/dvipsk586.patch
 
-post-configure:
-	(cd ${WRKSRC}/texk/web2c/ptex-src-2.1.10; \
-		./configure EUC ${LOCALBASE}/share/texmf.local)
-
 post-patch:
 	${MV} ${WRKSRC}/texk/kpathsea/texmf.in \
 		${WRKSRC}/texk/kpathsea/texmf.in.orig
 	${SED} -e 's,@TEXMFSITE@,${TEXMFSITE},' \
 		${WRKSRC}/texk/kpathsea/texmf.in.orig > \
 		${WRKSRC}/texk/kpathsea/texmf.in 
+
+post-configure:
+	(cd ${WRKSRC}/texk/web2c/ptex-src-2.1.10; \
+		./configure EUC ${LOCALBASE}/share/texmf.local)
 
 do-build:
 	(cd ${WRKSRC}/texk/web2c; ${GMAKE})

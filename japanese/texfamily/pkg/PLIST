@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/04/14 12:58:55 kei Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/10/24 00:29:32 kei Exp $
 bin/MakePK
 bin/dvi2ps
 bin/inijtex
@@ -161,6 +161,7 @@ share/texmf.local/dvips/base/texc.pro
 share/texmf.local/dvips/base/texps.pro
 share/texmf.local/ls-R
 share/texmf.local/web2c/jlatex.fmt
+share/texmf.local/web2c/jlatex209.fmt
 share/texmf.local/web2c/jtex.fmt
 share/texmf.local/web2c/jtex.pool
 share/texmf.local/web2c/mullatex.fmt
