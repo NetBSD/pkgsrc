@@ -1,9 +1,0 @@
-$NetBSD: patch-ad,v 1.2 2001/02/28 09:04:13 itojun Exp $
---- bin/dig/Makefile.in	Thu Feb 15 10:06:03 2001
-+++ bin/dig/Makefile.in	Wed Feb 28 17:56:50 2001
-@@ -72,4 +72,4 @@
- 	${LIBTOOL} ${INSTALL_PROGRAM} dig ${DESTDIR}${bindir}
- 	${LIBTOOL} ${INSTALL_PROGRAM} host ${DESTDIR}${bindir}
- 	${LIBTOOL} ${INSTALL_PROGRAM} nslookup ${DESTDIR}${bindir}
--	for m in ${MANPAGES}; do ${INSTALL_PROGRAM} $$m ${DESTDIR}${mandir}/man1; done
-+	for m in ${MANPAGES}; do ${INSTALL_DATA} $$m ${DESTDIR}${mandir}/man1; done
