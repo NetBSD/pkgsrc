@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/01/23 05:07:43 hamajima Exp $
+
+SHA1 (dtcpclient-20040923.tar.gz) = 0cd18e7026fb6363399d4faf973fad82ca8a9b5c
+Size (dtcpclient-20040923.tar.gz) = 11989 bytes
+SHA1 (patch-aa) = 0a0b46dbe8ed56e0276c32cb777aaaeb21d7082e
