@@ -1,6 +1,9 @@
-# $NetBSD: Makefile,v 1.13 1999/09/12 00:14:52 simonb Exp $
+# $NetBSD: Makefile,v 1.14 1999/09/12 01:37:05 simonb Exp $
 
 DISTNAME=	postfix-19990906-pl02
+PKGNAME=	postfix-19990906pl02
+PKGNAME=        mhonarc-2.2.0
+
 CATEGORIES=	mail
 MASTER_SITES=	ftp://postfix.cloud9.net/official/
 
