@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5979 2004/05/17 19:30:35 reed Exp $
+$NetBSD: CHANGES,v 1.5980 2004/05/18 12:47:23 recht Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2584,3 +2584,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added bitchbot-1.0.2 [minskim 2004-05-17]
 	Added eag-2.3 [minskim 2004-05-17]
 	Updated audit-packages to 1.31 [reed 2004-05-17]
+	Updated py-Lupy to 0.2.1 [recht 2004-05-18]
