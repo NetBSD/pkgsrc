@@ -1,0 +1,60 @@
+$NetBSD: patch-ab,v 1.1 1999/08/27 10:11:02 agc Exp $
+
+Changes for gd-1.6.3 package (GIF -> PNG)
+
+--- fly.c	1999/08/27 09:16:41	1.1
++++ fly.c	1999/08/27 09:17:03
+@@ -661,7 +661,7 @@
+ 			}
+ 			else
+ 			{
+-				brush = gdImageCreateFromGif(brushfile);
++				brush = gdImageCreateFromPng(brushfile);
+ 				gdImageSetBrush(img,brush);
+ 				brush_on = 1;
+ 				if (!quiet) fprintf(verbose_out,"## Brush Set ## to: %s\n",s);
+@@ -703,7 +703,7 @@
+ 			}
+ 			else
+ 			{
+-				tile = gdImageCreateFromGif(tilefile);
++				tile = gdImageCreateFromPng(tilefile);
+ 				gdImageSetTile(img,tile);
+ 				tile_on = TRUE;
+ 				if (!quiet) fprintf(verbose_out,"## Tile Set ## to: %s\n",s);
+@@ -767,7 +767,7 @@
+ 			break;
+ 
+ 		case END:
+-			gdImageGif(img,outfile);
++			gdImagePng(img,outfile);
+ 			fclose(outfile);
+ 			gdImageDestroy(img);
+ 			written_out = TRUE;
+@@ -788,7 +788,7 @@
+ 
+ 	/*  Write the gd to the GIF output file and exit */
+ FINISH:	if(!written_out && img) {
+-		gdImageGif(img,outfile);
++		gdImagePng(img,outfile);
+ 		fclose(outfile);
+ 		gdImageDestroy(img);
+ 	}
+@@ -1202,7 +1202,7 @@
+ 			filename);
+ 		exit(1);
+ 	}
+-	img_file = gdImageCreateFromGif(img_to_copy);
++	img_file = gdImageCreateFromPng(img_to_copy);
+ 	fclose(img_to_copy);
+ 
+ 	if( resize == 1 )
+@@ -1357,7 +1357,7 @@
+ 		else {
+ 			if(!quiet) fprintf(verbose_out,"Creating image from existing gif <%s>\n",
+ 			    filename);
+-			image = gdImageCreateFromGif(in);
++			image = gdImageCreateFromPng(in);
+ 			fclose(in);
+ 		}
+ 	}
