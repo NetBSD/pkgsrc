@@ -920,6 +920,11 @@ alink="#0000FF">
               <p><a href="http://www.sun.com/solaris/" target=
               "_top">Solaris</a></p>
             </li>
+
+            <li>
+              <p><a href="http://h30097.www3.hp.com/" target=
+              "_top">Tru64</a> (Digital UNIX/OSF1)</p>
+            </li>
           </ul>
         </div>
       </div>
@@ -1520,6 +1525,10 @@ release=pkgsrc
               </li>
 
               <li>
+                <p>DragonFlyBSD</p>
+              </li>
+
+              <li>
                 <p>FreeBSD</p>
               </li>
 
@@ -1541,6 +1550,10 @@ release=pkgsrc
 
               <li>
                 <p>Solaris</p>
+              </li>
+
+              <li>
+                <p>Tru64 (Digital UNIX/OSF1)</p>
               </li>
             </ul>
           </div>
@@ -4490,7 +4503,7 @@ CONF_FILES=   ${EGDIR}/Muttrc ${PKG_SYSCONFDIR}/Muttrc
           audit-packages installation procedure:</p>
           <pre class="screen">
 ===========================================================================
-$NetBSD: faq.xml,v 1.4 2005/01/11 16:05:20 wiz Exp $
+$NetBSD: pkgsrc.html,v 1.15 2005/01/11 16:34:44 xtraeme Exp $
 
 You may wish to have the vulnerabilities file downloaded daily so that
 it remains current.  This may be done by adding an appropriate entry
@@ -5525,7 +5538,7 @@ WRKSRC=         ${WRKDIR}/${DISTNAME}/unix
           <p>Be sure to add a RCS ID line as the first thing in any
           <code class="filename">PLIST</code> file you write:</p>
           <pre class="programlisting">
-@comment $NetBSD$
+@comment $NetBSD: pkgsrc.html,v 1.15 2005/01/11 16:34:44 xtraeme Exp $
 </pre>
         </div>
 
@@ -6200,7 +6213,7 @@ DEPENDS+=       foo&gt;=1.1.0:../../category/foo
             "filename">buildlink3.mk</code> is taken from
             <code class="filename">pkgsrc/graphics/tiff</code>:</p>
             <pre class="programlisting">
-# $NetBSD: buildlink3.mk,v 1.7 2004/03/18 09:12:12 jlam Exp $
+# $NetBSD: pkgsrc.html,v 1.15 2005/01/11 16:34:44 xtraeme Exp $
 
 BUILDLINK_DEPTH:=       ${BUILDLINK_DEPTH}+
 TIFF_BUILDLINK3_MK:=    ${TIFF_BUILDLINK3_MK}+
@@ -10710,7 +10723,7 @@ PERL5_PACKLIST=   ${PERL5_SITEARCH}/auto/Pg/.packlist
             </div>
           </div>
           <pre class="programlisting">
-# $NetBSD$
+# $NetBSD: pkgsrc.html,v 1.15 2005/01/11 16:34:44 xtraeme Exp $
 #
 
 DISTNAME=       bison-1.25
@@ -10755,7 +10768,7 @@ of the NetBSD source tree is beyond me.
             </div>
           </div>
           <pre class="programlisting">
-@comment $NetBSD$
+@comment $NetBSD: pkgsrc.html,v 1.15 2005/01/11 16:34:44 xtraeme Exp $
 bin/bison
 man/man1/bison.1.gz
 share/bison.simple

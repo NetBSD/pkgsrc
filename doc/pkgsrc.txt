@@ -14,7 +14,7 @@ The pkgsrc Developers
 
 Copyright (C) 1994-2004 The NetBSD Foundation, Inc
 
-$NetBSD: pkgsrc.xml,v 1.3 2004/10/22 00:24:48 hubertf Exp $
+$NetBSD: pkgsrc.txt,v 1.15 2005/01/11 16:34:44 xtraeme Exp $
 
 Abstract
 
@@ -297,6 +297,8 @@ platforms:
 
   * Solaris
 
+  * Tru64 (Digital UNIX/OSF1)
+
 1.2. Overview
 
 This document is divided into two parts. The first, The pkgsrc user's guide,
@@ -514,6 +516,8 @@ systems:
 
   * Darwin (Mac OS X)
 
+  * DragonFlyBSD
+
   * FreeBSD
 
   * Interix (Windows 2000, XP, 2003)
@@ -525,6 +529,8 @@ systems:
   * OpenBSD
 
   * Solaris
+
+  * Tru64 (Digital UNIX/OSF1)
 
 Support for other platforms is under development.
 
@@ -1766,7 +1772,7 @@ The following message is displayed as part of the audit-packages installation
 procedure:
 
 ===========================================================================
-$NetBSD: faq.xml,v 1.4 2005/01/11 16:05:20 wiz Exp $
+$NetBSD: pkgsrc.txt,v 1.15 2005/01/11 16:34:44 xtraeme Exp $
 
 You may wish to have the vulnerabilities file downloaded daily so that
 it remains current.  This may be done by adding an appropriate entry
@@ -2182,7 +2188,7 @@ the PLIST file (or files, see below!).
 
 Be sure to add a RCS ID line as the first thing in any PLIST file you write:
 
-@comment $NetBSD$
+@comment $NetBSD: pkgsrc.txt,v 1.15 2005/01/11 16:34:44 xtraeme Exp $
 
 8.2. Semi-automatic PLIST generation
 
@@ -2457,7 +2463,7 @@ following command will generate a good starting point for buildlink3.mk files:
 The following real-life example buildlink3.mk is taken from pkgsrc/graphics/
 tiff:
 
-# $NetBSD: buildlink3.mk,v 1.7 2004/03/18 09:12:12 jlam Exp $
+# $NetBSD: pkgsrc.txt,v 1.15 2005/01/11 16:34:44 xtraeme Exp $
 
 BUILDLINK_DEPTH:=       ${BUILDLINK_DEPTH}+
 TIFF_BUILDLINK3_MK:=    ${TIFF_BUILDLINK3_MK}+
@@ -4420,7 +4426,7 @@ A.1. files
 
 A.1.1. Makefile
 
-# $NetBSD$
+# $NetBSD: pkgsrc.txt,v 1.15 2005/01/11 16:34:44 xtraeme Exp $
 #
 
 DISTNAME=       bison-1.25
@@ -4444,7 +4450,7 @@ of the NetBSD source tree is beyond me.
 
 A.1.3. PLIST
 
-@comment $NetBSD$
+@comment $NetBSD: pkgsrc.txt,v 1.15 2005/01/11 16:34:44 xtraeme Exp $
 bin/bison
 man/man1/bison.1.gz
 share/bison.simple
