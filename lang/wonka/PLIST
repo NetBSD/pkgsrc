@@ -1,71 +1,72 @@
-@comment $NetBSD: PLIST,v 1.3 2003/07/03 11:04:42 skrll Exp $
-bin/java
-bin/wonka
-lib/device.config
-lib/ext/crypto.jar
-lib/font.properties
-lib/font/courR10.pcf
-lib/font/courR12.pcf
-lib/font/courR14.pcf
-lib/font/courR17.pcf
-lib/font/courR20.pcf
-lib/font/courR25.pcf
-lib/font/helvB08.pcf
-lib/font/helvB12.pcf
-lib/font/helvB14.pcf
-lib/font/helvB17.pcf
-lib/font/helvB18.pcf
-lib/font/helvB20.pcf
-lib/font/helvB25.pcf
-lib/font/helvR08.pcf
-lib/font/helvR12.pcf
-lib/font/helvR14.pcf
-lib/font/helvR17.pcf
-lib/font/helvR18.pcf
-lib/font/helvR20.pcf
-lib/font/helvR25.pcf
-lib/font/nippon13.pcf
-lib/font/nippon18.pcf
-lib/kbdIcon_d.png
-lib/kbdIcon_e.png
-lib/kbdSelect_d.png
-lib/kbdSelect_e.png
-lib/system.properties
-lib/taskbar.png
-lib/taskbar.properties
-lib/taskbar_large.png
-lib/vte.properties
-lib/wonka.policy
-lib/wonka.properties
-lib/wonka.security
-lib/wonkatest.properties
-lib/wre.jar
-test/CLTest.jar
-test/appletViewer.jar
-test/car-image.png
-test/car.png
-test/forest.png
-test/lena1.png
-test/lena2.png
-test/libJNIArrayTest.so
-test/libJNIClassAccessTest.so
-test/libJNIClassConstructionTest.so
-test/libJNIMemberAccessTest.so
-test/libJNIObjectFunctionAccessTest.so
-test/libJNIPrimitiveFunctionAccessTest.so
-test/libJNIPrimitiveTest.so
-test/libJNIStringTest.so
-test/mauve-suite.jar
-test/reference.data
-test/reference.data2
-test/reference.gz
-test/reference.zip
-test/rudolph3.gif
-test/utf8test.data
-test/vte.jar
-@dirrm test
-@dirrm lib/ext
-@dirrm lib/font
-@dirrm lib
-@dirrm bin
-@unexec ${RMDIR} -p %D 2>/dev/null || ${TRUE}
+@comment $NetBSD: PLIST,v 1.4 2004/07/01 00:51:23 wiz Exp $
+java/wonka/bin/java
+java/wonka/bin/wonka
+java/wonka/lib/device.config
+java/wonka/lib/ext/crypto.jar
+java/wonka/lib/font.properties
+java/wonka/lib/font/courR10.pcf
+java/wonka/lib/font/courR12.pcf
+java/wonka/lib/font/courR14.pcf
+java/wonka/lib/font/courR17.pcf
+java/wonka/lib/font/courR20.pcf
+java/wonka/lib/font/courR25.pcf
+java/wonka/lib/font/helvB08.pcf
+java/wonka/lib/font/helvB12.pcf
+java/wonka/lib/font/helvB14.pcf
+java/wonka/lib/font/helvB17.pcf
+java/wonka/lib/font/helvB18.pcf
+java/wonka/lib/font/helvB20.pcf
+java/wonka/lib/font/helvB25.pcf
+java/wonka/lib/font/helvR08.pcf
+java/wonka/lib/font/helvR12.pcf
+java/wonka/lib/font/helvR14.pcf
+java/wonka/lib/font/helvR17.pcf
+java/wonka/lib/font/helvR18.pcf
+java/wonka/lib/font/helvR20.pcf
+java/wonka/lib/font/helvR25.pcf
+java/wonka/lib/font/nippon13.pcf
+java/wonka/lib/font/nippon18.pcf
+java/wonka/lib/kbdIcon_d.png
+java/wonka/lib/kbdIcon_e.png
+java/wonka/lib/kbdSelect_d.png
+java/wonka/lib/kbdSelect_e.png
+java/wonka/lib/system.properties
+java/wonka/lib/taskbar.png
+java/wonka/lib/taskbar.properties
+java/wonka/lib/taskbar_large.png
+java/wonka/lib/vte.properties
+java/wonka/lib/wonka.policy
+java/wonka/lib/wonka.properties
+java/wonka/lib/wonka.security
+java/wonka/lib/wonkatest.properties
+java/wonka/lib/wre.jar
+java/wonka/test/CLTest.jar
+java/wonka/test/appletViewer.jar
+java/wonka/test/car-image.png
+java/wonka/test/car.png
+java/wonka/test/forest.png
+java/wonka/test/lena1.png
+java/wonka/test/lena2.png
+java/wonka/test/libJNIArrayTest.so
+java/wonka/test/libJNIClassAccessTest.so
+java/wonka/test/libJNIClassConstructionTest.so
+java/wonka/test/libJNIMemberAccessTest.so
+java/wonka/test/libJNIObjectFunctionAccessTest.so
+java/wonka/test/libJNIPrimitiveFunctionAccessTest.so
+java/wonka/test/libJNIPrimitiveTest.so
+java/wonka/test/libJNIStringTest.so
+java/wonka/test/mauve-suite.jar
+java/wonka/test/reference.data
+java/wonka/test/reference.data2
+java/wonka/test/reference.gz
+java/wonka/test/reference.zip
+java/wonka/test/rudolph3.gif
+java/wonka/test/utf8test.data
+java/wonka/test/vte.jar
+@dirrm java/wonka/test
+@dirrm java/wonka/lib/ext
+@dirrm java/wonka/lib/font
+@dirrm java/wonka/lib
+@dirrm java/wonka/bin
+@dirrm java/wonka
+@unexec ${RMDIR} %D/java 2>/dev/null || ${TRUE}
