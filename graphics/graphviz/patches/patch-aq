@@ -1,75 +1,121 @@
-$NetBSD: patch-aq,v 1.4 2002/08/28 13:49:38 seb Exp $
+$NetBSD: patch-aq,v 1.5 2003/03/03 11:35:00 seb Exp $
 
---- tcldot/Makefile.in.orig	Mon Aug  5 05:11:27 2002
+--- tcldot/Makefile.in.orig	2003-03-02 20:12:23.000000000 +0000
 +++ tcldot/Makefile.in
-@@ -185,15 +185,7 @@ Z_LIBS = @Z_LIBS@
- 
- AUTOMAKE_OPTIONS = 1.4
- 
--INCLUDES = @TCL_CFLAGS@ @TCL_INCLUDES@ \
--	-I$(top_srcdir)/dotneato/dotgen \
--	-I$(top_srcdir)/dotneato/neatogen \
--	-I$(top_srcdir)/dotneato/twopigen \
--	-I$(top_srcdir)/dotneato/common \
--	-I$(top_srcdir)/graph \
--	-I$(top_srcdir)/cdt \
--	-I$(top_srcdir)/pathplan \
--	-I$(top_srcdir)/tclhandle
-+INCLUDES = @TCL_CFLAGS@ @TCL_INCLUDES@ 	-I$(top_srcdir)/dotneato/dotgen 	-I$(top_srcdir)/dotneato/neatogen 	-I$(top_srcdir)/dotneato/twopigen 	-I$(top_srcdir)/dotneato/common 	-I$(top_srcdir)/graph 	-I$(top_srcdir)/cdt 	-I$(top_srcdir)/pathplan 	-I$(top_srcdir)/tclhandle
- 
- 
- LIBS = @LIBS@ -lc
-@@ -208,25 +200,12 @@ man_MANS = tcldot.n
- 
- libtcldot_la_SOURCES = tcldot.c tkgen.c tcldot.h
- 
--libtcldot_la_LIBADD = \
--	../tclhandle/libtclhandle.la \
--	../dotneato/common/libdotneato.la \
--        ../dotneato/dotgen/libdot.la \
--        ../dotneato/neatogen/libneato.la \
--        ../dotneato/twopigen/libtwopi.la \
--        ../dotneato/pack/libpackconvenience.la \
--        ../pathplan/libpathplanconvenience.la \
--        ../graph/libgraphconvenience.la \
--	../cdt/libcdtconvenience.la \
--	../gd/libgdconvenience.la \
--	../gdtclft/gdtclft.lo \
--	../tclstubs/libtclstubs.la
-+libtcldot_la_LIBADD =  	../tclhandle/libtclhandle.la 	../dotneato/common/libdotneato.la         ../dotneato/dotgen/libdot.la         ../dotneato/neatogen/libneato.la         ../dotneato/twopigen/libtwopi.la         ../dotneato/pack/libpackconvenience.la         ../pathplan/libpathplanconvenience.la         ../graph/libgraphconvenience.la 	../cdt/libcdtconvenience.la 	../gd/libgdconvenience.la 	../gdtclft/gdtclft.lo 	${TCL_STUB_LIB_SPEC}
+@@ -241,7 +241,7 @@ libtcldot_la_LIBADD = \
+ 	$(top_srcdir)/cdt/libcdtconvenience.la \
+ 	$(top_srcdir)/gd/libgdconvenience.la \
+ 	$(top_srcdir)/gdtclft/gdtclft.lo \
+-	$(top_srcdir)/tclstubs/libtclstubs.la
++	${TCL_STUB_LIB_SPEC}
  
  
  CLEANFILES = pkgIndex.tcl
+@@ -266,8 +266,7 @@ libtcldot_la_DEPENDENCIES = $(top_srcdir
+ 	$(top_srcdir)/graph/libgraphconvenience.la \
+ 	$(top_srcdir)/cdt/libcdtconvenience.la \
+ 	$(top_srcdir)/gd/libgdconvenience.la \
+-	$(top_srcdir)/gdtclft/gdtclft.lo \
+-	$(top_srcdir)/tclstubs/libtclstubs.la
++	$(top_srcdir)/gdtclft/gdtclft.lo
+ am_libtcldot_la_OBJECTS = tcldot.lo tkgen.lo
+ libtcldot_la_OBJECTS = $(am_libtcldot_la_OBJECTS)
  
--EXTRA_DIST = $(man_MANS) README README.Tkspline \
--	nmakefile Makefile.old
-+EXTRA_DIST = $(man_MANS) README README.Tkspline 	nmakefile Makefile.old
+@@ -275,8 +274,7 @@ DEFS = @DEFS@
+ DEFAULT_INCLUDES =  -I. -I$(srcdir) -I$(top_builddir)
+ CPPFLAGS = @CPPFLAGS@
+ LDFLAGS = @LDFLAGS@
+-depcomp = $(SHELL) $(top_srcdir)/depcomp
+-@AMDEP_TRUE@DEP_FILES = $(DEPDIR)/tcldot.Plo $(DEPDIR)/tkgen.Plo
++depcomp =
+ COMPILE = $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \
+ 	$(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
+ LTCOMPILE = $(LIBTOOL) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) \
+@@ -315,7 +313,7 @@ distclean-libtool:
+ 	-rm -f libtool
+ $(srcdir)/Makefile.in:  Makefile.am  $(top_srcdir)/configure.in $(ACLOCAL_M4)
+ 	cd $(top_srcdir) && \
+-	  $(AUTOMAKE) --gnu  tcldot/Makefile
++	  $(AUTOMAKE) --foreign  --ignore-deps tcldot/Makefile
+ Makefile:  $(srcdir)/Makefile.in  $(top_builddir)/config.status
+ 	cd $(top_builddir) && \
+ 	  CONFIG_HEADERS= CONFIG_LINKS= \
+@@ -348,30 +346,14 @@ mostlyclean-compile:
+ distclean-compile:
+ 	-rm -f *.tab.c
  
- mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
- CONFIG_HEADER = ../gvconfig.h
-@@ -248,7 +227,7 @@ libtcldot_la_DEPENDENCIES =  ../tclhandl
- ../dotneato/pack/libpackconvenience.la \
- ../pathplan/libpathplanconvenience.la ../graph/libgraphconvenience.la \
- ../cdt/libcdtconvenience.la ../gd/libgdconvenience.la \
--../gdtclft/gdtclft.lo ../tclstubs/libtclstubs.la
-+../gdtclft/gdtclft.lo
- libtcldot_la_OBJECTS =  tcldot.lo tkgen.lo
- COMPILE = $(CC) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
- LTCOMPILE = $(LIBTOOL) --mode=compile $(CC) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
-@@ -265,7 +244,7 @@ DIST_COMMON =  README Makefile.am Makefi
- 
- DISTFILES = $(DIST_COMMON) $(SOURCES) $(HEADERS) $(TEXINFOS) $(EXTRA_DIST)
- 
--TAR = gtar
-+TAR = tar
- GZIP_ENV = --best
- SOURCES = $(libtcldot_la_SOURCES)
- OBJECTS = $(libtcldot_la_OBJECTS)
-@@ -506,7 +485,6 @@ distdir: $(DISTFILES)
- 	      || exit 1; \
- 	  fi; \
- 	done
+-@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/tcldot.Plo@am__quote@
+-@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/tkgen.Plo@am__quote@
 -
- info-am:
- info: info-recursive
- dvi-am:
+-distclean-depend:
+-	-rm -rf $(DEPDIR)
+-
+ .c.o:
+-@AMDEP_TRUE@	source='$<' object='$@' libtool=no @AMDEPBACKSLASH@
+-@AMDEP_TRUE@	depfile='$(DEPDIR)/$*.Po' tmpdepfile='$(DEPDIR)/$*.TPo' @AMDEPBACKSLASH@
+-@AMDEP_TRUE@	$(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+ 	$(COMPILE) -c `test -f $< || echo '$(srcdir)/'`$<
+ 
+ .c.obj:
+-@AMDEP_TRUE@	source='$<' object='$@' libtool=no @AMDEPBACKSLASH@
+-@AMDEP_TRUE@	depfile='$(DEPDIR)/$*.Po' tmpdepfile='$(DEPDIR)/$*.TPo' @AMDEPBACKSLASH@
+-@AMDEP_TRUE@	$(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+ 	$(COMPILE) -c `cygpath -w $<`
+ 
+ .c.lo:
+-@AMDEP_TRUE@	source='$<' object='$@' libtool=yes @AMDEPBACKSLASH@
+-@AMDEP_TRUE@	depfile='$(DEPDIR)/$*.Plo' tmpdepfile='$(DEPDIR)/$*.TPlo' @AMDEPBACKSLASH@
+-@AMDEP_TRUE@	$(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+ 	$(LTCOMPILE) -c -o $@ `test -f $< || echo '$(srcdir)/'`$<
+-CCDEPMODE = @CCDEPMODE@
+ uninstall-info-am:
+ 
+ manndir = $(mandir)/mann
+@@ -578,8 +560,8 @@ clean-am: clean-generic clean-libtool cl
+ 
+ distclean: distclean-recursive
+ 
+-distclean-am: clean-am distclean-compile distclean-depend \
+-	distclean-generic distclean-libtool distclean-tags
++distclean-am: clean-am distclean-compile distclean-generic \
++	distclean-libtool distclean-tags
+ 
+ dvi: dvi-recursive
+ 
+@@ -617,21 +599,21 @@ uninstall-man: uninstall-mann
+ 
+ .PHONY: $(RECURSIVE_TARGETS) GTAGS all all-am all-local check check-am \
+ 	clean clean-generic clean-libtool clean-pkglibLTLIBRARIES \
+-	clean-recursive distclean distclean-compile distclean-depend \
+-	distclean-generic distclean-libtool distclean-recursive \
+-	distclean-tags distdir dvi dvi-am dvi-recursive info info-am \
+-	info-recursive install install-am install-data install-data-am \
+-	install-data-recursive install-exec install-exec-am \
+-	install-exec-recursive install-info install-info-am \
+-	install-info-recursive install-man install-mann \
+-	install-pkglibLTLIBRARIES install-recursive install-strip \
+-	installcheck installcheck-am installdirs installdirs-am \
+-	installdirs-recursive maintainer-clean maintainer-clean-generic \
+-	maintainer-clean-recursive mostlyclean mostlyclean-compile \
+-	mostlyclean-generic mostlyclean-libtool mostlyclean-recursive \
+-	tags tags-recursive uninstall uninstall-am uninstall-info-am \
+-	uninstall-info-recursive uninstall-man uninstall-mann \
+-	uninstall-pkglibLTLIBRARIES uninstall-recursive
++	clean-recursive distclean distclean-compile distclean-generic \
++	distclean-libtool distclean-recursive distclean-tags distdir \
++	dvi dvi-am dvi-recursive info info-am info-recursive install \
++	install-am install-data install-data-am install-data-recursive \
++	install-exec install-exec-am install-exec-recursive \
++	install-info install-info-am install-info-recursive install-man \
++	install-mann install-pkglibLTLIBRARIES install-recursive \
++	install-strip installcheck installcheck-am installdirs \
++	installdirs-am installdirs-recursive maintainer-clean \
++	maintainer-clean-generic maintainer-clean-recursive mostlyclean \
++	mostlyclean-compile mostlyclean-generic mostlyclean-libtool \
++	mostlyclean-recursive tags tags-recursive uninstall \
++	uninstall-am uninstall-info-am uninstall-info-recursive \
++	uninstall-man uninstall-mann uninstall-pkglibLTLIBRARIES \
++	uninstall-recursive
+ 
+ 
+ all-local: pkgIndex.tcl

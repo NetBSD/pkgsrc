@@ -1,8 +1,8 @@
-$NetBSD: patch-ak,v 1.4 2002/08/28 13:49:37 seb Exp $
+$NetBSD: patch-ak,v 1.5 2003/03/03 11:35:00 seb Exp $
 
---- tcldgl/demo/Makefile.in.orig	Mon Aug  5 05:11:31 2002
+--- tcldgl/demo/Makefile.in.orig	2003-03-02 20:12:23.000000000 +0000
 +++ tcldgl/demo/Makefile.in
-@@ -185,7 +185,7 @@ Z_LIBS = @Z_LIBS@
+@@ -206,7 +206,7 @@ install_sh = @install_sh@
  
  AUTOMAKE_OPTIONS = 1.4
  
@@ -10,13 +10,21 @@ $NetBSD: patch-ak,v 1.4 2002/08/28 13:49:37 seb Exp $
 +demodir = $(prefix)/share/examples/@PACKAGE@
  demo_SCRIPTS = dge
  demo_DATA = dge.README dge.example1.dot  dge.example2.dot
- EXTRA_DIST = $(demo_SCRIPTS) $(demo_DATA)
-@@ -201,7 +201,7 @@ DIST_COMMON =  Makefile.am Makefile.in
+ EXTRA_DIST = $(demo_SCRIPTS) $(demo_DATA) CVS/*
+@@ -216,6 +216,7 @@ CONFIG_HEADER = $(top_builddir)/config.h
+ CONFIG_CLEAN_FILES =
+ SCRIPTS = $(demo_SCRIPTS)
  
- DISTFILES = $(DIST_COMMON) $(SOURCES) $(HEADERS) $(TEXINFOS) $(EXTRA_DIST)
++depcomp =
+ DIST_SOURCES =
+ DATA = $(demo_DATA)
  
--TAR = gtar
-+TAR = tar
- GZIP_ENV = --best
- all: all-redirect
- .SUFFIXES:
+@@ -234,7 +235,7 @@ distclean-libtool:
+ 	-rm -f libtool
+ $(srcdir)/Makefile.in:  Makefile.am  $(top_srcdir)/configure.in $(ACLOCAL_M4)
+ 	cd $(top_srcdir) && \
+-	  $(AUTOMAKE) --gnu  tcldgl/demo/Makefile
++	  $(AUTOMAKE) --foreign  --ignore-deps tcldgl/demo/Makefile
+ Makefile:  $(srcdir)/Makefile.in  $(top_builddir)/config.status
+ 	cd $(top_builddir) && \
+ 	  CONFIG_HEADERS= CONFIG_LINKS= \
