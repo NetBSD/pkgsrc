@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2001/02/17 17:42:09 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2001/05/29 18:04:30 jlam Exp $
 # FreeBSD Id: Makefile,v 1.9 1997/03/08 05:00:11 gpalmer Exp
 #
 
@@ -11,7 +11,6 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.amanda.org/
 COMMENT=		Client part of Amanda, a network backup system
 
-DEPENDS+=		readline>=4.0:../../devel/readline
 DEPENDS+=		gtar-1.12:../../archivers/gtar
 DEPENDS+=		amanda-common-2.4.2:../../sysutils/amanda-common
 
@@ -19,8 +18,24 @@ GNU_CONFIGURE=		yes
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../sysutils/amanda-common/Makefile.common"
+.include "../../devel/readline/buildlink.mk"
+
+CPPFLAGS+=		-I${BUILDLINK_INCDIR}
+LDFLAGS+=		-L${BUILDLINK_LIBDIR}
 
 CONFIGURE_ARGS+=	--without-server --without-restore
+CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
+
+# Prevent configure script from finding unnecessary libraries.  We'll patch
+# the amrecover Makefile to add the readline libraries as it's the only
+# program that uses readline.
+#
+CONFIGURE_ENV+=         ac_cv_lib_intl_main=no
+CONFIGURE_ENV+=         ac_cv_lib_termcap_tgetent=no
+CONFIGURE_ENV+=         ac_cv_lib_curses_tgetent=no
+CONFIGURE_ENV+=         ac_cv_lib_ncurses_tgetent=no
+CONFIGURE_ENV+=         ac_cv_lib_ncurses_tgetent=no
+CONFIGURE_ENV+=         ac_cv_lib_readline_readline=no
 
 BUILD_DEFS+=		AMANDA_USER AMANDA_SMB AMANDA_VAR
 
@@ -28,5 +43,7 @@ BUILD_DEFS+=		AMANDA_USER AMANDA_SMB AMANDA_VAR
 CONFIGURE_ARGS+=	--with-smbclient
 DEPENDS+=		samba>=2.0.0:../../net/samba
 .endif
+
+pre-configure: ${BUILDLINK_TARGETS}
 
 .include "../../mk/bsd.pkg.mk"
