@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2001/03/27 03:19:55 hubertf Exp $
+# $NetBSD: Makefile,v 1.9 2001/04/04 17:04:00 manu Exp $
 
-DISTNAME=		linuxppc_lib-2000.q4.2
+DISTNAME=		linuxppc_lib-2000.q4.3
 CATEGORIES=		emulators
 MASTER_SITES=		ftp://ftp.linuxppc.org/linuxppc-halloween/software/
 DISTFILES=		glibc-2.1.3-15f.ppc.rpm glib-1.2.8-3.ppc.rpm \
