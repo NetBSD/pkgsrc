@@ -1,4 +1,4 @@
-# $NetBSD: defs.Linux.mk,v 1.73 2004/06/18 11:22:41 kristerw Exp $
+# $NetBSD: defs.Linux.mk,v 1.74 2004/06/27 22:54:21 jschauma Exp $
 #
 # Variable definitions for the Linux operating system.
 
@@ -30,7 +30,7 @@ EGREP?=		/bin/egrep
 EGREP?=		/usr/bin/egrep
 .endif
 EXPR?=		/usr/bin/expr
-FALSE?=		/bin/false
+FALSE?=		false				# Shell builtin
 .if exists(/bin/fgrep)
 FGREP?=		/bin/fgrep
 .elif exists(/usr/bin/fgrep)
@@ -116,20 +116,16 @@ SU?=		/bin/su
 TAIL?=		/usr/bin/tail
 TAR?=		${LOCALBASE}/bin/tar
 TEE?=		/usr/bin/tee
-.if exists(/bin/test)
-TEST?=		/bin/test
-.else
-TEST?=		/usr/bin/test
-.endif
+TEST?=		test			# Shell builtin
 .if exists(/bin/touch)
 TOUCH?=		/bin/touch
 .else
 TOUCH?=		/usr/bin/touch
 .endif
 TR?=		/usr/bin/tr
-TRUE?=		/bin/true
+TRUE?=		true			# Shell builtin
 TSORT?=		/usr/bin/tsort
-TYPE?=		type
+TYPE?=		type			# Shell builtin
 WC?=		/usr/bin/wc
 XARGS?=		/usr/bin/xargs -r
 
