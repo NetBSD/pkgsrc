@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:24:44 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/01/29 16:13:35 taca Exp $
 bin/irb${_RUBY_SUFFIX}
 bin/ruby
 bin/ruby${_RUBY_SUFFIX}
@@ -100,9 +100,9 @@ ${RUBY_LIBDIR}/net/protocol.rb
 ${RUBY_LIBDIR}/net/smtp.rb
 ${RUBY_LIBDIR}/net/telnet.rb
 @exec /bin/mkdir -p %D/${RUBY_SITEARCHLIBDIR}
-@dirrm ${RUBY_SITEARCHLIBDIR}
-@dirrm ${RUBY_SITELIBDIR}
-@dirrm lib/ruby/site_ruby
+@unexec ${RMDIR} %D/${RUBY_SITEARCHLIBDIR} 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/${RUBY_SITELIBDIR} 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/lib/ruby/site_ruby 2>/dev/null || ${TRUE}
 @dirrm ${RUBY_ARCHLIBDIR}
 @dirrm ${RUBY_LIBDIR}/cgi
 @dirrm ${RUBY_LIBDIR}/net
