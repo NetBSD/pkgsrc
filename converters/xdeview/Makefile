@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.24 2003/07/17 21:27:45 grant Exp $
+# $NetBSD: Makefile,v 1.25 2004/01/28 13:20:05 xtraeme Exp $
 #
 
 DISTNAME=	uudeview-0.5.18
 PKGNAME=	xdeview-0.5.18
+PKGREVISION=	1
 CATEGORIES=	converters
 MASTER_SITES=	http://www.fpx.de/fp/Software/UUDeview/download/
 
@@ -10,7 +11,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.fpx.de/fp/Software/UUDeview/
 COMMENT=	X11 program for uu/xx/Base64/BinHex de-/encoding
 
-USE_X11BASE=	yes
+USE_X11=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-tcl="${LOCALBASE}" --enable-tk="${LOCALBASE}"
 LDFLAGS+=	-s -lX11
