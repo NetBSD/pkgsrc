@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.2 2003/08/01 13:44:51 jschauma Exp $
+$NetBSD: patch-aa,v 1.2.6.1 2004/07/29 21:48:56 agc Exp $
 
---- configure.orig	Sun Jun 23 01:13:01 2002
-+++ configure	Sun Jul 27 18:06:40 2003
-@@ -2,63 +2,6 @@
+--- configure.orig	2002-06-23 15:13:01.000000000 +1000
++++ configure
+@@ -2,62 +2,7 @@
  
  PROGNAME=fspanel
  
@@ -62,11 +62,11 @@ $NetBSD: patch-aa,v 1.2 2003/08/01 13:44:51 jschauma Exp $
 -else
 -	echo no
 -fi
--
++LDFLAGS="$LDFLAGS -lX11"
+ 
  echo -n "checking for Linux... "
  if test "`uname`" = "Linux"; then
- 	CFLAGS="$CFLAGS -DNOSTDLIB -nostdlib"
-@@ -67,26 +10,22 @@
+@@ -67,26 +12,22 @@ else
  	echo no
  fi
  

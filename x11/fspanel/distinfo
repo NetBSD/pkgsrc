@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2003/08/01 13:44:51 jschauma Exp $
+$NetBSD: distinfo,v 1.2.6.1 2004/07/29 21:48:56 agc Exp $
 
 SHA1 (fspanel-0.8beta1.tar.gz) = 80225c1cd6984b458e487db3cbc04d8e3a4173d8
 Size (fspanel-0.8beta1.tar.gz) = 9703 bytes
-SHA1 (patch-aa) = de1923370525dd6b4a127ef12c1eae17557a7c35
+SHA1 (patch-aa) = 8a61200ff8ef1c05b78ed4bb1a9150c52a95b5e5
