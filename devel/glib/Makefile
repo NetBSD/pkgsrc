@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2002/02/18 15:14:11 seb Exp $
+# $NetBSD: Makefile,v 1.43 2002/03/21 12:20:29 dmcmahill Exp $
 # FreeBSD Id: Makefile,v 1.2 1998/08/06 14:55:12 vanilla Exp
 #
 
@@ -74,6 +74,10 @@ post-configure:
 		${MV} $${file}.fixed $${file};				\
 	done
 .endif
+
+test: build
+	cd ${WRKSRC} &&  ${MAKE_ENV} ${MAKE_PROGRAM} check 2>&1 | \
+		tee ${WRKDIR}/check.log
 
 .include "../../mk/pthread.buildlink.mk"
 .include "../../mk/texinfo.mk"
