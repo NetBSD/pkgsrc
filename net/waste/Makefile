@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/07/21 17:11:28 martti Exp $
+# $NetBSD: Makefile,v 1.5 2004/02/19 18:44:51 kristerw Exp $
 #
 
 DISTNAME=	waste-source
@@ -12,7 +12,6 @@ MASTER_SITES=	http://www.dhorrocks2003.pwp.blueyonder.co.uk/ \
 		http://edwards.servehttp.com:969/waste/ \
 		http://www.cleanstick.org/jon/junk/ \
 		http://www.samsimpson.com/ \
-		http://cyber.law.harvard.edu/blogs/gems/home/ \
 		http://www.sifnt.net/ \
 		ftp://ftp.wiresec.net/waste/ \
 		http://slackerbitch.free.fr/waste/
