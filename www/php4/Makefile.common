@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2001/03/01 18:18:17 jlam Exp $
+# $NetBSD: Makefile.common,v 1.9 2001/04/30 03:25:15 jlam Exp $
 
 DISTNAME=		php-${PHP_DIST_VERS}
 PHP_DIST_VERS=		4.0.4pl1
@@ -29,6 +29,15 @@ PLIST_SUBST+=		PHP_EXTENSION_DIR=${PHP_EXTENSION_DIR}
 USE_LIBTOOL=		# defined
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
+.include "../../mk/bsd.prefs.mk"
+
+PHP_CONFDIR?=		${LOCALBASE}/etc
+MESSAGE_SUBST+=		PHP_CONFDIR=${PHP_CONFDIR}
+
+.if ${OPSYS} == "SunOS"
+DEPENDS+=		zlib-*:../../devel/zlib
+.endif
+
 # Here we configure only for what NetBSD ships.  We add the rest via modules.
 #
 GNU_CONFIGURE=		# defined
@@ -47,7 +56,7 @@ CONFIGURE_ARGS+=	--without-mysql
 CONFIGURE_ARGS+=	--with-gdbm=${LOCALBASE}
 CONFIGURE_ARGS+=	--with-gettext=${GETTEXTDIR}
 CONFIGURE_ARGS+=	--with-yp --with-zlib
-CONFIGURE_ARGS+=	--with-config-file-path=${PREFIX}/etc
+CONFIGURE_ARGS+=	--with-config-file-path=${PHP_CONFDIR}
 CONFIGURE_ARGS+=	--with-system-regex
 CONFIGURE_ARGS+=	--with-exec-dir=${PREFIX}/libexec/php4
 CONFIGURE_ARGS+=	--enable-track-vars
@@ -63,12 +72,6 @@ CONFIGURE_ARGS+=	--enable-wddx
 #
 CONFIGURE_ARGS+=	--with-dbase
 CONFIGURE_ARGS+=	--with-filepro
-
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "SunOS"
-DEPENDS+=		zlib-*:../../devel/zlib
-.endif
 
 pre-configure: pre-common-configure
 
