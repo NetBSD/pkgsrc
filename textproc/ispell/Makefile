@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1998/04/15 10:38:50 agc Exp $
+# $NetBSD: Makefile,v 1.6 1998/04/16 12:44:26 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.21 1997/08/13 23:29:52 jmz Exp
 #
 
@@ -10,6 +10,8 @@ MASTER_SITES=	ftp://ftp.cs.ucla.edu/pub/ispell-3.1/
 MAINTAINER=	jmz@FreeBSD.org
 
 MAKE_FLAGS=	TMPDIR=${.CURDIR} -f
+SCRIPTS_ENV=	"LANG=${LANG}"
+
 MAN1=		buildhash.1 findaffix.1 ispell.1 munchlist.1 \
 		sq.1 tryaffix.1 unsq.1
 MAN4=		ispell.4 english.4
