@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2001/09/27 23:18:44 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2001/09/28 04:42:48 lukem Exp $
 
-DISTNAME=		nut-0.44.3-pre5
-PKGNAME=		ups-nut-cgi-0.44.3pre5
+DISTNAME=		nut-0.45.1
+PKGNAME=		ups-nut-cgi-0.45.1
 CATEGORIES=		sysutils
-MASTER_SITES=		http://www.exploits.org/nut/testing/0.44.3-pre/
+MASTER_SITES=		http://www.exploits.org/nut/release/
 
 MAINTAINER=		collver@linuxfreemail.com
 HOMEPAGE=		http://www.exploits.org/nut/
@@ -13,14 +13,12 @@ DEPENDS+=		gd-[0-9]*:../../graphics/gd
 DEPENDS+=		ups-nut-0*:../ups-nut
 BUILD_DEPENDS+=		autoconf>=2.13:../../devel/autoconf
 
-WRKSRC=			${WRKDIR}/nut-0.44.3
-
 ALL_TARGET=		cgi
 INSTALL_TARGET=		install-cgi
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${LOCALBASE}/etc/nut \
-			--with-state-path=/var/db \
+			--with-statepath=/var/db/nut \
 			--with-cgipath=${LOCALBASE}/share/nut/cgi \
 			--with-graphics=${LOCALBASE}
 
