@@ -1,34 +1,25 @@
-# $NetBSD: Makefile,v 1.1.1.1 1998/11/05 08:28:48 garbled Exp $
+# $NetBSD: Makefile,v 1.2 1998/11/13 16:29:18 tv Exp $
 #
 
 DISTNAME=		t1lib-0.8-beta
-PKGNAME=		t1libx-0.8
+PKGNAME=		t1lib-0.8
 CATEGORIES=		textproc x11
-MASTER_SITES=		#empty
+MASTER_SITES=		${MASTER_SITE_SUNSITE}
+MASTER_SITE_SUBDIR=	libs/graphics/
 
 MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.neuroinformatik.ruhr-uni-bochum.de/ini/PEOPLE/rmz/t1lib.html
 
-DEPENDS+=		t1lib-0.8:../../textproc/t1lib
+#DEPENDS+=		t1lib-0.8:../../textproc/t1lib
 
-WRKSRC=			../../textproc/t1lib/work/T1-0.8-beta
-NO_CHECKSUM=		yes
+WRKSRC=			${WRKDIR}/T1-0.8-beta
 USE_GMAKE=		yes
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_X11=		yes
 
-do-fetch:	#empty
-do-extract:
-	-@${MKDIR} ${WRKDIR}
-	(cd ../../textproc/t1lib && make clean)
-	(cd ../../textproc/t1lib && make patch)
-
-pre-clean:
-	(cd ../../textproc/t1lib && make clean)
-
-do-clean:
-	-@${RM} -r ${WRKDIR}
+PATCHFILES+=		${PKGSRCDIR}/textproc/t1lib/patches/patch-*
+ALLFILES=		${DISTFILES}    # don't checksum shared patches
 
 do-install:
 	(cd ${WRKSRC}/lib && ${GMAKE} install)
