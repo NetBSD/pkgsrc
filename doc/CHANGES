@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.978 2003/01/02 18:47:19 jlam Exp $
+$NetBSD: CHANGES,v 1.979 2003/01/02 22:19:47 atatat Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -32,10 +32,11 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated mousetar to 20021217 [agc 2003-01-02]
 	Updated aspell-slovak to 1.1 [salo 2003-01-02]
 	Updated fnlib to 0.5nb2 [jmmv 2003-01-02]
-	Updated p5-libwww to 5.67 [mjl 2002-01-02]
-	Added p5-Class-ReturnValue-0.40 [mjl 2002-01-02]
-	Added p5-Devel-StackTrace-1.02 [mjl 2002-01-02]
-	Added p5-Test-Inline-0.15 [mjl 2002-01-02]
-	Updated p5-DBIx-SearchBuilder to 0.76 [mjl 2002-01-02]
-	Updated docbook-xsl to 1.58.1nb1 [grant 2002-01-02]
-	Updated jdbc-postgresql to 7.3.1 [jlam 2002-01-02]
+	Updated p5-libwww to 5.67 [mjl 2003-01-02]
+	Added p5-Class-ReturnValue-0.40 [mjl 2003-01-02]
+	Added p5-Devel-StackTrace-1.02 [mjl 2003-01-02]
+	Added p5-Test-Inline-0.15 [mjl 2003-01-02]
+	Updated p5-DBIx-SearchBuilder to 0.76 [mjl 2003-01-02]
+	Updated docbook-xsl to 1.58.1nb1 [grant 2003-01-02]
+	Updated jdbc-postgresql to 7.3.1 [jlam 2003-01-02]
+	Updated pkglint to 3.40 [atatat 2003-01-02]
