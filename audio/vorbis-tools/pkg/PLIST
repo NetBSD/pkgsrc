@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/03/15 20:53:06 wiz Exp $
+bin/ogg123
+bin/oggenc
+bin/vorbiscomment
+man/man1/ogg123.1
+man/man1/oggenc.1
+share/doc/vorbis-tools-1.0beta4/ogg123rc-example
+@dirrm share/doc/vorbis-tools-1.0beta4
