@@ -1,0 +1,16 @@
+$NetBSD: patch-an,v 1.1 2000/08/25 13:37:51 wiz Exp $
+
+On ELF machines, don't try to add a '_' prefix to external funcs
+
+--- Ma2Asm/FromC/mach.h	2000/08/25 10:17:32	1.1
++++ Ma2Asm/FromC/mach.h	2000/08/25 10:18:26
+@@ -12,7 +12,8 @@
+ /*---------------------------------*/
+ 
+ #if defined(M_sony_news) || defined(M_ultrix_dec) || defined(M_alpha_osf) ||\
+-    defined(M_ix86_linux) || defined(M_ix86_sco) || defined(M_ix86_bsd)
++    defined(M_ix86_linux) || defined(M_ix86_sco) || defined(M_ix86_bsd) ||\
++    defined(__ELF__)
+ 
+ #   define M_Asm_Symbol1(name)     #name
+ #   define M_Asm_Symbol(name)      M_Asm_Symbol1(name)
