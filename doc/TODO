@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3302 2005/03/26 11:12:03 seb Exp $
+$NetBSD: TODO,v 1.3303 2005/03/26 11:41:20 adrianp Exp $
 
 Suggested new packages
 ======================
@@ -969,7 +969,6 @@ Suggested package updates
 	o snes9x-1.43
 	o snortsnarf-050314.1 [pkg/29753]
 	o snownews-1.5.6.1
-	o socat-1.4.2.0
 	o sox-12.17.7
 	o spim-7.1
 	o splint-3.1.1
