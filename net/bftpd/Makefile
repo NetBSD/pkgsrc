@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/06/02 13:13:15 jmmv Exp $
+# $NetBSD: Makefile,v 1.2 2004/04/25 07:45:37 snj Exp $
 #
 
 DISTNAME=	bftpd-1.0.24
@@ -9,7 +9,7 @@ MAINTAINER=	virtus@wanadoo.nl
 HOMEPAGE=	http://www.bftpd.org/
 COMMENT=	Small and fast FTP server
 
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 USE_PKGINSTALL=	YES
 GNU_CONFIGURE=	YES
 

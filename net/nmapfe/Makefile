@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2004/03/26 02:27:48 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2004/04/25 07:44:34 snj Exp $
 #
 
 DISTNAME=	nmap-3.50
@@ -14,7 +14,7 @@ COMMENT=	Graphical front end to the nmap port scanner
 
 DEPENDS+=	nmap-[23].*:../../net/nmap
 
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 GNU_CONFIGURE=	YES
 
 PATCHDIR=	${.CURDIR}/../../net/nmap/patches
@@ -27,6 +27,6 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/nmapfe/nmapfe ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/docs/nmapfe.1 ${PREFIX}/man/man1
 
-.include "../../x11/gtk/buildlink2.mk"
+.include "../../x11/gtk/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
