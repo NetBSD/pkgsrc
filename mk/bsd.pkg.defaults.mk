@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.139 2003/04/10 20:32:29 grant Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.140 2003/04/17 13:04:56 agc Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -9,6 +9,12 @@
 # ************************************************************************
 # NOTE TO PEOPLE EDITING THIS FILE - USE LEADING SPACES, NOT LEADING TABS.
 # ************************************************************************
+
+#ALLOW_VULNERABLE_PACKAGES=
+# allow the user to build packages which are known to be vulnerable to
+# security exploits
+# Possible: defined, not defined
+# Default: not defined
 
 #MANZ=
 # gzip manual pages at installation time
