@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1155 2003/03/22 18:18:28 dmcmahill Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1156 2003/03/23 09:40:48 tron Exp $
 #
 # This file is in the public domain.
 #
@@ -270,15 +270,15 @@ SHCOMMENT?=		${ECHO_MSG} >/dev/null '***'
 DISTINFO_FILE?=		${.CURDIR}/distinfo
 
 FIX_RPATH+=		LIBS
+LDFLAGS+=		-Wl,${RPATH_FLAG}${LOCALBASE}/lib
+LDFLAGS+=		-L${LOCALBASE}/lib
 .if defined(USE_X11)
 X11_LDFLAGS=		# empty
 X11_LDFLAGS+=		-Wl,${RPATH_FLAG}${X11BASE}/lib	
 X11_LDFLAGS+=		-L${X11BASE}/lib
 LDFLAGS+=		${X11_LDFLAGS}
 .endif
-LDFLAGS+=		-Wl,${RPATH_FLAG}${LOCALBASE}/lib
-LDFLAGS+=		-L${LOCALBASE}/lib
-FIX_RPATH+=		X11_LDFLAGS LDFLAGS
+FIX_RPATH+=		LDFLAGS
 MAKE_ENV+=		LDFLAGS="${LDFLAGS}"
 CONFIGURE_ENV+=		LDFLAGS="${LDFLAGS}" M4="${M4}" YACC="${YACC}"
 
