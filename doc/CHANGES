@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4260 2003/12/26 15:26:37 tron Exp $
+$NetBSD: CHANGES,v 1.4261 2003/12/26 18:31:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -178,7 +178,7 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated xmame to 0.62.1-rc4 [mycroft 2003-01-09]
 	Updated glimpse to 4.17.2 [mycroft 2003-01-09]
 	Updated tcl-expect to 5.38.0 [mycroft 2003-01-09]
-	Updated abiword to 1.0.3 [mycroft 2003-01-09]
+	Updated abiword-personal to 1.0.3 [mycroft 2003-01-09]
 	Updated sawfish-replibs to 1.2 [mycroft 2003-01-09]
 	Updated sawfish to 1.2 [mycroft 2003-01-09]
 	Updated pilot-link-libs to 0.11.7 [rh 2003-01-10]
@@ -4166,7 +4166,7 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated socks5 to 1.0.2nb2 [grant 2003-10-11]
 	Updated ser to 0.8.10nb2 [grant 2003-10-11]
 	Updated apr to 0.9.4nb1 [grant 2003-10-11]
-	Updated abiword to 1.0.5nb3 [grant 2003-10-11]
+	Updated abiword-personal to 1.0.5nb3 [grant 2003-10-11]
 	Updated fontconfig to 2.2.1nb2 [grant 2003-10-11]
 	Updated graphviz to 1.10nb1 [grant 2003-10-11]
 	Updated xmule to 1.6.0nb1 [grant 2003-10-11]
@@ -5382,3 +5382,6 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated libcaca to 0.5 [jmmv 2003-12-26]
 	Updated transcode to 0.6.11 [jmmv 2003-12-26]
 	Updated bidwatcher to 1.3.11 [tron 2003-12-26]
+	Updated enchant to 1.1.3 [wiz 2003-12-26]
+	Removed abiword2 [wiz 2003-12-26]
+	Updated abiword to 2.0.2 [wiz 2003-12-26]
