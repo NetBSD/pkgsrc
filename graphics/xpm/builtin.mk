@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.3 2004/04/24 21:20:56 snj Exp $
+# $NetBSD: builtin.mk,v 1.4 2004/05/20 11:25:57 grant Exp $
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -53,16 +53,14 @@ USE_BUILTIN.xpm?=	${IS_BUILTIN.xpm}
 
 .  if defined(BUILTIN_PKG.xpm)
 USE_BUILTIN.xpm=	yes
-.    for _depend_ in ${BUILDLINK_DEPENDS.xpm}
-.      if !empty(USE_BUILTIN.xpm:M[yY][eE][sS])
+.    if !empty(USE_BUILTIN.xpm:M[yY][eE][sS])
 USE_BUILTIN.xpm!=							\
-	if ${PKG_ADMIN} pmatch '${_depend_}' ${BUILTIN_PKG.xpm}; then	\
+       if ${PKG_ADMIN} pmatch 'xpm>=3.4' ${BUILTIN_PKG.xpm}; then	\
 		${ECHO} "yes";						\
-	else								\
+       else								\
 		${ECHO} "no";						\
-	fi
-.      endif
-.    endfor
+       fi
+.    endif
 .  endif
 .endif	# USE_BUILTIN.xpm
 
