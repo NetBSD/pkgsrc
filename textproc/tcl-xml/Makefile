@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/03/08 19:52:51 minskim Exp $
+# $NetBSD: Makefile,v 1.8 2004/03/09 01:22:58 minskim Exp $
 #
 
 DISTNAME=	TclXML-1.2
@@ -10,7 +10,7 @@ MAINTAINER=	jwise@NetBSD.org
 HOMEPAGE=	http://www.zveno.com/zm.cgi/in-tclxml/
 COMMENT=	XML parser implemented entirely in Tcl
 
-DEPENDS+=       tcl>=8.3.2:../../lang/tcl83
+DEPENDS+=       tcl>=8.3.2:../../lang/tcl
 
 # old name for this package...
 CONFLICTS+=	TclXML-[0-9]*
