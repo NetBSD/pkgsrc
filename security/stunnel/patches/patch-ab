@@ -1,16 +1,16 @@
-$NetBSD: patch-ab,v 1.14 2004/12/28 09:09:52 martti Exp $
+$NetBSD: patch-ab,v 1.15 2005/01/03 12:17:44 martti Exp $
 
---- configure.orig	2004-12-26 01:31:18.000000000 +0200
-+++ configure	2004-12-28 12:30:28.000000000 +0200
-@@ -21348,2 +21348,3 @@
+--- configure.orig	2004-12-30 13:57:47.000000000 +0200
++++ configure	2005-01-03 14:13:54.000000000 +0200
+@@ -21497,2 +21497,3 @@
  
 +if false; then
  # OSF hack instead of simple AC_CHECK_LIB here
-@@ -21475,2 +21476,3 @@
+@@ -21624,2 +21625,3 @@
  fi
 +fi
  
-@@ -22019,3 +22021,3 @@
+@@ -22168,3 +22170,3 @@
  LIBS="$LIBS $wrap_LIB"
 -CPPFLAGS="$CPPFLAGS -DLIBDIR=\\\"$libdir\\\" -DCONFDIR=\\\"$sysconfdir/stunnel\\\" -DPIDFILE=\\\"$localstatedir/run/stunnel.pid\\\""
 +CPPFLAGS="$CPPFLAGS -DLIBDIR=\\\"$libdir\\\" -DCONFDIR=\\\"$sysconfdir\\\" -DPIDFILE=\\\"$localstatedir/run/stunnel.pid\\\""
