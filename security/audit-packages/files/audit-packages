@@ -1,5 +1,10 @@
 #! /bin/sh
 
+if [ ! -f ${DISTDIR}/vulnerabilities ] ;then
+    echo "** Missing ${DISTDIR}/vulnerabilities"
+    echo "** run download-vulnerability-list"
+    exit 1
+fi
 ${AWK} '
 	/^#.*/ { next }
 	NF == 0 { next }
