@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2001/09/27 23:18:58 jlam Exp $
+# $NetBSD: Makefile,v 1.30 2002/11/14 10:04:46 jlam Exp $
 #
 
 DISTNAME=	Xaw3d-1.5
@@ -16,7 +16,7 @@ PLIST_SRC=	${WRKDIR}/PLIST-src
 
 .include "../../mk/bsd.prefs.mk"
 
-.if defined(HAVE_OPENWINDOWS)
+.if !empty(X11BASE:M*openwin)
 PLIST_SUBST+=	INCDIR=include/X11/X11
 .else
 PLIST_SUBST+=	INCDIR=include/X11
