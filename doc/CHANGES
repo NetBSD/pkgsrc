@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4939 2004/02/21 08:05:23 snj Exp $
+$NetBSD: CHANGES,v 1.4940 2004/02/21 13:09:32 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -954,3 +954,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added rtcw-1.33 [xtraeme 2004-02-21]
 	Updated gqview to 1.4.0 [snj 2004-02-21]
 	Removed gqview-devel [snj 2004-02-21]
+	Updated pkg_comp to 1.17 [jmmv 2004-02-21]
