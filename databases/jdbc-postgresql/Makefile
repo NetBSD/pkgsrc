@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2003/01/02 18:46:39 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2003/06/03 17:02:44 jschauma Exp $
 #
 
 DISTNAME=		postgresql-${DIST_VERS}
@@ -20,7 +20,7 @@ HOMEPAGE=		http://www.postgresql.org/
 COMMENT=		100% Java JDBC driver for PostgreSQL
 
 # No, we don't depend on postgresql.  This code base stands alone.
-BUILD_DEPENDS+=		jakarta-ant-[0-9]*:../../devel/jakarta-ant
+BUILD_DEPENDS+=		apache-ant-[0-9]*:../../devel/apache-ant
 
 EXTRACT_ELEMENTS=	${DISTNAME}/src/interfaces/jdbc
 
