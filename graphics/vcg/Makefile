@@ -1,25 +1,28 @@
-# New ports collection makefile for: vcg
-# Version required:     1.30.r3.17
-# Date created: 19 February 1995
-# Whom: hsu
-#
-# $Id: Makefile,v 1.1.1.1 1999/06/13 12:47:19 sakamoto Exp $
-#
+# $NetBSD: Makefile,v 1.2 1999/06/13 12:54:18 sakamoto Exp $
+# FreeBSD Id: Makefile,v 1.7 1998/08/05 09:31:14 asami Exp $
 
-DISTNAME=	vcg.1.30
+DISTNAME=	vcg.1.30.r3.17
 PKGNAME=	vcg-1.30
 CATEGORIES=	graphics
 MASTER_SITES=	ftp://ftp.cs.uni-sb.de/pub/graphics/vcg/
-DISTFILES=	vcg.1.30.r3.17.tgz
+EXTRACT_SUFX=	.tgz
 
-USE_X_PREFIX=	yes
-MANL=		pbmrot90.l pbmshift.l pbm2hp.l vcgdemomaker.l vcg.l xvcg.l
+MAINTAINER=	sakamoto@netbsd.org
+
+USE_X11BASE=	yes
+WRKSRC=		${WRKDIR}/vcg.1.30
 
 pre-patch:
-	@mkdir -p ${WRKSRC}/preconf/X11ccFreeBSD
-	@cp ${FILESDIR}/conf ${WRKSRC}/preconf/X11ccFreeBSD
-	@cp ${FILESDIR}/demo.csh ${WRKSRC}/preconf/X11ccFreeBSD
-	@cp ${FILESDIR}/globals.h ${WRKSRC}/preconf/X11ccFreeBSD
-	@cp ${FILESDIR}/tMakefile ${WRKSRC}/preconf/X11ccFreeBSD
+	@mkdir -p ${WRKSRC}/preconf/X11ccNetBSD
+	@cp ${FILESDIR}/conf ${WRKSRC}/preconf/X11ccNetBSD
+	@cp ${FILESDIR}/demo.csh ${WRKSRC}/preconf/X11ccNetBSD
+	@cp ${FILESDIR}/globals.h ${WRKSRC}/preconf/X11ccNetBSD
+	@cp ${FILESDIR}/tMakefile ${WRKSRC}/preconf/X11ccNetBSD
 
-.include <bsd.port.mk>
+post-install:
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/vcg
+	${INSTALL_DATA} ${WRKSRC}/doc/visual.ps  ${PREFIX}/share/doc/vcg
+	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/vcg
+	${INSTALL_DATA} ${WRKSRC}/expl/*.vcg ${PREFIX}/share/examples/vcg
+
+.include "../../mk/bsd.pkg.mk"
