@@ -1,4 +1,4 @@
-/*	$NetBSD: show.c,v 1.4 2003/09/23 07:13:52 grant Exp $	*/
+/*	$NetBSD: show.c,v 1.5 2004/04/09 18:38:12 tv Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: show.c,v 1.11 1997/10/08 07:47:38 charnier Exp";
 #else
-__RCSID("$NetBSD: show.c,v 1.4 2003/09/23 07:13:52 grant Exp $");
+__RCSID("$NetBSD: show.c,v 1.5 2004/04/09 18:38:12 tv Exp $");
 #endif
 #endif
 
@@ -141,7 +141,7 @@ show_index(char *title, char *fname)
 
 	if (!Quiet) {
 		printf("%s%s", InfoPrefix, title);
-		maxline -= MAXNAMESIZE;
+		maxline -= MAX(MAXNAMESIZE, strlen(title));
 	}
 	if ((fp = fopen(fname, "r")) == (FILE *) NULL) {
 		warnx("show_file: can't open '%s' for reading", fname);
