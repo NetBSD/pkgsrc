@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.169 2000/07/31 01:56:45 hubertf Exp $
+# $NetBSD: Makefile,v 1.170 2000/08/04 03:58:10 jlam Exp $
 # FreeBSD Id: Makefile,v 1.156 1997/09/30 07:54:42 asami Exp
 #
 
@@ -29,6 +29,7 @@
     SUBDIR += ethemes
     SUBDIR += filerunner
     SUBDIR += fltk
+    SUBDIR += flwm
     SUBDIR += fvwm-wharf
     SUBDIR += fvwm1
     SUBDIR += fvwm2
