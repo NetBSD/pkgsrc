@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.13 2004/02/12 13:34:29 jlam Exp $
+# $NetBSD: Makefile.common,v 1.14 2004/02/14 03:16:58 jlam Exp $
 #
 # This Makefile fragment should be included _below_ any SASL_PLUGIN
 # definition and _above_ any CONFIGURE_ARGS definitions.
 
-DISTNAME=	cyrus-sasl-2.1.15
+DISTNAME=	cyrus-sasl-2.1.17
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/ \
 		ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/OLD-VERSIONS/sasl/
@@ -28,7 +28,10 @@ DEFAULT_VIEW.${PKGBASE}=	${DEFAULT_VIEW.cyrus-sasl}
 
 USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
+
 GNU_CONFIGURE=		YES
+CONFIG_STATUS_OVERRIDE=	config.status
+
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 MAKE_ENV+=		SHLIBTOOL=${SHLIBTOOL:Q}
@@ -82,3 +85,10 @@ post-extract:
 #	${AUTOHEADER};					\
 #	${AUTOMAKE} -a --gnu -i ;			\
 #	${AUTOCONF}
+
+post-configure:
+	cd ${WRKSRC}; for file in plugins/Makefile; do			\
+		${SED}	-e "s|^\(LIBTOOL =\).*|\1 \$$(SHLIBTOOL)|g"	\
+			$$file > $$file.new;				\
+		${MV} -f $$file.new $$file;				\
+	done

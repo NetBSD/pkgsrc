@@ -1,10 +1,10 @@
-$NetBSD: patch-al,v 1.1 2004/01/09 19:37:48 jlam Exp $
+$NetBSD: patch-al,v 1.2 2004/02/14 03:16:59 jlam Exp $
 
---- Makefile.in.orig	Tue Jul 15 11:42:28 2003
+--- Makefile.in.orig	Mon Dec  1 08:35:06 2003
 +++ Makefile.in
-@@ -199,7 +199,7 @@ plugindir = @plugindir@
- @MACOSX_TRUE@INSTALLOSX = install-exec-local-osx
+@@ -235,7 +235,7 @@ target_vendor = @target_vendor@
  @MACOSX_FALSE@INSTALLOSX = 
+ @MACOSX_TRUE@INSTALLOSX = install-exec-local-osx
  
 -SUBDIRS = include sasldb plugins lib utils doc man $(PWC) $(SAM) $(JAV) $(SAD)
 +SUBDIRS = include sasldb plugins lib utils doc man $(PWC) $(SAM) $(JAV)

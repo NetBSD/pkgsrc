@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2004/02/12 13:34:29 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2004/02/14 03:16:58 jlam Exp $
 
 .include "Makefile.common"
 
-PKGREVISION=	2
+PKGREVISION=	# empty
 SVR4_PKGNAME=	csasl
 COMMENT=	Simple Authentication and Security Layer
 
@@ -31,7 +31,9 @@ CONFIGURE_ARGS+=	--with-devrandom=/dev/urandom
     (defined(SASL_USE_GSSAPI) && !empty(SASL_USE_GSSAPI:M[yY][eE][sS]))
 .  include "../../mk/krb5.buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-gssapi=${KRB5BASE}	# GSSAPI
-LIBS+=			-lcrypto
+CONFIGURE_ARGS+=	--with-gss_impl=${GSSIMPL.${KRB5_TYPE}}
+GSSIMPL.heimdal=	heimdal
+GSSIMPL.mit-krb5=	mit
 PLIST_SRC+=		${PKGDIR}/PLIST.krb5
 .endif
 
