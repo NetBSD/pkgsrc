@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2003/04/01 12:27:06 markd Exp $
+# $NetBSD: Makefile,v 1.16 2003/04/09 13:45:17 markd Exp $
 
 DISTNAME=	kdemultimedia-3.1.1
+PKGREVISION=	1
 CATEGORIES=	audio
 COMMENT=	Audio tools for the KDE integrated X11 desktop
 
@@ -31,6 +32,7 @@ FOO_MAIN_FILES= \
 .include "../../x11/kde3/Makefile.foo_main"
 
 .include "../../audio/arts/buildlink2.mk"
+.include "../../graphics/xine-lib/buildlink2.mk"
 .include "../../x11/kde3/buildlink2.mk"
 .include "../../x11/kdebase3/buildlink2.mk"
 .include "../../mk/pthread.buildlink2.mk"
