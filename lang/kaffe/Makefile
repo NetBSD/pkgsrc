@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2002/07/27 21:26:21 jschauma Exp $
+# $NetBSD: Makefile,v 1.40 2002/09/08 09:03:37 zuntum Exp $
 #
 
 DISTNAME=		kaffe-1.0.7
@@ -9,12 +9,12 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.kaffe.org/
 COMMENT=		Virtual machine capable of running Java(tm) code
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 USE_X11=		YES
 USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
-ONLY_FOR_PLATFORM=	*-*-arm32 *-*-i386 *-*-m68k *-*-mips* *-*-sparc
+ONLY_FOR_PLATFORM=	*-*-arm32 *-*-i386 *-*-m68k *-*-mips* *-*-sparc *-*-powerpc
 
 GNU_CONFIGURE=		yes
 GNU_CONFIGURE_PREFIX=	${PREFIX}/java/kaffe
@@ -40,11 +40,10 @@ post-install:
 test:
 	@cd ${WRKSRC}/test && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} check
 
-.include "../../devel/gmp/buildlink.mk"
-.include "../../devel/zlib/buildlink.mk"
-.include "../../graphics/jpeg/buildlink.mk"
-.include "../../graphics/libungif/buildlink.mk"
-.include "../../graphics/png/buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
+.include "../../devel/gmp/buildlink2.mk"
+.include "../../devel/zlib/buildlink2.mk"
+.include "../../graphics/jpeg/buildlink2.mk"
+.include "../../graphics/libungif/buildlink2.mk"
+.include "../../graphics/png/buildlink2.mk"
 
 .include "../../mk/bsd.pkg.mk"
