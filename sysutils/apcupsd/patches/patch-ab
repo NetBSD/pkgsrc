@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/01/21 19:15:59 bouyer Exp $
+
+--- apcaction.c	Wed Apr  7 18:06:41 1999
++++ apcaction.c	Sun Jul 18 19:48:13 1999
+@@ -59,7 +59,9 @@
+ 
+ #include <stdio.h>
+ #include <unistd.h>
++#ifndef __NetBSD__
+ #include <getopt.h>
++#endif /* __NetBSD__ */
+ #include <stdlib.h>
+ #include <stdarg.h>
+ #include <fcntl.h>

@@ -1,0 +1,17 @@
+$NetBSD: patch-ag,v 1.1.1.1 2000/01/21 19:16:00 bouyer Exp $
+
+--- include/apc_defines.h	Wed Apr  7 18:06:41 1999
++++ nclude/apc_defines.h	Sun Jul 18 19:45:49 1999
+@@ -66,6 +66,12 @@
+ #define PWRFAIL			"/var/run/powerfail"
+ #endif /* __freebsd__ */
+ 
++#ifdef __NetBSD__
++#define APCCONF	"/etc/apcupsd.conf"
++#define UPS_STAT	"/var/log/apcupsd.status"
++#define PWRFAIL	"/var/run/powerfail"
++#endif /* __NetBSD__ */
++
+ #ifndef APCCONF
+ #define APCCONF			"/etc/apcupsd.conf"
+ #endif
