@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: pkgvi,v 1.6 2001/03/16 13:11:41 wiz Exp $
+# $NetBSD: pkgvi,v 1.7 2001/12/03 14:30:17 seb Exp $
 #
 # Copyright (c) 2001 Tomasz Luchowski. All rights reserved.
 #
@@ -48,6 +48,10 @@ then
 fi
 
 file="$1"
+cmd=""
+case x"$file" in
+        x+*) cmd="$1"; shift ; file="$1" ;;
+esac
 
 if [ ! -f "$file" ]
 then
@@ -57,7 +61,7 @@ fi
 
 if [ -f $file.orig ]
 then
-	$editor $file
+	$editor $cmd $file
 	echo "$progname: Backup already exists. For a diff type:"
         echo "pkgdiff $file"
 	exit 0
@@ -72,7 +76,7 @@ if [ $? -ne 0 ]; then
 	exit 1
 fi
 
-$editor "$tmp"
+$editor $cmd "$tmp"
 
 if cmp "$file" "$tmp" >/dev/null 2>&1
 then
