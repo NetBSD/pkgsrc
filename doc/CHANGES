@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6464 2004/07/06 13:42:42 taya Exp $
+$NetBSD: CHANGES,v 1.6465 2004/07/06 13:52:25 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3272,3 +3272,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated pygtk to 0.6.11 [recht 2004-07-06]
 	Updated thunderbird to 0.7.1 [taya 2004-07-06]
 	Updated thunderbird-gtk2 to 0.7.1 [taya 2004-07-06]
+	Updated libxml2 to 2.6.11 [xtraeme 2004-07-06]
