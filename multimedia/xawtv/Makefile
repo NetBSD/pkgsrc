@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/04/18 07:11:29 snj Exp $
+# $NetBSD: Makefile,v 1.4 2004/07/19 23:56:21 xtraeme Exp $
 #
 
 DISTNAME=	xawtv_3.90
@@ -33,8 +33,11 @@ SUBST_SED.devoss=	-e 's|/dev/dsp|${DEVOSSAUDIO}|g'
 
 .include "../../mk/bsd.prefs.mk"
 
-.if defined(USE_MMX) && !empty(USE_MMX:M[Yy][Ee][Ss])
+.if !empty(MACHINE_ARCH:Mi386)
+BUILD_DEFS+=		USE_MMX
+.  if defined(USE_MMX) && !empty(USE_MMX:M[Yy][Ee][Ss])
 CONFIGURE_ARGS+=	--enable-mmx
+.  endif
 .endif
 
 .include "../../devel/ncurses/buildlink3.mk"

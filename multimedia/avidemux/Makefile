@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/04/05 18:41:14 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2004/07/19 23:56:21 xtraeme Exp $
 #
 
 DISTNAME=	avidemux-2.0.18
@@ -26,9 +26,10 @@ BUILDLINK_TRANSFORM+=   S:-O3:
 
 .include "../../mk/bsd.prefs.mk"
 
+.if !empty(MACHINE_ARCH:Mi386)
 BUILD_DEFS+=		USE_MMX
 
-.if empty(USE_MMX:M[Yy][Ee][Ss])
+.  if empty(USE_MMX:M[Yy][Ee][Ss])
 CONFIGURE_ARGS+=	--disable-mmx
 
 post-configure:
@@ -37,6 +38,7 @@ post-configure:
 	${SED} -e 's/TARGET_MMX=yes/TARGET_MMX=no/g' \
 		< ${WRKSRC}/adm_lavcodec/config.mak.in \
 		> ${WRKSRC}/adm_lavcodec/config.mak
+.  endif
 .endif
 
 do-install:
