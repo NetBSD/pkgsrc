@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.7 1999/03/10 08:24:16 agc Exp $
+# $NetBSD: pkglint.pl,v 1.8 1999/05/23 20:32:00 tv Exp $
 #
 # This version contains some changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org> and
@@ -778,6 +778,7 @@ EOF
 			"you don't need to define PKGNAME.");
 	}
 	$i = ($pkgname eq '') ? $distname : $pkgname;
+	$i =~ s/\${DISTNAME[^}]*}/$distname/g;
 	if ($i =~ /-([^-]+)$/) {
 		$j = $`;
 		$k = $1;
