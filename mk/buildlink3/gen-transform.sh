@@ -1,6 +1,6 @@
 #!@BUILDLINK_SHELL@
 #
-# $NetBSD: gen-transform.sh,v 1.16 2004/01/21 07:54:50 jlam Exp $
+# $NetBSD: gen-transform.sh,v 1.17 2004/01/21 08:04:29 jlam Exp $
 
 transform="@_BLNK_TRANSFORM_SEDFILE@"
 untransform="@_BLNK_UNTRANSFORM_SEDFILE@"
@@ -12,6 +12,8 @@ untransform="@_BLNK_UNTRANSFORM_SEDFILE@"
 #	sub-mangle:src:dst	mangles "src/*" into "dst/*"
 #	rpath:src:dst		translates the directory "src" into "dst"
 #					in rpath options
+#	sub-rpath:src:dst	translates "src/*" into "dst/*" in rpath
+#					options
 #	abs-rpath		removes all rpath options that try to add
 #					relative paths
 #	no-rpath		removes "-R*", "-Wl,-R", and "-Wl,-rpath,*"
@@ -89,6 +91,14 @@ EOF
 		gen $action mangle:-Wl,-rpath,$2:-Wl,-rpath,$3
 		gen $action mangle:-Wl,-R$2:-Wl,-R$3
 		gen $action mangle:-R$2:-R$3
+		;;
+	sub-rpath)
+		gen $action sub-mangle:-Wl,--rpath-link,$2:-Wl,--rpath-link,$3
+		gen $action sub-mangle:-Wl,--rpath,$2:-Wl,--rpath,$3
+		gen $action sub-mangle:-Wl,-rpath-link,$2:-Wl,-rpath-link,$3
+		gen $action sub-mangle:-Wl,-rpath,$2:-Wl,-rpath,$3
+		gen $action sub-mangle:-Wl,-R$2:-Wl,-R$3
+		gen $action sub-mangle:-R$2:-R$3
 		;;
 	abs-rpath)
 		gen $action __r:-Wl,--rpath-link,\\.
