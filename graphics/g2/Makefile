@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2003/04/29 22:02:09 jtb Exp $
+# $NetBSD: Makefile,v 1.10 2003/05/11 09:16:25 jmc Exp $
 
 DISTNAME=		g2-0.49a
 CATEGORIES=		graphics
-MASTER_SITES=		ftp://g2.sourceforge.net/pub/g2/
+MASTER_SITES=		http://g2.sourceforge.net/pub/
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://g2.sourceforge.net/
