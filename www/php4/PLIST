@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2003/08/31 19:56:05 jdolecek Exp $
+@comment $NetBSD: PLIST,v 1.7 2003/09/01 15:41:45 jdolecek Exp $
 bin/pear
 bin/php
 bin/php-config
@@ -326,11 +326,18 @@ share/php/php.gif
 @dirrm lib/php/doc/DB/doc
 @dirrm lib/php/doc/DB
 @dirrm lib/php/doc
+@dirrm lib/php/test/DB/tests/driver
+@dirrm lib/php/test/DB/tests
+@dirrm lib/php/test/DB
+@dirrm lib/php/test/XML_Parser/tests
+@dirrm lib/php/test/XML_Parser
+@dirrm lib/php/test
 @dirrm lib/php/XML/RPC
 @dirrm lib/php/XML
 @dirrm lib/php/PEAR/Command
 @dirrm lib/php/PEAR/Frontend
 @dirrm lib/php/PEAR
+@dirrm lib/php/OS
 @dirrm lib/php/Net
 @dirrm lib/php/Mail
 @dirrm lib/php/DB
