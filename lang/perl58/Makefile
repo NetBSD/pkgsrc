@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2004/01/08 19:18:00 jlam Exp $
+# $NetBSD: Makefile,v 1.29 2004/01/15 13:06:00 jlam Exp $
 
 # The following two variables should have empty values unless we're
 # building a perl snapshot or release candidate.
@@ -261,4 +261,5 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/mk
 	${INSTALL_DATA} ${WRKDIR}/bsd.perl.mk ${PREFIX}/share/mk/bsd.perl.mk
 
+.include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
