@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: pgsql.sh,v 1.15 2002/10/19 19:01:52 jlam Exp $
+# $NetBSD: pgsql.sh,v 1.16 2002/10/19 21:02:53 jlam Exp $
 #
 # PostgreSQL database rc.d control script
 #
@@ -77,7 +77,9 @@ pgsql_initdb()
 		@CHOWN@ ${pgsql_user} ${pgsql_home}
 		@CHGRP@ ${pgsql_group} ${pgsql_home}
 		@CHMOD@ 0750 ${pgsql_home}
-		@SU@ -m ${pgsql_user} -c "${initdb} ${common_args} ${flags}"
+		doit_command="${initdb} ${common_args} ${flags}"
+		doit="@SU@ -m ${pgsql_user} -c '${doit_command}'"
+		eval $doit
 	fi
 }
 
@@ -110,7 +112,9 @@ pgsql_doit()
 	restart)	@ECHO@ "Restarting ${name}." ;;
 	esac
 
-	@SU@ -m ${pgsql_user} -c "${ctl_command} ${action} ${command_args}"
+	doit_command="${ctl_command} ${action} ${command_args}"
+	doit="@SU@ -m ${pgsql_user} -c '${doit_command}'"
+	eval $doit
 }
 
 if [ -f /etc/rc.subr -a -d /etc/rc.d -a -f /etc/rc.d/DAEMON ]; then
