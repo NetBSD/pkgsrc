@@ -1,1 +1,3 @@
 SLIB installation for guile Scheme interpreter
+
+This package uses guile-1.4.
