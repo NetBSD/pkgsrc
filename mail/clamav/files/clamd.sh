@@ -1,12 +1,12 @@
 #!/bin/sh
 #
-# $NetBSD: clamd.sh,v 1.4 2004/08/01 04:58:21 jlam Exp $
+# $NetBSD: clamd.sh,v 1.5 2004/08/03 11:28:37 tv Exp $
 #
 # clamd does anti-virus checking.
 #
 # PROVIDE: clamd
 # REQUIRE: LOGIN
-# BEFORE: mail
+# BEFORE: mail local
 # KEYWORD: shutdown
 
 if [ -f /etc/rc.subr ]; then
