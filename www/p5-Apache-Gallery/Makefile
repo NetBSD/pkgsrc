@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/09/01 22:42:49 kim Exp $
+# $NetBSD: Makefile,v 1.2 2002/10/27 19:54:29 seb Exp $
 #
 
 DISTNAME=	Apache-Gallery-0.4.1
@@ -11,16 +11,15 @@ MAINTAINER=	kim@tac.nyc.ny.us
 HOMEPAGE=	http://apachegallery.dk/
 COMMENT=	perl5/Apache module for handling image directories
 
-DEPENDS+=	ap-perl>=1.25:../../www/ap-perl
 DEPENDS+=	p5-URI-[0-9]*:../../www/p5-URI
 DEPENDS+=	p5-Image-Info-[0-9]*:../../graphics/p5-Image-Info
 DEPENDS+=	p5-Image-Size-[0-9]*:../../graphics/p5-Image-Size
 DEPENDS+=	p5-CGI-FastTemplate-[0-9]*:../../www/p5-CGI-FastTemplate
 DEPENDS+=	p5-Inline-[0-9]*:../../devel/p5-Inline
 DEPENDS+=	p5-libapreq-[0-9]*:../../www/p5-libapreq
-DEPENDS+=	imlib2-[0-9]*:../../graphics/imlib2
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
+USE_X11=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Apache/Gallery/.packlist
 
 .include "../../mk/bsd.prefs.mk"
@@ -53,9 +52,6 @@ post-patch:
 	${SED} ${FILES_SUBST_SED} Gallery.pm.orig > Gallery.pm && \
 	${RM} -f Gallery.pm.orig
 
-do-configure:
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
-
 post-build:
 	@cd ${WRKSRC}/templates; \
 	for i in *.tpl; \
@@ -85,7 +81,8 @@ post-install:
 	${INSTALL_DATA_DIR} ${AG_EGDIR}
 	${INSTALL_DATA} ${WRKDIR}/${AG}.conf ${AG_EGDIR}
 
-.include "../../pkgtools/x11-links/xfree.buildlink2.mk"
-.include "../../lang/perl5/buildlink2.mk"
+.include "../../graphics/imlib2/buildlink2.mk"
+.include "../../www/ap-perl/buildlink2.mk"
+.include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
