@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2003/09/17 23:21:06 markd Exp $
+# $NetBSD: Makefile,v 1.14 2004/01/15 09:57:13 markd Exp $
 
-DISTNAME=	kdelibs-3.1.4
-PKGNAME=	kdelibdocs-3.1.4
+DISTNAME=	kdelibs-3.1.5
+PKGNAME=	kdelibdocs-3.1.5
 CATEGORIES=	x11 devel
 
 COMMENT=	KDE library documentation
