@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.465 2000/06/03 20:03:37 mycroft Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.466 2000/06/03 20:26:05 tron Exp $
 #
 # This file is in the public domain.
 #
@@ -1863,7 +1863,7 @@ update:
 	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} ${MAKEFLAGS} reinstall
 .endif
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	[ -s ${DDIR} ] && for dep in `${CAT} ${DDIR}` ; do		\
+	[ ! -s ${DDIR} ] || for dep in `${CAT} ${DDIR}` ; do		\
 		(if cd "../../$${dep}" ; then				\
 			${ECHO_MSG} "${_PKGSRC_IN}> Installing in $${dep}" &&	\
 			if [ "${RESUMEUPDATE}" = "NO" ] ; then		\
@@ -1924,7 +1924,7 @@ ${DDIR}: ${DLIST}
 	ddir=`${SED} 's:-[^-]*$$::' <${DLIST}`;				\
 	if ${PKG_INFO} -b $${ddir} >/dev/null 2>&1 ; then		\
 		${PKG_INFO} -b $${ddir} |				\
-		    ${SED} -ne 's,^\([^/]*/[^/]*\)/Makefile:.*,\1,p'	\
+		    ${SED} -ne 's,^\([^/]*/[^/]*\)/Makefile:.*,\1,p';	\
 	else 								\
 		${ECHO} >${DDIR};					\
 	fi
