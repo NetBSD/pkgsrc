@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2000/10/17 11:12:37 abs Exp $
+# $NetBSD: Makefile,v 1.3 2000/11/15 12:17:00 abs Exp $
 #
 
-DISTNAME=		if-psprint-1.1
+DISTNAME=		if-psprint-1.2
 CATEGORIES=		print
 MASTER_SITES=		# empty
 DISTFILES=		# empty
