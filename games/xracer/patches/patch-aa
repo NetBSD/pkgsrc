@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/05/29 06:36:01 rh Exp $
+
+--- include/xracer-joystick.h.orig	Sat May 27 04:58:58 2000
++++ include/xracer-joystick.h	Sat May 27 04:59:18 2000
+@@ -31,6 +31,6 @@
+ extern void xrJoystickInit (void);
+ extern int xrJoystickRead (struct xrJoystickStatus *status);
+ 
+-extern const char *xrJoystickDevice;
++extern char *xrJoystickDevice;
+ 
+ #endif /* __xracer_joystick_h__ */

@@ -1,0 +1,15 @@
+$NetBSD: patch-ad,v 1.1.1.1 2000/05/29 06:36:01 rh Exp $
+
+--- tracks/simple2/Makefile.in.orig	Sat May 27 05:48:08 2000
++++ tracks/simple2/Makefile.in	Sat May 27 05:48:29 2000
+@@ -169,8 +169,8 @@
+ obj_SnowMountain.lo obj_SnowMountain01.lo obj_SnowMountain02.lo \
+ obj_SnowMountain03.lo obj_StartGantry.lo obj_StartGantryLegs.lo \
+ backdrop.lo control.lo flare.lo sky.lo
+-COMPILE = $(CC) $(DEFS) $(INCLUDES) $(CPPFLAGS) $(CFLAGS)
+-LTCOMPILE = $(LIBTOOL) --mode=compile $(CC) $(DEFS) $(INCLUDES) $(CPPFLAGS) $(CFLAGS)
++COMPILE = $(CC) $(DEFS) $(INCLUDES) $(CPPFLAGS) $(CFLAGS) $(X_CFLAGS)
++LTCOMPILE = $(LIBTOOL) --mode=compile $(CC) $(DEFS) $(INCLUDES) $(CPPFLAGS) $(CFLAGS) $(X_CFLAGS)
+ LINK = $(LIBTOOL) --mode=link $(CC) $(CFLAGS) $(LDFLAGS) -o $@
+ DIST_COMMON =  Makefile.am Makefile.in
+ 
