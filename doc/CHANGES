@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.701 2002/12/06 14:05:08 wiz Exp $
+$NetBSD: CHANGES,v 1.702 2002/12/06 14:22:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3835,3 +3835,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Added pwgen-2.02 [jdolecek 2002-12-05]
 	Updated cyrus-imapd to 2.0.17 [chris 2002-12-05]
 	Updated subversion to 0.3987 [wiz 2002-12-06]
+	Updated mplayer-share to 0.90rc10nb1 [wiz 2002-12-06]
