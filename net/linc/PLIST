@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/04/23 12:17:22 rh Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/07/12 15:19:07 wiz Exp $
+bin/linc-cleanup-sockets
 bin/linc-config
 include/linc-1.0/linc/linc-config.h
 include/linc-1.0/linc/linc-connection.h
