@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 1999/08/13 14:06:56 agc Exp $
+@comment $NetBSD: PLIST,v 1.6 1999/08/23 09:09:06 tron Exp $
 bin/gnuattach
 bin/gnuclient
 bin/gnudoit
@@ -77,6 +77,7 @@ bin/xemacs-rcs-checkin
 @exec mkdir -p %D/lib/${PKGNAME}/lisp/auctex/style
 @exec mkdir -p %D/lib/${PKGNAME}/lisp/auctex
 @exec mkdir -p %D/lib/${PKGNAME}/lisp/apel
+@exec mkdir -p %D/lib/${PKGNAME}/etc/custom/example-themes
 @exec mkdir -p %D/lib/${PKGNAME}/etc/w3
 @exec mkdir -p %D/lib/${PKGNAME}/etc/vm
 @exec mkdir -p %D/lib/${PKGNAME}/etc/time
@@ -842,6 +843,7 @@ lib/${PKGNAME}/lisp/mule/canna-leim.el@.GZ@
 lib/${PKGNAME}/lisp/mule/chinese.el@.GZ@
 lib/${PKGNAME}/lisp/mule/cyrillic.el@.GZ@
 lib/${PKGNAME}/lisp/mule/english.el@.GZ@
+lib/${PKGNAME}/lisp/mule/ethiopic.el@.GZ@
 lib/${PKGNAME}/lisp/mule/european.el@.GZ@
 lib/${PKGNAME}/lisp/mule/greek.el@.GZ@
 lib/${PKGNAME}/lisp/mule/hebrew.el@.GZ@
@@ -860,12 +862,14 @@ lib/${PKGNAME}/lisp/mule/mule-init.el@.GZ@
 lib/${PKGNAME}/lisp/mule/mule-misc.el@.GZ@
 lib/${PKGNAME}/lisp/mule/mule-x-init.el@.GZ@
 lib/${PKGNAME}/lisp/mule/mule-tty-init.el@.GZ@
+lib/${PKGNAME}/lisp/mule/thai-xtis-chars.el@.GZ@
 lib/${PKGNAME}/lisp/mule/viet-chars.el@.GZ@
 lib/${PKGNAME}/lisp/mule/arabic.elc
 lib/${PKGNAME}/lisp/mule/canna-leim.elc
 lib/${PKGNAME}/lisp/mule/chinese.elc
 lib/${PKGNAME}/lisp/mule/cyrillic.elc
 lib/${PKGNAME}/lisp/mule/english.elc
+lib/${PKGNAME}/lisp/mule/ethiopic.elc
 lib/${PKGNAME}/lisp/mule/european.elc
 lib/${PKGNAME}/lisp/mule/greek.elc
 lib/${PKGNAME}/lisp/mule/hebrew.elc
@@ -884,6 +888,7 @@ lib/${PKGNAME}/lisp/mule/mule-init.elc
 lib/${PKGNAME}/lisp/mule/mule-misc.elc
 lib/${PKGNAME}/lisp/mule/mule-x-init.elc
 lib/${PKGNAME}/lisp/mule/mule-tty-init.elc
+lib/${PKGNAME}/lisp/mule/thai-xtis-chars.elc
 lib/${PKGNAME}/lisp/mule/viet-chars.elc
 lib/${PKGNAME}/info/dir
 lib/${PKGNAME}/info/cl.info
@@ -1126,6 +1131,7 @@ man/man1/xemacs-etags.1
 @dirrm lib/${PKGNAME}/etc/frame-icon
 @dirrm lib/${PKGNAME}/etc/eos
 @dirrm lib/${PKGNAME}/etc/e
+@dirrm lib/${PKGNAME}/etc/custom/example-themes
 @dirrm lib/${PKGNAME}/etc/custom
 @dirrm lib/${PKGNAME}/etc/auctex/style
 @dirrm lib/${PKGNAME}/etc/auctex
