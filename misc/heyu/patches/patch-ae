@@ -1,0 +1,26 @@
+$NetBSD: patch-ae,v 1.1 2002/07/02 14:03:53 wiz Exp $
+
+--- Configure.orig	Mon Apr 16 07:24:14 2001
++++ Configure
+@@ -15,9 +15,9 @@
+ 
+ # paths:
+ cat >> Makefile <<EoF
+-BIN = /usr/local/bin
+-MAN = /usr/local/man/man1
+-MAN5 = /usr/local/man/man5
++BIN = ${PREFIX}/bin
++MAN = ${PREFIX}/man/man1
++MAN5 = ${PREFIX}/man/man5
+ GROUP = sys
+ OWNER = bin
+ 
+@@ -111,7 +111,7 @@
+ 	;;
+     netbsd)
+ 	cat >> Makefile <<-EoF
+-		DFLAGS = -DPOSIX -DLOCKDIR=\"/var/spool/lock\"
++		DFLAGS = -DPOSIX -DLOCKDIR=\"/var/spool/lock\" -DNETBSD
+ 		CC = gcc
+ 		CFLAGS = -g -O \$(DFLAGS) -Wall
+ 		LIBS = -lm -lc
