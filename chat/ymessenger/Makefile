@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/07/27 18:51:43 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2001/08/20 04:10:20 jlam Exp $
 
 DISTNAME=		ymessenger-0.93.0
 CATEGORIES=		chat
@@ -32,6 +32,5 @@ RPMFILES=		${DISTFILES}
 
 post-install:
 	${LN} -fs ../${EMULSUBDIR}/usr/local/bin/ymessenger ${PREFIX}/bin
-	${LN} -fs ${PREFIX}/bin/netscape ${EMULDIR}/usr/local/bin/netscape
 
 .include "../../emulators/suse_linux/Makefile.common"
