@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.1.1.1 2002/10/16 08:58:43 rh Exp $
+$NetBSD: patch-aa,v 1.2 2003/01/14 05:37:21 rh Exp $
 
---- configure.orig	Fri Oct  4 15:22:50 2002
+--- configure.orig	Tue Aug 27 01:20:28 2002
 +++ configure
 @@ -8795,7 +8795,7 @@ fi
  
  
  
 -GL_PKG="gtkglext-0.0"
-+GL_PKG="gtkglext-0.x"
++GL_PKG="gtkglext-1.0"
  GL_REQUIRED_VERSION="0.3.1"
  
    succeeded=no
