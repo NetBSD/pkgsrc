@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2823 2005/01/04 09:32:35 jmmv Exp $
+$NetBSD: TODO,v 1.2824 2005/01/04 10:04:01 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -561,7 +561,6 @@ Suggested package updates
 	o gsed-4.1.2
 	o gtar-1.15.1
 	o gtetrinet-0.7.8
-	o gthumb-2.6.2
 	o gtk-systrace-2003.06.23
 	o gtkyahoo-0.18.3
 	o gtranscript-0.2.0
