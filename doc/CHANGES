@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9135 2005/02/14 09:52:58 adam Exp $
+$NetBSD: CHANGES,v 1.9136 2005/02/14 11:20:41 grant Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -870,3 +870,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated libarchive to 1.02.006 [xtraeme 2005-02-14]
 	Updated dovecot to 0.99.14 [xtraeme 2005-02-14]
 	Updated libusb to 0.1.10 [adam 2005-02-14]
+	Updated clamav to 0.83 [grant 2005-02-14]
