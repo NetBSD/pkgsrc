@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.25 1998/04/16 14:10:53 frueauf Exp $
+# $NetBSD: Packages.txt,v 1.26 1998/04/17 10:13:20 agc Exp $
 ###########################################################################
 
 			==========================
@@ -276,7 +276,7 @@ See /usr/pkgsrc/mk/bsd.pkg.mk for a description of all available options
 and variables.
 
 Please pay attention to the following gotchas, especially when preparing a
-port from the FreeBSD ports collection:
+package from the FreeBSD ports collection:
 
  - Update MANx (where x is 1-9, N or L); important for manpages being
    compressed correctly if MANZ is set
@@ -297,6 +297,17 @@ port from the FreeBSD ports collection:
    after:
 	# <$>NetBSD<$>
 	# FreeBSD Id: Makefile,v 1.17 1997/06/16 06:39:51 max Exp
+ - If the package installs any info files, the main info directory file
+   needs to be updated to reflect this fact. NetBSD now has an INFO_FILES
+   definition, which is used to do this. For example, to install the
+   indent.info entry into the info directory file, simply use the
+
+	INFO_FILES=	indent
+
+   definition in the package Makefile. If the package does this insertion
+   for you, you should specify USE_GTEXINFO in the package Makefile, to
+   ensure that the pre-requisite GNU texinfo package is installed on your
+   system.
 
 
  4.2 files/*
