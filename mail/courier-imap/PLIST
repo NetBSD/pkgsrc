@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2004/02/22 03:13:07 jlam Exp $
+@comment $NetBSD: PLIST,v 1.7 2004/02/22 16:43:27 jlam Exp $
 bin/couriertls
 bin/imapd
 bin/pop3d
@@ -26,11 +26,9 @@ share/courier/mkpop3dcert
 share/doc/courier/BUGS.imap
 share/doc/courier/README.imap
 share/examples/courier/imapd-ssl.dist
-share/examples/courier/imapd.authpam
 share/examples/courier/imapd.cnf
 share/examples/courier/imapd.dist
 share/examples/courier/pop3d-ssl.dist
-share/examples/courier/pop3d.authpam
 share/examples/courier/pop3d.cnf
 share/examples/courier/pop3d.dist
 @unexec ${RMDIR} -p %D/share/examples/courier 2>/dev/null || ${TRUE}
