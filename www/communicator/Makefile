@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 1999/06/19 02:59:44 abs Exp $
+# $NetBSD: Makefile,v 1.13 1999/06/21 08:44:29 jlam Exp $
 #
 # Every effort has been made to keep the communicator and navigator
 # Makefiles as similar as possible.
@@ -6,6 +6,7 @@
 BINNAME=	communicator
 NS_VERS=	4.61
 NS_VERS_SHORT=	461
+NS_ENCRYPTION?=	export
 #
 .if (${MACHINE_ARCH} == "alpha")
 .if !exists(/emul/osf1/sbin/loader)
@@ -30,7 +31,7 @@ DIST_DIR_NAME=	unsupported/sunos413
 WRKNAME=	${UNAME}
 .endif
 #
-DISTNAME=	${BINNAME}-v${NS_VERS_SHORT}-export.${UNAME}
+DISTNAME=	${BINNAME}-v${NS_VERS_SHORT}-${NS_ENCRYPTION}.${UNAME}
 PKGNAME=	${BINNAME}-${NS_VERS}
 CATEGORIES=	www
 SUB=		english/${NS_VERS}/unix/${DIST_DIR_NAME}/complete_install
@@ -49,6 +50,23 @@ WRKSRC=         ${WRKDIR}/${BINNAME}-v${NS_VERS_SHORT}.${WRKNAME}
 MOZILLA_HOME=	${PREFIX}/lib/netscape/${PKGNAME}
 PLIST_SRC=	${WRKDIR}/.PLIST_SRC
 NS_PLIST_SED=	"s,\$${NS_VERS},${NS_VERS},g"
+
+.if (${NS_ENCRYPTION} == "us")
+MASTER_SITES=
+RESTRICTED=		"128-bit key strong encryption; export-controlled"
+MIRROR_DISTFILE=	no
+ONLY_FOR_PLATFORM=	*-*-alpha *-*-i386
+
+do-fetch:
+	@if [ ! -f ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX} ]; then \
+	    ${ECHO_MSG}; \
+	    ${ECHO_MSG} "    The 128-bit key strong encryption version of"; \
+	    ${ECHO_MSG} "        Netscape for this platform must be fetched"; \
+	    ${ECHO_MSG} "        into ${DISTDIR} from"; \
+	    ${ECHO_MSG} "        http://www.netscape.com/download/"; \
+	    ${ECHO_MSG}; \
+	fi
+.endif
 
 do-install:
 	${SED} -e ${NS_PLIST_SED} ${PKGDIR}/PLIST.pre >${PLIST_SRC}
