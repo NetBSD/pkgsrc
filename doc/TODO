@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1910 2004/07/08 10:02:39 xtraeme Exp $
+$NetBSD: TODO,v 1.1911 2004/07/09 00:21:56 recht Exp $
 
 Suggested new packages
 ======================
@@ -177,7 +177,6 @@ Suggested package updates
 	o bind-9.3
 	o bitchx-1.1
 	o blender-2.33
-	o boehm-gc-6.3alpha6 [recht]
 	o boson-0.10
 	o centericq-4.10.0
 	o cervisia-2.1.2
