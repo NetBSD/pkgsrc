@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.1.1.1 2001/03/28 10:11:41 drochner Exp $
+$NetBSD: patch-ab,v 1.2 2001/03/28 16:43:57 drochner Exp $
 
---- freebsd.c.orig	Fri Feb 16 17:59:02 2001
-+++ freebsd.c	Fri Feb 16 17:59:16 2001
+--- freebsd.c.orig	Tue Oct 10 00:08:22 2000
++++ freebsd.c	Wed Mar 28 18:38:33 2001
 @@ -41,16 +41,18 @@
  {
      int i;
@@ -45,3 +45,21 @@ $NetBSD: patch-ab,v 1.1.1.1 2001/03/28 10:11:41 drochner Exp $
  
      ret = ioctl(dev->fd, USB_DO_REQUEST, &req);
      if (ret < 0)
+@@ -285,7 +289,7 @@
+ 
+ 	/* Open its control endpoint */
+ 
+-	sprintf(buf, "/dev/%s", di.devnames[0]);
++	sprintf(buf, "/dev/%s.00", di.devnames[0]);
+ 	dfd = open(buf, O_RDONLY);
+ 	if(dfd < 0)
+ 	{
+@@ -302,7 +306,7 @@
+ 
+ 	dev->bus = bus;
+ 
+-	strcpy(dev->filename, buf);
++	sprintf(dev->filename, "/dev/%s", di.devnames[0]);
+ 
+ 	if(ioctl(dfd, USB_GET_DEVICE_DESC, &dev->descriptor) < 0)
+ 	    USB_ERROR_STR(-errno, "couldn't get device descriptor for %s: %s",
