@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 12:13:13 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/20 12:02:41 skrll Exp $
 
-MD5 (libwww-perl-5.50.tar.gz) = 9ae366ecbce3eafb888b99444a9ad670
+SHA1 (libwww-perl-5.50.tar.gz) = 3980ff3bec6cbd162cf3a19f425fbfef0948904a
+Size (libwww-perl-5.50.tar.gz) = 152710 bytes

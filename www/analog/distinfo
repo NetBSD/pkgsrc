@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 12:12:19 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/20 12:02:30 skrll Exp $
 
-MD5 (analog-4.16.tar.gz) = e951152629b1b23ef09b17f32d9310c4
+SHA1 (analog-4.16.tar.gz) = d52ca1214665a8c01843e68b04c49d0e2615b9c9
+Size (analog-4.16.tar.gz) = 589785 bytes
 SHA1 (patch-aa) = 06c4ca7fd17daff10618c4cedde7d6cbb7349740
 SHA1 (patch-ab) = f11c9d3f5dec5b9cd04de0d114752c58484a648a

@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 12:13:25 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/20 12:02:46 skrll Exp $
 
-MD5 (w3-4.0pre.46.tar.gz) = 7c15eadee53b314fd46c957ae83e00a0
+SHA1 (w3-4.0pre.46.tar.gz) = 5cbf48993a7e74d5c9fea73def5a22b72668168d
+Size (w3-4.0pre.46.tar.gz) = 504010 bytes
 SHA1 (patch-aa) = 3b02015ed680630dbceb0e20e2f24850893beabd

@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 12:13:10 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/20 12:02:41 skrll Exp $
 
-MD5 (HTML-Template-2.2.tar.gz) = fd5791cdbe403440d6f9786c11ccc4c1
+SHA1 (HTML-Template-2.2.tar.gz) = e455c84c50151e1aee9ee5bc1a27cef83ab8f287
+Size (HTML-Template-2.2.tar.gz) = 57473 bytes

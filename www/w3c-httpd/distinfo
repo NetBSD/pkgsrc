@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 12:13:26 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/20 12:02:46 skrll Exp $
 
-MD5 (w3c-httpd-3.0A.tar.gz) = 8f9df48bb4fecdc6f1925573df8eb171
+SHA1 (w3c-httpd-3.0A.tar.gz) = 90d31fa16079e3eb959f361469f0f59af4611618
+Size (w3c-httpd-3.0A.tar.gz) = 627144 bytes
 SHA1 (patch-aa) = 44aacb2a600488d5140a9535fc8405b1a3a4150a
 SHA1 (patch-ab) = f579e55d5646911b05c2e4d1efd69551fcec4c5f
 SHA1 (patch-ac) = eeb2668b956d3aa81d338e22bce6664cc2551c2c

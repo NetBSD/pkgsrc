@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 12:12:27 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/20 12:02:32 skrll Exp $
 
-MD5 (ApacheJServ-1.1.2.tar.gz) = 6d48a1b9fcc5eea4dfebaae29ba5a485
+SHA1 (ApacheJServ-1.1.2.tar.gz) = 0e1618a40785a6f34669b6b2ef6958b868f3e891
+Size (ApacheJServ-1.1.2.tar.gz) = 770638 bytes
 SHA1 (patch-aa) = 9e6c9c65880f1bdc1edf1acdda5e6a344c03dbfe
 SHA1 (patch-ab) = bd1de609f0ef106718718d3437151354c628e2ce
 SHA1 (patch-ac) = 8beb08182fdd3ae6fa35726479f4a23025a5a958

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 12:12:31 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/20 12:02:33 skrll Exp $
 
-MD5 (arena-0.3.62.tar.gz) = 88f896bb7e367734d477af0e6d686ea5
+SHA1 (arena-0.3.62.tar.gz) = 21a28049c519630f7a2c0a759568316102f07410
+Size (arena-0.3.62.tar.gz) = 1277043 bytes
 SHA1 (patch-aa) = 43382f6bf4444bbbdae50d0d204fadf3ca392292
 SHA1 (patch-ab) = 48eef083cdaf34b3570986efc61e577cbf392b1f
 SHA1 (patch-ac) = 7a5fa61c05725af16be886a4da6faab394253fd2

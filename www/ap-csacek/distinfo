@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 12:12:24 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/20 12:02:31 skrll Exp $
 
-MD5 (csacek-2.1.4.tar.bz2) = 122a04f95b05aa174e23ae268599f188
+SHA1 (csacek-2.1.4.tar.bz2) = f1184c9641cc0df1b44baa4aeb8ed1b9d9a5f9a4
+Size (csacek-2.1.4.tar.bz2) = 305154 bytes
 SHA1 (patch-aa) = 1316041fe96346861f165b9c94d24912528a8e27

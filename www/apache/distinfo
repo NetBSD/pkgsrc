@@ -1,8 +1,11 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 12:12:29 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/20 12:02:33 skrll Exp $
 
-MD5 (apache_1.3.19.tar.gz) = e9b12b6fbf9a566110f09ac1f3791855
-MD5 (mod_ssl-2.8.1-1.3.19.tar.gz) = 7d7cd5db29e1081f5c2fb97fc86c8213
-MD5 (sitedrivenby.gif) = ad0647dceb931d02bfd046e55915f7b1
+SHA1 (apache_1.3.19.tar.gz) = 2cc8d431ef9eb1037f876394fef4aecb83948501
+Size (apache_1.3.19.tar.gz) = 1928677 bytes
+SHA1 (mod_ssl-2.8.1-1.3.19.tar.gz) = 3d93a88015fc3cf108923fd4085c28de617afcab
+Size (mod_ssl-2.8.1-1.3.19.tar.gz) = 749778 bytes
+SHA1 (sitedrivenby.gif) = 7671e9a8ec2cad3961b268befd33c0920e07c658
+Size (sitedrivenby.gif) = 8519 bytes
 SHA1 (patch-aa) = aed136dfee27b1fe98892d669d218c1070782b5e
 SHA1 (patch-ab) = ef7300383b4946ba78ffb592c174b5ea683b60f8
 SHA1 (patch-ac) = 4c18bb80f3fbe8d44c941e403ff10fd92b820785
