@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.146 2003/05/08 14:55:13 jmmv Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.147 2003/05/14 04:11:48 salo Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -609,6 +609,22 @@ DEFANG_SPOOLDIR?=	/var/spool/MIMEDefang
 
 DELIVER_SUID?=	NO
 # Used to decide if deliver should be installed suid root.
+# Possible: YES, NO
+# Default: NO
+
+DOVECOT_USE_GNUTLS?=	NO
+# Used by dovecot package to determine whether to use GnuTLS or OpenSSL as the
+# underlying crypto library.
+# Possible: YES, NO
+# Default: NO
+
+DOVECOT_USE_LDAP?=	NO
+# Used by dovecot package to determine whether to enable LDAP support.
+# Possible: YES, NO
+# Default: NO
+
+DOVECOT_USE_PGSQL?=	NO
+# Used by dovecot package to determine whether to enable PostgreSQL support.
 # Possible: YES, NO
 # Default: NO
 
