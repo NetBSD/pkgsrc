@@ -1,0 +1,40 @@
+$NetBSD: patch-aq,v 1.1 2003/11/03 00:56:26 heinz Exp $
+
+--- README.orig	Sat Sep 13 03:05:21 2003
++++ README
+@@ -105,30 +105,30 @@ Mail::SpamAssassin::Conf class (run the 
+ the standard defaults that people use.  There is an explanation of all the
+ default locations that SpamAssassin will look at the end.
+ 
+-  - /usr/share/spamassassin/*.cf:
++  - @PREFIX@/share/spamassassin/*.cf:
+ 
+ 	Distributed configuration files, with all defaults.  Do not modify
+ 	these, as they are overwritten when you upgrade.
+ 
+-  - /etc/mail/spamassassin/*.cf:
++  - @PKG_SYSCONFDIR@/*.cf:
+ 
+   	Site config files, for system admins to create, modify, and
+ 	add local rules and scores to.  Modifications here will be
+ 	appended to the config loaded from the above directory.
+ 
+-  - /usr/share/spamassassin/user_prefs.template:
++  - @PREFIX@/share/spamassassin/user_prefs.template:
+ 
+ 	Distributed default user preferences. Do not modify this, as it is
+ 	overwritten when you upgrade.
+ 
+-  - /etc/mail/spamassassin/user_prefs.template:
++  - @PKG_SYSCONFDIR@/user_prefs.template:
+ 
+ 	Default user preferences, for system admins to create, modify, and
+ 	set defaults for users' preferences files.  Takes precedence over
+ 	the above prefs file, if it exists.
+ 
+ 	Do not put system-wide settings in here; put them in the
+-	/etc/mail/spamassassin directory.  This file is just a template,
++	@PKG_SYSCONFDIR@ directory.  This file is just a template,
+ 	which will be copied to a user's home directory for them to
+ 	change.
+ 
