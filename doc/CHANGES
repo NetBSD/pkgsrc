@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1946 2003/04/15 16:24:42 salo Exp $
+$NetBSD: CHANGES,v 1.1947 2003/04/15 20:42:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1609,6 +1609,8 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated p5-PerlMagick to 5.5.6 [mjl 2003-04-15]
 	Added gnet1-1.1.8 [wiz 2003-04-15]
 	Updated coconut to 0.3.0nb3 [wiz 2003-04-15]
+	Removed gtk2-pan [wiz 2003-04-15]
+	Added pan-gnome-0.11.4nb2 [wiz 2003-04-15]
 	Updated pan to 0.13.4nb1 [wiz 2003-04-15]
 	Updated gnet to 2.0.0 [wiz 2003-04-15]
 	Updated cvsync to 0.19.4 [gehenna 2003-04-15]
