@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2001/02/16 15:22:31 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2001/03/03 22:24:01 tron Exp $
 # FreeBSD Id: Makefile,v 1.10 1997/07/17 15:12:44 max Exp
 
-DISTNAME=	libpng-1.0.8
+DISTNAME=	libpng-1.0.9
 PKGNAME=	${DISTNAME:S/lib//}
 CATEGORIES=	graphics
 MASTER_SITES=	ftp://ftp.libpng.org/pub/png/src/ \
@@ -9,7 +9,7 @@ MASTER_SITES=	ftp://ftp.libpng.org/pub/png/src/ \
 		ftp://swrinde.nde.swri.edu/pub/png/src/ \
 		ftp://ftp.fu-berlin.de/unix/graphics/png/src/
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.libpng.org/pub/png/
 COMMENT=	Library for manipulating PNG images
 
