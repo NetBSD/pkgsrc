@@ -4,4 +4,4 @@ device-dependent properties of a CD-ROM can use this library.
 
 Some support for disk image types like BIN/CUE and NRG is available,
 so applications that use this library also have the ability to read
-disc images as though they were CD's.
+disc images as though they were CDs.
