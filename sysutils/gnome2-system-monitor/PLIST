@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/04/01 19:08:26 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/09/21 17:14:13 jmmv Exp $
 bin/gnome-system-monitor
 share/applications/gnome-system-monitor.desktop
 share/gconf/schemas/gnome-system-monitor.schemas
@@ -30,12 +30,14 @@ ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/gnome-system-monitor.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gnome-system-monitor.mo
 ${PKGLOCALEDIR}/locale/el/LC_MESSAGES/gnome-system-monitor.mo
 ${PKGLOCALEDIR}/locale/en_CA/LC_MESSAGES/gnome-system-monitor.mo
+${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/gnome-system-monitor.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/gnome-system-monitor.mo
 ${PKGLOCALEDIR}/locale/fa/LC_MESSAGES/gnome-system-monitor.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/gnome-system-monitor.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gnome-system-monitor.mo
 ${PKGLOCALEDIR}/locale/ga/LC_MESSAGES/gnome-system-monitor.mo
 ${PKGLOCALEDIR}/locale/gl/LC_MESSAGES/gnome-system-monitor.mo
+${PKGLOCALEDIR}/locale/gu/LC_MESSAGES/gnome-system-monitor.mo
 ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/gnome-system-monitor.mo
 ${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/gnome-system-monitor.mo
 ${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/gnome-system-monitor.mo
@@ -53,6 +55,7 @@ ${PKGLOCALEDIR}/locale/mn/LC_MESSAGES/gnome-system-monitor.mo
 ${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/gnome-system-monitor.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/gnome-system-monitor.mo
 ${PKGLOCALEDIR}/locale/no/LC_MESSAGES/gnome-system-monitor.mo
+${PKGLOCALEDIR}/locale/pa/LC_MESSAGES/gnome-system-monitor.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/gnome-system-monitor.mo
 ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/gnome-system-monitor.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/gnome-system-monitor.mo
