@@ -1,0 +1,16 @@
+$NetBSD: patch-ad,v 1.1 2000/12/20 01:23:05 wiz Exp $
+
+--- src/network.c.orig	Mon Oct  4 01:12:04 1999
++++ src/network.c	Tue Dec 19 13:26:26 2000
+@@ -237,9 +237,9 @@
+   buffer[8] = (unsigned char)((new_random_seed >>  8) & 0xff);
+   buffer[9] = (unsigned char)((new_random_seed >>  0) & 0xff);
+ 
+-  strcpy((char *)&buffer[10], leveldir_current->name);
++  strcpy((char *)&buffer[10], leveldir_current->filename);
+ 
+-  SendBufferToServer(10 + strlen(leveldir_current->name) + 1);
++  SendBufferToServer(10 + strlen(leveldir_current->filename) + 1);
+ }
+ 
+ void SendToServer_PausePlaying()
