@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/09/24 10:36:12 tron Exp $
+# $NetBSD: Makefile,v 1.5 2001/10/05 19:04:24 tron Exp $
 
 DISTNAME=	Guppi-0.35.5
 PKGNAME=	guppi-0.35.5nb1
@@ -26,4 +26,5 @@ post-install:
 	${LN} -fs ${PREFIX}/share/aclocal/libguppi.m4 \
 	  ${LOCALBASE}/share/aclocal/libguppi.m4
 
+.include "../../devel/libglade/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
