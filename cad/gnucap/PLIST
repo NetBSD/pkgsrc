@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/03/29 02:24:42 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/04/21 03:06:29 dmcmahill Exp $
 bin/gnucap
 share/doc/gnucap/WARNINGS
 share/doc/gnucap/acs-tutorial
@@ -197,6 +197,13 @@ share/examples/gnucap/eq4-4609.ckt
 share/examples/gnucap/eq4-6913.ckt
 share/examples/gnucap/eq4-9217.ckt
 share/examples/gnucap/eq4-9217.tran.ckt
+share/examples/gnucap/eq4-9217.tran-slow.ckt
+share/examples/gnucap/eq5-.tran.ckt
+share/examples/gnucap/eq5-.tran.fast.ckt
+share/examples/gnucap/eq5-.tran.like-spice.ckt
+share/examples/gnucap/eq5-.tran.slow.ckt
+share/examples/gnucap/eq5-.tran.vfast.ckt
+share/examples/gnucap/eq5-.tran.vvfast.ckt
 share/examples/gnucap/eqboost.ckt
 share/examples/gnucap/eqflat.ckt
 share/examples/gnucap/eqmodify.ckt
