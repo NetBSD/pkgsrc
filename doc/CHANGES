@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6463 2004/07/06 13:34:09 recht Exp $
+$NetBSD: CHANGES,v 1.6464 2004/07/06 13:42:42 taya Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3270,3 +3270,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated libkver to 0.5 [cube 2004-07-06]
 	Updated gtk-gnutella to 0.93.4 [adam 2004-07-06]
 	Updated pygtk to 0.6.11 [recht 2004-07-06]
+	Updated thunderbird to 0.7.1 [taya 2004-07-06]
+	Updated thunderbird-gtk2 to 0.7.1 [taya 2004-07-06]
