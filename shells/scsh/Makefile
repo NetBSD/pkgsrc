@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2002/11/17 09:02:01 salo Exp $
+# $NetBSD: Makefile,v 1.19 2003/01/19 09:12:06 salo Exp $
 # FreeBSD Id: Makefile,v 1.4 1997/07/15 15:00:30 cracauer Exp 
 #
 
@@ -15,9 +15,6 @@ NOT_FOR_PLATFORM=	*-*-alpha	# Needs scheme
 GNU_CONFIGURE=		yes
 
 ALL_TARGET=		enough
-MAKE_ENV=		INSTALL_PROGRAM='${INSTALL_PROGRAM}' \
-			INSTALL_SCRIPT='${INSTALL_SCRIPT}' \
-			INSTALL_DATA='${INSTALL_DATA}'
 
 PKG_SHELL=		${PREFIX}/bin/scsh
 
