@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/03/18 05:25:32 taca Exp $
+${RUBY_SITEARCHLIBDIR}/digest.${RUBY_DLEXT}
+${RUBY_SITEARCHLIBDIR}/digest/md5.${RUBY_DLEXT}
+${RUBY_SITEARCHLIBDIR}/digest/rmd160.${RUBY_DLEXT}
+${RUBY_SITEARCHLIBDIR}/digest/sha1.${RUBY_DLEXT}
+${RUBY_SITEARCHLIBDIR}/digest/sha2.${RUBY_DLEXT}
+@dirrm ${RUBY_SITEARCHLIBDIR}/digest
+${RUBY_SITELIBDIR}/md5.rb
+${RUBY_SITELIBDIR}/sha1.rb
+${RUBY_DOCDIR}/digest/digest.txt
+${RUBY_DOCDIR}/digest/digest.txt.ja
+@dirrm ${RUBY_DOCDIR}/digest
