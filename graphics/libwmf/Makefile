@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2000/07/15 20:39:21 agc Exp $
+# $NetBSD: Makefile,v 1.9 2000/07/24 17:13:29 jlam Exp $
 #
 
 DISTNAME=		libwmf-0.1.17
@@ -8,7 +8,7 @@ MASTER_SITES=		http://www.csn.ul.ie/~caolan/publink/libwmf/
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.csn.ul.ie/~caolan/docs/libwmf.html
 
-BUILD_DEPENDS+=		${LOCALBASE}/bin/autoconf:../../devel/autoconf
+BUILD_DEPENDS+=		autoreconf:../../devel/autoconf
 DEPENDS+=		freetype-lib-*:../../graphics/freetype-lib
 DEPENDS+=		png>=1.0.6:../../graphics/png
 DEPENDS+=		xpm-3.4k:../../graphics/xpm
@@ -26,10 +26,13 @@ CONFIGURE_ARGS+=	--with-png="${LOCALBASE}"
 CONFIGURE_ARGS+=	--with-ttf="${LOCALBASE}"
 CONFIGURE_ARGS+=	--with-xpm="${XPMDIR}"
 CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
-CPPFLAGS+=		-I${LOCALBASE}/include -I${X11BASE}/include
+
+CPPFLAGS+=		-I${LOCALBASE}/include/freetype		# freetype.h
+CPPFLAGS+=		-I${LOCALBASE}/include			# png.h
+CPPFLAGS+=		-I${XPMDIR}/include			# xpm.h
 
 pre-configure:
-	cd ${WRKSRC}; ${LOCALBASE}/bin/autoconf
+	cd ${WRKSRC} && autoreconf
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/libwmf
