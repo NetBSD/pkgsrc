@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/01/23 20:32:41 wulf Exp $
+
+SHA1 (linpsk-0.8.0.4.tar.gz) = cd4c76608a0c11f9990345d7a6859db58d7bba27
+Size (linpsk-0.8.0.4.tar.gz) = 426817 bytes
+SHA1 (patch-aa) = b3fda2c3242e7f88a6f43ee40f66f35ab7938f85

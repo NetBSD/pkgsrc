@@ -1,0 +1,37 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/01/23 20:32:42 wulf Exp $
+
+--- configure.orig	2004-07-27 04:51:41.000000000 +0930
++++ configure	2004-10-01 23:57:19.000000000 +0930
+@@ -1047,7 +1047,7 @@
+                           include additional configurations [automatic]
+   --with-x                use the X Window System
+   --with-qtdir=DIR        Qt installation directory default=$QTDIR
+-  --with-fftw-base=DIR    Base directory for fftw include and library
++  --with-fftw-dir=DIR     Base directory for fftw include and library
+ 
+ Some influential environment variables:
+   CC          C compiler command
+@@ -19136,7 +19136,7 @@
+     { echo "$as_me:$LINENO: WARNING: output file \`$ofile' does not exist" >&5
+ echo "$as_me: WARNING: output file \`$ofile' does not exist" >&2;}
+   fi
+-  if test -z `grep -e 'shared_ext.*shrext' $ofile`; then
++  if test -z "`grep -e 'shared_ext.*shrext' $ofile`"; then
+     # Make sure $shared_ext gets set to $shrext
+     if sed -e 's/shared_ext/shrext/g' "$ofile" > "${ofile}T"; then
+       mv "${ofile}T" "$ofile"
+@@ -19795,10 +19795,10 @@
+ echo "$as_me:$LINENO: checking FFTW lib" >&5
+ echo $ECHO_N "checking FFTW lib... $ECHO_C" >&6
+ 
+-# Check whether --with-FFTW_BASE_DIR or --without-FFTW_BASE_DIR was given.
+-if test "${with_FFTW_BASE_DIR+set}" = set; then
+-  withval="$with_FFTW_BASE_DIR"
+-
++# Check whether --with-fftw-dir or --without-fftw-base-dir was given.
++if test "${with_fftw_dir+set}" = set; then
++  withval="$with_fftw_dir"
++    FFTW_BASE_DIR=$withval
+ fi;
+ if test x"$FFTW_BASE_DIR" = x ; then
+     FFTW_SEARCH="/usr /usr/local /usr/lib/ /sw /sw/lib qt"
