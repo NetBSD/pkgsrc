@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2001/12/09 22:06:45 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2001/12/23 23:03:22 wiz Exp $
 #
 
-DISTNAME=	popa3d-0.4.9.4
-PKGREVISION=	2
+DISTNAME=	popa3d-0.5
 CATEGORIES=	mail
 MASTER_SITES=	http://www.openwall.com/popa3d/ \
 		ftp://ftp.openwall.com/pub/projects/popa3d/ \
@@ -19,18 +18,20 @@ PKG_GROUPS=	${POPA3D_GROUP}
 PKG_USERS=	${POPA3D_USER}:${POPA3D_GROUP}
 
 DEINSTALL_EXTRA_TMPL=	${PKGDIR}/DEINSTALL
+USE_BUILDLINK_ONLY=	# defined
 
 FILES_SUBST+=	POPA3D_USER=${POPA3D_USER}
 FILES_SUBST+=	POPA3D_GROUP=${POPA3D_GROUP}
 
 post-patch:
 	cd ${WRKSRC} && \
-		${SED} "s,/usr/share/empty,${PREFIX}/share/empty," \
+		${SED} "s,/var/empty,${PREFIX}/share/empty," \
 			params.h > params.h.new && \
 		${MV} params.h.new params.h
 
 do-install:
-	${INSTALL_PROGRAM} -m 700 ${WRKSRC}/popa3d ${PREFIX}/libexec
+	${INSTALL_PROGRAM} -m 500 ${WRKSRC}/popa3d ${PREFIX}/libexec
+	${INSTALL_DATA} -m 644 ${WRKSRC}/popa3d.8 ${PREFIX}/man/man8/
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/popa3d
 	cd ${WRKSRC} && ${INSTALL_DATA} DESIGN INSTALL LICENSE \
 		${PREFIX}/share/doc/popa3d
