@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2003/06/27 16:00:05 jmmv Exp $
+$NetBSD: distinfo,v 1.4 2004/02/20 14:53:17 jmmv Exp $
 
-SHA1 (sirius-0.7.0.tar.gz) = 37961cf4cead9a467785db0a14895a72e9887316
-Size (sirius-0.7.0.tar.gz) = 1306274 bytes
+SHA1 (sirius-0.8.0.tar.gz) = 4d6854c9a7bcb19069215162040037518cd66cea
+Size (sirius-0.8.0.tar.gz) = 1623435 bytes
