@@ -1,3 +1,4 @@
+@comment $NetBSD: PLIST,v 1.2 1999/12/14 16:31:22 bouyer Exp $
 bin/hypermail
 share/doc/hypermail/hypermail.gif
 share/doc/hypermail/hypermail.html
