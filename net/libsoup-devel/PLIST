@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/10/15 21:22:17 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.6 2005/03/26 16:18:07 jmmv Exp $
 include/libsoup-2.2/libsoup/soup-address.h
 include/libsoup-2.2/libsoup/soup-connection.h
 include/libsoup-2.2/libsoup/soup-headers.h
@@ -22,38 +22,5 @@ include/libsoup-2.2/libsoup/soup-uri.h
 include/libsoup-2.2/libsoup/soup.h
 lib/libsoup-2.2.la
 lib/pkgconfig/libsoup-2.2.pc
-share/doc/libsoup/SoupAuth.html
-share/doc/libsoup/SoupAuthBasic.html
-share/doc/libsoup/SoupAuthDigest.html
-share/doc/libsoup/SoupConnection.html
-share/doc/libsoup/SoupConnectionNTLM.html
-share/doc/libsoup/SoupMessage.html
-share/doc/libsoup/SoupSoapMessage.html
-share/doc/libsoup/ch01.html
-share/doc/libsoup/home.png
-share/doc/libsoup/index.html
-share/doc/libsoup/index.sgml
-share/doc/libsoup/left.png
-share/doc/libsoup/libsoup-SoupAddress.html
-share/doc/libsoup/libsoup-SoupServer.html
-share/doc/libsoup/libsoup-SoupServerMessage.html
-share/doc/libsoup/libsoup-SoupSession.html
-share/doc/libsoup/libsoup-SoupSocket.html
-share/doc/libsoup/libsoup-soup-dns.html
-share/doc/libsoup/libsoup-soup-headers.html
-share/doc/libsoup/libsoup-soup-md5-utils.html
-share/doc/libsoup/libsoup-soup-message-private.html
-share/doc/libsoup/libsoup-soup-message-queue.html
-share/doc/libsoup/libsoup-soup-method.html
-share/doc/libsoup/libsoup-soup-misc.html
-share/doc/libsoup/libsoup-soup-server-auth.html
-share/doc/libsoup/libsoup-soup-ssl.html
-share/doc/libsoup/libsoup-soup-status.html
-share/doc/libsoup/libsoup-soup-uri.html
-share/doc/libsoup/libsoup.devhelp
-share/doc/libsoup/right.png
-share/doc/libsoup/style.css
-share/doc/libsoup/up.png
-@dirrm share/doc/libsoup
 @dirrm include/libsoup-2.2/libsoup
 @dirrm include/libsoup-2.2
