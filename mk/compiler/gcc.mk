@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.13 2004/02/02 12:45:08 jlam Exp $
+# $NetBSD: gcc.mk,v 1.14 2004/02/03 03:47:45 jlam Exp $
 
 .if !defined(COMPILER_GCC_MK)
 COMPILER_GCC_MK=	defined
@@ -18,25 +18,32 @@ _GCC2_PATTERNS=	2.8 2.8.* 2.9 2.9.* 2.[1-8][0-9] 2.[1-8][0-9].*	\
 _GCC3_PATTERNS=	2.95.[4-9]* 2.95.[1-9][0-9]* 2.9[6-9] 2.9[6-9].*	\
 		2.[1-9][0-9][0-9]* 3.* [4-9]*
 
-.if !defined(_IS_BUILTIN_GCC)
+_CC=	${CC:C/^/_asdf_/1:M_asdf_*:S/^_asdf_//}
+.for _dir_ in ${PATH:C/\:/ /g}
+.  if empty(_CC:M/*)
+.    if exists(${_dir_}/${CC:C/^/_asdf_/1:M_asdf_*:S/^_asdf_//})
+_CC=	${_dir_}/${CC:C/^/_asdf_/1:M_asdf_*:S/^_asdf_//}
+.    endif
+.  endif
+.endfor
+
+.if !empty(_CC:M${LOCALBASE}/*)
+_IS_BUILTIN_GCC=	NO
+.else
+.  if !empty(_CC:M/*)
 #
 # GCC in older versions of Darwin report "Apple Computer ... based on gcc
 # version ...", so we can't just grep for "^gcc".
 #
 _IS_BUILTIN_GCC!=	\
-	gccpath="`${TYPE} ${CC} | ${AWK} '{ print $$NF }'`";		\
-	case $$gccpath in						\
-	${LOCALBASE}/*)							\
+	if ${_CC} -v 2>&1 | ${GREP} -q "gcc version"; then	\
+		${ECHO} "YES";						\
+	else								\
 		${ECHO} "NO";						\
-		;;							\
-	*)								\
-		if ${CC} -v 2>&1 | ${GREP} -q 'gcc version'; then	\
-			${ECHO} "YES";					\
-		else							\
-			${ECHO} "NO";					\
-		fi;							\
-		;;							\
-	esac
+	fi
+.  else
+_IS_BUILTIN_GCC=	NO
+.  endif
 .endif
 
 # Distill the GCC_REQD list into a single _GCC_REQD value that is the
@@ -143,11 +150,11 @@ _USE_PKGSRC_GCC=	NO
 .  if !empty(_IS_BUILTIN_GCC:M[nN][oO])
 _USE_PKGSRC_GCC=	YES
 .  else
-_GCC_VERSION_STRING!=	${CC} -v 2>&1 | ${GREP} 'gcc version'
+_GCC_VERSION_STRING!=	${_CC} -v 2>&1 | ${GREP} 'gcc version'
 .    if !empty(_GCC_VERSION_STRING:Megcs*)
 _GCC_VERSION=	2.8.1		# egcs is considered to be gcc-2.8.1.
 .    elif !empty(_GCC_VERSION_STRING:Mgcc*)
-_GCC_VERSION!=	${CC} -dumpversion
+_GCC_VERSION!=	${_CC} -dumpversion
 .    else
 _GCC_VERSION=	0
 .    endif
@@ -168,22 +175,18 @@ _USE_PKGSRC_GCC!=	\
 # link against gcc shared libs.
 #
 _COMPILER_LD_FLAG=	-Wl,
+.  if !empty(_CC:M${LOCALBASE}/*)
+_GCC_SUBPREFIX=		${_CC:T:S/\/bin$//:S/${LOCALBASE}\///:S/${LOCALBASE}//}/
+.  else
 _GCC_SUBPREFIX!=	\
 	if ${PKG_INFO} -qe ${_GCC_PKGBASE}; then			\
 		${PKG_INFO} -f ${_GCC_PKGBASE} |			\
 		${GREP} "File:.*bin/gcc" |				\
 		${SED} -e "s/.*File: *//;s/bin\/gcc.*//;q";		\
 	else								\
-		gccpath="`${TYPE} ${CC} | ${AWK} '{ print $$NF }'`";	\
-		case $$gccpath in					\
-		${LOCALBASE}/*)						\
-			${ECHO} "`${BASENAME} $$gccpath`/";		\
-			;;						\
-		*)							\
-			${ECHO} "not_found/";				\
-			;;						\
-		esac
+		${ECHO} "not_found/";					\
 	fi
+.  endif
 _GCC_PREFIX=		${LOCALBASE}/${_GCC_SUBPREFIX}
 _GCC_ARCHDIR!=		\
 	if [ -x ${_GCC_PREFIX}bin/gcc ]; then				\
@@ -257,8 +260,9 @@ PKG_FC:=	${F77}
 .  endif
 .else
 .  if !empty(_IS_BUILTIN_GCC:M[yY][eE][sS])
-_GCC_PATH!=	${TYPE} ${CC} | ${AWK} '{ print $$NF }'
-PATH:=		${_GCC_PATH:H}:${PATH}
+.    if !empty(_CC:M/*)
+PATH:=		${_CC:H}:${PATH}
+.    endif
 .  endif
 .endif
 
