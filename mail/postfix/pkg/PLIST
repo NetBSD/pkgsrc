@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 1999/05/29 20:57:19 christos Exp $
+@comment $NetBSD: PLIST,v 1.2 1999/05/30 11:50:38 tron Exp $
 libexec/postfix/master
 sbin/postfix
+sbin/postdrop
 libexec/postfix/sendmail
 libexec/postfix/pickup
 libexec/postfix/cleanup
@@ -80,6 +81,7 @@ man/cat5/relocated.0
 man/cat5/transport.0
 man/cat5/virtual.0
 man/man8/bounce.8
+man/man8/defer.8
 man/man8/local.8
 man/man8/pipe.8
 man/man8/smtp.8
@@ -91,6 +93,7 @@ man/man8/pickup.8
 man/man8/showq.8
 man/man8/trivial-rewrite.8
 man/cat8/bounce.0
+man/cat8/defer.0
 man/cat8/local.0
 man/cat8/pipe.0
 man/cat8/smtp.0
