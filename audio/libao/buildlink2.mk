@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.4 2004/01/07 10:51:48 jmmv Exp $
+# $NetBSD: buildlink2.mk,v 1.5 2004/02/19 17:54:05 wiz Exp $
 
 .if !defined(LIBAO_BUILDLINK2_MK)
 LIBAO_BUILDLINK2_MK=	# defined
@@ -13,8 +13,6 @@ BUILDLINK_FILES.libao=	include/ao/ao.h
 BUILDLINK_FILES.libao+=	include/ao/os_types.h
 BUILDLINK_FILES.libao+=	lib/libao.*
 BUILDLINK_FILES.libao+=	lib/ao/*
-
-.include "../../devel/pkgconfig/buildlink2.mk"
 
 BUILDLINK_TARGETS+=	libao-buildlink
 
