@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/11/28 02:17:03 jtb Exp $
+$NetBSD: patch-aa,v 1.2 2001/01/22 23:30:02 jtb Exp $
 
 --- cfftb1.f.orig	Fri Nov 17 16:48:23 2000
 +++ cfftb1.f
@@ -9,3 +9,125 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/11/28 02:17:03 jtb Exp $
        NF = IFAC(2)
        NA = 0
        L1 = 1
+
+--- cfftf1.f.orig	Fri Nov 17 16:48:23 2000
++++ cfftf1.f
+@@ -1,5 +1,5 @@
+       SUBROUTINE CFFTF1 (N,C,CH,WA,IFAC)
+-      DIMENSION       CH(1)      ,C(1)       ,WA(1)      ,IFAC(1)
++      DIMENSION       CH(1)      ,C(1)       ,WA(1)      ,IFAC(*)
+       NF = IFAC(2)
+       NA = 0
+       L1 = 1
+
+--- cffti1.f.orig	Fri Nov 17 16:48:23 2000
++++ cffti1.f
+@@ -1,5 +1,5 @@
+       SUBROUTINE CFFTI1 (N,WA,IFAC)
+-      DIMENSION       WA(1)      ,IFAC(1)    ,NTRYH(4)
++      DIMENSION       WA(1)      ,IFAC(*)    ,NTRYH(4)
+       DATA NTRYH(1),NTRYH(2),NTRYH(3),NTRYH(4)/3,4,2,5/
+       NL = N
+       NF = 0
+
+--- cosqb.f.orig	Fri Nov 17 16:48:23 2000
++++ cosqb.f
+@@ -1,5 +1,5 @@
+       SUBROUTINE COSQB (N,X,WSAVE)
+-      DIMENSION       X(1)       ,WSAVE(1)
++      DIMENSION       X(*)       ,WSAVE(1)
+       DATA TSQRT2 /2.82842712474619/
+       IF (N-2) 101,102,103
+   101 X(1) = 4.*X(1)
+
+--- cosqf.f.orig	Fri Nov 17 16:48:23 2000
++++ cosqf.f
+@@ -1,5 +1,5 @@
+       SUBROUTINE COSQF (N,X,WSAVE)
+-      DIMENSION       X(1)       ,WSAVE(1)
++      DIMENSION       X(*)       ,WSAVE(1)
+       DATA SQRT2 /1.4142135623731/
+       IF (N-2) 102,101,103
+   101 TSQX = SQRT2*X(2)
+
+--- cost.f.orig	Fri Nov 17 16:48:23 2000
++++ cost.f
+@@ -1,5 +1,5 @@
+       SUBROUTINE COST (N,X,WSAVE)
+-      DIMENSION       X(1)       ,WSAVE(1)
++      DIMENSION       X(*)       ,WSAVE(1)
+       NM1 = N-1
+       NP1 = N+1
+       NS2 = N/2
+
+--- ezfft1.f.orig	Fri Nov 17 16:48:23 2000
++++ ezfft1.f
+@@ -1,5 +1,5 @@
+       SUBROUTINE EZFFT1 (N,WA,IFAC)
+-      DIMENSION       WA(1)      ,IFAC(1)    ,NTRYH(4)
++      DIMENSION       WA(1)      ,IFAC(*)    ,NTRYH(4)
+       DATA NTRYH(1),NTRYH(2),NTRYH(3),NTRYH(4)/4,2,3,5/
+      1    ,TPI/6.28318530717959/
+       NL = N
+
+--- ezfftb.f.orig	Fri Nov 17 16:48:23 2000
++++ ezfftb.f
+@@ -1,5 +1,5 @@
+       SUBROUTINE EZFFTB (N,R,AZERO,A,B,WSAVE)
+-      DIMENSION       R(1)       ,A(1)       ,B(1)       ,WSAVE(1)
++      DIMENSION       R(*)       ,A(1)       ,B(1)       ,WSAVE(1)
+       IF (N-2) 101,102,103
+   101 R(1) = AZERO
+       RETURN
+
+--- ezfftf.f.orig	Fri Nov 17 16:48:24 2000
++++ ezfftf.f
+@@ -2,7 +2,7 @@
+ C
+ C                       VERSION 3  JUNE 1979
+ C
+-      DIMENSION       R(1)       ,A(1)       ,B(1)       ,WSAVE(1)
++      DIMENSION       R(*)       ,A(1)       ,B(1)       ,WSAVE(1)
+       IF (N-2) 101,102,103
+   101 AZERO = R(1)
+       RETURN
+
+--- rfftb1.f.orig	Fri Nov 17 16:48:24 2000
++++ rfftb1.f
+@@ -1,5 +1,5 @@
+       SUBROUTINE RFFTB1 (N,C,CH,WA,IFAC)
+-      DIMENSION       CH(1)      ,C(1)       ,WA(1)      ,IFAC(1)
++      DIMENSION       CH(1)      ,C(1)       ,WA(1)      ,IFAC(*)
+       NF = IFAC(2)
+       NA = 0
+       L1 = 1
+
+--- rfftf1.f.orig	Fri Nov 17 16:48:24 2000
++++ rfftf1.f
+@@ -1,5 +1,5 @@
+       SUBROUTINE RFFTF1 (N,C,CH,WA,IFAC)
+-      DIMENSION       CH(1)      ,C(1)       ,WA(1)      ,IFAC(1)
++      DIMENSION       CH(1)      ,C(1)       ,WA(1)      ,IFAC(*)
+       NF = IFAC(2)
+       NA = 1
+       L2 = N
+
+--- rffti1.f.orig	Fri Nov 17 16:48:24 2000
++++ rffti1.f
+@@ -1,5 +1,5 @@
+       SUBROUTINE RFFTI1 (N,WA,IFAC)
+-      DIMENSION       WA(1)      ,IFAC(1)    ,NTRYH(4)
++      DIMENSION       WA(1)      ,IFAC(*)    ,NTRYH(4)
+       DATA NTRYH(1),NTRYH(2),NTRYH(3),NTRYH(4)/4,2,3,5/
+       NL = N
+       NF = 0
+
+--- sint1.f.orig	Fri Nov 17 16:48:24 2000
++++ sint1.f
+@@ -1,5 +1,5 @@
+       SUBROUTINE SINT1(N,WAR,WAS,XH,X,IFAC)
+-      DIMENSION WAR(1),WAS(1),X(1),XH(1),IFAC(1)
++      DIMENSION WAR(1),WAS(1),X(1),XH(*),IFAC(1)
+       DATA SQRT3 /1.73205080756888/
+       DO 100 I=1,N
+       XH(I) = WAR(I)
