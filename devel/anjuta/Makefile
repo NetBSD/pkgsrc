@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2004/02/26 16:25:52 cube Exp $
+# $NetBSD: Makefile,v 1.20 2004/03/08 19:40:37 jmmv Exp $
 #
 
 DISTNAME=		anjuta-1.2.1
+PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=anjuta/}
 
@@ -15,7 +16,7 @@ DEPENDS+=		gdk-pixbuf>=0.22:../../graphics/gdk-pixbuf
 DEPENDS+=		gettext>=0.11.5:../../devel/gettext
 DEPENDS+=		glade2>=2.0.1:../../devel/glade2
 DEPENDS+=		gmake>=3.80:../../devel/gmake
-DEPENDS+=		gnome2-dirs>=1.2:../../misc/gnome2-dirs
+DEPENDS+=		gnome2-dirs>=1.5:../../misc/gnome2-dirs
 DEPENDS+=		gnome2-terminal>=2.4.2:../../x11/gnome2-terminal
 DEPENDS+=		libtool>=1.5.2:../../devel/libtool
 DEPENDS+=		pkgconfig>=0.15.0:../../devel/pkgconfig

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2004/03/04 19:17:04 minskim Exp $
+# $NetBSD: Makefile,v 1.28 2004/03/08 19:40:43 jmmv Exp $
 #
 
 DISTNAME=	metacity-2.6.5
+PKGREVISION=	1
 CATEGORIES=	wm x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/metacity/2.6/}
 EXTRACT_SUFX=	.tar.bz2
@@ -11,7 +12,7 @@ HOMEPAGE=	http://www.gnome.org/softwaremap/projects/Metacity/
 COMMENT=	GNOME-compliant window manager
 
 BUILD_USES_MSGFMT=	YES
-DEPENDS=		gnome2-dirs>=1.0:../../misc/gnome2-dirs
+DEPENDS=		gnome2-dirs>=1.5:../../misc/gnome2-dirs
 
 USE_BUILDLINK3=		YES
 USE_PKGLOCALEDIR=	YES

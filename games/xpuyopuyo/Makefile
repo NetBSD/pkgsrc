@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2004/01/24 13:30:57 grant Exp $
+# $NetBSD: Makefile,v 1.25 2004/03/08 19:40:39 jmmv Exp $
 
 DISTNAME=		xpuyopuyo-0.9.1
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		games x11
 MASTER_SITES=		http://chaos2.org/xpuyopuyo/ \
 			http://lenin.dabney.caltech.edu./~justins/xpuyopuyo/
@@ -10,7 +10,7 @@ MAINTAINER=		jlam@NetBSD.org
 HOMEPAGE=		http://chaos2.org/xpuyopuyo/
 COMMENT=		Tetris-like puzzle game
 
-DEPENDS+=		gnome1-dirs>=1.0:../../misc/gnome1-dirs
+DEPENDS+=		gnome1-dirs>=1.5:../../misc/gnome1-dirs
 
 AUTOMAKE_REQD=		1.4
 USE_BUILDLINK2=		YES

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2004/03/07 12:09:21 jmmv Exp $
+# $NetBSD: Makefile,v 1.3 2004/03/08 19:40:41 jmmv Exp $
 
 DISTNAME=		gnome-media-2.4.1.1
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		multimedia gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-media/2.4/}
 EXTRACT_SUFX=		.tar.bz2
@@ -11,6 +11,7 @@ HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Set of audio/multimedia applications for GNOME2
 
 BUILD_USES_MSGFMT=	yes
+DEPENDS+=		xdg-dirs>=1.1:../../misc/xdg-dirs
 
 GNU_CONFIGURE=		yes
 USE_BUILDLINK3=		yes

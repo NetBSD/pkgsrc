@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.52 2004/03/07 12:09:21 jmmv Exp $
+# $NetBSD: Makefile,v 1.53 2004/03/08 19:40:43 jmmv Exp $
 #
 
 DISTNAME=	gdm-2.4.4.7
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gdm/2.4/} \
 		${MASTER_SITE_LOCAL}
@@ -14,6 +14,7 @@ COMMENT=	Gnome Display Manager - a re-implementation of the xdm program
 
 BUILDLINK_DEPENDS.libart2+=	libart2>=2.3.11
 BUILD_USES_MSGFMT=	YES
+DEPENDS+=		xdg-dirs>=1.1:../../misc/xdg-dirs
 
 USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
