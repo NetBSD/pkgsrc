@@ -3,8 +3,8 @@
 # Date created:         28 Jan 1997
 # Whom:                 jeff@cetlink.net
 #
-# $NetBSD: Makefile,v 1.2 1998/03/08 00:49:33 tron Exp $
-# $FreeBSD Id: Makefile,v 1.2 1997/02/14 07:55:45 asami Exp
+# $NetBSD: Makefile,v 1.3 1998/03/10 00:51:59 explorer Exp $
+# FreeBSD Id: Makefile,v 1.2 1997/02/14 07:55:45 asami Exp
 #
 
 DISTNAME=       gd1.2
