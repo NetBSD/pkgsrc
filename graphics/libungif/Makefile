@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2004/01/05 20:38:35 jlam Exp $
+# $NetBSD: Makefile,v 1.27 2004/01/29 12:06:19 grant Exp $
 #
 
 DISTNAME=	libungif-4.1.0b1
@@ -20,6 +20,7 @@ LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS=		--without-x
+CONFIGURE_ENV+=		ac_cv_lib_X11_main=no
 
 USE_BUILDLINK3=		yes
 
