@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2000/10/10 15:02:14 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.15 2000/10/10 19:26:15 dmcmahill Exp $
 
 DISTNAME=		pvm3.4.3
 PKGNAME=		pvm-3.4.3
@@ -9,8 +9,11 @@ EXTRACT_SUFX=		.tgz
 MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.epm.ornl.gov/pvm/pvm_home.html
 
-.if !exists(/usr/bin/ssh)                 
+.if exists(/usr/bin/ssh)                 
+SSH=		/usr/bin/ssh
+.else
 DEPENDS+=		{openssh-*,ssh{,6}-1.2.27}:../../security/ssh
+SSH=		${LOCALBASE}/bin/ssh
 .endif
 
 USE_FORTRAN=		yes
@@ -18,6 +21,7 @@ USE_X11=		yes
 WRKSRC=			${WRKDIR}/pvm3
 MAKE_ENV+=		PVM_ROOT=${WRKSRC}
 MAKE_ENV+=		PVM_ARCH=
+MAKE_ENV+=		SSH=${SSH}
 ALL_TARGET=		all install
 MESSAGE_FILE=		${WRKDIR}/MESSAGE
 PLIST_SRC=		${WRKDIR}/PLIST-src
