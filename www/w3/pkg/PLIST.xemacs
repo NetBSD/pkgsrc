@@ -1,17 +1,12 @@
-@comment $NetBSD: PLIST.xemacs,v 1.1.1.1 2000/12/01 06:18:18 jtb Exp $
+@comment $NetBSD: PLIST.xemacs,v 1.2 2001/03/01 18:55:53 jtb Exp $
 lib/xemacs/xemacs-packages/etc/w3/default.css
-lib/xemacs/xemacs-packages/info/dir
-@unexec install-info --delete --info-dir=%D/info %D/lib/xemacs/xemacs-packages/info/w3-faq.info
 lib/xemacs/xemacs-packages/info/w3-faq.info
-@exec install-info --info-dir=%D/info %D/lib/xemacs/xemacs-packages/info/w3-faq.info
-@unexec install-info --delete --info-dir=%D/info %D/lib/xemacs/xemacs-packages/info/w3.info
 lib/xemacs/xemacs-packages/info/w3.info
 lib/xemacs/xemacs-packages/info/w3.info-1
 lib/xemacs/xemacs-packages/info/w3.info-2
 lib/xemacs/xemacs-packages/info/w3.info-3
 lib/xemacs/xemacs-packages/info/w3.info-4
 lib/xemacs/xemacs-packages/info/w3.info-5
-@exec install-info --info-dir=%D/info %D/lib/xemacs/xemacs-packages/info/w3.info
 lib/xemacs/xemacs-packages/lisp/w3/auto-autoloads.el
 lib/xemacs/xemacs-packages/lisp/w3/auto-autoloads.elc
 lib/xemacs/xemacs-packages/lisp/w3/base64.el
