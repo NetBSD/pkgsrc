@@ -1,0 +1,12 @@
+$NetBSD: patch-ad,v 1.1.2.2 2005/03/25 08:27:53 snj Exp $
+
+--- gnu/config.h.in.orig	Sat Apr 17 05:33:38 2004
++++ gnu/config.h.in
+@@ -4,6 +4,7 @@
+ #undef LIBC
+ #undef NP_SFX
+ #undef ELF_EXECUTABLES
++#undef HAVE_LCHOWN
+ #undef HAVE_MKDTEMP
+ #undef HAVE_FCLOSEALL
+ #undef HAVE_SETPRIORITY
