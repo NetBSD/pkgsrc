@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.90 2003/08/18 17:00:24 taca Exp $
+# $NetBSD: Makefile,v 1.91 2003/09/11 15:48:24 taca Exp $
 
 DISTNAME=	squid-2.5.STABLE3
 PKGNAME=	squid-2.5.3
-PKGREVISION=	4
+PKGREVISION=	5
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-src//}
 CATEGORIES=	www
 MASTER_SITES=	http://www.squid-cache.org/Versions/v2/2.5/ \
@@ -48,7 +48,14 @@ PATCHFILES=	squid-2.5.STABLE3-Lithuanian.patch \
 		squid-2.5.STABLE3-aufs_threads.patch \
 		squid-2.5.STABLE3-digest_compile.patch \
 		squid-2.5.STABLE3-407_user_name.patch \
-		squid-2.5.STABLE3-multicast-ICP-timeout.patch
+		squid-2.5.STABLE3-multicast-ICP-timeout.patch \
+		squid-2.5.STABLE3-forwarded_for.patch \
+		squid-2.5.STABLE3-ncsa_auth_passwdfile.patch \
+		squid-2.5.STABLE3-POST-error.patch \
+		squid-2.5.STABLE3-auth_delay_pools.patch \
+		squid-2.5.STABLE3-http_reply_access_denied.patch \
+		squid-2.5.STABLE3-delay_access_auth.patch \
+		squid-2.5.STABLE3-external_acl_children.patch
 PATCH_DIST_STRIP=       -p1
 
 MAINTAINER=	taca@NetBSD.org
