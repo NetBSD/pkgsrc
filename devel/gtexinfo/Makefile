@@ -3,11 +3,11 @@
 # Date created:		14 November 1997
 # Whom:			lamj@stat.cmu.edu
 #
-# $NetBSD: Makefile,v 1.4 1998/03/05 13:17:17 hubertf Exp $
+# $NetBSD: Makefile,v 1.5 1998/03/09 08:09:34 hubertf Exp $
 #
 
-DISTNAME=       texinfo-3.11
-PKGNAME=	gtexinfo-3.11
+DISTNAME=       texinfo-3.12
+PKGNAME=	gtexinfo-3.12
 CATEGORIES=	devel
 MASTER_SITES=   ${MASTER_SITE_GNU}
 

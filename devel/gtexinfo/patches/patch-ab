@@ -1,19 +1,11 @@
-*** info/Makefile.in.orig	Thu Jul 31 19:51:17 1997
---- info/Makefile.in	Tue Oct  7 16:54:31 1997
-***************
-*** 107,113 ****
-  PROGRAMS =  $(bin_PROGRAMS) $(noinst_PROGRAMS)
-  
-  
-! DEFS = @DEFS@ -I. -I$(srcdir) -I..
-  CPPFLAGS = @CPPFLAGS@
-  LDFLAGS = @LDFLAGS@
-  LIBS = @LIBS@
---- 107,113 ----
-  PROGRAMS =  $(bin_PROGRAMS) $(noinst_PROGRAMS)
-  
-  
-! DEFS = @DEFS@ -DPORTSINFODIR=\"$(prefix)/info\" -I. -I$(srcdir) -I..
-  CPPFLAGS = @CPPFLAGS@
-  LDFLAGS = @LDFLAGS@
-  LIBS = @LIBS@
+--- info/Makefile.in.orig	Mon Mar  9 08:42:23 1998
++++ info/Makefile.in	Mon Mar  9 08:42:44 1998
+@@ -97,7 +97,7 @@
+ # Automake puts -I.. and -I$(srcdir) into DEFS by default, but
+ # we need to override it, so include them ourselves.
+ INCLUDES = -I. -I$(top_srcdir)/lib -I../intl -I.. -I$(srcdir)
+-DEFS = -DINFODIR=\"$(infodir)\" -DLOCALEDIR=\"$(localedir)\" @DEFS@
++DEFS = -DPORTSINFODIR=\"$(prefix)/info\" -DINFODIR=\"$(infodir)\" -DLOCALEDIR=\"$(localedir)\" @DEFS@
+ LDADD = ../lib/libtxi.a @TERMLIBS@ @INTLLIBS@
+ 
+ makedoc_SOURCES = makedoc.c

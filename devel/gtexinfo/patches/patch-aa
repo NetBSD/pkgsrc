@@ -1,19 +1,20 @@
-*** util/install-info.c.orig	Tue Oct  7 16:08:31 1997
---- util/install-info.c	Tue Oct  7 16:43:18 1997
-***************
-*** 335,341 ****
-  topmost node of the Info hierarchy, called (dir)Top.\n\
-  The first time you invoke Info you start off looking at this node.\n\
-  \n\
-! File: dir       Node: Top       This is the top of the INFO tree\n\
-  \n\
-    This (the Directory node) gives a menu of major topics.\n\
-    Typing \"q\" exits, \"?\" lists all Info commands, \"d\" returns here,\n\
---- 335,341 ----
-  topmost node of the Info hierarchy, called (dir)Top.\n\
-  The first time you invoke Info you start off looking at this node.\n\
-  \n\
-! File: dir	Node: Top	This is the top of the INFO tree\n\
-  \n\
-    This (the Directory node) gives a menu of major topics.\n\
-    Typing \"q\" exits, \"?\" lists all Info commands, \"d\" returns here,\n\
+--- util/Makefile.in	1998/02/13 13:13:54	1.1
++++ util/Makefile.in	1998/02/13 13:14:34
+@@ -40,7 +40,7 @@
+ INSTALL = @INSTALL@
+ INSTALL_PROGRAM = @INSTALL_PROGRAM@
+ INSTALL_DATA = @INSTALL_DATA@
+-INSTALL_SCRIPT = @INSTALL_SCRIPT@
++INSTALL_SCRIPT = ${BSD_INSTALL_SCRIPT}
+ transform = @program_transform_name@
+ 
+ NORMAL_INSTALL = true
+@@ -253,7 +253,7 @@
+ all: Makefile $(PROGRAMS) $(SCRIPTS)
+ 
+ install-strip:
+-	$(MAKE) INSTALL_PROGRAM='$(INSTALL_PROGRAM) -s' INSTALL_SCRIPT='$(INSTALL_PROGRAM)' install
++	$(MAKE) INSTALL_PROGRAM='$(INSTALL_PROGRAM) -s' INSTALL_SCRIPT='$(INSTALL_SCRIPT)' install
+ installdirs:
+ 	$(mkinstalldirs)  $(bindir) $(bindir)
+ 
