@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2004/02/09 10:13:07 markd Exp $
+@comment $NetBSD: PLIST,v 1.10 2004/05/04 11:47:30 markd Exp $
 bin/karbon
 bin/kchart
 bin/kformula
@@ -1107,6 +1107,7 @@ share/kde/apps/kivio/icons/hicolor/16x16/actions/layer_novisible.png
 share/kde/apps/kivio/icons/hicolor/16x16/actions/layer_print.png
 share/kde/apps/kivio/icons/hicolor/16x16/actions/layer_remove.png
 share/kde/apps/kivio/icons/hicolor/16x16/actions/layer_visible.png
+share/kde/apps/kivio/icons/hicolor/16x16/actions/linestyle.png
 share/kde/apps/kivio/icons/hicolor/16x16/actions/linewidth.png
 share/kde/apps/kivio/icons/hicolor/16x16/actions/open_stencilset.png
 share/kde/apps/kivio/icons/hicolor/16x16/actions/page_disabled.png
@@ -1134,6 +1135,8 @@ share/kde/apps/kivio/icons/hicolor/22x22/actions/font_italic.png
 share/kde/apps/kivio/icons/hicolor/22x22/actions/font_under.png
 share/kde/apps/kivio/icons/hicolor/22x22/actions/group_stencils.png
 share/kde/apps/kivio/icons/hicolor/22x22/actions/kivio_connector.xpm
+share/kde/apps/kivio/icons/hicolor/22x22/actions/linestyle.png
+share/kde/apps/kivio/icons/hicolor/22x22/actions/linewidth.png
 share/kde/apps/kivio/icons/hicolor/22x22/actions/open_stencilset.png
 share/kde/apps/kivio/icons/hicolor/22x22/actions/select_all.png
 share/kde/apps/kivio/icons/hicolor/22x22/actions/send_stencil_to_back.png
@@ -2368,7 +2371,6 @@ share/kde/apps/koffice/icons/crystalsvg/16x16/actions/tab_first.png
 share/kde/apps/koffice/icons/crystalsvg/16x16/actions/tab_last.png
 share/kde/apps/koffice/icons/crystalsvg/16x16/actions/tab_left.png
 share/kde/apps/koffice/icons/crystalsvg/16x16/actions/tab_right.png
-share/kde/apps/koffice/icons/crystalsvg/16x16/actions/text_strike.png
 share/kde/apps/koffice/icons/crystalsvg/16x16/actions/text_sub.png
 share/kde/apps/koffice/icons/crystalsvg/16x16/actions/text_super.png
 share/kde/apps/koffice/icons/crystalsvg/16x16/actions/textcolor.png
@@ -2436,7 +2438,6 @@ share/kde/apps/koffice/icons/crystalsvg/22x22/actions/shadowRU.png
 share/kde/apps/koffice/icons/crystalsvg/22x22/actions/shadowU.png
 share/kde/apps/koffice/icons/crystalsvg/22x22/actions/sub.png
 share/kde/apps/koffice/icons/crystalsvg/22x22/actions/super.png
-share/kde/apps/koffice/icons/crystalsvg/22x22/actions/text_strike.png
 share/kde/apps/koffice/icons/crystalsvg/22x22/actions/toggle_docbrowser.png
 share/kde/apps/koffice/icons/crystalsvg/22x22/actions/unsortedList.png
 share/kde/apps/koffice/icons/crystalsvg/22x22/actions/view_remove.png
@@ -2766,6 +2767,7 @@ share/kde/apps/kspread/icons/crystalsvg/16x16/actions/special_paste.png
 share/kde/apps/kspread/icons/crystalsvg/16x16/actions/text_bottom.png
 share/kde/apps/kspread/icons/crystalsvg/16x16/actions/text_top.png
 share/kde/apps/kspread/icons/crystalsvg/16x16/actions/vertical_text.png
+share/kde/apps/kspread/icons/crystalsvg/22x22/actions/black_sum.png
 share/kde/apps/kspread/icons/crystalsvg/22x22/actions/border_all.png
 share/kde/apps/kspread/icons/crystalsvg/22x22/actions/border_bottom.png
 share/kde/apps/kspread/icons/crystalsvg/22x22/actions/border_fall.png
@@ -2779,9 +2781,17 @@ share/kde/apps/kspread/icons/crystalsvg/22x22/actions/border_top.png
 share/kde/apps/kspread/icons/crystalsvg/22x22/actions/border_up.png
 share/kde/apps/kspread/icons/crystalsvg/22x22/actions/border_vertical.png
 share/kde/apps/kspread/icons/crystalsvg/22x22/actions/funct.png
+share/kde/apps/kspread/icons/crystalsvg/22x22/actions/mergecell.png
+share/kde/apps/kspread/icons/crystalsvg/22x22/actions/middle.png
+share/kde/apps/kspread/icons/crystalsvg/22x22/actions/money.png
+share/kde/apps/kspread/icons/crystalsvg/22x22/actions/multirow.png
 share/kde/apps/kspread/icons/crystalsvg/22x22/actions/percent.png
 share/kde/apps/kspread/icons/crystalsvg/22x22/actions/prec_minus.png
 share/kde/apps/kspread/icons/crystalsvg/22x22/actions/prec_plus.png
+share/kde/apps/kspread/icons/crystalsvg/22x22/actions/sort_decrease.png
+share/kde/apps/kspread/icons/crystalsvg/22x22/actions/sort_incr.png
+share/kde/apps/kspread/icons/crystalsvg/22x22/actions/text_bottom.png
+share/kde/apps/kspread/icons/crystalsvg/22x22/actions/text_top.png
 share/kde/apps/kspread/icons/crystalsvg/32x32/actions/border_all.png
 share/kde/apps/kspread/icons/crystalsvg/32x32/actions/border_bottom.png
 share/kde/apps/kspread/icons/crystalsvg/32x32/actions/border_fall.png
@@ -3124,13 +3134,17 @@ share/kde/services/karbon_svg_import.desktop
 share/kde/services/karbon_wmf_export.desktop
 share/kde/services/karbon_wmf_import.desktop
 share/kde/services/karbon_xcf_export.desktop
+share/kde/services/karbonpart.desktop
+share/kde/services/kchartpart.desktop
 share/kde/services/kfile_koffice.desktop
 share/kde/services/kfile_ooo.desktop
 share/kde/services/kformula_latex_export.desktop
 share/kde/services/kformula_mathml_export.desktop
 share/kde/services/kformula_mathml_import.desktop
 share/kde/services/kformula_png_export.desktop
+share/kde/services/kformulapart.desktop
 share/kde/services/kivioconnectortool.desktop
+share/kde/services/kiviopart.desktop
 share/kde/services/kivioselecttool.desktop
 share/kde/services/kiviotexttool.desktop
 share/kde/services/kiviozoomtool.desktop
@@ -3139,6 +3153,7 @@ share/kde/services/kofficethumbnail.desktop
 share/kde/services/kounavail.desktop
 share/kde/services/kpresenter_ooimpress_export.desktop
 share/kde/services/kpresenter_ooimpress_import.desktop
+share/kde/services/kpresenterpart.desktop
 share/kde/services/kprkword.desktop
 share/kde/services/kspelltool.desktop
 share/kde/services/kspread_applixspread_import.desktop
@@ -3153,7 +3168,9 @@ share/kde/services/kspread_opencalc_export.desktop
 share/kde/services/kspread_opencalc_import.desktop
 share/kde/services/kspread_qpro_import.desktop
 share/kde/services/kspreadcalc.desktop
+share/kde/services/kspreadpart.desktop
 share/kde/services/kugar_kugar_import.desktop
+share/kde/services/kugarpart.desktop
 share/kde/services/kword_abiword_export.desktop
 share/kde/services/kword_abiword_import.desktop
 share/kde/services/kword_amipro_export.desktop
@@ -3179,6 +3196,7 @@ share/kde/services/kword_wml_export.desktop
 share/kde/services/kword_wml_import.desktop
 share/kde/services/kword_wp_export.desktop
 share/kde/services/kword_wp_import.desktop
+share/kde/services/kwordpart.desktop
 share/kde/services/kwserialletter_classic.desktop
 share/kde/services/kwserialletter_qtsqldb_power.desktop
 share/kde/services/ole_excel97_import.desktop
