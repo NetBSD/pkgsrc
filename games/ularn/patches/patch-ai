@@ -1,7 +1,7 @@
-$NetBSD: patch-ai,v 1.1.1.1 2001/04/27 15:27:31 agc Exp $
+$NetBSD: patch-ai,v 1.2 2005/02/28 02:26:59 ben Exp $
 
---- fortune.c.orig	Fri Jun 19 13:55:36 1992
-+++ fortune.c	Sat Jan 13 18:07:37 2001
+--- fortune.c.orig	1992-06-19 13:55:36.000000000 -0700
++++ fortune.c
 @@ -1,4 +1,8 @@
  /* fortune.c */
 +#include <sys/types.h>
@@ -11,3 +11,11 @@ $NetBSD: patch-ai,v 1.1.1.1 2001/04/27 15:27:31 agc Exp $
  #include "header.h"
  #include "extern.h"
  /*
+@@ -16,7 +20,6 @@ char *file;
+ 	int lines,tmp;
+ 	struct stat stat;
+ 	int retval;
+-	char *malloc();
+ 
+ 	if (fortune_fd==0) {
+ 		/* open the file */

@@ -1,8 +1,16 @@
-$NetBSD: patch-al,v 1.3 2004/04/15 21:17:08 ben Exp $
+$NetBSD: patch-al,v 1.4 2005/02/28 02:26:59 ben Exp $
 
 --- io.c.orig	1995-01-18 11:48:27.000000000 -0800
 +++ io.c
-@@ -47,12 +47,18 @@
+@@ -19,7 +19,6 @@
+  *	FILE INPUT ROUTINES
+  *
+  *	long lgetc()			read one character from input buffer
+- *	long lrint()			read one integer from input buffer
+  *	lrfill(address,number)		put input bytes into a buffer
+  *	char *lgetw()			get a whitespace ended word from input
+  *	char *lgetl()			get a \n or EOF ended line from input
+@@ -47,12 +46,18 @@
   *
   * Note: ** entries are available only in termcap mode.
   */
@@ -22,7 +30,7 @@ $NetBSD: patch-al,v 1.3 2004/04/15 21:17:08 ben Exp $
  static int lfd;			/*  output file numbers	*/
  static int fd;				/*  input file numbers	*/
  int ipoint=BUFSIZ,iepoint=BUFSIZ;	/*  input buffering pointers  */
-@@ -61,13 +67,13 @@ static char lgetwbuf[LINBUFSIZE];	/* get
+@@ -61,13 +66,13 @@ static char lgetwbuf[LINBUFSIZE];	/* get
  /*
   *	getcharacter() 	Routine to read in one character from the terminal
   */
@@ -38,7 +46,7 @@ $NetBSD: patch-al,v 1.3 2004/04/15 21:17:08 ben Exp $
  }
  
  
-@@ -75,7 +81,7 @@ getcharacter ()
+@@ -75,7 +80,7 @@ getcharacter ()
   *	newgame() 
   *		Subroutine to save the initial time and seed rnd()
   */
@@ -47,7 +55,7 @@ $NetBSD: patch-al,v 1.3 2004/04/15 21:17:08 ben Exp $
  {
  	long *p,*pe;
  
-@@ -101,18 +107,14 @@ newgame ()
+@@ -101,18 +106,14 @@ newgame ()
   */
  /*VARARGS*/
  
@@ -68,7 +76,7 @@ $NetBSD: patch-al,v 1.3 2004/04/15 21:17:08 ben Exp $
  
  	if (lpnt >= lpend) lflush();
  	outb = lpnt;
-@@ -164,7 +166,7 @@ va_dcl
+@@ -164,7 +165,7 @@ va_dcl
  					break;
  				}
  				if (wide==0)  {
@@ -77,7 +85,7 @@ $NetBSD: patch-al,v 1.3 2004/04/15 21:17:08 ben Exp $
  					--outb;
  				}
  				else {
-@@ -172,7 +174,7 @@ va_dcl
+@@ -172,7 +173,7 @@ va_dcl
  					if (left)
  						while (n-- > 0)
  							*outb++ = ' ';
@@ -86,7 +94,7 @@ $NetBSD: patch-al,v 1.3 2004/04/15 21:17:08 ben Exp $
  						;
  					--outb;
  					if (left==0)
-@@ -230,7 +232,7 @@ va_dcl
+@@ -230,7 +231,7 @@ va_dcl
   *	No checking for output buffer overflow is done, but flushes if needed!
   *	Returns nothing of value.
   */
@@ -95,7 +103,7 @@ $NetBSD: patch-al,v 1.3 2004/04/15 21:17:08 ben Exp $
  long x;
  {
  	if (lpnt >= lpend)
-@@ -251,7 +253,7 @@ long x;
+@@ -251,7 +252,7 @@ long x;
   *	Enter with the address and number of bytes to write out
   *	Returns nothing of value
   */
@@ -104,7 +112,7 @@ $NetBSD: patch-al,v 1.3 2004/04/15 21:17:08 ben Exp $
  char *buf;
  int len;
  {
-@@ -286,7 +288,7 @@ int len;
+@@ -286,7 +287,7 @@ int len;
   *
   *  Returns 0 if EOF, otherwise the character
   */
@@ -113,16 +121,38 @@ $NetBSD: patch-al,v 1.3 2004/04/15 21:17:08 ben Exp $
  {
  	int i;
  
-@@ -320,7 +322,7 @@ long lgetc1()
-  *	The save order is low order first, to high order (4 bytes total)
-  *	Returns the int read
-  */
--long lrint()
-+long lrint(void)
- {
- 	long i;
+@@ -308,30 +309,6 @@ long lgetc1()
+ }
  
-@@ -339,7 +341,7 @@ long lrint()
+ /*
+- *	long lrint()			Read one integer from input buffer
+- *
+- *		+---------+---------+---------+---------+
+- *		|  high   |	    |	      |   low   |
+- *		|  order  |	    |	      |  order	|
+- *		|   byte  |	    |	      |	  byte	|
+- *		+---------+---------+---------+---------+
+- *	        31  ---  24 23 --- 16 15 ---  8 7  ---   0
+- *
+- *	The save order is low order first, to high order (4 bytes total)
+- *	Returns the int read
+- */
+-long lrint()
+-{
+-	long i;
+-
+-	i  = 255 & lgetc();
+-	i |= (255 & lgetc()) << 8;
+-	i |= (255 & lgetc()) << 16;
+-	i |= (255 & lgetc()) << 24;
+-	return(i);
+-}
+-
+-/*
+  *	lrfill(address,number)			put input bytes into a buffer
+  *		char *address;
+  *		int number;
+@@ -339,7 +316,7 @@ long lrint()
   *	Reads "number" bytes into the buffer pointed to by "address".
   *	Returns nothing of value
   */
@@ -131,7 +161,7 @@ $NetBSD: patch-al,v 1.3 2004/04/15 21:17:08 ben Exp $
  char *adr;
  int num;
  {
-@@ -379,7 +381,7 @@ int num;
+@@ -379,7 +356,7 @@ int num;
   *
   *	Returns pointer to a buffer that contains word.  If EOF, returns a 0
   */
@@ -140,7 +170,7 @@ $NetBSD: patch-al,v 1.3 2004/04/15 21:17:08 ben Exp $
  {
  	char *lgp;
  	int cc, n=LINBUFSIZE, quote=0;
-@@ -412,7 +414,7 @@ char *lgetw()
+@@ -412,7 +389,7 @@ char *lgetw()
   *
   *Returns pointer to a buffer that contains the line.  If EOF, returns 0
   */
@@ -149,7 +179,7 @@ $NetBSD: patch-al,v 1.3 2004/04/15 21:17:08 ben Exp $
  {
  	int i=LINBUFSIZE,ch;
  	char *str=lgetwbuf;
-@@ -437,7 +439,7 @@ char *lgetl()
+@@ -437,7 +414,7 @@ char *lgetl()
   *	lcreat((char*)0); means to the terminal
   *	Returns -1 if error, otherwise the file descriptor opened.
   */
@@ -158,7 +188,7 @@ $NetBSD: patch-al,v 1.3 2004/04/15 21:17:08 ben Exp $
  char *str;
  {
  	lpnt = lpbuf;
-@@ -461,7 +463,7 @@ char *str;
+@@ -461,7 +438,7 @@ char *str;
   *	lopen(0) means from the terminal
   *	Returns -1 if error, otherwise the file descriptor opened.
   */
@@ -167,7 +197,7 @@ $NetBSD: patch-al,v 1.3 2004/04/15 21:17:08 ben Exp $
  char *str;
  {
  	ipoint = iepoint = BUFSIZ;
-@@ -484,7 +486,7 @@ char *str;
+@@ -484,7 +461,7 @@ char *str;
   *	lappend(0) means to the terminal
   *	Returns -1 if error, otherwise the file descriptor opened.
   */
@@ -176,7 +206,7 @@ $NetBSD: patch-al,v 1.3 2004/04/15 21:17:08 ben Exp $
  char *str;
  {
  	lpnt = lpbuf;
-@@ -507,7 +509,7 @@ char *str;
+@@ -507,7 +484,7 @@ char *str;
   *
   *	Returns nothing of value.
   */
@@ -185,7 +215,7 @@ $NetBSD: patch-al,v 1.3 2004/04/15 21:17:08 ben Exp $
  {
  	if (fd > 0)
  		close(fd);
-@@ -518,7 +520,7 @@ lrclose()
+@@ -518,7 +495,7 @@ lrclose()
   *
   *	Returns nothing of value.
   */
@@ -194,7 +224,7 @@ $NetBSD: patch-al,v 1.3 2004/04/15 21:17:08 ben Exp $
  {
  	lflush();
  	if (lfd > 2)
-@@ -529,7 +531,7 @@ lwclose ()
+@@ -529,7 +506,7 @@ lwclose ()
   *	lprcat(string)			append a string to the output buffer
   *					avoids calls to lprintf (time consuming)
   */
@@ -203,7 +233,7 @@ $NetBSD: patch-al,v 1.3 2004/04/15 21:17:08 ben Exp $
  char *str;
  {
  	char *str2;
-@@ -537,8 +539,7 @@ char *str;
+@@ -537,8 +514,7 @@ char *str;
  	if (lpnt >= lpend)
  		lflush();
  	str2 = lpnt;
@@ -213,7 +243,7 @@ $NetBSD: patch-al,v 1.3 2004/04/15 21:17:08 ben Exp $
  	lpnt = str2 - 1;
  }
  
-@@ -553,15 +554,16 @@ static char cap[256];
+@@ -553,16 +529,17 @@ static char cap[256];
  static char *outbuf=0;	/* translated output buffer */
  char *CM, *CE, *CD, *CL, *SO, *SE, *AL, *DL;/* Termcap capabilities */
  char *HO, *BC, *UP;
@@ -228,12 +258,14 @@ $NetBSD: patch-al,v 1.3 2004/04/15 21:17:08 ben Exp $
  {
  	char termbuf[1024];
 -	char *pc, *capptr = cap+10;
+-	char *malloc(), *tgetstr(), *term, *getenv();
 +	char *pc;
 +	char *capptr = cap+10;
- 	char *malloc(), *tgetstr(), *term, *getenv();
++	char *term;
  
  	switch (tgetent(termbuf, term = getenv("TERM"))) {
-@@ -584,12 +586,11 @@ init_term ()
+ 	case -1:
+@@ -584,12 +561,11 @@ init_term ()
  	UP = tgetstr("up", &capptr);	/* cursor up */
  	HO = tgetstr("ho", &capptr);	/* home cursor */
  
@@ -250,7 +282,7 @@ $NetBSD: patch-al,v 1.3 2004/04/15 21:17:08 ben Exp $
  
  	if (!(BC = tgetstr("bc", &capptr))) {	/* backspace */
  		if (!(BC=tgetstr("le", &capptr))) {
-@@ -632,7 +633,7 @@ init_term ()
+@@ -632,7 +608,7 @@ init_term ()
  /*
   * cl_up(x,y) Clear screen from [x,1] to current position. Leave cursor at [x,y]
   */
@@ -259,7 +291,7 @@ $NetBSD: patch-al,v 1.3 2004/04/15 21:17:08 ben Exp $
  int x, y;
  {
  	int i;
-@@ -648,7 +649,7 @@ int x, y;
+@@ -648,7 +624,7 @@ int x, y;
  /*
   * cl_dn(x,y) 	Clear screen from [1,y] to end of display. Leave cursor at [x,y]
   */
@@ -268,7 +300,7 @@ $NetBSD: patch-al,v 1.3 2004/04/15 21:17:08 ben Exp $
  int x, y;
  {
  	int i;
-@@ -671,7 +672,7 @@ int x, y;
+@@ -671,7 +647,7 @@ int x, y;
  /*
   * standout(str)  Print the argument string in inverse video (standout mode).
   */
@@ -277,7 +309,7 @@ $NetBSD: patch-al,v 1.3 2004/04/15 21:17:08 ben Exp $
  char *str;
  {
  	if (boldon == 0) {
-@@ -687,7 +688,7 @@ char *str;
+@@ -687,7 +663,7 @@ char *str;
  /*
   * set_score_output() 	Called when output should be literally printed.
   */
@@ -286,7 +318,7 @@ $NetBSD: patch-al,v 1.3 2004/04/15 21:17:08 ben Exp $
  	enable_scroll = -1;
  }
  
-@@ -700,7 +701,7 @@ set_score_output() {
+@@ -700,7 +676,7 @@ set_score_output() {
   */
  static int scrline=18; /* line # for wraparound instead of scrolling if no DL */
  
@@ -295,7 +327,7 @@ $NetBSD: patch-al,v 1.3 2004/04/15 21:17:08 ben Exp $
  {
  	int lpoint;
  	char *str;
-@@ -796,18 +797,19 @@ static int ind=0;
+@@ -796,18 +772,19 @@ static int ind=0;
  /*
   * putcharacter(c)		Print one character in decoded output buffer.
   */
@@ -317,7 +349,7 @@ $NetBSD: patch-al,v 1.3 2004/04/15 21:17:08 ben Exp $
  {
  	if (ind)
  		write(lfd, outbuf, ind);
-@@ -825,7 +827,7 @@ flush_buf()
+@@ -825,7 +802,7 @@ flush_buf()
   *
   *
   */

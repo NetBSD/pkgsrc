@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.3 2004/04/15 21:17:08 ben Exp $
+$NetBSD: patch-aa,v 1.4 2005/02/28 02:26:59 ben Exp $
 
 --- Configure.orig	2004-04-15 13:55:44.000000000 -0700
 +++ Configure
@@ -19,7 +19,7 @@ $NetBSD: patch-aa,v 1.3 2004/04/15 21:17:08 ben Exp $
  large=''
  huge=''
 -ccflags=''
-+ccflags='-g -Wall -Wno-comment'
++ccflags="$CFLAGS -g -Wall -Wno-comment"
  ldflags=''
  cc=''
  n=''
