@@ -1,7 +1,7 @@
-$NetBSD: patch-de,v 1.1.1.1 2002/02/13 18:09:24 mrauch Exp $
+$NetBSD: patch-de,v 1.2 2002/02/14 22:51:42 mrauch Exp $
 
---- set_soenv.1.orig	Tue Nov 20 18:26:33 2001
-+++ set_soenv.1	Mon Feb 11 23:19:01 2002
+--- set_soenv.1.orig	Tue Nov 20 17:26:33 2001
++++ set_soenv.1	Thu Feb 14 23:13:12 2002
 @@ -35,0 +36 @@
 +$| = 1;                            # Don't cache.	
 @@ -283 +284,11 @@
@@ -53,10 +53,15 @@ $NetBSD: patch-de,v 1.1.1.1 2002/02/13 18:09:24 mrauch Exp $
 @@ -819 +844 @@
 -                        $ps.'$SOLARVER'.$ds.'$UPD'.$ds.'$INPATH'.$LIB;
 +                        $ps.$USR_LOCAL.$LIB;
-@@ -968 +993 @@
+@@ -961,0 +987 @@
++			$ps.$ENV{PREFIX}.
+@@ -968,2 +994,3 @@
 -                        $ps.$USR.$BIN.$ds."X11".
+-                        $ps.$USR.$LIB;
 +                        $ps.$USR.$ds."X11R6".$BIN.
-@@ -1057,0 +1083,18 @@
++                        $ps.$USR.$LIB.
++			$ps.$ENV{PATH};
+@@ -1057,0 +1085,18 @@
 +if ($platform eq "${NetBSD}") 
 +{  my $libgcc=`$COMPATH/gcc -print-libgcc-file-name | xargs dirname`;
 +   chomp($libgcc);
@@ -75,27 +80,27 @@ $NetBSD: patch-de,v 1.1.1.1 2002/02/13 18:09:24 mrauch Exp $
 +			" ".$ENV{'CCFLAGS'}.'"';
 +}
 +
-@@ -1065,0 +1109,5 @@
+@@ -1065,0 +1111,5 @@
 +if ($platform eq "${NetBSD}")
 +{
 +$SOLARINC            .= " ".$ENV{'BUILDLINK_CPPFLAGS'}." ";
 +}
 +
-@@ -1068,3 +1116,2 @@
+@@ -1068,3 +1118,2 @@
 -$SOLARINC            .= $I.$USR.$INCLUDE.
 -			$STLPORT_stlport;
 -if ($platform eq "$Linux")
 +$SOLARINC            .= $STLPORT_stlport;
 +if (($platform eq "$Linux") or ($platform eq "${NetBSD}"))
-@@ -1104,0 +1152,2 @@
+@@ -1104,0 +1154,2 @@
 +   $SOLARINC          .=$I.'$JAVA_HOME'.$INCLUDE.$ds."linux";
 +   $SOLARINC          .=$I.'$JAVA_HOME'.$INCLUDE.$ds."solaris";
-@@ -1418 +1467 @@
+@@ -1418 +1469 @@
 -   $answer = <STDIN>;
 +   exit(1);
-@@ -1514 +1563 @@
+@@ -1514 +1565 @@
 -   $value = <STDIN>; 
 +   exit(1);
-@@ -1555 +1604 @@
+@@ -1555 +1606 @@
 -      my $answer = <STDIN>; 
 +      exit(1);

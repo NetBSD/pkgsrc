@@ -1,0 +1,12 @@
+$NetBSD: patch-dg,v 1.1 2002/02/14 22:51:42 mrauch Exp $
+
+--- ../idlc/source/makefile.mk.orig	Thu Feb 14 18:06:37 2002
++++ ../idlc/source/makefile.mk
+@@ -148,6 +148,7 @@
+ 
+ $(MISC)$/parser.cxx: parser.yy
+ 	+bison -v -d -o$(MISC)$/parser.cxx parser.yy
++	-$(COPY) $(MISC)$/parser.hxx $(MISC)$/parser.cxx.h
+ 	+$(COPY) $(MISC)$/parser.cxx.h $(OUT)$/inc$/parser.h
+ # with line statements (for debugging)
+ #	+bison -v -d -o$(MISC)$/parser.cxx parser.yy
