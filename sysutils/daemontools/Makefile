@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.11 2003/07/17 22:53:30 grant Exp $
+# $NetBSD: Makefile,v 1.12 2004/05/02 17:50:05 xtraeme Exp $
 # FreeBSD Id: ports/sysutils/daemontools/Makefile,v 1.8 2000/12/03 05:16:41 steve Exp
 
-DISTNAME=	daemontools-0.70
+DISTNAME=	daemontools-0.76
 CATEGORIES=	sysutils
 MASTER_SITES=	http://cr.yp.to/daemontools/				\
 		ftp://cr.yp.to/daemontools/				\
-		ftp://ftp.innominate.org/pub/pape/djb/
+		http://smarden.org/pape/djb/manpages/
 DISTFILES=	${DISTNAME}.tar.gz					\
-		${DISTNAME}-man-20001116.tar.gz
+		${DISTNAME}-man.tar.gz
 
 MAINTAINER=	zuntum@NetBSD.org
 HOMEPAGE=	http://cr.yp.to/daemontools.html
@@ -18,17 +18,21 @@ NO_BIN_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_FTP=	${RESTRICTED}
 
 ALL_TARGET=	it
-INSTALL_TARGET=	setup check
 SAMPLERC=	svscan.sh.sample
 SERVICEDIR?=	/var/spool/service
+WRKSRC=		${WRKDIR}/admin/${DISTNAME}
+CMDDIR=		${WRKSRC}/command
 
 PLIST_SUBST+=	SERVICEDIR=${SERVICEDIR}
 DEINSTALL_FILE=	${WRKDIR}/.DEINSTALL
 
 post-patch:
-	@${ECHO} ${CC} ${CFLAGS} > ${WRKSRC}/conf-cc
-	@${ECHO} ${CC} ${_STRIPFLAG_CC} > ${WRKSRC}/conf-ld
-	@${ECHO} ${PREFIX} > ${WRKSRC}/conf-home
+	@${ECHO} ${CC} ${CFLAGS} > ${WRKSRC}/src/conf-cc
+	@${ECHO} ${CC} ${_STRIPFLAG_CC} > ${WRKSRC}/src/conf-ld
+	@${ECHO} ${PREFIX} > ${WRKSRC}/src/conf-home
+
+do-build:
+	cd ${WRKSRC} && package/compile
 
 post-build:
 	${SED}	-e "s,@@PREFIX@@,${PREFIX},"				\
@@ -37,13 +41,20 @@ post-build:
 	${SED}	"s,@@SERVICEDIR@@,${SERVICEDIR},g"			\
 		${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
 
+do-install:
+	(while read cmd; do \
+	  if ${FILE_CMD} ${CMDDIR}/$$cmd | ${GREP} -q "shell script"; then \
+	    ${INSTALL_SCRIPT} ${CMDDIR}/$$cmd ${PREFIX}/bin; \
+	  else \
+	    ${INSTALL_PROGRAM} ${CMDDIR}/$$cmd ${PREFIX}/bin; \
+	  fi \
+	done) < ${WRKSRC}/package/commands
+
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/daemontools
 	${INSTALL_DATA} ${WRKDIR}/${SAMPLERC}				\
 		${PREFIX}/share/examples/daemontools
 	${INSTALL_DATA_DIR} ${SERVICEDIR}
-
-	cd ${WRKDIR}/${DISTNAME}-man && 				\
-		${INSTALL_MAN} *.8 ${PREFIX}/man/man8
+	cd ${WRKDIR}/${PKGBASE}-man && ${INSTALL_MAN} *.8 ${PREFIX}/man/man8
 
 .include "../../mk/bsd.pkg.mk"
