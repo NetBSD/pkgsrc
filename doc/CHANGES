@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2080 2003/04/29 22:03:31 jtb Exp $
+$NetBSD: CHANGES,v 1.2081 2003/04/29 22:17:22 jtb Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1784,3 +1784,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated vm to 7.14 [jtb 2003-04-29]
 	Updated qcad to 1.5.4 [jtb 2003-04-29]
 	Updated g2 to 0.49a [jtb 2003-04-29]
+	Updated algae to 4.1.2 [jtb 2003-04-29]
