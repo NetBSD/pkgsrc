@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.3 2003/05/29 23:14:12 grant Exp $
+# $NetBSD: buildlink2.mk,v 1.4 2003/06/02 15:57:47 yyamano Exp $
 
 .if !defined(GCC3_BUILDLINK2_MK)
 GCC3_BUILDLINK2_MK=	# defined
@@ -66,7 +66,7 @@ BUILDLINK_WRAPPER_ENV+=	\
 
 # These files are from gcc-3.3.
 BUILDLINK_FILES.gcc=	${_GCC_SUBPREFIX}include/c++/3.3/*
-BUILDLINK_FILES.gcc=	${_GCC_SUBPREFIX}include/c++/3.3/*/*
+BUILDLINK_FILES.gcc+=	${_GCC_SUBPREFIX}include/c++/3.3/*/*
 BUILDLINK_FILES.gcc+=	${_GCC_SUBPREFIX}${_GCC_ARCHSUBDIR}/include/*
 BUILDLINK_FILES.gcc+=	${_GCC_SUBPREFIX}${_GCC_ARCHSUBDIR}/include/*/*
 BUILDLINK_FILES.gcc+=	${_GCC_SUBPREFIX}${_GCC_ARCHSUBDIR}/include/*/*/*
