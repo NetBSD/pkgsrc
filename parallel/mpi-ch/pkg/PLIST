@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1998/10/13 23:31:04 garbled Exp $
+@comment $NetBSD: PLIST,v 1.2 1998/10/20 22:24:22 garbled Exp $
 bin/tarch
 bin/tdevice
 bin/mpiman
@@ -511,14 +511,6 @@ share/examples/mpi/hello++.cc
 share/examples/mpi/simpleio.c
 share/examples/mpi/README
 share/examples/mpi/mpirun
-share/examples/mpi/cpi.o
-share/examples/mpi/cpi
-share/examples/mpi/cpilog.o
-share/examples/mpi/cpilog
-share/examples/mpi/simpleio.o
-share/examples/mpi/simpleio
-share/examples/mpi/hello++.o
-share/examples/mpi/hello++
 share/util/machines/machines.netbsd
 share/util/machines/machines.sample
 share/util/chp4_servs
@@ -545,18 +537,6 @@ share/examples/MPI-2-C++/chapter_10_mpi2.cc
 share/examples/MPI-2-C++/pi.cc
 share/examples/MPI-2-C++/README
 share/examples/MPI-2-C++/mpirun
-share/examples/MPI-2-C++/hello_world.o
-share/examples/MPI-2-C++/hello_world
-share/examples/MPI-2-C++/ring.o
-share/examples/MPI-2-C++/ring
-share/examples/MPI-2-C++/topology.o
-share/examples/MPI-2-C++/topology
-share/examples/MPI-2-C++/user_bcast.o
-share/examples/MPI-2-C++/user_bcast
-share/examples/MPI-2-C++/chapter_10_mpi2.o
-share/examples/MPI-2-C++/chapter_10_mpi2
-share/examples/MPI-2-C++/pi.o
-share/examples/MPI-2-C++/pi
 @dirrm libdata/netbsd/ch_p4/c++
 @dirrm libdata/netbsd/ch_p4
 @dirrm libdata/netbsd
