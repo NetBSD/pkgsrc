@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2003/07/17 22:52:09 grant Exp $
+# $NetBSD: Makefile,v 1.21 2004/04/07 13:56:43 cube Exp $
 
 DISTNAME=	nntpclnt-1.6.1
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	news
 MASTER_SITES=	ftp://ftp.uu.net/networking/news/nntp/
 
@@ -18,13 +18,18 @@ NO_BIN_ON_CDROM=${RESTRICTED}
 ALL_TARGET=	inews
 PKG_GROUPS=	news
 USE_PKGINSTALL=	yes
+PKG_SYSCONFSUBDIR=	nntp
+
+PLIST_SUBST+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
 
 .include "../../mk/bsd.prefs.mk"
 
 CONFIG_SH=	${FILESDIR}/config.${OPSYS}.sh
+ONLY_FOR_PLATFORM=	NetBSD-*-* SunOS-*-*
 
 do-configure:
-	${SED} -e s,@PREFIX@,${PREFIX}, ${CONFIG_SH} >${WRKSRC}/config.sh
+	${SED} -e s,@PREFIX@,${PREFIX}, -e s,@PKGSYSCONFDIR@,${PKG_SYSCONFDIR}, \
+		${CONFIG_SH} >${WRKSRC}/config.sh
 	@cd ${WRKSRC} && ${SH} Makefile.SH && ${SH} config.h.SH
 
 post-build:
@@ -37,6 +42,6 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/nntp.h ${PREFIX}/include/
 	${INSTALL_DATA} ${WRKSRC}/libnntpclnt.a ${PREFIX}/lib/
 	${INSTALL_DATA} ${WRKSRC}/nntpclnt.3 ${PREFIX}/man/man3/
-	${INSTALL_DATA_DIR} ${PREFIX}/etc/nntp
+	${INSTALL_DATA_DIR} ${PKG_SYSCONFDIR}
 
 .include "../../mk/bsd.pkg.mk"
