@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1999/03/14 19:19:38 rh Exp $
+# $NetBSD: Makefile,v 1.4 1999/04/23 12:33:20 kleink Exp $
 # FreeBSD Id: Makefile,v 1.9 1999/02/11 16:01:16 jfieber Exp
 #
 
@@ -27,6 +27,6 @@ do-install:
 	@unzip -a -q -o ${DISTDIR}/${DISTFILES} -d ${INSTDIR}
 	@${INSTALL_DATA} ${FILESDIR}/catalog ${INSTDIR}/catalog
 	@${CHMOD} ${SHAREMODE} ${INSTDIR}/*
-	@${CHOWN} -R ${SHAREOWN}.${SHAREGRP} ${INSTDIR}
+	@${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${INSTDIR}
 
 .include "../../mk/bsd.pkg.mk"
