@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2004/01/22 07:15:00 grant Exp $
+# $NetBSD: Makefile,v 1.18 2004/04/11 17:29:27 xtraeme Exp $
 
 DISTNAME=	mp3blaster-3.2.0
 PKGREVISION=	1
@@ -10,7 +10,7 @@ HOMEPAGE=	http://www.stack.nl/~brama/mp3blaster.html
 COMMENT=	MP3 console curses-based player
 
 PTHREAD_OPTS=	require
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=	yes
 USE_GNU_TOOLS+=	make
 
 GNU_CONFIGURE=	yes
@@ -18,7 +18,7 @@ CONFIGURE_ARGS+="--with-cxxflags=${CXXFLAGS}" \
 		--with-curses \
 		--with-oggvorbis
 
-.include "../../mk/pthread.buildlink2.mk"
+.include "../../mk/pthread.buildlink3.mk"
 
 .if defined(PTHREAD_TYPE) && (${PTHREAD_TYPE} == "pth")
 CONFIGURE_ARGS+=	--enable-newthreads
@@ -26,11 +26,12 @@ CONFIGURE_ARGS+=	--enable-newthreads
 
 post-extract:
 	${MKDIR} ${WRKSRC}/getopt
-	${MV} ${WRKSRC}/nmixer/getopt.h ${WRKSRC}/nmixer/getopt.c ${WRKSRC}/nmixer/getopt1.c \
-		${WRKSRC}/getopt
-	${RM} ${WRKSRC}/src/getopt.h ${WRKSRC}/src/getopt.c ${WRKSRC}/src/getopt1.c
+	${MV} ${WRKSRC}/nmixer/getopt.h ${WRKSRC}/nmixer/getopt.c \
+		${WRKSRC}/nmixer/getopt1.c ${WRKSRC}/getopt
+	${RM} ${WRKSRC}/src/getopt.h ${WRKSRC}/src/getopt.c \
+		${WRKSRC}/src/getopt1.c
 
-.include "../../audio/libvorbis/buildlink2.mk"
-.include "../../devel/ncurses/buildlink2.mk"
-.include "../../mk/ossaudio.buildlink2.mk"
+.include "../../audio/libvorbis/buildlink3.mk"
+.include "../../devel/ncurses/buildlink3.mk"
+.include "../../mk/ossaudio.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
