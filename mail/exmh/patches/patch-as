@@ -1,0 +1,32 @@
+*** exmh-2.0/lib/pgpExec.tcl	Mon Dec 22 15:52:20 1997
+--- lib/pgpExec.tcl		Tue Dec 23 12:33:36 1997
+***************
+*** 197,204 ****
+  	set keylist [split $keylist "\n"]
+  	set keys {}
+  	set key {}
+  	foreach line $keylist {
+!             if [regexp {^ *(pub|sec) +[0-9]+(/| +)([0-9A-F]+) +[0-9]+/ ?[0-9]+/[0-9]+ +(.*)$} $line {} {} {} keyid userid] {
+  		set key [list "0x$keyid" [string trim $userid]]
+  		lappend keys $key
+  	    }
+--- 194,212 ----
+  	set keylist [split $keylist "\n"]
+  	set keys {}
+  	set key {}
++ 	set previousKeyId 0
+  	foreach line $keylist {
+! 	    if {$previousKeyId == 1} {
+! 		Exmh_Debug "Entering case 1..."
+! 		regexp {^ +(.*)$} $line {} userid
+! 		if { $userid == "*** KEY REVOKED ***"} continue;
+! 		set key [list "0x$keyid" [string trim $userid]]
+! 		lappend keys $key
+! 		set previousKeyId 0
+!             } elseif [regexp {^ *(pub|sec) +[0-9]+(/| +)([0-9A-F]+) +[0-9]+/ ?[0-9]+/ ?[0-9]+ +days: +[0-9]+} $line {} {} {} keyid ] {
+! 		set previousKeyId 1
+! 	    } elseif [regexp {^ *(pub|sec) +[0-9]+(/| +)([0-9A-F]+) +[0-9]+/ ?[0-9]+/ ?[0-9]+ +(.*)$} $line {} {} {} keyid userid] {
+! 		if { $userid == "*** KEY REVOKED ***"} continue;
+  		set key [list "0x$keyid" [string trim $userid]]
+  		lappend keys $key
+  	    }

@@ -1,29 +1,37 @@
 # New ports collection Makefile for:    exmh2
-# Version required:		2.0zeta
-# Date created:		1 Jan 97
+# Version required:		2.0.1
+# Date released:		1 Jan 97
 # Whom:				Peter Wemm <peter@freebsd.org>
 #
-# $NetBSD: Makefile,v 1.3 1998/01/24 20:28:43 hubertf Exp $
-# FreeBSD Id: Makefile,v 1.17 1997/10/06 06:49:45 peter Exp
+# $NetBSD: Makefile,v 1.4 1998/02/25 12:08:07 agc Exp $
+# FreeBSD Id: Makefile,v 1.25 1998/02/15 05:36:54 peter Exp
 #
 
-DISTNAME=	exmh-2.0zeta
-PKGNAME=	exmh-2.0z
-CATEGORIES=	mail tk41
+DISTNAME=	exmh-2.0.1
+CATEGORIES=	mail tk80
 MASTER_SITES=	ftp://ftp.sunlabs.com/pub/tcl/exmh/
 EXTRACT_SUFX=	.tar.Z
 
-PATCH_SITES=	http://www.sunlabs.com/~bwelch/exmh/patches/2.0zeta/
-PATCHFILES=	ispell.patch koir.patch mime.patch seditMime.patch scan.patch \
-		addr.patch html.patch html_dpackage.patch pgpExec.patch
+PATCH_SITES=	http://sunscript.sun.com/exmh/patches/2.0.1/
+PATCHFILES=	utils.patch folderNew.patch extrasInit.patch exec.patch \
+		app-defaults.patch pgpMisc.patch seditMime.patch mime.patch \
+		bindings.patch html_bindings.patch find.patch mh.patch \
+		pgp.patch
 
-MAINTAINER=	peter@FreeBSD.org
+# User contributed and "new features".  Some not useable as-is.
+PATCHFILES+=	seditpost.patch inc.patch next.patch
+# XXX pgpExec.patch has got confused paths	(supplied as patch-as)
+# XXX newsgroups.patch is relative to a different directory (patch-at)
+# XXX MDN.patch doesn't apply			(patch-au)
+# XXX post.from.patch doesn't apply		(patch-av)
 
 .if defined(PATCH_DEBUG)
 PATCH_DIST_ARGS= -d ${WRKSRC}/lib -E ${PATCH_DIST_STRIP}
 .else
 PATCH_DIST_ARGS= -d ${WRKSRC}/lib --forward --quiet -E ${PATCH_DIST_STRIP}
 .endif
+
+MAINTAINER=	peter@FreeBSD.org
 
 DIST_SUBDIR=	${PKGNAME}
 
