@@ -1,0 +1,2 @@
+GNU binutils for Atmel AVR 8 bit RISC microcontrollers.
+Prerequisite for avr-gcc in a cross-compilation environment.
