@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2003/07/26 21:41:15 jmmv Exp $
+# $NetBSD: Makefile,v 1.6 2003/08/31 11:13:32 wiz Exp $
 #
 
-DISTNAME=		asc-source-1.13.7
+DISTNAME=		asc-source-1.13.8.0
 PKGNAME=		${DISTNAME:S/-source//}
-PKGREVISION=		1
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=asc-hq/}
