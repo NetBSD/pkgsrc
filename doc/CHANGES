@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7903 2004/11/19 09:56:33 adam Exp $
+$NetBSD: CHANGES,v 1.7904 2004/11/19 10:11:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5332,3 +5332,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated nail to 11.16 [cjep 2004-11-19]
 	Updated nail to 11.17 [cjep 2004-11-19]
 	Updated gtkterm2 to 0.2.3 [adam 2004-11-19]
+	Updated hatari to 0.50 [adam 2004-11-19]
