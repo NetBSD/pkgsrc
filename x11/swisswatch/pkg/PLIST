@@ -1,4 +1,4 @@
 bin/swisswatch
 lib/X11/app-defaults/SwissWatch
 lib/X11/app-defaults/SwissWatch-color
-man/man1/swisswatch.1.gz
+man/cat1/swisswatch.0.gz
