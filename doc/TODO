@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.242 2003/02/07 18:38:47 wiz Exp $
+$NetBSD: TODO,v 1.243 2003/02/08 15:52:36 wiz Exp $
 
 Suggested new packages
 ======================
@@ -79,7 +79,8 @@ Suggested package updates
 	o angband-3.0.3
 	o aim-1.5.277
 	o amaya-7.0
-	o atk-1.2.1 [pkg/20235]
+	o apcupsd-0.8.6
+	o atk-1.2.2 [pkg/20235]
 	o aumix-2.8
 	o balsa-1.4.2
 	o binutils-2.13.2.1
@@ -88,7 +89,7 @@ Suggested package updates
 	o bzflag-1.7g0
 	o canna-3.6p3 [pkg/20208]
 	o cdlabelgen-2.5.0
-	o centericq-4.9.2
+	o centericq-4.9.2 [pkg/20243]
 	o cfengine-1.6.5 [pkg/19459|seb]
 	o citrix_ica-6.30.1052 [pkg/19210]
 	o clisp-2.30
@@ -124,7 +125,7 @@ Suggested package updates
 	o gdb-5.3
 	o gdm-2.4.1.1
 	o getmail-2.3.11 [pkg/19707]
-	o gftp-2.0.14
+	o gftp-2.0.14 [pkg/20250]
 	o ghostscript-8.00 (apfl)
 	o gimp-print-4.2.5
 	o gkrellm-2.1.7
@@ -146,7 +147,7 @@ Suggested package updates
 	o gqmpeg-0.20.0
 	o gqview-1.3.0
 	o gsed-4.0.5
-	o gtetrinet-0.6.0
+	o gtetrinet-0.6.2
 	o gtk---2.2.0
 	o gtk2-2.2.1 [pkg/20237]
 	o gtk2-pan-0.13.3.90
@@ -209,6 +210,7 @@ Suggested package updates
 	o mowitz-0.2.2
 	o mrproject-0.8
 	o mysql-3.23.54
+	o naim-0.11.5.4
 	o napshare-1.2
 	o net-snmp-5.0.7 [pkg/19939]
 	o netatalk-1.6.0
@@ -261,6 +263,7 @@ Suggested package updates
 	o smalltalk-2.0.11
 	o smarteiffel-1.0 [replacing smalleiffel]
 	o snes9x-1.39a
+	o sodipodi-0.30
 	o source-highlight-1.6.3
 	o speex-1.0rc2
 	o squeak-3.2 [fredb|pkg/17950]
