@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2004/10/03 00:14:52 tv Exp $
-#
+# $NetBSD: Makefile,v 1.28 2004/10/29 08:27:48 tron Exp $
 
 DISTNAME=	gphoto2-2.1.4
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gphoto/}
 EXTRACT_SUFX=	.tar.bz2
@@ -29,6 +28,8 @@ CONFIGURE_ARGS+=	--with-jpeg-prefix=${BUILDLINK_PREFIX.jpeg}
 CONFIGURE_ARGS+=	--without-readline
 #USE_GNU_READLINE=	rl_completion_matches, rl_completion_append_character
 #.include "../../devel/readline/buildlink3.mk"
+
+BUILDLINK_DEPENDS.libexif=	libexif>=0.6.11
 
 .include "../../devel/cdk/buildlink3.mk"
 .include "../../devel/libgphoto2/buildlink3.mk"
