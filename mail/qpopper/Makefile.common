@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2002/06/15 21:20:02 cjep Exp $
+# $NetBSD: Makefile.common,v 1.7 2002/09/09 19:25:30 jlam Exp $
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--libexecdir=${LOCALBASE}/libexec \
@@ -17,8 +17,6 @@ VERSION=		4.0.4
 
 .include "../../mk/bsd.prefs.mk"
 
-CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_DIR}
-
 .if defined(KERBEROS)
 PKG_USE_KERBEROS=	# defined
 CONFIGURE_ARGS+=	--enable-kerberos
@@ -32,3 +30,5 @@ CONFIGURE_ARGS+=	--enable-servermode
 .if defined(USE_INET6) && ${USE_INET6} == YES
 CONFIGURE_ENV+=		O_DEFS="${O_DEFS}" CFLAGS="-DINET6"
 .endif
+
+LIBS+=			${LDFLAGS}
