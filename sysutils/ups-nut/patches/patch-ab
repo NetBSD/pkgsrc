@@ -1,0 +1,24 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/12/28 16:06:13 martin Exp $
+
+--- conf/Makefile.in.orig	Thu Dec 14 13:04:42 2000
++++ conf/Makefile.in	Thu Dec 14 13:05:27 2000
+@@ -13,17 +13,9 @@
+ 
+ install:
+ 	@for f in $(SECFILES) ; do \
+-		if [ -f $(CONFPATH)/$$f ]; then \
+-			echo "Preserving existing config file: $$f"; \
+-		else \
+-			$(INSTALLCMD) -m 0600 $$f $(CONFPATH); \
+-		fi; \
++		$(INSTALLCMD) -m 0600 $$f $(CONFPATH)/$$f.sample; \
+ 	done
+ 
+ 	@for f in $(PUBFILES) ; do \
+-		if [ -f $(CONFPATH)/$$f ]; then \
+-			echo "Preserving existing config file: $$f"; \
+-		else \
+-			$(INSTALLCMD) -m 0644 $$f $(CONFPATH); \
+-		fi; \
++		$(INSTALLCMD) -m 0644 $$f $(CONFPATH)/$$f.sample; \
+ 	done
