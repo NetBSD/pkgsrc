@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.90 1999/10/28 20:07:26 kim Exp $
+# $NetBSD: Makefile,v 1.91 1999/11/04 04:40:57 soren Exp $
 # FreeBSD Id: Makefile,v 1.117 1997/08/16 03:11:52 gpalmer Exp 
 #
 
@@ -79,6 +79,7 @@
 #    SUBDIR += p5-Net-Whois
     SUBDIR += p5-SNMP
     SUBDIR += p5-Wais
+    SUBDIR += pchar
 #    SUBDIR += pcnfsd
     SUBDIR += pfnet
     SUBDIR += pload
