@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/07/20 11:48:38 adam Exp $
+# $NetBSD: Makefile,v 1.14 2004/07/22 15:00:50 adam Exp $
 
 DISTNAME=	nessus-core-${VERS}
 .include 	"../nessus/Makefile.common"
@@ -17,6 +17,5 @@ CONFIGURE_ENV+=		ac_cv_path_GTKCONFIG="pkg-config gtk+-2.0" \
 RCD_SCRIPTS=	nessusd
 
 .include "../../security/libnasl/buildlink3.mk"
-.include "../../security/nessus-libraries/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
