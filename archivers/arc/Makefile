@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2003/07/17 21:21:05 grant Exp $
+# $NetBSD: Makefile,v 1.17 2004/01/20 12:07:06 agc Exp $
 # FreeBSD Id: Makefile,v 1.7 1997/08/10 22:31:09 fenner Exp
 #
 
 DISTNAME=       arc521e.pl8
 PKGNAME=        arc-5.21e
-WRKSRC=		${WRKDIR}
 CATEGORIES=	archivers
 MASTER_SITES=   ftp://ftp.kiarchive.ru/pub/unix/arcers/
 EXTRACT_SUFX=   .tar.Z
@@ -15,6 +14,8 @@ COMMENT=	Create & extract files from DOS .ARC files
 RESTRICTED=	"Do not modify. Do not charge for redistribution"
 NO_SRC_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_CDROM=${RESTRICTED}
+
+WRKSRC=		${WRKDIR}
 
 USE_BUILDLINK2=	yes
 

@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2003/07/17 21:24:29 grant Exp $
+# $NetBSD: Makefile,v 1.8 2004/01/20 12:08:12 agc Exp $
 
 DISTNAME=	kttcp-${VERSION}
-WRKSRC=		${WRKDIR}
 CATEGORIES=	benchmarks net
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -16,6 +15,7 @@ ONLY_FOR_PLATFORM=	NetBSD-1.6[B-Z]-* NetBSD-1.[7-9]* NetBSD-[2-9]*
 EXTRACT_ONLY=	# empty
 NO_CHECKSUM=	# defined
 
+WRKSRC=		${WRKDIR}
 MAKE_ENV+=	BINDIR=${LOCALBASE}/bin MANDIR=${LOCALBASE}/man
 
 post-extract:

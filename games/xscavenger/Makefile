@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2003/09/03 17:42:19 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2004/01/20 12:15:42 agc Exp $
 #
 
 DISTNAME=	xscavenger-1.4.4
-WRKSRC=		${WRKDIR}/${DISTNAME}/src
 CATEGORIES=	games x11
 MASTER_SITES=	http://www.xdr.com/dash/
 EXTRACT_SUFX=	.tgz
@@ -11,6 +10,7 @@ MAINTAINER=	wiz@NetBSD.org
 HOMEPAGE=	http://www.xdr.com/dash/scavenger.html
 COMMENT=	Loderunner clone with sound for X11
 
+WRKSRC=		${WRKDIR}/${DISTNAME}/src
 USE_IMAKE=	yes
 NO_INSTALL_MANPAGES=	yes
 

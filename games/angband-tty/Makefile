@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2003/09/17 19:40:21 grant Exp $
+# $NetBSD: Makefile,v 1.19 2004/01/20 12:15:39 agc Exp $
 #
 
 DISTNAME=		angband-283
 PKGNAME=		angband-tty-2.8.3
-WRKSRC=			${WRKDIR}/${DISTNAME}/src
 CATEGORIES=		games
 MASTER_SITES=		ftp://export.andrew.cmu.edu/angband/Source/ \
 			ftp://ftp.greyhelm.com/pub/Games/Angband/Angband-2.7.x/Source/
@@ -15,6 +14,7 @@ COMMENT=		Tolkien based variant of Moria for tty/console displays
 
 CONFLICTS=		angband-x11-[0-9]*
 
+WRKSRC=			${WRKDIR}/${DISTNAME}/src
 USE_BUILDLINK2=		# defined
 EXTRACT_ONLY=		${DISTNAME}${EXTRACT_SUFX}
 MAKEFILE=		Makefile.std

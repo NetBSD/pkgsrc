@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/09/30 01:57:08 jschauma Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/20 12:08:40 agc Exp $
 #
 
 DISTNAME=		GeneSplicer
 PKGNAME=		genesplicer-20030403
-WRKSRC=			${WRKDIR}/GeneSplicer/sources
 CATEGORIES=		biology
 MASTER_SITES=		ftp://ftp.tigr.org/pub/software/GeneSplicer/
 
@@ -16,6 +15,7 @@ EXAMPLES=		arabidopsis drosophila malaria pyoelii human rice \
 			training_data_sets/Arabidopsis			  \
 			training_data_sets/Human
 MAKEFILE=		makefile
+WRKSRC=			${WRKDIR}/GeneSplicer/sources
 USE_BUILDLINK2=		yes
 
 do-install:

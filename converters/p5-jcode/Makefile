@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2003/07/17 21:27:26 grant Exp $
+# $NetBSD: Makefile,v 1.5 2004/01/20 12:10:29 agc Exp $
 # FreeBSD Id: Makefile,v 1.2 1999/01/17 10:56:40 vanilla Exp $
 
 DISTNAME=	jcode.pl-2.13
 PKGNAME=	p5-jcode-2.13
 SVR4_PKGNAME=	p5jc2
-WRKSRC=		${WRKDIR}
 CATEGORIES=	japanese converters
 MASTER_SITES=	ftp://ftp.iij.ad.jp/pub/IIJ/dist/utashiro/perl/ \
 		ftp://ftp.sra.co.jp/pub/lang/perl/sra-scripts/
@@ -14,6 +13,7 @@ MAINTAINER=	tech-pkg-ja@jp.NetBSD.org
 HOMEPAGE=	# not available
 COMMENT=	Perl library for Japanese character code conversion
 
+WRKSRC=			${WRKDIR}
 USE_BUILDLINK2=		YES
 
 NO_BUILD=		# defined

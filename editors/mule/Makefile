@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2003/08/09 10:48:09 seb Exp $
+# $NetBSD: Makefile,v 1.22 2004/01/20 12:14:05 agc Exp $
 
 DISTNAME=	mule-2.3
 PKGREVISION=	1
-WRKSRC=		${WRKDIR}/mule
 CATEGORIES=	editors
 MASTER_SITES=	ftp://ftp.m17n.org/pub/mule/
 
@@ -21,6 +20,7 @@ CONFLICTS=	emacs-[0-9]*
 .include "../../inputmethod/canna-lib/buildlink2.mk"
 .endif
 
+WRKSRC=		${WRKDIR}/mule
 GNU_CONFIGURE=	yes
 USE_BUILDLINK2=	yes
 USE_GMAKE=	yes

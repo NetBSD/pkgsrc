@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2003/08/09 10:29:56 seb Exp $
+# $NetBSD: Makefile,v 1.10 2004/01/20 12:07:43 agc Exp $
 #
 
 DISTNAME=	trplayer-1.2.0
-WRKSRC=		${WRKDIR}
 CATEGORIES=	audio
 MASTER_SITES=	ftp://linux-speakup.org/pub/linux/goodies/trplayer/
 EXTRACT_SUFX=	-1.i386.rpm
@@ -29,6 +28,7 @@ INTERACTIVE_STAGE=	fetch		# XXX Not really!
 LICENSE=		trplayer-license
 ONLY_FOR_PLATFORM=	NetBSD-1.6*-i386
 
+WRKSRC=		${WRKDIR}
 CHECK_SHLIBS=	NO
 NO_BUILD=	YES
 

@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2003/09/19 23:08:22 dent Exp $
+# $NetBSD: Makefile,v 1.12 2004/01/20 12:15:39 agc Exp $
 
 DISTNAME=	civctp-demo-10251999
 PKGNAME=	civctp-demo-19991025
-WRKSRC=		${WRKDIR}/${WRKNAME}
 CATEGORIES=	games x11
 MASTER_SITES=	ftp://ftp.linuxgames.com/loki/demos/civctp/ \
 		ftp://download.linuxlords.com/pub/demos/civctp/ \
@@ -12,6 +11,7 @@ MAINTAINER=	abs@NetBSD.org
 HOMEPAGE=	http://www.lokigames.com/products/civctp/
 COMMENT=	Civilization: Call to Power - graphical strategy (linux demo)
 
+WRKSRC=			${WRKDIR}/${WRKNAME}
 NO_CONFIGURE=		yes
 
 # Someone needs to look at alpha, powerpc and sparc compat_linux

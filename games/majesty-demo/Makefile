@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2003/07/21 16:49:55 martti Exp $
+# $NetBSD: Makefile,v 1.4 2004/01/20 12:15:41 agc Exp $
 #
 
 DISTNAME=	majesty_demo
 PKGNAME=	majesty-demo-20030310
-WRKSRC=		${WRKDIR}
 CATEGORIES=	games
 MASTER_SITES=	http://demos.linuxgamepublishing.com/majesty/
 EXTRACT_SUFX=	.run
@@ -16,6 +15,8 @@ EXTRACT_CMD=	${SED} '1,/^END_OF_STUB$$/d' ${DOWNLOADED_DISTFILE} | \
 			${GZCAT} | ${PAX} -O -r
 
 ONLY_FOR_PLATFORM=*-*-i386
+
+WRKSRC=		${WRKDIR}
 
 .if (${MACHINE_ARCH} == "i386")
 DEPENDS+=       suse_x11>=6.3:../../emulators/${SUSE_DIR_PREFIX}_x11

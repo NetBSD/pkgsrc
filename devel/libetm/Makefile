@@ -1,15 +1,16 @@
-# $NetBSD: Makefile,v 1.10 2003/12/24 09:53:48 jmmv Exp $
+# $NetBSD: Makefile,v 1.11 2004/01/20 12:13:28 agc Exp $
 #
 
 DISTNAME=		ETM-1.09
 PKGNAME=		libetm-1.09
-WRKSRC=			${WRKDIR}/etm
 CATEGORIES=		devel
 MASTER_SITES=		http://www.snake.net/software/ETM/
 
 MAINTAINER=		ben@NetBSD.org
 HOMEPAGE=		${MASTER_SITES}
 COMMENT=		Exception and termination manager
+
+WRKSRC=			${WRKDIR}/etm
 
 post-patch:
 	${MV} ${WRKSRC}/Makefile ${WRKSRC}/Makefile.bak

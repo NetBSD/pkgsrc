@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2003/07/21 16:49:37 martti Exp $
+# $NetBSD: Makefile,v 1.8 2004/01/20 12:15:39 agc Exp $
 
 DISTNAME=		colchess
 PKGNAME=		${CHESS_ENGINE}-book-${DIST_SUBDIR}
-WRKSRC=			${WRKDIR}/ColChess
 CATEGORIES=		games
 MASTER_SITES=		http://www.ast.cam.ac.uk/~cmf/chess/
 EXTRACT_SUFX=		.tgz
@@ -15,6 +14,7 @@ DEPENDS+=		colchess>=7.0:../../games/colchess
 
 CONFLICTS+=		colchess-book-[0-9]*
 
+WRKSRC=			${WRKDIR}/ColChess
 CHESS_ENGINE=		colchess
 DIST_SUBDIR=		colchess-7.0
 NO_CONFIGURE=		# defined

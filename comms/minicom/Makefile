@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.36 2003/07/17 21:26:52 grant Exp $
+# $NetBSD: Makefile,v 1.37 2004/01/20 12:10:01 agc Exp $
 
 DISTNAME=	minicom-1.83.1.src
 PKGNAME=	${DISTNAME:S/.src//}
 PKGREVISION=	1
-WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}/src
 CATEGORIES=	comms
 MASTER_SITES=	${MASTER_SITE_BACKUP}
 #MASTER_SITES=	${MASTER_SITE_SUNSITE:=apps/serialcomm/dialout/} \
@@ -17,6 +16,7 @@ BUILD_USES_MSGFMT=	yes
 DEPENDS+=	gkermit-[0-9]*:../../comms/gkermit
 DEPENDS+=	lrzsz-[0-9]*:../../comms/lrzsz
 
+WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}/src
 USE_BUILDLINK2=		yes
 USE_PKGINSTALL=		yes
 USE_PKGLOCALEDIR=	yes

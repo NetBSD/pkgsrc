@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2003/03/29 12:40:13 jmmv Exp $
+# $NetBSD: Makefile,v 1.9 2004/01/20 12:08:12 agc Exp $
 # FreeBSD ID: ports/benchmarks/postmark/Makefile,v 1.2 1999/09/19 05:13:20 obrien Exp
 #
 
 DISTNAME=       postmark-1_5.c
 PKGNAME=	postmark-1.5
-WRKSRC=		${WRKDIR}
 CATEGORIES=	benchmarks
 MASTER_SITES=   http://www.netapp.com/ftp/
 EXTRACT_SUFX=	#
@@ -15,6 +14,7 @@ COMMENT=	NetApps file system benchmark
 
 EXTRACT_CMD=	${CP} ${DOWNLOADED_DISTFILE} postmark.c
 
+WRKSRC=		${WRKDIR}
 NO_CONFIGURE=	yes
 
 do-build:

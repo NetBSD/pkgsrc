@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2004/01/02 11:12:50 jmmv Exp $
+# $NetBSD: Makefile,v 1.15 2004/01/20 12:07:43 agc Exp $
 
 DISTNAME=	musicbox-1.01p2
-WRKSRC=		${WRKDIR}/musicbox-1.01
 CATEGORIES=	audio
 MASTER_SITES=	ftp://freebsd.csie.nctu.edu.tw/Upload/
 EXTRACT_SUFX=	.tgz
@@ -12,6 +11,7 @@ COMMENT=	X11 front-interface for mpg123
 DEPENDS+=	mpg123>=0.59.18:../../audio/mpg123
 DEPENDS+=	qt1-1.44:../../x11/qt1
 
+WRKSRC=		${WRKDIR}/musicbox-1.01
 USE_X11=	yes
 CFLAGS+=	-D${OPSYS}
 EVAL_PREFIX+=	QT1DIR=qt1

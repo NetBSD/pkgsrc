@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2003/07/21 16:49:46 martti Exp $
+# $NetBSD: Makefile,v 1.8 2004/01/20 12:15:40 agc Exp $
 #
 
 DISTNAME=	manual-1.8.1-2
 PKGNAME=	freeciv-manual-1.8.1.2
-WRKSRC=		${WRKDIR}/manual
 CATEGORIES=	games
 MASTER_SITES=	http://www.freeciv.org/ftp/contrib/manual/
 
@@ -11,6 +10,7 @@ MAINTAINER=	dillo@giga.or.at
 HOMEPAGE=	http://www.freeciv.org/
 COMMENT=	Manuals for freeciv (game, client, and server)
 
+WRKSRC=		${WRKDIR}/manual
 USE_BUILDLINK2=	YES
 NO_BUILD=	YES
 

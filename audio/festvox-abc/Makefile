@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2003/04/10 01:28:05 grant Exp $
+# $NetBSD: Makefile,v 1.16 2004/01/20 12:07:42 agc Exp $
 
 DISTNAME=	voice_abc_di-2.0
 PKGNAME=	festvox-abc-2.0
-WRKSRC=		${WRKDIR}/festival
 CATEGORIES=	audio
 MASTER_SITES=	ftp://cslu.cse.ogi.edu/pub/tts/
 
@@ -16,6 +15,7 @@ DEPENDS+=	festogi-spanish>=2.0:../festogi-spanish
 
 LICENSE=	no-commercial-use
 
+WRKSRC=		${WRKDIR}/festival
 NO_BUILD=	yes
 
 FHOME=		${PREFIX}/share/festival

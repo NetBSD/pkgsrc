@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2003/07/21 16:36:11 martti Exp $
+# $NetBSD: Makefile,v 1.8 2004/01/20 12:10:28 agc Exp $
 #
 
 DISTNAME=       bbcim095-5
 PKGNAME=        bbcim-0.95b5
-WRKSRC=		${WRKDIR}/bbcim
 CATEGORIES=	converters
 MASTER_SITES=	http://www.nvg.ntnu.no/bbc/util/
 EXTRACT_SUFX=	.zip
@@ -11,6 +10,7 @@ EXTRACT_SUFX=	.zip
 MAINTAINER=	skrll@NetBSD.org
 COMMENT=	File and diskimage conversion utility for BBC Micro software
 
+WRKSRC=		${WRKDIR}/bbcim
 MAN_PAGE=	${FILESDIR}/bbcim.1
 
 do-build:

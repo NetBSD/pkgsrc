@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2003/07/17 21:26:21 grant Exp $
+# $NetBSD: Makefile,v 1.9 2004/01/20 12:09:35 agc Exp $
 #
 
 DISTNAME=	icb.2.1.4
 PKGNAME=	tkicb-2.1.4
 PKGREVISION=	1
-WRKSRC=		${WRKDIR}
 CATEGORIES=	chat x11
 MASTER_SITES=	ftp://shoshin.armory.com/pub/
 EXTRACT_SUFX=	.tar.Z
@@ -19,6 +18,7 @@ NO_SRC_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 
+WRKSRC=		${WRKDIR}
 USE_BUILDLINK2=	YES
 USE_X11=	YES
 

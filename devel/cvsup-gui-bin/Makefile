@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2004/01/16 03:47:06 xtraeme Exp $
+# $NetBSD: Makefile,v 1.4 2004/01/20 12:13:28 agc Exp $
 
 DISTNAME=	cvsup-gui-static-16.1.h
 PKGNAME=	${DISTNAME:C/-static//}
-WRKSRC=		${WRKDIR}
 CATEGORIES=	devel
 MASTER_SITES=	http://motoyuki.bsdclub.org/data/NetBSD/CVSup/i386/
 EXTRACT_SUFX=	.tgz
@@ -13,6 +12,7 @@ COMMENT=	cvsup GUI client
 
 DEPENDS+=	cvsup-bin-[0-9]*:../../devel/cvsup-bin
 
+WRKSRC=		${WRKDIR}
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 DIST_SUBDIR=	cvsup-${MACHINE_ARCH}-${OS_VERSION:C/(...).*/\1/}

@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2004/01/10 14:25:42 recht Exp $
+# $NetBSD: Makefile,v 1.21 2004/01/20 12:07:41 agc Exp $
 
 DISTNAME=	audacity-src-1.0.0-2
 PKGNAME=	audacity-1.0.0.2
 PKGREVISION=	8
-WRKSRC=		${WRKDIR}/audacity-src-1.0.0
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=audacity/}
 EXTRACT_SUFX=	.tgz
@@ -14,6 +13,7 @@ COMMENT=	Audio editor
 
 BUILD_DEPENDS+=	zip-[0-9]*:../../archivers/zip
 
+WRKSRC=		${WRKDIR}/audacity-src-1.0.0
 USE_BUILDLINK2=		# defined
 USE_X11=		# defined
 USE_GMAKE=		# defined

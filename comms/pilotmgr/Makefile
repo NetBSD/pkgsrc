@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2003/07/21 16:35:16 martti Exp $
+# $NetBSD: Makefile,v 1.25 2004/01/20 12:10:01 agc Exp $
 
 DISTNAME=	pilotmgr-1.107p2
 PKGNAME=	pilotmgr-1.107.2
 PKGREVISION=	1
-WRKSRC=		${WRKDIR}/${DISTNAME:C/-.*$//}
 CATEGORIES=	comms
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 EXTRACT_SUFX=	.tar.bz2
@@ -17,6 +16,7 @@ DEPENDS+=	p5-Digest-MD5-[0-9]*:../../security/p5-Digest-MD5
 DEPENDS+=	p5-Tk-[0-9]*:../../x11/p5-Tk
 DEPENDS+=	p5-pilot-link-[0-9]*:../p5-pilot-link
 
+WRKSRC=			${WRKDIR}/${DISTNAME:C/-.*$//}
 USE_BUILDLINK2=		YES
 USE_X11=		YES
 HAS_CONFIGURE=		YES

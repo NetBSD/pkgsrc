@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2004/01/05 20:48:01 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2004/01/20 12:12:49 agc Exp $
 
 DISTNAME=		db-4.2.52
 PKGNAME=		${DISTNAME:S/db/db4/}
-WRKSRC=		${WRKDIR}/${DISTNAME}/build_unix
 CATEGORIES=		databases
 MASTER_SITES=	http://www.sleepycat.com/update/snapshot/
 
@@ -12,6 +11,7 @@ COMMENT=		Berkeley DB version 4 from Sleepycat Software
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
+WRKSRC=			${WRKDIR}/${DISTNAME}/build_unix
 USE_BUILDLINK3=		YES
 USE_GCC_SHLIB=		YES
 USE_LIBTOOL=		YES

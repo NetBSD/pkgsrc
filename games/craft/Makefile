@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2003/09/26 14:04:54 tron Exp $
+# $NetBSD: Makefile,v 1.11 2004/01/20 12:15:40 agc Exp $
 
 DISTNAME=	craftcc35
 PKGNAME=	craft-3.5
-WRKSRC=		${WRKDIR}
 CATEGORIES=	games x11
 MASTER_SITES=	ftp://set.gmd.de/pub/as/janus/craft/
 EXTRACT_SUFX=	.tar.Z
@@ -11,6 +10,7 @@ MAINTAINER=	root@garbled.net
 HOMEPAGE=	http://set.gmd.de/~hua/
 COMMENT=	Warcraft-like game for X11
 
+WRKSRC=		${WRKDIR}
 USE_GMAKE=	yes
 USE_X11BASE=	yes
 

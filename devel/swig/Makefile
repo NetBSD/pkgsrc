@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2003/03/29 12:40:40 jmmv Exp $
+# $NetBSD: Makefile,v 1.8 2004/01/20 12:13:29 agc Exp $
 
 DISTNAME=       swig1.1p5
 PKGNAME=	swig-1.1p5
-WRKSRC=		${WRKDIR}/SWIG1.1p5
 CATEGORIES=	devel
 MASTER_SITES=   ftp://ftp.swig.org/pub/
 
@@ -10,6 +9,7 @@ MAINTAINER=	mellon@isc.org
 HOMEPAGE=	http://www.swig.org/
 COMMENT=	Simplified Wrapper and Interface Generator
 
+WRKSRC=		${WRKDIR}/SWIG1.1p5
 USE_BUILDLINK2=	YES
 GNU_CONFIGURE=	YES
 

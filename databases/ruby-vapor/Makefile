@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/09/16 16:29:11 taca Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/20 12:12:49 agc Exp $
 
 DISTNAME=		vapor-0.7.0
 PKGNAME=		${RUBY_PKGNAMEPREFIX}${DISTNAME}
-WRKSRC=			${WRKDIR}/vapor-0.70
 CATEGORIES=		databases
 MASTER_SITES=		http://rubyforge.org/download.php/7/
 
@@ -14,6 +13,7 @@ DEPENDS+=		ruby-DBD-postgresql>=0.0.20:../ruby-DBD-postgresql
 DEPENDS+=		ruby-rexml>=2.4.0:../../textproc/ruby-rexml
 DEPENDS+=		ruby-racc>=1.4.3:../../devel/ruby-racc
 
+WRKSRC=			${WRKDIR}/vapor-0.70
 USE_RUBY_SETUP= 	yes
 RUBY_SETUP= 	install.rb
 

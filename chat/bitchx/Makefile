@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.25 2004/01/03 18:49:35 reed Exp $
+# $NetBSD: Makefile,v 1.26 2004/01/20 12:09:35 agc Exp $
 #
 
 DISTNAME=	ircii-pana-1.0c19
 PKGNAME=	bitchx-1.0.3.19
 PKGREVISION=	5
-WRKSRC=		${WRKDIR}/BitchX
 CATEGORIES=	chat
 MASTER_SITES=	ftp://ftp.bitchx.org/pub/BitchX/source/ \
 		ftp://ftp.bitchx.org/pub/BitchX/source/old/
@@ -13,6 +12,7 @@ MAINTAINER=	jmcneill@invisible.yi.org
 HOMEPAGE=	http://www.bitchx.org/
 COMMENT=	IRC client based on ircII
 
+WRKSRC=		${WRKDIR}/BitchX
 USE_BUILDLINK2=	YES
 USE_PKGINSTALL=	YES
 GNU_CONFIGURE=	YES

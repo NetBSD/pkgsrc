@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.22 2003/09/28 09:13:56 jlam Exp $
+# $NetBSD: Makefile,v 1.23 2004/01/20 12:13:28 agc Exp $
 #
 
 DISTNAME=		latestCDK
 PKGNAME=		cdk-4.9.9
 PKGREVISION=				1
-WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 CATEGORIES=		devel
 MASTER_SITES=		http://www.vexus.ca/release/
 EXTRACT_SUFX=		.tgz
@@ -13,6 +12,7 @@ MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.vexus.ca/CDK.html
 COMMENT=		Curses Development Kit
 
+WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 USE_BUILDLINK2=		yes
 USE_NCURSES=		# uses ncurses internals
 USE_LIBTOOL=		yes

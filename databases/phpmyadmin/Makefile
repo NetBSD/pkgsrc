@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2003/09/01 14:00:30 tron Exp $
+# $NetBSD: Makefile,v 1.15 2004/01/20 12:12:49 agc Exp $
 
 DISTNAME=	phpMyAdmin-${DIST_VERSION}-php
 PKGNAME=	phpmyadmin-2.5.3rc3
-WRKSRC=		${WRKDIR}/${DISTNAME:S/-php//}
 CATEGORIES=	databases www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=phpmyadmin/}
 EXTRACT_SUFX=	.tar.bz2
@@ -18,6 +17,7 @@ PLIST_SUBST+=	CP="${CP}" DIST_VERSION=${DIST_VERSION} \
 MESSAGE_SUBST+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR} PMCONFFILE=${PMCONFFILE} \
 		PMDIR=${PMDIR} EXDIR=${EXDIR}
 
+WRKSRC=		${WRKDIR}/${DISTNAME:S/-php//}
 CONF_INC_PHP=	${PREFIX}/share/phpmyadmin/config.inc.php
 DIST_VERSION=	2.5.3-rc3
 DOC_FILES=	ANNOUNCE.txt CREDITS ChangeLog \

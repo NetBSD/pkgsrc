@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2004/01/19 00:57:10 sjg Exp $
+# $NetBSD: Makefile,v 1.18 2004/01/20 12:13:27 agc Exp $
 #
 
 DISTNAME=       bmake-20040118
-WRKSRC=		${WRKDIR}/bmake
 CATEGORIES=	devel
 MASTER_SITES=   ftp://ftp.NetBSD.org/pub/incoming/sjg/
 
@@ -14,6 +13,7 @@ DEPENDS+=	mk-files>=20030714:../../devel/mk-files
 
 ONLY_FOR_PLATFORM=	NetBSD-*-*
 
+WRKSRC=		${WRKDIR}/bmake
 makesyspath=${PREFIX}/share/mk:/usr/share/mk:/usr/local/share/mk:/opt/share/mk
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+= --with-default-sys-path=${makesyspath}

@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2003/09/16 12:16:50 adam Exp $
+# $NetBSD: Makefile,v 1.7 2004/01/20 12:07:43 agc Exp $
 #
 
 DISTNAME=	openal-20030724
-WRKSRC=		${WRKDIR}/${DISTNAME}/linux
 CATEGORIES=	audio
 MASTER_SITES=	http://math.smsu.edu/~erik/files/fbsd/ \
 		http://www.smluc.org/~erik/ \
@@ -12,6 +11,7 @@ MAINTAINER=	xtraeme@NetBSD.org
 HOMEPAGE=	http://www.openal.org/
 COMMENT=	3D positional spatialized sound library
 
+WRKSRC=		${WRKDIR}/${DISTNAME}/linux
 GNU_CONFIGURE=	YES
 USE_BUILDLINK2=	YES
 USE_GMAKE=	YES

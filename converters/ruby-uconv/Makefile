@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2003/07/17 21:27:37 grant Exp $
+# $NetBSD: Makefile,v 1.4 2004/01/20 12:10:29 agc Exp $
 # FreeBSD: ports/japanese/ruby-uconv/Makefile,v 1.8 2001/01/30 19:26:22 knu Exp
 
 DISTNAME=	uconv-0.4.9
 PKGNAME=	${RUBY_PKGNAMEPREFIX}${DISTNAME}
-WRKSRC=		${WRKDIR}/uconv
 CATEGORIES=	japanese converters
 MASTER_SITES=	http://www.yoshidam.net/
 
@@ -11,6 +10,7 @@ MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	http://www.yoshidam.net/Ruby.html#uconv
 COMMENT=	Unicode conversion library with Japanese codesets support
 
+WRKSRC=		${WRKDIR}/uconv
 DIST_SUBDIR=	ruby
 USE_RUBY=	yes
 USE_RUBY_EXTCONF= yes

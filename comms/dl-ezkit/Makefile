@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2003/07/21 16:35:12 martti Exp $
+# $NetBSD: Makefile,v 1.10 2004/01/20 12:10:01 agc Exp $
 
 DISTNAME=	dl-ezkit-0.8.1-bsd
 PKGNAME=        dl-ezkit-0.8.1
-WRKSRC=		${WRKDIR}/dl-ezkit
 CATEGORIES=	comms
 MASTER_SITES=	http://www.ww.tu-freiberg.de/~pberg/download/Unix-sources/
 
@@ -12,6 +11,7 @@ COMMENT=	Coff file downloader for the EZ-KIT Lite using the RS232
 
 MAKEFILE=	Makefile.bsd
 
+WRKSRC=		${WRKDIR}/dl-ezkit
 USE_BUILDLINK2=	# defined
 
 do-install:

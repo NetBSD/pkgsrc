@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.25 2003/07/17 21:33:17 grant Exp $
+# $NetBSD: Makefile,v 1.26 2004/01/20 12:13:29 agc Exp $
 #
 
 DISTNAME=		pwlib_1.4.4
 PKGNAME=		pwlib-1.4.4
 PKGREVISION=		3
-WRKSRC=			${WRKDIR}/pwlib
 CATEGORIES=		devel
 MASTER_SITES=		http://www.openh323.org/bin/
 COUNTRY_MIRRORS=	at us1 us2 ru de cz
@@ -18,6 +17,7 @@ COMMENT=		Portable Windows Libary
 
 BUILD_DEPENDS=		bison-[0-9]*:../../devel/bison
 
+WRKSRC=			${WRKDIR}/pwlib
 USE_BUILDLINK2=		yes
 USE_PKGINSTALL=		yes
 USE_GMAKE=		yes

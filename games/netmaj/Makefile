@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2003/07/21 16:49:58 martti Exp $
+# $NetBSD: Makefile,v 1.7 2004/01/20 12:15:41 agc Exp $
 #
 
 DISTNAME=		netmaj-2.0.7
-WRKSRC=			${WRKDIR}/netmaj
 CATEGORIES=		games
 MASTER_SITES=		http://www.sfc.wide.ad.jp/~kusune/netmaj/files/
 
@@ -10,6 +9,7 @@ MAINTAINER=		kei@NetBSD.org
 HOMEPAGE=		http://www.sfc.wide.ad.jp/~kusune/netmaj/
 COMMENT=		Mahjongg game with network and 1-4 player(s) support
 
+WRKSRC=			${WRKDIR}/netmaj
 USE_BUILDLINK2=		# defined
 
 INSTALL_TARGET=		install install-pf

@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2004/01/05 23:22:51 jlam Exp $
+# $NetBSD: Makefile,v 1.25 2004/01/20 12:13:29 agc Exp $
 #
 
 DISTNAME=	popt-1.7
 PKGREVISION=	4
-WRKSRC=		${WRKDIR}/${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.rpm.org/pub/rpm/dist/rpm-4.1.x/		\
 		ftp://ftp.iks-jena.de/pub/software/unix/misc/		\
@@ -18,6 +17,7 @@ CONFLICTS=		ORBit<=0.5.3
 
 BUILD_USES_MSGFMT=	yes
 
+WRKSRC=			${WRKDIR}/${DISTNAME}
 USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes

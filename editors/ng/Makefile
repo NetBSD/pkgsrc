@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2003/03/29 12:40:45 jmmv Exp $
+# $NetBSD: Makefile,v 1.14 2004/01/20 12:14:05 agc Exp $
 
 DISTNAME=	ng-1.4.3
-WRKSRC=         ${WRKDIR}/ng
 CATEGORIES=     editors japanese
 MASTER_SITES=   http://tt.sakura.ne.jp/~amura/archives/ng/
 
@@ -9,6 +8,7 @@ MAINTAINER=     fk200329@fsinet.or.jp
 HOMEPAGE=	http://tt.sakura.ne.jp/~amura/ng/
 COMMENT=	Very light Emacs-clone with japanese support
 
+WRKSRC=         ${WRKDIR}/ng
 USE_BUILDLINK2=	YES
 
 .include "../../mk/bsd.prefs.mk"	# for USE_CANNA

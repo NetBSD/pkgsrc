@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2004/01/12 09:46:04 cjep Exp $
+# $NetBSD: Makefile,v 1.16 2004/01/20 12:10:55 agc Exp $
 
 DISTNAME=		cross-${TARGET_ARCH}-1.2
 PKGREVISION=		3
-WRKSRC=			${WRKDIR} # for the patch target
 CROSS_DISTFILES=
 MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.mingw.org/
@@ -28,6 +27,7 @@ W32_WRKSRC=		${WRKDIR}/w32api-1.2
 USE_GMAKE=		yes
 USE_PERL5=		build
 
+WRKSRC=			${WRKDIR} # for the patch target
 AS_FOR_TARGET=		${BINUTILS_WRKSRC}/gas/as-new
 AR_FOR_TARGET=		${BINUTILS_WRKSRC}/binutils/ar
 NM_FOR_TARGET=		${BINUTILS_WRKSRC}/binutils/nm-new

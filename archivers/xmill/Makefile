@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2003/12/24 09:53:47 jmmv Exp $
+# $NetBSD: Makefile,v 1.8 2004/01/20 12:07:07 agc Exp $
 
 DISTNAME=		xmill-0-7
 PKGNAME=		xmill-0.7
-WRKSRC=			${WRKDIR}
 CATEGORIES=		archivers
 MASTER_SITES=		# empty
 EXTRACT_SUFX=		.zip
@@ -15,6 +14,7 @@ BUILD_DEPENDS=		unzip-[0-9]*:../../archivers/unzip
 
 EXTRACT_CMD=		${LOCALBASE}/bin/unzip -aq ${DOWNLOADED_DISTFILE}
 
+WRKSRC=			${WRKDIR}
 USE_GMAKE=		#defined
 MAKEFILE=		makefile
 

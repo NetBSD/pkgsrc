@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2003/07/21 16:43:25 martti Exp $
+# $NetBSD: Makefile,v 1.10 2004/01/20 12:13:28 agc Exp $
 #
 
 DISTNAME=	its4-1.1.1
-WRKSRC=		${WRKDIR}/its4
 CATEGORIES=	devel
 MASTER_SITES=	# have to fetch for yourself, or from a NetBSD mirror
 EXTRACT_SUFX=	.tgz
@@ -13,6 +12,7 @@ COMMENT=	Static C/C++ code scanner for potential security problems
 
 LICENSE=        no-commercial-use
 
+WRKSRC=		${WRKDIR}/its4
 HAS_CONFIGURE=	YES
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/its4

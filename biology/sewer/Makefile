@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/09/27 23:36:34 jschauma Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/20 12:08:40 agc Exp $
 
 DISTNAME=		sewer
 PKGNAME=		sewer-2.6
-WRKSRC=			${WRKDIR}
 CATEGORIES=		biology
 MASTER_SITES=		ftp://iubio.bio.indiana.edu/molbio/analyze/
 EXTRACT_SUFX=		.zip
@@ -14,6 +13,7 @@ COMMENT=		SEquence Analysis using WEb Resources
 NO_CONFIGURE=		YES
 NO_BUILD=		YES
 
+WRKSRC=			${WRKDIR}
 USE_BUILDLINK2=		YES
 
 pre-install:
