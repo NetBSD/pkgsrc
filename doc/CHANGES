@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6720 2004/07/29 05:08:36 xtraeme Exp $
+$NetBSD: CHANGES,v 1.6721 2004/07/29 07:28:55 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3639,3 +3639,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added xorg-fontsTruetype-6.7.0 [xtraeme 2004-07-29]
 	Added xorg-fontsType1-6.7.0 [xtraeme 2004-07-29]
 	Added xorg-docs-6.7.0 [xtraeme 2004-07-29]
+	Added xorg-dirs-1.0 [xtraeme 2004-07-29]
