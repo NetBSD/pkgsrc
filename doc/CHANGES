@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9534 2005/03/21 22:51:42 jmmv Exp $
+$NetBSD: CHANGES,v 1.9535 2005/03/21 22:57:56 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1438,3 +1438,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated p5-Term-ReadKey to 2.30 [wiz 2005-03-21]
 	Updated monotone to 0.17 [jmmv 2005-03-21]
 	Updated monotone-server to 0.17 [jmmv 2005-03-21]
+	Updated libarchive to 1.02.016 [xtraeme 2005-03-21]
