@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1 2002/09/25 18:05:18 wiz Exp $
+
+--- Makefile.in.orig	Wed Sep 11 17:23:06 2002
++++ Makefile.in
+@@ -30,7 +30,6 @@ examples:
+ #
+ 
+ configure:	configure.in m4/* acconfig.h
+-	./autogen.sh
+ 
+ #
+ 
