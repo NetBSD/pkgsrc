@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2002/12/24 06:10:10 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2003/01/09 13:59:25 rh Exp $
 
-DISTNAME=		evolution-1.0.8
-PKGREVISION=		5
+DISTNAME=		evolution-1.2.1
 CATEGORIES=		mail time gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/evolution/1.0/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/evolution/1.2/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		rh@netbsd.org
@@ -16,7 +15,11 @@ BUILD_USES_MSGFMT=	YES
 
 # Using a wildcard here doesn't make sense because the version number of
 # "db3" is hardcoded in the "configure" script and some source modules.
-BUILDLINK_DEPENDS.db3=			db3-3.11.2
+BUILDLINK_DEPENDS.db3=		db3-3.11.2
+BUILDLINK_DEPENDS.gnome-vfs=	gnome-vfs>=1.0.5
+BUILDLINK_DEPENDS.libxml=	libxml>=1.8.17
+BUILDLINK_DEPENDS.gal=		gal>=0.22
+BUILDLINK_DEPENDS.gtkhtml=	gtkhtml>=1.1.7
 
 GNU_CONFIGURE=		YES
 USE_GMAKE=		YES
@@ -37,10 +40,12 @@ REPLACE_PERL+=		tools/evolution-addressbook-clean.in
 REPLACE_PERL+=		tools/killev
 CONFIGURE_ARGS+=	--with-openldap --without-static-ldap
 CONFIGURE_ARGS+=	--enable-nntp=yes
+CONFIGURE_ARGS+=	--enable-openssl=yes
 CONFIGURE_ARGS+=	--with-krb5=/usr --with-krb4=/usr
 CONFIGURE_ARGS+=	--with-db3-includes=${LOCALBASE}/include/db3
 CONFIGURE_ARGS+=	--with-db3-libs=${LOCALBASE}/lib
 CONFIGURE_ENV+=		CFLAGS="-D_POSIX_THREAD_SYSCALL_SOFT=1 ${CFLAGS}"
+CONFIGURE_ENV+=		PKG_CONFIG_PATH="${LOCALBASE}/lib/pkgconfig:${X11BASE}/lib/pkgconfig"
 CPPFLAGS+=		-D_POSIX_THREAD_SYSCALL_SOFT=1
 
 pre-configure:
@@ -85,4 +90,5 @@ pre-build: checkforx
 .include "../../devel/oaf/buildlink2.mk"
 .include "../../devel/gal/buildlink2.mk"
 .include "../../net/ORBit/buildlink2.mk"
+.include "../../net/soup/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
