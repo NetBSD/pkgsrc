@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.533 2003/05/09 10:04:42 wiz Exp $
+$NetBSD: TODO,v 1.534 2003/05/09 10:05:20 wiz Exp $
 
 Suggested new packages
 ======================
@@ -202,7 +202,6 @@ Suggested package updates
 	o openssl-0.9.7a
 	o oss-3.9.7i
 	o p0f-1.8.3
-	o pan-0.14.0
 	o php4-4.3.1
 	o pfaedit-20030506
 	o pine-4.55
