@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.334 1999/09/03 21:05:58 tron Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.335 1999/09/08 14:58:34 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -1708,6 +1708,7 @@ distclean: pre-distclean clean
 .if defined(DIST_SUBDIR)
 	-${_PKG_SILENT}${_PKG_DEBUG}${RMDIR} ${_DISTDIR}  
 .endif
+	-${_PKG_SILENT}${_PKG_DEBUG}${RM} -f README.html
 .endif
 
 # Prints out a list of files to fetch (useful to do a batch fetch)
