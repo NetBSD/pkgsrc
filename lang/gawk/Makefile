@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2002/07/17 09:07:43 agc Exp $
+# $NetBSD: Makefile,v 1.8 2002/10/22 23:53:25 jlam Exp $
 # FreeBSD Id: Makefile,v 1.13 1999/01/27 07:41:14 fenner Exp $
 
 DISTNAME=	gawk-3.1.0
@@ -11,13 +11,13 @@ COMMENT=	GNU awk
 
 ONLY_FOR_PLATFORM=	SunOS-*-*       # in NetBSD base system
 
-# this is a lie we only need ${GETTEXT_PREFIX}/share/gettext/po/Makefile.in.in
-BUILD_USES_MSGFMT=	YES
+# We need ${GETTEXT_PREFIX}/share/gettext/po/Makefile.in.in.
+BUILD_DEPENDS+=		gettext>=0.10.35nb1:../../devel/gettext
 
-GNU_CONFIGURE=	yes
-USE_BUILDLINK_ONLY=	YES
-TEXINFO_OVERRIDE=	YES
-MAKE_ENV+=	PKGLOCALEDIR=${PKGLOCALEDIR}
+USE_BUILDLINK2=		# defined
+GNU_CONFIGURE=		# defined
+TEXINFO_OVERRIDE=	# defined
+MAKE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR}
 EVAL_PREFIX+=		GETTEXT_PREFIX=gettext
 
 .include "../../mk/bsd.prefs.mk"
@@ -28,9 +28,9 @@ CONFIGURE_ARGS+=	--enable-portals
 
 pre-configure:
 	${RM} -f ${WRKSRC}/po/Makefile.in.in
-	${CP}  ${GETTEXT_PREFIX}/share/gettext/po/Makefile.in.in \
+	${CP} ${GETTEXT_PREFIX}/share/gettext/po/Makefile.in.in \
 		 ${WRKSRC}/po/Makefile.in.in
 
-.include "../../devel/gettext-lib/buildlink.mk"
+.include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
