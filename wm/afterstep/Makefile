@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2001/10/24 22:11:08 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2002/03/04 19:16:05 fredb Exp $
 
-DISTNAME=	AfterStep-1.8.9
-PKGNAME=	afterstep-1.8.9
+DISTNAME=	AfterStep-1.8.11
+PKGNAME=	afterstep-1.8.11
 CATEGORIES=	x11 wm
 MASTER_SITES=	ftp://ftp.afterstep.org/stable/ \
 		ftp://ftp.digex.net/pub/X11/window-managers/afterstep/AfterStep/stable/
@@ -12,20 +12,19 @@ HOMEPAGE=		http://www.afterstep.org/
 COMMENT=		NeXT-like window manager for X11
 
 BUILD_DEPENDS+=		autoconf>=2.13:../../devel/autoconf
-# XXX
-# XXX The following would be "RUN_DEPENDS," if we had such a thing.
-# XXX
 DEPENDS+=		asclock-[0-9]*:../../time/asclock
 DEPENDS+=		xp-[0-9]*:../../x11/xp
 
 USE_BUILDLINK_ONLY=	YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
-USE_PERL5=		YES
 
 CONFIGURE_ARGS+=	--disable-staticlibs
-CONFIGURE_ARGS+=	--with-helpcommand="xpman"
-CFLAGS+=		-I${BUILDLINK_DIR}/include/X11		# xpm.h
+CONFIGURE_ARGS+=	--disable-xinerama
+CONFIGURE_ARGS+=	--with-helpcommand=xpman
+CONFIGURE_ARGS+=	--with-xpm-includes='${BUILDLINK_DIR}/include/X11'
+CONFIGURE_ENV+=		PERL='${LOCALBASE}/bin/perl'
+CONFIGURE_ENV+=		ac_cv_prog_sgmltools='no'
 
 post-patch:
 	for i in `${FIND} ${WRKSRC} -name "*.man" -print` \
