@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2002/11/27 17:41:05 drochner Exp $
+@comment $NetBSD: PLIST,v 1.4 2002/12/12 01:56:23 grant Exp $
 bin/autopoint
 bin/gettext
 bin/gettextize
@@ -202,6 +202,5 @@ ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/gettext.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/gettext.mo
 @dirrm share/gettext/po
 @dirrm share/gettext/intl
-@dirrm share/gettext
 @dirrm lib/gettext
 @dirrm doc/gettext
