@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2001/04/18 12:14:29 agc Exp $
+$NetBSD: distinfo,v 1.3 2003/12/03 02:33:53 xtraeme Exp $
 
-SHA1 (gnome-audio-1.4.0.tar.gz) = c63a40c8bc9996c423738c46baf28202ab9338f2
-Size (gnome-audio-1.4.0.tar.gz) = 1451082 bytes
+SHA1 (gnome-audio-2.0.0.tar.bz2) = 488f6295e2e1f54a8988dd7e71ab673cd7fc8a00
+Size (gnome-audio-2.0.0.tar.bz2) = 1401319 bytes
