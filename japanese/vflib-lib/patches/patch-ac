@@ -1,7 +1,16 @@
-$NetBSD: patch-ac,v 1.1.1.1 2000/05/01 21:58:42 jlam Exp $
+$NetBSD: patch-ac,v 1.2 2001/06/25 20:19:53 jlam Exp $
 
 --- src/Makefile.in.orig	Tue Oct 27 02:33:17 1998
-+++ src/Makefile.in	Mon May  1 04:37:48 2000
++++ src/Makefile.in
+@@ -61,7 +61,7 @@
+ # VFlib
+ $(VFLIB):  $(CORE_OBJ) $(DRV_OBJ)
+ 	$(LIBTOOL) --mode=link \
+-		$(CC) -o $(VFLIB) $(CORE_OBJ) $(DRV_OBJ) \
++		$(CC) $(LDFLAGS) -o $(VFLIB) $(CORE_OBJ) $(DRV_OBJ) \
+ 		  -version-info @version_info@ -rpath $(libdir) \
+ 		  $(EXT_LIBRARY) 
+ 
 @@ -183,13 +183,13 @@
  
  # Installing
