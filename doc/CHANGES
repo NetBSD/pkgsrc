@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7524 2004/10/22 16:16:04 jdolecek Exp $
+$NetBSD: CHANGES,v 1.7525 2004/10/22 18:25:07 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4816,4 +4816,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated ssmtp to 2.61 [tv 2004-10-22]
 	Updated nail to 11.12 [cjep 2004-10-22]
 	Updated evolution-data-server to 1.0.2nb2 [jmmv 2004-10-22]
-	Update kmymoney2 to 0.6.2 [jdolecek 2004-10-22]
+	Updated kmymoney2 to 0.6.2 [jdolecek 2004-10-22]
