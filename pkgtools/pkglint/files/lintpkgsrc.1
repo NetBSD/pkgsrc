@@ -1,4 +1,4 @@
-.\"	$NetBSD: lintpkgsrc.1,v 1.9 2000/01/19 13:59:22 abs Exp $
+.\"	$NetBSD: lintpkgsrc.1,v 1.10 2000/05/29 19:44:28 dmcmahill Exp $
 .\"
 .\" Copyright (c) 1999 by David Brownlee (abs@netbsd.org)
 .\" Absolutely no warranty.
@@ -30,6 +30,8 @@ Parse Makefiles and output contents (Useful for debugging).
 Set basedir for binary packages, otherwise PKGSRCDIR/packages is used.
 .It Fl L
 List the filenames of Makefiles as they are parsed (for debugging).
+.It Fl M Ar distdir
+Set basedir for distfiles, otherwise PKGSRCDIR/distfiles is used.
 .It Fl P Ar pkgsrcdir
 Set pkgsrcdir - otherwise
 .Pa /etc/mk.conf
