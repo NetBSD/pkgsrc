@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink.mk,v 1.52 2002/01/01 19:10:03 jlam Exp $
+# $NetBSD: bsd.buildlink.mk,v 1.53 2002/01/03 20:00:06 jlam Exp $
 #
 # This Makefile fragment is included by package buildlink.mk files.  This
 # file does the following things:
@@ -117,7 +117,7 @@
 .if !defined(_BSD_BUILDLINK_MK)
 _BSD_BUILDLINK_MK=	# defined
 
-BUILDLINK_DIR?=		${WRKDIR}/.buildlink
+BUILDLINK_DIR=		${WRKDIR}/.buildlink
 
 .if !defined(_BUILDLINK_CPPFLAGS) || !defined(_BUILDLINK_LDFLAGS)
 _BUILDLINK_CPPFLAGS=	-I${BUILDLINK_DIR}/include
