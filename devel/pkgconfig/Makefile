@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/08/11 14:15:37 rh Exp $
+# $NetBSD: Makefile,v 1.2 2001/08/13 06:55:41 rh Exp $
 #
 
 DISTNAME=	pkgconfig-0.8.0
@@ -15,5 +15,8 @@ USE_LIBTOOL=	YES
 post-configure:
 	${RM} -f ${WRKSRC}/libtool
 	${LN} -s ${LOCALBASE}/bin/libtool ${WRKSRC}
+
+post-install:
+	${INSTALL_DATA_DIR} ${PREFIX}/lib/pkgconfig
 
 .include "../../mk/bsd.pkg.mk"
