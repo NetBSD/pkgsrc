@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2003/07/02 22:30:36 jtb Exp $
+# $NetBSD: Makefile,v 1.27 2003/07/10 13:46:04 jtb Exp $
 
 DISTNAME=       	icon.v942src
 PKGNAME=		icon-9.4.2
@@ -10,12 +10,19 @@ MAINTAINER=		tech-pkg@netbsd.org
 HOMEPAGE=		http://www.cs.arizona.edu/icon/index.htm
 COMMENT=		The Icon programming language
 
-ONLY_FOR_PLATFORM=	NetBSD-*-alpha NetBSD-*-i386 NetBSD-*-sparc NetBSD-*-powerpc \
-			NetBSD-*-mipseb NetBSD-*-mipsel NetBSD-*-m68k NetBSD-*-vax
-
+USE_BUILDLINK2=		YES
+USE_X11=		YES
 CONFIGURE_TARGET=	X-Configure
 ALL_TARGET=		All
 TEST_TARGET=		Test
+
+.if (${MACHINE_ARCH} != "alpha") || (${MACHINE_ARCH} != "i386") || \
+	(${MACHINE_ARCH} != "sparc") || (${MACHINE_ARCH} != "powerpc") || \
+	(${MACHINE_ARCH} != "mipseb") || (${MACHINE_ARCH} != "mipsel") || \
+	(${MACHINE_ARCH} != "m68k") || (${MACHINE_ARCH} != "vax")
+PTHREAD_OPTS+=		require native
+.include "../../mk/pthread.buildlink2.mk"
+.endif
 
 pre-build:
 	${MKDIR} ${WRKSRC}/lib/icon
