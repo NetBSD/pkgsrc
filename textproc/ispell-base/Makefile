@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2004/12/01 12:18:21 markd Exp $
+# $NetBSD: Makefile,v 1.22 2005/03/24 17:08:02 tv Exp $
 #
 
 DISTNAME=	ispell-3.2.06
@@ -45,6 +45,11 @@ do-configure:
 .if ${OPSYS} == "SunOS"
 	cd ${WRKSRC};							\
 	${ECHO} "#define USG" >> local.h;
+.endif
+.if ${OPSYS} == "Interix"
+	cd ${WRKSRC};							\
+	${ECHO} "#define SORTTMP \"\"" >> local.h;			\
+	${ECHO} "#define MAKE_SORTTMP \"\"" >> local.h;
 .endif
 
 .include "../../mk/bsd.pkg.mk"
