@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.978 2002/05/14 18:07:01 jschauma Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.979 2002/05/18 21:33:32 schmonz Exp $
 #
 # This file is in the public domain.
 #
@@ -2216,20 +2216,91 @@ do-shlib-handling:
 			fi						\
 			;;						\
 		"dylib")						\
-			${AWK} '/^@/ { print $$0; next }		\
+			${AWK} '					\
+				/^@/ { lines[NR] = $$0; next }		\
+		    		function libtool_release(lib) {		\
+					if (gsub("\.so\.", "\.", lib) || gsub("\.so$$", "", lib)) { \
+						lib = lib ".dylib"; \
+						if (system("${TEST} -h ${PREFIX}/" lib) == 0) { \
+							rels[NR] = lib; \
+						}			\
+					}				\
+				}					\
 				/.*\/lib[^\/]+\.so\.[0-9]+\.[0-9]+\.[0-9]+$$/ { \
+					libtool_release($$0);		\
+					lines[NR] = $$0;		\
+					links[linkc++] = $$0;		\
+					sub("\.[0-9]+$$", "");		\
+					links[linkc++] = $$0;		\
+					sub("\.[0-9]+$$", "");		\
+					links[linkc++] = $$0;		\
+					sub("\.[0-9]+$$", "");		\
+					links[linkc++] = $$0;		\
+					if (sub("-[^-]+\.so$$", "\.so")) { \
+						links[linkc++] = $$0;	\
+					}				\
 					next				\
 				}					\
 				/.*\/lib[^\/]+\.so\.[0-9]+\.[0-9]+$$/ {	\
+					libtool_release($$0);		\
+					lines[NR] = $$0;		\
+					links[linkc++] = $$0;		\
+					sub("\.[0-9]+$$", "");		\
+					links[linkc++] = $$0;		\
+					sub("\.[0-9]+$$", "");		\
+					links[linkc++] = $$0;		\
+					if (sub("-[^-]+\.so$$", "\.so")) { \
+						links[linkc++] = $$0;	\
+					}				\
 					next				\
 				}					\
 				/.*\/lib[^\/]+\.so\.[0-9]+$$/ {		\
+					libtool_release($$0);		\
+					lines[NR] = $$0;		\
+					links[linkc++] = $$0;		\
+					sub("\.[0-9]+$$", "");		\
+					links[linkc++] = $$0;		\
+					if (sub("-[^-]+\.so$$", "\.so")) { \
+						links[linkc++] = $$0;	\
+					}				\
 					next				\
 				}					\
 				/.*\/lib[^\/]+\.so$$/ {			\
+					libtool_release($$0);		\
+					lines[NR] = $$0;		\
+					links[linkc++] = $$0;		\
+					if (sub("-[^-]+\.so$$", "\.so")) { \
+						links[linkc++] = $$0;	\
+					}				\
 					next				\
 				}					\
-				{ print $$0 }				\
+				{ lines[NR] = $$0 }			\
+				END {					\
+					for (i = 1 ; i <= linkc ; i++)	\
+						for (j = 1 ; j <= NR ; j++) \
+							if (lines[j] == links[i]) \
+								lines[j] = "@comment " lines[j]; \
+					if (${SHLIB_PLIST_MODE}) 	\
+						for (i = 1 ; i <= NR ; i++) { \
+							print lines[i]; \
+							if (rels[i] != "") { \
+								print rels[i]; \
+								"${LS} -l ${PREFIX}/" rels[i] | getline tgt; \
+								gsub(".* ", "", tgt); \
+								if (tgts[tgt] == "") { \
+									tgts[tgt] = tgt; \
+				                                	if (index(tgt, "/") == 1) \
+				                                		print tgt; \
+				                                	else { \
+				                                		prefix=""; \
+				                                        	if (match(rels[i], ".*/") != 0) \
+				                        				prefix=substr(rels[i],1,RLENGTH); \
+						                        	print prefix tgt; \
+				                        		} \
+								}	\
+							}		\
+						}			\
+				}					\
 			' <${PLIST} >${PLIST}.tmp ;			\
 			if [ "${SHLIB_PLIST_MODE}" = "1" ]; then	\
 				${MV} ${PLIST}.tmp ${PLIST};		\
