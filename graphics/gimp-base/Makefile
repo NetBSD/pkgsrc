@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2002/12/21 23:29:25 jmmv Exp $
+# $NetBSD: Makefile,v 1.9 2002/12/23 17:35:35 jlam Exp $
 
 DISTNAME=		gimp-1.2.3
 PKGNAME=		gimp-base-1.2.3
@@ -77,6 +77,7 @@ PLIST_SUBST+=	HELPBROWSER="@comment "
 .include "../../graphics/jpeg/buildlink2.mk"
 .include "../../graphics/png/buildlink2.mk"
 .include "../../graphics/tiff/buildlink2.mk"
+.include "../../graphics/xpm/buildlink2.mk"
 .include "../../x11/gtk/buildlink2.mk"
 .endif
 
