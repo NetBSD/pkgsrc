@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2003/12/15 00:26:50 xtraeme Exp $
+# $NetBSD: Makefile,v 1.20 2003/12/15 00:27:12 xtraeme Exp $
 #
 
 DISTNAME=		gnome-session-2.4.1
@@ -26,7 +26,6 @@ LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 GCONF2_SCHEMAS= 	gnome-session.schemas
 
-.if 0
 .include "../../audio/esound/buildlink2.mk"
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../devel/GConf2/schemas.mk"
@@ -35,5 +34,4 @@ GCONF2_SCHEMAS= 	gnome-session.schemas
 .include "../../devel/libgnomeui/buildlink2.mk"
 .include "../../textproc/scrollkeeper/buildlink2.mk"
 .include "../../x11/gnome2-control-center/buildlink2.mk"
-.endif
 .include "../../mk/bsd.pkg.mk"
