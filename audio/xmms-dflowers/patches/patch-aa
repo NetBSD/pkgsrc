@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/08/16 01:35:13 hubertf Exp $
+$NetBSD: patch-aa,v 1.2 2001/08/16 03:20:45 hubertf Exp $
 
 --- Makefile.orig	Thu Dec 30 01:40:03 1999
 +++ Makefile
@@ -17,7 +17,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/08/16 01:35:13 hubertf Exp $
 -OBJ = dflowers.o
 -PREFIX = `which xmms | rev | cut -c10- | rev`
 +#CONF= -DNO_WIN_DECORATIONS
-+CFLAGS+= $(OPT) -Wall -fPIC `gtk-config --cflags gthread`
++CFLAGS+= $(OPT) -Wall -fPIC `${GTK_CONFIG} --cflags gthread`
 +#LFLAGS = -shared -fPIC -L/usr/local/lib -ldl
 +OBJ = dflowers.lo
 +VPREFIX = `xmms-config --visualization-plugin-dir`

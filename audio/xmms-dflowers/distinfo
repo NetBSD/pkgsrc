@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2001/08/16 01:35:13 hubertf Exp $
+$NetBSD: distinfo,v 1.2 2001/08/16 03:20:45 hubertf Exp $
 
 SHA1 (dflowers_v1.0.tar.gz) = b8ce00065d177923bf52a3f3f418db09afd0daaa
 Size (dflowers_v1.0.tar.gz) = 30468 bytes
-SHA1 (patch-aa) = 10cd5670f6b27621e52eaa6186644d6d09d71f5d
+SHA1 (patch-aa) = ca39aba8c539e4c23413a5dacb0b4c69d7a6dd8d
