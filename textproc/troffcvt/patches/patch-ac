@@ -1,0 +1,14 @@
+$NetBSD: patch-ac,v 1.1.1.1 2001/04/27 12:27:06 agc Exp $
+
+--- tblcvt/Makefile.orig	Sun Apr  8 20:23:09 2001
++++ tblcvt/Makefile	Sun Apr  8 20:23:31 2001
+@@ -309,7 +309,8 @@
+ tblcvt:: tblcvt.pl
+ 	$(RM) $@
+ 	echo "#!"$(PERL5PATH) > $@
+-	$(MSUB) tblcvt.pl >> $@
++	$(CAT) tblcvt.pl >> $@
++#	$(MSUB) tblcvt.pl >> $@
+ 	$(CHMOD) a+x $@
+ 
+ clean::
