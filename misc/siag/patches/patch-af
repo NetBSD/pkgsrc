@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1 1999/07/13 17:52:41 mjl Exp $
+
+--- tsiag/window.c.orig	Sun Jul 11 01:54:41 1999
++++ tsiag/window.c	Sun Jul 11 01:55:18 1999
+@@ -27,7 +27,7 @@
+ #include <string.h>
+ #include <stdlib.h>
+ #include <signal.h>
+-#include <curses.h>
++#include <ncurses.h>
+ #include <unistd.h>
+ #include <ctype.h>
+ 
