@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST.shared,v 1.1 2001/11/01 02:23:26 zuntum Exp $
-lib/httpd/mod_proxy.so
-lib/httpd/httpd.exp
-@dirrm lib/httpd
