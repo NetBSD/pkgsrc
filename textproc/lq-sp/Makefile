@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/02/14 16:28:02 abs Exp $
+# $NetBSD: Makefile,v 1.4 2002/04/11 01:56:24 dmcmahill Exp $
 #
 
 DISTNAME=	lq-sp-1.3.4.7
@@ -10,6 +10,9 @@ HOMEPAGE=	http://www.htmlhelp.com/tools/validator/offline/
 COMMENT=	Modified SP package
 
 USE_BUILDLINK_ONLY=	YES
+
+# doesn't build (LP64 bugs)
+NOT_FOR_PLATFORM=	*-*-alpha
 
 do-configure:
 	${MV} ${WRKSRC}/Makefile ${WRKSRC}/Makefile.netbsd
