@@ -12,7 +12,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.45 2001/04/19 13:25:42 wiz Exp $
+# $NetBSD: pkglint.pl,v 1.46 2001/04/21 12:54:17 wiz Exp $
 #
 # This version contains some changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
@@ -326,7 +326,7 @@ sub checkdistinfo {
 				&perror("FATAL: checksum of $patch differs between $portdir/$file and\n"
 				       ."       $portdir/$patchdir/$patch. Rerun 'make makepatchsum'.");
 			}
-		} elsif ($patch =~ /^patch-/)  {
+		} elsif ($patch =~ /^patch-[a-z0-9]+$/)  {
 			&perror("FATAL: patchfile '$patch' is in $file\n"
 			       ."       but not in $portdir/$patchdir/$patch. Rerun 'make makepatchsum'.");
 		}
@@ -335,7 +335,7 @@ sub checkdistinfo {
 	}
 	close(SUM);
 
-	foreach $patch ( <$portdir/$patchdir/patch-*> ) {
+	foreach $patch ( <$portdir/$patchdir/patch-[a-z0-9]+> ) {
 		$patch =~ /\/([^\/]+)$/;
 		if (! $indistinfofile{$1}) {
 			&perror("FATAL: patchsum of '$1' is in $portdir/$patchdir/$1 but not in\n"
