@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5739 2004/04/26 04:47:21 jlam Exp $
+$NetBSD: CHANGES,v 1.5740 2004/04/26 06:58:32 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2244,3 +2244,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added swiggle-0.3.2 [snj 2004-04-26]
 	Updated perl58 to 5.8.4 [jlam 2004-04-26]
 	Added perl-thread-5.8.4 as perl58-thread [jlam 2004-04-26]
+	Updated mit-krb5 to 1.3.3 [jlam 2004-04-26]
