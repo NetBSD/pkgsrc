@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.application,v 1.11 2004/04/14 11:31:12 xtraeme Exp $
+# $NetBSD: Makefile.application,v 1.12 2004/04/23 23:52:42 kristerw Exp $
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -8,10 +8,9 @@ _LINUX_SYSCTL_OSRELEASE?=      	compat.linux.osrelease
 _LINUX_SYSCTL_OSRELEASE?=      	emul.linux.kern.osrelease
 .endif
 
-.if (${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD") 
-.  if (${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "powerpc")
+.if ((${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD") && \
+	(${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "powerpc"))
 LINUX_KERNEL_OSRELEASE!=	(/sbin/sysctl -n ${_LINUX_SYSCTL_OSRELEASE} 2>/dev/null; ${ECHO} 2.0.38) | ${HEAD} -1
-.  endif
 
 .  if ${LINUX_KERNEL_OSRELEASE} == "2.0.38"
 SUSE_DIR_PREFIX=		suse64
