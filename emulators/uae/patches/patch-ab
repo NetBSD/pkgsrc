@@ -1,0 +1,32 @@
+$NetBSD: patch-ab,v 1.1 1999/06/19 15:30:56 tron Exp $
+
+--- src/sd-uss/sound.c.orig	Wed Jul 15 11:41:13 1998
++++ src/sd-uss/sound.c	Sat Jun 19 17:20:15 1999
+@@ -51,12 +51,12 @@
+ /* Try to determine whether sound is available.  This is only for GUI purposes.  */
+ int setup_sound (void)
+ {
+-    sound_fd = open ("/dev/dsp", O_WRONLY);
++    sound_fd = open ("/dev/sound", O_WRONLY);
+ 
+     sound_available = 0;
+ 
+     if (sound_fd < 0) {
+-	perror ("Can't open /dev/dsp");
++	perror ("Can't open /dev/sound");
+ 	if (errno == EBUSY) {
+ 	    /* We can hope, can't we ;) */
+ 	    sound_available = 1;
+@@ -82,10 +82,10 @@
+     int rate;
+     int dspbits;
+ 
+-    sound_fd = open ("/dev/dsp", O_WRONLY);
++    sound_fd = open ("/dev/sound", O_WRONLY);
+     have_sound = !(sound_fd < 0);
+     if (! have_sound) {
+-	perror ("Can't open /dev/dsp");
++	perror ("Can't open /dev/sound");
+ 	if (errno != EBUSY)
+ 	    sound_available = 0;
+ 	return 0;
