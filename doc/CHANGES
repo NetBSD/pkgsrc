@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5874 2004/05/09 05:21:53 minskim Exp $
+$NetBSD: CHANGES,v 1.5875 2004/05/09 05:40:40 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2422,3 +2422,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated vsftpd to 1.2.2 [salo 2004-05-09]
 	Added xmmsctrl-1.6 [minskim 2004-05-09]
 	Added p5-XML-Sablotron-0.98 [minskim 2004-05-09]
+	Added p5-Data-TemporaryBag-0.04 [minskim 2004-05-09]
