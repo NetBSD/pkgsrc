@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2002/10/12 10:17:04 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2002/10/26 18:11:20 bouyer Exp $
 
 DISTNAME=		w3c-libwww-5.3.2
 PKGNAME=		libwww-5.3.2
@@ -32,6 +32,16 @@ pre-configure:
 	    ${AUTOCONF}
 
 .include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "SunOS"
+# Solaris has a /usr/lib/libmd5 which seems to be enouth, and
+# /usr/local/lib/libmd5 breaks /usr/lib/librt
+CONFIGURE_ARGS+= --without-md5
+PLIST_SUBST+=	MD5LIB="@comment "
+.else
+PLIST_SUBST+=	MD5LIB=""
+.endif
+
 
 # Include SOCKS firewall support
 .if defined(USE_SOCKS) && (${USE_SOCKS} == 4 || ${USE_SOCKS} == 5)
