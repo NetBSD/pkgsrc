@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2004/01/26 15:15:05 jmmv Exp $
+# $NetBSD: Makefile,v 1.18 2004/01/26 15:20:31 jmmv Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -30,6 +30,7 @@ SUBDIR+=	realplayer
 SUBDIR+=	realplayer-codecs
 SUBDIR+=	trplayer
 SUBDIR+=	win32-codecs
+SUBDIR+=	xanim
 SUBDIR+=	xawtv
 SUBDIR+=	xine-lib
 SUBDIR+=	xine-ui
