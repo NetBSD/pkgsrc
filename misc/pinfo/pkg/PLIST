@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/03/23 20:07:33 fredb Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/07/02 23:06:55 fredb Exp $
 bin/pinfo
+info/pinfo.info
 man/man1/pinfo.1
 share/locale/cs/LC_MESSAGES/pinfo.mo
 share/locale/de/LC_MESSAGES/pinfo.mo

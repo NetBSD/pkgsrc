@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2001/07/02 22:46:49 fredb Exp $
+# $NetBSD: Makefile,v 1.8 2001/07/02 23:06:55 fredb Exp $
 #
 
-DISTNAME=		pinfo-0.6.0
-PKGNAME=		pinfo-0.6.0nb1
+DISTNAME=		pinfo-0.6.1
 CATEGORIES=		misc
 MASTER_SITES=		http://zeus.polsl.gliwice.pl/~pborys/stable-version/
 
