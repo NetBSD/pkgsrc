@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8909 2005/01/25 13:16:43 jmmv Exp $
+$NetBSD: CHANGES,v 1.8910 2005/01/25 13:37:39 blymn Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -576,3 +576,7 @@ Changes to the packages collection and infrastructure in 2005:
 	Added pkg_alternatives-1.0 [jmmv 2005-01-25]
 	alternatives.mk: Adds support to package Makefiles to easily handle
 		alternatives for common program names [jmmv 2005-01-25]
+	Updated lwp to 1.12 [blymn 2005-01-25]
+	Updated rpc2 to 1.26 [blymn 2005-01-25]
+	Updated rvm to 1.10 [blymn 2005-01-25]
+
