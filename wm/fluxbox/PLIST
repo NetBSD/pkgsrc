@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2004/09/02 21:56:32 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.9 2005/03/24 15:00:40 jmcneill Exp $
 bin/fbrun
 bin/fbsetbg
 bin/fluxbox
@@ -21,6 +21,7 @@ share/fluxbox/nls/et_EE/fluxbox.cat
 share/fluxbox/nls/fr_FR/fluxbox.cat
 share/fluxbox/nls/it_IT/fluxbox.cat
 share/fluxbox/nls/ja_JP/fluxbox.cat
+share/fluxbox/nls/ko_KR/fluxbox.cat
 share/fluxbox/nls/lv_LV/fluxbox.cat
 share/fluxbox/nls/nl_NL/fluxbox.cat
 share/fluxbox/nls/pl_PL/fluxbox.cat
@@ -30,6 +31,7 @@ share/fluxbox/nls/ru_RU/fluxbox.cat
 share/fluxbox/nls/sl_SI/fluxbox.cat
 share/fluxbox/nls/sv_SE/fluxbox.cat
 share/fluxbox/nls/tr_TR/fluxbox.cat
+share/fluxbox/nls/vi_VN/fluxbox.cat
 share/fluxbox/styles/Artwiz
 share/fluxbox/styles/BlueFlux/pixmaps/button_close_active.xpm
 share/fluxbox/styles/BlueFlux/pixmaps/button_close_pressed.xpm
@@ -96,6 +98,7 @@ share/fluxbox/styles/qnx-photon
 @dirrm share/fluxbox/styles/BlueFlux/pixmaps
 @dirrm share/fluxbox/styles/BlueFlux
 @dirrm share/fluxbox/styles
+@dirrm share/fluxbox/nls/vi_VN
 @dirrm share/fluxbox/nls/tr_TR
 @dirrm share/fluxbox/nls/sv_SE
 @dirrm share/fluxbox/nls/sl_SI
@@ -105,6 +108,7 @@ share/fluxbox/styles/qnx-photon
 @dirrm share/fluxbox/nls/pl_PL
 @dirrm share/fluxbox/nls/nl_NL
 @dirrm share/fluxbox/nls/lv_LV
+@dirrm share/fluxbox/nls/ko_KR
 @dirrm share/fluxbox/nls/ja_JP
 @dirrm share/fluxbox/nls/it_IT
 @dirrm share/fluxbox/nls/fr_FR
