@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.15 2004/09/14 08:25:43 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.16 2004/11/12 06:39:21 jlam Exp $
 
 DISTNAME=	xosd-2.2.12
 CATEGORIES=	x11
@@ -26,6 +26,6 @@ CONFIGURE_ENV+=		F77=${FALSE}
 SUBST_CLASSES=		fixme
 SUBST_STAGE.fixme=	post-patch
 SUBST_FILES.fixme=	configure
-SUBST_SED.fixme=	-e "s|-lpthread|${PTHREAD_LDFLAGS}|g"
+SUBST_SED.fixme=	-e "s|-lpthread|${PTHREAD_LIBS}|g"
 
 .include "../../mk/pthread.buildlink3.mk"

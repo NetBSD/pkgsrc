@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2004/10/15 14:50:06 tv Exp $
+# $NetBSD: Makefile,v 1.57 2004/11/12 06:39:20 jlam Exp $
 
 DISTNAME=		guile-1.6.4
 PKGREVISION=		4
@@ -22,10 +22,6 @@ INFO_FILES=		guile.info guile-tut.info goops.info r5rs.info
 
 TEST_DIRS=		${WRKSRC}
 TEST_TARGET=		check
-
-# Link the native thread so that Guile processes won't die when
-# libpthread.so is dl_open(3)'ed.
-CFLAGS+=		${PTHREAD_CFLAGS}                                                                                         
 
 .include "../../mk/bsd.prefs.mk"
 

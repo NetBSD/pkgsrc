@@ -1,4 +1,4 @@
-# $NetBSD: pthread.buildlink3.mk,v 1.14 2004/11/12 05:20:01 jlam Exp $
+# $NetBSD: pthread.buildlink3.mk,v 1.15 2004/11/12 06:39:20 jlam Exp $
 #
 # The pthreads strategy for pkgsrc is to "bless" a particular pthread
 # package as the Official Pthread Replacement (OPR).  A package that uses
@@ -171,7 +171,6 @@ PKG_SKIP_REASON= "${PKGNAME} needs pthreads, but ${_PKG_PTHREAD_BUILDLINK3_MK} i
 PTHREAD_CFLAGS=		${BUILDLINK_CFLAGS.pthread}
 PTHREAD_CFLAGS+=	${BUILDLINK_CPPFLAGS.pthread}
 PTHREAD_LDFLAGS=	${BUILDLINK_LDFLAGS.pthread}
-PTHREAD_LDFLAGS+=	${PTHREAD_LIBS}	# XXX This should be removed!
 PTHREAD_LIBS=		${BUILDLINK_LIBS.pthread}
 CONFIGURE_ENV+=		PTHREAD_CFLAGS="${PTHREAD_CFLAGS}"
 CONFIGURE_ENV+=		PTHREAD_LDFLAGS="${PTHREAD_LDFLAGS}"

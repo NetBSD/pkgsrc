@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/02/18 04:27:49 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2004/11/12 06:39:20 jlam Exp $
 #
 
 DISTNAME=	aget-0.4
@@ -25,8 +25,7 @@ SUBST_SED.options=	-e 's,CFLAGS =,\#CFLAGS =,' \
 			-e 's,CC =,\#CC =,'
 
 PTHREAD_OPTS+=          require
-CFLAGS+=	${PTHREAD_CFLAGS}
-LDFLAGS+=	${PTHREAD_LDFLAGS}
+LDFLAGS+=	${PTHREAD_LIBS}
 
 .if ${OPSYS} == "SunOS"
 CFLAGS+=	-DSOLARIS
