@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.15 2002/12/19 13:07:10 grant Exp $
+# $NetBSD: Makefile,v 1.16 2002/12/24 03:36:58 wiz Exp $
 #
 
-DISTNAME=		glib-2.0.7
+DISTNAME=		glib-2.2.0
 PKGNAME=		${DISTNAME:S/glib/glib2/}
 CATEGORIES=		devel
-MASTER_SITES=		ftp://ftp.gtk.org/pub/gtk/v2.0/ \
-			ftp://ftp.cs.umn.edu/pub/gimp/gtk/v2.0/ \
-			${MASTER_SITE_GNOME:=sources/glib/2.0/}
+MASTER_SITES=		ftp://ftp.gtk.org/pub/gtk/v2.2/ \
+			ftp://ftp.cs.umn.edu/pub/gimp/gtk/v2.2/ \
+			${MASTER_SITE_GNOME:=sources/glib/2.2/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		packages@netbsd.org
@@ -30,12 +30,6 @@ GNU_CONFIGURE=		# defined
 CONFIGURE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR}
 CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/glib
 
-.include "../../mk/bsd.prefs.mk"
-
-.if defined(USE_PTL2)
-PTHREAD_OPTS+=		native
-.endif
-
 test: build
 	cd ${WRKSRC} && ${MAKE_ENV} ${MAKE_PROGRAM} check 2>&1 | \
 		tee ${WRKDIR}/check.log
@@ -44,10 +38,5 @@ test: build
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../devel/pkgconfig/buildlink2.mk"
 .include "../../mk/pthread.buildlink2.mk"
-
-.if defined(PTHREAD_TYPE) && (${PTHREAD_TYPE} == "none")
-CPPFLAGS+=		-I${BUILDLINK_PREFIX.ptl2}/PTL/include
-.  include "../../devel/ptl2/buildlink2.mk"
-.endif
 
 .include "../../mk/bsd.pkg.mk"
