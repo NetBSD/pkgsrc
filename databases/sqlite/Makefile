@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2004/01/20 12:12:49 agc Exp $
+# $NetBSD: Makefile,v 1.20 2004/01/22 08:02:16 grant Exp $
 
 DISTNAME=		sqlite-2.8.5
 CATEGORIES=		databases
@@ -12,7 +12,7 @@ COMMENT=		SQL Database Engine In A C Library
 WRKSRC=			${WRKDIR}/sqlite-build
 USE_BUILDLINK2=		YES
 USE_LIBTOOL=		YES
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 GNU_CONFIGURE=		YES
