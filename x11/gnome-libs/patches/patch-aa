@@ -1,34 +1,24 @@
-$NetBSD: patch-aa,v 1.2 1998/10/04 23:42:01 tron Exp $
+$NetBSD: patch-aa,v 1.3 1998/12/29 14:23:04 tron Exp $
 
---- configure.orig	Tue Sep 29 01:46:18 1998
-+++ configure	Mon Oct  5 00:25:16 1998
-@@ -86,6 +86,9 @@
- # Initialize some other variables.
- subdirs=
- MFLAGS= MAKEFLAGS=
-+CFLAGS="-I../intl -I$X11BASE/include -I$LOCALBASE/include"
-+CPPFLAGS="-I../intl -I$X11BASE/include -I$LOCALBASE/include -I$LOCALBASE/include/giflib"
-+LDFLAGS="-L$X11BASE/lib -L$LOCALBASE/lib"
- # Maximum number of lines to put in a shell here document.
- ac_max_here_lines=12
- 
-@@ -1629,6 +1632,7 @@
- 
+--- configure.orig	Wed Dec 16 10:52:23 1998
++++ configure	Tue Dec 29 12:43:37 1998
+@@ -1674,6 +1674,7 @@
+ fi
  
  # Always use our own libtool.
 +if false; then
  LIBTOOL='$(SHELL) $(top_builddir)/libtool'
  
- 
-@@ -1708,6 +1712,7 @@
- ${CONFIG_SHELL-/bin/sh} $ac_aux_dir/ltconfig \
+ # Check for any special flags to pass to ltconfig.
+@@ -1718,6 +1719,7 @@
+ ${CONFIG_SHELL-/bin/sh} $ac_aux_dir/ltconfig --no-reexec \
  $libtool_flags --no-verify $ac_aux_dir/ltmain.sh $host \
  || { echo "configure: error: libtool configure failed" 1>&2; exit 1; }
 +fi
  
- 
- echo $ac_n "checking whether to enable maintainer-specific portions of Makefiles""... $ac_c" 1>&6
-@@ -7260,10 +7265,10 @@
+ # Redirect the config.log output again, so that the ltconfig log is not
+ # clobbered by the next message.
+@@ -9515,10 +9517,10 @@
      top_srcdir="$ac_dots$ac_given_srcdir" ;;
    esac
  
@@ -43,3 +33,18 @@ $NetBSD: patch-aa,v 1.2 1998/10/04 23:42:01 tron Exp $
  
    echo creating "$ac_file"
    rm -f "$ac_file"
+@@ -9788,10 +9790,10 @@
+       *) # Relative path.
+         ac_sub_cache_file="$ac_dots$cache_file" ;;
+       esac
+-  case "$ac_given_INSTALL" in
+-        [/$]*) INSTALL="$ac_given_INSTALL" ;;
+-        *) INSTALL="$ac_dots$ac_given_INSTALL" ;;
+-        esac
++#  case "$ac_given_INSTALL" in
++#        [/$]*) INSTALL="$ac_given_INSTALL" ;;
++#        *) INSTALL="$ac_dots$ac_given_INSTALL" ;;
++#        esac
+ 
+       echo "running ${CONFIG_SHELL-/bin/sh} $ac_sub_configure $ac_sub_configure_args --cache-file=$ac_sub_cache_file --srcdir=$ac_sub_srcdir"
+       # The eval makes quoting arguments work.

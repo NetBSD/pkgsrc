@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.2 1998/10/04 23:42:01 tron Exp $
+$NetBSD: md5,v 1.3 1998/12/29 14:23:04 tron Exp $
 
-MD5 (gnome-libs-0.30.1.tar.gz) = 84186592cab3f12e05653e76002f5b51
+MD5 (gnome-libs-0.99.0.tar.gz) = b55b99e6229129324c17ad9f57a0df43

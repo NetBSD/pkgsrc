@@ -1,36 +1,102 @@
-@comment $NetBSD: PLIST,v 1.3 1998/10/05 12:08:08 tron Exp $
+@comment $NetBSD: PLIST,v 1.4 1998/12/29 14:23:04 tron Exp $
 bin/convertrgb
 bin/dns-helper
-bin/gnome_segv
+bin/gconfigger
+bin/libart-config
+bin/loadshlib
 bin/gnome-config
 bin/gnome-dump-metadata
-bin/htmltest
+bin/gnome-gen-mimedb
+bin/gnome-moz-remote
+bin/gnome-name-service
+bin/gnome_segv
+bin/goad-browser
+doc/README.gtkcauldron
+doc/README.gtkcauldron_for_python
+doc/adding-sounds.txt
+doc/api-comment-style.txt
+doc/gtk_dialog_cauldron.3
+doc/suggestions.txt
+doc/mime-type-handling.txt
+etc/mime-magic
+etc/mime-magic.dat
+etc/paper.config
+etc/sound/events/gnome.soundlist
+etc/sound/events/gtk-events.soundlist
 @exec mkdir %D/html
 include/gnome.h
+include/popt-gnome.h
+include/libart_lgpl/art_affine.h
+include/libart_lgpl/art_bpath.h
+include/libart_lgpl/art_filterlevel.h
+include/libart_lgpl/art_gray_svp.h
+include/libart_lgpl/art_misc.h
+include/libart_lgpl/art_pathcode.h
+include/libart_lgpl/art_point.h
+include/libart_lgpl/art_rect.h
+include/libart_lgpl/art_rect_uta.h
+include/libart_lgpl/art_rgb.h
+include/libart_lgpl/art_rgb_affine.h
+include/libart_lgpl/art_rgb_bitmap_affine.h
+include/libart_lgpl/art_rgb_rgba_affine.h
+include/libart_lgpl/art_rgb_svp.h
+include/libart_lgpl/art_svp.h
+include/libart_lgpl/art_svp_ops.h
+include/libart_lgpl/art_svp_render_aa.h
+include/libart_lgpl/art_svp_vpath.h
+include/libart_lgpl/art_svp_vpath_stroke.h
+include/libart_lgpl/art_uta.h
+include/libart_lgpl/art_uta_ops.h
+include/libart_lgpl/art_uta_rect.h
+include/libart_lgpl/art_uta_vpath.h
+include/libart_lgpl/art_uta_svp.h
+include/libart_lgpl/art_vpath.h
+include/libart_lgpl/art_vpath_bpath.h
+include/libart_lgpl/art_vpath_svp.h
 include/libgnome/gnome-config.h
 include/libgnome/gnome-defs.h
 include/libgnome/gnome-fileconvert.h
-include/libgnome/gnome-hook.h
-include/libgnome/gnome-dl.h
 include/libgnome/gnome-dentry.h
 include/libgnome/gnome-exec.h
 include/libgnome/gnome-help.h
 include/libgnome/gnome-history.h
 include/libgnome/gnome-i18n.h
 include/libgnome/gnome-mime.h
-include/libgnome/gnome-parse.h
+include/libgnome/gnome-mime-info.h
+include/libgnome/gnome-paper.h
+include/libgnome/gnome-popt.h
 include/libgnome/gnome-score.h
-include/libgnome/gnome-string.h
+include/libgnome/gnome-sound.h
 include/libgnome/gnome-triggers.h
+include/libgnome/gnome-url.h
 include/libgnome/gnome-util.h
 include/libgnome/libgnome.h
 include/libgnome/gnome-metadata.h
 include/libgnome/gnome-regex.h
 include/libgnome/gnome-remote.h
-include/libgnome/lib_date.h
-include/libgnome/lib_defs.h
+include/libgnomeui/gnome-animator.h
+include/libgnomeui/gnome-canvas-polygon.h
+include/libgnomeui/gnome-dock.h
+include/libgnomeui/gnome-dock-band.h
+include/libgnomeui/gnome-dock-item.h
+include/libgnomeui/gnome-dock-layout.h
+include/libgnomeui/gnome-font-picker.h
+include/libgnomeui/gnome-guru.h
+include/libgnomeui/gnome-href.h
+include/libgnomeui/gnome-icon-item.h
+include/libgnomeui/gnome-icon-text.h
+include/libgnomeui/gnome-icon-entry.h
+include/libgnomeui/gnome-init.h
+include/libgnomeui/gnome-mdi-generic-child.h
+include/libgnomeui/gnome-mdi-session.h
+include/libgnomeui/gnome-popup-help.h
+include/libgnomeui/gnome-property-entries.h
+include/libgnomeui/gnome-pixmap-entry.h
+include/libgnomeui/gnome-spell.h
+include/libgnomeui/gnome-paper-selector.h
+include/libgnomeui/gnome-procbar.h
+include/libgnomeui/gtkpixmapmenuitem.h
 include/libgnomeui/gnome-about.h
-include/libgnomeui/gnome-actionarea.h
 include/libgnomeui/gnome-app.h
 include/libgnomeui/gnome-appbar.h
 include/libgnomeui/gnome-app-helper.h
@@ -44,7 +110,6 @@ include/libgnomeui/gnome-canvas-text.h
 include/libgnomeui/gnome-canvas-util.h
 include/libgnomeui/gnome-canvas-widget.h
 include/libgnomeui/gnome-client.h
-include/libgnomeui/gnome-color-selector.h
 include/libgnomeui/gnome-dateedit.h
 include/libgnomeui/gnome-dentry-edit.h
 include/libgnomeui/gnome-dialog.h
@@ -57,13 +122,11 @@ include/libgnomeui/gnome-geometry.h
 include/libgnomeui/gnome-ice.h
 include/libgnomeui/gnome-icon-list.h
 include/libgnomeui/gnome-icon-sel.h
-include/libgnomeui/gnome-lamp.h
 include/libgnomeui/gnome-less.h
 include/libgnomeui/gnome-messagebox.h
 include/libgnomeui/gnome-mdi.h
 include/libgnomeui/gnome-mdi-child.h
 include/libgnomeui/gnome-number-entry.h
-include/libgnomeui/gnome-net.h
 include/libgnomeui/gtkdial.h
 include/libgnomeui/gnome-preferences.h
 include/libgnomeui/gnome-propertybox.h
@@ -71,24 +134,19 @@ include/libgnomeui/gnome-properties.h
 include/libgnomeui/gnome-pixmap.h
 include/libgnomeui/gnome-scores.h
 include/libgnomeui/gnome-startup.h
-include/libgnomeui/gnome-rootwin.h
 include/libgnomeui/gnome-stock.h
 include/libgnomeui/gnome-types.h
 include/libgnomeui/gnome-uidefs.h
 include/libgnomeui/gnometypebuiltins.h
-include/libgnomeui/gtkcalendar.h
 include/libgnomeui/gtkcauldron.h
-include/libgnomeui/gtklayout.h
-include/libgnomeui/gtkspell.h
 include/libgnomeui/gtk-clock.h
 include/libgnomeui/gtk-ted.h
-include/libgnomeui/gtk-plug.h
-include/libgnomeui/gtk-socket.h
 include/libgnomeui/libgnomeui.h
 include/libgnomeui/gnome-color-picker.h
-include/libgnomeui/gnome-gtk-utils.h
 include/libgnomeui/gnome-popup-menu.h
 include/libgnomeui/gnome-winhints.h
+include/libgnorba/gnorba.h
+include/libgnorba/gnome-factory.h
 include/gtk-xmhtml/miniparse.h
 include/gtk-xmhtml/HTML.h
 include/gtk-xmhtml/XmHTML.h
@@ -100,46 +158,53 @@ include/gtk-xmhtml/toolkit.h
 include/zvt/zvtterm.h
 include/zvt/vtx.h
 include/zvt/lists.h
-include/zvt/subshell.h
 include/zvt/vt.h
 lib/gnome-libs/include/gnomesupport.h
-lib/gnome-libs/include/gnome-argp.h
-lib/gnome-libs/include/getopt.h
-lib/gnome-libs/include/long-options.h
-lib/gnome-libs/include/argp.h
-lib/gnome-libs/include/error.h
+lib/gnome-libs/include/popt-gnome.h
 lib/gnomeConf.sh
+lib/libart_lgpl.a
+lib/libart_lgpl.so.0.0
+lib/libart_lgpl.la
+lib/libartConf.sh
 lib/libgnome.so.30.0
 lib/libgnome.a
 lib/libgnomesupport.so.0.0
 lib/libgnomesupport.a
 lib/libgnomeui.so.30.0
 lib/libgnomeui.a
+lib/libgnorba.so.26.0
+lib/libgnorba.a
 lib/libgtkxmhtml.so.0.0
 lib/libgtkxmhtml.a
 lib/libzvt.a
 lib/libzvt.so.0.0
-share/locale/de/LC_MESSAGES/gnome-libs.mo
-share/locale/fr/LC_MESSAGES/gnome-libs.mo
-share/locale/it/LC_MESSAGES/gnome-libs.mo
-share/locale/ko/LC_MESSAGES/gnome-libs.mo
-share/locale/cs/LC_MESSAGES/gnome-libs.mo
-share/locale/es/LC_MESSAGES/gnome-libs.mo
-share/locale/no/LC_MESSAGES/gnome-libs.mo
-share/locale/fi/LC_MESSAGES/gnome-libs.mo
-share/locale/ga/LC_MESSAGES/gnome-libs.mo
-share/locale/pt/LC_MESSAGES/gnome-libs.mo
-share/locale/ja/LC_MESSAGES/gnome-libs.mo
-share/locale/sv/LC_MESSAGES/gnome-libs.mo
+sbin/gnome-pty-helper
+share/aclocal/libart.m4
+share/doc/gnome-doc.el
+share/doc/gnome-doc
+share/doc/mkstub
+share/idl/name-service.idl
+share/idl/gnome-factory.idl
+share/idl/Table.idl
+share/mime-info/gnome.mime
 share/pixmaps/calculator-font.png
+share/pixmaps/yes.xpm
+share/pixmaps/no.xpm
 share/gtkrc
+@dirrm doc
+@dirrm etc/sound/events
+@dirrm etc/sound
 @dirrm html
+@dirrm include/libgnorba
 @dirrm include/libgnome
 @dirrm include/libgnomeui
+@dirrm include/libart_lgpl
 @dirrm include/gtk-xmhtml
 @dirrm include/zvt
 @dirrm lib/gnome-libs/include
 @dirrm lib/gnome-libs
+@dirrm share/idl
+@dirrm share/mime-info
 @dirrm share/pixmaps
 @exec mkdir -p @@LOCALSTATEDIR@@
 @unexec rm -rf @@LOCALSTATEDIR@@
