@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.22 2003/08/30 22:51:37 jlam Exp $
+# $NetBSD: Makefile,v 1.23 2003/11/14 08:51:40 wiz Exp $
 
-DISTNAME=		vlnx416e
-PKGNAME=		uvscan-4.16.0
-PKGREVISION=		1
+DISTNAME=		vlnx424e
+PKGNAME=		uvscan-4.24.0
 WRKSRC=			${WRKDIR}
 CATEGORIES=		security
-MASTER_SITES=		http://download.nai.com/products/evaluation/virusscan/english/cmdline/linux/version_4.16/
+MASTER_SITES=		http://download.nai.com/products/evaluation/virusscan/english/cmdline/linux/version_4.24/intel/
 EXTRACT_SUFX=		.tar.Z
 
 MAINTAINER=		tech-pkg@NetBSD.org
-HOMEPAGE=		http://www.mcafeeb2b.com/products/virusscan/default.asp
+HOMEPAGE=		http://www.nai.com/us/products/mcafee/antivirus/desktop/vs_unix.htm
 COMMENT=		Evaluation version of a DOS/Windows file virus scanner
 
 CONFLICTS=		uvscan-dat-[0-9]*
@@ -73,7 +72,7 @@ do-install:
 		fi;							\
 	done
 	${INSTALL_DATA_DIR} ${DOCDIR}
-	for file in contact.txt license.txt unxadmin.pdf; do		\
+	for file in contact.txt license.txt ; do			\
 		${INSTALL_DATA} ${WRKSRC}/$${file} ${DOCDIR};		\
 	done
 
