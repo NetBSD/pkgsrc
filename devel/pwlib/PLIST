@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2002/12/01 18:31:41 jdolecek Exp $
+@comment $NetBSD: PLIST,v 1.4 2002/12/23 14:40:48 wiz Exp $
 bin/asnparser
 include/ptclib/cypher.h
 include/ptclib/asner.h
@@ -115,6 +115,7 @@ include/ptlib/vfakeio.h
 include/ptlib/video.h
 include/ptlib/videoio.h
 include/ptlib/videoio1394dc.h
+include/ptlib.h
 lib/libpt.a
 lib/libpt.la
 lib/libpt.so
