@@ -1,0 +1,27 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/08/30 08:41:44 rh Exp $
+
+--- configure.orig	Thu Jul 15 07:43:28 1999
++++ configure	Sun Aug 29 17:54:52 1999
+@@ -3457,11 +3457,13 @@
+ fi
+ 
+ 
++if false; then
+ # This can be used to rebuild libtool when needed
+ LIBTOOL_DEPS="$ac_aux_dir/ltconfig $ac_aux_dir/ltmain.sh"
+ 
+ # Always use our own libtool.
+ LIBTOOL='$(SHELL) $(top_builddir)/libtool'
++fi
+ 
+ # Redirect the config.log output again, so that the ltconfig log is not
+ # clobbered by the next message.
+@@ -4658,7 +4660,7 @@
+ 
+ 
+ PROGRAMS_GMIX=""
+-for ac_hdr in linux/soundcard.h
++for ac_hdr in soundcard.h
+ do
+ ac_safe=`echo "$ac_hdr" | sed 'y%./+-%__p_%'`
+ echo $ac_n "checking for $ac_hdr""... $ac_c" 1>&6

@@ -1,0 +1,46 @@
+$NetBSD: patch-ac,v 1.1.1.1 1999/08/30 08:41:44 rh Exp $
+
+--- gmix/gmix.c.orig	Thu Apr  8 21:40:37 1999
++++ gmix/gmix.c	Mon Aug 30 09:38:18 1999
+@@ -46,7 +46,9 @@
+ #include <string.h>
+ #include <signal.h>
+ #include <ctype.h>
+-#ifdef HAVE_LINUX_SOUNDCARD_H 
++#ifdef HAVE_SOUNDCARD_H
++#include <soundcard.h>
++#elif defined(HAVE_LINUX_SOUNDCARD_H)
+ #include <linux/soundcard.h>
+ #else 
+ #include <machine/soundcard.h>
+@@ -67,6 +69,13 @@
+ void init_devices(void);
+ void open_dialog(void);
+ 
++#ifndef HAVE_MIXER_INFO
++typedef struct {
++	char id[20];
++	char name[40];
++} mixer_info;
++#endif
++
+ /*
+  * Gnome info:
+  */
+@@ -294,12 +303,16 @@
+ 	/*
+ 	 * mixer-name
+ 	 */
++#ifdef HAVE_MIXER_INFO
+ 	res=ioctl(new_device->fd, SOUND_MIXER_INFO, &new_device->info);
+ 	if (res!=0) {
+ 		g_free(new_device);
+ 		return NULL;
+ 	}
+ 	if(!isalpha(new_device->info.name[0]))
++#else
++	g_snprintf(new_device->info.id, 31, "%d", num+1);
++#endif
+ 		g_snprintf(new_device->info.name, 31, "Card %d", num+1);
+ 	/* 
+ 	 * several bitmasks describing the mixer

@@ -1,0 +1,22 @@
+$NetBSD: patch-ad,v 1.1.1.1 1999/08/30 08:41:44 rh Exp $
+
+--- config.h.in.orig	Thu Jul 15 05:58:29 1999
++++ config.h.in	Mon Aug 30 09:25:31 1999
+@@ -53,6 +53,7 @@
+ #undef HAVE_CATGETS
+ #undef HAVE_GETTEXT
+ #undef HAVE_LINUX_SOUNDCARD_H
++#undef HAVE_SOUNDCARD_H
+ #undef HAVE_PROGRAM_INVOCATION_SHORT_NAME
+ #undef HAVE_PROGRAM_INVOCATION_NAME
+ 
+@@ -150,6 +151,9 @@
+ 
+ /* Define if you have the <linux/soundcard.h> header file.  */
+ #undef HAVE_LINUX_SOUNDCARD_H
++
++/* Define if you have the <soundcard.h> header file.  */
++#undef HAVE_SOUNDCARD_H
+ 
+ /* Define if you have the <locale.h> header file.  */
+ #undef HAVE_LOCALE_H
