@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2001/04/27 11:54:14 zuntum Exp $
+$NetBSD: distinfo,v 1.2 2002/03/22 03:48:18 itojun Exp $
 
-SHA1 (NeTraMet44b8.tar.gz) = 56df62610285730379876ff6f823872053df70df
-Size (NeTraMet44b8.tar.gz) = 828077 bytes
+SHA1 (NeTraMet44.tar.gz) = 7848d6aa81b29966127fc78afcd9375c60441a91
+Size (NeTraMet44.tar.gz) = 634714 bytes
