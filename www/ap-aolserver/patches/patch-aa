@@ -1,0 +1,40 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/07/16 17:04:01 cjones Exp $
+
+--- Makefile.in.orig	Sat Oct  7 12:44:37 2000
++++ Makefile.in	Sun Jul 15 15:09:31 2001
+@@ -25,7 +25,7 @@
+ 
+ BOOTSTRAP_MAIN_DIR  = $(APACHE_BASE)/libexec
+ BOOTSTRAP_OTHER_DIR = $(BOOTSTRAP_MAIN_DIR)/aol_bootstrap
+-TCL_MODULE_DIR      = $(APACHE_BASE)/tcl_modules
++TCL_MODULE_DIR      = $(APACHE_BASE)/etc/httpd/tcl_modules
+ 
+ ################################################################
+ 
+@@ -62,7 +62,7 @@
+ 
+ TCL_SRCS = \
+     tcl_modules/README tcl_modules/form.tcl \
+-    tcl_modules/http.tcl tcl_modules/nsd.ini.sample tcl_modules/nsdb.tcl \
++    tcl_modules/http.tcl tcl_modules/nsdb.tcl \
+     tcl_modules/sendmail.tcl tcl_modules/util.tcl
+ 
+ MISCFILES = \
+@@ -78,14 +78,14 @@
+ 
+ BUILD_MODULE = $(APXS) -c $(LIBS)
+ 
+-INSERT_MODULE = $(APXS) -i -a
++INSERT_MODULE = $(APXS) -i
+ 
+ ########################################################################
+ 
+-all: $(MODULE_FILE) install
++all: $(MODULE_FILE)
+ 
+ $(MODULE_FILE): $(OBJS)
+-	$(APXS) -c -o $@ $(OBJS) $(LIBS)
++	$(APXS) -c -o $@ $(OBJS) `echo $(LIBS) | sed 's/-Wl,//'`
+ 
+ install: install-mod_aolserver install-bootstrap install-tcl
+ 
