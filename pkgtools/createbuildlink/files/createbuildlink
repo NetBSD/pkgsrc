@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-#	$NetBSD: createbuildlink,v 1.5 2002/05/11 11:27:28 rh Exp $
+#	$NetBSD: createbuildlink,v 1.6 2002/05/11 11:52:06 rh Exp $
 #
 # Copyright (c) 2002 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -39,7 +39,7 @@
 # Create an initial buildlink.mk from a package's Makefile and PLIST
 #
 
-REV=`echo '$Revision: 1.5 $' | sed 's/\\$//g'`
+REV=`echo '$Revision: 1.6 $' | sed 's/\\$//g'`
 tmpdir=/tmp
 makefile=Makefile
 sedrules=$tmpdir/sedrules.buildlink.$$
@@ -203,7 +203,7 @@ if [ -n "$configs" ]; then
 		echo "BUILDLINK_CONFIG_WRAPPER_SED+=						\\"
 		echo "	-e \"s|-I[ 	]*\${BUILDLINK_PREFIX.$PKGNOVER}/$dir|-I\${BUILDLINK_DIR}/$dir|g\""
 		echo "REPLACE_BUILDLINK_SED+=							\\"
-		echo "	-e \"s|-I\${BUILDLINK_DIR}/$dir|-I[ 	]*\${BUILDLINK_PREFIX.$PKGNOVER}/$dir|g\""
+		echo "	-e \"s|-I\${BUILDLINK_DIR}/$dir|-I\${BUILDLINK_PREFIX.$PKGNOVER}/$dir|g\""
 		dir=`echo $dir | sed 's|/[^/]*$||'`
 	done
     done
@@ -215,7 +215,7 @@ if [ -n "$configs" ]; then
 		echo "BUILDLINK_CONFIG_WRAPPER_SED+=						\\"
 		echo "	-e \"s|-L[ 	]*\${BUILDLINK_PREFIX.$PKGNOVER}/$dir|-L\${BUILDLINK_DIR}/$dir|g\""
 		echo "REPLACE_BUILDLINK_SED+=							\\"
-		echo "	-e \"s|-L\${BUILDLINK_DIR}/$dir|-L[ 	]*\${BUILDLINK_PREFIX.$PKGNOVER}/$dir|g\""
+		echo "	-e \"s|-L\${BUILDLINK_DIR}/$dir|-L\${BUILDLINK_PREFIX.$PKGNOVER}/$dir|g\""
 		dir=`echo $dir | sed 's|/[^/]*$||'`
 	done
     done
