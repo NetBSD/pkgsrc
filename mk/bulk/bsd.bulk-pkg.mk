@@ -1,4 +1,4 @@
-#	$Id: bsd.bulk-pkg.mk,v 1.14 2000/09/02 14:05:36 hubertf Exp $
+#	$Id: bsd.bulk-pkg.mk,v 1.15 2000/09/15 21:47:03 hubertf Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@netbsd.org>
@@ -126,7 +126,7 @@ bulk-package:
 	if [ $$uptodate = 1 ]; then \
 		( if [ $$installed = 1 ]; then \
 			echo "BULK> Package ${PKGNAME} is upto-date, and still installed" ; \
-			echo "    removing installed package." ; \
+			echo "      removing installed package." ; \
 			${ECHO_MSG} ${MAKE} deinstall DEINSTALLDEPENDS=YES ; \
 			${DO}       ${MAKE} deinstall DEINSTALLDEPENDS=YES ; \
 		else \
