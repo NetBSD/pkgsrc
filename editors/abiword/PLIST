@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 21:22:31 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/11/26 13:08:25 martti Exp $
 bin/AbiWord
 bin/abiword
 libexec/AbiSuite/AbiWord
@@ -122,6 +122,7 @@ share/AbiSuite/AbiWord/help/en-US/basis1.html
 share/AbiSuite/AbiWord/help/en-US/basis2.html
 share/AbiSuite/AbiWord/help/en-US/beos_intel.html
 share/AbiSuite/AbiWord/help/en-US/beos_ppc.html
+share/AbiSuite/AbiWord/help/en-US/bidi.html
 share/AbiSuite/AbiWord/help/en-US/check.html
 share/AbiSuite/AbiWord/help/en-US/column.html
 share/AbiSuite/AbiWord/help/en-US/comindex.html
@@ -316,6 +317,8 @@ share/AbiSuite/AbiWord/help/images/cursor7.gif
 share/AbiSuite/AbiWord/help/images/cursor8.gif
 share/AbiSuite/AbiWord/help/images/cursor9.gif
 share/AbiSuite/AbiWord/help/images/cut.png
+share/AbiSuite/AbiWord/help/images/dir_ltr.png
+share/AbiSuite/AbiWord/help/images/dir_rtl.png
 share/AbiSuite/AbiWord/help/images/elevator.png
 share/AbiSuite/AbiWord/help/images/exmarg1.jpg
 share/AbiSuite/AbiWord/help/images/expose.png
@@ -334,6 +337,7 @@ share/AbiSuite/AbiWord/help/images/minim.png
 share/AbiSuite/AbiWord/help/images/new.png
 share/AbiSuite/AbiWord/help/images/open.png
 share/AbiSuite/AbiWord/help/images/ovr.png
+share/AbiSuite/AbiWord/help/images/para_dir.png
 share/AbiSuite/AbiWord/help/images/paste.png
 share/AbiSuite/AbiWord/help/images/print.png
 share/AbiSuite/AbiWord/help/images/redo.png
@@ -393,8 +397,8 @@ share/AbiSuite/AbiWord/strings/pl-PL.strings
 share/AbiSuite/AbiWord/strings/pt-BR.strings
 share/AbiSuite/AbiWord/strings/pt-PT.strings
 share/AbiSuite/AbiWord/strings/ru-RU.strings
-share/AbiSuite/AbiWord/strings/sl-SI.strings
 share/AbiSuite/AbiWord/strings/sk.strings
+share/AbiSuite/AbiWord/strings/sl-SI.strings
 share/AbiSuite/AbiWord/strings/sv-SE.strings
 share/AbiSuite/AbiWord/strings/uk-UA.strings
 share/AbiSuite/AbiWord/strings/zh-CN.strings
@@ -558,21 +562,23 @@ share/AbiSuite/icons/abiword_48.tif
 share/AbiSuite/icons/abiword_48.xpm
 share/AbiSuite/icons/abiword_logo.xpm
 share/AbiSuite/readme.txt
-@dirrm share/AbiSuite/icons
-@dirrm share/AbiSuite/fonts
-@dirrm share/AbiSuite/clipart
-@dirrm share/AbiSuite/AbiWord/strings
-@dirrm share/AbiSuite/AbiWord/sample
-@dirrm share/AbiSuite/AbiWord/help/images
-@dirrm share/AbiSuite/AbiWord/help/fr-FR/images
-@dirrm share/AbiSuite/AbiWord/help/fr-FR
-@dirrm share/AbiSuite/AbiWord/help/es-ES
+share/AbiSuite/templates/normal.awt
+@dirrm libexec/AbiSuite
+@dirrm share/AbiSuite/AbiWord/help/de-DE/de_DE
+@dirrm share/AbiSuite/AbiWord/help/de-DE/images
+@dirrm share/AbiSuite/AbiWord/help/de-DE
 @dirrm share/AbiSuite/AbiWord/help/en-US/images
 @dirrm share/AbiSuite/AbiWord/help/en-US
-@dirrm share/AbiSuite/AbiWord/help/de-DE/images
-@dirrm share/AbiSuite/AbiWord/help/de-DE/de_DE
-@dirrm share/AbiSuite/AbiWord/help/de-DE
+@dirrm share/AbiSuite/AbiWord/help/es-ES
+@dirrm share/AbiSuite/AbiWord/help/fr-FR/images
+@dirrm share/AbiSuite/AbiWord/help/fr-FR
+@dirrm share/AbiSuite/AbiWord/help/images
 @dirrm share/AbiSuite/AbiWord/help
+@dirrm share/AbiSuite/AbiWord/sample
+@dirrm share/AbiSuite/AbiWord/strings
 @dirrm share/AbiSuite/AbiWord
+@dirrm share/AbiSuite/clipart
+@dirrm share/AbiSuite/fonts
+@dirrm share/AbiSuite/icons
+@dirrm share/AbiSuite/templates
 @dirrm share/AbiSuite
-@dirrm libexec/AbiSuite

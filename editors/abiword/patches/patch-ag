@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.5 2001/08/10 04:50:09 jlam Exp $
+$NetBSD: patch-ag,v 1.6 2001/11/26 13:08:25 martti Exp $
 
---- src/other/spell/xp/lookup.c.orig	Wed Jul 18 13:46:01 2001
-+++ src/other/spell/xp/lookup.c
-@@ -301,22 +301,22 @@
+--- src/other/spell/xp/lookup.c.orig	Mon Aug 27 21:06:30 2001
++++ src/other/spell/xp/lookup.c	Mon Nov 26 12:54:18 2001
+@@ -314,22 +314,22 @@
  	    if (dp->word == (char *) -1)
  		dp->word = NULL;
  	    else
