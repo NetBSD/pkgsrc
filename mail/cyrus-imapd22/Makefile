@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2004/10/17 22:07:32 recht Exp $
+# $NetBSD: Makefile,v 1.24 2004/11/15 17:54:49 jlam Exp $
 
 DISTNAME=	cyrus-imapd-2.2.8
 PKGREVISION=	4
@@ -14,7 +14,6 @@ USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 PERL5_CONFIGURE=	no
-USE_DB185=		no
 BDB_ACCEPTED=		db4 db3
 
 USE_PKGINSTALL=		yes
