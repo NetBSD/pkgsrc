@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/09/24 12:49:10 blymn Exp $
+# $NetBSD: Makefile,v 1.2 2002/11/08 11:24:25 mrg Exp $
 
 DISTNAME=	bzflag-1.7e6
+PKGREVISION=	1
 PKGNAME=	${DISTNAME:S/e/.5./}
 CATEGORIES=	games x11
 MASTER_SITES=   ${MASTER_SITE_SOURCEFORGE:=bzflag/}
@@ -22,6 +23,10 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/bzfls ${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/bzfrelay ${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/bzfs ${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/man/bzflag.6s ${PREFIX}/man/man6/bzflag.6
+	${INSTALL_MAN} ${WRKSRC}/man/bzfls.6s ${PREFIX}/man/man6/bzfls.6
+	${INSTALL_MAN} ${WRKSRC}/man/bzfrelay.6s ${PREFIX}/man/man6/bzfrelay.6
+	${INSTALL_MAN} ${WRKSRC}/man/bzfs.6s ${PREFIX}/man/man6/bzfs.6
 	${INSTALL_DATA_DIR} ${PREFIX}/share/bzflag
 	${CP} ${WRKSRC}/data/* ${PREFIX}/share/bzflag
 
