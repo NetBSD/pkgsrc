@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2001/12/30 20:19:56 agc Exp $
+# $NetBSD: Makefile,v 1.3 2002/01/31 14:34:39 agc Exp $
 
-DISTNAME=	mlterm-2.0.0
+DISTNAME=	mlterm-2.2.0
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mlterm/}
 
@@ -16,9 +16,9 @@ USE_BUILDLINK_ONLY=	yes
 GNU_CONFIGURE=	yes
 
 USE_LIBTOOL=	yes
-LIBTOOL_OVERRIDE=	${WRKSRC}/autoconf/libtool
-LIBTOOL_OVERRIDE+=	${WRKSRC}/kiklib/autoconf/libtool
-LIBTOOL_OVERRIDE+=	${WRKSRC}/mkf/autoconf/libtool
+LIBTOOL_OVERRIDE=	${WRKSRC}/autoconf/ltmain.sh
+LIBTOOL_OVERRIDE+=	${WRKSRC}/kiklib/autoconf/ltmain.sh
+LIBTOOL_OVERRIDE+=	${WRKSRC}/mkf/autoconf/ltmain.sh
 
 .include "../../devel/glib/buildlink.mk"
 .include "../../x11/gtk/buildlink.mk"
