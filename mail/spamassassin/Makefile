@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2002/09/08 23:30:38 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2002/09/19 09:04:13 jlam Exp $
 
 DISTNAME=	Mail-SpamAssassin-2.31
 PKGNAME=	spamassassin-2.31
@@ -33,8 +33,6 @@ do-configure:
 	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
 
 post-install:
-	${SED}  -e 's:@PREFIX@:${PREFIX}:' ${FILESDIR}/spamd.sh \
-	    > ${PREFIX}/etc/rc.d/spamd
 .for d in spamassassin spamassassin/sql spamassassin/spamd
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/$d
 .endfor

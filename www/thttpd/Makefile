@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2002/06/16 19:12:13 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2002/09/19 09:04:34 jlam Exp $
 
 DISTNAME=	thttpd-2.23beta1
 PKGNAME=	thttpd-2.23.0.1
@@ -31,7 +31,7 @@ pre-configure:
 	done
 
 post-build:
-	for FILE in thttpd.conf thttpd.sh; do				\
+	for FILE in thttpd.conf; do					\
 		${SED} ${FILES_SUBST_SED}				\
 			${FILESDIR}/$${FILE} > ${WRKDIR}/$${FILE};	\
 	done
@@ -41,7 +41,6 @@ pre-install:
 
 post-install:
 	${INSTALL_DATA} ${WRKDIR}/thttpd.conf ${PREFIX}/share/examples
-	${INSTALL_SCRIPT} ${WRKDIR}/thttpd.sh ${PREFIX}/etc/rc.d/thttpd
 	${INSTALL_DATA} ${WRKSRC}/index.html ${PREFIX}/share/thttpd
 	${INSTALL_DATA} ${DISTDIR}/sitedrivenby.gif ${PREFIX}/share/thttpd
 

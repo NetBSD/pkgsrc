@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2002/09/18 21:15:11 jlam Exp $
+# $NetBSD: Makefile,v 1.31 2002/09/19 09:04:11 jlam Exp $
 
 DISTNAME=		cyrus-imapd-2.0.16
 PKGREVISION=		1
@@ -98,17 +98,7 @@ post-patch:
 		${MV} -f $${file}.fixed $${file};			\
 	done
 
-pre-install:
-	@for script in ${RCD_SCRIPTS}; do				\
-		${SED} ${FILES_SUBST_SED} ${FILESDIR}/$${script}.sh	\
-			> ${WRKDIR}/$${script};				\
-	done
-
 post-install:
-	for script in ${RCD_SCRIPTS}; do				\
-		${INSTALL_SCRIPT} ${WRKDIR}/$${script}			\
-			${PREFIX}/etc/rc.d/$${script};			\
-	done
 	${INSTALL_SCRIPT} ${WRKSRC}/tools/mkimap ${PREFIX}/cyrus/bin
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA} ${FILESDIR}/imapd.conf ${EGDIR}
