@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1800 2003/03/29 19:58:43 seb Exp $
+$NetBSD: CHANGES,v 1.1801 2003/03/29 21:21:51 salo Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1343,3 +1343,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated pkglint to 3.49 [wiz 2003-03-29]
 	Updated sendmail to 8.12.9 [seb 2003-03-29]
 	Updated libmilter to 8.12.9 [seb 2003-03-29]
+	Updated bitchx to 1.0.3.19nb1 [salo 2003-03-29]
