@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5106 2004/03/06 12:08:22 grant Exp $
+$NetBSD: CHANGES,v 1.5107 2004/03/06 13:47:40 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1184,3 +1184,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated blt to 2.4z [minskim 2004-03-06]
 	Updated abiword to 2.0.4 [xtraeme 2004-03-06]
 	Added ytalk-x11-3.1.1 [grant 2004-03-06]
+        Updated mozilla-gtk2 to 1.6nb3 [jmmv 2004-03-06]
