@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.319 2003/11/19 22:31:47 hubertf Exp $
+# $NetBSD: Packages.txt,v 1.320 2003/12/14 21:47:32 kristerw Exp $
 ###########################################################################
 
 			==========================
@@ -421,7 +421,7 @@ specific tasks at the end of the pre-build stage.  If the file
 example use of pre-build.local is to have the line:
 
 	# echo "I do not have enough disk space to build this pig." \
-		> pkgsrc/games/crafty-book-enormous/$BROKENF
+		> games/crafty-book-enormous/$BROKENF
 
 to prevent the system from trying to build a particular package
 which requires nearly 3 Gb of disk space.
