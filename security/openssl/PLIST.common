@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.7 2004/03/09 08:06:45 reed Exp $
+@comment $NetBSD: PLIST.common,v 1.8 2004/12/17 23:08:36 wiz Exp $
 bin/openssl
 bin/c_hash
 bin/c_info
@@ -286,7 +286,6 @@ man/man5/config.5
 man/man7/des_modes.7
 share/examples/openssl/CA.pl
 share/examples/openssl/CA.sh
-share/examples/openssl/der_chop
 share/examples/openssl/openssl.cnf
 @dirrm share/examples/openssl
 @dirrm include/openssl
