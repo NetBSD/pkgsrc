@@ -1,0 +1,43 @@
+$NetBSD: patch-aa,v 1.6 2000/11/15 13:52:59 wiz Exp $
+
+--- configure.orig	Mon Sep 25 23:23:23 2000
++++ configure
+@@ -970,8 +970,9 @@
+ test -z "$INSTALL_DATA" && INSTALL_DATA='${INSTALL} -m 644'
+ 
+ 
+-CONFIG_LIBS=
+-CONFIG_OPTS=
++# pass CFLAGS and LIBS (else they get ignored)
++CONFIG_LIBS="$LIBS"
++CONFIG_OPTS="$CFLAGS"
+ CONFIG_LDFLAGS=
+ 
+ 
+@@ -1055,6 +1056,8 @@
+   echo "$ac_t""no" 1>&6
+ fi
+ 
++# we don't want to use ncurses, curses are good enough
++if false; then
+ echo $ac_n "checking for initscr in -lncurses""... $ac_c" 1>&6
+ echo "configure:1060: checking for initscr in -lncurses" >&5
+ ac_lib_var=`echo ncurses'_'initscr | sed 'y%./+-%__p_%'`
+@@ -1094,6 +1097,7 @@
+ else
+   echo "$ac_t""no" 1>&6
+ fi
++fi
+ 
+ echo $ac_n "checking for cos in -lm""... $ac_c" 1>&6
+ echo "configure:1100: checking for cos in -lm" >&5
+@@ -1681,7 +1685,8 @@
+ fi
+ echo "$ac_t""$CONFIG_BRHIST" 1>&6
+ 
+-CONFIG_LIBS="$HAVE_LIBM $CONFIG_LIBS"
++# take care that -lm appears after -lffm (for alpha)
++CONFIG_LIBS="$CONFIG_LIBS $HAVE_LIBM"
+ 
+ 
+ 
