@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2187 2003/05/08 17:26:03 jmmv Exp $
+$NetBSD: CHANGES,v 1.2188 2003/05/08 18:06:39 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1897,3 +1897,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated texi2html to 1.64nb1 [jmmv 2003-05-08]
 	Updated fam to 2.6.9nb1 [jmmv 2003-05-08]
 	Updated eterm to 0.9.2nb3 [jmmv 2003-05-08]
+	Updated ORBit2 to 2.6.0nb2 [jmmv 2003-05-08]
