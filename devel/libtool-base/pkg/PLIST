@@ -1,13 +1,14 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/02/03 05:26:03 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/02/27 08:20:26 skrll Exp $
 bin/libtool
 bin/libtoolize
 include/ltdl.h
 lib/libltdl.a
 lib/libltdl.la
 lib/libltdl.so
-lib/libltdl.so.1
-lib/libltdl.so.1.2
+lib/libltdl.so.3
+lib/libltdl.so.3.0
 share/aclocal/libtool.m4
+share/aclocal/ltdl.m4
 share/libtool/config.guess
 share/libtool/config.sub
 share/libtool/libltdl/COPYING.LIB
@@ -23,6 +24,9 @@ share/libtool/libltdl/configure.in
 share/libtool/libltdl/ltdl.c
 share/libtool/libltdl/ltdl.h
 share/libtool/libltdl/stamp-h.in
+share/libtool/ltcf-c.sh
+share/libtool/ltcf-cxx.sh
+share/libtool/ltcf-gcj.sh
 share/libtool/ltconfig
 share/libtool/ltmain.sh
 @dirrm share/libtool/libltdl
