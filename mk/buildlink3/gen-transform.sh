@@ -1,6 +1,6 @@
 #!@BUILDLINK_SHELL@
 #
-# $NetBSD: gen-transform.sh,v 1.26 2004/03/13 03:41:13 uebayasi Exp $
+# $NetBSD: gen-transform.sh,v 1.27 2004/06/04 19:21:23 tv Exp $
 
 transform="@_BLNK_TRANSFORM_SEDFILE@"
 untransform="@_BLNK_UNTRANSFORM_SEDFILE@"
@@ -226,16 +226,14 @@ EOF
 		case "$action" in
 		transform|untransform)
 			@CAT@ >> $sedfile << EOF
-s|\($2/[^$_sep]*\)/lib\([^/$_sep]*\)\.so\.[0-9]*\.[0-9]*\.[0-9]*|-L\1 -l\2|g
-s|\($2\)/lib\([^/$_sep]*\)\.so\.[0-9]*\.[0-9]*\.[0-9]*|-L\1 -l\2|g
-s|\($2/[^$_sep]*\)/lib\([^/$_sep]*\)\.so\.[0-9]*\.[0-9]*|-L\1 -l\2|g
-s|\($2\)/lib\([^/$_sep]*\)\.so\.[0-9]*\.[0-9]*|-L\1 -l\2|g
-s|\($2/[^$_sep]*\)/lib\([^/$_sep]*\)\.so\.[0-9]*|-L\1 -l\2|g
-s|\($2\)/lib\([^/$_sep]*\)\.so\.[0-9]*|-L\1 -l\2|g
-s|\($2/[^$_sep]*\)/lib\([^/$_sep]*\)\.so|-L\1 -l\2|g
-s|\($2\)/lib\([^/$_sep]*\)\.so|-L\1 -l\2|g
-s|\($2/[^$_sep]*\)/lib\([^/$_sep]*\)\.dylib|-L\1 -l\2|g
-s|\($2\)/lib\([^/$_sep]*\)\.dylib|-L\1 -l\2|g
+s|\($2/[^$_sep]*\)/lib\([^/$_sep]*\)\.so\(\.[0-9]*\)*\([$_sep]\)|-L\1 -l\2\4|g
+s|\($2/[^$_sep]*\)/lib\([^/$_sep]*\)\.so\(\.[0-9]*\)*$|-L\1 -l\2|g
+s|\($2\)/lib\([^/$_sep]*\)\.so\(\.[0-9]*\)*\([$_sep]\)|-L\1 -l\2\4|g
+s|\($2\)/lib\([^/$_sep]*\)\.so\(\.[0-9]*\)*$|-L\1 -l\2|g
+s|\($2/[^$_sep]*\)/lib\([^/$_sep]*\)\.dylib\([$_sep]\)|-L\1 -l\2\3|g
+s|\($2/[^$_sep]*\)/lib\([^/$_sep]*\)\.dylib$|-L\1 -l\2|g
+s|\($2\)/lib\([^/$_sep]*\)\.dylib\([$_sep]\)|-L\1 -l\2\3|g
+s|\($2\)/lib\([^/$_sep]*\)\.dylib$|-L\1 -l\2|g
 EOF
 			;;
 		esac
