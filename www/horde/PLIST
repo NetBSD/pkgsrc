@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2003/08/16 21:08:40 bouyer Exp $
+@comment $NetBSD: PLIST,v 1.6 2003/09/14 21:26:41 bouyer Exp $
 
 
 share/horde/config/horde.php.dist
@@ -159,6 +159,7 @@ share/horde/lib/VFS/ftp.php
 share/horde/lib/VFS/sql_file.php
 share/horde/lib/base.php
 share/horde/lib/version.php
+share/horde/locale/ar_SY/LC_MESSAGES/horde.mo
 share/horde/locale/bg_BG/LC_MESSAGES/horde.mo
 share/horde/locale/ca_ES/LC_MESSAGES/horde.mo
 share/horde/locale/cs_CZ/LC_MESSAGES/horde.mo
@@ -200,6 +201,7 @@ share/horde/menu.php
 share/horde/navbar.php
 share/horde/po/Makefile
 share/horde/po/README
+share/horde/po/ar_SY.po
 share/horde/po/bg_BG.po
 share/horde/po/ca_ES.po
 share/horde/po/cs_CZ.po
@@ -306,6 +308,7 @@ share/horde/templates/wml/login/login.inc
 share/horde/templates/wml/login/user.inc
 share/horde/test.php
 share/horde/util/css2horde.php
+share/horde/util/go.php
 share/horde/util/special_characters.php
 share/doc/horde/COPYING
 share/doc/horde/README
@@ -404,6 +407,8 @@ share/examples/horde/horde.conf
 @dirrm share/horde/locale/ca_ES
 @dirrm share/horde/locale/bg_BG/LC_MESSAGES
 @dirrm share/horde/locale/bg_BG
+@dirrm share/horde/locale/ar_SY/LC_MESSAGES
+@dirrm share/horde/locale/ar_SY
 @dirrm share/horde/locale
 @dirrm share/horde/lib/VFS
 @dirrm share/horde/lib/Token
