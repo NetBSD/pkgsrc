@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2364 2004/11/14 09:15:28 jmmv Exp $
+$NetBSD: TODO,v 1.2365 2004/11/14 21:56:31 snj Exp $
 
 Suggested new packages
 ======================
@@ -244,7 +244,6 @@ Suggested package updates
 	o TeXmacs-1.0.4.3
 	o Xaw3d-1.5E
 	o Xbae-4.50.0
-	o abcde-2.2.0
 	o afterstep-2.00.00
 	o aim-1.5.286
 	o ald-0.1.6 [pkg/26431]
