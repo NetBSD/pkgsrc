@@ -1,4 +1,4 @@
-#	$NetBSD: CHANGES-1.6.1,v 1.1.2.21 2003/04/20 09:43:09 grant Exp $
+#	$NetBSD: CHANGES-1.6.1,v 1.1.2.22 2003/04/20 10:03:30 grant Exp $
 
 Changes to the pkgsrc-1-6-1 branch:
 
@@ -542,3 +542,14 @@ misc/xjdic/distinfo				1.2
 	Update dictionary files to latest version.
 	Closes PR 19885.
 	[hubertf, ticket #1263]
+
+net/snort/Makefile				1.22
+net/snort/Makefile.common			1.9
+net/snort/distinfo				1.16
+net/snort/patches/patch-aa			1.10
+net/snort/patches/patch-ad			1.9
+net/snort-mysql/Makefile			1.5
+net/snort-pgsql/Makefile			1.10
+
+	Bump PKGREVISION: honour PKG_SYSCONFDIR for real.
+	[salo, ticket #1258]
