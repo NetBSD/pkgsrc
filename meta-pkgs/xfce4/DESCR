@@ -5,3 +5,5 @@ This package does not contain anything by itself -- it is a
 purpose is to require dependencies so users can install this
 package only and have all the XFce stuff pulled in by the package
 dependency mechanism.
+
+This package installs XFce 4 without any extras.
