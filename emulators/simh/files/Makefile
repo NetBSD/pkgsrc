@@ -6,7 +6,8 @@ install:
 	@for file in ${PRGS}; do \
 		${BSD_INSTALL_PROGRAM} $$file ${PREFIX}/bin/simh-$$file; \
 	done
-	${BSD_INSTALL_DATA} simh_doc.txt ${PREFIX}/share/doc/
+	${BSD_INSTALL_DATA_DIR} ${PREFIX}/share/doc/simh
+	${BSD_INSTALL_DATA} simh_doc.txt ${PREFIX}/share/doc/simh/
 
 .SUFFIXES: .4o .7o .9o .15o
 .c.4o:
@@ -47,8 +48,8 @@ pdp9: pdp18b_cpu.9o pdp18b_drm.9o pdp18b_lp.9o pdp18b_mt.9o pdp18b_rf.9o \
       pdp18b_rp.9o pdp18b_stddev.9o pdp18b_sys.9o ${SCP}
 	${LINK.c} -o $@ $> -lm
 
-pdp11: pdp11_cpu.o pdp11_fp.o pdp11_lp.o pdp11_rk.o pdp11_rl.o pdp11_rp.o \
-       pdp11_rx.o pdp11_stddev.o pdp11_sys.o pdp11_tm.o ${SCP}
+pdp11: pdp11_cis.o pdp11_cpu.o pdp11_fp.o pdp11_lp.o pdp11_rk.o pdp11_rl.o \
+       pdp11_rp.o pdp11_rx.o pdp11_stddev.o pdp11_sys.o pdp11_tm.o ${SCP}
 	${LINK.c} -o $@ $> -lm
 
 pdp15: pdp18b_cpu.15o pdp18b_drm.15o pdp18b_lp.15o pdp18b_mt.15o pdp18b_rf.15o \
