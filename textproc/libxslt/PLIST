@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2003/07/11 23:43:53 wiz Exp $
+@comment $NetBSD: PLIST,v 1.16 2003/08/29 11:25:20 xtraeme Exp $
 bin/xslt-config
 bin/xsltproc
 include/libexslt/exslt.h
@@ -31,7 +31,7 @@ lib/libxslt.a
 lib/libxslt.la
 lib/libxslt.so
 lib/libxslt.so.1
-lib/libxslt.so.1.31
+lib/libxslt.so.1.32
 lib/libxsltbreakpoint.a
 lib/libxsltbreakpoint.la
 lib/libxsltbreakpoint.so
