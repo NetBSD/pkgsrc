@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/02/15 20:08:13 jschauma Exp $
+@comment $NetBSD: PLIST,v 1.1 2003/02/18 19:54:13 jschauma Exp $
 bin/ap-config
 bin/ap-mrtg
 man/man8/ap-config.8
