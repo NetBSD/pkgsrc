@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/04/14 14:56:09 ben Exp $
+# $NetBSD: Makefile,v 1.3 2004/07/28 02:47:35 minskim Exp $
 #
 
 DISTNAME=	ppmdi1
@@ -11,11 +11,15 @@ MAINTAINER=	ben@NetBSD.org
 HOMEPAGE=	http://compression.ru/ds/
 COMMENT=	PPM file compressor
 
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
 MAKEFILE=	makefile.gmk
 ALL_TARGET=	ppmd
 
 WRKSRC=		${WRKDIR}
 USE_LANGUAGES=	c++
+
+INSTALLATION_DIRS=	bin
 
 post-extract:
 	cd ${WRKSRC} && for i in *; do \
