@@ -1,20 +1,13 @@
-# New ports collection makefile for:	nasm
-# Version required:    0.98
-# Date created:        7 April 1998
-# Whom:                Murray Stokely <murray@cdrom.com>
-#
-# $Id: Makefile,v 1.1.1.1 1999/07/05 07:17:34 sakamoto Exp $
-#
+# $NetBSD: Makefile,v 1.2 1999/07/05 07:21:57 sakamoto Exp $
+# FreeBSD Id: Makefile,v 1.5 1999/06/16 14:02:28 billf Exp $
 
 DISTNAME=	nasm-0.98
 CATEGORIES=	devel lang
-MASTER_SITES=	${MASTER_SITE_SUNSITE}
-MASTER_SITE_SUBDIR=	devel/lang/assemblers
+MASTER_SITES=	${MASTER_SITE_SUNSITE:=devel/lang/assemblers/}
 
-MAINTAINER=	murray@cdrom.com
+MAINTAINER=	packages@netbsd.org
+HOMEPAGE=	http://www.web-sites.co.uk/nasm/
 
 GNU_CONFIGURE=	yes
 
-MAN1=		nasm.1 ndisasm.1
-
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"
