@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/03/05 09:28:14 grant Exp $
+# $NetBSD: Makefile,v 1.18 2005/03/08 18:51:06 xtraeme Exp $
 
 DISTNAME=	nasm-0.98.39
 CATEGORIES=	devel lang
@@ -26,5 +26,15 @@ MAKE_ENV+=	PERL5="${PERL5}"			\
 		INSTALL_DATA_DIR="${INSTALL_DATA_DIR}"
 
 INSTALLATION_DIRS=	bin info man/man1 share/doc/html
+
+.include "../../mk/compiler.mk"
+
+.if !empty(CC_VERSION:Mgcc-2*)
+SUBST_CLASSES+=     c99
+SUBST_STAGE.c99=    pre-configure
+SUBST_FILES.c99=    configure
+SUBST_SED.c99=      -e "s,\-std=c99,,g"
+SUBST_MESSAGE.c99=  "Fixing configure script."
+.endif
 
 .include "../../mk/bsd.pkg.mk"
