@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/01/04 11:48:30 recht Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/04 22:24:05 recht Exp $
 
 DISTNAME=	libxml2-python-${LIBXML_VERSION}
 PKGNAME=	${PYPKGPREFIX}-libxslt-1.1.2
@@ -9,7 +9,7 @@ MAINTAINER=	minskim@bawi.org
 HOMEPAGE=	http://xmlsoft.org/XSLT/
 COMMENT=	Python wrapper for libxslt
 
-DEPENDS+=	${PYPKGPREFIX}-libxml2>=${LIBXML_VERSION}:../../wip/py-libxml2
+DEPENDS+=	${PYPKGPREFIX}-libxml2>=${LIBXML_VERSION}:../../textproc/py-libxml2
 
 PYDISTUTILSPKG=	YES
 USE_BUILDLINK2=	YES
