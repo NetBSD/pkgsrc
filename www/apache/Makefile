@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.120 2003/01/28 22:04:26 jlam Exp $
+# $NetBSD: Makefile,v 1.121 2003/02/23 15:55:57 jmmv Exp $
 #
 # This pkg does not compile in mod_ssl, only the `mod_ssl EAPI' (a set of
 # code hooks that allow mod_ssl to be compiled separately later, if desired).
@@ -8,8 +8,8 @@ PKGNAME=		apache-${APACHE_VERSION}
 PKGREVISION=		3
 APACHE_VERSION=		1.3.27
 CATEGORIES=		www
-MASTER_SITES=		http://httpd.apache.org/dist/httpd/ \
-			http://www.apache.de/dist/httpd/
+MASTER_SITES=		${MASTER_SITE_APACHE:=httpd/} \
+			${MASTER_SITE_APACHE:=httpd/old/}
 # This must be defined, before it may be referred to on the LHS.
 EXTRACT_SUFX=		.tar.gz
 
