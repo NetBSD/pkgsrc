@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2001/10/31 20:24:19 zuntum Exp $
+bin/dact
+etc/dact.conf.sample
+man/man1/dact.1
