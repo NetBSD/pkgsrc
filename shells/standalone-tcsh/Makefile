@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/07/27 20:32:01 agc Exp $
+# $NetBSD: Makefile,v 1.2.4.1 2002/07/22 17:11:22 agc Exp $
 #
 
 NO_MTREE=		YES
@@ -17,3 +17,6 @@ CONFIGURE_ARGS+=	--mandir=/usr/share/man
 
 DISTINFO_FILE=		${.CURDIR}/../../shells/tcsh/distinfo
 PATCHDIR=		${.CURDIR}/../../shells/tcsh/patches
+
+pre-install:
+	${INSTALL_PROGRAM_DIR} ${PREFIX}/bin
