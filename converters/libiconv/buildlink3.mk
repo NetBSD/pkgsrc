@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.18 2004/05/03 02:22:24 snj Exp $
+# $NetBSD: buildlink3.mk,v 1.19 2004/05/17 21:32:34 seb Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 ICONV_BUILDLINK3_MK:=	${ICONV_BUILDLINK3_MK}+
@@ -11,7 +11,6 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Niconv}
 BUILDLINK_PACKAGES+=	iconv
 
 .if !empty(ICONV_BUILDLINK3_MK:M+)
-BUILDLINK_PKGBASE.iconv?=	libiconv
 BUILDLINK_DEPENDS.iconv+=	libiconv>=1.9.1
 BUILDLINK_PKGSRCDIR.iconv?=	../../converters/libiconv
 BUILDLINK_LDFLAGS.iconv=	${BUILDLINK_LDADD.iconv}
