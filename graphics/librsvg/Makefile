@@ -1,21 +1,19 @@
-# $NetBSD: Makefile,v 1.17 2004/11/20 22:10:23 jmmv Exp $
-#
+# $NetBSD: Makefile,v 1.18 2005/01/28 14:58:09 adam Exp $
 
-DISTNAME=		librsvg-1.0.1
-PKGREVISION=		8
-CATEGORIES=		graphics gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/librsvg/1.0/}
-EXTRACT_SUFX=		.tar.bz2
+DISTNAME=	librsvg-1.0.3
+CATEGORIES=	graphics gnome
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/librsvg/1.0/}
+EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=		rh@NetBSD.org
-HOMEPAGE=		http://www.levien.com/svg/
-COMMENT=		Raph's SVG library
+MAINTAINER=	rh@NetBSD.org
+HOMEPAGE=	http://www.levien.com/svg/
+COMMENT=	Raph's SVG library
 
-USE_BUILDLINK3=		YES
-USE_X11BASE=		YES
-GNU_CONFIGURE=		YES
+USE_BUILDLINK3=		yes
+USE_LIBTOOL=		yes
+USE_X11=		yes
+GNU_CONFIGURE=		yes
 
-USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 .include "../../graphics/gdk-pixbuf/buildlink3.mk"
