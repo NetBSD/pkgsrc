@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 1999/05/02 15:51:27 tron Exp $
+# $NetBSD: Makefile,v 1.23 1999/05/04 20:31:32 tron Exp $
 #
 
 DISTNAME=	gnome-libs-1.0.9
@@ -20,7 +20,6 @@ GNU_CONFIGURE=	yes
 USE_X11BASE=	yes
 USE_GMAKE=	yes
 USE_LIBTOOL=	yes
-LIBTOOL_FLAGS=	--cplusplus
 LDFLAGS+=       	"-L${LOCALBASE}/lib"
 CONFIGURE_ARGS+=	--localstatedir=${LOCALSTATEDIR} \
 			--with-glib-prefix=${LOCALBASE}
@@ -33,11 +32,6 @@ LOCALSTATEDIR=	/var/gnome
 
 PLIST_SRC=	${WRKDIR}/PLIST
 
-# Someone should show the GNOME people how to use CVS and how to define
-# dependences in makefiles.
-post-extract:
-	@find ${WRKDIR} -name "*.idl" -type f | xargs ${TOUCH}
-
 pre-build:
 	(cd ${WRKSRC}/support; ${GMAKE} gnomesupport.h)
 
@@ -45,5 +39,14 @@ post-install:
 	${MKDIR} ${LOCALSTATEDIR}
 	${SED} -e 's#@@LOCALSTATEDIR@@#${LOCALSTATEDIR}#' \
 	    <${PKGDIR}/PLIST >${PLIST_SRC}
+	@cd ${PREFIX}; find lib -name 'libgnome.so.*' >>${PLIST_SRC}
 
 .include "../../mk/bsd.pkg.mk"
+
+.if (${OBJECT_FMT} == a.out)
+.if exists(/usr/bin/c89)
+MAKE_ENV+=	A_OUT_LIBTOOL_FLAGS=--cplusplus
+.else
+MAKE_ENV+=	A_OUT_STATIC=-static
+.endif
+.endif
