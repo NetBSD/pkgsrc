@@ -1,4 +1,4 @@
-# $NetBSD: defs.SunOS.mk,v 1.27 2002/08/28 11:06:19 seb Exp $
+# $NetBSD: defs.SunOS.mk,v 1.28 2002/09/04 14:47:34 agc Exp $
 #
 # Variable definitions for the SunOS/Solaris operating system.
 
@@ -70,6 +70,7 @@ XARGS?=		/usr/bin/xargs
 CPP_PRECOMP_FLAGS?=	# unset
 DEF_UMASK?=		022
 DEFAULT_SERIAL_DEVICE?=	/dev/null
+EXPORT_SYMBOLS_LDFLAGS?=	# Don't add symbols to the dynamic symbol table
 GROUPADD?=		/usr/sbin/groupadd
 MOTIF_TYPE_DEFAULT?=	dt		# default 2.0 compatible libs type
 MOTIF12_TYPE_DEFAULT?=	dt		# default 1.2 compatible libs type

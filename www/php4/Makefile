@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2002/08/26 00:16:57 grant Exp $
+# $NetBSD: Makefile,v 1.26 2002/09/04 14:47:39 agc Exp $
 
 PKGNAME=		php-${PHP_BASE_VERS}
 PKGREVISION=		# empty
@@ -27,9 +27,8 @@ MAKE_ENV+=		LINK_LIBGCC_LDFLAGS="${LINK_LIBGCC_LDFLAGS}"
 .endif
 
 # Ensure we export symbols in the linked shared object.
-.if ${OPSYS} != "SunOS"
-LDFLAGS+=		-Wl,--export-dynamic
-.endif
+LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}
+MAKE_ENV+=		EXPORT_SYMBOLS_LDFLAGS="${EXPORT_SYMBOLS_LDFLAGS}"
 
 CONF_FILES=	${EGDIR}/php.ini-recommended ${PKG_SYSCONFDIR}/php.ini
 OWN_DIRS=	${PREFIX}/${PHP_EXTENSION_DIR}
