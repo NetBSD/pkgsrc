@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/02/21 12:53:23 mycroft Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/07/05 15:53:33 seb Exp $
 bin/rep
 bin/rep-config
 bin/rep-remote
@@ -8,7 +8,6 @@ include/rep.h
 include/rep_lisp.h
 include/rep_regexp.h
 include/rep_subrs.h
-@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/librep.info
 info/librep.info
 info/librep.info-1
 info/librep.info-2
@@ -19,7 +18,6 @@ info/librep.info-6
 info/librep.info-7
 info/librep.info-8
 info/librep.info-9
-@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/librep.info
 lib/librep.a
 lib/librep.la
 lib/librep.so
