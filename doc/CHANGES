@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4433 2004/01/12 04:31:39 jlam Exp $
+$NetBSD: CHANGES,v 1.4434 2004/01/12 14:29:56 martti Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -188,3 +188,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added libshout-2.0 [kim 2004-01-12]
 	Added mserv-devel-0.39 [kim 2004-01-12]
 	Updated PAM to 0.77nb1 [jlam 2004-01-12]
+	Updated dvdrip to 0.50.16 [martti 2004-01-12]
