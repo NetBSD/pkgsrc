@@ -1,8 +1,8 @@
-$NetBSD: patch-bq,v 1.7 2004/04/25 13:27:06 tron Exp $
+$NetBSD: patch-bq,v 1.8 2004/06/21 14:14:01 taya Exp $
 
 diff -ru ../Orig/mozilla/xpcom/io/nsLocalFileUnix.h ./xpcom/io/nsLocalFileUnix.h
---- ../Orig/mozilla/xpcom/io/nsLocalFileUnix.h	2003-07-19 07:14:16.000000000 +0900
-+++ ./xpcom/io/nsLocalFileUnix.h	2004-04-23 15:01:23.000000000 +0900
+--- ../Orig/mozilla/xpcom/io/nsLocalFileUnix.h	2004-01-15 15:14:13.000000000 +0900
++++ ./xpcom/io/nsLocalFileUnix.h	2004-06-10 23:07:36.000000000 +0900
 @@ -57,7 +57,7 @@
  #endif
  
