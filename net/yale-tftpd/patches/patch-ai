@@ -1,8 +1,8 @@
-$NetBSD: patch-ai,v 1.1 2002/04/01 00:04:44 dmcmahill Exp $
+$NetBSD: patch-ai,v 1.2 2004/03/21 10:29:51 seb Exp $
 
---- tftpyale.c.orig	Mon Mar 20 15:11:11 1995
+--- tftpyale.c.orig	1995-03-20 21:11:11.000000000 +0100
 +++ tftpyale.c
-@@ -95,7 +95,7 @@
+@@ -95,7 +95,7 @@ addFileRestriction (ac, av)
  int	ac;
  char**	av;
  {
@@ -11,7 +11,7 @@ $NetBSD: patch-ai,v 1.1 2002/04/01 00:04:44 dmcmahill Exp $
  
  	ac--; av++;
  	if (ac != 2) {
-@@ -104,7 +104,7 @@
+@@ -104,7 +104,7 @@ char**	av;
  	}
  
  	/* get list number */
@@ -20,7 +20,7 @@ $NetBSD: patch-ai,v 1.1 2002/04/01 00:04:44 dmcmahill Exp $
  	if (list <= 0) {
  		accessFormatError = "list argument not positive integer";
  		return 0;
-@@ -157,11 +157,11 @@
+@@ -157,27 +157,24 @@ struct stat* sb;
   * qualified (starts with '/') check to see if the
   * prefix matches the default directory.
   */
@@ -34,7 +34,18 @@ $NetBSD: patch-ai,v 1.1 2002/04/01 00:04:44 dmcmahill Exp $
  	char* rindex();
  
  	if (*fileName == '/') {
-@@ -177,7 +177,7 @@
+-		char* sep = rindex (fileName, '/');
+-		int count = sep - fileName;
+-
+-		if (count > 0)
+-			count--;
+ 		if (tftpDefaultDirectory
+ 		    && strncmp(fileName, tftpDefaultDirectory,
+ 				strlen(tftpDefaultDirectory))==0) {
+-			fileName = sep+1;
++			fileName +=strlen(tftpDefaultDirectory);
++			if(*fileName == '/')
++				fileName++;
  		}
  	}
  
@@ -43,7 +54,7 @@ $NetBSD: patch-ai,v 1.1 2002/04/01 00:04:44 dmcmahill Exp $
  
  	return list ? list : defaultAccessList;
  }
-@@ -269,7 +269,7 @@
+@@ -269,7 +266,7 @@ char**	argv;
  			continue;
  
  		cargv = config_fields(cnf);
@@ -52,7 +63,7 @@ $NetBSD: patch-ai,v 1.1 2002/04/01 00:04:44 dmcmahill Exp $
  		  /* specify default directory */
  		  case CMD_DEFAULT_DIR:
  			if (cargc != 2)
-@@ -481,7 +481,7 @@
+@@ -481,7 +478,7 @@ char*	buf;
  
  static struct CMDS {
  	char* cmdName;
