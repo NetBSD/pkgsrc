@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/04/15 10:32:33 grant Exp $
+
+--- src/Makefile.orig	2003-05-08 13:13:13.000000000 +1000
++++ src/Makefile
+@@ -187,9 +187,6 @@ endif
+ 
+ .C.n.lo:
+ 	$(LIBTOOL) --mode=compile $(CXX) $(CXXFLAGS) $(CPPFLAGS) -c $< -o $@
+-	if ( test "$(STRIP)" != "touch" ); then \
+-		$(STRIP) -x -R .note -R .comment $@; \
+-	fi
+ 
+ .C.p.lo:
+ 	$(LIBTOOL) --mode=compile $(CXX) $(DEBUGCXXFLAGS) $(CPPFLAGS) -c $< -o $@
