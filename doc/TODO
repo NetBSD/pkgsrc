@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3253 2005/03/22 14:06:28 wiz Exp $
+$NetBSD: TODO,v 1.3254 2005/03/22 14:15:51 wiz Exp $
 
 Suggested new packages
 ======================
@@ -782,7 +782,6 @@ Suggested package updates
 	o p5-Msgcat-1.03
 	o p5-Net-AOLIM-1.5
 	o p5-Net-CIDR-0.15
-	o p5-Net-DNS-0.48
 	o p5-Net-DNS-SEC-0.12
 	o p5-Net-Daemon-0.38
 	o p5-Net-Gnats-0.05
