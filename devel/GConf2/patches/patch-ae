@@ -1,6 +1,6 @@
-$NetBSD: patch-ae,v 1.3 2003/12/28 14:24:49 jmmv Exp $
+$NetBSD: patch-ae,v 1.4 2004/05/03 20:55:36 jmmv Exp $
 
---- gconf/gconftool.c.orig	2003-08-18 20:13:20.000000000 +0200
+--- gconf/gconftool.c.orig	2004-04-05 21:07:34.000000000 +0200
 +++ gconf/gconftool.c
 @@ -59,6 +59,7 @@ static char* long_desc = NULL;
  static char* owner = NULL;
@@ -45,47 +45,56 @@ $NetBSD: patch-ae,v 1.3 2003/12/28 14:24:49 jmmv Exp $
    if (spawn_gconfd)
      {
        do_spawn_daemon(conf);
-@@ -2760,15 +2782,14 @@ set_values(GConfEngine* conf, const gcha
+@@ -2769,30 +2791,29 @@ set_values(GConfEngine* conf, const gcha
    else
      full_key = g_strdup(key);
  
 -  if (schema_key)
-+  full_schema_key = NULL;
-+  if (unload_entry_file == NULL && schema_key)
++  if (unload_entry_file != NULL || schema_key)
      {
-       if (base_dir && *schema_key != '/')
-         full_schema_key = gconf_concat_dir_and_key(base_dir, schema_key);
-       else
-         full_schema_key = g_strdup(schema_key);
-     }
--  else
--    full_schema_key = NULL;
+-      gchar* full_schema_key;
++      gchar* full_schema_key = NULL;
++      GError* error = NULL;
  
-   tmp = values;
-   while (tmp)
-@@ -2776,21 +2797,21 @@ set_values(GConfEngine* conf, const gcha
-       GConfValue* value = tmp->data;
-       GError* error;
+-      if (base_dir && *schema_key != '/')
+-        full_schema_key = gconf_concat_dir_and_key(base_dir, schema_key);
+-      else
+-        full_schema_key = g_strdup(schema_key);
++      if (unload_entry_file == NULL)
++        {
++          if (base_dir && *schema_key != '/')
++            full_schema_key = gconf_concat_dir_and_key(base_dir, schema_key);
++          else
++            full_schema_key = g_strdup(schema_key);
++        }
  
 -      if (full_schema_key)
-+      error = NULL;
 +      if (!gconf_engine_associate_schema(conf, full_key, full_schema_key,  &error))
          {
--          error = NULL;
+-	  GError* error = NULL;
+-	  
 -          if (!gconf_engine_associate_schema(conf, full_key, full_schema_key,  &error))
 -            {
 -              g_assert(error != NULL);
--          
++          g_assert(error != NULL);
+           
 -              g_printerr (_("WARNING: failed to associate schema `%s' with key `%s': %s\n"),
 -			  full_schema_key, full_key, error->message);
 -              g_error_free(error);
 -            }
-+          g_assert(error != NULL);
-+
 +          g_printerr (_("WARNING: failed to associate schema `%s' with key `%s': %s\n"),
 +                      full_schema_key, full_key, error->message);
 +          g_error_free(error);
-         }
++        }
+ 
+-	  g_free(full_schema_key);
+-	}
++      g_free(full_schema_key);
+     }
+ 
+   tmp = values;
+@@ -2802,7 +2823,10 @@ set_values(GConfEngine* conf, const gcha
+       GError* error;
  
        error = NULL;
 -      gconf_engine_set(conf, full_key, value, &error);
@@ -96,7 +105,7 @@ $NetBSD: patch-ae,v 1.3 2003/12/28 14:24:49 jmmv Exp $
        if (error != NULL)
          {
            g_printerr (_("Error setting value: %s\n"), error->message);
-@@ -3307,7 +3328,7 @@ process_key_list(GConfEngine* conf, cons
+@@ -3318,7 +3342,7 @@ process_key_list(GConfEngine* conf, cons
    GSList* tmp;
    GError* error = NULL;
  
@@ -105,7 +114,7 @@ $NetBSD: patch-ae,v 1.3 2003/12/28 14:24:49 jmmv Exp $
      {
        schema_name = NULL;
      }
-@@ -3504,7 +3525,7 @@ process_schema(GConfEngine* conf, xmlNod
+@@ -3515,7 +3539,7 @@ process_schema(GConfEngine* conf, xmlNod
  
        hash_foreach_info.conf = conf;
        hash_foreach_info.key = schema_key;

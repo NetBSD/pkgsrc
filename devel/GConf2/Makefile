@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.28 2004/04/07 18:07:52 jmmv Exp $
+# $NetBSD: Makefile,v 1.29 2004/05/03 20:55:36 jmmv Exp $
 #
 
 .include "../../devel/GConf2/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/GConf/GConf2/}
-PKGREVISION=	2
 
 USE_PKGINSTALL=	YES
 
-CONFIGURE_ENV+=	PKG_USE_GTK=no
+CONFIGURE_ARGS+=	--disable-gtk
 
 OWN_DIRS=	${PKG_SYSCONFDIR}/2
 OWN_DIRS+=	${PKG_SYSCONFDIR}/gconf.xml.defaults
