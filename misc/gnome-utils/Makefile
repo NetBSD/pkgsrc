@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2004/04/14 16:15:25 jmmv Exp $
+# $NetBSD: Makefile,v 1.74 2004/04/26 22:07:06 snj Exp $
 
 DISTNAME=		gnome-utils-1.4.1.2
 PKGREVISION=		9
@@ -20,7 +20,7 @@ CONFLICTS=		coreutils<=5.0
 USE_DIRS+=		gnome1-1.5
 USE_GNU_TOOLS+=		make
 USE_X11BASE=		YES
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_PKGLOCALEDIR=	YES
 
 GNU_CONFIGURE=		YES
@@ -29,12 +29,12 @@ CONFIGURE_ENV+=		PKG_CONFIG_PATH="${LOCALBASE}/lib/pkgconfig:${X11BASE}/lib/pkgc
 CONFIGURE_ENV+=		LOCALBASE="${LOCALBASE}"
 
 .include "../../textproc/scrollkeeper/omf.mk"
-.include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../devel/gnome-objc/buildlink2.mk"
-.include "../../devel/libglade/buildlink2.mk"
-.include "../../devel/ncurses/buildlink2.mk"
-#.include "../../lang/guile14/buildlink2.mk"	# XXX: req. guile1[46] fix first
-.include "../../sysutils/libgtop/buildlink2.mk"
-.include "../../www/gtkhtml/buildlink2.mk"
-.include "../../x11/gnome-core/buildlink2.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/gnome-objc/buildlink3.mk"
+.include "../../devel/libglade/buildlink3.mk"
+.include "../../devel/ncurses/buildlink3.mk"
+#.include "../../lang/guile14/buildlink3.mk"	# XXX: req. guile1[46] fix first
+.include "../../sysutils/libgtop/buildlink3.mk"
+.include "../../www/gtkhtml/buildlink3.mk"
+.include "../../x11/gnome-core/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
