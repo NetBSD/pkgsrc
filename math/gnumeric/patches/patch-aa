@@ -1,0 +1,78 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/07/31 19:20:33 rh Exp $
+
+--- configure.orig	Tue Jul 13 05:52:16 1999
++++ configure	Sat Jul 31 19:46:20 1999
+@@ -2061,6 +2061,7 @@
+   ac_tool_prefix=
+ fi
+ 
++if false; then
+ # Always use our own libtool.
+ LIBTOOL='$(SHELL) $(top_builddir)/libtool'
+ 
+@@ -2293,6 +2294,7 @@
+ ${CONFIG_SHELL-/bin/sh} $ac_aux_dir/ltconfig --no-reexec \
+ $libtool_flags --no-verify $ac_aux_dir/ltmain.sh $host \
+ || { echo "configure: error: libtool configure failed" 1>&2; exit 1; }
++fi
+ 
+ # Redirect the config.log output again, so that the ltconfig log is not
+ # clobbered by the next message.
+@@ -3356,7 +3358,7 @@
+   echo $ac_n "(cached) $ac_c" 1>&6
+ else
+   ac_save_LIBS="$LIBS"
+-LIBS="-lxml `gnome-config --libs xml` $LIBS"
++LIBS="-L${LOCALBASE}/lib -lxml -lz $LIBS"
+ cat > conftest.$ac_ext <<EOF
+ #line 3362 "configure"
+ #include "confdefs.h"
+@@ -3387,7 +3389,7 @@
+   
+ 		
+ 		
+-		GNOME_XML_LIB=`gnome-config --libs xml`
++		GNOME_XML_LIB=-lxml
+ 	
+ else
+   echo "$ac_t""no" 1>&6
+@@ -6045,7 +6047,7 @@
+ 
+ echo $ac_n "checking For GnomePrint libraries""... $ac_c" 1>&6
+ echo "configure:6048: checking For GnomePrint libraries" >&5
+-if gnome-config --libs print > /dev/null 2>&1; then 
++if [ -f ${PREFIX}/lib/libgnomeprint.a ]; then 
+     echo "$ac_t""found" 1>&6
+ else
+     { echo "configure: error: Did not find GnomePrint installed" 1>&2; exit 1; }
+@@ -6053,14 +6055,14 @@
+ 
+ echo $ac_n "checking For Glade libraries""... $ac_c" 1>&6
+ echo "configure:6056: checking For Glade libraries" >&5
+-if gnome-config --libs libglade > /dev/null 2>&1; then 
++if [ -f ${PREFIX}/lib/libglade-gnome.a ]; then 
+     echo "$ac_t""found" 1>&6
+ else
+     { echo "configure: error: Did not find libGlade installed" 1>&2; exit 1; }
+ fi
+ 
+-EXTRA_GNOME_LIBS=`gnome-config --libs gnomeui print libglade $bonobo`
+-EXTRA_GNOME_CFLAGS=`gnome-config --cflags gnomeui print libglade $bonobo`
++EXTRA_GNOME_LIBS="`gnome-config --libs gnomeui $bonobo` -L${PREFIX}/lib -L${LOCALBASE}/lib -lgnomeprint -lglade-gnome -lglade"
++EXTRA_GNOME_CFLAGS="`gnome-config --cflags gnomeui $bonobo` -I${LOCALBASE}/include -I${PREFIX}/include/libgnomeprint"
+ 
+ 
+ 
+@@ -6442,10 +6444,12 @@
+     top_srcdir="$ac_dots$ac_given_srcdir" ;;
+   esac
+ 
++if false; then
+   case "$ac_given_INSTALL" in
+   [/$]*) INSTALL="$ac_given_INSTALL" ;;
+   *) INSTALL="$ac_dots$ac_given_INSTALL" ;;
+   esac
++fi
+ 
+   echo creating "$ac_file"
+   rm -f "$ac_file"
