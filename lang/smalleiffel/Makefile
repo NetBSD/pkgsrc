@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2000/02/25 06:18:08 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2000/09/06 14:31:38 jlam Exp $
 #
 
 DISTNAME=	se
@@ -18,7 +18,7 @@ MAKE_ENV+=	SmallEiffel=${WRKSRC}/sys/system.se
 ALL_TARGET=	./bin/compile_to_c
 
 DIST_SUBDIR=	${PKGNAME}
-DOCDIR=		${PREFIX}/share/doc/smalleiffel
+DOCDIR=		${PREFIX}/share/doc/html/smalleiffel
 EGDIR=		${PREFIX}/share/examples/smalleiffel
 LIBDIR=		${PREFIX}/share/smalleiffel
 LIBEXECDIR=	${PREFIX}/libexec/smalleiffel
@@ -30,7 +30,8 @@ post-patch:
 	${CHMOD} +x ${WRKSRC}/misc/GC.SH
 
 post-build:
-	${SED}	-e "s,@@SE_LIB@@,${LIBDIR},g" \
+	${SED}	-e "s,@@SE_DOC@@,${DOCDIR},g" \
+		-e "s,@@SE_LIB@@,${LIBDIR},g" \
 		-e "s,@@SE_LIBEXEC@@,${LIBEXECDIR},g" \
 		${FILESDIR}/smalleiffel.sh > ${WRKDIR}/smalleiffel.sh
 	${SED}	-e "s,@@SE_LIB@@,${LIBDIR},g" \

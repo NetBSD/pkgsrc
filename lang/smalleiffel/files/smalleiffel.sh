@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: smalleiffel.sh,v 1.4 1999/10/13 19:03:39 jlam Exp $
+# $NetBSD: smalleiffel.sh,v 1.5 2000/09/06 14:31:38 jlam Exp $
 #
 # This script is invoked as:
 #
@@ -9,6 +9,32 @@
 # where <cmd> is one of the programs in @@SE_LIBEXEC@@.
 #
 SmallEiffel=@@SE_LIB@@/sys/system.se; export SmallEiffel
+
+if [ -z $1 ]
+then
+	cat << EOF
+Usage:
+	smalleiffel <cmd> [<arg> ...]
+
+where <cmd> can be:
+
+	clean
+	compile
+	compile_to_c
+	compile_to_jvm
+	finder
+	pretty
+	print_jvm_class
+	short
+
+For more documentation on these commands, point a Web browser at:
+
+	@SE_DOC@/index.html
+
+EOF
+exit 0
+fi
+
 se_cmd=@@SE_LIBEXEC@@/$1
 shift
 
