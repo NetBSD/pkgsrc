@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 1998/06/21 04:29:07 tv Exp $
+# $NetBSD: Makefile,v 1.15 1998/07/15 10:34:56 agc Exp $
 
 DISTNAME=	ncurses-1.9.9g
 CATEGORIES=	devel
@@ -27,6 +27,5 @@ post-install:
 	( cd ${PREFIX}/include ; for i in form.h menu.h panel.h ; do \
 	  ${SED} '/#include/s|curses.h|ncurses.h|g' $$i >$$i.BAK ; \
 	  ${MV} $$i.BAK $$i ; done )
-	${LDCONFIG} || ${TRUE}
 
 .include "../../mk/bsd.pkg.mk"

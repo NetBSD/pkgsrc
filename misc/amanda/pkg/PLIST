@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 1998/05/07 17:07:33 agc Exp $
+@comment $NetBSD: PLIST,v 1.6 1998/07/15 10:37:10 agc Exp $
 lib/libamanda.a
 lib/libamanda.so.5.0
 lib/libamanda.la
@@ -14,8 +14,6 @@ lib/libamtape.a
 lib/libamserver.so.3.0
 lib/libamserver.la
 lib/libamserver.a
-@exec /sbin/ldconfig || /usr/bin/true
-@unexec /sbin/ldconfig || /usr/bin/true
 libexec/versionsuffix
 libexec/amandad
 libexec/calcsize
