@@ -1,0 +1,10 @@
+$NetBSD: patch-ao,v 1.1 2001/02/15 18:14:36 jtb Exp $
+
+--- flibs/ranlib/src/Makefile.in.orig	Thu Feb 15 17:08:02 2001
++++ flibs/ranlib/src/Makefile.in
+@@ -1,4 +1,4 @@
+-LIBRARY = libranlib.a
++LIBRARY = libranlib_rlab.a
+ 
+ SHELL = 	@MSHELL@
+ F77 =		@F77@
