@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/06/02 01:15:40 jschauma Exp $
+# $NetBSD: Makefile,v 1.8 2003/06/02 14:05:08 abs Exp $
 
 DISTNAME=	neXtaw-0.14.0
 CATEGORIES=	x11
@@ -21,7 +21,7 @@ EGDIR=		${PREFIX}/share/examples/${PKGBASE}
 .include "../../mk/bsd.prefs.mk"
 
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-alpha)
-.  include "../../lang/gcc/buildlink2.mk"
+.  include "../../mk/gcc.buildlink2.mk"
 .endif
 
 post-install:
