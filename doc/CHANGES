@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9600 2005/03/24 10:31:46 augustss Exp $
+$NetBSD: CHANGES,v 1.9601 2005/03/24 11:04:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1702,3 +1702,6 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated xmms to 1.2.10nb5 [wiz 2005-03-24]
 	Added album [augustss 2005-03-24]
 	Added album_themes [augustss 2005-03-24]
+	Updated gnome-core to 1.4.2nb17 [wiz 2005-03-24]
+	Updated gnome-panel to 1.4.2nb12 [wiz 2005-03-24]
+	Updated gnome-session to 1.4.2nb12 [wiz 2005-03-24]
