@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2001/02/25 04:17:40 hubertf Exp $
+# $NetBSD: Makefile,v 1.6 2001/07/15 15:34:57 wulf Exp $
 #
 
-DISTNAME=	geneweb-3.07
+DISTNAME=	geneweb-4.02
 CATEGORIES=	databases
 MASTER_SITES=	ftp://ftp.inria.fr/INRIA/Projects/cristal/geneweb/Src/
 
@@ -9,8 +9,8 @@ MAINTAINER=	wulf@netbsd.org
 HOMEPAGE=	http://cristal.inria.fr/~ddr/GeneWeb/
 COMMENT=	GeneWeb is a comprehensive genealogy database application
 
-DEPENDS+=	ocaml-3.*:../../lang/ocaml
-DEPENDS+=	camlp4-3.*:../../lang/camlp4
+DEPENDS+=	ocaml-3.01:../../lang/ocaml
+DEPENDS+=	camlp4-3.01.6:../../lang/camlp4
 
 USE_GMAKE=	yes
 
@@ -28,13 +28,14 @@ pre-configure:
 
 post-build:
 		cd ${WRKSRC} && ${GMAKE} distrib
-		${SED} s#@PREFIX@#${PREFIX}#g <${FILESDIR}/geneweb.sh \
-			>${WRKDIR}/geneweb.sh
+		${CAT} ${FILESDIR}/geneweb.sh | \
+		${SED} -e s#@PREFIX@#${PREFIX}#g > ${WRKDIR}/geneweb.sh
 
 do-install:
 		${INSTALL_DATA_DIR} ${PREFIX}/share/examples/geneweb
 		${INSTALL_DATA_DIR} ${PREFIX}/share/doc/geneweb
 		${INSTALL_DATA_DIR} ${PREFIX}/share/geneweb/etc
+		${INSTALL_DATA_DIR} ${PREFIX}/share/geneweb/gwtp_tmp
 		${INSTALL_DATA_DIR} ${PREFIX}/share/geneweb/images
 		${INSTALL_DATA_DIR} ${PREFIX}/share/geneweb/lang
 		${INSTALL_DATA_DIR} ${PREFIX}/share/geneweb/setup
@@ -42,18 +43,24 @@ do-install:
 		${INSTALL_PROGRAM} gwd ${PREFIX}/libexec && \
 		${INSTALL_PROGRAM} consang ${PREFIX}/bin && \
 		${INSTALL_PROGRAM} gwc ${PREFIX}/bin && \
-		${INSTALL_PROGRAM} gwtp ${PREFIX}/bin && \
+		${INSTALL_PROGRAM} gwtp_tmp/gwtp ${PREFIX}/bin && \
 		${INSTALL_PROGRAM} ged2gwb ${PREFIX}/bin && \
 		${INSTALL_PROGRAM} gwb2ged ${PREFIX}/bin && \
 		${INSTALL_PROGRAM} gwsetup ${PREFIX}/sbin && \
 		${INSTALL_PROGRAM} gwu ${PREFIX}/bin && \
 		${CP} -Rp doc/* ${PREFIX}/share/doc/geneweb && \
 		${CP} -Rp etc ${PREFIX}/share/geneweb && \
+		${CP} -Rp gwtp_tmp ${PREFIX}/share/geneweb && \
 		${CP} -Rp images ${PREFIX}/share/geneweb && \
 		${CP} -Rp lang ${PREFIX}/share/geneweb && \
 		${CP} -Rp setup ${PREFIX}/share/geneweb && \
 		${INSTALL_DATA} a.gwf ${PREFIX}/share/examples/geneweb && \
 		${INSTALL_DATA} only.txt ${PREFIX}/share/examples/geneweb
 		${INSTALL_SCRIPT} ${WRKDIR}/geneweb.sh ${PREFIX}/etc/rc.d/geneweb
+		${TOUCH} ${PREFIX}/share/geneweb/gwtp_tmp/passwd
+		${TOUCH} ${PREFIX}/share/geneweb/gwtp_tmp/gwtp.log
+		${CHMOD} 600 ${PREFIX}/share/geneweb/gwtp_tmp/passwd
+		${CHMOD} 600 ${PREFIX}/share/geneweb/gwtp_tmp/gwtp.log
+		${CHOWN} -R nobody.wheel ${PREFIX}/share/geneweb
 
 .include "../../mk/bsd.pkg.mk"
