@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1997/11/09 23:43:49 hubertf Exp $
+bin/asclock
+man/cat1/asclock.0
