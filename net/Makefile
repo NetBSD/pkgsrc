@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.543 2005/02/20 00:36:50 tron Exp $
+# $NetBSD: Makefile,v 1.544 2005/02/28 12:38:43 spz Exp $
 #
 
 COMMENT=	Networking tools
@@ -144,6 +144,7 @@ SUBDIR+=	iplog
 SUBDIR+=	ipv6calc
 SUBDIR+=	ipw
 SUBDIR+=	irrd
+SUBDIR+=	irrtoolset-nox11
 SUBDIR+=	ishell
 SUBDIR+=	isic
 SUBDIR+=	ispman
