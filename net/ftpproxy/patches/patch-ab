@@ -1,13 +1,20 @@
-$NetBSD: patch-ab,v 1.1 2002/05/09 16:55:52 taca Exp $
+$NetBSD: patch-ab,v 1.2 2003/09/02 17:27:18 taca Exp $
 
---- src/Makefile.orig	Tue Jan 22 00:46:03 2002
-+++ src/Makefile
-@@ -12,7 +12,7 @@
+--- Makefile.orig	2003-08-19 23:32:15.000000000 +0900
++++ Makefile
+@@ -3,13 +3,11 @@ VERSION =	1.2.1
+ DIR =		ftpproxy-$(VERSION)
+ TAR =		ftpproxy-$(VERSION)
+ 
+-export VERSION
+-
+ TARGETS =	ftp.proxy
  
  
- ftp.proxy:	$(FTPPROXY)
--	$(CC) -o $@ $(FTPPROXY)
-+	$(CC) -o $@ $(FTPPROXY) $(LIBS)
+-all:	$(TARGETS)
+-	cd src; make all 
++all:
++	cd src; make VERSION=${VERSION} all 
  
- 	
- clean:
+ 
+ install:	all
