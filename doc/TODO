@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1488 2004/03/09 22:21:09 jmmv Exp $
+$NetBSD: TODO,v 1.1489 2004/03/09 22:47:46 minskim Exp $
 
 Suggested new packages
 ======================
@@ -198,6 +198,7 @@ Suggested package updates
 	o gimageview-0.2.25
 	o global-4.6
 	o glpk-4.3
+	o gnome-vfs2-2.4.3
 	o gnomeicu-0.99
 	o gnumeric-1.2.5
 	o gnustep-1.9.1
