@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 1999/11/07 21:28:38 tron Exp $
+# $NetBSD: Makefile,v 1.3 2000/01/02 18:02:40 tron Exp $
 #
 
 DISTNAME=	gnome-audio-1.0.0
 CATEGORIES=	audio
-MASTER_SITES=	${MASTER_SITE_GNOME:=gnome-1.0.53/sources/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=stable/releases/gnome-1.0.53/}
 
 MAINTAINER=	rh@netbsd.org
 HOMEPAGE=	http://www.gnome.org/
