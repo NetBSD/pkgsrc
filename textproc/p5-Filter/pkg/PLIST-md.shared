@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST-md.shared,v 1.1.1.1 1999/12/02 16:39:36 rh Exp $
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Filter/Util/Call/Call.so
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Filter/Util/Call/Call.bs
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Filter/Util/Exec/Exec.so
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Filter/Util/Exec/Exec.bs
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Filter/decrypt/decrypt.so
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Filter/decrypt/decrypt.bs
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Filter/tee/tee.so
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Filter/tee/tee.bs
+@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Filter/decrypt
+@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Filter/tee
+@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Filter/Util/Call
+@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Filter/Util/Exec
+@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Filter/Util
+@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Filter
