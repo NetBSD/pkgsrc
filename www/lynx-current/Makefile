@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2004/01/24 15:23:47 grant Exp $
+# $NetBSD: Makefile,v 1.52 2004/02/13 08:07:52 jlam Exp $
 #
 
 DISTNAME=		lynx2.8.5dev.7
@@ -28,6 +28,8 @@ INSTALL_TARGET=		install-full install-lss
 MAKEFILE=       	makefile
 
 BUILD_DEFS+=		LYNX_SCREEN_LIB USE_SOCKS USE_INET6
+
+.include "../../mk/bsd.prefs.mk"
 
 # For nls/gettext
 CONFIGURE_ARGS+=	--enable-nls
@@ -59,19 +61,15 @@ CONFIGURE_ARGS+=	--enable-nested-tables
 CONFIGURE_ARGS+=	--enable-prettysrc
 CONFIGURE_ARGS+=	--enable-read-eta
 
-post-install:
-	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/lynx
-
-.include "../../mk/bsd.prefs.mk"
-
-.if (${LYNX_SCREEN_LIB} == slang)
+.if ${LYNX_SCREEN_LIB} == "slang"
 .  include "../../devel/libslang/buildlink3.mk"
-.elif (${LYNX_SCREEN_LIB} == ncurses)
+.elif ${LYNX_SCREEN_LIB} == "ncurses"
 USE_NCURSES=		color
 .  include "../../devel/ncurses/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-color-style
-.elif (${LYNX_SCREEN_LIB} == curses)
-.  if ${MACHINE_PLATFORM:MNetBSD-1.5*-i386} != ""
+.elif ${LYNX_SCREEN_LIB} == curses
+.  include "../../mk/curses.buildlink3.mk"
+.  if !empty(MACHINE_PLATFORM:MNetBSD-1.5*-i386)
 CONFIGURE_ARGS+=	--enable-color-style
 .  endif
 .else
@@ -110,6 +108,9 @@ CONFIGURE_ARGS+= 	--with-socks5
 .if defined(USE_INET6) && ${USE_INET6} == YES
 CONFIGURE_ARGS+=       --enable-ipv6
 .endif
+
+post-install:
+	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/lynx
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
