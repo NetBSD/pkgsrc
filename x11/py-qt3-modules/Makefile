@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/01/24 15:30:33 grant Exp $
+# $NetBSD: Makefile,v 1.7 2004/03/28 20:54:49 recht Exp $
 #
 
 DISTNAME=		PyQt-x11-gpl-3.8
@@ -14,6 +14,7 @@ USE_BUILDLINK2=		yes
 USE_X11=		yes
 USE_LIBTOOL=		yes
 USE_GNU_TOOLS+=		make
+USE_LANGUAGES=		c c++
 
 CONFIGURE_ARGS=		-q ${QTDIR} -m ${GMAKE} -p ${SIPBIN}
 
@@ -37,14 +38,14 @@ do-install:
 		(cd ${WRKSRC}/$${f} && ( \
 			${INSTALL_DATA} $${f}.py ${PREFIX}/${PYSITELIB}; \
 			${LIBTOOL} --mode=install ${INSTALL_DATA} \
-				lib$${f}cmodule.la ${PREFIX}/${PYSITELIB} \
+				lib$${f}cmodule.la ${PREFIX}/${QTLIBDIR} \
 			) \
 		); \
 	 done)
 	(for f in ${PYQTMODULES}; do \
-		(cd ${PREFIX}/${PYSITELIB}; for i in lib$${f}cmodule.*; do \
-			${LN} -sf ${PREFIX}/${PYSITELIB}/$$i \
-				${PREFIX}/${QTLIBDIR}/$$i; done \
+		(cd ${PREFIX}/${QTLIBDIR}; for i in lib$${f}cmodule.*; do \
+			${LN} -sf ${PREFIX}/${QTLIBDIR}/$$i \
+				${PREFIX}/${PYSITELIB}/$$i; done \
 		); \
 	done)
 
