@@ -1,16 +1,55 @@
-$NetBSD: patch-ah,v 1.1 2000/10/11 16:28:54 wennmach Exp $
+$NetBSD: patch-ah,v 1.2 2002/04/05 11:32:22 wennmach Exp $
 
-Do not install the des executable. This avoids a conflict with the
-openssl package, which installs an executable with the same name
-(and functionality) into the same place.
+Do not install the des executable, nor the des.1 man page. This avoids
+a conflict with the openssl package, which installs an executable with
+the same name (and functionality) into the same place.
 
---- lib/des/Makefile.in.orig	Wed Oct 11 18:07:08 2000
-+++ lib/des/Makefile.in	Wed Oct 11 18:08:09 2000
-@@ -42,7 +42,6 @@
- 	des$(EXECSUFFIX) \
- 	rpw$(EXECSUFFIX) \
- 	speed$(EXECSUFFIX)
--PROGS2INSTALL = des$(EXECSUFFIX)
- LIBNAME = $(LIBPREFIX)des
- LIBEXT = @LIBEXT@
- LIBPREFIX = @LIBPREFIX@
+--- lib/des/Makefile.am.orig	Mon Apr  1 11:48:01 2002
++++ lib/des/Makefile.am	Mon Apr  1 11:49:39 2002
+@@ -13,7 +13,7 @@
+ 
+ TESTS = destest mdtest md5crypt_test
+ CHECK_LOCAL = 
+-bin_PROGRAMS = des #rpw speed
++bin_PROGRAMS =
+ 
+ des_SOURCES = des.c des_ver.h
+ 
+@@ -59,7 +59,7 @@
+ EXTRA_libdes_la_SOURCES = dllmain.c passwd_dialog.aps passwd_dialog.clw \
+ 	passwd_dialog.rc passwd_dialog.res passwd_dlg.c passwd_dlg.h resource.h
+ 
+-man_MANS = des.1 des_crypt.3
++man_MANS = des_crypt.3
+ 
+ ## this is an awful lot of junk, but it's just as well to include everything
+ EXTRA_DIST =		\
+--- lib/des/Makefile.in.orig	Thu Apr  4 16:10:37 2002
++++ lib/des/Makefile.in	Thu Apr  4 16:11:27 2002
+@@ -212,7 +212,7 @@
+ check_PROGRAMS = destest mdtest md5crypt_test
+ 
+ TESTS = destest mdtest md5crypt_test
+-bin_PROGRAMS = des #rpw speed
++bin_PROGRAMS =
+ 
+ des_SOURCES = des.c des_ver.h
+ 
+@@ -260,7 +260,7 @@
+ 	passwd_dialog.rc passwd_dialog.res passwd_dlg.c passwd_dlg.h resource.h
+ 
+ 
+-man_MANS = des.1 des_crypt.3
++man_MANS = des_crypt.3
+ 
+ EXTRA_DIST = \
+ 	COPYRIGHT	\
+@@ -329,7 +329,7 @@
+ rc4_enc.lo read_pwd.lo rnd_keys.lo set_key.lo sha.lo str2key.lo \
+ xcbc_enc.lo
+ libdes_la_OBJECTS =  $(am_libdes_la_OBJECTS)
+-bin_PROGRAMS =  des$(EXEEXT)
++bin_PROGRAMS =
+ check_PROGRAMS =  destest$(EXEEXT) mdtest$(EXEEXT) \
+ md5crypt_test$(EXEEXT)
+ PROGRAMS =  $(bin_PROGRAMS)
