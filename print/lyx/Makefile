@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 1998/08/20 15:17:24 tsarna Exp $
+# $NetBSD: Makefile,v 1.12 1998/11/13 13:04:51 matthias Exp $
 # FreeBSD Id: Makefile,v 1.14 1998/02/14 16:46:50 andreas Exp
 #
 
@@ -16,7 +16,7 @@ RUN_DEPENDS=	latex:../../print/teTeX \
 DEPENDS+=	xpm-3.4k:../../graphics/xpm
 DEPENDS+=	xforms-0.88:../../x11/xforms
 
-ONLY_FOR_ARCHS=	arm32 i386 m68k sparc
+ONLY_FOR_ARCHS=	arm32 i386 m68k sparc ns32k
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS= --with-extra-lib=${X11BASE}/lib --with-extra-inc="${X11BASE}/include ${X11BASE}/include/X11"
