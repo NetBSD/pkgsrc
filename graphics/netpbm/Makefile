@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.95 2004/07/06 13:45:14 tron Exp $
+# $NetBSD: Makefile,v 1.96 2004/08/04 10:51:58 dmcmahill Exp $
 
 DISTNAME=	netpbm-10.18.13
 CATEGORIES=	graphics
@@ -31,6 +31,9 @@ MAKE_ENV+=	NETWORKLD="${LIBS}"
 
 .if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
 GCC_REQD+=		2.95.3
+.endif
+.if ${MACHINE_ARCH} == "alpha"
+GCC_REQD+=      3.0
 .endif
 
 pre-configure:
