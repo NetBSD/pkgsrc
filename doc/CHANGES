@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2808 2003/07/17 08:53:18 itojun Exp $
+$NetBSD: CHANGES,v 1.2809 2003/07/17 09:02:31 adam Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2839,3 +2839,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added avr-gcc-3.3.2003.05.11 [wennmach 2003-07-16]
 	Added avr-gdb-5.2.1 [wennmach 2003-07-16]
 	Updated nsd to 1.2.1 [itojun 2003-07-17]
+	Updated xpaint to 2.7.0 [adam 2003-07-17]
