@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1494 2004/08/27 06:29:08 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1495 2004/09/01 00:10:58 schmonz Exp $
 #
 # This file is in the public domain.
 #
@@ -588,7 +588,7 @@ EXTRACT_SUFX?=		.tar.gz
 
 # We need bzip2 for PATCHFILES with .bz2 suffix.
 .if defined(PATCHFILES)
-.  if ${PATCHFILES:E} == "bz2" && ${EXTRACT_SUFX} != ".tar.bz2"
+.  if !empty(PATCHFILES:M*.bz2) && ${EXTRACT_SUFX} != ".tar.bz2"
 .    if exists(/usr/bin/bzcat)
 BZCAT=			/usr/bin/bzcat
 .    else
