@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2005/01/13 09:27:06 manu Exp $
+--- build/rrd.sh.orig	2005-01-12 18:58:04.000000000 +0100
++++ build/rrd.sh	2005-01-12 18:58:53.000000000 +0100
+@@ -1,9 +1,6 @@
+ 	echo "Checking for RRDtool ..."
+ 
+-	RRDINC=""
+-	RRDLIB=""
+-	PNGLIB=""
+ 	for DIR in /opt/rrdtool* /usr/local/rrdtool* /usr/local /usr
+ 	do
+ 		if test -f $DIR/include/rrd.h
+ 		then

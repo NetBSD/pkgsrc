@@ -1,0 +1,12 @@
+$NetBSD: patch-af,v 1.1.1.1 2005/01/13 09:27:06 manu Exp $
+--- build/pcre.sh.orig	2005-01-12 19:01:30.000000000 +0100
++++ build/pcre.sh	2005-01-12 19:02:00.000000000 +0100
+@@ -1,8 +1,6 @@
+ 	echo "Checking for PCRE ..."
+ 
+-	PCREINC=""
+-	PCRELIB=""
+ 	for DIR in /opt/pcre* /usr/local/pcre* /usr/local /usr
+ 	do
+ 		if test -f $DIR/include/pcre.h
+ 		then

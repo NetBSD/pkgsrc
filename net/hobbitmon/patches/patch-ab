@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2005/01/13 09:27:06 manu Exp $
+--- build/fping.sh.orig	2005-01-12 18:56:26.000000000 +0100
++++ build/fping.sh	2005-01-12 18:56:38.000000000 +0100
+@@ -1,9 +1,8 @@
+ #!/bin/sh
+ 
+ 	echo "Checking for fping ..."
+ 
+-	FPING=""
+ 
+ 	for DIR in /bin /usr/bin /sbin /usr/sbin /usr/local/bin /usr/local/sbin /opt/bin
+ 	do
+ 		if test -x $DIR/fping
