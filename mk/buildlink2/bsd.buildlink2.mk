@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.11 2002/09/03 21:43:40 jlam Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.12 2002/09/03 22:06:50 jlam Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -555,7 +555,7 @@ CXX.SunOS?=		${SUNWSPROBASE}/bin/CC
 buildlink-${_BLNK_OPSYS}-wrappers: buildlink-wrappers
 .for _wrappee_ in ${_BLNK_WRAPPEES.${_BLNK_OPSYS}}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	if [ ! -x "${${_wrappee_}.${_BLNK_OPSYS}}" ]; then		\
+	if [ -x "${${_wrappee_}.${_BLNK_OPSYS}}" ]; then		\
 		wrapper="${BUILDLINK_DIR}/bin/${${_wrappee_}.${_BLNK_OPSYS}:T}"; \
 		${ECHO_BUILDLINK_MSG}					\
 			"Creating ${_BLNK_OPSYS} wrapper: $${wrapper}";	\
