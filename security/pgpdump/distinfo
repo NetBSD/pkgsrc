@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2004/10/28 11:36:59 taca Exp $
+$NetBSD: distinfo,v 1.14 2005/01/04 13:23:24 taca Exp $
 
-SHA1 (pgpdump-0.23.tar.gz) = 89231fbdef9a549b70eb8705d61bd4b5042a12bd
-Size (pgpdump-0.23.tar.gz) = 54613 bytes
+SHA1 (pgpdump-0.24.tar.gz) = 3c91b350a352eaf42496a8028b6f432cff8e505b
+Size (pgpdump-0.24.tar.gz) = 54735 bytes
 SHA1 (patch-aa) = 094442e84f26ce018e9baa7b7aeba2306a0f6281
