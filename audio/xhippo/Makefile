@@ -1,18 +1,21 @@
-# $NetBSD: Makefile,v 1.12 2001/05/09 11:29:11 agc Exp $
+# $NetBSD: Makefile,v 1.13 2003/02/14 02:50:08 hubertf Exp $
 #
 
-DISTNAME=	xhippo-2.0
+DISTNAME=	xhippo-3.3
 CATEGORIES=	audio x11
-MASTER_SITES=	ftp://ftp.netbsd.org/pub/NetBSD/packages/distfiles/
+MASTER_SITES=	${MASTER_SITE_GNU:=xhippo/}
 
 MAINTAINER=	hubertf@netbsd.org
-HOMEPAGE=	http://zenchaos.netpedia.net/
+HOMEPAGE=	http://www.gnu.org/software/xhippo/xhippo.html
 COMMENT=	Generic playlist manager for UNIX
 
-DEPENDS=	gtk+-1.2.*:../../x11/gtk
+USE_X11=	yes
+GNU_CONFIGURE=	yes
+USE_BUILDLINK2=	yes
 
-USE_X11=	YES
-GNU_CONFIGURE=	YES
+CONFIGURE_ENV+=	--with-gnome=no
+
+CONF_FILES=	${PREFIX}/share/doc/xhippo/xhippo.config.example ${PKG_SYSCONFDIR}/xhippo.config 
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/xhippo
@@ -26,4 +29,6 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/xhippo.txt.gz ${PREFIX}/share/doc/xhippo
 	${INSTALL_DATA} ${WRKSRC}/doc/xhippo.sgml ${PREFIX}/share/doc/xhippo
 
+.include "../../x11/gtk/buildlink2.mk"
+.include "../../audio/mad/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
