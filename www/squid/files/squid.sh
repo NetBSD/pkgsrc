@@ -1,9 +1,10 @@
 #!/bin/sh
 #
-# $NetBSD: squid.sh,v 1.7 2001/02/24 18:01:28 tron Exp $
+# $NetBSD: squid.sh,v 1.8 2001/05/10 21:58:02 tron Exp $
 #
 # PROVIDE: squid
 # REQUIRE: DAEMON
+# KEYWORD: shutdown
 
 name="squid"
 command="@PREFIX@/sbin/${name}"
