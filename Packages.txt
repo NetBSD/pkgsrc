@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.352 2004/08/22 19:42:10 jlam Exp $
+# $NetBSD: Packages.txt,v 1.353 2004/08/31 00:14:51 rh Exp $
 ###########################################################################
 
 			==========================
@@ -1987,7 +1987,7 @@ contain the necessary shared libraries.
 Please take careful consideration before adjusting BUILDLINK_DEPENDS.<pkg>
 as we don't want to cause unneeded package deletions and rebuilds.  In
 many cases, new versions of packages work just fine with older
-dependencies.  See section 10 for more information about dependencies on
+dependencies.  See section 11 for more information about dependencies on
 other packages, including the BUILDLINK_RECOMMENDED and RECOMMENDED
 definitions.
 
@@ -2549,7 +2549,7 @@ used across different systems that may have different versions of binary
 packages installed.
 
 For security fixes, please update the package vulnerabilities file as well as
-setting RECOMMENDED (see section 10.21 for more information).
+setting RECOMMENDED (see section 11.21 for more information).
 
 (c) If your package needs some executable to be able to run correctly, this
 is specified using the DEPENDS definition. The pkgsrc/print/lyx package needs
@@ -3140,7 +3140,7 @@ to take some extra steps to make sure they get registered in the database:
     back to authors!
 
  3) Check the PLIST and remove any entries under the etc/gconf directory,
-    as they will be handled automatically.  See section 10.27 for more
+    as they will be handled automatically.  See section 11.27 for more
     information.
 
  4) Define the GCONF2_SCHEMAS variable in your Makefile with a list of all
@@ -3330,7 +3330,7 @@ the *-x11-dirs packages.  Just specify the name without that part and pkgsrc
  11.47 How can I tweak 'make print-PLIST' output?
  ================================================
 
-If you have used any of the *-dirs packages, as explained in 10.45, you
+If you have used any of the *-dirs packages, as explained in 11.45, you
 may have noticed that 'make print-PLIST' outputs a set of @comment's
 instead of real @dirrm lines.  You can also do this for specific directories
 and files, so that the results of that command are very close to reality.
