@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6156 2004/06/06 05:09:57 schmonz Exp $
+$NetBSD: CHANGES,v 1.6157 2004/06/06 07:22:57 agc Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2812,3 +2812,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated freeze to 2.5nb2 [recht 2004-06-05]
 	Downgraded smlnj to 110.42 [snj 2004-06-06]
 	Updated tmda to 1.0.3 [schmonz 2004-06-06]
+	Added applerecords-0.4 [agc 2004-06-06]
