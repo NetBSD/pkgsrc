@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 1998/08/23 07:34:17 garbled Exp $
+man/man1/Fvwm-Wharf.1
+bin/Fvwm-Wharf
