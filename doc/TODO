@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.163 2003/01/09 19:36:55 jmmv Exp $
+$NetBSD: TODO,v 1.164 2003/01/09 22:34:02 grant Exp $
 
 Suggested new packages
 ======================
@@ -268,6 +268,9 @@ Suggested cleanups in pkgsrc
 	o Make packages install their configuration files under the
 	  examples hierarchy, using bsd.pkg.install.mk to copy them
 	  to the PKG_SYSCONFDIR directory when necessary.
+
+	o Make packages install honour PKGLOCALEDIR by setting
+	  USE_PKGLOCALEDIR=YES where appropriate (for eg. Solaris).
 
 	o Deprecate LTCONFIG_OVERRIDE -- replace with appropriate LIBTOOL_OVERRIDE
 
