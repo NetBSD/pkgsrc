@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-#	$NetBSD: src2nbcompat,v 1.1 2003/09/01 16:27:10 jlam Exp $
+#	$NetBSD: src2nbcompat,v 1.2 2003/09/01 22:49:42 jlam Exp $
 #
 # Copyright (c) 2003 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -75,10 +75,17 @@ for f in $files; do
 	newf=`echo $f | sed 's,^\./,,'`
 	case $newf in
 	*CVS/*)
+		# Skip copying over any CVS informatin.
 		;;
 	*Makefile|*Makefile.inc)
+		# Skip copying over the Makefiles since we'll be using
+		# a GNU autoconf-based build infrastructure.
 		;;
 	*.[ch])
+		# Add "#include <nbcompat.h>" before the first system
+		# header inclusion.  Protect all system headers with
+		# "#if HAVE_FOO_H ... #endif" guards.
+		#
 		awk '							\
 			BEGIN { seen = 0 }				\
 			/^\#[ 	]*include[ 	]+<[^ 	]*>/ {		\
@@ -99,11 +106,13 @@ for f in $files; do
 		' $newf > $dest/$newf
 		;;
 	*.[1-9])
+		# Copy the manpage over, and generate the catpage.
 		cp $newf $dest/$newf
 		catf=`echo $newf | sed 's,\.\([1-9]\),.cat\1,'`
 		nroff -mandoc $newf > $dest/$catf
 		;;
 	*)
+		# Everything else just gets copied verbatim.
 		cp $newf $dest/$newf
 		;;
 	esac
