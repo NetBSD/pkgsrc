@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9764 2005/04/05 09:52:32 salo Exp $
+$NetBSD: CHANGES,v 1.9765 2005/04/05 12:44:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1913,3 +1913,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated m4 to 1.4.3 [wiz 2005-04-05]
 	Updated cvsweb to 3.0.5 [wiz 2005-04-05]
 	Updated gaim to 1.2.1 [salo 2005-04-05]
+	Updated centericq to 4.20.0 [wiz 2005-04-05]
