@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2004/04/27 21:32:57 reed Exp $
+# $NetBSD: Makefile,v 1.7 2004/04/27 21:38:42 reed Exp $
 
 DISTNAME=		${DISTFILES}
 PKGNAME=		XFree86-libs-${XF_VER}
+PKGREVISION=		1
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XFREE}
 DISTFILES=		XFree86-4.4.0-src-1.tgz XFree86-4.4.0-src-2.tgz \
@@ -15,7 +16,7 @@ CONFLICTS+=		xextensions-[0-9]*
 CONFLICTS+=		libX11-[0-9]*
 CONFLICTS+=		libXau-[0-9]*
 
-DEPENDS=		imake>=4.4.0:../../x11/imake
+BUILD_DEPENDS=		imake>=4.4.0:../../x11/imake
 
 .include "../../mk/bsd.prefs.mk"
 
