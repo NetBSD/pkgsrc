@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/07/21 23:09:02 garbled Exp $
+bin/netscape
+bin/netscape.bin
+bin/movemail
+bin/movemail.bin
+share/netscape/nls/C
+share/netscape/nls/nls.dir
+share/netscape/java/java_301
+share/netscape/mailcap
+@dirrm share/netscape/java
+@dirrm share/netscape/nls
+@dirrm share/netscape
