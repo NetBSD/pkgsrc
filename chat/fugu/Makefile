@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2002/09/21 23:46:46 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2002/10/12 11:21:25 wiz Exp $
 #
 
 DISTNAME=	fugu-1.0
@@ -9,14 +9,17 @@ MAINTAINER=	lukem@netbsd.org
 HOMEPAGE=	http://fugu.gale.org
 COMMENT=	graphical client for the gale secure instant messaging system
 
-DEPENDS+=	rsaref-2.0p3:../../security/rsaref/
 PYTHON_VERSIONS_ACCEPTED= 20 21 # no 22 - uses Makefile.pre.in
 
 GNU_CONFIGURE= 	YES
 CONFIGURE_ENV+=	vi_cv_path_python=${PYTHONBIN}
-LDFLAGS+=	-L${LOCALBASE}/lib -Wl,-R${LOCALBASE}/lib
-CPPFLAGS+=	-I${LOCALBASE}/include -I${LOCALBASE}/include/rsaref
+LDFLAGS+=	-L${BUILDLINK_PREFIX.py-Pmw}/lib \
+		-Wl,-R${BUILDLINK_PREFIX.py-Pmw}/lib
+CPPFLAGS+=	-I${BUILDLINK_PREFIX.py-Pmw}/include \
+		-I${BUILDLINK_PREFIX.rsaref}/include/rsaref \
+		-I${BUILDLINK_PREFIX.rsaref}/include
 
 .include "../../lang/python/application.mk"
-.include "../../x11/py-Pmw/buildlink.mk"
+.include "../../security/rsaref/buildlink2.mk"
+.include "../../x11/py-Pmw/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
