@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.11 2001/05/03 05:11:43 jlam Exp $
+# $NetBSD: Makefile.common,v 1.12 2001/05/03 05:13:20 jlam Exp $
 
 DISTNAME=		ghostscript-${GS_VERS}
 GS_VERS=		6.01
@@ -171,36 +171,36 @@ post-extract:
 	${MV} ${WRKSRC}/lib/fixmswrd.pl ${WRKSRC}/lib/fixmswrd.pl.in
 
 post-patch:
-	if [ ! -f ${WRKDIR}/dmp_site.ps.bak ]; then \
-		${MV} ${WRKDIR}/dmp_site.ps ${WRKDIR}/dmp_site.ps.bak; \
+	if [ ! -f ${WRKDIR}/dmp_site.ps.bak ]; then			\
+		${MV} ${WRKDIR}/dmp_site.ps ${WRKDIR}/dmp_site.ps.bak;	\
 	fi
-	${SED} -e "s,epsimage\.src,${GSINST_DIR}/lib/escp_24.src,g" \
-		< ${WRKDIR}/dmp_site.ps.bak > ${WRKDIR}/dmp_site.ps
+	${SED} -e "s|epsimage\.src|${GSINST_DIR}/lib/escp_24.src|g"	\
+		${WRKDIR}/dmp_site.ps.bak > ${WRKDIR}/dmp_site.ps
 
 do-configure:
 	#
 	# Append build rules for extra drivers to contrib.mak
 	#
-	${CAT}	${WRKSRC}/src/contrib.mak-5.94.add \
-		${WRKSRC}/src/gdevlips.mak \
-		${WRKSRC}/src/gdev10v.mak \
-		${WRKSRC}/src/gdevmjc.mak \
-		${WRKSRC}/src/gdevrpdl.mak \
-		${WRKSRC}/src/gdevdmpr.mak \
-		${WRKSRC}/src/gdevalps.mak-5.50 \
-		${WRKSRC}/src/gdevmd2k.mak-5.8x \
-		${WRKSRC}/src/gdevprsc.mak \
+	${CAT}	${WRKSRC}/src/contrib.mak-5.94.add			\
+		${WRKSRC}/src/gdevlips.mak				\
+		${WRKSRC}/src/gdev10v.mak				\
+		${WRKSRC}/src/gdevmjc.mak				\
+		${WRKSRC}/src/gdevrpdl.mak				\
+		${WRKSRC}/src/gdevdmpr.mak				\
+		${WRKSRC}/src/gdevalps.mak-5.50				\
+		${WRKSRC}/src/gdevmd2k.mak-5.8x				\
+		${WRKSRC}/src/gdevprsc.mak				\
 		>> ${WRKSRC}/src/contrib.mak
 	#
 	# Prepend device list to unix-gcc.mak
 	#
-	${CAT}	${MAKEFRAGS} \
-		${WRKSRC}/src/unix-gcc.mak \
+	${CAT}	${MAKEFRAGS}						\
+		${WRKSRC}/src/unix-gcc.mak				\
 		> ${WRKDIR}/unix-gcc.mak
 	${MV} -f ${WRKDIR}/unix-gcc.mak ${WRKSRC}/src
 
-	${SED}	-e "s,@PERL@,${PERL5},g" \
-		< ${WRKSRC}/lib/fixmswrd.pl.in > ${WRKSRC}/lib/fixmswrd.pl
+	${SED}	-e "s|@PERL@|${PERL5}|g"				\
+		${WRKSRC}/lib/fixmswrd.pl.in > ${WRKSRC}/lib/fixmswrd.pl
 
 post-install:
 	strip ${PREFIX}/bin/gs
