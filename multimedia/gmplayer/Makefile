@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/06/18 18:43:23 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2004/06/21 07:01:38 tron Exp $
 
 PKGNAME=	gmplayer-${MPLAYER_PKG_VERSION}
 
@@ -41,6 +41,7 @@ SITES_${skin}= ${SKIN_SITES}
 
 DISTFILES+=	${DISTNAME}${EXTRACT_SUFX}
 DISTFILES+=	${SKINS}
+DISTINFO_FILE=	${.CURDIR}/distinfo
 
 USE_BUILDLINK3=		YES
 CONFIGURE_ARGS+=	--enable-gui --disable-mencoder \
