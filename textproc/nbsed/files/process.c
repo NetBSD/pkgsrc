@@ -1,9 +1,39 @@
-/*	$NetBSD: process.c,v 1.6 2004/06/13 13:12:09 grant Exp $	*/
+/*	$NetBSD: process.c,v 1.7 2004/08/21 08:39:54 jlam Exp $	*/
+
+/*-
+ * Copyright (c) 1992, 1993, 1994
+ *	The Regents of the University of California.  All rights reserved.
+ *
+ * This code is derived from software contributed to Berkeley by
+ * Diomidis Spinellis of Imperial College, University of London.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions
+ * are met:
+ * 1. Redistributions of source code must retain the above copyright
+ *    notice, this list of conditions and the following disclaimer.
+ * 2. Redistributions in binary form must reproduce the above copyright
+ *    notice, this list of conditions and the following disclaimer in the
+ *    documentation and/or other materials provided with the distribution.
+ * 3. Neither the name of the University nor the names of its contributors
+ *    may be used to endorse or promote products derived from this software
+ *    without specific prior written permission.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE REGENTS AND CONTRIBUTORS ``AS IS'' AND
+ * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ * ARE DISCLAIMED.  IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE LIABLE
+ * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+ * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+ * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+ * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+ * SUCH DAMAGE.
+ */
 
 /*-
  * Copyright (c) 1992 Diomidis Spinellis.
- * Copyright (c) 1992, 1993, 1994
- *	The Regents of the University of California.  All rights reserved.
  *
  * This code is derived from software contributed to Berkeley by
  * Diomidis Spinellis of Imperial College, University of London.
@@ -37,61 +67,61 @@
  * SUCH DAMAGE.
  */
 
+#if HAVE_CONFIG_H
 #include "config.h"
-
-#ifdef HAVE_SYS_CDEFS_H
+#endif
+#include <nbcompat.h>
+#if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-
 #ifndef lint
 #if 0
 static char sccsid[] = "@(#)process.c	8.6 (Berkeley) 4/20/94";
 #else
-__RCSID("$NetBSD: process.c,v 1.6 2004/06/13 13:12:09 grant Exp $");
+__RCSID("$NetBSD: process.c,v 1.7 2004/08/21 08:39:54 jlam Exp $");
 #endif
 #endif /* not lint */
 
+#if HAVE_SYS_TYPES_H
 #include <sys/types.h>
+#endif
+#if HAVE_SYS_STAT_H
 #include <sys/stat.h>
-
-#ifdef HAVE_SYS_IOCTL_H
+#endif
+#if HAVE_SYS_IOCTL_H
 #include <sys/ioctl.h>
 #endif
-
-#ifdef HAVE_SYS_UIO_H
+#if HAVE_SYS_UIO_H
 #include <sys/uio.h>
 #endif
 
-#ifdef HAVE_SYS_TERMIOS_H
-#include <sys/termios.h>
-#endif
-
+#if HAVE_CTYPE_H
 #include <ctype.h>
-
-#ifdef HAVE_ERRNO_H
+#endif
+#if HAVE_ERRNO_H
 #include <errno.h>
 #endif
-
-#ifdef HAVE_FCNTL_H
+#if HAVE_FCNTL_H
 #include <fcntl.h>
 #endif
-
-#ifdef HAVE_LIMITS_H
+#if HAVE_LIMITS_H
 #include <limits.h>
 #endif
-
-#ifdef HAVE_REGEX_H
+#if HAVE_REGEX_H
 #include <regex.h>
 #endif
-
+#if HAVE_STDIO_H
 #include <stdio.h>
+#endif
+#if HAVE_STDLIB_H
 #include <stdlib.h>
-
-#ifdef HAVE_STRING_H
+#endif
+#if HAVE_STRING_H
 #include <string.h>
 #endif
-
+#if HAVE_UNISTD_H
 #include <unistd.h>
+#endif
 
 #include "defs.h"
 #include "extern.h"

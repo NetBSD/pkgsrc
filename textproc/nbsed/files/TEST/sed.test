@@ -1,5 +1,5 @@
 #!/bin/sh -
-#	$NetBSD: sed.test,v 1.1.1.1 2003/08/18 17:35:00 agc Exp $
+#	$NetBSD: sed.test,v 1.2 2004/08/21 08:39:54 jlam Exp $
 #
 # Copyright (c) 1992 Diomidis Spinellis.
 # Copyright (c) 1992, 1993
@@ -34,7 +34,7 @@
 # SUCH DAMAGE.
 #
 #	from: @(#)sed.test	8.1 (Berkeley) 6/6/93
-#	$NetBSD: sed.test,v 1.1.1.1 2003/08/18 17:35:00 agc Exp $
+#	$NetBSD: sed.test,v 1.2 2004/08/21 08:39:54 jlam Exp $
 #
 
 # sed Regression Tests
@@ -513,7 +513,7 @@ u2/g' lines1
 
 test_error()
 {
-	exec 0>&3 4>&1 5>&2
+	exec 3<&0 4>&1 5>&2
 	exec 0</dev/null
 	exec 2>&1
 	set -x
@@ -548,7 +548,7 @@ test_error()
 	$TEST '!' && exit 1
 	$TEST supercalifrangolisticexprialidociussupercalifrangolisticexcius
 	set +x
-	exec 0>&3 1>&4 2>&5
+	exec 0<&3 1>&4 2>&5
 }
 
 main
