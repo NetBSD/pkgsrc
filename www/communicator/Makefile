@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1999/04/02 09:04:54 tron Exp $
+# $NetBSD: Makefile,v 1.5 1999/04/17 02:42:16 jlam Exp $
 #
 # Every effort has been made to keep the communicator and navigator
 # Makefiles as similar as possible.
@@ -16,22 +16,22 @@ UNAME=		sparc-sun-sunos4.1.3_U1
 UNAME_SHORT=	sunos413
 .endif
 #
-DISTNAME=	${BINNAME}-v45-export.${UNAME}
-PKGNAME=	${BINNAME}-4.5
+DISTNAME=	${BINNAME}-v451-export.${UNAME}
+PKGNAME=	${BINNAME}-4.51
 CATEGORIES=	www
 SUB=		english/unix/unsupported/${UNAME_SHORT}/complete_install
-MASTER_SITES=	ftp://ftp.netscape.org/pub/communicator/4.5/${SUB}/ \
-		ftp://sunsite.utk.edu/pub/netscape/communicator/4.5/${SUB}/ \
-		ftp://ftp-uk.netscape.com/pub/communicator/4.5/${SUB}/ \
-		ftp.informatik.rwth-aachen.de:/pub/mirror/ftp.netscape.com/pub/communicator/4.5/${SUB}/
+MASTER_SITES=	ftp://ftp.netscape.org/pub/communicator/4.51/${SUB}/ \
+		ftp://sunsite.utk.edu/pub/netscape/communicator/4.51/${SUB}/ \
+		ftp://ftp-uk.netscape.com/pub/communicator/4.51/${SUB}/ \
+		ftp.informatik.rwth-aachen.de:/pub/mirror/ftp.netscape.com/pub/communicator/4.51/${SUB}/
 ONLY_FOR_ARCHS=	i386 sparc
 
-MAINTAINER=	abs@netbsd.org
+MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://home.netscape.com/browsers/index.html
 
 NO_BUILD=	yes
 
-WRKSRC=         ${WRKDIR}/${BINNAME}-v45.${UNAME}
+WRKSRC=         ${WRKDIR}/${BINNAME}-v451.${UNAME}
 MOZILLA_HOME=	${PREFIX}/lib/netscape/${PKGNAME}
 PLIST_SRC=	${WRKDIR}/.PLIST_SRC
 
@@ -43,9 +43,9 @@ do-install:
     ldap10.jar resource.jar scd10.jar
 	${INSTALL_DATA} ${WRKSRC}/${file} ${MOZILLA_HOME}/java/classes
 .endfor
-	cd ${MOZILLA_HOME} ; tar xpzf ${WRKSRC}/nethelp-v45.nif
-	cd ${MOZILLA_HOME} ; tar xpzf ${WRKSRC}/netscape-v45.nif
-	cd ${MOZILLA_HOME} ; tar xpzf ${WRKSRC}/spellchk-v45.nif
+	cd ${MOZILLA_HOME} ; tar xpzf ${WRKSRC}/nethelp-v451.nif
+	cd ${MOZILLA_HOME} ; tar xpzf ${WRKSRC}/netscape-v451.nif
+	cd ${MOZILLA_HOME} ; tar xpzf ${WRKSRC}/spellchk-v451.nif
 
 	${SED} -e 's#@@MOZILLA_HOME@@#${MOZILLA_HOME}#g' \
 	    <${FILESDIR}/${BINNAME}.sh >${WRKDIR}/${BINNAME}.sh
