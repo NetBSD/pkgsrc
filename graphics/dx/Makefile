@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/05/08 19:48:45 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.9 2001/09/12 21:09:04 jlam Exp $
 
 DISTNAME=	dx-4.1.0
 CATEGORIES=	graphics
@@ -8,15 +8,40 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.research.ibm.com/dx/
 COMMENT=	Open Visualization Data Explorer
 
-DEPENDS+=	jpeg-6b:../../graphics/jpeg
+USE_BUILDLINK_ONLY=	yes
+USE_GMAKE=		yes
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--without-javadx
 
-USE_MOTIF=	yes
-USE_MESA=	yes
-GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
+# Ensure we export symbols in the linked shared object.
+LDFLAGS+=		-Wl,--export-dynamic
 
-#override ARCH to avoid picking up a bad ${ARCH} during the build
-MAKE_ENV+=	ARCH=""
-CONFIGURE_ENV+=	ARCH=""
+CPPFLAGS+=		-I${BUILDLINK_DIR}/include/freetype	# freetype.h
 
+# Override ARCH to avoid picking up a bad ${ARCH} during the build.
+MAKE_ENV+=		ARCH=""
+CONFIGURE_ENV+=		ARCH=""
+
+# Remove "-I/usr/include -I/usr/local/include" from the INCLUDES, and
+# "-L/usr/X11R6/lib -L/usr/local/lib" from the *_LDADD  passed to
+# the compiler, as this defeats buildlink.
+#
+post-patch:
+	cd ${WRKSRC};							\
+	files=`${FIND} . -name "Makefile.in" -print`;			\
+	for file in $${files}; do					\
+		${SED}	-e "/^INCLUDES.*=.*/s|[ 	]*-I/usr/include[ 	]*-I/usr/local/include||" \
+			-e "/^[^ ]*LDADD.*=.*/s|[ 	]*-L/usr/X11R6/lib[ 	]*-L/usr/local/lib||" \
+			$${file} > $${file}.fixed;			\
+		${MV} -f $${file}.fixed $${file};			\
+	done
+
+.include "../../devel/netcdf/buildlink.mk"
+.include "../../graphics/Mesa/buildlink.mk"
+.include "../../graphics/freetype-lib/buildlink.mk"
+.include "../../graphics/jpeg/buildlink.mk"
+.include "../../graphics/png/buildlink.mk"
+.include "../../graphics/tiff/buildlink.mk"
+.include "../../mk/motif.buildlink.mk"
+.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
