@@ -1,0 +1,2 @@
+Some libraries required for the nessus package: libhosts_gatherer,
+libnessus, libpcap-nessus, libpeks.
