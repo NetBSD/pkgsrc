@@ -1,0 +1,34 @@
+# $NetBSD: Makefile,v 1.1.1.1 2003/05/23 14:44:27 seb Exp $
+#
+
+DISTNAME=		scli-0.2.12
+CATEGORIES=		net
+MASTER_SITES=		ftp://ftp.ibr.cs.tu-bs.de/pub/local/scli/
+
+MAINTAINER=		seb@netbsd.org
+HOMEPAGE=		http://www.ibr.cs.tu-bs.de/projects/scli/
+COMMENT=		SNMP command line interface
+
+USE_BUILDLINK2=		yes
+GNU_CONFIGURE=		yes
+TEXINFO_REQD=		4.2 # XXX I'll revisit this
+AUTOMAKE_POST_PATTERNS+=	*.info *.info-*
+
+CONFIGURE_ARGS+=	--with-glib-prefix=${BUILDLINK_PREFIX.glib}
+USE_GNU_READLINE=	# history_list
+BUILDLINK_DEPENDS.readline?=    readline>=4.0
+
+CONFIGURE_ARGS+=	--with-xml-prefix=${BUILDLINK_PREFIX.libxml2}
+
+.for _p_ in ncurses readline
+CPPFLAGS+=		-I${BUILDLINK_PREFIX.${_p_}}/include
+LDFLAGS+=		-Wl,${RPATH_FLAG}${BUILDLINK_PREFIX.${_p_}}/lib
+LDFLAGS+=		-L${BUILDLINK_PREFIX.${_p_}}/lib
+.endfor
+
+.include "../../devel/readline/buildlink2.mk"
+.include "../../devel/glib/buildlink2.mk"
+.include "../../textproc/libxml2/buildlink2.mk"
+.include "../../devel/ncurses/buildlink2.mk"
+.include "../../mk/texinfo.mk"
+.include "../../mk/bsd.pkg.mk"
