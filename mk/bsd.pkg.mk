@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1296 2003/10/18 05:23:48 grant Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1297 2003/10/18 12:29:26 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -3845,8 +3845,8 @@ _BIN_INSTALL_FLAGS=	${BIN_INSTALL_FLAGS}
 _BIN_INSTALL_FLAGS+=	${PKG_ARGS_ADD}
 
 # Install binary pkg, without strict uptodate-check first
-.PHONY: bin-install
-bin-install:
+.PHONY: real-su-bin-install
+real-su-bin-install:
 	@found="`${PKG_BEST_EXISTS} \"${PKGWILDCARD}\" || ${TRUE}`";	\
 	if [ "$$found" != "" ]; then					\
 		${ECHO_MSG} "${_PKGSRC_IN}>  $$found is already installed - perhaps an older version?"; \
@@ -3877,6 +3877,15 @@ bin-install:
 			${MAKE} ${MAKEFLAGS} clean ;			\
 		fi ; \
 	fi
+
+.PHONY: bin-install
+bin-install:
+	@${ECHO_MSG} "${_PKGSRC_IN}> Binary install for ${PKGNAME}"
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	realtarget="real-su-bin-install";					\
+	action="binary install";					\
+	${_SU_TARGET}
+
 
 
 ################################################################
