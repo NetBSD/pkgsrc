@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2004/08/25 18:35:06 minskim Exp $
-lib/X11/fonts/TTF/09t@quark.ttf
+@comment $NetBSD: PLIST,v 1.5 2005/01/28 14:17:27 minskim Exp $
+lib/X11/fonts/TTF/09t@rk.ttf
+lib/X11/fonts/TTF/Aqu@rk.ttf
 lib/X11/fonts/TTF/Bandal.ttf
 lib/X11/fonts/TTF/Eunjin.ttf
 lib/X11/fonts/TTF/Ongdalsam.ttf
