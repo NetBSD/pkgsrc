@@ -1,32 +1,33 @@
-@comment $NetBSD: PLIST,v 1.2 2002/02/18 15:14:14 seb Exp $
-bin/gm4
+@comment $NetBSD: PLIST,v 1.3 2002/12/23 20:08:50 wiz Exp $
+bin/${GNU_PROGRAM_PREFIX}m4
+${GM4_LINK}bin/gm4
 @unexec ${INSTALL_INFO} --delete %D/info/m4.info %D/info/dir
 info/m4.info
 @exec ${INSTALL_INFO} %D/info/m4.info %D/info/dir
-share/examples/gm4/capitalize.m4
-share/examples/gm4/comments.m4
-share/examples/gm4/ddivert.m4
-share/examples/gm4/debug.m4
-share/examples/gm4/esyscmd.m4
-share/examples/gm4/exp.m4
-share/examples/gm4/file.m4
-share/examples/gm4/foreach.m4
-share/examples/gm4/forloop.m4
-share/examples/gm4/fstab.m4
-share/examples/gm4/hanoi.m4
-share/examples/gm4/incl-test.m4
-share/examples/gm4/include.m4
-share/examples/gm4/indir.m4
-share/examples/gm4/misc.m4
-share/examples/gm4/multiquotes.m4
-share/examples/gm4/patsubst.m4
-share/examples/gm4/pushpop.m4
-share/examples/gm4/regexp.m4
-share/examples/gm4/reverse.m4
-share/examples/gm4/sync-lines.m4
-share/examples/gm4/sysv-args.m4
-share/examples/gm4/trace.m4
-share/examples/gm4/translit.m4
-share/examples/gm4/undivert.m4
-share/examples/gm4/wrap.m4
-@dirrm share/examples/gm4
+share/examples/m4/capitalize.m4
+share/examples/m4/comments.m4
+share/examples/m4/ddivert.m4
+share/examples/m4/debug.m4
+share/examples/m4/esyscmd.m4
+share/examples/m4/exp.m4
+share/examples/m4/file.m4
+share/examples/m4/foreach.m4
+share/examples/m4/forloop.m4
+share/examples/m4/fstab.m4
+share/examples/m4/hanoi.m4
+share/examples/m4/incl-test.m4
+share/examples/m4/include.m4
+share/examples/m4/indir.m4
+share/examples/m4/misc.m4
+share/examples/m4/multiquotes.m4
+share/examples/m4/patsubst.m4
+share/examples/m4/pushpop.m4
+share/examples/m4/regexp.m4
+share/examples/m4/reverse.m4
+share/examples/m4/sync-lines.m4
+share/examples/m4/sysv-args.m4
+share/examples/m4/trace.m4
+share/examples/m4/translit.m4
+share/examples/m4/undivert.m4
+share/examples/m4/wrap.m4
+@dirrm share/examples/m4
