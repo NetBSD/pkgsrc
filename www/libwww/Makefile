@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2000/08/06 16:51:15 tron Exp $
+# $NetBSD: Makefile,v 1.12 2000/09/02 16:29:22 fredb Exp $
 # FreeBSD Id: Makefile,v 1.10 1998/06/14 23:34:59 jseger Exp
 #
 
@@ -18,6 +18,7 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 
 USE_GMAKE=		# defined
 USE_LIBTOOL=		# defined
+USE_SSL=		# defined
 LTCONFIG_OVERRIDE=	${WRKSRC}/config/ltconfig
 
 GNU_CONFIGURE=		# defined
