@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.566 2004/11/11 14:23:51 seb Exp $
+# $NetBSD: Makefile,v 1.567 2004/11/11 19:07:40 seb Exp $
 #
 
 COMMENT=	Development utilities
@@ -371,6 +371,7 @@ SUBDIR+=	p5-Memoize
 SUBDIR+=	p5-Memoize-ExpireLRU
 SUBDIR+=	p5-Module-Build
 SUBDIR+=	p5-Module-Dependency
+SUBDIR+=	p5-Module-ScanDeps
 SUBDIR+=	p5-Module-Versions-Report
 SUBDIR+=	p5-Net-CIDR
 SUBDIR+=	p5-Net-Netmask
