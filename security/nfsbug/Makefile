@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/03/22 03:27:18 kristerw Exp $
+# $NetBSD: Makefile,v 1.11 2004/10/01 10:37:33 grant Exp $
 
 DISTNAME=	nfsshell-1.0
 CATEGORIES=	net security
@@ -17,9 +17,9 @@ NO_EXPORT_CPP=	yes	# needed since we use rpcgen
 
 # Only works on 1.5B or greater on most platforms but will work on any x86
 # since struct pmap didn't get exposed through vm.h there.
-ONLY_FOR_PLATFORM=	NetBSD-1.5[B-Z]-* NetBSD-1.5Z[A-Z]-* NetBSD-1.[6-9]*-* \
-			NetBSD-[2-9]* \
-			NetBSD-*-i386
+ONLY_FOR_PLATFORM=	NetBSD-1.5[B-Z]-* NetBSD-1.5Z[A-Z]-*
+ONLY_FOR_PLATFORM+=	NetBSD-1.6*-* NetBSD-[2-9]*-*
+ONLY_FOR_PLATFORM+=	NetBSD-*-i386
 
 INSTALLATION_DIRS=	bin
 
