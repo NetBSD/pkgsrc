@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.346 2003/03/05 18:45:01 wiz Exp $
+$NetBSD: TODO,v 1.347 2003/03/06 08:33:31 wiz Exp $
 
 Suggested new packages
 ======================
@@ -188,6 +188,7 @@ Suggested package updates
 	o netpbm-10.8
 	o netscape-7.02
 	o ns-flash-6.0.69
+	o nut-7.16
 	o ogle-0.9.0
 	o openh323-1.11.2
 	o openldap-2.1.12
@@ -240,7 +241,7 @@ Suggested package updates
 	o sweep-0.8.1
 	o swig-1.3.17
 	o sylpheed-claws-0.8.9
-	o tcl/tk-8.4.1 [bjoern]
+	o tcl/tk-8.4.2 [bjoern]
 	o ted-2.12
 	o texmacs-1.0.1.7
 	o tightvnc-1.2.8
