@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2002/03/06 15:57:51 taca Exp $
+# $NetBSD: Makefile,v 1.43 2002/03/27 13:53:38 taca Exp $
 #
 
 COMMENT=	Packages with japanese language support
@@ -34,6 +34,7 @@ SUBDIR+=	p5-jcode
 SUBDIR+=	p5-nkf
 SUBDIR+=	qkc
 SUBDIR+=	ruby-romkan
+SUBDIR+=	ruby-uconv
 SUBDIR+=	sed
 SUBDIR+=	sj3-lib
 SUBDIR+=	sj3-server
