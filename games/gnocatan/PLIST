@@ -1,24 +1,27 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:52:42 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/07/13 13:59:36 wiz Exp $
 bin/gnocatan
+bin/gnocatanai
 bin/gnocatan-meta-server
 bin/gnocatan-server-console
 bin/gnocatan-server-gtk
 share/gnocatan/5-6-player.game
+share/gnocatan/canyon.game
+share/gnocatan/computer_names
+share/gnocatan/conquest+ports.game
+share/gnocatan/conquest.game
 share/gnocatan/default.game
 share/gnocatan/four-islands.game
+share/gnocatan/pond.game
 share/gnocatan/seafarers.game
 share/gnocatan/small.game
+share/gnocatan/square.game
+share/gnocatan/star.game
+share/gnocatan/x.game
 share/gnome/apps/Games/gnocatan.desktop
-share/gnome/help/gnocatan/C/actions.html
-share/gnome/help/gnocatan/C/authors.html
-share/gnome/help/gnocatan/C/book1.html
 share/gnome/help/gnocatan/C/c18.html
-share/gnome/help/gnocatan/C/c231.html
+share/gnome/help/gnocatan/C/c247.html
 share/gnome/help/gnocatan/C/c27.html
-share/gnome/help/gnocatan/C/chat.html
-share/gnome/help/gnocatan/C/develop-cards.html
-share/gnome/help/gnocatan/C/development.html
-share/gnome/help/gnocatan/C/docbook.css
+share/gnome/help/gnocatan/C/c530.html
 share/gnome/help/gnocatan/C/images/actions.gif
 share/gnome/help/gnocatan/C/images/chat.gif
 share/gnome/help/gnocatan/C/images/client.gif
@@ -44,24 +47,29 @@ share/gnome/help/gnocatan/C/images/plenty-dialog.gif
 share/gnome/help/gnocatan/C/images/quote.gif
 share/gnome/help/gnocatan/C/images/resources.gif
 share/gnome/help/gnocatan/C/images/sea.gif
+share/gnome/help/gnocatan/C/images/server-create.gif
 share/gnome/help/gnocatan/C/images/servers-dialog.gif
 share/gnome/help/gnocatan/C/images/status.gif
 share/gnome/help/gnocatan/C/images/steal-from.gif
 share/gnome/help/gnocatan/C/images/trade.gif
-share/gnome/help/gnocatan/C/images/waiting.gif
 share/gnome/help/gnocatan/C/index.html
-share/gnome/help/gnocatan/C/ln15.html
-share/gnome/help/gnocatan/C/map.html
-share/gnome/help/gnocatan/C/messages.html
-share/gnome/help/gnocatan/C/objective.html
-share/gnome/help/gnocatan/C/player-summary.html
-share/gnome/help/gnocatan/C/resources.html
-share/gnome/help/gnocatan/C/setup.html
-share/gnome/help/gnocatan/C/statusbar.html
 share/gnome/help/gnocatan/C/topic.dat
-share/gnome/help/gnocatan/C/turn.html
-share/gnome/help/gnocatan/C/x303.html
-share/gnome/help/gnocatan/C/x464.html
+share/gnome/help/gnocatan/C/x109.html
+share/gnome/help/gnocatan/C/x116.html
+share/gnome/help/gnocatan/C/x123.html
+share/gnome/help/gnocatan/C/x131.html
+share/gnome/help/gnocatan/C/x195.html
+share/gnome/help/gnocatan/C/x231.html
+share/gnome/help/gnocatan/C/x238.html
+share/gnome/help/gnocatan/C/x24.html
+share/gnome/help/gnocatan/C/x289.html
+share/gnome/help/gnocatan/C/x295.html
+share/gnome/help/gnocatan/C/x331.html
+share/gnome/help/gnocatan/C/x412.html
+share/gnome/help/gnocatan/C/x43.html
+share/gnome/help/gnocatan/C/x492.html
+share/gnome/help/gnocatan/C/x509.html
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gnocatan.mo
 share/pixmaps/gnocatan/board.png
 share/pixmaps/gnocatan/bridge.png
 share/pixmaps/gnocatan/city.png
@@ -80,9 +88,30 @@ share/pixmaps/gnocatan/road.png
 share/pixmaps/gnocatan/sea.png
 share/pixmaps/gnocatan/settlement.png
 share/pixmaps/gnocatan/ship.png
+share/pixmaps/gnocatan/splash.png
+share/pixmaps/gnocatan/themes/FreeCIV-like/board.png
+share/pixmaps/gnocatan/themes/FreeCIV-like/desert.png
+share/pixmaps/gnocatan/themes/FreeCIV-like/field.png
+share/pixmaps/gnocatan/themes/FreeCIV-like/forest.png
+share/pixmaps/gnocatan/themes/FreeCIV-like/hill.png
+share/pixmaps/gnocatan/themes/FreeCIV-like/mountain.png
+share/pixmaps/gnocatan/themes/FreeCIV-like/pasture.png
+share/pixmaps/gnocatan/themes/FreeCIV-like/sea.png
+share/pixmaps/gnocatan/themes/FreeCIV-like/theme.cfg
+share/pixmaps/gnocatan/themes/Iceland/desert.png
+share/pixmaps/gnocatan/themes/Iceland/field_grain.png
+share/pixmaps/gnocatan/themes/Iceland/forest_lumber.png
+share/pixmaps/gnocatan/themes/Iceland/gold.png
+share/pixmaps/gnocatan/themes/Iceland/hill_brick.png
+share/pixmaps/gnocatan/themes/Iceland/mountain_ore.png
+share/pixmaps/gnocatan/themes/Iceland/pasture_wool.png
+share/pixmaps/gnocatan/themes/Iceland/theme.cfg
 share/pixmaps/gnocatan/tick.png
 share/pixmaps/gnocatan/trade.png
 share/pixmaps/gnome-gnocatan.png
+@dirrm share/pixmaps/gnocatan/themes/Iceland
+@dirrm share/pixmaps/gnocatan/themes/FreeCIV-like
+@dirrm share/pixmaps/gnocatan/themes
 @dirrm share/pixmaps/gnocatan
 @dirrm share/gnome/help/gnocatan/C/images
 @dirrm share/gnome/help/gnocatan/C
