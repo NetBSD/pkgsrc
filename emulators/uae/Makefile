@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2000/07/28 19:27:58 kristerw Exp $
+# $NetBSD: Makefile,v 1.9 2000/08/26 19:25:38 kristerw Exp $
 
-DISTNAME=	uae-0.8.13
+DISTNAME=	uae-0.8.14
 CATEGORIES=	emulators
 MASTER_SITES=	ftp://ftp.freiburg.linux.de/pub/uae/sources/develop/
 
@@ -16,9 +16,6 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--enable-dga --enable-vidmode \
 			--with-gtk-prefix=${WRKDIR}
 CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
-
-post-configure:
-	(cd ${WRKSRC}/src; ${MAKE} .SECONDARY)
 
 do-install:
 .for FILE in readdisk uae
