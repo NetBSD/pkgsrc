@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.370 2003/03/13 23:24:45 wiz Exp $
+$NetBSD: TODO,v 1.371 2003/03/14 10:26:06 wiz Exp $
 
 Suggested new packages
 ======================
@@ -85,7 +85,6 @@ Suggested package updates
 	o canna-3.6p3 [pkg/20208]
 	o cdlabelgen-2.5.0
 	o cfengine-1.6.5 [pkg/19459|seb]
-	o citrix_ica-6.30.1052 [pkg/19210]
 	o clisp-2.30
 	o courier-0.40.2
 	o courier-imap-1.7.0
@@ -118,7 +117,7 @@ Suggested package updates
 	o gftp-2.0.14 [pkg/20250]
 	o ghostscript-8.00 (apfl)
 	o gimp-print-4.2.5
-	o gkrellm-2.1.7
+	o gkrellm-2.1.8
 	o gkrellm-volume-2.1.7
 	o glade2-1.1.3 [pkg/19154|broken, wait for next release]
 	o gnome-applets-2.0.0
@@ -131,6 +130,7 @@ Suggested package updates
 	o grace-5.1.12
 	o gsed-4.0.5
 	o gtetrinet-0.6.2
+	o hatari-0.30
 	o horde-2.1 [pkg/19497]
 	o horde-2.2
 	o icepref-2.2
@@ -169,6 +169,7 @@ Suggested package updates
 	o mixer.app-1.8.0
 	o mkfontscale-20020618
 	o mono-0.23 [pkg/20677]
+	o mozilla-1.3
 	o mpgtx-1.3 [pkg/19082]
 	o mrproject-0.9.1
 	o mrtg-2.9.27
