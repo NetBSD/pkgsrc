@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2002/11/14 23:33:12 jlam Exp $
+# $NetBSD: Makefile,v 1.38 2002/12/23 13:13:02 grant Exp $
 
 DISTNAME=	screen-3.9.13
 CATEGORIES=	misc
@@ -24,6 +24,13 @@ CONFIGURE_ARGS+=	--enable-telnet
 PLIST_SRC=	${PKGDIR}/PLIST.${OPSYS}
 .endif
 
+post-patch:
+	@for file in etc/etcscreenrc doc/screen.1; do 			\
+	${MV} ${WRKSRC}/$$file ${WRKSRC}/$$file.orig;			\
+	${SED} ${FILES_SUBST_SED}					\
+		${WRKSRC}/$$file.orig > ${WRKSRC}/$$file;		\
+	done
+
 post-install:
 	@${INSTALL_DATA_DIR} ${PREFIX}/share/examples/screen
 	${INSTALL_DATA} ${WRKSRC}/etc/etcscreenrc			\
@@ -35,4 +42,5 @@ post-install:
 .endif
 
 .include "../../mk/texinfo.mk"
+.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
