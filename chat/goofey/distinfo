@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2002/06/20 04:41:09 grant Exp $
+$NetBSD: distinfo,v 1.2 2005/02/23 15:59:11 agc Exp $
 
 SHA1 (goofey-3.15.tar.bz2) = 2b3c4f587363ef4f287ea87b3c52d3bb490d35b3
+RMD160 (goofey-3.15.tar.bz2) = fd9760aed4bb6bcfa4500aae9c4f0b6ae2a443ea
 Size (goofey-3.15.tar.bz2) = 19839 bytes

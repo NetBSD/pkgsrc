@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.2 2001/04/18 11:07:17 agc Exp $
+$NetBSD: distinfo,v 1.3 2005/02/23 15:59:11 agc Exp $
 
 SHA1 (icqlib-1.0.0.tar.gz) = dc0e2c2f471294b9289debf106b78aa2a4dbba05
+RMD160 (icqlib-1.0.0.tar.gz) = bd3397b9d86d7dfc1a6cc82d405901a3cb46f309
 Size (icqlib-1.0.0.tar.gz) = 249961 bytes

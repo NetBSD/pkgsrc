@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.6 2005/01/17 20:15:28 kristerw Exp $
+$NetBSD: distinfo,v 1.7 2005/02/23 15:59:11 agc Exp $
 
 SHA1 (gg2-2.2.4.tar.gz) = e22800b6fd56cdd58d156b403da7fb245cbfdc71
+RMD160 (gg2-2.2.4.tar.gz) = b12980cc62a6dc10555131528b651b4bd1b6c077
 Size (gg2-2.2.4.tar.gz) = 1363001 bytes
 SHA1 (patch-aa) = 3fedb56197306db9aeb09e8c2c0e7b944febabdc
 SHA1 (patch-ab) = 85879865593c86de6664a8f1ee5bd1d1cb237b29
