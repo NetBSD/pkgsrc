@@ -1,23 +1,21 @@
 # New ports collection makefile for:   kdesupport
-# Version required:    Beta1
+# Version required:    Beta2
 # Date created:        28 October 1997
 # Whom:                Stefan Eßer <se@freebsd.org>
 #
-# $Id: Makefile,v 1.1.1.1 1997/12/29 03:14:49 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 1997/12/29 03:22:08 hubertf Exp $
+# FreeBSD Id: Makefile,v 1.2 1997/11/05 04:19:46 asami Exp
 #
 
-DISTNAME=	kdesupport-Beta1-2
-PKGNAME=	kdesupport-1.2b
+DISTNAME=	kdesupport-Beta2-1
+PKGNAME=	kdesupport-2.1b
 CATEGORIES=	converters kde
-MASTER_SITES=	ftp://ftp.net.lut.ac.uk/kde/stable/Beta1/distribution/tgz/source/ \
- 		ftp://ftp.uni-erlangen.de/pub/Linux/MIRROR.KDE/stable/Beta1/distribution/tgz/source/ \
- 		ftp://ftp.caldera.com/pub/mirrors/kde/stable/Beta1/distribution/tgz/source/
+MASTER_SITES=	ftp://ftp.net.lut.ac.uk/kde/stable/Beta2/distribution/tgz/source/ \
+ 		ftp://ftp.uni-erlangen.de/pub/Linux/MIRROR.KDE/stable/Beta2/distribution/tgz/source/ \
+ 		ftp://ftp.caldera.com/pub/mirrors/kde/stable/Beta2/distribution/tgz/source/
 EXTRACT_SUFX=	.src.tgz
 
 MAINTAINER=	se@freebsd.org
-
-BUILD_DEPENDS=	moc:${PORTSDIR}/x11/qt
-LIB_DEPENDS=	qt\\.1\\.[0-9]:${PORTSDIR}/x11/qt
 
 HAS_CONFIGURE=	yes
 CONFIGURE_ARGS=	"--prefix=$(PREFIX)" \
