@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2004/05/29 08:05:08 dillo Exp $
+# $NetBSD: Makefile,v 1.16.2.1 2004/07/06 22:32:27 agc Exp $
 #
 
-DISTNAME=		cdrdao-1.1.8
+DISTNAME=		cdrdao-1.1.9
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=cdrdao/}
 
@@ -36,13 +36,7 @@ post-configure:
 
 post-install:
 		${INSTALL_MAN_DIR} ${PREFIX}/share/doc/cdrdao
-		${INSTALL_MAN} ${WRKSRC}/COPYING \
-			${WRKSRC}/README \
-			${WRKSRC}/Release-1.1.2 \
-			${WRKSRC}/Release-1.1.3 \
-			${WRKSRC}/CREDITS \
-			${WRKSRC}/README.FreeBSD \
-			${WRKSRC}/INSTALL \
+		${INSTALL_MAN} ${WRKSRC}/README \
 			${WRKSRC}/README.PlexDAE \
 			${PREFIX}/share/doc/cdrdao
 		${INSTALL_MAN_DIR} ${PREFIX}/share/doc/cdrdao/testtocs
@@ -54,7 +48,6 @@ post-install:
 		${INSTALL_MAN_DIR} ${PREFIX}/share/examples/cdrdao/psxcopy
 		${INSTALL_MAN} ${WRKSRC}/contrib/psxcopy-0.2/Makefile \
 			${WRKSRC}/contrib/psxcopy-0.2/README \
-			${WRKSRC}/contrib/psxcopy-0.2/cdjob.c \
 			${WRKSRC}/contrib/psxcopy-0.2/cdjob.c \
 			${WRKSRC}/contrib/psxcopy-0.2/psxdump.c \
 			${WRKSRC}/contrib/psxcopy-0.2/read-psx \
