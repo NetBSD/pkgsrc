@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: build,v 1.15 2001/10/20 00:30:22 dmcmahill Exp $
+# $NetBSD: build,v 1.16 2001/11/06 13:45:33 hubertf Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@netbsd.org>
@@ -134,7 +134,7 @@ for pkgdir in $BULK_PREREQ
 do
 	echo $pkgdir
 	# make sure its installed _and_ packaged
-	cd ${USR_PKGSRC}/$pkgdir && make bulk-install && make bulk-package && make clean
+	cd ${USR_PKGSRC}/$pkgdir && make bulk-install
 done
 
 # Figure out optimal build order.
