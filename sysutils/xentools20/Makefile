@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2005/03/27 15:58:24 bouyer Exp $
+# $NetBSD: Makefile,v 1.6 2005/04/01 19:06:12 bouyer Exp $
 #
 
 DISTNAME=		xen-2.0.3-src
 PKGNAME=		xentools20-2.0.3
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		sysutils
 MASTER_SITES=		http://www.cl.cam.ac.uk/Research/SRG/netos/xen/downloads/
 EXTRACT_SUFX=		.tgz
@@ -51,6 +51,7 @@ SUBST_SED.paths=        -e "s|/usr/sbin|${PREFIX}/sbin|g"
 SUBST_MESSAGE.paths=    "Fixing hardcoded paths."
 
 RCD_SCRIPTS=		xend
+FILES_SUBST+=		RCD_INTERPRETER=${PYTHONBIN}
 
 pre-build:
 	${MKDIR} ${WRKSRC}/libxc/xen/NetBSD
