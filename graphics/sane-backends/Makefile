@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/03/20 21:18:41 bouyer Exp $
+# $NetBSD: Makefile,v 1.17 2004/03/20 22:19:56 bouyer Exp $
 
 .include "Makefile.common"
 COMMENT=	API for access to scanners, digitals camera, frame grabbers etc.
@@ -8,6 +8,7 @@ PKGREVISION=	1
 
 SANE_MICRO=	12
 
+USE_PKGLOCALEDIR=	YES
 BUILD_USES_MSGFMT=	YES
 
 .if (${OPSYS} == "SunOS")
