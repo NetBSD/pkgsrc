@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.6 2004/04/04 16:53:59 recht Exp $
+$NetBSD: patch-ac,v 1.7 2004/05/11 17:33:42 recht Exp $
 
---- data/Makefile.in.orig	2004-03-19 03:26:35.000000000 +0100
-+++ data/Makefile.in	2004-03-20 14:05:48.000000000 +0100
-@@ -118,7 +118,7 @@
+--- data/Makefile.in.orig	2004-05-04 23:51:17.000000000 +0200
++++ data/Makefile.in	2004-05-11 14:04:36.000000000 +0200
+@@ -120,7 +120,7 @@
  libmono_cflags = @libmono_cflags@
  libmono_ldflags = @libmono_ldflags@
  libsuffix = @libsuffix@
