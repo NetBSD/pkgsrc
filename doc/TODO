@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2169 2004/09/26 16:53:34 wiz Exp $
+$NetBSD: TODO,v 1.2170 2004/09/27 11:20:53 adam Exp $
 
 Suggested new packages
 ======================
@@ -263,7 +263,6 @@ Suggested package updates
 	o ghostscript-8.00 (apfl)
 	o ghostscript-8.01 (gnu)
 	o gimageview-0.2.25
-	o gimp-2.0.5
 	o gimp-print-4.2.7
 	o glpk-4.6
 	o gnome-2.8
