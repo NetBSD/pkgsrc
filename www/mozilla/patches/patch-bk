@@ -1,0 +1,31 @@
+$NetBSD: patch-bk,v 1.5 2002/09/03 14:58:18 mycroft Exp $
+
+--- xpcom/ds/nsRecyclingAllocator.cpp.orig	Sat Sep  3 14:38:03 2022
++++ xpcom/ds/nsRecyclingAllocator.cpp	Sat Sep  3 14:35:24 2022
+@@ -159,7 +159,7 @@
+ 
+ // Allocation and free routines
+ void*
+-nsRecyclingAllocator::Malloc(PRUint32 bytes, PRBool zeroit)
++nsRecyclingAllocator::Malloc(PRSize bytes, PRBool zeroit)
+ {
+     // Mark that we are using. This will prevent any
+     // timer based release of unused memory.
+@@ -173,7 +173,7 @@
+      
+     // We need to do an allocation
+     // Add 4 bytes to what we allocate to hold the bucket index
+-    PRUint32 allocBytes = bytes + NS_ALLOCATOR_OVERHEAD_BYTES;
++    PRSize allocBytes = bytes + NS_ALLOCATOR_OVERHEAD_BYTES;
+   
+     // We dont have that memory already. Allocate.
+     Block *ptr = (Block *) (zeroit ? calloc(1, allocBytes) : malloc(allocBytes));
+@@ -275,7 +275,7 @@
+ }
+ 
+ nsRecyclingAllocator::Block*
+-nsRecyclingAllocator::FindFreeBlock(PRUint32 bytes)
++nsRecyclingAllocator::FindFreeBlock(PRSize bytes)
+ {
+     // We dont enter lock for this check. This is intentional.
+     // Here is my logic: we are checking if (!mFreeList). Doing this check
