@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2004/06/17 03:36:18 itojun Exp $
+# $NetBSD: Makefile,v 1.69 2004/09/22 16:14:37 kim Exp $
 #
 
 DISTNAME=	racoon-20040617a
@@ -45,7 +45,7 @@ CONFIGURE_ARGS+=--with-pkgversion=netbsd-pkgsrc-20040617a
 .endif
 
 pre-configure:
-	(cd ${WRKSRC}/../libipsec; ${MAKE})
+	(cd ${WRKSRC}/../libipsec; ${MAKE} ${MAKE_ENV})
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/racoon
