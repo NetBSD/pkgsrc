@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: cpuflags.NetBSD,v 1.31 2002/11/02 10:03:46 abs Exp $
+# $NetBSD: cpuflags.NetBSD,v 1.32 2002/12/23 13:56:22 abs Exp $
 
 if [ -x /sbin/sysctl ] ;then
     SYSCTL=/sbin/sysctl
@@ -100,17 +100,19 @@ case $hw_machine_arch in
 	620\ *)		   	FLAGS='-mcpu=620'	;; # Untested
     esac ;;
 
-    sparc | sparc64) case $hw_model in				   # Examples
-	MB86900/1A*)		FLAGS='-mcpu=cypress'		;; # ss1+
-	CY7C601*)		FLAGS='-mcpu=cypress'		;; # ss2
-	W8601/8701*)		FLAGS='-mcpu=cypress'		;; # elc
-	MB86904* | MB86907*)	FLAGS='-mcpu=supersparc'	;; # ss5 usparc
-	TMS390S10*)		FLAGS='-mcpu=supersparc'	;; # classic  "
-	TMS390Z50*)		FLAGS='-mcpu=supersparc'	;; # ss10/ss20
-	RT620/625*)		FLAGS='-mcpu=supersparc'	;; # ss20 ross
-	MB86930* | MB86934*)	FLAGS='-mcpu=sparclite'		;; # from gcc
+    sparc | sparc64) case " $hw_model" in			   # Examples
+	*[\ \(]MB86900/1A*)	FLAGS='-mcpu=cypress'		;; # ss1+
+	*[\ \(]CY7C601*)	FLAGS='-mcpu=cypress'		;; # ss2
+	*[\ \(]W8601/8701*)	FLAGS='-mcpu=cypress'		;; # elc
+	*[\ \(]MB86904*)	FLAGS='-mcpu=supersparc'	;; # ss5 usparc
+	*[\ \(]MB86907*)	FLAGS='-mcpu=supersparc'	;; # ss5 usparc
+	*[\ \(]TMS390S10*)	FLAGS='-mcpu=supersparc'	;; # classic  "
+	*[\ \(]TMS390Z50*)	FLAGS='-mcpu=supersparc'	;; # ss10/ss20
+	*[\ \(]RT620/625*)	FLAGS='-mcpu=supersparc'	;; # ss20 ross
+	*[\ \(]MB86930*)	FLAGS='-mcpu=sparclite'		;; # from gcc
+	*[\ \(]MB86934*)	FLAGS='-mcpu=sparclite'		;; # from gcc
 	# under 1.5.1 -mcpu=ultrasparc chokes egcs-2.91.66 compiling perl
-	SUNW,UltraSPARC*)	 FLAGS='-mcpu=v9'		;; # Ultra
+	*[\ \(]SUNW,UltraSPARC*) FLAGS='-mcpu=v9'		;; # Ultra
     esac ;;
 
     vax) # No VAX specific gcc optimisations available
