@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/02/23 01:29:52 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2000/03/30 23:24:43 wiz Exp $
 #
 
-DISTNAME=	its4-1.0
+DISTNAME=	its4-1.0.1
 CATEGORIES=	devel
 MASTER_SITES=	# have to fetch for yourself, or from a NetBSD mirror
 EXTRACT_SUFX=	.tgz
