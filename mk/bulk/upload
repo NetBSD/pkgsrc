@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: upload,v 1.22 2005/03/30 22:26:37 hubertf Exp $
+# $NetBSD: upload,v 1.23 2005/03/30 22:36:18 hubertf Exp $
 
 #
 # Upload non-restricted binary pkgs to ftp server
@@ -155,6 +155,9 @@ if [ "${MKSUMS}" = "yes" -o "${MKSUMS}" = "YES" ]; then
 				echo ${i}.asc >> $osf
 			fi
 		done
+	else
+		echo "Checksum files not PGP-signed. Please do so manually!"
+		echo "(Run 'gpg --clearsign' on all of them)"
 	fi
 fi
 
