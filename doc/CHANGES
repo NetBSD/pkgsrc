@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.526 2002/11/15 11:50:58 seb Exp $
+$NetBSD: CHANGES,v 1.527 2002/11/15 12:19:07 mrg Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -2824,6 +2824,7 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated links to 2.1.0.3 [wiz 2002-09-12]
 	Updated links-gui to 2.1.0.3 [wiz 2002-09-12]
 	Updated pkglint to 3.31 [wiz 2002-09-12]
+	Updated ircII to 20020912 [mrg 2002-09-12]
 	Added zope25-EasyImage-1.5 [drochner 2002-09-12]
 	Added zope25-Formulator-1.2.0 [drochner 2002-09-12]
 	Added zope25-JPicture-2.0 [drochner 2002-09-12]
@@ -3626,3 +3627,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated apache to 1.3.27nb2 [martti 2002-11-15]
 	Updated apache6 to 1.3.27nb1 [martti 2002-11-15]
 	Updated cyrus-imapd21 to 2.1.9nb1 [seb 2002-11-15]
+	Updated ircII to 20021103 [mrg 2002-11-15]
