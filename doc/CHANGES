@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4645 2004/01/30 14:37:13 adam Exp $
+$NetBSD: CHANGES,v 1.4646 2004/01/30 21:47:30 david Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -530,3 +530,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated kopete to 0.8rc1 [jmmv 2004-01-29]
 	Updated kmplayer to 0.8.2rc5nb3 [jmmv 2004-01-29]
 	Updated ngrep to 1.41 [adam 2004-01-30]
+	Updated freeradius to 0.9.3 [david 2004-01-30]
