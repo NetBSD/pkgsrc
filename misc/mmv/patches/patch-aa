@@ -1,0 +1,28 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/08/15 21:09:04 agc Exp $
+
+--- Makefile	2001/08/15 21:53:53	1.1
++++ Makefile	2001/08/15 21:57:23
+@@ -1,16 +1,16 @@
+ # Possible defines in CONF:
+ #	IS_MSDOS IS_SYSV IS_V7 IS_BSD HAS_DIRENT HAS_RENAME MV_DIR
+ 
+-CC		=gcc -traditional
+-LD		=$(CC)
+-CONF		=-DIS_SYSV -DHAS_DIRENT -DHAS_RENAME
+-CFLAGS		=-O2 -m486 $(CONF)
+-LDFLAGS		=-s -N
++#CC		=gcc -traditional
++#LD		=$(CC)
++CCFLAGS+=	-DIS_BSD -DHAS_DIRENT -DHAS_RENAME
++#CFLAGS		=-O2 $(CONF)
++#LDFLAGS		=-s -N
+ 
+ #IBIN		=$(LOCAL)$(ARCH)/bin
+ #IMAN		=$(LOCAL)$(ANY)/man
+-IBIN=$(DESTDIR)/usr/bin/
+-IMAN=$(DESTDIR)/usr/man/
++IBIN=${PREFIX}/bin
++IMAN=${PREFIX}/man
+ 
+ mmv:		mmv.o
+ 
