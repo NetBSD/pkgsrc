@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2002/01/06 19:41:28 jlam Exp $
+# $NetBSD: Makefile,v 1.45 2002/01/30 03:33:29 jlam Exp $
 
 DISTNAME=		cups-${DIST_VERS}-source
 PKGNAME=		cups-${VERS}
@@ -39,6 +39,7 @@ CONFIGURE_ENV+=		DSOFLAGS="${LDFLAGS}"
 
 .if defined(USE_PAM)
 .include "../../security/PAM/buildlink.mk"
+BUILD_DEFS+=		USE_PAM
 CONFIGURE_ARGS+=	--enable-pam
 PLIST_SRC=		${PKGDIR}/PLIST.pam
 PLIST_SRC+=		${PKGDIR}/PLIST
