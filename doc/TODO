@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2646 2004/12/04 02:19:41 taya Exp $
+$NetBSD: TODO,v 1.2647 2004/12/04 03:52:23 taya Exp $
 
 Suggested new packages
 ======================
@@ -694,7 +694,6 @@ Suggested package updates
 	o mowitz-0.3.0
 	o moz-bin-flash-7.0r25 [pkgsrc-wip]
 	o moz-bin-plugger-5.1.3
-	o mozilla-stable-1.4.3
 	o mpage-2.5.4
 	o mpfr-2.1.0
 	o mpi-ch-1.2.6 [pkg/27273]
