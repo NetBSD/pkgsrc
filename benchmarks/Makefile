@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2001/04/17 12:26:17 tron Exp $
+# $NetBSD: Makefile,v 1.22 2001/04/27 22:39:50 jtb Exp $
 #
 
 COMMENT=	Benchmarking tools
@@ -15,7 +15,7 @@ SUBDIR+=	heapsort
 SUBDIR+=	hint
 SUBDIR+=	httperf
 SUBDIR+=	iozone
-SUBDIR+=	linpack
+SUBDIR+=	linpack-bench
 SUBDIR+=	lmbench
 SUBDIR+=	netio
 SUBDIR+=	nsieve
