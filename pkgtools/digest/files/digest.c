@@ -1,4 +1,4 @@
-/*	$NetBSD: digest.c,v 1.6 2003/06/15 00:42:29 atatat Exp $ */
+/*	$NetBSD: digest.c,v 1.7 2003/06/16 13:35:22 atatat Exp $ */
 
 /*
  * Copyright (c) 2001 Alistair G. Crooks.  All rights reserved.
@@ -39,7 +39,7 @@
 #ifndef lint
 __COPYRIGHT("@(#) Copyright (c) 2001 \
 	        The NetBSD Foundation, Inc.  All rights reserved.");
-__RCSID("$NetBSD: digest.c,v 1.6 2003/06/15 00:42:29 atatat Exp $");
+__RCSID("$NetBSD: digest.c,v 1.7 2003/06/16 13:35:22 atatat Exp $");
 #endif
 
 
@@ -143,6 +143,8 @@ digest_file(char *fn, alg_t *alg)
 			rc = 1;
 		}
 	}
+
+	return (rc);
 }
 
 int
