@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.14 2001/04/09 12:01:26 wiz Exp $
+# $NetBSD: Makefile.common,v 1.15 2001/04/14 21:21:25 dmcmahill Exp $
 #
 
 DISTNAME=		xscreensaver-3.28
@@ -44,12 +44,6 @@ post-patch:
 
 .include "../../mk/bsd.prefs.mk"
 
-PERL?=			${LOCALBASE}/bin/perl
-.ifndef (PERL_VERSION)
-PERL_VERSION!=		if [ -x ${PERL} ]; then ${PERL} -e 'print $$]'; else ${ECHO} "5.006"; fi
-MAKEFLAGS+=		PERL_VERSION="${PERL_VERSION}"
-.endif
-
 .if (${OPSYS} == "NetBSD")
 .if defined(KERBEROS)
 CFLAGS+=		-I/usr/include/kerberosIV
@@ -59,3 +53,11 @@ CONFIGURE_ARGS+=	--without-kerberos
 .endif
 
 .include "../../mk/bsd.pkg.mk"
+
+# this has to come after bsd.pkg.mk for ECHO.
+
+PERL?=			${LOCALBASE}/bin/perl
+.ifndef (PERL_VERSION)
+PERL_VERSION!=		if [ -x ${PERL} ]; then ${PERL} -e 'print $$]'; else ${ECHO} "5.006"; fi
+MAKEFLAGS+=		PERL_VERSION="${PERL_VERSION}"
+.endif
