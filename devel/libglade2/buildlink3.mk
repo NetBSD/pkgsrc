@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2004/12/24 00:09:06 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2004/12/24 08:04:26 reed Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBGLADE2_BUILDLINK3_MK:=	${LIBGLADE2_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	libglade2
 
 .if !empty(LIBGLADE2_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.libglade2+=	libglade2>=2.3.6
-BUILDLINK_RECOMMENDED.libglade2+=	libglade2>=2.3.6nb1
+BUILDLINK_RECOMMENDED.libglade2+=	libglade2>=2.4.0nb2
 BUILDLINK_PKGSRCDIR.libglade2?=	../../devel/libglade2
 
 PRINT_PLIST_AWK+=	/^@dirrm lib\/libglade$$/ { next; }
