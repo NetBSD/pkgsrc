@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/01/26 23:46:23 jtb Exp $
+$NetBSD: patch-aa,v 1.2 2001/01/28 01:51:40 jtb Exp $
 
 --- makefile.orig	Sun Nov 19 14:11:21 2000
 +++ makefile
@@ -118,7 +118,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/01/26 23:46:23 jtb Exp $
  
  .c: 
 -	$(LINK_CXX) -o $@ $< ntl.a  $(GMP_LIBDIR) $(GMP_LIB) $(LDLIBS_CXX) 
-+	$(LINK_CXX) -o $@ $< libntl.la  $(GMP_LIBDIR) $(GMP_LIB) $(LDLIBS_CXX) 
++	$(LINK_CXX) -o $@ $< libntl.a  $(GMP_LIBDIR) $(GMP_LIB) $(LDLIBS_CXX) 
  
  #################################################################
  #
