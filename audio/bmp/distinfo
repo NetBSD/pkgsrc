@@ -1,0 +1,16 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/04/11 18:10:57 jmmv Exp $
+
+SHA1 (bmp-0.9.6.tar.gz) = 016c1faf0ba144f45aa73b9ba066ba7fde4e8885
+Size (bmp-0.9.6.tar.gz) = 1472135 bytes
+SHA1 (patch-ab) = 04eb21affbcefa34645a05b0c95bfa906202d7cf
+SHA1 (patch-ac) = 3e374fe2143a8fefcd84ff2499f97e170587ca8d
+SHA1 (patch-ad) = f51902a47efaf2423f86e5fc4c6ea7a7850b5034
+SHA1 (patch-ae) = 9461bcf2a238d44f6e0d92a465f7297c952e0182
+SHA1 (patch-af) = 6d13857c62249a9c0f06a957ff7c4a37b8b16617
+SHA1 (patch-ag) = 8ac4b5b1568c35c8a2d6bc9382e968c998ee04a4
+SHA1 (patch-ah) = 78a14f18656b79abd1250c659bcb4f7991396c42
+SHA1 (patch-ai) = 040adc1f20b7f283c6af1334117a26b76a293000
+SHA1 (patch-aj) = e6d354777dd4c8c5bf3b0bf08bdb1a6bfa4855dc
+SHA1 (patch-ak) = 33c0a13036271b817a82dac7c0275130dc1dcede
+SHA1 (patch-al) = 3887309232a926fa689e4d996ab4747eff38cde8
+SHA1 (patch-am) = b1b15fe6deeee7e9d51ce3cb8739baf9886e3812
