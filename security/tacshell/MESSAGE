@@ -1,0 +1,10 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2004/05/26 12:04:27 sekiya Exp $
+
+A sample configuration file has been placed in
+
+	${PREFIX}/etc/tacshell.conf-example
+
+Copy it to ${PREFIX}/etc/tacshell.conf and edit it to suit your environment.
+
+===========================================================================
