@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: INSTALL,v 1.1.1.1 2002/09/13 22:35:49 jlam Exp $
+# $NetBSD: INSTALL,v 1.2 2002/09/13 22:38:33 jlam Exp $
 
 ADOBE_RESOURCEDIR="@ADOBE_RESOURCEDIR@"
 GS_RESOURCEDIR="@GS_RESOURCEDIR@"
@@ -24,7 +24,7 @@ POST-INSTALL)
 
 DEINSTALL)
 	for file in ${FONTFILES}; do
-		fontbase=`${BASENAME} $file`
+		base=`${BASENAME} $file`
 		dest="${GS_RESOURCEDIR}/CMap/$base"
 		${RM} -f $dest
 	done
