@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2002/03/13 17:37:31 fredb Exp $
+# $NetBSD: Makefile,v 1.10 2003/03/12 21:02:25 jschauma Exp $
 #
 
 DISTNAME=	kmap-0.5.6
@@ -10,7 +10,7 @@ MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://www.islc.net/~icszepp/kmap/
 COMMENT=	KDE based frontend for the popular portscanning utility nmap
 
-DEPENDS+=	kdebase-1.1.2nb1:../../x11/kdebase
+DEPENDS+=	kdebase-1.1.2nb2:../../x11/kdebase
 DEPENDS+=	nmap>=2.12:../../net/nmap
 
 USE_X11BASE=		yes	# To get this near KDE
