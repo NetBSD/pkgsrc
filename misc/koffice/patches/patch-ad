@@ -1,0 +1,48 @@
+$NetBSD: patch-ad,v 1.7 2004/11/02 23:32:19 markd Exp $
+
+--- filters/kword/pdf/xpdf/xpdf/XRef.cc.orig	2004-10-23 20:01:23.000000000 +1300
++++ filters/kword/pdf/xpdf/xpdf/XRef.cc
+@@ -12,6 +12,7 @@
+ #pragma implementation
+ #endif
+ 
++#include <limits.h>
+ #include <stdlib.h>
+ #include <stddef.h>
+ #include <string.h>
+@@ -76,7 +77,7 @@ XRef::XRef(BaseStream *strA, GString *ow
+ 
+   // trailer is ok - read the xref table
+   } else {
+-    if (size*sizeof(XRefEntry)/sizeof(XRefEntry) != size) {
++    if ((unsigned) size >= INT_MAX / sizeof(XRefEntry)) {
+       error(-1, "Invalid 'size' inside xref table.");
+       ok = gFalse;
+       errCode = errDamaged;
+@@ -273,7 +274,7 @@ GBool XRef::readXRef(Guint *pos) {
+     // table size
+     if (first + n > size) {
+       newSize = size + 256;
+-      if (newSize*sizeof(XRefEntry)/sizeof(XRefEntry) != newSize) {
++      if ((unsigned) newSize >= INT_MAX / sizeof(XRefEntry)) {
+         error(-1, "Invalid 'newSize'");
+         goto err2;
+       }
+@@ -420,7 +421,7 @@ GBool XRef::constructXRef() {
+ 	    if (!strncmp(p, "obj", 3)) {
+ 	      if (num >= size) {
+ 		newSize = (num + 1 + 255) & ~255;
+-	        if (newSize*sizeof(XRefEntry)/sizeof(XRefEntry) != newSize) {
++	        if ((unsigned) newSize >= INT_MAX / sizeof(XRefEntry)) {
+ 	          error(-1, "Invalid 'obj' parameters.");
+ 	          return gFalse;
+ 	        }
+@@ -445,7 +446,7 @@ GBool XRef::constructXRef() {
+     } else if (!strncmp(p, "endstream", 9)) {
+       if (streamEndsLen == streamEndsSize) {
+ 	streamEndsSize += 64;
+-        if (streamEndsSize*sizeof(int)/sizeof(int) != streamEndsSize) {
++        if ((unsigned) streamEndsSize >= INT_MAX / sizeof(int)) {
+           error(-1, "Invalid 'endstream' parameter.");
+           return gFalse;
+         }
