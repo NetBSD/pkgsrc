@@ -1,0 +1,71 @@
+$NetBSD: patch-ac,v 1.8 2003/05/03 16:55:29 atatat Exp $
+
+--- dialects/n+obsd/dlsof.h.orig	2003-03-23 14:51:12.000000000 -0500
++++ dialects/n+obsd/dlsof.h
+@@ -73,7 +73,17 @@ struct buf;	/* dummy for function protot
+ 
+ #define	NFS
+ #define m_stat	mnt_stat
++
++# if	defined(NETBSDV) && __NetBSD_Version__>=106060000
++#define	_KERNEL
++# endif	/* defined(NETBSDV) && __NetBSD_Version__>=106060000 */
++
+ #include <sys/mount.h>
++
++# if	defined(NETBSDV) && __NetBSD_Version__>=106060000
++#undef	_KERNEL
++# endif	/* defined(NETBSDV) && __NetBSD_Version__>=106060000 */
++
+ #include <rpc/types.h>
+ #include <sys/protosw.h>
+ 
+@@ -87,6 +97,7 @@ struct buf;	/* dummy for function protot
+ #include <msdosfs/bpb.h>
+ #include <msdosfs/fat.h>
+ 
++#  if	defined(OPENBSDV) || (defined(NETBSDV) && __NetBSD_Version__<106060000)
+ /*
+  * As a terrible hack, the lsof Configure script extracts the netcred and
+  * netexport structure definitions from <sys/mount.h> and places them in
+@@ -100,9 +111,14 @@ struct buf;	/* dummy for function protot
+  *
+  * THIS IS A TERRIBLE AND FRAGILE HACK!!!  It might break if the netexport or
+  * netcred definitions change radically in <sys/mount.h>.
++ *
++ * It is no longer needed for NetBSD Versions 1.6F and above.
+  */
+ 
+ #include "netexport.h"
++#  endif	/* defined(OPENBSDV) 
++		   || (defined(NETBSDV) && __NetBSD_Version__<106060000) */
++
+ #define	_KERNEL
+ struct nameidata;	/* to satisfy a function prototype in msdosfsmount.h */
+ #include <msdosfs/msdosfsmount.h>
+@@ -178,6 +194,12 @@ struct sockproto {
+ #undef	DIRBLKSIZ
+ # endif	/* defined(DIRBLKSIZ) */
+ 
++# if	defined(HASI_FFS1)
++#define	_KERNEL
++#include <ufs/ufs/ufsmount.h>
++#undef	_KERNEL
++# endif	/* defined(HASI_FFS1) */
++
+ #include <ufs/ufs/inode.h>
+ 
+ # if	defined(DIRENT_BLKSIZ)
+@@ -223,9 +245,10 @@ struct sockproto {
+ 
+ # if	defined(HASNULLFS)
+ #define	_KERNEL
+-#  if	defined(NETBSDV) && NETBSDV>=1050
++#  if	defined(NETBSDV) && NETBSDV>=1050 && __NetBSD_Version__<106060000
+ #include "netexport.h"
+-#  endif	/* defined(NETBSDV) && NETBSDV>=1050 */
++#  endif	/* defined(NETBSDV) && NETBSDV>=1050
++		   && __NetBSD_Version__<106060000 */
+ #include <miscfs/nullfs/null.h>
+ #undef	_KERNEL
+ # endif	/* defined(HASNULLFS) */
