@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3205 2005/03/06 19:36:09 hira Exp $
+$NetBSD: TODO,v 1.3206 2005/03/07 12:38:00 adam Exp $
 
 Suggested new packages
 ======================
@@ -486,7 +486,6 @@ Suggested package updates
 	o giflib-4.1.3
 	o gifsicle-1.42
 	o gift-openft-0.2.1.4
-	o gimp-docs-2.0.7
 	o git-4.3.20
 	o gkrellm-leds-0.8.2
 	o gkrellm-multiping-2.0.9
