@@ -13,4 +13,5 @@
 /usr/bin/touch
 /usr/lib/libc.so*
 /usr/lib/libcurses.so*
+/usr/lib/libkver.so*
 /usr/libexec/ld.elf_so

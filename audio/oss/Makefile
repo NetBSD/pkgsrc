@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2003/11/08 14:50:14 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2003/11/14 10:09:06 wiz Exp $
 
 DISTNAME=	oss-${OSS_VERSION}	# Overridden below
 PKGNAME=	oss-${OSS_VERSION}
@@ -70,7 +70,7 @@ do-build:
 # and then copy the "installed" files to where to really want them.
 #
 chroot:
-	${PAX} -rw `${CAT} ${FILESDIR}/chroot` ${WRKSRC}
+	-${PAX} -rw `${CAT} ${FILESDIR}/chroot` ${WRKSRC}
 	${CHROOT} -u ${ROOT_USER} -g ${ROOT_GROUP} ${WRKSRC} ./install.sh
 	${ECHO} "OSSLIBDIR=${OSSLIBDIR}" > ${WRKSRC}/usr/lib/oss/oss.conf
 	${MV} ${WRKSRC}/usr/lib/oss/license.asc				\
