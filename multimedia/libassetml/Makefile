@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/02/16 18:38:40 reed Exp $
+# $NetBSD: Makefile,v 1.2 2005/02/18 19:32:10 reed Exp $
 #
 
 DISTNAME=		libassetml-1.2.1
@@ -8,6 +8,8 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ofset/}
 MAINTAINER=		reed@reedmedia.net
 HOMEPAGE=		http://www.ofset.org/assetml/
 COMMENT=		Library for sharing image and audio files between projects
+
+BUILD_DEPENDS+=	texi2html-[0-9]*:../../textproc/texi2html
 
 USE_BUILDLINK3=		yes
 USE_DIRS+=		gnome2-1.5	# share/gnome/help
