@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8126 2004/11/29 01:43:21 minskim Exp $
+$NetBSD: CHANGES,v 1.8127 2004/11/29 01:57:47 tv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5613,3 +5613,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated clearsilver to 0.9.13 [epg 2004-11-29]
 	Updated binkd to 0.9.8 [tv 2004-11-29]
 	Updated abook to 0.5.3 [minskim 2004-11-29]
+	Updated hashcash to 1.13 [tv 2004-11-29]
