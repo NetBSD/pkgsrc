@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.own.mk,v 1.14 1999/03/15 12:49:01 mrg Exp $
+#	$NetBSD: bsd.own.mk,v 1.15 1999/04/11 12:07:28 tron Exp $
 # From:  NetBSD: bsd.own.mk,v 1.120 1999/02/24 14:42:36 drochner Exp
 
 .if !defined(_PKGSRC_BSD_OWN_MK_)
@@ -119,7 +119,7 @@ SHLIB_TYPE?=    ${OBJECT_FMT}
 # if the user is running a NetBSD-current, as well as the right platform
 # It's also used to find out about SHLIB_TYPE.
 # I'm told that 1.3C was the first version with UVM	XXX - agc
-NETBSD_CURRENT!= /usr/bin/uname -r | /usr/bin/sed -e 's|^1\.3[C-Z]$$|yes|'
+NETBSD_CURRENT!= /usr/bin/uname -r | /usr/bin/sed -e 's|^1\.3[C-Z]$$|yes|' -e 's|^1\.4.*$$|yes|'
 
 .if !defined(UVM)
 .if (${NETBSD_CURRENT} == "yes")
