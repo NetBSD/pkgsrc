@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.4 1999/08/11 22:20:56 tron Exp $
+# $NetBSD: Makefile,v 1.5 1999/08/11 22:42:22 tron Exp $
 
 DISTNAME=	craftcc35
 PKGNAME=	craft-3.5
 CATEGORIES=	games x11
-MASTER_SITES=	ftp://borneo.gmd.de/pub/as/janus/craft/
+MASTER_SITES=	ftp://set.gmd.de/pub/as/janus/craft/
 EXTRACT_SUFX=	.tar.Z
 
 MAINTAINER=	root@garbled.net
-HOMEPAGE=	http://borneo.gmd.de/~hua/
+HOMEPAGE=	http://set.gmd.de/~hua/
 
 USE_GMAKE=	yes
 USE_X11BASE=	yes
