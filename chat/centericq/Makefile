@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2003/03/01 02:13:44 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2003/04/26 22:05:10 wiz Exp $
 #
 
 DISTNAME=	centericq-4.9.2
@@ -12,7 +12,7 @@ COMMENT=	Instant Messenger interface (ICQ2000, Yahoo!, and MSN support)
 
 USE_BUILDLINK2=		yes
 USE_PKGLOCALEDIR=	yes
-USE_NCURSES=		# ESCDELAY
+USE_NCURSES=		# mvaddchnstr()
 USE_CXX=		yes
 USE_GMAKE=		yes
 GNU_CONFIGURE=		yes
