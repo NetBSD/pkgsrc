@@ -1,8 +1,9 @@
-$NetBSD: patch-ab,v 1.4 2000/09/06 23:49:22 dmcmahill Exp $
+$NetBSD: patch-ab,v 1.5 2001/06/15 16:53:27 drochner Exp $
 
---- Makefile.in.orig	Sun Aug 20 04:52:53 2000
-+++ Makefile.in	Thu Aug 31 20:41:33 2000
-@@ -20,11 +20,11 @@
+--- Makefile.in.orig	Tue May 22 16:27:56 2001
++++ Makefile.in	Fri Jun 15 01:07:50 2001
+@@ -19,13 +19,13 @@
+ .SUFFIXES:	.o .cpp .c .cxx
  
  .c.o :
 -	$(CCC) -c @DEP_INFO_FLAGS@ $(CFLAGS) $(PICFLAGS) -o $@ $<
@@ -17,7 +18,9 @@ $NetBSD: patch-ab,v 1.4 2000/09/06 23:49:22 dmcmahill Exp $
 +	${LIBTOOL} --mode=compile $(CC) -c @DEP_INFO_FLAGS@ $(CPPFLAGS) -o $@ $<
  
  ########################### Paths #################################
-@@ -38,8 +38,4 @@
+ 
+@@ -37,10 +37,6 @@
+ VP4 = @top_srcdir@/src/generic
  VP5 = @top_srcdir@/src/unix
  VP6 = @top_srcdir@/src/html
 -VP7 = @top_srcdir@/src/png
@@ -25,15 +28,19 @@ $NetBSD: patch-ab,v 1.4 2000/09/06 23:49:22 dmcmahill Exp $
 -VP9 = @top_srcdir@/src/tiff
 -VP10 = @top_srcdir@/src/zlib
  VP11 = @top_srcdir@/src/iodbc
+ VP12 = @top_srcdir@/src/ole
  
-@@ -47,5 +43,5 @@
+@@ -66,7 +62,7 @@
+ # the comment at the end of the next line is needed because otherwise autoconf
  # would remove this line completely - it contains a built-in hack to remove
  # any VPATH assignment not containing ':'
--VPATH = $(VP1)@PATH_IFS@$(VP2)@PATH_IFS@$(VP3)@PATH_IFS@$(VP4)@PATH_IFS@$(VP5)@PATH_IFS@$(VP6)@PATH_IFS@$(VP7)@PATH_IFS@$(VP8)@PATH_IFS@$(VP9)@PATH_IFS@$(VP10)@PATH_IFS@$(VP11) # ':' for autoconf
-+VPATH = $(VP1)@PATH_IFS@$(VP2)@PATH_IFS@$(VP3)@PATH_IFS@$(VP4)@PATH_IFS@$(VP5)@PATH_IFS@$(VP6)@PATH_IFS@$(VP11) # ':' for autoconf
+-VPATH = $(VP1)@PATH_IFS@$(VP2)@PATH_IFS@$(VP3)@PATH_IFS@$(VP4)@PATH_IFS@$(VP5)@PATH_IFS@$(VP6)@PATH_IFS@$(VP7)@PATH_IFS@$(VP8)@PATH_IFS@$(VP9)@PATH_IFS@$(VP10)@PATH_IFS@$(VP11)@PATH_IFS@$(VP12)@PATH_IFS@$(VP13)@PATH_IFS@$(VP14) # ':' for autoconf
++VPATH = $(VP1)@PATH_IFS@$(VP2)@PATH_IFS@$(VP3)@PATH_IFS@$(VP4)@PATH_IFS@$(VP5)@PATH_IFS@$(VP6)@PATH_IFS@$(VP11)@PATH_IFS@$(VP12)@PATH_IFS@$(VP13)@PATH_IFS@$(VP14) # ':' for autoconf
  
  top_srcdir = @top_srcdir@
-@@ -76,11 +72,14 @@
+ prefix = @prefix@
+@@ -95,13 +91,16 @@
+ 
  top_builddir = .
  
 +EXTRALIBS=-lz -L@prefix@/lib -Wl,-R@prefix@/lib -ljpeg -lpng -ltiff
@@ -50,7 +57,9 @@ $NetBSD: patch-ab,v 1.4 2000/09/06 23:49:22 dmcmahill Exp $
 +#INSTALL_SCRIPT = @INSTALL@
  transform = @program_transform_name@
  
-@@ -111,8 +110,4 @@
+ NORMAL_INSTALL = :
+@@ -130,10 +129,6 @@
+ COMMDIR  = $(WXDIR)/src/common
  HTMLDIR  = $(WXDIR)/src/html
  UNIXDIR  = $(WXDIR)/src/unix
 -PNGDIR   = $(WXDIR)/src/png
@@ -59,7 +68,9 @@ $NetBSD: patch-ab,v 1.4 2000/09/06 23:49:22 dmcmahill Exp $
 -ZLIBDIR  = $(WXDIR)/src/zlib
  GTKDIR   = $(WXDIR)/src/gtk
  MOTIFDIR = $(WXDIR)/src/motif
-@@ -161,123 +156,4 @@
+ MSWDIR   = $(WXDIR)/src/msw
+@@ -184,41 +179,6 @@
+ OBJECTS = @ALL_OBJECTS@
  DEPFILES = @ALL_DEPFILES@
  
 -# the object files of sublibraries (we assume that they don't change [often],
@@ -97,7 +108,13 @@ $NetBSD: patch-ab,v 1.4 2000/09/06 23:49:22 dmcmahill Exp $
 -		pngget.o \
 -		pngset.o
 -
--
+ FREETYPEOBJS = \
+ 		ftsystem.o \
+ 		autohint.o \
+@@ -238,89 +198,6 @@
+ 		type1z.o \
+ 		winfnt.o
+ 
 -JPEGOBJS    = \
 -		jcomapi.o \
 -		jutils.o \
@@ -183,32 +200,38 @@ $NetBSD: patch-ab,v 1.4 2000/09/06 23:49:22 dmcmahill Exp $
 -
  IODBCOBJS = \
  		catalog.o \
-@@ -304,8 +180,11 @@
+ 		connect.o \
+@@ -345,64 +222,27 @@
+ 
  all: @WX_ALL@
  
 -@WX_LIBRARY_NAME_STATIC@:  $(OBJECTS)
+-	@$(INSTALL) -d ./lib
+-	$(AR) $(AROPTIONS) ./lib/$@ $(OBJECTS)
+-	$(RANLIB) ./lib/$@
 +CREATE_LINKS: $(top_builddir)/lib/@WX_LIBRARY_NAME@
 +
 +CREATE_INSTALLED_LINKS: preinstall
 +
 +$(top_builddir)/lib/@WX_LIBRARY_NAME@:  $(OBJECTS)
- 	@$(INSTALL) -d ./lib
--	$(AR) $(AROPTIONS) ./lib/$@ $(OBJECTS)
--	$(RANLIB) ./lib/$@
++	@$(INSTALL_DATA_DIR) ./lib
 +	${LIBTOOL} --mode=link cc -o $(top_builddir)/lib/@WX_LIBRARY_NAME@  ${OBJECTS:.o=.lo} ${EXTRALIBS} -rpath ${PREFIX}/lib -version-info 0:1
  
  @WX_LIBRARY_NAME_STATIC_GL@:  glcanvas.o
-@@ -314,52 +193,12 @@
+-	@$(INSTALL) -d ./lib
++	@$(INSTALL_DATA_DIR) ./lib
+ 	$(AR) $(AROPTIONS) ./lib/$@ glcanvas.o
  	$(RANLIB) ./lib/$@
  
 -@WX_LIBRARY_NAME_SHARED@:  $(OBJECTS)
 -	@$(INSTALL) -d ./lib
 -	$(SHARED_LD) ./lib/$@ $(BURNT_LIBRARY_NAME) $(OBJECTS) $(EXTRALIBS)
--	
+-
  @WX_LIBRARY_NAME_SHARED_GL@:  glcanvas.o
- 	@$(INSTALL) -d ./lib
+-	@$(INSTALL) -d ./lib
++	@$(INSTALL_DATA_DIR) ./lib
  	$(SHARED_LD) ./lib/$@ $(BURNT_LIBRARY_NAME_GL) glcanvas.o $(EXTRALIBS)
- 	
+ 
 -CREATE_LINKS: @WX_LIBRARY_NAME_SHARED@
 -	@$(RM) ./lib/@WX_LIBRARY_LINK1@
 -	@$(RM) ./lib/@WX_LIBRARY_LINK2@
@@ -217,7 +240,7 @@ $NetBSD: patch-ab,v 1.4 2000/09/06 23:49:22 dmcmahill Exp $
 -		&& $(LN_S) @WX_TARGET_LIBRARY@ @WX_LIBRARY_LINK1@ \
 -		&& $(LN_S) @WX_TARGET_LIBRARY@ @WX_LIBRARY_LINK2@ \
 -		&& $(LN_S) @WX_TARGET_LIBRARY@ @WX_LIBRARY_LINK3@
--	
+-
 -CREATE_LINKS_GL: @WX_LIBRARY_NAME_SHARED_GL@
 -	@$(RM) ./lib/@WX_LIBRARY_LINK1_GL@
 -	@$(RM) ./lib/@WX_LIBRARY_LINK2_GL@
@@ -226,7 +249,7 @@ $NetBSD: patch-ab,v 1.4 2000/09/06 23:49:22 dmcmahill Exp $
 -		&& $(LN_S) @WX_TARGET_LIBRARY_GL@ @WX_LIBRARY_LINK1_GL@ \
 -		&& $(LN_S) @WX_TARGET_LIBRARY_GL@ @WX_LIBRARY_LINK2_GL@ \
 -		&& $(LN_S) @WX_TARGET_LIBRARY_GL@ @WX_LIBRARY_LINK3_GL@
--	
+-
 -CREATE_INSTALLED_LINKS: preinstall
 -	$(RM) $(libdir)/@WX_LIBRARY_LINK1@
 -	$(RM) $(libdir)/@WX_LIBRARY_LINK2@
@@ -235,7 +258,7 @@ $NetBSD: patch-ab,v 1.4 2000/09/06 23:49:22 dmcmahill Exp $
 -		&& $(LN_S) @WX_LIBRARY_NAME_SHARED@ @WX_LIBRARY_LINK1@ \
 -		&& $(LN_S) @WX_LIBRARY_NAME_SHARED@ @WX_LIBRARY_LINK2@ \
 -		&& $(LN_S) @WX_LIBRARY_NAME_SHARED@ @WX_LIBRARY_LINK3@
--	
+-
 -CREATE_INSTALLED_LINKS_GL: preinstall_gl
 -	$(RM) $(libdir)/@WX_LIBRARY_LINK1_GL@
 -	$(RM) $(libdir)/@WX_LIBRARY_LINK2_GL@
@@ -244,15 +267,29 @@ $NetBSD: patch-ab,v 1.4 2000/09/06 23:49:22 dmcmahill Exp $
 -		&& $(LN_S) @WX_LIBRARY_NAME_SHARED_GL@ @WX_LIBRARY_LINK1_GL@ \
 -		&& $(LN_S) @WX_LIBRARY_NAME_SHARED_GL@ @WX_LIBRARY_LINK2_GL@ \
 -		&& $(LN_S) @WX_LIBRARY_NAME_SHARED_GL@ @WX_LIBRARY_LINK3_GL@
--	
+-
  $(OBJECTS):	$(WXDIR)/include/wx/defs.h $(WXDIR)/include/wx/object.h
  
  parser.o:    parser.c lexer.c
 -	$(CCLEX) -c $(CFLAGS) $(PICFLAGS) -o $@ parser.c
-+	${LIBTOOL} --mode=compile $(CCLEX) -c $(CFLAGS)  -o $@ parser.c
++	${LIBTOOL} --mode=compile $(CCLEX) -c $(CFLAGS) -o $@ parser.c
  
  parser.c:	$(COMMDIR)/parser.y lexer.c
-@@ -393,24 +232,22 @@
+ 	$(YACC) $(COMMDIR)/parser.y
+@@ -425,49 +265,41 @@
+ -include $(DEPFILES)
+ 
+ afminstall: preinstall
+-	$(INSTALL) -d $(datadir)
+-	$(INSTALL) -d $(datadir)/wx
+-	$(INSTALL) -d $(datadir)/wx/afm
+-	$(INSTALL) -d $(datadir)/wx/gs_afm
++	$(INSTALL_DATA_DIR) $(datadir)/wx
++	$(INSTALL_DATA_DIR) $(datadir)/wx/afm
++	$(INSTAL_DATA_DIRL) $(datadir)/wx/gs_afm
+ 	$(INSTALL_DATA) $(top_srcdir)/misc/afm/*.afm $(datadir)/wx/afm
+ 	$(INSTALL_DATA) $(top_srcdir)/misc/gs_afm/*.afm $(datadir)/wx/gs_afm
+ 
  # this is the real install target: copies the library, wx-config and the
  # headers to the installation directory
 -preinstall: $(top_builddir)/lib/@WX_TARGET_LIBRARY@ $(top_builddir)/wx@TOOLKIT_NAME@-config
@@ -264,12 +301,11 @@ $NetBSD: patch-ab,v 1.4 2000/09/06 23:49:22 dmcmahill Exp $
 -	$(INSTALL) -d $(prefix)
 -	$(INSTALL) -d $(bindir)
 -	$(INSTALL) -d $(libdir)
- 
+-
  	$(INSTALL_SCRIPT) $(top_builddir)/wx@TOOLKIT_NAME@-config $(bindir)/wx@TOOLKIT_NAME@-config
  	cd $(bindir) && rm -f wx-config && $(LN_S) wx@TOOLKIT_NAME@-config wx-config
 -	$(INSTALL_PROGRAM) $(top_builddir)/lib/@WX_TARGET_LIBRARY@ $(libdir)/@WX_TARGET_LIBRARY@
 +	${LIBTOOL} --mode=install ${INSTALL_DATA} $(top_builddir)/lib/@WX_LIBRARY_NAME@ ${libdir}
-+
  
 -	$(INSTALL) -d $(libdir)/wx
 -	$(INSTALL) -d $(libdir)/wx/include
@@ -280,24 +316,41 @@ $NetBSD: patch-ab,v 1.4 2000/09/06 23:49:22 dmcmahill Exp $
 +	$(INSTALL_DATA_DIR) $(libdir)/wx/include/wx
 +	$(INSTALL_DATA_DIR) $(libdir)/wx/include/wx/@TOOLKIT_NAME@
  	$(INSTALL_DATA) $(top_builddir)/include/wx/@TOOLKIT_DIR@/setup.h $(libdir)/wx/include/wx/@TOOLKIT_NAME@/setup.h
- 	
+ 
 -	$(INSTALL) -d $(includedir)/wx
+-	@if test "$(USE_GUI)" = 1; then $(INSTALL) -d $(includedir)/wx/@TOOLKIT_DIR@; fi
+-	@if test "$(USE_GUI)" = 1; then $(INSTALL) -d $(includedir)/wx/html; fi
+-	@if test "$(USE_GUI)" = 1; then $(INSTALL) -d $(includedir)/wx/generic; fi
+-	$(INSTALL) -d $(includedir)/wx/protocol
+-	$(INSTALL) -d $(includedir)/wx/unix
 +	$(INSTALL_DATA_DIR) $(includedir)/wx
- 	@if test "$(USE_GUI)" = 1; then $(INSTALL) -d $(includedir)/wx/@TOOLKIT_DIR@; fi
- 	@if test "$(USE_GUI)" = 1; then $(INSTALL) -d $(includedir)/wx/html; fi
-@@ -423,8 +260,8 @@
++	@if test "$(USE_GUI)" = 1; then $(INSTALL_DATA_DIR) $(includedir)/wx/@TOOLKIT_DIR@; fi
++	@if test "$(USE_GUI)" = 1; then $(INSTALL_DATA_DIR) $(includedir)/wx/html; fi
++	@if test "$(USE_GUI)" = 1; then $(INSTALL_DATA_DIR) $(includedir)/wx/generic; fi
++	$(INSTALL_DATA_DIR) $(includedir)/wx/protocol
++	$(INSTALL_DATA_DIR) $(includedir)/wx/unix
+ 	@list='$(HEADERS)'; for p in $$list; do \
+ 	  $(INSTALL_DATA) $(top_srcdir)/include/wx/$$p $(includedir)/wx/$$p; \
+ 	  echo "$(INSTALL_DATA) $(top_srcdir)/include/wx/$$p $(includedir)/wx/$$p"; \
  	done
  
 -	$(INSTALL) -d $(localedir)
-+	$(INSTALL_DATA_DIR) $(localedir)
  	@for p in $(WX_LINGUAS); do \
 -	  $(INSTALL) -d $(localedir)/$$p; \
 -	  $(INSTALL) -d $(localedir)/$$p/LC_MESSAGES; \
-+	  $(INSTALL_DATA_DIR) $(localedir)/$$p; \
-+	  $(INSTALL_DATA_DIR) $(localedir)/$$p/LC_MESSAGES; \
  	  $(INSTALL_DATA) $(top_srcdir)/locale/$$p.mo $(localedir)/$$p/LC_MESSAGES/wxstd.mo; \
  	  echo "$(INSTALL_DATA) $(top_srcdir)/locale/$$p.mo $(localedir)/$$p/LC_MESSAGES/wxstd.mo"; \
-@@ -524,8 +361,4 @@
+ 	done
+@@ -476,7 +308,6 @@
+ 	@echo " "
+ 	@echo " Installing wxWindows OpenGl add-on..."
+ 	@echo " "
+-	$(INSTALL) -d $(libdir)
+ 	$(INSTALL_PROGRAM) $(top_builddir)/lib/@WX_TARGET_LIBRARY_GL@ $(libdir)/@WX_TARGET_LIBRARY_GL@
+ 
+ install: @AFMINSTALL@ @WX_ALL_INSTALLED@
+@@ -565,10 +396,6 @@
+ 	cp $(WXDIR)/lib/vms_gtk.opt $(DISTDIR)/lib
  	mkdir $(DISTDIR)/src
  	mkdir $(DISTDIR)/src/zlib
 -	cp $(ZLIBDIR)/*.h $(DISTDIR)/src/zlib
@@ -306,13 +359,17 @@ $NetBSD: patch-ab,v 1.4 2000/09/06 23:49:22 dmcmahill Exp $
 -	cp $(ZLIBDIR)/*.mms $(DISTDIR)/src/zlib
  
  # this target is the common part of distribution script for all GUI toolkits,
-@@ -561,5 +394,4 @@
+ # but is not used when building wxBase distribution
+@@ -600,7 +427,6 @@
+ 	mkdir $(DISTDIR)/src/html/bitmaps
  	mkdir $(DISTDIR)/src/$(TOOLKITDIR)
  	mkdir $(DISTDIR)/src/png
 -	mkdir $(DISTDIR)/src/jpeg
  	mkdir $(DISTDIR)/src/tiff
  	mkdir $(DISTDIR)/src/iodbc
-@@ -584,7 +416,4 @@
+ 	mkdir $(DISTDIR)/src/unix
+@@ -623,9 +449,6 @@
+ 	cp $(PNGDIR)/*.h $(DISTDIR)/src/png
  	cp $(PNGDIR)/*.c $(DISTDIR)/src/png
  	cp $(PNGDIR)/README $(DISTDIR)/src/png
 -	cp $(JPEGDIR)/*.h $(DISTDIR)/src/jpeg
@@ -320,3 +377,4 @@ $NetBSD: patch-ab,v 1.4 2000/09/06 23:49:22 dmcmahill Exp $
 -	cp $(JPEGDIR)/README $(DISTDIR)/src/jpeg
  	cp $(TIFFDIR)/*.h $(DISTDIR)/src/tiff
  	cp $(TIFFDIR)/*.c $(DISTDIR)/src/tiff
+ 	cp $(TIFFDIR)/README $(DISTDIR)/src/tiff
