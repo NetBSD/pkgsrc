@@ -412,13 +412,7 @@ Suggested package updates
 Infrastructure problems which need addressing
 =============================================
 
-	o fix mk/compiler.mk to handle non-pkgsrc gcc,
-	  eg. /opt/sfw/bin/gcc. [grant]
-
-	  need to figure out how to override buildlink2's hiding of
-	  /usr/local, as the installation of gcc I am testing with is
-	  in that directory.
-	
+	o bootstrap building of gcc2/gcc3.
 
 Suggested pkgsrc enhancements
 =============================
