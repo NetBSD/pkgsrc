@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2001/09/27 23:18:21 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2001/09/29 17:43:55 rh Exp $
 
-DISTNAME=		evolution-0.13
+DISTNAME=		evolution-0.14
 CATEGORIES=		mail time gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=unstable/sources/evolution/}
 EXTRACT_SUFX=		.tar.bz2
@@ -16,7 +16,7 @@ DEPENDS+=		db3-2.9:../../databases/db3
 DEPENDS+=		gal>=0.12:../../devel/gal
 DEPENDS+=		bonobo>=1.0.7:../../devel/bonobo
 DEPENDS+=		bonobo-conf>=0.11:../../devel/bonobo-conf
-DEPENDS+=		gtkhtml>=0.12.0:../../www/gtkhtml
+DEPENDS+=		gtkhtml>=0.13.0:../../www/gtkhtml
 DEPENDS+=		gnome-vfs>=1.0.1:../../sysutils/gnome-vfs
 DEPENDS+=		libunicode>=0.4:../../textproc/libunicode
 DEPENDS+=		oaf>=0.6.5:../../devel/oaf

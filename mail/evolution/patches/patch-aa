@@ -1,9 +1,9 @@
-$NetBSD: patch-aa,v 1.4 2001/09/25 13:31:18 tron Exp $
+$NetBSD: patch-aa,v 1.5 2001/09/29 17:43:55 rh Exp $
 
---- configure.orig	Fri Aug 24 00:41:21 2001
-+++ configure	Mon Sep 24 22:08:59 2001
-@@ -4644,13 +4644,13 @@
- if { (eval echo configure:4645: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
+--- configure.orig	Sat Sep 22 00:22:38 2001
++++ configure
+@@ -8364,13 +8364,13 @@
+ if { (eval echo configure:8365: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
    rm -rf conftest*
    CATOBJEXT=.gmo
 -		   DATADIRNAME=share
@@ -18,7 +18,7 @@ $NetBSD: patch-aa,v 1.4 2001/09/25 13:31:18 tron Exp $
  fi
  rm -f conftest*
  		INSTOBJEXT=.mo
-@@ -4879,7 +4879,7 @@
+@@ -8599,7 +8599,7 @@
        # We need to process the po/ directory.
        POSUB=po
      else
@@ -27,7 +27,7 @@ $NetBSD: patch-aa,v 1.4 2001/09/25 13:31:18 tron Exp $
        nls_cv_header_intl=intl/libintl.h
        nls_cv_header_libgt=intl/libgettext.h
      fi
-@@ -5494,8 +5494,8 @@
+@@ -9195,8 +9195,8 @@
  # This can only change between Evolution versions (and then can only
  # go up.)
  evolution_db_version_major=3
