@@ -1,4 +1,4 @@
-/*	$NetBSD: main.c,v 1.8 2004/03/22 11:44:24 wiz Exp $	*/
+/*	$NetBSD: main.c,v 1.9 2004/05/07 16:40:41 jlam Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static char *rcsid = "from FreeBSD Id: main.c,v 1.14 1997/10/08 07:47:26 charnier Exp";
 #else
-__RCSID("$NetBSD: main.c,v 1.8 2004/03/22 11:44:24 wiz Exp $");
+__RCSID("$NetBSD: main.c,v 1.9 2004/05/07 16:40:41 jlam Exp $");
 #endif
 #endif
 
@@ -50,13 +50,14 @@ __RCSID("$NetBSD: main.c,v 1.8 2004/03/22 11:44:24 wiz Exp $");
 #include "lib.h"
 #include "info.h"
 
-static const char Options[] = "aBbcDde:fFhIiK:kLl:mNnpqRrsSvV";
+static const char Options[] = "aBbcDde:fFhIiK:kLl:mNnpQ:qRrsSvV";
 
 int     Flags = 0;
 Boolean AllInstalled = FALSE;
 Boolean File2Pkg = FALSE;
 Boolean Quiet = FALSE;
 char   *InfoPrefix = "";
+char   *BuildInfoVariable = "";
 char    PlayPen[FILENAME_MAX];
 size_t  PlayPenSize = sizeof(PlayPen);
 char   *CheckPkg = NULL;
@@ -69,7 +70,8 @@ usage(void)
 	fprintf(stderr, "%s\n%s\n%s\n",
 	    "usage: pkg_info [-BbcDdFfIikLmNnpqRrSsVvh] [-e package] [-l prefix]",
 	    "                pkg-name [pkg-name ...]",
-	    "       pkg_info -a [flags]");
+	    "       pkg_info -a [flags]",
+	    "       pkg_info -Q variable pkg-name [pkg-name ...]");
 	exit(1);
 }
 
@@ -157,6 +159,11 @@ main(int argc, char **argv)
 
 		case 'p':
 			Flags |= SHOW_PREFIX;
+			break;
+
+		case 'Q':
+			Flags |= SHOW_BI_VAR;
+			BuildInfoVariable = optarg;
 			break;
 
 		case 'q':
