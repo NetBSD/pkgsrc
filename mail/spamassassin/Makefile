@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2004/05/31 12:43:06 heinz Exp $
+# $NetBSD: Makefile,v 1.46 2004/06/06 04:29:17 schmonz Exp $
 
 DISTNAME=	Mail-SpamAssassin-${SPAMASSASSIN_VERSION}
 PKGNAME=	spamassassin-${SPAMASSASSIN_VERSION}
@@ -147,8 +147,7 @@ post-extract:
 pre-configure: perl5-configure
 
 pre-install:
-	${FIND} ${WRKSRC} -name "*.orig" -print -o			\
-		-name "*.subst.sav" -print | ${XARGS} ${RM} -f
+	${FIND} ${WRKSRC} -name "*.orig" -print | ${XARGS} ${RM} -f
 
 post-install:
 	@${TEST} -r ${PLIST_ADD} && ${RM} ${PLIST_ADD} ; :
