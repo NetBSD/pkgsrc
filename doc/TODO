@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.701 2003/07/12 01:54:48 zuntum Exp $
+$NetBSD: TODO,v 1.702 2003/07/12 07:05:44 wiz Exp $
 
 Suggested new packages
 ======================
@@ -86,7 +86,6 @@ Suggested package updates
 	o courier-imap-2.0
 	o crafty-19.1
 	o crossfire-1.5.0
-	o cscope-15.4
 	o csound-4.24.0
 	o cvs-1.11.6
 	o cxref-1.5e
