@@ -1,4 +1,4 @@
-# $NetBSD: pthread.builtin.mk,v 1.2.2.1 2004/11/28 20:11:32 tv Exp $
+# $NetBSD: pthread.builtin.mk,v 1.2.2.2 2004/12/09 17:15:01 tv Exp $
 
 .for _lib_ in pthread c_r rt
 .  if !defined(_BLNK_LIB_FOUND.${_lib_})
@@ -52,6 +52,9 @@ BUILDLINK_LDFLAGS.pthread+=	-pthread
 BUILDLINK_CFLAGS.pthread+=	-pthread
 .  else
 BUILDLINK_CPPFLAGS.pthread+=	-D_REENTRANT
+.  endif
+.  if ${OPSYS} == "FreeBSD"
+BUILDLINK_CPPFLAGS.pthread+=	-D_THREAD_SAFE
 .  endif
 
 # Handle systems which have pthreads functions in libc_r such as
