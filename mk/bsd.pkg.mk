@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1274 2003/09/12 23:33:07 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1275 2003/09/13 05:55:14 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -706,7 +706,7 @@ uptodate-digest:
 .if defined(_OPSYS_PKGTOOLS_REQD)
 PKGTOOLS_REQD=		${_OPSYS_PKGTOOLS_REQD}
 .else
-PKGTOOLS_REQD=		20030907
+PKGTOOLS_REQD=		20030912
 .endif
 
 # Check that we are using up-to-date pkg_* tools with this file.
@@ -1806,7 +1806,7 @@ show-downlevel:
 	${_PKG_SILENT}${_PKG_DEBUG}${DO_NADA}
 .  else
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	found="`${PKG_INFO} -e \"${PKGBASE}\" || ${TRUE}`";		\
+	found="`${PKG_BEST_EXISTS} \"${PKGBASE}\" || ${TRUE}`";		\
 	if [ "X$$found" != "X" -a "X$$found" != "X${PKGNAME}" ]; then	\
 		${ECHO} "${PKGBASE} package: $$found installed, pkgsrc version ${PKGNAME}"; \
 		if [ "X$$STOP_DOWNLEVEL_AFTER_FIRST" != "X" ]; then	\
@@ -1823,7 +1823,7 @@ show-installed-depends:
 .  if defined(DEPENDS)
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	for i in ${DEPENDS:C/:.*$//:Q:S/\ / /g} ; do			\
-		echo "$$i =>" `${PKG_INFO} -e "$$i"` ;			\
+		echo "$$i =>" `${PKG_BEST_EXISTS} "$$i"` ;		\
 	done
 .  endif
 .endif
@@ -1836,7 +1836,7 @@ show-needs-update:
 	for i in `${MAKE} show-all-depends-dirs`; do			\
 		cd ${_PKGSRCDIR}/$$i;					\
 		want=`make show-vars VARNAMES=PKGNAME`;			\
-		have=`${PKG_INFO} -e "$${want%-*}" || true`;		\
+		have=`${PKG_BEST_EXISTS} "$${want%-*}" || true`;	\
 		if [ -z "$$have" ]; then				\
 			echo "$$i => (none) => needs install of $$want"; \
 		elif [ "$$have" != "$$want" ]; then			\
@@ -1853,7 +1853,7 @@ show-pkgsrc-dir:
 	${_PKG_SILENT}${_PKG_DEBUG}${DO_NADA}
 .  else
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	found="`${PKG_INFO} -e \"${PKGWILDCARD}\" || ${TRUE}`";		\
+	found="`${PKG_BEST_EXISTS} \"${PKGWILDCARD}\" || ${TRUE}`";	\
 	if [ "X$$found" != "X" ]; then					\
 		${ECHO} ${PKGPATH};					\
 	fi
@@ -2451,7 +2451,7 @@ real-su-install: ${MESSAGE}
 	${RM} -f ${WRKDIR}/.CONFLICTS
 .    for conflict in ${CONFLICTS}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	found="`${PKG_INFO} -e \"${conflict}\" || ${TRUE}`";		\
+	found="`${PKG_BEST_EXISTS} \"${conflict}\" || ${TRUE}`";	\
 	if [ X"$$found" != X"" ]; then					\
 		${ECHO} "$$found" >> ${WRKDIR}/.CONFLICTS;		\
 	fi
@@ -2467,7 +2467,7 @@ real-su-install: ${MESSAGE}
 	fi
 .  endif	# CONFLICTS
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	found="`${PKG_INFO} -e \"${PKGWILDCARD}\" || ${TRUE}`";		\
+	found="`${PKG_BEST_EXISTS} \"${PKGWILDCARD}\" || ${TRUE}`";	\
 	if [ "$$found" != "" ]; then					\
 		${ECHO_MSG} "${_PKGSRC_IN}>  $$found is already installed - perhaps an older version?"; \
 		${ECHO_MSG} "*** If so, you may use either of:"; \
@@ -3238,7 +3238,7 @@ real-su-deinstall:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	found="`${PKG_INFO} -e \"${PKGNAME}\" || ${TRUE}`";		\
 	case "$$found" in						\
-	"") found="`${PKG_INFO} -e \"${PKGWILDCARD}\" || ${TRUE}`" ;;	\
+	"") found="`${PKG_BEST_EXISTS} \"${PKGWILDCARD}\" || ${TRUE}`" ;; \
 	esac;								\
 	if [ "$$found" != "" ]; then					\
 		${ECHO} Running ${PKG_DELETE} ${real-su-deinstall-flags} $$found ; \
@@ -3248,7 +3248,7 @@ real-su-deinstall:
 	@${SHCOMMENT} Also remove BUILD_DEPENDS:
 .    for pkg in ${BUILD_DEPENDS:C/:.*$//}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	found="`${PKG_INFO} -e \"${pkg}\" || ${TRUE}`";			\
+	found="`${PKG_BEST_EXISTS} \"${pkg}\" || ${TRUE}`";		\
 	if [ "$$found" != "" ]; then					\
 		${ECHO} Running ${PKG_DELETE} $$found;			\
 		${PKG_DELETE} ${real-su-deinstall-flags} $$found || ${TRUE}; \
@@ -3441,7 +3441,7 @@ real-su-replace:
 		exit 1;							\
 	fi
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	oldpkgname=`${PKG_INFO} -e "${PKGBASE}"`;			\
+	oldpkgname=`${PKG_BEST_EXISTS} "${PKGBASE}"`;			\
 	newpkgname=${PKGNAME};						\
 	${ECHO} "$$oldpkgname" > ${WRKDIR}/.replace;			\
 	replace_action="${MAKE} install";				\
@@ -3798,7 +3798,7 @@ _BIN_INSTALL_FLAGS+=	${PKG_ARGS_ADD}
 # Install binary pkg, without strict uptodate-check first
 .PHONY: bin-install
 bin-install:
-	@found="`${PKG_INFO} -e \"${PKGWILDCARD}\" || ${TRUE}`";	\
+	@found="`${PKG_BEST_EXISTS} \"${PKGWILDCARD}\" || ${TRUE}`";	\
 	if [ "$$found" != "" ]; then					\
 		${ECHO_MSG} "${_PKGSRC_IN}>  $$found is already installed - perhaps an older version?"; \
 		${ECHO_MSG} "*** If so, you may wish to \`\`pkg_delete $$found'' and install"; \
@@ -3936,7 +3936,7 @@ install-depends: uptodate-pkgtools
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	pkg="${dep:C/:.*//}";						\
 	dir="${dep:C/[^:]*://:C/:.*$//}";				\
-	found=`${PKG_INFO} -e "$$pkg" || ${TRUE}`;			\
+	found=`${PKG_BEST_EXISTS} "$$pkg" || ${TRUE}`;			\
 	if [ "X$$REBUILD_DOWNLEVEL_DEPENDS" != "X" ]; then		\
 		pkgname=`cd $$dir ; ${MAKE} ${MAKEFLAGS} show-var VARNAME=PKGNAME`; \
 		if [ "X$$found" != "X" -a "X$$found" != "X$${pkgname}" ]; then \
@@ -3945,21 +3945,21 @@ install-depends: uptodate-pkgtools
 		fi;							\
 	fi;								\
 	if [ "$$found" != "" ]; then					\
-		instobjfmt=`${PKG_INFO} -B "$$pkg" | ${AWK} -F'=[ \t]*' '/^OBJECT_FMT/ {print $$2; exit}'`; \
+		instobjfmt=`${PKG_INFO} -B "$$found" | ${AWK} -F'=[ \t]*' '/^OBJECT_FMT/ {print $$2; exit}'`; \
 		if [ "$$instobjfmt" = "" ]; then			\
 			if [ "X${WARN_NO_OBJECT_FMT}" != "Xno" ]; then	\
-				${ECHO} "WARNING: Unknown object format for installed package $$pkg - continuing"; \
+				${ECHO} "WARNING: Unknown object format for installed package $$found - continuing"; \
 			fi;						\
 		elif [ "$$instobjfmt" != "${OBJECT_FMT}" ]; then	\
-			${ECHO} "Installed package $$pkg is an $$instobjfmt package."; \
+			${ECHO} "Installed package $$found is an $$instobjfmt package."; \
 			${ECHO} "You are building an ${OBJECT_FMT} package, which will not inter-operate."; \
-			${ECHO} "Please update the $$pkg package to ${OBJECT_FMT}"; \
+			${ECHO} "Please update the $$found package to ${OBJECT_FMT}"; \
 			if [ "X${FATAL_OBJECT_FMT_SKEW}" != "Xno" ]; then \
 				exit 1;					\
 			fi;						\
 		fi;							\
 		if [ `${ECHO} $$found | ${WC} -w` -gt 1 ]; then		\
-			${ECHO} '***' "WARNING: Dependency on '$$pkg' expands to several installed packages " ; \
+			${ECHO} '***' "WARNING: Dependency on '$$found' expands to several installed packages " ; \
 			${ECHO} "    (" `${ECHO} $$found` ")." ; 	\
 			${ECHO} "    Please check if this is really intended!" ; \
 		else 							\
@@ -3973,7 +3973,7 @@ install-depends: uptodate-pkgtools
 			${ECHO_MSG} "=> No directory for $$dir.  Skipping.."; \
 		else							\
 			cd $$dir ;					\
-			${MAKE} ${MAKEFLAGS} $$target _PKGSRC_DEPS=", ${PKGNAME}${_PKGSRC_DEPS}" PKGNAME_REQD=$$pkg; \
+			${MAKE} ${MAKEFLAGS} $$target _PKGSRC_DEPS=", ${PKGNAME}${_PKGSRC_DEPS}" PKGNAME_REQD="$$pkg"; \
 			${ECHO_MSG} "${_PKGSRC_IN}> Returning to build of ${PKGNAME}"; \
 		fi;							\
 	fi
