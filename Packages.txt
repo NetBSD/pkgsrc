@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.4 1997/12/26 03:42:33 hubertf Exp $
+# $NetBSD: Packages.txt,v 1.5 1997/12/27 04:13:29 hubertf Exp $
 ###########################################################################
 
 			==========================
@@ -485,12 +485,15 @@ of when dealing with the PLIST file (or files, see below!).
    -m" gives. 
 
  * Manpage-compression:
-   Manpages should be installed in compressed for if MANZ is set (in
+   Manpages should be installed in compressed form if MANZ is set (in
    bsd.own.mk), and uncompressed otherwise. To handle this in the PLIST
    file, the suffix ".gz" is appended/removed automatically for manpages
    according to MANZ and MANCOMPRESSED being set or not, see above for
-   details. This modification of the PLIST file is done on a copy of it,
-   not pkg/PLIST itself.
+   details. (We don't regard any .gz suffix on manpages set in pkg/PLIST,
+   as many FreeBSD ports seem to have .gz pages in PLIST even when they
+   install manpages without compressing them; rather, we set it on our
+   own here, if needed). This modification of the PLIST file is done on
+   a copy of it, not pkg/PLIST itself.
 
 
  5.2 MD/MI vs. general PLIST
