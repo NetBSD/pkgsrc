@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.110 2002/12/05 21:52:33 jmmv Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.111 2002/12/06 14:25:07 wiz Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -984,11 +984,6 @@ MAJORDOMO_USER?= majordom
 # Used by majordomo package as the userid majordomo runs at.
 # Possible: any
 # Default: majordom
-
-MPLAYER_FONT?= iso-8859-1/arial-14
-# Used by the mplayer-share package to display subtitles and the timer.
-# Possible: any font directory which contains the mplayer font.desc
-# Default: iso-8859-1/arial-14
 
 MPLAYER_USE_REALMEDIA?= NO
 # Used by mplayer to enable realmedia support by using the realplayer
