@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 1998/11/12 15:45:09 agc Exp $
+# $NetBSD: Makefile,v 1.11 1999/02/15 23:57:50 is Exp $
 #
 
 DISTNAME=       mpg123-0.59o
@@ -10,6 +10,8 @@ HOMEPAGE=	http://mpg.123.org/
 
 .if (${MACHINE_ARCH} == "i386")
 ALL_TARGET=	netbsd-i386
+.elif (${MACHINE_ARCH} == "m68k")
+ALL_TARGET=	netbsd-m68k
 .else
 ALL_TARGET=	netbsd
 .endif
