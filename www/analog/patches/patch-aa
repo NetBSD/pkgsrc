@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.15 2001/05/14 12:42:14 tron Exp $
+$NetBSD: patch-aa,v 1.16 2001/05/14 20:35:17 tron Exp $
 
 --- Makefile.orig	Tue May  1 12:38:33 2001
-+++ Makefile	Mon May 14 14:23:34 2001
-@@ -1,8 +1,8 @@
++++ Makefile	Mon May 14 22:29:27 2001
+@@ -1,12 +1,17 @@
  # Makefile for analog 5.0
  # Please read docs/Readme.html, or http://www.analog.cx/
 -CC = gcc           # which compiler to use: eg cc, acc, gcc. NB Different
@@ -13,3 +13,13 @@ $NetBSD: patch-aa,v 1.15 2001/05/14 12:42:14 tron Exp $
  #                 HP/UX cc needs CFLAGS = -Aa (HP/UX 9) or -Ae (HP/UX 10)
  #                 BS2000/OSD needs CFLAGS = -XLLML -XLLMK
  #                 NeXTSTEP needs CFLAGS = -O2 -pipe -no-precomp 
+-DEFS =          # any combination of -DNOPIPES -DNODNS -DNODIRENT -DNOGLOB ...
++DEFS =        -DANALOGDIR=\"${PREFIX}/lib/analog/\" \
++      -DDEFAULTCONFIGFILE=\"${PREFIX}/etc/analog.cfg\" \
++      -DIMAGEDIR=\"/images/\" \
++      -DLANGDIR=\"${PREFIX}/lib/analog/lang/\" \
++      -DLOGFILE=\"/var/log/httpd-access.log\"
++#                 any combination of -DNOPIPES -DNODNS -DNODIRENT -DNOGLOB ...
+ #                 ... -DNOOPEN -DNOFOLLOW -DNOALARM -DNOGRAPHICS -DNOGMTIME ...
+ #                 ... -DEBCDIC -DUSE_PLAIN_SETJMP -DHAVE_GD -DHAVE_PCRE ...
+ #                 ... -DNEED_STRCMP -DNEED_MEMMOVE -DNEED_STRTOUL ...
