@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2394 2004/11/19 16:32:57 minskim Exp $
+$NetBSD: TODO,v 1.2395 2004/11/19 16:34:11 minskim Exp $
 
 Suggested new packages
 ======================
@@ -598,7 +598,6 @@ Suggested package updates
 	o py-TPG-3.0.2
 	o py-TTFQuery-1.0.0
 	o py-ZODB-3.2.3
-	o py-cjkcodecs-1.1.1
 	o py-generate-2.1
 	o py-ldap-2.0.4
 	o py-logging-0.4.9.5
