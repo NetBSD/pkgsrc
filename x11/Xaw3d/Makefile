@@ -1,9 +1,10 @@
-# New ports collection makefile for:	Xaw3d
+# New ports collection Makefile for: Xaw3d
 # Version required:	1.3
-# Date created:		18 November 1994
-# Whom:			asami
+# Date created:         30th November 1997
+# Whom:                 tron@lyssa.owl.de
 #
-# $Id: Makefile,v 1.1.1.1 1997/12/29 02:22:39 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 1997/12/29 02:31:53 hubertf Exp $
+# FreeBSD Id: Makefile,v 1.14 1997/06/19 09:33:26 asami Exp
 #
 
 DISTNAME=	Xaw3d-1.3
@@ -11,16 +12,15 @@ CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XCONTRIB}
 MASTER_SITE_SUBDIR=	widgets/Xaw3d/R6.1
 
-MAINTAINER=	asami@FreeBSD.ORG
-
-WRKSRC=		${WRKDIR}/xc/lib/Xaw3d
 USE_IMAKE=	yes
+WRKSRC=		${WRKDIR}/xc/lib/Xaw3d
 
 post-extract:
-	${MKDIR} ${WRKSRC}/X11/Xaw3d
-	cd ${WRKSRC}/X11/Xaw3d; ln -sf ../../*.h .
+	@(cd ${WRKSRC};ln -s .. X11)
 
 post-install:
 	${LDCONFIG} -m ${PREFIX}/lib
+	${MKDIR} -p ${PREFIX}/share/doc/Xaw3d
+	${CP} ${FILESDIR}/README.XAW3D ${PREFIX}/share/doc/Xaw3d
 
 .include <bsd.port.mk>
