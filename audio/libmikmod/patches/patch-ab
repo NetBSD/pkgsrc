@@ -1,0 +1,35 @@
+$NetBSD: patch-ab,v 1.1.1.1 1999/12/10 01:33:28 hubertf Exp $
+
+--- docs/mikmod.texi.orig	Sun Oct  3 18:47:56 1999
++++ docs/mikmod.texi	Sun Oct  3 18:48:33 1999
+@@ -78,12 +78,14 @@
+ @direntry
+ * MikMod: (mikmod).            MikMod Sound Library.
+ @end direntry
++@end ifnottex
+ 
+ @c ========================================================== Top node
+ @node Top, Introduction, (dir), (dir)
+ @top MikMod Sound Library
+ @w{This manual documents the MikMod Sound Library, version @value{library-version}.}
+ 
++@ifnottex
+ @menu
+ * Introduction::          What is MikMod ?
+ * Tutorial::              Your first steps with MikMod.
+@@ -3077,15 +3079,11 @@
+ @end menu
+ @end ifnottex
+ 
+-@ifnottex
+ @node Function Index, Type and Variable Index, Index, Index
+-@end ifnottex
+ @unnumbered Function Index
+ @printindex fn
+ 
+-@ifnottex
+ @node Type and Variable Index, , Function Index, Index
+-@end ifnottex
+ @unnumbered Type and Variable Index
+ @printindex vr
+ 
