@@ -1,9 +1,0 @@
-#!/bin/sh
-#
-# $NetBSD: configure,v 1.4 2001/01/05 20:24:05 is Exp $
-#
-
-cd $WRKSRC || exit 1;
-
-echo "MANSUFFIX=6"              >> Imakefile || exit 1;
-exit 0;
