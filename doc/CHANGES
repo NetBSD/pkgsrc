@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5447 2004/04/05 11:47:55 xtraeme Exp $
+$NetBSD: CHANGES,v 1.5448 2004/04/05 12:00:03 markd Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1783,3 +1783,6 @@ Changes to the packages collection and infrastructure in 2004:
 	Added allegro-4.1.13 [xtraeme 2004-04-05]
 	Added raine-0.40.0 [xtraeme 2004-04-05]
 	Added ubs-0.17 [xtraeme 2004-04-05]
+	Updated kile to 1.6.2 [markd 2004-04-05]
+	Updated quanta3 to 3.2.1nb2 [markd 2004-04-05]
+	Updated kde3 to 3.2.1nb4 [markd 2004-04-05]
