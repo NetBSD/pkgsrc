@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2003/03/29 21:20:29 salo Exp $
+# $NetBSD: Makefile,v 1.18 2003/05/05 06:06:11 grant Exp $
 #
 
 DISTNAME=	ircii-pana-1.0c19
@@ -22,6 +22,19 @@ post-patch:
 	@${MV} ${WRKSRC}/doc/BitchX.1 ${WRKSRC}/doc/BitchX.1.orig
 	@${SED} ${FILES_SUBST_SED} \
 		${WRKSRC}/doc/BitchX.1.orig > ${WRKSRC}/doc/BitchX.1
+
+.if defined(BITCHX_WITH_GTK)
+.include "../../x11/gnome-libs/buildlink2.mk"
+.include "../../x11/gtk/buildlink2.mk"
+.include "../../graphics/imlib/buildlink2.mk"
+CONFIGURE_ARGS+=	--with-gtk
+CFLAGS+=		-I${PREFIX}/include/gnome-1.0
+PLIST_SUBST+=		GTK="gtk"
+PLIST_SUBST+=		NOT_GTK="@comment "
+.else
+PLIST_SUBST+=		GTK=
+PLIST_SUBST+=		NOT_GTK=
+.endif
 
 .include "../../archivers/bzip2/buildlink2.mk"
 .include "../../devel/ncurses/buildlink2.mk"
