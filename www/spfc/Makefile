@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/01/18 18:05:29 jwise Exp $
+# $NetBSD: Makefile,v 1.2 2000/05/09 21:02:35 jwise Exp $
 
 DISTNAME=	spfc-0.2.0
 CATEGORIES=	www
@@ -15,17 +15,16 @@ DEPENDS+=	jsdk-2.0:../../www/jsdk20
 USE_JAVA=
 USE_GMAKE=
 NO_CONFIGURE=
-NO_MTREE=
-MAKE_ENV+=	CLASSPATH=${CLASSPATH}:${JSDK_HOME}/lib/jsdk.jar
+MAKE_ENV+=	CLASSPATH=${CLASSPATH}:${PREFIX}/lib/jsdk.jar
 WRKSRC=		${WRKDIR}/spfc-0.2.0/src/
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/../bin/spfc.jar ${JSDK_HOME}/lib
-	${MKDIR} ${JSDK_HOME}/doc/spfc
+	${INSTALL_DATA} ${WRKSRC}/../bin/spfc.jar ${PREFIX}/lib/java
+	${MKDIR} ${PREFIX}/share/doc/java/spfc
 	(cd ${WRKSRC}/../docs ; ${GTAR} pcf - .) | \
-		(cd ${JSDK_HOME}/doc/spfc ; ${GTAR} pxvf -)
+		(cd ${PREFIX}/share/doc/java/spfc ; ${GTAR} pxvf -)
 
 .include "../../mk/bsd.pkg.mk"
-JSDK_HOME=	${JAVA_HOME}/jsdk
-BUILD_DEFS+=	JSDK_HOME
-PREFIX:=	${JSDK_HOME}
+
+# This must be after the include of bsd.pkg.mk
+CLASSPATH:=${CLASSPATH}:${PREFIX}/lib/java/jsdk.jar:.
