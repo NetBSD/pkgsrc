@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.101 2002/09/05 00:13:41 itojun Exp $
+# $NetBSD: Makefile,v 1.102 2002/10/20 00:49:55 wiz Exp $
 # FreeBSD Id: Makefile,v 1.47 1997/11/10 22:04:42 dima Exp
 #
 
@@ -18,7 +18,7 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.cs.hut.fi/ssh/
 COMMENT=		Secure shell client and server (remote login program)
 
-CONFLICTS=		openssh-[0-9]* ssh6-[0-9]*
+CONFLICTS=		openssh-[0-9]* ssh2-[0-9]* ssh6-[0-9]*
 
 CRYPTO=			YES
 LICENSE=		no-commercial-use
