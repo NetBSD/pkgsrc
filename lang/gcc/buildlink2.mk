@@ -1,7 +1,7 @@
-# $NetBSD: buildlink2.mk,v 1.7 2003/04/10 13:13:28 grant Exp $
+# $NetBSD: buildlink2.mk,v 1.8 2003/05/27 07:01:56 grant Exp $
 
-.if !defined(GCC_BUILDLINK2_MK)
-GCC_BUILDLINK2_MK=	# defined
+.if !defined(GCC2_BUILDLINK2_MK)
+GCC2_BUILDLINK2_MK=	# defined
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -98,4 +98,4 @@ BUILDLINK_TARGETS+=	gcc-buildlink
 
 gcc-buildlink: _BUILDLINK_USE
 
-.endif	# GCC_BUILDLINK2_MK
+.endif	# GCC2_BUILDLINK2_MK
