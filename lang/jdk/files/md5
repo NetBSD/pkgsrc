@@ -1,3 +1,4 @@
-$NetBSD: md5,v 1.5 2000/01/11 12:35:07 hubertf Exp $
+$NetBSD: md5,v 1.6 2000/02/01 02:21:56 jwise Exp $
 
 MD5 (jdk1.1.8-rc1.tgz) = 117e27c001acb7a474261fb5fa7dced2
+MD5 (jdk1.1.8-rc1-elf.tgz) = 3265a7d843e95e472fabdbebcc01c132
