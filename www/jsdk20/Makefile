@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2000/08/18 22:46:51 hubertf Exp $
+# $NetBSD: Makefile,v 1.8 2000/09/11 15:39:10 jwise Exp $
 # STOP!  Don't update this to a later version of this software.
 # The JSDK and Apache Jakarta projects have merged, making the
 # jakarta-tomcat package the current version of this software.
@@ -11,6 +11,7 @@ CATEGORIES=	www
 MASTER_SITES=	# none
 EXTRACT_SUFX=	.tar.Z
 
+LICENSE=	sun-jsdk20-license
 MAINTAINER=	jwise@netbsd.org
 HOMEPAGE=	http://java.sun.com/products/servlet/index.html
 
@@ -30,14 +31,29 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 
 .include "../../mk/bsd.prefs.mk"
 
+TEMPDIR?=	/tmp
+TEMPFILE!=echo ${TEMPDIR}/jsdk20.location.$$$$
+
+pre-fetch:
+	@if [ ! -x ${LOCALBASE}/bin/urlget ];\
+	then \
+		${ECHO} '==> Installing urlget to fetch swing' ; \
+		(cd ../../www/urlget && make install) ; \
+	fi
+
 do-fetch:
-	@if [ ! -f ${DISTDIR}/${DIST_SUBDIR}/${DISTNAME}${EXTRACT_SUFX} ]; then \
-	    ${ECHO_MSG} "==============================================================="; \
-	    ${ECHO_MSG} "    For licensing reasons, the JSDK 2.0 distribution must be"; \
-	    ${ECHO_MSG} "    fetched manually into \"${DISTDIR}/${DIST_SUBDIR}\" from"; \
-	    ${ECHO_MSG} "    http://java.sun.com/products/servlet/download.html"; \
-	    ${ECHO_MSG} "==============================================================="; \
-	    ${FALSE}; \
+	-if [ ! -f ${DISTDIR}/${DISTFILES} ] ; \
+	then \
+	${LOCALBASE}/bin/urlget -p http://java.sun.com/cgi-bin/download2.cgi \
+		referer=http://java.sun.com/products/servlet/download.html \
+		protocol="FTP Download" \
+		download-name=jsdk20-solaris2-sparc.tar.Z \
+		config-file=jsdk20.config \
+		platform=solaris2-sparc \
+		domain-checked= \
+		> ${TEMPFILE} ; \
+	${FETCH_CMD} -o ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX} `${GREP} ftp:// ${TEMPFILE} | \
+		${SED} -e 's|.*\(ftp://.*.tar.Z\).*|\1|'` ;\
 	fi
 
 do-install:
