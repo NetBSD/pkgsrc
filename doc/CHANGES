@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4454 2004/01/14 01:47:47 xtraeme Exp $
+$NetBSD: CHANGES,v 1.4455 2004/01/14 02:00:42 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -210,3 +210,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated subversion to 0.36.0 [epg 2004-01-13]
 	Updated ttt to 1.8 [xtraeme 2004-01-13]
 	Updated mailmain to 2.1.4 [xtraeme 2004-01-14]
+	Updated xchm to 0.8.10 [xtraeme 2004-01-14]
