@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2000/04/06 18:00:13 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.13 2000/04/14 17:30:31 pooka Exp $
 #
 
 DISTNAME=		nethack-3.3.0
@@ -19,7 +19,7 @@ USE_X11=		yes
 USE_GMAKE=		yes
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	./sys/unix/setup.sh
-ALL_TARGET=		nethack
+ALL_TARGET=		x11tiles nethack
 INSTALL_TARGET=		binfiles
 MAKE_ENV+=		GTYPE=-qt QTDIR=${X11BASE}
 
@@ -28,7 +28,7 @@ ALLFILES=		${DISTFILES}	# don't checksum shared patches
 
 MD5_FILE=		${.CURDIR}/../nethack-lib/files/md5
 
-BROKEN=			'complains about tiles.xmp at runtime and non-writable scores directory'
+BROKEN=			'qt2 lossage'
 
 post-extract:
 	@${CHMOD} 755 ${WRKSRC}/sys/unix/setup.sh
@@ -37,5 +37,9 @@ post-patch:
 	@${MV} ${WRKSRC}/include/config.h ${WRKSRC}/foo
 	@${SED} -e 's@XXXPREFIXXXX@${PREFIX}@g' <${WRKSRC}/foo> ${WRKSRC}/include/config.h
 	@${RM} -f ${WRKSRC}/foo
+
+post-install:
+	@${MV} ${WRKSRC}/dat/x11tiles ${WRKSRC}/dat/tiles.xpm
+	@${INSTALL_DATA} ${WRKSRC}/dat/tiles.xpm ${PREFIX}/share/nethackdir
 
 .include "../../mk/bsd.pkg.mk"
