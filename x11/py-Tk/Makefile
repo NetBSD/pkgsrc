@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2002/01/31 15:48:10 drochner Exp $
+# $NetBSD: Makefile,v 1.21 2002/09/21 23:47:01 jlam Exp $
 #
 
 PKGNAME=	${PYPKGPREFIX}-Tk-0
@@ -34,7 +34,7 @@ post-install:
 		-e "s|@X11BASE@|${X11BASE}|g" \
 		<${FILESDIR}/Setup.in >${PREFIX}/${PYLIB}/config/Setup.tk
 
-.include "../../lang/python/extension.buildlink.mk"
+.include "../../lang/python/extension.mk"
 .include "../../lang/python/srcdist.mk"
 .include "../../lang/tcl/buildlink.mk"
 .include "../../x11/tk/buildlink.mk"

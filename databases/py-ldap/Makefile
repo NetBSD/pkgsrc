@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2002/01/19 17:14:55 drochner Exp $
+# $NetBSD: Makefile,v 1.9 2002/09/21 23:46:47 jlam Exp $
 
 DISTNAME=	python-ldap-1.10alpha3-src
 PKGNAME=	${PYPKGPREFIX}-ldap-1.10a3
@@ -27,5 +27,5 @@ post-install:
 	(cd ${PREFIX}; ${FIND} -d ${PYSITELIB}/python-ldap \
 	 -type d -print | ${SED} -e "s/^/@dirrm /" >>${PLIST_SRC})
 
-.include "../../lang/python/extension.buildlink.mk"
+.include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2002/03/13 17:36:56 fredb Exp $
+# $NetBSD: Makefile,v 1.14 2002/09/21 23:46:50 jlam Exp $
 #
 
 DISTNAME=       emma-0.8-1
@@ -32,6 +32,6 @@ post-extract:
 	  ${CP} ${LOCALBASE}/share/automake/$$FILE ${WRKSRC}/$$FILE; \
 	done
 
-.include "../../lang/python/application.buildlink.mk"
+.include "../../lang/python/application.mk"
 .include "../../time/py-mxDateTime/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

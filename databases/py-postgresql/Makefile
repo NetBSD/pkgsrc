@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2002/04/04 14:36:42 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2002/09/21 23:46:47 jlam Exp $
 
 PKGNAME=		${PYPKGPREFIX}-postgresql-3.2
 COMMENT=		Python interface to PostgreSQL
@@ -42,6 +42,6 @@ post-install:
 	done
 
 .include "../../databases/postgresql-lib/buildlink.mk"
-.include "../../lang/python/extension.buildlink.mk"
+.include "../../lang/python/extension.mk"
 .include "../../time/py-mxDateTime/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

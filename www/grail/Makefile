@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2002/05/12 10:16:51 abs Exp $
+# $NetBSD: Makefile,v 1.15 2002/09/21 23:47:00 jlam Exp $
 #
 
 DISTNAME=	grail-0.6
@@ -32,6 +32,6 @@ do-install:
 	(cd ${PREFIX}; ${FIND} -d ${GRAILDIR} -type d -print | \
 	${SED} -e "s/^/@dirrm /" >>${PLIST_SRC})
 
-.include "../../lang/python/application.buildlink.mk"
+.include "../../lang/python/application.mk"
 .include "../../x11/py-Tk/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

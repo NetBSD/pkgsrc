@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/01/29 12:12:07 drochner Exp $
+# $NetBSD: Makefile,v 1.6 2002/09/21 23:46:55 jlam Exp $
 #
 
 DISTNAME=	ReportLab_1_01
@@ -39,5 +39,5 @@ do-install:
 	(cd ${PREFIX}; ${FIND} -d ${PYSITELIB}/reportlab \
 		-type d -print | ${SED} -e "s/^/@dirrm /" >>${PLIST_SRC})
 
-.include "../../lang/python/extension.buildlink.mk"
+.include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"

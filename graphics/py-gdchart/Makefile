@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2002/03/13 17:37:16 fredb Exp $
+# $NetBSD: Makefile,v 1.7 2002/09/21 23:46:50 jlam Exp $
 #
 
 DISTNAME=	gdchart-py-0.6
@@ -34,5 +34,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/${f} ${EXAMPLE_DIR}
 .endfor
 
-.include "../../lang/python/extension.buildlink.mk"
+.include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
