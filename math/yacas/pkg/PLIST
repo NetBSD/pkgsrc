@@ -1,15 +1,23 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/02/20 14:40:34 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.2 2000/11/11 15:31:53 dmcmahill Exp $
 bin/yacas
 bin/yacas.sh
+bin/yacas_client
+share/yacas/addons/README
+share/yacas/addons/editvi
+share/yacas/addons/editvi.def
+share/yacas/addons/gnuplot
+share/yacas/addons/gnuplot.def
 share/yacas/array
 share/yacas/array.def
 share/yacas/assoc
 share/yacas/assoc.def
+share/yacas/c_form
 share/yacas/complex
 share/yacas/complex.def
 share/yacas/constants
 share/yacas/controlflow
 share/yacas/controlflow.def
+share/yacas/cstubgen
 share/yacas/deffunc
 share/yacas/deriv
 share/yacas/deriv.def
@@ -18,21 +26,25 @@ share/yacas/documentation/coding.html
 share/yacas/documentation/codingchapter1.html
 share/yacas/documentation/codingchapter2.html
 share/yacas/documentation/codingchapter3.html
+share/yacas/documentation/codingchapter4.html
+share/yacas/documentation/codingchapter5.html
 share/yacas/documentation/codingchapters.html
 share/yacas/documentation/codingmanual.html
 share/yacas/documentation/intro.html
 share/yacas/documentation/introchapter1.html
 share/yacas/documentation/introchapter2.html
 share/yacas/documentation/introchapter3.html
-share/yacas/documentation/introchapter4.html
 share/yacas/documentation/introchapters.html
 share/yacas/documentation/intromanual.html
+share/yacas/documentation/isboolean.html
+share/yacas/documentation/manicon.html
 share/yacas/documentation/ref.html
 share/yacas/documentation/refchapter1.html
 share/yacas/documentation/refchapter10.html
 share/yacas/documentation/refchapter11.html
 share/yacas/documentation/refchapter12.html
 share/yacas/documentation/refchapter13.html
+share/yacas/documentation/refchapter14.html
 share/yacas/documentation/refchapter2.html
 share/yacas/documentation/refchapter3.html
 share/yacas/documentation/refchapter4.html
@@ -43,10 +55,17 @@ share/yacas/documentation/refchapter8.html
 share/yacas/documentation/refchapter9.html
 share/yacas/documentation/refchapters.html
 share/yacas/documentation/refmanual.html
-share/yacas/edit
-share/yacas/edit.def
+share/yacas/documentation/refprogchapter1.html
+share/yacas/documentation/refprogchapter2.html
+share/yacas/documentation/refprogchapter3.html
+share/yacas/documentation/refprogchapter4.html
+share/yacas/documentation/refprogchapters.html
+share/yacas/documentation/refprogmanual.html
+share/yacas/documentation/yacaslogo.gif
 share/yacas/example
 share/yacas/example.def
+share/yacas/factors
+share/yacas/factors.def
 share/yacas/fakedb
 share/yacas/fakedb.def
 share/yacas/formula
@@ -62,14 +81,19 @@ share/yacas/linalg
 share/yacas/linalg.def
 share/yacas/lists
 share/yacas/lists.def
+share/yacas/logic
+share/yacas/logic.def
 share/yacas/newly
 share/yacas/newly.def
 share/yacas/numbers
 share/yacas/numbers.def
+share/yacas/padic
+share/yacas/padic.def
 share/yacas/patterns
 share/yacas/patterns.def
 share/yacas/predicates
 share/yacas/predicates.def
+share/yacas/print
 share/yacas/random
 share/yacas/random.def
 share/yacas/simplify
@@ -88,14 +112,17 @@ share/yacas/substitute
 share/yacas/substitute.def
 share/yacas/sums
 share/yacas/sums.def
-share/yacas/tools/logserver
-share/yacas/tools/mysqlstubs
-share/yacas/tools/yacasserverthread
+share/yacas/tensor
+share/yacas/tensor.def
+share/yacas/testers
+share/yacas/testers.def
+share/yacas/texform
+share/yacas/texform.def
 share/yacas/trigsimp
 share/yacas/trigsimp.def
 share/yacas/univar
 share/yacas/univar.def
 share/yacas/yacasinit
 @dirrm share/yacas/documentation
-@dirrm share/yacas/tools
+@dirrm share/yacas/addons
 @dirrm share/yacas
