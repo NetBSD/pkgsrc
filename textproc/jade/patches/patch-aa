@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1 1999/06/27 14:05:48 drochner Exp $
+$NetBSD: patch-aa,v 1.2 2001/06/25 03:47:39 jlam Exp $
 
 --- configure.orig	Tue Oct 13 06:05:00 1998
 +++ configure	Sat Jun 26 01:52:18 1999
@@ -10,7 +10,7 @@ $NetBSD: patch-aa,v 1.1 1999/06/27 14:05:48 drochner Exp $
 -  CXXFLAGS="-O2"
 -fi
 +#if test "$CXXFLAGS" = ""; then 
-+  CXXFLAGS=""
++#  CXXFLAGS="-O2"
 +#fi
  
  LTVERSION=`cat VERSION | cut -d'.' -f1,2 | sed 's/\./:/g'`
