@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/11/07 17:26:58 ad Exp $
+@comment $NetBSD: PLIST,v 1.2 2000/11/07 18:11:48 ad Exp $
 man/cat8/ppp.0
 man/cat8/pppctl.0
 man/man8/ppp.8
@@ -21,3 +21,5 @@ share/examples/ppp/ppp.linkup.span-isp.working
 share/examples/ppp/ppp.secret.sample
 share/examples/ppp/ppp.secret.span-isp
 share/examples/ppp/ppp.secret.span-isp.working
+@dirrm etc/ppp
+@dirrm share/examples/ppp
