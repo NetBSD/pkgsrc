@@ -1,0 +1,11 @@
+*** kwm/main.C~	Sat Dec  6 11:19:12 1997
+--- kwm/main.C	Sat Dec  6 11:19:14 1997
+***************
+*** 326,329 ****
+--- 326,331 ----
+    static int NumLockMask = 0;
+    if (!NumLockMask){
++ 
++     if (!XKeysymToKeycode(qt_xdisplay(), keysym)) return;
+      XModifierKeymap* xmk = XGetModifierMapping(qt_xdisplay());
+      int i;
