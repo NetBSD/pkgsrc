@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.4 2002/09/23 09:22:15 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.5 2002/09/23 19:57:30 jlam Exp $
 
 .if !defined(CONTROLCENTER_BUILDLINK2_MK)
 CONTROLCENTER_BUILDLINK2_MK=	# defined
@@ -12,6 +12,7 @@ EVAL_PREFIX+=			BUILDLINK_PREFIX.controlcenter=controlcenter
 BUILDLINK_PREFIX.controlcenter_DEFAULTS=	${X11PREFIX}
 BUILDLINK_FILES.controlcenter=	include/libcapplet1/*
 BUILDLINK_FILES.controlcenter+=	lib/libcapplet.*
+BUILDLINK_FILES.controlcenter+=	share/idl/control-center.idl
 
 BUILDLINK_CPPFLAGS.controlcenter= \
 	-I${BUILDLINK_PREFIX.controlcenter}/include/libcapplet1

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.2 2002/09/22 09:52:37 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2002/09/23 19:57:32 jlam Exp $
 #
 # This Makefile fragment is included by packages that use gnome2-control-center.
 #
@@ -18,6 +18,8 @@ BUILDLINK_FILES.gnome2-control-center+=	include/gnome-window-settings-2.0/gnome-
 BUILDLINK_FILES.gnome2-control-center+=	include/gnome-window-settings-2.0/gnome-wm-manager.h
 BUILDLINK_FILES.gnome2-control-center+=	lib/bonobo/servers/GNOME_SettingsDaemon.server
 BUILDLINK_FILES.gnome2-control-center+=	lib/libgnome-window-settings.*
+BUILDLINK_FILES.gnome2-control-center+=	share/idl/ConfigArchiver.idl
+BUILDLINK_FILES.gnome2-control-center+=	share/idl/GNOME_SettingsDaemon.idl
 
 .include "../../audio/esound/buildlink2.mk"
 .include "../../devel/gettext-lib/buildlink2.mk"
