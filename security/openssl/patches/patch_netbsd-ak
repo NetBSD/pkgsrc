@@ -1,0 +1,19 @@
+*** apps/speed.c.orig	Sat Apr  7 13:33:11 2001
+--- apps/speed.c	Sat Apr  7 13:32:37 2001
+***************
+*** 82,88 ****
+  #include <openssl/rand.h>
+  #include <openssl/err.h>
+  
+! #if defined(__FreeBSD__)
+  # define USE_TOD
+  #elif !defined(MSDOS) && (!defined(VMS) || defined(__DECC))
+  # define TIMES
+--- 82,88 ----
+  #include <openssl/rand.h>
+  #include <openssl/err.h>
+  
+! #if defined(__FreeBSD__) || defined(__NetBSD__)
+  # define USE_TOD
+  #elif !defined(MSDOS) && (!defined(VMS) || defined(__DECC))
+  # define TIMES
