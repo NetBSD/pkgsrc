@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1966 2003/04/17 22:16:46 jmmv Exp $
+$NetBSD: CHANGES,v 1.1967 2003/04/17 23:25:26 salo Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1644,3 +1644,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated eclipse to 2.1 [jschauma 2003-04-17]
 	Updated zope25 to 2.6.1 [drochner 2003-04-17]
 	Updated MesaLib to 5.0nb2 [jmmv 2003-04-17]
+	Updated xmms to 1.2.7nb5 [nathanw 2003-04-17]
+	Updated gnome-vfs to 1.0.5nb1 [nathanw 2003-04-17]
