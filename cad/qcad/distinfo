@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.8 2004/01/02 18:11:06 reinoud Exp $
+$NetBSD: distinfo,v 1.9 2004/10/12 21:02:18 ben Exp $
 
 SHA1 (qcad-1.5.4-src.tar.gz) = d28f31bb392cdcd5d7ea9396647e07851757c790
 Size (qcad-1.5.4-src.tar.gz) = 2884049 bytes
-SHA1 (patch-aa) = b7e69c55aba5d026cd732267d0259ae89b7b394c
+SHA1 (patch-aa) = f2752f57849a237a66029dfd80d5afcbf533cddc
 SHA1 (patch-ab) = cea24c43b1d9187f8b55c2c831e26ac8d7a6efe7
 SHA1 (patch-ac) = 3210453403685c1294547871eda4ec2f0df3c61a
 SHA1 (patch-ad) = 873961829011b8717c154d4c4caf7e8c428a848e

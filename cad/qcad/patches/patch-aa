@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.7 2004/01/02 18:11:06 reinoud Exp $
+$NetBSD: patch-aa,v 1.8 2004/10/12 21:02:18 ben Exp $
 
 --- Makefile.orig	2002-09-20 19:26:57.000000000 +0200
 +++ Makefile
@@ -27,7 +27,7 @@ $NetBSD: patch-aa,v 1.7 2004/01/02 18:11:06 reinoud Exp $
 -LIBS     = $(SUBLIBS)  -Wl,-rpath,$(QTDIR)/lib  -L$(QTDIR)/lib  -L/usr/X11R6/lib -lqt -lXext -lX11 -lm
 -AR       = ar cqs
 -RANLIB   = 
-+LIBS     = -Wl,-R,$(QTDIR)/lib -L$(QTDIR)/lib -Wl,-R$(X11BASE)/lib -L$(X11BASE)/lib -Wl,-R$(LOCALBASE)/lib -L$(LOCALBASE)/lib -lqt-mt -lGLU -lGL -lXmu -lXext -lX11 -lm -lSM -lICE -lXmu -lpng -lz -ljpeg
++LIBS     = -Wl,-R$(QTDIR)/lib -L$(QTDIR)/lib -Wl,-R$(X11BASE)/lib -L$(X11BASE)/lib -Wl,-R$(LOCALBASE)/lib -L$(LOCALBASE)/lib -lqt-mt -lGLU -lGL -lXmu -lXext -lX11 -lm -lSM -lICE -lXmu -lpng -lz -ljpeg
 +AR       ?= ar cqs
 +RANLIB   ?= 
  MOC      = $(QTDIR)/bin/moc
