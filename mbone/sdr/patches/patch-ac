@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.4 1998/10/02 06:47:29 hubertf Exp $
+$NetBSD: patch-ac,v 1.5 1998/10/02 09:49:59 kleink Exp $
 --- src/iohandler.c.orig	Thu Jan  8 20:40:17 1998
 +++ src/iohandler.c	Fri Oct  2 08:26:48 1998
 @@ -43,6 +43,9 @@
@@ -6,7 +6,7 @@ $NetBSD: patch-ac,v 1.4 1998/10/02 06:47:29 hubertf Exp $
  #include <winsock.h>
  #endif
 +#ifdef HAVE_SYS_INTTYPES_H
-+#include <sys/inttypes.h>
++#include <inttypes.h>
 +#endif
  #include <tk.h>
  #ifdef WIN32
