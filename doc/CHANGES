@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8765 2005/01/15 21:47:02 schmonz Exp $
+$NetBSD: CHANGES,v 1.8766 2005/01/15 21:58:09 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -328,3 +328,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Added instiki-0.9.2 [minskim 2005-01-15]
 	Updated mc to 4.6.1rc2 [wiz 2005-01-15]
 	Updated spamassassin to 3.0.2 [schmonz 2005-01-15]
+	Updated sun-jdk15 to 5.0.1 [jmmv 2005-01-15]
+	Updated sun-jre15 to 5.0.1 [jmmv 2005-01-15]

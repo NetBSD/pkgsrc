@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2907 2005/01/15 21:47:02 schmonz Exp $
+$NetBSD: TODO,v 1.2908 2005/01/15 21:58:09 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -1074,8 +1074,6 @@ Suggested package updates
 	o streamtuner-0.99.99
 	o subtitleripper-0.3.4
 	o subversion-1.1.3
-	o sun-jdk15-5.0.1
-	o sun-jre15-5.0.1
 	o svk-0.27
 	o swfdec-0.3.2
 	o swi-prolog-5.5.2
