@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 1999/03/11 20:21:05 bad Exp $
+# $NetBSD: Makefile,v 1.48 1999/06/12 20:24:53 kleink Exp $
 # FreeBSD Id: Makefile,v 1.87 1997/10/15 04:58:31 max Exp
 #
 
@@ -72,6 +72,7 @@
     SUBDIR += xboing
     SUBDIR += xbomber
 #    SUBDIR += xchomp
+    SUBDIR += xconq
 #    SUBDIR += xcubes
 #    SUBDIR += xdeblock
     SUBDIR += xdemineur
