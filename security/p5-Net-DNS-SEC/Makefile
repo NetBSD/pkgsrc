@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/01/12 09:46:04 cjep Exp $
+# $NetBSD: Makefile,v 1.3 2004/01/31 21:12:23 snj Exp $
 #
 
 DISTNAME=		Net-DNS-SEC-0.11
@@ -21,6 +21,7 @@ DEPENDS+=		p5-Digest-BubbleBabble>=0.01:../../security/p5-Digest-BubbleBabble
 
 BUILDLINK_DEPENDS.perl=	perl>=5.6.1
 USE_BUILDLINK2=		YES
+USE_PKGINSTALL=		YES
 
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Net/DNS/SEC/.packlist
 
@@ -42,7 +43,5 @@ post-install:
 	@${INSTALL_SCRIPT} ${WRKSRC}/demo/${f} ${EGDIR}/
 .endfor
 
-
 .include "../../lang/perl5/module.mk"
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
