@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2004/01/24 15:30:33 grant Exp $
+# $NetBSD: Makefile,v 1.7 2004/05/09 17:04:22 recht Exp $
 #
 
-DISTNAME=	sip-x11-gpl-3.8
-PKGNAME=	${PYPKGPREFIX}-qt3-sip-3.8
+DISTNAME=	sip-4.0rc3
+PKGNAME=	${PYPKGPREFIX}-qt3-${DISTNAME}
 CATEGORIES=	x11 devel
 MASTER_SITES=	http://www.river-bank.demon.co.uk/download/sip/
 
@@ -15,41 +15,35 @@ CONFLICTS+=	${PYPKGPREFIX}-qt2-sip-*
 # needs qmake
 BUILD_DEPENDS+=		qt3-tools-3.*:../../x11/qt3-tools
 
-USE_BUILDLINK2= 	# defined
-USE_X11=		# defined
-USE_LIBTOOL=		# defined
-USE_GNU_TOOLS+=		make
+USE_BUILDLINK3= yes
+USE_X11=	yes
+USE_LIBTOOL=	yes
+USE_GNU_TOOLS+=	make
+USE_LANGUAGES=	c c++
 
-CONFIGURE_ARGS=		-q ${QTDIR} -m ${GMAKE}
+CONFIGURE_ARGS=		-b ${PREFIX}/bin
+CONFIGURE_ARGS+=	-d ${PREFIX}/${PYSITELIB}
+CONFIGURE_ARGS+=	-e ${PREFIX}/${PYINC}
+CONFIGURE_ARGS+=	-v ${PREFIX}/share/sip${PYVERSSUFFIX}
 
-PYQT_TMPDIR=		${WRKDIR}/pyqt_tmp
-CONFIGURE_ARGS+=	-d ${PYQT_TMPDIR}
-CONFIGURE_ARGS+=	-b ${PYQT_TMPDIR}
-
-PYTHON_VERSIONS_ACCEPTED=	22pth 23pth 21pth
+PYTHON_VERSIONS_ACCEPTED=	23pth
 PY_PATCHPLIST=	yes
-QTLIBDIR=	${QTDIR:S/${BUILDLINK_PREFIX.qt3-libs}\///}/lib
-PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX} QTLIBDIR=${QTLIBDIR}
+PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 
-MAKE_ENV+=	QTPREFIX=${QTDIR}
+CONFIGURE_ARGS+=	CFLAGS_SHLIB=-fPIC
+CONFIGURE_ARGS+=	LFLAGS_SHLIB=-shared
+
+SUBST_CLASSES+=		pyversfx
+SUBST_STAGE.pyversfx=	pre-configure
+SUBST_FILES.pyversfx=	sipgen/sipgen.sbf
+SUBST_SED.pyversfx=	-e "s|@PYVERSSUFFIX@|${PYVERSSUFFIX}|g"
 
 do-configure:
-	${MKDIR} -p ${PYQT_TMPDIR}
-	(cd ${WRKSRC} && ${PYTHONBIN} build.py ${CONFIGURE_ARGS})
-
-# XXX - hack. Shouldn't need the symlinks as qmake should let us build
-# proper libraries that install outside of QTDIR more easily.
-post-install:
-	(cd ${PYQT_TMPDIR} && ${INSTALL_PROGRAM} sip \
-		${PREFIX}/bin/sip${PYVERSSUFFIX})
-	(cd ${PYQT_TMPDIR} && ${LIBTOOL} ${INSTALL_DATA} \
-		libsip.la ${PREFIX}/${PYSITELIB})
-	(cd ${PREFIX}/${PYSITELIB}; for i in libsip.*; do \
-		${LN} -sf ${PREFIX}/${PYSITELIB}/$$i \
-			${PREFIX}/${QTLIBDIR}/$$i; done)
+	(cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \
+		${PYTHONBIN} configure.py ${CONFIGURE_ARGS})
 
 .include "../../lang/python/extension.mk"
 .include "../../lang/python/application.mk"
-.include "../../x11/qt3-libs/buildlink2.mk"
+.include "../../x11/qt3-libs/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
