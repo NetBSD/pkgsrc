@@ -1,16 +1,12 @@
-$NetBSD: patch-ae,v 1.5 2001/04/21 01:00:38 jtb Exp $
+$NetBSD: patch-ae,v 1.6 2001/06/25 17:49:33 jtb Exp $
 
---- /dev/null	Sat Apr 21 01:48:33 2001
-+++ stalinc
-@@ -0,0 +1,11 @@
-+#!/bin/sh
-+
-+STALIN_INCLUDES="-I @PREFIX@/lib/stalin -I @PREFIX@/include \
-+    -I @PREFIX@/lib -I @GC_PREFIX@/include -I @GC_PREFIX@/lib \
-+    -I @X11BASE@/lib -I @X11BASE@/include"
-+
-+STALIN_OPTIONS="-Ob -Om -On -Or -Ot -d -d1 -du -dI -k \
-+		-copt -O2 -copt -fomit-frame-pointer \
-+		-copt -freg-struct-return"
-+
-+exec @PREFIX@/bin/stalin $STALIN_INCLUDES $STALIN_OPTIONS $@
+--- stalin-sparc.c.orig	Mon Jun 25 08:05:20 2001
++++ stalin-sparc.c
+@@ -1,7 +1,6 @@
+ #include <stddef.h>
+ #include <assert.h>
+ #include <time.h>
+-#include <alloca.h>
+ #include <gc.h>
+ #include <string.h>
+ #include <math.h>

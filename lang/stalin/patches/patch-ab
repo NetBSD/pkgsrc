@@ -1,13 +1,12 @@
-$NetBSD: patch-ab,v 1.2 2001/01/21 02:04:56 jtb Exp $
+$NetBSD: patch-ab,v 1.3 2001/06/25 17:49:33 jtb Exp $
 
---- stalin.sc.orig	Sat Nov 18 18:48:05 2000
-+++ stalin.sc
-@@ -25538,7 +25538,7 @@
-  (set! *program* "stalin")
-  (initialize-stalin!)
-  (set! *include-path*
--       (append '(".") include-path '("/usr/local/stalin/include")))
-+       (append '(".") include-path '("@PREFIX@/lib/stalin")))
-  (set! *bounds-checks?* (not disable-bounds-checks?))
-  (set! *memory-checks?* (not disable-memory-checks?))
-  (set! *overflow-checks?* (not disable-overflow-checks?))
+--- stalin-alpha.c.orig	Mon Jun 25 08:04:29 2001
++++ stalin-alpha.c
+@@ -1,7 +1,6 @@
+ #include <stddef.h>
+ #include <assert.h>
+ #include <time.h>
+-#include <alloca.h>
+ #include <gc.h>
+ #include <string.h>
+ #include <math.h>
