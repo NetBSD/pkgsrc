@@ -1,0 +1,3 @@
+${PREFIX}/bin
+${PREFIX}/lib/camlp4
+${PREFIX}/man/man1
