@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/04/15 17:36:29 drochner Exp $
+# $NetBSD: Makefile,v 1.5 2004/04/18 05:05:43 snj Exp $
 #
 
 DISTNAME=	offlineimap_${_OFFLINEIMAP_VER}
@@ -11,13 +11,12 @@ HOMEPAGE=	http://gopher.quux.org:70/devel/offlineimap/
 COMMENT=	Powerful IMAP/Maildir synchronization and reader support
 
 WRKSRC=		${WRKDIR}/offlineimap
-USE_BUILDLINK2=	# defined
+USE_BUILDLINK3=	yes
 
 # This is only to placate pkglint
 _OFFLINEIMAP_VER=	4.0.0
 
 PYTHON_VERSIONS_ACCEPTED=	22pth 23pth
-BUILDLINK_DEPENDS.python22-pth=	python22-pth>=2.2.2
 PYDISTUTILSPKG=			yes
 PYTHON_PATCH_SCRIPTS=		bin/offlineimap
 PLIST_SUBST+=			PYSITELIB=${PYSITELIB}
