@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.1.1.1 1999/02/21 12:37:20 rh Exp $
+$NetBSD: md5,v 1.2 1999/03/07 16:28:20 rh Exp $
 
-MD5 (wu-ftpd-2.4.2-beta-18-vr14.tar.gz) = db4403de07667babbadbbd1ae72f0799
+MD5 (wu-ftpd-2.4.2-vr16.tar.gz) = 951932d2452eae4044c51a555549bb35
