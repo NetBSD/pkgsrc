@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2002/06/17 10:06:50 drochner Exp $
+# $NetBSD: Makefile,v 1.51 2002/06/25 06:53:39 itojun Exp $
 #
 
 DISTNAME=	racoon-20020507a
@@ -16,14 +16,17 @@ CRYPTO=		yes
 IGNORE+=		"${PKGNAME} requires ipsec-ready NetBSD"
 .endif
 
-.include "../../mk/bsd.prefs.mk"
 BUILD_DEFS+=	USE_INET6
+BUILD_DEFS+=	PKG_SYSCONFDIR
+.include "../../mk/bsd.prefs.mk"
 
 USE_BUILDLINK_ONLY=	yes
 
 CONFLICTS+=	racoon-[0-9]*
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/racoon
+
+PKG_SYSCONFSUBDIR?=	racoon
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--enable-debug
@@ -32,7 +35,7 @@ CONFIGURE_ARGS+=--enable-ipv6
 .else
 CONFIGURE_ARGS+=--disable-ipv6
 .endif
-CONFIGURE_ARGS+=--sysconfdir=/etc/racoon
+CONFIGURE_ARGS+=--sysconfdir=${PKG_SYSCONFDIR}
 .if defined(PKGREVISION)
 CONFIGURE_ARGS+=--with-pkgversion=netbsd-pkgsrc-20020507anb${PKGREVISION}
 .else
