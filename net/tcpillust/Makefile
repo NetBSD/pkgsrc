@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/07/31 20:24:15 itojun Exp $
+# $NetBSD: Makefile,v 1.3 2000/08/31 15:12:08 jwise Exp $
 # $FreeBSD: ports/net/tcpillust/Makefile,v 1.1.1.1 2000/07/29 06:26:00 sada Exp $
 #
 
@@ -9,13 +9,12 @@ MASTER_SITES=	ftp://ftp.csl.sony.co.jp/CSL/nishida/
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.csl.sony.co.jp/person/nishida/tcpillust.html
 
-DEPENDS+=	tk-*:../../x11/tk80
-DEPENDS+=	tcl-*:../../lang/tcl80
+DEPENDS+=	tk-8.3.2:../../x11/tk
 
 USE_IMAKE=	yes
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+=--with-tcl-include=${LOCALBASE}/include/tcl8.0 \
-		--with-tk-include=${LOCALBASE}/include/tk8.0 \
+CONFIGURE_ARGS+=--with-tcl-include=${LOCALBASE}/include \
+		--with-tk-include=${LOCALBASE}/include \
 		--with-tcl-lib=${LOCALBASE}/lib \
 		--with-tk-lib=${LOCALBASE}/lib
 
