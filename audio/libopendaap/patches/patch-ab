@@ -1,0 +1,29 @@
+$NetBSD: patch-ab,v 1.1 2004/08/01 16:13:32 kristerw Exp $
+
+--- discover.c.orig	Sun Aug  1 18:05:09 2004
++++ discover.c	Sun Aug  1 18:06:16 2004
+@@ -89,9 +89,10 @@
+     {
+         domainlabel name;
+         domainname type, domain;
++	SDiscover_HostList *new;
+         pthread_mutex_lock(&pDiscover->mtObjectLock);
+ 
+-        SDiscover_HostList *new = malloc(sizeof(SDiscover_HostList));
++        new = malloc(sizeof(SDiscover_HostList));
+         memset(new, 0, sizeof(SDiscover_HostList));
+ 
+         new->next = pDiscover->prenamed;
+@@ -193,11 +194,10 @@
+     SDiscover *pDiscover = (SDiscover *)pvDiscoverThis;
+     SDiscover_HostList *cur, *next;
+     int cmd;
++    int finalized = 0;
+ 
+     pthread_mutex_lock(&pDiscover->mtWorkerLock);
+     pthread_mutex_lock(&pDiscover->mtObjectLock);
+-
+-    int finalized = 0;
+ 
+     cur = pDiscover->prenamed;
+     pDiscover->prenamed = NULL;
