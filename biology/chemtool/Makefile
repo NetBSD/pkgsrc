@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2004/04/10 02:33:12 minskim Exp $
+# $NetBSD: Makefile,v 1.22 2004/04/10 02:40:01 minskim Exp $
 
 DISTNAME=		chemtool-1.6
 CATEGORIES=		biology
@@ -8,7 +8,9 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://ruby.chemie.uni-freiburg.de/~martin/chemtool/
 COMMENT=		Program for drawing organic molecules
 
-USE_BUILDLINK2=		yes
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 USE_X11=		yes
 GNU_CONFIGURE=		yes
@@ -23,5 +25,5 @@ post-install:
 	cd ${WRKSRC} && ${INSTALL_DATA} README TODO 			\
 		${PREFIX}/share/doc/chemtool/
 
-.include "../../x11/gtk/buildlink2.mk"
+.include "../../x11/gtk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
