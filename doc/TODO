@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.969 2003/10/25 07:23:44 xtraeme Exp $
+$NetBSD: TODO,v 1.970 2003/10/26 02:39:39 lukem Exp $
 
 Suggested new packages
 ======================
@@ -120,6 +120,7 @@ Suggested package updates
 	o Xaw3d-1.5E
 	o Xbae-4.50.0
 	o abiword-2.0
+	o abcde 2.1.8
 	o amanda-2.4.4p1
 	o anjuta-1.0.2
 	o apache-1.3.29
