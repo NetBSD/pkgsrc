@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3230 2003/09/03 21:33:44 seb Exp $
+$NetBSD: CHANGES,v 1.3231 2003/09/04 01:51:53 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3516,3 +3516,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated wxGTK to 2.4.1 [xtraeme 2003-09-03]
 	Updated mserv to 0.05nb1 [abs 2003-09-03]
 	Updated nam to 1.9 [seb 2003-09-03]
+	Updated libnbcompat to 20030828 [jlam 2003-09-03]
