@@ -1,0 +1,16 @@
+$NetBSD: patch-ag,v 1.1.1.1 2000/06/07 19:05:21 skrll Exp $
+
+--- splits_cat.c.orig	Fri Jul  4 08:05:18 1997
++++ splits_cat.c	Sun Jun  4 16:57:25 2000
+@@ -20,9 +20,9 @@
+    #ifdef NL
+     printf("Naam van de te splitsen catalogus?");
+    #else
+-    printf("Name of the catalogue to be split?");
++    printf("Name of the catalogue to be split?\n");
+    #endif
+-    scanf("%50s", cat_naam);
++   exit(1);
+   } else strcpy(cat_naam, argv[1+options]);
+ 
+ 

@@ -1,0 +1,21 @@
+$NetBSD: patch-ad,v 1.1.1.1 2000/06/07 19:05:21 skrll Exp $
+
+--- diskb_add.c.orig	Fri Jul  4 08:28:28 1997
++++ diskb_add.c	Sun Jun  4 16:57:25 2000
+@@ -27,7 +27,6 @@
+ //     #else
+ //     printf("Name of the archive file to be added?");
+ //     #endif
+-//     scanf("%50s", addfile);
+ //     } else {strcpy(addfile, argv[2+options]); options +=1;}
+ */
+ 
+@@ -52,7 +51,7 @@
+       #ifdef NL
+       printf("Er zijn al 31 bestanden op het diskbeeld\n\n");
+       #else
+-      printf("There are already 31 files on the diskimage\n\n");
++      printf("There are already 31 files on the diskimage\n");
+       #endif
+       exit(1);
+     }
