@@ -1,4 +1,4 @@
-/*	$NetBSD: var.c,v 1.1.1.1 2004/03/11 13:04:14 grant Exp $	*/
+/*	$NetBSD: var.c,v 1.2 2004/08/23 03:44:34 jlam Exp $	*/
 
 /*
  * Copyright (c) 1988, 1989, 1990, 1993
@@ -39,20 +39,20 @@
  */
 
 #ifdef MAKE_BOOTSTRAP
-static char rcsid[] = "$NetBSD: var.c,v 1.1.1.1 2004/03/11 13:04:14 grant Exp $";
+static char rcsid[] = "$NetBSD: var.c,v 1.2 2004/08/23 03:44:34 jlam Exp $";
 #else
 #include <sys/cdefs.h>
 #ifndef lint
 #if 0
 static char sccsid[] = "@(#)var.c	8.3 (Berkeley) 3/19/94";
 #else
-__RCSID("$NetBSD: var.c,v 1.1.1.1 2004/03/11 13:04:14 grant Exp $");
+__RCSID("$NetBSD: var.c,v 1.2 2004/08/23 03:44:34 jlam Exp $");
 #endif
 #endif /* not lint */
 #endif
 
 #if !defined(MAKE_BOOTSTRAP) && !defined(lint)
-__IDSTRING(rcs_id,"$Id: var.c,v 1.1.1.1 2004/03/11 13:04:14 grant Exp $");
+__IDSTRING(rcs_id,"$Id: var.c,v 1.2 2004/08/23 03:44:34 jlam Exp $");
 #endif
 
 /*-
@@ -100,7 +100,16 @@ __IDSTRING(rcs_id,"$Id: var.c,v 1.1.1.1 2004/03/11 13:04:14 grant Exp $");
 #include    <ctype.h>
 #ifndef NO_REGEX
 #include    <sys/types.h>
+#include    <nbcompat/nbconfig.h>
+/* bmake supplies its own <sys/cdefs.h> so this header is always present. */
+#ifndef HAVE_SYS_CDEFS_H
+#define HAVE_SYS_CDEFS_H 1
+#endif
+#if HAVE_REGEX_H
 #include    <regex.h>
+#else
+#include    <nbcompat/regex.h>
+#endif
 #endif
 #include    <stdlib.h>
 #include    "make.h"
