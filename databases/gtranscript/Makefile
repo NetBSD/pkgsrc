@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1999/12/02 01:47:05 darcy Exp $
+# $NetBSD: Makefile,v 1.7 2000/04/09 03:55:02 jlam Exp $
 #
 
 DISTNAME=	gtranscript-0.0.1
@@ -21,6 +21,8 @@ DEPENDS+=	postgresql-6.5.3:../../databases/postgresql
 
 GNU_CONFIGURE=	YES
 USE_X11BASE=	YES
-CONFIGURE_ENV+=	CFLAGS="${CFLAGS} -I${LOCALBASE}/pgsql/include"
+
+CONFIGURE_ENV+=	CPPFLAGS="${CPPFLAGS}"
+CPPFLAGS+=	-I${LOCALBASE}/include		# pgsql/*.h
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/01/10 22:33:12 jwise Exp $
+# $NetBSD: Makefile,v 1.2 2000/04/09 03:58:13 jlam Exp $
 
 DISTNAME=	AuthPG-1.1b1
 PKGNAME=	ap-auth-postgresql-1.1b1
@@ -13,17 +13,16 @@ DEPENDS+=	postgresql-*:../../databases/postgresql
 # For "apxs":
 BUILD_DEPENDS=	${LOCALBASE}/bin/perl:../../lang/perl5
 
-PGUSER?=	pgsql
-
-INCLUDES=	-I${PREFIX}/${PGUSER}/include
-LIBS=		-L${PREFIX}/${PGUSER}/lib -Wl,-R${PREFIX}/${PGUSER}/lib -lpq
+CPPFLAGS+=	-I${LOCALBASE}/include/pgsql
+LIBS=		-lpq -lcrypt
 
 do-build:
-	cd ${WRKSRC} && ${PREFIX}/sbin/apxs ${INCLUDES} ${LIBS} -c mod_auth_pg.c
+	cd ${WRKSRC} && ${PREFIX}/sbin/apxs \
+		${CPPFLAGS} ${LDFLAGS} ${LIBS} -c mod_auth_pg.c
 
 do-install:
 	@cd ${WRKSRC} && ${PREFIX}/sbin/apxs -i mod_auth_pg.so
-	-${MKDIR} ${PREFIX}/share/doc/mod_auth_pg
+	-${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mod_auth_pg
 	${INSTALL_DATA} ${WRKSRC}/mod_auth_pg.html ${PREFIX}/share/doc/mod_auth_pg
 	${INSTALL_DATA} ${WRKSRC}/mod_auth_pg.ko.html ${PREFIX}/share/doc/mod_auth_pg
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/mod_auth_pg
