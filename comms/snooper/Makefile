@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.3 1999/12/02 03:34:50 itojun Exp $
+# $NetBSD: Makefile,v 1.4 1999/12/28 04:34:52 wiz Exp $
 # FreeBSD Id: Makefile,v 1.3 1998/08/13 09:20:41 itojun Exp $
 
 DISTNAME=	snooper-19991202
-PKGNAME=	snooper-19991202
 CATEGORIES=	comms
 MASTER_SITES=   ftp://ftp.foretune.co.jp/pub/tools/snooper/
 
