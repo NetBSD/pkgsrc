@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2002/09/10 16:06:50 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2002/09/25 23:17:26 jwise Exp $
 
-DISTNAME=		Sablot-0.71
-PKGNAME=		sablotron-0.71
-PKGREVISION=		1
+DISTNAME=		Sablot-0.96
+PKGNAME=		sablotron-0.96
 CATEGORIES=		textproc
 MASTER_SITES=		http://download-2.gingerall.cz/download/sablot/
 
@@ -14,7 +13,6 @@ USE_BUILDLINK2=		YES
 GNU_CONFIGURE=  	YES
 USE_GMAKE=		YES
 USE_LIBTOOL=		YES
-LTCONFIG_OVERRIDE=	${WRKSRC}/tools/ltconfig
 
 .include "../../converters/libiconv/buildlink2.mk"
 .include "../../textproc/expat/buildlink2.mk"
