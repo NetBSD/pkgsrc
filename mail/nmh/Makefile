@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 1999/09/14 02:32:24 kim Exp $
+# $NetBSD: Makefile,v 1.30 1999/10/29 19:19:41 sakamoto Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/08/04 06:51:28 markm Exp
 #
 
@@ -8,6 +8,8 @@ MASTER_SITES=   ftp://ftp.math.gatech.edu/pub/nmh/
 
 MAINTAINER=     kim@tac.nyc.ny.us
 HOMEPAGE=	http://www.math.gatech.edu/nmh/
+
+CONFLICTS=	ja-mh-6.8.4-JP-*
 
 # We choose DOT_LOCKING in our patches because ".lock" files are
 # the most common locking mechanism supported by mail software.
