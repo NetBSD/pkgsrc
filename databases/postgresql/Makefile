@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2000/09/21 14:34:56 jlam Exp $
+# $NetBSD: Makefile,v 1.55 2000/12/07 16:56:39 jlam Exp $
 # FreeBSD Id: Makefile,v 1.22 1997/12/24 01:21:37 alex Exp
 #
 
@@ -53,11 +53,9 @@ pre-install:
 	esac
 
 	${SED}	-e 's|@PGUSER@|${PGUSER}|g' \
-		-e 's|@PGHOME@|${PGHOME}|g' \
 		< ${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
 	${SED}	-e 's|@PGUSER@|${PGUSER}|g' \
 		-e 's|@PGGROUP@|${PGGROUP}|g' \
-		-e 's|@PGHOME@|${PGHOME}|g' \
 		-e 's|@USERDIR@|${USERDIR}|g' \
 		< ${PKGDIR}/INSTALL > ${INSTALL_FILE}
 	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} PRE-INSTALL
