@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2000/12/16 22:37:30 tron Exp $
+# $NetBSD: Makefile,v 1.3 2000/12/17 13:05:41 tron Exp $
 
-DISTNAME=		suse_audio-6.3
+DISTNAME=		suse_audio-${SUSE_VERSION}
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_SUSE:=snd1/}
 DISTFILES=		${RPMFILES}
@@ -8,7 +8,7 @@ DISTFILES=		${RPMFILES}
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.suse.com/
 
-DEPENDS+=		suse_base-6.3:../suse_base
+DEPENDS+=		suse_base-${SUSE_VERSION}:../suse_base
 
 ONLY_FOR_PLATFORM=      NetBSD-*-i386
 
