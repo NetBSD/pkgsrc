@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/05/12 15:58:14 schmonz Exp $
+# $NetBSD: Makefile,v 1.3 2002/08/22 17:23:12 schmonz Exp $
 #
 
 DISTNAME=	jam-2.4
@@ -9,6 +9,8 @@ EXTRACT_SUFX=	.tar
 MAINTAINER=	schmonz@netbsd.org
 HOMEPAGE=	http://www.perforce.com/jam/jam.html
 COMMENT=	Program construction tool, like make(1)
+
+CONFLICTS=	acunia-jam-[0-9]*
 
 DOCDIR=		share/doc/${PKGBASE}
 HTMLDIR=	share/doc/html/${PKGBASE}
