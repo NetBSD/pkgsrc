@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1266 2003/01/28 22:45:14 abs Exp $
+$NetBSD: CHANGES,v 1.1267 2003/01/28 23:15:23 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -462,4 +462,6 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated apache2 to 2.0.44 [martti 2003-01-28]
 	Updated netscape7 to 7.01  [abs 2003-01-28]
 	Updated pkglint to 3.46 [abs 2003-01-28]
-
+	Updated gimageview to 0.2.13nb1 [jmmv 2003-01-28]
+	Updated gphoto to 0.4.3nb3 [jmmv 2003-01-28]
+	Updated scigraphica-0.8.0nb2 [jmmv 2003-01-28]
