@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2001/03/11 23:24:40 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.53 2001/04/12 21:54:43 jtb Exp $
 #
 
 COMMENT=	Emulators for other operating systems
@@ -17,6 +17,7 @@ SUBDIR+=	hercules-images
 SUBDIR+=	ia64sim
 SUBDIR+=	linux-locale
 SUBDIR+=	linuxppc_lib
+SUBDIR+=	mmix
 SUBDIR+=	netbsd32_compat14
 SUBDIR+=	netbsd32_compat15
 SUBDIR+=	osf1_lib
