@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/01/13 11:03:56 sakamoto Exp $
+# $NetBSD: Makefile,v 1.4 2000/02/05 18:16:33 wiz Exp $
 #
 
 DISTNAME=	libwcsmbs-0.0.4-4jrpm
@@ -12,7 +12,7 @@ EXTRACT_SUFX=	.i386.rpm
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
 		wcsmbs-locale-0.4.11-1jrpm${EXTRACT_SUFX}
 
-BROKEN=	"linux-locale is not work correctly with glibc-2.1.2\(suse_linux-6.3\)"
+BROKEN=	linux-locale does not work correctly with glibc-2.1.2 (suse_linux-6.3)
 
 MAINTAINER=	sakamoto@netbsd.org
 
