@@ -1,39 +1,48 @@
-$NetBSD: patch-ai,v 1.6 2002/05/03 23:14:52 jtb Exp $
+$NetBSD: patch-ai,v 1.7 2004/04/20 18:14:37 drochner Exp $
 
---- /dev/null	Wed May  1 14:20:26 2002
-+++ mfhdf/ncdump/Makefile	Wed May  1 14:24:12 2002
-@@ -0,0 +1,34 @@
-+PROG= ncdump
-+PROGNAME= hdfncdump
-+
-+MAN= hdfncdump.1
-+
-+SRCS= ncdump.c vardata.c dumplib.c
-+
-+BINDIR= ${PREFIX}/bin
-+LIBDIR= ${PREFIX}/lib
-+MANDIR= ${PREFIX}/man
-+CFLAGS= -g
-+CPPFLAGS+= -I${.CURDIR}/../libsrc
-+
-+LDFLAGS+= -L${.CURDIR}/../libsrc
-+LDFLAGS+= -L${.CURDIR}/../../hdf/src
-+LDFLAGS+= -Wl,-R${BUILDLINK_PREFIX.jpeg}/lib
-+LDFLAGS+= -Wl,-R${BUILDLINK_PREFIX.zlib}/lib
-+
-+LDADD+= -lmfhdf -ldf -ljpeg -lz
-+
-+NOGCCERROR= 1
-+
-+NCGEN= ${.CURDIR}/../ncgen/ncgen
-+
-+test:	${PROG} test0.cdl
-+	${NCGEN} -o test0.nc -n test0.cdl
-+	./${PROG} test0.nc > test1.cdl
-+	${NCGEN} -o test1.nc -n test1.cdl
-+	./${PROG} -n test0 test1.nc > test2.cdl
-+	@cmp test1.cdl test2.cdl && \
-+		echo "*** ${PROG} test successful ***" ; \
-+	rm test1.cdl test1.nc test2.cdl
-+
-+.include <bsd.prog.mk>
+--- mfhdf/ncdump/Makefile.in.orig	2003-11-07 19:39:00.000000000 +0100
++++ mfhdf/ncdump/Makefile.in	2004-04-20 16:38:54.000000000 +0200
+@@ -156,7 +156,7 @@
+ #############################################################################
+ #############################################################################
+ bin_PROGRAMS = ncdump
+-man1_MANS = ncdump.1
++man1_MANS = hdfncdump.1
+ 
+ ncdump_SOURCES = dumplib.c ncdump.c vardata.c
+ ncdump_LDADD = ../libsrc/libmfhdf.a $(top_builddir)/hdf/src/libdf.a
+@@ -171,7 +171,7 @@
+ mkinstalldirs = $(SHELL) $(top_srcdir)/bin/mkinstalldirs
+ CONFIG_HEADER = $(top_builddir)/hdf/src/h4config.h
+ CONFIG_CLEAN_FILES =
+-bin_PROGRAMS = ncdump$(EXEEXT)
++bin_PROGRAMS = hdfncdump$(EXEEXT)
+ PROGRAMS = $(bin_PROGRAMS)
+ 
+ am_ncdump_OBJECTS = dumplib.$(OBJEXT) ncdump.$(OBJEXT) vardata.$(OBJEXT)
+@@ -227,7 +227,7 @@
+ 
+ clean-binPROGRAMS:
+ 	-test -z "$(bin_PROGRAMS)" || rm -f $(bin_PROGRAMS)
+-ncdump$(EXEEXT): $(ncdump_OBJECTS) $(ncdump_DEPENDENCIES) 
++hdfncdump$(EXEEXT): $(ncdump_OBJECTS) $(ncdump_DEPENDENCIES) 
+ 	@rm -f ncdump$(EXEEXT)
+ 	$(LINK) $(ncdump_LDFLAGS) $(ncdump_OBJECTS) $(ncdump_LDADD) $(LIBS)
+ 
+@@ -491,11 +491,11 @@
+ 	uninstall-man uninstall-man1
+ 
+ 
+-check: ncdump $(srcdir)/test0.cdl
+-	../ncgen/ncgen -o test0.nc -n $(srcdir)/test0.cdl
+-	./ncdump test0.nc > test1.cdl
+-	../ncgen/ncgen -o test1.nc -n test1.cdl
+-	./ncdump -n test0 test1.nc > test2.cdl
++check: hdfncdump $(srcdir)/test0.cdl
++	../ncgen/hdfncgen -o test0.nc -n $(srcdir)/test0.cdl
++	./hdfncdump test0.nc > test1.cdl
++	../ncgen/hdfncgen -o test1.nc -n test1.cdl
++	./hdfncdump -n test0 test1.nc > test2.cdl
+ 	@cmp test1.cdl test2.cdl && echo "*** ncdump test successful ***" ;     \
+ 	    rm -f test1.nc test1.cdl test2.cdl
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
