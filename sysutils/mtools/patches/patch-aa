@@ -1,8 +1,16 @@
-$NetBSD: patch-aa,v 1.6 2003/05/22 16:16:04 salo Exp $
+$NetBSD: patch-aa,v 1.7 2003/08/05 20:21:43 seb Exp $
 
---- Makefile.in.orig	2000-05-14 20:14:59.000000000 +0200
-+++ Makefile.in	2003-05-22 18:00:53.000000000 +0200
-@@ -49,6 +49,7 @@
+--- Makefile.in.orig	2000-05-14 18:14:59.000000000 +0000
++++ Makefile.in
+@@ -11,7 +11,6 @@ USERCFLAGS = 
+ USERLDFLAGS =
+ USERLDLIBS =
+ 
+-MAKEINFO = makeinfo
+ TEXI2DVI = texi2dvi
+ TEXI2HTML = texi2html
+ 
+@@ -49,6 +48,7 @@ LN_S        = @LN_S@
  
  INSTALL         = @INSTALL@
  INSTALL_PROGRAM = @INSTALL_PROGRAM@
@@ -10,7 +18,7 @@ $NetBSD: patch-aa,v 1.6 2003/05/22 16:16:04 salo Exp $
  INSTALL_DATA    = @INSTALL_DATA@
  INSTALL_INFO	= @INSTALL_INFO@
  
-@@ -56,7 +57,7 @@
+@@ -56,7 +56,7 @@ INSTALL_INFO	= @INSTALL_INFO@
  .SUFFIXES: .o .c
  .SUFFIXES: .o .c
  
@@ -19,7 +27,7 @@ $NetBSD: patch-aa,v 1.6 2003/05/22 16:16:04 salo Exp $
  mdu.1 mformat.1 mkmanifest.1 mlabel.1 mmd.1 mmount.1 mmove.1 mpartition.1 \
  mrd.1 mread.1 mren.1 mshowfat.1 mtoolstest.1 mtools.1 mtype.1 mzip.1
  MAN1EXT	= 1
-@@ -256,7 +257,7 @@
+@@ -256,7 +256,7 @@ install-links: $(bindir)/mtools
  install-scripts: $(bindir)/mtools
  	@$(top_srcdir)/mkinstalldirs $(bindir)
  	@for j in $(SCRIPTS) ; do \
