@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.24 2002/02/21 21:24:54 zuntum Exp $
+# $NetBSD: Makefile,v 1.25 2002/05/03 10:55:17 zuntum Exp $
 #
 
 DISTNAME=	avifile-0.6.20010814
 PKGREVISION=	1
 CATEGORIES=	graphics
-MASTER_SITES=	http://zuntum.utech.lublin.pl/distfiles/
+MASTER_SITES=	${MASTER_SITE_LOCAL}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	packages@netbsd.org
@@ -17,6 +17,8 @@ BUILD_DEPENDS+=	automake>=1.4:../../devel/automake
 WRKSRC=		${WRKDIR}/avifile-0.6
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386
+
+NO_SRC_ON_FTP=		"Already in MASTER_SITE_LOCAL"
 
 BUILD_USES_GETTEXT_M4=	YES
 
