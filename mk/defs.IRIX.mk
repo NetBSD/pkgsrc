@@ -1,4 +1,4 @@
-# $NetBSD: defs.IRIX.mk,v 1.45 2004/04/11 17:06:18 jschauma Exp $
+# $NetBSD: defs.IRIX.mk,v 1.46 2004/04/13 22:04:15 heinz Exp $
 #
 # Variable definitions for the IRIX operating system.
 
@@ -161,10 +161,7 @@ _STRIPFLAG_INSTALL?=	-s	# install(1) option to strip
 .endif
 
 LOCALBASE?=		${DESTDIR}/usr/pkg
-.if exists(${LOCALBASE}/sbin/pkg_info)
 PKG_TOOLS_BIN?=		${LOCALBASE}/sbin
-.endif
-PKG_TOOLS_BIN?=		${LOCALBASE}/bin
 
 CONFIGURE_ENV+=		ABI=${ABI}
 MAKE_ENV+=		ABI=${ABI}
