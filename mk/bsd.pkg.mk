@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.319 1999/08/22 21:36:10 tron Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.320 1999/08/22 21:36:49 tron Exp $
 #
 # This file is in the public domain.
 #
@@ -535,7 +535,7 @@ MASTER_SITE_XCONTRIB+=	\
 
 MASTER_SITE_GNU+=	\
 	ftp://ftp.gnu.org/pub/gnu/ \
-	ftp://wuarchive.wustl.edu/systems/gnu/
+	ftp://ftp.wustl.edu/systems/gnu/
 
 MASTER_SITE_PERL_CPAN+=	\
 	ftp://ftp.digital.com/pub/plan/perl/CPAN/modules/by-module/ \
@@ -543,7 +543,7 @@ MASTER_SITE_PERL_CPAN+=	\
 
 MASTER_SITE_TEX_CTAN+=  \
 	ftp://ftp.cdrom.com/pub/tex/ctan/  \
-	ftp://wuarchive.wustl.edu/packages/TeX/  \
+	ftp://ftp.wustl.edu/packages/TeX/  \
 	ftp://ftp.funet.fi/pub/TeX/CTAN/  \
 	ftp://ftp.tex.ac.uk/public/ctan/tex-archive/  \
 	ftp://ftp.dante.de/tex-archive/
