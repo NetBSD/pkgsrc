@@ -1,17 +1,17 @@
-# $NetBSD: Makefile.common,v 1.5 2003/07/17 22:53:42 grant Exp $
+# $NetBSD: Makefile.common,v 1.6 2003/08/23 16:41:59 recht Exp $
 #
 
-DISTNAME=		xmbmon201
+DISTNAME=		xmbmon203
 CATEGORIES=		sysutils
 MASTER_SITES=		http://www.nt.phys.kyushu-u.ac.jp/shimizu/download/
-PATCH_SITES+=		http://www.nt.phys.kyushu-u.ac.jp/shimizu/download/
-PATCHFILES+=		xmbmon201.netbsd.patch.gz xmbmon201pl1.diff
+#PATCH_SITES+=		http://www.nt.phys.kyushu-u.ac.jp/shimizu/download/
+#PATCHFILES+=		xmbmon201.netbsd.patch.gz xmbmon201pl1.diff
 PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=		tech-pkg@NetBSD.org
 #HOMEPAGE=	
 
-MAKEFILE=		Makefile.NetBSD
+#MAKEFILE=		Makefile.NetBSD
 GNU_CONFIGURE=		yes
 
 DISTINFO_FILE?=		${.CURDIR}/../../sysutils/mbmon/distinfo
