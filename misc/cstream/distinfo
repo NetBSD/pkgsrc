@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2001/09/19 05:24:27 gmcgarry Exp $
+$NetBSD: distinfo,v 1.2 2003/09/22 12:30:24 wiz Exp $
 
 SHA1 (cstream-2.2.tar.gz) = aef89176123f1ae6cb824e66b2e9b3aa3be7644e
 Size (cstream-2.2.tar.gz) = 43124 bytes
+SHA1 (patch-aa) = 68f73e1052731342f59cbd3baaf772d45e62cacd
