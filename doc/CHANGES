@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4731 2004/02/08 01:01:23 kleink Exp $
+$NetBSD: CHANGES,v 1.4732 2004/02/08 12:47:23 recht Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -701,3 +701,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Deleted py-koCodecs [minskim 2004-02-07]
 	Updated openbox to 3.1nb2 [jmmv 2004-02-07]
 	Updated gnupg to 1.2.4nb1 [kleink 2004-02-08]
+	Updated kodos to 2.4.0 [recht 2004-02-08]
