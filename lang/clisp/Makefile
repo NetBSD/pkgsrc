@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.25 2002/10/25 18:40:53 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2002/12/01 14:49:15 salo Exp $
 
 DISTNAME=		clisp-2.27
+PKGREVISION=		1
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=clisp/}
-PKGVERSION=		1
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		mjl@netbsd.org
@@ -13,6 +13,7 @@ COMMENT=		CLISP, a Common Lisp implementation
 NOT_FOR_PLATFORM=	*-*-alpha	# severe LP64 problems
 
 USE_BUILDLINK2=		YES
+USE_PKGLOCALEDIR=	YES
 CONFIGURE_ENV+=		CC="${CC}" CFLAGS="${CFLAGS}" CPPFLAGS="${CPPFLAGS}"
 GNU_CONFIGURE=		YES
 WRKSRC=			${WRKDIR}/${DISTNAME}/src
@@ -26,9 +27,9 @@ LIBTOOL_OVERRIDE+=	${WRKSRC}/libiconv/libcharset/libtool
 LIBTOOL_OVERRIDE+=	${WRKSRC}/libiconv/libtool ${WRKSRC}/sigsegv/libtool
 
 post-patch:
-	cp files/tramp-rs6000-netbsd.o ${WRKSRC}/../ffcall/callback/trampoline_r
-	cp files/tramp-rs6000-netbsd.s ${WRKSRC}/../ffcall/callback/trampoline_r
-	cp files/vacall-rs6000-netbsd.s ${WRKSRC}/../ffcall/callback/vacall_r
+	${CP} files/tramp-rs6000-netbsd.o ${WRKSRC}/../ffcall/callback/trampoline_r
+	${CP} files/tramp-rs6000-netbsd.s ${WRKSRC}/../ffcall/callback/trampoline_r
+	${CP} files/vacall-rs6000-netbsd.s ${WRKSRC}/../ffcall/callback/vacall_r
 
 do-configure:
 	cd ${WRKSRC}; \
