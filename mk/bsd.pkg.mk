@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.643 2001/01/15 19:46:29 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.644 2001/01/17 20:46:57 tron Exp $
 #
 # This file is in the public domain.
 #
@@ -546,7 +546,11 @@ LS?=		/usr/bin/ls
 MKDIR?=		/usr/bin/mkdir -p
 MTREE?=		${LOCALBASE}/bsd/bin/mtree
 MV?=		/usr/bin/mv
+.if exists(/usr/bin/gpatch)
+PATCH?=		/usr/bin/gpatch -b
+.else
 PATCH?=		${LOCALBASE}/bin/patch -b
+.endif
 PAX?=		/bin/pax
 PKG_TOOLS_BIN?= ${LOCALBASE}/bsd/bin
 RM?=		/usr/bin/rm
