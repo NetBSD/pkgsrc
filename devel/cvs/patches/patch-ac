@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.3 1998/08/21 19:06:52 tv Exp $
+$NetBSD: patch-ac,v 1.4 2000/10/18 03:31:16 hubertf Exp $
 
---- src/Makefile.in.orig	Thu Jun 18 13:21:42 1998
-+++ src/Makefile.in	Wed Aug 12 13:32:09 1998
+--- src/Makefile.in.orig	Fri Sep  8 20:28:03 2000
++++ src/Makefile.in
 @@ -86,10 +86,8 @@
  	@cd ..; $(MAKE) lint SUBDIRS=src
  
@@ -15,7 +15,7 @@ $NetBSD: patch-ac,v 1.3 1998/08/21 19:06:52 tv Exp $
  
  installdirs:
  	$(SHELL) $(top_srcdir)/mkinstalldirs $(bindir)
-@@ -144,10 +142,10 @@
+@@ -140,10 +138,10 @@
  
  # Linking rules.
  
@@ -28,7 +28,7 @@ $NetBSD: patch-ac,v 1.3 1998/08/21 19:06:52 tv Exp $
  
  xlint: $(SOURCES)
  	files= ; \
-@@ -181,7 +179,7 @@
+@@ -177,7 +175,7 @@
  	$(CC) $(CPPFLAGS) $(INCLUDES) -I$(top_srcdir)/diff $(DEFS) $(CFLAGS) -c $(srcdir)/rcscmds.c
  
  zlib.o: zlib.c $(top_srcdir)/zlib/zlib.h

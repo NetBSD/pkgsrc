@@ -1,18 +1,8 @@
-$NetBSD: patch-af,v 1.2 2000/02/23 06:48:56 mycroft Exp $
+$NetBSD: patch-af,v 1.3 2000/10/18 03:31:16 hubertf Exp $
 
---- src/update.c.orig	Thu Jun 25 10:56:50 1998
-+++ src/update.c	Wed Feb 23 01:28:45 2000
-@@ -1039,7 +1039,8 @@
- 	    cvs_output (": Executing '", 0);
- 	    run_print (stdout);
- 	    cvs_output ("'\n", 0);
--	    (void) run_exec (RUN_TTY, RUN_TTY, RUN_TTY, RUN_NORMAL);
-+	    (void) run_exec (RUN_TTY, RUN_TTY, RUN_TTY,
-+			     RUN_NORMAL | RUN_UNSETXID);
- 	}
- 	else if (ferror (fp))
- 	    error (0, errno, "cannot read %s", CVSADM_UPROG);
-@@ -1304,11 +1305,18 @@
+--- src/update.c.orig	Wed Jul 26 21:29:01 2000
++++ src/update.c
+@@ -1374,11 +1374,18 @@
  		    xchmod (finfo->file, 1);
  		else
  		{

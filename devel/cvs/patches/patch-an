@@ -1,11 +1,11 @@
-$NetBSD: patch-an,v 1.1 1999/04/20 15:01:11 mycroft Exp $
+$NetBSD: patch-an,v 1.2 2000/10/18 03:31:16 hubertf Exp $
 
---- src/history.c.orig	Sat Apr 11 12:29:49 1998
-+++ src/history.c	Tue Apr 20 10:15:03 1999
-@@ -725,7 +725,7 @@
- #else
- 	fprintf (stderr, "-> fopen(%s,a)\n", fname);
- #endif
+--- src/history.c.orig	Wed May  3 00:13:25 2000
++++ src/history.c
+@@ -730,7 +730,7 @@
+     if (trace)
+ 	fprintf (stderr, "%s-> fopen(%s,a)\n",
+ 		 CLIENT_SERVER_STR, fname);
 -    if (noexec)
 +    if (nolock)
  	goto out;
