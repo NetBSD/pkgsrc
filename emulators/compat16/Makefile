@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/12/14 04:17:18 grant Exp $
+# $NetBSD: Makefile,v 1.2 2005/02/21 20:57:20 veego Exp $
 #
 
 DISTNAME=		compat16-${MACHINE_ARCH}-${VERSION}
@@ -23,10 +23,6 @@ SHLIB_HANDLING=		NO
 .include "../../mk/bsd.prefs.mk"
 
 EMULSUBDIR=		emul/netbsd16
-
-.if exists(${PKGDIR}/PLIST.${MACHINE_ARCH})
-PLIST_SRC=		${PKGDIR}/PLIST.${MACHINE_ARCH}
-.endif
 
 PLIST_SUBST+=		EMULSUBDIR=${EMULSUBDIR}
 
