@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2001/04/05 19:27:42 jwise Exp $
+# $NetBSD: Makefile,v 1.15 2001/09/27 20:27:33 jlam Exp $
 
 DISTNAME=	swing1_1_1
 PKGNAME=	swing-1.1.1
@@ -10,12 +10,12 @@ MAINTAINER=	jwise@netbsd.org
 HOMEPAGE=	http://www.javasoft.com/products/jfc/
 COMMENT=	Sun's Java Foundation Classes (the Swing UI toolkit), version 1.1.1
 
-BUILD_DEPENDS+=        urlget-1.3:../../www/urlget
+BUILD_DEPENDS+=        urlget>=1.3:../../www/urlget
 
 RESTRICTED=	"Read license before redistributing the Java(tm) Foundation Classes"
-NO_SRC_ON_FTP=	${RESTRICTED}
+NO_SRC_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
-NO_BIN_ON_FTP=	${RESTRICTED}
+NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
 LICENSE=	sun-swing-license
@@ -37,23 +37,29 @@ ROOT_GROUP?=	wheel
 .include "../../mk/bsd.prefs.mk"
 
 TEMPDIR?=	/tmp
-TEMPFILE!=echo ${TEMPDIR}/swing.location.$$$$
+TEMPFILE!=	echo ${TEMPDIR}/swing.location.$$$$
+URLGET?=	${LOCALBASE}/bin/urlget
 
 pre-fetch:
-	${MAKE} install-depends DEPENDS=
+	@if [ ! -f ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX} ]; then	\
+		if [ ! -x ${URLGET} ]; then				\
+			${MAKE} install-depends DEPENDS=;		\
+		fi;							\
+	fi
 
 do-fetch:
-	-if [ ! -f ${DISTDIR}/${DISTFILES} ] ; then \
-	${LOCALBASE}/bin/urlget -p http://www.javasoft.com/Download3 \
-		referer=http://www.javasoft.com/products/jfc/download.html \
-		protocol="FTP Download" \
-		download-name=swing1_1_1.zip \
-		config-file=swing111.config \
-		platform=zip \
-		domain-checked= \
-		> ${TEMPFILE} ; \
-	${FETCH_CMD} -o ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX} `${GREP} ftp:// ${TEMPFILE} | \
-		${SED} -e 's|.*\(ftp://.*.zip\).*|\1|'` ; \
+	-@if [ ! -f ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX} ] ; then	\
+		${URLGET} -p http://java.sun.com/Download3		\
+			referer=					\
+			protocol="FTP Download"				\
+			download-name=${DISTNAME}${EXTRACT_SUFX}	\
+			config-file=swing111.config			\
+			platform=zip					\
+			domain-checked=					\
+			> ${TEMPFILE};					\
+		${FETCH_CMD} -o ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX}	\
+			`${GREP} ftp:// ${TEMPFILE} |			\
+			${SED} -e 's|.*\(ftp://.*.zip\).*|\1|'`;	\
 	fi
 
 do-install:
