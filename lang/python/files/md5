@@ -1,6 +1,6 @@
-$NetBSD: md5,v 1.6 1998/09/20 20:28:11 tsarna Exp $
+$NetBSD: md5,v 1.7 1999/03/03 19:47:45 tsarna Exp $
 
-MD5 (python/pyth151.tgz) = eb8ef6e37e543058a2d47996ecf62427
+MD5 (python/pyth151.tgz) = 485f5febc1d2865abea2adc72a345827
 MD5 (python/freeze.1.txt) = 7cb9266ba6db670cd019cf27c77468ef
 MD5 (python/_tkinter.1.txt) = 7298bfd731a613a28e2cb72ad8e3e266
 MD5 (python/configure.1.txt) = 8d525b80d2442021dc29fbd328b8f87d
