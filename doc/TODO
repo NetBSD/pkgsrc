@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1088 2003/12/01 12:09:07 bouyer Exp $
+$NetBSD: TODO,v 1.1089 2003/12/01 15:43:10 epg Exp $
 
 Suggested new packages
 ======================
@@ -390,7 +390,7 @@ Suggested package updates
 	o staroffice-7
 	o stella-1.3
 	o streamtuner-live365-0.3.2 [xtraeme]
-	o subversion-0.33.1
+	o subversion-0.33.1 [epg]
 	o swig-1.3.17 [epg]
 	o sylpheed-claws-0.9.7
 	o t1lib-5.0.0
