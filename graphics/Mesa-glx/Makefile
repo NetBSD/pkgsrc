@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2000/09/03 10:11:47 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2000/09/05 09:33:15 jlam Exp $
 
 DISTNAME=	glx-20000813
 PKGNAME=	Mesa-${DISTNAME}
@@ -12,7 +12,7 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
 MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://utah-glx.sourceforge.net/
 
-BUILD_DEPENDS+=	${PERL5}:../../lang/perl5
+BUILD_DEPENDS+=	${PERL5}:../../lang/perl5-base
 BUILD_DEPENDS+=	${AUTOCONF}:../../devel/autoconf
 BUILD_DEPENDS+=	${TCLSH}:../../lang/tcl
 
