@@ -1,50 +1,22 @@
-$NetBSD: patch-am,v 1.1.1.1 1999/11/17 17:34:39 wennmach Exp $
+$NetBSD: patch-am,v 1.2 2003/02/16 23:08:59 seb Exp $
 
---- examples/shared-demo.pl.in.orig	Sun Nov 14 13:07:33 1999
-+++ examples/shared-demo.pl.in	Sun Nov 14 13:12:13 1999
-@@ -36,8 +36,8 @@
- my $GRUNS = 4;
- my $RRD1  = "shared-demo.rrd";
- my $RRD2  = "shared-demob.rrd";
--my $GIF1  = "shared-demo1.gif";
--my $GIF2  = "shared-demo2.gif";
-+my $PNG1  = "shared-demo1.png";
-+my $PNG2  = "shared-demo2.png";
- my $time  = 30*int(time/30);
- my $START = $time-$RUNS*$STEP;
+--- examples/cgi-demo.cgi.in.orig	Tue Feb 26 10:21:25 2002
++++ examples/cgi-demo.cgi.in
+@@ -11,7 +11,7 @@ the <TT>shared-demo.pl</TT>.
+ <H1>This is NOT traffic</H1>
  
-@@ -109,18 +109,18 @@
-   die "$0: unable to update `$RRD2': $ERROR\n";
- }
  
--print "* Creating $GRUNS graphs: $GIF1 & $GIF2\n\n";
-+print "* Creating $GRUNS graphs: $PNG1 & $PNG2\n\n";
- my $now = $time;
- for (my $i=0;$i<$GRUNS;$i++) {
--  my @rrd_gifs = ($RRD1, $GIF1, $RRD2, $GIF2);
--  while (@rrd_gifs) {
--    my $RRD = shift(@rrd_gifs);
--    my $GIF = shift(@rrd_gifs);
--    my ($graphret,$xs,$ys) = RRDs::graph $GIF, "--title", 'Test GRAPH', 
-+  my @rrd_pngs = ($RRD1, $PNG1, $RRD2, $PNG2);
-+  while (@rrd_pngs) {
-+    my $RRD = shift(@rrd_pngs);
-+    my $PNG = shift(@rrd_pngs);
-+    my ($graphret,$xs,$ys) = RRDs::graph $PNG, "--title", 'Test GRAPH', 
-     '--base', '1024',
-           "--vertical-label", 'Dummy Units', "--start", (-$RUNS*$STEP),
-           "--end", $time,
--	  "--interlace", "--imgformat","GIF",
-+	  "--interlace", "--imgformat","PNG",
-           "DEF:alpha=$RRD:a:AVERAGE",
-           "DEF:beta=$RRD:b:AVERAGE",
-           "DEF:gamma=$RRD:c:AVERAGE",
-@@ -147,7 +147,7 @@
-     if ($ERROR = RRDs::error) {
-       print "ERROR: $ERROR\n";
-     } else {
--      print "GIF Size: ${xs}x${ys}\n";
-+      print "PNG Size: ${xs}x${ys}\n";
-       print "Graph Return:\n",(join "\n", @$graphret),"\n\n";
-     }
-   }
+-<P><RRD::GRAPH cgi-demo1.gif 
++<P><RRD::GRAPH cgi-demo1.png 
+ 	    --lower-limit 0
+ 	    --start 'end-10h'
+ 	    --title "Graph in Localtime <RRD::TIME::NOW %c>"
+@@ -22,7 +22,7 @@ the <TT>shared-demo.pl</TT>.
+ </P>
+ 
+ <P><RRD::SETENV TZ UTC>
+-   <RRD::GRAPH cgi-demo2.gif 
++   <RRD::GRAPH cgi-demo2.png
+ 	    --lower-limit 0
+ 	    --start 'end-10h'
+ 	    --title "Graph in UTC"

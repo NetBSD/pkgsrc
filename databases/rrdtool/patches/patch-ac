@@ -1,13 +1,14 @@
-$NetBSD: patch-ac,v 1.4 2001/09/24 13:10:48 wulf Exp $
+$NetBSD: patch-ac,v 1.5 2003/02/16 23:08:57 seb Exp $
 
---- contrib/Makefile.in.orig	Thu Feb 22 12:07:39 2001
-+++ contrib/Makefile.in
-@@ -87,7 +87,7 @@
- ZLIB_LIB_DIR = @ZLIB_LIB_DIR@
+--- configure.in.orig	Fri Oct 11 18:39:19 2002
++++ configure.in
+@@ -145,9 +145,6 @@ if test "x$GCC" = "xyes"; then
+   fi
+ fi
  
- SUBDIRS = trytime
--contribdir = $(prefix)/contrib
-+contribdir = $(prefix)/share/rrdtool/contrib
- contrib_DATA = README
- EXTRA_DIST = rrdview log2rrd rrd-file-icon rrdproc rrdlastds add_ds killspike rrdfetchnames snmpstats rrdexplorer php3 php4
- mkinstalldirs = $(SHELL) $(top_srcdir)/config/mkinstalldirs
+-dnl add pic flag in any case this makes sure all our code is relocatable
+-CFLAGS="$CFLAGS "`grep pic_flag= libtool | sed -e 's/.*pic_flag=//' -e 's/"//g'`
+-
+ dnl it seems that hpux chockes on -fPIC for some reason
+ ZLIB_CFLAGS=$CFLAGS
+ case $target_os in
