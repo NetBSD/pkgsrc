@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2001/05/24 04:28:19 jlam Exp $
+# $NetBSD: Makefile,v 1.27 2001/05/26 08:13:13 jlam Exp $
 #
 # According to AbiSource's explanation of their trademark rights,
 # compilations/distributions of AbiWord not provided by AbiSource must
@@ -23,36 +23,29 @@ HOMEPAGE=	http://www.abisource.com/
 COMMENT=	Open Source cross-platform word processor
 
 BUILD_DEPENDS+=	unzip-*:../../archivers/unzip
-DEPENDS+=	libiconv>=1.5:../../converters/libiconv
 DEPENDS+=	ispell-base-*:../../textproc/ispell-base
 DEPENDS+=	gtk+-1.2.*:../../x11/gtk
-DEPENDS+=	png>=1.0.11:../../graphics/png
 
 USE_X11=	# defined
 USE_XPM=	# defined
 USE_GMAKE=	# defined
-NO_CONFIGURE=	# defined
 ALL_TARGET=	compile canonical
 
+.include "../../converters/libiconv/buildlink.mk"
+.include "../../graphics/png/buildlink.mk"
+
 OS_CFLAGS=	${CFLAGS}
+OS_CFLAGS+=	-I${BUILDLINK_INCDIR}
 
 .if exists(/usr/include/inttypes.h)
 OS_CFLAGS+=	-DHAVE_INTTYPE_H=1
 .endif
 
-# Avoid headers from some installed packages.  These must come first before
-# ${LOCALBASE}/include!
-#
-OS_CFLAGS+=	-I${WRKDIR}/expat
-OS_CFLAGS+=	-I${WRKDIR}/psiconv
-OS_CFLAGS+=	-I${WRKDIR}/wv
-
-OS_CFLAGS+=	-I${LOCALBASE}/include	# png.h & iconv.h
-
 # AbiWord expects the iconv functions to be in the system libraries, so
 # unconditionally link against the pkgsrc libiconv.so.
 #
-XLDFLAGS=	${LDFLAGS} -liconv
+XLDFLAGS=	-L${BUILDLINK_LIBDIR}
+XLDFLAGS+=	${LDFLAGS} -liconv
 
 MAKE_ENV+=	OS_CFLAGS="${OS_CFLAGS}"
 MAKE_ENV+=	XLDFLAGS="${XLDFLAGS}"
@@ -64,6 +57,8 @@ WRKSRC=		${WRKDIR}/abi
 
 post-extract:
 	${RM} -rf ${WRKSRC}/user/wp/help/images/CVS
+
+pre-configure: ${BUILDLINK_TARGETS}
 
 post-install:
 	${CHMOD} -R a+r ${PREFIX}/share/AbiSuite
