@@ -1,18 +1,0 @@
-$NetBSD: patch-i386bsd_nat_c,v 1.1.1.1 2004/06/01 19:29:30 shannonjr Exp $
-
---- gdb/i386bsd-nat.c.orig	2003-09-28 07:35:44.000000000 -0600
-+++ gdb/i386bsd-nat.c
-@@ -109,11 +109,13 @@ static int have_ptrace_xmmregs = -1;
- 
- /* Return nonzero if we shouldn't try to fetch register REGNO.  */
- 
-+#if !defined (CANNOT_FETCH_REGISTER)
- static int
- cannot_fetch_register (int regno)
- {
-   return (reg_offset[regno] == -1);
- }
-+#endif
- 
- 
- /* Transfering the registers between GDB, inferiors and core files.  */
