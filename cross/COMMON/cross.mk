@@ -1,4 +1,4 @@
-#	$NetBSD: cross.mk,v 1.15 2000/06/01 12:24:00 wiz Exp $
+#	$NetBSD: cross.mk,v 1.16 2000/11/09 13:04:55 wiz Exp $
 
 # Shared definitions for building a cross-compile environment.
 
@@ -64,14 +64,14 @@ binutils-build:
 		${MAKE_PROGRAM} ${MAKE_FLAGS} all
 	@cd ${BINUTILS_WRKSRC}/gas && ${SETENV} ${MAKE_ENV} \
 		${MAKE_PROGRAM} ${MAKE_FLAGS} as-new
-	test -x ${WRKDIR}/ar || ${LINK.c} -o ${WRKDIR}/ar \
+	${TEST} -x ${WRKDIR}/ar || ${LINK.c} -o ${WRKDIR}/ar \
 		-DPREFIX=\"${PREFIX}\" \
 		-DGNUTARGET=\"${BINUTILS_GNUTARGET}\" \
 		${COMMON_DIR}/buwrapper.c
 	@cd ${WRKDIR} && \
 		${LN} -f ar nm && \
 		${LN} -f ar ranlib
-	test -x ${WRKDIR}/ld || ${LINK.c} -o ${WRKDIR}/ld \
+	${TEST} -x ${WRKDIR}/ld || ${LINK.c} -o ${WRKDIR}/ld \
 		-DPREFIX=\"${PREFIX}\" \
 		-DGNUTARGET=\"${BINUTILS_GNUTARGET}\" \
 		-DLDEMULATION=\"${BINUTILS_LDEMULATION}\" \
@@ -210,7 +210,7 @@ egcs-install:
 	@cd ${EGCS_WRKSRC}/gcc && ${SETENV} ${MAKE_ENV} \
 		${MAKE_PROGRAM} ${MAKE_FLAGS} ${EGCS_MAKE_FLAGS} \
 		install-common install-headers install-libgcc install-driver
-	chown -R ${BINOWN}:${BINGRP} ${PREFIX}/lib/gcc-lib/${TARGET_ARCH}/${EGCS_INTVERSION}
+	${CHOWN} -R ${BINOWN}:${BINGRP} ${PREFIX}/lib/gcc-lib/${TARGET_ARCH}/${EGCS_INTVERSION}
 	${LN} -f ${PREFIX}/bin/${TARGET_ARCH}-gcc ${PREFIX}/bin/${TARGET_ARCH}-cc
 	${LN} -f ${PREFIX}/bin/${TARGET_ARCH}-gcc ${TARGET_DIR}/bin/cc
 .if !defined(EGCS_NO_F77)
@@ -248,13 +248,13 @@ EXTRACT_ONLY=		${DISTFILES:N*.diff.gz}
 .if defined(SYS_INCLUDE) && !defined(EGCS_FAKE_RUNTIME)
 pre-install: pre-install-includes
 pre-install-includes:
-	cd ${SYS_INCLUDE} && pax -rw . ${TARGET_DIR}/include
+	cd ${SYS_INCLUDE} && ${PAX} -rw . ${TARGET_DIR}/include
 .endif
 
 .if defined(SYS_LIB)
 pre-install: pre-install-lib
 pre-install-lib:
-	cd ${SYS_LIB} && pax -rw . ${TARGET_DIR}/lib
+	cd ${SYS_LIB} && ${PAX} -rw . ${TARGET_DIR}/lib
 .endif
 
 post-install: post-install-plist
