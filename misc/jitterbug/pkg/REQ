@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: REQ,v 1.2 1999/10/11 13:39:34 wennmach Exp $
+# $NetBSD: REQ,v 1.3 2000/08/18 16:22:40 wiz Exp $
 
 JB_USER=@JB_USER@
 JB_USERID=@JB_USERID@
@@ -9,7 +9,8 @@ JB_GROUPID=@JB_GROUPID@
 JB_LOCALMAIL=@JB_LOCALMAIL@
 JB_PACKAGE=@JB_PACKAGE@
 PREFIX=@PREFIX@
-ADDNERD=@LOCALBASE@/sbin/addnerd
+ADDUSER=@ADDUSER@
+ADDGROUP=@ADDGROUP@
 FILESDIR=@FILESDIR@
 
 PKG=$1
@@ -36,7 +37,7 @@ then
 	exit 1
 else
 	echo "Adding group $JB_GROUP (gid $JB_GROUPID) to /etc/group ..."
-	echo "$JB_GROUP:*:$JB_GROUPID:" >> /etc/group
+	${ADDGROUP} -g ${JB_GROUPID} ${JB_GROUP}
 fi
 fi
 
@@ -44,7 +45,7 @@ fi
 if finger ${JB_USER} 2>&1 | grep >/dev/null "no such user"
 then
 	echo "Creating '$JB_USER' user ..."
-	${ADDNERD} -h ${PREFIX} -u ${JB_USERID} -g ${JB_GROUP} ${JB_USER}
+	${ADDUSER} -d ${PREFIX} -u ${JB_USERID} -g ${JB_GROUP} ${JB_USER}
 	echo Done.
 else
 	echo "User '$JB_USER' already exists, proceeding."

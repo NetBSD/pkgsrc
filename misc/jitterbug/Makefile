@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2000/01/06 17:02:47 wennmach Exp $
+# $NetBSD: Makefile,v 1.10 2000/08/18 16:22:38 wiz Exp $
 
 DISTNAME=	jitterbug-1.6.2
 WRKSRC=		${WRKDIR}/${PKGNAME}/source
@@ -8,8 +8,16 @@ MASTER_SITES=	ftp://jitterbug.samba.org/pub/jitterbug/
 MAINTAINER=	wennmach@netbsd.org
 HOMEPAGE=	http://jitterbug.samba.org/
 
-DEPENDS+=	addnerd-1.6:../../sysutils/addnerd
 DEPENDS+=	apache-1.3.*:../../www/apache
+
+.if exists(/usr/sbin/user)
+ADDUSER=		/usr/sbin/useradd
+ADDGROUP=		/usr/sbin/groupadd
+.else
+DEPENDS+=		user>=20000313:../../sysutils/user
+ADDUSER=		${LOCALBASE}/sbin/useradd
+ADDGROUP=		${LOCALBASE}/sbin/groupadd
+.endif
 
 PLIST_SRC=	${WRKDIR}/PLIST-src
 REQ_FILE=	${WRKDIR}/REQ
@@ -122,7 +130,8 @@ pre-install:
 		-e 's|@JB_LOCALMAIL@|${JB_LOCALMAIL}|g'                       \
 		-e 's|@JB_PACKAGE@|${JB_PACKAGE}|g'                           \
 		-e 's|@PREFIX@|${PREFIX}|g'                                   \
-		-e 's|@LOCALBASE@|${LOCALBASE}|g'                             \
+		-e 's|@ADDUSER@|${ADDUSER}|g'				      \
+		-e 's|@ADDGROUP@|${ADDGROUP}|g'				      \
 		-e 's|@FILESDIR@|${FILESDIR}|g'                               \
 			<${PKGDIR}/REQ                                        \
 			>${REQ_FILE}
