@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/05/05 19:51:13 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2001/06/26 13:51:00 zuntum Exp $
 #
 
 DISTNAME=	icb.2.1.4
@@ -11,17 +11,16 @@ MAINTAINER=	jwise@netbsd.org
 HOMEPAGE=	http://www.icb.net/
 COMMENT=	TK interface to the ICB chat system
 
-DEPENDS=	tk>=8.3.2:../../x11/tk
-
 RESTRICTED=		"Author wishes to handle distribution"
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 
+USE_BUILDLINK_ONLY=	YES
 USE_X11=	yes
-NO_CONFIGURE=	yes
-NO_WRKSUBDIR=	yes
+
+WRKSRC=		${WRKDIR}
 
 do-build:
 	${SED} -e 's,/usr/local/lib/icb,${PREFIX}/libdata/tkicb,g' \
@@ -39,4 +38,5 @@ do-install:
 		${WRKSRC}/lib/servers ${PREFIX}/libdata/tkicb/lib
 	${INSTALL_SCRIPT} ${WRKSRC}/lib/* ${PREFIX}/libdata/tkicb/lib
 
+.include "../../x11/tk/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
