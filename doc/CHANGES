@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7410 2004/10/12 08:31:17 jmmv Exp $
+$NetBSD: CHANGES,v 1.7411 2004/10/12 11:24:35 markd Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4622,3 +4622,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated spamassassin to 3.0.0 [heinz 2004-10-12]
 	Updated dbus to 0.22nb1 [jmmv 2004-10-12]
 	Updated dbus-glib to 0.22nb1 [jmmv 2004-10-12]
+	Updated kbiff to 3.7.1 [markd 2004-10-12]
+	Updated kmplayer to 0.8.3a [markd 2004-10-12]
