@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2002/05/11 10:21:28 zuntum Exp $
+# $NetBSD: Makefile,v 1.13 2002/10/02 19:20:39 dillo Exp $
 
 DISTNAME=	trafshow-3.1
 PKGREVISION=	1
@@ -14,8 +14,6 @@ MAINTAINER=     packages@netbsd.org
 HOMEPAGE=	http://soft.risp.ru/trafshow/index.shtml
 COMMENT=	Full screen visualization of the network traffic
 
-BUILD_DEPENDS+=	autoconf>=2.13:../../devel/autoconf
-
 GNU_CONFIGURE=	yes
 ALL_TARGET=	trafshow
 
@@ -26,9 +24,6 @@ BUILD_DEFS+=	USE_INET6
 .if defined(USE_INET6) && ${USE_INET6} == "YES"
 CPPFLAGS+=	-DINET6
 .endif
-
-pre-configure:
-	cd ${WRKSRC} && ${LOCALBASE}/bin/autoreconf
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/trafshow ${PREFIX}/bin
