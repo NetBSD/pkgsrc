@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/02/17 18:22:27 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2002/09/29 03:20:41 jlam Exp $
 
 DISTNAME=		libffm.0.28
 PKGNAME=		libffm-0.28
@@ -8,6 +8,7 @@ MASTER_SITES=		ftp://ftp.unix-ag.org/user/nils/
 MAINTAINER=		root@garbled.net
 COMMENT=		fast alpha-optimized replacement for some libm routines
 
+USE_BUILDLINK2=		yes
 USE_GMAKE=		yes
 
 ONLY_FOR_PLATFORM=      NetBSD-*-alpha
