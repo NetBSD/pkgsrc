@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/04/25 04:16:43 xtraeme Exp $
+# $NetBSD: Makefile,v 1.12 2004/04/27 03:09:58 snj Exp $
 #
 
 DISTNAME=		gscope-0.4.1
@@ -12,14 +12,14 @@ COMMENT=		Software oscilloscope library
 
 BUILD_DEPENDS+=		gtk-doc-[0-9]*:../../textproc/gtk-doc
 
-USE_BUILDLINK2=		# defined
+USE_BUILDLINK3=		yes
 USE_X11=		# defined
 GNU_CONFIGURE=		# defined
 USE_LIBTOOL=		# defined
 
-.include "../../devel/popt/buildlink2.mk"
-.include "../../graphics/gdk-pixbuf/buildlink2.mk"
-.include "../../x11/gnome-libs/buildlink2.mk"
-.include "../../x11/gtk/buildlink2.mk"
+.include "../../devel/popt/buildlink3.mk"
+.include "../../graphics/gdk-pixbuf/buildlink3.mk"
+.include "../../x11/gnome-libs/buildlink3.mk"
+.include "../../x11/gtk/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
