@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 1999/04/15 20:39:49 tron Exp $
+# $NetBSD: Makefile,v 1.10 2000/07/11 10:47:19 agc Exp $
 # FreeBSD Id: Makefile,v 1.2 1996/11/18 09:55:42 asami Exp
 #
 
@@ -14,6 +14,6 @@ USE_IMAKE=	yes
 
 post-install:
 	cd ${WRKSRC}; \
-	${INSTALL_MAN} xautolock.man ${X11BASE}/man/man1/xautolock.1
+	${INSTALL_MAN} xautolock.man ${X11PREFIX}/man/man1/xautolock.1
 
 .include "../../mk/bsd.pkg.mk"
