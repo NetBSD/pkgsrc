@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.104 1998/06/22 14:47:49 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.105 1998/06/23 10:35:56 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -1014,7 +1014,7 @@ _PORT_USE: .USE
 			${SCRIPTDIR}/${.TARGET:S/^real-/post-/}; \
 	fi
 .if make(real-install)
-	@(newmanpages=`/usr/bin/egrep 					\
+	@(newmanpages=`/usr/bin/egrep -h				\
 		'^([^/]*/)*man/([^/]*/)?(man[1-9ln]/.*\.[1-9ln]|cat[1-9ln]/.*\.0)(\.gz)?$$'	\
 		${PLIST_SRC} || /usr/bin/true`;				\
 	if [ X"${MANCOMPRESSED}" != X"" -a X"${MANZ}" = X"" ]; then	\
