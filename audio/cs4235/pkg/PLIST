@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/10/17 01:32:33 hubertf Exp $
+bin/cs4235_3dctl

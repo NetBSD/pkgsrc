@@ -1,0 +1,6 @@
+Program to enable and modify the 3D mode on Crystal CS4235 sound cards.
+It's working quite well for me; it seems to work just as well as the 3D
+control in Windows.
+
+Unfortunately the code only works on i386, but if anybody wants to fix
+that they're more than welcome :-)
