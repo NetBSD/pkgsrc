@@ -1,5 +1,5 @@
---- portlint.pl-orig	Sat Apr 25 13:19:25 1998
-+++ portlint.pl	Sat Apr 25 13:32:53 1998
+--- portlint.pl.orig	Tue Apr 28 16:20:01 1998
++++ portlint.pl	Tue Apr 28 16:28:06 1998
 @@ -1,4 +1,4 @@
 -#! /usr/bin/perl
 +#!@PREFIX@/bin/perl
@@ -8,7 +8,7 @@
  # implemented by:
 @@ -12,6 +12,10 @@
  #
- # $Id: patch-aa,v 1.1 1998/04/25 13:23:35 frueauf Exp $
+ # $Id: patch-aa,v 1.2 1998/04/28 14:57:44 frueauf Exp $
  #
 +# This version contains some changes necessary for NetBSD packages
 +# done by Hubert Feyrer <hubertf@netbsd.org> and
@@ -285,7 +285,7 @@
 -			print "OK: \"$j\" seen in $file.\n" if ($verbose);
 +		if ($tmp =~ /\n[^#]/) {
 +			&perror("FATAL: non-comment line in comment section of $file.");
- 		}
++		}
 +		foreach $i (@linestocheck) {
 +			$j = $i;
 +			$j =~ s/\(.*\)\?//g;
@@ -296,7 +296,7 @@
 +			} else {
 +				print "OK: \"$j\" seen in $file.\n" if ($verbose);
 +			}
-+		}
+ 		}
 +	} else {
 +		$tmp = $sections[$idx++];
  	}
@@ -431,22 +431,107 @@
  			} else {
  			    &perror("WARN: DISTFILES/DISTNAME affects WRKSRC. ".
  				"take caution when changing them.");
-@@ -993,12 +1048,14 @@
- 			@mman = split(/\s+/, $1);
- 			@pman = split(/\s+/, $plistmanall{$i});
- 			foreach $j (@mman) {
-+		                next if ($j eq '');
- 				if (!grep($_ eq $j, @pman)) {
- 					&perror("WARN: manpage $j in $file ".
- 						"MAN$i but not in PLIST.");
+@@ -986,53 +1041,57 @@
+ 	}
+ 
+ 	# check MAN[1-9LN]
+-	print "OK: checking MAN[0-9LN].\n" if ($verbose);
+-	foreach $i (split(//, $manchapters)) {
+-		next if ($i eq '');
+-		if ($tmp =~ /MAN\U$i\E=\s*([^\n]*)\n/) {
+-			@mman = split(/\s+/, $1);
+-			@pman = split(/\s+/, $plistmanall{$i});
+-			foreach $j (@mman) {
+-				if (!grep($_ eq $j, @pman)) {
+-					&perror("WARN: manpage $j in $file ".
+-						"MAN$i but not in PLIST.");
++	if ($extrafile) {
++		print "OK: checking MAN[0-9LN].\n" if ($verbose);
++		foreach $i (split(//, $manchapters)) {
++			next if ($i eq '');
++			if ($tmp =~ /MAN\U$i\E=\s*([^\n]*)\n/) {
++				@mman = split(/\s+/, $1);
++				@pman = split(/\s+/, $plistmanall{$i});
++				foreach $j (@mman) {
++			                next if ($j eq '');
++					if (!grep($_ eq $j, @pman)) {
++						&perror("WARN: manpage $j in $file ".
++							"MAN$i but not in PLIST.");
++					}
  				}
+-			}
+-			foreach $j (@pman) {
+-				if (!grep($_ eq $j, @mman)) {
+-					&perror("WARN: manpage $j in PLIST ".
+-						"but not in $file MAN$i.");
++				foreach $j (@pman) {
++			                next if ($j eq '');
++					if (!grep($_ eq $j, @mman)) {
++						&perror("WARN: manpage $j in PLIST ".
++							"but not in $file MAN$i.");
++					}
+ 				}
+-			}
+-		} else {
+-			if ($plistmanall{$i}) {
+-				if ($manstrict) {
+-					&perror("FATAL: manpage for chapter ".
+-						"$i must be listed in ".
+-						"$file MAN\U$i\E. ");
+-				} else {
+-					&perror("WARN: manpage for chapter ".
+-						"$i should be listed in ".
+-						"MAN\U$i\E, ".
+-						"even if compression is ".
+-						"not necessery.");
++			} else {
++				if ($plistmanall{$i}) {
++					if ($manstrict) {
++						&perror("FATAL: manpage for chapter ".
++							"$i must be listed in ".
++							"$file MAN\U$i\E. ");
++					} else {
++						&perror("WARN: manpage for chapter ".
++							"$i should be listed in ".
++							"MAN\U$i\E, ".
++							"even if compression is ".
++							"not necessery.");
++					}
++				}
++				if ($mancompress && $plistman{$i}) {
++					&perror("WARN: MAN\U$i\E? will help you ".
++						"compressing manual page in chapter ".
++						"\"$i\".");
++				} elsif (!$mancompress && $plistmangz{$i}) {
++					&perror("WARN: MAN\U$i\E? will help you ".
++						"uncompressing manual page in chapter ".
++						"\"$i\".");
+ 				}
+-			}
+-			if ($mancompress && $plistman{$i}) {
+-				&perror("WARN: MAN\U$i\E? will help you ".
+-					"compressing manual page in chapter ".
+-					"\"$i\".");
+-			} elsif (!$mancompress && $plistmangz{$i}) {
+-				&perror("WARN: MAN\U$i\E? will help you ".
+-					"uncompressing manual page in chapter ".
+-					"\"$i\".");
  			}
- 			foreach $j (@pman) {
-+		                next if ($j eq '');
- 				if (!grep($_ eq $j, @mman)) {
- 					&perror("WARN: manpage $j in PLIST ".
- 						"but not in $file MAN$i.");
-@@ -1169,7 +1226,7 @@
+ 		}
+-	}
+-	if ($tmp !~ /MANLANG/ && scalar(keys %manlangs)) {
+-		$i = (keys %manlangs)[0];
+-		&perror("WARN: how about using MANLANG for ".
+-			"designating manual language, such as \"$i\"?");
++		if ($tmp !~ /MANLANG/ && scalar(keys %manlangs)) {
++			$i = (keys %manlangs)[0];
++			&perror("WARN: how about using MANLANG for ".
++				"designating manual language, such as \"$i\"?");
++		}
+ 	}
+ 
+ 	# check USE_X11 and USE_IMAKE
+@@ -1169,7 +1228,7 @@
  %cmdnames = split(/\n|\t+/, <<EOF);
  /usr/opt	\${PORTSDIR} instead
  $portsdir	\${PORTSDIR} instead
