@@ -1,4 +1,4 @@
-# $NetBSD: mk.conf.example,v 1.193 2001/04/07 01:53:23 kim Exp $
+# $NetBSD: mk.conf.example,v 1.194 2001/04/09 00:33:06 jtb Exp $
 #
 
 # Sample /etc/mk.conf file, which can be used to set specific values
@@ -235,9 +235,9 @@
 # Default: not defined
 
 #PKG_FC=
-# The fortran compiler used to compile fortran code contained in
+# The Fortran compiler used to compile Fortran code contained in
 # packages.
-# Possible: any fortran compiler
+# Possible: any Fortran compiler
 # Default: none
 
 #PRE_ROOT_CMD=${CHMOD} -R o+w ${WRKDIR}
@@ -658,7 +658,7 @@ PAPERSIZE=	A4
 #PINE_USE_LDAP=
 # Compile code into pine to use a LDAP server for an address book. 
 # Possible: undefined, YES
-# Defailt: undefined (support not compiled in)
+# Default: undefined (support not compiled in)
 
 #PINFO_USE_NATIVE_CURSES=
 # Used in pinfo to use NetBSD native curses, rather than ncurses.
@@ -891,6 +891,12 @@ PAPERSIZE=	A4
 # Add encryption code to zip1
 # Possible: defined, not defined
 # Default: not defined
+
+#ZSH_STATIC=
+# Build static version of zsh binary - recommended if used as a login shell
+# Possible: defined, not defined
+# Default: not defined
+
 
 #
 #	Overrides for faster or cheaper sites.
