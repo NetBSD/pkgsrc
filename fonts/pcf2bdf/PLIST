@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2002/12/31 05:44:43 kei Exp $
+bin/pcf2bdf
+man/man1/pcf2bdf.1
