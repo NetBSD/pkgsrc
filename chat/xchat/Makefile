@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2002/03/15 16:38:05 skrll Exp $
+# $NetBSD: Makefile,v 1.19 2002/03/19 08:00:18 skrll Exp $
 
 DISTNAME=	xchat-1.8.7
 PKGREVISION=	1
@@ -34,12 +34,6 @@ CONFIGURE_ARGS+=	--enable-ipv6
 .include "../../security/openssl/buildlink.mk"
 CONFIGURE_ARGS+=	--enable-openssl=${BUILDLINK_DIR}
 .endif
-
-# XXX
-# Is this needed?
-pre-configure:
-	@cd ${WRKSRC} && \
-	${RM} -f po/zh_TW.Big5.po
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/xchat
