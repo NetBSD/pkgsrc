@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3221 2005/03/14 15:17:19 salo Exp $
+$NetBSD: TODO,v 1.3222 2005/03/15 15:57:31 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -529,7 +529,6 @@ Suggested package updates
 	o guile-oops-1.0.2
 	o guile-pg-0.25
 	o guile-www-1.1.1
-	o gxmame-0.35beta1 [pkg/29675]
 	o hackbot-2.21
 	o hashcash-1.16
 	o haskell-mode-1.45

@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9487 2005/03/15 15:51:56 wiz Exp $
+$NetBSD: CHANGES,v 1.9488 2005/03/15 15:57:31 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1367,3 +1367,4 @@ Changes to the packages collection and infrastructure in 2005:
         Updated mysql-client to 4.0.24 [xtraeme 2005-03-15]
         Updated mysql-server to 4.0.24 [xtraeme 2005-03-15]
 	Updated gmp to 4.1.4nb1 [wiz 2005-03-15]
+	Updated gxmame to 0.35beta1 [xtraeme 2005-03-15]
