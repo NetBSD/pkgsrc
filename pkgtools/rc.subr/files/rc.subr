@@ -1,4 +1,4 @@
-# $NetBSD: rc.subr,v 1.4 2003/07/06 20:40:34 grant Exp $
+# $NetBSD: rc.subr,v 1.5 2004/10/11 19:32:14 tv Exp $
 #
 # Copyright (c) 1997-2002 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -74,6 +74,21 @@ case $_osname in
 		_RCCMD_whoami="/usr/ucb/whoami"
 		_RCARG_psformat="-o pid,comm"
 		_RCARG_ps="-ef"
+		;;
+	Interix)
+		bsd_echo () {
+			if [ "$1" = "-n" ]; then
+				shift; echo "$@\c"
+			else
+				echo "$@"
+			fi
+		}
+		_RCCMD_chown="/usr/bin/chown"
+		_RCCMD_ci="/usr/contrib/bin/ci"
+		_RCCMD_co="/usr/contrib/bin/co"
+		_RCCMD_echo="bsd_echo"
+		_RCCMD_rcs="/usr/contrib/bin/rcs"
+		_RCARG_psformat="-wwo pid,comm"
 		;;
 	Linux)
 		_RCCMD_chown="/bin/chown"
