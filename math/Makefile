@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2001/04/17 00:20:41 jtb Exp $
+# $NetBSD: Makefile,v 1.59 2001/04/27 22:58:13 jtb Exp $
 #
 
 COMMENT=	Mathematics
@@ -25,6 +25,7 @@ SUBDIR+=	grpn
 SUBDIR+=	gsl
 SUBDIR+=	lapack
 SUBDIR+=	libffm
+SUBDIR+=	linpack
 SUBDIR+=	mcsim
 SUBDIR+=	meschach
 SUBDIR+=	metis
