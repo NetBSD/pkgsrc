@@ -1,0 +1,10 @@
+$NetBSD: patch-au,v 1.1 1998/08/25 12:53:10 agc Exp $
+
+--- ./pvm3/src/pmsg.c.orig	Sat Jul 18 22:31:49 1998
++++ ./pvm3/src/pmsg.c	Sat Jul 18 22:31:48 1998
+@@ -88,4 +88,5 @@
+ 
+ #include <stdio.h>
++#include <sys/types.h>
+ #ifdef NEEDMENDIAN
+ #include <machine/endian.h>

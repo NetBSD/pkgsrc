@@ -1,0 +1,11 @@
+$NetBSD: patch-ao,v 1.1 1998/08/25 12:53:09 agc Exp $
+
+--- ./pvm3/src/hoster.c.orig	Sat Jul 18 22:31:43 1998
++++ ./pvm3/src/hoster.c	Sat Jul 18 22:31:42 1998
+@@ -139,5 +139,5 @@
+  *
+  */
+-
++#include <sys/types.h>
+ #ifdef NEEDMENDIAN
+ #include <machine/endian.h>
