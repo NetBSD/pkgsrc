@@ -1,0 +1,30 @@
+$NetBSD: patch-ab,v 1.5 2003/11/18 16:10:55 jschauma Exp $
+
+--- demos/Makefile.am.orig	2003-11-07 10:57:52.000000000 -0600
++++ demos/Makefile.am	2003-11-17 21:26:50.000000000 -0600
+@@ -22,6 +22,7 @@
+ 	morph3d \
+ 	multiarb \
+ 	occlude \
++	osdemo \
+ 	paltex \
+ 	pixeltex \
+ 	pointblast \
+@@ -47,14 +48,14 @@
+ 
+ CLEANFILES = test.ppm
+ 
+-LDADD = $(GLUT_LIBS) \
+-	$(top_builddir)/$(GLU_DIR)/libGLU.la \
+-	$(top_builddir)/src/libGL.la -lm
++LDADD = $(GLUT_LIBS) -lGLU -lGL -lm
+ 
+ #LDFLAGS = -no-install
+ 
+ EXTRA_DIST = isosurf.dat particles.cxx particles.h tunneldat.h
+ 
++osdemo_LDADD = $(LDADD) -lOSMesa
++
+ # use double buffering if possible
+ BUFFER = -db
+ 

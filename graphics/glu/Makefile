@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2003/11/09 02:23:18 jschauma Exp $
+# $NetBSD: Makefile,v 1.21 2003/11/18 16:10:56 jschauma Exp $
 
 PKGNAME=		${DISTNAME:C/MesaLib/glu/}
-PKGREVISION=		1
+PKGREVISION=		2
 WRKSRC=			${WRKDIR}/${DISTNAME:C/Lib//}
 MAINTAINER=		rh@NetBSD.org
 COMMENT=		GLU polygon tesselation facility for Mesa
