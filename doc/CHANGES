@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9011 2005/02/02 22:26:36 drochner Exp $
+$NetBSD: CHANGES,v 1.9012 2005/02/03 10:51:13 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -725,3 +725,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added gimp-rawphoto-1.19 [drochner 2005-02-02]
 	Added gimp-ufraw-0.3 [drochner 2005-02-02]
 	Updated jhead to 2.3 [drochner 2005-02-02]
+	Updated gpdf to 2.8.3 [jmmv 2005-02-02]
