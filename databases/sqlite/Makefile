@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2001/11/19 01:15:46 reinoud Exp $
+# $NetBSD: Makefile,v 1.4 2001/12/05 02:04:04 reinoud Exp $
 
-DISTNAME=		sqlite-2.1.1
+DISTNAME=		sqlite-2.1.4
 CATEGORIES=		databases
 MASTER_SITES=		http://www.hwaci.com/sw/sqlite/
 
@@ -18,6 +18,9 @@ GNU_CONFIGURE=		YES
 CONFIGURE_SCRIPT=	../sqlite/configure
 CONFIGURE_ARGS+=	--without-tcl
 CONFIGURE_ENV+=		config_TARGET_READLINE_INC="-I${BUILDLINK_DIR}/include"
+
+CFLAGS+=		-DUINT32_TYPE=uint32_t -DUINT16_TYPE=uint16_t \
+			-DUINT8_TYPE=uint8_t -DINTPTR_TYPE=long 
 
 post-extract:
 	${MKDIR} ${WRKSRC}
