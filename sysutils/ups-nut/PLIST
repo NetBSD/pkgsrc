@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2004/04/23 22:07:59 reed Exp $
+@comment $NetBSD: PLIST,v 1.15 2004/08/03 05:21:50 martti Exp $
 bin/upsc
 bin/upscmd
 bin/upslog
@@ -24,6 +24,7 @@ libexec/nut/mge-shut
 libexec/nut/mge-utalk
 libexec/nut/oneac
 libexec/nut/powercom
+libexec/nut/powermust
 libexec/nut/safenet
 libexec/nut/sms
 libexec/nut/tripplite
@@ -55,6 +56,7 @@ man/man8/mge-utalk.8
 man/man8/nutupsdrv.8
 man/man8/oneac.8
 man/man8/powercom.8
+man/man8/powermust.8
 man/man8/safenet.8
 man/man8/sms.8
 man/man8/snmp-ups.8
@@ -109,6 +111,11 @@ share/doc/nut/snmp.txt
 share/doc/nut/sock-protocol.txt
 share/doc/nut/ssl.txt
 share/doc/nut/upssched.txt
+share/examples/nut/ups.conf.sample
+share/examples/nut/upsd.conf.sample
+share/examples/nut/upsd.users.sample
+share/examples/nut/upsmon.conf.sample
+share/examples/nut/upssched.conf.sample
 share/nut/cmdvartab
 share/nut/driver.list
 @dirrm share/nut
