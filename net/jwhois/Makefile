@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/06/17 21:47:52 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2001/07/02 16:51:49 jlam Exp $
 #
 
 DISTNAME=		jwhois-2.4.1
@@ -10,7 +10,6 @@ HOMEPAGE=		http://www.gnu.org/software/jwhois/
 COMMENT=		Configurable WHOIS client
 
 GNU_CONFIGURE=		# defined
-USE_LIBINTL=		# defined
 CONFIGURE_ARGS+=	--sysconfdir=/etc
 CONFIGURE_ARGS+=	--localstatedir=/var/db
 CONFIGURE_ARGS+=	--with-cache
@@ -21,4 +20,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/example/jwhois.conf ${PREFIX}/share/examples
 	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
+.include "../../devel/gettext-lib/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
