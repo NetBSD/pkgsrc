@@ -1,0 +1,16 @@
+--- src/plugins/land/land.c.orig	Mon Mar 22 15:05:37 1999
++++ src/plugins/land/land.c	Mon Mar 22 15:14:21 1999
+@@ -11,13 +11,6 @@
+ 
+ #include <includes.h>
+ 
+-#include <netinet/ip.h>
+-#include <netinet/udp.h>
+-#ifdef BSD
+-#include <netinet/tcp.h>
+-#endif
+-
+-
+ /* Minor portability tweaks. --KGB */
+ #if (!defined(BSD) && (!defined(__GLIBC__) || __GLIBC__ < 2 || defined(__powerpc__)))
+ #include <netinet/ip_tcp.h>
