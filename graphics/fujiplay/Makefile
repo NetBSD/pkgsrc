@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2005/02/21 20:26:11 hubertf Exp $
+# $NetBSD: Makefile,v 1.9 2005/03/10 14:07:29 tv Exp $
 #
 
 DISTNAME=	fujiplay
 PKGNAME=	fujiplay-1.33
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://topo.math.u-psud.fr/~bousch/
 EXTRACT_SUFX=	.tgz
@@ -14,7 +15,7 @@ COMMENT=	Download pictures from some Fujifilm digital cameras
 DIST_SUBDIR=	fujiplay-1.33
 WRKSRC=		${WRKDIR}
 
-post-patch:
+xpost-patch:
 	cd ${WRKSRC} ; ${MV} fujiplay.c fujiplay.c.orig2 ; \
 	${SED} \
 		-e '791,794s/^/"/g' \
