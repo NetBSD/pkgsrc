@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2004/05/27 01:22:55 wiz Exp $
+$NetBSD: distinfo,v 1.4 2004/09/28 10:41:59 adrianp Exp $
 
-SHA1 (chkrootkit-0.43.tar.gz) = 58e3693823a9b8ab9b6bb609d54b5716af332a00
-Size (chkrootkit-0.43.tar.gz) = 33355 bytes
+SHA1 (chkrootkit-0.44.tar.gz) = 54610d8dac4d0585306d95be5a55c2ac02c5fec6
+Size (chkrootkit-0.44.tar.gz) = 34163 bytes
 SHA1 (patch-aa) = c47ecb09d02c710727420a3adfb7d8b62d721f2d
 SHA1 (patch-ab) = 109a43494bda8d0966164b7684f63a6a83f2d829
+SHA1 (patch-ac) = 857ac79001fd5fc4f3f88e905af212fab63e3d06
