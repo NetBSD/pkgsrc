@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2654 2004/12/05 08:33:09 jmmv Exp $
+$NetBSD: TODO,v 1.2655 2004/12/05 08:44:56 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -660,7 +660,6 @@ Suggested package updates
 	o lyx-qt-1.3.5
 	o lyx-xforms-1.3.5
 	o maelstrom-x11-2.0.7
-	o mail-notification-1.0
 	o maildrop-1.5.3 [pkg/22369]
 	o maildrop-1.6.3
 	o mailman-2.1.5
