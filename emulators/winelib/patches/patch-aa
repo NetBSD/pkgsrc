@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/04/04 16:52:41 recht Exp $
+
+--- Make.rules.in.orig	2004-04-04 18:15:46.000000000 +0200
++++ Make.rules.in
+@@ -56,7 +56,7 @@ GLOBAL_INCLUDE_PATH = 
+ GLOBAL_DLL_PATH     = 
+ GLOBAL_DLLS         = 
+ GLOBAL_LIBRARY_PATH = 
+-GLOBAL_LIBRARIES    = dl pthread
++GLOBAL_LIBRARIES    = pthread
+ 
+ # First some useful definitions
+ 
