@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.304 1999/07/27 07:09:48 mycroft Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.305 1999/07/27 15:01:30 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -852,14 +852,7 @@ describe:
 
 # Fetch
 _FETCH_FILE=								\
-	bfile=`${BASENAME} $$file`;					\
 	if [ ! -f $$file -a ! -f $$bfile ]; then			\
-		if [ -h $$file -o -h $$bfile ]; then			\
-			${ECHO_MSG} ">> ${_DISTDIR}/$$bfile is a broken symlink."; \
-			${ECHO_MSG} ">> Perhaps a filesystem (most likely a CD) isn't mounted?"; \
-			${ECHO_MSG} ">> Please correct this problem and try again."; \
-			exit 1;						\
-		fi ;							\
 		${ECHO_MSG} ">> $$bfile doesn't seem to exist on this system."; \
 		for site in $$sites; do					\
 			${ECHO_MSG} ">> Attempting to fetch $$bfile from $${site}."; \
@@ -884,6 +877,19 @@ _FETCH_FILE=								\
 		exit 1;							\
 	fi
 
+_CHECK_DIST_PATH=							\
+	if [ "X${DIST_PATH}" != "X" ]; then				\
+		for d in "" `${ECHO} ${DIST_PATH} | ${TR} ':' ' '`; do	\
+			if [ "X$$d" = "X" -o "X$$d" = "X${DISTDIR}" ]; then continue; fi; \
+			if [ -f $$d/${DIST_SUBDIR}/$$bfile ]; then	\
+				${ECHO} "Using $$d/${DIST_SUBDIR}/$$bfile"; \
+				${RM} -f $$bfile;			\
+				${LN} -s $$d/${DIST_SUBDIR}/$$bfile $$bfile; \
+				break;					\
+			fi;						\
+		done;							\
+	fi
+
 #
 # Sort the master site list according to the patterns in MASTER_SORT
 #
@@ -906,13 +912,17 @@ do-fetch:
 	 sites="${SORTED_MASTER_SITES}";				\
 	 for file in "" ${_DISTFILES}; do				\
 		if [ "X$$file" = X"" ]; then continue; fi;		\
-		 ${_FETCH_FILE}						\
+		bfile=`${BASENAME} $$file`;				\
+		${_CHECK_DIST_PATH};					\
+		${_FETCH_FILE}						\
 	 done)
 .if defined(_PATCHFILES)
 	${_PKG_SILENT}(${_PKG_DEBUG}cd ${_DISTDIR};			\
 	 sites="${PATCH_SITES}";					\
 	 for file in "" ${_PATCHFILES}; do				\
 		if [ "X$$file" = X"" ]; then continue; fi;		\
+		bfile=`${BASENAME} $$file`;				\
+		${_CHECK_DIST_PATH};					\
 		${_FETCH_FILE}						\
 	 done)
 .endif
@@ -1004,9 +1014,11 @@ do-patch:
 			fail="";					\
 			for i in ${PATCHDIR}/patch-*; do		\
 				case $$i in				\
-				${PATCHDIR}/patch-local-*) ;;		\
 				*.orig|*.rej|*~)			\
 					${ECHO_MSG} "===>   Ignoring patchfile $$i" ; \
+					continue;			\
+					;;				\
+				${PATCHDIR}/patch-local-*) 		\
 					;;				\
 				*)					\
 					if [ -f ${PATCH_SUM_FILE} ]; then \
@@ -1024,15 +1036,15 @@ do-patch:
 							${ECHO_MSG} "Patch file $$i has been modified"; \
 							${ECHO_MSG} "**************************************"; \
 							fail="$$fail $$filename"; \
+							continue;	\
 						fi;			\
 					fi;				\
-					if [ ${PATCH_DEBUG_TMP} = yes ]; then \
-						${ECHO_MSG} "===>   Applying ${OPSYS} patch $$i" ; \
-					fi;				\
-					${PATCH} ${PATCH_ARGS} < $$i	\
-					|| ( ${ECHO} Patch $$i failed ; exit 1 ) ; \
 					;;				\
 				esac;					\
+				if [ ${PATCH_DEBUG_TMP} = yes ]; then	\
+					${ECHO_MSG} "===>   Applying ${OPSYS} patch $$i" ; \
+				fi;					\
+				${PATCH} ${PATCH_ARGS} < $$i || ( ${ECHO} Patch $$i failed ; exit 1 ) ; \
 			done;						\
 			if [ "X$$fail" != "X" ]; then			\
 				${ECHO_MSG} "Patching failed due to modified patch file(s): $$fail"; \
