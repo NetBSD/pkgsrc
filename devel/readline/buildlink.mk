@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.16 2001/07/27 14:31:44 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.17 2002/04/02 14:28:28 abs Exp $
 #
 # This Makefile fragment is included by packages that use readline().
 #
@@ -40,8 +40,14 @@ BUILDLINK_FILES.readline+=	lib/libreadline.*
 
 BUILDLINK_PREFIX.history=	${BUILDLINK_PREFIX.readline}
 BUILDLINK_FILES.history+=	lib/libhistory.*
-.else
-.if exists(/usr/include/readline.h)
+.elif ${OPSYS} == "Linux"
+BUILDLINK_PREFIX.readline=	/usr
+BUILDLINK_FILES.readline=	include/readline/*
+BUILDLINK_FILES.readline+=	lib/libreadline.*
+
+BUILDLINK_PREFIX.history=	/usr
+BUILDLINK_FILES.history+=	lib/libhistory.*
+.elif exists(/usr/include/readline.h)
 BUILDLINK_PREFIX.readline=	/usr
 BUILDLINK_FILES.readline=	include/readline.h
 BUILDLINK_FILES.readline+=	lib/libedit.*
@@ -66,7 +72,6 @@ BUILDLINK_PREFIX.history=	/usr
 BUILDLINK_FILES.history+=	lib/libedit.*
 BUILDLINK_TRANSFORM.history=	-e "s|libedit|libhistory|g"
 REPLACE_LIBNAMES_SED+=		-e "s|-lhistory|-ledit|g"
-.endif
 .endif
 
 BUILDLINK_TARGETS.readline=	# empty
