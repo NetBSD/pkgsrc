@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/09/25 00:33:19 grant Exp $
+# $NetBSD: Makefile,v 1.2 2004/09/26 18:35:51 agc Exp $
 #
 
 DISTNAME=		MailScanner-4.30.3-2
@@ -16,7 +16,7 @@ USE_PKGINSTALL=		YES
 PKG_SYSCONFSUBDIR=	MailScanner
 
 DEPENDS+=		p5-Archive-Zip-[0-9]*:../../archivers/p5-Archive-Zip
-DEPENDS+=		p5-Convert-BinHex-[0-9]*:../../wip/p5-Convert-BinHex
+DEPENDS+=		p5-Convert-BinHex-[0-9]*:../../converters/p5-Convert-BinHex
 DEPENDS+=		p5-Net-CIDR>=0.09:../../devel/p5-Net-CIDR
 DEPENDS+=		p5-MIME-tools>=0:../../mail/p5-MIME-tools
 DEPENDS+=		tnef>=1.0:../../mail/tnef
