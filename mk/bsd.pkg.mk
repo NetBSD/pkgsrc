@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.992 2002/06/17 09:11:10 grant Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.993 2002/06/20 20:15:48 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -1921,6 +1921,13 @@ do-build:
 
 # Install
 
+.if defined(PKG_CREATE_USERGROUP)
+INSTALL_SCRIPT_ENV+=	PKG_CREATE_USERGROUP=${PKG_CREATE_USERGROUP}
+.endif
+.if defined(PKG_CONFIG)
+INSTALL_SCRIPT_ENV+=	PKG_CONFIG=${PKG_CONFIG}
+.endif
+
 .if !target(do-install)
 do-install:
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} ${INSTALL_TARGET}
@@ -2042,11 +2049,11 @@ real-su-install: ${MESSAGE}
 		${ECHO_MSG} "Become root and try again to ensure correct permissions."; \
 	fi
 .endif # !NO_MTREE
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} pre-install-script
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${SETENV} ${INSTALL_SCRIPT_ENV} ${MAKE} ${MAKEFLAGS} pre-install-script
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} pre-install
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} do-install
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} post-install
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} post-install-script
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${SETENV} ${INSTALL_SCRIPT_ENV} ${MAKE} ${MAKEFLAGS} post-install-script
 .for f in ${INFO_FILES}
 	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} "${INSTALL_INFO} --info-dir=${PREFIX}/info ${PREFIX}/info/${f}"; \
 	${INSTALL_INFO} --remove --info-dir=${PREFIX}/info ${PREFIX}/info/${f}; \
