@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 1999/11/12 22:07:10 tron Exp $
+# $NetBSD: Makefile,v 1.21 1999/11/12 22:20:49 tron Exp $
 
 DISTNAME=	squid-2.2.STABLE5-src
 PKGNAME=	squid-2.2s5
@@ -10,23 +10,28 @@ MASTER_SITES=  \
 	ftp://sunsite.auc.dk/pub/infosystems/squid/squid-2/STABLE/ \
 	ftp://ftp.net.lut.ac.uk/squid/squid-2/STABLE/
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://squid.nlanr.net/Squid/
 
 BUILD_DEPENDS=    ${LOCALBASE}/bin/perl:../../lang/perl5
 
+# Configuration options which can be overwritten by the user.
+SQUID_CONFIGURE_ARGS?=	--enable-cachemgr-hostname=localhost \
+			--enable-icmp \
+			--enable-ipf-transparent \
+			--enable-snmp
+SQUID_HTTP_PORT?=	3128
+SQUID_ICP_PORT?=	3130
+
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	--sysconfdir=/etc \
-		--localstatedir=/var/squid
+CONFIGURE_ARGS+= --sysconfdir=/etc \
+		--localstatedir=/var/squid \
+		${SQUID_CONFIGURE_ARGS}
+CONFIGURE_ENV+=	CACHE_HTTP_PORT=${SQUID_HTTP_PORT} \
+		CACHE_ICP_PORT=${SQUID_ICP_PORT} \
+		PERL=${LOCALBASE}/bin/perl
 
-# Options you might want to enable
-CONFIGURE_ARGS+=	--enable-cachemgr-hostname=localhost
-CONFIGURE_ARGS+=	--enable-icmp
-CONFIGURE_ARGS+=	--enable-ipf-transparent
-CONFIGURE_ARGS+=	--enable-snmp
-
-CONFIGURE_ENV+=		PERL=${LOCALBASE}/bin/perl
-
+BUILD_DEFS+=	SQUID_CONFIGURE_ARGS SQUID_HTTP_PORT SQUID_ICP_PORT
 MAKEFILE=	makefile
 MAKE_ENV+=	INSTALL_SCRIPT="${INSTALL_SCRIPT}" PKG_PREFIX="${PREFIX}"
 PLIST_SRC=	${PKGDIR}/PLIST ${WRKDIR}/PLIST.share
