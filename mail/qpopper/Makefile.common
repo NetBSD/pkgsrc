@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2002/05/03 15:09:51 taca Exp $
+# $NetBSD: Makefile.common,v 1.6 2002/06/15 21:20:02 cjep Exp $
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--libexecdir=${LOCALBASE}/libexec \
@@ -20,7 +20,7 @@ VERSION=		4.0.4
 CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_DIR}
 
 .if defined(KERBEROS)
-USE_KERBEROS=		# defined
+PKG_USE_KERBEROS=	# defined
 CONFIGURE_ARGS+=	--enable-kerberos
 .endif
 

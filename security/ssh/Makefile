@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.98 2002/02/05 04:26:56 jlam Exp $
+# $NetBSD: Makefile,v 1.99 2002/06/15 21:20:04 cjep Exp $
 # FreeBSD Id: Makefile,v 1.47 1997/11/10 22:04:42 dima Exp
 #
 
@@ -104,13 +104,13 @@ DEPENDS+=		socks5-1.0.2:../../net/socks5
 # MD5 (ssh-1.2.27-afs-kerberos.patch-1) = d440f74958d9c3805b76dbc13e97e87d
 
 .if defined(KERBEROS)
-USE_KERBEROS=		yes
+PKG_USE_KERBEROS=		yes
 CONFIGURE_ARGS+=	--with-krb4=/usr
 .endif
 
 # XXX KERBEROS 5 SUPPORT BROKEN WITH HEIMDAL
 #.if defined(KERBEROS) && ${KERBEROS} == 5
-#USE_KERBEROS=	yes
+#PKG_USE_KERBEROS=	yes
 #CONFIGURE_ARGS+=--with-krb5=/usr
 #.else
 #CONFIGURE_ARGS+=--without-krb5

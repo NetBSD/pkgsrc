@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.113 2002/04/06 16:53:01 frueauf Exp $
+# $NetBSD: Makefile,v 1.114 2002/06/15 21:20:01 cjep Exp $
 
 DISTNAME=	fetchmail-5.9.11
 CATEGORIES=	mail
@@ -36,7 +36,7 @@ CONFIGURE_ARGS+=	--without-ssl
 BUILD_DEFS+=		FETCHMAIL_USE_SSL
 
 .if defined(KERBEROS)
-USE_KERBEROS=		yes
+PKG_USE_KERBEROS=	yes
 CONFIGURE_ARGS+=	--with-kerberos=yes
 .if ${MACHINE_PLATFORM:MNetBSD-1.[0-4]*-i386} == ""
 REPLACE_KERBEROS_LIBS=	# defined

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2002/05/24 04:11:47 itojun Exp $
+# $NetBSD: Makefile,v 1.72 2002/06/15 21:20:04 cjep Exp $
 
 DISTNAME=		openssh-3.2.3p1
 PKGNAME=		openssh-3.2.3.1
@@ -68,7 +68,7 @@ CONFIGURE_ARGS+=	--with-md5-passwords
 
 # XXX: <krb.h>
 #.if defined(KERBEROS)
-#USE_KERBEROS=		yes
+#PKG_USE_KERBEROS=		yes
 #CONFIGURE_ARGS+=	--with-kerberos4=/usr
 #.endif
 
