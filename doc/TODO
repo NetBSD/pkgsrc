@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2632 2004/12/02 18:33:23 minskim Exp $
+$NetBSD: TODO,v 1.2633 2004/12/02 22:03:02 dillo Exp $
 
 Suggested new packages
 ======================
@@ -557,7 +557,6 @@ Suggested package updates
 	o hot-babe-0.1.4
 	o httperf-0.8
 	o httptunnel-3.3
-	o hugo-3.1.01
 	o hydrogen-0.9.0
 	o hylafax-4.2.0
 	o i2ocfg-1.1
