@@ -1,24 +1,13 @@
-$NetBSD: patch-ab,v 1.1.1.1 2002/09/07 03:04:06 rh Exp $
+$NetBSD: patch-ab,v 1.2 2003/02/14 20:10:03 jmmv Exp $
 
---- doc/Makefile.am.orig	Thu Sep  5 20:08:27 2002
-+++ doc/Makefile.am	Thu Sep  5 20:08:59 2002
-@@ -166,8 +166,8 @@
- 	    echo '-- Installing '$$i ; \
- 	    $(INSTALL_DATA) $$i $(DESTDIR)$(TARGET_DIR); \
- 	  done; \
--	  echo '-- Installing $(srcdir)/html/index.sgml' ; \
--	  $(INSTALL_DATA) $(srcdir)/html/index.sgml $(DESTDIR)$(TARGET_DIR); \
-+	  echo '-- Installing $(srcdir)/html/index.html' ; \
-+	  $(INSTALL_DATA) $(srcdir)/html/index.html $(DESTDIR)$(TARGET_DIR); \
- 	fi)
+--- schemas/Makefile.in.orig	Mon Jan 20 20:46:20 2003
++++ schemas/Makefile.in
+@@ -303,7 +303,7 @@ maintainer-clean
  
- #
-@@ -187,7 +187,7 @@
- 	test -d $(distdir)/html || mkdir $(distdir)/html
- 	-cp $(srcdir)/tmpl/*.sgml $(distdir)/tmpl
- 	-cp $(srcdir)/sgml/*.sgml $(distdir)/sgml
--	-cp $(srcdir)/html/index.sgml $(distdir)/html
-+	-cp $(srcdir)/html/index.html $(distdir)/html
- 	-cp $(srcdir)/html/*.html $(srcdir)/html/*.css $(distdir)/html
- 
- 	images=$(HTML_IMAGES) ;    	      \
+ # don't do this if we are building in eg. rpm
+ install-data-local:
+-	if test -z "$(DESTDIR)" ; then \
++	if false ; then \
+ 		for p in $(schema_DATA) ; do \
+ 			GCONF_CONFIG_SOURCE=$(GCONF_SCHEMA_CONFIG_SOURCE) $(GCONFTOOL) --makefile-install-rule $(srcdir)/$$p; \
+ 		done \
