@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1365 2004/02/10 20:01:16 minskim Exp $
+$NetBSD: TODO,v 1.1366 2004/02/11 04:07:16 minskim Exp $
 
 Suggested new packages
 ======================
@@ -335,7 +335,6 @@ Suggested package updates
 	o xboard-4.2.7
 	o xdaliclock-2.20
 	o xephem-3.5.2
-	o xerces-c-2.3.0 [pkg/23861|heinz?]
 	o xerces-c-2.4.0 [heinz?]
 	o xerces-j-2.4.0 [pkg/21725]
 	o xerces-j-2.6.1
