@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.5 2002/02/13 15:53:10 taca Exp $
+# $NetBSD: Makefile,v 1.6 2003/05/24 00:57:04 taca Exp $
 #
 
 DISTNAME=		yatsvrs-5.00p6
 PKGNAME=		${DISTNAME:S/p/./}
 CATEGORIES=		mail
-MASTER_SITES=		ftp://ftp.jepro.co.jp/pub/jepro/yatsvr/
+MASTER_SITES=		ftp://ftp.jone-system.com/pub/jepro/yatsvr/
 
 MAINTAINER=		taca@netbsd.org
-HOMEPAGE=		http://www.jepro.co.jp/products/yat/
+HOMEPAGE=		# not available
 COMMENT=		Extended POP3 server and some supporting servers
 
 CONFLICTS=		ascyd-* yatsvr4-*
