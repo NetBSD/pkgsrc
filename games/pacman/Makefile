@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2001/06/11 06:34:33 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2001/06/30 11:27:17 zuntum Exp $
 
 DISTNAME=		Pacman-0.3-CVS-00-11-17
 PKGNAME=		Pacman-0.3
@@ -9,14 +9,13 @@ MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.clanlib.org/
 COMMENT=		Pacman, a small demonstration game for ClanLib
 
-DEPENDS+=		ClanLib>=0.2.2:../../graphics/clanlib
 DEPENDS+=		autoconf>=2.13:../../devel/autoconf
 
+USE_BUILDLINK_ONLY=	YES
 USE_X11BASE=		yes
 GNU_CONFIGURE=		yes
 USE_GMAKE=		yes
 
-LDFLAGS+=		-L${LOCALBASE}/lib
 CFLAGS+=		-I${X11BASE}/include
 
 # needs a valid X display to compile its datafiles
@@ -36,4 +35,5 @@ pre-build:
 		exit 1;							    \
 	fi;
 
+.include "../../graphics/clanlib/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
