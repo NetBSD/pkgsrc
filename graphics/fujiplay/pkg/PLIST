@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/11/23 04:22:13 hubertf Exp $
-bin/fujiplay
-bin/yycc2ppm
-share/doc/fujiplay/README
-share/doc/fujiplay/fujiplay.lsm
-share/doc/fujiplay/mx700-commands.html

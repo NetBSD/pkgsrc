@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST.k12x10,v 1.1 2001/01/12 15:00:10 itojun Exp $
-lib/X11/fonts/local/k6x10.pcf.gz
-lib/X11/fonts/local/k12x10.pcf.gz

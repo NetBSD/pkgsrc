@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:56:12 zuntum Exp $
+bin/mirror
+bin/do_unlinks
+bin/pkgs_to_mmin
+bin/mirrormaster
+man/man1/mirror.1.gz
+man/man1/mirrormaster.1.gz
+lib/mirror/lchat.pl
+lib/mirror/dateconv.pl
+lib/mirror/ftp.pl
+lib/mirror/lsparse.pl
+lib/mirror/mirror.defaults.dist
+@exec if [ ! -f %D/lib/mirror/mirror.defaults ]; then cp -p %D/lib/mirror/mirror.defaults.dist %D/lib/mirror/mirror.defaults; fi
+@unexec rmdir %D/lib/mirror 2>/dev/null || true

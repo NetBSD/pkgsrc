@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:57:43 zuntum Exp $
+bin/mergelogs
+bin/pen
+man/man1/mergelogs.1
+man/man1/pen.1
+share/doc/pen/COPYING
+share/doc/pen/ChangeLog
+share/doc/pen/README
+@dirrm share/doc/pen

@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:54:13 zuntum Exp $
+bin/dosmod
+bin/wine
+etc/wine.conf.example
+include/wine/windows.h
+include/wine/wintypes.h
+lib/libwine.so
+lib/libwine.so.1
+lib/libwine.so.1.0
+lib/wine.sym
+man/man1/wine.1
+@dirrm include/wine

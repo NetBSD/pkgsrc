@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/09/02 15:35:37 veego Exp $
-bin/jhead
-share/doc/html/jhead/usage.html
-@dirrm share/doc/html/jhead

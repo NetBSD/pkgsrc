@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/06/19 11:32:02 zuntum Exp $
-libexec/vsftpd
-man/man5/vsftpd.conf.5
-man/man8/vsftpd.8
-share/doc/vsftpd/INSTALL
-share/doc/vsftpd/README
-share/examples/vsftpd/vsftpd.conf
-@dirrm share/doc/vsftpd
-@dirrm share/examples/vsftpd

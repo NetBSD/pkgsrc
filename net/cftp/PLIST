@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:54:59 zuntum Exp $
+bin/cftp
+@unexec install-info --delete %D/info/cftp.info %D/info/dir
+info/cftp.info
+@exec install-info %D/info/cftp.info %D/info/dir
+share/doc/cftp/README
+share/doc/cftp/bindings.desc
+@dirrm share/doc/cftp

@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/07/01 14:03:24 taca Exp $
-${RUBY_SITELIBDIR}/formatter.rb
-${RUBY_SITELIBDIR}/html-parser.rb
-${RUBY_SITELIBDIR}/sgml-parser.rb
-${RUBY_DOCDIR}/html-parser/README.html
-@dirrm ${RUBY_DOCDIR}/html-parser

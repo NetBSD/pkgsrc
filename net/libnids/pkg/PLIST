@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2000/08/11 12:12:41 wiz Exp $
-include/nids.h
-lib/libnids.a
-man/man3/libnids.3

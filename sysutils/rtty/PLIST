@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:53:41 zuntum Exp $
+rtty/bin/ttysrv
+rtty/bin/rtty
+rtty/bin/locbrok
+rtty/bin/Startup
+rtty/bin/console
+rtty/bin/startsrv
+rtty/bin/agelogs
+rtty/bin/agelog
+share/doc/rtty/README
+@comment rtty/bin created above
+@exec mkdir %D/rtty/dev
+@exec mkdir %D/rtty/sock
+@exec mkdir %D/rtty/log
+@exec mkdir %D/rtty/pid
+@exec mkdir %D/rtty/opt
+@dirrm rtty/dev
+@dirrm rtty/sock
+@dirrm rtty/log
+@dirrm rtty/pid
+@dirrm rtty/opt
+@dirrm rtty/bin
+@dirrm rtty
+@dirrm share/doc/rtty

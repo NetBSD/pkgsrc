@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/12/10 00:08:23 hubertf Exp $
-bin/gif320
-man/man1/gif320.1
-share/doc/gif320/README
-share/doc/gif320/README.VMS
-share/doc/gif320/CHANGES
-share/doc/gif320/COPYING

@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:29:45 zuntum Exp $
+bin/vfxdvi.bin
+bin/vfxdvi
+bin/vfxdviprint
+man/man1/vfxdvi.1
+share/texmf.local/vfxdvi/vfontmap
+share/texmf.local/vfxdvi/xdvipaper.dvi2ps-j
+share/texmf.local/vfxdvi/xdvipaper.dvips
+share/texmf.local/vfxdvi/xdvipaper.jdvi2kps
+@dirrm share/texmf.local/vfxdvi

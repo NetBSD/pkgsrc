@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:58:45 zuntum Exp $
+bin/sabcmd
+include/sablot.h
+include/sdom.h
+include/shandler.h
+lib/libsablot.a
+lib/libsablot.la
+lib/libsablot.so
+lib/libsablot.so.60
+lib/libsablot.so.60.0

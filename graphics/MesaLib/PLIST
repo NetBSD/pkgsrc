@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:50:11 zuntum Exp $
+etc/mesa.conf
+include/GL/gl.h
+include/GL/gl_mangle.h
+include/GL/glext.h
+include/GL/glx.h
+include/GL/glx_mangle.h
+include/GL/osmesa.h
+include/GL/xmesa.h
+include/GL/xmesa_x.h
+include/GL/xmesa_xf86.h
+lib/libGL.so
+lib/libGL.so.3
+lib/libGL.so.3.4
+lib/libGL.a
+lib/libGL.la
+@unexec rmdir %D/include/GL >/dev/null 2>&1 || true

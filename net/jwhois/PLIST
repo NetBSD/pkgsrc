@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:55:54 zuntum Exp $
+bin/jwhois
+@unexec	install-info --delete %D/info/jwhois.info %D/info/dir
+info/jwhois.info
+@exec	install-info %D/info/jwhois.info %D/info/dir
+man/man1/jwhois.1
+share/examples/jwhois.conf
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/jwhois.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/jwhois.mo

@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 1997/11/14 10:41:01 agc Exp $
-sbin/crashme
-sbin/pddet
-man/man1/crashme.1

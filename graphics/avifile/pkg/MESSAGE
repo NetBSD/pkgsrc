@@ -1,9 +1,0 @@
-$NetBSD: MESSAGE,v 1.2 2001/04/13 09:16:57 zuntum Exp $
-======================================================================
-
-This package requires a kernel built with
-the directive:
-
-options USER_LDT
-
-======================================================================
