@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.6 2001/04/24 12:41:01 skrll Exp $
+
+--- test/regression/Makefile.in.orig	Tue Apr 24 13:27:42 2001
++++ test/regression/Makefile.in
+@@ -160,7 +160,6 @@
+ 	ThreadState.java \
+ 	UncaughtException.java \
+ 	IllegalWait.java \
+-	Preempt.java 		\
+ 	ReflectInterfaces.java \
+ 	TestSerializable.java \
+ 	TestSerializable2.java \
