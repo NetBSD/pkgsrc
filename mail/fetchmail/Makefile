@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.122 2002/11/24 19:55:37 chris Exp $
+# $NetBSD: Makefile,v 1.123 2002/12/01 15:37:59 salo Exp $
 
 DISTNAME=	fetchmail-6.1.2
 CATEGORIES=	mail
@@ -13,6 +13,7 @@ COMMENT=	batch mail retrieval/forwarding utility for pop2, pop3, apop, imap
 BUILD_USES_MSGFMT=	YES
 
 USE_BUILDLINK2=		YES
+USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--without-hesiod
 CONFIG_GUESS_OVERRIDE=	${WRKSRC}/config.guess
