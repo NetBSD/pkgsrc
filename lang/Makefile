@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.85 2000/12/12 01:30:49 wiz Exp $
+# $NetBSD: Makefile,v 1.86 2000/12/29 17:19:21 hubertf Exp $
 #
 
     SUBDIR += STk
@@ -50,7 +50,6 @@
     SUBDIR += p2c
     SUBDIR += perl5
     SUBDIR += perl5-base
-#   SUBDIR += perl5-current		# perl-base is newer
     SUBDIR += py-extclass
     SUBDIR += py-html-docs
     SUBDIR += python
