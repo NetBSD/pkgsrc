@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.103 2004/10/21 06:36:39 xtraeme Exp $
+# $NetBSD: Makefile,v 1.104 2004/11/04 14:29:38 jmmv Exp $
 #
 
 COMMENT=	Editors
@@ -40,6 +40,7 @@ SUBDIR+=	jed
 SUBDIR+=	joe
 SUBDIR+=	jove
 SUBDIR+=	kile
+SUBDIR+=	leafpad
 SUBDIR+=	leim
 SUBDIR+=	leim20
 SUBDIR+=	lpe
