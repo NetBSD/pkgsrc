@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2000/01/23 10:42:15 itojun Exp $
+# $NetBSD: Makefile,v 1.17 2000/01/23 15:13:49 itojun Exp $
 # FreeBSD Id: Makefile,v 1.18 1998/04/06 20:50:31 andreas Exp
 #
 
@@ -9,7 +9,7 @@ MASTER_SITES= 	ftp://ucd-snmp.ucdavis.edu/ \
 		ftp://ftp.win.or.jp/pub/network/snmp/ucd-snmp/
 
 PATCH_SITES=	ftp://ftp.kame.net/pub/kame/misc/
-PATCHFILES=	ucd-snmp-4.0.1-v6-20000121a.diff.gz
+PATCHFILES=	ucd-snmp-4.0.1-v6-20000124a.diff.gz
 PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	packages@netbsd.org
