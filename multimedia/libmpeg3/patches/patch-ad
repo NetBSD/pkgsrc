@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.1.1.1 2001/08/02 17:34:00 drochner Exp $
+$NetBSD: patch-ad,v 1.1 2004/06/26 18:00:21 grant Exp $
 
 --- ifo.h.orig	Tue Jul 31 17:19:54 2001
 +++ ifo.h	Tue Jul 31 17:20:47 2001

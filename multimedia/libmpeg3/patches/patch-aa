@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/08/02 17:34:00 drochner Exp $
+$NetBSD: patch-aa,v 1.1 2004/06/26 18:00:21 grant Exp $
 
 --- Makefile.orig	Sun May 20 05:05:26 2001
 +++ Makefile	Tue Jul 31 17:34:17 2001
