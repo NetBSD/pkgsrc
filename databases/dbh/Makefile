@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.9 2004/10/08 09:13:30 martti Exp $
+# $NetBSD: Makefile,v 1.10 2005/01/15 12:49:31 jmmv Exp $
 
 DISTNAME=		dbh-1.0.20
 CATEGORIES=		databases
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=dbh/}
 
-MAINTAINER=		benedikt.meurer@unix-ag.uni-siegen.de
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://dbh.sourceforge.net/
 COMMENT=		Library to create disk based Hashtables
 
