@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/08/15 14:38:38 drochner Exp $
+
+SHA1 (monotone-0.14.tar.gz) = e1c05a6e9c2fdc3b3e20cdca67b12a1cdc6364af
+Size (monotone-0.14.tar.gz) = 1792738 bytes
+SHA1 (patch-aa) = bd7008ca3872ece8177148f1384f155bfe7b85b5
+SHA1 (patch-ab) = 87a17eea880d9ed744996a08e09b94285ba690c7
+SHA1 (patch-ac) = e6f6ab03f4a132d37d1774f72230c7b6ffa9f778
+SHA1 (patch-ad) = ad9f992c4b8ff24083f793e36c5c2b6772087583
