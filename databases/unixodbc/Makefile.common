@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2001/11/26 07:31:43 jlam Exp $
+# $NetBSD: Makefile.common,v 1.5 2001/12/04 15:55:47 jlam Exp $
 
 DISTNAME=	unixODBC-${ODBC_DIST_VERS}
 CATEGORIES=	databases
@@ -11,13 +11,9 @@ HOMEPAGE?=	http://www.unixodbc.org/
 #
 # ODBC_DIST_VERS	version number on the php distfile
 # ODBC_BASE_VERS	pkgsrc-mangled version number (convert pl -> .)
-# ODBC_PKG_VERS		pkgsrc revisions of php (nbX, etc.)
-# ODBC_VERS		pkgsrc version number of package
 #
 ODBC_DIST_VERS=		2.0.11
 ODBC_BASE_VERS=		${ODBC_DIST_VERS}
-ODBC_PKG_VERS?=		# empty
-ODBC_VERS=		${ODBC_BASE_VERS}${ODBC_PKG_VERS}
 
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
