@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3065 2003/08/18 16:05:46 taca Exp $
+$NetBSD: CHANGES,v 1.3066 2003/08/18 17:02:05 taca Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3296,3 +3296,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated py-dns to 1.1.0 [gson 2003-08-18]
 	Updated mew3 to 3.3 [taca 2003-08-18]
 	Updated squid to squid-2.5.3nb3 [taca 2003-08-18]
+	Updated squid to squid-2.5.3nb4 [taca 2003-08-18]
