@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: pgsql.sh,v 1.1.1.1 2001/05/14 14:50:26 jlam Exp $
+# $NetBSD: pgsql.sh,v 1.2 2001/05/14 20:38:56 jlam Exp $
 #
 # PostgreSQL database rc.d control script
 #
@@ -8,17 +8,33 @@
 # REQUIRE: DAEMON
 # KEYWORD: shutdown
 
+PGHOME=@PGHOME@
+
 name="pgsql"
 rcvar=$name
 pgsql_user="@PGUSER@"
 command="@PREFIX@/bin/pg_ctl"
-command_args="-s -D @PGHOME@/data -l @PGHOME@/errlog"
+command_args="-s -D ${PGHOME}/data -l ${PGHOME}/errlog"
 
 # pgsql_flags contains options for the PostgreSQL postmaster.
 # See postmaster(1) for possible options.
 #
 #pgsql_flags="-i"	# allows TCP/IP connections
 #pgsql_flags="-i -l"	# enables SSL connections (TCP/IP required)
+
+# set defaults
+if [ -r /etc/rc.conf ]
+then
+	. /etc/rc.conf
+else
+	eval ${rcvar}=YES
+fi
+
+# $flags from environment overrides $pgsql_flags
+if [ -n ${flags} ]
+then
+	pgsql_flags="${flags}"
+fi
 
 pgsql_doit()
 {
@@ -29,12 +45,32 @@ pgsql_doit()
 	fi
 
 	case ${action} in
-	start)		echo "Starting ${name}." ;;
+	start)		pgsql_start_precmd; echo "Starting ${name}." ;;
 	stop)		echo "Stopping ${name}." ;;
 	restart)	echo "Restarting ${name}." ;;
 	esac
 
 	@SU@ -m ${pgsql_user} -c "${command} ${command_args} ${action}"
+}
+
+pgsql_start_precmd()
+{
+	if [ ! -f ${PGHOME}/data/base/1/PG_VERSION ]
+	then
+		$0 forceinitdb
+	fi
+}
+
+pgsql_initdb()
+{
+	if [ -f ${PGHOME}/data/base/1/PG_VERSION ]
+	then
+		echo "The PostgreSQL template databases have already been initialized."
+		echo "Skipping database initialization."
+	else
+		echo "Initializing PostgreSQL databases."
+		@SU@ -m ${pgsql_user} -c "@PREFIX@/bin/initdb -D ${PGHOME}/data $flags"
+	fi
 }
 
 checkyesno()
@@ -50,25 +86,28 @@ checkyesno()
 	esac
 }
 
-if [ -r /etc/rc.conf ]
-then
-	. /etc/rc.conf
-else
+# force commands are always executed
+cmd=${1:-start}
+case ${cmd} in
+force*)
+	cmd=${cmd#force}
 	eval ${rcvar}=YES
-fi
+	;;
+esac
 
 if checkyesno ${rcvar}
 then
-	cmd=${1:-start}
-
 	if [ -x ${command} ]
 	then
 		case ${cmd} in
+		initdb)
+			${rcvar}_${cmd}
+			;;
 		restart|start|stop|status)
 			${rcvar}_doit ${cmd}
 			;;
 		*)
-			echo 1>&2 "Usage: $0 [restart|start|stop|status]"
+			echo 1>&2 "Usage: $0 [initdb|restart|start|stop|status]"
 			exit 1
 			;;
 		esac
