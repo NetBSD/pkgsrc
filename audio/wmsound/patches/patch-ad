@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.1.1.1 1999/04/06 17:18:01 tron Exp $
+$NetBSD: patch-ad,v 1.2 1999/04/26 23:30:00 tron Exp $
 
 --- utils/Imakefile.orig	Thu Mar 18 00:15:11 1999
 +++ utils/Imakefile	Sun Mar 21 02:22:07 1999
@@ -15,7 +15,7 @@ $NetBSD: patch-ad,v 1.1.1.1 1999/04/06 17:18:01 tron Exp $
 +  OSSLIB =
 +#endif
 +
-+WMSOUNDLIB = -L${LOCALBASE}/lib -lPropList -L../lib -lwmsnd $(ESDLIB) $(OSSLIB)
++WMSOUNDLIB = -L${LOCALBASE}/lib -Wl,-R${LOCALBASE}/lib -lPropList -L../lib -lwmsnd $(ESDLIB) $(OSSLIB)
 +STD_INCLUDES = -I${LOCALBASE}/include -I${X11BASE}/include
  DEPLIBS = $(DEPXLIB) 
  
