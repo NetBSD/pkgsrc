@@ -1,0 +1,72 @@
+$NetBSD: patch-ab,v 1.1.1.1 1999/12/24 03:23:50 itohy Exp $
+
+--- skkconfig.c.orig	Thu Nov 13 22:42:43 1997
++++ skkconfig.c	Fri Dec 24 00:51:24 1999
+@@ -988,12 +988,43 @@
+ void initSkkinputDousaketteiVariables( void )
+ {
+   struct servent *servent ;
++#ifdef SKK_CONF		/* use skk.conf */
++  FILE *conffp;
++  char line[128];
++  static char hostbuf[120];
++  char *confhost = NULL;
++  int confport = 0;
++
++  if ((conffp = fopen(SKK_CONF, "r")) != NULL) {
++    char *p, *data;
++
++    while (fgets(line, sizeof line, conffp) != NULL) {
++      if ((p = strchr(line, '#')) != NULL)
++	*p = '\0';
++      if ((p = strtok(line, ": \t\n")) == NULL)
++	continue;
++      if ((data = strtok((char *) NULL, " \t\n")) == NULL)
++	continue;
++      if (!strcmp(p, "skkserv_host")) {
++	  strcpy(hostbuf, data);
++	  confhost = hostbuf;
++      } else if (!strcmp(p, "skkserv_port")) {
++	  confport = atoi(data);
++      }
++    }
++  }
++#endif
+ 
+   /* 局所辞書の所在を知らないとしておく。*/
+   skkinput_local_jisyo_name  = DEFAULT_SKKLJISYO ;
+   skkinput_backup_jisyo_name = DEFAULT_SKKBJISYO ;
+   skkinput_record_name       = DEFAULT_SKKRECORD ;
+   skk_local_jisyo_name	     = DEFAULT_SKKLOCALJISYO ;
++#ifdef SKK_CONF
++  if (confport)
++    skkserv_portnum          = confport;
++  else {
++#endif
+   /* "/etc/services" からポート番号を得ておく。*/
+   servent = getservbyname( SKKSERV_SERVICE_NAME, SKKSERV_SERVICE_PROTO ) ;
+   if( servent == NULL ){
+@@ -1001,16 +1032,22 @@
+     skkserv_portnum          = atoi( DEFAULT_SKKPORT ) ;
+   } else {
+     /* /etc/services に設定があった…。*/
+-    skkserv_portnum          = htons( servent->s_port ) ;
++    skkserv_portnum          = ntohs( servent->s_port ) ;
+ #if defined(DEBUG)
+     fprintf
+       ( stderr, "getservbyname: \"%s\", %d\n",
+ 	servent->s_name, skkserv_portnum ) ;
+ #endif
+   }
++#ifdef SKK_CONF
++  }
++#endif
+   /* 環境変数 SKKSERV が設定されていれば、それを DEFAULT の skkserv *
+    * host とする。*/
+   if( ( skkserv_host = getenv( "SKKSERVER" ) ) == NULL )
++#ifdef SKK_CONF
++    if ((skkserv_host = confhost) == NULL)
++#endif
+     skkserv_host        = DEFAULT_SKKSERVER ;
+ 
+   /* デフォルトのキーマップを作成する。*/

@@ -1,0 +1,21 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/12/24 03:23:50 itohy Exp $
+
+--- Imakefile.orig	Tue Mar  3 21:59:39 1998
++++ Imakefile	Tue Dec 21 01:29:48 1999
+@@ -81,7 +81,8 @@
+ OBJS = $(COMMONOBJS) $(KINPUTOBJS) $(XIMPOBJS) $(IMOBJS)
+ 
+ #ifdef SkkServer
+-SKKSERVER_DEFS = -DDEFAULT_SKKSERVER=\"SkkServer\"
++SKKSERVER_DEFS = -DDEFAULT_SKKSERVER=\"SkkServer\"	\
++	-DSKK_CONF=\"$(EXECBASE)/etc/skk.conf\"
+ #endif
+ 
+ #ifdef SkkPort
+@@ -95,5 +96,5 @@
+ DEFINES = $(SKKSERVER_DEFS) $(SKKPORT_DEFS) $(SKK_DEBUGFLAGS) \
+           $(SKKFONT_DEFS) $(SKK_KINPUTDEFS) $(SKK_XIMPDEFS) $(SKK_IMDEFS)
+ 
+-ComplexProgramTarget(skkinput)
++ComplexProgramTargetNoMan(skkinput)
+ InstallAppDefaults(Skkinput)
