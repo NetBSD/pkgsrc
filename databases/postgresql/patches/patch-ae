@@ -1,6 +1,6 @@
-diff -rc2 postgresql-6.4.2-orig/src/config.sub postgresql-6.4.2/src/config.sub
-*** postgresql-6.4.2-orig/src/config.sub	Tue Mar 25 02:16:33 1997
---- postgresql-6.4.2/src/config.sub	Thu Mar  4 21:46:43 1999
+diff -rc2 config.sub config.sub
+*** config.sub	Tue Mar 25 02:16:33 1997
+--- config.sub	Thu Mar  4 21:46:43 1999
 ***************
 *** 150,154 ****
   	# Recognize the basic CPU types without company name.
@@ -27,9 +27,9 @@ diff -rc2 postgresql-6.4.2-orig/src/config.sub postgresql-6.4.2/src/config.sub
 ! 	      | mips64el-* | mips64orion-* | mips64orionel-* | f301-* | arm32-*)
   		;;
   	# Recognize the various machine names and aliases which stand
-diff -rc2 postgresql-6.4.2-orig/src/configure postgresql-6.4.2/src/configure
-*** postgresql-6.4.2-orig/src/configure	Sun Dec 13 15:08:20 1998
---- postgresql-6.4.2/src/configure	Thu Mar  4 21:52:02 1999
+diff -rc2 configure configure
+*** configure	Sun Dec 13 15:08:20 1998
+--- configure	Thu Mar  4 21:52:02 1999
 ***************
 *** 741,745 ****
   rm -f conftest.sh
@@ -43,9 +43,9 @@ diff -rc2 postgresql-6.4.2-orig/src/configure postgresql-6.4.2/src/configure
 ! . ./conftest.sh
   rm -f conftest.sh
   
-diff -rc2 postgresql-6.4.2-orig/src/configure.in postgresql-6.4.2/src/configure.in
-*** postgresql-6.4.2-orig/src/configure.in	Sun Dec 13 15:08:20 1998
---- postgresql-6.4.2/src/configure.in	Thu Mar  4 21:54:10 1999
+diff -rc2 configure.in configure.in
+*** configure.in	Sun Dec 13 15:08:20 1998
+--- configure.in	Thu Mar  4 21:54:10 1999
 ***************
 *** 148,152 ****
   rm -f conftest.sh
