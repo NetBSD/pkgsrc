@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1999/09/30 15:20:37 bouyer Exp $
+# $NetBSD: Makefile,v 1.4 1999/10/04 17:35:51 bouyer Exp $
 # FreeBSD Id: ports/security/crack/Makefile,v 1.11 1999/09/04 19:24:50 obrien Exp
 
 DISTNAME=	crack5.0
@@ -22,27 +22,33 @@ pre-build:
 		${ECHO_MSG} "You may want to install the dict distribution into /usr/share/dict" ; \
 		${ECHO_MSG} "to increase the size of the cracking dictionary." ; \
 	fi)
+	@sed 's|@@PREFIX@@|${PREFIX}|g' < ${WRKSRC}/Crack > ${WRKSRC}/Crack.new
+	@rm -f ${WRKSRC}/Crack && mv ${WRKSRC}/Crack.new ${WRKSRC}/Crack
+	@${CHMOD} a+rx ${WRKSRC}/Crack
 
 do-build:
 	(cd ${WRKSRC} ; ./Crack -makeonly)
-	(cd ${WRKSRC} ; ./Crack -makedict)
 
 do-install:
-	@${MKDIR} ${PREFIX}/crack
-	@${CHMOD} go-rwx ${PREFIX}/crack
-	@${MKDIR} ${PREFIX}/crack/conf ${PREFIX}/crack/dict ${PREFIX}/crack/doc
-	@${MKDIR} ${PREFIX}/crack/extra ${PREFIX}/crack/run
-	@${MKDIR} ${PREFIX}/crack/scripts
-	@${MKDIR} ${PREFIX}/crack/dict/1 ${PREFIX}/crack/dict/2 \
-		${PREFIX}/crack/dict/3
-	@${MKDIR} ${PREFIX}/crack/run/bin
-	@${MKDIR} ${PREFIX}/crack/run/bin/netbsd-1-i386_
+	@${MKDIR} ${PREFIX}/libexec/crack
+	@${CHMOD} go-rwx ${PREFIX}/libexec/crack
+	@${MKDIR} ${PREFIX}/share/crack/conf 
+	@${CHMOD} go-rwx ${PREFIX}/share/crack
+	@${MKDIR} ${PREFIX}/share/crack/dict
+	@${MKDIR} ${PREFIX}/share/doc/crack
+	@${MKDIR} ${PREFIX}/share/crack/extra ${PREFIX}/share/crack/run
+	@${MKDIR} ${PREFIX}/share/crack/scripts
+	@${MKDIR} ${PREFIX}/share/crack/dict/1 ${PREFIX}/share/crack/dict/2 \
+		${PREFIX}/share/crack/dict/3
+	@${MKDIR} ${PREFIX}/share/crack/run
 	@${MKDIR} ${PREFIX}/crack/run/dict
-	${INSTALL_SCRIPT} ${WRKSRC}/Crack ${PREFIX}/crack/
-	${INSTALL_SCRIPT} ${WRKSRC}/Reporter ${PREFIX}/crack/
-	${INSTALL_DATA} ${WRKSRC}/LICENCE ${PREFIX}/crack/
-	${INSTALL_DATA} ${WRKSRC}/manual.html ${PREFIX}/crack/
-	${INSTALL_DATA} ${WRKSRC}/manual.txt ${PREFIX}/crack/
+	${INSTALL_SCRIPT} ${WRKSRC}/Crack ${PREFIX}/sbin
+	@sed 's|@@PREFIX@@|${PREFIX}|g' < ${WRKSRC}/Reporter > \
+	    ${PREFIX}/sbin/Reporter
+	@${CHMOD} 700 ${PREFIX}/sbin/Crack ${PREFIX}/sbin/Reporter
+	${INSTALL_DATA} ${WRKSRC}/LICENCE ${PREFIX}/share/doc/crack/
+	${INSTALL_DATA} ${WRKSRC}/manual.html ${PREFIX}/share/doc/crack/
+	${INSTALL_DATA} ${WRKSRC}/manual.txt ${PREFIX}/share/doc/crack/
 	@for i in \
 		conf/dictrun.conf \
 		conf/rules.weird \
@@ -130,23 +136,27 @@ do-install:
 		dict/3/words.italian.dwg \
 		dict/3/surnames.finnish.dwg \
 		dict/3/chinese.dwg \
-		doc/credits,v5.0.txt \
-		doc/faq.txt \
-		doc/fips181.txt \
-		doc/dicts,v5.0.txt \
-		doc/appendix,v4.1.txt \
-		doc/usenet-article.txt \
-		doc/threading.txt \
-		doc/gui.txt \
-		doc/humour.txt \
-		run/dict/2.dwg.gz \
-		run/dict/1.dwg.gz \
-		run/dict/3.dwg.gz \
 		extra/Makefile \
 		extra/brute.c ;\
 	do \
-		echo ${INSTALL_DATA} ${WRKSRC}/$$i ${PREFIX}/crack/$$i ;\
-		${INSTALL_DATA} ${WRKSRC}/$$i ${PREFIX}/crack/$$i ;\
+		echo ${INSTALL_DATA} ${WRKSRC}/$$i ${PREFIX}/share/crack/$$i ;\
+		${INSTALL_DATA} ${WRKSRC}/$$i ${PREFIX}/share/crack/$$i ;\
+	done
+	@for i in \
+		credits,v5.0.txt \
+		faq.txt \
+		fips181.txt \
+		dicts,v5.0.txt \
+		appendix,v4.1.txt \
+		usenet-article.txt \
+		threading.txt \
+		gui.txt \
+		humour.txt; \
+	do \
+		echo ${INSTALL_DATA} ${WRKSRC}/doc/$$i \
+		    ${PREFIX}/share/doc/crack/$$i ;\
+		${INSTALL_DATA} ${WRKSRC}/doc/$$i \
+		    ${PREFIX}/share/doc/crack/$$i ;\
 	done
 	@for i in \
 		scripts/smartcat \
@@ -178,18 +188,24 @@ do-install:
 		extra/b64decode \
 		extra/Dictstats.pl; \
 	do \
-		echo ${INSTALL_SCRIPT} ${WRKSRC}/$$i ${PREFIX}/crack/$$i ;\
-		${INSTALL_SCRIPT} ${WRKSRC}/$$i ${PREFIX}/crack/$$i ;\
+		echo ${INSTALL_SCRIPT} ${WRKSRC}/$$i \
+		    ${PREFIX}/share/crack/$$i ;\
+		${INSTALL_SCRIPT} ${WRKSRC}/$$i ${PREFIX}/share/crack/$$i ;\
 	done
 	@for i in \
-		run/bin/netbsd-1-i386_/dawg \
-		run/bin/netbsd-1-i386_/xdawg \
-		run/bin/netbsd-1-i386_/cracker \
-		run/bin/netbsd-1-i386_/dictfilt \
-		run/bin/netbsd-1-i386_/kickdict; \
+		dawg \
+		xdawg \
+		cracker \
+		dictfilt \
+		kickdict; \
 	do \
-		echo ${INSTALL_PROGRAM} ${WRKSRC}/$$i ${PREFIX}/crack/$$i ;\
-		${INSTALL_PROGRAM} ${WRKSRC}/$$i ${PREFIX}/crack/$$i ;\
+		echo ${INSTALL_PROGRAM} ${WRKSRC}/run/bin/$$i \
+		    ${PREFIX}/libexec/crack/$$i ;\
+		${INSTALL_PROGRAM} ${WRKSRC}/run/bin/$$i \
+		    ${PREFIX}/libexec/crack/$$i ;\
 	done
+
+post-install:
+	(${PREFIX}/sbin/Crack -makedict)
 
 .include "../../mk/bsd.pkg.mk"
