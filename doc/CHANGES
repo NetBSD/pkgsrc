@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4477 2004/01/16 13:28:27 abs Exp $
+$NetBSD: CHANGES,v 1.4478 2004/01/17 00:06:28 taya Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -302,4 +302,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated distcc to 2.12.1 [xtraeme 2004-01-16]
 	Updated libmpeg2 to 0.4.0 [xtraeme 2004-01-16]
 	Updated mserv to 0.35nb6 [abs 2004-01-16]
+	Updated mozilla to 1.6 [taya 2004-01-17]
 
