@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2004/04/26 15:42:44 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.9 2004/05/02 17:00:14 xtraeme Exp $
 bin/mbchk
 man/man1/mbchk.1
 man/man8/grub-install.8
@@ -22,6 +22,7 @@ share/grub/${MACHINE_ARCH}-/reiserfs_stage1_5
 share/grub/${MACHINE_ARCH}-/stage1
 share/grub/${MACHINE_ARCH}-/stage2
 ${ISO9660}share/grub/${MACHINE_ARCH}-/stage2_eltorito
+${UFS2}share/grub/${MACHINE_ARCH}-/ufs2_stage1_5
 share/grub/${MACHINE_ARCH}-/vstafs_stage1_5
 share/grub/${MACHINE_ARCH}-/xfs_stage1_5
 @dirrm share/grub/${MACHINE_ARCH}-
