@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.4 2001/11/17 15:28:49 tron Exp $
+$NetBSD: patch-ab,v 1.5 2002/01/29 07:40:11 martti Exp $
 
---- include/libxml/parser.h.orig	Thu Nov  1 04:35:06 2001
-+++ include/libxml/parser.h	Sat Nov 17 11:09:51 2001
-@@ -573,7 +573,5 @@
+--- include/libxml/parser.h.orig	Tue Jan  1 04:36:27 2002
++++ include/libxml/parser.h	Mon Jan 28 15:45:26 2002
+@@ -575,7 +575,5 @@
  }
  #endif
  
