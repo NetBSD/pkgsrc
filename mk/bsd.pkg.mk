@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1010 2002/07/22 02:33:55 jschauma Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1010.2.1 2002/07/22 16:25:50 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -159,7 +159,13 @@ XMKMF_CMD?=		${X11PREFIX}/bin/xmkmf
 BUILDLINK_DIR?=		${LOCALBASE}
 BUILDLINK_X11_DIR?=	${X11BASE}
 
-.if defined(USE_IMAKE) || defined(USE_X11BASE)
+.if ${PKG_INSTALLATION_TYPE} == "pkgviews"
+.  if defined(USE_IMAKE) && make(real-configure)
+PREFIX=			${LOCALBASE}
+.  else
+PREFIX=			${LOCALBASE}/packages/${PKGNAME}
+.  endif # USE_IMAKE
+.elif defined(USE_IMAKE) || defined(USE_X11BASE)
 .  if exists(${LOCALBASE}/lib/X11/config/xpkgwedge.def) || \
       exists(${X11BASE}/lib/X11/config/xpkgwedge.def)
 BUILD_DEPENDS+=		xpkgwedge>=1.5:../../pkgtools/xpkgwedge
@@ -171,6 +177,17 @@ NO_MTREE=		yes
 .else
 PREFIX=			${LOCALBASE}
 .endif
+
+# set up the prefix for info files
+.if ${PKG_INSTALLATION_TYPE} == "pkgviews"
+_INFO_PREFIX=		${LOCALBASE}
+.else
+_INFO_PREFIX=		${PREFIX}
+.endif
+
+PLIST_TYPE?=		static
+
+PLIST_IGNORE_FILES+=	info/dir
 
 # We need to make sure the buildlink-x11 package is not installed since it
 # currently breaks builds that use imake.
@@ -366,6 +383,11 @@ LDFLAGS+=		-L${LOCALBASE}/lib
 .endif
 MAKE_ENV+=		LDFLAGS="${LDFLAGS}"
 CONFIGURE_ENV+=		LDFLAGS="${LDFLAGS}" M4="${M4}" YACC="${YACC}"
+
+.if ${PKG_INSTALLATION_TYPE} == "pkgviews"
+DEFAULT_PKGVIEW?=	""
+PKGVIEWS+=		${DEFAULT_PKGVIEW}
+.endif
 
 MAKE_FLAGS?=
 MAKEFILE?=		Makefile
@@ -620,8 +642,30 @@ uptodate-digest:
 		esac							\
 	fi
 
+uptodate-xpkgwedge: uptodate-digest
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	if [ ! -f ${LOCALBASE}/lib/X11/config/xpkgwedge.def ]; then	\
+		case ${PKGNAME} in					\
+		digest-*|xpkgwedge-*)					\
+			;;						\
+		*)							\
+			{ cd ${_PKGSRCDIR}/pkgtools/xpkgwedge;		\
+			${MAKE} clean;					\
+			if [ -f ${LOCALBASE}/lib/X11/config/xpkgwedge.def ]; then \
+				${MAKE} ${MAKEFLAGS} deinstall;		\
+			fi;						\
+			${MAKE} ${MAKEFLAGS} ${DEPENDS_TARGET};		\
+			${MAKE} ${MAKEFLAGS} clean; } 			\
+			;;						\
+		esac							\
+	fi
+
 # Latest version of pkgtools required for this file.
+.if ${PKG_INSTALLATION_TYPE} == "pkgviews"
 PKGTOOLS_REQD=		20020402
+.else
+PKGTOOLS_REQD=		20020402
+.endif
 
 # Check that we are using up-to-date pkg_* tools with this file.
 .if defined(ZOULARIS_VERSION)
@@ -688,6 +732,10 @@ PKG_ARGS_COMMON+=	-m ${MTREE_FILE}
 PKG_ARGS_INSTALL=	-p ${PREFIX} ${PKG_ARGS_COMMON}
 PKG_ARGS_BINPKG=	-p ${PREFIX:S/^${DESTDIR}//} -L ${PREFIX} ${PKG_ARGS_COMMON}
 .endif # !PKG_ARGS_COMMON
+
+.if ${PKG_INSTALLATION_TYPE} == "pkgviews"
+PKG_ARGS_INSTALL+=	-U
+.endif
 
 PKG_SUFX?=		.tgz
 #PKG_SUFX?=		.tbz		# bzip2(1) pkgs
@@ -2045,7 +2093,7 @@ delete-package:
 .endif
 
 real-su-install: ${MESSAGE}
-.if !defined(NO_PKG_REGISTER) && !defined(FORCE_PKG_REGISTER)
+.if !defined(NO_PKG_REGISTER) && !defined(FORCE_PKG_REGISTER) && ${PKG_INSTALLATION_TYPE} == "overwrite"
 .  if defined(CONFLICTS)
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	${RM} -f ${WRKDIR}/.CONFLICTS
@@ -2074,11 +2122,12 @@ real-su-install: ${MESSAGE}
 		${ECHO_MSG} "*** this package again by \`\`${MAKE} reinstall'' to upgrade it properly,"; \
 		${ECHO_MSG} "*** or use \`\`${MAKE} update'' to upgrade it and all of its dependencies."; \
 		${ECHO_MSG} "*** If you really wish to overwrite the old package of $$found"; \
-		${ECHO_MSG} "*** without deleting it first, set the variable \"FORCE_PKG_REGISTER\""; \
+		${ECHO_MSG} "*** without deleting it first, set the variable \"FORCE_PKG_REGISTER\","; \
+		${ECHO_MSG} "*** or set PKG_INSTALLATION_TYPE to \"pkgviews\","; \
 		${ECHO_MSG} "*** in your environment or the \"${MAKE} install\" command line."; \
 		exit 1;							\
 	fi
-.endif # !NO_PKG_REGISTER && !NO_FORCE_REGISTER
+.endif # !NO_PKG_REGISTER && !NO_FORCE_REGISTER && overwrite
 	${_PKG_SILENT}${_PKG_DEBUG}if [ `${SH} -c umask` -ne ${DEF_UMASK} ]; then \
 		${ECHO_MSG} "${_PKGSRC_IN}>  Warning: your umask is \"`${SH} -c umask`"\".; \
 		${ECHO_MSG} "If this is not desired, set it to an appropriate value (${DEF_UMASK})"; \
@@ -2100,6 +2149,10 @@ real-su-install: ${MESSAGE}
 		${ECHO_MSG} "Become root and try again to ensure correct permissions."; \
 	fi
 .endif # !NO_MTREE
+.  if ${PKG_INSTALLATION_TYPE} == "pkgviews" && !exists(${PREFIX})
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${MKDIR} ${PREFIX}
+.  endif # !exists(${PREFIX})
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} pre-install-script
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} pre-install
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} do-install
@@ -2110,9 +2163,6 @@ real-su-install: ${MESSAGE}
 	${INSTALL_INFO} --remove --info-dir=${PREFIX}/info ${PREFIX}/info/${f}; \
 	${INSTALL_INFO} --info-dir=${PREFIX}/info ${PREFIX}/info/${f}
 .endfor
-	@# PLIST must be generated at this late point (instead of
-	@# depending on it somewhere earlier), as the
-	@# pre/do/post-install aren't run then yet:
 	@${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} ${PLIST}
 	${_PKG_SILENT}${_PKG_DEBUG}newmanpages=`${EGREP} -h		\
 		'^([^@/]*/)*man/([^/]*/)?(man[1-9ln]/.*\.[1-9ln]|cat[1-9ln]/.*\.0)(\.gz)?$$' \
@@ -2156,8 +2206,10 @@ real-su-install: ${MESSAGE}
 		done;							\
 	fi
 .if ${_DO_SHLIB_CHECKS} == "yes"
+.  if ${PKG_INSTALLATION_TYPE} == "overwrite"
 	${_PKG_SILENT}${_PKG_DEBUG}\
 	${MAKE} ${MAKEFLAGS} do-shlib-handling SHLIB_PLIST_MODE=0
+.  endif # overwrite
 .endif
 .ifdef MESSAGE
 	@${ECHO_MSG} "${_PKGSRC_IN}> Please note the following:"
@@ -2166,11 +2218,11 @@ real-su-install: ${MESSAGE}
 	@${ECHO_MSG} ""
 .endif
 .if !defined(NO_PKG_REGISTER)
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} fake-pkg
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} _REAL_PKG_DBDIR=${PKG_DBDIR} PKG_DBDIR=${LOCALBASE}/packages fake-pkg
 .endif # !NO_PKG_REGISTER
 	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${INSTALL_COOKIE}
 .if defined(PKG_DEVELOPER) && (${CHECK_SHLIBS} == "YES")
-	@${MAKE} ${MAKEFLAGS} check-shlibs
+	@${MAKE} ${MAKEFLAGS} _REAL_PKG_DBDIR=${PKG_DBDIR} PKG_DBDIR=${LOCALBASE}/packages check-shlibs
 .endif
 
 
@@ -2464,6 +2516,12 @@ release-configure-lock:
 release-build-lock:
 	${_RELEASE_LOCK}
 
+.if ${PKG_INSTALLATION_TYPE} == "pkgviews"
+_UPTODATE_XPKGWEDGE=	uptodate-xpkgwedge
+.else
+_UPTODATE_XPKGWEDGE=
+.endif
+
 ################################################################
 # Skeleton targets start here
 # 
@@ -2487,7 +2545,7 @@ patch: extract acquire-patch-lock ${PATCH_COOKIE} release-patch-lock
 .endif
 
 .if !target(configure)
-configure: patch acquire-configure-lock ${CONFIGURE_COOKIE} release-configure-lock
+configure: ${_UPTODATE_XPKGWEDGE} patch acquire-configure-lock ${CONFIGURE_COOKIE} release-configure-lock
 .endif
 
 .if !target(build)
@@ -2699,22 +2757,32 @@ real-su-deinstall-flags+=	-r
 real-su-deinstall-flags+=	-v
 .  endif
 
+.if ${PKG_INSTALLATION_TYPE} == "pkgviews"
+_DELETE_CMD=	${SETENV} PKG_DBDIR=${LOCALBASE}/packages ${PKG_TOOLS_BIN}/pkg_delete
+_INFO_CMD=	${SETENV} PKG_DBDIR=${LOCALBASE}/packages ${PKG_TOOLS_BIN}/pkg_info
+.else
+_DELETE_CMD=	${PKG_DELETE}
+_INFO_CMD=	${PKG_INFO}
+.endif
+
 real-su-deinstall:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	found="`${PKG_INFO} -e \"${PKGWILDCARD}\" || ${TRUE}`";		\
-	if [ "$$found" != "" ]; then					\
-		${ECHO} Running ${PKG_DELETE} ${real-su-deinstall-flags} $$found ; \
-		${PKG_DELETE} ${real-su-deinstall-flags} $$found || ${TRUE} ; \
-	fi
+	found="`${_INFO_CMD} -e \"${PKGWILDCARD}\" || ${TRUE}`";	\
+	case "$$found" in						\
+	"")	;;							\
+	*)	${ECHO} Running ${_DELETE_CMD} ${real-su-deinstall-flags} $$found; \
+		${_DELETE_CMD} ${real-su-deinstall-flags} $$found || ${TRUE};; \
+	esac
 .  if (${DEINSTALLDEPENDS} != "NO") && (${DEINSTALLDEPENDS} != "ALL")
 	@${SHCOMMENT} Also remove BUILD_DEPENDS:
 .    for pkg in ${BUILD_DEPENDS:C/:.*$//}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	found="`${PKG_INFO} -e \"${pkg}\" || ${TRUE}`";			\
-	if [ "$$found" != "" ]; then					\
-		${ECHO} Running ${PKG_DELETE} $$found;			\
-		${PKG_DELETE} ${real-su-deinstall-flags} $$found || ${TRUE}; \
-	fi
+	found="`${_INFO_CMD} -e \"${pkg}\" || ${TRUE}`";		\
+	case "$$found" in						\
+	"")	;;							\
+	*)	${ECHO} Running ${_DELETE_CMD} ${real-su-deinstall-flags} $$found; \
+		${_DELETE_CMD} ${real-su-deinstall-flags} $$found || ${TRUE};; \
+	esac
 .    endfor
 .  endif # DEINSTALLDEPENDS
 	@${RM} -f ${INSTALL_COOKIE} ${PACKAGE_COOKIE}
@@ -3382,6 +3450,23 @@ package-noinstall:
 # Dependency checking
 ################################################################
 
+.if ${PKG_INSTALLATION_TYPE} == "pkgviews" && defined(DEPENDS) && \
+	exists(${LOCALBASE}/packages) && \
+	(make(real-configure) || make(real-build))
+.  for dep in ${DEPENDS}
+_depname!=	${SETENV} PKG_DBDIR=${PKG_DBDIR} ${PKG_TOOLS_BIN}/pkg_info -e "${dep:C|:.*||}"  | ${TR} ' ' '\012' | ${SORT} -r | ${HEAD} -n 1
+.    if ${_depname} != ""
+.      if exists(${LOCALBASE}/packages/${_depname}/include)
+CPPFLAGS+=	-I${LOCALBASE}/packages/${_depname}/include
+.      endif
+.      if exists(${LOCALBASE}/packages/${_depname}/include)
+LDFLAGS+=	-Wl,-R${LOCALBASE}/packages/${_depname}/lib
+LDFLAGS+=	-L${LOCALBASE}/packages/${_depname}/lib
+.      endif
+.    endif
+.  endfor
+.endif
+
 .if !target(install-depends)
 # Tells whether to halt execution if the object formats differ
 FATAL_OBJECT_FMT_SKEW?= yes
@@ -3396,7 +3481,7 @@ install-depends: uptodate-pkgtools
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	pkg="${dep:C/:.*//}";						\
 	dir="${dep:C/[^:]*://:C/:.*$//}";				\
-	found=`${PKG_INFO} -e "$$pkg" || ${TRUE}`;			\
+	found=`${SETENV} PKG_DBDIR=${PKG_DBDIR} ${PKG_TOOLS_BIN}/pkg_info -e "$$pkg" || ${TRUE}`; \
 	if [ "X$$REBUILD_DOWNLEVEL_DEPENDS" != "X" ]; then		\
 		pkgname=`cd $$dir ; ${MAKE} ${MAKEFLAGS} show-var VARNAME=PKGNAME`; \
 		if [ "X$$found" != "X" -a "X$$found" != "X$${pkgname}" ]; then \
@@ -3737,6 +3822,12 @@ print-pkg-size-depends:
 ###  - make print-PLIST | brain >PLIST
 ###
 
+.if ${PKG_INSTALLATION_TYPE} == "pkgviews"
+_PLIST_FIND_CMD=	${FIND} ${PREFIX}/[A-Za-z0-9]*
+.else
+_PLIST_FIND_CMD=	${FIND} ${PREFIX}/. -newer ${EXTRACT_COOKIE}
+.endif
+
 # Common (system) directories not to generate @dirrm statements for
 # Reads MTREE_FILE and extracts a list of sed commands that will
 # sort out which directories NOT to include into the PLIST @dirrm list
@@ -3763,6 +3854,16 @@ COMMON_DIRS!= 	${AWK} 'BEGIN  { 					\
 			} 						\
 		} 							\
 	' <${MTREE_FILE}
+_SHLIB_TYPE!=	${MAKE} ${MAKEFLAGS} show-shlib-type
+_SED_PLIST_SUBSTS=							\
+	-e  's@${OPSYS}@\$${OPSYS}@' 					\
+	-e  's@${OS_VERSION:S/./\./}@\$${OS_VERSION}@'			\
+	-e  's@${MACHINE_ARCH}@\$${MACHINE_ARCH}@' 			\
+	-e  's@${MACHINE_GNU_ARCH}@\$${MACHINE_GNU_ARCH}@'		\
+	-e  's@${MACHINE_GNU_PLATFORM}@\$${MACHINE_GNU_PLATFORM}@'	\
+	-e  's@${LOWER_VENDOR}@\$${LOWER_VENDOR}@' 			\
+	-e  's@${LOWER_OPSYS}@\$${LOWER_OPSYS}@' 			\
+	-e  's@${PKGNAME}@\$${PKGNAME}@'
 .endif
 
 
@@ -3773,11 +3874,8 @@ COMMON_DIRS!= 	${AWK} 'BEGIN  { 					\
 
 .if !target(print-PLIST)
 print-PLIST:
-	${_PKG_SILENT}${_PKG_DEBUG}\
-	${ECHO} '@comment $$'NetBSD'$$'
-	${_PKG_SILENT}${_PKG_DEBUG}\
-	shlib_type=`${MAKE} ${MAKEFLAGS} show-shlib-type`;		\
-	case $$shlib_type in 						\
+	@${ECHO} '@comment $$'NetBSD'$$';				\
+	case "${_SHLIB_TYPE}" in 					\
 	"a.out")	genlinks=1 ;;					\
 	*)		genlinks=0 ;;					\
 	esac;								\
@@ -3826,8 +3924,8 @@ print-PLIST:
 		    print $$0;						\
 		  }							\
 		}'
-	${_PKG_SILENT}${_PKG_DEBUG}\
-	for i in `${FIND} ${PREFIX}/. -newer ${EXTRACT_COOKIE} -type d	\
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	for i in `${_PLIST_FIND_CMD} -type d				\
 			| ${SED}					\
 				-e s@${PREFIX}/./@@			\
 				-e '/^${PREFIX:S/\//\\\//g}\/.$$/d'	\
@@ -3853,6 +3951,10 @@ print-PLIST:
 		-e  's@${PKGLOCALEDIR}/locale@\$${PKGLOCALEDIR}/locale@'
 .endif # target(print-PLIST)
 
+# By default, all packages attempt to link into the views
+.if ${PKG_INSTALLATION_TYPE} == "pkgviews"
+BUILD_VIEWS?=	yes
+.endif
 
 # Fake installation of package so that user can pkg_delete it later.
 # Also, make sure that an installed package is recognized correctly in
@@ -3871,7 +3973,7 @@ fake-pkg: ${PLIST} ${DESCR} ${MESSAGE}
 		${MKDIR} ${PKG_DBDIR};					\
 	fi
 .  if defined(FORCE_PKG_REGISTER)
-	${_PKG_SILENT}${_PKG_DEBUG}${PKG_DELETE} -O ${PKGNAME}
+	${_PKG_SILENT}${_PKG_DEBUG}${_DELETE_CMD} -O ${PKGNAME}
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -rf ${PKG_DBDIR}/${PKGNAME}
 .  endif
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${BUILD_VERSION_FILE} ${BUILD_INFO_FILE}
@@ -3920,7 +4022,14 @@ fake-pkg: ${PLIST} ${DESCR} ${MESSAGE}
 	${ECHO} $$size_this >${SIZE_PKG_FILE};				\
 	${ECHO} $$size_this $$size_depends + p | ${DC} >${SIZE_ALL_FILE}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	if [ ! -d ${PKG_DBDIR}/${PKGNAME} ]; then			\
+	doit=yes;							\
+	case ${PKG_INSTALLATION_TYPE} in				\
+	overwrite)	if [ -d ${PKG_DBDIR}/${PKGNAME} ]; then		\
+				doit=no;				\
+			fi ;;						\
+	esac;								\
+	case $$doit in							\
+	yes)								\
 		${ECHO_MSG} "${_PKGSRC_IN}> Registering installation for ${PKGNAME}"; \
 		${MKDIR} ${PKG_DBDIR}/${PKGNAME};			\
 		${PKG_CREATE} ${PKG_ARGS_INSTALL} -O ${PKGFILE} > ${PKG_DBDIR}/${PKGNAME}/+CONTENTS; \
@@ -3974,8 +4083,8 @@ fake-pkg: ${PLIST} ${DESCR} ${MESSAGE}
 				${MV} ${PKG_DBDIR}/$$realdep/reqby.$$$$ ${PKG_DBDIR}/$$realdep/+REQUIRED_BY; \
 				${ECHO} "${PKGNAME} requires installed package $$realdep"; \
 			fi;						\
-		done;							\
-	fi
+		done ;;							\
+	esac
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if [ -f ${DISTDIR}/vulnerabilities ]; then			\
 		allvul="`${AWK} '/#.*/ { next } NF > 0 { cmd = sprintf(\"${PKG_INFO} -e \\\"%s\\\"\", $$1); system(cmd) }' ${DISTDIR}/vulnerabilities`"; \
@@ -3988,6 +4097,40 @@ fake-pkg: ${PLIST} ${DESCR} ${MESSAGE}
 			fi;						\
 		done;							\
 	fi
+.  if ${PKG_INSTALLATION_TYPE} == "pkgviews" && defined(PKGVIEWS) && ${BUILD_VIEWS} == "yes"
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${MKDIR} ${LOCALBASE};						\
+	for v in ${PKGVIEWS}; do					\
+		case "$$v" in						\
+		"")	dbdir=${_REAL_PKG_DBDIR}; viewname=default ;;	\
+		*)	dbdir=${LOCALBASE}/$$v/.dbdir; viewname=$$v ;;	\
+		esac;							\
+		${ECHO} "=> Performing package view clash check for ${PKGNAME} in $$viewname view"; \
+		pkg=`${SETENV} PKG_DBDIR=$$dbdir ${PKG_TOOLS_BIN}/pkg_info -e ${PKGBASE} || ${TRUE}`; \
+		case "$$pkg" in						\
+		"")	;;						\
+		*)	${ECHO} "*** ${PKGBASE} exists in $$viewname view - package $$pkg ***"; \
+			${ECHO} "*** Not hoisting ${PKGNAME} into $$viewname view"; \
+			continue ;;					\
+		esac;							\
+		${ECHO} "=> Performing package view overwrite check for ${PKGNAME} in $$viewname view"; \
+		dups=`${SETENV} PLIST_IGNORE_FILES="${PLIST_IGNORE_FILES}" PKG_DBDIR=${_REAL_PKG_DBDIR} \
+			${PKG_TOOLS_BIN}/pkg_view -p ${LOCALBASE} --view=$$v check ${PKGNAME} || ${TRUE}`; \
+		case "$$dups" in					\
+		"")	;;						\
+		*)	${ECHO} "***********************************************************"; \
+			${ECHO} "**** The following symbolic links will be overwritten *****"; \
+			for f in $$dups; do				\
+				${LS} -l ${LOCALBASE}/$$v/$$f;		\
+			done;						\
+			${ECHO} "***********************************************************"; \
+			;;						\
+		esac;							\
+		${ECHO} "=> Linking package into $$viewname view";	\
+		${SETENV} PLIST_IGNORE_FILES="${PLIST_IGNORE_FILES}" PKG_DBDIR=${_REAL_PKG_DBDIR} \
+			${PKG_TOOLS_BIN}/pkg_view -p ${LOCALBASE} --view=$$v add ${PKGNAME}; \
+	done
+.  endif # pkgviews && PKGVIEWS
 .endif
 
 # Depend is generally meaningless for arbitrary packages, but if someone wants
@@ -4123,7 +4266,7 @@ ${PLIST}: ${PLIST_SRC}
 			${PLIST_SUBST:S/=/}!/:S/$/!g/:S/^/ -e s!\\\${/}	\
 		> ${PLIST}; 						\
 	  ${MAKE} ${MAKEFLAGS} do-shlib-handling			\
-		SHLIB_PLIST_MODE=1 ;					\
+		SHLIB_PLIST_MODE=1
 
 # generate ${DESCR} from ${DESCR_SRC} by:
 # - Appending the homepage URL, if any

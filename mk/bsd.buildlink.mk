@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink.mk,v 1.61 2002/04/25 00:03:32 jlam Exp $
+# $NetBSD: bsd.buildlink.mk,v 1.61.4.1 2002/07/22 16:25:50 agc Exp $
 #
 # This Makefile fragment is included by package buildlink.mk files.  This
 # file does the following things:
@@ -219,9 +219,15 @@ PATH:=			${BUILDLINK_DIR}/bin:${PATH}
 .endif
 
 BUILDLINK_CONFIG_WRAPPER_SED?=		# empty
+.if ${PKG_INSTALLATION_TYPE} == "pkgviews"
+_BUILDLINK_CONFIG_WRAPPER_POST_SED+=					\
+	-e "s|-I${LOCALBASE}/packages/[^/]*|-I${BUILDLINK_DIR}/|g"	\
+	-e "s|-L${LOCALBASE}/packages/[^/]*|-L${BUILDLINK_DIR}/|g"
+.else
 _BUILDLINK_CONFIG_WRAPPER_POST_SED+=					\
 	-e "s|-I${LOCALBASE}/|-I${BUILDLINK_DIR}/|g"			\
 	-e "s|-L${LOCALBASE}/|-L${BUILDLINK_DIR}/|g"
+.endif
 _BUILDLINK_CONFIG_WRAPPER_SED=						\
 	${_BUILDLINK_CONFIG_WRAPPER_PRE_SED}				\
 	${BUILDLINK_CONFIG_WRAPPER_SED}					\

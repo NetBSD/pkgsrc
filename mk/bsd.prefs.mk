@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.73 2002/06/21 21:06:48 jlam Exp $
+# $NetBSD: bsd.prefs.mk,v 1.73.2.1 2002/07/22 16:25:52 agc Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -296,8 +296,8 @@ MAKEFLAGS+=		DIGEST_VERSION="${DIGEST_VERSION}"
 .endif
 
 .ifndef PKGTOOLS_VERSION
-PKGTOOLS_VERSION!=${PKG_TOOLS_BIN}/pkg_info -V 2>/dev/null || echo 20010302
-MAKEFLAGS+=	PKGTOOLS_VERSION="${PKGTOOLS_VERSION}"
+PKGTOOLS_VERSION!=	${PKG_TOOLS_BIN}/pkg_info -V 2>/dev/null || echo 20010302
+MAKEFLAGS+=		PKGTOOLS_VERSION="${PKGTOOLS_VERSION}"
 .endif
 
 .if (${OPSYS} == SunOS) && !defined(ZOULARIS_VERSION)

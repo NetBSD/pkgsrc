@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.71 2002/07/20 12:42:35 tron Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.71.2.1 2002/07/22 16:25:50 agc Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -48,6 +48,11 @@ PKGSRC_SLEEPSECS?= 5
 # The number of seconds to wait when PKGSRC_LOCKTYPE is sleep
 # Possible: a positive integer
 # Default: 5
+
+PKG_INSTALLATION_TYPE?=	overwrite
+# The type of installations that are currently done.
+# Possible: overwrite, pkgviews
+# Default: overwrite
 
 #USETBL=
 # Run raw manual pages through tbl(1) before piping through troff(1)
