@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2004/09/16 19:36:10 minskim Exp $
+# $NetBSD: Makefile,v 1.6 2004/09/21 17:38:53 xtraeme Exp $
 
 DISTNAME=		${DISTFILES}
 PKGNAME=		xorg-libs-${XORG_VER}
-PKGREVISION=		2
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG}
-DISTFILES=		X11R6.7.0-src1.tar.gz X11R6.7.0-src2.tar.gz \
-			X11R6.7.0-src3.tar.gz
+DISTFILES=		X11R${XORG_VER}-src1.tar.gz X11R${XORG_VER}-src2.tar.gz \
+			X11R${XORG_VER}-src3.tar.gz
 
 MAINTAINER=		xtraeme@NetBSD.org
 HOMEPAGE=		http://www.x.org/

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/07/29 07:27:43 xtraeme Exp $
+# $NetBSD: Makefile,v 1.3 2004/09/21 17:38:53 xtraeme Exp $
 
 DISTNAME=	# empty
 PKGNAME=	xorg-${XORG_VER}
@@ -21,7 +21,7 @@ DEPENDS+=	xorg-fontsMisc>=${XORG_VER}:../../fonts/xorg-fontsMisc
 DEPENDS+=	xorg-fontsCyrillic>=${XORG_VER}:../../fonts/xorg-fontsCyrillic
 DEPENDS+=	xorg-fontsTruetype>=${XORG_VER}:../../fonts/xorg-fontsTruetype
 DEPENDS+=	xorg-fontsType1>=${XORG_VER}:../../fonts/xorg-fontsType1
-DEPENDS+=	xorg-docs>=${XORG_VER}:../../misc/xorg-docs
+#DEPENDS+=	xorg-docs>=${XORG_VER}:../../misc/xorg-docs
 
 NO_BUILD=		# defined
 NO_BUILDLINK=		# defined
