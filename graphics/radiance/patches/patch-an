@@ -1,0 +1,14 @@
+$NetBSD: patch-an,v 1.1.1.1 2005/02/16 22:17:34 jschauma Exp $
+
+--- src/cv/mgflib/Makefile.orig	2005-02-15 15:16:48.000000000 -0500
++++ src/cv/mgflib/Makefile	2005-02-15 15:17:06.000000000 -0500
+@@ -6,8 +6,7 @@
+ # Use '-DMEM_PTR=char *' if your malloc return type is not 'void *'.
+ MACH = 
+ OPT = -O
+-CFLAGS = $(MACH) $(OPT)
+-CC = cc
++CFLAGS += $(MACH) $(OPT) ${LDFLAGS}
+ 
+ OBJS = parser.o context.o xf.o object.o lookup.o badarg.o \
+ words.o fvect.o
