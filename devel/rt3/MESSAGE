@@ -1,11 +1,16 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2004/08/03 15:33:50 cube Exp $
+$NetBSD: MESSAGE,v 1.2 2004/11/03 23:34:05 cube Exp $
 
 You must configure RT by editing ${PKG_SYSCONFDIR}/RT_SiteConfig.pm.
 
 To initialize the RT database, run
-	${PREFIX}/sbin/rt-setup-database --action init
-as a user in the ${RT_GROUP} group or as superuser.
+
+	${PREFIX}/sbin/rt-setup-database --action init \
+	    --dba dbadmin --prompt-for-dba-password
+
+as a user in the ${RT_GROUP} group or as superuser.  In the previous
+command-line, 'dbadmin' stands for the database administrator's username,
+e.g. 'root' for MySQL.
 
 See also the manual on ${HOMEPAGE}docs.html
 ===========================================================================
