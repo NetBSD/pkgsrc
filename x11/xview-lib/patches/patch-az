@@ -1,0 +1,10 @@
+$NetBSD: patch-az,v 1.1 2001/05/11 20:41:32 dmcmahill Exp $
+
+--- lib/libxview/win/win_env.c.orig	Tue Jun 29 01:15:40 1993
++++ lib/libxview/win/win_env.c	Fri May 11 15:16:15 2001
+@@ -16,4 +16,5 @@
+  */
+ 
++#include <string.h>
+ #include <xview/rect.h>
+ #include <xview/win_env.h>
