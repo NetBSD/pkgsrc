@@ -1,19 +1,13 @@
-$NetBSD: patch-ac,v 1.2 1998/08/07 11:09:04 agc Exp $
+$NetBSD: patch-ac,v 1.3 2000/04/05 14:32:53 pooka Exp $
 
-*** config/unix/Config/Makefile.orig	Fri Jul 29 21:40:55 1994
---- config/unix/Config/Makefile	Wed Mar  1 14:27:05 1995
-***************
-*** 1,7 ****
-- CC=cc
-- CFLAGS= -DVarTran
-- LDFLAGS=
-  SHELL=/bin/sh
-  MAKE=make
-  
-  all:
---- 1,5 ----
-  SHELL=/bin/sh
-+ CFLAGS+= -DVarTran
-  MAKE=make
-  
-  all:
+--- config/unix/Config/Makefile.orig	Thu Jul  1 20:36:41 1999
++++ config/unix/Config/Makefile	Wed Apr  5 16:17:56 2000
+@@ -1,7 +1,5 @@
+-CC=cc
+-CFLAGS= -DVarTran
+-LDFLAGS=
+ SHELL=/bin/sh
++CFLAGS+= -DVarTran
+ MAKE=make
+ 
+ all:
