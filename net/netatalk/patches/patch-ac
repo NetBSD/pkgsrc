@@ -1,19 +1,29 @@
-$NetBSD: patch-ac,v 1.3 2002/05/25 12:55:25 markd Exp $
+$NetBSD: patch-ac,v 1.4 2002/09/02 11:43:39 abs Exp $
 
---- etc/atalkd/main.c.orig	Mon Dec 31 15:05:20 2001
-+++ etc/atalkd/main.c	Mon Jan 14 21:59:05 2002
-@@ -276,12 +276,12 @@
- 		    syslog( LOG_INFO, "config for no router" );
- 		      
- 		    if ( iface->i_flags & IFACE_PHASE2 ) {
--			iface->i_rt->rt_firstnet = 0;
-+			iface->i_rt->rt_firstnet = htons(1);
- 			iface->i_rt->rt_lastnet = htons( STARTUP_LASTNET );
- 			setaddr( iface, IFACE_PHASE2,
- 				iface->i_addr.sat_addr.s_net,
- 				iface->i_addr.sat_addr.s_node,
--				0, htons( STARTUP_LASTNET ));
-+				htons(1), htons( STARTUP_LASTNET ));
- 		    }
- 		    if ( looproute( iface, RTMP_ADD ) ) { /* -1 or 1 */
- 			syslog( LOG_ERR,
+--- etc/afpd/ofork.c.orig	Thu Feb  7 23:57:27 2002
++++ etc/afpd/ofork.c
+@@ -14,6 +14,7 @@
+ #include <string.h>
+ #include <sys/stat.h> /* works around a bug */
+ #include <sys/param.h>
++#include <sys/resource.h>
+ #include <syslog.h>
+ #include <errno.h>
+ 
+@@ -146,7 +147,15 @@ struct adouble      *ad;
+     int			i;
+ 
+     if (!oforks) {
+-        nforks = (getdtablesize() - 10) / 2;
++	struct rlimit rlp;
++
++	getrlimit(RLIMIT_NOFILE, &rlp);
++	if (rlp.rlim_cur < 128)
++	    rlp.rlim_cur = 128;
++	setrlimit(RLIMIT_NOFILE, &rlp);
++	getrlimit(RLIMIT_NOFILE, &rlp);
++
++        nforks = (rlp.rlim_cur - 10) / 2;
+         oforks = (struct ofork **) calloc(nforks, sizeof(struct ofork *));
+         if (!oforks)
+             return NULL;

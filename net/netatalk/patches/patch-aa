@@ -1,19 +1,13 @@
-$NetBSD: patch-aa,v 1.4 2002/05/25 12:55:25 markd Exp $
+$NetBSD: patch-aa,v 1.5 2002/09/02 11:43:38 abs Exp $
 
---- distrib/initscripts/Makefile.in.orig	Sat Feb 16 06:52:26 2002
-+++ distrib/initscripts/Makefile.in	Sat Feb 16 06:57:46 2002
-@@ -149,12 +149,12 @@
- # checking for NetBSD init scripts
- #
- @USE_COBALT_TRUE@sysvdir = /etc/rc.d/init.d
--@USE_NETBSD_TRUE@sysvdir = /etc/rc.d
-+@USE_NETBSD_TRUE@sysvdir = ${prefix}/etc/rc.d
- @USE_REDHAT_TRUE@sysvdir = /etc/rc.d/init.d
- @USE_SUSE_TRUE@sysvdir = /etc/rc.d
- @USE_TRU64_TRUE@sysvdir = /sbin/init.d
- @USE_COBALT_TRUE@sysv_SCRIPTS = atalk
--@USE_NETBSD_TRUE@sysv_SCRIPTS = afp atalk pap timelord
-+@USE_NETBSD_TRUE@sysv_SCRIPTS = afpd atalkd papd timelord
- @USE_REDHAT_TRUE@sysv_SCRIPTS = atalk
- @USE_SUSE_TRUE@sysv_SCRIPTS = atalk
- @USE_TRU64_TRUE@sysv_SCRIPTS = atalk
+--- configure.orig	Wed Mar 27 22:20:55 2002
++++ configure
+@@ -8267,7 +8267,7 @@ if test "${with_pkgconfdir+set}" = set; 
+ fi
+ 
+ 
+-	NLSDIR="${PKGCONFDIR}/nls"
++	NLSDIR="${prefix}/share/netatalk/nls"
+ 
+ 	# Check whether --with-nls-dir or --without-nls-dir was given.
+ if test "${with_nls_dir+set}" = set; then
