@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.48 2004/03/31 04:39:17 xtraeme Exp $
+# $NetBSD: Makefile,v 1.49 2004/04/02 18:47:39 kristerw Exp $
 #
 
 DISTNAME=		xmame-0.80.1
 PKGNAME=		xmess-0.80.1
+PKGREVISION=		1
 CATEGORIES=		emulators games x11
 MASTER_SITES=		http://x.mame.net/download/
 EXTRACT_SUFX=		.tar.bz2
@@ -15,7 +16,7 @@ RESTRICTED=		"selling is not allowed"
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
 USE_X11=		YES
 USE_GNU_TOOLS+=		make
@@ -25,6 +26,8 @@ UNLIMIT_RESOURCES=	datasize
 
 .include "../../mk/bsd.prefs.mk"
 
+BUILD_DEFS+=		USE_ESOUND
+
 ROMPATH=		${PREFIX}/share/${TARGET}
 SPOOLDIR=		/var/games/${TARGET}
 
@@ -32,8 +35,6 @@ MAKE_FLAGS+=		TARGET="${TARGET:S/x//}"
 MAKE_FLAGS+=		LIBS="${LDFLAGS} ${LIBS}"
 MAKE_FLAGS+=		CFLAGS="${CFLAGS}"
 MAKE_FLAGS+=		X11INC= X11LIB=
-
-BUILD_DEFS+=		USE_ESOUND
 
 .if !empty(USE_ESOUND:M[Yy][Ee][Ss])
 MAKE_FLAGS+=		SOUND_ESOUND=1
@@ -43,9 +44,10 @@ MAKE_FLAGS+=		SOUND_ESOUND=1
 MAME_DISP_METHOD?=	x11
 
 # Determine which CPU-specific code to use.
-.for MARCH in alpha m68k i386 ia64
+.for MARCH in alpha m68k i386 ia64 mips
 MAME_CPU.${MARCH}?=	${MARCH}
 .endfor
+MAME_CPU.x86_64?=	amd64
 .if !defined(MAME_CPU.${MACHINE_ARCH})
 .  include "../../mk/endian.mk"
 _MAME_CPU.big-endian=		risc
