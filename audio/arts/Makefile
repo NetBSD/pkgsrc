@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2004/02/14 17:21:32 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2004/02/22 10:56:26 markd Exp $
 
 DISTNAME=	arts-1.2.0
 PKGREVISION=	1
@@ -10,6 +10,7 @@ COMMENT=	Analog Real-Time Synthesizer
 CONFLICTS+=	kdelibs-2*
 
 USE_BUILDLINK2=		yes
+USE_LANGUAGES=		c c++
 USE_PERL5=		build
 
 BUILD_DEPENDS+=		pkgconfig>=0.15.0:../../devel/pkgconfig
