@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2602 2004/11/30 12:32:09 wiz Exp $
+$NetBSD: TODO,v 1.2603 2004/11/30 15:01:22 adam Exp $
 
 Suggested new packages
 ======================
@@ -383,7 +383,6 @@ Suggested package updates
 	o conglomerate-0.7.16
 	o conserver-8.1.11
 	o controlcenter-1.4.0.5
-	o cooledit-3.17.12
 	o corewars-0.9.13
 	o courier-auth-0.47
 	o courier-imap-3.0.8
