@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/03/08 01:29:25 snj Exp $
+# $NetBSD: Makefile,v 1.15 2004/08/04 03:06:55 jschauma Exp $
 #
 
 DISTNAME=		xboing2.4
@@ -18,8 +18,8 @@ USE_IMAKE=		YES
 NO_INSTALL_MANPAGES=	YES
 
 post-install:
-	${CHOWN} bin:games ${X11PREFIX}/bin/xboing
-	${CHMOD} 2755 ${X11PREFIX}/bin/xboing
+	${CHOWN} ${GAMEOWN}:${GAMEGRP} ${X11PREFIX}/bin/xboing
+	${CHMOD} ${GAMEMODE} ${X11PREFIX}/bin/xboing
 	${INSTALL_MAN} ${WRKSRC}/xboing.man ${X11PREFIX}/man/man6/xboing.6
 
 .include "../../graphics/xpm/buildlink3.mk"
