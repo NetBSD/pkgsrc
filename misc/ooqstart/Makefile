@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/03/09 08:18:25 rh Exp $
+# $NetBSD: Makefile,v 1.2 2002/10/08 17:47:05 wiz Exp $
 #
 
 DISTNAME=	ooqstart-0.8.3
@@ -12,6 +12,7 @@ COMMENT=	OpenOffice quickstart applet for GNOME
 
 DEPENDS+=	gnome-applets>=1.4.0:../../x11/gnome-applets
 
+USE_BUILDLINK2=	YES
 USE_GMAKE=	YES
 USE_X11BASE=	YES
 NO_CONFIGURE=	YES
@@ -29,5 +30,6 @@ do-install:
 		${PREFIX}/gnome/help/ooqstart_applet/C
 .endfor
 
-.include "../../graphics/gdk-pixbuf-gnome/buildlink.mk"
+.include "../../graphics/gdk-pixbuf-gnome/buildlink2.mk"
+.include "../../x11/gnome-core/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
