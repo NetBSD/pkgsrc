@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/07/17 21:26:02 grant Exp $
+# $NetBSD: Makefile,v 1.8 2003/07/22 13:49:38 wiz Exp $
 #
 
 DISTNAME=	licq-1.2.6
@@ -26,6 +26,8 @@ WRKSRC=		${WRKDIR:=/${DISTNAME}/plugins/qt-gui}
 
 PATCHDIR=	${.CURDIR}/../licq-gui-console/patches
 DISTINFO_FILE=	${.CURDIR}/../licq-gui-console/distinfo
+
+INCOMPAT_CURSES=	NetBSD-1.4*-* NetBSD-1.5*-* NetBSD-1.6[-_.]*-* NetBSD-1.6[A-Q]-*
 
 .include "../../x11/qt3-libs/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
