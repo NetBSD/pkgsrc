@@ -1,0 +1,7 @@
+GConf is a configuration database system, functionally similar to the
+Windows registry but lots better. It was written for the GNOME
+desktop but does not require GNOME; configure should notice if GNOME
+is not installed and compile the basic GConf library anyway.
+
+This package installs graphical utilities included in GConf's
+distribution file.
