@@ -1,2 +1,2 @@
 #!/bin/sh
-(cd ${PREFIX}/share/games/Rollemup; ${PREFIX}/bin/Rollemup)
+(cd ${PREFIX}/${GAMES_DIR}/Rollemup; ${PREFIX}/bin/Rollemup)
