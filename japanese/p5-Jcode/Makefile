@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/07/19 12:54:57 taca Exp $
+# $NetBSD: Makefile,v 1.10 2001/09/26 08:12:33 taca Exp $
 #
 
 DISTNAME=	Jcode-0.75
@@ -14,12 +14,14 @@ DEPENDS+=	p5-MIME-Base64>=2.1:../../converters/p5-MIME-Base64
 
 USE_PERL5=	# defined
 PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/Jcode/.packlist
-ALL_TARGET+=	test
 
 pre-configure:
 	@cd ${WRKSRC}; ${RM} -f mac_install.pl win_install.pl
 
 do-configure:
 	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
+
+test:
+	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${MAKE} test
 
 .include "../../mk/bsd.pkg.mk"
