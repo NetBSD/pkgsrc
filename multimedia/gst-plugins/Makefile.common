@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2004/04/06 09:36:28 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.2 2004/04/06 11:10:06 jmmv Exp $
 #
 
 DISTNAME=		gst-plugins-0.8.0
@@ -24,6 +24,9 @@ USE_PKGLOCALEDIR=	yes
 
 CONFIGURE_ARGS+=	--disable-gconf
 CONFIGURE_ARGS+=	--disable-gconftool
+CONFIGURE_ARGS+=	--disable-x
+CONFIGURE_ARGS+=	--disable-xshm
+CONFIGURE_ARGS+=	--disable-xvideo
 CONFIGURE_ARGS+=	--disable-examples
 CONFIGURE_ARGS+=	--disable-tests
 
@@ -96,10 +99,7 @@ CONFIGURE_ARGS+=	--disable-tests
 		vcd \
 		vorbis \
 		vorbistest \
-		x \
-		xshm \
-		xvid \
-		xvideo
+		xvid
 CONFIGURE_ARGS+=	--disable-${driver}
 .endfor
 .undef driver
