@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2502 2004/11/27 00:30:15 wiz Exp $
+$NetBSD: TODO,v 1.2503 2004/11/27 00:43:43 sketch Exp $
 
 Suggested new packages
 ======================
@@ -854,7 +854,6 @@ Suggested package updates
 	o p5-Class-ObjectTemplate-0.7
 	o p5-Class-ReturnValue-0.52
 	o p5-Compress-Bzip2-1.02
-	o p5-Config-General-2.27
 	o p5-Config-IniFiles-2.38
 	o p5-Convert-BER-1.3101
 	o p5-Crypt-CBC-2.12
