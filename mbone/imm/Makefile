@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2001/02/17 18:04:35 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2001/05/31 11:48:24 wiz Exp $
 #
 # NetBSD "imm" package
 # The original was based on the imm-3.5a1 FreeBSD port maintained
@@ -15,7 +15,7 @@ EXTRACT_SUFX=	.tar.Z
 MAINTAINER=	is@netbsd.org
 COMMENT=	Internet Image(or other data) Multicaster (and receiver)
 
-DEPENDS+=	tk-8.3.2:../../x11/tk
+DEPENDS+=	tk>=8.3.2:../../x11/tk
 
 USE_X11=	yes
 ALL_TARGET=	netbsd
