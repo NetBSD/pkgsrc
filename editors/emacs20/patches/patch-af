@@ -1,6 +1,6 @@
-$NetBSD: patch-af,v 1.1.1.1 2003/04/11 00:31:45 uebayasi Exp $
+$NetBSD: patch-af,v 1.2 2003/04/11 04:00:18 uebayasi Exp $
 
---- src/Makefile.in.orig	Thu Jan 16 19:08:48 2003
+--- src/Makefile.in.orig	Thu Mar 27 12:43:25 2003
 +++ src/Makefile.in
 @@ -329,7 +329,7 @@
  #ifdef USE_X_TOOLKIT
@@ -20,15 +20,6 @@ $NetBSD: patch-af,v 1.1.1.1 2003/04/11 00:31:45 uebayasi Exp $
  #endif
  
  #ifndef LIB_GCC
-@@ -457,7 +457,7 @@
- #endif /* not ORDINARY_LINK */
- 
- ALL_LDFLAGS = LD_SWITCH_SYSTEM LD_SWITCH_SYSTEM_TEMACS LD_SWITCH_MACHINE \
--	 LD_SWITCH_MACHINE_TEMACS LD_SWITCH_SITE $(LDFLAGS)
-+	 LD_SWITCH_MACHINE_TEMACS LD_SWITCH_SITE
- 
- /* A macro which other sections of Makefile can redefine to munge the
-    flags before they're passed to LD.  This is helpful if you have
 @@ -804,14 +804,7 @@
  #define OBJECTS_MACHINE
  #endif
