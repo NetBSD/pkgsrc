@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.774 2003/08/10 11:15:00 wiz Exp $
+$NetBSD: TODO,v 1.775 2003/08/10 11:23:28 recht Exp $
 
 Suggested new packages
 ======================
@@ -235,7 +235,6 @@ Suggested package updates
 	o snd-6.8
 	o snes9x-1.40
 	o soappy-0.9.8 [pkg/20787]
-	o spread-3.17.1 [pkg/21949]
 	o squeak-3.2 [fredb|pkg/17950]
 	o squeak-3.5
 	o srp_client-1.7.5 [jlam]
