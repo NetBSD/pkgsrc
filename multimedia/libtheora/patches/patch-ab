@@ -1,0 +1,17 @@
+$NetBSD: patch-ab,v 1.1 2005/03/21 17:16:23 dmcmahill Exp $
+
+--- examples/Makefile.am.orig	2004-09-24 14:25:14.000000000 -0400
++++ examples/Makefile.am	2005-03-21 09:49:46.465883000 -0500
+@@ -12,8 +12,10 @@
+ 
+ dump_video_SOURCES = dump_video.c
+-dump_video_LDADD = $(LDADD)
++dump_video_LDADD = $(GETOPT_OBJS) $(LDADD)
++dump_video_DEPENDENCIES = $(GETOPT_OBJS)
+ 
+ player_example_SOURCES = player_example.c
+-player_example_LDADD = $(LDADD) $(SDL_LIBS) $(VORBIS_LIBS)
++player_example_LDADD = $(GETOPT_OBJS) $(LDADD) $(SDL_LIBS) $(VORBIS_LIBS)
++dump_video_DEPENDENCIES = $(GETOPT_OBJS)
+ 
+ encoder_example_SOURCES = encoder_example.c
