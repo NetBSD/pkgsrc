@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1.1.1 2004/09/26 01:12:12 dmcmahill Exp $
+$NetBSD: patch-ab,v 1.1 2004/10/01 22:56:11 dmcmahill Exp $
 
 --- bem/src/math_library.h.orig	Tue Aug 24 01:02:45 2004
 +++ bem/src/math_library.h
