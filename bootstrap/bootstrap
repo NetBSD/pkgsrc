@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.25 2005/01/05 21:51:19 tv Exp $
+# $NetBSD: bootstrap,v 1.26 2005/01/12 11:30:37 agc Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -212,6 +212,9 @@ DragonFly)
 	need_bsd_install=no
 	need_sed=no
 	set_opsys=no
+	check_prog paxprog pax
+	check_prog tarprog tar
+	check_prog mtreeprog mtree
 	machine_arch=`uname -p`
 	;;
 FreeBSD)
