@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2004Q3,v 1.1.2.38 2004/12/01 01:50:06 snj Exp $
+$NetBSD: CHANGES-pkgsrc-2004Q3,v 1.1.2.39 2004/12/01 06:59:55 snj Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2004Q3 branch:
@@ -79,3 +79,5 @@ Pullup ticket 149 - requested by Lubomir Sedlacik
 win32-codecs update
 Pullup ticket 157 - requested by Havard Eidnes
 security update for thunderbird and thunderbird-gtk2
+Pullup ticket 161 - requested by Jan Schaumann
+security update for sun-jre14 and sun-jdk14
