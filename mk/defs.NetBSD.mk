@@ -1,4 +1,4 @@
-# $NetBSD: defs.NetBSD.mk,v 1.16 2001/11/21 13:54:14 agc Exp $
+# $NetBSD: defs.NetBSD.mk,v 1.17 2001/11/21 13:57:31 agc Exp $
 #
 # Variable definitions for the NetBSD operating system.
 
@@ -74,6 +74,7 @@ _DO_LIBINTL_CHECKS=	yes	# perform checks for valid libintl
 _DO_SHLIB_CHECKS=	yes	# fixup PLIST for shared libs/run ldconfig
 _IMAKE_MAKE=		${MAKE}	# program which gets invoked by imake
 _OPSYS_HAS_MANZ=	yes	# MANZ controls gzipping of man pages
+_OPSYS_HAS_OSSAUDIO=	yes	# libossaudio is available
 _PATCH_BACKUP_ARG=	-b	# switch to patch(1) to provide a backup file
 _PREFORMATTED_MAN_DIR=	cat	# directory where catman pages are
 _USE_RPATH=		yes	# add rpath to LDFLAGS
