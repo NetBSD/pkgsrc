@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.511 2000/07/19 22:57:31 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.512 2000/07/20 12:33:43 rh Exp $
 #
 # This file is in the public domain.
 #
@@ -1385,6 +1385,14 @@ do-package: ${PLIST} ${DESCR}
 			exit 1;						\
 		fi;							\
 	fi
+.if defined(NO_BIN_ON_CDROM)
+	@${ECHO_MSG} "${_PKGSRC_IN}> Warning: ${PKGNAME} may not be put on a CD-ROM:"
+	@${ECHO_MSG} "${_PKGSRC_IN}>          ${NO_BIN_ON_CDROM}."
+.endif
+.if defined(NO_BIN_ON_FTP)
+	@${ECHO_MSG} "${_PKGSRC_IN}> Warning: ${PKGNAME} may not be made available through FTP:"
+	@${ECHO_MSG} "${_PKGSRC_IN}>          ${NO_BIN_ON_FTP}."
+.endif
 .endif
 
 # Some support rules for do-package
@@ -2002,6 +2010,14 @@ ${DLIST}:
 # fetch - only fetch the distfile if it is allowed to be
 # re-distributed freely
 mirror-distfiles:
+.if defined(NO_SRC_ON_CDROM)
+	@${ECHO_MSG} "${_PKGSRC_IN}> Warning: ${PKGNAME} distfile may not be put on a CD-ROM:"
+	@${ECHO_MSG} "${_PKGSRC_IN}>          ${NO_SRC_ON_CDROM}."
+.endif
+.if defined(NO_SRC_ON_FTP)
+	@${ECHO_MSG} "${_PKGSRC_IN}> Warning: ${PKGNAME} distfile may not be made available through FTP:"
+	@${ECHO_MSG} "${_PKGSRC_IN}>          ${NO_SRC_ON_FTP}."
+.endif
 .if (${MIRROR_DISTFILE} == "yes")
 	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} ${MAKEFLAGS} fetch NO_IGNORE=yes NO_CHECK_DEPENDS=yes
 .endif
