@@ -3,6 +3,7 @@
 # Date created:		April 2, 1997
 # Whom:			Marc G. Fournier <scrappy@FreeBSD.ORG>
 #
+# $NetBSD: Makefile,v 1.2 1998/02/17 15:37:40 agc Exp $
 # FreeBSD Id: Makefile,v 1.22 1997/12/24 01:21:37 alex Exp
 
 DISTNAME=	postgresql-6.2.1
@@ -12,17 +13,19 @@ MASTER_SITES=	ftp://ftp.PostgreSQL.org/pub/ \
 
 MAINTAINER=	andreas@FreeBSD.ORG
 
-# if you want to use the tcl/tk frontend pgaccess, then you need to build
-# postgresql with tcl support by typing: make USE_TCL=yes
 .if defined(USE_TCL)
 MAKE_ENV=	USE_TCL=true TCL_INCDIR=${PREFIX}/include/tcl8.0
-LIB_DEPENDS=	tcl80\\.1\\.:${PORTSDIR}/lang/tcl80
+LIB_DEPENDS=	tcl80.1.:${PORTSDIR}/lang/tcl80
 .endif
 
 NO_PACKAGE=	"Requires pgsql uid"
 WRKSRC=		${WRKDIR}/${DISTNAME}/src
+ONLY_FOR_ARCHS=	i386
+
+PGUSER?=	pgsql
 
 USE_GMAKE=	YES
+USE_PERL5=	yes
 MAKEFILE=	GNUmakefile
 HAS_CONFIGURE=	YES
 CONFIGURE_ARGS= --prefix=${PREFIX}/pgsql \
@@ -50,14 +53,6 @@ MANL=		abort.l alter_table.l begin.l close.l cluster.l \
 
 MANPREFIX=	${PREFIX}/pgsql
 
-pre-fetch:
-.if !defined(USE_TCL)
-	@${ECHO_MSG} "To build the \"PostgreSQL to Tcl interface library\", libpgtcl, type:"
-	@${ECHO_MSG} "    make USE_TCL=yes"
-.else
-	@${ECHO_MSG} "Building PostgreSQL with \"libpgtcl\"."
-.endif
-
 post-build:
 	@ ${ECHO} "------------------------------------------------------------"
 	@ ${ECHO} "Dump existing databases, before installing new db version !!"
@@ -66,10 +61,10 @@ post-build:
 
 pre-install:
 .if defined(PACKAGE_BUILDING)
-	/bin/rm -rf ${PREFIX}/pgsql
+	${RM} -rf ${PREFIX}/pgsql
 .endif
 	@ ${MKDIR} ${PREFIX}/pgsql
-	@ ${SETENV} ${MAKE_ENV} perl ${SCRIPTDIR}/createuser
+	@ ${SETENV} ${MAKE_ENV} perl ${SCRIPTDIR}/createuser ${PGUSER}
 
 post-install:
 	@ if [ ! -f ${PREFIX}/pgsql/.profile ]; then \
@@ -94,21 +89,21 @@ post-install:
 		${ECHO} "#export TZ" \
 			>> ${PREFIX}/pgsql/.profile; \
 	fi
-	@ chown -R pgsql:pgsql ${PREFIX}/pgsql
-	@ ${ECHO} 'Initializing PostgreSQL Databases - this may take a few minutes...'
-	@ ${LDCONFIG} -m ${PREFIX}/pgsql/lib
-	@ su -l pgsql -c '${PREFIX}/pgsql/bin/initdb --pglib=${PREFIX}/pgsql/lib --pgdata=${PREFIX}/pgsql/data'
-	@ ${SED} -e "s=!!PREFIX!!=${PREFIX}=g" < ${FILESDIR}/pgsql.sh.tmpl \
+	@/usr/sbin/chown -R ${PGUSER}:${PGUSER} ${PREFIX}/pgsql
+	@${ECHO} 'Initializing PostgreSQL Databases - this may take a few minutes...'
+	@${LDCONFIG} -m ${PREFIX}/pgsql/lib
+	@${ECHO} '${PREFIX}/pgsql/bin/initdb --pglib=${PREFIX}/pgsql/lib --pgdata=${PREFIX}/pgsql/data' | su -l ${PGUSER}
+	@${SED} -e "s=!!PREFIX!!=${PREFIX}=g" < ${FILESDIR}/pgsql.sh.tmpl \
 		> ${PREFIX}/etc/rc.d/pgsql.sh
-	@ chmod 554 ${PREFIX}/etc/rc.d/pgsql.sh
-	@ chown root.pgsql ${PREFIX}/etc/rc.d/pgsql.sh
-	@ ${INSTALL_DATA} ${FILESDIR}/post-install-notes ${PREFIX}/pgsql
+	@/bin/chmod 554 ${PREFIX}/etc/rc.d/pgsql.sh
+	@/usr/sbin/chown root.${PGUSER} ${PREFIX}/etc/rc.d/pgsql.sh
+	@${INSTALL_DATA} ${FILESDIR}/post-install-notes ${PREFIX}/pgsql
 .if !defined(NOPORTDOCS)
 	${MKDIR} ${PREFIX}/share/doc/pgsql
 	${CP} -r ${WRKDIR}/${DISTNAME}/doc/* ${PREFIX}/share/doc/pgsql
 .endif
 .if !defined(BATCH)
-	@ more -e ${FILESDIR}/post-install-notes
+	@${CAT} ${FILESDIR}/post-install-notes
 .endif
 
 .include <bsd.port.mk>
