@@ -1,4 +1,4 @@
-$NetBSD: patch-ax,v 1.5 2004/03/28 22:00:05 minskim Exp $
+$NetBSD: patch-ax,v 1.6 2004/03/29 15:12:57 tron Exp $
 
 --- configure.orig	2003-11-26 13:47:26.000000000 -0600
 +++ configure
@@ -50,7 +50,7 @@ $NetBSD: patch-ax,v 1.5 2004/03/28 22:00:05 minskim Exp $
  int
  main ()
  {
-@@ -9910,7 +9914,101 @@ cat >>confdefs.h <<_ACEOF
+@@ -9910,7 +9914,102 @@ cat >>confdefs.h <<_ACEOF
  #define HAVE_STRUCT_SOCKADDR_SA_LEN 1
  _ACEOF
  
@@ -106,6 +106,7 @@ $NetBSD: patch-ax,v 1.5 2004/03/28 22:00:05 minskim Exp $
 +cat confdefs.h >>conftest.$ac_ext
 +cat >>conftest.$ac_ext <<_ACEOF
 +/* end confdefs.h.  */
++#include <sys/types.h>
 +#include <sys/un.h>
 +
 +int
