@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2002/03/25 08:49:59 fredb Exp $
+# $NetBSD: Makefile,v 1.35 2002/03/25 09:17:55 fredb Exp $
 
 DISTNAME=	wwwoffle-2.7a
 PKGNAME=	wwwoffle-2.7.1
@@ -51,21 +51,24 @@ post-install:
 # Directories other than html and search are automatically created at run time
 	${GTAR} czCf / ${PREFIX}/libdata/wwwoffle-spool.tar.gz \
 		var/wwwoffle/html var/wwwoffle/search
-# We don't do the following automatically, as that would inconvenience
-# package build machines, not to mention putting the wrong information
-# in the "wwwoffle.pac" files.
 	@${ECHO}
 	@${ECHO} ==+===+===+===+===+===+===+===+===+===+===+===+===+===+===+=
 	@${ECHO}
 	@${ECHO} Attention pkgsrc source users:
 	@${ECHO}
-	@${ECHO} "Running \`sh INSTALL _ POST-INSTALL' from this directory"
-	@${ECHO} 'will fix up the installed "wwwoffle.pac" files and convert'
-	@${ECHO} 'your old cache to the new format, exactly as in the binary'
-	@${ECHO} 'package install.'
+	@${ECHO} 'Please run' "\`make finish'" 'from this directory *after*'
+	@${ECHO} '(optionally) running' "\`make package'", 'in order to fix'
+	@${ECHO} 'up the installed "wwwoffle.pac" files to your hostname'
+	@${ECHO} 'and convert your config file and cache to the new format.'
 	@${ECHO}
 	@${ECHO} ==+===+===+===+===+===+===+===+===+===+===+===+===+===+===+=
 	@${ECHO}
+
+# We don't do the following automatically, as that would inconvenience
+# package build machines, not to mention putting the wrong information
+# into the "wwwoffle.pac" files.
+finish:
+	${SH} INSTALL _ POST-INSTALL
 
 .include "../../mk/bsd.prefs.mk"
 
