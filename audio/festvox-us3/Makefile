@@ -1,0 +1,35 @@
+# $NetBSD: Makefile,v 1.1.1.1 1999/10/11 16:51:41 proff Exp $
+
+DISTNAME=	festvox_us3
+PKGNAME=	festvox-us3-1.4.0
+WRKSRC=		${WRKDIR}/festival
+CATEGORIES=	audio
+MASTER_SITES=	ftp://ftp.cstr.ed.ac.uk/pub/festival/1.4.0/
+
+MAINTAINER=	proff@iq.org
+HOMEPAGE=	http://www.cstr.ed.ac.uk/projects/festival.html
+
+DEPENDS+=	festival-1.4.0:../festival \
+		festlex-poslex-1.4.0:../festlex-poslex \
+		festlex-cmu-1.4.0:../festlex-cmu \
+		mbrola-301h:../mbrola \
+		mbrolavox-us3-990208:../mbrolavox-us3
+
+LICENSE=	no-commercial-use
+
+NO_BUILD=	yes
+
+FHOME=		${PREFIX}/share/festival
+MBROLA=		${FHOME}/lib/voices/english/us3_mbrola
+
+post-extract:
+	@ chmod -R a+r ${WRKSRC}
+	@ find ${WRKSRC} -type d -print0 | xargs -0 chmod 755
+
+do-install:
+	cd ${WRKSRC} && pax -r -w * ${FHOME}
+#ugh
+	ln -fs ../../../../../mbrola/voices/us3 ${MBROLA}
+	ln -fs ../../../../../mbrola/voices/us3/us3mrpa ${MBROLA}
+
+.include "../../mk/bsd.pkg.mk"
