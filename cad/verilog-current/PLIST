@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2004/03/02 15:34:07 drochner Exp $
+@comment $NetBSD: PLIST,v 1.7 2004/09/02 01:55:47 dmcmahill Exp $
 bin/iverilog
 bin/iverilog-vpi
 bin/vvp
@@ -18,6 +18,7 @@ lib/ivl/ivlpp
 lib/ivl/null-s.conf
 lib/ivl/null.conf
 lib/ivl/null.tgt
+lib/ivl/system.sft
 lib/ivl/system.vpi
 lib/ivl/vvp-s.conf
 lib/ivl/vvp.conf
