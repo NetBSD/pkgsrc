@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/07/13 13:53:53 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/21 17:38:25 martti Exp $
 #
 
 DISTNAME=	acidlaunch-0.5
@@ -8,7 +8,7 @@ MASTER_SITES=	http://linuxgamers.net/download/
 
 MAINTAINER=	ptiJo@noos.fr
 HOMEPAGE=	http://linuxgamers.net/infoPage.php?page=acidlaunch
-COMMENT=	small, light-weight app launcher
+COMMENT=	Small, light-weight app launcher
 
 GNU_CONFIGURE=	YES
 USE_BUILDLINK2=	YES

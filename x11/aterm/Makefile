@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/07/17 22:56:21 grant Exp $
+# $NetBSD: Makefile,v 1.13 2003/07/21 17:38:25 martti Exp $
 #
 
 DISTNAME=	aterm-0.4.2
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=aterm/}
 
 MAINTAINER=	hubertf@NetBSD.org
 HOMEPAGE=	http://aterm.sourceforge.net/
-COMMENT=	aterm (Afterstep XVT) - a VT102 emulator for the X window system
+COMMENT=	Aterm (Afterstep XVT) - a VT102 emulator for the X window system
 
 USE_BUILDLINK2=	YES
 USE_X11=	YES
