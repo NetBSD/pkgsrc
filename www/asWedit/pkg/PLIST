@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/07/17 09:39:05 rh Exp $
+bin/asWedit
+libdata/asWedit.hlp
+share/examples/asWedit/AsWedit
+share/doc/asWedit/INSTALL
+share/doc/asWedit/LICENSE
+share/doc/asWedit/ORDERING
+share/doc/asWedit/README
+@dirrm share/doc/asWedit
+@dirrm share/examples/asWedit
