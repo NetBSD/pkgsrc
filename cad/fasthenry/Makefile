@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2003/09/17 19:40:03 grant Exp $
+# $NetBSD: Makefile,v 1.18 2004/01/20 12:09:09 agc Exp $
 #
 
 DISTNAME=	fasthenry-3.0-12Nov96
 PKGNAME=	fasthenry-3.0.19961112
-WRKSRC=		${WRKDIR}/fasthenry-3.0
 CATEGORIES=	cad
 MASTER_SITES=	ftp://rle-vlsi.mit.edu/pub/fasthenry/
 EXTRACT_SUFX=	.tar.Z
@@ -19,6 +18,7 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_FTP=		${RESTRICTED}
 
+WRKSRC=			${WRKDIR}/fasthenry-3.0
 USE_BUILDLINK2=		yes
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	./config

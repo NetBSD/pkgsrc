@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.9 2003/07/17 21:27:52 grant Exp $
+# $NetBSD: Makefile,v 1.10 2004/01/20 12:10:55 agc Exp $
 #
 
 DISTVERSION=		1.0.0.0
 DISTFILES=		# none
-WRKSRC=			${WRKDIR}/${EGCS_DISTNAME}
 
 MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.NetBSD.org/
 COMMENT=		Cross-compile environment for Cywin32/i386
 
+WRKSRC=			${WRKDIR}/${EGCS_DISTNAME}
 USE_CROSS_BINUTILS=	yes
 BINUTILS_GNUTARGET=	pe-i386
 BINUTILS_LDEMULATION=	i386pe

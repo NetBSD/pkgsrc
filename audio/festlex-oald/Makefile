@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2003/04/10 01:28:04 grant Exp $
+# $NetBSD: Makefile,v 1.13 2004/01/20 12:07:41 agc Exp $
 
 DISTNAME=	festlex_OALD
 PKGNAME=	festlex-oald-1.4.0
-WRKSRC=		${WRKDIR}/festival
 CATEGORIES=	audio
 MASTER_SITES=	ftp://ftp.cstr.ed.ac.uk/pub/festival/1.4.1/ \
 		http://www.speech.cs.cmu.edu/festival/cstr/festival/1.4.1/
@@ -15,6 +14,7 @@ DEPENDS+=	festival>=1.4.0:../festival
 
 LICENSE=	no-commercial-use
 
+WRKSRC=		${WRKDIR}/festival
 NO_BUILD=	yes
 
 FHOME=		${PREFIX}/share/festival

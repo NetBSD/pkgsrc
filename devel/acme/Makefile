@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2003/07/17 21:29:21 grant Exp $
+# $NetBSD: Makefile,v 1.5 2004/01/20 12:13:27 agc Exp $
 #
 
 DISTNAME=	acme085_linux
 PKGNAME=	acme-0.85
-WRKSRC=		${WRKTOP}/sources
 CATEGORIES=	devel
 MASTER_SITES=	http://www.esw-heim.tu-clausthal.de/~marco/cpf/current/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${LIBDIST}
@@ -14,6 +13,7 @@ COMMENT=	Cross assembler for 6502, 65c02, and 65816
 
 BUILD_DEPENDS+=	unzip-*:../../archivers/unzip
 
+WRKSRC=		${WRKTOP}/sources
 LIBDIST=	lib002.zip
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 WRKTOP=		${WRKDIR}/acme085

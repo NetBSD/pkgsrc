@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2003/12/24 09:53:47 jmmv Exp $
+# $NetBSD: Makefile,v 1.14 2004/01/20 12:07:06 agc Exp $
 
 DISTNAME=		stuffit520.611linux-i386
 PKGNAME=		stuffit-5.2.0.611
-WRKSRC=			${WRKDIR}
 CATEGORIES=		archivers
 MASTER_SITES=		ftp://ftp.aladdinsys.com/pub/linux/StuffIt/ \
 			ftp://ftp2.aladdinsys.com/pub/linux/StuffIt/
@@ -22,6 +21,7 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386
 
+WRKSRC=			${WRKDIR}
 CHECK_SHLIBS=		NO
 NO_CONFIGURE=		# defined
 NO_BUILD=		# defined

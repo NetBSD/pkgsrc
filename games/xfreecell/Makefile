@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2003/03/29 12:41:10 jmmv Exp $
+# $NetBSD: Makefile,v 1.4 2004/01/20 12:15:42 agc Exp $
 
 DISTNAME=	xfreecell-1.0.5b
-WRKSRC=		${WRKDIR}/xfreecell
 CATEGORIES=	games
 MASTER_SITES=   http://www2.giganet.net/~nakayama/
 EXTRACT_SUFX=	.tgz
@@ -14,6 +13,7 @@ USE_X11BASE=	yes
 USE_GMAKE=	yes
 MAKEFILE=	makefile
 
+WRKSRC=		${WRKDIR}/xfreecell
 NO_CONFIGURE=	YES
 
 .include "../../mk/bsd.pkg.mk"

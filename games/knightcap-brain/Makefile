@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2003/07/21 16:49:52 martti Exp $
+# $NetBSD: Makefile,v 1.8 2004/01/20 12:15:41 agc Exp $
 
 DISTNAME=		new_brain
 PKGNAME=		knightcap-brain-19980616
-WRKSRC=			${WRKDIR}
 CATEGORIES=		games
 MASTER_SITES=		ftp://samba.anu.edu.au/pub/KnightCap/
 EXTRACT_SUFX=		.dat
@@ -13,6 +12,7 @@ COMMENT=		Book of losing moves for KnightCap
 
 ONLY_FOR_PLATFORMS=	*-*-i386
 
+WRKSRC=			${WRKDIR}
 DIST_SUBDIR=		${PKGNAME}
 
 EXTRACT_ONLY=		# empty

@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2003/11/05 23:32:11 seb Exp $
+# $NetBSD: Makefile,v 1.6 2004/01/20 12:10:55 agc Exp $
 
 DISTNAME=		binutils-2.12.1
 PKGNAME=		cross-h8300-hms-binutils-2.12.1
-WRKSRC=			${WRKDIR}/objdir
 CATEGORIES=		cross
 MASTER_SITES=		ftp://ftp.gnu.org/gnu/binutils/
 EXTRACT_SUFX=		.tar.bz2
@@ -13,6 +12,7 @@ COMMENT=		h8300-hms cross utility
 
 H8300_PREFIX=		${PREFIX}/libexec/cross-h8300-hms
 
+WRKSRC=			${WRKDIR}/objdir
 USE_BUILDLINK2=		yes
 USE_GMAKE=		yes
 USE_MAKEINFO=		yes

@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2003/09/30 17:59:59 sjg Exp $
+# $NetBSD: Makefile,v 1.15 2004/01/20 12:13:28 agc Exp $
 #
 
 DISTNAME=	mk-20030930
 PKGNAME=	mk-files-20030930
-WRKSRC=		${WRKDIR}/mk
 CATEGORIES=	devel
 MASTER_SITES=   ftp://ftp.NetBSD.org/pub/incoming/sjg/
 
@@ -13,6 +12,8 @@ COMMENT=	Portable *.mk files for the NetBSD portable bmake utility
 
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
+
+WRKSRC=		${WRKDIR}/mk
 
 .include "../../mk/bsd.prefs.mk"
 

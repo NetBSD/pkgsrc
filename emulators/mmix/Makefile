@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2003/07/30 19:20:33 jtb Exp $
+# $NetBSD: Makefile,v 1.12 2004/01/20 12:14:41 agc Exp $
 
 DISTNAME=	mmix-20030622
-WRKSRC=		${WRKDIR}
 CATEGORIES=	emulators devel lang
 MASTER_SITES=	http://www-cs-faculty.stanford.edu/~knuth/programs/
 
@@ -11,6 +10,7 @@ COMMENT=	Simulators for Knuth's MMIX RISC architecture
 
 BUILD_DEPENDS+= cweb-[0-9]*:../../devel/cweb
 
+WRKSRC=		${WRKDIR}
 ALL_TARGET=	all doc
 
 do-install:

@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2004/01/19 20:18:02 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2004/01/20 12:07:07 agc Exp $
 #
 
 DISTNAME=	unrarsrc-3.3.4
 PKGNAME=	${DISTNAME:S/src//}
-WRKSRC=		${WRKDIR}/unrar
 CATEGORIES=	archivers
 MASTER_SITES=	http://www.rarlab.com/rar/
 
@@ -19,6 +18,8 @@ LICENSE=	unrar-license
 RESTRICTED=	"Do not modify. Do not charge a fee for redistribution."
 NO_SRC_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_CDROM=${RESTRICTED}
+
+WRKSRC=		${WRKDIR}/unrar
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/unrar

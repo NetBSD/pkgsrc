@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2004/01/03 18:49:39 reed Exp $
+# $NetBSD: Makefile,v 1.17 2004/01/20 12:14:05 agc Exp $
 
 DISTNAME=	ted-2.14.src
 PKGNAME=	ted-2.14
 PKGREVISION=			1
-WRKSRC=		${WRKDIR}/Ted-2.14
 CATEGORIES=	editors
 MASTER_SITES=	ftp://ftp.nluug.nl/pub/editors/ted/	\
 		ftp://metalab.unc.edu/pub/packages/editors/ted/
@@ -12,6 +11,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.nllgg.nl/Ted/
 COMMENT=	X11 based WordPad-like word processor
 
+WRKSRC=		${WRKDIR}/Ted-2.14
 USE_BUILDLINK2=	YES
 USE_X11BASE=	YES
 

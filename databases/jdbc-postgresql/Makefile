@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2003/08/23 15:16:37 jschauma Exp $
+# $NetBSD: Makefile,v 1.22 2004/01/20 12:12:49 agc Exp $
 #
 
 DISTNAME=		postgresql-${DIST_VERS}
 PKGNAME=		jdbc-${DISTNAME}
-WRKSRC=			${WRKDIR}/${DISTNAME}/src/interfaces/jdbc
 CATEGORIES=		databases java
 MASTER_SITES?=		http://www.postgresql.org/ftpsite/source/v${DIST_VERS}/ \
 			ftp://ftp.postgresql.org/pub/source/v${DIST_VERS}/ \
@@ -24,6 +23,7 @@ BUILD_DEPENDS+=		apache-ant-[0-9]*:../../devel/apache-ant
 
 EXTRACT_ELEMENTS=	${DISTNAME}/src/interfaces/jdbc
 
+WRKSRC=			${WRKDIR}/${DISTNAME}/src/interfaces/jdbc
 USE_GMAKE=		YES
 
 EXAMPLEDIR=		${PREFIX}/share/examples/java/jdbc-postgresql

@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2004/01/03 18:49:39 reed Exp $
+# $NetBSD: Makefile,v 1.4 2004/01/20 12:13:29 agc Exp $
 #
 
 DISTNAME=	ogre-v0-12-1
 PKGNAME=	ogre-0.12.1
 PKGREVISION=			1
-WRKSRC=		${WRKDIR}/ogrenew
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ogre/}
 EXTRACT_SUFX=	.tar.bz2
@@ -13,6 +12,7 @@ MAINTAINER=	xtraeme@NetBSD.org
 HOMEPAGE=	http://ogre.sourceforge.net/
 COMMENT=	Object-Oriented Graphics Rendering Engine
 
+WRKSRC=			${WRKDIR}/ogrenew
 GNU_CONFIGURE=		yes
 USE_BUILDLINK2=		yes
 USE_GMAKE=		yes

@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2003/07/17 21:37:14 grant Exp $
+# $NetBSD: Makefile,v 1.8 2004/01/20 12:15:17 agc Exp $
 # Based on FreeBSD Id: Makefile,v 1.6 1999/02/12 17:23:40 motoyuki Exp
 #
 
 DISTNAME=	jisx0212fonts-0.0
-WRKSRC=		${WRKDIR}
 CATEGORIES=	fonts x11 japanese
 MASTER_SITES=	ftp://ginkaku.kudpc.kyoto-u.ac.jp/fonts/ \
 		ftp://ftp.jp.NetBSD.org/pub/NetBSD-jp/tut-jp/fonts/ \
@@ -13,6 +12,7 @@ DISTFILES=	${BDF14} ${BDF16} ${BDF24} ${BDF40}
 MAINTAINER=	itojun@itojun.org
 COMMENT=	X11 X0212-1990 font.  14, 16, 24 and 40 dots availble
 
+WRKSRC=		${WRKDIR}
 USE_X11BASE=	yes
 EXTRACT_ONLY=	${DISTFILES}
 MAKE_ENV+=	DISTDIR=${DISTDIR} DISTFILES="${DISTFILES}"

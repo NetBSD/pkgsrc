@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/10/04 19:13:28 jschauma Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/20 12:08:40 agc Exp $
 #
 
 DISTNAME=		xylem.1.8.7
 PKGNAME=		xylem-1.8.7
-WRKSRC=                 ${WRKDIR}/xylem/src.c
 CATEGORIES=		biology
 MASTER_SITES=		ftp://ftp.cc.umanitoba.ca/psgendb/
 EXTRACT_SUFX=		.tar.Z
@@ -12,6 +11,7 @@ MAINTAINER=		hdp@cs.nmsu.edu
 HOMEPAGE=		http://home.cc.umanitoba.ca/~psgendb/XYLEM.html
 COMMENT=		Tools for manipulation of genetic databases
 
+WRKSRC=                 ${WRKDIR}/xylem/src.c
 USE_BUILDLINK2=		YES
 
 do-configure:

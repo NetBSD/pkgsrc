@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2003/07/17 21:25:21 grant Exp $
+# $NetBSD: Makefile,v 1.6 2004/01/20 12:09:09 agc Exp $
 #
 
 DISTNAME=	simian_man_12_98
 PKGNAME=	simian-docs-2.1
-WRKSRC=		${WRKDIR}
 CATEGORIES=	cad
 MASTER_SITES=	http://weewave.mer.utexas.edu/MED_files/MED_research/Intrcncts/SIMIAN_stuff/simian_mnl_ps_pdf/
 EXTRACT_SUFX=	.pdf
@@ -18,6 +17,7 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_SRC_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 
+WRKSRC=		${WRKDIR}
 EXTRACT_ONLY=	# empty
 NO_CONFIGURE=	yes
 NO_BUILD=	yes

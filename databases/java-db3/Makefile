@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2003/08/23 15:16:36 jschauma Exp $
+# $NetBSD: Makefile,v 1.12 2004/01/20 12:12:49 agc Exp $
 
 DISTNAME=	db-3.3.11
 PKGNAME=	java-db3-3.11.2
-WRKSRC=		${WRKDIR}/${DISTNAME}/build_unix
 CATEGORIES=	databases java
 MASTER_SITES=	http://www.sleepycat.com/update/3.3.11/
 
@@ -21,6 +20,7 @@ JAVAC=			${PKG_JAVA_HOME}/bin/javac
 JAR=			${PKG_JAVA_HOME}/bin/jar
 JAVACABS=		${JAVAC}
 
+WRKSRC=			${WRKDIR}/${DISTNAME}/build_unix
 USE_BUILDLINK2=		yes
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool

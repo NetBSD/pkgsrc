@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2003/12/24 09:53:48 jmmv Exp $
+# $NetBSD: Makefile,v 1.3 2004/01/20 12:07:43 agc Exp $
 #
 
 DISTNAME=		xmms-meta-timidity-0.1
-WRKSRC=			${WRKDIR}
 CATEGORIES=		audio
 MASTER_SITES=		# empty
 DISTFILES=		# empty
@@ -14,6 +13,7 @@ COMMENT=		XMMS meta input script for timidity
 DEPENDS+=		timidity-[0-9]*:../../audio/timidity
 DEPENDS+=		eawpatches-[0-9]*:../../audio/eawpatches
 
+WRKSRC=			${WRKDIR}
 USE_BUILDLINK2=		yes
 
 do-build:

@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2003/11/06 20:00:12 reed Exp $
+# $NetBSD: Makefile,v 1.10 2004/01/20 12:07:41 agc Exp $
 #
 
 DISTNAME=	faad2-1.1
-WRKSRC=		${WRKDIR}/faad2
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=faac/}
 
@@ -14,6 +13,7 @@ RESTRICTED=	Dolby doesn't allow binary distributions
 NO_BIN_ON_FTP=	${RESTRICTED}
 NO_BIN_ON_CDROM=${RESTRICTED}
 
+WRKSRC=		${WRKDIR}/faad2
 USE_BUILDLINK2=		YES
 USE_GCC_SHLIB=		YES
 USE_GMAKE=		YES

@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2003/07/17 21:36:57 grant Exp $
+# $NetBSD: Makefile,v 1.6 2004/01/20 12:15:17 agc Exp $
 #
 
 DISTNAME=	bakoma-20010719
 PKGNAME=	bakoma-fonts-1.1
-WRKSRC=		${WRKDIR}/bakoma
 CATEGORIES=	fonts
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 # The "on the fly" distfile creation from CTAN messes up the checksums.
@@ -17,6 +16,7 @@ LICENSE+=		no-commercial-use
 NO_SRC_ON_CDROM=	#defined
 NO_BIN_ON_CDROM=	#defined
 BAKOMA_DIR=		${PREFIX}/share/tex-contrib/BaKoMa
+WRKSRC=			${WRKDIR}/bakoma
 
 do-build:
 	${RM} -f ${WRKSRC}/fontmap.map

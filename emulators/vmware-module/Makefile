@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2003/07/17 21:36:22 grant Exp $
+# $NetBSD: Makefile,v 1.14 2004/01/20 12:14:41 agc Exp $
 
 DISTNAME=	vmware-netbsd-1.2
 PKGNAME=	vmware-module-1.2
-WRKSRC=		${WRKDIR}
 CATEGORIES=	emulators
 MASTER_SITES=   ftp://ftp.NetBSD.org/pub/NetBSD/misc/vmware/
 EXTRACT_SUFX=	.tgz
@@ -15,6 +14,7 @@ CONFLICTS=	vmware-module-3*
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386
 
+WRKSRC=		${WRKDIR}
 NO_CONFIGURE=	# defined
 
 NO_SRC_ON_FTP=		already there

@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2003/09/25 09:19:28 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.9 2004/01/20 12:14:41 agc Exp $
 #
 PEACE_VERSION=	20030919
 DISTNAME=	peace-0.0.${PEACE_VERSION}
 SITES_peace-20030919.tar.gz=http://cvs.kshosen.ac.jp/PEACE/src/
-WRKSRC=		${WRKDIR}/peace
 CATEGORIES=	emulators
 
 MAINTAINER=	peace-sacrifice@hauN.org
@@ -21,6 +20,8 @@ DEPENDS+=	icu>=2.4nb1:../../textproc/icu
 BUILD_DEPENDS=	cross-i386-netbsdpe>=1.3:../../cross/i386-netbsdpe
 BUILD_DEPENDS+=	w32api>=2.4:../../devel/w32api
 BUILD_DEPENDS+= x11-links-*:../../pkgtools/x11-links
+
+WRKSRC=		${WRKDIR}/peace
 CPPFLAGS+=	-I${WRKDIR}/cross/i386-netbsdpe/include \
 		-I${WRKDIR}/cross/i386-netbsdpe/include/c++
 LDFLAGS=	-L${WRKSRC}/lib

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2003/07/17 21:33:56 grant Exp $
+# $NetBSD: Makefile,v 1.12 2004/01/20 12:13:29 agc Exp $
 #
 
 # pkgsrc/mail/sendmail (as of 8.11.0) specifically wants 1999, not 2000.
@@ -10,7 +10,6 @@
 #
 DISTNAME=       sfio_1999.src.unix
 PKGNAME=        sfio-1999
-WRKSRC=		${WRKDIR}
 CATEGORIES=	devel
 MASTER_SITES=   ${MASTER_SITE_LOCAL}
 EXTRACT_SUFX=	.cpio
@@ -18,6 +17,8 @@ EXTRACT_SUFX=	.cpio
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://akpublic.research.att.com/sw/tools/sfio/
 COMMENT=	Safe and Fast IO library
+
+WRKSRC=		${WRKDIR}
 
 do-extract:
 	@${MKDIR} ${WRKDIR}

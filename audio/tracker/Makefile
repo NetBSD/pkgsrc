@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.27 2003/08/09 10:29:56 seb Exp $
+# $NetBSD: Makefile,v 1.28 2004/01/20 12:07:43 agc Exp $
 # FreeBSD Id: Makefile,v 1.29 1996/12/20 23:46:22 ache Exp
 #
 
 DISTNAME=		tracker-5.3
 PKGREVISION=		1
-WRKSRC=			${WRKDIR}/tracker
 CATEGORIES=		audio
 MASTER_SITES=		# empty
 EXTRACT_SUFX=		.tgz
@@ -18,6 +17,7 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_SRC_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 
+WRKSRC=			${WRKDIR}/tracker
 MAKE_FLAGS=		MACHINE=netbsd CC=${CC} INSTALL="${INSTALL}" \
 		INST_BIN_OPT="-c -s -m ${BINMODE} -o ${BINOWN} -g ${BINGRP}" \
 		INST_MAN_OPT="-c -m 644 -o ${BINOWN} -g ${BINGRP}" \

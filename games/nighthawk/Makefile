@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2003/07/17 21:39:10 grant Exp $
+# $NetBSD: Makefile,v 1.15 2004/01/20 12:15:41 agc Exp $
 #
 
 DISTNAME=		nighthawk-2.1
-WRKSRC=			${WRKDIR}/nighthawk
 CATEGORIES=		x11 games
 MASTER_SITES=		http://jsno.downunder.net.au/proj_linux/nighthawk.html
 EXTRACT_SUFX=		.tgz
@@ -15,6 +14,7 @@ MAINTAINER=		hubertf@NetBSD.org
 HOMEPAGE=		http://jsno.arafuraconnect.com.au/proj_linux/nighthawk.html
 COMMENT=		C=64 Paradroid clone
 
+WRKSRC=			${WRKDIR}/nighthawk
 USE_BUILDLINK2=		YES
 USE_GMAKE=		YES
 USE_X11=		YES

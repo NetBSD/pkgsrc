@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2003/11/18 14:34:33 xtraeme Exp $
+# $NetBSD: Makefile,v 1.9 2004/01/20 12:15:42 agc Exp $
 #
 
 DISTNAME=		xnibbles-1.0BETA4
 PKGNAME=		xnibbles-1.0b4
 PKGREVISION=		1
-WRKSRC=			${WRKDIR}/xnibbles
 CATEGORIES=		games x11
 MASTER_SITES=		http://www.tjhsst.edu/xnibbles/
 
@@ -12,6 +11,7 @@ MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.tjhsst.edu/xnibbles/
 COMMENT=		Winding snakes game for X11
 
+WRKSRC=			${WRKDIR}/xnibbles
 USE_BUILDLINK2=		YES
 USE_X11=		YES
 USE_GMAKE=		YES

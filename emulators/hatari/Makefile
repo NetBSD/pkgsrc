@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2004/01/01 03:18:15 cjep Exp $
+# $NetBSD: Makefile,v 1.8 2004/01/20 12:14:41 agc Exp $
 #
 
 DISTNAME=	hatari-0.45
-WRKSRC=		${WRKDIR}/${DISTNAME}/src
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=hatari/}
 
@@ -10,6 +9,7 @@ MAINTAINER=	cjep@NetBSD.org
 HOMEPAGE=	http://hatari.sourceforge.net/
 COMMENT=	Atari ST emulator
 
+WRKSRC=		${WRKDIR}/${DISTNAME}/src
 USE_BUILDLINK2=	YES
 USE_X11=	YES
 USE_GMAKE=	YES

@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2004/01/03 18:49:41 reed Exp $
+# $NetBSD: Makefile,v 1.6 2004/01/20 12:15:41 agc Exp $
 #
 
 DISTNAME=	tuxmath-2001.09.07-0102
 PKGNAME=	tuxmath-20010907
 PKGREVISION=			3
-WRKSRC=		${WRKDIR}/tuxmath
 CATEGORIES=	games math
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tuxmath/}
 
@@ -12,6 +11,7 @@ MAINTAINER=	reed@reedmedia.net
 HOMEPAGE=	http://www.newbreedsoftware.com/tuxmath/
 COMMENT=	Educational math arcade game
 
+WRKSRC=		${WRKDIR}/tuxmath
 USE_BUILDLINK2=	YES
 USE_GMAKE=	YES
 NO_CONFIGURE=	# defined

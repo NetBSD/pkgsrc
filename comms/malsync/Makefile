@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2003/07/21 16:35:14 martti Exp $
+# $NetBSD: Makefile,v 1.11 2004/01/20 12:10:01 agc Exp $
 #
 
 DISTNAME=	${PKGNAME_NOREV:S/-/_/}.src
 PKGNAME=	malsync-2.1.1
 PKGREVISION=			1
-WRKSRC=		${WRKDIR}/malsync
 CATEGORIES=	comms
 MASTER_SITES=	http://www.tomw.org/malsync/
 
@@ -12,6 +11,7 @@ MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://www.tomw.org/malsync/
 COMMENT=	Utility to synchronize Palm Pilots to the AvantGo.com service
 
+WRKSRC=		${WRKDIR}/malsync
 USE_BUILDLINK2=		YES
 USE_GMAKE=		YES
 MAKE_ENV+=		PILOT_LINK_DIR=${BUILDLINK_PREFIX.pilot-link-libs}

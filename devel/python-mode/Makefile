@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2004/01/15 09:07:31 markd Exp $
+# $NetBSD: Makefile,v 1.8 2004/01/20 12:13:29 agc Exp $
 #
 
 DISTNAME=	python-mode-4.6
 PKGREVISION=	1
-WRKSRC=		${WRKDIR}
 CATEGORIES=	devel
 MASTER_SITES=	http://www.python.org/emacs/python-mode/
 DISTFILES=	python-mode.el
@@ -15,6 +14,8 @@ COMMENT=	Emacs mode for editing python files
 # Note that XEmacs >=21.4.4 includes a python-mode in the prog-modes
 # package. Also, python-mode does not appear to work as is with XEmacs 21.1
 EMACS_VERSIONS_ACCEPTED= emacs21 emacs21nox emacs20
+
+WRKSRC=		${WRKDIR}
 
 .include "../../mk/emacs.mk"
 

@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2003/09/09 18:00:24 hubertf Exp $
+# $NetBSD: Makefile,v 1.13 2004/01/20 12:14:06 agc Exp $
 #
 
 DISTNAME=	vigor-0.016
-WRKSRC=		${WRKDIR}/${DISTNAME}/build
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=vigor/}
 
@@ -12,6 +11,7 @@ COMMENT=	nvi with excessive online "help"
 
 CONFLICTS+=	nvi-[0-9]*
 
+WRKSRC=		${WRKDIR}/${DISTNAME}/build
 USE_X11=	yes
 USE_BUILDLINK2=	yes
 

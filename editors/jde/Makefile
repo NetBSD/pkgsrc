@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2003/08/23 15:10:41 jschauma Exp $
+# $NetBSD: Makefile,v 1.13 2004/01/20 12:14:05 agc Exp $
 #
 
 DISTNAME=       jde-2.3.2
-WRKSRC=         ${WRKDIR}/${DISTNAME}/lisp
 CATEGORIES=     devel editors java
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 # The "real" site has silly naming conventions:
@@ -16,6 +15,8 @@ DEPENDS+=       speedbar>=0.14rc2:../../editors/speedbar
 DEPENDS+=       eieio>=0.17:../../lang/eieio
 DEPENDS+=       semantic>=1.4rc13:../../devel/semantic
 DEPENDS+=       elib>=1.0:../../devel/elib
+
+WRKSRC=         ${WRKDIR}/${DISTNAME}/lisp
 
 .include "../../mk/emacs.mk"
 

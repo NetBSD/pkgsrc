@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/09/27 22:24:56 jschauma Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/20 12:08:40 agc Exp $
 #
 
 DISTNAME=		MUMmer3.04
 PKGNAME=		mummer-3.04
-WRKSRC=			${WRKDIR}/${DISTNAME}
 CATEGORIES=		biology
 MASTER_SITES=		ftp://ftp.tigr.org/pub/software/MUMmer/
 
@@ -11,6 +10,7 @@ MAINTAINER=		hdp@cs.nmsu.edu
 HOMEPAGE=		http://www.tigr.org/software/mummer/
 COMMENT=		System for aligning whole genome sequences
 
+WRKSRC=			${WRKDIR}/${DISTNAME}
 USE_BUILDLINK2=		YES
 USE_GNU_TOOLS+=		make
 

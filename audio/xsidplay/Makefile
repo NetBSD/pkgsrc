@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.24 2003/07/17 21:24:22 grant Exp $
+# $NetBSD: Makefile,v 1.25 2004/01/20 12:07:43 agc Exp $
 #
 
 DISTNAME=	xsidplay-1_5_4
 PKGNAME=	xsidplay-1.5.4
 PKGREVISION=	1
-WRKSRC=		${WRKDIR}/xsidplay-1.5.4
 CATEGORIES=	audio x11
 MASTER_SITES=	http://www.geocities.com/SiliconValley/Lakes/5147/sidplay/packages/
 EXTRACT_SUFX=	.tgz
@@ -13,6 +12,7 @@ MAINTAINER=	pooka@NetBSD.org
 HOMEPAGE=	http://www.geocities.com/SiliconValley/Lakes/5147/sidplay/
 COMMENT=	Commodore 64 music player and SID chip emulator for X11
 
+WRKSRC=			${WRKDIR}/xsidplay-1.5.4
 USE_BUILDLINK2=		yes
 USE_LIBTOOL=		yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig

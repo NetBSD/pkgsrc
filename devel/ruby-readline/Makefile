@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2003/12/19 12:04:20 sketch Exp $
+# $NetBSD: Makefile,v 1.8 2004/01/20 12:13:29 agc Exp $
 #
 
 DISTNAME=		${RUBY_DISTNAME}
 PKGNAME=		${RUBY_PKGNAMEPREFIX}readline-${RUBY_VERSION}
 PKGREVISION=		2
-WRKSRC=			${RUBY_WRKSRC}/ext/readline
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_RUBY}
 
@@ -12,6 +11,7 @@ MAINTAINER=		taca@NetBSD.org
 HOMEPAGE=		http://www.ruby-lang.org/en/
 COMMENT=		Ruby extension to readline library
 
+WRKSRC=			${RUBY_WRKSRC}/ext/readline
 DIST_SUBDIR=		ruby
 USE_GNU_READLINE=	# uses rl_event_hook interface to GNU readline
 USE_BUILDLINK2=		# defined

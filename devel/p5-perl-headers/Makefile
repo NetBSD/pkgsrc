@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2004/01/05 22:16:25 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2004/01/20 12:13:29 agc Exp $
 
 DISTNAME=		p5-perl-headers
 PKGNAME=		${DISTNAME}-${OS_VERSION}
 SVR4_PKGNAME=		p5plh
-WRKSRC=			${WRKDIR}
 CATEGORIES=		devel perl5
 MASTER_SITES=		# empty
 DISTFILES=		# empty
@@ -14,6 +13,7 @@ COMMENT=		Perl header files
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
+WRKSRC=			${WRKDIR}
 USE_BUILDLINK3=		yes
 PERL5_PACKLIST=		${PERL5_SITEARCH}/.packlist.h2ph
 

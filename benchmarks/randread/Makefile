@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2003/07/21 16:31:04 martti Exp $
+# $NetBSD: Makefile,v 1.5 2004/01/20 12:08:12 agc Exp $
 #
 
 DISTNAME=	randread-0.1
-WRKSRC=		${WRKDIR}
 CATEGORIES=	benchmarks
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=randread/}
 
@@ -11,6 +10,7 @@ HOMEPAGE=	http://randread.sourceforge.net/
 COMMENT=	Program to help benchmark random disk read performance
 
 ALL_TARGET=	randread
+WRKSRC=		${WRKDIR}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/randread ${PREFIX}/sbin

@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2003/07/17 21:21:46 grant Exp $
+# $NetBSD: Makefile,v 1.4 2004/01/20 12:07:07 agc Exp $
 #
 
 DISTNAME=	unzoo.c
 PKGNAME=	unzoo-4.4
-WRKSRC=		${WRKDIR}
 CATEGORIES=	archivers
 MASTER_SITES=	ftp://ftp.math.rwth-aachen.de/pub/gap/gap4/util/
 EXTRACT_SUFX=	# defined
@@ -11,6 +10,7 @@ EXTRACT_SUFX=	# defined
 MAINTAINER=	cjep@NetBSD.org
 COMMENT=	Extract zoo archives
 
+WRKSRC=		${WRKDIR}
 USE_BUILDLINK2=	YES
 
 do-extract:

@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2003/07/21 16:45:55 martti Exp $
+# $NetBSD: Makefile,v 1.19 2004/01/20 12:14:41 agc Exp $
 
 DISTNAME=		linuxppc_lib-2000.4.6
-WRKSRC=			${WRKDIR}/${DISTNAME}
 CATEGORIES=		emulators
 MASTER_SITES+=		ftp://ftp.linuxppc.org/linuxppc-halloween/software/
 MASTER_SITES+=		http://linuxppc.org/software/java/dl/motif/
@@ -38,6 +37,7 @@ ONLY_FOR_PLATFORM=	NetBSD-1.5[U-Z]-macppc NetBSD-1.5Z[A-Z]-macppc \
 			NetBSD-1.5[U-Z]-sandpoint NetBSD-1.5Z[A-Z]-sandpoint \
 			NetBSD-1.[6-9]*-sandpoint
 
+WRKSRC=			${WRKDIR}/${DISTNAME}
 SHLIB_HANDLING=		NO
 CHECK_SHLIBS=		NO
 DIST_SUBDIR=		linuxppc_lib

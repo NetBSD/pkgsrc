@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2004/01/03 18:49:40 reed Exp $
+# $NetBSD: Makefile,v 1.9 2004/01/20 12:15:39 agc Exp $
 #
 
 DISTNAME=		asc-source-1.13.8.0
 PKGNAME=		${DISTNAME:S/-source//}
 PKGREVISION=				2
-WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=asc-hq/}
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX} ${AUDIO_FILES}
@@ -16,6 +15,7 @@ COMMENT=		Turn based strategy game
 AUDIO_FILES=		frontiers.mp3 machine_wars.mp3 time_to_strike.mp3
 EXTRACT_ONLY=		${DISTNAME}${EXTRACT_SUFX}
 
+WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 USE_BUILDLINK2=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes

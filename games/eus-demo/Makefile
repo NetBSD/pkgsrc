@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2003/09/19 05:18:37 dent Exp $
+# $NetBSD: Makefile,v 1.12 2004/01/20 12:15:40 agc Exp $
 
 DISTNAME=	eus-demo
 PKGNAME=	eus-demo-1.0
-WRKSRC=		${WRKDIR}/${WRKNAME}
 CATEGORIES=	games x11
 MASTER_SITES=	ftp://ftp.linuxgames.com/loki/demos/eus/ \
 		ftp://download.linuxlords.com/pub/demos/eus/ \
@@ -12,6 +11,7 @@ MAINTAINER=	abs@NetBSD.org
 HOMEPAGE=	http://www.lokigames.com/products/eus/
 COMMENT=	Eric's Ultimate Solitaire (linux demo)
 
+WRKSRC=			${WRKDIR}/${WRKNAME}
 NO_CONFIGURE=		yes
 
 # Someone needs to look at alpha, powerpc and sparc compat_linux

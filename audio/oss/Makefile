@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2004/01/05 20:50:01 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2004/01/20 12:07:43 agc Exp $
 
 DISTNAME=	oss-${OSS_VERSION}	# Overridden below
 PKGNAME=	oss-${OSS_VERSION}
-WRKSRC=		${WRKDIR}
 CATEGORIES=	audio sysutils
 MASTER_SITES=	ftp://ftp.opensound.com/pub/oss/netbsd/
 
@@ -25,6 +24,7 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_SRC_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 
+WRKSRC=			${WRKDIR}
 USE_BUILDLINK3=		yes
 USE_PKGINSTALL=		yes
 NO_CONFIGURE=		yes

@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/01/05 23:50:20 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/20 12:13:28 agc Exp $
 
 DISTNAME=	cvsup-static-16.1.h
 PKGNAME=	${DISTNAME:C/static/bin/}
-WRKSRC=		${WRKDIR}
 CATEGORIES=	devel
 MASTER_SITES=	http://motoyuki.bsdclub.org/data/NetBSD/CVSup/i386/
 EXTRACT_SUFX=	.tgz
@@ -11,6 +10,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://people.freebsd.org/~jdp/
 COMMENT=	cvsup daemon and client
 
+WRKSRC=		${WRKDIR}
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 ONLY_FOR_PLATFORM=	NetBSD-1.[5-9]*-i386

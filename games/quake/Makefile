@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2003/11/30 22:58:41 jschauma Exp $
+# $NetBSD: Makefile,v 1.28 2004/01/20 12:15:41 agc Exp $
 
 DISTNAME=	q1source
 PKGNAME=	quake-2.30
 PKGREVISION=	3
-WRKSRC=		${WRKDIR}
 CATEGORIES=	games x11
 MASTER_SITES=	ftp://ftp.fu-berlin.de/pc/msdos/games/idgames/idstuff/source/ \
 		ftp://ftp.idsoftware.com/idstuff/source/
@@ -17,6 +16,7 @@ DEPENDS+=	quakedata-[0-9]*:../../games/quakedata
 
 ONLY_FOR_PLATFORM=	*-*-i386
 
+WRKSRC=		${WRKDIR}
 USE_BUILDLINK2=	yes
 USE_GMAKE=	yes
 MAKE_ENV+=	MAINDIR=${WRKSRC}

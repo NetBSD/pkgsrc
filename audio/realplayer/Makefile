@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2003/11/15 00:20:28 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.23 2004/01/20 12:07:43 agc Exp $
 
 PKGNAME=		realplayer-8.0.1
-WRKSRC=			${WRKDIR}/RealPlayer8
 CATEGORIES=		audio
 MASTER_SITES=		# empty
 EXTRACT_SUFX=		.bin
@@ -39,6 +38,7 @@ ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-*-sparc SunOS-*-sparc
 
 CONFLICTS=		realplayer-codecs<8nb2
 
+WRKSRC=			${WRKDIR}/RealPlayer8
 CRYPTO=			# defined
 INTERACTIVE_STAGE=	fetch extract
 CHECK_SHLIBS=		NO

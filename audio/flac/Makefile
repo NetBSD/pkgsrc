@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2003/12/24 09:53:47 jmmv Exp $
+# $NetBSD: Makefile,v 1.15 2004/01/20 12:07:42 agc Exp $
 #
 
 DISTNAME=		flac-1.1.0
 PKGREVISION=				1
-WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 CATEGORIES=		audio archivers
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=flac/}
 
@@ -17,6 +16,7 @@ COMMENT=		Free lossless audio codec
 BUILD_DEPENDS+=		nasm>=0.98:../../devel/nasm
 .endif
 
+WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 USE_BUILDLINK2=		yes
 USE_GMAKE=		yes
 GNU_CONFIGURE=		yes

@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2004/01/05 20:48:01 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2004/01/20 12:12:49 agc Exp $
 
 DISTNAME=	db-3.3.11
 PKGNAME=	db3-3.11.2
 PKGREVISION=	1
-WRKSRC=		${WRKDIR}/${DISTNAME}/build_unix
 CATEGORIES=	databases
 MASTER_SITES=	http://www.sleepycat.com/update/snapshot/
 
@@ -17,6 +16,7 @@ PATCH_DIST_ARGS=-d ${WRKSRC}/.. --forward --quiet -p0
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
+WRKSRC=			${WRKDIR}/${DISTNAME}/build_unix
 USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKDIR}/${DISTNAME}/build_unix/libtool

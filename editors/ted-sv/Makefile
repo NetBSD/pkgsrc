@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2003/07/17 21:35:01 grant Exp $
+# $NetBSD: Makefile,v 1.8 2004/01/20 12:14:06 agc Exp $
 
 DISTNAME=	Ted_sv_SE
 PKGNAME=	ted-sv-2.14
-WRKSRC=		${WRKDIR}
 CATEGORIES=	editors
 MASTER_SITES=	ftp://ftp.nluug.nl/pub/editors/ted/ \
 		ftp://metalab.unc.edu/pub/packages/editors/ted/
@@ -13,6 +12,7 @@ COMMENT=	Swedish spelling dictionary for the Ted word processor
 
 DEPENDS+=       ted>=2.6:../../editors/ted
 
+WRKSRC=		${WRKDIR}
 USE_X11BASE=	YES
 
 DIST_SUBDIR=	Ted-2.14

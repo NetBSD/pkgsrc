@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.9 2003/07/21 16:43:48 martti Exp $
+# $NetBSD: Makefile,v 1.10 2004/01/20 12:13:30 agc Exp $
 #
 
 DISTNAME=	xxgdb-1.12
-WRKSRC=		${WRKDIR}/${DISTNAME}
 CATEGORIES=	devel x11
 MASTER_SITES=	${MASTER_SITE_XCONTRIB:=utilities/}
 
 MAINTAINER=	rh@trapdoor.vip.at
 COMMENT=	Graphical X11 interface for gdb
 
+WRKSRC=		${WRKDIR}/${DISTNAME}
 USE_IMAKE=	yes
 
 .include "../../mk/bsd.prefs.mk"
