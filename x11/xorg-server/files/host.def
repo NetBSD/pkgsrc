@@ -1,0 +1,44 @@
+/* $NetBSD: host.def,v 1.1.1.1 2004/07/29 04:52:42 xtraeme Exp $ */
+
+#define ProjectRoot @PREFIX@
+#define BuildHtmlManPages NO
+
+/* Workaround */
+#define XorgVersion 670
+
+#define MakeCmd @MAKE@
+#define HasGnuMake      NO
+#define ImakeCmd @IMAKE@
+#define RmanCmd @RMAN@
+#define HtmlIndexCmd @MKHTMLINDEX@
+#define DependDir @GCCMAKEDEP@
+#define DependCmd @MAKEDEPEND@
+#define RevPathCmd @REVPATH@
+
+#define NothingOutsideProjectRoot YES
+#define InstallXserverSetUID YES
+
+#define BuildServer YES
+#define LibInstallBuild YES
+#define ModInstall YES
+#define XF86Server YES
+#define BuildServersOnly YES
+#define BuildGLXLibrary YES
+#define BuildXFree86ConfigTools YES
+#define UseInstalledPrograms YES
+
+#define BuildFontCache NO
+#define BuiltFontLib NO
+
+#define StandardIncludes -I@BLNK@/include
+#define ExtraLoadFlags @LDFLAGS@
+
+#define XTrueTypeInstallCConvHeaders NO
+
+#define HasFreetype2 YES
+#define Freetype2Dir @BLNK@
+
+#define HasFontconfig YES
+#define FontconfigDir @BLNK@
+
+#define BuildHtmlManPages NO
