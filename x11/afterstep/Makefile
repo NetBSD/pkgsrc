@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2000/08/23 23:14:33 tron Exp $
+# $NetBSD: Makefile,v 1.26 2000/08/26 17:15:06 veego Exp $
 
 DISTNAME=	AfterStep-1.8.0
 PKGNAME=	afterstep-1.8.0
@@ -19,7 +19,7 @@ DEPENDS+=		xp-*:../../x11/xp
 
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
-USE_PERL=		YES
+USE_PERL5=		YES
 USE_X11=		YES
 USE_XPM=		YES
 
