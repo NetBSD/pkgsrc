@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 1999/07/15 12:23:57 tron Exp $
+@comment $NetBSD: PLIST,v 1.10 1999/08/17 18:26:02 rh Exp $
 bin/mc
 bin/mcedit
 bin/mcmfmt
@@ -62,12 +62,15 @@ lib/mc/term/xterm.ti
 man/man1/mc.1
 man/man1/mcedit.1
 man/man8/mcserv.8
+share/locale/ca/LC_MESSAGES/mc.mo
 share/locale/cs/LC_MESSAGES/mc.mo
 share/locale/da/LC_MESSAGES/mc.mo
 share/locale/de/LC_MESSAGES/mc.mo
 share/locale/es/LC_MESSAGES/mc.mo
 share/locale/es_ES/LC_MESSAGES/mc.mo
+share/locale/fi/LC_MESSAGES/mc.mo
 share/locale/fr/LC_MESSAGES/mc.mo
+share/locale/hu/LC_MESSAGES/mc.mo
 share/locale/it/LC_MESSAGES/mc.mo
 share/locale/ja/LC_MESSAGES/mc.mo
 share/locale/ko/LC_MESSAGES/mc.mo
@@ -75,6 +78,8 @@ share/locale/no/LC_MESSAGES/mc.mo
 share/locale/pl/LC_MESSAGES/mc.mo
 share/locale/ro/LC_MESSAGES/mc.mo
 share/locale/ru/LC_MESSAGES/mc.mo
+share/locale/wa/LC_MESSAGES/mc.mo
+share/locale/zh_TW.Big5/LC_MESSAGES/mc.mo
 @dirrm lib/mc/term
 @dirrm lib/mc/syntax
 @dirrm lib/mc/extfs

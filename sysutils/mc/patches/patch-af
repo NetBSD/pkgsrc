@@ -1,17 +1,17 @@
-$NetBSD: patch-af,v 1.7 1999/04/04 23:00:41 tron Exp $
+$NetBSD: patch-af,v 1.8 1999/08/17 18:26:02 rh Exp $
 
---- Makefile.in.orig	Tue Mar 30 08:34:33 1999
-+++ Makefile.in	Mon Apr  5 00:47:35 1999
+--- Makefile.in.orig	Tue Jul 13 05:57:18 1999
++++ Makefile.in	Tue Aug 17 19:03:25 1999
 @@ -5,7 +5,7 @@
  @MCFGR@@MCF@
  
  foreigndirs=pc
--codedirs=vfs lib doc slang gtkedit edit src gnome new_icons icons idl syntax
-+codedirs=vfs lib doc slang gtkedit edit src new_icons icons syntax
+-codedirs=vfs lib doc doc-gnome doc-gnome/C doc-gnome/C/figs slang gtkedit edit src gnome new_icons icons idl syntax
++codedirs=vfs lib doc slang gtkedit edit src gnome new_icons icons syntax
  unixdirs=intl $(codedirs) @POSUB@
  alldirs=$(unixdirs) $(foreigndirs) 
  subdirs=$(alldirs)
-@@ -46,7 +46,7 @@
+@@ -45,7 +45,7 @@
  install: installdirs
  	@for I in $(unixdirs); do cd $$I; $(MAKE) DESTDIR=$(DESTDIR) $@ || exit 1; cd ..; done
  	$(INSTALL_DATA) $(srcdir)/FAQ $(DESTDIR)$(mclibdir)/FAQ
@@ -20,7 +20,7 @@ $NetBSD: patch-af,v 1.7 1999/04/04 23:00:41 tron Exp $
  	chmod +x $(DESTDIR)$(suppbindir)/mcfn_install
  	@echo "Please verify that the configuration values are correctly"
  	@echo "set in the mc.ext file in $(mclibdir)"
-@@ -58,9 +58,8 @@
+@@ -57,9 +57,8 @@
  installdirs:
  	$(MKINSTALLDIRS) $(DESTDIR)$(bindir) $(DESTDIR)$(mclibdir)
  	$(MKINSTALLDIRS) $(DESTDIR)$(mandir) $(DESTDIR)$(man8dir)
