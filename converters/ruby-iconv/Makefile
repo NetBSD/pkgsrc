@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/09/10 16:06:37 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2002/10/09 17:40:58 wiz Exp $
 #
 
 DISTNAME=	iconv-0.4.4
@@ -11,9 +11,7 @@ MAINTAINER=	taca@netbsd.org
 HOMEPAGE=	http://member.nifty.ne.jp/nokada/ruby.html
 COMMENT=	Iconv wrapper class for Ruby
 
-USE_BUILDLINK_ONLY= #defined
-
-.include "../../converters/libiconv/buildlink.mk"
+USE_BUILDLINK2= # defined
 
 DIST_SUBDIR=	ruby
 USE_RUBY_EXTCONF= yes
@@ -32,6 +30,8 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/${f} ${RUBY_DOCDIR}/iconv
 .endfor
 
+.include "../../converters/libiconv/buildlink2.mk"
 .include "../../textproc/ruby-rdtool/Makefile.common"
 .include "../../lang/ruby-base/Makefile.common"
+.include "../../lang/ruby-base/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
