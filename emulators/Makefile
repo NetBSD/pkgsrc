@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.100 2004/06/20 19:35:00 xtraeme Exp $
+# $NetBSD: Makefile,v 1.101 2004/06/21 20:32:13 xtraeme Exp $
 #
 
 COMMENT=	Emulators for other operating systems
@@ -37,6 +37,7 @@ SUBDIR+=	linux-locale
 SUBDIR+=	linuxppc_lib
 SUBDIR+=	lrmi
 SUBDIR+=	minivmac
+SUBDIR+=	mips64emul
 SUBDIR+=	mmix
 SUBDIR+=	netbsd32_compat14
 SUBDIR+=	netbsd32_compat15
