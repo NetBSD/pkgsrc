@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/05/06 21:10:39 grant Exp $
+# $NetBSD: Makefile,v 1.6 2003/05/06 21:11:24 grant Exp $
 
 DISTNAME=	net-snmp-5.0.6
 CATEGORIES=	net
@@ -26,7 +26,7 @@ USE_PKGINSTALL=		yes
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
-.if (${OPSYS} == "NetBSD")
+.if ${OPSYS} == "NetBSD"
 CFLAGS+=		-Dnetbsd1
 .endif
 
@@ -79,7 +79,7 @@ pre-configure:
 	${MKDIR} ${BUILDLINK_DIR}/include/sys
 	${CP} ${FILESDIR}/disklabel.h ${BUILDLINK_DIR}/include/sys
 .endif
-.if ${OPSYS} == SunOS
+.if ${OPSYS} == "SunOS"
 	#
 	# Adapt for the fact that the default I've seen of ac_max_sed_cmds=90
 	# will not work w/ built-in sed on Solaris.
