@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.27 2001/02/25 04:18:23 hubertf Exp $
+# $NetBSD: Makefile.common,v 1.28 2001/02/28 10:40:24 wiz Exp $
 #
 # Common include file for communicator and navigator packages
 
@@ -72,7 +72,6 @@ MASTER_SITES=	ftp://archive.netscape.com/archive/communicator/${SUB}/
 .endif
 #
 
-MIRROR_DISTFILE=no
 NO_BUILD=	yes
 MAINTAINER=	abs@netbsd.org
 HOMEPAGE=	http://home.netscape.com/browsers/index.html
