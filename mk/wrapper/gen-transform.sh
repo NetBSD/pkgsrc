@@ -1,6 +1,6 @@
 #! @WRAPPER_SHELL@
 #
-# $NetBSD: gen-transform.sh,v 1.6 2004/11/08 22:29:19 jlam Exp $
+# $NetBSD: gen-transform.sh,v 1.7 2004/11/09 17:16:16 jlam Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -54,7 +54,11 @@ rpath_options="-Wl,--rpath, -Wl,-rpath-link, -Wl,-rpath, -Wl,-R -R"
 
 ######################################################################
 # gen action arg
-#       Outputs sed commands that correspond to $action for $arg.
+#	Outputs sed commands that correspond to $action for $arg.  The
+#	"transform" action pertains to transforming command-line options,
+#	while the "untransform" action pertains to unwrapping *-config
+#	files, *.pc files, and *.lai (to-be-installed libtool archive)
+#	files.
 ######################################################################
 gen()
 {
@@ -142,7 +146,14 @@ gen()
 	##############################################################
 	libpath)
 		case $_action in
-		transform|untransform)
+		transform)
+			$debug_log $wrapperlog "   (gen-transform) $_cmd: $@"
+			$cat << EOF
+s|^$1\(/[^$_sep]*\.la[$_sep]\)|$2\1|g
+s|^$1\(/[^$_sep]*\.la\)$|$2\1|g
+EOF
+			;;
+		untransform)
 			$debug_log $wrapperlog "   (gen-transform) $_cmd: $@"
 			$cat << EOF
 s|\([$_sep]\)$1\(/[^$_sep]*\.la[$_sep]\)|\1$2\2|g
@@ -199,7 +210,14 @@ EOF
 	##############################################################
 	opt)
 		case $_action in
-		transform|untransform)
+		transform)
+			$debug_log $wrapperlog "   (gen-transform) $_cmd: $@"
+			$cat << EOF
+s|^$1\([$_sep]\)|$2\1|g
+s|^$1$|$2|g
+EOF
+			;;
+		untransform)
 			$debug_log $wrapperlog "   (gen-transform) $_cmd: $@"
 			$cat << EOF
 s|\([$_sep]\)$1\([$_sep]\)|\1$2\2|g
@@ -217,7 +235,14 @@ EOF
         ###############################################################
 	opt-depot)
 		case $_action in
-		transform|untransform)
+		transform)
+			$debug_log $wrapperlog "   (gen-transform) $_cmd: $@"
+			$cat << EOF
+s|^$1/[^/$_sep]*\(/[^$_sep]*[$_sep]\)|$2\1|g
+s|^$1/[^/$_sep]*\(/[^$_sep]*\)$|$2\1|g
+EOF
+			;;
+		untransform)
 			$debug_log $wrapperlog "   (gen-transform) $_cmd: $@"
 			$cat << EOF
 s|\([$_sep]\)$1/[^/$_sep]*\(/[^$_sep]*[$_sep]\)|\1$2\2|g
@@ -244,7 +269,14 @@ EOF
 	##############################################################
 	opt-sub-trailer)
 		case $_action in
-		transform|untransform)
+		transform)
+			$debug_log $wrapperlog "   (gen-transform) $_cmd: $@"
+			$cat << EOF
+s|^$1\(/[^$_sep]*\)$2\([$_sep]\)|$3\1$4|g
+s|^$1\(/[^$_sep]*\)$2$|$3\1$4|g
+EOF
+			;;
+		untransform)
 			$debug_log $wrapperlog "   (gen-transform) $_cmd: $@"
 			$cat << EOF
 s|\([$_sep]\)$1\(/[^$_sep]*\)$2\([$_sep]\)|\1$3\2$4\3|g
@@ -296,7 +328,14 @@ EOF
 	##############################################################
 	rm-optarg)
 		case $_action in
-		transform|untransform)
+		transform)
+			$debug_log $wrapperlog "   (gen-transform) $_cmd: $@"
+			$cat << EOF
+s|^$1[^$_sep]*\([$_sep]\)|\1|g
+s|^$1[^$_sep]*$||g
+EOF
+			;;
+		untransform)
 			$debug_log $wrapperlog "   (gen-transform) $_cmd: $@"
 			$cat << EOF
 s|\([$_sep]\)$1[^$_sep]*\([$_sep]\)|\1\2|g
