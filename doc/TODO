@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2583 2004/11/29 15:03:22 uebayasi Exp $
+$NetBSD: TODO,v 1.2584 2004/11/29 15:05:56 wiz Exp $
 
 Suggested new packages
 ======================
@@ -796,7 +796,6 @@ Suggested package updates
 	o p5-CGI_Lite-2.02
 	o p5-CGI-Minimal-1.16
 	o p5-Cache-Cache-1.03
-	o p5-Class-Accessor-0.19
 	o p5-Class-Container-0.11
 	o p5-Class-Factory-1.03
 	o p5-Class-MethodMaker-2.04.1
