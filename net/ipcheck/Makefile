@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/07/17 22:51:15 grant Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/21 17:10:45 martti Exp $
 #
 
 DISTNAME=	ipcheck.py
@@ -10,7 +10,7 @@ DIST_SUBDIR=	${PKGNAME}
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://ipcheck.sourceforge.net/
-COMMENT=	python client for the dyndns service
+COMMENT=	Python client for the dyndns service
 
 EXTRACT_SUFX=	#none
 EXTRACT_CMD=	${CP} ${DOWNLOADED_DISTFILE} ${WRKSRC}

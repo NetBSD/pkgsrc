@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/07/17 22:52:56 grant Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/21 17:20:10 martti Exp $
 #
 
 DISTNAME=	libbf-0.8.2b
@@ -11,7 +11,7 @@ MASTER_SITES=	ftp://ftp.psy.uq.oz.au/pub/Crypto/libeay/ \
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.counterpane.com/blowfish.html
-COMMENT=	blowfish block cipher library
+COMMENT=	Blowfish block cipher library
 
 CRYPTO=		YES
 

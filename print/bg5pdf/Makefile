@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/07/17 22:52:23 grant Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/21 17:16:16 martti Exp $
 #
 
 DISTNAME=	bg5pdf-1.0.0
@@ -8,7 +8,7 @@ MASTER_SITES=	http://students.washington.edu/cschin/bg5ps/bg5pdf/
 
 MAINTAINER=	rxg@NetBSD.org
 HOMEPAGE=	http://students.washington.edu/cschin/bg5ps/bg5pdf/
-COMMENT=	wrap big5 encoding text file into PDF file by using PDFlib
+COMMENT=	Wrap big5 encoding text file into PDF file by using PDFlib
 
 USE_BUILDLINK2=			yes
 PYTHON_VERSIONS_ACCEPTED=	21

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/07/17 22:53:03 grant Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/21 17:20:15 martti Exp $
 #
 
 DISTNAME=		Crypt-IDEA-1.01
@@ -8,7 +8,7 @@ MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Crypt/}
 
 MAINTAINER=		tech-pkg@NetBSD.org
 #HOMEPAGE=	
-COMMENT=		perl5 module for the IDEA symmetric key algorithm
+COMMENT=		Perl5 module for the IDEA symmetric key algorithm
 
 USE_BUILDLINK2=		YES
 

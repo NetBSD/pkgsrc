@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/07/17 22:52:37 grant Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/21 17:16:27 martti Exp $
 #
 
 DISTNAME=	pscal-1.15
@@ -7,7 +7,7 @@ MASTER_SITES=	http://www.panix.com/~mbh/pscal/
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.panix.com/~mbh/projects.html
-COMMENT=	produces simple, nice-looking PostScript calendars
+COMMENT=	Produces simple, nice-looking PostScript calendars
 
 do-build:
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2003/07/17 22:51:12 grant Exp $
+# $NetBSD: Makefile,v 1.26 2003/07/21 17:10:41 martti Exp $
 
 DISTNAME=	gnapster-1.5.0
 PKGREVISION=	5
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gnapster/}
 
 MAINTAINER=	tron@NetBSD.org
 HOMEPAGE=	http://sourceforge.net/projects/gnapster/
-COMMENT=	simple client for the online mp3 community
+COMMENT=	Simple client for the online mp3 community
 
 BUILD_USES_MSGFMT=	YES
 
