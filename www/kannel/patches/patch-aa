@@ -1,0 +1,86 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/05/30 12:46:19 rh Exp $
+
+--- utils/start-stop-daemon.c.orig	Wed Apr 12 19:06:22 2000
++++ utils/start-stop-daemon.c	Tue May 30 12:32:29 2000
+@@ -33,8 +33,13 @@
+ #elif defined(__sparc__)
+ #define OSsunos
+ #else
++#include <sys/param.h>
++#if (defined(BSD) && BSD >= 199306)
++#define OSBSD
++#else
+ #error Unknown architecture - cannot build start-stop-daemon
+ #endif
++#endif
+ 
+ #ifdef HAVE_HURH_H
+ #include <hurd.h>
+@@ -570,6 +575,46 @@
+ #endif /*OSsunos*/
+ 
+ 
++#if defined(BSD)
++/*
++pid_is_user, takes the pid and a uid, normally ours, but can be someone
++elses, to allow you to identify the process' owner. returns zero on success,
++and either true or the uid of the owner on failure (this may be undefined,
++or I may be misremembering.
++*/
++static int
++pid_is_user(int pid, int uid)
++{
++   struct stat sb;
++   char buf[32];
++
++   sprintf(buf, "/proc/%d", pid);
++   if (stat(buf, &sb) != 0)
++      return 0; /*I can stat it so it seems to be mine...*/
++   return ((int) sb.st_uid == uid);
++}
++
++/*
++pid_is_cmd, takes a pid, and a string representing the process' (supposed)
++name.  Compares the process' supposed name with the name reported by the
++system.  Returns zero on failure, and nonzero on success.
++*/
++static int
++pid_is_cmd(int pid, const char *name)
++{
++   char buf[64];
++   FILE *f;
++
++   sprintf(buf, "/proc/%d/status", pid);
++   f = fopen(buf, "r");
++   if (!f)
++      return 0;
++   fread(buf,sizeof(buf),1,f);
++   return (strncmp(buf, name, strlen(name)) == 0 && buf[strlen(name)] == ' ');
++}
++#endif /*OSBSD*/
++
++
+ static void
+ check(int pid)
+ {
+@@ -604,7 +649,7 @@
+ 
+ /* WTA: this  needs to be an autoconf check for /proc/pid existance.
+  */
+-#if defined(OSLinux) || defined (OSsunos)
++#if defined(OSLinux) || defined (OSsunos) || defined(OSBSD)
+ static void
+ do_procinit(void)
+ {
+@@ -822,7 +867,11 @@
+ 		close(fd);
+ 		chdir("/");
+ 		umask(022); /* set a default for dumb programs */
++#ifdef OSBSD
++		setpgid(0, getpid());	/* set the process group */
++#else
+ 		setpgrp();  /* set the process group */
++#endif
+ 		fd=open("/dev/null", O_RDWR); /* stdin */
+ 		dup(fd); /* stdout */
+ 		dup(fd); /* stderr */
