@@ -1,4 +1,4 @@
-/*	$NetBSD: pen.c,v 1.4 2003/03/16 19:44:10 jschauma Exp $	*/
+/*	$NetBSD: pen.c,v 1.5 2003/04/11 14:40:36 grant Exp $	*/
 
 #if 0
 #include <sys/cdefs.h>
@@ -6,7 +6,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: pen.c,v 1.25 1997/10/08 07:48:12 charnier Exp";
 #else
-__RCSID("$NetBSD: pen.c,v 1.4 2003/03/16 19:44:10 jschauma Exp $");
+__RCSID("$NetBSD: pen.c,v 1.5 2003/04/11 14:40:36 grant Exp $");
 #endif
 #endif
 #endif
@@ -227,8 +227,8 @@ leave_playpen(char *save)
  * We do this autoconf dance here to get around the old interface (it's
  * in libc on 2.7 and 2.8, but not in 2.9)
  */
-#if !defined(HAVE_STATFS) || (defined(HAVE_STATFS) && defined(HAVE_STATVFS) && !defined(__linux__))
-/*	$NetBSD: pen.c,v 1.4 2003/03/16 19:44:10 jschauma Exp $	*/
+#if !defined(HAVE_STATFS) || (defined(HAVE_STATFS) && defined(HAVE_STATVFS) && !defined(__linux__) && !defined(__FreeBSD__))
+/*	$NetBSD: pen.c,v 1.5 2003/04/11 14:40:36 grant Exp $	*/
 
 /*-
  * Copyright (c) 1998 The NetBSD Foundation, Inc.
@@ -402,9 +402,11 @@ fstatfs(fd, sfs)
 #endif
 
 /*
- * Return free disk space (in bytes) on given file system
+ * Return free disk space (in bytes) on given file system.
+ * Returns size in a uint64_t since off_t isn't 64 bits on all
+ * operating systems.
  */
-off_t
+uint64_t
 min_free(char *tmpdir)
 {
 	struct statfs buf;
@@ -413,5 +415,5 @@ min_free(char *tmpdir)
 		warn("statfs");
 		return -1;
 	}
-	return (off_t) buf.f_bavail * (off_t) buf.f_bsize;
+	return (uint64_t) buf.f_bavail * (uint64_t) buf.f_bsize;
 }
