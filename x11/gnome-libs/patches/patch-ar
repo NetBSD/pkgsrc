@@ -1,0 +1,13 @@
+$NetBSD: patch-ar,v 1.4 2001/06/16 20:04:51 jlam Exp $
+
+--- gtk-xmhtml/Makefile.in.orig	Fri Mar 16 14:47:33 2001
++++ gtk-xmhtml/Makefile.in	Sat Jun 16 09:00:26 2001
+@@ -146,7 +146,7 @@
+ 
+ libgtkxmhtmlincludedir = $(includedir)/gtk-xmhtml
+ 
+-INCLUDES = -I.. -I$(srcdir)/.. -I$(includedir) @GTK_CFLAGS@            -DWITH_GTK -DDEBUG -DGNOME_LIB
++INCLUDES = -I.. -I$(srcdir)/.. @GTK_CFLAGS@            -DWITH_GTK -DDEBUG -DGNOME_LIB
+ 
+ 
+ lib_LTLIBRARIES = libgtkxmhtml.la
