@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2001/05/24 14:54:22 jtb Exp $
+
+--- Doc/Makefile.in.orig	Thu May 24 14:49:25 2001
++++ Doc/Makefile.in
+@@ -261,7 +261,7 @@
+ 	if ( \
+ 	    sed '/^@setfilename/s|zsh|$(tzsh)|' \
+ 		< $(sdir)/zsh.texi > infodir/tzsh.texi && \
+-	    (cd infodir && $(MAKEINFO) tzsh.texi) && \
++	    (cd infodir && $(MAKEINFO) --no-split tzsh.texi) && \
+ 	    for file in infodir/$(tzsh).info*; do \
+ 		$(INSTALL_DATA) $$file $(DESTDIR)$(infodir) || exit 1; \
+ 	    done \

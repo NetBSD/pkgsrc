@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2001/05/18 20:31:19 jtb Exp $
+SHA1 (patch-aa) = f15ea2152b94b0eb21dcb972a30229c99e9c1d4f
 
 SHA1 (zsh-3.1.9.tar.gz) = 0248f047aa47933582706a49cd4d1404f14642f3
 Size (zsh-3.1.9.tar.gz) = 1858071 bytes
+SHA1 (patch-aa) = f15ea2152b94b0eb21dcb972a30229c99e9c1d4f
