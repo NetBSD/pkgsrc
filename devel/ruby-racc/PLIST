@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2001/12/30 17:13:47 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/01/04 09:58:17 taca Exp $
 bin/racc
 bin/racc2y
 bin/y2racc
@@ -9,6 +9,7 @@ ${RUBY_SITELIBDIR}/racc/iset.rb
 ${RUBY_SITELIBDIR}/racc/output.rb
 ${RUBY_SITELIBDIR}/racc/raccp.rb
 ${RUBY_SITELIBDIR}/racc/raccs.rb
+${RUBY_SITELIBDIR}/racc/rubyloader.rb
 ${RUBY_SITELIBDIR}/racc/state.rb
 ${RUBY_SITELIBDIR}/racc/ucodep.rb
 ${RUBY_EXAMPLESDIR}/racc/array.y
