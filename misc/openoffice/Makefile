@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/02/13 21:11:11 mrauch Exp $
+# $NetBSD: Makefile,v 1.4 2002/02/14 14:07:08 mrauch Exp $
 
 DISTNAME=		openoffice-0.0.0.641
 WRKSRC=			${WRKDIR}/oo_641_src/config_office
@@ -20,7 +20,8 @@ GCC_VERSION!=		${CC} --version
 .if ${GCC_VERSION}!="2.95.2" && ${GCC_VERSION}!="2.95.3"
 .include "../../lang/gcc/Makefile.gcc"
 .endif
-BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
+# bison 1.3* won't work: there was an incompatible change in it
+BUILD_DEPENDS+=		bison-1.2*:../../devel/bison
 BUILD_DEPENDS+=		gmake-[0-9]*:../../devel/gmake
 BUILD_DEPENDS+=		tcsh-[0-9]*:../../shells/tcsh
 BUILD_DEPENDS+=		zip-[0-9]*:../../archivers/zip
