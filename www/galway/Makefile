@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/10/15 14:50:07 tv Exp $
+# $NetBSD: Makefile,v 1.12 2004/12/03 14:31:29 wiz Exp $
 #
 
 DISTNAME=	galway-0.33
@@ -11,7 +11,7 @@ MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://erin.netpedia.net/galway.html
 COMMENT=	Web editor programmed in Scheme
 
-DEPENDS+=	guile-gtk>=0.19nb2:../../devel/guile-gtk
+DEPENDS+=	guile-gtk>=0.19nb2:../../devel/guile14-gtk
 
 USE_BUILDLINK3=	yes
 NO_BUILD=	yes
