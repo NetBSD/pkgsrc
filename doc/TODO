@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.492 2003/04/23 13:03:16 uebayasi Exp $
+$NetBSD: TODO,v 1.493 2003/04/24 11:18:00 mjl Exp $
 
 Suggested new packages
 ======================
@@ -124,7 +124,7 @@ Suggested package updates
 	o gawk-3.1.2
 	o gcpio-2.5 [pkg/20799]
 	o gcvs-1.0-1
-	o gd-2.0.4
+	o gd-2.0.12
 	o gdm-2.4.1.1
 	o getmail-3.1.2
 	o gftp-2.0.14 [pkg/20250]
