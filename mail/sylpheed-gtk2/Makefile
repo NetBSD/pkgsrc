@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2004/11/08 11:47:02 gavan Exp $
+# $NetBSD: Makefile,v 1.22 2004/12/26 04:12:58 minskim Exp $
 #
 
-DISTNAME=	sylpheed-0.9.99-gtk2-20041024
-PKGNAME=	sylpheed-gtk2-0.9.99.20041024
+DISTNAME=	sylpheed-1.0.0-gtk2-20041224
+PKGNAME=	sylpheed-gtk2-1.0.0.20041224
 CATEGORIES=	mail x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sylpheed-gtk2/}
 
