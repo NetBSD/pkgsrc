@@ -1,4 +1,4 @@
-$NetBSD: BUILDLINK3_DG,v 1.2 2004/02/05 07:49:48 seb Exp $
+$NetBSD: BUILDLINK3_DG,v 1.3 2004/02/05 08:50:38 jlam Exp $
 
  0 Developer's guide to buildlink3
  =================================
@@ -92,7 +92,7 @@ The following real-life example buildlink3.mk is taken from
 graphics/tiff:
 
 ------------8<------------8<------------8<------------8<------------
-# $NetBSD: BUILDLINK3_DG,v 1.2 2004/02/05 07:49:48 seb Exp $
+# $NetBSD: BUILDLINK3_DG,v 1.3 2004/02/05 08:50:38 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 TIFF_BUILDLINK3_MK:=	${TIFF_BUILDLINK3_MK}+
@@ -230,8 +230,11 @@ A3: You should examine the contents of the ${WRKDIR}/.work.log file.
     by the wrapper scripts, and the lines preceded with <.> are the
     commands that are executed by the wrapper scripts.
 
-Q4: Why variables set by the buildlink3 framework can't be seen with
-    'make show-var VARNAME=....'?
 
-A4: Some buildlink3 variable are only defined for a subset of a package
-    build phases. Try 'make PKG_PHASE=buildlink VARNAME=...' instead.
+Q4: Why can't I check the values of variables set by the buildlink3
+    framework using 'make show-var VARNAME=...'?
+
+A4: Some buildlink3 variables are only defined for a subset of a
+    package build phases.  Try instead:
+
+	make show-var PKG_PHASE=buildlink VARNAME=...'
