@@ -1,4 +1,4 @@
-#	$NetBSD: Makefile,v 1.1.1.1 2002/04/03 17:54:10 mrg Exp $
+# $NetBSD: Makefile,v 1.2 2002/04/03 18:02:07 wiz Exp $
 
 DISTNAME=	onyx-${VERS}
 CATEGORIES=	lang
