@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8692 2005/01/11 09:04:21 martti Exp $
+$NetBSD: CHANGES,v 1.8693 2005/01/11 10:30:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -230,3 +230,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated netbsd32_compat14 to 1.4.3.1nb1 [hamajima 2005-01-11]
 	Updated netbsd32_compat16 to 1.0nb1 [hamajima 2005-01-11]
 	Updated ddd to 3.3.10 [martti 2005-01-11]
+	Updated tuxpaint to 0.9.14nb3 [wiz 2005-01-11]
