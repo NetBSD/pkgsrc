@@ -1,0 +1,63 @@
+$NetBSD: patch-ae,v 1.1 2005/02/13 20:36:11 tron Exp $
+
+--- Setup.orig	1999-03-24 23:00:00.000000000 +0000
++++ Setup	2005-02-13 20:34:12.000000000 +0000
+@@ -36,50 +36,11 @@
+ read foo
+ 
+ VERS="5.003"
+-PERL=
+-
+-echo "Locating Perl 5..."
+-for dir in `echo $PATH | sed -e 's/:/ /g'`
+-do
+-	for cmd in perl5 perl
+-	do
+-		if [ -n "$dir" -a -x "$dir/$cmd" ]
+-		then
+-			MAYBE=`$dir/$cmd -e 'print $^X'`
+-	
+-			if [ "$MAYBE" != "" ]
+-			then
+-				`$MAYBE -e "eval{require $VERS}; \
+-					    exit 0 if \\$@; exit 1"`
+-			fi
+-
+-			if [ $? -eq 1 ]
+-			then
+-				PERL=$MAYBE
+-				break 2
+-			fi
+-		fi
+-	done
+-done
+-
+-# Now, either we've found the right version of Perl and we 
+-# can continue, or we haven't and we should fail.
+-#
+-
+-if [ -z "$PERL" ]
+-then
+-	cat<<EOF
+-Setup was unable to locate an appropriate version of
+-Perl from your path.  You need to have Perl v5.003 or
+-later in your path for PilotManager to work.
+-EOF
+-	exit 1;
+-fi
+ 
+ echo "Perl 5 found [at $PERL]"
+ echo "Please wait..."
+ 
+-cat > /tmp/pmgr-setup.pl <<EOF
++cat > ${WRKDIR}/pmgr-setup.pl <<EOF
+ 
+ use Config;
+ 
+@@ -212,5 +173,5 @@
+ 
+ EOF
+ 
+-$PERL /tmp/pmgr-setup.pl
++$PERL ${WRKDIR}/pmgr-setup.pl
+ 
