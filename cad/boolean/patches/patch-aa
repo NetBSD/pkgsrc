@@ -1,82 +1,26 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/11/18 17:57:27 dmcmahill Exp $
+$NetBSD: patch-aa,v 1.2 2003/05/15 23:02:06 dmcmahill Exp $
 
---- makefile.gui.orig	Sun Sep 17 22:18:44 2000
-+++ makefile.gui	Sat Nov 11 19:35:59 2000
-@@ -1,5 +1,5 @@
--CC		=	g++
-+CC		=	${CXX}
- #WXWIN		= 	../wx_src
--WXWINDOW_LIBPATH=       /usr/local/lib
-+WXWINDOW_LIBPATH=       ${LOCALBASE}/lib
- WXWIN		=	$(WXWINDOW_LIBPATH)
- TEMPDIR		=	../temp/linuxgui
-@@ -11,19 +11,17 @@
- 			-I$(SRCDIR)/tools \
- 			-I$(SRCDIR)/bool \
--         -I$(SRCDIR)/drivers \
-+			-I$(SRCDIR)/drivers \
- 			-I$(SRCDIR)/intrface \
- 			-I$(SRCDIR)/dosint \
--         -I$(SRCDIR)/list \
--			-I$(WXWIN)/wx/include\
--			-I/usr/local/include\
--			-I/usr/local/lib/wx/include\
--			-I/usr/local/lib/glib/include\
--			-I/usr/local/include\
--			-I/usr/X11R6/include 
--LIBDIR		=	-L/usr/X11R6/lib \
--			-L/usr/local/lib
-+			-I$(SRCDIR)/list \
-+			-I${LOCALBASE}/include \
-+			-I${X11BASE}/include \
-+			`glib-config --cflags` \
-+			`gtk-config --cflags` \
-+			`wx-config --cflags`
-+LIBDIR		=	-L${X11BASE}/lib -Wl,-R${X11BASE}/lib \
-+			-L${LOCALBASE}/lib -Wl,-R${LOCALBASE}/lib
- XTRAFLAGS	=	-static
- CFLAGS 		= 	-D_G_UNIX \
--			-DBIGINDIAN \
- 			-DLINUX \
- 			-DWIN_INT \
-@@ -31,15 +29,16 @@
- 			-fenum-int-equiv \
- 			-fexceptions \
--         -fguiding-decls \
-+			-fguiding-decls \
- 			-fno-implicit-templates \
--		   -D_REENTRANT -g 
-+			-D_REENTRANT -g 
- #		   -D_REENTRANT -g -D__WXDEBUG__
- #			-Wall -D_REENTRANT    -g -D__WXDEBUG__  
- TEXTLIBS	= 	-ll -lm -lg++ -lstdc++
- LIBS   		= 	-lstdc++ -lXmu -lXt \
--		        -lwx_gtk \
--			-lgtk -lgdk -lglib -lgmodule \
--			-lpthread  -rdynamic  -ldl -lXext -lX11 -lm -lgthread
--		
-+			`glib-config --libs` \
-+			`gtk-config --libs` \
-+			`wx-config --libs` \
-+			--Wl,-export-dynamic -lXext \
-+			-lX11 -lm
- PROGNAME 	= 	boolean
- SRCPOOLS 	= 	interface misc  bool gdssource drivers tools parser list
-@@ -72,8 +71,8 @@
- 			$(TEMPDIR)/unitsdlg.o \
- 			$(TEMPDIR)/distdlg.o \
--         $(TEMPDIR)/orderdlg.o \
-+			$(TEMPDIR)/orderdlg.o \
- 			$(TEMPDIR)/groupdlg.o \
- 			$(TEMPDIR)/strucdlg.o \
--         $(TEMPDIR)/about.o \
-+			$(TEMPDIR)/about.o \
- 			$(TEMPDIR)/wait.o \
- 			$(TEMPDIR)/gdsapp.o \
-@@ -126,5 +125,5 @@
- 			$(TEMPDIR)/trans.o\
- 			$(TEMPDIR)/dcclbuf.o\
--         $(TEMPDIR)/windrv.o \
-+			$(TEMPDIR)/windrv.o \
- 			$(TEMPDIR)/gdsdrout.o \
- 			$(TEMPDIR)/emaskin.o \
+--- bin/boolean.orig	Thu Nov 28 13:49:06 2002
++++ bin/boolean
+@@ -1,7 +1,6 @@
+ #! /bin/sh
+-PATH=/opt/protools/boolean/6.3/boolean/apps/edit:$PATH
+ 
+-GDSROOT=/opt/protools/boolean/6.3/boolean/apps/edit
++GDSROOT=@prefix@/share/boolean
+ export GDSROOT
+ 
+ echo "boolean operation program"
+@@ -12,9 +11,9 @@ if test ! -d ${HOME}/gdsuser ; then 
+    cp -r $GDSROOT/gdsuser $HOME
+ else
+    if test ! -f  ${HOME}/gdsuser/6.3_version ; then
+-        echo copying gdsuser to your HOME directory because the one there is too old
+-   	rm -r ${HOME}/gdsuser
+-	cp -r $GDSROOT/gdsuser $HOME
++        echo "The files in your $HOME/gdsuser directory are not recent enough."
++	echo "Please remove this directory and run this program again."
++	echo "A new set of files will be installed to $HOME/gdsuer."
+    fi	    
+ fi
+ 
