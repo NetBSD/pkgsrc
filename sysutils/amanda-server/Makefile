@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 1999/09/06 19:30:21 bad Exp $
+# $NetBSD: Makefile,v 1.13 1999/09/29 12:34:15 agc Exp $
 # FreeBSD Id: Makefile,v 1.9 1997/03/08 05:00:11 gpalmer Exp
 #
 
@@ -41,5 +41,12 @@ post-install:
 	    ${WRKDIR}/${DISTNAME}/example/disklist; do \
 		${INSTALL_DATA} $$i ${PREFIX}/share/examples/amanda; \
 	done
+
+.if ${OPSYS} == "SunOS"
+PLIST_SRC=	${WRKDIR}/PLIST-src
+
+pre-install:
+	${SED} -e 's|^libexec/chg-scsi$$|@comment libexec/chg-scsi needs headers...|' ${PKGDIR}/PLIST > ${PLIST_SRC}
+.endif
 
 .include "../../mk/bsd.pkg.mk"
