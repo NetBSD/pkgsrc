@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2002/12/14 17:30:31 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.4 2003/01/02 22:44:44 jmmv Exp $
 bin/sndfile-convert
 bin/sndfile-info
 bin/sndfile-play
@@ -18,4 +18,3 @@ share/octave/site/m/sndfile_save.m
 @dirrm share/octave/site/m
 @dirrm share/octave/site
 @dirrm share/octave
-@unexec ${RMDIR} %D/lib/pkgconfig 2> /dev/null || ${TRUE}
