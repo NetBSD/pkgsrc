@@ -1,8 +1,8 @@
-$NetBSD: patch-ch,v 1.4 2003/03/11 13:10:23 markd Exp $
+$NetBSD: patch-ch,v 1.5 2003/05/22 02:42:50 markd Exp $
 
---- konqueror/Makefile.in.orig	Fri Jan 17 09:03:09 2003
+--- konqueror/Makefile.in.orig	Tue May 13 23:07:59 2003
 +++ konqueror/Makefile.in
-@@ -291,7 +291,7 @@ INCLUDES = -I$(top_srcdir)/libkonq -I$(t
+@@ -427,7 +427,7 @@ INCLUDES = -I$(top_srcdir)/libkonq -I$(t
  #SUBDIRS = . kfmexec client iconview dirtree listview keditbookmarks shellcmdplugin about pics sidebar
  SUBDIRS = . kfmexec client iconview listview keditbookmarks shellcmdplugin about pics sidebar
  
@@ -11,7 +11,7 @@ $NetBSD: patch-ch,v 1.4 2003/03/11 13:10:23 markd Exp $
  
  konqdatadir = $(kde_datadir)/konqueror
  konqdata_DATA = konqueror.rc
-@@ -308,7 +308,7 @@ include_HEADERS = KonquerorIface.h
+@@ -444,7 +444,7 @@ include_HEADERS = KonquerorIface.h
  
  bin_PROGRAMS = konqueror
  
@@ -20,7 +20,7 @@ $NetBSD: patch-ch,v 1.4 2003/03/11 13:10:23 markd Exp $
  #>- 	    KonquerorIface.cc KonquerorIface.skel \
  #>- 	    KonqMainWindowIface.cc KonqMainWindowIface.skel \
  #>- 	    KonqViewIface.cc KonqViewIface.skel \
-@@ -323,7 +323,7 @@ bin_PROGRAMS = konqueror
+@@ -459,7 +459,7 @@ bin_PROGRAMS = konqueror
  #>- 	    konq_browseriface.cc \
  #>- 	    delayedinitializer.cc
  #>+ 14
@@ -29,7 +29,7 @@ $NetBSD: patch-ch,v 1.4 2003/03/11 13:10:23 markd Exp $
  	    KonquerorIface.cc  \
  	    KonqMainWindowIface.cc  \
  	    KonqViewIface.cc  \
-@@ -346,11 +346,15 @@ noinst_HEADERS = KonqMainWindowIface.h K
+@@ -482,11 +482,15 @@ noinst_HEADERS = KonqMainWindowIface.h K
  	konq_view.h konq_viewmgr.h version.h
  
  
@@ -48,7 +48,7 @@ $NetBSD: patch-ch,v 1.4 2003/03/11 13:10:23 markd Exp $
  konqueror_LDFLAGS = $(KDE_RPATH) $(all_libraries)
  
  data_DATA = kfmclient.desktop kfmclient_dir.desktop kfmclient_html.desktop kfmclient_war.desktop
-@@ -375,32 +379,37 @@ CONFIG_HEADER = $(top_builddir)/config.h
+@@ -512,32 +516,37 @@ CONFIG_HEADER = $(top_builddir)/config.h
  CONFIG_CLEAN_FILES =
  LTLIBRARIES = $(lib_LTLIBRARIES)
  
@@ -94,9 +94,9 @@ $NetBSD: patch-ch,v 1.4 2003/03/11 13:10:23 markd Exp $
 +konqueror_OBJECTS = konqueror_main.$(OBJEXT)
 +konqueror_DEPENDENCIES = libkonqueror_main.la
  
- DEFS = @DEFS@
  DEFAULT_INCLUDES =  -I. -I$(srcdir) -I$(top_builddir)
-@@ -413,7 +422,7 @@ am__depfiles_maybe = depfiles
+ depcomp = $(SHELL) $(top_srcdir)/admin/depcomp
+@@ -546,7 +555,7 @@ am__depfiles_maybe = depfiles
  #>- @AMDEP_TRUE@	./$(DEPDIR)/KonqViewIface.Plo \
  #>- @AMDEP_TRUE@	./$(DEPDIR)/KonquerorIface.Plo \
  #>- @AMDEP_TRUE@	./$(DEPDIR)/delayedinitializer.Plo \
@@ -105,7 +105,7 @@ $NetBSD: patch-ch,v 1.4 2003/03/11 13:10:23 markd Exp $
  #>- @AMDEP_TRUE@	./$(DEPDIR)/konq_browseriface.Plo \
  #>- @AMDEP_TRUE@	./$(DEPDIR)/konq_combo.Plo \
  #>- @AMDEP_TRUE@	./$(DEPDIR)/konq_factory.Plo \
-@@ -424,13 +433,15 @@ am__depfiles_maybe = depfiles
+@@ -557,13 +566,15 @@ am__depfiles_maybe = depfiles
  #>- @AMDEP_TRUE@	./$(DEPDIR)/konq_misc.Plo \
  #>- @AMDEP_TRUE@	./$(DEPDIR)/konq_profiledlg.Plo \
  #>- @AMDEP_TRUE@	./$(DEPDIR)/konq_run.Plo ./$(DEPDIR)/konq_view.Plo \
@@ -125,7 +125,7 @@ $NetBSD: patch-ch,v 1.4 2003/03/11 13:10:23 markd Exp $
  @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/konq_browseriface.Plo \
  @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/konq_combo.Plo \
  @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/konq_factory.Plo \
-@@ -441,12 +452,14 @@ am__depfiles_maybe = depfiles
+@@ -574,12 +585,14 @@ am__depfiles_maybe = depfiles
  @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/konq_misc.Plo \
  @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/konq_profiledlg.Plo \
  @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/konq_run.Plo ./$(DEPDIR)/konq_view.Plo \
@@ -142,7 +142,7 @@ $NetBSD: patch-ch,v 1.4 2003/03/11 13:10:23 markd Exp $
  @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/konq_browseriface.Plo \
  @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/konq_combo.Plo \
  @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/konq_factory.Plo \
-@@ -457,7 +470,9 @@ am__depfiles_maybe = depfiles
+@@ -590,7 +603,9 @@ am__depfiles_maybe = depfiles
  @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/konq_misc.Plo \
  @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/konq_profiledlg.Plo \
  @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/konq_run.Plo ./$(DEPDIR)/konq_view.Plo \
@@ -153,17 +153,17 @@ $NetBSD: patch-ch,v 1.4 2003/03/11 13:10:23 markd Exp $
  
  #>- CXXCOMPILE = $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) \
  #>- 	$(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS)
-@@ -478,7 +493,8 @@ CXXLD = $(CXX)
+@@ -610,7 +625,8 @@ CXXLD = $(CXX)
+ #>+ 2
  CXXLINK = $(LIBTOOL) --mode=link --tag=CXX $(CXXLD) $(AM_CXXFLAGS) $(CXXFLAGS) $(KDE_CXXFLAGS) \
  	$(AM_LDFLAGS) $(LDFLAGS) -o $@
- CXXFLAGS = @CXXFLAGS@
 -DIST_SOURCES = $(konqueror_la_SOURCES) $(konqueror_SOURCES)
 +DIST_SOURCES = $(konqueror_la_SOURCES) $(libkonqueror_main_la_SOURCES) \
 +	$(konqueror_SOURCES)
  DATA = $(data_DATA) $(data2_DATA) $(data3_DATA) $(data4_DATA) \
  	$(data5_DATA) $(kde_apps_DATA) $(kde_services_DATA) \
  	$(konqdata_DATA)
-@@ -493,7 +509,7 @@ RECURSIVE_TARGETS = info-recursive dvi-r
+@@ -626,7 +642,7 @@ RECURSIVE_TARGETS = info-recursive dvi-r
  DIST_COMMON = $(include_HEADERS) $(noinst_HEADERS) AUTHORS ChangeLog \
  	Makefile.am Makefile.in TODO
  DIST_SUBDIRS = $(SUBDIRS)
@@ -172,7 +172,7 @@ $NetBSD: patch-ch,v 1.4 2003/03/11 13:10:23 markd Exp $
  
  #>- all: all-recursive
  #>+ 1
-@@ -540,6 +556,8 @@ clean-libLTLIBRARIES:
+@@ -673,6 +689,8 @@ clean-libLTLIBRARIES:
  	done
  konqueror.la: $(konqueror_la_OBJECTS) $(konqueror_la_DEPENDENCIES) 
  	$(CXXLINK) -rpath $(libdir) $(konqueror_la_LDFLAGS) $(konqueror_la_OBJECTS) $(konqueror_la_LIBADD) $(LIBS)
@@ -181,7 +181,7 @@ $NetBSD: patch-ch,v 1.4 2003/03/11 13:10:23 markd Exp $
  binPROGRAMS_INSTALL = $(INSTALL_PROGRAM)
  install-binPROGRAMS: $(bin_PROGRAMS)
  	@$(NORMAL_INSTALL)
-@@ -583,7 +601,6 @@ distclean-compile:
+@@ -716,7 +734,6 @@ distclean-compile:
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/KonqViewIface.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/KonquerorIface.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/delayedinitializer.Plo@am__quote@
@@ -189,7 +189,7 @@ $NetBSD: patch-ch,v 1.4 2003/03/11 13:10:23 markd Exp $
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/konq_actions.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/konq_browseriface.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/konq_combo.Plo@am__quote@
-@@ -597,6 +614,8 @@ distclean-compile:
+@@ -730,6 +747,8 @@ distclean-compile:
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/konq_run.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/konq_view.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/konq_viewmgr.Plo@am__quote@
@@ -198,16 +198,16 @@ $NetBSD: patch-ch,v 1.4 2003/03/11 13:10:23 markd Exp $
  
  distclean-depend:
  	-rm -rf ./$(DEPDIR)
-@@ -889,7 +908,7 @@ distclean-tags:
- 	-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH
+@@ -1064,7 +1083,7 @@ distclean-tags:
+ 	-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
  #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
  #>+ 4
--KDE_DIST=profile_midnightcommander.desktop profile_webbrowsing.desktop kfmclient_war.desktop konq_viewmgr.cc konq_mainwindow.cc konqfilemgr.desktop konq_frame.cc kfmclient_dir.desktop DESIGN KonqMainWindowIface.cc profile_filepreview.desktop konq_combo.cc konq_profiledlg.cc kfmclient_html.desktop konqueror.desktop konq_misc.cc konqbrowser.desktop konq_browseriface.cc uninstall.desktop KonquerorIface.cc convert_kdelnk.sh IDEAS konq_view.cc konqueror.rc profile_filemanagement.desktop DESIGN_config konq_guiclients.cc konq_factory.cc konq_actions.cc konq_run.cc konquerorsu.desktop KonqViewIface.cc delayedinitializer.cc Home.desktop kfmclient.desktop konqueror_config.desktop 
-+KDE_DIST=konq_viewmgr.cc DESIGN konqfilemgr.desktop convert_kdelnk.sh konq_view.cc DESIGN_config profile_midnightcommander.desktop konq_browseriface.cc konq_combo.cc konqueror_config.desktop konqueror.rc konqbrowser.desktop delayedinitializer.cc profile_filemanagement.desktop kfmclient_dir.desktop konq_misc.cc kfmclient_html.desktop kfmclient.desktop uninstall.desktop konq_mainwindow.cc konq_actions.cc konq_frame.cc KonqMainWindowIface.cc IDEAS konqueror.desktop konq_profiledlg.cc konq_run.cc konq_factory.cc konq_guiclients.cc profile_filepreview.desktop Home.desktop KonquerorIface.cc konquerorsu.desktop kfmclient_war.desktop KonqViewIface.cc profile_webbrowsing.desktop 
+-KDE_DIST=profile_midnightcommander.desktop profile_webbrowsing.desktop kfmclient_war.desktop konqfilemgr.desktop kfmclient_dir.desktop DESIGN profile_filepreview.desktop kfmclient_html.desktop konqueror.desktop konqbrowser.desktop uninstall.desktop convert_kdelnk.sh IDEAS konqueror.rc profile_filemanagement.desktop DESIGN_config konquerorsu.desktop Home.desktop kfmclient.desktop konqueror_config.desktop 
++KDE_DIST=DESIGN konqfilemgr.desktop convert_kdelnk.sh DESIGN_config profile_midnightcommander.desktop konqueror_config.desktop konqueror.rc konqbrowser.desktop profile_filemanagement.desktop kfmclient_dir.desktop kfmclient_html.desktop kfmclient.desktop uninstall.desktop IDEAS konqueror.desktop profile_filepreview.desktop Home.desktop konquerorsu.desktop kfmclient_war.desktop profile_webbrowsing.desktop 
  
  DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
  
-@@ -1056,9 +1075,6 @@ uninstall-info: uninstall-info-recursive
+@@ -1246,9 +1265,6 @@ uninstall-info: uninstall-info-recursive
  #konqueror_static_LDADD = konqueror.la *view/*.la dirtree/*.la $(libdir)/libkhtml.la
  #konqueror_static_LDFLAGS = $(all_libraries) -static
  
@@ -217,7 +217,7 @@ $NetBSD: patch-ch,v 1.4 2003/03/11 13:10:23 markd Exp $
  messages: rc.cpp
  	$(EXTRACTRC) *.rc */*.rc >> rc.cpp
  	$(EXTRACTRC) sidebar/trees/history_module/history_dlg.ui >> rc.cpp
-@@ -1079,23 +1095,13 @@ uninstall-local:
+@@ -1269,23 +1285,13 @@ uninstall-local:
  # Otherwise a system limit (for SysV at least) may be exceeded.
  .NOEXPORT:
  
@@ -246,7 +246,7 @@ $NetBSD: patch-ch,v 1.4 2003/03/11 13:10:23 markd Exp $
  
  #>+ 3
  delayedinitializer.moc: $(srcdir)/delayedinitializer.h
-@@ -1106,40 +1112,50 @@ konq_mainwindow.moc: $(srcdir)/konq_main
+@@ -1296,40 +1302,50 @@ konq_mainwindow.moc: $(srcdir)/konq_main
  	$(MOC) $(srcdir)/konq_mainwindow.h -o konq_mainwindow.moc
  
  #>+ 3
@@ -315,7 +315,7 @@ $NetBSD: patch-ch,v 1.4 2003/03/11 13:10:23 markd Exp $
  
  #>+ 6
  clean-idl:
-@@ -1159,33 +1175,33 @@ force-reedit:
+@@ -1349,33 +1365,33 @@ force-reedit:
  
  
  #>+ 11
@@ -362,7 +362,7 @@ $NetBSD: patch-ch,v 1.4 2003/03/11 13:10:23 markd Exp $
  #>+ 3
  cvs-clean:
  	$(MAKE) admindir=$(top_srcdir)/admin -f $(top_srcdir)/admin/Makefile.common cvs-clean
-@@ -1195,25 +1211,25 @@ kde-rpo-clean:
+@@ -1385,25 +1401,25 @@ kde-rpo-clean:
  	-rm -f *.rpo
  
  #>+ 23

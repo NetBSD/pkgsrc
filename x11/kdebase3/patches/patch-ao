@@ -1,8 +1,8 @@
-$NetBSD: patch-ao,v 1.4 2003/03/11 13:10:19 markd Exp $
+$NetBSD: patch-ao,v 1.5 2003/05/22 02:42:48 markd Exp $
 
---- kcontrol/kcontrol/Makefile.in.orig	Fri Jan 17 09:03:05 2003
+--- kcontrol/kcontrol/Makefile.in.orig	Tue May 13 23:07:54 2003
 +++ kcontrol/kcontrol/Makefile.in
-@@ -309,52 +309,65 @@ INCLUDES = $(all_includes)
+@@ -445,52 +445,65 @@ INCLUDES = $(all_includes)
  
  SUBDIRS = . pics
  
@@ -95,7 +95,7 @@ $NetBSD: patch-ao,v 1.4 2003/03/11 13:10:19 markd Exp $
  kcminit_LDFLAGS = $(all_libraries) $(KDE_RPATH) -export-dynamic
  
  rccontroldir = $(kde_datadir)/kcontrol
-@@ -373,7 +386,7 @@ CONFIG_HEADER = $(top_builddir)/config.h
+@@ -510,7 +523,7 @@ CONFIG_HEADER = $(top_builddir)/config.h
  CONFIG_CLEAN_FILES =
  LTLIBRARIES = $(lib_LTLIBRARIES)
  
@@ -104,7 +104,7 @@ $NetBSD: patch-ao,v 1.4 2003/03/11 13:10:19 markd Exp $
  am_kcminit_la_OBJECTS = kcminit.lo global.lo
  #>- kcminit_la_OBJECTS = $(am_kcminit_la_OBJECTS)
  #>+ 4
-@@ -381,50 +394,68 @@ kcminit_la_final_OBJECTS = kcminit_la.al
+@@ -518,60 +531,84 @@ kcminit_la_final_OBJECTS = kcminit_la.al
  kcminit_la_nofinal_OBJECTS = kcminit.lo global.lo
  @KDE_USE_FINAL_FALSE@kcminit_la_OBJECTS = $(kcminit_la_nofinal_OBJECTS)
  @KDE_USE_FINAL_TRUE@kcminit_la_OBJECTS = $(kcminit_la_final_OBJECTS)
@@ -194,9 +194,7 @@ $NetBSD: patch-ao,v 1.4 2003/03/11 13:10:19 markd Exp $
 +kcontrol_OBJECTS = kcontrol_main.$(OBJEXT)
 +kcontrol_DEPENDENCIES = libkcontrol_main.la
  
- DEFS = @DEFS@
  DEFAULT_INCLUDES =  -I. -I$(srcdir) -I$(top_builddir)
-@@ -434,11 +465,17 @@ LIBS = @LIBS@
  depcomp = $(SHELL) $(top_srcdir)/admin/depcomp
  am__depfiles_maybe = depfiles
  #>- @AMDEP_TRUE@DEP_FILES = ./$(DEPDIR)/aboutwidget.Plo \
@@ -216,7 +214,7 @@ $NetBSD: patch-ao,v 1.4 2003/03/11 13:10:19 markd Exp $
  #>- @AMDEP_TRUE@	./$(DEPDIR)/kecdialog.Plo ./$(DEPDIR)/main.Plo \
  #>- @AMDEP_TRUE@	./$(DEPDIR)/modloader.Plo \
  #>- @AMDEP_TRUE@	./$(DEPDIR)/moduleIface.Plo \
-@@ -449,13 +486,19 @@ am__depfiles_maybe = depfiles
+@@ -582,13 +619,19 @@ am__depfiles_maybe = depfiles
  #>- @AMDEP_TRUE@	./$(DEPDIR)/quickhelp.Plo \
  #>- @AMDEP_TRUE@	./$(DEPDIR)/searchwidget.Plo \
  #>- @AMDEP_TRUE@	./$(DEPDIR)/toplevel.Plo
@@ -240,7 +238,7 @@ $NetBSD: patch-ao,v 1.4 2003/03/11 13:10:19 markd Exp $
  @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/kecdialog.Plo ./$(DEPDIR)/main.Plo \
  @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/modloader.Plo \
  @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/moduleIface.Plo \
-@@ -467,11 +510,17 @@ am__depfiles_maybe = depfiles
+@@ -600,11 +643,17 @@ am__depfiles_maybe = depfiles
  @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/searchwidget.Plo \
  @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/toplevel.Plo
  @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@DEP_FILES =  $(DEPDIR)/kcdialog_skel.P $(DEPDIR)/moduleIface_skel.P  ./$(DEPDIR)/aboutwidget.Plo \
@@ -260,9 +258,9 @@ $NetBSD: patch-ao,v 1.4 2003/03/11 13:10:19 markd Exp $
  @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/kecdialog.Plo ./$(DEPDIR)/main.Plo \
  @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/modloader.Plo \
  @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/moduleIface.Plo \
-@@ -503,8 +552,9 @@ CXXLINK = $(LIBTOOL) --mode=link --tag=C
+@@ -635,8 +684,9 @@ CXXLD = $(CXX)
+ CXXLINK = $(LIBTOOL) --mode=link --tag=CXX $(CXXLD) $(AM_CXXFLAGS) $(CXXFLAGS) $(KDE_CXXFLAGS) \
  	$(AM_LDFLAGS) $(LDFLAGS) -o $@
- CXXFLAGS = @CXXFLAGS@
  DIST_SOURCES = $(kcminit_la_SOURCES) $(kcmshell_la_SOURCES) \
 -	$(kcontrol_la_SOURCES) $(kcminit_SOURCES) $(kcmshell_SOURCES) \
 -	$(kcontrol_SOURCES)
@@ -272,8 +270,8 @@ $NetBSD: patch-ao,v 1.4 2003/03/11 13:10:19 markd Exp $
  DATA = $(data_DATA) $(rccontrol_DATA) $(rcinfo_DATA)
  
  
-@@ -514,7 +564,7 @@ RECURSIVE_TARGETS = info-recursive dvi-r
- 	uninstall-recursive check-recursive installcheck-recursive
+@@ -647,7 +697,7 @@ RECURSIVE_TARGETS = info-recursive dvi-r
+ 	check-recursive installcheck-recursive
  DIST_COMMON = Makefile.am Makefile.in
  DIST_SUBDIRS = $(SUBDIRS)
 -SOURCES = $(kcminit_la_SOURCES) $(kcmshell_la_SOURCES) $(kcontrol_la_SOURCES) $(kcminit_SOURCES) $(kcmshell_SOURCES) $(kcontrol_SOURCES)
@@ -281,7 +279,7 @@ $NetBSD: patch-ao,v 1.4 2003/03/11 13:10:19 markd Exp $
  
  #>- all: all-recursive
  #>+ 1
-@@ -565,6 +615,12 @@ kcmshell.la: $(kcmshell_la_OBJECTS) $(kc
+@@ -698,6 +748,12 @@ kcmshell.la: $(kcmshell_la_OBJECTS) $(kc
  	$(CXXLINK) -rpath $(libdir) $(kcmshell_la_LDFLAGS) $(kcmshell_la_OBJECTS) $(kcmshell_la_LIBADD) $(LIBS)
  kcontrol.la: $(kcontrol_la_OBJECTS) $(kcontrol_la_DEPENDENCIES) 
  	$(CXXLINK) -rpath $(libdir) $(kcontrol_la_LDFLAGS) $(kcontrol_la_OBJECTS) $(kcontrol_la_LIBADD) $(LIBS)
@@ -294,7 +292,7 @@ $NetBSD: patch-ao,v 1.4 2003/03/11 13:10:19 markd Exp $
  binPROGRAMS_INSTALL = $(INSTALL_PROGRAM)
  install-binPROGRAMS: $(bin_PROGRAMS)
  	@$(NORMAL_INSTALL)
-@@ -612,13 +668,17 @@ distclean-compile:
+@@ -745,13 +801,17 @@ distclean-compile:
  
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/aboutwidget.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/dockcontainer.Plo@am__quote@
@@ -313,16 +311,16 @@ $NetBSD: patch-ao,v 1.4 2003/03/11 13:10:19 markd Exp $
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/kcrootonly.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/kecdialog.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/main.Plo@am__quote@
-@@ -816,7 +876,7 @@ distclean-tags:
- 	-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH
+@@ -991,7 +1051,7 @@ distclean-tags:
+ 	-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
  #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
  #>+ 4
--KDE_DIST=cr32-app-kcontrol.png quickhelp.cpp cr48-app-kcontrol.png kcdialog.h proxywidget.h moduletreeview.cpp quickhelp.h KControl_NoDisplay.desktop cr64-app-kcontrol.png helpwidget.cpp aboutwidget.h global.h toplevel.h modulemenu.h kcrootonly.cpp modulemenu.cpp kinfocenterui.rc modules.cpp kcontrolui.rc kcmshell.h kinfocenter.desktop helpwidget.h main.h moduleinfo.h moduletreeview.h searchwidget.h proxywidget.cpp moduleIface.cpp moduleiconview.h dockcontainer.cpp dockcontainer.h kcdialog.cpp kecdialog.h cr16-app-kcontrol.png aboutwidget.cpp version.h cr128-app-kcontrol.png indexwidget.h KControl.desktop moduleIface.h modules.h modloader.h moduleiconview.cpp kcrootonly.h 
-+KDE_DIST=kcontrolui.rc indexwidget.h cr64-app-kcontrol.png kinfocenterui.rc proxywidget.h dockcontainer.h cr32-app-kcontrol.png modulemenu.h aboutwidget.cpp quickhelp.h cr128-app-kcontrol.png searchwidget.h modules.cpp main.h kecdialog.cpp moduletreeview.h moduleiconview.cpp kcdialog.h kecdialog.h moduleIface.h searchwidget.cpp aboutwidget.h kinfocenter.desktop kcrootonly.cpp kcrootonly.h dockcontainer.cpp toplevel.h helpwidget.h moduleIface.cpp kcdialog.cpp KControl.desktop cr48-app-kcontrol.png moduletreeview.cpp proxywidget.cpp modules.h version.h cr16-app-kcontrol.png quickhelp.cpp moduleiconview.h KControl_NoDisplay.desktop moduleinfo.h global.h kcmshell.h helpwidget.cpp modulemenu.cpp modloader.h 
+-KDE_DIST=cr32-app-kcontrol.png cr48-app-kcontrol.png kcdialog.h proxywidget.h quickhelp.h KControl_NoDisplay.desktop cr64-app-kcontrol.png aboutwidget.h global.h toplevel.h modulemenu.h modulemenu.cpp kinfocenterui.rc kcontrolui.rc kcmshell.h kinfocenter.desktop helpwidget.h main.h moduleinfo.h moduletreeview.h searchwidget.h moduleiconview.h dockcontainer.h kecdialog.h cr16-app-kcontrol.png version.h cr128-app-kcontrol.png indexwidget.h KControl.desktop moduleIface.h modules.h modloader.h kcrootonly.h 
++KDE_DIST=kcontrolui.rc indexwidget.h cr64-app-kcontrol.png kinfocenterui.rc proxywidget.h dockcontainer.h cr32-app-kcontrol.png modulemenu.h quickhelp.h cr128-app-kcontrol.png searchwidget.h main.h moduletreeview.h kcdialog.h kecdialog.h moduleIface.h aboutwidget.h kinfocenter.desktop kcrootonly.h toplevel.h helpwidget.h KControl.desktop cr48-app-kcontrol.png modules.h version.h cr16-app-kcontrol.png moduleiconview.h KControl_NoDisplay.desktop moduleinfo.h global.h kcmshell.h modulemenu.cpp modloader.h 
  
  DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
  
-@@ -884,7 +944,6 @@ install-strip:
+@@ -1065,7 +1125,6 @@ install-strip:
  mostlyclean-generic:
  
  clean-generic:
@@ -330,7 +328,7 @@ $NetBSD: patch-ao,v 1.4 2003/03/11 13:10:19 markd Exp $
  
  distclean-generic:
  	-rm -f Makefile $(CONFIG_CLEAN_FILES)
-@@ -981,84 +1040,81 @@ install-data-local: KControl_NoDisplay.d
+@@ -1170,84 +1229,81 @@ install-data-local: KControl_NoDisplay.d
  
  messages: rc.cpp
  	$(XGETTEXT) *.cpp -o $(podir)/kcontrol.pot
@@ -449,7 +447,7 @@ $NetBSD: patch-ao,v 1.4 2003/03/11 13:10:19 markd Exp $
  
  #>+ 5
  kcdialog.kidl: $(srcdir)/kcdialog.h $(DCOP_DEPENDENCIES)
-@@ -1074,7 +1130,7 @@ moduleIface_skel.cpp: moduleIface.kidl
+@@ -1263,7 +1319,7 @@ moduleIface_skel.cpp: moduleIface.kidl
  
  #>+ 3
  clean-metasources:
@@ -458,7 +456,7 @@ $NetBSD: patch-ao,v 1.4 2003/03/11 13:10:19 markd Exp $
  
  #>+ 5
  clean-idl:
-@@ -1125,45 +1181,57 @@ kcminit_la.all_cpp.cpp: $(srcdir)/Makefi
+@@ -1314,45 +1370,57 @@ kcminit_la.all_cpp.cpp: $(srcdir)/Makefi
  	rm -f kcminit_la.all_cpp.final kcminit_la.all_cpp.files
  
  #>+ 11
@@ -537,7 +535,7 @@ $NetBSD: patch-ao,v 1.4 2003/03/11 13:10:19 markd Exp $
  #>+ 3
  cvs-clean:
  	$(MAKE) admindir=$(top_srcdir)/admin -f $(top_srcdir)/admin/Makefile.common cvs-clean
-@@ -1173,39 +1241,39 @@ kde-rpo-clean:
+@@ -1362,39 +1430,39 @@ kde-rpo-clean:
  	-rm -f *.rpo
  
  #>+ 37

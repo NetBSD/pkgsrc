@@ -1,8 +1,8 @@
-$NetBSD: patch-bm,v 1.3 2003/03/11 13:10:38 markd Exp $
+$NetBSD: patch-bm,v 1.4 2003/05/22 02:42:42 markd Exp $
 
---- kioslave/http/Makefile.am.orig	Sun Oct 27 11:18:24 2002
+--- kioslave/http/Makefile.am.orig	Wed May  7 23:46:34 2003
 +++ kioslave/http/Makefile.am
-@@ -9,7 +9,7 @@
+@@ -8,7 +8,7 @@ INCLUDES= -I$(top_srcdir)/interfaces $(a
  ####### Files
  
  bin_PROGRAMS = kio_http_cache_cleaner
@@ -11,7 +11,7 @@ $NetBSD: patch-bm,v 1.3 2003/03/11 13:10:38 markd Exp $
  kde_module_LTLIBRARIES = kio_http.la
  
  kio_http_la_SOURCES = http.cc httpfilter.cc
-@@ -17,12 +17,15 @@
+@@ -16,12 +16,15 @@ kio_http_la_METASOURCES = AUTO
  kio_http_la_LIBADD = $(LIB_KIO) $(LIBZ)
  kio_http_la_LDFLAGS = $(all_libraries) -module $(KDE_PLUGIN)
  
@@ -19,7 +19,7 @@ $NetBSD: patch-bm,v 1.3 2003/03/11 13:10:38 markd Exp $
 -kio_http_cache_cleaner_LDADD   = kio_http_cache_cleaner.la
 +kio_http_cache_cleaner_SOURCES = http_cache_cleaner_main.cpp
 +kio_http_cache_cleaner_LDADD   = libkio_http_cache_cleaner_main.la
- kio_http_cache_cleaner_LDFLAGS = $(KDE_RPATH)
+ kio_http_cache_cleaner_LDFLAGS = $(KDE_RPATH) $(all_libraries)
  
 -kio_http_cache_cleaner_la_SOURCES = http_cache_cleaner.cpp
 -kio_http_cache_cleaner_la_LIBADD  = $(LIB_KIO)
@@ -28,10 +28,10 @@ $NetBSD: patch-bm,v 1.3 2003/03/11 13:10:38 markd Exp $
 +
 +kio_http_cache_cleaner_la_SOURCES = http_cache_cleaner_main.cpp
 +kio_http_cache_cleaner_la_LIBADD  = libkio_http_cache_cleaner_main.la
- kio_http_cache_cleaner_la_LDFLAGS = -module -avoid-version
+ kio_http_cache_cleaner_la_LDFLAGS = -module -avoid-version $(all_libraries)
  
  noinst_HEADERS = http.h
-@@ -30,6 +33,3 @@
+@@ -29,6 +32,3 @@ noinst_HEADERS = http.h
  kdelnkdir = $(kde_servicesdir)
  kdelnk_DATA = http_cache_cleaner.desktop http.protocol https.protocol \
                webdav.protocol webdavs.protocol
