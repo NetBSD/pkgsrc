@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2003/07/12 23:03:39 mjl Exp $
+@comment $NetBSD: PLIST,v 1.10 2003/07/13 22:32:11 mjl Exp $
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/gnucash.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/gnucash.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gnucash.mo
@@ -30,7 +30,6 @@ bin/gnucash-config
 bin/gnucash-env
 bin/gnucash-make-guids
 bin/gnucash-run-script
-bin/update-finance-quote
 etc/gnucash/config
 include/gnucash/Account.h
 include/gnucash/Backend.h
