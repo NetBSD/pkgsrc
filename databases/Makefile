@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.115 2004/02/13 19:41:05 minskim Exp $
+# $NetBSD: Makefile,v 1.116 2004/02/13 21:31:54 minskim Exp $
 #
 
 COMMENT=	Databases
@@ -88,6 +88,7 @@ SUBDIR+=	pxtools
 SUBDIR+=	py-PgSQL
 SUBDIR+=	py-ZODB
 SUBDIR+=	py-bsddb3
+SUBDIR+=	py-dbxml
 SUBDIR+=	py-gdbm
 SUBDIR+=	py-ldap
 SUBDIR+=	py-metakit
