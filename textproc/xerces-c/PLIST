@@ -1,35 +1,122 @@
-@comment $NetBSD: PLIST,v 1.2 2003/06/23 07:52:39 jlam Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/02/11 04:06:04 minskim Exp $
 include/xercesc/dom/DOM.hpp
-include/xercesc/dom/DOMString.hpp
-include/xercesc/dom/DOM_Attr.hpp
-include/xercesc/dom/DOM_CDATASection.hpp
-include/xercesc/dom/DOM_CharacterData.hpp
-include/xercesc/dom/DOM_Comment.hpp
-include/xercesc/dom/DOM_DOMException.hpp
-include/xercesc/dom/DOM_DOMImplementation.hpp
-include/xercesc/dom/DOM_Document.hpp
-include/xercesc/dom/DOM_DocumentFragment.hpp
-include/xercesc/dom/DOM_DocumentType.hpp
-include/xercesc/dom/DOM_Element.hpp
-include/xercesc/dom/DOM_Entity.hpp
-include/xercesc/dom/DOM_EntityReference.hpp
-include/xercesc/dom/DOM_NamedNodeMap.hpp
-include/xercesc/dom/DOM_Node.hpp
-include/xercesc/dom/DOM_NodeFilter.hpp
-include/xercesc/dom/DOM_NodeIterator.hpp
-include/xercesc/dom/DOM_NodeList.hpp
-include/xercesc/dom/DOM_Notation.hpp
-include/xercesc/dom/DOM_ProcessingInstruction.hpp
-include/xercesc/dom/DOM_Range.hpp
-include/xercesc/dom/DOM_RangeException.hpp
-include/xercesc/dom/DOM_Text.hpp
-include/xercesc/dom/DOM_TreeWalker.hpp
-include/xercesc/dom/DOM_XMLDecl.hpp
-include/xercesc/dom/DomMemDebug.hpp
+include/xercesc/dom/DOMAttr.hpp
+include/xercesc/dom/DOMBuilder.hpp
+include/xercesc/dom/DOMCDATASection.hpp
+include/xercesc/dom/DOMCharacterData.hpp
+include/xercesc/dom/DOMComment.hpp
+include/xercesc/dom/DOMConfiguration.hpp
+include/xercesc/dom/DOMDocument.hpp
+include/xercesc/dom/DOMDocumentFragment.hpp
+include/xercesc/dom/DOMDocumentRange.hpp
+include/xercesc/dom/DOMDocumentTraversal.hpp
+include/xercesc/dom/DOMDocumentType.hpp
+include/xercesc/dom/DOMElement.hpp
+include/xercesc/dom/DOMEntity.hpp
+include/xercesc/dom/DOMEntityReference.hpp
+include/xercesc/dom/DOMEntityResolver.hpp
+include/xercesc/dom/DOMError.hpp
+include/xercesc/dom/DOMErrorHandler.hpp
+include/xercesc/dom/DOMException.hpp
+include/xercesc/dom/DOMImplementation.hpp
+include/xercesc/dom/DOMImplementationLS.hpp
+include/xercesc/dom/DOMImplementationRegistry.hpp
+include/xercesc/dom/DOMImplementationSource.hpp
+include/xercesc/dom/DOMInputSource.hpp
+include/xercesc/dom/DOMLocator.hpp
+include/xercesc/dom/DOMNamedNodeMap.hpp
+include/xercesc/dom/DOMNode.hpp
+include/xercesc/dom/DOMNodeFilter.hpp
+include/xercesc/dom/DOMNodeIterator.hpp
+include/xercesc/dom/DOMNodeList.hpp
+include/xercesc/dom/DOMNotation.hpp
+include/xercesc/dom/DOMProcessingInstruction.hpp
+include/xercesc/dom/DOMRange.hpp
+include/xercesc/dom/DOMRangeException.hpp
+include/xercesc/dom/DOMText.hpp
+include/xercesc/dom/DOMTreeWalker.hpp
+include/xercesc/dom/DOMTypeInfo.hpp
+include/xercesc/dom/DOMUserDataHandler.hpp
+include/xercesc/dom/DOMWriter.hpp
+include/xercesc/dom/DOMWriterFilter.hpp
+include/xercesc/dom/StDOMNode.hpp
+include/xercesc/dom/deprecated/DOM.hpp
+include/xercesc/dom/deprecated/DOMParser.hpp
+include/xercesc/dom/deprecated/DOMString.hpp
+include/xercesc/dom/deprecated/DOM_Attr.hpp
+include/xercesc/dom/deprecated/DOM_CDATASection.hpp
+include/xercesc/dom/deprecated/DOM_CharacterData.hpp
+include/xercesc/dom/deprecated/DOM_Comment.hpp
+include/xercesc/dom/deprecated/DOM_DOMException.hpp
+include/xercesc/dom/deprecated/DOM_DOMImplementation.hpp
+include/xercesc/dom/deprecated/DOM_Document.hpp
+include/xercesc/dom/deprecated/DOM_DocumentFragment.hpp
+include/xercesc/dom/deprecated/DOM_DocumentType.hpp
+include/xercesc/dom/deprecated/DOM_Element.hpp
+include/xercesc/dom/deprecated/DOM_Entity.hpp
+include/xercesc/dom/deprecated/DOM_EntityReference.hpp
+include/xercesc/dom/deprecated/DOM_NamedNodeMap.hpp
+include/xercesc/dom/deprecated/DOM_Node.hpp
+include/xercesc/dom/deprecated/DOM_NodeFilter.hpp
+include/xercesc/dom/deprecated/DOM_NodeIterator.hpp
+include/xercesc/dom/deprecated/DOM_NodeList.hpp
+include/xercesc/dom/deprecated/DOM_Notation.hpp
+include/xercesc/dom/deprecated/DOM_ProcessingInstruction.hpp
+include/xercesc/dom/deprecated/DOM_Range.hpp
+include/xercesc/dom/deprecated/DOM_RangeException.hpp
+include/xercesc/dom/deprecated/DOM_Text.hpp
+include/xercesc/dom/deprecated/DOM_TreeWalker.hpp
+include/xercesc/dom/deprecated/DOM_XMLDecl.hpp
+include/xercesc/dom/deprecated/DomMemDebug.hpp
+include/xercesc/dom/impl/DOMAttrImpl.hpp
+include/xercesc/dom/impl/DOMAttrMapImpl.hpp
+include/xercesc/dom/impl/DOMAttrNSImpl.hpp
+include/xercesc/dom/impl/DOMCDATASectionImpl.hpp
+include/xercesc/dom/impl/DOMCasts.hpp
+include/xercesc/dom/impl/DOMCharacterDataImpl.hpp
+include/xercesc/dom/impl/DOMChildNode.hpp
+include/xercesc/dom/impl/DOMCommentImpl.hpp
+include/xercesc/dom/impl/DOMConfigurationImpl.hpp
+include/xercesc/dom/impl/DOMDeepNodeListImpl.hpp
+include/xercesc/dom/impl/DOMDeepNodeListPool.c
+include/xercesc/dom/impl/DOMDeepNodeListPool.hpp
+include/xercesc/dom/impl/DOMDocumentFragmentImpl.hpp
+include/xercesc/dom/impl/DOMDocumentImpl.hpp
+include/xercesc/dom/impl/DOMDocumentTypeImpl.hpp
+include/xercesc/dom/impl/DOMElementImpl.hpp
+include/xercesc/dom/impl/DOMElementNSImpl.hpp
+include/xercesc/dom/impl/DOMEntityImpl.hpp
+include/xercesc/dom/impl/DOMEntityReferenceImpl.hpp
+include/xercesc/dom/impl/DOMErrorImpl.hpp
+include/xercesc/dom/impl/DOMImplementationImpl.hpp
+include/xercesc/dom/impl/DOMLocatorImpl.hpp
+include/xercesc/dom/impl/DOMNamedNodeMapImpl.hpp
+include/xercesc/dom/impl/DOMNodeIDMap.hpp
+include/xercesc/dom/impl/DOMNodeImpl.hpp
+include/xercesc/dom/impl/DOMNodeIteratorImpl.hpp
+include/xercesc/dom/impl/DOMNodeListImpl.hpp
+include/xercesc/dom/impl/DOMNodeVector.hpp
+include/xercesc/dom/impl/DOMNormalizer.hpp
+include/xercesc/dom/impl/DOMNotationImpl.hpp
+include/xercesc/dom/impl/DOMParentNode.hpp
+include/xercesc/dom/impl/DOMProcessingInstructionImpl.hpp
+include/xercesc/dom/impl/DOMRangeImpl.hpp
+include/xercesc/dom/impl/DOMStringPool.hpp
+include/xercesc/dom/impl/DOMTextImpl.hpp
+include/xercesc/dom/impl/DOMTreeWalkerImpl.hpp
+include/xercesc/dom/impl/DOMTypeInfoImpl.hpp
+include/xercesc/dom/impl/DOMWriterImpl.hpp
+include/xercesc/dom/impl/XSDElementNSImpl.hpp
+include/xercesc/framework/LocalFileFormatTarget.hpp
 include/xercesc/framework/LocalFileInputSource.hpp
+include/xercesc/framework/MemBufFormatTarget.hpp
 include/xercesc/framework/MemBufInputSource.hpp
+include/xercesc/framework/MemoryManager.hpp
 include/xercesc/framework/StdInInputSource.hpp
+include/xercesc/framework/StdOutFormatTarget.hpp
 include/xercesc/framework/URLInputSource.hpp
+include/xercesc/framework/Wrapper4DOMInputSource.hpp
+include/xercesc/framework/Wrapper4InputSource.hpp
 include/xercesc/framework/XMLAttDef.hpp
 include/xercesc/framework/XMLAttDefList.hpp
 include/xercesc/framework/XMLAttr.hpp
@@ -49,51 +136,27 @@ include/xercesc/framework/XMLRecognizer.hpp
 include/xercesc/framework/XMLRefInfo.hpp
 include/xercesc/framework/XMLValidator.hpp
 include/xercesc/framework/XMLValidityCodes.hpp
-include/xercesc/idom/IDCasts.hpp
-include/xercesc/idom/IDChildNode.hpp
-include/xercesc/idom/IDDeepNodeListPool.c
-include/xercesc/idom/IDDeepNodeListPool.hpp
-include/xercesc/idom/IDNodeIDMap.hpp
-include/xercesc/idom/IDNodeVector.hpp
-include/xercesc/idom/IDOM.hpp
-include/xercesc/idom/IDOM_Attr.hpp
-include/xercesc/idom/IDOM_CDATASection.hpp
-include/xercesc/idom/IDOM_CharacterData.hpp
-include/xercesc/idom/IDOM_Comment.hpp
-include/xercesc/idom/IDOM_DOMException.hpp
-include/xercesc/idom/IDOM_DOMImplementation.hpp
-include/xercesc/idom/IDOM_Document.hpp
-include/xercesc/idom/IDOM_DocumentFragment.hpp
-include/xercesc/idom/IDOM_DocumentType.hpp
-include/xercesc/idom/IDOM_Element.hpp
-include/xercesc/idom/IDOM_Entity.hpp
-include/xercesc/idom/IDOM_EntityReference.hpp
-include/xercesc/idom/IDOM_NamedNodeMap.hpp
-include/xercesc/idom/IDOM_Node.hpp
-include/xercesc/idom/IDOM_NodeFilter.hpp
-include/xercesc/idom/IDOM_NodeIterator.hpp
-include/xercesc/idom/IDOM_NodeList.hpp
-include/xercesc/idom/IDOM_Notation.hpp
-include/xercesc/idom/IDOM_ProcessingInstruction.hpp
-include/xercesc/idom/IDOM_Range.hpp
-include/xercesc/idom/IDOM_RangeException.hpp
-include/xercesc/idom/IDOM_Text.hpp
-include/xercesc/idom/IDOM_TreeWalker.hpp
-include/xercesc/idom/IDParentNode.hpp
-include/xercesc/idom/IDStringPool.hpp
 include/xercesc/internal/CharTypeTables.hpp
+include/xercesc/internal/DGXMLScanner.hpp
 include/xercesc/internal/ElemStack.hpp
 include/xercesc/internal/EndOfEntityException.hpp
+include/xercesc/internal/IANAEncodings.hpp
+include/xercesc/internal/IGXMLScanner.hpp
+include/xercesc/internal/MemoryManagerImpl.hpp
 include/xercesc/internal/ReaderMgr.hpp
+include/xercesc/internal/SGXMLScanner.hpp
 include/xercesc/internal/VecAttrListImpl.hpp
 include/xercesc/internal/VecAttributesImpl.hpp
+include/xercesc/internal/WFXMLScanner.hpp
 include/xercesc/internal/XMLInternalErrorHandler.hpp
 include/xercesc/internal/XMLReader.hpp
 include/xercesc/internal/XMLScanner.hpp
-include/xercesc/parsers/DOMParser.hpp
-include/xercesc/parsers/IDOMParser.hpp
+include/xercesc/internal/XMLScannerResolver.hpp
+include/xercesc/parsers/AbstractDOMParser.hpp
+include/xercesc/parsers/DOMBuilderImpl.hpp
 include/xercesc/parsers/SAX2XMLReaderImpl.hpp
 include/xercesc/parsers/SAXParser.hpp
+include/xercesc/parsers/XercesDOMParser.hpp
 include/xercesc/sax/AttributeList.hpp
 include/xercesc/sax/DTDHandler.hpp
 include/xercesc/sax/DocumentHandler.hpp
@@ -115,6 +178,8 @@ include/xercesc/sax2/XMLReaderFactory.hpp
 include/xercesc/util/ArrayIndexOutOfBoundsException.hpp
 include/xercesc/util/AutoSense.hpp
 include/xercesc/util/Base64.hpp
+include/xercesc/util/BaseRefVectorOf.c
+include/xercesc/util/BaseRefVectorOf.hpp
 include/xercesc/util/BinFileInputStream.hpp
 include/xercesc/util/BinInputStream.hpp
 include/xercesc/util/BinMemInputStream.hpp
@@ -132,6 +197,7 @@ include/xercesc/util/Compilers/MIPSproDefs.hpp
 include/xercesc/util/Compilers/MVSCPPDefs.hpp
 include/xercesc/util/Compilers/OS400SetDefs.hpp
 include/xercesc/util/Compilers/PTXCCDefs.hpp
+include/xercesc/util/Compilers/QCCDefs.hpp
 include/xercesc/util/Compilers/SCOCCDefs.hpp
 include/xercesc/util/Compilers/SunCCDefs.hpp
 include/xercesc/util/Compilers/SunKaiDefs.hpp
@@ -139,7 +205,9 @@ include/xercesc/util/Compilers/TandemCCDefs.hpp
 include/xercesc/util/Compilers/VCPPDefs.hpp
 include/xercesc/util/CountedPointer.c
 include/xercesc/util/CountedPointer.hpp
+include/xercesc/util/DefaultPanicHandler.hpp
 include/xercesc/util/EmptyStackException.hpp
+include/xercesc/util/EncodingValidator.hpp
 include/xercesc/util/FlagJanitor.c
 include/xercesc/util/FlagJanitor.hpp
 include/xercesc/util/HashBase.hpp
@@ -153,22 +221,31 @@ include/xercesc/util/InvalidCastException.hpp
 include/xercesc/util/Janitor.c
 include/xercesc/util/Janitor.hpp
 include/xercesc/util/KVStringPair.hpp
+include/xercesc/util/KeyRefPair.c
+include/xercesc/util/KeyRefPair.hpp
 include/xercesc/util/KeyValuePair.c
 include/xercesc/util/KeyValuePair.hpp
-include/xercesc/util/MsgLoaders/ICU/ICUMsgLoader.hpp
+include/xercesc/util/LogicalPath.c
+include/xercesc/util/MsgLoaders/InMemory/InMemMsgLoader.hpp
+include/xercesc/util/MsgLoaders/InMemory/XercesMessages_en_US.hpp
 include/xercesc/util/Mutexes.hpp
 include/xercesc/util/NameIdPool.c
 include/xercesc/util/NameIdPool.hpp
+include/xercesc/util/NetAccessors/Socket/SocketNetAccessor.hpp
+include/xercesc/util/NetAccessors/Socket/UnixHTTPURLInputStream.hpp
 include/xercesc/util/NoDefTranscoderException.hpp
 include/xercesc/util/NoSuchElementException.hpp
 include/xercesc/util/NullPointerException.hpp
 include/xercesc/util/NumberFormatException.hpp
+include/xercesc/util/PanicHandler.hpp
 include/xercesc/util/ParseException.hpp
 include/xercesc/util/PlatformUtils.hpp
-include/xercesc/util/Platforms/NetBSD/NetBSDDefs.hpp
+include/xercesc/util/Platforms/${OPSYS}/${OPSYS}Defs.hpp
 include/xercesc/util/QName.hpp
 include/xercesc/util/RefArrayOf.c
 include/xercesc/util/RefArrayOf.hpp
+include/xercesc/util/RefArrayVectorOf.c
+include/xercesc/util/RefArrayVectorOf.hpp
 include/xercesc/util/RefHash2KeysTableOf.c
 include/xercesc/util/RefHash2KeysTableOf.hpp
 include/xercesc/util/RefHash3KeysIdPool.c
@@ -181,17 +258,21 @@ include/xercesc/util/RefVectorOf.c
 include/xercesc/util/RefVectorOf.hpp
 include/xercesc/util/RuntimeException.hpp
 include/xercesc/util/SchemaDateTimeException.hpp
+include/xercesc/util/SecurityManager.hpp
 include/xercesc/util/StringPool.hpp
 include/xercesc/util/TransENameMap.c
 include/xercesc/util/TransENameMap.hpp
 include/xercesc/util/TransService.hpp
-include/xercesc/util/Transcoders/ICU/ICUTransService.hpp
+${NATIVEICONV}include/xercesc/util/Transcoders/Iconv/IconvTransService.hpp
+${GNUICONV}include/xercesc/util/Transcoders/IconvGNU/IconvGNUTransService.hpp
 include/xercesc/util/TranscodingException.hpp
 include/xercesc/util/UTFDataFormatException.hpp
 include/xercesc/util/UnexpectedEOFException.hpp
 include/xercesc/util/UnsupportedEncodingException.hpp
 include/xercesc/util/ValueArrayOf.c
 include/xercesc/util/ValueArrayOf.hpp
+include/xercesc/util/ValueHashTableOf.c
+include/xercesc/util/ValueHashTableOf.hpp
 include/xercesc/util/ValueStackOf.c
 include/xercesc/util/ValueStackOf.hpp
 include/xercesc/util/ValueVectorOf.c
@@ -203,6 +284,8 @@ include/xercesc/util/XMLAbstractDoubleFloat.hpp
 include/xercesc/util/XMLBigDecimal.hpp
 include/xercesc/util/XMLBigInteger.hpp
 include/xercesc/util/XMLChTranscoder.hpp
+include/xercesc/util/XMLChar.hpp
+include/xercesc/util/XMLDOMMsg.hpp
 include/xercesc/util/XMLDateTime.hpp
 include/xercesc/util/XMLDeleterFor.c
 include/xercesc/util/XMLDeleterFor.hpp
@@ -228,7 +311,9 @@ include/xercesc/util/XMLUni.hpp
 include/xercesc/util/XMLUniDefs.hpp
 include/xercesc/util/XMLUri.hpp
 include/xercesc/util/XMLWin1252Transcoder.hpp
+include/xercesc/util/XMemory.hpp
 include/xercesc/util/XercesDefs.hpp
+include/xercesc/util/XercesVersion.hpp
 include/xercesc/util/regx/ASCIIRangeFactory.hpp
 include/xercesc/util/regx/BMPattern.hpp
 include/xercesc/util/regx/BlockRangeFactory.hpp
@@ -318,6 +403,7 @@ include/xercesc/validators/datatype/YearMonthDatatypeValidator.hpp
 include/xercesc/validators/schema/ComplexTypeInfo.hpp
 include/xercesc/validators/schema/GeneralAttributeCheck.hpp
 include/xercesc/validators/schema/NamespaceScope.hpp
+include/xercesc/validators/schema/PSVIDefs.hpp
 include/xercesc/validators/schema/SchemaAttDef.hpp
 include/xercesc/validators/schema/SchemaAttDefList.hpp
 include/xercesc/validators/schema/SchemaElementDecl.hpp
@@ -327,6 +413,9 @@ include/xercesc/validators/schema/SchemaSymbols.hpp
 include/xercesc/validators/schema/SchemaValidator.hpp
 include/xercesc/validators/schema/SubstitutionGroupComparator.hpp
 include/xercesc/validators/schema/TraverseSchema.hpp
+include/xercesc/validators/schema/XSDDOMParser.hpp
+include/xercesc/validators/schema/XSDErrorReporter.hpp
+include/xercesc/validators/schema/XSDLocator.hpp
 include/xercesc/validators/schema/XUtil.hpp
 include/xercesc/validators/schema/XercesAttGroupInfo.hpp
 include/xercesc/validators/schema/XercesElementWildcard.hpp
@@ -346,7 +435,9 @@ include/xercesc/validators/schema/identity/XPathMatcher.hpp
 include/xercesc/validators/schema/identity/XPathMatcherStack.hpp
 include/xercesc/validators/schema/identity/XPathSymbols.hpp
 include/xercesc/validators/schema/identity/XercesXPath.hpp
-lib/libxerces-c1_7_0.so
+lib/libxerces-c.so
+lib/libxerces-c.so.23
+lib/libxerces-c.so.23.0
 @dirrm include/xercesc/validators/schema/identity
 @dirrm include/xercesc/validators/schema
 @dirrm include/xercesc/validators/datatype
@@ -354,19 +445,23 @@ lib/libxerces-c1_7_0.so
 @dirrm include/xercesc/validators/DTD
 @dirrm include/xercesc/validators
 @dirrm include/xercesc/util/regx
-@dirrm include/xercesc/util/Transcoders/ICU
+${GNUICONV}@dirrm include/xercesc/util/Transcoders/IconvGNU
+${NATIVEICONV}@dirrm include/xercesc/util/Transcoders/Iconv
 @dirrm include/xercesc/util/Transcoders
 @dirrm include/xercesc/util/Platforms/${OPSYS}
 @dirrm include/xercesc/util/Platforms
-@dirrm include/xercesc/util/MsgLoaders/ICU
-@dirrm include/xercesc/util/MsgLoaders
+@dirrm include/xercesc/util/NetAccessors/Socket
+@dirrm include/xercesc/util/NetAccessors
 @dirrm include/xercesc/util/Compilers
+@dirrm include/xercesc/util/MsgLoaders/InMemory
+@dirrm include/xercesc/util/MsgLoaders
 @dirrm include/xercesc/util
 @dirrm include/xercesc/sax2
 @dirrm include/xercesc/sax
 @dirrm include/xercesc/parsers
 @dirrm include/xercesc/internal
-@dirrm include/xercesc/idom
 @dirrm include/xercesc/framework
+@dirrm include/xercesc/dom/impl
+@dirrm include/xercesc/dom/deprecated
 @dirrm include/xercesc/dom
 @dirrm include/xercesc
