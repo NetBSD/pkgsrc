@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2001/06/11 06:34:19 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2001/06/21 16:38:33 rh Exp $
 # FreeBSD: ports/audio/xmms/Makefile,v 1.9 2000/02/11 01:46:12 cpiazza Exp
 
-DISTNAME=	xmms-1.2.4
+DISTNAME=	xmms-1.2.5
 CATEGORIES=	audio
 MASTER_SITES=	ftp://ftp.xmms.org/xmms/1.2.x/ \
 		ftp://ftp.sunet.se/pub/multimedia/xmms/1.2.x/
@@ -19,6 +19,7 @@ DEPENDS+=	libxml>=1.8.5:../../textproc/libxml
 USE_LIBTOOL=	yes
 USE_X11=	yes
 USE_MESA=	yes
+USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include
@@ -31,7 +32,7 @@ LTCONFIG_OVERRIDE=${WRKSRC}/ltconfig
 
 .if (${OPSYS} == NetBSD)
 CONFIGURE_ARGS+=--with-dev-dsp=/dev/sound
-CPPFLAGS+=	-I${WRKDIR}
+CPPFLAGS+=	-I${WRKDIR} -DHAVE_NANOSLEEP=1
 
 .if (${MACHINE_ARCH} == i386)
 post-patch:
