@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2005/01/23 09:24:18 wulf Exp $
+$NetBSD: distinfo,v 1.3 2005/02/22 21:06:07 agc Exp $
 
 SHA1 (xdx-1.2.tar.gz) = b4720c8ad873f065348933351a7c7d6909171b21
+RMD160 (xdx-1.2.tar.gz) = 727dc18a53637aecd7083de5b9b7d85721f62cf8
 Size (xdx-1.2.tar.gz) = 204680 bytes
 SHA1 (patch-aa) = a0ffc7b43b1cba7c5876392451aa43d53df9f792

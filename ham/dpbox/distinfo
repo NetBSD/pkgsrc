@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.6 2004/09/18 15:45:13 wiz Exp $
+$NetBSD: distinfo,v 1.7 2005/02/22 21:06:06 agc Exp $
 
 SHA1 (dpbox-60000.tar.gz) = 73a55785f499324f57736c7fb3cc0bd1001facd3
+RMD160 (dpbox-60000.tar.gz) = 05a14f7601b531fcdd0bc0252d171eed3bfafb7f
 Size (dpbox-60000.tar.gz) = 957010 bytes
 SHA1 (patch-aa) = 8235aa600edffd952c1d932c0ee8011ba0896d08
 SHA1 (patch-ab) = abeee7b86844c8937792ef09a938caf232574fb3
