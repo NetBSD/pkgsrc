@@ -1,0 +1,53 @@
+$NetBSD: patch-aa,v 1.1 2002/02/21 03:02:34 jonb Exp $
+
+--- ../arch/inventory/inventory.sh.orig	Tue Feb 19 23:23:24 2002
++++ ../arch/inventory/inventory.sh
+@@ -680,42 +680,42 @@
+     printf "\\n"
+     printf "Source Files: "
+     printf "\\n\\n"
+-    "$this" $common_flags $tags --source-command "$source_command" "$@" | "$column"
++    "$this" $common_flags $tags --source-command "$source_command" "$@" | $column
+   fi
+ 
+   if test $precious -eq 1 ; then
+     printf "\\n"
+     printf "Precious Files: "
+     printf "\\n\\n"
+-    "$this" $common_flags --precious-command "$precious_command" "$@" | "$column"
++    "$this" $common_flags --precious-command "$precious_command" "$@" | $column
+   fi
+ 
+   if test $backups -eq 1 ; then
+     printf "\\n"
+     printf "Backup Files: "
+     printf "\\n\\n"
+-    "$this" $common_flags --backups-command "$backups_command" "$@" | "$column"
++    "$this" $common_flags --backups-command "$backups_command" "$@" | $column
+   fi
+ 
+   if test $junk -eq 1 ; then
+     printf "\\n"
+     printf "Junk Files: "
+     printf "\\n\\n"
+-    "$this" $common_flags --junk-command "$junk_command" "$@" | "$column"
++    "$this" $common_flags --junk-command "$junk_command" "$@" | $column
+   fi
+ 
+   if test $unrecognized -eq 1 ; then
+     printf "\\n"
+     printf "Unrecognized Files: "
+     printf "\\n\\n"
+-    "$this" $common_flags --unrecognized-command "$unrecognized_command" "$@" | "$column"
++    "$this" $common_flags --unrecognized-command "$unrecognized_command" "$@" | $column
+   fi
+ 
+   if test $trees -eq 1 ; then
+     printf "\\n"
+     printf "Nested Project Trees: "
+     printf "\\n\\n"
+-    "$this" $common_flags --trees "$@" | "$column"
++    "$this" $common_flags --trees "$@" | $column
+   fi
+ 
+ fi
