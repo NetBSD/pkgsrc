@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2004/01/03 18:49:42 reed Exp $
+# $NetBSD: Makefile,v 1.22 2004/01/20 22:08:32 snj Exp $
 #
 
 DISTNAME=		gimp-1.2.5
@@ -37,7 +37,7 @@ CONFIGURE_ARGS+=	--disable-python
 CONFIGURE_ARGS+=	--disable-print
 
 # Add settings for MPEG, LIBMPEG, and GAP_DECODE_MPEG to properly support
-# the MPEG library from graphics/mpeg-lib that changed it's name, as the
+# the MPEG library from graphics/mpeg-lib that changed its name, as the
 # configure script will default to searching from -lmpeg.
 #
 CONFIGURE_ENV+=		MPEG="mpeg"
