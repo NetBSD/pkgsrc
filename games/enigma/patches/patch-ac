@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2004/03/01 22:46:26 heinz Exp $
+
+--- doc/Makefile.in.orig	Sat Oct 11 19:19:50 2003
++++ doc/Makefile.in
+@@ -138,7 +138,7 @@ target_os = @target_os@
+ target_vendor = @target_vendor@
+ SUBDIRS = manual refman
+ 
+-docdir = @datadir@/doc/enigma/reference
++docdir = @datadir@/doc/html/enigma/reference
+ doc_DATA = functions.html functions.css ant_lua.txt CREATING-LEVELS
+ 
+ EXTRA_DIST = enigma.6 HACKING TODO $(doc_DATA)
