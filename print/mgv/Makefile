@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/04/14 00:51:16 jtb Exp $
+# $NetBSD: Makefile,v 1.2 2001/04/14 01:12:07 jtb Exp $
 
 DISTNAME=		mgv-3.1.5
 CATEGORIES=		print
@@ -17,6 +17,7 @@ CONFIGURE_ARGS+=	--with-motif-includes=${MOTIFBASE}/include
 CONFIGURE_ARGS+=	--with-motif-libs=${MOTIFBASE}/lib
 
 post-install:
+	${INSTALL_DATA} ${WRKSRC}/doc/*.gif ${PREFIX}/share/mgv/3.1.5/help
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html
 	${LN} -fs ${PREFIX}/share/mgv/3.1.5/help ${PREFIX}/share/doc/html/mgv
 
