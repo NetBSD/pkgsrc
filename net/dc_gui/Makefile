@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2003/05/19 22:37:47 jmc Exp $
+# $NetBSD: Makefile,v 1.16 2003/05/22 21:49:18 jmc Exp $
 #
 
 DISTNAME=	dc_gui-0.66
@@ -30,7 +30,7 @@ post-configure:
 	@${ECHO} '# define ENODATA ENOMSG' >> ${WRKSRC}/config.h
 	@${ECHO} '#endif' >> ${WRKSRC}/config.h
 	@sleep 5
-	@${TOUCH} ${WRKSRC}/stamp-h
+	@${TOUCH} ${WRKSRC}/stamp-h ${WRKSRC}/stamp-h.in
 
 .include "../../converters/libiconv/buildlink2.mk"
 .include "../../databases/db4/buildlink2.mk"
