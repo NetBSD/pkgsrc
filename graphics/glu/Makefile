@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2002/09/01 11:49:42 tron Exp $
+# $NetBSD: Makefile,v 1.13 2002/10/27 17:58:12 bouyer Exp $
 
 PKGNAME=		${DISTNAME:C/MesaLib/glu/}
 WRKSRC=			${WRKDIR}/${DISTNAME:C/Lib//}
@@ -16,7 +16,7 @@ USE_X11BASE=		yes
 .include "../../mk/bsd.prefs.mk"
 
 # Check if we got libGLU distributed with XFree86 4.x.
-.if (${OPSYS} != SunOS) && exists(${X11BASE}/include/GL/glu.h)
+.if exists(${X11BASE}/include/GL/glu.h)
 _IS_BUILTIN_GLU!=	${EGREP} -c BuildGLULibrary ${X11BASE}/lib/X11/config/X11.tmpl || ${TRUE}
 .else
 _IS_BUILTIN_GLU=	0
