@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2004/11/10 19:13:10 snj Exp $
-#
+# $NetBSD: Makefile,v 1.44 2004/12/06 23:00:23 adam Exp $
 
 DISTNAME=	gc6.3
 PKGNAME=	${DISTNAME:S/gc/boehm-gc-/}
@@ -15,10 +14,10 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=		YES
 USE_GNU_TOOLS+=		make
+USE_LANGUAGES=		c c++
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
-CONFIGURE_ARGS+=	--enable-cplusplus --disable-threads
-USE_LANGUAGES=		c c++
+CONFIGURE_ARGS+=	--enable-cplusplus
 INSTALLATION_DIRS=	man/man3
 
 MAKE_ENV+=		COPTS=${CFLAGS:Q}
@@ -26,6 +25,10 @@ MAKE_ENV+=		COPTS=${CFLAGS:Q}
 #TEST_TARGET=		check
 
 .include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} != "Darwin"
+CONFIGURE_ARGS+=	--disable-threads
+.endif
 
 .if defined(EXTRACT_USING_PAX)
 EXTRACT_ELEMENTS=	-u
