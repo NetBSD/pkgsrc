@@ -1,0 +1,22 @@
+$NetBSD: patch-ac,v 1.4 2003/10/09 18:38:34 reed Exp $
+
+--- filters/kspread/qpro/libqpro/src/stream.cc.orig	2003-09-29 16:48:06.000000000 +0000
++++ filters/kspread/qpro/libqpro/src/stream.cc	2003-09-29 16:48:38.000000000 +0000
+@@ -31,7 +31,7 @@
+ #else
+ #include <string.h>
+ #include <fstream.h>
+-#include <strstream.h>
++#include <strstream>
+ 
+ // For IRIX
+ namespace std {}
+@@ -60,7 +60,7 @@
+    , cOffset(0L)
+    , cStreamBuf(0)
+ {
+-   cStreamBuf = new strstreambuf (pBuffer, pLen);
++   cStreamBuf = new std::strstreambuf (pBuffer, pLen);
+ 
+    cIn = new istream(cStreamBuf);
+ }
