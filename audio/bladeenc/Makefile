@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1999/09/13 03:33:32 simonb Exp $
+# $NetBSD: Makefile,v 1.6 1999/09/13 09:55:35 tron Exp $
 #
 
 DISTNAME=		bladeenc-082-src-stable-2
@@ -7,7 +7,7 @@ CATEGORIES=		audio
 MASTER_SITES=		http://home.swipnet.se/~w-82625/encoder/source/
 
 MAINTAINER=		packages@netbsd.org
-HOMEPAGE=		http://bladeenc.cjb.net
+HOMEPAGE=		http://bladeenc.cjb.net/
 
 #do-install:
 #	${INSTALL_SCRIPT} ${WRKDIR}/bladeenc ${PREFIX}/bin/
