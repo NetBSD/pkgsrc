@@ -1,17 +1,20 @@
-$NetBSD: patch-aa,v 1.7 2001/09/12 06:17:14 jlam Exp $
+$NetBSD: patch-aa,v 1.8 2003/12/22 04:46:15 fredb Exp $
 
---- Imakefile.orig	Wed Sep 12 02:11:53 2001
+--- Imakefile.orig	2000-02-09 03:23:32.000000000 -0600
 +++ Imakefile
-@@ -10,10 +10,10 @@
+@@ -12,11 +12,11 @@
        CCOPTIONS = -Aa -D_HPUX_SOURCE
  #endif
  
--     	INCLUDES = -I../zlib -I../libpng
-+     	INCLUDES = -I${BUILDLINK_DIR}/include
-     SYSPATHFILE = $(XAPPLOADDIR)/Xloadimage
-         DEPLIBS = $(DEPXLIB)
--LOCAL_LIBRARIES = $(XLIB) -L../zlib -L../libpng -lpng -lz 
-+LOCAL_LIBRARIES = $(XLIB) -L${BUILDLINK_DIR}/lib -Wl,-R${LOCALBASE}/lib -lpng -lz 
- SYS_LIBRARIES   = -lm
-         DEFINES = -DHAVE_GUNZIP
+-JPEG_INCLUDES = 
+-JPEG_LDFLAGS = 
++JPEG_INCLUDES = -I${BUILDLINK_DIR}/include
++JPEG_LDFLAGS =  -L${BUILDLINK_DIR}/lib -Wl,-R${LOCALBASE}/lib
  
+-PNG_INCLUDES = 
+-PNG_LDFLAGS = 
++PNG_INCLUDES =  -I${BUILDLINK_DIR}/include
++PNG_LDFLAGS =  -L${BUILDLINK_DIR}/lib -Wl,-R${LOCALBASE}/lib
+ 
+ SYSPATHFILE = $(XAPPLOADDIR)/Xli
+ DEPLIBS = $(DEPXLIB)
