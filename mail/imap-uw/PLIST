@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2004/05/13 18:14:34 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2004/09/22 07:38:52 jlam Exp $
 include/c-client/c-client.h
 include/c-client/env.h
 include/c-client/env_unix.h
@@ -20,17 +20,8 @@ include/c-client/rfc822.h
 include/c-client/smtp.h
 include/c-client/tcp.h
 include/c-client/utf8.h
-lib/libc-client.a
 lib/libc-client.la
-lib/libc-client.so
-lib/libc-client.so.${CCLIENT_MAJOR}
-lib/libc-client.so.${CCLIENT_MAJOR}.${CCLIENT_MINOR}
 lib/libc-client_pic.a
-lib/libimapuw.a
-lib/libimapuw.la
-lib/libimapuw.so
-lib/libimapuw.so.${CCLIENT_MAJOR}
-lib/libimapuw.so.${CCLIENT_MAJOR}.${CCLIENT_MINOR}
 libexec/imapd
 libexec/ipop2d
 libexec/ipop3d
