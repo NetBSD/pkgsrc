@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 1999/07/12 04:34:23 windsor Exp $
+# $NetBSD: Makefile,v 1.20 1999/08/18 08:45:19 agc Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/08/27 13:06:01 ache Exp
 #
 
@@ -52,6 +52,8 @@ ASMFLAG=
 OBJS_EXT=
 ASMFLAG=	-DPORTABLE -DMPORTABLE
 .endif
+
+BUILD_DEFS+=	USE_RSAREF2 M68060 ASMFLAG
 
 .if !defined(USE_RSAREF2) || ${USE_RSAREF2} != YES && ${USE_RSAREF2} != NO
 pre-fetch:
