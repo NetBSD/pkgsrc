@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 1998/06/03 12:43:25 agc Exp $
+# $NetBSD: Makefile,v 1.12 1998/06/10 13:55:34 agc Exp $
 # FreeBSD Id: Makefile,v 1.22 1997/12/24 01:21:37 alex Exp
 
-DISTNAME=	postgresql-6.2.1
+DISTNAME=	postgresql-6.3.2
 CATEGORIES=	databases
 MASTER_SITES=	ftp://ftp.PostgreSQL.org/pub/ \
 		ftp://ftp.jaist.ac.jp/pub/dbms/postgres95/
@@ -10,26 +10,28 @@ MAINTAINER=	packages@netbsd.org
 
 DEPENDS+=	tk-8.0p2:../../x11/tk80
 DEPENDS+=	tcl-8.0p2:../../lang/tcl80
+DEPENDS+=	addnerd-1.5:../../sysutils/addnerd
 
 NO_PACKAGE=	"Requires pgsql uid"
 WRKSRC=		${WRKDIR}/${DISTNAME}/src
-ONLY_FOR_ARCHS=	i386
 
 PGUSER?=	pgsql
+PGGROUP?=	ingres
 
-USE_GMAKE=	YES
-USE_PERL5=	yes
+USE_GMAKE=	yes
 MAKEFILE=	GNUmakefile
-MAKE_ENV+=	USE_TCL=true
-HAS_CONFIGURE=	YES
+HAS_CONFIGURE=	yes
 CONFIGURE_ARGS= --prefix=${PREFIX}/pgsql \
 		--enable-locale \
+		--with-tcl \
+		--with-includes=${PREFIX}/include \
+		--with-libs=${PREFIX}/lib \
 		--with-template=`uname -s | ${TR} '[A-Z]' '[a-z]'`
 
 MAN1=		cleardbdir.1 createdb.1 createuser.1 destroydb.1 \
-		destroyuser.1 initdb.1 ipcclean.1 monitor.1 pg_dump.1 \
+		destroyuser.1 initdb.1 ipcclean.1 pg_dump.1 \
 		pg_dumpall.1 pg_passwd.1 pgintro.1 postgres.1 \
-		postmaster.1 psql.1
+		postmaster.1 psql.1 initlocation.1 ecpg.1
 MAN3=		catalogs.3 large_objects.3 libpq.3 oracle_compat.3 pgbuiltin.3
 MAN5=		bki.5 page.5 pg_hba.conf.5
 MANL=		abort.l alter_table.l begin.l close.l cluster.l \
@@ -41,9 +43,10 @@ MANL=		abort.l alter_table.l begin.l close.l cluster.l \
 		drop_database.l drop_function.l drop_index.l drop_operator.l \
 		drop_rule.l drop_sequence.l drop_table.l drop_trigger.l \
 		drop_type.l drop_view.l end.l explain.l fetch.l grant.l \
-		insert.l listen.l load.l move.l notify.l purge.l rename.l \
+		insert.l listen.l load.l move.l notify.l \
 		reset.l revoke.l rollback.l select.l set.l show.l sql.l \
-		update.l vacuum.l
+		update.l vacuum.l lock.l drop_user.l drop_language.l \
+		create_user.l create_language.l alter_user.l
 
 MANPREFIX=	${PREFIX}/pgsql
 
@@ -59,8 +62,8 @@ pre-install:
 .if defined(PACKAGE_BUILDING)
 	${RM} -rf ${PREFIX}/pgsql
 .endif
-	@ ${MKDIR} ${PREFIX}/pgsql
-	@ ${SETENV} ${MAKE_ENV} perl ${SCRIPTDIR}/createuser ${PGUSER}
+	@${MKDIR} ${PREFIX}/pgsql
+	@${SETENV} ${MAKE_ENV} addnerd -g ${PGGROUP} ${PGUSER}
 
 post-install:
 	@ if [ ! -f ${PREFIX}/pgsql/.profile ]; then \
@@ -85,14 +88,14 @@ post-install:
 		${ECHO} "#export TZ" \
 			>> ${PREFIX}/pgsql/.profile; \
 	fi
-	@/usr/sbin/chown -R ${PGUSER}:${PGUSER} ${PREFIX}/pgsql
+	@/usr/sbin/chown -R ${PGUSER}:${PGGROUP} ${PREFIX}/pgsql
 	@${ECHO} 'Initializing PostgreSQL Databases - this may take a few minutes...'
 	@${LDCONFIG} -m ${PREFIX}/pgsql/lib || ${TRUE}
-	@${ECHO} '${PREFIX}/pgsql/bin/initdb --pglib=${PREFIX}/pgsql/lib --pgdata=${PREFIX}/pgsql/data' | su -l ${PGUSER}
+	@${ECHO} '${SETENV} PATH=${PREFIX}/pgsql/bin:$$PATH ${PREFIX}/pgsql/bin/initdb --pglib=${PREFIX}/pgsql/lib --pgdata=${PREFIX}/pgsql/data' | su -l ${PGUSER}
 	@${SED} -e "s=!!PREFIX!!=${PREFIX}=g" < ${FILESDIR}/pgsql.sh.tmpl \
 		> ${PREFIX}/etc/rc.d/pgsql.sh
 	@/bin/chmod 554 ${PREFIX}/etc/rc.d/pgsql.sh
-	@/usr/sbin/chown root.${PGUSER} ${PREFIX}/etc/rc.d/pgsql.sh
+	@/usr/sbin/chown root.${PGGROUP} ${PREFIX}/etc/rc.d/pgsql.sh
 	@${INSTALL_DATA} ${FILESDIR}/post-install-notes ${PREFIX}/pgsql
 .if !defined(NOPORTDOCS)
 	${MKDIR} ${PREFIX}/share/doc/pgsql
