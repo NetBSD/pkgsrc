@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.54 2003/11/30 22:58:41 jschauma Exp $
+# $NetBSD: Makefile,v 1.55 2004/01/20 02:48:33 jschauma Exp $
 #
 
 PKGNAME=	Mesa-${MESA_VERSION}
-PKGREVISION=	1
 MASTER_SITES= 	# empty
 DISTFILES=	# empty
 
@@ -11,17 +10,17 @@ COMMENT=	Graphics library meta package, similar to SGI's OpenGL
 
 CONFLICTS=	Mesa-glx-[0-9]*
 
-pre-patch:	# empty
-
 USE_BUILDLINK2=	yes
 
-USE_X11BASE=	yes
+USE_X11=	yes
 NO_CHECKSUM=	yes
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
+NO_PATCH=	yes
 EXTRACT_ONLY=	# empty
 
-post-patch:	# empty
+do-patch:	# empty
+do-buildlink:	# empty
 do-install:	# empty
 
 .include "Makefile.common"

@@ -1,14 +1,22 @@
-$NetBSD: patch-ac,v 1.4 2003/11/18 16:10:55 jschauma Exp $
+$NetBSD: patch-ac,v 1.5 2004/01/20 02:48:33 jschauma Exp $
 
---- samples/Makefile.am.orig	2003-11-07 08:32:08.000000000 -0600
-+++ samples/Makefile.am	2003-11-17 20:51:29.000000000 -0600
-@@ -12,8 +12,7 @@
- 
- EXTRA_DIST = tkmap.c loadppm.c
- 
--LDADD = $(GLUT_LIBS) $(top_builddir)/$(GLU_DIR)/libGLU.la \
--	$(top_builddir)/src/libGL.la -lm
-+LDADD = $(GLUT_LIBS) -lGLU -lGL -lm
- #LDFLAGS = -no-install
- 
- # default image
+--- Makefile.orig	2004-01-19 18:31:20.000000000 -0500
++++ Makefile	2004-01-19 18:31:54.000000000 -0500
+@@ -79,7 +79,7 @@
+ 	@echo "  make linux-icc             for Linux with the Intel C/C++ compiler"
+ 	@echo "  make lynxos                for LynxOS systems with GCC"
+ 	@echo "  make mklinux               for Linux on Power Macintosh"
+-	@echo "  make netbsd                for NetBSD 1.0 systems with GCC"
++	@echo "  make pkgsrc                for pkgsrc systems"
+ 	@echo "  make openbsd               for OpenBSD systems"
+ 	@echo "  make openstep              for OpenStep/MacOSX Server systems"
+ 	@echo "  make osf1                  for DEC Alpha systems with OSF/1"
+@@ -115,7 +115,7 @@
+ linux-alpha-static linux-alpha \
+ linux-ppc-static linux-ppc \
+ linux-sparc linux-sparc5 linux-sparc-ultra \
+-mklinux netbsd osf1 openbsd qnx \
++mklinux pkgsrc osf1 openbsd qnx \
+ solaris-x86 solaris-x86-gcc \
+ sunos4 sunos4-sl sunos4-gcc sunos4-gcc-sl sunos4-gcc-x11r6-sl \
+ sunos5 sunos5-smp sunos5-gcc sunos5-gcc-debug \
