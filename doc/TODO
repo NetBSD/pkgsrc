@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2723 2004/12/17 18:39:39 salo Exp $
+$NetBSD: TODO,v 1.2724 2004/12/17 23:33:24 wiz Exp $
 
 Suggested new packages
 ======================
@@ -276,6 +276,7 @@ Suggested package updates
 	o GutenMark-20040320
 	o ORBit-0.5.17
 	o PAM-0.78
+	o SDL-1.2.8
 	o TeXmacs-1.0.4-R3
 	o Xaw3d-1.5E
 	o YoSucker-63
@@ -316,6 +317,7 @@ Suggested package updates
 	o aribas-1.52
 	o arla-0.36.2
 	o arping-2.04
+	o arpwatch-2.1a13
 	o artist-1.2.6
 	o asapm-2.13
 	o aspell-0.60.1.1 [wiz]
@@ -328,6 +330,7 @@ Suggested package updates
 	o aspell-ukrainian-0.51.0 [wiz]
 	o ast-ksh-20040229
 	o astyle-1.15.3
+	o atk-1.9.0
 	o auctex-11.53
 	o avidemux-2.0.34
 	o avl-2.0.1
@@ -552,6 +555,7 @@ Suggested package updates
 	o gss-0.0.15
 	o gst-plugins-0.8.6
 	o gtk-systrace-2003.06.23
+	o gtk2-2.6.0
 	o gtksee-0.5.6 [pkg/26372]
 	o gtkyahoo-0.18.3
 	o gtranscript-0.2.0
@@ -627,6 +631,7 @@ Suggested package updates
 	o lcab-1.011
 	o lcc-4.2
 	o leafnode-1.10.7
+	o lesstif-0.94.0
 	o lftp-3.0.12
 	o libast-0.6
 	o libcdio-0.71
@@ -752,6 +757,7 @@ Suggested package updates
 	o oo2c-2.1.5
 	o open2300-1.8
 	o opencobol-0.30
+	o openmotif-2.2.4
 	o openntpd-3.6.1p1
 	o openoffice-1.1.4
 	o openoffice-linux-1.1.4
@@ -901,6 +907,7 @@ Suggested package updates
 	o p5-razor-agents-2.61
 	o p5-sybperl-2.17
 	o p5-xmltv-0.5.37
+	o pango-1.8.0
 	o pari-2.2.7
 	o pdmenu-1.2.85
 	o pen-0.15.0
@@ -1006,6 +1013,7 @@ Suggested package updates
 	o resize_image-0.7
 	o rio500-0.8.1
 	o rioutil-1.4.6.1
+	o ripmime-1.4.0.3
 	o rman-3.2
 	o robodoc-4.99.6
 	o root-4.01.04
@@ -1062,6 +1070,7 @@ Suggested package updates
 	o snes9x-1.42
 	o snownews-1.5.6
 	o socat-1.4.1.0
+	o spamassassin-3.0.2
 	o speedtouch-1.2beta3
 	o spim-7.0
 	o splint-3.1.1
@@ -1187,7 +1196,7 @@ Suggested package updates
 	o xfce4-taskbar-plugin-0.2.2
 	o xfe-0.72
 	o xfmail-1.5.4
-	o xine-lib-1-rc7
+	o xine-lib-1-rc8
 	o xkbset-0.5
 	o xlispstat-3.52.20
 	o xm7-303
