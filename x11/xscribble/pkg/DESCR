@@ -1,0 +1,9 @@
+Xscribble is an X application that allows a user of a touch screen
+to input characters into X applications, using a uni-stroke (graffiti
+like) alphabet. It uses the X test extension to allow synthesis of
+characters as though they had been typed on a keyboard. It is the
+X version of the scribble program.
+
+As this program is "familiar" to Palm users, even if other, better
+recognizers become available, it is important that we have a good
+implementation of this recognition system..
