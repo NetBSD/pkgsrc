@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 1999/10/28 04:58:36 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 1999/10/28 23:50:59 jlam Exp $
 bin/dox
 bin/e_cache_clean
 bin/e_cache_query
@@ -7,7 +7,9 @@ bin/e_gen_kde_menu
 bin/e_gen_menu
 bin/eesh
 bin/enlightenment
+bin/enlightenment.install
 bin/epp
+man/man1/enlightenment.1
 share/enlightenment/E-docs/E_app_menu.png
 share/enlightenment/E-docs/E_app_rightmouse_menu.png
 share/enlightenment/E-docs/E_area_settings.png
@@ -64,9 +66,13 @@ share/enlightenment/config/backup-textclasses.cfg
 share/enlightenment/config/backup-tooltips.cfg
 share/enlightenment/config/backup/.directory
 share/enlightenment/config/control.cfg
+share/enlightenment/config/control.kde.cfg
+share/enlightenment/config/control.nokde.cfg
 share/enlightenment/config/definitions
 share/enlightenment/config/icondefs.cfg
 share/enlightenment/config/keybindings.cfg
+share/enlightenment/config/keybindings.gmc.cfg
+share/enlightenment/config/keybindings.nogmc.cfg
 share/enlightenment/config/menus.cfg
 share/enlightenment/config/pix/about.png
 share/enlightenment/config/pix/apple.png
@@ -1103,6 +1109,7 @@ share/enlightenment/themes/ShinyMetal/images/button_up_bar_3.png
 share/enlightenment/themes/ShinyMetal/images/dock1.png
 share/enlightenment/themes/ShinyMetal/images/dock2.png
 share/enlightenment/themes/ShinyMetal/images/dock3.png
+share/enlightenment/themes/ShinyMetal/images/icon.png
 share/enlightenment/themes/ShinyMetal/init.cfg
 share/enlightenment/themes/ShinyMetal/init/images/progress_bar.png
 share/enlightenment/themes/ShinyMetal/init/images/progress_bar_number.png
@@ -1153,115 +1160,6 @@ share/enlightenment/themes/ShinyMetal/ttfonts/zirkle.ttf
 share/enlightenment/themes/ShinyMetal/windowmatches.cfg
 @exec	ln -sf BrushedMetal-Tigert %D/share/enlightenment/themes/DEFAULT
 @unexec	rm -f %D/share/enlightenment/themes/DEFAULT
-@dirrm share/enlightenment/themes/ShinyMetal/ttfonts
-@dirrm share/enlightenment/themes/ShinyMetal/tooltips/images
-@dirrm share/enlightenment/themes/ShinyMetal/tooltips
-@dirrm share/enlightenment/themes/ShinyMetal/sound/samples
-@dirrm share/enlightenment/themes/ShinyMetal/sound
-@dirrm share/enlightenment/themes/ShinyMetal/slideouts
-@dirrm share/enlightenment/themes/ShinyMetal/pager/images
-@dirrm share/enlightenment/themes/ShinyMetal/pager
-@dirrm share/enlightenment/themes/ShinyMetal/menustyles/images
-@dirrm share/enlightenment/themes/ShinyMetal/menustyles
-@dirrm share/enlightenment/themes/ShinyMetal/init/images
-@dirrm share/enlightenment/themes/ShinyMetal/init
-@dirrm share/enlightenment/themes/ShinyMetal/images
-@dirrm share/enlightenment/themes/ShinyMetal/iconbox
-@dirrm share/enlightenment/themes/ShinyMetal/focuslist
-@dirrm share/enlightenment/themes/ShinyMetal/eterm/images
-@dirrm share/enlightenment/themes/ShinyMetal/eterm
-@dirrm share/enlightenment/themes/ShinyMetal/epplets/images/tmp
-@dirrm share/enlightenment/themes/ShinyMetal/epplets/images/.xvpics
-@dirrm share/enlightenment/themes/ShinyMetal/epplets/images
-@dirrm share/enlightenment/themes/ShinyMetal/epplets
-@dirrm share/enlightenment/themes/ShinyMetal/dragbar/images
-@dirrm share/enlightenment/themes/ShinyMetal/dragbar
-@dirrm share/enlightenment/themes/ShinyMetal/dock
-@dirrm share/enlightenment/themes/ShinyMetal/dialogs/images
-@dirrm share/enlightenment/themes/ShinyMetal/dialogs
-@dirrm share/enlightenment/themes/ShinyMetal/cursors/images
-@dirrm share/enlightenment/themes/ShinyMetal/cursors
-@dirrm share/enlightenment/themes/ShinyMetal/coords
-@dirrm share/enlightenment/themes/ShinyMetal/borders/images
-@dirrm share/enlightenment/themes/ShinyMetal/borders/TRANSIENT
-@dirrm share/enlightenment/themes/ShinyMetal/borders/SIDE
-@dirrm share/enlightenment/themes/ShinyMetal/borders/SHAPED
-@dirrm share/enlightenment/themes/ShinyMetal/borders/PAGER
-@dirrm share/enlightenment/themes/ShinyMetal/borders/MENU_BORDER
-@dirrm share/enlightenment/themes/ShinyMetal/borders/ICONBOX
-@dirrm share/enlightenment/themes/ShinyMetal/borders/FIXEDSIZE
-@dirrm share/enlightenment/themes/ShinyMetal/borders/DEFAULT
-@dirrm share/enlightenment/themes/ShinyMetal/borders/BOTTOM
-@dirrm share/enlightenment/themes/ShinyMetal/borders/BORDERLESS
-@dirrm share/enlightenment/themes/ShinyMetal/borders
-@dirrm share/enlightenment/themes/ShinyMetal/backgrounds
-@dirrm share/enlightenment/themes/ShinyMetal/ABOUT
-@dirrm share/enlightenment/themes/ShinyMetal
-@dirrm share/enlightenment/themes/BrushedMetal-Tigert/ttfonts
-@dirrm share/enlightenment/themes/BrushedMetal-Tigert/tooltips/images
-@dirrm share/enlightenment/themes/BrushedMetal-Tigert/tooltips
-@dirrm share/enlightenment/themes/BrushedMetal-Tigert/sound/samples
-@dirrm share/enlightenment/themes/BrushedMetal-Tigert/sound
-@dirrm share/enlightenment/themes/BrushedMetal-Tigert/slideouts/images
-@dirrm share/enlightenment/themes/BrushedMetal-Tigert/slideouts
-@dirrm share/enlightenment/themes/BrushedMetal-Tigert/pager/images
-@dirrm share/enlightenment/themes/BrushedMetal-Tigert/pager
-@dirrm share/enlightenment/themes/BrushedMetal-Tigert/menustyles/images
-@dirrm share/enlightenment/themes/BrushedMetal-Tigert/menustyles
-@dirrm share/enlightenment/themes/BrushedMetal-Tigert/init/images
-@dirrm share/enlightenment/themes/BrushedMetal-Tigert/init
-@dirrm share/enlightenment/themes/BrushedMetal-Tigert/iconbox/images
-@dirrm share/enlightenment/themes/BrushedMetal-Tigert/iconbox
-@dirrm share/enlightenment/themes/BrushedMetal-Tigert/focuslist/images
-@dirrm share/enlightenment/themes/BrushedMetal-Tigert/focuslist
-@dirrm share/enlightenment/themes/BrushedMetal-Tigert/eterm/images
-@dirrm share/enlightenment/themes/BrushedMetal-Tigert/eterm
-@dirrm share/enlightenment/themes/BrushedMetal-Tigert/epplets/images
-@dirrm share/enlightenment/themes/BrushedMetal-Tigert/epplets
-@dirrm share/enlightenment/themes/BrushedMetal-Tigert/dragbar/images
-@dirrm share/enlightenment/themes/BrushedMetal-Tigert/dragbar
-@dirrm share/enlightenment/themes/BrushedMetal-Tigert/dock/images
-@dirrm share/enlightenment/themes/BrushedMetal-Tigert/dock
-@dirrm share/enlightenment/themes/BrushedMetal-Tigert/dialogs/images
-@dirrm share/enlightenment/themes/BrushedMetal-Tigert/dialogs
-@dirrm share/enlightenment/themes/BrushedMetal-Tigert/cursors/images
-@dirrm share/enlightenment/themes/BrushedMetal-Tigert/cursors/bw_images
-@dirrm share/enlightenment/themes/BrushedMetal-Tigert/cursors
-@dirrm share/enlightenment/themes/BrushedMetal-Tigert/coords/images
-@dirrm share/enlightenment/themes/BrushedMetal-Tigert/coords
-@dirrm share/enlightenment/themes/BrushedMetal-Tigert/common/images
-@dirrm share/enlightenment/themes/BrushedMetal-Tigert/common
-@dirrm share/enlightenment/themes/BrushedMetal-Tigert/buttons/images
-@dirrm share/enlightenment/themes/BrushedMetal-Tigert/buttons
-@dirrm share/enlightenment/themes/BrushedMetal-Tigert/borders/common/images
-@dirrm share/enlightenment/themes/BrushedMetal-Tigert/borders/common
-@dirrm share/enlightenment/themes/BrushedMetal-Tigert/borders/TRANSIENT/images
-@dirrm share/enlightenment/themes/BrushedMetal-Tigert/borders/TRANSIENT
-@dirrm share/enlightenment/themes/BrushedMetal-Tigert/borders/SHAPED/images
-@dirrm share/enlightenment/themes/BrushedMetal-Tigert/borders/SHAPED
-@dirrm share/enlightenment/themes/BrushedMetal-Tigert/borders/RIGHT_PAGER/images
-@dirrm share/enlightenment/themes/BrushedMetal-Tigert/borders/RIGHT_PAGER
-@dirrm share/enlightenment/themes/BrushedMetal-Tigert/borders/PAGER/images
-@dirrm share/enlightenment/themes/BrushedMetal-Tigert/borders/PAGER
-@dirrm share/enlightenment/themes/BrushedMetal-Tigert/borders/MENU_BORDER_ONLY/images
-@dirrm share/enlightenment/themes/BrushedMetal-Tigert/borders/MENU_BORDER_ONLY
-@dirrm share/enlightenment/themes/BrushedMetal-Tigert/borders/MENU/images
-@dirrm share/enlightenment/themes/BrushedMetal-Tigert/borders/MENU
-@dirrm share/enlightenment/themes/BrushedMetal-Tigert/borders/ICONBOX/images
-@dirrm share/enlightenment/themes/BrushedMetal-Tigert/borders/ICONBOX
-@dirrm share/enlightenment/themes/BrushedMetal-Tigert/borders/FIXED_SIZE/images
-@dirrm share/enlightenment/themes/BrushedMetal-Tigert/borders/FIXED_SIZE
-@dirrm share/enlightenment/themes/BrushedMetal-Tigert/borders/DEFAULT/images
-@dirrm share/enlightenment/themes/BrushedMetal-Tigert/borders/DEFAULT
-@dirrm share/enlightenment/themes/BrushedMetal-Tigert/borders/BORDER_ONLY/images
-@dirrm share/enlightenment/themes/BrushedMetal-Tigert/borders/BORDER_ONLY
-@dirrm share/enlightenment/themes/BrushedMetal-Tigert/borders/BORDERLESS/images
-@dirrm share/enlightenment/themes/BrushedMetal-Tigert/borders/BORDERLESS
-@dirrm share/enlightenment/themes/BrushedMetal-Tigert/borders
-@dirrm share/enlightenment/themes/BrushedMetal-Tigert/backgrounds/images
-@dirrm share/enlightenment/themes/BrushedMetal-Tigert/backgrounds
-@dirrm share/enlightenment/themes/BrushedMetal-Tigert/ABOUT
-@dirrm share/enlightenment/themes/BrushedMetal-Tigert
 @dirrm share/enlightenment/themes/BlueSteel/ttfonts
 @dirrm share/enlightenment/themes/BlueSteel/tooltips/images
 @dirrm share/enlightenment/themes/BlueSteel/tooltips
@@ -1328,6 +1226,115 @@ share/enlightenment/themes/ShinyMetal/windowmatches.cfg
 @dirrm share/enlightenment/themes/BlueSteel/Eterm
 @dirrm share/enlightenment/themes/BlueSteel/ABOUT
 @dirrm share/enlightenment/themes/BlueSteel
+@dirrm share/enlightenment/themes/BrushedMetal-Tigert/ttfonts
+@dirrm share/enlightenment/themes/BrushedMetal-Tigert/tooltips/images
+@dirrm share/enlightenment/themes/BrushedMetal-Tigert/tooltips
+@dirrm share/enlightenment/themes/BrushedMetal-Tigert/sound/samples
+@dirrm share/enlightenment/themes/BrushedMetal-Tigert/sound
+@dirrm share/enlightenment/themes/BrushedMetal-Tigert/slideouts/images
+@dirrm share/enlightenment/themes/BrushedMetal-Tigert/slideouts
+@dirrm share/enlightenment/themes/BrushedMetal-Tigert/pager/images
+@dirrm share/enlightenment/themes/BrushedMetal-Tigert/pager
+@dirrm share/enlightenment/themes/BrushedMetal-Tigert/menustyles/images
+@dirrm share/enlightenment/themes/BrushedMetal-Tigert/menustyles
+@dirrm share/enlightenment/themes/BrushedMetal-Tigert/init/images
+@dirrm share/enlightenment/themes/BrushedMetal-Tigert/init
+@dirrm share/enlightenment/themes/BrushedMetal-Tigert/iconbox/images
+@dirrm share/enlightenment/themes/BrushedMetal-Tigert/iconbox
+@dirrm share/enlightenment/themes/BrushedMetal-Tigert/focuslist/images
+@dirrm share/enlightenment/themes/BrushedMetal-Tigert/focuslist
+@dirrm share/enlightenment/themes/BrushedMetal-Tigert/eterm/images
+@dirrm share/enlightenment/themes/BrushedMetal-Tigert/eterm
+@dirrm share/enlightenment/themes/BrushedMetal-Tigert/epplets/images
+@dirrm share/enlightenment/themes/BrushedMetal-Tigert/epplets
+@dirrm share/enlightenment/themes/BrushedMetal-Tigert/dragbar/images
+@dirrm share/enlightenment/themes/BrushedMetal-Tigert/dragbar
+@dirrm share/enlightenment/themes/BrushedMetal-Tigert/dock/images
+@dirrm share/enlightenment/themes/BrushedMetal-Tigert/dock
+@dirrm share/enlightenment/themes/BrushedMetal-Tigert/dialogs/images
+@dirrm share/enlightenment/themes/BrushedMetal-Tigert/dialogs
+@dirrm share/enlightenment/themes/BrushedMetal-Tigert/cursors/images
+@dirrm share/enlightenment/themes/BrushedMetal-Tigert/cursors/bw_images
+@dirrm share/enlightenment/themes/BrushedMetal-Tigert/cursors
+@dirrm share/enlightenment/themes/BrushedMetal-Tigert/coords/images
+@dirrm share/enlightenment/themes/BrushedMetal-Tigert/coords
+@dirrm share/enlightenment/themes/BrushedMetal-Tigert/common/images
+@dirrm share/enlightenment/themes/BrushedMetal-Tigert/common
+@dirrm share/enlightenment/themes/BrushedMetal-Tigert/buttons/images
+@dirrm share/enlightenment/themes/BrushedMetal-Tigert/buttons
+@dirrm share/enlightenment/themes/BrushedMetal-Tigert/borders/common/images
+@dirrm share/enlightenment/themes/BrushedMetal-Tigert/borders/common
+@dirrm share/enlightenment/themes/BrushedMetal-Tigert/borders/TRANSIENT/images
+@dirrm share/enlightenment/themes/BrushedMetal-Tigert/borders/TRANSIENT
+@dirrm share/enlightenment/themes/BrushedMetal-Tigert/borders/SHAPED/images
+@dirrm share/enlightenment/themes/BrushedMetal-Tigert/borders/SHAPED
+@dirrm share/enlightenment/themes/BrushedMetal-Tigert/borders/RIGHT_PAGER/images
+@dirrm share/enlightenment/themes/BrushedMetal-Tigert/borders/RIGHT_PAGER
+@dirrm share/enlightenment/themes/BrushedMetal-Tigert/borders/PAGER/images
+@dirrm share/enlightenment/themes/BrushedMetal-Tigert/borders/PAGER
+@dirrm share/enlightenment/themes/BrushedMetal-Tigert/borders/MENU_BORDER_ONLY/images
+@dirrm share/enlightenment/themes/BrushedMetal-Tigert/borders/MENU_BORDER_ONLY
+@dirrm share/enlightenment/themes/BrushedMetal-Tigert/borders/MENU/images
+@dirrm share/enlightenment/themes/BrushedMetal-Tigert/borders/MENU
+@dirrm share/enlightenment/themes/BrushedMetal-Tigert/borders/ICONBOX/images
+@dirrm share/enlightenment/themes/BrushedMetal-Tigert/borders/ICONBOX
+@dirrm share/enlightenment/themes/BrushedMetal-Tigert/borders/FIXED_SIZE/images
+@dirrm share/enlightenment/themes/BrushedMetal-Tigert/borders/FIXED_SIZE
+@dirrm share/enlightenment/themes/BrushedMetal-Tigert/borders/DEFAULT/images
+@dirrm share/enlightenment/themes/BrushedMetal-Tigert/borders/DEFAULT
+@dirrm share/enlightenment/themes/BrushedMetal-Tigert/borders/BORDER_ONLY/images
+@dirrm share/enlightenment/themes/BrushedMetal-Tigert/borders/BORDER_ONLY
+@dirrm share/enlightenment/themes/BrushedMetal-Tigert/borders/BORDERLESS/images
+@dirrm share/enlightenment/themes/BrushedMetal-Tigert/borders/BORDERLESS
+@dirrm share/enlightenment/themes/BrushedMetal-Tigert/borders
+@dirrm share/enlightenment/themes/BrushedMetal-Tigert/backgrounds/images
+@dirrm share/enlightenment/themes/BrushedMetal-Tigert/backgrounds
+@dirrm share/enlightenment/themes/BrushedMetal-Tigert/ABOUT
+@dirrm share/enlightenment/themes/BrushedMetal-Tigert
+@dirrm share/enlightenment/themes/ShinyMetal/ttfonts
+@dirrm share/enlightenment/themes/ShinyMetal/tooltips/images
+@dirrm share/enlightenment/themes/ShinyMetal/tooltips
+@dirrm share/enlightenment/themes/ShinyMetal/sound/samples
+@dirrm share/enlightenment/themes/ShinyMetal/sound
+@dirrm share/enlightenment/themes/ShinyMetal/slideouts
+@dirrm share/enlightenment/themes/ShinyMetal/pager/images
+@dirrm share/enlightenment/themes/ShinyMetal/pager
+@dirrm share/enlightenment/themes/ShinyMetal/menustyles/images
+@dirrm share/enlightenment/themes/ShinyMetal/menustyles
+@dirrm share/enlightenment/themes/ShinyMetal/init/images
+@dirrm share/enlightenment/themes/ShinyMetal/init
+@dirrm share/enlightenment/themes/ShinyMetal/images
+@dirrm share/enlightenment/themes/ShinyMetal/iconbox
+@dirrm share/enlightenment/themes/ShinyMetal/focuslist
+@dirrm share/enlightenment/themes/ShinyMetal/eterm/images
+@dirrm share/enlightenment/themes/ShinyMetal/eterm
+@dirrm share/enlightenment/themes/ShinyMetal/epplets/images/tmp
+@dirrm share/enlightenment/themes/ShinyMetal/epplets/images/.xvpics
+@dirrm share/enlightenment/themes/ShinyMetal/epplets/images
+@dirrm share/enlightenment/themes/ShinyMetal/epplets
+@dirrm share/enlightenment/themes/ShinyMetal/dragbar/images
+@dirrm share/enlightenment/themes/ShinyMetal/dragbar
+@dirrm share/enlightenment/themes/ShinyMetal/dock
+@dirrm share/enlightenment/themes/ShinyMetal/dialogs/images
+@dirrm share/enlightenment/themes/ShinyMetal/dialogs
+@dirrm share/enlightenment/themes/ShinyMetal/cursors/images
+@dirrm share/enlightenment/themes/ShinyMetal/cursors
+@dirrm share/enlightenment/themes/ShinyMetal/coords
+@dirrm share/enlightenment/themes/ShinyMetal/borders/images
+@dirrm share/enlightenment/themes/ShinyMetal/borders/TRANSIENT
+@dirrm share/enlightenment/themes/ShinyMetal/borders/SIDE
+@dirrm share/enlightenment/themes/ShinyMetal/borders/SHAPED
+@dirrm share/enlightenment/themes/ShinyMetal/borders/PAGER
+@dirrm share/enlightenment/themes/ShinyMetal/borders/MENU_BORDER
+@dirrm share/enlightenment/themes/ShinyMetal/borders/ICONBOX
+@dirrm share/enlightenment/themes/ShinyMetal/borders/FIXEDSIZE
+@dirrm share/enlightenment/themes/ShinyMetal/borders/DEFAULT
+@dirrm share/enlightenment/themes/ShinyMetal/borders/BOTTOM
+@dirrm share/enlightenment/themes/ShinyMetal/borders/BORDERLESS
+@dirrm share/enlightenment/themes/ShinyMetal/borders
+@dirrm share/enlightenment/themes/ShinyMetal/backgrounds
+@dirrm share/enlightenment/themes/ShinyMetal/ABOUT
+@dirrm share/enlightenment/themes/ShinyMetal
 @dirrm share/enlightenment/themes
 @dirrm share/enlightenment/config/pix
 @dirrm share/enlightenment/config/backup
