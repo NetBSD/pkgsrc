@@ -1,0 +1,12 @@
+Vim is an almost compatible version of the UNIX editor Vi.  Many new features
+have been added: multi level undo, syntax highlighting, command line history,
+on-line help, filename completion, block operations, etc.  There is also a
+Graphical User Interface (GUI) available.  See doc/vi_diff.txt.
+
+If you are building the package from source you may want to enable some 
+features such as a perl or python interpreter which are not enabled by 
+default.
+
+This version also contains a X11 Athena GUI. Use the variable XAW_TYPE
+to select between the `flat' and 3d widget set. If you don't have X11,
+look at the `vim' package instead.

@@ -1,0 +1,38 @@
+$NetBSD: patch-ad,v 1.1.1.1 1999/12/21 13:26:29 pooka Exp $
+
+--- Makefile.orig	Sun Sep 19 13:27:33 1999
++++ Makefile	Thu Nov 25 21:03:25 1999
+@@ -902,23 +902,26 @@
+ ### Athena Widget GUI interface.
+ ### Use Xaw3d to make the menus look a little bit nicer
+ #XAW_LIB = -lXaw3d
+-XAW_LIB = -lXaw
++#XAW_LIB = -lXaw
+ 
+ ### When using Xaw3d, uncomment/comment the following lines to also get the
+ ### scrollbars from Xaw3d.
+-#ATHENA_SRC	= gui.c gui_athena.c gui_x11.c pty.c gui_at_fs.c
+-#ATHENA_OBJ	= gui.o gui_athena.o gui_x11.o pty.o gui_at_fs.o
+-#ATHENA_DEFS	= -DUSE_GUI_ATHENA $(NARROW_PROTO) \
+-#		    -Dvim_scrollbarWidgetClass=scrollbarWidgetClass \
+-#		    -Dvim_XawScrollbarSetThumb=XawScrollbarSetThumb
++.if ($(XAW_LIB) != "Xaw")
++ATHENA_SRC	= gui.c gui_athena.c gui_x11.c pty.c gui_at_fs.c
++ATHENA_OBJ	= gui.o gui_athena.o gui_x11.o pty.o gui_at_fs.o
++ATHENA_DEFS	= -DUSE_GUI_ATHENA $(NARROW_PROTO) \
++		    -Dvim_scrollbarWidgetClass=scrollbarWidgetClass \
++		    -Dvim_XawScrollbarSetThumb=XawScrollbarSetThumb
++.else
+ ATHENA_SRC	= gui.c gui_athena.c gui_x11.c pty.c gui_at_sb.c gui_at_fs.c
+ ATHENA_OBJ	= gui.o gui_athena.o gui_x11.o pty.o gui_at_sb.o gui_at_fs.o
+ ATHENA_DEFS	= -DUSE_GUI_ATHENA $(NARROW_PROTO)
++.endif
+ 
+ ATHENA_INCL	= gui.h
+ ATHENA_IPATH	= -I$(GUI_INC_LOC)
+ ATHENA_LIBS_DIR = -L$(GUI_LIB_LOC)
+-ATHENA_LIBS1	= $(XAW_LIB)
++ATHENA_LIBS1	= -l$(XAW_LIB)
+ ATHENA_LIBS2	= -lXt
+ ATHENA_TARGETS	= $(BINDIR)/$(GVIMTARGET) \
+ 			$(BINDIR)/$(GVIEWTARGET) \
