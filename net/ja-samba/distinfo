@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2003/04/07 18:10:07 taca Exp $
+$NetBSD: distinfo,v 1.8 2003/04/08 03:39:13 taca Exp $
 
 SHA1 (samba-2.2.7a-ja-1.1.tar.bz2) = 7555ad9055a5c2e19f7506138713ade174d26816
 Size (samba-2.2.7a-ja-1.1.tar.bz2) = 7307743 bytes
@@ -18,3 +18,4 @@ SHA1 (patch-ar) = 1974317b2be6689df6d0ad06138fa5a28dfaf99f
 SHA1 (patch-as) = 3aa4e0d7f254d2302940b4b6540b4e1b96582b2b
 SHA1 (patch-at) = 1b4215e00c243eb21d009ef13896371eecacf5c3
 SHA1 (patch-au) = ad02a1175a5aeb2e6a8f65b280df0e550d557970
+SHA1 (patch-bb) = 86475e740b3b9d903929f678aa9f274d5a64b78a
