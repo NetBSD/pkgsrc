@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1430 2004/03/29 16:01:39 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1431 2004/03/31 10:00:43 grant Exp $
 #
 # This file is in the public domain.
 #
@@ -480,7 +480,7 @@ FETCH_CMD?=		/usr/bin/ftp
 
 TOUCH_FLAGS?=		-f
 
-# determine if we need GNU patch from pkgsrc.
+# determine if we need a working patch(1).
 _NEED_PATCH!=		if [ -d ${PATCHDIR} ]; then \
 				if [ "`${ECHO} ${PATCHDIR}/patch-*`" != "${PATCHDIR}/patch-*" ]; then \
 					${ECHO} YES; \
