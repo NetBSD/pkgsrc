@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.6 2004/04/06 01:29:25 reed Exp $
+# $NetBSD: builtin.mk,v 1.7 2004/05/09 20:31:07 danw Exp $
 
 .if !defined(_BLNK_LIBINTL_FOUND)
 _BLNK_LIBINTL_FOUND!=	\
@@ -105,7 +105,7 @@ _GETTEXT_NEEDS_ICONV?=	no
 .      if !empty(_GETTEXT_NEEDS_ICONV:M[nN][oO])
 _GETTEXT_NEEDS_ICONV!=	\
 	if ${PKG_INFO} -qe '${_depend_}'; then				\
-		pkg=`cd ${_PKG_DBDIR}; ${PKG_ADMIN} -S lsbest '${_depend_}'`; \
+		pkg=`cd ${_PKG_DBDIR}; ${PKG_ADMIN} -b -S lsbest '${_depend_}'`; \
 		if ${PKG_INFO} -qN "$$pkg" | ${GREP} -q "libiconv-[0-9]"; then \
 			${ECHO} "yes";					\
 		else							\
