@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8891 2005/01/24 09:04:25 abs Exp $
+$NetBSD: CHANGES,v 1.8892 2005/01/24 09:59:58 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -529,4 +529,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated python24 to 2.4nb2 [recht 2005-01-23]
 	Added python23-nth-2.3.4 [recht 2005-01-23]
 	Updated imap-uw to 2004c1 [abs 2005-01-23]
-
+	Updated gimp to 2.2.3 [adam 2005-01-23]
