@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.6 2000/12/21 16:59:32 jlam Exp $
+$NetBSD: patch-ab,v 1.7 2001/01/11 19:00:43 jlam Exp $
 
---- Makefile.orig	Thu Dec 21 08:45:21 2000
+--- Makefile.orig	Wed Jan  3 12:44:40 2001
 +++ Makefile
 @@ -60,8 +60,8 @@
  		echo Installing in $$dir... ;\
@@ -13,12 +13,3 @@ $NetBSD: patch-ab,v 1.6 2000/12/21 16:59:32 jlam Exp $
  	echo Installing in data...
  	(cd data; $(MAKE) $(MFLAGS) install)
  	echo Installing in doc...
-@@ -75,7 +75,7 @@
- 	echo Installing in templates...
- 	(cd templates; $(MAKE) $(MFLAGS) install)
- 	echo Installing startup script...
--	if test "x$INITDIR" != "x"; then \
-+	if test "x$(INITDIR)" != "x"; then \
- 		$(MKDIR) $(prefix)/$(INITDIR)/init.d; \
- 		$(RM) $(prefix)/$(INITDIR)/init.d/cups; \
- 		$(INSTALL_SCRIPT) cups.sh $(prefix)/$(INITDIR)/init.d/cups; \
