@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2002/12/25 12:35:04 grant Exp $
+# $NetBSD: Makefile,v 1.11 2003/01/20 22:23:38 jdolecek Exp $
 #
 
 DISTNAME=	Python-2.2.2
@@ -26,7 +26,7 @@ PLIST_SUBST+=	PY_PLATNAME=${LOWER_OPSYS}
 PLIST_SUBST+=	PY_PLATNAME=${LOWER_OPSYS}${OS_VERSION:C/\..*//}
 .endif
 
-.if ${OPSYS} == "NetBSD"
+.if (${OPSYS} == "NetBSD") && !exists(/usr/include/pthread.h)
 CONFIGURE_ARGS+=	--without-threads
 .endif
 
