@@ -1,6 +1,6 @@
 #! @WRAPPER_SHELL@
 #
-# $NetBSD: gen-transform.sh,v 1.2 2004/09/22 23:00:26 jlam Exp $
+# $NetBSD: gen-transform.sh,v 1.3 2004/09/26 05:50:39 jlam Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -349,12 +349,12 @@ EOF
 		transform|untransform)
 			$debug_log $wrapperlog "   (gen-transform) $_cmd: $@"
 			gen $_action "opt:-I$1:"
-			gen $_action "opt-sub:-I$1:"
+			gen $_action "rm-optarg:-I$1/"
 			gen $_action "opt:-L$1:"
-			gen $_action "opt-sub:-L$1:"
+			gen $_action "rm-optarg:-L$1/"
 			for _R in $rpath_options; do
 				gen $_action "opt:$_R$1:"
-				gen $_action "opt-sub:$_R$1:"
+				gen $_action "rm-optarg:$_R$1/"
 			done
 			;;
 		esac
