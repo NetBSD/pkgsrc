@@ -1,0 +1,7 @@
+Strace is a diagnostic and troubleshooting tool for printing out a trace
+of all the system calls made by another process.  It intercepts and
+records the signals received by a process and the system calls which
+are called by a process.  The name of each system call, its arguments
+and its return value are reported.
+
+This version of strace is maintained by Wichert Akkerman.
