@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/09/14 04:00:25 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2001/10/26 14:10:01 agc Exp $
 
 DISTNAME=		netscape-v304-export.x86-unknown-bsd
 PKGNAME=		navigator3-3.04
@@ -21,6 +21,9 @@ WRKSRC=			${WRKDIR}
 USE_X11BASE=		YES
 SCRIPTS_ENV+=		MACHINE_ARCH=${MACHINE_ARCH}
 NO_BUILD=		YES
+
+pre-configure:
+	cd ${.CURDIR} && ${SETENV} ${SCRIPTS_ENV} ${SH} ${SCRIPTDIR}/configure
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/netscape

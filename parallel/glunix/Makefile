@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2001/09/27 23:18:34 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2001/10/26 14:10:01 agc Exp $
 
 DISTNAME=	glunix-release-1-0a
 PKGNAME=	glunix-1.0a
@@ -45,6 +45,12 @@ DEPENDS+=       user>=20000313:../../sysutils/user
 USER_CMD=       ${LOCALBASE}/sbin/user
 GROUP_CMD=      ${LOCALBASE}/sbin/group
 .endif
+
+pre-fetch:
+	cd ${.CURDIR} && ${SETENV} ${SCRIPTS_ENV} ${SH} ${SCRIPTDIR}/pre-fetch
+
+post-patch:
+	cd ${.CURDIR} && ${SETENV} ${SCRIPTS_ENV} ${SH} ${SCRIPTDIR}/post-patch
 
 # the glunix group needs to exist before building.
 pre-configure:

@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.831 2001/10/26 13:57:58 skrll Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.832 2001/10/26 14:09:59 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -1627,16 +1627,8 @@ _PORT_USE: .USE
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} install-depends DEPENDS_TARGET=${DEPENDS_TARGET}
 .endif
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${SETENV} ${MAKE_ENV} ${MAKE} ${MAKEFLAGS} ${.TARGET:S/^real-/pre-/}
-	${_PKG_SILENT}${_PKG_DEBUG}if [ -f ${SCRIPTDIR}/${.TARGET:S/^real-/pre-/} ]; then		\
-		cd ${.CURDIR} && ${SETENV} ${SCRIPTS_ENV} ${SH}		\
-			${SCRIPTDIR}/${.TARGET:S/^real-/pre-/};		\
-	fi
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${SETENV} ${MAKE_ENV} ${MAKE} ${MAKEFLAGS} ${.TARGET:S/^real-/do-/}
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${SETENV} ${MAKE_ENV} ${MAKE} ${MAKEFLAGS} ${.TARGET:S/^real-/post-/}
-	${_PKG_SILENT}${_PKG_DEBUG}if [ -f ${SCRIPTDIR}/${.TARGET:S/^real-/post-/} ]; then	\
-		cd ${.CURDIR} && ${SETENV} ${SCRIPTS_ENV} ${SH}		\
-			${SCRIPTDIR}/${.TARGET:S/^real-/post-/};	\
-	fi
 .if !make(real-fetch)							\
 	&& (!make(real-package) || !defined(PACKAGE_NOINSTALL))
 	${_PKG_SILENT}${_PKG_DEBUG}					\
