@@ -1,4 +1,4 @@
-# $NetBSD: mk.conf.example,v 1.44 1999/02/24 10:45:42 agc Exp $
+# $NetBSD: mk.conf.example,v 1.45 1999/02/25 15:58:26 bouyer Exp $
 #
 # Sample /etc/mk.conf file, which can be used to set specific values
 # for building either NetBSD or some of the NetBSD packages collection.
@@ -132,11 +132,13 @@
                                 # login user and group responsible for backups
                                 # Possible: any user name
                                 # Default: backup
-
 #AMANDA_SMB=                    # Used in the amanda-client package to enable
                                 # backup with smbclient
                                 # Possible: defined, not defined
                                 # Default: not defined
+#AMANDA_VAR=	/var/amanda     # Specifies the directory in which amanda puts
+                                # its logs and status files. 
+                                # Default: /var/amanda
 
 #BOOTSTRAP_EGCS=		# Used in egcs-current package to set
                                 # bootstrap compile (two-stage) mode.
