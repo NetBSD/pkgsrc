@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/03/04 12:05:12 wiz Exp $
+$NetBSD: distinfo,v 1.2 2005/03/14 16:11:42 rillig Exp $
 
 SHA1 (datlib22.zip) = 422b88786d86325f1b5ac29c46fb1ef3c8dcf5e4
 RMD160 (datlib22.zip) = 527302e7b035dad554127c4adafce533ca03e034
 Size (datlib22.zip) = 80830 bytes
-SHA1 (patch-aa) = c3babe4b2843c0ff362aaa5f08b4278bbcd9340c
+SHA1 (patch-aa) = c589d437d71f9342cb15b1b0e731169b274bd6b0
