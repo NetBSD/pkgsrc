@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2003/03/29 12:41:27 jmmv Exp $
+# $NetBSD: Makefile,v 1.30 2003/07/17 21:44:47 grant Exp $
 
 .include "../../lang/perl5/Makefile.common"
 
@@ -7,7 +7,7 @@ SVR4_PKGNAME=	lperl
 WRKSRC=		${WRKDIR}/${EXTRACT_ELEMENTS}
 CATEGORIES+=	lang devel
 
-MAINTAINER=	jlam@netbsd.org
+MAINTAINER=	jlam@NetBSD.org
 HOMEPAGE=	http://language.perl.com/index.html
 COMMENT=	Perl DynaLoader as a shared object
 

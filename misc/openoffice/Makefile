@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2003/05/05 16:43:44 jmmv Exp $
+# $NetBSD: Makefile,v 1.37 2003/07/17 21:49:34 grant Exp $
 
 DISTNAME=		openoffice-0.0.0.641
 PKGREVISION=		2
@@ -10,9 +10,9 @@ DISTFILES=		oo_641_src.tar.bz2
 DISTFILES+=		gpc231.tar.Z
 DISTFILES+=		oo_moz_641.tar.gz
 SITES_gpc231.tar.Z= 	ftp://ftp.cs.man.ac.uk/pub/toby/gpc/
-SITES_oo_moz_641.tar.gz=ftp://ftp.netbsd.org/pub/NetBSD/misc/mrauch/
+SITES_oo_moz_641.tar.gz=ftp://ftp.NetBSD.org/pub/NetBSD/misc/mrauch/
 
-MAINTAINER=		mrauch@netbsd.org
+MAINTAINER=		mrauch@NetBSD.org
 HOMEPAGE=		http://www.openoffice.org/
 COMMENT=		Integrated office productivity suite
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2003/03/29 12:41:47 jmmv Exp $
+# $NetBSD: Makefile,v 1.29 2003/07/17 21:48:25 grant Exp $
 #
 
 DISTNAME=		nt.1.5a23
@@ -7,7 +7,7 @@ WRKSRC=			${WRKDIR}
 CATEGORIES=		mbone tk
 MASTER_SITES=		http://www-mice.cs.ucl.ac.uk/multimedia/software/nte/1.5a23/
 
-MAINTAINER=		mycroft@netbsd.org
+MAINTAINER=		mycroft@NetBSD.org
 HOMEPAGE=		http://www-mice.cs.ucl.ac.uk/multimedia/software/nte/
 COMMENT=		Multicast Network Text Editor
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2003/07/03 11:04:42 skrll Exp $
+# $NetBSD: Makefile,v 1.12 2003/07/17 21:45:38 grant Exp $
 #
 
 DISTNAME=	wonka-src-0.9.6-release
@@ -7,7 +7,7 @@ WRKSRC=		${WRKDIR}/open-wonka
 CATEGORIES=	lang
 MASTER_SITES=	http://wonka.acunia.com/
 
-MAINTAINER=	skrll@netbsd.org
+MAINTAINER=	skrll@NetBSD.org
 HOMEPAGE=	http://wonka.acunia.com/download.html
 COMMENT=	BSD-licenced java virtual machine
 

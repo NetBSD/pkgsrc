@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.12 2003/06/02 01:18:11 jschauma Exp $
+# $NetBSD: Makefile,v 1.13 2003/07/17 21:49:27 grant Exp $
 
 DISTNAME=	logsurfer-1.5b
 PKGNAME=	logsurfer-1.5.2
 CATEGORIES=	misc
 MASTER_SITES=	ftp://ftp.cert.dfn.de/pub/tools/audit/logsurfer/
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.cert.dfn.de/eng/team/wl/logsurf/
 COMMENT=	Processes logfiles and performs certain actions
 

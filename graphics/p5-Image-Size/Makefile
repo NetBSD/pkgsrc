@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/06/02 01:19:18 jschauma Exp $
+# $NetBSD: Makefile,v 1.13 2003/07/17 21:42:07 grant Exp $
 #
 
 DISTNAME=	Image-Size-2.991
@@ -7,7 +7,7 @@ SVR4_PKGNAME=	p5isi
 CATEGORIES=	graphics perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Image/}
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://theory.uwinnipeg.ca/CPAN/data/Image-Size/
 COMMENT=	Read the dimensions of an image in several popular formats
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2003/07/13 13:52:05 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2003/07/17 21:41:05 grant Exp $
 #
 
 DISTNAME=	gphoto2-2.1.1
@@ -7,7 +7,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gphoto/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://gphoto.sourceforge.net/proj/gphoto2/
 COMMENT=	digital camera access command line client
 

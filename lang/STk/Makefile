@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.10 2003/05/10 00:26:33 jtb Exp $
+# $NetBSD: Makefile,v 1.11 2003/07/17 21:43:56 grant Exp $
 
 DISTNAME=       	STk-4.0.1
 CATEGORIES=		lang
 MASTER_SITES=		ftp://kaolin.unice.fr/pub/STk/
 
-MAINTAINER=		perry@netbsd.org
+MAINTAINER=		perry@NetBSD.org
 HOMEPAGE=		http://kaolin.unice.fr/STk/
 COMMENT=		Scheme interpreter with full access to the Tk graphical package
 

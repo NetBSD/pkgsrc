@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/07/02 12:08:20 jmmv Exp $
+# $NetBSD: Makefile,v 1.8 2003/07/17 21:46:51 grant Exp $
 #
 
 DISTNAME=	prayer-1.0.5
@@ -6,7 +6,7 @@ PKGREVISION=	2
 CATEGORIES=	mail www
 MASTER_SITES=	ftp://ftp.csx.cam.ac.uk/pub/software/email/prayer/
 
-MAINTAINER=	abs@netbsd.org
+MAINTAINER=	abs@NetBSD.org
 HOMEPAGE=	http://www-uxsup.csx.cam.ac.uk/~dpc22/prayer/
 COMMENT=	Small, fast, web mail interface
 

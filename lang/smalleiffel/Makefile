@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2001/07/14 12:37:54 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2003/07/17 21:45:23 grant Exp $
 #
 
 DISTNAME=	${PKGNAME:S/smalleiffel/se/}
@@ -10,7 +10,7 @@ MASTER_SITES=	ftp://ftp.loria.fr/pub/loria/genielog/SmallEiffel/Oldies/ \
 		ftp://ftp.progsoc.uts.edu.au/pub/Eiffel/SmallEiffel/Oldies/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	jlam@netbsd.org
+MAINTAINER=	jlam@NetBSD.org
 HOMEPAGE=	http://smalleiffel.loria.fr/
 COMMENT=	GNU Eiffel compiler
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2003/06/02 01:18:47 jschauma Exp $
+# $NetBSD: Makefile,v 1.33 2003/07/17 21:46:02 grant Exp $
 
 DISTNAME=	faces-1.6.1
 PKGREVISION=	2
@@ -7,7 +7,7 @@ CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.cs.indiana.edu/pub/faces/faces/faces-1.6.1/
 EXTRACT_SUFX=	.tar.Z
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 COMMENT=	visual mail, user and print face server
 
 DEPENDS+=	netpbm>=9.2:../../graphics/netpbm

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.10 2003/03/26 04:05:42 jschauma Exp $
+# $NetBSD: Makefile.common,v 1.11 2003/07/17 21:45:27 grant Exp $
 
 CATEGORIES=	lang
 EXTRACT_SUFX=	.bin
 
-MAINTAINER=	jschauma@netbsd.org
+MAINTAINER=	jschauma@NetBSD.org
 HOMEPAGE=	http://java.sun.com/
 DOWNLOAD=	http://java.sun.com/j2se/1.4.1/download.html
 

@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.12 2003/01/28 03:08:01 uebayasi Exp $
+# $NetBSD: Makefile,v 1.13 2003/07/17 21:47:11 grant Exp $
 
 DISTNAME=	wl-2.10.0
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.ring.gr.jp/pub/text/elisp/wl/stable/
 
-MAINTAINER=	tech-pkg-ja@jp.netbsd.org
+MAINTAINER=	tech-pkg-ja@jp.NetBSD.org
 HOMEPAGE=	http://www.gohome.org/wl/
 COMMENT=	mail/news management system with IMAP4rev1 support for Emacs
 

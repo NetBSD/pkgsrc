@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2003/06/07 14:47:19 cjep Exp $
+# $NetBSD: Makefile,v 1.29 2003/07/17 21:42:57 grant Exp $
 
 DISTNAME=	urt
 PKGNAME=	urt-3.1b1
@@ -12,7 +12,7 @@ PATCH_SITES=	ftp://ptolemy.berkeley.edu/pub/misc/urt/
 PATCHFILES=	urt-3.1b-3.1b1.patch
 PATCH_DIST_STRIP=-p1
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 COMMENT=	Toolkit and library for raster image processing
 
 EXTRACT_ONLY=	urt-3.1b.tar.Z

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2003/06/02 01:19:22 jschauma Exp $
+# $NetBSD: Makefile,v 1.12 2003/07/17 21:41:44 grant Exp $
 
 DISTNAME=	libmng-1.0.5
 PKGNAME=	${DISTNAME:S/lib//}
@@ -7,7 +7,7 @@ MASTER_SITES=	http://www.3-t.com/libmng/download/ \
 		${MASTER_SITE_SOURCEFORGE:=libmng/} \
 		http://www.libmng.com/download/
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.libmng.com/
 COMMENT=	Multiple-image Network Graphics (MNG) reference library
 

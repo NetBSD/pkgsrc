@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2003/07/13 13:52:06 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2003/07/17 21:41:09 grant Exp $
 #
 
 DISTNAME=	graphviz-1.9
@@ -6,7 +6,7 @@ PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.graphviz.org/pub/graphviz/ARCHIVE/
 
-MAINTAINER=	seb@netbsd.org
+MAINTAINER=	seb@NetBSD.org
 HOMEPAGE=	http://www.graphviz.org/
 COMMENT=	Graph Drawing Programs from AT&T Research and Lucent Bell Labs
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2003/07/13 13:52:43 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2003/07/17 21:49:19 grant Exp $
 
 DISTNAME=	koffice-1.2.1
 PKGREVISION=	3
@@ -12,7 +12,7 @@ PATCH_SITES=	http://www.koffice.org/bugfixes/
 PATCHFILES=	1.2.1_kword_crashes.diff
 PATCH_DIST_ARGS?=	-d ${WRKSRC}/kword -p0
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.koffice.org/
 COMMENT=	KDE Office Suite
 

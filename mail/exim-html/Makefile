@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/12/09 11:40:48 ad Exp $
+# $NetBSD: Makefile,v 1.4 2003/07/17 21:45:59 grant Exp $
 
 DISTNAME=	exim-html-4.10
 CATEGORIES=	mail net
@@ -7,7 +7,7 @@ MASTER_SITES=	ftp://ftp.exim.org/pub/exim/exim4/ \
 		ftp://ftp.esat.net/pub/networking/mail/mta/exim/exim4/
 EXTRACT_SUFX=  	.tar.bz2
 
-MAINTAINER=	ad@netbsd.org
+MAINTAINER=	ad@NetBSD.org
 HOMEPAGE=	http://www.exim.org/
 COMMENT=	HTML documentation for the Exim mail transfer agent
 

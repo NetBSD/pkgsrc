@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/06/02 01:19:21 jschauma Exp $
+# $NetBSD: Makefile,v 1.8 2003/07/17 21:41:49 grant Exp $
 # FreeBSD Id: Makefile,v 1.11 1998/10/05 03:13:32 steve Exp
 #
 
@@ -10,7 +10,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	ftp://mm-ftp.cs.berkeley.edu/pub/multimedia/mpeg/play/
 EXTRACT_SUFX=	-src.tar.gz
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://bmrc.berkeley.edu/projects/mpeg/mpeg_play.html
 COMMENT=	Program to play mpeg movies on X displays
 

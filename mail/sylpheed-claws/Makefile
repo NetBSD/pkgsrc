@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2003/07/13 13:52:28 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2003/07/17 21:47:06 grant Exp $
 #
 
 DISTNAME=	sylpheed-0.8.11claws
@@ -8,7 +8,7 @@ CATEGORIES=	mail news x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sylpheed-claws/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	chris@netbsd.org
+MAINTAINER=	chris@NetBSD.org
 HOMEPAGE=	http://sylpheed-claws.sourceforge.net/
 COMMENT=	X based e-mail and netnews client
 

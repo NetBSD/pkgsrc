@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2002/11/14 03:46:43 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/17 21:49:29 grant Exp $
 #
 
 DISTNAME=	lookup-1.3
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lookup/}
 
-MAINTAINER=	uebayasi@netbsd.org
+MAINTAINER=	uebayasi@NetBSD.org
 HOMEPAGE=	http://lookup.sourceforge.net/
 COMMENT=	electric dictionary agent for Emacs
 

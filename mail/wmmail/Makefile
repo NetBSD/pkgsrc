@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2003/04/26 09:49:36 jmmv Exp $
+# $NetBSD: Makefile,v 1.24 2003/07/17 21:47:12 grant Exp $
 
 DISTNAME=	WMMail.app-0.64
 PKGNAME=	wmmail-0.64
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	mail x11 windowmaker
 MASTER_SITES=	http://www.eecg.utoronto.ca/~chanb/WMMail.app/
 
-MAINTAINER=	tron@netbsd.org
+MAINTAINER=	tron@NetBSD.org
 HOMEPAGE=	http://www.eecg.toronto.edu/cgi-bin/cgiwrap/chanb/index.cgi?wmmail
 COMMENT=	xbiff like "mail-checker" for WindowMaker
 

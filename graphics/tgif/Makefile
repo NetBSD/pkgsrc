@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2003/05/05 16:32:28 jmmv Exp $
+# $NetBSD: Makefile,v 1.41 2003/07/17 21:42:51 grant Exp $
 #
 
 DISTNAME=		tgif-4.1.42
@@ -6,7 +6,7 @@ PKGREVISION=		2
 CATEGORIES=		graphics
 MASTER_SITES=		ftp://bourbon.usc.edu/pub/tgif/free-of-charge/
 
-MAINTAINER=		dmcmahill@netbsd.org
+MAINTAINER=		dmcmahill@NetBSD.org
 HOMEPAGE=		http://bourbon.usc.edu:8001/tgif/tgif.html
 COMMENT=		Fully-featured X11 drawing program
 

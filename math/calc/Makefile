@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.9 2003/06/02 01:18:34 jschauma Exp $
+# $NetBSD: Makefile,v 1.10 2003/07/17 21:47:22 grant Exp $
 
 DISTNAME=	calc-2.02f
 PKGREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GNU:=calc/}
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/calc/calc.html
 COMMENT=	Advanced Calculator for GNU Emacs
 

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.13 2003/06/02 01:18:21 jschauma Exp $
+# $NetBSD: Makefile,v 1.14 2003/07/17 21:48:14 grant Exp $
 
 DISTNAME=		tela-1.34
 CATEGORIES=		math
 MASTER_SITES=		ftp://ftp.funet.fi/pub/sci/math/tela/ \
 			ftp://sumppu.fmi.fi/pub/tela/
 
-MAINTAINER=		tech-pkg@netbsd.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.geo.fmi.fi/prog/tela_00.html
 COMMENT=		Tensor Language - a programming language for scientific computing
 

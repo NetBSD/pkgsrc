@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/03/29 12:41:46 jmmv Exp $
+# $NetBSD: Makefile,v 1.3 2003/07/17 21:48:25 grant Exp $
 #
 
 DISTNAME=	src-mdp-1.9a5
@@ -8,7 +8,7 @@ MASTER_SITES+=	http://manimac.itd.nrl.navy.mil/MDP/dist/
 MASTER_SITES+=	http://downloads.pf.itd.nrl.navy.mil/protolib/
 DISTFILES=	src-mdp-1.9a5.tgz src-protolib-1.0a3d.tgz
 
-MAINTAINER=	manu@netbsd.org
+MAINTAINER=	manu@NetBSD.org
 HOMEPAGE=	http://manimac.itd.nrl.navy.mil/MDP/
 COMMENT=	Multicast file transfer
 

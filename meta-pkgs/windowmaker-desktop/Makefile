@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/05/02 11:55:46 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2003/07/17 21:48:38 grant Exp $
 #
 
 DISTNAME=	windowmaker-desktop-1.1
@@ -7,7 +7,7 @@ CATEGORIES=	meta-pkgs x11 windowmaker
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 
-MAINTAINER=	jmmv@netbsd.org
+MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://www.windowmaker.org/
 COMMENT=	provides a desktop based on the WindowMaker wm
 

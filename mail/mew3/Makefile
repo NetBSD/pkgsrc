@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2003/04/12 13:50:34 uebayasi Exp $
+# $NetBSD: Makefile,v 1.3 2003/07/17 21:46:30 grant Exp $
 
 DISTNAME=	mew-3.2
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.mew.org/pub/Mew/release/
 
-MAINTAINER=	tech-pkg-ja@jp.netbsd.org
+MAINTAINER=	tech-pkg-ja@jp.NetBSD.org
 HOMEPAGE=	http://www.mew.org/
 COMMENT=	Messaging in the Emacs World
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/07/13 13:52:44 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2003/07/17 21:49:22 grant Exp $
 # FreeBSD Id: ports/astro/kstars/Makefile,v 1.7 2002/03/31 06:52:00 pat Exp
 
 DISTNAME=	kstars-0.9.kde2
@@ -9,7 +9,7 @@ WRKSRC=		${WRKDIR}/${PKGBASE}
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=kstars/}
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://edu.kde.org/kstars/
 COMMENT=	Desktop planetarium that presents the night sky at any date and time
 

@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.27 2003/07/10 08:55:03 jtb Exp $
+# $NetBSD: Makefile,v 1.28 2003/07/17 21:42:19 grant Exp $
 
 DISTNAME=		plplot-5.2.1
 CATEGORIES=		graphics
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=plplot/}
 
-MAINTAINER=		tech-pkg@netbsd.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://plplot.sourceforge.net/
 COMMENT=		Scientific plotting package
 

@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2003/06/02 01:19:00 jschauma Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/17 21:44:47 grant Exp $
 
 DISTNAME=	kali-0.47
 CATEGORIES=	lang
 MASTER_SITES=	ftp://ftp.nj.nec.com/pub/pls/
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.neci.nj.nec.com/PLS/Kali.html
 COMMENT=	Distributed implementation of Scheme
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.74 2003/07/13 13:52:30 wiz Exp $
+# $NetBSD: Makefile,v 1.75 2003/07/17 21:47:33 grant Exp $
 #
 
 DISTNAME=		gnumeric-1.0.13
@@ -6,7 +6,7 @@ PKGREVISION=		3
 CATEGORIES=		math gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnumeric/1.0/}
 
-MAINTAINER=		rh@netbsd.org
+MAINTAINER=		rh@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/gnumeric/
 COMMENT=		Spreadsheet program from the GNOME project
 

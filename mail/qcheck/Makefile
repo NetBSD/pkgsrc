@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/04/01 21:18:54 zuntum Exp $
+# $NetBSD: Makefile,v 1.4 2003/07/17 21:46:52 grant Exp $
 #
 
 DISTNAME=	qcheck
@@ -6,7 +6,7 @@ PKGNAME=	qcheck-1.0
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.meanmachine.ch/pub/unix/qmail/
 
-MAINTAINER=	zuntum@netbsd.org
+MAINTAINER=	zuntum@NetBSD.org
 COMMENT=	Text-only biff with Maildir support
 
 NO_CONFIGURE=	YES

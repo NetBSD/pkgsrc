@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.7 2002/09/21 23:46:53 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2003/07/17 21:46:58 grant Exp $
 #
 
 DISTNAME=	queue-repair-0.8.4
 CATEGORIES=	mail
 MASTER_SITES=	http://www.qcc.sk.ca/~charlesc/software/queue_repair/
 
-MAINTAINER=	zuntum@netbsd.org
+MAINTAINER=	zuntum@NetBSD.org
 COMMENT=	check or correct most corruptions of the queue in qmail
 
 NO_BUILD=	YES

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2003/07/06 12:37:25 grant Exp $
+# $NetBSD: Makefile,v 1.27 2003/07/17 21:44:25 grant Exp $
 
 DISTNAME=		gcc-2.95.3
 GCC_VERSION=		2.95.3
@@ -10,7 +10,7 @@ WRKSRC=			${WRKDIR}/objdir
 CATEGORIES=		lang security
 MASTER_SITES=		${MASTER_SITE_GNU:=gcc/}
 
-MAINTAINER=		tech-pkg@netbsd.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.trl.ibm.com/projects/security/ssp/
 COMMENT=		GNU Compiler Collection with Stack-smashing protection
 

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.40 2003/07/13 13:52:37 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2003/07/17 21:49:01 grant Exp $
 
 DISTNAME=		gnome-pim-1.4.6
 PKGREVISION=		3
 CATEGORIES=		misc x11 gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-pim/1.4/}
 
-MAINTAINER=		rh@netbsd.org
+MAINTAINER=		rh@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Personal Information Manager for GNOME
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/06/02 01:19:14 jschauma Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/17 21:42:41 grant Exp $
 #
 
 DISTNAME=	rp8codecs${RP_ARCH}
@@ -8,7 +8,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	ftp://mplayerhq.hu/MPlayer/releases/codecs/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://mplayerhq.hu/MPlayer/releases/codecs/
 COMMENT=	RealPlayer 8 shared libraries, primary for use with MPlayer
 

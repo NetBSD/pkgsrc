@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.74 2003/07/13 14:16:10 wulf Exp $
+# $NetBSD: Makefile,v 1.75 2003/07/17 21:41:55 grant Exp $
 
 DISTNAME=	netpbm-10.11.8
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=netpbm/}
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	tron@netbsd.org
+MAINTAINER=	tron@NetBSD.org
 HOMEPAGE=	http://netpbm.sourceforge.net/
 COMMENT=	toolkit for conversion of images between different formats
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2003/03/28 21:14:23 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2003/07/17 21:45:19 grant Exp $
 # FreeBSD: ports/lang/ruby/Makefile,v 1.40 2001/01/18 19:53:38 knu Exp
 
 DISTNAME=	ruby-${RUBY_VERSION}
@@ -6,7 +6,7 @@ CATEGORIES=	lang
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 
-MAINTAINER=	taca@netbsd.org
+MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	http://www.ruby-lang.org/en/
 COMMENT=	Ruby, object-oriented interpreted scripting language
 

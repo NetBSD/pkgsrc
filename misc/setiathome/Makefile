@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/06/02 19:55:16 abs Exp $
+# $NetBSD: Makefile,v 1.11 2003/07/17 21:49:55 grant Exp $
 #
 
 .include "../../mk/bsd.prefs.mk"
@@ -31,7 +31,7 @@ MASTER_SITES=	ftp://ftp.cdrom.com/pub/setiathome/ \
 		ftp://setidata.ssl.berkeley.edu/pub/
 EXTRACT_SUFX=	.tar
 
-MAINTAINER=	abs@netbsd.org
+MAINTAINER=	abs@NetBSD.org
 HOMEPAGE=	http://setiathome.ssl.berkeley.edu/
 COMMENT=	Search for Extraterrestrial Intelligence - at home
 

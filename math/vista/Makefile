@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/06/02 01:18:20 jschauma Exp $
+# $NetBSD: Makefile,v 1.8 2003/07/17 21:48:18 grant Exp $
 #
 
 DISTNAME=	vista
@@ -7,7 +7,7 @@ WRKSRC=		${WRKDIR}/vista-5.0.5
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://forrest.psych.unc.edu/research/vista.html
 COMMENT=	Visual statistics system
 

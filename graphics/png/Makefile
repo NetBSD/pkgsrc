@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2003/06/12 15:40:31 jschauma Exp $
+# $NetBSD: Makefile,v 1.50 2003/07/17 21:42:20 grant Exp $
 
 # On update, don't forget to increase shared library major/minor's in
 # accordance with changes (patch-aa).
@@ -13,7 +13,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libpng/} \
 		ftp://ftp.fu-berlin.de/unix/graphics/png/src/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	fredb@netbsd.org
+MAINTAINER=	fredb@NetBSD.org
 HOMEPAGE=	http://www.libpng.org/pub/png/
 COMMENT=	Library for manipulating PNG images
 

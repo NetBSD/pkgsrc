@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2003/07/13 13:52:21 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2003/07/17 21:44:32 grant Exp $
 
 DISTNAME=		guile-1.6.3
 #PKGREVISION=		1
@@ -6,7 +6,7 @@ PKGREVISION=		1
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_GNU:=guile/}
 
-MAINTAINER=		tech-pkg@netbsd.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.gnu.org/software/guile/guile.html
 COMMENT=		GNU's Ubiquitous Intelligent Language for Extension
 

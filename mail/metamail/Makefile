@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2003/06/02 01:18:43 jschauma Exp $
+# $NetBSD: Makefile,v 1.21 2003/07/17 21:46:27 grant Exp $
 
 DISTNAME=	mm2.7
 PKGNAME=	metamail-2.7
@@ -8,7 +8,7 @@ CATEGORIES=	mail
 MASTER_SITES=	ftp://thumper.bellcore.com/pub/nsb/
 EXTRACT_SUFX=	.tar.Z
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 COMMENT=	Implementation of MIME, the Multipurpose Internet Mail Extensions
 
 CONFLICTS+=	elm>=2.5.5 mm-2.7

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2002/05/13 14:44:20 yyamano Exp $
+# $NetBSD: Makefile,v 1.14 2003/07/17 21:46:55 grant Exp $
 #
 
 DISTNAME=	qmail-conf-0.60
@@ -9,7 +9,7 @@ MASTER_SITES=	http://www.din.or.jp/~ushijima/qmail-conf/		\
 		ftp://cr.yp.to/djbdns/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} djbdns-1.05${EXTRACT_SUFX}
 
-MAINTAINER=	zuntum@netbsd.org
+MAINTAINER=	zuntum@NetBSD.org
 HOMEPAGE=	http://www.din.or.jp/~ushijima/qmail-conf/
 COMMENT=	collection of tools for setting up qmail services
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.34 2003/06/23 15:46:23 salo Exp $
+# $NetBSD: Makefile.common,v 1.35 2003/07/17 21:41:52 grant Exp $
 #
 
 MPLAYER_DIST_VERSION=	0.90
@@ -16,7 +16,7 @@ MASTER_SITES=		http://www.mplayerhq.hu/MPlayer/releases/ \
 EXTRACT_SUFX=		.tar.bz2
 DIST_SUBDIR=		mplayer
 
-MAINTAINER?=		tech-pkg@netbsd.org
+MAINTAINER?=		tech-pkg@NetBSD.org
 HOMEPAGE?=		http://www.mplayerhq.hu/
 
 PATCHDIR=		${.CURDIR}/../../graphics/mplayer-share/patches

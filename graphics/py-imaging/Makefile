@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.18 2003/06/27 10:11:59 drochner Exp $
+# $NetBSD: Makefile,v 1.19 2003/07/17 21:42:33 grant Exp $
 
 DISTNAME=	Imaging-1.1.4
 PKGNAME=	${PYPKGPREFIX}-imaging-1.1.4
 CATEGORIES=	graphics
 MASTER_SITES=	http://effbot.org/downloads/
 
-MAINTAINER=	tsarna@netbsd.org
+MAINTAINER=	tsarna@NetBSD.org
 HOMEPAGE=	http://www.pythonware.com/products/pil/
 COMMENT=	PIL, the Python Imaging Library
 

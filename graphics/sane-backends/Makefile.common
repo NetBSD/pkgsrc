@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2003/06/29 10:16:44 rh Exp $
+# $NetBSD: Makefile.common,v 1.9 2003/07/17 21:42:44 grant Exp $
 
 CATEGORIES?=	graphics
 MASTER_SITES?=	ftp://ftp.mostang.com/pub/sane/${DISTNAME}/ \
@@ -6,7 +6,7 @@ MASTER_SITES?=	ftp://ftp.mostang.com/pub/sane/${DISTNAME}/ \
 		ftp://gd.tuwien.ac.at/hci/sane/${DISTNAME}/ \
 		ftp://ftp.informatik.uni-oldenburg.de/pub/${DISTNAME}/
 
-MAINTAINER?=	tech-pkg@netbsd.org
+MAINTAINER?=	tech-pkg@NetBSD.org
 HOMEPAGE?=	http://www.mostang.com/sane/
 
 SANE_MAJOR?=	1

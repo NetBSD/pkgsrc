@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2003/03/29 12:41:29 jmmv Exp $
+# $NetBSD: Makefile,v 1.12 2003/07/17 21:45:07 grant Exp $
 #
 
 DISTNAME=	Zope-2.2.2-src
@@ -8,7 +8,7 @@ CATEGORIES=	lang
 MASTER_SITES=   http://www.zope.org/Products/Zope/2.2.2/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	tsarna@netbsd.org
+MAINTAINER=	tsarna@NetBSD.org
 HOMEPAGE=	http://www.digicool.com/releases/ExtensionClass
 COMMENT=	Python-extensible C "classes" and Acquisition for Python
 

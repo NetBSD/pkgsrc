@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/03/28 21:14:24 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2003/07/17 21:48:35 grant Exp $
 #
 
 DISTNAME=	netbsd-doc-print-1.1
@@ -7,7 +7,7 @@ CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 
-MAINTAINER=	hubertf@netbsd.org
+MAINTAINER=	hubertf@NetBSD.org
 COMMENT=	meta-package including all packages to convert SGML->PDF/PS
 
 DEPENDS+=	tex-jadetex>=2.20nb1:../../print/tex-jadetex

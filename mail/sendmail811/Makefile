@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/06/02 01:18:38 jschauma Exp $
+# $NetBSD: Makefile,v 1.10 2003/07/17 21:47:01 grant Exp $
 
 DISTNAME=	sendmail.8.11.6
 PKGNAME=	sendmail-8.11.6
@@ -24,7 +24,7 @@ CR_PATCH=sendmail.8.11.6.security.cr.patch
 PATCHFILES+=	${CR_PATCH}
 SITES_${CR_PATCH}=	${MASTER_SITES}
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.sendmail.org/
 COMMENT=	The well known Mail Transport Agent
 

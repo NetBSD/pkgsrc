@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2001/05/19 03:56:38 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2003/07/17 21:49:58 grant Exp $
 #
 
 DISTNAME=	tds-1.4.2
 CATEGORIES=	misc www japanese
 MASTER_SITES=	http://tds.dive-in.to/dist/stable/
 
-MAINTAINER=	kei@netbsd.org
+MAINTAINER=	kei@NetBSD.org
 HOMEPAGE=	http://tds.dive-in.to/
 COMMENT=	web diary system
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2003/07/13 13:52:20 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2003/07/17 21:44:20 grant Exp $
 #
 
 DISTNAME=	Gauche-0.6.3
@@ -7,7 +7,7 @@ CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gauche/}
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	minoura@netbsd.org
+MAINTAINER=	minoura@NetBSD.org
 HOMEPAGE=	http://www.shiro.dreamhost.com/scheme/gauche/index.html
 COMMENT=	R5RS Scheme implementation developed to be a handy script interpreter
 

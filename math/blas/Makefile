@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2003/06/02 01:18:34 jschauma Exp $
+# $NetBSD: Makefile,v 1.12 2003/07/17 21:47:21 grant Exp $
 #
 
 DISTNAME=		blas
@@ -11,7 +11,7 @@ MASTER_SITES=		ftp://ftp.netlib.org/blas/ \
 			ftp://www.hensa.ac.uk/mirrors/netlib/blas/
 EXTRACT_SUFX=		.tgz
 
-MAINTAINER=		tech-pkg@netbsd.org
+MAINTAINER=		tech-pkg@NetBSD.org
 COMMENT=		Basic Linear Algebra Subprograms (Fortran)
 
 USE_FORTRAN=		YES
