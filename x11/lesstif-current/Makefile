@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 1998/07/03 23:30:10 tron Exp $
+# $NetBSD: Makefile,v 1.9 1998/07/15 12:20:05 agc Exp $
 # FreeBSD Id: Makefile,v 1.13 1997/09/08 08:34:13 tg Exp
 #
 
@@ -28,8 +28,5 @@ pre-fetch:
 		${ECHO} "To install lesstif, first delete Motif from ${X11BASE}"; \
 		return 1;						\
 	fi
-
-post-install:
-	${LDCONFIG} || ${TRUE}
 
 .include "../../mk/bsd.pkg.mk"
