@@ -1,35 +1,18 @@
-# New ports collection makefile for:    gshar+gunshar
-# Version required:     4.2
-# Date created:         28 Dec 1994
-# Whom:                 ache
-#
-# FreeBSD Id: Makefile,v 1.13 1999/01/27 07:41:03 fenner Exp
-#
+# $NetBSD: Makefile,v 1.2 1999/05/23 20:33:46 tv Exp $
 
-DISTNAME=       sharutils-4.2
+DISTNAME=	sharutils-4.2
+PKGNAME=	g${DISTNAME}
 CATEGORIES=	archivers
-MASTER_SITES=   ${MASTER_SITE_GNU}
-MASTER_SITE_SUBDIR=	sharutils
+MASTER_SITES=	${MASTER_SITE_GNU:=sharutils/}
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	packages@netbsd.org
 
 GNU_CONFIGURE=  yes
-CONFIGURE_ARGS= --program-prefix=g --disable-uucode
+CONFIGURE_ARGS= --program-prefix=g --disable-uucode --with-gnu-gettext
 INSTALL_TARGET= install install-man
-MAN1=		gshar.1 gunshar.1
+INFO_FILES=	remsync.info sharutils.info
 
 post-patch:
-	@touch ${WRKSRC}/po/sharutils.pot
+	@${TOUCH} ${TOUCH_FLAGS} ${WRKSRC}/po/sharutils.pot
 
-post-install:
-.for file in gshar gunshar
-	strip ${PREFIX}/bin/${file}
-.endfor
-	if [ ! -f ${PREFIX}/info/dir ]; then \
-	  ${SED} -ne '1,/Menu:/p' /usr/share/info/dir > ${PREFIX}/info/dir; \
-	fi
-.for info in remsync.info sharutils.info
-	install-info ${PREFIX}/info/${info} ${PREFIX}/info/dir
-.endfor
-
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"
