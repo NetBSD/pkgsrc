@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 1998/04/15 10:38:17 agc Exp $
+# $NetBSD: Makefile,v 1.5 1998/06/08 18:23:45 bad Exp $
 # FreeBSD Id: Makefile,v 1.3 1997/08/04 22:47:16 ache Exp
 #
 
-DISTNAME=       MIME-Base64-2.03
-PKGNAME=        p5-MIME-Base64-2.03
+DISTNAME=       MIME-Base64-2.05
+PKGNAME=        p5-MIME-Base64-2.05
 CATEGORIES=	converters perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN}
 MASTER_SITE_SUBDIR=     MIME
