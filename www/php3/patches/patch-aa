@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 1999/05/03 19:45:44 tv Exp $
+$NetBSD: patch-aa,v 1.5 2000/04/13 09:51:23 tron Exp $
 
---- functions/dl.c.orig	Sun May  2 14:34:53 1999
-+++ functions/dl.c	Sun May  2 14:35:15 1999
-@@ -123,7 +123,11 @@
+--- functions/dl.c.orig	Thu Mar 30 03:22:37 2000
++++ functions/dl.c	Thu Apr 13 11:48:07 2000
+@@ -120,7 +120,11 @@
  #endif
  		RETURN_FALSE;
  	}
@@ -12,5 +12,5 @@ $NetBSD: patch-aa,v 1.4 1999/05/03 19:45:44 tv Exp $
 +	get_module = (php3_module_entry *(*)(void)) dlsym(handle, "_get_module");
 +#endif
  	
- 	if (!get_module) {
- 		dlclose(handle);
+ 	if (!get_module)
+ 		get_module = (php3_module_entry *(*)(void)) dlsym(handle, "_get_module");
