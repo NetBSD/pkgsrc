@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2003/08/03 05:50:04 sjg Exp $
+# $NetBSD: Makefile,v 1.14 2003/09/16 17:14:08 grant Exp $
 #
 
 DISTNAME=       bmake-20030731
@@ -11,6 +11,8 @@ HOMEPAGE=	http://www.crufty.net/help/sjg/bmake.html
 COMMENT=	Portable (autoconf) version of NetBSD 'make' utility
 
 DEPENDS+=	mk-files>=20030714:../../devel/mk-files
+
+ONLY_FOR_PLATFORM=	NetBSD-*-*
 
 makesyspath=${PREFIX}/share/mk:/usr/share/mk:/usr/local/share/mk:/opt/share/mk
 GNU_CONFIGURE=	yes
