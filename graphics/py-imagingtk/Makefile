@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/01/22 18:12:12 drochner Exp $
+# $NetBSD: Makefile,v 1.3 2002/01/28 17:37:24 drochner Exp $
 #
 
 DISTNAME=	Imaging-1.1.1
@@ -9,8 +9,6 @@ MASTER_SITES=	http://www.pythonware.com/downloads/
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.pythonware.com/products/pil/
 COMMENT=	Tk support for the Python Imaging Library (PIL)
-
-DEPENDS+=	py-Tk>=2.0:../../x11/py-Tk
 
 PYTHON_VERSIONS_ACCEPTED= 20 # XXX for now until some things are cleaned up
 BUILDLINK_DEPENDS.python20= python20>=2.0.1nb1
@@ -34,4 +32,5 @@ do-install:
 
 .include "../../lang/python/extension.buildlink.mk"
 .include "../../graphics/py-imaging/buildlink.mk"
+.include "../../x11/py-Tk/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
