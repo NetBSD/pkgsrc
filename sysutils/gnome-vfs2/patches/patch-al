@@ -1,0 +1,20 @@
+$NetBSD: patch-al,v 1.6 2004/04/24 21:00:07 danw Exp $
+
+--- modules/sftp-method.c.orig	Sat Apr 24 15:37:26 2004
++++ modules/sftp-method.c
+@@ -175,6 +175,15 @@ typedef struct
+ 
+ typedef ssize_t (*read_write_fn) (int, void *, size_t);
+ 
++#ifndef TEMP_FAILURE_RETRY
++#define TEMP_FAILURE_RETRY(expression)				\
++	(__extension__						\
++	 ({ long int __result;					\
++	  	do __result = (long int) (expression);		\
++		while (__result == -1L && errno == EINTR);	\
++		__result; }))
++#endif
++
+ static gsize
+ atomic_io (read_write_fn f, gint fd, gpointer buffer_in, gsize size) 
+ {
