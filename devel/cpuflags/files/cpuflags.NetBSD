@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: cpuflags.NetBSD,v 1.47 2004/04/01 19:44:59 abs Exp $
+# $NetBSD: cpuflags.NetBSD,v 1.48 2004/04/22 12:00:05 abs Exp $
 
 if [ -x /sbin/sysctl ] ;then
     SYSCTL=/sbin/sysctl
@@ -62,12 +62,13 @@ case $hw_machine_arch in
 	esac ;;
 
     i386) case $hw_model in
-	*Intel\ Pentium/MMX\ *)		FLAGS='-march=pentium-mmx'      ;;
+	*Intel\ Pentium/MMX\ *)		FLAGS='-march=pentium-mmx'	;;
 	*Intel\ Pentium\ II\ *)		FLAGS='-march=pentium2'		;;
 	*Intel\ Pentium\ III\ *)	FLAGS='-march=pentium3'		;;
 	*Intel\ Mobile\ Pentium\ III\ *) FLAGS='-march=pentium3'	;;
 	*Intel\ Celeron\ \(Mendocino\)\ *) FLAGS='-march=pentium3 -mno-sse' ;;
 	*Intel\ Pentium\ M\ *)		FLAGS='-march=pentium3'		;;
+	*Intel\ Mobile\ Pentium\ 4\ *)	FLAGS='-march=pentium4'		;;
 	*Intel\ Pentium\ 4\ *)		FLAGS='-march=pentium4'		;;
 	*AMD\ K6-III*)			FLAGS='-march=k6-3'		;;
 	*AMD\ K6-2*)			FLAGS='-march=k6-2'		;;
@@ -169,7 +170,7 @@ fi
 #   -march=k6-3 -> -march=k6 -> -march=pentium -> -march=i486
 #
 # The format of table is
-#   gcc_version_in_which_option_was_introduced  new_option  old_option
+#   gcc_version_in_which_option_was_introduced	new_option  old_option
 
 if [ -n "$FLAGS" ]; then
     gcc_ver=`${CC} -dumpversion | sed 's/^egcs-//'`
