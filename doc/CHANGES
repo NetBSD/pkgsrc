@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1037 2003/01/06 13:55:28 jmmv Exp $
+$NetBSD: CHANGES,v 1.1038 2003/01/06 19:49:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -135,3 +135,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated postfix to 2.0.0.2 [martti 2003-01-06]
 	Updated guile to 1.6.1 [uebayasi 2003-01-06]
 	Updated gail to 1.1.7 [jmmv 2003-01-06]
+	Updated xrick to 021212 [wiz 2003-01-06]
