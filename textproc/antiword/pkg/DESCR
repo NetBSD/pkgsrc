@@ -1,0 +1,4 @@
+  Antiword is a free MS Word reader for NetBSD, Linux, BeOS, and Acorn
+computers.  It converts the binary files from Word 6, 7, 97 and 2000
+to text and Postscript.  Antiword tries to keep the layout of the
+document intact. 
