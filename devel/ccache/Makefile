@@ -1,12 +1,13 @@
-# $NetBSD: Makefile,v 1.1 2002/04/08 17:07:53 kent Exp $
+# $NetBSD: Makefile,v 1.2 2002/04/08 17:39:38 wiz Exp $
 
 DISTNAME=	ccache-1.5
-MASTER_SITES=	http://ccache.samba.org/ftp/ccache/
 CATEGORIES=	devel
-MAINTENER=	packages@netbsd.org
+MASTER_SITES=	http://ccache.samba.org/ftp/ccache/
+
+MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://ccache.samba.org/
 COMMENT=	Cache for C/C++ compilers
 
-GNU_CONFIGURE=
+GNU_CONFIGURE=	YES
 
 .include "../../mk/bsd.pkg.mk"
