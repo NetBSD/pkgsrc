@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/02/16 13:23:46 seb Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/12/04 23:37:14 jmmv Exp $
 bin/cm
 share/examples/opencm/opencm.conf
 share/opencm/help/add.help
@@ -39,6 +39,7 @@ share/opencm/help/set-user.help
 share/opencm/help/set-userkey.help
 share/opencm/help/set-ws-repos.help
 share/opencm/help/set-ws-user.help
+share/opencm/help/show-ws-mutable.help
 share/opencm/help/show-ws-repos.help
 share/opencm/help/show-ws-user.help
 share/opencm/help/status.help
