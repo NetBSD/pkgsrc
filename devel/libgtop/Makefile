@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2000/06/21 00:37:20 jlam Exp $
+# $NetBSD: Makefile,v 1.37 2000/06/24 16:40:57 danw Exp $
 
 DISTNAME=		libgtop-1.0.9
 CATEGORIES=		devel gnome
@@ -12,7 +12,18 @@ DEPENDS+=		gettext-0.10.*:../../devel/gettext
 DEPENDS+=		gnome-libs-*:../../x11/gnome-libs
 DEPENDS+=		guile-[0-9]*:../../lang/guile
 
-ONLY_FOR_PLATFORM=	NetBSD-*-arm32 NetBSD-*-i386 NetBSD-*-m68k
+NOT_FOR_PLATFORM=	SunOS
+
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == NetBSD
+.if (${MACHINE_ARCH} != arm32) && (${MACHINE_ARCH} != i386) && \
+    (${MACHINE_ARCH} != m68k) && (${MACHINE_ARCH} != powerpc)
+IGNORE=			"has not yet been ported to ${MACHINE_ARCH}."
+IGNORE+=		"Please look at /usr/include/${MACHINE_ARCH}/pcb.h"
+IGNORE+=		"and update patches/patch-al appropriately."
+IGNORE+=		"(More information can be found in libgtop.info.)"
+.endif
+.endif
 
 GNU_CONFIGURE=		# defined
 USE_X11BASE=		# defined
