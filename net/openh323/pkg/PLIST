@@ -1,7 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/08/25 16:11:14 mjl Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/05/10 11:14:57 agc Exp $
 lib/libh323.la
 lib/libh323.a
 lib/libh323.so
+lib/libh323.so.1
+lib/libh323.so.1.1
 bin/simph323
 include/QTIoctl.h
 include/acmcodec.h
