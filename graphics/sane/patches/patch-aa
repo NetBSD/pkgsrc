@@ -1,24 +1,13 @@
-$NetBSD: patch-aa,v 1.3 1998/08/07 10:40:53 agc Exp $
+$NetBSD: patch-aa,v 1.4 1999/05/03 16:20:01 rh Exp $
 
---- backend/Makefile.in.orig	Fri Jul 24 07:06:49 1998
-+++ backend/Makefile.in	Thu Aug  6 22:49:14 1998
-@@ -75,7 +75,7 @@
+--- backend/Makefile.in.orig	Sun Apr  4 01:00:44 1999
++++ backend/Makefile.in	Wed Apr 21 21:04:33 1999
+@@ -33,7 +33,7 @@
+ INSTALL_PROGRAM = @INSTALL_PROGRAM@
+ INSTALL_DATA = @INSTALL_DATA@
+ RANLIB = @RANLIB@
+-LN_S = @LN_S@
++LN_S = @LN_S@ -f
  
- %-s.c:	$(srcdir)/stubs.c
- 	rm -f $@
--	ln -s $(srcdir)/stubs.c $@
-+	ln -sf $(srcdir)/stubs.c $@
- 
- # Don't delete any intermediate files.
- .PRECIOUS: %-s.c %-s.lo %.lo dll-preload.c
-@@ -99,8 +99,8 @@
- 	done
- 	rm -f $(libdir)/libsane.a $(libdir)/libsane.so \
- 		$(libdir)/libsane.so.$(V_MAJOR)*
--	ln -s sane/libsane-dll.a $(libdir)/libsane.a
--	ln -s sane/libsane-dll.so $(libdir)/libsane.so
-+	ln -sf sane/libsane-dll.a $(libdir)/libsane.a
-+	ln -sf sane/libsane-dll.so $(libdir)/libsane.so
- 	@cd $(libsanedir) && for n in libsane-dll.so.$(V_MAJOR)*; do \
- 	  nn=`echo $$n | sed 's,^libsane-dll,libsane,'`; \
- 	  (cd ..; ln -s sane/$$n $$nn); \
+ CC = @CC@
+ INCLUDES = -I. -I$(srcdir) -I$(top_builddir)/include -I$(top_srcdir)/include
