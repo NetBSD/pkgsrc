@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2002/12/03 11:14:01 drochner Exp $
+# $NetBSD: Makefile,v 1.11 2003/01/10 07:53:08 cjep Exp $
 
 DISTNAME=	xcdroast-0.98alpha11
 PKGNAME=	xcdroast-0.98a11
@@ -13,10 +13,11 @@ DEPENDS+=	cdrecord-xcdroast098a11-[0-9]*:../../sysutils/cdrecord-xcdroast
 
 .include "../../mk/bsd.prefs.mk"
 
-USE_BUILDLINK2=	YES
-USE_X11=	YES
-GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+= --sysconfdir=${PKG_SYSCONFDIR}
+USE_BUILDLINK2=		YES
+USE_PKGLOCALEDIR=	YES
+USE_X11=		YES
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 .if ${_OPSYS_HAS_OSSAUDIO} == "yes"
 CFLAGS+=	-DHAVE_OSS
