@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 1998/05/03 20:49:45 frueauf Exp $
+@comment $NetBSD: PLIST,v 1.2 1998/07/15 11:27:53 agc Exp $
 bin/scanimage
 bin/xcam
 bin/xscanimage
@@ -81,7 +81,6 @@ lib/libsane-umax.so.0.72
 lib/libsane.a
 lib/libsane.so
 lib/libsane.so.0.72
-@exec /sbin/ldconfig || /usr/bin/true
 man/man1/saned.1.gz
 man/man1/scanimage.1.gz
 man/man1/xscanimage.1.gz

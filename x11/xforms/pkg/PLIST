@@ -1,15 +1,11 @@
-@comment $NetBSD: PLIST,v 1.2 1998/05/08 14:22:04 frueauf Exp $
+@comment $NetBSD: PLIST,v 1.3 1998/07/15 11:06:46 agc Exp $
 bin/fd2ps
 bin/fdesign
 include/X11/forms.h
 lib/libforms.a
-@exec	ln -sf %D/%F %D/lib/libxforms.a
-@unexec	rm -f %D/lib/libxforms.a
+lib/libxforms.a
 lib/libforms.so.0.88
-@exec	ln -sf %D/%F %D/lib/libxforms.so.0.88
-@unexec	rm -f %D/lib/libxforms.so.0.88
-@exec	/sbin/ldconfig || /usr/bin/true
-@unexec	/sbin/ldconfig || /usr/bin/true
+lib/libxforms.so.0.88
 man/man1/fd2ps.1.gz
 man/man1/fdesign.1.gz
 man/man5/forms.5.gz
