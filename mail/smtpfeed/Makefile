@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2001/01/29 11:34:32 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2001/01/31 10:24:03 itojun Exp $
 # Based on FreeBSD Id: Makefile,v 1.27 1999/04/03 08:25:18 itojun Exp
 #
 
-DISTNAME=	smtpfeed-1.08
+DISTNAME=	smtpfeed-1.10
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.kyoto.wide.ad.jp/pub/mail/smtpfeed/ \
 		ftp://ftp.kyoto.wide.ad.jp/pub/mail/sendmail/ \
