@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2002/12/10 12:30:58 markd Exp $
+$NetBSD: distinfo,v 1.2 2003/12/04 13:50:34 adam Exp $
 
-SHA1 (rpy-0.3.tar.gz) = c1c57b22bc9d309552515946acd28b5c8e82013c
-Size (rpy-0.3.tar.gz) = 215545 bytes
+SHA1 (rpy-0.3.1.tar.gz) = ec56b00518fed416179afac949914fa2055cd8d7
+Size (rpy-0.3.1.tar.gz) = 219278 bytes
 SHA1 (patch-aa) = 34ec97c595215c0ac037d8774b29289596bff43f
