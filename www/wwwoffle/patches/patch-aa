@@ -1,0 +1,24 @@
+--- Makefile.orig	Sat Jun  6 18:02:38 1998
++++ Makefile	Sat Jun  6 18:05:01 1998
+@@ -14,17 +14,17 @@
+ 
+ ########
+ 
+-INSTDIR=/usr/local
++INSTDIR=${PREFIX}
+ SPOOLDIR=/var/spool/wwwoffle
+-CONFDIR=/var/spool/wwwoffle
++CONFDIR=${PREFIX}/etc/wwwoffle
+ 
+ ########
+ 
+ CC=gcc
+-CFLAGS=-O2 -Wall -g
++CFLAGS=-O2 -Wall
+ 
+ LD=gcc
+-LDFLAGS=-g
++LDFLAGS=-s
+ 
+ LEX=flex -i -L
+ 
