@@ -1,8 +1,18 @@
-$NetBSD: patch-af,v 1.2 2001/04/07 20:52:45 rh Exp $
+$NetBSD: patch-af,v 1.3 2001/09/30 22:13:45 mycroft Exp $
 
---- logview/logrtns.c.orig	Tue Feb 27 09:33:19 2001
-+++ logview/logrtns.c
-@@ -294,8 +294,8 @@
+--- logview/logrtns.c.orig	Thu Jun 28 08:14:22 2001
++++ logview/logrtns.c	Sun Sep 30 22:10:01 2001
+@@ -24,6 +24,9 @@
+ #include "config.h"
+ #include "logview.h"
+ #include "logrtns.h"
++#ifdef HAVE_LOCALE_H
++#include <locale.h>
++#endif
+ 
+ /*
+  * -----------------
+@@ -405,8 +408,8 @@
  {
     LogLine *line;
     FILE *fp;
@@ -13,7 +23,7 @@ $NetBSD: patch-af,v 1.2 2001/04/07 20:52:45 rh Exp $
     long int old_pos;
  
     fp = lg->fp;
-@@ -365,8 +365,8 @@
+@@ -476,8 +479,8 @@
  {
     FILE *fp;
     LogLine *line;
