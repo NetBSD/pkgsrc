@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1111 2002/12/23 14:15:35 wiz Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1112 2002/12/23 15:14:54 wiz Exp $
 #
 # This file is in the public domain.
 #
@@ -358,9 +358,7 @@ LDFLAGS:=		${LDFLAGS:N*-Wl,-R*:N*-rpath*}
 .  endif
 .endif
 
-.if !defined(USE_BUILDLINK_ONLY)
 LDFLAGS+=		-L${LOCALBASE}/lib
-.endif
 MAKE_ENV+=		LDFLAGS="${LDFLAGS}"
 CONFIGURE_ENV+=		LDFLAGS="${LDFLAGS}" M4="${M4}" YACC="${YACC}"
 
