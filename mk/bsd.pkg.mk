@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1234 2003/08/09 10:24:54 seb Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1235 2003/08/12 11:35:03 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -4234,18 +4234,19 @@ print-pkg-size-depends:
 # Common (system) directories not to generate @dirrm statements for
 # Reads MTREE_FILE and extracts a list of sed commands that will
 # sort out which directories NOT to include into the PLIST @dirrm list
-SUBST_PLIST_REPLACEMENT=\
+SUBST_PLIST_REPLACEMENT1=						\
 		-e  's@${OPSYS}@\$${OPSYS}@' 				\
 		-e  's@${OS_VERSION:S/./\./g}@\$${OS_VERSION}@'		\
 		-e  's@${MACHINE_GNU_PLATFORM}@\$${MACHINE_GNU_PLATFORM}@' \
 		-e  's@${MACHINE_ARCH}@\$${MACHINE_ARCH}@' 		\
 		-e  's@${MACHINE_GNU_ARCH}@\$${MACHINE_GNU_ARCH}@'	\
 		-e  's@${LOWER_VENDOR}@\$${LOWER_VENDOR}@' 		\
-		-e  's@${LOWER_OPSYS}@\$${LOWER_OPSYS}@' 		\
-		-e  's@${LOWER_OS_VERSION:S/./\./g}@\$${LOWER_OS_VERSION}@' 	\
-		-e  's@${PKGNAME:S/./\./g}@\$${PKGNAME}@' 			\
+		-e  's@${LOWER_OS_VERSION:S/./\./g}@\$${LOWER_OS_VERSION}@' \
+		-e  's@${LOWER_OPSYS}@\$${LOWER_OPSYS}@'
+SUBST_PLIST_REPLACEMENT2=						\
+		-e  's@${PKGNAME:S/./\./g}@\$${PKGNAME}@' 		\
 		-e  's@${PKGVERSION:S/./\./g}@\$${PKGVERSION}@'		\
-		-e  's@${PKGLOCALEDIR}/locale@\$${PKGLOCALEDIR}/locale@' \
+		-e  's@${PKGLOCALEDIR}/locale@\$${PKGLOCALEDIR}/locale@'
 
 .if make(print-PLIST)
 COMMON_DIRS!= 	${AWK} 'BEGIN  { 					\
@@ -4292,9 +4293,8 @@ print-PLIST:
 	${FIND} ${PREFIX}/. -xdev -newer ${EXTRACT_COOKIE} \! -type d	\
 	 | ( ${GREP} -v emul/linux/proc || ${TRUE} )			\
 	 | ${SORT}							\
-	 | ${SED}							\
-		-e  's@${PREFIX}/./@@' 					\
-		${SUBST_PLIST_REPLACEMENT}				\
+	 | ${SED} -e 's@${PREFIX}/./@@' ${SUBST_PLIST_REPLACEMENT1}	\
+	 | ${SED} ${SUBST_PLIST_REPLACEMENT2}				\
 	 | ${AWK} '							\
 		/^@/ { print $$0; next }				\
 		/.*\/lib[^\/]+\.so\.[0-9]+\.[0-9]+\.[0-9]+$$/ { 	\
@@ -4334,8 +4334,8 @@ print-PLIST:
 		${ECHO} @dirrm $$i ;					\
 	done								\
 	| ( ${GREP} -v emul/linux/proc || ${TRUE} )			\
-	| ${SED}							\
-		${SUBST_PLIST_REPLACEMENT}
+	| ${SED} ${SUBST_PLIST_REPLACEMENT1}				\
+	| ${SED} ${SUBST_PLIST_REPLACEMENT2}
 .endif # target(print-PLIST)
 
 
