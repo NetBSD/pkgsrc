@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9232 2005/02/20 13:57:55 xtraeme Exp $
+$NetBSD: CHANGES,v 1.9233 2005/02/20 14:00:28 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -976,3 +976,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Removed gnubile [tron 2005-02-20]
 	Updated metacity to 2.8.13 [jmmv 2005-02-20]
 	Updated swapd to 1.0.3 [xtraeme 2005-02-20]
+	Updated gnetman to 20050211 [dmcmahill 2005-02-20]
