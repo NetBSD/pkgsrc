@@ -1,9 +1,9 @@
-$NetBSD: patch-aa,v 1.2 2003/07/31 02:49:53 jschauma Exp $
+$NetBSD: patch-aa,v 1.3 2005/03/24 08:53:29 adam Exp $
 
---- configure.orig	2002-04-07 10:05:48.000000000 -0400
-+++ configure	2003-07-30 22:29:10.000000000 -0400
-@@ -18,7 +18,7 @@
- # Sun Apr  7 12:04:48 CEST 2002
+--- configure.orig	2004-01-12 15:47:18.000000000 +0000
++++ configure
+@@ -19,7 +19,7 @@
+ # Tue Nov 11 21:30:26 CET 2003
  
  
 -echo='/bin/echo -e'
@@ -11,16 +11,16 @@ $NetBSD: patch-aa,v 1.2 2003/07/31 02:49:53 jschauma Exp $
  
  rm -rf configure-tmp || exit 1;
  mkdir configure-tmp || exit 1;
-@@ -29,7 +29,7 @@
+@@ -30,7 +30,7 @@ makedirs=".";
  # $CXX
  #
  
 -$echo 'Checking C++ compiler... \c';
 +$echo -n 'Checking C++ compiler... ';
  cat <<EOF >$tmp_file.C;
- #include <iostream.h>
+ #include <iostream>
  int main(int, char **) {
-@@ -54,7 +54,7 @@
+@@ -55,7 +55,7 @@ $echo "use \"$CXX\"";
  # $SYS_POLL_MISSING
  #
  
@@ -29,7 +29,7 @@ $NetBSD: patch-aa,v 1.2 2003/07/31 02:49:53 jschauma Exp $
  SYS_POLL_MISSING=unknown;
  cat <<EOF >$tmp_file.C;
  #ifdef SYS_POLL_MISSING /* { */
-@@ -94,7 +94,7 @@
+@@ -95,7 +95,7 @@ esac;
  # $SOCKET_LIBRARIES
  #
  
@@ -38,7 +38,7 @@ $NetBSD: patch-aa,v 1.2 2003/07/31 02:49:53 jschauma Exp $
  SOCKET_LIBRARIES=unknown;
  cat >$tmp_file.C <<EOF;
  extern "C" int socket();
-@@ -125,7 +125,7 @@
+@@ -126,7 +126,7 @@ fi;
  # $BOOL_DEFINITION
  #
  
@@ -47,7 +47,7 @@ $NetBSD: patch-aa,v 1.2 2003/07/31 02:49:53 jschauma Exp $
  BOOL_DEFINITION=unknown;
  cat <<EOF >$tmp_file.C;
  #ifdef BOOL_DEFINITION
-@@ -162,7 +162,7 @@
+@@ -163,7 +163,7 @@ esac;
  # $EXPLICIT
  #
  
@@ -56,7 +56,7 @@ $NetBSD: patch-aa,v 1.2 2003/07/31 02:49:53 jschauma Exp $
  EXPLICIT=unknown;
  cat <<EOF >$tmp_file.C;
  struct C {
-@@ -193,7 +193,7 @@
+@@ -194,7 +194,7 @@ esac;
  # $LIBSTDCXX_INCLUDES, $LIBSTDCXX_LIBS
  #
  
@@ -65,7 +65,7 @@ $NetBSD: patch-aa,v 1.2 2003/07/31 02:49:53 jschauma Exp $
  cat <<EOF >$tmp_file.C;
  #include <string>
  #include <list>
-@@ -221,7 +221,7 @@
+@@ -222,7 +222,7 @@ fi;
  # $AUTO_PTR_BROKEN
  #
  AUTO_PTR_BROKEN="";
@@ -74,16 +74,16 @@ $NetBSD: patch-aa,v 1.2 2003/07/31 02:49:53 jschauma Exp $
  cat <<EOF >$tmp_file.C;
  #include <memory>
  #include <string>
-@@ -253,7 +253,7 @@
+@@ -254,7 +254,7 @@ fi;
  # $MAKEDEPEND_INCLUDES
  #
  MAKEDEPEND_INCLUDES="";
 -$echo 'Checking "makedepend" includes... \c';
-+$echo -n 'Checking "makedepend" includes... ';
- echo "#include <iostream.h>" >$tmp_file.C;
++$echo -n 'Checking "makedepend" includes... \c';
+ echo "#include <iostream>" >$tmp_file.C;
  MAKEDEPEND_INCLUDES=`$CXX -E $tmp_file.C 2>/dev/null |
  sed -n \
-@@ -286,7 +286,7 @@
+@@ -287,7 +287,7 @@ for i in \
    MAKEDEPEND_INCLUDES; \
  do cmd="$cmd -e \"s|@$i@|\$$i|g\""; done;
  for dir in $makedirs; do
