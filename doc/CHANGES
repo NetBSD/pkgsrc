@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3362 2003/09/13 21:21:25 tron Exp $
+$NetBSD: CHANGES,v 1.3363 2003/09/13 21:58:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3676,5 +3676,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated p5-Net-SSLeay to 1.25 [jlam 2003-09-13]
 	Updated p5-IO-Socket-SSL to 0.95 [jlam 2003-09-13]
 	Updated gtkhtml to 1.1.10 [tron 2003-09-13]
-	Updated fetchmailconf to 6.2.4nb1 [tron 2003-09-13]
 	Updated fetchmailconf to 6.2.4nb1 [tron 2003-09-13]
