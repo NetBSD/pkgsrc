@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2697 2004/12/05 21:05:14 he Exp $
+$NetBSD: TODO,v 1.2698 2004/12/05 23:40:20 recht Exp $
 
 Suggested new packages
 ======================
@@ -953,7 +953,6 @@ Suggested package updates
 	o py-zconfig-2.1
 	o pygtk-2.4.1
 	o pysol-4.82
-	o python-2.4 [recht]
 	o qDecoder-7.1
 	o qmail-qfilter-2.0
 	o qt1-1.45
