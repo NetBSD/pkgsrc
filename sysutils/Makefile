@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.103 2001/07/06 22:21:17 zuntum Exp $
+# $NetBSD: Makefile,v 1.104 2001/07/07 09:30:12 zuntum Exp $
 #
 
 COMMENT=	System utilities
@@ -70,6 +70,7 @@ SUBDIR+=	stow
 SUBDIR+=	sux
 SUBDIR+=	sysgen
 SUBDIR+=	sysinfo
+SUBDIR+=	tdir
 SUBDIR+=	tits
 SUBDIR+=	tkcron
 SUBDIR+=	tload
