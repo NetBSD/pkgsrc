@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2004/11/20 22:07:49 jmmv Exp $
+# $NetBSD: Makefile,v 1.34 2004/11/27 18:48:25 minskim Exp $
 #
 
 DISTNAME=		libxml-1.8.17
@@ -10,6 +10,8 @@ MASTER_SITES=		ftp://rpmfind.net/pub/veillard/ \
 MAINTAINER=		rh@NetBSD.org
 HOMEPAGE=		http://xmlsoft.org/
 COMMENT=		XML parser, mainly used by the GNOME project
+
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
