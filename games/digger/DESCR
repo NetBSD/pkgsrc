@@ -1,0 +1,15 @@
+Digger was originally created by Windmill software in 1983 and
+released as a copy-protected, bootable 5.25" floppy disk for the
+IBM PC. As it requires a genuine CGA card, it didn't work on modern
+PCs.
+
+In 1998, I created Digger Remastered, which runs on all PCs with
+CGA or better and plays just like the original. It also has many
+new features, including:
+  * Exit button
+  * Optional VGA graphics
+  * Recording and playback
+  * Real time speed control
+  * Keyboard redefinition
+  * Gauntlet mode
+  * Two player simultaneous mode
