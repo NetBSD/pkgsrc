@@ -1,8 +1,18 @@
-$NetBSD: patch-ae,v 1.1 2004/10/23 15:00:48 shannonjr Exp $
+$NetBSD: patch-ae,v 1.2 2004/11/04 20:41:21 shannonjr Exp $
 
---- gpgme/engine-gpgsm.c.orig	2004-04-19 08:12:02.000000000 -0600
+--- gpgme/engine-gpgsm.c.orig	2004-10-22 12:29:21.000000000 -0600
 +++ gpgme/engine-gpgsm.c
-@@ -448,7 +448,8 @@ gpgsm_new (void **engine, const char *lc
+@@ -27,6 +27,9 @@
+ #include <sys/types.h>
+ #include <assert.h>
+ #include <unistd.h>
++#if HAVE_RFUNCS_H
++#include <rfuncs.h>
++#endif
+ #include <locale.h>
+ #include <fcntl.h> /* FIXME */
+ #include <errno.h>
+@@ -452,7 +455,8 @@ gpgsm_new (void **engine, const char *lc
  
    if (isatty (1))
      {
