@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2001/04/20 10:49:55 agc Exp $
+$NetBSD: distinfo,v 1.3 2002/03/17 16:58:24 fredb Exp $
 
-SHA1 (mmix-20000918/mmix.tar.gz) = 8436221d4f078716941b19873acb3f89c7013d95
-Size (mmix-20000918/mmix.tar.gz) = 302634 bytes
+SHA1 (mmix-20000918/mmix.tar.gz) = 0a663b53b9e0ab3cf39b09ed0a721968deeaefc7
+Size (mmix-20000918/mmix.tar.gz) = 304564 bytes
 SHA1 (patch-aa) = 927eabd1b0d1180fb909ca943b511fa325601c7e
