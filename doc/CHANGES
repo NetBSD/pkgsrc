@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8912 2005/01/25 13:49:33 jmmv Exp $
+$NetBSD: CHANGES,v 1.8913 2005/01/25 14:11:54 cube Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -587,3 +587,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated vim-kde to 6.2.14nb2 [jmmv 2005-01-25]
 	Updated vim-motif to 6.3.045nb1 [jmmv 2005-01-25]
 	Updated vim-xaw to 6.3.045nb1 [jmmv 2005-01-25]
+	Added p5-Set-Crontab-1.00 [cube 2005-01-25]
