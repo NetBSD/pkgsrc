@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/10/31 21:07:14 jdolecek Exp $
+# $NetBSD: Makefile,v 1.3 2004/11/05 17:11:40 jdolecek Exp $
 
 MODNAME=		gd
 CATEGORIES+=		graphics
@@ -7,8 +7,6 @@ COMMENT=		PHP extension for GD graphics library
 
 USE_BUILDLINK3=		YES
 USE_X11=		YES
-
-.include "../../lang/php/ext.mk"
 
 CONFIGURE_ARGS+=	--with-${MODNAME}	# use bundled libgd
 CONFIGURE_ARGS+=	--with-jpeg-dir=${BUILDLINK_DIR}
@@ -26,4 +24,5 @@ CONFIGURE_ARGS+=	--without-t1lib
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/xpm/buildlink3.mk"
+.include "../../lang/php/ext.mk"
 .include "../../mk/bsd.pkg.mk"
