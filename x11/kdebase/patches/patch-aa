@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.7 1999/02/15 21:34:49 tron Exp $
+$NetBSD: patch-aa,v 1.8 1999/02/17 00:02:14 tron Exp $
 
 --- configure.orig	Sat Feb  6 18:49:38 1999
-+++ configure	Sun Feb 14 10:01:32 1999
++++ configure	Wed Feb 17 00:23:05 1999
 @@ -516,9 +516,9 @@
  # Prefer explicitly selected file to automatically selected ones.
  if test -z "$CONFIG_SITE"; then
@@ -81,3 +81,19 @@ $NetBSD: patch-aa,v 1.7 1999/02/15 21:34:49 tron Exp $
    cat >> confdefs.h <<EOF
  #define HAVE_PAM_LIB 1
  EOF
+@@ -4984,6 +4984,7 @@
+ 
+ 
+ 
++if false; then
+ echo $ac_n "checking for giflib""... $ac_c" 1>&6
+ echo "configure:4989: checking for giflib" >&5
+ if eval "test \"`echo '$''{'ac_cv_lib_gif'+set}'`\" = set"; then
+@@ -5030,6 +5031,7 @@
+ 
+ else
+   { echo "configure: error: You need giflib23. Please install the kdesupport package" 1>&2; exit 1; }
++fi
+ fi
+ 
+ echo $ac_n "checking for jpeglib""... $ac_c" 1>&6
