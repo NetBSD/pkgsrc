@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/12/28 16:07:51 martin Exp $
+$NetBSD: patch-aa,v 1.2 2001/09/28 04:42:49 lukem Exp $
 
---- Makefile.in.orig	Fri Dec 22 19:40:24 2000
-+++ Makefile.in	Thu Dec 28 16:36:28 2000
+--- Makefile.in.orig	Fri Aug 10 02:52:31 2001
++++ Makefile.in	Fri Sep 28 12:50:05 2001
 @@ -5,10 +5,10 @@
  BASEPATH    = $(INSTALLROOT)@prefix@
  CONFPATH    = $(INSTALLROOT)@sysconfdir@
@@ -15,8 +15,8 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/12/28 16:07:51 martin Exp $
  CFLAGS	= -I../include @CFLAGS@
  
  # these are here so they can be overridden during a make install
-@@ -58,7 +58,7 @@
- 		$(INSTALLCMD) -d -o $(RUNUID) -g $(RUNGID) $(STATEPATH) || exit 1; \
+@@ -58,11 +58,10 @@
+ 		./install-sh -d -o $(RUNUID) -g $(RUNGID) $(STATEPATH) || exit 1; \
  	fi
  
 -cgi:
@@ -24,3 +24,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/12/28 16:07:51 martin Exp $
  	@cd clients; $(MAKE) cgi; cd ..;
  
  install-cgi: install-dirs 
+-	@cd conf; $(MAKE) install; cd ..;
+ 	@cd clients; $(MAKE) install-cgi; cd ..;
+ 
+ install-misc: install-dirs
