@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.169 1998/10/03 03:14:23 tv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.170 1998/10/03 14:44:14 tv Exp $
 #
 # This file is in the public domain.
 #
@@ -1187,6 +1187,8 @@ _PORT_USE: .USE
 				${SED} -e "s|^$$so$$|@comment No shared objects - &|" ${PLIST} > ${PLIST}.tmp && \
 					${MV} ${PLIST}.tmp ${PLIST};	\
 			done;						\
+			${SED} -e "s|.*\.so$|@comment No shared objects - &|" ${PLIST} > ${PLIST}.tmp && \
+				${MV} ${PLIST}.tmp ${PLIST};		\
 			;;						\
 		esac;							\
 	fi)
