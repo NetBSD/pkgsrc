@@ -1,9 +1,11 @@
-# $NetBSD: gcc.mk,v 1.59 2004/03/13 17:52:24 jlam Exp $
+# $NetBSD: gcc.mk,v 1.60 2004/03/13 19:08:37 jlam Exp $
 
 .if !defined(COMPILER_GCC_MK)
 COMPILER_GCC_MK=	defined
 
 .include "../../mk/bsd.prefs.mk"
+
+USE_NATIVE_GCC?=	no
 
 GCC_REQD+=	2.8.0
 
@@ -76,7 +78,7 @@ _GCC_PKG_SATISFIES_DEP=		YES
 .      for _vers_ in ${GCC_REQD}
 .        if !empty(_GCC_PKG_SATISFIES_DEP:M[yY][eE][sS])
 _GCC_PKG_SATISFIES_DEP!=	\
-	if ${PKG_ADMIN} pmatch 'gcc>=${_vers_}' ${_pkg_}; then		\
+	if ${PKG_ADMIN} pmatch 'gcc>=${_vers_}' ${_pkg_} 2>/dev/null; then \
 		${ECHO} "YES";						\
 	else								\
 		${ECHO} "NO";						\
@@ -184,6 +186,10 @@ USE_GCC_SHLIB?=		yes
 .  endif
 .endif
 
+.if !empty(USE_NATIVE_GCC:M[yY][eE][sS])
+_USE_PKGSRC_GCC=	no
+.endif
+
 .if defined(_IGNORE_GCC)
 _USE_PKGSRC_GCC=	NO
 .endif
@@ -193,7 +199,7 @@ _USE_PKGSRC_GCC=	YES
 .  if !empty(_IS_BUILTIN_GCC:M[yY][eE][sS])
 _GCC_TEST_DEPENDS=	gcc>=${_GCC_REQD}
 _USE_PKGSRC_GCC!=	\
-	if ${PKG_ADMIN} pmatch '${_GCC_TEST_DEPENDS}' ${_GCC_PKG}; then	\
+	if ${PKG_ADMIN} pmatch '${_GCC_TEST_DEPENDS}' ${_GCC_PKG} 2>/dev/null; then \
 		${ECHO} "NO";						\
 	else								\
 		${ECHO} "YES";						\
@@ -207,7 +213,7 @@ _USE_PKGSRC_GCC!=	\
 .if !defined(_NEED_NEWER_GCC)
 _PKGSRC_GCC_VERSION=	${_GCC_PKGBASE}-${_GCC_DIST_VERSION}
 _NEED_NEWER_GCC!=	\
-	if ${PKG_ADMIN} pmatch '${_GCC_DEPENDS}' ${_PKGSRC_GCC_VERSION}; then \
+	if ${PKG_ADMIN} pmatch '${_GCC_DEPENDS}' ${_PKGSRC_GCC_VERSION} 2>/dev/null; then \
 		${ECHO} "NO";						\
 	else								\
 		${ECHO} "YES";						\
