@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5719 2004/04/23 16:11:05 xtraeme Exp $
+$NetBSD: CHANGES,v 1.5720 2004/04/23 18:43:37 itojun Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2223,3 +2223,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated mailsync to 4.4.4 [ben 2004-04-22]
 	Updated mathomatic to 11.0cnb1 [minskim 2004-04-23]
 	Added screws-0.52 [xtraeme 2004-04-23]
+	Updated nsd to 2.0.2 [itojun 2004-04-23]
