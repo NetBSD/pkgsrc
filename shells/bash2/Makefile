@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2000/10/04 10:22:56 toshii Exp $
+# $NetBSD: Makefile,v 1.25 2000/12/11 22:55:46 wiz Exp $
 # FreeBSD Id: Makefile,v 1.26 1997/06/27 23:03:27 ache Exp 
 #
 
@@ -27,14 +27,17 @@ post-install:
 	${CP} /etc/shells /etc/shells.bak
 	(${GREP} -v ${PREFIX}/bin/bash /etc/shells.bak; ${ECHO} ${PREFIX}/bin/bash) >/etc/shells
 	${RM} /etc/shells.bak
-	${MKDIR} ${PREFIX}/share/doc/bash
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/bash
 	${INSTALL_MAN}  \
 		${WRKDIR}/doc/article.ps  \
 		${WRKDIR}/doc/bashref.ps  \
-		${WRKDIR}/doc/bash.html  \
-		${WRKDIR}/doc/bashref.html  \
 		${WRKDIR}/doc/article.txt  \
 		${PREFIX}/share/doc/bash
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/bash
+	${INSTALL_MAN} \
+		${WRKDIR}/doc/bash.html  \
+		${WRKDIR}/doc/bashref.html  \
+		${PREFIX}/share/doc/html/bash
 	${GZIP_CMD} ${PREFIX}/share/doc/bash/*.ps
 
 .include "../../mk/bsd.pkg.mk"
