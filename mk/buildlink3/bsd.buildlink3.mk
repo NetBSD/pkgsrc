@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.87 2004/02/16 21:01:17 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.88 2004/02/17 14:49:17 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -127,7 +127,58 @@ _BLNK_DEPMETHOD.${_pkg_}=	_BLNK_ADD_TO.BUILD_DEPENDS
 .  endif
 .    if defined(BUILDLINK_DEPENDS.${_pkg_}) && \
         defined(BUILDLINK_PKGSRCDIR.${_pkg_})
-.      for _depend_ in ${BUILDLINK_DEPENDS.${_pkg_}}
+#
+# BEGIN dependency reduction
+#
+# This next block of code sets _BLNK_DEPENDS.<pkg> to the strictest set of
+# dependencies it can derive from ${BUILDLINK_DEPENDS.<pkg>}.  It only
+# understands dependencies of the form foo>=1.0, and foo-1.0, and leaves
+# the other dependencies undisturbed.
+#
+# The algorithm takes dependencies of the form foo{>=,-}1.0 and converts
+# them to foo-1.0.  It then compares this pkg name against each dependency
+# to see if it satisfies them all.  The key fact is the the strictest
+# dependency, when converted to a pkg name, will satisfy every dependency.
+#
+_BLNK_DEPENDS.${_pkg_}=		\
+	${BUILDLINK_DEPENDS.${_pkg_}:N[a-zA-Z0-9]*-[0-9]*:N[a-zA-Z0-9]*>=[0-9]*}
+_BLNK_GE_DEPENDS.${_pkg_}=	\
+	${BUILDLINK_DEPENDS.${_pkg_}:M[a-zA-Z0-9]*-[0-9]*}		\
+	${BUILDLINK_DEPENDS.${_pkg_}:M[a-zA-Z0-9]*>=[0-9]*}
+_BLNK_STRICTEST_DEPENDS.${_pkg_}?=	none
+.      for _depend_ in ${_BLNK_GE_DEPENDS.${_pkg_}}
+.        for _dep2pkg_ in ${_depend_:S/>=/-/}
+.          if ${_BLNK_STRICTEST_DEPENDS.${_pkg_}} == "none"
+_BLNK_PKG_SATISFIES_DEP.${_pkg_}=	YES
+.            for _dep_ in ${_BLNK_GE_DEPENDS.${_pkg_}}
+.              if !empty(_BLNK_PKG_SATISFIES_DEP.${_pkg_}:M[yY][eE][sS])
+_BLNK_PKG_SATISFIES_DEP.${_pkg_}!=	\
+	if ${PKG_ADMIN} pmatch '${_dep_}' ${_dep2pkg_}; then		\
+		${ECHO} "YES";						\
+	else								\
+		${ECHO} "NO";						\
+	fi
+.              endif
+.            endfor
+.            if !empty(_BLNK_PKG_SATISFIES_DEP.${_pkg_}:M[yY][eE][sS])
+_BLNK_STRICTEST_DEPENDS.${_pkg_}=	${_depend_}
+.            endif
+.          endif
+.        endfor
+.      endfor
+.      if ${_BLNK_STRICTEST_DEPENDS.${_pkg_}} == "none"
+#
+# If the dependencies simply conflict, then pass them on through to the
+# normal dependency handling code.
+#
+_BLNK_DEPENDS.${_pkg_}=		${BUILDLINK_DEPENDS.${_pkg_}}
+.      else
+_BLNK_DEPENDS.${_pkg_}+=	${_BLNK_STRICTEST_DEPENDS.${_pkg_}}
+.      endif
+#
+# END dependency reduction
+#
+.      for _depend_ in ${_BLNK_DEPENDS.${_pkg_}}
 .        if empty(${_BLNK_DEPMETHOD.${_pkg_}}:M${_depend_}\:*)
 ${_BLNK_DEPMETHOD.${_pkg_}}+=	${_depend_}:${BUILDLINK_PKGSRCDIR.${_pkg_}}
 .        endif
