@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2004Q4,v 1.1.2.88 2005/02/25 16:49:23 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2004Q4,v 1.1.2.89 2005/02/25 22:20:36 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2004Q4 branch:
@@ -187,3 +187,5 @@ Pullup ticket 308 - requested by Matthias Drochner
 security fix for xview-lib
 Pullup ticket 313 - requested by Adrian Portelli
 security fix for cyrus-imapd22
+Pullup ticket 309 - requested by Adrian Portelli
+security fix for phpmyadmin
