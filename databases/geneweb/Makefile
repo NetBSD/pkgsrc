@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/01/02 09:34:50 wulf Exp $
+# $NetBSD: Makefile,v 1.11 2003/01/19 12:34:45 grant Exp $
 #
 
 DISTNAME=	geneweb-4.09
@@ -12,6 +12,8 @@ COMMENT=	GeneWeb is a comprehensive genealogy database application
 DEPENDS+=	ocaml>=3.04:../../lang/ocaml
 
 USE_GMAKE=	yes
+
+RCD_SCRIPTS=	geneweb
 
 .if !exists(${LOCALBASE}/bin/ocamlc.opt)
 ALL_TARGET=	out
@@ -31,8 +33,6 @@ pre-configure:
 
 post-build:
 		cd ${WRKSRC} && ${GMAKE} distrib
-		${CAT} ${FILESDIR}/geneweb.sh | \
-		${SED} -e s#@PREFIX@#${PREFIX}#g > ${WRKDIR}/geneweb.sh
 
 do-install:
 		${INSTALL_DATA_DIR} ${PREFIX}/share/examples/geneweb
@@ -59,7 +59,6 @@ do-install:
 		${CP} -Rp setup ${PREFIX}/share/geneweb && \
 		${INSTALL_DATA} a.gwf ${PREFIX}/share/examples/geneweb && \
 		${INSTALL_DATA} only.txt ${PREFIX}/share/examples/geneweb
-		${INSTALL_SCRIPT} ${WRKDIR}/geneweb.sh ${PREFIX}/etc/rc.d/geneweb
 		${TOUCH} ${PREFIX}/share/geneweb/gwtp_tmp/passwd
 		${TOUCH} ${PREFIX}/share/geneweb/gwtp_tmp/gwtp.log
 		${CHMOD} 600 ${PREFIX}/share/geneweb/gwtp_tmp/passwd
