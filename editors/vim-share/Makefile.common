@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.10 2001/10/04 10:18:12 martti Exp $
+# $NetBSD: Makefile.common,v 1.11 2001/10/04 12:38:02 agc Exp $
 VIM_VERSION=		6.0
 DISTNAME=		vim-${VIM_VERSION}
 CATEGORIES=		editors
@@ -12,3 +12,6 @@ HOMEPAGE=		http://www.vim.org/
 
 GNU_CONFIGURE=		yes
 WRKSRC=			${WRKDIR}/vim60/src
+
+PATCHDIR?=		${.CURDIR}/../vim-share/patches
+DISTINFO_FILE?=		${.CURDIR}/../vim-share/distinfo
