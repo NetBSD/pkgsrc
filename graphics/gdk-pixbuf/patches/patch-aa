@@ -1,0 +1,31 @@
+$NetBSD: patch-aa,v 1.3 2002/07/19 04:33:29 fredb Exp $
+
+This is to work-around the following error, reported in PR pkg/17553:
+
+cc -DHAVE_CONFIG_H -I. -I. -I../.. -I/t/pkgobj/graphics/gdk-pixbuf/work.m68k/.buildlink/include/glib/glib-1.2 -I/t/pkgobj/graphics/gdk-pixbuf/work.m68k/.buildlink/lib/glib/include -I/t/pkgobj/graphics/gdk-pixbuf/work.m68k/.buildlink/include/gtk-1.2 -I/t/pkgobj/graphics/gdk-pixbuf/work.m68k/.buildlink/include/glib/glib-1.2 -I/t/pkgobj/graphics/gdk-pixbuf/work.m68k/.buildlink/lib/glib/include -I/usr/pkg/share/x11-links/include -I../../gdk-pixbuf -I/t/pkgobj/graphics/gdk-pixbuf/work.m68k/.buildlink/include -I/usr/pkg/share/x11-links/include -I/t/pkgobj/graphics/gdk-pixbuf/work.m68k/.buildlink/include -O2 -I/usr/pkg/share/x11-links/include -c pixops.c  -fPIC -DPIC -o .libs/pixops.o
+pixops.c: In function `bilinear_quadrant':
+pixops.c:1349: internal error--unrecognizable insn:
+(insn 204 56 58 (set (reg:DF 17 %fp1)
+        (const_double:DF (mem/u:DF (symbol_ref/u:SI ("*.LC10")) 0) 0 [0x0] 0 [0x0] 0 [0x0])) -1 (nil)
+    (nil))
+gmake[3]: *** [pixops.lo] Error 1
+gmake[3]: Leaving directory `/t/pkgobj/graphics/gdk-pixbuf/work.m68k/gdk-pixbuf-0.17.0/gdk-pixbuf/pixops'
+[and so on]
+
+--- gdk-pixbuf/pixops/Makefile.am.orig	Mon May 22 13:49:06 2000
++++ gdk-pixbuf/pixops/Makefile.am
+@@ -21,5 +21,14 @@
+ 	pixops-internal.h		\
+ 	$(mmx_sources)
+ 
++ifeq (m68k,$(findstring m68k,$(host_alias)))
++pixops.o: pixops.c
++	$(COMPILE) -O -c $<
++
++pixops.lo: pixops.c
++	$(LIBTOOL) --mode=compile $(COMPILE) -O -c $<
++
++ endif
++
+ EXTRA_DIST =				\
+ 	DETAILS
