@@ -1,0 +1,11 @@
+--- lib/Xm/FontList.c-orig	Fri Mar 13 23:42:13 1998
++++ lib/Xm/FontList.c	Sat Apr  4 12:29:29 1998
+@@ -211,7 +211,7 @@
+     if (entry)
+     {
+ 	XtFree((*entry)->tag);
+-	XtFree((XtPointer)entry);
++	XtFree((XtPointer)*entry);
+ 
+ 	/* should we close the Font? */
+     }
