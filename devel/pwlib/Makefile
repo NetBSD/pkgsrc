@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.35 2004/11/30 16:44:47 adam Exp $
+# $NetBSD: Makefile,v 1.36 2004/12/01 13:10:06 adam Exp $
 
 DISTNAME=	pwlib-v1_8_3-src
-PKGNAME=	${DISTNAME:S/_/./g:S/-src//:S/-v/-/}
+PKGNAME=	pwlib-1.8.3
 CATEGORIES=	devel
 MASTER_SITES+=	http://www.voxgratia.org/releases/
 EXTRACT_SUFX=	-tar.gz
@@ -19,7 +19,7 @@ USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_PKGINSTALL=		yes
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--disable-sasl --disable-openldap --disable-openssl
+CONFIGURE_ARGS+=	--disable-sasl --disable-openldap
 CONFIGURE_ARGS+=	--disable-expat --disable-video --disable-qos
 PTHREAD_OPTS+=		require
 
@@ -57,5 +57,6 @@ do-install:
 		${INSTALL_DATA} $$f ${PREFIX}/$$f;	\
 	done
 
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
