@@ -1,21 +1,23 @@
-# $NetBSD: Makefile,v 1.49 2004/02/02 13:02:50 jlam Exp $
+# $NetBSD: Makefile,v 1.50 2004/02/04 13:58:39 markd Exp $
 
-DISTNAME=	kdelibs-3.1.5
-PKGREVISION=	1
+DISTNAME=	kdelibs-3.2.0
 CATEGORIES=	x11
 COMMENT=	Support libraries for the KDE integrated X11 desktop
 
 .include "../../meta-pkgs/kde3/Makefile.kde3"
 
 CONFLICTS+=	koffice3<=1.1.1
+DEPENDS+=	xdg-dirs>=1.0:../../misc/xdg-dirs
 
 USE_BUILDLINK2=		YES
 USE_LANGUAGES=		c c++
+USE_PKGINSTALL=		YES
 
 CONFIGURE_ARGS+=	--with-ssl-dir="${BUILDLINK_PREFIX.openssl}"
 
 SGML_CATALOGS=		${PREFIX}/share/kde/apps/ksgmltools2/customization/catalog
 SGML_CATALOGS+=		${PREFIX}/share/kde/apps/ksgmltools2/docbook/xml-dtd-4.1.2/docbook.cat
+SGML_CATALOGS+=		${PREFIX}/share/kde/apps/ksgmltools2/docbook/xml-dtd-4.2/docbook.cat
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -33,22 +35,16 @@ REPLACE_PERL= \
 PLIST_SRC=		${WRKDIR}/PLIST
 UNLIMIT_RESOURCES=	datasize memorysize
 
-FOO_MAIN_FILES= \
-	arts/knotify/knotify_main.cpp \
-	dcop/dcopserver_main.cpp \
-	kconf_update/kconf_update_main.cpp \
-	kded/kbuildsycoca_main.cpp \
-	kded/kded_main.cpp \
-	kdeprint/management/kaddprinterwizard_main.cpp \
-	kio/misc/kio_uiserver_main.cpp \
-	kioslave/http/http_cache_cleaner_main.cpp \
-	kioslave/http/kcookiejar/kcookiejar_main.cpp
-
-.include "../../meta-pkgs/kde3/Makefile.foo_main"
-
 FIXUP_FILES= \
-	kspell/ksconfig.cpp \
+	kdeui/ksconfig.cpp \
 	kio/kssl/kopenssl.cc
+
+# Several programs need to be setuid-root, but due to the way that KDE3
+# finds executables, the files must have their read bit set so that
+# KStandardDir::findResource() will find them.
+#
+_KDE_SETUID_ROOT=	${ROOT_USER} ${ROOT_GROUP} 4755
+SPECIAL_PERMS+=	${PREFIX}/bin/kgrantpty	${_KDE_SETUID_ROOT}
 
 pre-configure:
 	@for i in ${FIXUP_FILES}; do \
@@ -79,8 +75,8 @@ PLIST_SUBST+=		KDED_WORKAROUND=""
 # We will create the complete icon directory tree for use by other KDE3
 # packages at post-install time.
 #
-ICONCOLORS=	hicolor locolor
-ICONSIZES=	16x16 22x22 32x32 48x48 64x64
+ICONCOLORS=	crystalsvg hicolor locolor
+ICONSIZES=	16x16 22x22 32x32 48x48 64x64 128x128
 ICONDIRS=	actions/kde actions apps devices filesystems mimetypes
 
 post-install:
