@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.3 1999/10/11 00:19:23 jlam Exp $
+
+--- Makefile.in.orig	Wed Sep 29 12:37:54 1999
++++ Makefile.in	Sun Oct 10 19:52:23 1999
+@@ -840,6 +840,7 @@
+ 	sed -e 's?\@XML_LIBDIR\@?$(XML_LIBDIR)?g' \
+ 	    -e 's?\@XML_INCLUDEDIR\@?$(XML_INCLUDEDIR)?g' \
+ 	    -e 's?\@XML_LIBS\@?$(XML_LIBS)?g' \
++	    -e 's?\@VERSION\@?$(VERSION)?g' \
+ 	      < $(srcdir)/xmlConf.sh.in > xmlConf.tmp \
+ 	  && mv xmlConf.tmp xmlConf.sh
+ 
