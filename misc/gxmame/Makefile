@@ -1,17 +1,17 @@
-# $NetBSD: Makefile,v 1.8 2004/10/03 00:12:59 tv Exp $
+# $NetBSD: Makefile,v 1.9 2004/11/07 21:13:23 kristerw Exp $
 #
 
 DISTNAME=	gxmame-0.34b
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gxmame/}
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	flynn@energyhq.es.eu.org
 HOMEPAGE=	http://gxmame.sourceforge.net/
 COMMENT=	Frontend for XMame using the GTK2 library
 
 BUILD_USES_MSGFMT=	yes
-DEPENDS+=		xmame-[0-9]*:../../emulators/xmame
+DEPENDS+=		xmame>=0.87:../../emulators/xmame
 
 GNU_CONFIGURE=		yes
 USE_BUILDLINK3=		yes
