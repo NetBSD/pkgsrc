@@ -1,4 +1,4 @@
-# $NetBSD: mk.conf.example,v 1.146 2000/07/23 19:40:17 fredb Exp $
+# $NetBSD: mk.conf.example,v 1.147 2000/08/13 09:07:45 veego Exp $
 #
 
 # Sample /etc/mk.conf file, which can be used to set specific values
@@ -751,7 +751,6 @@ PAPERSIZE=	A4
 
 # Denmark
 #
-#MASTER_SITE_XCONTRIB=	ftp://ftp.sunsite.auc.dk/mirrors/ftp.x.org/contrib/
 #MASTER_SITE_GNU=	ftp://ftp.sunsite.auc.dk/pub/gnu/
 #MASTER_SITE_PERL_CPAN=	ftp://ftp.sunsite.auc.dk/pub/languages/perl/CPAN/modules/by-module/
 #MASTER_SITE_TEX_CTAN=	ftp://ftp.sunsite.auc.dk/pub/tex/ctan/
