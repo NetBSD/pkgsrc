@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2858 2005/01/07 13:29:12 adam Exp $
+$NetBSD: TODO,v 1.2859 2005/01/08 06:25:48 schmonz Exp $
 
 Suggested new packages
 ======================
@@ -572,7 +572,6 @@ Suggested package updates
 	o horde-3.0.2
 	o host-20040812 [cjep,talking to greg woods about this]
 	o hot-babe-0.2.2
-	o howl-0.9.8 [schmonz,tech-pkg post 2004/12/28 contains update]
 	o html-4.23
 	o html2wml-0.4.11
 	o httperf-0.8
