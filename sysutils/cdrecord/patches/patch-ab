@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.2 1998/08/07 11:14:03 agc Exp $
+$NetBSD: patch-ab,v 1.3 2000/03/03 15:22:19 scw Exp $
 
 *** DEFAULTS/Defaults.netbsd.orig	Wed Nov 12 23:52:33 1997
 --- DEFAULTS/Defaults.netbsd	Wed Nov 12 23:55:30 1997
@@ -8,7 +8,7 @@ $NetBSD: patch-ab,v 1.2 1998/08/07 11:14:03 agc Exp $
   
   DEFINCDIRS=	$(SRCROOT)/include
 ! LDPATH=		-L/opt/schily/lib
-  #RUNPATH=	-R /opt/schily/lib -R $(OLIBSDIR)	Will probably not work
+  #RUNPATH=	-R $(INS_BASE)/lib -R /opt/schily/lib -R $(OLIBSDIR)	Will probably not work
   
   ###########################################################################
 --- 19,25 ----
@@ -16,7 +16,7 @@ $NetBSD: patch-ab,v 1.2 1998/08/07 11:14:03 agc Exp $
   
   DEFINCDIRS=	$(SRCROOT)/include
 ! LDPATH=		-L$(SRCROOT)/lib
-  #RUNPATH=	-R /opt/schily/lib -R $(OLIBSDIR)	Will probably not work
+  #RUNPATH=	-R $(INS_BASE)/lib -R /opt/schily/lib -R $(OLIBSDIR)	Will probably not work
   
   ###########################################################################
 ***************
