@@ -1,6 +1,6 @@
 #!@SH@
 #
-# $NetBSD: usergroup,v 1.6 2005/01/31 19:53:31 jlam Exp $
+# $NetBSD: usergroup,v 1.7 2005/01/31 21:41:06 jlam Exp $
 #
 # +USERGROUP - users and groups management script
 #
@@ -378,7 +378,7 @@ CHECK-REMOVE)
 
 *)
 	${ECHO} "Usage: ./+USERGROUP ADD|REMOVE [metadatadir]"
-	${ECHO} "       ./+USERGROUP CHECK-ADD|CHECK-REMOVE"
+	${ECHO} "       ./+USERGROUP CHECK-ADD|CHECK-REMOVE [metadatadir]"
 	;;
 esac
 exit $exitcode
