@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/11/28 04:36:05 taca Exp $
+# $NetBSD: Makefile,v 1.4 2005/03/06 13:09:55 taca Exp $
 #
 
 DISTNAME=	nqxml-1.1.3p1
@@ -31,18 +31,19 @@ do-install:
 post-install:
 	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}/nqxml
 .for f in ${DOC}
-	${INSTALL_DATA} ${WRKSRC}/$f ${RUBY_DOCDIR}/nqxml
+	${INSTALL_DATA} ${WRKSRC}/${f} ${RUBY_DOCDIR}/nqxml
 .endfor
 	${INSTALL_DATA_DIR} ${RUBY_EXAMPLESDIR}/nqxml/contrib
 .for f in ${EXAMPLES}
-	${INSTALL_DATA} ${WRKSRC}/examples/$f ${RUBY_EXAMPLESDIR}/nqxml
+	${INSTALL_DATA} ${WRKSRC}/examples/${f} ${RUBY_EXAMPLESDIR}/nqxml
 .endfor
 .for f in ${CONTRIB_LIB}
-	${INSTALL_DATA} ${WRKSRC}/contrib/$f ${RUBY_EXAMPLESDIR}/nqxml/contrib
+	${INSTALL_DATA} ${WRKSRC}/contrib/${f} \
+		${RUBY_EXAMPLESDIR}/nqxml/contrib
 .endfor
 	${INSTALL_DATA_DIR} ${RUBY_EXAMPLESDIR}/nqxml/tests
 .for f in ${TESTS}
-	${INSTALL_DATA} ${WRKSRC}/tests/$f ${RUBY_EXAMPLESDIR}/nqxml/tests
+	${INSTALL_DATA} ${WRKSRC}/tests/${f} ${RUBY_EXAMPLESDIR}/nqxml/tests
 .endfor
 
 .include "../../lang/ruby/modules.mk"
