@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4728 2004/02/07 21:31:41 minskim Exp $
+$NetBSD: CHANGES,v 1.4729 2004/02/07 22:01:47 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -698,3 +698,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added JMdict-2003.012 [wiz 2004-02-07]
 	Updated mldonkey to 2.5.8 [wiz 2004-02-07]
 	Added py-cjkcodecs-1.0.3 [minskim 2004-02-07]
+	Deleted py-koCodecs [minskim 2004-02-07]
