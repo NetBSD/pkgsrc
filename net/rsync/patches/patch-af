@@ -1,0 +1,16 @@
+$NetBSD: patch-af,v 1.1 1998/11/05 00:24:38 mycroft Exp $
+
+--- proto.h.orig	Tue Nov  3 17:00:46 1998
++++ proto.h	Wed Nov  4 19:07:49 1998
+@@ -138,7 +138,11 @@
+ int do_chmod(const char *path, mode_t mode);
+ int do_rename(char *fname1, char *fname2);
+ int do_mkdir(char *fname, mode_t mode);
++#ifdef HAVE_MKSTEMP
++int do_mkstemp(char *template);
++#else
+ char *do_mktemp(char *template);
++#endif
+ int do_stat(const char *fname, STRUCT_STAT *st);
+ int do_lstat(const char *fname, STRUCT_STAT *st);
+ int do_fstat(int fd, STRUCT_STAT *st);
