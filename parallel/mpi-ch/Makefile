@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2001/04/05 17:56:19 wennmach Exp $
+# $NetBSD: Makefile,v 1.17 2001/04/09 12:00:49 wiz Exp $
 
 DISTNAME=		mpich-1.2.1
 CATEGORIES=		parallel
@@ -26,14 +26,14 @@ CONFIGURE_ARGS+=	--disable-f90 --disable-f90modules
 
 .include "../../mk/bsd.prefs.mk"
 
-.if exists(work/with-java)
+.if exists(${WRKDIR}/with-java)
 PLIST_SRC+=		${PKGDIR}/PLIST.java
 .endif
 PLIST_SRC+=		${PKGDIR}/PLIST
 
 post-build:
 	@(if [ -e ${WRKSRC}/mpe/viewers/jumpshot-2/bin/jumpshot ]; then \
-		${TOUCH} work/with-java; \
+		${TOUCH} ${WRKDIR}/with-java; \
 	fi)
 
 post-install:
