@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3598 2003/09/30 21:23:40 tron Exp $
+$NetBSD: CHANGES,v 1.3599 2003/10/01 01:17:35 grant Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4034,3 +4034,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated libkver to 0.2 [seb 2003-09-30]
 	Updated ImageMagick to 5.5.7.11 [mycroft 2003-09-30]
 	Updated p5-PerlMagick to 5.5.7.11 [mycroft 2003-09-30]
+	Added rinetd 0.62 [grant 2003-10-01]
