@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2003/05/06 17:41:38 jmmv Exp $
+# $NetBSD: Makefile,v 1.12 2003/05/22 09:37:27 wiz Exp $
 #
 
 DISTNAME=		gcc-3.2.2
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_GNU:=gcc/}
 
@@ -75,7 +75,8 @@ post-install:
 .include "../../mk/bsd.pkg.mk"
 
 # Make bootstrap with compiler != gcc possible.
-LDFLAGS=		${_STRIPFLAG_CC}
+CONFIGURE_ENV+=	LDFLAGS="${_STRIPFLAG_CC}"
+MAKE_ENV+=	GCC_PREFIX="${GCC_PREFIX}"
 
 # On NetBSD, the gcc-2.95.3 for:
 #
