@@ -12,7 +12,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.31 2000/06/21 23:28:28 wiz Exp $
+# $NetBSD: pkglint.pl,v 1.32 2000/07/14 16:09:26 hubertf Exp $
 #
 # This version contains some changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org> and
@@ -1126,10 +1126,8 @@ EOF
 
 				# check port dir existence
 				$k = (split(':', $k))[1];
-				if ($osname ne "NetBSD") {
-					$k =~ s/\${PORTSDIR}/$ENV{'PORTSDIR'}/;
-				}
-				if (! -d $k) {
+				$k =~ s/\${PKGSRCDIR}/$ENV{'PKGSRCDIR'}/;
+				if (! -d "$portdir/$k") {
 					&perror("WARN: no package directory $k ".
 						"found, even though it is ".
 						"listed in $j.");
