@@ -1,17 +1,26 @@
-$NetBSD: patch-aa,v 1.3 2004/03/09 11:59:24 markd Exp $
+$NetBSD: patch-aa,v 1.4 2004/04/20 13:13:42 markd Exp $
 
---- configure.orig	2004-03-01 10:47:15.000000000 +1300
+--- configure.orig	2004-04-06 02:48:29.000000000 +1200
 +++ configure
-@@ -32634,7 +32634,7 @@ if test "${ac_cv_lib_FLAC_FLAC__seekable
+@@ -34640,7 +34640,7 @@ if test "${ac_cv_lib_FLAC_FLAC__seekable
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
    ac_check_lib_save_LIBS=$LIBS
 -LIBS="-lFLAC  $LIBS"
 +LIBS="-lFLAC -lm $LIBS"
  cat >conftest.$ac_ext <<_ACEOF
- /* #line $LINENO "configure" */
  /* confdefs.h.  */
-@@ -33519,7 +33519,7 @@ fi
+ _ACEOF
+@@ -34865,7 +34865,7 @@ echo "${ECHO_T}incs=$para_incdir libs=$p
+ echo "${ECHO_T}$with_cdparanoia" >&6
+     CDPARANOIA_ROOT="$with_cdparanoia"
+     if test "x$CDPARANOIA_ROOT" != "x/usr" ; then
+-      CDPARANOIA_INCS="-I${CDPARANOIA_ROOT}/include"
++      CDPARANOIA_INCS="-I${CDPARANOIA_ROOT}/include/cdparanoia"
+       CDPARANOIA_LIBS="-L${CDPARANOIA_ROOT}/lib "
+       if test "$USE_RPATH" = "yes" ; then
+         CDPARANOIA_RPATH="-R ${CDPARANOIA_ROOT}/lib"
+@@ -35572,7 +35572,7 @@ fi
  echo "$as_me:$LINENO: result: $ac_cv_lib_ossaudio_main" >&5
  echo "${ECHO_T}$ac_cv_lib_ossaudio_main" >&6
  if test $ac_cv_lib_ossaudio_main = yes; then
@@ -20,7 +29,7 @@ $NetBSD: patch-aa,v 1.3 2004/03/09 11:59:24 markd Exp $
  fi
  
  
-@@ -34785,8 +34785,23 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
+@@ -36995,8 +36995,23 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
  
@@ -46,7 +55,7 @@ $NetBSD: patch-aa,v 1.3 2004/03/09 11:59:24 markd Exp $
  else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
-@@ -34840,7 +34855,22 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
+@@ -37059,7 +37074,22 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
  
@@ -69,7 +78,7 @@ $NetBSD: patch-aa,v 1.3 2004/03/09 11:59:24 markd Exp $
  
  else
    echo "$as_me: failed program was:" >&5
-@@ -34895,7 +34925,22 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
+@@ -37123,7 +37153,22 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
  
@@ -92,7 +101,27 @@ $NetBSD: patch-aa,v 1.3 2004/03/09 11:59:24 markd Exp $
  
  else
    echo "$as_me: failed program was:" >&5
-@@ -35487,10 +35532,10 @@ _ACEOF
+@@ -37169,8 +37214,8 @@ cat >>conftest.$ac_ext <<_ACEOF
+ 		#include <sys/types.h>
+ 		typedef int16_t size16;
+ 		typedef int32_t size32;
+-                #include <cdda_interface.h>
+-                #include <cdda_paranoia.h>
++                #include <cdparanoia/cdda_interface.h>
++                #include <cdparanoia/cdda_paranoia.h>
+ 
+ int
+ main ()
+@@ -37221,7 +37266,7 @@ if test "${ac_cv_lib_cdda_paranoia_paran
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-lcdda_paranoia -lcdda_paranoia -lcdda_interface $LIBS"
++LIBS="-lcdda_paranoia -lm -lcdda_interface $LIBS"
+ cat >conftest.$ac_ext <<_ACEOF
+ /* confdefs.h.  */
+ _ACEOF
+@@ -37793,10 +37838,10 @@ _ACEOF
      ;;
  
    NetBSD)
