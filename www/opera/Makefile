@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2002/10/24 10:23:07 bouyer Exp $
+# $NetBSD: Makefile,v 1.26 2003/01/07 22:09:56 cjep Exp $
 
 DISTNAME=	opera-5.0.1
 CATEGORIES=	www
@@ -60,6 +60,5 @@ do-install:
 	mv ${PREFIX}/bin/opera ${PREFIX}/libexec/opera
 	${INSTALL_SCRIPT} ${WRKDIR}/opera ${PREFIX}/bin
 
-.include "../../mk/bsd.pkg.mk"
 .endif
-
+.include "../../mk/bsd.pkg.mk"
