@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1997/10/06 13:45:46 agc Exp $
+# $NetBSD: Makefile,v 1.3 1997/11/06 12:45:31 agc Exp $
 # New ports collection makefile for:	xpm
 # Version required:     3.4j
 # Date created:		14 September 1994
@@ -12,6 +12,8 @@ CATEGORIES=	graphics x11
 MASTER_SITES=	ftp://avahi.inria.fr/pub/xpm/
 
 USE_IMAKE=	yes
+
+CAT1= 		sxpm.0
 
 post-install:
 	${LDCONFIG} -m ${PREFIX}/lib
