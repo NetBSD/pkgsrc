@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2003/07/31 09:34:13 grant Exp $
+# $NetBSD: Makefile,v 1.6 2003/09/05 18:40:47 jlam Exp $
 #
 
-DISTNAME=		pax-20030731
+DISTNAME=		pax-20030905
 CATEGORIES=		archivers pkgtools
 MASTER_SITES=		# empty
 DISTFILES=		# empty
