@@ -1,7 +1,13 @@
-# $NetBSD: options.mk,v 1.2 2004/11/17 19:56:49 xtraeme Exp $
+# $NetBSD: options.mk,v 1.3 2005/03/30 10:00:36 schmonz Exp $
+
+.if ${MACHINE_ARCH} == "sparc64" || \
+	${MACHINE_ARCH} == "alpha" || \
+	${MACHINE_ARCH} == "amd64"
+PKG_DEFAULT_OPTIONS+=   tinydns64
+.endif
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.djbdns
-PKG_SUPPORTED_OPTIONS=	inet6 ignoreip2
+PKG_SUPPORTED_OPTIONS=	inet6 ignoreip2 tinydns64
 .include "../../mk/bsd.options.mk"
 
 ###
@@ -22,4 +28,13 @@ PLIST_SRC+=			${PKGDIR}/PLIST.inet6
 IGNOREIP2_PATCH=		djbdns-1.05-ignoreip2.patch
 PATCHFILES+=			${IGNOREIP2_PATCH}
 SITES_${IGNOREIP2_PATCH}=	http://www.tinydns.org/
+.endif
+
+###
+### Bernhard Roth's patch to fix tinydns-data on 64-bit platforms
+###
+.if !empty(PKG_OPTIONS:Mtinydns64)
+TINYDNS64_PATCH=		tinydns64.diff
+PATCHFILES+=			${TINYDNS64_PATCH}
+SITES_${TINYDNS64_PATCH}=	http://www.pwrlock.de/br/
 .endif
