@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/05/30 21:34:39 tron Exp $
+
+--- batchftp.c.orig	Tue Oct 23 21:12:42 1990
++++ batchftp.c	Sun May 30 23:20:33 1999
+@@ -129,7 +129,7 @@
+ 
+ 
+ 	parent_pid = (int) getpid();                    /* sprintf does not always support type "long" */
+-	getwd(home_dir);
++	getcwd(home_dir,sizeof(home_dir));
+ 	sprintf(msgfile, "%s/msg%d",home_dir, parent_pid);      /*construct full pathname for ftp output file */
+ 
+ 	/* Parse command line switches and assign other arguments */
+@@ -729,7 +729,7 @@
+ 	FILE            *fs_ptr;                /* pointer to f_stdout */
+ 	FILE            *msg_ptr;               /* pointer to ftp output file */
+ 	int		monitor_flag;		/* return value of monitor_ftp () */
+-	union wait      status;                 /* wait for child to terminate */
++	int             status;                 /* wait for child to terminate */
+ 	char            *sh_args[3];            /* arguments for execv */
+ 
+ 	*alarm_flag = _FALSE;                   /* alarm has not been called */
