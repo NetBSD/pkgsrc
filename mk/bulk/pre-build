@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: pre-build,v 1.11 2001/03/14 15:04:03 hubertf Exp $
+# $NetBSD: pre-build,v 1.12 2001/03/19 11:25:39 dmcmahill Exp $
 #
 # Clean up system to be ready for bulk pkg build
 #
@@ -16,6 +16,11 @@ else
 fi
 
 PRUNEDISTFILES=${PRUNEDISTFILES:-"yes"}
+PRUNEPACKAGES=${PRUNEPACKAGES:-"no"}
+PRUNELINKS=${PRUNEPACKAGES:-"no"}
+PRUNEDISTFILES=`echo $PRUNEDISTFILES | tr "[:lower:]" "[:upper:]"`
+PRUNEPACKAGES=`echo $PRUNEPACKAGES | tr "[:lower:]" "[:upper:]"`
+PRUNELINKS=`echo $PRUNELINKS | tr "[:lower:]" "[:upper:]"`
 
 # extract the name of the files used for the build log and broken build log.
 # these have defaults set by bsd.bulk-pkg.mk and may be overridden in /etc/mk.conf
@@ -51,13 +56,40 @@ fi
 # Remove old/broken distfiles and binary packages
 #
 
-if [ $PRUNEDISTFILES = "yes" -o $PRUNEDISTFILES = "YES" ]; then
-	echo Removing old/broken distfiles and binary packages
+DISTDIR=`( cd $USR_PKGSRC/pkgtools/pkglint ; make show-var VARNAME=DISTDIR )`;
+PACKAGES=`( cd $USR_PKGSRC/pkgtools/pkglint ; make show-var VARNAME=PACKAGES )`;
+
+if [ $PRUNEDISTFILES = "YES" ]; then
+	echo "Removing old/broken distfiles"
 	( cd ${USR_PKGSRC}/pkgtools/pkglint ; make bulk-install )
-	lintpkgsrc -r -P${USR_PKGSRC}
+	lintpkgsrc -K $PACKAGES -P $USR_PKGSRC -M $DISTDIR -o -m -r
 	echo done.
 else
 	echo "Skipping distfile pruning."
+fi
+
+if [ $PRUNEPACKAGES = "YES" ]; then
+	echo "Removing old (out of date) binary packages"
+	( cd ${USR_PKGSRC}/pkgtools/pkglint ; make bulk-install )
+	lintpkgsrc -K $PACKAGES -P $USR_PKGSRC -M $DISTDIR -p -r
+	echo done.
+else
+	echo "Skipping packages pruning."
+fi
+
+if [ $PRUNELINKS = "YES" ]; then
+	echo "Checking for and removing orphaned packages links"
+	find $PACKAGES -type l -print |  \
+	while read f 
+	do
+		if [ ! -d $f -a ! -f $f ]; then
+			echo "Removing orphaned link:  \"$f\""
+			rm $f
+		fi
+	done
+	echo done.
+else
+	echo "Skipping pruning of packages links."
 fi
 
 #
@@ -71,15 +103,17 @@ if [ -d /var/db/pkg ]; then
 	for pkg in *
 	do
 		if `pkg_info -qe $pkg`; then 
-			echo pkg_delete -rR $pkg
-			pkg_delete -rR $pkg
+			echo pkg_delete -r $pkg
+			pkg_delete -r $pkg
 		fi
 	done
+	# this should have removed everything.  Now force any broken pkgs
+	# to deinstall
 	for pkg in *
 	do
 		if `pkg_info -qe $pkg`; then 
-			echo pkg_delete -rR $pkg
-			pkg_delete -rR -f $pkg
+			echo pkg_delete -f $pkg
+			pkg_delete -f $pkg
 		fi
 	done
 	
