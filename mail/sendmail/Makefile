@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2000/07/24 04:22:31 itojun Exp $
+# $NetBSD: Makefile,v 1.19 2000/07/30 17:49:00 itojun Exp $
 
 DISTNAME=	sendmail.8.11.0
 PKGNAME=	sendmail-8.11.0
@@ -6,6 +6,13 @@ CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.sendmail.org/pub/sendmail/ \
 		ftp://ftp.cert.dfn.de/pub/tools/net/sendmail/ \
 		ftp://ftp.kyoto.wide.ad.jp/pub/mail/sendmail/
+
+PATCH_SITES=	ftp://ftp.kyoto.wide.ad.jp/pub/mail/smtpfeed/
+PATCHFILES=	sendmail8.11.0+3.3W.patch.gz
+PATCH_DIST_ARGS=-d ${WRKSRC}/sendmail -E ${PATCH_DIST_STRIP}
+.if !(defined(PATCH_DEBUG) || defined(PKG_VERBOSE))
+PATCH_DIST_ARGS+=--forward --quiet
+.endif
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.sendmail.org/
