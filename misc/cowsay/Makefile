@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/03/25 20:13:23 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2000/12/05 19:30:58 drochner Exp $
 
-DISTNAME=		cowsay-3.02
+DISTNAME=		cowsay-3.03
 CATEGORIES=		misc
 MASTER_SITES=		ftp://ftp.nog.net/pub/tony/cowsay/
 
