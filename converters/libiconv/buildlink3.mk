@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2004/02/11 11:30:49 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2004/02/11 12:17:58 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 ICONV_BUILDLINK3_MK:=	${ICONV_BUILDLINK3_MK}+
@@ -13,9 +13,11 @@ BUILDLINK_PKGSRCDIR.iconv?=	../../converters/libiconv
 
 BUILDLINK_CHECK_BUILTIN.iconv?=	NO
 
+_ICONV_H=	/usr/include/iconv.h
+
 .if !defined(BUILDLINK_IS_BUILTIN.iconv)
 BUILDLINK_IS_BUILTIN.iconv=	NO
-.  if exists(/usr/include/iconv.h)
+.  if exists(${_ICONV_H})
 BUILDLINK_IS_BUILTIN.iconv=	YES
 .  endif
 _INCOMPAT_ICONV?=	# should be set from defs.${OPSYS}.mk
@@ -75,6 +77,20 @@ BUILDLINK_TRANSFORM+=	l:iconv:
 .    endif
 BUILDLINK_LDADD.iconv?=	${_BLNK_LIBICONV}
 .  endif
+
+.if !defined(ICONV_TYPE)
+ICONV_TYPE?=	gnu
+.  if !empty(BUILDLINK_USE_BUILTIN.iconv:M[yY][eE][sS]) && \
+      exists(${_ICONV_H})
+ICONV_TYPE!=	\
+	if ${GREP} -q "GNU LIBICONV Library" ${_ICONV_H}; then		\
+		${ECHO} "gnu";						\
+	else								\
+		${ECHO} "native";					\
+	fi
+.  endif
+MAKEFLAGS+=	ICONV_TYPE=${ICONV_TYPE}
+.endif
 
 .  if defined(GNU_CONFIGURE)
 .    if !empty(BUILDLINK_USE_BUILTIN.iconv:M[nN][oO])
