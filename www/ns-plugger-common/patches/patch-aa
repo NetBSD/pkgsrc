@@ -1,0 +1,38 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/08/22 11:02:12 rh Exp $
+
+--- pluggerrc.orig	Wed Nov 10 02:42:29 1999
++++ pluggerrc
+@@ -27,6 +27,7 @@
+ 
+ audio/midi: midi,mid: MIDI audio file
+ audio/x-midi: midi,mid: MIDI audio file
++	many: midiplay $file
+ 	many: timidity -s 44100 -a -idqqqqqqq $file
+ 	: playmidi $file
+ 
+@@ -48,6 +49,7 @@
+ audio/x-mpeg: mpa,abs,mpega: MPEG audio
+ 	stream, preload: splay -t 200 -M
+ 	stream, preload: mpg123 -q -b 128 -
++	many: gqmpeg --playlist_add_play $file
+ 	many: splay -t 200 $file
+ 	many: amp -b 200 -q $file
+ 	many: mpg123 -q -b 128 $file
+@@ -68,7 +70,9 @@
+ 
+ audio/wav:wav:Microsoft wave file
+ audio/x-wav:wav:Microsoft wave file
++	stream, preload: audioplay
+ 	stream, preload: splay -W
++	many: audioplay $file
+ 	many: wavplay -q $file
+ 	stream, preload: bplay 1>/dev/null 2>/dev/null
+ 	: bplay 1>/dev/null 2>/dev/null
+@@ -84,6 +88,7 @@
+ image/x-sun-raster: rs: SUN raster image
+ 	exits: xloadimage -quiet -windowid $window $file
+ 	exits: display -window $window -backdrop $file
++	many: xv $file
+ 
+ audio/mpeg-url: m3u: MPEG music resource locator
+ audio/x-mpeg-url: m3u: MPEG music resource locator
