@@ -3,7 +3,7 @@
 # Date created:		19 August 1997
 # Whom:			jkh
 #
-# $NetBSD: Makefile,v 1.5 1998/01/24 20:26:24 hubertf Exp $
+# $NetBSD: Makefile,v 1.6 1998/02/02 08:11:02 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1997/08/20 10:33:35 jkh Exp
 #
 
@@ -24,7 +24,7 @@ MAN3=		Alloc.3 AddErrInfo.3 AllowExc.3 AppInit.3 AssocData.3 Async.3 BackgdErr.3
 MANN=		Tcl.n after.n append.n array.n bgerror.n binary.n break.n case.n catch.n cd.n clock.n close.n concat.n continue.n eof.n error.n eval.n exec.n exit.n expr.n fblocked.n fconfigure.n fcopy.n if.n file.n fileevent.n filename.n flush.n for.n foreach.n format.n gets.n glob.n global.n history.n http.n incr.n info.n interp.n join.n lappend.n library.n lindex.n linsert.n list.n llength.n load.n lrange.n lreplace.n lsearch.n lsort.n namespace.n open.n package.n pid.n pkgMkIndex.n proc.n puts.n pwd.n read.n regexp.n registry.n regsub.n rename.n resource.n return.n safe.n scan.n seek.n set.n socket.n source.n split.n string.n subst.n switch.n tclvars.n tell.n time.n trace.n unknown.n unset.n update.n uplevel.n upvar.n variable.n vwait.n while.n Base.n Http.n Safe.n pkg_mkIndex.n
 
 post-install:
-	${LDCONFIG} -m ${PREFIX}/lib || /usr/bin/true
+	${LDCONFIG} -m ${PREFIX}/lib || ${TRUE}
 
 test:
 	cd ${WRKSRC} && ${MAKE} test
