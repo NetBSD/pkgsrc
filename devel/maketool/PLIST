@@ -1,7 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:24:52 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/01/10 21:12:07 tron Exp $
 bin/extract_targets
 bin/make_makefile
 bin/maketool
 share/locale/la/LC_MESSAGES/maketool.mo
-@dirrm share/locale/la/LC_MESSAGES
-@dirrm share/locale/la
