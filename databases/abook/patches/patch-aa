@@ -1,15 +1,7 @@
-$NetBSD: patch-aa,v 1.1 2004/07/28 02:50:22 kim Exp $
+$NetBSD: patch-aa,v 1.2 2004/07/28 02:51:31 kim Exp $
 
 --- filter.c	2004/01/23 07:14:32	1.29
 +++ filter.c	2004/03/25 18:19:38	1.30
-@@ -1,6 +1,6 @@
- 
- /*
-- * $Id: patch-aa,v 1.1 2004/07/28 02:50:22 kim Exp $
-+ * $Id: patch-aa,v 1.1 2004/07/28 02:50:22 kim Exp $
-  *
-  * by JH <jheinonen@users.sourceforge.net>
-  *
 @@ -618,6 +618,7 @@
  mutt_read_line(FILE *in, char **alias, char **rest)
  {
