@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2002/03/13 17:37:55 fredb Exp $
+# $NetBSD: Makefile,v 1.10 2002/10/09 13:57:13 wiz Exp $
 # FreeBSD Id: ports/x11-toolkits/fox/Makefile,v 1.14 2001/02/23 19:00:05 knu Exp
 
 DISTNAME=	fox-0.99.174
@@ -26,6 +26,7 @@ CONFIGURE_ENV+=	X_CFLAGS="${X_CFLAGS}"
 
 .endif
 
+USE_BUILDLINK2=	# defined
 USE_X11BASE=	# defined
 USE_LIBTOOL=	# defined
 LTCONFIG_OVERRIDE=${WRKSRC}/ltconfig
@@ -33,7 +34,7 @@ LTCONFIG_OVERRIDE=${WRKSRC}/ltconfig
 GNU_CONFIGURE=	# defined
 CONFIGURE_ARGS+=--with-opengl=mesa --with-x --with-shm=yes --enable-release
 
-.include "../../graphics/jpeg/buildlink.mk"
-.include "../../graphics/png/buildlink.mk"
-.include "../../graphics/Mesa/buildlink.mk"
+.include "../../graphics/jpeg/buildlink2.mk"
+.include "../../graphics/png/buildlink2.mk"
+.include "../../graphics/Mesa/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
