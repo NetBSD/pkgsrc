@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/05/07 01:14:49 xtraeme Exp $
+# $NetBSD: Makefile,v 1.17 2004/06/05 23:36:33 reed Exp $
 #
 
 DISTNAME=	gpdf-0.131
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gpdf/0.131/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	tech-pkg@NetBSD.org
-HOMEPAGE=	http://www.gnome.org/
+HOMEPAGE=	http://www.purl.org/NET/gpdf
 COMMENT=	GNOME 2 version of xpdf
 
 BUILD_USES_MSGFMT=	yes
