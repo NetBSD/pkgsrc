@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2003/07/23 09:41:23 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.57 2003/07/25 02:43:00 grant Exp $
 #
 
 .include "mk/bsd.prefs.mk"
@@ -101,22 +101,18 @@ README.html: .PRECIOUS
 _PKGSRCDIR=${.CURDIR}
 .endif
 
-.PHONY: index
-index: ${.CURDIR}/INDEX
-
-${.CURDIR}/INDEX:
-	@${RM} -f ${.CURDIR}/DEPENDSDB
+${.CURDIR}/PKGDB:
+	@${RM} -f ${.CURDIR}/PKGDB
 	@${ECHO_MSG} "Extracting complete dependency database.  This may take a while..."
-	@DB=${.CURDIR}/DEPENDSDB ; \
+	@DB=${.CURDIR}/PKGDB ; \
 	PKGSRCDIR=${.CURDIR} ; \
 	npkg=1; \
-	${RM} -fr $$DB ; \
-	list=`${GREP} '^[[:space:]]*'SUBDIR */Makefile | sed 's,/Makefile.*=[[:space:]]*,/,'` ; \
+	list=`${GREP} '^[[:space:]]*'SUBDIR */Makefile | ${SED} 's,/Makefile.*=[[:space:]]*,/,'` ; \
 	for pkgdir in $$list ; do \
 		if [ ! -d $$pkgdir ]; then  \
 			echo " " ; \
 			echo "WARNING:  the package directory $pkgdir is listed in" > /dev/stderr ; \
-			echo $pkgdir | sed 's;/.*;/Makefile;g' > /dev/stderr ; \
+			echo $pkgdir | ${SED} 's;/.*;/Makefile;g' > /dev/stderr ; \
 			echo "but the directory does not exist.  Please fix this!" > /dev/stderr ; \
 		else \
 			cd $$pkgdir ; \
@@ -140,9 +136,14 @@ ${.CURDIR}/INDEX:
 		npkg=`${EXPR} $$npkg + 1` ; \
 		cd $$PKGSRCDIR  ; \
 	done
+
+.PHONY: index
+index: ${.CURDIR}/INDEX
+
+${.CURDIR}/INDEX: ${.CURDIR}/PKGDB
 	@${RM} -f ${.CURDIR}/INDEX
-	@${AWK} -f ./mk/scripts/genindex.awk PKGSRCDIR=${.CURDIR} SORT=${SORT} ${.CURDIR}/DEPENDSDB
-	@${RM} -f ${.CURDIR}/DEPENDSDB
+	@${AWK} -f ./mk/scripts/genindex.awk PKGSRCDIR=${.CURDIR} SORT=${SORT} ${.CURDIR}/PKGDB
+	@${RM} -f ${.CURDIR}/PKGDB
 
 print-index:	${.CURDIR}/INDEX
 	@${AWK} -F\| '{ printf("Port:\t%s\nPath:\t%s\nInfo:\t%s\nMaint:\t%s\nIndex:\t%s\nB-deps:\t%s\nR-deps:\t%s\nArch:\t%s\n\n", $$1, $$2, $$4, $$6, $$7, $$8, $$9, $$10); }' < ${.CURDIR}/INDEX
