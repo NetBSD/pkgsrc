@@ -1,8 +1,8 @@
-$NetBSD: patch-al,v 1.1 2001/09/24 03:56:02 taca Exp $
+$NetBSD: patch-al,v 1.2 2001/12/28 10:32:50 taca Exp $
 
---- scripts/mknmz.in.orig	Wed Aug 22 15:16:20 2001
+--- scripts/mknmz.in.orig	Sun Nov 25 18:28:58 2001
 +++ scripts/mknmz.in
-@@ -179,6 +179,8 @@
+@@ -176,6 +176,8 @@
      my $processed_num = 0;
      my $file_size = util::filesize($cfile);
  
