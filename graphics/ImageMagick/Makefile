@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 1998/11/01 22:34:11 tron Exp $
+# $NetBSD: Makefile,v 1.31 1998/11/02 01:02:12 tron Exp $
 #
 
 DISTNAME=	ImageMagick-4.1.3
@@ -23,6 +23,7 @@ pre-configure:
 .else
 		@echo >${WRKSRC}/bzlib.tmpl
 .endif
+		@cd ${WRKSRC} && ./configure --prefix=${X11BASE}
 
 MIRROR_DISTFILE= no
 USE_IMAKE=	yes
