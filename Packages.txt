@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.91 2000/06/30 10:23:28 agc Exp $
+# $NetBSD: Packages.txt,v 1.92 2000/06/30 11:09:53 wiz Exp $
 ###########################################################################
 
 			==========================
@@ -314,13 +314,14 @@ MASTER_SITE_SUBDIR will not work.
 Currently the following values are available for CATEGORIES. If more than
 one is used, they need to be separated by spaces:
 
-	archivers   corba      graphics  meta-pkgs  print      
-	audio       cross      ham	 misc       security
-	benchmarks  databases  japanese  net        shells
-	biology     devel      lang      news       sysutils 
-	cad         editors    mail      parallel   textproc
-	comms       emulators  math      pkgtools   www
-	converters  games      mbone     plan9      x11
+	archivers   databases   ham         net         security
+	audio       devel       japanese    news        shells
+	benchmarks  distfiles   lang        packages    sysutils
+	biology     editors     mail        parallel    templates
+	cad         emulators   math        pkglocate   textproc
+	comms       fonts       mbone       pkgtools    www
+	converters  games       meta-pkgs   plan9       x11
+	cross       graphics    misc        print
 
 See the NetBSD packages(7) manual page for a description of all available
 options and variables.
@@ -409,6 +410,16 @@ One important thing to mention is to pay attention that no RCS IDs get
 stored in the patch files, as these will cause problems when later checked
 into the NetBSD CVS tree. To avoid this, use the "-U 2" or -U 1" option to
 diff.
+
+If you don't want to worry about the problems in the last two paragraphs
+yourself, use pkgdiff from the pkgtools/pkgdiff package, which takes care
+of any RCS Ids by itself.
+
+For even more automation, we recommend using mkpatches from the same
+package to make a whole set of patches. You just have to backup files
+before you edit them to "filename.orig", e.g. with "cp -p filename
+filename.orig". If you upgrade a package this way, you can easily compare
+the new set of patches with the previously existing one with patchdiff.
 
 When preparing a FreeBSD port for the NetBSD packages system, it's likely
 that the FreeBSD port will work on NetBSD. However, check that the person
@@ -554,9 +565,10 @@ E.g:
 	cvs add patches/patch-aa
 	cvs ci
 
-Please note all package updates/additions in doc/pkg-CHANGES! Its very important
-to keep this file up to date, because it will be used by scripts to
-automatically update some pages on www.netbsd.org.
+Please note all package updates/additions in doc/pkg-CHANGES! It's very
+important to keep this file up to date and conforming to the existing
+format, because it will be used by scripts to automatically update pages on
+www.netbsd.org.
 
 
  5 PLIST* issues
