@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/06/10 11:53:54 sakamoto Exp $
+# $NetBSD: Makefile,v 1.3 2002/06/12 01:46:42 wiz Exp $
 # FreeBSD Id: Makefile,v 1.4 1999/06/06 13:19:49 taoka Exp $
 
 DISTNAME=	kinput2-v3
@@ -33,7 +33,7 @@ KINPUT2_DEF+=	-DUseCanna -Dport_CANNASRC=${BUILDLINK_DIR}/include \
 #		-Dport_WNNLIB="${LDFLAGS} -lwnn6 -lcrypt"
 #.elif (!defined(USE_WNN4) || ${USE_WNN4} == YES)
 .if !defined(USE_WNN4) || ${USE_WNN4} == YES
-.include "../../inputmethod/freewnn-lib/buildlink.mk"
+.include "../../inputmethod/ja-freewnn-lib/buildlink.mk"
 KINPUT2_DEF+=	-DUseWnn -Dport_WNNINCDIR=${BUILDLINK_DIR}/include/wnn \
 		-Dport_WNNLIB="${LDFLAGS} -lwnn -lcrypt"
 PLIST_SRC+=	${PKGDIR}/PLIST-freewnn
