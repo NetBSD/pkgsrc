@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/07/10 09:48:47 zuntum Exp $
+bin/water
+share/water/water320.bmp
+@dirrm share/water
