@@ -1,21 +1,21 @@
-# $NetBSD: Makefile,v 1.3 2000/10/15 10:28:54 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2000/10/21 22:36:33 wiz Exp $
 
 DISTNAME=		enormous
 PKGNAME=		${CHESS_ENGINE}-book-${DISTNAME}-20000511
 CATEGORIES=		games
 MASTER_SITES=		ftp://ftp.cis.uab.edu/pub/hyatt/common/${DISTNAME}/
+EXTRACT_SUFX=		.zip
 DISTFILES=		a${EXTRACT_SUFX}
 DISTFILES+=		b${EXTRACT_SUFX}
 DISTFILES+=		c${EXTRACT_SUFX}
 DISTFILES+=		d${EXTRACT_SUFX}
 DISTFILES+=		e${EXTRACT_SUFX}
-EXTRACT_SUFX=		.zip
 
 MAINTAINER=		jlam@netbsd.org
 
-CONFLICTS=		${CHESS_ENGINE}-book-*
-
 DEPENDS+=		crafty>=17.0:../../games/crafty
+
+CONFLICTS=		${CHESS_ENGINE}-book-*
 
 REASON=			"Files too large"
 NO_SRC_ON_CDROM=	${REASON}
