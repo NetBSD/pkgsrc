@@ -1,4 +1,4 @@
-# $NetBSD: logic,v 1.4 2004/09/23 03:59:01 jlam Exp $
+# $NetBSD: logic,v 1.5 2004/09/26 19:11:50 danw Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -85,7 +85,6 @@ while ! queue_is_empty argbuf; do
 			lib="${arg#$dir/lib}" 
 			case $lib in
 			*/*)		argok=yes; continue ;;
-			*.[0-9]*.dylib)	lib="${lib%%.[0-9]*.dylib}" ;;
 			*.dylib)	lib="${lib%.dylib}" ;;
 			esac
 			prepend_queue argbuf "-l$lib"
