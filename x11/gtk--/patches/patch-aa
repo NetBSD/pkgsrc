@@ -1,0 +1,33 @@
+--- src/gensig/gensig.cc.orig	Wed May 13 16:25:09 1998
++++ src/gensig/gensig.cc	Wed May 13 16:26:02 1998
+@@ -680,3 +680,30 @@
+     system(buf);
+     return 0;
+ }
++
++
++/* basename function from MOROHOSHI Akihiko <moro@race.u-tokyo.ac.jp> */
++char *
++basename(const char * str) {
++  const char *s,*t;
++  char *r;
++  if (str == NULL)
++    return strdup(".");
++
++  if( *str == '\0' )
++    return strdup(".");
++      
++  for (s=str+strlen(str)-1; *s=='/' && s>str; s--) /* trim trailing '/'s */
++    ;
++  t=s+1;
++  for (; s>=str; s--)
++    if (*s == '/') {
++      if (t-s>1)
++        str=s+1;	/* t-s==1 is special case: str=~^/+$ */
++        break;
++    }
++  r=(char *)malloc(t-str+1);
++  strncpy(r,str,t-str);
++  r[t-str]='\0';
++  return r;
++}
