@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4005 2003/12/07 01:04:02 epg Exp $
+$NetBSD: CHANGES,v 1.4006 2003/12/07 01:56:16 epg Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5003,3 +5003,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated p5-HTML-Mason to 1.24 [epg 2003-12-06]
 	Updated db4 to 4.2.52 [epg 2003-12-07]
 	Updated py-bsddb3 to 4.1.1nb3 [epg 2003-12-07]
+	Updated p5-SVN-Web to 0.35 [epg 2003-12-07]
