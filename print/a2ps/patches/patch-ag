@@ -1,6 +1,6 @@
---- Makefile.in.orig	Thu Jun 25 16:23:49 1998
-+++ Makefile.in	Wed Jul  1 22:14:36 1998
-@@ -74,7 +74,7 @@
+--- lib/Makefile.in.orig	Thu Jun 25 16:24:21 1998
++++ lib/Makefile.in	Wed Jul  1 22:14:37 1998
+@@ -50,7 +50,7 @@
  INSTALL = @INSTALL@
  INSTALL_PROGRAM = @INSTALL_PROGRAM@
  INSTALL_DATA = @INSTALL_DATA@
@@ -9,12 +9,12 @@
  transform = @program_transform_name@
  
  NORMAL_INSTALL = :
-@@ -368,7 +368,7 @@
- uninstall: uninstall-recursive
+@@ -733,7 +733,7 @@
+ uninstall: uninstall-libLTLIBRARIES uninstall-includeHEADERS
  
  install-strip:
 -	$(MAKE) INSTALL_PROGRAM='$(INSTALL_PROGRAM) -s' INSTALL_SCRIPT='$(INSTALL_PROGRAM)' install
 +	$(MAKE) INSTALL_PROGRAM='$(INSTALL_PROGRAM) -s' INSTALL_SCRIPT='$(INSTALL_SCRIPT)' install
- installdirs: installdirs-recursive
- 
+ installdirs:
+ 	$(mkinstalldirs)  $(DATADIR)$(libdir) $(DATADIR)$(includedir)
  

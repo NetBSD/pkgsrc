@@ -1,5 +1,5 @@
---- Makefile.in.orig	Thu Jun 25 16:23:49 1998
-+++ Makefile.in	Wed Jul  1 22:14:36 1998
+--- contrib/Makefile.in.orig	Thu Jun 25 16:25:28 1998
++++ contrib/Makefile.in	Wed Jul  1 22:14:38 1998
 @@ -74,7 +74,7 @@
  INSTALL = @INSTALL@
  INSTALL_PROGRAM = @INSTALL_PROGRAM@
@@ -9,12 +9,12 @@
  transform = @program_transform_name@
  
  NORMAL_INSTALL = :
-@@ -368,7 +368,7 @@
- uninstall: uninstall-recursive
+@@ -418,7 +418,7 @@
+ uninstall: uninstall-recursive uninstall-am
  
  install-strip:
 -	$(MAKE) INSTALL_PROGRAM='$(INSTALL_PROGRAM) -s' INSTALL_SCRIPT='$(INSTALL_PROGRAM)' install
 +	$(MAKE) INSTALL_PROGRAM='$(INSTALL_PROGRAM) -s' INSTALL_SCRIPT='$(INSTALL_SCRIPT)' install
  installdirs: installdirs-recursive
- 
+ 	$(mkinstalldirs)  $(DATADIR)$(bindir) $(DATADIR)$(bindir)
  
