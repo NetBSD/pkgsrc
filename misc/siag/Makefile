@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2003/01/17 02:09:36 uebayasi Exp $
+# $NetBSD: Makefile,v 1.31 2003/01/17 02:58:59 uebayasi Exp $
 #
 
 DISTNAME=       siag-3.5.4
@@ -15,13 +15,10 @@ DEPENDS+=	gnuplot>=3.7:../../graphics/gnuplot
 CONFIGURE_ARGS+=--with-x
 CONFIGURE_ARGS+=--with-guile
 CONFIGURE_ARGS+=--with-docdir=${PREFIX}/share/doc/siag
-GNU_CONFIGURE=  YES
 USE_BUILDLINK2=	YES
+GNU_CONFIGURE=  YES
 USE_GMAKE=	YES
 USE_X11=	YES
-
-#CFLAGS+=	-Dunix
-#_STRIPFLAG_INSTALL=
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -38,6 +35,6 @@ CONFIGURE_ARGS+=--with-xawm=Xaw
 .include "../../devel/ncurses/buildlink2.mk"
 .include "../../lang/guile14/buildlink2.mk"
 .include "../../graphics/xpm/buildlink2.mk"
-.include "../../mk/xaw.buildlink2.mk"
 .include "../../x11/mowitz/buildlink2.mk"
+.include "../../mk/xaw.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
