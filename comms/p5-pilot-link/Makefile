@@ -1,23 +1,24 @@
-# $NetBSD: Makefile,v 1.5 2000/06/01 11:23:16 rh Exp $
+# $NetBSD: Makefile,v 1.6 2000/08/14 14:19:30 wiz Exp $
 
-DISTNAME=	pilot-link.0.9.3
-PKGNAME=	p5-pilot-link-0.9.3
-CATEGORIES=	comms
-MASTER_SITES=	ftp://ryeham.ee.ryerson.ca/pub/PalmOS/
+DISTNAME=		pilot-link.0.9.3
+PKGNAME=		p5-pilot-link-0.9.3
+CATEGORIES=		comms
+MASTER_SITES=		ftp://ryeham.ee.ryerson.ca/pub/PalmOS/
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=		packages@netbsd.org
 
-DEPENDS+=	pilot-link-0.9.3:../pilot-link
+DEPENDS+=		pilot-link-0.9.3:../../comms/pilot-link
 
-USE_PERL5=	yes
-USE_PKGLIBTOOL=	yes
-GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	--with-perl5=${PERL5_BIN} --without-tcl \
-		--without-python --without-java
+USE_PERL5=		yes
+USE_LIBTOOL=		yes
+LTCONFIG_OVERRIDE=	${WRKDIR}/${DISTNAME}/scripts/ltconfig
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS=		--with-perl5=${PERL5_BIN} --without-tcl \
+			--without-python --without-java
 
-MAKE_ENV+=	OTHERLDFLAGS="${LDFLAGS}"
-PERL5_BIN=	${LOCALBASE}/bin/perl
-WRKSRC=		${WRKDIR}/${DISTNAME}/Perl5
+MAKE_ENV+=		OTHERLDFLAGS="${LDFLAGS}"
+PERL5_BIN=		${LOCALBASE}/bin/perl
+WRKSRC=			${WRKDIR}/${DISTNAME}/Perl5
 
 pre-configure:
 	@cd ${WRKSRC} && \
