@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.24 2003/10/24 01:12:52 xtraeme Exp $
+# $NetBSD: Makefile,v 1.25 2003/11/03 00:36:02 dillo Exp $
 
 DISTNAME=	xpdf-2.03
 CATEGORIES=	print
 MASTER_SITES=	ftp://ftp.foolabs.com/pub/xpdf/ \
 		${MASTER_SITE_SUNSITE:=apps/graphics/viewers/X/}
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	dillo@NetBSD.org
 HOMEPAGE=	http://www.foolabs.com/xpdf/
 COMMENT=	Display tool for PDF files
 
