@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/02/05 07:45:30 jmc Exp $
+# $NetBSD: Makefile,v 1.3 2002/12/23 16:24:59 cjep Exp $
 #
 
 DISTNAME=	xmlrpc4r-1_7_9
@@ -17,7 +17,7 @@ NO_BUILD=	yes
 
 DOC=		README ToDo doc/rubyStyle.css doc/ChangeLog.html \
 		doc/base64.html doc/client.html doc/datetime.html \
-		doc/howto.html doc/index.html doc/server.html 
+		doc/howto.html doc/index.html doc/server.html
 EXAMPLES=	call.rb \
 		chat/client.rb chat/client.rb.tk chat/server.rb \
 		introspection/client.rb introspection/server.rb \
