@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 1999/04/04 23:16:54 tron Exp $
+# $NetBSD: Makefile,v 1.5 1999/04/16 22:54:02 tron Exp $
 
-DISTNAME=	mc-4.5.29
-PKGNAME=	gmc-4.5.29
+DISTNAME=	mc-4.5.30
+PKGNAME=	gmc-4.5.30
 CATEGORIES=	systuils gnome
 MASTER_SITES=	ftp://ftp.gnome.org/pub/GNOME/gnome-1.0/sources/ \
 		ftp://ftp.jimpick.com/pub/mirrors/gnome/gnome-1.0/sources/ \
@@ -11,7 +11,7 @@ MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.gnome.org/mc/
 
 DEPENDS+=	libslang-1.2.2:../../devel/libslang
-DEPENDS+=	gnome-core-1.0.4:../../x11/gnome-core
+DEPENDS+=	gnome-core-1.0.5:../../x11/gnome-core
 
 CONFLICTS+=	mc-*
 
