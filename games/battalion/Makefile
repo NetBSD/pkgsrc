@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2004/01/20 12:15:39 agc Exp $
-#
+# $NetBSD: Makefile,v 1.25 2004/03/10 02:29:43 snj Exp $
 
 DISTNAME=		battalion
 PKGNAME=		battalion-1.4
@@ -16,7 +15,7 @@ NOT_FOR_PLATFORM=	*-*-alpha	# relies on Mesa (gcc)
 
 WRKSRC=			${WRKDIR}/battalionSource
 EXTRACT_ONLY=		battalionSource1.4.tar.Z
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_X11=		yes
 
 do-install:
@@ -40,6 +39,6 @@ do-install:
 pre-clean:
 	@${RM} -rf ${WRKDIR}/battalionSUN4
 
-.include "../../graphics/MesaLib/buildlink2.mk"
-.include "../../graphics/glu/buildlink2.mk"
+.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../graphics/glu/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
