@@ -1,4 +1,4 @@
-# $NetBSD: db1.builtin.mk,v 1.7 2004/11/28 05:44:34 jlam Exp $
+# $NetBSD: db1.builtin.mk,v 1.8 2004/12/02 17:40:49 jlam Exp $
 
 .for _lib_ in db db1
 .  if !defined(_BLNK_LIB_FOUND.${_lib_})
@@ -15,6 +15,8 @@ BUILDLINK_VARS+=	_BLNK_LIB_FOUND.${_lib_}
 .endfor
 .undef _lib_
 
+_DB_H_HEADERS=	/usr/include/db.h /usr/include/db1/db.h
+
 .if !defined(IS_BUILTIN.db1)
 IS_BUILTIN.db1=		no
 #
@@ -22,7 +24,7 @@ IS_BUILTIN.db1=		no
 # else it doesn't support db-1.85 databases.
 #
 _BLNK_NATIVE_DB1_OK=	no
-.  for _inc_ in /usr/include/db.h /usr/include/db1/db.h
+.  for _inc_ in ${_DB_H_HEADERS}
 .    if exists(${_inc_})
 _BLNK_NATIVE_DB1_OK.${_inc_}!=	\
 	if ${GREP} -q "^\#define.*HASHVERSION.*2$$" ${_inc_}; then	\
@@ -56,11 +58,11 @@ CHECK_BUILTIN.db1?=	no
 .if !empty(CHECK_BUILTIN.db1:M[nN][oO])
 .  if !empty(USE_BUILTIN.db1:M[yY][eE][sS])
 BUILDLINK_PREFIX.db1=	/usr
-.    if exists(/usr/include/db.h)
-BUILDLINK_INCDIRS.db1=	include
-.    elif exists(/usr/include/db1/db.h)
-BUILDLINK_INCDIRS.db1=	include/db1
-.    endif
+.    for _inc_ in ${_DB_H_HEADERS}
+.      if exists(${_inc_})
+BUILDLINK_INCDIRS.db1?=	${_inc_:H:S/^${BUILDLINK_PREFIX.db1}\///}
+.      endif
+.    endfor
 .    if !empty(_BLNK_LIB_FOUND.db:M[yY][eE][sS])
 BUILDLINK_LDADD.db1=	-ldb
 .    elif !empty(_BLNK_LIB_FOUND.db1:M[yY][eE][sS])
@@ -73,12 +75,16 @@ BUILDLINK_TRANSFORM+=	rm:-ldb
 BUILDLINK_LIBS.db1=	${BUILDLINK_LDADD.db1}
 
 BUILDLINK_TARGETS+=	buildlink-db1-db185-h
-.    if !target(buildlink-db1-db185-h)
+.    for _inc_ in ${_DB_H_HEADERS}
+.      if !target(buildlink-db1-db185-h)
 .PHONY: buildlink-db1-db185-h
 buildlink-db1-db185-h:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${ECHO} "#include <db.h>" > ${BUILDLINK_DIR}/include/db_185.h
-.    endif
+	if ${TEST} ! -f ${BUILDLINK_DIR}/include/db_185.h; then		\
+		${LN} -fs ${_inc_} ${BUILDLINK_DIR}/include/db_185.h;	\
+	fi
+.      endif
+.    endfor
 
 .  endif # USE_BUILTIN.db1 == yes
 .endif	# CHECK_BUILTIN.db1
