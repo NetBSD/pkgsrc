@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.902 2002/12/24 18:43:10 wiz Exp $
+$NetBSD: CHANGES,v 1.903 2002/12/24 20:23:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -4243,4 +4243,6 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated pspp to 0.3.0nb1 [jmmv 2002-12-24]
 	Updated binkd to 0.9.4nb1 [jmmv 2002-12-24]
 	Updated qt3 to 3.0.6nb1 [wiz 2002-12-24]
-	Updated kde3 to 3.0.4nb2 [wiz 2002-11-01]
+	Updated kde3 to 3.0.4nb2 [wiz 2002-12-24]
+	bsd.buildlink.mk: removed (buildlink1 to buildlink2
+		conversion complete) [wiz 2002-12-24]
