@@ -1,4 +1,4 @@
-# $NetBSD: libtool-fix-la,v 1.16 2003/01/06 09:06:09 jlam Exp $
+# $NetBSD: libtool-fix-la,v 1.17 2003/01/07 07:34:08 jlam Exp $
 #
 # For *.la files, in the "relink_command" line, we make the following
 # replacements:
@@ -181,9 +181,10 @@ if $test -f $lafile; then
 		) > ${laifile}
 		@RM@ -f ${laifile}.tmp
 		$echo "==> Fixed $laifile" >> $wrapperlog
-		if @EGREP@ "${BUILDLINK_X11_DIR}|${BUILDLINK_DIR}" $laifile >/dev/null 2>&1; then
+		if $test "$libdir" != "${BUILDLINK_DIR}/.tmp/inst" && \
+		   @EGREP@ "${BUILDLINK_X11_DIR}|${BUILDLINK_DIR}" $laifile >/dev/null 2>&1; then
 			$echo "==> [buildlink2] Error: buildlink2 leakage into $laifile" >> $wrapperlog
-			$echo "==> [buildlink2] Error: buildlink2 leakage into $laifile"
+			$echo "==> [buildlink2] Error: buildlink2 leakage into $laifile" 1>&2
 			wrapper_result=1
 		fi
 	fi
