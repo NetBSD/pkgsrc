@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2004/12/19 21:25:42 wiz Exp $
+# $NetBSD: Makefile,v 1.15.2.1 2005/02/22 22:13:28 snj Exp $
 
 DISTNAME=	mailman-2.1.4
-PKGREVISION=	1
+PKGREVISION=	3
 CATEGORIES=	mail www
 MASTER_SITES=	http://www.list.org/ \
 		${MASTER_SITE_GNU:=mailman/}
@@ -44,7 +44,7 @@ PLIST_SUBST+=		MAILMAN_CGIEXT=${MAILMAN_CGIEXT:S/none//}
 PKG_GROUPS=		${MAILMAN_GROUP}
 PKG_USERS=		${MAILMAN_USER}:${MAILMAN_GROUP}::Mailman\\ user::${SH}
 
-OWN_DIRS_PERMS+=	${EXECDIR} root ${MAILMAN_GROUP} 755
+OWN_DIRS_PERMS+=	${EXECDIR} root ${MAILMAN_GROUP} 775
 OWN_DIRS_PERMS+=	${MAILMAN_DATADIR} ${MAILMAN_USER} ${MAILMAN_GROUP} 755
 MAKE_DIRS_PERMS+=	${MAILMAN_DATADIR}/archives ${MAILMAN_USER} ${MAILMAN_GROUP} 775
 MAKE_DIRS_PERMS+=	${MAILMAN_DATADIR}/archives/public ${MAILMAN_USER} ${MAILMAN_GROUP} 775
@@ -61,7 +61,10 @@ CONF_FILES+=		${EXECDIR}/Mailman/mm_cfg.py.dist ${EXECDIR}/Mailman/mm_cfg.py
 
 RCD_SCRIPTS=		mailman
 
-PYTHON_VERSIONS_ACCEPTED= 23 23pth 22 22pth 21 21pth
+INSTALL_EXTRA_TMPL+=	${FILESDIR}/INSTALL
+DEINSTALL_EXTRA_TMPL+=	${FILESDIR}/DEINSTALL
+
+PYTHON_VERSIONS_ACCEPTED= 24 24pth 23 23pth 22 22pth 21 21pth
 PYTHON_PATCH_SCRIPTS+=	Mailman/Archiver/pipermail.py
 PYTHON_PATCH_SCRIPTS+=	Mailman/Post.py
 PYTHON_PATCH_SCRIPTS+=	admin/bin/Release.py
@@ -108,7 +111,7 @@ post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA} ${WRKDIR}/mailman.conf.dist ${EGDIR}/mailman.conf
 	${CHOWN} -R root:${MAILMAN_GROUP} ${EXECDIR}
-	${CHMOD} -R g-w ${EXECDIR}
+	${CHMOD} -R g+w ${EXECDIR}
 	${CHMOD} g+s ${EXECDIR}/cgi-bin/*
 
 .include "../../lang/python/application.mk"

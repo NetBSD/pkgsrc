@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/01/14 01:46:29 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.4.8.1 2005/02/22 22:13:28 snj Exp $
 lib/mailman/Mailman/Archiver/Archiver.py
 lib/mailman/Mailman/Archiver/Archiver.pyc
 lib/mailman/Mailman/Archiver/HyperArch.py
@@ -313,6 +313,7 @@ lib/mailman/bin/mmsitepass
 lib/mailman/bin/msgfmt.py
 lib/mailman/bin/newlist
 lib/mailman/bin/paths.py
+lib/mailman/bin/paths.pyc
 lib/mailman/bin/qrunner
 lib/mailman/bin/rb-archfix
 lib/mailman/bin/remove_members
