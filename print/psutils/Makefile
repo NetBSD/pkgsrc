@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1998/04/20 11:56:32 frueauf Exp $
+# $NetBSD: Makefile,v 1.7 1998/06/10 08:02:09 agc Exp $
 # FreeBSD Id: Makefile,v 1.15 1998/01/08 18:52:13 fenner Exp
 #
 
@@ -11,7 +11,7 @@ MAINTAINER=	packages@netbsd.org
 
 MANUAL_PACKAGE_BUILD=	PAPERSIZE has to be set to letter or A4
 WRKSRC=		${WRKDIR}/psutils
-MAKE_FLAGS?=	PAPER=${PAPERSIZE} -f
+MAKE_FLAGS?=	PAPER=${PAPERSIZE}
 MAN1=		psbook.1 psselect.1 pstops.1 epsffit.1 psnup.1 psresize.1 \
 		getafm.1 fixdlsrps.1 fixfmps.1 fixmacps.1 fixpsditps.1 \
 		fixpspps.1 fixtpps.1 fixwfwps.1 fixwpps.1 fixwwps.1 \
