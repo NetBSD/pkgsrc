@@ -1,12 +1,20 @@
-$NetBSD: patch-ae,v 1.5 2000/01/18 22:31:47 tron Exp $
+$NetBSD: patch-ae,v 1.6 2000/08/30 18:42:24 jlam Exp $
 
---- makedepend.SH.BAK	Wed Nov 19 23:11:49 1997
-+++ makedepend.SH	Wed Nov 19 23:12:34 1997
-@@ -66,6 +66,7 @@
-     # to be out of date.  I don't know if OS/2 has touch, so do this:
-     case "$osname" in
-     os2) ;;
-+    netbsd) ;;
-     *) $touch $firstmakefile ;;
-     esac
- fi
+--- perl.h.orig	Sun Mar 19 00:45:33 2000
++++ perl.h
+@@ -486,6 +486,15 @@
+ #   include <sys/param.h>
+ #endif
+ 
++/* needed for IAMSUID case for 4.4BSD systems
++ * XXX there should probably be a Configure variable
++ */
++
++#ifdef I_SYS_PARAM
++#if (defined (BSD) && (BSD >= 199306))
++#   include <sys/mount.h>
++#endif /* !BSD */
++#endif /* !I_SYS_PARAM */
+ 
+ /* Use all the "standard" definitions? */
+ #if defined(STANDARD_C) && defined(I_STDLIB)
