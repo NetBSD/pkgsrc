@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/07/30 21:05:42 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2004/08/01 19:43:45 jlam Exp $
 
 DISTNAME=	cyrus-sasl-2.1.18
 PKGNAME=	${DISTNAME:S/sasl/saslauthd/}
@@ -30,6 +30,7 @@ SASLSOCKETDIR?=		${VARBASE}/run/saslauthd
 BUILD_DEFS+=		SASLSOCKETDIR
 FILES_SUBST+=		SASLSOCKETDIR=${SASLSOCKETDIR}
 CONFIGURE_ARGS+=	--with-saslauthd="${SASLSOCKETDIR}"
+CONFIGURE_ARGS+=	--with-openssl=${SSLBASE}
 
 .include "Makefile.options"
 
@@ -39,6 +40,8 @@ RCD_SCRIPTS=		saslauthd
 FILES_SUBST+=		ROOT_USER=${ROOT_USER}
 
 INSTALLATION_DIRS=	bin
+
+.include "../../security/openssl/buildlink3.mk"
 
 post-configure:
 	${LN} -sf saslauthd.h ${WRKSRC}/config.h
