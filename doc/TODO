@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.491 2003/04/23 12:49:46 uebayasi Exp $
+$NetBSD: TODO,v 1.492 2003/04/23 13:03:16 uebayasi Exp $
 
 Suggested new packages
 ======================
@@ -115,6 +115,7 @@ Suggested package updates
 	o exim-4.12 [pkg/19850]
 	o exim-4.14
 	o exmh-2.6.2
+	o fftw-3.0
 	o fltk-1.1.3
 	o foomatic-2.9.1 [jlam]
 	o fox-1.0.34
