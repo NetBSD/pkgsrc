@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3429 2003/09/17 17:22:39 jmmv Exp $
+$NetBSD: CHANGES,v 1.3430 2003/09/17 18:43:43 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3751,3 +3751,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated vera to 1.11 [hubertf 2003-09-17]
 	Updated nasm to 0.98.37 [jmmv 2003-09-17]
 	Removed nasm-devel [jmmv 2003-09-17]
+	Updated pnm2ppa to 1.12 [jmmv 2003-09-17]
