@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2004/07/24 22:45:15 recht Exp $
+# $NetBSD: Makefile,v 1.24 2004/07/28 15:22:07 schmonz Exp $
 
 DISTNAME=		dovecot-0.99.10.7
 CATEGORIES=		mail
@@ -13,6 +13,8 @@ PATCH_DIST_STRIP=	-p1
 MAINTAINER=		tom@replic8.net
 HOMEPAGE=		http://www.dovecot.org/
 COMMENT=		Secure IMAP and POP3 server
+
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=		YES
 USE_LIBTOOL=		YES
@@ -74,11 +76,13 @@ PKG_USERS=	${DOVECOT_USER}:${DOVECOT_GROUP}::Dovecot\\ IMAP/POP3\\ user
 EGDIR=		${PREFIX}/share/examples/dovecot
 CONF_FILES=	${EGDIR}/dovecot.conf.default ${PKG_SYSCONFDIR}/dovecot.conf
 
+INSTALLATION_DIRS=	libexec/dovecot sbin share/doc/dovecot share/examples/dovecot
+
 post-configure:
 	@cd ${WRKSRC};							\
-	for file in dovecot-example.conf; do				\
-		${SED} ${FILES_SUBST_SED} $$file > $$file.new;		\
-		${MV} -f $$file.new $$file;				\
+	for i in dovecot-example.conf; do				\
+		${SED} ${FILES_SUBST_SED} $$i > $$i.new;		\
+		${MV} -f $$i.new $$i;					\
 	done
 
 post-install:
