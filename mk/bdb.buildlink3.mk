@@ -1,9 +1,11 @@
-# $NetBSD: bdb.buildlink3.mk,v 1.11 2004/07/10 03:05:46 grant Exp $
+# $NetBSD: bdb.buildlink3.mk,v 1.12 2004/11/15 17:54:49 jlam Exp $
 #
 # This Makefile fragment is meant to be included by packages that
 # require a Berkeley DB implementation.  bdb.buildlink3.mk will:
 #
 #       * set BDBBASE to the base directory of the Berkeley DB files;
+#	* set BDB_LIBS to the library option needed to link against
+#	  the Berkeley DB library;
 #       * set BDB_TYPE to the Berkeley DB implementation used.
 #
 # There are two variables that can be used to tweak the selection of
@@ -20,13 +22,38 @@ BDB_BUILDLINK3_MK:=	${BDB_BUILDLINK3_MK}+
 .include "../../mk/bsd.prefs.mk"
 
 .if !empty(BDB_BUILDLINK3_MK:M+)
+
+# If we've specified a list of acceptable Berkeley DB packages and it
+# doesn't include db1, then don't set USE_DB185 to yes.  The package's
+# configure process should know how to probe for the libraries and
+# headers on its own.
+#
+.  if defined(BDB_ACCEPTED) && empty(BDB_ACCEPTED:Mdb1)
+USE_DB185?=	no
+.  else
+USE_DB185?=	yes
+.  endif
+
 BDB_DEFAULT?=	# empty
 BDB_ACCEPTED?=	${_BDB_PKGS}
 
-# This is an exhaustive list of all of the Berkeley DB implementations
-# that may be used with bdb.buildlink3.mk, in order of precedence.
+# _BDB_PKGS is an exhaustive list of all of the Berkeley DB
+# implementations that may be used with bdb.buildlink3.mk, in order
+# of precedence.
 #
-_BDB_PKGS?=	native db4 db3 db2
+.  if !empty(USE_DB185:M[yY][eE][sS])
+CHECK_BUILTIN.db1:=	yes
+.    include "../../mk/db1.builtin.mk"
+CHECK_BUILTIN.db1:=	no
+.    if defined(IS_BUILTIN.db1) && !empty(IS_BUILTIN.db1:M[yY][eE][sS])
+# Prefer the builtin db1 support if we requested it
+_BDB_PKGS?=	db1 db4 db3 db2
+.    else
+_BDB_PKGS?=	db4 db3 db2 db1
+.    endif
+.  else
+_BDB_PKGS?=	db4 db3 db2
+.  endif
 
 _BDB_PKGBASE.db2=	db
 _BDB_PKGSRCDIR.db2=	../../databases/db
@@ -41,7 +68,7 @@ _BDB_ACCEPTED=	${BDB_ACCEPTED}
 # Mark the acceptable Berkeley DB packages and check which, if any, are
 # already installed.
 #
-.  for _bdb_ in ${_BDB_ACCEPTED:Nnative}
+.  for _bdb_ in ${_BDB_ACCEPTED}
 _BDB_OK.${_bdb_}=	yes
 .    if !defined(_BDB_INSTALLED.${_bdb_})
 _BDB_INSTALLED.${_bdb_}!=	\
@@ -54,40 +81,12 @@ MAKEFLAGS+=	_BDB_INSTALLED.${_bdb_}=${_BDB_INSTALLED.${_bdb_}}
 .    endif
 .  endfor
 
-USE_DB185?=		yes
-_BDB_CPPFLAGS?=		# empty
-_BDB_LIBS?=		# empty
-_BDB_LDFLAGS?=		# empty
-_BDB_OK.native?=	no
-_BDB_INSTALLED.native?=	no
-.  if exists(/usr/include/db.h)
-_BDB_OK.native!=	\
-	if ${GREP} -q "^\#define.*HASHVERSION.*2$$" /usr/include/db.h; then \
-		${ECHO} "yes";						\
-	else								\
-		${ECHO} "no";						\
-	fi
-.    if !empty(_BDB_OK.native:M[yY][eE][sS])
-_BDB_INSTALLED.native=	yes
-_BDB_INCDIRS=		include
-_BDB_TRANSFORM=		# empty
-_BDB_LIBS+=		# empty
-.    endif
-.  endif
-.  if !empty(_BDB_OK.native:M[nN][oO]) && exists(/usr/include/db1/db.h)
-_BDB_OK.native=		yes
-_BDB_INSTALLED.native=	yes
-_BDB_INCDIRS=		include/db1
-_BDB_TRANSFORM=		l:db:db1
-_BDB_LIBS+=		-ldb1
-_BDB_CPPFLAGS+=		-I/usr/${_BDB_INCDIRS}
-.  endif
-.  if !empty(USE_DB185:M[nN][oO])
-_BDB_OK.native=		no
-_BDB_INSTALLED.native=	no
-_BDB_INCDIRS=		# empty
-_BDB_TRANSFORM=		# empty
-_BDB_LIBS+=		# empty
+.  if defined(USE_BUILTIN.db1)
+_BDB_OK.db1=		${USE_BUILTIN.db1}
+_BDB_INSTALLED.db1=	${USE_BUILTIN.db1}
+.  else
+_BDB_OK.db1=		no
+_BDB_INSTALLED.db1=	no
 .  endif
 
 .  if !defined(_BDB_TYPE)
@@ -110,7 +109,7 @@ _BDB_TYPE?=	${_bdb_}
 #
 # ...otherwise, just use the first accepted Berkeley DB package.
 #
-.    for _bdb_ in ${_BDB_ACCEPTED:Nnative}
+.    for _bdb_ in ${_BDB_ACCEPTED}
 _BDB_TYPE?=	${_bdb_}
 .    endfor
 _BDB_TYPE?=	none
@@ -121,27 +120,18 @@ BDB_TYPE=	${_BDB_TYPE}
 BUILD_DEFS+=	BDB_TYPE
 BUILD_DEFS+=	BDBBASE
 
+# Define some public variables to refer to package-specific variables.
+BDBBASE=	${BUILDLINK_PREFIX.${_BDB_PKGBASE.${BDB_TYPE}}}
+BDB_LIBS=	${BUILDLINK_LDADD.${_BDB_PKGBASE.${BDB_TYPE}}}
+
 .endif	# BDB_BUILDLINK3_MK
 
 .if ${BDB_TYPE} == "none"
 PKG_FAIL_REASON=	"No acceptable Berkeley DB implementation found."
+.elif ${BDB_TYPE} == "db1"
+BUILDLINK_PACKAGES:=		${BUILDLINK_PACKAGES:Ndb1}
+BUILDLINK_PACKAGES+=		db1
+BUILDLINK_BUILTIN_MK.db1=	../../mk/db1.builtin.mk
 .else
-.  if ${BDB_TYPE} == "native"
-IS_BUILTIN.db-native=		yes
-USE_BUILTIN.db-native=		yes
-BUILDLINK_PACKAGES:=		${BUILDLINK_PACKAGES:Ndb-native}
-BUILDLINK_PACKAGES+=		db-native
-BUILDLINK_INCDIRS.db-native?=	${_BDB_INCDIRS}
-BUILDLINK_TRANSFORM?=		${_BDB_TRANSFORM}
-BDBBASE=	${BUILDLINK_PREFIX.db-native}
-BUILDLINK_CPPFLAGS.bdb+=	${_BDB_CPPFLAGS}
-BUILDLINK_LDFLAGS.bdb+=		${_BDB_LDFLAGS}
-BUILDLINK_LIBS.bdb+=		${_BDB_LIBS}
-.  else
-BDBBASE=	${BUILDLINK_PREFIX.${_BDB_PKGBASE.${BDB_TYPE}}}
-.    include "${_BDB_PKGSRCDIR.${BDB_TYPE}}/buildlink3.mk"
-BUILDLINK_CPPFLAGS.bdb+=	${BUILDLINK_CPPFLAGS.${BDB_TYPE}}
-BUILDLINK_LDFLAGS.bdb+=		${BUILDLINK_LDFLAGS.${BDB_TYPE}}
-BUILDLINK_LIBS.bdb+=		${BUILDLINK_LIBS.${BDB_TYPE}}
-.  endif
+.  include "${_BDB_PKGSRCDIR.${BDB_TYPE}}/buildlink3.mk"
 .endif
