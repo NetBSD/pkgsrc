@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2000/11/29 01:50:59 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2000/11/30 00:15:51 wiz Exp $
 # FreeBSD Id: Makefile,v 1.6 1998/12/28 01:02:05 vanilla Exp
 #
 
@@ -10,10 +10,11 @@ MAINTAINER=		rxg@ms25.url.com.tw
 HOMEPAGE=		http://www.netpedia.net/hosting/gqview/mpeg-index.html
 
 DEPENDS+=		gdk-pixbuf>=0.8.0nb1:../../graphics/gdk-pixbuf
-DEPENDS+=		gettext>=0.10.35nb1:../../devel/gettext
+BUILD_DEPENDS+=		msgfmt:../../devel/gettext
 DEPENDS+=		gtk+-1.2.*:../../x11/gtk
 DEPENDS+=		mpg123-0.59r:../../audio/mpg123
 
+USE_LIBINTL=		# defined
 USE_X11BASE=		# defined
 
 GNU_CONFIGURE=		# defined
