@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.615 2002/11/27 08:18:21 sjg Exp $
+$NetBSD: CHANGES,v 1.616 2002/11/27 10:18:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3357,6 +3357,7 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated xscrabble to 1.0nb1 [wiz 2002-10-21]
 	Updated cpuflags to 0.36 [abs 2002-10-21]
 	Updated verilog-current to 20021019 [dmcmahill 2002-10-21]
+	Updated pth to 1.4.1nb4 [skrll 2002-10-21]
 	Updated gcc-ssp to 2.95.3.13 [kent 2002-10-22]
 	Updated guspatches to 1.0nb1 [wiz 2002-10-22]
 	Updated findutils to 4.1nb1 [wiz 2002-10-22]
@@ -3374,6 +3375,7 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated zope25-ZWiki to 0.11.0 [drochner 2002-10-23]
 	Added zope25-BTreeFolder-0.2 [drochner 2002-10-23]
 	Added zope25-DocumentLibrary-1.0rc1 [drochner 2002-10-23]
+	Updated pth to 1.4.1nb5 [drochner 2002-10-23]
 	Updated doxygen to 1.2.18 [martti 2002-10-24]
 	Added net-snmp-5.0.6 [jlam 2002-10-24]
 	Removed net-snmp-current [jlam 2002-10-24]
@@ -3736,3 +3738,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated rioutil to 1.2.1 [schmonz 2002-11-26]
 	Added rmail-mime-1.13.0 [jschauma 2002-11-26]
 	Updated bmake to 3.1.14 [sjg 2002-11-26]
+	Updated pth to 1.4.1nb6 [skrll 2002-11-26]
