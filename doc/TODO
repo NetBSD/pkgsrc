@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2640 2004/12/03 13:42:20 wiz Exp $
+$NetBSD: TODO,v 1.2641 2004/12/03 13:43:53 adam Exp $
 
 Suggested new packages
 ======================
@@ -568,7 +568,6 @@ Suggested package updates
 	o icsi-finger-1.0.29
 	o idesk-0.5.6
 	o ijs-0.35
-	o imlib-1.9.15
 	o inform-6.30 [pkg/24631]
 	o inform-6.30.2
 	o inkscape-0.40
