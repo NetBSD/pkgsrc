@@ -1,8 +1,9 @@
-$NetBSD: patch-ae,v 1.1.1.1 2001/03/14 12:10:22 agc Exp $
---- lookup.c.orig	Mon Oct 26 23:24:20 1998
-+++ lookup.c	Mon Oct 26 23:25:41 1998
-@@ -212,22 +212,22 @@
- 	    if (dp->word == (char *) -1)
+$NetBSD: patch-ae,v 1.2 2004/12/01 12:18:21 markd Exp $
+
+--- lookup.c.orig	2001-07-26 09:51:46.000000000 +1200
++++ lookup.c
+@@ -243,22 +243,22 @@ int linit ()
+ 	    if (dp->word == (unsigned char *) -1)
  		dp->word = NULL;
  	    else
 -		dp->word = &hashstrings [ (int)(dp->word) ];
