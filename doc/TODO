@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2063 2004/08/18 19:05:20 schmonz Exp $
+$NetBSD: TODO,v 1.2064 2004/08/19 03:35:02 schmonz Exp $
 
 Suggested new packages
 ======================
@@ -369,7 +369,6 @@ Suggested package updates
 	o readline-5.0
 	o realplayer-10.0
 	o rep-gtk-0.17
-	o rioutil-1.4.6
 	o rox-1.2.2
 	o rox-session-0.1.23
 	o rrdtool-1.0.48
