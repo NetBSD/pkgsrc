@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.5 2002/09/23 10:14:40 jlam Exp $
-
-SHA1 (Pacman-0.3-CVS-00-11-17.tar.gz) = 0d30f2ae3410d2df7b3fecb5cce732ba3022041d
-Size (Pacman-0.3-CVS-00-11-17.tar.gz) = 62257 bytes
-SHA1 (patch-aa) = 1a820d58f80cfa6a474e4480286d3f4cbf0ee56d
-SHA1 (patch-ab) = 8d20c41dfb1a010586a3ebfb3ab4e7f675b93400
