@@ -1,0 +1,15 @@
+$NetBSD: patch-ak,v 1.1.1.1 2001/01/13 16:38:23 skrll Exp $
+
+--- util/Makefile.in.orig	Sat Sep 30 18:37:28 2000
++++ util/Makefile.in
+@@ -392,8 +392,8 @@
+ 
+ 
+ install::
+-	-mkdir -p $(PREFIX)/$(MODULE)
+-	$(CP) $(UTIL_CPP_PUBHEADERS) $(C_FILES) $(PREFIX)/$(MODULE)
++	-mkdir -p $(PREFIX)/include/$(MODULE)
++	$(CP) $(UTIL_CPP_PUBHEADERS) $(C_FILES) $(PREFIX)/include/$(MODULE)
+ 	cd Platforms ; $(MAKE) $@ ; cd ..
+ 	cd Transcoders/$(TRANSCODERMODULE) ; $(MAKE) $@ ; cd ../..
+ 	cd MsgLoaders/$(MESSAGELOADERMODULE) ; $(MAKE) $@ ; cd ../..
