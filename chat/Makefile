@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2002/03/18 06:46:08 zuntum Exp $
+# $NetBSD: Makefile,v 1.35 2002/05/03 15:50:31 zuntum Exp $
 #
 
 COMMENT=	communication programs
@@ -11,6 +11,7 @@ SUBDIR+=	centericq
 SUBDIR+=	dircproxy
 SUBDIR+=	ekg
 SUBDIR+=	epic4
+SUBDIR+=	epic4-doc
 SUBDIR+=	everybuddy
 SUBDIR+=	everybuddy-gnome
 SUBDIR+=	fugu
