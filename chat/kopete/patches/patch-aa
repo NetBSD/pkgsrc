@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/07/19 18:50:25 jmmv Exp $
+
+--- kopete/plugins/importer/Makefile.in.orig	2003-04-28 13:30:27.000000000 +0200
++++ kopete/plugins/importer/Makefile.in
+@@ -268,8 +268,8 @@ kde_module_LTLIBRARIES = kopete_importer
+ #>+ 1
+ kopete_importer_la_SOURCES=importerplugin.cpp importer.cpp imp.cpp  importeruibase.cpp
+ #>- kopete_importer_la_METASOURCES = AUTO
+-kopete_importer_la_LDFLAGS = -module
+-kopete_importer_la_LIBADD = ../../libkopete/libkopete.la ../../protocols/msn/kopete_msn.la ../../protocols/icq_new/kopete_icq.la -lkio
++kopete_importer_la_LDFLAGS = -module $(KDE_PLUGIN)
++kopete_importer_la_LIBADD = ../../libkopete/libkopete.la -lkopete_msn -lkopete_icq -lkio
+ 
+ data_DATA = importer.plugin
+ subdir = kopete/plugins/importer
