@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/04/06 13:44:53 jmmv Exp $
+bin/dvdnav-config
+include/dvdnav/dvd_reader.h
+include/dvdnav/dvd_types.h
+include/dvdnav/dvd_udf.h
+include/dvdnav/dvdnav.h
+include/dvdnav/dvdnav_events.h
+include/dvdnav/ifo_read.h
+include/dvdnav/ifo_types.h
+include/dvdnav/nav_print.h
+include/dvdnav/nav_read.h
+include/dvdnav/nav_types.h
+lib/libdvdnav.a
+lib/libdvdnav.la
+lib/libdvdnav.so
+lib/libdvdnav.so.3
+lib/libdvdnav.so.3.0
+@dirrm include/dvdnav
