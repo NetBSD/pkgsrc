@@ -1,0 +1,11 @@
+$NetBSD: patch-ad,v 1.1 2002/03/23 05:59:06 itojun Exp $
+
+--- port/darwin/include/port_before.h-	Fri Mar 22 21:38:26 2002
++++ port/darwin/include/port_before.h	Fri Mar 22 21:38:55 2002
+@@ -13,3 +13,6 @@
+ #else
+ #define ISC_FORMAT_PRINTF(fmt, args)
+ #endif
++
++#define HAS_INET6_STRUCTS
++#define NEED_IN6ADDR_ANY
