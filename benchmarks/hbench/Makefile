@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1998/09/23 16:56:00 agc Exp $
+# $NetBSD: Makefile,v 1.4 1998/11/12 16:15:29 agc Exp $
 
 DISTNAME=		hbench-OS-1.0
 PKGNAME=		hbench-1.0
@@ -13,8 +13,8 @@ DEPENDS+=		gnuplot-3.5:../../graphics/gnuplot
 ALL_TARGET=		build
 USE_PERL5=		yes
 WRKSRC=			${WRKDIR}/hbench-OS
-NETBSDVER!=		echo `uname -s|tr '[A-Z]' '[a-z]'``uname -r`-`uname -m`
-ARCH!=			echo `uname -m`
+NETBSDVER!=		${ECHO} `uname -s|tr '[A-Z]' '[a-z]'``uname -r`-`uname -m`
+ARCH!=			${ECHO} `uname -m`
 
 PLIST_SRC=		${WRKDIR}/PLIST-src
 
