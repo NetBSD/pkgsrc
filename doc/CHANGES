@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4748 2004/02/09 12:29:40 markd Exp $
+$NetBSD: CHANGES,v 1.4749 2004/02/09 12:40:20 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -726,3 +726,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated lcms to 1.12 [seb 2004-02-09]
 	Updated docbook-xml to 4.2nb6 [jmmv 2004-02-09]
 	Updated kdirstat to 2.4.0 [markd 2004-02-09]
+	Updated conglomerate to 0.7.11 [jmmv 2004-02-09]
