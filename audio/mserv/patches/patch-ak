@@ -1,4 +1,4 @@
-$NetBSD: patch-ak,v 1.2 2002/10/03 15:46:58 abs Exp $
+$NetBSD: patch-ak,v 1.3 2003/04/17 15:09:19 abs Exp $
 
 --- mserv/mserv.c.orig	Sat Jul 15 18:01:15 2000
 +++ mserv/mserv.c
@@ -22,7 +22,19 @@ $NetBSD: patch-ak,v 1.2 2002/10/03 15:46:58 abs Exp $
  	    mserv_strtoprintable(author);
  	    mserv_strtoprintable(name);
  	    mserv_strtoprintable(genres);
-@@ -3370,7 +3370,13 @@ int mserv_setmixer(t_client *cl, int wha
+@@ -3328,8 +3328,10 @@ int mserv_setmixer(t_client *cl, int wha
+     return -1;
+   }
+   curval = curval & 0xff;
+-  if (!*line)
++  if (!*line) {
++    close(mixer_fd);
+     return curval;
++  }
+   if (*line == '+' || *line == '-') {
+     type = *line == '+' ? 1 : -1;
+     param = 1;
+@@ -3370,7 +3372,13 @@ int mserv_setmixer(t_client *cl, int wha
  	mserv_response(cl, "IOCTLWR", NULL);
  	return -1;
        }
