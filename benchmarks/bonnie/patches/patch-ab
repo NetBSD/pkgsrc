@@ -11,6 +11,6 @@
 +MANDIR=${PREFIX}/man
  
 -Bonnie:
-+MANZ=	1
++MANINSTALL=	maninstall catinstall
 +
 +.include <bsd.prog.mk>
