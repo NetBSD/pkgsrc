@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2001/06/29 08:53:17 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2001/10/03 22:36:41 jlam Exp $
 #
 
 DISTNAME=		wxGTK-2.2.7
@@ -10,8 +10,6 @@ HOMEPAGE=		http://www.freiburg.linux.de/~wxxt/
 COMMENT=		GTK-based implementation of the wxWindows GUI library
 
 USE_BUILDLINK_ONLY=	# defined
-REPLACE_BUILDLINK=	wxgtk-config
-
 USE_GMAKE=		# defined
 USE_LIBTOOL=		# defined
 GNU_CONFIGURE=		# defined
