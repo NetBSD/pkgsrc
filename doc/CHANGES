@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8898 2005/01/24 16:52:03 xtraeme Exp $
+$NetBSD: CHANGES,v 1.8899 2005/01/24 17:20:43 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -536,3 +536,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated kannel to 1.4.0 [wulf 2005-01-24]
 	Updated teTeX-bin to 2.0.2nb5 [kei 2005-01-24]
 	Updated zsnes to 1.42 [xtraeme 2005-01-24]
+	Added radeontool-1.5 [jmcneill 2005-01-24]
