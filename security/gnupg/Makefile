@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2004/02/08 01:00:13 kleink Exp $
+# $NetBSD: Makefile,v 1.61 2004/03/01 19:12:25 wiz Exp $
 
 DISTNAME=	gnupg-1.2.4
 PKGREVISION=	1
@@ -33,12 +33,18 @@ INFO_FILES=	gpg.info gpgv.info
 
 .include "../../mk/bsd.prefs.mk"
 
-BUILD_DEFS+=	USE_I586 USE_IDEA USE_OPENLDAP
+BUILD_DEFS+=	USE_I586 USE_IDEA USE_OPENLDAP M68060
 
 .if defined(USE_I586) && ${USE_I586} == YES
 # use assembler routines optimized for i586
 ONLY_FOR_PLATFORM=	*-*-i386
 MACHINE_GNU_ARCH=	i586
+.endif
+
+.if defined(M68060) && ${M68060} == YES 
+# be more efficient on M68060 machines
+CONFIGURE_ENV+=                M68060=${M68060}
+CFLAGS+=                       -m68060
 .endif
 
 .if defined(USE_IDEA) && ${USE_IDEA} == YES
