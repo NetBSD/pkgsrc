@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2001/06/30 23:13:25 taca Exp $
+$NetBSD: distinfo,v 1.2 2001/12/30 16:49:40 taca Exp $
 
 SHA1 (ruby/ruby-zlib-0.4.0.tar.gz) = 14f17f97d5a8714f1d1d9aa8c0687f2c27225356
 Size (ruby/ruby-zlib-0.4.0.tar.gz) = 21228 bytes
+SHA1 (patch-aa) = 5be2e3e5894624e2c7f6a20501a0d199cee90bc1
