@@ -1,13 +1,10 @@
-$NetBSD: patch-ab,v 1.4 1999/11/18 14:54:51 agc Exp $
-
---- nls/Makefile.orig	Thu Nov 18 14:41:07 1999
-+++ nls/Makefile	Thu Nov 18 14:46:27 1999
-@@ -3,7 +3,7 @@
- #
- LANGFILE=LANGS
- CATNAME=elm2.4me+.cat
--GENCAT=	nls/gencat
-+GENCAT=	gencat
+$NetBSD: patch-ab,v 1.5 2001/07/18 20:04:13 martin Exp $
+--- nls/LANGS.orig	Thu Apr 20 05:38:33 1995
++++ nls/LANGS	Wed Jul 18 06:58:32 2001
+@@ -1,5 +1,3 @@
+ # LANGS file
  
- HDIR=	../hdrs
- SDIR=	C/C/C
+-C/C/C			/usr/local/nls/msg/C
+-english/us/ascii	/usr/local/nls/msg/english
+-french/canada/8859	/usr/local/nls/msg/french
++C/C/C			__PREFIX/share/nls/C

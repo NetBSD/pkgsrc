@@ -1,40 +1,28 @@
-# $NetBSD: Makefile,v 1.15 2001/02/17 18:24:44 wiz Exp $
-# FreeBSD: Makefile,v 1.42 1997/12/24 01:21:07 alex Exp
+# $NetBSD: Makefile,v 1.16 2001/07/18 20:04:11 martin Exp $
 #
 
-DISTNAME=		elm-2.4ME+78
-PKGNAME=		elm-2.4me78
+DISTNAME=		elm2.5.5
+PKGNAME=		elm-2.5.5
 CATEGORIES=		mail
-MASTER_SITES=		ftp://ftp.ozone.fmi.fi/KEH/ \
-			ftp://ftp.funet.fi/pub/unix/mail/elm/elm-2.4ME+/ \
-			ftp://ftp.ibp.fr/pub/unix/mail/elm-me/
+MASTER_SITES=		ftp://ftp.virginia.edu/pub/elm/
 
 MAINTAINER=		packages@netbsd.org
-HOMEPAGE=		http://www.myxa.com/old/elm.html
-COMMENT=		ELM Mail User Agent
+HOMEPAGE=		http://www.instinct.org/elm/
+COMMENT=		ELM Mail User Agent (without ME extensions)
 
-CONFLICTS=		elm-*ME+*
+CONFLICTS=		elm-*
 
-HAS_CONFIGURE=		Yes
+HAS_CONFIGURE=		YES
 CONFIGURE_SCRIPT=	./Configure
-CONFIGURE_ENV=		PREFIX="${PREFIX}" RUN_AS_BATCH=yes
-CONFIGURE_ARGS=		-S
-
-WRKSRC=			${WRKDIR}/elm2.4.ME+.78
+CONFIGURE_ARGS+=	-d
 
 pre-configure:
-	${CP} ${FILESDIR}/config.sh ${WRKSRC}/
+	${CP} ${FILESDIR}/config.sh ${WRKSRC}/config.sh.orig
+	${SED} -e 's:PREFIX:'${PREFIX}':g' \
+		${WRKSRC}/config.sh.orig > ${WRKSRC}/config.sh.tmp
+	${SED} -e 's:LOCALBASE:'${LOCALBASE}':g' \
+		${WRKSRC}/config.sh.tmp > ${WRKSRC}/config.sh
 	${MV} ${WRKSRC}/nls/LANGS ${WRKSRC}/nls/LANGS.tmpl
-	${SED} -e 's:__PREFIX:'${PREFIX}':g'< ${WRKSRC}/nls/LANGS.tmpl > ${WRKSRC}/nls/LANGS
-
-post-install:
-	cd ${WRKSRC}/nls; ${MAKE} install
-	if [ -f ${PREFIX}/lib/elm.mimetypes ] ; then \
-		${INSTALL_DATA} \
-			${FILESDIR}/elm.mimetypes ${PREFIX}/lib/elm.mimetypes-dist; \
-	else \
-		${INSTALL_DATA} \
-			${FILESDIR}/elm.mimetypes ${PREFIX}/lib; \
-	fi
+	${SED} -e 's:__PREFIX:'${PREFIX}':g' < ${WRKSRC}/nls/LANGS.tmpl > ${WRKSRC}/nls/LANGS
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,13 +1,24 @@
-$NetBSD: patch-ac,v 1.4 2000/06/04 16:28:23 jdolecek Exp $
-
---- Configure.orig	Sun Jun  4 17:21:26 2000
-+++ Configure	Sun Jun  4 17:22:17 2000
-@@ -15,7 +15,7 @@
- PATH=".:$PATH:/bin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/ucb:/usr/local:/usr/lbin:/etc:/usr/new:/usr/new/bin:/usr/nbin"
- export PATH || (echo "OOPS, this isn't sh.  Desperation time.  I will feed myself to sh."; sh $0; kill $$)
+$NetBSD: patch-ac,v 1.5 2001/07/18 20:04:13 martin Exp $
+--- nls/Makefile.orig	Mon Jul 16 00:30:02 2001
++++ nls/Makefile	Wed Jul 18 06:56:10 2001
+@@ -1,6 +1,6 @@
+ LANGFILE=LANGS
+ CATNAME=elm2.5.cat
+-GENCAT=	gencat/gencat
++GENCAT=	./gencat/gencat
  
--if test ! -t 0; then
-+if test "X$RUN_AS_BATCH" = "X" -a ! -t 0; then
-     echo "Say 'sh Configure', not 'sh <Configure'"
-     exit 1
- fi
+ HDIR=	../hdrs
+ SDIR=	C/C/C
+@@ -35,8 +35,11 @@
+ # same basename, so wait until install to put them somewhere.
+ all:
+ 
+-install:
++install: $(GENCAT)
+ 	./Install $(LANGFILE) $(GENCAT) $(CATNAME)
++
++$(GENCAT):
++	cd gencat && $(MAKE) $(MFLAGS) $(MJ)
+ 
+ $(HFILES): $(MFILES)
+ 	gencat/gencat $(MSGCAT) "$(SDIR)/`basename $@ .h`".m -h $@

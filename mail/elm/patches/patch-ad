@@ -1,22 +1,19 @@
-$NetBSD: patch-ad,v 1.5 2000/06/04 16:28:23 jdolecek Exp $
-
---- src/pgp.c.orig	Wed May 24 16:48:24 2000
-+++ src/pgp.c	Sun Jun  4 17:59:58 2000
-@@ -145,7 +145,7 @@
- 		char *path;
- 	    case pgp2:	
- 		
--		execl(pgp2_path, 
-+		execlp(pgp2_path, 
- 		      pgp2_path,"+verbose=0", "+language=en", "-kv", c, 
- 		      (char *)0);
- 		tmp = errno;
-@@ -160,7 +160,7 @@
- 		perror(path);
- 		break;
- 	    case gpg:
--		execl(gpg_path, 
-+		execlp(gpg_path, 
- 		      gpg_path,"--list-public-keys",c,(char *)0);
- 		tmp = errno;
- 		perror(path);
+$NetBSD: patch-ad,v 1.6 2001/07/18 20:04:13 martin Exp $
+--- Make.defs.SH.orig	Mon Jul 16 01:59:07 2001
++++ Make.defs.SH	Mon Jul 16 02:02:02 2001
+@@ -113,6 +113,7 @@
+ RM		= $rm
+ TEST		= $test
+ TOUCH		= $touch
++MKDIR		= mkdir
+ 
+ DESTBIN		= $installbin
+ DESTLIB		= $installlib
+@@ -143,6 +144,7 @@
+ 	$(RM) -f $@.old ; \
+ 	$(TEST) ! -f $@ || $(MV) $@ $@.old ; \
+ 	$(RM) -f $@.old ; \
++	$(MKDIR) -p `dirname $@` ; \
+ 	$(CP) $? $@ ; \
+ 	$(TEST) $(MAILERMODE) -lt 999 || $(CHGRP) $(MAILGRP) $@ ; \
+ 	$(CHMOD) $(MAILERMODE) $@
