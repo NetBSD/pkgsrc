@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/10/22 07:35:39 rh Exp $
+# $NetBSD: Makefile,v 1.6 2000/10/31 13:35:46 wennmach Exp $
 #
 
 DISTNAME=		oaf-0.6.0
@@ -10,6 +10,7 @@ HOMEPAGE=		http://www.gnome.org/
 
 DEPENDS+=		gnome-libs>=1.2.3:../../x11/gnome-libs
 DEPENDS+=		libxml>=1.8.10:../../textproc/libxml
+DEPENDS+=		popt-*:../../devel/popt
 
 GNU_CONFIGURE=		YES
 USE_X11BASE=		YES
