@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2004/04/16 14:30:45 recht Exp $
+@comment $NetBSD: PLIST,v 1.14 2004/08/12 11:53:43 adam Exp $
 qt3/bin/assistant
 qt3/bin/designer
 qt3/bin/linguist
@@ -97,6 +97,8 @@ qt3/mkspecs/macx-mwerks/qplatformdefs.h
 qt3/mkspecs/macx-pbuilder/Info.plist.app
 qt3/mkspecs/macx-pbuilder/qmake.conf
 qt3/mkspecs/macx-pbuilder/qplatformdefs.h
+qt3/mkspecs/macx-xlc/qmake.conf
+qt3/mkspecs/macx-xlc/qplatformdefs.h
 qt3/mkspecs/netbsd-g++/qmake.conf
 qt3/mkspecs/netbsd-g++/qplatformdefs.h
 qt3/mkspecs/openbsd-g++/qmake.conf
