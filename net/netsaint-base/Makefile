@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/01/16 15:39:42 rh Exp $
+# $NetBSD: Makefile,v 1.2 2001/01/16 16:23:07 rh Exp $
 #
 
 DISTNAME=	netsaint-0.0.6
@@ -11,18 +11,7 @@ HOMEPAGE=	http://www.netsaint.org/
 
 DEPENDS+=	gd>1.8.1:../../graphics/gd
 
-NETSAINT_USER?=	netsaint
-NETSAINT_GROUP?=${NETSAINT_USER}
-
-USE_X11=	YES
-GNU_CONFIGURE=	YES
-CONFIGURE_ARGS+=--localstatedir=/var
-CONFIGURE_ARGS+=--datadir=${PREFIX}/share/netsaint
-CONFIGURE_ARGS+=--sysconfdir=${PREFIX}/etc/netsaint
-CONFIGURE_ARGS+=--libexecdir=${PREFIX}/libexec/netsaint
-CONFIGURE_ARGS+=--with-lockfile=/var/run/netsaint/netsaint.lock
-CONFIGURE_ARGS+=--with-netsaint-user=${NETSAINT_USER}
-CONFIGURE_ARGS+=--with-netsaint-grp=${NETSAINT_GROUP}
+.include "Makefile.common"
 
 MESSAGE_FILE=	${WRKDIR}/MESSAGE
 
