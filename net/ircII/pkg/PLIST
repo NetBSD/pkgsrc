@@ -1,13 +1,11 @@
-@comment $NetBSD: PLIST,v 1.2 1997/11/09 22:12:45 hubertf Exp $
-bin/irc-2.9_roof
+@comment $NetBSD: PLIST,v 1.3 1997/11/27 09:46:40 explorer Exp $
+bin/irc-2.9beta2
 @exec 	ln -f %B/%f %B/irc
 @unexec	rm -f %B/irc
 bin/ircbug
 bin/ircio
 bin/ircflush
 bin/wserv
-man/man1/ircII.1.gz
-man/man1/ircbug.1.gz
 lib/irc/translation/ASCII
 lib/irc/translation/CP437
 lib/irc/translation/CP850
@@ -27,10 +25,13 @@ lib/irc/translation/MACINTOSH
 lib/irc/translation/NEXT
 lib/irc/translation/NORWEGIAN_1
 lib/irc/translation/NORWEGIAN_2
+lib/irc/translation/POLISH
+lib/irc/translation/POLISH_NOPL
 lib/irc/translation/PORTUGUESE
 lib/irc/translation/PORTUGUESE_COM
 lib/irc/translation/RUSSIAN
 lib/irc/translation/RUSSIAN_ALT
+lib/irc/translation/RUSSIAN_WIN
 lib/irc/translation/SPANISH
 lib/irc/translation/SWEDISH
 lib/irc/translation/SWEDISH_NAMES
@@ -39,6 +40,7 @@ lib/irc/translation/SWISS
 lib/irc/translation/UNITED_KINGDOM
 lib/irc/translation/UNITED_KINGDOM_COM
 lib/irc/script/2.8script
+lib/irc/script/2.9script
 lib/irc/script/action
 lib/irc/script/alias
 lib/irc/script/autoop
@@ -51,6 +53,7 @@ lib/irc/script/commander
 lib/irc/script/compl.mods
 lib/irc/script/complete
 lib/irc/script/cursor
+lib/irc/script/dccchan
 lib/irc/script/deutsch
 lib/irc/script/disc
 lib/irc/script/dmsg
@@ -63,6 +66,8 @@ lib/irc/script/flood
 lib/irc/script/fnet
 lib/irc/script/functions
 lib/irc/script/global
+lib/irc/script/help
+lib/irc/script/log
 lib/irc/script/history
 lib/irc/script/history-match
 lib/irc/script/imap
@@ -73,7 +78,6 @@ lib/irc/script/kickmenu
 lib/irc/script/killpath
 lib/irc/script/kpstat
 lib/irc/script/list
-lib/irc/script/log
 lib/irc/script/lynx_ircrc
 lib/irc/script/meta1
 lib/irc/script/meta2
@@ -152,6 +156,7 @@ lib/irc/help/info
 lib/irc/help/input
 lib/irc/help/intro
 lib/irc/help/invite
+lib/irc/help/ison
 lib/irc/help/join
 lib/irc/help/kick
 lib/irc/help/kill
@@ -189,8 +194,10 @@ lib/irc/help/say
 lib/irc/help/send
 lib/irc/help/sendline
 lib/irc/help/server
+lib/irc/help/servlist
 lib/irc/help/signoff
 lib/irc/help/sleep
+lib/irc/help/squery
 lib/irc/help/squit
 lib/irc/help/stats
 lib/irc/help/summon
@@ -280,9 +287,9 @@ lib/irc/help/dcc/rename
 lib/irc/help/dcc/send
 lib/irc/help/dcc/talk
 lib/irc/help/dcc/tmsg
+lib/irc/help/load/2.9script
 lib/irc/help/load/action
 lib/irc/help/load/alias
-lib/irc/help/load/local
 lib/irc/help/load/autoop
 lib/irc/help/load/basical
 lib/irc/help/load/bigcheese
@@ -291,6 +298,7 @@ lib/irc/help/load/channel
 lib/irc/help/load/columns
 lib/irc/help/load/commander
 lib/irc/help/load/cursor
+lib/irc/help/load/dccchan
 lib/irc/help/load/deutsch
 lib/irc/help/load/disc
 lib/irc/help/load/edit
@@ -302,18 +310,20 @@ lib/irc/help/load/finger.who
 lib/irc/help/load/flood
 lib/irc/help/load/fnet
 lib/irc/help/load/functions
+lib/irc/help/load/help
 lib/irc/help/load/history
 lib/irc/help/load/irciihelp
+lib/irc/help/load/msg
 lib/irc/help/load/ircprimer
+lib/irc/help/load/kpstat
 lib/irc/help/load/kickmenu
 lib/irc/help/load/killpath
-lib/irc/help/load/kpstat
 lib/irc/help/load/list
 lib/irc/help/load/load
+lib/irc/help/load/local
 lib/irc/help/load/lynx_ircrc
 lib/irc/help/load/meta1
 lib/irc/help/load/meta2
-lib/irc/help/load/msg
 lib/irc/help/load/mudlike
 lib/irc/help/load/nemesis
 lib/irc/help/load/netsplit
@@ -336,8 +346,8 @@ lib/irc/help/load/traces
 lib/irc/help/load/troy
 lib/irc/help/load/uhnotify
 lib/irc/help/load/version
-lib/irc/help/load/whowas
 lib/irc/help/load/wallopstat
+lib/irc/help/load/whowas
 lib/irc/help/load/window
 lib/irc/help/note/antiwall
 lib/irc/help/note/count
@@ -432,12 +442,14 @@ lib/irc/help/set/clock_alarm
 lib/irc/help/set/cmdchars
 lib/irc/help/set/command_mode
 lib/irc/help/set/continued_line
-lib/irc/help/set/dcc_block_size
+lib/irc/help/set/ctcp_reply_backlog_seconds
+lib/irc/help/set/ctcp_reply_flood_size
 lib/irc/help/set/debug
+lib/irc/help/set/ctcp_reply_ignore_seconds
+lib/irc/help/set/dcc_block_size
 lib/irc/help/set/display
 lib/irc/help/set/eight_bit_characters
 lib/irc/help/set/encrypt_program
-lib/irc/help/set/log
 lib/irc/help/set/exec_protection
 lib/irc/help/set/flood_after
 lib/irc/help/set/flood_rate
@@ -447,22 +459,23 @@ lib/irc/help/set/full_status_line
 lib/irc/help/set/help_pager
 lib/irc/help/set/help_path
 lib/irc/help/set/help_prompt
-lib/irc/help/set/help_service
 lib/irc/help/set/help_window
 lib/irc/help/set/hide_private_channels
 lib/irc/help/set/highlight_char
 lib/irc/help/set/history
+lib/irc/help/set/history_file
 lib/irc/help/set/hold_mode
 lib/irc/help/set/hold_mode_max
 lib/irc/help/set/indent
 lib/irc/help/set/input_aliases
+lib/irc/help/set/insert_mode
 lib/irc/help/set/input_prompt
 lib/irc/help/set/input_protection
-lib/irc/help/set/insert_mode
-lib/irc/help/set/lastlog
 lib/irc/help/set/inverse_video
+lib/irc/help/set/lastlog
 lib/irc/help/set/lastlog_level
 lib/irc/help/set/load_path
+lib/irc/help/set/log
 lib/irc/help/set/logfile
 lib/irc/help/set/mail
 lib/irc/help/set/max_recursions
@@ -484,13 +497,13 @@ lib/irc/help/set/set
 lib/irc/help/set/shell
 lib/irc/help/set/shell_flags
 lib/irc/help/set/shell_limit
-lib/irc/help/set/status_away
 lib/irc/help/set/show_away_once
 lib/irc/help/set/show_channel_names
 lib/irc/help/set/show_end_of_msgs
 lib/irc/help/set/show_numerics
 lib/irc/help/set/show_status_all
 lib/irc/help/set/show_who_hopcount
+lib/irc/help/set/status_away
 lib/irc/help/set/status_channel
 lib/irc/help/set/status_chanop
 lib/irc/help/set/status_clock
@@ -519,7 +532,6 @@ lib/irc/help/set/user_wallops
 lib/irc/help/set/verbose_ctcp
 lib/irc/help/set/warn_of_ignores
 lib/irc/help/set/xterm_options
-lib/irc/help/set/history_file
 lib/irc/help/window/add
 lib/irc/help/window/addgroup
 lib/irc/help/window/back
@@ -559,6 +571,7 @@ lib/irc/help/window/server
 lib/irc/help/window/show
 lib/irc/help/window/shrink
 lib/irc/help/window/stack
+lib/irc/help/window/sticky
 lib/irc/help/window/swap
 lib/irc/help/window/window
 @dirrm lib/irc/help/alias
