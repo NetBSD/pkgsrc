@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/01/03 18:49:44 reed Exp $
+# $NetBSD: Makefile,v 1.11 2004/01/07 02:21:16 jlam Exp $
 #
 
 DISTNAME=		swfdec-0.2.1
@@ -20,7 +20,7 @@ LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 PKGCONFIG_OVERRIDE=	${WRKSRC}/swfdec.pc.in
 
 .if !defined(PKG_SYSCONFDIR.gtk2) || empty(PKG_SYSCONFDIR.gtk2)
-MESSAGE_SUBST+=		PKG_SYSCONFDIR.gtk2="${PKG_SYSCONFBASE}/gtk-2.0"
+MESSAGE_SUBST+=		PKG_SYSCONFDIR.gtk2="${PKG_SYSCONFBASEDIR}/gtk-2.0"
 .else
 MESSAGE_SUBST+=		PKG_SYSCONFDIR.gtk2="${PKG_SYSCONFDIR.gtk2}"
 .endif

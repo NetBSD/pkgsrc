@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2003/08/30 22:51:23 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2004/01/07 02:21:16 jlam Exp $
 
 DISTNAME=	sqwebmail-3.3.1
 CATEGORIES=	www
@@ -38,7 +38,7 @@ CONFIGURE_ARGS+=	--enable-cgibindir=${PREFIX}/libexec/cgi-bin
 CONFIGURE_ARGS+=	--enable-imagedir=${IMAGEDIR}
 CONFIGURE_ARGS+=	--enable-imageurl=/images/sqwebmail
 
-MIME_TYPES=		${PKG_SYSCONFDIR}/mime.types:${PKG_SYSCONFBASE}/httpd/mime.types:${PREFIX}/etc/mime.types:/etc/mime.types
+MIME_TYPES=		${PKG_SYSCONFDIR}/mime.types:${PKG_SYSCONFBASEDIR}/httpd/mime.types:${PREFIX}/etc/mime.types:/etc/mime.types
 CONFIGURE_ARGS+=	--enable-mimetypes="${MIME_TYPES}"
 CONFIGURE_ARGS+=	--with-ispell="${LOCALBASE}/bin/ispell"
 
