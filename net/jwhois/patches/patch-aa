@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.5 2005/01/27 20:38:02 kleink Exp $
+$NetBSD: patch-aa,v 1.6 2005/01/29 17:45:35 kim Exp $
 
---- example/jwhois.conf.orig	2003-06-30 19:16:45.000000000 +0200
-+++ example/jwhois.conf	2005-01-27 21:33:30.000000000 +0100
+--- example/jwhois.conf.orig	2003-06-30 13:16:45.000000000 -0400
++++ example/jwhois.conf	2005-01-29 12:36:50.000000000 -0500
 @@ -55,7 +55,42 @@
  	"^[0-9]+\\.[0-9]+\\.[0-9]+/[0-9]+-[0-9]+$" = "whois.nic.br";
   
@@ -55,6 +55,15 @@ $NetBSD: patch-aa,v 1.5 2005/01/27 20:38:02 kleink Exp $
  	"\\.fj$" = "whois.usp.ac.fj";
  	"\\.fm$" = "www.dot.fm";
  	"\\.fo$" = "whois.ripe.net";
+@@ -242,7 +277,7 @@
+ 	"\\.to$" = "whois.tonic.to";
+ 	"\\.tr$" = "whois.metu.edu.tr";
+ 	"\\.tt$" = "www.nic.tt";
+-	"\\.tv$" = "whois.tv";
++	"\\.tv$" = "whois.nic.tv";
+ 	"\\.tw$" = "whois.twnic.net";
+ 	"\\.ua$" = "whois.com.ua";
+ 	"\\.ug$" = "whois.co.ug";
 @@ -371,6 +406,15 @@
  	"80.0.0.0/8" = "whois.ripe.net";
  	"81.0.0.0/8" = "whois.ripe.net";
@@ -71,7 +80,33 @@ $NetBSD: patch-aa,v 1.5 2005/01/27 20:38:02 kleink Exp $
  	"150.217.0.0/16" = "whois.ripe.net";
  	"151.3.0.0/16" = "whois.ripe.net";
  	"151.4.0.0/15" = "whois.ripe.net";
-@@ -724,10 +768,10 @@
+@@ -491,6 +535,10 @@
+ 		whois-redirect = ".*Whois Server: \\(.*\\)";
+ 	}
+ 
++	"whois\\.nic\\.tv" {
++		whois-redirect = ".*Whois Server: \\(.*\\)";
++	}
++
+ 	"whois\\.apnic\\.net" {
+ 		whois-redirect = ".*http://\\(whois\\.nic\\.or\\.kr\\)/";
+ 		whois-redirect = ".*at \\([Ww][Hh][Oo][Ii][Ss]\\.[A-Za-z]*\\.[Nn][Ee][Tt]\\)";
+@@ -693,14 +741,6 @@
+ 		form-element = "whois";
+ 	}
+ 
+-	"cgi\\.ficora\\.fi" {
+-		http = "true";
+-		http-method = "GET";
+-		http-action = "/wwwbin/domains.pl";
+-		form-element = "search";
+-		form-extra = "language=eng";
+-	}
+-
+ 	"whois\\.lacnic\\.net" {
+ 		whois-redirect = ".*\\(whois.nic.br\\)";
+ 		whois-redirect = ".*\\(whois.registro.br\\)";
+@@ -724,10 +764,10 @@
  
  #
  # The cache feature is used to provide a local cache with Whois information.
@@ -84,7 +119,7 @@ $NetBSD: patch-aa,v 1.5 2005/01/27 20:38:02 kleink Exp $
  
  #
  # This is the time after which an entry expires from the cache in hours.
-@@ -743,7 +787,7 @@
+@@ -743,7 +783,7 @@
  #
  # Path to the browser to use for HTTP servers.
  #
