@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.755 2003/07/30 13:50:39 wiz Exp $
+$NetBSD: TODO,v 1.756 2003/07/30 14:05:57 wiz Exp $
 
 Suggested new packages
 ======================
@@ -131,7 +131,6 @@ Suggested package updates
 	o gnuchess-5.06
 	o gnustep-0.8.8
 	o gpa-0.6.1
-	o gperiodic-2.0.5
 	o gq-0.6.0 [pkg/21284]
 	o grace-5.1.12
 	o gtetrinet-0.7.3
