@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4436 2004/01/12 17:23:47 xtraeme Exp $
+$NetBSD: CHANGES,v 1.4437 2004/01/12 18:42:06 seb Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -194,3 +194,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added pnet-0.6.2 [xtraeme 2004-01-12]
 	Added pnetlib-0.6.2 [xtraeme 2004-01-12]
 	Added pnetC-0.6.0 [xtraeme 2004-01-12]
+	Updated cssc to 0.16a.0 [seb 2004-01-12]
