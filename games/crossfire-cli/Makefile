@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/07/19 00:24:02 garbled Exp $
+# $NetBSD: Makefile,v 1.10 2001/10/26 10:14:48 agc Exp $
 #
 
 DISTNAME=	crossfire-client-1.0.0
@@ -28,6 +28,8 @@ SCRIPTS_ENV+=	${SCRIPTSDIR}
 CONFIGURE_ARGS+=	--prefix=${LOCALBASE}
 CONFIGURE_ARGS+=	--with-includes=-I${LOCALBASE}/include
 CONFIGURE_ARGS+=	--with-sound-dir=${LOCALBASE}/share/cfclient/sounds
+
+REPLACE_PERL=	utils/deftoheader.pl items.pl
 
 pre-build:
 	cd ${WRKSRC} && ${MAKE} soundsdef.h
