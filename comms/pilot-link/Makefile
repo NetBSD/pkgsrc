@@ -3,7 +3,7 @@
 # Date created:		28 December 1996
 # Whom:			sommerfeld@alum.mit.edu
 #
-# $NetBSD: Makefile,v 1.1 1998/03/17 03:02:31 sommerfe Exp $
+# $NetBSD: Makefile,v 1.2 1998/03/18 00:17:24 hubertf Exp $
 #
 
 DISTNAME=	pilot-link.0.8.11
@@ -22,7 +22,4 @@ do-configure:
 	    INSTALL="/usr/bin/install -c -o ${BINOWN} -g ${BINGRP}" \
 	    ${CONFIGURE_ENV} ./${CONFIGURE_SCRIPT} ${CONFIGURE_ARGS})
 
-
 .include <bsd.port.mk>
-
-
