@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.68 2005/03/06 12:57:38 markd Exp $
+# $NetBSD: Makefile,v 1.69 2005/03/23 21:44:37 markd Exp $
 
 DISTNAME=	kdebase-${_KDE_VERSION}
-PKGREVISION=	4
 CATEGORIES=	x11
 COMMENT=	Base modules for the KDE 3 integrated X11 desktop
 
@@ -31,6 +30,10 @@ CONFIGURE_ARGS+=	--without-java
 REPLACE_PERL= \
 			kcontrol/fileshare/fileshareset \
 			kcontrol/keys/convertShortcuts.pl \
+			khelpcenter/searchhandlers/khc_htdig.pl \
+			khelpcenter/searchhandlers/khc_htsearch.pl \
+			khelpcenter/searchhandlers/khc_docbookdig.pl \
+			khelpcenter/searchhandlers/khc_mansearch.pl \
 			kicker/kicker-3.1-properSizeSetting.pl \
 			kioslave/finger/kio_finger.pl \
 			kioslave/info/kde-info2html \
@@ -129,7 +132,7 @@ post-install:
 .if ${OPSYS} == "NetBSD"
 	@# NetBSD Advertisement O:-)
 	cd ${PREFIX}/share/kde/config/kdm;				\
-	${SED} -e 's|^#\(LogoPixmap\)=.*|\1=${PREFIX}/${ICONDIR}/NetBSD-flag.png|' \
+	${SED} -e 's|^\(LogoPixmap\)=.*|\1=${PREFIX}/${ICONDIR}/NetBSD-flag.png|' \
 		kdmrc > ${WRKDIR}/kdmrc.ad;				\
 	${CP} -f ${WRKDIR}/kdmrc.ad kdmrc
 .endif
@@ -139,6 +142,7 @@ post-install:
 .include "../../databases/openldap/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
+.include "../../graphics/openexr/buildlink3.mk"
 .include "../../x11/Xrandr/buildlink3.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"
 .include "../../x11/xcursor/buildlink3.mk"

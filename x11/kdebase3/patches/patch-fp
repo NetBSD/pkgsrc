@@ -1,9 +1,9 @@
-$NetBSD: patch-fp,v 1.1 2004/11/01 16:39:06 gavan Exp $
+$NetBSD: patch-fp,v 1.2 2005/03/23 21:44:37 markd Exp $
 
---- kioslave/pop3/pop3.cc.orig	2004-07-17 18:52:07.000000000 +0100
+--- kioslave/pop3/pop3.cc.orig	2005-01-04 03:50:57.000000000 +1300
 +++ kioslave/pop3/pop3.cc
-@@ -59,6 +59,8 @@
- 
+@@ -63,6 +63,8 @@ extern "C" {
+ #include <kio/passdlg.h>
  #include "pop3.h"
  
 +#undef truncate

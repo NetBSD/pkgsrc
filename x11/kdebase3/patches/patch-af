@@ -1,36 +1,52 @@
-$NetBSD: patch-af,v 1.5 2004/04/26 11:54:15 markd Exp $
+$NetBSD: patch-af,v 1.6 2005/03/23 21:44:37 markd Exp $
 
---- kcontrol/info/info_netbsd.cpp.orig	2003-01-21 02:17:16.000000000 +1300
+--- kcontrol/info/info_netbsd.cpp.orig	2005-02-04 12:18:52.000000000 +1300
 +++ kcontrol/info/info_netbsd.cpp
-@@ -272,7 +272,11 @@ bool GetInfo_Partitions (QListView *lbox
- 	FILE *pipe = popen("/sbin/mount", "r");
- 	QTextStream *t;
- 	u_int64_t tsz, fsz;
+@@ -265,9 +265,11 @@ bool GetInfo_SCSI (QListView *lbox)
+ bool GetInfo_Partitions (QListView *lbox)
+ {
+ 	int num; // number of mounts
+-	// FIXME: older pkgsrc patches checked ST_RDONLY for this declaration
+-	// what is ST_RDONLY and how does it affect getmntinfo?
 +#ifdef ST_RDONLY
-+	struct statvfs sfs;
++	struct statvfs *mnt; // mount data pointer
 +#else
- 	struct statfs sfs;
+ 	struct statfs *mnt; // mount data pointer
 +#endif
- 	int ok;
  
- 	if (!pipe) {
-@@ -312,11 +316,19 @@ bool GetInfo_Partitions (QListView *lbox
- 			flags = "";
- 		}
+ 	// get mount info
+ 	if (!(num=getmntinfo(&mnt, MNT_WAIT))) {
+@@ -290,7 +292,11 @@ bool GetInfo_Partitions (QListView *lbox
+ 		unsigned long long big[2];
+ 		QString vv[5];
  
 +#ifdef ST_RDONLY
-+		if (statvfs(mountpoint, &sfs) == 0) {
-+			tsz = ((1LL * sfs.f_blocks * sfs.f_frsize / 1024) + 513)
-+					/ 1024;
-+			fsz = ((1LL * sfs.f_bfree * sfs.f_frsize / 1024) + 513)
-+					/ 1024;
++		big[0] = big[1] = mnt->f_frsize; // coerce the product
 +#else
- 		if (statfs(mountpoint, &sfs) == 0) {
- 			tsz = ((1LL * sfs.f_blocks * sfs.f_bsize / 1024) + 513)
- 					/ 1024;
- 			fsz = ((1LL * sfs.f_bfree * sfs.f_bsize / 1024) + 513)
- 					/ 1024;
+ 		big[0] = big[1] = mnt->f_bsize; // coerce the product
 +#endif
- 			ok = 1;
- 		} else {
- 			tsz = fsz = 0;
+ 		big[0] *= mnt->f_blocks;
+ 		big[1] *= mnt->f_bavail; // FIXME: use f_bfree if root?
+ 
+@@ -307,7 +313,11 @@ bool GetInfo_Partitions (QListView *lbox
+ 				.arg(mnt->f_files ? mnt->f_ffree*100/mnt->f_files : 0);
+ 
+ 		vv[4] = QString::null;
++#ifdef ST_RDONLY
++#define MNTF(x) if (mnt->f_flag & ST_##x) vv[4] += QString::fromLatin1(#x " ");
++#else
+ #define MNTF(x) if (mnt->f_flags & MNT_##x) vv[4] += QString::fromLatin1(#x " ");
++#endif
+ 		MNTF(ASYNC)
+ 		MNTF(DEFEXPORTED)
+ 		MNTF(EXKERB)
+@@ -316,7 +326,9 @@ bool GetInfo_Partitions (QListView *lbox
+ 		MNTF(EXPORTED)
+ 		MNTF(EXPUBLIC)
+ 		MNTF(EXRDONLY)
++#ifndef ST_RDONLY
+ 		MNTF(IGNORE)
++#endif
+ 		MNTF(LOCAL)
+ 		MNTF(NOATIME)
+ 		MNTF(NOCOREDUMP)

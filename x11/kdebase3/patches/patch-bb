@@ -1,16 +1,8 @@
-$NetBSD: patch-bb,v 1.5 2004/11/01 16:39:06 gavan Exp $
+$NetBSD: patch-bb,v 1.6 2005/03/23 21:44:37 markd Exp $
 
---- kdesktop/init.cc.orig	2004-05-22 21:26:46.000000000 +0100
+--- kdesktop/init.cc.orig	2005-02-04 12:18:56.000000000 +1300
 +++ kdesktop/init.cc
-@@ -33,6 +33,7 @@
- #include <dirent.h>
- #include <stdlib.h>
- 
-+#undef truncate
- 
- // for multihead
- extern int kdesktop_screen_number;
-@@ -79,6 +80,9 @@ static void copyDirectoryFile(const QStr
+@@ -105,6 +105,9 @@ static void copyDirectoryFile(const QStr
      cmd += " ";
      cmd += KProcess::quote(dir+"/.directory");
      system( QFile::encodeName(cmd) );
@@ -18,15 +10,5 @@ $NetBSD: patch-bb,v 1.5 2004/11/01 16:39:06 gavan Exp $
 +    cmd += KProcess::quote(dir+"/.directory");
 +    system( QFile::encodeName(cmd) );
    }
- }
- 
-@@ -112,6 +116,9 @@ void copyDesktopLinks()
- 	cmd += " ";
- 	cmd += QFile::encodeName(KProcess::quote(desktopPath));
- 	system( cmd );
-+	cmd = "chmod u+w ";
-+	cmd += QFile::encodeName(KProcess::quote(desktopPath + desk.readName()));
-+	system( cmd );
-     }
  }
  
