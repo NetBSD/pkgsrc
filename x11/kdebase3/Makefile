@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.55 2004/08/11 13:54:06 markd Exp $
+# $NetBSD: Makefile,v 1.56 2004/08/21 12:35:15 markd Exp $
 
 DISTNAME=	kdebase-${_KDE_VERSION}
-PKGREVISION=	1
 CATEGORIES=	x11
 COMMENT=	Base modules for the KDE 3 integrated X11 desktop
 
@@ -30,8 +29,10 @@ REPLACE_PERL= \
 			kcontrol/keys/convertShortcuts.pl \
 			kicker/kicker-3.1-properSizeSetting.pl \
 			kioslave/finger/kio_finger.pl \
-			kwin/kwin3_plugin.pl \
-			kwin/pluginlibFix.pl \
+			kioslave/info/kde-info2html \
+			klipper/klipper-1-2.pl \
+			kwin/data/kwin3_plugin.pl \
+			kwin/data/pluginlibFix.pl \
 			konsole/schemaStrip.pl
 
 CONF_FILES=		${PREFIX}/share/kde/config/kdm/kdmrc \
@@ -46,22 +47,6 @@ LIBS+=			${EXPORT_SYMBOLS_LDFLAGS}
 .endif
 
 PLIST_SRC=		${WRKDIR}/PLIST.Xdpms
-
-.if ${OPSYS} == "Linux"
-KDE3_NSPLUGINS?=	YES
-.else
-KDE3_NSPLUGINS?=	NO
-.endif
-BUILD_DEFS+=		KDE3_NSPLUGINS
-
-.if ${KDE3_NSPLUGINS} == "YES"
-PLIST_SRC+=		${PKGDIR}/PLIST.nsplugins
-CONFIGURE_ARGS+=	--with-motif-includes="${BUILDLINK_PREFIX.motif}/include"
-CONFIGURE_ARGS+=	--with-motif-libraries="${BUILDLINK_PREFIX.motif}/lib"
-.include "../../mk/motif.buildlink3.mk"
-.else
-CONFIGURE_ARGS+=	--without-motif
-.endif
 
 _KDE3_EXTRA_INCLUDES=	${LOCALBASE}/include:${X11BASE}/include:${BUILDLINK_PREFIX.freetype2}/include/freetype2
 
