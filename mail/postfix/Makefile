@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.138 2004/07/19 04:51:52 jlam Exp $
+# $NetBSD: Makefile,v 1.139 2004/07/19 05:28:07 jlam Exp $
 
 DISTNAME=	postfix-2.1.3
 CATEGORIES=	mail
@@ -149,11 +149,13 @@ POSTFIX_CONF_FILES+=	src/global/mail_params.h
 
 FILES_SUBST+=	EXAMPLEDIR=${EXAMPLEDIR}
 MESSAGE_SUBST+=	EXAMPLEDIR=${EXAMPLEDIR}
+MESSAGE_SUBST+=	DOCDIR=${DOCDIR}
 
 PKG_GROUPS?=	postfix maildrop
 PKG_USERS?=	postfix:postfix::Postfix\\ User:${POSTFIX_QUEUE_DIR}
 
 LIBEXECDIR=	${PREFIX}/libexec/${PKGBASE}
+DOCDIR=		${PREFIX}/share/doc/${PKGBASE}
 EXAMPLEDIR=	${PREFIX}/share/examples/${PKGBASE}
 
 CONF_FILES=	${EXAMPLEDIR}/main.cf ${PKG_SYSCONFDIR}/main.cf
@@ -193,8 +195,8 @@ post-build:
 pre-install:
 	${INSTALL_DATA_DIR} ${PKG_SYSCONFDIR}
 	${INSTALL_DATA_DIR} ${EXAMPLEDIR}
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/postfix
 	${INSTALL_DATA_DIR} ${LIBEXECDIR}
+	${INSTALL_DATA_DIR} ${DOCDIR}
 	${CHOWN} ${ROOT_USER}:${ROOT_GROUP} ${EXAMPLEDIR} ${LIBEXECDIR}
 	${CHMOD} 755 ${EXAMPLEDIR} ${LIBEXECDIR}
 	-${RM} -f ${WRKSRC}/conf/*.orig
