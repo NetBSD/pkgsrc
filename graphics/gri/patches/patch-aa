@@ -1,15 +1,11 @@
-$NetBSD: patch-aa,v 1.1.1.1 2002/05/03 23:45:15 jtb Exp $
+$NetBSD: patch-aa,v 1.2 2003/07/10 08:27:39 jtb Exp $
 
---- configure.in.orig	Wed Apr  3 20:09:30 2002
-+++ configure.in	Wed May  1 21:20:19 2002
-@@ -229,60 +229,13 @@
- AC_CHECK_HEADERS(unistd.h)
- 
- 
--dnl     Check for netcdf library.  It might be
--dnl	in one of several places, so check
--dnl	several locations, reporting location
--dnl	if found.
+--- configure.in.orig
++++ configure.in
+@@ -274,56 +274,14 @@
+ dnl	in one of several places, so check
+ dnl	several locations, reporting location
+ dnl	if found.
 -AC_MSG_CHECKING(for netcdf library)
 -define(CHECK_FOR_NETCDF, [
 -    if test -d /opt/netcdf/include ; then
@@ -60,7 +56,8 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/05/03 23:45:15 jtb Exp $
 -])dnl
 -dnl
 -CHECK_FOR_NETCDF
-+AC_CHECK_LIB(netcdf, ncvarid, HAVE_LIBNETCDF="YES", HAVE_LIBNETCDF="")
++
++AC_CHECK_LIB(netcdf, nc_open, HAVE_LIBNETCDF="YES", HAVE_LIBNETCDF="")
 +[
 +if test -n "$HAVE_LIBNETCDF" ; then
 +   ] AC_DEFINE(HAVE_LIBNETCDF) [
@@ -68,5 +65,5 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/05/03 23:45:15 jtb Exp $
 +fi
 +]
  
- AC_CHECK_LIB(m,sin)
- AC_SUBST(EXTRA_CXXFLAGS)
+ dnl gri3 AC_CHECK_LIB(m,sin)
+ dnl gri3 AC_CHECK_LIB(popt,poptGetNextOpt,[
