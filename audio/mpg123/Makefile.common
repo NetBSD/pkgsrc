@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2003/07/17 21:22:58 grant Exp $ -*- Makefile -*-
+# $NetBSD: Makefile.common,v 1.8 2003/10/18 11:17:40 grant Exp $ -*- Makefile -*-
 DISTNAME=	mpg123-0.59r
 MPG123_VERSION=	0.59.18
 CATEGORIES=	audio
@@ -40,7 +40,7 @@ ALL_TARGET=	netbsd-i386-elf${TARGET_SUFFIX}
 ALL_TARGET=	netbsd-i386${TARGET_SUFFIX}
 .    endif # ELF
 .  elif ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
-.    if defined(MPG123_ARM_FIXED64) && ${MPG123_ARM_FIXED64} == "YES
+.    if defined(MPG123_ARM_FIXED64) && ${MPG123_ARM_FIXED64} == "YES"
 ALL_TARGET=	netbsd-arm-64${TARGET_SUFFIX}
 .    else
 ALL_TARGET=	netbsd-arm${TARGET_SUFFIX}
@@ -63,8 +63,6 @@ pre-patch:
 
 post-patch:
 	${RM} -f ${WRKSRC}/mpg123
-	${CP} ${FILESDIR}/decode_i586_.s ${WRKSRC}/
-	cd ${WRKSRC} ; ${MV} decode_i586.s decode_i586.s.orig ;\
-	${SED} \
-		-e 's@^/@#/@g' \
-		<decode_i586.s.orig >decode_i586.s
+	${CP} ${FILESDIR}/decode_i586_.s ${WRKSRC}
+	cd ${WRKSRC} && ${MV} decode_i586.s decode_i586.s.orig; \
+		${SED} -e 's@^/@#/@g' decode_i586.s.orig > decode_i586.s
