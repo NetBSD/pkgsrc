@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.13 2003/12/20 04:23:05 grant Exp $	*/
+/*	$NetBSD: perform.c,v 1.14 2004/01/04 01:49:38 hubertf Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: perform.c,v 1.44 1997/10/13 15:03:46 jkh Exp";
 #else
-__RCSID("$NetBSD: perform.c,v 1.13 2003/12/20 04:23:05 grant Exp $");
+__RCSID("$NetBSD: perform.c,v 1.14 2004/01/04 01:49:38 hubertf Exp $");
 #endif
 #endif
 
@@ -128,7 +128,7 @@ pkg_do(const char *pkg)
 	char   dbdir[FILENAME_MAX];
 	const char *exact, *extra1;
 	FILE   *cfile;
-	int     errc;
+	int     errc, err_prescan;
 	plist_t *p;
 	struct stat sb;
 	struct utsname host_uname;
@@ -544,6 +544,7 @@ ignore_replace_depends_check:
 	/* Quick pre-check if any conflicting dependencies are installed
 	 * (e.g. version X is installed, but version Y is required)
 	 */
+	err_prescan=0;
 	for (p = Plist.head; p; p = p->next) {
 		char installed[FILENAME_MAX];
 		
@@ -596,15 +597,18 @@ ignore_replace_depends_check:
 
 					if (Force) {
 						warnx("Proceeding anyway.");
-					} else {	
-						warnx("Please resolve this conflict!");
-						errc = 1;
-						goto success; /* close enough */
+					} else {
+						err_prescan++;
 					}
 				}
 			}
 		}
 	}
+	if (err_prescan > 0) {
+		warnx("Please resolve this conflict!");
+		errc += err_prescan;
+		goto success; /* close enough */
+	}	
 	
 
 	/* Now check the packing list for dependencies */
