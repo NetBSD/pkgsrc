@@ -1,13 +1,12 @@
-$NetBSD: patch-ac,v 1.6 1998/12/18 23:53:16 tron Exp $
+$NetBSD: patch-ac,v 1.7 1999/01/16 01:43:30 tron Exp $
 
---- gtk/Makefile.in.orig	Thu Dec 17 07:33:52 1998
-+++ gtk/Makefile.in	Fri Dec 18 23:52:34 1998
-@@ -369,7 +369,7 @@
- 	../gdk/gdkrgb.h
+--- gtk/Makefile.in.orig	Mon Jan  4 10:55:25 1999
++++ gtk/Makefile.in	Sat Jan 16 01:37:56 1999
+@@ -371,7 +371,6 @@
  
  libgtk_la_LDFLAGS = \
--	-version-info $(LT_CURRENT):$(LT_REVISION):$(LT_AGE) -release $(LT_RELEASE) \
-+	-version-info $(LT_CURRENT):$(LT_REVISION):$(LT_AGE) \
- 	@GLIB_LIBS@ 			\
- 	@x_ldflags@			\
- 	@x_libs@ 			\
+ 	-version-info $(LT_CURRENT):$(LT_REVISION):$(LT_AGE)	\
+-	-release $(LT_RELEASE) 					\
+ 	@GLIB_LIBS@ 						\
+ 	@x_ldflags@						\
+ 	@x_libs@ 						\
