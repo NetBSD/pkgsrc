@@ -1,31 +1,40 @@
-# $NetBSD: Makefile.in,v 1.1.1.1 1998/12/12 17:28:23 tsarna Exp $
+# $NetBSD: Makefile.in,v 1.2 1999/04/20 18:06:06 tsarna Exp $
 
-all: all-pcgi all-lib all-dt all-bobopos
-configure: configure-pcgi configure-lib configure-dt configure-bobopos
+all: all-pcgi all-lib all-dt all-bobopos all-search
+configure: config-pcgi config-lib config-dt config-bobopos config-search
 	
-configure-pcgi:
+config-pcgi:
 	(cd pcgi; ./configure)
 
 all-pcgi:
 	(cd pcgi; make)
 
-configure-lib:
+config-lib:
 	(cd lib/python; \
 	make -f Makefile.pre.in boot PYTHON=@PREFIX@/bin/python)
 
 all-lib:
 	(cd lib/python; make)
 
-configure-dt:
+config-dt:
 	(cd lib/python/DocumentTemplate; \
 	make -f Makefile.pre.in boot PYTHON=python)
 
 all-dt:
 	(cd lib/python/DocumentTemplate; make)
 
-configure-bobopos:
+config-bobopos:
 	(cd lib/python/BoboPOS; \
 	make -f Makefile.pre.in boot PYTHON=python)
 
 all-bobopos:
 	(cd lib/python/BoboPOS; make)
+
+
+config-search:
+	(cd lib/python/SearchIndex; \
+	make -f Makefile.pre.in boot PYTHON=python)
+
+all-search:
+	(cd lib/python/SearchIndex; make)
+
