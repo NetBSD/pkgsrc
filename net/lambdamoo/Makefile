@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/05/26 00:21:43 rh Exp $
+# $NetBSD: Makefile,v 1.2 2002/05/26 00:57:15 rh Exp $
 
 DISTNAME=		LambdaMOO-1.8.1
 PKGNAME=		lambdamoo-1.8.1
@@ -22,8 +22,7 @@ PKG_GROUPS=		${LAMBDAMOO_GROUP}
 PKG_USERS=		${LAMBDAMOO_USER}:${LAMBDAMOO_GROUP}
 _PKG_USER_HOME=		${LAMBDAMOO_HOME}
 _PKG_USER_SHELL=	${SH}
-DEINSTALL_EXTRA_TMPL=   ${PKGDIR}/DEINSTALL.out
-USE_BUILDLINK_ONLY=     # defined
+DEINSTALL_EXTRA_TMPL=   ${WRKDIR}/DEINSTALL.out
 
 ALL_TARGET=
 GNU_CONFIGURE=		yes
@@ -31,9 +30,9 @@ WRKSRC=			${WRKDIR}/MOO-1.8.1
 
 post-build:
 	${MV} ${WRKSRC}/restart.sh ${WRKSRC}/restart.sh.in
-	${SED} <${WRKSRC}/restart.sh.in >${WRKSRC}/restart.sh \
+	${SED} <${WRKSRC}/restart.sh.in >${WRKSRC}/restart.sh	\
 		"s|__PREFIX__|${PREFIX}|g"
-	${SED} <${PKGDIR}/DEINSTALL >${PKGDIR}/DEINSTALL.out \
+	${SED} <${PKGDIR}/DEINSTALL >${DEINSTALL_EXTRA_TMPL}	\
 		"s|__LAMBDAMOO_HOME__|${LAMBDAMOO_HOME}|g"
 
 do-install:
