@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.125 2002/09/30 16:03:53 wiz Exp $
+$NetBSD: CHANGES,v 1.126 2002/09/30 16:36:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3049,3 +3049,5 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated tuxpaint-stamps to 2002.09.29 [wiz 2002-09-30]
 	Updated rats to 2.1 [taca 2002-09-30]
 	Updated tuxpaint to 2002.09.29 [wiz 2002-09-30]
+	Updated pkglint to 3.36 [atatat 2002-09-30]
+	Updated dc_gui to 0.62 [wiz 2002-09-30]
