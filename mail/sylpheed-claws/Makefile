@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2002/12/29 23:45:30 chris Exp $
+# $NetBSD: Makefile,v 1.12 2002/12/30 18:45:57 chris Exp $
 
 DISTNAME=	sylpheed-0.8.8claws
 PKGNAME=	sylpheed-claws-0.8.8
+PKGREVISION=	1
 CATEGORIES=	mail news x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sylpheed-claws/}
 EXTRACT_SUFX=	.tar.bz2
@@ -23,7 +24,7 @@ GNU_CONFIGURE=		yes
 # Force gnome detection off to avoid installing some extra files
 CONFIGURE_ENV+=		ac_cv_path_GNOME_CONFIG="no"
 CONFIGURE_ARGS+=	--enable-nls
-CONFIGURE_ARGS+=	--enable-ssl
+CONFIGURE_ARGS+=	--enable-openssl
 CONFIGURE_ARGS+=	--enable-gpgme
 CONFIGURE_ARGS+=	--enable-compface
 
