@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2001/09/27 23:17:47 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2002/02/27 17:14:28 jlam Exp $
 # FreeBSD Id: Makefile,v 1.10 1998/06/08 09:21:37 tg Exp
 #
 
@@ -12,7 +12,10 @@ MAINTAINER=	dmcmahill@netbsd.org
 HOMEPAGE=	http://bwrc.eecs.berkeley.edu/Classes/IcBook/SPICE/
 COMMENT=	General-purpose circuit simulation program
 
-DEPENDS+=	readline>=4.0:../../devel/readline
+BUILDLINK_DEPENDS.readline=	readline>=4.0
+
+USE_BUILDLINK_ONLY=	yes
+USE_GNU_READLINE=	uses rl_* interface
 
 # documentation in ftp://ic.eecs.berkeley.edu/pub/Spice3/um.3f3.ps
 
@@ -20,20 +23,26 @@ DEPENDS+=	readline>=4.0:../../devel/readline
 #PATCH_SITES=	ftp://ilpsoft.eecs.berkeley.edu/pub/SPICE3F5/
 #PATCHFILES=	grid.patch newcoms.patch spsmp.patch
 
-USE_X11=	yes
 WRKSRC=		${WRKDIR}
 
 CONFLICTS=	ng-spice-[0-9]*
 
+post-extract:
+	${CP} ${FILESDIR}/NetBSD ${WRKSRC}/conf
+
 do-configure:
 	${RM} -f ${WRKSRC}/makefile
-	${SED} 's;@WRKSRC@;${WRKSRC};g' <${FILESDIR}/NetBSD \
-		>${WRKSRC}/conf/NetBSD
-	${MV} ${WRKSRC}/conf/defaults ${WRKSRC}/conf/defaults.BAK
-	${SED} \
-		-e 's@$${X11BASE}@${X11PREFIX}@' \
-		-e 's@$${PREFIX}@${PREFIX}@' \
-		<${WRKSRC}/conf/defaults.BAK >${WRKSRC}/conf/defaults
+	cd ${WRKSRC}/conf; for file in NetBSD defaults; do		\
+		${SED}	-e "s|@MAKE_PROGRAM@|${MAKE_PROGRAM}|g"		\
+			-e "s|@CFLAGS@|${CFLAGS}|g"			\
+			-e "s|@LDFLAGS@|${LDFLAGS}|g"			\
+			-e 's|@BUILDLINK_X11_DIR@|${BUILDLINK_X11_DIR}|g' \
+			-e 's|@X11BASE@|${X11BASE}|g'			\
+			-e "s|@WRKSRC@|${WRKSRC}|g"			\
+			-e 's|@PREFIX@|${PREFIX}|g'			\
+			$${file} > $${file}.new;			\
+		${MV} -f $${file}.new $${file};				\
+	done
 
 do-build:
 	cd ${WRKSRC} ; util/build NetBSD default
@@ -57,4 +66,6 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/spice3
 	${INSTALL_DATA} ${WRKSRC}/examples/*.cir ${PREFIX}/share/examples/spice3
 
+.include "../../devel/readline/buildlink.mk"
+.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,33 +1,44 @@
-$NetBSD: patch-ac,v 1.3 1999/10/01 17:05:15 dmcmahill Exp $
+$NetBSD: patch-ac,v 1.4 2002/02/27 17:14:28 jlam Exp $
 
-*** src/include/misc.h.orig	Thu Dec  1 09:17:02 1994
---- src/include/misc.h	Sun Mar 31 12:32:58 1996
-***************
-*** 86,92 ****
---- 86,94 ----
-  extern char *realloc();
-  extern char *getenv();
-  extern int errno;
-+ #if !(defined(__FreeBSD__) || defined(__NetBSD__))
-  extern char *sys_errlist[];
-+ #endif
-  extern char *getenv();
-  extern char *getwd();
-  extern int rand();
-***************
-*** 111,122 ****
---- 111,124 ----
-  #    endif /* clearerr */
-  #  endif /* HAS_CLEARERR */
-  
-+ #if !(defined(__FreeBSD__) || defined(__NetBSD__))
-  #  ifndef bzero
-  extern int bzero();
-  #  endif
-  #  ifndef bcopy
-  extern void bcopy();
-  #  endif
-+ #endif /* defined(__FreeBSD__) || defined(__NetBSD__) */
-  
-  #  ifndef index
-  #    ifdef HAS_INDEX
+--- src/include/misc.h.orig	Sun Apr 25 17:37:48 1993
++++ src/include/misc.h
+@@ -86,7 +86,9 @@
+ extern char *realloc();
+ extern char *getenv();
+ extern int errno;
++#if !(defined(__FreeBSD__) || defined(__NetBSD__))
+ extern char *sys_errlist[];
++#endif
+ extern char *getenv();
+ extern char *getwd();
+ extern int rand();
+@@ -109,12 +111,14 @@
+ #    endif /* clearerr */
+ #  endif /* HAS_CLEARERR */
+ 
++#if !(defined(__FreeBSD__) || defined(__NetBSD__))
+ #  ifndef bzero
+ extern int bzero();
+ #  endif
+ #  ifndef bcopy
+ extern void bcopy();
+ #  endif
++#endif /* defined(__FreeBSD__) || defined(__NetBSD__) */
+ 
+ #  ifndef index
+ #    ifdef HAS_INDEX
+@@ -144,12 +148,14 @@
+ extern void perror();
+ #endif
+ 
++#if !(defined(__FreeBSD__) || defined(__NetBSD__))
+ #ifdef HAS_TIME_
+ #  ifdef HAS_BSDTIME
+ extern char *timezone();
+ #  endif
+ extern char *asctime();
+ extern struct tm *localtime();
++#endif
+ #endif
+ 
+ #ifndef HAS_MEMAVL

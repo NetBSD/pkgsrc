@@ -1,10 +1,15 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:49:22 zuntum Exp $
-bin/spice3
-bin/nutmeg
-bin/sconvert
+@comment $NetBSD: PLIST,v 1.2 2002/02/27 17:14:28 jlam Exp $
 bin/help
-bin/proc2mod
 bin/multidec
+bin/nutmeg
+bin/proc2mod
+bin/sconvert
+bin/spice3
+man/man1/nutmeg.1
+man/man1/sconvert.1
+man/man1/spice.1
+man/man3/mfb.3
+man/man5/mfbcap.5
 share/examples/spice3/bjtnoise.cir
 share/examples/spice3/bsim1tst.cir
 share/examples/spice3/bsim2tst.cir
@@ -25,18 +30,13 @@ share/examples/spice3/resnoise.cir
 share/examples/spice3/rtlinv.cir
 share/examples/spice3/schmitt.cir
 share/examples/spice3/simplepz.cir
-share/spice3/helpdir/spice.txt
 share/spice3/helpdir/spice.idx
-share/spice3/scripts/setplot
-share/spice3/scripts/spinit
+share/spice3/helpdir/spice.txt
 share/spice3/mfbcap
 share/spice3/news
-man/man5/mfbcap.5.gz
-man/man1/sconvert.1.gz
-man/man1/nutmeg.1.gz
-man/man1/spice.1.gz
-man/man3/mfb.3.gz
-@dirrm share/examples/spice3
-@dirrm share/spice3/helpdir
+share/spice3/scripts/setplot
+share/spice3/scripts/spinit
 @dirrm share/spice3/scripts
+@dirrm share/spice3/helpdir
 @dirrm share/spice3
+@dirrm share/examples/spice3
