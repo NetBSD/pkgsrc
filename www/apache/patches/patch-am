@@ -1,8 +1,8 @@
-$NetBSD: patch-am,v 1.6 2002/03/28 17:17:08 thorpej Exp $
+$NetBSD: patch-am,v 1.6.16.1 2004/12/01 00:25:56 salo Exp $
 
---- src/include/ap_config.h.orig	Thu Mar 28 08:43:24 2002
-+++ src/include/ap_config.h	Thu Mar 28 09:01:18 2002
-@@ -1359,7 +1359,7 @@
+--- src/include/ap_config.h.orig	2004-09-16 00:45:17.000000000 +0100
++++ src/include/ap_config.h
+@@ -1304,7 +1304,7 @@ extern int ap_execve(const char *filenam
   * so we don't have to.  Sigh...
   */
  

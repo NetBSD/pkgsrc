@@ -1,30 +1,19 @@
-$NetBSD: patch-ae,v 1.6 2001/10/17 19:17:00 jlam Exp $
+$NetBSD: patch-ae,v 1.6.16.1 2004/12/01 00:25:56 salo Exp $
 
---- src/modules/standard/mod_include.c.orig	Thu Sep 20 23:51:54 2001
+--- src/modules/standard/mod_include.c.orig	2004-10-25 16:44:04.000000000 +0100
 +++ src/modules/standard/mod_include.c
-@@ -93,7 +93,11 @@
+@@ -50,7 +50,10 @@
  #include "http_log.h"
  #include "http_main.h"
  #include "util_script.h"
 +#include "ap_include_extern.h"
 +#include "ap_hook.h"
  #endif
-+#define get_tag ap_include_get_tag
 +#define parse_string ap_include_parse_string
  
  #define STARTING_SEQUENCE "<!--#"
  #define ENDING_SEQUENCE "-->"
-@@ -352,7 +356,8 @@
-  * the tag value is html decoded if dodecode is non-zero
-  */
- 
--static char *get_tag(pool *p, FILE *in, char *tag, int tagbuf_len, int dodecode)
-+API_EXPORT(char *)
-+ap_include_get_tag(pool *p, FILE *in, char *tag, int tagbuf_len, int dodecode)
- {
-     char *t = tag, *tag_val, c, term;
- 
-@@ -471,7 +476,8 @@
+@@ -447,7 +450,8 @@ static int get_directive(FILE *in, char 
  /*
   * Do variable substitution on strings
   */
@@ -34,7 +23,7 @@ $NetBSD: patch-ae,v 1.6 2001/10/17 19:17:00 jlam Exp $
  			size_t length, int leave_name)
  {
      char ch;
-@@ -669,7 +675,8 @@
+@@ -645,7 +649,8 @@ static int handle_include(FILE *in, requ
              parse_string(r, tag_val, parsed_string, sizeof(parsed_string), 0);
              if (tag[0] == 'f') {
                  /* be safe; only files in this directory or below allowed */
@@ -44,7 +33,7 @@ $NetBSD: patch-ae,v 1.6 2001/10/17 19:17:00 jlam Exp $
                      error_fmt = "unable to include file \"%s\" "
                          "in parsed file %s";
                  }
-@@ -1081,7 +1088,8 @@
+@@ -1057,7 +1062,8 @@ static int find_file(request_rec *r, con
                          "in parsed file %s";
          }
          else {
@@ -54,7 +43,7 @@ $NetBSD: patch-ae,v 1.6 2001/10/17 19:17:00 jlam Exp $
              rr = ap_sub_req_lookup_file(tag_val, r);
  
              if (rr->status == HTTP_OK && rr->finfo.st_mode != 0) {
-@@ -2162,6 +2170,16 @@
+@@ -2140,6 +2146,16 @@ static int handle_printenv(FILE *in, req
      }
  }
  
@@ -71,7 +60,7 @@ $NetBSD: patch-ae,v 1.6 2001/10/17 19:17:00 jlam Exp $
  
  
  /* -------------------------- The main function --------------------------- */
-@@ -2300,6 +2318,13 @@
+@@ -2275,6 +2291,13 @@ static void send_parsed_content(FILE *f,
              }
  #endif
              else {
