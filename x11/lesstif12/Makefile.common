@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2004/03/20 01:39:30 snj Exp $
+# $NetBSD: Makefile.common,v 1.7 2004/04/24 22:46:13 jlam Exp $
 
 DISTNAME=		lesstif-${LESSTIF_VERSION}
 LESSTIF_VERSION=	0.93.0
@@ -10,7 +10,7 @@ MASTER_SITES=		ftp://ftp.hungry.com/pub/hungry/lesstif/srcdist/ \
 			http://gd.tuwien.ac.at/hci/lesstif/srcdist/ \
 			http://www.damtp.cam.ac.uk/mirror/ftp.hungry.com/pub/hungry/lesstif/srcdist/
 
-MAINTAINER=		jlam@NetBSD.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.lesstif.org/
 
 USE_X11BASE=		# defined
