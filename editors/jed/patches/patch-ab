@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.1.1.1 1998/10/31 23:16:12 hwr Exp $
+--- src/Makefile.in.orig	Wed Feb 11 17:57:16 1998
++++ src/Makefile.in	Sat Oct 31 22:43:41 1998
+@@ -13,8 +13,8 @@
+ prefix = @prefix@
+ exec_prefix = @exec_prefix@
+ #JED_ROOT = $(HOME)/src/jed# <--- make sure # is at end of file!!
+-#JED_ROOT = $(prefix)/jed# <--- make sure # is at end of file!!
+-JED_ROOT = @JED_ROOT@# <--- make sure # is at end of file!!
++JED_ROOT = $(prefix)/share/jed# <--- make sure # is at end of file!!
++#JED_ROOT = @JED_ROOT@# <--- make sure # is at end of file!!
+ BIN_DIR = @bindir@
+ MAN_DIR = @mandir@/man1
+ INSTALL		= @INSTALL@

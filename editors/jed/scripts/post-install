@@ -1,0 +1,5 @@
+#!/bin/sh
+# $NetBSD: post-install,v 1.1.1.1 1998/10/31 23:16:12 hwr Exp $
+echo "Installing lib files now"
+cd ${WRKSRC}
+tar cf - lib | (cd ${PREFIX}/share/jed ; tar xf - )

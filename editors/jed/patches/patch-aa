@@ -1,0 +1,11 @@
+$NetBSD: patch-aa,v 1.1.1.1 1998/10/31 23:16:12 hwr Exp $
+--- configure.orig	Wed Feb 11 17:57:02 1998
++++ configure	Sat Oct 31 22:39:03 1998
+@@ -2434,6 +2434,7 @@
+ # version.
+ 
+ JD_Search_Dirs="$JD_Search_Dirs \
++		/usr/pkg/include,/usr/pkg/lib \
+                 /usr/local/include,/usr/local/lib \
+ 		/usr/include,/usr/lib \
+ 		/usr/include/slang,/usr/lib \
