@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.472 2004/05/15 21:02:35 itojun Exp $
+# $NetBSD: Makefile,v 1.473 2004/06/01 21:49:08 kristerw Exp $
 #
 
 COMMENT=	Networking tools
@@ -16,7 +16,6 @@ SUBDIR+=	airport2basestationconfig
 SUBDIR+=	airportbasestationconfig
 SUBDIR+=	airportmodemutility
 SUBDIR+=	amule
-SUBDIR+=	archie
 SUBDIR+=	arla
 SUBDIR+=	arpd
 SUBDIR+=	arpwatch
@@ -177,8 +176,6 @@ SUBDIR+=	neat
 SUBDIR+=	nemesis
 SUBDIR+=	net-snmp
 SUBDIR+=	netatalk
-SUBDIR+=	netatalk-asun
-SUBDIR+=	netatalk-umich
 SUBDIR+=	netcat
 SUBDIR+=	netname
 SUBDIR+=	netperf
@@ -375,7 +372,6 @@ SUBDIR+=	wmpload
 SUBDIR+=	wol
 SUBDIR+=	wu-ftpd
 SUBDIR+=	x2vnc
-SUBDIR+=	xarchie
 SUBDIR+=	xipdump
 SUBDIR+=	xmftp
 SUBDIR+=	xnap
