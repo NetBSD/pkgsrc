@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2002/03/18 07:58:35 fredb Exp $
+# $NetBSD: Makefile,v 1.7 2003/03/10 04:09:04 jmc Exp $
 
 DISTNAME=		mercury-compiler-0.10.1
 PKGNAME=		mercury-0.10.1
@@ -23,6 +23,7 @@ CONFIGURE_ENV+=		BOEHM_GC_DIR=${BOEHM_GC_DIR}
 
 # Some of the scripts test CC and use special settings for gcc.
 CONFIGURE_ENV+=		CC=gcc
+MAKE_ENV+=		_OPSYS_RPATH_NAME=${_OPSYS_RPATH_NAME}
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/mercury/lib/${MACHINE_GNU_PLATFORM}
