@@ -1,20 +1,20 @@
-$NetBSD: patch-aa,v 1.7 1999/09/20 21:43:34 kim Exp $
+$NetBSD: patch-aa,v 1.8 2002/07/08 02:21:19 kim Exp $
 
---- Makefile.orig	Sat Jun  5 00:07:14 1999
-+++ Makefile	Mon Sep 20 17:30:05 1999
+--- Makefile.orig	Thu Feb  7 23:14:41 2002
++++ Makefile	Sun Jul  7 21:34:04 2002
 @@ -18,7 +18,7 @@
  #
  # Use /lib/cpp or /usr/ccs/lib/cpp for CPP on Solaris or SVR4 machines.
  
 -CC =		cc
 +#CC =		cc
+ 
  CPP =		$(CC) -E
  #CPP =		/lib/cpp
- #CFLAGS =	-O2 # -g # -I/usr/local/lib/malloc-debug -DMALLOC_FUNC_CHECK
-@@ -28,7 +28,7 @@
- #-Wpointer-arith -Wcast-qual -Wcast-align -Wconversion \
- #-Waggregate-return -Wmissing-prototypes -Wnested-externs
- #LDFLAGS =	-s # -lmalloc # /usr/local/lib/malloc-debug/libmalloc.a
+@@ -27,7 +27,7 @@
+ CFLAGS =	-O # -g -Wall -ansi -pedantic
+ #CFLAGS =	-O # -w0 -g3			# for DEC
+ 
 -MAKE =		make
 +#MAKE =		make
  
