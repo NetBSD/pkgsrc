@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/11/29 01:56:16 tv Exp $
+# $NetBSD: Makefile,v 1.5 2004/11/29 04:21:33 tv Exp $
 #
 
 DISTNAME=		hashcash-1.13
@@ -11,6 +11,8 @@ HOMEPAGE=		http://www.hashcash.org/
 COMMENT=		Hash collision based postage stamp
 
 USE_BUILDLINK3=		yes
+
+.include "../../mk/bsd.prefs.mk"
 
 CFLAGS+=		-Dunix
 
