@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3073 2005/02/19 21:54:32 cjep Exp $
+$NetBSD: TODO,v 1.3074 2005/02/19 22:04:25 wiz Exp $
 
 Suggested new packages
 ======================
@@ -394,7 +394,7 @@ Suggested package updates
 	o diction-1.07
 	o diffstat-1.37
 	o dinotrace-9.2a
-	o dirac-0.5.0
+	o dirac-0.5.1
 	o dirdiff-2.0
 	o distcc-2.18.3
 	o dmalloc-5.4.2
@@ -404,6 +404,7 @@ Suggested package updates
 	o doclifter-2.1
 	o docsis-0.9.1
 	o dpkg-1.10.25
+	o dspam-3.2.7
 	o dvdrip-0.52.1
 	o dvipng-1.5 [http://sourceforge.net/projects/dvipng/]
 	o dylan-compiler-2.4.0
@@ -439,7 +440,7 @@ Suggested package updates
 	o fdgw-20040609
 	o fhist-1.14
 	o fidogate-4.4.10
-	o findutils-4.2.15
+	o findutils-4.2.18
 	o firefox-bin-1.0
 	o flim-1.14.7
 	o fluxbox-0.9.11 [pkg/28736]
@@ -453,6 +454,7 @@ Suggested package updates
 	o fugu-1.2.3
 	o fvwm2-themes-0.7.0
 	o g2-0.50
+	o gaim-1.1.3
 	o galeon-1.3.19
 	o gap-4r4p3
 	o garmin-utils-2.2
@@ -466,6 +468,7 @@ Suggested package updates
 	o gdeskcal-0.57.1
 	o gdm1-2.2.5.5
 	o gerbv-1.0.0
+	o getmail-4.3.3
 	o gettext-0.14.1
 	o gftp-2.0.18
 	o ghc-6.2.2
@@ -544,9 +547,9 @@ Suggested package updates
 	o inn-2.4.2
 	o intercal-0.24 [dillo]
 	o ion3-devel-20041104
-	o iozone-3.228
+	o iozone-3.233
 	o ipcheck-0.219
-	o ipsec-tools-0.5beta1
+	o ipsec-tools-0.5
 	o ircd-hybrid-7.0.4
 	o iroffer-1.309
 	o iselect-1.3.0
@@ -637,12 +640,13 @@ Suggested package updates
 	o mantis-0.19.2
 	o mapserver-4.2.5
 	o maradns-1.0.23
-	o mathomatic-12.1
+	o mathomatic-12.1b
 	o memtest86-3.2
 	o mergeant-0.52
 	o mew-4.2
 	o mgetty+sendfax-1.1.31
 	o micq-0.4.12 [pkg/29063]
+	o micq-0.5
 	o mimedefang-2.51
 	o mini_sendmail-1.3.5
 	o minicom-2.1
