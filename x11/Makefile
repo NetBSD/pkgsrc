@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.83 1999/03/30 05:06:26 garbled Exp $
+# $NetBSD: Makefile,v 1.84 1999/04/01 05:47:32 garbled Exp $
 # FreeBSD Id: Makefile,v 1.156 1997/09/30 07:54:42 asami Exp
 #
 
@@ -18,10 +18,12 @@
 #    SUBDIR += blt
 #    SUBDIR += bricons
 #    SUBDIR += camltk41
+    SUBDIR += controlcenter
     SUBDIR += ctwm
 #    SUBDIR += dclock
     SUBDIR += dxpc
     SUBDIR += emiclock
+    SUBDIR += econf
 #    SUBDIR += emu
     SUBDIR += enlightenment
     SUBDIR += eterm
