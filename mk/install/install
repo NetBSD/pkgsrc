@@ -1,106 +1,22 @@
 # start of install
 #
-# $NetBSD: install,v 1.34 2005/01/28 06:30:59 jlam Exp $
+# $NetBSD: install,v 1.35 2005/01/28 07:37:55 jlam Exp $
 
 case ${STAGE} in
 PRE-INSTALL)
-	msginit
-	_pkg_exit=0
-	if [ -n "${PKG_GROUPS}" ]; then
-		_print_group_header=1
-		eval set -- ${PKG_GROUPS}
-		for groupset; do
-			save_IFS="${IFS}"; IFS=":"
-			set -- ${groupset}
-			group="$1"; groupid="$2"
-			IFS="${save_IFS}"
-			
-			# We need to check that ${PKG_GROUP} exists before
-			# adding the user.  Do it with chgrp to be able to
-			# use NIS.
-			#
-	          	${TOUCH} /tmp/grouptest.$$
-		  	if ${CHGRP} ${group} /tmp/grouptest.$$ >/dev/null 2>&1; then
-				${ECHO} "Group '${group}' already exists."
-			elif [ "${_PKG_CREATE_USERGROUP}" = "NO" ]; then
-				if [ ${_print_group_header} -gt 0 ]; then
-					_print_group_header=0
-					msgadd ""
-					msgadd "The following groups need to be created for ${PKGNAME}:"
-					msgadd ""
-				fi
-				if [ -z "${groupid}" ]; then
-					groupid_str=
-				else
-					groupid_str=" (${groupid})"
-				fi
-				msgadd "#${group}${groupid_str}"
-				_pkg_exit=1
-			else
-				groupid_option=
-				if [ -n "${groupid}" ]; then
-					groupid_option="-g"
-				fi
-				${ECHO} "Creating group: ${group}"
-				${GROUPADD} ${groupid_option} ${groupid} "${group}"
-			fi
-			${RM} -f /tmp/grouptest.$$
-		done
+	#
+	# Require that necessary users and groups exist or else fail the
+	# installation of the package.
+	#
+	case ${_PKG_CREATE_USERGROUP} in
+	YES)	${TEST} -x ./+USERGROUP && ./+USERGROUP ADD ${PKG_METADATA_DIR} ;;
+	esac
+	if ${TEST} -x ./+USERGROUP && ./+USERGROUP CHECK-ADD ${PKG_METADATA_DIR}; then
+		:
+	else
+		exit 1
 	fi
-	if [ -n "${PKG_USERS}" ]; then
-		_print_user_header=1
-		eval set -- ${PKG_USERS}
-		for userset; do
-			save_IFS="${IFS}"; IFS=":"
-			set -- ${userset}
-			user="$1"; group="$2"; userid="$3"
-			descr="${4:-${PKGBASE} ${user} user}"
-			home="${5:-@PKG_USER_HOME@}"
-			shell="${6:-@PKG_USER_SHELL@}"
-			IFS="${save_IFS}"
-
-			# Use `id' to be able to use NIS.
-			if ${ID} "${user}" >/dev/null 2>&1; then
-				${ECHO} "User '${user}' already exists."
-			elif [ "${_PKG_CREATE_USERGROUP}" = "NO" ]; then
-				if [ ${_print_user_header} -gt 0 ]; then
-					_print_user_header=0
-					msgadd ""
-					msgadd "The following users need to be created for ${PKGNAME}:"
-					msgadd ""
-				fi
-				if [ -z "${userid}" ]; then
-					userid_str=
-				else
-					userid_str=" (${userid})"
-				fi
-				msgadd "#${user}${userid_str}: ${group}, ${home}, ${shell}"
-				_pkg_exit=1
-			else
-				userid_option=
-				if [ -n "${userid}" ]; then
-					userid_option="-u"
-				fi
-				${ECHO} "Creating user: ${user}"
-				${USERADD} -c "${descr}"		\
-					${userid_option} ${userid}	\
-					-g "${group}"			\
-					-d "${home}"			\
-					-s "${shell}"			\
-					"${user}"
-			fi
-		done
-	fi
-	if ! msgempty; then
-		${ECHO} "==========================================================================="
-		msgprint
-		${ECHO} ""
-		${ECHO} "==========================================================================="
-	fi
-	if [ ${_pkg_exit} -gt 0 ]; then
-		exit ${_pkg_exit}
-	fi
-
+	#
 	# Create package directories at pre-install time.
 	#
 	if [ "${PKG_INSTALLATION_TYPE}" = "pkgviews" -a			\
@@ -126,7 +42,7 @@ POST-INSTALL)
 	#
 	# Note any missing package directories.
 	#
-	${TEST} -x ./+DIRS && ./+DIRS CHECK-ADD
+	${TEST} -x ./+DIRS && ./+DIRS CHECK-ADD ${PKG_METADATA_DIR}
 
 	msginit
 	if [ "${_PKG_CONFIG}" = "YES" ]; then
