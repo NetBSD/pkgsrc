@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/06/05 07:36:58 hamajima Exp $
+$NetBSD: distinfo,v 1.2 2005/02/24 08:45:13 agc Exp $
 
 SHA1 (snx101util-0.2.tar.gz) = 118b6b8ae8427d43ea275e14eaad116915e74bd8
+RMD160 (snx101util-0.2.tar.gz) = f25f99cb1001f56a20c36f5e1747f7ad036d5a10
 Size (snx101util-0.2.tar.gz) = 9983 bytes

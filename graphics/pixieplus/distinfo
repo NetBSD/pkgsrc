@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.5 2004/12/14 12:16:43 markd Exp $
+$NetBSD: distinfo,v 1.6 2005/02/24 08:45:11 agc Exp $
 
 SHA1 (pixieplus-0.5.4.tar.gz) = bea6ce3e030fecb9ecceaaf85d155ccc9a4550d5
+RMD160 (pixieplus-0.5.4.tar.gz) = 73c164e8bd66f045c09b9396e2ce777d6daca363
 Size (pixieplus-0.5.4.tar.gz) = 2297945 bytes
 SHA1 (patch-aa) = e9383e025b871ce6629f5924eec3f2bf305c0df4
 SHA1 (patch-ab) = 8b8530ad5d0827504947d9c798efda2e11e0f415

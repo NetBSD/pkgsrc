@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2004/05/20 17:41:39 minskim Exp $
+$NetBSD: distinfo,v 1.4 2005/02/24 08:45:04 agc Exp $
 
 SHA1 (exiftags-0.99.1.tar.gz) = d72105b4b93946133135cf15279e5d1b73cf8ec9
+RMD160 (exiftags-0.99.1.tar.gz) = 5d6eefeaeb2d5d4f28ea889d14441ca10290bab0
 Size (exiftags-0.99.1.tar.gz) = 62397 bytes
 SHA1 (patch-aa) = 1d741e83e05ceb866c7dcd36206b0ed2edd9ea18
