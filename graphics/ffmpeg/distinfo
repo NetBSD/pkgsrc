@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2002/03/19 12:39:27 tron Exp $
+
+SHA1 (ffmpeg-0.4.5.tar.gz) = 7d99250eb20c45b77a08e00ecad1f73d11f57cb8
+Size (ffmpeg-0.4.5.tar.gz) = 280506 bytes
+SHA1 (patch-aa) = e2e7ca0465ea69514a6b36e93451ea7eaca0513c
+SHA1 (patch-ab) = d9938d202f9c40e54361abf60bbe275ecc752d28
+SHA1 (patch-ac) = c5d40e240f447316128a0bfca15eb902fe0468db
