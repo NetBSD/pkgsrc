@@ -1,4 +1,4 @@
-# $NetBSD: defs.Interix.mk,v 1.2 2004/03/11 19:37:42 tv Exp $
+# $NetBSD: defs.Interix.mk,v 1.3 2004/03/11 20:54:09 tv Exp $
 #
 # Variable definitions for the Interix operating system.
 
@@ -23,7 +23,11 @@ FILE_CMD?=	/bin/file
 FIND?=		/bin/find
 GMAKE?=		${LOCALBASE}/bin/gmake
 GREP?=		/bin/grep
+.if exists(${LOCALBASE}/bin/gtar)
+GTAR?=		${LOCALBASE}/bin/gtar
+.else
 GTAR?=		${LOCALBASE}/bin/tar
+.endif
 GUNZIP_CMD?=	/usr/contrib/bin/gunzip -f
 GZCAT?=		/usr/contrib/bin/gunzip -c
 GZIP?=		-9
@@ -61,11 +65,7 @@ SHLOCK=		${LOCALBASE}/bin/shlock
 SORT?=		/bin/sort
 SU?=		/bin/su
 TAIL?=		/bin/tail
-.if exists(${LOCALBASE}/bin/tar)
 TAR?=		${LOCALBASE}/bin/tar
-.else
-TAR?=		/bin/tar
-.endif
 TEE?=		/bin/tee
 TEST?=		test				# Shell builtin
 TOUCH?=		/bin/touch
