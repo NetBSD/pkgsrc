@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2002/10/30 07:45:17 martti Exp $
+@comment $NetBSD: PLIST,v 1.9 2002/12/03 06:37:15 martti Exp $
 share/examples/squirrelmail/squirrelmail.conf
 share/squirrelmail/AUTHORS
 share/squirrelmail/COPYING
@@ -30,6 +30,7 @@ share/squirrelmail/doc/ReleaseNotes/1.2/Notes-1.2.5
 share/squirrelmail/doc/ReleaseNotes/1.2/Notes-1.2.6.txt
 share/squirrelmail/doc/ReleaseNotes/1.2/Notes-1.2.7.txt
 share/squirrelmail/doc/ReleaseNotes/1.2/Notes-1.2.8.txt
+share/squirrelmail/doc/ReleaseNotes/1.2/Notes-1.2.9.txt
 share/squirrelmail/doc/addressbook.txt
 share/squirrelmail/doc/compose.txt
 share/squirrelmail/doc/db-backend.txt
@@ -256,6 +257,15 @@ share/squirrelmail/help/th_TH/main_folder.hlp
 share/squirrelmail/help/th_TH/options.hlp
 share/squirrelmail/help/th_TH/read_mail.hlp
 share/squirrelmail/help/th_TH/search.hlp
+share/squirrelmail/help/zh_CN/FAQ.hlp
+share/squirrelmail/help/zh_CN/addresses.hlp
+share/squirrelmail/help/zh_CN/basic.hlp
+share/squirrelmail/help/zh_CN/compose.hlp
+share/squirrelmail/help/zh_CN/folders.hlp
+share/squirrelmail/help/zh_CN/main_folder.hlp
+share/squirrelmail/help/zh_CN/options.hlp
+share/squirrelmail/help/zh_CN/read_mail.hlp
+share/squirrelmail/help/zh_CN/search.hlp
 share/squirrelmail/images/down_pointer.png
 share/squirrelmail/images/index.php
 share/squirrelmail/images/minus.gif
@@ -263,6 +273,7 @@ share/squirrelmail/images/plus.gif
 share/squirrelmail/images/sec_remove_da_DK.png
 share/squirrelmail/images/sec_remove_eng.png
 share/squirrelmail/images/sec_remove_es_ES.png
+share/squirrelmail/images/sec_remove_fr_FR.png
 share/squirrelmail/images/sec_remove_id_ID.png
 share/squirrelmail/images/sec_remove_ko_KR.png
 share/squirrelmail/images/sec_remove_lt_LT.png
@@ -629,6 +640,7 @@ share/squirrelmail/themes/spice_of_life_lite.php
 @dirrm share/squirrelmail/locale/bg_BG
 @dirrm share/squirrelmail/locale
 @dirrm share/squirrelmail/images
+@dirrm share/squirrelmail/help/zh_CN
 @dirrm share/squirrelmail/help/th_TH
 @dirrm share/squirrelmail/help/sv_SE
 @dirrm share/squirrelmail/help/sl_SI
