@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/09/10 16:06:49 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2002/10/05 00:29:43 wiz Exp $
 #
 
 DISTNAME=	ROX-Session-0.1.14
@@ -16,7 +16,7 @@ DEPENDS+=	rox>=1.2.0nb2:../../sysutils/rox
 
 DIST_SUBDIR=	rox
 
-USE_BUILDLINK_ONLY=	yes
+USE_BUILDLINK2=		yes
 GNU_CONFIGURE=		yes
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/ROX-Session/src
@@ -36,6 +36,6 @@ do-install:
 		< ${WRKDIR}/${DISTNAME}/ROX-Session/AppRun		\
 			> ${PREFIX}/share/rox/ROX-Session/AppRun
 
-.include "../../textproc/libxml2/buildlink.mk"
-.include "../../x11/gtk2/buildlink.mk"
+.include "../../textproc/libxml2/buildlink2.mk"
+.include "../../x11/gtk2/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
