@@ -1,4 +1,4 @@
-$NetBSD: patch-am,v 1.1.1.1 2005/02/16 22:17:34 jschauma Exp $
+$NetBSD: patch-am,v 1.2 2005/02/17 00:38:37 jschauma Exp $
 
 --- src/util/Rmakefile.orig	2004-10-27 19:23:48.000000000 -0400
 +++ src/util/Rmakefile	2005-02-15 17:23:01.000000000 -0500
@@ -21,12 +21,3 @@ $NetBSD: patch-am,v 1.1.1.1 2005/02/16 22:17:34 jschauma Exp $
  
  PROGS = findglare glarendx rpiece rad ranimate ranimove vwright getinfo \
  		vwrays xglaresrc
-@@ -96,7 +94,7 @@
- 	$(CC) $(CFLAGS) -o getinfo getinfo.o -lrt
- 
- glrad:	glrad.o
--	$(CC) $(CFLAGS) -o glrad glrad.o -lrgl -lrt -lGLU -lGL \
-+	$(CC) $(CFLAGS) -o glrad glrad.o -lrgl -lrt \
- -lX11 -lXext -lm
- 
- contour:	contour.o
