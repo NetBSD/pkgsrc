@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2001/04/09 22:24:51 hubertf Exp $
+# $NetBSD: Makefile,v 1.14 2001/04/16 21:49:59 jtb Exp $
 #
 
 DISTNAME=		mod_perl-1.25
@@ -13,6 +13,7 @@ COMMENT=		Module that embeds a Perl interpreter into Apache
 
 DEPENDS+=		libperl-{5.0*,5.6.0nb*,5.[6-9]*}:../../lang/libperl
 DEPENDS+=		apache{,6}-1.3.*:../../www/apache
+DEPENDS+=		p5-BSD-Resource>=1.10:../../devel/p5-BSD-Resource
 
 USE_PERL5=		# defined
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/mod_perl/.packlist
