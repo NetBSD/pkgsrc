@@ -1,36 +1,48 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 02:19:07 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/09/24 00:58:30 kim Exp $
 bin/wmb
 bin/wmd
 bin/wmk
 bin/wml
 bin/wmu
-lib/wml/aux/logos/logo-apache.gif
-lib/wml/aux/logos/logo-apache.info
-lib/wml/aux/logos/logo-apache.png
-lib/wml/aux/logos/logo-freebsd.gif
-lib/wml/aux/logos/logo-freebsd.info
-lib/wml/aux/logos/logo-freebsd.png
-lib/wml/aux/logos/logo-gimp.gif
-lib/wml/aux/logos/logo-gimp.info
-lib/wml/aux/logos/logo-gimp.png
-lib/wml/aux/logos/logo-htdig.gif
-lib/wml/aux/logos/logo-htdig.info
-lib/wml/aux/logos/logo-htdig.png
-lib/wml/aux/logos/logo-linux.gif
-lib/wml/aux/logos/logo-linux.info
-lib/wml/aux/logos/logo-linux.png
-lib/wml/aux/logos/logo-php3.gif
-lib/wml/aux/logos/logo-php3.info
-lib/wml/aux/logos/logo-php3.png
-lib/wml/aux/logos/logo-vim.gif
-lib/wml/aux/logos/logo-vim.info
-lib/wml/aux/logos/logo-vim.png
-lib/wml/aux/logos/logo-wml.gif
-lib/wml/aux/logos/logo-wml.info
-lib/wml/aux/logos/logo-wml.png
-lib/wml/aux/txt2html.dict
-lib/wml/aux/weblintrc
-lib/wml/aux/wmd.txt
+lib/wml/data/logos/logo-apache.gif
+lib/wml/data/logos/logo-apache.info
+lib/wml/data/logos/logo-apache.png
+lib/wml/data/logos/logo-freebsd.gif
+lib/wml/data/logos/logo-freebsd.info
+lib/wml/data/logos/logo-freebsd.png
+lib/wml/data/logos/logo-gimp.gif
+lib/wml/data/logos/logo-gimp.info
+lib/wml/data/logos/logo-gimp.png
+lib/wml/data/logos/logo-htdig.gif
+lib/wml/data/logos/logo-htdig.info
+lib/wml/data/logos/logo-htdig.png
+lib/wml/data/logos/logo-linux.gif
+lib/wml/data/logos/logo-linux.info
+lib/wml/data/logos/logo-linux.png
+lib/wml/data/logos/logo-netbsd.gif
+lib/wml/data/logos/logo-netbsd.info
+lib/wml/data/logos/logo-netbsd.png
+lib/wml/data/logos/logo-openbsd.gif
+lib/wml/data/logos/logo-openbsd.info
+lib/wml/data/logos/logo-openbsd.png
+lib/wml/data/logos/logo-php.gif
+lib/wml/data/logos/logo-php.info
+lib/wml/data/logos/logo-php.png
+lib/wml/data/logos/logo-php3.gif
+lib/wml/data/logos/logo-php3.info
+lib/wml/data/logos/logo-php3.png
+lib/wml/data/logos/logo-vim.gif
+lib/wml/data/logos/logo-vim.info
+lib/wml/data/logos/logo-vim.png
+lib/wml/data/logos/logo-wml.gif
+lib/wml/data/logos/logo-wml.info
+lib/wml/data/logos/logo-wml.png
+lib/wml/data/logos/logo-xemacs.gif
+lib/wml/data/logos/logo-xemacs.info
+lib/wml/data/logos/logo-xemacs.png
+lib/wml/data/txt2html.dict
+lib/wml/data/weblintrc
+lib/wml/data/wmd.txt
 lib/wml/exec/wml_aux_freetable
 lib/wml/exec/wml_aux_htmlclean
 lib/wml/exec/wml_aux_htmlinfo
@@ -96,13 +108,12 @@ lib/wml/include/sys/bootp4.wml
 lib/wml/include/sys/compat1.wml
 lib/wml/perl/lib/HTML/Clean.pm
 lib/wml/perl/lib/auto/HTML/Clean/autosplit.ix
-lib/wml/perl/lib/${MACHINE_ARCH}-${LOWER_OPSYS}/WML/GD.pm
-lib/wml/perl/lib/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/HTML/Clean/.packlist
-lib/wml/perl/lib/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/WML/GD/.packlist
-lib/wml/perl/lib/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/WML/GD/GD.bs
-lib/wml/perl/lib/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/WML/GD/GD.so
-lib/wml/perl/lib/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/WML/GD/autosplit.ix
-man/cat1/wml_aux_linklint.0
+lib/wml/perl/lib/${PERL_ARCHNAME}/WML/GD.pm
+lib/wml/perl/lib/${PERL_ARCHNAME}/auto/HTML/Clean/.packlist
+lib/wml/perl/lib/${PERL_ARCHNAME}/auto/WML/GD/.packlist
+lib/wml/perl/lib/${PERL_ARCHNAME}/auto/WML/GD/GD.bs
+lib/wml/perl/lib/${PERL_ARCHNAME}/auto/WML/GD/GD.so
+lib/wml/perl/lib/${PERL_ARCHNAME}/auto/WML/GD/autosplit.ix
 man/cat1/wml_aux_tidy.0
 man/cat1/wml_aux_txt2html.0
 man/cat1/wml_p4_gm4.0
@@ -125,6 +136,7 @@ man/man1/wml_aux_freetable.1
 man/man1/wml_aux_htmlclean.1
 man/man1/wml_aux_htmlinfo.1
 man/man1/wml_aux_iselect.1
+man/man1/wml_aux_linklint.1
 man/man1/wml_aux_map2html.1
 man/man1/wml_aux_weblint.1
 man/man1/wml_p1_ipp.1
@@ -186,13 +198,13 @@ man/man7/wml_intro.7
 man/man7/wml_macros.7
 man/man7/wml_tags.7
 man/man7/wml_tutorial.7
-@dirrm lib/wml/perl/lib/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/WML/GD
-@dirrm lib/wml/perl/lib/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/WML
-@dirrm lib/wml/perl/lib/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/HTML/Clean
-@dirrm lib/wml/perl/lib/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/HTML
-@dirrm lib/wml/perl/lib/${MACHINE_ARCH}-${LOWER_OPSYS}/auto
-@dirrm lib/wml/perl/lib/${MACHINE_ARCH}-${LOWER_OPSYS}/WML
-@dirrm lib/wml/perl/lib/${MACHINE_ARCH}-${LOWER_OPSYS}
+@dirrm lib/wml/perl/lib/${PERL_ARCHNAME}/auto/WML/GD
+@dirrm lib/wml/perl/lib/${PERL_ARCHNAME}/auto/WML
+@dirrm lib/wml/perl/lib/${PERL_ARCHNAME}/auto/HTML/Clean
+@dirrm lib/wml/perl/lib/${PERL_ARCHNAME}/auto/HTML
+@dirrm lib/wml/perl/lib/${PERL_ARCHNAME}/auto
+@dirrm lib/wml/perl/lib/${PERL_ARCHNAME}/WML
+@dirrm lib/wml/perl/lib/${PERL_ARCHNAME}
 @dirrm lib/wml/perl/lib/auto/HTML/Clean
 @dirrm lib/wml/perl/lib/auto/HTML
 @dirrm lib/wml/perl/lib/auto
@@ -208,6 +220,6 @@ man/man7/wml_tutorial.7
 @dirrm lib/wml/include/des
 @dirrm lib/wml/include
 @dirrm lib/wml/exec
-@dirrm lib/wml/aux/logos
-@dirrm lib/wml/aux
+@dirrm lib/wml/data/logos
+@dirrm lib/wml/data
 @dirrm lib/wml
