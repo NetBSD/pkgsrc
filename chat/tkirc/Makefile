@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/02/23 19:13:38 hubertf Exp $
+# $NetBSD: Makefile,v 1.5 2001/03/09 11:44:37 dmcmahill Exp $
 
 DISTNAME=	tkirc1.202
 PKGNAME=	tkirc-1.202
@@ -19,7 +19,7 @@ WRKSRC=		${WRKDIR}/tkirc
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/tkirc	  ${PREFIX}/bin
-	${INSTALL_DATA_DIR}} ${PREFIX}/share/doc/tkirc
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/tkirc
 	${INSTALL_DATA} ${WRKSRC}/tkircrc-example ${PREFIX}/share/doc/tkirc
 	${INSTALL_DATA} ${WRKSRC}/README	  ${PREFIX}/share/doc/tkirc
 	${INSTALL_DATA} ${WRKSRC}/CHANGES	  ${PREFIX}/share/doc/tkirc
