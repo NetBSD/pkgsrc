@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2004/04/18 03:03:59 snj Exp $
+# $NetBSD: Makefile,v 1.3 2004/08/25 20:26:17 snj Exp $
 
-DISTNAME=		quakeforge-0.5.4
+DISTNAME=		quakeforge-0.5.5
 CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=quake/}
 
@@ -11,6 +11,7 @@ COMMENT=		Improved Quake engine
 BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
 
 CONFIGURE_ARGS+=	--with-cpp="${CPP} %d %i %o"
+CONFIGURE_ARGS+=	--disable-ogg
 CONFIGURE_ARGS+=	--disable-xmms
 GNU_CONFIGURE=		YES
 USE_BUILDLINK3=		YES
@@ -32,6 +33,12 @@ BUILD_DEFS+=		USE_INET6
 CONFIGURE_ARGS+=	--without-ipv6
 .endif
 
+pre-install:
+	${INSTALL_PROGRAM_DIR} ${PREFIX}/include/QF/plugin
+	${INSTALL_PROGRAM_DIR} ${PREFIX}/include/QF/ruamoko/gui
+
 .include "../../devel/SDL/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
 .include "../../mk/ossaudio.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

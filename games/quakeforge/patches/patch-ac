@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.1 2004/07/14 00:17:58 hubertf Exp $
+$NetBSD: patch-ac,v 1.2 2004/08/25 20:26:18 snj Exp $
 
---- ruamoko/cl_menu/Makefile.am.orig	2003-06-04 22:32:10.000000000 +0200
-+++ ruamoko/cl_menu/Makefile.am
-@@ -9,7 +9,7 @@ QFCC_DEP=$(top_builddir)/tools/qfcc/sour
+--- ruamoko/cl_menu/Makefile.am.orig	2004-02-13 21:02:25.000000000 -0800
++++ ruamoko/cl_menu/Makefile.am	2004-08-24 15:21:15.000000000 -0700
+@@ -7,7 +7,7 @@ QFCC_DEP=$(top_builddir)/tools/qfcc/sour
  QFCC=$(QFCC_DEP)
  QCFLAGS=-qq -g -Werror
  QCPPFLAGS=-I. -I$(srcdir) -I$(top_builddir)/ruamoko/include -I$(top_srcdir)/ruamoko/include -I$(top_builddir)/include -I$(top_srcdir)/include
@@ -11,10 +11,10 @@ $NetBSD: patch-ac,v 1.1 2004/07/14 00:17:58 hubertf Exp $
  if HAVE_ZLIB
  GZ=.gz
  else
-@@ -44,7 +44,7 @@ menu_obj=$(addsuffix .qfo,$(basename $(m
+@@ -40,7 +40,7 @@ menu_obj=$(addsuffix .qfo,$(basename $(m
  
- menu.dat$(GZ): $(menu_obj) $(QFCC_DEP) ../lib/libgui.a ../lib/libcsqc.a ../lib/libr.a
- 	$(QFCC) $(QCFLAGS) -p $(STRIP) -o menu.dat $(menu_obj) ../lib/libgui.a ../lib/libcsqc.a ../lib/libr.a
+ menu.dat$(GZ): $(menu_obj) $(QFCC_DEP) ../lib/libcsqc.a ../lib/libr.a ../gui/libgui.a
+ 	$(QFCC) $(QCFLAGS) -p $(STRIP) -o menu.dat $(menu_obj) ../gui/libgui.a ../lib/libcsqc.a ../lib/libr.a
 -	$(GZIP)
 +	$(XGZIP)
  
