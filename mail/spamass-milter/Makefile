@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/04/03 14:46:02 manu Exp $
+# $NetBSD: Makefile,v 1.2 2003/04/03 14:49:38 wiz Exp $
 #
 
 DISTNAME=	spamass-milter-0.1.3a
@@ -9,11 +9,11 @@ MAINTAINER=	manu@netbsd.org
 HOMEPAGE=	http://savannah.nongnu.org/projects/spamass-milt/
 COMMENT=	Milter interface to Spamassassin
 
-DEPENDS+=	spamassassin:../../mail/spamassassin
+DEPENDS+=	spamassassin>=2.44:../../mail/spamassassin
 
 USE_BUILDLINK2=	YES
 GNU_CONFIGURE=	YES
 
-.include "../../mk/pthread.buildlink2.mk"
 .include "../../mail/libmilter/buildlink2.mk"
+.include "../../mk/pthread.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
