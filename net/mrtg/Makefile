@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2001/02/17 18:19:09 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2001/02/25 13:30:41 tron Exp $
 # FreeBSD Id: Makefile,v 1.7 1997/12/16 19:42:17 vanilla Exp
 #
 
@@ -47,30 +47,30 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/mrtg
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mrtg
 	for file in ${WRKSRC}/doc/*; do \
-		${INSTALL_DATA} $$file ${PREFIX}/share/doc/mrtg/; \
+	  ${INSTALL_DATA} $$file ${PREFIX}/share/doc/mrtg; \
 	done
+	${MV} ${PREFIX}/share/doc/mrtg/*.1 ${PREFIX}/man/man1
 	for file in ANNOUNCE CHANGES COPYING COPYRIGHT README; do \
-		${INSTALL_DATA} ${WRKSRC}/$$file ${PREFIX}/share/doc/mrtg/; \
+	  ${INSTALL_DATA} ${WRKSRC}/$$file ${PREFIX}/share/doc/mrtg; \
 	done
 	for file in ${WRKSRC}/images/*.png; do \
-		${INSTALL_DATA} $$file ${PREFIX}/share/mrtg/; \
+	  ${INSTALL_DATA} $$file ${PREFIX}/share/mrtg; \
 	done
 	${INSTALL_DATA} ${WRKDIR}/mrtg.conf.example ${PREFIX}/etc/mrtg
 	for file in netstat2mrtg sys2mrtg; do \
-		${INSTALL_SCRIPT} ${WRKDIR}/$$file ${PREFIX}/libexec/; \
+	  ${INSTALL_SCRIPT} ${WRKDIR}/$$file ${PREFIX}/libexec; \
 	done
 	${INSTALL_DATA_DIR} ${PERL5_SITELIB}
 	${INSTALL_SCRIPT} ${WRKSRC}/lib/mrtg2/BER.pm \
-	    ${WRKSRC}/lib/mrtg2/SNMP_Session.pm \
-	    ${WRKSRC}/lib/mrtg2/SNMP_util.pm \
-	    ${WRKSRC}/lib/mrtg2/MRTG_lib.pm \
-	    ${WRKSRC}/lib/mrtg2/locales_mrtg.pm \
-		${PERL5_SITELIB}
+	  ${WRKSRC}/lib/mrtg2/SNMP_Session.pm \
+	  ${WRKSRC}/lib/mrtg2/SNMP_util.pm \
+	  ${WRKSRC}/lib/mrtg2/MRTG_lib.pm \
+	  ${WRKSRC}/lib/mrtg2/locales_mrtg.pm \
+	  ${PERL5_SITELIB}
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/rateup ${PREFIX}/libexec/
 	${INSTALL_SCRIPT} ${WRKSRC}/bin/mrtg ${PREFIX}/bin/
 	for file in cfgmaker indexmaker; do \
-		${INSTALL_SCRIPT} ${WRKSRC}/bin/$$file \
-			${PREFIX}/bin/mrtg$$file; \
+	  ${INSTALL_SCRIPT} ${WRKSRC}/bin/$$file ${PREFIX}/bin/mrtg$$file; \
 	done
 
 .include "../../mk/bsd.pkg.mk"
