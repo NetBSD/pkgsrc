@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.425 2004/01/07 01:24:55 xtraeme Exp $
+# $NetBSD: Makefile,v 1.426 2004/01/08 09:45:20 wiz Exp $
 #
 
 COMMENT=	Networking tools
@@ -19,6 +19,7 @@ SUBDIR+=	archie
 SUBDIR+=	arla
 SUBDIR+=	arpd
 SUBDIR+=	arpwatch
+SUBDIR+=	awhois
 SUBDIR+=	batchftp
 SUBDIR+=	bftpd
 SUBDIR+=	bind4
