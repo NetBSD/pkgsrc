@@ -1,9 +1,8 @@
-$NetBSD: patch-ag,v 1.1 1999/05/04 19:02:46 tv Exp $
+$NetBSD: patch-ag,v 1.2 1999/12/07 11:22:04 rh Exp $
 
---- convertor/alloc.c.orig	Tue May  4 15:06:04 1999
-+++ convertor/alloc.c	Tue May  4 15:06:39 1999
-@@ -32,11 +32,9 @@
- /* $Id: patch-ag,v 1.1 1999/05/04 19:02:46 tv Exp $ */
+--- convertor/alloc.c.orig	Tue Dec  7 12:16:24 1999
++++ convertor/alloc.c	Tue Dec  7 12:16:24 1999
+@@ -33,9 +33,7 @@
  
  #include "token_cache.h"
 -#if WIN32|WINNT
@@ -13,4 +12,3 @@ $NetBSD: patch-ag,v 1.1 1999/05/04 19:02:46 tv Exp $
 -#endif
  
  mem_header *head;
- 
