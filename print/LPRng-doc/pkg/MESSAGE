@@ -1,0 +1,10 @@
+$NetBSD: MESSAGE,v 1.1.1.1 2000/12/12 20:12:06 kei Exp $
+===========================================================================
+
+For further information for LPRng, have a look at
+	${PREFIX}/share/doc/LPRng/LPRng-HOWTO.txt
+
+or point your favorite brower at
+	${PREFIX}/share/doc/LPRng/LPRng-HOWTO.html
+
+===========================================================================
