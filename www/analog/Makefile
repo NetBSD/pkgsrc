@@ -1,15 +1,16 @@
-# $NetBSD: Makefile,v 1.12 1999/12/18 14:16:52 tron Exp $
+# $NetBSD: Makefile,v 1.13 2000/02/23 18:31:56 tron Exp $
 # FreeBSD Id: Makefile,v 1.15 1999/03/15 02:01:27 steve Exp
 
-DISTNAME=       analog4.01
-PKGNAME=        analog-4.01
+DISTNAME=       analog4.03
+PKGNAME=        analog-4.03
 CATEGORIES=	www
 MASTER_SITES=   ${HOMEPAGE} \
 		http://www.web42.com/analog/ \
+		http://www.statslab.cam.ac.uk/~sret1/analog/ \
 		http://ftp.sunet.se/pub/www/utilities/analog/
 
-MAINTAINER=     packages@netbsd.org
-HOMEPAGE=	http://www.statslab.cam.ac.uk/~sret1/analog/
+MAINTAINER=     tron@netbsd.org
+HOMEPAGE=	http://www.analog.cx/
 
 ALL_TARGET=	analog
 MAKE_ENV+=	PREFIX=${PREFIX}
