@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5242 2004/03/12 21:36:09 jlam Exp $
+$NetBSD: CHANGES,v 1.5243 2004/03/12 21:53:53 recht Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1450,3 +1450,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated ispell-german to 20030222 [recht 2004-03-12]
 	Updated asc to 1.14.0.0 [wiz 2004-03-12]
 	Updated db4 to 4.1.25nb1 [jlam 2004-03-12]
+	Updated awstats to 6.0 [recht 2004-03-12]
