@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.854 2001/11/21 12:58:15 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.855 2001/11/21 13:02:52 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -333,7 +333,7 @@ LDFLAGS+=		-Wl,-R${X11BASE}/lib
 LDFLAGS+=		-L${X11BASE}/lib
 .  endif
 .endif
-.if ${OPSYS} != "Darwin"
+.if ${_USE_RPATH} == "yes"
 LDFLAGS+=		-Wl,-R${LOCALBASE}/lib
 .endif
 .if !defined(USE_BUILDLINK_ONLY)

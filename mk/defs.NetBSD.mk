@@ -1,4 +1,4 @@
-# $NetBSD: defs.NetBSD.mk,v 1.11 2001/11/21 12:58:16 agc Exp $
+# $NetBSD: defs.NetBSD.mk,v 1.12 2001/11/21 13:02:53 agc Exp $
 #
 # Variable definitions for the NetBSD operating system.
 
@@ -70,3 +70,4 @@ ROOT_GROUP?=	wheel
 
 _DO_LIBINTL_CHECKS=	yes	# perform checks for valid libintl
 _IMAKE_MAKE=	${MAKE}		# program which gets invoked by imake
+_USE_RPATH=	yes		# add rpath to LDFLAGS
