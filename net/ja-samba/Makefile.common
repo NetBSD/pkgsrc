@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.6 2004/08/17 17:32:44 taca Exp $
+# $NetBSD: Makefile.common,v 1.7 2004/10/03 16:16:39 taca Exp $
 
 DISTNAME=		samba-${SAMBA_BASE_VERS}-ja-${SAMBA_JA_VERS}
-SAMBA_BASE_VERS=	2.2.10
+SAMBA_BASE_VERS=	2.2.11
 SAMBA_JA_VERS=		1.0
 WRKSRC?=		${WRKDIR}/${DISTNAME}/source
 CATEGORIES?=		net
