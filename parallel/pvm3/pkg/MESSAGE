@@ -4,3 +4,9 @@ PVM_ARCH to NETBSD
 
 in your startup files (.cshrc, .profile) on all machines
 in the cluster.
+
+In addition, you can specify each host's run path in your pvmhosts file
+like so:
+hostname ep=/usr/pkg/bin
+This allows you to point different achitecture types to various sets of
+shared or local binaries.
