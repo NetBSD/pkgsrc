@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 2004/02/27 15:45:12 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/11/08 13:42:17 wiz Exp $
 bin/rar-linux
 lib/default.sfx
 share/doc/rar-linux/license.txt
 share/doc/rar-linux/rar.txt
-share/doc/rar-linux/rar_faq.txt
 share/doc/rar-linux/rarfiles.lst
 share/doc/rar-linux/readme.txt
 share/doc/rar-linux/technote.txt

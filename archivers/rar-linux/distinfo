@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/02/27 15:10:29 wiz Exp $
+$NetBSD: distinfo,v 1.2 2004/11/08 13:42:17 wiz Exp $
 
-SHA1 (rarlinux-3.3.0.tar.gz) = 40884fe61638a959e30e98962d9a7d1d1ffc3c8c
-Size (rarlinux-3.3.0.tar.gz) = 674889 bytes
+SHA1 (rarlinux-3.4.1.tar.gz) = 2326b406a3ca01ff66cffeb8b528e8b5d8f0d304
+Size (rarlinux-3.4.1.tar.gz) = 678872 bytes
