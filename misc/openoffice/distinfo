@@ -1,9 +1,11 @@
-$NetBSD: distinfo,v 1.1.1.1 2002/02/13 18:09:21 mrauch Exp $
+$NetBSD: distinfo,v 1.2 2002/02/13 21:11:11 mrauch Exp $
 
 SHA1 (oo_641_src.tar.bz2) = ad4c7000cf317d7e9d694a6d519336bfaf1f8edd
 Size (oo_641_src.tar.bz2) = 109167758 bytes
 SHA1 (gpc231.tar.Z) = dd70a665179a9eac23624a4fe9f22104aad9bb1d
 Size (gpc231.tar.Z) = 27917 bytes
+SHA1 (oo_moz_641.tar.gz) = 97f6a80cf5170627fbeb4defc7f018b8448f74ff
+Size (oo_moz_641.tar.gz) = 6315814 bytes
 SHA1 (patch-aa) = d7e3045188a9e8a594ebef1024dee113c7320885
 SHA1 (patch-ab) = b18f016cae5d89d79f5c8de1989cc72e0e9da1af
 SHA1 (patch-ac) = 3bcea1e83189fe6c1ff6077c0a33b125a43feaee
