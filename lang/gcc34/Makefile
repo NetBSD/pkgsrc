@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2004/07/09 22:04:16 seb Exp $
+# $NetBSD: Makefile,v 1.5 2004/07/21 16:03:33 shannonjr Exp $
 #
 
-DISTNAME=	gcc-${GCC_VERSION}-${GCC_VERSION_DATE}
+DISTNAME=	gcc-${GCC_VERSION}
 PKGNAME=	gcc34-${GCC_VERSION}
 CATEGORIES=	lang
-#MASTER_SITES=	${MASTER_SITE_GNU:=gcc/gcc-${GCC_VERSION}/}
-MASTER_SITES=	ftp://gcc.gnu.org/pub/gcc/prerelease-${GCC_VERSION}-${GCC_VERSION_DATE}/
+MASTER_SITES=	${MASTER_SITE_GNU:=gcc/gcc-${GCC_VERSION}/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	shannonjr@NetBSD.org
@@ -13,7 +12,6 @@ HOMEPAGE=	http://www.gnu.org/software/gcc/gcc.html
 COMMENT=	This is the gcc 3.4 compiler
 
 GCC_VERSION=		3.4.1
-GCC_VERSION_DATE=	20040625
 
 .include "../../mk/bsd.prefs.mk"
 
