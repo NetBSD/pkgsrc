@@ -3,3 +3,5 @@ E-mail and data files.  It lets you communicate securely with people
 you've never met, with no secure channels needed for prior exchange of
 keys.  It's well featured and fast, with sophisticated key management,
 digital signatures, data compression, and good ergonomic design.
+
+This is PGP 5.x which understands both RSA and DSS/Diffie-Hellman keys.
