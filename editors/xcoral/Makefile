@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/02/25 04:17:44 hubertf Exp $
+# $NetBSD: Makefile,v 1.7 2003/05/05 17:30:54 grant Exp $
 # FreeBSD Id: Makefile,v 1.6 1999/01/26 02:16:00 steve Exp
 #
 
@@ -21,12 +21,12 @@ LIBFILES=	DEPEND README cmd.sc color.sc comments.sc compare-win.sc \
 		utilities.sc version.sc window-utilities.sc xcoralrc.lf
 
 do-install:
+	${INSTALL_DATA_DIR} ${PREFIX}/lib/xcoral
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/xcoral/HTML/icons
 	${INSTALL_PROGRAM} ${WRKSRC}/xcoral ${PREFIX}/bin
-	@${INSTALL_DATA_DIR} ${PREFIX}/lib/xcoral
 .for FILE in ${LIBFILES}
 	${INSTALL_DATA} ${WRKSRC}/SmacLib/${FILE} ${PREFIX}/lib/xcoral
 .endfor
-	@${INSTALL_DATA_DIR} ${PREFIX}/share/doc/xcoral/HTML/icons
 	${CP} -r ${WRKSRC}/Doc/* ${PREFIX}/share/doc/xcoral
 
 .include "../../mk/bsd.pkg.mk"
