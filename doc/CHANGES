@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.549 2002/11/18 20:24:03 jlam Exp $
+$NetBSD: CHANGES,v 1.550 2002/11/18 22:34:54 cjep Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3656,3 +3656,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Added libcomprex-0.3.2 [cjep 2002-11-18]
 	Added mudsh-20010311 [cjep 2002-11-18]
 	Updated db to 2.7.7nb1 [jlam 2002-11-18]
+	Added bsdgrep-0.16 [cjep 2002-11-18]
