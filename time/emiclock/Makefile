@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/02/25 04:18:19 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 2001/06/04 18:40:57 jtb Exp $
 #
 
 DISTNAME=	emiclock-2.0.2
@@ -7,6 +7,13 @@ MASTER_SITES=	ftp://ftp.noge.com/pub/EmiClock/X11/
 
 MAINTAINER=	minoura@netbsd.org
 COMMENT=	Analog clock with image in the middle
+
+LICENSE=	emiclock-license
+RESTRICTED=	"Do not distribute"
+NO_SRC_ON_FTP=${RESTRICTED}
+NO_BIN_ON_FTP=${RESTRICTED}
+NO_SRC_ON_CDROM=${RESTRICTED}
+NO_BIN_ON_CDROM=${RESTRICTED}
 
 USE_X11BASE=	yes
 USE_IMAKE=	yes
