@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2001/08/06 15:37:37 abs Exp $
+# $NetBSD: Makefile,v 1.26 2001/08/06 20:48:54 agc Exp $
 #
 
 DISTNAME=	tcsh-6.10
@@ -78,7 +78,7 @@ post-install:
 		TCSHPATH=${PREFIX}/bin/tcsh;			\
 	fi;							\
 	(							\
-		${GREP} -v $${TCSHPATH} /etc/shells.bak;	\
+		${GREP} -v '^$${TCSHPATH}$$' /etc/shells.bak;	\
 		${ECHO} $${TCSHPATH}				\
 	) >/etc/shells
 
