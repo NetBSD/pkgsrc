@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2002/06/26 10:29:33 seb Exp $
+@comment $NetBSD: PLIST,v 1.5 2002/07/17 13:22:49 rh Exp $
 bin/cddbslave
 bin/cddbsubmit
 bin/gmix
@@ -79,3 +79,5 @@ share/mime-info/grecord.mime
 @dirrm share/gnome/help/gmix/C/figures
 @dirrm share/gnome/help/gmix/C
 @dirrm share/gnome/help/gmix
+@unexec scrollkeeper-rebuilddb
+@exec scrollkeeper-rebuilddb
