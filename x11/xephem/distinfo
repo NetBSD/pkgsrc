@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.2 2001/04/19 11:07:53 skrll Exp $
+$NetBSD: distinfo,v 1.3 2002/01/19 11:39:43 drochner Exp $
 
-SHA1 (xephem-3.4.tar.gz) = 4dbee068242022ab077d9516f99374095a23c238
-Size (xephem-3.4.tar.gz) = 2329501 bytes
-SHA1 (patch-aa) = 4f27922e46d18486e9d0931f4107ededb0c46b1b
-SHA1 (patch-ac) = c53bd1e08396eef2240f2e4c26d0961de80d2ebb
-SHA1 (patch-ad) = f61619f628a0dc47b8c6e50e454e270a788ba9d4
+SHA1 (xephem-3.5.2.tar.gz) = ec3bee509b9fa2679c4a80e52c2c8763ad1f4f24
+Size (xephem-3.5.2.tar.gz) = 2523508 bytes
+SHA1 (patch-aa) = dd2564928714170a365747a93c5565b1122aa9a0
+SHA1 (patch-ac) = 103263121d64924f190ac072194ef16ac597a07f
 SHA1 (patch-ae) = ede7fae621127ce381f144f3a56fe47b98ebb95e
