@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.482 2002/11/08 10:17:23 wiz Exp $
+$NetBSD: CHANGES,v 1.483 2002/11/08 11:50:33 mrg Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3557,3 +3557,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated xpdf-chinese-simplified to 20020617 [wiz 2002-11-08]
 	Added xpdf-hebrew-20021022 [wiz 2002-11-08]
 	Updated xpdf-latin2 to 20021022 [wiz 2002-11-08]
+	Added aegis-4.9 [mrg 2002-11-08]
