@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2002/01/18 08:49:39 martti Exp $
+# $NetBSD: Makefile,v 1.25 2002/01/19 11:46:31 drochner Exp $
 
 DISTNAME=	gnome-1.4.0.4
 CATEGORIES=	x11 gnome
@@ -21,7 +21,6 @@ DEPENDS+=	gnome-chess>=0.2.4:../../games/gnome-chess
 DEPENDS+=	gnome-games>1.4.0:../../games/gnome-games
 DEPENDS+=	gnome-media>=1.2.0:../../audio/gnome-media
 DEPENDS+=	gnome-pim>=1.4.0:../../misc/gnome-pim
-DEPENDS+=	gnome-python>=1.4.0:../gnome-python
 DEPENDS+=	gnome-users-guide>=1.2:../gnome-users-guide
 DEPENDS+=	gnome-utils>=1.4.1:../../misc/gnome-utils
 DEPENDS+=	evolution>=0.15:../../mail/evolution
@@ -40,4 +39,5 @@ NO_BUILD=	yes
 
 do-install:	# empty
 
+.include "../../x11/gnome-python/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
