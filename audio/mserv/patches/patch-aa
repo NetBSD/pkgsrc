@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.6 2003/09/03 12:35:12 martin Exp $
+$NetBSD: patch-aa,v 1.7 2003/09/03 19:55:28 abs Exp $
 
 --- mserv/Makefile.in.orig	2003-08-03 16:57:19.000000000 +0200
 +++ mserv/Makefile.in	2003-09-03 14:01:16.000000000 +0200
@@ -7,7 +7,7 @@ $NetBSD: patch-aa,v 1.6 2003/09/03 12:35:12 martin Exp $
  target_vendor = @target_vendor@
  
 -INCLUDES = -I../hdr -DDATADIR=\"${datadir}\"
-+INCLUDES = -I../hdr -DDATADIR=\"${datadir}\" -DBINDIR=\"${prefix}/bin\"
++INCLUDES = -I../hdr -DDATADIR=\"${datadir}\" -DBINDIR=\"${prefix}/bin\" -DPARSE_OGG_INFO=1
  
  bin_PROGRAMS = mserv
  
