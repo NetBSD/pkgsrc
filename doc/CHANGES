@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4184 2003/12/19 09:46:12 jmmv Exp $
+$NetBSD: CHANGES,v 1.4185 2003/12/19 09:52:36 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5238,3 +5238,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added rp-l2tp-0.3 [agc 2003-12-18]
 	Added p5-Memoize-ExpireLRU-0.55 [grant 2003-12-19]
 	Updated gaim to 0.74nb3 [jmmv 2003-12-19]
+	Updated pkg_comp to 1.12 [jmmv 2003-12-19]
