@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1998/08/05 12:16:48 frueauf Exp $
+# $NetBSD: Makefile,v 1.4 1998/08/05 14:46:31 tv Exp $
 #
 
 DISTNAME=       imap-4.2
@@ -9,19 +9,18 @@ EXTRACT_SUFX=	.tar.Z
 
 MAINTAINER=	tv@netbsd.org
 
-BUILD_DEPENDS=	${PREFIX}/bin/libtool:../../devel/libtool
+USE_LIBTOOL=	yes
 
+INST_PROG=	${LIBTOOL} ${INSTALL_PROGRAM}
+INST_LIB=	${LIBTOOL} ${INSTALL_DATA}
 CONFLICTS=	imap-uw-4.1
-
-INST_PROG=	${PREFIX}/bin/libtool --mode=install ${INSTALL_PROGRAM}
-INST_LIB=	${PREFIX}/bin/libtool --mode=install ${INSTALL_DATA}
 
 do-configure:
 	@${SED} -e 's|@PREFIX@|${PREFIX}|' ${WRKSRC}/src/imapd/imapd.8c >${WRKSRC}/imapd.8
 	@${SED} -e 's|@PREFIX@|${PREFIX}|' ${WRKSRC}/src/ipopd/ipopd.8c >${WRKSRC}/ipopd.8
 
 do-build:
-	cd ${WRKSRC} && ${MAKE} neb PREFIX=${PREFIX} CC="${PREFIX}/bin/libtool ${CC}"
+	cd ${WRKSRC} && ${MAKE} neb PREFIX=${PREFIX} CC="${LIBTOOL} ${CC}"
 
 do-install:
 	${INST_LIB} ${WRKSRC}/c-client/libimapuw.la ${PREFIX}/lib/
