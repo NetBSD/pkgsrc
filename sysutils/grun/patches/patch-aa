@@ -1,0 +1,27 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/11/18 22:41:41 agc Exp $
+
+Use correct header file for locale information
+
+--- grun.c	2001/11/13 14:57:16	1.1
++++ grun.c	2001/11/13 14:57:44
+@@ -50,6 +50,10 @@
+ #define ARG_BASE	1
+ #endif
+ 
++#ifdef HAVE_LOCALE_H
++#include <locale.h>
++#endif
++
+ #include <sys/stat.h>
+ 
+ #define MAX_BUFF	1024
+@@ -894,7 +898,9 @@
+ 
+ 	gtk_init(&argc, &argv);
+ #ifndef WIN32
++#ifdef HAVE_SETLOCALE
+ 	setlocale (LC_ALL, "");
++#endif
+ 	bindtextdomain (PACKAGE, LOCALEDIR);
+ 	textdomain (PACKAGE);
+ #endif /* WIN32 */

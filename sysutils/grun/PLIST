@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/11/18 22:41:40 agc Exp $
+bin/grun
+man/man1/grun.1
+share/grun/gassoc
+share/grun/consfile
+@dirrm share/grun
