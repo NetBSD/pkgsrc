@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/02/17 18:18:46 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2002/09/23 07:07:02 grant Exp $
 #
 
 DISTNAME=	dhid-4.0.1
@@ -11,16 +11,11 @@ COMMENT=	Dynamic Host Information System client daemon
 
 DEPENDS+=	gmp-[0-9]*:../../devel/gmp
 
-do-configure:
-	${SED} \
-		-e "s,@PREFIX@,${PREFIX},g" \
-		-e "s,@ECHO@,${ECHO},g" \
-		< ${FILESDIR}/dhid.sh > ${WRKDIR}/dhid.sh
+RCD_SCRIPTS=	dhid
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/dhid ${PREFIX}/sbin
 	${INSTALL_PROGRAM} ${WRKSRC}/genkeys ${PREFIX}/sbin/dhid-genkeys
-	${INSTALL_SCRIPT} ${WRKDIR}/dhid.sh ${PREFIX}/etc/rc.d/dhid
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/dhid
 	${INSTALL_DATA} ${WRKSRC}/COPYRIGHT ${PREFIX}/share/doc/dhid
 	${INSTALL_DATA} ${WRKSRC}/AUTHORS ${PREFIX}/share/doc/dhid
@@ -28,4 +23,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/WHATSNEW ${PREFIX}/share/doc/dhid
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/dhid
 
+.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
