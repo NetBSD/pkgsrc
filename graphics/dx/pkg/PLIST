@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2000/01/31 20:56:50 drochner Exp $
+@comment $NetBSD: PLIST,v 1.3 2000/04/28 15:27:02 drochner Exp $
 bin/dx
+dx/lib_netbsd/arch.mak
 dx/lib_netbsd/libDXlite.a
 dx/lib_netbsd/libDXcallm.a
 dx/lib_netbsd/libDX.a
@@ -113,9 +114,9 @@ dx/help/ugidx
 dx/help/svsmstrh
 dx/help/usrefidx
 dx/help/GarHelpDir
-dx/help/BMHelpDir
 dx/help/HelpDir
 dx/help/HelpNotAvailable
+dx/help/MBHelpDir
 dx/help/dxall1
 dx/help/dxall10
 dx/help/dxall100
