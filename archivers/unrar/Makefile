@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2004/02/27 15:28:20 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2004/03/11 21:39:17 tv Exp $
 #
 
 DISTNAME=	unrarsrc-3.3.6
@@ -31,7 +31,7 @@ do-install:
 
 # Don't set _LARGEFILE_SOURCE for platforms w/o ftello() and fseeko().
 #
-.for __glob__ in NetBSD-1.5*
+.for __glob__ in Interix-* NetBSD-1.5*
 .if ${MACHINE_PLATFORM:M${__glob__}} != ""
 .MAKEFLAGS+=	DEFINES=""
 .endif
