@@ -1,27 +1,20 @@
-$NetBSD: patch-ae,v 1.5 2001/06/26 03:14:12 christos Exp $
+$NetBSD: patch-ae,v 1.6 2004/05/12 18:45:26 bouyer Exp $
 
---- changer-src/Makefile.in.orig	Tue Apr  3 15:55:43 2001
-+++ changer-src/Makefile.in	Mon Jun 25 22:51:37 2001
-@@ -163,7 +163,7 @@
- # routines, and second to pick up any references in the other libraries.
- ###
+--- changer-src/scsi-changer-driver.c.orig	2003-01-26 11:20:56.000000000 -0800
++++ changer-src/scsi-changer-driver.c	2004-02-23 08:44:56.000000000 -0800
+@@ -1358,13 +1358,14 @@
+ {
+   int ret = 0;
+   extern OpenFiles_T *pDev;
++  extern changer_t chg;         /* Needed for the infos about havebarcode */
  
--LDADD = ../common-src/libamanda.$(LIB_EXTENSION) 	../server-src/libamserver.$(LIB_EXTENSION) 	../tape-src/libamtape.$(LIB_EXTENSION) 	../common-src/libamanda.$(LIB_EXTENSION)
-+LDADD = ../server-src/libamserver.$(LIB_EXTENSION)
+   DebugPrint(DEBUG_INFO, SECTION_BARCODE,"##### START BarCode\n");
+   DebugPrint(DEBUG_INFO, SECTION_BARCODE,"%-20s : fd %d\n", "BarCode", fd);
  
- 
- SUFFIXES = .pl .sh
-@@ -191,11 +191,8 @@
- scsi-irix.$(OBJEXT) scsi-linux.$(OBJEXT) scsi-solaris.$(OBJEXT) \
- scsi-bsd.$(OBJEXT)
- chg_scsi_LDADD = $(LDADD)
--chg_scsi_DEPENDENCIES =  ../common-src/libamanda.$(LIB_EXTENSION) \
--../server-src/libamserver.$(LIB_EXTENSION) \
--../tape-src/libamtape.$(LIB_EXTENSION) \
--../common-src/libamanda.$(LIB_EXTENSION)
--chg_scsi_LDFLAGS = 
-+chg_scsi_DEPENDENCIES = ../server-src/libamserver.$(LIB_EXTENSION) 
-+chg_scsi_LDFLAGS = -lamanda -lamtape
- chg_scsi_chio_OBJECTS =  chg-scsi-chio.$(OBJEXT) scsi-hpux.$(OBJEXT) \
- scsi-chio.$(OBJEXT)
- chg_scsi_chio_LDADD = $(LDADD)
+   DebugPrint(DEBUG_INFO, SECTION_BARCODE,"Ident = [%s], function = [%s]\n", pDev[fd].ident,
+ 	     pDev[fd].functions->ident);
+-  ret = pDev[fd].functions->function_barcode(fd);
++  ret = (pDev[fd].functions->function_barcode(fd) | chg.havebarcode);
+   DebugPrint(DEBUG_INFO, SECTION_BARCODE,"##### STOP BarCode (%d)\n",ret);
+   return(ret);
+ }
