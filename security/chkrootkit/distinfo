@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/02/17 15:33:52 minskim Exp $
+
+SHA1 (chkrootkit-0.43/chkrootkit.tar.gz) = 58e3693823a9b8ab9b6bb609d54b5716af332a00
+Size (chkrootkit-0.43/chkrootkit.tar.gz) = 33355 bytes
+SHA1 (patch-aa) = c47ecb09d02c710727420a3adfb7d8b62d721f2d
