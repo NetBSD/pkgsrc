@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/11/29 17:23:53 wiz Exp $
+include/gdk-pixbuf/gnome-canvas-pixbuf.h
+lib/gnomecanvaspixbufConf.sh
+lib/libgnomecanvaspixbuf.a
+lib/libgnomecanvaspixbuf.la
+lib/libgnomecanvaspixbuf.so.1.0
