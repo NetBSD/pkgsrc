@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.149 2002/10/03 13:57:19 markd Exp $
+$NetBSD: CHANGES,v 1.150 2002/10/03 14:07:12 martti Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3079,3 +3079,5 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated kdesdk to 3.0.3 [markd 2002-10-03]
 	Updated kdevelop-base to 2.1.3 [markd 2002-10-03]
 	Updated kdevelop to 2.1.3 [markd 2002-10-03]
+	Updated libxml2 to 2.4.25 [martti 2002-10-03]
+	Updated libxslt to 1.0.21 [martti 2002-10-03]
