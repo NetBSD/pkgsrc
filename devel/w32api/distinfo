@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.3 2001/10/21 12:39:05 kent Exp $
+$NetBSD: distinfo,v 1.4 2002/03/18 03:25:46 kent Exp $
 
-SHA1 (w32api-1.1-src.tar.gz) = 8b2391d94c18839b245313e5d30c1f38576b3954
-Size (w32api-1.1-src.tar.gz) = 483745 bytes
+SHA1 (w32api-1.2-src.tar.gz) = 4862ee2372ea962651a315eba836c2e04cd1fa4c
+Size (w32api-1.2-src.tar.gz) = 493336 bytes
 SHA1 (patch-ag) = 03b48ea8781815c5a170d9e80fe706dc50d07b04
-SHA1 (patch-ah) = 4768a485524455dc16a573f78ce36941177afa6d
+SHA1 (patch-ah) = 1829e9f6d5f243b98cc97132e840a7d6165290ca
 SHA1 (patch-ai) = 2ea74a51180e05ae3fde354ad8b0f535c39619ab

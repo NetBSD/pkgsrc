@@ -1,12 +1,33 @@
-$NetBSD: patch-ah,v 1.1 2001/10/21 12:39:06 kent Exp $
+$NetBSD: patch-ah,v 1.2 2002/03/18 03:25:47 kent Exp $
 
---- include/winnt.h.orig	Mon Jul 16 01:01:27 2001
+--- include/winnt.h.orig	Tue Dec  4 22:10:28 2001
 +++ include/winnt.h
-@@ -53,6 +53,7 @@
+@@ -52,15 +52,19 @@
+ typedef char *PSZ;
  
  #ifndef _WCHAR_T_DEFINED
- #define _WCHAR_T_DEFINED
-+#undef _BSD_WCHAR_T_
- #ifndef _WCHAR_T_
- #define _WCHAR_T_
- #undef __need_wchar_t
+-#define _WCHAR_T_DEFINED
+-#ifndef _WCHAR_T_
+-#define _WCHAR_T_
+-#undef __need_wchar_t
+-#ifndef __cplusplus
+-typedef unsigned short wchar_t;
+-#endif
+-#endif
+-#endif
++# define _WCHAR_T_DEFINED
++# ifndef _WCHAR_T_
++#  define _WCHAR_T_
++#  undef __need_wchar_t
++#  ifndef __cplusplus
++#   include <machine/ansi.h>
++#   ifdef _BSD_WCHAR_T_
++typedef _BSD_WCHAR_T_ wchar_t;
++#    undef _BSD_WCHAR_T_
++#   endif /* _BSD_WCHAR_T_ */
++#  endif /* !__cplusplus */
++# endif /* !_WCHAR_T_ */
++#endif /* !_WCHAR_T_DEFINED */
+ 
+ typedef wchar_t WCHAR;
+ typedef WCHAR *PWCHAR,*LPWCH,*PWCH,*NWPSTR,*LPWSTR,*PWSTR;
