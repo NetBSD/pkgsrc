@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2002/01/14 10:04:53 martti Exp $
+$NetBSD: distinfo,v 1.5 2002/02/15 09:05:01 martti Exp $
 
-SHA1 (xfce-3.8.7.tar.gz) = 958ee162f42c767986814367a766dd87425b9840
-Size (xfce-3.8.7.tar.gz) = 3965611 bytes
-SHA1 (patch-ac) = a0d8dc9a5e2ff332fcf8d367495c140fe8b891e3
+SHA1 (xfce-3.8.14.tar.gz) = 29970b93ff5708f39b1ebb0bd34101220a5401de
+Size (xfce-3.8.14.tar.gz) = 4575761 bytes
+SHA1 (patch-ac) = 522fda7357121014b3570ebce1f64aaca3141a54
