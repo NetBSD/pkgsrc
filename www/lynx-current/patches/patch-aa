@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2001/03/27 02:58:41 fredb Exp $
+$NetBSD: patch-aa,v 1.5 2001/12/31 04:21:31 fredb Exp $
 
---- configure.orig	Mon Feb 26 20:41:57 2001
+--- configure.orig	Sun Nov 18 19:37:14 2001
 +++ configure
-@@ -5717,7 +5717,7 @@
+@@ -4296,7 +4296,7 @@
    fi
    ;;
  esac
@@ -11,82 +11,30 @@ $NetBSD: patch-aa,v 1.4 2001/03/27 02:58:41 fredb Exp $
  cat >> confdefs.h <<\EOF
  #define SOCKS 1
  EOF
-@@ -6833,7 +6833,10 @@
+@@ -5412,12 +5412,25 @@
  echo "$ac_t""$cf_cv_screen" 1>&6
  
  case $cf_cv_screen in
--ncurses|slang)
-+ncurses)
-+	cf_cv_ncurses_header=ncurses.h
+-ncurses|ncursesw|slang)
++ncurses|ncursesw)
++	case $host_os in
++	netbsd)
++		cf_cv_ncurses_h=ncurses.h
++		;;
++	esac
 +	;;
 +slang)
  	;;
  pdcurses)
  	cf_cv_ncurses_header=xcurses.h
-@@ -7484,6 +7487,12 @@
- EOF
- 
  	;;
-+ncurses.h)
-+	cat >> confdefs.h <<\EOF
-+#define HAVE_NCURSES_H 1
-+EOF
-+
-+	;;
- esac
- 
- case $cf_cv_ncurses_header in # (vi
-@@ -8655,32 +8664,32 @@
- cf_slang_LIBS3="$LIBS"
- echo $ac_n "checking if we can link slang without termcap""... $ac_c" 1>&6
- echo "configure:8658: checking if we can link slang without termcap" >&5
--if test -n "`echo $cf_slang_LIBS1 | sed -e 's/ //g'`" ; then
--	cf_exclude=`echo ".$cf_slang_LIBS2" | sed -e "s@$cf_slang_LIBS1@@" -e 's@^.@@'`
--else
--	cf_exclude="$cf_slang_LIBS2"
--fi
--LIBS=`echo ".$cf_slang_LIBS3" | sed -e "s@$cf_exclude@@" -e 's@^.@@'`
--cat > conftest.$ac_ext <<EOF
-+#if test -n "`echo $cf_slang_LIBS1 | sed -e 's/ //g'`" ; then
-+#	cf_exclude=`echo ".$cf_slang_LIBS2" | sed -e "s@$cf_slang_LIBS1@@" -e 's@^.@@'`
-+#else
-+#	cf_exclude="$cf_slang_LIBS2"
-+#fi
-+#LIBS=`echo ".$cf_slang_LIBS3" | sed -e "s@$cf_exclude@@" -e 's@^.@@'`
-+#cat > conftest.$ac_ext <<EOF
- #line 8666 "configure"
- #include "confdefs.h"
- #include <slang.h>
--int main() {
--SLtt_get_screen_size()
--; return 0; }
--EOF
--if { (eval echo configure:8673: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
--  rm -rf conftest*
--  cf_result=yes
--else
--  echo "configure: failed program was:" >&5
--  cat conftest.$ac_ext >&5
--  rm -rf conftest*
-+#int main() {
-+#SLtt_get_screen_size()
-+#; return 0; }
-+#EOF
-+#if { (eval echo configure:8673: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
-+#  rm -rf conftest*
-+#  cf_result=yes
-+#else
-+#  echo "configure: failed program was:" >&5
-+#  cat conftest.$ac_ext >&5
-+#  rm -rf conftest*
-   cf_result=no
--fi
--rm -f conftest*
-+#fi
-+#rm -f conftest*
- echo "$ac_t""$cf_result" 1>&6
--test $cf_result = no && LIBS="$cf_slang_LIBS3"
-+test $cf_result = no && LIBS="$cf_slang_LIBS3 -lm -ltermcap"
- 
- 
- 
+ curses)
++	case $host_os in
++	netbsd)
++		ac_cv_header_term_h=no
++		cf_cv_ncurses_version=no
++		;;
++	esac
+ 	if eval "test \"`echo '$''{'cf_cv_ncurses_header'+set}'`\" != set"; then
+ 		cf_cv_ncurses_header=curses.h
+ 	fi
