@@ -1,47 +1,32 @@
-# $NetBSD: Makefile,v 1.32 2001/06/19 03:48:01 jlam Exp $
-#
+# $NetBSD: Makefile,v 1.33 2002/06/20 19:28:25 jlam Exp $
 
-DISTNAME=		coda-5.3.13
-PKGNAME=		coda-client-5.3.13
-CATEGORIES=		net
-MASTER_SITES=		ftp://ftp.coda.cs.cmu.edu/pub/coda/src/
+PKGNAME=	coda-client-${DIST_VERS}
+COMMENT=	client programs for a replicated high-performance network file system
 
-MAINTAINER=		phil@cs.wwu.edu
-HOMEPAGE=		http://www.coda.cs.cmu.edu/
-COMMENT=		client programs for a replicated high-performance network file system
+USE_BUILDLINK_ONLY=	yes
 
-# Requires "lwp" plus "filesystem CODA" to operate. Should build on
-# any NetBSD-*-m68k, though.
-ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-*-m68k NetBSD-*-sparc* NetBSD-*-arm32
+.include "../../net/coda5_server/Makefile.common"
 
 ALL_TARGET=		coda
 INSTALL_TARGET=		client-install
+INSTALL_EXTRA_TMPL=	${.CURDIR}/DEINSTALL
+DEINSTALL_EXTRA_TMPL=	${.CURDIR}/INSTALL
 
-USE_PERL5=		yes
-GNU_CONFIGURE=		yes
-USE_GMAKE=		yes
-USE_BUILDLINK_ONLY=	yes
-
-.include "../../devel/lwp/buildlink.mk"
-.include "../../devel/readline/buildlink.mk"
-.include "../../devel/rpc2/buildlink.mk"
-.include "../../devel/rvm/buildlink.mk"
-
-DEINSTALL_FILE=		${WRKDIR}/DEINSTALL
-INSTALL_FILE=		${WRKDIR}/INSTALL
-
-INSTALL_SUBST=		CAT=${CAT:Q}
-INSTALL_SUBST+=		LN=${LN:Q}
-INSTALL_SUBST+=		RM=${RM:Q}
-INSTALL_SUBST+=		RMDIR=${RMDIR:Q}
-INSTALL_SUBST+=		TRUE=${TRUE:Q}
-INSTALL_SUBST_SED=	${INSTALL_SUBST:S/=/@!/:S/$/!g/:S/^/ -e s!@/}
-
-pre-install:
-	${SED} ${INSTALL_SUBST_SED} ${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
-	${SED} ${INSTALL_SUBST_SED} ${PKGDIR}/INSTALL > ${INSTALL_FILE}
+CONF_FILES+=	${EGDIR}/sidekick.intr.ex ${PKG_SYSCONFDIR}/sidekick.intr
+CONF_FILES+=	${EGDIR}/venus.conf.ex ${PKG_SYSCONFDIR}/venus.conf
 
 post-install:
-	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
+	cd ${PREFIX}; ${PAX} -zr					\
+		-s "/usr\/\(man\/man.\/\)au.8/\1venus-au.8/"		\
+		-s "/usr\/\(man\/man.\/\)replay.8/\1coda_replay.8/"	\
+		-s "/usr\///"						\
+		-f ${_DISTDIR}/${CODADOC_DISTFILE}			\
+		`${GREP} "^man/" ${PLIST_SRC} |				\
+			${GREP} -v "man/man8/au.8" |			\
+			${SED}	-e "s|^|usr/|"				\
+				-e "s|coda_replay\.8|replay.8|"		\
+				-e "s|venus-au\.8|au.8|"`
+	${LN} -sf venus-au.8 ${PREFIX}/man/man8/au.8
 
+.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
