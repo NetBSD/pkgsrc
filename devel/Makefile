@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.262 2002/01/24 23:51:22 seb Exp $
+# $NetBSD: Makefile,v 1.263 2002/01/29 16:32:18 drochner Exp $
 #
 
 COMMENT=	Development utilities
@@ -218,9 +218,13 @@ SUBDIR+=	prcs
 SUBDIR+=	pth
 SUBDIR+=	ptl2
 SUBDIR+=	pwlib
+SUBDIR+=	py-Checker
+SUBDIR+=	py-Optik
 SUBDIR+=	py-curses
 SUBDIR+=	py-expect
 SUBDIR+=	py-idle
+SUBDIR+=	py-unit
+SUBDIR+=	py-unitgui
 SUBDIR+=	ratfor
 SUBDIR+=	rcs
 SUBDIR+=	rdp
