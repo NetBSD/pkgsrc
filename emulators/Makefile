@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.103 2004/07/13 10:32:37 tron Exp $
+# $NetBSD: Makefile,v 1.104 2004/07/13 10:35:35 tron Exp $
 #
 
 COMMENT=	Emulators for other operating systems
@@ -73,7 +73,7 @@ SUBDIR+=	suse64_xforms
 SUBDIR+=	suse91_base
 SUBDIR+=	suse91_compat
 SUBDIR+=	suse91_gtk
-SUBDIR+=	suse91_linux
+#SUBDIR+=	suse91_linux
 SUBDIR+=	suse91_x11
 SUBDIR+=	suse_audio
 SUBDIR+=	suse_base
