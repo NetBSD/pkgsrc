@@ -1,26 +1,31 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/11/22 11:32:29 agc Exp $
+$NetBSD: patch-aa,v 1.1.1.1.2.1 2002/06/23 19:03:52 jlam Exp $
 
---- Makefile.orig	Mon Jul  9 02:54:24 2001
-+++ Makefile	Mon Jul  9 02:55:51 2001
-@@ -1,5 +1,6 @@
+--- Makefile.orig	Fri May 31 05:13:18 2002
++++ Makefile
+@@ -1,6 +1,6 @@
  
 -CC=gcc
-+CC+= ${CFLAGS}
-+BINDIR= ${PREFIX}/bin
+-LD=ld
++CC+=${CFLAGS}
++BINDIR=${PREFIX}/bin
  
  default:
- 	$(CC) -c conditionals.c -Wall
-@@ -46,10 +47,9 @@
- 	$(CC) -o unipiss unipiss.c html.o general.o -Wall
+ 	cd src && make
+@@ -16,14 +16,12 @@
+ 	@mv src/gtkasp2php .
  
  install:
 -	@if [ -e asp2php ]; then install asp2php /usr/local/bin; fi;
--	@if [ -e unipiss ]; then install unipiss /usr/local/bin; fi;
 -	@if [ -e gtkasp2php ]; then install gtkasp2php /usr/local/bin; fi;
 -	@echo "Compiled programs have been installed in /usr/local/bin"
-+	@if [ -e unipiss ]; then install unipiss ${BINDIR}; fi;
 +	@if [ -e gtkasp2php ]; then install gtkasp2php ${BINDIR}; fi;
 +	@echo "Compiled programs have been installed in ${BINDIR}"
  	@echo ""
  
- all: default
+ uninstall:
+-	@if [ -e /usr/local/bin/asp2php ]; then rm /usr/local/bin/asp2php; fi;
+-	@if [ -e /usr/local/bin/gtkasp2php ]; then rm /usr/local/bin/gtkasp2php; fi;
++	@if [ -e ${BINDIR}/gtkasp2php ]; then rm ${BINDIR}/gtkasp2php; fi;
+ 	@echo "asp2php has been uninstalled."
+ 	@echo ""
+ 

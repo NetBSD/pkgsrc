@@ -1,0 +1,23 @@
+$NetBSD: patch-aa,v 1.1.1.1.20.2 2002/06/23 19:00:49 jlam Exp $
+
+--- configure.orig	Sun May 26 12:06:50 2002
++++ configure
+@@ -530,18 +530,6 @@
+ # Check whether --with-platform or --without-platform was given.
+ if test "${with_platform+set}" = set; then
+   withval="$with_platform"
+-  
+-else
+-  
+-{ echo "configure: error: 
+-
+-Please do not run 'configure' manually - instead, run the AppRun script with
+-the --compile option, like this:
+-	$ ROX-Session/AppRun --compile
+-
+-Thank you.
+-" 1>&2; exit 1; }
+-
+ fi
+ 
+ 

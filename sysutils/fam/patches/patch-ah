@@ -1,0 +1,15 @@
+$NetBSD: patch-ah,v 1.1.1.1.2.2 2002/06/23 18:59:58 jlam Exp $
+
+--- fam/Interest.c++.orig	Thu Dec 20 08:59:20 2001
++++ fam/Interest.c++
+@@ -25,7 +25,9 @@
+ #include <string.h>
+ #include <errno.h>
+ #include <sys/param.h>
+-#include <sys/sysmacros.h>
++#if !defined(BSD)
++#  include <sys/sysmacros.h>
++#endif
+ 
+ #ifdef HAVE_IRIX_XTAB_VERIFICATION
+ #include <stdio.h>

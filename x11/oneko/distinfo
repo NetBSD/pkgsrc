@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2001/04/19 11:07:41 skrll Exp $
+$NetBSD: distinfo,v 1.2.2.1 2002/06/23 19:06:42 jlam Exp $
 
-SHA1 (oneko-1.1b.tar.gz) = e00ac84c1e06abfed0fdebbd106e90d0fd9f6645
+SHA1 (oneko-1.1b.tar.gz) = b7c924dbcc28565e7bfa05cbfdcf8a98085bfd2d
 Size (oneko-1.1b.tar.gz) = 47714 bytes
 SHA1 (oneko-1.2.diff.gz) = 0594737a32d0a0d32c9261ed7f38165818ad593b
 Size (oneko-1.2.diff.gz) = 12637 bytes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2002/04/30 16:10:20 wiz Exp $
+# $NetBSD: Makefile,v 1.6.2.1 2002/06/23 19:00:14 jlam Exp $
 #
 
 DISTNAME=	grub-0.92
@@ -8,6 +8,8 @@ MASTER_SITES=	ftp://alpha.gnu.org/gnu/grub/
 MAINTAINER=	jgoerzen@complete.org
 HOMEPAGE=	http://www.gnu.org/software/grub/
 COMMENT=	GRand Unified Bootloader -- Boots *BSD, Linux, groks ffs, FAT, ext2
+
+ONLY_FOR_PLATFORM=	*-*-i386
 
 GNU_CONFIGURE=		YES
 USE_GMAKE=		YES

@@ -1,3 +1,4 @@
+$NetBSD: patch-aa,v 1.6.2.1 2002/06/23 19:07:10 jlam Exp $
 --- scan.c.orig	Sun Nov  7 01:51:55 1999
 +++ scan.c	Tue Jul 10 09:31:14 2001
 @@ -626,6 +626,10 @@

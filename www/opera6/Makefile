@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8.2.2 2002/06/21 23:05:49 jlam Exp $
+# $NetBSD: Makefile,v 1.8.2.3 2002/06/23 19:04:26 jlam Exp $
 
 DISTNAME=	opera-${OPERA_PKG_VERSION}
 CATEGORIES=	www
@@ -7,7 +7,8 @@ MASTER_SITES=	ftp://opera.panix.com/pub/linux/${OPERA_DIR}/ \
 		http://ftp.sunet.se/pub/www/clients/Opera/linux/${OPERA_DIR}/ \
 		http://ftp.opera.com/pub/opera/linux/${OPERA_DIR}/ \
 		http://opera.online.no/linux/${OPERA_DIR}/ \
-		ftp://ftp.tuwien.ac.at/infosys/browsers/opera/linux/${OPERA_DIR}/
+		ftp://ftp.tuwien.ac.at/infosys/browsers/opera/linux/${OPERA_DIR}/ \
+		ftp://ftp.opera.com/pub/opera/linux/
 EXTRACT_SUFX=	.rpm
 DISTFILES=	opera-${OPERA_DIST_VERSION}.${OPERA_ARCH}${EXTRACT_SUFX}
 
@@ -29,7 +30,7 @@ USE_BUILDLINK2=	# defined
 .include "../../mk/bsd.prefs.mk"
 
 # A default so lintpkgsrc is happy
-OPERA_PKG_VERSION=	6.0
+OPERA_PKG_VERSION=	6.01
 
 .if (${MACHINE_ARCH} == i386)
 DEPENDS+=	suse_compat>=6.3:../../emulators/${SUSE_DIR_PREFIX}_compat
@@ -38,9 +39,9 @@ DEPENDS+=	suse_libpng>=6.4:../../emulators/${SUSE_DIR_PREFIX}_libpng
 DEPENDS+=	suse_x11>=6.3:../../emulators/${SUSE_DIR_PREFIX}_x11
 
 OPERA_ARCH=		i386
-OPERA_DIR=		600/beta2
-OPERA_DIST_VERSION=	6.0-20020412.1-static-qt
-OPERA_PKG_VERSION=	5.999.2
+OPERA_DIR=		601/final/en/qt_static
+OPERA_DIST_VERSION=	6.01-20020523.1-static-qt
+OPERA_PKG_VERSION=	6.01
 .endif
 
 RPMFILES=	${DISTFILES}

@@ -1,0 +1,5 @@
+A Motif-based implementation of the wxWindows cross-platform GUI library.
+
+wxWindows is a set of libraries that allows C++ applications to compile
+and run on several different types of computer, with minimal source code
+changes.  There is one library per supported GUI. 

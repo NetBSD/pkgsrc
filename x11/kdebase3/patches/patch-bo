@@ -1,0 +1,13 @@
+$NetBSD: patch-bo,v 1.1.1.1.2.2 2002/06/23 19:05:32 jlam Exp $
+
+--- kicker/extensions/childpanel/Makefile.am.orig	Tue Feb 26 17:04:57 2002
++++ kicker/extensions/childpanel/Makefile.am
+@@ -5,7 +5,7 @@
+ childpanel_panelextension_la_SOURCES = childpanelextension.cpp childpanelextension.skel
+ childpanel_panelextension_la_METASOURCES = AUTO
+ childpanel_panelextension_la_LDFLAGS = $(all_libraries) -version-info 1:0:0 -module 
+-childpanel_panelextension_la_LIBADD = $(LIB_KDEUI) $(LIB_KSYCOCA) ../../kicker.la
++childpanel_panelextension_la_LIBADD = $(LIB_KDEUI) $(LIB_KSYCOCA) ../../libkicker_main.la
+ 
+ noinst_HEADERS = childpanelextension.h
+ 

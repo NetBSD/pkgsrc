@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1.20.2 2002/06/23 19:00:59 jlam Exp $
+
+--- Emacs/AppRun.orig	Sun Oct 22 23:16:51 2000
++++ Emacs/AppRun
+@@ -3,7 +3,7 @@
+ # If necessary, emacs is started
+ . `dirname $0`/Config
+ echo USE_CLIENT=$USE_CLIENT
+-function start_emacs {
++start_emacs() {
+     local start_server
+     [ -z "$USE_CLIENT" ] || start_server="-eval '(server-start)'"
+     eval emacs $start_server $@

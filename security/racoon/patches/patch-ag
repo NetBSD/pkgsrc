@@ -1,31 +1,23 @@
-$NetBSD: patch-ag,v 1.3 2002/05/07 09:03:57 itojun Exp $
+$NetBSD: patch-ag,v 1.3.2.1 2002/06/23 18:59:23 jlam Exp $
 
---- plog.c	Fri Apr 26 09:00:10 2002
-+++ plog.c	Tue May  7 17:56:49 2002
-@@ -1,2 +1,2 @@
--/*	$KAME: plog.c,v 1.22 2002/04/26 00:00:10 itojun Exp $	*/
-+/*	$KAME: plog.c,v 1.23 2002/05/07 08:56:19 sakane Exp $	*/
+--- algorithm.c.orig	Thu Apr 25 18:48:32 2002
++++ algorithm.c	Mon May 20 22:11:56 2002
+@@ -60,15 +60,15 @@
+ { "sha2_256",	algtype_sha2_256,	OAKLEY_ATTR_HASH_ALG_SHA2_256,
+ 		eay_sha2_256_init,	eay_sha2_256_update,
+ 		eay_sha2_256_final,	eay_sha2_256_hashlen,
+-		eay_sha1_one, },
++		eay_sha2_256_one, },
+ { "sha2_384",	algtype_sha2_384,	OAKLEY_ATTR_HASH_ALG_SHA2_384,
+ 		eay_sha2_384_init,	eay_sha2_384_update,
+ 		eay_sha2_384_final,	eay_sha2_384_hashlen,
+-		eay_sha1_one, },
++		eay_sha2_384_one, },
+ { "sha2_512",	algtype_sha2_512,	OAKLEY_ATTR_HASH_ALG_SHA2_512,
+ 		eay_sha2_512_init,	eay_sha2_512_update,
+ 		eay_sha2_512_final,	eay_sha2_512_hashlen,
+-		eay_sha1_one, },
++		eay_sha2_512_one, },
+ };
  
-@@ -133,6 +133,5 @@
- plogv(int pri, const char *func, struct sockaddr *sa,
--	const char *fmt, ...)
-+	const char *fmt, va_list ap)
- {
- 	char *newfmt;
--	va_list ap;
- 
-@@ -143,9 +142,5 @@
- 
--	if (f_foreground) {
--		va_start(ap, fmt);
-+	if (f_foreground)
- 		vprintf(newfmt, ap);
--		va_end(ap);
--	}
- 
--	va_start(ap, fmt);
- 	if (logfile)
-@@ -158,3 +153,2 @@
- 	}
--	va_end(ap);
- }
+ static struct hmac_algorithm oakley_hmacdef[] = {

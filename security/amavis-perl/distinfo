@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2001/10/22 06:57:10 martti Exp $
+$NetBSD: distinfo,v 1.1.1.1.2.1 2002/06/23 18:58:50 jlam Exp $
 
-SHA1 (amavisd-snapshot-20010714.tar.gz) = 2099c9e57ed05de30b5d2218c7deb56ba3230b33
-Size (amavisd-snapshot-20010714.tar.gz) = 290862 bytes
+SHA1 (amavisd-snapshot-20020300.tar.gz) = 1e206885b124423ceb6831a4e0cf8e4b5f02c60a
+Size (amavisd-snapshot-20020300.tar.gz) = 313215 bytes

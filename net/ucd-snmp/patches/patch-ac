@@ -1,0 +1,17 @@
+$NetBSD: patch-ac,v 1.7.2.2 2002/06/23 18:57:14 jlam Exp $
+
+--- agent/mibgroup/ucd_snmp.h.orig	Thu Feb  7 16:39:26 2002
++++ agent/mibgroup/ucd_snmp.h	Sat May 25 08:36:34 2002
+@@ -32,8 +32,10 @@
+ config_arch_require(freebsd4, ucd-snmp/memory_freebsd2)
+ config_arch_require(freebsd5, ucd-snmp/vmstat_freebsd2)
+ config_arch_require(freebsd5, ucd-snmp/memory_freebsd2)
+-config_arch_require(netbsd1, ucd-snmp/vmstat_netbsd1)
+-config_arch_require(netbsd1, ucd-snmp/memory_netbsd1)
++config_arch_require(netbsd, ucd-snmp/vmstat_netbsd1)
++config_arch_require(netbsd, ucd-snmp/memory_netbsd1)
++config_arch_require(netbsdelf, ucd-snmp/vmstat_netbsd1)
++config_arch_require(netbsdelf, ucd-snmp/memory_netbsd1)
+ config_arch_require(openbsd2, ucd-snmp/vmstat_netbsd1)
+ config_arch_require(openbsd2, ucd-snmp/memory_netbsd1)
+ config_arch_require(bsdi4, ucd-snmp/vmstat_bsdi4)

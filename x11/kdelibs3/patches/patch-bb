@@ -1,0 +1,13 @@
+$NetBSD: patch-bb,v 1.1.1.1.2.2 2002/06/23 19:06:27 jlam Exp $
+
+--- kinit/klauncher_main.cpp.orig	Wed Oct 10 18:40:41 2001
++++ kinit/klauncher_main.cpp
+@@ -86,8 +86,3 @@
+    launcher->exec();
+    return 0;
+ }
+-
+-int main(/*int argc, char **argv*/)
+-{
+-   return 0;
+-}

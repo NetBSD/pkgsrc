@@ -1,7 +1,7 @@
-$NetBSD: patch-aj,v 1.2 2001/08/07 11:23:57 drochner Exp $
+$NetBSD: patch-aj,v 1.2.2.1 2002/06/23 18:59:45 jlam Exp $
 
 --- cdrecord/scsi_cdr.c.orig	Wed Apr 11 00:22:21 2001
-+++ cdrecord/scsi_cdr.c	Mon Aug  6 11:14:44 2001
++++ cdrecord/scsi_cdr.c	Wed May 15 19:55:52 2002
 @@ -271,6 +271,12 @@
  request_sense(scgp)
  	SCSI	*scgp;
@@ -23,3 +23,15 @@ $NetBSD: patch-aj,v 1.2 2001/08/07 11:23:57 drochner Exp $
  	return (0);
  }
  
+@@ -1741,9 +1748,9 @@
+ 
+ 	fillbytes(mode, sizeof(mode), '\0');
+ 	scgp->silent++;
+-	if (mode_sense(scgp, mode, 0xFF, 0x3F, current?0:2) < 0) {	/* All Pages */
++	if (mode_sense(scgp, mode, 0xFE, 0x3F, current?0:2) < 0) {	/* All Pages */
+ 		fillbytes(mode, sizeof(mode), '\0');
+-		if (mode_sense(scgp, mode, 0xFF, 0, current?0:2) < 0)	{/* VU (block desc) */
++		if (mode_sense(scgp, mode, 0xFE, 0, current?0:2) < 0)	{/* VU (block desc) */
+ 			scgp->silent--;
+ 			return (-1);
+ 		}

@@ -1,30 +1,31 @@
-# $NetBSD: Makefile,v 1.3 2002/03/19 17:54:37 drochner Exp $
+# $NetBSD: Makefile,v 1.3.2.1 2002/06/23 19:06:48 jlam Exp $
 #
 
 .include "../qt3-libs/Makefile.common"
 
 PKGNAME=		qt3-tools-${QTVERSION}
+PKGREVISION=		1
 COMMENT=		QT GUI (WYSIWYG) builder and other tools
 
 CONFIGURE_ARGS+=	-I${BUILDLINK_QTDIR}/include \
 			-L${BUILDLINK_QTDIR}/lib
 
+MAKE_ENV+=              LIBQT="-lqt-mt"
+
 USE_BUILDLINK_ONLY=		yes
-BUILDLINK_DEPENDS.qt3-libs=	qt3-libs-${QTVERSION}
+
+USE_PTHREAD=	native pth-syscall
 
 UNLIMIT_RESOURCES=	datasize
 
 ALL_TARGET=		sub-tools
 
 do-install:
-	${MKDIR} ${QTPREFIX}/plugins/imageformats
-	${LIBTOOL} ${INSTALL_DATA} ${WRKSRC}/plugins/imageformats/libqjpeg.la ${QTPREFIX}/plugins/imageformats
-	${LIBTOOL} ${INSTALL_DATA} ${WRKSRC}/plugins/imageformats/libqmng.la ${QTPREFIX}/plugins/imageformats
 	${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/bin/uic ${QTPREFIX}/bin
 	${LIBTOOL} ${INSTALL_DATA} ${WRKSRC}/lib/libqui.la ${QTPREFIX}/lib
 	${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/bin/designer ${QTPREFIX}/bin
 	${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/lib/libeditor.la ${QTPREFIX}/lib
-	${MKDIR} ${QTPREFIX}/plugins/designer
+	${INSTALL_DATA_DIR} ${QTPREFIX}/plugins/designer
 	${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/plugins/designer/libwizards.la ${QTPREFIX}/plugins/designer
 	${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/plugins/designer/libcppeditor.la ${QTPREFIX}/plugins/designer
 	${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/plugins/designer/libdlgplugin.la ${QTPREFIX}/plugins/designer
@@ -34,6 +35,7 @@ do-install:
 	${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/bin/qm2ts ${QTPREFIX}/bin
 	${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/bin/qtconfig ${QTPREFIX}/bin
 
+.include "../../mk/pthread.buildlink.mk"
 .include "../../x11/qt3-libs/buildlink.mk"
 .include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

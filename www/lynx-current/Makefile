@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2002/05/04 17:06:48 fredb Exp $
+# $NetBSD: Makefile,v 1.38.2.1 2002/06/23 19:04:11 jlam Exp $
 #
 
 DISTNAME=		lynx2.8.5dev.7
@@ -15,14 +15,13 @@ HOMEPAGE=		http://lynx.browser.org/
 COMMENT=		Alphanumeric display oriented World-Wide Web Client
 
 BUILD_USES_MSGFMT=	yes
+USE_BUILDLINK_ONLY=	yes
 
 WRKSRC=			${WRKDIR}/lynx2-8-5
 
 USE_BUILDLINK_ONLY=	yes
 GNU_CONFIGURE=		yes
 USE_GMAKE=		yes
-USE_LIBINTL=		yes
-USE_SSL=		yes
 INSTALL_TARGET=		install-full install-lss
 MAKEFILE=       	makefile
 

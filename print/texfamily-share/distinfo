@@ -1,0 +1,22 @@
+$NetBSD: distinfo,v 1.1.1.1.2.2 2002/06/23 18:58:45 jlam Exp $
+
+SHA1 (TeXfamily/ptex-texmf-1.10.tar.gz) = 8ad1e8c5c30146af00329ab5148f43b8f6481489
+Size (TeXfamily/ptex-texmf-1.10.tar.gz) = 1861430 bytes
+SHA1 (TeXfamily/texfam-texmf-latex209.tar.gz) = b28b3f10701531514503d72c3c2609a63042db29
+Size (TeXfamily/texfam-texmf-latex209.tar.gz) = 204702 bytes
+SHA1 (TeXfamily/texfam-texmf-j1.9.tar.gz) = f563c0791a649e38624965ee27c8c400639041a8
+Size (TeXfamily/texfam-texmf-j1.9.tar.gz) = 212327 bytes
+SHA1 (TeXfamily/texfam-texmf-j1.9.1.tar.gz) = f0a166bdce7f5aaf244610ab60eaf6e9aef47c2d
+Size (TeXfamily/texfam-texmf-j1.9.1.tar.gz) = 57886 bytes
+SHA1 (TeXfamily/texfam-texmf-m0.8.tar.gz) = 7d80eec06277b0682f7315c26238b0f88a0057ab
+Size (TeXfamily/texfam-texmf-m0.8.tar.gz) = 76500 bytes
+SHA1 (TeXfamily/mulfonts-vf.tar.gz) = 12a83f6b7fa6388b1a7a2cf9438bb4f55d3efcd3
+Size (TeXfamily/mulfonts-vf.tar.gz) = 4300 bytes
+SHA1 (TeXfamily/mulfonts-subtfm.tar.gz) = c99f1783980df042d64f9492bb944463a8771a80
+Size (TeXfamily/mulfonts-subtfm.tar.gz) = 8019 bytes
+SHA1 (TeXfamily/nmin-ngoth.tar.gz) = 17f0169c92465c0ee7d704c8cc5eea75738d1a2b
+Size (TeXfamily/nmin-ngoth.tar.gz) = 522303 bytes
+SHA1 (TeXfamily/standard.tar.gz) = b447bbba89018460ec87b257d8a89a9ad2d9fc43
+Size (TeXfamily/standard.tar.gz) = 1041383 bytes
+SHA1 (TeXfamily/morisawa.tar.gz) = f865b0582813f9dddd10f7fc0730d486efef829c
+Size (TeXfamily/morisawa.tar.gz) = 651717 bytes

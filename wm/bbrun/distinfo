@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.2.2.2 2002/06/23 19:03:03 jlam Exp $
+
+SHA1 (bbrun-1.3.tar.gz) = 719af622334f6c3186f07da7c9246a8b05381f6c
+Size (bbrun-1.3.tar.gz) = 19423 bytes
+SHA1 (patch-aa) = 20abf46fedcd208fc2a50d8afc2615bf4b6ae95a

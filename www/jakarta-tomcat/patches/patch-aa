@@ -1,3 +1,4 @@
+$NetBSD: patch-aa,v 1.10.2.1 2002/06/23 19:03:55 jlam Exp $
 --- build.xml.orig	Fri Oct 26 09:59:03 2001
 +++ build.xml	Fri Apr 19 13:38:31 2002
 @@ -2,15 +2,15 @@

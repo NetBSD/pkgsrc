@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2002/03/18 23:04:41 wiz Exp $
+# $NetBSD: Makefile,v 1.24.2.1 2002/06/23 19:03:01 jlam Exp $
 #
 
 COMMENT=	window managers (for X)
@@ -10,6 +10,7 @@ SUBDIR+=	amiwm
 SUBDIR+=	bbconf
 SUBDIR+=	bbkeys
 SUBDIR+=	bbpager
+SUBDIR+=	bbrun
 SUBDIR+=	blackbox
 SUBDIR+=	ctwm
 SUBDIR+=	econf
@@ -20,12 +21,13 @@ SUBDIR+=	fluxbox
 SUBDIR+=	flwm
 SUBDIR+=	fvwm1
 SUBDIR+=	fvwm2
-SUBDIR+=	fvwm95
+SUBDIR+=	icepref
 SUBDIR+=	icewm
 SUBDIR+=	icewm-gnome
 SUBDIR+=	icewmconf
 SUBDIR+=	ion
 SUBDIR+=	lwm
+SUBDIR+=	metacity
 SUBDIR+=	olvwm
 SUBDIR+=	pwm
 SUBDIR+=	qvwm

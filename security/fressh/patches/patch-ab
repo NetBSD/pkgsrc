@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.2.2 2002/06/23 18:58:57 jlam Exp $
+
+--- ssh-agent.c.orig	Sun Feb 11 05:16:14 2001
++++ ssh-agent.c
+@@ -890,7 +890,7 @@
+ 	struct auth_id *id;
+ 	u_int32_t keybits, resptype;
+ 	u_int8_t *session_id = NULL;
+-	u_int8_t *encr_chal = NULL, *chal, response[16];
++	u_int8_t *encr_chal = NULL, *chal = NULL, response[16];
+ 	ssh_MD5 md5ctx;
+ 	int nuke = 0;
+ 	int chal_len = 0, len;

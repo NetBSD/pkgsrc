@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.2 2002/05/07 22:25:04 hubertf Exp $
+$NetBSD: patch-ad,v 1.2.2.1 2002/06/23 18:57:18 jlam Exp $
 
 --- conf/upclient.conf.orig	Sat Jun 16 18:33:54 2001
 +++ conf/upclient.conf
@@ -7,7 +7,7 @@ $NetBSD: patch-ad,v 1.2 2002/05/07 22:25:04 hubertf Exp $
  
  Interval	= 120			# Transmit interval
 -UptimeServer	= data.uptimes.net	# Uptimes Project's data server
-+UptimeServer	= uptimes.wonko.net	# Uptimes Project's data server
++UptimeServer	= uptimes.wonko.com	# Uptimes Project's data server
  
  SendIdleTime	= 1			# Send your idle time
  SendLoadAvg	= 1			# Send load average

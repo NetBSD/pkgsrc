@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2002/04/13 07:07:49 agc Exp $
+# $NetBSD: Makefile,v 1.4.2.1 2002/06/23 19:07:22 jlam Exp $
 #
 
 DISTNAME=		xplanet-0.93
 PKGREVISION=		1
 CATEGORIES=		x11
-MASTER_SITES=		http://prdownloads.sourceforge.net/xplanet/
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=xplanet/}
 
 MAINTAINER=		atatat@netbsd.org
 HOMEPAGE=		http://xplanet.sourceforge.net/

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2001/06/06 20:21:21 jtb Exp $
+# $NetBSD: Makefile,v 1.3.2.1 2002/06/23 18:59:21 jlam Exp $
 #
 
 DISTNAME=       portsentry-1.0
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=   http://www.psionic.com/tools/
 
@@ -26,5 +27,10 @@ post-patch:
 			-e 's|@solaris@|'$$solaris'|g'			\
 						$$f.prefix > $$f;	\
 	done
+
+post-install:
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/portsentry
+	${INSTALL_DATA} ${WRKSRC}/README.install ${PREFIX}/share/doc/portsentry
+	${INSTALL_DATA} ${WRKSRC}/README.methods ${PREFIX}/share/doc/portsentry
 
 .include "../../mk/bsd.pkg.mk"

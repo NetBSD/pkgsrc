@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1.1.1.14.2 2002/06/23 19:00:52 jlam Exp $
+libexec/rox/System
+share/rox/System/AppIcon.xpm
+share/rox/System/AppInfo.xml
+share/rox/System/AppRun
+share/rox/System/Help/COPYING
+share/rox/System/Help/Changes
+share/rox/System/Help/README
+@dirrm share/rox/System/Help
+@dirrm share/rox/System

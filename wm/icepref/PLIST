@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1.30.2 2002/06/23 19:03:11 jlam Exp $
+bin/icepref
+man/man1/icepref.1

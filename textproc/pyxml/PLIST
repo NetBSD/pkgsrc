@@ -1,12 +1,10 @@
-@comment $NetBSD: PLIST,v 1.4 2002/02/05 21:58:09 drochner Exp $
+@comment $NetBSD: PLIST,v 1.4.2.1 2002/06/23 19:02:46 jlam Exp $
 bin/xmlproc_parse${PYVERSSUFFIX}
 bin/xmlproc_val${PYVERSSUFFIX}
 ${PYSITELIB}/_xmlplus/FtCore.py
 ${PYSITELIB}/_xmlplus/FtCore.pyc
 ${PYSITELIB}/_xmlplus/__init__.py
 ${PYSITELIB}/_xmlplus/__init__.pyc
-${PYSITELIB}/_xmlplus/_checkversion.py
-${PYSITELIB}/_xmlplus/_checkversion.pyc
 ${PYSITELIB}/_xmlplus/dom/Attr.py
 ${PYSITELIB}/_xmlplus/dom/Attr.pyc
 ${PYSITELIB}/_xmlplus/dom/CDATASection.py
@@ -59,6 +57,8 @@ ${PYSITELIB}/_xmlplus/dom/de/LC_MESSAGES/4Suite.mo
 ${PYSITELIB}/_xmlplus/dom/domreg.py
 ${PYSITELIB}/_xmlplus/dom/domreg.pyc
 ${PYSITELIB}/_xmlplus/dom/en_US/LC_MESSAGES/4Suite.mo
+${PYSITELIB}/_xmlplus/dom/ext/Dom2Sax.py
+${PYSITELIB}/_xmlplus/dom/ext/Dom2Sax.pyc
 ${PYSITELIB}/_xmlplus/dom/ext/Printer.py
 ${PYSITELIB}/_xmlplus/dom/ext/Printer.pyc
 ${PYSITELIB}/_xmlplus/dom/ext/Visitor.py

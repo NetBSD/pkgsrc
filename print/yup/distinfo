@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1.12.2 2002/06/23 18:58:48 jlam Exp $
+
+SHA1 (yup-r1-rel.tgz) = f3b81abd6c70a3bf9fd0b35af8eb2fa75d83778c
+Size (yup-r1-rel.tgz) = 89529 bytes
+SHA1 (patch-aa) = bbc3e7f463c6376c85aead6698af42840debe4a4

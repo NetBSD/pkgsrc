@@ -1,0 +1,13 @@
+$NetBSD: patch-bf,v 1.1.1.1.2.2 2002/06/23 19:06:30 jlam Exp $
+
+--- kio/kssl/ksslsettings.cc.orig	Thu Feb  7 22:16:52 2002
++++ kio/kssl/ksslsettings.cc
+@@ -89,7 +89,7 @@
+   d = new KSSLSettingsPrivate;
+   m_cfg = new KConfig("cryptodefaults", false, false);
+ 
+-  if (!KGlobal::dirs()->addResourceType("kssl", "share/apps/kssl")) {
++  if (!KGlobal::dirs()->addResourceType("kssl", KStandardDirs::kde_default("data") + "kssl")) {
+     //kdDebug(7029) << "Error adding (kssl, share/apps/kssl)" << endl;
+   }
+ 

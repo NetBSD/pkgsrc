@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2002/05/03 00:42:28 fredb Exp $
+# $NetBSD: Makefile,v 1.19.2.1 2002/06/23 19:00:11 jlam Exp $
 #
 
 DISTNAME=	gkrellm-1.2.11
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://web.wt.net/~billw/gkrellm/
 EXTRACT_SUFX=	.tar.bz2
@@ -11,6 +12,7 @@ HOMEPAGE=	http://gkrellm.net/
 COMMENT=	GTK based system monitor
 
 BUILD_USES_MSGFMT=	YES
+
 USE_BUILDLINK_ONLY=	YES
 USE_GMAKE=		YES
 

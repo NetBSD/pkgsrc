@@ -1,0 +1,28 @@
+$NetBSD: patch-ad,v 1.1.2.2 2002/06/23 19:06:48 jlam Exp $
+
+--- src/kernel/qthread_unix.cpp.orig	Fri May 24 16:43:12 2002
++++ src/kernel/qthread_unix.cpp
+@@ -87,6 +87,7 @@
+ // helpers
+ #define Q_THREAD_SELF()    pthread_self()
+ #define Q_THREAD_EXIT(a)   pthread_exit((a))
++#if defined(_POSIX_THREAD_PRIORITY_SCHEDULING)
+ #define Q_THREAD_CREATE(a) pthread_attr_t attr; \
+                            pthread_attr_init(&attr); \
+ 	                   pthread_attr_setinheritsched(&attr, PTHREAD_INHERIT_SCHED); \
+@@ -94,6 +95,15 @@
+ 	                   (a) = pthread_create(&thread_id, &attr, start_thread, \
+                                                 (void *) that); \
+ 	                   pthread_attr_destroy(&attr);
++#else
++#define Q_THREAD_CREATE(a) pthread_attr_t attr; \
++                           pthread_attr_init(&attr); \
++                           pthread_attr_setdetachstate(&attr, PTHREAD_CREATE_DETACHED); \
++	                   (a) = pthread_create(&thread_id, &attr, start_thread, \
++                                                (void *) that); \
++	                   pthread_attr_destroy(&attr);
++#endif
++
+ #endif // Q_OS_SOLARIS
+ 
+ 

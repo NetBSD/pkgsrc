@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/04/21 11:25:07 rh Exp $
+# $NetBSD: Makefile,v 1.1.1.1.2.1 2002/06/23 19:00:36 jlam Exp $
 #
 
 DISTNAME=	rox-base-1.0.2
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=rox/}
 EXTRACT_SUFX=	.tgz
@@ -19,6 +20,8 @@ post-extract:
 	${FIND} ${WRKSRC} -name CVS | xargs ${RM} -rf
 
 do-install:
-	${CP} -Rf ${WRKSRC}/Choices ${PREFIX}/share
+	${INSTALL_DATA_DIR} 	${PREFIX}/share/rox
+	${INSTALL_PROGRAM_DIR} 	${PREFIX}/libexec/rox
+	${CP} -Rf ${WRKSRC}/Choices ${PREFIX}/share/rox
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,0 +1,12 @@
+$NetBSD: patch-am,v 1.1.1.1.2.2 2002/06/23 19:00:02 jlam Exp $
+
+--- fam/Scheduler.h.orig	Tue Dec 18 11:03:37 2001
++++ fam/Scheduler.h
+@@ -24,6 +24,7 @@
+ #define Scheduler_included
+ 
+ #include <sys/time.h>
++#include <string.h>
+ 
+ #include "Boolean.h"
+ 

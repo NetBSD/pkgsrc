@@ -1,25 +1,27 @@
-$NetBSD: patch-aa,v 1.2 2001/07/22 16:52:30 wiz Exp $
+$NetBSD: patch-aa,v 1.2.2.1 2002/06/23 18:57:19 jlam Exp $
 
 --- ioctl_stat.c.orig	Sat Dec 18 02:35:12 1999
-+++ ioctl_stat.c
-@@ -68,6 +68,9 @@
++++ ioctl_stat.c	Fri May 24 20:22:27 2002
+@@ -68,6 +68,13 @@
  
  void ioctl_stat(if_data *ifd)
  {
 +#ifdef __NetBSD__
 +	struct ifreq ifr;
++#ifdef SIOCGIFDATA
++	struct ifdatareq ifdr;
++	struct if_data * const ifi = &ifdr.ifdr_data;
++#endif
 +#endif
  	struct ifpppstatsreq req;
  	
  	if (s < 0) getsocket();
-@@ -79,8 +82,20 @@
+@@ -79,6 +86,31 @@
  	req.stats_ptr = (caddr_t) &req.stats;
  #endif
  	/* sprintf(req.ifr_name, ifd->device); */
--	strncpy(req.ifr_name, ifd->device, sizeof(req.ifr_name));
- 	
 +#ifdef __NetBSD__
-+	snprintf(ifr.ifr_name, sizeof(req.ifr_name), ifd->device);
++	strncpy(ifr.ifr_name, ifd->device, sizeof(ifr.ifr_name));
 +	if (ioctl(s, SIOCGIFFLAGS, (caddr_t)&ifr) < 0 ||
 +						!(ifr.ifr_flags&IFF_UP))
 +	{
@@ -30,7 +32,27 @@ $NetBSD: patch-aa,v 1.2 2001/07/22 16:52:30 wiz Exp $
 +	}
 +#endif
 +
-+	strncpy(req.ifr_name, ifd->device, sizeof(req.ifr_name));
++#if defined(__NetBSD__) && defined(SIOCGIFDATA)
++	/* prefere the generic interface statistics over the PPP specific ones */
++	strncpy(ifdr.ifdr_name, ifd->device, sizeof(ifdr.ifdr_name));
++	if (ioctl(s, SIOCGIFDATA, &ifdr) == -1)
++	{
++		/* non-existant device? */
++		ifd->in_bytes = 0UL;
++		ifd->out_bytes = 0UL;
++		return;
++	}
++	ifd->in_bytes = (unsigned long)ifi->ifi_ibytes;
++	ifd->out_bytes = (unsigned long)ifi->ifi_obytes;
++#else
+ 	strncpy(req.ifr_name, ifd->device, sizeof(req.ifr_name));
+ 	
  	if (ioctl(s, SIOCGPPPSTATS, &req) != 0)
- 	{
- 		/* non-existant device? */
+@@ -91,6 +123,7 @@
+ 	
+ 	ifd->in_bytes = (unsigned long)req.stats.p.ppp_ibytes;
+ 	ifd->out_bytes = (unsigned long)req.stats.p.ppp_obytes;
++#endif
+ 	
+ 	return;
+ }

@@ -1,0 +1,56 @@
+$NetBSD: patch-ab,v 1.1.1.1.2.2 2002/06/23 19:05:12 jlam Exp $
+
+--- kate/app/Makefile.am.orig	Thu Jan 10 17:03:37 2002
++++ kate/app/Makefile.am
+@@ -1,29 +1,35 @@
+-lib_LTLIBRARIES = kate.la kwrite.la
++lib_LTLIBRARIES = libkate_main.la kate.la libkwrite_main.la kwrite.la
+ bin_PROGRAMS = kate kwrite
+ 
+-kate_la_SOURCES = kateapp.cpp kateconfigdialog.cpp kateconfigplugindialogpage.cpp \
+-	kateconsole.cpp katedocmanager.cpp katefilelist.cpp katefileselector.cpp \
+-	katemainwindow.cpp katepluginmanager.cpp katesplitter.cpp \
+-	kateviewmanager.cpp kateviewspace.cpp katemain.cpp \
+-	kateappIface.skel kateIface.skel kategrepdialog.cpp katefiledialog.cpp
++libkate_main_la_SOURCES = kateapp.cpp kateconfigdialog.cpp \
++	kateconfigplugindialogpage.cpp kateconsole.cpp katedocmanager.cpp \
++	katefilelist.cpp katefileselector.cpp katemainwindow.cpp \
++	katepluginmanager.cpp katesplitter.cpp kateviewmanager.cpp \
++	kateviewspace.cpp katemain.cpp kateappIface.skel kateIface.skel \
++	kategrepdialog.cpp katefiledialog.cpp
+ 
+-kate_la_LIBADD   = ../interfaces/libkateinterfaces.la -lkscript
++libkate_main_la_LIBADD   = ../interfaces/libkateinterfaces.la -lkscript
++libkate_main_la_LDFLAGS = $(all_libraries) $(KDE_RPATH)
++
++kate_la_SOURCES = dummy_main.cpp
++kate_la_LIBADD  = libkate_main.la
+ kate_la_LDFLAGS = $(all_libraries) $(KDE_RPATH) -module -avoid-version
+ 
+-kwrite_la_SOURCES = kwritemain.cpp katefiledialog.cpp
+-kwrite_la_LIBADD   = ../interfaces/libkateinterfaces.la
++libkwrite_main_la_SOURCES = kwritemain.cpp katefiledialog.cpp
++libkwrite_main_la_LIBADD  = ../interfaces/libkateinterfaces.la
++libkwrite_main_la_LDFLAGS = $(all_libraries) $(KDE_RPATH)
++
++kwrite_la_SOURCES = dummy_main.cpp
++kwrite_la_LIBADD  = libkwrite_main.la
+ kwrite_la_LDFLAGS = $(all_libraries) $(KDE_RPATH) -module -avoid-version
+ 
+-kate_SOURCES = dummy.cpp
+-kate_LDADD = kate.la
++kate_SOURCES = dummy_main.cpp
++kate_LDADD = libkate_main.la
+ kate_LDFLAGS = $(KDE_RPATH) $(all_libraries)
+ 
+-kwrite_SOURCES = dummy.cpp
+-kwrite_LDADD = kwrite.la
++kwrite_SOURCES = dummy_main.cpp
++kwrite_LDADD = libkwrite_main.la
+ kwrite_LDFLAGS = $(KDE_RPATH) $(all_libraries)
+-
+-dummy.cpp:
+-	echo > dummy.cpp
+ 
+ INCLUDES= -DKATEPART_NOT_INSTALLED -I../interfaces $(all_includes)
+ 

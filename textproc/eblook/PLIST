@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1.2.2 2002/06/23 19:01:36 jlam Exp $
+bin/eblook
+@unexec install-info --delete %D/info/eblook.info %D/info/dir
+info/eblook.info
+@exec install-info %D/info/eblook.info %D/info/dir

@@ -1,6 +1,6 @@
 #!@PREFIX@/bin/perl
 
-# $NetBSD: lintpkgsrc.pl,v 1.66 2002/03/22 15:57:55 wiz Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.66.2.1 2002/06/23 18:57:47 jlam Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -14,6 +14,7 @@
 #			{qt2-designer>=2.2.4,qt2-designer-kde>=2.3.1nb1} 
 
 $^W = 1;
+use locale;
 use strict;
 use Getopt::Std;
 use File::Find;
@@ -340,13 +341,42 @@ sub deweycmp
     eval "$cmp $test 0";
     }
 
+sub convert_to_standard_dewey
+    {
+    # According to the current implementation in pkg_install/lib/str.c
+    # as of 2002/06/02, '_' before a number, '.', and 'pl' get treated as 0,
+    # while 'rc' gets treated as -1; other characters are converted to lower
+    # case and then to a number: a->1, b->2, c->3, etc. Numbers stay the same.
+    # 'nb' is a special case that's already been handled when we are here.
+    my($elem, $underscore, @temp);
+    foreach $elem (@_) {
+	if ($elem =~ /\d+/) {
+	    push(@temp, $elem);
+	}
+	elsif ($elem =~ /^pl$/ or $elem =~ /^\.$/) {
+	    push(@temp, 0);
+	}
+	elsif ($elem =~ /^_$/) {
+	    push(@temp, 0);
+	}
+	elsif ($elem =~ /^rc$/) {
+	    push(@temp, -1);
+	}
+	else {
+	    push(@temp, 0);
+	    push(@temp, ord($elem)-ord("a")+1);
+	}
+    }
+    @temp;
+}
+
 sub deweycmp_extract
     {
     my($match, $val) = @_;
     my($cmp, @matchlist, @vallist);
 
-    @matchlist = split(/\D+/, $match);
-    @vallist = split(/\D+/, $val);
+    @matchlist = convert_to_standard_dewey(split(/(\D+)/, lc($match)));
+    @vallist = convert_to_standard_dewey(split(/(\D+)/, lc($val)));
     $cmp = 0;
     while( ! $cmp && (@matchlist || @vallist))
 	{
@@ -594,7 +624,7 @@ sub package_globmatch
 
 	($matchpkgname, $test, $matchver) = ($1, $2, $3);
 
-	if ($test ne '-' && $matchver !~ /^[\d.]+(nb\d+|)$/ )
+	if ($test ne '-' && $matchver !~ /^[\d.]+(pl\d+|p\d+|rc\d+|nb\d+|)*$/ )
 	    { $matchver = "invalid-dewey($test$matchver)"; }
 	elsif (@pkgvers = $pkglist->pkgver($matchpkgname))
 	    {
@@ -787,7 +817,7 @@ sub parse_makefile_vars
 	    }
 	if (m#^\.else\b# && @if_false)
 	    {
-	    $if_false[$#if_false] = $if_false[$#if_false]?0:1;
+	    $if_false[$#if_false] = $if_false[$#if_false] == 1?0:1;
 	    debug("$file: .else (@if_false)\n");
 	    next;
 	    }

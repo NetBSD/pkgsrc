@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 2002/01/24 13:47:02 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2.2.1 2002/06/23 19:04:39 jlam Exp $
+bin/skipdownload
 bin/skipstone
 bin/skipstone-bin
-bin/skipdownload
 share/skipstone/pixmaps/default/back.xpm
 share/skipstone/pixmaps/default/config.xpm
 share/skipstone/pixmaps/default/forward.xpm

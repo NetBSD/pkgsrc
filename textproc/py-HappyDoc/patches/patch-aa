@@ -1,4 +1,4 @@
-@NetBSD@
+$NetBSD: patch-aa,v 1.1.1.1.2.1 2002/06/23 19:02:42 jlam Exp $
 
 --- setup.py.orig	Tue Jan 29 16:46:18 2002
 +++ setup.py	Tue Jan 29 16:47:05 2002

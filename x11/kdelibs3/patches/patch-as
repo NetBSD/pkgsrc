@@ -1,0 +1,13 @@
+$NetBSD: patch-as,v 1.1.1.1.2.2 2002/06/23 19:06:20 jlam Exp $
+
+--- kded/kded.cpp.orig	Wed May  8 19:27:28 2002
++++ kded/kded.cpp
+@@ -554,5 +554,7 @@
+ };
+ 
+-int main(int argc, char *argv[])
++extern "C" int kdemain(int, char *[]);
++
++int kdemain(int argc, char *argv[])
+ {
+      KAboutData aboutData( "kded", I18N_NOOP("KDE Daemon"),

@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.1.2.2 2002/06/23 19:00:28 jlam Exp $
+
+--- fed/fed.c.orig	Sat Oct  7 22:44:47 1995
++++ fed/fed.c
+@@ -48,7 +48,7 @@
+ 
+ #include "fed.h"
+ 
+-void main(int argc, char *argv[])
++int main(int argc, char *argv[])
+ {
+ 	int i;
+ 	int row, col;

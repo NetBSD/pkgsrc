@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1.2.2 2002/06/23 19:02:38 jlam Exp $
+
+SHA1 (Text-Kakasi-1.04.tar.gz) = a0648751ecccdbf57e2619a5d5b73cf30ae19414
+Size (Text-Kakasi-1.04.tar.gz) = 15877 bytes
+SHA1 (patch-aa) = 109f7b1455df423ec1088a17ff1f7f1f0db6092f

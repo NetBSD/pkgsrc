@@ -1,9 +1,9 @@
-$NetBSD: patch-ab,v 1.21 2002/04/25 15:52:46 taya Exp $
+$NetBSD: patch-ab,v 1.21.2.1 2002/06/23 19:04:18 jlam Exp $
 
-diff -ru ../mozilla-current.orig/mozilla/configure.in ./configure.in
---- ../mozilla-current.orig/mozilla/configure.in	Sat Apr  6 23:46:35 2002
-+++ ./configure.in	Sun Apr  7 01:18:18 2002
-@@ -1016,6 +1016,13 @@
+diff -ru ../Orig/mozilla/configure.in ./configure.in
+--- ../Orig/mozilla/configure.in	Tue May 28 04:29:12 2002
++++ ./configure.in	Thu Jun  6 09:13:17 2002
+@@ -1014,6 +1014,13 @@
      if test "$LIBRUNPATH"; then
  	DSO_LDOPTS="-Wl,-R$LIBRUNPATH $DSO_LDOPTS"
      fi

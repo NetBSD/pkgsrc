@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2002/04/04 11:50:09 wiz Exp $
+# $NetBSD: Makefile,v 1.4.2.1 2002/06/23 19:04:58 jlam Exp $
 #
 
 DISTNAME=		gdkxft-1.5
 CATEGORIES=		x11
-MASTER_SITES=		http://prdownloads.sourceforge.net/gdkxft/
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gdkxft/}
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://gdkxft.sourceforge.net/

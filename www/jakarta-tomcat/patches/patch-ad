@@ -1,3 +1,4 @@
+$NetBSD: patch-ad,v 1.1.2.1 2002/06/23 19:03:56 jlam Exp $
 --- src/share/org/apache/tomcat/facade/RequestDispatcherImpl.java.orig	Thu Dec 28 14:13:50 2000
 +++ src/share/org/apache/tomcat/facade/RequestDispatcherImpl.java	Sat Aug 11 15:39:18 2001
 @@ -139,6 +139,7 @@

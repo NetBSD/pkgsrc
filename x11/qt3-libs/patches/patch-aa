@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.2 2002/05/04 13:30:10 drochner Exp $
+$NetBSD: patch-aa,v 1.2.2.1 2002/06/23 19:06:47 jlam Exp $
 
---- Makefile.orig	Mon Mar 18 05:58:44 2002
-+++ Makefile	Fri May  3 17:38:21 2002
-@@ -63,7 +63,7 @@
- 	cd plugins/src && $(MAKE) uninstall
- plugins-install: sub-plugins
- 	cd plugins/src && $(MAKE) install
--sub-plugins: sub-src .qmake.cache FORCE
-+sub-plugins: .qmake.cache FORCE
- 	cd plugins/src && $(MAKE)
+--- Makefile.orig	Thu May 30 09:42:36 2002
++++ Makefile
+@@ -47,7 +47,7 @@
+ 	cd tools && $(MAKE) uninstall
+ tools-install: sub-tools
+ 	cd tools && $(MAKE) install
+-sub-tools: sub-plugins FORCE
++sub-tools: FORCE
+ 	cd tools && $(MAKE)
  
- #tutorials
+ #qmake

@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.23 2001/10/11 13:16:01 wiz Exp $
+# $NetBSD: Makefile,v 1.23.2.1 2002/06/23 18:57:23 jlam Exp $
 #
 
 COMMENT=	Network news
 
-#SUBDIR+=	gnus		# info files conflict, perry's working on it
+SUBDIR+=	cg
 SUBDIR+=	inn
 SUBDIR+=	knews
+SUBDIR+=	leafnode
 SUBDIR+=	newscache
 SUBDIR+=	newsfetch
 SUBDIR+=	nn

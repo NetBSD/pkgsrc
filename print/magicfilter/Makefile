@@ -1,16 +1,18 @@
-# $NetBSD: Makefile,v 1.31 2002/03/13 17:37:37 fredb Exp $
+# $NetBSD: Makefile,v 1.31.2.1 2002/06/23 18:58:29 jlam Exp $
 
 DISTNAME=	magicfilter-1.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_SUNSITE:=system/printing/}
 
 MAINTAINER=	packages@netbsd.org
 COMMENT=	customizable, extensible automatic printer filter
 
+# Any version will do:
+#
 DEPENDS+=	a2ps-[0-9]*:../../print/a2ps
 DEPENDS+=	ghostscript{,-nox11}-[6-9]*:../../print/ghostscript
-DEPENDS+=	netpbm>=9.7nb1:../../graphics/netpbm
+DEPENDS+=	netpbm-[0-9]*:../../graphics/netpbm
 DEPENDS+=	teTeX-bin-[0-9]*:../../print/teTeX-bin
 DEPENDS+=	papersize-[0-9]*:../../print/papersize
 

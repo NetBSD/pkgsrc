@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2002/05/03 12:46:02 drochner Exp $
+# $NetBSD: Makefile,v 1.69.2.1 2002/06/23 18:57:51 jlam Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -11,10 +11,12 @@ SUBDIR+=	acroread
 SUBDIR+=	acroread3
 SUBDIR+=	apsfilter
 SUBDIR+=	auctex
+SUBDIR+=	bg5ps
 SUBDIR+=	cups
 SUBDIR+=	cupsomatic
 SUBDIR+=	cupsomatic-ppds
 SUBDIR+=	dvidvi
+SUBDIR+=	dvipdfm
 SUBDIR+=	enscript
 SUBDIR+=	foomatic-gswrapper
 SUBDIR+=	ggv
@@ -28,6 +30,11 @@ SUBDIR+=	gnome-print
 SUBDIR+=	gv
 SUBDIR+=	html2ps
 SUBDIR+=	if-psprint
+SUBDIR+=	ja-a2ps
+SUBDIR+=	ja-vflib
+SUBDIR+=	ja-vflib-lib
+SUBDIR+=	ja-vflib-utils
+SUBDIR+=	ja-vfxdvik
 SUBDIR+=	lgrind
 SUBDIR+=	lilypond
 SUBDIR+=	lyx
@@ -57,9 +64,12 @@ SUBDIR+=	teTeX-sharesrc
 SUBDIR+=	tex-eurosym
 SUBDIR+=	tex-hugelatex
 SUBDIR+=	tex-jadetex
+SUBDIR+=	texfamily
+SUBDIR+=	texfamily-share
 SUBDIR+=	transfig
 SUBDIR+=	ttftot42
 SUBDIR+=	xpdf
 SUBDIR+=	xpp
+SUBDIR+=	yup
 
 .include "../mk/bsd.pkg.subdir.mk"

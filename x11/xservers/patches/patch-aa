@@ -1,4 +1,4 @@
-B$NetBSD: patch-aa,v 1.2 2002/02/23 18:34:14 tron Exp $
+B$NetBSD: patch-aa,v 1.2.2.1 2002/06/23 19:07:28 jlam Exp $
 
 --- programs/Imakefile  1998/12/01 10:26:15     1.2
 +++ programs/Imakefile  2002/02/11 09:16:14
@@ -7,7 +7,7 @@ B$NetBSD: patch-aa,v 1.2 2002/02/23 18:34:14 tron Exp $
  
  #if BuildServersOnly
 -SUBDIRS = $(XSSRCDIR)
-+SUBDIRS = $(XSSRCDIR) mkfontdir xkbcomp
++SUBDIRS = $(XSSRCDIR) bdftopcf mkfontdir xkbcomp
  #else
  SUBDIRS = \
  	appres bdftopcf bitmap $(SCREENSAVESRCDIR) editres fsinfo \

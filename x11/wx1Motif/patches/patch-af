@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1.1.1.2.2 2002/06/23 19:07:02 jlam Exp $
+
+--- src/base/wb_utils.cpp.orig	Fri Nov 20 11:57:58 1998
++++ src/base/wb_utils.cpp
+@@ -691,7 +691,7 @@
+ #endif
+ 	{
+ 	    register char  *start = d;
+-	    register        braces = (*s == '{' || *s == '(');
++	    register int   braces = (*s == '{' || *s == '(');
+ 	    register char  *value;
+ 	    while (*d++ = *s)
+ 		if (braces ? (*s == '}' || *s == ')') : !(isalnum(*s) || *s == '_') )

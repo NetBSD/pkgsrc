@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.66 2002/04/24 05:43:08 martti Exp $
+# $NetBSD: Makefile,v 1.66.2.1 2002/06/23 18:59:11 jlam Exp $
 
-DISTNAME=		openssh-3.1p1
-PKGNAME=		openssh-3.1.1
+DISTNAME=		openssh-3.2.3p1
+PKGNAME=		openssh-3.2.3.1
 SVR4_PKGNAME=		ossh
 CATEGORIES=		security
-MASTER_SITES=		ftp://gd.tuwien.ac.at/OpenBSD/OpenSSH/portable/ \
+MASTER_SITES=		ftp://gd.tuwien.ac.at/opsys/OpenBSD/OpenSSH/portable/ \
 			ftp://ftp.openssh.com/pub/OpenBSD/OpenSSH/portable/ \
 			ftp://ftp.openssh.com/pub/OpenBSD/OpenSSH/portable/old/
 # Don't delete the last entry -- it's there if the pkgsrc version is not
@@ -48,6 +48,8 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-pid-dir=${SSH_PID_DIR}
 CONFIGURE_ARGS+=	--with-ssl-dir=${BUILDLINK_DIR}
 CONFIGURE_ARGS+=	--with-tcp-wrappers=${BUILDLINK_DIR}
+# necessary until openssh distribution fixes ordering of "-lcrypt -lcrypto"
+CONFIGURE_ARGS+=	--with-md5-passwords
 
 # XXX: PAM authentication causes memory faults, and I haven't tracked down
 # XXX: why yet.  For the moment, disable PAM authentication.
@@ -66,7 +68,7 @@ CONFIGURE_ARGS+=	--with-tcp-wrappers=${BUILDLINK_DIR}
 
 # XXX: <krb.h>
 #.if defined(KERBEROS)
-#USE_KERBEROS=		yes
+#PKG_USE_KERBEROS=		yes
 #CONFIGURE_ARGS+=	--with-kerberos4=/usr
 #.endif
 

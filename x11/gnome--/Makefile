@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.7 2002/03/24 21:23:57 rh Exp $
+# $NetBSD: Makefile,v 1.7.2.1 2002/06/23 19:04:59 jlam Exp $
 #
 
 DISTNAME=	gnomemm-1.1.19
 PKGNAME=	${DISTNAME:S/mm/--/}
 PKGREVISION=	1
 CATEGORIES=	x11
-MASTER_SITES=	http://prdownloads.sourceforge.net/gtkmm/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gtkmm/}
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://gtkmm.sourceforge.net/

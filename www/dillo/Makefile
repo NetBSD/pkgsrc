@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2002/04/29 11:57:03 rh Exp $
+# $NetBSD: Makefile,v 1.6.2.1 2002/06/23 19:03:42 jlam Exp $
 #
 
 DISTNAME=	dillo-0.6.5
@@ -18,10 +18,8 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/dillo
 	${INSTALL_DATA} ${WRKSRC}/doc/* ${PREFIX}/share/doc/dillo
 
-
-.include	"../../graphics/jpeg/buildlink.mk"
-.include	"../../graphics/png/buildlink.mk"
-.include	"../../x11/gtk/buildlink.mk"
-.include	"../../mk/x11.buildlink.mk"
-
+.include "../../graphics/jpeg/buildlink.mk"
+.include "../../graphics/png/buildlink.mk"
+.include "../../x11/gtk/buildlink.mk"
+.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

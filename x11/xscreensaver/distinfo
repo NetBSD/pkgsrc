@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.18 2002/04/09 22:50:02 jlam Exp $
+$NetBSD: distinfo,v 1.18.2.1 2002/06/23 19:07:25 jlam Exp $
 
 SHA1 (xscreensaver-4.02.tar.gz) = b32cf3ed37680669a4a7ea2b945fadb5841fc6b3
 Size (xscreensaver-4.02.tar.gz) = 2201442 bytes
-SHA1 (patch-aa) = 0ee5aa8c2683d85dfa9106f3633c457e2d271e5e
+SHA1 (patch-aa) = 4e1c13fdc4019bb190981618f6c3a6583e27b95c
 SHA1 (patch-ab) = 3f60a99f7d45f38b6c4afe2fcc6eafc9456acb30
 SHA1 (patch-ac) = 4f201f01b65935c57efa7bfec8291f29a7ff1280
 SHA1 (patch-ae) = 9209256c4dcc7bde3dd812bb8fcbad1f8b4f0f08

@@ -1,13 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2001/12/21 10:48:15 agc Exp $
+# $NetBSD: Makefile,v 1.4.2.1 2002/06/23 19:03:36 jlam Exp $
 
-DISTNAME=	asp2php-0.75.25
+DISTNAME=	asp2php-0.76.10
 CATEGORIES=	www
-MASTER_SITES=	http://home.swbell.net/mikekohn/asp2php/
+MASTER_SITES=	http://65.108.58.129/asp2php/
 
-MAINTAINER=	shell@shellhung.org
+MAINTAINER=	shell@netbsd.org
 HOMEPAGE=	http://asp2php.naken.cc/
 COMMENT=	converts asp pages to php pages
-
-WRKSRC=		${WRKDIR}/asp2php
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2002/03/13 17:37:43 fredb Exp $
+# $NetBSD: Makefile,v 1.26.2.1 2002/06/23 19:00:13 jlam Exp $
 
 PKGNAME=		g${DISTNAME}
 PKGREVISION=		1
@@ -11,6 +11,7 @@ DEPENDS+=		gnome-core>=1.4.0.4nb1:../../x11/gnome-core
 USE_X11BASE=		# defined
 CONFIGURE_ARGS+=	--with-tm-x-support
 CONFIGURE_ARGS+=	--with-gnome
+BUILD_USES_MSGFMT=	yes
 
 post-install:
 	${RMDIR} ${PREFIX}/share/gnome/help/gmc/C/figs

@@ -1,7 +1,7 @@
 #!/bin/sh
-# $NetBSD: cdpack.sh,v 1.4 2001/06/24 21:46:34 dmcmahill Exp $
+# $NetBSD: cdpack.sh,v 1.4.2.1 2002/06/23 18:57:39 jlam Exp $
 #
-# Copyright (c) 2001 Dan McMahill, All rights reserved.
+# Copyright (c) 2001, 2002 Dan McMahill, All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions
@@ -44,14 +44,17 @@ TMP=${TMPDIR}/${prog}.$$
 depf=$TMP/depf
 depf2=$TMP/depf2
 deptree=$TMP/deptree
+exclude=$TMP/exclude
 order=$TMP/order
 cdlist=$TMP/cdlist
 indexf=$TMP/indexf
 readme=$TMP/readme
 warnings=$TMP/warnings
+restricted=$TMP/restricted
 
 rm -fr $TMP
 mkdir $TMP 
+touch $exclude
 
 usage(){
 	echo "$prog - generates ISO9660 images for a multi-cd binary package collection"
@@ -61,7 +64,11 @@ usage(){
 }
 
 clean_and_exit(){
-	rm -fr $TMP
+	if [ "x$DEBUG" = "xno" ]; then
+	    rm -fr $TMP
+        else
+	    echo "Debugging output left in $TMP"
+	fi
 	exit 1
 }
 
@@ -80,6 +87,7 @@ fullpath(){
 }
 
 ADD_README=no
+DEBUG=no
 DUP=yes
 VERBOSE=no
 VERSION=no
@@ -87,11 +95,39 @@ USE_XTRA=no
 USE_OTHERS=no
 mkisofslog=/dev/null
 
+ALLOW_NO_BIN_ON_CDROM=no
+ALLOW_NO_BIN_ON_FTP=yes
+
 while
     test -n "$1"
 do
     case "$1"
     in
+	# allow NO_BIN_ON_CDROM packages
+	-ac) ALLOW_NO_BIN_ON_CDROM=yes
+	    shift
+	    ;;
+
+	# allow NO_BIN_ON_FTP packages
+	-af) ALLOW_NO_BIN_ON_FTP=yes
+	    shift
+	    ;;
+
+	# enable debugging
+	-d) DEBUG=yes
+	    shift
+	    ;;
+
+	# exclude NO_BIN_ON_CDROM packages
+	-ec) ALLOW_NO_BIN_ON_CDROM=no
+	    shift
+	    ;;
+
+	# exclude NO_BIN_ON_FTP packages
+	-ef) ALLOW_NO_BIN_ON_FTP=no
+	    shift
+	    ;;
+
 	# log file for the output of mkisofs -v -v
 	-l) mkisofslog=$2
 	    shift 2
@@ -159,6 +195,16 @@ cddir=$2
 
 if [ $VERBOSE = "yes" ]; then
     echo "Verbose output is on"
+    if [ "$ALLOW_NO_BIN_ON_CDROM" = "yes" ]; then
+	echo "NO_BIN_ON_CDROM Packages will be included in the images"
+    else
+	echo "NO_BIN_ON_CDROM Packages will be excluded in the images"
+    fi
+    if [ "$ALLOW_NO_BIN_ON_FTP" = "yes" ]; then
+	echo "NO_BIN_ON_FTP Packages will be included in the images"
+    else
+	echo "NO_BIN_ON_FTP Packages will be excluded in the images"
+    fi
 fi
 
 #
@@ -234,7 +280,7 @@ do
 		pkgname=`basename $pkg .tgz`
 
 		# extract the packing list
-		cat $pkg | (cd $TMP; tar --fast-read -xzf - +CONTENTS)
+		cat $pkg | (cd $TMP; tar --fast-read -xzf - +BUILD_INFO +CONTENTS)
 
 		# extract the depends
 		deps=`awk '/^@pkgdep/ {printf("%s ",$2)}' $TMP/+CONTENTS`
@@ -242,7 +288,34 @@ do
 		# extract any conflicts
 		cfls=`awk '/^@pkgcfl/ {printf("%s ",$2)}' $TMP/+CONTENTS`
 
-		rm $TMP/+CONTENTS
+		# check to see if we're allowed to add this package to the CD set
+		NO_BIN_ON_CDROM=`awk -F "=" '/NO_BIN_ON_CDROM/ {print $2}' $TMP/+BUILD_INFO`
+		if [ ! -z "$NO_BIN_ON_CDROM" ]; then
+		    if [ "$ALLOW_NO_BIN_ON_CDROM" = "no" ]; then
+		    	echo "EXCLUDED $pkgname:  NO_BIN_ON_CDROM=$NO_BIN_ON_CDROM" >> $restricted
+			if [ "$VERBOSE" = "yes" ]; then
+			    echo "Excluding $pkg because NO_BIN_ON_CDROM=$NO_BIN_ON_CDROM"
+			    echo "$pkgname" >> $exclude
+			fi
+		    else
+		    	echo "INCLUDED $pkgname:  NO_BIN_ON_CDROM=$NO_BIN_ON_CDROM" >> $restricted
+		    fi
+		fi
+		NO_BIN_ON_FTP=`awk -F "=" '/NO_BIN_ON_FTP/ {print $2}' $TMP/+BUILD_INFO`
+		if [ ! -z "$NO_BIN_ON_FTP" ]; then
+		    if [ "$ALLOW_NO_BIN_ON_FTP" = "no" ]; then
+		        echo "EXCLUDED $pkgname:  NO_BIN_ON_FTP=$NO_BIN_ON_FTP" >> $restricted
+			if [ "$VERBOSE" = "yes" ]; then
+			    echo "Excluding $pkg because NO_BIN_ON_FTP=$NO_BIN_ON_FTP"
+			    echo "$pkgname" >> $exclude
+			fi
+		    else
+		        echo "INCLUDED $pkgname:  NO_BIN_ON_FTP=$NO_BIN_ON_FTP" >> $restricted
+		    fi
+		fi
+
+		# cleanup
+		rm $TMP/+CONTENTS $TMP/+BUILD_INFO
 		
 		# store the results
 		echo "$pkgname | $deps | $cfls" >> $depf
@@ -300,13 +373,14 @@ tsort $deptree > $order
 #    packages = ARGV[1];
 #    cddir    = ARGV[2];
 #    deptree  = ARGV[3];
-#    order    = ARGV[4];
-#    cdlist   = ARGV[5];
+#    exclude  = ARGV[4];
+#    order    = ARGV[5];
+#    cdlist   = ARGV[6];
 #
 if [ "$VERBOSE" = "yes" ]; then
-    echo "awk -f @prefix@/libexec/cdgen.awk $packages $cddir $deptree $order $cdlist dup=$DUP verbose=$VERBOSE $XTRA_SIZE $OTHER_SIZE"
+    echo "awk -f @prefix@/libexec/cdgen.awk $packages $cddir $deptree $exclude $order $cdlist dup=$DUP verbose=$VERBOSE $XTRA_SIZE $OTHER_SIZE"
 fi
-awk -f @prefix@/libexec/cdgen.awk $packages $cddir $deptree $order $cdlist dup=$DUP verbose=$VERBOSE $XTRA_SIZE $OTHER_SIZE
+awk -f @prefix@/libexec/cdgen.awk $packages $cddir $deptree $exclude $order $cdlist dup=$DUP verbose=$VERBOSE $XTRA_SIZE $OTHER_SIZE
 
 if [ $? -ne 0 ]; then
     echo "$prog:  ERROR:  cdgen.awk has failed"
@@ -346,6 +420,46 @@ a collection of packages.
 EOF
 fi
 
+#
+# NO_BIN_ON_CDROM Comment
+#
+
+if [ "$ALLOW_NO_BIN_ON_CDROM" = "no" ]; then
+cat <<EOF >> $readme
+All packages with NO_BIN_ON_CDROM set have been excluded from
+this cd collection.
+EOF
+else
+cat <<EOF >> $readme
+This CD collection includes packaged with NO_BIN_ON_CDROM set.
+Please do not violate license agreements by selling this CD
+without verifying that you are allowed to.  A list of these
+packages may be found in the ".restricted" file on this CD.
+EOF
+fi
+
+#
+# NO_BIN_ON_FTP Comment
+#
+
+if [ "$ALLOW_NO_BIN_ON_FTP" = "no" ]; then
+cat <<EOF >> $readme
+All packages with NO_BIN_ON_FTP set have been excluded from
+this cd collection.
+EOF
+else
+cat <<EOF >> $readme
+This CD collection includes packages with NO_BIN_ON_FTP set.
+Please do not violate license agreements by placing this 
+image on a public FTP site without verifying that you are
+allowed to.  A list of these packages may be found in the
+ ".restricted" file on this CD.
+EOF
+fi
+
+#
+# cdpack Comment
+#
 cat <<EOF >> $readme
 
 This README, along with the CD layout was created using the
@@ -355,7 +469,7 @@ ftp://ftp.netbsd.org/pub/NetBSD/packages/pkgsrc/pkgtools/cdpack
 .
 
 EOF
-
+    
 # 
 # Generate an index file which lists the contents of each CD.
 #
@@ -364,6 +478,21 @@ echo "Creating CD Index File"
 
 for cdname in `cat $cdlist`
 do
+    #
+    # cdgen shouldn't have included any restricted pkgs, but
+    # make 100% sure now!
+    #
+    if [ $VERBOSE = "yes" ]; then
+	echo "Removing any leftover restricted packages from $cdname"
+    fi
+    for pkg in `cat $exclude`
+    do
+	rm -f ${cddir}/${cdname}/packages/*/$pkg
+    done
+
+    if [ $VERBOSE = "yes" ]; then
+	echo "Creating index for $cdname"
+    fi
     for pkg in ${cddir}/${cdname}/packages/All/*
     do
 	echo "`basename $pkg`  $cdname" >> $indexf
@@ -382,13 +511,13 @@ sort ${indexf}.tmp > $indexf
 #
 
 if [ $VERBOSE = "yes" ]; then
-    echo "Copying .index file to the image directories."
+    echo "Copying .index and .restricted files to the image directories."
 fi
 
 ncds=0
 for cdname in `cat $cdlist`
 do
-    (cd ${cddir}/${cdname} && cp $indexf .index)
+    (cd ${cddir}/${cdname} && cp $indexf .index ; cp $restricted .restricted)
 
     if [ $ADD_README = "yes" ]; then
        (cd ${cddir}/${cdname} && cp $readme README.txt)
@@ -446,11 +575,41 @@ if [ -f $warnings ]; then
 	cat $warnings
 fi
 
+echo "-------------------------------------------------------"
+echo "* Please note:  This CD set was created with          *"
+echo "*                                                     *"
+if [ "$ALLOW_NO_BIN_ON_CDROM" = "no" ]; then
+    echo "*   - NO_BIN_ON_CDROM packages excluded.              *"
+else
+    echo "*   - NO_BIN_ON_CDROM packages INCLUDED.  Please      *"
+    echo "*     verify that you will not violate any licenses   *"
+    echo "*     with this CD set.  Refer to the /.restricted    *"
+    echo "*     file which has been placed on each CD in the    *"
+    echo "*     set for details.                                *"
+fi
+echo "*                                                     *"
+if [ "$ALLOW_NO_BIN_ON_FTP" = "no" ]; then
+    echo "*   - NO_BIN_ON_FTP packages excluded.                *"
+else
+    echo "*   - NO_BIN_ON_FTP packages INCLUDED.  You should    *"
+    echo "*     not make this CD set available via FTP as it    *"
+    echo "*     would violate the license on one or more        *"
+    echo "*     packages.  Refer to the /.restricted file       *"
+    echo "*     which has been placed on each CD in the         *"
+    echo "*     set for details.                                *"
+fi
+echo "*                                                     *"
+echo "-------------------------------------------------------"
+
 echo " "
 echo "$prog finished: `date`" 
 echo " "
 
-rm -fr $TMP
+if [ "x$DEBUG" = "xno" ]; then
+    rm -fr $TMP
+else
+    echo "Debugging output left in $TMP"
+fi
 
 exit 0
 

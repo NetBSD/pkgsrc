@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.12.2.2 2002/06/23 18:57:59 jlam Exp $
+
+--- scheduler/main.c.orig	Wed Feb 13 12:21:36 2002
++++ scheduler/main.c
+@@ -476,9 +476,9 @@
+     * Update the browse list as needed...
+     */
+ 
+-    if (Browsing)
++    if (Browsing && BrowseProtocols)
+     {
+-      if (FD_ISSET(BrowseSocket, &input))
++      if (BrowseSocket >= 0 && FD_ISSET(BrowseSocket, &input))
+         UpdateCUPSBrowse();
+ 
+       if (PollPipe >= 0 && FD_ISSET(PollPipe, &input))

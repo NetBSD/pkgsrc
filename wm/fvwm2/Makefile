@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2002/04/14 13:59:42 veego Exp $
+# $NetBSD: Makefile,v 1.16.2.1 2002/06/23 19:03:05 jlam Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/10/11 10:42:43 jkh Exp
 #
 
@@ -16,9 +16,9 @@ COMMENT=	Newer version of X11 Virtual window manager
 
 DEPENDS+=	xpmroot-2.*:../../x11/xpmroot
 
-CONFLICTS=	fvwm-2.*
+CONFLICTS=	fvwm1-* fvwm>=1
 EXTRACT_ONLY=	${DISTNAME}.tar.gz
-FVWM_VER=	2.4.7
+FVWM_VER=	2.4.8
 
 USE_X11BASE=		YES
 GNU_CONFIGURE=		YES

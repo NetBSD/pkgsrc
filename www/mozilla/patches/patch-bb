@@ -1,8 +1,8 @@
-$NetBSD: patch-bb,v 1.7 2002/04/25 15:52:46 taya Exp $
+$NetBSD: patch-bb,v 1.7.2.1 2002/06/23 19:04:21 jlam Exp $
 
-diff -ru ../mozilla-current.orig/mozilla/nsprpub/pr/include/md/_netbsd.h ./nsprpub/pr/include/md/_netbsd.h
---- ../mozilla-current.orig/mozilla/nsprpub/pr/include/md/_netbsd.h	Thu Aug 23 22:31:16 2001
-+++ ./nsprpub/pr/include/md/_netbsd.h	Sun Apr  7 01:18:40 2002
+diff -ru ../Orig/mozilla/nsprpub/pr/include/md/_netbsd.h ./nsprpub/pr/include/md/_netbsd.h
+--- ../Orig/mozilla/nsprpub/pr/include/md/_netbsd.h	Wed Apr 10 12:16:43 2002
++++ ./nsprpub/pr/include/md/_netbsd.h	Thu Jun  6 09:13:29 2002
 @@ -48,6 +48,8 @@
  #define _PR_SI_ARCHITECTURE "m68k"
  #elif defined(__powerpc__)

@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.44 2002/04/19 16:53:41 fredb Exp $
+# $NetBSD: Makefile,v 1.44.2.1 2002/06/23 18:58:26 jlam Exp $
 # FreeBSD Id: Makefile,v 1.14 1998/02/14 16:46:50 andreas Exp
 #
 
-DISTNAME=		lyx-1.1.6fix4
-PKGNAME=		lyx-1.1.6.4
-PKGREVISION=		2
+DISTNAME=		lyx-1.2.0
+PKGNAME=		lyx-1.2.0
 CATEGORIES=		print
 MASTER_SITES=		ftp://ftp.lyx.org/pub/lyx/stable/ \
 			ftp://gd.tuwien.ac.at/publishing/tex/lyx/stable/ \
@@ -18,6 +17,12 @@ DEPENDS=		ispell-base-[0-9]*:../../textproc/ispell-base
 DEPENDS+=		teTeX>=1.0.6:../../print/teTeX
 DEPENDS+=		jpeg-6b:../../graphics/jpeg
 DEPENDS+=		xforms>=0.9999:../../x11/xforms
+
+GCC_VERSION!=		gcc --version
+.if (${GCC_VERSION:C/-.*$$//} == egcs)
+# "egcs" cannot be used, as this package tickles c++ compiler bugs
+.include "../../lang/gcc/Makefile.gcc"
+.endif
 
 USE_PERL5=		YES
 USE_XPM=		YES

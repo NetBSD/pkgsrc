@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2001/12/02 06:56:47 jlam Exp $
+# $NetBSD: Makefile,v 1.17.2.1 2002/06/23 19:04:44 jlam Exp $
 
-DISTNAME=	thttpd-2.21b
+DISTNAME=	thttpd-2.23beta1
+PKGNAME=	thttpd-2.23.0.1
 CATEGORIES=	www
 MASTER_SITES=	http://www.acme.com/software/thttpd/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
@@ -23,16 +24,16 @@ RCD_SCRIPTS=	thttpd
 pre-configure:
 	${MV} ${WRKSRC}/extras/htpasswd.1 ${WRKSRC}/extras/thtpasswd.1
 	${MV} ${WRKSRC}/extras/htpasswd.c ${WRKSRC}/extras/thtpasswd.c
-	for file in thttpd.8 extras/Makefile.in extras/thtpasswd.c; do	\
-		${MV} -f ${WRKSRC}/$${file} ${WRKSRC}/$${file}.bak;	\
-		${SED}	-e "s,htpasswd,thtpasswd,g"			\
-			${WRKSRC}/$${file}.bak > ${WRKSRC}/$${file};	\
+	for FILE in thttpd.8 extras/Makefile.in extras/thtpasswd.c; do	\
+		${MV} -f ${WRKSRC}/$${FILE} ${WRKSRC}/$${FILE}.bak;	\
+		${SED}	-e "s,\.htpasswd,XXX,g;s,htpasswd,thtpasswd,g;s,XXX,.htpasswd,g" \
+			${WRKSRC}/$${FILE}.bak > ${WRKSRC}/$${FILE};	\
 	done
 
 post-build:
-	for file in thttpd.conf thttpd.sh; do				\
+	for FILE in thttpd.conf thttpd.sh; do				\
 		${SED} ${FILES_SUBST_SED}				\
-			${FILESDIR}/$${file} > ${WRKDIR}/$${file};	\
+			${FILESDIR}/$${FILE} > ${WRKDIR}/$${FILE};	\
 	done
 
 pre-install:

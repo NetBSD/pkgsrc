@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1.1.1.2.2 2002/06/23 18:59:56 jlam Exp $
+
+--- fam/FileSystem.c++.orig	Tue Dec 18 11:03:37 2001
++++ fam/FileSystem.c++
+@@ -22,7 +22,7 @@
+ 
+ #include "FileSystem.h"
+ 
+-#include <mntent.h>
++#include "mntent.h"
+ #include <string.h>
+ 
+ #include "Event.h"

@@ -1,20 +1,12 @@
-# $NetBSD: Makefile,v 1.8.2.2 2002/06/21 23:05:48 jlam Exp $
+# $NetBSD: Makefile,v 1.8.2.3 2002/06/23 19:04:08 jlam Exp $
 #
 
-DISTNAME=	links-0.96
-CATEGORIES=	www
-MASTER_SITES=	http://artax.karlin.mff.cuni.cz/~mikulas/links/download/ \
-		http://www.add.com.pl/links/download/			 \
-		http://ice.dammit.lt/links/download/			 \
-		http://mirrors.oven.com/links/				 \
-		http://links.sourceforge.net/download/
-
-MAINTAINER=	wiz@netbsd.org
-HOMEPAGE=	http://artax.karlin.mff.cuni.cz/~mikulas/links/
+PKGNAME=	links-2.0
 COMMENT=	Lynx-like text WWW browser
 
-GNU_CONFIGURE=	YES
+CONFLICTS+=	links-gui-[0-9]*
+
 USE_BUILDLINK2=	YES
 
-.include "../../security/openssl/buildlink2.mk"
+.include "../../www/links/Makefile.common"
 .include "../../mk/bsd.pkg.mk"

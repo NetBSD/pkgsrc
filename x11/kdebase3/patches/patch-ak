@@ -1,0 +1,15 @@
+$NetBSD: patch-ak,v 1.1.1.1.2.2 2002/06/23 19:05:17 jlam Exp $
+
+--- kcontrol/access/main.cpp.orig	Mon Jan  7 10:39:46 2002
++++ kcontrol/access/main.cpp
+@@ -11,7 +11,9 @@
+ 	    "with disabilities.");
+ 
+ 
+-int main(int argc, char *argv[])
++extern "C" int kdemain(int, char *[]);
++
++int kdemain(int argc, char *argv[])
+ {
+   KAboutData about("kaccess", I18N_NOOP("KDE Accessibility Tool"), "0.1",
+                    DESCRIPTION, KAboutData::License_QPL, 

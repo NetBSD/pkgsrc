@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1.1.1.2.2 2002/06/23 18:59:49 jlam Exp $
+bin/fam
+etc/fam.conf.sample
+include/fam.h
+lib/fam/editconf.perl
+lib/libfam.a
+lib/libfam.la
+lib/libfam.so
+lib/libfam.so.0
+lib/libfam.so.0.0
+man/man1/fam.1
+man/man3/fam.3
+@dirrm lib/fam

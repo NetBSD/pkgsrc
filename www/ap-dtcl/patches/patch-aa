@@ -1,8 +1,8 @@
---- builddtcl.sh.orig	Fri Apr 19 14:19:04 2002
-+++ builddtcl.sh	Fri Apr 19 14:19:13 2002
-@@ -1,57 +1,6 @@
- #!/bin/sh
- # $Id: patch-aa,v 1.7 2002/04/19 18:32:37 jwise Exp $
+$NetBSD: patch-aa,v 1.7.2.1 2002/06/23 19:03:23 jlam Exp $
+
+--- builddtcl.sh.orig	Tue Oct  9 17:29:47 2001
++++ builddtcl.sh
+@@ -3,53 +3,2 @@
  
 -# Name of tclsh - on FreeBSD, this is probably tclsh8.2
 -TCLSH=tclsh  ######### CHANGEME ##########
@@ -56,5 +56,3 @@
 -fi
 -
  # find location of tclConfig.sh, source it, and export variables to
- # make them available to 'make'
- 

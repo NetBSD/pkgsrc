@@ -1,0 +1,12 @@
+$NetBSD: patch-ag,v 1.1.1.1.2.2 2002/06/23 19:01:29 jlam Exp $
+
+--- Makefile.am.orig	Sat Feb  2 10:08:19 2002
++++ Makefile.am
+@@ -1,6 +1,6 @@
+ AUTOMAKE_OPTIONS = 1.4 no-dependencies
+ 
+-SUBDIRS = doc prolog lib chasen mkchadic
++SUBDIRS = doc lib chasen mkchadic
+ EXTRA_DIRS = perl
+ 
+ EXTRA_DIST = README-ja INSTALL-ja NEWS-ja chasen.spec

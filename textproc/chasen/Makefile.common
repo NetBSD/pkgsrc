@@ -1,0 +1,8 @@
+# $NetBSD: Makefile.common,v 1.1.1.1.2.2 2002/06/23 19:01:26 jlam Exp $
+#
+
+CHASEN_VERSION=		2.2.9
+
+CHASEN_CONFDIR?=	${LOCALBASE}/etc
+CHASEN_DICDIR?=		${LOCALBASE}/share/chasen/dic
+CONFIGURE_ENV+=		--sysconfdir=${CHASEN_CONFDIR}

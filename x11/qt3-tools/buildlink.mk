@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.3 2002/03/19 17:54:37 drochner Exp $
+# $NetBSD: buildlink.mk,v 1.3.2.1 2002/06/23 19:06:49 jlam Exp $
 #
 # This Makefile fragment is included by packages that use qt3-tools.
 #
@@ -17,8 +17,14 @@ QT3_TOOLS_BUILDLINK_MK=	# defined
 
 .include "../../mk/bsd.buildlink.mk"
 
-BUILDLINK_DEPENDS.qt3-tools?= qt3-tools>=3.0.2
+BUILDLINK_DEPENDS.qt3-tools?= qt3-tools>=3.0.4
+BUILDLINK_DEPENDS_METHOD.qt3-tools?= full
+
+.if ${BUILDLINK_DEPENDS_METHOD.qt3-tools} == build
+BUILD_DEPENDS+=	${BUILDLINK_DEPENDS.qt3-tools}:../../x11/qt3-tools
+.else
 DEPENDS+=	${BUILDLINK_DEPENDS.qt3-tools}:../../x11/qt3-tools
+.endif
 
 EVAL_PREFIX+=			BUILDLINK_PREFIX.qt3-tools=qt3-tools
 BUILDLINK_PREFIX.qt3-tools=	${X11PREFIX}

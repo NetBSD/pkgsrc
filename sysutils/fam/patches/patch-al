@@ -1,0 +1,12 @@
+$NetBSD: patch-al,v 1.1.1.1.2.2 2002/06/23 19:00:01 jlam Exp $
+
+--- fam/Makefile.am.orig	Tue Dec 18 11:03:37 2001
++++ fam/Makefile.am
+@@ -72,6 +72,7 @@
+   main.c++ \
+   timeval.c++ \
+   timeval.h \
++  mntent_compat.c++ \
+   @IMON_FUNCS@.c++
+ 
+ EXTRA_fam_SOURCES = IMonIrix.c++ IMonLinux.c++ IMonNone.c++

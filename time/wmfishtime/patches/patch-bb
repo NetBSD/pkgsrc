@@ -1,3 +1,4 @@
+$NetBSD: patch-bb,v 1.1.2.1 2002/06/23 19:02:56 jlam Exp $
 --- wmfishtime.1.orig	Sat Jan 19 05:55:30 2002
 +++ wmfishtime.1	Sat Jan 19 05:55:48 2002
 @@ -54,16 +54,16 @@

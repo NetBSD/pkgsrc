@@ -1,0 +1,96 @@
+$NetBSD: patch-ba,v 1.1.1.1.2.2 2002/06/23 19:06:27 jlam Exp $
+
+--- kinit/Makefile.in.orig	Tue May 21 15:42:12 2002
++++ kinit/Makefile.in
+@@ -324,8 +324,7 @@
+ klauncher_la_SOURCES = klauncher.cpp klauncher_main.cpp autostart.cpp
+ 
+ klauncher_LDFLAGS = $(all_libraries) $(KDE_RPATH)
+-klauncher_LDADD = klauncher.la
+-klauncher_SOURCES = dummy.cpp
++klauncher_SOURCES = main.cpp
+ 
+ METASOURCES = AUTO
+ 
+@@ -375,11 +374,12 @@
+ #>+ 1
+ kioslave_OBJECTS = kioslave.$(OBJEXT)
+ kioslave_DEPENDENCIES =
+-am_klauncher_OBJECTS = dummy.$(OBJEXT)
++am_klauncher_OBJECTS = main.$(OBJEXT)
+ #>- klauncher_OBJECTS = $(am_klauncher_OBJECTS)
+ #>+ 1
+-klauncher_OBJECTS = dummy.$(OBJEXT)
+-klauncher_DEPENDENCIES = klauncher.la
++klauncher_OBJECTS = main.$(OBJEXT)
++klauncher_LDADD = $(LDADD)
++klauncher_DEPENDENCIES =
+ am_kshell_OBJECTS = shell.$(OBJEXT)
+ #>- kshell_OBJECTS = $(am_kshell_OBJECTS)
+ #>+ 1
+@@ -405,12 +405,12 @@
+ LDFLAGS = @LDFLAGS@
+ LIBS = @LIBS@
+ depcomp = $(SHELL) $(top_srcdir)/admin/depcomp
+-@AMDEP_TRUE@DEP_FILES = $(DEPDIR)/autostart.Plo $(DEPDIR)/dummy.Po \
+-	@AMDEP_TRUE@	$(DEPDIR)/kinit.Po $(DEPDIR)/kioslave.Po \
+-	@AMDEP_TRUE@	$(DEPDIR)/klauncher.Plo \
++@AMDEP_TRUE@DEP_FILES = $(DEPDIR)/autostart.Plo $(DEPDIR)/kinit.Po \
++	@AMDEP_TRUE@	$(DEPDIR)/kioslave.Po $(DEPDIR)/klauncher.Plo \
+ 	@AMDEP_TRUE@	$(DEPDIR)/klauncher_main.Plo $(DEPDIR)/kwrapper.Po \
+-	@AMDEP_TRUE@	$(DEPDIR)/lnusertemp.Po $(DEPDIR)/setproctitle.Po \
+-	@AMDEP_TRUE@	$(DEPDIR)/shell.Po $(DEPDIR)/wrapper.Po
++	@AMDEP_TRUE@	$(DEPDIR)/lnusertemp.Po $(DEPDIR)/main.Po \
++	@AMDEP_TRUE@	$(DEPDIR)/setproctitle.Po $(DEPDIR)/shell.Po \
++	@AMDEP_TRUE@	$(DEPDIR)/wrapper.Po
+ COMPILE = $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \
+ 	$(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
+ LTCOMPILE = $(LIBTOOL) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) \
+@@ -556,13 +556,13 @@
+ 	-rm -f *.tab.c
+ 
+ @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/autostart.Plo@am__quote@
+-@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/dummy.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kinit.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kioslave.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/klauncher.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/klauncher_main.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kwrapper.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/lnusertemp.Po@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/main.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/setproctitle.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/shell.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/wrapper.Po@am__quote@
+@@ -703,7 +703,7 @@
+ 
+ #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
+ #>+ 4
+-KDE_DIST=LICENSE.setproctitle README.autostart README.DCOP startkde.example README.wrapper 
++KDE_DIST=startkde.example LICENSE.setproctitle README.wrapper README.autostart README.DCOP 
+ 
+ DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
+ 
+@@ -845,9 +845,6 @@
+ 
+ shell.c : wrapper.c
+ # do nothing, it just depends on it
+-
+-dummy.cpp:
+-	echo > dummy.cpp
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
+ .NOEXPORT:
+@@ -924,11 +921,11 @@
+ 	rm -f kioslave.all_cpp.final kioslave.all_cpp.files
+ 
+ #>+ 11
+-klauncher.all_cpp.cpp: $(srcdir)/Makefile.in dummy.cpp  
++klauncher.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/main.cpp  
+ 	@echo 'creating klauncher.all_cpp.cpp ...'; \
+ 	rm -f klauncher.all_cpp.files klauncher.all_cpp.final; \
+ 	echo "#define KDE_USE_FINAL 1" >> klauncher.all_cpp.final; \
+-	for file in dummy.cpp ; do \
++	for file in main.cpp ; do \
+ 	  echo "#include \"$$file\"" >> klauncher.all_cpp.files; \
+ 	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> klauncher.all_cpp.final; \
+ 	done; \

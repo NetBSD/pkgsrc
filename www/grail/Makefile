@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2002/02/15 10:30:24 drochner Exp $
+# $NetBSD: Makefile,v 1.13.2.1 2002/06/23 19:03:48 jlam Exp $
 #
 
 DISTNAME=	grail-0.6
 CATEGORIES=	www
-MASTER_SITES=	http://prdownloads.sourceforge.net/grail/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=grail/}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	tsarna@netbsd.org

@@ -1,29 +1,29 @@
-# $NetBSD: Makefile,v 1.7 2002/04/14 11:25:08 rh Exp $
+# $NetBSD: Makefile,v 1.7.2.1 2002/06/23 18:58:25 jlam Exp $
 #
 
-DISTNAME=	lilypond-1.3.119
-PKGREVISION=	1
+DISTNAME=	lilypond-1.4.13
 CATEGORIES=	print
-MASTER_SITES=	ftp://ftp.cs.uu.nl/pub/GNU/LilyPond/development/
+MASTER_SITES=	ftp://ftp.cs.uu.nl/pub/GNU/LilyPond/stable/
 
 MAINTAINER=	rh@netbsd.org
 HOMEPAGE=	http://www.cs.uu.nl/people/hanwen/lilypond/index.html
 COMMENT=	GNU Music Typesetter
 
-DEPENDS+=	guile>=1.3.4:../../lang/guile
-DEPENDS+=	teTeX>=1.0.7:../../print/teTeX
 BUILD_DEPENDS+=	bison>=1.32:../../devel/bison
 
 GNU_CONFIGURE=	YES
 USE_GMAKE=	YES
 MAKEFILE=	GNUmakefile
 
+TEXINFO_REQD=	4.0
 INFO_FILES=	lilypond.info lilypond-internals.info
 
-CONFIGURE_ARGS+=--disable-kpathsea
+CONFIGURE_ARGS+=--disable-optimising
 CONFIGURE_ENV+=	PYTHON=${PYTHONBIN}
 PYTHON_VERSIONS_ACCEPTED= 20 21 # 22 has some regular expression problem
 
+.include "../../lang/guile/buildlink.mk"
 .include "../../lang/python/application.buildlink.mk"
+.include "../../print/teTeX-bin/kpathsea.buildlink.mk"
 .include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"

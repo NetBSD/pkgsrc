@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/11/02 07:33:00 martti Exp $
+# $NetBSD: Makefile,v 1.2.2.1 2002/06/23 18:58:50 jlam Exp $
 #
 
 DISTNAME=	amavisd-snapshot-${VERSION}
@@ -33,7 +33,7 @@ DEPENDS+=	p5-MIME-tools>=5.313:../../mail/p5-MIME-tools
 DEPENDS+=	p5-Net-[0-9]*:../../net/p5-Net
 DEPENDS+=	p5-Unix-Syslog-[0-9]*:../../sysutils/p5-Unix-Syslog
 
-VERSION=	20010714
+VERSION=	20020300
 
 SMTPPORT?=	10025			# target port for scanned mails
 VIRUSDIR?=	/var/log/virusmails	# where to put contaminated mails

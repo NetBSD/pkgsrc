@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2002/01/03 14:42:43 lukem Exp $
+# $NetBSD: Makefile,v 1.18.2.1 2002/06/23 19:01:10 jlam Exp $
 #
 
-DISTNAME=		nut-0.45.3
-PKGNAME=		ups-nut-0.45.3
+DISTNAME=		nut-0.45.5
+PKGNAME=		ups-nut-0.45.5
+PKGREVISION=		1
 CATEGORIES=		sysutils
 MASTER_SITES=		http://www.exploits.org/nut/release/
 
@@ -31,6 +32,9 @@ NUT_GROUP?=		nut
 
 FILES_SUBST+=		NUT_CONFDIR=${NUT_CONFDIR}
 FILES_SUBST+=		NUT_STATEDIR=${NUT_STATEDIR}
+
+MESSAGE_SUBST+=		NUT_CONFDIR=${NUT_CONFDIR}
+MESSAGE_SUBST+=		NUT_EGDIR=${NUT_EGDIR}
 
 PKG_GROUPS=		${NUT_GROUP}
 PKG_USERS=		${NUT_USER}:${NUT_GROUP}::Network\\ UPS\\ Tools::${SH}

@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.1.1.1.2.2 2002/06/23 18:58:24 jlam Exp $
+
+--- texk/make/common.mk.orig	Wed May 30 21:58:55 2001
++++ texk/make/common.mk	Wed May 30 21:58:01 2001
+@@ -42,7 +42,7 @@
+ kpathsea_dir = $(kpathsea_parent)/kpathsea
+ kpathsea_srcdir_parent = $(top_srcdir)/..
+ kpathsea_srcdir = $(kpathsea_srcdir_parent)/kpathsea
+-kpathsea = $(kpathsea_dir)/libkpathsea.la
++kpathsea = /usr/pkg/lib/libkpathsea.a
+ 
+ @MAINT@ifeq ($(CC), gcc)
+ @MAINT@XDEFS = -Wall -Wpointer-arith $(warn_more)

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.104 2002/04/12 19:00:12 jlam Exp $
+# $NetBSD: Makefile,v 1.104.2.1 2002/06/23 18:58:49 jlam Exp $
 #
 
 COMMENT=	Security tools
@@ -10,6 +10,7 @@ SUBDIR+=	aide
 SUBDIR+=	amavis
 SUBDIR+=	amavis-perl
 SUBDIR+=	apg
+SUBDIR+=	arirang
 SUBDIR+=	audit-packages
 SUBDIR+=	cfs
 SUBDIR+=	crack
@@ -79,6 +80,7 @@ SUBDIR+=	pgp2
 SUBDIR+=	pgp5
 SUBDIR+=	pgpdump
 SUBDIR+=	php4-mcrypt
+SUBDIR+=	php4-mhash
 SUBDIR+=	pks
 SUBDIR+=	portsentry
 SUBDIR+=	priv
@@ -93,11 +95,10 @@ SUBDIR+=	rid
 SUBDIR+=	rsaref
 SUBDIR+=	ruby-acl
 SUBDIR+=	ruby-digest
-SUBDIR+=	ruby-md5
 SUBDIR+=	ruby-openssl
-SUBDIR+=	ruby-sha1
 SUBDIR+=	ruby-tcpwrap
 SUBDIR+=	scanssh
+SUBDIR+=	seahorse
 SUBDIR+=	smimemsg
 SUBDIR+=	smtpd
 SUBDIR+=	sniff

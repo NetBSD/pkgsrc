@@ -1,6 +1,6 @@
 #! /bin/sh
 #
-# $NetBSD: tomcat.sh,v 1.5 2001/05/24 16:06:43 abs Exp $
+# $NetBSD: tomcat.sh,v 1.5.2.1 2002/06/23 19:03:54 jlam Exp $
 #
 # PROVIDE: tomcat
 # REQUIRE: DAEMON
@@ -34,7 +34,7 @@ then
 	eval ${rcvar}_flags="${flags}"
 fi
 
-CLASSPATH=${CLASSPATH}:${PREFIX}/lib/java/servlet.jar:${PREFIX}/lib/java/jaxp.jar:${PREFIX}/lib/java/parser.jar
+CLASSPATH=${CLASSPATH}:${PREFIX}/lib/java/servlet.jar:${PREFIX}/lib/java/jaxp.jar:${PREFIX}/lib/java/parser.jar:${PREFIX}/lib/java/crimson.jar:${PREFIX}/lib/java/ant.jar
 if [ -n "${tomcat_classpath}" ]
 then
 	CLASSPATH=${CLASSPATH}:${tomcat_classpath}
@@ -77,8 +77,12 @@ then
 			$0 start
 			;;
 
+		flush)
+			cd ${PREFIX}/tomcat/work && rm -rf */*
+			;;
+
 		*)
-			echo 1>&2 "Usage: $0 [restart|start|stop]"
+			echo 1>&2 "Usage: $0 [restart|start|stop|flush]"
 			exit 1
 			;;
 		esac
