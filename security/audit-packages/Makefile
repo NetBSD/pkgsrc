@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2004/04/09 15:30:57 jschauma Exp $
+# $NetBSD: Makefile,v 1.45 2004/04/09 16:06:59 jschauma Exp $
 
 DISTNAME=	audit-packages-1.29
 CATEGORIES=	security pkgtools
@@ -29,8 +29,8 @@ NROFF=		nroff -mandoc
 .endif
 
 do-build:
-	@for f in audit-packages audit-packages.8 \
-		download-vulnerability-list; do	\
+	@for f in audit-packages audit-packages.0 audit-packages.8 	\
+		download-vulnerability-list; do				\
 		${SED} -e 's|@PKGVULNDIR@|${PKGVULNDIR}|g' 		\
 			-e 's|@AWK@|${AWK}|g'				\
 			-e 's|@FETCH_CMD@|${FETCH_CMD}|g'		\
