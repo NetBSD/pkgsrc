@@ -1,4 +1,4 @@
-# $NetBSD: motif.buildlink.mk,v 1.2 2001/09/13 08:05:10 jlam Exp $
+# $NetBSD: motif.buildlink.mk,v 1.3 2001/09/13 08:37:28 jlam Exp $
 #
 # This Makefile fragment is included by packages that use Motif.
 #
@@ -65,17 +65,15 @@ _MOTIF_TYPE=		none
 MOTIFBASE=		/usr/dt
 .  elif ${_MOTIF_TYPE} == "none"
 MOTIFBASE=		${X11BASE}
-.  elif ${_MOTIF_TYPE} == "openmotif"
-MOTIFBASE=		${X11PREFIX}
-.  elif ${_MOTIF_TYPE} == "lesstif"
-MOTIFBASE=		${X11PREFIX}
 .  endif
 .endif
 
 .if ${_MOTIF_TYPE} == "openmotif"
 .  include "../../x11/openmotif/buildlink.mk"
+MOTIFBASE=		${BUILDLINK_PREFIX.openmotif}
 .elif ${_MOTIF_TYPE} == "lesstif"
 .  include "../../x11/lesstif/buildlink.mk"
+MOTIFBASE=		${BUILDLINK_PREFIX.lesstif}
 .else
 #
 # Link the pre-existing Motif libraries and headers in ${MOTIFBASE} into
@@ -98,7 +96,6 @@ motif-buildlink: _BUILDLINK_USE
 .endif
 
 USE_X11=		# defined
-MAKE_ENV+=		MOTIFBASE="${MOTIFBASE}"
 MAKE_ENV+=		MOTIFLIB="${MOTIFLIB}"
 LDFLAGS+=		-Wl,-R${MOTIFBASE}/lib
 MOTIFLIB?=		-Wl,-R${MOTIFBASE}/lib -Wl,-R${X11BASE}/lib -L${BUILDLINK_DIR}/lib -lXm -lXp
