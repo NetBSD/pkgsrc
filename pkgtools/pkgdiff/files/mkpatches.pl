@@ -1,6 +1,6 @@
 #!@PREFIX@/bin/perl
 #
-# $NetBSD: mkpatches.pl,v 1.1.1.1 2000/06/28 01:42:42 wiz Exp $
+# $NetBSD: mkpatches.pl,v 1.2 2000/07/01 02:38:56 wiz Exp $
 #
 # mkpatches: creates a set of patches patch-aa, patch-ab, ...
 #   in work/.newpatches by looking for *.orig files in and below
@@ -87,7 +87,12 @@ while(<handle>) {
     if ( -f $complete ) {
 	$patchfile = ("aa".."zz")[$l];
 	$patchfile =~ s/^/patch-/;
-	system("pkgdiff $path $complete > $patchdir/$patchfile");
+	$diff=`pkgdiff $path $complete`;
+	if ( "$diff" eq "" ) {
+		print ("$complete and $path don't differ\n");
+	} else {
+		system("pkgdiff $path $complete > $patchdir/$patchfile");
+	}
     } else {
 	print ("$complete doesn't exist, though $path does");
     }
