@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.89 2001/07/01 12:56:50 taca Exp $
+# $NetBSD: Makefile,v 1.90 2001/07/03 14:07:37 abs Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -40,6 +40,7 @@ SUBDIR+=	mutt-devel
 SUBDIR+=	nmh
 SUBDIR+=	oe2mbx
 SUBDIR+=	p5-IMAP-Admin
+SUBDIR+=	p5-MIME-Lite
 SUBDIR+=	p5-MIME-tools
 SUBDIR+=	p5-Mail-IMAPClient
 SUBDIR+=	p5-Mail-Sendmail
