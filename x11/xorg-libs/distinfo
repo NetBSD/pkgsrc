@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/07/29 04:50:53 xtraeme Exp $
+$NetBSD: distinfo,v 1.2 2004/09/16 19:36:10 minskim Exp $
 
 SHA1 (X11R6.7.0-src1.tar.gz) = 14f282cee9dc1ff6ebc34d834892599b53195f8b
 Size (X11R6.7.0-src1.tar.gz) = 30039655 bytes
@@ -15,3 +15,11 @@ SHA1 (patch-af) = 30618658577dd37b31191197cd2c156ff72e0d90
 SHA1 (patch-ag) = 178d556fa11818420cd685308cf179ee5f6f7dac
 SHA1 (patch-ah) = 4545d9fd50c2a7b6f5a04da330784eaf9a5373ad
 SHA1 (patch-ai) = 841c2e76c3934b9da967aaed1876b78d3fc0465e
+SHA1 (patch-aj) = db9c5c632af1bc1398ba3761ee9ed2a2470a0a76
+SHA1 (patch-ak) = faefb423f2fd8d996a94a4828d9a637d47249d42
+SHA1 (patch-al) = 65a0e16cae97ad0970ef9e4eee2aaade3fea7b98
+SHA1 (patch-am) = b52649d74b8c6f0d946728c1d706c03860bbedf6
+SHA1 (patch-an) = b47bec52f41d846df82c6dfd9d7dadb12e630334
+SHA1 (patch-ao) = 9d6a0406f9a872063bdd2c6960585c61ddd4ee86
+SHA1 (patch-ap) = c5e1789afa5eeda9be795d78eca6a0c1692fff9a
+SHA1 (patch-aq) = 1eb268c329b33ad9822d752638a8bde62dca4d92
