@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/06/20 18:43:26 xtraeme Exp $
+# $NetBSD: Makefile,v 1.11 2004/07/23 15:45:15 wiz Exp $
 #
 
 DISTNAME=		vlc-${VLC_VER}
@@ -28,7 +28,7 @@ CONFIGURE_ARGS+=	--disable-skins2
 BUILDLINK_DEPENDS.vcdimager+=	vcdimager>=0.7.20nb1
 BUILDLINK_DEPENDS.ffmpeg+=	ffmpeg>=0.4.8nb1 # Postprocess fix 
 
-CONFIGURE_ARGS+=	--disable-speex # pkgsrc version too old
+CONFIGURE_ARGS+=	--disable-speex # needs unstable 1.1.x branch
 
 CONFIGURE_ARGS+=	--enable-dvb
 CONFIGURE_ARGS+=	--enable-flac
