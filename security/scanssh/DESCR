@@ -1,3 +1,6 @@
-scanssh scans the given addresses and networks for running SSH
-servers.  It will query their version number and displays the
-results in a list.
+ScanSSH supports scanning a list of addresses and networks for open proxies, 
+SSH protocol servers, Web and SMTP servers. Where possible ScanSSH, displays 
+the version number of the running services. ScanSSH protocol scanner supports 
+random selection of IP addresses from large network ranges and is useful for 
+gathering statistics on the deployment of SSH protocol servers in a company 
+or the Internet as whole.
