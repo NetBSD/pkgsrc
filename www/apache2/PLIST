@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2003/07/09 08:09:05 itojun Exp $
+@comment $NetBSD: PLIST,v 1.17 2003/10/28 04:49:32 itojun Exp $
 etc/rc.d/apache
 include/httpd/ap_compat.h
 include/httpd/ap_config.h
@@ -78,6 +78,7 @@ share/examples/httpd/httpd-std.conf
 share/examples/httpd/magic
 share/examples/httpd/mime.types
 share/examples/httpd/ssl-std.conf
+share/httpd/build/config.nice
 share/httpd/build/config_vars.mk
 share/httpd/build/instdso.sh
 share/httpd/build/library.mk
@@ -489,10 +490,12 @@ share/httpd/manual/filter.html
 share/httpd/manual/filter.html.en
 share/httpd/manual/filter.html.ja.jis
 share/httpd/manual/filter.html.ko.euc-kr
+share/httpd/manual/filter.html.ru.koi8-r
 share/httpd/manual/filter.xml
 share/httpd/manual/filter.xml.ja
 share/httpd/manual/filter.xml.ko
 share/httpd/manual/filter.xml.meta
+share/httpd/manual/filter.xml.ru
 share/httpd/manual/glossary.html
 share/httpd/manual/glossary.html.en
 share/httpd/manual/glossary.html.ko.euc-kr
@@ -503,10 +506,12 @@ share/httpd/manual/handler.html
 share/httpd/manual/handler.html.en
 share/httpd/manual/handler.html.ja.jis
 share/httpd/manual/handler.html.ko.euc-kr
+share/httpd/manual/handler.html.ru.koi8-r
 share/httpd/manual/handler.xml
 share/httpd/manual/handler.xml.ja
 share/httpd/manual/handler.xml.ko
 share/httpd/manual/handler.xml.meta
+share/httpd/manual/handler.xml.ru
 share/httpd/manual/howto/auth.html
 share/httpd/manual/howto/auth.html.en
 share/httpd/manual/howto/auth.html.ja.jis
@@ -553,14 +558,15 @@ share/httpd/manual/images/up.gif
 share/httpd/manual/index.html
 share/httpd/manual/index.html.de
 share/httpd/manual/index.html.en
-share/httpd/manual/index.html.fr
 share/httpd/manual/index.html.ja.jis
 share/httpd/manual/index.html.ko.euc-kr
+share/httpd/manual/index.html.ru.koi8-r
 share/httpd/manual/index.xml
 share/httpd/manual/index.xml.de
 share/httpd/manual/index.xml.ja
 share/httpd/manual/index.xml.ko
 share/httpd/manual/index.xml.meta
+share/httpd/manual/index.xml.ru
 share/httpd/manual/install.html
 share/httpd/manual/install.html.de
 share/httpd/manual/install.html.en
@@ -621,6 +627,10 @@ share/httpd/manual/misc/perf-tuning.html
 share/httpd/manual/misc/perf-tuning.html.en
 share/httpd/manual/misc/perf-tuning.xml
 share/httpd/manual/misc/perf-tuning.xml.meta
+share/httpd/manual/misc/relevant_standards.html
+share/httpd/manual/misc/relevant_standards.html.en
+share/httpd/manual/misc/relevant_standards.xml
+share/httpd/manual/misc/relevant_standards.xml.meta
 share/httpd/manual/misc/rewriteguide.html
 share/httpd/manual/misc/rewriteguide.html.en
 share/httpd/manual/misc/rewriteguide.xml
@@ -1119,8 +1129,10 @@ share/httpd/manual/programs/httpd.xml
 share/httpd/manual/programs/httpd.xml.meta
 share/httpd/manual/programs/index.html
 share/httpd/manual/programs/index.html.en
+share/httpd/manual/programs/index.html.ru.koi8-r
 share/httpd/manual/programs/index.xml
 share/httpd/manual/programs/index.xml.meta
+share/httpd/manual/programs/index.xml.ru
 share/httpd/manual/programs/logresolve.html
 share/httpd/manual/programs/logresolve.html.en
 share/httpd/manual/programs/logresolve.xml
@@ -1334,11 +1346,13 @@ share/httpd/manual/vhosts/index.html.de
 share/httpd/manual/vhosts/index.html.en
 share/httpd/manual/vhosts/index.html.ja.jis
 share/httpd/manual/vhosts/index.html.ko.euc-kr
+share/httpd/manual/vhosts/index.html.ru.koi8-r
 share/httpd/manual/vhosts/index.xml
 share/httpd/manual/vhosts/index.xml.de
 share/httpd/manual/vhosts/index.xml.ja
 share/httpd/manual/vhosts/index.xml.ko
 share/httpd/manual/vhosts/index.xml.meta
+share/httpd/manual/vhosts/index.xml.ru
 share/httpd/manual/vhosts/ip-based.html
 share/httpd/manual/vhosts/ip-based.html.en
 share/httpd/manual/vhosts/ip-based.html.ko.euc-kr
@@ -1358,6 +1372,7 @@ share/httpd/manual/vhosts/name-based.html.ja.jis
 share/httpd/manual/vhosts/name-based.html.ko.euc-kr
 share/httpd/manual/vhosts/name-based.xml
 share/httpd/manual/vhosts/name-based.xml.de
+share/httpd/manual/vhosts/name-based.xml.ja
 share/httpd/manual/vhosts/name-based.xml.ko
 share/httpd/manual/vhosts/name-based.xml.meta
 @dirrm share/httpd/manual/developer
