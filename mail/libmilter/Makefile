@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/05/09 21:14:42 snj Exp $
+# $NetBSD: Makefile,v 1.7 2004/08/30 20:48:47 adrianp Exp $
 
 .include "../../mail/sendmail/Makefile.common"
 
@@ -20,4 +20,4 @@ PTHREAD_OPTS+=	require
 .include "../../mk/bsd.pkg.mk"
 
 # has to be below include for bsd.pkg.mk, else substition fails
-OBJDIR!=	${ECHO} obj.`uname -srm | ${TR} \  .`
+OBJDIR!=	${ECHO} obj.`${UNAME} -srm | ${TR} \  .`
