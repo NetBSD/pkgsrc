@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/03/28 21:12:53 xtraeme Exp $
+$NetBSD: distinfo,v 1.2 2004/07/15 20:31:45 jmmv Exp $
 
-SHA1 (imposter-0.1.tar.gz) = 25a6f48a7ffdb7eafed614179cda0eb5638bbce0
-Size (imposter-0.1.tar.gz) = 152167 bytes
+SHA1 (imposter-0.2.tar.gz) = cd5b8c916d87691dc33d03607460d1939ff380d2
+Size (imposter-0.2.tar.gz) = 165306 bytes
