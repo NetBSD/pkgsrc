@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 2001/03/28 02:35:38 hubertf Exp $
+
+--- Makefile.in.orig	Tue Feb 13 23:58:32 2001
++++ Makefile.in
+@@ -86,7 +86,7 @@
+ VERSION = @VERSION@
+ l = @l@
+ 
+-SUBDIRS = src po intl
++SUBDIRS = src po #HF#intl
+ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+ CONFIG_HEADER = config.h
