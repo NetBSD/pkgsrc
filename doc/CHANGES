@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.949 2002/12/30 20:47:56 tron Exp $
+$NetBSD: CHANGES,v 1.950 2002/12/30 22:00:30 kristerw Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -4319,3 +4319,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated leafnode to 1.9.31 [cjep 2002-12-30]
 	Updated sylpheed-claws to 0.8.8nb1 [chris 2002-12-30]
 	Updated gmp3info to 0.8.4 [tron 2002-12-30]
+	Updated snes9x to 1.39nb2 [kristerw 2002-12-30]
