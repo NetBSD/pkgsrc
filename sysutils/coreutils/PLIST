@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.2 2003/08/05 13:59:58 seb Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/02/22 21:32:18 recht Exp $
+bin/${GNU_PROGRAM_PREFIX}[
 bin/${GNU_PROGRAM_PREFIX}basename
 bin/${GNU_PROGRAM_PREFIX}cat
 bin/${GNU_PROGRAM_PREFIX}chgrp
@@ -88,8 +89,6 @@ bin/${GNU_PROGRAM_PREFIX}wc
 bin/${GNU_PROGRAM_PREFIX}who
 bin/${GNU_PROGRAM_PREFIX}whoami
 bin/${GNU_PROGRAM_PREFIX}yes
-info/coreutils.info
-@comment belongs to libiconv: lib/charset.alias
 man/man1/${GNU_PROGRAM_PREFIX}basename.1
 man/man1/${GNU_PROGRAM_PREFIX}cat.1
 man/man1/${GNU_PROGRAM_PREFIX}chgrp.1
@@ -123,6 +122,7 @@ man/man1/${GNU_PROGRAM_PREFIX}hostname.1
 man/man1/${GNU_PROGRAM_PREFIX}id.1
 man/man1/${GNU_PROGRAM_PREFIX}install.1
 man/man1/${GNU_PROGRAM_PREFIX}join.1
+man/man1/${GNU_PROGRAM_PREFIX}kill.1
 man/man1/${GNU_PROGRAM_PREFIX}link.1
 man/man1/${GNU_PROGRAM_PREFIX}ln.1
 man/man1/${GNU_PROGRAM_PREFIX}logname.1
