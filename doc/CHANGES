@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4634 2004/01/28 15:27:12 xtraeme Exp $
+$NetBSD: CHANGES,v 1.4635 2004/01/28 15:41:47 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -519,3 +519,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated cooledit to 3.17.5nb1 [xtraeme 2004-01-28]
 	Updated mule to 2.3nb2 [xtraeme 2004-01-28]
 	Updated xmame to 0.78.1nb1 [xtraeme 2004-01-28]
+	Updated xmess to 0.78.1nb1 [xtraeme 2004-01-28]
