@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.410 2000/02/28 22:13:31 fredb Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.411 2000/03/01 10:53:07 tron Exp $
 #
 # This file is in the public domain.
 #
@@ -691,7 +691,8 @@ MASTER_SITE_TEX_CTAN+=  \
 
 MASTER_SITE_SUNSITE+=	\
 	ftp://sunsite.unc.edu/pub/Linux/ \
-	ftp://ftp.infomagic.com/pub/mirrors/linux/sunsite/
+	ftp://ftp.infomagic.com/pub/mirrors/linux/sunsite/ \
+	ftp://ftp.informatik.rwth-aachen.de/pub/comp/Linux/sunsite.unc.edu/
 
 MASTER_SITE_GNOME+=	\
 	ftp://ftp.gnome.org/pub/GNOME/ \
