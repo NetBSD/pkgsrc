@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1189 2003/12/14 11:52:44 wiz Exp $
+$NetBSD: TODO,v 1.1190 2003/12/14 12:04:52 markd Exp $
 
 Suggested new packages
 ======================
@@ -206,14 +206,12 @@ Suggested package updates
 	o icepref-2.2
 	o inn-2.4.0
 	o isync-0.9.1 [pkg/22189]
-	o ivtools-1.1.2
 	o jakarta-tomcat-3.3.1a
 	o joe-2.9.8 [pkg/18022, incomplete]
 	o jpilot-0.99.6
 	o jwhois-3.2.2 [pkg/22741]
 	o kaffe-1.1.3
 	o kbiff-3.7
-	o kile-1.6 [markd]
 	o koffice-1.2.94 [pkg/23412|kleink]
 	o lavaps-2.4
 	o lcms-1.0.9
