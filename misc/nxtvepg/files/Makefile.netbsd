@@ -43,7 +43,7 @@ LDLIBS          = -L$(LOCALBASE)/lib\
 
 INCS            += -I$(LOCALBASE)/include/tcl$(TCL_VER)\
                    -I$(LOCALBASE)/include/tk$(TCL_VER)
-WANT_THREADS    = 1 # uncomment to force process based implementation
+#WANT_THREADS    = 1 # uncomment to force process based implementation
 
 PTHREAD         = -pthread
 
@@ -78,10 +78,10 @@ DEFS   += -DTK_LIBRARY_PATH=\"$(TK_LIBRARY_BASE)/tk$(TCL_VER)\"
 DEFS   += -DTCL_LIBRARY_PATH=\"$(TK_LIBRARY_BASE)/tcl$(TCL_VER)\"
 
 # enable use of multi-threading
-ifdef WANT_THREADS
-  DEFS   += -DUSE_THREADS
-  LDLIBS += $(PTHREAD)
-endif
+#ifdef WANT_THREADS
+#  DEFS   += -DUSE_THREADS
+#  LDLIBS += $(PTHREAD)
+#endif
 
 # enable use of daemon and client/server connection
 DEFS   += -DUSE_DAEMON
