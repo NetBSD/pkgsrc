@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1215 2003/12/16 23:18:03 grant Exp $
+$NetBSD: TODO,v 1.1216 2003/12/16 23:29:33 magick Exp $
 
 Suggested new packages
 ======================
@@ -318,7 +318,6 @@ Suggested package updates
 	o xanim-2.92.0 [pkg/19934]
 	o xboard-4.2.7
 	o xdaliclock-2.20
-	o xemacs-21.5.16
 	o xephem-3.5.2
 	o xerces-c-2.2.0 [heinz]
 	o xerces-j-2.4.0 [pkg/21725]
