@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/10/14 02:11:31 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2000/01/02 03:14:03 wiz Exp $
 #
 
 DISTNAME=	gobo15
@@ -25,7 +25,7 @@ post-extract:
 	${RM} -rf ${WRKSRC}/bin
 
 pre-build:
-	for file in `find ${WRKSRC} -name "se.sh" -print`; do \
+	for file in `${FIND} ${WRKSRC} -name "se.sh" -print`; do \
 		${SED} -e "s,compile,smalleiffel compile -verbose -O2," \
 			$${file} > $${file}.tmp; \
 		${RM} -f $${file}; \
@@ -38,7 +38,7 @@ do-build:
 	cd ${WRKSRC}/src/geyacc; GOBO=${WRKSRC} ${SH} se.sh
 
 pre-install:
-	for file in `find ${WRKSRC} -name "loadpath.se" -print`; do \
+	for file in `${FIND} ${WRKSRC} -name "loadpath.se" -print`; do \
 		${SED} -e "s,\$${GOBO},${GOBO}," $${file} > $${file}.tmp; \
 		${RM} -f $${file}; \
 		${MV} -f $${file}.tmp $${file}; \
