@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8822 2005/01/19 21:29:11 adrianp Exp $
+$NetBSD: CHANGES,v 1.8823 2005/01/19 22:00:44 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -426,3 +426,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated msmtp to 1.2.4 [adam 2005-01-19]
 	Updated eclipse to 3.0.1 [jschauma 2005-01-19]
 	Updated cgiirc to 0.5.5 [adrianp 2005-01-19]
+	Updated ircservices to 5.0.44 [adrianp 2005-01-19]
