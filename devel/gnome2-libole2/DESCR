@@ -1,0 +1,3 @@
+  libole2 provides an API to access OLE2 streams as used by Microsoft
+in their compound files.   Such common file formats as Excel, Word,
+Powerpoint, and Visio use this system.
