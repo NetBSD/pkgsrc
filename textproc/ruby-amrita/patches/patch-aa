@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/03/12 05:15:27 taca Exp $
+
+--- install.rb.orig	2002-07-19 16:20:51.000000000 +0900
++++ install.rb
+@@ -37,7 +37,7 @@ def install(from, to)
+ 
+     st = File::lstat(path)
+     dest = path.sub(from, to)
+-    mode = 0644
++    mode = 0444
+ 
+     if st.symlink?
+       linksrc = File::readlink(path)
