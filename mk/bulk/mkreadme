@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: mkreadme,v 1.5 2002/11/13 10:14:04 dmcmahill Exp $
+# $NetBSD: mkreadme,v 1.6 2002/11/13 11:12:04 dmcmahill Exp $
 #
 # Script for README.html generation
 #
@@ -49,7 +49,7 @@ usage(){
     echo "Usage:      $prog [-c|--cdrom] [-C|--prune] [-d|--debug] [-f|--ftp] "
     echo "                  [-m|--multi-arch] [-p|--pkgsrc directory] "
     echo "                  [-P|--packages directory] [-r|--restart] "
-    echo "                  [-s|--single-arch]"
+    echo "                  [-s|--single-arch] [-S|--save-database]"
     echo " "
     echo "            $prog -h|--help"
     echo " "
@@ -85,6 +85,10 @@ usage(){
     echo "  -s|--single-arch    Assumes a single OS release and MACHINE_ARCH binary"
     echo "                      packages directory structure."
     echo " "
+    echo "  -S|--save-database  Does not delete the database file after the run."
+    echo "                      This is useful for debugging or re-running this script"
+    echo "                      with the -r option."
+    echo " "
     echo "  -v|--version        Displays the version of this script and exits."
     echo " "
     echo "Example:    $prog -p /pub/NetBSD/packages/pkgsrc -P /pub/NetBSD/packages -m -f"
@@ -92,7 +96,7 @@ usage(){
 }
 
 clean_and_exit(){
-    if [ "x$DEBUG" = "xno" -a "x$restart" = "xno" ]; then
+    if [ "x$DEBUG" = "xno" -a "x$restart" = "xno" -a "x$save" = "xno" ]; then
 	rm -fr $TMPDIR
     else
 	echo "Debugging output left in $TMP"
@@ -113,6 +117,7 @@ ftp_readme=no
 restart=no
 prune=no
 DEBUG=no
+save=no
 
 while
     test -n "$1"
@@ -178,6 +183,12 @@ do
     # assume a single directory structure layout for the binary pkgs
     -s|--single-arch)
 	multiarch=no
+	shift
+	;;
+
+    # Save the database files
+    -S|--save-database)
+	save=yes
 	shift
 	;;
 
@@ -452,7 +463,7 @@ fi
 echo " "
 echo "README.html generation finished:  `date`"
 echo " "
-if [ "x$DEBUG" = "xno" -a "x$restart" = "xno" ]; then
+if [ "x$DEBUG" = "xno" -a "x$restart" = "xno" -a "x$save" = "xno" ]; then
     rm -fr $TMPDIR
 else
     echo "Debugging output left in $TMPDIR"
