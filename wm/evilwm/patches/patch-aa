@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.8 2003/09/16 19:17:40 xtraeme Exp $
+$NetBSD: patch-aa,v 1.9 2003/09/22 20:30:28 jmmv Exp $
 
---- Makefile.orig	2003-09-16 21:09:49.000000000 +0200
-+++ Makefile	2003-09-16 21:11:16.000000000 +0200
+--- Makefile.orig	Fri Jun 27 11:32:14 2003
++++ Makefile	Mon Sep 22 20:07:06 2003
 @@ -1,11 +1,11 @@
  # If you don't use CC 
 -CC       = gcc
@@ -26,6 +26,18 @@ $NetBSD: patch-aa,v 1.8 2003/09/16 19:17:40 xtraeme Exp $
  
  # To support virtual desktops, uncomment one or both of the following 2 lines.
  DEFINES += -DVWM
+@@ -66,9 +66,9 @@
+ #DEFINES += -DXDEBUG	# show some X calls
+ 
+ DEFINES += -DVERSION=\"$(version).$(revision).$(subrev)\" $(DEBIAN)
+-CFLAGS  += $(INCLUDES) $(DEFINES) -Os -Wall
++CFLAGS  += $(INCLUDES) $(DEFINES)
+ #CFLAGS  += $(INCLUDES) $(DEFINES) -g -Wall
+-CFLAGS  += -Wstrict-prototypes -Wpointer-arith -Wcast-align -Wcast-qual -Wshadow -Waggregate-return -Wnested-externs -Winline -Wwrite-strings -Wundef
++#CFLAGS  += -Wstrict-prototypes -Wpointer-arith -Wcast-align -Wcast-qual -Wshadow -Waggregate-return -Wnested-externs -Winline -Wwrite-strings -Wundef
+ LDFLAGS += $(LDPATH) $(LIBS)
+ 
+ HEADERS  = evilwm.h
 @@ -90,9 +90,8 @@
  
  doinstall:

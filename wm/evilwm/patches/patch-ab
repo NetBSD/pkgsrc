@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.1 2003/09/22 20:30:28 jmmv Exp $
+
+--- screen.c.orig	Mon Sep 22 20:04:18 2003
++++ screen.c	Mon Sep 22 20:04:35 2003
+@@ -356,7 +356,8 @@
+ #endif
+ 
+ void unhide(Client *c, int raise) {
+-	c->ignore_unmap = 0;
++	if (!c->ignore_unmap)
++		c->ignore_unmap = 0;
+ 	XMapWindow(dpy, c->window);
+ 	raise ? XMapRaised(dpy, c->parent) : XMapWindow(dpy, c->parent);
+ 	set_wm_state(c, NormalState);
