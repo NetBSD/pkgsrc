@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.90 2002/09/30 13:55:54 jschauma Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.91 2002/10/01 13:35:12 jschauma Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -1050,6 +1050,11 @@ NMH_PAGER?= more
 # default pager for use in nmh.
 # Possible: any pager.
 # Default: more
+
+NS_INST?= recommended
+# Used by www/netscape7 to decide on a complete or a recommended install
+# Possible: recommended, complete
+# Default: recommended
 
 #NS_PREFERRED=
 # Used by netscape to determine preferred browser to open
