@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2002/08/25 21:49:28 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2003/01/19 06:46:23 salo Exp $
 # FreeBSD Id: Makefile,v 1.8 1997/08/10 22:31:36 fenner Exp 
 #
 
@@ -17,7 +17,5 @@ USE_BUILDLINK2=	yes
 WRKSRC=		${WRKDIR}
 ALL_TARGET=     bsdansi
 MAKEFILE=       makefile
-MAKE_ENV+=	INSTALL_PROGRAM="${INSTALL_PROGRAM}" \
-		INSTALL_DATA="${INSTALL_DATA}"
 
 .include "../../mk/bsd.pkg.mk"
