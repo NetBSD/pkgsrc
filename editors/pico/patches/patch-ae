@@ -1,7 +1,7 @@
-$NetBSD: patch-ae,v 1.4 2000/11/09 03:34:14 hubertf Exp $
+$NetBSD: patch-ae,v 1.5 2001/12/15 08:31:08 martti Exp $
 
---- pico/makefile.sol.orig	Tue Jun 30 00:23:56 1998
-+++ pico/makefile.sol	Thu Dec  2 17:54:23 1999
+--- pico/makefile.sol.orig	Tue Oct 23 22:19:09 2001
++++ pico/makefile.sol	Fri Dec 14 19:11:59 2001
 @@ -32,25 +32,13 @@
  RM=          rm -f
  LN=          ln -s
@@ -17,7 +17,7 @@ $NetBSD: patch-ae,v 1.4 2000/11/09 03:34:14 hubertf Exp $
 -# give that a try.  This is still using the Solaris compiler but
 -# leaving out the UCB compatibility includes and libraries.
 -LDCC= ./cc5.sol
-+DEBUG=       # -g -DDEBUG
++DEBUG=
  
  STDCFLAGS=	-Dconst= -Dsv4 -DPOSIX -DJOB_CONTROL -DMOUSE
  CFLAGS=         $(OPTIMIZE) $(PROFILE) $(DEBUG) $(EXTRACFLAGS) $(STDCFLAGS)
@@ -27,7 +27,7 @@ $NetBSD: patch-ae,v 1.4 2000/11/09 03:34:14 hubertf Exp $
 -LIBARGS=	ru
 -RANLIB=		true
 -
- LIBS=		$(EXTRALIBES) -ltermlib
+ LIBS=		$(EXTRALDFLAGS) -ltermlib
  
  OFILES=		attach.o basic.o bind.o browse.o buffer.o \
 @@ -64,17 +52,17 @@
