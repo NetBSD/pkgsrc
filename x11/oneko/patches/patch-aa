@@ -1,0 +1,31 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/09/10 00:39:25 tron Exp $
+
+--- Imakefile.orig	Thu Oct 31 14:09:31 1991
++++ Imakefile	Fri Sep 10 02:35:38 1999
+@@ -1,23 +1,10 @@
+ /**/# Cannot compile in using Gcc
+              CC = cc
+ 
+-LOCAL_LIBRARIES = -L/usr/local/lib $(XLIB)
++LOCAL_LIBRARIES = $(XLIB)
+   SYS_LIBRARIES = -lm
+         DEPLIBS = $(DEPXLIB)
+-        DEFINES = -DSHAPE -I/usr/local/include
+-
+-CP = /bin/cp
+-STRIP = /bin/strip
+-RM = /bin/rm -f
++        DEFINES = -DSHAPE
+ 
+ SimpleProgramTarget(oneko)
+-
+-DESTDIR = /afs/andrew/system/dest/@sys/contributed/neko/011
+-
+-install::
+-	$(RM) $(DESTDIR)/bin/oneko $(DESTDIR)/man/man1/oneko.man
+-	$(CP) oneko $(DESTDIR)/bin/oneko
+-	$(STRIP) $(DESTDIR)/bin/oneko
+-	$(CP) oneko.man $(DESTDIR)/man/man1/oneko.1
+-
+-/* InstallAppDefaults(Oneko) */
++InstallManPage(oneko,$(MANDIR))
