@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.40 2003/07/17 21:21:45 grant Exp $
-# FreeBSD Id: Makefile,v 1.14 1997/06/19 05:30:04 ache Exp
-#
+# $NetBSD: Makefile,v 1.41 2003/08/20 12:23:49 tron Exp $
 
 DISTNAME=	unzip550
 PKGNAME=	unzip-5.50
+PKGREVISION=	1
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 CATEGORIES=	archivers
 MASTER_SITES=	ftp://ftp.info-zip.org/pub/infozip/src/ \
@@ -11,11 +10,15 @@ MASTER_SITES=	ftp://ftp.info-zip.org/pub/infozip/src/ \
 		ftp://uiarchive.cso.uiuc.edu/pub/packages/zip/src/ \
 		ftp://ftp.fu-berlin.de/pub/unix/tools/archivers/unzip/
 
+PATCH_SITES=		http://security.debian.org/pool/updates/main/u/unzip/
+PATCHFILES=		unzip_5.50-1woody1.diff.gz
+PATCH_DIST_STRIP=	-p1
+
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.info-zip.org/pub/infozip/UnZip.html
 COMMENT=	List, test and extract compressed files in a ZIP archive
 
-USE_BUILDLINK2=	# defined
+USE_BUILDLINK2=	yes
 
 .include "../../mk/bsd.prefs.mk"
 
