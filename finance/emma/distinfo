@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:10:32 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/18 13:44:01 agc Exp $
 
-MD5 (emma-0.7-5.tar.gz) = 60485d6f2ef2cb97685b72fe6a25071c
+SHA1 (emma-0.7-5.tar.gz) = 971f0e09303877dc8815605c79fc9acc8be2e8f8
+Size (emma-0.7-5.tar.gz) = 263784 bytes
