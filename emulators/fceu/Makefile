@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2004/07/26 18:00:17 dillo Exp $
+# $NetBSD: Makefile,v 1.3 2004/08/15 20:24:21 wiz Exp $
 #
 
-DISTNAME=		fceu-0.98.10.src
+DISTNAME=		fceu-0.98.11.src
 PKGNAME=		${DISTNAME:S/.src//}
-PKGREVISION=		1
 CATEGORIES=		emulators
 MASTER_SITES=		http://fceultra.sourceforge.net/releases/
 EXTRACT_SUFX=		.tar.bz2
