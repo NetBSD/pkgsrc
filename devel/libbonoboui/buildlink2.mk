@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.11 2004/01/03 18:49:38 reed Exp $
+# $NetBSD: buildlink2.mk,v 1.12 2004/02/15 07:48:09 minskim Exp $
 
 .if !defined(LIBBONOBOUI_BUILDLINK2_MK)
 LIBBONOBOUI_BUILDLINK2_MK=	# defined
@@ -8,7 +8,7 @@ BUILDLINK_DEPENDS.libbonoboui?=	libbonoboui>=2.4.1nb2
 BUILDLINK_PKGSRCDIR.libbonoboui?=	../../devel/libbonoboui
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.libbonoboui=libbonoboui
-BUILDLINK_PREFIX.libbonoboui_DEFAULT=	${X11PREFIX}
+BUILDLINK_PREFIX.libbonoboui_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.libbonoboui+=	include/libbonoboui-2.0/bonobo/*
 BUILDLINK_FILES.libbonoboui+=	include/libbonoboui-2.0/*
 BUILDLINK_FILES.libbonoboui+=	lib/libbonoboui-2.*
