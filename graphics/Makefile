@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.211 2002/10/28 15:13:56 agc Exp $
+# $NetBSD: Makefile,v 1.212 2002/10/30 11:20:49 markd Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -174,6 +174,7 @@ SUBDIR+=	py-gdchart
 SUBDIR+=	py-gimp
 SUBDIR+=	py-imaging
 SUBDIR+=	py-imagingtk
+SUBDIR+=	py-piddle
 SUBDIR+=	qiv
 SUBDIR+=	qvplay
 SUBDIR+=	rayshade
