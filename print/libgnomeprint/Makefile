@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/02/14 20:19:46 jmmv Exp $
+# $NetBSD: Makefile,v 1.11 2003/02/17 22:22:43 jmmv Exp $
 #
 
 DISTNAME=		libgnomeprint-2.2.1.1
@@ -24,6 +24,16 @@ PKGCONFIG_OVERRIDE=	${WRKSRC}/libgnomeprint/libgnomeprint-2.2.pc.in
 
 CONFIGURE_ARGS+=	--enable-gtk-doc=no
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html
+
+.include "../../mk/bsd.prefs.mk"
+
+BUILD_DEFS+=		USE_CUPS
+.if defined(USE_CUPS) && !empty(USE_CUPS:M[Yy][Ee][Ss])
+.include "../../print/cups/buildlink2.mk"
+CONFIGURE_ARGS+=	--with-cups
+.else
+CONFIGURE_ARGS+=	--without-cups
+.endif
 
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../devel/libbonobo/buildlink2.mk"
