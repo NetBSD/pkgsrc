@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2000/08/23 23:14:25 tron Exp $
+# $NetBSD: Makefile,v 1.7 2001/01/12 12:35:14 dent Exp $
 #
 
 DISTNAME=		xboing2.4
@@ -7,7 +7,7 @@ CATEGORIES=		games x11
 MASTER_SITES=		${MASTER_SITE_XCONTRIB:=games/}
 
 MAINTAINER=		root@garbled.net
-HOMEPAGE=		http://www.catt.rmit.edu.au/xboing/xboing.html
+HOMEPAGE=		http://www.techrescue.org/xboing/
 
 USE_IMAKE=		YES
 USE_XPM=		YES
