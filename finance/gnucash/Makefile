@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2002/10/06 02:57:15 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2002/11/26 23:18:14 jlam Exp $
 #
 
 DISTNAME=		gnucash-1.6.8
@@ -11,7 +11,6 @@ MAINTAINER=		tron@netbsd.org
 HOMEPAGE=		http://www.gnucash.org/
 COMMENT=		Personal double-entry accounting program
 
-DEPENDS+=			swig-1.1p5:../../devel/swig
 BUILDLINK_DEPENDS.g-wrap=	g-wrap>=1.2.1:../../devel/g-wrap
 BUILDLINK_DEPENDS.g-wrap+=	g-wrap<1.3.0:../../devel/g-wrap
 BUILDLINK_DEPENDS.guile=	guile>=1.4:../../lang/guile
@@ -49,6 +48,7 @@ post-extract:
 .include "../../devel/g-wrap/buildlink2.mk"
 .include "../../devel/libglade/buildlink2.mk"
 .include "../../devel/popt/buildlink2.mk"
+.include "../../devel/swig/buildlink2.mk"
 .include "../../graphics/gdk-pixbuf/buildlink2.mk"
 .include "../../lang/guile/buildlink2.mk"
 .include "../../math/guppi/buildlink2.mk"
