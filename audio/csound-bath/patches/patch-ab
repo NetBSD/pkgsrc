@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.2 2002/03/23 02:23:00 wiz Exp $
+$NetBSD: patch-ab,v 1.3 2002/04/28 14:44:14 tron Exp $
 
 --- getstring.c.orig	Sat Jan 26 03:52:46 2002
 +++ getstring.c
@@ -8,7 +8,7 @@ $NetBSD: patch-ab,v 1.2 2002/03/23 02:23:00 wiz Exp $
      if (db == NULL) {
 -      strcpy(name, "/usr/local/lib/csound.xmg");
 -      db = fopen("/usr/local/lib/csound.xmg", "rb");
-+      sprintf(name, "%s/share/csound/csound.txt", PREFIX);
++      sprintf(name, "%s/share/csound/csound.xmg", PREFIX);
 +      db = fopen(name, "rb");
      }
  #ifdef mills_macintosh
