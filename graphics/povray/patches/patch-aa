@@ -1,19 +1,14 @@
-$NetBSD: patch-aa,v 1.3 2003/08/31 23:04:15 gavan Exp $
+$NetBSD: patch-aa,v 1.4 2004/11/18 15:57:38 adam Exp $
 
---- src/optout.h.orig	Tue Jan  7 01:30:05 2003
-+++ src/optout.h
-@@ -45,11 +45,10 @@
- #define POV_RAY_COPYRIGHT "Copyright 1991-2002 POV-Ray Team(tm)"
- #define OFFICIAL_VERSION_NUMBER 350
+--- source/optout.h.orig	2004-08-02 23:15:55.000000000 +0000
++++ source/optout.h
+@@ -56,8 +56,7 @@ BEGIN_POV_NAMESPACE
  
--#define DISTRIBUTION_MESSAGE_1 "This is an unofficial version compiled by:"
--#error You must complete the following DISTRIBUTION_MESSAGE macro
+ #define DISTRIBUTION_MESSAGE_1 "This is an unofficial version compiled by:"
+ #ifndef DISTRIBUTION_MESSAGE_2
+-#error You must complete the following DISTRIBUTION_MESSAGE_2 definition
 -#define DISTRIBUTION_MESSAGE_2 " FILL IN NAME HERE........................."
-+#define DISTRIBUTION_MESSAGE_1 "This is an unofficial version compiled for"
 +#define DISTRIBUTION_MESSAGE_2 " The NetBSD Packages collection (http://www.pkgsrc.org/)"
+ #endif
  #define DISTRIBUTION_MESSAGE_3 " The POV-Ray Team(tm) is not responsible for supporting this version."
--
-+ 
- /* Number of help pages (numbered 0 to MAX_HELP_PAGE). */
  
- #define MAX_HELP_PAGE   7
