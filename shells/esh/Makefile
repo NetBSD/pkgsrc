@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/03/08 21:26:50 jtb Exp $
+# $NetBSD: Makefile,v 1.6 2001/04/14 21:43:59 jtb Exp $
 #
 # XXX MASTER_SITES and HOMEPAGE are commented out as they now require
 # authorization for access.
@@ -8,7 +8,7 @@ DISTNAME=		esh-0.8
 CATEGORIES=		shells
 #MASTER_SITES=		http://esh.netpedia.net/
 
-MAINTAINER=		jtb@netbsd.org
+MAINTAINER=		packages@netbsd.org
 #HOMEPAGE=		http://esh.netpedia.net
 COMMENT=		Unix shell with Lisp-like syntax
 
