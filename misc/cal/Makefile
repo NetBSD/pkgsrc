@@ -3,7 +3,8 @@
 # Date created:				2 April 1997
 # Whom:	Andrey Zakhvatov <andy@icc.surw.chel.su>
 #
-# $Id: Makefile,v 1.1.1.1 1997/10/11 21:54:03 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 1997/10/24 00:47:42 hubertf Exp $
+# FreeBSD Id: Makefile,v 1.5 1997/05/12 06:33:23 max Exp
 #
 
 DISTNAME=		cal-3.5
