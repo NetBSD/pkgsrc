@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.8 2002/07/19 04:18:40 mycroft Exp $
+
+--- cdd_cdcmds.c.orig	Sat Jan  6 06:29:43 2001
++++ cdd_cdcmds.c	Fri Jul 19 04:15:28 2002
+@@ -356,7 +356,7 @@
+ return (F_dtable[F_pte].end_cdda_func)(scsifd);
+ }
+ 
+-int unsupported(void)
++int unsupported()
+ {
+ cdd_printf("This operation is not supported on this device!\n");
+ 
