@@ -1,0 +1,11 @@
+--- uml/operation.cpp.orig	2004-06-15 19:28:32.000000000 +0200
++++ uml/operation.cpp	2004-06-15 19:28:43.000000000 +0200
+@@ -40,7 +40,7 @@
+ 	{
+ 		if(obj == a)
+ 			if(!list.remove(obj))
+-				cerr<<"Error removing parm"<<endl;
++				std::cerr<<"Error removing parm"<<std::endl;
+ 	}
+ }
+ ////////////////////////////////////////////////////////////////////////////////////////////////////

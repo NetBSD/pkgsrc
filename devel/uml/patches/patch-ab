@@ -1,0 +1,11 @@
+--- uml/classattpage.cpp.orig	2004-06-15 19:34:42.000000000 +0200
++++ uml/classattpage.cpp	2004-06-15 19:35:19.000000000 +0200
+@@ -283,7 +283,7 @@
+ 	Attribute * a = (Attribute *)concept -> findChildObject(ATTRIBUTE, s);
+ 	if(!a && id != NEWATT)
+ 	{
+-		cerr<<"can't find att from selection"<<endl;
++		std::cerr<<"can't find att from selection"<<std::endl;
+ 		return;
+ 	}
+ 	switch(id)

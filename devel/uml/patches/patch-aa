@@ -1,0 +1,29 @@
+--- uml/association.cpp.orig	2004-06-15 19:35:27.000000000 +0200
++++ uml/association.cpp	2004-06-15 19:36:19.000000000 +0200
+@@ -203,7 +203,7 @@
+ 			wB = view -> findWidget(bID);
+ 			if(!wA || !wB)
+ 			{
+-				cerr<<"Can't make association"<<endl;
++				std::cerr<<"Can't make association"<<std::endl;
+ 				return false;
+ 			}
+ 		   if(assoc == 408)
+@@ -252,7 +252,7 @@
+ 			wB = view -> findWidget(bID);
+ 			if(!wA || !wB)
+ 			{
+-				cerr<<"Can't make association"<<endl;
++				std::cerr<<"Can't make association"<<std::endl;
+ 				return false;
+ 			}
+ 			
+@@ -302,7 +302,7 @@
+ 		wB = view -> findWidget(bID);
+ 		if(!wA || !wB)
+ 		{
+-			cerr<<"Can't make association"<<endl;
++			std::cerr<<"Can't make association"<<std::endl;
+ 			return false;
+ 		}
+ 		
