@@ -1,4 +1,4 @@
-/*	$NetBSD: kttcp.c,v 1.1.1.1 2002/06/29 01:07:20 thorpej Exp $	*/
+/*	$NetBSD: kttcp.c,v 1.2 2002/06/30 19:15:57 thorpej Exp $	*/
 
 /*
  * Copyright (c) 2002 Wasabi Systems, Inc.
@@ -38,7 +38,6 @@
 
 #include <sys/types.h>
 #include <sys/socket.h>
-#include <sys/syscall.h>
 #include <sys/ioctl.h>
 #include <sys/time.h>
 #include <netdb.h>
@@ -62,10 +61,10 @@ static void
 usage(void)
 {
 	fprintf(stderr,
-	    "usage: kttcp -r [-b sockbufsize] [-p port] [-q] [-c syscallnum]\n"
+	    "usage: kttcp -r [-b sockbufsize] [-p port] [-q]\n"
 	    "                [-4] [-6]\n"
 	    "       kttcp -s [-b sockbufsize] [-n bytes] [-q] [-p port]\n"
-	    "                [-c syscallnum] [-4] [-6] host\n"
+	    "                [-4] [-6] host\n"
 	);
 	exit(1);
 }
