@@ -1,6 +1,6 @@
 #!@BUILDLINK_SHELL@
 #
-# $NetBSD: gen-transform.sh,v 1.10 2004/01/11 03:30:20 grant Exp $
+# $NetBSD: gen-transform.sh,v 1.11 2004/01/13 07:52:37 jlam Exp $
 
 transform="@_BLNK_TRANSFORM_SEDFILE@"
 untransform="@_BLNK_UNTRANSFORM_SEDFILE@"
@@ -11,6 +11,8 @@ untransform="@_BLNK_UNTRANSFORM_SEDFILE@"
 #	mangle:src:dst		mangles the directory "src" into "dst"
 #	rpath:src:dst		translates the directory "src" into "dst"
 #					in rpath options
+#	abs-rpath		removes all rpath options that try to add
+#					relative paths
 #	no-rpath		removes "-R*", "-Wl,-R", and "-Wl,-rpath,*"
 #	depot:src:dst		translates "src/<dir>/" into "dst/"
 #	I:src:dst		translates "-Isrc" into "-Idst"
@@ -55,6 +57,14 @@ EOF
 		gen $action mangle:-Wl,-rpath,$2:-Wl,-rpath,$3
 		gen $action mangle:-Wl,-R$2:-Wl,-R$3
 		gen $action mangle:-R$2:-R$3
+		;;
+	abs-rpath)
+		gen $action __r:-Wl,--rpath-link,[^/]
+		gen $action __r:-Wl,--rpath,[^/]
+		gen $action __r:-Wl,-rpath-link,[^/]
+		gen $action __r:-Wl,-rpath,[^/]
+		gen $action __r:-Wl,-R[^/]
+		gen $action __r:-R[^/]
 		;;
 	no-rpath)
 		gen $action _r:-Wl,--rpath-link,
@@ -164,7 +174,7 @@ EOF
 		case "$action" in
 		transform|untransform)
 			@CAT@ >> $sedfile << EOF
-s|$2/[^ 	\`"':;]*||g
+s|$2[^ 	\`"':;]*||g
 EOF
 			;;
 		esac
@@ -182,17 +192,17 @@ EOF
 		;;
 	r)
 		case "$2" in
-		"")	r=__r ;;
-		*)	r=_r ;;
+		"")	r=__r; pat="/"  ;;
+		*)	r=_r;  pat="$2" ;;
 		esac
-		gen $action $r:-I$2
-		gen $action $r:-L$2
-		gen $action $r:-Wl,--rpath-link,$2
-		gen $action $r:-Wl,--rpath,$2
-		gen $action $r:-Wl,-rpath-link,$2
-		gen $action $r:-Wl,-rpath,$2
-		gen $action $r:-Wl,-R$2
-		gen $action $r:-R$2
+		gen $action $r:-I$pat
+		gen $action $r:-L$pat
+		gen $action $r:-Wl,--rpath-link,$pat
+		gen $action $r:-Wl,--rpath,$pat
+		gen $action $r:-Wl,-rpath-link,$pat
+		gen $action $r:-Wl,-rpath,$pat
+		gen $action $r:-Wl,-R$pat
+		gen $action $r:-R$pat
 		;;
 	S)
 		case "$action" in
