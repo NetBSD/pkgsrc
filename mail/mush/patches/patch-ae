@@ -1,0 +1,48 @@
+$NetBSD: patch-ae,v 1.1 1998/09/04 18:33:47 christos Exp $
+
+*** old/panels.c	Fri Sep  4 11:22:05 1998
+--- panels.c	Fri Sep  4 11:21:28 1998
+***************
+*** 31,36 ****
+--- 31,37 ----
+      save_item,		/* saves messages */
+      sub_hdr_item[6];	/* display items that just sit there and give help */
+  
++ static char		gpat[] = "*/{.,..}";
+  #ifndef NO_WALK_MENUS
+  Panel
+      folder_panel,
+***************
+*** 461,467 ****
+      struct stat 	s_buf;
+      char		buf[MAXPATHLEN];
+  
+!     if (glob(path, "*/{.,..}")) {
+  	return NULL;
+      }
+  
+--- 462,468 ----
+      struct stat 	s_buf;
+      char		buf[MAXPATHLEN];
+  
+!     if (glob(path, gpat)) {
+  	return NULL;
+      }
+  
+***************
+*** 708,714 ****
+  	sprintf(buf, "%s/{.*,*}", path);
+  	if (filexp(buf, &names) > 0) {
+  	    for (np = names; np && *np; np++) {
+! 		if (!glob(*np, "*/{.,..}"))
+  		    add_path_to_menu(item, *np, n);
+  	    }
+  	    free_vec(names);
+--- 709,715 ----
+  	sprintf(buf, "%s/{.*,*}", path);
+  	if (filexp(buf, &names) > 0) {
+  	    for (np = names; np && *np; np++) {
+! 		if (!glob(*np, gpat))
+  		    add_path_to_menu(item, *np, n);
+  	    }
+  	    free_vec(names);
