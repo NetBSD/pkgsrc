@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.2 2003/08/11 22:08:34 recht Exp $
+$NetBSD: patch-aa,v 1.3 2003/12/24 11:44:08 recht Exp $
 
---- google.py.orig	2002-04-18 22:11:18.000000000 +0200
-+++ google.py	2003-05-31 12:17:35.000000000 +0200
+--- google.py.orig	2003-06-18 11:17:06.000000000 +0200
++++ google.py	2003-12-24 12:38:27.000000000 +0100
 @@ -43,7 +43,8 @@
  Erik Max Francis, for the command line interface
  Michael Twomey, for HTTP proxy support"""
@@ -23,20 +23,23 @@ $NetBSD: patch-aa,v 1.2 2003/08/11 22:08:34 recht Exp $
  _googlefile1 = ".googlekey"
  _googlefile2 = "googlekey.txt"
  _licenseLocations = (
-@@ -201,10 +202,10 @@
+@@ -201,11 +202,11 @@
  class _SearchBase:
      def __init__(self, params):
          for k, v in params.items():
 -            if isinstance(v, SOAP.structType):
+-                v = v._asdict
 +            if isinstance(v, Types.structType):
-                 v = v._asdict
++                v = v._asdict()
              try:
 -                if isinstance(v[0], SOAP.structType):
+-                    v = [node._asdict for node in v]
 +                if isinstance(v[0], Types.structType):
-                     v = [node._asdict for node in v]
++                    v = [node._asdict() for node in v]
              except:
                  pass
-@@ -303,7 +304,7 @@
+             self.__dict__[str(k)] = v
+@@ -303,16 +304,16 @@
      See documentation of these individual classes for list of available attributes
      """
      http_proxy = getProxy(http_proxy)
@@ -45,6 +48,17 @@ $NetBSD: patch-aa,v 1.2 2003/08/11 22:08:34 recht Exp $
      license_key = getLicense(license_key)
      filter = _marshalBoolean(filter)
      safeSearch = _marshalBoolean(safeSearch)
+     data = remoteserver.doGoogleSearch(license_key, q, start, maxResults, filter, restrict,
+                                        safeSearch, language, inputencoding, outputencoding)
+-    metadata = data._asdict
++    metadata = data._asdict()
+     del metadata["resultElements"]
+     metadata = SearchResultsMetaData(metadata)
+-    results = [SearchResult(node._asdict) for node in data.resultElements]
++    results = [SearchResult(node._asdict()) for node in data.resultElements]
+     return SearchReturnValue(metadata, results)
+ 
+ def doGetCachedPage(url, license_key = None, http_proxy = None):
 @@ -330,7 +331,7 @@
      Returns: string, text of cached page    
      """
