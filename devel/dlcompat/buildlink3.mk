@@ -1,4 +1,6 @@
-# $NetBSD: buildlink3.mk,v 1.5 2004/03/05 19:25:10 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2004/07/18 09:35:08 schmonz Exp $
+
+.if ${OPSYS} == "Darwin"
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 DLCOMPAT_BUILDLINK3_MK:=	${DLCOMPAT_BUILDLINK3_MK}+
@@ -11,8 +13,10 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ndlcompat}
 BUILDLINK_PACKAGES+=	dlcompat
 
 .if !empty(DLCOMPAT_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.dlcompat+=	dlcompat>=20020606
+BUILDLINK_DEPENDS.dlcompat+=	dlcompat>=20030629
 BUILDLINK_PKGSRCDIR.dlcompat?=	../../devel/dlcompat
 .endif  # DLCOMPAT_BUILDLINK3_MK
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+
+.endif	# OPSYS
