@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/04/09 12:01:07 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/05/02 12:37:05 rh Exp $
 #
 
 DISTNAME=	scrollkeeper-0.2
@@ -15,5 +15,6 @@ DEPENDS+=	libxml>=1.8.9:../../textproc/libxml
 
 GNU_CONFIGURE=		yes
 USE_LIBINTL=		yes
+USE_GMAKE=		yes
 
 .include "../../mk/bsd.pkg.mk"
