@@ -1,8 +1,6 @@
-$NetBSD: distinfo,v 1.8 2004/06/23 13:25:42 grant Exp $
+$NetBSD: distinfo,v 1.9 2004/08/14 12:28:49 tron Exp $
 
-SHA1 (mozilla-i386-pc-solaris2.8-1.7.tar.gz) = b6a6b53f9e7acbf451123bf5ddb92b0893316611
-Size (mozilla-i386-pc-solaris2.8-1.7.tar.gz) = 21802418 bytes
-SHA1 (mozilla-i686-pc-linux-gnu-1.7.tar.gz) = c4c9d1f413ac1c47a8535e2e61c689f6f8576ba8
-Size (mozilla-i686-pc-linux-gnu-1.7.tar.gz) = 13809716 bytes
-SHA1 (mozilla-sparc-sun-solaris2.8-1.7.tar.gz) = 0f049fa84be6843a5e6786b0f23cc7715a88850a
-Size (mozilla-sparc-sun-solaris2.8-1.7.tar.gz) = 17718280 bytes
+SHA1 (mozilla-i686-pc-linux-gnu-1.7.2.tar.gz) = 9a0f68224cb50e880623729e278bf1ef29db7739
+Size (mozilla-i686-pc-linux-gnu-1.7.2.tar.gz) = 13810856 bytes
+SHA1 (mozilla-sparc-sun-solaris2.8-1.7.2.tar.bz2) = 68eab9e823e6d1fdacf7a971afd3f89222eb7532
+Size (mozilla-sparc-sun-solaris2.8-1.7.2.tar.bz2) = 15701937 bytes
