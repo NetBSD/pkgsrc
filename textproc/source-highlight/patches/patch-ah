@@ -1,6 +1,6 @@
-$NetBSD: patch-ah,v 1.6 2004/08/16 15:21:45 seb Exp $
+$NetBSD: patch-ah,v 1.7 2004/10/21 00:15:47 seb Exp $
 
---- tests/Makefile.in.orig	2004-08-16 14:10:24.000000000 +0000
+--- tests/Makefile.in.orig	2004-10-20 23:33:28.000000000 +0000
 +++ tests/Makefile.in
 @@ -56,9 +56,9 @@ CONFIG_HEADER = $(top_builddir)/config.h
  CONFIG_CLEAN_FILES =
@@ -23,16 +23,16 @@ $NetBSD: patch-ah,v 1.6 2004/08/16 15:21:45 seb Exp $
  sysconfdir = @sysconfdir@
  target_alias = @target_alias@
  TAGS_J2H_OPTION = -f html --tags-file $(top_srcdir)/src/tags.j2h 
-@@ -214,7 +215,7 @@ syslog.log syslog.log.html \
- tags.syslog
+@@ -216,7 +217,7 @@ tags.syslog tags.esc \
+ changelog.css
  
  CPP2HTML_WHEADERS = $(CPP2HTML) --header=$(srcdir)/header.html --footer=$(srcdir)/footer.html --title="Header and footer test"
 -source_highlightdoc_DATA = test.php3.html test.pl.html test.pm.html \
 +source_highlightdochtml_DATA = test.php3.html test.pl.html test.pm.html \
  test.py.html test.rb.html test.js.html test.lua.html test.ml.html \
  test.sml.html test.log.html access.log.html auth.log.html error.log.html syslog.log.html \
- tags.syslog
-@@ -253,22 +254,22 @@ $(top_srcdir)/configure:  $(am__configur
+ tags.syslog tags.esc
+@@ -255,22 +256,22 @@ $(top_srcdir)/configure:  $(am__configur
  $(ACLOCAL_M4):  $(am__aclocal_m4_deps)
  	cd $(top_builddir) && $(MAKE) $(AM_MAKEFLAGS) am--refresh
  uninstall-info-am:
@@ -64,7 +64,7 @@ $NetBSD: patch-ah,v 1.6 2004/08/16 15:21:45 seb Exp $
  	done
  tags: TAGS
  TAGS:
-@@ -308,7 +309,7 @@ check-am: all-am
+@@ -310,7 +311,7 @@ check-am: all-am
  check: check-am
  all-am: Makefile $(DATA)
  installdirs:
@@ -73,7 +73,7 @@ $NetBSD: patch-ah,v 1.6 2004/08/16 15:21:45 seb Exp $
  	  test -z "$$dir" || $(mkdir_p) "$$dir"; \
  	done
  install: install-am
-@@ -354,7 +355,7 @@ info: info-am
+@@ -356,7 +357,7 @@ info: info-am
  
  info-am:
  
@@ -82,7 +82,7 @@ $NetBSD: patch-ah,v 1.6 2004/08/16 15:21:45 seb Exp $
  
  install-exec-am:
  
-@@ -380,17 +381,17 @@ ps: ps-am
+@@ -382,17 +383,17 @@ ps: ps-am
  
  ps-am:
  

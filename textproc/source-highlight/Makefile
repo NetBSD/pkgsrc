@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2004/08/16 15:21:45 seb Exp $
+# $NetBSD: Makefile,v 1.15 2004/10/21 00:15:47 seb Exp $
 #
 
-DISTNAME=	source-highlight-1.10
+DISTNAME=	source-highlight-1.11
 SVR4_PKGNAME=	srchl
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GNU:=src-highlite/}
@@ -12,6 +12,7 @@ COMMENT=	Highlight syntax of various languages source into HTML document
 
 GNU_CONFIGURE=	YES
 USE_BUILDLINK3=	YES
+USE_LANGUAGES=	c c++
 
 TEST_TARGET=	check
 
