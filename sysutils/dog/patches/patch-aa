@@ -1,17 +1,16 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/01/19 01:35:05 hubertf Exp $
+$NetBSD: patch-aa,v 1.2 2003/09/23 13:34:45 wiz Exp $
 
---- Makefile.orig	Tue Jul 13 20:32:24 1999
-+++ Makefile
-@@ -12,18 +12,20 @@
+--- Makefile.orig	Wed Jun 21 17:00:57 2000
++++ Makefile	Tue Sep 23 10:15:48 2003
+@@ -18,22 +18,23 @@
  #  dogboy@photodex.com!
  
  INSTALL = /usr/bin/install -c
 -OBJS = dog.o getopt.o getopt1.o
 -CFLAGS = -O3 -Wall
 +#HF#OBJS = dog.o getopt.o getopt1.o
-+OBJS = dog.o # NetBSD (and about any other Unix) has getopt in libc :-)
-+CC ?= cc
-+CFLAGS ?= -O -pipe
++OBJS += dog.o # NetBSD (and about any other Unix) has getopt in libc :-)
++#CFLAGS = -O3 -Wall
  
 -prefix = /usr/local
 +prefix = ${PREFIX}
@@ -24,7 +23,13 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/01/19 01:35:05 hubertf Exp $
  
  dog:	${OBJS}
 -	gcc ${CFLAGS} -o dog ${OBJS}
-+	$(CC) ${CFLAGS} -o dog ${OBJS}
++	$(CC) ${CFLAGS} -o dog ${OBJS} ${LDFLAGS}
  
  install:	dog
- 	$(INSTALL) -m 644 dog.1 ${mandir}/man1
+-	$(INSTALL) -m 644 dog.1 ${mandir}/man1
+-	$(INSTALL) -m 755 dog ${bindir}
++	$(BSD_INSTALL_MAN) dog.1 ${mandir}/man1/dog.1
++	$(BSD_INSTALL_PROGRAM) dog ${bindir}/dog
+ 
+ clean:
+ 	rm -f dog *.o *~
