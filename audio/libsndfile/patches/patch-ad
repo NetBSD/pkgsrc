@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 2002/10/18 13:26:13 jlam Exp $
+
+--- examples/Makefile.in.orig	Thu Oct 17 22:22:17 2002
++++ examples/Makefile.in
+@@ -107,7 +107,7 @@ sndfile_info_SOURCES = sndfile-info.c 
+ sndfile_info_LDADD = $(SNDFILEDIR)/libsndfile.la -lm
+ 
+ sndfile_play_SOURCES = sndfile-play.c 
+-sndfile_play_LDADD = $(SNDFILEDIR)/libsndfile.la -lm $(OS_SPECIFIC_LINKS)
++sndfile_play_LDADD = $(SNDFILEDIR)/libsndfile.la -lm $(OS_SPECIFIC_LINKS) $(LIBOSSAUDIO)
+ 
+ sfconvert_SOURCES = sfconvert.c 
+ sfconvert_LDADD = $(SNDFILEDIR)/libsndfile.la -lm
