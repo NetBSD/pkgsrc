@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.1.1.1 2000/06/15 14:04:47 rh Exp $
+$NetBSD: patch-ab,v 1.2 2003/01/13 18:29:53 wiz Exp $
 
---- ../../../mal/common/AGNet.h.orig	Sun May 14 23:17:36 2000
-+++ ../../../mal/common/AGNet.h	Thu Jun 15 14:20:07 2000
+--- mal/common/AGNet.h.orig	Fri Jan  5 17:50:07 2001
++++ mal/common/AGNet.h
 @@ -54,6 +54,7 @@
  #       else /* defined(macintosh) */
  #           include <netdb.h>
@@ -14,8 +14,8 @@ $NetBSD: patch-ab,v 1.1.1.1 2000/06/15 14:04:47 rh Exp $
  #               include <sys/filio.h>
  #               include <arpa/inet.h>
  #           else
--#               ifdef __FreeBSD__
-+#               if (defined(BSD) && BSD >= 199306)
+-#               if defined(__FreeBSD__) || defined(_HPUX_SOURCE)
++#               if (defined(BSD) && BSD >= 199306) || defined(_HPUX_SOURCE)
  #                   include <sys/ioctl.h>
  #                   include <arpa/inet.h>
  #               else
