@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.5 2001/10/15 22:45:55 skrll Exp $
+$NetBSD: distinfo,v 1.6 2001/11/13 21:11:54 jlam Exp $
 
 SHA1 (kdemultimedia-2.2.1.tar.bz2) = fcff29a9498d7023193132abd2e1e6dbd2d82b17
 Size (kdemultimedia-2.2.1.tar.bz2) = 4683892 bytes
-SHA1 (patch-aa) = 789123bef295d72f84bb08ef0dc59ce392ca8eaf
+SHA1 (patch-aa) = bfa0d4835eebe4e6f38ee4d0ad01940c67fb72af
 SHA1 (patch-ab) = 364d905ff5379535285d3c5d462607c0020451d3
 SHA1 (patch-ac) = 9981b9eae552aead074cee46bd0c065dca2e1fca
 SHA1 (patch-ad) = d32a98772d5367d7230f69b8984913e9c6ab1267
@@ -16,3 +16,4 @@ SHA1 (patch-an) = b6a16911a05d713062b3366ae43e685e6084f259
 SHA1 (patch-ao) = 7c909e0d4029087534ab3085c5522ac6929a3502
 SHA1 (patch-ap) = e7733176a118c06208337a738a6388711a8d6ec4
 SHA1 (patch-aq) = e919b11924c777e805e9aba17ca84359ec64eebd
+SHA1 (patch-ar) = 808f111a44af7323fd0d105e29cfe7af828f7021

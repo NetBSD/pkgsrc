@@ -1,0 +1,16 @@
+$NetBSD: patch-ar,v 1.1 2001/11/13 21:11:55 jlam Exp $
+
+--- mpeglib/lib/util/render/x11/imageDeskX11.cpp.orig	Thu Jan 11 10:40:00 2001
++++ mpeglib/lib/util/render/x11/imageDeskX11.cpp
+@@ -397,7 +397,11 @@
+ 	}
+ 
+ 	int bestMode = -1;
++#if defined(__NetBSD__)
++	int border, minBorder = INT_MAX;
++#else
+ 	int border, minBorder = MAXINT;
++#endif
+ 
+ 	for (i = 0; i < vm_count; i++) {
+ 		printf("mode %d: %dx%d\n",i, vm_modelines[i]->hdisplay,vm_modelines[i]->vdisplay);
