@@ -1,0 +1,32 @@
+$NetBSD: patch-ad,v 1.1 2002/03/03 15:20:10 veego Exp $
+
+===================================================================
+RCS file: /cvsroot/libusb/libusb/bsd.c,v
+retrieving revision 1.11
+retrieving revision 1.12
+diff -u -r1.11 -r1.12
+--- bsd.c	2002/02/05 20:43:38	1.11
++++ bsd.c	2002/02/16 18:56:51	1.12
+@@ -3,7 +3,7 @@
+  *
+  * Derived from Linux version by Richard Tobin.
+  *
+- * $Id: patch-ad,v 1.1 2002/03/03 15:20:10 veego Exp $
++ * $Id: patch-ad,v 1.1 2002/03/03 15:20:10 veego Exp $
+  * $Name:  $
+  *
+  * This library is covered by the LGPL, read LICENSE for details.
+@@ -182,7 +182,12 @@
+ #else
+     snprintf(buf, sizeof(buf) - 1, "%s.%02d", dev->device->filename, ep);
+ #endif
+-    fd = open(buf, mode);
++    /* Try to open it O_RDWR first for those devices which have in and out
++     * endpoints with the same address (eg 0x02 and 0x82)
++     */
++    fd = open(buf, O_RDWR);
++    if (fd < 0 && errno == ENXIO)
++      fd = open(buf, mode);
+     if (fd < 0)
+       USB_ERROR_STR(fd, "can't open %s for bulk read: %s\n",
+                     buf, strerror(errno));
