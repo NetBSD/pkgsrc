@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.42 2001/12/02 06:56:43 jlam Exp $
+# $NetBSD: Makefile,v 1.43 2001/12/14 23:18:15 jlam Exp $
 
 DISTNAME=		cups-${DIST_VERS}-source
 PKGNAME=		cups-${VERS}
-BASE_VERS=		1.1.10
-DIST_VERS=		${BASE_VERS}-1
+BASE_VERS=		1.1.12
+DIST_VERS=		${BASE_VERS}
 VERS=			${DIST_VERS:S/-/./g}
 WRKSRC=			${WRKDIR}/cups-${BASE_VERS}
 CATEGORIES=		print
@@ -21,10 +21,10 @@ COMMENT=		Common UNIX Printing System
 
 CONFLICTS+=		LPRng-[0-9]* LPRng-core-[0-9]*
 
-USE_BUILDLINK_ONLY=	# defined
-USE_GMAKE=		# defined
-USE_LIBTOOL=		# defined
-GNU_CONFIGURE=		# defined
+USE_BUILDLINK_ONLY=	YES
+USE_GMAKE=		YES
+USE_LIBTOOL=		YES
+GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--localstatedir=/var
 CONFIGURE_ARGS+=	--with-docdir=${PREFIX}/share/doc/html/cups
@@ -60,26 +60,28 @@ BUILD_DEFS+=		CUPS_USER CUPS_GROUP
 
 DOCDIR=			${PREFIX}/share/doc/cups
 EGDIR=			${PREFIX}/share/examples/cups
+CUPS_CONFDIR=		${PKG_SYSCONFDIR}/cups
+CUPS_LOGDIR=		/var/log/cups
+CUPS_REQUESTS=		/var/spool/cups
 
-PKG_GROUPS=	${CUPS_GROUP}
-PKG_USERS=	${CUPS_USER}:${CUPS_GROUP}::Common\\ UNIX\\ Printing\\ System\\ user:${SH}
+PKG_GROUPS=		${CUPS_GROUP}
+PKG_USERS=		${CUPS_USER}:${CUPS_GROUP}::Common\\ UNIX\\ Printing\\ System\\ user::${SH}
 
-CONF_FILES=	${EGDIR}/client.conf ${PKG_SYSCONFDIR}/cups/client.conf
-CONF_FILES+=	${EGDIR}/cupsd.conf ${PKG_SYSCONFDIR}/cups/cupsd.conf
-SUPPORT_FILES=	${EGDIR}/classes.conf ${PKG_SYSCONFDIR}/cups/classes.conf
-SUPPORT_FILES+=	${EGDIR}/mime.convs ${PKG_SYSCONFDIR}/cups/mime.convs
-SUPPORT_FILES+=	${EGDIR}/mime.types ${PKG_SYSCONFDIR}/cups/mime.types
-SUPPORT_FILES+=	${EGDIR}/printers.conf ${PKG_SYSCONFDIR}/cups/printers.conf
-RCD_SCRIPTS=	cupsd
+CONF_FILES=		${EGDIR}/client.conf ${CUPS_CONFDIR}/client.conf
+CONF_FILES+=		${EGDIR}/cupsd.conf ${CUPS_CONFDIR}/cupsd.conf
+SUPPORT_FILES=		${EGDIR}/classes.conf ${CUPS_CONFDIR}/classes.conf
+SUPPORT_FILES+=		${EGDIR}/mime.convs ${CUPS_CONFDIR}/mime.convs
+SUPPORT_FILES+=		${EGDIR}/mime.types ${CUPS_CONFDIR}/mime.types
+SUPPORT_FILES+=		${EGDIR}/printers.conf ${CUPS_CONFDIR}/printers.conf
+RCD_SCRIPTS=		cupsd
 
-OWN_DIRS+=		${PKG_SYSCONFDIR}/cups
-OWN_DIRS+=		${PKG_SYSCONFDIR}/cups/interfaces
-OWN_DIRS+=		${PKG_SYSCONFDIR}/cups/ppd
-OWN_DIRS+=		/var/log/cups
-OWN_DIRS+=		/var/spool/cups
-OWN_DIRS_PERMS=		${PKG_SYSCONFDIR}/cups/certs			\
-			${CUPS_USER} ${CUPS_GROUP} 0711
-OWN_DIRS_PERMS+=	/var/spool/cups/tmp ${CUPS_USER} ${CUPS_GROUP} 1700
+OWN_DIRS=		${CUPS_CONFDIR}
+OWN_DIRS+=		${CUPS_CONFDIR}/interfaces
+OWN_DIRS+=		${CUPS_CONFDIR}/ppd
+OWN_DIRS+=		${CUPS_LOGDIR}
+OWN_DIRS_PERMS=		${CUPS_CONFDIR}/certs ${CUPS_USER} ${CUPS_GROUP} 0711
+OWN_DIRS_PERMS+=	${CUPS_REQUESTS} ${CUPS_USER} ${CUPS_GROUP} 0700
+OWN_DIRS_PERMS+=	${CUPS_REQUESTS}/tmp ${CUPS_USER} ${CUPS_GROUP} 1700
 
 pre-install:
 	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/cups.pam > ${WRKDIR}/cups.pam
