@@ -1,0 +1,21 @@
+  gschem is the schematic capture program/tool which is part of gEDA.
+It's sole purpose is to facilitate the graphical input of
+components/circuits.
+
+  Schematic capture is a fancy name for the ability to draw and
+layout circuits using a computer.  Standard symbols are used to
+represent the various gates and components which are interconnected
+by nets (wires).  Most vector drawing programs can be used for
+schematic capture but they usually lack one (or more) of the
+following characteristics: 
+
+ * The awareness of the electrical properties of components, nets,
+   and pins. 
+ * Hierarchical design (having components represent some abstracted
+   functionality).  The ability to associate attributes with nets and
+   components. 
+ * Generate netlists from the schematic. 
+
+  These are all critical features (among others which I cannot recall
+right now) which are shared by all schematic capture programs.  The
+schematic capture program which is part of gEDA is called "gschem". 
