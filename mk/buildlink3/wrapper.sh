@@ -1,10 +1,11 @@
 #!@BUILDLINK_SHELL@
 #
-# $NetBSD: wrapper.sh,v 1.1.2.1 2003/08/14 13:16:55 jlam Exp $
+# $NetBSD: wrapper.sh,v 1.1.2.2 2003/08/28 19:12:56 jlam Exp $
 
 Xsed='@SED@ -e 1s/^X//'
 sed_quote_subst='s/\([\\`\\"$\\\\]\)/\\\1/g'
 
+marshall="@_BLNK_WRAP_MARSHALL@"
 private_pre_cache="@_BLNK_WRAP_PRIVATE_PRE_CACHE@"
 private_cache_add="@_BLNK_WRAP_PRIVATE_CACHE_ADD@"
 private_cache="@_BLNK_WRAP_PRIVATE_CACHE@"
@@ -34,9 +35,17 @@ while $test $# -gt 0; do
 	arg="$1"; shift
 	cachehit=no
 	skipcache=no
+	#
+	# Marshall any group of consecutive arguments into a single
+	# $arg to be checked in the cache and logic files.
+	#
+	. $marshall
+	#
+	# Check the private cache, and possibly set skipcache=yes.
+	#
 	. $private_cache
 	#
-	# The private cache may set skipcache=yes.
+	# Check the common cache shared by all of the other wrappers.
 	#
 	case $skipcache,$cachehit in
 	no,no)	. $cache ;;

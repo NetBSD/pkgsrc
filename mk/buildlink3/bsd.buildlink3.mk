@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.1.2.26 2003/08/28 09:48:20 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.1.2.27 2003/08/28 19:12:55 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -676,6 +676,7 @@ _BLNK_SANITIZED_PATH!=	${ECHO} ${PATH} | ${SED}			\
 _BLNK_WRAP_SANITIZE_PATH=	PATH="${_BLNK_SANITIZED_PATH}"
 _BLNK_EMPTY_FILE?=		${BUILDLINK_DIR}/bin/.empty
 _BLNK_WRAP_ENV?=		${BUILDLINK_WRAPPER_ENV}
+_BLNK_WRAP_MARSHALL=		${BUILDLINK_DIR}/bin/.marshall
 _BLNK_WRAP_PRE_CACHE=		${BUILDLINK_DIR}/bin/.pre-cache
 _BLNK_WRAP_CACHE_ADD=		${BUILDLINK_DIR}/bin/.cache-add
 _BLNK_WRAP_CACHE=		${BUILDLINK_DIR}/bin/.cache
@@ -702,6 +703,7 @@ _BLNK_WRAP_SETENV.${_wrappee_}=	${_wrappee_}="${BUILDLINK_${_wrappee_}:T}"
 _BLNK_WRAP_SANITIZE_PATH.${_wrappee_}=		${_BLNK_WRAP_SANITIZE_PATH}
 _BLNK_WRAP_EXTRA_FLAGS.${_wrappee_}=		# empty
 _BLNK_WRAP_ENV.${_wrappee_}=			${_BLNK_WRAP_ENV}
+_BLNK_WRAP_MARSHALL.${_wrappee_}=		${_BLNK_WRAP_MARSHALL}
 _BLNK_WRAP_PRIVATE_PRE_CACHE.${_wrappee_}=	${_BLNK_EMPTY_FILE}
 _BLNK_WRAP_PRIVATE_CACHE_ADD.${_wrappee_}=	${_BLNK_EMPTY_FILE}
 _BLNK_WRAP_PRIVATE_CACHE.${_wrappee_}=		${_BLNK_EMPTY_FILE}
@@ -834,6 +836,7 @@ _BLNK_WRAPPER_TRANSFORM_SED.${_wrappee_}=				\
 	-e "s|@_BLNK_LIBTOOL_FIX_LA@|${_BLNK_LIBTOOL_FIX_LA:Q}|g"	\
 	-e "s|@_BLNK_WRAP_LOG@|${_BLNK_WRAP_LOG:Q}|g"			\
 	-e "s|@_BLNK_WRAP_EXTRA_FLAGS@|${_BLNK_WRAP_EXTRA_FLAGS.${_wrappee_}:Q}|g" \
+	-e "s|@_BLNK_WRAP_MARSHALL@|${_BLNK_WRAP_MARSHALL.${_wrappee_}:Q}|g" \
 	-e "s|@_BLNK_WRAP_PRIVATE_PRE_CACHE@|${_BLNK_WRAP_PRIVATE_PRE_CACHE.${_wrappee_}:Q}|g" \
 	-e "s|@_BLNK_WRAP_PRIVATE_CACHE_ADD@|${_BLNK_WRAP_PRIVATE_CACHE_ADD.${_wrappee_}:Q}|g" \
 	-e "s|@_BLNK_WRAP_PRIVATE_CACHE@|${_BLNK_WRAP_PRIVATE_CACHE.${_wrappee_}:Q}|g" \
@@ -851,6 +854,7 @@ buildlink-wrappers: ${BUILDLINK_${_wrappee_}}
 .if !target(${BUILDLINK_${_wrappee_}})
 ${BUILDLINK_${_wrappee_}}:						\
 		${_BLNK_WRAPPER_SH.${_wrappee_}}			\
+		${_BLNK_WRAP_MARSHALL.${_wrappee_}}			\
 		${_BLNK_WRAP_PRIVATE_CACHE.${_wrappee_}}		\
 		${_BLNK_WRAP_CACHE.${_wrappee_}}			\
 		${_BLNK_WRAP_LOGIC.${_wrappee_}}			\
@@ -948,6 +952,11 @@ buildlink-${_BLNK_OPSYS}-wrappers: buildlink-wrappers
 ${_BLNK_EMPTY_FILE}:
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
 	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_ARGS} ${.TARGET}
+
+${_BLNK_WRAP_MARSHALL}: ${.CURDIR}/../../mk/buildlink3/marshall
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
+	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC}			\
+		| ${_BLNK_SH_CRUNCH_FILTER} > ${.TARGET}
 
 .for _wrappee_ in ${_BLNK_WRAPPEES}
 .  if !target(${_BLNK_WRAP_PRIVATE_CACHE_ADD.${_wrappee_}})
@@ -1074,7 +1083,8 @@ ${_BLNK_LIBTOOL_FIX_LA}:						\
 #
 _BLNK_RPATH_FLAGS=	${RPATH_FLAG}
 _BLNK_RPATH_FLAGS+=	-Wl,${RPATH_FLAG}
-.for _rflag_ in -Wl,-R -Wl,-rpath, -Wl,-rpath-link,
+.for _rflag_ in \
+	-Wl,-R -Wl,-rpath, -Wl,--rpath, -Wl,-rpath-link, -Wl,--rpath-link
 .  if empty(_BLNK_RPATH_FLAGS:M${_rflag_})
 _BLNK_RPATH_FLAGS+=	${_rflag_}
 .  endif
