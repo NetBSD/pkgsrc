@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2004/03/29 23:39:43 wiz Exp $
+# $NetBSD: Makefile.common,v 1.6 2004/04/27 03:43:54 snj Exp $
 #
 
 DISTNAME=	BitTorrent-3.4.1a
@@ -15,6 +15,6 @@ DISTINFO_FILE=	${.CURDIR}/../../net/bittorrent/distinfo
 FILESDIR=	${.CURDIR}/../../net/bittorrent/files
 PATCHDIR=	${.CURDIR}/../../net/bittorrent/patches
 
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 
 PYTHON_VERSIONS_ACCEPTED=	23pth 22pth
