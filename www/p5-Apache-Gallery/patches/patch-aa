@@ -1,0 +1,41 @@
+$NetBSD: patch-aa,v 1.4 2004/04/01 19:21:50 kim Exp $
+
+Convert newlines to <BR> tags in visible folder names on the directory
+page, but not in the menu bar.
+
+--- lib/Apache/Gallery.pm.orig	2004-03-13 13:02:03.000000000 -0500
++++ lib/Apache/Gallery.pm	2004-03-13 13:02:49.000000000 -0500
+@@ -272,7 +272,7 @@
+ 				if (-d $thumbfilename) {
+ 					my $dirtitle = '';
+ 					if (-e $thumbfilename . ".folder") {
+-						$dirtitle = get_filecontent($thumbfilename . ".folder");
++						$dirtitle = get_filecontent($thumbfilename . ".folder", 1);
+ 					}
+ 
+ 					$tpl->assign(FILEURL => uri_escape($fileurl, $escape_rule), FILE => ($dirtitle ? $dirtitle : $file));
+@@ -1041,6 +1041,7 @@
+ 
+ sub get_filecontent {
+ 	my $file = shift;
++	my $fold = shift;
+ 	open(FH, $file) or return undef;
+ 	my $content = '';
+ 	{
+@@ -1048,6 +1049,7 @@
+ 	$content = <FH>;
+ 	}
+ 	close(FH);
++	$content =~ s/\n/<BR>\n/g if $fold;
+ 	return $content;
+ }
+ 
+@@ -1145,7 +1147,7 @@
+ 			$dirname = File::Spec->catdir($dirname, $link);
+ 
+ 			if (-e $dirname . ".folder") {
+-				$linktext = get_filecontent($dirname . ".folder");
++				$linktext = get_filecontent($dirname . ".folder", 0);
+ 			}
+ 		}
+ 
