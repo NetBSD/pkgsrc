@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2001/09/27 23:19:00 jlam Exp $
+# $NetBSD: Makefile,v 1.69 2001/10/06 14:47:35 rh Exp $
 
 DISTNAME=		gnome-core-1.4.0.4
 CATEGORIES=		x11 gnome
@@ -9,15 +9,10 @@ MAINTAINER=		rh@netbsd.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Base component of GNU Network Object Management Environment
 
-DEPENDS+=		gdk-pixbuf-gnome>=0.9.0nb1:../../graphics/gdk-pixbuf-gnome
-DEPENDS+=		libghttp>=1.0.9:../../www/libghttp
-DEPENDS+=		libxml-[0-9]*:../../textproc/libxml
 DEPENDS+=		xscreensaver-gnome>=3.25nb1:../xscreensaver-gnome
-DEPENDS+=		libglade>=0.14:../../devel/libglade
-DEPENDS+=		gtkhtml>=0.8.3:../../www/gtkhtml
 BUILD_USES_MSGFMT=	YES
 
-USE_LIBINTL=		YES
+USE_BUILDLINK_ONLY=	YES
 USE_X11BASE=		YES
 USE_GMAKE=		YES
 USE_LIBTOOL=		YES
@@ -27,7 +22,6 @@ LOCALSTATEDIR=		/var/gnome
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--localstatedir=${LOCALSTATEDIR}
-CPPFLAGS+=		-I${LOCALBASE}/include	# libintl.h
 
 USE_PERL5=		YES
 PERL_SCRIPTS=		help-browser/gnome-convert help-browser/gnome-download
@@ -48,4 +42,11 @@ post-install:
 .endfor
 .endfor
 
+.include "../../graphics/gdk-pixbuf-gnome/buildlink.mk"
+.include "../../www/libghttp/buildlink.mk"
+.include "../../textproc/libxml/buildlink.mk"
+.include "../../devel/libglade/buildlink.mk"
+.include "../../www/gtkhtml/buildlink.mk"
+.include "../../devel/gettext-lib/buildlink.mk"
+.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
