@@ -1,9 +1,8 @@
 #!/usr/pkg/bin/python
 #
-#	$NetBSD: zope-install.py,v 1.2 1999/01/09 20:49:27 kleink Exp $
-#	$Endicor$
+#	$NetBSD: zope-install.py,v 1.3 1999/06/19 22:48:23 tsarna Exp $
 #
-# Copyright (c) 1998 Endicor Technologies, Inc.
+# Copyright (c) 1998,1999 Endicor Technologies, Inc.
 # All rights reserved. Written by Ty Sarna <tsarna@endicor.com>
 #
 # Redistribution and use in source and binary forms, with or without
@@ -11,10 +10,7 @@
 # are met:
 # 1. Redistributions of source code must retain the above copyright
 #    notice, this list of conditions and the following disclaimer.
-# 2. Redistributions in binary form must reproduce the above copyright
-#    notice, this list of conditions and the following disclaimer in the
-#    documentation and/or other materials provided with the distribution.
-# 3. The name of the author may not be used to endorse or promote products
+# 2. The name of the author may not be used to endorse or promote products
 #    derived from this software without specific prior written permission
 #
 # THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
@@ -36,7 +32,7 @@ import sys, os, re, getopt, string
 prefix = "/usr/pkg"
 cgidir = prefix + "/libexec/cgi-bin"
 apconf = prefix + "/etc/httpd/httpd.conf"
-zopedir = prefix + "/zope"
+zopedir = prefix + "/lib/zope"
 zopevar = zopedir + "/var"
 zopedata = "/var/zope"
 
@@ -50,7 +46,7 @@ def usage():
     print '\t-u\tusername to run as, default to Apache\'s user'
     print '\t-g\tgroupname to run as, default to Apache\'s group'
     print '\t-d\tdirectory for instance, defaults to %s/instancename' % zopedata
-    print '\t-d\tdirectory for CGIs, defaults to %s' % cgidir
+    print '\t-c\tdirectory for CGIs, defaults to %s' % cgidir
     
     sys.exit(1)
 
@@ -110,7 +106,7 @@ def createfile(pretend, fname, contents):
         f.close()
             
 if __name__ == "__main__":
-    optlist, args = getopt.getopt(sys.argv[1:], 'np:u:g:d:')
+    optlist, args = getopt.getopt(sys.argv[1:], 'np:u:g:d:c:')
     if len(args) != 1:
         usage()
 
@@ -173,5 +169,5 @@ via http://yourwebserver/instance/
 
 RewriteEngine on
 RewriteCond %%{HTTP:Authorization}  ^(.*)
-RewriteRule ^/%(instance)s/(.*) %(cgidir)s/%(instance)s.cgi/$1  [e=HTTP_CGI_AUTHORIZATION:%%1,t=application/x-httpd-cgi,l]
+RewriteRule ^/%(instance)s($|/)(.*) %(cgidir)s/%(instance)s.cgi/$2  [e=HTTP_CGI_AUTHORIZATION:%%1,t=application/x-httpd-cgi,l]
 """ % vars())
