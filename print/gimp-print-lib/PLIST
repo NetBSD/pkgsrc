@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2003/04/23 17:33:00 drochner Exp $
+@comment $NetBSD: PLIST,v 1.7 2003/04/27 14:43:09 cjep Exp $
 bin/gimpprint-config
 include/gimp-print/gimp-print.h
 @unexec install-info --delete --info-dir=%D/info %D/info/gimpprint.info
@@ -131,19 +131,19 @@ share/gimp-print/doc/manual-html/print-color.png
 share/gimp-print/doc/manual-html/print-main.png
 share/gimp-print/doc/manual-html/print-setup.png
 share/gimp-print/doc/users-guide.pdf
-share/locale/da/LC_MESSAGES/gimp-print.mo
-share/locale/de/LC_MESSAGES/gimp-print.mo
-share/locale/el/LC_MESSAGES/gimp-print.mo
-share/locale/en_GB/LC_MESSAGES/gimp-print.mo
-share/locale/es/LC_MESSAGES/gimp-print.mo
-share/locale/fr/LC_MESSAGES/gimp-print.mo
-share/locale/ja/LC_MESSAGES/gimp-print.mo
-share/locale/nl/LC_MESSAGES/gimp-print.mo
-share/locale/no/LC_MESSAGES/gimp-print.mo
-share/locale/pl/LC_MESSAGES/gimp-print.mo
-share/locale/pt/LC_MESSAGES/gimp-print.mo
-share/locale/sk/LC_MESSAGES/gimp-print.mo
-share/locale/sv/LC_MESSAGES/gimp-print.mo
+${PKGLOCALEDIR}/da/LC_MESSAGES/gimp-print.mo
+${PKGLOCALEDIR}/de/LC_MESSAGES/gimp-print.mo
+${PKGLOCALEDIR}/el/LC_MESSAGES/gimp-print.mo
+${PKGLOCALEDIR}/en_GB/LC_MESSAGES/gimp-print.mo
+${PKGLOCALEDIR}/es/LC_MESSAGES/gimp-print.mo
+${PKGLOCALEDIR}/fr/LC_MESSAGES/gimp-print.mo
+${PKGLOCALEDIR}/ja/LC_MESSAGES/gimp-print.mo
+${PKGLOCALEDIR}/nl/LC_MESSAGES/gimp-print.mo
+${PKGLOCALEDIR}/no/LC_MESSAGES/gimp-print.mo
+${PKGLOCALEDIR}/pl/LC_MESSAGES/gimp-print.mo
+${PKGLOCALEDIR}/pt/LC_MESSAGES/gimp-print.mo
+${PKGLOCALEDIR}/sk/LC_MESSAGES/gimp-print.mo
+${PKGLOCALEDIR}/sv/LC_MESSAGES/gimp-print.mo
 @exec ${MKDIR} %D/share/gimp-print/samples
 @dirrm share/gimp-print/samples
 @dirrm share/gimp-print/doc/manual-html
