@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.247 2003/02/10 15:37:46 wiz Exp $
+$NetBSD: TODO,v 1.248 2003/02/11 19:28:51 wiz Exp $
 
 Suggested new packages
 ======================
@@ -101,12 +101,13 @@ Suggested package updates
 	o cyrus-imapd21-2.1.12
 	o cyrus-sasl2-2.1.12
 	o dante-1.1.13
-	o db4-4.1.25
+	o db4-4.1.25 [pkg/20289]
 	o dylan-compiler-2.3.9
 	o dylan-interpreter-2.3.9
 	o easytag-0.27
 	o elm-me-2.4pl100
 	o exim-4.12 [pkg/19850]
+	o exmh-2.6
 	o fetchmail-6.2.1 [pkg/20143,pkg/20144]
 	o file-roller-2.2.0
 	o flac-1.1.0
@@ -140,6 +141,7 @@ Suggested package updates
 	o gnomeicu-0.99beta
 	o gnuboy-1.0.3 [pkg/19580]
 	o gnucash-1.8.0 [pkg/20271]
+	o gnucash-1.8.1
 	o gnuplot-3.7.3 [pkg/19663]
 	o gpa-0.6.1
 	o gpgme-0.4.0
@@ -149,7 +151,7 @@ Suggested package updates
 	o gtetrinet-0.6.2
 	o gtk---2.2.0
 	o gtk2-2.2.1 [pkg/20237]
-	o gtk2-pan-0.13.3.90
+	o gtk2-pan-0.13.3.92
 	o guile-1.6.3
 	o htmldoc-1.8.23
 	o horde-2.1 [pkg/19497]
@@ -160,6 +162,7 @@ Suggested package updates
 	o imp-3.1 [pkg/19497]
 	o inform-6.21.3 [pkg/19298]
 	o inn 2.3.4 [waiting for IPv6 patch]
+	o iozone-3.157
 	o ircu-2.10.11.04
 	o iozone-3.147
 	o jakarta-ant-1.5 [pkg/18322]
@@ -190,7 +193,9 @@ Suggested package updates
 	o libslang-1.4.7
 	o libsndfile-1.0.4
 	o libxml-2.5.2 [problems with kde2(?)|pkg/20229]
+	o libxml-2.5.3
 	o libxslt-1.0.25 [problems with kde2(?)|pkg/20230]
+	o libxslt-1.0.26
 	o lilypond-1.6.6
 	o lmbench-2.0.4
 	o lout-3.26 [pkg/18687]
@@ -201,12 +206,13 @@ Suggested package updates
 	o memtest86-3.0
 	o metacity-2.4.13
 	o mhonarc-2.5.13 [pkg/19366]
-	o micq-0.4.10.1
+	o micq-0.4.10.1 [pkg/20294]
 	o midnight-commander-4.6.0
 	o mixer.app-1.8.0
 	o mkfontscale-20020618
 	o mng-1.0.5rc2
 	o mowitz-0.2.2
+	o mplayer-0.90rc4
 	o mrproject-0.8
 	o mysql-3.23.54
 	o naim-0.11.5.4
@@ -297,12 +303,14 @@ Suggested package updates
 	o wxGTK-2.4.0
 	o xalan-c-1.4
 	o xanim-2.92.0 [pkg/19934]
+	o xchat-2.0.0
 	o xerces-c-2.1.0 [heinz]
 	o xfstt-1.4
 	o xmame-0.64.1rc2
 	o xmcd-3.2.0
 	o xmess-0.64.1rc2
 	o xosview-1.8.0 [pkg/20265]
+	o xpaint-2.6.8
 	o xpuyopuyo-0.9.5
 	o xsane-0.90
 	o xscreensaver-4.07
