@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2004/03/11 14:01:34 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.8 2004/04/20 16:26:01 jmmv Exp $
 bin/gnome-database-properties
 include/libgnomedb/gnome-db-browser.h
 include/libgnomedb/gnome-db-combo.h
@@ -101,13 +101,17 @@ ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/libgnomedb-2.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/libgnomedb-2.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/libgnomedb-2.mo
 ${PKGLOCALEDIR}/locale/el/LC_MESSAGES/libgnomedb-2.mo
+${PKGLOCALEDIR}/locale/en_CA/LC_MESSAGES/libgnomedb-2.mo
+${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/libgnomedb-2.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/libgnomedb-2.mo
 ${PKGLOCALEDIR}/locale/fa/LC_MESSAGES/libgnomedb-2.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/libgnomedb-2.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/libgnomedb-2.mo
 ${PKGLOCALEDIR}/locale/ga/LC_MESSAGES/libgnomedb-2.mo
 ${PKGLOCALEDIR}/locale/gl/LC_MESSAGES/libgnomedb-2.mo
+${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/libgnomedb-2.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/libgnomedb-2.mo
+${PKGLOCALEDIR}/locale/id/LC_MESSAGES/libgnomedb-2.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/libgnomedb-2.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/libgnomedb-2.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/libgnomedb-2.mo
@@ -167,13 +171,13 @@ share/pixmaps/libgnomedb/gnome-db.png
 @comment in xdg-dirs: @dirrm share/pixmaps
 @dirrm share/omf/libgnomedb
 @comment in scrollkeeper: @dirrm share/omf
-@comment in gnome-dirs: @dirrm share/mime-info
+@comment in xdg-dirs: @dirrm share/mime-info
 @dirrm share/gnome-db/ui
 @dirrm share/gnome-db
 @comment in GConf2: @dirrm share/gconf/schemas
 @dirrm share/doc/html/libgnomedb
 @comment in gnome2-dirs: @dirrm share/control-center-2.0/capplets
 @comment in libglade2: @dirrm lib/libglade/2.0
-@comment in bonobo-activation: @dirrm lib/bonobo/servers
-@comment in bonobo-activation: @dirrm lib/bonobo/monikers
+@comment in libbonobo: @dirrm lib/bonobo/servers
+@comment in libbonobo: @dirrm lib/bonobo/monikers
 @dirrm include/libgnomedb
