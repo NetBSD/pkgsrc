@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.13 2004/01/03 18:33:24 reed Exp $
+$NetBSD: patch-ab,v 1.14 2004/12/28 23:10:10 reed Exp $
 
---- libtiff/tiff.h.orig	Mon Oct  7 11:50:46 2002
-+++ libtiff/tiff.h
-@@ -79,7 +79,7 @@ typedef	char int8;
- typedef	unsigned char uint8;
- typedef	short int16;
- typedef	unsigned short uint16;	/* sizeof (uint16) must == 2 */
--#if defined(__alpha) || (defined(_MIPS_SZLONG) && _MIPS_SZLONG == 64) || defined(__LP64__) || defined(__arch64__)
-+#if defined(__alpha) || (defined(_MIPS_SZLONG) && _MIPS_SZLONG == 64) || defined(__LP64__) || defined(__arch64__) || defined(_LP64)
- typedef	int int32;
- typedef	unsigned int uint32;	/* sizeof (uint32) must == 4 */
- #else
+--- html/Makefile.in.orig	2004-12-20 11:41:54.000000000 -0800
++++ html/Makefile.in
+@@ -224,7 +224,7 @@ target_alias = @target_alias@
+ target_cpu = @target_cpu@
+ target_os = @target_os@
+ target_vendor = @target_vendor@
+-docdir = $(prefix)/share/doc/$(PACKAGE)-$(VERSION)/html
++docdir = $(prefix)/share/doc/$(PACKAGE)/html
+ docfiles = \
+ 	addingtags.html \
+ 	bugs.html \
