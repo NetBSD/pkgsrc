@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.8 2005/01/30 22:59:50 bouyer Exp $
+$NetBSD: patch-ac,v 1.9 2005/02/09 11:42:38 bouyer Exp $
 
---- src/host.c.orig	Sun Oct 26 02:38:25 2003
-+++ src/host.c	Sun Jan 23 21:23:28 2005
+--- src/host.c.orig	2003-10-26 02:38:25.000000000 +0100
++++ src/host.c	2005-02-08 17:36:26.000000000 +0100
 @@ -189,13 +189,15 @@
      if (ai->ai_family == AF_INET6) 
        {
@@ -34,7 +34,7 @@ $NetBSD: patch-ac,v 1.8 2005/01/30 22:59:50 bouyer Exp $
  
    return al;
  }
-@@ -279,33 +284,29 @@
+@@ -279,33 +284,30 @@
    */
  void
  wget_sockaddr_set_address (wget_sockaddr *sa, 
@@ -42,6 +42,7 @@ $NetBSD: patch-ac,v 1.8 2005/01/30 22:59:50 bouyer Exp $
 +			   unsigned short port, ip_address *addr, int family)
  {
 -  if (ip_family == AF_INET) 
++  memset (sa, 0, sizeof(*sa));
 +  if (family == AF_INET)
      {
 -      sa->sin.sin_family = ip_family;
@@ -75,7 +76,7 @@ $NetBSD: patch-ac,v 1.8 2005/01/30 22:59:50 bouyer Exp $
        return;
      }
  #endif  
-@@ -422,12 +423,12 @@
+@@ -422,12 +424,12 @@
    * socklen_t	structure length for socket options
    */
  socklen_t
@@ -91,7 +92,7 @@ $NetBSD: patch-ac,v 1.8 2005/01/30 22:59:50 bouyer Exp $
      return sizeof (struct sockaddr_in6);
  #endif
    abort();
-@@ -435,42 +436,6 @@
+@@ -435,42 +437,6 @@
    return 0;
  }
  
@@ -134,7 +135,7 @@ $NetBSD: patch-ac,v 1.8 2005/01/30 22:59:50 bouyer Exp $
  
  /* Versions of gethostbyname and getaddrinfo that support timeout. */
  
-@@ -559,17 +524,16 @@
+@@ -559,17 +525,16 @@
  pretty_print_address (ip_address *addr)
  {
  #ifdef ENABLE_IPV6
@@ -159,7 +160,7 @@ $NetBSD: patch-ac,v 1.8 2005/01/30 22:59:50 bouyer Exp $
  }
  
  /* Add host name HOST with the address ADDR_TEXT to the cache.
-@@ -601,23 +565,27 @@
+@@ -601,23 +566,27 @@
  lookup_host (const char *host, int silent)
  {
    struct address_list *al = NULL;
