@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/07/17 21:27:53 grant Exp $
+# $NetBSD: Makefile,v 1.11 2003/08/04 21:07:48 jmc Exp $
 #
 
 DISTVERSION=		5.3.12.1
@@ -15,6 +15,10 @@ USE_CROSS_BINUTILS=	yes
 BINUTILS_GNUTARGET=	elf32-i386
 BINUTILS_LDEMULATION=	elf_i386
 USE_CROSS_EGCS=		yes
+
+# Scripts in the build need to have a $CPP defined that works with the built
+# compiler
+NO_EXPORT_CPP=		yes
 
 LINUXDEVEL_FILES=	libc-5.3.12-18.i386.rpm \
 			libc-devel-5.3.12-18.i386.rpm \
