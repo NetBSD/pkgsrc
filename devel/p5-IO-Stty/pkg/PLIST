@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/07/16 00:39:59 thorpej Exp $
+lib/perl5/site_perl/IO/stty.pl
+lib/perl5/site_perl/IO/Stty.pm
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/IO/Stty/.packlist
+@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/IO/Stty
+@dirrm lib/perl5/site_perl/IO
