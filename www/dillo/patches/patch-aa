@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.4.10.1 2005/02/03 23:30:17 salo Exp $
+
+--- dpid/Makefile.in.orig	2004-10-25 13:12:18.000000000 +0200
++++ dpid/Makefile.in
+@@ -475,8 +475,8 @@ uninstall-am: uninstall-binPROGRAMS unin
+ 
+ 
+ install-data-local :
+-	$(mkinstalldirs) $(DESTDIR)$(sysconfdir)
+-	echo dpi_dir=$(libdir)/dillo/dpi > $(DESTDIR)$(sysconfdir)/dpidrc
++	$(mkinstalldirs) $(DESTDIR)$(datadir)/examples/$(PACKAGE)
++	echo dpi_dir=$(libdir)/dillo/dpi > $(DESTDIR)$(datadir)/examples/$(PACKAGE)/dpidrc
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
+ .NOEXPORT:
