@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2000/05/01 14:20:15 sakamoto Exp $
+# $NetBSD: Makefile,v 1.9 2000/12/08 08:49:22 wiz Exp $
 # FreeBSD Id: Makefile,v 1.11 1999/04/17 10:51:03 itojun Exp
 
 DISTNAME=	nvi-1.79
@@ -35,9 +35,6 @@ CANNA_OPT.iso-2022-jp=${CANNA_OPT.euc-jp}
 PLIST_TMP=	${WRKDIR}/PLIST
 PLIST_SRC+=	${PKGDIR}/PLIST ${PLIST_TMP}
 
-REQ_TMP=	${PKGDIR}/REQ
-REQ_FILE=	${WRKDIR}/REQ
-
 AUTODETECT.euc-jp=jp
 AUTODETECT.sjis=jp
 AUTODETECT.iso-2022-jp=jp
@@ -64,7 +61,6 @@ post-build:
 		${FILESDIR}/nvi-m17n > ${WRKDIR}/nvi-${encoding}
 	@${ECHO} "bin/nvi-${encoding}" >> ${PLIST_TMP}
 .endfor
-	@${SED} -e 's|$${PREFIX}|${PREFIX}|' ${REQ_TMP} > ${REQ_FILE}
 
 post-install:
 .for encoding in ${ENCODING}
