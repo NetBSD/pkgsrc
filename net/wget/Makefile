@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2003/07/17 22:52:02 grant Exp $
+# $NetBSD: Makefile,v 1.66 2003/08/04 14:27:29 seb Exp $
 
 DISTNAME=	wget-1.8.2
 PKGREVISION=	1
@@ -30,6 +30,7 @@ CONFIGURE_ENV+=		OPENSSL_LDFLAGS="${OPENSSL_LDFLAGS}"
 EGDIR=			${PREFIX}/share/examples/wget
 CONF_FILES=		${EGDIR}/wgetrc ${PKG_SYSCONFDIR}/wgetrc
 
+USE_NEW_TEXINFO=	YES
 INFO_FILES=		wget.info
 
 .include "../../mk/bsd.prefs.mk"
@@ -43,5 +44,4 @@ CONFIGURE_ARGS+=--without-ssl
 .endif
 
 .include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
