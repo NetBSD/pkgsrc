@@ -1,4 +1,4 @@
-# $NetBSD: bsd.wrapper.mk,v 1.1 2004/09/21 15:01:41 jlam Exp $
+# $NetBSD: bsd.wrapper.mk,v 1.2 2004/09/23 03:59:01 jlam Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -78,6 +78,7 @@ PREPEND_PATH+=		${WRAPPER_BINDIR}
 WRAPPER_DEBUG?=		yes
 CONFIGURE_ENV+=		WRAPPER_DEBUG="${WRAPPER_DEBUG}"
 MAKE_ENV+=		WRAPPER_DEBUG="${WRAPPER_DEBUG}"
+SCRIPTS_ENV+=		WRAPPER_DEBUG="${WRAPPER_DEBUG}"
 
 # The caching code, which greatly speeds up the build process, doesn't
 # work correctly on certain platforms.
@@ -293,6 +294,7 @@ _WRAP_SUBST_SED.${_wrappee_}=						\
 	-e "s|@_WRAP_SCAN@|${_WRAP_SCAN.${_wrappee_}:Q}|g"		\
 	-e "s|@_WRAP_SKIP_TRANSFORM@|${_WRAP_SKIP_TRANSFORM.${_wrappee_}:Q}|g" \
 	-e "s|@_WRAP_TRANSFORM@|${_WRAP_TRANSFORM.${_wrappee_}:Q}|g"	\
+	-e "s|@_WRAP_TRANSFORM_SED@|${_WRAP_TRANSFORM_SED.${_wrappee_}:Q}|g" \
 	${_WRAP_SUBST_SED}
 
 _WRAP_COOKIE.${_wrappee_}=	${WRAPPER_DIR}/.wrapper_${_wrappee_}_done
@@ -532,7 +534,6 @@ ${_WRAP_CMD_SINK.${_wrappee_}}: ${WRAPPER_SRCDIR}/cmd-sink
 ${_WRAP_LOGIC.${_wrappee_}}: ${WRAPPER_SRCDIR}/logic
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
 	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC}			\
-		| ${SED} -e "s|@_WRAP_TRANSFORM_SED@|${_WRAP_TRANSFORM_SED.${_wrappee_}:Q}|g" \
 		| ${_WRAP_SH_CRUNCH_FILTER} > ${.TARGET}
 .  endif
 .endfor	# _WRAPPEES
