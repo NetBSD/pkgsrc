@@ -1,26 +1,7 @@
-$NetBSD: patch-ac,v 1.2 2001/09/10 00:23:32 mycroft Exp $
+$NetBSD: patch-ac,v 1.3 2002/04/03 20:38:35 rh Exp $
 
---- cl/src/get-cl.c.orig	Thu Mar 15 11:10:33 2001
-+++ cl/src/get-cl.c	Mon Sep 10 00:16:56 2001
-@@ -19,6 +19,7 @@
- #include <config.h>
- #include <sys/types.h>
- #include <sys/stat.h>
-+#include <sys/param.h>
- #include <libintl.h>
- #include <stdio.h>
- #include <stdlib.h>
-@@ -29,7 +30,7 @@
- 
- #define SCROLLKEEPERLOCALEDIR "/usr/share/locale"
- 
--#define PATHLEN	256
-+#define PATHLEN	MAXPATHLEN
- 
- static char **av;
- 
---- cl/src/install.c.orig	Thu Mar 15 11:10:33 2001
-+++ cl/src/install.c	Mon Sep 10 00:17:09 2001
+--- cl/src/install.c.orig	Thu Mar 15 21:10:33 2001
++++ cl/src/install.c
 @@ -24,6 +24,7 @@
  #include <locale.h>
  #include <unistd.h>
@@ -38,41 +19,23 @@ $NetBSD: patch-ac,v 1.2 2001/09/10 00:23:32 mycroft Exp $
  
  static int verbose = 0;
  
---- cl/src/uninstall.c.orig	Thu Mar 15 11:10:33 2001
-+++ cl/src/uninstall.c	Mon Sep 10 00:17:21 2001
-@@ -23,6 +23,7 @@
- #include <string.h>
- #include <unistd.h>
- #include <sys/stat.h>
-+#include <sys/param.h>
- #include <libintl.h>
- #include <locale.h>
- #include <scrollkeeper.h>
-@@ -31,7 +32,7 @@
- 
- #define _(String) gettext (String)
- 
--#define PATHLEN		256
-+#define PATHLEN		MAXPATHLEN
- 
- struct IdTab {
-     int id;
---- cl/src/update.c.orig	Thu Mar 15 11:10:33 2001
-+++ cl/src/update.c	Mon Sep 10 00:17:33 2001
-@@ -19,6 +19,7 @@
- #include <config.h>
- #include <sys/types.h>
- #include <sys/stat.h>
-+#include <sys/param.h>
- #include <limits.h>
- #include <stdio.h>
- #include <stdlib.h>
-@@ -32,7 +33,7 @@
- 
- #define SCROLLKEEPERLOCALEDIR "/usr/share/locale"
- 
--#define PATHLEN	256
-+#define PATHLEN	MAXPATHLEN
- 
- char **av;
+@@ -512,7 +513,7 @@
+ 	{
+ 	    char source_file[PATHLEN], target_file[PATHLEN];
+ 	
+-	    sprintf(command, "mkdir %s/%s", scrollkeeper_dir, dir_ent->d_name);
++	    sprintf(command, "mkdir -p %s/%s", scrollkeeper_dir, dir_ent->d_name);
+ 	    system(command);
+ 	    sprintf(source_file, "%s/scrollkeeper_cl.xml", source_path);
+ 	    sprintf(target_file, "%s/%s/scrollkeeper_cl.xml", 
+@@ -610,7 +611,9 @@
+     stat(toc_dir, &buf);
+     if (!S_ISDIR(buf.st_mode))
+     {
+-        sprintf(command, "mkdir %s", toc_dir);
++        sprintf(command, "rm -f %s", toc_dir);
++	system(command);
++        sprintf(command, "mkdir -p %s", toc_dir);
+ 	system(command);
+     }
  
