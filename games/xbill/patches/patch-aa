@@ -1,0 +1,27 @@
+$NetBSD: patch-aa,v 1.1 1998/08/15 14:19:53 frueauf Exp $
+
+--- Imakefile.orig	Thu Jan 23 09:38:35 1997
++++ Imakefile	Mon Aug 10 08:11:01 1998
+@@ -1,2 +1,2 @@
+-XBILL_DIR = /var/lib/games/xbill/
++XBILL_DIR = $(PREFIX)/share/xbill/
+ XCOMM XBILL_DIR = $(HOME)/.xbill/
+@@ -12,3 +12,3 @@
+ 
+-XPMINC = -I$(HOME)/include
++XCOMM XPMINC = -I$(HOME)/include
+ XPMLIB = -lXpm
+@@ -21,3 +21,3 @@
+ CXXDEFINES = $(XBILL_DEF) $(DEFS) $(INCS)
+-CCFLAGS = $(ALLDEFINES) -Wall -g
++CCFLAGS = $(ALLDEFINES) -O
+ 
+@@ -138,3 +138,7 @@
+ 
+-InstallProgramWithFlags(scores, $(XBILL_DIR), -m 777)
++install::
++	mkdir -p $(XBILL_DIR)
++	/usr/bin/install -c -m 0664 -o bin -g games scores $(XBILL_DIR)
++	/usr/bin/install -c -s -m 2755 -o bin -g games xbill $(PREFIX)/bin
++
+ InstallMultiple ($(XPMS), $(XBILL_DIR)pixmaps)
