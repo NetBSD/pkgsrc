@@ -1,15 +1,17 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/06/08 17:51:26 bad Exp $
+$NetBSD: patch-aa,v 1.2 2001/03/27 11:53:18 agc Exp $
 
---- ./Makefile.orig	Wed Aug 27 09:56:21 1997
-+++ ./Makefile	Tue Jun  8 10:59:33 1999
-@@ -14,5 +14,5 @@
+--- Makefile.orig	Wed Aug 27 16:56:21 1997
++++ Makefile	Tue Mar 27 12:41:29 2001
+@@ -13,27 +13,29 @@
+ #
   
  # Put the location of your Perl binary here:
 -PERL = /bin/perl
 +PERL = @LOCALBASE@/bin/perl
  
  # What do you call your C compiler?
-@@ -21,18 +21,20 @@
+ CC = cc
+  
  # Where do you want Majordomo to be installed?  This CANNOT be the
  # current directory (where you unpacked the distribution)
 -W_HOME = /usr/test/majordomo-$(VERSION)
@@ -35,7 +37,9 @@ $NetBSD: patch-aa,v 1.1.1.1 1999/06/08 17:51:26 bad Exp $
 +MAN_MODE = 444
  EXEC_MODE = 755
  HOME_MODE = 751
-@@ -63,9 +65,9 @@
+ 
+@@ -62,11 +64,11 @@
+ # parent process, and without the leading "W_" in the variable names) gets
  # passed to processes run by "wrapper"
  W_SHELL = /bin/sh
 -W_PATH = /bin:/usr/bin:/usr/ucb
@@ -48,14 +52,18 @@ $NetBSD: patch-aa,v 1.1.1.1 1999/06/08 17:51:26 bad Exp $
 +TMPDIR = @TMPDIR@
  
  #--------YOU SHOULDN'T HAVE TO CHANGE ANYTHING BELOW THIS LINE.-------------
-@@ -77,5 +79,5 @@
+ 
+@@ -76,7 +78,7 @@
+ SHELL = /bin/sh
  
  WRAPPER_FLAGS = -DBIN=\"$(W_HOME)\" -DPATH=\"PATH=$(W_PATH)\" \
 -	-DHOME=\"HOME=$(W_HOME)\" -DSHELL=\"SHELL=$(W_SHELL)\" \
 +	-DHOME=\"HOME=$(HOME)\" -DSHELL=\"SHELL=$(W_SHELL)\" \
  	-DMAJORDOMO_CF=\"MAJORDOMO_CF=$(W_MAJORDOMO_CF)\"      \
  	$(POSIX)
-@@ -145,11 +147,10 @@
+ 
+@@ -144,13 +146,12 @@
+ 
  install-scripts: config-scripts
  	$(INSTALL) -m $(HOME_MODE) $(INSTALL_FLAGS) . $(W_HOME)
 -	$(INSTALL) -m $(EXEC_MODE) $(INSTALL_FLAGS) . $(W_HOME)/bin
@@ -69,7 +77,9 @@ $NetBSD: patch-aa,v 1.1.1.1 1999/06/08 17:51:26 bad Exp $
 +			$(TMP)/$$file @PREFIX@/bin/$$file; \
  	done
  
-@@ -178,43 +179,37 @@
+ 	@echo "Copying Majordomo files to $(W_HOME)"
+@@ -177,45 +178,39 @@
+ # all cases, the sample.cf file must be installed so that config-test will
  # be able to check for new variables.
  install-cf:
 -	@if [ ! -f $(W_HOME)/majordomo.cf ]; \
@@ -108,9 +118,10 @@ $NetBSD: patch-aa,v 1.1.1.1 1999/06/08 17:51:26 bad Exp $
 +	@$(INSTALL) -m $(MAN_MODE) $(INSTALL_FLAGS) \
  		Doc/man/approve.1 $(MAN)/man1/approve.1
 -	@$(INSTALL) -m $(FILE_MODE) $(INSTALL_FLAGS) \
-+	@$(INSTALL) -m $(MAN_MODE) $(INSTALL_FLAGS) \
- 		Doc/man/digest.1 $(MAN)/man1/digest.1
+-		Doc/man/digest.1 $(MAN)/man1/digest.1
 -	@$(INSTALL) -m $(FILE_MODE) $(INSTALL_FLAGS) \
++	@$(INSTALL) -m $(MAN_MODE) $(INSTALL_FLAGS) \
++		Doc/man/digest.1 $(MAN)/man8/digest.8
 +	@$(INSTALL) -m $(MAN_MODE) $(INSTALL_FLAGS) \
  		Doc/man/bounce.1 $(MAN)/man1/bounce.1
 -	@$(INSTALL) -m $(FILE_MODE) $(INSTALL_FLAGS) \
@@ -126,3 +137,4 @@ $NetBSD: patch-aa,v 1.1.1.1 1999/06/08 17:51:26 bad Exp $
 +	@$(INSTALL) -m $(MAN_MODE) $(INSTALL_FLAGS) \
  		Doc/man/resend.1 $(MAN)/man1/resend.1
  
+ wrapper: wrapper.c
