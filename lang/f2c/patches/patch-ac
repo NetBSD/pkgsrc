@@ -1,10 +1,14 @@
-$NetBSD: patch-ac,v 1.3 1998/08/25 08:54:07 agc Exp $
+$NetBSD: patch-ac,v 1.4 1999/01/14 13:56:04 frueauf Exp $
 
-Add various options to f2c, including PIC support
+Much cleanup of the script.  Added various options such as
+-O for optimization
+-fPIC for PIC support
+-Wall for gcc warnings
+-Wl,  for additional linker arguments
 
 --- fc.orig	Tue May 16 17:37:49 1995
-+++ fc	Mon Aug 24 14:05:40 1998
-@@ -1,26 +1,51 @@
++++ fc	Tue Jan 12 20:31:32 1999
+@@ -1,26 +1,54 @@
  #!/bin/sh
 -PATH=/v/bin:/bin:/usr/bin
 +PATH=/bin:/usr/bin:PREFIX/bin
@@ -68,9 +72,12 @@ Add various options to f2c, including PIC support
 +#
 +#		-Wall		turn on the -Wall flag to the c compiler
 +#
++#		-Wl,		Pass options to the linker.  For example, -Wl,-R/usr/X11R6/lib
++#				passes "-R/usr/X11R6/lib" to the linker
++#
  #		files		FORTRAN source files ending in .f .
  #				FORTRAN with cpp preprocessor directives
-@@ -30,21 +55,18 @@
+@@ -30,21 +58,18 @@
  #				efl source files ending in .e .
  #				RATFOR files ending in .r .
 -
@@ -83,14 +90,14 @@ Add various options to f2c, including PIC support
 -
 -#		-I includepath	passed to C compiler (for .c files)
 -#				or to cpp (for .F files), and to f2c
--
--#		-Ntnnn		allow nnn entries in table t
 +# if no input arguments, then spit out the help stuff from the beginning
 +# of this file.
 +if [ $# = 0 ]; then
 + cat $0 | awk '$1 == "#USAGESTART", $1 == ""' | tail +2 | sed 's/#//g'
 +fi
  
+-#		-Ntnnn		allow nnn entries in table t
+-
 -#		-P		emit .P files
  
  s=/tmp/stderr_$$
@@ -99,7 +106,7 @@ Add various options to f2c, including PIC support
 +CC=${CC_f2c:-'cc '}
  EFL=${EFL:-efl}
  EFLFLAGS=${EFLFLAGS:-'system=portable deltastno=10'}
-@@ -58,25 +80,29 @@
+@@ -58,25 +83,29 @@
  OUTF=a.out
  cOPT=1
 -set -- `getopt cCD:gI:N:Oo:Suw6 "$@"`
@@ -138,7 +145,7 @@ Add various options to f2c, including PIC support
 +		G="-g"
  		shift;;
  
-@@ -86,45 +112,75 @@
+@@ -86,11 +115,37 @@
  		;;
  
 +        -I*)    CFLAGS="$CFLAGS $1"
@@ -167,41 +174,41 @@ Add various options to f2c, including PIC support
 +
 +	-O|-O1|-O2|-O3)	
 +		CFLAGS="$CFLAGS $1"
- 		shift
- 		;;
- 
--	-u)	F2CFLAGS="$F2CFLAGS -u"
++		shift
++		;;
++
 +	-P)	F2CFLAGS="$F2CFLAGS $1"
- 		shift
- 		;;
- 
--	-w)	F2CFLAGS="$F2CFLAGS -w"
--		case $2 in -6) F2CFLAGS="$F2CFLAGS"66; shift
--			case $2 in -6) shift;; esac;; esac
++		shift
++		;;
++
 +
 +	-S)	CFLAGS="$CFLAGS -S"
 +		cOPT=0
  		shift
  		;;
+@@ -101,30 +156,38 @@
+ 
+ 	-w)	F2CFLAGS="$F2CFLAGS -w"
+-		case $2 in -6) F2CFLAGS="$F2CFLAGS"66; shift
+-			case $2 in -6) shift;; esac;; esac
+ 		shift
+ 		;;
  
 -	-N)	F2CFLAGS="$F2CFLAGS $1""$2"
 -		shift 2
-+	-u)	F2CFLAGS="$F2CFLAGS -u"
++	-w66)	F2CFLAGS="$F2CFLAGS -w66"
 +		shift
  		;;
  
 -	-P)	F2CFLAGS="$F2CFLAGS $1"
-+	-w)	F2CFLAGS="$F2CFLAGS -w"
++	-Wall)	CFLAGS="$CFLAGS -Wall"
  		shift
  		;;
  
-+	-w66)	F2CFLAGS="$F2CFLAGS -w66"
-+		shift
-+		;;
- 
+-
 -	-S)	CFLAGS="$CFLAGS -S"
 -		cOPT=0
-+	-Wall)	CFLAGS="$CFLAGS -Wall"
++	-Wl*)	CFLAGS="$CFLAGS $1"
  		shift
  		;;
  
@@ -228,7 +235,7 @@ Add various options to f2c, including PIC support
 +
  while
  	test -n "$1"
-@@ -232,5 +288,20 @@
+@@ -232,5 +295,20 @@
  done
  
 -case $cOPT in 2) $CC -o $OUTF -u MAIN__ $OFILES -lf2c -lm;; esac
