@@ -1,7 +1,8 @@
-This package is wrapper for specific release of Ruby programming
-language, providing commands (ruby, irb, ...) without its release
-number information.
+This package is a wrapper for specific releases of the Ruby
+programming language, providing commands (ruby, irb, ...) without
+any release number information.
 
-Actual Ruby programming language is provided by a package with its
-release number like ruby16 or ruby18 and any package should not
-depends on this pacakge directly.
+The actual Ruby programming language is provided by packages with
+release numbers, like ruby16 or ruby18.
+
+No package should depend on this package directly.
