@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2004/03/10 21:15:43 markd Exp $
+@comment $NetBSD: PLIST,v 1.17 2004/04/20 12:33:56 markd Exp $
 bin/appletproxy
 bin/drkonqi
 bin/extensionproxy
@@ -46,6 +46,7 @@ bin/kpersonalizer
 bin/kpm
 bin/kprinter
 bin/krandom.kss
+${HAVE_RANDR}bin/krandrinithack
 ${HAVE_RANDR}bin/krandrtray
 bin/krdb
 bin/kreadconfig
@@ -383,6 +384,8 @@ lib/kde3/konsole.la
 lib/kde3/konsole.so
 lib/kde3/kprinter.la
 lib/kde3/kprinter.so
+${HAVE_RANDR}lib/kde3/krandrinithack.la
+${HAVE_RANDR}lib/kde3/krandrinithack.so
 lib/kde3/ksmserver.la
 lib/kde3/ksmserver.so
 lib/kde3/ksplashdefault.la
@@ -471,8 +474,6 @@ lib/kde3/taskbar_panelextension.la
 lib/kde3/taskbar_panelextension.so
 lib/kde3/textthumbnail.la
 lib/kde3/textthumbnail.so
-${HAVE_RANDR}lib/krandrinithack.la
-${HAVE_RANDR}lib/krandrinithack.so
 lib/libkateinterfaces.la
 lib/libkateinterfaces.so
 lib/libkateinterfaces.so.0
@@ -523,6 +524,8 @@ lib/libkdeinit_konsole.la
 lib/libkdeinit_konsole.so
 lib/libkdeinit_kprinter.la
 lib/libkdeinit_kprinter.so
+${HAVE_RANDR}lib/libkdeinit_krandrinithack.la
+${HAVE_RANDR}lib/libkdeinit_krandrinithack.so
 lib/libkdeinit_ksmserver.la
 lib/libkdeinit_ksmserver.so
 lib/libkdeinit_kwin.la
@@ -1951,7 +1954,6 @@ share/kde/apps/konqueror/pics/indicator_noconnect.png
 share/kde/apps/konqueror/pics/indicator_viewactive.png
 share/kde/apps/konqueror/pics/thumbnailfont_7x4.png
 share/kde/apps/konqueror/profiles/filemanagement
-share/kde/apps/konqueror/profiles/filepreview
 share/kde/apps/konqueror/profiles/midnightcommander
 share/kde/apps/konqueror/profiles/webbrowsing
 share/kde/apps/konqueror/servicemenus/konsolehere.desktop
@@ -2187,6 +2189,7 @@ share/kde/icons/crystalsvg/128x128/apps/wp.png
 share/kde/icons/crystalsvg/128x128/apps/xclock.png
 share/kde/icons/crystalsvg/128x128/apps/xfmail.png
 share/kde/icons/crystalsvg/128x128/apps/xmag.png
+share/kde/icons/crystalsvg/16x16/actions/newfont.png
 share/kde/icons/crystalsvg/16x16/apps/access.png
 share/kde/icons/crystalsvg/16x16/apps/acroread.png
 share/kde/icons/crystalsvg/16x16/apps/agent.png
@@ -2343,12 +2346,14 @@ share/kde/icons/crystalsvg/16x16/apps/xpaint.png
 share/kde/icons/crystalsvg/16x16/apps/xv.png
 share/kde/icons/crystalsvg/16x16/devices/print_printer.png
 share/kde/icons/crystalsvg/16x16/filesystems/folder_print2.png
+share/kde/icons/crystalsvg/22x22/actions/newfont.png
 share/kde/icons/crystalsvg/22x22/apps/klipper.png
 share/kde/icons/crystalsvg/22x22/apps/konqueror.png
 share/kde/icons/crystalsvg/22x22/apps/ksplash.png
 share/kde/icons/crystalsvg/22x22/apps/kvirc.png
 share/kde/icons/crystalsvg/22x22/apps/nedit.png
 share/kde/icons/crystalsvg/22x22/apps/randr.png
+share/kde/icons/crystalsvg/32x32/actions/newfont.png
 share/kde/icons/crystalsvg/32x32/apps/access.png
 share/kde/icons/crystalsvg/32x32/apps/acroread.png
 share/kde/icons/crystalsvg/32x32/apps/agent.png
