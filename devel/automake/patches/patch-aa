@@ -1,27 +1,19 @@
-$NetBSD: patch-aa,v 1.4 2002/10/03 19:31:52 wiz Exp $
+$NetBSD: patch-aa,v 1.5 2003/07/12 08:42:36 wiz Exp $
 
---- automake.texi.orig	Tue Mar  5 13:57:24 2002
-+++ automake.texi	Thu May  2 23:24:44 2002
-@@ -1,6 +1,7 @@
- \input texinfo   @c -*-texinfo-*-
- @c %**start of header
- @setfilename automake.info
-+@dircategory Programming & development tools
- @settitle automake
- @setchapternewpage off
- @c %**end of header
+--- automake.texi.orig	Thu Jul 10 22:30:17 2003
++++ automake.texi
 @@ -9,12 +10,12 @@
  
- @dircategory GNU programming tools
+ @dircategory Software development
  @direntry
--* automake: (automake).		Making Makefile.in's
-+* Automake: (automake).		Making Makefile.in's
+-* automake: (automake).		Making Makefile.in's.
++* Automake: (automake).		Making Makefile.in's.
  @end direntry
  
  @dircategory Individual utilities
  @direntry
--* aclocal: (automake)Invoking aclocal.          Generating aclocal.m4
-+* Aclocal: (automake)Invoking aclocal.          Generating aclocal.m4
+-* aclocal: (automake)Invoking aclocal.          Generating aclocal.m4.
++* Aclocal: (automake)Invoking aclocal.          Generating aclocal.m4.
  @end direntry
  
  @ifinfo
