@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2002/11/24 13:20:45 tron Exp $
+# $NetBSD: Makefile.common,v 1.7 2002/11/24 13:40:47 tron Exp $
 
 DISTNAME=	xchat-1.8.10
 PKGREVISION=	1
@@ -9,6 +9,10 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://xchat.org/
 COMMENT=	X11 (X Window System) IRC client, using the GTK+ toolkit
+
+PATCH_SITES=		${HOMEPAGE}files/source/1.8/patches/
+PATCHFILES=		xc1810fixme3.diff
+PATCH_DIST_STRIP=	-p1
 
 DISTINFO_FILE=	${.CURDIR}/../xchat/distinfo
 FILESDIR=	${.CURDIR}/../xchat/files
