@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/04/22 15:17:08 drochner Exp $
+$NetBSD: patch-aa,v 1.2 2004/07/09 15:51:44 recht Exp $
 
---- setup.py.orig	2004-04-22 17:03:28.000000000 +0200
-+++ setup.py	2004-04-22 17:06:58.000000000 +0200
-@@ -551,5 +551,5 @@
+--- setup.py.orig	2004-03-09 09:30:38.000000000 +0100
++++ setup.py
+@@ -551,5 +551,5 @@ data.
                                  runtime_library_dirs = rlib_dirs,
                                  )],
        cmdclass = cmdclass,
