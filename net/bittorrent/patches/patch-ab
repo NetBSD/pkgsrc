@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.1 2004/03/09 10:33:22 recht Exp $
+$NetBSD: patch-ab,v 1.2 2005/02/13 13:53:34 recht Exp $
 
---- btreannounce.py.orig	2004-03-07 22:50:01.000000000 +0100
-+++ btreannounce.py	2004-03-07 22:50:12.000000000 +0100
+--- btreannounce.py.orig	Mon Mar 17 20:26:40 2003
++++ btreannounce.py
 @@ -3,7 +3,7 @@
  # Written by Henry 'Pi' James and Bram Cohen
  # see LICENSE.txt for license information
