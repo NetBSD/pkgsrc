@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/07/09 18:34:54 zuntum Exp $
+# $NetBSD: Makefile,v 1.3 2001/08/13 14:20:13 zuntum Exp $
 #
 
 DISTNAME=	queue-repair-0.8.4
@@ -8,6 +8,7 @@ MASTER_SITES=	http://www.qcc.sk.ca/~charlesc/software/queue_repair/
 MAINTAINER=	zuntum@netbsd.org
 COMMENT=	check or correct most corruptions of the queue in qmail
 
+DEPENDS+=	qmail>=1.03:../../mail/qmail
 DEPENDS+=	python-*:../../lang/python
 
 NO_BUILD=	YES
