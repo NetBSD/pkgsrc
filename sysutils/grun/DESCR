@@ -1,0 +1,6 @@
+gRun is a GTK based Run dialog that closely resembles
+the Windows Run dialog, similar to xexec.  However,
+gRun is much more powerful than xexec, looks a lot
+better, and has the big advantage that you can start
+typing a command without having to mouse-click into
+the text field.
