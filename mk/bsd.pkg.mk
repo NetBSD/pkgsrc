@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.172 1998/10/04 20:56:58 tron Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.173 1998/10/05 00:34:44 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -375,13 +375,14 @@ REQ_FILE=		${PKGDIR}/REQ
 MESSAGE_FILE=		${PKGDIR}/MESSAGE
 .endif
 
-PKG_INFO?=		/usr/sbin/pkg_info
-PKG_CREATE?=		/usr/sbin/pkg_create
+PKG_CREATE?=	/usr/sbin/pkg_create
+PKG_DELETE?=	/usr/sbin/pkg_delete
+PKG_INFO?=	/usr/sbin/pkg_info
 .if !defined(PKG_ARGS)
 PKG_ARGS=		-v -c ${COMMENT} -d ${DESCR} -f ${PLIST} -p ${PREFIX} -P "`${MAKE} package-depends PACKAGE_DEPENDS_WITH_PATTERNS=true|sort -u`"
 .if defined(CONFLICTS)
 # Only use -C if the pkg_create command supports it.
-__PKG_CREATE_C__!= ${PKG_CREATE} -C 2>&1 | /usr/bin/egrep 'illegal option' ; echo
+__PKG_CREATE_C__!=	${PKG_CREATE} -C 2>&1 | /usr/bin/egrep 'illegal option' ; echo
 .if (${__PKG_CREATE_C__} == "")
 PKG_ARGS+=		-C "${CONFLICTS}"
 .endif
@@ -425,8 +426,6 @@ LDCONFIG?=	/sbin/ldconfig
 LN?=		/bin/ln
 MKDIR?=		/bin/mkdir -p
 MV?=		/bin/mv
-PKG_DELETE?=	/usr/sbin/pkg_delete
-PKG_INFO?=	/usr/sbin/pkg_info
 RM?=		/bin/rm
 RMDIR?=		/bin/rmdir
 SED?=		/usr/bin/sed
@@ -1045,7 +1044,7 @@ _PORT_USE: .USE
 .if defined(CONFLICTS)
 	@${RM} -f ${WRKDIR}/.CONFLICTS
 .for conflict in ${CONFLICTS}
-	@found=`/bin/csh -f -c "/bin/ls -d ${PKG_DBDIR}/${conflict} |& ${SED} -e 's|^\(/bin/\)\{0,1\}ls: .*$$||g' || exit 0"`; \
+	@found="`${PKG_INFO} -e \"${conflict}\" || ${TRUE}`"; \
 	if [ X"$$found" != X"" ]; then					\
 		${ECHO} "$$found" >> ${WRKDIR}/.CONFLICTS;		\
 	fi
@@ -1532,32 +1531,30 @@ package-path:
 PACKAGE_DEPENDS_WITH_PATTERNS?=false
 .if !target(package-depends)
 package-depends:
-	@for dir in ${DEPENDS} ; do \
-		OFS=$$IFS ;  IFS=: ; \
-		set $$dir ; \
-		IFS=$$OFS ; pkg=$$1 ; dir=$$2 ; \
-		if [ -d $$dir ]; then \
-			if ${PACKAGE_DEPENDS_WITH_PATTERNS} ; then \
-				${ECHO} "$$pkg" ; \
-			else \
-				(cd $$dir ; ${MAKE} package-name PACKAGE_NAME_TYPE=${PACKAGE_NAME_TYPE}); \
-			fi ; \
-			(cd $$dir ; ${MAKE} package-depends PACKAGE_NAME_TYPE=${PACKAGE_NAME_TYPE}); \
+.for dep in ${DEPENDS}
+	@pkg="`${ECHO} \"${dep}\" | ${SED} -e 's/:.*//'`"; \
+	dir="`${ECHO} \"${dep}\" | ${SED} -e 's/[^:]*://'`"; \
+	if [ -d $$dir ]; then \
+		if ${PACKAGE_DEPENDS_WITH_PATTERNS} ; then \
+			${ECHO} "$$pkg" ; \
 		else \
-			${ECHO_MSG} "Warning: \"$$dir\" non-existent -- @pkgdep registration incomplete" >&2; \
-		fi; \
-	done
-	@for dir in ${RUN_DEPENDS}; do \
-		OFS=$$IFS ;  IFS=: ; \
-		set $$dir ; \
-		IFS=$$OFS ; pkg=$$1 ; dir=$$2 ; \
-		if [ -d $$dir ]; then \
 			(cd $$dir ; ${MAKE} package-name PACKAGE_NAME_TYPE=${PACKAGE_NAME_TYPE}); \
-			(cd $$dir ; ${MAKE} package-depends PACKAGE_NAME_TYPE=${PACKAGE_NAME_TYPE}); \
-		else \
-			${ECHO_MSG} "Warning: \"$$dir\" non-existent -- @pkgdep registration incomplete" >&2; \
-		fi; \
-	done
+		fi ; \
+		(cd $$dir ; ${MAKE} package-depends PACKAGE_NAME_TYPE=${PACKAGE_NAME_TYPE}); \
+	else \
+		${ECHO_MSG} "Warning: \"$$dir\" non-existent -- @pkgdep registration incomplete" >&2; \
+	fi
+.endfor
+.for dep in ${RUN_DEPENDS}
+	@pkg="`${ECHO} \"${dep}\" | ${SED} -e 's/:.*//'`"; \
+	dir="`${ECHO} \"${dep} |\" ${SED} -e 's/[^:]*://'`"; \
+	if [ -d $$dir ]; then \
+		(cd $$dir ; ${MAKE} package-name PACKAGE_NAME_TYPE=${PACKAGE_NAME_TYPE}); \
+		(cd $$dir ; ${MAKE} package-depends PACKAGE_NAME_TYPE=${PACKAGE_NAME_TYPE}); \
+	else \
+		${ECHO_MSG} "Warning: \"$$dir\" non-existent -- @pkgdep registration incomplete" >&2; \
+	fi
+.endfor
 .endif # target(package-depends)
 
 # Build a package but don't check the package cookie
@@ -1653,7 +1650,7 @@ misc-depends:
 .for dep in ${DEPENDS}
 	@package="`${ECHO} \"${dep}\" | ${SED} -e s/:.\*//`";		\
 	dir="`${ECHO} \"${dep}\" | ${SED} -e s/.\*://`";		\
-	found=`/bin/csh -f -c "/bin/ls -d ${PKG_DBDIR}/$$package |& ${SED} -e 's|^\(/bin/\)\{0,1\}ls: .*$$||g' || exit 0"`; \
+	found="`${PKG_INFO} -e \"$$package\" || ${TRUE}`";		\
 	if [ X"$$found" != X"" ]; then					\
 		${ECHO_MSG} "===>  ${PKGNAME} depends on installed package: $$package - `${ECHO} $$found | ${SED} -e 's|${PKG_DBDIR}/||g' | tr '\012' '\040'` found"; \
 	else								\
@@ -1771,7 +1768,7 @@ describe:
 	${ECHO} -n "|"; \
 	case "A${RUN_DEPENDS}B${DEPENDS}C" in \
 		ABC) ;; \
-		*) cd ${.CURDIR} && ${ECHO} -n `${MAKE} package-depends|sort -u`;; \
+		*) cd ${.CURDIR} && ${ECHO} -n "`${MAKE} package-depends PACKAGE_DEPENDS_WITH_PATTERNS=true|sort -u`";; \
 	esac; \
 	${ECHO} -n "|"; \
 	if [ "${ONLY_FOR_ARCHS}" = "" ]; then \
@@ -1872,7 +1869,7 @@ print-depends-list:
 print-package-depends:
 .if defined(RUN_DEPENDS) || defined(DEPENDS)
 	@${ECHO} -n 'This port requires package(s) "'
-	@${ECHO} -n `${MAKE} package-depends | sort -u`
+	@${ECHO} -n "`${MAKE} package-depends | sort -u`"
 	@${ECHO} '" to run.'
 .endif
 .endif
@@ -1915,15 +1912,15 @@ fake-pkg: ${PLIST} ${DESCR}
 			fi;						\
 		fi;							\
 		for dep in `${MAKE} package-depends PACKAGE_DEPENDS_WITH_PATTERNS=true ECHO_MSG=${TRUE} | sort -u`; do \
-			realdep=`${PKG_INFO} -e "$$dep" || true` ; \
-			echo "a sanity check should be put in here to prevent some dumb user having the pkg installed/registered twice somehow - HF" >/dev/null ; \
+			realdep="`${PKG_INFO} -e \"$$dep\" || ${TRUE}`" ; \
+			echo "a sanity check should be put in here to prevent some user having the pkg installed/registered twice somehow - HF" >/dev/null ; \
 			if [ -z "$$realdep" ]; then \
 				echo "$$dep not installed - NOT registered" ; \
 			else \
-				if [ -d ${PKG_DBDIR}/$$realdep ]; then \
-					if ! ${GREP} ^${PKGNAME}$$ ${PKG_DBDIR}/$$realdep/+REQUIRED_BY \
+				if [ -d "${PKG_DBDIR}/$$realdep" ]; then \
+					if ! ${GREP} "^${PKGNAME}$$" "${PKG_DBDIR}/$$realdep/+REQUIRED_BY" \
 						>/dev/null 2>&1; then \
-						${ECHO} ${PKGNAME} >> ${PKG_DBDIR}/$$realdep/+REQUIRED_BY; \
+						${ECHO} "${PKGNAME}" >> "${PKG_DBDIR}/$$realdep/+REQUIRED_BY"; \
 						echo "${PKGNAME} registered in ${PKG_DBDIR}/$$realdep/+REQUIRED_BY" ; \
 					fi; \
 				fi; \
@@ -1987,20 +1984,3 @@ ${DESCR}: ${DESCR_SRC}
 	@(${ECHO} ; ${ECHO} "Homepage:" ; \
 	${ECHO} '${HOMEPAGE}') >> ${DESCR}	
 .endif
-
-
-
-
-
-
-
-
-
-
-#
-##
-###
-#### .include "../../mk/bsd.hf-pkg.mk"
-###
-##
-#
