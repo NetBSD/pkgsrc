@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 1999/05/07 07:11:17 ross Exp $
+
+--- apple.h.orig	Thu May  6 23:54:19 1999
++++ apple.h	Thu May  6 23:41:02 1999
+@@ -5,6 +5,8 @@
+ 
+ #include <sys/param.h>
+ #include <stdio.h>
++#include <stdlib.h>
++#include <string.h>
+ 
+ #ifndef MIN
+ #define MIN(a,b) (((a)<(b))?(a):(b))
