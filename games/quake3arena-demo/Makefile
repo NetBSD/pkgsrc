@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2004/07/07 09:05:43 xtraeme Exp $
+# $NetBSD: Makefile,v 1.22 2004/11/17 21:10:51 snj Exp $
 
 DISTNAME=	linuxq3ademo-1_11-6_x86_gz
 PKGREVISION=	1
@@ -8,7 +8,7 @@ MASTER_SITES=	ftp://ftp.idsoftware.com/idstuff/quake3/linux/ \
 		ftp://mirrors.xmission.com/idsoftware/quake3/linux/
 EXTRACT_SUFX=	.sh
 
-MAINTAINER=	snj@pobox.com
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.quake3arena.com/
 COMMENT=	Quake 3 Arena -- first person shooter (linux demo)
 
