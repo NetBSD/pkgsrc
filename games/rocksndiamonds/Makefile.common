@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.10 2004/11/03 15:14:17 adam Exp $
+# $NetBSD: Makefile.common,v 1.11 2004/12/22 16:46:19 reed Exp $
 
 DISTNAME=	rocksndiamonds-3.1.0
 CATEGORIES=	games x11
@@ -11,6 +11,8 @@ USE_BUILDLINK3=		YES
 USE_GNU_TOOLS+=		make
 USE_PKGINSTALL=		YES
 USE_X11=		YES
+
+INSTALLATION_DIRS=	man/man6
 
 PLIST_SRC=	${WRKDIR}/PLIST ../rocksndiamonds/PLIST
 PLIST_SUBST+=	SCORE_PATH=${SCORE_PATH}
@@ -37,7 +39,8 @@ pre-configure:
 do-install:
 	${INSTALL_PROGRAM} -o ${RND_USER} -g ${RND_GROUP} -m 2755 \
 		${WRKSRC}/rocksndiamonds ${PREFIX}/bin/
-	${INSTALL_MAN} ${WRKSRC}/rocksndiamonds.1 ${PREFIX}/man/man1/
+	${INSTALL_MAN} ${WRKSRC}/rocksndiamonds.1 \
+		${PREFIX}/man/man6/rocksndiamonds.6
 	${INSTALL_DATA_DIR} ${PREFIX}/share/rocksndiamonds
 	cd ${WRKSRC} && ${PAX} -rw sounds graphics levels music \
 		${PREFIX}/share/rocksndiamonds/
