@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.134 2001/05/03 17:01:16 wiz Exp $
+# $NetBSD: Makefile,v 1.135 2001/05/15 23:27:42 jlam Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -108,6 +108,7 @@ SUBDIR+=	php4-pgsql
 SUBDIR+=	py-pcgi
 SUBDIR+=	py-zpublisher
 SUBDIR+=	quanta
+SUBDIR+=	sitecopy
 SUBDIR+=	spfc
 SUBDIR+=	squid
 SUBDIR+=	surfraw
