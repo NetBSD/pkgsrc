@@ -1,11 +1,7 @@
-$NetBSD: distinfo,v 1.9 2001/07/26 14:29:12 jlam Exp $
+$NetBSD: distinfo,v 1.10 2002/03/30 08:56:36 pooka Exp $
 
-SHA1 (wget-1.7.tar.gz) = b44118972c11a410b81ad3d306861b370071e611
-Size (wget-1.7.tar.gz) = 945138 bytes
-SHA1 (wget-17-v6-20010716a.diff.gz) = 02ddc575dc2cd33b38a2b111662198b77ef67491
-Size (wget-17-v6-20010716a.diff.gz) = 49827 bytes
+SHA1 (wget-1.8.1.tar.gz) = d576c23b8e663a6411765299804a6d451a428a5a
+Size (wget-1.8.1.tar.gz) = 1097780 bytes
 SHA1 (patch-aa) = 98c944716c403d0501505fc52c69c898d7870ea5
 SHA1 (patch-ab) = 797716b5a213c1e6b12f9407769e606b50818a67
 SHA1 (patch-ac) = 20cc35210374c68ddcaf39830620d853b4311988
-SHA1 (patch-ad) = 8994c291eb3e06c87a6c83dfc2b02fbf9f318c34
-SHA1 (patch-ae) = 1400b747cb0b2cd4311e566941cbc8ff3e59c76d
