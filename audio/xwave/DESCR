@@ -1,22 +1,11 @@
+xwave is an audio player, recorder and editor for the X Window System.
  
-xwave - an audio player, recorder, editor  for the XWindow System
- 
-  Copyright (C) 1996 Kai Kollmorgen
-  (kkollmor@informatik.uni-rostock.de)
- 
+This is an alpha release of xwave.
 
-This is an alpha release, so be patient.
-Many of the features i wanted to include are not there at this time.
-I have not heavy tested the installation and xwave on different systems,
-so it is possible that xwave will not compile or run on your system.
-
-I have used some libs from other authors, the copyrights and notes are in
-the different directories.
-
-The Userinterface of xwave is based on the Athena Widget Set and some
-Widgets from FWF. The application defaults are optimized for work with
-Xaw3d (replaces the Xaw for 3d look), 
-so if you don't use Xaw3d you will probably modify the resources. 
+The user interface of xwave is based on the Athena Widget Set and some
+Widgets from FWF. The application defaults are optimized to work with
+Xaw3d (replaces the Xaw for 3d look), so if you don't use Xaw3d you will 
+probably need to modify the resources. 
 
 Features:
 	- multiple files
@@ -29,8 +18,3 @@ Features:
 	- raw, wav, au, aiff, aifc (PCM,ALAW,ULAW,ADPCM <- not all
 	  implementations)
 	- files of every length
-
-INSTALL:
-	If your /tmp is too small for handling temporary files, set
-	the X ressource XWave*tdir to some big directory (Either in
-	/usr/X11R6/lib/X11/app-defaults/XWave or your ~/.Xdefaults)
