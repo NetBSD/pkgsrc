@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2000/05/12 23:01:39 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2000/09/24 14:15:29 hubertf Exp $
 #
 
-DISTNAME=	lftp-2.2.2
+DISTNAME=	lftp-2.2.6
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.yars.free.net/pub/software/unix/net/ftp/client/lftp/\
 		${MASTER_SITE_SUNSITE:=system/network/file-transfer/}
