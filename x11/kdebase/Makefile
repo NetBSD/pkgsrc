@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 1999/11/15 00:34:53 tron Exp $
+# $NetBSD: Makefile,v 1.57 1999/11/15 00:53:13 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.6 1997/11/27 00:35:27 se Exp
 
 DISTNAME=	kdebase-1.1.2
@@ -7,7 +7,7 @@ MASTER_SITES=	ftp://ftp.us.kde.org/pub/kde/stable/1.1.2/distribution/tar/generic
 		ftp://ftp.de.kde.org/pub/kde/stable/1.1.2/distribution/tar/generic/source/bz2/ \
 		${MASTER_SITE_LOCAL}
 EXTRACT_SUFX=	.tar.bz2
-DISTFILES=	${DISTNAME}${EXTRACT_SUFX} Daemon.png 
+DISTFILES=	${DISTNAME}${EXTRACT_SUFX} Daemon.png Daemon.README
 
 MAINTAINER=	tron@netbsd.org
 HOMEPAGE=       http://www.kde.org/
@@ -69,5 +69,6 @@ post-install:
 	${ECHO} 'LogoPixmap=${PREFIX}/share/kde/icons/Daemon.png' >>kdmrc ; \
 	${RM} kdmrc.new
 	${INSTALL_DATA} ${DISTDIR}/Daemon.png ${PREFIX}/share/kde/icons
+	${INSTALL_DATA} ${DISTDIR}/Daemon.README ${PREFIX}/share/kde/icons
 
 .include "../../mk/bsd.pkg.mk"
