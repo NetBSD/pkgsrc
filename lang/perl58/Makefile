@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.76 2005/03/23 16:52:02 jlam Exp $
+# $NetBSD: Makefile,v 1.77 2005/03/24 02:33:08 jlam Exp $
 
 # The following two variables should have empty values unless we're
 # building a perl snapshot or release candidate.
@@ -97,9 +97,10 @@ USE_GNU_TOOLS+=	make
 #
 LIBSWANTED.Darwin=	m c
 LIBSWANTED.FreeBSD=	m crypt
-LIBSWANTED.Interix=	m dl
 LIBSWANTED.IRIX=	m crypt
+LIBSWANTED.Interix=	m dl
 LIBSWANTED.NetBSD=	m crypt
+LIBSWANTED.OpenBSD=	m crypt
 LIBSWANTED.SunOS=	m crypt dl socket nsl
 LIBSWANTED=		${LIBSWANTED.${OPSYS}}
 
@@ -111,6 +112,7 @@ SYSLIBPATH.Darwin=	/usr/lib
 SYSLIBPATH.FreeBSD=	/usr/lib
 SYSLIBPATH.Interix=	/usr/lib
 SYSLIBPATH.NetBSD=	/usr/lib
+SYSLIBPATH.OpenBSD=	/usr/lib
 SYSLIBPATH.SunOS=	/usr/lib
 SYSLIBPATH=		${SYSLIBPATH.${OPSYS}}
 
