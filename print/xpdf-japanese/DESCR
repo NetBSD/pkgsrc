@@ -1,0 +1,13 @@
+If this package includes CMap files, they contain their own copyright
+notices and distribution conditions.  All other files in the package
+are Copyright 2002 Derek B. Noonburg, and are licensed under the GNU
+General Public License (GPL), version 2.
+
+This package provides support files needed to use the Xpdf tools with
+Japanese PDF files.
+
+Contents:
+- Adobe-Japan1 character collection support
+- ISO-2022-JP encoding
+- EUC-JP encoding
+- Shift-JIS encoding
