@@ -1,62 +1,37 @@
-$NetBSD: patch-aa,v 1.3 2000/06/09 09:06:55 bouyer Exp $
+$NetBSD: patch-aa,v 1.4 2001/08/24 11:37:07 abs Exp $
 
---- arpsnmp.8.orig	Mon Apr 27 19:11:09 1998
-+++ arpsnmp.8	Mon Apr 27 19:12:05 1998
-@@ -55,7 +55,7 @@
- .na
- .nh
- .nf
--/usr/operator/arpwatch - default directory
-+/var/db/arpwatch - default directory
- arp.dat - ethernet/ip address database
- ethercodes.dat - vendor ethernet block list
- .ad
-
---- arpwatch.8.orig	Fri Oct 31 21:02:27 1997
-+++ arpwatch.8	Fri Jun  9 10:00:29 2000
-@@ -19,13 +19,7 @@
- .\" WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED WARRANTIES OF
- .\" MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
- .\"
--.TH ARPSNMP 8 "31 October 1997"
--.UC 4
--.SH NAME
--arpsnmp - keep track of ethernet/ip address pairings
--.SH SYNOPSIS
--.B arpsnmp
--[
-+.TH ARPWATCH 8 "31 October 1997"
- .UC 4
- .SH NAME
- arpwatch - keep track of ethernet/ip address pairings
-@@ -33,6 +27,8 @@
- .na
- .B arpwatch
- [
-+.B -a
-+] [
- .B -d
- ] [
- .B -f
-@@ -58,6 +54,12 @@
- to listen for arp packets on a local ethernet interface.
- .LP
- The
-+.B -a
-+flag supress check for local network. By default, arp traffic for IP addresses
-+which don't belong to the local network are logged as bogons, and not added
-+to the database.
-+.LP
-+The
- .B -d
- flag is used enable debugging. This also inhibits forking into the
- background and emailing the reports. Instead, they are sent to
-@@ -120,7 +122,7 @@
- .na
- .nh
- .nf
--/usr/operator/arpwatch - default directory
-+/var/db/arpwatch - default directory
- arp.dat - ethernet/ip address database
- ethercodes.dat - vendor ethernet block list
- .ad
+--- Makefile.in.orig	Thu Jun 15 01:39:55 2000
++++ Makefile.in
+@@ -30,8 +30,10 @@
+ BINDEST = @sbindir@
+ # Pathname of directory to install the man page
+ MANDEST = @mandir@
++# Pathname of directory to install ethernet vendor codes
++ETCDEST = $(prefix)/etc
+ # Pathname of directory to install database file
+-ARPDIR = $(prefix)/arpwatch
++ARPDIR = /var/db/arpwatch
+ 
+ # VPATH
+ srcdir = @srcdir@
+@@ -45,7 +47,8 @@
+ PROG = arpwatch
+ CCOPT = @V_CCOPT@
+ INCLS = -I. @V_INCLS@
+-DEFS = -DDEBUG @DEFS@ -DARPDIR=\"$(ARPDIR)\" -DPATH_SENDMAIL=\"$(SENDMAIL)\"
++DEFS = -DDEBUG @DEFS@ -DARPDIR=\"$(ARPDIR)\" -DPATH_SENDMAIL=\"$(SENDMAIL)\" \
++       -DETHERCODES=\"$(ETCDEST)/ethercodes.dat\"
+ 
+ # Standard CFLAGS
+ CFLAGS = $(CCOPT) $(DEFS) $(INCLS)
+@@ -110,8 +113,8 @@
+ 	$(CC) $(CFLAGS) -o $@ zap.o intoa.o -lutil
+ 
+ install: force
+-	$(INSTALL) -m 555 -o bin -g bin arpwatch $(DESTDIR)$(BINDEST)
+-	$(INSTALL) -m 555 -o bin -g bin arpsnmp $(DESTDIR)$(BINDEST)
++	$(INSTALL) arpwatch $(DESTDIR)$(BINDEST)
++	$(INSTALL) arpsnmp $(DESTDIR)$(BINDEST)
+ 
+ install-man: force
+ 	$(INSTALL) -m 444 -o bin -g bin $(srcdir)/arpwatch.8 \
