@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/12/12 02:03:46 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2000/12/12 13:07:14 wiz Exp $
 #
 
+    SUBDIR += 9wm
     SUBDIR += afterstep
     SUBDIR += amiwm
     SUBDIR += blackbox
