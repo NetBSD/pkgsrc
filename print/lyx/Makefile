@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2002/08/23 09:08:08 martti Exp $
+# $NetBSD: Makefile,v 1.47 2002/09/21 04:52:38 jlam Exp $
 # FreeBSD Id: Makefile,v 1.14 1998/02/14 16:46:50 andreas Exp
 #
 
@@ -15,8 +15,6 @@ COMMENT=		Graphical frontend for LaTeX (nearly WYSIWYG)
 
 DEPENDS=		ispell-base-[0-9]*:../../textproc/ispell-base
 DEPENDS+=		teTeX>=1.0.6:../../print/teTeX
-DEPENDS+=		jpeg-6b:../../graphics/jpeg
-DEPENDS+=		xforms>=0.9999:../../x11/xforms
 
 GCC_VERSION!=		gcc --version
 .if (${GCC_VERSION:C/-.*$$//} == egcs)
@@ -24,16 +22,23 @@ GCC_VERSION!=		gcc --version
 .include "../../lang/gcc/Makefile.gcc"
 .endif
 
+USE_BUILDLINK2=		YES
 USE_PERL5=		YES
-USE_XPM=		YES
 GNU_CONFIGURE=		YES
-EVAL_PREFIX+=		XFORMSDIR=xforms
-CONFIGURE_ARGS+= 	--with-extra-lib="${X11BASE}/lib" \
-			--with-extra-inc="${XFORMSDIR}/include/X11"
+CONFIGURE_ARGS+= 	--with-extra-lib=${BUILDLINK_PREFIX.xforms}/lib \
+			--with-extra-inc=${BUILDLINK_PREFIX.xforms}/include/X11
+
+USE_LIBTOOL=		YES
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+LIBTOOL_OVERRIDE+=	${WRKSRC}/sigc++/libtool
 
 LDFLAGS+=		-L${X11BASE}/lib -Wl,-R${X11BASE}/lib
 
 post-install:
 	${CHMOD} +x ${PREFIX}/share/lyx/configure
+
+.include "../../graphics/jpeg/buildlink2.mk"
+.include "../../graphics/xpm/buildlink2.mk"
+.include "../../x11/xforms/buildlink2.mk"
 
 .include "../../mk/bsd.pkg.mk"
