@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:53:14 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/07/19 04:46:33 mycroft Exp $
 bin/gmc
 bin/gmc-client
 bin/mc
@@ -110,6 +110,7 @@ ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/mc.mo
 ${PKGLOCALEDIR}/locale/wa/LC_MESSAGES/mc.mo
 ${PKGLOCALEDIR}/locale/zh_CN.GB2312/LC_MESSAGES/mc.mo
 ${PKGLOCALEDIR}/locale/zh_TW.Big5/LC_MESSAGES/mc.mo
+@exec ${MKDIR} %D/share/mc
 share/mime-info/mc.keys
 share/pixmaps/mc/directory.xpm
 share/pixmaps/mc/gnome-application-encapsulated_postscript.png
@@ -209,6 +210,7 @@ share/pixmaps/mc/makefile.xpm
 share/pixmaps/mc/sound.xpm
 share/pixmaps/mc/trash.xpm
 @dirrm share/pixmaps/mc
+@dirrm share/mc
 @dirrm share/gnome/help/gmc/C
 @dirrm share/gnome/help/gmc
 @dirrm lib/mc/term
