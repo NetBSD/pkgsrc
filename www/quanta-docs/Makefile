@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2004/01/03 18:49:55 reed Exp $
+# $NetBSD: Makefile,v 1.12 2004/01/20 12:27:59 agc Exp $
 
 DISTNAME=	quanta-docs-1.0
 PKGREVISION=	4
-WRKSRC=		${WRKDIR}
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=quanta/}
 EXTRACT_SUFX=	.tar.bz2
@@ -19,6 +18,7 @@ COMMENT= 	Documentation collection for Quanta, the KDE web editor
 
 DEPENDS+=	quanta>=1.9.9.2:../../www/quanta
 
+WRKSRC=			${WRKDIR}
 BUILD_USES_MSGFMT=	YES
 USE_BUILDLINK2=		YES
 

@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2003/11/11 13:00:24 wennmach Exp $
+# $NetBSD: Makefile,v 1.30 2004/01/20 12:26:15 agc Exp $
 
 DISTNAME=	apNetBSD
 PKGNAME=	aperture-2.0
 PKGREVISION=	5
-WRKSRC=		${WRKDIR}
 CATEGORIES=	sysutils x11
 EXTRACT_SUFX=	.shar
 # Not sure why ${MASTER_SITE_LOCAL:=${PKGNAME}} doesn't work, but the
@@ -25,6 +24,7 @@ ONLY_FOR_PLATFORM=	NetBSD-*-i386
 
 NO_SRC_ON_FTP=		Already in MASTER_SITE_LOCAL
 
+WRKSRC=			${WRKDIR}
 ALL_TARGET=		cleandir depend all
 DIST_SUBDIR=		${PKGNAME}
 INSTALL_TARGET=		dirs includes install

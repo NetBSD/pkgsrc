@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/12/25 13:27:32 jmmv Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/20 12:24:29 agc Exp $
 #
 
 DISTNAME=	prosper-1.00.4
 PKGNAME=	tex-${DISTNAME}
-WRKSRC=		${WRKDIR}/prosper
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=prosper/}
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} PPRblends.sty.gz
@@ -14,6 +13,7 @@ COMMENT=	LaTeX class for writing transparencies
 
 DEPENDS=	teTeX-bin-[0-9]*:../../print/teTeX-bin
 
+WRKSRC=		${WRKDIR}/prosper
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 

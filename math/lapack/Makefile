@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2003/12/04 10:32:30 adam Exp $
+# $NetBSD: Makefile,v 1.12 2004/01/20 12:20:05 agc Exp $
 #
 
 DISTNAME=	lapack
 PKGNAME=	lapack-20010201
 PKGREVISION=	1
-WRKSRC=		${WRKDIR}/LAPACK
 CATEGORIES=	math
 MASTER_SITES=	ftp://ftp.netlib.org/lapack/			\
 		ftp://netlib.bell-labs.com/netlib/lapack/	\
@@ -17,6 +16,7 @@ MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://www.netlib.org/lapack/index.html
 COMMENT=	Linear Algebra PACKage
 
+WRKSRC=			${WRKDIR}/LAPACK
 DIST_SUBDIR=		lapack-20010201
 USE_BUILDLINK2=		YES
 USE_FORTRAN=		YES

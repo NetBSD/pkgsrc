@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2003/08/09 11:27:49 seb Exp $
+# $NetBSD: Makefile,v 1.18 2004/01/20 12:26:49 agc Exp $
 #
 
 DISTNAME=	ispell-3.1.20
 PKGNAME=	ispell-base-3.1.20
 PKGREVISION=	2
-WRKSRC=		${WRKDIR}/ispell-3.1
 CATEGORIES=	textproc
 MASTER_SITES=	ftp://ftp.cs.ucla.edu/pub/ispell-3.1/
 
@@ -17,6 +16,7 @@ COMMENT=	Interactive spelling checker
 
 CONFLICTS+=	ispell-[0-9]*
 
+WRKSRC=		${WRKDIR}/ispell-3.1
 MAKE_FLAGS+=	TMPDIR="${WRKDIR}"
 
 USE_MAKEINFO=	YES

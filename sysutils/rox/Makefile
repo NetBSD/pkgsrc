@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2004/01/03 18:49:53 reed Exp $
+# $NetBSD: Makefile,v 1.17 2004/01/20 12:26:16 agc Exp $
 #
 
 DISTNAME=	rox-1.2.0
 PKGREVISION=	9
-WRKSRC=		${WRKDIR}/${DISTNAME}/ROX-Filer/src
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=rox/}
 EXTRACT_SUFX=	.tgz
@@ -14,6 +13,7 @@ COMMENT=	RISC OS-like filer for X
 
 DEPENDS+=	rox-base>=1.0.2nb1:../../sysutils/rox-base
 
+WRKSRC=		${WRKDIR}/${DISTNAME}/ROX-Filer/src
 DIST_SUBDIR=	rox
 
 USE_BUILDLINK2=		yes

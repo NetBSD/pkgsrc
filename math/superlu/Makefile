@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2003/11/11 11:53:56 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2004/01/20 12:20:05 agc Exp $
 
 DISTNAME=		superlu_3.0
 PKGNAME=		superlu-3.0
-WRKSRC=			${WRKDIR}/SuperLU_3.0
 CATEGORIES=		math
 MASTER_SITES=		http://www.nersc.gov/~xiaoye/SuperLU/
 
@@ -15,6 +14,7 @@ DEPENDS+=		blas-[0-9]*:../../math/blas
 BLAS_PREFIX_DEFAULT=	${LOCALBASE}
 EVAL_PREFIX+=		BLAS_PREFIX=blas
 
+WRKSRC=			${WRKDIR}/SuperLU_3.0
 ALL_TARGET=		superlulib
 TEST_DIRS=		${WRKSRC}/TESTING/MATGEN ${WRKSRC}/TESTING
 TEST_TARGET=		all

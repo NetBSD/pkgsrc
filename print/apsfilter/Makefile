@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2003/10/08 10:07:37 taca Exp $
+# $NetBSD: Makefile,v 1.16 2004/01/20 12:24:28 agc Exp $
 #
 
 DISTNAME=	apsfilter-7.2.5
-WRKSRC=		${WRKDIR}/apsfilter
 CATEGORIES=	print
 MASTER_SITES=	http://www.apsfilter.org/download/
 
@@ -18,6 +17,7 @@ DEPENDS+=	netpbm>=9.7nb1:../../graphics/netpbm
 DEPENDS+=	a2ps-[0-9]*:../../print/a2ps
 DEPENDS+=	psutils-[0-9]*:../../print/psutils
 
+WRKSRC=		${WRKDIR}/apsfilter
 HAS_CONFIGURE=	YES
 USE_BZIP2=	YES
 USE_PKGINSTALL=	YES

@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2003/07/17 21:49:57 grant Exp $
+# $NetBSD: Makefile,v 1.31 2004/01/20 12:21:02 agc Exp $
 
 DISTNAME=		so51a_lnx_${LANGNO}
 PKGNAME=		staroffice-${LANGUAGE}-5.1a
-WRKSRC=			${WRKDIR}/so51inst/office51
 CATEGORIES=		misc
 MASTER_SITES=		${DOWNLOAD_SITE}
 EXTRACT_SUFX=		.tar
@@ -30,6 +29,7 @@ PATCH_FUZZ_FACTOR=	-F1
 INTERACTIVE_STAGE=	fetch install
 NO_BUILD=		YES
 
+WRKSRC=			${WRKDIR}/so51inst/office51
 CHECK_SHLIBS=		no
 DECOMPRESS_CMD=		${CAT}
 

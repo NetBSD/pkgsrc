@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/07/21 12:27:50 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/20 12:18:16 agc Exp $
 #
 
 DISTNAME=		libggiwmh-0.1.0.src
 PKGNAME=		${DISTNAME:S/.src//}
-WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 CATEGORIES=		graphics devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ggi/} \
 			ftp://ftp.ggi-project.org/pub/ggi/extensions/libwmh/
@@ -13,6 +12,7 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.ggi-project.org/packages/libggiwmh.html
 COMMENT=		Windows Manager hints library for GGI
 
+WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 USE_BUILDLINK2=		yes
 USE_PKGINSTALL=		yes
 USE_PKGLOCALEDIR=	yes
