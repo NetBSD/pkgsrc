@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2003/12/23 23:57:16 pooka Exp $
+$NetBSD: distinfo,v 1.5 2005/02/24 09:03:09 agc Exp $
 
 SHA1 (mzscheme-205.src.unix.tar.gz) = b64d70fe756cd2567d8dcdbccf01c954aa230a26
+RMD160 (mzscheme-205.src.unix.tar.gz) = 9d36f9f5e5136e9a1a70fdcaa11264b5cfaa5a1f
 Size (mzscheme-205.src.unix.tar.gz) = 3249057 bytes
 SHA1 (patch-aa) = dbd42db2a5db10aff1a1af233004c785c52ddc80
 SHA1 (patch-ab) = 2b32df4c5ee422e03c5fc8717295b9c492e80b58

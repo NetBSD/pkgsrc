@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2004/11/08 11:56:10 adam Exp $
+$NetBSD: distinfo,v 1.3 2005/02/24 09:03:06 agc Exp $
 
 SHA1 (cdl3-1.2.5.tar.gz) = dff067d4bf325c15646b02571752cdad8ec03aa2
+RMD160 (cdl3-1.2.5.tar.gz) = b014308567536f0bda5f1df778f8c2531dbbf54f
 Size (cdl3-1.2.5.tar.gz) = 960423 bytes
 SHA1 (patch-aa) = bfae91d27c52f7dd0cb3b264e6d6b7abb3f7ba56
 SHA1 (patch-ab) = 229d9d7c4204ee59b59632b8fcfc84dac4b1ce8a
