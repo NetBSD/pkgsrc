@@ -1,12 +1,13 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/12/06 18:25:22 grant Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/12/13 12:54:43 grant Exp $
 bin/scrollz
-bin/scrollz-${PKGVERSION}
-lib/scrollz/doc/ScrollZ.doc
-lib/scrollz/help/ScrollZ.help
-@exec ${MKDIR} %D/lib/scrollz/translation
-@dirrm lib/scrollz/translation
-@exec ${MKDIR} %D/lib/scrollz/script
-@dirrm lib/scrollz/script
-@dirrm lib/scrollz/help
-@dirrm lib/scrollz/doc
-@dirrm lib/scrollz
+bin/${PKGNAME}
+man/man1/scrollz.1
+share/scrollz/doc/ScrollZ.doc
+share/scrollz/help/ScrollZ.help
+@exec ${MKDIR} %D/share/scrollz/translation
+@dirrm share/scrollz/translation
+@exec ${MKDIR} %D/share/scrollz/script
+@dirrm share/scrollz/script
+@dirrm share/scrollz/help
+@dirrm share/scrollz/doc
+@dirrm share/scrollz
