@@ -1,6 +1,6 @@
 #!@BUILDLINK_SHELL@
 #
-# $NetBSD: libtool.sh,v 1.3 2003/09/09 09:11:42 jlam Exp $
+# $NetBSD: libtool.sh,v 1.4 2003/09/23 19:48:23 jlam Exp $
 
 Xsed='@SED@ -e 1s/^X//'
 sed_quote_subst='s/\([\\`\\"$\\\\]\)/\\\1/g'
@@ -34,10 +34,58 @@ BUILDLINK_DIR="@BUILDLINK_DIR@"
 WRKDIR="@WRKDIR@"
 WRKSRC="@WRKSRC@"
 
-cmd="@WRAPPEE@"
+mode=link
+prevopt=
+nonopt=
 lafile=
-case "$1" in
-*install|*cp|*install-sh|*install.sh)
+for arg; do
+	case $arg in
+	-*=*)	optarg=`$echo "X$arg" | $Xsed -e 's/[-_a-zA-Z0-9]*=//'` ;;
+	*)	optarg= ;;
+	esac
+	if $test -n "$prevopt"; then
+		case $prevopt in
+		--mode)
+			mode="$arg"
+			;;
+		--fix-la|-o)
+			case $arg in
+			*.la) lafile="$arg" ;;
+			esac
+			;;
+		esac
+		prevopt=
+		continue
+	fi
+	case $arg in
+	--mode|--fix-la|-o)
+		prevopt="$arg"
+		;;
+	--mode=*)
+		mode="$optarg"
+		;;
+	-*)
+		if $test -n "$nonopt"; then
+			case $arg in
+			-c) mode=compile ;;
+			esac
+		fi
+		;;
+	*)
+		if $test -z "$nonopt"; then	
+			nonopt="$arg"
+			case $arg in
+			*cc|*++|gcc*|*-gcc*|*CC) mode=link ;;
+			*install*|cp|mv)	 mode=install ;;
+			esac
+		fi
+		;;
+	esac
+done
+
+cmd="@WRAPPEE@"
+case $mode in
+install)
 	arg="$1"; shift
 	. $libtool_do_install
 	;;
@@ -46,24 +94,15 @@ case "$1" in
 		arg="$1"; shift
 		case $arg in
 		--fix-la)
-			case "$1" in
-			*.la)
-				lafile="$1"
-			 	. $libtool_fix_la
-				exit
+			. $libtool_fix_la
+			exit
+			;;
+		*cc|*++|gcc*|*-gcc*|*CC)
+			case $mode in
+			link)
+				cmd="$cmd $arg"
+ 				arg="@_BLNK_WRAP_EXTRA_FLAGS@"
 				;;
-			esac
-			;;
-		--mode|--mode=install)
-			if $test "$arg" = "--mode=install" || \
-			   $test "$arg" = "--mode" -a "$1" = "install"; then
-				. $libtool_do_install
-				break
-			fi
-			;;
-		-o)
-			case "$1" in
-			*.la) lafile="$1" ;;
 			esac
 			;;
 		*)
@@ -101,7 +140,7 @@ case "$1" in
 		# Reduce command length by not appending options that we've
 		# already seen to the command.
 		#
-		case $arg in
+		case "$arg" in
 		-[DILR]*|-Wl,-R*|-Wl,-*,/*)
 			#
 			# These options are only ever useful the first time
