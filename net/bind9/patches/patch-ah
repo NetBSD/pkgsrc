@@ -1,3 +1,5 @@
+$NetBSD: patch-ah,v 1.6 2005/03/15 15:50:04 tron Exp $
+
 --- lib/bind/configure.in.orig	Tue Apr  6 15:49:26 2004
 +++ lib/bind/configure.in	Tue Apr  6 15:50:11 2004
 @@ -81,16 +81,16 @@
