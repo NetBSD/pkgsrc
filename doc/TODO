@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.83 2002/12/18 19:36:06 wiz Exp $
+$NetBSD: TODO,v 1.84 2002/12/19 00:55:10 wiz Exp $
 
 Suggested new packages
 ======================
@@ -154,7 +154,6 @@ Suggested package updates
 	o kde-3.0.5 [skrll]
 	o kdevelop-2.1.4 [3.0alpha1]
 	o koffice-1.2.1
-	o lame-3.93.1 [pkg/19388]
 	o lbreakout2-2.4
 	o lcms-1.0.9
 	o lftp-2.6.3 [pkg/19419]
