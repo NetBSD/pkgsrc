@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2003/03/15 20:28:52 kei Exp $
+# $NetBSD: Makefile,v 1.51 2003/03/16 01:06:08 kei Exp $
 #
 
 COMMENT=	Fonts
@@ -45,6 +45,12 @@ SUBDIR+=	ghostscript-cidfonts
 SUBDIR+=	ghostscript-cmaps
 SUBDIR+=	ghostscript-fonts
 SUBDIR+=	intlfonts
+SUBDIR+=	ja-elisat
+SUBDIR+=	ja-elisau
+SUBDIR+=	ja-kaname
+SUBDIR+=	ja-kappa20
+SUBDIR+=	ja-naga10
+SUBDIR+=	ja-shinonome
 SUBDIR+=	jisx0208fonts
 SUBDIR+=	jisx0212fonts
 SUBDIR+=	jisx0213fonts
