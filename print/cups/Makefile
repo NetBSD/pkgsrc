@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.84 2004/12/28 23:18:21 reed Exp $
+# $NetBSD: Makefile,v 1.85 2004/12/29 15:31:24 minskim Exp $
 #
 # The CUPS author is very good about taking back changes into the main
 # CUPS distribution.  The correct place to send patches or bug-fixes is:
@@ -40,7 +40,7 @@ INSTALL_TARGET=		installcups
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR}
-CONFIGURE_ARGS+=	--localstatedir=/var
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--with-docdir=${PREFIX}/share/doc/html/cups
 CONFIGURE_ARGS+=	--with-serverbindir=${PREFIX}/libexec/cups
 CONFIGURE_ARGS+=	--with-rcdir=${RCD_SCRIPTS_DIR}
