@@ -1,0 +1,68 @@
+$NetBSD: patch-ab,v 1.1.1.1 2003/12/12 19:05:18 wiz Exp $
+
+--- Makefile.in.orig	Sun Nov  9 20:29:57 2003
++++ Makefile.in
+@@ -186,8 +186,8 @@ install-binSCRIPTS: $(bin_SCRIPTS)
+ 	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
+ 	  if test -f $$d$$p; then \
+ 	    f=`echo "$$p" | sed 's|^.*/||;$(transform)'`; \
+-	    echo " $(binSCRIPT_INSTALL) $$d$$p $(DESTDIR)$(bindir)/$$f"; \
+-	    $(binSCRIPT_INSTALL) $$d$$p $(DESTDIR)$(bindir)/$$f; \
++	    echo " $(binSCRIPT_INSTALL) $$d$$p $(DESTDIR)$(bindir)/$$f-$(APIVERSION)"; \
++	    $(binSCRIPT_INSTALL) $$d$$p $(DESTDIR)$(bindir)/$$f-$(APIVERSION); \
+ 	  else :; fi; \
+ 	done
+ 
+@@ -201,7 +201,7 @@ uninstall-binSCRIPTS:
+ 
+ .texi.info:
+ 	@rm -f $@ $@-[0-9] $@-[0-9][0-9] $(@:.info=).i[0-9] $(@:.info=).i[0-9][0-9]
+-	$(MAKEINFO) $(AM_MAKEINFOFLAGS) $(MAKEINFOFLAGS) -I $(srcdir) \
++	$(MAKEINFO) --no-split $(AM_MAKEINFOFLAGS) $(MAKEINFOFLAGS) -I $(srcdir) \
+ 	 -o $@ `test -f '$<' || echo '$(srcdir)/'`$<
+ 
+ .texi.dvi:
+@@ -599,7 +599,6 @@ install-data-am: install-info-am
+ 
+ install-exec-am: install-binSCRIPTS
+ 	@$(NORMAL_INSTALL)
+-	$(MAKE) $(AM_MAKEFLAGS) install-exec-hook
+ 
+ install-info: install-info-recursive
+ 
+@@ -607,27 +606,17 @@ install-info-am: $(INFO_DEPS)
+ 	@$(NORMAL_INSTALL)
+ 	$(mkinstalldirs) $(DESTDIR)$(infodir)
+ 	@list='$(INFO_DEPS)'; \
+-	for file in $$list; do \
++	for file in automake.info; do \
+ 	  if test -f $$file; then d=.; else d=$(srcdir); fi; \
+-	  file_i=`echo "$$file" | sed 's|\.info$$||;s|$$|.i|'`; \
+-	  for ifile in $$d/$$file $$d/$$file-[0-9] $$d/$$file-[0-9][0-9] \
+-                       $$d/$$file_i[0-9] $$d/$$file_i[0-9][0-9] ; do \
+-	    if test -f $$ifile; then \
+-	      relfile=`echo "$$ifile" | sed 's|^.*/||'`; \
+-	      echo " $(INSTALL_DATA) $$ifile $(DESTDIR)$(infodir)/$$relfile"; \
+-	      $(INSTALL_DATA) $$ifile $(DESTDIR)$(infodir)/$$relfile; \
+-	    else : ; fi; \
+-	  done; \
++	if test -f $$d/automake.info; then \
++	   echo " $(INSTALL_DATA) $$d/automake.info $(DESTDIR)$(infodir)/automake17.info"; \
++	   $(INSTALL_DATA) $$d/automake.info $(DESTDIR)$(infodir)/automake17.info; \
++	  else : ; fi; \
+ 	done
+ 	@$(POST_INSTALL)
+-	@if (install-info --version && \
+-	     install-info --version 2>&1 | sed 1q | grep -i -v debian) >/dev/null 2>&1; then \
+-	  list='$(INFO_DEPS)'; \
+-	  for file in $$list; do \
+-	    relfile=`echo "$$file" | sed 's|^.*/||'`; \
+-	    echo " install-info --info-dir=$(DESTDIR)$(infodir) $(DESTDIR)$(infodir)/$$relfile";\
+-	    install-info --info-dir=$(DESTDIR)$(infodir) $(DESTDIR)$(infodir)/$$relfile || :;\
+-	  done; \
++	@if $(SHELL) -c '$(INSTALL_INFO) --version | sed 1q | fgrep -s -v -i debian' >/dev/null 2>&1; then \
++	    echo " $(INSTALL_INFO) --info-dir=$(DESTDIR)$(infodir) $(DESTDIR)$(infodir)/automake17.info";\
++	    $(INSTALL_INFO) --info-dir=$(DESTDIR)$(infodir) $(DESTDIR)$(infodir)/automake17.info || :;\
+ 	else : ; fi
+ install-man:
+ 
