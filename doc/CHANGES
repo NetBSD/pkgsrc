@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1691 2003/03/19 21:11:50 jlam Exp $
+$NetBSD: CHANGES,v 1.1692 2003/03/19 22:31:38 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1200,3 +1200,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated edb to 1.0.3nb1 [jmmv 2003-03-19]
 	Updated autogen to 5.5.3 [kristerw 2003-03-19]
 	Added cy-login-1.5.27 [jlam 2003-03-19]
+	Added cy2-login-2.1.12 [jlam 2003-03-19]
+	Added cy2-ntlm-2.1.12 [jlam 2003-03-19]
