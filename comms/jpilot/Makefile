@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2001/04/02 20:06:11 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2001/06/22 05:59:58 jlam Exp $
 #
 
 DISTNAME=		jpilot-0.99
@@ -10,22 +10,21 @@ HOMEPAGE=		http://jpilot.org/
 COMMENT=		desktop organizer application for the palm pilot
 
 BUILD_DEPENDS+=		autoconf-2.13:../../devel/autoconf
-BUILD_USES_MSGFMT=	yes
-DEPENDS+=		gtk+>=1.2.0:../../x11/gtk
-DEPENDS+=		pilot-link>=0.9.3:../../comms/pilot-link
+BUILD_USES_MSGFMT=	# defined
 
 CONFLICTS+=		jpilot-libplugin-*
+
+USE_BUILDLINK_ONLY=	# defined
+USE_CONFIG_WRAPPER=	# defined
 
 GNU_CONFIGURE=		# defined
 USE_LIBTOOL=		# defined
 USE_X11=		# defined
-USE_LIBINTL=		# defined
+#USE_LIBINTL=		# defined
 
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
-EVAL_PREFIX+=		GTKDIR=gtk+
-EVAL_PREFIX+=		PILOTLINKDIR=pilot-link
-CONFIGURE_ARGS+=	--with-gtk-prefix="${GTKDIR}"
-CONFIGURE_ARGS+=	--with-pilot-prefix="${PILOTLINKDIR}"
+CONFIGURE_ARGS+=	--with-gtk-prefix="${BUILDLINK_DIR}"
+CONFIGURE_ARGS+=	--with-pilot-prefix="${BUILDLINK_DIR}"
 CONFIGURE_ENV+=		PKGLOCALEDIR="${PKGLOCALEDIR}"
 
 INCDIR=			${PREFIX}/include/jpilot
@@ -37,7 +36,7 @@ post-extract:
 	${RM} -f ${WRKSRC}/po/Makefile.in
 
 pre-configure:
-	cd ${WRKSRC} && ${LOCALBASE}/bin/autoconf
+	cd ${WRKSRC} && ${LOCALBASE}/bin/autoreconf --force
 
 post-install:
 	${INSTALL_DATA_DIR} ${INCDIR} ${HTMLDIR} ${PLUGINSDIR}
@@ -46,4 +45,7 @@ post-install:
 	cd ${WRKSRC}/docs; ${INSTALL_MAN} *.1 ${MAN1DIR}
 	${TOUCH} ${PLUGINSDIR}/.directory
 
+.include "../../comms/pilot-link/buildlink.mk"
+.include "../../devel/gettext-lib/buildlink.mk"
+.include "../../x11/gtk/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
