@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.452 2004/01/09 01:46:44 grant Exp $
+# $NetBSD: Makefile,v 1.453 2004/01/09 16:59:28 xtraeme Exp $
 #
 
 COMMENT=	Development utilities
@@ -42,7 +42,6 @@ SUBDIR+=	blib
 SUBDIR+=	bmake
 SUBDIR+=	boehm-gc
 SUBDIR+=	bonobo
-SUBDIR+=	bonobo-activation
 SUBDIR+=	bonobo-conf
 SUBDIR+=	boost
 SUBDIR+=	buddy
