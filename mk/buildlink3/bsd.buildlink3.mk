@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.112 2004/03/11 08:36:41 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.113 2004/03/12 18:03:53 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -148,18 +148,19 @@ _BLNK_DEPENDS+=	${_pkg_}
 .    endif
 .endfor
 
+# By default, every package receives a full dependency.
+.for _pkg_ in ${_BLNK_PACKAGES}
+BUILDLINK_DEPMETHOD.${_pkg_}?=	full
+.endfor
+
 # Add the proper dependency on each package pulled in by buildlink3.mk
 # files.  BUILDLINK_DEPMETHOD.<pkg> contains a list of either "full" or
 # "build", and if any of that list is "full" then we use a full dependency
-# on <pkg>, otherwise we use a build dependency on <pkg>.  By default,
-# we use a full dependency.
+# on <pkg>, otherwise we use a build dependency on <pkg>.
 #
 # We skip the dependency calculation for some phases since they never
 # use the dependency information.
 #
-.for _pkg_ in ${_BLNK_PACKAGES}
-BUILDLINK_DEPMETHOD.${_pkg_}?=	full
-.endfor
 _BLNK_PHASES_SKIP_DEPENDS=	fetch patch tools buildlink configure build
 .if empty(_BLNK_PHASES_SKIP_DEPENDS:M${PKG_PHASE})
 _BLNK_ADD_TO.DEPENDS=		# empty
