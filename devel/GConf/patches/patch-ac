@@ -1,0 +1,47 @@
+$NetBSD: patch-ac,v 1.3 2001/04/10 22:55:07 rh Exp $
+
+--- configure.orig	Thu Apr  5 16:31:04 2001
++++ configure
+@@ -3015,14 +3015,14 @@
+ 
+ 
+ 
+-echo $ac_n "checking for poptGetArg in -lpopt""... $ac_c" 1>&6
+-echo "configure:3020: checking for poptGetArg in -lpopt" >&5
++echo $ac_n "checking for poptGetArg in -lgnomesupport""... $ac_c" 1>&6
++echo "configure:3020: checking for poptGetArg in -lgnomesupport" >&5
+ ac_lib_var=`echo popt'_'poptGetArg | sed 'y%./+-%__p_%'`
+ if eval "test \"`echo '$''{'ac_cv_lib_$ac_lib_var'+set}'`\" = set"; then
+   echo $ac_n "(cached) $ac_c" 1>&6
+ else
+   ac_save_LIBS="$LIBS"
+-LIBS="-lpopt  $LIBS"
++LIBS="-lgnomesupport  $LIBS"
+ cat > conftest.$ac_ext <<EOF
+ #line 3028 "configure"
+ #include "confdefs.h"
+@@ -3050,19 +3050,19 @@
+ fi
+ if eval "test \"`echo '$ac_cv_lib_'$ac_lib_var`\" = yes"; then
+   echo "$ac_t""yes" 1>&6
+-  POPT_LIBS=-lpopt
++  POPT_LIBS=-lgnomesupport
+ else
+   echo "$ac_t""no" 1>&6
+-ac_safe=`echo "popt.h" | sed 'y%./+-%__p_%'`
+-echo $ac_n "checking for popt.h""... $ac_c" 1>&6
+-echo "configure:3059: checking for popt.h" >&5
++ac_safe=`echo "popt-gnome.h" | sed 'y%./+-%__p_%'`
++echo $ac_n "checking for popt-gnome.h""... $ac_c" 1>&6
++echo "configure:3059: checking for popt-gnome.h" >&5
+ if eval "test \"`echo '$''{'ac_cv_header_$ac_safe'+set}'`\" = set"; then
+   echo $ac_n "(cached) $ac_c" 1>&6
+ else
+   cat > conftest.$ac_ext <<EOF
+ #line 3064 "configure"
+ #include "confdefs.h"
+-#include <popt.h>
++#include <popt-gnome.h>
+ EOF
+ ac_try="$ac_cpp conftest.$ac_ext >/dev/null 2>conftest.out"
+ { (eval echo configure:3069: \"$ac_try\") 1>&5; (eval $ac_try) 2>&5; }
