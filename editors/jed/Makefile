@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2001/10/25 19:31:10 agc Exp $
+# $NetBSD: Makefile,v 1.17 2001/10/25 19:34:44 agc Exp $
 #
 
 DISTNAME=		jed-B0.99-15
@@ -19,10 +19,9 @@ CONFIGURE_ARGS+=	--without-X
 WRKSRC=			${WRKDIR}/jed-B0.99-15
 
 post-install:
-	echo "Installing lib files"
-	cd ${WRKSRC};							\
+	@cd ${WRKSRC};							\
 		for dir in lib info doc; do				\
-			echo "Installing $$dir files";			\
+			${ECHO} "Installing $$dir files";		\
 			${PAX} -rwpe $$dir ${PREFIX}/share/jed;		\
 		done
 	${RM} -f ${PREFIX}/share/jed/doc/jed.1 ${PREFIX}/share/jed/doc/rgrep.1
