@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1073 2003/11/27 16:11:05 xtraeme Exp $
+$NetBSD: TODO,v 1.1074 2003/11/27 16:37:58 recht Exp $
 
 Suggested new packages
 ======================
@@ -137,8 +137,6 @@ Suggested package updates
 	o Xbae-4.50.0
 	o abiword-2.0.1
 	o abcde-2.1.9
-	o aegis-4.12 [pkg/23414]
-	o aegis-4.15
 	o amanda-2.4.4p1
 	o anjuta-1.0.2
 	o arch-1.1pre5 [pkg/23022]
