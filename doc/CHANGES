@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4866 2004/02/16 21:34:01 minskim Exp $
+$NetBSD: CHANGES,v 1.4867 2004/02/16 22:51:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -876,3 +876,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated nicotine to 1.0.7 [hubertf 2004-02-16]
 	Updated roundup to 0.6.5 [recht 2004-02-16]
 	Updated trafshow to 4.0 [snj 2004-02-16]
+	Updated nsd to 2.0.0nb1 [itojun 2004-02-16]
