@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.428 2002/10/31 17:44:10 tron Exp $
+$NetBSD: CHANGES,v 1.429 2002/10/31 17:58:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3472,3 +3472,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated standalone-tcsh to 6.12.00nb1 [wiz 2002-10-31]
 	Updated monafonts to 2.21 [toshii 2002-10-31]
 	Updated opera6 to 6.10 [tron 2002-10-31]
+	Updated pan to 0.13.1 (gtk2-pan) [wiz 2002-10-31]
