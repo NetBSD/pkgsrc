@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.5 2002/09/11 11:24:40 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.6 2002/09/23 02:28:37 jlam Exp $
 
 .if !defined(GLIB2_BUILDLINK2_MK)
 GLIB2_BUILDLINK2_MK=	# defined
@@ -26,8 +26,8 @@ PTHREAD_OPTS+=	native
 .include "../../mk/pthread.buildlink2.mk"
 
 .if defined(PTHREAD_TYPE) && (${PTHREAD_TYPE} == "none")
-CPPFLAGS+=	-I${BUILDLINK_PREFIX.ptl2}/PTL/include
 .  include "../../devel/ptl2/buildlink2.mk"
+CPPFLAGS+=	${BUILDLINK_CPPFLAGS.ptl2}
 .endif
 
 BUILDLINK_TARGETS+=	glib2-buildlink

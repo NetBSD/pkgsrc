@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.2 2002/08/25 19:23:59 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2002/09/23 02:28:39 jlam Exp $
 
 .if !defined(WX1MOTIF_BUILDLINK2_MK)
 WX1MOTIF_BUILDLINK2_MK=	# defined
@@ -13,13 +13,15 @@ BUILDLINK_PREFIX.wx1Motif_DEFAULT=	${X11PREFIX}
 BUILDLINK_FILES.wx1Motif=	include/wxwindows1/*
 BUILDLINK_FILES.wx1Motif+=	lib/wxwindows1/libwx_motif.a
 
-WX1MOTIF_CPPFLAGS=        -I${BUILDLINK_PREFIX.wx1Motif}/include/wxwindows1
-WX1MOTIF_LDFLAGS=         -L${BUILDLINK_PREFIX.wx1Motif}/lib/wxwindows1
+BUILDLINK_CPPFLAGS.wx1Motif= \
+	-I${BUILDLINK_PREFIX.wx1Motif}/include/wxwindows1
+BUILDLINK_LDFLAGS.wx1Motif= \
+	-L${BUILDLINK_PREFIX.wx1Motif}/lib/wxwindows1
 
-CFLAGS+=                ${WX1MOTIF_CPPFLAGS}
-CXXFLAGS+=              ${WX1MOTIF_CPPFLAGS}
-CPPFLAGS+=              ${WX1MOTIF_CPPFLAGS}
-LDFLAGS+=               ${WX1MOTIF_LDFLAGS}
+CFLAGS+=		${BUILDLINK_CPPFLAGS.wx1Motif}
+CXXFLAGS+=		${BUILDLINK_CPPFLAGS.wx1Motif}
+CPPFLAGS+=		${BUILDLINK_CPPFLAGS.wx1Motif}
+LDFLAGS+=		${BUILDLINK_LDFLAGS.wx1Motif}
 
 .include "../../mk/motif.buildlink2.mk"
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.4 2002/09/22 09:43:16 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.5 2002/09/23 02:28:37 jlam Exp $
 
 .if !defined(LIBGLADE_BUILDLINK2_MK)
 LIBGLADE_BUILDLINK2_MK=	# defined
@@ -13,7 +13,10 @@ BUILDLINK_FILES.libglade=	include/libglade-1.0/glade/*
 BUILDLINK_FILES.libglade+=	lib/libglade.*
 BUILDLINK_FILES.libglade+=	lib/libglade-gnome.*
 
-CPPFLAGS+=	-I${BUILDLINK_PREFIX.libglade}/include/libglade-1.0
+BUILDLINK_CPPFLAGS.libglade= \
+	-I${BUILDLINK_PREFIX.libglade}/include/libglade-1.0
+
+CPPFLAGS+=	${BUILDLINK_CPPFLAGS.libglade}
 
 .include "../../audio/esound/buildlink2.mk"
 .include "../../devel/gettext-lib/buildlink2.mk"

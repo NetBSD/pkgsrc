@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.2 2002/08/25 19:23:27 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2002/09/23 02:28:38 jlam Exp $
 
 .if !defined(FOX_BUILDLINK2_MK)
 FOX_BUILDLINK2_MK=	# defined
@@ -13,7 +13,8 @@ BUILDLINK_FILES.fox=	include/fox/*
 BUILDLINK_FILES.fox+=	lib/libFOX-*
 BUILDLINK_FILES.fox+=	lib/libFOX.*
 
-CPPFLAGS+=	-I${BUILDLINK_PREFIX.fox}/include/fox
+BUILDLINK_CPPFLAGS.fox+=	-I${BUILDLINK_PREFIX.fox}/include/fox
+CPPFLAGS+=			${BUILDLINK_CPPFLAGS.fox}
 
 BUILDLINK_TARGETS+=	fox-buildlink
 
