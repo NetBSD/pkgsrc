@@ -1,4 +1,4 @@
-# $NetBSD: pyversion.mk,v 1.21 2003/08/04 08:15:47 drochner Exp $
+# $NetBSD: pyversion.mk,v 1.22 2003/09/30 22:44:52 kristerw Exp $
 
 .if !defined(PYTHON_PYVERSION_MK)
 PYTHON_PYVERSION_MK=	defined
@@ -109,7 +109,7 @@ PYDEPENDENCY=	${BUILDLINK_DEPENDS.python23-pth}:${PYPKGSRCDIR}
 PYPACKAGE=	python23-pth
 PYVERSSUFFIX=	2p3
 PYPKGPREFIX=	py23pth
-.  if defined(USE_BUILDLINK2)
+.  if defined(USE_BUILDLINK2) && empty(USE_BUILDLINK2:M[nN][oO])
 PTHREAD_OPTS=	require
 .    include "../../mk/pthread.buildlink2.mk"
 .    if ${PTHREAD_TYPE} == "pth"
@@ -128,7 +128,7 @@ PYDEPENDENCY=	${BUILDLINK_DEPENDS.python22-pth}:${PYPKGSRCDIR}
 PYPACKAGE=	python22-pth
 PYVERSSUFFIX=	2p2
 PYPKGPREFIX=	py22pth
-.  if defined(USE_BUILDLINK2)
+.  if defined(USE_BUILDLINK2) && empty(USE_BUILDLINK2:M[nN][oO])
 PTHREAD_OPTS=	require
 .    include "../../mk/pthread.buildlink2.mk"
 .    if ${PTHREAD_TYPE} == "pth"
@@ -147,7 +147,7 @@ PYPACKAGE=	python21-pth
 PYDEPENDENCY=	${BUILDLINK_DEPENDS.python21-pth}:${PYPKGSRCDIR}
 PYVERSSUFFIX=	2p1
 PYPKGPREFIX=	py21pth
-.  if defined(USE_BUILDLINK2)
+.  if defined(USE_BUILDLINK2) && empty(USE_BUILDLINK2:M[nN][oO])
 PTHREAD_OPTS=	require
 .    include "../../mk/pthread.buildlink2.mk"
 .    if ${PTHREAD_TYPE} == "pth"
@@ -174,7 +174,7 @@ BUILD_DEPENDS+=	py15-distutils-*:../../devel/py-distutils
 	error: no valid Python version
 .endif
 
-.if defined(USE_BUILDLINK2)
+.if defined(USE_BUILDLINK2) && empty(USE_BUILDLINK2:M[nN][oO])
 .  if defined(PYTHON_FOR_BUILD_ONLY)
 BUILD_DEPMETHOD.python?=	build
 .  endif
