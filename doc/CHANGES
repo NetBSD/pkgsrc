@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4328 2004/01/02 18:45:44 ben Exp $
+$NetBSD: CHANGES,v 1.4329 2004/01/02 21:57:15 cjep Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -28,3 +28,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated sun-jre13 to 1.0.10 [jschauma 2004-01-02]
 	Updated qcad to 1.5.4nb3 [reinoud 2004-01-02]
 	Added fp-netbsd-ws-4.3.1 [ben 2004-01-02]
+	Updated adobe-cmaps to 20030924 [cjep 2004-01-02]
