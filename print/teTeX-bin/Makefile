@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2000/04/15 22:30:45 mycroft Exp $
+# $NetBSD: Makefile,v 1.21 2000/08/06 02:23:34 fredb Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/08/05 06:56:41 tg Exp
 #
 
@@ -13,7 +13,7 @@ MAINTAINER=	hubertf@netbsd.org
 BUILD_DEPENDS+=	${LOCALBASE}/bin/bison:../../devel/bison
 DEPENDS+=	teTeX-share-1.0.*:../teTeX-share
 DEPENDS+=	dialog-0.6z:../../misc/dialog
-DEPENDS+=	libwww-5.2.8:../../www/libwww
+DEPENDS+=	libwww>=5.2.8:../../www/libwww
 DEPENDS+=	png>=1.0.6:../../graphics/png
 
 CONFLICTS+=	omega-*
