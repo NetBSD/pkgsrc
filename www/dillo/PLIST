@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/12/06 16:15:41 dillo Exp $
+bin/dillo
+share/examples/dillo/dillorc
+@dirrm share/examples/dillo
