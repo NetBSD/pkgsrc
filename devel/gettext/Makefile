@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2000/06/30 17:07:35 danw Exp $
+# $NetBSD: Makefile,v 1.15 2000/09/19 21:01:42 tron Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1998/08/09 15:13:33 kuriyama Exp
 #
 
@@ -12,6 +12,7 @@ MAINTAINER=		packages@netbsd.org
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
+CONFIGURE_ARGS+=	--with-included-gettext
 
 INFO_FILES=		gettext.info
 
