@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/10/01 14:39:37 uebayasi Exp $
+# $NetBSD: Makefile,v 1.3 2002/10/03 13:32:15 agc Exp $
 #
 
 DISTNAME=	ddskk20020929
@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	tech-pkg-ja@jp.netbsd.org
 HOMEPAGE=	http://openlab.ring.gr.jp/skk/index.html
-COMMENT=	
+COMMENT=	Japanese input methods for Emacs
 
 DEPENDS=	apel>=10.2:../../devel/apel
 
