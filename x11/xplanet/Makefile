@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/04/04 16:47:54 atatat Exp $
+# $NetBSD: Makefile,v 1.3 2002/04/12 13:20:01 jlam Exp $
 #
 
 DISTNAME=		xplanet-0.93
@@ -10,13 +10,11 @@ MAINTAINER=		atatat@netbsd.org
 HOMEPAGE=		http://xplanet.sourceforge.net/
 COMMENT=		Rotating rendered map of the Earth in X11 root window
 
-GNU_CONFIGURE=		YES
-CONFIGURE_ARGS=		--with-gl-dir=${X11BASE} --with-glut-dir=${X11BASE}
-USE_GMAKE=		yes
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--with-gl-dir=${BUILDLINK_DIR}
+CONFIGURE_ARGS+=	--with-glut-dir=${BUILDLINK_DIR}
 
-DEPENDS+=		MesaLib-*:../../graphics/MesaLib
-DEPENDS+=		glut-*:../../graphics/glut
-DEPENDS+=		glu-*:../../graphics/glu
+USE_GMAKE=		yes
 
 LIBS=			-lpbm -lppm -lpgm
 MAKE_ENV+=		LIBS="${LIBS}"
@@ -27,12 +25,14 @@ pre-configure:
 	[ -f $$f.BAK ] || ${MV} $$f $$f.BAK ; \
 	${SED} -e 's|@PREFIX@|${PREFIX}|g' < $$f.BAK > $$f
 
-.include "../../graphics/libungif/buildlink.mk"
+.include "../../graphics/Mesa/buildlink.mk"
 .include "../../graphics/jpeg/buildlink.mk"
-.include "../../graphics/png/buildlink.mk"
-.include "../../graphics/netpbm/buildlink.mk"
-.include "../../graphics/tiff/buildlink.mk"
 .include "../../graphics/freetype2/buildlink.mk"
+.include "../../graphics/libungif/buildlink.mk"
+.include "../../graphics/netpbm/buildlink.mk"
+.include "../../graphics/png/buildlink.mk"
+.include "../../graphics/tiff/buildlink.mk"
 .include "../../x11/tk/buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
+
+#.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
