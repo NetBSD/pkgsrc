@@ -1,0 +1,18 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/08/12 22:27:05 zuntum Exp $
+
+--- Makefile.in.orig	Mon May  7 14:42:59 2001
++++ Makefile.in
+@@ -11,10 +11,10 @@
+ CXX	=	g++
+ CFLAGS	=	-pipe -Wall -O3 -ffast-math -DNO_DEBUG -Wno-unused 
+ CXXFLAGS=	-pipe -Wall -O3 -ffast-math -DNO_DEBUG -Wno-unused 
+-INCPATH	=	-I/usr/X11R6/include
+-LINK	=	g++
++INCPATH	=	-I${X11BASE}/include
++LINK	=	g++ -Wl,-R${X11BASE}/lib
+ LFLAGS	=	
+-LIBS	=   -L/usr/X11R6/lib -lfltk -lGL -lXext -lX11 -lm -ldl
++LIBS	=   -L${X11BASE}/lib -lfltk -lGL -lXext -lX11 -lm -lossaudio
+ MOC	=	moc
+ UIC	=	
+ TAR	=	tar -cf
