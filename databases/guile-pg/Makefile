@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2004/12/03 13:41:30 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2004/12/22 23:59:06 wiz Exp $
 #
 
 DISTNAME=	guile-pg-0.23
@@ -8,9 +8,6 @@ MASTER_SITES=	http://www.glug.org/people/ttn/software/guile-pg/
 MAINTAINER=	gdt@ir.bbn.com
 HOMEPAGE=	http://www.glug.org/people/ttn/software/guile-pg/
 COMMENT=	PostgreSQL interface for Guile
-
-# This is wrong if pgsql.buildlink3.mk chooses otherwise.
-DEPENDS+=	postgresql74-client>=7.4.1:../../databases/postgresql74-client
 
 USE_BUILDLINK3=	YES
 USE_LIBTOOL=	YES
