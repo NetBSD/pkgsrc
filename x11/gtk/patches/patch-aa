@@ -1,19 +1,19 @@
-$NetBSD: patch-aa,v 1.20 2001/02/26 21:42:57 tron Exp $
+$NetBSD: patch-aa,v 1.21 2001/03/10 10:50:38 drochner Exp $
 
---- configure.orig	Thu May 25 02:31:48 2000
-+++ configure	Thu May 25 18:53:46 2000
+--- configure.orig	Fri Mar  2 20:34:37 2001
++++ configure	Wed Mar  7 22:16:35 2001
 @@ -22,8 +22,8 @@
  #
  GTK_MAJOR_VERSION=1
  GTK_MINOR_VERSION=2
--GTK_MICRO_VERSION=8
--GTK_INTERFACE_AGE=3
-+GTK_MICRO_VERSION=20
-+GTK_INTERFACE_AGE=8
- GTK_BINARY_AGE=8
+-GTK_MICRO_VERSION=9
+-GTK_INTERFACE_AGE=0
++GTK_MICRO_VERSION=21
++GTK_INTERFACE_AGE=9
+ GTK_BINARY_AGE=9
  GTK_VERSION=$GTK_MAJOR_VERSION.$GTK_MINOR_VERSION.$GTK_MICRO_VERSION
  ac_help="$ac_help
-@@ -4099,7 +4101,7 @@
+@@ -4106,7 +4106,7 @@
  
  # AM_GTK_GNU_GETTEXT above substs $DATADIRNAME
  # this is the directory where the *.{mo,gmo} files are installed
