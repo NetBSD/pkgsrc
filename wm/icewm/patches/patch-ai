@@ -1,0 +1,11 @@
+--- install.inc.orig	2003-05-03 18:20:38.000000000 +0200
++++ install.inc	2003-05-03 18:20:49.000000000 +0200
+@@ -9,7 +9,7 @@
+ PREFIX      = /usr
+ BINDIR      = ${exec_prefix}/bin
+ LIBDIR      = ${libdir}/X11/icewm
+-CFGDIR      = ${sysconfdir}/X11/icewm
++CFGDIR      = ${sysconfdir}
+ LOCDIR      = ${datadir}/locale
+ KDEDIR 	    = /usr/share
+ DOCDIR	    = ${prefix}/doc
