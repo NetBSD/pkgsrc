@@ -1,33 +1,49 @@
-# New ports collection makefile for:	GNU emacs
-# Version required:	19.34b
-# Date created:		29 October 1994
-# Whom:			jkh
-#
-# $Id: Makefile,v 1.1.1.1 1997/10/11 20:54:46 hubertf Exp $
-#
+# $NetBSD: Makefile,v 1.1.1.2 2003/04/11 00:34:24 uebayasi Exp $
+# FreeBSD Id: Makefile,v 1.30 1997/12/14 02:03:53 asami Exp
 
-DISTNAME=	emacs-19.34b
+DISTNAME=	emacs-21.2
 CATEGORIES=	editors
-MASTER_SITES=	${MASTER_SITE_GNU}
+MASTER_SITES=	${MASTER_SITE_GNU:=emacs/}
 
-MAINTAINER=	ports@FreeBSD.ORG
+MAINTAINER=	packages@netbsd.org
+HOMEPAGE=	http://www.gnu.org/software/emacs/emacs.html
+COMMENT=	GNU editing macros (editor)
 
-WRKSRC=		${WRKDIR}/emacs-19.34
-GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
-CONFIGURE_ARGS=	i386--freebsd --with-x-toolkit
-STRIP=
-MAN1=		emacs.1 etags.1 ctags.1
+CONFLICTS=	mule-[0-9]*
+
+USE_BUILDLINK2=		yes
+USE_X11=		yes
+USE_GMAKE=		yes
+USE_LIBTOOL=		yes
+GNU_CONFIGURE=		yes
+
+CONFIGURE_ARGS+=	--with-x
+CONFIGURE_ARGS+=	--with-x-toolkit=athena
+
+.include "../../graphics/xpm/buildlink2.mk"
+CONFIGURE_ARGS+=	--with-xpm
+.include "../../graphics/jpeg/buildlink2.mk"
+CONFIGURE_ARGS+=	--with-jpeg
+.include "../../graphics/tiff/buildlink2.mk"
+CONFIGURE_ARGS+=	--with-tiff
+# need 4.1.0b1 or higher (a bug in 4.1.0 can crash Emacs)
+BUILDLINK_DEPENDS.libungif=	libungif>=4.1.0.1
+.include "../../graphics/libungif/buildlink2.mk"
+CONFIGURE_ARGS+=	--with-gif
+.include "../../graphics/png/buildlink2.mk"
+CONFIGURE_ARGS+=	--with-png
+
+INFO_FILES=	emacs vip viper forms gnus mh-e cl sc dired-x ediff \
+		    ccmode message widget reftex forms
+
+post-extract:
+	${CP} ${FILESDIR}/site-init.el ${WRKSRC}/lisp
+
+pre-install:
+	@${FIND} ${WRKSRC} -type f -name "*.orig" | ${XARGS} ${RM} -f
 
 post-install:
-.for file in emacs-19.34 emacsclient etags ctags b2m
-	strip ${PREFIX}/bin/${file}
-.endfor
-	if [ ! -f ${PREFIX}/info/dir ]; then \
-	  ${SED} -ne '1,/Menu:/p' /usr/share/info/dir > ${PREFIX}/info/dir; \
-	fi
-.for info in emacs vip viper forms gnus mh-e cl sc dired-x ediff ccmode
-	install-info ${PREFIX}/info/${info} ${PREFIX}/info/dir
-.endfor
+	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/emacs
 
-.include <bsd.port.mk>
+.include "../../mk/texinfo.mk"
+.include "../../mk/bsd.pkg.mk"
