@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/01/07 18:47:00 ben Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/02/02 04:10:04 wiz Exp $
 bin/f-prot
 lib/fprot-workstation-bin/f-prot
 lib/fprot-workstation-bin/ENGLISH.TX0
@@ -13,6 +13,7 @@ share/doc/html/fprot-workstation-bin/auto_updt.html
 share/doc/html/fprot-workstation-bin/comm_scan.html
 share/doc/html/fprot-workstation-bin/index.html
 share/doc/html/fprot-workstation-bin/inf_eicar.gif
+share/doc/html/fprot-workstation-bin/info_options.html
 share/doc/html/fprot-workstation-bin/inst_pro.html
 share/doc/html/fprot-workstation-bin/license.html
 share/doc/html/fprot-workstation-bin/loc_files.html
