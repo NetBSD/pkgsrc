@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/05/30 12:46:19 rh Exp $
+$NetBSD: patch-aa,v 1.2 2001/07/21 14:16:54 wiz Exp $
 
---- utils/start-stop-daemon.c.orig	Wed Apr 12 19:06:22 2000
-+++ utils/start-stop-daemon.c	Tue May 30 12:32:29 2000
-@@ -33,8 +33,13 @@
- #elif defined(__sparc__)
- #define OSsunos
+--- utils/start-stop-daemon.c.orig	Fri May 26 20:05:53 2000
++++ utils/start-stop-daemon.c	Fri Jun 29 09:07:15 2001
+@@ -34,8 +34,13 @@
+ #elif defined(__FreeBSD__)
+ #define FreeBSD
  #else
 +#include <sys/param.h>
 +#if (defined(BSD) && BSD >= 199306)
@@ -16,9 +16,9 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/05/30 12:46:19 rh Exp $
  
  #ifdef HAVE_HURH_H
  #include <hurd.h>
-@@ -570,6 +575,46 @@
- #endif /*OSsunos*/
- 
+@@ -607,6 +612,46 @@
+ }
+ #endif /*FreeBSD*/
  
 +#if defined(BSD)
 +/*
@@ -63,24 +63,21 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/05/30 12:46:19 rh Exp $
  static void
  check(int pid)
  {
-@@ -604,7 +649,7 @@
+@@ -641,7 +686,7 @@
  
  /* WTA: this  needs to be an autoconf check for /proc/pid existance.
   */
--#if defined(OSLinux) || defined (OSsunos)
-+#if defined(OSLinux) || defined (OSsunos) || defined(OSBSD)
+-#if defined(OSLinux) || defined (SunOS) || defined(FreeBSD)
++#if defined(OSLinux) || defined (SunOS) || defined(OSBSD)
  static void
  do_procinit(void)
  {
-@@ -822,7 +867,11 @@
+@@ -859,7 +904,7 @@
  		close(fd);
  		chdir("/");
  		umask(022); /* set a default for dumb programs */
-+#ifdef OSBSD
-+		setpgid(0, getpid());	/* set the process group */
-+#else
+-#ifndef FreeBSD
++#ifndef OSBSD
  		setpgrp();  /* set the process group */
-+#endif
- 		fd=open("/dev/null", O_RDWR); /* stdin */
- 		dup(fd); /* stdout */
- 		dup(fd); /* stderr */
+ #else
+ 		setpgrp(0, runas_gid);  /* set the process group */
