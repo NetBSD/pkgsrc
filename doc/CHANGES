@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5241 2004/03/12 20:08:41 wiz Exp $
+$NetBSD: CHANGES,v 1.5242 2004/03/12 21:36:09 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1449,3 +1449,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated paragui to 1.0.4nb4 [wiz 2004-03-12]
 	Updated ispell-german to 20030222 [recht 2004-03-12]
 	Updated asc to 1.14.0.0 [wiz 2004-03-12]
+	Updated db4 to 4.1.25nb1 [jlam 2004-03-12]
