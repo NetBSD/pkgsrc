@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2004/03/08 19:40:40 jmmv Exp $
+# $NetBSD: Makefile,v 1.38 2004/04/14 16:15:24 jmmv Exp $
 
 DISTNAME=	Guppi-0.40.3
 PKGNAME=	${DISTNAME:S/G/g/}
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/guppi/
 COMMENT=	Plot program with integrated statistics capabilities
-
-DEPENDS+=		xdg-x11-dirs>=1.1:../../misc/xdg-x11-dirs
 
 .if exists(/usr/include/wctype.h)
 #
@@ -28,6 +26,7 @@ PLIST_SUBST+=		GNUMERIC="@comment "
 .endif
 
 USE_BUILDLINK2=		YES
+USE_DIRS+=		xdg-x11-1.1
 USE_PKGLOCALEDIR=	YES
 USE_X11BASE=		YES
 USE_GNU_TOOLS+=		make
