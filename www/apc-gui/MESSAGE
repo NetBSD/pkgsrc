@@ -1,5 +1,5 @@
 ==========================================================================
-$NetBSD: MESSAGE,v 1.1 2001/11/01 02:16:15 zuntum Exp $
+$NetBSD: MESSAGE,v 1.2 2001/11/26 07:34:07 jlam Exp $
 
 You will need to make APC GUI accessible through your HTTP server.
 If you are running Apache and ap-php, then you may either symlink
@@ -8,7 +8,7 @@ If you are running Apache and ap-php, then you may either symlink
 
 into DocumentRoot, or add the following line to httpd.conf:
 
-	Include ${APACHE_SYSCONFDIR}/apc_gui.conf
+	Include ${PKG_SYSCONFDIR}/apc_gui.conf
 
 to make the APC web interface accessible through:
 	
