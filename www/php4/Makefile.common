@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.20 2001/12/03 08:31:05 jlam Exp $
+# $NetBSD: Makefile.common,v 1.21 2001/12/31 23:54:24 jlam Exp $
 
 DISTNAME=		php-${PHP_DIST_VERS}
 CATEGORIES+=		www php4
@@ -14,7 +14,7 @@ HOMEPAGE=		http://www.php.net/
 # PHP_DIST_VERS		version number on the php distfile
 # PHP_BASE_VERS		pkgsrc-mangled version number (convert pl -> .)
 #
-PHP_DIST_VERS=		4.0.6
+PHP_DIST_VERS=		4.1.0
 PHP_BASE_VERS=		${PHP_DIST_VERS}
 
 # Location of installed PHP4 loadable modules under ${PREFIX}.
@@ -22,7 +22,7 @@ PHP_BASE_VERS=		${PHP_DIST_VERS}
 # The number for the last part of the path represents a specific version
 # of the Zend API.
 #
-PHP_EXTENSION_DIR=	lib/php/20001222
+PHP_EXTENSION_DIR=	lib/php/20010901
 PLIST_SUBST+=		PHP_EXTENSION_DIR=${PHP_EXTENSION_DIR}
 
 .include "../../mk/bsd.prefs.mk"

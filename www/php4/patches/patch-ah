@@ -1,22 +1,22 @@
-$NetBSD: patch-ah,v 1.3 2001/10/16 04:54:24 jlam Exp $
+$NetBSD: patch-ah,v 1.4 2001/12/31 23:54:26 jlam Exp $
 
---- php.ini-optimized.orig	Thu May 31 23:20:49 2001
-+++ php.ini-optimized
-@@ -231,7 +231,7 @@
- include_path	=                   ; UNIX: "/path1:/path2"  Windows: "\path1;\path2"
- doc_root		=					; the root of the php pages, used only if nonempty
- user_dir		=					; the directory under which php opens the script using /~username, used only if nonempty
--extension_dir	=	./				; directory in which the loadable extensions (modules) reside
-+;extension_dir	=	./				; directory in which the loadable extensions (modules) reside
- enable_dl		= On				; Whether or not to enable the dl() function.
- 									; The dl() function does NOT properly work in multithreaded
- 									; servers, such as IIS or Zeus, and is automatically disabled
-@@ -242,7 +242,7 @@
- ; File Uploads ;
- ;;;;;;;;;;;;;;;;
- file_uploads	= On				; Whether to allow HTTP file uploads
--;upload_tmp_dir	=	                ; temporary directory for HTTP uploaded files (will use system default if not specified)
-+upload_tmp_dir	= /tmp	                ; temporary directory for HTTP uploaded files (will use system default if not specified)
- upload_max_filesize = 2M		    ; Maximum allowed size for uploaded files
+--- php.ini-recommended.orig	Fri Aug 17 12:54:16 2001
++++ php.ini-recommended
+@@ -368,7 +368,7 @@
+ user_dir =
  
+ ; Directory in which the loadable extensions (modules) reside.
+-extension_dir = ./
++;extension_dir = ./
  
+ ; Whether or not to enable the dl() function.  The dl() function does NOT work
+ ; properly in multithreaded servers, such as IIS or Zeus, and is automatically
+@@ -385,7 +385,7 @@
+ 
+ ; Temporary directory for HTTP uploaded files (will use system default if not
+ ; specified).
+-;upload_tmp_dir =
++upload_tmp_dir = /tmp
+ 
+ ; Maximum allowed size for uploaded files.
+ upload_max_filesize = 2M
