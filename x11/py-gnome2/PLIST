@@ -1,0 +1,73 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/09 13:06:20 recht Exp $
+lib/pkgconfig/gnome-python-2.0.pc
+${PYSITELIB}/gtk-2.0/bonobo/__init__.py
+${PYSITELIB}/gtk-2.0/bonobo/__init__.pyc
+${PYSITELIB}/gtk-2.0/bonobo/__init__.pyo
+${PYSITELIB}/gtk-2.0/bonobo/_bonobo.a
+${PYSITELIB}/gtk-2.0/bonobo/_bonobo.la
+${PYSITELIB}/gtk-2.0/bonobo/_bonobo.so
+${PYSITELIB}/gtk-2.0/bonobo/activation.a
+${PYSITELIB}/gtk-2.0/bonobo/activation.la
+${PYSITELIB}/gtk-2.0/bonobo/activation.so
+${PYSITELIB}/gtk-2.0/bonobo/ui.a
+${PYSITELIB}/gtk-2.0/bonobo/ui.la
+${PYSITELIB}/gtk-2.0/bonobo/ui.so
+${PYSITELIB}/gtk-2.0/gconf.a
+${PYSITELIB}/gtk-2.0/gconf.la
+${PYSITELIB}/gtk-2.0/gconf.so
+${PYSITELIB}/gtk-2.0/gnome/__init__.py
+${PYSITELIB}/gtk-2.0/gnome/__init__.pyc
+${PYSITELIB}/gtk-2.0/gnome/__init__.pyo
+${PYSITELIB}/gtk-2.0/gnome/_gnome.a
+${PYSITELIB}/gtk-2.0/gnome/_gnome.la
+${PYSITELIB}/gtk-2.0/gnome/_gnome.so
+${PYSITELIB}/gtk-2.0/gnome/applet.a
+${PYSITELIB}/gtk-2.0/gnome/applet.la
+${PYSITELIB}/gtk-2.0/gnome/applet.so
+${PYSITELIB}/gtk-2.0/gnome/canvas.a
+${PYSITELIB}/gtk-2.0/gnome/canvas.la
+${PYSITELIB}/gtk-2.0/gnome/canvas.so
+${PYSITELIB}/gtk-2.0/gnome/nautilus.a
+${PYSITELIB}/gtk-2.0/gnome/nautilus.la
+${PYSITELIB}/gtk-2.0/gnome/nautilus.so
+${PYSITELIB}/gtk-2.0/gnome/ui.a
+${PYSITELIB}/gtk-2.0/gnome/ui.la
+${PYSITELIB}/gtk-2.0/gnome/ui.so
+${PYSITELIB}/gtk-2.0/gnome/vfs.a
+${PYSITELIB}/gtk-2.0/gnome/vfs.la
+${PYSITELIB}/gtk-2.0/gnome/vfs.so
+${PYSITELIB}/gtk-2.0/gnome/zvt.a
+${PYSITELIB}/gtk-2.0/gnome/zvt.la
+${PYSITELIB}/gtk-2.0/gnome/zvt.so
+${PYSITELIB}/gtk-2.0/gnomeprint/__init__.py
+${PYSITELIB}/gtk-2.0/gnomeprint/__init__.pyc
+${PYSITELIB}/gtk-2.0/gnomeprint/__init__.pyo
+${PYSITELIB}/gtk-2.0/gnomeprint/_print.a
+${PYSITELIB}/gtk-2.0/gnomeprint/_print.la
+${PYSITELIB}/gtk-2.0/gnomeprint/_print.so
+${PYSITELIB}/gtk-2.0/gnomeprint/ui.a
+${PYSITELIB}/gtk-2.0/gnomeprint/ui.la
+${PYSITELIB}/gtk-2.0/gnomeprint/ui.so
+${PYSITELIB}/gtk-2.0/gtkhtml2.a
+${PYSITELIB}/gtk-2.0/gtkhtml2.la
+${PYSITELIB}/gtk-2.0/gtkhtml2.so
+share/pygtk/2.0/defs/applet.defs
+share/pygtk/2.0/defs/art.defs
+share/pygtk/2.0/defs/bonobo-types.defs
+share/pygtk/2.0/defs/bonobo.defs
+share/pygtk/2.0/defs/bonoboui-types.defs
+share/pygtk/2.0/defs/bonoboui.defs
+share/pygtk/2.0/defs/canvas.defs
+share/pygtk/2.0/defs/gconf.defs
+share/pygtk/2.0/defs/gnome.defs
+share/pygtk/2.0/defs/gtkhtml2.defs
+share/pygtk/2.0/defs/nautilus.defs
+share/pygtk/2.0/defs/print.defs
+share/pygtk/2.0/defs/printui.defs
+share/pygtk/2.0/defs/ui.defs
+share/pygtk/2.0/defs/zvt.defs
+@comment in py-gtk2: @dirrm share/pygtk/2.0/defs
+@dirrm ${PYSITELIB}/gtk-2.0/gnomeprint
+@dirrm ${PYSITELIB}/gtk-2.0/gnome
+@dirrm ${PYSITELIB}/gtk-2.0/bonobo
+@comment in py-gtk2: @dirrm ${PYSITELIB}/gtk-2.0
