@@ -1,20 +1,17 @@
-$NetBSD: patch-ac,v 1.2 2003/05/01 21:32:46 jmmv Exp $
+$NetBSD: patch-ac,v 1.3 2004/01/22 10:08:19 agc Exp $
 
 --- Makefile	2000/02/07 15:16:12	1.1
 +++ Makefile	2000/02/07 15:17:47
-@@ -21,9 +21,9 @@
+@@ -20,7 +20,7 @@
  #
  #
- # Generic compiler
+ # Generic compiler (usually linked to gcc on most platforms)
 -CC = cc
-+# CC = cc
- # GNU..
--#CC = gcc 
-+CC = gcc 
++#CC = cc
  
- # Normal systems flags
- CFLAGS = -O -Wall
-@@ -35,8 +35,8 @@
+ # GNU..
+ #CC = gcc 
+@@ -37,8 +37,8 @@
  #CFLAGS = -pg -O -Wall -DNODAEMON
  #LIBS = /usr/lib/libefence.a
  
@@ -25,12 +22,12 @@ $NetBSD: patch-ac,v 1.2 2003/05/01 21:32:46 jmmv Exp $
  
  all:
  		@echo "Usage: make <systype>"
-@@ -67,21 +67,17 @@
+@@ -69,21 +69,17 @@
  install:	
  		@echo "Creating psionic directory $(INSTALLDIR)"
  		@if [ ! -d $(INSTALLDIR) ]; then /bin/mkdir $(INSTALLDIR); fi
 -		@echo "Setting directory permissions"
--		chmod 700 $(INSTALLDIR)
+-		@if [ "$(INSTALLDIR)" = "/usr/local/psionic" ]; then /bin/chmod 700 $(INSTALLDIR) ; fi
  		@echo "Creating portsentry directory $(INSTALLDIR)$(CHILDDIR)"
  		@if [ ! -d $(INSTALLDIR)$(CHILDDIR) ]; then /bin/mkdir\
  			$(INSTALLDIR)$(CHILDDIR); fi
