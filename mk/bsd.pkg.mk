@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.335 1999/09/08 14:58:34 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.336 1999/09/08 22:01:19 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -1581,7 +1581,9 @@ pkg-su-deinstall: uptodate-pkgtools
 
 .if (${DEINSTALLDEPENDS} != "NO")
 .if (${DEINSTALLDEPENDS} != "ALL")
-root-install-flags+=	-R
+# used for removing stuff in bulk builds
+root-install-flags+=	-r -R
+# used for "update" target
 .else
 root-install-flags+=	-r
 .endif
