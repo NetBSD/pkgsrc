@@ -1,3 +1,5 @@
+$NetBSD: patch-ab,v 1.1 2001/02/24 16:56:56 sakamoto Exp $
+
 --- Makefile.in.orig	Fri Oct  6 16:07:38 2000
 +++ Makefile.in	Mon Oct  9 08:21:36 2000
 @@ -89,7 +89,7 @@

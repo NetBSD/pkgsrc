@@ -1,56 +1,39 @@
-# New ports collection makefile for:	fox
-# Date created:		23 Feb 2000
-# Whom:			Will Andrews <andrews@technologist.com>
-#
-# $FreeBSD: ports/x11-toolkits/fox/Makefile,v 1.15 2001/02/24 06:37:04 knu Exp $
-#
+# $NetBSD: Makefile,v 1.2 2001/02/24 16:56:54 sakamoto Exp $
+# FreeBSD Id: ports/x11-toolkits/fox/Makefile,v 1.14 2001/02/23 19:00:05 knu Exp
 
-PORTNAME=	fox
-PORTVERSION=	0.99.157
-CATEGORIES=	x11-toolkits
+DISTNAME=	fox-0.99.157
+CATEGORIES=	x11
 MASTER_SITES=	ftp://ftp.cfdrc.com/pub/FOX/ \
 		ftp://SunSITE.Informatik.RWTH-Aachen.DE/pub/Linux/fox/
 
-MAINTAINER?=	knu@FreeBSD.org
+MAINTAINER=	sakamoto@netbsd.org
+HOMEPAGE=	http://www.cfdrc.com/FOX/fox.html
+COMMENT=	Fast and extensive C++ GUI toolkit
 
-LIB_DEPENDS=	jpeg.9:${PORTSDIR}/graphics/jpeg \
-		png.4:${PORTSDIR}/graphics/png
+DEPENDS=	jpeg-*:../../graphics/jpeg \
+		png-*:../../graphics/png
 
-.if defined(WITH_XUNICODE)
-PKGNAMESUFFIX=	-xunicode
+.if !defined(USE_XUNICODE) || ${USE_XUNICODE} == "YES"
+
+MASTER_SITES+=	http://www.ab.wakwak.com/~tino/jatk/
+DISTFILES=	${DISTNAME}${EXTRACT_SUFX} xunicode-0.3.1${EXTRACT_SUFX}
 
 PATCH_SITES=	http://www.ab.wakwak.com/~tino/jatk/fox/
-PATCHFILES=	${PORTNAME}${PKGNAMESUFFIX}-${PORTVERSION}.diff
-PATCH_DIST_STRIP=	-p1
+PATCHFILES=	${DISTNAME:C/-/-xunicode-/}.diff
+PATCH_DIST_STRIP=-p1
 
-#EXTRA_PATCHES=	${PATCHDIR}/xunicode.patch-*
+CPPFLAGS+=	-I..
+X_CFLAGS=	-DUSE_XUNICODE
+CONFIGURE_ENV+=	CPPFLAGS="${CPPFLAGS}" X_CFLAGS="${X_CFLAGS}"
 
-BUILD_DEPENDS=	${X11BASE}/lib/libxunicode.a:${PORTSDIR}/converters/xunicode
-
-CONFIGURE_ENV=	X_CFLAGS=-DUSE_XUNICODE
 .endif
 
-USE_MESA=	yes
-INSTALLS_SHLIB=	yes
-CONFIGURE_ARGS+=--with-opengl=mesa --with-x
-.if defined(NO_SHM)
-CONFIGURE_ARGS+=--with-shm=no
-.else
-CONFIGURE_ARGS+=--with-shm=yes
-.endif
-.if defined(DEBUG)
-CONFIGURE_ARGS+=--enable-debug
-.else
-CONFIGURE_ARGS+=--enable-release
-.endif
-.if defined(WANT_PROFILE)
-CONFIGURE_ARGS+=--with-profiling=gprof
-.endif
-USE_LIBTOOL=	yes
-SHLIB_MAJ=	1
-SHLIB_MIN=	0
-MAKE_ENV+=	LT_CURRENT="${SHLIB_MAJ}" LT_REVISION="${SHLIB_MIN}"
-PLIST_SUB+=	LIBVER="${SHLIB_MAJ}"
-MAN1=		reswrap.1
+USE_X11BASE=	# defined
+USE_MESA=	# defined
+USE_LIBTOOL=	# defined
+LTCONFIG_OVERRIDE=${WRKSRC}/ltconfig
 
-.include <bsd.port.mk>
+GNU_CONFIGURE=	# defined
+CONFIGURE_ARGS+=--with-opengl=mesa --with-x --with-shm=yes --enable-release
+
+.include "../../mk/bsd.pkg.mk"
