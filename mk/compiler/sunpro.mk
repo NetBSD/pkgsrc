@@ -1,11 +1,11 @@
-# $NetBSD: sunpro.mk,v 1.1 2004/02/01 00:31:00 jlam Exp $
+# $NetBSD: sunpro.mk,v 1.2 2004/02/01 00:57:26 jlam Exp $
 
 .if !defined(COMPILER_SUNPRO_MK)
 COMPILER_SUNPRO_MK=	defined
 
-.include "../../mk/bsd.prefs.mk"
-
 SUNWSPROBASE?=	/opt/SUNWspro
+PATH:=		${SUNWSPROBASE}/bin:${PATH}
+
 CC=	${SUNWSPROBASE}/bin/cc
 CPP=	${SUNWSPROBASE}/bin/cc -E
 CXX=	${SUNWSPROBASE}/bin/CC
