@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/03/09 06:18:23 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/06/27 09:03:16 seb Exp $
 bin/libgeda-config
 include/libgeda/colors.h
 include/libgeda/defines.h
@@ -8,9 +8,7 @@ include/libgeda/libgeda.h
 include/libgeda/o_types.h
 include/libgeda/prototype.h
 include/libgeda/struct.h
-@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/libgedadoc.info
 info/libgedadoc.info
-@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/libgedadoc.info
 info/libgedadoc.info-1
 info/libgedadoc.info-10
 info/libgedadoc.info-11
