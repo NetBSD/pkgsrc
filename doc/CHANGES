@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1654 2003/03/16 01:49:47 kei Exp $
+$NetBSD: CHANGES,v 1.1655 2003/03/16 01:59:02 mrg Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1123,6 +1123,7 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated citrix_ica to 6.30.1052 [wiz 2003-03-14]
 	Updated libdvdcss to 1.2.6 [wiz 2003-03-14]
 	Updated cvsync to 0.14.5 [gehenna 2003-03-14]
+	Updated ircII to 20030314 [mrg 2003-03-14]
 	Updated pkgdepgraph to 2.2 [atatat 2003-03-14]
 	Updated lopster to 1.2.0 [hubertf 2003-03-15]
 	Updated teTeX2 to 2.0.2 [kei 2003-03-15]
@@ -1152,3 +1153,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added ja-naga10-1.1 [kei 2003-03-15]
 	Added ja-shinonome-0.9.9 [kei 2003-03-15]
 	Updated jisx0208fonts to 20301316 [kei 2003-03-16]
+	Updated ircII to 20030315 [mrg 2003-03-16]
