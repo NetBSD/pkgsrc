@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2003/07/17 22:52:52 grant Exp $
+# $NetBSD: Makefile.common,v 1.5 2004/01/24 15:00:22 grant Exp $
 #
 # This Makefile fragment should be included _below_ and SASL_PLUGIN
 # definition and _above_ any CONFIGURE_ARGS definitions.
@@ -21,7 +21,7 @@ DEPENDS+=		cyrus-sasl>=1.5.27:../../security/cyrus-sasl
 
 USE_BUILDLINK2=		YES
 GNU_CONFIGURE=		YES
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/config/ltconfig
 
