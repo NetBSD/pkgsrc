@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:23:48 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/05 22:39:02 skrll Exp $
 bin/btreeop
 bin/gctags
 bin/global
@@ -12,5 +12,5 @@ man/man1/gctags.1
 man/man1/global.1
 man/man1/gtags.1
 man/man1/htags.1
-@comment @exec /bin/mkdir -p /usr/pkg/libdata/lint
+@comment @exec ${MKDIR} -p /usr/pkg/libdata/lint
 @comment @dirrm libdata/lint
