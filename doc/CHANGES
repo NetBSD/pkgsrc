@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4530 2004/01/21 05:39:44 atatat Exp $
+$NetBSD: CHANGES,v 1.4531 2004/01/21 06:56:59 martti Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -373,3 +373,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added fastfs-19940614 [grant 2004-01-21]
 	Added gpg2dot-1.0 [atatat 2004-01-21]
 	Updated gpg2dot-1.2 [lukem 2004-01-21]
+	Updated postfix to 2.0.17 [martti 2004-01-21]
