@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/06/03 13:18:05 shell Exp $
+# $NetBSD: Makefile,v 1.3 2002/09/25 15:25:37 seb Exp $
 
 DISTNAME=	XML-NamespaceSupport-1.07
 PKGNAME=	p5-${DISTNAME}
@@ -8,11 +8,8 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=XML/}
 MAINTAINER=	packages@netbsd.org
 COMMENT=	Perl module to the SAX2 NamespaceSupport class
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/XML/NamespaceSupport/.packlist
 
-do-configure:
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
-
-.include "../../lang/perl5/buildlink.mk"
+.include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
