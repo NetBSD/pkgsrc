@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 1999/07/07 23:11:18 tron Exp $
+# $NetBSD: Makefile,v 1.16 2000/01/02 03:38:32 wiz Exp $
 #
 
 DISTNAME=	xanim2801
@@ -8,11 +8,11 @@ MASTER_SITES=	ftp://xanim.va.pubnix.com/\
 		ftp://xanim.va.pubnix.com/modules/ \
 		http://xanim.resnet.gatech.edu/files/ \
 		ftp://ftp.ut.ee/pub/graphics/xanim/ \
-		ftp://ftp.ut.ee/pub/graphics/xanim/modules \
+		ftp://ftp.ut.ee/pub/graphics/xanim/modules/ \
 		ftp://ftp.ba-stuttgart.de/Mirrors/xanim/ \
 		ftp://ftp.ba-stuttgart.de/Mirrors/xanim/modules/ \
 		ftp://ftp.lysator.liu.se/mirror/X11/apps/xanim/ \
-		ftp://ftp.lysator.liu.se/mirror/X11/apps/xanim/modules \
+		ftp://ftp.lysator.liu.se/mirror/X11/apps/xanim/modules/ \
 		ftp://ftp.uni-trier.de/pub/unix/X11/application/xanim/ \
 		ftp://ftp.uni-trier.de/pub/unix/X11/application/xanim/modules/
 DISTFILES=	${EXTRACT_ONLY} ${EXTRA_FILES}
