@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2000/05/31 21:39:09 jwise Exp $
+# $NetBSD: Makefile,v 1.43 2000/06/07 21:51:58 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.13 1997/10/13 11:11:32 itojun Exp
 #
 
@@ -11,6 +11,7 @@
     SUBDIR += eperl
     SUBDIR += fop
     SUBDIR += glimpse
+    SUBDIR += html
     SUBDIR += html2text
     SUBDIR += iso12083
     SUBDIR += iso8879
