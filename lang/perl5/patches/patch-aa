@@ -1,5 +1,14 @@
---- Configure.ORIG	Tue May 13 19:20:34 1997
-+++ Configure	Fri May 23 11:33:40 1997
+--- Configure.orig	Wed Jun 11 00:28:03 1997
++++ Configure	Thu Oct  2 10:07:10 1997
+@@ -65,7 +65,7 @@
+ fi
+ 
+ : Proper PATH setting
+-paths='/bin /usr/bin /usr/local/bin /usr/ucb /usr/local /usr/lbin'
++paths='/bin /usr/bin /usr/pkg/bin /usr/local/bin /usr/ucb /usr/local /usr/lbin'
+ paths="$paths /opt/bin /opt/local/bin /opt/local /opt/lbin"
+ paths="$paths /usr/5bin /etc /usr/gnu/bin /usr/new /usr/new/bin /usr/nbin"
+ paths="$paths /opt/gnu/bin /opt/new /opt/new/bin /opt/nbin"
 @@ -91,11 +91,11 @@
  *)	CDPATH='' ;;
  esac
@@ -17,3 +26,35 @@
  
  : Test and see if we are running under ksh, either blatantly or in disguise.
  if (PATH=.; alias -x) >/dev/null 2>&1; then
+@@ -725,7 +725,7 @@
+ archobjs=''
+ : Possible local include directories to search.
+ : Set locincpth to "" in a hint file to defeat local include searches.
+-locincpth="/usr/local/include /opt/local/include /usr/gnu/include"
++locincpth="/usr/pkg/include /usr/local/include /opt/local/include /usr/gnu/include"
+ locincpth="$locincpth /opt/gnu/include /usr/GNU/include /opt/GNU/include"
+ :
+ : no include file wanted by default
+@@ -735,19 +735,19 @@
+ xlibpth='/usr/lib/386 /lib/386'
+ 
+ : Possible local library directories to search.
+-loclibpth="/usr/local/lib /opt/local/lib /usr/gnu/lib"
++loclibpth="/usr/pkg/lib /usr/local/lib /opt/local/lib /usr/gnu/lib"
+ loclibpth="$loclibpth /opt/gnu/lib /usr/GNU/lib /opt/GNU/lib"
+ 
+ : general looking path for locating libraries
+ glibpth="/shlib /usr/shlib /lib/pa1.1 /usr/lib/large"
+ glibpth="$glibpth /lib /usr/lib $xlibpth"
+ glibpth="$glibpth /lib/large /usr/lib/small /lib/small"
+-glibpth="$glibpth /usr/ccs/lib /usr/ucblib /usr/local/lib"
++glibpth="$glibpth /usr/ccs/lib /usr/ucblib /usr/pkg/lib /usr/local/lib"
+ 
+ : Private path used by Configure to find libraries.  Its value
+ : is prepended to libpth. This variable takes care of special
+ : machines, like the mips.  Usually, it should be empty.
+-plibpth=''
++plibpth='/usr/pkg/lib'
+ 
+ : full support for void wanted by default
+ defvoidused=15
