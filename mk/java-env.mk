@@ -1,4 +1,4 @@
-# $NetBSD: java-env.mk,v 1.4 2005/01/30 23:18:38 jmmv Exp $
+# $NetBSD: java-env.mk,v 1.5 2005/03/19 16:46:45 jmmv Exp $
 #
 # This Makefile fragment handles Java wrappers and is meant to be included
 # by packages that provide a Java build-time and/or run-time environment.
@@ -37,16 +37,15 @@ JAVA_WRAPPERS?=		# empty
 
 .if !empty(JAVA_WRAPPERS)
 INSTALLATION_DIRS+=	bin
-.endif
 
 ALTERNATIVES_SRC=	${WRKDIR}/.ALTERNATIVES
 ${WRKDIR}/.ALTERNATIVES:
-.for w in ${JAVA_WRAPPERS}
+.  for w in ${JAVA_WRAPPERS}
 	@${ECHO} 'bin/${w} ${PREFIX}/bin/${JAVA_NAME}-${w}' \
 		>>${WRKDIR}/.ALTERNATIVES
-.endfor
+.  endfor
 
-.for w in ${JAVA_WRAPPERS}
+.  for w in ${JAVA_WRAPPERS}
 
 JAVA_WRAPPER_BIN.${w}?=	${JAVA_HOME}/bin/${w}
 
@@ -55,29 +54,30 @@ post-build:		${WRKDIR}/${w}
 .PHONY:			install-java-wrapper-${w}
 post-install:		install-java-wrapper-${w}
 
-.  if !target(${WRKDIR}/${w})
+.    if !target(${WRKDIR}/${w})
 ${WRKDIR}/${w}:
 	@${ECHO} 'Generating ${w} wrapper...'
 	@${ECHO} '#! ${SH}' >${WRKDIR}/${w}
 	@${ECHO} 'PATH=${JAVA_HOME}/bin:$${PATH}; export PATH' >>${WRKDIR}/${w}
 	@${ECHO} 'JAVA_HOME=${JAVA_HOME}; export JAVA_HOME' >>${WRKDIR}/${w}
 	@${ECHO} 'JVM_HOME=${JAVA_HOME}; export JVM_HOME' >>${WRKDIR}/${w}
-.    if !empty(JAVA_CLASSPATH)
+.      if !empty(JAVA_CLASSPATH)
 	@${ECHO} 'CLASSPATH=${JAVA_CLASSPATH}:$${CLASSPATH}; export CLASSPATH' \
 		>>${WRKDIR}/${w}
-.    endif
-.    for f in ${JAVA_UNLIMIT}
+.      endif
+.      for f in ${JAVA_UNLIMIT}
 	@${ECHO} '${ULIMIT_CMD_${f}}' >>${WRKDIR}/${w}
-.    endfor
-.    undef f
+.      endfor
+.      undef f
 	@${ECHO} '${JAVA_WRAPPER_BIN.${w}} "$$@"' >>${WRKDIR}/${w}
-.  endif
+.    endif
 
 install-java-wrapper-${w}:
 	${INSTALL_SCRIPT} ${WRKDIR}/${w} ${PREFIX}/bin/${JAVA_NAME}-${w}
 
-.endfor
-.undef w
+.  endfor
+.  undef w
+.endif
 
 # Handle the ${PREFIX}/java shared directory automatically.
 USE_PKGINSTALL=		YES
