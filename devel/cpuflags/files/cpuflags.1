@@ -1,0 +1,38 @@
+.\"	$NetBSD: cpuflags.1,v 1.1.1.1 2001/06/07 09:59:28 abs Exp $
+
+.Dd May 31, 2001
+.Dt CPUFLAGS 1
+.Os 
+.Sh NAME
+.Nm cpuflags
+.Nd determine compiler flags to best target current cpu
+.Sh SYNOPSIS
+.Nm
+.Sh DESCRIPTION
+.Nm
+queries the current cpu type and gcc version, then outputs appropriate
+compiler options to best target code for that cpu. If no options exist
+to target the current cpu then nothing is output.
+.Pp
+In the event of the cpu not being recognised, a warning is sent to stderr.
+.Pp
+.Sh EXAMPLES
+.Nm
+can be used to set default flags for building entries from pkgsrc and
+recompiling the NetBSD kernel or userland by adding the following to
+.Pa /etc/mk.conf
+.Bd -literal -offset indent
+ .if ! defined(CPU_FLAGS) && exists(/usr/pkg/bin/cpuflags)
+ CPU_FLAGS!=/usr/pkg/bin/cpuflags
+ MAKE_ENV+=CPU_FLAGS=${CPU_FLAGS}
+ CFLAGS+=${CPU_FLAGS}
+ CXXFLAGS+=${CPU_FLAGS}
+ .endif
+.Ed
+.Sh BUGS
+.Nm
+does not know about many cpu types yet - updates welcomed to <abs@netbsd.org>
+.Pp
+Currently
+.Nm
+is also gcc specific.
