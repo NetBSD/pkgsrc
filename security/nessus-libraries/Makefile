@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2004/10/03 00:18:10 tv Exp $
+# $NetBSD: Makefile,v 1.19 2004/10/04 17:25:51 adrianp Exp $
 
 DISTNAME=	nessus-libraries-${VERS}
 PKGREVISION=	1
@@ -13,7 +13,7 @@ USE_LIBTOOL=	yes
 BUILD_DEPENDS+=	bison-[0-9]*:../../devel/bison
 
 GNU_CONFIGURE=		yes
-CONFIGURE_ENV+=		CPP=${CPP}
+CONFIGURE_ENV+=		CPP="${CPP}"
 CONFIGURE_ARGS+=	--enable-zlib=${BUILDLINK_PREFIX.zlib}/lib \
 			--localstatedir=${VARBASE}
 
