@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 20:44:16 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/11/30 13:36:14 salo Exp $
 bin/lrz
 bin/lrx
 bin/lrb
@@ -7,4 +7,4 @@ bin/lsx
 bin/lsb
 man/man1/lrz.1
 man/man1/lsz.1
-share/locale/de/LC_MESSAGES/lrzsz.cat
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/lrzsz.mo
