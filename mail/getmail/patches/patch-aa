@@ -1,15 +1,18 @@
-$NetBSD: patch-aa,v 1.3 2004/08/01 08:29:56 schmonz Exp $
+$NetBSD: patch-aa,v 1.4 2004/08/06 16:02:50 schmonz Exp $
 
---- setup.py.orig	2004-07-18 18:47:24.000000000 -0400
+--- setup.py.orig	2004-08-04 12:41:16.000000000 -0400
 +++ setup.py
-@@ -37,8 +37,9 @@ for (pos, arg) in enumerate(args):
- 
- GETMAILDOCDIR = os.path.join(
+@@ -39,12 +39,11 @@ GETMAILDOCDIR = os.path.join(
      datadir or prefix,
-+    'share',
+     'share',
      'doc',
 -    'getmail-%s' % __version__
 +    'getmail'
  )
  
  GETMAILMANDIR = os.path.join(
+     datadir or prefix,
+-    'share',
+     'man',
+     'man1'
+ )
