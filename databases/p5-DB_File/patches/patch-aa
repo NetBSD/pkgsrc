@@ -1,8 +1,16 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/03/19 15:45:27 seb Exp $
+$NetBSD: patch-aa,v 1.2 2003/03/22 19:13:01 heinz Exp $
 
---- Makefile.PL.orig	2002-06-22 11:35:48.000000000 +0200
+--- Makefile.PL.orig	Sat Jun 22 11:35:48 2002
 +++ Makefile.PL
-@@ -14,7 +14,8 @@ my $DB_NAME ;
+@@ -7,14 +7,15 @@ use Config ;
+ die "DB_File needs Perl 5.004_05 or better. This is $]\n" 
+     if $] <= 5.00404; 
+ 
+-my $VER_INFO ;
++my $VER_INFO = "";
+ my $LIB_DIR ;
+ my $INC_DIR ;
+ my $DB_NAME ;
  my $LIBS ;
  my $COMPAT185 = "" ;
  
