@@ -1,4 +1,8 @@
-@comment $NetBSD: PLIST,v 1.8 2004/09/22 07:38:52 jlam Exp $
+@comment $NetBSD: PLIST,v 1.8.2.1 2005/03/10 13:22:37 salo Exp $
+bin/dmail
+bin/mailutil
+bin/mlock
+bin/tmail
 include/c-client/c-client.h
 include/c-client/env.h
 include/c-client/env_unix.h
@@ -25,6 +29,9 @@ lib/libc-client_pic.a
 libexec/imapd
 libexec/ipop2d
 libexec/ipop3d
+man/man1/dmail.1
+man/man1/mailutil.1
+man/man1/tmail.1
 man/man8/imapd.8
 man/man8/ipop2d.8
 man/man8/ipop3d.8
@@ -33,8 +40,8 @@ sbin/mtest
 sbin/rimapd
 share/doc/imap-uw/BUILD
 share/doc/imap-uw/CONFIG
-share/doc/imap-uw/FAQ.txt
 share/doc/imap-uw/FAQ.html
+share/doc/imap-uw/FAQ.txt
 share/doc/imap-uw/IPv6.txt
 share/doc/imap-uw/RELNOTES
 share/doc/imap-uw/SSLBUILD
