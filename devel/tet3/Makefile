@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/11/09 00:08:43 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2003/11/17 09:02:55 agc Exp $
 
 DISTNAME=	tet3.3h-unsup.src
 PKGNAME=	tet3-3.3h
@@ -31,6 +31,13 @@ post-install:
 	${INSTALL_PROGRAM_DIR} ${PREFIX}/tet3/lib
 	cd ${WRKSRC}/../lib && ${PAX} -rwpe . ${PREFIX}/tet3/lib
 
-.include "../../lang/perl5/buildlink2.mk"
 .include "../../mk/pthread.buildlink2.mk"
+
+PTHREAD_OPTS=	native	# only native threads make sense
+
+.if defined(PTHREAD_TYPE) && ${PTHREAD_TYPE} != "native"
+PKG_SKIP_REASON=	"Native threads are needed for this package"
+.endif
+
+.include "../../lang/perl5/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
