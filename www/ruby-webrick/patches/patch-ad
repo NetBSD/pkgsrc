@@ -1,0 +1,21 @@
+$NetBSD: patch-ad,v 1.1 2005/01/28 14:20:44 taca Exp $
+
+--- lib/webrick/httpauth/htpasswd.rb.orig	2003-07-23 04:20:45.000000000 +0900
++++ lib/webrick/httpauth/htpasswd.rb
+@@ -32,7 +32,15 @@ module WEBrick
+           open(@path){|io|
+             while line = io.gets
+               line.chomp!
+-              user, pass = line.split(":")
++              case line
++              when %r!\A[^:]+:[a-zA-Z0-9./]{13}\z!
++                user, pass = line.split(":")
++              when /:\$/, /:{SHA}/
++                raise NotImplementedError,
++                      'MD5, SHA1 .htpasswd file not supported'
++              else
++                raise StandardError, 'bad .htpasswd file'
++              end
+               @passwd[user] = pass
+             end
+           }
