@@ -1,9 +1,8 @@
-# $NetBSD: Makefile.common,v 1.7 2001/04/22 16:25:58 wiz Exp $
-VIM_VERSION=		5.7
+# $NetBSD: Makefile.common,v 1.8 2001/06/06 06:07:29 pooka Exp $
+VIM_VERSION=		5.8
 DISTNAME=		vim-${VIM_VERSION}
 CATEGORIES=		editors
 MASTER_SITES=		ftp://ftp.vim.org/pub/editors/vim/unix/ \
-			ftp://ftp.nuxi.com/pub/vim/unix/ \
 			ftp://ftp.fu-berlin.de/misc/editors/vim/unix/ \
 			ftp://ftp.twics.co.jp/pub/vim/unix/
 DISTFILES=		${DISTNAME}-src${EXTRACT_SUFX}
