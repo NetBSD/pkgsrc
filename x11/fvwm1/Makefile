@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 1999/07/27 21:34:30 tron Exp $
+# $NetBSD: Makefile,v 1.20 1999/11/01 16:09:37 tron Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/10/11 10:42:43 jkh Exp
 #
 
@@ -10,7 +10,7 @@ MASTER_SITES=	ftp://ftp.netbsd.org/pub/NetBSD/packages/distfiles/
 MAINTAINER=	cjs@netbsd.org
 HOMEPAGE=	http://www.hpc.uh.edu/fvwm/
 
-DEPENDS=	xpmroot-2.2:../../x11/xpmroot
+DEPENDS=	xpmroot-2.*:../../x11/xpmroot
 
 CONFLICTS=	fvwm-1.*
 
