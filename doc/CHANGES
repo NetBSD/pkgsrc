@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9100 2005/02/10 08:46:28 itojun Exp $
+$NetBSD: CHANGES,v 1.9101 2005/02/10 10:18:54 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -831,3 +831,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated openpam to 20050201 [jlam 2005-02-10]
 	Added courier-authlib-0.53 [jlam 2005-02-10]
 	Updated cue to 20050131 [itojun 2005-02-10]
+	Updated pkg_alternatives to 1.3 [jmmv 2005-02-10]
