@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 1999/07/02 08:34:37 jlam Exp $
+
+--- src/chrtrans/makefile.in.orig	Sat May  8 13:46:28 1999
++++ src/chrtrans/makefile.in	Fri Jul  2 03:59:44 1999
+@@ -94,7 +94,7 @@
+ tables: $(TABLES)
+ 
+ makeuctb$x: makeuctb.o
+-	$(CC) $(CC_OPTS) -o $@ makeuctb.o $(INTLLIB) $(LIBS)
++	$(CC) $(CC_OPTS) $(LDFLAGS) -o $@ makeuctb.o $(INTLLIB) $(LIBS)
+ 
+ makeuctb.o: $(srcdir)/UCkd.h $(srcdir)/makeuctb.c
+ 
