@@ -3,7 +3,7 @@
 # Date created:		30 Jul 1996
 # Whom:			searle@longacre.demon.co.uk
 #
-# $NetBSD: Makefile,v 1.5 1998/02/02 08:59:38 hubertf Exp $
+# $NetBSD: Makefile,v 1.6 1998/02/16 10:01:59 tron Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/10/30 05:15:19 jkh Exp
 #
 
@@ -12,6 +12,8 @@ CATEGORIES=	x11
 MASTER_SITES=	ftp://ftp.troll.no/qt/source/
 
 MAINTAINER=	searle@longacre.demon.co.uk
+
+USE_X11=	yes
 
 QTDIR=	${PREFIX}
 
