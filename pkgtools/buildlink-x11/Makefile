@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2001/08/19 16:22:25 tron Exp $
+# $NetBSD: Makefile,v 1.7 2001/08/22 17:45:57 jlam Exp $
 
-DISTNAME=	buildlink-x11-0.7
+DISTNAME=	buildlink-x11-0.8
 CATEGORIES=	pkgtools devel x11
 MASTER_SITES=	# empty
 DISTFILES=	# empty

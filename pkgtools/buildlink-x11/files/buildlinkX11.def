@@ -1,4 +1,4 @@
-/*	$NetBSD: buildlinkX11.def,v 1.2 2001/08/08 07:23:28 jlam Exp $	*/
+/*	$NetBSD: buildlinkX11.def,v 1.3 2001/08/22 17:45:57 jlam Exp $	*/
 
 #ifdef AfterVendorCF
 
@@ -9,8 +9,10 @@
  * Force the buildlink include and lib directories to the head of the
  * compiler search paths.  The include directory is added through the
  * C{,plusplus}DebugFlags, which are the first options given to the
- * compiler.  It is _required_ that BUILDLINK_DIR be defined in the
- * environment.
+ * compiler.  The following variables should be defined in the environment:
+ *
+ *	BUILDLINK_DIR		the location of 3rd-party software
+ *	BUILDLINK_X11_DIR	the location of the X11R6 hierarchy
  */
 
 #  ifndef BuildLinkCppFlags
