@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.1 2001/03/20 12:46:50 rh Exp $
+$NetBSD: patch-aa,v 1.2 2002/07/12 14:47:04 wiz Exp $
 
---- capi/Makefile.in.orig	Tue Mar 20 12:38:20 2001
+--- capi/Makefile.in.orig	Mon Jun 24 10:52:57 2002
 +++ capi/Makefile.in
-@@ -29,7 +29,7 @@
+@@ -31,7 +31,7 @@
  libdir = @libdir@
  infodir = @infodir@
  mandir = @mandir@
 -includedir = @includedir@
 +includedir = @includedir@/dante
  oldincludedir = /usr/include
- 
- DESTDIR =
+ pkgdatadir = $(datadir)/@PACKAGE@
+ pkglibdir = $(libdir)/@PACKAGE@
