@@ -1,0 +1,8 @@
+monotone is a free distributed version control system. it provides a simple,
+single-file transactional version store, with fully disconnected operation and
+an efficient peer-to-peer synchronization protocol. it understands
+history-sensitive merging, lightweight branches, integrated code review and
+3rd party testing. it uses cryptographic version naming and client-side RSA
+certificates. it has good internationalization support, has no external
+dependencies, runs on linux, solaris, OSX, and windows, and is licensed under
+the GNU GPL.

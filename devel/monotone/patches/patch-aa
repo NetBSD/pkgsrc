@@ -1,0 +1,40 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/08/15 14:38:38 drochner Exp $
+
+--- configure.orig	2004-08-14 14:48:02.000000000 +0200
++++ configure
+@@ -7964,7 +7964,7 @@ fi
+ 
+ # Now check for Boost libraries proper.
+ 
+-LIBS="-lboost_unit_test_framework $OLD_LIBS"
++LIBS="-lboost_unit_test_framework${BLIBSF} $OLD_LIBS"
+ echo "$as_me:$LINENO: checking libboost_unit_test_framework library" >&5
+ echo $ECHO_N "checking libboost_unit_test_framework library... $ECHO_C" >&6
+ cat >conftest.$ac_ext <<_ACEOF
+@@ -8019,7 +8019,7 @@ rm -f conftest.err conftest.$ac_objext \
+       conftest$ac_exeext conftest.$ac_ext
+ LIBS=$OLD_LIBS
+ 
+-LIBS="-lboost_filesystem $LIBS"
++LIBS="-lboost_filesystem${BLIBSF} $LIBS"
+ echo "$as_me:$LINENO: checking libboost_filesystem library" >&5
+ echo $ECHO_N "checking libboost_filesystem library... $ECHO_C" >&6
+ cat >conftest.$ac_ext <<_ACEOF
+@@ -8078,7 +8078,7 @@ fi
+ rm -f conftest.err conftest.$ac_objext \
+       conftest$ac_exeext conftest.$ac_ext
+ 
+-LIBS="-lboost_date_time $LIBS"
++LIBS="-lboost_date_time${BLIBSF} $LIBS"
+ echo "$as_me:$LINENO: checking libboost_date_time library" >&5
+ echo $ECHO_N "checking libboost_date_time library... $ECHO_C" >&6
+ cat >conftest.$ac_ext <<_ACEOF
+@@ -8138,7 +8138,7 @@ rm -f conftest.err conftest.$ac_objext \
+       conftest$ac_exeext conftest.$ac_ext
+ 
+ 
+-LIBS="-lboost_regex $LIBS"
++LIBS="-lboost_regex${BLIBSF} $LIBS"
+ echo "$as_me:$LINENO: checking libboost_regex library" >&5
+ echo $ECHO_N "checking libboost_regex library... $ECHO_C" >&6
+ cat >conftest.$ac_ext <<_ACEOF
