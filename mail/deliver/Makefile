@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/06/02 01:18:49 jschauma Exp $
+# $NetBSD: Makefile,v 1.3 2003/07/02 11:32:35 jmmv Exp $
 
 DISTNAME=	deliver-2.1.14
 CATEGORIES=	mail
@@ -19,11 +19,12 @@ DELIVER_SUID?=	NO
 # identify the "sys", "post", and "err" delivery files as owned by deliver.
 DELIVER_CONF_PREFIX?=	${PREFIX}/etc/deliver/
 
-post-patch:
+pre-configure:
 	cd ${WRKSRC};							\
-	for FILE in config.h deliver.8; do				\
+	for FILE in config.h deliver.8 conf/os-netbsd.h; do		\
 		${MV} $${FILE} $${FILE}.bak;				\
 		${SED} -e 's#@DELIVER_CONF_PREFIX@#${DELIVER_CONF_PREFIX}#g' \
+		       -e 's#@PREFIX@#${PREFIX}#g'			\
 		< $${FILE}.bak > $${FILE};				\
 	done;								\
 	${MV} deliver.8 deliver.1
