@@ -1,11 +1,9 @@
-$NetBSD: patch-an,v 1.1 2000/08/25 13:37:51 wiz Exp $
+$NetBSD: patch-an,v 1.2 2002/11/13 20:15:14 jschauma Exp $
 
-On ELF machines, don't try to add a '_' prefix to external funcs
-
---- Ma2Asm/FromC/mach.h	2000/08/25 10:17:32	1.1
-+++ Ma2Asm/FromC/mach.h	2000/08/25 10:18:26
+--- Ma2Asm/FromC/mach.h.orig	Wed Nov 13 13:46:19 2002
++++ Ma2Asm/FromC/mach.h	Wed Nov 13 13:47:00 2002
 @@ -12,7 +12,8 @@
- /*---------------------------------*/
+  *---------------------------------*/
  
  #if defined(M_sony_news) || defined(M_ultrix_dec) || defined(M_alpha_osf) ||\
 -    defined(M_ix86_linux) || defined(M_ix86_sco) || defined(M_ix86_bsd)
