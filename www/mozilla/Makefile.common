@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.27 2004/01/20 12:27:59 agc Exp $
+# $NetBSD: Makefile.common,v 1.28 2004/01/22 00:21:26 wiz Exp $
 
 MOZ_DIST_VER?=	${MOZ_VER}
 DISTNAME?=	mozilla-source-${MOZ_DIST_VER}
@@ -76,7 +76,7 @@ CONFIGURE_ARGS+=	--enable-calendar
 CONFIGURE_ARGS+=	--enable-mathml
 .endif
 
-.if exists(${X11BASE}/include/X11/extensions/Xinerama.h)
+.if exists(${X11BASE}/include/X11/extensions/Xinerama.h) && exists(${X11BASE}/lib/libXinerama.so)
 CONFIGURE_ARGS+=	--enable-xinerama
 .endif
 
