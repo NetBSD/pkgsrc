@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2000/01/16 18:37:05 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2000/06/26 16:44:20 dmcmahill Exp $
 # FreeBSD Id: Makefile,v 1.5 1998/11/29 12:43:12 asami Exp
 #
 
@@ -11,9 +11,11 @@ MASTER_SITES=		http://www.tigr.net/afterstep/as-apps/download/asapm/ \
 MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://www.tigr.net/afterstep/as-apps/download/asapm/
 
-DEPENDS=		xpm-*:../../graphics/xpm
+.if !exists(/usr/include/machine/apmvar.h")
+IGNORE+=		"APM is not available for ${MACHINE_PLATFORM}"
+.endif
 
-ONLY_FOR_PLATFORM=	*-*-i386 *-*-sparc	# needs APM support
+DEPENDS+=		xpm-*:../../graphics/xpm
 
 GNU_CONFIGURE=		yes
 USE_X11=		yes

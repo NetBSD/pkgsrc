@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/10/31 21:16:07 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 2000/06/26 16:44:22 dmcmahill Exp $
 #
 
 DISTNAME=	xbatt-1.3pr1
@@ -8,6 +8,10 @@ MASTER_SITES=	http://www2.clave.gr.jp/~eto/xbatt/
 
 MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://www2.clave.gr.jp/~eto/xbatt/	# Not really
+
+.if !exists(/usr/include/machine/apmvar.h")
+IGNORE+=	"APM is not available for ${MACHINE_PLATFORM}"                  
+.endif
 
 DEPENDS+=	xpm-3.4k:../../graphics/xpm
 
