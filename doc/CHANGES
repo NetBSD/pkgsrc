@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5545 2004/04/11 23:04:50 minskim Exp $
+$NetBSD: CHANGES,v 1.5546 2004/04/11 23:49:34 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1918,3 +1918,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated yamt to 0.5nb6 [xtraeme 2004-04-11]
 	Updated gpdf to 0.131nb1 [jmmv 2004-04-11]
 	Updated afio to 2.5 [minskim 2004-04-12]
+	Added ish-0.2 [minskim 2004-04-12]

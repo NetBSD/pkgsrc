@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.463 2004/04/09 12:36:07 grant Exp $
+# $NetBSD: Makefile,v 1.464 2004/04/11 23:49:34 minskim Exp $
 #
 
 COMMENT=	Networking tools
@@ -122,6 +122,7 @@ SUBDIR+=	ipv6calc
 SUBDIR+=	ipw
 SUBDIR+=	irrd
 SUBDIR+=	isic
+SUBDIR+=	ish
 SUBDIR+=	ispman
 SUBDIR+=	ja-samba
 SUBDIR+=	jftpgw
