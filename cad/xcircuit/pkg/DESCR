@@ -1,0 +1,8 @@
+The program xcircuit is a generic drawing program tailored especially
+for making publication-quality renderings of circuit diagrams (hence
+the name).  The output is pure PostScript, and the graphical interface
+attempts to maintain as much consistency as possible between the X11
+window rendering and the final printer output.
+
+xcircuit is mouse, menu, and keyboard-driven, with the emphasis on
+single-character keyboard macros.
