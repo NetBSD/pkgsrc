@@ -1,4 +1,4 @@
-/*	$NetBSD: sha1hl.c,v 1.1.1.1 2003/03/31 05:02:57 grant Exp $	*/
+/*	$NetBSD: sha1hl.c,v 1.2 2003/09/01 15:31:20 jlam Exp $	*/
 
 /* sha1hl.c
  * ----------------------------------------------------------------------------
@@ -11,16 +11,16 @@
 
 /* #include "namespace.h" */
 
-#ifdef HAVE_CONFIG_H
-#include <config.h>
+#if HAVE_CONFIG_H
+#include "nbconfig.h"
 #endif
 
 #include <nbtypes.h>
 
-#ifdef HAVE_FCNTL_H
+#if HAVE_FCNTL_H
 #include <fcntl.h>
 #endif
-#ifdef HAVE_SYS_FILE_H
+#if HAVE_SYS_FILE_H
 #include <sys/file.h>
 #endif
 #include <sys/uio.h>
@@ -30,12 +30,12 @@
 #include <sha1.h>
 #include <stdio.h>
 #include <stdlib.h>
-#ifdef HAVE_UNISTD_H
+#if HAVE_UNISTD_H
 #include <unistd.h>
 #endif
 
 #if defined(LIBC_SCCS) && !defined(lint)
-__RCSID("$NetBSD: sha1hl.c,v 1.1.1.1 2003/03/31 05:02:57 grant Exp $");
+__RCSID("$NetBSD: sha1hl.c,v 1.2 2003/09/01 15:31:20 jlam Exp $");
 #endif /* LIBC_SCCS and not lint */
 
 #ifndef _DIAGASSERT

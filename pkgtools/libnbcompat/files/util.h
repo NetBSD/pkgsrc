@@ -1,4 +1,4 @@
-/*	$NetBSD: util.h,v 1.1.1.1 2003/03/31 05:03:06 grant Exp $	*/
+/*	$NetBSD: util.h,v 1.2 2003/09/01 15:31:21 jlam Exp $	*/
 
 /*-
  * Copyright (c) 1995
@@ -36,29 +36,27 @@
 #ifndef _UTIL_H_
 #define _UTIL_H_
 
-#ifdef HAVE_CONFIG_H
-#include "config.h"
-#endif
+#include <nbconfig.h>
 
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
 
-#ifdef HAVE_SYS_TTYCOM_H
+#if HAVE_SYS_TTYCOM_H
 #include <sys/ttycom.h>
 #endif
 #include <sys/types.h>
 #include <stdio.h>
 
-#ifdef HAVE_PWD_H
+#if HAVE_PWD_H
 #include <pwd.h>
 #endif
 
-#ifdef HAVE_TERMIOS_H
+#if HAVE_TERMIOS_H
 #include <termios.h>
 #endif
 
-#ifdef HAVE_UTMP_H
+#if HAVE_UTMP_H
 #include <utmp.h>
 #endif
 

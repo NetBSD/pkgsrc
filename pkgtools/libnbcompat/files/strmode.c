@@ -1,4 +1,4 @@
-/*	$NetBSD: strmode.c,v 1.2 2003/08/27 12:25:40 jmmv Exp $	*/
+/*	$NetBSD: strmode.c,v 1.3 2003/09/01 15:31:21 jlam Exp $	*/
 
 /*-
  * Copyright (c) 1990, 1993
@@ -31,11 +31,7 @@
 
 #include "nbcompat.h"
 
-#ifdef HAVE_CONFIG_H
-#include "config.h"
-#endif
-
-#ifdef HAVE_SYS_CDEFS_H
+#if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
 
@@ -43,7 +39,7 @@
 #if 0
 static char sccsid[] = "@(#)strmode.c	8.3 (Berkeley) 8/15/94";
 #else
-__RCSID("$NetBSD: strmode.c,v 1.2 2003/08/27 12:25:40 jmmv Exp $");
+__RCSID("$NetBSD: strmode.c,v 1.3 2003/09/01 15:31:21 jlam Exp $");
 #endif
 #endif /* LIBC_SCCS and not lint */
 
@@ -51,7 +47,7 @@ __RCSID("$NetBSD: strmode.c,v 1.2 2003/08/27 12:25:40 jmmv Exp $");
 #include <sys/types.h>
 #include <sys/stat.h>
 
-#ifdef HAVE_ASSERT_H
+#if HAVE_ASSERT_H
 #include <assert.h>
 #endif
 

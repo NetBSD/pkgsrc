@@ -1,4 +1,4 @@
-/*	$NetBSD: vis.c,v 1.1.1.1 2003/03/31 05:02:59 grant Exp $	*/
+/*	$NetBSD: vis.c,v 1.2 2003/09/01 15:31:22 jlam Exp $	*/
 
 /*-
  * Copyright (c) 1999 The NetBSD Foundation, Inc.
@@ -34,8 +34,8 @@
  * SUCH DAMAGE.
  */
 
-#ifdef HAVE_CONFIG_H
-#include "config.h"
+#if HAVE_CONFIG_H
+#include "nbconfig.h"
 #endif
 
 #if HAVE_SYS_CDEFS_H
@@ -43,13 +43,13 @@
 #endif
 
 #if defined(LIBC_SCCS) && !defined(lint)
-__RCSID("$NetBSD: vis.c,v 1.1.1.1 2003/03/31 05:02:59 grant Exp $");
+__RCSID("$NetBSD: vis.c,v 1.2 2003/09/01 15:31:22 jlam Exp $");
 #endif /* LIBC_SCCS and not lint */
 
 #include "namespace.h"
 #include <sys/types.h>
 
-#ifdef HAVE_ASSERT_H
+#if HAVE_ASSERT_H
 #include <assert.h>
 #endif
 
@@ -330,7 +330,7 @@ vis(dst, c, flag, nextc)
 	return (dst);
 }
 
-#ifdef HAVE_STRVIS
+#if HAVE_STRVIS
 /*
  * strvis, strvisx - visually encode characters from src into dst
  *	

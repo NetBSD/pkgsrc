@@ -1,40 +1,64 @@
-# $NetBSD: Makefile.in,v 1.8 2003/07/31 22:40:27 jschauma Exp $
+# $NetBSD: Makefile.in,v 1.9 2003/09/01 15:31:15 jlam Exp $
 #
 
-srcdir	= @srcdir@
-prefix	= @prefix@
-VPATH	= @srcdir@
-SHELL	= /bin/sh
+srcdir=		@srcdir@
+prefix= 	@prefix@
+VPATH=		@srcdir@
+SHELL=		/bin/sh
 
-CC	= @CC@
-CFLAGS	= -I${srcdir} -I. @INCLUDES@ @CFLAGS@
-CPPFLAGS= @CPPFLAGS@
-DEFS	= @DEFS@
-INSTALL	= @INSTALL@
-LDFLAGS	= @LDFLAGS@
+CC=		@CC@
+CFLAGS=		-I${srcdir} -I. @INCLUDES@ @CFLAGS@
+CPPFLAGS=	@CPPFLAGS@
+DEFS=		@DEFS@
+INSTALL=	@INSTALL@
+LDFLAGS=	@LDFLAGS@
 
-AR	= @AR@
-RANLIB	= @RANLIB@
+AWK=		@AWK@
+AR=		@AR@
+RANLIB=		@RANLIB@
 
-LIB	= libnbcompat.a
+LIB=		libnbcompat.a
 
-OBJS	= @LIBOBJS@ \
-	md5c.o md5hl.o rmd160.o rmd160hl.o sha1.o sha1hl.o \
-	sha2.o sha2hl.o unvis.o vis.o setmode.o __fts13.o \
-	getid.o misc.o pack_dev.o spec.o setmode.o stat_flags.o \
-	pwcache.o getopt_long.o
+INCS=		extern.h err.h ftpglob.h fts.h getopt.h md5.h mtree.h \
+		namespace.h nbcompat.h nbtypes.h pack_dev.h pwcache.h \
+		rmd160.h sha1.h sha2.h stat_flags.h util.h vis.h
 
-LINK=   = $(CCLD) $(CFLAGS) $(LDFLAGS) -o $@
-COMPILE = $(CC) $(CPPFLAGS) $(CFLAGS)
+OBJS=		@LIBOBJS@ \
+		md5c.o md5hl.o rmd160.o rmd160hl.o sha1.o sha1hl.o \
+		sha2.o sha2hl.o unvis.o vis.o setmode.o __fts13.o \
+		getid.o misc.o pack_dev.o spec.o setmode.o stat_flags.o \
+		pwcache.o getopt_long.o
 
-all: nbtypes.h ${LIB}
+LINK=		$(CCLD) $(CFLAGS) $(LDFLAGS) -o $@
+COMPILE=	$(CC) $(CPPFLAGS) $(CFLAGS)
+
+.PHONY: all install clean distclean
+
+all: nbtypes.h nbconfig.hi ${LIB}
 
 .c.o: nbtypes.h
-	$(COMPILE) $(DEFS) -c $< -o $@
+	$(COMPILE) $(DEFS) -c $<
 
 ${LIB}: ${OBJS}
 	${AR} cr $@ ${OBJS}
 	${RANLIB} $@
+
+nbconfig.hi: nbconfig.h
+	${AWK} '							\
+		BEGIN { process = 1 }					\
+		/NBCOMPAT template section follows\./ { process = 0 }	\
+		/^\#[ 	]*define[ 	]+PACKAGE_.*/ { next }		\
+		/^\#[ 	]*define[ 	]+/ {				\
+			if (process == 1) {				\
+				guard = gensub("[ 	]+.*", "", "1", gensub("^\#[ 	]*define[ 	]+", "", "1")); \
+				print "\#ifndef " guard;		\
+				print $$0;				\
+				print "\#endif";			\
+				next;					\
+			}						\
+		}							\
+		{ print }						\
+	' nbconfig.h > $@
 
 nbtypes.h: bits
 	./bits nbtypes.h
@@ -46,28 +70,15 @@ install:
 	${INSTALL} -m 555 ${LIB} ${prefix}/lib
 	${RANLIB} ${prefix}/lib/${LIB}
 	${INSTALL} -m 755 -d ${prefix}/include/libnbcompat
-	${INSTALL} -m 444 extern.h ${prefix}/include/libnbcompat
-	${INSTALL} -m 444 err.h ${prefix}/include/libnbcompat
-	${INSTALL} -m 444 ftpglob.h ${prefix}/include/libnbcompat
-	${INSTALL} -m 444 fts.h ${prefix}/include/libnbcompat
-	${INSTALL} -m 444 getopt.h ${prefix}/include/libnbcompat
-	${INSTALL} -m 444 md5.h ${prefix}/include/libnbcompat
-	${INSTALL} -m 444 mtree.h ${prefix}/include/libnbcompat
-	${INSTALL} -m 444 namespace.h ${prefix}/include/libnbcompat
-	${INSTALL} -m 444 nbcompat.h ${prefix}/include/libnbcompat
-	${INSTALL} -m 444 nbtypes.h ${prefix}/include/libnbcompat
-	${INSTALL} -m 444 pack_dev.h ${prefix}/include/libnbcompat
-	${INSTALL} -m 444 pwcache.h ${prefix}/include/libnbcompat
-	${INSTALL} -m 444 rmd160.h ${prefix}/include/libnbcompat
-	${INSTALL} -m 444 sha1.h ${prefix}/include/libnbcompat
-	${INSTALL} -m 444 sha2.h ${prefix}/include/libnbcompat
-	${INSTALL} -m 444 stat_flags.h ${prefix}/include/libnbcompat
-	${INSTALL} -m 444 util.h ${prefix}/include/libnbcompat
-	${INSTALL} -m 444 vis.h ${prefix}/include/libnbcompat
+	@for file in ${INCS}; do \
+		echo "${INSTALL} -m 444 $$file ${prefix}/include/libnbcompat/$$file"; \
+		${INSTALL} -m 444 $$file ${prefix}/include/libnbcompat/$$file; \
+	done
+	${INSTALL} -m 444 nbconfig.hi ${prefix}/include/libnbcompat/nbconfig.h
 
 clean:
 	rm -f *.a *.o bits nbtypes.h
 
 distclean: clean
-	rm -f Makefile config.h config.log config.status configure.lineno
+	rm -f Makefile config.log config.status configure.lineno nbconfig.h
 

@@ -1,4 +1,4 @@
-/* config.h.in.  Generated from configure.ac by autoheader.  */
+/* nbconfig.h.in.  Generated from configure.ac by autoheader.  */
 
 /* Define to 1 if the `getpgrp' function requires zero arguments. */
 #undef GETPGRP_VOID
@@ -115,9 +115,6 @@
 /* Define to 1 if you have the <limits.h> header file. */
 #undef HAVE_LIMITS_H
 
-/* Define to 1 if you have the <locale.h> header file. */
-#undef HAVE_LOCALE_H
-
 /* Define to 1 if the system has the type `long long'. */
 #undef HAVE_LONG_LONG
 
@@ -146,11 +143,20 @@
 /* Define to 1 if you have the `memset' function. */
 #undef HAVE_MEMSET
 
+/* Define to 1 if you have the `mkdtemp' function. */
+#undef HAVE_MKDTEMP
+
 /* Define to 1 if you have the `mkstemp' function. */
 #undef HAVE_MKSTEMP
 
-/* Define to 1 if you have the <param.h> header file. */
-#undef HAVE_PARAM_H
+/* Define to 1 if you have the <ndir.h> header file. */
+#undef HAVE_NDIR_H
+
+/* Define to 1 if you have the <netdb.h> header file. */
+#undef HAVE_NETDB_H
+
+/* Define to 1 if you have the <netinet/in6_machtypes.h> header file. */
+#undef HAVE_NETINET_IN6_MACHTYPES_H
 
 /* Define to 1 if you have the <paths.h> header file. */
 #undef HAVE_PATHS_H
@@ -167,8 +173,8 @@
 /* Define to 1 if you have the `pwcache_userdb' function. */
 #undef HAVE_PWCACHE_USERDB
 
-/* Define to 1 if you have the <regex.h> header file. */
-#undef HAVE_REGEX_H
+/* Define to 1 if you have the <pwd.h> header file. */
+#undef HAVE_PWD_H
 
 /* Define to 1 if you have the `RMD160File' function. */
 #undef HAVE_RMD160FILE
@@ -203,17 +209,8 @@
 /* Define to 1 if you have the `SHA1File' function. */
 #undef HAVE_SHA1FILE
 
-/* Define to 1 if you have the `sl_init' function. */
-#undef HAVE_SL_INIT
-
 /* Define to 1 if you have the `snprintf' function. */
 #undef HAVE_SNPRINTF
-
-/* Define to 1 if you have the `statfs' function. */
-#undef HAVE_STATFS
-
-/* Define to 1 if you have the `statvfs' function. */
-#undef HAVE_STATVFS
 
 /* Define to 1 if you have the <stdint.h> header file. */
 #undef HAVE_STDINT_H
@@ -275,6 +272,9 @@
 /* Define to 1 if you have the <sys/cdefs.h> header file. */
 #undef HAVE_SYS_CDEFS_H
 
+/* Define to 1 if you have the <sys/dir.h> header file. */
+#undef HAVE_SYS_DIR_H
+
 /* Define to 1 if you have the <sys/endian.h> header file. */
 #undef HAVE_SYS_ENDIAN_H
 
@@ -286,6 +286,9 @@
 
 /* Define to 1 if you have the <sys/mount.h> header file. */
 #undef HAVE_SYS_MOUNT_H
+
+/* Define to 1 if you have the <sys/ndir.h> header file. */
+#undef HAVE_SYS_NDIR_H
 
 /* Define to 1 if you have the <sys/param.h> header file. */
 #undef HAVE_SYS_PARAM_H
@@ -305,6 +308,9 @@
 /* Define to 1 if you have the <sys/time.h> header file. */
 #undef HAVE_SYS_TIME_H
 
+/* Define to 1 if you have the <sys/ttycom.h> header file. */
+#undef HAVE_SYS_TTYCOM_H
+
 /* Define to 1 if you have the <sys/types.h> header file. */
 #undef HAVE_SYS_TYPES_H
 
@@ -313,6 +319,9 @@
 
 /* Define to 1 if you have the <termcap.h> header file. */
 #undef HAVE_TERMCAP_H
+
+/* Define to 1 if you have the <termios.h> header file. */
+#undef HAVE_TERMIOS_H
 
 /* Define to 1 if you have the `timegm' function. */
 #undef HAVE_TIMEGM
@@ -349,6 +358,9 @@
 
 /* Define to 1 if you have the <util.h> header file. */
 #undef HAVE_UTIL_H
+
+/* Define to 1 if you have the <utmp.h> header file. */
+#undef HAVE_UTMP_H
 
 /* Define to 1 if the system has the type `u_int16_t'. */
 #undef HAVE_U_INT16_T
@@ -409,24 +421,29 @@
 #undef size_t
 
 
+/* NBCOMPAT template section follows. */
 
-/* Define if *printf() uses %qd to print `long long' (otherwise uses %lld) */
+/* Define to 1 if the `statfs' function is built into the library. */
+#undef HAVE_NBCOMPAT_STATFS
+
+/* Define to 1 if *printf() uses %qd to print `long long' (otherwise uses
+   %lld) */
 #undef HAVE_PRINTF_QD
 
-/* Define if `long long' is supported and sizeof(off_t) >= 8 */
+/* Define to 1 if `long long' is supported and sizeof(off_t) >= 8 */
 #undef HAVE_QUAD_SUPPORT
 
-/* Define if optarg is declared in <stdlib.h> or <unistd.h> */
+/* Define to 1 if optarg is declared in <stdlib.h> or <unistd.h> */
 #undef HAVE_OPTARG_D
 
-/* Define if optind is declared in <stdlib.h> or <unistd.h> */
+/* Define to 1 if optind is declared in <stdlib.h> or <unistd.h> */
 #undef HAVE_OPTIND_D
 
 #ifndef HAVE___ATTRIBUTE__
 # define __attribute__(x)
 #endif
 
-#ifdef HAVE_SYS_CDEFS_H
+#if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
 
@@ -475,19 +492,19 @@
 # endif
 #endif
 
-#ifdef HAVE_SYS_PARAM_H
+#if HAVE_SYS_PARAM_H
 #include <sys/param.h>
 #endif
 
-#ifdef HAVE_SYS_ENDIAN_H
+#if HAVE_SYS_ENDIAN_H
 #include <sys/endian.h>
 #endif
 
-#ifdef HAVE_MACHINE_ENDIAN_H
+#if HAVE_MACHINE_ENDIAN_H
 #include <machine/endian.h>
 #endif
 
-#ifdef HAVE_SYS_BYTEORDER_H
+#if HAVE_SYS_BYTEORDER_H
 #include <sys/byteorder.h>
 #endif
 
@@ -516,22 +533,18 @@
 #endif
 
 #if defined(HAVE_MEMSET)
-#define MEMSET_BZERO(p,l)	memset((p), 0, (l))
+# define MEMSET_BZERO(p,l)	memset((p), 0, (l))
+#elif defined(HAVE_BZERO)
+# define MEMSET_BZERO(p,l)	bzero((p), (l))
 #else
-# if defined(HAVE_BZERO)
-#define MEMSET_BZERO(p,l)	bzero((p), (l))
-# else
-#error You need either memset or bzero
-# endif
+# error You need either memset or bzero
 #endif
 
 #if defined(HAVE_MEMCPY)
-#define MEMCPY_BCOPY(d,s,l)	memcpy((d), (s), (l))
+# define MEMCPY_BCOPY(d,s,l)	memcpy((d), (s), (l))
+#elif defined(HAVE_BCOPY)
+# define MEMCPY_BCOPY(d,s,l)	bcopy((s), (d), (l))
 #else
-# if defined(HAVE_BCOPY)
-#define MEMCPY_BCOPY(d,s,l)	bcopy((s), (d), (l))
-# else
-#error You need either memcpy or bcopy
-# endif
+# error You need either memcpy or bcopy
 #endif
 

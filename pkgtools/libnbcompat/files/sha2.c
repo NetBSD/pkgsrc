@@ -34,8 +34,8 @@
  */
 
 
-#ifdef HAVE_CONFIG_H
-#include <config.h>
+#if HAVE_CONFIG_H
+#include "nbconfig.h"
 #endif
 
 #include <nbtypes.h>

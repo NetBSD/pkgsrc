@@ -1,7 +1,7 @@
 #ifndef _NBCOMPAT_H
 #define _NBCOMPAT_H
 
-#include "config.h"
+#include <nbconfig.h>
 
 #include <nbtypes.h>
 
@@ -117,6 +117,68 @@ struct {								\
 #define	LIST_NEXT(elm, field)		((elm)->field.le_next)
 #endif
 
+#if HAVE_SYS_QUEUE_H
+# include <sys/queue.h>
+#else
+#define TAILQ_HEAD(name, type)						\
+struct name {								\
+	struct type *tqh_first;	/* first element */			\
+	struct type **tqh_last;	/* addr of last next element */		\
+}
+
+#define TAILQ_HEAD_INITIALIZER(head)					\
+	{ NULL, &(head).tqh_first }
+
+#define TAILQ_ENTRY(type)						\
+struct {								\
+	struct type *tqe_next;	/* next element */			\
+	struct type **tqe_prev;	/* address of previous next element */	\
+}
+
+#define	TAILQ_INIT(head) do {						\
+	(head)->tqh_first = NULL;					\
+	(head)->tqh_last = &(head)->tqh_first;				\
+} while (/*CONSTCOND*/0)
+
+#define TAILQ_INSERT_HEAD(head, elm, field) do {			\
+	if (((elm)->field.tqe_next = (head)->tqh_first) != NULL)	\
+		(head)->tqh_first->field.tqe_prev =			\
+		    &(elm)->field.tqe_next;				\
+	else								\
+		(head)->tqh_last = &(elm)->field.tqe_next;		\
+	(head)->tqh_first = (elm);					\
+	(elm)->field.tqe_prev = &(head)->tqh_first;			\
+} while (/*CONSTCOND*/0)
+
+#define TAILQ_INSERT_TAIL(head, elm, field) do {			\
+	(elm)->field.tqe_next = NULL;					\
+	(elm)->field.tqe_prev = (head)->tqh_last;			\
+	*(head)->tqh_last = (elm);					\
+	(head)->tqh_last = &(elm)->field.tqe_next;			\
+} while (/*CONSTCOND*/0)
+
+#define TAILQ_REMOVE(head, elm, field) do {				\
+	if (((elm)->field.tqe_next) != NULL)				\
+		(elm)->field.tqe_next->field.tqe_prev = 		\
+		    (elm)->field.tqe_prev;				\
+	else								\
+		(head)->tqh_last = (elm)->field.tqe_prev;		\
+	*(elm)->field.tqe_prev = (elm)->field.tqe_next;			\
+} while (/*CONSTCOND*/0)
+
+/*
+ * Tail queue access methods.
+ */
+#define	TAILQ_EMPTY(head)		((head)->tqh_first == NULL)
+#define	TAILQ_FIRST(head)		((head)->tqh_first)
+#define	TAILQ_NEXT(elm, field)		((elm)->field.tqe_next)
+
+#define TAILQ_FOREACH(var, head, field)					\
+	for ((var) = ((head)->tqh_first);				\
+		(var);							\
+		(var) = ((var)->field.tqe_next))
+#endif
+
 #if HAVE_ASSERT_H
 # include <assert.h>
 #endif
@@ -125,7 +187,7 @@ struct {								\
 # include <err.h>
 #endif
 
-#include "ftpglob.h"
+#include <ftpglob.h>
 
 #if HAVE_SYS_MKDEV_H
 # include <sys/mkdev.h>
@@ -256,7 +318,7 @@ int	pclose(FILE *);
 #endif
 
 #ifndef HAVE_ERR
-#include "err.h"
+#include <err.h>
 #endif
 
 #ifndef HAVE_FGETLN
@@ -286,6 +348,10 @@ int inet_pton(int, const char *, void *);
 
 #ifndef HAVE_MKSTEMP
 int	mkstemp(char *);
+#endif
+
+#ifndef HAVE_MKDTEMP
+char   *mkdtemp(char *);
 #endif
 
 #ifndef HAVE_LCHMOD
