@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2000/07/24 21:20:23 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.34 2000/07/27 23:32:03 hubertf Exp $
 
 # Note to package maintainers:
 # To update the distfile of this pkg, cd to /usr/src/usr.sbin,
@@ -14,6 +14,7 @@ MASTER_SITES=		${MASTER_SITE_LOCAL}
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.netbsd.org/
 
+# No special options needed for IPv6 support
 WRKSRC=			${WRKDIR}/pkg_install
 MAKE_ENV+=		BINDIR=/usr/sbin MANDIR=/usr/share/man NOLINT=1
 NO_CONFIGURE=		yes
