@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2002/03/12 20:54:16 hubertf Exp $
+# $NetBSD: Makefile,v 1.10 2002/03/29 11:29:22 rh Exp $
 
-DISTNAME=		silc-client-0.8.1
+DISTNAME=		silc-client-0.8.3
 CATEGORIES=		chat
 MASTER_SITES=		http://www.silcnet.org/download/client/sources/ \
 			ftp://ftp.silcnet.org/silc/client/sources/ \
@@ -29,6 +29,10 @@ CONFIGURE_ARGS+=	--with-helpdir=${PREFIX}/share/silc/help
 CONFIGURE_ARGS+=	--with-docdir=${PREFIX}/share/doc/silc
 CONFIGURE_ARGS+=	--with-etcdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-ncurses=${BUILDLINK_DIR}
+
+# list it into IPv6-ready packages
+BUILD_DEFS+=		USE_INET6
+CONFIGURE_ARGS+=	--enable-ipv6
 
 # Optional support for perl scripting.
 # If you want to disable it, set SILC_CLIENT_WITH_PERL to NO
