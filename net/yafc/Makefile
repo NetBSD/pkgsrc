@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/07/17 22:52:06 grant Exp $
+# $NetBSD: Makefile,v 1.5 2003/08/04 14:31:02 seb Exp $
 
 DISTNAME=	yafc-0.7.10
 CATEGORIES=	net
@@ -14,6 +14,7 @@ USE_GNU_READLINE=	yes
 USE_BUILDLINK2=		yes
 
 CONFIGURE_ARGS+=	--with-readline=${BUILDLINK_PREFIX.readline}
+USE_NEW_TEXINFO=	YES
 INFO_FILES=		yafc.info
 
 .include "../../mk/bsd.prefs.mk"
@@ -25,5 +26,4 @@ CPPFLAGS+=		-I/usr/include/gssapi
 .endif
 
 .include "../../devel/readline/buildlink2.mk"
-.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
