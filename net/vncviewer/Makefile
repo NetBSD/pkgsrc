@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/01/20 12:22:22 agc Exp $
+# $NetBSD: Makefile,v 1.11 2005/02/24 15:18:33 wiz Exp $
 # FreeBSD Id: Makefile,v 1.2 1998/03/19 01:54:59 msmith Exp
 #
 
@@ -6,7 +6,7 @@ DISTNAME=       	vnc-3.3.3r2_unixsrc
 PKGNAME=		vncviewer-3.3.3.2
 PKGREVISION=		1
 CATEGORIES=		net x11
-MASTER_SITES=   	http://www.uk.research.att.com/vnc/dist/
+MASTER_SITES=   	http://www.uk.research.att.com/archive/vnc/dist/
 EXTRACT_SUFX=		.tgz
 
 PATCH_SITES=		ftp://ftp.kame.net/pub/kame/misc/
