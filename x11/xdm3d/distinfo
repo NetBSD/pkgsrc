@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.2 2001/04/19 11:07:52 skrll Exp $
+$NetBSD: distinfo,v 1.3 2002/03/20 01:49:23 wiz Exp $
 
 SHA1 (xdm3d-1.0.tar.gz) = 494a33aefee0c1545331b657bf47b90634b69648
 Size (xdm3d-1.0.tar.gz) = 157858 bytes
 SHA1 (patch-aa) = 4a86a37ad238e502352346fa86090b7578d862ee
+SHA1 (patch-ab) = 4e61db30ef609a194629482355e91858803698ca
+SHA1 (patch-ac) = a9a2ea520168d18e8178ef12010be72a2b8d3727
