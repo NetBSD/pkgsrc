@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.245 2001/09/16 22:52:57 zuntum Exp $
+# $NetBSD: Makefile,v 1.246 2001/09/24 23:16:39 wiz Exp $
 #
 
 COMMENT=	Networking tools
@@ -172,6 +172,8 @@ SUBDIR+=	tcpdstat
 SUBDIR+=	tcpdump
 SUBDIR+=	tcpillust
 SUBDIR+=	tcptrace
+SUBDIR+=	tightvnc
+SUBDIR+=	tightvncviewer
 SUBDIR+=	tinyfugue
 SUBDIR+=	tkined
 SUBDIR+=	tn5250
