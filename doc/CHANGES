@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.496 2002/11/10 08:00:22 tron Exp $
+$NetBSD: CHANGES,v 1.497 2002/11/10 09:07:46 grant Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3569,6 +3569,6 @@ Changes to the packages collection and infrastructure in 2002:
 	Added gtoolkit-0.9.5 [rh 2002-11-09]
 	Added gtoolkit-examples-0.9.5 [rh 2002-11-09]
 	Updated reed to 5.4 [wiz 2002-11-09]
-	Updated Basilisk to 0.9.1nb1 [wiz 2002-11-09]
+	Updated BasiliskII to 0.9.1nb1 [wiz 2002-11-09]
 	Updated pvm to 3.4.4 [is 2002-11-09]
 	Updated aperture to 2.0nb4 [tron 2002-11-10]
