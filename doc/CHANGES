@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5703 2004/04/21 12:09:49 dillo Exp $
+$NetBSD: CHANGES,v 1.5704 2004/04/21 12:48:00 seb Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2206,3 +2206,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated aspell-slovak to 0.52.0 [salo 2004-04-21]
 	Updated libevent to 0.8 [xtraeme 2004-04-21]
 	Updated scsh to 0.6.6 [dillo 2004-04-21]
+	Updated cvs2svn to 0.916 [seb 2004-04-21]
