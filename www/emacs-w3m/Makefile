@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2002/10/19 09:38:18 minoura Exp $
+# $NetBSD: Makefile,v 1.3 2003/01/11 15:32:57 uebayasi Exp $
 
-DISTNAME=	emacs-w3m-1.3.2
-PKGREVISION=	1
+DISTNAME=	emacs-w3m-1.3.3
 CATEGORIES=	www
 MASTER_SITES=	${HOMEPAGE}
 
@@ -9,8 +8,8 @@ MAINTAINER=	uebayasi@netbsd.org
 HOMEPAGE=	http://emacs-w3m.namazu.org/
 COMMENT=	simple w3m interface for Emacs
 
-DEPENDS+=	{w3m,w3m-img}>=0.3.1:../../www/w3m
-BUILD_DEPENDS+=	${PKGNAME_PREFIX}semi-*:../../devel/semi
+EMACS_DEPENDS+=	{w3m,w3m-img}>=0.3.1:../../www/w3m
+BUILD_DEPENDS+=	semi-*:../../devel/semi
 
 .include "../../mk/emacs.mk"
 
@@ -18,7 +17,7 @@ BUILD_DEPENDS+=	${PKGNAME_PREFIX}semi-*:../../devel/semi
 EMACS_VERSIONS_ACCEPTED=	emacs21 emacs20 xemacs211 xemacs215
 
 .if ${EMACS_FLAVOR} == "xemacs"
-DEPENDS+=	${PKGNAME_PREFIX}apel>=10.3:../../devel/apel
+EMACS_DEPENDS+=	apel>=10.3:../../devel/apel
 BUILD_DEPENDS+=	mew-xemacs-*:../../mail/mew-xemacs
 .else
 BUILD_DEPENDS+=	mew-*:../../mail/mew
@@ -26,7 +25,7 @@ BUILD_DEPENDS+=	mew-*:../../mail/mew
 
 EMACS_MAJOR_VERSION=	${EMACS_VERSION:C/\..*//}
 .if ${EMACS_FLAVOR} == "emacs" && ${EMACS_MAJOR_VERSION} == 21
-DEPENDS+=	Mule-UCS>=0.84:../../editors/mule-ucs
+EMACS_DEPENDS+=	Mule-UCS>=0.84:../../editors/mule-ucs
 .endif
 
 HAS_CONFIGURE=	# defined
