@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.9 2005/02/23 17:36:17 wiz Exp $
+$NetBSD: distinfo,v 1.10 2005/03/22 16:05:13 jmmv Exp $
 
-SHA1 (libxklavier-1.04.tar.gz) = 6b909ef1320255144034a8bcdbb7cdaa15db156e
-RMD160 (libxklavier-1.04.tar.gz) = af26888399a4936f73e432d4b61e457365ae6f65
-Size (libxklavier-1.04.tar.gz) = 422337 bytes
-SHA1 (patch-aa) = 7746a3876cde51cfb08c58bd173a18520eb62d77
-SHA1 (patch-ab) = 77e692a927f80c592ecd9caed989ac24fbe9048a
-SHA1 (patch-ac) = 6fc58f67e95e6c8ea8df1e42c29493be61b9f8c1
+SHA1 (libxklavier-2.0.tar.gz) = 2eae2b8013be972172374fb5cc71a4f368c41d76
+RMD160 (libxklavier-2.0.tar.gz) = a8f219a61f47ed1bb0f801d0e78512b4275e0082
+Size (libxklavier-2.0.tar.gz) = 435898 bytes
+SHA1 (patch-aa) = c545095d06dbacf9452d138fdef6fcf485457d11
+SHA1 (patch-ab) = 0da271f9ee8a9b7bfeffa8f12b9d66cec5635e2c
