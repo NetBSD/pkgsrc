@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.124 2002/03/24 18:08:57 wiz Exp $
+# $NetBSD: Makefile,v 1.125 2002/03/25 11:26:30 drochner Exp $
 #
 
 COMMENT=	System utilities
@@ -40,6 +40,7 @@ SUBDIR+=	gentoo
 SUBDIR+=	gkrellm
 SUBDIR+=	gmc
 SUBDIR+=	gnome-vfs
+SUBDIR+=	gnometoaster
 SUBDIR+=	gpart
 SUBDIR+=	grun
 SUBDIR+=	gtop
