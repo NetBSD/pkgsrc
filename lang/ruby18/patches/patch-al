@@ -1,0 +1,36 @@
+$NetBSD: patch-al,v 1.1 2005/01/23 17:33:19 taca Exp $
+
+--- ext/nkf/nkf-utf8/nkf.c.orig	2004-12-04 03:04:38.000000000 +0900
++++ ext/nkf/nkf-utf8/nkf.c
+@@ -256,6 +256,10 @@ extern POINT _BufferSize;
+ 
+ /*      function prototype  */
+ 
++#ifdef CHECK_OPTION
++static int (*iconv_for_check)() = 0;
++#endif
++
+ #ifdef ANSI_C_PROTOTYPE
+ #define PROTO(x)  x 
+ #define STATIC static
+@@ -1311,9 +1315,6 @@ void set_iconv(f, iconv_func)
+      int (*iconv_func)();
+ #endif
+ {
+-#ifdef CHECK_OPTION
+-    static int (*iconv_for_check)() = 0;
+-#endif
+ #ifdef INPUT_CODE_FIX
+     if (f || !input_f)
+ #endif
+@@ -4292,7 +4293,9 @@ reinit()
+     broken_counter = 0;
+     broken_last = 0;
+     z_prev2=0,z_prev1=0;
+-
++#ifdef CHECK_OPTION
++    iconv_for_check = 0;
++#endif
+ }
+ #endif
+ 

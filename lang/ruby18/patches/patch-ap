@@ -1,0 +1,13 @@
+$NetBSD: patch-ap,v 1.1 2005/01/23 17:33:19 taca Exp $
+
+--- lib/webrick/httpauth/basicauth.rb.orig	2004-12-18 15:17:33.000000000 +0900
++++ lib/webrick/httpauth/basicauth.rb
+@@ -34,7 +34,7 @@ module WEBrick
+         unless basic_credentials = check_scheme(req)
+           challenge(req, res)
+         end
+-        userid, password = decode64(basic_credentials).split(":", 2) 
++        userid, password = basic_credentials.unpack("m*")[0].split(":", 2)
+         password ||= ""
+         if userid.empty?
+           error("user id was not given.")

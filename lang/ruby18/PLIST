@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2004/12/04 17:20:46 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2005/01/23 17:33:19 taca Exp $
 bin/erb${RUBY_VER}
 bin/irb${RUBY_VER}
 bin/rdoc${RUBY_VER}
@@ -54,6 +54,51 @@ ${RUBY_EXAMPLESDIR}/dl/msgbox.rb
 ${RUBY_EXAMPLESDIR}/dl/msgbox2.rb
 ${RUBY_EXAMPLESDIR}/dl/stream.rb
 @dirrm ${RUBY_EXAMPLESDIR}/dl
+${RUBY_EXAMPLESDIR}/drb/README.rd
+${RUBY_EXAMPLESDIR}/drb/README.rd.ja
+${RUBY_EXAMPLESDIR}/drb/darray.rb
+${RUBY_EXAMPLESDIR}/drb/darrayc.rb
+${RUBY_EXAMPLESDIR}/drb/dbiff.rb
+${RUBY_EXAMPLESDIR}/drb/dcdbiff.rb
+${RUBY_EXAMPLESDIR}/drb/dchatc.rb
+${RUBY_EXAMPLESDIR}/drb/dchats.rb
+${RUBY_EXAMPLESDIR}/drb/dhasen.rb
+${RUBY_EXAMPLESDIR}/drb/dhasenc.rb
+${RUBY_EXAMPLESDIR}/drb/dlogc.rb
+${RUBY_EXAMPLESDIR}/drb/dlogd.rb
+${RUBY_EXAMPLESDIR}/drb/dqin.rb
+${RUBY_EXAMPLESDIR}/drb/dqlib.rb
+${RUBY_EXAMPLESDIR}/drb/dqout.rb
+${RUBY_EXAMPLESDIR}/drb/dqueue.rb
+${RUBY_EXAMPLESDIR}/drb/drbc.rb
+${RUBY_EXAMPLESDIR}/drb/drbch.rb
+${RUBY_EXAMPLESDIR}/drb/drbm.rb
+${RUBY_EXAMPLESDIR}/drb/drbmc.rb
+${RUBY_EXAMPLESDIR}/drb/drbs-acl.rb
+${RUBY_EXAMPLESDIR}/drb/drbs.rb
+${RUBY_EXAMPLESDIR}/drb/drbssl_c.rb
+${RUBY_EXAMPLESDIR}/drb/drbssl_s.rb
+${RUBY_EXAMPLESDIR}/drb/extserv_test.rb
+${RUBY_EXAMPLESDIR}/drb/gw_ct.rb
+${RUBY_EXAMPLESDIR}/drb/gw_cu.rb
+${RUBY_EXAMPLESDIR}/drb/gw_s.rb
+${RUBY_EXAMPLESDIR}/drb/holderc.rb
+${RUBY_EXAMPLESDIR}/drb/holders.rb
+${RUBY_EXAMPLESDIR}/drb/http0.rb
+${RUBY_EXAMPLESDIR}/drb/http0serv.rb
+${RUBY_EXAMPLESDIR}/drb/name.rb
+${RUBY_EXAMPLESDIR}/drb/namec.rb
+${RUBY_EXAMPLESDIR}/drb/old_tuplespace.rb
+${RUBY_EXAMPLESDIR}/drb/rinda_ts.rb
+${RUBY_EXAMPLESDIR}/drb/rindac.rb
+${RUBY_EXAMPLESDIR}/drb/rindas.rb
+${RUBY_EXAMPLESDIR}/drb/ring_echo.rb
+${RUBY_EXAMPLESDIR}/drb/ring_inspect.rb
+${RUBY_EXAMPLESDIR}/drb/ring_place.rb
+${RUBY_EXAMPLESDIR}/drb/simpletuple.rb
+${RUBY_EXAMPLESDIR}/drb/speedc.rb
+${RUBY_EXAMPLESDIR}/drb/speeds.rb
+@dirrm ${RUBY_EXAMPLESDIR}/drb
 ${RUBY_EXAMPLESDIR}/dualstack-fetch.rb
 ${RUBY_EXAMPLESDIR}/dualstack-httpd.rb
 ${RUBY_EXAMPLESDIR}/eval.rb
@@ -87,6 +132,7 @@ ${RUBY_EXAMPLESDIR}/occur.pl
 ${RUBY_EXAMPLESDIR}/occur.rb
 ${RUBY_EXAMPLESDIR}/occur2.rb
 ${RUBY_EXAMPLESDIR}/optparse/opttest.rb
+${RUBY_EXAMPLESDIR}/optparse/subcommand.rb
 @dirrm ${RUBY_EXAMPLESDIR}/optparse
 ${RUBY_EXAMPLESDIR}/philos.rb
 ${RUBY_EXAMPLESDIR}/pi.rb
@@ -98,13 +144,26 @@ ${RUBY_EXAMPLESDIR}/rcs.awk
 ${RUBY_EXAMPLESDIR}/rcs.dat
 ${RUBY_EXAMPLESDIR}/rcs.rb
 ${RUBY_EXAMPLESDIR}/regx.rb
+${RUBY_EXAMPLESDIR}/rss/blend.rb
+${RUBY_EXAMPLESDIR}/rss/list_description.rb
+${RUBY_EXAMPLESDIR}/rss/rss_recent.rb
+${RUBY_EXAMPLESDIR}/rss/tdiary_plugin/rss-recent.rb
+@dirrm ${RUBY_EXAMPLESDIR}/rss/tdiary_plugin
+@dirrm ${RUBY_EXAMPLESDIR}/rss
 ${RUBY_EXAMPLESDIR}/sieve.rb
+${RUBY_EXAMPLESDIR}/soap/authheader/authmgr.rb
+${RUBY_EXAMPLESDIR}/soap/authheader/client.rb
+${RUBY_EXAMPLESDIR}/soap/authheader/client2.rb
+${RUBY_EXAMPLESDIR}/soap/authheader/server.rb
+${RUBY_EXAMPLESDIR}/soap/authheader/server2.rb
+@dirrm ${RUBY_EXAMPLESDIR}/soap/authheader
 ${RUBY_EXAMPLESDIR}/soap/babelfish.rb
 ${RUBY_EXAMPLESDIR}/soap/calc/calc.rb
 ${RUBY_EXAMPLESDIR}/soap/calc/calc2.rb
 ${RUBY_EXAMPLESDIR}/soap/calc/client.rb
 ${RUBY_EXAMPLESDIR}/soap/calc/client2.rb
 ${RUBY_EXAMPLESDIR}/soap/calc/httpd.rb
+${RUBY_EXAMPLESDIR}/soap/calc/samplehttpd.conf
 ${RUBY_EXAMPLESDIR}/soap/calc/server.cgi
 ${RUBY_EXAMPLESDIR}/soap/calc/server.rb
 ${RUBY_EXAMPLESDIR}/soap/calc/server2.rb
@@ -113,11 +172,14 @@ ${RUBY_EXAMPLESDIR}/soap/digraph.rb
 ${RUBY_EXAMPLESDIR}/soap/exchange/client.rb
 ${RUBY_EXAMPLESDIR}/soap/exchange/exchange.rb
 ${RUBY_EXAMPLESDIR}/soap/exchange/httpd.rb
+${RUBY_EXAMPLESDIR}/soap/exchange/samplehttpd.conf
 ${RUBY_EXAMPLESDIR}/soap/exchange/server.cgi
 ${RUBY_EXAMPLESDIR}/soap/exchange/server.rb
 @dirrm ${RUBY_EXAMPLESDIR}/soap/exchange
 ${RUBY_EXAMPLESDIR}/soap/helloworld/hw_c.rb
 ${RUBY_EXAMPLESDIR}/soap/helloworld/hw_s.rb
+${RUBY_EXAMPLESDIR}/soap/helloworld/hw_c_gzip.rb
+${RUBY_EXAMPLESDIR}/soap/helloworld/hw_s_gzip.rb
 @dirrm ${RUBY_EXAMPLESDIR}/soap/helloworld
 ${RUBY_EXAMPLESDIR}/soap/icd/IICD.rb
 ${RUBY_EXAMPLESDIR}/soap/icd/icd.rb
@@ -125,13 +187,48 @@ ${RUBY_EXAMPLESDIR}/soap/icd/icd.rb
 ${RUBY_EXAMPLESDIR}/soap/raa/iRAA.rb
 ${RUBY_EXAMPLESDIR}/soap/raa/soap4r.rb
 @dirrm ${RUBY_EXAMPLESDIR}/soap/raa
+${RUBY_EXAMPLESDIR}/soap/raa2.4/raa.rb
+${RUBY_EXAMPLESDIR}/soap/raa2.4/raaDriver.rb
+${RUBY_EXAMPLESDIR}/soap/raa2.4/raaServiceClient.rb
+${RUBY_EXAMPLESDIR}/soap/raa2.4/sample.rb
+@dirrm ${RUBY_EXAMPLESDIR}/soap/raa2.4
 ${RUBY_EXAMPLESDIR}/soap/sampleStruct/client.rb
 ${RUBY_EXAMPLESDIR}/soap/sampleStruct/httpd.rb
 ${RUBY_EXAMPLESDIR}/soap/sampleStruct/iSampleStruct.rb
+${RUBY_EXAMPLESDIR}/soap/sampleStruct/samplehttpd.conf
 ${RUBY_EXAMPLESDIR}/soap/sampleStruct/sampleStruct.rb
 ${RUBY_EXAMPLESDIR}/soap/sampleStruct/server.cgi
 ${RUBY_EXAMPLESDIR}/soap/sampleStruct/server.rb
 @dirrm ${RUBY_EXAMPLESDIR}/soap/sampleStruct
+${RUBY_EXAMPLESDIR}/soap/scopesample/client.rb
+${RUBY_EXAMPLESDIR}/soap/scopesample/httpd.rb
+${RUBY_EXAMPLESDIR}/soap/scopesample/samplehttpd.conf
+${RUBY_EXAMPLESDIR}/soap/scopesample/servant.rb
+${RUBY_EXAMPLESDIR}/soap/scopesample/server.cgi
+${RUBY_EXAMPLESDIR}/soap/scopesample/server.rb
+@dirrm ${RUBY_EXAMPLESDIR}/soap/scopesample
+${RUBY_EXAMPLESDIR}/soap/ssl/files/README
+${RUBY_EXAMPLESDIR}/soap/ssl/files/ca.cert
+${RUBY_EXAMPLESDIR}/soap/ssl/files/client.cert
+${RUBY_EXAMPLESDIR}/soap/ssl/files/client.key
+${RUBY_EXAMPLESDIR}/soap/ssl/files/server.cert
+${RUBY_EXAMPLESDIR}/soap/ssl/files/server.key
+${RUBY_EXAMPLESDIR}/soap/ssl/files/sslclient.properties
+${RUBY_EXAMPLESDIR}/soap/ssl/files/sslclient_require_noserverauth.properties
+${RUBY_EXAMPLESDIR}/soap/ssl/files/sslclient_with_clientauth.properties
+${RUBY_EXAMPLESDIR}/soap/ssl/files/subca.cert
+@dirrm ${RUBY_EXAMPLESDIR}/soap/ssl/files
+${RUBY_EXAMPLESDIR}/soap/ssl/sslclient.rb
+${RUBY_EXAMPLESDIR}/soap/ssl/sslclient_require_noserverauth.rb
+${RUBY_EXAMPLESDIR}/soap/ssl/sslclient_with_clientauth.rb
+${RUBY_EXAMPLESDIR}/soap/ssl/sslserver.rb
+${RUBY_EXAMPLESDIR}/soap/ssl/sslserver_noauth.rb
+${RUBY_EXAMPLESDIR}/soap/ssl/sslserver_require_clientauth.rb
+@dirrm ${RUBY_EXAMPLESDIR}/soap/ssl
+${RUBY_EXAMPLESDIR}/soap/swa/client.rb
+${RUBY_EXAMPLESDIR}/soap/swa/server.rb
+@dirrm ${RUBY_EXAMPLESDIR}/soap/swa
+${RUBY_EXAMPLESDIR}/soap/whois.rb
 @dirrm ${RUBY_EXAMPLESDIR}/soap
 ${RUBY_EXAMPLESDIR}/svr.rb
 ${RUBY_EXAMPLESDIR}/test.rb
@@ -145,6 +242,15 @@ ${RUBY_EXAMPLESDIR}/time.rb
 ${RUBY_EXAMPLESDIR}/trojan.rb
 ${RUBY_EXAMPLESDIR}/tsvr.rb
 ${RUBY_EXAMPLESDIR}/uumerge.rb
+${RUBY_EXAMPLESDIR}/webrick/demo-app.rb
+${RUBY_EXAMPLESDIR}/webrick/demo-multipart.cgi
+${RUBY_EXAMPLESDIR}/webrick/demo-servlet.rb
+${RUBY_EXAMPLESDIR}/webrick/demo-urlencoded.cgi
+${RUBY_EXAMPLESDIR}/webrick/hello.cgi
+${RUBY_EXAMPLESDIR}/webrick/hello.rb
+${RUBY_EXAMPLESDIR}/webrick/httpd.rb
+${RUBY_EXAMPLESDIR}/webrick/httpsd.rb
+@dirrm ${RUBY_EXAMPLESDIR}/webrick
 ${RUBY_EXAMPLESDIR}/wsdl/amazon/AmazonSearch.rb
 ${RUBY_EXAMPLESDIR}/wsdl/amazon/AmazonSearchDriver.rb
 ${RUBY_EXAMPLESDIR}/wsdl/amazon/sampleClient.rb
@@ -155,12 +261,16 @@ ${RUBY_EXAMPLESDIR}/wsdl/googleSearch/GoogleSearchDriver.rb
 ${RUBY_EXAMPLESDIR}/wsdl/googleSearch/README
 ${RUBY_EXAMPLESDIR}/wsdl/googleSearch/httpd.rb
 ${RUBY_EXAMPLESDIR}/wsdl/googleSearch/sampleClient.rb
+${RUBY_EXAMPLESDIR}/wsdl/googleSearch/samplehttpd.conf
 ${RUBY_EXAMPLESDIR}/wsdl/googleSearch/sjissearch.sh
 ${RUBY_EXAMPLESDIR}/wsdl/googleSearch/wsdlDriver.rb
 @dirrm ${RUBY_EXAMPLESDIR}/wsdl/googleSearch
 ${RUBY_EXAMPLESDIR}/wsdl/raa/raa.wsdl
 ${RUBY_EXAMPLESDIR}/wsdl/raa/soap4r.rb
 @dirrm ${RUBY_EXAMPLESDIR}/wsdl/raa
+${RUBY_EXAMPLESDIR}/wsdl/raa2.4/raa.rb
+${RUBY_EXAMPLESDIR}/wsdl/raa2.4/wsdlDriver.rb
+@dirrm ${RUBY_EXAMPLESDIR}/wsdl/raa2.4
 @dirrm ${RUBY_EXAMPLESDIR}/wsdl
 @dirrm ${RUBY_EXAMPLESDIR}
 lib/libruby${RUBY_VER}-static.a
@@ -360,6 +470,7 @@ ${RUBY_LIBDIR}/rdoc/generators/template/html/hefss.rb
 ${RUBY_LIBDIR}/rdoc/generators/template/html/html.rb
 ${RUBY_LIBDIR}/rdoc/generators/template/html/kilmer.rb
 ${RUBY_LIBDIR}/rdoc/generators/template/html/old_html.rb
+${RUBY_LIBDIR}/rdoc/generators/template/html/one_page_html.rb
 @dirrm ${RUBY_LIBDIR}/rdoc/generators/template/html
 ${RUBY_LIBDIR}/rdoc/generators/template/xml/rdf.rb
 ${RUBY_LIBDIR}/rdoc/generators/template/xml/xml.rb
@@ -394,6 +505,8 @@ ${RUBY_LIBDIR}/rdoc/parsers/parserfactory.rb
 ${RUBY_LIBDIR}/rdoc/rdoc.rb
 ${RUBY_LIBDIR}/rdoc/ri/ri_cache.rb
 ${RUBY_LIBDIR}/rdoc/ri/ri_descriptions.rb
+${RUBY_LIBDIR}/rdoc/ri/ri_display.rb
+${RUBY_LIBDIR}/rdoc/ri/ri_driver.rb
 ${RUBY_LIBDIR}/rdoc/ri/ri_formatter.rb
 ${RUBY_LIBDIR}/rdoc/ri/ri_options.rb
 ${RUBY_LIBDIR}/rdoc/ri/ri_paths.rb
@@ -403,6 +516,7 @@ ${RUBY_LIBDIR}/rdoc/ri/ri_writer.rb
 @dirrm ${RUBY_LIBDIR}/rdoc/ri
 ${RUBY_LIBDIR}/rdoc/template.rb
 ${RUBY_LIBDIR}/rdoc/tokenstream.rb
+${RUBY_LIBDIR}/rdoc/usage.rb
 @dirrm ${RUBY_LIBDIR}/rdoc
 ${RUBY_LIBDIR}/readbytes.rb
 ${RUBY_LIBDIR}/resolv-replace.rb
@@ -422,9 +536,11 @@ ${RUBY_LIBDIR}/rexml/dtd/notationdecl.rb
 @dirrm ${RUBY_LIBDIR}/rexml/dtd
 ${RUBY_LIBDIR}/rexml/element.rb
 ${RUBY_LIBDIR}/rexml/encoding.rb
+${RUBY_LIBDIR}/rexml/encodings/CP-1252.rb
 ${RUBY_LIBDIR}/rexml/encodings/EUC-JP.rb
 ${RUBY_LIBDIR}/rexml/encodings/ICONV.rb
 ${RUBY_LIBDIR}/rexml/encodings/ISO-8859-1.rb
+${RUBY_LIBDIR}/rexml/encodings/ISO-8859-15.rb
 ${RUBY_LIBDIR}/rexml/encodings/SHIFT-JIS.rb
 ${RUBY_LIBDIR}/rexml/encodings/SHIFT_JIS.rb
 ${RUBY_LIBDIR}/rexml/encodings/UNILE.rb
@@ -447,6 +563,7 @@ ${RUBY_LIBDIR}/rexml/parsers/lightparser.rb
 ${RUBY_LIBDIR}/rexml/parsers/pullparser.rb
 ${RUBY_LIBDIR}/rexml/parsers/sax2parser.rb
 ${RUBY_LIBDIR}/rexml/parsers/streamparser.rb
+${RUBY_LIBDIR}/rexml/parsers/treeparser.rb
 ${RUBY_LIBDIR}/rexml/parsers/ultralightparser.rb
 ${RUBY_LIBDIR}/rexml/parsers/xpathparser.rb
 @dirrm ${RUBY_LIBDIR}/rexml/parsers
@@ -456,6 +573,10 @@ ${RUBY_LIBDIR}/rexml/sax2listener.rb
 ${RUBY_LIBDIR}/rexml/source.rb
 ${RUBY_LIBDIR}/rexml/streamlistener.rb
 ${RUBY_LIBDIR}/rexml/text.rb
+${RUBY_LIBDIR}/rexml/validation/relaxng.rb
+${RUBY_LIBDIR}/rexml/validation/validation.rb
+${RUBY_LIBDIR}/rexml/validation/validationexception.rb
+@dirrm ${RUBY_LIBDIR}/rexml/validation
 ${RUBY_LIBDIR}/rexml/xmldecl.rb
 ${RUBY_LIBDIR}/rexml/xmltokens.rb
 ${RUBY_LIBDIR}/rexml/xpath.rb
@@ -465,6 +586,33 @@ ${RUBY_LIBDIR}/rinda/rinda.rb
 ${RUBY_LIBDIR}/rinda/ring.rb
 ${RUBY_LIBDIR}/rinda/tuplespace.rb
 @dirrm ${RUBY_LIBDIR}/rinda
+${RUBY_LIBDIR}/rss/0.9.rb
+${RUBY_LIBDIR}/rss/1.0.rb
+${RUBY_LIBDIR}/rss/2.0.rb
+${RUBY_LIBDIR}/rss/content.rb
+${RUBY_LIBDIR}/rss/converter.rb
+${RUBY_LIBDIR}/rss/dublincore.rb
+${RUBY_LIBDIR}/rss/maker/0.9.rb
+${RUBY_LIBDIR}/rss/maker/1.0.rb
+${RUBY_LIBDIR}/rss/maker/2.0.rb
+${RUBY_LIBDIR}/rss/maker/base.rb
+${RUBY_LIBDIR}/rss/maker/content.rb
+${RUBY_LIBDIR}/rss/maker/dublincore.rb
+${RUBY_LIBDIR}/rss/maker/syndication.rb
+${RUBY_LIBDIR}/rss/maker/trackback.rb
+@dirrm ${RUBY_LIBDIR}/rss/maker
+${RUBY_LIBDIR}/rss/maker.rb
+${RUBY_LIBDIR}/rss/parser.rb
+${RUBY_LIBDIR}/rss/rexmlparser.rb
+${RUBY_LIBDIR}/rss/rss.rb
+${RUBY_LIBDIR}/rss/syndication.rb
+${RUBY_LIBDIR}/rss/taxonomy.rb
+${RUBY_LIBDIR}/rss/trackback.rb
+${RUBY_LIBDIR}/rss/utils.rb
+${RUBY_LIBDIR}/rss/xml-stylesheet.rb
+${RUBY_LIBDIR}/rss/xmlparser.rb
+${RUBY_LIBDIR}/rss/xmlscanner.rb
+@dirrm ${RUBY_LIBDIR}/rss
 ${RUBY_LIBDIR}/rubyunit.rb
 ${RUBY_LIBDIR}/runit/assert.rb
 ${RUBY_LIBDIR}/runit/cui/testrunner.rb
@@ -488,6 +636,7 @@ ${RUBY_LIBDIR}/shell/version.rb
 ${RUBY_LIBDIR}/shell.rb
 ${RUBY_LIBDIR}/shellwords.rb
 ${RUBY_LIBDIR}/singleton.rb
+${RUBY_LIBDIR}/soap/attachment.rb
 ${RUBY_LIBDIR}/soap/baseData.rb
 ${RUBY_LIBDIR}/soap/element.rb
 ${RUBY_LIBDIR}/soap/encodingstyle/aspDotNetHandler.rb
@@ -496,15 +645,22 @@ ${RUBY_LIBDIR}/soap/encodingstyle/literalHandler.rb
 ${RUBY_LIBDIR}/soap/encodingstyle/soapHandler.rb
 @dirrm ${RUBY_LIBDIR}/soap/encodingstyle
 ${RUBY_LIBDIR}/soap/generator.rb
+${RUBY_LIBDIR}/soap/header/handler.rb
+${RUBY_LIBDIR}/soap/header/handlerset.rb
+${RUBY_LIBDIR}/soap/header/simplehandler.rb
+@dirrm ${RUBY_LIBDIR}/soap/header
 ${RUBY_LIBDIR}/soap/mapping/factory.rb
 ${RUBY_LIBDIR}/soap/mapping/mapping.rb
 ${RUBY_LIBDIR}/soap/mapping/registry.rb
 ${RUBY_LIBDIR}/soap/mapping/rubytypeFactory.rb
 ${RUBY_LIBDIR}/soap/mapping/typeMap.rb
 ${RUBY_LIBDIR}/soap/mapping/wsdlRegistry.rb
+${RUBY_LIBDIR}/soap/mapping/wsdlencodedregistry.rb
+${RUBY_LIBDIR}/soap/mapping/wsdlliteralregistry.rb
 @dirrm ${RUBY_LIBDIR}/soap/mapping
 ${RUBY_LIBDIR}/soap/mapping.rb
 ${RUBY_LIBDIR}/soap/marshal.rb
+${RUBY_LIBDIR}/soap/mimemessage.rb
 ${RUBY_LIBDIR}/soap/netHttpClient.rb
 ${RUBY_LIBDIR}/soap/parser.rb
 ${RUBY_LIBDIR}/soap/processor.rb
@@ -512,6 +668,7 @@ ${RUBY_LIBDIR}/soap/property.rb
 ${RUBY_LIBDIR}/soap/rpc/cgistub.rb
 ${RUBY_LIBDIR}/soap/rpc/driver.rb
 ${RUBY_LIBDIR}/soap/rpc/element.rb
+${RUBY_LIBDIR}/soap/rpc/httpserver.rb
 ${RUBY_LIBDIR}/soap/rpc/proxy.rb
 ${RUBY_LIBDIR}/soap/rpc/router.rb
 ${RUBY_LIBDIR}/soap/rpc/rpc.rb
@@ -631,13 +788,23 @@ ${RUBY_LIBDIR}/wsdl/service.rb
 ${RUBY_LIBDIR}/wsdl/soap/address.rb
 ${RUBY_LIBDIR}/wsdl/soap/binding.rb
 ${RUBY_LIBDIR}/wsdl/soap/body.rb
+${RUBY_LIBDIR}/wsdl/soap/cgiStubCreator.rb
+${RUBY_LIBDIR}/wsdl/soap/classDefCreator.rb
+${RUBY_LIBDIR}/wsdl/soap/classDefCreatorSupport.rb
+${RUBY_LIBDIR}/wsdl/soap/clientSkeltonCreator.rb
 ${RUBY_LIBDIR}/wsdl/soap/complexType.rb
 ${RUBY_LIBDIR}/wsdl/soap/data.rb
 ${RUBY_LIBDIR}/wsdl/soap/definitions.rb
+${RUBY_LIBDIR}/wsdl/soap/driverCreator.rb
+${RUBY_LIBDIR}/wsdl/soap/element.rb
 ${RUBY_LIBDIR}/wsdl/soap/fault.rb
 ${RUBY_LIBDIR}/wsdl/soap/header.rb
 ${RUBY_LIBDIR}/wsdl/soap/headerfault.rb
+${RUBY_LIBDIR}/wsdl/soap/mappingRegistryCreator.rb
+${RUBY_LIBDIR}/wsdl/soap/methodDefCreator.rb
 ${RUBY_LIBDIR}/wsdl/soap/operation.rb
+${RUBY_LIBDIR}/wsdl/soap/servantSkeltonCreator.rb
+${RUBY_LIBDIR}/wsdl/soap/standaloneServerStubCreator.rb
 @dirrm ${RUBY_LIBDIR}/wsdl/soap
 ${RUBY_LIBDIR}/wsdl/types.rb
 ${RUBY_LIBDIR}/wsdl/wsdl.rb
@@ -650,10 +817,14 @@ ${RUBY_LIBDIR}/wsdl/xmlSchema/complexType.rb
 ${RUBY_LIBDIR}/wsdl/xmlSchema/content.rb
 ${RUBY_LIBDIR}/wsdl/xmlSchema/data.rb
 ${RUBY_LIBDIR}/wsdl/xmlSchema/element.rb
+${RUBY_LIBDIR}/wsdl/xmlSchema/enumeration.rb
 ${RUBY_LIBDIR}/wsdl/xmlSchema/import.rb
 ${RUBY_LIBDIR}/wsdl/xmlSchema/parser.rb
 ${RUBY_LIBDIR}/wsdl/xmlSchema/schema.rb
 ${RUBY_LIBDIR}/wsdl/xmlSchema/sequence.rb
+${RUBY_LIBDIR}/wsdl/xmlSchema/simpleContent.rb
+${RUBY_LIBDIR}/wsdl/xmlSchema/simpleRestriction.rb
+${RUBY_LIBDIR}/wsdl/xmlSchema/simpleType.rb
 ${RUBY_LIBDIR}/wsdl/xmlSchema/unique.rb
 @dirrm ${RUBY_LIBDIR}/wsdl/xmlSchema
 @dirrm ${RUBY_LIBDIR}/wsdl
@@ -669,6 +840,13 @@ ${RUBY_LIBDIR}/xmlrpc/server.rb
 ${RUBY_LIBDIR}/xmlrpc/utils.rb
 @dirrm ${RUBY_LIBDIR}/xmlrpc
 ${RUBY_LIBDIR}/xsd/charset.rb
+${RUBY_LIBDIR}/xsd/codegen.rb
+${RUBY_LIBDIR}/xsd/codegen/classdef.rb
+${RUBY_LIBDIR}/xsd/codegen/commentdef.rb
+${RUBY_LIBDIR}/xsd/codegen/gensupport.rb
+${RUBY_LIBDIR}/xsd/codegen/methoddef.rb
+${RUBY_LIBDIR}/xsd/codegen/moduledef.rb
+@dirrm ${RUBY_LIBDIR}/xsd/codegen
 ${RUBY_LIBDIR}/xsd/datatypes.rb
 ${RUBY_LIBDIR}/xsd/datatypes1999.rb
 ${RUBY_LIBDIR}/xsd/iconvcharset.rb
