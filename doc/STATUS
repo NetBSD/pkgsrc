@@ -1,19 +1,27 @@
-# $NetBSD: STATUS,v 1.8 2003/04/21 18:21:42 cjep Exp $
+# $NetBSD: STATUS,v 1.9 2003/04/25 13:54:57 jschauma Exp $
 
 Below is a list of packages known to build on various non-NetBSD
-platforms.
+platforms.  Currently, there are three categories.  If all packages in a given
+category build, install, run and uninstall without any problems, then that
+platform satisfies the conditions for this category and may be labeled
+appropriately.
+
 
 'supported' means that pkgsrc on this platform is more than just
 experimental and can actually be used to provide a reliable environment
-for the average user.
+for the average user.  Note that by their requirements, these packages pull in
+virtually all _essential_ packages that are not explicitly mentioned.
+
 
 A 'fully supported' platform supports virtually all packages (if
 available for that platform) and can reliably be used in a production
 environment.
 
+
 'yowza' finally adds a handful of packages that are known to be very
 complex and may not even be fully functional under NetBSD on platforms
 other than i386.
+
 
 You are strongly encouraged to add leaf packages which are known to
 build on certain platforms.
@@ -23,6 +31,7 @@ platforms. Please attempt to fix any packages which are broken, or
 submit PRs if you are unable to.
 
 Please add/correct entries as appropriate.
+
 
 Legend:
 Y	-	Builds and installs perfectly
@@ -34,15 +43,13 @@ blank	-	Unknown
 *	-	see footnote
 
 ---------------------------------------------------------------------------
-'supported'
----------------------------------------------------------------------------
 Package                 Darwin   FreeBSD   IRIX   Linux   OpenBSD   Solaris
 ---------------------------------------------------------------------------
 audio/mpg123                                 Y      Y                  Y
 devel/cvs                  Y        Y        Y      Y        Y         Y
 devel/gettext              Y        Y        Y      Y        Y         Y
 devel/libtool              Y        Y        Y      Y        Y         Y
-devel/ncurses                                                X*        Y
+devel/ncurses                                Y      Y        X*        Y
 editors/vim                Y        Y        Y      Y                  Y
 editors/xemacs                                      Y
 editors/emacs                                       Y
@@ -65,13 +72,15 @@ www/apache                 Y        Y        Y      Y        Y         Y
 www/links                  Y        Y        Y      Y                  Y
 www/lynx                   Y        Y               Y                  Y
 ---------------------------------------------------------------------------
+'supported'
+---------------------------------------------------------------------------
 notes:
 
 OpenBSD/ncurses: does not install a shared libncurses++ library.
 Linux/xpdf: depends on openmotif, see PR
 
----------------------------------------------------------------------------
-'fully supported'
+
+
 ---------------------------------------------------------------------------
 Package                 Darwin   FreeBSD   IRIX   Linux   OpenBSD   Solaris 
 ---------------------------------------------------------------------------
@@ -90,14 +99,16 @@ misc/openoffice
 www/mozilla                                                            Y
 www/opera
 ---------------------------------------------------------------------------
+'fully supported'
+---------------------------------------------------------------------------
 notes:
 
 Solaris/mplayer: depends on cdparanoia.
 Solaris/mozilla: depends on net/ORBit (broken buildlink2/libtool libpthread
 handling) and lang/gcc (stdlibc++).
 
----------------------------------------------------------------------------
-'yowza'
+
+
 ---------------------------------------------------------------------------
 Package                 Darwin   FreeBSD   IRIX   Linux   OpenBSD   Solaris
 ---------------------------------------------------------------------------
@@ -105,3 +116,6 @@ meta-pkgs/gnome
 misc/koffice3
 x11/kde3
 ---------------------------------------------------------------------------
+'yowza'
+---------------------------------------------------------------------------
+notes:
