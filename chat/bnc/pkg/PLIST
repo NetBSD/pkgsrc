@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/03/06 18:39:51 wiz Exp $
+bin/bnc
+bin/bncchk
+bin/bncmkpasswd
+bin/bncsetup
+share/doc/bnc/README
+share/examples/bnc.conf.sample
+@dirrm share/doc/bnc
