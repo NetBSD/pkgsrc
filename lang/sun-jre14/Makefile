@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2003/08/26 21:02:53 jschauma Exp $
+# $NetBSD: Makefile,v 1.11 2003/10/29 22:18:54 jschauma Exp $
 
-DISTNAME=	j2re-1_4_2_01-linux-i586
-PKGNAME=	sun-jre14-2.1
-WRKSRC=		${WRKDIR}/j2re1.4.2_01
+DISTNAME=	j2re-1_4_2_02-linux-i586
+PKGNAME=	sun-jre14-2.2
+WRKSRC=		${WRKDIR}/j2re1.4.2_02
 MASTER_SITES=	# empty
 
 COMMENT=	Sun's Java(tm) 2 Runtime Environment 1.4.2
