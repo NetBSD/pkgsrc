@@ -1,11 +1,12 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/03/12 22:19:18 fredette Exp $
-sbin/latd
-sbin/latcp
-sbin/moprc
+@comment $NetBSD: PLIST,v 1.2 2003/10/21 20:55:42 xtraeme Exp $
 bin/llogin
-etc/latd.conf
 man/man1/llogin.1
 man/man5/latd.conf.5
-man/man8/latd.8
 man/man8/latcp.8
+man/man8/latd.8
 man/man8/moprc.8
+sbin/latcp
+sbin/latd
+sbin/moprc
+share/examples/latd/latd.conf
+@dirrm share/examples/latd
