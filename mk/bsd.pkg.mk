@@ -1,7 +1,7 @@
 #-*- mode: Fundamental; tab-width: 4; -*-
 # ex:ts=4
 #
-#	$NetBSD: bsd.pkg.mk,v 1.68 1998/04/20 08:24:58 frueauf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.69 1998/04/20 10:16:24 agc Exp $
 #
 #	This file is derived from bsd.port.mk - 940820 Jordan K. Hubbard.
 #	This file is in the public domain.
@@ -552,7 +552,7 @@ MTREE_ARGS?=	-U -f ${MTREE_FILE} -d -e -p
 MAKE_ENV+=	EXTRA_SYS_MK_INCLUDES="<bsd.own.mk>"
 .elif (${OPSYS} == "NetBSD")
 NEED_OWN_INSTALL_TARGET=	no
-.include <bsd.own.mk>
+.include "../../mk/bsd.own.mk"
 SHAREOWN = ${DOCOWN}
 SHAREGRP = ${DOCGRP}
 SHAREMODE = ${DOCMODE}
