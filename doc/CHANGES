@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8687 2005/01/10 21:56:27 adrianp Exp $
+$NetBSD: CHANGES,v 1.8688 2005/01/11 02:10:37 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -215,3 +215,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Removed sendmail811 [adrianp 2005-01-10]
 	Updated getmail to 4.3.0 [schmonz 2005-01-10]
 	Updated dillo to 0.8.3nb2 [adrianp 2005-01-10]
+	Updated mklivecd to 0.9 [xtraeme 2005-01-11]
