@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:39:40 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/20 13:52:21 agc Exp $
 
-MD5 (splitvt-1.6.3.tar.gz) = e95e166145ec51d2a9d80aa6472f9f98
+SHA1 (splitvt-1.6.3.tar.gz) = 0a2ca870a770b663b50b92881e31eb3492107cec
+Size (splitvt-1.6.3.tar.gz) = 57692 bytes

@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:39:30 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/20 13:52:20 agc Exp $
 
-MD5 (sch-20010224.tar.gz) = 95ddf897a75fe9b05fbdda6b7d2963e0
+SHA1 (sch-20010224.tar.gz) = 428f3581d4705d5816430efbb3b49634f2f38b32
+Size (sch-20010224.tar.gz) = 185050 bytes

@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:37:33 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/20 13:52:09 agc Exp $
 
-MD5 (cowsay-3.03.tar.gz) = b29169797359420dadb998079021a494
+SHA1 (cowsay-3.03.tar.gz) = cc65a9b13295c87df94a58caa8a9176ce5ec4a27
+Size (cowsay-3.03.tar.gz) = 15189 bytes
 SHA1 (patch-aa) = 2613aabd26116b6f800f8b5a814fa0d29f852c52
