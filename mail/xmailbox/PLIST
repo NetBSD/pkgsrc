@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2002/06/26 10:29:48 seb Exp $
+@comment $NetBSD: PLIST,v 1.4 2003/03/02 20:19:43 jschauma Exp $
 bin/xmailbox
 lib/X11/app-defaults/XMailbox
 share/xmailbox/0xmail1.xpm
@@ -9,6 +9,6 @@ share/xmailbox/4xmail1.xpm
 share/xmailbox/5xmail1.xpm
 share/xmailbox/xmail1.xpm
 share/xmailbox/xnomail1.xpm
-man/cat1/xmailbox.0
+${IMAKE_MAN_DIR}/xmailbox.${IMAKE_MANNEWSUFFIX}
 @exec ${MKDIR} %D/share/xmailbox
 @unexec ${RM} -rf %D/share/xmailbox
