@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2005/03/23 22:18:51 markd Exp $
+@comment $NetBSD: PLIST,v 1.12 2005/03/25 15:06:23 markd Exp $
 bin/atlantikdesigner
 bin/exif.py
 bin/fsview
@@ -62,7 +62,6 @@ lib/kde3/libwebarchiverplugin.la
 lib/kde3/math_panelapplet.la
 lib/kde3/mediacontrol_panelapplet.la
 lib/kde3/noatun_ffrs.la
-lib/kde3/noatun_oblique.la
 lib/kde3/noatunalsaplayer.la
 lib/kde3/noatunblurscope.la
 lib/kde3/noatuncharlatan.la
@@ -267,9 +266,6 @@ share/kde/apps/noatun/luckytag.plugin
 share/kde/apps/noatun/lyrics.plugin
 share/kde/apps/noatun/lyricsui.rc
 share/kde/apps/noatun/madness.plugin
-share/kde/apps/noatun/oblique.plugin
-share/kde/apps/noatun/oblique/schemas/standard
-share/kde/apps/noatun/obliqueui.rc
 share/kde/apps/noatun/pitchablespeed.plugin
 share/kde/apps/noatun/synaescope.plugin
 share/kde/apps/noatun/tippecanoe.plugin
