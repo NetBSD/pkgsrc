@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2003/02/15 11:02:29 wiz Exp $
+@comment $NetBSD: PLIST,v 1.17 2003/06/10 10:47:04 jmmv Exp $
 bin/gdk-pixbuf-csource
 bin/gdk-pixbuf-query-loaders
 bin/gtk-demo
@@ -261,22 +261,22 @@ lib/libgdk-x11-2.0.a
 lib/libgdk-x11-2.0.la
 lib/libgdk-x11-2.0.so
 lib/libgdk-x11-2.0.so.200
-lib/libgdk-x11-2.0.so.200.1
+lib/libgdk-x11-2.0.so.200.2
 lib/libgdk_pixbuf-2.0.a
 lib/libgdk_pixbuf-2.0.la
 lib/libgdk_pixbuf-2.0.so
 lib/libgdk_pixbuf-2.0.so.200
-lib/libgdk_pixbuf-2.0.so.200.1
+lib/libgdk_pixbuf-2.0.so.200.2
 lib/libgdk_pixbuf_xlib-2.0.a
 lib/libgdk_pixbuf_xlib-2.0.la
 lib/libgdk_pixbuf_xlib-2.0.so
 lib/libgdk_pixbuf_xlib-2.0.so.200
-lib/libgdk_pixbuf_xlib-2.0.so.200.1
+lib/libgdk_pixbuf_xlib-2.0.so.200.2
 lib/libgtk-x11-2.0.a
 lib/libgtk-x11-2.0.la
 lib/libgtk-x11-2.0.so
 lib/libgtk-x11-2.0.so.200
-lib/libgtk-x11-2.0.so.200.1
+lib/libgtk-x11-2.0.so.200.2
 lib/pkgconfig/gdk-2.0.pc
 lib/pkgconfig/gdk-pixbuf-2.0.pc
 lib/pkgconfig/gdk-pixbuf-xlib-2.0.pc
@@ -616,6 +616,7 @@ share/doc/html/gtk/stock_cancel_20.png
 share/doc/html/gtk/stock_cdrom_24.png
 share/doc/html/gtk/stock_clear_24.png
 share/doc/html/gtk/stock_close_24.png
+share/doc/html/gtk/stock_color_picker_25.png
 share/doc/html/gtk/stock_colorselector_24.png
 share/doc/html/gtk/stock_convert_24.png
 share/doc/html/gtk/stock_copy_24.png
@@ -715,7 +716,6 @@ ${PKGLOCALEDIR}/locale/cy/LC_MESSAGES/gtk20.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/gtk20.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gtk20.mo
 ${PKGLOCALEDIR}/locale/el/LC_MESSAGES/gtk20.mo
-${PKGLOCALEDIR}/locale/en@IPA/LC_MESSAGES/gtk20.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/gtk20.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/gtk20.mo
 ${PKGLOCALEDIR}/locale/et/LC_MESSAGES/gtk20.mo
@@ -730,12 +730,14 @@ ${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/gtk20.mo
 ${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/gtk20.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/gtk20.mo
 ${PKGLOCALEDIR}/locale/ia/LC_MESSAGES/gtk20.mo
+${PKGLOCALEDIR}/locale/id/LC_MESSAGES/gtk20.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/gtk20.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/gtk20.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/gtk20.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/gtk20.mo
 ${PKGLOCALEDIR}/locale/lv/LC_MESSAGES/gtk20.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/gtk20.mo
+${PKGLOCALEDIR}/locale/ml/LC_MESSAGES/gtk20.mo
 ${PKGLOCALEDIR}/locale/mn/LC_MESSAGES/gtk20.mo
 ${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/gtk20.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/gtk20.mo
@@ -748,14 +750,15 @@ ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/gtk20.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/gtk20.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/gtk20.mo
 ${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/gtk20.mo
-${PKGLOCALEDIR}/locale/sp/LC_MESSAGES/gtk20.mo
 ${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/gtk20.mo
+${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/gtk20.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gtk20.mo
 ${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/gtk20.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/gtk20.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/gtk20.mo
 ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/gtk20.mo
 ${PKGLOCALEDIR}/locale/wa/LC_MESSAGES/gtk20.mo
+${PKGLOCALEDIR}/locale/yi/LC_MESSAGES/gtk20.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/gtk20.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/gtk20.mo
 share/themes/Default/gtk-2.0-key/gtkrc
@@ -773,7 +776,7 @@ share/themes/Emacs/gtk-2.0-key/gtkrc
 @dirrm share/doc/html/gtk
 @dirrm share/doc/html/gdk-pixbuf
 @dirrm share/doc/html/gdk
-@exec ${MKDIR} %D/lib/gtk-2.0/modules 2>/dev/null || ${TRUE}
+@exec ${MKDIR} %D/lib/gtk-2.0/modules 2>/dev/null || %{TRUE}
 @dirrm lib/gtk-2.0/modules
 @dirrm lib/gtk-2.0/include
 @dirrm lib/gtk-2.0/2.2.0/loaders
