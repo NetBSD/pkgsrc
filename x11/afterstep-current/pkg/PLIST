@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 1999/08/24 10:16:40 fredb Exp $
+@comment $NetBSD: PLIST,v 1.3 1999/08/29 14:16:14 fredb Exp $
 bin/ASSound
 bin/Animate
 bin/Audio
@@ -98,6 +98,8 @@ share/afterstep/desktop/buttons/5-e.xpm
 share/afterstep/desktop/buttons/5.xpm
 share/afterstep/desktop/buttons/5p-e.xpm
 share/afterstep/desktop/buttons/5p.xpm
+share/afterstep/desktop/buttons/as1.5-iconizeR.xpm
+share/afterstep/desktop/buttons/as1.5-iconizeR-p.xpm
 share/afterstep/desktop/buttons/as-iconize-pressed.xpm
 share/afterstep/desktop/buttons/as-iconize.xpm
 share/afterstep/desktop/buttons/as-kill-pressed.xpm
@@ -134,9 +136,10 @@ share/afterstep/desktop/buttons/fuf-shade-pressed.xpm
 share/afterstep/desktop/buttons/fuf-shade.xpm
 share/afterstep/desktop/buttons/fuf-switchwindow-pressed.xpm
 share/afterstep/desktop/buttons/fuf-switchwindow.xpm
-share/afterstep/desktop/buttons/fuf-test.xpm
 share/afterstep/desktop/buttons/fuf-windowmenu-pressed.xpm
 share/afterstep/desktop/buttons/fuf-windowmenu.xpm
+share/afterstep/desktop/buttons/g_iconize.xpm
+share/afterstep/desktop/buttons/g_shut.xpm
 share/afterstep/desktop/buttons/os8-iconize-pressed.xpm
 share/afterstep/desktop/buttons/os8-iconize.xpm
 share/afterstep/desktop/buttons/os8-kill-pressed.xpm
@@ -326,7 +329,6 @@ share/afterstep/desktop/icons/8bpp/widget.xpm
 share/afterstep/desktop/icons/8bpp/workshop.xpm
 share/afterstep/desktop/icons/8bpp/writeletter.xpm
 share/afterstep/desktop/icons/common/3_dots.xpm
-share/afterstep/desktop/icons/common/98.xpm
 share/afterstep/desktop/icons/common/AfterStep7.xpm
 share/afterstep/desktop/icons/common/AfterStep8.xpm
 share/afterstep/desktop/icons/common/Earth.xpm
@@ -339,18 +341,13 @@ share/afterstep/desktop/icons/common/arrow.xpm
 share/afterstep/desktop/icons/common/bebutton.xpm
 share/afterstep/desktop/icons/common/bluebar.xpm
 share/afterstep/desktop/icons/common/darkbluebar.xpm
-share/afterstep/desktop/icons/common/dk.xpm
 share/afterstep/desktop/icons/common/e.xpm
-share/afterstep/desktop/icons/common/fr.xpm
+share/afterstep/desktop/icons/common/east.xpm
 share/afterstep/desktop/icons/common/fuf-new-menu-top.xpm
 share/afterstep/desktop/icons/common/fuf-new-top-focused.xpm
 share/afterstep/desktop/icons/common/fuf-new-top-unfocused.xpm
 share/afterstep/desktop/icons/common/fuf-wharf.xpm
-share/afterstep/desktop/icons/common/g_iconize.xpm
-share/afterstep/desktop/icons/common/g_shut.xpm
-share/afterstep/desktop/icons/common/gnome-logo.xpm
 share/afterstep/desktop/icons/common/greenbar.xpm
-share/afterstep/desktop/icons/common/hr.xpm
 share/afterstep/desktop/icons/common/mini-app.xpm
 share/afterstep/desktop/icons/common/mini-as.xpm
 share/afterstep/desktop/icons/common/mini-exit.xpm
@@ -380,9 +377,12 @@ share/afterstep/desktop/icons/common/ostxu.xpm
 share/afterstep/desktop/icons/common/redbar.xpm
 share/afterstep/desktop/icons/common/s.xpm
 share/afterstep/desktop/icons/common/se.xpm
+share/afterstep/desktop/icons/common/south.xpm
+share/afterstep/desktop/icons/common/southeast.xpm
+share/afterstep/desktop/icons/common/southwest.xpm
 share/afterstep/desktop/icons/common/sw.xpm
-share/afterstep/desktop/icons/common/vr.xpm
 share/afterstep/desktop/icons/common/w.xpm
+share/afterstep/desktop/icons/common/west.xpm
 share/afterstep/desktop/icons/common/xiterm.xpm
 share/afterstep/desktop/sounds/bong.au
 share/afterstep/desktop/sounds/clink.au
@@ -421,11 +421,12 @@ share/afterstep/looks/look.DEFAULT
 share/afterstep/looks/look.DeepBlue
 share/afterstep/looks/look.Ethan
 share/afterstep/looks/look.Ethan2
+share/afterstep/looks/look.Frames
 share/afterstep/looks/look.Guylhem
-share/afterstep/looks/look.Guylhem2
 share/afterstep/looks/look.MacOS8
 share/afterstep/looks/look.Metallic
 share/afterstep/looks/look.Nextish
+share/afterstep/looks/look.NEW-stuff
 share/afterstep/looks/look.Ostx
 share/afterstep/looks/look.PureNext
 share/afterstep/looks/look.Sea
@@ -436,10 +437,8 @@ share/afterstep/looks/look.grey
 share/afterstep/looks/look.greyblue
 share/afterstep/looks/look.lightblue
 share/afterstep/looks/look.lightgrey
-share/afterstep/looks/look.nek
 share/afterstep/looks/look.orchid
 share/afterstep/looks/look.purple
-share/afterstep/looks/look.turquoise
 share/afterstep/non-configurable/0_background
 share/afterstep/non-configurable/0_feel.15bpp
 share/afterstep/non-configurable/0_feel.16bpp
@@ -484,9 +483,6 @@ share/afterstep/non-configurable/3_look.16bpp
 share/afterstep/non-configurable/3_look.24bpp
 share/afterstep/non-configurable/3_look.32bpp
 share/afterstep/non-configurable/3_look.8bpp
-share/afterstep/non-configurable/Make8bitXPMs
-share/afterstep/non-configurable/Xpm2Jpg
-share/afterstep/non-configurable/startmenu
 share/afterstep/pager
 share/afterstep/scripts/Animate
 share/afterstep/scripts/BellSetup

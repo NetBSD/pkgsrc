@@ -1,7 +1,7 @@
-$NetBSD: patch-ah,v 1.1 1999/08/24 10:16:40 fredb Exp $
+$NetBSD: patch-ah,v 1.2 1999/08/29 14:16:13 fredb Exp $
 
---- autoconf/Makefile.common.lib.in.orig
-+++ autoconf/Makefile.common.lib.in
+--- autoconf/Makefile.common.lib.in.orig	Wed Aug 25 17:44:20 1999
++++ autoconf/Makefile.common.lib.in	Fri Aug 27 22:05:30 1999
 @@ -4,7 +4,7 @@
  
  @MAKEFILEDEFINES@
@@ -52,10 +52,10 @@ $NetBSD: patch-ah,v 1.1 1999/08/24 10:16:40 fredb Exp $
  
  #
  # include dependency files if they exist
-@@ -82,13 +63,3 @@
- ifneq ($(wildcard .depend),)
+@@ -84,14 +65,4 @@
+ #ifneq ($(wildcard .depend),)
  include .depend
- endif
+ #endif
 -
 -$(DYNPROG): $(DYNPROG).$(LIBVERMAJOR)
 -	ln -sf $(DYNPROG).$(LIBVERMAJOR) $(DYNPROG)
@@ -66,3 +66,4 @@ $NetBSD: patch-ah,v 1.1 1999/08/24 10:16:40 fredb Exp $
 -$(DYNPROG).$(LIBVER): $(OBJSDLL)
 -	$(CC) -shared -Wl,-soname,$(DYNPROG).$(LIBVERMAJOR) -o $(DYNPROG).$(LIBVER) \
 -	 $(OBJSDLL)
+ 
