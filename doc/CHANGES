@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1180 2003/01/21 11:18:23 skrll Exp $
+$NetBSD: CHANGES,v 1.1181 2003/01/21 11:23:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -342,11 +342,12 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated grepmail to 4.91 [wiz 2003-01-20]
 	Updated aspell-slovak to 0.50.3.1.1 [salo 2003-01-20]
 	Updated p5-Text-CSV-Hash to 0.17 [abs 2003-01-20]
-	Updated libwmf to 0.8.2 [drochner 2003-01-20]
+	Updated libwmf to 0.2.8 [drochner 2003-01-20]
 	Updated gimageview to 0.2.13 [drochner 2003-01-20]
 	Updated zope25-ZPhotoSlides to 0.9 [drochner 2003-01-20]
 	Updated mysql-client to 3.23.49nb3 [lukem 2003-01-21]
 	Updated mysql-server to 3.23.49nb3 [lukem 2003-01-21]
+	Updated gtar-base to 1.13.25nb1 [jschauma 2003-01-21]
 	Updated cvs to 1.11.5 [wiz 2003-01-21]
 	Updated libgtop to 1.0.13nb1 [tron 2003-01-21]
 	Updated ncurses to 5.3 [wiz 2003-01-21]
