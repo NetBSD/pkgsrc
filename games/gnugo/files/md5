@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.3 1999/11/10 21:06:03 hwr Exp $
+$NetBSD: md5,v 1.4 2000/11/21 04:51:36 toshii Exp $
 
-MD5 (gnugo-2.4.tar.gz) = 218dbbf62077d5fe862ae6b3be45e181
+MD5 (gnugo-2.6.tar.gz) = 34c84ae83668a66677df4032fad478d9
