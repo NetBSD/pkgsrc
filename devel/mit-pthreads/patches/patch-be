@@ -1,0 +1,12 @@
+$NetBSD: patch-be,v 1.1 1998/12/28 23:31:37 bad Exp $
+
+--- pthreads/specific.c.orig	Sat Dec 10 20:32:15 1994
++++ pthreads/specific.c	Tue Dec 29 00:16:06 1998
+@@ -42,6 +42,7 @@
+ #include <errno.h>
+ #include <pthread.h>
+ #include <stdlib.h>
++#include <string.h>
+ 
+ static struct pthread_key key_table[PTHREAD_DATAKEYS_MAX];
+ static pthread_mutex_t key_mutex = PTHREAD_MUTEX_INITIALIZER;
