@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.20 2001/02/21 13:31:48 hubertf Exp $
+$NetBSD: md5,v 1.21 2001/03/05 18:24:05 wiz Exp $
 
-MD5 (pkg_install-20010221.tar.gz) = c5e2013bb9db46b76d4523b7a252d719
+MD5 (pkg_install-20010306.tar.gz) = c00c44070ff7eb4297951efad0b313f3
