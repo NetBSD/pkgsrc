@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/06/26 20:23:41 agc Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/02/26 22:44:09 abs Exp $
 bin/dqs_execd332
 bin/dqs_options332
 bin/dqs_random332
@@ -13,6 +13,18 @@ bin/qmove332
 bin/qrls332
 bin/qstat332
 bin/qsub332
+share/doc/html/dqs/Image16.gif
+share/doc/html/dqs/Image17.gif
+share/doc/html/dqs/Image18.gif
+share/doc/html/dqs/Image19.gif
+share/doc/html/dqs/Image20.gif
+share/doc/html/dqs/Image21.gif
+share/doc/html/dqs/Image22.gif
+share/doc/html/dqs/Image23.gif
+share/doc/html/dqs/InstMaint.html
+share/doc/html/dqs/Refernce.html
+share/doc/html/dqs/UserGuide.html
+share/doc/html/dqs/error_msg.htm
 share/examples/dqs/conf_file
 share/examples/dqs/key_file
 share/examples/dqs/resolve_file
