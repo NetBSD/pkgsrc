@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.3 2005/03/23 15:11:32 minskim Exp $
+
+--- sockunix.c.orig	Tue Jan  4 07:15:47 2005
++++ sockunix.c
+@@ -21,6 +21,10 @@
+ #include	<netdb.h>
+ #include	<errno.h>
+ 
++#ifndef MAXDNAME
++#define MAXDNAME NS_MAXDNAME
++#endif
++
+ FILE *sock_open(const char *str, const char *mode);
+ 
+ FILE *
