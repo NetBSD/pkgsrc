@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1998/09/13 19:35:05 garbled Exp $
+# $NetBSD: Makefile,v 1.8 1999/02/20 22:48:46 hubertf Exp $
 #
 
 DISTNAME=			Xaw-Xpm-1.1
@@ -12,7 +12,7 @@ HOMEPAGE=			http://www.zip.com.au/~bb/XawXpm/
 
 DEPENDS+=			xpm-3.4k:../../graphics/xpm
 
-CONFLICTS=			Xaw3d-1.3 Xaw3d-1.5
+CONFLICTS=			Xaw3d-*
 
 USE_IMAKE=			yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 1998/11/26 23:34:13 hubertf Exp $
+# $NetBSD: Makefile,v 1.15 1999/02/20 22:48:36 hubertf Exp $
 #
 
 DISTNAME=	rsync-2.2.1
@@ -10,8 +10,6 @@ MASTER_SITES=	ftp://samba.anu.edu.au/pub/rsync/  \
 
 MAINTAINER=     mycroft@netbsd.org
 HOMEPAGE=	http://samba.anu.edu.au/rsync/
-
-CONFLICTS=	rsync-1.6.9 rsync-2.0.18 rsync-2.1.0 rsync-2.1.1
 
 GNU_CONFIGURE=	yes
 

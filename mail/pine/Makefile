@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 1998/11/13 16:32:37 tv Exp $
+# $NetBSD: Makefile,v 1.28 1999/02/20 22:48:34 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.21 1997/03/26 02:12:07 ache Exp
 #
 
@@ -12,8 +12,6 @@ HOMEPAGE=	http://www.washington.edu/pine/
 
 # This pkg doesn't build pico or libpico; the pico pkg does that part.
 DEPENDS=	pico-3.4:../../editors/pico
-
-CONFLICTS=	pine-3.96 pine-4.00 pine-4.02
 
 do-configure:
 	${CP} -f ${WRKSRC}/pine/osdep/os-neb.h ${WRKSRC}/pine/osdep/os-neb.h.orig

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 1998/11/05 06:35:24 mycroft Exp $
+# $NetBSD: Makefile,v 1.14 1999/02/20 22:48:24 hubertf Exp $
 #
 
 DISTNAME=	xmcd-2.4
@@ -9,8 +9,6 @@ MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://sunsite.unc.edu/~cddb/xmcd/index.html
 
 DEPENDS+=	ncurses-1.9.9g:../../devel/ncurses
-
-CONFLICTS=	xmcd-2.3
 
 USE_MOTIF=	yes
 USE_IMAKE=	yes

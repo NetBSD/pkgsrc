@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 1998/12/20 15:09:30 frueauf Exp $
+# $NetBSD: Makefile,v 1.14 1999/02/20 22:48:31 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/08/29 12:17:50 tg Exp
 #
 
@@ -14,8 +14,6 @@ DEPENDS+=	xpm-3.4k:../../graphics/xpm
 DEPENDS+=	tiff-3.4:../../graphics/tiff
 DEPENDS+=	jpeg-6b:../../graphics/jpeg
 DEPENDS+=	png-1.0.2:../../graphics/png
-
-CONFLICTS=	xpaint-2.5
 
 USE_IMAKE=      yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 1998/12/18 00:42:39 tsarna Exp $
+# $NetBSD: Makefile,v 1.11 1999/02/20 22:48:25 hubertf Exp $
 
 DISTNAME=	MySQLmodule-1.4
 PKGNAME=	py-mysql-1.4
@@ -12,8 +12,6 @@ HOMEPAGE=	http://snail.earthlight.co.nz/projects.html
 
 DEPENDS+=	python-1.5.1:../../lang/python \
 		mysql>=3.21:../../databases/mysql
-
-CONFLICTS=	py-mysql-1.1
 
 EXTRACT_ONLY=	MySQLmodule-1.4${EXTRACT_SUFX}
 ALL_TARGET=	default

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 1998/11/30 18:58:09 tv Exp $
+# $NetBSD: Makefile,v 1.14 1999/02/20 22:48:30 hubertf Exp $
 #
 
 DISTNAME=	jpegsrc.v6b
@@ -8,8 +8,6 @@ MASTER_SITES=	ftp://ftp.uu.net/graphics/jpeg/
 
 MAINTAINER=	mycroft@netbsd.org
 HOMEPAGE=	http://www.ijg.org/
-
-CONFLICTS=	jpeg-6a
 
 USE_LIBTOOL=	yes
 

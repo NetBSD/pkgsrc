@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 1998/12/14 10:25:50 frueauf Exp $
+# $NetBSD: Makefile,v 1.11 1999/02/20 22:48:43 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.9 1997/11/12 03:24:41 obrien Exp
 #
 
@@ -11,8 +11,6 @@ EXTRACT_SUFX=	.tar.Z
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.courtesan.com/courtesan/products/sudo/
-
-CONFLICTS=	sudo-1.5.3 sudo-1.5.4p1 sudo-1.5.6p2
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--with-C2 --with-skey --with-nbsdops --disable-path-info

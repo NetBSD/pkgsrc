@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 1999/02/17 02:46:47 hubertf Exp $
+# $NetBSD: Makefile,v 1.24 1999/02/20 22:48:43 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/11/05 23:55:31 asami Exp
 #
 
@@ -8,8 +8,6 @@ MASTER_SITES=	ftp://ftp.fokus.gmd.de/pub/unix/cdrecord/
 
 MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://www.fokus.gmd.de/nthp/employees/schilling/cdrecord.html
-
-CONFLICTS=	cdrecord-*
 
 USE_GMAKE=	yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 1999/02/08 23:31:59 tron Exp $
+# $NetBSD: Makefile,v 1.9 1999/02/20 22:48:34 hubertf Exp $
 #
 
 DISTNAME=       imap-4.5
@@ -14,8 +14,6 @@ USE_LIBTOOL=	yes
 
 INST_PROG=	${LIBTOOL} ${INSTALL_PROGRAM}
 INST_LIB=	${LIBTOOL} ${INSTALL_DATA}
-CONFLICTS=	imap-uw-*
-
 MESSAGE_FILE=	${WRKDIR}/.MESSAGE
 
 do-configure:

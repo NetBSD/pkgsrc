@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 1999/02/03 13:00:18 frueauf Exp $
+# $NetBSD: Makefile,v 1.38 1999/02/20 22:48:33 hubertf Exp $
 #
 
 DISTNAME=       fetchmail-4.7.7
@@ -9,8 +9,6 @@ MASTER_SITES=	ftp://ftp.ccil.org/pub/esr/fetchmail/ \
 
 MAINTAINER=	mycroft@netbsd.org
 HOMEPAGE=	http://sagan.earthspace.net/~esr/fetchmail/
-
-CONFLICTS=	fetchmail-*
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=  LDFLAGS="${CFLAGS}"

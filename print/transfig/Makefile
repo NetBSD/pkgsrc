@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 1998/08/27 13:46:00 garbled Exp $
+# $NetBSD: Makefile,v 1.11 1999/02/20 22:48:42 hubertf Exp $
 #
 
 DISTNAME=		transfig.3.2.1
@@ -12,8 +12,6 @@ MAINTAINER=		root@garbled.net
 
 DEPENDS+=		xpm-3.4k:../../graphics/xpm
 DEPENDS+=		jpeg-6b:../../graphics/jpeg
-
-CONFLICTS=		transfig-3.2
 
 USE_IMAKE=		yes
 

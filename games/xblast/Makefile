@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1998/11/10 08:34:55 garbled Exp $
+# $NetBSD: Makefile,v 1.8 1999/02/20 22:48:29 hubertf Exp $
 #
 
 DISTNAME=		xblast-2.6.beta-sound
@@ -12,8 +12,6 @@ HOMEPAGE=		http://www.ikp.uni-koeln.de/~vogel/xblast/xblast.html
 
 BUILD_DEPENDS+=		wish8.0:../../x11/tk80
 BUILD_DEPENDS+=		tclsh8.0:../../lang/tcl80
-
-CONFLICTS=		xblast-2.2
 
 USE_IMAKE=		yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1999/01/29 19:26:37 bad Exp $
+# $NetBSD: Makefile,v 1.6 1999/02/20 22:48:45 hubertf Exp $
 #
 
 DISTNAME=	squid-2.0.PATCH2
@@ -11,11 +11,6 @@ MASTER_SITES=  \
 	ftp://sunsite.auc.dk/pub/infosystems/squid/squid-2/ \
 	ftp://ftp.net.lut.ac.uk/squid/squid-2/
 EXTRACT_SUFX=	-src.tar.gz
-
-CONFLICTS=	squid-1.1.21 \
-		squid-2.0.PRE1 \
-		squid-2.0.RELEASE \
-		squid-2.0.PATCH1
 
 MAINTAINER=	kim@tac.nyc.ny.us
 HOMEPAGE=	http://squid.nlanr.net/Squid/
