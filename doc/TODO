@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2495 2004/11/26 22:20:40 snj Exp $
+$NetBSD: TODO,v 1.2496 2004/11/26 23:05:37 darcy Exp $
 
 Suggested new packages
 ======================
@@ -474,7 +474,6 @@ Suggested package updates
 	o enscript-1.6.4
 	o epic4-2.1.1
 	o epiphany-extensions-1.4.2
-	o epydoc-2.1
 	o erlang-10b.1a
 	o esh-0.8.5
 	o etach-1.4.0
@@ -525,7 +524,6 @@ Suggested package updates
 	o gdm-2.6.0.6
 	o gdm1-2.2.5.5
 	o geg-1.0.2
-	o generate-2.1
 	o generator-0.35
 	o getmail-4.2.4
 	o gettext-0.14.1
@@ -1080,7 +1078,6 @@ Suggested package updates
 	o py-ZODB-3.2.3
 	o py-amkCrypto-2.0
 	o py-curl-7.12.2
-	o py-generate-2.1
 	o py-gnuplot-1.7
 	o py-gtk2-2.4.1
 	o py-ldap-2.0.5
