@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1283 2003/09/14 15:32:30 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1284 2003/09/14 16:41:30 danw Exp $
 #
 # This file is in the public domain.
 #
@@ -2761,8 +2761,11 @@ do-shlib-handling:
 					next				\
 				}					\
 				/.*\/lib[^\/]+\.so$$/ {			\
-					libtool_release($$0);		\
 					lines[NR] = $$0;		\
+					if (system("${TEST} -e ${PREFIX}/" $$0) == 0) { \
+						next;			\
+					}				\
+					libtool_release($$0);		\
 					links[linkc++] = $$0;		\
 					if (sub("-[^-]+\.so$$", "\.so")) { \
 						links[linkc++] = $$0;	\
