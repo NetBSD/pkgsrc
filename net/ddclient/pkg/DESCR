@@ -1,0 +1,10 @@
+ddclient is a Perl client used to update dynamic DNS entries for accounts
+on Dynamic DNS Network Services' free DNS service.  See http://www.dyndns.org
+for details on obtaining a free account.
+
+Comments can always be sent to:
+        mailto:paul+ddclient@burry.dyndns.org
+
+If you use ddclient, please send a brief note to:
+        mailto:paul+ddclient@burry.dyndns.org
+and indicate if you would like to be notified of new releases.

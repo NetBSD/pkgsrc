@@ -1,0 +1,6 @@
+
+1. Please register at http://www.dyndns.org/
+
+2. Copy /usr/pkg/etc/ddclient.conf-example to /usr/pkg/etc/ddclient.conf
+   and adjust to your needs.
+

@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/08/07 02:50:12 hubertf Exp $
+bin/ddclient
+etc/ddclient.conf-example
+share/doc/ddclient/COPYING
+share/doc/ddclient/COPYRIGHT
+share/doc/ddclient/README
+share/doc/ddclient/sample-etc_cron.d_ddclient
+share/doc/ddclient/sample-etc_dhcpc_dhcpcd-eth0.exe
+share/doc/ddclient/sample-etc_ppp_ip-up.local
+share/doc/ddclient/contrib/ddupdate
+@dirrm share/doc/ddclient/contrib
+@dirrm share/doc/ddclient
