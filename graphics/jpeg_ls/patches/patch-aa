@@ -1,0 +1,31 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/12/21 21:29:08 wiz Exp $
+
+--- Decoder/global.h.orig	Tue Jun 22 21:04:33 1999
++++ Decoder/global.h
+@@ -95,8 +95,6 @@ extern char	*plane_int_string,
+ 			*pixel_int_string;
+ 
+ 
+-#define BIG_ENDIAN	1
+-
+ typedef struct	jpeg_ls {
+ 
+ 	int	columns,					/* The number of columns */
+@@ -318,7 +316,7 @@ extern int alpha;
+ extern int vLUT[3][2 * LUTMAX16];
+ extern int lutmax;
+ extern int classmap[CONTEXTS1];
+-extern int *qdiv0, *qdiv,        /* quantization table (division via look-up) */
++extern int *qdiv0, *qdiv1,        /* quantization table (division via look-up) */
+ 	   *qmul0, *qmul;        /* dequantization table */
+ 
+ /* statistics tables */
+@@ -359,7 +357,7 @@ void prepareLUTs();
+ void prepare_qtables(int, int);
+ void init_stats(int);
+ 
+-#ifdef BIG_ENDIAN
++#ifdef NEVER_ASSUME_BIG_ENDIAN
+ #    define ENDIAN8(x)   (x)
+ #    define ENDIAN16(x)   (x)
+ #else
