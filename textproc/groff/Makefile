@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/05/15 08:11:01 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2003/05/22 01:50:07 jmc Exp $
 #
 
 DISTNAME=	groff-1.19
@@ -10,7 +10,8 @@ MAINTAINER=	wiz@netbsd.org
 HOMEPAGE=	http://www.gnu.org/software/groff/groff.html
 COMMENT=	GNU roff text processing suite
 
-BUILD_DEPENDS+=	netpbm>=10.0:../../graphics/netpbm
+DEPENDS+=	netpbm>=10.0:../../graphics/netpbm
+DEPENDS+=	psutils>=1.17:../../print/psutils
 
 GNU_CONFIGURE=	YES
 USE_PERL5=	YES
@@ -24,5 +25,6 @@ INFO_FILES=	groff
 CONFIGURE_ENV+=	PAGE=${PAPERSIZE}
 .endif
 
+.include "../../mk/ghostscript.mk"
 .include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
