@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2002/02/28 02:41:28 jun Exp $
+# $NetBSD: Makefile,v 1.47 2002/05/07 23:27:47 hubertf Exp $
 
 DISTNAME=	mew-2.2
 CATEGORIES=	mail
@@ -7,6 +7,8 @@ MASTER_SITES=	ftp://ftp.mew.org/pub/Mew/
 MAINTAINER=	tech-pkg-ja@jp.netbsd.org
 HOMEPAGE=	http://www.mew.org/
 COMMENT=	Messaging in the Emacs World
+
+CONFLICTS=+	mew-xemacs-2.*
 
 DEPENDS+=	emacs>=20.7:../../editors/emacs
 
