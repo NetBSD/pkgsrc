@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/09/18 14:26:52 kim Exp $
+# $NetBSD: Makefile,v 1.2 1999/09/18 16:16:07 kim Exp $
 #
 
 DISTNAME=	gzip-1.2.4a
@@ -10,7 +10,7 @@ EXTRACT_SUFX=	.shar
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.gnu.org/software/gzip/gzip.html
 
-EXTRACT_CMD=	${CAT} ${DOWNLOADED_DISTFILE} | ${TR} -d \\r | ${SH}
+EXTRACT_CMD=	${DECOMPRESS_CMD} ${DOWNLOADED_DISTFILE} | ${SH}
 
 USE_GTEXINFO=	yes
 INFO_FILES=	gzip.info
