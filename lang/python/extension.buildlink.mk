@@ -1,4 +1,4 @@
-# $NetBSD: extension.buildlink.mk,v 1.2 2001/10/29 05:45:09 jmc Exp $
+# $NetBSD: extension.buildlink.mk,v 1.3 2001/10/29 16:34:40 drochner Exp $
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -95,15 +95,6 @@ do-install:
 	(cd ${WRKSRC} && ${PYTHONBIN} ${PYSETUP} ${PYSETUPINSTALLARGS} install)
 .endif
 
-PY_PLIST_TEMPLATE?=	${PKGDIR}/PLIST
-PY_PLIST_SRC?=		${WRKDIR}/.PLIST_SRC
-
-py_patchplist:
-	${SED} "s|PYINC|${PYINC}|g;s|PYSITELIB|${PYSITELIB}|g" \
-	<${PY_PLIST_TEMPLATE} >${PY_PLIST_SRC}
-
 .if defined(PY_PATCHPLIST)
-PLIST_SRC?=	${PY_PLIST_SRC}
-
-pre-install: py_patchplist
+PLIST_SUBST+=	PYINC=${PYINC} PYSITELIB=${PYSITELIB}
 .endif
