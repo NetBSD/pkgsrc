@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8120 2004/11/28 23:12:31 wiz Exp $
+$NetBSD: CHANGES,v 1.8121 2004/11/28 23:32:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5604,3 +5604,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated p5-MIME-Base64 to 3.05 [wiz 2004-11-28]
 	Updated p5-MIME-tools to 5.145 [wiz 2004-11-28]
 	Updated shmux to 1.0b5 [wiz 2004-11-28]
+	Updated amavisd-new to 2.2.0 [wiz 2004-11-28]
