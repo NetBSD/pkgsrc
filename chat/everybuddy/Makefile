@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/07/13 13:50:45 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2003/08/09 17:11:04 seb Exp $
 
 .include "Makefile.common"
 PKGREVISION=	4
@@ -10,3 +10,8 @@ CONFLICTS+=	everybuddy-gnome-[0-9]*
 .include "../../converters/libiconv/buildlink2.mk"
 .include "../../x11/gtk/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
+
+_ICONV_LIB=	${BUILDLINK_LIBICONV_LDADD:M-l*:C/-l//}
+.if empty(_ICONV_LIB)
+BUILDLINK_TRANSFORM+=	S:-liconv:
+.endif
