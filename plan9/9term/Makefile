@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2000/01/10 01:39:05 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2000/05/15 11:54:42 agc Exp $
 # FreeBSD Id: Makefile,v 1.5 1996/12/07 23:43:56 asami Exp
 #
 
@@ -11,7 +11,7 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.psrg.cs.usyd.edu.au/~matty/9term/index.html
 
 # needs library and private header, but not during runtime
-BUILD_DEPENDS=		${BUILD_ROOT}/plan9/sam/${WRKDIR:T}/libframe/libframe.a:../../plan9/sam:all
+BUILD_DEPENDS=		${BUILD_ROOT}/editors/sam/${WRKDIR:T}/libframe/libframe.a:../../editors/sam:all
 
 USE_X11=		yes
 
