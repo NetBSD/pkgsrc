@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.559 2002/11/20 03:27:35 itojun Exp $
+$NetBSD: CHANGES,v 1.560 2002/11/20 08:47:16 tron Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3667,3 +3667,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated ap-ssl to 2.8.12nb1 [jlam 2002-11-19]
 	Updated ap2-perl to 1.99.7 [jlam 2002-11-19]
 	Updated racoon to 20021120a [itojun 2002-11-20]
+	Added emacs-dict-client-1.8.2 [tron 2002-11-20]
