@@ -1,6 +1,7 @@
-SHA1 (patch-aa) = 0cfe03d2bbae988a6c59ec4ee67244ed836d7f1d
+$NetBSD: distinfo,v 1.4 2001/06/20 05:39:02 jtb Exp $
 
 SHA1 (zsh-4.0.1.tar.bz2) = f47c555f4d85745017869b15e22d64a67304a716
 Size (zsh-4.0.1.tar.bz2) = 1650945 bytes
 SHA1 (patch-aa) = 0cfe03d2bbae988a6c59ec4ee67244ed836d7f1d
 SHA1 (patch-ab) = 9f9ca7de2eb97308102316ef2acc8b0fa5175f93
+SHA1 (patch-ac) = b1e4355b0f4531622dd25e176057e1c96ee4a96c
