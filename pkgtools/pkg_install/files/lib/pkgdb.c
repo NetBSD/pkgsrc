@@ -1,9 +1,9 @@
-/*	$NetBSD: pkgdb.c,v 1.5 2003/01/14 15:18:35 jschauma Exp $	*/
+/*	$NetBSD: pkgdb.c,v 1.6 2003/02/11 14:40:55 grant Exp $	*/
 
 #if 0
 #include <sys/cdefs.h>
 #ifndef lint
-__RCSID("$NetBSD: pkgdb.c,v 1.5 2003/01/14 15:18:35 jschauma Exp $");
+__RCSID("$NetBSD: pkgdb.c,v 1.6 2003/02/11 14:40:55 grant Exp $");
 #endif
 #endif
 
@@ -209,6 +209,7 @@ pkgdb_remove(const char *key)
 /* remove any entry from the cache which has a data field of `pkg' */
 int
 pkgdb_remove_pkg(const char *pkg)
+#if defined(HAVE_DBOPEN)
 {
 	DBT     data;
 	DBT     key;
@@ -239,6 +240,9 @@ pkgdb_remove_pkg(const char *pkg)
 		}
 	}
 	return ret;
+#else
+	return EXIT_SUCCESS;
+#endif /* HAVE_DBOPEN */
 }
 
 /*
