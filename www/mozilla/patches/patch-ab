@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.23 2002/06/06 02:05:58 taya Exp $
+$NetBSD: patch-ab,v 1.24 2002/07/04 03:45:31 taya Exp $
 
 diff -ru ../Orig/mozilla/configure.in ./configure.in
 --- ../Orig/mozilla/configure.in	Tue May 28 04:29:12 2002
-+++ ./configure.in	Thu Jun  6 09:13:17 2002
++++ ./configure.in	Sun Jun 30 16:28:58 2002
 @@ -1014,6 +1014,13 @@
      if test "$LIBRUNPATH"; then
  	DSO_LDOPTS="-Wl,-R$LIBRUNPATH $DSO_LDOPTS"
@@ -17,3 +17,13 @@ diff -ru ../Orig/mozilla/configure.in ./configure.in
      ;;
  
  *-nto*) 
+@@ -1847,9 +1854,6 @@
+ 				CXXFLAGS="$CXXFLAGS -mt" 
+ 			fi
+ 			;;
+-	*-*-netbsd*)
+-		USE_PTHREADS=
+-		_PTHREAD_LDFLAGS=
+ 	esac
+ fi
+ 

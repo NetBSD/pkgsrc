@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.90 2002/06/23 02:20:07 kei Exp $
+# $NetBSD: Makefile,v 1.91 2002/07/04 03:45:30 taya Exp $
 
 MOZ_VER=	1.0
 DISTNAME=	mozilla-source-${MOZ_VER}
 PKGNAME=	mozilla-${MOZ_VER}
+PKGREVISION=	1
 WRKSRC=		${WRKDIR}/mozilla
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_MOZILLA:=mozilla${MOZ_VER}/src/}
@@ -66,9 +67,10 @@ SCRIPTS_ENV+=	BINGRP=${BINGRP}
 SCRIPTS_ENV+=	BINMODE=${BINMODE}
 SCRIPTS_ENV+=	SETENV=${SETENV}
 
-.include "../../mk/bsd.prefs.mk"
-
-.if (${OPSYS} == "NetBSD")
+# mozilla could be built with nathanw's pthread, but doesn't work now
+# so explicity disable pthread support now.
+# if you want to try pthread version of mozilla, remove # before !exists(...)
+.if (${OPSYS} == "NetBSD") # && !exists(/usr/include/pthread.h)
 CONFIGURE_ARGS+= --without-pthreads
 .endif
 
