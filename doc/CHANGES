@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7382 2004/10/09 14:16:59 hubertf Exp $
+$NetBSD: CHANGES,v 1.7383 2004/10/09 16:27:20 jdolecek Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4589,3 +4589,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated dync to 1.1nb1 [kristerw 2004-10-08]
 	Updated gtk2 to 2.4.11 [jmmv 2004-10-09]
 	Added ttf2pk-1.3.1 [hubertf 2004-10-09]
+	Updated phppgadmin to 3.4.1 [jdolecek 2004-10-09]
