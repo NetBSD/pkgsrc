@@ -1,0 +1,23 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/03/05 23:21:03 hubertf Exp $
+
+--- Makefile.orig	Thu Feb 22 12:00:10 2001
++++ Makefile
+@@ -1,10 +1,8 @@
+ # You can modify CC variable if you have compiler other than GCC
+ # But the code was designed and tested with GCC
+-CC = gcc
+ 
+ # compilation flags
+ # You should comment the line below for AIX+native cc
+-FLAGS = -Wall
+ 
+ # libraries
+ LIBS = -lcrypt
+@@ -15,7 +13,6 @@
+ CRYPTED_PASS = APG_USE_CRYPT
+ 
+ # Install dirs
+-INSTALL_PREFIX = /usr/local
+ APG_BIN_DIR = /bin
+ APG_MAN_DIR = /man/man1
+ APGD_BIN_DIR = /sbin
