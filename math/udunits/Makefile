@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/02/17 18:22:45 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/04/14 21:43:57 jtb Exp $
 
 DISTNAME=		udunits
 PKGNAME=		udunits-1.11.7
@@ -6,7 +6,7 @@ CATEGORIES=		math devel
 MASTER_SITES=		http://www.unidata.ucar.edu/packages/udunits/
 EXTRACT_SUFX=		.tar.Z
 
-MAINTAINER=		jtb@netbsd.org
+MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.unidata.ucar.edu/packages/udunits/
 COMMENT=		Library and program for manipulating units of physical quantities
 

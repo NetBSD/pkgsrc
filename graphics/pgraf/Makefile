@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2001/04/11 21:49:15 jtb Exp $
+# $NetBSD: Makefile,v 1.4 2001/04/14 21:43:44 jtb Exp $
 
 DISTNAME=		pgraf-20010131
 CATEGORIES=		graphics
 MASTER_SITES=		${MASTER_SITE_LOCAL}
 
-MAINTAINER=		jtb@netbsd.org
+MAINTAINER=		packages@netbsd.org
 COMMENT=		Portable graphics system
 
 NO_SRC_ON_FTP=		Already in MASTER_SITE_LOCAL

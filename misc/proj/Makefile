@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/02/17 18:09:19 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/04/14 21:43:58 jtb Exp $
 
 DISTNAME=		PROJ.4.3.3
 PKGNAME=		proj-4.3.3
@@ -7,7 +7,7 @@ MASTER_SITES=		ftp://kai.er.usgs.gov/pub/Proj.4/
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX} PROJ.4.3.ps.gz \
 			OF90-284.ps.gz SWISS.ps.gz
 
-MAINTAINER=		jtb@netbsd.org
+MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://kai.er.usgs.gov/intro/MAPGENdetails.html
 COMMENT=		Cartesian cartographic projection library and programs
 

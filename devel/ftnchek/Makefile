@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2001/03/15 23:48:22 jtb Exp $
+# $NetBSD: Makefile,v 1.5 2001/04/14 21:43:40 jtb Exp $
 
 DISTNAME=	ftnchek-3.0.3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SUNSITE:=devel/lang/fortran/}
 
-MAINTAINER=	jtb@netbsd.org
+MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.dsm.fordham.edu/~ftnchek
 COMMENT=	Static analyzer for Fortran programs
 

@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2001/02/17 18:22:26 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/04/14 21:43:52 jtb Exp $
 
 DISTNAME=		lapack-20010201
 CATEGORIES=		math
 MASTER_SITES=		${MASTER_SITE_LOCAL}
 
-MAINTAINER=		jtb@netbsd.org
+MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.netlib.org/lapack/index.html
 COMMENT=		Linear Algebra PACKage
 
