@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/03/13 19:49:01 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/03/13 19:49:01 zuntum Exp $
+bin/sarah
+etc/sarah.conf.sample
+man/man1/sarah.1
+share/doc/sarah/CHANGES
+share/doc/sarah/README
+@dirrm share/doc/sarah
