@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/02/25 15:53:17 minskim Exp $
+# $NetBSD: Makefile,v 1.13 2004/02/25 18:27:33 minskim Exp $
 
 DISTNAME=	gnutls-1.0.4
 PKGREVISION=	1
@@ -8,6 +8,8 @@ MASTER_SITES=	ftp://ftp.gnutls.org/pub/gnutls/
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.gnutls.org/
 COMMENT=	GNU Transport Layer Security library
+
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=	YES
 USE_LIBTOOL=	YES

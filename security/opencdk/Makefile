@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/02/25 15:53:17 minskim Exp $
+# $NetBSD: Makefile,v 1.9 2004/02/25 18:20:06 minskim Exp $
 #
 
 DISTNAME=	opencdk-0.5.3
@@ -9,6 +9,8 @@ MASTER_SITES=	ftp://ftp.gnutls.org/pub/gnutls/opencdk/
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.gnutls.org/
 COMMENT=	Open Crypto Development Kit
+
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=	YES
 USE_LIBTOOL=	YES
