@@ -1,4 +1,4 @@
-/*	$NetBSD: spec.c,v 1.1 2003/09/05 18:39:00 jlam Exp $	*/
+/*	$NetBSD: spec.c,v 1.2 2003/12/20 04:52:50 grant Exp $	*/
 
 /*-
  * Copyright (c) 1989, 1993
@@ -76,7 +76,7 @@
 #if 0
 static char sccsid[] = "@(#)spec.c	8.2 (Berkeley) 4/28/95";
 #else
-__RCSID("$NetBSD: spec.c,v 1.1 2003/09/05 18:39:00 jlam Exp $");
+__RCSID("$NetBSD: spec.c,v 1.2 2003/12/20 04:52:50 grant Exp $");
 #endif
 #endif /* not lint */
 
@@ -114,6 +114,9 @@ __RCSID("$NetBSD: spec.c,v 1.1 2003/09/05 18:39:00 jlam Exp $");
 #if HAVE_VIS_H
 #include <vis.h>
 #endif
+#if HAVE_UTIL_H
+#include <util.h>
+#endif
 
 #include "extern.h"
 #include "pack_dev.h"
@@ -132,7 +135,7 @@ spec(FILE *fp)
 	NODE *centry, *last, *pathparent, *cur;
 	char *p, *e, *next;
 	NODE ginfo, *root;
-	char *buf, *tname;
+	char *buf, *tname, *ntname;
 	size_t tnamelen, plen;
 
 	root = NULL;
@@ -190,9 +193,10 @@ noparent:		mtree_err("no parent node");
 
 		plen = strlen(p) + 1;
 		if (plen > tnamelen) {
-			tnamelen = plen;
-			if ((tname = realloc(tname, tnamelen)) == NULL)
+			if ((ntname = realloc(tname, plen)) == NULL)
 				mtree_err("realloc: %s", strerror(errno));
+			tname = ntname;
+			tnamelen = plen;
 		}
 		if (strunvis(tname, p) == -1)
 			mtree_err("strunvis failed on `%s'", p);
@@ -434,8 +438,8 @@ replacenode(NODE *cur, NODE *new)
 {
 
 	if (cur->type != new->type)
-		mtree_err("existing entry type `%s' does not match type `%s'",
-		    nodetype(cur->type), nodetype(new->type));
+		mtree_err("existing entry for `%s', type `%s' does not match type `%s'",
+		    cur->name, nodetype(cur->type), nodetype(new->type));
 #define REPLACE(x)	cur->x = new->x
 #define REPLACESTR(x)	if (cur->x) free(cur->x); cur->x = new->x
 
