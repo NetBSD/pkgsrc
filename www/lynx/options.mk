@@ -1,17 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2004/08/22 19:32:52 jlam Exp $
-
-.if defined(LYNX_SCREEN_LIB) && !empty(LYNX_SCREEN_LIB:Mslang)
-PKG_DEFAULT_OPTIONS+=	slang
-.endif
-.if defined(LYNX_SCREEN_LIB) && !empty(LYNX_SCREEN_LIB:Mncurses)
-PKG_DEFAULT_OPTIONS+=	ncurses
-.endif
-.if defined(LYNX_SCREEN_LIB) && !empty(LYNX_SCREEN_LIB:Mcurses)
-PKG_DEFAULT_OPTIONS+=	curses
-.endif
-.if defined(USE_INET6) && !empty(USE_INET6:M[yY][eE][sS])
-PKG_DEFAULT_OPTIONS+=	inet6
-.endif
+# $NetBSD: options.mk,v 1.3 2004/11/17 19:56:49 xtraeme Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.lynx
 PKG_SUPPORTED_OPTIONS=	curses inet6 ncurses slang socks4 socks5

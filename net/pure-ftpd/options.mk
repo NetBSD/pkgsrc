@@ -1,18 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2004/10/29 07:07:44 xtraeme Exp $
-
-# Legacy options
-.if !empty(PURE_FTPD_USE_MYSQL:M[Yy][Ee][Ss])
-PKG_DEFAULT_OPTIONS+=	mysql
-.endif
-.if !empty(PURE_FTPD_USE_PGSQL:M[Yy][Ee][Ss])
-PKG_DEFAULT_OPTIONS+=	pgsql
-.endif
-.if !empty(PURE_FTPD_USE_TLS:M[Yy][Ee][Ss])
-PKG_DEFAULT_OPTIONS+=	ssl
-.endif
-.if !empty(PURE_FTPD_USE_VIRTUAL_CHROOT:M[Yy][Ee][Ss])
-PKG_DEFAULT_OPTIONS+=	virtualchroot
-.endif
+# $NetBSD: options.mk,v 1.3 2004/11/17 19:56:49 xtraeme Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.pureftpd
 PKG_SUPPORTED_OPTIONS=	ldap mysql pgsql ssl virtualchroot

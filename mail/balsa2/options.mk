@@ -1,9 +1,5 @@
-# $NetBSD: options.mk,v 1.1 2004/11/14 17:02:03 jmmv Exp $
+# $NetBSD: options.mk,v 1.2 2004/11/17 19:56:49 xtraeme Exp $
 #
-
-.if defined(USE_OPENLDAP) && ${USE_OPENLDAP} == YES
-PKG_DEFAULT_OPTIONS+=	openldap
-.endif
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.balsa2
 PKG_SUPPORTED_OPTIONS=	openldap ssl

@@ -1,18 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2004/10/12 00:11:10 heinz Exp $
-
-# Global and legacy options
-.if defined(SPAMASSASSIN_USE_SSL) && !empty(SPAMASSASSIN_USE_SSL:M[yY][eE][sS])
-PKG_DEFAULT_OPTIONS+=	ssl
-.endif
-.if defined(SPAMASSASSIN_RAZOR_TESTS) && !empty(SPAMASSASSIN_RAZOR_TESTS:M[yY][eE][sS])
-PKG_DEFAULT_OPTIONS+=	net-tests
-.endif
-.if defined(SPAMASSASSIN_PERL_WARNINGS) && !empty(SPAMASSASSIN_PERL_WARNINGS:M[yY][eE][sS])
-PKG_DEFAULT_OPTIONS+=	perl-warnings
-.endif
-.if defined(SPAMASSASSIN_PERL_TAINT_CHECKS) && !empty(SPAMASSASSIN_PERL_TAINT_CHECKS:M[yY][eE][sS])
-PKG_DEFAULT_OPTIONS+=	perl-taint-checks
-.endif
+# $NetBSD: options.mk,v 1.2 2004/11/17 19:56:49 xtraeme Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.spamassassin
 PKG_SUPPORTED_OPTIONS=	ssl net-tests perl-warnings perl-taint-checks \
