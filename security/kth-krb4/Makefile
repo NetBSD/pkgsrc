@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2004/09/04 23:40:44 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2004/09/05 18:44:56 wiz Exp $
 #
 
 DISTNAME=		krb4-1.2.1
@@ -57,14 +57,6 @@ post-patch:
 		${MV} -f $${file}.fixed $${file};			\
 	done
 
-# enable this once our autoconf has been upgraded to autoconf>=2.52:
-#pre-configure:
-#	cd ${WRKSRC};							\
-#	${ACLOCAL};							\
-#	${AUTOHEADER};							\
-#	${AUTOMAKE} -a --foreign -i;					\
-#	${AUTOCONF}
-
 post-install:
 	${INSTALL_DATA_DIR} ${EXAMPLEDIR}
 	${INSTALL_DATA} ${WRKSRC}/etc/krb.conf ${EXAMPLEDIR}
@@ -73,7 +65,5 @@ post-install:
 	${INSTALL_DATA} ${FILESDIR}/services-1.4.2.diff ${EXAMPLEDIR}
 	${INSTALL_DATA} ${FILESDIR}/services-1.5.diff ${EXAMPLEDIR}
 
-# Enable line below once it's needed
-#.include "../../mk/automake.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
