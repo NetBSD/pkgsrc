@@ -1,7 +1,7 @@
-$NetBSD: patch-bd,v 1.2 1998/08/07 10:35:59 agc Exp $
+$NetBSD: patch-bd,v 1.3 1999/07/06 07:54:35 jlam Exp $
 
---- /dev/null	Sat Jul  4 02:20:57 1998
-+++ usercode/makefile.netbsd	Sat Jul  4 02:29:45 1998
+--- /dev/null	Tue Jul  6 03:03:17 1999
++++ usercode/makefile.netbsd	Tue Jul  6 03:05:03 1999
 @@ -0,0 +1,13 @@
 +# MikMod User Code Makefile for NetBSD
 +
@@ -12,7 +12,7 @@ $NetBSD: patch-bd,v 1.2 1998/08/07 10:35:59 agc Exp $
 +CFLAGS = -O6 -funroll-loops -ffast-math -finline-functions -fomit-frame-pointer -pipe -I$(INCLUDEDIR) -I$(PREFIX)/include -DSOLARIS -DUSE_ZIP
 +
 +mikmod: $(OBJS) $(LIBDIR)/libmikmod.a $(LIBDIR)/libmmio.a
-+	cc -o mikmod $(OBJS) ../playercode/munitrk.o ../playercode/virtch.o ../playercode/npertab.o -L$(LIBDIR) -L$(PREFIX)/lib -lmikmod -lmmio -lncurses
++	cc -o mikmod $(OBJS) ../playercode/munitrk.o ../playercode/virtch.o ../playercode/npertab.o ${LDFLAGS} -L$(LIBDIR) -lmikmod -lmmio -lncurses
 +
 +clean: 
 +	rm -f $(OBJS) mikmod
