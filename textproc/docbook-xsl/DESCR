@@ -1,0 +1,9 @@
+The DocBook XSL stylesheets provide a serie of ready-to-use templates to
+process documents based on the DocBook XML DTD. They can generate different
+types of output files, like XHTML, slides, manpages, JavaDoc...
+
+They are written in a modular fashion. Each of the HTML and FO stylesheets
+starts with a driver file that assembles a collection of component files
+into a complete stylesheet. This modular design puts similar things together
+into smaller files that are easier to write and maintain than one big
+stylesheet.
