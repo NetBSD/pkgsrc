@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2003/12/12 15:38:16 jschauma Exp $
+# $NetBSD: Makefile,v 1.15 2003/12/12 17:17:19 jschauma Exp $
 
 DISTNAME=	j2sdk-1_4_2_03-linux-i586
 PKGNAME=	sun-jdk14-2.3
@@ -6,6 +6,8 @@ WRKSRC=		${WRKDIR}/j2sdk1.4.2_03
 MASTER_SITES=	# empty
 
 COMMENT=	Sun's Java(tm) 2 SDK, Standard Edition 1.4.2
+
+SHORT=		SDK
 
 DEPENDS=	sun-jre14>=2.0:../../lang/sun-jre14
 
@@ -21,21 +23,6 @@ post-extract:
 		fi;							\
 	done
 	${LN} -sf . ${WRKSRC}/jre
-
-_FETCH_MESSAGE= \
-	${ECHO} "======================================================================"; \
-	${ECHO} ; \
-	${ECHO} " The file ${DISTNAME}${EXTRACT_SUFX} containing the"; \
-	${ECHO} " Java(tm) 2 SDK, Standard Edition must be fetched"; \
-	${ECHO} " into:"; \
-	${ECHO} "	${DISTDIR}/${DISTNAME}${EXTRACT_SUFX}"; \
-	${ECHO} " from:"; \
-	${ECHO} "	${DOWNLOAD} or"; \
-	${ECHO} "	${ARCHIVE}"; \
-	${ECHO} ; \
-	${ECHO} " Choose 'Linux self-extracting file' from the 'SDK' column."; \
-	${ECHO} ; \
-	${ECHO} "======================================================================"
 
 .include "../../lang/sun-jre14/Makefile.common"
 
