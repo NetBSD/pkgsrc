@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1118 2003/12/03 17:45:03 sketch Exp $
+$NetBSD: TODO,v 1.1119 2003/12/03 21:07:59 jschauma Exp $
 
 Suggested new packages
 ======================
@@ -293,7 +293,6 @@ Suggested package updates
 	o minicom-2.1
 	o mowitz-0.3.0
 	o mozilla-bin-1.5.1 [grant]
-	o mpich-1.2.5.2 [jschauma]
 	o mplayer-1.0pre2
 	o mrproject-0.9.1
 	o mrtg-2.10.6
