@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.15 2004/03/08 19:52:51 minskim Exp $
+# $NetBSD: Makefile,v 1.16 2004/03/11 07:16:45 minskim Exp $
 #
 
 .include "Makefile.common"
 
 PKGNAME=	tcl-expect-${EXPECT_VERSION}
+PKGREVISION=	1
 CATEGORIES=	lang
 
 MAINTAINER=	jwise@NetBSD.org
 COMMENT=	Extensions to Tcl to support scripting of interactive programs
-
-DEPENDS+=	tcl>=8.3.2:../../lang/tcl83
 
 CONFLICTS+=	expect-[0-9]*
 
@@ -18,4 +17,5 @@ CONFIGURE_ARGS= --enable-shared \
 		--with-tclinclude=${PREFIX}/include/tcl \
 		--without-x
 
+.include "../../lang/tcl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
