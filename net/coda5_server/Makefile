@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2001/06/10 00:08:46 jlam Exp $
+# $NetBSD: Makefile,v 1.30 2001/06/11 02:05:13 jlam Exp $
 #
 
 DISTNAME=		coda-5.3.13
@@ -25,18 +25,14 @@ USE_GMAKE=		yes
 .include "../../devel/rpc2/buildlink.mk"
 .include "../../devel/rvm/buildlink.mk"
 
-CFLAGS+=		-I${BUILDLINK_INCDIR}
-CXXFLAGS+=		-I${BUILDLINK_INCDIR}
-LDFLAGS+=		-L${BUILDLINK_LIBDIR}
-
 DEINSTALL_FILE=		${WRKDIR}/DEINSTALL
 INSTALL_FILE=		${WRKDIR}/INSTALL
 
-INSTALL_SUBST=		CAT=${CAT}
-INSTALL_SUBST+=		LN=${LN}
-INSTALL_SUBST+=		RM=${RM}
-INSTALL_SUBST+=		RMDIR=${RMDIR}
-INSTALL_SUBST+=		TRUE=${TRUE}
+INSTALL_SUBST=		CAT=${CAT:Q}
+INSTALL_SUBST+=		LN=${LN:Q}
+INSTALL_SUBST+=		RM=${RM:Q}
+INSTALL_SUBST+=		RMDIR=${RMDIR:Q}
+INSTALL_SUBST+=		TRUE=${TRUE:Q}
 
 pre-install:
 	${SED} ${INSTALL_SUBST:S/=/@!/:S/$/!g/:S/^/ -e s!@/}		\

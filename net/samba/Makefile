@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2001/06/10 00:08:47 jlam Exp $
+# $NetBSD: Makefile,v 1.56 2001/06/11 02:05:13 jlam Exp $
 
 DISTNAME=		samba-2.2.0
 PKGNAME=		${DISTNAME}nb1
@@ -23,13 +23,10 @@ LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 USE_GNU_READLINE=	# uses rl_event_hook interface to GNU readline
 
+CFLAGS+=		-I${SSLBASE}/include/openssl	# ssl.h, err.h
+
 .include "../../mk/bsd.prefs.mk"
 .include "../../devel/readline/buildlink.mk"
-
-CFLAGS+=		-I${SSLBASE}/include/openssl	# ssl.h, err.h
-CFLAGS+=		-I${BUILDLINK_INCDIR}
-CPPFLAGS+=		-I${BUILDLINK_INCDIR}
-LDFLAGS+=		-L${BUILDLINK_LIBDIR}
 
 SAMBA_LOGDIR=		/var/log
 SAMBA_LOCKDIR=		/var/run/samba
