@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1999/11/29 04:35:47 sakamoto Exp $
+# $NetBSD: Makefile,v 1.6 1999/12/22 05:09:19 sakamoto Exp $
 #
 
 DISTNAME=	Rollemup
@@ -31,11 +31,7 @@ ONLY_FOR_PLATFORM=	*-*-i386
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "NetBSD"
-.if (${MACHINE_ARCH} == "i386")
-.if !exists(/emul/linux/lib/ld-linux.so.2)
-IGNORE= requires Linux glibc2 libraries - see compat_linux(8)
-.endif
-.endif
+DEPENDS=	suse_linux-6.1p1:../../emulators/suse_linux
 .endif
 
 do-build:
