@@ -1,0 +1,27 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/03/30 14:59:28 rh Exp $
+
+--- Makefile.orig	Wed Feb  2 02:01:39 2000
++++ Makefile	Thu Mar 30 16:53:45 2000
+@@ -1,15 +1,15 @@
+ # SScript library makefile.
+ 
+-CC = gcc
+-CFLAGS = -O -Wall
+-
+ all:
+-	${CC} ${CFLAGS} -c sscript.c
+-	ar rc libsscript.a sscript.o
+-	ranlib libsscript.a
++	${LIBTOOL} --mode=compile ${CC} ${CFLAGS} -c sscript.c
++	${LIBTOOL} --mode=link cc -o libsscript.la sscript.lo -rpath ${PREFIX}/lib -version-info 2:0
+ 
+ install:
+-	cp libsscript.a /usr/lib/libsscript.a
++	${LIBTOOL} --mode=install ${BSD_INSTALL_DATA} libsscript.la ${PREFIX}/lib
++	${BSD_INSTALL_DATA_DIR} ${PREFIX}/include/libsscript
++	${BSD_INSTALL_DATA} sscript.h ${PREFIX}/include/libsscript
++	${BSD_INSTALL_DATA_DIR} ${PREFIX}/share/doc/libsscript
++	${BSD_INSTALL_DATA} sscript-lib.doc ${PREFIX}/share/doc/libsscript
+ 
+ clean:
+ 	rm -f *.a *.o *~
