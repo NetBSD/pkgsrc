@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1998/10/02 20:06:35 rvb Exp $
+share/doc/coda-doc-4.6.5/intro/00README
+share/doc/coda-doc-4.6.5/intro/Announcement
+share/doc/coda-doc-4.6.5/intro/BUILD
+share/doc/coda-doc-4.6.5/intro/ChangeLog
+share/doc/coda-doc-4.6.5/intro/INSTALL
+share/doc/coda-doc-4.6.5/intro/README
+share/doc/coda-doc-4.6.5/intro/RUN
+share/doc/coda-doc-4.6.5/intro/WARNING
+share/doc/coda-doc-4.6.5/intro/WARNING.NetBSD
