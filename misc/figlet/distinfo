@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2001/04/27 10:06:12 abs Exp $
+$NetBSD: distinfo,v 1.4 2002/07/19 08:00:47 agc Exp $
 
-SHA1 (figlet22.tar.gz) = 8e8a91e4f827551eed128bb53172e63b18eba303
-Size (figlet22.tar.gz) = 165091 bytes
-SHA1 (patch-aa) = c5eeea229195a43c964c04445206977f8af1211b
+SHA1 (figlet221.tar.gz) = f11ee2e158959bed59410e4eb2c2bd3da597dbf1
+Size (figlet221.tar.gz) = 172219 bytes
+SHA1 (patch-aa) = a71d5b7bd8e296b7e17bb94b7156dee3bbf98b55
