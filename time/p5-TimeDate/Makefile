@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2002/07/05 06:58:34 tron Exp $
+# $NetBSD: Makefile,v 1.2 2002/10/07 22:34:27 seb Exp $
 #
 
 DISTNAME=      	TimeDate-1.10
@@ -10,11 +10,8 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Date/}
 MAINTAINER=	packages@netbsd.org
 COMMENT=	perl5 TimeDate distribution
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/TimeDate/.packlist
 
-do-configure:
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
-
-.include "../../lang/perl5/buildlink.mk"
+.include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
