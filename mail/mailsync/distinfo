@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2004/04/22 23:41:27 ben Exp $
+$NetBSD: distinfo,v 1.5 2004/11/16 18:56:46 adrianp Exp $
 
-SHA1 (mailsync_4.4.4-1.tar.gz) = 0e45f1136c7aae78730317c0dd74734a0df2a873
-Size (mailsync_4.4.4-1.tar.gz) = 27408 bytes
-SHA1 (patch-aa) = b637925e91cca6b8675144be4e3f012ea7c219d0
-SHA1 (patch-ab) = 47530d92d127a3f45a6158d34b6f25dfb7d60192
+SHA1 (mailsync_5.2.1.orig.tar.gz) = ce32305c5d2d659ecc41d81036a78a346e97ebe0
+Size (mailsync_5.2.1.orig.tar.gz) = 139967 bytes
+SHA1 (patch-ac) = 7805db2f99a0c06c19b30cec3bf3367cf445f717
