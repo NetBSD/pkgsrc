@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2001/01/04 20:12:06 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2001/01/09 04:29:03 wiz Exp $
 bin/gnc-prices
 bin/gnucash
 etc/gnucash/config
@@ -39,6 +39,7 @@ share/gnucash/doc/examples/ms-money.qif
 share/gnucash/doc/examples/quicktest.qif
 share/gnucash/doc/examples/splitdemo.xac
 share/gnucash/doc/examples/swipe.qif
+share/gnucash/doc/examples/taxreport.xac
 share/gnucash/doc/examples/test.xac
 share/gnucash/doc/examples/test2.xac
 share/gnucash/doc/examples/test3.xac
@@ -82,8 +83,14 @@ share/gnucash/html/C/image/regwin-single2.gif
 share/gnucash/html/C/image/report-av-baln.gif
 share/gnucash/html/C/image/report-baln.gif
 share/gnucash/html/C/image/report-folio.gif
+share/gnucash/html/C/image/report-hierarchical-options.png
+share/gnucash/html/C/image/report-hierarchical.png
 share/gnucash/html/C/image/report-option.gif
 share/gnucash/html/C/image/report-pnl.gif
+share/gnucash/html/C/image/report-tax-options.png
+share/gnucash/html/C/image/report-tax.png
+share/gnucash/html/C/image/report-txf-options.png
+share/gnucash/html/C/image/report-txf.png
 share/gnucash/html/C/image/reportwin.gif
 share/gnucash/html/C/image/ticker-a.gif
 share/gnucash/html/C/image/ticker-b.gif
@@ -107,6 +114,7 @@ share/gnucash/html/C/xacc-globalprefs.html
 share/gnucash/html/C/xacc-globalprops.html
 share/gnucash/html/C/xacc-gpl.html
 share/gnucash/html/C/xacc-groups.html
+share/gnucash/html/C/xacc-hierarchical-report.html
 share/gnucash/html/C/xacc-main.html
 share/gnucash/html/C/xacc-mainwin.html
 share/gnucash/html/C/xacc-pnl.html
@@ -118,8 +126,14 @@ share/gnucash/html/C/xacc-recnwin.html
 share/gnucash/html/C/xacc-regwin.html
 share/gnucash/html/C/xacc-regwin_kbd.html
 share/gnucash/html/C/xacc-reports.html
+share/gnucash/html/C/xacc-tax-report-example.html
+share/gnucash/html/C/xacc-tax-report.html
 share/gnucash/html/C/xacc-ticker.html
 share/gnucash/html/C/xacc-trans_report.html
+share/gnucash/html/C/xacc-txf-categories.html
+share/gnucash/html/C/xacc-txf-export-anomalies.html
+share/gnucash/html/C/xacc-txf-export-example.html
+share/gnucash/html/C/xacc-txf-export-report.html
 share/gnucash/html/C/xacc-y2k.html
 share/gnucash/html/fr/bofa-mym.html
 share/gnucash/html/fr/image/appr-asset1.gif
@@ -221,7 +235,10 @@ share/gnucash/scm/report/budget-report.scm
 share/gnucash/scm/report/folio.scm
 share/gnucash/scm/report/hello-world.scm
 share/gnucash/scm/report/report-list.scm
+share/gnucash/scm/report/taxtxf.scm
 share/gnucash/scm/report/transaction-report.scm
+share/gnucash/scm/report/txf-export-help.scm
+share/gnucash/scm/report/txf-export.scm
 share/gnucash/scm/slib-backup.scm
 share/gnucash/scm/srfi/srfi-1.r5rs.scm
 share/gnucash/scm/srfi/srfi-1.unclear.scm
