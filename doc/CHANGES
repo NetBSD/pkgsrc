@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4486 2004/01/17 12:58:10 xtraeme Exp $
+$NetBSD: CHANGES,v 1.4487 2004/01/17 14:41:50 recht Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -310,3 +310,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added mozilla-gtk2-1.6 [taya 2004-01-17]
 	Updated ap2-perl to 1.99.12 [bad 2004-01-17]
 	Updated thttpd to 2.25b [xtraeme 2004-01-17]
+	Added libcdio-0.65 [recht 2004-01-17]
