@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.39 2004/06/01 15:01:17 taya Exp $
+# $NetBSD: Makefile.common,v 1.40 2004/06/01 22:41:21 xtraeme Exp $
 
 MOZ_DIST_VER?=	${MOZ_VER}
 DISTNAME?=	mozilla-source-${MOZ_DIST_VER}
@@ -88,7 +88,7 @@ CONFIGURE_ARGS+=	--enable-xinerama
 # avoid creating a .mozilla directory in the users home
 # directory
 SCRIPTS_ENV+=	HOME="${WRKDIR}"
-.if (${MOZCONFDIR} != "")
+.if !empty(MOZCONFDIR)
 SCRIPTS_ENV+=	TMPMOZCONFDIR="${WRKDIR}/${MOZCONFDIR}"
 .endif
 
