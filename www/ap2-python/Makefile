@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/01/23 20:41:49 recht Exp $
+# $NetBSD: Makefile,v 1.6 2005/03/03 21:14:36 grant Exp $
 # FreeBSD Id: ports/www/mod_python3/Makefile,v 1.28 2004/03/11 14:36:30 perky Exp
 
 DISTNAME=		mod_python-${VERSION}
@@ -13,6 +13,7 @@ HOMEPAGE=		http://www.modpython.org/
 COMMENT=		Apache module that embeds the Python interpreter
 
 USE_BUILDLINK3= YES
+USE_LIBTOOL=	YES
 USE_PKGINSTALL= YES
 APACHE_MODULE=  YES
 VERSION=3.1.3
