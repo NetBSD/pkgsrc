@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.743 2003/07/26 00:32:37 wiz Exp $
+$NetBSD: TODO,v 1.744 2003/07/26 21:29:43 chris Exp $
 
 Suggested new packages
 ======================
@@ -235,7 +235,6 @@ Suggested package updates
 	o sun-jdk14-1.4.2
 	o sun-jre14-1.4.2
 	o swig-1.3.17 [epg]
-	o sylpheed-0.9.4 [pkg/22264]
 	o sylpheed-claws-0.9.3
 	o t1lib-5.0.0
 	o tcl/tk-8.4.3
