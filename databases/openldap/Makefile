@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2004/01/09 22:48:16 jlam Exp $
+# $NetBSD: Makefile,v 1.65 2004/01/21 13:11:09 jlam Exp $
 #
 
 DISTNAME=		openldap-2.1.22
@@ -46,11 +46,11 @@ BUILD_DEFS+=		USE_SASL USE_SASL2
 .include "../../mk/bsd.prefs.mk"
 
 .if defined(USE_SASL2) && (${USE_SASL2} == "YES")
-.include "../../security/cyrus-sasl2/buildlink3.mk"
+.  include "../../security/cyrus-sasl2/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-cyrus-sasl
 CONFIGURE_ARGS+=	--enable-spasswd
 .elif defined(USE_SASL) && (${USE_SASL} == "YES")
-.include "../../security/cyrus-sasl/buildlink3.mk"
+.  include "../../security/cyrus-sasl/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-cyrus-sasl
 CONFIGURE_ARGS+=	--enable-spasswd
 .endif
