@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:56:15 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/07/06 19:18:21 tv Exp $
 bin/mrtg
 bin/mrtgcfgmaker
 bin/mrtgindexmaker
@@ -8,6 +8,7 @@ ${PERL5_SITELIB}/SNMP_Session.pm
 ${PERL5_SITELIB}/SNMP_util.pm
 ${PERL5_SITELIB}/MRTG_lib.pm
 ${PERL5_SITELIB}/locales_mrtg.pm
+libexec/envstat2mrtg
 libexec/netstat2mrtg
 libexec/rateup
 libexec/sys2mrtg
