@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/07/24 22:45:15 recht Exp $
+# $NetBSD: Makefile,v 1.16 2004/07/27 19:46:54 recht Exp $
 
 DISTNAME=		ruby-postgres-${VERSION}
 PKGNAME=		${RUBY_PKGNAMEPREFIX}postgresql-${VERSION}
@@ -24,6 +24,8 @@ EXAMPLE_LIBS=		losample.rb psqlHelp.rb
 EXAMPLE_SCRIPTS=	psql.rb test1.rb test2.rb test4.rb
 REPLACE_RUBY=		sample/psql.rb sample/test1.rb sample/test2.rb \
 			sample/test4.rb
+
+PGSQL_VERSION_REQD=	73
 
 pre-install:
 	@cd ${WRKSRC}; \
