@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/05/22 15:22:21 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2001/05/22 16:09:14 jlam Exp $
 
 DISTNAME=		sitecopy-0.10.15
 CATEGORIES=		www
@@ -21,9 +21,7 @@ CONFIGURE_ARGS+=	--enable-libxml
 
 .include "../../devel/libgetopt/Makefile.getopt"
 
-CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
-CPPFLAGS+=		-I${WRKINCDIR}
-CFLAGS+=		-I${WRKINCDIR}
+CFLAGS+=		-I${WRKINCDIR} ${CPPFLAGS}
 
 pre-configure: link-getopt-headers
 
