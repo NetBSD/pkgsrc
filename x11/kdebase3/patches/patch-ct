@@ -1,8 +1,8 @@
-$NetBSD: patch-ct,v 1.5 2003/03/11 13:10:24 markd Exp $
+$NetBSD: patch-ct,v 1.6 2003/05/22 02:42:51 markd Exp $
 
---- konsole/konsole/Makefile.in.orig	Fri Jan 17 09:03:10 2003
+--- konsole/konsole/Makefile.in.orig	Tue May 13 23:08:00 2003
 +++ konsole/konsole/Makefile.in
-@@ -301,7 +301,7 @@ INCLUDES = -I. $(all_includes)
+@@ -437,7 +437,7 @@ INCLUDES = -I. $(all_includes)
  
  # you can add here more. This one gets installed
  bin_PROGRAMS = konsole konsole_grantpty kwrited #kcmkonsole
@@ -11,7 +11,7 @@ $NetBSD: patch-ct,v 1.5 2003/03/11 13:10:24 markd Exp $
  
  
  # libkonsolepart is a part, but konsole.la links directly to it, so we can't
-@@ -336,30 +336,38 @@ libkonsolepart_la_LDFLAGS = $(all_librar
+@@ -472,30 +472,38 @@ libkonsolepart_la_LDFLAGS = $(all_librar
  libkonsolepart_la_LIBADD = $(LIBUTIL) $(XTESTLIB) $(LIB_KPARTS)
  
  # kwrited kdeinit module
@@ -29,7 +29,7 @@ $NetBSD: patch-ct,v 1.5 2003/03/11 13:10:24 markd Exp $
 -kwrited_SOURCES = dummy.cpp
 -kwrited_LDADD = kwrited.la 
 +kwrited_SOURCES = kwrited_main.cpp
-+kwrited_LDADD = libkwrited_main.la
++kwrited_LDADD = libkwrited_main.la 
  kwrited_LDFLAGS = $(all_libraries) $(KDE_RPATH)
  
  # konsole kdeinit module
@@ -44,22 +44,22 @@ $NetBSD: patch-ct,v 1.5 2003/03/11 13:10:24 markd Exp $
       konsole_wcwidth.cpp konsolebookmarkhandler.cpp konsolebookmarkmenu.cpp konsole_child.cpp konsoleiface_skel.cpp sessioniface_skel.cpp
  
 +libkonsole_main_la_LDFLAGS = $(all_libraries)
-+libkonsole_main_la_LIBADD = $(LIB_KDEUI) $(LIB_KIO) $(LIBUTIL) $(XTESTLIB)
++libkonsole_main_la_LIBADD = $(LIB_KDEPRINT) $(LIBUTIL) $(XTESTLIB)
 +
 +konsole_la_SOURCES = konsole_main.cpp
  konsole_la_LDFLAGS = $(all_libraries) -module -avoid-version
--konsole_la_LIBADD = $(LIB_KDEUI) $(LIB_KIO) $(LIBUTIL) $(XTESTLIB)
+-konsole_la_LIBADD = $(LIB_KDEPRINT) $(LIBUTIL) $(XTESTLIB)
 +konsole_la_LIBADD = libkonsole_main.la
  
  # konsole executable
 -konsole_SOURCES = dummy.cpp
--konsole_LDADD = konsole.la $(LIB_KIO)
+-konsole_LDADD = konsole.la $(LIB_KDEPRINT)
 +konsole_SOURCES = konsole_main.cpp
 +konsole_LDADD = libkonsole_main.la
  konsole_LDFLAGS = $(all_libraries) $(KDE_RPATH)
  
  
-@@ -394,27 +402,32 @@ CONFIG_HEADER = $(top_builddir)/config.h
+@@ -531,27 +539,32 @@ CONFIG_HEADER = $(top_builddir)/config.h
  CONFIG_CLEAN_FILES =
  LTLIBRARIES = $(kde_module_LTLIBRARIES) $(lib_LTLIBRARIES)
  
@@ -110,7 +110,7 @@ $NetBSD: patch-ct,v 1.5 2003/03/11 13:10:24 markd Exp $
  libkonsolepart_la_DEPENDENCIES =
  am_libkonsolepart_la_OBJECTS = TEPty.lo BlockArray.lo konsole_part.lo \
  	schema.lo session.lo TEWidget.lo TEmuVt102.lo TEScreen.lo \
-@@ -427,25 +440,30 @@ libkonsolepart_la_nofinal_OBJECTS = TEPt
+@@ -564,25 +577,30 @@ libkonsolepart_la_nofinal_OBJECTS = TEPt
  	konsole_wcwidth.lo TEmulation.lo TEHistory.lo keytrans.lo konsoleiface_skel.lo sessioniface_skel.lo
  @KDE_USE_FINAL_FALSE@libkonsolepart_la_OBJECTS = $(libkonsolepart_la_nofinal_OBJECTS)
  @KDE_USE_FINAL_TRUE@libkonsolepart_la_OBJECTS = $(libkonsolepart_la_final_OBJECTS)
@@ -145,9 +145,9 @@ $NetBSD: patch-ct,v 1.5 2003/03/11 13:10:24 markd Exp $
 +kwrited_OBJECTS = kwrited_main.$(OBJEXT)
 +kwrited_DEPENDENCIES = libkwrited_main.la
  
- DEFS = @DEFS@
  DEFAULT_INCLUDES =  -I. -I$(srcdir) -I$(top_builddir)
-@@ -458,44 +476,56 @@ am__depfiles_maybe = depfiles
+ depcomp = $(SHELL) $(top_srcdir)/admin/depcomp
+@@ -591,44 +609,56 @@ am__depfiles_maybe = depfiles
  #>- @AMDEP_TRUE@	./$(DEPDIR)/TEHistory.Plo ./$(DEPDIR)/TEPty.Plo \
  #>- @AMDEP_TRUE@	./$(DEPDIR)/TEScreen.Plo ./$(DEPDIR)/TEWidget.Plo \
  #>- @AMDEP_TRUE@	./$(DEPDIR)/TEmuVt102.Plo \
@@ -215,9 +215,9 @@ $NetBSD: patch-ct,v 1.5 2003/03/11 13:10:24 markd Exp $
  @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/schema.Plo ./$(DEPDIR)/session.Plo
  
  COMPILE = $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \
-@@ -526,14 +556,15 @@ CXXLINK = $(LIBTOOL) --mode=link --tag=C
+@@ -657,14 +687,15 @@ CXXLD = $(CXX)
+ CXXLINK = $(LIBTOOL) --mode=link --tag=CXX $(CXXLD) $(AM_CXXFLAGS) $(CXXFLAGS) $(KDE_CXXFLAGS) \
  	$(AM_LDFLAGS) $(LDFLAGS) -o $@
- CXXFLAGS = @CXXFLAGS@
  DIST_SOURCES = $(konsole_la_SOURCES) $(kwrited_la_SOURCES) \
 -	$(libkonsolepart_la_SOURCES) $(konsole_SOURCES) \
 +	$(libkonsole_main_la_SOURCES) $(libkonsolepart_la_SOURCES) \
@@ -233,7 +233,7 @@ $NetBSD: patch-ct,v 1.5 2003/03/11 13:10:24 markd Exp $
  
  #>- all: all-am
  #>+ 1
-@@ -610,11 +641,15 @@ konsole.la: $(konsole_la_OBJECTS) $(kons
+@@ -741,11 +772,15 @@ konsole.la: $(konsole_la_OBJECTS) $(kons
  	$(CXXLINK) -rpath $(libdir) $(konsole_la_LDFLAGS) $(konsole_la_OBJECTS) $(konsole_la_LIBADD) $(LIBS)
  kwrited.la: $(kwrited_la_OBJECTS) $(kwrited_la_DEPENDENCIES) 
  	$(CXXLINK) -rpath $(libdir) $(kwrited_la_LDFLAGS) $(kwrited_la_OBJECTS) $(kwrited_la_LIBADD) $(LIBS)
@@ -249,7 +249,7 @@ $NetBSD: patch-ct,v 1.5 2003/03/11 13:10:24 markd Exp $
  binPROGRAMS_INSTALL = $(INSTALL_PROGRAM)
  install-binPROGRAMS: $(bin_PROGRAMS)
  	@$(NORMAL_INSTALL)
-@@ -667,16 +702,19 @@ distclean-compile:
+@@ -798,16 +833,19 @@ distclean-compile:
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/TEWidget.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/TEmuVt102.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/TEmulation.Plo@am__quote@
@@ -270,16 +270,16 @@ $NetBSD: patch-ct,v 1.5 2003/03/11 13:10:24 markd Exp $
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/main.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/schema.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/session.Plo@am__quote@
-@@ -805,7 +843,7 @@ distclean-tags:
- 	-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH
+@@ -982,7 +1020,7 @@ distclean-tags:
+ 	-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
  #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
  #>+ 4
--KDE_DIST=x-konsole.desktop sessioniface.h TEScreen.cpp MakeDefaults konsole_part.h konsolebookmarkmenu.cpp TEmulation.cpp konsole_child.cpp keytrans.cpp konsolerc konsoleiface.h konsolebookmarkhandler.cpp TEHistory.cpp konsole_wcwidth.cpp 
-+KDE_DIST=keytrans.cpp konsoleiface.h konsole_part.h konsolebookmarkmenu.cpp konsole_wcwidth.cpp x-konsole.desktop konsolerc konsole_child.cpp sessioniface.h MakeDefaults TEHistory.cpp TEScreen.cpp TEmulation.cpp konsolebookmarkhandler.cpp 
+-KDE_DIST=x-konsole.desktop sessioniface.h MakeDefaults konsole_part.h konsolerc konsoleiface.h 
++KDE_DIST=konsoleiface.h konsole_part.h x-konsole.desktop konsolerc sessioniface.h MakeDefaults 
  
  DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
  
-@@ -962,50 +1000,37 @@ messages: rc.cpp
+@@ -1154,50 +1192,37 @@ messages: rc.cpp
  	$(XGETTEXT) rc.cpp *.cpp -o $(podir)/konsole.pot
  	rm -f schemas.cpp
  	rm -f tips.cpp
@@ -342,7 +342,7 @@ $NetBSD: patch-ct,v 1.5 2003/03/11 13:10:24 markd Exp $
  
  #>+ 3
  session.moc: $(srcdir)/session.h
-@@ -1016,12 +1041,22 @@ TEmuVt102.moc: $(srcdir)/TEmuVt102.h
+@@ -1208,12 +1233,22 @@ TEmuVt102.moc: $(srcdir)/TEmuVt102.h
  	$(MOC) $(srcdir)/TEmuVt102.h -o TEmuVt102.moc
  
  #>+ 3
@@ -369,7 +369,7 @@ $NetBSD: patch-ct,v 1.5 2003/03/11 13:10:24 markd Exp $
  
  #>+ 8
  libkonsolepart.la.closure: $(libkonsolepart_la_OBJECTS) $(libkonsolepart_la_DEPENDENCIES)
-@@ -1034,7 +1069,7 @@ libkonsolepart.la.closure: $(libkonsolep
+@@ -1226,7 +1261,7 @@ libkonsolepart.la.closure: $(libkonsolep
  
  #>+ 3
  clean-metasources:
@@ -378,7 +378,7 @@ $NetBSD: patch-ct,v 1.5 2003/03/11 13:10:24 markd Exp $
  
  #>+ 7
  clean-idl:
-@@ -1059,19 +1094,19 @@ force-reedit:
+@@ -1251,19 +1286,19 @@ force-reedit:
  
  
  #>+ 11
@@ -407,7 +407,7 @@ $NetBSD: patch-ct,v 1.5 2003/03/11 13:10:24 markd Exp $
  	@echo 'creating libkonsolepart_la.all_cpp.cpp ...'; \
  	rm -f libkonsolepart_la.all_cpp.files libkonsolepart_la.all_cpp.final; \
  	echo "#define KDE_USE_FINAL 1" >> libkonsolepart_la.all_cpp.final; \
-@@ -1084,20 +1119,20 @@ libkonsolepart_la.all_cpp.cpp: $(srcdir)
+@@ -1276,20 +1311,20 @@ libkonsolepart_la.all_cpp.cpp: $(srcdir)
  
  #>+ 3
  clean-final:
@@ -433,7 +433,7 @@ $NetBSD: patch-ct,v 1.5 2003/03/11 13:10:24 markd Exp $
  #>+ 3
  cvs-clean:
  	$(MAKE) admindir=$(top_srcdir)/admin -f $(top_srcdir)/admin/Makefile.common cvs-clean
-@@ -1107,25 +1142,25 @@ kde-rpo-clean:
+@@ -1299,25 +1334,25 @@ kde-rpo-clean:
  	-rm -f *.rpo
  
  #>+ 23

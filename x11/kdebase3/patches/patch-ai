@@ -1,8 +1,8 @@
-$NetBSD: patch-ai,v 1.5 2003/03/11 13:10:19 markd Exp $
+$NetBSD: patch-ai,v 1.6 2003/05/22 02:42:47 markd Exp $
 
---- kcontrol/access/Makefile.in.orig	Fri Jan 17 09:03:04 2003
+--- kcontrol/access/Makefile.in.orig	Tue May 13 23:07:53 2003
 +++ kcontrol/access/Makefile.in
-@@ -290,16 +290,20 @@ INCLUDES = $(all_includes)
+@@ -426,16 +426,20 @@ INCLUDES = $(all_includes)
  
  bin_PROGRAMS = kaccess
  
@@ -29,7 +29,7 @@ $NetBSD: patch-ai,v 1.5 2003/03/11 13:10:19 markd Exp $
  
  kcm_access_la_SOURCES = kcmaccess.cpp 
  kcm_access_la_LDFLAGS = $(all_libraries) -module -avoid-version -no-undefined
-@@ -317,27 +321,32 @@ CONFIG_HEADER = $(top_builddir)/config.h
+@@ -454,37 +458,48 @@ CONFIG_HEADER = $(top_builddir)/config.h
  CONFIG_CLEAN_FILES =
  LTLIBRARIES = $(kde_module_LTLIBRARIES) $(lib_LTLIBRARIES)
  
@@ -70,10 +70,7 @@ $NetBSD: patch-ai,v 1.5 2003/03/11 13:10:19 markd Exp $
 +kaccess_OBJECTS = kaccess_main.$(OBJEXT)
 +kaccess_DEPENDENCIES = libkaccess_main.la
  
- DEFS = @DEFS@
  DEFAULT_INCLUDES =  -I. -I$(srcdir) -I$(top_builddir)
-@@ -346,12 +355,18 @@ LDFLAGS = @LDFLAGS@
- LIBS = @LIBS@
  depcomp = $(SHELL) $(top_srcdir)/admin/depcomp
  am__depfiles_maybe = depfiles
 -#>- @AMDEP_TRUE@DEP_FILES = ./$(DEPDIR)/dummy.Po ./$(DEPDIR)/kaccess.Plo \
@@ -95,9 +92,9 @@ $NetBSD: patch-ai,v 1.5 2003/03/11 13:10:19 markd Exp $
  @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/kcmaccess.Plo ./$(DEPDIR)/main.Plo
  
  #>- CXXCOMPILE = $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) \
-@@ -374,13 +389,13 @@ CXXLINK = $(LIBTOOL) --mode=link --tag=C
+@@ -506,13 +521,13 @@ CXXLD = $(CXX)
+ CXXLINK = $(LIBTOOL) --mode=link --tag=CXX $(CXXLD) $(AM_CXXFLAGS) $(CXXFLAGS) $(KDE_CXXFLAGS) \
  	$(AM_LDFLAGS) $(LDFLAGS) -o $@
- CXXFLAGS = @CXXFLAGS@
  DIST_SOURCES = $(kaccess_la_SOURCES) $(kcm_access_la_SOURCES) \
 -	$(kaccess_SOURCES)
 +	$(libkaccess_main_la_SOURCES) $(kaccess_SOURCES)
@@ -111,7 +108,7 @@ $NetBSD: patch-ai,v 1.5 2003/03/11 13:10:19 markd Exp $
  
  #>- all: all-am
  #>+ 1
-@@ -460,6 +475,8 @@ kaccess.la: $(kaccess_la_OBJECTS) $(kacc
+@@ -592,6 +607,8 @@ kaccess.la: $(kaccess_la_OBJECTS) $(kacc
  @KDE_USE_CLOSURE_TRUE@kcm_access.la: kcm_access.la.closure $(kcm_access_la_OBJECTS) $(kcm_access_la_DEPENDENCIES) 
  @KDE_USE_CLOSURE_FALSE@kcm_access.la: $(kcm_access_la_OBJECTS) $(kcm_access_la_DEPENDENCIES) 
  	$(CXXLINK) -rpath $(kde_moduledir) $(kcm_access_la_LDFLAGS) $(kcm_access_la_OBJECTS) $(kcm_access_la_LIBADD) $(LIBS)
@@ -120,7 +117,7 @@ $NetBSD: patch-ai,v 1.5 2003/03/11 13:10:19 markd Exp $
  binPROGRAMS_INSTALL = $(INSTALL_PROGRAM)
  install-binPROGRAMS: $(bin_PROGRAMS)
  	@$(NORMAL_INSTALL)
-@@ -499,8 +516,9 @@ mostlyclean-compile:
+@@ -631,8 +648,9 @@ mostlyclean-compile:
  distclean-compile:
  	-rm -f *.tab.c
  
@@ -131,8 +128,8 @@ $NetBSD: patch-ai,v 1.5 2003/03/11 13:10:19 markd Exp $
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/kcmaccess.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/main.Plo@am__quote@
  
-@@ -609,7 +627,7 @@ distclean-tags:
- 	-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH
+@@ -773,7 +791,7 @@ distclean-tags:
+ 	-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
  #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
  #>+ 4
 -KDE_DIST=kaccess.h configure.in.in kcmaccess.desktop kaccess.desktop 
@@ -140,7 +137,7 @@ $NetBSD: patch-ai,v 1.5 2003/03/11 13:10:19 markd Exp $
  
  DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
  
-@@ -745,21 +763,18 @@ uninstall-am: uninstall-binPROGRAMS unin
+@@ -924,21 +942,18 @@ uninstall-am: uninstall-binPROGRAMS unin
  messages:
  	$(XGETTEXT) $(kaccess_la_SOURCES) -o $(podir)/kaccess.pot
  	$(XGETTEXT) $(kcm_access_la_SOURCES) -o $(podir)/kcmaccess.pot
@@ -166,7 +163,7 @@ $NetBSD: patch-ai,v 1.5 2003/03/11 13:10:19 markd Exp $
  #>+ 8
  kcm_access.la.closure: $(kcm_access_la_OBJECTS) $(kcm_access_la_DEPENDENCIES)
  	@echo "int main() {return 0;}" > kcm_access_la_closure.cpp
-@@ -771,7 +786,7 @@ kcm_access.la.closure: $(kcm_access_la_O
+@@ -950,7 +965,7 @@ kcm_access.la.closure: $(kcm_access_la_O
  
  #>+ 3
  clean-metasources:
@@ -175,7 +172,7 @@ $NetBSD: patch-ai,v 1.5 2003/03/11 13:10:19 markd Exp $
  
  #>+ 3
  clean-closures:
-@@ -788,33 +803,33 @@ force-reedit:
+@@ -967,33 +982,33 @@ force-reedit:
  
  
  #>+ 11
@@ -222,7 +219,7 @@ $NetBSD: patch-ai,v 1.5 2003/03/11 13:10:19 markd Exp $
  #>+ 3
  cvs-clean:
  	$(MAKE) admindir=$(top_srcdir)/admin -f $(top_srcdir)/admin/Makefile.common cvs-clean
-@@ -824,7 +839,7 @@ kde-rpo-clean:
+@@ -1003,7 +1018,7 @@ kde-rpo-clean:
  	-rm -f *.rpo
  
  #>+ 5

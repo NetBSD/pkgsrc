@@ -1,9 +1,9 @@
-$NetBSD: patch-ac,v 1.4 2003/03/11 13:10:18 markd Exp $
+$NetBSD: patch-ac,v 1.5 2003/05/22 02:42:47 markd Exp $
 
---- kate/app/Makefile.in.orig	Fri Jan 17 09:03:04 2003
+--- kate/app/Makefile.in.orig	Tue May 13 23:07:53 2003
 +++ kate/app/Makefile.in
-@@ -284,7 +284,7 @@ qt_includes = @qt_includes@
- qt_libraries = @qt_libraries@
+@@ -420,7 +420,7 @@ target_os = @target_os@
+ target_vendor = @target_vendor@
  x_includes = @x_includes@
  x_libraries = @x_libraries@
 -lib_LTLIBRARIES = libkateinterfaces.la kate.la kwrite.la
@@ -11,7 +11,7 @@ $NetBSD: patch-ac,v 1.4 2003/03/11 13:10:18 markd Exp $
  bin_PROGRAMS = kate kwrite
  
  #>- libkateinterfaces_la_SOURCES = kateapp.cpp kateconfigdialog.cpp kateconfigplugindialogpage.cpp \
-@@ -304,20 +304,28 @@ libkateinterfaces_la_SOURCES=kateapp.cpp
+@@ -440,20 +440,28 @@ libkateinterfaces_la_SOURCES=kateapp.cpp
  
  libkateinterfaces_la_LIBADD = ../interfaces/libkateinterfacesprivate.la -lkscript ../lib/libkmultitabbar.la
  libkateinterfaces_la_LDFLAGS = $(all_libraries) $(KDE_RPATH) -module -avoid-version
@@ -48,7 +48,7 @@ $NetBSD: patch-ac,v 1.4 2003/03/11 13:10:18 markd Exp $
  kwrite_LDFLAGS = $(KDE_RPATH) $(all_libraries)
  
  #>- METASOURCES = AUTO  
-@@ -329,19 +337,21 @@ CONFIG_HEADER = $(top_builddir)/config.h
+@@ -466,19 +474,21 @@ CONFIG_HEADER = $(top_builddir)/config.h
  CONFIG_CLEAN_FILES =
  LTLIBRARIES = $(lib_LTLIBRARIES)
  
@@ -80,7 +80,7 @@ $NetBSD: patch-ac,v 1.4 2003/03/11 13:10:18 markd Exp $
  libkateinterfaces_la_DEPENDENCIES = \
  	../interfaces/libkateinterfacesprivate.la \
  	../lib/libkmultitabbar.la
-@@ -364,19 +374,29 @@ libkateinterfaces_la_nofinal_OBJECTS = k
+@@ -501,25 +511,35 @@ libkateinterfaces_la_nofinal_OBJECTS = k
  	katedockcontainer.lo kateIface_skel.lo
  @KDE_USE_FINAL_FALSE@libkateinterfaces_la_OBJECTS = $(libkateinterfaces_la_nofinal_OBJECTS)
  @KDE_USE_FINAL_TRUE@libkateinterfaces_la_OBJECTS = $(libkateinterfaces_la_final_OBJECTS)
@@ -114,10 +114,7 @@ $NetBSD: patch-ac,v 1.4 2003/03/11 13:10:18 markd Exp $
 +kwrite_OBJECTS = dummy_main.$(OBJEXT)
 +kwrite_DEPENDENCIES = libkwrite_main.la
  
- DEFS = @DEFS@
  DEFAULT_INCLUDES =  -I. -I$(srcdir) -I$(top_builddir)
-@@ -385,8 +405,8 @@ LDFLAGS = @LDFLAGS@
- LIBS = @LIBS@
  depcomp = $(SHELL) $(top_srcdir)/admin/depcomp
  am__depfiles_maybe = depfiles
 -#>- @AMDEP_TRUE@DEP_FILES = ./$(DEPDIR)/dummy_kate.Po \
@@ -127,7 +124,7 @@ $NetBSD: patch-ac,v 1.4 2003/03/11 13:10:18 markd Exp $
  #>- @AMDEP_TRUE@	./$(DEPDIR)/kactionselector.Plo \
  #>- @AMDEP_TRUE@	./$(DEPDIR)/kateapp.Plo \
  #>- @AMDEP_TRUE@	./$(DEPDIR)/kateconfigdialog.Plo \
-@@ -409,8 +429,8 @@ am__depfiles_maybe = depfiles
+@@ -542,8 +562,8 @@ am__depfiles_maybe = depfiles
  #>- @AMDEP_TRUE@	./$(DEPDIR)/kwritedialogs.Plo \
  #>- @AMDEP_TRUE@	./$(DEPDIR)/kwritemain.Plo
  #>+ 47
@@ -138,7 +135,7 @@ $NetBSD: patch-ac,v 1.4 2003/03/11 13:10:18 markd Exp $
  @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/kactionselector.Plo \
  @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/kateapp.Plo \
  @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/kateconfigdialog.Plo \
-@@ -432,8 +452,8 @@ am__depfiles_maybe = depfiles
+@@ -565,8 +585,8 @@ am__depfiles_maybe = depfiles
  @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/kbookmarkhandler.Plo \
  @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/kwritedialogs.Plo \
  @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/kwritemain.Plo
@@ -149,9 +146,9 @@ $NetBSD: patch-ac,v 1.4 2003/03/11 13:10:18 markd Exp $
  @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/kactionselector.Plo \
  @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/kateapp.Plo \
  @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/kateconfigdialog.Plo \
-@@ -476,10 +496,10 @@ CXXLINK = $(LIBTOOL) --mode=link --tag=C
+@@ -608,10 +628,10 @@ CXXLD = $(CXX)
+ CXXLINK = $(LIBTOOL) --mode=link --tag=CXX $(CXXLD) $(AM_CXXFLAGS) $(CXXFLAGS) $(KDE_CXXFLAGS) \
  	$(AM_LDFLAGS) $(LDFLAGS) -o $@
- CXXFLAGS = @CXXFLAGS@
  DIST_SOURCES = $(kate_la_SOURCES) $(kwrite_la_SOURCES) \
 -	$(libkateinterfaces_la_SOURCES) $(kate_SOURCES) \
 -	$(kwrite_SOURCES)
@@ -163,7 +160,7 @@ $NetBSD: patch-ac,v 1.4 2003/03/11 13:10:18 markd Exp $
  
  #>- all: all-am
  #>+ 1
-@@ -528,8 +548,12 @@ kate.la: $(kate_la_OBJECTS) $(kate_la_DE
+@@ -660,8 +680,12 @@ kate.la: $(kate_la_OBJECTS) $(kate_la_DE
  	$(CXXLINK) -rpath $(libdir) $(kate_la_LDFLAGS) $(kate_la_OBJECTS) $(kate_la_LIBADD) $(LIBS)
  kwrite.la: $(kwrite_la_OBJECTS) $(kwrite_la_DEPENDENCIES) 
  	$(CXXLINK) -rpath $(libdir) $(kwrite_la_LDFLAGS) $(kwrite_la_OBJECTS) $(kwrite_la_LIBADD) $(LIBS)
@@ -176,7 +173,7 @@ $NetBSD: patch-ac,v 1.4 2003/03/11 13:10:18 markd Exp $
  binPROGRAMS_INSTALL = $(INSTALL_PROGRAM)
  install-binPROGRAMS: $(bin_PROGRAMS)
  	@$(NORMAL_INSTALL)
-@@ -572,8 +596,8 @@ mostlyclean-compile:
+@@ -704,8 +728,8 @@ mostlyclean-compile:
  distclean-compile:
  	-rm -f *.tab.c
  
@@ -187,16 +184,16 @@ $NetBSD: patch-ac,v 1.4 2003/03/11 13:10:18 markd Exp $
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/kactionselector.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/kateapp.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/kateconfigdialog.Plo@am__quote@
-@@ -665,7 +689,7 @@ distclean-tags:
- 	-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH
+@@ -829,7 +853,7 @@ distclean-tags:
+ 	-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
  #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
  #>+ 4
--KDE_DIST=katefilelist.cpp katefiledialog.h katemailfilesdialog.h kateapp.h katepluginmanager.h kategrepdialog.cpp katefileselector.h katedocmanager.h katesplitter.cpp kateviewmanager.cpp kateviewspace.h katemain.h katedockcontainer.cpp kateconsole.cpp kateconfigplugindialogpage.h katesplitter.h kactionselector.h kateconfigdialog.h katemainwindow.h kwritemain.h katepluginmanager.cpp kbookmarkhandler.h kateviewmanager.h katemailfilesdialog.cpp kateIface.h katedocmanager.cpp katefilelist.h kwritedialogs.h kbookmarkhandler.cpp katefileselector.cpp kateconsole.h kateviewspace.cpp katemainwindow.cpp kactionselector.cpp katedockcontainer.h kategrepdialog.h 
-+KDE_DIST=katemailfilesdialog.h katefileselector.h kateIface.h katemainwindow.cpp kateviewspace.cpp kateapp.h kbookmarkhandler.h katemailfilesdialog.cpp kactionselector.cpp katefiledialog.h katesplitter.h kwritemain.h kategrepdialog.cpp kateconfigplugindialogpage.h kateviewmanager.cpp kwritedialogs.h kategrepdialog.h kateviewspace.h katesplitter.cpp katemain.h kateconfigdialog.h katefilelist.cpp katedockcontainer.h kactionselector.h katefileselector.cpp katepluginmanager.h kateconsole.h katedockcontainer.cpp kateconsole.cpp katefilelist.h katemainwindow.h kateviewmanager.h katedocmanager.h katedocmanager.cpp katepluginmanager.cpp kbookmarkhandler.cpp 
+-KDE_DIST=katefiledialog.h katemailfilesdialog.h kateapp.h katepluginmanager.h katefileselector.h katedocmanager.h kateviewspace.h katemain.h kateconfigplugindialogpage.h katesplitter.h kactionselector.h kateconfigdialog.h katemainwindow.h kwritemain.h kbookmarkhandler.h kateviewmanager.h kateIface.h katefilelist.h kwritedialogs.h kateconsole.h katedockcontainer.h kategrepdialog.h 
++KDE_DIST=katemailfilesdialog.h katefileselector.h kateIface.h kateapp.h kbookmarkhandler.h katefiledialog.h katesplitter.h kwritemain.h kateconfigplugindialogpage.h kwritedialogs.h kategrepdialog.h kateviewspace.h katemain.h kateconfigdialog.h katedockcontainer.h kactionselector.h katepluginmanager.h kateconsole.h katefilelist.h katemainwindow.h kateviewmanager.h katedocmanager.h 
  
  DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
  
-@@ -788,91 +812,85 @@ uninstall-am: uninstall-binPROGRAMS unin
+@@ -967,91 +991,85 @@ uninstall-am: uninstall-binPROGRAMS unin
  
  dummy_kate_la.cpp:
  	echo > dummy_kate_la.cpp
@@ -320,7 +317,7 @@ $NetBSD: patch-ac,v 1.4 2003/03/11 13:10:18 markd Exp $
  
  #>+ 3
  kwritedialogs.moc: $(srcdir)/kwritedialogs.h
-@@ -886,7 +904,7 @@ kateIface_skel.cpp: kateIface.kidl
+@@ -1065,7 +1083,7 @@ kateIface_skel.cpp: kateIface.kidl
  
  #>+ 3
  clean-metasources:
@@ -329,7 +326,7 @@ $NetBSD: patch-ac,v 1.4 2003/03/11 13:10:18 markd Exp $
  
  #>+ 4
  clean-idl:
-@@ -904,19 +922,7 @@ force-reedit:
+@@ -1083,19 +1101,7 @@ force-reedit:
  
  
  #>+ 11
@@ -350,7 +347,7 @@ $NetBSD: patch-ac,v 1.4 2003/03/11 13:10:18 markd Exp $
  	@echo 'creating libkateinterfaces_la.all_cpp.cpp ...'; \
  	rm -f libkateinterfaces_la.all_cpp.files libkateinterfaces_la.all_cpp.final; \
  	echo "#define KDE_USE_FINAL 1" >> libkateinterfaces_la.all_cpp.final; \
-@@ -927,22 +933,34 @@ libkateinterfaces_la.all_cpp.cpp: $(srcd
+@@ -1106,22 +1112,34 @@ libkateinterfaces_la.all_cpp.cpp: $(srcd
  	cat libkateinterfaces_la.all_cpp.final libkateinterfaces_la.all_cpp.files > libkateinterfaces_la.all_cpp.cpp; \
  	rm -f libkateinterfaces_la.all_cpp.final libkateinterfaces_la.all_cpp.files
  
@@ -390,7 +387,7 @@ $NetBSD: patch-ac,v 1.4 2003/03/11 13:10:18 markd Exp $
  #>+ 3
  cvs-clean:
  	$(MAKE) admindir=$(top_srcdir)/admin -f $(top_srcdir)/admin/Makefile.common cvs-clean
-@@ -952,43 +970,43 @@ kde-rpo-clean:
+@@ -1131,43 +1149,43 @@ kde-rpo-clean:
  	-rm -f *.rpo
  
  #>+ 41

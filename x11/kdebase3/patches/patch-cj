@@ -1,8 +1,8 @@
-$NetBSD: patch-cj,v 1.4 2003/03/11 13:10:24 markd Exp $
+$NetBSD: patch-cj,v 1.5 2003/05/22 02:42:50 markd Exp $
 
---- konqueror/client/Makefile.in.orig	Fri Jan 17 09:03:09 2003
+--- konqueror/client/Makefile.in.orig	Tue May 13 23:07:59 2003
 +++ konqueror/client/Makefile.in
-@@ -287,14 +287,18 @@ x_libraries = @x_libraries@
+@@ -423,14 +423,18 @@ x_libraries = @x_libraries@
  AM_CPPFLAGS = -DQT_NO_CAST_ASCII
  
  bin_PROGRAMS = kfmclient
@@ -26,7 +26,7 @@ $NetBSD: patch-cj,v 1.4 2003/03/11 13:10:24 markd Exp $
  
  noinst_HEADERS = kfmclient.h
  #>- METASOURCES = AUTO
-@@ -302,31 +306,36 @@ noinst_HEADERS = kfmclient.h
+@@ -438,9 +442,9 @@ noinst_HEADERS = kfmclient.h
  KonquerorIface_DIR = $(srcdir)/..
  KDesktopIface_DIR = $(top_srcdir)/kdesktop
  
@@ -36,8 +36,9 @@ $NetBSD: patch-cj,v 1.4 2003/03/11 13:10:24 markd Exp $
 -kfmclient_LDADD = kfmclient.la
 +kfmclient_LDADD = libkfmclient_main.la
  subdir = konqueror/client
+ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
  mkinstalldirs = $(SHELL) $(top_srcdir)/admin/mkinstalldirs
- CONFIG_HEADER = $(top_builddir)/config.h
+@@ -448,30 +452,41 @@ CONFIG_HEADER = $(top_builddir)/config.h
  CONFIG_CLEAN_FILES =
  LTLIBRARIES = $(lib_LTLIBRARIES)
  
@@ -72,10 +73,7 @@ $NetBSD: patch-cj,v 1.4 2003/03/11 13:10:24 markd Exp $
 +kfmclient_OBJECTS = kfmclient_main.$(OBJEXT)
 +kfmclient_DEPENDENCIES = libkfmclient_main.la
  
- DEFS = @DEFS@
  DEFAULT_INCLUDES =  -I. -I$(srcdir) -I$(top_builddir)
-@@ -335,10 +344,16 @@ LDFLAGS = @LDFLAGS@
- LIBS = @LIBS@
  depcomp = $(SHELL) $(top_srcdir)/admin/depcomp
  am__depfiles_maybe = depfiles
 -#>- @AMDEP_TRUE@DEP_FILES = ./$(DEPDIR)/dummy.Po ./$(DEPDIR)/kfmclient.Plo
@@ -95,10 +93,10 @@ $NetBSD: patch-cj,v 1.4 2003/03/11 13:10:24 markd Exp $
  
  #>- CXXCOMPILE = $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) \
  #>- 	$(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS)
-@@ -359,11 +374,12 @@ CXXLD = $(CXX)
+@@ -491,11 +506,12 @@ CXXLD = $(CXX)
+ #>+ 2
  CXXLINK = $(LIBTOOL) --mode=link --tag=CXX $(CXXLD) $(AM_CXXFLAGS) $(CXXFLAGS) $(KDE_CXXFLAGS) \
  	$(AM_LDFLAGS) $(LDFLAGS) -o $@
- CXXFLAGS = @CXXFLAGS@
 -DIST_SOURCES = $(kfmclient_la_SOURCES) $(kfmclient_SOURCES)
 +DIST_SOURCES = $(kfmclient_la_SOURCES) $(libkfmclient_main_la_SOURCES) \
 +	$(kfmclient_SOURCES)
@@ -110,7 +108,7 @@ $NetBSD: patch-cj,v 1.4 2003/03/11 13:10:24 markd Exp $
  
  #>- all: all-am
  #>+ 1
-@@ -410,6 +426,8 @@ clean-libLTLIBRARIES:
+@@ -542,6 +558,8 @@ clean-libLTLIBRARIES:
  	done
  kfmclient.la: $(kfmclient_la_OBJECTS) $(kfmclient_la_DEPENDENCIES) 
  	$(CXXLINK) -rpath $(libdir) $(kfmclient_la_LDFLAGS) $(kfmclient_la_OBJECTS) $(kfmclient_la_LIBADD) $(LIBS)
@@ -119,7 +117,7 @@ $NetBSD: patch-cj,v 1.4 2003/03/11 13:10:24 markd Exp $
  binPROGRAMS_INSTALL = $(INSTALL_PROGRAM)
  install-binPROGRAMS: $(bin_PROGRAMS)
  	@$(NORMAL_INSTALL)
-@@ -449,8 +467,9 @@ mostlyclean-compile:
+@@ -581,8 +599,9 @@ mostlyclean-compile:
  distclean-compile:
  	-rm -f *.tab.c
  
@@ -130,8 +128,8 @@ $NetBSD: patch-cj,v 1.4 2003/03/11 13:10:24 markd Exp $
  
  distclean-depend:
  	-rm -rf ./$(DEPDIR)
-@@ -637,15 +656,16 @@ uninstall-am: uninstall-binPROGRAMS unin
- 	uninstall-info-am uninstall-libLTLIBRARIES
+@@ -816,15 +835,16 @@ uninstall-am: uninstall-binPROGRAMS unin
+ 	uninstall-libLTLIBRARIES
  
  
 -dummy.cc:
@@ -150,7 +148,7 @@ $NetBSD: patch-cj,v 1.4 2003/03/11 13:10:24 markd Exp $
  #>+ 9
  KonquerorIface.kidl: $(srcdir)/../KonquerorIface.h $(DCOP_DEPENDENCIES)
  	$(DCOPIDL) $(srcdir)/../KonquerorIface.h > KonquerorIface.kidl || ( rm -f KonquerorIface.kidl ; /bin/false )
-@@ -657,10 +677,6 @@ KDesktopIface_stub.h: KDesktopIface.kidl
+@@ -836,10 +856,6 @@ KDesktopIface_stub.h: KDesktopIface.kidl
  	$(DCOPIDL2CPP) --c++-suffix cc --no-signals --no-skel KDesktopIface.kidl
  
  #>+ 3
@@ -161,7 +159,7 @@ $NetBSD: patch-cj,v 1.4 2003/03/11 13:10:24 markd Exp $
  clean-metasources:
  	-rm -f  kfmclient.moc
  
-@@ -681,33 +697,33 @@ force-reedit:
+@@ -860,33 +876,33 @@ force-reedit:
  
  
  #>+ 11
@@ -208,7 +206,7 @@ $NetBSD: patch-cj,v 1.4 2003/03/11 13:10:24 markd Exp $
  #>+ 3
  cvs-clean:
  	$(MAKE) admindir=$(top_srcdir)/admin -f $(top_srcdir)/admin/Makefile.common cvs-clean
-@@ -717,8 +733,8 @@ kde-rpo-clean:
+@@ -896,8 +912,8 @@ kde-rpo-clean:
  	-rm -f *.rpo
  
  #>+ 6

@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2003/05/13 10:01:54 markd Exp $
+# $NetBSD: Makefile,v 1.28 2003/05/22 02:42:40 markd Exp $
 
-DISTNAME=	kdelibs-3.1.1
-PKGREVISION=	2
+DISTNAME=	kdelibs-3.1.2
 CATEGORIES=	x11
 COMMENT=	Support libraries for the KDE integrated X11 desktop
 

@@ -1,6 +1,6 @@
-$NetBSD: patch-cs,v 1.4 2003/03/11 13:10:24 markd Exp $
+$NetBSD: patch-cs,v 1.5 2003/05/22 02:42:50 markd Exp $
 
---- konsole/konsole/Makefile.am.orig	Fri Jan  3 17:43:59 2003
+--- konsole/konsole/Makefile.am.orig	Wed May  7 23:44:16 2003
 +++ konsole/konsole/Makefile.am
 @@ -12,7 +12,7 @@ INCLUDES = -I. $(all_includes)
  
@@ -29,7 +29,7 @@ $NetBSD: patch-cs,v 1.4 2003/03/11 13:10:24 markd Exp $
 -kwrited_SOURCES	= dummy.cpp
 -kwrited_LDADD   = kwrited.la 
 +kwrited_SOURCES	= kwrited_main.cpp
-+kwrited_LDADD   = libkwrited_main.la
++kwrited_LDADD   = libkwrited_main.la 
  kwrited_LDFLAGS = $(all_libraries) $(KDE_RPATH)
  
  
@@ -39,16 +39,16 @@ $NetBSD: patch-cs,v 1.4 2003/03/11 13:10:24 markd Exp $
       TEScreen.cpp TEmulation.cpp TEHistory.cpp keytrans.cpp konsoleiface.skel sessioniface.skel \
       konsole_wcwidth.cpp konsolebookmarkhandler.cpp konsolebookmarkmenu.cpp konsole_child.cpp
 +libkonsole_main_la_LDFLAGS = $(all_libraries)
-+libkonsole_main_la_LIBADD = $(LIB_KDEUI) $(LIB_KIO) $(LIBUTIL) $(XTESTLIB)
++libkonsole_main_la_LIBADD = $(LIB_KDEPRINT) $(LIBUTIL) $(XTESTLIB)
 +
 +konsole_la_SOURCES = konsole_main.cpp
  konsole_la_LDFLAGS = $(all_libraries) -module -avoid-version
--konsole_la_LIBADD = $(LIB_KDEUI) $(LIB_KIO) $(LIBUTIL) $(XTESTLIB)
+-konsole_la_LIBADD = $(LIB_KDEPRINT) $(LIBUTIL) $(XTESTLIB)
 +konsole_la_LIBADD = libkonsole_main.la
  
  # konsole executable
 -konsole_SOURCES = dummy.cpp
--konsole_LDADD = konsole.la $(LIB_KIO)
+-konsole_LDADD = konsole.la $(LIB_KDEPRINT)
 +konsole_SOURCES = konsole_main.cpp
 +konsole_LDADD = libkonsole_main.la
  konsole_LDFLAGS = $(all_libraries) $(KDE_RPATH)
