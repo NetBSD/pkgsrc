@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2000/03/21 22:40:57 tron Exp $
+# $NetBSD: Makefile,v 1.18 2000/03/27 16:36:13 fredb Exp $
 # FreeBSD Id: Makefile,v 1.15 1998/05/27 08:44:56 dburr Exp
 #
 
@@ -22,7 +22,7 @@ USE_MOTIF=		yes
 
 GNU_CONFIGURE=		yes
 
-LDFLAGS+=		-L${X11BASE}/LessTif/Motif1.2/lib -L${X11BASE}/lib
+LDFLAGS+=		-L${X11BASE}/LessTif/Motif1.2/lib -L${X11BASE}/lib -Wl,-R${X11BASE}/LessTif/Motif1.2/lib 
 
 CONFIGURE_ENV=		CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/LessTif/Motif1.2/include -I${X11BASE}/include -Dunix"
 CONFIGURE_ARGS=		--with-zdir=/usr --with-jpegdir=${LOCALBASE} --with-pngdir=${LOCALBASE}
