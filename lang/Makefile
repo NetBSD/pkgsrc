@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.181 2004/06/29 18:02:54 shannonjr Exp $
+# $NetBSD: Makefile,v 1.182 2004/06/30 17:41:54 salo Exp $
 #
 
 COMMENT=	Programming languages
@@ -41,14 +41,14 @@ SUBDIR+=	gb
 SUBDIR+=	gcc
 SUBDIR+=	gcc-ssp
 SUBDIR+=	gcc3
-SUBDIR+=	gcc34
 SUBDIR+=	gcc3-ada
-SUBDIR+=	gcc34-ada
 SUBDIR+=	gcc3-c
 SUBDIR+=	gcc3-c++
 SUBDIR+=	gcc3-f77
 SUBDIR+=	gcc3-java
 SUBDIR+=	gcc3-objc
+SUBDIR+=	gcc34
+SUBDIR+=	gcc34-ada
 SUBDIR+=	gforth
 SUBDIR+=	ghc
 SUBDIR+=	gpc
@@ -78,6 +78,7 @@ SUBDIR+=	kali
 SUBDIR+=	ksi
 SUBDIR+=	libperl
 SUBDIR+=	librep
+SUBDIR+=	libtcl-nothread
 SUBDIR+=	lua
 SUBDIR+=	lua4
 SUBDIR+=	maude
