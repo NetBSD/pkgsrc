@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/07/23 19:01:40 wiz Exp $
+
+SHA1 (Cygne-SDL-0.1-src.tar.gz) = f9c50702d1911d0ff1728e5aa089e67cfdfd0030
+Size (Cygne-SDL-0.1-src.tar.gz) = 106448 bytes
+SHA1 (patch-aa) = 9f23ff20e32950b2821654ca8269ebe82294e8b6
+SHA1 (patch-ab) = 89789c935f2865a015a72cf11621971d8b43b538
+SHA1 (patch-ac) = bee744a1b007158d681da122615bab3d8414b824
+SHA1 (patch-ad) = 120c1df8c521c1ffbd7750335730849ac921dc41
