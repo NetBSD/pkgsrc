@@ -3,7 +3,7 @@
 # Date created:		15 May 1995
 # Whom:			torstenb
 #
-# $NetBSD: Makefile,v 1.2 1997/10/28 01:02:29 hubertf Exp $
+# $NetBSD: Makefile,v 1.3 1998/01/24 21:37:54 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.6 1996/12/01 01:22:54 obrien Exp 
 #
 
@@ -22,11 +22,11 @@ MAN1=		mirror.1 mirrormaster.1
 post-configure:
 	cd ${WRKSRC} ; ${SED} \
 		s:/usr/local:${PREFIX}: <mirror.pl >mirror.pl.BAK ; \
-		mv mirror.pl.BAK mirror.pl
+		${MV} mirror.pl.BAK mirror.pl
 	cd ${WRKSRC} ; for i in do_unlinks mirror mirror.pl mm \
 		pkgs_to_mmin ; do \
 		${SED} s:/usr/bin/perl:${PREFIX}/bin/perl: <$$i >$$i.BAK ; \
-		mv $$i.BAK $$i ; done
+		${MV} $$i.BAK $$i ; done
 
 pre-install:
 	${MKDIR} ${PREFIX}/lib/mirror
