@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.28 2005/01/05 09:15:29 adam Exp $
+$NetBSD: distinfo,v 1.29 2005/01/24 22:10:44 tv Exp $
 
 SHA1 (tcl8.4.9-src.tar.gz) = 77370577ded22315fb8f60e20500920352412e58
 Size (tcl8.4.9-src.tar.gz) = 3496364 bytes
 SHA1 (patch-aa) = b9a40bcc2873065714f802e8605709da8532eeee
-SHA1 (patch-ab) = adbc7e77190469e49712d25d3683288d8de9be0d
+SHA1 (patch-ab) = 248f281b084af50aa980521b3ff3d72a40e97efd
 SHA1 (patch-ac) = ca2409270eee18ca2c8ddf9a002d9fff95053e4d
 SHA1 (patch-ae) = f086af46134e7698e71a9cf1b5668f32ae722d46
-SHA1 (patch-af) = bd59ac1331b2e314ed245d7bd60fbf05643fcb29
+SHA1 (patch-af) = b149cb12b04d2b379dfe6acbc6438c294224f65b
 SHA1 (patch-ag) = 0a11bfc878d43b15f6444923fac18b4876b62398
 SHA1 (patch-ah) = 0aaa349fcf9ce736e1f7d3dad377ee355f549ecb
