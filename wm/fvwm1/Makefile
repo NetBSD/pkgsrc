@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/10/14 13:47:17 tron Exp $
+# $NetBSD: Makefile,v 1.7 2002/06/17 08:12:36 martti Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/10/11 10:42:43 jkh Exp
 #
 
@@ -13,7 +13,7 @@ COMMENT=	Virtual window manager for X
 
 DEPENDS=	xpmroot-2.*:../../x11/xpmroot
 
-CONFLICTS=	fvwm-1.*
+CONFLICTS=	fvwm2-*
 
 NO_SRC_ON_FTP=	Already in MASTER_SITE_LOCAL
 
