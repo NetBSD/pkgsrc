@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: cpuflags.NetBSD,v 1.34 2003/04/22 08:01:37 abs Exp $
+# $NetBSD: cpuflags.NetBSD,v 1.35 2003/05/29 11:45:50 abs Exp $
 
 if [ -x /sbin/sysctl ] ;then
     SYSCTL=/sbin/sysctl
@@ -15,6 +15,12 @@ hw_model=`$SYSCTL -n hw.model`
 if [ -n "$MACHINE" -a $hw_machine != "$MACHINE" ]; then
     echo
     exit
+fi
+
+if [ -n "$1" ]; then
+    CC=$1
+else
+    CC=gcc
 fi
 
 case $hw_machine_arch in
@@ -53,9 +59,15 @@ case $hw_machine_arch in
 	esac ;;
 
     i386) case $hw_model in
+	*Intel\ Pentium\ II\ *)	FLAGS='-march=pentium2'		;;
+	*Intel\ Pentium\ III\ *) FLAGS='-march=pentium3'		;;
+	*Intel\ Pentium\ 4\ *)	FLAGS='-march=pentium4'		;;
+	*AMD\ K6-III*)		FLAGS='-march=k6-3'		;;
+	*AMD\ K6-2*)		FLAGS='-march=k6-2'		;;
+	*AMD\ K6*)		FLAGS='-march=k6'		;;
+	*AMD\ K7*)		FLAGS='-march=athlon'		;;
 	*386-class*)		FLAGS='-march=i386'		;;
 	*486-class*)		FLAGS='-march=i486'		;;
-	*AMD\ K6*)		FLAGS='-march=k6'		;;
 	*586-class*)		FLAGS='-march=pentium'		;;
 	*686-class*)		FLAGS='-march=pentiumpro'	;;
     esac ;;
@@ -133,7 +145,7 @@ fi
 
 # Fixup flags for old gcc
 if [ -n "$FLAGS" ]; then
-    gcc_ver=`gcc -v 2>&1 | awk '/gcc version/ {sub("egcs-","");print $3}'`
+    gcc_ver=`${CC} -v 2>&1 | awk '/gcc version/ {sub("egcs-","");print $3}'`
     FLAGS=`awk -v "flags=$FLAGS" -v "gcc_ver=$gcc_ver" '
 	{if (gcc_ver < $1){map[$2] = ""$3}}
 	END{if (flags in map) {print map[flags]}else {print flags}}
@@ -151,6 +163,11 @@ if [ -n "$FLAGS" ]; then
 2.90	-mcpu=strongarm110	-m6
 2.90	-mcpu=arm710		-m6
 2.95	-march=k6		-march=pentium
+3.2	-march=k6-2		-march=k6
+3.2	-march=k6-3		-march=k6
+3.2	-march=pentium2		-march=pentiumpro
+3.2	-march=pentium3		-march=pentiumpro
+3.2	-march=pentium4		-march=pentiumpro
 EOD
 `
 fi

@@ -1,4 +1,4 @@
-# $Id: cpuflags.mk,v 1.7 2002/08/05 13:17:11 abs Exp $
+# $Id: cpuflags.mk,v 1.8 2003/05/29 11:45:50 abs Exp $
 # Makefile include fragment to simplify use of cpuflags in pkgsrc
 # abs@netbsd.org - freely distributable, no warrenties, stick no bills.
 
@@ -14,7 +14,7 @@
 
 .ifndef CPU_FLAGS
 
-CPU_FLAGS!=/usr/pkg/bin/cpuflags
+CPU_FLAGS!=/usr/pkg/bin/cpuflags ${CC}
 CPU_DIR!=echo ${CPU_FLAGS} | sed 's/ //'
 MAKEFLAGS+=CPU_FLAGS=${CPU_FLAGS} CPU_DIR="${CPU_DIR}" 		# For sub makes
 
