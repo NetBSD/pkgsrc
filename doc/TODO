@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.406 2003/03/22 04:36:36 rh Exp $
+$NetBSD: TODO,v 1.407 2003/03/22 04:59:58 salo Exp $
 
 Suggested new packages
 ======================
@@ -144,7 +144,6 @@ Suggested package updates
 	o icewm-1.2.7
 	o inform-6.21.3 [pkg/19298]
 	o inn 2.3.5
-	o ja-shinonome-0.9.10 [pkg/20832]
 	o jakarta-ant-1.5 [pkg/18322]
 	o jakarta-ant-1.5.2
 	o jakarta-tomcat-3.3.1a
