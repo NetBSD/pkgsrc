@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.8 2000/05/19 03:58:57 jlam Exp $
+$NetBSD: patch-ae,v 1.9 2000/09/19 13:13:30 hubertf Exp $
 
---- src/osdep/unix/Makefile.orig	Tue Nov 16 21:05:48 1999
-+++ src/osdep/unix/Makefile	Tue May  2 15:18:30 2000
-@@ -99,7 +99,7 @@
+--- src/osdep/unix/Makefile.orig	Wed Aug 30 23:28:56 2000
++++ src/osdep/unix/Makefile
+@@ -100,7 +100,7 @@
  
  # Normally no need to change any of these
  
@@ -11,7 +11,7 @@ $NetBSD: patch-ae,v 1.8 2000/05/19 03:58:57 jlam Exp $
  BINARIES=mail.o misc.o newsrc.o smanager.o osdep.o utf8.o siglocal.o \
   dummy.o pseudo.o netmsg.o flstring.o fdstring.o \
   rfc822.o nntp.o smtp.o imap4r1.o pop3.o \
-@@ -122,7 +122,7 @@
+@@ -123,7 +123,7 @@
  # Here if no make argument established
  
  missing: osdep.h
@@ -20,21 +20,22 @@ $NetBSD: patch-ae,v 1.8 2000/05/19 03:58:57 jlam Exp $
  
  osdep.h:
  	@echo You must specify what type of system
-@@ -386,10 +386,11 @@
+@@ -431,11 +431,12 @@
  
  neb:	# NetBSD
  	$(BUILD) `cat EXTRASPECIALS` OS=bsi \
 +	 CC="$(CC)" \
+ 	 CRXTYPE=nfs \
  	 SPOOLDIR=/var \
 -	 ACTIVEFILE=/var/db/news/active \
 +	 ACTIVEFILE=/var/news/db/active \
  	 RSHPATH=/usr/bin/rsh \
--	 BASECFLAGS="-g -O -pipe -DNFSKLUDGE" \
-+	 BASECFLAGS="-O -pipe -DNFSKLUDGE" \
+-	 BASECFLAGS="-g -O -pipe" \
++	 BASECFLAGS="-O -pipe" \
  	 BASELDFLAGS="-lcrypt"
  
- nxt:	# NEXTSTEP
-@@ -709,7 +710,7 @@
+ nec:	# NEC UX
+@@ -813,7 +814,7 @@
  	 -DACTIVEFILE=\"$(ACTIVEFILE)\" -DNEWSSPOOL=\"$(NEWSSPOOL)\" \
  	 -DRSHPATH=\"$(RSHPATH)\" -DLOCKPGM=\"$(LOCKPGM)\" > OSCFLAGS
  	echo $(BASELDFLAGS) $(EXTRALDFLAGS) > LDFLAGS
