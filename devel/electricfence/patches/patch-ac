@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2001/11/09 00:39:39 hubertf Exp $
+
+--- tstheap.c.orig	Fri Jan 20 05:54:32 1995
++++ tstheap.c
+@@ -47,7 +47,7 @@
+ 
+ 	for ( ; count < duration; count++ ) {
+ 		void * *	element = &pool[(int)(drand48() * POOL_SIZE)];
+-		size_t		size = (size_t)(drand48() * (LARGEST_BUFFER + 1));
++		size_t		size = (size_t)(lrand48() % (LARGEST_BUFFER + 1));
+ 
+ 		if ( *element ) {
+ 			free( *element );
