@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2003/09/28 09:13:59 jlam Exp $
+# $NetBSD: Makefile,v 1.61 2003/09/29 08:37:09 grant Exp $
 #
 
 DISTNAME=		lynx2.8.4rel.1
@@ -117,7 +117,7 @@ CONFIGURE_ARGS+= 	--with-socks5
 CONFIGURE_ARGS+=       --enable-ipv6
 .endif
 
-.include "../../mk/curses.buildlink2.mk"
+.include "../../devel/ncurses/buildlink2.mk"
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../devel/zlib/buildlink2.mk"
 .include "../../security/openssl/buildlink2.mk"
