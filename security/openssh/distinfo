@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.6 2001/08/17 19:49:08 kim Exp $
+$NetBSD: distinfo,v 1.7 2001/09/27 05:12:54 itojun Exp $
 
-SHA1 (openssh-2.9p2.tar.gz) = add432005b43f71ccf964bb77b37291273dd4ceb
-Size (openssh-2.9p2.tar.gz) = 662590 bytes
-SHA1 (patch-aa) = 0a3322cbb38c666266a7d44fc8188546b7818926
-SHA1 (patch-ab) = 92eee280f610967ddd56c0f31cd2bf2960f898b4
-SHA1 (patch-ah) = 58a9bbc7c35e7d043c26288affe6fb1a88d9db2e
+SHA1 (openssh-2.9.9p2.tar.gz) = 4b2949dcf87bb484a2dcb6eb03312f97561f819c
+Size (openssh-2.9.9p2.tar.gz) = 697371 bytes
+SHA1 (patch-aa) = 99e51831871fc9f7fc3799c0092e44b0326da9df
+SHA1 (patch-ab) = 15196cd4448f189342dc4c0fa618005832c94cfc
+SHA1 (patch-ah) = 7adbe390d4397b284061a213f08a9c7933fcd954
