@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2000/08/23 23:14:33 tron Exp $
+# $NetBSD: Makefile,v 1.30 2000/09/02 13:24:50 hubertf Exp $
 #
 
 DISTNAME=       bxform-088
@@ -43,6 +43,9 @@ USE_XPM=	YES
 USE_LIBTOOL=	YES
 MAKEFILE=	${FILESDIR}/Makefile
 PLIST_SRC=	${PKGDIR}/PLIST.mi ${PKGDIR}/PLIST.shlib
+
+CHECK_SHLIBS=	NO	# fdesigner doesn't find libX11 on i386
+			# we don't have sources, so don't run this test
 
 # When the XForms API changes and breaks binary-compatibility with the
 # previous version, increment the MAJOR by 1 and reset the MINOR to 0.
