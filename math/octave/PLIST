@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2003/07/02 20:58:34 jtb Exp $
+@comment $NetBSD: PLIST,v 1.7 2003/08/02 19:39:08 seb Exp $
 bin/mkoctfile
 bin/mkoctfile-${PKGVERSION}
 bin/octave
@@ -211,8 +211,6 @@ include/${PKGNAME}/octave/xdiv.h
 include/${PKGNAME}/octave/xpow.h
 @exec ln -s ${PKGNAME} %D/include/octave
 @unexec ${RM} -f %D/include/octave
-@unexec ${INSTALL_INFO} --delete %D/info/octave.info %D/info/dir
-@unexec ${INSTALL_INFO} --delete %D/info/liboctave.info %D/info/dir
 info/liboctave.info
 info/liboctave.info-1
 info/liboctave.info-2
@@ -230,8 +228,6 @@ info/octave.info-6
 info/octave.info-7
 info/octave.info-8
 info/octave.info-9
-@exec ${INSTALL_INFO} %D/info/liboctave.info %D/info/dir
-@exec ${INSTALL_INFO} %D/info/octave.info %D/info/dir
 lib/${PKGNAME}/libcruft.a
 lib/${PKGNAME}/liboctave.a
 lib/${PKGNAME}/liboctinterp.a
