@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1.1.1 2003/12/14 01:16:39 xtraeme Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2003/12/30 22:50:38 cjep Exp $
 #
 # This Makefile fragment is included by packages that use fribidi.
 #
@@ -17,7 +17,6 @@ BUILDLINK_PREFIX.fribidi_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.fribidi+=	include/fribidi/*.h
 BUILDLINK_FILES.fribidi+=	lib/libfribidi.*
 BUILDLINK_FILES.fribidi+=	lib/pkgconfig/fribidi.pc
-
 
 BUILDLINK_TARGETS+=	fribidi-buildlink
 
