@@ -1,18 +1,8 @@
-$NetBSD: patch-ax,v 1.2 1999/07/26 21:49:50 tron Exp $
+$NetBSD: patch-ax,v 1.3 1999/08/22 22:55:46 kim Exp $
 
---- nntp.c.orig	Thu Nov 25 10:39:37 1993
-+++ nntp.c	Mon Jul 26 23:20:32 1999
-@@ -85,7 +85,9 @@
- import int silent, no_update;
- 
- import int sys_nerr;
-+#ifndef __NetBSD__
- import char *sys_errlist[];
-+#endif
- extern void nn_exitmsg();
- extern void sys_error();
- extern int sys_warning();
-@@ -759,7 +761,7 @@
+--- nntp.c.orig	Wed Jun  9 14:18:25 1999
++++ nntp.c	Sun Aug 22 18:14:18 1999
+@@ -769,7 +769,7 @@
      strncpy(host, (gethostbyname(host))->h_name, sizeof host);
  
      server_real_name = (gethostbyname(nntp_server))->h_name;
@@ -21,7 +11,7 @@ $NetBSD: patch-ax,v 1.2 1999/07/26 21:49:50 tron Exp $
  
      if (use_nntp) {
  	freeobj(news_active);
-@@ -1098,7 +1100,7 @@
+@@ -1108,7 +1108,7 @@
  
       case OK_BODY:
  	tmp = open_file(cptr->file_name, OPEN_APPEND|MUST_EXIST);
