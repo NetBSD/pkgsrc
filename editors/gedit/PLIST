@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2004/04/01 18:51:56 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.10 2004/05/15 14:28:53 jmmv Exp $
 bin/gedit
 bin/gnome-text-editor
 include/gedit-2.6/gedit/bonobo-mdi-child.h
@@ -139,6 +139,7 @@ share/gnome/help/gedit/zh_TW/figures/gedit_window.png
 share/gnome/help/gedit/zh_TW/gedit.xml
 share/gnome/help/gedit/zh_TW/legal.xml
 share/idl/GNOME_Gedit.idl
+${PKGLOCALEDIR}/locale/af/LC_MESSAGES/gedit-2.6.mo
 ${PKGLOCALEDIR}/locale/am/LC_MESSAGES/gedit-2.6.mo
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/gedit-2.6.mo
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/gedit-2.6.mo
@@ -161,10 +162,12 @@ ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/gedit-2.6.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gedit-2.6.mo
 ${PKGLOCALEDIR}/locale/ga/LC_MESSAGES/gedit-2.6.mo
 ${PKGLOCALEDIR}/locale/gl/LC_MESSAGES/gedit-2.6.mo
+${PKGLOCALEDIR}/locale/gu/LC_MESSAGES/gedit-2.6.mo
 ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/gedit-2.6.mo
 ${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/gedit-2.6.mo
 ${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/gedit-2.6.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/gedit-2.6.mo
+${PKGLOCALEDIR}/locale/is/LC_MESSAGES/gedit-2.6.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/gedit-2.6.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/gedit-2.6.mo
 ${PKGLOCALEDIR}/locale/kn/LC_MESSAGES/gedit-2.6.mo
@@ -259,7 +262,6 @@ share/pixmaps/gedit-plugin-manager.png
 @dirrm lib/gedit-2/plugins
 @dirrm lib/gedit-2
 @comment in libbonobo: @dirrm lib/bonobo/servers
-@comment in libbonobo: @dirrm lib/bonobo
 @dirrm include/gedit-2.6/gedit/recent-files
 @dirrm include/gedit-2.6/gedit
 @dirrm include/gedit-2.6
