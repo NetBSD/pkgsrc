@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.314 2003/12/03 05:22:16 martti Exp $
+# $NetBSD: Makefile,v 1.315 2003/12/03 23:41:11 xtraeme Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -292,5 +292,6 @@ SUBDIR+=	xwatchwin
 SUBDIR+=	xwit
 SUBDIR+=	xworld
 SUBDIR+=	xwrits
+SUBDIR+=	zenity
 
 .include "../mk/bsd.pkg.subdir.mk"
