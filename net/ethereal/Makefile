@@ -1,26 +1,26 @@
-# $NetBSD: Makefile,v 1.99 2004/10/31 13:22:53 adrianp Exp $
+# $NetBSD: Makefile,v 1.100 2004/12/17 18:35:38 salo Exp $
+#
 
-DISTNAME=	ethereal-0.10.7
-PKGREVISION=	# defined1
-CATEGORIES=	net
-MASTER_SITES=	http://www.ethereal.com/distribution/ \
-		http://ethereal.planetmirror.com/distribution/ \
-		http://www.mirrors.wiretapped.net/security/packet-capture/ethereal/ \
-		http://netmirror.org/mirror/ftp.ethereal.com/ \
-		http://ethereal.secuwiz.com/distribution/ \
-		http://ethereal.0ni0n.org/distribution/ \
-		ftp://ftp.ethereal.com/pub/ethereal/ \
-		ftp://ftp.sunet.se/pub/network/monitoring/ethereal/ \
-		ftp://ftp.planetmirror.com/pub/ethereal/ \
-		ftp://gd.tuwien.ac.at/infosys/security/ethereal/ \
-		http://ftp.sunet.se/pub/network/monitoring/ethereal/ \
-		http://ethereal.netarc.jp/distribution/ \
-		ftp://ftp.ethereal.com/pub/ethereal/old-versions/
-EXTRACT_SUFX=	.tar.bz2
+DISTNAME=		ethereal-0.10.8
+CATEGORIES=		net
+MASTER_SITES=		http://www.ethereal.com/distribution/ \
+			http://ethereal.planetmirror.com/distribution/ \
+			http://www.mirrors.wiretapped.net/security/packet-capture/ethereal/ \
+			http://netmirror.org/mirror/ftp.ethereal.com/ \
+			http://ethereal.secuwiz.com/distribution/ \
+			http://ethereal.0ni0n.org/distribution/ \
+			ftp://ftp.ethereal.com/pub/ethereal/ \
+			ftp://ftp.sunet.se/pub/network/monitoring/ethereal/ \
+			ftp://ftp.planetmirror.com/pub/ethereal/ \
+			ftp://gd.tuwien.ac.at/infosys/security/ethereal/ \
+			http://ftp.sunet.se/pub/network/monitoring/ethereal/ \
+			http://ethereal.netarc.jp/distribution/ \
+			ftp://ftp.ethereal.com/pub/ethereal/old-versions/
+EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=	frueauf@NetBSD.org
-HOMEPAGE=	http://www.ethereal.com/
-COMMENT=	Network protocol analyzer
+MAINTAINER=		frueauf@NetBSD.org
+HOMEPAGE=		http://www.ethereal.com/
+COMMENT=		Network protocol analyzer
 
 USE_BUILDLINK3=		YES
 USE_X11=		YES
@@ -45,12 +45,12 @@ PTHREAD_OPTS=		require
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "Darwin" 
+.if ${OPSYS} == "Darwin"
 USE_BUILTIN.libpcap=	no
 .endif
 
-.include "../../devel/zlib/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../net/libpcap/buildlink3.mk"
 .include "../../net/net-snmp/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
