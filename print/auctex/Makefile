@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.9 2002/09/16 03:31:26 uebayasi Exp $
+# $NetBSD: Makefile,v 1.10 2003/01/11 10:02:03 uebayasi Exp $
 
-DISTNAME=		auctex-11.11
+DISTNAME=		auctex-11.13
 CATEGORIES=		print
-MASTER_SITES=		ftp://ftp.sunsite.auc.dk/pub/emacs/auctex/ftp/auctex/
+MASTER_SITES=		http://savannah.nongnu.org/download/auctex/stable.pkg/11.13/
 
 MAINTAINER=		packages@netbsd.org
-HOMEPAGE=		http://sunsite.auc.dk/auctex/
+HOMEPAGE=		http://www.nongnu.org/auctex/
 COMMENT=		Enhanced LaTeX mode for Emacs
 
 DEPENDS+=		teTeX-[0-9]*:../../print/teTeX
@@ -29,24 +29,25 @@ INFO_FILES+=		auctex
 PLIST_SUBST+=		INFODIR=${INFODIR}
 MESSAGE_SUBST+=		LISPDIR=${LISPDIR}
 
+EGDIR=			${PREFIX}/share/examples/auctex
+CONF_FILES=		${EGDIR}/tex-site.el ${EMACS_LISPPREFIX}/auctex/tex-site.el
+
 post-patch:
 	${MV} ${WRKSRC}/tex-site.el ${WRKSRC}/tex-site.el.orig
 	${SED} -e 's:@LISPDIR@:'${LISPDIR}':g'			\
 		-e 's:@TEX_PREFIX@:'${TEX_PREFIX}':g'		\
 	${WRKSRC}/tex-site.el.orig > ${WRKSRC}/tex-site.el
-	${CP} ${WRKSRC}/tex-site.el ${WRKSRC}/tex-site.el.dist
+#	${CP} ${WRKSRC}/tex-site.el ${WRKSRC}/tex-site.el.dist
 
 post-build:
 	${RM} -f ${WRKSRC}/doc/auctex*
 	cd ${WRKSRC}/doc && ${SETENV} ${MAKE_ENV} ${MAKE} auctex
 
 do-install:
+	${INSTALL_DATA_DIR} ${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/tex-site.el ${EGDIR}
+#	${INSTALL_DATA} ${WRKSRC}/tex-site.el.dist ${EGDIR}
 	${INSTALL_DATA_DIR} ${EMACS_LISPPREFIX}/auctex
-	${INSTALL_DATA} ${WRKSRC}/tex-site.el ${EMACS_LISPPREFIX}/auctex
-	${INSTALL_DATA} ${WRKSRC}/tex-site.el.dist ${EMACS_LISPPREFIX}/auctex
-.if !exists(${EMACS_LISPPREFIX}/auctex/tex-site.el)
-	${INSTALL_DATA} ${WRKSRC}/tex-site.el ${EMACS_LISPPREFIX}/auctex/tex-site.el
-.endif
 	for f in auc-old.el bib-cite.el font-latex.el hilit-LaTeX.el	   \
 	latex.el lpath.el multi-prompt.el tex-buf.el tex-info.el tex-jp.el \
 	tex.el texmathp.el; do						   \
@@ -58,4 +59,5 @@ do-install:
 
 .include "../../mk/emacs.mk"
 .include "../../mk/texinfo.mk"
+.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
