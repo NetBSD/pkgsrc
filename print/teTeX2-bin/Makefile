@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/07/13 13:53:09 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2003/07/13 14:37:42 wulf Exp $
 
 DISTNAME=	tetex-src-${TETEX_BIN_VERS}
 PKGNAME=	teTeX2-bin-${TETEX_BIN_VERS}
@@ -17,6 +17,9 @@ DEPENDS+=	dialog-0.6z*:../../misc/dialog
 CONFLICTS+=	omega-[0-9]*
 
 INFO_FILES=	latex.info dvips.info web2c.info kpathsea.info
+
+REPLACE_PERL=	texk/xdvik/t1mapper \
+		texk/oxdvik/t1mapper
 
 .include "../../mk/bsd.prefs.mk"
 # sysutils/coreutils installs a 'readlink' program, so conflict with it if
