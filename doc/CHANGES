@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6390 2004/06/29 02:59:31 xtraeme Exp $
+$NetBSD: CHANGES,v 1.6391 2004/06/29 06:18:03 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3171,4 +3171,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gnome-extras to 2.6.2 [jmmv 2004-06-28]
 	Updated gdb6 to 6.1.1 [shannonjr 2004-06-28]
 	Updated bogofilter to 0.92.0 [snj 2004-06-29]
-	Added opencobol-0.23 [xtraeme 2004-06-29]
+	Added open-cobol-0.23 [xtraeme 2004-06-29]
