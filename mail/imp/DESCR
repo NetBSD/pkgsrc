@@ -2,3 +2,5 @@ IMP is a set of PHP scripts that implement an IMAP based webmail system.
 Assuming you have an account on a server that supports IMAP, you can use
 an installation of IMP to check your mail from anywhere that you have web
 access.
+This is the previous stable branch of IMP.  A version of IMP using the
+current stable branch is available as mail/imp4.
