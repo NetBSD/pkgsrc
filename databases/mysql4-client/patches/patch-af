@@ -1,26 +1,8 @@
-$NetBSD: patch-af,v 1.4 2004/11/01 08:30:25 grant Exp $
+$NetBSD: patch-af,v 1.5 2005/01/10 15:47:18 xtraeme Exp $
 
---- configure.orig	2004-10-23 17:29:20.000000000 +1000
-+++ configure
-@@ -23040,7 +23040,7 @@ cat >>conftest.$ac_ext <<_ACEOF
- int
- main ()
- {
--int link_test() { return compress(0, (unsigned long*) 0, "", 0); }
-+return compress(0, (unsigned long*) 0, "", 0);
-   ;
-   return 0;
- }
-@@ -23109,7 +23109,7 @@ cat >>conftest.$ac_ext <<_ACEOF
- int
- main ()
- {
--int link_test() { return compress(0, (unsigned long*) 0, "", 0); }
-+return compress(0, (unsigned long*) 0, "", 0);
-   ;
-   return 0;
- }
-@@ -34120,30 +34120,10 @@ else
+--- configure.orig	2004-12-27 17:48:08.000000000 +0100
++++ configure	2005-01-10 15:44:21.000000000 +0100
+@@ -36429,34 +36429,10 @@
  fi;
  
  
@@ -41,17 +23,25 @@ $NetBSD: patch-af,v 1.4 2004/11/01 08:30:25 grant Exp $
 -_ACEOF
 -
 -else
-   orbit_exec_prefix=
-   orbit_includes=
-   orbit_libs=
-   orbit_idl=
+-  orbit_exec_prefix=
+-  orbit_includes=
+-  orbit_libs=
+-  orbit_idl=
 -  echo "$as_me:$LINENO: result: not found" >&5
 -echo "${ECHO_T}not found" >&6
 -fi
+-
+-
+-
+-
++orbit_exec_prefix=
++orbit_includes=
++orbit_libs=
++orbit_idl=
  
- 
- 
-@@ -34422,7 +34402,7 @@ then
+   echo "$as_me:$LINENO: checking if we should build MySQLFS" >&5
+ echo $ECHO_N "checking if we should build MySQLFS... $ECHO_C" >&6
+@@ -36731,7 +36707,7 @@
  else
    bench_dirs=""
  fi
@@ -60,3 +50,12 @@ $NetBSD: patch-af,v 1.4 2004/11/01 08:30:25 grant Exp $
  
  
  # Don't build readline, i have it already
+@@ -38915,7 +38891,7 @@
+ server_scripts=
+ thread_dirs=
+ 
+-sql_client_dirs="libmysql client"
++sql_client_dirs="libmysql regex client"
+ linked_client_targets="linked_libmysql_sources"
+ CLIENT_LIBS=$NON_THREADED_CLIENT_LIBS
+ if test "$THREAD_SAFE_CLIENT" != "no"

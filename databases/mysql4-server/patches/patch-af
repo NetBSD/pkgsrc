@@ -1,26 +1,8 @@
-$NetBSD: patch-af,v 1.6 2004/11/08 18:19:41 xtraeme Exp $
+$NetBSD: patch-af,v 1.7 2005/01/10 15:47:18 xtraeme Exp $
 
---- configure.orig	2004-10-23 17:29:20.000000000 +1000
-+++ configure
-@@ -23040,7 +23040,7 @@ cat >>conftest.$ac_ext <<_ACEOF
- int
- main ()
- {
--int link_test() { return compress(0, (unsigned long*) 0, "", 0); }
-+return compress(0, (unsigned long*) 0, "", 0);
-   ;
-   return 0;
- }
-@@ -23109,7 +23109,7 @@ cat >>conftest.$ac_ext <<_ACEOF
- int
- main ()
- {
--int link_test() { return compress(0, (unsigned long*) 0, "", 0); }
-+return compress(0, (unsigned long*) 0, "", 0);
-   ;
-   return 0;
- }
-@@ -34120,30 +34120,10 @@ else
+--- configure.orig	2005-01-10 16:12:40.000000000 +0100
++++ configure	2005-01-10 16:12:52.000000000 +0100
+@@ -36429,33 +36429,10 @@
  fi;
  
  
@@ -48,15 +30,9 @@ $NetBSD: patch-af,v 1.6 2004/11/08 18:19:41 xtraeme Exp $
 -  echo "$as_me:$LINENO: result: not found" >&5
 -echo "${ECHO_T}not found" >&6
 -fi
+-
+-
+-
  
  
- 
-@@ -34422,7 +34402,7 @@ then
- else
-   bench_dirs=""
- fi
--bench_dirs="$bench_dirs mysql-test"
-+bench_dirs="$bench_dirs mysql-test"
- 
- 
- # Don't build readline, i have it already
+   echo "$as_me:$LINENO: checking if we should build MySQLFS" >&5

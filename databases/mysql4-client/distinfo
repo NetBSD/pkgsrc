@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.10 2004/11/08 18:19:41 xtraeme Exp $
+$NetBSD: distinfo,v 1.11 2005/01/10 15:47:18 xtraeme Exp $
 
-SHA1 (mysql-4.1.7.tar.gz) = 11c1c3a3004175d8b9ac710f9c7815cf759e6293
-Size (mysql-4.1.7.tar.gz) = 19849046 bytes
-SHA1 (patch-af) = 890b096c132339660cff33128d410a99646f49e1
+SHA1 (mysql-4.1.8a.tar.gz) = 845555eb6d1f48806e24e66a7a28ae822729cdcf
+Size (mysql-4.1.8a.tar.gz) = 22945198 bytes
+SHA1 (patch-af) = 66ac801ebd289d36a36434c6626cfea09a022713
 SHA1 (patch-au) = 9183bfa3a6f5b4a9553a6de83448fb684d514a91
-SHA1 (patch-av) = bc68c2e72d41e920f981c2ac277bcd5c8ff91611
-SHA1 (patch-aw) = d431580785ecddda8af80e6b816f5eabcba55a27
-SHA1 (patch-ax) = 5421a348d7a43ea30c570a09d1250a7e25ec00f9
+SHA1 (patch-av) = e2563965cb074c4dbd3b225b98de579dbb1d2b9b
+SHA1 (patch-aw) = cd03eb6c81a932186370e9ed248d0c7886b7286d
+SHA1 (patch-ax) = 9e9176468d6d335617862a4d77a358931d7c8c49
+SHA1 (patch-ay) = 5cb2f32bd1a0dfb0cc9d94c08736dceeac799d12

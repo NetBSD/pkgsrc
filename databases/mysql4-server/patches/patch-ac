@@ -1,10 +1,10 @@
-$NetBSD: patch-ac,v 1.1 2004/10/28 01:12:44 xtraeme Exp $
+$NetBSD: patch-ac,v 1.2 2005/01/10 15:47:18 xtraeme Exp $
 
---- mysql-test/Makefile.in.orig	2004-10-27 23:51:22.000000000 +0200
-+++ mysql-test/Makefile.in	2004-10-27 23:51:48.000000000 +0200
-@@ -305,7 +305,7 @@
+--- mysql-test/Makefile.in.orig	2005-01-10 16:11:33.000000000 +0100
++++ mysql-test/Makefile.in	2005-01-10 16:11:53.000000000 +0100
+@@ -355,7 +355,7 @@
+ @HAVE_NDBCLUSTER_DB_FALSE@DIST_SUBDIRS = 
  @HAVE_NDBCLUSTER_DB_TRUE@DIST_SUBDIRS = ndb
- 
  benchdir_root = $(prefix)
 -testdir = $(benchdir_root)/mysql-test
 +testdir = $(benchdir_root)/share/mysql-test

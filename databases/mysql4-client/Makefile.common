@@ -1,6 +1,6 @@
-# $NetBSD: Makefile.common,v 1.27 2004/12/17 17:48:08 wiz Exp $
+# $NetBSD: Makefile.common,v 1.28 2005/01/10 15:47:18 xtraeme Exp $
 
-DISTNAME=		mysql-4.1.7
+DISTNAME=		mysql-4.1.8a
 CATEGORIES=		databases
 MASTER_SITES=		http://mirrors.sunsite.dk/mysql/Downloads/MySQL-4.1/ \
 			ftp://sunsite.dk/mirrors/mysql/Downloads/MySQL-4.1/ \
@@ -51,6 +51,7 @@ CONFIGURE_ARGS+=	--without-bench
 CONFIGURE_ARGS+=	--with-low-memory
 CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl}
 CONFIGURE_ARGS+=	--with-vio
+CONFIGURE_ARGS+=	--without-mysqlfs
 
 CONFIGURE_ARGS+=	--with-charset=${MYSQL_CHARSET}
 CONFIGURE_ARGS+=	--with-extra-charsets=${MYSQL_EXTRA_CHARSET}
