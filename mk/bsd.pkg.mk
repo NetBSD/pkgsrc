@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.894 2002/01/06 02:03:40 tron Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.895 2002/01/06 20:03:22 fredb Exp $
 #
 # This file is in the public domain.
 #
@@ -803,10 +803,6 @@ MASTER_SITE_SOURCEFORGE+=	\
 	http://ftp1.sourceforge.net/ \
 	ftp://ftp.tuwien.ac.at/opsys/linux/sourceforge/
 
-# Empty declaration to avoid "variable MASTER_SITES recursive" error
-MASTER_SITES?=
-PATCH_SITES?=
-
 # The primary backup site.
 MASTER_SITE_BACKUP?=	\
 	ftp://ftp.netbsd.org/pub/NetBSD/packages/distfiles/ \
@@ -826,16 +822,6 @@ _MASTER_SITE_OVERRIDE:= ${MASTER_SITE_OVERRIDE}
 # Where to put distfiles that don't have any other master site
 MASTER_SITE_LOCAL?= \
 	${MASTER_SITE_BACKUP:=LOCAL_PORTS/}
-
-# I guess we're in the master distribution business! :)  As we gain mirror
-# sites for distfiles, add them to this list.
-.if !defined(MASTER_SITE_OVERRIDE)
-MASTER_SITES+=	${_MASTER_SITE_BACKUP}
-PATCH_SITES+=	${_MASTER_SITE_BACKUP}
-.else
-MASTER_SITES:=	${_MASTER_SITE_OVERRIDE} ${MASTER_SITES}
-PATCH_SITES:=	${_MASTER_SITE_OVERRIDE} ${PATCH_SITES}
-.endif
 
 # Derived names so that they're easily overridable.
 DISTFILES?=		${DISTNAME}${EXTRACT_SUFX}
@@ -872,6 +858,7 @@ _DISTFILES?=	${DISTFILES}
 _IGNOREFILES?=	${IGNOREFILES}
 _PATCHFILES?=	${PATCHFILES}
 .endif
+_ALLFILES?=	${_DISTFILES} ${_PATCHFILES}
 
 # This is what is actually going to be extracted, and is overridable
 #  by user.
@@ -1189,7 +1176,9 @@ package:
 # adding pre-* or post-* targets/scripts, override these.
 ################################################################
 
-# Fetch
+#
+# Define the elementary fetch macros.
+#
 _FETCH_FILE=								\
 	if [ ! -f $$file -a ! -f $$bfile -a ! -h $$bfile ]; then	\
 		${ECHO_MSG} "=> $$bfile doesn't seem to exist on this system."; \
@@ -1240,8 +1229,9 @@ _CHECK_DIST_PATH=							\
 	fi
 
 #
-# Sort the master site list according to the patterns in MASTER_SORT
+# Sort the master site list according to the patterns in MASTER_SORT.
 #
+.if defined(MASTER_SORT) || defined(MASTER_SORT_REGEX)
 MASTER_SORT?=
 MASTER_SORT_REGEX?=
 MASTER_SORT_REGEX+= ${MASTER_SORT:S/./\\./g:C/.*/:\/\/[^\/]*&\//}
@@ -1251,33 +1241,54 @@ MASTER_SORT_AWK= BEGIN { RS = " "; ORS = " "; IGNORECASE = 1 ; gl = "${MASTER_SO
 MASTER_SORT_AWK+= /${srt:C/\//\\\//g}/ { good["${srt}"] = good["${srt}"] " " $$0 ; next; } 
 .endfor
 MASTER_SORT_AWK+= { rest = rest " " $$0; } END { n=split(gl, gla); for(i=1;i<=n;i++) { print good[gla[i]]; } print rest; }
-SORTED_MASTER_SITES_CMD= ${ECHO} '${MASTER_SITES}' | ${AWK} '${MASTER_SORT_AWK}'
-SORTED_PATCH_SITES_CMD= ${ECHO} '${PATCH_SITES}' | ${AWK} '${MASTER_SORT_AWK}'
 
+SORT_SITES_CMD= ${ECHO} $$unsorted_sites | ${AWK} '${MASTER_SORT_AWK}'
+ORDERED_SITES= ${MASTER_SITE_OVERRIDE} `${SORT_SITES_CMD}`
+.else
+ORDERED_SITES= ${MASTER_SITE_OVERRIDE} $$unsorted_sites
+.endif
+
+#
+# Complete macro for the do-fetch and fetch-list-one-package targets.
+#
+.if !defined(_FETCH_ALLFILES)
+.  if !empty(_DISTFILES)
+.    for fetchfile in ${_DISTFILES}
+.      if defined(MASTER_SITES_${fetchfile:T})
+SITES_${fetchfile:T}?= ${MASTER_SITES_${fetchfile:T}}
+.      else
+SITES_${fetchfile:T}?= ${MASTER_SITES}
+.      endif
+.    endfor
+.  endif
+.  if !empty(_PATCHFILES)
+.    for fetchfile in ${_PATCHFILES}
+.      if defined(PATCH_SITES_${fetchfile:T})
+SITES_${fetchfile:T}?= ${PATCH_SITES_${fetchfile:T}}
+.      else
+SITES_${fetchfile:T}?= ${PATCH_SITES}
+.      endif
+.    endfor
+.  endif
+.  if !empty(_ALLFILES)
+_FETCH_ALLFILES= ${MKDIR} ${_DISTDIR};
+_FETCH_ALLFILES+= cd ${_DISTDIR};
+.    for fetchfile in ${_ALLFILES}
+_FETCH_ALLFILES+= 							\
+	unsorted_sites="${SITES_${fetchfile:T}} ${MASTER_SITE_BACKUP}";	\
+	sites="${ORDERED_SITES}";					\
+	file="${fetchfile}";						\
+	bfile="${fetchfile:T}";						\
+	${_CHECK_DIST_PATH};						\
+	${_FETCH_FILE};
+.    endfor
+.  endif
+_FETCH_ALLFILES?= ${DO_NADA}
+.endif
 
 .if !target(do-fetch)
 do-fetch:
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${_DISTDIR}
-.for fetchfile in ${_DISTFILES}
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${_DISTDIR};			\
-	sortedsites=`${SORTED_MASTER_SITES_CMD}`;			\
-	sites="${MASTER_SITES_${fetchfile:T}} $$sortedsites";		\
-	file="${fetchfile}";						\
-	bfile="${fetchfile:T}";						\
-	${_CHECK_DIST_PATH};						\
-	${_FETCH_FILE}
-.endfor
-.  if defined(_PATCHFILES)
-.for fetchfile in ${_PATCHFILES}
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${_DISTDIR};			\
-	sortedsites=`${SORTED_PATCH_SITES_CMD}`;			\
-	sites="${PATCH_SITES_${fetchfile:T}} $$sortedsites";		\
-	file="${fetchfile}";						\
-	bfile="${fetchfile:T}";						\
-	${_CHECK_DIST_PATH};						\
-	${_FETCH_FILE}
-.endfor
-.  endif
+	${_PKG_SILENT}${_PKG_DEBUG}${_FETCH_ALLFILES}
 .endif
 
 # show both build and run depends directories (non-recursively)
@@ -2608,33 +2619,7 @@ fetch-list-recursive:
 
 .if !target(fetch-list-one-pkg)
 fetch-list-one-pkg:
-	@${MKDIR} ${_DISTDIR}
-	@[ -z "${_DISTDIR}" ] || ${ECHO} "${MKDIR} ${_DISTDIR}"
-.  if defined(DISTFILES)
-.for fetchfile in ${DISTFILES}
-	@(cd ${_DISTDIR};						\
-	if [ ! -f ${fetchfile} -a ! -f ${fetchfile:T} ]; then		\
-		${ECHO} -n "cd ${_DISTDIR} && [ -f ${fetchfile} -o -f ${fetchfile:T} ] || "; \
-		for site in "" ${MASTER_SITES_${fetchfile:T}} `${SORTED_MASTER_SITES_CMD}`; do	\
-			if [ "X$$site" = X"" ]; then continue; fi; 	\
-			${ECHO} -n ${FETCH_CMD} ${FETCH_BEFORE_ARGS} "'"$${site}${fetchfile}"'" "${FETCH_AFTER_ARGS}" '|| '; \
-		done;							\
-		${ECHO} "${ECHO} ${fetchfile} not fetched";		\
-	fi)
-.endfor
-.  endif # DISTFILES
-.  if defined(PATCHFILES)
-.for fetchfile in ${PATCHFILE}
-	@(cd ${_DISTDIR};						\
-	if [ ! -f ${fetchfile} -a ! -f ${fetchfile:T} ]; then		\
-		${ECHO} -n "cd ${_DISTDIR} && [ -f ${fetchfile} -o -f ${fetchfile:T} ] || "; \
-		for site in ${PATCH_SITES_${fetchfile:T}} `${SORTED_PATCH_SITES_CMD}`; do		\
-			${ECHO} -n ${FETCH_CMD} ${FETCH_BEFORE_ARGS} $${site}$${fetchfile} "${FETCH_AFTER_ARGS}" '|| '; \
-		done;							\
-		${ECHO} "${ECHO} $${fetchfile} not fetched";		\
-	fi)
-.endfor
-.  endif # defined(PATCHFILES)
+	@${ECHO} ${_FETCH_ALLFILES:Q}
 .endif # !target(fetch-list-one-pkg)
 
 # Checksumming utilities
