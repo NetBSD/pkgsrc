@@ -1,4 +1,4 @@
-/*	$NetBSD: rmd160hl.c,v 1.1.1.1 2001/03/06 11:21:05 agc Exp $	*/
+/*	$NetBSD: rmd160hl.c,v 1.2 2001/03/08 14:55:17 agc Exp $	*/
 
 /* rmd160hl.c
  * ----------------------------------------------------------------------------
@@ -13,7 +13,7 @@
 
 #include <sys/cdefs.h>
 #ifndef lint
-__RCSID("$NetBSD: rmd160hl.c,v 1.1.1.1 2001/03/06 11:21:05 agc Exp $");
+__RCSID("$NetBSD: rmd160hl.c,v 1.2 2001/03/08 14:55:17 agc Exp $");
 #endif	/* not lint */
 
 #include <sys/types.h>
@@ -32,10 +32,12 @@ __RCSID("$NetBSD: rmd160hl.c,v 1.1.1.1 2001/03/06 11:21:05 agc Exp $");
 #define _DIAGASSERT(cond)	assert(cond)
 #endif
 
+#if 0
 #if defined(__weak_alias)
 __weak_alias(RMD160End,_RMD160End)
 __weak_alias(RMD160File,_RMD160File)
 __weak_alias(RMD160Data,_RMD160Data)
+#endif
 #endif
 
 char *

@@ -1,4 +1,4 @@
-/*	$NetBSD: rmd160.c,v 1.1.1.1 2001/03/06 11:21:05 agc Exp $	*/
+/*	$NetBSD: rmd160.c,v 1.2 2001/03/08 14:55:17 agc Exp $	*/
 
 /********************************************************************\
  *
@@ -20,7 +20,7 @@
 
 #include <sys/cdefs.h>
 #ifndef lint
-__RCSID("$NetBSD: rmd160.c,v 1.1.1.1 2001/03/06 11:21:05 agc Exp $");
+__RCSID("$NetBSD: rmd160.c,v 1.2 2001/03/08 14:55:17 agc Exp $");
 #endif	/* not lint */
 
 /* header files */
@@ -46,11 +46,13 @@ __RCSID("$NetBSD: rmd160.c,v 1.1.1.1 2001/03/06 11:21:05 agc Exp $");
 #define _DIAGASSERT(cond)	assert(cond)
 #endif
 
+#if 0
 #if !defined(_KERNEL) && defined(__weak_alias)
 __weak_alias(RMD160Transform,_RMD160Transform)
 __weak_alias(RMD160Init,_RMD160Init)
 __weak_alias(RMD160Update,_RMD160Update)
 __weak_alias(RMD160Final,_RMD160Final)
+#endif
 #endif
 
 /********************************************************************/
