@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2000/08/30 22:17:14 tron Exp $
+# $NetBSD: Makefile,v 1.71 2000/09/09 01:07:59 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.6 1997/11/27 00:35:27 se Exp
 
 DISTNAME=	kdebase-1.1.2
@@ -69,6 +69,7 @@ post-configure:
 
 post-install:
 	@${CHMOD} u+s ${PREFIX}/bin/klock
+	@${CHMOD} u+s ${PREFIX}/bin/*.kss
 	@${CP} ${PLIST_INIT} ${PLIST_SRC}
 	@(cd ${PREFIX}; ${FIND} ${PLIST_DIRS} -type f >>${PLIST_SRC})
 	@(cd ${PREFIX}; ${FIND} ${PLIST_DIRS} -type d | sort -r | \
