@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2000/01/19 04:55:01 hubertf Exp $
+# $NetBSD: Makefile,v 1.28 2000/02/18 20:25:14 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.44 1997/09/13 20:19:28 chuckr Exp
 #
 
@@ -10,6 +10,7 @@
     SUBDIR += bvi
 #    SUBDIR += e93
     SUBDIR += emacs
+    SUBDIR += framemaker
 #    SUBDIR += gvim
     SUBDIR += hexedit
     SUBDIR += jed
