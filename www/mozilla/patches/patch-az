@@ -1,0 +1,14 @@
+$NetBSD: patch-az,v 1.1 2001/08/04 07:05:19 taya Exp $
+
+diff -ru ../Orig/mozilla/directory/c-sdk/ldap/include/portable.h ./directory/c-sdk/ldap/include/portable.h
+--- ../Orig/mozilla/directory/c-sdk/ldap/include/portable.h	Sat Jul 28 07:02:31 2001
++++ ./directory/c-sdk/ldap/include/portable.h	Sat Aug  4 10:38:30 2001
+@@ -98,7 +98,7 @@
+  * some systems don't have the BSD re_comp and re_exec routines
+  */
+ #ifndef NEED_BSDREGEX
+-#if ( defined( SYSV ) || defined( VMS ) || defined( netbsd ) || defined( freebsd ) || defined( linux )) && !defined(sgi)
++#if ( defined( SYSV ) || defined( VMS ) || defined( NETBSD ) || defined( freebsd ) || defined( linux )) && !defined(sgi)
+ #define NEED_BSDREGEX
+ #endif
+ #endif
