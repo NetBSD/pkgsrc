@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.154 2000/05/25 20:54:36 jwise Exp $
+# $NetBSD: Makefile,v 1.155 2000/05/27 14:13:25 agc Exp $
 # FreeBSD Id: Makefile,v 1.156 1997/09/30 07:54:42 asami Exp
 #
 
@@ -47,7 +47,6 @@
     SUBDIR += gtkstep
     SUBDIR += icewm
     SUBDIR += icewm-gnome
-    SUBDIR += intlfonts
     SUBDIR += jisx0208fonts
     SUBDIR += jisx0212fonts
     SUBDIR += jisx0213fonts
