@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/02/15 05:54:18 bad Exp $
+# $NetBSD: Makefile,v 1.4 2000/03/28 16:50:24 tron Exp $
 #
 
 DISTNAME=	Msql-Mysql-modules-1.2017
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.mysql.com.org/
 
 DEPENDS+=	mysql-client-3.22.32:../../databases/mysql-client
 DEPENDS+=	p5-DBI-1.08:../../databases/p5-DBI
-DEPENDS+=	p5-Data-Dumper-2.10:../../devel/p5-Data-Dumper
+DEPENDS+=	p5-Data-Dumper>=2.10:../../devel/p5-Data-Dumper
 DEPENDS+=	p5-Data-ShowTable-3.3:../../devel/p5-Data-ShowTable
 
 USE_PERL5=	YES
