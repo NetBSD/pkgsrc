@@ -1,3 +1,4 @@
+$NetBSD: patch-ac,v 1.7 2001/02/28 10:26:03 wiz Exp $
 --- other/xfsoundrc.in.orig	Thu Jan 18 17:47:13 2001
 +++ other/xfsoundrc.in	Thu Jan 18 17:47:37 2001
 @@ -1,5 +1,5 @@

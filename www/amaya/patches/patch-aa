@@ -1,3 +1,4 @@
+$NetBSD: patch-aa,v 1.4 2001/02/28 10:26:03 wiz Exp $
 --- ../configure.orig	Sun Jan 14 12:11:19 2001
 +++ ../configure	Sun Jan 14 12:20:22 2001
 @@ -1651,58 +1651,12 @@

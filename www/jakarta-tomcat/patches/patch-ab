@@ -1,3 +1,4 @@
+$NetBSD: patch-ab,v 1.5 2001/02/28 10:26:03 wiz Exp $
 --- src/share/org/apache/tomcat/task/ApacheConfig.java.orig	Tue Dec 12 14:51:28 2000
 +++ src/share/org/apache/tomcat/task/ApacheConfig.java	Tue Dec 12 18:58:28 2000
 @@ -97,7 +97,7 @@
