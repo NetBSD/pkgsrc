@@ -1,0 +1,22 @@
+$NetBSD: patch-ad,v 1.1 1999/05/23 10:16:41 dan Exp $
+*** cdd_cdcmds.c.orig	Sun May 31 17:13:24 1998
+--- cdd_cdcmds.c	Sun May 23 19:37:26 1999
+***************
+*** 160,165 ****
+--- 160,175 ----
+          mmc_end_cdda
+          }
+      ,
++         { 
++         "MATSHITA CD-R   CW-7502",
++         mmc_getcdtoc,
++         mmc_cd_setblocksize,
++         mmc_cdrawread,
++         mmc_cddaread,
++         mmc_begin_cdda,
++         mmc_end_cdda
++         }
++     ,
+          {
+          "END-OF-DEVICES",
+          unsupported,
