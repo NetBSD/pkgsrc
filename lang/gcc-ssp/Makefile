@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2002/01/04 05:57:22 kent Exp $
+# $NetBSD: Makefile,v 1.7 2002/02/16 14:46:20 kent Exp $
 
 DISTNAME=		gcc-2.95.3
 GCC_VERSION=		2.95.3
@@ -76,7 +76,8 @@ post-extract:
 	for ARCH in arm arm i386 m68k sh sparc vax; do \
 	  ${MKDIR} $${ARCH}; \
 	  ${CP} ${GCC_FILESDIR}/$${ARCH}_netbsd-elf.h $${ARCH}/netbsd-elf.h; \
-	done
+	done; \
+	${CP} ${GCC_FILESDIR}/sparc_netbsd-elf-common.h sparc/netbsd-elf-common.h
 
 post-patch:
 	${ECHO} "bogus" >${WRKSRC}/../${DISTNAME}/gcc/cstamp-h.in
