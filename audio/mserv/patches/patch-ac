@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.6 2003/09/03 19:55:28 abs Exp $
+$NetBSD: patch-ac,v 1.7 2003/09/04 18:32:46 abs Exp $
 
 --- mserv/mserv.c.orig	Sun Aug  3 15:57:20 2003
 +++ mserv/mserv.c
@@ -21,7 +21,48 @@ $NetBSD: patch-ac,v 1.6 2003/09/03 19:55:28 abs Exp $
  #include "defconf.h"
  #include "conf.h"
  #include "opt.h"
-@@ -2098,8 +2103,17 @@ static t_track *mserv_loadtrk(const char
+@@ -2019,11 +2024,13 @@ static t_track *mserv_loadtrk(const char
+       alen = strlen(buffer);
+       if (buffer[alen-1] != '\n') {
+ 	mserv_log("Line %d too long in '%s'", line, fullpath_trk);
++	fclose(fd);
+ 	return NULL;
+       }
+       buffer[--alen] = '\0';
+       if (!(l = strcspn(buffer, "=")) || l >= 64) {
+ 	mserv_log("Invalid track line %d in '%s'", line, fullpath_trk);
++	fclose(fd);
+ 	return NULL;
+       }
+       strncpy(token, buffer, l);
+@@ -2059,6 +2066,7 @@ static t_track *mserv_loadtrk(const char
+ 	}
+ 	if ((arate = malloc(sizeof(t_rating)+strlen(token)+1)) == NULL) {
+ 	  mserv_log("Out of memory creating ratings for '%s'", fullpath_trk);
++	  fclose(fd);
+ 	  return NULL;
+ 	}
+ 	memset(arate, 0, sizeof(t_rating));
+@@ -2082,15 +2090,18 @@ static t_track *mserv_loadtrk(const char
+     }
+     if (!*author) {
+       mserv_log("No author specified in '%s'", fullpath_trk);
++      fclose(fd);
+       return NULL;
+     }
+     if (!*name) {
+       mserv_log("No name specified in '%s'", fullpath_trk);
++      fclose(fd);
+       return NULL;
+     }
+     if (fstat(fileno(fd), &buf) == -1) {
+       perror("fstat");
+       mserv_log("Unable to stat '%s': %s", filename, strerror(errno));
++      fclose(fd);
+       return NULL;
+     }
+     mtime = buf.st_mtime;
+@@ -2098,8 +2109,17 @@ static t_track *mserv_loadtrk(const char
    }
    if (duration == 0 && !*miscinfo) {
      len = strlen(fullpath_file);
@@ -39,7 +80,7 @@ $NetBSD: patch-ac,v 1.6 2003/09/03 19:55:28 abs Exp $
        if (duration == -1) {
  	mserv_log("Unable to determine details of mp3 '%s': %s",
  		  filename, strerror(errno));
-@@ -3427,6 +3441,62 @@ int mserv_setmixer(t_client *cl, int wha
+@@ -3427,6 +3447,62 @@ int mserv_setmixer(t_client *cl, int wha
    close(mixer_fd);
    mserv_response(cl, "NAN", NULL);
    return -1;
