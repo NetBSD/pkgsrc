@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.8 2002/01/10 09:47:26 simonb Exp $
+$NetBSD: patch-aa,v 1.9 2002/02/11 05:49:35 simonb Exp $
 
 --- scripts/wrapzap.orig	Thu Jan 10 11:57:21 2002
 +++ scripts/wrapzap	Thu Jan 10 20:39:43 2002
@@ -35,4 +35,4 @@ $NetBSD: patch-aa,v 1.8 2002/01/10 09:47:26 simonb Exp $
 +. /etc/adzap.conf
  
  export ZAP_MODE ZAP_BASE ZAP_BASE_SSL ZAP_PREMATCH ZAP_POSTMATCH
- export STUBURL_AD STUBURL_ADSSL STUBURL_ADJS STUBURL_ADHTML STUDURL_ADMP3 \
+ export STUBURL_AD STUBURL_ADSSL STUBURL_ADJS STUBURL_ADHTML STUBURL_ADMP3 \
