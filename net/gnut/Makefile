@@ -1,24 +1,22 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/04/15 05:17:42 kim Exp $
+# $NetBSD: Makefile,v 1.1.1.2 2000/04/18 06:57:33 deberg Exp $
 #
 
-DISTNAME=		gnut-0.3.21
-CATEGORIES=		net
-MASTER_SITES=		http://www.umr.edu/~jjp/
+DISTNAME=	gnut-0.3.22
+CATEGORIES=	net
+MASTER_SITES=	http://www.umr.edu/~jjp/
 
-MAINTAINER=		packages@netbsd.org
-HOMEPAGE=		http://www.umr.edu/~jjp/
+MAINTAINER=	deberg@netbsd.org
+HOMEPAGE=	http://www.umr.edu/~jjp/
 
-DEPENDS+=		unproven-pthreads-*:../../devel/unproven-pthreads
+# Sync these with devel/unproven-pthreads:
+ONLY_FOR_PLATFORM=      NetBSD-*-i386 NetBSD-*-arm32 NetBSD-*-m68k
 
-GNU_CONFIGURE=		yes
+DEPENDS+=	unproven-pthreads-0.*:../../devel/unproven-pthreads
 
-CONFIGURE_ENV+=		CC=${LOCALBASE}/pthreads/bin/pgcc
+GNU_CONFIGURE=	yes
 
-GNUTDOCDIR=		${PREFIX}/share/doc/gnut
-
-post-install:
-	${MKDIR} ${GNUTDOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/TUTORIAL ${GNUTDOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/gnutrc.sample ${GNUTDOCDIR}
+CONFIGURE_ARGS+=--with-mit-pthreads
+CONFIGURE_ENV+=	CC=${LOCALBASE}/pthreads/bin/pgcc \
+		CXX=${LOCALBASE}/pthreads/bin/pg++
 
 .include "../../mk/bsd.pkg.mk"
