@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2005/02/09 15:28:46 taca Exp $
+# $NetBSD: Makefile.common,v 1.6 2005/02/21 15:25:36 taca Exp $
 #
 # Ruby base distribution common definition
 
@@ -67,5 +67,31 @@ PLIST_SUBST+=		RUBY_SHLIBVER="${RUBY_SHLIBVER}" \
 			RUBY_SHLIBMAJOR="${RUBY_SHLIBMAJOR}" \
 			RUBY_NOSHLIBMAJOR=${RUBY_NOSHLIBMAJOR} \
 			RUBY_NAME="${RUBY_NAME}"
+
+# Common macros.
+.if ${OPSYS} == "NetBSD"
+.if empty(OS_VERSION:M1.[0-9].*)
+PTHREAD_OPTS+=  native
+.include "../../mk/pthread.buildlink3.mk"
+.if defined(PTHREAD_TYPE) && ${PTHREAD_TYPE} == "none"
+CONFIGURE_ARGS+=	--disable-pthread
+.else
+CONFIGURE_ARGS+=	--enable-pthread
+.endif
+.endif
+.endif
+
+.if ${OPSYS} == "IRIX"
+# X11BASE, *not* X11PREFIX:  X11PREFIX == PREFIX, but we need to point
+# to the ABI-specific libraries
+CONFIGURE_ENV+=	X11BASE="${X11BASE}"
+.endif
+
+# XXX:	Ruby extconf shuld select native ndbm(3) or Berkley DB's
+#	ndbm(3) compatible support.
+#
+.if ${OPSYS} != "SunOS"
+BDB_ACCEPTED?=		db1
+.endif
 
 .include "replace.mk"
