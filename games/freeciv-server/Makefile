@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.15 2004/03/05 12:08:51 adam Exp $
+# $NetBSD: Makefile,v 1.16 2004/04/22 03:54:17 snj Exp $
 
 PKGNAME=	${DISTNAME:S/-/-server-/}
 COMMENT=	Freeciv game server
 
 DEPENDS+=	freeciv-share>=${FC_VERS}:../../games/freeciv-share
 
-USE_BUILDLINK2=		# defined
 USE_GNU_READLINE=	# uses callback interface of GNU readline
 LIBS+=			-ltermcap
 
@@ -21,7 +20,7 @@ do-install:
 	cd ${WRKSRC}/server; ${SETENV} ${MAKE_ENV} \
 		${MAKE_PROGRAM} ${MAKE_FLAGS} ${INSTALL_TARGET}
 
-.include "../../devel/readline/buildlink2.mk"
-.include "../../devel/zlib/buildlink2.mk"
+.include "../../devel/readline/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
