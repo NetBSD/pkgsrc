@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2004/04/14 01:00:38 snj Exp $
+# $NetBSD: Makefile,v 1.42 2004/04/24 17:48:41 minskim Exp $
 #
 
 DISTNAME=		pango-1.4.0
@@ -11,6 +11,8 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.pango.org/
 COMMENT=		Library for layout and rendering of text
+
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=		yes
 USE_PKGINSTALL=		yes
