@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.436 2003/12/04 08:45:43 agc Exp $
+# $NetBSD: Makefile,v 1.437 2003/12/04 15:26:55 epg Exp $
 #
 
 COMMENT=	Development utilities
@@ -240,6 +240,9 @@ SUBDIR+=	p4-docs
 SUBDIR+=	p4d
 SUBDIR+=	p4pr
 SUBDIR+=	p4web
+SUBDIR+=	p5-Algorithm-Annotate
+SUBDIR+=	p5-Algorithm-Diff
+SUBDIR+=	p5-Algorithm-Merge
 SUBDIR+=	p5-AppConfig
 SUBDIR+=	p5-AtExit
 SUBDIR+=	p5-Attribute-Handlers
@@ -318,6 +321,7 @@ SUBDIR+=	p5-Tie-IxHash
 SUBDIR+=	p5-WeakRef
 SUBDIR+=	p5-gettext
 SUBDIR+=	p5-perl-headers
+SUBDIR+=	p5-subversion
 SUBDIR+=	palmos-includes
 SUBDIR+=	pango
 SUBDIR+=	papaya
@@ -409,6 +413,7 @@ SUBDIR+=	subversion-base
 SUBDIR+=	subversion-python
 SUBDIR+=	swig
 #SUBDIR+=	swig-build	# conflicts with swig (soon to change)
+SUBDIR+=	swig-perl
 SUBDIR+=	swig-python
 SUBDIR+=	tavrasm
 SUBDIR+=	tcl-tclcl
