@@ -3,7 +3,8 @@
 # Date created:		03 Aug 1996
 # Whom:			shanee@rabbit.augusta.de
 #
-# $Id: Makefile,v 1.1.1.1 1997/10/11 21:55:06 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 1998/01/26 23:24:43 hubertf Exp $
+# FreeBSD Id: Makefile,v 1.6 1997/10/26 23:57:06 fenner Exp
 #
 
 DISTNAME=	unclutter-8
@@ -14,7 +15,7 @@ EXTRACT_SUFX=	.tar.Z
 
 MAINTAINER=	shanee@rabbit.augusta.de
 
-WRKSRC=		$(WRKDIR)/unclutter
+WRKSRC=		${WRKDIR}/unclutter
 USE_IMAKE=	yes
 
 .include <bsd.port.mk>
