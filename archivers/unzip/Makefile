@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2000/04/20 03:13:55 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2000/10/21 20:50:57 wiz Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/06/19 05:30:04 ache Exp 
 #
 
@@ -16,10 +16,6 @@ MAKEFILE=	unix/Makefile
 ALL_TARGET=	unzips
 # we do not use USE_ZLIB because of unknown bugs in 5.40's use of libz
 MAKE_FLAGS=	CF="${CFLAGS} -I. -DBSD -DUNIX -Dunix -DUSE_UNSHRINK"
-
-BUILD_DEFS+=	ZIP_ENCRYPTION
-
-.include "../../mk/bsd.prefs.mk"
 
 do-install:
 	cd ${WRKSRC} && ${INSTALL_PROGRAM} unzip funzip unzipsfx ${PREFIX}/bin
