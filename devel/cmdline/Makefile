@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/06/21 02:53:49 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2002/09/04 16:00:41 wiz Exp $
 
 DISTNAME=	CmdLine
 PKGNAME=	cmdline-${PKG_VERS}
@@ -16,13 +16,13 @@ DIST_SUBDIR=	cmdline-${DIST_VERS}
 USE_BUILDLINK_ONLY=	# defined
 USE_LIBTOOL=		# defined
 
-.include "../../devel/readline/buildlink.mk"
-
 MOREUSRDEFS=	-I${BUILDLINK_DIR}/include/readline
+MOREUSRDEFS+=	-I${BUILDLINK_DIR}/include/readline/readline
 MOREUSRLIBS=	-L${BUILDLINK_DIR}/lib -lreadline -ltermcap
 
 MAKE_ENV+=	OPT="${CXXFLAGS}"
 MAKE_ENV+=	MOREUSRDEFS="${MOREUSRDEFS}"
 MAKE_ENV+=	MOREUSRLIBS="${MOREUSRLIBS}"
 
+.include "../../devel/readline/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
