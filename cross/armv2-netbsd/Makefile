@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/02/16 14:04:53 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2001/02/23 12:14:16 wiz Exp $
 #
 
 DISTVERSION=		1.3.0.0
@@ -22,7 +22,7 @@ BUILD_DEPENDS+=		${LOCALBASE}/bin/autoconf:../../devel/autoconf
 
 post-patch: egcs-autoconf
 
-egcs-${LOCALBASE}/bin/autoconf:
+egcs-autoconf:
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${WRKSRC}/gcc && ${LOCALBASE}/bin/autoconf
 
 # FOllowing chunk ripped from cross.mk
