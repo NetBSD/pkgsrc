@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.4 1998/04/15 10:38:25 agc Exp $
+# $NetBSD: Makefile,v 1.5 1998/04/28 14:07:41 bouyer Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/02/14 07:55:45 asami Exp
 #
 
-DISTNAME=       gd1.2
-PKGNAME=        gd-1.2
+DISTNAME=       gd1.3
+PKGNAME=        gd-1.3
 CATEGORIES=	graphics
-MASTER_SITES=   http://www.boutell.com/gd/
-EXTRACT_SUFX=   .tar.Z
+MASTER_SITES=   ftp://www.boutell.com/pub/boutell/gd/
 
 MAINTAINER=	packages@netbsd.org
 
