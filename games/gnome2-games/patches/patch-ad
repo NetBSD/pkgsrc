@@ -1,33 +1,21 @@
-$NetBSD: patch-ad,v 1.1 2005/03/16 15:39:02 rillig Exp $
+$NetBSD: patch-ad,v 1.2 2005/03/29 13:59:40 jmmv Exp $
 
-Use C comments, not C++. Needed for gcc-2.95.3.
+Drop C++ comments; they break the build with gcc-2.95.
 
---- iagno/othello.c.orig	Wed Jan 12 10:21:32 2005
-+++ iagno/othello.c	Wed Mar 16 00:05:05 2005
-@@ -551,7 +551,7 @@ find_best_move(gint8 board[8][8], guint 
- 					memcpy (tboard, board, sizeof (gint8) * 8 * 8);
- 					move_board(tboard, i, j, me, 0);
- 	
--					// assume that opponent takes best move
-+					/* assume that opponent takes best move */
- 					tmp_move = find_best_move(tboard, not_me, ply_depth-1,
- 						-pass_thresh, -use_thresh, 0, 0);
- 
-@@ -808,14 +808,14 @@ eval_board (gint8 board[8][8], guint me)
+--- iagno/othello.c.orig	2005-01-25 06:44:38.000000000 +0000
++++ iagno/othello.c
+@@ -784,14 +784,11 @@ eval_board (gint8 board[8][8], guint me)
  				found_free = TRUE;
  		}
  		
 -	// check if a player is dead
-+	/* check if a player is dead */
  	if (!found_me && found_not_me)
- 		return (-10000);
+ 		return (S_LOSING_GAME);
  	else if (found_me && !found_not_me)
- 		return (10000);
+ 		return (S_WINNING_GAME);
  	
 -	// if the game is finished, return the actual score rather than
 -	// a huristic
-+	/* if the game is finished, return the actual score rather than
-+	 * a huristic */
  	if (!found_free)
  		return (actual_score);
  	
