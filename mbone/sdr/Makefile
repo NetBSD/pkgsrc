@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2003/03/29 12:41:47 jmmv Exp $
+# $NetBSD: Makefile,v 1.36 2003/07/03 14:40:49 agc Exp $
 #
 
 DISTNAME=	sdr-3.0
@@ -34,6 +34,11 @@ SYSDIR= freebsd
 .endif
 
 USE_GMAKE=	yes
+
+post-patch:
+	${MV} ${WRKSRC}/../src/sdr.tcl ${WRKSRC}/../src/sdr.tcl.in &&	\
+	${SED} -e 's|@PREFIX@|${PREFIX}|' ${WRKSRC}/../src/sdr.tcl.in >	\
+		${WRKSRC}/../src/sdr.tcl
 
 do-configure:
 	cd ${WRKSRC} ; ${SH} ./configure
