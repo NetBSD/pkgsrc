@@ -1,7 +1,6 @@
-diff -ru ../mozilla-current.orig/mozilla/config/rules.mk ./config/rules.mk
---- ../mozilla-current.orig/mozilla/config/rules.mk	Sat Jun  3 11:49:45 2000
-+++ ./config/rules.mk	Sun Jun  4 14:06:22 2000
-@@ -148,6 +148,11 @@
+--- config/rules.mk.orig	Tue Jun 13 16:54:01 2000
++++ config/rules.mk	Sun Jun 18 11:43:55 2000
+@@ -152,6 +152,11 @@
  endif
  
  SHARED_LIBRARY		:= $(LIBRARY:.$(LIB_SUFFIX)=$(DLL_SUFFIX))
@@ -13,7 +12,7 @@ diff -ru ../mozilla-current.orig/mozilla/config/rules.mk ./config/rules.mk
  
  endif # OS2
  endif # MKSHLIB
-@@ -507,6 +512,14 @@
+@@ -512,6 +517,14 @@
  else
  	$(INSTALL) -m 555 $(SHARED_LIBRARY) $(DIST)/lib
  	$(INSTALL) -m 555 $(SHARED_LIBRARY) $(DIST)/bin
@@ -27,8 +26,8 @@ diff -ru ../mozilla-current.orig/mozilla/config/rules.mk ./config/rules.mk
 +endif # NetBSD
  endif # OS2
  ifeq ($(OS_ARCH),OpenVMS)
- 	$(INSTALL) -m 555 $(SHARED_LIBRARY:$(DLL_SUFFIX)=.vms) $(DIST)/bin
-@@ -719,7 +732,11 @@
+ 	$(INSTALL) -m 555 $(SHARED_LIBRARY:$(DLL_SUFFIX)=.vms) $(DIST)/lib
+@@ -725,7 +738,11 @@
  	@for lib in $(SHARED_LIBRARY_LIBS); do $(AR_EXTRACT) $${lib}; $(CLEANUP2); done
  endif # SHARED_LIBRARY_LIBS
  endif # NO_LD_ARCHIVE_FLAGS
