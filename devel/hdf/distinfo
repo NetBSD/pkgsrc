@@ -1,23 +1,11 @@
-$NetBSD: distinfo,v 1.4 2002/05/03 23:14:52 jtb Exp $
+$NetBSD: distinfo,v 1.5 2004/04/20 18:14:37 drochner Exp $
 
-SHA1 (HDF4.1r5.tar.gz) = e284b3d14c5a1e6ca75ca581aa7bfa33a27208fb
-Size (HDF4.1r5.tar.gz) = 4423795 bytes
-SHA1 (patch-aa) = dd9c4c44423a8d93226e72331d921b0911cd0e62
-SHA1 (patch-ab) = bc3dcc046aee99ec219d2e01b98dc314f63e25b6
-SHA1 (patch-ac) = 45ba44cbdf00ac0b4b7101d2c1514e34a57dd024
-SHA1 (patch-ad) = 193fadfb544d876041e636707e54c348e485794b
-SHA1 (patch-ae) = 20cf3ec7d97dc12720e9fdb60c913d729d6e97f2
-SHA1 (patch-af) = d788f52dbc0534310ffa9bffefc5f685206042c5
-SHA1 (patch-ag) = 1a3143fc8508213690a6e5953b30b915b64bf910
-SHA1 (patch-ah) = 0b0f14b8f281674e73479c33908c578340f9435b
-SHA1 (patch-ai) = a7b075cd42b28613d98c93e4ecc68818845386a4
-SHA1 (patch-aj) = 86c18e35cc0079ec99982075f1f528cbac975b6e
-SHA1 (patch-ak) = d29cd29382e6775f3bfb353dd745c78ac85b2e1b
-SHA1 (patch-al) = 719419d45c33134b51105fa63a0e4aad7c05ed03
-SHA1 (patch-an) = d098b92a0bbd78daa979ead386e0d81f12e5f6dd
-SHA1 (patch-ao) = 7b3e02fd7003bc7915c144433151b1eb878effdc
-SHA1 (patch-ap) = 5f6cd95f18ae6cb0c4da1155180abcedfb02abe0
-SHA1 (patch-aq) = 92412e45cf9d85e0c46dbcb7f5b9aa40d2b36991
+SHA1 (HDF4.2r0.tar.gz) = 499d8c249a18a78ae81fe1d80095290ffc4d8b54
+Size (HDF4.2r0.tar.gz) = 3712651 bytes
+SHA1 (patch-ai) = ca2ea7f69d201fb5fd9b4b43201b96aec5c9c0d8
+SHA1 (patch-aj) = 848515c038b1c89abc3f4aaad7c816e4429a3780
+SHA1 (patch-ao) = 313ea577ddc7c6f55bd8536dc34625c232ebd168
+SHA1 (patch-ap) = b7d704321653cbf95d8784c6364b880bdc8d67df
 SHA1 (patch-ar) = 5fbb6e8c56ccf05db0217e9551a0c72ecd9f5c06
 SHA1 (patch-as) = b4fa7cd3bcafd75c9bfc045c2849bde21becd2de
-SHA1 (patch-at) = 10348b63c21218eb6336358f756df0ec86b0d95e
+SHA1 (patch-ba) = a54063eec83563a7ee785ad6120beba4e096ef1a
