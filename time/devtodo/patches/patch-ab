@@ -1,11 +1,11 @@
-$NetBSD: patch-ab,v 1.1 2001/05/15 06:54:24 zuntum Exp $
+$NetBSD: patch-ab,v 1.2 2003/12/28 15:40:14 zuntum Exp $
 
---- src/todoterm.cc.orig	Mon Apr 30 23:24:56 2001
+--- src/todoterm.cc.orig	2001-11-08 11:51:20.000000000 +0100
 +++ src/todoterm.cc
-@@ -4,7 +4,11 @@
- #ifdef USETERMCAP
+@@ -5,7 +5,11 @@
  #include <string>
  #include <stdexcept>
+ #include <curses.h>
 +#ifdef __NetBSD__
 +#include <termcap.h>
 +#else
