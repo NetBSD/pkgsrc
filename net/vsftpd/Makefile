@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2003/05/09 23:31:38 salo Exp $
+# $NetBSD: Makefile,v 1.4 2003/05/29 20:08:41 salo Exp $
 #
 
-DISTNAME=	vsftpd-1.1.3
+DISTNAME=	vsftpd-1.2.0
 CATEGORIES=	net
 MASTER_SITES=	ftp://vsftpd.beasts.org/users/cevans/
 
-MAINTAINER=	vaneth@krasnik.org
+MAINTAINER=	salo@netbsd.org
 HOMEPAGE=	http://vsftpd.beasts.org/
 COMMENT=	FTP server that aims to be very secure
 
@@ -30,6 +30,10 @@ CONF_FILES=	${EGDIR}/vsftpd.conf.default ${PKG_SYSCONFDIR}/vsftpd.conf
 MAKE_DIRS=	/var/chroot
 OWN_DIRS=	/var/chroot/vsftpd
 
+.if defined(USE_INET6) && !empty(USE_INET6:M[Yy][Ee][Ss])
+BUILD_DEFS+=	USE_INET6
+.endif
+
 post-patch:
 	@cd ${WRKSRC} && \
 		for f in vsftpd.8 vsftpd.conf.5 vsftpd.conf; do		\
@@ -47,4 +51,5 @@ do-install:
 	cd ${WRKSRC} && ${INSTALL_DATA} FAQ INSTALL README TUNING ${DOCDIR}
 
 .include "../../security/tcp_wrappers/buildlink2.mk"
+
 .include "../../mk/bsd.pkg.mk"
