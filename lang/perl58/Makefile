@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2004/11/25 22:02:49 jlam Exp $
+# $NetBSD: Makefile,v 1.63 2004/12/10 04:27:39 jlam Exp $
 
 # The following two variables should have empty values unless we're
 # building a perl snapshot or release candidate.
@@ -9,7 +9,7 @@ PERL5_RC_VERS=	# empty
 .if empty(PERL5_SNAPSHOT) && empty(PERL5_RC_VERS)
 DISTNAME=	perl-${PERL5_VERS}
 PKGNAME=	perl-${PERL5_VERS}
-PKGREVISION=	3
+PKGREVISION=	4
 SNAPSHOT_SITES=	# empty
 .else
 .  if !empty(PERL5_SNAPSHOT)
@@ -245,15 +245,6 @@ post-install:
 	fi
 .endif
 	${RMDIR} -p ${PERL5_SITEARCH} 2>/dev/null || ${TRUE}
-	${RM} -f ${WRKDIR}/bsd.perl.mk
-	eval `${PERL5} -V:installsitelib 2>/dev/null` && \
-		echo PERL5_SITELIB=$$installsitelib >>${WRKDIR}/bsd.perl.mk
-	eval `${PERL5} -V:installsitearch 2>/dev/null` && \
-		echo PERL5_SITEARCH=$$installsitearch >>${WRKDIR}/bsd.perl.mk
-	eval `${PERL5} -V:installarchlib 2>/dev/null` && \
-		echo PERL5_ARCHLIB=$$installarchlib >>${WRKDIR}/bsd.perl.mk
-	${INSTALL_DATA_DIR} ${PREFIX}/share/mk
-	${INSTALL_DATA} ${WRKDIR}/bsd.perl.mk ${PREFIX}/share/mk/bsd.perl.mk
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
