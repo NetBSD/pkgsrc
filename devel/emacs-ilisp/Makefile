@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/11/15 20:33:04 dillo Exp $
+# $NetBSD: Makefile,v 1.2 2002/09/14 03:12:06 uebayasi Exp $
 #
 
 DISTNAME=	ilisp-5.11
@@ -10,12 +10,12 @@ MAINTAINER=	dillo@netbsd.org
 HOMEPAGE=	http://sourceforge.net/projects/ilisp/
 COMMENT=	emacs interface to embedded Lisp process
 
-DEPENDS+=	emacs-[0-9]*:../../editors/emacs
-
-MAKE_ENV+=	EMACS=${PREFIX}/bin/emacs
+MAKE_ENV+=	EMACS=${EMACS_BIN}
 ALL_TARGET=	compile
 
-SITELISP=	${PREFIX}/share/emacs/site-lisp/ilisp
+.include "../../mk/emacs.mk"
+
+SITELISP=	${EMACS_LISPPREFIX}/ilisp
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/emacs-ilisp
