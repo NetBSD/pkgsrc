@@ -1,11 +1,8 @@
-$NetBSD: patch-aa,v 1.1 1998/12/03 23:17:57 frueauf Exp $
+$NetBSD: patch-aa,v 1.2 1999/02/05 16:33:34 frueauf Exp $
 
---- README.NetBSD-orig	Fri Oct 23 06:16:09 1998
-+++ README.NetBSD	Thu Dec  3 23:45:14 1998
-@@ -1,9 +1,9 @@
-                               NetBSD
--                             JDK1.1.5
-+                             JDK1.1.6
+--- README.NetBSD-orig	Fri Dec 11 04:31:31 1998
++++ README.NetBSD	Fri Feb  5 16:47:07 1999
+@@ -16,7 +16,7 @@
  
  This port is based on the FreeBSD port which in turn is based on
  Jeffrey Hsu's original JDK 1.0 port, and is also based on Randy
