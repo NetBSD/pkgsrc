@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1998/11/22 22:30:08 tv Exp $
+bin/pfnet
+lib/perl5/site_perl/CMDLINE.pm
+lib/perl5/site_perl/FNET.pm
