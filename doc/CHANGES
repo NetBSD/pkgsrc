@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8391 2004/12/21 13:53:00 grant Exp $
+$NetBSD: CHANGES,v 1.8392 2004/12/21 17:28:42 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -6454,3 +6454,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added py-basicproperty-0.6.3a [darcy 2004-12-21]
 	Added py-table-0.8.3a [darcy 2004-12-21]
 	Updated libtool-base to 1.5.10nb9 [grant 2004-12-21]
+	Updated xterm to 197 [minskim 2004-12-21]
