@@ -1,0 +1,16 @@
+$NetBSD: patch-ab,v 1.1 2004/11/28 04:21:42 taca Exp $
+
+--- quota.c.orig	2002-03-30 23:59:12.000000000 +0900
++++ quota.c
+@@ -159,7 +159,11 @@ rb_quotactl(int cmd, char *dev, VALUE vu
+   char *path;
+   int is_gid;
+   uid_t uid;
++#if defined(HAVE_SYS_STATVFS_H)
++  struct statvfs *buff;
++#else
+   struct statfs *buff;
++#endif
+   int i, count, ret;
+   
+   buff = 0;
