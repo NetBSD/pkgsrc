@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2002/04/05 19:36:35 proff Exp $
+@comment $NetBSD: PLIST,v 1.5 2002/04/05 23:23:17 wiz Exp $
 etc/nntpcache/VERSION
 etc/nntpcache/innreport.conf-dist
 etc/nntpcache/innreport.pl
@@ -47,5 +47,4 @@ share/doc/nntpcache/LICENSING
 share/doc/nntpcache/README
 share/doc/nntpcache/README.INN
 share/doc/nntpcache/README.pam
-
 @dirrm share/doc/nntpcache
