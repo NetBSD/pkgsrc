@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2003/06/23 13:50:57 jschauma Exp $
+@comment $NetBSD: PLIST,v 1.8 2003/08/10 22:28:22 jschauma Exp $
 .systemPrefs/.system.lock
 .systemPrefs/.systemRootModFile
 CHANGES
@@ -20,7 +20,7 @@ bin/rmid
 bin/rmiregistry
 bin/servertool
 bin/tnameserv
-javaws-1_2_0_03-linux-i586-i.zip
+javaws-1_2_0_04-linux-i586-i.zip
 lib/audio/soundbank.gm
 lib/charsets.jar
 lib/cmm/CIEXYZ.pf

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2003/06/23 13:50:56 jschauma Exp $
+# $NetBSD: Makefile,v 1.9 2003/08/10 22:28:21 jschauma Exp $
 
-DISTNAME=	j2sdk-1_4_1_03-linux-i586
-PKGNAME=	sun-jdk14-1.0.3
-WRKSRC=		${WRKDIR}/j2sdk1.4.1_03
+DISTNAME=	j2sdk-1_4_1_04-linux-i586
+PKGNAME=	sun-jdk14-1.0.4
+WRKSRC=		${WRKDIR}/j2sdk1.4.1_04
 MASTER_SITES=	# empty
 
 COMMENT=	Sun's Java(tm) 2 SDK, Standard Edition 1.4.1
