@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2714 2003/07/10 08:58:28 jtb Exp $
+$NetBSD: CHANGES,v 1.2715 2003/07/10 08:59:35 itojun Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2471,7 +2471,7 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated pkgchk to 1.37 [abs 2003-06-16]
 	Updated doxygen to 1.3.2 [martti 2003-06-16]
 	Updated cpuflags to 0.50 [abs 2003-06-16]
-	Updated nsd to 1.1 [itojun 2003-06-17]
+	Updated nsd to 1.1.0 [itojun 2003-06-17]
 	Updated gqview-devel to 1.3.2 [wiz 2003-06-17]
 	Updated arch to 1.0.0.25 [wiz 2003-06-17]
 	Updated p5-Compress-Zlib to 1.21 [wiz 2003-06-17]
@@ -2716,3 +2716,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated xcircuit to 3.1.16 [jtb 2003-07-09]
 	Updated gri to 2.12.5 [jtb 2003-07-09]
 	Updated plplot to 5.2.1 [jtb 2003-07-09]
+	Updated nsd to 1.2.0 [itojun 2003-07-10]
