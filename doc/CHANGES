@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1237 2003/01/26 14:36:47 salo Exp $
+$NetBSD: CHANGES,v 1.1238 2003/01/26 21:50:15 seb Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -417,3 +417,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated xpmroot to 2.4.15 [martti 2003-01-26]
 	Updated fvwm2 to 2.4.15 [martti 2003-01-26]
 	Updated silc-server to 0.9.12 [salo 2003-01-26]
+	Added libdnet-1.5 [seb 2003-01-26]
