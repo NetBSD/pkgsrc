@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/08/14 11:51:02 zuntum Exp $
+# $NetBSD: Makefile,v 1.2 2003/08/14 12:20:01 zuntum Exp $
 #
 
 DISTNAME=		qmail-qfilter-1.5
@@ -14,6 +14,10 @@ USE_BUILDLINK2=		yes
 REPLACE_PERL=		samples/block-long-dates			\
 			samples/deny-filetypes				\
 			samples/rename-filetypes
+
+post-patch:
+	${ECHO} ${CC} ${CFLAGS} > ${WRKSRC}/conf-cc
+	${ECHO} ${CC} ${_STRIPFLAG_CC} > ${WRKSRC}/conf-ld
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/qmail-qfilter ${PREFIX}/bin
