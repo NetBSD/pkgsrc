@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2004/04/25 20:37:39 snj Exp $
+# $NetBSD: Makefile,v 1.10 2004/09/27 16:49:25 jmmv Exp $
 
-DISTNAME=		evolution-1.2.4
-PKGREVISION=		10
+DISTNAME=		evolution12-1.2.4
 CATEGORIES=		mail time gnome
 MASTER_SITES=		ftp://ftp.ximian.com/pub/ximian-evolution/source/ \
 			ftp://ximian.netnitco.net/pub/mirrors/ximian/ximian-evolution/source/ \
@@ -19,6 +18,8 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		rh@NetBSD.org
 HOMEPAGE=		http://ximian.com/products/evolution/
 COMMENT=		GNOME mailer, calendar, contact manager, and communications tool
+
+CONFLICTS+=		evolution<2.0 evolution14-[0-9]*
 
 BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
 DEPENDS+=		psmisc-[0-9]*:../../sysutils/psmisc

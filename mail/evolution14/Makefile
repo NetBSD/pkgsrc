@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/09/27 16:46:42 jmmv Exp $
+# $NetBSD: Makefile,v 1.4 2004/09/27 16:49:25 jmmv Exp $
 
 DISTNAME=		evolution-1.4.6
 PKGNAME=		${DISTNAME:S/evolution/evolution14/}
@@ -10,6 +10,8 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		rh@NetBSD.org
 HOMEPAGE=		http://ximian.com/products/evolution/
 COMMENT=		GNOME mailer, calendar, contact manager, and communications tool
+
+CONFLICTS+=		evolution12-[0-9]*
 
 DEPENDS+=		psmisc-[0-9]*:../../sysutils/psmisc
 BUILD_USES_MSGFMT=	YES
