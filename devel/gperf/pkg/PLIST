@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 1998/05/18 14:49:19 tv Exp $
+@comment $NetBSD: PLIST,v 1.2 1998/09/22 10:48:44 agc Exp $
 bin/gperf
 @unexec %D/bin/install-info --delete %D/info/gperf.info %D/info/dir
 info/gperf.info
 @exec %D/bin/install-info %D/info/gperf.info %D/info/dir
-@exec [ -f %D/info/dir ] || sed -ne '1,/Menu:/p' /usr/share/info/dir > %D/info/dir
 man/man1/gperf.1.gz
