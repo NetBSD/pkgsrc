@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1 1998/09/04 13:13:17 agc Exp $
+
+Use NetBSD's libtool
+
+--- configure.orig	Tue Sep  1 16:50:33 1998
++++ configure	Tue Sep  1 16:51:04 1998
+@@ -1209,6 +1209,7 @@
+ fi
+ 
+ # Always use our own libtool.
++if false; then
+ LIBTOOL='$(SHELL) $(top_builddir)/libtool'
+ 
+ # Check for any special flags to pass to ltconfig.
+@@ -1253,6 +1254,7 @@
+ ${CONFIG_SHELL-/bin/sh} $ac_aux_dir/ltconfig \
+ $libtool_flags --no-verify $ac_aux_dir/ltmain.sh $host \
+ || { echo "configure: error: libtool configure failed" 1>&2; exit 1; }
++fi
+ 
+ # Extract the first word of "ranlib", so it can be a program name with args.
+ set dummy ranlib; ac_word=$2
