@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4781 2004/02/11 03:23:57 xtraeme Exp $
+$NetBSD: CHANGES,v 1.4782 2004/02/11 04:01:09 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -775,3 +775,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added genecys-data-0.1 [garbled 2004-02-10]
 	Added genecys-client-0.1 [garbled 2004-02-10]
 	Updated jabberd to 1.4.3nb1 [xtraeme 2004-02-11]
+	Updated gtkhtml3 to 3.0.9nb5 [xtraeme 2004-02-11]
