@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.864 2003/09/15 14:00:09 wiz Exp $
+$NetBSD: TODO,v 1.865 2003/09/15 15:23:43 adam Exp $
 
 Suggested new packages
 ======================
@@ -230,7 +230,6 @@ Suggested package updates
 	o pysol-4.82
 	o rdiff-backup-0.12.4
 	o rep-gtk-0.17
-	o rocksndiamonds-3.0.4
 	o rosegarden-2.1.4 [pkg/21904]
 	o rox-1.2.2
 	o rox-session-0.1.20
