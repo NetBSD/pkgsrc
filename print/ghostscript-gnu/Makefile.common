@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2003/07/17 22:52:27 grant Exp $
+# $NetBSD: Makefile.common,v 1.9 2003/09/12 20:07:27 grant Exp $
 
 DISTNAME=	ghostscript-${GS_VERS}
 GS_VERS=	7.05
@@ -83,6 +83,5 @@ post-install:
 .include "../../mk/bsd.pkg.mk"
 
 .if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
-USE_GCC3=YES
-.  include "../../mk/gcc.buildlink2.mk"
+USE_GCC3=	# defined
 .endif
