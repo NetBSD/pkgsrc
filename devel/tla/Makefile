@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2004/02/28 19:51:16 recht Exp $
+# $NetBSD: Makefile,v 1.6 2004/02/28 22:09:24 recht Exp $
 #
 
 DISTNAME=	tla-1.2
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://regexps.srparish.net/src/tla/
 
@@ -19,8 +20,8 @@ USE_GNU_TOOLS+=	make
 HAS_CONFIGURE=		# defined
 CONFIGURE_SCRIPT=	../configure
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
-CONFIGURE_ARGS+=	--with-gnu-diff=${PREFIX}/bin/${GNU_PROGRAM_PREFIX}/gdiff
-CONFIGURE_ARGS+=	--with-gnu-diff3=${PREFIX}/bin/${GNU_PROGRAM_PREFIX}/gdiff
+CONFIGURE_ARGS+=	--with-gnu-diff=${PREFIX}/bin/${GNU_PROGRAM_PREFIX}diff
+CONFIGURE_ARGS+=	--with-gnu-diff3=${PREFIX}/bin/${GNU_PROGRAM_PREFIX}diff
 CONFIGURE_ARGS+=	--with-gnu-patch=${PREFIX}/bin/${GNU_PROGRAM_PREFIX}patch
 CONFIGURE_ARGS+=	--with-gnu-tar=${PREFIX}/bin/${GNU_PROGRAM_PREFIX}tar
 
