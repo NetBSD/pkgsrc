@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2004/01/05 22:27:19 jlam Exp $
+# $NetBSD: Makefile,v 1.76 2004/01/06 17:17:53 reed Exp $
 
 .include "../../lang/perl5/Makefile.common"
 
@@ -33,6 +33,8 @@ CONFIGURE_ARGS+=	-Ui_malloc
 CONFIGURE_ARGS+=	-Uusemymalloc
 CONFIGURE_ARGS+=	-Uinstallusrbinperl
 TEST_TARGET=		test
+
+CONFIGURE_ARGS+=	-Dman1dir="${PREFIX}/man/man1"
 
 # Install Perl man3 pages into a private directory under the the normal
 # Perl installation.  Also install site-specific Perl man3 pages into a
