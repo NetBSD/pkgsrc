@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1941 2004/07/17 14:54:33 snj Exp $
+$NetBSD: TODO,v 1.1942 2004/07/17 19:08:28 wiz Exp $
 
 Suggested new packages
 ======================
@@ -304,7 +304,6 @@ Suggested package updates
 	o moz-bin-plugger-1.5.1
 	o moz-mplayer-2.65
 	o mozilla-stable-1.4.2
-	o mplayer-1.0pre5
 	o mrproject-0.9.1
 	o multi-gnome-terminal-1.6.2
 	o multitail-3.2.2
