@@ -1,0 +1,13 @@
+$NetBSD: patch-ak,v 1.4 2005/03/01 16:06:37 wiz Exp $
+
+--- src/glob.c.orig	2001-11-29 18:01:38.000000000 +0100
++++ src/glob.c
+@@ -437,6 +437,8 @@ static int amatch(char *s, char *p)
+ 	    continue;
+ 
+ 	case '*':
++	    while (*p == '*')
++		p++;
+ 	    if (!*p)
+ 		return (1);
+ 	    if (*p == '/') {
