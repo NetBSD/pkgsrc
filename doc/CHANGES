@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7518 2004/10/22 05:43:28 xtraeme Exp $
+$NetBSD: CHANGES,v 1.7519 2004/10/22 09:15:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4810,3 +4810,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated mysql4-client to 4.0.21 [xtraeme 2004-10-22]
 	Updated mysql4-server to 4.0.21 [xtraeme 2004-10-22]
 	Updated dspam to 3.2.0 [xtraeme 2004-10-22]
+	Updated loudmouth to 0.17.1 [adam 2004-10-22]
+	Updated ekg to 1.5nb2 [adam 2004-10-22]
