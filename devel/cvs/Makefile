@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 1999/08/18 09:04:17 agc Exp $
+# $NetBSD: Makefile,v 1.23 1999/09/14 02:32:23 kim Exp $
 #
 
 DISTNAME=       cvs-1.10
@@ -11,17 +11,19 @@ HOMEPAGE=	http://www.cyclic.com/cvs/info.html
 GNU_CONFIGURE=	yes
 USE_GTEXINFO=	yes
 
-BUILD_DEFS+=	USE_KERBEROS4 USE_KERBEROS5 RCS_LOCALID
+BUILD_DEFS+=	RCS_LOCALID
 
 .include "../../mk/bsd.prefs.mk"
 
-.if defined(USE_KERBEROS4)
+.if defined(KERBEROS) && ${KERBEROS} == 4
+USE_KERBEROS=	yes
 CONFIGURE_ARGS+=	--with-krb4=/usr --enable-encryption
 .else
 CONFIGURE_ARGS+=	--with-krb4=no
 .endif
 
-.if defined(USE_KERBEROS5)
+.if defined(KERBEROS) && ${KERBEROS} == 5
+USE_KERBEROS=	yes
 CONFIGURE_ARGS+=	--with-gssapi
 .else
 CONFIGURE_ARGS+=	--with-gssapi=no
