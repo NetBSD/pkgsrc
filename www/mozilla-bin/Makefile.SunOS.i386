@@ -1,0 +1,10 @@
+# $NetBSD: Makefile.SunOS.i386,v 1.1 2003/11/27 16:07:46 grant Exp $
+#
+
+DISTNAME=	mozilla-i386-pc-solaris2.8-1.5
+MASTER_SITES=	${MASTER_SITE_MOZILLA:=mozilla1.5/contrib/}
+
+DEPENDS+=	gtk+>=1.2:../../x11/gtk
+
+PLATFORM=	${LOWER_OPSYS}
+MOZILLA_LIB=	${PREFIX}/lib/mozilla-${PLATFORM}

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile.NetBSD.i386,v 1.4 2003/10/19 08:27:27 grant Exp $
+# $NetBSD: Makefile.NetBSD.i386,v 1.5 2003/11/27 16:07:46 grant Exp $
 #
 
-DISTNAME=	mozilla-i686-pc-linux-gnu-1.4
+DISTNAME=	mozilla-i686-pc-linux-gnu-1.5
+MASTER_SITES=	${MASTER_SITE_MOZILLA:=mozilla1.5/}
 
 PLATFORM=	linux
 MOZILLA_LIB=	${PREFIX}/lib/mozilla-${PLATFORM}
