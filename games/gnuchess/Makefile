@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2001/11/29 01:12:33 hubertf Exp $
+# $NetBSD: Makefile,v 1.14 2002/03/15 04:59:16 jmc Exp $
 # FreeBSD Id: Makefile,v 1.6 1999/01/27 07:41:12 fenner Exp
 #
 
@@ -23,6 +23,14 @@ WRKSRC=		${WRKDIR}/${DISTNAME}/src
 
 BOOKDIR=	${PREFIX}/lib/gnuchess
 DOCDIR=		${PREFIX}/share/doc/gnuchess
+
+# powerpc egcs has problems with -O2 here
+GCC_VERSION!=           gcc --version
+.if (${GCC_VERSION:C/-.*$$//} == egcs) && (${MACHINE_ARCH} == "powerpc")
+CONFIGURE_ENV+=		CFLAGS="-O -Winline -Wmissing-prototypes -funroll-loops"
+.else
+CONFIGURE_ENV+=         CFLAGS="-O3 -Winline -Wmissing-prototypes -funroll-loops -fomit-frame-pointer"
+.endif
 
 post-build:
 	${SED} -e "s|@PREFIX@|${PREFIX}|g"				\
