@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.8 2004/11/30 10:37:56 kleink Exp $
+$NetBSD: patch-ac,v 1.9 2004/12/16 12:21:35 kleink Exp $
 
---- example/jwhois.conf.orig	2004-11-30 11:19:19.000000000 +0100
-+++ example/jwhois.conf	2004-11-30 11:27:55.000000000 +0100
-@@ -55,7 +55,39 @@
+--- example/jwhois.conf.orig	2004-12-16 13:17:40.000000000 +0100
++++ example/jwhois.conf	2004-12-16 13:18:55.000000000 +0100
+@@ -55,7 +55,40 @@
  	"^[0-9]+\\.[0-9]+\\.[0-9]+/[0-9]+-[0-9]+$" = "whois.nic.br";
   
  	#
@@ -33,6 +33,7 @@ $NetBSD: patch-ac,v 1.8 2004/11/30 10:37:56 kleink Exp $
 +	"^2001:4[67][A-F0-9][A-F0-9]:.+" = "whois.ripe.net";
 +	"^2001:4[89][A-F0-9][A-F0-9]:.+" = "whois.arin.net";
 +	"^2001:4[AB][A-F0-9][A-F0-9]:.+" = "whois.ripe.net";
++	"^2001:4[CD][A-F0-9][A-F0-9]:.+" = "whois.ripe.net";
 +	# ...
 +	"^2001:5[A-F0-9][A-F0-9][A-F0-9]:.+" = "whois.ripe.net";
 +	# ...
@@ -43,7 +44,7 @@ $NetBSD: patch-ac,v 1.8 2004/11/30 10:37:56 kleink Exp $
  	#
  	".*:.*" = "whois.6bone.net";
  
-@@ -371,6 +403,12 @@
+@@ -371,6 +404,12 @@
  	"80.0.0.0/8" = "whois.ripe.net";
  	"81.0.0.0/8" = "whois.ripe.net";
  	"82.0.0.0/8" = "whois.ripe.net";
