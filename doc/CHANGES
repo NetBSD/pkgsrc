@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9615 2005/03/24 22:40:15 cube Exp $
+$NetBSD: CHANGES,v 1.9616 2005/03/24 22:51:53 rh Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1724,3 +1724,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added libotr-2.0.1 [nathanw 2005-03-24]
 	Added gaim-otr-2.0.1 [nathanw 2005-03-24]
 	Updated netbsd-tap to 20050324 [cube 2005-03-25]
+	Updated cgoban-java to 2.6.10 [rh 2005-03-24]
