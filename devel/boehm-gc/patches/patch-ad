@@ -1,8 +1,6 @@
-$NetBSD: patch-ad,v 1.14 2003/05/22 16:46:50 jmmv Exp $
-
---- include/private/gcconfig.h.orig	2003-04-30 01:44:13.000000000 +0200
-+++ include/private/gcconfig.h	2003-05-14 00:28:46.000000000 +0200
-@@ -83,7 +83,7 @@
+--- include/private/gcconfig.h.orig	Tue Jun 17 04:01:23 2003
++++ include/private/gcconfig.h	Fri Apr  2 23:43:18 2004
+@@ -85,7 +85,7 @@
  #    define SPARC
  #    define mach_type_known
  # endif
@@ -11,7 +9,7 @@ $NetBSD: patch-ad,v 1.14 2003/05/22 16:46:50 jmmv Exp $
  #    define M68K
  #    define mach_type_known
  # endif
-@@ -91,7 +91,7 @@
+@@ -93,7 +93,7 @@
  #    define POWERPC
  #    define mach_type_known
  # endif
@@ -20,7 +18,7 @@ $NetBSD: patch-ad,v 1.14 2003/05/22 16:46:50 jmmv Exp $
  #    define ARM32
  #    define mach_type_known
  # endif
-@@ -104,6 +104,10 @@
+@@ -106,6 +106,10 @@
  #    endif
  #    define mach_type_known
  # endif
@@ -31,18 +29,20 @@ $NetBSD: patch-ad,v 1.14 2003/05/22 16:46:50 jmmv Exp $
  # if defined(mips) || defined(__mips) || defined(_mips)
  #    define MIPS
  #    if defined(nec_ews) || defined(_nec_ews)
-@@ -596,9 +600,14 @@
+@@ -601,8 +605,14 @@
  #   ifdef NETBSD
  #	define OS_TYPE "NETBSD"
  #	define HEURISTIC2
+-	extern char etext[];
+-#	define DATASTART ((ptr_t)(etext))
 +#	ifdef __ELF__
 +#	  define DATASTART GC_data_start
 +#	  define DYNAMIC_LOADING
 +#	else
- 	extern char etext[];
- #	define DATASTART ((ptr_t)(etext))
++	  extern char etext[];
++#	  define DATASTART ((ptr_t)(etext))
++#       endif
++#   define USE_GENERIC_PUSH_REGS
  #   endif
-+#   endif
  #   ifdef LINUX
  #       define OS_TYPE "LINUX"
- #       define STACKBOTTOM ((ptr_t)0xf0000000)
