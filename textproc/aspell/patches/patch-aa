@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2002/01/15 01:07:25 wiz Exp $
+
+--- filter/Makefile.in.orig	Mon Aug 20 05:44:49 2001
++++ filter/Makefile.in
+@@ -90,7 +90,7 @@
+ 
+ pkginclude_HEADERS = *.hh
+ 
+-INCLUDES = -I../util -I$(includedir)
++INCLUDES = -I../util
+ 
+ libaspell_filter_la_SOURCES =  filter.cc     map_repl_read.cc	single_repl.cc	 hash_repl.cc  repl.cc		substr_repl.cc	 urlskip.cc map_repl.cc   sgml.cc		email.cc         tex.cc
+ 
