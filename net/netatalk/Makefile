@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2003/02/15 20:01:06 fredb Exp $
+# $NetBSD: Makefile,v 1.22 2003/02/23 19:18:51 fredb Exp $
 
-DISTNAME=	netatalk-1.6.0
+DISTNAME=	netatalk-1.6.1
 CATEGORIES=	net print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=netatalk/} \
 		http://me.in-berlin.de/~jroger/netatalk/
@@ -11,7 +11,6 @@ COMMENT=	Netatalk appletalk file and print services
 
 GNU_CONFIGURE=	YES
 USE_BUILDLINK2=	YES
-USE_PKGINSTALL=	YES
 USE_GMAKE=	YES
 USE_PERL5=	YES
 USE_LIBTOOL=	YES
@@ -33,6 +32,9 @@ CONFIGURE_ARGS+=	--enable-netbsd \
 			--with-nls-dir=${PREFIX}/share/netatalk/nls \
 			--with-uams-path=${PREFIX}/libexec/netatalk/uams
 
+#CONFIGURE_ARGS+=	--with-flock-locks	# broken
+#CONFIGURE_ARGS+=	--with-bdb=${PREFIX}	# still some known issues
+
 pre-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/libexec/psffilters
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/netatalk
@@ -43,5 +45,8 @@ pre-install:
 					${PREFIX}/share/examples/netatalk/
 .endfor
 
+#.include "../../databases/db3/buildlink2.mk"
 .include "../../devel/rx/buildlink2.mk"
+
+.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
