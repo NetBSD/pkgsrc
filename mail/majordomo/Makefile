@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2001/10/01 21:15:12 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2004/11/04 12:20:18 wiz Exp $
 
 DISTNAME=		majordomo-1.94.5
 CATEGORIES=		mail
@@ -133,9 +133,9 @@ post-install:
 	@${INSTALL_DATA} -o ${MAJORDOMO_USER} -g ${MAJORDOMO_GROUP} \
 		${WRKSRC}/aliases.majordomo ${EXDIR}/aliases.majordomo
 	@${INSTALL_DATA} -o ${MAJORDOMO_USER} -g ${MAJORDOMO_GROUP} \
-		${FILESDIR}/.keep_me ${EXDIR}/archives/example-l/.keep_me
+		${FILESDIR}/keep_me ${EXDIR}/archives/example-l/.keep_me
 	@${INSTALL_DATA} -o ${MAJORDOMO_USER} -g ${MAJORDOMO_GROUP} \
-		${FILESDIR}/.keep_me ${EXDIR}/digests/example-l-digest/.keep_me
+		${FILESDIR}/keep_me ${EXDIR}/digests/example-l-digest/.keep_me
 .for file in ${EXFILES}
 	@${INSTALL_DATA} -o ${MAJORDOMO_USER} -g ${MAJORDOMO_GROUP} \
 		${FILESDIR}/${file} ${EXDIR}/lists/${file}
