@@ -1,9 +1,15 @@
-@comment $NetBSD: PLIST,v 1.2 2002/12/24 17:21:03 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/01/24 02:01:53 kristerw Exp $
 bin/udunits
+etc/udunits.dat
 include/udunits.h
 include/udunits.inc
 lib/libudport.a
 lib/libudunits.a
+lib/perl5/5.6.1/${MACHINE_ARCH}-${LOWER_OPSYS}/perllocal.pod
+lib/perl5/site_perl/5.6.1/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/UDUNITS/.packlist
+lib/perl5/site_perl/5.6.1/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/UDUNITS/UDUNITS.bs
+lib/perl5/site_perl/5.6.1/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/UDUNITS/UDUNITS.so
+lib/perl5/site_perl/5.6.1/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/UDUNITS/autosplit.ix
 man/man1/udunits.1
 man/man1/udunitsperl.1
 man/man3/udunits.3
@@ -11,3 +17,7 @@ man/man3/udunits.3f
 man/man3f/udunits.3f
 share/examples/udunits/udunits.dat
 @dirrm share/examples/udunits
+@dirrm man/man3f
+@dirrm lib/perl5/site_perl/5.6.1/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/UDUNITS
+@dirrm lib/perl5/site_perl/5.6.1/${MACHINE_ARCH}-${LOWER_OPSYS}/auto
+@dirrm lib/perl5/site_perl/5.6.1/${MACHINE_ARCH}-${LOWER_OPSYS}
