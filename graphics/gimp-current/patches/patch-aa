@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/11/27 04:08:32 hubertf Exp $
+$NetBSD: patch-aa,v 1.2 2000/03/13 14:41:50 tron Exp $
 
 --- configure.orig	Thu Nov 25 21:24:04 1999
-+++ configure	Fri Nov 26 16:05:46 1999
++++ configure	Mon Mar 13 15:15:15 2000
 @@ -668,7 +668,7 @@
  # It thinks the first close brace ends the variable substitution.
  test -z "$INSTALL_PROGRAM" && INSTALL_PROGRAM='${INSTALL}'
@@ -27,6 +27,17 @@ $NetBSD: patch-aa,v 1.1.1.1 1999/11/27 04:08:32 hubertf Exp $
  
  # Redirect the config.log output again, so that the ltconfig log is not
  # clobbered by the next message.
+@@ -4293,8 +4295,8 @@
+ 
+ 
+ 
+-GLIB_CFLAGS=`echo $GTK_CFLAGS | sed 's/^.*\(-I[^ ]*glib[^ ]*  *-I[^ ]*\).*$/\1/'`
+-GLIB_LDFLAGS=`echo $GTK_LIBS | sed -e 's/^.*-lgdk[^ ]* *\(-L[^ ]*\).*$/\1/' -e 's/^.* -lgdk[^ ]* .*$//'`
++GLIB_CFLAGS=`${LOCALBASE}/bin/glib-config --cflags`
++GLIB_LDFLAGS=`${LOCALBASE}/bin/glib-config --libs`
+ if test -z "$GLIB_LDFLAGS" ; then
+   GLIB_LDFLAGS=`echo $GTK_LIBS | sed 's/^ *\(-L[^ ]*\) .*$/\1/'`
+ fi 
 @@ -4657,7 +4659,7 @@
    echo $ac_n "(cached) $ac_c" 1>&6
  else
