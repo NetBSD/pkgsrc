@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2072 2003/04/28 23:25:01 jdolecek Exp $
+$NetBSD: CHANGES,v 1.2073 2003/04/29 01:37:07 rh Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1773,3 +1773,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated rxvt to 2.7.10nb3 [martin 2003-04-28]
 	Added suse_freetype2-7.3 [jdolecek 2003-04-29]
 	Added opera-7.1.0beta1 [jdolecek 2003-04-29]
+	Updated createbuildlink to 2.6 [rh 2003-04-29]
