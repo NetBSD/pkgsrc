@@ -1,4 +1,4 @@
-# $NetBSD: java-vm.mk,v 1.4 2002/12/31 14:42:21 jlam Exp $
+# $NetBSD: java-vm.mk,v 1.5 2003/01/29 09:34:32 abs Exp $
 #
 # This Makefile fragment handles Java dependencies and make variables,
 # and is meant to be included by packages that require Java either at
@@ -183,6 +183,8 @@ BUILDLINK_DEPENDS.blackdown-jdk13?=	blackdown-jdk13-[0-9]*
 BUILDLINK_DEPENDS.kaffe?=		kaffe-[0-9]*
 BUILDLINK_DEPENDS.wonka?=		wonka-[0-9]*
 
+_JAVA_BASE_CLASSES=	classes.zip
+
 .if ${_PKG_JVM} == "jdk"
 _JDK_PKGSRCDIR=		../../lang/jdk
 _JRE_PKGSRCDIR=		../../lang/jdk
@@ -219,6 +221,7 @@ _JDK_PKGSRCDIR=		../../lang/wonka
 _JRE_PKGSRCDIR=		../../lang/wonka
 _JRE_DEPENDENCY=	wonka-[0-9]*:${_JRE_PKGSRCDIR}
 _JAVA_HOME_DEFAULT=	${LOCALBASE}/java/wonka
+_JAVA_BASE_CLASSES=	wre.jar
 SCRIPTS_ENV+=		JAVAC="jikes"
 .endif
 _JDK_DEPENDENCY?=	${BUILDLINK_DEPENDS.${_PKG_JVM}}:${_JDK_PKGSRCDIR}
