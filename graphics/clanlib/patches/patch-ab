@@ -1,6 +1,5 @@
-$NetBSD: patch-ab,v 1.2 2000/12/15 03:13:05 garbled Exp $
---- Sources/Core/Input/X11/joystick_linux.h.orig	Thu Jul  8
-11:36:50 1999
+$NetBSD: patch-ab,v 1.3 2000/12/15 03:24:18 garbled Exp $
+--- Sources/Core/Input/X11/joystick_linux.h.orig	Thu Jul  8 11:36:50 1999
 +++ Sources/Core/Input/X11/joystick_linux.h	Thu Jul  8 11:41:55 1999
 @@ -21,13 +21,16 @@
  #define header_joystick_linux
