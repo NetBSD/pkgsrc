@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/01/22 19:15:16 skrll Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/03/11 13:30:43 markd Exp $
 bin/kdevdlg2ui
 bin/kdevelop
 bin/one2two
@@ -255,6 +255,38 @@ share/kde/apps/kdevelop/tools/processesend.pl
 share/kde/icons/hicolor/16x16/apps/kdevelop.png
 share/kde/icons/hicolor/32x32/apps/kdevelop.png
 share/kde/icons/hicolor/48x48/apps/kdevelop.png
+share/kde/locale/af/LC_MESSAGES/kdevelop.mo
+share/kde/locale/ar/LC_MESSAGES/kdevelop.mo
+share/kde/locale/az/LC_MESSAGES/kdevelop.mo
+share/kde/locale/da/LC_MESSAGES/kdevelop.mo
+share/kde/locale/de/LC_MESSAGES/kdevelop.mo
+share/kde/locale/en_GB/LC_MESSAGES/kdevelop.mo
+share/kde/locale/es/LC_MESSAGES/kdevelop.mo
+share/kde/locale/et/LC_MESSAGES/kdevelop.mo
+share/kde/locale/fi/LC_MESSAGES/kdevelop.mo
+share/kde/locale/fr/LC_MESSAGES/kdevelop.mo
+share/kde/locale/hu/LC_MESSAGES/kdevelop.mo
+share/kde/locale/id/LC_MESSAGES/kdevelop.mo
+share/kde/locale/is/LC_MESSAGES/kdevelop.mo
+share/kde/locale/it/LC_MESSAGES/kdevelop.mo
+share/kde/locale/ja/LC_MESSAGES/kdevelop.mo
+share/kde/locale/lv/LC_MESSAGES/kdevelop.mo
+share/kde/locale/nb/LC_MESSAGES/kdevelop.mo
+share/kde/locale/nl/LC_MESSAGES/kdevelop.mo
+share/kde/locale/nn/LC_MESSAGES/kdevelop.mo
+share/kde/locale/pl/LC_MESSAGES/kdevelop.mo
+share/kde/locale/pt/LC_MESSAGES/kdevelop.mo
+share/kde/locale/pt_BR/LC_MESSAGES/kdevelop.mo
+share/kde/locale/ro/LC_MESSAGES/kdevelop.mo
+share/kde/locale/sk/LC_MESSAGES/kdevelop.mo
+share/kde/locale/sl/LC_MESSAGES/kdevelop.mo
+share/kde/locale/sv/LC_MESSAGES/kdevelop.mo
+share/kde/locale/ta/LC_MESSAGES/kdevelop.mo
+share/kde/locale/tr/LC_MESSAGES/kdevelop.mo
+share/kde/locale/vi/LC_MESSAGES/kdevelop.mo
+share/kde/locale/xh/LC_MESSAGES/kdevelop.mo
+share/kde/locale/zh_CN/LC_MESSAGES/kdevelop.mo
+share/kde/locale/zu/LC_MESSAGES/kdevelop.mo
 share/kde/mimelnk/application/x-kdevelop-project.desktop
 @dirrm share/kde/apps/kdevelop/tools
 @dirrm share/kde/apps/kdevelop/templates
