@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.1.1.1 2002/03/08 16:45:35 wiz Exp $
+$NetBSD: distinfo,v 1.2 2002/03/11 05:23:54 jmc Exp $
 
 SHA1 (copter-commander-1.8.tar.bz2) = 5ad2818193ffb7567fc318c9e2b19e0cb9a71b7a
 Size (copter-commander-1.8.tar.bz2) = 1415285 bytes
-SHA1 (patch-aa) = 22bee79e403dd544be5304c1276d4b1f55f80e5a
+SHA1 (patch-aa) = dd05eef7116b1a2b1dca8651d8a38e63b2fc5054
 SHA1 (patch-ab) = 229a2e2e49ad5f9bb5e9bfcce98a63be34ab4f5f
 SHA1 (patch-ac) = 6a64b0ff837f55e6ee73709113e2607de8cb9441
 SHA1 (patch-ad) = e7a8f56c48adc230204177d98a2ba4a7954b1c10
