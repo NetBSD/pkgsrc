@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/03/29 22:04:09 recht Exp $
+$NetBSD: distinfo,v 1.2 2004/04/03 11:28:53 wiz Exp $
 
 SHA1 (ttmkfdir2.20021109.tar.bz2) = bee1944ce3e5b6c4503a14e6429737cc558a24c0
 Size (ttmkfdir2.20021109.tar.bz2) = 701900 bytes
 SHA1 (patch-aa) = 513c6922cfa60a6c2dbf332a5d65e0277bd89929
 SHA1 (patch-ab) = d22b1eb7de9c2ba622583bb2e2fe6c4ccd4b26d2
 SHA1 (patch-ac) = 23eb6e500522a1ce826a9b0899d7afff6017d096
+SHA1 (patch-ad) = 0c328908ffae3397293ff6b00094444e23164788
