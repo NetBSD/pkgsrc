@@ -3,7 +3,8 @@
 # Date created:         Tue Feb  7 12:02:49  1995
 # Whom:                 hsu
 #
-# $Id: Makefile,v 1.1.1.1 1997/11/03 00:36:12 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 1997/11/03 00:39:10 hubertf Exp $
+# FreeBSD Id: Makefile,v 1.19 1997/09/30 19:21:40 max Exp
 #
 
 DISTNAME=       Mesa-2.2
