@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/11/05 23:41:57 he Exp $
+# $NetBSD: Makefile,v 1.3 2004/11/07 18:30:44 kristerw Exp $
 
 DISTNAME=	MasonX-Request-WithApacheSession-0.30
 PKGNAME=	p5-${DISTNAME}
@@ -12,6 +12,7 @@ COMMENT=	Perl5 module adding a session to the Mason Request obj
 
 DEPENDS+=	p5-Apache-Session-Wrapper>=0.13:../../www/p5-Apache-Session-Wrapper
 DEPENDS+=	p5-HTML-Mason>=1.16:../../www/p5-HTML-Mason
+BUILD_DEPENDS+=	p5-Module-Build>=0.20:../../devel/p5-Module-Build
 
 USE_BUILDLINK3=	YES
 
