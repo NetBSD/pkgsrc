@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2004/08/04 08:47:22 recht Exp $
+# $NetBSD: Makefile,v 1.35 2004/11/01 10:51:30 recht Exp $
 #
 
 DISTNAME=	icu-3.0
@@ -50,6 +50,8 @@ PLIST_SUBST+=		MH_NAME=mh-solaris
 .  endif
 .elif ${OPSYS} == "IRIX"
 PLIST_SUBST+=		MH_NAME=mh-irix
+.elif ${OPSYS} == "Darwin"
+PLIST_SUBST+=		MH_NAME=mh-darwin
 .else
 # For unknown systems, set the filename to mh-unknown so that the user
 # gets a warning about missing files.
