@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/01/02 16:15:09 fredb Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/01/17 11:15:32 martti Exp $
 bin/ebrowser
 bin/gnome-gtkhtml-editor
 bin/gtkhtml-properties-capplet
@@ -97,10 +97,15 @@ lib/gtkhtmlConf.sh
 lib/libgtkhtml.a
 lib/libgtkhtml.la
 lib/libgtkhtml.so
-lib/libgtkhtml.so.17
-lib/libgtkhtml.so.17.0
+lib/libgtkhtml.so.21
+lib/libgtkhtml.so.21.0
 share/control-center/Documents/gtkhtml-properties.desktop
 share/gnome/apps/Settings/Documents/gtkhtml-properties.desktop
+share/gnome/html/gtkhtml-decl.txt
+share/gnome/html/gtkhtml-sections.txt
+share/gnome/html/gtkhtml.hierarchy
+share/gnome/html/gtkhtml.sgml
+share/gnome/html/gtkhtml.types
 share/gnome/html/gtkhtml/gtkhtml-gtkhtml-enums.html
 share/gnome/html/gtkhtml/gtkhtml-gtkhtml-stream.html
 share/gnome/html/gtkhtml/gtkhtml-gtkhtml-types.html
@@ -109,11 +114,6 @@ share/gnome/html/gtkhtml/gtkhtml.html
 share/gnome/html/gtkhtml/index.html
 share/gnome/html/gtkhtml/license.html
 share/gnome/html/gtkhtml/r27.html
-share/gnome/html/gtkhtml-decl.txt
-share/gnome/html/gtkhtml-sections.txt
-share/gnome/html/gtkhtml.hierarchy
-share/gnome/html/gtkhtml.sgml
-share/gnome/html/gtkhtml.types
 share/gnome/ui/GNOME_GtkHTML_Editor.xml
 share/gtkhtml/Editor.idl
 share/gtkhtml/gtkhtml-capplet.glade
@@ -125,21 +125,19 @@ share/gtkhtml/icons/24_copy.png
 share/gtkhtml/icons/24_cut.png
 share/gtkhtml/icons/24_paste.png
 share/gtkhtml/icons/bulb.png
+share/gtkhtml/icons/empty_image.png
+share/gtkhtml/icons/flowers.png
 share/gtkhtml/icons/html-viewer.png
 share/gtkhtml/icons/insert-image-16.png
 share/gtkhtml/icons/insert-image-24.png
 share/gtkhtml/icons/insert-link-16.png
 share/gtkhtml/icons/insert-link-24.png
+share/gtkhtml/icons/insert-object-16.png
+share/gtkhtml/icons/insert-object-24.png
 share/gtkhtml/icons/insert-rule-16.png
 share/gtkhtml/icons/insert-rule-24.png
 share/gtkhtml/icons/insert-table-16.png
 share/gtkhtml/icons/insert-table-24.png
-share/gtkhtml/icons/search-24.png
-share/gtkhtml/icons/search-and-replace-24.png
-share/gtkhtml/icons/empty_image.png
-share/gtkhtml/icons/flowers.png
-share/gtkhtml/icons/insert-object-16.png
-share/gtkhtml/icons/insert-object-24.png
 share/gtkhtml/icons/properties-16.png
 share/gtkhtml/icons/redo-16.png
 share/gtkhtml/icons/redo-24.png
@@ -150,7 +148,9 @@ share/gtkhtml/icons/rule-yellow-flowers-center.png
 share/gtkhtml/icons/rule-yellow-flowers-left.png
 share/gtkhtml/icons/rule-yellow-flowers-right.png
 share/gtkhtml/icons/search-16.png
+share/gtkhtml/icons/search-24.png
 share/gtkhtml/icons/search-and-replace-16.png
+share/gtkhtml/icons/search-and-replace-24.png
 share/gtkhtml/icons/transparent.png
 share/gtkhtml/icons/undo-16.png
 share/gtkhtml/icons/undo-24.png
@@ -171,10 +171,12 @@ share/locale/it/LC_MESSAGES/gtkhtml.mo
 share/locale/ja/LC_MESSAGES/gtkhtml.mo
 share/locale/ko/LC_MESSAGES/gtkhtml.mo
 share/locale/lt/LC_MESSAGES/gtkhtml.mo
+share/locale/lv/LC_MESSAGES/gtkhtml.mo
 share/locale/nl/LC_MESSAGES/gtkhtml.mo
 share/locale/nn/LC_MESSAGES/gtkhtml.mo
 share/locale/no/LC_MESSAGES/gtkhtml.mo
 share/locale/pl/LC_MESSAGES/gtkhtml.mo
+share/locale/pt/LC_MESSAGES/gtkhtml.mo
 share/locale/pt_BR/LC_MESSAGES/gtkhtml.mo
 share/locale/ru/LC_MESSAGES/gtkhtml.mo
 share/locale/sk/LC_MESSAGES/gtkhtml.mo
@@ -182,10 +184,11 @@ share/locale/sl/LC_MESSAGES/gtkhtml.mo
 share/locale/sv/LC_MESSAGES/gtkhtml.mo
 share/locale/tr/LC_MESSAGES/gtkhtml.mo
 share/locale/uk/LC_MESSAGES/gtkhtml.mo
+share/locale/zh_CN/LC_MESSAGES/gtkhtml.mo
 share/locale/zh_TW/LC_MESSAGES/gtkhtml.mo
 share/oaf/GNOME_GtkHTML_EBrowser.oaf
 share/oaf/GNOME_GtkHTML_Editor.oaf
+@dirrm include/gtkhtml
 @dirrm share/gnome/html/gtkhtml
 @dirrm share/gtkhtml/icons
 @dirrm share/gtkhtml
-@dirrm include/gtkhtml
