@@ -1,16 +1,14 @@
+@comment $NetBSD: PLIST,v 1.2 2001/02/24 15:51:49 jtb Exp $
 bin/cuprolog
 share/doc/cu-prolog/CHANGES
 share/doc/cu-prolog/COPYRIGHT
 share/doc/cu-prolog/COPYRIGHT.j
-share/doc/cu-prolog/INSTALL
-share/doc/cu-prolog/INSTALL.j
 share/doc/cu-prolog/README
 share/doc/cu-prolog/README.j
 share/doc/cu-prolog/cu3eman.dvi
 share/doc/cu-prolog/cu3man.dvi
 share/doc/cu-prolog/newpred_e.doc
 share/doc/cu-prolog/newpred_j.doc
-@dirrm share/doc/cu-prolog
 share/examples/cu-prolog/README
 share/examples/cu-prolog/bagof.p
 share/examples/cu-prolog/eisele.p
@@ -19,4 +17,5 @@ share/examples/cu-prolog/jpsg.p
 share/examples/cu-prolog/kasper.p
 share/examples/cu-prolog/marcus.p
 share/examples/cu-prolog/memap.p
+@dirrm share/doc/cu-prolog
 @dirrm share/examples/cu-prolog
