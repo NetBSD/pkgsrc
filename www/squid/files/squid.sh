@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: squid.sh,v 1.15 2002/09/20 02:02:02 grant Exp $
+# $NetBSD: squid.sh,v 1.16 2002/09/27 17:15:56 grant Exp $
 #
 
 # PROVIDE: squid
@@ -20,6 +20,7 @@ stop_cmd="stop_nicely"
 kill_command="${command} -k shutdown"
 reload_cmd="${command} -k reconfigure"
 rotate_cmd="${command} -k rotate"
+createdirs_cmd="squid_createdirs"
 
 #### end of configuration section ####
 
@@ -29,32 +30,38 @@ stop_nicely ()
 {
 	if [ -f ${pidfile} ] ; then
 		DAEMON_PID=`sed 1q ${pidfile}`
-		echo -n "Stopping ${name}"
+		@ECHO@ -n "Stopping ${name}"
 		${kill_command}
 		if [ ${DAEMON_PID} -ne 0 ]; then
-			echo -n '['
+			@ECHO@ -n '['
 			for WAIT in 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
 			do
 				if kill -0 ${DAEMON_PID} >/dev/null 2>&1; then
 					sleep 4
-					echo -n '.'
+					@ECHO@ -n '.'
 					test $WAIT -lt 15 || kill ${DAEMON_PID}
 				else
 					break
 				fi
 			done
-			echo '].'
+			@ECHO@ '].'
 			unset WAIT
 		fi
 		unset DAEMON_PID
 	fi
 }
 
+# create the squid cache directories
+squid_createdirs()
+{
+	${start_cmd} -z
+}
+
 if [ -f /etc/rc.subr -a -d /etc/rc.d -a -f /etc/rc.d/DAEMON ]; then
 	. /etc/rc.subr
 	. /etc/rc.conf
 
-	extra_commands="reload rotate"
+	extra_commands="createdirs reload rotate"
 	load_rc_config $name
 	run_rc_command "$1"
 
@@ -63,11 +70,14 @@ else				# old NetBSD, Solaris, Linux, etc...
 	case $1 in
 	start)
 		if [ -x ${command} -a -f ${conf_file} ] ; then
-			eval ${start_cmd} && echo -n " ${name}"
+			eval ${start_cmd} && @ECHO@ -n " ${name}"
 		fi
 		;;
 	stop)
 		${stop_cmd}
+		;;
+	createdirs)
+		squid_createdirs
 		;;
 	reload)
 		if [ -f ${pidfile} ] ; then
@@ -80,7 +90,7 @@ else				# old NetBSD, Solaris, Linux, etc...
 		fi
 		;;
 	*)
-		echo "Usage: $0 {start|stop|reload}" 1>&2
+		@ECHO@ "Usage: $0 {start|stop|reload|createdirs}" 1>&2
 		exit 64
 		;;
 	esac
