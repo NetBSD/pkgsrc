@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.414 2003/03/23 19:38:16 wiz Exp $
+$NetBSD: TODO,v 1.415 2003/03/25 08:59:30 wiz Exp $
 
 Suggested new packages
 ======================
@@ -185,11 +185,11 @@ Suggested package updates
 	o nessus-2.0.1 [pkg/20796]
 	o net-snmp-5.0.7 [pkg/19939]
 	o net-snmp-5.0.8
-	o netpbm-10.14
 	o netscape-7.02
 	o newscache-0.99.22p1
 	o ns-flash-6.0.79
-	o nut-7.19
+	o nut-7.20
+	o nxtvepg-2.5.0
 	o ogle-0.9.1
 	o openh323-1.11.2
 	o openldap-2.1.12
@@ -227,7 +227,8 @@ Suggested package updates
 	o smarteiffel-1.0 [replacing smalleiffel]
 	o snes9x-1.39a
 	o soappy-0.9.8 [pkg/20787]
-	o spamassassin-2.50 [heinz]
+	o sox-12.17.4
+	o spamassassin-2.52 [heinz]
 	o sqlite-2.7.5 [pkg/19719]
 	o sqlite-2.7.6
 	o squeak-3.2 [fredb|pkg/17950]
@@ -246,6 +247,7 @@ Suggested package updates
 	o tightvnc-1.2.8
 	o ttf2pt1-3.4.3
 	o vfu-4.00
+	o vm-7.13
 	o vnc-3.3.4 [http://www.realvnc.com/download.html]
 	o vttest-20030301
 	o wine-20030318
@@ -253,10 +255,12 @@ Suggested package updates
 	o wxGTK-2.4.0 [pkg/20640]
 	o xalan-c-1.4
 	o xanim-2.92.0 [pkg/19934]
+	o xdialog-2.1.0
 	o xerces-c-2.1.0 [heinz]
 	o xmcd-3.2.0
 	o xosview-1.8.0 [pkg/20265]
 	o xpaint-2.6.9
+	o xpdf-2.02
 	o xplanet-1.0.0
 	o xpuyopuyo-0.9.5
 	o xscreensaver-4.09
