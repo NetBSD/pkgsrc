@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.652 2002/12/01 18:37:11 jdolecek Exp $
+$NetBSD: CHANGES,v 1.653 2002/12/01 18:42:40 seb Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3780,3 +3780,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated namazu2 to 2.0.12nb1 [taca 2002-11-30]
 	Updated imapfilter to 0.8.4 [seb 2002-12-01]
 	Updated pwlib to 1.4.4 [jdolecek 2002-12-01]
+	Updated graphviz to 1.8.10 [seb 2002-12-1]
