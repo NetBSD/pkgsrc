@@ -1,21 +1,20 @@
-$NetBSD: patch-ac,v 1.16 2003/11/27 17:38:29 abs Exp $
+$NetBSD: patch-ac,v 1.17 2004/02/24 19:39:42 snj Exp $
 
---- abcde.orig	2003-11-05 16:08:37.000000000 +0000
-+++ abcde
-@@ -963,7 +963,12 @@ do_cddbedit ()
- 		echo "abcde: internal error: cddb-choice not recorded." >&2
- 		exit 1
- 	fi
-+
-+	# Strip out ^M
- 	CDDBDATA="$ABCDETEMPDIR/cddbread.$(checkstatus cddb-choice)"
-+	CDDBDATATMP="$ABCDETEMPDIR/cddbread.tmp"
-+	tr -d '\r' < $CDDBDATA > $CDDBDATATMP
-+	mv $CDDBDATATMP $CDDBDATA
- 
- 	if [ "$INTERACTIVE" = "y" ]; then
- 		echo -n "Edit selected CDDB data? [y/n] (n): " >&2
-@@ -1281,8 +1286,8 @@ if [ -z "$WAVOUTPUTDIR" ]; then
+--- abcde.orig	2004-02-15 16:19:36.000000000 -0800
++++ abcde	2004-02-23 10:50:21.000000000 -0800
+@@ -1026,7 +1026,11 @@ do_cddbread ()
+ do_cddbedit ()
+ {
+ 	if checkstatus cddb-edit >/dev/null; then
++		# Strip out ^M
+ 		CDDBDATA="$ABCDETEMPDIR/cddbread.$(checkstatus cddb-choice)"
++		CDDBDATATMP="$ABCDETEMPDIR/cddbread.tmp"
++		tr -d '\r' < $CDDBDATA > $CDDBDATATMP
++		mv $CDDBDATATMP $CDDBDATA
+ 		VARIOUSARTISTS="$(checkstatus variousartists)"
+ 		VARIOUSARTISTSTYLE="$(checkstatus variousartiststyle)"
+ 		return 0
+@@ -1494,8 +1498,8 @@ if [ -z "$WAVOUTPUTDIR" ]; then
  fi
  
  # Load system defaults
@@ -26,18 +25,17 @@ $NetBSD: patch-ac,v 1.16 2003/11/27 17:38:29 abs Exp $
  fi
  # Load user preference defaults
  if [ -r $HOME/.abcde.conf ]; then
-@@ -1308,8 +1313,8 @@ else
- 	elif [ -e /dev/acd0c ]; then
+@@ -1528,6 +1532,9 @@ if [ "$CDROM" = "" ] ; then
  		CDROM=/dev/acd0c
- 	else
--		echo "abcde error: CDROM device cannot be found." >&2
--		exit 1
+ 	elif [ -e /dev/disk1 ]; then
+ 		CDROM=/dev/disk1
++	else
 +		RAWPART=`sysctl -n kern.rawpartition | awk '{printf "%c",97+$0}'`
 +		CDROM=/dev/rcd0$RAWPART
  	fi
  fi
  
-@@ -1356,7 +1361,7 @@ done
+@@ -1603,7 +1610,7 @@ fi
  case "$CDROMREADERSYNTAX" in
  	cdparanoia|debug)
  		CDROMREADER="$CDPARANOIA"
@@ -46,7 +44,7 @@ $NetBSD: patch-ac,v 1.16 2003/11/27 17:38:29 abs Exp $
  		;;
  	cdda2wav)
  		CDROMREADER="$CDDA2WAV"
-@@ -1485,7 +1490,8 @@ for X in $CDROMREADER $CDDISCID ${NEEDTA
+@@ -1737,7 +1744,8 @@ for X in $CDROMREADER $CDDISCID ${NEEDTA
  do
  	# Cut off the command-line options we just added in
  	X=$(echo $X | cut -d' ' -f2)
