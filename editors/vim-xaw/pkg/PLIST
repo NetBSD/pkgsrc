@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/12/21 13:26:30 pooka Exp $
+bin/vim
+bin/gvim
+bin/gview
+bin/rgvim
+bin/rgview
+bin/ex
+bin/view
+bin/rvim
+bin/rview
+man/man1/gvim.1
+man/man1/gview.1
+man/man1/rgvim.1
+man/man1/rgview.1
