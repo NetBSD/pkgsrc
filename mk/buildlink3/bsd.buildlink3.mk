@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.40 2004/01/07 06:47:29 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.41 2004/01/07 07:11:34 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -693,7 +693,8 @@ _BLNK_TRANSFORM+=	rpath:${_dir_}:${_BLNK_MANGLE_DIR.${_dir_}}
 # are just found in the default view.
 #
 .if ${PKG_INSTALLATION_TYPE} == "overwrite"
-_BLNK_TRANSFORM+=	depot:${DEPOTBASE}:${LOCALBASE}
+_BLNK_TRANSFORM+=	transform:depot:${DEPOTBASE}:${LOCALBASE}
+_BLNK_TRANSFORM+=	untransform:depot:${DEPOTBASE}:${_BLNK_MANGLE_DIR.${BUILDLINK_DIR}}
 .endif
 #
 # Convert direct paths to shared libraries into "-Ldir -llib" equivalents.
@@ -710,6 +711,11 @@ _BLNK_TRANSFORM+=	P:${X11BASE}:${_BLNK_MANGLE_DIR.${BUILDLINK_X11_DIR}}
 .  endif
 _BLNK_TRANSFORM+=	P:${LOCALBASE}:${_BLNK_MANGLE_DIR.${BUILDLINK_DIR}}
 .endif
+#
+# Explicitly remove everything that's an absolute path when
+# untransforming.
+#
+_BLNK_TRANSFORM+=	untransform:r:
 #
 # Transform references into ${X11BASE} into ${BUILDLINK_X11_DIR}.
 #
@@ -729,10 +735,10 @@ _BLNK_TRANSFORM+=	L:${LOCALBASE}:${_BLNK_MANGLE_DIR.${BUILDLINK_DIR}}
 #
 _BLNK_TRANSFORM+=	${BUILDLINK_TRANSFORM}
 #
-# Explicitly remove everything else that's an absolute path, since we've
-# already protected the ones we care about.
+# Explicitly remove everything else that's an absolute path when
+# transforming, since we've already protected the ones we care about.
 #
-_BLNK_TRANSFORM+=       r:
+_BLNK_TRANSFORM+=       transform:r:
 #
 # Remove -Wl,-R* and *-rpath* if _USE_RPATH == "no".
 # Transform -Wl,-R* and *-rpath* if Sun compilers are used.
