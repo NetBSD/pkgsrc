@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/07/31 22:48:50 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2001/08/12 18:17:15 jlam Exp $
 
 DISTNAME=	courier-imap-1.3.8.2
 CATEGORIES=	mail
@@ -20,6 +20,7 @@ CONFIGURE_ARGS+=	--sysconfdir=/etc/courier
 CONFIGURE_ARGS+=	--enable-unicode
 CONFIGURE_ARGS+=	--with-db=db
 CONFIGURE_ARGS+=	--with-userdb=/etc/courier/userdb
+CONFIGURE_ARGS+=	--disable-root-check
 CONFIGURE_ENV+=		OPENSSL=${BUILDLINK_PREFIX.openssl}/bin/openssl
 CONFIGURE_ENV+=		SSLCERTS=${SSLCERTS}
 
