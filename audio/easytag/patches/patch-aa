@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/07/20 23:11:53 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2000/07/23 08:29:21 jlam Exp $
 
---- Makefile.orig	Tue Jul 18 09:08:33 2000
-+++ Makefile	Fri Jul 21 00:37:49 2000
+--- Makefile.orig	Tue Jul 18 03:08:33 2000
++++ Makefile	Sun Jul 23 04:24:31 2000
 @@ -11,16 +11,13 @@
  
  
@@ -21,3 +21,13 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/07/20 23:11:53 wiz Exp $
  LOCALEDIR = $(PREFIX)/share/locale
  
  # The dir where are located pixmaps, logo
+@@ -37,7 +34,9 @@
+ install:
+ 	$(MAKE) install -C src
+ 	[ -z "$(NLS)" ] || $(MAKE) install -C po
++	mkdir -p $(PREFIX)/share/gnome/apps/Multimedia
+ 	cp -f easytag.desktop $(PREFIX)/share/gnome/apps/Multimedia/
++	mkdir -p $(PREFIX)/share/pixmaps
+ 	cp -f pixmaps/EasyTAG_icon.xpm $(PREFIX)/share/pixmaps/EasyTAG.xpm
+ 	mkdir -p $(PREFIX)/share/easytag
+ 	cp -f pixmaps/EasyTAG_logo.xpm $(PREFIX)/share/easytag/
