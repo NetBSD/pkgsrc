@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.54 2002/12/11 12:34:56 cjep Exp $
+$NetBSD: TODO,v 1.55 2002/12/11 20:32:40 wiz Exp $
 
 Suggested new packages
 ======================
@@ -108,8 +108,6 @@ Suggested package updates
 	o fetchmail-6.1.3 [pkg/19242]
 	o fileroller-2.0
 	o fltk-1.1.1
-	o fluxbox-0.1.13 [pkg/19224]
-	o fluxbox-0.1.14
 	o fox-1.0.28
 	o freeciv-1.13.0
 	o freetype-2.1.2 [pkg/19109]
@@ -143,6 +141,7 @@ Suggested package updates
 	o imlib2-1.0.6 [pkg/19144]
 	o inform-6.21.3 [pkg/19298]
 	o intltool-0.23 [pkg/18891]
+	o iozone-3.147
 	o jakarta-ant-1.5 [pkg/18322]
 	o jed-0.99.16 [pkg/18937]
 	o jgloss-1.0.6
@@ -179,10 +178,11 @@ Suggested package updates
 	o mrproject-0.7
 	o multi-gnome-terminal-1.6.1
 	o mysql-4.0.3
-	o naim-0.11.4.12
+	o naim-0.11.5
 	o nasm-0.98.35
 	o ncurses-5.3
 	o netpbm-10.8
+	o netscape-7.01
 	o nxtvepg-2.4.1
 	o openoffice-1.0.1 [skrll]
 	o openoffice-643 [post-1.0.1]
@@ -217,6 +217,7 @@ Suggested package updates
 	o sendfile-20010424
 	o shorten-3.5.0
 	o siag-office-3.5.3
+	o silc-client-0.9.10.1
 	o smalltalk-2.0.9
 	o snes9x-1.39a
 	o sodipodi-0.28
@@ -244,7 +245,7 @@ Suggested package updates
 	o xsane-0.87 [rh|pkg/17952]
 	o xsidplay-1.6.5pre15
 	o ysm-2.8.1 [pkg/19251]
-	o yudit-2.7
+	o yudit-2.7.2
 
 
 Suggested pkgsrc enhancements
