@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.174 2003/07/03 08:32:53 agc Exp $
+# $NetBSD: Makefile,v 1.175 2003/07/10 08:48:16 adam Exp $
 #
 
 COMMENT=	Audio tools
@@ -89,6 +89,8 @@ SUBDIR+=	libao-arts
 SUBDIR+=	libao-esound
 SUBDIR+=	libaudiofile
 SUBDIR+=	libcdaudio
+SUBDIR+=	libid3tag
+SUBDIR+=	libmad
 SUBDIR+=	libmikmod
 SUBDIR+=	libogg
 SUBDIR+=	libsamplerate
@@ -98,6 +100,7 @@ SUBDIR+=	libvorbis
 SUBDIR+=	liveice
 SUBDIR+=	mad
 SUBDIR+=	mad123
+SUBDIR+=	madplay
 SUBDIR+=	maplay
 SUBDIR+=	mbrola
 SUBDIR+=	mbrolavox-en1
