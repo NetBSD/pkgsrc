@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/03/14 16:14:04 skrll Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/03/16 15:16:34 skrll Exp $
 bin/aktion
 bin/artsbuilder
 bin/artscontrol
@@ -155,11 +155,12 @@ lib/libkmixapplet.la
 lib/libkmixapplet.so
 lib/libkmixapplet.so.1
 lib/libkmixapplet.so.1.0
+lib/libmpeg-0.3.0.so
+lib/libmpeg-0.3.0.so.0
+lib/libmpeg-0.3.0.so.0.3
 lib/libmpeg.a
 lib/libmpeg.la
 lib/libmpeg.so
-lib/libmpeg.so.0
-lib/libmpeg.so.0.3
 lib/libnoatun.a
 lib/libnoatun.la
 lib/libnoatun.so
