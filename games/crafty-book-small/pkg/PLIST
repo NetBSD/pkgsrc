@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/10/15 02:08:52 jlam Exp $
+lib/${CHESS_ENGINE}/${BOOK_FILE}
