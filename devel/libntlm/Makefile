@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/02/14 17:21:38 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2004/02/14 18:26:27 jmmv Exp $
 #
 
 DISTNAME=		libntlm-0.3.2
@@ -13,7 +13,7 @@ GNU_CONFIGURE=		yes
 USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
 
-PKGCONFIG_OVERRIDE+=    ${WRKSRC}/libntlm.pc.in
+PKGCONFIG_OVERRIDE+=    libntlm.pc.in
 
 .include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

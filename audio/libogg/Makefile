@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2004/02/14 17:21:33 jlam Exp $
+# $NetBSD: Makefile,v 1.28 2004/02/14 18:26:27 jmmv Exp $
 
 DISTNAME=	libogg-1.1
 CATEGORIES=	devel audio
@@ -18,7 +18,7 @@ GCC_REQD+=		2.95.3
 
 PLIST_SUBST+=		DISTNAME=${DISTNAME}
 
-PKGCONFIG_OVERRIDE+=	${WRKSRC}/ogg.pc.in
+PKGCONFIG_OVERRIDE+=	ogg.pc.in
 
 .include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2004/02/14 17:21:53 jlam Exp $
+# $NetBSD: Makefile,v 1.36 2004/02/14 18:26:29 jmmv Exp $
 
 DISTNAME=	libxslt-1.1.2
 PKGNAME=	${DISTNAME}
@@ -15,8 +15,8 @@ USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		yes
 USE_PERL5=		build
-PKGCONFIG_OVERRIDE=	${WRKSRC}/libxslt.pc.in
-PKGCONFIG_OVERRIDE+=	${WRKSRC}/libexslt.pc.in
+PKGCONFIG_OVERRIDE=	libxslt.pc.in
+PKGCONFIG_OVERRIDE+=	libexslt.pc.in
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-libxml-prefix=${BUILDLINK_PREFIX.libxml2}

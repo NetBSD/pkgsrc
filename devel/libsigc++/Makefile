@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/02/14 17:21:38 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2004/02/14 18:26:27 jmmv Exp $
 
 DISTNAME=	libsigc++-1.2.5
 CATEGORIES=	devel
@@ -14,7 +14,7 @@ USE_LIBTOOL=		YES
 USE_GNU_TOOLS+=		m4 make
 USE_LANGUAGES=		c c++
 
-PKGCONFIG_OVERRIDE=	${WRKSRC}/sigc++-1.2.pc.in
+PKGCONFIG_OVERRIDE=	sigc++-1.2.pc.in
 
 CONFIGURE_ENV+=		ac_cv_prog_M4=${M4}
 
