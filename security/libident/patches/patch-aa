@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 1999/03/12 16:32:08 tron Exp $
+$NetBSD: patch-aa,v 1.6 2003/01/19 09:04:04 salo Exp $
 
 --- Makefile.orig	Fri Jan 17 20:10:55 1997
 +++ Makefile	Fri Mar 12 17:20:39 1999
@@ -61,9 +61,9 @@ $NetBSD: patch-aa,v 1.5 1999/03/12 16:32:08 tron Exp $
 -	cp ident.h $(INCDIR)/ident.h
 -	-$(RM) $(MANDIR)/ident.3
 -	cp ident.3 $(MANDIR)/ident.3
-+	${LIBTOOL} --mode=install ${INSTALL_DATA} ${LIBIDENT} ${PREFIX}/lib
-+	${INSTALL_DATA} ident.h ${INCDIR}/ident.h
-+	${INSTALL_DATA} ident.3 ${MANDIR}/ident.3
++	${LIBTOOL} --mode=install ${BSD_INSTALL_DATA} ${LIBIDENT} ${PREFIX}/lib
++	${BSD_INSTALL_DATA} ident.h ${INCDIR}/ident.h
++	${BSD_INSTALL_DATA} ident.3 ${MANDIR}/ident.3
  
  clean:
  	-$(RM) $(LIBIDENT) ident-tester lookup-tester *~ core *.o \#*
