@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3043 2005/02/18 16:11:09 wiz Exp $
+$NetBSD: TODO,v 1.3044 2005/02/18 16:18:12 wiz Exp $
 
 Suggested new packages
 ======================
@@ -408,7 +408,6 @@ Suggested package updates
 	o doclifter-2.1
 	o docsis-0.9.1
 	o dpkg-1.10.25
-	o dsssl-docbook-modular-1.79
 	o dvdrip-0.52.1
 	o dvipng-1.5 [http://sourceforge.net/projects/dvipng/]
 	o dylan-compiler-2.4.0
