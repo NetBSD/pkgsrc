@@ -1,4 +1,4 @@
-# $NetBSD: bsd.wrapper.mk,v 1.2 2004/09/23 03:59:01 jlam Exp $
+# $NetBSD: bsd.wrapper.mk,v 1.3 2004/09/25 20:38:21 jlam Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -133,7 +133,11 @@ WRAPPER_VARS+=		_WRAP_PATH
 #
 _WRAPPEES+=	AS
 _WRAPPEES+=	CC
+# XXX The following is a workaround until I can find time to fix this
+# XXX more completely (jlam).
+.if ${CPP:N-*} != ${CC}
 _WRAPPEES+=	CPP
+.endif
 _WRAPPEES+=	CXX
 _WRAPPEES+=	FC
 .if defined(USE_X11)
