@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/11/09 22:42:20 manu Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/02/20 01:03:30 manu Exp $
 lib/libipsec.la
 include/libipsec/libpfkey.h
 sbin/setkey
@@ -17,10 +17,19 @@ share/examples/ipsec-tools/psk.txt.sample
 share/examples/ipsec-tools/racoon.conf
 share/examples/ipsec-tools/racoon.conf.in
 share/examples/ipsec-tools/racoon.conf.sample
-share/examples/ipsec-tools/racoon.conf.sample-cvpn
 share/examples/ipsec-tools/racoon.conf.sample-gssapi
 share/examples/ipsec-tools/racoon.conf.sample-inherit
 share/examples/ipsec-tools/racoon.conf.sample-natt
 share/examples/ipsec-tools/racoon.conf.sample-plainrsa
+share/examples/ipsec-tools/roadwarrior/README
+share/examples/ipsec-tools/roadwarrior/client/racoon.conf
+share/examples/ipsec-tools/roadwarrior/client/phase1-up.sh
+share/examples/ipsec-tools/roadwarrior/client/phase1-down.sh
+share/examples/ipsec-tools/roadwarrior/server/racoon.conf
+share/examples/ipsec-tools/roadwarrior/server/racoon.conf-radius
+share/examples/ipsec-tools/roadwarrior/server/phase1-down.sh
 @dirrm include/libipsec
+@dirrm share/examples/ipsec-tools/roadwarrior/client
+@dirrm share/examples/ipsec-tools/roadwarrior/server
+@dirrm share/examples/ipsec-tools/roadwarrior
 @dirrm share/examples/ipsec-tools
