@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4484 2004/01/17 12:39:09 bad Exp $
+$NetBSD: CHANGES,v 1.4485 2004/01/17 12:39:37 bad Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -308,4 +308,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added doclifter-1.6 [recht 2004-01-17]
 	Updated gnome2-applets to 2.4.2 [xtraeme 2004-01-17]
 	Added mozilla-gtk2-1.6 [taya 2004-01-17]
-	Updated ap2-perl to 1.99_12 [bad 2004-01-17]
+	Updated ap2-perl to 1.99.12 [bad 2004-01-17]
