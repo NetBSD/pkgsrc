@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.148 2000/04/09 15:22:29 itojun Exp $
+# $NetBSD: Makefile,v 1.149 2000/04/27 06:47:24 kim Exp $
 # FreeBSD Id: Makefile,v 1.156 1997/09/30 07:54:42 asami Exp
 #
 
@@ -106,6 +106,7 @@
     SUBDIR += xautolock
     SUBDIR += xbanner
     SUBDIR += xbeats
+    SUBDIR += xcal
     SUBDIR += xcb
     SUBDIR += xcolors
     SUBDIR += xcolorsel
