@@ -1,4 +1,4 @@
-# $NetBSD: mipspro-ucode-cc-post-logic,v 1.1 2004/02/18 11:18:42 jlam Exp $
+# $NetBSD: mipspro-ucode-cc-post-logic,v 1.2 2004/03/13 03:41:13 uebayasi Exp $
 #
 # Silently accept some GCC compiler arguments by silently converting
 # them to the MIPSpro compiler equivalents.  This makes the MIPSpro
@@ -33,9 +33,9 @@ case $arg in
 	addtoprivatecache=yes
 	;;
 -f[Pp][Ii][Cc])
-        # The MIPSpro compiler uses -KPIC to create position independent code.
-        #
-        arg=-KPIC
-        addtoprivatecache=yes
-        ;;
+	# The MIPSpro compiler uses -KPIC to create position independent code.
+	#
+	arg=-KPIC
+	addtoprivatecache=yes
+	;;
 esac

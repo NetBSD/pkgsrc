@@ -1,6 +1,6 @@
 #!@BUILDLINK_SHELL@
 #
-# $NetBSD: libtool.sh,v 1.15 2004/02/12 20:29:34 jlam Exp $
+# $NetBSD: libtool.sh,v 1.16 2004/03/13 03:41:13 uebayasi Exp $
 
 Xsed='@SED@ -e 1s/^X//'
 sed_quote_subst='s/\([\\`\\"$\\\\]\)/\\\1/g'
@@ -107,10 +107,10 @@ install)
 	# for package creation.
 	#
 	while $test $# -gt 0; do
-        	arg="$1"; shift
-        	. $quotearg
-        	arg="$qarg"
-        	cmd="$cmd $arg"
+		arg="$1"; shift
+		. $quotearg
+		arg="$qarg"
+		cmd="$cmd $arg"
 	done    
 	;;
 *)
