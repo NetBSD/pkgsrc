@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/12/28 02:47:47 reed Exp $
+# $NetBSD: Makefile,v 1.5 2005/03/02 13:35:20 wiz Exp $
 #
 
 DISTNAME=		rinetd
@@ -16,7 +16,7 @@ NO_CONFIGURE=		# defined
 USE_PKGINSTALL=		yes
 BUILD_TARGET=		rinetd
 
-CPPFLAGS+=		-DRINETD_CONF='\"${PKG_SYSCONFDIR}/rinetd.conf\"'
+CPPFLAGS+=		-DRINETD_CONF="\"${PKG_SYSCONFDIR}/rinetd.conf\""
 
 RCD_SCRIPTS=		rinetd
 
