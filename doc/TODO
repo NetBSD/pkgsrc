@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1023 2003/11/13 13:49:01 itojun Exp $
+$NetBSD: TODO,v 1.1024 2003/11/13 20:06:51 grant Exp $
 
 Suggested new packages
 ======================
@@ -77,7 +77,7 @@ Suggested new packages
 	TV viewing manager
 	http://xmltv.sourceforge.net/
 
-	MythTV
+	MythTV [wip/mythtv]
 	Digital video recorder
 	http://www.mythtv.org/
 
@@ -90,7 +90,7 @@ Suggested new packages
 	different backends and provides APIs for many popular languages
 	http://sqlrelay.sourceforge.net/
 
-	Unreal Tournament server [grant]
+	Unreal Tournament server [wip/unrealtournament-server]
 	Server for Unreal Tournament first person shooter
 	http://files.sobservers.com/UnrealTournament/UTServerOnly/
 
