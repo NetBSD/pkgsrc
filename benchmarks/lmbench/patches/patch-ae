@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1 1998/08/30 17:46:26 garbled Exp $
+--- src/lmdd.c.orig	Sat Aug 29 13:06:05 1998
++++ src/lmdd.c	Sat Aug 29 13:17:06 1998
+@@ -797,7 +797,9 @@
+ 				oflags |= (notrunc || append) ? 0 : O_TRUNC;
+ 				oflags |= nocreate ? 0 : O_CREAT;
+ 				oflags |= append ? O_APPEND : 0;
++#if NetBSD > 199712
+ 				oflags |= osync ? O_SYNC : 0;
++#endif
+ 				ret = open(&av[i][len], oflags,0644);
+ #ifdef	O_DIRECT
+ 				if ((getarg("odirect=", ac, av) != -1) ||

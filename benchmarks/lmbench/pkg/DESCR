@@ -1,0 +1,11 @@
+         lmbench is a micro-benchmark suite designed to focus attention
+      on the basic building blocks of many common system  applications,
+      such  as  databases,  simulations, software development, and
+      networking.  In almost all  cases,  the  individual  tests  are
+      the result  of  analysis and isolation of a customer's actual
+      performance problem.  These tools can be, and currently  are,
+      used  to compare  different system implementations from different
+      vendors.  The tools have been and continue to be used by processor
+      designers.  In  several  cases,  the  benchmarks  have  uncovered
+      previously unknown  bugs  and design flaws.  lmbench  includes an
+      extensible database of results from systems current as of late 1995.
