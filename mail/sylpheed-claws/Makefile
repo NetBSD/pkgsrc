@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2003/01/28 22:03:41 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2003/03/22 01:45:15 salo Exp $
+#
 
-DISTNAME=	sylpheed-0.8.8claws
-PKGNAME=	sylpheed-claws-0.8.8
-PKGREVISION=	1
+DISTNAME=	sylpheed-0.8.11claws
+PKGNAME=	sylpheed-claws-0.8.11
 CATEGORIES=	mail news x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sylpheed-claws/}
 EXTRACT_SUFX=	.tar.bz2
@@ -18,7 +18,7 @@ CONFLICTS=	sylpheed-[0-9]*
 USE_BUILDLINK2=		yes
 USE_PKGINSTALL=		yes
 USE_PKGLOCALEDIR=	yes
-USE_X11BASE=		yes
+USE_X11=		yes
 USE_GMAKE=		yes
 
 GNU_CONFIGURE=		yes
@@ -59,6 +59,7 @@ CONF_FILES=	${EGDIR}/mime.types ${PKG_SYSCONFDIR}/mime.types
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA} ${FILESDIR}/mime.types ${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/sylpheed*.png ${PREFIX}/share/sylpheed
 
 .include "../../converters/libiconv/buildlink2.mk"
 .include "../../graphics/gdk-pixbuf/buildlink2.mk"
