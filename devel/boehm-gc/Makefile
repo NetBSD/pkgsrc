@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 1997/10/06 14:32:52 agc Exp $
 # New ports collection makefile for:	boehm-gc
 # Version required:	4.10
 # Date created:		15 November 1996
 # Whom:			Mike McGaughey <mmcg@cs.monash.edu.au>
 #
+# $NetBSD: Makefile,v 1.3 1998/01/24 03:57:53 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.1 1996/11/16 01:51:25 jdp Exp
 #
 
