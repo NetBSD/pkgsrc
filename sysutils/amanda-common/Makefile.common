@@ -1,0 +1,25 @@
+# $NetBSD: Makefile.common,v 1.1 1999/09/06 19:30:20 bad Exp $
+#
+# common make file fragment shared by all amanda-* pkgs.
+#
+
+.if ${OPSYS} == "NetBSD"
+AMANDA_GROUP=		operator
+.elif ${OPSYS} == "SunOS"
+AMANDA_GROUP=		sysadmin
+.endif
+
+AMANDA_USER?=		backup
+AMANDA_VAR?=		/var/amanda
+
+USE_LIBTOOL=		yes
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--with-user=${AMANDA_USER} \
+			--with-group=${AMANDA_GROUP} \
+			--with-owner=root \
+			--with-mmap --with-amandahosts \
+			--with-includes=${PREFIX}/include \
+			--with-libraries=${PREFIX}/lib \
+			--localstatedir=${AMANDA_VAR} \
+			--with-gnutar-listdir=${AMANDA_VAR}/gnutar-lists \
+			--with-dump-honor-nodump
