@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/02/19 00:22:41 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2004/02/19 00:38:12 minskim Exp $
 #
 
 DISTNAME=		fonttools-2.0b1
@@ -13,7 +13,6 @@ COMMENT=		Library for manipulating fonts
 
 WRKSRC=			${WRKDIR}/fonttools
 USE_BUILDLINK3=		yes
-PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes
 
 PLIST_SUBST+=		FONTTOOLSPTH=${FONTTOOLSPTH}
