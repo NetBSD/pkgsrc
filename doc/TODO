@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3281 2005/03/23 21:48:49 wiz Exp $
+$NetBSD: TODO,v 1.3282 2005/03/23 21:53:56 wiz Exp $
 
 Suggested new packages
 ======================
@@ -255,7 +255,6 @@ Suggested package updates
 	o GMT-4.0
 	o GUIlib-1.1.1
 	o GridSim-3.1
-	o GutenMark-20040320
 	o MayaVi-1.4
 	o MyPasswordSafe-20041210
 	o PAM-0.78
