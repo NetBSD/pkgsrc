@@ -1,0 +1,22 @@
+$NetBSD: patch-ab,v 1.7 2005/01/16 22:54:37 kristerw Exp $
+
+--- gst/tta/gstttaparse.c.orig	Sun Jan 16 23:27:29 2005
++++ gst/tta/gstttaparse.c	Sun Jan 16 23:28:36 2005
+@@ -161,12 +161,13 @@
+   switch (GST_EVENT_TYPE (event)) {
+     case GST_EVENT_SEEK:
+     {
++      GstEvent *seek_event;
++      guint64 time, seek_frame, seekpos;
+       if (GST_EVENT_SEEK_FORMAT (event) == GST_FORMAT_TIME) {
+         GST_DEBUG_OBJECT (ttaparse, "got seek event");
+-        GstEvent *seek_event;
+-        guint64 time = GST_EVENT_SEEK_OFFSET (event);
+-        guint64 seek_frame = time / (FRAME_TIME * 1000000000);
+-        guint64 seekpos = ttaparse->index[seek_frame].pos;
++        time = GST_EVENT_SEEK_OFFSET (event);
++        seek_frame = time / (FRAME_TIME * 1000000000);
++        seekpos = ttaparse->index[seek_frame].pos;
+ 
+         GST_DEBUG_OBJECT (ttaparse, "seeking to %u", (guint) seekpos);
+         seek_event =
