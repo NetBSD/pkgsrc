@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2003/01/03 00:38:31 lukem Exp $
+# $NetBSD: Makefile,v 1.32 2003/01/20 18:09:08 jdolecek Exp $
 
 PKGNAME=		${DISTNAME:S/-/-server-/}
 PKGREVISION=		1
@@ -7,20 +7,30 @@ COMMENT=		MySQL, a free SQL database (server)
 
 .include "../mysql-client/Makefile.common"
 
-# hardwire use of included mit-pthreads on NetBSD
-.if (${OPSYS} == "NetBSD")
-CONFIGURE_ARGS+=	--with-mit-threads
-.endif
-
 CONFIGURE_ARGS+=	--with-libwrap
 CONFIGURE_ARGS+=	--without-berkeley-db
 USE_BUILDLINK2=		YES
 USE_GMAKE=		YES
 
+ONLY_FOR_PLATFORM=	SunOS-*-sparc Linux-*-*
+
+# on NetBSD, if native threads are not available, hardwire
+# included mit-pthreads
+.if (${OPSYS} == "NetBSD")
+.if (exists(/usr/include/pthread.h))
+
+# native pthreads
+ONLY_FOR_PLATFORM+=	NetBSD-*-*
+.else
+
+# force included mit-pthreads
+CONFIGURE_ARGS+=	--with-mit-threads
+
 # platforms on which included mit-pthreads is usable
-ONLY_FOR_PLATFORM=	NetBSD-*-alpha NetBSD-*-arm32 NetBSD-*-i386	\
-			NetBSD-*-sparc NetBSD-*-m68k SunOS-*-sparc	\
-			NetBSD-*-powerpc Linux-*-*
+ONLY_FOR_PLATFORM+=	NetBSD-*-alpha NetBSD-*-arm32 NetBSD-*-i386	\
+			NetBSD-*-sparc NetBSD-*-m68k NetBSD-*-powerpc
+.endif
+.endif
 
 DEINSTALL_FILE=		${WRKDIR}/DEINSTALL
 
