@@ -1,0 +1,18 @@
+$NetBSD: patch-ac,v 1.7 2004/04/24 09:29:54 jmmv Exp $
+
+--- src/protocols/novell/nmcontact.c.orig	Sun Apr 18 06:29:20 2004
++++ src/protocols/novell/nmcontact.c	Sat Apr 24 05:03:53 2004
+@@ -701,10 +701,12 @@
+ void
+ nm_folder_remove_contact(NMFolder * folder, NMContact * contact)
+ {
++	GSList *node;
++
+ 	if (folder == NULL || contact == NULL)
+ 		return;
+ 
+-	GSList *node = folder->contacts;
++	node = folder->contacts;
+ 
+ 	while (node) {
+ 		if (contact->id == ((NMContact *) (node->data))->id) {

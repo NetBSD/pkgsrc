@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2004/04/02 16:08:21 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.26 2004/04/24 09:29:53 jmmv Exp $
 bin/gaim
 bin/gaim-remote
 include/gaim-remote/remote-socket.h
@@ -39,12 +39,12 @@ lib/gaim/libmsn.so
 lib/gaim/libnapster.a
 lib/gaim/libnapster.la
 lib/gaim/libnapster.so
+lib/gaim/libnovell.a
+lib/gaim/libnovell.la
+lib/gaim/libnovell.so
 lib/gaim/liboscar.a
 lib/gaim/liboscar.la
 lib/gaim/liboscar.so
-lib/gaim/libtoc.a
-lib/gaim/libtoc.la
-lib/gaim/libtoc.so
 lib/gaim/libyahoo.a
 lib/gaim/libyahoo.la
 lib/gaim/libyahoo.so
@@ -102,6 +102,7 @@ ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/gaim.mo
+${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/no/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/gaim.mo
@@ -333,8 +334,10 @@ share/pixmaps/gaim/status/default/msn.png
 share/pixmaps/gaim/status/default/na.png
 share/pixmaps/gaim/status/default/napster.png
 share/pixmaps/gaim/status/default/notauthorized.png
+share/pixmaps/gaim/status/default/novell.png
 share/pixmaps/gaim/status/default/occupied.png
 share/pixmaps/gaim/status/default/offline.png
+share/pixmaps/gaim/status/default/rendezvous.png
 share/pixmaps/gaim/status/default/secure.png
 share/pixmaps/gaim/status/default/trepia.png
 share/pixmaps/gaim/status/default/wireless.png
