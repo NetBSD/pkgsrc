@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1625 2004/04/16 21:29:16 kristerw Exp $
+$NetBSD: TODO,v 1.1626 2004/04/16 22:16:50 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -301,7 +301,6 @@ Suggested package updates
 	o pygtk-0.6.11
 	o pysol-4.82
 	o rep-gtk-0.17
-	o rhythmbox-0.8.0
 	o rox-1.2.2
 	o rox-session-0.1.20
 	o rrdtool-1.0.45
