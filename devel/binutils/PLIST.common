@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.1 2002/12/25 16:53:51 grant Exp $
+@comment $NetBSD: PLIST.common,v 1.2 2003/06/08 20:17:14 fredb Exp $
 ${MACHINE_GNU_PLATFORM}/bin/ar
 ${MACHINE_GNU_PLATFORM}/bin/as
 ${MACHINE_GNU_PLATFORM}/bin/ld
@@ -9,7 +9,6 @@ bin/addr2line
 bin/ar
 bin/as
 bin/c++filt
-bin/gasp
 bin/gprof
 bin/ld
 bin/nm
@@ -23,15 +22,66 @@ bin/strip
 include/ansidecl.h
 include/bfd.h
 include/bfdlink.h
+include/dis-asm.h
+include/symcat.h
+@unexec ${INSTALL_INFO} --delete %D/info/as.info %D/info/dir
+@unexec ${INSTALL_INFO} --delete %D/info/bfd.info %D/info/dir
+@unexec ${INSTALL_INFO} --delete %D/info/binutils.info %D/info/dir
+@unexec ${INSTALL_INFO} --delete %D/info/gprof.info %D/info/dir
+@unexec ${INSTALL_INFO} --delete %D/info/ld.info %D/info/dir
+info/as.info
+info/as.info-1
+info/as.info-10
+info/as.info-11
+info/as.info-2
+info/as.info-3
+info/as.info-4
+info/as.info-5
+info/as.info-6
+info/as.info-7
+info/as.info-8
+info/as.info-9
+info/bfd.info
+info/bfd.info-1
+info/bfd.info-2
+info/bfd.info-3
+info/bfd.info-4
+info/bfd.info-5
+info/bfd.info-6
+info/bfd.info-7
+info/bfd.info-8
+info/bfd.info-9
+info/binutils.info
+info/binutils.info-1
+info/binutils.info-2
+info/binutils.info-3
+info/gprof.info
+info/gprof.info-1
+info/gprof.info-2
+info/gprof.info-3
+info/ld.info
+info/ld.info-1
+info/ld.info-2
+info/ld.info-3
+info/ld.info-4
+info/ld.info-5
+info/ld.info-6
+@exec ${INSTALL_INFO} %D/info/as.info %D/info/dir
+@exec ${INSTALL_INFO} %D/info/bfd.info %D/info/dir
+@exec ${INSTALL_INFO} %D/info/binutils.info %D/info/dir
+@exec ${INSTALL_INFO} %D/info/configure.info %D/info/dir
+@exec ${INSTALL_INFO} %D/info/gprof.info %D/info/dir
+@exec ${INSTALL_INFO} %D/info/ld.info %D/info/dir
+@exec ${INSTALL_INFO} %D/info/standards.info %D/info/dir
 lib/libbfd.a
 lib/libbfd.la
-lib/libiberty.a
 lib/libopcodes.a
 lib/libopcodes.la
 man/man1/addr2line.1
 man/man1/ar.1
 man/man1/as.1
 man/man1/c++filt.1
+man/man1/dlltool.1
 man/man1/gprof.1
 man/man1/ld.1
 man/man1/nlmconv.1
@@ -39,6 +89,42 @@ man/man1/nm.1
 man/man1/objcopy.1
 man/man1/objdump.1
 man/man1/ranlib.1
+man/man1/readelf.1
 man/man1/size.1
 man/man1/strings.1
 man/man1/strip.1
+man/man1/windres.1
+share/locale/da/LC_MESSAGES/bfd.mo
+share/locale/da/LC_MESSAGES/binutils.mo
+share/locale/da/LC_MESSAGES/gprof.mo
+share/locale/da/LC_MESSAGES/opcodes.mo
+share/locale/de/LC_MESSAGES/opcodes.mo
+share/locale/es/LC_MESSAGES/bfd.mo
+share/locale/es/LC_MESSAGES/binutils.mo
+share/locale/es/LC_MESSAGES/gas.mo
+share/locale/es/LC_MESSAGES/gprof.mo
+share/locale/es/LC_MESSAGES/ld.mo
+share/locale/es/LC_MESSAGES/opcodes.mo
+share/locale/fr/LC_MESSAGES/bfd.mo
+share/locale/fr/LC_MESSAGES/binutils.mo
+share/locale/fr/LC_MESSAGES/gas.mo
+share/locale/fr/LC_MESSAGES/gprof.mo
+share/locale/fr/LC_MESSAGES/ld.mo
+share/locale/fr/LC_MESSAGES/opcodes.mo
+share/locale/id/LC_MESSAGES/gprof.mo
+share/locale/id/LC_MESSAGES/opcodes.mo
+share/locale/ja/LC_MESSAGES/bfd.mo
+share/locale/ja/LC_MESSAGES/binutils.mo
+share/locale/pt_BR/LC_MESSAGES/gprof.mo
+share/locale/pt_BR/LC_MESSAGES/opcodes.mo
+share/locale/sv/LC_MESSAGES/bfd.mo
+share/locale/sv/LC_MESSAGES/binutils.mo
+share/locale/sv/LC_MESSAGES/gprof.mo
+share/locale/sv/LC_MESSAGES/ld.mo
+share/locale/sv/LC_MESSAGES/opcodes.mo
+share/locale/tr/LC_MESSAGES/bfd.mo
+share/locale/tr/LC_MESSAGES/binutils.mo
+share/locale/tr/LC_MESSAGES/gas.mo
+share/locale/tr/LC_MESSAGES/gprof.mo
+share/locale/tr/LC_MESSAGES/ld.mo
+share/locale/tr/LC_MESSAGES/opcodes.mo
