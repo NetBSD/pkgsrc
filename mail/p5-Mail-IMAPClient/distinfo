@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:34:37 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/20 13:10:01 agc Exp $
 
-MD5 (Mail-IMAPClient-1.07.tar.gz) = f42f84359749ddde469daa6ac7cac8c5
+SHA1 (Mail-IMAPClient-1.07.tar.gz) = 3dc558b890e6fa004b6e6ba05c3cee39b14a0075
+Size (Mail-IMAPClient-1.07.tar.gz) = 84061 bytes

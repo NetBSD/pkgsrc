@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:33:34 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/20 13:09:55 agc Exp $
 
-MD5 (bulk_mailer-1.13.tar.gz) = 795a953ae89c01c4b2192bf965377feb
+SHA1 (bulk_mailer-1.13.tar.gz) = 2886641461b6702affc4624456829b5944581a35
+Size (bulk_mailer-1.13.tar.gz) = 34854 bytes

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:34:15 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/20 13:09:59 agc Exp $
 
 SHA1 (majordomo-1.94.5.tgz) = 44b18c7b9133f2cd992f6e718551d613d9d45c00
+Size (majordomo-1.94.5.tgz) = 312244 bytes
 SHA1 (patch-aa) = 7e7c3230c707c48f402e06ec1f021af1c2ba988b
 SHA1 (patch-ab) = 68bdbd77029ebd8f113c492e50e60aa7efb35de9
 SHA1 (patch-ac) = bea997e785b2656b1660a11efce759a56a700ab2

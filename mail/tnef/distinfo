@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:35:22 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/20 13:10:05 agc Exp $
 
-MD5 (tnef-0.16.tar.gz) = 464d836375ceab0f81d1f92405c75606
+SHA1 (tnef-0.16.tar.gz) = c3260bfcb31266772470a89180e0f8608fc40773
+Size (tnef-0.16.tar.gz) = 130721 bytes
