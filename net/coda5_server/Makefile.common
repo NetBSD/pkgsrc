@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2002/06/20 19:28:35 jlam Exp $
+# $NetBSD: Makefile.common,v 1.2 2002/09/10 11:02:17 jlam Exp $
 
 DISTNAME?=		coda-${DIST_VERS}
 DIST_VERS?=		5.3.19
@@ -17,6 +17,7 @@ HOMEPAGE?=		http://www.coda.cs.cmu.edu/
 DISTINFO_FILE?=		${.CURDIR}/../../net/coda5_server/distinfo
 PATCHDIR?=		${.CURDIR}/../../net/coda5_server/patches
 
+USE_BUILDLINK2=		yes
 USE_PERL5=		yes
 USE_GMAKE=		yes
 
@@ -32,7 +33,7 @@ pre-install: install-egdir
 install-egdir:
 	${INSTALL_DATA_DIR} ${EGDIR}
 
-.include "../../devel/lwp/buildlink.mk"
-.include "../../devel/readline/buildlink.mk"
-.include "../../devel/rpc2/buildlink.mk"
-.include "../../devel/rvm/buildlink.mk"
+.include "../../devel/lwp/buildlink2.mk"
+.include "../../devel/readline/buildlink2.mk"
+.include "../../devel/rpc2/buildlink2.mk"
+.include "../../devel/rvm/buildlink2.mk"
