@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/07/29 07:26:03 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2004/07/30 11:24:38 xtraeme Exp $
 #
 
-DISTNAME=	xorg-dirs-1.0
+DISTNAME=	xorg-dirs-1.1
 CATEGORIES=	misc
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -20,6 +20,7 @@ USE_PKGINSTALL=		yes
 WRKSRC=			${WRKDIR}
 
 XORG_ONLY_DIRS=		# defined
+.include "../../meta-pkgs/xorg/Makefile.common"
 .include "../../mk/bsd.prefs.mk"
 .include "dirs.mk"
 
