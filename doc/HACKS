@@ -1,4 +1,4 @@
-# $NetBSD: HACKS,v 1.4 2003/01/25 00:20:59 salo Exp $
+# $NetBSD: HACKS,v 1.5 2003/01/25 02:35:54 hubertf Exp $
 #
 # This file is intended to document workarounds for currently unsolved
 # (mostly) compiler bugs.
@@ -325,4 +325,14 @@ descr
 	The SHA1Transform() function causes the sparc64 compiler to use
 	excessive amounts of memory attempting to optimise this function.
 	Using no optimisation allows the function to build.
+kcah
+
+hack	ImageMagick arm32+mipsel -O2 bug
+mdate	25 Jan 2003
+who	hubertf (the mipsel one, dunno who did the arm32 one)
+port	cobald (probably other mipsel's), arm32
+file	graphics/ImageMagick/Makefile : 1.90
+descr
+	When compiling with -O2, gcc spins at one file. Going back to
+	-O fixes this. (The usual story...)
 kcah
