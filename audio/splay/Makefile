@@ -1,15 +1,22 @@
-# $NetBSD: Makefile,v 1.6 1998/08/23 10:45:43 frueauf Exp $
+# $NetBSD: Makefile,v 1.7 1999/03/28 20:08:08 rh Exp $
 # FreeBSD Id: Makefile,v 1.4 1997/08/09 23:37:33 fenner Exp 
 #
 
-DISTNAME=		splay-0.5
+DISTNAME=		splay-0.8.2
 CATEGORIES=		audio
-MASTER_SITES=		${MASTER_SITE_SUNSITE}
-MASTER_SITE_SUBDIR=	apps/sound/players/
+MASTER_SITES=		http://my.netian.com/~polarb/ \
+			http://synergy.kaist.ac.kr/~jwj95/ \
+			ftp://ftp.univie.ac.at/systems/linux/linuxberg/files/x11/media/ \
+			ftp://ftp.tu-clausthal.de/pub/unix.new/audio/ \
+			ftp://ftp.online.be/raid/linuxberg/files/x11/media/ \
+			ftp://crydee.sai.msu.ru/zeus/unix/sound/players/ \
+			ftp://ftp.cit.nepean.uws.edu.au/unix/misc/audio/
 
 MAINTAINER=		packages@netbsd.org
-HOMEPAGE=		http://adam.kaist.ac.kr/~jwj95/
+HOMEPAGE=		http://synergy.kaist.ac.kr/~jwj/
 
 GNU_CONFIGURE=		yes
+CONFIGURE_ARGS=		--without-xsplay
+CONFIGURE_ENV=		LIBS="${LIBS} -lossaudio"
 
 .include "../../mk/bsd.pkg.mk"
