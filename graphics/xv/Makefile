@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2001/07/08 20:12:45 tron Exp $
+# $NetBSD: Makefile,v 1.38 2001/07/08 21:40:48 tron Exp $
 
 DISTNAME=	xv-3.10a
 PKGNAME=	${DISTNAME}nb1
@@ -34,18 +34,18 @@ post-patch:
 		> ${WRKSRC}/config.h
 
 .if ${OPSYS} == "SunOS"
-pre-build:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} xvinfo.o CC=cc
+post-configure:
+	cd ${WRKSRC} && \
+	${MV} ${MAKEFILE} ${MAKEFILE}.old && \
+	${SED} -e 's# CC = .*# CC = ${CC}#' \
+	  -e 's# CCOPTIONS = .*# CCOPTIONS = ${CFLAGS}'# \
+	  -e 's# CDEBUGFLAGS = .*# CDEBUGFLAGS =#' \
+	  ${MAKEFILE}.old >${MAKEFILE}
 .endif
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/xv
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/xv
 	${INSTALL_DATA} ${WRKSRC}/docs/xvdocs.ps ${PREFIX}/share/doc/xv
-
-.if ${OPSYS} == "SunOS"
-MAKE_ENV+=	CPPFLAGS=
-LDFLAGS+=	-Wl,-R${X11BASE}/lib
-.endif
 
 .include "../../mk/bsd.pkg.mk"
