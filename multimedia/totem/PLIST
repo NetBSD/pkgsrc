@@ -1,0 +1,155 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/03/22 16:37:32 jmmv Exp $
+bin/totem
+bin/totem-video-thumbnailer
+include/totem/1/plparser/totem-disc.h
+include/totem/1/plparser/totem-pl-parser-builtins.h
+include/totem/1/plparser/totem-pl-parser.h
+lib/libtotem-plparser.la
+lib/nautilus/extensions-1.0/libtotem-properties-page.la
+lib/pkgconfig/totem-plparser.pc
+man/man1/totem.1
+share/applications/totem.desktop
+share/gconf/schemas/totem-handlers.schemas
+share/gconf/schemas/totem-video-thumbnail.schemas
+share/gconf/schemas/totem.schemas
+share/gnome/help/totem/C/figures/totem_next_button.png
+share/gnome/help/totem/C/figures/totem_pause_button.png
+share/gnome/help/totem/C/figures/totem_play_button.png
+share/gnome/help/totem/C/figures/totem_previous_button.png
+share/gnome/help/totem/C/figures/totem_show_playlist_button.png
+share/gnome/help/totem/C/figures/totem_start_window.png
+share/gnome/help/totem/C/figures/totem_volume_maximum_button.png
+share/gnome/help/totem/C/figures/totem_volume_mute_button.png
+share/gnome/help/totem/C/legal.xml
+share/gnome/help/totem/C/totem.xml
+share/gnome/help/totem/de/figures/totem_next_button.png
+share/gnome/help/totem/de/figures/totem_pause_button.png
+share/gnome/help/totem/de/figures/totem_play_button.png
+share/gnome/help/totem/de/figures/totem_previous_button.png
+share/gnome/help/totem/de/figures/totem_show_playlist_button.png
+share/gnome/help/totem/de/figures/totem_start_window.png
+share/gnome/help/totem/de/figures/totem_volume_maximum_button.png
+share/gnome/help/totem/de/figures/totem_volume_mute_button.png
+share/gnome/help/totem/de/legal.xml
+share/gnome/help/totem/de/totem.xml
+share/gnome/help/totem/es/figures/totem_next_button.png
+share/gnome/help/totem/es/figures/totem_pause_button.png
+share/gnome/help/totem/es/figures/totem_play_button.png
+share/gnome/help/totem/es/figures/totem_previous_button.png
+share/gnome/help/totem/es/figures/totem_show_playlist_button.png
+share/gnome/help/totem/es/figures/totem_start_window.png
+share/gnome/help/totem/es/figures/totem_volume_maximum_button.png
+share/gnome/help/totem/es/figures/totem_volume_mute_button.png
+share/gnome/help/totem/es/legal.xml
+share/gnome/help/totem/es/totem.xml
+share/gnome/help/totem/ru/figures/totem_screenshot.png
+share/gnome/help/totem/ru/figures/totem_start_window.png
+share/gnome/help/totem/ru/legal.xml
+share/gnome/help/totem/ru/totem.xml
+${PKGLOCALEDIR}/locale/am/LC_MESSAGES/totem.mo
+${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/totem.mo
+${PKGLOCALEDIR}/locale/az/LC_MESSAGES/totem.mo
+${PKGLOCALEDIR}/locale/be/LC_MESSAGES/totem.mo
+${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/totem.mo
+${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/totem.mo
+${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/totem.mo
+${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/totem.mo
+${PKGLOCALEDIR}/locale/cy/LC_MESSAGES/totem.mo
+${PKGLOCALEDIR}/locale/da/LC_MESSAGES/totem.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/totem.mo
+${PKGLOCALEDIR}/locale/el/LC_MESSAGES/totem.mo
+${PKGLOCALEDIR}/locale/en_CA/LC_MESSAGES/totem.mo
+${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/totem.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/totem.mo
+${PKGLOCALEDIR}/locale/et/LC_MESSAGES/totem.mo
+${PKGLOCALEDIR}/locale/eu/LC_MESSAGES/totem.mo
+${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/totem.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/totem.mo
+${PKGLOCALEDIR}/locale/ga/LC_MESSAGES/totem.mo
+${PKGLOCALEDIR}/locale/gu/LC_MESSAGES/totem.mo
+${PKGLOCALEDIR}/locale/he/LC_MESSAGES/totem.mo
+${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/totem.mo
+${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/totem.mo
+${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/totem.mo
+${PKGLOCALEDIR}/locale/id/LC_MESSAGES/totem.mo
+${PKGLOCALEDIR}/locale/is/LC_MESSAGES/totem.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/totem.mo
+${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/totem.mo
+${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/totem.mo
+${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/totem.mo
+${PKGLOCALEDIR}/locale/lv/LC_MESSAGES/totem.mo
+${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/totem.mo
+${PKGLOCALEDIR}/locale/ml/LC_MESSAGES/totem.mo
+${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/totem.mo
+${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/totem.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/totem.mo
+${PKGLOCALEDIR}/locale/no/LC_MESSAGES/totem.mo
+${PKGLOCALEDIR}/locale/pa/LC_MESSAGES/totem.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/totem.mo
+${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/totem.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/totem.mo
+${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/totem.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/totem.mo
+${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/totem.mo
+${PKGLOCALEDIR}/locale/sq/LC_MESSAGES/totem.mo
+${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/totem.mo
+${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/totem.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/totem.mo
+${PKGLOCALEDIR}/locale/th/LC_MESSAGES/totem.mo
+${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/totem.mo
+${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/totem.mo
+${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/totem.mo
+${PKGLOCALEDIR}/locale/wa/LC_MESSAGES/totem.mo
+${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/totem.mo
+${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/totem.mo
+share/omf/totem/totem-C.omf
+share/omf/totem/totem-de.omf
+share/omf/totem/totem-es.omf
+share/omf/totem/totem-ru.omf
+share/pixmaps/media-player-48.png
+share/pixmaps/vanity.png
+share/totem/filmholes-big-left.png
+share/totem/filmholes-big-right.png
+share/totem/filmholes.png
+share/totem/media-player-48.png
+share/totem/mozilla-viewer.glade
+share/totem/playlist-16.png
+share/totem/playlist-24.png
+share/totem/playlist-playing.png
+share/totem/playlist.glade
+share/totem/popup.glade
+share/totem/properties.glade
+share/totem/rhythmbox-volume-max.png
+share/totem/rhythmbox-volume-zero.png
+share/totem/screenshot.glade
+share/totem/skip_to.glade
+share/totem/stock-tool-brightness-contrast-22.png
+share/totem/stock_media_next.png
+share/totem/stock_media_pause.png
+share/totem/stock_media_play.png
+share/totem/stock_media_previous.png
+share/totem/totem.glade
+share/totem/totem_logo.png
+share/totem/uri.glade
+share/totem/vanity.glade
+share/totem/vanity.png
+@dirrm share/totem
+@comment in xdg-dirs: @dirrm share/pixmaps
+@dirrm share/omf/totem
+@comment in scrollkeeper: @dirrm share/omf
+@dirrm share/gnome/help/totem/ru/figures
+@dirrm share/gnome/help/totem/ru
+@dirrm share/gnome/help/totem/es/figures
+@dirrm share/gnome/help/totem/es
+@dirrm share/gnome/help/totem/de/figures
+@dirrm share/gnome/help/totem/de
+@dirrm share/gnome/help/totem/C/figures
+@dirrm share/gnome/help/totem/C
+@dirrm share/gnome/help/totem
+@comment in gnome2-dirs: @dirrm share/gnome/help
+@comment in GConf2: @dirrm share/gconf/schemas
+@comment in xdg-dirs: @dirrm share/applications
+@comment in nautilus: @dirrm lib/nautilus/extensions-1.0
+@dirrm include/totem/1/plparser
+@dirrm include/totem/1
+@dirrm include/totem

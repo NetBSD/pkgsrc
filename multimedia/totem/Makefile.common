@@ -1,0 +1,46 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2005/03/22 16:37:32 jmmv Exp $
+#
+
+DISTNAME=	totem-1.0
+CATEGORIES=	multimedia gnome
+MASTER_SITES=	http://www.hadess.net/files/software/totem/
+
+MAINTAINER=	jmmv@NetBSD.org
+HOMEPAGE=	http://www.hadess.net/totem.php3
+COMMENT=	Movie player for the GNOME Desktop
+
+DISTINFO_FILE=	${.CURDIR}/../../multimedia/totem/distinfo
+PATCHDIR=	${.CURDIR}/../../multimedia/totem/patches
+PLIST_SRC=	${.CURDIR}/../../multimedia/totem/PLIST
+
+GNU_CONFIGURE=		YES
+USE_BUILDLINK3=		YES
+USE_DIRS+=		gnome2-1.5
+USE_GNU_TOOLS+=		make
+USE_LIBTOOL=		YES
+USE_PKGLOCALEDIR=	YES
+USE_X11=		YES
+
+PKGCONFIG_OVERRIDE=	totem-plparser.pc.in
+
+GCONF2_SCHEMAS=		totem.schemas
+GCONF2_SCHEMAS+=	totem-handlers.schemas
+GCONF2_SCHEMAS+=	totem-video-thumbnail.schemas
+
+BUILDLINK_DEPENDS.glib2+=	glib2>=2.6.3
+
+.include "../../devel/GConf2/schemas.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/libgnomeui/buildlink3.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../sysutils/gnome-vfs2/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../sysutils/nautilus/buildlink3.mk"
+.include "../../sysutils/nautilus-cd-burner/buildlink3.mk"
+.include "../../textproc/intltool/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
+.include "../../textproc/scrollkeeper/omf.mk"
+.include "../../x11/gnome-desktop/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
