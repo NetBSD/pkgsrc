@@ -1,0 +1,14 @@
+$NetBSD: patch-ac,v 1.3 2003/12/18 15:07:00 recht Exp $
+
+--- src/fcfreetype.c.orig	2003-12-18 15:55:56.000000000 +0100
++++ src/fcfreetype.c
+@@ -56,8 +56,8 @@
+ #include <freetype/t1tables.h>
+ 
+ #if (FREETYPE_MINOR > 1 || (FREETYPE_MINOR == 1 && FREETYPE_PATCH >= 4))
++#include <ft2build.h>
+ #include <freetype/ftbdf.h>
+-#include <freetype/ftmodule.h>
+ #define USE_FTBDF
+ #define HAS_BDF_PROPERTY(f) ((f) && (f)->driver && \
+ 			     (f)->driver->root.clazz->get_interface)

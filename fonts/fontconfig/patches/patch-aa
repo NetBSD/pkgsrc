@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.2 2003/08/31 19:19:13 wiz Exp $
+$NetBSD: patch-aa,v 1.3 2003/12/18 15:07:00 recht Exp $
 
---- Makefile.in.orig	Sun Aug 31 18:53:15 2003
+--- Makefile.in.orig	2003-06-09 20:40:48.000000000 +0200
 +++ Makefile.in
 @@ -201,14 +201,14 @@ fontconfig-zip: $(top_builddir)/config.s
  
