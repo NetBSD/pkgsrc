@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.275 1999/05/24 23:04:52 tv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.276 1999/05/25 01:08:22 tv Exp $
 #
 # This file is in the public domain.
 #
@@ -1445,7 +1445,7 @@ root-deinstall:
 # re-distributed freely
 mirror-distfiles:
 .if (${MIRROR_DISTFILE} == "yes")
-	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} fetch NO_IGNORE=yes
+	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} fetch NO_IGNORE=yes NO_CHECK_DEPENDS=yes
 .endif
 
 
