@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/04/02 19:16:18 jmc Exp $
+# $NetBSD: Makefile,v 1.5 2003/05/06 21:10:39 grant Exp $
 
 DISTNAME=	net-snmp-5.0.6
 CATEGORIES=	net
@@ -32,11 +32,15 @@ CFLAGS+=		-Dnetbsd1
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-shared
-.if defined(USE_INET6) && (${USE_INET6} == "YES")
+# net-snmp doesn't do IPv6 on Solaris
+.if (defined(USE_INET6) && (${USE_INET6} == "YES")) && ${OPSYS} != "SunOS"
 CONFIGURE_ARGS+=	--enable-ipv6
+IPV6H=			""
 .else
 CONFIGURE_ARGS+=	--disable-ipv6
+IPV6H=			"@comment "
 .endif
+PLIST_SUBST+=   	IPV6H=${IPV6H}
 CONFIGURE_ARGS+=	--with-defaults
 CONFIGURE_ARGS+=	--with-libwrap
 CONFIGURE_ARGS+=	--with-openssl
