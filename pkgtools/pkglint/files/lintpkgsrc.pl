@@ -1,6 +1,6 @@
 #!/usr/bin/env perl
 
-# $NetBSD: lintpkgsrc.pl,v 1.30 2000/09/11 10:39:05 abs Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.31 2000/09/20 06:39:28 abs Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -349,11 +349,21 @@ sub glob2regex
 	elsif ($_ eq '{' )
 	    { $regex .= '('; $in_alt = 1; }
 	elsif ($_ eq '}' )
-	    { $regex .= ')'; $in_alt = 0; }
+	    {
+	    if (!$in_alt)
+		{ print "Warning - mismatched glob '$glob' -> '$regex'\n"; }
+	    else
+		{ $regex .= ')'; $in_alt = 0; }
+	    }
 	elsif ($_ eq ','  && $in_alt)
 	    { $regex .= '|'; }
 	else
 	    { $regex .= $_; }
+	}
+    if ($in_alt)
+	{
+	print "Warning - mismatched glob '$glob' -> '$regex'\n";
+	$regex .= ')';
 	}
     $regex .= '$';
     $regex;
@@ -455,9 +465,7 @@ sub parse_makefile_pkgsrc
 	{
 	if ( $pkgname =~ /\$/ )
 	    { print "\rBogus: $pkgname (from $file)\n"; }
-	elsif ($pkgname !~ /(.*)-(\d.*)/)
-	    { print "Cannot extract $pkgname version ($file)\n"; }
-	else
+	elsif ($pkgname =~ /(.*)-(\d.*)/)
 	    {
 	    if (defined $vars->{'NO_BIN_ON_FTP'} ||
 		defined $vars->{'RESTRICTED'})
@@ -594,7 +602,7 @@ sub parse_makefile_vars
     for ($loop = 1 ; $loop ;)
 	{
 	$loop = 0;
-	foreach $key ( keys %vars )
+	foreach $key (keys %vars)
 	    {
 	    if ( index($vars{$key}, '$') == -1 )
 		{ next; }
@@ -604,23 +612,43 @@ sub parse_makefile_vars
 		$vars{$key} = $_;
 		$loop = 1;
 		}
-	    elsif ($vars{$key} =~ m#\${(\w+):([CS])/([^/]+)/([^/]*)/(g?)}#)
+	    elsif ($vars{$key} =~ m#\${(\w+):([CS]/[^{}/]+/[^{}/]*/g?(|:[^{}]+))}#)
 		{
-		my($var, $how, $from, $to, $global) = ($1, $2, $3, $4, $5);
+		my($left, $subvar, $right) = ($`, $1, $');
+		my(@patterns) = split(':', $2);
+		my($result);
 
-		# If $vars{$var} contains a $ skip it on this pass.
-		# Hopefully it will get subtituted and we can catch it
+		$result = $vars{$subvar};
+		$result ||= '';
+
+		# If $vars{$subvar} contains a $ skip it on this pass.
+		# Hopefully it will get substituted and we can catch it
 		# next time around.
-		if (defined($vars{$var}) && index($vars{$var}, '$') == -1 )
+		if (index($result, '${') != -1)
+		    { next; }
+
+		debug("substitutelist: $key ($result) $subvar (@patterns)\n");
+		foreach (@patterns)
 		    {
+		    if (! m#([CS])/([^/]+)/([^/]*)/(g?)#)
+			{ next; }
+
+		    my($how, $from, $to, $global) = ($1, $2, $3, $4);
+		    debug("substitute: $subvar, $how, $from, $to, $global\n");
+
 		    if ($how eq 'S')
-			{ $from =~ s/\./\\./g; } # Change . etc to \\.
-		    $to =~ s/\\(\d)/\$$1/g; # Change \1 etc to $1
-		    $_ = $vars{$var};
-		    eval "s/$from/$to/$global";
-		    if ($vars{$key} =~ s#\${$var:[CS]/[^/]+/[^/]*/$global}#$_#)
-			{ $loop = 1; }
+			{
+			if (($_ = index($result, $from)) != -1)
+			    { substr($result, $_, length($from), $to); }
+			}
+		    else
+			{
+			$to =~ s/\\(\d)/\$$1/g; # Change \1 etc to $1
+			eval "\$result =~ s/$from/$to/$global";
+			}
 		    }
+		$vars{$key} = $left . $result . $right;
+		$loop = 1;
 		}
 	    }
 	}
