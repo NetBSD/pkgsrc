@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2000/06/26 16:44:20 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.9 2000/07/06 21:09:38 dmcmahill Exp $
 # FreeBSD Id: Makefile,v 1.5 1998/11/29 12:43:12 asami Exp
 #
 
@@ -11,7 +11,7 @@ MASTER_SITES=		http://www.tigr.net/afterstep/as-apps/download/asapm/ \
 MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://www.tigr.net/afterstep/as-apps/download/asapm/
 
-.if !exists(/usr/include/machine/apmvar.h")
+.if !exists(/usr/include/machine/apmvar.h)
 IGNORE+=		"APM is not available for ${MACHINE_PLATFORM}"
 .endif
 
