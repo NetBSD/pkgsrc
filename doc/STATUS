@@ -1,4 +1,4 @@
-# $NetBSD: STATUS,v 1.3 2003/04/15 21:08:07 grant Exp $
+# $NetBSD: STATUS,v 1.4 2003/04/16 11:01:36 grant Exp $
 
 Below is a list of packages known to build on various non-NetBSD
 platforms.
@@ -86,12 +86,14 @@ lang/sun-j*                                         Y
 lang/wonka
 math/gnumeric
 misc/openoffice
-www/mozilla
+www/mozilla                                                            Y
 www/opera
 ---------------------------------------------------------------------------
 notes:
 
 Solaris/mplayer: depends on cdparanoia.
+Solaris/mozilla: depends on net/ORBit (broken buildlink2/libtool libpthread
+handling) and lang/gcc (stdlibc++).
 
 ---------------------------------------------------------------------------
 'yowza'
