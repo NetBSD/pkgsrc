@@ -3,7 +3,7 @@
 # Date created:				Tue Oct 28 00:12:41 CET 1997
 # Whom:					Hubert Feyrer (hubertf@netbsd.org)
 #
-# $NetBSD: Makefile,v 1.10 1998/02/02 08:59:11 hubertf Exp $
+# $NetBSD: Makefile,v 1.11 1998/03/16 08:06:30 hubertf Exp $
 
 DISTNAME=	ncurses-1.9.9g
 CATEGORIES=	devel
@@ -48,12 +48,14 @@ MAN3=		curs_addch.3 curs_addchstr.3 curs_addstr.3 curs_attr.3 \
 MAN5=		terminfo.5 term.5
 MAN7=		term.7
 
-post-extract:
+post-patch:
 	( cd ${WRKSRC}/man ; ${RM} -f tput.1 tset.1 clear.1 )
 	( cd ${WRKSRC}/man ; for i in *.1m ; do \
-	  ${MV} $$i `basename $$i .1m`.1 ; done )
+	  ${SED} -e '/#include/s/curses.h/ncurses.h/' <$$i >`basename $$i .1m`.1 ; \
+	  rm -f $$i ; done )
 	( cd ${WRKSRC}/man ; for i in *.3x ; do \
-	  ${MV} $$i `basename $$i .3x`.3 ; done )
+	  ${SED} -e '/#include/s/curses.h/ncurses.h/' <$$i >`basename $$i .3x`.3 ; \
+	  rm -f $$i ; done )
 
 post-install:
 	${MV} ${PREFIX}/include/curses.h ${PREFIX}/include/ncurses.h
