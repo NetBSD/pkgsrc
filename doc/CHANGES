@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7539 2004/10/23 15:04:55 shannonjr Exp $
+$NetBSD: CHANGES,v 1.7540 2004/10/23 17:06:27 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4835,3 +4835,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added dirmngr-0.5.6 [shannonjr 2004-10-23]
 	Added gnupg-devel-1.9.11 [shannonjr 2004-10-23]
 	Updated gpgme to 1.0.1 [shannonjr 2004-10-23]
+	Added p5-Time-Piece-1.08 [minskim 2004-10-23]
