@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5977 2004/05/17 09:29:43 minskim Exp $
+$NetBSD: CHANGES,v 1.5978 2004/05/17 18:40:51 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2582,3 +2582,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated p5-SOAP-Lite to 0.60a [grant 2004-05-16]
 	Updated kdelibs3 to 3.2.2nb2 [markd 2004-05-17]
 	Added bitchbot-1.0.2 [minskim 2004-05-17]
+	Added eag-2.3 [minskim 2004-05-17]
