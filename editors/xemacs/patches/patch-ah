@@ -1,29 +1,17 @@
-$NetBSD: patch-ah,v 1.6 2001/03/03 19:59:23 tron Exp $
+$NetBSD: patch-ah,v 1.7 2003/02/25 02:14:59 uebayasi Exp $
 
---- src/unexelf.c.orig	Tue Jan  9 04:27:56 2001
-+++ src/unexelf.c	Sat Mar  3 18:31:10 2001
-@@ -481,10 +481,18 @@
- 
- #ifndef ElfW
- # ifdef __STDC__
--#  define ElfW(type)	Elf32_##type
-+#  define ElfBitsW(bits, type) Elf##bits##_##type
- # else
--#  define ElfW(type)	Elf32_/**/type
-+#  define ElfBitsW(bits, type) Elf/**/bits/**/_/**/type
+--- src/unexelf.c.orig	Tue Aug 20 20:38:23 2002
++++ src/unexelf.c
+@@ -486,7 +486,7 @@
+ #  define ElfBitsW(bits, type) Elf/**/bits/**/_/**/type
  # endif
-+# if defined (_LP64) || defined(__alpha__)
-+#  define ELFSIZE 64
-+# else
-+#  define ELFSIZE 32
-+# endif
-+  /* This macro expands `bits' before invoking ElfBitsW.  */
-+# define ElfExpandBitsW(bits, type) ElfBitsW (bits, type)
-+# define ElfW(type) ElfExpandBitsW (ELFSIZE, type)
- #endif
- 
- #ifndef ELF_BSS_SECTION_NAME
-@@ -949,7 +957,7 @@
+ # ifndef ELFSIZE
+-#  ifdef _LP64
++#  if defined(_LP64) || defined(__alpha__)
+ #   define ELFSIZE 64
+ #  else
+ #   define ELFSIZE 32
+@@ -962,7 +962,7 @@
        memcpy (NEW_SECTION_H (nn).sh_offset + new_base, src,
  	      NEW_SECTION_H (nn).sh_size);
  
