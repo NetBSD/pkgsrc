@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2003/03/09 19:04:53 jschauma Exp $
+# $NetBSD: Makefile,v 1.16 2003/03/24 18:03:33 jschauma Exp $
 
 PKGNAME=		MesaLib-${MESA_VERSION}
 WRKSRC=			${WRKDIR}/${DISTNAME:S/Lib//}
@@ -16,7 +16,6 @@ BUILD_DIRS=		${WRKSRC}/src
 
 # XXX should be >= 3.4.2
 .if empty(MESA_REQD:M5.[0-9]*)
-#MESA_VERSION=		3.4.2
 
 # Check if we got Mesa distributed with XFree86 4.x.
 .if exists(${X11BASE}/include/GL/glx.h) && \
@@ -35,8 +34,8 @@ PKG_SKIP_REASON= "${PKGNAME} is part of your X11 distribution"
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/include/GL
 	cd ${WRKSRC}/include/GL; for hdr in				\
-		gl.h gl_mangle.h glext.h glx.h glx_mangle.h osmesa.h	\
-		xmesa.h xmesa_x.h xmesa_xf86.h;				\
+		gl.h gl_mangle.h glext.h glx.h glxext.h glx_mangle.h	\
+		osmesa.h xmesa.h xmesa_x.h xmesa_xf86.h;		\
 	do								\
 		${INSTALL_DATA} $${hdr} ${PREFIX}/include/GL;		\
 	done
