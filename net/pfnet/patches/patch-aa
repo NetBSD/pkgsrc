@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 1998/11/22 22:30:08 tv Exp $
+
+--- CMDLINE.pm.orig	Sun Nov 22 17:14:46 1998
++++ CMDLINE.pm	Sun Nov 22 17:15:10 1998
+@@ -50,7 +50,7 @@
+ 				}
+ 				$line = '';
+ 				$backspace = $linelen;
+-			} elsif ($ordch == 8) {		# Ctrl-h
++			} elsif ($ordch == 8 || $ordch == 127) {		# Ctrl-h
+ 				if ($linelen == 0) {
+ 					goto EXIT;
+ 				}
