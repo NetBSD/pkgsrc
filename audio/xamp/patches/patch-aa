@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/09/17 00:48:27 hubertf Exp $
+$NetBSD: patch-aa,v 1.2 1999/11/15 13:07:12 rh Exp $
 
---- ../audioIO.c.old	Sun Oct 26 10:55:27 1997
-+++ ../audioIO.c	Sun Oct 26 10:56:03 1997
+--- ../audioIO.c.orig	Sat May 31 19:47:58 1997
++++ ../audioIO.c	Mon Nov 15 13:58:45 1999
 @@ -18,7 +18,7 @@
    #include "audioIO_HPUX.c"
  #endif
@@ -11,59 +11,3 @@ $NetBSD: patch-aa,v 1.1.1.1 1999/09/17 00:48:27 hubertf Exp $
    #include "audioIO_SunOS.c"
  #endif
  
---- ../audioIO.h.old	Sun Oct 26 10:57:10 1997
-+++ ../audioIO.h	Fri Oct 31 06:43:07 1997
-@@ -27,3 +27,7 @@
- #ifdef OS_SunOS
-   #define AUSIZ 4096
- #endif
-+
-+#ifdef OS_NetBSD
-+  #define AUSIZ 32768
-+#endif
---- ../audioIO_SunOS.c.old	Sun Oct 26 10:58:36 1997
-+++ ../audioIO_SunOS.c	Sun Oct 26 11:13:51 1997
-@@ -8,7 +8,11 @@
- 
- #include "amp.h"
- #include <sys/types.h>
-+#ifndef OS_NetBSD
- #include <sys/stropts.h>
-+#else
-+#include <sys/ioctl.h>
-+#endif
- #include <fcntl.h>
- #include <unistd.h>
- #include <stdio.h>
-@@ -36,8 +40,7 @@
- 	}
- 	DB(audio, msg("Audio device opened on %d\n",audio_fd) );
- 
--	if (ioctl(audio_fd,AUDIO_GETINFO,&auinfo)<0)
--		die("Unable to get audio info\n");
-+	AUDIO_INITINFO(&auinfo);
- 
- 	auinfo.play.precision=16;
- 	auinfo.play.encoding=AUDIO_ENCODING_LINEAR;
---- configure.in.old	Sun Oct 26 10:53:03 1997
-+++ configure.in	Sun Oct 26 10:54:32 1997
-@@ -58,7 +58,7 @@
-     DEFINES="-DOS_$OS_TYPE -DARCH_$ARCH_TYPE"
-     ;;
- 
--  Linux|FreeBSD)
-+  Linux|FreeBSD|NetBSD)
-     CC="gcc"
-     if test "$ARCH_TYPE" = "i486" ; then
-       CFLAGS_ARCH="-m486"
---- configure.old	Sun Oct 26 11:18:18 1997
-+++ configure	Sun Oct 26 11:18:45 1997
-@@ -1398,7 +1398,7 @@
-     DEFINES="-DOS_$OS_TYPE -DARCH_$ARCH_TYPE"
-     ;;
- 
--  Linux|FreeBSD)
-+  Linux|FreeBSD|NetBSD)
-     CC="gcc"
-     if test "$ARCH_TYPE" = "i486" ; then
-       CFLAGS_ARCH="-m486"
