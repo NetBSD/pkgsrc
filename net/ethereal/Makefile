@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2003/04/16 12:53:46 jmc Exp $
-#
+# $NetBSD: Makefile,v 1.74 2003/04/17 07:17:01 tron Exp $
 
 DISTNAME=		ethereal-0.9.11
 CATEGORIES=		net
@@ -23,6 +22,8 @@ CONFIGURE_ARGS+=	--with-ssl=${SSLBASE}
 CONFIGURE_ARGS+=	--with-net-snmp=${BUILDLINK_PREFIX.net-snmp}
 CONFIGURE_ARGS+=	--with-pcap=${BUILDLINK_PREFIX.libpcap}
 CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib}
+
+.include "../../mk/bsd.prefs.mk"
 
 # It really wants gnu sed or xpg4/bin/sed on solaris.
 .if ${OPSYS} == SunOS
