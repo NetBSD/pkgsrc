@@ -1,0 +1,57 @@
+$NetBSD: patch-af,v 1.1 2000/03/26 14:16:47 itojun Exp $
+--- src/main.c.orig	Fri Sep 11 03:41:53 1998
++++ src/main.c	Fri Sep 24 15:49:42 1999
+@@ -157,6 +157,8 @@
+        --http-passwd=PASS    set http password to PASS.\n\
+   -C,  --cache=on/off        (dis)allow server-cached data (normally allowed).\n\
+        --ignore-length       ignore `Content-Length\' header field.\n\
++       --inet                use IP version 4 socket.\n\
++       --inet6               use IP version 6 socket.\n\
+        --header=STRING       insert STRING among the headers.\n\
+        --proxy-user=USER     set USER as proxy username.\n\
+        --proxy-passwd=PASS   set PASS as proxy password.\n\
+@@ -195,7 +197,7 @@
+ main (int argc, char *const *argv)
+ {
+   char **url, **t;
+-  int i, c, nurl, status, append_to_log;
++  int i, c, nurl, status, append_to_log, af;
+ 
+   static struct option long_options[] =
+   {
+@@ -211,6 +213,8 @@
+     { "force-html", no_argument, NULL, 'F'},
+     { "help", no_argument, NULL, 'h' },
+     { "ignore-length", no_argument, NULL, 10 },
++    { "inet", no_argument, NULL, '4' },
++    { "inet6", no_argument, NULL, '6' },
+     { "mirror", no_argument, NULL, 'm' },
+     { "no-clobber", no_argument, NULL, 13 },
+     { "no-directories", no_argument, NULL, 19 },
+@@ -334,6 +338,12 @@
+ 	case 22:
+ 	  setval ("simplehostcheck", "on");
+ 	  break;
++	case '4':
++	  setval ("inet", "on");
++	  break;
++	case '6':
++	  setval ("inet6", "on");
++	  break;
+ 	case 'b':
+ 	  setval ("background", "on");
+ 	  break;
+@@ -572,6 +582,13 @@
+       print_usage ();
+       exit (1);
+     }
++
++  if (opt.inet && opt.inet6) {
++     printf (_("Can't inet and inet6 be specified at the same time.\n"));
++      print_usage ();
++      exit (1);
++  }
++ 
+   if (opt.timestamping && opt.noclobber)
+     {
+       printf (_("\
