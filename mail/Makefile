@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.152 2002/12/09 10:38:01 cjep Exp $
+# $NetBSD: Makefile,v 1.153 2002/12/13 09:49:12 salo Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -44,6 +44,8 @@ SUBDIR+=	fromto
 SUBDIR+=	getmail
 SUBDIR+=	grepmail
 SUBDIR+=	hypermail
+SUBDIR+=	ifile
+SUBDIR+=	ifile-procmail
 SUBDIR+=	imap-uw
 SUBDIR+=	imap-uw-utils
 SUBDIR+=	imapfilter
