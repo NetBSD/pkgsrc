@@ -16,7 +16,7 @@ DDEESSCCRRIIPPTTIIOONN
 
      ppkkggddeeppggrraapphh will also read any files passed to it as arguments (or stdin
      if it is not connected to a tty), in search of output that resembles that
-     of either lintpkgsrc(1) --ii, audit-packages(1), or the output from a pre-
+     of either lintpkgsrc(1) --ii, audit-packages(8), or the output from a pre-
      vious incantation of this program.
 
      In the latter case, ppkkggddeeppggrraapphh will recolor the graph passed as input
@@ -94,7 +94,7 @@ DDEESSCCRRIIPPTTIIOONN
      --dd _p_k_g___d_b_d_i_r
               The location of the package database files.  This defaults to
               the value of the _P_K_G___D_B_D_I_R environment variable, if it is set,
-              or to _/_v_a_r_/_d_b_/_p_k_g.
+              or to _@_P_K_G___D_B_D_I_R_@.
 
      --ee       Adds an ``existence check'' to each of the lines of sh(1) style
               output so that commands can be skipped if the package is already
@@ -167,7 +167,7 @@ DDEESSCCRRIIPPTTIIOONN
      --PP _p_k_g_s_r_c_d_i_r
               The root of the pkgsrc source tree.  This defaults to the value
               of the _P_K_G_S_R_C_D_I_R environment variable, if it is set, or to
-              _/_u_s_r_/_p_k_g_s_r_c.
+              _@_P_K_G_S_R_C_D_I_R_@.
 
      --RR       Instead of the standard graph output, emits a series of sh(1)
               commands that will rebuild all the out of date packages by
@@ -194,7 +194,7 @@ DDEESSCCRRIIPPTTIIOONN
               update procedure, the lists may be incomplete and can cause
               problems.
 
-     --ss       Print a simple list of packages instead of sh commands.  The
+     --ss       Print a simple list of packages instead of sh(1) commands.  The
               default output set for this command is out of date packages from
               the entire package set.  Use combinations of --aa, --LL, --OO _p_a_c_k_a_g_e,
               and --SS _p_a_c_k_a_g_e to select more or other package lists.
@@ -222,10 +222,10 @@ EENNVVIIRROONNMMEENNTT
      erated by the --FF and --RR output modes.
 
    PPKKGG__DDBBDDIIRR
-     Where to find registered packages instead of _/_v_a_r_/_d_b_/_p_k_g.
+     Where to find registered packages instead of _@_P_K_G___D_B_D_I_R_@.
 
    PPKKGGSSRRCCDDIIRR
-     Where the pkgsrc tree is located instead of _/_u_s_r_/_p_k_g_s_r_c.
+     Where the pkgsrc tree is located instead of _@_P_K_G_S_R_C_D_I_R_@.
 
    PPKKGG__PPAATTHH
    PPAACCKKAAGGEESS
@@ -340,4 +340,4 @@ BBUUGGSS
      ages that have moved within the pkgsrc tree.  It is necessary that you
      edit the rebuild script by hand to work around this.
 
-NetBSD 2.0                       June 5, 2004                       NetBSD 2.0
+NetBSD 2.0_BETA                  June 5, 2004                  NetBSD 2.0_BETA
