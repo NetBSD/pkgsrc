@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1998/04/15 10:38:59 agc Exp $
+# $NetBSD: Makefile,v 1.5 1998/05/27 14:48:18 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.7 1996/11/18 09:56:45 asami Exp 
 #
 
@@ -12,9 +12,6 @@ MAINTAINER=	is@netbsd.org
 
 USE_IMAKE=	yes
 
-pre-install:
-	@mkdir -p ${PREFIX}/bin
-	@mkdir -p ${PREFIX}/man/man6
-	@(cd ${WRKSRC}; ${MAKE} ${MAKE_FLAGS} ${MAKEFILE} install.man)
+CAT6=		xsnow.0
 
 .include "../../mk/bsd.pkg.mk"
