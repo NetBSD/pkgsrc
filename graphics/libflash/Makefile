@@ -1,7 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/08/28 17:33:50 rh Exp $
+# $NetBSD: Makefile,v 1.2 2001/02/16 15:22:25 wiz Exp $
 #
 
 PKGNAME=	lib${DISTNAME}
+
+COMMENT=	open source flash(tm) library
 
 DEPENDS+=	jpeg-6b:../../graphics/jpeg
 

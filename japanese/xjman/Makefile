@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2000/05/16 11:20:02 sakamoto Exp $
+# $NetBSD: Makefile,v 1.7 2001/02/16 15:25:33 wiz Exp $
 # FreeBSD Id: ports/japanese/xjman/Makefile,v 1.10 1999/10/30 15:34:24 sada Exp
 
 DISTNAME=	xjman-0.5
@@ -8,6 +8,7 @@ EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	sakamoto@netbsd.org
 HOMEPAGE=	http://xjman.dsl.gr.jp/
+COMMENT=	Japanized X manual from "The X Japanese Documentation Project"
 
 DEPENDS+=	ja-man-*:../../japanese/man
 

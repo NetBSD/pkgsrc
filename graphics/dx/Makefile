@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2000/10/15 12:06:36 rh Exp $
+# $NetBSD: Makefile,v 1.7 2001/02/16 15:22:17 wiz Exp $
 
 DISTNAME=	dx-4.1.0
 CATEGORIES=	graphics
@@ -6,6 +6,7 @@ MASTER_SITES=	http://www.research.ibm.com/dx/srcDownload/srcArchive/
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.research.ibm.com/dx/
+COMMENT=	Open Visualization Data Explorer
 
 DEPENDS+=	jpeg-6b:../../graphics/jpeg
 

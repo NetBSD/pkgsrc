@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/02/09 23:41:34 jtb Exp $
+# $NetBSD: Makefile,v 1.2 2001/02/16 15:22:27 wiz Exp $
 
 DISTNAME=		ncview-1.92b
 CATEGORIES=		graphics
@@ -6,6 +6,7 @@ MASTER_SITES=		ftp://cirrus.ucsd.edu/pub/ncview/
 
 MAINTAINER=		jtb@netbsd.org
 HOMEPAGE=		http://meteora.ucsd.edu/~pierce/ncview_home_page.html
+COMMENT=		Visual browser for netCDF format files
 
 DEPENDS+=		netcdf>=3.4:../../devel/netcdf
 DEPENDS+=		udunits>=1.11.7:../../math/udunits

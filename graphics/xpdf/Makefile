@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2000/12/17 20:59:37 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2001/02/16 15:22:36 wiz Exp $
 # FreeBSD Id: Makefile,v 1.12 1998/03/11 03:08:12 vanilla Exp
 # 
 
@@ -10,6 +10,7 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.foolabs.com/xpdf/
+COMMENT=	Display tool for PDF files
 
 DEPENDS+=	freetype-lib-1.3.1:../../graphics/freetype
 DEPENDS+=	ghostscript-fonts-*:../../print/ghostscript-fonts

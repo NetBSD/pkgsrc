@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/01/10 14:52:53 taca Exp $
+# $NetBSD: Makefile,v 1.5 2001/02/16 15:25:14 wiz Exp $
 #
 
 DISTNAME=		chasen-2.2.1
@@ -8,6 +8,7 @@ DISTFILES=		# empty
 
 MAINTAINER=		tech-pkg-ja@jp.netbsd.org
 HOMEPAGE=		http://chasen.aist-nara.ac.jp/
+COMMENT=		ChaSen, Japanese Morphological Analysis System
 
 DEPENDS+=		chasen-base>=2.2.1:../../japanese/chasen-base
 DEPENDS+=		ipadic>=2.4.1:../../japanese/ipadic

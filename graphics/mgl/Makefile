@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2000/12/15 04:12:20 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2001/02/16 15:22:27 wiz Exp $
 
 DISTNAME=       mgl2-alpha-019
 PKGNAME=        mgl-0.1.9a
@@ -11,6 +11,7 @@ PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=     fk200329@fsinet.or.jp
 HOMEPAGE=	http://www.netbsd.org/Ports/hpcmips/mgl2.html
+COMMENT=	Graphics library for NEC Mobilegear/PocketBSD,NetBSD/hpcmips
 
 DEPENDS= 	jpeg-6b:../../graphics/jpeg \
 		png>=1.0.3:../../graphics/png \

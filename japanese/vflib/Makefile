@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2000/05/01 22:01:24 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2001/02/16 15:25:31 wiz Exp $
 
 DISTNAME=		ja-vflib-${VFLIB_VERSION}
 VFLIB_VERSION=		2.24.2
@@ -8,6 +8,7 @@ DISTFILES=		# empty
 
 MAINTAINER=		tech-pkg-ja@jp.netbsd.org
 HOMEPAGE=		http://TypeHack.aial.hiroshima-u.ac.jp/VFlib/
+COMMENT=		Japanese Vector font libraries and utilities
 
 DEPENDS+=		ja-vflib-lib-${VFLIB_VERSION}:../../japanese/vflib-lib
 DEPENDS+=		ja-vflib-utils-${VFLIB_VERSION}:../../japanese/vflib-utils

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.2 2000/08/03 19:20:43 rh Exp $
+# $NetBSD: Makefile,v 1.2 2001/02/16 15:22:17 wiz Exp $
 # FreeBSD Id: ports/graphics/fbm/Makefile,v 1.5 2000/04/29 23:54:02 steve Exp
 
 DISTNAME=	fbm-1.2
@@ -7,6 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SUNSITE:=apps/graphics/convert/}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	packages@netbsd.org
+COMMENT=	Fuzzy Pixmap Manipulation utilities
 
 NO_WRKSUBDIR=	yes
 

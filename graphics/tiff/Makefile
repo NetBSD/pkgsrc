@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2001/01/21 20:27:26 tron Exp $
+# $NetBSD: Makefile,v 1.29 2001/02/16 15:22:34 wiz Exp $
 
 DISTNAME=	tiff-v3.5.5
 PKGNAME=	tiff-3.5.5
@@ -11,6 +11,7 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.libtiff.org/
+COMMENT=	library and tools for reading and writing TIFF data files
 
 DEPENDS+=	jpeg-6b:../../graphics/jpeg
 

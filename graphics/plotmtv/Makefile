@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/12/14 02:18:50 jtb Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/16 15:22:30 wiz Exp $
 
 DISTNAME=	Plotmtv1.4.1
 PKGNAME=	plotmtv-1.4.1
@@ -7,6 +7,7 @@ MASTER_SITES=	${MASTER_SITE_XCONTRIB:=applications/}
 EXTRACT_SUFX=	.tar.Z
 
 MAINTAINER=	jtb@netbsd.org
+COMMENT=	Multipurpose X11 plotting program
 
 WRKSRC=		${WRKDIR}/Plotmtv1.4.1
 

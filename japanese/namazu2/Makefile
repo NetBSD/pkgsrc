@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/01/27 02:29:24 taca Exp $
+# $NetBSD: Makefile,v 1.2 2001/02/16 15:25:24 wiz Exp $
 # FreeBSD Id: ports/japanese/namazu2/Makefile,v 1.16 2000/10/26 20:56:25 knu Exp
 
 DISTNAME=	namazu-2.0.5
@@ -7,6 +7,7 @@ MASTER_SITES=	http://www.namazu.org/stable/
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.namazu.org/index.html.en
+COMMENT=	Full-text search system intended for easy use
 
 DEPENDS+=	p5-File-MMagic>=1.09:../../misc/p5-File-MMagic \
 		p5-Text-Kakasi>=1.04:../../japanese/p5-Text-Kakasi \

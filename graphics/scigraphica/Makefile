@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/01/15 12:37:57 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2001/02/16 15:22:33 wiz Exp $
 #
 
 DISTNAME=	sg-0.6.1
@@ -8,6 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=scigraphica/}
 
 MAINTAINER=	drochner@netbsd.org
 HOMEPAGE=	http://scigraphica.sourceforge.net/
+COMMENT=	data analysis and technical graphics
 
 DEPENDS+=	gtk+-*:../../x11/gtk
 DEPENDS+=	gtk+extra>=0.99.12:../../x11/gtk+extra

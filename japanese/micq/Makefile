@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/01/31 19:16:36 tron Exp $
+# $NetBSD: Makefile,v 1.6 2001/02/16 15:25:23 wiz Exp $
 
 DISTNAME=	micq-0.4.3
 PKGNAME=	ja-${DISTNAME}
@@ -14,6 +14,7 @@ PATCH_DIST_STRIP= -p1
 
 MAINTAINER=	eric@fox.phoenix.az.us
 HOMEPAGE=	http://micq.maesoft.net/
+COMMENT=	Text-based ICQ implementation
 
 BROKEN=		${PKGNAME} requires fixes for remote buffer overflow\
 		vulnerability.

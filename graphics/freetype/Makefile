@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2000/07/22 08:12:39 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2001/02/16 15:22:19 wiz Exp $
 
 DISTNAME=		freetype-${FT_VERS}
 FT_VERS=		1.3.1
@@ -8,6 +8,7 @@ DISTFILES=		#
 
 MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://www.freetype.org/
+COMMENT=		FreeType libraries and utilities
 
 DEPENDS+=		freetype-lib-${FT_VERS}:../../graphics/freetype-lib
 DEPENDS+=		freetype-utils-${FT_VERS}:../../graphics/freetype-utils

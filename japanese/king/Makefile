@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2000/09/28 15:51:19 sakamoto Exp $
+# $NetBSD: Makefile,v 1.12 2001/02/16 15:25:20 wiz Exp $
 #
 
 DISTNAME=	king-1.00-tb40-1
@@ -9,6 +9,7 @@ ONLY_FOR_PLATFORM=	NetBSD-*-i386
 
 MAINTAINER=	sakamoto@netbsd.org
 HOMEPAGE=	http://www.ibm.co.jp/software/internet/king/
+COMMENT=	The king of translator POWER+ (Linux version)
 
 IS_INTERACTIVE=	yes
 RESTRICTED=	"A commercial licence needs to be purchased from IBM Corp"

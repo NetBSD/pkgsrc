@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2000/12/28 15:08:46 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2001/02/16 15:22:32 wiz Exp $
 
 DISTNAME=	Imaging-1.0b1
 PKGNAME=	py-imaging-1.0b1
@@ -7,6 +7,7 @@ MASTER_SITES=	http://www.pythonware.com/downloads/
 
 MAINTAINER=	tsarna@netbsd.org
 HOMEPAGE=	http://www.pythonware.com/products/pil/
+COMMENT=	PIL, the Python Imaging Library
 
 DEPENDS+=	python>=2.0:../../lang/python
 DEPENDS+=	jpeg-6b:../../graphics/jpeg

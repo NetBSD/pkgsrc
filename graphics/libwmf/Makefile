@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2000/11/16 18:25:23 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2001/02/16 15:22:26 wiz Exp $
 #
 
 DISTNAME=		libwmf-0.1.20
@@ -7,6 +7,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=wvware/}
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.wvware.com/libwmf.html
+COMMENT=		library for reading and converting WMF (Windows Meta Files)
 
 DEPENDS+=		freetype-lib>=1.3.1:../../graphics/freetype-lib
 DEPENDS+=		png>=1.0.6:../../graphics/png

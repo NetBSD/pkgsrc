@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2000/12/12 19:16:56 drochner Exp $
+# $NetBSD: Makefile,v 1.5 2001/02/16 15:22:15 wiz Exp $
 #
 
 DISTNAME=		MesaLib-3.4
@@ -10,6 +10,7 @@ EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		rh@netbsd.org
 HOMEPAGE=		http://www.mesa3d.org/
+COMMENT=		Graphics library similar to SGI's OpenGL
 
 CHECK_MESA=		yes
 USE_X11BASE=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/08/24 00:04:25 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.6 2001/02/16 15:22:32 wiz Exp $
 
 DISTNAME=	pstoedit_3_20
 PKGNAME=	pstoedit-3.20
@@ -8,6 +8,7 @@ EXTRACT_SUFX=	.zip
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.geocities.com/SiliconValley/Network/1958/pstoedit/
+COMMENT=	Convert PostScript / PDF into various vector graphic formats
 
 # Requires C++ support of plotutils.
 DEPENDS+=	plotutils-2.4.1:../../graphics/plotutils

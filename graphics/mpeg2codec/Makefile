@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1999/10/07 17:41:54 tron Exp $
+# $NetBSD: Makefile,v 1.4 2001/02/16 15:22:27 wiz Exp $
 
 DISTNAME=	mpeg2vidcodec_v12
 PKGNAME=	mpeg2codec-1.2
@@ -7,6 +7,7 @@ MASTER_SITES=	ftp://ftp.mpeg.org/pub/mpeg/mssg/
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.mpeg.org/MSSG/
+COMMENT=	MPEG Software Simulation Group's MPEG-2 Encoder and Decoder
 
 USE_X11BASE=	yes
 NO_CONFIGURE=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/10/15 12:06:42 rh Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/16 15:22:33 wiz Exp $
 #
 
 DISTNAME=	rbogl
@@ -9,6 +9,7 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	sakamoto@netbsd.org
 HOMEPAGE=	http://www2.giganet.net/~yoshi/
+COMMENT=	Ruby interface to OpenGL
 
 DEPENDS+=	ruby-1.4.*:../../lang/ruby
 

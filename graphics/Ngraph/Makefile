@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/11/25 08:17:15 sakamoto Exp $
+# $NetBSD: Makefile,v 1.2 2001/02/16 15:22:15 wiz Exp $
 #
 
 DISTNAME=	Ngraph-6.3.06-src
@@ -11,6 +11,7 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX} Ngraph-6.3-doc.tar.gz \
 
 MAINTAINER=	oishi@ims.ac.jp
 HOMEPAGE=	http://www2e.biglobe.ne.jp/~isizaka/
+COMMENT=	the 2D graph and data analysis program
 
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 

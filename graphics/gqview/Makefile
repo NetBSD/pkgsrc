@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/02/16 13:19:21 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2001/02/16 15:22:23 wiz Exp $
 # FreeBSD Id: Makefile,v 1.7 1998/12/09 06:59:39 vanilla Exp
 #
 
@@ -8,6 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gqview/}
 
 MAINTAINER=	wiz@netbsd.org
 HOMEPAGE=	http://gqview.sourceforge.net/index.html
+COMMENT=	another gtk-based graphic file viewer
 
 DEPENDS+=	gdk-pixbuf>=0.9.0:../../graphics/gdk-pixbuf
 DEPENDS+=	gtk+-1.2.*:../../x11/gtk

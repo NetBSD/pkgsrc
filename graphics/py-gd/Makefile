@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/12/28 15:04:47 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2001/02/16 15:22:32 wiz Exp $
 
 DISTNAME=	gdmodule.c
 PKGNAME=	py-gd-1.3
@@ -8,6 +8,7 @@ DISTFILES=	gdmodule.c
 
 MAINTAINER=	tsarna@netbsd.org
 HOMEPAGE=	http://starship.python.net/~richard/gdmodule/
+COMMENT=	Python interface to gd graphics library
 
 DEPENDS+=	python>=2.0:../../lang/python
 DEPENDS+=	gd>=1.8.3:../../graphics/gd

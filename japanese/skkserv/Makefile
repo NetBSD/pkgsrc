@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/01/29 11:34:29 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2001/02/16 15:25:31 wiz Exp $
 
 DISTNAME=	skk9.6
 PKGNAME=	skkserv-3.9.4nb1
@@ -12,6 +12,7 @@ PATCH_DIST_ARGS= -d ${WRKSRC}/jisyo --forward --quiet
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://skk.kuis.kyoto-u.ac.jp/
+COMMENT=	Dictionary server for Simple Kana-Kanji conversion programs
 
 BUILD_DEFS+=	USE_INET6
 

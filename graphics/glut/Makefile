@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/12/12 17:22:40 drochner Exp $
+# $NetBSD: Makefile,v 1.4 2001/02/16 15:22:22 wiz Exp $
 #
 
 DISTNAME=		Mesa-3.4
@@ -12,6 +12,7 @@ DISTFILES+=		${DISTNAME:S/Mesa/MesaDemos/}${EXTRACT_SUFX}
 
 MAINTAINER=		rh@netbsd.org
 HOMEPAGE=		http://www.ssec.wisc.edu/~brianp/Mesa.html
+COMMENT=		GLUT Graphics library similar to SGI's OpenGL
 
 CONFLICTS+=		Mesa-glx-*
 CONFLICTS+=		Mesa<3.2.1

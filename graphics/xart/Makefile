@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2000/08/23 23:14:27 tron Exp $
+# $NetBSD: Makefile,v 1.16 2001/02/16 15:22:35 wiz Exp $
 #
 
 DISTNAME=       xart19980415
@@ -9,6 +9,7 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.cqi.com/~humbubba/linux.html
+COMMENT=	Paint program (enhanced xpaint)
 
 DEPENDS+=	jpeg-6b:../../graphics/jpeg
 DEPENDS+=	tiff-*:../../graphics/tiff
