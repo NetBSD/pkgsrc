@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: INSTALL,v 1.1.1.1 2000/08/25 12:35:40 veego Exp $
+# $NetBSD: INSTALL,v 1.2 2000/08/25 13:33:11 veego Exp $
 
 PKGNAME=$1
 STAGE=$2
@@ -35,7 +35,7 @@ PRE-INSTALL)
 		echo "User '${CYUSER}' already exists...proceeding."
 	else
 		echo "Creating '${CYUSER}' user..."
-		${ADDUSER} -c "Amanda User" -g ${CYGROUP} -s /bin/sh ${CYUSER}
+		${ADDUSER} -c "Cyrus User" -g ${CYGROUP} -s /bin/sh ${CYUSER}
 		echo "Done."
 	fi
 	;;
