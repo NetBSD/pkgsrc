@@ -1,0 +1,22 @@
+$NetBSD: patch-ab,v 1.1 2003/11/18 21:09:18 markd Exp $
+
+--- configure.orig	2003-10-23 07:16:29.000000000 +1300
++++ configure
+@@ -1643,7 +1643,7 @@ if eval "test \"`echo '$''{'ac_cv_lib_$a
+   echo $ac_n "(cached) $ac_c" 1>&6
+ else
+   ac_save_LIBS="$LIBS"
+-LIBS="-lstdc++  $LIBS"
++LIBS="-lstdc++ -lm  $LIBS"
+ cat > conftest.$ac_ext <<EOF
+ #line 1649 "configure"
+ #include "confdefs.h"
+@@ -1684,7 +1684,7 @@ if eval "test \"`echo '$''{'ac_cv_lib_$a
+   echo $ac_n "(cached) $ac_c" 1>&6
+ else
+   ac_save_LIBS="$LIBS"
+-LIBS="-lstdc++  $LIBS"
++LIBS="-lstdc++ -lm  $LIBS"
+ cat > conftest.$ac_ext <<EOF
+ #line 1690 "configure"
+ #include "confdefs.h"
