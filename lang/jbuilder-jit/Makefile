@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2001/09/27 23:18:17 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2001/10/31 14:32:58 tv Exp $
 #
 
 DISTNAME=	unix_jb35foundation
 PKGNAME=	jbuilder-jit-1.2.15
 CATEGORIES=     lang
-MASTER_SITES=	ftp://ftpc.inprise.com/pub/jbuilder/jb35foundation/unix/
+MASTER_SITES=	http://www.vit.edu.tw/borland/JBuilder35Foundation/
 
 MAINTAINER=	tv@netbsd.org
 HOMEPAGE=	http://www.inprise.com/jbuilder/foundation/linux.html
@@ -12,8 +12,6 @@ COMMENT=	Just-In-Time compiler for Linux Java Virtual Machine
 
 # works with both 1.2.2 and 1.3 JVMs
 DEPENDS=	sun-jre-[0-9]*:../../lang/sun-jre13
-
-BROKEN=		Old distfile not available anymore; needs to be updated to 4.0.
 
 WRKSRC=		${WRKDIR}/javacomp-1.2.15
 EXTRACT_ELEMENTS= LinuxJIT/javacomp-1.2.15.tar.gz
