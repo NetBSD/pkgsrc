@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1530 2004/03/27 22:07:32 tron Exp $
+$NetBSD: TODO,v 1.1531 2004/03/28 01:14:56 snj Exp $
 
 Suggested new packages
 ======================
@@ -273,7 +273,6 @@ Suggested package updates
 	o multi-gnome-terminal-1.6.2
 	o multitail-3.1.2
 	o nail-10.7 [cjep, when freeze is over]
-	o naim-0.11.6.7 [snj, when freeze is over]
 	o nano-1.2.3
 	o nap-1.5.2
 	o napshare-1.2
