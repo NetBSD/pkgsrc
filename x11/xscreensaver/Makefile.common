@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.37 2002/09/29 09:38:20 jlam Exp $
+# $NetBSD: Makefile.common,v 1.38 2002/10/28 22:37:10 wiz Exp $
 #
 
-DISTNAME=		xscreensaver-4.02
+DISTNAME=		xscreensaver-4.06
 CATEGORIES=		x11
 MASTER_SITES=		${HOMEPAGE} \
 			ftp://ftp.fu-berlin.de/unix/X11/graphics/xscreensaver/
@@ -16,10 +16,7 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-hackdir=${PREFIX}/libexec/xscreensaver
 CONFIGURE_ARGS+=	--with-gl
 CONFIGURE_ARGS+=	--with-gle
-CONFIGURE_ARGS+=	--with-gtk=${BUILDLINK_PREFIX.gtk}
 CONFIGURE_ARGS+=	--with-jpeg=${BUILDLINK_PREFIX.jpeg}
-CONFIGURE_ARGS+=	--with-gdk-pixbuf=${BUILDLINK_PREFIX.gdk-pixbuf}
-CONFIGURE_ARGS+=	--with-xml=${BUILDLINK_PREFIX.libxml}
 CONFIGURE_ARGS+=	--with-zippy=/usr/games/fortune
 
 CONFIGURE_ARGS+=	--without-motif
@@ -54,13 +51,5 @@ CONFIGURE_ARGS+=	--without-kerberos
 .  include "../../lang/gcc/buildlink2.mk"
 .endif
 
-post-patch:
-	cd ${WRKSRC}/driver ; \
-	f=xscreensaver.kss ; \
-	[ -f $$f.BAK ] || ${MV} $$f $$f.BAK ; \
-	${SED} -e 's|@PREFIX@|${PREFIX}|g' < $$f.BAK > $$f
-
-.include "../../graphics/gdk-pixbuf/buildlink2.mk"
 .include "../../graphics/gle/buildlink2.mk"
-.include "../../textproc/libxml/buildlink2.mk"
-.include "../../x11/gtk/buildlink2.mk"
+.include "../../graphics/jpeg/buildlink2.mk"
