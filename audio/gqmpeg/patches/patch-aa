@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.8 2000/07/06 00:46:11 hubertf Exp $
+$NetBSD: patch-aa,v 1.9 2000/08/02 06:06:15 jlam Exp $
 
---- Makefile.in.orig	Thu Jul  6 00:25:15 2000
-+++ Makefile.in	Thu Jul  6 00:25:22 2000
-@@ -96,7 +96,7 @@
- l = @l@
- localedir = @localedir@
- 
--SUBDIRS = src plugin intl po
-+SUBDIRS = src plugin po
- DIST_SUBDIRS = src plugin intl po
- 
- man_MANS = gqmpeg.1
+--- po/Makefile.in.in.orig	Mon Jun  5 20:46:40 2000
++++ po/Makefile.in.in	Wed Aug  2 01:44:50 2000
+@@ -19,7 +19,7 @@
+ prefix = @prefix@
+ exec_prefix = @exec_prefix@
+ datadir = $(prefix)/@DATADIRNAME@
+-localedir = $(datadir)/locale
++localedir = $(prefix)/share/locale
+ gnulocaledir = $(prefix)/share/locale
+ gettextsrcdir = $(prefix)/share/gettext/po
+ subdir = po

@@ -12,3 +12,5 @@ Features:
     - Basic file management (move/copy/rename/delete)
     - Tab completion in most dialogs.
     - Presets for playlists.
+    - Drag and drop support.
+    - Shoutcast (http://server:port) support.
