@@ -1,25 +1,4 @@
-$NetBSD: distinfo,v 1.7 2003/10/01 01:14:58 christos Exp $
+$NetBSD: distinfo,v 1.8 2003/11/10 17:18:28 agc Exp $
 
-SHA1 (xosview-1.7.0.b.tar.gz) = 7f3053e0e8300995eb16421b0840cfbe9c4c7d07
-Size (xosview-1.7.0.b.tar.gz) = 134985 bytes
-SHA1 (patch-aa) = eee6460439413714dc235173c333e68b23a40e22
-SHA1 (patch-ab) = 09ebf4dfcae497b169f9170f53ec853745d8fc0b
-SHA1 (patch-ac) = 80d74f813739693f3c1b40c8cb442eac8574497d
-SHA1 (patch-ad) = 594bea4feb45b082c9e4809044cbeaafba81c53e
-SHA1 (patch-ae) = 22b3cbe6a2ba488c28a12b7185d0dcff2d3fbf05
-SHA1 (patch-af) = a9b1cfa4f00526e884239af1514c1b4eecd98a4e
-SHA1 (patch-ag) = 1b4e4cb5e8ba1a732eb57b44f5e41562b219d9ac
-SHA1 (patch-ah) = a566d00f2035e41db8bfe265f27e3177e9915ee8
-SHA1 (patch-ai) = adf1a5b55f1c69fdeb351329fe61edfc4c307471
-SHA1 (patch-aj) = b3e186c222f183b0a66d904b79a982eb16cf90e1
-SHA1 (patch-ak) = 3f0770a966bbfca0af312613922683cdb439f9b1
-SHA1 (patch-al) = fe2e608f4a989114c6f1110d4095d2e71085de2c
-SHA1 (patch-am) = d5b623d24a19d3abde92225607a946c379fd7c3b
-SHA1 (patch-an) = eee9622975ea617f38fb412f595a83c1b383cda7
-SHA1 (patch-ao) = 507234e1f52933ce86e80a4a5f77f78cca4c6995
-SHA1 (patch-aq) = 3c65d034a2e825842d8225205af0d4047e49ed78
-SHA1 (patch-ar) = 9661856017f24890181d629f0973d74a0a183289
-SHA1 (patch-as) = eb7206136486d0dd11cf44e008623b5b3396ecf9
-SHA1 (patch-at) = 78f1579fd55d1909d9d3294a25d0e384693f9972
-SHA1 (patch-au) = 31a138d0dc45278cdd8b6e702a185fbc5d4e1054
-SHA1 (patch-av) = 29c83dc3a0dda55f285c75883020781dec2cb30a
+SHA1 (xosview-1.8.1alpha.tar.gz) = f655f336a6c6d3e5ed2fd0bd8581de1d17ed0680
+Size (xosview-1.8.1alpha.tar.gz) = 241885 bytes
