@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1868 2004/06/26 19:19:11 adrianp Exp $
+$NetBSD: TODO,v 1.1869 2004/06/26 19:27:23 adrianp Exp $
 
 Suggested new packages
 ======================
@@ -176,6 +176,7 @@ Suggested package updates
 	o avidemux-2.0.20
 	o balsa-1.4.4
 	o bind-9.3
+	o bitchx-1.1
 	o bk_edit-0.6.23
 	o blender-2.33
 	o boehm-gc-6.3alpha6 [recht]
