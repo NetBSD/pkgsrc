@@ -1,4 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/06/05 21:42:36 reed Exp $
+$NetBSD: distinfo,v 1.2 2005/02/07 15:54:04 abs Exp $
 
 SHA1 (pine-pgp-filters-1.1.tar.gz) = e81d5ff8c3632d423728aeaed32236093a62a6db
 Size (pine-pgp-filters-1.1.tar.gz) = 6859 bytes
+SHA1 (patch-aa) = 0059bdd731355b7f94e1333c5c476774cffd3ca2
+SHA1 (patch-ab) = 271a81ba0bcc224040e663bf8961c81d136e6edd
+SHA1 (patch-ac) = 4e7ba38d8b4f1d393264fe207ab4ef8e312fcc40
