@@ -1,0 +1,28 @@
+$NetBSD: patch-af,v 1.1.1.1 2005/03/06 16:36:08 taca Exp $
+
+--- ext/socket/socket.c.orig	2002-11-01 03:40:11.000000000 +0900
++++ ext/socket/socket.c
+@@ -585,6 +585,23 @@ ip_addrsetup(host, port)
+ 	rb_raise(rb_eSocket, "getaddrinfo: %s", gai_strerror(error));
+     }
+ 
++#if defined(__APPLE__) && defined(__MACH__)
++    {
++	struct addrinfo *r;
++	r = res;
++	while (r) {
++	    if (! r->ai_socktype) r->ai_socktype = hints.ai_socktype;
++	    if (! r->ai_protocol) {
++		if (r->ai_socktype == SOCK_DGRAM) {
++		    r->ai_protocol = IPPROTO_UDP;
++		} else if (r->ai_socktype == SOCK_STREAM) {
++		    r->ai_protocol = IPPROTO_TCP;
++		}
++	    }
++	    r = r->ai_next;
++	}
++    }
++#endif
+     return res;
+ }
+ 

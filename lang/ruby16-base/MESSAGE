@@ -1,0 +1,18 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2005/03/06 16:36:08 taca Exp $
+
+Note that a number of packages which are installed as default with
+the Ruby ${RUBY_VERSION} distribution are provided as separate packages:
+
+	databases/ruby-dbm:		DBM module
+	databases/ruby-gdbm:		GDBM module
+	devel/ruby16-curses:		Curses module
+	devel/ruby-readline:		readline module
+	security/ruby-digest:		message digest module
+	x11/ruby16-tcltklib:		Tcl/Tk libraries
+	x11/ruby16-tk:			Tk modules
+
+Note: make sure to set "RUBY_VERSION_DEFAULT=1.6" in /etc/mk.conf
+if you  use Ruby ${RUBY_VER} based packages.
+
+===========================================================================
