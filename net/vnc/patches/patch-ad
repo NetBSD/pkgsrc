@@ -1,0 +1,73 @@
+$NetBSD: patch-ad,v 1.1 1998/10/01 20:19:48 frueauf Exp $
+
+--- Xvnc/programs/Xserver/hw/vnc/rfbserver.c-orig	Mon Jul 13 18:01:52 1998
++++ Xvnc/programs/Xserver/hw/vnc/rfbserver.c	Thu Oct  1 21:58:27 1998
+@@ -816,10 +816,15 @@
+     ublen = sz_rfbFramebufferUpdateMsg;
+ 
+     if (REGION_NOTEMPTY(pScreen,&updateCopyRegion)) {
+-	if (!rfbSendCopyRegion(cl,&updateCopyRegion,dx,dy))
++      if (!rfbSendCopyRegion(cl,&updateCopyRegion,dx,dy)) {
++            REGION_UNINIT(pScreen,&updateRegion);
++            REGION_UNINIT(pScreen,&updateCopyRegion);
+ 	    return FALSE;
++      }
+     }
+ 
++    REGION_UNINIT(pScreen,&updateCopyRegion);
++
+     for (i = 0; i < REGION_NUM_RECTS(&updateRegion); i++) {
+ 	int x = REGION_RECTS(&updateRegion)[i].x1;
+ 	int y = REGION_RECTS(&updateRegion)[i].y1;
+@@ -831,24 +836,34 @@
+ 
+ 	switch (cl->preferredEncoding) {
+ 	case rfbEncodingRaw:
+-	    if (!rfbSendRectEncodingRaw(cl, x, y, w, h))
++	    if (!rfbSendRectEncodingRaw(cl, x, y, w, h)) {
++                REGION_UNINIT(pScreen,&updateRegion);
+ 		return FALSE;
++            }
+ 	    break;
+ 	case rfbEncodingRRE:
+-	    if (!rfbSendRectEncodingRRE(cl, x, y, w, h))
++	    if (!rfbSendRectEncodingRRE(cl, x, y, w, h)) {
++                REGION_UNINIT(pScreen,&updateRegion);
+ 		return FALSE;
++            }
+ 	    break;
+ 	case rfbEncodingCoRRE:
+-	    if (!rfbSendRectEncodingCoRRE(cl, x, y, w, h))
++	    if (!rfbSendRectEncodingCoRRE(cl, x, y, w, h)) {
++                REGION_UNINIT(pScreen,&updateRegion);
++            }
+ 		return FALSE;
+ 	    break;
+ 	case rfbEncodingHextile:
+-	    if (!rfbSendRectEncodingHextile(cl, x, y, w, h))
++	    if (!rfbSendRectEncodingHextile(cl, x, y, w, h)) {
++                REGION_UNINIT(pScreen,&updateRegion);
+ 		return FALSE;
++            }
+ 	    break;
+ 	}
+     }
+ 
++    REGION_UNINIT(pScreen,&updateRegion);
++
+     if (!rfbSendUpdateBuf(cl))
+ 	return FALSE;
+ 
+@@ -896,9 +911,9 @@
+ 	firstInNextBand = thisRect;
+ 	nrectsInBand = 0;
+ 
+-	while ((REGION_RECTS(reg)[firstInNextBand].y1
+-		== REGION_RECTS(reg)[thisRect].y1) &&
+-	       (nrects > 0))
++        while ((nrects > 0) &&
++               (REGION_RECTS(reg)[firstInNextBand].y1
++                == REGION_RECTS(reg)[thisRect].y1))
+ 	{
+ 	    firstInNextBand += y_inc;
+ 	    nrects--;
