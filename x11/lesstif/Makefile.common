@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.2 2000/07/30 01:33:11 dmcmahill Exp $
+# $NetBSD: Makefile.common,v 1.3 2000/10/23 19:45:05 jlam Exp $
 
 DISTNAME=		lesstif-${LESSTIF_VERSION}
-LESSTIF_VERSION=	0.91.4
+LESSTIF_VERSION=	0.91.8
 CATEGORIES=		x11
 MASTER_SITES=		ftp://ftp.hungry.com/pub/hungry/lesstif/srcdist/ \
 			ftp://ftp.unicamp.br/pub/X11/lesstif/srcdist/ \
@@ -13,7 +13,7 @@ MASTER_SITES=		ftp://ftp.hungry.com/pub/hungry/lesstif/srcdist/ \
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.lesstif.org/
 
-BUILD_DEPENDS+=		autoreconf:../../devel/autoconf
+BUILD_DEPENDS+=		autoconf:../../devel/autoconf
 BUILD_DEPENDS+=		automake:../../devel/automake
 
 USE_X11BASE=		# defined
@@ -24,10 +24,14 @@ LTCONFIG_OVERRIDE+=	${WRKSRC}/Xlt/ltconfig
 LTCONFIG_OVERRIDE+=	${WRKSRC}/Xbae/ltconfig
 
 GNU_CONFIGURE=		# defined
-CONFIGURE_ARGS+=	--enable-production --disable-debug
+CONFIGURE_ARGS+=	--enable-production --disable-debug --disable-verbose
+CONFIGURE_ARGS+=	--enable-xdnd
 
 FILESDIR=		${.CURDIR}/../../x11/lesstif/files
 PATCHDIR=		${.CURDIR}/../../x11/lesstif/patches
+
+post-extract:
+	cd ${WRKSRC}/lib/config; ${MV} host.def LessTif.def
 
 pre-configure:
 	for d in . lib/Xlt lib/Xbae test ; do \
