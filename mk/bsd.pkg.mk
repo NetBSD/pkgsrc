@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.106 1998/06/29 21:52:20 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.107 1998/07/03 19:27:39 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -255,18 +255,19 @@ SHAREMODE = ${DOCMODE}
 
 .if !defined(NO_WRKDIR)
 .if defined(OBJMACHINE)
-WRKDIR?=		${.CURDIR}/work.${MACHINE_ARCH}
-.else
-WRKDIR?=		${.CURDIR}/work
-.endif
-.else
+WRKDIR_BASENAME?=	work.${MACHINE_ARCH}
+.else # OBJMACHINE
+WRKDIR_BASENAME?=	work
+.endif # OBJMACHINE
+WRKDIR?=		${.CURDIR}/${WRKDIR_BASENAME}
+.else # !NO_WRKDIR
 WRKDIR?=		${.CURDIR}
-.endif
+.endif # !NO_WRKDIR
 .if defined(NO_WRKSUBDIR)
 WRKSRC?=		${WRKDIR}
-.else
+.else # NO_WRKSUBDIR
 WRKSRC?=		${WRKDIR}/${DISTNAME}
-.endif
+.endif # NO_WRKSUBDIR
 
 .if defined(WRKOBJDIR)
 # XXX Is pwd -P available in FreeBSD's /bin/sh?
@@ -768,11 +769,11 @@ mirror-distfiles:
 do-extract:
 .if !defined(NO_WRKDIR)
 .if defined(WRKOBJDIR)
-	@${RM} -rf ${WRKOBJDIR}/${PORTSUBDIR}
-	@${MKDIR} -p ${WRKOBJDIR}/${PORTSUBDIR}
-	@echo "${WRKDIR} -> ${WRKOBJDIR}/${PORTSUBDIR}"
+	@${RM} -rf ${WRKOBJDIR}/${PORTSUBDIR}/${WRKDIR_BASENAME}
+	@${MKDIR} -p ${WRKOBJDIR}/${PORTSUBDIR}/${WRKDIR_BASENAME}
+	@echo "${WRKDIR} -> ${WRKOBJDIR}/${PORTSUBDIR}/${WRKDIR_BASENAME}"
 	@# XXX whatif a build is going on right now?  Is this wise?
-	@${LN} -sf ${WRKOBJDIR}/${PORTSUBDIR} ${WRKDIR}
+	@${LN} -sf ${WRKOBJDIR}/${PORTSUBDIR}/${WRKDIR_BASENAME} ${WRKDIR}
 .else
 	@${RM} -rf ${WRKDIR}
 	@${MKDIR} ${WRKDIR}
