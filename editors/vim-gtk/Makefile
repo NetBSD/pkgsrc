@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2001/06/11 06:34:31 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2001/06/20 20:03:04 jlam Exp $
 
 .include		"../vim-share/Makefile.common"
 
@@ -7,15 +7,16 @@ PKGNAME=		vim-gtk-${VIM_VERSION}
 COMMENT=		Vim editor (vi clone) with X11 GTK+ GUI
 
 DEPENDS+=		vim-share-${VIM_VERSION}:../vim-share
-DEPENDS+=		gtk+-1.2.*:../../x11/gtk
 CONFLICTS=		vim-[0-9]* vim-xaw-*
 
 DISTFILES+=		${DISTNAME}-rt${EXTRACT_SUFX}
 
 USE_X11=		yes
-USE_CURSES=		yes
+USE_BUILDLINK_ONLY=	yes
+USE_CONFIG_WRAPPER=	yes
 
 CONFIGURE_ARGS+=	--enable-gui=gtk
+CONFIGURE_ARGS+=	--with-tlib=ncurses
 
 ALL_TARGET=		vim
 INSTALL_TARGET=		installvimbin
@@ -30,14 +31,6 @@ post-install:
 		${LN} -s vim ${PREFIX}/bin/$$f;				\
 	done
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${NEED_NCURSES} == "YES"
-CONFIGURE_ARGS+=	--with-tlib=ncurses
-CPPFLAGS+=		-I${LOCALBASE}/include	# for ncurses' termcap.h
-LDFLAGS+=		-L${LOCALBASE}/lib	# for -lncurses
-.else
-CONFIGURE_ARGS+=	--with-tlib=curses
-.endif
-
+.include "../../devel/ncurses/buildlink.mk"
+.include "../../x11/gtk/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
