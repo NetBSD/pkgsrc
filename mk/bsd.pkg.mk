@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1013 2002/07/24 00:54:23 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1014 2002/07/24 17:44:16 mrauch Exp $
 #
 # This file is in the public domain.
 #
@@ -1343,7 +1343,7 @@ batch-check-distfiles:
 		[ ! -z "${HOMEPAGE}" ] && 				\
 			${ECHO} "*** See ${HOMEPAGE} for more details";	\
 		${ECHO};						\
-		${TOUCH} ${INTERACTIVE_COOKIE}				\
+		${TOUCH} ${INTERACTIVE_COOKIE};				\
 		${FALSE} ;;						\
 	esac
 
