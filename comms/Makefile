@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.34 2001/03/01 20:43:56 jlam Exp $
+# $NetBSD: Makefile,v 1.35 2001/05/21 22:28:02 jtb Exp $
 #
 
 COMMENT=	Communication utilities
 
 SUBDIR+=	binkd
+SUBDIR+=	efax
 SUBDIR+=	estic
 SUBDIR+=	fidogate
 SUBDIR+=	gkermit
