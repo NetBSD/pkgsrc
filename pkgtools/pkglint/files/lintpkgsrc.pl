@@ -1,6 +1,6 @@
 #!/usr/bin/env perl
 
-# $NetBSD: lintpkgsrc.pl,v 1.10 1999/12/18 14:39:21 abs Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.11 1999/12/18 14:53:33 abs Exp $
 
 # (Somewhat quickly) Written by David Brownlee <abs@netbsd.org>.
 # Caveats:
@@ -453,7 +453,11 @@ sub scan_pkgsrc_makefiles
 	close(CAT);
 	&verbose('.');
 	}
-    &verbose(' (', scalar(keys %pkgver2dir), " packages)\n");
+
+    my ($len);
+    $_ = scalar(keys %pkgver2dir).' packages';
+    $len = @categories - length($_);
+    &verbose("\b"x@categories, $_, ' 'x$len, "\b"x$len, "\n");
 
     if ($check_depends)
 	{
