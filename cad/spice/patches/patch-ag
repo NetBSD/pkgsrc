@@ -1,0 +1,51 @@
+$NetBSD: patch-ag,v 1.1 1999/10/01 17:05:15 dmcmahill Exp $
+
+--- conf/defaults.orig	Thu Jul 29 17:33:56 1993
++++ conf/defaults	Wed Sep 29 21:30:44 1999
+@@ -66,5 +66,5 @@
+ #		SYS_DIR		= $(DIST_DIR)
+ 
+-SYS_DIR		= $(TOP1)/$(SYSTEM)
++SYS_DIR		= $(TOP0)/$(SYSTEM)
+ 
+ #	OBJ_TOP is the directory in which intermidiate files reside
+@@ -106,10 +106,10 @@
+ #	file listed on the "build" command line.
+ 
+-SPICE_DIR	= $(TOP1)/$(SYSTEM)
+-SPICE_LIB_DIR	= $(SPICE_DIR)/lib
++SPICE_DIR	= ${PREFIX}
++SPICE_LIB_DIR	= $(SPICE_DIR)/share/spice3
+ SPICE_EXEC_DIR	= $(SPICE_DIR)/bin
+ 
+ S_SPICE_DIR	= $(SPICE_DIR)
+-S_SPICE_LIB_DIR	= $(S_SPICE_DIR)/lib
++S_SPICE_LIB_DIR	= $(S_SPICE_DIR)/share/spice3
+ S_SPICE_EXEC_DIR= $(S_SPICE_DIR)/bin
+ 
+@@ -130,9 +130,9 @@
+ #	file "conf/vax" or "conf/gcc".
+ 
+-CC		= cc
++CC		= gcc
+ 
+ #	CC_OPT: Default compile options (optimization/debug level, other)
+ 
+-CC_OPT		= -O
++CC_OPT		= -O2 -pipe
+ 
+ #	CC_OPT_SAFE: Special compile options to override CC_OPT for code
+@@ -204,5 +204,5 @@
+ #	a convenience that is used in the following definitions.
+ 
+-X_DIR		= /usr
++X_DIR		= ${X11BASE}
+ 
+ #	INCX lists the X include directories.  This may be different between
+@@ -219,5 +219,5 @@
+ #	it, then you do not need it (delete the following reference to it).
+ 
+-LIBX		= -L$(X_DIR)/lib -lXaw -lXt -lXext -lXmu -lX11
++LIBX		= -L$(X_DIR)/lib -Wl,-R$(X_DIR)/lib -lXaw -lXt -lXext -lXmu -lSM -lICE -lX11
+ 
+ 
