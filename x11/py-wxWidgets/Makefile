@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/12/25 19:56:28 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2004/12/25 20:01:25 wiz Exp $
 #
 
 DISTNAME=	wxPythonSrc-2.4.2.4
@@ -14,6 +14,9 @@ COMMENT=	wxPython: Python bindings for wxWidgets
 WRKSRC=		${WRKDIR}/wxPythonSrc-2.4.2.4/wxPython
 USE_BUILDLINK3=	yes
 USE_GNU_TOOLS+=	make
+
+# previous name of the package
+CONFLICTS+=	${PYPKGPREFIX}-wxWindows-[0-9]*
 
 # we depend on glib which pulls in threads
 PYTHON_VERSIONS_ACCEPTED=	23pth 22pth 21pth
