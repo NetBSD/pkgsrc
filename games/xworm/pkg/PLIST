@@ -1,3 +1,4 @@
+@comment $NetBSD: PLIST,v 1.2 1998/11/07 14:30:11 frueauf Exp $
 bin/xworm
 share/xworm/xworm.font
 share/xworm/xworm.grid
