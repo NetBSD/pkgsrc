@@ -1,4 +1,10 @@
-# $NetBSD: Makefile.common,v 1.16 2004/02/14 13:55:19 jlam Exp $
+# $NetBSD: Makefile.common,v 1.17 2004/02/14 14:43:51 jlam Exp $
+#
+# This file is currently included by:
+#
+#	security/cyrus-sasl2/Makefile
+#	security/cy2-login/Makefile
+#	security/cy2-ntlm/Makefile
 #
 # This Makefile fragment should be included _below_ any SASL_PLUGIN
 # definition and _above_ any CONFIGURE_ARGS definitions.
