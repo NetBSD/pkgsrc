@@ -1,0 +1,20 @@
+$NetBSD: patch-ab,v 1.1 1998/10/07 02:13:10 tv Exp $
+
+--- video.h.orig	Tue Oct  6 22:06:33 1998
++++ video.h	Tue Oct  6 22:06:40 1998
+@@ -388,6 +388,15 @@
+ extern unsigned int cacheMiss[8][8];
+ #endif
+ 
++#ifdef __NetBSD__
++#include <machine/endian.h>
++#if BYTE_ORDER == LITTLE_ENDIAN
++#define LITTLE_ENDIAN_ARCHITECTURE 1
++#else
++#define BIG_ENDIAN_ARCHITECTURE 1
++#endif
++#endif
++
+ #if !defined(__MIPSEL__) && (defined(MIPSEL) || defined(__MIPSEL) || defined(__MIPSEL__) || defined(__mipsel) || defined(__mipsel__))
+ #define __MIPSEL__ 1
+ #endif
