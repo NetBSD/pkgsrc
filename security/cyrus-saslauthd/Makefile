@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/03/29 05:50:26 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2004/03/31 06:49:41 jlam Exp $
 
 DISTNAME=	cyrus-sasl-2.1.18
 PKGNAME=	${DISTNAME:S/sasl/saslauthd/}
@@ -49,8 +49,10 @@ CONFIGURE_ARGS+=	--with-openssl=${SSLBASE}
 PLIST_SRC+=		${PKGDIR}/PLIST.ldap
 .endif
 
-.if defined(KERBEROS) || \
-    (defined(SASL_USE_GSSAPI) && !empty(SASL_USE_GSSAPI:M[yY][eE][sS]))
+.if defined(KERBEROS)
+SASL_USE_GSSAPI=	yes
+.endif
+.if (defined(SASL_USE_GSSAPI) && !empty(SASL_USE_GSSAPI:M[yY][eE][sS]))
 .  include "../../mk/krb5.buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-gssapi=${KRB5BASE}
 CONFIGURE_ARGS+=	--with-gss_impl=${GSSIMPL.${KRB5_TYPE}}
