@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1339 2003/02/12 07:23:45 martti Exp $
+$NetBSD: CHANGES,v 1.1340 2003/02/12 16:53:53 shell Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -570,6 +570,8 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated bochs to 2.0.2 [fredb 2003-02-06]
 	Updated eb to 3.2.3 [cjep 2003-02-08]
 	Updated spamassassin to 2.44nb1 [heinz 2003-02-09]
+	Updated p5-SSLeay to 0.47 [shell 2003-02-09]
+	Updated curl to 7.10.3 [shell 2003-02-09]
 	Updated rdesktop to 1.1.0nb1 [grant 2003-02-10]
 	Updated sun-jre13 to 1.0.7nb1 [jlam 2003-02-10]
 	Updated blackdown-jdk13 to 1nb2 [jlam 2003-02-10]
