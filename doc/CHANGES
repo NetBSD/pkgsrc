@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8479 2004/12/27 23:36:46 minskim Exp $
+$NetBSD: CHANGES,v 1.8480 2004/12/27 23:41:35 markd Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -6598,3 +6598,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gtksee to 0.5.6 [wiz 2004-12-27]
 	Added mixminion-0.0.7.1 [wiz 2004-12-27]
 	Added py-OpenSSL-0.6 [minskim 2004-12-27]
+	Updated kmysqladmin to 0.7.0 [markd 2004-12-27]
