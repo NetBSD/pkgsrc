@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1070 2002/10/21 01:17:11 wiz Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1071 2002/10/21 01:23:03 wiz Exp $
 #
 # This file is in the public domain.
 #
@@ -326,11 +326,7 @@ LIBTOOL_REQD=		1.4.20010614nb9
 LIBTOOL=		${LOCALBASE}/bin/libtool
 .if defined(USE_LIBTOOL)
 PKGLIBTOOL=		${LIBTOOL}
-.  if defined(USE_LTDL)
-DEPENDS+=		libtool>=${LIBTOOL_REQD}:../../devel/libtool
-.  else
 BUILD_DEPENDS+=		libtool-base>=${LIBTOOL_REQD}:../../devel/libtool-base
-.  endif
 CONFIGURE_ENV+=		LIBTOOL="${PKGLIBTOOL} ${LIBTOOL_FLAGS}"
 MAKE_ENV+=		LIBTOOL="${PKGLIBTOOL} ${LIBTOOL_FLAGS}"
 .endif
