@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3636 2003/10/04 21:02:02 jschauma Exp $
+$NetBSD: CHANGES,v 1.3637 2003/10/04 21:08:46 agc Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4071,3 +4071,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added scm-5d8 [agc 2003-10-04]
 	Added gpspoint-2.030521 [jschauma 2003-10-04]
 	Added gpsutils-0.4.0 [jschauma 2003-10-04]
+	Updated pkgchk to 1.44 [agc 2003-10-04]
