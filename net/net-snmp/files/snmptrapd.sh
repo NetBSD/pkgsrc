@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: snmptrapd.sh,v 1.1.1.1 2002/10/24 08:29:34 jlam Exp $
+# $NetBSD: snmptrapd.sh,v 1.2 2003/09/12 12:07:19 uebayasi Exp $
 #
 # PROVIDE: snmptrapd
 # REQUIRE: DAEMON
@@ -13,7 +13,12 @@ name="snmptrapd"
 rcvar=$name
 command="@PREFIX@/sbin/${name}"
 pidfile="/var/run/${name}.pid"
-snmptrapd_flags="-s -l 1"	# log using syslog w/ facility LOG_LOCAL1
+# XXX this should include '-S 1' to explicitly set LOG_LOCAL1, but if
+# it's there snmptrapd blows up saying "no syslog facility specified"
+# and then printing a usage message (and the old -l complains too!)
+#   --woods
+#
+snmptrapd_flags="-s"	# log using syslog w/ facility LOG_LOCAL1
 command_args="-u ${pidfile}"
 
 if [ -f @PKG_SYSCONFDIR@/snmptrapd.conf ]; then
