@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1836 2004/06/18 17:51:32 reed Exp $
+$NetBSD: TODO,v 1.1837 2004/06/18 21:43:49 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -313,7 +313,8 @@ Suggested package updates
 	o mowitz-0.3.0
 	o moz-bin-flash-7.0r25 [pkgsrc-wip]
 	o moz-bin-plugger-1.5.1
-	o moz-mplayer-2.60
+	o moz-mplayer-2.65
+	o mozilla-1.7
 	o mozilla-stable-1.4.2
 	o mrproject-0.9.1
 	o multi-gnome-terminal-1.6.2
