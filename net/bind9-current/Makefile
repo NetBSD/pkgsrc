@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2001/02/04 10:43:23 itojun Exp $
+# $NetBSD: Makefile,v 1.12 2001/02/04 11:15:43 itojun Exp $
 #
 
 DISTNAME=	bind-${BIND_VERSION}
@@ -23,6 +23,10 @@ CONFIGURE_ARGS+=--with-libtool=yes \
 		--localstatedir=/var \
 		--with-randomdev=/dev/urandom
 LDFLAGS+=	-Wl,-R${LOCALBASE}/pthreads/lib -L${LOCALBASE}/pthreads/lib
+# use external OpenSSL.  comment the following two lines out to use
+# OpenSSL shipped with BIND9.
+USE_SSL=	yes
+CONFIGURE_ARGS+=--with-openssl=${LOCALBASE}
 
 post-build:
 	${SED} \

@@ -1,0 +1,10 @@
+$NetBSD: patch-ai,v 1.1 2001/02/04 11:15:43 itojun Exp $
+
+--- lib/lwres/man/Makefile.in-	Sun Feb  4 19:01:13 2001
++++ lib/lwres/man/Makefile.in	Sun Feb  4 19:01:21 2001
+@@ -54,4 +54,4 @@
+ 	$(SHELL) ${top_srcdir}/mkinstalldirs ${DESTDIR}${mandir}/man3
+ 
+ install:: installdirs
+-	for m in ${MANPAGES}; do ${INSTALL_PROGRAM} $$m ${DESTDIR}${mandir}/man3; done
++	for m in ${MANPAGES}; do ${INSTALL_DATA} $$m ${DESTDIR}${mandir}/man3; done

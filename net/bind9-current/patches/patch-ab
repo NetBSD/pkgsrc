@@ -1,10 +1,33 @@
-$NetBSD: patch-ab,v 1.1 2001/02/04 10:39:12 itojun Exp $
+$NetBSD: patch-ab,v 1.2 2001/02/04 11:15:43 itojun Exp $
+support for kame scopeid extension (assumes that link scope = interface)
 
---- lib/lwres/man/Makefile.in-	Sun Feb  4 19:01:13 2001
-+++ lib/lwres/man/Makefile.in	Sun Feb  4 19:01:21 2001
-@@ -54,4 +54,4 @@
- 	$(SHELL) ${top_srcdir}/mkinstalldirs ${DESTDIR}${mandir}/man3
+--- lib/lwres/getnameinfo.c-	Sun Jan 28 15:34:19 2001
++++ lib/lwres/getnameinfo.c	Sun Jan 28 16:13:15 2001
+@@ -63,6 +63,9 @@
+ #include <sys/socket.h>
  
- install:: installdirs
--	for m in ${MANPAGES}; do ${INSTALL_PROGRAM} $$m ${DESTDIR}${mandir}/man3; done
-+	for m in ${MANPAGES}; do ${INSTALL_DATA} $$m ${DESTDIR}${mandir}/man3; done
+ #include <netinet/in.h>
++#ifdef __KAME__
++#include <net/if.h>
++#endif
+ 
+ #include <stdio.h>
+ #include <string.h>
+@@ -219,13 +222,11 @@
+ 		    ((const struct sockaddr_in6 *)sa)->sin6_scope_id) {
+ 			char *p = numaddr + strlen(numaddr);
+ 			const char *stringscope = NULL;
+-#if 0
++
++#ifdef __KAME__
+ 			if ((flags & NI_NUMERICSCOPE) == 0) {
+-				/*
+-				 * Vendors may want to add support for
+-				 * non-numeric scope identifier.
+-				 */
+-				stringscope = foo;
++				stringscope = if_indextoname(
++				    ((const struct sockaddr_in6 *)sa)->sin6_scope_id);
+ 			}
+ #endif
+ 			if (stringscope == NULL) {

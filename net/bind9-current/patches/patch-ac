@@ -1,10 +1,39 @@
-$NetBSD: patch-ac,v 1.1 2001/02/04 10:39:13 itojun Exp $
+$NetBSD: patch-ac,v 1.2 2001/02/04 11:15:43 itojun Exp $
+support for kame scopeid extension (assumes that link scope = interface)
 
---- bin/named/Makefile.in-	Sun Feb  4 19:02:24 2001
-+++ bin/named/Makefile.in	Sun Feb  4 19:02:32 2001
-@@ -103,4 +103,4 @@
- install:: named lwresd installdirs
- 	${LIBTOOL} ${INSTALL_PROGRAM} named ${DESTDIR}${sbindir}
- 	(cd ${DESTDIR}${sbindir}; rm -f lwresd; @LN@ named lwresd)
--	for m in ${MANPAGES}; do ${INSTALL_PROGRAM} $$m ${DESTDIR}${mandir}/man8; done
-+	for m in ${MANPAGES}; do ${INSTALL_DATA} $$m ${DESTDIR}${mandir}/man8; done
+--- lib/lwres/getaddrinfo.c-	Sun Jan 28 15:34:17 2001
++++ lib/lwres/getaddrinfo.c	Sun Jan 28 15:38:37 2001
+@@ -28,6 +28,9 @@
+ #include <sys/un.h>
+ 
+ #include <netinet/in.h>
++#ifdef __KAME__
++#include <net/if.h>
++#endif
+ 
+ #include <arpa/nameser.h>
+ #include <arpa/inet.h>
+@@ -262,14 +265,18 @@
+ 			p = strchr(ntmp, '%');
+ 			ep = NULL;
+ 
+-			/*
+-			 * Vendors may want to support non-numeric
+-			 * scopeid around here.
+-			 */
++#ifdef __KAME__
++			if (p != NULL) {
++				scopeid = if_nametoindex(p + 1);
++				if (scopeid)
++					p = NULL;
++			}
++#endif
+ 
+-			if (p != NULL)
++			if (p != NULL) {
+ 				scopeid = (lwres_uint32_t)strtoul(p + 1,
+ 								  &ep, 10);
++			}
+ 			if (p != NULL && ep != NULL && ep[0] == '\0')
+ 				*p = '\0';
+ 			else {
