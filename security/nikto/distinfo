@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/12/05 17:45:24 xtraeme Exp $
+
+SHA1 (nikto-1.32.tar.gz) = 3d1909ccbd60e14f8a319d33c33830bdd8a6da61
+Size (nikto-1.32.tar.gz) = 345290 bytes
+SHA1 (patch-aa) = 2fe6b18a1e66b1ecc865aa50feb5fc166bc0e853
+SHA1 (patch-ab) = 1d5ad9f778dc9af6f37549a9882e7adc6e55a09c
