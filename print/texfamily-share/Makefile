@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/09/18 03:37:04 uebayasi Exp $
+# $NetBSD: Makefile,v 1.4 2002/11/28 03:50:57 uebayasi Exp $
 
 DISTNAME=	TeXfamily-share-1.2.1
 PKGREVISION=	3
@@ -36,16 +36,18 @@ do-install:
 .for f in ptex-texmf-2.0 texfam-texmf-latex209 texfam-texmf-j1.9 \
     texfam-texmf-j1.9.1 texfam-texmf-m0.8 \
     mulfonts-vf mulfonts-subtfm jis nmin-ngoth standard morisawa
-	@${GTAR} -plzx -C ${PREFIX}/share/texmf.local \
-		-f ${DISTDIR}/${DIST_SUBDIR}/${f}${EXTRACT_SUFX} \
-		--exclude=ls-R
+	@cd ${PREFIX}/share/texmf.local; \
+		${PAX} -rz -pe -s /ls-R// \
+			-f ${DISTDIR}/${DIST_SUBDIR}/${f}${EXTRACT_SUFX}
 .endfor
 	@${INSTALL_DATA_DIR} ${PREFIX}/share/texmf.local/doc/fonts
-	@${GTAR} Ccf ${WRKDIR}/morisawa/tfm/ptex - . | \
-		${GTAR} Cxf ${PREFIX}/share/texmf.local/fonts/tfm/ptex -
+	@cd ${WRKDIR}/morisawa/tfm/ptex; \
+		${PAX} -rw -pe . ${PREFIX}/share/texmf.local/fonts/tfm/ptex
 .for font in jis nmin-ngoth standard morisawa
-	@${GTAR} Ccf ${WRKDIR}/${font} - tfm/dvips vf | \
-		${GTAR} Cxf ${PREFIX}/share/texmf.local/fonts -
+	@cd ${WRKDIR}/${font}; \
+		for d in tfm/dvips vf; do \
+			${PAX} -rw -pe $$d ${PREFIX}/share/texmf.local/fonts; \
+		done
 	@${INSTALL_DATA} ${WRKDIR}/${font}/README.txt \
 		${PREFIX}/share/texmf.local/doc/fonts/README.${font}
 .endfor
