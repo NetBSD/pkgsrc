@@ -1,0 +1,19 @@
+$NetBSD: patch-aa,v 1.3 2002/04/21 21:06:55 hubertf Exp $
+
+--- Makefile.in.orig	Sun Apr 21 22:49:50 2002
++++ Makefile.in
+@@ -53,10 +53,10 @@
+ 		make installonly
+ 
+ installonly:
+-		mkdir -p $(root)/bin/
+-		install -m 755 -o root -g root ipv6calc/ipv6calc $(root)/bin/
+-		mkdir -p $(root)/usr/bin/
+-		install -m 755 -o root -g root ipv6logconv/ipv6logconv $(root)/usr/bin/
++		mkdir -p $(root)/bin
++		${BSD_INSTALL_PROGRAM} ipv6calc/ipv6calc $(root)/bin
++		mkdir -p $(root)/bin
++		${BSD_INSTALL_PROGRAM} ipv6logconv/ipv6logconv $(root)/bin
+ 
+ getopt-make:
+ 		cd getopt/ && make
