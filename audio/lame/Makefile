@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1999/10/13 05:54:07 explorer Exp $
+# $NetBSD: Makefile,v 1.6 1999/10/13 05:58:22 explorer Exp $
 #
 
 #
@@ -30,7 +30,9 @@ ALL_TARGET=	lame
 MIRROR_DISTFILE=no
 LICENSE=	fee-based-commercial-use
 
+.if !make(makepatchsum)
 PATCHDIR=       ${WRKDIR}/.patches
+.endif
 
 post-extract:
 	@${MKDIR} ${PATCHDIR}
