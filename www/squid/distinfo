@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.29 2003/04/28 12:01:03 taca Exp $
+$NetBSD: distinfo,v 1.30 2003/05/09 05:07:13 taca Exp $
 
 SHA1 (squid-2.5.2/squid-2.5.STABLE2.tar.bz2) = e319b3cfdf5d92df9ef39da048fc4235d9cc5154
 Size (squid-2.5.2/squid-2.5.STABLE2.tar.bz2) = 1020696 bytes
@@ -18,6 +18,28 @@ SHA1 (squid-2.5.2/squid-2.5.STABLE2-header_access_paranoid.patch) = b330d73d796e
 Size (squid-2.5.2/squid-2.5.STABLE2-header_access_paranoid.patch) = 524 bytes
 SHA1 (squid-2.5.2/squid-2.5.STABLE2-dns_root_label.patch) = e6b1b319ab8a58e4ef9111e4301caed27b72f171
 Size (squid-2.5.2/squid-2.5.STABLE2-dns_root_label.patch) = 719 bytes
+SHA1 (squid-2.5.2/squid-2.5.STABLE2-aix5.patch) = 2b3e51af316512654fee851a0fd8c9c101b51747
+Size (squid-2.5.2/squid-2.5.STABLE2-aix5.patch) = 2545 bytes
+SHA1 (squid-2.5.2/wb_group-1.1.patch) = 16768e2acb4e9a223cd1e7e85fac5d7ce01af81a
+Size (squid-2.5.2/wb_group-1.1.patch) = 10273 bytes
+SHA1 (squid-2.5.2/squid-2.5.STABLE2-snmp_gauges.patch) = 128b85509df14ce758021029c3ffbeb9b0edde66
+Size (squid-2.5.2/squid-2.5.STABLE2-snmp_gauges.patch) = 4111 bytes
+SHA1 (squid-2.5.2/squid-2.5.STABLE2-redhat9-ssl.patch) = 9e091cd97ee0dbb6e757408f33d92c88cdc5fa81
+Size (squid-2.5.2/squid-2.5.STABLE2-redhat9-ssl.patch) = 1336 bytes
+SHA1 (squid-2.5.2/squid-2.5.STABLE2-reconfig_logs.patch) = 58facfe58925d47bb4de0ea99523bd1d570c0ece
+Size (squid-2.5.2/squid-2.5.STABLE2-reconfig_logs.patch) = 853 bytes
+SHA1 (squid-2.5.2/squid-2.5.STABLE2-ldap_auth_unavail.patch) = 6da92b65a6659330c7c715613ef935b02393891b
+Size (squid-2.5.2/squid-2.5.STABLE2-ldap_auth_unavail.patch) = 599 bytes
+SHA1 (squid-2.5.2/squid-2.5.STABLE2-msntauth.patch) = d5d2f346a479a9ef960dfff4d683bbd3db9b6550
+Size (squid-2.5.2/squid-2.5.STABLE2-msntauth.patch) = 1696 bytes
+SHA1 (squid-2.5.2/squid-2.5.STABLE2-ident_REQUIRED.patch) = d70765268f5820393c5d254756535acf8ce671ce
+Size (squid-2.5.2/squid-2.5.STABLE2-ident_REQUIRED.patch) = 650 bytes
+SHA1 (squid-2.5.2/squid-2.5.STABLE2-reply_body_max_size.patch) = 8626969a543fa8c42f2a0a3af2142d6901dbe919
+Size (squid-2.5.2/squid-2.5.STABLE2-reply_body_max_size.patch) = 6548 bytes
+SHA1 (squid-2.5.2/squid-2.5.STABLE2-acl_lookup_loop.patch) = 3067187cd63f7e4dbc472700b5ddcc6e06ae9dc2
+Size (squid-2.5.2/squid-2.5.STABLE2-acl_lookup_loop.patch) = 3773 bytes
+SHA1 (squid-2.5.2/squid-2.5.STABLE2-squid_ldap_auth.patch) = 8f5eb18f4b6a8c1542232604a8629658dc909b20
+Size (squid-2.5.2/squid-2.5.STABLE2-squid_ldap_auth.patch) = 19060 bytes
 SHA1 (patch-aa) = 2e0d96f6ccb9d0c42db2da49e76846edad09624f
 SHA1 (patch-ab) = 1224ba4cee98a26d2c9d670eb6d57c6187ff2d56
 SHA1 (patch-ac) = 1b283f0a573c02c82ce26f75e67d19b1ec5ff9f0
