@@ -3,7 +3,8 @@
 # Date created:		16 Februar 1995
 # Whom:			Gennady Sorokopud <gena@NetVision.net.il>
 #
-# $Id: Makefile,v 1.1.1.1 1997/10/28 23:19:25 augustss Exp $
+# $NetBSD: Makefile,v 1.2 1997/10/29 01:18:30 augustss Exp $
+# FreeBSD Id: Makefile,v 1.8 1997/09/08 13:20:10 tg Exp 
 #
 
 DISTNAME=	xmcd-2.2
