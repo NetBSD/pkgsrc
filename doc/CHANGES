@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2109 2003/05/01 15:45:38 jmmv Exp $
+$NetBSD: CHANGES,v 1.2110 2003/05/01 17:01:05 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1813,3 +1813,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated sendmail811 to 8.11.6nb4 [jmmv 2003-05-01]
 	Updated sendmail to 8.12.9nb2 [jmmv 2003-05-01]
 	Updated sendfile to 2.1.0.2nb1 [jmmv 2003-05-01]
+	Updated nsca to 1.1.0nb2 [jmmv 2003-05-01]
