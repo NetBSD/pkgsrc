@@ -1,0 +1,7 @@
+This Tcl extension provides access to MySQL database servers using simple Tcl
+commands.
+
+I wrote this extension because my main Tcl application (fully integrated
+accounting system) was requiring more flexibility than the current extensions
+allowed, I also wanted to increase performance (I had too many wrapper
+programs for performing basic queries).
