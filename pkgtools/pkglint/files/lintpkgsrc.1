@@ -1,4 +1,4 @@
-.\"	$NetBSD: lintpkgsrc.1,v 1.15 2001/05/14 15:01:24 agc Exp $
+.\"	$NetBSD: lintpkgsrc.1,v 1.16 2001/05/18 10:38:47 abs Exp $
 .\"
 .\" Copyright (c) 1999 by David Brownlee (abs@netbsd.org)
 .\" Absolutely no warranty.
@@ -106,8 +106,11 @@ or have an incorrect checksum (usually due to an interrupted download),
 and any old binary packages. To remove any given type, additionally
 specify the -o, -m, or -p flags respectively.
 .It Fl u
-For each package current installed, run 'make fetch-list | sh' to ensure
-all the distfiles needed for the latest version are present.
+As 
+.Fl i
+plus for mismatched packages, display REQUIRED details and run
+'make fetch-list | sh' to ensure all the distfiles needed for
+the latest version are present.
 .Pp
 Warning: The behaviour of this command may change in a later version.
 .El
