@@ -1,19 +1,50 @@
-@comment $NetBSD: PLIST,v 1.10 2000/05/30 09:16:12 rh Exp $
+@comment $NetBSD: PLIST,v 1.11 2000/06/01 12:08:02 rh Exp $
+bin/libole2-config
 bin/gnumeric
 etc/CORBA/servers/gnumeric.gnorba
 etc/CORBA/servers/graph.gnorba
+include/libole2/libole2.h
+include/libole2/ms-ole.h
+include/libole2/ms-ole-summary.h
+include/libole2/ms-ole-vba.h
+lib/libole2.a
 lib/gnumericConf.sh
-lib/gnumeric/0.53/plugins/gnum_lotus.a
-lib/gnumeric/0.53/plugins/gnum_oleo.a
-lib/gnumeric/0.53/plugins/gnum_sc.a
-lib/gnumeric/0.53/plugins/gnum_sylk.a
-lib/gnumeric/0.53/plugins/gnum_text.a
-lib/gnumeric/0.53/plugins/gnum_csv.a
-lib/gnumeric/0.53/plugins/gnum_xbase.a
-lib/gnumeric/0.53/plugins/gnum_html.a
-lib/gnumeric/0.53/plugins/gnum_dif.a
-lib/gnumeric/0.53/plugins/gnum_sample.a
-lib/gnumeric/0.53/plugins/gnum_numtheory.a
+lib/libole2.so.0.0
+lib/libole2.la
+lib/libole2Conf.sh
+lib/gnumeric/0.54/plugins/libgnum_lotus.so.0.0
+lib/gnumeric/0.54/plugins/gnum_lotus.la
+lib/gnumeric/0.54/plugins/libgnum_lotus.a
+lib/gnumeric/0.54/plugins/libgnum_oleo.so.0.0
+lib/gnumeric/0.54/plugins/gnum_oleo.la
+lib/gnumeric/0.54/plugins/libgnum_oleo.a
+lib/gnumeric/0.54/plugins/libgnum_sc.so.0.0
+lib/gnumeric/0.54/plugins/gnum_sc.la
+lib/gnumeric/0.54/plugins/libgnum_sc.a
+lib/gnumeric/0.54/plugins/libgnum_sylk.so.0.0
+lib/gnumeric/0.54/plugins/gnum_sylk.la
+lib/gnumeric/0.54/plugins/libgnum_sylk.a
+lib/gnumeric/0.54/plugins/libgnum_text.so.0.0
+lib/gnumeric/0.54/plugins/gnum_text.la
+lib/gnumeric/0.54/plugins/libgnum_text.a
+lib/gnumeric/0.54/plugins/libgnum_csv.so.0.0
+lib/gnumeric/0.54/plugins/gnum_csv.la
+lib/gnumeric/0.54/plugins/libgnum_csv.a
+lib/gnumeric/0.54/plugins/libgnum_xbase.so.0.0
+lib/gnumeric/0.54/plugins/gnum_xbase.la
+lib/gnumeric/0.54/plugins/libgnum_xbase.a
+lib/gnumeric/0.54/plugins/libgnum_html.so.0.0
+lib/gnumeric/0.54/plugins/gnum_dif.la
+lib/gnumeric/0.54/plugins/gnum_html.la
+lib/gnumeric/0.54/plugins/libgnum_html.a
+lib/gnumeric/0.54/plugins/libgnum_dif.so.0.0
+lib/gnumeric/0.54/plugins/libgnum_dif.a
+lib/gnumeric/0.54/plugins/libgnum_sample.so.0.0
+lib/gnumeric/0.54/plugins/gnum_sample.la
+lib/gnumeric/0.54/plugins/libgnum_sample.a
+lib/gnumeric/0.54/plugins/libgnum_numtheory.so.0.0
+lib/gnumeric/0.54/plugins/gnum_numtheory.la
+lib/gnumeric/0.54/plugins/libgnum_numtheory.a
 share/locale/cs/LC_MESSAGES/gnumeric.mo
 share/locale/da/LC_MESSAGES/gnumeric.mo
 share/locale/de/LC_MESSAGES/gnumeric.mo
@@ -39,6 +70,7 @@ share/locale/sv/LC_MESSAGES/gnumeric.mo
 share/locale/uk/LC_MESSAGES/gnumeric.mo
 share/locale/zh_TW.Big5/LC_MESSAGES/gnumeric.mo
 share/locale/en_GB/LC_MESSAGES/gnumeric.mo
+share/locale/gl/LC_MESSAGES/gnumeric.mo
 share/locale/es_DO/LC_MESSAGES/gnumeric.mo
 share/locale/es_GT/LC_MESSAGES/gnumeric.mo
 share/locale/es_HN/LC_MESSAGES/gnumeric.mo
@@ -47,6 +79,11 @@ share/locale/es_PA/LC_MESSAGES/gnumeric.mo
 share/locale/es_PE/LC_MESSAGES/gnumeric.mo
 share/locale/es_SV/LC_MESSAGES/gnumeric.mo
 share/locale/zh_CN.GB2312/LC_MESSAGES/gnumeric.mo
+share/aclocal/libole2.m4
+share/aclocal/gnome-libole2.m4
+share/pixmaps/gnome-gnumeric.png
+share/pixmaps/gnome-application-x-gnumeric.png
+share/pixmaps/gnome-application-x-xls.png
 share/pixmaps/gnumeric/orient-horizontal.png
 share/pixmaps/gnumeric/orient-vertical.png
 share/pixmaps/gnumeric/right-down.png
@@ -173,9 +210,6 @@ share/pixmaps/gnumeric/inside_border
 share/pixmaps/gnumeric/outline_border
 share/pixmaps/gnumeric/no_border
 share/pixmaps/gnumeric/stf-druid.png
-share/pixmaps/gnome-gnumeric.png
-share/pixmaps/gnome-application-x-gnumeric.png
-share/pixmaps/gnome-application-x-xls.png
 share/idl/Graph.idl
 share/idl/Gnumeric.idl
 share/gnome/help/gnumeric/C/gnumeric.html
@@ -605,48 +639,65 @@ share/gnome/apps/Applications/gnumeric.desktop
 share/mime-info/gnumeric.keys
 share/mime-info/gnumeric.mime
 share/mc/templates/gnumeric.desktop
-share/gnumeric/0.53/python/gnumeric_startup.py
-share/gnumeric/0.53/python/gnumeric_defs.py
-share/gnumeric/0.53/glade/graphics.glade
-share/gnumeric/0.53/glade/advanced-filter.glade
-share/gnumeric/0.53/glade/analysis-tools.glade
-share/gnumeric/0.53/glade/autocorrect.glade
-share/gnumeric/0.53/glade/autocorrect-exceptions.glade
-share/gnumeric/0.53/glade/autosave.glade
-share/gnumeric/0.53/glade/autosave-prompt.glade
-share/gnumeric/0.53/glade/col-width.glade
-share/gnumeric/0.53/glade/font-sel.glade
-share/gnumeric/0.53/glade/hf-config.glade
-share/gnumeric/0.53/glade/import.glade
-share/gnumeric/0.53/glade/names.glade
-share/gnumeric/0.53/glade/print.glade
-share/gnumeric/0.53/glade/row-height.glade
-share/gnumeric/0.53/glade/sheet-order.glade
-share/gnumeric/0.53/glade/sheet-rename.glade
-share/gnumeric/0.53/glade/solver.glade
-share/gnumeric/0.53/glade/solver-options.glade
-share/gnumeric/0.53/glade/summary.glade
-share/gnumeric/0.53/glade/dialog-zoom.glade
-share/gnumeric/0.53/glade/insert-cells.glade
-share/gnumeric/0.53/glade/delete-cells.glade
-share/gnumeric/0.53/glade/cell-format.glade
-share/gnumeric/0.53/glade/cell-sort.glade
-share/gnumeric/0.53/glade/dialog-stf.glade
-share/gnumeric/0.53/glade/dialog-stf-export.glade
-share/gnumeric/0.53/glade/plugin-manager.glade
-share/gnumeric/0.53/glade/function-select.glade
-share/gnumeric/0.53/glade/workbook-attr.glade
+share/libole2/html/libole2.html
+share/libole2/html/libole2-decl.txt
+share/libole2/html/libole2-sections.txt
+share/libole2/html/libole2/index.html
+share/libole2/html/libole2/libole2-common.html
+share/libole2/html/libole2/libole2-miscellaneous.html
+share/libole2/html/libole2/libole2-msole.html
+share/libole2/html/libole2/libole2-msolestream.html
+share/libole2/html/libole2/libole2-msolesummary.html
+share/libole2/html/libole2/r14.html
+share/libole2/html/libole2/r19.html
+share/gnumeric/0.54/python/gnumeric_startup.py
+share/gnumeric/0.54/python/gnumeric_defs.py
+share/gnumeric/0.54/glade/graphics.glade
+share/gnumeric/0.54/glade/advanced-filter.glade
+share/gnumeric/0.54/glade/analysis-tools.glade
+share/gnumeric/0.54/glade/autocorrect.glade
+share/gnumeric/0.54/glade/autocorrect-exceptions.glade
+share/gnumeric/0.54/glade/autosave.glade
+share/gnumeric/0.54/glade/autosave-prompt.glade
+share/gnumeric/0.54/glade/col-width.glade
+share/gnumeric/0.54/glade/font-sel.glade
+share/gnumeric/0.54/glade/hf-config.glade
+share/gnumeric/0.54/glade/import.glade
+share/gnumeric/0.54/glade/names.glade
+share/gnumeric/0.54/glade/print.glade
+share/gnumeric/0.54/glade/row-height.glade
+share/gnumeric/0.54/glade/sheet-order.glade
+share/gnumeric/0.54/glade/sheet-rename.glade
+share/gnumeric/0.54/glade/solver.glade
+share/gnumeric/0.54/glade/solver-options.glade
+share/gnumeric/0.54/glade/summary.glade
+share/gnumeric/0.54/glade/dialog-zoom.glade
+share/gnumeric/0.54/glade/insert-cells.glade
+share/gnumeric/0.54/glade/delete-cells.glade
+share/gnumeric/0.54/glade/cell-format.glade
+share/gnumeric/0.54/glade/cell-sort.glade
+share/gnumeric/0.54/glade/dialog-stf.glade
+share/gnumeric/0.54/glade/dialog-stf-export.glade
+share/gnumeric/0.54/glade/plugin-manager.glade
+share/gnumeric/0.54/glade/function-select.glade
+share/gnumeric/0.54/glade/workbook-attr.glade
+share/oaf/gnumeric.oafinfo
 share/oaf/graph.oafinfo
-@dirrm lib/gnumeric/0.53/plugins
-@dirrm lib/gnumeric/0.53
+@dirrm lib/gnumeric/0.54/plugins
+@dirrm lib/gnumeric/0.54
 @dirrm lib/gnumeric
+@dirrm include/libole2
+@dirrm share/libole2/html/libole2
+@dirrm share/libole2/html
+@dirrm share/libole2
+@dirrm share/oaf
 @dirrm share/pixmaps/gnumeric
 @dirrm share/gnome/help/gnumeric/C/images
 @dirrm share/gnome/help/gnumeric/C
 @dirrm share/gnome/help/gnumeric
-@dirrm share/gnumeric/0.53/glade
-@dirrm share/gnumeric/0.53/python
-@dirrm share/gnumeric/0.53
+@dirrm share/gnumeric/0.54/glade
+@dirrm share/gnumeric/0.54/python
+@dirrm share/gnumeric/0.54
 @dirrm share/gnumeric
 @unexec rmdir %D/share/mc/templates 2>/dev/null || true
 @unexec rmdir %D/share/mc 2>/dev/null || true
