@@ -1,15 +1,15 @@
 # New ports collection makefile for:	lyx
-# Version required:	0.10.6
+# Version required:	0.12.0
 # Date created:		Sa  12 Okt 1996 19:20:51 MET DST
 # Whom:			Andreas Klemm <andreas@klemm.gtn.com>
 #
-# $NetBSD: Makefile,v 1.2 1998/02/28 20:34:12 frueauf Exp $
+# $NetBSD: Makefile,v 1.3 1998/03/19 13:43:04 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.14 1998/02/14 16:46:50 andreas Exp
 #
 
 DISTNAME=	lyx-0.12.0
 CATEGORIES=	print
-MASTER_SITES=	ftp://ftp.via.ecp.fr/pub/lyx/beta_stable/ \
+MASTER_SITES=	ftp://ftp.via.ecp.fr/pub/lyx/stable/ \
 		ftp://la1ad.uio.no/pub/lyx/
 
 MAINTAINER=	andreas@FreeBSD.ORG
