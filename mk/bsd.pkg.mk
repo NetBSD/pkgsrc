@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.219 1999/03/03 17:48:23 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.220 1999/03/03 22:53:49 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -54,7 +54,8 @@ NOMANCOMPRESS?=	yes
 DEF_UMASK?=		022
 .elif (${OPSYS} == "NetBSD")
 DEF_UMASK?=		0022
-NOCLEANDEPENDS=	yes
+CLEANDEPENDS?=		NO
+DEINSTALLDEPENDS?=	NO
 .else
 DEF_UMASK?=		0022
 .endif
@@ -1380,17 +1381,39 @@ reinstall:
 # Deinstall
 #
 # Special target to remove installation
-
 .if !target(deinstall)
 deinstall: uptodate-pkgtools
 	@${ECHO_MSG} "===> Deinstalling for ${PKGNAME}"
 .ifdef PKG_VERBOSE
-	@${PKG_DELETE} -v -f ${PKGNAME}
+	@${PKG_DELETE} -v ${PKGNAME} || true
 .else
-	@${PKG_DELETE} -f ${PKGNAME}
+	@${PKG_DELETE} ${PKGNAME} || true
 .endif
 	@${RM} -f ${INSTALL_COOKIE} ${PACKAGE_COOKIE}
+.if (${DEINSTALLDEPENDS} != "NO")
+	@if ! ${PKG_INFO} -qe ${PKGNAME} ; then \
+		${MAKE} deinstall-depends ; \
+	fi
 .endif
+.endif
+
+
+# Deinstall-depends
+# XXX Should be done with "pkg_delete -R"
+#
+# Like clean-depends, only to deinstall things
+.if !target(deinstall-depends)
+deinstall-depends: uptodate-pkgtools
+.if defined(FETCH_DEPENDS) || defined(BUILD_DEPENDS) \
+	|| defined(DEPENDS) || defined(RUN_DEPENDS)
+	@for dir in `${ECHO} ${FETCH_DEPENDS} ${BUILD_DEPENDS} ${DEPENDS} ${RUN_DEPENDS} | ${TR} '\040' '\012' | ${SED} -e 's/^[^:]*://' -e 's/:.*//' | sort -u`; do \
+		if [ -d $$dir ] ; then \
+			(cd $$dir && ${MAKE} DEINSTALLDEPENDS=${DEINSTALLDEPENDS} deinstall); \
+		fi \
+	done
+.endif
+.endif
+
 
 .endif # __ARCH_OK
        # The functions below may be useful even if _ARCH_OK is not set
@@ -1409,7 +1432,7 @@ pre-clean:
 
 .if !target(clean)
 clean: pre-clean
-.if !defined(NOCLEANDEPENDS)
+.if (${CLEANDEPENDS} != "NO")
 	@${MAKE} clean-depends
 .endif
 	@${ECHO_MSG} "===>  Cleaning for ${PKGNAME}"
@@ -1750,7 +1773,7 @@ clean-depends:
 	|| defined(DEPENDS) || defined(RUN_DEPENDS)
 	@for dir in `${ECHO} ${FETCH_DEPENDS} ${BUILD_DEPENDS} ${DEPENDS} ${RUN_DEPENDS} | ${TR} '\040' '\012' | ${SED} -e 's/^[^:]*://' -e 's/:.*//' | sort -u`; do \
 		if [ -d $$dir ] ; then \
-			(cd $$dir && ${MAKE} NOCLEANDEPENDS=yes clean clean-depends); \
+			(cd $$dir && ${MAKE} CLEANDEPENDS=${CLEANDEPENDS} clean ); \
 		fi \
 	done
 .endif
