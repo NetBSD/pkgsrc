@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.134 2002/06/26 05:52:47 grant Exp $
+# $NetBSD: Makefile,v 1.135 2002/06/30 02:10:42 jschauma Exp $
 #
 
 COMMENT=	Electronic mail utilities
 
 SUBDIR+=	autorespond
 SUBDIR+=	balsa
+SUBDIR+=	bbmail
 SUBDIR+=	bulk_mailer
 SUBDIR+=	coolmail
 SUBDIR+=	courier-auth
