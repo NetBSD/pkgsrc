@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.2 1999/12/26 18:39:02 itojun Exp $
+
 --- rblcheck.c.orig	Thu Aug 20 00:47:03 1998
 +++ rblcheck.c	Sun May  2 12:39:29 1999
 @@ -79,6 +79,7 @@

@@ -1,3 +1,4 @@
+@comment $NetBSD: PLIST,v 1.2 1999/12/26 18:39:03 itojun Exp $
 bin/rblcheck
 share/doc/rblcheck/BUGS
 share/doc/rblcheck/CHANGES
