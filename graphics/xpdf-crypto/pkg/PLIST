@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/09/25 20:39:46 fredb Exp $
+bin/xpdf
+bin/pdftops
+bin/pdftotext
+bin/pdfinfo
+bin/pdftopbm
+bin/pdfimages
+man/man1/xpdf.1
+man/man1/pdftops.1
+man/man1/pdftotext.1
+man/man1/pdfinfo.1
+man/man1/pdftopbm.1
+man/man1/pdfimages.1
+man/cat1/xpdf.0
+man/cat1/pdftops.0
+man/cat1/pdftotext.0
+man/cat1/pdfinfo.0
+man/cat1/pdftopbm.0
+man/cat1/pdfimages.0
