@@ -1,19 +1,20 @@
-# $NetBSD: Makefile,v 1.12 2002/04/04 07:41:07 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2002/09/21 08:08:18 jlam Exp $
 
 PKGNAME=		tk-postgresql-${BASE_VERS}
 COMMENT=		Tk interface to PostgreSQL
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
+USE_X11=		YES
 
 .include "../../databases/postgresql/Makefile.common"
 
-CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_DIR}
+CONFIGURE_ARGS+=	--with-openssl=${SSLBASE}
 CONFIGURE_ARGS+=	--with-tcl
 CONFIGURE_ARGS+=	--with-tk
-CONFIGURE_ARGS+=	--with-tclconfig=${BUILDLINK_DIR}/lib
-CONFIGURE_ARGS+=	--with-tkconfig=${BUILDLINK_DIR}/lib
+CONFIGURE_ARGS+=	--with-tclconfig=${BUILDLINK_PREFIX.tcl}/lib
+CONFIGURE_ARGS+=	--with-tkconfig=${BUILDLINK_PREFIX.tk}/lib
 CONFIGURE_ENV+=		TCLSH="${TCLSH}"
-TCLSH=			${LOCALBASE}/bin/tclsh
+TCLSH=			${BUILDLINK_PREFIX.tcl}/bin/tclsh
 MAKE_ENV+=		INSTALLED_LIBPQ=1 INSTALLED_LIBPGTCL=1
 
 DIRS_TO_BUILD=		src/bin/pgtclsh
@@ -36,8 +37,8 @@ post-install:
 	${GTAR} zxCf ${PREFIX}/man ${WRKSRC}/doc/man.tar.gz		\
 		`${SED} -e "s|#.*||" ${FILESDIR}/man.tk`
 
-.include "../../databases/postgresql-lib/buildlink.mk"
-.include "../../databases/tcl-postgresql/buildlink.mk"
-.include "../../x11/tk/buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
+.include "../../databases/postgresql-lib/buildlink2.mk"
+.include "../../databases/tcl-postgresql/buildlink2.mk"
+.include "../../x11/tk/buildlink2.mk"
+
 .include "../../mk/bsd.pkg.mk"
