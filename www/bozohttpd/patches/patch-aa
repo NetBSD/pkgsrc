@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.11 2004/02/24 13:39:57 wiz Exp $
+
+--- bozohttpd.c.orig	Wed Feb 18 14:11:57 2004
++++ bozohttpd.c
+@@ -1988,8 +1988,6 @@ print_cgi_header:
+ 	} else
+ 		debug((DEBUG_OBESE, "process_cgi:  not-writing HTTP header .."));
+ 
+-	/* XXX we should be printing 200 here? */
+-	(void)bozoprintf("%s 200 Here it is\r\n", request->hr_proto);
+ 	debug((DEBUG_FAT, "process_cgi: going exec %s, %s %s %s",
+ 	    path, argv[0], strornull(argv[1]), strornull(argv[2])));
+ 
