@@ -1,0 +1,14 @@
+*** Makefile.old	Wed Jul 17 22:02:20 1991
+--- Makefile	Wed Dec 28 04:39:21 1994
+***************
+*** 1,5 ****
+! 
+! CC=cc 
+  
+  all:	      unarj
+  
+--- 1,4 ----
+! CFLAGS+=-DUNIX
+  
+  all:	      unarj
+  
