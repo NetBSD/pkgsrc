@@ -1,13 +1,13 @@
-# $NetBSD: DEINSTALL,v 1.1 2004/07/21 17:45:13 jlam Exp $
+# $NetBSD: DEINSTALL,v 1.2 2004/07/21 17:55:13 jlam Exp $
 
 case ${STAGE} in
 POST-DEINSTALL)
 	if [ -d @MYSQL_DATADIR@ ]; then
 		${CAT} << EOF
 ===========================================================================
-If you won't be using ${PKGNAME} any longer, you may want to remove
-
-  * the following directories:
+If you won't be using ${PKGNAME} any longer, and you don't
+wish to preserve your existing databases, then you may remove the
+following directory:
 
 	@MYSQL_DATADIR@
 ===========================================================================
