@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.8 2003/06/02 01:18:26 jschauma Exp $
+# $NetBSD: Makefile,v 1.9 2003/07/07 22:07:44 jtb Exp $
 #
 
 DISTNAME=		Math-Pari-2.001804
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		1
+PKGREVISION=		2
 SVR4_PKGNAME=		p5mpa
 CATEGORIES=		math perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Math/}
 
 MAINTAINER=		tech-pkg@netbsd.org
-#HOMEPAGE=	
+#HOMEPAGE=
 COMMENT=		perl5 interface to the pari math library
 
 DEPENDS+=		pari-[0-9]*:../../math/pari
@@ -18,6 +18,7 @@ DEPENDS+=		pari-[0-9]*:../../math/pari
 
 USE_BUILDLINK2=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Math/Pari/.packlist
+TEST_TARGET=		# the tests need looking at
 
 # XXX: could be improved...
 post-extract:
