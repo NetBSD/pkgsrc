@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.105 2001/07/13 21:58:08 itojun Exp $
+# $NetBSD: Makefile,v 1.106 2001/08/13 10:32:39 zuntum Exp $
 #
 
 COMMENT=	System utilities
@@ -17,6 +17,7 @@ SUBDIR+=	c++rt0
 SUBDIR+=	cdrdao
 SUBDIR+=	cdrecord
 SUBDIR+=	cfengine
+SUBDIR+=	checkpassword
 SUBDIR+=	cpogm
 SUBDIR+=	crashme
 SUBDIR+=	daemontools
