@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1659 2003/03/16 10:21:48 kleink Exp $
+$NetBSD: CHANGES,v 1.1660 2003/03/16 14:52:25 cjep Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1159,3 +1159,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated samba to 2.2.8 [martti 2003-03-16]
 	Updated vim to 6.1.405 [martti 2003-03-16]
 	Updated scmxx to 0.6.3.6 [kleink 2003-03-16]
+	Updated nawk to 20030314 [cjep 2003-03-16]
