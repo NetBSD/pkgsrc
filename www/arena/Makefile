@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2002/10/21 13:27:24 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2003/04/10 20:07:20 grant Exp $
 
 DISTNAME=		arena-0.3.62
 PKGREVISION=		2
@@ -29,26 +29,25 @@ MAKEFILE=		makefile
 # Arena requires libwww's "config.h" header - it is installed as "wwwconf.h",
 # so make a symlink in ${WRKSRC}
 pre-configure:
-	for c in ${LOCALBASE}/include/w3c-libwww/wwwconf.h \
-	    ${LOCALBASE}/include/wwwconf.h; do \
-	  if [ -f $$c ]; then \
-	    ${LN} -sf $$c ${WRKSRC}/config.h; \
- 	  fi; \
+	for c in ${LOCALBASE}/include/w3c-libwww/wwwconf.h ${LOCALBASE}/include/wwwconf.h; do \
+		if [ -f $$c ]; then \
+			${LN} -sf $$c ${WRKSRC}/config.h; \
+		fi; \
 	done
 
 do-install:
 	${INSTALL_PROGRAM} \
-	    ${WRKSRC}/Arena/${MACHINE_GNU_PLATFORM:C/.*-.*-//}/arena \
-	    ${PREFIX}/bin/
+		${WRKSRC}/Arena/${MACHINE_GNU_PLATFORM:C/.*-.*-//}/arena \
+		${PREFIX}/bin/
 	${INSTALL_DATA} ${WRKSRC}/Arena/Source/arenarc ${PREFIX}/share/examples/
 	if [ ! -f ${LOCALBASE}/etc/arenarc ]; then \
-	  ${CP} ${PREFIX}/share/examples/arenarc ${LOCALBASE}/etc/; \
+		${CP} ${PREFIX}/share/examples/arenarc ${LOCALBASE}/etc/; \
 	fi
 	${INSTALL_DATA_DIR} ${PREFIX}/share/locale/en/LC_MESSAGES
 	msgfmt --output-file=${WRKDIR}/Arena.gmo \
-	    ${WRKSRC}/Arena/LC_MESSAGES/en/Arena.po
+		${WRKSRC}/Arena/LC_MESSAGES/en/Arena.po
 	${INSTALL_DATA} ${WRKDIR}/Arena.gmo \
-	    ${PREFIX}/share/locale/en/LC_MESSAGES/
+		${PREFIX}/share/locale/en/LC_MESSAGES/
 	${INSTALL_DATA} ${WRKSRC}/Arena/doc/arena.man ${PREFIX}/man/man1/arena.1
 
 .include "../../mk/bsd.prefs.mk"
