@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.6 1999/03/28 07:55:05 rh Exp $
+$NetBSD: patch-ab,v 1.7 1999/07/07 23:11:19 tron Exp $
 
 --- Imakefile.orig	Sun Mar 21 23:36:26 1999
-+++ Imakefile	Sun Mar 28 09:14:27 1999
++++ Imakefile	Thu Jul  8 00:55:07 1999
 @@ -96,9 +96,9 @@
  XCOMM   to link against symbols inside xanim.
  XCOMM 
@@ -35,7 +35,7 @@ $NetBSD: patch-ab,v 1.6 1999/03/28 07:55:05 rh Exp $
  
  
  
-@@ -186,13 +186,29 @@
+@@ -186,13 +186,35 @@
  XCOMM  
  XCOMM  Again don't use these if you are using the dynamically loadable modules.
  XCOMM 
@@ -46,21 +46,27 @@ $NetBSD: patch-ab,v 1.6 1999/03/28 07:55:05 rh Exp $
 -XCOMM XA_IV32_LIB = mods/xa2.1_iv32_linuxELF.o
 -XCOMM XA_CVID_LIB = mods/xa2.0_cvid_linuxELF.o
 -XCOMM XA_CYUV_LIB = mods/xa1.0_cyuv_linuxELF.o
-+.if (${MACHINE_ARCH} == "i386") || (${MACHINE_ARCH} == "m68k") || (${MACHINE_ARCH} == "sparc")
++#include "objarch.tmpl"
++
++.if (${MACHINE_OBJ_ARCH} == "i386-a.out") || (${MACHINE_OBJ_ARCH} == "i386-ELF") || (${MACHINE_OBJ_ARCH} == "m68k-a.out") || (${MACHINE_OBJ_ARCH} == "sparc-a.out")
 +XA_IV32_DEF = -DXA_IV32 
 +XA_CVID_DEF = -DXA_CVID
 +XA_CYUV_DEF = -DXA_CYUV
 +.endif
 +XCOMM
-+.if (${MACHINE_ARCH} == "i386")
++.if (${MACHINE_OBJ_ARCH} == "i386-a.out")
 +XA_IV32_LIB = mods/xa2.0_iv32_netbsd386.o
 +XA_CVID_LIB = mods/xa2.0_cvid_netbsd386.o
 +XA_CYUV_LIB = mods/xa1.0_cyuv_netbsd386.o
-+.elif (${MACHINE_ARCH} == "m68k")
++.elif (${MACHINE_OBJ_ARCH} == "i386-ELF")
++XA_IV32_LIB = mods/xa2.0_iv32_linuxELF.o
++XA_CVID_LIB = mods/xa2.0_cvid_linuxELF.o
++XA_CYUV_LIB = mods/xa1.0_cyuv_linuxELF.o
++.elif (${MACHINE_OBJ_ARCH} == "m68k-a.out")
 +XA_IV32_LIB = mods/xa2.0_iv32_netbsd68k.o
 +XA_CVID_LIB = mods/xa2.0_cvid_netbsd68k.o
 +XA_CYUV_LIB = mods/xa1.0_cyuv_netbsd68k.o
-+.elif (${MACHINE_ARCH} == "sparc")
++.elif (${MACHINE_OBJ_ARCH} == "sparc-a.out")
 +XA_IV32_LIB = mods/xa2.0_iv32_sparcCOFF.o
 +XA_CVID_LIB = mods/xa2.0_cvid_sparcCOFF.o
 +XA_CYUV_LIB = mods/xa1.0_cyuv_sparcAOUT.o
@@ -72,7 +78,7 @@ $NetBSD: patch-ab,v 1.6 1999/03/28 07:55:05 rh Exp $
  XCOMM 
  XCOMM ##########################
  XCOMM  NOTE: SGI Machines Only: 
-@@ -267,8 +283,8 @@
+@@ -267,8 +289,8 @@
  XCOMM  XA_AUDIO_DEFS =
  XCOMM 
  XCOMM ## -- Linux PCs ---------------------------------------------------------
@@ -83,7 +89,7 @@ $NetBSD: patch-ab,v 1.6 1999/03/28 07:55:05 rh Exp $
  XCOMM 
  XCOMM  -- Linux PC's with OLD Rev sound drivers -------------------------------
  XCOMM  XA_AUDIO_DEFS = -DXA_LINUX_AUDIO -DXA_LINUX_OLDER_SND
-@@ -307,7 +323,7 @@
+@@ -307,7 +329,7 @@
  XCOMM  XA_AUDIO_DEFS = -DXA_SONY_AUDIO
  XCOMM 
  XCOMM  -- NetBSD-current (as of 30/April 1995)---------------------------------
@@ -92,7 +98,7 @@ $NetBSD: patch-ab,v 1.6 1999/03/28 07:55:05 rh Exp $
  XCOMM 
  XCOMM  -- QNX 4.2 PC's --------------------------------------------------------
  XCOMM  XA_AUDIO_DEFS = -DXA_LINUX_AUDIO -DXA_SELECT
-@@ -465,7 +481,7 @@
+@@ -465,7 +487,7 @@
  
  PROGRAMS = $(XANIM)
  
