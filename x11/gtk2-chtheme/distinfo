@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2005/01/21 20:17:58 kristerw Exp $
+$NetBSD: distinfo,v 1.3 2005/02/23 17:36:12 wiz Exp $
 
 SHA1 (gtk-chtheme-0.3.1.tar.bz2) = dbea31f4092877e786fe040fae1374238fada94a
+RMD160 (gtk-chtheme-0.3.1.tar.bz2) = 5d080e905fc5d60c085e8c46d9338ddad805f38c
 Size (gtk-chtheme-0.3.1.tar.bz2) = 18205 bytes
 SHA1 (patch-aa) = ac7fa718bf0cdd0b36382761b8fd716cf00e6bad
 SHA1 (patch-ab) = 084f5591a47e5a45c296a8abc5ae913c2c5723e9

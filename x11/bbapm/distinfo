@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.3 2003/12/03 17:41:21 gson Exp $
+$NetBSD: distinfo,v 1.4 2005/02/23 17:36:09 wiz Exp $
 
-MD5 (bbapm-0.0.1.tar.gz) = 4d2629959bd907696c7765b7c34bc54f
-MD5 (bbapm-0.0.1-freebsd-patch-2.diff) = 8b9242c0fa6067d9d7c10dcbdc0cb8c7
+SHA1 (bbapm-0.0.1.tar.gz) = 9ab102dd4289962ae2b5bd10a73a394e349da4cf
+RMD160 (bbapm-0.0.1.tar.gz) = dfcec30fe55b6b5443cfb188527f16c1b2a50fd7
+Size (bbapm-0.0.1.tar.gz) = 61376 bytes
 SHA1 (patch-aa) = 82be3cca979f6a8ecef1c15f85af44865c998587
 SHA1 (patch-ab) = 147dd5cfebdbbd62440d0303959fbc2e369bb203
 SHA1 (patch-ac) = d35c171f83a2eb622804111a2ee34722b796a710

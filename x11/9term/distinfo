@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.5 2001/12/15 20:37:53 agc Exp $
+$NetBSD: distinfo,v 1.6 2005/02/23 17:36:09 wiz Exp $
 
 SHA1 (9term.1.6.3.tar.gz) = deb6248c9e441934ad8af522871034e24cb2bf5b
+RMD160 (9term.1.6.3.tar.gz) = cb5ba3c70c9d29b5c0cde2692b0bf56be05614fa
 Size (9term.1.6.3.tar.gz) = 135169 bytes
 SHA1 (patch-aa) = 8e06b589d762d0fd349b66a0e20a51f1ac728fd5
 SHA1 (patch-ab) = c79dc4ef6bbc75112f8fe1e9ef3dafeb380a2d09

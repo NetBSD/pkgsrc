@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2002/01/09 14:46:51 drochner Exp $
+$NetBSD: distinfo,v 1.5 2005/02/23 17:36:11 wiz Exp $
 
 SHA1 (gtk+extra-0.99.17.tar.gz) = 5dec008ef56469024f51d6631856b5b31f2158e7
+RMD160 (gtk+extra-0.99.17.tar.gz) = f306384bdd15f64d2009d3b6a4183e6b27f90e51
 Size (gtk+extra-0.99.17.tar.gz) = 426952 bytes
 SHA1 (patch-aa) = d798284aa820f24dec4d3764761810e6c4503122
 SHA1 (patch-ab) = 2206f755a7d9d4494e75d201413f1caca5c8ecf3

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2004/08/15 03:25:24 minskim Exp $
+$NetBSD: distinfo,v 1.5 2005/02/23 17:36:10 wiz Exp $
 
 SHA1 (FileRunner-2.5.1.tar.gz) = ef607b3229491c1a6608fac67ce584d01a50c69d
+RMD160 (FileRunner-2.5.1.tar.gz) = 94c0dd841aac617c2b5632975e4c7fa1fe149c11
 Size (FileRunner-2.5.1.tar.gz) = 122795 bytes
 SHA1 (patch-aa) = 3e929372fee6620c23022e5eaecd33830d9151f7
 SHA1 (patch-ab) = 88076263693fc7e379adccd6dac4c17e66519d46

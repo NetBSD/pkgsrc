@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/12/04 20:39:16 jmmv Exp $
+$NetBSD: distinfo,v 1.2 2005/02/23 17:36:16 wiz Exp $
 
 SHA1 (lablgtk-2.4.0.tar.gz) = 28606d4ad6f4c798b544d227c26ca3dfb2239472
+RMD160 (lablgtk-2.4.0.tar.gz) = 7d27e9e6f9ba329441085073dff4f5617c6fbfeb
 Size (lablgtk-2.4.0.tar.gz) = 637739 bytes
