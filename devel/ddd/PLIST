@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/02/18 15:14:08 seb Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/09/30 09:55:41 tron Exp $
 bin/ddd
 @unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/ddd-themes.info
 info/ddd-themes.info
@@ -20,7 +20,6 @@ info/ddd.info-7
 info/ddd.info-8
 info/ddd.info-9
 @exec ${INSTALL_INFO} --info-dir=%D/info %D/info/ddd.info
-lib/libiberty.a
 man/man1/ddd.1
 share/${PKGNAME}/COPYING
 share/${PKGNAME}/NEWS
