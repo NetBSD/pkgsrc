@@ -1,4 +1,4 @@
-# $NetBSD: HACKS,v 1.14 2003/03/15 02:15:57 dmcmahill Exp $
+# $NetBSD: HACKS,v 1.15 2003/06/01 02:02:49 grant Exp $
 #
 # This file is intended to document workarounds for currently unsolved
 # (mostly) compiler bugs.
@@ -357,4 +357,14 @@ file	graphics/ImageMagick/Makefile : 1.90
 descr
 	When compiling with -O2, gcc spins at one file. Going back to
 	-O fixes this. (The usual story...)
+kcah
+
+hack	zip -O bug
+mdate	1 Jun 2003
+who	grant
+port	powerpc
+file	archivers/zip/Makefile : 1.33
+descr
+	When compiling with -O or -O2, gcc dies with an internal
+	compiler error on crypt.c. Turning off optimization fixes this.
 kcah
