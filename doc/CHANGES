@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5885 2004/05/09 23:47:51 wiz Exp $
+$NetBSD: CHANGES,v 1.5886 2004/05/10 00:18:08 recht Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2438,3 +2438,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated roundup to 0.7.0 [recht 2004-05-09]
 	Updated gtk-thinice-engine to 2.0.2nb5 [snj 2004-05-09]
 	Updated kdrill to 5.6.11nb2 [wiz 2004-05-09]
+	Updated py-gnome2 to 2.0.2 [recht 2004-05-10]
+	Updated doxygen to 1.3.7 [recht 2004-05-10]
