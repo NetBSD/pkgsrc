@@ -1,0 +1,17 @@
+The Bywater BASIC Interpreter (bwBASIC) implements a large superset
+of the ANSI Standard for Minimal BASIC (X3.60-1978) and a significant
+subset of the ANSI Standard for Full BASIC (X3.113-1987) in C. It also
+offers shell programming facilities as an extension of BASIC. bwBASIC
+seeks to be as portable as possible.
+
+Originally written by Ted A. Campbell, and released under the GPL. It
+was posted to comp.sources.misc, volume 40. It was hosted for a while at
+ftp.eng.umd.edu.  
+
+Patched by Jon B. Volkoff. 
+Version 2.20 was released 25 November 1995
+Patch 1: 15 March 1996
+Patch 2: 11 October 1997
+
+Patch 2 includes new files for UNIX ncurses interface, compliments of
+L.C. Benschop, Eindhoven, The Netherlands.
