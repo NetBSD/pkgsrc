@@ -1,0 +1,33 @@
+--- xa_audio.c.orig	Sun Jan 26 17:22:03 1997
++++ xa_audio.c	Sun Feb 15 21:34:01 1998
+@@ -4480,6 +4480,22 @@
+   a_info.blocksize = 1024;
+   ioctl(devAudio, AUDIO_SETINFO, &a_info);
+   AUDIO_INITINFO(&a_info);
++#ifdef AUDIO_ENCODING_SLINEAR
++  /* Use new encoding names */
++  a_info.play.encoding = AUDIO_ENCODING_SLINEAR;
++  ioctl(devAudio, AUDIO_SETINFO, &a_info);
++  AUDIO_INITINFO(&a_info);
++  a_info.mode = AUMODE_PLAY | AUMODE_PLAY_ALL;
++  ioctl(devAudio, AUDIO_SETINFO, &a_info);
++  AUDIO_INITINFO(&a_info);
++  a_info.play.precision = 16;
++  if (ioctl(devAudio, AUDIO_SETINFO, &a_info) < 0) {
++    AUDIO_INITINFO(&a_info);
++    a_info.play.encoding = AUDIO_ENCODING_ULINEAR;
++    a_info.play.precision = 8;
++    ioctl(devAudio, AUDIO_SETINFO, &a_info);
++  }
++#else
+   a_info.play.encoding = AUDIO_ENCODING_PCM16;
+   ioctl(devAudio, AUDIO_SETINFO, &a_info);
+   AUDIO_INITINFO(&a_info);
+@@ -4488,6 +4504,7 @@
+   AUDIO_INITINFO(&a_info);
+   a_info.play.precision = 16;
+   ioctl(devAudio, AUDIO_SETINFO, &a_info);
++#endif
+   AUDIO_INITINFO(&a_info);
+   a_info.play.sample_rate = 11025;
+   ioctl(devAudio, AUDIO_SETINFO, &a_info);
