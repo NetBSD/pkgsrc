@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.1.1.1 2000/07/25 12:44:34 wulf Exp $
+$NetBSD: patch-ad,v 1.2 2005/02/19 15:40:54 wiz Exp $
 
---- interp/random.h.orig	Mon Jul 24 00:18:41 2000
-+++ interp/random.h	Mon Jul 24 00:19:01 2000
-@@ -18,7 +18,7 @@
+--- interp/random.h.orig	1999-08-31 18:19:18.000000000 +0200
++++ interp/random.h
+@@ -18,7 +18,7 @@ extern float strand();
     /* strand();                                                        */
     /* returns a randomly distributed 'random' real between 0 & 2^31 -1 */
  
