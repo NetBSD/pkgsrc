@@ -1,0 +1,10 @@
+$NetBSD: patch-ai,v 1.3 2001/04/09 03:09:12 jtb Exp $
+
+--- /dev/null	Mon Apr  9 02:50:05 2001
++++ MAIN__.c
+@@ -0,0 +1,5 @@
++void
++MAIN__ (void)
++{
++  abort();
++}
