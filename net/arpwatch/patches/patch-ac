@@ -1,29 +1,7 @@
-$NetBSD: patch-ac,v 1.5 2001/08/24 11:37:08 abs Exp $
+$NetBSD: patch-ac,v 1.6 2002/08/05 17:54:04 wiz Exp $
 
 --- arpwatch.8.orig	Sun Oct  8 21:31:28 2000
 +++ arpwatch.8
-@@ -27,6 +27,8 @@
- .na
- .B arpwatch
- [
-+.B -a
-+] [
- .B -dN
- ] [
- .B -f
-@@ -55,6 +57,12 @@
- to listen for arp packets on a local ethernet interface.
- .LP
- The
-+.B -a
-+flag supress check for local network. By default, arp traffic for IP addresses
-+which don't belong to the local network are logged as bogons, and not added
-+to the database.
-+.LP
-+The
- .B -d
- flag is used enable debugging. This also inhibits forking into the
- background and emailing the reports. Instead, they are sent to
 @@ -152,7 +160,7 @@
  .na
  .nh
