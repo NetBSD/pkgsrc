@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.8 2004/12/20 11:31:12 grant Exp $
+# $NetBSD: Makefile,v 1.9 2005/02/18 13:57:08 wiz Exp $
 
-DISTNAME=	libxml-perl-0.07
-PKGNAME=	p5-libxml-0.07
+DISTNAME=	libxml-perl-0.08
+PKGNAME=	p5-libxml-0.08
 SVR4_PKGNAME=	p5lxm
-PKGREVISION=	1
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=XML/}
 
 MAINTAINER=	tech-pkg@NetBSD.org
-HOMEPAGE=	http://www.bitsko.slc.ut.us/
+HOMEPAGE=	http://search.cpan.org/dist/libxml-perl/
 COMMENT=	Perl module collection for working with XML
 
 DEPENDS+=	p5-XML-Parser>=2.29:../../textproc/p5-XML-Parser
