@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.284 2003/01/29 08:50:11 grant Exp $
+# $NetBSD: Packages.txt,v 1.285 2003/02/03 11:13:54 jmmv Exp $
 ###########################################################################
 
 			==========================
@@ -41,7 +41,7 @@ derived from FreeBSD.
 This document is divided into two parts.  The first, "User's Guide",
 describes how one can use one of the packages in the Package
 Collection, either by installing a precompiled binary package, or
-by building your own copy using the NetBSD package system.  The
+by building one's copy using the NetBSD package system.  The
 second part, "Package Constructor's Guide", explains how to prepare
 a package so it can be easily built by other NetBSD users without
 knowing about the package's building details.
@@ -102,8 +102,7 @@ is a description of all the terminology used within this document:
  ==============
 
 Right now this document is written in plain ASCII text, and there's not
-much typography applied here. Future versions may move to something like
-HTML or DocBook, which have better ways theres.
+much typography applied here. It's beeing moved to DocBook.
 
 When giving examples for commands, shell prompts are used to show if the
 command should/can be issued as root, or if "normal" user privileges are
@@ -574,7 +573,7 @@ steps:
 
 This will just jump inside the sandbox and start thrash^Wbuilding.
 At the end of the build, mail will be sent with the results of the build.
-Created binary pkgs will be in /usr/sandbox/usr/pkgsrc/packages (whereever
+Created binary pkgs will be in /usr/sandbox/usr/pkgsrc/packages (wherever
 that points/mounts to/from).
 
 
@@ -606,7 +605,7 @@ on each CD in the collection, then you need to create a directory which
 contains these files.  For example
 
 	# mkdir /tmp/common
-	# echo "This is a README" > /tmp/commmon/README
+	# echo "This is a README" > /tmp/common/README
 	# echo "Another file" > /tmp/common/COPYING
 	# mkdir /tmp/common/bin
 	# echo "#!/bin/sh" > /tmp/common/bin/myscript
@@ -1566,8 +1565,8 @@ perform the equivalent of:
    DEPENDS. Useful if out of date DEPENDS are causing build problems.
 
  * check-shlibs:
-   After a package is installed, check all it's binaries and (on ELF 
-   platforms) shared libraries if they find the shared libs they need.
+   After a package is installed, check all its binaries and (on ELF 
+   platforms) shared libraries to see if they find the shared libs they need.
    Run by default if PKG_DEVELOPER is set in /etc/mk.conf.
 
  * print-PLIST:
@@ -1727,7 +1726,7 @@ debugging aids.
  * Edit the Makefile as requested.
  * Fill in DESCR
  * ``make configure''
- * Add any dependancies glimpsed from the configure step to the package's
+ * Add any dependencies glimpsed from the configure step to the package's
    Makefile.
  * Make the package compile, doing multiple rounds of
 
@@ -2000,10 +1999,10 @@ ambiguous matches such as tk-postgresql matching a tk-* DEPEND.
 
 (c) If your package needs some executable to be able to run correctly, this
 is specified using the DEPENDS definition. The pkgsrc/print/lyx package needs
-to be able to execute the latex binary from the teTex package when it runs,
+to be able to execute the latex binary from the teTeX package when it runs,
 and that is specified:
 
-	DEPENDS+=        teTex-[0-9]*:../../print/teTeX 
+	DEPENDS+=        teTeX-[0-9]*:../../print/teTeX 
 
 The comment about wildcard dependencies from previous paragraph
 applies here, too.
@@ -2269,7 +2268,7 @@ prior to package installation.
 
 Some source files trigger bugs in the compiler, based on combinations
 of compiler version and architecture and almost always relation to
-optimsation being enabled.  Common symptoms are gcc internal errors
+optimisation being enabled.  Common symptoms are gcc internal errors
 or never finishing compiling a file.
 
 Typically a workaround involves testing the MACHINE_ARCH and compiler
@@ -2313,7 +2312,7 @@ configure and build process of the package to use known binaries for these
 commands.
 
 If a minimum version of makeinfo and install-info commands are required,
-define TEXINFO_REQD in the package's Makefile to this mininum version.
+define TEXINFO_REQD in the package's Makefile to this minimum version.
 
 If a package is not well behaved (i.e., it does not pick MAKEINFO or
 INSTALL_INFO in the environment at configure or build time) you should do
