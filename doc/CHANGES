@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4428 2004/01/11 21:38:00 kim Exp $
+$NetBSD: CHANGES,v 1.4429 2004/01/11 23:07:58 grant Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -180,3 +180,7 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated py-m2crypto to 0.12 [jschauma 2004-01-11]
 	Updated gaim to 0.75 [jmmv 2004-01-11]
 	Updated logtime to 1.1 [kim 2004-01-11]
+	Moved tcsh-static to static-tcsh [grant 2004-01-11]
+	Moved tcsh-standalone to standalone-tcsh [grant 2004-01-11]
+	Moved bash2-static to static-bash2 [grant 2004-01-11]
+	Moved ast-ksh-static to static-ast-ksh [grant 2004-01-11]
