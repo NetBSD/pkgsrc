@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2000/10/19 12:07:49 abs Exp $
+
+--- setdisplay/Makefile.orig	Tue Oct 17 18:44:47 2000
++++ setdisplay/Makefile
+@@ -1,6 +1,6 @@
+ PROG=setdisplay
+ SRCS=setdisplay.c
+-BINDIR=/usr/local/bin
+-MANDIR=/usr/local/man
++BINDIR=${PREFIX}/bin
++MANDIR=${PREFIX}/man
+ 
+ .include <bsd.prog.mk>

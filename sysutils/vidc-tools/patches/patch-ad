@@ -1,0 +1,11 @@
+$NetBSD: patch-ad,v 1.1.1.1 2000/10/19 12:07:49 abs Exp $
+
+--- setkbd/Makefile.orig	Tue Oct 17 18:44:51 2000
++++ setkbd/Makefile
+@@ -1,5 +1,5 @@
+ PROG=	setkbd
+ SRCS=	setkbd.c
+-BINDIR= /usr/local/bin
++BINDIR=${PREFIX}/bin
+ NOMAN=
+ .include <bsd.prog.mk>
