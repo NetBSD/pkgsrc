@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9315 2005/02/26 01:58:20 wiz Exp $
+$NetBSD: CHANGES,v 1.9316 2005/02/26 10:08:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1112,3 +1112,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Added writer2latex-0.4b2 [rh 2005-02-26]
 	Updated ap2-auth-ldap to 3.3 [adrianp 2005-02-26]
 	Updated p5-DateTime to 0.27 [wiz 2005-02-26]
+	Updated links to 2.1.0.17 [wiz 2005-02-26]
+	Updated links-gui to 2.1.0.17 [wiz 2005-02-26]
