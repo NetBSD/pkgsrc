@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1998/11/13 01:43:24 frueauf Exp $
+# $NetBSD: Makefile,v 1.6 1999/05/07 07:11:16 ross Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1998/06/16 16:50:06 dburr Exp
 #
 
@@ -8,8 +8,6 @@ MASTER_SITES=	ftp://ftp.ge.ucl.ac.uk/pub/mkhfs/
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.ps.ucl.ac.uk/~jcpearso/mkhybrid.html
-
-NOT_FOR_ARCHS=	alpha	#gcc lossage
 
 GNU_CONFIGURE=	yes
 
