@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2004/04/23 22:07:56 reed Exp $
+@comment $NetBSD: PLIST,v 1.9 2004/06/05 13:16:35 taca Exp $
 bin/findsmb
 bin/make_printerdef
 bin/make_smbcodepage
@@ -168,6 +168,8 @@ share/examples/samba/LDAP/smbldap-tools/smbldap-usershow.pl
 share/examples/samba/LDAP/smbldap-tools/smbldap_conf.pm
 share/examples/samba/LDAP/smbldap-tools/smbldap_tools.pm
 share/examples/samba/README
+share/examples/samba/adduser.sh
+share/examples/samba/deluser.sh
 share/examples/samba/misc/convert_smbpasswd
 share/examples/samba/misc/extra_smbstatus
 share/examples/samba/misc/modify_samba_config.pl
