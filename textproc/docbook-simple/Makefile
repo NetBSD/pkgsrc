@@ -1,16 +1,17 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/12/13 21:19:18 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2003/12/23 22:25:29 wiz Exp $
 #
 
-DISTNAME=	docbook-simple-1.0
+DISTNAME=	docbook-simple-1.1b1
 WRKSRC=		${WRKDIR}
 CATEGORIES=	textproc
-MASTER_SITES=	http://www.oasis-open.org/docbook/xml/simple/1.0/
+MASTER_SITES=	http://docbook.org/xml/simple/1.1b1/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	minskim@bawi.org
-HOMEPAGE=	http://www.oasis-open.org/docbook/xml/simple/
+HOMEPAGE=	http://docbook.org/xml/simple/
 COMMENT=	Simplified DocBook XML DTD
 
+NO_CONFIGURE=	YES
 NO_BUILD=	YES
 
 INSTDIR=	${DESTDIR}${PREFIX}/share/xml
