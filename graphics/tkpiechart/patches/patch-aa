@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/06/07 22:45:49 tron Exp $
+
+--- instapkg.tcl.orig	Tue Jun  8 00:38:40 1999
++++ instapkg.tcl	Tue Jun  8 00:38:59 1999
+@@ -1,6 +1,6 @@
+ #!/bin/sh
+ # the next line restarts using the interpreter \
+-exec tclsh "$0" "$@"
++exec tclsh8.0 "$0" "$@"
+ 
+ # $Id: patch-aa,v 1.1.1.1 1999/06/07 22:45:49 tron Exp $
+ 
