@@ -1,12 +1,18 @@
-$NetBSD: patch-ab,v 1.21 2001/05/09 10:24:11 agc Exp $
+$NetBSD: patch-ab,v 1.22 2001/06/14 14:55:47 skrll Exp $
 
---- ltmain.sh.orig	Mon Feb 19 05:05:23 2001
-+++ ltmain.sh	Wed May  9 11:13:29 2001
-@@ -484,7 +484,14 @@
+--- ltmain.sh.orig	Wed May 23 05:05:43 2001
++++ ltmain.sh
+@@ -494,11 +494,18 @@
+     # command doesn't match the default compiler.
+     if test -n "$available_tags" && test -z "$tagname"; then
+       case $base_compile in
+-      "$CC "*) ;;
++      "$CC "*) tagname=CC ;;
        # Blanks in the command may have been stripped by the calling shell,
        # but not from the CC environment variable when ltconfig was run.
-       "`$echo $CC` "*) ;;
+-      "`$echo $CC` "*) ;;
 -      *)
++      "`$echo $CC` "*) tagname=CC ;;
 +      *)   base_compiler=`echo $base_compile | awk '{ print $1 }'`
 +	   case $base_compiler in
 +	   *cc)	tagname=CC ;;
@@ -18,7 +24,7 @@ $NetBSD: patch-ab,v 1.21 2001/05/09 10:24:11 agc Exp $
          for z in $available_tags; do
            if grep "^### BEGIN LIBTOOL TAG CONFIG: $z$" < "$0" > /dev/null; then
  	    # Evaluate the configuration.
-@@ -514,8 +521,6 @@
+@@ -528,8 +535,6 @@
  #        else
  #          echo "$modename: using $tagname tagged configuration"
          fi
@@ -27,11 +33,17 @@ $NetBSD: patch-ab,v 1.21 2001/05/09 10:24:11 agc Exp $
      fi
  
      objname=`$echo "X$obj" | $Xsed -e 's%^.*/%%'`
-@@ -1423,7 +1428,14 @@
+@@ -1528,11 +1533,18 @@
+     # command doesn't match the default compiler.
+     if test -n "$available_tags" && test -z "$tagname"; then
+       case $base_compile in
+-      "$CC "*) ;;
++      "$CC "*) tagname=CC ;;
        # Blanks in the command may have been stripped by the calling shell,
        # but not from the CC environment variable when ltconfig was run.
-       "`$echo $CC` "*) ;;
+-      "`$echo $CC` "*) ;;
 -      *)
++      "`$echo $CC` "*) tagname=CC ;;
 +      *)   base_compiler=`echo $base_compile | awk '{ print $1 }'`
 +	   case $base_compiler in
 +	   *cc)	tagname=CC ;;
@@ -43,7 +55,7 @@ $NetBSD: patch-ab,v 1.21 2001/05/09 10:24:11 agc Exp $
          for z in $available_tags; do
            if grep "^### BEGIN LIBTOOL TAG CONFIG: $z$" < "$0" > /dev/null; then
  	    # Evaluate the configuration.
-@@ -1453,8 +1465,6 @@
+@@ -1562,8 +1574,6 @@
  #       else
  #         echo "$modename: using $tagname tagged configuration"
          fi
@@ -52,81 +64,3 @@ $NetBSD: patch-ab,v 1.21 2001/05/09 10:24:11 agc Exp $
      fi
  
      if test "$export_dynamic" = yes && test -n "$export_dynamic_flag_spec"; then
-@@ -2397,7 +2407,7 @@
- 
- 	# Check that each of the things are valid numbers.
- 	case "$current" in
--	0 | [1-9] | [1-9][0-9]*) ;;
-+	0 | [1-9] | [1-9][0-9] | [1-9][0-9][0-9]) ;;
- 	*)
- 	  $echo "$modename: CURRENT \`$current' is not a nonnegative integer" 1>&2
- 	  $echo "$modename: \`$vinfo' is not valid version information" 1>&2
-@@ -2406,7 +2416,7 @@
- 	esac
- 
- 	case "$revision" in
--	0 | [1-9] | [1-9][0-9]*) ;;
-+	0 | [1-9] | [1-9][0-9] | [1-9][0-9][0-9]) ;;
- 	*)
- 	  $echo "$modename: REVISION \`$revision' is not a nonnegative integer" 1>&2
- 	  $echo "$modename: \`$vinfo' is not valid version information" 1>&2
-@@ -2415,7 +2425,7 @@
- 	esac
- 
- 	case "$age" in
--	0 | [1-9] | [1-9][0-9]*) ;;
-+	0 | [1-9] | [1-9][0-9] | [1-9][0-9][0-9]) ;;
- 	*)
- 	  $echo "$modename: AGE \`$age' is not a nonnegative integer" 1>&2
- 	  $echo "$modename: \`$vinfo' is not valid version information" 1>&2
-@@ -2612,6 +2622,9 @@
- 	  *-*-cygwin* | *-*-mingw* | *-*-pw32* | *-*-os2* | *-*-beos*)
- 	    # these systems don't actually have a c library (as such)!
- 	    ;;
-+          *-*-netbsd*)
-+            # Don't link with libc until the a.out ld.so is fixed.
-+            ;;
- 	  *)
-  	    # Add libc to deplibs on all other systems if necessary.
-  	    if test $build_libtool_need_lc = "yes"; then
-@@ -2771,6 +2784,40 @@
- 	    fi
- 	  done # Gone through all deplibs.
- 	  ;;
-+        match_pattern*)
-+          set dummy $deplibs_check_method
-+          match_pattern_regex=`expr "$deplibs_check_method" : "$2 \(.*\)"`
-+          for a_deplib in $deplibs; do
-+            name="`expr $a_deplib : '-l\(.*\)'`"
-+            # If $name is empty we are operating on a -L argument.
-+            if test "$name" != "" -a "$name" != "0"; then
-+              libname=`eval \\$echo \"$libname_spec\"`
-+              for i in $lib_search_path $sys_lib_search_path $shlib_search_path; do
-+                potential_libs=`ls $i/$libname[.-]* 2>/dev/null`
-+                for potent_lib in $potential_libs; do
-+                  if eval echo \"$potent_lib\" 2>/dev/null \
-+                      | sed 10q \
-+                      | egrep "$match_pattern_regex" > /dev/null; then
-+                    newdeplibs="$newdeplibs $a_deplib"
-+                    a_deplib=""
-+                    break 2
-+                  fi
-+                done
-+              done
-+              if test -n "$a_deplib" ; then
-+                droppeddeps=yes
-+                echo
-+                echo "*** Warning: This library needs some functionality provided by $a_deplib."
-+                echo "*** I have the capability to make that library automatically link in when"
-+                echo "*** you link to this library.  But I can only do this if you have a"
-+                echo "*** shared version of the library, which you do not appear to have."
-+              fi
-+            else
-+              # Add a -L argument.
-+              newdeplibs="$newdeplibs $a_deplib"
-+            fi
-+          done # Gone through all deplibs.
-+          ;;
- 	none | unknown | *)
- 	  newdeplibs=""
- 	  if $echo "X $deplibs" | $Xsed -e 's/ -lc$//' \

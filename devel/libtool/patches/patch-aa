@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.24 2001/05/22 10:31:08 abs Exp $
+$NetBSD: patch-aa,v 1.25 2001/06/14 14:55:46 skrll Exp $
 
---- ltconfig.in.orig	Tue May 22 11:10:20 2001
-+++ ltconfig.in	Tue May 22 11:07:29 2001
-@@ -1118,7 +1118,7 @@
+--- ltconfig.in.orig	Mon May 21 05:05:06 2001
++++ ltconfig.in
+@@ -1198,7 +1198,7 @@
  
  # This must be Linux ELF.
  linux-gnu*)
@@ -11,16 +11,7 @@ $NetBSD: patch-aa,v 1.24 2001/05/22 10:31:08 abs Exp $
    need_lib_prefix=no
    need_version=no
    library_names_spec='${libname}${release}.so$versuffix ${libname}${release}.so$major $libname.so'
-@@ -1142,6 +1142,8 @@
- 
- netbsd*)
-   version_type=sunos
-+  need_lib_prefix=no
-+  need_version=no
-   if echo __ELF__ | $CC -E - | grep __ELF__ >/dev/null; then
-     library_names_spec='${libname}${release}.so$versuffix ${libname}.so$versuffix'
-     finish_cmds='PATH="\$PATH:/sbin" ldconfig -m $libdir'
-@@ -1200,7 +1202,7 @@
+@@ -1282,7 +1282,7 @@
    ;;
  
  solaris*)

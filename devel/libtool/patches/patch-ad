@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.4 2001/05/08 13:38:42 skrll Exp $
+$NetBSD: patch-ad,v 1.5 2001/06/14 14:55:47 skrll Exp $
 
---- Makefile.in.orig	Mon Feb 19 05:06:14 2001
+--- Makefile.in.orig	Wed May 23 05:07:23 2001
 +++ Makefile.in
 @@ -93,7 +93,7 @@
  
@@ -11,21 +11,3 @@ $NetBSD: patch-ad,v 1.4 2001/05/08 13:38:42 skrll Exp $
  SUBDIRS = $(BUILD_SUBDIRS)
  DIST_SUBDIRS = $(BUILD_SUBDIRS) $(CONF_SUBDIRS)
  
-@@ -476,6 +476,17 @@
- 	file_magic_cmd="$(file_magic_cmd)" \
- 	$(SHELL) $(srcdir)/ltconfig $(LIBTOOL_FLAGS) --srcdir=$(srcdir) \
- 	  --output=$@T $(srcdir)/ltmain.sh $(host_triplet)
-+	AR="$(AR)" CC="$(CC)" CFLAGS="$(CFLAGS)" CPPFLAGS="$(CPPFLAGS)" \
-+	LTCC="$(CC)" FILE="$(FILE)" LD="$(LD)" LDFLAGS="$(LDFLAGS)" \
-+	LIBS="$(LIBS)" LN_S="$(LN_S)" NM="$(NM)" RANLIB="$(RANLIB)" \
-+	STRIP="$(STRIP)" AS="$(AS)" DLLTOOL="$(DLLTOOL)" \
-+	OBJDUMP="$(OBJDUMP)" \
-+	objext="$(OBJEXT)" exeext="$(EXEEXT)" \
-+	reload_flag="$(reload_flag)" \
-+	deplibs_check_method="$(deplibs_check_method)" \
-+	file_magic_cmd="$(file_magic_cmd)" \
-+	$(SHELL) $(srcdir)/ltconfig $(LIBTOOL_FLAGS) --srcdir=$(srcdir) \
-+	  --add-tag=CC --output=$@T $(srcdir)/ltcf-c.sh $(host_triplet)
- @HAVE_CXX_TRUE@	AR="$(AR)" CC="$(CXX)" CFLAGS="$(CXXFLAGS)" CPPFLAGS="$(CPPFLAGS)" \
- @HAVE_CXX_TRUE@	LTCC="$(CC)" FILE="$(FILE)" LD="$(LD)" LDFLAGS="$(LDFLAGS)" \
- @HAVE_CXX_TRUE@	LIBS="$(LIBS)" LN_S="$(LN_S)" NM="$(NM)" RANLIB="$(RANLIB)" \
