@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.vtysh,v 1.1.1.1 2003/08/13 07:26:57 itojun Exp $
+bin/vtysh
