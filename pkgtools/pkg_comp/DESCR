@@ -11,3 +11,4 @@ Some ideas about what to use it for (taken from manpage):
   work properly.
 * Avoid autoconf's side effects by keeping a separate chroot for
   each project, like one for GNOME2 and another one for KDE3.
+* Schedule builds of package sets for several different machines.
