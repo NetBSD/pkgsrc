@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.12 2004/09/21 17:10:26 jmmv Exp $
+$NetBSD: distinfo,v 1.13 2004/10/12 18:39:45 jmmv Exp $
 
-SHA1 (gcalctool-4.4.18.tar.bz2) = 236212c935e1fbc42806ae28a5b7015d9c6de37f
-Size (gcalctool-4.4.18.tar.bz2) = 908618 bytes
+SHA1 (gcalctool-4.4.20.tar.bz2) = c49e38772dcdc7bde6b443c8f3ab991f816b68d4
+Size (gcalctool-4.4.20.tar.bz2) = 918938 bytes
