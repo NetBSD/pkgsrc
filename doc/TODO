@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.162 2003/01/09 18:51:36 wiz Exp $
+$NetBSD: TODO,v 1.163 2003/01/09 19:36:55 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -18,9 +18,9 @@ Suggested new packages
 	Version of gd for systems without X11.
 	[cjep is looking at this]
 
-	jabber
-	Messaging client.
-	http://www.jabber.com/downloads/index.shtml
+	jabberd
+	Messaging server.
+	http://www.jabberstudio.org/projects/jabberd2/releases/
 
 	jgloss
 	application for adding reading and translation annotations to Japanese
