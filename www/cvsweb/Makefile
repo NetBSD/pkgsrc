@@ -1,5 +1,5 @@
 #
-# $NetBSD: Makefile,v 1.21 2004/06/09 01:56:15 lukem Exp $
+# $NetBSD: Makefile,v 1.22 2004/06/09 18:55:11 xtraeme Exp $
 #
 
 DISTNAME=		cvsweb-3.0.1
@@ -17,6 +17,7 @@ DEPENDS+=		p5-MIME-Types>=1.12:../../mail/p5-MIME-Types
 DEPENDS+=		p5-URI>=1.30:../../www/p5-URI
 
 NO_BUILDLINK=		YES
+NO_BUILD=		YES
 USE_PERL5=		# defined
 USE_PKGINSTALL=		YES
 
@@ -47,8 +48,6 @@ CONF_FILES=		${EGDIR}/cvsweb.conf ${PKG_SYSCONFDIR}/cvsweb.conf
 DEPENDS+=		rcs-[0-9]*:../../devel/rcs
 .endif
 
-do-build:
-
 do-install:
 	${INSTALL_SCRIPT_DIR} ${PREFIX}/libexec/cgi-bin
 	${INSTALL_SCRIPT} ${WRKSRC}/cvsweb.cgi ${PREFIX}/libexec/cgi-bin
@@ -68,5 +67,13 @@ do-install:
 .for f in ${CVSWEB_DOCS}
 	${INSTALL_DATA} ${WRKSRC}/${f} ${DOCDIR}/${f}
 .endfor
+
+SUBST_CLASSES=		prefix
+SUBST_STAGE.prefix=	post-patch
+SUBST_FILES.prefix=	cvsweb.conf cvsweb.cgi INSTALL	
+SUBST_SED.prefix=	-e "s,/usr/local/etc/apache,${PKG_SYSCONFBASE}/httpd,g"
+SUBST_SED.prefix+=	-e "s,/usr/local/etc/cvsweb,${PKG_SYSCONFDIR},g"
+SUBST_SED.prefix+=	-e "s,/usr/local/bin,${LOCALBASE}/bin,g"
+SUBST_MESSAGE.prefix=	"Fixing harcoded paths."
 
 .include "../../mk/bsd.pkg.mk"
