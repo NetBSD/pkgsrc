@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2000/04/09 23:49:11 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2000/04/16 17:26:31 jlam Exp $
 
-PKGNAME=	${DISTNAME:S/-/-x11-/}
+PKGNAME=	${DISTNAME:S/-/-x11-/}nb1
 CATEGORIES+=	x11
 
 DEPENDS+=	ghostscript-5.50:../../print/ghostscript5
