@@ -1,6 +1,8 @@
 pthreads/bin/pgcc
 pthreads/bin/pg++
 pthreads/lib/libpthread.a
+pthreads/lib/libpthread_p.a
+pthreads/lib/libpthread_pic.a
 pthreads/include/Makefile.inc
 pthreads/include/dirent.h
 pthreads/include/endian.h
