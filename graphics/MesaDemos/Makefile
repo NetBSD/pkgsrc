@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/12/05 15:20:22 jschauma Exp $
+# $NetBSD: Makefile,v 1.2 2002/12/10 18:55:00 jschauma Exp $
 
 PKGNAME=		MesaDemos-${MESA_VERSION}
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX}
@@ -6,6 +6,10 @@ DISTFILES+=		${DISTNAME:S/MesaLib/MesaDemos/}${EXTRACT_SUFX}
 WRKSRC=			${WRKDIR}/${DISTNAME:S/Lib//}
 MAINTAINER=		jschauma@netbsd.org
 COMMENT=		OpenGL examples and Demos
+
+# XXX:
+BROKEN=			"This package not available until Mesa is updated to
+5.0!"
 
 .include "../Mesa/Makefile.common"
 
@@ -22,7 +26,6 @@ do-install:
 	cd ${WRKSRC}/${dir} && ${PAX} -s ,^./.*Makefile.*,, -s ,^./CVS.*,, \
 		-rw . ${PREFIX}/share/examples/${PKGNAME}/${dir}
 .endfor
-	
 
 .include "../../graphics/Mesa/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
