@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/03/03 10:04:04 recht Exp $
+bin/btcompletedirgui.py
+bin/btdownloadgui.py
