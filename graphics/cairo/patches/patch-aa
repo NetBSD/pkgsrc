@@ -1,0 +1,23 @@
+$NetBSD: patch-aa,v 1.1 2004/07/03 23:01:36 recht Exp $
+
+--- src/cairo_image_surface.c.orig	2004-04-14 03:06:15.000000000 +0200
++++ src/cairo_image_surface.c
+@@ -462,7 +462,17 @@ cairo_int_status_t
+ _cairo_image_surface_set_clip_region (cairo_image_surface_t *surface,
+ 				      pixman_region16_t *region)
+ {
+-    pixman_image_set_clip_region (surface->pixman_image, region);
++    if (region) {
++        pixman_region16_t *rcopy;
++
++        rcopy = pixman_region_create();
++        /* pixman_image_set_clip_region expects to take ownership of the
++         * passed-in region, so we create a copy to give it. */
++        pixman_region_copy (rcopy, region);
++        pixman_image_set_clip_region (surface->pixman_image, rcopy);
++    } else {
++        pixman_image_set_clip_region (surface->pixman_image, region);
++    }
+ 
+     return CAIRO_STATUS_SUCCESS;
+ }
