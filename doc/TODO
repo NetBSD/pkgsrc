@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2218 2004/10/14 13:44:56 minskim Exp $
+$NetBSD: TODO,v 1.2219 2004/10/14 16:35:06 ben Exp $
 
 Suggested new packages
 ======================
@@ -417,7 +417,6 @@ Suggested package updates
 	o skkinput-2.06.4
 	o slib-3a1
 	o slrn-0.9.8.1
-	o slurm-0.3.3 [pkg/27248]
 	o smalltalk-2.1.8
 	o smarteiffel-2.0b2 [replacing smalleiffel|pkg/26540]
 	o sml-nj-110.49 [pkgsrc-wip]
