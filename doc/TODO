@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2664 2004/12/05 13:31:12 wiz Exp $
+$NetBSD: TODO,v 1.2665 2004/12/05 13:41:39 wiz Exp $
 
 Suggested new packages
 ======================
@@ -407,7 +407,6 @@ Suggested package updates
 	o devIL-1.6.7
 	o devhelp-0.9.3
 	o devtodo-0.1.18
-	o dgpsip-1.32
 	o dhisd-5.1
 	o dict-client-1.9.11
 	o dict-server-1.9.11
