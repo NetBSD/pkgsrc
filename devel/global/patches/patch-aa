@@ -1,9 +1,0 @@
-$NetBSD: patch-aa,v 1.3 2000/09/09 14:58:49 wiz Exp $
-
---- Makefile.orig	Sat Sep 18 08:37:53 1999
-+++ Makefile
-@@ -1,3 +1,3 @@
--SUBDIR= libdb libutil global gtags gctags btreeop htags
-+SUBDIR= libutil global gtags gctags btreeop htags
- 
- .include <bsd.subdir.mk>

@@ -1,17 +1,16 @@
-@comment $NetBSD: PLIST,v 1.3 2000/09/09 14:58:50 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2000/10/08 23:25:31 abs Exp $
 bin/btreeop
 bin/gctags
 bin/global
 bin/gtags
 bin/htags
-lib/libgloutil.a
-lib/libgloutil_pic.a
-libdata/lint/llib-lgloutil.ln
-man/cat1/btreeop.0
-man/cat1/gctags.0
-man/cat1/global.0
-man/cat1/gtags.0
+@unexec install-info --delete --info-dir=%D/info %D/info/global.info
+info/global.info
+@exec install-info --info-dir=%D/info %D/info/global.info
 man/man1/btreeop.1
 man/man1/gctags.1
 man/man1/global.1
 man/man1/gtags.1
+man/man1/htags.1
+@comment @exec /bin/mkdir -p /usr/pkg/libdata/lint
+@comment @dirrm libdata/lint

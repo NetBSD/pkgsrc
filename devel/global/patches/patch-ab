@@ -1,9 +1,0 @@
-$NetBSD: patch-ab,v 1.3 2000/09/03 09:52:56 wiz Exp $
---- libutil/mgets.c.orig	Wed Aug 18 11:02:42 1999
-+++ libutil/mgets.c	Fri Apr 21 15:14:23 2000
-@@ -39,4 +39,5 @@
- #include <stdio.h>
- #include <stdlib.h>
-+#include <string.h>
- 
- #include "die.h"
