@@ -1,4 +1,6 @@
-$NetBSD: patch-ao,v 1.5 2000/01/23 00:48:10 tron Exp $
+$NetBSD: patch-ao,v 1.6 2000/01/28 13:23:31 jdolecek Exp $
+
+The login_cap fix committed to KDE2 source tree (jdolecek 19990128)
 
 --- kdm/kgreeter.cpp.orig	Mon Aug 16 13:36:34 1999
 +++ kdm/kgreeter.cpp	Sun Jan 23 01:23:53 2000
