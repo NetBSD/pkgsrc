@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.265 2003/02/15 08:52:46 salo Exp $
+$NetBSD: TODO,v 1.266 2003/02/15 09:45:28 salo Exp $
 
 Suggested new packages
 ======================
@@ -216,7 +216,6 @@ Suggested package updates
 	o oss-3.9.7h
 	o p0f-1.8.3
 	o p5-CGI-2.88 [pkg/20323]
-	o p5-Time-HiRes-1.42 [pkg/20321]
 	o pango-1.2.1
 	o pen-0.9.5 [pkg/19216]
 	o php4-4.3.0
