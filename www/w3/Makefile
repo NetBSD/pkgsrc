@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2003/07/17 22:56:01 grant Exp $
+# $NetBSD: Makefile,v 1.14 2003/08/07 11:36:33 seb Exp $
 
 DISTNAME=	w3-4.0pre.47
 PKGNAME=	w3-4.0b47
@@ -15,6 +15,8 @@ COMMENT=	World Wide Web browser for Emacs
 
 CONFIGURE_ARGS+=--enable-site-install
 
+USE_NEW_TEXINFO=	YES
+
 .include "../../mk/emacs.mk"
 
 .if ${EMACS_FLAVOR} == "xemacs"
@@ -30,5 +32,4 @@ INFO_FILES=	w3.info w3-faq.info
 PLIST_SRC=	${PKGDIR}/PLIST.emacs
 .endif
 
-.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
