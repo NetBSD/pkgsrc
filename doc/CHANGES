@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8384 2004/12/21 03:43:26 schmonz Exp $
+$NetBSD: CHANGES,v 1.8385 2004/12/21 04:23:33 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -6445,3 +6445,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated overnet to 1.0.1nb1 [minskim 2004-12-21]
 	Added firefox-gtk2-bin-acroread-1.0 [xtraeme 2004-12-21]
 	Updated ezmlm-idx to 0.43 [schmonz 2004-12-21]
+	Updated ezmlm to 0.53nb1 [schmonz 2004-12-21]
