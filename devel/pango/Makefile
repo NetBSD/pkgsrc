@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.39 2004/02/27 14:30:04 jmmv Exp $
+# $NetBSD: Makefile,v 1.40 2004/04/01 18:15:16 jmmv Exp $
 #
 
-DISTNAME=		pango-1.2.5
-PKGREVISION=		1
+DISTNAME=		pango-1.4.0
 CATEGORIES=		devel
-MASTER_SITES=		ftp://ftp.gtk.org/pub/gtk/v2.2/ \
-			ftp://ftp.cs.umn.edu/pub/gimp/gtk/v2.2/ \
-			${MASTER_SITE_GNOME:=sources/pango/1.2/}
+MASTER_SITES=		ftp://ftp.gtk.org/pub/gtk/v2.4/ \
+			ftp://ftp.cs.umn.edu/pub/gimp/gtk/v2.4/ \
+			${MASTER_SITE_GNOME:=sources/pango/1.4/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		tech-pkg@NetBSD.org
@@ -37,6 +36,7 @@ BUILDLINK_DEPENDS.Xrender+=	Xrender>=0.8
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../fonts/Xft2/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../x11/Xrender/buildlink3.mk"
