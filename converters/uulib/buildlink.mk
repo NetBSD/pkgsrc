@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.3 2002/03/24 03:11:06 fredb Exp $
+# $NetBSD: buildlink.mk,v 1.4 2002/08/31 16:54:33 wiz Exp $
 #
 # This Makefile fragment is included by packages that use uulib.
 #
@@ -17,7 +17,7 @@ UULIB_BUILDLINK_MK=	# defined
 
 .include "../../mk/bsd.buildlink.mk"
 
-BUILDLINK_DEPENDS.uulib?=	uulib>=0.5.17
+BUILDLINK_DEPENDS.uulib?=	uulib>=0.5.18
 DEPENDS+=	${BUILDLINK_DEPENDS.uulib}:../../converters/uulib
 
 EVAL_PREFIX+=		BUILDLINK_PREFIX.uulib=uulib
