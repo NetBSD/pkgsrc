@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.48 2003/08/30 07:24:52 gehenna Exp $
+# $NetBSD: Makefile,v 1.49 2003/09/09 17:45:11 gehenna Exp $
 #
 
-DISTNAME=	cvsync-0.24.5
+DISTNAME=	cvsync-0.24.6
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.cvsync.org/pub/cvsync/
 
@@ -21,6 +21,8 @@ CONF_FILES+=	${EGDIR}/cvsync.conf ${PKG_SYSCONFDIR}/cvsync.conf
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/samples/cvsync.conf ${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/samples/cvsyncd-NetBSD.conf ${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/samples/cvsyncd-OpenBSD.conf ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/samples/cvsyncd.conf ${EGDIR}
 
 .include "../../mk/pthread.buildlink2.mk"
