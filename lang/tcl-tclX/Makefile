@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/12/23 17:23:34 bjoern Exp $
+# $NetBSD: Makefile,v 1.11 2003/01/10 11:40:16 jmmv Exp $
 #
 
 DISTNAME=	tclX8.2.0
@@ -10,10 +10,9 @@ MAINTAINER=	jwise@netbsd.org
 HOMEPAGE=	http://www.neosoft.com/TclX/
 COMMENT=	Extended Tcl (TclX), a set of Tcl extensions for system programming
 
-DEPENDS+=	tcl>=8.3.4:../../lang/tcl
-
 CONFLICTS+=	tclX-[0-9]*
 
+USE_BUILDLINK2=		yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-shared --with-tcl=${PREFIX}/lib --enable-tk=NO
@@ -51,4 +50,5 @@ pre-clean:
 test:
 	@(cd ${WRKSRC}; ${MAKE_ENV} ${MAKE} test)
 
+.include "../../lang/tcl/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
