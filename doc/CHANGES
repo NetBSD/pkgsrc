@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2567 2003/06/23 15:50:37 wiz Exp $
+$NetBSD: CHANGES,v 1.2568 2003/06/23 19:07:10 kristerw Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2548,3 +2548,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated dovecot to 0.99.10rc2 [salo 2003-06-23]
 	Added bomberclone-data-0.7 [wiz 2003-06-23]
 	Added bomberclone-0.9.9 [wiz 2003-06-23]
+	Updated vice to 1.12 [kristerw 2003-06-23]
