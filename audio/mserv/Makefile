@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2004/02/20 00:41:16 abs Exp $
+# $NetBSD: Makefile,v 1.22 2004/04/11 17:39:05 xtraeme Exp $
 #
 
 DISTNAME=	mserv-0.35
@@ -15,7 +15,7 @@ DEPENDS+=	mpg123-[0-9]*:../mpg123
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/mserv
 CONFIGURE_ENV+=		MY_LIBS="-lvorbisfile -lvorbis"
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
 
 REPLACE_PERL=		support/mservedit webclient/main.cgi \
@@ -27,7 +27,7 @@ post-configure:
 	${MV} ${WRKSRC}/mserv/soundcard.h ${WRKSRC}/mserv/mservsoundcard.h
 
 post-install:
-	 ${INSTALL_SCRIPT} ${WRKSRC}/support/mservedit ${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/support/mservedit ${PREFIX}/bin
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mserv
 	${INSTALL_DATA} \
 		${WRKSRC}/INSTALL \
@@ -38,7 +38,7 @@ post-install:
 		${WRKSRC}/webclient/* \
 		${PREFIX}/share/mserv/webclient
 
-.include "../../audio/libogg/buildlink2.mk"
-.include "../../audio/libvorbis/buildlink2.mk"
+.include "../../audio/libogg/buildlink3.mk"
+.include "../../audio/libvorbis/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
