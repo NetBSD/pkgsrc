@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.131 2002/05/02 13:55:13 bouyer Exp $
+# $NetBSD: Makefile,v 1.132 2002/05/12 10:26:24 rh Exp $
 #
 
 COMMENT=	System utilities
@@ -34,6 +34,7 @@ SUBDIR+=	dog
 SUBDIR+=	e2fsprogs
 SUBDIR+=	etcupdate
 SUBDIR+=	extipl
+SUBDIR+=	fam
 SUBDIR+=	fdgw
 SUBDIR+=	fileutils
 SUBDIR+=	findutils
