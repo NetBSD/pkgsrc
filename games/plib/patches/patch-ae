@@ -1,0 +1,17 @@
+$NetBSD: patch-ae,v 1.1.1.1 2000/02/19 22:32:45 rh Exp $
+
+--- src/sl/smMixer.cxx.orig	Fri Aug 13 05:14:12 1999
++++ src/sl/smMixer.cxx	Sat Feb 19 22:41:41 2000
+@@ -156,10 +156,10 @@
+    setVolume ( SOUND_MIXER_CD     , left, right ) ; 
+ }
+ 
+-#elif defined(__OpenBSD__)
++#elif defined(__NetBSD__) || defined(__OpenBSD__)
+ 
+ /* ------------------------------------------------------------ */
+-/* OpenBSD 2.3                                                  */
++/* NetBSD or OpenBSD 2.3                                        */
+ /* ------------------------------------------------------------ */
+ 
+ void smMixer::open ( char *device )

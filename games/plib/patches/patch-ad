@@ -1,0 +1,17 @@
+$NetBSD: patch-ad,v 1.1.1.1 2000/02/19 22:32:45 rh Exp $
+
+--- src/sl/slDSP.cxx.orig	Sun Oct 10 18:54:44 1999
++++ src/sl/slDSP.cxx	Sat Feb 19 22:39:53 2000
+@@ -388,10 +388,10 @@
+ }
+ 
+ /* ------------------------------------------------------------ */
+-/* OpenBSD 2.3 this should be very close to SUN Audio           */
++/* NetBSD and OpenBSD should be very close to SUN Audio         */
+ /* ------------------------------------------------------------ */
+ 
+-#elif defined(__OpenBSD__) || defined(SOLARIS)
++#elif defined(__NetBSD__) || defined(__OpenBSD__) || defined(SOLARIS)
+ void slDSP::open ( char *device, int _rate, int _stereo, int _bps )
+ {
+ 
