@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: build,v 1.41 2004/07/22 14:26:42 agc Exp $
+# $NetBSD: build,v 1.42 2004/08/06 10:41:51 sketch Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -161,6 +161,8 @@ if [ "$ftp_proxy" != "" ]; then
 fi
 echo ""
 
+unset CDPATH		# ensure cd does not print new cwd to stdout, which
+			# confuses the printindex script.
 unset DISPLAY		# allow sane failure for gimp, xlispstat
 
 # Check that the pkg_tools are up to date
