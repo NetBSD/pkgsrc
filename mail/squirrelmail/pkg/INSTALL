@@ -1,0 +1,61 @@
+#! /bin/sh
+#
+# $NetBSD: INSTALL,v 1.1.1.1 2001/01/24 22:44:13 jlam Exp $
+
+PKGNAME=$1
+STAGE=$2
+
+CAT="@CAT@"
+CHGRP="@CHGRP@"
+CHMOD="@CHMOD@"
+CHOWN="@CHOWN@"
+CP="@CP@"
+MKDIR="@MKDIR@"
+
+USER=nobody
+GROUP=nobody
+
+SMDIR=${PKG_PREFIX}/@SM_SUBDIR@
+DATADIR=/var/spool/squirrelmail
+
+case ${STAGE} in
+PRE-INSTALL)
+	;;
+
+POST-INSTALL)
+	${MKDIR} ${DATADIR}
+	${MKDIR} ${DATADIR}/attachments
+	${CHGRP} -R ${GROUP} ${DATADIR}/attachments
+	${CHMOD} 730 ${DATADIR}/attachments
+	${MKDIR} ${DATADIR}/data
+	${CHOWN} -R ${USER}:${GROUP} ${DATADIR}/data
+
+	echo "Installing configuration files:"
+	FILE=${DATADIR}/data/default_pref
+	SAMPLEFILE=${SMDIR}/data/default_pref
+	if [ -f ${FILE} ]
+	then
+		echo "    ${FILE} already exists"
+	else
+		echo "    ${FILE}"
+		${CP} ${SAMPLEFILE} ${FILE}
+		${CHMOD} 644 ${FILE}
+	fi
+	${CAT} << EOF
+
+===========================================================================
+Please run the SquirrelMail configuration script:
+
+	cd ${SMDIR}/config && ./conf.pl
+
+to customize the SquirrelMail webmail system for your site.
+===========================================================================
+EOF
+	;;
+
+*)
+	echo "Unexpected argument: ${STAGE}"
+	exit 1
+	;;
+esac
+exit 0

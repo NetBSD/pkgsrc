@@ -1,0 +1,31 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/01/24 22:44:13 jlam Exp $
+
+--- config/config_default.php.orig	Tue Jan 23 08:26:47 2001
++++ config/config_default.php
+@@ -125,7 +125,7 @@
+ //  anything if it's true, but some servers will respond weird if it's
+ //  false. (Cyrus works fine whether it's true OR false).
+ 
+-    $show_contain_subfolders_option = false;
++    $show_contain_subfolders_option = true;
+ 
+ //  This option controls what character set is used when sending mail
+ //  and when sending HTMl to the browser. Do not set this to US-ASCII,
+@@ -147,7 +147,7 @@
+ //  Relative (to the config directory):
+ //    $data_dir = "../data/";
+ 
+-    $data_dir = "../data/";
++    $data_dir = "/var/spool/squirrelmail/data/";
+ 
+ //  Path to directory used for storing attachments while a mail is
+ //  being sent. There are a few security considerations regarding this
+@@ -161,7 +161,7 @@
+ //      there for too long.
+ //    - It should probably be another directory than data_dir.
+ 
+-    $attachment_dir = $data_dir;
++    $attachment_dir = "/var/spool/squirrelmail/attachments/";
+ 
+ //  This is the default size of the folder list.  Default is 200,
+ //  but you can set it to whatever you wish.
