@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.version,v 1.8 2003/09/27 20:14:41 recht Exp $
+# $NetBSD: Makefile.version,v 1.9 2003/11/29 16:25:17 junyoung Exp $
 
 .if !defined(SVNVER)
-SVNVER=		0.30.0
+SVNVER=		0.32.1
 # This macro is in this file because the URL changes with every release.
 MASTER_SITES=	http://svn.collab.net/tarballs/
 .endif
