@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2004/11/08 12:50:18 markd Exp $
+@comment $NetBSD: PLIST,v 1.26 2004/11/18 11:48:37 markd Exp $
 bin/appletproxy
 bin/drkonqi
 bin/extensionproxy
@@ -3781,7 +3781,7 @@ share/kde/wallpapers/triplegears.jpg
 @dirrm share/kde/locale/l10n/C
 @dirrm share/kde/locale/l10n
 @dirrm share/kde/locale/en_US
-@dirrm share/kde/locale
+@comment dirrm share/kde/locale
 @comment dirrm share/kde/icons/locolor/32x32/apps
 @comment dirrm share/kde/icons/locolor/16x16/apps
 @comment dirrm share/kde/icons/hicolor/32x32/apps
@@ -3954,7 +3954,7 @@ share/kde/wallpapers/triplegears.jpg
 @dirrm share/kde/apps/kcminput/pics
 @dirrm share/kde/apps/kcminput
 @dirrm share/kde/apps/kcmcss
-@dirrm share/kde/apps/kcm_componentchooser
+@comment dirrm share/kde/apps/kcm_componentchooser
 @dirrm share/kde/apps/kbookmark
 @dirrm share/kde/apps/kate/scripts
 @dirrm share/kde/apps/kate/plugins/katedefaultproject

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2004/08/21 12:38:32 markd Exp $
+@comment $NetBSD: PLIST,v 1.12 2004/11/18 11:48:36 markd Exp $
 share/doc/kde/HTML/en/kdelibs-apidocs/arts/arts.tag
 share/doc/kde/HTML/en/kdelibs-apidocs/arts/html/annotated.html
 share/doc/kde/HTML/en/kdelibs-apidocs/arts/html/artsmessage_8cc-source.html
@@ -10884,8 +10884,8 @@ share/doc/kde/HTML/en/kdelibs-apidocs/search.html
 @dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kresources
 @dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kparts/html
 @dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kparts
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/knewstuff/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/knewstuff
+@comment dirrm share/doc/kde/HTML/en/kdelibs-apidocs/knewstuff/html
+@comment dirrm share/doc/kde/HTML/en/kdelibs-apidocs/knewstuff
 @dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kmdi/html
 @dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kmdi
 @dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kjs/html

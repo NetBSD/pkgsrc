@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2004/09/22 08:09:26 jlam Exp $
+@comment $NetBSD: PLIST,v 1.14 2004/11/18 11:48:37 markd Exp $
 bin/adddebug
 bin/build-progress.sh
 bin/catalogmanager
@@ -839,7 +839,7 @@ share/kde/servicetypes/kompareviewpart.desktop
 @dirrm share/kde/apps/kapptemplate/appframework
 @dirrm share/kde/apps/kapptemplate/admin
 @dirrm share/kde/apps/kapptemplate
-@dirrm share/kde/apps/kabc/formats
+@comment dirrm share/kde/apps/kabc/formats
 @dirrm share/kde/apps/cervisiapart
 @dirrm share/kde/apps/cervisia
 @dirrm share/kde/apps/catalogmanager
