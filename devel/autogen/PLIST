@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.5 2004/02/13 08:26:03 seb Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/03/01 02:26:13 minskim Exp $
 bin/autogen
 bin/autoopts-config
 bin/columns
 bin/getdefs
 bin/xml2ag
 include/options.h
+include/usage-txt.h
 lib/libguileopts.a
 lib/libguileopts.la
 lib/libguileopts.so
@@ -13,8 +14,8 @@ lib/libguileopts.so.0.1
 lib/libopts.a
 lib/libopts.la
 lib/libopts.so
-lib/libopts.so.19
-lib/libopts.so.19.0
+lib/libopts.so.22
+lib/libopts.so.22.1
 man/man1/autogen.1
 man/man1/autoopts-config.1
 man/man1/columns.1
@@ -32,18 +33,18 @@ share/autogen/aginfo.tpl
 share/autogen/aginfo3.tpl
 share/autogen/agman1.tpl
 share/autogen/agman3.tpl
+share/autogen/autoopts.m4
 share/autogen/confmacs.tpl
 share/autogen/conftest.tpl
 share/autogen/fsm-macro.tpl
 share/autogen/fsm-trans.tpl
 share/autogen/fsm.tpl
-share/autogen/libopts-19.0.10.tar.gz
+share/autogen/getopt.tpl
+share/autogen/libopts-22.1.13.tar.gz
 share/autogen/optcode.tpl
 share/autogen/opthead.tpl
 share/autogen/options.tpl
-share/autogen/options_h.tpl
 share/autogen/optlib.tpl
 share/autogen/optmain.tpl
-share/autogen/schemedef.scm
 share/autogen/stdoptions.def
 @dirrm share/autogen
