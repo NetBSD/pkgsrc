@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/11/10 08:49:32 xtraeme Exp $
+# $NetBSD: Makefile,v 1.4 2004/11/10 09:11:34 xtraeme Exp $
 #
 
 DISTNAME=		ipsec-tools-0.5.pre20041109
@@ -36,4 +36,5 @@ post-install:
 	${INSTALL_DATA} ${SAMPLE_DIR}/racoon.conf.sample-plainrsa ${EXAMPLE_DIR}
 
 .include "../../net/libradius/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
