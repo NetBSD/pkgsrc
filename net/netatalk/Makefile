@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2000/10/19 03:45:47 briggs Exp $
+# $NetBSD: Makefile,v 1.12 2001/02/17 18:19:12 wiz Exp $
 #
 
 DISTNAME=		netatalk-990130
@@ -9,6 +9,7 @@ MASTER_SITES=		ftp://terminator.rs.itd.umich.edu/unix/netatalk/
 
 MAINTAINER=		wrstuden@netbsd.org
 HOMEPAGE=		http://www.umich.edu/~rsug/netatalk/
+COMMENT=		University of Michigan's netatalk; AppleTalk interworking
 
 CONFLICTS=		netatalk-asun-[0-9]*
 CONFLICTS+=		netatalk-19981109

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2000/09/03 12:56:44 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2001/02/17 18:19:44 wiz Exp $
 # $FreeBSD: ports/net/tcpillust/Makefile,v 1.1.1.1 2000/07/29 06:26:00 sada Exp $
 #
 
@@ -8,6 +8,7 @@ MASTER_SITES=	ftp://ftp.csl.sony.co.jp/CSL/nishida/
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.csl.sony.co.jp/person/nishida/tcpillust.html
+COMMENT=	Graphical TCP connection analysis tool
 
 DEPENDS+=	tk-8.3.2:../../x11/tk
 

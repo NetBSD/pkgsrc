@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2001/02/06 03:17:00 fredb Exp $
+# $NetBSD: Makefile,v 1.34 2001/02/17 18:20:00 wiz Exp $
 # Based on KAME Id: Makefile,v 1.1.2.1.2.1.10.2 1999/01/05 11:03:50 itojun Exp
 #
 
@@ -10,6 +10,7 @@ MASTER_SITES=	ftp://ftp.zebra.org/pub/zebra/
 
 MAINTAINER=	itojun@itojun.org
 HOMEPAGE=	http://www.zebra.org/
+COMMENT=	Free multithreaded routing daemon software
 
 BUILD_DEPENDS+=	${LOCALBASE}/bin/automake:../../devel/automake
 BUILD_DEPENDS+=	${LOCALBASE}/bin/autoreconf:../../devel/autoconf

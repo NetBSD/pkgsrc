@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/02/10 19:08:09 bad Exp $
+# $NetBSD: Makefile,v 1.5 2001/02/17 18:24:48 wiz Exp $
 #
 
 DISTNAME=	grepmail-4.45
@@ -7,6 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=grepmail/}
 
 MAINTAINER=	david@fundy.net
 HOMEPAGE=	http://grepmail.sourceforge.net/
+COMMENT=	mbox formatted file search utility
 
 USE_PERL5=	# defined
 CONFIGURE_ENV=	PERL=${PERL5}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/11/11 17:49:28 tron Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/17 18:19:25 wiz Exp $
 #
 
 DISTNAME=		ispman-0.5
@@ -9,6 +9,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ispman/}
 
 MAINTAINER=		rh@netbsd.org
 HOMEPAGE=		http://www.ispman.org/
+COMMENT=		Perl module for ISPMan webAdministrator and command line utils
 
 DEPENDS+=		p5-CGI>=2.72:../../www/p5-CGI
 DEPENDS+=		p5-Text-Template>=1.23:../../textproc/p5-Text-Template

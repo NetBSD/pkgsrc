@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2000/09/09 23:26:46 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2001/02/17 17:54:49 wiz Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/07/30 18:17:48 adam Exp
 #
 
@@ -7,7 +7,8 @@ CATEGORIES=	news
 MASTER_SITES=	ftp://ftp.gw.com/pub/unix/news/nn/ \
 		ftp://ftp.visi.com/users/mtpins/nn/
 
-MAINTAINER=     packages@netbsd.org
+MAINTAINER=	packages@netbsd.org
+COMMENT=	NN newsreader
 
 BUILD_DEFS+=	USE_INN
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/12/15 01:58:57 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2001/02/17 18:18:39 wiz Exp $
 #
 
 DISTNAME=	cftp-0.10
@@ -8,6 +8,7 @@ MASTER_SITES=	ftp://sunsite.csd.smc.univie.ac.at/pub/nih/cftp/ \
 
 MAINTAINER=	wiz@netbsd.org
 HOMEPAGE=	http://sunsite.csd.smc.univie.ac.at/pub/nih/cftp/
+COMMENT=	Comfortable FTP, a full screen ftp client
 
 GNU_CONFIGURE=	YES
 INFO_FILES=	cftp.info

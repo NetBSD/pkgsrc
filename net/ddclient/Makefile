@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/01/29 15:25:55 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2001/02/17 18:18:45 wiz Exp $
 #
 
 DISTNAME=	ddclient-2.3.2
@@ -7,6 +7,7 @@ MASTER_SITES=	http://burry.net/ddclient/
 
 MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://burry.net/ddclient
+COMMENT=	Client to update dynamic DNS entries for accounts on dyndns.org
 
 NO_BUILD=	yes
 

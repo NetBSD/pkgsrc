@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2000/12/19 10:30:23 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.20 2001/02/17 18:19:52 wiz Exp $
 # FreeBSD Id: Makefile,v 1.2 1998/03/19 01:54:59 msmith Exp
 #
 
@@ -11,6 +11,7 @@ DISTFILES=		vnc-3.3.3r2_unixsrc.tgz \
 
 MAINTAINER=		abs@netbsd.org
 HOMEPAGE=		http://www.uk.research.att.com/vnc/
+COMMENT=		Display X and Win32 desktops on remote X/Win32/Java displays
 
 DEPENDS+=		vncviewer-*:../../net/vncviewer
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2000/09/09 19:40:20 fredb Exp $
+# $NetBSD: Makefile,v 1.10 2001/02/17 18:19:40 wiz Exp $
 #
 
 DISTNAME=		speak_freely-7.2
@@ -8,6 +8,7 @@ MASTER_SITES=		http://www.fourmilab.ch/speakfree/unix/
 
 MAINTAINER=		johnam@mail.kemper.org
 HOMEPAGE=		http://www.fourmilab.ch/speakfree/unix/
+COMMENT=		Internet "phone" for UNIX
 
 DEPENDS+=		gsm-1.0.10:../../audio/gsm
 

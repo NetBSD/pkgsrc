@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2001/02/06 03:16:59 fredb Exp $
+# $NetBSD: Makefile,v 1.44 2001/02/17 18:19:35 wiz Exp $
 
 DISTNAME=		samba-2.0.7-ja-1.3
 PKGNAME=		samba-2.0.7.1.3
@@ -8,6 +8,7 @@ MASTER_SITES=		ftp://ftp.samba.gr.jp/pub/samba-jp/samba-2.0.7-ja/
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.samba.org/
+COMMENT=		SMB/CIFS protocol server suite for UNIX
 
 BUILD_DEPENDS+=		${LOCALBASE}/bin/autoreconf:../../devel/autoconf
 BUILD_DEPENDS+=		msgfmt:../../devel/gettext

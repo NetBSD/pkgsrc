@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1999/10/22 23:55:49 tron Exp $
+# $NetBSD: Makefile,v 1.7 2001/02/17 18:18:56 wiz Exp $
 #
 
 DISTNAME=	gtksamba-0.3.2pl1
@@ -8,6 +8,7 @@ MASTER_SITES=	http://www.open-systems.com/gtksamba/
 
 MAINTAINER=	packages@NetBSD.org
 HOMEPAGE=	http://www.open-systems.com/gtksamba.html
+COMMENT=	Samba configuration tool for X Window System
 
 DEPENDS+=	gtk+-1.2.*:../../x11/gtk
 

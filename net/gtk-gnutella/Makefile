@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2000/07/15 20:39:22 agc Exp $
+# $NetBSD: Makefile,v 1.9 2001/02/17 18:18:56 wiz Exp $
 #
 
 DISTNAME=		gtk-gnutella-0.12
@@ -8,6 +8,7 @@ MASTER_SITES=		http://gtk-gnutella.sourceforge.net/download/ \
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://gtk-gnutella.sourceforge.net/
+COMMENT=		GTk-based gnutella client
 
 DEPENDS=		gtk+-1.2.*:../../x11/gtk
 
