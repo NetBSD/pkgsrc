@@ -1,18 +1,10 @@
---- Makefile.inc.in.orig	Wed May 28 16:19:44 1997
-+++ Makefile.inc.in	Wed Jul  2 14:09:57 1997
-@@ -3,12 +3,13 @@
+--- Makefile.inc.in.orig	Wed May 27 10:49:34 1998
++++ Makefile.inc.in	Sat Jul  4 06:07:15 1998
+@@ -4,6 +4,7 @@
  prefix= @prefix@
  exec_prefix = @exec_prefix@
- libdir= $(prefix)/lib
-+datadir= $(prefix)/share
+ libdir= @libdir@
++datadir= @datadir@
  
  AR = ar
  RANLIB = @RANLIB@
- OPTS = @DEFS@
--LIBRPMRC_FILENAME=$(libdir)/rpmrc
--LIBRPMALIAS_FILENAME=$(libdir)/rpmpopt
-+LIBRPMRC_FILENAME=$(datadir)/misc/rpmrc
-+LIBRPMALIAS_FILENAME=$(datadir)/misc/rpmpopt
- RPMNLSDIR=@datadir@/locale
- RPMNLSPACKAGE=rpm
- CFLAGS = @CFLAGS@ @INCPATH@ $(WARNINGS) $(OPTS) -I$(topdir) \
