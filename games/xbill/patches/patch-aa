@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.3 1998/09/30 08:51:30 tron Exp $
+$NetBSD: patch-aa,v 1.4 1999/12/08 17:48:13 bouyer Exp $
 
 --- Imakefile.orig	Thu Jan 23 09:38:35 1997
 +++ Imakefile	Mon Sep 14 13:20:24 1998
@@ -22,7 +22,7 @@ $NetBSD: patch-aa,v 1.3 1998/09/30 08:51:30 tron Exp $
  INCLUDES = -I. $(XPMINC)
  CXXDEFINES = $(XBILL_DEF) $(DEFS) $(INCS)
 -CCFLAGS = $(ALLDEFINES) -Wall -g
-+CCFLAGS = $(ALLDEFINES) -O
++CCFLAGS = $(ALLDEFINES) -O $(CXXDEFINES)
  
  CXX = g++ $(CCFLAGS)
  CCC = $(CXX)
@@ -33,10 +33,10 @@ $NetBSD: patch-aa,v 1.3 1998/09/30 08:51:30 tron Exp $
 -InstallProgramWithFlags(scores, $(XBILL_DIR), -m 777)
 +install::
 +	mkdir -p $(XBILL_DIR)
-+	if [ ! -e /var/games/xbill.scores ]; then \
-+		/usr/bin/install -c -m 0664 -o bin -g games scores /var/games/xbill.scores ; \
++	if [ ! -d /var/games/xbill.scores ]; then \
++		${INSTALL} -c -m 0664 -o bin -g games scores /var/games/xbill.scores ; \
 +	fi
-+	/usr/bin/install -c -s -m 2755 -o bin -g games xbill $(PREFIX)/bin
++	${INSTALL} -c -s -m 2755 -o bin -g games xbill $(PREFIX)/bin
 +
  InstallMultiple ($(XPMS), $(XBILL_DIR)pixmaps)
  InstallMultiple ($(XBMS), $(XBILL_DIR)bitmaps)
