@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/01/24 19:20:41 martti Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/01/24 20:35:48 martti Exp $
 share/squirrelmail/locale/ar/LC_MESSAGES/address_add.po
 share/squirrelmail/locale/ar/LC_MESSAGES/squirrelmail.po
 share/squirrelmail/locale/ar/LC_MESSAGES/address_add.mo
@@ -925,15 +925,6 @@ share/squirrelmail/images/sec_remove_sr_YU.png
 share/squirrelmail/images/sec_remove_sv_SE.png
 share/squirrelmail/images/sec_remove_tr_TR.png
 share/squirrelmail/images/sec_remove_ug.png
-share/squirrelmail/help/en_US/addresses.hlp
-share/squirrelmail/help/en_US/basic.hlp
-share/squirrelmail/help/en_US/options.hlp
-share/squirrelmail/help/en_US/folders.hlp
-share/squirrelmail/help/en_US/FAQ.hlp
-share/squirrelmail/help/en_US/compose.hlp
-share/squirrelmail/help/en_US/read_mail.hlp
-share/squirrelmail/help/en_US/search.hlp
-share/squirrelmail/help/en_US/main_folder.hlp
 share/squirrelmail/help/bg_BG/addresses.hlp
 share/squirrelmail/help/bg_BG/basic.hlp
 share/squirrelmail/help/bg_BG/compose.hlp
@@ -1245,7 +1236,6 @@ share/squirrelmail/help/zh_CN/search.hlp
 @dirrm share/squirrelmail/locale/zh_CN
 @dirrm share/squirrelmail/locale/zh_TW/LC_MESSAGES
 @dirrm share/squirrelmail/locale/zh_TW
-@dirrm share/squirrelmail/help/en_US
 @dirrm share/squirrelmail/help/bg_BG
 @dirrm share/squirrelmail/help/ca_ES
 @dirrm share/squirrelmail/help/cy_GB
