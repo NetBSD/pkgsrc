@@ -1,0 +1,10 @@
+$NetBSD: patch-ae,v 1.1 1998/08/20 22:07:25 agc Exp $
+
+make a placeholder Makefile.in so sed doesn't puke during configure stage
+
+--- /dev/null	Wed Aug 19 14:32:56 1998
++++ src/services/name/Makefile.in	Wed Aug 19 14:34:41 1998
+@@ -0,0 +1,3 @@
++# NetBSD
++#
++# There might as well be something here.
