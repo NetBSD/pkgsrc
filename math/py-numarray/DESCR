@@ -1,0 +1,7 @@
+Numarray is an array processing package designed to efficiently
+manipulate large multi-dimensional arrays.  Numarray is modelled after
+Numeric and features c-code generated from python template scripts,
+the capacity to operate directly on arrays in files, and improved type
+promotions.  Numarray provides support for manipulating arrays
+consisting of numbers, strings, records, or objects using the same
+basic infrastructure and syntax.
