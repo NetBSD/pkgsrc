@@ -1,12 +1,13 @@
-$NetBSD: patch-ad,v 1.6 1998/08/07 10:40:50 agc Exp $
+$NetBSD: patch-ad,v 1.7 1999/01/10 23:52:16 tron Exp $
 
---- pbmplus.h.orig	Sat Jun 20 03:42:19 1998
-+++ pbmplus.h	Sat Jun 20 03:43:47 1998
-@@ -121,2 +121,3 @@
- #endif
-+#ifndef __NetBSD__
- extern int atoi();
-@@ -125,2 +126,3 @@
- extern int write();
-+#endif /* NetBSD */
- #endif
+--- pbm/libpbm1.c.orig	Mon Jan 10 18:37:22 1994
++++ pbm/libpbm1.c	Sun Jan 10 23:48:40 1999
+@@ -132,7 +132,7 @@
+         if ( isupper( c1 ) )
+             c1 = tolower( c1 );
+         if ( isupper( c2 ) )
+-            c1 = tolower( c2 );
++            c2 = tolower( c2 );
+         if ( c1 != c2 )
+             return 0;
+         }

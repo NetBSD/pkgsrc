@@ -1,8 +1,17 @@
-$NetBSD: patch-aa,v 1.4 1998/08/07 10:40:50 agc Exp $
+$NetBSD: patch-aa,v 1.5 1999/01/10 23:52:15 tron Exp $
 
 --- Makefile.orig	Wed Jan 26 12:47:35 1994
-+++ Makefile	Wed Feb 25 02:22:04 1998
-@@ -48,31 +48,31 @@
++++ Makefile	Mon Jan 11 00:17:07 1999
+@@ -21,7 +21,7 @@
+ #CC =		gcc -ansi -pedantic -fcombine-regs -fpcc-struct-return
+ 
+ # CONFIGURE: cc flags go here.
+-CFLAGS =	-O
++CFLAGS =	-O2
+ #CFLAGS =	-g
+ #CFLAGS =	-g -O
+ 
+@@ -48,33 +48,36 @@
  # By the way, you must have at least version 2.4 of libtiff.  Earlier
  # versions will not work.
  TIFFDEF =	-DLIBTIFF
@@ -37,11 +46,16 @@ $NetBSD: patch-aa,v 1.4 1998/08/07 10:40:50 agc Exp $
  # compress or pack. The ../mantocat is used on systems which use man pages
  # in the "cat" format.
 -MANCP =			cp
-+MANCP =			${INSTALL_MAN}
++MANCP =			install -c -m 0644
  #MANCP =		../mantocat
  
++INSTALLLIBS =		$(PREFIX)/lib
++INSTALLDEFS =		$(PREFIX)/include
++
  # CONFIGURE: Normally the Makefiles build and install separate binaries for
-@@ -87,10 +87,10 @@
+ # each program.  However, on some systems (especially those without shared
+ # libraries) this can mean a lot of space.  In this case you might try
+@@ -87,10 +90,10 @@
  #
  # Note that if you make a "merge", the executables don't get created
  # until you do the install.
@@ -56,7 +70,7 @@ $NetBSD: patch-aa,v 1.4 1998/08/07 10:40:50 agc Exp $
  
  # End of configurable definitions.
  
-@@ -99,8 +99,8 @@
+@@ -99,10 +102,10 @@
  SUBDIRS =	pbm pgm ppm pnm
  
  binaries:
@@ -65,5 +79,42 @@ $NetBSD: patch-aa,v 1.4 1998/08/07 10:40:50 agc Exp $
 +#	./stamp-date
 +#	( echo "libtiff" ; cd libtiff ; make )
  	for i in $(SUBDIRS) ; do \
- 	    ( echo $$i ; cd $$i ; $(MAKE) $(MFLAGS) 'CC=$(CC)' 'CFLAGS=$(CFLAGS)' 'TIFFDEF=$(TIFFDEF)' 'TIFFINC=$(TIFFINC)' 'TIFFLIB=$(TIFFLIB)' 'TIFFBINARIES=$(TIFFBINARIES)' 'TIFFOBJECTS=$(TIFFOBJECTS)' 'LDFLAGS=$(LDFLAGS)' binaries ); \
+-	    ( echo $$i ; cd $$i ; $(MAKE) $(MFLAGS) 'CC=$(CC)' 'CFLAGS=$(CFLAGS)' 'TIFFDEF=$(TIFFDEF)' 'TIFFINC=$(TIFFINC)' 'TIFFLIB=$(TIFFLIB)' 'TIFFBINARIES=$(TIFFBINARIES)' 'TIFFOBJECTS=$(TIFFOBJECTS)' 'LDFLAGS=$(LDFLAGS)' binaries ); \
++	    ( echo "===> $$i" ; cd $$i ; $(MAKE) $(MFLAGS) 'CC=$(CC)' 'CFLAGS=$(CFLAGS)' 'TIFFDEF=$(TIFFDEF)' 'TIFFINC=$(TIFFINC)' 'TIFFLIB=$(TIFFLIB)' 'TIFFBINARIES=$(TIFFBINARIES)' 'TIFFOBJECTS=$(TIFFOBJECTS)' 'LDFLAGS=$(LDFLAGS)' binaries ); \
+ 	done
+ 
+ merge:
+@@ -113,15 +116,19 @@
+ 	done
+ 
+ install.bin:
+-	-mkdir $(INSTALLBINARIES)
++#	-mkdir $(INSTALLBINARIES)
++#	-mkdir $(INSTALLLIBS)
++#	-mkdir $(INSTALLDEFS)
+ 	for i in $(SUBDIRS) ; do \
+-	    ( echo $$i ; cd $$i ; $(MAKE) $(MFLAGS) 'CC=$(CC)' 'CFLAGS=$(CFLAGS)' 'TIFFDEF=$(TIFFDEF)' 'TIFFINC=$(TIFFINC)' 'TIFFLIB=$(TIFFLIB)' 'TIFFBINARIES=$(TIFFBINARIES)' 'TIFFOBJECTS=$(TIFFOBJECTS)' 'LDFLAGS=$(LDFLAGS)' 'INSTALLBINARIES=$(INSTALLBINARIES)' 'INSTALLSCRIPTS=$(INSTALLSCRIPTS)' install.bin ); \
++	    ( echo $$i ; cd $$i ; $(MAKE) $(MFLAGS) 'CC=$(CC)' 'CFLAGS=$(CFLAGS)' 'TIFFDEF=$(TIFFDEF)' 'TIFFINC=$(TIFFINC)' 'TIFFLIB=$(TIFFLIB)' 'TIFFBINARIES=$(TIFFBINARIES)' 'TIFFOBJECTS=$(TIFFOBJECTS)' 'LDFLAGS=$(LDFLAGS)' 'INSTALLBINARIES=$(INSTALLBINARIES)' 'INSTALLSCRIPTS=$(INSTALLSCRIPTS)' 'INSTALLLIBS=$(INSTALLLIBS)' 'INSTALLDEFS=$(INSTALLDEFS)' install.bin ); \
+ 	done
+ 
+ install.merge:
+-	-mkdir $(INSTALLBINARIES)
++#	-mkdir $(INSTALLBINARIES)
++#	-mkdir $(INSTALLLIBS)
++#	-mkdir $(INSTALLDEFS)
+ 	for i in $(SUBDIRS) ; do \
+-	    ( echo $$i ; cd $$i ; $(MAKE) $(MFLAGS) 'CC=$(CC)' 'CFLAGS=$(CFLAGS)' 'TIFFDEF=$(TIFFDEF)' 'TIFFINC=$(TIFFINC)' 'TIFFLIB=$(TIFFLIB)' 'TIFFBINARIES=$(TIFFBINARIES)' 'TIFFOBJECTS=$(TIFFOBJECTS)' 'LDFLAGS=$(LDFLAGS)' 'INSTALLBINARIES=$(INSTALLBINARIES)' 'INSTALLSCRIPTS=$(INSTALLSCRIPTS)' install.merge ); \
++	    ( echo $$i ; cd $$i ; $(MAKE) $(MFLAGS) 'CC=$(CC)' 'CFLAGS=$(CFLAGS)' 'TIFFDEF=$(TIFFDEF)' 'TIFFINC=$(TIFFINC)' 'TIFFLIB=$(TIFFLIB)' 'TIFFBINARIES=$(TIFFBINARIES)' 'TIFFOBJECTS=$(TIFFOBJECTS)' 'LDFLAGS=$(LDFLAGS)' 'INSTALLBINARIES=$(INSTALLBINARIES)' 'INSTALLSCRIPTS=$(INSTALLSCRIPTS)' 'INSTALLLIBS=$(INSTALLLIBS)' 'INSTALLDEFS=$(INSTALLDEFS)' install.merge ); \
+ 	done
+ 
+ install.man:
+@@ -131,7 +138,7 @@
+ 
+ clean:
+ 	rm -f *.shar *.shar? art.* *~
+-	echo "" > compile.h
+-	for i in $(SUBDIRS) libtiff ; do \
++	rm -f compile.h ; echo "" > compile.h
++	for i in $(SUBDIRS) ; do \
+ 	    ( echo $$i ; cd $$i ; $(MAKE) $(MFLAGS) clean ); \
  	done
