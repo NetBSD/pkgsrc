@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.12 2003/09/14 01:00:18 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.13 2003/09/14 01:46:47 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -23,6 +23,14 @@
 # BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:C/\+$//}	# pop
 # .endif # FOO_BUILDLINK3_MK
 # -------------8<-------------8<-------------8<-------------8<-------------
+#
+# Note that if a buildlink3.mk file is included, then the package Makefile
+# has the expectation that it can use the value of BUILDLINK_PREFIX.<pkg>.
+# If the buildlink3.mk tries to handle dependencies satisfied directly by
+# the base system, then it should provide an appropriate value for
+# BUILDLINK_PREFIX.<pkg> for that case.  The case where a dependency is
+# satisfied by a pkgsrc-installed package is handled automatically by this
+# file.
 #
 # The different variables that may be set in a buildlink2.mk file are
 # described below.
