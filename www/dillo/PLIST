@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.2 2002/04/29 11:57:03 rh Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/11/26 15:07:31 jmmv Exp $
 bin/dillo
-etc/dillorc
 share/doc/dillo/Cache.txt
 share/doc/dillo/Cookies.txt
 share/doc/dillo/Dillo.txt
@@ -18,4 +17,6 @@ share/doc/dillo/Makefile.am
 share/doc/dillo/Makefile.in
 share/doc/dillo/NC_design.txt
 share/doc/dillo/README
+share/examples/dillo/dillorc
 @dirrm share/doc/dillo
+@dirrm share/examples/dillo
