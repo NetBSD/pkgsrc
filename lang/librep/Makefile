@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2000/10/27 08:01:46 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2000/10/27 17:47:01 jlam Exp $
 #
 
-DISTNAME=		librep-0.13.1
+DISTNAME=		librep-${REP_VERS}
+REP_VERS=		0.13.2
 CATEGORIES=		lang devel
 MASTER_SITES=		ftp://librep.sourceforge.net/pub/librep/
 
@@ -22,5 +23,7 @@ CONFIGURE_ARGS+=	--with-readline
 CONFIGURE_ARGS+=	--with-gmp-prefix=${LOCALBASE}
 CONFIGURE_ARGS+=	--with-gdbm-prefix=${LOCALBASE}
 CONFIGURE_ENV+=		LIBS="-lintl"
+
+PLIST_SUBST+=		REP_VERS=${REP_VERS}
 
 .include "../../mk/bsd.pkg.mk"
