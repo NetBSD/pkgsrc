@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 1998/06/02 21:50:06 tron Exp $
+# $NetBSD: Makefile,v 1.9 1998/06/09 13:36:48 agc Exp $
 # FreeBSD Id: Makefile,v 1.8 1997/09/08 13:20:10 tg Exp 
 #
 
@@ -8,7 +8,7 @@ MASTER_SITES=	http://mercury.hypersurf.com/~amb/download/xmcd/src/
 
 MAINTAINER=	hubertf@netbsd.org
 
-REQUIRES_MOTIF=	yes
+USE_MOTIF=	yes
 USE_IMAKE=	yes
 IS_INTERACTIVE=	yes	# asks a lot of questions
 
