@@ -1,6 +1,7 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2004/10/23 10:53:44 jdolecek Exp $
+$NetBSD: MESSAGE,v 1.2 2005/01/02 22:28:48 wiz Exp $
 
-Install gnucash-docs package for Help, and the Tutorial and Concepts Guide.
+Install the gnucash-docs package for the Help Manual and the Tutorial
+and Concepts Guide.
 
 ===========================================================================
