@@ -1,18 +1,16 @@
-# $NetBSD: Makefile,v 1.60 2002/07/24 19:45:23 jlam Exp $
+# $NetBSD: Makefile,v 1.61 2002/08/26 20:55:03 tron Exp $
 
 DISTNAME=		libgtop-1.0.12
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		devel gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=stable/sources/libgtop/}
 
 MAINTAINER=		tron@netbsd.org
-HOMEPAGE=		http://www.home-of-linux.org/gnome/libgtop/
 COMMENT=		library to retrieve system information, used in GNOME
 
 USE_PERL5=		build
 BUILD_USES_MSGFMT=	yes
 DEPENDS+=		gnome-libs>=1.4.1.2nb1:../../x11/gnome-libs
-DEPENDS+=		guile-[0-9]*:../../lang/guile
 
 NOT_FOR_PLATFORM=	SunOS-*-*
 OSVERSION_SPECIFIC=	yes
@@ -45,11 +43,9 @@ CPPFLAGS+=		-I${LOCALBASE}/include	# libintl.h
 #LDFLAGS+=		-g
 
 GNU_CONFIGURE=		YES
-CONFIGURE_ARGS+=	--with-glib-prefix=${LOCALBASE}
-CONFIGURE_ARGS+=	--with-libgtop-guile --with-catgets
-CONFIGURE_ENV+=		AWK="${AWK}"
-CONFIGURE_ENV+=		LN_S="${LN} -s"
-CONFIGURE_ENV+=		PERL="${PERL5}"
+CONFIGURE_ARGS+=	--with-glib-prefix=${LOCALBASE} \
+			--with-catgets --with-libgtop-guile=no
+CONFIGURE_ENV+=		AWK="${AWK}" LN_S="${LN} -s" PERL="${PERL5}"
 
 .include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
