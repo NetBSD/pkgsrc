@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2003/04/07 17:30:15 magick Exp $
+@comment $NetBSD: PLIST,v 1.9 2003/05/02 23:31:34 magick Exp $
 bin/${EMACSVER}
 bin/ellcc
 bin/gnuattach
@@ -90,8 +90,6 @@ lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/glyphs-x.h
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/glyphs.h
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/gpmevent.h
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/gtk-xemacs.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/gui-gtk.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/gui-x.h
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/gui.h
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/gutter.h
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/hash.h
@@ -210,7 +208,6 @@ lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/windowsnt.h
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/xps100.h
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/macros.h
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/mem-limits.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/menubar-msw.h
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/menubar.h
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/miscplay.h
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/mule-ccl.h
@@ -389,6 +386,7 @@ lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/xintrinsicp.h
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/xmmanagerp.h
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/xmprimitivep.h
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/xmu.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/xmotif.h
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/make-docfile
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/mmencode
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/modules/auto-autoloads.el
@@ -1353,10 +1351,10 @@ lib/${EMACSVER}/lisp/mule/mule-composite.elc
 lib/${EMACSVER}/lisp/mule/mule-locale.txt
 lib/${EMACSVER}/lisp/mule/mule-msw-init-late.el
 lib/${EMACSVER}/lisp/mule/mule-msw-init-late.elc
-lib/${EMACSVER}/lisp/mule/mule-msw-init.el
-lib/${EMACSVER}/lisp/mule/mule-msw-init.elc
 lib/${EMACSVER}/lisp/mule/mule-tty-init.el
 lib/${EMACSVER}/lisp/mule/mule-tty-init.elc
+lib/${EMACSVER}/lisp/mule/mule-win32-init.el
+lib/${EMACSVER}/lisp/mule/mule-win32-init.elc
 lib/${EMACSVER}/lisp/mule/mule-x-init.el
 lib/${EMACSVER}/lisp/mule/mule-x-init.elc
 lib/${EMACSVER}/lisp/mule/thai-util.el
@@ -1377,6 +1375,8 @@ lib/${EMACSVER}/lisp/multicast.el
 lib/${EMACSVER}/lisp/multicast.elc
 lib/${EMACSVER}/lisp/mwheel.el
 lib/${EMACSVER}/lisp/mwheel.elc
+lib/${EMACSVER}/lisp/newcomment.el
+lib/${EMACSVER}/lisp/newcomment.elc
 lib/${EMACSVER}/lisp/objects.el
 lib/${EMACSVER}/lisp/objects.elc
 lib/${EMACSVER}/lisp/obsolete.el
@@ -1515,7 +1515,6 @@ lib/${EMACSVER}/lisp/update-elc.el
 lib/${EMACSVER}/lisp/userlock.el
 lib/${EMACSVER}/lisp/userlock.elc
 lib/${EMACSVER}/lisp/version.el
-lib/${EMACSVER}/lisp/very-early-lisp.el
 lib/${EMACSVER}/lisp/view-less.el
 lib/${EMACSVER}/lisp/view-less.elc
 lib/${EMACSVER}/lisp/wid-browse.el
