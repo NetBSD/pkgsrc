@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2003/06/02 01:20:10 jschauma Exp $
+# $NetBSD: Makefile,v 1.58 2003/06/05 12:09:17 markd Exp $
 # FreeBSD Id: Makefile,v 1.30 1997/12/14 02:03:53 asami Exp
 
 DISTNAME=	emacs-21.3
@@ -33,6 +33,10 @@ BUILDLINK_DEPENDS.libungif=	libungif>=4.1.0.1
 CONFIGURE_ARGS+=	--with-gif
 .include "../../graphics/png/buildlink2.mk"
 CONFIGURE_ARGS+=	--with-png
+
+.if defined(EMACS_USE_XAW3D) && !empty(EMACS_USE_XAW3D:M[Yy][Ee][Ss])
+.include "../../x11/Xaw3d/buildlink2.mk"
+.endif
 
 .include "../../mk/bsd.prefs.mk"
 
