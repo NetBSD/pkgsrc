@@ -1,35 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 20:06:35 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/17 22:41:39 hubertf Exp $
 bin/irssi
-etc/irssi/colorless.theme
-etc/irssi/config
-etc/irssi/default.theme
-lib/irssi/modules/libfe_irc_dcc.a
-lib/irssi/modules/libfe_irc_dcc.la
-lib/irssi/modules/libfe_irc_dcc.so
-lib/irssi/modules/libfe_irc_dcc.so.0
-lib/irssi/modules/libfe_irc_dcc.so.0.0
-lib/irssi/modules/libfe_irc_notifylist.a
-lib/irssi/modules/libfe_irc_notifylist.la
-lib/irssi/modules/libfe_irc_notifylist.so
-lib/irssi/modules/libfe_irc_notifylist.so.0
-lib/irssi/modules/libfe_irc_notifylist.so.0.0
-lib/irssi/modules/libirc_dcc.a
-lib/irssi/modules/libirc_dcc.la
-lib/irssi/modules/libirc_dcc.so
-lib/irssi/modules/libirc_dcc.so.0
-lib/irssi/modules/libirc_dcc.so.0.0
-lib/irssi/modules/libirc_flood.a
-lib/irssi/modules/libirc_flood.la
-lib/irssi/modules/libirc_flood.so
-lib/irssi/modules/libirc_flood.so.0
-lib/irssi/modules/libirc_flood.so.0.0
-lib/irssi/modules/libirc_notifylist.a
-lib/irssi/modules/libirc_notifylist.la
-lib/irssi/modules/libirc_notifylist.so
-lib/irssi/modules/libirc_notifylist.so.0
-lib/irssi/modules/libirc_notifylist.so.0.0
+etc/irssi.conf
 share/doc/irssi/botnet.txt
 share/doc/irssi/design.txt
+share/doc/irssi/faq.txt
 share/doc/irssi/formats.txt
 share/doc/irssi/manual.txt
 share/doc/irssi/perl.txt
@@ -115,6 +89,7 @@ share/irssi/help/rmrejoins
 share/irssi/help/rping
 share/irssi/help/run
 share/irssi/help/save
+share/irssi/help/say
 share/irssi/help/sconnect
 share/irssi/help/scrollback
 share/irssi/help/server
@@ -124,6 +99,7 @@ share/irssi/help/silence
 share/irssi/help/squery
 share/irssi/help/squit
 share/irssi/help/stats
+share/irssi/help/statusbar
 share/irssi/help/time
 share/irssi/help/toggle
 share/irssi/help/topic
@@ -136,6 +112,7 @@ share/irssi/help/unload
 share/irssi/help/unnotify
 share/irssi/help/unquery
 share/irssi/help/unsilence
+share/irssi/help/upgrade
 share/irssi/help/uping
 share/irssi/help/userhost
 share/irssi/help/ver
@@ -145,20 +122,24 @@ share/irssi/help/wait
 share/irssi/help/wall
 share/irssi/help/wallchops
 share/irssi/help/wallops
+share/irssi/help/watch
 share/irssi/help/who
 share/irssi/help/whois
 share/irssi/help/whowas
 share/irssi/help/window
 share/irssi/help/wjoin
 share/irssi/help/wquery
-share/locale/de/LC_MESSAGES/irssi.mo
-share/locale/fr/LC_MESSAGES/irssi.mo
-share/locale/pl/LC_MESSAGES/irssi.mo
-share/locale/pt_BR/LC_MESSAGES/irssi.mo
-share/locale/sv/LC_MESSAGES/irssi.mo
+share/irssi/scripts/autoop.pl
+share/irssi/scripts/autorejoin.pl
+share/irssi/scripts/clones.pl
+share/irssi/scripts/hello.pl
+share/irssi/scripts/privmsg.pl
+share/irssi/scripts/quitmsg.pl
+share/irssi/scripts/realname.pl
+share/irssi/themes/colorless.theme
+share/irssi/themes/default.theme
+@dirrm share/irssi/themes
+@dirrm share/irssi/scripts
 @dirrm share/irssi/help
 @dirrm share/irssi
 @dirrm share/doc/irssi
-@dirrm lib/irssi/modules
-@dirrm lib/irssi
-@dirrm etc/irssi
