@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2001/03/07 16:07:31 agc Exp $
+# $NetBSD: Makefile,v 1.40 2001/04/30 14:37:23 agc Exp $
 # FreeBSD Id: Makefile,v 1.19 1998/03/08 06:44:48 obrien Exp
 #
 
@@ -21,6 +21,7 @@ HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	./Configure
 CONFIGURE_ARGS=		-n ${LOWER_OPSYS}
 CONFIGURE_ENV+=		LSOF_CC="${CC} ${CFLAGS}"
+MAKE_ENV+=		CPPFLAGS="${CPPFLAGS} -DLSOF_MORE_SECURE=${LSOF_MORE_SECURE}"
 
 SRCBALL_NAME=		${DISTNAME:S/_W$//}
 
@@ -31,6 +32,8 @@ REAL_GROUP=		-g kmem
 .elif ${OPSYS} == "SunOS"
 MAKE_ENV+=		CPPFLAGS=
 .endif
+
+LSOF_MORE_SECURE?= 0
 
 post-extract:
 	@(cd ${WRKDIR} ; \
