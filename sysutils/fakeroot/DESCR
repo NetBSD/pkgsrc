@@ -1,0 +1,4 @@
+Fakeroot creates a `faked root' environment.
+
+A typical use case is creating tar (or somesuch) packages that should have
+proper file ownerships and modes without needing root access to the machine.

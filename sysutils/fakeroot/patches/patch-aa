@@ -1,0 +1,48 @@
+$NetBSD: patch-aa,v 1.1.1.1 2002/12/20 11:23:54 lonewolf Exp $
+
+--- scripts/fakeroot.orig	Sun Nov 24 02:02:55 2002
++++ scripts/fakeroot
+@@ -14,7 +14,7 @@ BINDIR=`dirname $0`
+ PREFIX=`dirname ${BINDIR}`
+     
+ LIB=libfakeroot.so.0
+-PATHS=${PREFIX}/lib/libfakeroot:${PREFIX}/lib64/libfakeroot
++PATHS=${PREFIX}/lib:${PREFIX}/lib64
+ FAKED=${BINDIR}/faked
+ 
+ libfound=no
+@@ -63,8 +63,10 @@ then
+ 	if test -r "$dir/$LIB"
+ 	then
+ 	    libfound=yes
++	    uselib=$dir/$LIB
+ 	fi
+     done
++    LIB=$uselib
+ else
+     if test -r "$LIB"
+     then
+@@ -90,20 +92,16 @@ if test -z "$FAKEROOTKEY" || test -z "$P
+   exit 1
+ fi
+ 
+-# Keep other library paths
+-if test -n "$LD_LIBRARY_PATH"; then
+-  PATHS="$PATHS:$LD_LIBRARY_PATH"
+-fi
+-# ...and preloaded libs
++# Keep preloaded libs
+ if test -n "$LD_PRELOAD"; then
+   LIB="$LIB $LD_PRELOAD"
+ fi
+ 
+ if test -z "$*"; then
+-  FAKEROOTKEY=$FAKEROOTKEY LD_LIBRARY_PATH="$PATHS" LD_PRELOAD="$LIB" ${SHELL:-/bin/sh}
++  FAKEROOTKEY=$FAKEROOTKEY LD_PRELOAD="$LIB" ${SHELL:-/bin/sh}
+   RESULT=$?
+ else
+-  FAKEROOTKEY=$FAKEROOTKEY LD_LIBRARY_PATH="$PATHS" LD_PRELOAD="$LIB" "$@"
++  FAKEROOTKEY=$FAKEROOTKEY LD_PRELOAD="$LIB" "$@"
+   RESULT=$?
+ fi
+ 
