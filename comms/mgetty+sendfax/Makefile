@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.25 2003/02/26 21:45:43 fredb Exp $
+# $NetBSD: Makefile,v 1.26 2003/02/27 17:13:37 fredb Exp $
 # FreeBSD Id: Makefile,v 1.25 1998/07/16 06:44:37 vanilla Exp
 #
 
 DISTNAME=	mgetty1.1.28-Jan10
 PKGNAME=	mgetty-1.1.28
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	comms
 MASTER_SITES=	ftp://ftp.leo.org/pub/comp/os/unix/networking/mgetty/ \
 		ftp://alpha.greenie.net/pub/mgetty/source/1.1/
@@ -15,37 +15,39 @@ COMMENT=	Handle external logins, send and receive faxes
 
 CONFLICTS=	hylafax-[0-9]*
 
-WRKSRC=		${WRKDIR}/${PKGNAME:C/nb[0-9]//}
-INFO_FILES=	mgetty.info
-INSTALL_FILE=	${WRKDIR}/INSTALL
+USE_BUILDLINK2=		yes
+USE_PKGINSTALL=		yes
 
-MGETTY_CONFDIR=	${PREFIX}/etc/mgetty+sendfax
-#MGETTY_CONFDIR=/etc/mgetty
-MAKE_ENV+=	MGETTY_CONFDIR=${MGETTY_CONFDIR}
+MAKE_ENV=		MGETTY_CONFDIR=${PKG_SYSCONFDIR}
+WRKSRC=			${WRKDIR}/${PKGNAME:C/nb[0-9]//}
 
-USE_BUILDLINK2=	# defined
+INFO_FILES=		mgetty.info
+PKG_SYSCONFSUBDIR=	mgetty+sendfax
 
-pre-patch:
-	${MV} ${WRKSRC}/doc/fax.1in ${WRKSRC}/doc/sendfax.1in
+.ifndef CONF_FILES
+. for cfg in		dialin.config		\
+			faxheader		\
+			faxrunq.config		\
+			faxspool.rules.sample	\
+			login.config		\
+			mgetty.config
+CONF_FILES+=		${_EXAMPLES_DIR}/${cfg} ${PKG_SYSCONFDIR}/${cfg}
+. endfor
+.endif
+
+_EXAMPLES_DIR=		${PREFIX}/share/examples/mgetty+sendfax
 
 do-configure:
-	cd ${.CURDIR} && ${SETENV} ${SCRIPTS_ENV} ${SH} ${SCRIPTDIR}/configure
-
-post-configure:
-	${SED} -e 's#$${INSTALL_DATA_DIR}#${INSTALL_DATA_DIR}#' \
-		-e 's#$${MGETTY_CONFDIR}#${MGETTY_CONFDIR}#' \
-		-e 's#$${PAX}#${PAX}#' \
-		-e 's#$${PREFIX}#${PREFIX}#' \
-		${PKGDIR}/INSTALL > ${INSTALL_FILE}
-	cd ${WRKSRC}; \
-	    ${MV} faxrunq.config faxrunq.config.old; \
-	    ${SED} 's#/usr/local#${PREFIX}#' \
-		    faxrunq.config.old > faxrunq.config
-
-post-install:
-	${INSTALL_DATA_DIR} ${MGETTY_CONFDIR}
-	cd ${PREFIX}/share/examples/mgetty+sendfax; \
-	    ${PAX} -r -w -pe -k * ${MGETTY_CONFDIR}
+	${MV} ${WRKSRC}/doc/fax.1in ${WRKSRC}/doc/sendfax.1in
+	cd ${WRKSRC}						\
+	&& for _file in faxrunq.config policy.h-dist;		\
+	do							\
+		${MV} $$_file $${_file}.orig;			\
+		${SED} 's|/usr/local|${PREFIX}|'		\
+		    $${_file}.orig > $$_file;			\
+	done							\
+	&& cd ${.CURDIR}					\
+	&& ${SETENV} ${SCRIPTS_ENV} ${SH} ${SCRIPTDIR}/configure
 
 .include "../../graphics/netpbm/buildlink2.mk"
 .include "../../mk/texinfo.mk"
