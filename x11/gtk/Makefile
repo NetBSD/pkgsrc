@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2001/06/16 19:50:58 jlam Exp $
+# $NetBSD: Makefile,v 1.60 2001/06/18 20:49:02 jlam Exp $
 
 DISTNAME=		gtk+-1.2.10
 CATEGORIES=		x11
@@ -38,15 +38,18 @@ PLIST_SUBST+=		LOCALBASE=${LOCALBASE}
 #
 X_LDFLAGS=		-Wl,-R${X11BASE}/lib -L${X11BASE}/lib
 
-# Fix gtk-config by removing buildlink directory references.
+# Fix config scripts by removing buildlink directory references.
 post-build:
 	@cd ${WRKSRC};							\
-	${MV} -f gtk-config gtk-config.fixme;				\
-	${SED}	-e "/^glib/s|-I${BUILDLINK_DIR}/|-I${LOCALBASE}/|g"	\
-		-e "/^glib/s|-L${BUILDLINK_DIR}/|-L${LOCALBASE}/|g"	\
-		gtk-config.fixme > gtk-config;				\
-	${RM} -f gtk-config.fixme;					\
-	${CHMOD} +x gtk-config
+	config_scripts="gtk-config";					\
+	for file in $${config_scripts}; do				\
+		${MV} -f $${file} $${file}.fixme;			\
+		${SED}	-e "s|-I${BUILDLINK_DIR}/|-I${LOCALBASE}/|g"	\
+			-e "s|-L${BUILDLINK_DIR}/|-L${LOCALBASE}/|g"	\
+			$${file}.fixme > $${file};			\
+		${RM} -f $${file}.fixme;				\
+		${CHMOD} +x $${file};					\
+	done
 
 post-install:
 	${TEST} ${PREFIX} = ${LOCALBASE} || \

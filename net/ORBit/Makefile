@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2001/06/16 20:02:10 jlam Exp $
+# $NetBSD: Makefile,v 1.56 2001/06/18 20:49:01 jlam Exp $
 #
 
 DISTNAME=		ORBit-0.${ORBIT_MAJOR}.${ORBIT_MINOR}
@@ -39,14 +39,17 @@ INFO_FILES=		libIDL.info
 pre-configure:
 	cd ${WRKSRC}/popt && ${LOCALBASE}/bin/autoreconf --include-deps --force
 
-# Fix libIDLConf.sh by removing buildlink directory references.
+# Fix config scripts by removing buildlink directory references.
 post-build:
-	@cd ${WRKSRC}/libIDL;						\
-	${MV} -f libIDLConf.sh libIDLConf.sh.fixme;			\
-	${SED}	-e "s|-I${BUILDLINK_DIR}/|-I${LOCALBASE}/|g"		\
-		-e "s|-L${BUILDLINK_DIR}/|-L${LOCALBASE}/|g"		\
-		libIDLConf.sh.fixme > libIDLConf.sh;			\
-	${RM} -f libIDLConf.sh.fixme;					\
-	${CHMOD} +x libIDLConf.sh
+	@cd ${WRKSRC};							\
+	config_scripts="libIDL/libIDLConf.sh";				\
+	for file in $${config_scripts}; do				\
+		${MV} -f $${file} $${file}.fixme;			\
+		${SED}	-e "s|-I${BUILDLINK_DIR}/|-I${LOCALBASE}/|g"	\
+			-e "s|-L${BUILDLINK_DIR}/|-L${LOCALBASE}/|g"	\
+			$${file}.fixme > $${file};			\
+		${RM} -f $${file}.fixme;				\
+		${CHMOD} +x $${file};					\
+	done
 
 .include "../../mk/bsd.pkg.mk"
