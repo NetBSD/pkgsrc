@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.131 2001/04/22 08:23:42 tron Exp $
+# $NetBSD: Makefile,v 1.132 2001/04/27 13:36:06 agc Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -118,6 +118,7 @@ SUBDIR+=	urt
 SUBDIR+=	win32-codecs
 SUBDIR+=	vcg
 SUBDIR+=	viewfax
+SUBDIR+=	wmphoto
 SUBDIR+=	xanim
 SUBDIR+=	xart
 SUBDIR+=	xbmbrowser
