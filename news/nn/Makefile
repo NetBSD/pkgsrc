@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2003/07/17 22:52:08 grant Exp $
+# $NetBSD: Makefile,v 1.21 2004/03/22 10:25:26 wiz Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/07/30 18:17:48 adam Exp
 #
 
@@ -27,6 +27,8 @@ SFILE=		s-netbsd.h
 
 .if ${LOWER_ARCH} == "i386"
 MFILE=		m-i80386.h
+.else if ${LOWER_ARCH} == "mipseb"
+MFILE=         m-mipsel.h
 .else
 MFILE=		m-${LOWER_ARCH}.h
 .endif
