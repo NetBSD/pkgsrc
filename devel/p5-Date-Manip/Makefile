@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/07/17 21:32:16 grant Exp $
+# $NetBSD: Makefile,v 1.11 2003/07/21 16:43:36 martti Exp $
 #
 
 VERS=		5.40
@@ -10,7 +10,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Date/}
 
 MAINTAINER=	jwise@NetBSD.org
 HOMEPAGE=	http://www.cpan.org/
-COMMENT=	perl5 module for date calculations
+COMMENT=	Perl5 module for date calculations
 
 USE_BUILDLINK2=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Date/Manip/.packlist

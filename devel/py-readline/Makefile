@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/07/17 21:33:30 grant Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/21 16:43:45 martti Exp $
 #
 
 PKGNAME=	${PYPKGPREFIX}-readline-0
@@ -6,7 +6,7 @@ CATEGORIES=	devel misc
 
 MAINTAINER=	tsarna@NetBSD.org
 HOMEPAGE=	http://www.python.org/doc/tut/interacting.html
-COMMENT=	line editing support for Python
+COMMENT=	Line editing support for Python
 
 EXTRACT_ELEMENTS=	${PYSUBDIR}/Modules/readline.c
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/07/17 21:32:45 grant Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/21 16:43:40 martti Exp $
 #
 
 DISTNAME=	Parse-RecDescent-1.94
@@ -7,7 +7,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Parse/}
 
 MAINTAINER=	tech-pkg@NetBSD.org
-COMMENT=		generate recursive-descent parsers
+COMMENT=		Generate recursive-descent parsers
 
 USE_BUILDLINK2=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Parse/RecDescent/.packlist
