@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2003/06/02 01:21:49 jschauma Exp $
+# $NetBSD: Makefile,v 1.15 2003/06/25 21:45:15 seb Exp $
 
 DISTNAME=	sharutils-4.2.1
 PKGNAME=	g${DISTNAME}
@@ -16,8 +16,9 @@ USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 
 INSTALL_TARGET=		install install-man
+USE_NEW_TEXINFO=	YES
+USE_MAKEINFO=		YES
 INFO_FILES=		remsync.info sharutils.info
-TEXINFO_OVERRIDE=	YES
 
 CONFIGURE_ARGS+=	--disable-uucode
 
@@ -33,5 +34,4 @@ post-patch:
 	@${TOUCH} ${TOUCH_FLAGS} ${WRKSRC}/po/sharutils.pot
 
 .include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
