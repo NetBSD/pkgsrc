@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2000/05/30 12:46:20 rh Exp $
+
+--- configure.orig	Sun Apr 23 22:41:16 2000
++++ configure	Tue May 30 12:43:39 2000
+@@ -542,7 +542,7 @@
+ 
+ 
+ 
+-docdir='${prefix}/doc/kannel'
++docdir='${prefix}/share/doc/kannel'
+ 
+ 
+ # Extract the first word of "gcc", so it can be a program name with args.

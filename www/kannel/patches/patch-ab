@@ -1,0 +1,22 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/05/30 12:46:19 rh Exp $
+
+--- Makefile.in.orig	Sun Apr  9 19:45:02 2000
++++ Makefile.in	Tue May 30 12:49:32 2000
+@@ -90,7 +90,7 @@
+ 
+ # Set this to something if you want all installed binaries to have a suffix.
+ # Version number if common.
+-suffix = -$(VERSION)
++suffix =
+ 
+ #
+ # You probably don't need to touch anything below this, if you're just
+@@ -180,7 +180,7 @@
+ install: all
+ 	$(INSTALL) -d $(bindir)
+ 	for prog in $(progs); do \
+-		$(INSTALL) $$prog $(bindir)/`basename $$prog`$(suffix); \
++		${BSD_INSTALL_PROGRAM} $$prog $(bindir)/`basename $$prog`${suffix}; \
+ 	done
+ 
+ install-docs:
