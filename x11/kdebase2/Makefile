@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2001/11/15 21:31:42 jlam Exp $
+# $NetBSD: Makefile,v 1.32 2001/11/22 04:27:47 jlam Exp $
 
 DISTNAME=	kdebase-2.2.1
 CATEGORIES=	x11
@@ -70,8 +70,9 @@ post-install:
 	${INSTALL_DATA} ${DISTDIR}/Daemon.README			\
 		${PREFIX}/share/doc/kde/HTML/en/kdm
 
-	@# Several programs need to be setuid-root, so we need to remove
-	@# remove read/write permissions for security reasons.
+	@# Several programs need to be setuid-root, but due to the way that
+	@# KDE2 finds executables, the files must have their read bit set,
+	@# which is a potential security risk.  "Ugh".
 	@#
 	suid_progs="							\
 		bin/konsole_grantpty					\
@@ -79,7 +80,7 @@ post-install:
 		bin/ksysguardd						\
 	";								\
 	for prog in $${suid_progs}; do					\
-		${CHMOD} 4711 ${PREFIX}/$${prog};			\
+		${CHMOD} 4755 ${PREFIX}/$${prog};			\
 	done
 
 	@# The global desktop template files need to be user-writeable, or
