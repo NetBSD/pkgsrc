@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/01/06 04:03:16 abs Exp $
+
+--- configure.orig	Wed Jan  5 20:09:34 2000
++++ configure	Wed Jan  5 20:05:44 2000
+@@ -1255,6 +1255,7 @@
+ case "$host" in
+ *-linux*) rm -f output.c; ln -s output_linux.c output.c;;
+ *-openbsd*) rm -f output.c; ln -s output_linux.c output.c;;
++*-netbsd*) rm -f output.c; ln -s output_linux.c output.c;;
+ *-irix*) rm -f output.c; ln -s output_irix.c output.c;;
+ *-solaris*) rm -f output.c; ln -s output_solaris.c output.c;;
+ *) echo "$host is not currently supported by ac3dec"; exit 1;;
