@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5314 2004/03/28 20:18:36 mycroft Exp $
+$NetBSD: CHANGES,v 1.5315 2004/03/28 20:36:51 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1539,3 +1539,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated transcode to 0.6.12 [mycroft 2004-03-28]
 	Updated xine-lib to 1rc3b [mycroft 2004-03-28]
 	Updated faad2 to 2.0 [mycroft 2004-03-28]
+	Updated classpath to 0.07nb1 [jmmv 2004-03-28]
+	Added classpath-gui-0.07 [jmmv 2004-03-28]
