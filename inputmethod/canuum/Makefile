@@ -1,30 +1,33 @@
-# $NetBSD: Makefile,v 1.5 2003/03/29 12:41:23 jmmv Exp $
+# $NetBSD: Makefile,v 1.6 2003/04/19 03:51:24 uebayasi Exp $
 #
 
 DISTNAME=	canuum-1.0
-PKGREVISION=	1
-WRKSRC=		${WRKDIR}/Canna35b2/canuum
+PKGREVISION=	2
+WRKSRC=		${WRKDIR}/${CANNA_VER}/canuum
 CATEGORIES=	japanese inputmethod
-MASTER_SITES=	ftp://ftp.nec.co.jp/pub/Canna/Canna35/
-DISTFILES=	Uum4.109.tar.gz Canna35b2.tar.gz
-EXTRACT_ONLY=	Uum4.109.tar.gz
+MASTER_SITES=	ftp://ftp.nec.co.jp/pub/Canna/${CANNA_VER}5/
+DISTFILES=	Uum${UUM_VER}.tar.gz ${CANNA_VER}.tar.gz
 
 MAINTAINER=	oishi@ims.ac.jp
 HOMEPAGE=	http://www.nec.co.jp/japanese/product/computer/soft/canna/
 COMMENT=	Japanese input tty frontend for Canna using uum
 
+EXTRACT_ONLY=	Uum${UUM_VER}.tar.gz
+
 USE_BUILDLINK2=	YES
-USE_IMAKE=	YES
-USE_X11=	YES
 MAKE_ARGS=	PREFIX=${PREFIX}
 
 MAKE_ENV+=	CCOPTIONS="${CPPFLAGS}" EXTRA_LDOPTIONS="${LDFLAGS}"
 
+UUM_VER=	4.109
+CANNA_VER=	Canna36p1
+
 post-extract:
-	@${GTAR} -xzf ${DISTDIR}/Canna35b2.tar.gz -C ${WRKDIR} \
-		Canna35b2/Canna.conf Canna35b2/canuum
-	@${MV} ${WRKDIR}/Canna35b2/Canna.conf ${WRKSRC}/
-	@${CP} ${WRKDIR}/Uum4.109/* ${WRKSRC}
+	@${GTAR} -xzf ${DISTDIR}/${CANNA_VER}.tar.gz -C ${WRKDIR} \
+		${CANNA_VER}/Canna.conf ${CANNA_VER}/canuum ${CANNA_VER}/canna
+	@${MV} ${WRKDIR}/${CANNA_VER}/Canna.conf ${WRKSRC}
+	@${CP} ${WRKDIR}/Uum${UUM_VER}/* ${WRKSRC}
+	@${CP} ${WRKDIR}/${CANNA_VER}/canna/*.h ${WRKSRC}
 
 pre-patch:
 	@(cd ${WRKSRC}; ${PATCH} ${PATCH_DIST_ARGS} < Canuum.patch)
@@ -32,7 +35,8 @@ pre-patch:
 do-configure:
 	@(cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${XMKMF_CMD}; \
 		${MAKE} ${MAKE_ARGS} Makefile; \
-		${MAKE} ${MAKE_ARGS} cannaconf.h; ${MAKE} ${MAKE_ARGS} depend)
+		${MAKE} ${MAKE_ARGS} cannaconf.h; \
+		${MAKE} ${MAKE_ARGS} depend)
 
 do-build:
 	@(cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_ARGS} all)
