@@ -1,14 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/27 02:06:55 rh Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/04/27 16:05:03 jmmv Exp $
 bin/nautilus
 bin/nautilus-file-management-properties
 bin/nautilus-server-connect
-etc/X11/serverconfig/.directory
-etc/X11/starthere/.directory
-etc/X11/starthere/applications.desktop
-etc/X11/starthere/preferences.desktop
-etc/X11/starthere/serverconfig.desktop
-etc/X11/starthere/sysconfig.desktop
-etc/X11/sysconfig/.directory
 include/libnautilus/libnautilus.h
 include/libnautilus/nautilus-bonobo-ui.h
 include/libnautilus/nautilus-clipboard.h
@@ -66,6 +59,13 @@ libexec/nautilus-throbber
 share/applications/nautilus.desktop
 share/applications/network-scheme.desktop
 share/control-center-2.0/capplets/nautilus-file-management-properties.desktop
+share/examples/nautilus/X11/serverconfig/.directory
+share/examples/nautilus/X11/starthere/.directory
+share/examples/nautilus/X11/starthere/applications.desktop
+share/examples/nautilus/X11/starthere/preferences.desktop
+share/examples/nautilus/X11/starthere/serverconfig.desktop
+share/examples/nautilus/X11/starthere/sysconfig.desktop
+share/examples/nautilus/X11/sysconfig/.directory
 share/gconf/schemas/apps_nautilus_preferences.schemas
 share/gnome-2.0/ui/nautilus-clipboard-ui.xml
 share/gnome-2.0/ui/nautilus-desktop-icon-view-ui.xml
@@ -350,8 +350,9 @@ share/pixmaps/nautilus/zoom_body.png
 @dirrm share/nautilus/patterns
 @dirrm share/nautilus/glade
 @dirrm share/nautilus
+@dirrm share/examples/nautilus/X11/sysconfig
+@dirrm share/examples/nautilus/X11/starthere
+@dirrm share/examples/nautilus/X11/serverconfig
+@dirrm share/examples/nautilus/X11
+@dirrm share/examples/nautilus
 @dirrm include/libnautilus
-@dirrm etc/X11/sysconfig
-@dirrm etc/X11/starthere
-@dirrm etc/X11/serverconfig
-@dirrm etc/X11
