@@ -1,12 +1,6 @@
-$NetBSD: distinfo,v 1.3 2004/11/12 19:01:57 kristerw Exp $
+$NetBSD: distinfo,v 1.4 2004/11/29 08:22:27 martin Exp $
 
-SHA1 (open2300-1.7.tar.gz) = 12227964e6a74f41c1efbbd58c4af67fc8ca3151
-Size (open2300-1.7.tar.gz) = 330103 bytes
-SHA1 (patch-aa) = f63fcb9632729e32750f6e1129e2011bbe5c4419
-SHA1 (patch-ab) = abf7bc87a25d1894ecc32d09ed48bd479f076fe3
-SHA1 (patch-ac) = 5ddd6e4c0ce2df718c4fcb7efed1d9553c415684
-SHA1 (patch-ad) = 68fe348565fbc7434d58613b9578d499513bf1e4
-SHA1 (patch-ae) = 062f9d02e839c3c01a31d8b5ac6824a688742c2b
-SHA1 (patch-af) = eaeda5057a9d268c0034c0edff080bb488861296
-SHA1 (patch-ag) = 1239d4d60865e75aa61bba1f04e760c74e84d68c
-SHA1 (patch-ah) = 00d5dfd3a86691f7b2c0cef6360fc52103be6f17
+SHA1 (open2300-1.8.tar.gz) = 86fd2dcdef995498ed17062dd4b8df5db6b3383d
+Size (open2300-1.8.tar.gz) = 330320 bytes
+SHA1 (patch-aa) = 3f2cc9994e45a77d2bfc6907515e5c7c4a6d13d3
+SHA1 (patch-ab) = 9437137a36e434fcabde6acc5373be04523357e9
