@@ -1,6 +1,6 @@
 #!/usr/bin/env perl
 
-# $NetBSD: lintpkgsrc.pl,v 1.16 2000/01/10 02:01:22 abs Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.17 2000/01/10 15:06:49 abs Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -24,14 +24,16 @@ my(	$pkgsrcdir,		# Base of pkgsrc tree
 	%default_makefile_vars,	# Default vars set for Makefiles
 	%opt,			# Command line options
 	@old_prebuiltpackages,	# List of obsolete prebuilt package paths
+	@prebuilt_pkgdirs,	# Use to follow symlinks in prebuilt pkgdirs
 	@restricted_prebuiltpackages);	# Ditto, but for RESTRICTED packages
 
 $ENV{PATH} .= ':/usr/sbin';
 
-if (! &getopts('DK:P:Rdhilmopr', \%opt) || $opt{'h'} ||
+if (! &getopts('DK:P:Rdhilmopru', \%opt) || $opt{'h'} ||
 	! ( defined($opt{'d'}) || defined($opt{'i'}) || defined($opt{'l'}) ||
 	    defined($opt{'m'}) || defined($opt{'o'}) || defined($opt{'p'}) ||
-	    defined($opt{'r'}) || defined($opt{'D'}) || defined($opt{'R'}) ))
+	    defined($opt{'r'}) || defined($opt{'u'}) || defined($opt{'D'}) ||
+	    defined($opt{'R'}) ))
     { &usage_and_exit; }
 $| = 1;
 
@@ -90,7 +92,9 @@ if ($opt{'D'})
 	    { $binpkgdir = $opt{'K'}; }
 	else
 	    { $binpkgdir = "$pkgsrcdir/packages"; }
-	find(\&check_prebuilt_packages, $binpkgdir);
+	@prebuilt_pkgdirs = ($binpkgdir);
+	while (@prebuilt_pkgdirs)
+	    { find(\&check_prebuilt_packages, shift @prebuilt_pkgdirs); }
 	if ($opt{'r'})
 	    {
 	    &verbose("Unlinking 'old' prebuiltpackages\n");
@@ -101,9 +105,9 @@ if ($opt{'D'})
 
     if ($opt{'d'})
 	{ &scan_pkgsrc_makefiles($pkgsrcdir, 1); }
-    if ($opt{'i'})
+    if ($opt{'i'} || $opt{'u'})
 	{
-	my(@pkgs, $pkg);
+	my(@pkgs, @bad, $pkg);
 
 	@pkgs = &list_installed_packages;
 	if (!%pkgver2dir)
@@ -111,7 +115,26 @@ if ($opt{'D'})
 	foreach $pkg ( @pkgs )
 	    {
 	    if ( $_ = &invalid_version($pkg) )
-		{ print $_; }
+		{
+		push(@bad, $pkg);
+		print $_;
+		}
+	    }
+	if ($opt{'u'})
+	    {
+	    foreach $pkg (@bad)
+		{
+		my($pkgdir);
+
+		if ( $pkg =~ /^([^*?[]+)-([\d*?[].*)/ ) 
+		    { $pkgdir = $pkgver2dir{"$1-$pkg2ver{$1}"}; }
+
+		if (!defined($pkgdir))
+		    { &fail("Unable to determine directory for '$pkg'"); }
+		print "$pkgsrcdir/$pkgdir\n";
+		safe_chdir("$pkgsrcdir/$pkgdir");
+		system('make fetch-list | sh');
+		}
 	    }
 	}
     if ($opt{'l'})
@@ -138,6 +161,8 @@ sub check_prebuilt_packages
 	    push(@restricted_prebuiltpackages, "$File::Find::dir/$_");
 	    }
 	}
+    elsif (-l $_ && -d $_)
+	{ push(@prebuilt_pkgdirs, readlink($_)); }
     }
 
 # Dewey decimal verson number matching - or thereabouts
@@ -177,7 +202,7 @@ sub get_default_makefile_vars
 	$vars{'MACHINE_ARCH'},
 	$vars{'MACHINE'} ) = (split);
     $vars{'EXTRACT_SUFX'} = 'tar.gz';
-    $vars{'OBJECT_FMT'} = '';
+    $vars{'OBJECT_FMT'} = 'x';
     %vars;
     }
 
@@ -527,14 +552,25 @@ sub parse_eval_make_false
     my($false, $test);
 
     $false = 0;
-    $test = parse_expand_vars($1, $vars);
+    $test = parse_expand_vars($line, $vars);
     # XX This is _so_ wrong - need to parse this correctly
     $test =~ s/"//g;
 
-    if ( $test =~ /^defined\((\S+)\)$/ && !defined($${vars}{$1}) )
-	{ $false = 1; }
-    elsif ( $test =~ /^(\S+)\s+==\s+(\S+)$/ && $1 ne $2 )
-	{ $false = 1; }
+    debug("conditional: $test\n");
+    while ( $test =~ /defined\((\S+)\)/ )
+	{
+	$_ = (defined($${vars}{$1}) ?1 :0);
+	$test =~ s/defined\(\S+\)/$_/;
+	}
+    while ( $test =~ /([^\s()]+)\s+==\s+([^\s()]+)/ )
+	{
+	$_ = ($1 eq $2) ?1 :0;
+	$test =~ s/\S+\s+==\s+\S+/$_/;
+	}
+    if ($test !~ /[^\d()\s&|]/ )
+	{ $false = (eval $test) ?0 :1; }
+    else
+	{ $false = 0; }
     $false;
     }
 
@@ -746,6 +782,8 @@ sub set_pkgsrcdir # Parse /etc/mk.conf (if present) for PKGSRCDIR
     $pkgsrcdir;
     }
 
+# Remember to update manual page when modifying option list
+#
 sub usage_and_exit
     {
     print "Usage: lintpkgsrc [opts]
