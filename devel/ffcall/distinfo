@@ -1,10 +1,9 @@
-$NetBSD: distinfo,v 1.4 2003/03/06 23:50:51 jmc Exp $
+$NetBSD: distinfo,v 1.5 2004/03/02 16:05:01 adam Exp $
 
-SHA1 (ffcall-1.8d.tar.gz) = 41362ce04ba43acbee0083f85077601f41acaf25
-Size (ffcall-1.8d.tar.gz) = 587897 bytes
-SHA1 (patch-aa) = e4ad5a65ab22c638dcf64764d3a54960f65564f1
-SHA1 (patch-ab) = b6bce2134149ed72cb4b4eca4d9eb517d58e80fb
-SHA1 (patch-ac) = 1b8aabb3ec5d26246d583a32e43abad964b9a7e5
-SHA1 (patch-ad) = 8202dd37542ece1a18afcc104cb2fb9ced01cfaa
-SHA1 (patch-ae) = b4a57c3f92e0a032af026ee11635f7ad20886ab0
-SHA1 (patch-af) = 1633a460515f202d117a2ad6652950e14c549742
+SHA1 (ffcall-1.9.tar.gz) = 6088036bd44581853d546d0ab5803dd1b36d61b9
+Size (ffcall-1.9.tar.gz) = 873806 bytes
+SHA1 (patch-aa) = 1aef05b97cf4da460325caddf9410dc7c1917d76
+SHA1 (patch-ab) = 7e4b587a080af5530c7bd883a71b614162522320
+SHA1 (patch-ad) = 4cfba7c4ce9fb709d1e857433c5caad293ca9c29
+SHA1 (patch-ae) = 183b4e0dcd194a47fd94c19573ffd698bab14392
+SHA1 (patch-af) = cff72d52332759b42f09acded753b08043b8aefc
