@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2004/03/18 09:12:16 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2004/12/04 03:50:40 taya Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 MOZILLA_STABLE_BUILDLINK3_MK:=	${MOZILLA_STABLE_BUILDLINK3_MK}+
@@ -11,7 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nmozilla-stable}
 BUILDLINK_PACKAGES+=	mozilla-stable
 
 .if !empty(MOZILLA_STABLE_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.mozilla-stable+=	mozilla-stable>=1.4.1nb2
+BUILDLINK_DEPENDS.mozilla-stable+=	mozilla-stable>=1.7.3
 BUILDLINK_PKGSRCDIR.mozilla-stable?=	../../www/mozilla-stable
 .endif	# MOZILLA_STABLE_BUILDLINK3_MK
 

@@ -1,9 +1,9 @@
-$NetBSD: patch-ai,v 1.1 2004/06/05 10:20:55 taya Exp $
+$NetBSD: patch-ai,v 1.2 2004/12/04 03:50:40 taya Exp $
 
 diff -ru ../Orig/mozilla/gfx/src/ps/nsFontMetricsPS.cpp ./gfx/src/ps/nsFontMetricsPS.cpp
---- ../Orig/mozilla/gfx/src/ps/nsFontMetricsPS.cpp	2003-04-23 01:25:08.000000000 +0900
-+++ ./gfx/src/ps/nsFontMetricsPS.cpp	2004-06-05 15:49:03.000000000 +0900
-@@ -1110,10 +1110,10 @@
+--- ../Orig/mozilla/gfx/src/ps/nsFontMetricsPS.cpp	2004-02-05 10:57:05.000000000 +0900
++++ ./gfx/src/ps/nsFontMetricsPS.cpp	2004-06-10 23:00:08.000000000 +0900
+@@ -1141,10 +1141,10 @@
    
    mPixelSize = NSToIntRound(app2dev * mFont->size);
  
@@ -18,7 +18,7 @@ diff -ru ../Orig/mozilla/gfx/src/ps/nsFontMetricsPS.cpp ./gfx/src/ps/nsFontMetri
  
    nsresult rv;
    mFt2 = do_GetService(NS_FREETYPE2_CONTRACTID, &rv);
-@@ -1159,7 +1159,7 @@
+@@ -1190,7 +1190,7 @@
    if (!face)
      return 0;
  
@@ -27,7 +27,7 @@ diff -ru ../Orig/mozilla/gfx/src/ps/nsFontMetricsPS.cpp ./gfx/src/ps/nsFontMetri
    nsresult rv = mFt2->GetImageCache(&iCache);
    if (NS_FAILED(rv)) {
      NS_ERROR("Failed to get Image Cache");
-@@ -1197,8 +1197,8 @@
+@@ -1228,8 +1228,8 @@
    
    FTC_Manager cManager;
    mFt2->GetFTCacheManager(&cManager);
@@ -38,7 +38,7 @@ diff -ru ../Orig/mozilla/gfx/src/ps/nsFontMetricsPS.cpp ./gfx/src/ps/nsFontMetri
    NS_ASSERTION(rv==0, "failed to get face/size");
    if (rv)
      return nsnull;
-@@ -1593,16 +1593,16 @@
+@@ -1622,16 +1622,16 @@
    mEntry->GetFamilyName(fontName);
    mEntry->GetStyleName(styleName);
    
