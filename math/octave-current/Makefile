@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/03/29 21:19:39 wennmach Exp $
+# $NetBSD: Makefile,v 1.4 2001/04/02 18:43:15 wiz Exp $
 
 DISTNAME=	octave-2.1.33
 CATEGORIES=	math
@@ -16,8 +16,6 @@ COMMENT=	High-level language, primarily intended for numerical computations
 BUILD_DEPENDS+= teTeX>=1.0.7:../../print/teTeX
 DEPENDS+=	gnuplot>=3.7:../../graphics/gnuplot
 DEPENDS+=	readline>=4.0:../../devel/readline
-
-CONFLICTS+=	octave-2.0.*
 
 USE_X11=	yes
 GNU_CONFIGURE=	yes
@@ -41,16 +39,16 @@ OCTAVE_HTML=	faq/Octave-FAQ_toc.html interpreter/octave_*.html \
 		liboctave/liboctave_*.html
 
 post-install:
-.for file in ${LIBOCTAVE_INFO}
-	${INSTALL_DATA} ${WRKSRC}/doc/liboctave/${file} ${PREFIX}/info
+.for f in ${LIBOCTAVE_INFO}
+	${INSTALL_DATA} ${WRKSRC}/doc/liboctave/$f ${PREFIX}/info
 .endfor
-	${MKDIR} ${PREFIX}/share/doc/octave
-.for file in ${OCTAVE_DOC}
-	${INSTALL_DATA} ${WRKSRC}/doc/${file} ${PREFIX}/share/doc/octave
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/octave
+.for f in ${OCTAVE_DOC}
+	${INSTALL_DATA} ${WRKSRC}/doc/$f ${PREFIX}/share/doc/octave
 .endfor
-	${MKDIR} ${PREFIX}/share/doc/html/octave
-.for file in ${OCTAVE_HTML}
-	${INSTALL_DATA} ${WRKSRC}/doc/${file} ${PREFIX}/share/doc/html/octave
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/octave
+.for f in ${OCTAVE_HTML}
+	${INSTALL_DATA} ${WRKSRC}/doc/$f ${PREFIX}/share/doc/html/octave
 .endfor
 
 .include <../../mk/bsd.pkg.mk>
