@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.2 2002/10/03 08:04:28 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2002/10/03 09:17:08 jlam Exp $
 
 .if !defined(OSS_BUILDLINK2_MK)
 OSS_BUILDLINK2_MK=	# defined
@@ -15,22 +15,39 @@ BUILDLINK_FILES.oss+=	lib/oss/include/sys/soundcard.h
 BUILDLINK_FILES.oss+=	lib/oss/include/sys/ultrasound.h
 BUILDLINK_FILES.oss+=	lib/oss/libOSSlib.*
 
-BUILDLINK_CPPFLAGS.oss=	-I${BUILDLINK_PREFIX.oss}/lib/oss/include
-BUILDLINK_LDFLAGS.oss=	-L${BUILDLINK_PREFIX.oss}/lib/oss		\
-			-Wl,-R${BUILDLINK_PREFIX.oss}/lib/oss
+_OSSLIBDIR=		${BUILDLINK_PREFIX.oss}/lib/oss
+BUILDLINK_CPPFLAGS.oss=	-I${_OSSLIBDIR}/include
+BUILDLINK_LDFLAGS.oss=	-L${_OSSLIBDIR} -Wl,-R${_OSSLIBDIR}
 
-BUILDLINK_PREFIX.ossaudio=	${BUILDLINK_PREFIX.oss}/lib/oss
+BUILDLINK_PREFIX.ossaudio=	${_OSSLIBDIR}
 BUILDLINK_FILES.ossaudio=	include/sys/awe_voice.h
 BUILDLINK_FILES.ossaudio+=	include/sys/dm.h
 BUILDLINK_FILES.ossaudio+=	include/sys/soundcard.h
 BUILDLINK_FILES.ossaudio+=	include/sys/ultrasound.h
 
 BUILDLINK_TARGETS+=	oss-buildlink
+BUILDLINK_TARGETS+=	oss-buildlink-soundcard-h
 
 LIBOSSAUDIO=		# empty
 DEVOSSAUDIO=		/dev/dsp
 DEVOSSSOUND=		${DEVOSSAUDIO}
 
 oss-buildlink: _BUILDLINK_USE
+
+# Many source files mistakenly include both <sys/soundcard.h> and
+# <soundcard.h>, which causes errors since the definitions in the OSS
+# sys/soundcard.h conflict with the definitions in the system soundcard.h.
+# We fix this by making <sys/soundcard.h> and <soundcard.h> point to the
+# same file and rely on multiple inclusion protection to prevent conflicts.
+#
+oss-buildlink-soundcard-h:
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	soundcard_h=${BUILDLINK_DIR}/include/soundcard.h;		\
+	sys_soundcard_h=${BUILDLINK_PREFIX.ossaudio}/include/sys/soundcard.h; \
+	if [ ! -f $${soundcard_h} -a -f $${sys_soundcard_h} ]; then	\
+		${ECHO_BUILDLINK_MSG}					\
+			"Linking $${sys_soundcard_h} to $${soundcard_h}."; \
+		${LN} -s $${sys_soundcard_h} $${soundcard_h};		\
+        fi;                                                             \
 
 .endif	# OSS_BUILDLINK2_MK
