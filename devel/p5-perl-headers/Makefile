@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/10/15 07:35:14 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2000/10/21 22:26:07 wiz Exp $
 
 DISTNAME=		p5-perl-headers
 PKGNAME=		${DISTNAME}-${OS_VERSION}
@@ -19,7 +19,7 @@ NO_PATCH=		# defined
 NO_CONFIGURE=		# defined
 
 do-build:
-	${MKDIR} -p ${WRKSRC}/h2ph
+	${MKDIR} ${WRKSRC}/h2ph
 	${RM} -f ${WRKSRC}/h2ph_log ${WRKSRC}/packlist
 	( cd /usr/include; ${PREFIX}/bin/h2ph -d ${WRKSRC}/h2ph -r -l . ) \
 		> ${WRKSRC}/h2ph_log
@@ -33,7 +33,7 @@ do-build:
 do-install:
 	${CP} -R ${WRKSRC}/h2ph/* ${PERL5_SITEARCH}
 	${INSTALL_DATA} ${WRKSRC}/packlist ${PERL5_PACKLIST}
-	${CAT} ${PERL5_PACKLIST} | xargs chmod a-w
-	${CAT} ${PERL5_PACKLIST} | xargs chown ${SHAREOWN}:${SHAREGRP}
+	${CAT} ${PERL5_PACKLIST} | xargs ${CHMOD} a-w
+	${CAT} ${PERL5_PACKLIST} | xargs ${CHOWN} ${SHAREOWN}:${SHAREGRP}
 
 .include "../../mk/bsd.pkg.mk"
