@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2002/10/03 16:07:56 martti Exp $
+$NetBSD: distinfo,v 1.8 2002/10/15 10:18:41 martti Exp $
 
-SHA1 (popt-1.6.4.tar.gz) = bbe0d8993af622abe7057c57436f462e7554c9d4
-Size (popt-1.6.4.tar.gz) = 529791 bytes
-SHA1 (patch-aa) = 72abb8c71f00e5f96cb8954ba59e3b3028baa5f5
+SHA1 (popt-1.7.tar.gz) = 66f3c77b87a160951b180447f4a6dce68ad2f71b
+Size (popt-1.7.tar.gz) = 574549 bytes
+SHA1 (patch-aa) = e4fe1bf5bfd717faf8233a22300869121827af6c
