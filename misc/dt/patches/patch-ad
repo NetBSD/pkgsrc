@@ -1,0 +1,37 @@
+$NetBSD: patch-ad,v 1.1 2002/02/10 22:49:55 fredb Exp $
+
+--- vt.c.orig	Fri May 24 10:13:52 1996
++++ vt.c	Thu Feb  7 09:12:59 2002
+@@ -748,6 +748,9 @@
+ 	register int line, i;
+ 
+ 	if (v->state == ESnormal && ch >= ' ' && ch < 256) {
++		if ( (v->attr & T_G0) && ch >= 'a' && ch <= 'z')
++			ch -= 95;
++
+ 		if (v->hanging_cursor) {
+ 			v->x = 0;
+ 			movecursordown(v);
+@@ -800,8 +803,10 @@
+ 		v->hanging_cursor = 0;
+ 		return;
+ 	case 14:
++		v->attr |= T_G0;
+ 		return;		/* Alternate font (^N)	 */
+ 	case 15:
++		v->attr &= ~T_G0;
+ 		return;		/* Normal font (^O)	 */
+ 	case 24:		/* (^X)			 */
+ 	case 26:
+@@ -1071,9 +1076,11 @@
+ 	case ESsetG0:
+ 		if (ch == '0') {
+ 			/* Set graphics character set */
++			v->attr |= T_G0;
+ 		} else
+ 			if (ch == 'B') {
+ 				/* Set normal character set */
++				v->attr &= ~T_G0;
+ 			} else
+ 				if (ch == 'U') {
+ 					/* Set null character set */

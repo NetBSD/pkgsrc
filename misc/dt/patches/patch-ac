@@ -1,0 +1,12 @@
+$NetBSD: patch-ac,v 1.1 2002/02/10 22:49:55 fredb Exp $
+
+--- vt.h.orig	Sun Jun  9 07:32:33 1996
++++ vt.h	Thu Feb  7 09:12:59 2002
+@@ -20,6 +20,7 @@
+ #define T_REVERSE	0x04
+ #define T_SELECTED	0x08
+ #define T_INSERT	0x10
++#define T_G0		0x20
+ 
+ /* Cursor types */
+ #define C_BLOCK		0x01
