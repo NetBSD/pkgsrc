@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.531 2000/08/01 02:23:43 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.532 2000/08/01 02:51:34 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -666,7 +666,7 @@ SIZE_ALL_FILE=		${WRKDIR}/.SizeAll
 PKG_ARGS=		-v -c ${COMMENT} -d ${DESCR} -f ${PLIST} -l
 PKG_ARGS+=		-b ${BUILD_VERSION_FILE} -B ${BUILD_INFO_FILE}
 PKG_ARGS+=		-s ${SIZE_PKG_FILE} -S ${SIZE_ALL_FILE}
-PKG_ARGS+=		-p ${PREFIX} -P "`${MAKE} ${MAKEFLAGS} package-depends PACKAGE_DEPENDS_QUICK=true|sort -u`"
+PKG_ARGS+=		-p ${PREFIX} -P "`${MAKE} ${MAKEFLAGS} run-depends-list PACKAGE_DEPENDS_QUICK=true|sort -u`"
 .ifdef CONFLICTS
 PKG_ARGS+=		-C "${CONFLICTS}"
 .endif
@@ -2394,8 +2394,8 @@ bin-install:
 # You probably won't need to touch these
 ################################################################
 
-# Set to "html" by the README.html target (and passed via depends-list
-# and package-depends)
+# Set to "html" by the README.html target (and passed via build-depends-list
+# and run-depends-list)
 PACKAGE_NAME_TYPE?=	name
 
 # Nobody should want to override this unless PKGNAME is simply bogus.
@@ -2416,8 +2416,8 @@ PACKAGE_DEPENDS_WITH_PATTERNS?=true
 # (i.e. when calling for pkg_create args, and for fake-pkg)
 # Will probably not work with PACKAGE_DEPENDS_WITH_PATTERNS=false ...
 PACKAGE_DEPENDS_QUICK?=false
-.if !target(package-depends)
-package-depends:
+.if !target(run-depends-list)
+run-depends-list:
 .for dep in ${DEPENDS}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	pkg="${dep:C/:.*//}";						\
@@ -2436,13 +2436,13 @@ package-depends:
 		${PKG_INFO} -qf "$$pkg" | ${AWK} '/^@pkgdep/ {print $$2}'; \
 	else 							\
 		if cd $$dir 2>/dev/null; then				\
-			${MAKE} ${MAKEFLAGS} package-depends PACKAGE_NAME_TYPE=${PACKAGE_NAME_TYPE}; \
+			${MAKE} ${MAKEFLAGS} run-depends-list PACKAGE_NAME_TYPE=${PACKAGE_NAME_TYPE}; \
 		else 							\
 			${ECHO_MSG} "Warning: \"$$dir\" non-existent -- @pkgdep registration incomplete" >&2; \
 		fi;							\
 	fi
 .endfor
-.endif # target(package-depends)
+.endif # target(run-depends-list)
 
 # Build a package but don't check the package cookie
 
@@ -2580,12 +2580,12 @@ check-depends:
 .endif
 .endif
 
-.if !target(depends-list)
-depends-list:
+.if !target(build-depends-list)
+build-depends-list:
 .for dir in ${BUILD_DEPENDS} ${DEPENDS}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	cd ${dir:C/^[^:]*://:C/:.*//};					\
-	${MAKE} ${MAKEFLAGS} package-name depends-list PACKAGE_NAME_TYPE=${PACKAGE_NAME_TYPE}
+	${MAKE} ${MAKEFLAGS} package-name build-depends-list PACKAGE_NAME_TYPE=${PACKAGE_NAME_TYPE}
 .endfor
 .endif
 
@@ -2673,11 +2673,11 @@ describe:
 	${ECHO} -n "|${MAINTAINER}|${CATEGORIES}|";			\
 	case "A${BUILD_DEPENDS}B${DEPENDS}C" in	\
 		ABC) ;;							\
-		*) cd ${.CURDIR} && ${ECHO} -n `${MAKE} ${MAKEFLAGS} depends-list|sort -u`;; \
+		*) cd ${.CURDIR} && ${ECHO} -n `${MAKE} ${MAKEFLAGS} build-depends-list|sort -u`;; \
 	esac;								\
 	${ECHO} -n "|";							\
 	if [ "${DEPENDS}" != "" ]; then				\
-		*) cd ${.CURDIR} && ${ECHO} -n `${MAKE} ${MAKEFLAGS} package-depends|sort -u`;; \
+		*) cd ${.CURDIR} && ${ECHO} -n `${MAKE} ${MAKEFLAGS} run-depends-list|sort -u`;; \
 	fi;								\
 	${ECHO} -n "|";							\
 	if [ "${ONLY_FOR_ARCHS}" = "" ]; then				\
@@ -2735,9 +2735,9 @@ SED_HOMEPAGE_EXPR=       -e 's|%%HOMEPAGE%%||'
 
 .PHONY: README.html
 README.html: .PRECIOUS
-	@${MAKE} ${MAKEFLAGS} depends-list PACKAGE_NAME_TYPE=html | sort -u >> $@.tmp1
+	@${MAKE} ${MAKEFLAGS} build-depends-list PACKAGE_NAME_TYPE=html | sort -u >> $@.tmp1
 	@[ -s $@.tmp1 ] || ${ECHO} "<I>(none)</I>" >> $@.tmp1
-	@${MAKE} ${MAKEFLAGS} package-depends PACKAGE_NAME_TYPE=html | sort -u >> $@.tmp2
+	@${MAKE} ${MAKEFLAGS} run-depends-list PACKAGE_NAME_TYPE=html | sort -u >> $@.tmp2
 	@[ -s $@.tmp2 ] || ${ECHO} "<I>(none)</I>" >> $@.tmp2
 	@${ECHO} '${PKGNAME:S/&/\&amp;/g:S/>/\&gt;/g:S/</\&lt;/g}' >> $@.tmp3
 	@${MAKE} ${MAKEFLAGS} binpkg-list  >> $@.tmp4
@@ -2771,20 +2771,20 @@ show-pkgtools-version:
 show-var:
 	@${ECHO} "${${VARNAME}}"
 
-.if !target(print-depends-list)
-print-depends-list:
+.if !target(print-build-depends-list)
+print-build-depends-list:
 .if defined(BUILD_DEPENDS) || defined(DEPENDS)
 	@${ECHO} -n 'This package requires package(s) "'
-	@${ECHO} -n `${MAKE} ${MAKEFLAGS} depends-list | sort -u`
+	@${ECHO} -n `${MAKE} ${MAKEFLAGS} build-depends-list | sort -u`
 	@${ECHO} '" to build.'
 .endif
 .endif
 
-.if !target(print-package-depends)
-print-package-depends:
+.if !target(print-run-depends-list)
+print-run-depends-list:
 .if defined(DEPENDS)
 	@${ECHO} -n 'This package requires package(s) "'
-	@${ECHO} -n "`${MAKE} ${MAKEFLAGS} package-depends | sort -u`"
+	@${ECHO} -n `${MAKE} ${MAKEFLAGS} run-depends-list | sort -u`
 	@${ECHO} '" to run.'
 .endif
 .endif
@@ -3007,7 +3007,7 @@ fake-pkg: ${PLIST} ${DESCR}
 				${CP} ${MESSAGE_FILE} ${PKG_DBDIR}/${PKGNAME}/+DISPLAY; \
 			fi;						\
 		fi;							\
-		for dep in `${MAKE} ${MAKEFLAGS} package-depends PACKAGE_DEPENDS_QUICK=true ECHO_MSG=${TRUE} | sort -u`; do \
+		for dep in `${MAKE} ${MAKEFLAGS} run-depends-list PACKAGE_DEPENDS_QUICK=true ECHO_MSG=${TRUE} | sort -u`; do \
 			realdep="`${PKG_INFO} -e \"$$dep\" || ${TRUE}`" ; \
 			if [ `${ECHO} $$realdep | wc -w` -gt 1 ]; then 				\
 				${ECHO} '***' "WARNING: '$$dep' expands to several installed packages " ; \
