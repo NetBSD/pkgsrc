@@ -1,4 +1,4 @@
-/*	$NetBSD: main.c,v 1.2 2003/01/06 04:34:16 jschauma Exp $	*/
+/*	$NetBSD: main.c,v 1.3 2003/03/29 18:41:56 jschauma Exp $	*/
 
 #if 0
 #include <sys/cdefs.h>
@@ -6,7 +6,7 @@
 #if 0
 static char *rcsid = "from FreeBSD Id: main.c,v 1.14 1997/10/08 07:47:26 charnier Exp";
 #else
-__RCSID("$NetBSD: main.c,v 1.2 2003/01/06 04:34:16 jschauma Exp $");
+__RCSID("$NetBSD: main.c,v 1.3 2003/03/29 18:41:56 jschauma Exp $");
 #endif
 #endif
 #endif
@@ -253,7 +253,7 @@ main(int argc, char **argv)
 				errx(EXIT_FAILURE, "No matching pkg for %s.", *argv);
 		} else {
 			if (ispkgpattern(*argv)) {
-				if (findmatchingname(_pkgdb_getPKGDB_DIR(), *argv, add_to_list_fn, &pkgs) == 0)
+				if (findmatchingname(_pkgdb_getPKGDB_DIR(), *argv, add_to_list_fn, &pkgs) <= 0)
 					errx(EXIT_FAILURE, "No matching pkg for %s.", *argv);
 			} else {
 				lpp = alloc_lpkg(*argv);
