@@ -1,0 +1,39 @@
+--- Makefile.orig	2004-08-27 07:20:33.000000000 +0000
++++ Makefile	2004-09-07 18:39:55.000000000 +0000
+@@ -23,20 +23,16 @@
+ # SUCH DAMAGE.
+ #
+ #	$FreeBSD: src/lib/libradius/Makefile,v 1.1.1.1 1998/11/13 00:53:01 jdp Exp $
+ 
+-PREFIX=	/usr/local
+-
+-RM=		rm -f
+-LN=		ln
+-CC=		cc
+-CFLAGS= -O2
++RM=            rm -f
++LN=            ln
+ 
+ # linux -L$(PREFIX)/lib -lmd
+-LIBMD= -L$(PREFIX)/lib -lmd
++#LIBMD= -L$(PREFIX)/lib -lmd
+ 
+ # netbsd - it's in libc
+-#LIBMD= -L/usr/lib -lc
++LIBMD= -L/usr/lib -lc
+ 
+ 
+ LIB=    radius
+ OBJS=   radlib.o
+@@ -61,9 +57,9 @@
+ 	$(RM) lib$(LIB).a
+ 
+ install:	all
+ 	install -c -m 644 -o bin -g bin lib$(LIB).a $(PREFIX)/lib
+-	install -c -m 644 -o bin -g bin lib$(LIB).so.1.0 $(PREFIX)/lib
+-	$(LN) -sf $(PREFIX)/lib/lib$(LIB).so.1.0 $(PREFIX)/lib/lib$(LIB).so
++#	install -c -m 644 -o bin -g bin lib$(LIB).so.1.0 $(PREFIX)/lib
++#	$(LN) -sf $(PREFIX)/lib/lib$(LIB).so.1.0 $(PREFIX)/lib/lib$(LIB).so
+ 	install -c -m 444 -o bin -g bin radlib.h $(PREFIX)/include
+ 	install -c -m 444 -o bin -g bin libradius.3 $(PREFIX)/man/man3
+ 	install -c -m 444 -o bin -g bin radius.conf.5 $(PREFIX)/man/man5

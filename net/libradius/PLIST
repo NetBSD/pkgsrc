@@ -1,0 +1,4 @@
+lib/libradius.a
+include/radlib.h
+man/man3/libradius.3
+man/man5/radius.conf.5
