@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7387 2004/10/10 09:48:35 minskim Exp $
+$NetBSD: CHANGES,v 1.7388 2004/10/10 09:59:06 dillo Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4597,3 +4597,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added strace-4.5.7 [reed 2004-10-10]
 	Updated postgresql74 to 7.4.5 [jdolecek 2004-10-10]
 	Updated moss to 0.1.11 [minskim 2004-10-10]
+	Updated pkgdiff to 0.115 [dillo 2004-10-10]
