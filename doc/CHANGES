@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6019 2004/05/25 12:05:39 salo Exp $
+$NetBSD: CHANGES,v 1.6020 2004/05/25 12:43:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2641,3 +2641,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated libgsf to 1.9.1 [drochner 2004-05-24]
 	Updated mldonkey to 2.5.21 [wiz 2005-05-25]
 	Updated lftp to 3.0.3 [salo 2004-05-25]
+	Updated bittorrent to 3.4.2 [wiz 2004-05-25]
+	Updated bittorrent-gui to 3.4.2 [wiz 2004-05-25]
