@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/11/15 00:36:21 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2002/11/15 00:39:53 jlam Exp $
 
 DISTNAME=	RDB-2.6d
 PKGNAME=	rdb-2.6.4
@@ -11,11 +11,11 @@ COMMENT=	relational database system that uses standard filters via pipes
 
 WRKSRC=		${WRKDIR}/rdb
 NO_BUILD=	yes
-USE_BUILDLINK_ONLY=	yes
+USE_BUILDLINK2=	yes
 
 REPLACE_PERL=	column compute dataent etbl headchg jointbl lst2tbl mergetbl
 REPLACE_PERL+=	mktbl ptbl rdb rdbt repair reporttbl row search sorttbl
 REPLACE_PERL+=	subtotal summ tbl2lst uniqtbl valid
 
-.include "../../lang/perl5/buildlink.mk"
+.include "../../lang/perl5/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
