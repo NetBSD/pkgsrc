@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/12/13 15:39:28 cjep Exp $
+# $NetBSD: Makefile,v 1.2 2003/06/02 01:21:52 jschauma Exp $
 # FreeBSD Id: ports/archivers/arj/Makefile,v 1.2 2002/09/17 05:17:29 ijliao Exp
 
 DISTNAME=	arj-3.10b
 CATEGORIES=	archivers
 MASTER_SITES=	http://testcase.newmail.ru/files/
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://arj.sourceforge.net/
 COMMENT=	Open-source ARJ
 

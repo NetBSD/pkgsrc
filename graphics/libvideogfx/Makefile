@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/02/13 18:55:41 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2003/06/02 01:19:22 jschauma Exp $
 #
 
 DISTNAME=	libvideogfx-1.0.3
@@ -6,7 +6,7 @@ CATEGORIES=	graphics
 MASTER_SITES= \
   http://rachmaninoff.informatik.uni-mannheim.de/libvideogfx/data/
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE= \
   http://rachmaninoff.informatik.uni-mannheim.de/libvideogfx/index.html
 COMMENT=	C++ library for low-level video processing

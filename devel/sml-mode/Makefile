@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2002/02/18 15:14:16 seb Exp $
+# $NetBSD: Makefile,v 1.4 2003/06/02 01:20:14 jschauma Exp $
 
 DISTNAME=	sml-mode-3.9.5
 CATEGORIES=	devel editors
 MASTER_SITES=	ftp://flint.cs.yale.edu/pub/monnier/sml-mode/
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 COMMENT=	Emacs mode for editing Standard ML source code
 
 DEPENDS+=	emacs-[0-9]*:../../editors/emacs

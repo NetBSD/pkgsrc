@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/03/31 06:56:25 grant Exp $
+# $NetBSD: Makefile,v 1.9 2003/06/02 01:17:34 jschauma Exp $
 #
 
 DISTNAME=		pax-19980903
@@ -7,7 +7,7 @@ WRKSRC=			${WRKDIR}/pax
 CATEGORIES=		pkgtools
 MASTER_SITES=		${MASTER_SITE_LOCAL}
 
-MAINTAINER=		packages@netbsd.org
+MAINTAINER=		tech-pkg@netbsd.org
 HOMEPAGE=		http://www.netbsd.org/
 COMMENT=		Standard POSIX portable archiver
 

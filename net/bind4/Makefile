@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2003/03/29 12:41:54 jmmv Exp $
+# $NetBSD: Makefile,v 1.14 2003/06/02 01:18:03 jschauma Exp $
 #
 
 DISTNAME=	bind-4.9.11-REL
@@ -7,7 +7,7 @@ WRKSRC=		${WRKDIR}
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.isc.org/isc/bind/src/4.9.11/
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://www.isc.org/
 COMMENT=	The BIND name server, version 4, as an alternative to BIND 8
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2003/03/02 19:47:25 jschauma Exp $
+# $NetBSD: Makefile,v 1.29 2003/06/02 01:19:11 jschauma Exp $
 #
 
 DISTNAME=       xart19980415
@@ -9,7 +9,7 @@ CATEGORIES=	graphics x11
 MASTER_SITES=	http://linux01.gwdg.de/~rhohen/linux/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://linux01.gwdg.de/~rhohen/linux.html
 COMMENT=	Paint program (enhanced xpaint)
 

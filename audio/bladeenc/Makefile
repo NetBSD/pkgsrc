@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2002/12/14 00:39:58 jschauma Exp $
+# $NetBSD: Makefile,v 1.19 2003/06/02 01:21:41 jschauma Exp $
 #
 
 DISTNAME=		bladeenc-0.94.2-src-stable
@@ -7,7 +7,7 @@ PKGREVISION=		2
 CATEGORIES=		audio
 MASTER_SITES=		http://bladeenc.mp3.no/source/
 
-MAINTAINER=		packages@netbsd.org
+MAINTAINER=		tech-pkg@netbsd.org
 HOMEPAGE=		http://bladeenc.mp3.no/
 COMMENT=		Free MPEG Audio Layer 3 encoder (not decoder)
 

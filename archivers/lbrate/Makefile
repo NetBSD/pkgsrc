@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/12/13 17:50:50 cjep Exp $
+# $NetBSD: Makefile,v 1.2 2003/06/02 01:21:47 jschauma Exp $
 # FreeBSD Id: ports/archivers/lbrate/Makefile,v 1.4 2002/06/19 08:18:05 sobomax Exp
 
 DISTNAME=	lbrate-1.1
 CATEGORIES=	archivers
 MASTER_SITES=	ftp://ftp.ibiblio.org/pub/Linux/utils/compress/
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://rus.members.beeb.net/lbrate.html
 COMMENT=	Extract/decompress CP/M LBR archives
 

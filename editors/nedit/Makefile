@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2003/03/29 12:40:44 jmmv Exp $
+# $NetBSD: Makefile,v 1.27 2003/06/02 01:20:07 jschauma Exp $
 
 VERS=		5.3
 DISTNAME=	nedit-${VERS}-source
@@ -10,7 +10,7 @@ MASTER_SITES=	http://www.nedit.org/ftp/v${VERS:S/./_/g}/ \
 		ftp://ftp.nl.nedit.org/pub/mirror/NEdit/v${VERS:S/./_/g}/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://www.nedit.org/
 COMMENT=	Motif based standard GUI style text editor
 

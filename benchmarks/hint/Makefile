@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2003/03/29 12:40:11 jmmv Exp $
+# $NetBSD: Makefile,v 1.14 2003/06/02 01:21:30 jschauma Exp $
 # FreeBSD: Makefile,v 1.1.1.1 1998/06/15 18:09:43 ghelmer Exp
 #
 
@@ -9,7 +9,7 @@ CATEGORIES=	benchmarks
 MASTER_SITES=	ftp://ftp.scl.ameslab.gov/pub/HINT/source/tar/
 EXTRACT_SUFX=	.tar
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://www.scl.ameslab.gov/Projects/HINT/
 COMMENT=	Scalable benchmark for testing CPU and memory performance
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/03/03 02:45:52 jschauma Exp $
+# $NetBSD: Makefile,v 1.9 2003/06/02 01:17:37 jschauma Exp $
 # FreeBSD Id: Makefile,v 1.12 1996/12/01 01:23:22 obrien Exp
 #
 
@@ -7,7 +7,7 @@ PKGREVISION=		1
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_XCONTRIB:=applications/}
 
-MAINTAINER=		packages@netbsd.org
+MAINTAINER=		tech-pkg@netbsd.org
 COMMENT=		X11 front-end program for the archie network search service
 
 USE_IMAKE=		yes

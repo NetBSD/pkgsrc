@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.15 2002/08/31 15:25:32 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2003/06/02 01:15:46 jschauma Exp $
 #
 
 DISTNAME=		dxpc-3.8.1
 CATEGORIES=		x11
 MASTER_SITES=		http://www.vigor.nu/dxpc/3.8.1/
 
-MAINTAINER=		packages@netbsd.org
+MAINTAINER=		tech-pkg@netbsd.org
 HOMEPAGE=		http://www.vigor.nu/dxpc/
 COMMENT=		Differential X Protocol Compressor
 

@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.9 2002/08/25 21:49:03 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2003/06/02 01:21:50 jschauma Exp $
 
 DISTNAME=       freeze-2.5
 CATEGORIES=	archivers
 MASTER_SITES=	ftp://ftp.cdrom.com/pub/unixfreeware/archive/
 
-MAINTAINER=     packages@netbsd.org
+MAINTAINER=     tech-pkg@netbsd.org
 COMMENT=	FREEZE / MELT compression program - often used in QNX
 
 USE_BUILDLINK2=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2003/05/02 11:55:45 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2003/06/02 01:18:31 jschauma Exp $
 
 DISTNAME=	Guppi-0.40.3
 PKGNAME=	${DISTNAME:S/G/g/}
@@ -7,7 +7,7 @@ CATEGORIES=	math graphics
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/Guppi/0.40/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://www.gnome.org/guppi/
 COMMENT=	Plot program with integrated statistics capabilities
 

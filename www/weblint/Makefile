@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2002/08/25 21:52:25 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2003/06/02 01:15:57 jschauma Exp $
 #
 
 DISTNAME=	weblint-1.020
@@ -9,7 +9,7 @@ MASTER_SITES=	http://www.perl.com/CPAN/authors/id/NEILB/ \
 		ftp://ftp.gmd.de/mirrors/CPAN/authors/id/NEILB/ \
 		ftp://cpan.perl.org/CPAN/authors/id/NEILB/
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 #HOMEPAGE=	http://www.weblint.org/
 COMMENT=	HTML validator and sanity checker
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/05/02 11:56:33 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2003/06/02 01:16:18 jschauma Exp $
 #
 
 DISTNAME=	wmfishtime-1.23
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	time x11
 MASTER_SITES=	http://www.ne.jp/asahi/linux/timecop/software/
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://www.ne.jp/asahi/linux/timecop/
 COMMENT=	dockable clock application with clock, date and fish
 

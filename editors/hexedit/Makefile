@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2002/10/25 17:36:46 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2003/06/02 01:20:09 jschauma Exp $
 #
 
 DISTNAME=	hexedit-1.2.2
@@ -7,7 +7,7 @@ CATEGORIES=	editors
 MASTER_SITES=	http://www.chez.com/prigaux/
 EXTRACT_SUFX=	.src.tgz
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://www.chez.com/prigaux/hexedit.html
 COMMENT=	to view and edit files in hexadecimal or ASCII
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/03/29 12:41:44 jmmv Exp $
+# $NetBSD: Makefile,v 1.9 2003/06/02 01:18:23 jschauma Exp $
 
 DISTNAME=	slatec_src
 PKGNAME=	slatec-4.1
@@ -11,7 +11,7 @@ MASTER_SITES=	ftp://ftp.netlib.org/slatec/ \
 		ftp://ftp.zib.de/netlib/slatec/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 COMMENT=	Library of mathematical and statistical Fortran 77 subroutines
 
 USE_FORTRAN=	YES

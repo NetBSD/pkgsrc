@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/11/18 15:20:38 cjep Exp $
+# $NetBSD: Makefile,v 1.2 2003/06/02 01:21:46 jschauma Exp $
 # FreeBSD Id: ports/archivers/makeself/Makefile,v 1.8 2001/07/07 03:47:49 dwcjr Exp
 
 DISTNAME=	makeself-1.5.3
@@ -6,7 +6,7 @@ CATEGORIES=	archivers
 MASTER_SITES=	http://linuxberg.tele.net/files/console/file/
 EXTRACT_SUFX=	.gz.sh
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://www.lokigames.com/~megastep/makeself/
 COMMENT=	neat script to make self-extracting archives
 

@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.8 2002/12/23 16:28:11 cjep Exp $
+# $NetBSD: Makefile,v 1.9 2003/06/02 01:17:20 jschauma Exp $
 
 DISTNAME=		cfs-1.4.1
 CATEGORIES=		security
 MASTER_SITES=		http://www.crypto.com/software/
 
-MAINTAINER=		packages@netbsd.org
+MAINTAINER=		tech-pkg@netbsd.org
 HOMEPAGE=		http://www.crypto.com/software/
 COMMENT=		encrypting file system, using NFS as its interface
 

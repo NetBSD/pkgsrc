@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/06/01 10:24:42 jmmv Exp $
+# $NetBSD: Makefile,v 1.2 2003/06/02 01:18:05 jschauma Exp $
 #
 
 DISTNAME=	GeoIP-1.1.9
 CATEGORIES=	net
 MASTER_SITES=	http://www.maxmind.com/download/geoip/api/c/
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://www.maxmind.com/download/geoip/api/c/
 COMMENT=	Find the country from any IP address
 

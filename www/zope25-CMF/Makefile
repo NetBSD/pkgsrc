@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/05/02 11:56:47 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2003/06/02 01:15:56 jschauma Exp $
 
 DISTNAME=	CMF-1.3.1
 PKGREVISION=	1
@@ -7,7 +7,7 @@ WRKSRC=		${WRKDIR}/CMF-1.3.1
 CATEGORIES=	www
 MASTER_SITES=	http://cmf.zope.org/download/CMF-1.3.1/
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://cmf.zope.org/
 COMMENT=	Content Management Framework for Zope
 

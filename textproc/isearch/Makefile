@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2002/05/03 22:36:08 jtb Exp $
+# $NetBSD: Makefile,v 1.5 2003/06/02 01:16:40 jschauma Exp $
 
 DISTNAME=		Isearch-1.47.01
 PKGNAME=		isearch-1.47.01
 CATEGORIES=		textproc databases
 MASTER_SITES=		http://www.etymon.com/pub/Isearch/
 
-MAINTAINER=		packages@netbsd.org
+MAINTAINER=		tech-pkg@netbsd.org
 HOMEPAGE=		http://www.etymon.com/Isearch/
 COMMENT=		Advanced text indexing and searching system
 

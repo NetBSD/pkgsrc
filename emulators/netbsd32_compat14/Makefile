@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2002/08/13 03:06:10 jdarrow Exp $
+# $NetBSD: Makefile,v 1.5 2003/06/02 01:19:57 jschauma Exp $
 #
 
 DISTNAME=		compat14-${MACHINE32_ARCH}-${VERSION}
@@ -6,7 +6,7 @@ PKGNAME=		netbsd32_compat14-${VERSION}
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_LOCAL}
 
-MAINTAINER=		packages@netbsd.org
+MAINTAINER=		tech-pkg@netbsd.org
 HOMEPAGE=		http://www.netbsd.org/Releases/formal-1.4/index.html
 COMMENT=		32-bit shared libraries for NetBSD 1.4 (and earlier) compatibility
 

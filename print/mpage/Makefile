@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2002/08/25 21:50:33 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2003/06/02 01:17:28 jschauma Exp $
 #
 
 DISTNAME=	mpage-2.5
@@ -6,7 +6,7 @@ CATEGORIES=	print
 MASTER_SITES=	ftp://ftp.mesa.nl/pub/mpage/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 COMMENT=	Print multiple pages per sheet of paper
 
 USE_BUILDLINK2=	yes

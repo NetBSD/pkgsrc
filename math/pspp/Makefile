@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2003/01/28 22:03:43 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2003/06/02 01:18:25 jschauma Exp $
 #
 
 DISTNAME=	pspp-0.3.0
@@ -13,7 +13,7 @@ MASTER_SITES=	ftp://franz.stat.wisc.edu/pub/PSPP/ \
 		ftp://ftp.icm.edu.pl/vol/rzm0/gnu-alpha/pspp/ \
 		ftp://ftp.tuniv.szczecin.pl/mirrors/alpha.gnu.org/pub/gnu/pspp/
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://www.gnu.org/software/pspp/
 COMMENT=	Program for statistical analysis of sampled data
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2002/12/23 16:22:52 cjep Exp $
+# $NetBSD: Makefile,v 1.7 2003/06/02 01:18:08 jschauma Exp $
 
 DISTNAME=		proj-4.4.5
 CATEGORIES=		misc
@@ -6,7 +6,7 @@ MASTER_SITES=		ftp://ftp.remotesensing.org/pub/proj/
 DISTFILES=		proj-4.4.5.tar.gz proj-pdf-docs.tar.gz \
 			proj-nad27-1.1.tar.gz
 
-MAINTAINER=		packages@netbsd.org
+MAINTAINER=		tech-pkg@netbsd.org
 HOMEPAGE=		http://www.remotesensing.org/proj/
 COMMENT=		Cartographic projection software
 

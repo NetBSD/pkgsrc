@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2003/05/06 23:03:10 seb Exp $
+# $NetBSD: Makefile,v 1.16 2003/06/02 01:19:17 jschauma Exp $
 
 DISTNAME=	pstoedit_3_31
 PKGNAME=	pstoedit-3.31
@@ -8,7 +8,7 @@ CATEGORIES=	converters graphics print
 MASTER_SITES=	http://home.t-online.de/home/helga.glunz/wglunz/pstoedit/
 EXTRACT_SUFX=	.zip
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://www.pstoedit.net/
 COMMENT=	Convert PostScript / PDF into various vector graphic formats
 

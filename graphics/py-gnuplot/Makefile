@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/12/04 18:38:27 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2003/06/02 01:19:16 jschauma Exp $
 #
 
 DISTNAME=	gnuplot-py-1.6
@@ -6,7 +6,7 @@ PKGNAME=	${PYPKGPREFIX}-gnuplot-1.6
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gnuplot-py/}
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://gnuplot-py.sourceforge.net/
 COMMENT=	Python package that interfaces to gnuplot
 

@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/09/19 05:24:27 gmcgarry Exp $
+# $NetBSD: Makefile,v 1.2 2003/06/02 01:18:17 jschauma Exp $
 
 DISTNAME=	cstream-2.2
 CATEGORIES=	misc
 MASTER_SITES=	http://www.cons.org/cracauer/download/
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=       http://www.cons.org/cracauer/
 COMMENT=	General-purpose stream-handling tool with bandwidth limiting
 

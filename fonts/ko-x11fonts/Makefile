@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2003/03/28 21:14:20 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2003/06/02 01:19:45 jschauma Exp $
 
 DISTNAME=		ko-x11fonts-20010722
 CATEGORIES=		fonts x11 korean
 MASTER_SITES=		# empty
 DISTFILES=		# empty
 
-MAINTAINER=		packages@netbsd.org
+MAINTAINER=		tech-pkg@netbsd.org
 COMMENT=		Korean X11 fonts
 
 DEPENDS+=		ko-baekmuk>=20010718:../../fonts/ko-baekmuk

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2001/02/25 04:17:56 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 2003/06/02 01:18:59 jschauma Exp $
 
 DISTNAME=	minischeme
 PKGNAME=	minischeme-0.85
 CATEGORIES=	lang
 MASTER_SITES=	ftp://ftp.cs.indiana.edu/pub/scheme-repository/imp/
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 COMMENT=	Very tiny scheme interpreter
 
 post-extract:

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.13 2003/05/22 16:48:31 jmmv Exp $
+# $NetBSD: Makefile,v 1.14 2003/06/02 01:18:23 jschauma Exp $
 
 DISTNAME=		rlab-2.1.05
 PKGREVISION=		1
 CATEGORIES=		math
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=rlab/}
 
-MAINTAINER=		packages@netbsd.org
+MAINTAINER=		tech-pkg@netbsd.org
 HOMEPAGE=		http://rlab.sourceforge.net/
 COMMENT=		Matrix oriented, interactive programming environment
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2003/03/29 12:41:37 jmmv Exp $
+# $NetBSD: Makefile,v 1.12 2003/06/02 01:18:42 jschauma Exp $
 #
 
 DISTNAME=       MIME-tools-5.411a
@@ -8,7 +8,7 @@ WRKSRC=		${WRKDIR}/MIME-tools-5.411
 CATEGORIES=	perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=MIME/}
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://www.zeegee.com/code/perl/MIME-tools/
 COMMENT=	perl5 modules for encoding and decoding MIME messages
 

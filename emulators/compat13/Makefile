@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/05/24 11:47:53 taca Exp $
+# $NetBSD: Makefile,v 1.13 2003/06/02 01:20:00 jschauma Exp $
 #
 
 DISTNAME=		compat13-${MACHINE_ARCH}${PKGMINOR}
@@ -6,7 +6,7 @@ PKGNAME=		compat13-1.3.3${PKGMINOR}
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_LOCAL}
 
-MAINTAINER=		packages@netbsd.org
+MAINTAINER=		tech-pkg@netbsd.org
 HOMEPAGE=		http://www.netbsd.org/Releases/formal-1.3/index.html
 COMMENT=		Shared libraries for NetBSD 1.3 (and earlier) compatibility
 

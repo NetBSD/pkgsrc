@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2002/10/25 19:05:04 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2003/06/02 01:16:57 jschauma Exp $
 # FreeBSD Id: Makefile,v 1.9 1997/03/08 05:00:11 gpalmer Exp
 #
 
@@ -8,7 +8,7 @@ SVR4_PKGNAME=		amase
 CATEGORIES=		sysutils
 MASTER_SITES=		ftp://ftp.cs.umd.edu/pub/amanda/
 
-MAINTAINER=		packages@netbsd.org
+MAINTAINER=		tech-pkg@netbsd.org
 HOMEPAGE=		http://www.amanda.org/
 COMMENT=		Server part of Amanda, a network backup system
 

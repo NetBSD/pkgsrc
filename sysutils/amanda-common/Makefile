@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2003/01/28 22:04:14 jlam Exp $
+# $NetBSD: Makefile,v 1.25 2003/06/02 01:16:58 jschauma Exp $
 # FreeBSD Id: Makefile,v 1.9 1997/03/08 05:00:11 gpalmer Exp
 #
 
@@ -8,7 +8,7 @@ SVR4_PKGNAME=		amaco
 CATEGORIES=		sysutils
 MASTER_SITES=		ftp://ftp.cs.umd.edu/pub/amanda/
 
-MAINTAINER=		packages@netbsd.org
+MAINTAINER=		tech-pkg@netbsd.org
 HOMEPAGE=		http://www.amanda.org/
 COMMENT=		Libraries and binaries used by both the client and server parts of amanda
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/03/29 12:42:46 jmmv Exp $
+# $NetBSD: Makefile,v 1.6 2003/06/02 01:16:12 jschauma Exp $
 
 DISTNAME=	X.V11R3uwm
 PKGNAME=	uwm-19881027
@@ -7,7 +7,7 @@ WRKSRC=		${WRKDIR}/X.V11R3/clients/uwm
 CATEGORIES=	x11 wm
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 #HOMEPAGE=	http://www.x.org/
 COMMENT=	X11R3 window manager
 

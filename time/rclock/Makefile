@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/02/17 17:32:08 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2003/06/02 01:16:18 jschauma Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1997/03/03 16:27:10 obrien Exp
 #
 
@@ -10,7 +10,7 @@ MASTER_SITES=		${MASTER_SITE_SUNSITE:=utils/file/managers/mc/rxvt/}  \
 			ftp://tsx-11.mit.edu/pub/linux/sources/usr.bin.X11/
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		packages@netbsd.org
+MAINTAINER=		tech-pkg@netbsd.org
 COMMENT=		Analog clock for X w/appointment reminder and mail notification
 
 USE_X11BASE=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2003/05/08 16:48:23 jmmv Exp $
+# $NetBSD: Makefile,v 1.15 2003/06/02 01:16:25 jschauma Exp $
 #
 
 DISTNAME=		texi2html-1.64
@@ -6,7 +6,7 @@ PKGREVISION=		1
 CATEGORIES=		textproc
 MASTER_SITES=		http://www.mathematik.uni-kl.de/~obachman/Texi2html/Distrib/
 
-MAINTAINER=		packages@netbsd.org
+MAINTAINER=		tech-pkg@netbsd.org
 HOMEPAGE=		http://www.mathematik.uni-kl.de/~obachman/Texi2html/
 COMMENT=		Texinfo-to-HTML direct translator
 

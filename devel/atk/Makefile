@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2003/05/06 17:40:48 jmmv Exp $
+# $NetBSD: Makefile,v 1.17 2003/06/02 01:20:58 jschauma Exp $
 #
 
 DISTNAME=		atk-1.2.2
@@ -9,7 +9,7 @@ MASTER_SITES=		ftp://ftp.gtk.org/pub/gtk/v2.2/ \
 			${MASTER_SITE_GNOME:=sources/atk/1.2/}
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		packages@netbsd.org
+MAINTAINER=		tech-pkg@netbsd.org
 HOMEPAGE=		http://developer.gnome.org/projects/gap/
 COMMENT=		Set of interfaces for accessibility
 

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.8 2003/02/17 06:44:49 salo Exp $
+# $NetBSD: Makefile,v 1.9 2003/06/02 01:18:43 jschauma Exp $
 
 DISTNAME=		nullmailer-1.00RC7
 PKGNAME=		${DISTNAME:S/0RC7/.0rc7/}
 CATEGORIES=		mail
 MASTER_SITES=		http://untroubled.org/nullmailer/
 
-MAINTAINER=		packages@netbsd.org
+MAINTAINER=		tech-pkg@netbsd.org
 HOMEPAGE=		http://untroubled.org/nullmailer/
 COMMENT=		Simple relay-only mail transport agent
 

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.18 2002/08/31 16:54:34 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2003/06/02 01:21:15 jschauma Exp $
 #
 
 DISTNAME=       uudeview-0.5.18
 CATEGORIES=	converters
 MASTER_SITES=	http://www.fpx.de/fp/Software/UUDeview/download/
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://www.fpx.de/fp/Software/UUDeview/
 COMMENT=	Program for uu/xx/Base64/BinHex de-/encoding
 

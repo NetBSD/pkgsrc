@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/05/17 02:03:12 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.2 2003/06/02 01:17:49 jschauma Exp $
 #
 
 DISTNAME=	Net-Z3950-0.32
@@ -7,7 +7,7 @@ SVR4_PKGNAME=	p5nz3
 CATEGORIES=	net perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Net/}
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://perl.z3950.org
 COMMENT=	perl interface to the Z39.50 information retrieval protocol
 

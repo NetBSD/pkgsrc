@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2003/05/08 14:55:13 jmmv Exp $
+# $NetBSD: Makefile,v 1.15 2003/06/02 01:16:12 jschauma Exp $
 
 #
 # There is no distinfo file since the files change contents so often on the
@@ -11,7 +11,7 @@ CATEGORIES=	x11 wm windowmaker
 MASTER_SITES=	http://download.themes.org/wm/
 DISTFILES=	${THEME_FILES}
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://wm.themes.org/
 COMMENT=	Themes for the window manager WindowMaker
 

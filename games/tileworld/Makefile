@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/05/05 19:05:13 jmmv Exp $
+# $NetBSD: Makefile,v 1.5 2003/06/02 01:19:35 jschauma Exp $
 #
 
 DISTNAME=	tworld-1.0
@@ -8,7 +8,7 @@ WRKSRC=		${WRKDIR}/tworld-1.0
 CATEGORIES=	games
 MASTER_SITES=	http://www.muppetlabs.com/~breadbox/pub/software/tworld/
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://www.muppetlabs.com/~breadbox/software/tworld/
 COMMENT=	"Game based on Chip's Challenge"
 

@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2002/11/14 23:39:24 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2003/06/02 01:21:18 jschauma Exp $
 
 DISTNAME=		cbmconvert-2.0.5
 CATEGORIES=		converters archivers
 MASTER_SITES=		ftp://ftp.funet.fi/pub/cbm/crossplatform/converters/unix/
 
-MAINTAINER=		packages@netbsd.org
+MAINTAINER=		tech-pkg@netbsd.org
 COMMENT=		Converts files to and from various C64/C128/CBM formats
 
 USE_BUILDLINK2=		# defined

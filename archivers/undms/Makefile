@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/03/29 12:40:03 jmmv Exp $
+# $NetBSD: Makefile,v 1.9 2003/06/02 01:21:43 jschauma Exp $
 
 DISTNAME=	undms-1.3.c
 PKGNAME=	undms-1.3
@@ -8,7 +8,7 @@ MASTER_SITES=	ftp://de.aminet.net/pub/aminet/misc/unix/ \
 		ftp://us.aminet.net/pub/aminet/misc/unix/
 EXTRACT_SUFX=	.Z
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 COMMENT=	Converts .dms Amiga disk images to uncompressed .adf images
 
 USE_BUILDLINK2=	# defined

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2003/05/02 11:55:11 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2003/06/02 01:19:32 jschauma Exp $
 #
 
 DISTNAME=	avifile-0.6.20010814
@@ -8,7 +8,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://avifile.sourceforge.net/
 COMMENT=	MPEG-4 (DivX) video player library
 

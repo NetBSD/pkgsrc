@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2002/10/09 17:39:55 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2003/06/02 01:18:24 jschauma Exp $
 
 DISTNAME=	ScientificPython-2.2
 PKGNAME=	${PYPKGPREFIX}-Scientific-2.2
@@ -6,7 +6,7 @@ CATEGORIES=	math
 MASTER_SITES=	http://starship.python.net/crew/hinsen/ \
 		http://dirac.cnrs-orleans.fr/programs/
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://starship.python.net/crew/hinsen/scientific.html
 COMMENT=	Python modules for scientific computing
 

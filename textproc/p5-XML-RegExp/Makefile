@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2002/09/26 10:43:37 seb Exp $
+# $NetBSD: Makefile,v 1.8 2003/06/02 01:16:30 jschauma Exp $
 #
 
 DISTNAME=	XML-RegExp-0.03
@@ -7,7 +7,7 @@ SVR4_PKGNAME=	p5xre
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=XML/}
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 COMMENT=	Provide regular expressions for some XML tokens
 
 CONFLICTS+=	p5-libxml-enno-[0-9]*

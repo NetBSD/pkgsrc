@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.7 2001/12/19 01:09:25 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.8 2003/06/02 01:18:20 jschauma Exp $
 #
 
 DISTNAME=	yacas-1.0.48
 CATEGORIES=	math
 MASTER_SITES=	http://www.xs4all.nl/~apinkus/backups/
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://www.xs4all.nl/~apinkus/yacas.html
 COMMENT=	Yet Another Computer Algebra System
 

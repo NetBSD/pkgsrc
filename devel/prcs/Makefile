@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2002/12/23 16:15:27 cjep Exp $
+# $NetBSD: Makefile,v 1.23 2003/06/02 01:20:18 jschauma Exp $
 # FreeBSD Id: Makefile,v 1.9 1997/10/13 05:11:40 jmacd Exp
 #
 
@@ -7,7 +7,7 @@ PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		ftp://ftp.xcf.berkeley.edu/pub/prcs/
 
-MAINTAINER=		packages@netbsd.org
+MAINTAINER=		tech-pkg@netbsd.org
 HOMEPAGE=		http://prcs.sourceforge.net
 COMMENT=		Project Revision Control System
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2002/10/06 22:31:05 seb Exp $
+# $NetBSD: Makefile,v 1.8 2003/06/02 01:16:35 jschauma Exp $
 #
 
 DISTNAME=	Filter-1.16
@@ -7,7 +7,7 @@ SVR4_PKGNAME=	p5fil
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Filter/}
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 COMMENT=	Perl5 classes representing a number of source filters
 
 USE_BUILDLINK2=		YES

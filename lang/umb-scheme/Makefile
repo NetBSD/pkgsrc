@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/03/29 12:41:33 jmmv Exp $
+# $NetBSD: Makefile,v 1.6 2003/06/02 01:18:51 jschauma Exp $
 
 DISTNAME=		umb-scheme-3.2
 WRKSRC=			${WRKDIR}/scheme-3.2
@@ -6,7 +6,7 @@ CATEGORIES=		lang
 MASTER_SITES=		ftp://ftp.cs.umb.edu/pub/scheme/
 EXTRACT_SUFX=		.tar.Z
 
-MAINTAINER=		packages@netbsd.org
+MAINTAINER=		tech-pkg@netbsd.org
 COMMENT=		UMB Scheme interpreter
 
 ALL_TARGET=		default

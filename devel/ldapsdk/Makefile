@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/05/01 09:43:42 jmmv Exp $
+# $NetBSD: Makefile,v 1.11 2003/06/02 01:20:42 jschauma Exp $
 
 DISTNAME=	ldapsdk_12311998
 PKGNAME=	${DISTNAME:S/_/-/}
@@ -7,7 +7,7 @@ WRKSRC=		${WRKDIR}/mozilla
 CATEGORIES=	devel databases
 MASTER_SITES=	ftp://ftp.mozilla.org/pub/directory/c-sdk/ldap/
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://www.mozilla.org/directory/
 COMMENT=	LDAP C-SDK from the Mozilla project
 

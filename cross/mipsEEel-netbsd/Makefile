@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2002/10/03 18:47:14 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2003/06/02 01:21:10 jschauma Exp $
 
 DISTNAME=	cross-${TARGET_ARCH}-${DISTVERSION}
 TARGET_ARCH=	mipsEEel-netbsd
 DISTVERSION=	1.0.0
 PKGREVISION=	1
 CATEGORIES+=	cross lang
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 COMMENT=	Cross-compiler for NetBSD/PlayStation2 kernel
 
 BZCAT=		/usr/bin/bzcat

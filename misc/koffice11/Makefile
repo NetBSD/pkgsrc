@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/05/02 11:55:55 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2003/06/02 01:18:13 jschauma Exp $
 
 DISTNAME=	koffice-1.1.1
 PKGREVISION=	2
@@ -11,7 +11,7 @@ BUILD_DEPENDS+=	qt2-designer-kde>=2.3.1nb2:../../x11/qt2-designer-kde
 
 CONFLICTS=	koffice3-[0-9]*
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://www.koffice.org/
 COMMENT=	KDE Office Suite with text processor, spreadsheet, etc.
 

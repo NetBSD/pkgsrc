@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/10/20 17:46:05 seb Exp $
+# $NetBSD: Makefile,v 1.4 2003/06/02 01:17:09 jschauma Exp $
 #
 
 DISTNAME=		Digest-HMAC-1.01
@@ -7,7 +7,7 @@ SVR4_PKGNAME=		p5sh2
 CATEGORIES=		security perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Digest/}
 
-MAINTAINER=		packages@netbsd.org
+MAINTAINER=		tech-pkg@netbsd.org
 COMMENT=		perl5 module for HMAC
 
 DEPENDS+=		p5-Digest-SHA1>=1.00:../p5-Digest-SHA1

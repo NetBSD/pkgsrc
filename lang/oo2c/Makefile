@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/05/22 16:48:30 jmmv Exp $
+# $NetBSD: Makefile,v 1.5 2003/06/02 01:18:58 jschauma Exp $
 
 DISTNAME=		oo2c_${BITS}-2.0.9
 PKGNAME=		oo2c-2.0.9
@@ -7,7 +7,7 @@ CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ooc/}
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		packages@netbsd.org
+MAINTAINER=		tech-pkg@netbsd.org
 HOMEPAGE=		http://ooc.sourceforge.net
 COMMENT=		Optimizing Oberon-2 Compiler
 

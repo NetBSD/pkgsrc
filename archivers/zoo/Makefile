@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2003/05/06 17:40:22 jmmv Exp $
+# $NetBSD: Makefile,v 1.16 2003/06/02 01:21:42 jschauma Exp $
 # FreeBSD Id: Makefile,v 1.8 1997/08/10 22:31:36 fenner Exp
 #
 
@@ -8,7 +8,7 @@ WRKSRC=		${WRKDIR}
 CATEGORIES=	archivers
 MASTER_SITES=   ftp://ftp.kiarchive.ru/pub/unix/arcers/
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 COMMENT=	Manipulate archives of files in compressed form
 
 LICENSE=	zoo-license

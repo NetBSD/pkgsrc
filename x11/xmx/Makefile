@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2001/02/17 17:07:19 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2003/06/02 01:15:33 jschauma Exp $
 
 DISTNAME=	xmx-2.1alpha.pl7
 PKGNAME=	xmx-2.1a7
 CATEGORIES=	x11
 MASTER_SITES=	ftp://ftp.cs.brown.edu/pub/xmx/
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://www.cs.brown.edu/software/xmx/
 COMMENT=	X11 Protocol Multiplexor
 

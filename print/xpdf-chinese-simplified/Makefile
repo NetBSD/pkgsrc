@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/03/29 12:42:20 jmmv Exp $
+# $NetBSD: Makefile,v 1.8 2003/06/02 01:17:25 jschauma Exp $
 #
 
 DISTNAME=	xpdf-chinese-simplified
@@ -8,7 +8,7 @@ WRKSRC=		${WRKDIR}/${DISTNAME}
 CATEGORIES=	print
 MASTER_SITES=	ftp://ftp.foolabs.com/pub/xpdf/
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://www.foolabs.com/xpdf/
 COMMENT=	xpdf support files for Chinese (Simplified)
 

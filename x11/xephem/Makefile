@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2003/03/29 12:43:12 jmmv Exp $
+# $NetBSD: Makefile,v 1.17 2003/06/02 01:15:35 jschauma Exp $
 
 DISTNAME=	xephem-3.5.2
 PKGREVISION=	1
@@ -7,7 +7,7 @@ CATEGORIES=	x11
 MASTER_SITES=	http://www.clearskyinstitute.com/xephem/ \
 		ftp://iphcip1.physik.uni-mainz.de/pub/xephem/
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://www.clearskyinstitute.com/xephem/
 COMMENT=	Interactive astronomical ephemeris program
 

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.8 2003/03/05 08:44:56 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2003/06/02 01:17:15 jschauma Exp $
 
 DISTNAME=	mcrypt-2.6.4
 CATEGORIES=	security devel
 MASTER_SITES=	ftp://mcrypt.hellug.gr/pub/mcrypt/ \
 		ftp://mcrypt.hellug.gr/pub/mcrypt/old/
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://mcrypt.hellug.gr/
 COMMENT=	replacement to crypt(1), supports many crypto algorithms
 
