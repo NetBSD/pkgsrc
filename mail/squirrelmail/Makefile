@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/01/24 22:44:13 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2001/01/25 17:52:51 jlam Exp $
 
 DISTNAME=	squirrelmail-1.0pre3
 PKGNAME=	squirrelmail-0.9.3
@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=squirrelmail/} \
 MAINTAINER=	jlam@netbsd.org
 HOMEPAGE=	http://www.squirrelmail.org/
 
-DEPENDS+=	php>=4.0:../../www/php4
+DEPENDS+=	php>=4.0.4.1nb1:../../www/php4
 
 USE_PERL5=	# defined
 NO_CONFIGURE=	# defined
