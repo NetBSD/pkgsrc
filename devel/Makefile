@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 1998/08/21 19:06:51 tv Exp $
+# $NetBSD: Makefile,v 1.34 1998/08/22 11:14:08 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.78 1997/10/01 08:32:59 cracauer Exp
 #
 
@@ -34,7 +34,7 @@
 #    SUBDIR += ilu
 #    SUBDIR += lclint
 #    SUBDIR += libdlmalloc
-    SUBDIR += libg++
+#    SUBDIR += libg++
     SUBDIR += libscsi
     SUBDIR += libslang
     SUBDIR += libtool
