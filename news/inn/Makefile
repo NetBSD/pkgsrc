@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2001/07/10 16:02:12 tron Exp $
+# $NetBSD: Makefile,v 1.28 2001/07/16 13:41:18 tron Exp $
 
 DISTNAME=		inn-2.3.2
 CATEGORIES=		news
@@ -21,6 +21,7 @@ INN_DATA_DIR?=		/var/news
 USE_PERL5=		YES
 HAS_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--host=${MACHINE_GNU_PLATFORM} --prefix=${PREFIX}/inn \
+			--enable-setgid-inews \
 			--enable-uucp-rnews \
 			--mandir=${PREFIX}/man \
 			--with-perl --with-tmp-path=${INN_DATA_DIR}/tmp \
