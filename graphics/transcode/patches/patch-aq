@@ -1,0 +1,16 @@
+$NetBSD: patch-aq,v 1.1.1.1 2003/06/23 07:09:32 mrg Exp $
+
+--- libac3/Makefile.am.orig	Wed Feb 20 10:10:29 2002
++++ libac3/Makefile.am
+@@ -4,9 +4,9 @@ DEFAULT_INCLUDES = -I$(top_srcdir) -I$(s
+ 
+ CFLAGS = -O3 -funroll-loops -ffast-math -DLINUX @CFLAGS@
+ 
+-noinst_LIBRARIES = libac3_tc.a
++noinst_LTLIBRARIES = libac3_tc.la
+ 
+-libac3_tc_a_SOURCES = bitstream.c decode.c imdct.c coeff.c exponent.c stats.c\
++libac3_tc_la_SOURCES = bitstream.c decode.c imdct.c coeff.c exponent.c stats.c\
+ 	bit_allocate.c  parse.c crc.c debug.c rematrix.c downmix.c dither.c \
+ 	sanity_check.c
+ 

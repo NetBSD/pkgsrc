@@ -1,0 +1,22 @@
+$NetBSD: patch-al,v 1.1.1.1 2003/06/23 07:09:32 mrg Exp $
+
+diff -rcp src/iodir.c src/iodir.c
+*** src/iodir.c	Sun Mar  9 00:42:49 2003
+--- src/iodir.c	Mon Jun  9 17:45:31 2003
+***************
+*** 25,31 ****
+  #include <dirent.h>
+  #include "ioaux.h"
+  
+! #if defined(__bsdi__) || defined(__FreeBSD__)
+  typedef	off_t off64_t;
+  #define	lseek64 lseek
+  #endif
+--- 25,31 ----
+  #include <dirent.h>
+  #include "ioaux.h"
+  
+! #if defined(__bsdi__) || defined(__FreeBSD__) || defined(__NetBSD__)
+  typedef	off_t off64_t;
+  #define	lseek64 lseek
+  #endif
