@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/09/25 04:41:39 xtraeme Exp $
+
+SHA1 (foobillard-2.8.tar.gz) = 306a083a6555a30f3df6cf075635e6c7acef1495
+Size (foobillard-2.8.tar.gz) = 1098364 bytes
+SHA1 (patch-aa) = c795240b99d152355b8d4dbe5d1736daf5e50c57

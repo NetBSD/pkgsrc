@@ -1,0 +1,37 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/09/25 04:41:39 xtraeme Exp $
+
+--- src/billard3d.c.orig	2003-08-19 06:04:36.000000000 +0200
++++ src/billard3d.c	2003-08-19 06:07:00.000000000 +0200
+@@ -24,7 +24,14 @@
+ #include <string.h>
+ #include <math.h>
+ #include <unistd.h>
++#include <sys/param.h>
++#ifdef __FreeBSD__ && __FreeBSD_version >= 500000
++#include <sys/endian.h>
++#elif defined __NetBSD__
++#include <sys/endian.h>
++#else
+ #include <endian.h>
++#endif
+ 
+ #ifndef USE_SDL
+ #include <GL/glut.h>
+@@ -4934,7 +4941,7 @@
+ 
+    /* config file */
+    load_config( &confv, &confc, argv, argc );
+-   while( ( act_option = getopt_long_only(confc, confv, "+", long_options, &option_index) ) >= 0){
++   while( ( act_option = getopt_long(confc, confv, "+", long_options, &option_index) ) >= 0){
+        DPRINTF("processing option %d=%s\n",act_option,optarg);
+        process_option(act_option);
+    }
+@@ -5032,7 +5039,7 @@
+        fread( &ball_ball_snd.data[SOUND_NULLOFFS*2], 1, ball_ball_snd.len-SOUND_NULLOFFS*2*2 , f );
+        fclose(f);
+ 
+-#if __BYTE_ORDER == __BIG_ENDIAN
++#if _BYTE_ORDER == _BIG_ENDIAN
+        {
+           char *snd=ball_ball_snd.data;
+           for(i=0;i<ball_ball_snd.len;i+=2)
