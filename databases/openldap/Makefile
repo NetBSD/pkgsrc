@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.68 2004/02/14 17:21:36 jlam Exp $
+# $NetBSD: Makefile,v 1.69 2004/02/19 14:42:39 jlam Exp $
 
 DISTNAME=		openldap-2.1.25
 SVR4_PKGNAME=		oldap
+PKGREVISION=		1
 CATEGORIES=		databases
 MASTER_SITES=		ftp://ftp.openldap.org/pub/OpenLDAP/openldap-release/
 EXTRACT_SUFX=		.tgz
@@ -18,8 +19,6 @@ USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
-PTHREAD_OPTS+=		require
-
 TEST_TARGET=		test
 
 PKG_SYSCONFSUBDIR=	openldap
@@ -88,7 +87,18 @@ CONF_FILES_PERMS+=	${EGDIR}/${FILE} ${PKG_SYSCONFDIR}/${FILE}	\
 .for FILE in ${SUPPS}
 SUPPORT_FILES+=		${EGDIR}/${FILE} ${PKG_SYSCONFDIR}/${FILE}
 .endfor
-RCD_SCRIPTS=		slapd slurpd
+RCD_SCRIPTS=		slapd
+
+# While the package does build correctly using GNU pth, slapd isn't able to
+# pass "make test" without segfaulting at startup.  For now, just build
+# without threads-support if it's not a native thread library.
+#
+.if defined(_OPENLDAP_REQUIRE_THREADS) && \
+    !empty(_OPENLDAP_REQUIRE_THREADS:M[yY][eE][sS])
+PTHREAD_OPTS+=		require
+.else
+PTHREAD_OPTS+=		native
+.endif
 
 .include "../../databases/db4/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
@@ -97,8 +107,13 @@ RCD_SCRIPTS=		slapd slurpd
 
 .if ${PTHREAD_TYPE} == "native"
 CONFIGURE_ARGS+=	--with-threads
+PLIST_SUBST+=		SLURPD_COMMENT=
+RCD_SCRIPTS+=		slurpd
 .elif ${PTHREAD_TYPE} == "pth"
 CONFIGURE_ARGS+=	--with-threads=pth
+.else
+CONFIGURE_ARGS+=	--without-threads
+PLIST_SUBST+=		SLURPD_COMMENT="@comment "
 .endif
 
 post-install:
