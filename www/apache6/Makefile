@@ -1,12 +1,9 @@
-# $NetBSD: Makefile,v 1.28 2001/04/14 19:50:05 kim Exp $
-#
-# The fourth number in the PKGNAME version indicates a NetBSD pkg revision
-# (to indicate changes in the shipped third party patches such as the mod_ssl
-# EAPI when there has been no change to the Apache version number).
+# $NetBSD: Makefile,v 1.29 2001/04/29 21:21:13 jlam Exp $
 #
 # This package does not compile in mod_ssl support hooks, as it conflicts
-# with IPv6 enable patch.
-# IPv6 enable patch conflicts with third-party modules anyway, due to
+# with IPv6-enable patch.
+#
+# IPv6-enable patch conflicts with third-party modules anyway, due to
 # sanity fixes in apache module API (for example, avoid u_long for IPv4 addrs)
 #
 
@@ -14,32 +11,26 @@ DISTNAME=		apache_1.3.19
 PKGNAME=		apache6-1.3.19
 CATEGORIES=		www
 MASTER_SITES=		http://httpd.apache.org/dist/httpd/ \
+			http://www.apache.de/dist/httpd/ \
 			http://www.netbsd.org/images/logos/
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX} \
 			sitedrivenby.gif
-# IPv6 patch, needs -p1
+
 MASTER_SITES+=		ftp://ftp.kame.net/pub/kame/misc/
-DISTFILES+=		apache-1.3.19-v6-20010301a.diff.gz
+DISTFILES+=		${IPV6_PATCH}
+IPV6_PATCH=		apache-1.3.19-v6-20010301a.diff.gz
+PATCH_DIST_STRIP=	-p1	# IPv6 patch needs -p1
 
-MAINTAINER=		jlam@netbsd.org
+MAINTAINER=		itojun@netbsd.org
 HOMEPAGE=		http://httpd.apache.org/
-COMMENT=		HTTP (Web) server, with IPv6 support
+COMMENT=		HTTP (Web) server with IPv6 support
 
-CONFLICTS=		apache-*modssl-* apache6-*
-CONFLICTS=		apache-*
+CONFLICTS=		apache-* apache-*modssl-* apache6-*
 
 EXTRACT_ONLY=		${DISTFILES:N*.gif:N*.diff.gz}
 HAS_CONFIGURE=		# defined
 CONFIGURE_SCRIPT=	${WRKSRC}/configure.v6
-CONFIGURE_ARGS+=	--prefix=${PREFIX}				\
-			--sbindir=${PREFIX}/sbin			\
-			--libexecdir=${PREFIX}/lib/httpd		\
-			--datadir=${PREFIX}/share/httpd			\
-			--cgidir=${PREFIX}/libexec/cgi-bin		\
-			--includedir=${PREFIX}/include/httpd		\
-			--runtimedir=/var/run				\
-			--logfiledir=/var/log/httpd			\
-			--proxycachedir=/var/spool/httpd/proxy
+CONFIGURE_ARGS+=	--with-layout="${WRKDIR}/config.layout:pkgsrc"
 CONFIGURE_ARGS+=	--enable-module=most				\
 			--enable-module=auth_db				\
 			--disable-module=auth_dbm
@@ -56,7 +47,6 @@ IGNORE=			"IPv6 only build"
 .endif
 
 APACHE_SYSCONFDIR?=	${LOCALBASE}/etc/httpd
-CONFIGURE_ARGS+=	--sysconfdir=${APACHE_SYSCONFDIR}
 BUILD_DEFS+=		APACHE_SYSCONFDIR
 
 .if defined(APACHE_SUEXEC) && ${APACHE_SUEXEC} == YES
@@ -105,19 +95,23 @@ pre-patch:
 	${FIND} ${WRKSRC} -name '*.orig' -exec ${RM} -f {} \;
 
 post-patch:
-	for i in apache-1.3.19-v6-20010301a.diff.gz; do \
-		${GZCAT} ${_DISTDIR}/$$i | \
-		    ${PATCH} ${PATCH_DIST_ARGS:C/-p0/-p1/} \
-		    || ( ${ECHO} Patch $$i failed ; exit 1 ) ; \
+	for file in ${IPV6_PATCH}; do					\
+		${GZCAT} ${_DISTDIR}/$${file} |				\
+		    ${PATCH} ${PATCH_DIST_ARGS}				\
+		    || ( ${ECHO} "Patch $${file} failed" ; exit 1 ) ;	\
 	done
 	${CHMOD} +x ${CONFIGURE_SCRIPT}
 
-post-build:
-	${SED}	-e "s,@PREFIX@,${PREFIX},g"				\
-		${FILESDIR}/apache.sh > ${WRKDIR}/apache.sh
+pre-configure:
+	${SED}	-e "s|@PREFIX@|${PREFIX}|g"				\
+		-e "s|@APACHE_SYSCONFDIR@|${APACHE_SYSCONFDIR}|g"	\
+		${FILESDIR}/config.layout > ${WRKDIR}/config.layout
 
 pre-install:
 	${FIND} ${WRKSRC}/htdocs -name '*.orig' -exec ${RM} -f {} \;
+	${SED}	-e "s|@PREFIX@|${PREFIX}|g"				\
+		-e "s|@APACHE_SYSCONFDIR@|${APACHE_SYSCONFDIR}|g"	\
+		${FILESDIR}/apache.sh > ${WRKDIR}/apache.sh
 	${SED}	-e "s|@CAT@|${CAT}|g"					\
 		-e "s|@RM@|${RM}|g"					\
 		-e "s|@RMDIR@|${RMDIR}|g"				\
