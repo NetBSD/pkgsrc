@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 1998/09/04 22:14:26 agc Exp $
+
+--- libgnomeui/Makefile.in.orig	Sat Aug 15 15:49:03 1998
++++ libgnomeui/Makefile.in	Sat Aug 15 15:48:19 1998
+@@ -349,7 +349,7 @@
+ ted_demo_DEPENDENCIES =  $(top_builddir)/libgnomeui/libgnomeui.la \
+ $(top_builddir)/libgnome/libgnome.la
+ ted_demo_LDFLAGS = 
+-stock_demo_OBJECTS =  stock_demo.o
++stock_demo_OBJECTS =  stock_demo.o gnome-stock.o
+ stock_demo_DEPENDENCIES =  $(top_builddir)/libgnomeui/libgnomeui.la \
+ $(top_builddir)/libgnome/libgnome.la
+ stock_demo_LDFLAGS = 
