@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.in,v 1.9 2003/09/23 06:36:20 grant Exp $
+# $NetBSD: Makefile.in,v 1.10 2004/08/21 06:33:40 jlam Exp $
 
 srcdir=		@srcdir@
 
@@ -22,15 +22,12 @@ INSTALL=	@INSTALL@
 
 PROG=		pkg_delete
 
-SRCS=	main.c perform.c
-OBJS=	$(SRCS:.c=.o)
+OBJS=	main.o perform.o
 
-.PHONY: all clean install
+all: $(PROG)
 
 .c.o:
 	$(CC) $(DEFS) $(CPPFLAGS) $(CFLAGS) -c $<
-
-all: $(PROG)
 
 $(PROG): $(OBJS)
 	$(CCLD) $(LDFLAGS) -o $@ $(OBJS) $(LIBS)
