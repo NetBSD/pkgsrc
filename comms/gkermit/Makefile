@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/07/13 14:41:19 fredb Exp $
+# $NetBSD: Makefile,v 1.6 2001/08/19 03:53:48 jlam Exp $
 #
 
 DISTNAME=	gkermit
@@ -10,8 +10,10 @@ MAINTAINER=	fredb@netbsd.org
 HOMEPAGE=	http://www.columbia.edu/kermit/gkermit.html
 COMMENT=	minimal implementation of the ``kermit'' protocol (GPL'd)
 
+USE_BUILDLINK_ONLY=	yes
 ALL_TARGET=	posix
 MAKEFILE=	makefile
+MAKE_FLAGS+=	CC="${CC}" KFLAGS="${CFLAGS}"
 NO_WRKSUBDIR=	yes
 
 do-install:
