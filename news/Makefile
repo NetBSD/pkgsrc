@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2004/08/23 21:15:30 recht Exp $
+# $NetBSD: Makefile,v 1.30.4.1 2004/12/24 01:07:24 snj Exp $
 #
 
 COMMENT=	Network news
@@ -15,7 +15,6 @@ SUBDIR+=	nn
 SUBDIR+=	nntpcache
 SUBDIR+=	nntpclnt
 SUBDIR+=	pan
-SUBDIR+=	pan-gnome
 SUBDIR+=	slrn
 SUBDIR+=	suck
 SUBDIR+=	tin
