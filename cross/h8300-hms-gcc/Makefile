@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/06/27 22:29:09 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.2 2002/09/30 20:27:42 jlam Exp $
 
 DISTNAME=		gcc-core-3.1
 PKGNAME=		cross-h8300-hms-gcc-3.1
@@ -15,13 +15,15 @@ MAINTAINER=		oishi@ims.ac.jp
 HOMEPAGE=		#empty
 COMMENT=		gcc compiler for h8300-hms
 
-DEPENDS+=		cross-h8300-hms-binutils-*:../../cross/h8300-hms-binutils
+DEPENDS+=	cross-h8300-hms-binutils-[0-9]*:../../cross/h8300-hms-binutils
 
+H8300_PREFIX=		${LOCALBASE}/libexec/cross-h8300-hms
+
+USE_BUILDLINK2=		yes
 USE_GMAKE=		yes
-INSTALL_SUBDIR=		libexec/cross-h8300-hms
 HAS_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--prefix=${LOCALBASE}/${INSTALL_SUBDIR}
-CONFIGURE_ARGS+=	--infodir=${LOCALBASE}/${INSTALL_SUBDIR}/gcc
+CONFIGURE_ARGS+=	--prefix=${H8300_PREFIX}
+CONFIGURE_ARGS+=	--infodir=${H8300_PREFIX}/gcc
 CONFIGURE_ARGS+=	--target=h8300-hms
 CONFIGURE_ARGS+=	--enable-languages=c
 CONFIGURE_ARGS+=	--with-newlib
@@ -37,13 +39,8 @@ post-extract:
 post-install:
 	for f in h8300-hms-cpp    h8300-hms-gcc \
 		 h8300-hms-gccbug h8300-hms-gcov ; do \
-		${LN} -s ../${INSTALL_SUBDIR}/bin/$$f ${LOCALBASE}/bin/$$f ; \
+		${LN} -s ${H8300_PREFIX}/bin/$$f ${PREFIX}/bin/$$f ; \
 	done
 
-GCC_VERSION!=           gcc --version
-.if (${GCC_VERSION:C/-.*$$//} == egcs)
-# "egcs" cannot be used, as this package tickles c++ compiler bugs
-.include "../../lang/gcc/Makefile.gcc"
-.endif
-
+.include "../../lang/gcc/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
