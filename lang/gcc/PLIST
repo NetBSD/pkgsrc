@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2002/02/18 15:14:25 seb Exp $
+@comment $NetBSD: PLIST,v 1.5 2002/03/14 16:21:57 wiz Exp $
 etc/gcc-2.95.3.mk
 ${PKGNAME}/bin/c++
 ${PKGNAME}/bin/c++filt
@@ -11,10 +11,10 @@ ${PKGNAME}/bin/gcc
 ${PKGNAME}/bin/gcj
 ${PKGNAME}/bin/gcjh
 ${PKGNAME}/bin/gcov
-${PKGNAME}/bin/${MACHINE_GCC_PLATFORM}-gcc
+${PKGNAME}/bin/${MACHINE_GNU_PLATFORM}-gcc
 ${PKGNAME}/bin/jcf-dump
 ${PKGNAME}/bin/jv-scan
-${PKGNAME}/${MACHINE_GCC_PLATFORM}/include/_G_config.h
+${PKGNAME}/${MACHINE_GNU_PLATFORM}/include/_G_config.h
 ${PKGNAME}/include/g++-3/PlotFile.h
 ${PKGNAME}/include/g++-3/SFile.h
 ${PKGNAME}/include/g++-3/algo.h
@@ -164,43 +164,43 @@ ${PKGNAME}/include/g++-3/utility
 ${PKGNAME}/include/g++-3/valarray
 ${PKGNAME}/include/g++-3/vector
 ${PKGNAME}/include/g++-3/vector.h
-${PKGNAME}/lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${PKGVERSION}/cc1
-${PKGNAME}/lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${PKGVERSION}/cc1chill
-${PKGNAME}/lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${PKGVERSION}/cc1obj
-${PKGNAME}/lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${PKGVERSION}/cc1plus
-${PKGNAME}/lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${PKGVERSION}/chillrt0.o
-${PKGNAME}/lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${PKGVERSION}/collect2
-${PKGNAME}/lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${PKGVERSION}/cpp0
-${PKGNAME}/lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${PKGVERSION}/f771
-${PKGNAME}/lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${PKGVERSION}/include/README
-${PKGNAME}/lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${PKGVERSION}/include/exception
-${PKGNAME}/lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${PKGVERSION}/include/float.h
-${PKGNAME}/lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${PKGVERSION}/include/g2c.h
-${PKGNAME}/lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${PKGVERSION}/include/limits.h
-${PKGNAME}/lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${PKGVERSION}/include/math.h
-${PKGNAME}/lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${PKGVERSION}/include/new
-${PKGNAME}/lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${PKGVERSION}/include/new.h
-${PKGNAME}/lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${PKGVERSION}/include/objc/NXConstStr.h
-${PKGNAME}/lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${PKGVERSION}/include/objc/Object.h
-${PKGNAME}/lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${PKGVERSION}/include/objc/Protocol.h
-${PKGNAME}/lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${PKGVERSION}/include/objc/encoding.h
-${PKGNAME}/lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${PKGVERSION}/include/objc/hash.h
-${PKGNAME}/lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${PKGVERSION}/include/objc/objc-api.h
-${PKGNAME}/lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${PKGVERSION}/include/objc/objc-list.h
-${PKGNAME}/lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${PKGVERSION}/include/objc/objc.h
-${PKGNAME}/lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${PKGVERSION}/include/objc/sarray.h
-${PKGNAME}/lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${PKGVERSION}/include/objc/thr.h
-${PKGNAME}/lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${PKGVERSION}/include/objc/typedstream.h
-${PKGNAME}/lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${PKGVERSION}/include/syslimits.h
-${PKGNAME}/lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${PKGVERSION}/include/typeinfo
-${PKGNAME}/lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${PKGVERSION}/jc1
-${PKGNAME}/lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${PKGVERSION}/jvgenmain
-${PKGNAME}/lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${PKGVERSION}/libchill.a
-${PKGNAME}/lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${PKGVERSION}/libg2c.a
-${PKGNAME}/lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${PKGVERSION}/libgcc.a
-${PKGNAME}/lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${PKGVERSION}/libobjc.a
-${PKGNAME}/lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${PKGVERSION}/libstdc++.a
-${PKGNAME}/lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${PKGVERSION}/specs
+${PKGNAME}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/cc1
+${PKGNAME}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/cc1chill
+${PKGNAME}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/cc1obj
+${PKGNAME}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/cc1plus
+${PKGNAME}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/chillrt0.o
+${PKGNAME}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/collect2
+${PKGNAME}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/cpp0
+${PKGNAME}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/f771
+${PKGNAME}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/include/README
+${PKGNAME}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/include/exception
+${PKGNAME}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/include/float.h
+${PKGNAME}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/include/g2c.h
+${PKGNAME}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/include/limits.h
+${PKGNAME}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/include/math.h
+${PKGNAME}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/include/new
+${PKGNAME}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/include/new.h
+${PKGNAME}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/include/objc/NXConstStr.h
+${PKGNAME}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/include/objc/Object.h
+${PKGNAME}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/include/objc/Protocol.h
+${PKGNAME}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/include/objc/encoding.h
+${PKGNAME}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/include/objc/hash.h
+${PKGNAME}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/include/objc/objc-api.h
+${PKGNAME}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/include/objc/objc-list.h
+${PKGNAME}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/include/objc/objc.h
+${PKGNAME}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/include/objc/sarray.h
+${PKGNAME}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/include/objc/thr.h
+${PKGNAME}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/include/objc/typedstream.h
+${PKGNAME}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/include/syslimits.h
+${PKGNAME}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/include/typeinfo
+${PKGNAME}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/jc1
+${PKGNAME}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/jvgenmain
+${PKGNAME}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/libchill.a
+${PKGNAME}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/libg2c.a
+${PKGNAME}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/libgcc.a
+${PKGNAME}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/libobjc.a
+${PKGNAME}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/libstdc++.a
+${PKGNAME}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/specs
 ${PKGNAME}/lib/libiberty.a
 ${PKGNAME}/lib/libstdc++.a.2.10.0nb1
 ${PKGNAME}/man/man1/cccp.1
@@ -274,16 +274,16 @@ info/gcc.info-8
 info/gcc.info-9
 @dirrm ${PKGNAME}/man/man1
 @dirrm ${PKGNAME}/man
-@dirrm ${PKGNAME}/lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${PKGVERSION}/include/objc
-@dirrm ${PKGNAME}/lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${PKGVERSION}/include
-@dirrm ${PKGNAME}/lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${PKGVERSION}
-@dirrm ${PKGNAME}/lib/gcc-lib/${MACHINE_GCC_PLATFORM}
+@dirrm ${PKGNAME}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/include/objc
+@dirrm ${PKGNAME}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/include
+@dirrm ${PKGNAME}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${PKGVERSION}
+@dirrm ${PKGNAME}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}
 @dirrm ${PKGNAME}/lib/gcc-lib
 @dirrm ${PKGNAME}/lib
 @dirrm ${PKGNAME}/include/g++-3/std
 @dirrm ${PKGNAME}/include/g++-3
 @dirrm ${PKGNAME}/include
-@dirrm ${PKGNAME}/${MACHINE_GCC_PLATFORM}/include
-@dirrm ${PKGNAME}/${MACHINE_GCC_PLATFORM}
+@dirrm ${PKGNAME}/${MACHINE_GNU_PLATFORM}/include
+@dirrm ${PKGNAME}/${MACHINE_GNU_PLATFORM}
 @dirrm ${PKGNAME}/bin
 @dirrm ${PKGNAME}
