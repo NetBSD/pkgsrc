@@ -1,24 +1,35 @@
-$NetBSD: patch-bw,v 1.1 2004/07/19 22:41:16 dmcmahill Exp $
+$NetBSD: patch-bw,v 1.2 2004/07/30 13:07:25 dmcmahill Exp $
 
 --- libfpvm/Makefile.aimk.orig	Mon Mar 15 19:05:11 1999
-+++ libfpvm/Makefile.aimk	Wed Mar 24 23:23:12 2004
-@@ -110,9 +110,12 @@
++++ libfpvm/Makefile.aimk
+@@ -35,7 +35,7 @@ PVMBFUNCH		=	$(PVMDIR)/src/bfunc.h
+ PVMBFHEADERS	=	$(PVMHEADERS) $(PVMBFUNCH)
+ 
+ LIBPREFIX		=	lib
+-LIBFPVM			=	$(LIBPREFIX)fpvm3.a
++LIBFPVM			=	$(LIBPREFIX)fpvm3.la
+ 
+ LOBS			=	pvmfaddhost.o \
+ 					pvmfaddmhf.o \
+@@ -109,11 +109,14 @@ $(PVMLDIR):
+ 	- mkdir $(PVMLDIR)
  
  $(PVMLDIR)/$(LIBFPVM):  $(LIBFPVM)
--	cp $(LIBFPVM) $(PVMLDIR)
 +	${MKDIR} $(PVMLDIR)/.libs
 +	cp .libs/* $(PVMLDIR)/.libs
-+	cp $(LIBFPVM:.a=.la) $(PVMLDIR)
+ 	cp $(LIBFPVM) $(PVMLDIR)
  
  $(LIBFPVM):  $(LOBS) ftocstr.o
 -	$(AR) cr $(LIBFPVM) $?
 -	case x$(HASRANLIB) in xt ) echo ranlib; ranlib $(LIBFPVM) ;; esac
-+	${LIBTOOL} --mode=link ${CC} ${PVM_STATIC} -o ${.TARGET:.a=.la} ${LOBS:.o=.lo} \
++	${LIBTOOL} --mode=link ${CC} ${PVM_STATIC} -o $@ ${LOBS:.o=.lo} \
 +		ftocstr.lo -rpath ${PVM_DIR}/lib/$(PVM_ARCH) \
 +		-version-info ${PVMLIB_VER}
  
  clean:
-@@ -122,320 +125,322 @@
+ 	rm -f $(LOBS) ftocstr.o $(LIBFPVM)
+@@ -121,321 +124,323 @@ clean:
+ tidy:
  	rm -f $(LOBS)
  
 +LTCC=	$(LIBTOOL) --mode=compile $(CC)
