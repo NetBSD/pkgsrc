@@ -1,17 +1,17 @@
-$NetBSD: patch-ad,v 1.4 2004/06/23 08:42:57 mycroft Exp $
+$NetBSD: patch-ad,v 1.5 2005/02/14 09:50:18 adam Exp $
 
---- bsd.c.orig	2004-01-27 22:36:40.000000000 +0000
-+++ bsd.c	2004-06-23 08:40:16.000000000 +0000
-@@ -320,7 +320,7 @@
- int usb_bulk_read(usb_dev_handle *dev, int ep, char *bytes, int size,
-                   int timeout)
+--- bsd.c.orig	2004-02-18 06:34:52.000000000 +0000
++++ bsd.c
+@@ -399,7 +399,7 @@ int usb_interrupt_write(usb_dev_handle *
+ int usb_interrupt_read(usb_dev_handle *dev, int ep, char *bytes, int size,
+                        int timeout)
  {
 -  int fd, ret, retrieved = 0, one = 1;
 +  int fd, ret, retrieved = 0, one = 1, requested;
  
    /* Ensure the endpoint address is correct */
    ep |= USB_ENDPOINT_IN;
-@@ -346,7 +346,8 @@
+@@ -425,7 +425,8 @@ int usb_interrupt_read(usb_dev_handle *d
      USB_ERROR_STR(-errno, "error setting short xfer: %s", strerror(errno));
  
    do {
@@ -20,8 +20,8 @@ $NetBSD: patch-ad,v 1.4 2004/06/23 08:42:57 mycroft Exp $
 +    ret = read(fd, bytes+retrieved, requested);
      if (ret < 0)
  #if __FreeBSD__
-       USB_ERROR_STR(-errno, "error reading from bulk endpoint %s.%d: %s",
-@@ -356,7 +357,7 @@
+       USB_ERROR_STR(-errno, "error reading from interrupt endpoint %s.%d: %s",
+@@ -435,7 +436,7 @@ int usb_interrupt_read(usb_dev_handle *d
                    dev->device->filename, UE_GET_ADDR(ep), strerror(errno));
  #endif
      retrieved += ret;
