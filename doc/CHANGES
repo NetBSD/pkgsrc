@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5672 2004/04/20 09:17:46 xtraeme Exp $
+$NetBSD: CHANGES,v 1.5673 2004/04/20 09:37:19 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2102,3 +2102,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated eel2 to 2.6.1 [minskim 2004-04-20]
 	Added honeyd-0.8b [xtraeme 2004-04-20]
 	Added honeyd-arpd-0.2 [xtraeme 2004-04-20]
+	Added oinkmaster-0.8 [xtraeme 2004-04-20]
