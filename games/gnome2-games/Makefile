@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/04/21 02:28:57 rh Exp $
+# $NetBSD: Makefile,v 1.2 2003/05/01 11:21:25 jmmv Exp $
 
 DISTNAME=		gnome-games-2.2.1
+PKGREVISION=		1
 CATEGORIES=		games gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-games/2.2/}
 EXTRACT_SUFX=		.tar.bz2
@@ -14,6 +15,7 @@ BUILD_USES_MSGFMT=	yes
 CONFLICTS=		xbill-[0-9]*
 
 USE_BUILDLINK2=		yes
+USE_PKGINSTALL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_GMAKE=		yes
 USE_X11=		yes
@@ -24,18 +26,29 @@ LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR}
 CONFIGURE_ARGS+=	--localstatedir=/var
+# This package installs files in sysconfdir but does not read them directly,
+# so the following configuration argument is safe.
+CONFIGURE_ARGS+=	--sysconfdir=${EGDIR}
 
-INSTALL_FILE=		${WRKDIR}/INSTALL
+EGDIR=			${PREFIX}/share/examples/gnome2-games
+CONF_FILES=
+.for conffile in	sound/events/gataxx.soundlist \
+			sound/events/gnect.soundlist \
+			sound/events/gnibbles.soundlist \
+			sound/events/gnobots2.soundlist \
+			sound/events/iagno.soundlist
+CONF_FILES+=		${EGDIR}/${conffile} ${PKG_SYSCONFDIR}/${conffile}
+.endfor
+.undef conffile
+
+FILES_SUBST+=		INSTALL="${INSTALL}"
+INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
 
 post-patch:
 	cd ${WRKSRC} &&							\
 	${CP} gnect/src/connect4.c gnect/src/connect4.c.broken &&	\
 	${SED} -e 's|/usr/share|${PREFIX}/share|'			\
 		< gnect/src/connect4.c.broken > gnect/src/connect4.c
-
-post-build:
-	${SED} -e 's#@@INSTALL@@#${INSTALL}#' \
-	  ${PKGDIR}/INSTALL >${INSTALL_FILE}
 
 GCONF2_SCHEMAS=		freecell.schemas
 GCONF2_SCHEMAS+=	gataxx.schemas
