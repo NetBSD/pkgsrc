@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/12/14 04:25:52 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 2000/12/14 04:34:40 hubertf Exp $
 #
 
 DISTNAME=	plex86
 PKGNAME=	plex86-0.20001214
 CATEGORIES=	emulators
-MASTER_SITES=	ftp://ftp.netbsd.org/pub/NetBSD/misc/fvdl/
+MASTER_SITES=	ftp://ftp.netbsd.org/pub/NetBSD/misc/fvdl/ \
+		${MASTER_SITE_LOCAL}
 DISTFILES=	plex86-20001214.tgz plex86.tgz
 
 MAINTAINER=	hubertf@netbsd.org
