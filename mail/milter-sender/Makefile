@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/10/27 17:57:33 manu Exp $
+# $NetBSD: Makefile,v 1.2 2003/10/27 22:52:48 manu Exp $
 #
 
 DISTNAME=		milter-sender-0.41
@@ -15,6 +15,13 @@ GNU_CONFIGURE=		yes
 MAKEFILE=		makefile
 #CFLAGS+=		-I${WRKDIR}
 USE_BUILDLINK2=		yes
+
+LICENSE=		snert-license
+RESTRICTED=		"Redistribution not permitted"
+NO_SRC_ON_FTP=		${RESTRICTED}
+NO_SRC_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_FTP=		${RESTRICTED}
+NO_BIN_ON_CDROM=	${RESTRICTED}
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/milter-sender.sh ${PREFIX}/etc/rc.d

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/10/27 17:56:58 manu Exp $
+# $NetBSD: Makefile,v 1.2 2003/10/27 22:52:48 manu Exp $
 #
 
 DISTNAME=		libsnert-1.23
@@ -15,6 +15,13 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-mutex=flock
 MAKEFILE=		makefile
 USE_BUILDLINK2=		yes
+
+LICENSE=		snert-license
+RESTRICTED=		"Redistribution not permitted"
+NO_SRC_ON_FTP=		${RESTRICTED}
+NO_SRC_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_FTP=		${RESTRICTED}
+NO_BIN_ON_CDROM=	${RESTRICTED}
 
 INCDIR=			${WRKSRC}/../../include
 LIBDIR=			${WRKSRC}/../../lib
