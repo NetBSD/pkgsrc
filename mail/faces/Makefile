@@ -4,7 +4,7 @@
 # Whom:			Lars Koeller <Lars_Koeller@odie.physik2.uni-rostock.de>
 #			Andreas Klemm <andreas@FreeBSD.ORG>
 #
-# $NetBSD: Makefile,v 1.3 1998/02/26 16:10:42 agc Exp $
+# $NetBSD: Makefile,v 1.4 1998/02/28 10:42:39 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.5 1997/11/17 18:47:53 max Exp
 #
 
@@ -13,10 +13,10 @@ CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.cs.indiana.edu/pub/faces/faces/ \
 		ftp://odie.physik2.uni-rostock.de/pub/
 EXTRACT_SUFX=	.tar.Z
-		
+
 MAINTAINER=	Lars.Koeller@Uni-Bielefeld.DE
 
-WRKSRC=		$(WRKDIR)/faces
+WRKSRC=		${WRKDIR}/faces
 MAN1=		compface.1 faces.1 face_update.1 uncompface.1
 MAN3=		compface.3 uncompface.3
 
