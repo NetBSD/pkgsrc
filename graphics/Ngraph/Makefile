@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.12 2004/10/03 00:14:48 tv Exp $
+# $NetBSD: Makefile,v 1.13 2004/11/29 20:31:16 wiz Exp $
 #
 
-DISTNAME=	Ngraph-6.3.20-src
+DISTNAME=	Ngraph-6.3.30-src
 PKGNAME=	${DISTNAME:S/-src//}
-PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://www2e.biglobe.ne.jp/~isizaka/bin/ \
 		ftp://ftp.cs.umb.edu/pub/interleaf/CDE/
-DISTFILES=	${DISTNAME}${EXTRACT_SUFX} Ngraph-6.3-doc.tar.gz \
+DISTFILES=	${DISTNAME}${EXTRACT_SUFX} Ngraph-6.3.30-doc.tar.gz \
 		ileaf-widgets.tar.Z
 
 MAINTAINER=	oishi@ims.ac.jp
@@ -24,7 +23,7 @@ post-extract:
 	${GTAR} -C ${WRKSRC}/combo -xzf ${DISTDIR}/ileaf-widgets.tar.Z
 
 post-install:
-	${GTAR} -C ${PREFIX}/libexec/Ngraph -xzf ${DISTDIR}/Ngraph-6.3-doc.tar.gz
+	${GTAR} -C ${PREFIX}/libexec/Ngraph -xzf ${DISTDIR}/Ngraph-6.3.30-doc.tar.gz
 
 .include "../../mk/motif.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
