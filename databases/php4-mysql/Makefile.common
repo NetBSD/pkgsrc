@@ -1,0 +1,13 @@
+# $NetBSD: Makefile.common,v 1.1 2003/09/25 06:22:11 wiz Exp $
+
+PKGMODNAME=             mysql
+CATEGORIES+=            databases
+PKGREVISION?=           # empty
+
+COMMENT?=               PHP4 extension for MySQL databases
+
+USE_BUILDLINK2?=        # defined
+
+EVAL_PREFIX+=           MYSQLDIR=mysql-client
+CONFIGURE_ARGS+=        --with-${MODNAME}=shared,${MYSQLDIR}
+LDFLAGS+=               -Wl,${RPATH_FLAG}${LOCALBASE}/lib/mysql
