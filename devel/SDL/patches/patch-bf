@@ -1,4 +1,4 @@
-$NetBSD: patch-bf,v 1.1 2005/01/06 12:25:23 drochner Exp $
+$NetBSD: patch-bf,v 1.2 2005/01/06 16:32:01 drochner Exp $
 
 --- include/SDL_endian.h.orig	2005-01-06 13:10:43.000000000 +0100
 +++ include/SDL_endian.h
@@ -7,7 +7,7 @@ $NetBSD: patch-bf,v 1.1 2005/01/06 12:25:23 drochner Exp $
  static __inline__ Uint16 SDL_Swap16(Uint16 x)
  {
 -	__asm__("xchgb %b0,%h0" : "=q" (x) :  "0" (x));
-+	__asm__("xchgb %b0,%h0" : "+Q" (x) :  "0" (x));
++	__asm__("xchgb %b0,%h0" : "=Q" (x) :  "0" (x));
  	return x;
  }
  #elif defined(__GNUC__) && (defined(__powerpc__) || defined(__ppc__))
