@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2001/04/27 11:59:15 zuntum Exp $
+# $NetBSD: Makefile,v 1.76 2001/05/07 00:59:07 wiz Exp $
 #
 
 COMMENT=	Security tools
@@ -54,7 +54,7 @@ SUBDIR+=	pgpdump
 SUBDIR+=	pks
 SUBDIR+=	portsentry
 SUBDIR+=	priv
-SUBDIR+=	py-crypto
+SUBDIR+=	py-amkCrypto
 SUBDIR+=	racoon
 SUBDIR+=	rc5des
 SUBDIR+=	rid
