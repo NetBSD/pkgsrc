@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/03/29 12:40:52 jmmv Exp $
+# $NetBSD: Makefile,v 1.6 2003/05/05 17:57:35 grant Exp $
 
 DISTNAME=	vmware-netbsd-3.2.2
 PKGNAME=	vmware-module-3.2.2
@@ -44,22 +44,23 @@ do-build:
 .endfor
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/lkm ${PREFIX}/etc/rc.conf.d
-	${INSTALL_DATA} ${WRKDIR}/rc.conf.d/linuxrtc ${PREFIX}/etc/rc.conf.d/
-	${INSTALL_DATA} ${WRKDIR}/rc.conf.d/vmmon ${PREFIX}/etc/rc.conf.d/
-	${INSTALL_DATA} ${WRKDIR}/rc.conf.d/vmnet ${PREFIX}/etc/rc.conf.d/
-	${INSTALL_DATA} ${WRKDIR}/rc.conf.d/vmnetif ${PREFIX}/etc/rc.conf.d/
-	${INSTALL_DATA} ${WRKDIR}/source/linuxrtc/linuxrtc.o ${PREFIX}/lkm/
-	${INSTALL_DATA} ${WRKDIR}/source/vmmon/vmmon.o ${PREFIX}/lkm/
-	${INSTALL_DATA} ${WRKDIR}/source/vmnet/vmnet.o ${PREFIX}/lkm/
-	${INSTALL_SCRIPT} ${WRKDIR}/share/lkm/vmnet_post.sh ${PREFIX}/lkm/
-	${INSTALL_SCRIPT} ${WRKDIR}/share/lkm/linuxrtc_post.sh ${PREFIX}/lkm/
-	${INSTALL_SCRIPT} ${WRKDIR}/share/lkm/vmmon_post.sh ${PREFIX}/lkm/
+	${INSTALL_DATA_DIR} ${PREFIX}/lkm
+	${INSTALL_DATA_DIR} ${PREFIX}/etc/rc.conf.d
+	${INSTALL_DATA} ${WRKDIR}/rc.conf.d/linuxrtc ${PREFIX}/etc/rc.conf.d
+	${INSTALL_DATA} ${WRKDIR}/rc.conf.d/vmmon ${PREFIX}/etc/rc.conf.d
+	${INSTALL_DATA} ${WRKDIR}/rc.conf.d/vmnet ${PREFIX}/etc/rc.conf.d
+	${INSTALL_DATA} ${WRKDIR}/rc.conf.d/vmnetif ${PREFIX}/etc/rc.conf.d
+	${INSTALL_DATA} ${WRKDIR}/source/linuxrtc/linuxrtc.o ${PREFIX}/lkm
+	${INSTALL_DATA} ${WRKDIR}/source/vmmon/vmmon.o ${PREFIX}/lkm
+	${INSTALL_DATA} ${WRKDIR}/source/vmnet/vmnet.o ${PREFIX}/lkm
+	${INSTALL_SCRIPT} ${WRKDIR}/share/lkm/vmnet_post.sh ${PREFIX}/lkm
+	${INSTALL_SCRIPT} ${WRKDIR}/share/lkm/linuxrtc_post.sh ${PREFIX}/lkm
+	${INSTALL_SCRIPT} ${WRKDIR}/share/lkm/vmmon_post.sh ${PREFIX}/lkm
 	@cd ${WRKSRC}/rc.d && for f in linuxrtc vmmon vmnet vmnetif; do \
 		${SED}  -e 's,@PREFIX@,${PREFIX},' < $$f > $$f.patched; \
 		${INSTALL_SCRIPT} $$f.patched ${PREFIX}/etc/rc.d/$$f; \
 	done
-	${SED}  -e 's,@VMWARE_PREFIX@,${PREFIX},' \
+	${SED} -e 's,@VMWARE_PREFIX@,${PREFIX},' \
 		< ${WRKSRC}/rc.conf.d/vmware > ${WRKSRC}/rc.conf.d/vmware.patched
 	${INSTALL_DATA} ${WRKSRC}/rc.conf.d/vmware.patched \
 		${PREFIX}/etc/rc.conf.d/vmware
