@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2925 2005/01/18 16:36:56 adam Exp $
+$NetBSD: TODO,v 1.2926 2005/01/19 12:55:38 wiz Exp $
 
 Suggested new packages
 ======================
@@ -351,7 +351,7 @@ Suggested package updates
 	o cdpd-1.0.2
 	o cdrtools-2.01
 	o cdrtools-ossdvd-2.01a32
-	o centericq-4.13.0
+	o centericq-4.14.0
 	o cfengine2-2.1.11
 	o cfengine2-doc-2.1.11
 	o cfitsio-2.510
@@ -380,6 +380,7 @@ Suggested package updates
 	o courier-auth-0.48
 	o courier-imap-4.0.0
 	o crafty-19.5
+	o crimsonfields-0.4.6
 	o crossfire-cli-1.5.0
 	o crossfire-srv-1.5.0
 	o crypto++-5.2.1 [pkg/28740]
@@ -417,7 +418,6 @@ Suggested package updates
 	o doclifter-2.1
 	o docsis-0.9.1
 	o dpkg-1.10.25
-	o dropbear-0.44
 	o dsssl-docbook-modular-1.79
 	o dvdrip-0.52.1
 	o dvipng-1.4 [http://sourceforge.net/projects/dvipng/]
@@ -535,6 +535,7 @@ Suggested package updates
 	o gsed-4.1.2
 	o gtetrinet-0.7.8
 	o gtexinfo-4.8
+	o gtk-send-pr-0.4.2
 	o gtk-systrace-2003.06.23
 	o gtkyahoo-0.18.3
 	o gtranscript-0.2.0
@@ -645,7 +646,7 @@ Suggested package updates
 	o libtecla-1.6.1
 	o libtheora-1.0alpha4
 	o licq-core-1.3.0
-	o liferea-0.9.0
+	o liferea-0.9.0b
 	o linuxsms-0.77
 	o lmbench-2.0.4
 	o lmclock-1.2
@@ -726,7 +727,6 @@ Suggested package updates
 	o ns-flash-6.0.79
 	o ns-plugger-common-5.1.3
 	o nsca-1.2.0
-	o nsd-2.1.5
 	o nslint-2.1a3
 	o nxtvepg-2.7.4
 	o obexftp-0.10.6
@@ -912,6 +912,7 @@ Suggested package updates
 	o poedit-1.3.1
 	o poppy-4.01
 	o posh-0.3.14
+	o postgresql-8.0
 	o postgresql-autodoc-1.24
 	o pptp-1.5.0 [http://pptpclient.sourceforge.net/]
 	o prc-tools-2.3
@@ -1078,7 +1079,7 @@ Suggested package updates
 	o tcpdpriv-0.9
 	o tcpdstat-0.9
 	o tcpdump-3.8.3
-	o tcpick-0.2.0
+	o tcpick-0.2.1
 	o tcpillust-1.00b
 	o tcpreplay-2.3.2
 	o tcptrace-6.6.7
@@ -1216,7 +1217,7 @@ Suggested package updates
 	o zircon-1.18.256
 	o zopeedit-0.8
 	o zsh-4.2.3
-	o zsnes-1.40
+	o zsnes-1.41
 	o zziplib-0.13.37
 
 Infrastructure problems which need addressing
