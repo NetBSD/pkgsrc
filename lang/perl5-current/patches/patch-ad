@@ -1,0 +1,15 @@
+$NetBSD: patch-ad,v 1.3 2000/07/25 03:39:39 jlam Exp $
+
+--- hints/netbsd.sh.orig	Sun Feb  6 09:57:09 2000
++++ hints/netbsd.sh	Mon Jul 24 23:34:35 2000
+@@ -63,6 +63,10 @@
+ '') usevfork=true ;;
+ esac
+ 
++# fseeko and ftello are currently not available on NetBSD.  See PR pkg/10655.
++d_fseeko="$undef"
++d_ftello="$undef"
++
+ # Pre-empt the /usr/bin/perl question of installperl.
+ installusrbinperl='n'
+ 
