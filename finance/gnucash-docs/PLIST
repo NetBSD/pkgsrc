@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/10/23 10:40:35 jdolecek Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/02/09 20:22:08 wiz Exp $
 share/gnome/help/gnucash/C/appendixa.xml
 share/gnome/help/gnucash/C/appendixb.xml
 share/gnome/help/gnucash/C/appendixc.xml
@@ -382,10 +382,22 @@ share/gnome/help/gnucash/C/txf-categories.xml
 share/gnome/help/gnucash/de_DE/chartofaccts.xml
 share/gnome/help/gnucash/de_DE/chtacctseg.xml
 share/gnome/help/gnucash/de_DE/fdl-appendix.xml
+share/gnome/help/gnucash/de_DE/figures/basics_accounts.png
 share/gnome/help/gnucash/de_DE/figures/home.png
 share/gnome/help/gnucash/de_DE/figures/left.png
 share/gnome/help/gnucash/de_DE/figures/right.png
 share/gnome/help/gnucash/de_DE/figures/up.png
+share/gnome/help/gnucash/de_DE/gnucash-guide.xml
+share/gnome/help/gnucash/de_DE/gnucash-guide/figures/basics_accounts.png
+share/gnome/help/gnucash/de_DE/gnucash-guide/index.html
+share/gnome/help/gnucash/de_DE/gnucash-guide/stylesheet/caution.png
+share/gnome/help/gnucash/de_DE/gnucash-guide/stylesheet/gnome-money.png
+share/gnome/help/gnucash/de_DE/gnucash-guide/stylesheet/gnucash-icon.png
+share/gnome/help/gnucash/de_DE/gnucash-guide/stylesheet/important.png
+share/gnome/help/gnucash/de_DE/gnucash-guide/stylesheet/note.png
+share/gnome/help/gnucash/de_DE/gnucash-guide/stylesheet/tip.png
+share/gnome/help/gnucash/de_DE/gnucash-guide/stylesheet/warning.png
+share/gnome/help/gnucash/de_DE/gnucash-guide/titlepage.html
 share/gnome/help/gnucash/de_DE/gnucash-help.xml
 share/gnome/help/gnucash/de_DE/gnucash-help/custom-gnucash.html
 share/gnome/help/gnucash/de_DE/gnucash-help/fdl-preamble.html
@@ -420,26 +432,26 @@ share/gnome/help/gnucash/de_DE/gnucash-help/usage.html
 share/gnome/help/gnucash/de_DE/legal.xml
 share/gnome/help/gnucash/de_DE/txf-categories.xml
 share/omf/gnucash-docs/gnucash-guide-C.omf
-@exec scrollkeeper-install -q %D/share/omf/gnucash-docs/gnucash-guide-C.omf 2>/dev/null || /usr/bin/true
+share/omf/gnucash-docs/gnucash-guide-de_DE.omf
 share/omf/gnucash-docs/gnucash-help-C.omf
-@exec scrollkeeper-install -q %D/share/omf/gnucash-docs/gnucash-help-C.omf 2>/dev/null || /usr/bin/true
 share/omf/gnucash-docs/gnucash-help-de_DE.omf
-@exec scrollkeeper-install -q %D/share/omf/gnucash-docs/gnucash-help-de_DE.omf 2>/dev/null || %/usr/bin/true
 @dirrm share/omf/gnucash-docs
+@comment in scrollkeeper: @dirrm share/omf
 @dirrm share/gnome/help/gnucash/de_DE/gnucash-help/stylesheet
 @dirrm share/gnome/help/gnucash/de_DE/gnucash-help/figures
 @dirrm share/gnome/help/gnucash/de_DE/gnucash-help
+@dirrm share/gnome/help/gnucash/de_DE/gnucash-guide/stylesheet
+@dirrm share/gnome/help/gnucash/de_DE/gnucash-guide/figures
+@dirrm share/gnome/help/gnucash/de_DE/gnucash-guide
 @dirrm share/gnome/help/gnucash/de_DE/figures
 @dirrm share/gnome/help/gnucash/de_DE
-@dirrm share/gnome/help/gnucash/C/gnucash-guide/stylesheet
-@dirrm share/gnome/help/gnucash/C/gnucash-guide/figures
-@dirrm share/gnome/help/gnucash/C/gnucash-guide
 @dirrm share/gnome/help/gnucash/C/gnucash-help/stylesheet
 @dirrm share/gnome/help/gnucash/C/gnucash-help/figures
 @dirrm share/gnome/help/gnucash/C/gnucash-help
+@dirrm share/gnome/help/gnucash/C/gnucash-guide/stylesheet
+@dirrm share/gnome/help/gnucash/C/gnucash-guide/figures
+@dirrm share/gnome/help/gnucash/C/gnucash-guide
 @dirrm share/gnome/help/gnucash/C/figures
 @dirrm share/gnome/help/gnucash/C
 @dirrm share/gnome/help/gnucash
-@unexec scrollkeeper-uninstall -q %D/share/omf/gnucash-docs/gnucash-guide-C.omf 2>/dev/null || %/usr/bin/true
-@unexec scrollkeeper-uninstall -q %D/share/omf/gnucash-docs/gnucash-help-C.omf 2>/dev/null || %/usr/bin/true
-@unexec scrollkeeper-uninstall -q %D/share/omf/gnucash-docs/gnucash-help-de_DE.omf 2>/dev/null || %%/usr/bin/true
+@comment in gnome1-dirs: @dirrm share/gnome/help
