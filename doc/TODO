@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1646 2004/04/20 09:43:14 recht Exp $
+$NetBSD: TODO,v 1.1647 2004/04/20 14:59:08 markd Exp $
 
 Suggested new packages
 ======================
@@ -233,7 +233,6 @@ Suggested package updates
 	o joe-2.9.8 [pkg/18022, incomplete]
 	o john-1.6.37
 	o jpilot-0.99.7 [pkg/24635]
-	o kde-3.2.2
 	o larswm-7.3.2
 	o lavaps-2.4
 	o leafnode-1.9.52
