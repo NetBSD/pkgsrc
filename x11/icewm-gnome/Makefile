@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2000/07/31 07:37:01 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2000/10/17 23:15:29 jlam Exp $
 
 PKGNAME=		${DISTNAME:S/-/-gnome-/}
 
@@ -11,6 +11,5 @@ USE_X11=		yes
 EVAL_PREFIX+=		GNOMEDIR=gnome-libs
 CONFIGURE_ARGS+=	--with-gnome-menus="${GNOMEDIR}/bin/gnome-config"
 CONFIGURE_ARGS+=	--with-imlib
-CONFIGURE_ENV+=		LIBS="-lintl"
 
 .include "../../x11/icewm/Makefile.common"
