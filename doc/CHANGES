@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3020 2003/08/10 14:44:58 wiz Exp $
+$NetBSD: CHANGES,v 1.3021 2003/08/10 22:31:13 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3230,3 +3230,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Added offlineimap-4.0.0 [seb 2003-08-10]
 	Updated Gorm to 0.3.0 [rh 2003-08-10]
 	Updated crimsonfields to 0.3.5 [wiz 2003-08-10]
+	Updated sun-jre14 to 1.0.4 [jschauma 2003-08-10]
+	Updated sun-jdk14 to 1.0.4 [jschauma 2003-08-10]
