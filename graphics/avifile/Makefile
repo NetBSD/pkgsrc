@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2003/02/02 21:53:25 zuntum Exp $
+# $NetBSD: Makefile,v 1.16 2003/05/02 11:55:11 wiz Exp $
 
 DISTNAME=	avifile-0.53.5
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://ernie.eit.uni-kl.de/avifile/			\
 		http://divx.euro.ru/					\

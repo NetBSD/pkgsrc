@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2002/08/27 19:18:37 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2003/05/02 11:55:31 wiz Exp $
 #
 
 DISTNAME=	water-1.0
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.libsdl.org/projects/water/src/
 

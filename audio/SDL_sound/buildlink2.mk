@@ -1,10 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.1.1.1 2003/03/26 22:48:26 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2003/05/02 11:53:37 wiz Exp $
 
 .if !defined(SDL_SOUND_BUILDLINK2_MK)
 SDL_SOUND_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		SDL_sound
-BUILDLINK_DEPENDS.SDL_sound?=	SDL_sound>=1.0.0
+BUILDLINK_DEPENDS.SDL_sound?=	SDL_sound>=1.0.0nb1
 BUILDLINK_PKGSRCDIR.SDL_sound?=	../../audio/SDL_sound
 
 EVAL_PREFIX+=				BUILDLINK_PREFIX.SDL_sound=SDL_sound

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile.common,v 1.5 2003/04/03 15:19:33 tron Exp $
+# $NetBSD: Makefile.common,v 1.6 2003/05/02 11:54:00 wiz Exp $
 
 DISTNAME=	everybuddy-0.2.0
+PKGREVISION=	1
 CATEGORIES=	chat
 MASTER_SITES=	http://www.everybuddy.com/files/
 

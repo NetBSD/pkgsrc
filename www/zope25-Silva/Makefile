@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2002/12/02 15:18:00 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2003/05/02 11:56:53 wiz Exp $
 
 DISTNAME=	Silva-0.8.6.1
+PKGREVISION=	1
 PKGNAME=	zope25-Silva-0.8.6.1
 CATEGORIES=	www
 MASTER_SITES=	http://www.zope.org/Members/faassen/Silva/

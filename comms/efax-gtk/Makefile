@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2003/03/29 12:40:19 jmmv Exp $
+# $NetBSD: Makefile,v 1.8 2003/05/02 11:54:08 wiz Exp $
 
 DISTNAME=		efax-gtk-1.0.1b.src
 PKGNAME=		efax-gtk-1.0.1b
-PKGREVISION=		3
+PKGREVISION=		4
 WRKSRC=			${WRKDIR}/efax-gtk
 CATEGORIES=		comms
 MASTER_SITES=		http://www.cvine.freeserve.co.uk/efax-gtk/

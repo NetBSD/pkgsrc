@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.2 2002/10/16 16:45:37 dillo Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2003/05/02 11:57:28 wiz Exp $
 #
 # This Makefile fragment is included by packages that use lablgtk.
 
@@ -6,7 +6,7 @@
 LABLGTK_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			lablgtk
-BUILDLINK_DEPENDS.lablgtk?=		lablgtk>=1.2.5
+BUILDLINK_DEPENDS.lablgtk?=		lablgtk>=1.2.5nb1
 BUILDLINK_PKGSRCDIR.lablgtk?=		../../x11/lablgtk
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.lablgtk=lablgtk

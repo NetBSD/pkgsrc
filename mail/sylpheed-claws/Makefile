@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2003/03/22 05:23:32 salo Exp $
+# $NetBSD: Makefile,v 1.16 2003/05/02 11:55:42 wiz Exp $
 #
 
 DISTNAME=	sylpheed-0.8.11claws
 PKGNAME=	sylpheed-claws-0.8.11
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	mail news x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sylpheed-claws/}
 EXTRACT_SUFX=	.tar.bz2
@@ -33,8 +33,6 @@ CONFIGURE_ARGS+=	--enable-aspell
 
 PKG_SYSCONFSUBDIR=	sylpheed
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
-
-BUILDLINK_DEPENDS.gpgme=	gpgme>=0.3.10
 
 .include "../../mk/bsd.prefs.mk"
 BUILD_DEFS+=		USE_INET6 USE_OPENLDAP

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.37 2003/04/20 08:26:15 rh Exp $
+# $NetBSD: Makefile,v 1.38 2003/05/02 11:56:14 wiz Exp $
 #
 
 DISTNAME=		ggv-1.0.2
-PKGREVISION=		7
+PKGREVISION=	8
 CATEGORIES=		print gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/ggv/1.0/}
 

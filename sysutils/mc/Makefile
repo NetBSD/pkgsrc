@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.41 2001/02/17 17:42:15 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2003/05/02 11:56:25 wiz Exp $
 # FreeBSD Id: Makefile,v 1.16 1997/11/30 19:37:48 vanilla Exp
 #
 
+PKGREVISION=		1
 COMMENT=		Midnight Commander, a free Norton Commander Clone
 
 CONFIGURE_ARGS+=	--without-x
