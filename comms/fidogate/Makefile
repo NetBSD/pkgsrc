@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2002/02/18 15:14:03 seb Exp $
+# $NetBSD: Makefile,v 1.18 2002/03/23 17:47:46 yyamano Exp $
 #
 
 DISTNAME=	fidogate-4.4.4
@@ -13,7 +13,7 @@ USE_BUILDLINK_ONLY=	yes
 USE_GMAKE=		yes
 
 INFO_FILES=	fidogate.info
-MAKE_ENV=	DEBUG="${CFLAGS} -Werror" CC="${CC} ${STRIPFLAG}"
+MAKE_ENV=	DEBUG="${CFLAGS} -Werror" CC="${CC} ${_STRIPFLAG_CC}"
 
 post-extract:
 	@${CP} ${WRKSRC}/examples/orodruin/fidogate.conf ${WRKSRC}/
